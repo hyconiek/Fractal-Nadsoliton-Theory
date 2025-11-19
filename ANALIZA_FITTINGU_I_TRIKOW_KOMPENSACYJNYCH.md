@@ -4,6 +4,7 @@
 ## Przegląd badań zakończonych sukcesem pod kątem dopasowywania parametrów
 
 **Data utworzenia:** 11.2025  
+**Ostatnia aktualizacja:** 19.11.2025  
 **Status:** Analiza krytyczna
 
 ---
