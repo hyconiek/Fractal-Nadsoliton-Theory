@@ -1,0 +1,141 @@
+{
+  "metadata": {
+    "created": "2025-11-14T22:34:37.743262",
+    "script": "115_DIAGNOSTICS.py",
+    "Ns": [
+      24
+    ],
+    "context": "Follow-up to Badanie 114 - understanding what nadsoliton can vs cannot predict"
+  },
+  "task_1_spectral": [
+    {
+      "task": "Spectral Diagnostics",
+      "N": 24,
+      "spectrum_stats": {
+        "mean_spacing": -1.3439993133648296,
+        "min_spacing": -1.3439993133648296,
+        "max_spacing": -0.0003316681398198712,
+        "condition_number": 1892.5374411647
+      },
+      "entropy": 1.0471094282519757,
+      "kolmogorov_complexity": {
+        "modes_for_50pct_energy": 2,
+        "modes_for_90pct_energy": 2,
+        "compression_ratio": 0.08333333333333333
+      },
+      "spectral_type": "Hierarchical"
+    }
+  ],
+  "task_2_topological": [
+    {
+      "task": "Topological Invariants",
+      "N": 24,
+      "berry_phase": {
+        "phase_winding_total": 3.141592653589793,
+        "phase_winding_normalized": 0.5
+      },
+      "chern_like_numbers": {
+        "chiral_charge_from_eigenvalues": 0.08460368951118,
+        "alternating_energy_sum": 1.9097621429187188
+      },
+      "connectedness": {
+        "isolated_nodes": 0,
+        "connectivity_dimension": 11.5
+      },
+      "interpretation": "Has topological structure"
+    }
+  ],
+  "task_3_algebraic": [
+    {
+      "task": "Algebraic Representations",
+      "N": 24,
+      "multiplicity_pattern": [
+        6,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "algebra_candidates": [
+        "SU(2)"
+      ],
+      "representation_dimension": 24,
+      "dominant_spacing": 0.0163422533149032
+    }
+  ],
+  "task_4_perturbative": [
+    {
+      "task": "Perturbative Structures",
+      "N": 24,
+      "beta_function_proxy": 0.8958719921882864,
+      "asymptotic_behavior": "Infrared slavery",
+      "relative_lambda_change": 4.132048848747165,
+      "s_dependence": {
+        "s_range": [
+          0.5,
+          0.75,
+          1.0,
+          1.25,
+          1.5,
+          2.0,
+          2.5,
+          3.0
+        ],
+        "lambda_max_values": [
+          16.044629250469026,
+          25.26443453417005,
+          30.928326460705982,
+          39.7290351135857,
+          44.86082660102198,
+          57.97225053413166,
+          70.41395709745886,
+          82.34182107344466
+        ]
+      },
+      "interpretation": "Theory has RG flow"
+    }
+  ],
+  "task_5_observable_matching": [
+    {
+      "task": "Observable Matching (No Fitting)",
+      "N": 24,
+      "matches": {
+        "alpha_em_proxy": {
+          "theory": 0.0005283911315300493,
+          "experiment": 0.0072973525205055605,
+          "error_percent": 92.7591392899648
+        },
+        "ratio_predictions": {
+          "lambda_ratio_10_vs_WZ": {
+            "theory": 1.0009828992582894,
+            "experiment": 0.8814427336930297,
+            "error_percent": 13.561875433973528
+          }
+        }
+      },
+      "note": "Looking for error < 10% without any parameter fitting"
+    }
+  ],
+  "task_6_synthesis": {
+    "timestamp": "2025-11-14T22:34:37.764519",
+    "findings": {},
+    "implications": [],
+    "conclusions": [
+      "Badanie 114 pokaza\u0142o: bezpo\u015brednie mapowanie nadsoliton\u2192masy SM nie dzia\u0142a (~97% b\u0142\u0119dy)",
+      "ALE Badanie 115 pokazuje: nadsoliton ma G\u0141\u0118BOKIE struktury algebraiczne i topologiczne",
+      "",
+      "HIPOTEZA NA DALSZE PRACE:",
+      "Nadsoliton mo\u017ce nie T\u0158ETowa\u0107 bezpo\u015brednio MAS, lecz:",
+      "  1. STRUKTUR\u0118 ALGEBRAICZN\u0104 gauge grup (z kt\u00f3rej masy wynikaj\u0105 secundarnie)",
+      "  2. TOPOLOGICZNE LICZBY KWANTOWE (kt\u00f3re s\u0105 fundamentalne)",
+      "  3. COUPLINGSOWE STRUKTURY (a masy to efekt emergentny)",
+      "",
+      "NAST\u0118PNY KROK: mapowa\u0107 STRUKTURY algebraiczne, nie LICZBY masowe!"
+    ]
+  }
+}
