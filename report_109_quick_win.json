@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "script": "109_QUICK_WIN_PHYSICAL_VALIDATION.py",
+    "generated": "2025-11-14T19:16:29.616426+00:00",
+    "N": 24,
+    "scales_count": 60
+  },
+  "tasks": {
+    "0": {
+      "title": "Spektralna separacja",
+      "description": "Analiza gap: top vs 2nd vs 3rd eigenvalue dla S zbudowanego na wszystkich skalach.",
+      "metrics": {
+        "gap_top_2nd": 27.75401003614118,
+        "gap_2nd_3rd": 10.399776282589102,
+        "ratio_top_2nd": 1.1914231457315028
+      },
+      "wniosek": "Jeżeli ratio_top_2nd >> 1 (np. >20) — silna separacja spektralna (smoking gun).",
+      "zgodnosc_z_ToE": "⚠️"
+    },
+    "1": {
+      "title": "Hierarchia mas (proxy)",
+      "description": "Stosunki największych eigenvalues jako proxy masa (top/4th, top/5th ...)",
+      "metrics": {
+        "top_eigen": 172.74175396899238,
+        "top_over_4th": 2.4669343490494757,
+        "ratios": [
+          3.400048851350216,
+          3.343420215434925,
+          2.6640845731944736,
+          2.4669343490494757,
+          1.4873423954226197,
+          1.2834858641886528,
+          1.1914231457315028
+        ]
+      },
+      "wniosek": "Stosunki powyżej ~3–5 wskazują na stabilną hierarchię mas generowaną z kernela K(d).",
+      "zgodnosc_z_ToE": "⚠️"
+    },
+    "2": {
+      "title": "Przepływ RG (beta-proxy)",
+      "description": "Obliczenie lambda_max(s) i estymacja d lambda / d ln s (beta-proxy)",
+      "metrics": {
+        "lambda_max_vals_mean": 21.281264236847623,
+        "beta_std": 46.93726727945361,
+        "beta_sign_changes": 12
+      },
+      "wniosek": "Wiele zmian znaku beta-proxy wskazuje na nieliniową, fizyczną dynamikę RG (nie trywialną).",
+      "zgodnosc_z_ToE": "✅"
+    },
+    "3": {
+      "title": "Odporność na perturbacje",
+      "description": "Zbadanie względnej zmiany lambda_max po małej perturbacji",
+      "metrics": {
+        "lambda_max_nominal": 172.74175396899238,
+        "lambda_max_perturbed": 172.79183701295966,
+        "relative_change": 0.000289930157686523
+      },
+      "wniosek": "Relatywna zmiana < 0.15 (15%) wskazuje na odporność i fizyczną realność stanu.",
+      "zgodnosc_z_ToE": "✅"
+    },
+    "4": {
+      "title": "Uniwersalność N",
+      "description": "Sprawdzenie jak lambda_max zmienia się z rozmiarem systemu N",
+      "metrics": {
+        "lambda_max_by_N": {
+          "16": 149.69788536727017,
+          "20": 160.14593195601287,
+          "24": 172.74179337782053,
+          "28": 176.69454948439343
+        },
+        "rel_std": 0.0646582858675393
+      },
+      "wniosek": "Relatywne odchylenie < 0.10 oznacza N-niezależność (termodynamiczny limit).",
+      "zgodnosc_z_ToE": "✅"
+    },
+    "5": {
+      "title": "Stabilność vakuum (trace/N)",
+      "description": "Trace(S)/N jako proxy energii vakuumowej",
+      "metrics": {
+        "trace": 912.8317468339782,
+        "trace_over_N": 38.034656118082424
+      },
+      "wniosek": "Trace/N stabilne w skali <0.1% wskazuje na fizyczne vakuum (wartość referencyjna ≈ 2.77).",
+      "zgodnosc_z_ToE": "⚠️"
+    },
+    "6": {
+      "title": "Fidelity między top a 2nd mode",
+      "description": "Overlap między top-mode a second-mode jako miara separacji modalnej",
+      "metrics": {
+        "fidelity": 8.673617379875359e-17
+      },
+      "wniosek": "Fidelity << 1 (np. <0.3) pokazuje wyraźne rozdzielenie modów (silna separacja).",
+      "zgodnosc_z_ToE": "✅"
+    },
+    "7": {
+      "title": "Entropy Shannon top-mode",
+      "description": "Niska entropia sugeruje 'blockiness' i emergencję symetrii (grupowe struktury)",
+      "metrics": {
+        "shannon_entropy": 2.8856412226659263
+      },
+      "wniosek": "Relatywnie niska entropia (w porównaniu z równomiernym rozkładem) wspiera emergencję algebraiczną SU(3)×SU(2)×U(1).",
+      "zgodnosc_z_ToE": "⚠️"
+    },
+    "8": {
+      "title": "Norma komutatora proxy",
+      "description": "Proxy sprawdzające, czy naturalne operatory tworzą quasi-zamkniętą algebrę",
+      "metrics": {
+        "comm_norm": 109.89983258737989
+      },
+      "wniosek": "Niska norma komutatora wskazuje na zbliżenie do zamkniętej algebry operatorów (symetrie emergentne).",
+      "zgodnosc_z_ToE": "⚠️"
+    },
+    "9": {
+      "title": "Mapowanie do obserwabli eksperymentalnych (proxy)",
+      "description": "Przypisanie top-eigen do energii przejścia i ocena SNR",
+      "metrics": {
+        "DeltaE_proxy": 0.17274175396899238,
+        "noise_level": 0.06494758177170327,
+        "snr_proxy": 2.6597103272225873
+      },
+      "wniosek": "SNR proxy > 10 sugeruje obserwowalność w realnych eksperymentach (możliwa detekcja).",
+      "zgodnosc_z_ToE": "⚠️"
+    }
+  }
+}
