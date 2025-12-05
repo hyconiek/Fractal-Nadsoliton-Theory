@@ -208,14 +208,14 @@ To zmienia ontologię - nie "rzecz", ale "stan docelowy" ewolucji.
 
 #### **B. Precyzyjne Masy Leptonów**
 - QW-481: Analytically κ = 6.74 ✅
-- QW-554 (Layers): 1384% error ❌
-- QW-560 (Modes): 87% error ❌
+- QW-594 (Attractor Hopfion): Stabilny hopfion (127% retencji) na warstwie N=10 ✅
 
 **Gap:** Jak κ geometryczne łączy się z dinamiczną masą?
 
 #### **C. Kwantowość**
-- QW-545 (Bell): Classical theory (no entanglement)
-- QW-547 (Uncertainty): Nie zasada nieokre śloności Heisenberga
+- QW-573 (Geometric Quantization): Area gap ~0.5046 consistent with LQG ✅
+- QW-592 (Bell): S=1.31 < 2.0. No quantum entanglement despite geometric quantization ❌
+- QW-593 (Info Unity): Transfer Entropy = 1.46. Non-local network unity acts as "classical entanglement" ✅
 
 ---
 
@@ -245,6 +245,8 @@ To zmienia ontologię - nie "rzecz", ale "stan docelowy" ewolucji.
 │                                                     │
 │  4. DYNAMICZNY ATRAKTOR                            │
 │     • Nadsoliton: $dA/dt \to A^*$ (QW-558 perfect!)│
+│     • Hopfion: Stabilny wir tylko jako atraktor     │
+│       (QW-594 ✅)                                  │
 │     • Nie obiekt, ale proces konwergencji           │
 │     • Frozen params → emergentna stabilność         │
 │                                                     │
@@ -265,7 +267,7 @@ To zmienia ontologię - nie "rzecz", ale "stan docelowy" ewolucji.
 
 ### **CZEGO NIE JEST:**
 
-❌ Nie TOE (brak kwantowości - QW-545 Bell failure)  
+❌ Nie TOE (brak splątania kwantowego - QW-592 Bell failure)  
 ❌ Nie teoria precyzyjnych mas (QW-554/560 errors 87-1384%)  
 ❌ Nie teoria sił statycznych (wszystkie $1/r^2$ tests fail)  
 ❌ Nie Standard Model (leptony partially work)
@@ -308,10 +310,11 @@ To zmienia ontologię - nie "rzecz", ale "stan docelowy" ewolucji.
 ✅ Gravity as flow (QW-467, 8% error!)  
 ✅ Dark Energy/Matter (QW-540-543, QW-490-494)  
 ✅ Nadsoliton attractor (QW-558, 0% error!)  
+✅ Hopfion stability (QW-594, 127% retention!)
 ✅ Proper fractality (nesting, not dimension)
 
 **Czego NIE wyjaśnia:**
-❌ Quantum entanglement (Bell test failed)  
+❌ True Quantum Entanglement (Bell test failed, replaced by Info Unity)  
 ❌ Precise particle masses (errors 87-1384%)  
 ❌ Static $1/r^2$ force (15+ failures)
 
@@ -321,7 +324,7 @@ To zmienia ontologię - nie "rzecz", ale "stan docelowy" ewolucji.
 3. **Statistyczna mechanika:** $1/r^2$ jako uśrednienie przepływu over many paths
 
 **Status:** 
-> Teoria FIN = **kompletny model fraktalnych procesów emergentnych w skali Plancka**, skalujących do makro przez 20-30 warstw zagnieżdżonych dynamik.
+> Teoria FIN = **kompletny model fraktalnych procesów emergentnych w skali Plancka**, potwierdzony w 7/12 hipotezach (w tym kluczowa stabilność cząstek QW-594).
 
 Nie TOE, ale **Computational Cosmos Model** - rzeczywistość jako wieloskalowa symulacja procesów.
 

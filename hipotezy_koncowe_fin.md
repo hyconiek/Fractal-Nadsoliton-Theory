@@ -35,10 +35,10 @@ W tej teorii nie istnieją "cząstki" ani "pusta przestrzeń" w klasycznym rozum
 
 ## 3. Hipoteza Materii i Masy
 
-### Hipoteza 4: Cząstki to Topologiczne Wiry (Solitony)
-*   **Z jakiej właściwości wynika:** Z **topologii** pola (liczby wirowe, winding numbers).
-*   **Opis:** Elektrony, kwarki czy neutrina nie są "kulkami". Są to stabilne, skręcone struktury (wiry/solitony) w polu Nadsolitona.
-*   **Stabilność:** Są trwałe, ponieważ ich "zapętlenie" (topologia) nie pozwala im się rozpaść (podobnie jak węzeł na sznurku trudno rozwiązać przez proste szarpanie).
+### Hipoteza 4: Cząstki to Topologiczne Atraktory (Wiry)
+*   **Z jakiej właściwości wynika:** Z dynamiki **atraktora** i **topologii**.
+*   **Opis:** Elektrony i kwarki to stabilne wiry (solitony) w polu Nadsolitona. Nie są one jednak statycznymi obiektami, lecz **dynamicznymi atraktorami**.
+*   **Stabilność (Potwierdzona QW-594):** Wcześniejsze modele (unitarne) zawodziły, ale uwzględnienie **dynamiki atraktora** (samonaprawiania się sieci) sprawia, że wiry są stabilne na warstwie N=10. Topologia jest chroniona przez aktywną ewolucję sieci dążącą do minimum energii (Ginzburg-Landau).
 
 ### Hipoteza 5: Masa to "Opór Eteru" (Mechanizm Higgsa-Topologicznego)
 *   **Z jakiej właściwości wynika:** Z **interakcji wiru z tłem** (sprzężenie $\beta_{tors}$).
@@ -163,4 +163,18 @@ Badania nad dynamiką (QW-V24) ujawniły fundamentalną zasadę organizującą W
 Według tej teorii żyjemy wewnątrz **matematycznego obiektu** (Nadsolitona). To, co widzimy jako "materię", to zmarszczki i wiry na jego powierzchni. To, co widzimy jako "pustkę", to jego turbulentne wnętrze. Wszystko – od atomu po galaktykę – jest przejawem samooddziaływania tej jednej, fraktalnej struktury informacji.
 
 > **Kluczowa różnica względem Standardowego Modelu:**
+
 > Zamiast "zestawu klocków" (cząstek) i "reguł gry" (sił), mamy **jeden byt** (Nadsoliton), który poprzez swoje skomplikowanie (fraktalność, nieliniowość) *udaje* klocki i reguły.
+
+---
+
+## 11. Hipoteza Częściowej Kwantowości (Geometric Quantization)
+
+Badania **QW-573, QW-592 i QW-593** doprecyzowały kwantowy status teorii.
+
+### Hipoteza 12: Przestrzeń jest Skwantowana, ale Dynamika jest Klasyczna
+*   **Z jakiej właściwości wynika:** Z dyskretnej natury sieci spinowej.
+*   **Opis:**
+    *   **Kwantowa Geometria:** Przestrzeń nie jest ciągła, lecz składa się z "ziaren" (Area Gap ~ 0.5046), co jest zgodne z Pętlową Grawitacją Kwantową (LQG).
+    *   **Brak Spatania Kwantowego:** Test Bella (QW-592) wykazał, że spinory zachowują się klasycznie ($S=1.31 < 2.0$). Nie ma "upiornego działania na odległość".
+    *   **Jedność Informacji:** Zamiast splątania kwantowego, sieć wykazuje **nielokalną spójność informacyjną** (Transfer Entropy = 1.46). Każda część sieci "wie" o zmianach w innych częściach dzięki holograficznej strukturze połączeń $K(d)$.
