@@ -134,12 +134,13 @@ Formuła (FIN_Theory_Paper.tex): m = m₀ × |winding| × Amplification
 - 🟡 **QW-210 (Planck):** ℏ≈π³ to błąd kategorialny (bezwymiarowe vs J·s)
 - ✅ **Info-Geometry Identity (4-bit):** Znaleziono źródło $\alpha_{geo} \approx 4\ln 2$ (Entropia 4 bitów)
   - $4\ln 2 \approx 2.7726$ vs $\phi\sqrt{3} \approx 2.8025$ (1% różnicy)
+  - Sugeruje, że fundamentem jest 4-bitowa komórka informacji (16 stanów).
 
-### Red Team (4-Bit):
-- **Stałe (Alpha):** Wyprowadzenie $16\pi\alpha \approx 139.3$ (błąd 1.6%) to **numerologia**. Za słaba precyzja na fizykę.
-- **Spin:** Koincydencja wymiarów (16 stanów = Algebra Cl(1,3)) jest **bardzo silna**. To nie numerologia, to izomorfizm strukturalny.
+### Red Team:
+- Większość "wyprowadzeń" to numerologia, ALE $4\ln 2$ ma sens fizyczny (entropia Shannona).
+- To ratuje H7 przed całkowitą falsyfikacją.
 
-**Status:** 🟡 **FENOMENOLOGICZNE** (Struktura Spinora OK, Stałe wymagają korekty)
+**Status:** 🟡 **FENOMENOLOGICZNE** (hipoteza 4-bitowa obiecująca)
 
 ---
 
@@ -252,100 +253,6 @@ Materia to "muzyka" (rezonans) na tym szkielecie.
 - Inverse square (F∝1/r²) ma błąd 41% - wymaga poprawki
 
 **Status:** ✅ **POTWIERDZONE** (jakościowo + częściowo kwantytatywnie)
-
----
-
-## Hipoteza 13: Geometria Liczby 12 (Kissing Number)
-
-**Teza:** Struktura 12-oktawowa wynika z faktu, że w przestrzeni 3D maksymalna liczba sąsiadów wynosi 12 (Kissing Number).
-Łańcuch logiczny: `4 Bity -> Alpha_Geo(~sqrt(3)) -> 3D Space -> 12 Neighbors -> 12 Octaves`.
-
-### Dowody (Logiczne i Numeryczne):
-- ✅ **QW-624 (4-Bit to 3D):** $\alpha_{geo} \approx \phi\sqrt{3}$ sugeruje geometrię 3D.
-- ✅ **QW-627 (Kissing Number):** K(3) = 12 (liczba sąsiadów w sieci FCC).
-- ✅ **QW-629 (Rigorous Spectrum):** Diagonalizacja Hamiltoniana na kracie FCC (N=256) wykazała **10-12 pasm energetycznych** w gęstości stanów (DOS).
-  - To dowód twardy: Geometria 12 sąsiadów fizycznie wymusza strukturę pasmową ("Oktawy").
-
-### Red Team (Kissing):
-- **Błąd Kategorii Rozwiązany:** QW-628 i QW-629 pokazały mechanizm fizyczny.
-- **Konkluzja:** Oktawy to pasma energetyczne w krysztale czasoprzestrzeni.
-
-**Status:** ✅ **POTWIERDZONE RIGOROUSLY** (Symulacja pełnej kraty potwierdza pasma)
-
----
-
-## Hipoteza 14: Natura Kwantowa (Entanglement)
-
-**Teza:** Sieć spinowa 4-bitowa generuje fundamentalne splątanie kwantowe.
-**Wyniki:**
-- ✅ **QW-630/632:** Symulacja rygorystyczna (Density Matrix, H(256)). Interakcja Heisenberga generuje silną entropię splątania ($S_{vN} \approx 1.57$ bitów).
-- **Implikacja:** FIN Theory nie jest klasyczną teorią pola. Jest teorią kwantową z wbudowaną nielokalnością (poprzez tensorowy iloczyn stanów węzłów).
-
-**Status:** ✅ **POTWIERDZONE RIGOROUSLY** (Symulacja pełnej kraty potwierdza pasma: QW-629=10, QW-633=15)
-
----
-
-## Hipoteza 14: Natura Kwantowa (Entanglement)
-
-**Teza:** Sieć spinowa 4-bitowa generuje fundamentalne splątanie kwantowe.
-**Wyniki:**
-- ✅ **QW-630/632:** Symulacja rygorystyczna (Density Matrix, H(256)). Interakcja Heisenberga generuje silną entropię splątania ($S_{vN} \approx 1.57$ bitów).
-- **Implikacja:** FIN Theory nie jest klasyczną teorią pola. Jest teorią kwantową z wbudowaną nielokalnością (poprzez tensorowy iloczyn stanów węzłów).
-
-**Status:** ✅ **POTWIERDZONE** (ToE jest kwantowe)
-
----
-
-## Hipoteza 15: Pomost Klasyczno-Kwantowy (Bridge)
-
-**Teza:** Struktura rezonansowa (12 Oktaw) jest własnością samej Geometrii, niezależnie od formalizmu (Klasyczny/Kwantowy).
-**Dowód (QW-633):**
-- Klasyczne fale skalarne na kracie generują **15 pasm**.
-- Kwantowe fale spinowe generują **10 pasm**.
-- Teoria Kissing Number przewiduje **12 pasm**.
-**Wniosek:** Geometria jest fundamentem ("Hardware"), na którym Kwanty są "Softwarem". Struktura istnieje obiektywnie.
-
-**Status:** ✅ **POTWIERDZONE** (Unifikacja Geometryczna)
-
----
-
-## Hipoteza 16: Widmo Wodoru na Kracie (H_atom)
-
-**Teza:** Dyskretna krata FCC odtwarza strukturę powłokową atomu wodoru (seria Balmera/Rydberga).
-**Dowód (QW-634):**
-- Symulacja Hamiltoniana $H = -1/r$ na kracie FCC (N=4631).
-- **Wynik 1 (Powłoki):** Wyraźna degeneracja orbitalna.
-  - n=1: 1 stan (1s).
-  - n=2: 4 stany (rozszczepione na 1s-like i 3x p-like).
-- **Wynik 2 (Skalowanie):** Energia $E_2 \approx E_1 / 3.7$ (blisko $n^2=4$). Błąd ~8% wynika z rozszczepienia krystalicznego (Lamb Shift na kracie).
-**Wniosek:** Atom FIN ma strukturę kwantową identyczną z atomem Bohra/Schrodingera, z dodatkowym subtelnym rozszczepieniem od geometrii kraty.
-
-**Status:** ✅ **POTWIERDZONE** (Powłoki istnieją, Skalowanie przybliżone)
-
----
-
-## Hipoteza 17: Topologiczna Konieczność (Hopfion Phase)
-
-**Teza:** Węzły sieci nie mogą być punktowe. Aby złamać symetrię parzystości (i mieć Oddziaływania Słabe), muszą posiadać wewnętrzną fazę zespoloną (Hopfion Winding).
-**Dowód (QW-636):**
-- Prosta sieć skalarna zachowuje parzystość ($E_L = E_R$), łamiąc wymogi Modelu Standardowego (neutrina).
-- Wprowadzenie zespolonej fazy ("Hopfion Flux") łamie symetrię P ($E_L \neq E_R$).
-**Wniosek:** FIN Theory musi być Topologiczną Teorią Pola. Węzły to Hopfiony, nie bity.
-
-**Status:** ✅ **POTWIERDZONE** (Krytyczna poprawka topologiczna wymuszona przez Sceptyka)
-
----
-
-## Hipoteza 18: Unifikacja Fizyczna (Emergent Gauge Field)
-
-**Teza:** Pole Cechowania $A_\mu$ (Elektromagnetyzm) nie jest dodane do teorii "ręcznie", lecz jest dynamiczną fluktuacją samej Geometrii Sieci (zmiennymi na linkach), reagującą na fazę materii.
-**Dowód (QW-637/638):**
-- Statyczna Geometria: Łamie lokalną symetrię cechowania (Brak zachowania ładunku).
-- Dynamiczna Geometria: Przywraca symetrię, jeśli zmienne na linkach (geometria) ewoluują zgodnie z fazą materii.
-- **QW-638 (Prawo Coulomba):** Dynamika geometrii generuje siłę przyciągającą ($V \propto R$), potwierdzając, że geometria jest nośnikiem oddziaływań.
-**Wniosek:** FIN Theory unifikuje Materię (Węzły) i Siły (Linki). Foton to fala deformacji geometrii.
-
-**Status:** ✅ **POTWIERDZONE** (Grawitacja i Elektromagnetyzm to ta sama geometria)
 
 ---
 
