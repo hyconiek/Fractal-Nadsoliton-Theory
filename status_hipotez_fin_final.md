@@ -155,26 +155,28 @@ Formuła (FIN_Theory_Paper.tex): m = m₀ × |winding| × Amplification
 - ✅ **QW-593 (Information Unity):** Transfer Entropy=1.46 (nielocalny przepływ informacji przez K(d)!)
 
 ### Nowe Odkrycia Egzotyczne:
-- 🌟 **QW-603 (Anyonic Statistics):** θ = 0.880 ≈ π/3.6 (fractional phase!)
-  - Hopfiony wykazują anyoniczną statystykę przy wymianie pozycji
-  - 0 < θ < π (ani bozony θ=0, ani fermiony θ=π)
-  - Link do topological quantum computing!
-  - **Anyony występują zazwyczaj tylko w 2D, ale FIN ma je w 3D!**
-
-- 🌟 **QW-604/604b (Super-Ballistic Dispersion):** Δσ ∝ t^2.4
+- 🌟 **QW-604/604b/606 (Super-Ballistic Dispersion):** Δσ ∝ t^2.4
   - QW-604: b = 2.328
   - QW-604b (clean, no gamma): b = 2.386 (potwierdzone bez artefaktów!)
+  - QW-606: Beta_tors NIE wpływa → **intrinsic network property**
   - Szybsze niż kwantowe (b=1) i klasyczne (b=0.5)
   - Egzotyczna dynamika fal - network amplification effect
+
+- ❌ **QW-603/605 (Anyonic Statistics - FALSYFIKOWANE):**
+  - QW-603: Single exchange θ=0.880 wyglądał obiecująco
+  - QW-605: Multiple braids **NIE kumulują** fazy liniowo (R²=-1.12)
+  - Faza **maleje**: 0.88→0.73→0.02 zamiast rosnąć
+  - QW-605b: Gamma nie odpowiada za decay
+  - **Wniosek:** Hopfiony NIE są prawdziwymi anyonami
 
 ### Red Team:
 - FIN ma **kwantową geometrię** (zgodną z LQG) ✓
 - FIN ma **interferencję** falową ✓
 - FIN **NIE MA** kwantowego splątania Bell ✗
-- ALE: **anyonic statistics + super-ballistic = nowa fizyka** poza standardową QM!
-- FIN może być mostem między klasycznym a kwantowym (anyony to 2D quasiparticles w QM)
+- **Super-ballistic = nowa fizyka** poza standardową QM! ✓
+- Anyony były false positive (single test misleading)
 
-**Status:** 🟢 **POTWIERDZONE** (geometria kwantowa + egzotyczna dynamika)
+**Status:** ✅ **POTWIERDZONE** (geometria kwantowa + super-ballistic dynamics)
 
 ---
 
@@ -200,16 +202,29 @@ Formuła (FIN_Theory_Paper.tex): m = m₀ × |winding| × Amplification
 
 **Teza:** Masa wzmacnia połączenia (wiring). Silniejsze K → krótszy D_eff → zakrzywienie.
 
-### Dowody:
-- ✅ **QW-440 (Hebbian Gravity):** Kontrakcja 9.7% wokół protonu
-- ✅ **QW-540 (Neural Universe):** Grawitacja wyłania się z reguły Hebba
-- ✅ **QW-543 (Dark Energy):** Zapominanie (decay) wyjaśnia ekspansję
+### Dowód:
+- ✅ **QW-611 (Octave-Layer Orthogonality):** r=0.993
+  - Spektrum eigenvalues zachowane przez wszystkie warstwy
+  - Coupling strength maleje eksponencjalnie z warstwami (R²=0.98)
+- ✅ **QW-617 (Topological Robustness):** Struktura jest NIEZMIENNIKIEM!
+  - Testowano β_tors w zakresie [0.001, 0.1] (×100)
+  - Orthogonalność zmieniła się tylko o 3.2%
+  - Geometria wynika z TOPOLOGII sieci, nie z siły sprzężeń
+- ✅ **QW-616 (Tensor 3D Emergence):** ψ₁D ⊗ ψ₁D ⊗ ψ₁D
+  - Amplifikacja wymiaru: d≈0.74 (1D) → d≈2.77 (3D)
+  - Wyjaśnia dlaczego oktawy same w sobie mają niski wymiar
+
+### Interpretacja:
+
+**12 Oktaw** (wymiar POZIOMY): Zapominanie (decay) wyjaśnia ekspansję
+- ✅ **QW-610 (Multi-Body Gravity):** Superpozycja F_net = ΣF_i (100.5%), równe siły F_A/F_B=1.00
 
 ### Red Team:
 - Mechanizm Hebba działa jakościowo ✓
-- Wymaga większej skali dla kwantyfikacji
+- **QW-610 potwierdza kwantytatywnie:** Superpozycja + równość sił dla równych odległości ✓
+- Inverse square (F∝1/r²) ma błąd 41% - wymaga poprawki
 
-**Status:** ✅ **POTWIERDZONE** (jakościowo)
+**Status:** ✅ **POTWIERDZONE** (jakościowo + częściowo kwantytatywnie)
 
 ---
 
