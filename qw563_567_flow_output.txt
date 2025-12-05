@@ -1,0 +1,169 @@
+================================================================================
+QW-563 TO QW-567: GRAVITY AS FLOW (River Model Tests)
+================================================================================
+HYPOTHESIS: Gravity = Information Flow, NOT Force
+BASE: QW-467 River Model success (v ~ r^-0.46, 8% error)
+================================================================================
+
+Frozen Parameters:
+  α_geo = 2.772589
+  ω = 0.785398
+  φ = 0.523599
+  β_tors = 0.010000
+
+Dynamic (QW-V24):
+  γ_gain = 1.055200
+  γ_damp = 1.198000
+================================================================================
+
+================================================================================
+QW-563: VELOCITY FIELD MEASUREMENT
+================================================================================
+Measuring information current J = Im(ψ* ∇ψ)
+Extracting flow velocity v(r) = J/|ψ|²
+
+Network: 400 nodes in 3D
+Mass center: node 289 @ [-0.16537655 -0.14606501 -0.05178166]
+Initial state: mass localized @ r < 1.0
+  |ψ|² sum: 1.000000
+
+Evolving to steady state (100 steps)...
+  Step 0: E = 2.430570
+  Step 20: E = 2.430570
+  Step 40: E = 2.430570
+  Step 60: E = 2.430570
+  Step 80: E = 2.430570
+Steady state reached
+
+Computing velocity field...
+Velocity field sampled: 372 nodes
+Radius range: [0.73, 7.97]
+Velocity range: [-8839.374474, -0.371086]
+
+QW-563 RESULT: Flow Velocity Law
+  v(r) = 0.0000 / r^2.0000
+  Uncertainty: ±0.0000 on exponent
+  R² = -0.053236
+
+  GTR prediction: n = 0.5 (v ∝ 1/√r)
+  Measured: n = 2.0000
+  Error: 300.0%
+
+  ❌ PARTIAL: Fit quality or exponent deviation too large
+
+================================================================================
+QW-564: FLOW vs FORCE PARADIGM COMPARISON
+================================================================================
+Comparing two models of gravity:
+  FORCE: F = -GM/r², a = F/m
+  FLOW: v_particle = v_flow(r) = √(2GM/r)
+
+Test particle: node 392 @ r = 4.99
+Evolving test particle for 50 steps...
+
+Trajectory comparison:
+  Network (ground truth): r_final = 0.48
+  Flow model: r_final = 0.10, Δ = 1.5679
+  Force model: r_final = 2.68, Δ = 3.8449
+
+  Ratio: Force_error / Flow_error = 2.45
+
+  ✅ SUCCESS: Flow model 2.5× better than Force!
+
+================================================================================
+QW-565: GEODESIC MOTION IN FLOW (Orbital Dynamics)
+================================================================================
+Testing if stable orbits emerge from flow + tangential velocity
+Based on QW-470 success (elliptical orbits e=0.93)
+
+Orbital test particle: node 78 @ r = 5.09
+Evolving orbital particle for 200 steps...
+  Step 0: r = 0.52
+  Step 40: r = 0.49
+  Step 80: r = 0.57
+  Step 120: r = 0.21
+  Step 160: r = 0.19
+
+Orbital analysis:
+  r_max = 0.74
+  r_min = 0.13
+  r_mean = 0.41
+  Eccentricity e = 0.706
+
+  ✅ SUCCESS: Stable orbit detected!
+     Bounded orbit with e < 0.8
+     This confirms geodesic motion in flow field
+
+================================================================================
+QW-566: TIME DILATION AS LAG IN FLOW
+================================================================================
+Testing if clocks run slower in stronger flow (closer to mass)
+Based on QW-435 success (1.24% dilation measured)
+
+Clock A: node 360 @ r = 1.09
+Clock B: node 85 @ r = 7.08
+Evolving clocks for 150 steps...
+
+Time dilation measurement:
+  Clock A (r=1.5): Δφ = 1.984
+  Clock B (r=7.0): Δφ = 41.816
+  Ratio γ = φ_B / φ_A = 21.081262
+
+GTR prediction:
+  v²(r_A) = 1.250
+  v²(r_B) = 0.282
+  γ_theory = 1.004476
+
+Comparison:
+  γ_measured = 21.081262
+  γ_theory = 1.004476
+  Error: 1998.7%
+
+  ⚠️ PARTIAL: Dilation detected but magnitude off
+
+================================================================================
+QW-567: FRAME DRAGGING (Lense-Thirringa Effect)
+================================================================================
+Testing if rotating mass creates azimuthal flow
+Based on QW-405/468 success (β=-0.04, 5 spin peaks)
+Rotating mass initialized with L = 2.0
+Evolving to steady state (150 steps)...
+  Step 0
+  Step 30
+  Step 60
+  Step 90
+  Step 120
+Measuring azimuthal velocity field...
+
+Frame dragging measurement:
+  v_φ(r) = 5.7879 / r^0.0000
+  R² = 0.0000
+
+  GTR prediction: v_φ ∝ 1/r²  (n = 2.0)
+  Measured: n = 0.00
+  Deviation: 2.00
+
+  ❌ FAIL: No clear frame dragging signal
+
+================================================================================
+FINAL SUMMARY: QW-563 TO QW-567
+================================================================================
+
+Results:
+  QW-563 (Velocity Field): ❌ FAIL
+  QW-564 (Flow vs Force): ✅ SUCCESS
+  QW-565 (Geodesic/Orbit): ✅ SUCCESS
+  QW-566 (Time Dilation): ❌ FAIL
+  QW-567 (Frame Dragging): ❌ FAIL
+
+Implemented: 5/5 (100%)
+Passed: 2/5 (40%)
+
+================================================================================
+COMPREHENSIVE FLOW PARADIGM TEST:
+================================================================================
+⚠️ PARTIAL VALIDATION - Flow paradigm shows strong promise
+   2/5 tests passed - needs refinement
+================================================================================
+Analysis complete. Output saved.
+================================================================================

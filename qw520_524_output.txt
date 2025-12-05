@@ -1,0 +1,64 @@
+================================================================================
+QW-520 TO QW-524: KERNEL FORENSICS
+Analyzing the Frozen Kernel K(d)
+================================================================================
+
+============================================================
+QW-520: KERNEL SPECTROSCOPY (Is it a Propagator?)
+============================================================
+Dominant Frequency k_peak: 0.1249
+Expected k from omega: 0.1250
+Peak Width (Qualitative): Sharp
+Interpretation: Peak at k != 0 implies oscillatory spatial structure.
+  -> Not a simple Yukawa potential (1/r * exp(-mr)).
+  -> More like a crystal lattice potential or a wave packet.
+
+============================================================
+QW-521: EFFECTIVE POTENTIAL (Smoothing)
+============================================================
+r      Raw        Sm(1.0)    Sm(5.0)    Sm(10.0)  
+--------------------------------------------------
+0.0    2.4011     -0.1489    -0.1489    -0.1489   
+5.0    -0.6328    -0.1266    -0.1266    -0.1266   
+10.1   -1.3448    -0.0194    -0.0194    -0.0194   
+15.1   2.3601     0.0127     0.0127     0.0127    
+20.1   -1.9020    -0.0125    -0.0125    -0.0125   
+25.1   0.3599     0.0049     0.0049     0.0049    
+30.2   1.2756     0.0051     0.0051     0.0051    
+35.2   -2.0354    -0.0112    -0.0112    -0.0112   
+40.2   1.5359     0.0102     0.0102     0.0102    
+45.2   -0.1606    -0.0032    -0.0032    -0.0032   
+
+Monotonicity Check:
+  Sigma=1.0: Monotonic? False
+  Sigma=2.0: Monotonic? False
+  Sigma=5.0: Monotonic? False
+  Sigma=10.0: Monotonic? False
+
+============================================================
+QW-522: TOPOLOGICAL MAPPING (Phase Space)
+============================================================
+Phase Rotation Rate d(theta)/dd: -0.7854
+Expected from omega: -0.7854 (approx)
+
+============================================================
+QW-523: RESONANCE DISTANCES (Mass Gap)
+============================================================
+Resonance Distances (Peaks): [7.307307307307307, 15.315315315315317, 23.323323323323326, 31.331331331331334, 39.33933933933934]
+Spacings: [8.00800801 8.00800801 8.00800801 8.00800801 8.00800801]
+Average Spacing: 8.0080
+Expected 2pi/omega: 8.0000
+
+============================================================
+QW-524: FLUID PROPERTIES (Information Fluid)
+============================================================
+Moment Analysis:
+  K(d) ~ 1/d
+  Moment M0 (Total Force) ~ Int K ~ Int 1/d ~ log(R) -> Diverges (Logarithmically)
+  Moment M2 (Bulk Modulus) ~ Int d^2 K ~ Int d -> Diverges (Quadratically)
+Interpretation:
+  The 'Information Fluid' is NON-LOCAL.
+  It behaves like a stiff, long-range medium (e.g., charged plasma or solid).
+  It is NOT a simple viscous fluid (which requires local interactions).
+================================================================================
+MISSION COMPLETE

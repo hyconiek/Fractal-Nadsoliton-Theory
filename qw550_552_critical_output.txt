@@ -1,0 +1,109 @@
+================================================================================
+QW-550 TO QW-552: CRITICAL HYPOTHESIS TESTS
+Testing 3 Critical Gaps from Post-QW-450 Analysis
+================================================================================
+
+Baseline Parameters:
+  α_geo = 2.7716
+  ω = 0.7854
+  φ = 0.5236
+  β_tors = 0.01
+
+================================================================================
+
+QW-550: HOPFIONS IN NEURAL NETWORK (Evolving Kernel)
+================================================================================
+
+Initialized Hopfion on 32x32 grid (1024 nodes)
+Coupling matrix: 1024x1024
+Initial winding number: -0.980
+
+Evolving with Hebbian dynamics (η=0.001)...
+  Step    0: Winding = -0.980, Energy = 1.97
+  Step  100: Winding = -0.973, Energy = 1.97
+  Step  200: Winding = -0.966, Energy = 1.98
+  Step  300: Winding = -0.968, Energy = 1.99
+  Step  400: Winding = -0.961, Energy = 1.99
+
+================================================================================
+QW-550 RESULT:
+================================================================================
+  Initial winding number: -0.980
+  Final winding number:   -0.993
+  Topological stability:  DESTROYED
+
+  ❌ FAILURE: Hopfion UNSTABLE even with Hebbian learning
+     → H4 (Particles as Vortices) NOT confirmed
+
+
+================================================================================
+QW-551: LEPTON MASSES IN EVOLVING SYSTEM (H5)
+================================================================================
+
+Initial 3-generation coupling matrix:
+[[ 0.          0.71023858 -1.35862385]
+ [ 0.71023858  0.          0.71023858]
+ [-1.35862385  0.71023858  0.        ]]
+
+Evolving network with resonance-driven learning...
+  Iter  200: μ/e = 0.32 (target 207), τ/e = 0.68 (target 3477)
+  Iter  400: μ/e = 0.33 (target 207), τ/e = 0.67 (target 3477)
+  Iter  600: μ/e = 0.32 (target 207), τ/e = 0.68 (target 3477)
+  Iter  800: μ/e = 0.30 (target 207), τ/e = 0.70 (target 3477)
+
+================================================================================
+QW-551 RESULT:
+================================================================================
+  Target: m_μ/m_e = 206.77, m_τ/m_e = 3477.15
+  Result: λ_μ/λ_e = 2.73 (error: 98.7%)
+          λ_τ/λ_e = 3.73 (error: 99.9%)
+
+  ❌ FAILURE: Cannot reproduce lepton masses from evolving system
+     → H5 (Mass as Resistance) NOT confirmed
+     → Error too large (>100%)
+
+
+================================================================================
+QW-552: HEBBIAN GRAVITY SCALING TEST (H6)
+================================================================================
+
+Measuring gravitational force for 8 separations...
+  r =   5: F = 0.014402
+  r =  10: F = 0.012596
+  r =  15: F = 0.012439
+  r =  20: F = 0.010413
+  r =  25: F = 0.008848
+  r =  30: F = 0.010309
+  r =  40: F = 0.009031
+  r =  50: F = 0.007634
+
+================================================================================
+QW-552 RESULT:
+================================================================================
+  Power law fit: F = 0.0221 / r^0.248
+  Target: n = 2.0 (Newton's law)
+  Measured: n = 0.248
+  Error: 87.6%
+
+  ❌ FAILURE: Scaling exponent n = 0.25 (not 2.0)
+     → H6 (Forces as Gradients) NOT confirmed
+     → Still shows CONFINEMENT (n ≈ 0)
+
+
+================================================================================
+FINAL SUMMARY: QW-550 TO QW-552 (Critical Hypothesis Tests)
+================================================================================
+
+Results:
+  ❌ QW-550 (H4: Hopfions): FAILURE
+  ❌ QW-551 (H5: Leptons): FAILURE
+  ❌ QW-552 (H6: Gravity): FAILURE
+
+Overall: 0/3 tests passed (0%)
+
+❌ POOR RESULT: Only 0/3 hypotheses confirmed
+   → Neural Universe paradigm may need further refinement
+
+================================================================================
+MISSION COMPLETE
+================================================================================
