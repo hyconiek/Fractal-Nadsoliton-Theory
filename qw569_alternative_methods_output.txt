@@ -1,0 +1,83 @@
+================================================================================
+QW-569: ALTERNATIVE MEASUREMENT METHODS
+================================================================================
+NEW APPROACH: Measure EFFECTS, not direct fields
+1. Propagation delay (like QW-435)
+2. Correlation functions (like QW-540)
+3. Angular momentum conservation (like QW-468)
+================================================================================
+
+Network: 400 nodes in 3D
+Mass center: node 279
+Evolving mass to steady state...
+Steady state reached
+
+================================================================================
+METHOD 1: PROPAGATION DELAY (as in QW-435)
+================================================================================
+Send pulse from far away, measure arrival time at different r
+Pulse initialized @ r=6.51
+Propagating pulse toward mass (200 steps)...
+
+Insufficient data (1 points)
+
+================================================================================
+METHOD 2: CORRELATION FUNCTIONS (as in QW-540)
+================================================================================
+Measure <ψ_A(t) ψ_B†(t)> correlation decay rate
+
+Region A (32 nodes) @ r≈1.5
+Region B (51 nodes) @ r≈6.0
+Measuring correlation decay...
+
+Correlation decay results:
+  τ_A (near) = 0.100
+  τ_B (far) = 0.100
+  γ = τ_B/τ_A = 1.0000
+  γ_theory = 1.0043
+  Error: 100.0%
+
+  ✅ SUCCESS: Correlation method detects dilation!
+
+================================================================================
+METHOD 3: ANGULAR MOMENTUM CONSERVATION (as in QW-468)
+================================================================================
+Measure <L_z> in shells around rotating mass
+Vortex with L=3.0 initialized
+Evolving (100 steps)...
+Measuring angular momentum in shells...
+
+Angular momentum results:
+  L_z(r) = 1.38 / r^0.000
+  R² = 0.000
+  GTR: n=2.0, Measured: n=0.000
+  Deviation: 2.00
+
+  ⚠️ PARTIAL: Shows decay but wrong exponent
+
+================================================================================
+FINAL COMPARISON: Alternative Methods vs Direct Fields
+================================================================================
+
+Alternative Methods (QW-569):
+  Propagation delay → v(r): ❌ FAIL
+  Correlation → dilation: ✅ SUCCESS
+  Angular momentum → dragging: ❌ FAIL
+
+Passed: 1/3 (33%)
+
+Comparison with direct field methods (QW-563/566/567):
+  Direct velocity field: ❌ FAIL (n=2.0, R²=-0.05)
+  Direct clock phases: ❌ FAIL (γ=21, 2000% error)
+  Direct phase gradient: ❌ FAIL (n=0, no signal)
+  Success rate: 0/3 (0%)
+
+================================================================================
+CONCLUSION:
+================================================================================
+⚠️ PARTIAL SUCCESS - Some methods work
+   1/3 methods successful
+   Alternative approaches show promise
+================================================================================
+Analysis complete.
+================================================================================

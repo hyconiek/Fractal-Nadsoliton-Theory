@@ -1,0 +1,149 @@
+================================================================================
+QW-553 TO QW-557: FRACTAL LAYER TESTS
+Testing with Proper Multi-Scale Architecture
+================================================================================
+
+Frozen Parameters:
+  α_geo = 2.7716
+  ω = 0.7854
+  φ = 0.5236
+  β_tors = 0.01
+  κ = 6.7397 (mass scaling)
+
+================================================================================
+
+QW-557: SCALING INVARIANCE TEST (β^N Universality)
+================================================================================
+
+Testing if all physical quantities scale universally as β^(aN)
+
+Testing 7 fractal layers: N = [ 0  5 10 15 20 25 30]
+
+Gravity_G:
+  Expected exponent: a = 1.00
+  Fitted exponent:   a = 1.000
+  Error: 0.0%
+
+Length_L:
+  Expected exponent: a = -1.00
+  Fitted exponent:   a = -1.000
+  Error: 0.0%
+
+Time_T:
+  Expected exponent: a = -1.00
+  Fitted exponent:   a = -1.000
+  Error: 0.0%
+
+Mass_m:
+  Expected exponent: a = -1.00
+  Fitted exponent:   a = -1.000
+  Error: 0.0%
+
+Energy_E:
+  Expected exponent: a = 0.00
+  Fitted exponent:   a = -0.000
+  Error: 0.0%
+
+Density_rho:
+  Expected exponent: a = 2.00
+  Fitted exponent:   a = 2.000
+  Error: 0.0%
+
+Force_F:
+  Expected exponent: a = 1.00
+  Fitted exponent:   a = 1.000
+  Error: 0.0%
+
+Hubble_H:
+  Expected exponent: a = 1.00
+  Fitted exponent:   a = 1.000
+  Error: 0.0%
+
+Velocity_v:
+  Expected exponent: a = 0.00
+  Fitted exponent:   a = 0.000
+  Error: 0.0%
+
+Action_S:
+  Expected exponent: a = 0.00
+  Fitted exponent:   a = 0.000
+  Error: 0.0%
+
+================================================================================
+QW-557 RESULT:
+================================================================================
+  Mean error across all quantities: 0.0%
+  Maximum error: 0.0%
+  Tested quantities: 10
+
+  ✅ SUCCESS: β^N scaling is UNIVERSAL!
+     → All 10 quantities scale consistently
+     → Fractal layer paradigm VALIDATED
+
+
+================================================================================
+QW-553: MULTI-LAYER GRAVITY TEST (H6)
+================================================================================
+
+Simulating gravity across 20 fractal layers
+Testing 7 separations: r = [ 5 10 15 20 30 40 50]
+
+Multi-layer gravity fit:
+  F(r) = 1.1806 / r^-0.067
+  Target: n = 2.0 (Newton's law)
+  Measured: n = -0.067
+  Error: 103.3%
+
+================================================================================
+QW-553 RESULT:
+ ================================================================================
+  ❌ FAILURE: Exponent n = -0.07 (not 2.0)
+     → Multi-layer averaging did NOT fix scaling
+
+
+================================================================================
+QW-554: LAYER-SPECIFIC LEPTON MASSES (H5)
+================================================================================
+
+Lepton layers:
+  Electron: N = 10
+  Muon:     N = 11
+  Tau:      N = 12
+
+Mass ratios from layer scaling:
+  m_μ / m_e = 100.00
+  Expected:   6.74 (κ from QW-481)
+  Error:      1383.7%
+
+  m_τ / m_e = 10000.00
+  Expected:   45.42 (κ² from QW-481)
+  Error:      21915.0%
+
+================================================================================
+QW-554 RESULT:
+================================================================================
+  ❌ FAILURE: Errors too large (μ: 1384%, τ: 21915%)
+
+
+================================================================================
+FINAL SUMMARY: QW-553 TO QW-557 (Fractal Layer Tests)
+================================================================================
+
+Results (Implemented Tests):
+  ✅ QW-557 (Universality): SUCCESS
+  ❌ QW-553 (Multi-Layer Gravity): FAILURE
+  ❌ QW-554 (Layer-Specific Leptons): FAILURE
+  ⚠️ QW-555 (Hopfions N=10): NOT IMPLEMENTED (Complex topology simulation)
+  ⚠️ QW-556 (Cross-Layer Coupling): NOT IMPLEMENTED (Requires full multi-layer architecture)
+
+Implemented: 3/5 tests
+Passed: 1/3 (33%)
+
+❌ POOR RESULT: Only 1/3 tests passed
+
+================================================================================
+Next Steps:
+  1. QW-555 (Hopfions) requires full topological simulation on N=10
+  2. QW-556 (Cross-layer) requires implementing layer coupling mechanism
+  3. Update raport_dowodowy_hipotez.md with corrected multi-layer evidence
+================================================================================
