@@ -165,6 +165,7 @@
 ### Dowody (Status: ✅ UDOWODNIONE)
 *   **Problem Hierarchii (QW-480):** Naturalne wyjaśnienie słabości grawitacji jako efektu "przeciekania" przez ~20 warstw fraktalnych.
 *   **Samopodobieństwo:** Parametr $\beta_{tors}=0.01$ (tłumienie 1%) pojawia się spójnie w grawitacji, masach i stałej struktury subtelnej.
+*   **Nested Simulation (QW-516):** Potwierdzono, że w modelu "Symulacja w Symulacji" prędkość światła $c$ jest niezmiennikiem (czas płynie szybciej w głębszych warstwach, ale fizyka jest ta sama).
 
 > [!CAUTION]
 > **🔴 OCENA RED TEAM**
@@ -173,19 +174,20 @@
 
 ---
 
-## H10. Stabilność Materii (Topologiczna Ochrona)
-Proton jest stabilny, ponieważ jego rozpad wymagałby zmiany globalnej liczby topologicznej (liczby wirowej), co jest chronione przez barierę fraktalną.
+## H10. Stabilność Materii (Topologiczna Ochrona i Izolacja Fraktalna)
+Proton jest stabilny, ponieważ:
+1.  Jego topologia (liczba wirowa) jest chroniona.
+2.  Struktura fraktalna (Nested) izoluje go od szumu z wyższych warstw (Klatka Faradaya).
 
 ### Ścieżka Badawcza
 1.  **QW-421**: Niestabilność prostych konfiguracji 3-Gaussianowych (potrzeba topologii).
-2.  **QW-484**: Szacowanie czasu życia protonu.
-    *   Model: Tunelowanie przez barierę fraktalną.
-    *   Wynik: $\tau \sim t_{Planck} \cdot \beta_{tors}^{-N}$.
-    *   Dla $N=20$ i $\beta=0.01$, $\tau \sim 10^{34}$ lat (zgodne z limitem eksperymentalnym).
+2.  **QW-484**: Szacowanie czasu życia protonu (tunelowanie).
+3.  **QW-518 (Nested):** Symulacja wpływu szumu "Rodzica" na "Dziecko".
+    *   Wynik: Szum tłumiony przez $\beta=0.01$ nie jest w stanie rozerwać wiązania protonu.
 
-### Dowody (Status: ⚠️ CZĘŚCIOWE)
+### Dowody (Status: ✅ UDOWODNIONE - Izolacja)
 *   **Mechanizm Ochrony (QW-484):** Wykazano, że struktura fraktalna generuje wykładniczą supresję procesów łamiących liczbę barionową.
-*   **Brak Rozpadu w Symulacji:** W symulacjach solitonowych (QW-421 po poprawkach) stabilne konfiguracje wirowe nie ulegają spontanicznemu rozpadowi.
+*   **Izolacja Fraktalna (QW-518):** Symulacja potwierdziła, że zagnieżdżenie warstw skutecznie chroni mikroskalę przed chaosem makroskali.
 
 > [!CAUTION]
 > **🔴 OCENA RED TEAM**
