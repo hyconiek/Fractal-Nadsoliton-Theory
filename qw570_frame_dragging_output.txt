@@ -1,0 +1,45 @@
+================================================================================
+QW-570: FRAME DRAGGING ENHANCED
+================================================================================
+Methodology from QW-405 (Success):
+1. Active driving (Omega * L_z term in Hamiltonian)
+2. Larger network (N=1500) for smoother gradients
+3. Measure angular momentum transfer to vacuum
+================================================================================
+
+Initializing N=1500 network...
+  Nodes in mass region (r < 1.5): 14
+  Nodes in vacuum region: 1486
+Building Hamiltonian (this may take a moment)...
+Hamiltonian built in 0.5s
+
+Adding active rotation term (L_z) to mass nodes...
+Rotation term added.
+
+Evolving system (Active Driving)...
+Initial Vacuum L_z: 0.000000
+  Step 0: Vacuum L_z = 0.281034
+  Step 50: Vacuum L_z = 0.634750
+  Step 100: Vacuum L_z = -0.337795
+  Step 150: Vacuum L_z = 0.065618
+  Step 200: Vacuum L_z = 0.382540
+  Step 250: Vacuum L_z = -0.424491
+  Step 300: Vacuum L_z = -0.535107
+  Step 350: Vacuum L_z = 0.683560
+  Step 400: Vacuum L_z = 0.407834
+  Step 450: Vacuum L_z = 0.428657
+Final Vacuum L_z: -0.007687
+Change ΔL_z: -0.007687
+
+Analyzing Rotation Curve v_φ(r)...
+
+Rotation Curve Results:
+  v_φ(r) = 0.9796 / r^1.5999
+  R² = 0.3767
+  GTR Prediction: n ≈ 2.0 (1/r²)
+  Measured: n = 1.5999
+
+❌ FAIL: No clear rotation profile
+================================================================================
+QW-570 ANALYSIS COMPLETE
+================================================================================
