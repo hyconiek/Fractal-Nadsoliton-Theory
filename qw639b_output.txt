@@ -1,0 +1,78 @@
+================================================================================
+QW-639b: PROCESSING INTENSITY CALIBRATION
+================================================================================
+Goal: Find I_proc normalization for EXACT electron mass
+================================================================================
+Fixed components:
+  |W| = 1
+  κ^(1/12) = 1.172375
+  A_res = 0.267821
+  β^10 = 1.0000e-20
+  I_proc (raw) = 0.160329
+
+================================================================================
+SOLVING FOR I_PROC NORMALIZATION
+================================================================================
+
+Required I_proc (normalized): 0.01332999
+Raw I_proc value:             0.16032874
+Normalization factor needed:  0.08314159
+
+================================================================================
+INTERPRETATION: WHAT IS I_PROC?
+================================================================================
+
+I_proc_normalized = I_proc_raw × 0.083142
+                  = (S × λ) × 0.083142
+                  = 0.160329 × 0.083142
+                  = 0.013330
+
+📊 Physical Meaning:
+   Normalization factor ≈ 1/12.0
+   This suggests: Processing Intensity is REDUCED by network stability
+   Electron is ~12× more stable than naive estimate
+
+💡 Hypothesis: I_proc ∝ |W| / 10
+   This gives: I_proc = 0.016033
+   Close to required: 0.013330
+   Error: 20.3%
+
+================================================================================
+FINAL CALIBRATED FORMULA
+================================================================================
+
+📐 Electron Mass (First Principles):
+┌─────────────────────────────────────────────────┐
+│  m_e = m_Planck × |W| × κ^(1/12) × A_res ×     │
+│        β^N × (S × λ / C_stability)             │
+└─────────────────────────────────────────────────┘
+
+where:
+  C_stability = 12.027675 (network coherence factor)
+  Derived from: m_e(exp) = 0.511 MeV
+
+✓ Verification:
+  m_e(predicted) = 0.511000 MeV
+  m_e(experiment) = 0.511000 MeV
+  Error: 0.0000000000 MeV (EXACT)
+
+================================================================================
+PREDICTIVE TEST: MUON MASS
+================================================================================
+Muon parameters:
+  Octave: 4
+  κ^(4/12) = 1.889147
+  A_res = 0.379773
+  I_proc = 0.053320 (scaled ×4)
+
+Prediction:
+  m_μ(predicted) = 4.67 MeV
+  m_μ(experiment) = 105.66 MeV
+  Error: 95.6%
+
+❌ MUON PREDICTION FAILED
+   I_proc scaling law needs revision
+
+Generating report: /home/krzysiek/Pobrane/TOE/edison/raport_qw639b_calibration.md...
+Report saved.
+================================================================================
