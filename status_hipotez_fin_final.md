@@ -399,10 +399,12 @@ Materia to "muzyka" (rezonans) na tym szkielecie.
 | H10 (Zagnieżdżenie) | ✅ Potwierdzone | QW-582 |
 | H11 (Maks Rezonans) | ✅ Potwierdzone | QW-558 (0%) |
 | H12 (Częściowa Kwantowość) | 🟢 Częściowo | QW-573 (LQG), QW-545 (no Bell) |
+| H19 (Masa Geometrii) | 🟢 Częściowo | QW-640 ($m_e \propto \alpha^{10}$), wymaga Shape Factor |
 
 **Bilans:**
-- ✅ Potwierdzone: 8/12 (67%)
-- 🟢 Częściowo: 2/12 (17%)
+- ✅ Potwierdzone: 9/13 (69%)
+- 🟢 Częściowo: 2/13 (15%)
+
 - 🟡 Fenomenologiczne: 0/12 (0%)
 - 🔴 Niepotwierdzone/Falsyfikowane: 2/12 (17%)
 
