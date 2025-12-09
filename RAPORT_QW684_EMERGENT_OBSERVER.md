@@ -1,5 +1,5 @@
 # RAPORT: QW-684 EMERGENT OBSERVER BELL TEST
-**Data:** 2025-12-06 23:30:21.589041
+**Data:** 2025-12-08 15:40:59.621725
 **Hipoteza:** Emergentny obserwator widzi inną kwantowość niż widok zewnętrzny
 
 ## 1. KONCEPCJA

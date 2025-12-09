@@ -1,5 +1,5 @@
 # RAPORT: QW-692 LABORATORY PARADOX
-**Data:** 2025-12-07 01:23:51.506074
+**Data:** 2025-12-07 01:45:47.095345
 **Cel:** Czy 'wyciszenie' warstw fraktalnych (Lab) przywraca łamanie Bella?
 
 ## 1. WYNIKI
