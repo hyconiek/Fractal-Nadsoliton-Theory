@@ -1,5 +1,5 @@
 # RAPORT: WIDMO WODORU (QW-676)
-**Data:** 2025-12-06 22:12:12.239326
+**Data:** 2025-12-08 20:42:57.966092
 **Cel:** Czy FIN produkuje $E_n \propto 1/n^2$?
 
 ## 1. SETUP
