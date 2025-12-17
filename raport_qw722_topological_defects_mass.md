@@ -1,5 +1,5 @@
 # RAPORT QW-722: MODELOWANIE MAS JAKO DEFEKTÓW TOPOLOGICZNYCH
-**Data:** 2025-12-08 23:39:36.734804
+**Data:** 2025-12-17 01:54:50.131534
 
 ## 1. Metoda
 Masy modelowane jako defekty topologiczne (winding numbers) w sieci oktaw.
