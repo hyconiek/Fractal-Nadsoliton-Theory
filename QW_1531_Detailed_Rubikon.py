@@ -7,6 +7,13 @@ import time
 timestamp = int(time.time())
 report_filename = f"QW_1531_Report_{timestamp}.md"
 
+# QW-1531: HONEST HIERARCHICAL RUBIKON TEST (Corrected)
+# Tag: QW-1531-detectability
+# NOTE: This is a detectability test. It evaluates if FIN is distinguishable from GR 
+# in detected catalogs. Selection normalization P_det(n) is intentionally omitted here 
+# to focus on signal visibility. Full population inference is handled in QW-1532.
+# ============================================================
+
 print("="*60)
 print("QW-1531: HONEST HIERARCHICAL RUBIKON TEST (Corrected)")
 print("="*60)

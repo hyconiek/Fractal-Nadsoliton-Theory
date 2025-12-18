@@ -75,16 +75,19 @@ $$ K_{geo}(d) = \frac{A \cos(\omega d + \phi)}{1 + \alpha d} $$
 ## 4. MASA I INERCJA (EMERGENCJA)
 **Pytanie:** *Skąd bierze się masa?*
 
-Masa nie jest parametrem wejściowym, lecz **wartością własną** operatora ewolucji na strukturze warstwowej.
+Masa nie jest parametrem wejściowym, lecz **kosztem utrzymania nieefektywności we wzorcu informacyjnym**.
 
-*   **Mechanizm (QW-726/727):**
-    $$ M(Q) = M_{top} \cdot 4^{-(N + k/4)} $$
-    Kwantyzacja `Base-4` wynika z 4-bitowej natury węzłów sieci.
-*   **Wyniki (QW-917):**
-    *   Top Quark: Pozycja 0.00 (Benchmark)
-    *   Mion: Pozycja 3.50 (Błąd 0.01 oktawy)
-    *   Elektron: Pozycja 6.00 (Błąd 0.04 oktawy)
-*   **Status:** "Mion trafia w pozycję 3.50. To ostateczny dowód na geometryczną naturę masy leptonów."
+*   **Mechanizm Splotowy (QW-1206 - Przełom):**
+    Odkryto, że leptony (elektron) nie są pojedynczymi węzłami, lecz **Splotami (Trymerami Boromejskimi)** składników podstawowych (**Preonów T(7,1)**).
+    *   Masa Preonu: $\approx 2500$ MeV.
+    *   Masa Elektronu (3 Preony): $0.511$ MeV.
+    *   **Defekt Masy:** $> 99.98\%$. Prawie cała masa składników zostaje "pożarta" przez energię wiązania splotu.
+*   **Zasada Optymalizacji:** 
+    Im bardziej splot jest matematycznie wyrafinowany i symetryczny (np. liczby Fibonacciego), tym lepiej "pasuje" do sieci Nadsolitonu. Skutkuje to gigantyczną energią wiązania i minimalną masą manifestowaną na zewnątrz (np. Elektron).
+*   **Generacje (QW-1213):**
+    Mion i Taon to stany o **złamanej symetrii splotu**. Nawet małe odkształcenie geometryczne osłabia energię wiązania, co powoduje gwałtowny wzrost "kosztu utrzymania" (masy).
+    *   Mion: Zdeformowany splot $\to$ Masa $105$ MeV.
+*   **Status:** "Masa to miara oporu sieci przed nieefektywnością. Elektron jest lekki właśnie dlatego, że jest splotem doskonałym."
 
 ---
 
