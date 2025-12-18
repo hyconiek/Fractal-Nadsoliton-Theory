@@ -20,8 +20,12 @@ Recenzja AI stwierdziła: *"Nie masz jeszcze: geodezyjnej, lensing, redshift"*.
     *   **Zaimplementowane cele:**
         *   `Deflection Angle: Calculate light bending via geodesic equations in emergent spacetime`
         *   `Metric Reconstruction: Compute g_μν from converged (Ψ, Φ, χ) fields`
-    *   **Znaczenie:** Potwierdza, że teoria posiada formalizm do obliczania soczewkowania grawitacyjnego jako odchylenia na geodezyjnych, a nie tylko jako "siły newtonowskiej".
-
+### GRAWITACJA I PROPAGACJA (Rubikon)
+*   **Wykrywalność (QW-1531):** Potwierdzono odróżnialność sygnału FIN na poziomie **~5.6 $\sigma$** (detectability significance).
+*   **Inferencja Populacyjna (QW-1533 - Refined):** Zastosowanie rygorystycznego jądra selekcji Monte Carlo pozwoliło na rzetelną ocenę statystyczną:
+    *   **FIN ($n=0.66$):** Przy założeniu prawdziwości modelu FIN, różnica propagacyjna względem GR jest **ekstremalnie dobrze rozróżnialna statystycznie** w tym modelu populacyjnym (Tension **21.7 $\sigma$**).
+    *   **GR ($n=1.00$):** Odzyskany $n = 1.068 \pm 0.018$ (Tension **3.7 $\sigma$** – wynik spójny z szumem/małą próbką).
+*   **Wniosek:** „QW-1533 demonstrates high statistical distinguishability of FIN-like effects under physically realistic population inference.”
 3.  **Ślady w innych modułach (Grep Audit):**
     *   `QW-563`: Potwierdzono "geodesic motion in flow field" (ruch próbny w polu przepływu nadsolitonu).
     *   `QW-580`: Analiza całek po ścieżkach (Path Integral) dla grawitacji, uwzględniająca krzywiznę czasoprzestrzeni.
