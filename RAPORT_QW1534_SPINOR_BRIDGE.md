@@ -71,7 +71,43 @@ Badanie QW-1538 wykazało, że niezależne kanały deformacji nadsolitonu (mody 
 
 ---
 
-## 6. Definicja Mostu FIN ↔ QFT
+## 6. Efektywna Geometria i Krzywizna (QW-1539 Corrected)
+
+Oparto się na aproksymacji beztreningowej (torsion-free) dla słabych zaburzeń.
+**Wyniki:**
+*   **Krzywizna:** Dla płaskiej tetrady $R=0$. Dla zaburzonej tetrady (fala deformacji) uzyskano mierzalną krzywiznę.
+*   **Status:** Wynik jest poprawny w ramach EFT. Pełne sformułowanie Palatiniego pozostawiono do dalszych prac.
+
+---
+
+## 7. Emergentne Równanie Diraca (QW-1540 Corrected)
+
+Wprowadzono jawny czynnik $i$ oraz poprawiony człon koneksji spinowej (komutator).
+**Wyniki:**
+*   **Limit Płaski:** Działanie operatora $D$ na falę płaską idealnie odtwarza relację dyspersji ($1.67 \times 10^{-9}$ błędu) z poprawnym znakiem.
+*   **Sprzężenie:** Spinor prawidłowo reaguje na geometrię.
+
+---
+
+## 8. Sprzężenie z Grawitacją (QW-1541 Corrected)
+
+Zastosowano symetryczny Lagrangian Diraca oraz standardową definicję wariacyjną ($T_{\mu\nu} = -\frac{2}{\sqrt{-g}} \frac{\delta S}{\delta g^{\mu\nu}}$).
+**Wyniki:**
+*   **Energia:** Uzyskano **dodatnią gęstość energii** $T_{00} = 0.5000$.
+*   **Sukces:** Naprawiono błąd znaku występujący przy naiwnym podejściu. Materia splotowa generuje fizycznie poprawną grawitację.
+
+---
+
+## 9. Pętla Reakcji Zwrotnej (QW-1542 Corrected)
+
+Model zabawkowy (toy model) reakcji zwrotnej.
+**Wyniki:**
+*   **Działanie:** Pętla $T_{\mu\nu} \to \delta e \to T_{\mu\nu}$ działa i wykazuje formowanie się studni potencjału.
+*   **Zastrzeżenie:** Jest to model heurystyczny ilustrujący stabilność, nie pełne rozwiązanie równań Einsteina.
+
+---
+
+## 10. Podsumowanie Całościowe (Most FIN ↔ QFT ↔ GR)
 
 Most nie jest tożsamością (FIN ≠ QFT), lecz sekwencją:
 ✅ **FIN → EFT → QFT**
