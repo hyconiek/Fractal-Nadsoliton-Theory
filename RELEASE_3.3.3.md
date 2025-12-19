@@ -64,4 +64,4 @@ To maintain scientific rigor, this release acknowledges the following open probl
 *   **Synthesis:** `RAPORT_QW1534_SPINOR_BRIDGE.md` (Total Bridge Overview).
 *   **Detailed Results:** `RAPORT_QW1541_GRAVITY_CORRECTED.md` and related technical logs.
 
-**Full Paper Update:** The TeX documentation has been updated to reflect the transition from "Topological Analogies" to "Formal Effective Bridge".
+
