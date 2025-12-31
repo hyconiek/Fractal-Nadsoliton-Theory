@@ -1,4 +1,4 @@
-# 🚀 Release 3.5 — *Rigorous Consistency & Quantization Tests*
+# 🚀 Release 3.5.0 — *Rigorous Consistency & Quantization Tests*
 
 **(QW-1611 → QW-1624)**
 
@@ -76,6 +76,6 @@ This release finalizes **Phase 5** of the FIN research program, focused on **str
 
 ---
 
-**Release:** 3.5
+**Release:** 3.5.0
 **Date:** 2025-12-30
 **Status:** Methodologically normalized, no overclaims
