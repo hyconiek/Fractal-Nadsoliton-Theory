@@ -2,7 +2,7 @@
 
 **Krzysztof Żuchowski**  
 *Independent Researcher, Fractal Information Theory Project*  
-*Current Version: 3.2.1 — Neural Genesis & Preon Unification (2025-12-11)*
+*Current Version: 3.5.0 — Neural Genesis & Preon Unification (2025-12-30)*
 
 ---
 
@@ -141,6 +141,7 @@ Particle masses follow Fibonacci pattern:
 
 - **[TOE_FINAL_DOCUMENTATION.pdf](TOE_FINAL_DOCUMENTATION.pdf)** — Complete 81-page scientific documentation (4594 lines LaTeX)
 - **[QW Studies](.)** — 1160+ verification scripts (Python)
+- **[Zenodo Archive (DOI)](https://doi.org/10.5281/zenodo.17645737)** — Permanent citation record
 - **[gemini_sum.md](gemini_sum.md)** — Research summary in Polish
 
 ---
