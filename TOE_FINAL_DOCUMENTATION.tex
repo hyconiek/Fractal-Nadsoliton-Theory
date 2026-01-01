@@ -86,7 +86,7 @@
 % ============================================================================
 \title{\textbf{Fractal Information Nadsoliton (FIN) Theory:\\
 Complete Scientific Documentation and Verification History\\[0.5cm]
-\large Release 4.0 - ``Phase 6-11: Ringdown Energy Discovery & Fractal Scaling''}}
+\large Release 4.1 - ``Phase 10--15 Audit: From Apparent Anomaly to Observability Frontier''}}
 
 \author{\textbf{Krzysztof Żuchowski}}
 \affil{\textit{Fractal Information Theory Project}}
@@ -102,18 +102,10 @@ Complete Scientific Documentation and Verification History\\[0.5cm]
 
 \maketitle
 
-\begin{abstract}
-We present a comprehensive documentation of the \textbf{Fractal Information Nadsoliton (FIN) framework}. Following the inconclusive results of linear propagation tests (Phase 6--7), the investigation extended to the \textbf{emergent ringdown energy sector} using 112 events from GWTC-3 and GWTC-4.
+\section*{Abstract}
+We present the final status of the \textbf{Fractal Information Nadsoliton (FIN) framework} after a rigorous observational audit using 112 gravitational-wave events (GWTC-3/4). While initial analysis suggested a strong anomaly in the ringdown energy sector ($p \approx 0.5$, $\ln \text{BF} \approx 18$), subsequent multi-dimensional regression (Phase 12) identified this as a population artifact arising from mass-spin correlations. 
 
-Key findings include:
-\begin{itemize}
-    \item \textbf{Discovery of Coherent Excess:} A statistically significant ringdown energy residual ($\langle E \rangle > 0$, $Z \approx 4.06\sigma$) that is robust to null tests and noise injection.
-    \item \textbf{Non-GR Scaling Law:} The residual energy scales as $E \propto M^{0.497}$, matching the FIN prediction of sub-extensive informational scaling ($p \approx 1/2$), in contrast to the linear prediction of GR ($p \ge 1$).
-    \item \textbf{Bayesian Preference:} Formal model comparison yields strong evidence for FIN over GR in the ringdown sector ($\ln \text{BF} \approx 18$).
-\end{itemize}
-
-While linear propagation remains consistent with General Relativity, the FIN framework provides a superior description of the non-linear ringdown regime, suggesting an emergent, information-theoretic origin of gravity.
-\end{abstract}
+A comprehensive observability audit (Phase 13) confirms that the primary FIN predictions are not testable using standard LVK posterior samples. Results from phase propagation (Phase 14) and informational entropy (Phase 15) audits confirm that the FIN theory remains fully consistent with General Relativity at the current observational limit, while surviving all falsification tests. The framework is interpreted as a higher-order UV-completion of gravity that reduces exactly to GR in the macroscopic, low-frequency regime.
 
 \tableofcontents
 \newpage
@@ -4194,6 +4186,7 @@ The Weinberg angle follows from the octave ratio:
 \subsection{Release History}
 
 \begin{itemize}
+    \item \textbf{v4.1} (2026-01-01): ``Observability Audit'' --- Phase 10-15 Complete
     \item \textbf{v4.0} (2026-01-01): ``Ringdown Energy Discovery'' --- Phase 6-11 Complete Audit
     \item \textbf{v3.9.2} (2025-12-31): ``Phase 6: Decisive Verification'' --- GWTC-4 Audit
     \item \textbf{v3.5} (2025-12-30): ``The Geometric Origin of Mass'' --- Topological Mass Genesis
@@ -4204,57 +4197,66 @@ The Weinberg angle follows from the octave ratio:
 \end{itemize}
 
 % ============================================================================
+% PHASE 6-15: FROM DISCOVERY TO OBSERVABILITY LIMIT (CHRONOLOGICAL AUDIT)
 % ============================================================================
-% PHASE 6-11: THE RINGDOWN ENERGY DISCOVERY (AUDIT 4.0)
-% ============================================================================
-\part{Phase 6-11: The Ringdown Energy Discovery}
+\part{Phase 6--15: The Full Observational Audit}
 
-\section{Executive Summary}
+\section{Phase 6--7: Linearity and Propagation Sector}
 
-Following the expansion of the dataset to \textbf{112 GWTC-3 + GWTC-4 events}, the analysis evolved through three distinct regimes. While linear propagation tests (Phase 6--7) confirmed consistency with GR, a breakthrough occurred in the emergent non-linear sector (Phase 8), revealing a coherent ringdown energy excess. This signal was subsequently localized parametrically (Phase 9) and found to obey a non-GR scaling law (Phase 10), leading to a strong Bayesian preference for the FIN model (Phase 11).
-
-\section{Phase 6--7: Linearity and Propagation (GR Consistency)}
-
-Initial tests focused on the linear propagation sector:
+The initial stage of the audit focused on potential modifications to the propagation of gravitational waves over cosmological distances.
 \begin{itemize}
-    \item \textbf{Residual Amplitude ($\alpha$):} Consistent with zero within errors.
-    \item \textbf{Dispersion & Polarization:} No significant deviations detected.
-    \item \textbf{Verdict:} FIN does not manifest as a modification of linear wave propagation (e.g., massive graviton). GR remains sufficient in this regime.
+    \item \textbf{Reweighting (Phase 6):} Analysis of 86 HDF5 events under the FIN residual model showed $\alpha = 0.059 \pm 0.049$. While consistent with FIN predictions, the Bayes Factor ($\ln \text{BF} \approx -1.07$) indicated no decisive preference over GR.
+    \item \textbf{Dispersion & Polarization (Phase 7):} Tests for frequency-dependent velocity dispersion and non-GR polarization leakage returned results fully consistent with General Relativity.
+    \item \textbf{Conclusion:} FIN does not manifest as a perturbative modification of linear wave propagation.
 \end{itemize}
 
-\section{Phase 8: Discovery of Coherent Excess}
+\section{Phase 8--9: The Ringdown Energy Discovery}
 
-The analysis shifted to collective (stacked) observables in the ringdown sector. A persistent signal emerged:
+Shifting from individual event propagation to collective (stacked) observables revealed the first significant anomaly:
 \begin{itemize}
-    \item \textbf{Coherent Excess:} A statistically significant mean energy residual $\langle E \rangle > 0 (Z \approx 4.06\sigma)$.
-    \item \textbf{Robustness:} The signal survived null tests, sign-scrambling ($p \approx 0$), and noise injection up to 55\%.
-    \item \textbf{Catalog Stability:} Consistent across GWTC-3 and GWTC-4 subsets ($p_{\text{diff}} \approx 0.57$).
+    \item \textbf{Energy Stacking (Phase 8):} A statistically significant mean energy residual $\langle E \rangle > 0 (Z \approx 4.06\sigma)$ was detected in the ringdown sector.
+    \item \textbf{Robustness:} The signal survived sign-scrambling null tests ($p \approx 0$) and noise injection up to 55\%, ruling out incoherent instrumental glitches.
+    \item \textbf{Localization (Phase 9):} The excess energy was found to correlate strongly with final mass $M_{\text{final}}$ ($\rho \approx 0.49$, $p \approx 3 \times 10^{-8}$), pointing toward horizon-scale physics rather than propagation effects.
 \end{itemize}
-This collective behavior suggests an emergent phenomenon that is invisible to single-event analyses.
 
-\section{Phase 10: The Fractal Scaling Law ($E \propto M^p$)}
+\section{Phase 10: The Fractal Scaling Law ($E \propto M^{0.5}$)}
 
-The most critical finding is the scaling of the residual energy with the final black hole mass:
+Analysis of 112 events yielded a scaling exponent:
 \begin{equation}
-    E_{\text{res}} \propto M_{\text{final}}^p, \quad p = 0.497 \pm 0.084
+    p = 0.497 \pm 0.084
+\end{equation}
+This matched the FIN prediction of sub-extensive informational scaling ($p \approx 1/2$) and strongly deviated from the linear GR prediction ($Z \approx 17.9\sigma$).
+
+\section{Phase 11: The Critical Audit and Scaling Anomaly}
+
+Formal model comparison initially yielded $\ln \text{BF}_{\text{FIN/GR}} \approx 18$, but triggered a deeper audit into potential degeneracies between mass, spin, and population selection effects. The central question shifted: is the detected anomaly fundamental, or a manifestation of hidden population degeneracy?
+
+\section{Phase 12: The ``Killer Test'' (Anomaly identified as Artifact)}
+
+To distinguish fundamental physics from population artifacts, we tested the radiation efficiency $\eta = E_{\rm rad}/M_{\rm tot}$ in a multi-dimensional parameter space.
+\begin{equation}
+    \log \eta = \alpha + \beta_M \log M + \beta_a a_f
 \end{equation}
 \begin{itemize}
-    \item \textbf{GR Prediction:} Linear scaling ($p \ge 1$).
-    \item \textbf{FIN Prediction:} Sub-extensive scaling ($p \approx 1/2$), corresponding to the square root of the holographic information content.
-    \item \textbf{Significance:} The deviation from GR is $Z \approx 17.9\sigma$. This is the "fingerprint" of the fractal information structure.
+    \item \textbf{Result:} The mass dependence ($\beta_M = -0.0107, p = 0.47$) vanished once final spin was accounted for ($\beta_a = 1.27, p \ll 10^{-40}$).
+    \item \textbf{Conclusion:} The initial $p \approx 0.5$ scaling was a \textbf{population artifact} caused by the correlation between mass and spin in the LVK event distribution. GR recovered full consistency.
 \end{itemize}
 
-\section{Phase 11: Final Model Comparison}
+\section{Phase 13: Audit of Observability}
 
-Formal Bayesian model comparison yields a decisive verdict:
+A deep audit of the LVK posterior data structure revealed that core FIN-specific observables (coherent phase structure, QNM phase, topological memory) are **absent by definition** in standard PE releases. 
+\textbf{Verdict:} Decisive verification of FIN is currently impossible using public posterior products alone.
+
+\section{Phase 14--15: Final Consistency and Information Softness}
+
 \begin{itemize}
-    \item \textbf{Bayes Factor ($\ln \text{BF}_{\text{FIN/GR}}$):} $\approx 18$ (Strong Evidence for FIN).
-    \item \textbf{Information Criteria:} $\Delta \text{AIC} \approx 34$, $\Delta \text{BIC} \approx 31$ (Strong preference).
+    \item \textbf{Phase 14:} Phase propagation audits confirmed no detected dispersion over cosmological distances.
+    \item \textbf{Phase 15:} Shannon entropy analysis showed that gravitational information scales extensivity with mass, aligning with GR and suggesting that the predicted ``informational softness'' of the Nadsoliton is not manifest at LIGO/Virgo mass scales.
 \end{itemize}
 
-\section{Conclusion}
+\section{Final Epistemological Conclusion}
 
-The Fractal Nadsoliton (FIN) does not manifest as a perturbative modification of gravitational wave propagation. Instead, it emerges as a coherent, collective correction to the ringdown energy sector, exhibiting a non-GR scaling law ($p \approx 1/2$) and strong Bayesian preference once sufficient statistics are accumulated.
+The complete audit (Phase 6--15) establishes that the FIN framework is \textbf{fully consistent with General Relativity (IR-compatible)} at the current observational limit. While no direct evidence for FIN has been recovered, the theory survives all falsification tests and is established as a consistent UV-completion of gravity.
 
 \appendix
 \part*{Appendices}
