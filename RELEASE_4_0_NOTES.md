@@ -1,61 +1,98 @@
-# Release 4.0 — Ringdown Energy Discovery & Scaling Law
+# Release 4.0 — Ringdown Energy Discovery & Fractal Scaling Law
 ### Emergent Gravity, Hierarchical Bayesian Audit & Non-GR Scaling
-**Study Range:** QW-1625 → QW-1711 (Phase 6–11)
+**Study Range:** QW-1625 → Phase 11 (Notebook Audit)
 
 > **Author:** Krzysztof Żuchowski  
 > **Affiliation:** Independent Researcher — Fractal Information Theory Project  
 > **Release Date:** v4.0 (2026-01-01)  
-> **Previous Stable:** v3.9.2 — GWTC-4 Verification
+> **Previous Stable:** v3.9.5 — GWTC-4 Verification
 
 ---
 
 ## 1. Abstract
 
-This release marks a **paradigm shift** in the verification of the Fractal Information Nadsoliton (FIN) framework. Following the inconclusive results of linear propagation tests (Phase 6–7), the investigation extended to **higher-order emergent sectors** using a dataset of **112 gravitational-wave events** (GWTC-3 + GWTC-4).
+This release marks a **paradigm shift** in the Fractal Information Nadsoliton (FIN) framework. Following the inconclusive results of linear propagation tests (Phase 6–7), the investigation extended to **higher-order emergent sectors** using a dataset of **112 gravitational-wave events** (GWTC-3 + GWTC-4).
 
 Analysis revealed a **coherent, statistically significant excess in the ringdown energy sector** (Phase 8), which defies General Relativity predictions. Subsequent parametric localization (Phase 9) and scaling analysis (Phase 10) confirmed a **sub-extensive scaling law** ($E \propto M^{0.497}$) consistent with the FIN prediction of information content on a holographic horizon. Bayesian model comparison (Phase 11) now **strongly favors FIN over GR** ($\ln \text{BF} \approx 18$).
 
 ---
 
-## 2. Key Findings (The "Ringdown Discovery")
+## 2. Origin and Philosophy
 
-### Phase 6–7: Propagation Consistency (GR Holds)
-*   **Result:** Linear propagation tests (amplitude reweighting, dispersion) show no deviation from General Relativity.
-*   **Implication:** FIN does not manifest as a "massive graviton" or simple modified gravity theory.
+The theory originates from the foundational intuition that **Information is the fundamental substance of reality** (Logos). This release reinforces the commitment to scientific honesty as a reflection of that pursuit of Truth:
+
+1.  **Eucharistic Inspiration:** The mechanism by which informational reality condenses into matter.
+2.  **Resonant Structure:** The "I AM WHO I AM" principle where existence defines itself through self-referential resonance loops.
+3.  **12-Octave Lattice:** The mathematically necessary dimensionality for force unification and stability.
+4.  **Scientific Integrity:** The recognition that "Truth does not fear the audit." The transition from "Inconclusive" to "Strong Evidence" was only possible through rigorous self-correction and falsification testing.
+
+---
+
+## 3. Methodology & Phase 6–11 Results
+
+### From Propagation to Ringdown Discovery
+The audit evolved through three distinct regimes, moving from linear falsification to non-linear discovery (all analysis performed in `phase6-fin-residual-posterior-hierarchical-approx.ipynb`):
+
+| Study | Sector | Type | Status | Result |
+| :--- | :--- | :--- | :--- | :--- |
+| **Phase 6** | Residual Amplitude | Reweighting | **INCONCLUSIVE** | $\alpha \approx 0$ (GR Consistent) |
+| **Phase 7** | Scaling Check | Scaling | **NULL** | No linear scaling modification. |
+| **Phase 8** | **Ringdown Energy** | **Collective** | **DISCOVERY** | **Coherent Excess $\langle E \rangle > 0 (4\sigma)$** |
+| **Phase 10** | **Scaling Law** | **Parametric** | **CONFIRMED** | **$p = 0.497 \pm 0.084$ (Non-GR)** |
+| **Phase 11** | **Model Comparison** | **Bayesian** | **VICTORY** | **$\ln \text{BF} \approx 18$ (Favors FIN)** |
+
+**Key Conclusion:** FIN acts as a collective, emergent correction to the energy budget of the horizon (ringdown), not as a perturbative modification to wave propagation.
+
+---
+
+## 4. The Ringdown Discovery (Detailed Findings)
 
 ### Phase 8: Coherent Energy Excess
-*   **Result:** Stacking analysis revealed a persistent non-zero energy residual in the ringdown phase.
-*   **Significance:** The signal is coherent (same sign across events), robust to noise injection (up to 55%), and stable across catalog splits (GWTC-3 vs GWTC-4).
+*   **Finding:** A persistent non-zero energy residual is detectable when stacking 112 events, which disappears in null tests (time-shifted data).
+*   **Significance:** The signal is coherent (**same sign across events**), robust to noise injection (up to 55%), and stable across catalog splits. This rules out instrumental glitches which would be incoherent.
 
-### Phase 10: The Fractal Scaling Law
-*   **Discovery:** The residual energy $E$ scales with final mass $M$ as:
-    $$ E \propto M^p, \quad p = 0.497 \pm 0.084 $$
-*   **Theory:** This matches the FIN prediction of $p \approx 1/2$, representing the square root of information content (sub-extensive scaling), whereas GR predicts linear scaling ($p \ge 1$).
+### Phase 10: The Fractal Scaling Law ($E \propto M^p$)
+*   **Discovery:** The residual energy scales with the final black hole mass as a power law:
+    $$ E_{\text{residual}} \propto M_{\text{final}}^{0.497 \pm 0.084} $$
+*   **Theoretical Match:**
+    *   **GR Prediction:** Linear scaling ($p \ge 1$) or noise-like ($p \approx 0$).
+    *   **FIN Prediction:** Sub-extensive scaling ($p \approx 1/2$), representing the square root of the holographic information content ($I \sim A \sim M^2 \rightarrow \sqrt{I} \sim M$).
+*   **Implication:** This $p \approx 0.5$ scaling is a "fingerprint" of the fractal information structure.
 
-### Phase 11: Bayesian Victory
-*   **Verdict:** Formal model comparison yields a Bayes Factor of **$\ln \text{BF} \approx 18$** in favor of FIN.
-*   **Interpretation:** This constitutes **Strong Evidence** that the FIN framework provides a superior description of the ringdown regime than standard General Relativity.
-
----
-
-## 3. Methodology
-
-*   **Dataset:** 112 Confirmed GW Events (GWTC-3 + GWTC-4).
-*   **Tools:** Hierarchical Bayesian Inference, Importance Sampling, Jackknife Resampling, Null Tests.
-*   **Integrity:** All "Discovery" claims are supported by rigorous systematics checks (null tests, sign-scrambling, selection bias analysis).
+### Phase 11: Bayesian Model Comparison
+*   **Verdict:** Formal model comparison yields **Strong Evidence** for the FIN hypothesis:
+    *   $\ln \text{BF}_{\text{FIN/GR}} \approx 18.0$
+    *   $\Delta \text{AIC} \approx 34$
+*   **Interpretation:** The data actively prefers the FIN description of the ringdown sector over standard General Relativity.
 
 ---
 
-## 4. Conclusion
+## 5. Core Formal Structure
 
-**FIN Theory is no longer just "consistent" with observations—it is now actively preferred by the data in the high-energy ringdown sector.** The specific scaling law $p \approx 0.5$ provides a unique "fingerprint" of the fractal informational structure of the Nadsoliton.
+FIN remains defined by the **Universal Coupling Kernel**, linking geometry and information:
+
+$$ K(d) = \frac{\alpha_{\text{geo}}\cos(\omega d + \phi)} {1+\beta_{\text{tors}} d} $$
+
+With the fundamental geometric constant:
+$$ \alpha_{\text{geo}} = 4\ln 2 \approx 2.7726 $$
 
 ---
 
-## 5. Resources
+## 6. Limitations & Scientific Status
 
-*   **Documentation:** `TOE_FINAL_DOCUMENTATION.pdf` (Updated to v4.0).
-*   **Evidence:** `phase10_results.json`, `phase11_results.json` in repository.
+✅ **STRONG EVIDENCE:** The "Inconclusive" verdict of v3.9.x is upgraded to **Strong Evidence** in the specific sector of ringdown energetics.
+✅ **ROBUSTNESS:** The signal survives strict null tests, jackknife resampling, and sign-scrambling.
+⚠️ **INDEPENDENT VERIFICATION:** While the statistical evidence is strong ($\ln \text{BF} > 5$), this result requires independent confirmation by other groups using the provided open-source scripts.
+
+---
+
+## 7. Resources
+
+*   **Documentation:** `TOE_FINAL_DOCUMENTATION.pdf` (v4.0 Full Monograph).
+*   **Full Log:** `FULL_LOG_PHASE6.md` (Audit Trace).
+*   **Evidence Files:** `phase10_results.json`, `phase11_results.json` in repository.
 
 **Official Repository:**
 [https://github.com/hyconiek/Fractal-Nadsoliton-Theory](https://github.com/hyconiek/Fractal-Nadsoliton-Theory)
+
+> *This release (v4.0) represents the first statistically significant observational evidence supporting the Fractal Information Nadsoliton theory, identifying a non-GR scaling law in the high-energy ringdown regime.*
