@@ -131,6 +131,9 @@ The research followed a strictly incremental path:
     \item \textbf{v21--v24: Global Validation.} Cross-epoch (O3a/O3b/O4) and cross-detector validation using correlation-based Cross-Hurst estimators.
 \end{enumerate}
 
+\subsection{Cross-Hurst Analysis}
+To probe shared temporal structure between detectors, we employ a correlation-based cross-process $Z_{xy}(s) = \sum [x(t) \cdot y(t)]$ for detector pair $(x,y)$. The Hurst exponent of this cumulative product process quantifies the degree of phase-robust correlated memory between detectors, as implemented in the v24 validation suite.
+
 \subsection{Null Models}
 Two independent surrogate models are constructed:
 \begin{enumerate}[leftmargin=1.5em]
