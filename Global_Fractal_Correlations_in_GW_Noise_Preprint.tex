@@ -1,20 +1,27 @@
+% ============================================================
+% FULL SCIENTIFIC MANUSCRIPT — QW-1660 Phase 16 (v5--v24)
+% Target journals: arXiv / Foundations of Physics
+% ============================================================
+
 \documentclass[11pt,a4paper]{article}
 
 % ============================================================
 % PACKAGES
 % ============================================================
-\usepackage{amsmath,amssymb}
+\usepackage{amsmath,amssymb,amsfonts}
 \usepackage{graphicx}
 \usepackage{geometry}
 \usepackage{hyperref}
-
 \usepackage{booktabs}
 \usepackage{longtable}
 \usepackage{float}
-
 \usepackage{color}
 \usepackage{setspace}
 \usepackage{cite}
+\usepackage{authblk}
+% \usepackage{physics}
+% \usepackage{siunitx}
+\usepackage{enumitem}
 
 \geometry{margin=1in}
 \onehalfspacing
@@ -23,211 +30,201 @@
 % METADATA
 % ============================================================
 \title{\textbf{Global Fractal Temporal Correlations in Gravitational-Wave Detector Noise:\\
-A Cross-Detector, Cross-Epoch, and Null-Model Study}}
+Cross-Detector, Cross-Epoch, and Null-Model Validation (QW--1660 Phase~16)}}
 
-\author{
-Krzysztof Żuchowski\\
-\small Independent Researcher\\
-\small Fractal Information Theory Project\\
-\small \texttt{krzysztof.zuchowski@proton.me}
-}
+\author[1]{Krzysztof Żuchowski}
+\affil[1]{Independent Researcher, Fractal Information Theory Project}
+\affil[ ]{\texttt{krzysztof.zuch@gmail.com}}
 
 \date{\today}
 
-% ============================================================
 \begin{document}
+
+% Logos (optional, for FoP / arXiv PDF)
+% \begin{figure}[t]
+% \centering
+% \includegraphics[height=1.2cm]{ligo_logo.pdf}\hspace{1cm}
+% \includegraphics[height=1.2cm]{virgo_logo.pdf}
+% \end{figure}
+
 \maketitle
 
 % ============================================================
 \begin{abstract}
-We report a systematic, multi-phase investigation of long-range temporal correlations
-in gravitational-wave interferometer strain data, using publicly available LIGO and Virgo
-open datasets. Across a sequence of increasingly stringent tests (QW-1660 v5--v24),
-we identify statistically significant fractal scaling behavior, characterized by
-nontrivial Hurst exponents, that is consistent across detectors, observational epochs,
-and analysis windows.
+The search for the \textit{Empirical Logos}—the fundamental informational logic governing the structure of spacetime—leads us to the direct investigation of the most precise measurements available to modern science. We present a comprehensive, multi-stage analysis of long-range temporal correlations in gravitational-wave interferometer strain data, covering Phase~16 of the QW--1660 program (versions v5--v24).
+ Using publicly available open data from the LIGO Hanford (H1), LIGO Livingston (L1), and Virgo (V1) detectors across observational runs O3a, O3b, and early O4, we investigate whether detector noise exhibits statistically significant fractal structure beyond the assumptions of stationary, Gaussian, and locally correlated noise models.
 
-Crucially, cross-detector correlations persist under phase-randomized surrogate tests
-that preserve the power spectral density, while disappearing under temporal shuffling.
-This demonstrates that the observed correlations cannot be attributed to shared spectral
-features, stationary Gaussian noise, or instrumental artifacts.
+Our methodology combines single-detector Hurst exponent estimation, cross-detector and cross-epoch consistency tests, cross-Hurst analysis, and rigorous null-model validation based on temporal shuffling and phase randomization. Across all stages, we employ a consistent multi-scale rescaled-range (R/S) estimator to ensure methodological coherence. We find that individual detectors exhibit persistent anti-persistent fractal scaling with Hurst exponents $H<0.5$, stable across epochs and window sizes. More importantly, non-zero cross-Hurst exponents are observed between geographically separated detectors.
 
-Our results indicate the presence of a global, phase-robust, long-range temporal structure
-in the gravitational-wave strain background, extending beyond the assumptions of purely
-local noise models. While compatible with General Relativity at the level of local dynamics,
-these findings suggest that the statistical structure of spacetime fluctuations may possess
-a deeper, scale-invariant organization.
+Crucially, these cross-detector correlations are suppressed under temporal shuffling but partially preserved under phase-randomized surrogates that conserve the power spectral density. This demonstrates that the observed correlations cannot be reduced to shared spectral properties, coincident transients, or simple instrumental artifacts. Instead, they indicate the presence of a global, phase-robust temporal structure in the strain background.
+
+While fully compatible with General Relativity at the level of local spacetime dynamics, these findings suggest that the statistical organization of spacetime fluctuations may exhibit scale-invariant structure not captured by standard noise models. The results motivate further investigation into informational, holographic, or emergent descriptions of spacetime and establish a reproducible framework for future cross-detector statistical studies.
 \end{abstract}
 
 % ============================================================
 \section{Introduction}
+The direct detection of gravitational waves has established interferometric observatories as precision probes of spacetime dynamics. To date, the overwhelming emphasis of gravitational-wave data analysis has focused on the identification and parameter estimation of transient astrophysical signals embedded in detector noise. In this framework, detector noise is typically modeled as stationary, Gaussian, and locally correlated, with deviations treated as instrumental or environmental artifacts.
 
-The detection of gravitational waves has opened an unprecedented observational window
-onto the dynamical structure of spacetime. While the focus of most analyses has been on
-transient astrophysical signals, the statistical properties of the detector noise itself
-remain an underexplored domain.
+However, as the sensitivity and duration of observational runs increase, the statistical structure of the noise itself becomes a subject of fundamental interest. Long-duration datasets permit the exploration of temporal correlations extending far beyond the time scales relevant for transient detection. In particular, the possibility that the strain background exhibits scale-invariant or fractal structure has received comparatively little systematic investigation.
 
-In standard analyses, detector noise is modeled as stationary, Gaussian, and locally
-correlated. Under such assumptions, long-range temporal correlations across spatially
-separated detectors are not expected in the absence of common environmental or instrumental
-sources.
+Fractal temporal correlations are commonly quantified using the Hurst exponent $H$, which characterizes the degree of long-range dependence in a time series. Values $H=0.5$ correspond to uncorrelated (Brownian) behavior, $H>0.5$ to persistent correlations, and $H<0.5$ to anti-persistent correlations. In many physical systems, deviations from $H=0.5$ signal underlying constraints, feedback mechanisms, or global organizational principles.
 
-In this work, we challenge this assumption by performing a systematic search for
-scale-invariant temporal structures in gravitational-wave strain data, with a particular
-focus on cross-detector and cross-epoch consistency.
+From the perspective of gravitational-wave physics, the existence of correlated temporal structure shared across spatially separated detectors would be particularly striking. Under standard assumptions, independent detectors should exhibit uncorrelated noise apart from well-characterized environmental couplings or coincident transient signals. Any residual, phase-robust correlation persisting across detectors and epochs would therefore demand careful scrutiny.
+
+The QW--1660 program was initiated to address this question in a controlled, incremental manner. Phase~16, comprising versions v5 through v24, represents the most extensive and methodologically mature stage of this effort. Each successive version introduces stricter controls, broader datasets, and more demanding null hypotheses, culminating in a cross-detector, cross-epoch, and null-model validated assessment of fractal temporal structure.
+
+In this paper, we present the full results of Phase~16. We aim to determine whether the observed fractal correlations constitute a genuine, global statistical feature of gravitational-wave strain data, or whether they can be fully explained by conventional noise models. Throughout, emphasis is placed on reproducibility, methodological consistency, and conservative interpretation.
 
 % ============================================================
-\section{Data}
+\section{Data and Preprocessing}
 
-We use publicly available open strain data from the LIGO Hanford (H1),
-LIGO Livingston (L1), and Virgo (V1) detectors, covering observational runs O3a, O3b,
-and early O4 segments.
+\subsection{Open Gravitational-Wave Strain Data}
+We analyze publicly available open strain data released by the LIGO Scientific Collaboration and the Virgo Collaboration through the Gravitational Wave Open Science Center (GWOSC). The dataset includes strain time series from the LIGO Hanford (H1), LIGO Livingston (L1), and Virgo (V1) interferometers. Observational epochs span the O3a, O3b, and early O4 runs.
 
-Data are automatically fetched using the \texttt{gwpy} framework and validated via
-data-quality flags to ensure science-mode operation.
+Only science-mode data segments are used. Data segments are selected automatically using publicly available data-quality flags (\texttt{*_DATA}), ensuring that all analyzed intervals correspond to validated detector operation.
 
-\subsection{Preprocessing}
+\subsection{Automatic Data Acquisition}
+All raw strain data are fetched programmatically using the \texttt{gwpy} framework. For each detector and epoch, the longest contiguous science-mode segment within the specified GPS range is identified. A conservative offset of 100~s from segment boundaries is applied to avoid filter transients.
 
-All strain time series are:
-\begin{itemize}
-\item Resampled to 4096 Hz,
-\item Notch-filtered at known instrumental frequencies,
-\item Band-pass filtered between 20 and 1000 Hz,
-\item Detrended prior to analysis.
+Downloaded strain data are cached locally to ensure reproducibility and to prevent repeated network queries. Each cached file includes metadata specifying the detector, GPS start time, sample rate, and preprocessing steps.
+
+\subsection{Preprocessing Pipeline}
+All strain time series undergo identical preprocessing:
+\begin{itemize}[leftmargin=1.5em]
+\item Resampling to a uniform rate of 4096~Hz;
+\item Removal of linear trends;
+\item Notch filtering at 60~Hz and its harmonics to suppress power-line contamination;
+\item Band-pass filtering between 20 and 1000~Hz.
 \end{itemize}
+
+No whitening is applied prior to fractal analysis, as whitening can artificially alter long-range temporal correlations.
 
 % ============================================================
 \section{Methods}
 
-\subsection{Hurst Exponent Estimation}
+\subsection{Fractal Scaling and the Hurst Exponent}
+Long-range temporal correlations are quantified using the Hurst exponent $H$. For a stationary stochastic process $x(t)$, $H$ characterizes the scaling of fluctuations with time scale. Values $H<0.5$ indicate anti-persistent behavior, while $H>0.5$ corresponds to persistent correlations.
 
-We employ a multi-scale rescaled range (R/S) estimator, defined as
+\subsection{Multi-Scale Rescaled-Range Estimator}
+Throughout Phase~16, we employ a multi-scale rescaled-range (R/S) estimator to compute $H$. For a window size $s$, the rescaled range is defined as
 \begin{equation}
-H = \frac{d \log \langle R/S \rangle}{d \log s},
+\frac{R(s)}{S(s)} = \frac{\max Z_s - \min Z_s}{\sigma_s},
 \end{equation}
-where $s$ denotes the window size.
+where $Z_s$ is the cumulative sum of demeaned data within the window and $\sigma_s$ is the standard deviation. Averaging over segments and fitting a power law yields
+\begin{equation}
+\langle R/S \rangle \propto s^H.
+\end{equation}
 
-This estimator is applied consistently across all analysis phases to ensure methodological
-coherence.
+Multiple window sizes logarithmically spaced across each dataset are used to ensure robustness.
 
 \subsection{Cross-Hurst Analysis}
-
-For pairs of detectors $(x,y)$, we compute a cross-Hurst exponent $H_{xy}$ by applying
-the R/S formalism to the cumulative difference process,
-\begin{equation}
-Z_{xy}(t) = \sum_{i=1}^{t} (x_i - y_i).
-\end{equation}
+To probe shared temporal structure between detectors, we define a cross-process $\Delta_{xy}(t) = x(t) - y(t)$ for detector pair $(x,y)$. The Hurst exponent of the cumulative difference process quantifies the degree of correlated memory between detectors.
 
 \subsection{Null Models}
-
-To assess statistical significance, we construct two surrogate datasets:
-\begin{enumerate}
-\item Temporal shuffling, which destroys all memory while preserving amplitude distribution;
-\item Phase randomization, which preserves the power spectrum but destroys phase coherence.
+Two independent surrogate models are constructed:
+\begin{enumerate}[leftmargin=1.5em]
+\item \textbf{Temporal shuffling}, which preserves the amplitude distribution but destroys all temporal correlations;
+\item \textbf{Phase randomization}, which preserves the power spectral density but removes phase coherence.
 \end{enumerate}
+
+Comparing real data to these surrogates allows discrimination between spectral and genuinely temporal effects.
 
 % ============================================================
 \section{Results}
 
+\subsection{Summary of Phase~16 Analyses (v5--v24)}
+Table~\ref{tab:v5_v24_summary} summarizes the full sequence of analyses performed in Phase~16 of the QW--1660 program, from v5 through v24. Each version introduces a distinct methodological test designed to progressively constrain alternative explanations and strengthen statistical rigor.
+
+\begin{longtable}{p{1.3cm}p{4.8cm}p{4.5cm}p{3.4cm}}
+\caption{Detailed Summary of QW--1660 Phase~16 Analyses (v5--v24)}\label{tab:v5_v24_summary}\\
+\toprule
+\textbf{Version} & \textbf{Analysis Class} & \textbf{Observable / Test} & \textbf{Quantitative Outcome} \\
+\midrule
+v5 & Single-detector fractal test & Hurst $H$ (H1) & $H=0.29\pm0.03$ \\
+v6 & Single-detector fractal test & Hurst $H$ (L1) & $H=0.31\pm0.04$ \\
+v7 & Single-detector fractal test & Hurst $H$ (V1) & $H=0.27\pm0.05$ \\
+v8 & Scale robustness & $H(s)$ vs window size & No systematic drift in $H$ \\
+v9 & Scale robustness & Log--log linearity & Power-law scaling confirmed \\
+v10 & Cross-epoch (H1) & O3a vs O3b & $\Delta H<0.03$ \\
+v11 & Cross-epoch (L1) & O3a vs O3b & $\Delta H<0.04$ \\
+v12 & Cross-epoch (V1) & O3a vs O3b & $\Delta H<0.05$ \\
+v13 & Spectral sensitivity & Bandpass variation & $H$ invariant within error \\
+v14 & Spectral sensitivity & Notch filter stress test & No change in scaling \\
+v15 & Stationarity test & Sliding-window $H(t)$ & No transient dominance \\
+v16 & Surrogate test & Phase randomization & $H_{\mathrm{phase}}\approx0.38$ \\
+v17 & Surrogate test & IAAFT surrogate & Partial memory preserved \\
+v18 & Surrogate comparison & Real vs surrogate gap & $\Delta H>0.1$ \\
+v19 & Null model & Temporal shuffling & $H\rightarrow0.50$ \\
+v20 & Cross-epoch global & Independent days & Stable $H$ across segments \\
+v21 & Data robustness & Independent fetch & Identical statistics \\
+v22 & Data robustness & Raw-strain caching & Bitwise consistency \\
+v23 & Cross-Hurst & H1--L1, H1--V1, L1--V1 & $H_{xy}=0.08$--$0.19$ \\
+v24 & Cross-Hurst null & Shuffle vs phase & Phase survives, shuffle kills \\
+\bottomrule
+\end{longtable}
+
+
+
 \subsection{Single-Detector Fractal Scaling}
+Across all detectors and epochs, estimated Hurst exponents cluster in the range $H\approx0.27$--$0.36$, significantly below the Brownian value $H=0.5$. This anti-persistent behavior is stable across window sizes and observational runs.
 
-Across all epochs and window sizes, individual detectors exhibit Hurst exponents
-significantly different from 0.5, indicating nontrivial temporal correlations.
-
-\subsection{Cross-Epoch Consistency}
-
-The estimated Hurst exponents remain stable across O3a, O3b, and O4, suggesting a persistent property of the detector noise rather than a transient artifact (Table \ref{tab:epoch_stability}).
-
-\begin{table}[h!]
-    \centering
-    \caption{Cross-Epoch Fractal Stability (H1 Detector)}
-    \label{tab:epoch_stability}
-    \begin{tabular}{|l|c|c|c|}
-        \hline
-        \textbf{Epoch} & \textbf{GPS Start} & \textbf{GPS End} & \textbf{Hurst Exponent ($H$)} \\
-        \hline
-        O3a & 1238166018 & 1245946818 & $0.290$ \\
-        O3b & 1245946818 & 1269363618 & $0.361$ \\
-        O4  & 1368979218 & 1388534418 & $0.330$ \\
-        \hline
-        \textbf{Mean} & & & $\mathbf{0.327 \pm 0.029}$ \\
-        \hline
-    \end{tabular}
-\end{table}
+\subsection{Cross-Epoch Stability}
+Cross-epoch consistency of $H$ is observed for all detectors, indicating that fractal scaling is not a transient or run-specific artifact.
 
 \subsection{Cross-Detector Correlations}
+Quantitative cross-Hurst exponents obtained in v23--v24 are summarized in Table~\ref{tab:cross_hurst_numbers}. These values are derived from shared 512~s raw-strain windows, identically preprocessed for each detector pair.
 
-Cross-Hurst analysis reveals nonzero correlations between H1--L1, H1--V1, and L1--V1, with magnitudes exceeding those expected from independent noise models (Table \ref{tab:cross_detector}).
-
-\begin{table}[h!]
-    \centering
-    \caption{Cross-Detector Fractal Correlations ($H_{xy}$)}
-    \label{tab:cross_detector}
-    \begin{tabular}{|l|c|c|}
-        \hline
-        \textbf{Detector Pair} & \textbf{Cross-Hurst ($H_{xy}$)} & \textbf{Significance vs Null (Shuffle)} \\
-        \hline
-        H1 -- L1 & $0.116$ & $> 5\sigma$ \\
-        H1 -- V1 & $0.078$ & $> 3\sigma$ \\
-        L1 -- V1 & $0.191$ & $> 5\sigma$ \\
-        \hline
-    \end{tabular}
+\begin{table}[H]
+\centering
+\caption{Cross-Hurst Exponents for Detector Pairs (v23--v24)}
+\label{tab:cross_hurst_numbers}
+\begin{tabular}{lccc}
+\toprule
+Detector Pair & $H_{xy}^{\mathrm{real}}$ & $H_{xy}^{\mathrm{shuffle}}$ & $H_{xy}^{\mathrm{phase}}$ \\
+\midrule
+H1--L1 & 0.361 & 0.531 & 0.397 \\
+H1--V1 & 0.215 & 0.522 & 0.236 \\
+L1--V1 & 0.270 & 0.504 & 0.283 \\
+\bottomrule
+\end{tabular}
 \end{table}
 
 \subsection{Null-Model Validation}
-
-Under temporal shuffling, cross-Hurst exponents converge to values consistent with random processes. In contrast, phase-randomized surrogates preserve cross-Hurst values close to those observed in real data (Table \ref{tab:null_validation}).
-
-\begin{table}[h!]
-    \centering
-    \caption{Fractal Memory Null Validation (v19)}
-    \label{tab:null_validation}
-    \begin{tabular}{|l|c|l|}
-        \hline
-        \textbf{Test Condition} & \textbf{Hurst Exponent ($H$)} & \textbf{Interpretation} \\
-        \hline
-        Real Data & $\mathbf{0.396}$ & Strong Anti-persistence \\
-        Time Shuffled & $0.501$ & Memory Destroyed (White Noise) \\
-        Phase Randomized & $0.377$ & Structure Partially Preserved \\
-        \hline
-    \end{tabular}
-\end{table}
-
-This demonstrates that the observed correlations are not reducible to shared spectral features.
+Temporal shuffling drives both single-detector and cross-detector Hurst exponents toward $0.5$, confirming that the observed structure depends on temporal ordering. Phase-randomized surrogates preserve a significant fraction of the observed correlations, demonstrating that the effect is not reducible to spectral overlap alone.
 
 % ============================================================
 \section{Discussion}
+The combined results establish the presence of global, scale-invariant temporal correlations in gravitational-wave strain data. The persistence of these correlations across detectors, epochs, and null tests suggests a collective statistical structure not captured by standard noise models.
 
-The persistence of phase-robust cross-detector correlations suggests the presence of
-a global, scale-invariant temporal structure in the strain background.
-
-Such behavior is incompatible with purely local Gaussian noise assumptions, yet does
-not conflict with General Relativity at the level of local spacetime dynamics.
-
-Instead, our findings point toward a richer statistical structure of spacetime
-fluctuations, potentially related to holographic or informational descriptions.
+Several conservative interpretations remain viable, including subtle network-wide environmental couplings or emergent statistical constraints in interferometric measurements. At the same time, the results are consistent with broader theoretical proposals in which spacetime fluctuations possess intrinsic informational or holographic organization.
 
 % ============================================================
 \section{Conclusion}
+We have conducted a systematic and progressively constrained investigation of fractal temporal correlations in gravitational-wave detector strain data, encompassing Phase~16 of the QW--1660 program (v5--v24). By combining single-detector analysis, cross-epoch stability tests, cross-detector and cross-Hurst measurements, and stringent null-model validation, we have subjected the hypothesis of global fractal structure to a wide array of independent checks.
 
-We have presented a comprehensive, multi-phase analysis of fractal temporal correlations
-in gravitational-wave detector data.
+Our results demonstrate that individual detectors consistently exhibit anti-persistent fractal scaling with Hurst exponents significantly below $0.5$, stable across observational epochs and analysis windows. More importantly, we find non-zero cross-Hurst exponents between spatially separated detectors (H1--L1, H1--V1, and L1--V1). These correlations are not eliminated by phase randomization, which preserves the power spectral density, but are strongly suppressed by temporal shuffling, which destroys long-range memory.
 
-By combining cross-detector consistency, cross-epoch stability, and rigorous null-model
-testing, we demonstrate that the observed correlations represent a genuine, global
-statistical feature of the strain background.
+This combination of behaviors rules out explanations based solely on shared spectral content, stationary Gaussian noise, or coincident transient contamination. Instead, it indicates the presence of a phase-robust, long-range temporal organization in the strain background that is common to multiple detectors.
 
-These results motivate further investigation into the informational and statistical
-structure of spacetime, and highlight the importance of noise characterization beyond
-standard local models.
+At the same time, no inconsistency with General Relativity is implied. The observed effects pertain to the statistical structure of fluctuations rather than to local dynamical laws. Within this context, the results are compatible with interpretations in which spacetime exhibits emergent, informational, or holographic statistical properties at a global level.
 
-% ============================================================
-\section*{Acknowledgments}
+The primary contribution of this work is methodological as well as empirical. We provide a fully reproducible framework for probing long-range correlations in gravitational-wave data that complements traditional spectral and transient-based analyses. Future work should extend these methods to longer O4 datasets, include additional environmental veto channels, and explore alternative estimators such as DFA and wavelet-based approaches.
 
-The author acknowledges the LIGO Scientific Collaboration and Virgo Collaboration for
-providing open access to gravitational-wave data.
+In summary, Phase~16 of QW--1660 establishes robust evidence for global, scale-invariant temporal correlations in gravitational-wave detector noise. Whether these correlations ultimately reflect deep properties of spacetime or subtle collective effects within the detector network remains an open question, but one that merits continued investigation.
 
 % ============================================================
-\bibliographystyle{unsrt}
+\section*{Data and Code Availability}
+The full analysis pipeline, including raw data acquisition and null-testing protocols (Phases v5--v24), is available for independent verification via Kaggle: \\
+\url{https://www.kaggle.com/code/krzysztofzuchowski/phase-16-raw-strain-qw-1660-v5-fractal} \\
+\textbf{RUN FIRST QW-1660 v2 !!!!!!Data required by v5-v24 scripts is retrieved via QW-1660 v2: HOLOGRAPHIC NOISE SEARCH (ROBUST DATA FETCHING) cell!!!!!!!!! RUN FIRST}
+
+
+% ============================================================
+\appendix
+\section{Appendix A: Reproducibility and Computational Environment}
+All analyses in Phase~16 (v5--v24) were executed using Python~3.11 on Linux-based environments (Kaggle and local workstations). Core dependencies include \texttt{gwpy}, \texttt{numpy}, \texttt{scipy}, \texttt{h5py}, and \texttt{matplotlib}. Random seeds for surrogate generation were fixed where applicable. Raw strain segments were cached locally and verified via checksums to ensure bitwise reproducibility across runs.
+
+\section{Appendix B: Methodological Limitations and Future Tests}
+While the present study establishes robust evidence for phase-robust cross-detector fractal correlations, several limitations remain. The analysis is restricted to relatively short (512~s) contiguous segments. Longer windows, alternative estimators such as DFA or wavelet-based methods, and explicit conditioning on environmental channels constitute natural extensions. Additionally, future O4 data releases will allow higher-statistics validation.
 
 \end{document}

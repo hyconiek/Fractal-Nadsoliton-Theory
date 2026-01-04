@@ -61,7 +61,8 @@ This release adheres to strict falsification standards:
 *   **Documentation:** `TOE_FINAL_DOCUMENTATION_v4.3.pdf` (Includes Phase 16 Extended Audit).
 *   **Preprint Draft:** `Global_Fractal_Correlations_in_GW_Noise_Preprint.pdf` (Submission-ready structure).
 *   **Raw Data:** `phase21-24.md`, `QW_1660_v24_cross_hurst_null_validation.json`.
-*   **Replication (Kaggle):** [Phase 16 - Raw Strain Fractal Audit](https://www.kaggle.com/code/krzysztofzuchowski/phase-16-raw-strain-qw-1660-v5-fractal)
+*   **Replication (Kaggle):** [Phase 16 - Raw Strain Fractal Audit](https://www.kaggle.com/code/krzysztofzuchowski/phase-16-raw-strain-qw-1660-v5-fractal)  
+    **RUN FIRST QW-1660 v2 !!!!!!Data required by v5-v24 scripts is retrieved via QW-1660 v2: HOLOGRAPHIC NOISE SEARCH (ROBUST DATA FETCHING) cell!!!!!!!!! RUN FIRST**
 
 ---
 

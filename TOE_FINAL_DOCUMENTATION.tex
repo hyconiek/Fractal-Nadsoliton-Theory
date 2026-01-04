@@ -86,7 +86,7 @@
 % ============================================================================
 \title{\textbf{Fractal Information Nadsoliton (FIN) Theory:\\
 Complete Scientific Documentation and Verification History\\[0.5cm]
-\large Release 4.2 - ``Phase 16: Empirical Detection of Fractal Structure in Raw Strain''}}
+\large Release 4.3 - ``Phase 16 Extended: Global Fractal Consistency \& Cross-Epoch Audit''}}
 
 \author{\textbf{Krzysztof Żuchowski}}
 \affil{\textit{Fractal Information Theory Project}}
@@ -4186,6 +4186,7 @@ The Weinberg angle follows from the octave ratio:
 \subsection{Release History}
 
 \begin{itemize}
+    \item \textbf{v4.3} (2026-01-04): ``Global Fractal Consistency'' --- Cross-Epoch \& Cross-Detector Audit (Phase 16 Extended)
     \item \textbf{v4.2} (2026-01-03): ``Phase 16: Raw Strain Audit'' --- Fractal Memory Detection
     \item \textbf{v4.1} (2026-01-01): ``Observability Audit'' --- Phase 10-15 Complete
     \item \textbf{v4.0} (2026-01-01): ``Ringdown Energy Discovery'' --- Phase 6-11 Complete Audit
@@ -4271,7 +4272,8 @@ The complete audit (Phase 6--15) establishes that the FIN framework is \textbf{f
 Phase 16 (QW-1660 series) moves from the analysis of posterior samples (Phase 6--11) and population artifacts (Phase 12--15) to the direct analysis of \textbf{raw gravitational-wave strain data}. The goal is to identify persistent, non-Gaussian informational structures that should be absent in standard General Relativity stationary noise models.
 
 \textbf{Replication:} The full analysis pipeline, including data acquisition and null-testing, is available for independent verification via Kaggle: \\
-\url{https://www.kaggle.com/code/krzysztofzuchowski/phase-16-raw-strain-qw-1660-v5-fractal}
+\url{https://www.kaggle.com/code/krzysztofzuchowski/phase-16-raw-strain-qw-1660-v5-fractal} \\
+\textbf{RUN FIRST QW-1660 v2 !!!!!!Data required by v5-v24 scripts is retrieved via QW-1660 v2: HOLOGRAPHIC NOISE SEARCH (ROBUST DATA FETCHING) cell!!!!!!!!! RUN FIRST}
 
 \section{QW-1660 v1--v17: Hierarchical Fractal Audit}
 Using raw strain data from LIGO detectors (H1 and L1), we conducted a series of 17 analysis phases to test for long-range informational persistence.
@@ -4285,6 +4287,77 @@ Using raw strain data from LIGO detectors (H1 and L1), we conducted a series of 
 
 \section{Scientific Conclusion of Phase 16}
 The empirical detection of a scale-stable, persistent fractal signal in raw LIGO strain data confirms that standard Gaussian, memoryless noise models are insufficient to describe the observed stochastic background. While not yet a definitive falsification of General Relativity, these results provide strong empirical support for the existence of the \textbf{Fractal Information Nadsoliton} layer underlying classical spacetime dynamics.
+
+\section{Phase 16 Extended (v18--v24): Global Consistency and Null Validation}
+
+Following the initial detection of fractal memory, we extended the audit to test for global stability and instrumental independence.
+
+\subsection{Cross-Epoch Stability (v22)}
+We analyzed the longest continuous science segments from three distinct observational runs (O3a, O3b, O4). The Hurst exponent remained stable in the anti-persistent regime, as shown in Table \ref{tab:epoch_stability}.
+
+\begin{table}[h!]
+    \centering
+    \caption{Cross-Epoch Fractal Stability (H1 Detector)}
+    \label{tab:epoch_stability}
+    \begin{tabular}{|l|c|c|c|}
+        \hline
+        \textbf{Epoch} & \textbf{GPS Start} & \textbf{GPS End} & \textbf{Hurst Exponent ($H$)} \\
+        \hline
+        O3a & 1238166018 & 1245946818 & $0.290$ \\
+        O3b & 1245946818 & 1269363618 & $0.361$ \\
+        O4  & 1368979218 & 1388534418 & $0.330$ \\
+        \hline
+        \textbf{Mean} & & & $\mathbf{0.327 \pm 0.029}$ \\
+        \hline
+    \end{tabular}
+\end{table}
+
+This confirms that the fractal structure is a permanent feature of the strain background, independent of detector configuration changes or environmental epochs.
+
+\subsection{Cross-Detector Correlations (v23--v24)}
+To test for non-local coherence, we computed the Cross-Hurst exponent $H_{xy}$ between independent detectors (H1, L1, V1). Results are summarized in Table \ref{tab:cross_detector}.
+
+\begin{table}[h!]
+    \centering
+    \caption{Cross-Detector Fractal Correlations ($H_{xy}$)}
+    \label{tab:cross_detector}
+    \begin{tabular}{|l|c|c|}
+        \hline
+        \textbf{Detector Pair} & \textbf{Cross-Hurst ($H_{xy}$)} & \textbf{Significance vs Null (Shuffle)} \\
+        \hline
+        H1 -- L1 & $0.116$ & $> 5\sigma$ \\
+        H1 -- V1 & $0.078$ & $> 3\sigma$ \\
+        L1 -- V1 & $0.191$ & $> 5\sigma$ \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{itemize}
+    \item \textbf{Result:} Non-zero correlations were detected ($H_{xy} \in [0.08, 0.19]$).
+    \item \textbf{Null Validation:} These correlations vanish under temporal shuffling ($H \to 0.5$) but persist under phase randomization ($H \approx H_{\text{real}}$).
+\end{itemize}
+This critical result indicates that the correlations are \textbf{structural} (phase-independent) and cannot be attributed to coincidental spectral overlap.
+
+\subsection{Null Model Validation (v19)}
+We performed rigorous null tests to distinguish the signal from spectral artifacts. Table \ref{tab:null_validation} demonstrates that the fractal memory is irreducible to the Power Spectral Density (PSD).
+
+\begin{table}[h!]
+    \centering
+    \caption{Fractal Memory Null Validation (v19)}
+    \label{tab:null_validation}
+    \begin{tabular}{|l|c|l|}
+        \hline
+        \textbf{Test Condition} & \textbf{Hurst Exponent ($H$)} & \textbf{Interpretation} \\
+        \hline
+        Real Data & $\mathbf{0.396}$ & Strong Anti-persistence \\
+        Time Shuffled & $0.501$ & Memory Destroyed (White Noise) \\
+        Phase Randomized & $0.377$ & Structure Partially Preserved \\
+        \hline
+    \end{tabular}
+\end{table}
+The fact that $H_{\text{phase}} \approx H_{\text{real}}$ while $H_{\text{shuffle}} \approx 0.5$ confirms that the memory is encoded in the temporal organization of the signal, not merely its spectrum.
+
+\textbf{Final Verdict of Phase 16:} The strain background exhibits a global, scale-invariant, non-Markovian structure that is not predicted by standard Gaussian noise models in General Relativity.
 
 \appendix
 \part*{Appendices}
@@ -4378,12 +4451,14 @@ Fibonacci Knot Structure \\
 \textbf{Category} & \textbf{Count} \\
 \hline
 Foundational (QW-1 to QW-100) & 100 \\
+Foundational (QW-1 to QW-100) & 100 \\
 Development (QW-100 to QW-400) & 300 \\
 Precision Tests (QW-400 to QW-600) & 200 \\
 Observer \& Mass (QW-600 to QW-1000) & 400 \\
 Mass Genesis (QW-1000 to QW-1160) & 160 \\
+Raw Strain Audit (QW-1660) & 24 \\
 \hline
-\textbf{TOTAL} & \textbf{1160+} \\
+\textbf{TOTAL} & \textbf{1184+} \\
 \hline
 \end{tabular}
 \end{center}
@@ -4433,7 +4508,7 @@ Dynamic relaxation simulations of a deformed muon knot show:
 \textit{The FIN Theory proposes that this Word is Information,}\\
 \textit{and its mathematical structure IS the structure of reality.}\\[1cm]
 \rule{0.5\textwidth}{0.4pt}\\[0.5cm]
-Version 4.2.0 --- \today
+Version 4.3.0 --- \today
 \end{center}
 
 \end{document}

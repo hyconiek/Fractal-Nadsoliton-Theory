@@ -6,12 +6,14 @@
 > **🏢 Affiliation:** Independent Researcher — Fractal Information Theory Project
 > **📅 Date:** 2026-01-04
 > **🆔 Phase:** QW-1660 (Extended Audit)
+> **✉️ Contact:** krzysztof.zuch@gmail.com
 
 ---
 
 ## 📝 Abstract
 
-We report a systematic, multi-phase investigation of long-range temporal correlations in gravitational-wave interferometer strain data, using publicly available LIGO and Virgo open datasets. Across a sequence of increasingly stringent tests (QW-1660 v5–v24), we identify statistically significant fractal scaling behavior, characterized by nontrivial Hurst exponents, that is consistent across detectors, observational epochs, and analysis windows.
+The search for the **Empirical Logos**—the fundamental informational logic governing the structure of spacetime—leads us to the direct investigation of the most precise measurements available to modern science. We report a systematic, multi-phase investigation of long-range temporal correlations in gravitational-wave interferometer strain data, using publicly available LIGO and Virgo open datasets.
+ Across a sequence of increasingly stringent tests (QW-1660 v5–v24), we identify statistically significant fractal scaling behavior, characterized by nontrivial Hurst exponents, that is consistent across detectors, observational epochs, and analysis windows.
 
 Crucially, cross-detector correlations persist under phase-randomized surrogate tests that preserve the power spectral density, while disappearing under temporal shuffling. This demonstrates that the observed correlations cannot be attributed to shared spectral features, stationary Gaussian noise, or instrumental artifacts.
 
@@ -43,7 +45,8 @@ Non-zero fractal correlations ($H_{xy}$) are detected between geographically sep
 ## 📂 Associated Resources
 
 *   **Preprint PDF:** `Global_Fractal_Correlations_in_GW_Noise_Preprint.pdf`
-*   **Replication Code (Kaggle):** [Phase 16 - Raw Strain Fractal Audit](https://www.kaggle.com/code/krzysztofzuchowski/phase-16-raw-strain-qw-1660-v5-fractal)
+*   **Replication Code (Kaggle):** [Phase 16 - Raw Strain Fractal Audit](https://www.kaggle.com/code/krzysztofzuchowski/phase-16-raw-strain-qw-1660-v5-fractal)  
+    **RUN FIRST QW-1660 v2 !!!!!!Data required by v5-v24 scripts is retrieved via QW-1660 v2: HOLOGRAPHIC NOISE SEARCH (ROBUST DATA FETCHING) cell!!!!!!!!! RUN FIRST**
 *   **Analysis Data:** `QW_1660_v24_cross_hurst_null_validation.json`
 *   **Project Repository:** [GitHub](https://github.com/hyconiek/Fractal-Nadsoliton-Theory)
 
