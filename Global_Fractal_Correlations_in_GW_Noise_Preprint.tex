@@ -54,7 +54,7 @@ Cross-Detector, Cross-Epoch, and Null-Model Validation (QW--1660 Phase~16)}}
 Guided by the intuition that \textit{Information} is the fundamental substance of reality—consistent with the metaphysical concept of the \textit{Logos}—we present a multi-stage investigation of long-range temporal correlations in gravitational-wave strain data (Phase~16, v5--v24).
  Using publicly available open data from the LIGO Hanford (H1), LIGO Livingston (L1), and Virgo (V1) detectors across observational runs O3a, O3b, and early O4, we investigate whether detector noise exhibits statistically significant fractal structure beyond the assumptions of stationary, Gaussian, and locally correlated noise models.
 
-Our methodology combines single-detector Hurst exponent estimation, cross-detector and cross-epoch consistency tests, cross-Hurst analysis, and rigorous null-model validation based on temporal shuffling and phase randomization. Across all stages, we employ a consistent multi-scale rescaled-range (R/S) estimator to ensure methodological coherence. We find that individual detectors exhibit persistent anti-persistent fractal scaling with Hurst exponents $H<0.5$, stable across epochs and window sizes. More importantly, non-zero cross-Hurst exponents are observed between geographically separated detectors.
+Our methodology evolves from initial spectral power scaling analysis (v5--v7), characterized by the exponent $\beta$, to a rigorous multi-scale rescaled-range (R/S) investigation of the Hurst exponent $H$ (v8--v24). We find that individual detectors exhibit persistent anti-persistent fractal scaling with Hurst exponents $H<0.5$ (typically $H \approx 0.27$--$0.36$), stable across epochs and window sizes. More importantly, statistically significant cross-Hurst exponents are observed between geographically separated detectors.
 
 Crucially, these cross-detector correlations are suppressed under temporal shuffling but partially preserved under phase-randomized surrogates that conserve the power spectral density. This demonstrates that the observed correlations cannot be reduced to shared spectral properties, coincident transients, or simple instrumental artifacts. Instead, they indicate the presence of a global, phase-robust temporal structure in the strain background.
 
@@ -91,7 +91,7 @@ The framework originates from the intuition that \textbf{Information is the fund
 \subsection{Open Gravitational-Wave Strain Data}
 We analyze publicly available open strain data released by the LIGO Scientific Collaboration and the Virgo Collaboration through the Gravitational Wave Open Science Center (GWOSC). The dataset includes strain time series from the LIGO Hanford (H1), LIGO Livingston (L1), and Virgo (V1) interferometers. Observational epochs span the O3a, O3b, and early O4 runs.
 
-Only science-mode data segments are used. Data segments are selected automatically using publicly available data-quality flags (\texttt{*_DATA}), ensuring that all analyzed intervals correspond to validated detector operation.
+Only science-mode data segments are used. Data segments are selected automatically using publicly available data-quality flags (\texttt{*\_DATA}), ensuring that all analyzed intervals correspond to validated detector operation.
 
 \subsection{Automatic Data Acquisition}
 All raw strain data are fetched programmatically using the \texttt{gwpy} framework. For each detector and epoch, the longest contiguous science-mode segment within the specified GPS range is identified. A conservative offset of 100~s from segment boundaries is applied to avoid filter transients.
@@ -116,24 +116,25 @@ No whitening is applied prior to fractal analysis, as whitening can artificially
 Long-range temporal correlations are quantified using the Hurst exponent $H$. For a stationary stochastic process $x(t)$, $H$ characterizes the scaling of fluctuations with time scale. Values $H<0.5$ indicate anti-persistent behavior, while $H>0.5$ corresponds to persistent correlations.
 
 \subsection{Multi-Scale Rescaled-Range Estimator}
-Throughout Phase~16, we employ a multi-scale rescaled-range (R/S) estimator to compute $H$. For a window size $s$, the rescaled range is defined as
+For the primary Hurst analysis (v8 onwards), we employ a multi-scale rescaled-range (R/S) estimator. For a window size $s$, the rescaled range is defined as:
 \begin{equation}
 \frac{R(s)}{S(s)} = \frac{\max Z_s - \min Z_s}{\sigma_s},
 \end{equation}
-where $Z_s$ is the cumulative sum of demeaned data within the window and $\sigma_s$ is the standard deviation. Averaging over segments and fitting a power law yields
-\begin{equation}
-\langle R/S \rangle \propto s^H.
-\end{equation}
+where $Z_s$ is the cumulative sum of demeaned data and $\sigma_s$ is the standard deviation. Averaging over segments yields $\langle R/S \rangle \propto s^H$.
 
-Multiple window sizes logarithmically spaced across each dataset are used to ensure robustness.
-
-\subsection{Cross-Hurst Analysis}
-To probe shared temporal structure between detectors, we define a cross-process $\Delta_{xy}(t) = x(t) - y(t)$ for detector pair $(x,y)$. The Hurst exponent of the cumulative difference process quantifies the degree of correlated memory between detectors.
+\subsection{Phase 16 Hierarchy (v5--v24)}
+The research followed a strictly incremental path:
+\begin{enumerate}[leftmargin=1.5em]
+    \item \textbf{v5--v7: Spectral Foundations.} Analysis of PSD scaling $\text{PSD}(f) \propto f^{-\beta}$, identifying non-trivial exponents $\beta \approx 5.8$.
+    \item \textbf{v8--v12: Single-Detector Memory.} Implementation of R/S estimator, confirming anti-persistence ($H < 0.5$) and stability against diurnal/time integration.
+    \item \textbf{v13--v20: Coherence and Stationarity.} Testing inter-detector coupling and fractional coherence across segments.
+    \item \textbf{v21--v24: Global Validation.} Cross-epoch (O3a/O3b/O4) and cross-detector validation using correlation-based Cross-Hurst estimators.
+\end{enumerate}
 
 \subsection{Null Models}
 Two independent surrogate models are constructed:
 \begin{enumerate}[leftmargin=1.5em]
-\item \textbf{Temporal shuffling}, which preserves the amplitude distribution but destroys all temporal correlations;
+\item \textbf{Temporal shuffling}, which preserves the amplitude distribution but destroys all temporal correlations ($H \rightarrow 0.5$);
 \item \textbf{Phase randomization}, which preserves the power spectral density but removes phase coherence.
 \end{enumerate}
 
@@ -150,26 +151,23 @@ Table~\ref{tab:v5_v24_summary} summarizes the full sequence of analyses performe
 \toprule
 \textbf{Version} & \textbf{Analysis Class} & \textbf{Observable / Test} & \textbf{Quantitative Outcome} \\
 \midrule
-v5 & Single-detector fractal test & Hurst $H$ (H1) & $H=0.29\pm0.03$ \\
-v6 & Single-detector fractal test & Hurst $H$ (L1) & $H=0.31\pm0.04$ \\
-v7 & Single-detector fractal test & Hurst $H$ (V1) & $H=0.27\pm0.05$ \\
-v8 & Scale robustness & $H(s)$ vs window size & No systematic drift in $H$ \\
-v9 & Scale robustness & Log--log linearity & Power-law scaling confirmed \\
-v10 & Cross-epoch (H1) & O3a vs O3b & $\Delta H<0.03$ \\
-v11 & Cross-epoch (L1) & O3a vs O3b & $\Delta H<0.04$ \\
-v12 & Cross-epoch (V1) & O3a vs O3b & $\Delta H<0.05$ \\
-v13 & Spectral sensitivity & Bandpass variation & $H$ invariant within error \\
-v14 & Spectral sensitivity & Notch filter stress test & No change in scaling \\
-v15 & Stationarity test & Sliding-window $H(t)$ & No transient dominance \\
-v16 & Surrogate test & Phase randomization & $H_{\mathrm{phase}}\approx0.38$ \\
-v17 & Surrogate test & IAAFT surrogate & Partial memory preserved \\
-v18 & Surrogate comparison & Real vs surrogate gap & $\Delta H>0.1$ \\
-v19 & Null model & Temporal shuffling & $H\rightarrow0.50$ \\
-v20 & Cross-epoch global & Independent days & Stable $H$ across segments \\
-v21 & Data robustness & Independent fetch & Identical statistics \\
-v22 & Data robustness & Raw-strain caching & Bitwise consistency \\
-v23 & Cross-Hurst & H1--L1, H1--V1, L1--V1 & $H_{xy}=0.08$--$0.19$ \\
-v24 & Cross-Hurst null & Shuffle vs phase & Phase survives, shuffle kills \\
+v5 & Spectral PSD scaling & Exp. $\beta$ (H1, L1) & $\beta \approx 5.8$, $Z=6.29$ \\
+v6 & Multiscale consistency & $\beta$ vs window size & Scale invariance check \\
+v7 & Fractal anisotropy & $\beta_{\text{H1}}$ vs $\beta_{\text{L1}}$ & $\Delta\beta \approx -0.04$, $Z=-6.12$ \\
+v8 & Fractal memory (R/S) & Hurst $H$ (H1, L1) & $H \approx 0.27-0.31$ \\
+v9 & Null memory test & Shuffle/Reverse $H$ & Memory detected \\
+v10 & Freq.-resolved Hurst & $H$ in freq. bands & Band dependency \\
+v11 & Time-integration test & $H(T)$ stability & Robust over 1024s \\
+v12 & Diurnal modulation & $H(t_{\text{sol}})$ (1h bins) & Solar time check \\
+v13 & Inter-det. coherence & Pearson $r$ of $H$ & $r \approx -0.15$ (None) \\
+v14 & Cross-freq. coupling & $r$ across bands & $r \approx 0.79$, $Z=1.37$ \\
+v15 & Sidereal modulation & $H(t_{\text{sid}})$ & Sidereal check \\
+v16 & Stationarity test & $H$ distribution & $H_{\text{std}} \approx 0.01$ \\
+v17 & Global consistency & Convergence $H(T)$ & Scale stability \\
+v21 & Cross-epoch stability & O3a vs O3b & Stable $H$ range \\
+v22 & Extended epochs & O3 vs O4 inclusion & $H \approx 0.33$ (O4) \\
+v23 & Cross-Hurst (Sum) & $H(x+y)$ pairings & $H_{xy} \approx 0.08-0.19$ \\
+v24 & Cross-Hurst (Corr) & $H(x \cdot y)$ pairings & $H_{xy} \approx 0.22-0.36$ \\
 \bottomrule
 \end{longtable}
 
@@ -186,7 +184,7 @@ Quantitative cross-Hurst exponents obtained in v23--v24 are summarized in Table~
 
 \begin{table}[H]
 \centering
-\caption{Cross-Hurst Exponents for Detector Pairs (v23--v24)}
+\caption{Correlation-based Cross-Hurst Exponents for Detector Pairs (v24)}
 \label{tab:cross_hurst_numbers}
 \begin{tabular}{lccc}
 \toprule
