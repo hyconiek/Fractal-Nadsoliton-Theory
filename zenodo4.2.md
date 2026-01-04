@@ -70,6 +70,8 @@ The audit transitioned from high-level parameter estimation to raw-signal forens
 *   📄 **Documentation:** `TOE_FINAL_DOCUMENTATION_v4.2.pdf` (The Raw Strain Audit).
 *   📜 **Release Notes:** `RELEASE_4_2_NOTES.md`.
 *   💾 **Analysis Data:** `phase16_results.json`, `QW_1660_v17_global_consistency.json`.
+*   🔗 **Replication (Kaggle):** [Phase 16 - Raw Strain Fractal Audit](https://www.kaggle.com/code/krzysztofzuchowski/phase-16-raw-strain-qw-1660-v5-fractal)  
+    **RUN FIRST QW-1660 v2 !!!!!!Data required by v5-v24 scripts is retrieved via QW-1660 v2: HOLOGRAPHIC NOISE SEARCH (ROBUST DATA FETCHING) cell!!!!!!!!! RUN FIRST**
 
 **💻 Official Repository:**
 [https://github.com/hyconiek/Fractal-Nadsoliton-Theory](https://github.com/hyconiek/Fractal-Nadsoliton-Theory)

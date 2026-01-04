@@ -74,7 +74,8 @@ This indicates the correlations are driven by **shared non-local information** r
 *   📄 **Preprint:** `Global_Fractal_Correlations_in_GW_Noise_Preprint.pdf` (Submission Ready).
 *   📜 **Release Notes:** `RELEASE_4_3_NOTES.md`.
 *   💾 **Raw Evidence:** `QW_1660_v24_cross_hurst_null_validation.json`.
-*   🔗 **Replication (Kaggle):** [Phase 16 - Raw Strain Fractal Audit](https://www.kaggle.com/code/krzysztofzuchowski/phase-16-raw-strain-qw-1660-v5-fractal)
+*   🔗 **Replication (Kaggle):** [Phase 16 - Raw Strain Fractal Audit](https://www.kaggle.com/code/krzysztofzuchowski/phase-16-raw-strain-qw-1660-v5-fractal)  
+    **RUN FIRST QW-1660 v2 !!!!!!Data required by v5-v24 scripts is retrieved via QW-1660 v2: HOLOGRAPHIC NOISE SEARCH (ROBUST DATA FETCHING) cell!!!!!!!!! RUN FIRST**
 
 **💻 Official Repository:**
 [https://github.com/hyconiek/Fractal-Nadsoliton-Theory](https://github.com/hyconiek/Fractal-Nadsoliton-Theory)
