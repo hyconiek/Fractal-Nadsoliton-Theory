@@ -4280,15 +4280,83 @@ Phase 16 (QW-1660 series) marks the move from analysis of processed posterior sa
 \textbf{CRITICAL:} Run \QW{2}: HOLOGRAPHIC NOISE SEARCH (ROBUST DATA FETCHING) cell first to initialize the dataset.
 
 \section{Foundational Fractal Audit (v5--v24)}
-Analysis of H1, L1, and V1 data across O3 and O4 runs established the basic parameters of the fractal background:
-\begin{itemize}
-    \item \textbf{Spectral Foundations (v5--v7):} Identified a stable spectral exponent $\beta \approx 5.8$.
-    \item \textbf{Fractal Memory (v8--v12):} Confirmed a sub-diffusive Hurst exponent $H \in [0.27, 0.31]$ persistent across scales.
-    \item \textbf{Cross-Detector Correlations (v23--v24):} Detected phase-robust cross-Hurst exponents $H_{xy} \approx 0.22$--$0.36$ between geographically separated detectors.
-\end{itemize}
+Analysis of H1, L1, and V1 data across O3 and O4 runs established the basic parameters of the fractal background. Table~\ref{tab:v5_v24_summary} summarizes the sequence of methodological tests designed to progressively constrain alternative explanations and strengthen statistical rigor during this phase.
+
+\begin{longtable}{p{1.3cm}p{4.8cm}p{4.5cm}p{3.4cm}}
+\caption{Detailed Summary of QW--1660 Phase~16 Analyses (v5--v24)}\label{tab:v5_v24_summary}\\
+\toprule
+\textbf{Version} & \textbf{Analysis Class} & \textbf{Observable / Test} & \textbf{Quantitative Outcome} \\
+\midrule
+v5 & Spectral PSD scaling & Exp. $\beta$ (H1, L1) & $\beta \approx 5.8$, $Z=6.29$ \\
+v6 & Multiscale consistency & $\beta$ vs window size & Scale invariance check \\
+v7 & Fractal anisotropy & $\beta_{\text{H1}}$ vs $\beta_{\text{L1}}$ & $\Delta\beta \approx -0.04$, $Z=-6.12$ \\
+v8 & Fractal memory (R/S) & Hurst $H$ (H1, L1) & $H \approx 0.27-0.31$ \\
+v9 & Null memory test & Shuffle/Reverse $H$ & Memory detected \\
+v10 & Freq.-resolved Hurst & $H$ in freq. bands & Band dependency \\
+v11 & Time-integration test & $H(T)$ stability & Robust over 1024s \\
+v12 & Diurnal modulation & $H(t_{\text{sol}})$ (1h bins) & Solar time check \\
+v13 & Inter-det. coherence & Pearson $r$ of $H$ & $r \approx -0.15$ (None) \\
+v14 & Cross-freq. coupling & $r$ across bands & $r \approx 0.79$, $Z=1.37$ \\
+v15 & Sidereal modulation & $H(t_{\text{sid}})$ & Sidereal check \\
+v16 & Stationarity test & $H$ distribution & $H_{\text{std}} \approx 0.01$ \\
+v17 & Global consistency & Convergence $H(T)$ & Scale stability \\
+v18 & Multi-det. global & H1 vs L1 stability & $H \approx 0.28-0.32$ \\
+v19 & Memory persistence & Real vs Shuffle & Memory confirmed \\
+v20 & Cross-epoch stability & Independent day test & $H \approx 0.27$ stable \\
+v21 & Cross-epoch global & O3a vs O3b & Stable $H$ range \\
+v22 & Extended epochs & O3 vs O4 inclusion & $H \approx 0.33$ (O4) \\
+v23 & Cross-Hurst (Sum) & $H(x+y)$ pairings & $H_{xy} \approx 0.08-0.19$ \\
+v24 & Cross-Hurst (Corr) & $H(x \cdot y)$ pairings & $H_{xy} \approx 0.22-0.36$ \\
+\bottomrule
+\end{longtable}
+
+\subsection{Cross-Detector Correlations}
+Quantitative cross-Hurst exponents obtained in v23--v24 are summarized in Table~\ref{tab:cross_hurst_numbers}. These values are derived from shared 512~s raw-strain windows, identically preprocessed for each detector pair.
+
+\begin{table}[H]
+\centering
+\caption{Correlation-based Cross-Hurst Exponents for Detector Pairs (v24)}
+\label{tab:cross_hurst_numbers}
+\begin{tabular}{lccc}
+\toprule
+Detector Pair & $H_{xy}^{\mathrm{real}}$ & $H_{xy}^{\mathrm{shuffle}}$ & $H_{xy}^{\mathrm{phase}}$ \\
+\midrule
+H1--L1 & 0.361 & 0.531 & 0.397 \\
+H1--V1 & 0.215 & 0.522 & 0.236 \\
+L1--V1 & 0.270 & 0.504 & 0.283 \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \section{Universal Multifractal Signature (v25--v27)}
 Extended MF-DFA analysis (Phase 16 v25+) identifies FIN as a member of a specific universality class. The $q$-dependent Hurst exponent $H(q)$ follows a \textbf{log-Poisson cascade}, characteristic of quantum vacuum noise and the CMB background, rather than a log-normal process.
+
+\section{Research Hierarchy: Phase 16 Audits (v25--v46)}
+The final verification phase of Release 4.4 was conducted through a series of specialized physical audits. The hierarchy of these tests and their primary verdicts are summarized in Table~\ref{tab:phase16_audits}.
+
+\begin{table}[H]
+\centering
+\caption{Detailed Summary of Phase 16 Structural and Physical Audits (v25--v46)}
+\label{tab:phase16_audits}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Version} & \textbf{Audit Focus} & \textbf{Primary Verdict / Outcome} \\
+\hline
+v25--v26 & Multifractal Identity & Identification of log-Poisson cascade. \\
+v27 & Class Identification & Universality match with CMB/Vacuum noise. \\
+v28 & Spacetime Coherence & Robustness under time-lag tau analysis. \\
+v29, v36 & Geometric Scaling & $dH/d\log L \approx 0 \implies$ Scale Invariance. \\
+v30 & Environmental Veto & Rejection of Seismic/Magnetic noise models. \\
+v31--v33 & Informational Nature & FIN survives LZ-compression and shuffling. \\
+v34--v35 & Spacetime Topology & Finite globality; Time-reversal invariance. \\
+v37 & Tensoriality & $\Delta H_{+,\times} > 0.1 \implies$ Tensorial character. \\
+v39, v44 & Energy Independence & $\rho(H, E_{\text{RMS}}) \approx 0 \implies$ Non-energetic. \\
+v40--v41 & Cosmic Coupling & $\rho(H, z) \approx -0.96 \implies$ Redshift dependence. \\
+v43, v45 & Operationality & FIN established as a Relational Functional. \\
+v46 & Scale Consistency & Planck-proxy validation via window scaling. \\
+\hline
+\end{tabular}
+\end{table}
 
 \section{Falsification and Physical Audit (v28--v46)}
 A rigorous physics audit (Release 4.4) was conducted to test the structural vs. dynamic nature of FIN:
