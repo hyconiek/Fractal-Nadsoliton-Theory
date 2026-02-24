@@ -39,7 +39,7 @@ The audit ladder has reached its summit:
 | :--- | :--- | :--- | :--- |
 | **v25--26** | **Multifractal Identity** | **Log-Poisson Cascade** | Identity matches quantum vacuum and CMB noise. |
 | **v36--37** | **Physical Audit** | **$\Delta H > 0.1$** | FIN is tensorial (metric-coupled), not scalar. |
-| **v36, v45** | **Scale Invariance** | **$dH/d\log L \approx 0$** | Signature is independent of detector arm length. |
+| **v36, v45** | **Scale Invariance** | **$\frac{dH}{d \log L} \approx 0$** | Signature is independent of detector arm length. |
 | **v39, v45** | **Energy Independence** | **$\rho(H, E_{\text{RMS}}) \approx 0$** | Signal carries information WITHOUT energy transport. |
 | **v40--41** | **Cosmic Coupling** | **$\rho(H, z) \approx -0.96$** | Strong coupling to redshift and GW event rates. |
 | **v46** | **Theory Consistency** | **$D = 1.77$** | Matches theoretical Nadsoliton network density. |
@@ -52,7 +52,7 @@ The audit ladder has reached its summit:
 
 Validated by the Phase 16 audit, the framework is governed by:
 *   **A1 — Relationality:** FIN exists only as a correlation between fields, not a local observable.
-*   **A2 — Non-energetic:** The functional transfers zero energy or mass.
+*   **A2 — Non-energetic:** The functional transfers zero energy or mass ($\rho \approx 0$).
 *   **A3 — Scale Invariance:** Robust to geometric and temporal window scaling.
 *   **A4 — Tensoriality:** Follows metric transformation laws (Polarization $\Delta H > 0.1$).
 *   **A5 — Stationarity:** A structural measure of reality ($\sigma(H) \approx 7 \times 10^{-4}$), not a dynamic process.

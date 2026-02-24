@@ -1,0 +1,787 @@
+Characterization of gravitational-wave detector noise with fractals
+Marco Cavaglià
+
+arXiv:2201.09984v1 [gr-qc] 24 Jan 2022
+
+Institute of Multi-messenger Astrophysics and Cosmology,
+Missouri University of Science and Technology,
+Physics Building, 1315 N. Pine St., Rolla, MO 65409, USA
+We present a new method, based on fractal analysis, to characterize the output of a physical
+detector that is in the form of a set of real-valued, discrete physical measurements. We apply
+the method to gravitational-wave data from the latest observing run of the Laser Interferometer
+Gravitational-wave Observatory. We show that a measure of the fractal dimension of the main detector output (strain channel) can be used to determine the instrument status, test data stationarity,
+and identify non-astrophysical excess noise in low latency. When applied to instrument control and
+environmental data (auxiliary channels) the fractal dimension can be used to identify the origins of
+noise transients, non-linear couplings in the various detector subsystems, and provide a means to
+flag stretches of low-quality data.
+
+I.
+
+INTRODUCTION
+
+This paper introduces a new method to characterize the data of gravitational-wave (GW) interferometric detectors and, more generally, the data of any detector whose output is in the form of a
+(set of) real-valued, discretely-sampled measurements. Current ground-based GW detectors such
+as Laser Interferometer Gravitational-wave Observatory (LIGO) [1], Virgo [2], and KAGRA [3], are
+exquisite scientific instruments of extreme sensitivity. Because of this feature and the feebleness of
+the signals these detectors aim to detect, coveted astrophysical information is typically buried in
+instrumental and environmental noise of different origins. Therefore, GW scientists devote considerable effort to the characterization of detector noise and data quality investigations [4–9]. These
+activities are essential to improve the instruments, provide feedback to commissioners, validate
+detection candidates, reduce search backgrounds, and ultimately increase the significance of GW
+signals.
+The noise floor of GW detectors is typically non-stationary and non-Gaussian [6]. The detector
+sensitivity is limited by fundamental and technical noise sources, as well as transient and persistent
+noise artifacts that arise from physical disturbances and/or non-linear couplings between the various
+detector subsystems and their environments [4]. Therefore, characterization of GW detector noise
+is a non-trivial task. To complicate the matter, during observing runs there is a strong need
+to perform detector characterization and data quality assessment in low-latency [10]. A rapid and
+accurate estimation of detector data is indeed crucial to validate or retract candidate detections and
+disseminate accurate physical information of astrophysical triggers. Online and offline validation of
+GW triggers requires a series of steps to assess the state of the detector, evaluate specific metrics,
+and ultimately produce a single event validation result [6]. Great advances have been made in the
+automation of online and offline validation of triggers that minimize human involvement and shorten
+the latency of the process. Tasks that are currently implemented in LIGO-Virgo-KAGRA (LVK)
+low-latency data quality reports are based on techniques that include signal processing tools such
+as omicron [11], machine learning algorithms such as iDQ [12], automated checks of lock status
+and noise stationarity, and monitors to identify physical couplings between the detectors and their
+environments. Nevertheless, many of these process still require a human input for final validation.
+
+2
+Although identifying noise artifacts with spectrograms and available auxiliary channel information
+is relatively easy, assessing their impact on astrophysical candidate trigger parameters and sky
+locations is not trivial [13, 14]. Even questions that are in theory as simple as determining whether
+the detectors are in a good state may be hard to answer. In the following we will show that a
+measurement of the fractal dimension of the detector data may be provide an additional, effective
+tool for characterizing the instrument output in low latency and providing data quality assessment.
+Fractals arise naturally in non-linear dynamical systems and have been used to study physical problems in a plethora of disciplines including, among others, biology and medicine [15], engineering
+[16], computer graphics [17], archeology [18], and economics [19]. In the context of GW interferometry, they have been used to characterize the time evolution of Virgo and KAGRA seismometer
+data [20–23]. Fractal sets can be characterized by their dimension. The fractal dimension DF
+of a set determines its degree of complexity [24]. In the case of a physical measurement over a
+time interval, it has been shown that the value of the fractal dimension is related to the frequency
+content of the data [25]. For example, Gaussian (white) noise has DF = 2, while noise with a
+different power spectrum has typically 1 < DF < 2. Therefore, the fractal dimension can be used
+to measure the characteristics of the instrument’s noise, as well as to monitor its stationarity over
+time. As the fractal dimension of a device’s output with stationary noise floor is constant during
+normal operations, any change in the fractal dimension must denote a variation in the noise power
+spectrum of the instrument. The fractal dimension is also particularly suited to capture non-linear
+effects in complex physical devices.
+In the case at hand, this paper will show that fractal analysis can be used to characterize the
+behavior of GW detectors and identify data non-stationarity in their output. A simple measure of
+the fractal dimension of the main detector output (the “strain channel”) enables fast identification
+of the interferometer lock status, instrumental or environmental excess noise in data used for astrophysical searches, and also monitors the stationarity of the detector [26–28]. When applied to
+instrument control and environmental data (“auxiliary channels”) the fractal dimension can be used
+to identify the origins of noise transients, non-linear couplings in the various detector subsystems,
+and provide a means to flag stretches of low-quality data. Moreover, the numerical calculation of (a
+good approximant to) the fractal dimension is computationally cheap and can easily be performed
+in real time, thus enabling on-the-fly information on the instrument output [26–28].
+For the sake of brevity, the following analysis will focus on LIGO data. Extensions of this analysis
+to other GW detector data, as well as discretely-sampled, real-valued data produced by generic
+measurement devices are straightforward.
+
+II.
+
+FRACTAL DIMENSION
+
+A detailed discussion of the mathematics of fractals is beyond the scope of this paper. The content
+of this section is limited to a brief discussion of the basic elements of fractal analysis that are
+required to understand its application to GW detector data.
+In broad terms, fractals are subsets of n-dimensional Euclidean spaces with non-integer dimension
+DF < n [24]. The fractal dimension defines the degree of complexity of the set and quantifies how
+densely the fractal set occupies its covering n-dimensional Euclidean space. Different definitions
+of fractal dimensions exist in the literature, such as the Hausdorff dimension [29], the packing
+
+3
+dimension [30], and the box-counting dimension [31, 32]. These different definitions are generally
+equivalent for exactly self-similar fractal sets, but not for generic fractals. Moreover, discretelysampled physical measurements do not strictly define a fractal set and allow only for an approximate
+measure of DF . Although the fractal dimension of a physical measurement cannot be uniquely
+defined, the absolute value of DF is unimportant for the purpose of this study; all the relevant
+information for the characterization of the instrument noise is encoded in the variation of DF .
+Therefore, throughout this paper we will use the box-counting (Minkowski-Bouligand) definition of
+fractal dimension [31, 32] without loss of generality.
+Consider a set of real-valued, time-dependent measurements M = {t, O(t)}, where t ∈ [0, T ] and
+O : [0, T ] → R. The set M defines our (fractal) curve. Let M() be the union of all measurements
+of M within a distance  centered on M. Providing the limit exists, the Minkowski-Bouligand
+dimension of M is [33]
+(MB)
+
+DF
+
+= 2 − lim
+
+→0
+
+ln A(M())
+,
+ln 
+
+(1)
+
+where A is the area of M(), i.e., the area traced out by a small circle with radius  following the
+measurements O(t) from 0 to T . It can be shown that Eq. (1) can be rewritten as the box-counting
+dimension:
+(BC)
+
+DF
+
+= lim
+
+ln N ()
+
+→0 ln(1/)
+
+,
+
+(2)
+
+where N is the (minimum) number of disjoint squares of side  that are necessary to cover M().
+The fractal dimension can be calculated from Eq. (1) or Eq. (2) by computing the slope of A(M) or
+N () vs.  in double logarithmic scale (log-log plot). For all purposes of this analysis, the MinkowskiBouligand dimension and the box-counting dimension can be considered equivalent. Throughout
+the remainder of the paper we will make use of the definition in Eq. (1), which will be referred as
+DF .
+It was mentioned above that a set of discretely-sampled time-dependent measurements is not strictly
+a fractal. Therefore, the numerical evaluation of DF with either method requires some care. A
+set of N physical measurements of M is endowed with two scales that break the scaling invariance
+hypothesis at the basis of the fractal dimension derivation: A minimum scale defined by the inverse
+of the sampling frequency, ∆t = 1/fs , and a maximum scale defined by the measurement time
+T = N ∆t. This implies that the relation between ln A(M) and ln  for physical sets is not linear,
+nor it can be calculated at scales smaller than ∆t or larger than T . In these cases, DF is generally
+evaluated by computing the argument of the limit in Eq. (1) at different scales k = k∆t, where
+k = 1, 2, . . . M ≤ N , and then performing a linear fit to evaluate the function in the limit of
+infinitely-sampled measurements, fs → ∞:
+DF (M ) = 2 − S M ({P1 , . . . PM }) ,
+
+(3)
+
+where S M denotes the slope of the linear fit computed on the points Pk = (ln k , ln Ak (k )) corresponding to the M possible scales in the data.
+An additional source of approximation in the calculation of DF follows from the numerical scheme
+used to compute the numerator of Eq. (1). In our analysis we employ two different methods to
+evaluate A(M), the variation (VAR) method [33–35] and the ANAM method [36]. We follow Ref.
+[37] for their implementation.
+
+4
+• VAR method. The VAR method [34] is one of the most efficient techniques to evaluate the
+fractal dimension [33, 35]. The VAR estimator is defined by taking the average of the function
+F[O(t), ] = max {t0 ∈ [t − , t + ], O(t0 )} − min {t0 ∈ [t − , t + ], O(t0 )} ,
+
+(4)
+
+on the data set, i.e.,
+VAR
+
+A
+
+1
+() =
+T
+
+Z T
+dt F[O(t), ] .
+
+(5)
+
+0
+
+For a discretly-sampled set of N measurements at times tj = j∆t, where j = 0, 1, . . . N − 1,
+we evaluate AVAR () at the scales k . The discretized version of Eq. (4) is a d-dimensional
+vector with components
+Fk,l = max[Ol−k . . . Ol+k ] − min[Ol−k . . . Ol+k ] ,
+
+(6)
+
+where l = [k, k + 1, . . . N − k + 1), Oj denotes the measurement at time tj and M = N/2 − 1.
+A simple numpy implementation returning the vector AVAR with components AVAR
+is
+k
+import numpy as np
+def VAR ( data ) :
+N = len ( data )
+F_k = [ [ np . abs ( np . max ( data [ l - k : l + k + 1 ] ) - np . min ( data [ l - k : l + k + 1 ] ) ) \
+for l in np . arange (l , N - l ) ] for k in np . arange (1 , N // 2 ) ]
+A_var = [ np . mean ( np . asarray ( F_k [ j ] ) ) for j in np . arange ( len ( F_k ) ) ]
+return A_var
+
+Typically, the slope of AVAR is constant to a good approximation. Therefore, it is not
+necessary to compute all its components. The computation of the estimator can be sped up
+by limiting the calculation of the second loop to N //(2*decimate), where decimate is a
+positive integer.
+• ANAM method. The ANAM estimator [36] is defined by taking the average of the function
+
+G[O(t), ] =
+
+1
+2
+
+Z 
+
+Z 
+dt2 O(t + t1 ) − O(t − t2 )
+
+dt1
+0
+
+α
+
+1/α
+(7)
+
+0
+
+on the data set, where α ≥ 1 is an arbitrary parameter, i.e.,
+Z
+1 T
+ANAM
+dt G[O(t), ] .
+A
+() =
+T 0
+
+(8)
+
+Equation (8) can be calculated as a discretized vector at the scales k :
+
+AANAM
+=
+k
+
+1
+N − 2k
+
+NX
+−k−1
+
+
+
+
+j=k
+
+1
+(k + 1)2
+
+k
+X
+
+1/α
+α
+Oj+i − Oj−l 
+
+,
+
+(9)
+
+i,l=0
+
+A simple numpy implementation returning the AANAM vector with components AANAM
+is
+k
+
+5
+import numpy as np
+def ANAM ( data ) :
+N = len ( data )
+df = np . asarray ( [ np . power ( np . abs ( data - data [ i ] ) , args . alpha ) \
+for i in np . arange ( N ) ] ) . reshape (N , N )
+A_anam = [ ( k + 1 ) ** ( - 2 / alpha ) / ( N - 2 * k ) * np . sum ( [ np . power ( np . sum ( [ df [ j +i , j - l ] \
+for i in np . arange ( k + 1 ) for l in np . arange ( k + 1 ) ] ) ,1 / alpha ) \
+for j in np . arange (k , N - k ) ] ) for k in np . arange (1 , N // 2 ) ]
+return A_anam
+
+Similarly to the VAR estimator, the computation of the ANAM estimator can be sped up
+by limiting the calculation of the last loop to N //(2*decimate). Moreover, it can be shown
+that the theoretical fractal dimension in Eq. (8) does not depend on the value of α [36]. In
+the following we will set α = 1 to minimize the numerical complexity of Eq. (9) and speed up
+the numerical calculation.
+Using either estimator and Eq. (3), a numerical estimate of the fractal dimension is obtained by
+computing the slope of the curve traced by the points (ln k, ln Ak ). Although the curve is expected
+to be linear, this is only approximately true because of the finite sampling rate and length of
+the data, the numerical approximations used to compute Ak , and machine computational errors.
+Therefore, the fractal dimension is estimated by extracting the slope of the curve with a linear fit.
+
+III.
+
+ALGORITHM PERFORMANCE TESTS
+
+We test the performance of the estimators by evaluating DF on a few real-valued data sets with
+known fractal dimension. The Takagi-Landsberg (TL) function and the Weierstrass function are
+two well-known fractal sets whose fractal dimension can be computed analytically. The TL function
+is defined as
+∞
+X
+Tw (t) =
+wn s(2n t) ,
+(10)
+n=0
+
+where |w| < 1 is a real parameter and s(t) is the distance from t to the nearest integer:
+s(t) = min
+|t − n| .
+n∈Z
+
+(11)
+
+The fractal dimension of the TL function is
+DT L (w) = 2 + log2 (w) .
+
+(12)
+
+The Weierstrass function is defined as
+Wab (t) =
+
+∞
+X
+
+a−k sin(bk t) ,
+
+(13)
+
+k=1
+
+where 1 < a < 2 and b > 1 are real parameters. The fractal dimension of the Weierstrass function
+is
+DW (a, b) = 2 − logb (a) .
+
+(14)
+
+6
+Figures 1 and 2 show the percent errors of the fractal dimension calculated with the VAR and
+ANAM methods for one second-long TL and Weierstrass time series sampled at 4096 Hz, different
+function parameters and different values of decimate, respectively. Errors in the estimate of DF are
+typically within a few percent with the largest values occurring at the boundaries of the function
+convergence intervals (w = 1/2, 1 for the TL function and a = 0, 1 for the Weierstrass function).
+These tests also show that the ANAM estimator is generally slightly more accurate than the VAR
+estimator. The price one needs to pay for this better accuracy is in a lower computational speed of
+the ANAM estimator compared to the VAR estimator. The simple python implementation of the
+ANAM method shown in the previous section can be slower by as much as two orders of magnitude
+than the VAR implementation, depending on the value of decimate. The accuracy of the estimate
+depends on the value of decimate, the region in the function’s parameter space and the estimator.
+For example, percent errors with decimate=4 tend to be smaller than the corresponding errors
+with decimate=128 for the Weierstrass function for most of its parameter space, irrespective of the
+estimator used. Since in our study we are concerned with time variations of the fractal dimension
+rather than its absolute value, the main factor determining the choice of decimate is computational
+speed.
+
+FIG. 1. Percent errors for the fractal dimension of the TL function for different values of the parameter w
+and decimate. Left: VAR estimator. Right: ANAM estimator. Fits are done with the Gaussian Process
+Regressor implementation of sklearn [38] with kernel RBF(length scale=10,length scale bounds=[1e-01,
+10.0]).
+
+Next we test the performance of the algorithms on time series which better resemble the noise of
+GW detectors: white noise and Brownian noise [39]. Figure 3 shows the distributions of the fractal
+dimension for a set of one hundred, one second-long white noise series sampled at 4096 Hz calculated
+with the VAR and ANAM methods and decimate=16. The percent error from the theoretical value
+DF = 2 is about -3% for the VAR estimator and -0.9% for the ANAM estimator. Figure 4 shows the
+corresponding results for Brownian noise. In this case, the percent errors from the theoretical value
+DF = 1.5 are about -4% and -0.6% for the VAR and ANAM estimators, respectively. Similarly to
+the TL and Weierstrass functions, the ANAM estimator seems to be slightly more accurate than
+the VAR estimator.
+
+7
+
+FIG. 2. Percent errors for the fractal dimension of the Weierstrass function for different values of the
+parameter a and decimate. The parameter b is fixed as b = int((1.+1.5*np.pi)/a+1.). Left: VAR
+estimator. Right: ANAM estimator. Fits are done with the Gaussian Process Regressor implementation of
+sklearn [38] with kernel RBF(length scale=10,length scale bounds=[1e-01, 10.0]).
+
+FIG. 3. Distribution of the fractal dimension for one hundred, one second-long white noise series sampled
+at 4096 Hz. The parameter decimate is 16. Left: VAR estimator. Right: ANAM estimator. Fits are
+Gaussian curves with mean µ and standard deviation σ.
+
+IV.
+
+APPLICATION TO LIGO DATA
+
+To evaluate the performance of the algorithm on interferometer data and show its effectiveness
+in identifying noise transients and monitoring the stationarity of the detector we apply the VAR
+method on two four-hour stretches of LIGO data from the third LVK observing run [40]. In the
+first example, we choose a period of time where the LIGO-Livingston (L1) interferometer noise was
+contaminated by a class of radio frequency beat note noise transients, colloquially called whistles
+[4]. In the second example, we consider a different period of time where data were corrupted by
+a different class of noise transients caused by stray scattered light in the interferometer optical
+system [4]. In our analysis, we focus on the strain channel and one of the main auxiliary channels
+
+8
+
+FIG. 4. Distribution of the fractal dimension for one hundred, one second-long Brownian noise series
+sampled at 4096 Hz. The parameter decimate is 16. The speed of the Brownian process is 2. Left: VAR
+estimator. Right: ANAM estimator. Fits are Gaussian curves with mean µ and standard deviation σ.
+
+that witness the noise transients. We will show that the fractal dimension method allows for the
+identification of the noise transients for both channels and both glitch classes.
+Whistle glitches are broadband noise transients with frequency ranging from less than ∼ 100 Hz
+to several kHz with typical duration of the order of ∼ 1 second. Their time-frequency representation shows the typical pattern of a frequency-decreasing arch followed by a frequency-increasing
+arch. Whistle glitches are caused by beat notes in the instrument Voltage Controlled Oscillators
+and are witnessed by a number of auxiliary channels depending on their origin. For the stretches
+of data considered here, the main witness channel identified by hveto [41] is one of the fast sensing control auxiliary channels used to monitor the interferometer power recycling cavity (PRC),
+L1:LSC-PRCL OUT DQ. (For a list of LIGO abbreviations and acronyms, and naming conventions for
+auxiliary channel and data quality flags naming conventions, see [40].)
+Figure 5 shows the evolution of DF over four hours of the L1:LSC-PRCL OUT DQ channel data
+sampled at 16,386 Hz. The fractal dimension is evaluated with the VAR method and decimate=64,
+which allows for the computation of DF in real time. The top left panel shows one hour of data
+when the interferometer is in its nominal observing mode (L1:DMT-ANALYSIS READY) at the start
+of the glitchy period. Each point in the plot represents the value of the fractal dimension for a
+second-long data segment. The fractal dimension is stationary with most values ranging between
+DF = 1 (linear noise) and DF = 1.2. The plot’s shaded areas represent time segments where
+whistle glitches were identified and flagged in the LVK Data Quality Segment Database [42]. Three
+out of the four glitches flagged by the L1:DHC-WHISTLES data quality flag coincide with anomalous
+values of DF > 1.2. The Q-transform [43] plots (“Q-scans”) of these anomalous segments are
+shown in Fig. 6. These Q-scans show that all four time segments include whistle glitches. However,
+the glitch corresponding to the anomalous fractal dimension with value just above 1.2 (top-right
+panel) appears to be less loud than the other three, possibly explaining why it is missed by the
+L1:DHC-WHISTLES data quality flag. The corresponding Q-scans of the calibrated strain data used
+for astrophysical searches (L1:DCS-CALIB STRAIN C01) are shown in Fig. 7. As expected, the fainter
+glitch is not visible in the Q-scan of the calibrated strain.
+
+9
+The top-right panel of Fig. 5 shows the fractal dimension for one hour of later data which is
+characterized by a more severe, increasing rate of whistle glitches. In the initial 45-minute stretch,
+the anomalous points of the fractal dimension show a clear correlation with the L1:DHC-WHISTLES
+data quality flag segments. During this time, the value of DF becomes as high as ∼ 1.5 denoting
+the appearance of louder glitches compared to the previous period. At about 15 minutes before the
+end of the segment, the glitch rate and high signal-to-noise ratio (SNR) render the interferometer
+data practically unusable for astrophysical searches. This is denoted with a new data quality flag,
+L1:DHC-SEVERE WHISTLES FEB4. Eventually, the excess noise leads to the interferometer dropping
+out of observing mode and losing lock. The bottom-left panel shows the fractal dimension for a
+one-hour of data during this time. The plot starts with the detector initially not locked. Lock is
+regained at around ∼ 30 minutes into the segment. The fractal dimension exhibits wild variations
+when the interferometer is unlocked with DF spanning the whole range of possible values before
+settling down again in the range ∼ 1 - 1.2 when lock is regained. Note that the interferometer is
+still in non-observing mode during this time while it is transitioning to its low-noise nominal state.
+Finally, the bottom-right panel shows DF for a later one-hour of data when the instrument is again
+locked, in observing mode, and free of whistle glitches. The fractal dimension is now stationary
+and well below DF = 1.2.
+The one-hour period shown in the top-left panel also shows two additional segments flagged by
+L1:DHC-WHISTLES where apparently the fractal dimension is not anomalous. It is worth digging
+a little deeper into them. The left panels of Fig. 8 show the variation of the fractal dimension of
+L1:LSC-PRCL OUT DQ for a period of 32 seconds around these segments. Three second-long Q-scans
+centered on the flagged times are shown in the right panels. During the data quality segment
+starting at GPS time 1264833002, the fractal dimension is around DF = 1, a value typical of quiet
+times. In fact, the Q-scan of this segment does not show any visible excess noise and might have
+been wrongly flagged. (The Q-scan of the calibrated strain channel at this time also does not show
+any visible glitch.) The data quality segment at GPS time 164833447 includes values of the fractal
+dimension as high as DF ∼ 1.1. The Q-scan to the right shows indeed that this segment contains
+whistle glitches, although not as loud as the other flagged whistle glitches in the one-hour period.
+It is interesting to note that the fractal dimension around this time shows a “wavy” behavior with
+its value fluctuating between DF ∼ 1 and DF ∼ 1.1 in a quasi-periodic fashion. This effect is due
+to the presence of whistle glitches across the entire period. For example, a Q-scan of the first few
+seconds of the 32-second interval in the bottom panel, where DF shows a “bump”, confirms that
+(low-SNR) whistle glitches are also present at this time.
+In addition to glitch identification, the fractal dimension can be used to characterize the (non-)
+stationarity of the interferometer in the presence of noise transients. It is straightforward to note
+from Fig. 5 that the variation of DF is larger when whistle glitches occur than in their absence.
+This effect can be quantified by computing the stationarity metric, defined as ratio of the rolling
+standard deviation of DF to the rolling average of DF . When glitches are present, the metric
+shows higher values and vice versa. The metric can then be used to determine whether a given
+period is characterized by excess noise. The left panel of Fig. 9 shows the stationarity metric
+for the three one-hour, observing periods of Fig. 5 computed on a 60 second-long rolling window
+preceding each value of DF . The quiet time (bottom-right panel of Fig. 5 is characterized by a
+value of the stationarity metric consistently smaller than 0.02 (darker area). The moderate (Fig. 5,
+top-left) and the severe (Fig. 5, top-right panel) periods exhibit higher values of the metric over
+their corresponding one-hour data stretches, with the severe period characterized by a value of the
+metric as high as ∼ 5 times the value for the moderate case. The right panel of Fig. 9 shows the
+histogram distributions of the stationarity metric for the three periods. A simple threshold of 0.02
+
+10
+
+FIG. 5. Fractal dimension of four, one-hour periods of L1 data for the L1:LSC-PRCL OUT DQ auxiliary channel
+(a witness of whistle glitches). The sampling rate of the channel is 16,384 Hz. The fractal dimension is
+computed with the VAR algorithm decimated at 64. Each point represents DF for one second of data.
+The interferometer is in observing mode (L1:DMT-ANALYSIS READY) during the periods corresponding to the
+top-left, top-right and bottom-right panels, and out of observing mode during the period corresponding to
+the bottom-left panel. Different color shades denote different data quality flags.
+
+captures all the 60-second segments with elevated excess noise.
+To test the method on another class of noise we repeat the above analysis for the scattered light
+glitches. Excess noise transients due to unwanted scattered light in the interferometer optical
+systems have been one of the major sources of noise in LIGO data during third observation run (O3)
+[44]. For that reason, a number of investigations to determine its causes and develop mitigation
+strategies have been conducted over the past few years [45–48]. Scattered light noise manifests itself
+as transients at low and medium frequencies in the interferometer sensitive band. It is commonly
+divided in two sub-classes: slow and fast scattering [44]. Slow scattering typically occurs during
+periods of elevated ground motion due to earthquakes and microseism noise in the sub-Hz frequency
+band. The time-frequency representation of slow scattered light glitches is that of stacked arches
+with duration of few seconds. Fast scattering occurs at higher frequencies (a few Hz) due to
+anthropogenic noise. Fast scattered light glitches have a smaller duration and SNR than slow
+scattered light glitches. Their time-frequency representation is that of arches with duration of ∼ 1
+
+11
+
+FIG. 6. Q-scans of the L1:LSC-PRCL OUT DQ auxiliary channel centered on the four anomalous points
+with DF > 1.2 in the top-left panel of Fig. 5 showing the presence of whistle glitches. The top-left panel
+corresponds to the anomalous point at t = 482 seconds from the beginning of the one-hour time period. The
+top-right panel corresponds to the anomalous point with value closer to the DF = 1.2 threshold occurring
+at t = 1034 seconds from the beginning of the one-hour time period. The bottom panels correspond to the
+anomalous points occurring a few minutes before the end of the one-hour period.
+
+second. (See Figs. 4 and 5 in Ref. [4] for Q-scans of scattering glitches.)
+Figure 10 shows the variation of the fractal dimension for four, one-hour periods of O3 calibrated
+strain L1 data on January 6, 2020, during a time of elevated slow scattered light glitch activity
+[45]. The top-left plot shows DF before the onset of the glitchy period. The value of the fractal
+dimension is stationary over this period, taking values between DF = 1.6 and 1.8 with occasional,
+low-SNR isolated glitches identified by values of DF ∼ 1.6. The two bottom plots show the value
+of the fractal dimension over two hours with elevated scattered light noise (denoted by an active
+L1:DHC-SEVERE SCATTERING data quality flag) following a drop out of observing mode and a lock
+loss (top-right plot). The fractal dimension in the presence of scattered light glitches exhibits higher
+variability compared to the quiet time with values as low as DF ∼ 1.4. Figure 11 shows the Q-scans
+of the four anomalous times with lowest value of DF in the bottom-left of Fig. 10.
+Figure 12 shows the variation of the fractal dimension of the length sensing and control auxiliary
+channel recording the output of the photodiode which observes the reflected light from the PRC,
+L1:LSC-REFL A LF OUT DQ, for the same periods. The presence of scattered light excess noise manifests itself as an increased variability of DF in the witness channel. Similarly to the whistle glitch
+analysis, the excess noise can be quantified by comparing the stationarity metric in the different
+time periods. Figures 13 and 14 show the variation of the metric and its histogram distribution
+for the two left panels of the calibrated strain and the L1:LSC-REFL A LF OUT DQ auxiliary channel,
+respectively. The stationarity metric during glitchy times (lighter red shaded area) is on average
+higher by a factor ×2 compared to the metric during the quiet period (darker blue area) with the
+
+12
+
+FIG. 7. Q-scans of the calibrated strain channel L1:DCS-CALIB STRAIN C01 for the four glitches of Fig. 6.
+The whistle glitch in the top-right panel is not visible due to its lower SNR although it is apparent in the
+Q-scan of the L1:LSC-PRCL OUT DQ auxiliary channel.
+
+witness channel displaying an overall higher variability than the strain channel. A simple threshold
+of 0.02 (0.04) on the stationarity metric for the strain (auxiliary) channel can be used to distinguish
+low- and high-noise periods.
+
+V.
+
+CONCLUSIONS
+
+Fractal analysis provides an effective method for characterizing the output of a physical measuring
+device. In this paper, we have applied this concept to GW detector data. The fractal dimension of
+the interferometer’s strain and auxiliary channels can be used to identify noise artifacts in the data,
+monitor the stationarity of the detector and its status, as well as provide a measure of data quality.
+To illustrate the method we have considered two known examples of noise transients that occurred
+during the latest LVK observing run in one of the LIGO detectors (L1). These examples show
+that the fractal dimension DF is stationary and Gaussian distributed when the interferometer is
+operating in its nominal, low-noise mode. Non-astrophyscal noise transients correlate with anomalous values of DF . Periods of elevated glitchiness are characterized by an increased variability of
+the fractal dimension and/or non-stationarity. They can be identified by comparing the degree of
+dispersion of DF with respect to quiet times. Periods of lock loss are denoted by extreme variations
+of the fractal dimension over the whole range of possible values.
+Algorithms for the calculation of the fractal dimension are computationally cheap. One second of
+LIGO data channel at 16,384 Hz can be processed with a numba [49] decorator on a single GPU in
+∼ 0.6 seconds. Thus the method can be applied to GW data analysis in real time. Identification of
+
+13
+
+FIG. 8. Variation of the fractal dimension and corresponding Q-scans around the two flagged segments
+in the top-left panel of Fig. 5 that do not appear to be coincident with anomalous values of DF . The
+first period (GPS times 1264833002-1264833005) is quiet, thus the L1:DHC-WHISTLES flag might have been
+incorrectly assigned. The second period (GPS time 1264833447) is characterized by whistles, although these
+are not as loud as the other flagged glitches in the one-hour period (see Fig. 6). In this case, the value of
+fractal dimension does not pass the DF = 1.2 threshold. Additional, low-SNR whistle glitches are present
+during these periods and can be identified by values of DF approaching 1.1.
+
+glitch times through identification of anomalous fractal dimension outliers is a safe procedure against
+vetoing astrophysical compact binary coalescence (CBC) signals. CBC signals are characterized by
+well-defined time-frequency relations, i.e., in a sense they are “smooth” functions. The value of
+the fractal dimension depends on the whole frequency content of the data. Therefore, adding a
+smooth function to the background noise is not expected to change the fractal dimension. This
+conclusion may be different in the case of broadband, stochastic signals such as GW from corecollapse supernovae. Whether the fractal dimension could be used to detect these signals is an
+intriguing possibility which remains to be seen.
+Other avenues for future investigations on the applicability of the method to real data include
+development of anomaly detection algorithms in real-time (see, e.g, the interesting proposal in
+Ref. [50]), a full study of the relation between the fractal dimension and the characteristics of
+the instrument noise (non-linearity effects, multi-band analysis, correlations between the fractal
+
+14
+
+FIG. 9. Stationarity metric for the three observing mode data periods in Fig. 5 (L1:LSC-PRCL OUT DQ
+channel). Left: Ratio of the rolling standard deviation of DF to the rolling average of DF computed on 60
+second-long segments (darker-filled area: quiet time; medium dark-filled area: mild whistle glitchy time;
+darker-filled area: severe whistle glitchy time). The first 60 seconds of data (grey area) are used to generate
+the first value of the metric. Right: Histogram distribution of the stationarity metric for the three different
+time segments (blue: quiet time; green: mild glitchy time; red: severe glitchy time). Solid vertical lines
+indicate the mean values of the stationarity metric. Dotted vertical lines denote standard deviations from
+the means.
+
+dimension of the strain and auxiliary channels, relation to glitch SNR, rate, frequency breadth
+or other features,. . . ), and a more extensive characterization of real data (follow-up of anomalous
+fractal dimension times, fractal dimension-based differentiation of glitch classes, construction of
+suitable data quality metrics, . . . ). Theoretical developments include exploring different analytical
+models for the definition of the fractal dimension, such as entropic models [51, 52], and other choices
+of numerical approximants for even faster and more accurate estimations of DF .
+
+ACKNOWLEDGEMENTS
+
+This work was partially supported by the U.S. National Science Foundation award PHY-2011334
+and is based upon work supported by NSF’s LIGO Laboratory which is a major facility fully funded
+by the National Science Foundation. The author is grateful for computational resources provided
+by the LIGO Laboratory and supported by the U.S. National Science Foundation Grants PHY0757058 and PHY-0823459, as well as resources from the Gravitational Wave Open Science Center,
+a service of the LIGO Laboratory, the LIGO Scientific Collaboration and the Virgo Collaboration.
+Part of this research has made use of data, software and web tools obtained from the Gravitational
+Wave Open Science Center [40] and publicly available at https://www.gw-openscience.org.
+LIGO was constructed and is operated by the California Institute of Technology and Massachusetts
+Institute of Technology with funding from the U.S. National Science Foundation under grant PHY0757058. Virgo is funded by the French Centre National de la Recherche Scientifique (CNRS), the
+Italian Istituto Nazionale di Fisica Nucleare (INFN) and the Dutch Nikhef, with contributions by
+Polish and Hungarian institutes. The author would like to thank the many colleagues of the LIGO
+Scientific Collaboration and the Virgo Collaboration who have provided invaluable help over the
+
+15
+
+FIG. 10. Fractal dimension of the calibrated strain channel L1:DCS-CALIB STRAIN C01 for four, one-hour
+periods of L1 data with elevated scattered light glitch activity. The sampling rate of the channel is 16,384
+Hz. The fractal dimension is computed with the VAR algorithm decimated at 64. Each point represents DF
+for one second of data. The interferometer is in observing mode (L1:DMT-ANALYSIS READY) during the entire
+period corresponding to the top-left panel, and out of observing mode for the entire period corresponding
+to the top-right panel and parts of the two bottom panel periods. The top-right panel corresponds to a
+period of high noise with several lock losses denoted by the sudden drops of DF . Different color shades
+denote periods of observing mode and active status of the L1:DHC-SEVERE SCATTERING data quality flag.
+
+years and useful comments about this work, in particular Beverly Berger and Julian Ding.
+Part of this work was done over the fall 2021 at the Institute of Pure and Applied Mathematics
+(IPAM), University of California Los-Angeles (UCLA). The author would like to thank IPAM,
+UCLA and the National Science Foundation through grant DMS-1925919 for hosting him. The
+author would also like to thank, in particular, Dima Shlyakhtenko for useful suggestions about the
+theoretical aspects of this work, and Christian Ratsch, Selenne Bañuelos and all IPAM staff for
+their warm hospitality.
+Software for this analysis is written in Python 3.x [53] (https://www.python.org/) and uses standard Open Source libraries and community-contributed modules from the Python Package Index
+(PyPI) repository [54] including numpy, scipy, gwpy, h5py, pandas, matplotlib, nds2utils, numba
+
+16
+
+FIG. 11. Q-scans [43] of the calibrated strain channel L1:DCS-CALIB STRAIN C01 for the four anomalous
+times with lowest value of DF in the bottom-left of Fig. 10. The times with anomalous fractal dimensions
+correspond to scattered light glitches [4].
+
+[49], and sklearn [38]. Q-transform [43] plots have been generated with Ligo DV-Web [55].
+This manuscript has been assigned LIGO Document Control Center number LIGO-P2200005.
+
+REFERENCES
+
+[1] J. Aasi et al. (LIGO Scientific), Class. Quant. Grav. 32, 074001 (2015), 1411.4547, URL http://
+stacks.iop.org/0264-9381/32/i=7/a=074001.
+[2] F. Acernese et al. (VIRGO), Class. Quant. Grav. 32, 024001 (2015), 1408.3978, URL http://stacks.
+iop.org/0264-9381/32/i=2/a=024001.
+[3] T. Akutsu et al. (KAGRA), PTEP 2021, 05A101 (2021), 2005.05574.
+[4] D. Davis, J. S. Areeda, B. K. Berger, R. Bruntz, A. Effler, R. C. Essick, R. P. Fisher, P. Godwin,
+E. Goetz, A. F. Helmling-Cornell, et al., Classical and Quantum Gravity 38, 135014 (2021), URL
+https://doi.org/10.1088/1361-6382/abfd85.
+[5] B. P. Abbott et al. (LIGO Scientific, Virgo), Class. Quant. Grav. 33, 134001 (2016), 1602.03844.
+[6] B. P. Abbott et al. (LIGO Scientific, Virgo), Class. Quant. Grav. 37, 055002 (2020), 1908.11170.
+[7] J. Aasi et al. (VIRGO), Class. Quant. Grav. 29, 155002 (2012), 1203.5613.
+[8] J. Aasi et al. (LIGO Scientific, VIRGO), Class. Quant. Grav. 32, 115012 (2015), 1410.7764.
+[9] J. Slutsky et al., Class. Quant. Grav. 27, 165023 (2010), 1004.0998.
+
+17
+
+FIG. 12. Fractal dimension of the L1:LSC-REFL A LF OUT DQ witness auxiliary channel for the four periods
+in Fig. 10. The sampling rate of the channel is 16,384 Hz. The fractal dimension is computed with the VAR
+algorithm decimated at 64. The witness channel displays a higher variability than the calibrated strain
+channel, denoting a noiser L1:LSC-REFL A LF OUT DQ data stream compared to L1:DCS-CALIB STRAIN C01.
+
+[10] LIGO Scientific Collaboration and Virgo Collaboration, Ligo/virgo public alerts user guide, v. 16, URL
+https://emfollow.docs.ligo.org/userguide/.
+[11] F. Robinet, N. Arnaud, N. Leroy, A. Lundgren, D. Macleod, and J. McIver, SoftwareX 12, 100620
+(2020), 2007.11374.
+[12] R. Essick, P. Godwin, L. Blackburn, and E. Katsavounidis (2020), 2005.12761.
+[13] J. Powell, Class. Quant. Grav. 35, 155017 (2018), 1803.11346.
+[14] K. Chatziioannou, N. Cornish, M. Wijngaarden, and T. B. Littenberg, Phys. Rev. D 103, 044013
+(2021), 2101.01200.
+[15] T. Nonnenmacher, G. Losa, and E. Weibel, Fractals in Biology and Medicine, Mathematics and Biosciences in Interaction (Birkhäuser Basel, 2013), ISBN 9783034885010, URL https://books.google.
+com/books?id=hVr2BwAAQBAJ.
+[16] J. Lévy-Véhel and E. Lutton, Fractals in Engineering: New Trends in Theory and Applications (Springer London, 2005), ISBN 9781846280481, URL https://books.google.com/books?id=
+sZhDAAAAQBAJ.
+[17] J. Encarnacao, H. Peitgen, G. Sakas, and G. Englert, Fractal Geometry and Computer Graphics,
+Beiträge zur Graphischen Datenverarbeitung (Springer Berlin Heidelberg, 2012), ISBN 9783642956782,
+URL https://books.google.com/books?id=Ep3zCAAAQBAJ.
+
+18
+
+FIG. 13. Stationarity metric for the fractal dimension corresponding to the left panels of Fig. 10
+(L1:DCS-CALIB STRAIN C01 channel). Left: Ratio of the rolling standard deviation to the rolling average of DF computed on 60 second-long segments (darker-filled area: quiet time, light-filled area: scattered
+light glitchy time). The first 60 seconds of data (grey area) are used to generate the first value of the metric.
+Right: Histogram distributions of the stationarity metric for the two time periods (blue: quiet time; red:
+glitchy time). Solid vertical lines indicate the mean values of the stationarity metric. Dotted vertical lines
+denote standard deviations from the means.
+
+FIG. 14. Stationarity metric for the fractal dimension corresponding to the left panels of Fig. 12
+(L1:LSC-REFL A LF OUT DQ channel). Left: Ratio of the rolling standard deviation to the rolling average of DF computed on 60 second-long segments (darker-filled area: quiet time, light-filled area: glitchy
+time). The first 60 seconds of data (grey area) are used to generate the first value of the metric. Right:
+Histogram distributions of the stationarity metric for the two time periods (blue: quiet time; red: scattered
+light glitchy time). Solid vertical lines indicate the mean values of the stationarity metric. Dotted vertical
+lines denote standard deviations from the means.
+
+[18] C. T. Brown, W. R. T. Witschey, and L. S. Liebovitch, Journal of Archaeological Method and Theory
+12, 37 (2005).
+[19] E. Peters, Fractal Market Analysis: Applying Chaos Theory to Investment and Economics, Wiley
+Finance (Wiley, 1994), ISBN 9780471585244, URL https://books.google.com/books?id=_bkoySKyc_
+cC.
+[20] S. Bianchi, Journal of Open Source Software 5, 1828 (2020), URL https://doi.org/10.21105/joss.
+01828.
+
+19
+[21] A. Longo, S. Bianchi, W. Plastino, B. Idźkowski, M. Suchiński, and T. Bulik, Pure and Applied
+Geophysics 177, 2597 (2020), ISSN 6, URL https://doi.org/10.1007/s00024-019-02395-x.
+[22] A. Longo, S. Bianchi, W. Plastino, I. Fiori, D. Fiorucci, J. Harms, F. Paoletti, M. Barsuglia, and
+M. Falxa, Pure and Applied Geophysics 177, 3395 (2020), ISSN 7, URL https://doi.org/10.1007/
+s00024-020-02428-w.
+[23] A. Longo, S. Bianchi, W. Plastino, K. Miyo, T. Yokozawa, T. Washimi, and A. Araya, Pure and Applied
+Geophysics 178, 3461 (2021), ISSN 9, URL https://doi.org/10.1007/s00024-021-02810-2.
+[24] B. B. Mandelbrot (1977).
+[25] T. Higuchi, Physica D Nonlinear Phenomena 46, 254 (1990).
+[26] M. Cavaglià (2021), g2net WG3 invited seminar, June 18 at 2pm CET, URL https://www.dropbox.
+com/s/ujwrz0hbxljmdiv/MarcoCavaglia.mp4?dl=0.
+[27] M. Cavaglià (2021), g2net WG3 training school on Machine Learning for Advanced Control Techniques, August 30 - September 2, 2021, URL https://panopto.abo.fi/Panopto/Pages/Viewer.aspx?
+id=38208e71-6784-4ed3-86ef-ada500a563c8.
+[28] M. Cavaglià (2021), mathematical and Computational Challenges in the Era of Gravitational Wave
+Astronomy – Workshop IV: Big Data in Multi-Messenger Astrophysics, URL https://www.youtube.
+com/watch?v=gk1aX9FKTkk&ab_channel=InstituteforPure%26AppliedMathematics%28IPAM%29.
+[29] T. Gneiting, H. Ševčı́ková, and D. B. Percival, Statistical Science 27, 247 (2012), URL https://doi.
+org/10.1214/11-STS370.
+[30] C. Tricot, Mathematical Proceedings of the Cambridge Philosophical Society 91, 57 (1982).
+[31] M. Bouligand, Bull. Sci. Math. p. 320–344 & 361–376 (1928).
+[32] E. W. Weisstein, Minkowski-bouligand dimension, MathWorld, A Wolfram Web Resource, https:
+//mathworld.wolfram.com/Minkowski-BouligandDimension.html, accessed: 2021-09-24.
+[33] B. Dubuc, S. W. Zucker, C. Tricot, J. F. Quiniou, and D. Wehbi, Proceedings of the Royal Society
+of London. Series A, Mathematical and Physical Sciences 425, 113 (1989), ISSN 00804630, URL
+http://www.jstor.org/stable/2398496.
+[34] C. Tricot, J. F. Quiniou, D. Wehbi, C. Roques-Carmes, and B. Dubuc (1988).
+[35] B. Dubuc and S. Dubuc, J. Numer. Anal. 33, 602 (2006), URL https://epubs.siam.org/doi/10.
+1137/0733032.
+[36] M. Bigerelle and I. Alain, Comptes rendus de l’Académie des sciences. Série II, Mécanique, physique,
+chimie, astronomie 323, 669 (1996).
+[37] M. Bigerelle and A. Iost, Chaos Solitons & Fractals 11, 2179 (2000).
+[38] F. Pedregosa, G. Varoquaux, A. Gramfort, V. Michel, B. Thirion, O. Grisel, M. Blondel, P. Prettenhofer, R. Weiss, V. Dubourg, et al., Journal of Machine Learning Research 12, 2825 (2011).
+[39] A. B. Downey, Think DSP: Digital Signal Processing in Python (O’Reilly Media, Inc., 2016), 1st ed.,
+ISBN 1491938455.
+[40] Gravitational wave open science center, URL https://www.gw-openscience.org/.
+[41] J. R. Smith, T. Abbott, E. Hirose, N. Leroy, D. MacLeod, J. McIver, P. Saulson, and P. Shawhan,
+Classical and Quantum Gravity 28, 235005 (2011), URL https://doi.org/10.1088/0264-9381/28/
+23/235005.
+[42] R. P. Fisher, G. Hemming, M.-A. Bizouard, D. A. Brown, P. F. Couvares, F. Robinet, and D. Verkindt,
+SoftwareX 14, 100677 (2021), ISSN 2352-7110, URL https://www.sciencedirect.com/science/
+article/pii/S2352711021000224.
+[43] S. K. Chatterji,
+Doctoral thesis,
+Massachusetts Institute of Technology (2005),
+http://hdl.handle.net/1721.1/34388.
+[44] S.
+Soni,
+Lsu
+doctoral
+dissertations,
+Louisiana
+State
+University,
+5498
+(2021),
+https://digitalcommons.lsu.edu/gradschool dissertations/5498.
+[45] S. Soni, C. Austin, A. Effler, R. M. S. Schofield, G. González, V. V. Frolov, J. C. Driggers, A. Pele,
+A. L. Urban, G. Valdes, et al., Classical and Quantum Gravity 38, 025016 (2021), URL https:
+//doi.org/10.1088/1361-6382/abc906.
+[46] G. Valdes, B. O’Reilly, and M. Diaz, Class. Quant. Grav. 34, 235009 (2017).
+[47] A. Longo, S. Bianchi, G. Valdes, N. Arnaud, and W. Plastino (2021), 2112.06046.
+[48] S. Bianchi, A. Longo, G. Valdes, G. González, and W. Plastino (2021), 2107.07565.
+
+20
+[49] Numba, an open source jit compiler, version 0.54.1 (7 october, 2021), URL https://numba.pydata.
+org/.
+[50] J. Ding, R. Ng, and J. McIver (2021), 2111.09465.
+[51] O. Zmeskal, P. Dzik, and M. Vesely, Comput. Math. Appl. 66, 135–146 (2013), ISSN 0898-1221, URL
+https://doi.org/10.1016/j.camwa.2013.01.017.
+[52] S. Verdú, Entropy 21 (2019), ISSN 1099-4300, URL https://www.mdpi.com/1099-4300/21/8/720.
+[53] G. Van Rossum and F. L. Drake, Python 3 Reference Manual (CreateSpace, Scotts Valley, CA, 2009),
+ISBN 1441412697.
+[54] Python package index - pypi, URL https://pypi.org/.
+[55] J. S. Areeda, J. R. Smith, A. P. Lundgren, E. Maros, D. M. Macleod, and J. Zweizig, Astron. Comput.
+18, 27 (2017), 1611.01089, URL https://ldvw.ligo.caltech.edu/ldvw/view.
+
+
