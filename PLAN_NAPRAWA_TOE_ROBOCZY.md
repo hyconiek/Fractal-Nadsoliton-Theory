@@ -2259,3 +2259,83 @@ Po tej rundzie:
 5. Artefakty:
    - `report_qw1919_stage_b_derivational_gate.json`,
    - `RAPORT_QW1919_STAGE_B_DERIVATIONAL_GATE.md`.
+
+## 218. High-power identifiability interior stability (QW-1920)
+1. `QW_1920_HIGH_POWER_IDENTIFIABILITY_INTERIOR_STABILITY.py`
+   - Dwie galezie:
+     - Real arm: rozszerzone profile mikromodelu (`dmax=24`, `n_profiles=42`) i fit triady bez ansatzu.
+     - Synthetic power arm: odzysk triady tym samym estymatorem przy kontrolowanym szumie.
+2. Wynik:
+   - Real arm: nadal silna presja graniczna (`beta=2.0`, `beta_high_frac=1.0`, kondycja ~`2e16`).
+   - Synthetic arm: estymator ma wysoka moc odzysku (`joint_hit_rate=1.0`, granice ~`0.033`).
+3. Werdykt:
+   - `HIGH_POWER_IDENTIFIABILITY_DATA_LIMITED_INTERIOR_NOT_ESTABLISHED`.
+4. Znaczenie:
+   - problem jest glownie informacyjny w aktualnych danych/obserwablach, a nie czysto numeryczny estymatora.
+5. Artefakty:
+   - `report_qw1920_high_power_identifiability_interior_stability.json`,
+   - `RAPORT_QW1920_HIGH_POWER_IDENTIFIABILITY_INTERIOR_STABILITY.md`.
+
+## 219. Projekt ortogonalnej obserwabli beta (QW-1921)
+1. `QW_1921_ORTHOGONAL_BETA_OBSERVABLE_DESIGN.py`
+   - Discovery/holdout po `pair_id` hash.
+   - Selekcja kandydatow beta-observable pod kryteria:
+     - niska korelacja z omega-proxy,
+     - wysoka wrazliwosc na beta-like intervention,
+     - niska wrazliwosc na omega-like intervention.
+2. Wynik:
+   - wybrano `B7_local_resid_std`.
+   - holdout: corr z omega-proxy `0.0939`, beta_sens `0.9907`, omega_leak `0.0435`.
+3. Werdykt:
+   - `ORTHOGONAL_BETA_OBSERVABLE_DESIGN_PASS`.
+4. Artefakty:
+   - `report_qw1921_orthogonal_beta_observable_design.json`,
+   - `RAPORT_QW1921_ORTHOGONAL_BETA_OBSERVABLE_DESIGN.md`.
+
+## 220. Blind external intervention run dla wybranej obserwabli (QW-1922)
+1. `QW_1922_BETA_OBSERVABLE_BLIND_EXTERNAL_INTERVENTION.py`
+   - Implementacja `B7_local_resid_std` na dwoch datasetach:
+     - primary external rebuild v2,
+     - stress alpha6.
+   - Ewaluacja kontrastu: beta-effect vs omega-leakage + bootstrap q05.
+2. Wynik:
+   - Primary holdout: contrast `0.9472`, q05 `0.8338`.
+   - Stress holdout: contrast `2.2180`, q05 `2.0730`.
+3. Werdykt:
+   - `BETA_OBSERVABLE_BLIND_EXTERNAL_INTERVENTION_PASS`.
+4. Artefakty:
+   - `report_qw1922_beta_observable_blind_external_intervention.json`,
+   - `RAPORT_QW1922_BETA_OBSERVABLE_BLIND_EXTERNAL_INTERVENTION.md`.
+
+## 221. Integracja ograniczenia beta do derywacji triady (QW-1923)
+1. `QW_1923_BETA_CONSTRAINED_TRIAD_DERIVATION.py`
+   - Priory beta zbudowany z sygnalu `QW-1922`.
+   - Porownanie fitow: unconstrained vs beta-constrained.
+2. Wynik:
+   - beta: `2.0 -> 0.605` (ulga graniczna),
+   - ale koszt dopasowania wysoki: relative objective increase `~1.44`.
+3. Werdykt:
+   - `BETA_CONSTRAINED_TRIAD_DERIVATION_TRADEOFF_HIGH`.
+4. Artefakty:
+   - `report_qw1923_beta_constrained_triad_derivation.json`,
+   - `RAPORT_QW1923_BETA_CONSTRAINED_TRIAD_DERIVATION.md`.
+
+## 222. Tuning wagi ograniczenia + transfer retest (QW-1924)
+1. `QW_1924_LAMBDA_TUNING_AND_TRANSFER_RETEST.py`
+   - Skan `lambda_beta` i bilans 3 skladnikow:
+     - jakosc fitu rdzenia,
+     - zejscie beta z granicy,
+     - transfer na blind external holdout.
+2. Wynik:
+   - najlepszy kompromis operacyjny pozostaje przy `lambda_beta=0.0`.
+   - kazde wymuszenie beta do wnetrza znacaco pogarsza dopasowanie rdzenia.
+3. Werdykt:
+   - `LAMBDA_TUNING_PARTIAL`.
+4. Konkluzja operacyjna:
+   - aktualny material wspiera teze, ze potrzeba nowego kanału danych/interwencji dla beta,
+     a nie tylko dalszego dociskania regularizacji.
+5. Wymagany nastepny krok:
+   - `COLLECT_TRUE_EXTERNAL_INTERVENTION_DATA_FOR_BETA_CHANNEL`.
+6. Artefakty:
+   - `report_qw1924_lambda_tuning_and_transfer_retest.json`,
+   - `RAPORT_QW1924_LAMBDA_TUNING_AND_TRANSFER_RETEST.md`.
