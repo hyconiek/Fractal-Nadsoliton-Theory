@@ -4150,3 +4150,50 @@ Po tej rundzie:
    - obserwabla obniża `rmse`, ale nie podnosi `n_bins` ani mediany sily fazowej do progow twardych.
 5. Znaczenie:
    - potrzebna jest przebudowa bazy obserwabli mikro (dodatkowy kanal informacji), a nie tylko reweighting obecnego kanalu.
+
+## 341. Przelom: spectral phase-locked pointwise derivation (QW-2048)
+1. Dodano:
+   - `QW_2048_SPECTRAL_PHASE_LOCKED_POINTWISE_DERIVATION.py`
+2. Zmiana metodologiczna:
+   - zamiast fazy z estymatora obwiedni (kolaps `omega=0.05`), faza jest blokowana widmowo z operatora signed-dynamic.
+3. Wynik:
+   - `SPECTRAL_PHASE_LOCKED_POINTWISE_DERIVATION_PASS`,
+   - `readiness=POINTWISE_IDENTIFIABILITY_REPAIRED`,
+   - `pass_count=8/8`.
+4. Kluczowe liczby:
+   - `n_rows_total=342`, `n_bins=17`,
+   - `phase_min_median=0.852` (pow. progu 0.75),
+   - pokrycie binowe targetu (`beta/eta/joint`) = `0.8235 / 0.9412 / 0.8235`,
+   - `median_rmse=0.00426`.
+5. Znaczenie:
+   - usuniete zostaly dwa historyczne blokery punktowego rygoru mikro (`n_bins`, `phase_strength`).
+
+## 342. Spectral micro-stageC intersection gate (QW-2049)
+1. Dodano:
+   - `QW_2049_SPECTRAL_MICRO_STAGEC_INTERSECTION_GATE.py`
+2. Cel:
+   - ponowic gate mikro->Stage-C->external po naprawie 2048.
+3. Wynik:
+   - `SPECTRAL_MICRO_STAGEC_INTERSECTION_GATE_PASS`,
+   - `readiness=TOE_INTERNAL_BRIDGE_STRICTLY_CLOSED_PENDING_EXTERNAL_MULTITEAM_AUDIT`,
+   - `pass_count=7/7`.
+4. Klucz:
+   - wszystkie flagi TRUE, w tym `micro_pointwise_bins_ge_6` i `micro_phase_condition_strength_ge_0p75`,
+   - external primary/stress utrzymuja PASS.
+5. Znaczenie:
+   - most mikro->refrozen->Stage-C jest domkniety wewnetrznie w rygorze bez retune sektorowego.
+
+## 343. Freeze bundle dla spectral micro bridge (QW-2050)
+1. Dodano:
+   - `QW_2050_SPECTRAL_MICRO_BRIDGE_FREEZE_BUNDLE.py`
+2. Cel:
+   - przygotowac deterministyczny pakiet przekazaniowy pod niezalezny multiteam confirmatory run.
+3. Wynik:
+   - `SPECTRAL_MICRO_BRIDGE_FREEZE_BUNDLE_READY`,
+   - `readiness=READY_FOR_TRUE_INDEPENDENT_MULTITEAM_RUN`,
+   - `pass_count=4/4`.
+4. Artefakty:
+   - `external_confirmatory_v2/independent_bundle_qw2050_spectral_micro_bridge/manifest_qw2050.json`,
+   - `external_confirmatory_v2/independent_bundle_qw2050_spectral_micro_bridge/RUNBOOK_QW2050.md`.
+5. Znaczenie:
+   - lokalnie domkniety zostal maksymalny poziom rygoru; kolejny krok ma juz nature zewnetrznej replikacji.
