@@ -1,0 +1,80 @@
+{
+  "generated_utc": "2026-03-03T03:54:39.086306+00:00",
+  "triad_source": "report_qw1917_triad_derivation_no_ansatz_profile.json",
+  "triad": {
+    "omega": 0.088,
+    "phi": 0.8899999999999997,
+    "beta": 2.0
+  },
+  "datasets": {
+    "primary": {
+      "path": "/home/krzysiek/Pobrane/TOE/edison/external_confirmatory_v2/confirmatory_dataset_external_source_rebuild_v2_1831cfg/pta_v2_pairs.csv",
+      "n_rows": 2016,
+      "n_discovery": 985,
+      "n_holdout": 1031,
+      "nuisance_affine": {
+        "a": 2.226494525214111,
+        "b": 0.3296255146297891
+      },
+      "holdout_metrics": {
+        "pearson_corr": 0.6576609888029065,
+        "spearman_corr": 0.3200793027351034,
+        "rmse": 0.09270905543471218,
+        "rmse_base": 0.12306431657098585,
+        "rmse_gain_ratio": 0.24666176176880789
+      },
+      "permutation": {
+        "n_perm": 5000,
+        "q95_corr": 0.05174473441038478,
+        "q95_rmse_gain": -0.17119983304749425,
+        "p_corr": 0.0001999600079984003,
+        "p_rmse_gain": 0.0001999600079984003
+      },
+      "pass_flags": {
+        "corr_gt_perm_q95": true,
+        "rmse_gain_gt_perm_q95": true,
+        "p_corr_le_0p01": true,
+        "p_gain_le_0p01": true,
+        "rmse_gain_positive": true
+      },
+      "all_pass": true
+    },
+    "stress": {
+      "path": "/home/krzysiek/Pobrane/TOE/edison/external_confirmatory_v2/confirmatory_dataset_external_source_alpha6_1831cfg/pta_v2_pairs.csv",
+      "n_rows": 2016,
+      "n_discovery": 985,
+      "n_holdout": 1031,
+      "nuisance_affine": {
+        "a": 2.166093079739771,
+        "b": 0.33147058074760466
+      },
+      "holdout_metrics": {
+        "pearson_corr": 0.2931709246372379,
+        "spearman_corr": 0.16962836174911625,
+        "rmse": 0.2790430652368245,
+        "rmse_base": 0.2917988803935347,
+        "rmse_gain_ratio": 0.043714407469648504
+      },
+      "permutation": {
+        "n_perm": 5000,
+        "q95_corr": 0.051914939074464865,
+        "q95_rmse_gain": -0.022667750604108958,
+        "p_corr": 0.0001999600079984003,
+        "p_rmse_gain": 0.0001999600079984003
+      },
+      "pass_flags": {
+        "corr_gt_perm_q95": true,
+        "rmse_gain_gt_perm_q95": true,
+        "p_corr_le_0p01": true,
+        "p_gain_le_0p01": true,
+        "rmse_gain_positive": true
+      },
+      "all_pass": true
+    }
+  },
+  "pass_flags": {
+    "primary_all_pass": true,
+    "stress_soft_pass": true
+  },
+  "verdict": "TRIAD_BLIND_EXTERNAL_VALIDATION_PASS_STRONG"
+}

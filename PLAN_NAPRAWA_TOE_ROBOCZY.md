@@ -2161,3 +2161,101 @@ Po tej rundzie:
 4. Artefakty:
    - `report_qw1914_toe_potential_scorecard.json`,
    - `RAPORT_QW1914_TOE_POTENTIAL_SCORECARD.md`.
+
+## 213. Derivational bridge dla alpha (QW-1915)
+1. `QW_1915_ALPHA_DERIVATIONAL_BRIDGE.py`
+   - Zbudowano jawny most miedzy constrained mikromodelem (`QW-1891`) i
+     empirycznym alpha (`QW-1913`) przez mapowanie:
+     - `alpha = lambda_b / scale`.
+   - `scale` pobrany z zamrozonego assembly (`QW-1911`): `0.05`.
+2. Wynik:
+   - `alpha_weighted_inv_objective = 5.690`,
+   - `alpha_selected_q1891 = 7.000`,
+   - zakres z siatki 1891: `[2.0, 10.0]`,
+   - alpha empiryczny multisplit: `6.0`.
+3. Kompatybilnosc:
+   - `abs_diff(weighted, empirical)=0.310`,
+   - `abs_diff(selected, empirical)=1.000`,
+   - werdykt: `ALPHA_DERIVATIONAL_BRIDGE_COMPATIBLE`.
+4. Artefakty:
+   - `report_qw1915_alpha_derivational_bridge.json`,
+   - `RAPORT_QW1915_ALPHA_DERIVATIONAL_BRIDGE.md`.
+
+## 214. Bramka etapu domkniecia po integracji alpha (QW-1916)
+1. `QW_1916_CLOSURE_STAGE_GATE.py`
+   - Zintegrowano 4 filary:
+     - empiryczne domkniecie (`QW-1902`),
+     - transfer multisplit (`QW-1913`),
+     - kompatybilnosc mostu alpha (`QW-1915`),
+     - status rdzenia derivacyjnego (`QW-1890`).
+2. Wynik:
+   - `readiness = TOE_STAGE_A_CLOSED_STAGE_B_OPEN`,
+   - `stage_score = 0.800`.
+3. Interpretacja:
+   - Stage A (empiria + transfer + bridge alpha): domkniety,
+   - Stage B (pelna derivacja bez ansatzu): nadal otwarty.
+4. Wymagany nastepny krok:
+   - `DERIVE_BETA_OMEGA_PHI_FROM_MICROMODEL_WITHOUT_ANSATZ_AND_VALIDATE_ON_BLIND_EXTERNAL_DATA`.
+5. Artefakty:
+   - `report_qw1916_closure_stage_gate.json`,
+   - `RAPORT_QW1916_CLOSURE_STAGE_GATE.md`.
+
+## 215. Derywacja triady bez ansatzu na rozszerzonych granicach (QW-1917)
+1. `QW_1917_TRIAD_DERIVATION_NO_ANSATZ_PROFILE.py`
+   - Wejscie: profile mikromodelu signed/dynamic z `QW-1739`.
+   - Metoda:
+     - globalna funkcja celu z eliminacja amplitud nuisance per-run,
+     - multistart + coordinate refine,
+     - rozszerzone granice (`omega in [0.02,1.90]`, `beta in [1e-4,2.0]`),
+     - bootstrap stabilnosci i audyt presji granicznej.
+2. Wynik:
+   - optimum: `omega=0.088`, `phi=0.890`, `beta=2.000`,
+   - `n_unique_modes=3`,
+   - silna presja graniczna dla `beta` (`beta_high boundary fraction = 1.0`),
+   - bardzo zla kondycja hessiana (`~1e16`).
+3. Werdykt:
+   - `TRIAD_NO_ANSATZ_DERIVATION_PARTIAL`.
+4. Znaczenie:
+   - triada jest wyprowadzalna operacyjnie bez recznego ansatzu,
+   - ale identyfikowalnosc rdzenia derivacyjnego pozostaje niepelna (degeneracja w kierunku wysokiego tlumienia).
+5. Artefakty:
+   - `report_qw1917_triad_derivation_no_ansatz_profile.json`,
+   - `RAPORT_QW1917_TRIAD_DERIVATION_NO_ANSATZ_PROFILE.md`.
+
+## 216. Blind external validation dla triady z QW-1917 (QW-1918)
+1. `QW_1918_TRIAD_BLIND_EXTERNAL_VALIDATION.py`
+   - Triada (`omega,phi,beta`) jest zamrozona z `QW-1917`.
+   - Brak strojenia triady na danych zewnetrznych.
+   - Discovery/holdout split deterministyczny po `pair_id` (hash),
+     z dozwolona jedynie kalibracja nuisance affine (`a,b`) na discovery.
+   - Test na holdout z permutacyjnym nullem (`n_perm=5000`).
+2. Wynik:
+   - Primary external-source rebuild v2:
+     - `pearson=0.658`, `rmse_gain=0.247`, `p_corr~2e-4`, `p_gain~2e-4`, `all_pass=True`.
+   - Stress (alpha6):
+     - `pearson=0.293`, `rmse_gain=0.044`, `p_corr~2e-4`, `p_gain~2e-4`, `all_pass=True`.
+3. Werdykt:
+   - `TRIAD_BLIND_EXTERNAL_VALIDATION_PASS_STRONG`.
+4. Znaczenie:
+   - nawet przy czesciowo zdegenerowanej derywacji, zamrozona triada ma istotny sygnal predykcyjny na blind external holdout.
+5. Artefakty:
+   - `report_qw1918_triad_blind_external_validation.json`,
+   - `RAPORT_QW1918_TRIAD_BLIND_EXTERNAL_VALIDATION.md`.
+
+## 217. Bramka Stage B po QW-1917/1918 (QW-1919)
+1. `QW_1919_STAGE_B_DERIVATIONAL_GATE.py`
+   - Integracja:
+     - Stage A z `QW-1916`,
+     - sila derywacji bez ansatzu z `QW-1917`,
+     - blind external pass z `QW-1918`.
+2. Wynik:
+   - `readiness = TOE_STAGE_B_PARTIAL_EXTERNAL_PASS_DERIVATIONAL_PARTIAL`,
+   - `stage_b_score = 0.920`.
+3. Interpretacja:
+   - Stage B zrobil realny krok naprzod (blind external pass),
+   - ale nie jest jeszcze formalnie domkniety przez nierozwiazana luke identyfikowalnosci wewnetrznej (presja graniczna `beta`).
+4. Wymagany nastepny krok:
+   - `RUN_HIGH_POWER_IDENTIFIABILITY_EXPERIMENT_FOR_TRIAD_INTERIOR_STABILITY`.
+5. Artefakty:
+   - `report_qw1919_stage_b_derivational_gate.json`,
+   - `RAPORT_QW1919_STAGE_B_DERIVATIONAL_GATE.md`.
