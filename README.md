@@ -18,6 +18,8 @@ The theory has been validated through **1200+ numerical verification studies (QW
 
 **Critical Assessment:** The theory succeeds in gauge/gravity sector and has now established a rigorous **Preon Model**. Fermion spin is emergent via 3D Skyrmions. See Part XIX of the documentation for honest evaluation.
 
+**Important status note (2026-03-03):** FIN is a strong research program, but it is **not yet a closed ToE**. Stage A is closed, Stage B remains open (derivational core not fully closed; see QW-1916, QW-1919, QW-1927).
+
 ---
 
 ## Origin and Philosophy
@@ -35,6 +37,35 @@ The theory originates from a deep intuition that **Information is the fundamenta
 5.  **The 12-Octave Lattice:** Initial 3-octave models were expanded to a **12-octave structure**, inspired by the symbolic description of the Holy City's twelve foundation layers, which proved to be the mathematically necessary dimension for unifying all forces (Kissing Number in 3D).
 
 6.  **Access to Truth:** The work assumes that since human consciousness is part of this informational substrate, the human mind has direct access to fundamental truths through wisdom and intuition, allowing for the "decoding" of reality.
+
+---
+
+## Nadsoliton Primer (Textbook-Level, English)
+
+This section explains the central idea in plain language, at roughly high-school physics level.
+
+### What is a Nadsoliton?
+A **Nadsoliton** is the proposed fundamental object of FIN: a single, persistent, self-organizing informational wave-state.  
+Instead of starting from many independent particles and fields, FIN starts from one global structure and asks how familiar physics can emerge from it.
+
+### Core properties
+- **Single substrate:** one underlying informational medium, not many disconnected substances.
+- **Multi-scale structure:** organization across octave-like scales.
+- **Resonant coupling:** scales interact through the kernel \(K(d)\).
+- **Topological stability:** persistent localized patterns behave like particles.
+- **Finite propagation structure:** information transfer has a maximal rate, interpreted as the origin of relativistic speed limits.
+
+### How familiar physics is expected to emerge
+1. **Vacuum dynamics:** the vacuum is modeled as active, structured information dynamics.
+2. **Allowed modes:** the coupling kernel selects which oscillations are amplified or suppressed.
+3. **Stable localized patterns:** some modes become persistent topological objects (particle candidates).
+4. **Mass/inertia:** interpreted as the cost of maintaining and changing a complex stable pattern.
+5. **Interactions:** appear as effective coupling channels between patterns.
+6. **Light:** propagating excitation of the underlying medium.
+7. **Gravity:** effective geometry/plasticity response of the medium to concentrated stable structure.
+
+### One-sentence intuition
+Think of the universe as one giant resonant medium: particles are stable knots in it, forces are rules for how knots affect each other through that medium.
 
 ---
 
@@ -134,6 +165,25 @@ Particle masses follow Fibonacci pattern:
 | Q8: β = 0.01 Origin | 🟠 PARTIAL | Derived from gauge hierarchy |
 
 **Conclusion:** FIN Theory is a **promising phenomenological framework** with remarkable successes in the gauge/gravity sector. It is **NOT yet a complete theory** — flavor mixing and full radiative corrections require further development. The theory's strength lies in its **falsifiability** and **honest acknowledgment of limitations**.
+
+---
+
+## Current ToE Status (Honest, as of March 3, 2026)
+
+Below is the current closure status based on the newest internal gates/reports:
+
+- **QW-1916:** `TOE_STAGE_A_CLOSED_STAGE_B_OPEN`.
+- **QW-1919:** derivational stage is partial (`TOE_STAGE_B_PARTIAL_EXTERNAL_PASS_DERIVATIONAL_PARTIAL`), not strong closure.
+- **QW-1920 / QW-1917:** triad identifiability in real data still shows boundary-pressure and poor conditioning in key fits.
+- **QW-1927:** true external beta-channel readiness currently `NOT_READY` in strict mode when external independence is not fully satisfied.
+
+### What this means scientifically
+- FIN has meaningful empirical and methodological progress.
+- FIN is **not yet** the final ToE / “Holy Grail” replacement for SM+GR.
+- The main open gap is full derivational closure under strict independent external confirmatory conditions.
+
+### Practical interpretation
+FIN should currently be treated as an advanced, falsifiable unification candidate with strong partial results, not as a completed final theory.
 
 ---
 
