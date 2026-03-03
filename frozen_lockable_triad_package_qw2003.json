@@ -1,0 +1,117 @@
+{
+  "package_id": "QW2003_LOCKABLE_TRIAD_FROZEN_V1",
+  "generated_utc": "2026-03-03T12:06:54.445108+00:00",
+  "status": {
+    "q2001_verdict": "BOUNDED_GW_TRIAD_LOCKABLE_PASS",
+    "q2002_verdict": "SINGLE_KERNEL_TRIPLE_SECTOR_CLOSURE_PASS_V3",
+    "q2002_readiness": "TOE_STAGE_C_SINGLE_KERNEL_CLOSED_LOCKABLE_INTERNAL"
+  },
+  "frozen_components": {
+    "kernel": {
+      "omega": 0.37341399972174283,
+      "phi": -1.310233577483508,
+      "beta": 0.6159380564131874,
+      "eta": 2.8
+    },
+    "shared_params": {
+      "chi_im": 0.31277657543084514,
+      "diag_iso": 0.011133623526631775,
+      "diag_q_coeff": 0.023231150712776396,
+      "diag_sector": 0.11340639008162685,
+      "lambda_mix": 0.6558721036754207,
+      "p_amp": 0.9252148940096931,
+      "phase_q": 0.26672804099980674,
+      "r_dist": 0.9758497827019121,
+      "rho_gap": 1.0065574010654268,
+      "theta_iso": 0.3453065240958936,
+      "theta_sector": 0.16772593255657867
+    },
+    "gw_operator": {
+      "xi1": 0.00164905739,
+      "xi3": 0.001712654074,
+      "xi4": 5.2824299e-05,
+      "gamma_c": 0.796713,
+      "kappa_t": 1.4
+    },
+    "thresholds": {
+      "ckm_mean_rel_pct_max": 15.0,
+      "pmns_mean_rel_pct_max": 15.0,
+      "gw_sep_min": 0.002,
+      "gw_adv_min": 0.3,
+      "gw_auc_min": 0.75,
+      "gw_control_gap_max": 0.0025
+    }
+  },
+  "fixed_branch_inputs": {
+    "fixed_q_nu": [
+      0,
+      1,
+      2
+    ]
+  },
+  "frozen_performance_snapshot": {
+    "deterministic": {
+      "flavor": {
+        "ckm_mean_rel_pct": 12.852042472719024,
+        "pmns_mean_rel_pct": 11.734031958164346
+      },
+      "gw": {
+        "auc_h1l1_vs_ctrl": 0.8996234904466559,
+        "adv_shared_minus_ctrl_q90": 0.5434782608695653,
+        "sep_median_h1l1_minus_ctrl": 0.0033877401008480306,
+        "control_median_gap": 7.252065607897605e-05
+      },
+      "flags": {
+        "mass_mean_rel_pct_le_max": true,
+        "mass_max_rel_pct_le_max": true,
+        "mass_tau_charm_ratio_err_le_max": true,
+        "ckm_mean_rel_pct_le_max": true,
+        "pmns_mean_rel_pct_le_max": true,
+        "gw_sep_ge_min": true,
+        "gw_adv_ge_min": true,
+        "gw_auc_ge_min": true,
+        "gw_control_gap_le_max": true
+      },
+      "all_pass": true
+    },
+    "bootstrap": {
+      "triad_pass_rate_2500_seeds": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "triad_pass_rate_5000_seeds": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "triad_pass_rate_10000_seeds": [
+        1.0
+      ],
+      "triad_pass_rate_5000_min": 1.0,
+      "triad_pass_rate_5000_mean": 1.0
+    },
+    "local_deterministic_pass_rates": {
+      "r01": 1.0,
+      "r02": 1.0,
+      "r05": 1.0
+    },
+    "baseline_comparison": {
+      "q1970_boot_pass_rate_5000": 0.7994,
+      "improvement_abs": 0.2006
+    }
+  },
+  "usage_rules": {
+    "no_parameter_retuning": true,
+    "no_threshold_modification": true,
+    "blind_external_only": true
+  },
+  "source_reports": [
+    "report_qw1969_bootstrap_robust_recenter_search.json",
+    "report_qw2001_bounded_gw_triad_lockable_gate.json",
+    "report_qw2002_single_kernel_triple_sector_closure_gate_v3.json"
+  ],
+  "package_sha256": "f5123046189f7f137a0f2cd2c715eea424d230e2352e75f6e80c483b8f069c02"
+}
