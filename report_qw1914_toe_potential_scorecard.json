@@ -1,0 +1,74 @@
+{
+  "generated_utc": "2026-03-03T03:24:19.177256+00:00",
+  "inputs": {
+    "q1902_readiness": "EMPIRICAL_CLOSURE_PASS",
+    "q1912_verdict": "SPLIT_VALIDATION_PASS_DISCOVERY_AND_HOLDOUT",
+    "q1913_verdict": "MULTISPLIT_TRANSFER_PASS_ALL_FOLDS",
+    "q1745_readiness": "MICROMODEL_ITERATION_OPEN",
+    "q1890_readiness": "TOE_NOT_CLOSED_REQUIRES_DERIVATIONAL_REFORMULATION",
+    "q1907_overall": "PRE1700_HAS_INFERENCE_BUT_NO_EXTERNAL_KERNEL_RETUNING_SIGNAL"
+  },
+  "scores": {
+    "empirical_closure": 0.9861169734717417,
+    "robustness_transfer": 1.0,
+    "derivational_closure": 0.4321474904312015,
+    "claim_hygiene": 0.6492323917148941,
+    "reproducibility_semantic": 1.0,
+    "overall_potential": 0.825030090328758
+  },
+  "diagnostics": {
+    "metric_score_1902": 0.980167104959631,
+    "externality_ok_1902": true,
+    "single_holdout_pass_1912": true,
+    "multisplit_holdout_pass_rate_1913": 1.0,
+    "selected_alphas_1913": [
+      6.0,
+      6.0,
+      6.0
+    ],
+    "mean_mass_error_pct_q1703": 8.241700295896637,
+    "semantic_determinism_rate_q1702": 1.0
+  },
+  "classification": {
+    "toe_potential": "HIGH",
+    "closure_profile": "EMPIRICAL_STRONG_DERIVATIONAL_OPEN"
+  },
+  "qualitative_comparison_matrix": [
+    {
+      "program": "SM+GR (effective benchmark)",
+      "empirical_fit_today": "very_high",
+      "unification_depth": "low",
+      "free_parameter_load": "high",
+      "near_term_falsifiability": "very_high"
+    },
+    {
+      "program": "String/M-theory (broad class)",
+      "empirical_fit_today": "low_direct",
+      "unification_depth": "high_formal",
+      "free_parameter_load": "high_landscape",
+      "near_term_falsifiability": "low"
+    },
+    {
+      "program": "Loop Quantum Gravity",
+      "empirical_fit_today": "low_direct",
+      "unification_depth": "medium_gravity_focused",
+      "free_parameter_load": "medium",
+      "near_term_falsifiability": "low_to_medium"
+    },
+    {
+      "program": "Asymptotic Safety (gravity-first)",
+      "empirical_fit_today": "low_direct",
+      "unification_depth": "medium",
+      "free_parameter_load": "medium",
+      "near_term_falsifiability": "medium"
+    },
+    {
+      "program": "Nadsoliton TOE (current repo state)",
+      "empirical_fit_today": "medium_to_high_internal_external_archive",
+      "unification_depth": "medium_partial_derivational_gap",
+      "free_parameter_load": "medium_alpha_bridge_active",
+      "near_term_falsifiability": "high_with_new_blind_external_run"
+    }
+  ],
+  "verdict": "TOE_POTENTIAL_SCORECARD_COMPLETE"
+}
