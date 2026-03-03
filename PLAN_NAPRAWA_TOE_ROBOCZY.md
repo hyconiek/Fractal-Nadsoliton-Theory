@@ -4089,3 +4089,64 @@ Po tej rundzie:
 5. Znaczenie:
    - sama istniejaca galaz mikro jest blisko, ale nie trafia jeszcze punktowo wymaganej pary `(Z_beta, delta_eta)` z kernela refrozen,
    - kolejny krok wewnetrzny: pointwise derivation z rozkladow mikrostanu zamiast tylko envelope-grid.
+
+## 337. Pointwise derivation `Z_beta(d), delta_eta(d)` z mikromodelu (QW-2044)
+1. Dodano:
+   - `QW_2044_POINTWISE_MICRO_ZBETA_DELTAETA_DERIVATION.py`
+2. Cel:
+   - przejsc z envelope-grid do lokalnych estymat okienkowych (`d`-pointwise) bez danych sektorowych.
+3. Wynik:
+   - `POINTWISE_MICRO_DERIVATION_FAIL`,
+   - `readiness=POINTWISE_SUPPORT_NOT_ESTABLISHED`,
+   - `pass_count=4/7`.
+4. Klucz:
+   - dobra jakosc lokalnych fitow (`median_rmse=0.032`), ale slaba pokrywalnosc punktowa:
+   - tylko `n_bins=4`, `eta` target pokryty punktowo tylko w `25%` binow.
+5. Znaczenie:
+   - glowny problem to identyfikowalnosc faza-vs-obwiednia, nie sama stabilnosc dopasowania.
+
+## 338. Phase-conditioned pointwise derivation (QW-2045)
+1. Dodano:
+   - `QW_2045_PHASE_CONDITIONED_POINTWISE_MICRO_DERIVATION.py`
+2. Cel:
+   - odsprzegnac faze od obwiedni przez selekcje punktow o wysokiej informatywnosci fazowej.
+3. Wynik:
+   - `PHASE_CONDITIONED_POINTWISE_DERIVATION_PARTIAL`,
+   - `readiness=PARTIAL_IDENTIFIABILITY_REPAIR`,
+   - `pass_count=6/8`.
+4. Klucz:
+   - target `(beta, eta)` miesci sie globalnie w CI95 i pokrycie binowe (dla dostepnych binow) jest wysokie,
+   - ale pozostaja dwa blokery:
+   - `n_bins=2 < 6` oraz `phase_condition_strength < 0.75`.
+5. Znaczenie:
+   - krok naprzod metodologicznie, ale punktowy rygor nadal nie jest domkniety.
+
+## 339. Gate przeciecia micro-support z Stage-C pass-set (QW-2046)
+1. Dodano:
+   - `QW_2046_MICRO_STAGEC_INTERSECTION_GATE.py`
+2. Cel:
+   - sprawdzic, czy pointwise micro-support da sie spiac z gotowym Stage-C pass-pool bez retune sektorowego.
+3. Wynik:
+   - `MICRO_STAGEC_INTERSECTION_GATE_PARTIAL`,
+   - `readiness=MICRO_TO_STAGEC_BRIDGE_PARTIAL`,
+   - `pass_count=5/7`.
+4. Klucz:
+   - Stage-C + blind external przechodza (primary i stress),
+   - przeciecie z micro-CI istnieje (`intersection_count=10/10`),
+   - ale dwa wewnetrzne warunki mikrorygoru nadal padaja (`n_bins`, `phase_strength`).
+5. Znaczenie:
+   - most mikro->Stage-C istnieje operacyjnie, lecz formalnie jest jeszcze za slaby do finalnego claimu derywacyjnego.
+
+## 340. Signed phase-torsion observable scan (QW-2047)
+1. Dodano:
+   - `QW_2047_SIGNED_PHASE_TORSION_OBSERVABLE_SCAN.py`
+2. Cel:
+   - sprawdzic, czy nowa obserwabla fazowo-torsyjna poprawi dwa pozostale blokery (`n_bins`, `phase_strength`).
+3. Wynik:
+   - `SIGNED_PHASE_TORSION_OBSERVABLE_PARTIAL`,
+   - `readiness=PARTIAL_REPAIR_RETAINED`,
+   - najlepszy wariant nadal `pass_count=6/8` (brak poprawy liczby flag vs baseline).
+4. Klucz:
+   - obserwabla obniża `rmse`, ale nie podnosi `n_bins` ani mediany sily fazowej do progow twardych.
+5. Znaczenie:
+   - potrzebna jest przebudowa bazy obserwabli mikro (dodatkowy kanal informacji), a nie tylko reweighting obecnego kanalu.
