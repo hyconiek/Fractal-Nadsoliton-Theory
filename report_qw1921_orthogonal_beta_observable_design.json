@@ -1,0 +1,134 @@
+{
+  "generated_utc": "2026-03-03T04:26:50.668177+00:00",
+  "pta_path": "/home/krzysiek/Pobrane/TOE/edison/external_confirmatory_v2/confirmatory_dataset_external_source_rebuild_v2_1831cfg/pta_v2_pairs.csv",
+  "split": {
+    "method": "sha256(pair_id) parity",
+    "n_discovery": 985,
+    "n_holdout": 1031
+  },
+  "discovery": {
+    "candidate_metrics": {
+      "B1_tail_weighted_resid": {
+        "corr_abs_with_omega_proxy": 0.06515966766752354,
+        "beta_sensitivity": 0.23423661909544644,
+        "omega_leakage": 0.012515388218649144,
+        "orthogonal_score": 0.15656156320927375
+      },
+      "B2_tail_weighted_d2": {
+        "corr_abs_with_omega_proxy": 0.4568378410393565,
+        "beta_sensitivity": 0.2497987483189647,
+        "omega_leakage": 0.014731776789235535,
+        "orthogonal_score": -0.22177086950962732
+      },
+      "B3_std_feature": {
+        "corr_abs_with_omega_proxy": 0.008053974960906166,
+        "beta_sensitivity": 0.0,
+        "omega_leakage": 0.0,
+        "orthogonal_score": -0.008053974960906166
+      },
+      "B4_one_minus_autoc1": {
+        "corr_abs_with_omega_proxy": 0.0006667686176607036,
+        "beta_sensitivity": 0.0,
+        "omega_leakage": 0.0,
+        "orthogonal_score": -0.0006667686176607036
+      },
+      "B5_switch_rate": {
+        "corr_abs_with_omega_proxy": 0.017792687802777034,
+        "beta_sensitivity": 0.0,
+        "omega_leakage": 0.0,
+        "orthogonal_score": -0.017792687802777034
+      },
+      "B6_abs_slope": {
+        "corr_abs_with_omega_proxy": 0.036721272130769866,
+        "beta_sensitivity": 0.0,
+        "omega_leakage": 0.0,
+        "orthogonal_score": -0.036721272130769866
+      },
+      "B7_local_resid_std": {
+        "corr_abs_with_omega_proxy": 0.023109391414993324,
+        "beta_sensitivity": 1.0755177554112196,
+        "omega_leakage": 0.04183377807773038,
+        "orthogonal_score": 1.0105745859184958
+      },
+      "B8_hybrid": {
+        "corr_abs_with_omega_proxy": 0.3683327671842318,
+        "beta_sensitivity": 0.21320874897651443,
+        "omega_leakage": 0.03653834330542066,
+        "orthogonal_score": -0.19166236151313804
+      }
+    },
+    "selected_candidate": "B7_local_resid_std",
+    "selected_metrics": {
+      "corr_abs_with_omega_proxy": 0.023109391414993324,
+      "beta_sensitivity": 1.0755177554112196,
+      "omega_leakage": 0.04183377807773038,
+      "orthogonal_score": 1.0105745859184958
+    }
+  },
+  "holdout": {
+    "candidate_metrics": {
+      "B1_tail_weighted_resid": {
+        "corr_abs_with_omega_proxy": 0.036813021047869224,
+        "beta_sensitivity": 0.26276209922983024,
+        "omega_leakage": 0.02513119192507032,
+        "orthogonal_score": 0.20081788625689068
+      },
+      "B2_tail_weighted_d2": {
+        "corr_abs_with_omega_proxy": 0.4664303205951019,
+        "beta_sensitivity": 0.23793439344964412,
+        "omega_leakage": 0.007418615608842466,
+        "orthogonal_score": -0.23591454275430027
+      },
+      "B3_std_feature": {
+        "corr_abs_with_omega_proxy": 0.022056819250097375,
+        "beta_sensitivity": 0.0,
+        "omega_leakage": 0.0,
+        "orthogonal_score": -0.022056819250097375
+      },
+      "B4_one_minus_autoc1": {
+        "corr_abs_with_omega_proxy": 0.013611385097984843,
+        "beta_sensitivity": 0.0,
+        "omega_leakage": 0.0,
+        "orthogonal_score": -0.013611385097984843
+      },
+      "B5_switch_rate": {
+        "corr_abs_with_omega_proxy": 0.006098479804959208,
+        "beta_sensitivity": 0.0,
+        "omega_leakage": 0.0,
+        "orthogonal_score": -0.006098479804959208
+      },
+      "B6_abs_slope": {
+        "corr_abs_with_omega_proxy": 0.03893620419547915,
+        "beta_sensitivity": 0.0,
+        "omega_leakage": 0.0,
+        "orthogonal_score": -0.03893620419547915
+      },
+      "B7_local_resid_std": {
+        "corr_abs_with_omega_proxy": 0.09388517874041251,
+        "beta_sensitivity": 0.9906720910463198,
+        "omega_leakage": 0.043487753756882845,
+        "orthogonal_score": 0.8532991585490245
+      },
+      "B8_hybrid": {
+        "corr_abs_with_omega_proxy": 0.35806735846219684,
+        "beta_sensitivity": 0.19059781259932462,
+        "omega_leakage": 0.02376727395058995,
+        "orthogonal_score": -0.19123681981346216
+      }
+    },
+    "selected_candidate_metrics": {
+      "corr_abs_with_omega_proxy": 0.09388517874041251,
+      "beta_sensitivity": 0.9906720910463198,
+      "omega_leakage": 0.043487753756882845,
+      "orthogonal_score": 0.8532991585490245
+    }
+  },
+  "pass_flags": {
+    "holdout_corr_abs_le_0p20": true,
+    "holdout_beta_sensitivity_ge_0p35": true,
+    "holdout_omega_leakage_le_0p25": true,
+    "holdout_orthogonal_score_positive": true
+  },
+  "verdict": "ORTHOGONAL_BETA_OBSERVABLE_DESIGN_PASS",
+  "required_next_step": "IMPLEMENT_SELECTED_BETA_OBSERVABLE_IN_BLIND_EXTERNAL_INTERVENTION_RUN"
+}
