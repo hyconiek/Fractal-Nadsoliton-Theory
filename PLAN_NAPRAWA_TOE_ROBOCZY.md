@@ -4022,3 +4022,53 @@ Po tej rundzie:
 5. Znaczenie:
    - jednoczesnie domkniete: (a) zgodnosc derivacyjna beta oraz (b) Stage-C+blind external na refrozen kernelu.
    - pozostaje juz tylko krok z natury zewnetrzny: niezalezny multi-team audit.
+
+## 333. Audyt integralnosci charakterystyk nadsolitona (QW-2040)
+1. Dodano:
+   - `QW_2040_NADSOLITON_CRITICAL_CHARACTERISTICS_INTEGRITY_AUDIT.py`
+2. Cel:
+   - rozdzielic dwa poziomy integralnosci:
+   - (a) zgodnosc z kanoniczna semantyka TeX pre-1700,
+   - (b) integralnosc operacyjna aktualnej galezi refrozen.
+3. Wynik:
+   - `tex_canonical_integrity_verdict = TEX_CANONICAL_CHARACTERISTICS_NOT_PRESERVED`,
+   - `current_refrozen_branch_integrity_verdict = CURRENT_REFROZEN_BRANCH_CHARACTERISTICS_OPERATIONALLY_PRESERVED`.
+4. Znaczenie:
+   - galaz refrozen pozostaje operacyjnie stabilna i gate-valid,
+   - ale nie zachowuje numerycznie kanonicznych charakterystyk TeX.
+
+## 334. Audyt reparametryzacyjny canonical vs refrozen (QW-2041)
+1. Dodano:
+   - `QW_2041_CANONICAL_REFROZEN_REPARAMETERIZATION_AUDIT.py`
+2. Hipoteza:
+   - roznica miedzy kernelem kanonicznym i refrozen da sie usunac przez monotoniczna mape wspolrzednej:
+   - `d_can = a * d_ref^p + b`.
+3. Wynik:
+   - `CANONICAL_REFROZEN_REPARAMETERIZATION_FAIL`,
+   - `readiness=CANONICAL_SEMANTIC_DRIFT_CONFIRMED_INTERNAL`,
+   - najlepszy kandydat bramkowy przechodzi tylko `2/7` flag twardych.
+4. Kluczowe liczby:
+   - best strict waveform: `corr=0.6736`, `r2=0.4350`, `affine_r2=0.4537`,
+   - bledy wezlow (median/q95 rel): `2335.0 / 5302.9`,
+   - best gate candidate: `pass_count=2/7`, `corr=0.6397`, `r2=0.1687`.
+5. Znaczenie:
+   - prosta fizyczna reparametryzacja nie tlumaczy driftu semantyki,
+   - kolejny krok wewnetrzny: jawny operator-most miedzy semantyka kanoniczna a efektywna.
+
+## 335. EFT matching i naturalnosc mostu canonical->refrozen (QW-2042)
+1. Dodano:
+   - `QW_2042_EFT_MATCHING_NATURALNESS_AUDIT.py`
+2. Cel:
+   - policzyc wymagane stale dopasowania `Z_omega, Z_beta, delta_phi, delta_eta`,
+   - ocenic czy taki most jest perturbacyjnie naturalny.
+3. Wynik:
+   - `EFT_MATCHING_STRONGLY_NONNATURAL`,
+   - `readiness=MICRODERIVATION_OF_STRONG_RENORMALIZATION_REQUIRED`,
+   - naturalness `1/4`.
+4. Kluczowe liczby:
+   - `Z_omega=0.2365`, `delta_phi=-0.3611`, `Z_beta=92.0`, `delta_eta=0.8`,
+   - `ln(Z_beta)=4.52`,
+   - minimalny rzad korekt dla kanalu beta (przy max x2 na rzad) = `7`.
+5. Znaczenie:
+   - luka wewnetrzna nie dotyczy juz triady Stage-C, tylko pochodzenia silnej renormalizacji beta/eta,
+   - nastepny krok stricte teoretyczny: mikrodynamika nadsolitona musi wyprowadzic `Z_beta` i `delta_eta` bez retune sektorowego.
