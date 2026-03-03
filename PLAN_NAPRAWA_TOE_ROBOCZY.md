@@ -4072,3 +4072,20 @@ Po tej rundzie:
 5. Znaczenie:
    - luka wewnetrzna nie dotyczy juz triady Stage-C, tylko pochodzenia silnej renormalizacji beta/eta,
    - nastepny krok stricte teoretyczny: mikrodynamika nadsolitona musi wyprowadzic `Z_beta` i `delta_eta` bez retune sektorowego.
+
+## 336. Feasibility silnej renormalizacji z istniejacej galezi mikro (QW-2043)
+1. Dodano:
+   - `QW_2043_MICRO_RENORMALIZATION_FEASIBILITY_FROM_QW1932.py`
+2. Cel:
+   - sprawdzic, czy wymagane z QW-2042 (`Z_beta~92`, `delta_eta~0.8`) sa juz wspierane przez strict-pass envelope z QW-1932, bez nowego tuningu.
+3. Wynik:
+   - `MICRO_RENORMALIZATION_FEASIBILITY_FAIL`,
+   - `readiness=MICRO_BRANCH_DOES_NOT_SUPPORT_REQUIRED_RENORMALIZATION`,
+   - `pass_count=2/4`.
+4. Kluczowe liczby:
+   - strict-pass CI95: `Z_beta=[38.18, 107.38]`, `delta_eta=[0.825, 1.775]`,
+   - target: `Z_beta=92` (inside), `delta_eta=0.8` (poza CI95, na dolnej krawedzi zakresu),
+   - nearest strict point: `eta=1.8`, `beta=1.1243` (`Z_beta=112.43`), joint distance `0.797`.
+5. Znaczenie:
+   - sama istniejaca galaz mikro jest blisko, ale nie trafia jeszcze punktowo wymaganej pary `(Z_beta, delta_eta)` z kernela refrozen,
+   - kolejny krok wewnetrzny: pointwise derivation z rozkladow mikrostanu zamiast tylko envelope-grid.
