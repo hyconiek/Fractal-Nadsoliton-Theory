@@ -1,0 +1,137 @@
+{
+  "generated_utc": "2026-03-03T02:36:36.268877+00:00",
+  "threshold_sources": {
+    "pta_protocol_sha256": "e5bcdc803f5587f790d9c1a70418463ed416760c4fcec72f6cd06b46a92b2f50",
+    "gw_protocol_sha256": "b9cf21d3d32508e95c6f7cef2e8a953a12f6c7ea7732b6288605c518ab5db5af"
+  },
+  "candidates": [
+    {
+      "candidate_dir": "/home/krzysiek/Pobrane/TOE/edison/external_confirmatory_v2/confirmatory_dataset_external_source_rebuild",
+      "exists": true,
+      "dataset_id": "EXTERNAL_SOURCE_REBUILD_20260303",
+      "provider": "EXTERNAL_SOURCE_REBUILD_LOCAL_ARCHIVE",
+      "externality_ok": false,
+      "pta_summary": {
+        "n_pairs": 2016,
+        "n_replications": 60,
+        "mean_pair_mean_gain": -2.0403354705528324e-05,
+        "bootstrap_lower95_mean_pair_mean_gain": -5.6701064773140774e-05,
+        "prob_pair_mean_gain_positive": 0.46726190476190477,
+        "one_sided_lower95_prob_pair_mean_gain_positive": 0.44878021083952857
+      },
+      "pta_pass_flags": {
+        "mean_pair_mean_gain": false,
+        "bootstrap_lower95_mean_pair_mean_gain": false,
+        "prob_pair_mean_gain_positive": false,
+        "one_sided_lower95_prob_pair_mean_gain_positive": false
+      },
+      "gw_summary": {
+        "n_rows": 1014,
+        "n_folds": 5,
+        "calibrated_mean_auc": 0.7237818261633011,
+        "calibrated_mean_adv": 0.2984635645302897,
+        "calibrated_mean_control_gap": 0.0001522305157043392,
+        "calibrated_prob_adv_positive": 1.0
+      },
+      "gw_pass_flags": {
+        "calibrated_mean_auc": false,
+        "calibrated_mean_adv": false,
+        "calibrated_mean_control_gap": true,
+        "calibrated_prob_adv_positive": true
+      },
+      "pta_all": false,
+      "gw_all": false,
+      "hard_gate": "FAIL",
+      "row_counts": {
+        "pta": 2016,
+        "gw": 1014
+      }
+    },
+    {
+      "candidate_dir": "/home/krzysiek/Pobrane/TOE/edison/external_confirmatory_v2/confirmatory_dataset_external_source_rebuild_v2_1831cfg",
+      "exists": true,
+      "dataset_id": "EXTERNAL_SOURCE_REBUILD_20260303",
+      "provider": "EXTERNAL_SOURCE_REBUILD_LOCAL_ARCHIVE",
+      "externality_ok": false,
+      "pta_summary": {
+        "n_pairs": 2016,
+        "n_replications": 60,
+        "mean_pair_mean_gain": -2.0403354705528324e-05,
+        "bootstrap_lower95_mean_pair_mean_gain": -5.6701064773140774e-05,
+        "prob_pair_mean_gain_positive": 0.46726190476190477,
+        "one_sided_lower95_prob_pair_mean_gain_positive": 0.44878021083952857
+      },
+      "pta_pass_flags": {
+        "mean_pair_mean_gain": false,
+        "bootstrap_lower95_mean_pair_mean_gain": false,
+        "prob_pair_mean_gain_positive": false,
+        "one_sided_lower95_prob_pair_mean_gain_positive": false
+      },
+      "gw_summary": {
+        "n_rows": 759,
+        "n_folds": 5,
+        "calibrated_mean_auc": 0.9416076278354479,
+        "calibrated_mean_adv": 0.7570980392156862,
+        "calibrated_mean_control_gap": 0.00015390018782949908,
+        "calibrated_prob_adv_positive": 1.0
+      },
+      "gw_pass_flags": {
+        "calibrated_mean_auc": true,
+        "calibrated_mean_adv": true,
+        "calibrated_mean_control_gap": true,
+        "calibrated_prob_adv_positive": true
+      },
+      "pta_all": false,
+      "gw_all": true,
+      "hard_gate": "PARTIAL",
+      "row_counts": {
+        "pta": 2016,
+        "gw": 759
+      }
+    }
+  ],
+  "best_candidate": {
+    "candidate_dir": "/home/krzysiek/Pobrane/TOE/edison/external_confirmatory_v2/confirmatory_dataset_external_source_rebuild_v2_1831cfg",
+    "exists": true,
+    "dataset_id": "EXTERNAL_SOURCE_REBUILD_20260303",
+    "provider": "EXTERNAL_SOURCE_REBUILD_LOCAL_ARCHIVE",
+    "externality_ok": false,
+    "pta_summary": {
+      "n_pairs": 2016,
+      "n_replications": 60,
+      "mean_pair_mean_gain": -2.0403354705528324e-05,
+      "bootstrap_lower95_mean_pair_mean_gain": -5.6701064773140774e-05,
+      "prob_pair_mean_gain_positive": 0.46726190476190477,
+      "one_sided_lower95_prob_pair_mean_gain_positive": 0.44878021083952857
+    },
+    "pta_pass_flags": {
+      "mean_pair_mean_gain": false,
+      "bootstrap_lower95_mean_pair_mean_gain": false,
+      "prob_pair_mean_gain_positive": false,
+      "one_sided_lower95_prob_pair_mean_gain_positive": false
+    },
+    "gw_summary": {
+      "n_rows": 759,
+      "n_folds": 5,
+      "calibrated_mean_auc": 0.9416076278354479,
+      "calibrated_mean_adv": 0.7570980392156862,
+      "calibrated_mean_control_gap": 0.00015390018782949908,
+      "calibrated_prob_adv_positive": 1.0
+    },
+    "gw_pass_flags": {
+      "calibrated_mean_auc": true,
+      "calibrated_mean_adv": true,
+      "calibrated_mean_control_gap": true,
+      "calibrated_prob_adv_positive": true
+    },
+    "pta_all": false,
+    "gw_all": true,
+    "hard_gate": "PARTIAL",
+    "row_counts": {
+      "pta": 2016,
+      "gw": 759
+    }
+  },
+  "verdict": "BEST_CANDIDATE_PARTIAL_OR_EXTERNALITY_BLOCKED",
+  "readiness": "EMPIRICAL_CLOSURE_NOT_READY"
+}

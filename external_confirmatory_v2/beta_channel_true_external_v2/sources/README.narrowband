@@ -1,0 +1,125 @@
+DIRECTORY AND FILE STRUCTURE (FURTHER DETAILS BELOW)
+---------------------------------------------------
+
+    ../narrowband/par/*.par
+        Timing model parameters for each pulsar suitable for use with PINT
+    ../narrowband/tim/*.tim
+        Times-of-arrival (TOAs) for each pulsar
+    ../narrowband/template/*.sum.sm
+        FITS format standard profile templates used for each pulsar/receiver.
+    ../narrowband/config/*.yaml
+        Timing analysis configuration files
+    ../narrowband/alternate/tempo2
+        Timing model parameters for each pulsar suitable for use with tempo2
+    ../narrowband/alternate/tim/initial/*.tim
+        The complete initial set of TOAs for each pulsar
+    ../narrowband/alternate/tim/excise/*.tim
+        Cleaned TOAs (include excised TOAs with "-cut" flags)
+    ../narrowband/alternate/NoRedNoisePars/*.NRN.par
+        Timing model parameter files where red noise has been replaced by one
+        or more additional frequency derivatives. These par files can be used
+        to fold existing data, e.g. Fermi/NICER photons.
+    ../narrowband/alternate/predictive/*.par
+        Timing model parameter files with best-known values coincident with
+        the end of the data span. Intended for folding future observations.
+
+
+PRIMARY PARAMETER AND TOA FILES AND THEIR USE
+---------------------------------------------
+
+  The primary files in this data set are the parameters and TOAs in the
+../narrowband/par and ../narrowband/tim directories. These models were 
+generated and are recommended for use with the PINT timing software package.
+For tempo2, please use the parameter files found in the alternate/tempo2/ 
+subdirectory.
+
+  TOAs listed in the .tim file are in "tempo2" format.  These .tim files are
+suitable for use with any standard timing software (tempo, tempo2, or PINT).
+The TOA format is documented at the following website:
+
+  http://tempo.sourceforge.net/ref_man_sections/toa.txt
+
+  The tempo2 TOA format supports inclusion of "flags" providing
+additional metadata for each TOA line.  The flags used in this data set
+include:
+
+  -fe:     Front End (telescope receiver)
+  -be:     Back End (telescope data acquisition system)
+  -f:      Front End plus Back End combination
+  -bw:     Bandwidth (bandwidth of spectral channels used for this TOA, in MHz)
+  -tobs:   Observing time (seconds)
+  -tmplt:  Filename of standard profile template used to calculate the TOA
+  -gof:    Goodness-of-fit (reduced chi-square) of the template to the
+             channelized profile
+  -nbin:   The number of bins in the original data profile (always 2048 in
+             this data set)
+  -nch:    The number of raw spectral channels summed to produce the subband
+             for this TOA
+  -chan:   Spectral channel number after summing raw channels (number between
+             0 and the number of channels)
+  -subint: Subintegration number in cases where a continuous observation was
+             broken into small time segments (number between 0 and the number
+             of subintegrations minus one)
+  -snr:    Signal-to-noise ratio reported by the psrchive program pat
+  -wt:     Channel weight: product of bandwidth and observation time (units of
+             10^6 but otherwise dimensionless)
+  -flux:   Flux density in this channel (mJy)
+  -fluxe:  Uncertainty in flux in this channel (mJy)
+  -proc:   Processing pipeline version used to calculate the TOA (always "15y")
+  -pta:    Pulsar Timing Array (always "NANOGrav" in this data set)
+  -to:     Time offset incorporated into TOA to account for hardware delay
+             in the back end (seconds)
+  -ver:    TOA calculation pipeline version (date and git version hash)
+  -simul:  Data taken simultaneously with multiple back ends; since they are
+             redundant, only data from one back end is kept in the data set
+  -img uncorr: This profile did not undergo removal of the ADC artifact image
+  -cut:    Reason for excision (excised TOAs only)
+
+  For each pulsar, an initial set of TOAs was generated from the
+available raw data.  For the final analysis, some TOAs were excised for
+various reasons including for example known instrumental failures,
+automated or manual data quality checks, or lack of sufficient frequency
+coverage.  This process is described in detail in the 15-year data set
+paper.  The final clean set of TOAs is provided in the tim/
+subdirectory.  The complete initial set of TOAs and the excised TOAs can
+be found in the alternate/ subdirectory.  Excised TOA lines include a
+"-cut" flag which specifies the reason for excision; see Table 2 in the
+15-year paper for a detailed description of the -cut flag values.
+
+
+STANDARD PROFILE TEMPLATES
+--------------------------
+
+  The template/ directory contains all pulse profile templates used for
+generation of the TOAs in this data set.  The templates are given in PSRFITS
+format, and the template used for any given TOA can be identified via the
+-tmplt flag on the TOA line.  See the NANOGrav Nine-year data set paper
+(Arzoumanian et al 2015, ApJ 813, 65; arXiv:1505.07540) and the NANOGrav
+Five-year data set paper (Demorest et al 2013, ApJ 562, 94; arXiv:1201.6641)
+for a description of the algorithms used in template profile generation.  These
+templates can be read by the programs in the psrchive package at:
+
+  http://psrchive.sourceforge.net/
+
+
+CONFIGURATION FILES
+-------------------
+
+  The timing pipeline software "PINT_Pal" was used to automate many
+steps in this analysis.  PINT_Pal requires a YAML-format configuration
+file for each pulsar.  The configuration files used for this data set
+can be found in the config/ subdirectory.  The PINT_Pal software can be
+found at:
+
+  https://github.com/nanograv/pint_pal
+
+
+CLOCK FILES
+-----------
+
+  The clock files used for our analysis are provided in the
+../clock/ subdirectory.  While the standard files distributed with 
+tempo/tempo2 should be consistent with these, this may be a source of 
+inconsistent results in the future. PINT does not provide its own 
+clock files, and instead references tempo clock files. Please see 
+the README.clock file in ../clock for installation instructions.

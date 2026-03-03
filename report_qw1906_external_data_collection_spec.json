@@ -1,0 +1,46 @@
+{
+  "generated_utc": "2026-03-03T02:04:00.646496+00:00",
+  "source_reports": [
+    "report_qw1905_external_data_requirements_power_map.json",
+    "report_qw1850_pta_v2_prereg_protocol.json"
+  ],
+  "spec": {
+    "n_pairs_recommended_min": 1200,
+    "n_pairs_preferred": 2000,
+    "pta_thresholds_locked": {
+      "mean_pair_mean_gain_min": 0.04,
+      "bootstrap_lower95_mean_pair_mean_gain_min": 0.0,
+      "prob_pair_mean_gain_positive_min": 0.667,
+      "one_sided_lower95_prob_pair_mean_gain_positive_min": 0.6
+    },
+    "minimum_signal_requirements": {
+      "mean_pair_mean_gain_target_min": 0.04,
+      "prob_pair_mean_gain_positive_target_min": 0.667,
+      "one_sided_lower95_prob_positive_target_min": 0.6
+    },
+    "feature_signal_proxy_requirements": {
+      "alpha_required_for_80pct_power": 6.0,
+      "hxy_feature_slope_baseline": 0.007943958384792803,
+      "hxy_feature_slope_target": 0.27435374571309035,
+      "hxy_feature_corr_baseline": 0.175063515176203,
+      "hxy_feature_corr_target": 0.9723728858736442,
+      "delta_hxy_mean_needed": -0.011534705124773467,
+      "delta_hxy_abs_mean_needed": 0.21616841296904107,
+      "delta_hxy_q50_needed": -0.055416484076465156,
+      "delta_hxy_q90_needed": 0.3748193847751364,
+      "delta_hxy_positive_fraction": 0.4280753968253968
+    },
+    "baseline_pta_state": {
+      "mean_pair_mean_gain": 0.0004265830519200779,
+      "prob_pair_mean_gain_positive": 0.5699404761904762,
+      "one_sided_lower95_prob_pair_mean_gain_positive": 0.5514887709079526
+    },
+    "collection_guidance": [
+      "prioritize pulsar pairs with high long-memory coherence and low sign-switching noise",
+      "maximize stable cadence and long overlap windows across pair set",
+      "avoid mixed-quality cohorts; enforce hard quality floor before confirmatory run",
+      "keep protocol thresholds unchanged; model updates require new preregistration"
+    ]
+  },
+  "verdict": "EXTERNAL_DATA_COLLECTION_SPEC_READY"
+}

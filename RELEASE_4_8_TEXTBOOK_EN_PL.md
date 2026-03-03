@@ -61,33 +61,33 @@ What changed was the **GW operator/readout layer**, not the kernel ontology.
 
 ## 4) Core Formula Set (Textbook-Level)
 
-## 4.1 Kernel
+### 4.1 Kernel
 
-\[
+$$
 K(d)=\frac{\cos(\omega d+\phi)}{1+\beta d^{\eta}}
-\]
+$$
 
 This is the single frozen structural function used across sectors.
 
-## 4.2 Cyclic topological distance (mod 24)
+### 4.2 Cyclic topological distance (mod 24)
 
-\[
+$$
 d_{ij}=1+\min\left(|q_i-q_j|\bmod 24,\;24-(|q_i-q_j|\bmod 24)\right)
-\]
+$$
 
-## 4.3 Mass branch (noncircular chain)
+### 4.3 Mass branch (noncircular chain)
 
 Effective charge:
 
-\[
-q_{\text{eff}}=q_{\text{base}}+s\,\Delta_{\text{info}}
-\]
+$$
+q_{\mathrm{eff}}=q_{\mathrm{base}}+s\,\Delta_{\mathrm{info}}
+$$
 
 Mass law:
 
-\[
-m_{\text{pred}}=m_{\text{top}}\cdot 4^{-\gamma q_{\text{eff}}/4}
-\]
+$$
+m_{\mathrm{pred}}=m_{\mathrm{top}}\cdot 4^{-\gamma q_{\mathrm{eff}}/4}
+$$
 
 With Release-4.8 locked branch values:
 
@@ -95,141 +95,144 @@ With Release-4.8 locked branch values:
 - `Delta_info = 0.17702715186107637`
 - mean mass relative error (reference branch): `12.0508%`
 
-## 4.4 Flavor Hamiltonian (shared operator)
+### 4.4 Flavor Hamiltonian (shared operator)
 
 Base amplitude:
 
-\[
-\text{base}_{ij}=\operatorname{sgn}(K_{ij})\,|K_{ij}|^{p_{amp}}\,d_{ij}^{r_{dist}}
-\]
+$$
+B_{ij}=\mathrm{sgn}(K_{ij})\,|K_{ij}|^{p_{amp}}\,d_{ij}^{r_{dist}}
+$$
 
 Near-gap damping:
 
-\[
-\text{near}_{ij}=e^{-\rho_{gap}|i-j|}
-\]
+$$
+N_{ij}=e^{-\rho_{gap}|i-j|}
+$$
 
 Phase:
 
-\[
+$$
 \Phi_{ij}=\phi_q(q_i-q_j)+\theta_{iso}\,\sigma_{iso}(i-j)+\theta_{sector}\,\sigma_{sec}(i-j)
-\]
+$$
 
 Complex coupling:
 
-\[
-S_{ij}=\lambda_{mix}\,\text{base}_{ij}\,\text{near}_{ij}
-\]
+$$
+S_{ij}=\lambda_{mix}\,B_{ij}\,N_{ij}
+$$
 
 Hermitian Hamiltonian form:
 
-\[
-H=\frac{1}{2}(H+H^{\dagger})=\operatorname{Re}+i\,\chi_{im}\,\operatorname{Im}_{asym}+\operatorname{Diag}
-\]
+$$
+H=\frac{1}{2}(H+H^{\dagger})=\mathrm{Re}+i\,\chi_{im}\,\mathrm{Im}_{asym}+\mathrm{Diag}
+$$
 
 Mixing matrices:
 
-\[
+$$
 V_{CKM}=|U_u^{\dagger}U_d|,\qquad V_{PMNS}=|U_\nu^{\dagger}U_\ell|
-\]
+$$
 
-## 4.5 GW baseline score (before bounded repair)
+### 4.5 GW baseline score (before bounded repair)
 
 Kernel-derived weights:
 
-\[
+$$
 w_n=\frac{|K(n)|^{p_{amp}}n^{r_{dist}}}{\sum_{k=1}^{4}|K(k)|^{p_{amp}}k^{r_{dist}}}
-\]
+$$
 
 Score:
 
-\[
+$$
 S_{base}=w_1 f_{max}+w_2 f_{mean}+w_3 f_{0ms}+w_4 f_{10ms}
-\]
+$$
 
-## 4.6 Signed coupling channels (GW structural terms)
+### 4.6 Signed coupling channels (GW structural terms)
 
-With `pair_sign` = +1 (H1-V1), -1 (L1-V1), 0 (H1-L1), and
+With $s_{\mathrm{pair}} \in \{+1, -1, 0\}$ corresponding to H1-V1, L1-V1, H1-L1 pairs respectively, and lag time mapped to seconds:
 
-\[
-\tau = \text{best\_lag\_ms}\cdot 10^{-3}
-\]
+$$
+\tau = \Delta t_{\mathrm{best}} \cdot 10^{-3}
+$$
 
+Let $C_0$ and $C_{10}$ be the correlations at 0 and 10 ms, and $M_{\mathrm{abs}}$ be the mean absolute correlation.
 
 a) first channel:
 
-\[
-c_1\propto pair\_sign\cdot\sin(\omega\tau+\phi)\cdot(corr_{0}-corr_{10})
-\]
+$$
+c_1 \propto s_{\mathrm{pair}} \cdot \sin(\omega\tau+\phi) \cdot (C_0 - C_{10})
+$$
 
 b) second channel:
 
-\[
-c_3\propto pair\_sign\cdot\cos(\omega\tau+\phi)\cdot(mean\_abs+|corr_0|+|corr_{10}|)
-\]
+$$
+c_3 \propto s_{\mathrm{pair}} \cdot \cos(\omega\tau+\phi) \cdot (M_{\mathrm{abs}} + |C_0| + |C_{10}|)
+$$
 
 c) third channel:
 
-\[
-c_4\propto pair\_sign\cdot\sin(\omega\tau+\phi)\cos(\omega\tau+\phi)\cdot(|corr_0|+|corr_{10}|+mean\_abs)
-\]
+$$
+c_4 \propto s_{\mathrm{pair}} \cdot \sin(\omega\tau+\phi)\cos(\omega\tau+\phi) \cdot (|C_0| + |C_{10}| + M_{\mathrm{abs}})
+$$
 
 Each channel is standardized by its own standard deviation.
 
-## 4.7 Release-4.8 breakthrough operator (bounded coupling)
+### 4.7 Release-4.8 breakthrough operator (bounded coupling)
 
 Signed combination:
 
-\[
+$$
 t=\xi_1 c_1+\xi_3 c_3+\xi_4 c_4
-\]
+$$
 
 Bounded/saturated term:
 
-\[
-t_{eff}=\operatorname{clip}\big(t,-\kappa_t\sigma_t,+\kappa_t\sigma_t\big)
-\]
+$$
+t_{eff}=\mathrm{clip}\big(t,-\kappa_t\sigma_t,+\kappa_t\sigma_t\big)
+$$
 
 Raw score:
 
-\[
+$$
 S_{raw}=S_{base}+t_{eff}
-\]
+$$
 
 Monotonic compression:
 
-\[
-z=\frac{S_{raw}-\operatorname{median}(S_{raw})}{\sigma_{S}},\qquad
-S=\operatorname{median}(S_{raw})+\sigma_S\,\operatorname{sgn}(z)|z|^{\gamma_c}
-\]
+$$
+z=\frac{S_{raw}-\mathrm{median}(S_{raw})}{\sigma_{S}},\qquad
+S=\mathrm{median}(S_{raw})+\sigma_S\,\mathrm{sgn}(z)|z|^{\gamma_c}
+$$
 
-## 4.8 Statistical validation formulas
+### 4.8 Statistical validation formulas
 
 Control threshold:
 
-\[
+$$
 q_{90}=Q_{0.9}(S_{control})
-\]
+$$
 
 GW diagnostics:
 
-\[
+$$
 ADV=P(S_{HL}>q_{90})-P(S_{control}>q_{90})
-\]
+$$
 
-\[
-SEP=\operatorname{median}(S_{HL})-\operatorname{median}(S_{control})
-\]
+$$
+SEP=\mathrm{median}(S_{HL})-\mathrm{median}(S_{control})
+$$
 
-\[
-GAP=|\operatorname{median}(S_{HV})-\operatorname{median}(S_{LV})|
-\]
+$$
+GAP=|\mathrm{median}(S_{HV})-\mathrm{median}(S_{LV})|
+$$
 
 Triad bootstrap pass-rate:
 
-\[
-R_{boot}=\frac{\#\{\text{bootstrap samples passing all flags}\}}{N_{boot}}
-\]
+$$
+R_{boot}=\frac{N_{pass}}{N_{boot}}
+$$
+
+*(Where $N_{pass}$ is the number of bootstrap samples passing all flags).*
 
 ## 5) Thresholds Used in Closure Gates
 
@@ -336,33 +339,33 @@ Zmianie uległa warstwa operatora GW (odczyt/statystyka), a nie rdzeń kernela.
 
 ## 4) Kluczowe wzory (poziom podręcznikowy)
 
-## 4.1 Kernel
+### 4.1 Kernel
 
-\[
+$$
 K(d)=\frac{\cos(\omega d+\phi)}{1+\beta d^{\eta}}
-\]
+$$
 
 To jedna wspólna funkcja strukturalna używana we wszystkich sektorach.
 
-## 4.2 Cykliczna odległość topologiczna (mod 24)
+### 4.2 Cykliczna odległość topologiczna (mod 24)
 
-\[
+$$
 d_{ij}=1+\min\left(|q_i-q_j|\bmod 24,\;24-(|q_i-q_j|\bmod 24)\right)
-\]
+$$
 
-## 4.3 Gałąź masowa (łańcuch niekołowy)
+### 4.3 Gałąź masowa (łańcuch niekołowy)
 
 Ładunek efektywny:
 
-\[
-q_{\text{eff}}=q_{\text{base}}+s\,\Delta_{\text{info}}
-\]
+$$
+q_{\mathrm{eff}}=q_{\mathrm{base}}+s\,\Delta_{\mathrm{info}}
+$$
 
 Prawo masy:
 
-\[
-m_{\text{pred}}=m_{\text{top}}\cdot 4^{-\gamma q_{\text{eff}}/4}
-\]
+$$
+m_{\mathrm{pred}}=m_{\mathrm{top}}\cdot 4^{-\gamma q_{\mathrm{eff}}/4}
+$$
 
 Wartości gałęzi użytej jako źródło:
 
@@ -370,136 +373,140 @@ Wartości gałęzi użytej jako źródło:
 - `Delta_info = 0.17702715186107637`
 - średni błąd względny mas: `12.0508%`
 
-## 4.4 Hamiltonian flavor (wspólny operator)
+### 4.4 Hamiltonian flavor (wspólny operator)
 
 Amplituda bazowa:
 
-\[
-\text{base}_{ij}=\operatorname{sgn}(K_{ij})\,|K_{ij}|^{p_{amp}}\,d_{ij}^{r_{dist}}
-\]
+$$
+B_{ij}=\mathrm{sgn}(K_{ij})\,|K_{ij}|^{p_{amp}}\,d_{ij}^{r_{dist}}
+$$
 
 Tłumienie odległości pokoleniowej:
 
-\[
-\text{near}_{ij}=e^{-\rho_{gap}|i-j|}
-\]
+$$
+N_{ij}=e^{-\rho_{gap}|i-j|}
+$$
 
 Faza:
 
-\[
+$$
 \Phi_{ij}=\phi_q(q_i-q_j)+\theta_{iso}\,\sigma_{iso}(i-j)+\theta_{sector}\,\sigma_{sec}(i-j)
-\]
+$$
 
 Sprzężenie zespolone:
 
-\[
-S_{ij}=\lambda_{mix}\,\text{base}_{ij}\,\text{near}_{ij}
-\]
+$$
+S_{ij}=\lambda_{mix}\,B_{ij}\,N_{ij}
+$$
 
 Postać hermitowska:
 
-\[
-H=\frac{1}{2}(H+H^{\dagger})=\operatorname{Re}+i\,\chi_{im}\,\operatorname{Im}_{asym}+\operatorname{Diag}
-\]
+$$
+H=\frac{1}{2}(H+H^{\dagger})=\mathrm{Re}+i\,\chi_{im}\,\mathrm{Im}_{asym}+\mathrm{Diag}
+$$
 
 Macierze mieszania:
 
-\[
+$$
 V_{CKM}=|U_u^{\dagger}U_d|,\qquad V_{PMNS}=|U_\nu^{\dagger}U_\ell|
-\]
+$$
 
-## 4.5 Bazowy score GW (przed naprawą)
+### 4.5 Bazowy score GW (przed naprawą)
 
 Wagi z kernela:
 
-\[
+$$
 w_n=\frac{|K(n)|^{p_{amp}}n^{r_{dist}}}{\sum_{k=1}^{4}|K(k)|^{p_{amp}}k^{r_{dist}}}
-\]
+$$
 
 Score:
 
-\[
+$$
 S_{base}=w_1 f_{max}+w_2 f_{mean}+w_3 f_{0ms}+w_4 f_{10ms}
-\]
+$$
 
-## 4.6 Kanały sprzężeń podpisanych
+### 4.6 Kanały sprzężeń podpisanych
 
-Dla `pair_sign`: +1 (H1-V1), -1 (L1-V1), 0 (H1-L1), oraz
+Dla znaku $s_{\mathrm{pair}} \in \{+1, -1, 0\}$ odpowiadającego odpowiednio parom H1-V1, L1-V1, H1-L1, oraz przy opóźnieniu przeliczonym na sekundy:
 
-\[
-\tau = \text{best\_lag\_ms}\cdot 10^{-3}
-\]
+$$
+\tau = \Delta t_{\mathrm{best}} \cdot 10^{-3}
+$$
+
+Niech $C_0$ oraz $C_{10}$ oznaczają korelacje w 0 i 10 ms, a $M_{\mathrm{abs}}$ średnią bezwzględną korelację.
 
 mamy:
 
-\[
-c_1\propto pair\_sign\cdot\sin(\omega\tau+\phi)\cdot(corr_{0}-corr_{10})
-\]
+$$
+c_1 \propto s_{\mathrm{pair}} \cdot \sin(\omega\tau+\phi) \cdot (C_0 - C_{10})
+$$
 
-\[
-c_3\propto pair\_sign\cdot\cos(\omega\tau+\phi)\cdot(mean\_abs+|corr_0|+|corr_{10}|)
-\]
+$$
+c_3 \propto s_{\mathrm{pair}} \cdot \cos(\omega\tau+\phi) \cdot (M_{\mathrm{abs}} + |C_0| + |C_{10}|)
+$$
 
-\[
-c_4\propto pair\_sign\cdot\sin(\omega\tau+\phi)\cos(\omega\tau+\phi)\cdot(|corr_0|+|corr_{10}|+mean\_abs)
-\]
+$$
+c_4 \propto s_{\mathrm{pair}} \cdot \sin(\omega\tau+\phi)\cos(\omega\tau+\phi) \cdot (|C_0| + |C_{10}| + M_{\mathrm{abs}})
+$$
 
 Każdy kanał jest standaryzowany przez swoje odchylenie standardowe.
 
-## 4.7 Wzór przełomowy Release 4.8 (bounded coupling)
+### 4.7 Wzór przełomowy Release 4.8 (bounded coupling)
 
 Kombinacja podpisana:
 
-\[
+$$
 t=\xi_1 c_1+\xi_3 c_3+\xi_4 c_4
-\]
+$$
 
 Ograniczenie amplitudy:
 
-\[
-t_{eff}=\operatorname{clip}\big(t,-\kappa_t\sigma_t,+\kappa_t\sigma_t\big)
-\]
+$$
+t_{eff}=\mathrm{clip}\big(t,-\kappa_t\sigma_t,+\kappa_t\sigma_t\big)
+$$
 
 Score surowy:
 
-\[
+$$
 S_{raw}=S_{base}+t_{eff}
-\]
+$$
 
 Kompresja monotoniczna:
 
-\[
-z=\frac{S_{raw}-\operatorname{median}(S_{raw})}{\sigma_{S}},\qquad
-S=\operatorname{median}(S_{raw})+\sigma_S\,\operatorname{sgn}(z)|z|^{\gamma_c}
-\]
+$$
+z=\frac{S_{raw}-\mathrm{median}(S_{raw})}{\sigma_{S}},\qquad
+S=\mathrm{median}(S_{raw})+\sigma_S\,\mathrm{sgn}(z)|z|^{\gamma_c}
+$$
 
-## 4.8 Wzory testów statystycznych
+### 4.8 Wzory testów statystycznych
 
 Próg kontrolny:
 
-\[
+$$
 q_{90}=Q_{0.9}(S_{control})
-\]
+$$
 
 Diagnostyki GW:
 
-\[
+$$
 ADV=P(S_{HL}>q_{90})-P(S_{control}>q_{90})
-\]
+$$
 
-\[
-SEP=\operatorname{median}(S_{HL})-\operatorname{median}(S_{control})
-\]
+$$
+SEP=\mathrm{median}(S_{HL})-\mathrm{median}(S_{control})
+$$
 
-\[
-GAP=|\operatorname{median}(S_{HV})-\operatorname{median}(S_{LV})|
-\]
+$$
+GAP=|\mathrm{median}(S_{HV})-\mathrm{median}(S_{LV})|
+$$
 
 Bootstrap triady:
 
-\[
-R_{boot}=\frac{\#\{\text{próbki bootstrap spełniające wszystkie flagi}\}}{N_{boot}}
-\]
+$$
+R_{boot}=\frac{N_{pass}}{N_{boot}}
+$$
+
+*(Gdzie $N_{pass}$ to liczba próbek bootstrap spełniających wszystkie flagi).*
 
 ## 5) Progi użyte przy domykaniu
 

@@ -1,0 +1,38 @@
+{
+  "generated_utc": "2026-03-02T22:04:47.518309+00:00",
+  "checks": [
+    {
+      "domain": "PTA quantile predictive branch (1823)",
+      "score": 1.0,
+      "status": "PASS",
+      "note": "QUANTILE_SCORE_OOS_SUPPORTED"
+    },
+    {
+      "domain": "Quantile-gated readiness decision (1824)",
+      "score": 1.0,
+      "status": "PASS",
+      "note": "SEQUENCE_BRANCH_CONDITIONAL_READY_UNDER_QUANTILE_GATING"
+    },
+    {
+      "domain": "PTA operational campaign robustness (1786)",
+      "score": 0.9657498781676414,
+      "status": "PASS",
+      "note": "EMPIRICAL_CAMPAIGN_ROBUSTNESS_CONFIRMED"
+    },
+    {
+      "domain": "GW transfer feasibility (1725+1726)",
+      "score": 0.0,
+      "status": "FAIL",
+      "note": "GW_CROSS_HURST_ANOMALY_NOT_ROBUST / FIN_023_TO_031_PROJECTION_NOT_SUPPORTED"
+    }
+  ],
+  "global_score": 0.7414374695419104,
+  "hard_gate": "PARTIAL",
+  "readiness": "QUANTILE_PROTOCOL_PTA_READY_GW_BLOCKED",
+  "recommendation": "RUN_GW_SPECIFIC_REDESIGN_BEFORE_JOINT_CAMPAIGN",
+  "pta_ready": true,
+  "gw_ready": false,
+  "blockers": [
+    "GW branch fails strict robustness and projection criteria (QW-1725/QW-1726)."
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "generated_utc": "2026-03-02T21:49:10.290275+00:00",
+  "checks": [
+    {
+      "domain": "In-sample evidence (1815)",
+      "score": 1.0,
+      "status": "PASS",
+      "note": "MULTISCALE_SEQUENCE_EMBEDDING_PARTIAL"
+    },
+    {
+      "domain": "OOS predictive support (1817)",
+      "score": 0.9307039753486674,
+      "status": "PASS",
+      "note": "SEQUENCE_OOS_VALIDATION_PARTIAL"
+    },
+    {
+      "domain": "Stability and dispersion control (1815/1817/1818)",
+      "score": 0.13852722932534148,
+      "status": "FAIL",
+      "note": "dispersion remains high"
+    },
+    {
+      "domain": "Regime-aware stabilization (1816)",
+      "score": 0.0,
+      "status": "FAIL",
+      "note": "REGIME_AWARE_SEQUENCE_MODEL_WEAK"
+    }
+  ],
+  "global_score": 0.5173078011685023,
+  "hard_gate": "FAIL",
+  "readiness": "SEQUENCE_BRANCH_NOT_READY",
+  "recommendation": "PARK_AND_REDESIGN_MODELING_ASSUMPTIONS",
+  "inconsistencies": [
+    "In-sample dispersion criterion fails for embedding branch (std delta > 0.30).",
+    "OOS superiority vs flat is not universal (P(M2E>flat) < 0.95).",
+    "Robust preprocessing did not reduce OOS dispersion; variability source remains unresolved.",
+    "Regime-aware extension degraded evidence vs base embedding model."
+  ],
+  "key_metrics": {
+    "qw1815_std_delta": 1.235959608533984,
+    "qw1817_std_delta_ll": 4.089444839248823,
+    "qw1818_std_delta_ll": 5.656193986744458,
+    "qw1817_prob_m2e_gt_flat": 0.8571428571428571,
+    "qw1816_full_delta_m2er_vs_m2e": -1.1877008325396297
+  }
+}

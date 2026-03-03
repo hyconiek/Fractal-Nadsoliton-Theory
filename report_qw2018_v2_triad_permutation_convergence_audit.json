@@ -1,0 +1,84 @@
+{
+  "generated_utc": "2026-03-03T19:15:47.884501+00:00",
+  "triad": {
+    "omega": 0.088,
+    "phi": 0.8899999999999997,
+    "beta": 2.0
+  },
+  "dataset_path": "/home/krzysiek/Pobrane/TOE/edison/external_confirmatory_v2/beta_channel_true_external_v2/beta_channel_pairs.csv",
+  "holdout_base_metrics": {
+    "pearson_corr": 0.05310677604284089,
+    "spearman_corr": 0.0307683580175458,
+    "rmse": 0.1808767617812033,
+    "rmse_base": 0.18092643297577032,
+    "rmse_gain_ratio": 0.00027453807467525904
+  },
+  "grid_results": [
+    {
+      "n_perm": 1000,
+      "n_seeds": 12,
+      "p_corr_median": 0.01048951048951049,
+      "p_corr_q10": 0.007992007992007992,
+      "p_corr_q90": 0.013886113886113887,
+      "p_gain_median": 0.006993006993006993,
+      "p_gain_q10": 0.003096903096903097,
+      "p_gain_q90": 0.011788211788211789,
+      "frac_corr_le_0p01": 0.5,
+      "frac_gain_le_0p01": 0.8333333333333334
+    },
+    {
+      "n_perm": 3000,
+      "n_seeds": 12,
+      "p_corr_median": 0.008330556481172941,
+      "p_corr_q10": 0.006331222925691436,
+      "p_corr_q90": 0.011929356881039653,
+      "p_gain_median": 0.0061646117960679776,
+      "p_gain_q10": 0.0036654448517160947,
+      "p_gain_q90": 0.007964011996001333,
+      "frac_corr_le_0p01": 0.5833333333333334,
+      "frac_gain_le_0p01": 1.0
+    },
+    {
+      "n_perm": 5000,
+      "n_seeds": 12,
+      "p_corr_median": 0.009098180363927216,
+      "p_corr_q10": 0.007358528294341132,
+      "p_corr_q90": 0.010537892421515697,
+      "p_gain_median": 0.005898820235952809,
+      "p_gain_q10": 0.0050189962007598475,
+      "p_gain_q90": 0.006778644271145771,
+      "frac_corr_le_0p01": 0.8333333333333334,
+      "frac_gain_le_0p01": 1.0
+    },
+    {
+      "n_perm": 10000,
+      "n_seeds": 12,
+      "p_corr_median": 0.00924907509249075,
+      "p_corr_q10": 0.008129187081291872,
+      "p_corr_q90": 0.010468953104689531,
+      "p_gain_median": 0.00564943505649435,
+      "p_gain_q10": 0.00484951504849515,
+      "p_gain_q90": 0.00647935206479352,
+      "frac_corr_le_0p01": 0.75,
+      "frac_gain_le_0p01": 1.0
+    },
+    {
+      "n_perm": 20000,
+      "n_seeds": 12,
+      "p_corr_median": 0.009374531273436328,
+      "p_corr_q10": 0.008304584770761462,
+      "p_corr_q90": 0.009794510274486277,
+      "p_gain_median": 0.0058997050147492625,
+      "p_gain_q10": 0.00535973201339933,
+      "p_gain_q90": 0.006444677766111694,
+      "frac_corr_le_0p01": 0.9166666666666666,
+      "frac_gain_le_0p01": 1.0
+    }
+  ],
+  "robust_flags": {
+    "robust_corr_p_le_0p01": true,
+    "robust_gain_p_le_0p01": true
+  },
+  "verdict": "V2_TRIAD_PERMUTATION_CONVERGENCE_ROBUST_PASS",
+  "required_next_step": "PROCEED_TO_TRIAD_STAGE_WITH_V2_PACKAGE"
+}

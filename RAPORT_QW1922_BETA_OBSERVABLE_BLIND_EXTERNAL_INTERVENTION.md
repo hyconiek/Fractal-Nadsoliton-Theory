@@ -1,14 +1,14 @@
 # RAPORT QW-1922: BETA OBSERVABLE BLIND EXTERNAL INTERVENTION
 
-- Data UTC: 2026-03-03T04:28:13.691278+00:00
+- Data UTC: 2026-03-03T19:06:10.511810+00:00
 - Selected observable: `B7_local_resid_std`
 - Verdict: **BETA_OBSERVABLE_BLIND_EXTERNAL_INTERVENTION_PASS**
 
 ## Primary (holdout)
-- effect_beta: 0.9907
-- effect_omega: 0.0435
-- contrast: 0.9472
-- contrast_boot_q05: 0.8338
+- effect_beta: 1.4071
+- effect_omega: 0.0897
+- contrast: 1.3174
+- contrast_boot_q05: 1.1963
 - all_pass: True
 
 ## Stress (holdout)

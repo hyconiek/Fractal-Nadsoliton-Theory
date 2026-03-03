@@ -1,6 +1,6 @@
 # RAPORT QW-1925: TRUE EXTERNAL BETA-CHANNEL COLLECTION SPEC
 
-- Data UTC: 2026-03-03T04:48:09.089791+00:00
+- Data UTC: 2026-03-03T19:06:53.947886+00:00
 - Verdict: **TRUE_EXTERNAL_BETA_CHANNEL_COLLECTION_SPEC_READY**
 - selected_beta_observable: `B7_local_resid_std`
 
@@ -11,7 +11,7 @@
 - holdout_contrast_boot_q05 >= 0.2
 
 ## Power Targets
-- conservative contrast target: 0.5683
+- conservative contrast target: 0.7904
 - conservative sigma: 0.1200
 - n_holdout min (80% power): 400
 - n_holdout min (90% power): 500

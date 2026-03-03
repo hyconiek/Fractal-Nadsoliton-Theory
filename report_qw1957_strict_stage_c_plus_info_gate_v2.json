@@ -1,0 +1,87 @@
+{
+  "generated_utc": "2026-03-03T07:29:26.078407+00:00",
+  "inputs": {
+    "q1946_readiness": "TOE_STAGE_C_BLOCKED_V2",
+    "q1955_verdict": "NOGO_DIAGNOSIS_WITH_MINIMAL_REPAIR_FAIL",
+    "q1956_verdict": "TWO_STATE_REPAIRED_OPERATOR_FAIL"
+  },
+  "flags": {
+    "stage_b_closed": true,
+    "triad_strict_pass_q1946": false,
+    "minimal_repair_pass_q1955": false,
+    "two_state_repair_pass_q1956": false
+  },
+  "blocker_ranking": [
+    {
+      "metric": "triad::mass_mean_rel_pct",
+      "relative_miss": 4.216160066205308
+    },
+    {
+      "metric": "triad::ckm_mean_rel_pct",
+      "relative_miss": 1.599561016306239
+    },
+    {
+      "metric": "info1956::closed_info_gain_vs_control",
+      "relative_miss": 1.1778213883552597
+    },
+    {
+      "metric": "info1955::info_gain_vs_control",
+      "relative_miss": 1.136084926602152
+    },
+    {
+      "metric": "triad::q_assignment_joint_feasibility",
+      "relative_miss": 1.0
+    },
+    {
+      "metric": "info1955::acc_gain_vs_control",
+      "relative_miss": 0.8611111111111116
+    },
+    {
+      "metric": "info1956::channel_complementarity",
+      "relative_miss": 0.47345307967240813
+    },
+    {
+      "metric": "info1955::channel_complementarity",
+      "relative_miss": 0.4647796362648162
+    },
+    {
+      "metric": "triad::gw_control_gap",
+      "relative_miss": 0.4028009556107747
+    },
+    {
+      "metric": "triad::mass_max_rel_pct",
+      "relative_miss": 0.33194012192629335
+    },
+    {
+      "metric": "info1956::closed_acc_gain_vs_open",
+      "relative_miss": 0.07407407407407363
+    },
+    {
+      "metric": "triad::pmns_mean_rel_pct",
+      "relative_miss": 0.03232994637354002
+    },
+    {
+      "metric": "triad::gw_auc",
+      "relative_miss": 0.0
+    },
+    {
+      "metric": "triad::gw_adv",
+      "relative_miss": 0.0
+    },
+    {
+      "metric": "triad::gw_sep",
+      "relative_miss": 0.0
+    },
+    {
+      "metric": "info1955::dual_accuracy",
+      "relative_miss": 0.0
+    },
+    {
+      "metric": "info1956::closed_accuracy",
+      "relative_miss": 0.0
+    }
+  ],
+  "readiness": "TOE_STAGE_C_PLUS_INFO_BLOCKED_V2",
+  "verdict": "STRICT_STAGE_C_PLUS_INFO_GATE_V2_FAIL",
+  "required_next_step": "REWORK_MINIMAL_REPAIR_OPERATOR_AND_MASS_FLAVOR_LINK"
+}

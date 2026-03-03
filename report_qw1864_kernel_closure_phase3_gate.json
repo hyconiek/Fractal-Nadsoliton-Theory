@@ -1,0 +1,36 @@
+{
+  "generated_utc": "2026-03-03T00:06:21.894391+00:00",
+  "checks": {
+    "canonical_reconstruction_strength": {
+      "score": 0.0,
+      "pass": false,
+      "note": "CANONICAL_KERNEL_RECONSTRUCTION_NOT_CLOSED"
+    },
+    "micromodel_compatibility": {
+      "score": 1.5074315340205559e-43,
+      "pass": false,
+      "note": "MICROMODEL_CANONICAL_COMPATIBILITY_FAIL"
+    },
+    "identifiability_design": {
+      "score": 0.825318414676242,
+      "pass": true,
+      "note": "IDENTIFIABILITY_DESIGN_PARTIAL"
+    }
+  },
+  "global_score": 0.2063296036690605,
+  "hard_gate": false,
+  "readiness": "PHASE3_OPEN_KERNEL_NOT_CLOSED",
+  "recommended_next_steps": [
+    {
+      "id": "QW-1865",
+      "title": "Synthetic recovery benchmark on best observable set",
+      "goal": "Verify unbiased recovery of beta, omega, phi under realistic noise."
+    },
+    {
+      "id": "QW-1866",
+      "title": "Paired signed-intervention execution protocol",
+      "goal": "Implement baseline vs sign-flipped branch measurements to break omega-beta coupling."
+    }
+  ],
+  "verdict": "KERNEL_CLOSURE_PHASE3_GATE_COMPLETE"
+}

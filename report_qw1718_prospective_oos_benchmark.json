@@ -1,0 +1,59 @@
+{
+  "generated_utc": "2026-03-02T15:45:32.390370+00:00",
+  "manifest": {
+    "version": "FIN-Prospective-Benchmark-1",
+    "frozen_utc": "2026-03-02T15:45:32.389799+00:00",
+    "thresholds": {
+      "flavor_shared_mean_rel_pct_max": 15.0,
+      "mass_oos_test_mean_pct_max": 10.0,
+      "mass_bootstrap_test_median_pct_max": 10.0,
+      "mass_bootstrap_gap_mean_pct_max": 7.0,
+      "ir_delta_max_mu_le_1e-3": 0.001,
+      "identifiability_mass_cond_max": 100000.0
+    }
+  },
+  "manifest_hash_sha256": "d5815383290f5d387bd5baa744a94b770a27054fd8153d149b08f5e350b80c1b",
+  "checks": [
+    {
+      "name": "Flavor shared CKM/PMNS",
+      "value": {
+        "ckm": 21.27155345397912,
+        "pmns": 33.670736737640965
+      },
+      "pass": false,
+      "threshold": 15.0
+    },
+    {
+      "name": "Mass OOS test_mean",
+      "value": 8.999014915803762,
+      "pass": true,
+      "threshold": 10.0
+    },
+    {
+      "name": "Mass bootstrap robustness",
+      "value": {
+        "test_median_pct": 10.830672556718213,
+        "gap_mean_pct": 21.20328180351618
+      },
+      "pass": false,
+      "threshold": {
+        "test_median_pct": 10.0,
+        "gap_mean_pct": 7.0
+      }
+    },
+    {
+      "name": "IR Lorentz delta_max",
+      "value": 1.147288708480687e-09,
+      "pass": true,
+      "threshold": 0.001
+    },
+    {
+      "name": "Mass identifiability cond(X^T X)",
+      "value": 4.761438831454202,
+      "pass": true,
+      "threshold": 100000.0
+    }
+  ],
+  "score": 0.6,
+  "verdict": "PROSPECTIVE_BENCHMARK_PARTIAL"
+}

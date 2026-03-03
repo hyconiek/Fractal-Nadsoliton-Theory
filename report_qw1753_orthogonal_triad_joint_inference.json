@@ -1,0 +1,67 @@
+{
+  "generated_utc": "2026-03-02T17:41:18.260436+00:00",
+  "inputs": {
+    "beta_source": "QW-1749",
+    "omega_phi_source": "QW-1752",
+    "n_beta_rows": 36,
+    "n_omega_rows_total": 36,
+    "n_omega_rows_good": 11
+  },
+  "weighted_posteriors": {
+    "beta": {
+      "neff": 18.477364346172113,
+      "ci95": [
+        0.0003,
+        0.012319331514868064
+      ],
+      "median": 0.0016840556900727924,
+      "boundary_rate": 0.45957041105935487
+    },
+    "omega": {
+      "neff": 7.4524320853601695,
+      "ci95": [
+        0.033664778716199995,
+        0.4628077615608949
+      ],
+      "median": 0.31880202717506123,
+      "boundary_rate": 0.1818601934135473
+    },
+    "phi": {
+      "circular_mean": -0.23832003792834214,
+      "circular_std": 0.9471343833176431
+    }
+  },
+  "orthogonality_tests": {
+    "spearman_omega_vs_delta_beta_perturb": -0.7272727272727273,
+    "weighted_slope_delta_beta_perturb_vs_omega": -0.09135400127499096,
+    "weighted_intercept_delta_beta_perturb_vs_omega": 0.05973675647426367,
+    "delta_beta_perturb_q90": 0.08115889394832854
+  },
+  "joint_empirical_mc": {
+    "n_samples": 20000,
+    "ci95": {
+      "beta": [
+        0.0003,
+        0.012320568927789934
+      ],
+      "omega": [
+        0.033664778716199995,
+        0.4863112196198982
+      ],
+      "phi": [
+        -2.572275595447706,
+        0.8008299729614756
+      ]
+    },
+    "joint_nonboundary_rate": 0.4425
+  },
+  "pass_flags": {
+    "beta_observable_quality": true,
+    "omega_observable_quality": true,
+    "information_content": true,
+    "orthogonality": false,
+    "phi_stability": true,
+    "nonboundary_joint": false
+  },
+  "verdict": "ORTHOGONAL_TRIAD_IDENTIFIABILITY_WEAK"
+}

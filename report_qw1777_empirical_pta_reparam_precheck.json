@@ -1,0 +1,59 @@
+{
+  "generated_utc": "2026-03-02T18:38:53.051908+00:00",
+  "inputs": {
+    "phase70": {
+      "delta_rss_real": 0.19496731569331482,
+      "delta_rss_phase": 0.021492817726188933,
+      "mean_real": 0.008228684230178342,
+      "mean_phase": 0.7346987755632999,
+      "hd_params": [
+        -0.7350665779724914,
+        0.06619594199647595
+      ]
+    },
+    "phase71": {
+      "logZ_flat": -917.1555087630439,
+      "logZ_fin": -917.3527017363408,
+      "logB": -0.1971929732968647
+    },
+    "phase75": {
+      "sigma_q0": 0.3576543964263531,
+      "logB_real": -3.303799642542913,
+      "logB_inj": 12.340352413668484
+    },
+    "phase76": {
+      "gps": 1266965117,
+      "duration": 512,
+      "fs": 4096,
+      "H_q0_whitened": 0.5051262703952046,
+      "interpretation": "If H_q0 > 0.15, FIN survives Whitening and exhibits true phase-space log-Poisson structure. If H_q0 ~ 0, flat noise."
+    },
+    "q1725_verdict": "GW_CROSS_HURST_ANOMALY_NOT_ROBUST",
+    "q1726_verdict": "FIN_023_TO_031_PROJECTION_NOT_SUPPORTED",
+    "q1776_readiness": "REPARAM_EMPIRICAL_READY",
+    "q1776_hard_gate": "PASS"
+  },
+  "derived_metrics": {
+    "delta_rss_phase": 0.021492817726188933,
+    "mean_phase": 0.7346987755632999,
+    "logB71": -0.1971929732968647,
+    "logB_real": -3.303799642542913,
+    "logB_inj": 12.340352413668484,
+    "sigma_q0": 0.3576543964263531,
+    "H_q0_whitened": 0.5051262703952046
+  },
+  "pass_flags": {
+    "reparam_ready": true,
+    "pipeline_sensitivity": true,
+    "real_structure_signal": true,
+    "legacy_path_not_robust": true,
+    "bayes_headroom_for_reparam": true
+  },
+  "verdict": "EMPIRICAL_REPARAM_CAMPAIGN_READY",
+  "recommended_next_campaign": {
+    "data_domain": "PTA + GW detectors",
+    "primary_model": "reparameterized dictionary from QW-1773",
+    "validation_mode": "grouped CV + OOD holdout + injection controls",
+    "success_target": "logB_reparam > +3 on real data with preserved injection detectability"
+  }
+}

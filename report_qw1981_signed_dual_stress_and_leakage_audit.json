@@ -1,0 +1,71 @@
+{
+  "generated_utc": "2026-03-03T09:43:40.890406+00:00",
+  "source_reports": [
+    "report_qw1970_structural_gw_control_term_gate.json",
+    "report_qw1980_signed_dual_basis_independent_gate.json"
+  ],
+  "candidate": {
+    "xi1": 0.0017053879748270668,
+    "xi3": 0.0007108832453038897,
+    "deterministic_gw": {
+      "auc_h1l1_vs_ctrl": 0.8773531847084004,
+      "adv_shared_minus_ctrl_q90": 0.3972332015810277,
+      "sep_median_h1l1_minus_ctrl": 0.002984410998415351,
+      "control_median_gap": 0.0006821026205023265
+    },
+    "deterministic_flags": {
+      "gw_sep_ge_min": true,
+      "gw_adv_ge_min": true,
+      "gw_auc_ge_min": true,
+      "gw_control_gap_le_max": true
+    }
+  },
+  "real_stability": {
+    "iid_bootstrap_n": 2000,
+    "iid_rates_8seeds": [
+      0.9865,
+      0.9855,
+      0.983,
+      0.9795,
+      0.9815,
+      0.989,
+      0.984,
+      0.9825
+    ],
+    "iid_min": 0.9795,
+    "iid_median": 0.9835,
+    "iid_max": 0.989,
+    "block_bootstrap_n": 1200,
+    "block_len": 8,
+    "block_rates_6seeds": [
+      0.9333333333333333,
+      0.9391666666666667,
+      0.9466666666666667,
+      0.9291666666666667,
+      0.9416666666666667,
+      0.9433333333333334
+    ],
+    "block_min": 0.9291666666666667,
+    "block_median": 0.9404166666666667,
+    "block_max": 0.9466666666666667
+  },
+  "null_random_topology": {
+    "n_topologies": 120,
+    "bootstrap_n_each": 300,
+    "deterministic_pass_count": 0,
+    "deterministic_pass_rate": 0.0,
+    "bootstrap_mean": 0.06041666666666667,
+    "bootstrap_p90": 0.1410000000000001,
+    "bootstrap_std": 0.058753348998321096
+  },
+  "null_adversarial_topology": {
+    "n_groups": 30,
+    "k_candidates_per_group": 30,
+    "bootstrap_n_each": 300,
+    "bootstrap_mean": 0.26211111111111113,
+    "bootstrap_p90": 0.45833333333333337,
+    "bootstrap_std": 0.12272065035963327
+  },
+  "verdict": "SIGNED_DUAL_STRESS_PASS_STRONG",
+  "required_next_step": "PROMOTE_TO_EXTERNAL_CONFIRMATORY_PREP"
+}

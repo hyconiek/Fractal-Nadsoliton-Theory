@@ -1,0 +1,75 @@
+{
+  "protocol_id": "QW-1899-EXTERNAL-DETECTOR-PROTOCOL",
+  "created_utc": "2026-03-03T01:12:28.579692+00:00",
+  "model_lock": {
+    "model_name": "admissible_amplitude_lite",
+    "source_reports": [
+      "report_qw1896_admissible_amplitude_lite_gate.json",
+      "report_qw1897_admissible_amplitude_lite_multisplit.json"
+    ],
+    "complexity": {
+      "n_obs_per_profile": 12,
+      "k_model": 10,
+      "residual_dof": 2
+    },
+    "fixed_hyperparams": {
+      "lambda_c": 0.2,
+      "lambda_b": 0.35,
+      "lambda_bias": 0.05,
+      "constraints": {
+        "omega": "pi/4 +/- 0.12",
+        "phi": "{+/- pi/6} +/- 0.22",
+        "beta": "[0.005, 0.05]"
+      }
+    }
+  },
+  "dataset_requirements": {
+    "externality": "must be independent from all design/tuning datasets",
+    "providers": [
+      "LIGO",
+      "Virgo",
+      "KAGRA",
+      "PTA collaboration"
+    ],
+    "freeze_required": true,
+    "required_files": [
+      "manifest.json",
+      "pta_v2_pairs.csv",
+      "gw_windows.csv"
+    ],
+    "manifest_fields": [
+      "dataset.dataset_id",
+      "dataset.provider",
+      "dataset.externality_statement",
+      "files[].sha256"
+    ]
+  },
+  "primary_metrics": {
+    "success_rate": "fraction of external splits passing all three median-gain constraints",
+    "rmse_gain_median": "median(ctrl_rmse - model_rmse)",
+    "canon_gain_median": "median(model_canon - ctrl_canon)",
+    "nonboundary_gain_median": "median(model_nonboundary - ctrl_nonboundary)"
+  },
+  "pass_thresholds": {
+    "success_rate_min": 0.6,
+    "rmse_gain_median_min": 0.0132,
+    "canon_gain_median_min": 0.0338,
+    "nonboundary_gain_median_min": 0.25
+  },
+  "hard_fail_conditions": [
+    "residual_dof < 2",
+    "any post-hoc threshold change",
+    "dataset hash mismatch vs manifest",
+    "reuse of design/training dataset"
+  ],
+  "decision_rule": "PASS only if all thresholds met; else FAIL",
+  "anti_p_hacking": {
+    "single_protocol_hash": true,
+    "no_hyperparam_retuning_on_external": true,
+    "no_metric_substitution": true
+  },
+  "bridge_context": {
+    "precondition_report": "report_qw1898_empirical_bridge_precondition_gate.json",
+    "precondition_readiness": "EMPIRICAL_BRIDGE_PRECONDITION_PASS"
+  }
+}

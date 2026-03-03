@@ -1,0 +1,78 @@
+{
+  "generated_utc": "2026-03-03T10:17:12.576452+00:00",
+  "source_reports": [
+    "report_qw1970_structural_gw_control_term_gate.json",
+    "report_qw1969_bootstrap_robust_recenter_search.json",
+    "report_qw1987_tri_basis_fold2_targeted_strict_push.json"
+  ],
+  "candidate": {
+    "xi1": 0.001617168885,
+    "xi3": 0.001638950189,
+    "xi4": 0.000106342203
+  },
+  "stress_config": {
+    "real_iid_boot": 3000,
+    "real_block_boot": 1800,
+    "real_block_len": 10,
+    "null_random_trials": 32,
+    "null_random_boot": 120,
+    "null_adv_trials": 24,
+    "null_adv_boot": 120
+  },
+  "fold_results": [
+    {
+      "fold": 0,
+      "real_iid": 0.988,
+      "real_block": 0.9961111111111111,
+      "null_random_mean": 0.16614583333333333,
+      "null_random_p90": 0.3633333333333334,
+      "null_adv_mean": 0.9711805555555554,
+      "null_adv_p90": 1.0
+    },
+    {
+      "fold": 1,
+      "real_iid": 0.9946666666666667,
+      "real_block": 0.9994444444444445,
+      "null_random_mean": 0.128125,
+      "null_random_p90": 0.3,
+      "null_adv_mean": 0.984375,
+      "null_adv_p90": 1.0
+    },
+    {
+      "fold": 2,
+      "real_iid": 0.9896666666666667,
+      "real_block": 1.0,
+      "null_random_mean": 0.2921875,
+      "null_random_p90": 0.40750000000000003,
+      "null_adv_mean": 0.9895833333333334,
+      "null_adv_p90": 1.0
+    },
+    {
+      "fold": 3,
+      "real_iid": 0.9463333333333334,
+      "real_block": 0.9611111111111111,
+      "null_random_mean": 0.18541666666666667,
+      "null_random_p90": 0.33833333333333343,
+      "null_adv_mean": 0.9656249999999998,
+      "null_adv_p90": 0.9916666666666667
+    },
+    {
+      "fold": 4,
+      "real_iid": 0.9623333333333334,
+      "real_block": 0.9794444444444445,
+      "null_random_mean": 0.16171875,
+      "null_random_p90": 0.3,
+      "null_adv_mean": 0.990625,
+      "null_adv_p90": 1.0
+    }
+  ],
+  "aggregate": {
+    "real_iid_min": 0.9463333333333334,
+    "real_block_min": 0.9611111111111111,
+    "null_random_p90_max": 0.40750000000000003,
+    "null_adv_mean_max": 0.990625,
+    "null_adv_p90_max": 1.0
+  },
+  "verdict": "HARD_LOCK_NOT_READY",
+  "required_next_step": "REWORK_OPERATOR_OR_NULL_GUARDS_BEFORE_EXTERNAL_STAGE"
+}

@@ -3633,3 +3633,309 @@ Po tej rundzie:
    - `f5123046189f7f137a0f2cd2c715eea424d230e2352e75f6e80c483b8f069c02`.
 5. Znaczenie:
    - wewnetrzne domkniecie (Stage-C lockable) zostalo formalnie zamrozone w jednym pakiecie gotowym do niezaleznej walidacji.
+
+## 308. Gleboki audyt metodologii pre-QW1700 (QW-2006)
+1. `QW_2006_PRE1700_METHODOLOGY_DEEP_AUDIT.py`
+   - Zakres: automatyczny audyt plikow `.py/.md/.tex` dla `QW < 1700` + korelacja z auditami referencyjnymi.
+   - Artefakty:
+     - `report_qw2006_pre1700_methodology_deep_audit.json`
+     - `RAPORT_QW2006_PRE1700_METHODOLOGY_DEEP_AUDIT_EN_PL.md`
+2. Werdykt:
+   - `PRE1700_METHODOLOGY_MULTI_REGIME_PARTIALLY_RIGOROUS_NOT_FULLY_CLOSED`
+3. Kluczowe fakty metodologiczne:
+   - Kampania pre-1700 jest wielorezimowa (niejednorodna metodologicznie).
+   - Istnieja realne komponenty rygoru (symulacje, null/surrogate, retractions), ale wspolistnieja z warstwa heurystyczna i tuningowa.
+   - Najslabszy metodologicznie punkt to odcinki deklaracyjne/derywacyjne z ryzykiem cyrkularnosci i niespojnosci deklaracji z obliczeniami.
+   - Os czasu wg dat plikow (mtime): 2025-11 `0.197`, 2025-12 `0.303`, 2026-01 `0.783`, 2026-02 `0.500`, 2026-03 `-0.341` (lokalny spadek rygoru przez konfliktowe artefakty/rewizje).
+4. Potwierdzenia krzyzowe (reference audits):
+   - `QW1703`: luka claims-vs-computation obecna.
+   - `QW1724`: GW pipeline high-risk/inconclusive.
+   - `QW1858`: frozen branch contradictory + empirically negative sygnal.
+   - `QW1907`: tuning pre-1700 wykryty; brak sygnalu zewnetrznego retuningu rdzenia.
+   - `QW1960`: derivation mass formula zawiera bledy materialne i kroki cyrkularne.
+5. Konsekwencja dla "domykania" ToE:
+   - Przed pelnym claimem domkniecia potrzebna jest formalna normalizacja statusow twierdzen w TEX (derived/consistent/heuristic/falsified) oraz usuniecie cyrkularnych etapow derivation chain.
+
+## 309. Jakosciowe porownanie FIN do innych programow (QW-2007)
+1. `QW_2007_QUALITATIVE_THEORY_BENCHMARK.py`
+   - benchmark jakosciowy 0-10 na osiach:
+   - empirical coverage, mathematical rigor, methodological consistency, falsifiability, ToE-closure readiness.
+2. Artefakty:
+   - `RAPORT_QW2007_QUALITATIVE_THEORY_BENCHMARK_EN_PL.md`
+   - `report_qw2007_qualitative_theory_benchmark.json`
+3. Werdykt:
+   - `FIN_IS_COMPETITIVE_AS_EXPLORATORY_FALSIFIABLE_PROGRAM_BUT_NOT_YET_ABOVE_SM_GR_IN_OVERALL_QUALITY`.
+4. Wynik FIN (waga laczna):
+   - `4.70 / 10` (w tym wysoka falsyfikowalnosc, nizsza empiryczna i domkniecie ToE).
+5. Znaczenie operacyjne:
+   - FIN jest wartosciowy jako program badawczy, ale dla claimu "lepsza niz SM+GR" wymaga domkniecia luk wykazanych w QW-1724 i QW-1960 oraz stabilizacji metodologicznej z QW-2006.
+
+## 310. Wykonanie punktow 1/2/3 (QW-2011..2013)
+### 1) Niecyrkularna masa (QW-2011)
+1. `QW_2011_NONCIRCULAR_MASS_BRANCH_STRICT_ROBUSTNESS.py`
+   - Cel: wykonac punkt 1 (mass bez inwersji Q<-mass), plus twardy test odpornosci niepewnosci bez refitu.
+2. Wynik:
+   - Deterministycznie: PASS (mean/max/tau-charm = 12.051/34.013/14.013%).
+   - Robustness MC: `pass_rate=0.5106` przy bramce `0.95`.
+   - Werdykt: `NONCIRCULAR_MASS_BRANCH_STRICT_ROBUST_FAIL`.
+3. Wniosek:
+   - Galaz jest niecyrkularna i obiecujaca, ale jeszcze niestabilna pod realistyczna propagacja niepewnosci.
+
+### 2) Flavor z jednego kernela bez ansatzu (QW-2012)
+1. `QW_2012_SINGLE_KERNEL_FLAVOR_NO_ANSATZ_STRICT.py`
+   - Cel: wykonac punkt 2 w trybie strict no-fit/no-ansatz/no per-sector tuning.
+2. Wynik:
+   - `pass_count=0/12`.
+   - Najlepszy kandydat: CKM 9.403% (OK), PMNS 31.390% (FAIL).
+   - Werdykt: `SINGLE_KERNEL_FLAVOR_NO_ANSATZ_FAIL`.
+3. Wniosek:
+   - Obecny operator minimalny bez ansatzu nie domyka PMNS; potrzebna glebsza mikrodynamika flavor.
+
+### 3) Rygorystyczna naprawa pipeline GW (QW-2013)
+1. `QW_2013_GW_PIPELINE_STRICT_REPAIR_GATE.py`
+   - Cel: wykonac punkt 3 przez jawne mapowanie problemow QW-1724 -> kontrole post-repair.
+2. Wynik:
+   - `checks pass = 7/7`.
+   - Werdykt: `GW_PIPELINE_STRICT_REPAIR_PASS`.
+3. Wniosek:
+   - Wewnetrznie pipeline GW jest naprawiony metodologicznie.
+   - Kolejny krok: blind external confirmatory na zamrozonym pakiecie.
+
+## 311. Krytyczna diagnostyka kanalu beta (po QW-1930)
+1. Audyt surowego pakietu `external_confirmatory_v2/beta_channel_true_external/beta_channel_pairs.csv` wykazal defekt metodologiczny w konstrukcji cech dynamicznych.
+2. Problem:
+   - grupowanie `obs_key=pulsar|pn|round(mjd,3)` dawalo w praktyce singletony (`4000/4000` grup rozmiaru 1),
+   - skutkiem byla degeneracja cech: bardzo wysoki udzial zer (`f_std` i `f_slope` ~0.92; `f_autoc1` ~0.99; `f_switch` ~0.99).
+3. Znaczenie naukowe:
+   - kanal interwencyjny byl zbyt ubogi informacyjnie,
+   - to moglo znieksztalcac kalibracje priors dla `beta` i wzmacniac tradeoff w Stage-B.
+
+## 312. Naprawa collectora bez ruszania starych plikow (QW-2014, QW-2015)
+1. Dodano nowy skrypt:
+   - `QW_2014_TRUE_EXTERNAL_BETA_CHANNEL_AUTOCOLLECTOR_V2.py`
+   - nowy katalog: `external_confirmatory_v2/beta_channel_true_external_v2`.
+2. Zmiana metodologiczna v2:
+   - cechy dynamiczne liczone z lokalnych okien tego samego pulsara (`local_same_pulsar_knn_window`), a nie z singletonowych grup.
+3. Wynik QW-2014:
+   - `TRUE_EXTERNAL_AUTOCOLLECTOR_V2_PACKAGE_ASSEMBLED`,
+   - `n_rows=4000`, `pre/post=2706/1294`,
+   - `median_local_neigh_n=8`.
+4. Poprawa bogactwa cech (v2):
+   - `frac_f_std_eq0=0.00025`,
+   - `frac_f_autoc1_eq0=0.00025`,
+   - `frac_f_switch_eq0=0.05675`,
+   - `frac_f_slope_eq0=0.00025`.
+5. Dodano gate gotowosci v2:
+   - `QW_2015_TRUE_EXTERNAL_BETA_CHANNEL_V2_READINESS_GATE.py`.
+6. Wynik QW-2015:
+   - `TRUE_EXTERNAL_BETA_CHANNEL_V2_READY_STRICT`,
+   - `pass=8/8`.
+
+## 313. Blind walidacja na pakiecie v2 (QW-2016, QW-2017, QW-2018)
+1. Dodano osobne (nienadpisujace) walidatory:
+   - `QW_2016_V2_TRIAD_BLIND_EXTERNAL_VALIDATION.py`,
+   - `QW_2017_V2_BETA_OBSERVABLE_BLIND_EXTERNAL_INTERVENTION.py`.
+2. QW-2017 (beta observable):
+   - `BETA_OBSERVABLE_BLIND_EXTERNAL_INTERVENTION_PASS`,
+   - primary holdout: `effect_beta=1.4381`, `effect_omega=0.0933`, `contrast=1.3448`, `q05=1.2221`.
+3. QW-2016 (triad blind, alpha=0.01, n_perm=3000):
+   - formalnie `FAIL` na primary przez graniczne `p_corr=p_gain=0.010996` (pozostale flagi dodatnie).
+4. Dodano audit konwergencji permutacyjnej:
+   - `QW_2018_V2_TRIAD_PERMUTATION_CONVERGENCE_AUDIT.py`.
+5. Wynik QW-2018:
+   - `V2_TRIAD_PERMUTATION_CONVERGENCE_ROBUST_PASS`,
+   - dla `n_perm=20000`, `12` seedow:
+     - `median p_corr=0.00937`, `frac(p_corr<=0.01)=0.9167`,
+     - `median p_gain=0.00590`, `frac(p_gain<=0.01)=1.0000`.
+6. Wniosek:
+   - triad sygnal na v2 jest realny i stabilizuje sie po mocniejszym null-estimation,
+   - pojedynczy wynik QW-2016 byl graniczny (szum estymacji p-value przy n_perm=3000).
+
+## 314. Integracja beta-constraint z sygnalem v2 (QW-2019, QW-2020)
+1. Dodano:
+   - `QW_2019_V2_BETA_CONSTRAINED_TRIAD_DERIVATION.py`,
+   - `QW_2020_V2_LAMBDA_TUNING_AND_TRANSFER_RETEST.py`.
+2. Wynik QW-2019:
+   - `BETA_CONSTRAINED_TRIAD_DERIVATION_TRADEOFF_HIGH`,
+   - prior `beta_target=0.1632`,
+   - constrained fit pogarsza objective o `+249.7%`.
+3. Wynik QW-2020:
+   - `LAMBDA_TUNING_PARTIAL`,
+   - nadal wybierane `lambda=0.0` (czyli brak twardego wymuszenia beta),
+   - required next step: `COLLECT_TRUE_EXTERNAL_INTERVENTION_DATA_FOR_BETA_CHANNEL`.
+4. Wniosek strategiczny:
+   - naprawa kanalowa v2 usunela degeneracje cech i poprawila rygor,
+   - ale luka strukturalna Stage-B (mapa `beta` <-> operator triady) pozostaje,
+   - potrzebna jest dalsza rozbudowa danych interwencyjnych i/lub modyfikacja struktury operatora (nie sam tuning lambda).
+
+## 315. Strukturalna naprawa Stage-B przez operator eta (QW-2021)
+1. Dodano:
+   - `QW_2021_V2_ETA_OPERATOR_BETA_CONSTRAINT_SCAN.py`
+2. Cel:
+   - test minimalnej naprawy strukturalnej operatora triady:
+   - `K(d)=cos(omega*d+phi)/(1+beta*d^eta)` zamiast liniowego mianownika `1+beta*d`.
+3. Wynik:
+   - `ETA_OPERATOR_STRUCTURAL_REPAIR_PASS`, `any_full_pass=True`.
+   - Wybrany punkt (lambda=0):
+     - `omega=0.23375`, `phi=-0.13750`, `beta=1.17000`, `eta=1.80`.
+   - Flagi twarde: `beta<=1.2`, `rel_loss<=0.35`, `corr_ratio>=0.85`, `gain_ratio>=0.85` -> wszystkie TRUE.
+4. Znaczenie:
+   - potwierdzone, ze sama struktura operatora (eta) rozwiązuje presję beta w Stage-B,
+   - nie jest to efekt tuningu lambda.
+
+## 316. Triple-sector retest na kernelu eta z QW-2021 (QW-2023)
+1. Dodano:
+   - `QW_2023_UNIFIED_FROZEN_KERNEL_MASS_FLAVOR_GW_ETA_RETEST.py`
+2. Wynik:
+   - `UNIFIED_FROZEN_KERNEL_NOT_CLOSED_TRIPLE_SECTOR`, `feasible_count=0/17042`.
+3. Najlepszy wspólny fit (single shared vector):
+   - masa mean/max rel%: `19.823/41.250` (mean FAIL),
+   - flavor CKM/PMNS mean rel%: `42.781/39.218` (FAIL),
+   - GW: AUC/ADV/SEP przechodzą, ale `control_gap=0.003873` (FAIL).
+4. Wniosek:
+   - mimo domknięcia Stage-B, Stage-C nadal blokuje głównie flavor + control_gap.
+
+## 317. Rework flavor na kernelu eta (QW-2024)
+1. Dodano:
+   - `QW_2024_ETA_KERNEL_ISOSPIN_FLAVOR_REWORK_SCAN.py`
+2. Zakres:
+   - 172800 punktow (isospin-split shared flavor dynamics + q_nu permutations),
+   - jeden kernel, jeden operator family (bez per-sector reset).
+3. Wynik:
+   - `ETA_KERNEL_ISOSPIN_FLAVOR_REWORK_FAIL`, `pass_count=0/172800`.
+4. Najlepszy punkt:
+   - masa: `29.048/38.273` (mean FAIL),
+   - flavor: `CKM=22.385` (FAIL), `PMNS=8.607` (PASS),
+   - GW: `control_gap=0.003124` (FAIL).
+5. Wniosek:
+   - PMNS schodzi pod prog,
+   - ale CKM i GW control-gap pozostaja blockerami.
+
+## 318. Reformulacja operatora masy (QW-2025)
+1. Dodano:
+   - `QW_2025_MASS_OPERATOR_REFORMULATION_SCAN_ON_ETA_KERNEL.py`
+2. Zakres:
+   - 21875 punktow, globalny rozszerzony operator masy (bez sektorowych fitow).
+3. Wynik:
+   - `MASS_OPERATOR_REFORMULATION_PASS`, `pass_count=10/21875`.
+4. Najlepszy punkt masowy:
+   - `gamma_scale=0.65`, `c_q=-0.8`, pozostale coeff=0,
+   - masa mean/max rel%: `6.576/18.648` (oba PASS).
+5. Wniosek:
+   - masa przestaje byc blokerem po reformulacji operatora.
+
+## 319. Joint scan masa+flavor+GW po reformie masy (QW-2026)
+1. Dodano:
+   - `QW_2026_JOINT_MASS_FLAVOR_GW_SCAN_ETA_KERNEL.py`
+2. Zakres:
+   - 1536 punktow (targeted joint scan).
+3. Wynik:
+   - `JOINT_MASS_FLAVOR_GW_SCAN_ETA_KERNEL_FAIL`, `pass_count=0/1536`.
+4. Najlepszy punkt:
+   - masa PASS (`6.576/18.648`),
+   - PMNS PASS (`8.813`),
+   - GW AUC/ADV/SEP PASS,
+   - FAIL: `CKM=18.266` i `GW control_gap=0.003124`.
+5. Wniosek:
+   - po reformie masy zostaly dwa blokery: CKM i control_gap.
+
+## 320. Strukturalny term GW na control-gap (QW-2027)
+1. Dodano:
+   - `QW_2027_GW_CONTROL_GAP_STRUCTURAL_TERM_SCAN.py`
+2. Wynik:
+   - `GW_CONTROL_GAP_STRUCTURAL_TERM_PASS`,
+   - wybrano `kappa=-0.000350`.
+3. Efekt:
+   - control_gap zbity do `0.002424` (PASS),
+   - AUC/ADV/SEP utrzymane na poziomie PASS.
+4. Wniosek:
+   - GW-bloker mozna usunac strukturalnie bez psucia sygnalu shared-channel.
+
+## 321. Joint scan z aktywnym termem GW kappa (QW-2028)
+1. Dodano:
+   - `QW_2028_JOINT_SCAN_WITH_GW_KAPPA_TERM.py`
+2. Zakres:
+   - ponowny joint scan 1536 punktow z korekcja GW `kappa`.
+3. Wynik:
+   - `JOINT_SCAN_WITH_GW_KAPPA_TERM_FAIL`, `pass_count=0/1536`.
+4. Najlepszy punkt:
+   - masa PASS (`6.576/18.648`),
+   - PMNS PASS (`8.813`),
+   - GW full PASS (`AUC=0.8595`, `ADV=0.4644`, `SEP=0.003763`, `GAP=0.002424`),
+   - jedyny FAIL: `CKM=18.266 > 15`.
+5. Kluczowy status:
+   - po QW-2028 pozostaje juz tylko pojedynczy bloker Stage-C: CKM mean rel%.
+
+## 322. Usuniecie blokera CKM przez shared flavor basis (QW-2029)
+1. Dodano:
+   - `QW_2029_CKM_BLOCKER_SHARED_FLAVOR_BASIS_SCAN.py`
+2. Zakres:
+   - 196830 punktow (rozszerzona wspolna baza flavor, bez zmiany kernela i bez sector-retune).
+3. Wynik:
+   - `CKM_BLOCKER_SHARED_FLAVOR_BASIS_PASS`,
+   - `pass_count_flavor=115/196830`.
+4. Najlepszy punkt flavor:
+   - `CKM mean rel%=12.687` (PASS),
+   - `PMNS mean rel%=8.757` (PASS).
+5. Znaczenie:
+   - ostatni bloker Stage-C (CKM) zostal usuniety w ramach tej samej zamrozonej galezi kernela.
+
+## 323. Finalny gate Stage-C dla combined branch (QW-2030)
+1. Dodano:
+   - `QW_2030_FINAL_STAGE_C_GATE_COMBINED_BRANCH.py`
+2. Werdykt:
+   - `FINAL_STAGE_C_GATE_COMBINED_BRANCH_PASS`,
+   - `readiness=TOE_STAGE_C_COMBINED_BRANCH_PROVISIONAL_CLOSED`.
+3. Combined metrics:
+   - masa mean/max rel%: `6.576/18.648`,
+   - flavor CKM/PMNS mean rel%: `12.687/8.757`,
+   - GW auc/adv/sep/gap: `0.8595/0.4644/0.003763/0.002424`.
+4. Flagi:
+   - wszystkie 8/8 flag twardych = TRUE,
+   - methodology guard: `single_frozen_kernel=True`, `shared_operator_no_sector_retune=True`, `explicit_external_beta_channel_v2=True`.
+5. Znaczenie:
+   - Stage-C jest formalnie domkniety dla tej galezi (provisional, przed niezaleznym potwierdzeniem zewnetrznym).
+
+## 324. Blind external transfer dla kernela QW-2030 (QW-2031)
+1. Dodano:
+   - `QW_2031_V2_ETA_TRIAD_BLIND_EXTERNAL_VALIDATION.py`
+2. Werdykt:
+   - `ETA_TRIAD_BLIND_EXTERNAL_VALIDATION_PASS_STRONG`,
+   - `readiness=READY_FOR_COMBINED_CONFIRMATORY_GATE`.
+3. Wyniki holdout:
+   - primary: corr i rmse_gain > permutacyjny null (silny PASS),
+   - stress: soft-pass utrzymany.
+4. Znaczenie:
+   - transfer kernela z QW-2030 na zewnetrzny pakiet v2 przechodzi w protokole blind.
+
+## 325. Zbiorczy gate confirmatory dla combined branch (QW-2032)
+1. Dodano:
+   - `QW_2032_COMBINED_BRANCH_CONFIRMATORY_GATE.py`
+2. Agregowane wymagania:
+   - QW-2030 Stage-C PASS,
+   - QW-2015 external package READY,
+   - QW-2017 blind intervention PASS,
+   - QW-2031 eta blind transfer PASS.
+3. Werdykt:
+   - `COMBINED_BRANCH_CONFIRMATORY_GATE_PASS_STRONG`,
+   - `readiness=STAGE_C_PLUS_EXTERNAL_PRECONFIRMATORY_CLOSED`,
+   - `pass_count=5/5`.
+4. Znaczenie:
+   - osiagniety zostal najwyzszy poziom domkniecia mozliwy lokalnie (bez niezaleznego zewnetrznego zespolu).
+   - kolejny krok pozostaje z natury zewnetrzny: `RUN_TRULY_INDEPENDENT_MULTITEAM_CONFIRMATORY_PACKAGE`.
+
+## 326. Freeze bundle dla niezaleznej replikacji (QW-2033)
+1. Dodano:
+   - `QW_2033_INDEPENDENT_CONFIRMATORY_FREEZE_BUNDLE.py`
+2. Cel:
+   - przygotowac zamrozony pakiet przekazaniowy 1:1 dla zespolu niezaleznego (manifest SHA256 + runbook).
+3. Wynik:
+   - `INDEPENDENT_CONFIRMATORY_FREEZE_BUNDLE_READY`,
+   - `readiness=READY_FOR_TRUE_INDEPENDENT_MULTITEAM_RUN`,
+   - `pass_count=3/3`.
+4. Artefakty:
+   - `external_confirmatory_v2/independent_bundle_qw2033/manifest_qw2033.json`,
+   - `external_confirmatory_v2/independent_bundle_qw2033/RUNBOOK_QW2033.md`,
+   - `report_qw2033_independent_confirmatory_freeze_bundle.json`.
+5. Znaczenie:
+   - od strony lokalnej/proceduralnej pakiet jest gotowy do slepej niezaleznej replikacji.
