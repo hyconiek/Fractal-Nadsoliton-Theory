@@ -1,0 +1,76 @@
+{
+  "generated_utc": "2026-03-03T20:22:10.589690+00:00",
+  "source": {
+    "microprofiles": "QW_2021_V2_ETA_OPERATOR_BETA_CONSTRAINT_SCAN.py:build_profiles",
+    "fit_method": "QW_2021_V2_ETA_OPERATOR_BETA_CONSTRAINT_SCAN.py:fit_global",
+    "target_kernel": "report_qw2030_final_stage_c_gate_combined_branch.json:kernel"
+  },
+  "config": {
+    "n_grid": [
+      48,
+      64,
+      80,
+      96
+    ],
+    "seeds_per_n": 6,
+    "dmax": 24,
+    "n_bootstrap": 32,
+    "lambda_beta": 0.0
+  },
+  "target_kernel": {
+    "omega": 0.23375000000000004,
+    "phi": -0.13750000000000018,
+    "beta": 1.1700000000000004,
+    "eta": 1.8
+  },
+  "bootstrap_stats": {
+    "omega": {
+      "q02p5": 0.02,
+      "q50": 0.22411615793288903,
+      "q97p5": 0.24770763214688998,
+      "mean": 0.18416975138035319,
+      "std": 0.08743656189070702
+    },
+    "phi": {
+      "q02p5": -0.25761383791564896,
+      "q50": 1.3505045923614225,
+      "q97p5": 2.9297393584475797,
+      "mean": 1.1068559454145812,
+      "std": 1.3508445661452744
+    },
+    "beta": {
+      "q02p5": 0.567478473414824,
+      "q50": 0.7613764948496836,
+      "q97p5": 0.9252556577986368,
+      "mean": 0.7604710999459128,
+      "std": 0.10990609302081893
+    },
+    "eta": {
+      "q02p5": 1.8,
+      "q50": 1.8,
+      "q97p5": 1.8,
+      "mean": 1.8,
+      "std": 0.0
+    },
+    "objective": {
+      "q02p5": 5.7967100207397335,
+      "q50": 7.756960161157182,
+      "q97p5": 11.082052648503804,
+      "mean": 8.016610883294533,
+      "std": 1.4764491051720834
+    }
+  },
+  "flags": {
+    "target_omega_in_bootstrap_ci95": true,
+    "target_phi_in_bootstrap_ci95": true,
+    "target_beta_in_bootstrap_ci95": false,
+    "target_eta_in_bootstrap_ci95": true,
+    "beta_std_le_0p60": true,
+    "eta_std_le_0p50": true
+  },
+  "pass_count": 5,
+  "total_flags": 6,
+  "readiness": "DERIVATIONAL_STABILITY_ACCEPTABLE",
+  "verdict": "ETA_KERNEL_DERIVATIONAL_STABILITY_PASS",
+  "required_next_step": "LOCK_DERIVATIONAL_APPENDIX_FOR_FROZEN_KERNEL"
+}

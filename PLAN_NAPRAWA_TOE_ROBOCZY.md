@@ -3939,3 +3939,28 @@ Po tej rundzie:
    - `report_qw2033_independent_confirmatory_freeze_bundle.json`.
 5. Znaczenie:
    - od strony lokalnej/proceduralnej pakiet jest gotowy do slepej niezaleznej replikacji.
+
+## 327. Audyt stabilnosci derivacyjnej kernela eta (QW-2034)
+1. Dodano:
+   - `QW_2034_ETA_KERNEL_DERIVATIONAL_STABILITY_AUDIT.py`
+2. Cel:
+   - sprawdzic czy zamrozony kernel z QW-2030 miesci sie w bootstrapowych przedzialach re-derywacji z mikromodelu.
+3. Wynik:
+   - `ETA_KERNEL_DERIVATIONAL_STABILITY_PASS`,
+   - `readiness=DERIVATIONAL_STABILITY_ACCEPTABLE`,
+   - `pass_count=5/6`.
+4. Znaczenie:
+   - luka derivacyjna zostala oslabiona: target kernel jest w duzej mierze zgodny ze stabilna re-derywacja mikro.
+
+## 328. Audyt wielofoldowej stabilnosci sygnalu external (QW-2035)
+1. Dodano:
+   - `QW_2035_ETA_PRIMARY_SIGNAL_MULTIFOLD_STABILITY.py`
+2. Cel:
+   - policzyc stabilnosc sygnalu blind external na wielu deterministicznych foldach (primary + stress).
+3. Wynik:
+   - `ETA_SIGNAL_MULTIFOLD_STABILITY_PARTIAL`,
+   - `readiness=SIGNAL_STABILITY_PARTIAL`,
+   - `pass_count=1/2`.
+4. Znaczenie:
+   - statystyczny sygnal pozostaje, ale praktyczna sila i generalizacja na foldach sa nierowne.
+   - to jest obecnie glowna wewnetrzna luka do dalszego domkniecia przed finalnym claimem.
