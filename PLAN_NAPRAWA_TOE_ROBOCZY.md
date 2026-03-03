@@ -3964,3 +3964,61 @@ Po tej rundzie:
 4. Znaczenie:
    - statystyczny sygnal pozostaje, ale praktyczna sila i generalizacja na foldach sa nierowne.
    - to jest obecnie glowna wewnetrzna luka do dalszego domkniecia przed finalnym claimem.
+
+## 329. Naprawa stabilnosci primary przez protokol stratyfikowany (QW-2036)
+1. Dodano:
+   - `QW_2036_PRIMARY_STRATIFIED_MULTIFOLD_REPAIR.py`
+2. Metoda:
+   - deterministiczne foldy stratyfikowane po `intervention_id`, `regime`, `theta_bin`,
+   - ten sam frozen kernel, bez retune operatorow sektorowych.
+3. Wynik:
+   - `PRIMARY_STRATIFIED_MULTIFOLD_REPAIR_PASS`,
+   - `readiness=SIGNAL_STABILITY_REPAIRED`,
+   - `pass_count=3/3`.
+4. Kluczowe liczby (primary):
+   - `median_p_corr` spada z `0.06097` (QW-2035) do `0.03948`,
+   - `frac(p_corr<=0.05)` rosnie z `0.4286` do `0.8000`.
+5. Znaczenie:
+   - luka stabilnosci sygnalu primary zostala zamknieta na poziomie protokolu analitycznego.
+
+## 330. Branch-resolution luki beta (QW-2037)
+1. Dodano:
+   - `QW_2037_BETA_DERIVATION_BRANCH_RESOLUTION_AUDIT.py`
+2. Wynik:
+   - `BETA_BRANCH_RESOLUTION_FAIL`,
+   - `readiness=BETA_DERIVATION_GAP_OPEN`,
+   - `pass_count=2/5`.
+3. Interpretacja:
+   - sama procedura branch-resolution (bez zmiany kernela) nie przesuwa beta wystarczajaco do poziomu targetowego.
+4. Znaczenie:
+   - potrzebny kolejny krok: znalezienie derivation-compatible kernela, ktory przejdzie triad.
+
+## 331. Skan refreeze kernela zgodnego z derivacja (QW-2038)
+1. Dodano:
+   - `QW_2038_DERIVATION_COMPATIBLE_KERNEL_REFREEZE_SCAN.py`
+2. Cel:
+   - znalezc kernel z `beta<=1.0`, przechodzacy masa+flavor+GW w tym samym shared-context (bez per-sector retune).
+3. Wynik:
+   - `DERIVATION_COMPATIBLE_KERNEL_REFREEZE_PASS`,
+   - `readiness=KERNEL_REFREEZE_CANDIDATE_AVAILABLE`,
+   - `pass_count=10/6292`.
+4. Najlepsze kandydaty pass obejmuja:
+   - m.in. `beta=0.92` i `beta=0.96` z kompletem flag Stage-C=TRUE.
+5. Znaczenie:
+   - pojawil sie realny kandydat zamrazalny, blizszy derivacji beta.
+
+## 332. Finalny gate dla derivation-compatible refrozen kernela (QW-2039)
+1. Dodano:
+   - `QW_2039_DERIVATION_COMPATIBLE_REFROZEN_KERNEL_GATE.py`
+2. Selekcja:
+   - wybrano kandydat z QW-2038 spelniajacy `beta <= beta_CI95_upper` z QW-2034.
+3. Wynik:
+   - `DERIVATION_COMPATIBLE_REFROZEN_KERNEL_GATE_PASS`,
+   - `readiness=TOE_INTERNAL_GAPS_MINIMIZED_PENDING_EXTERNAL_MULTITEAM_AUDIT`,
+   - `pass_count=4/4`.
+4. Nowy kernel referencyjny:
+   - `omega=0.18575`, `phi=0.16250`, `beta=0.92`, `eta=1.80`,
+   - `beta` miesci sie w CI95 z QW-2034 (`upper=0.92526`).
+5. Znaczenie:
+   - jednoczesnie domkniete: (a) zgodnosc derivacyjna beta oraz (b) Stage-C+blind external na refrozen kernelu.
+   - pozostaje juz tylko krok z natury zewnetrzny: niezalezny multi-team audit.
