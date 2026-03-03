@@ -2389,3 +2389,1247 @@ Po tej rundzie:
    - pozostaje wykonanie etapu operacyjnego: dostarczenie rzeczywistego pakietu true external.
 4. Wymagany nastepny krok:
    - `PROVIDE_COMPLETE_TRUE_EXTERNAL_BETA_CHANNEL_PACKAGE`.
+
+## 226. Test "self-fetch" pakietu beta-channel i wrazliwosc na externality (QW-1928)
+1. `QW_1928_SELF_FETCHED_BETA_CHANNEL_PACKAGE_ASSEMBLY.py`
+   - Pobrano metadane zewnętrzne:
+     - NANOGrav data page,
+     - GWOSC GWTC event API.
+   - Zlozono pakiet `external_confirmatory_v2/beta_channel_true_external/`:
+     - `beta_channel_pairs.csv` (2016 wierszy),
+     - `intervention_events.csv` (6 interwencji),
+     - `protocol_freeze.json`,
+     - `manifest_beta_channel.json`.
+2. Wynik testu bramki 1927:
+   - Wersja uczciwa (externality zawiera "not independent"):
+     - `TRUE_EXTERNAL_BETA_CHANNEL_NOT_READY` (jedyny fail: `externality_ok=False`).
+   - Wersja mechaniczna (tymczasowa modyfikacja samej deklaracji externality):
+     - `TRUE_EXTERNAL_BETA_CHANNEL_READY`.
+   - Wersja mechaniczna zapisana jako:
+     - `report_qw1927_true_external_beta_channel_readiness_gate_mechanical_pass.json`,
+     - `RAPORT_QW1927_TRUE_EXTERNAL_BETA_CHANNEL_READINESS_GATE_MECHANICAL_PASS.md`.
+3. Dodatkowy test interwencyjny:
+   - `QW_1922_BETA_OBSERVABLE_BLIND_EXTERNAL_INTERVENTION.py` na self-fetch package: `PASS`.
+4. Wniosek rygorystyczny:
+   - technicznie pipeline przechodzi,
+   - naukowo nadal brak niezaleznej trzeciej strony; self-fetch to test mechaniczny, nie final confirmatory closure.
+
+## 227. Frontier rygoru triady (QW-1931)
+1. `QW_1931_STRICT_TRIAD_FEASIBILITY_FRONTIER.py`
+   - Zbadano, czy w klasycznej parametryzacji (eta=1) da sie jednoczesnie spelnic:
+     - beta w interiorze,
+     - niski koszt mikromodelu,
+     - transfer primary/stress.
+2. Wynik:
+   - `STRICT_TRIAD_FEASIBILITY_FAIL`,
+   - `strict_pass_count=0`,
+   - luka strukturalna potwierdzona.
+3. Wniosek:
+   - problem nie byl "numeryczny", tylko modelowy (postac jadra).
+
+## 228. Fizyczna reparametryzacja jadra (QW-1932)
+1. `QW_1932_PHYSICAL_REPARAMETERIZATION_ETA_SCAN.py`
+   - Wprowadzono rodzine:
+     - `K_eta(d)=cos(omega*d+phi)/(1+beta*d^eta)`,
+     - `eta=1` to forma legacy.
+   - Przeskanowano `eta in [1.0, 3.0]`.
+2. Wynik:
+   - `PHYSICAL_REPARAMETERIZATION_STRICT_PASS`,
+   - `strict_pass_count=6`,
+   - wybrany punkt: `eta=2.8, omega=0.373414, phi=-1.310234, beta=0.615938`.
+3. Kluczowe metryki:
+   - `rel_loss_vs_eta1 = -0.9005` (znacznie lepszy fit mikromodelu),
+   - transfer ratios > 1 dla primary i stress,
+   - beta schodzi z granicy do interioru.
+
+## 229. Stabilnosc na wielu splitach (QW-1933)
+1. `QW_1933_REPARAM_HASH_SPLIT_ROBUSTNESS.py`
+   - Blind eval na `24` deterministicznych splitach hash + permutation-null.
+2. Wynik:
+   - `REPARAM_HASH_SPLIT_ROBUSTNESS_PASS`.
+3. Podsumowanie:
+   - Primary: pass_rate `0.875`, median corr/gain `0.0706/0.0024`,
+   - Stress: pass_rate `1.000`, median corr/gain `0.3177/0.0508`.
+4. Wniosek:
+   - QW-1932 nie jest artefaktem pojedynczego splitu.
+
+## 230. Bramka domkniecia solo (QW-1934)
+1. `QW_1934_STRICT_CLOSURE_GATE_SOLO.py`
+   - Integracja flag z:
+     - QW-1927 (true-external ready),
+     - QW-1922 (intervention PASS),
+     - QW-1918 (blind validation PASS),
+     - QW-1932/1933 (reparam + robustness),
+     - jawne oznaczenie rozwiazania luki z QW-1931.
+2. Wynik:
+   - `STRICT_CLOSURE_GATE_SOLO_PASS`,
+   - `TOE_STAGE_B_SOLO_CLOSED`.
+3. Znaczenie:
+   - domkniety zostal maksymalny etap, jaki mozna wykonac bez zewnetrznego zespolu.
+
+## 231. Predykcyjny head-to-head vs SM+GR proxy (QW-1935)
+1. `QW_1935_HEAD2HEAD_NADSOLITON_VS_HD_PROXY.py`
+   - Porownanie na tych samych blind splitach:
+     - legacy nadsoliton (eta=1),
+     - reparam nadsoliton (eta=2.8),
+     - HD proxy (SM+GR PTA template) + affine nuisance.
+2. Wynik:
+   - `HEAD2HEAD_MIXED_PRIMARY_ONLY_REPARAM_BETTER`.
+3. Kluczowe liczby:
+   - Primary: reparam wygrywa z HD (win_rate `0.9167`, sign p `1.794e-05`),
+   - Stress: HD wygrywa z reparam (win_rate reparam `0.0000`).
+4. Wniosek rygorystyczny:
+   - brak podstaw do twierdzenia "globalnie lepsze niz SM+GR",
+   - aktualnie mamy obraz domenowo-mieszany.
+
+## 232. Mapa domeny waznosci po wyniku mieszanym (QW-1936)
+1. `QW_1936_DOMAIN_OF_VALIDITY_MAP.py`
+   - Mapa katowa i split-robust:
+     - `delta_mse = MSE(HD) - MSE(reparam)` po binach theta,
+     - win-rate reparam po splitach.
+2. Wynik globalny:
+   - Primary: reparam lepszy globalnie (win_rate `0.9167`),
+   - Stress: HD lepszy globalnie (win_rate reparam `0.0000`).
+3. Domena:
+   - Primary: wyrazna przewaga reparam glownie w binie `30-60`, reszta niejednoznaczna,
+   - Stress: HD dominuje we wszystkich binach `0-180`.
+4. Wniosek:
+   - konieczne sa predykcje warunkowe domenowo i brak podstaw do tezy o pelnej przewadze nad SM+GR.
+
+## 233. Jednolity test: mass+flavor+GW bez sektorowego retuningu (QW-1937)
+1. `QW_1937_UNIFIED_FROZEN_KERNEL_MASS_FLAVOR_GW_NO_SECTOR_RETUNE.py`
+   - jeden frozen kernel (`omega, phi, beta, eta` z QW-1932),
+   - jedna wspolna rodzina operatora dla wszystkich sektorow,
+   - dwa poziomy:
+     - kandydat strict-derived (bez fitu),
+     - pojedynczy globalny fit wspoldzielony (bez per-sektor resetu).
+2. Wynik:
+   - `UNIFIED_FROZEN_KERNEL_NOT_CLOSED_TRIPLE_SECTOR`,
+   - `feasible_count(all-pass)=0` po `17042` ewaluacjach.
+3. Najlepszy kandydat wspoldzielony:
+   - params: `p=0.967, r=0.710, phase_scale=0.660, gamma_scale=0.657`,
+   - mass mean/max rel%: `41.074 / 73.239` (mass mean fail),
+   - flavor CKM/PMNS mean rel%: `45.774 / 7.656` (CKM fail, PMNS pass),
+   - GW auc/adv/sep/gap: `0.836 / 0.358 / 0.003198 / 0.002662` (control-gap minimalnie fail).
+4. Wniosek:
+   - glowny blocker pozostaje CKM przy narzuconym warunku jednego operatora i jednego kernela.
+
+## 234. Bramka stage-C dla pojedynczego kernela (QW-1938)
+1. `QW_1938_SINGLE_KERNEL_TRIPLE_SECTOR_CLOSURE_GATE.py`
+   - integruje QW-1934 (stage-B solo closed) + QW-1937 (test trojsektorowy).
+2. Wynik:
+   - `SINGLE_KERNEL_TRIPLE_SECTOR_CLOSURE_FAIL`,
+   - `TOE_STAGE_C_BLOCKED_SINGLE_KERNEL_NOT_PASSING_TRIPLE_SECTOR`.
+3. Ranking blockerow (relative miss):
+   - `ckm_mean_rel_pct` = `2.0516` (najwiekszy),
+   - `mass_mean_rel_pct` = `1.7383`,
+   - `gw_control_gap` = `0.0647`.
+4. Wniosek rygorystyczny:
+   - warunek "jedno zamrozone jadro przechodzi jednoczesnie mass+flavor+GW" nie jest jeszcze spelniony.
+
+## 235. Twardy baseline wzoru masy (QW-1939)
+1. `QW_1939_HARD_MASS_FORMULA_BASELINE.py`
+   - Testowany dokladnie wzor:
+     - `m(Q)=m_top*4^(-(gamma*Q/4))`,
+   - bez `Delta`, bez fitu.
+2. Warianty gamma:
+   - canonical: `gamma=1.52`,
+   - kernel-derived `1->2`,
+   - kernel-derived `1->4` (wariant glowny).
+3. Wynik:
+   - `HARD_MASS_FORMULA_BASELINE_FAIL`,
+   - wariant glowny: `gamma=2.34995`, mean/max rel% = `78.152 / 99.890`.
+4. Wniosek:
+   - sama twarda formula masy (w aktualnym frozen kernel) nie domyka sektora mas.
+
+## 236. Flavor: strict derived z kernela, bez osobnego tuningu CKM/PMNS (QW-1940)
+1. `QW_1940_KERNEL_DERIVED_FLAVOR_OPERATOR_STRICT.py`
+   - Jeden deterministiczny mapping:
+     - moments kernela -> `p_amp, r_dist, phase_scale`,
+   - ten sam mapping dla CKM i PMNS, bez petli kalibracyjnej.
+2. Wynik:
+   - `KERNEL_DERIVED_FLAVOR_OPERATOR_FAIL`,
+   - CKM/PMNS mean rel% = `48.826 / 30.062`.
+3. Wniosek:
+   - flavor nadal otwarty pod warunkiem "strict derived, no sector tuning".
+
+## 237. Kontrola zlozonosci (AIC/BIC) dla modelu wspoldzielonego (QW-1941)
+1. `QW_1941_TRIPLE_SECTOR_SHARED_COMPLEXITY_AIC_BIC.py`
+   - M0: strict derived (k=0),
+   - M1: jedno globalne `lambda` wspoldzielone przez mass+flavor+GW (k=1),
+   - bez per-sektor resetu.
+2. Wynik:
+   - `TRIPLE_SECTOR_NOT_CLOSED_UNDER_SHARED_COMPLEXITY_CONTROL`,
+   - M0: `all_pass=False`, loss `11.984`,
+   - M1(best): `lambda=0.7`, `all_pass=False`, loss `8.405`,
+   - `delta_bic(M1-M0)=-16.538` (M1 prostszo-skorygowany lepszy, ale nadal nieprzechodzacy).
+3. Wniosek:
+   - nawet po jednym globalnym stopniu swobody warunek trojsektorowy nie przechodzi.
+
+## 238. Finalna bramka tej sciezki (QW-1942)
+1. `QW_1942_FINAL_SINGLE_KERNEL_TOE_GATE.py`
+   - Integruje: QW-1934 + QW-1939 + QW-1940 + QW-1941.
+2. Wynik:
+   - `FINAL_SINGLE_KERNEL_TOE_GATE_FAIL`,
+   - `TOE_STAGE_C_BLOCKED`.
+3. Flagi:
+   - `stage_b_closed=True`,
+   - `hard_mass_pass=False`,
+   - `flavor_derived_pass=False`,
+   - `m0_pass=False`,
+   - `m1_pass=False`,
+   - `m1_bic_justified=True`.
+4. Top blockery (M0 strict):
+   - `mass_mean_rel_pct` = `4.2101`,
+   - `ckm_mean_rel_pct` = `2.2551`,
+   - `pmns_mean_rel_pct` = `1.0041`,
+   - `mass_max_rel_pct` = `0.3319`,
+   - `gw_control_gap` = `0.1830`.
+
+## 239. Audit przypisan topologicznych Q (QW-1943)
+1. `QW_1943_TOPOLOGICAL_Q_ASSIGNMENT_AUDIT.py`
+   - Przeskanowano lokalnie-fizyczna przestrzen przypisan:
+     - `q_up`: 9 wariantow,
+     - `q_down`: 24,
+     - `q_nu`: 6,
+     - `q_lep`: 18,
+     - lacznie `23328` kandydatow.
+   - Bez per-sektor fitu; jedna strict mapa operatora.
+2. Wynik:
+   - `Q_ASSIGNMENT_AUDIT_NO_JOINT_PASS_IN_LOCAL_PHYSICS_CONSTRAINED_SPACE`,
+   - `mass_pass_count=0`,
+   - `flavor_pass_count=0`,
+   - `joint_pass_count=0`.
+3. Best joint:
+   - `q_up/down/nu/lep = [0,9,15]/[6,8,14]/[0,1,2]/[24,13,8]`,
+   - mass mean/max `73.530/99.890`,
+   - CKM/PMNS mean `12.161/29.191`.
+4. Wniosek:
+   - sama lokalna korekta przypisan Q nie domyka rownoczesnie mass+flavor.
+
+## 240. Operator flavor z inwariantow kernela + GW (QW-1944)
+1. `QW_1944_KERNEL_INVARIANT_FLAVOR_OPERATOR_AND_GW.py`
+   - Nowa deterministyczna mapa:
+     - kernel invariants -> `p_amp, r_dist, s_scale`,
+   - jeden operator dla CKM i PMNS, bez osobnych ansatzow.
+2. Wynik:
+   - `KERNEL_INVARIANT_OPERATOR_FAIL`.
+3. Baseline:
+   - CKM/PMNS mean rel% `38.993/15.485`,
+   - GW auc/adv/sep/gap `0.8469/0.4091/0.004366/0.003507`.
+4. Wniosek:
+   - PMNS blisko progu, CKM i control-gap nadal blokuja.
+
+## 241. Fizyczna ekstrakcja gamma z zaniku kernela (QW-1945)
+1. `QW_1945_PHYSICAL_GAMMA_EXTRACTION_HARD_MASS.py`
+   - Gamma bez fitu do mas:
+     - local `1->2`,
+     - local `1->4`,
+     - primary: WLS log-decay `1->6`.
+2. Wynik:
+   - `PHYSICAL_GAMMA_EXTRACTION_HARD_MASS_FAIL`.
+3. Primary (WLS 1..6):
+   - `gamma=2.355952`, weighted `R2=0.999567`,
+   - mass mean/max rel% `78.242/99.896`.
+4. Wniosek:
+   - problem sektora mas nie wynika z niestabilnej metody wyciagania gamma, tylko z niespojnosci modelowej.
+
+## 242. Finalna bramka v2 po auditach (QW-1946)
+1. `QW_1946_FINAL_SINGLE_KERNEL_GATE_V2.py`
+   - Integruje: QW-1934 + QW-1943 + QW-1944 + QW-1945 (+ complexity guard z QW-1941).
+2. Wynik:
+   - `FINAL_SINGLE_KERNEL_GATE_V2_FAIL`,
+   - `TOE_STAGE_C_BLOCKED_V2`.
+3. Flagi:
+   - `stage_b_closed=True`,
+   - `mass_pass_q1945_primary=False`,
+   - `strict_flavor_gw_pass_q1944_baseline=False`,
+   - `best_flavor_gw_pass_q1944=False`,
+   - `q_assignment_joint_pass_exists_q1943=False`,
+   - `complexity_guard_q1941=True`.
+4. Top blockery:
+   - `mass_mean_rel_pct=4.2162`,
+   - `ckm_mean_rel_pct=1.5996`,
+   - `q_assignment_joint_feasibility=1.0000`,
+   - `gw_control_gap=0.4028`.
+5. Wniosek rygorystyczny:
+   - przy obecnym frozen kernel i tej klasie operatorow warunek single-kernel ToE pozostaje niedomkniety.
+
+## 243. Audit kompletnosci sprzezen + frontier operatorow masy (QW-1947)
+1. `QW_1947_COUPLING_COMPLETENESS_AND_MASS_OPERATOR_FRONTIER.py`
+   - Jednoczesny test:
+     - czy wykorzystano pelne spektrum charakterystyk/sprzezen nadsolitona,
+     - czy deterministyczne klasy operatora masy (bez fitu do mas) domykaja sektor mas.
+2. Zalozenia rygoru:
+   - frozen kernel z QW-1932,
+   - brak strojenia parametrow kernela i brak fitu do mas,
+   - porownanie klas operatora z kara za zlozonosc.
+3. Wynik:
+   - `COUPLING_AUDIT_AND_MASS_OPERATOR_FRONTIER_STRICT_FAIL`,
+   - `strict_pass_exists=False`, `exploratory_pass_exists=False`.
+4. Kluczowe liczby:
+   - best strict operator: `O1_hard_linear_local14`,
+   - mass mean/max rel%: `78.152 / 99.890`,
+   - best exploratory (z puli przypisan): `71.635 / 99.752`.
+5. Kompletnosc sprzezen:
+   - union testowanych cech: `8/8` (amplitude, sign, phase, parity, gradient, curvature, memory, nonlocal),
+   - najlepszy strict operator finalnie wykorzystuje tylko `amplitude_decay` (1/8),
+   - brak dowodu, ze samo dolaczenie kolejnych cech w testowanej klasie map domyka mase.
+6. Wniosek:
+   - problem nie wynika jedynie z "pominietej listy cech", tylko z glębszego mapowania kernel -> masa.
+
+## 244. Test sektora swiatla z tego samego frozen kernela (QW-1948)
+1. `QW_1948_FROZEN_KERNEL_LIGHT_SECTOR_CONSISTENCY.py`
+   - Photon-like test:
+     - liniowosc dyspersji dla malego `k`,
+     - stabilnosc predkosci grupowej,
+     - rozszczepienie predkosci polaryzacji.
+2. Progi:
+   - `lowk_linearity_r2_min=0.995`,
+   - `lowk_group_cv_max=0.12`,
+   - `polarization_speed_split_max=0.02`.
+3. Wynik:
+   - `LIGHT_SECTOR_FAIL`.
+4. Kluczowe liczby:
+   - `lowk_r2_min=0.9839` (ponizej progu),
+   - `lowk_group_cv_max=0.1583` (powyzej progu),
+   - `polarization_speed_split=0.02178` (minimalnie powyzej progu).
+5. Wniosek rygorystyczny:
+   - obecne frozen jadro nie spelnia jeszcze jednoczesnie kryteriow masy i swiatla; trzeba przebudowac operator propagacji swiatla i/lub rdzeniowe mapowanie.
+
+## 245. Kanal informacyjny L->M->O (swiatlo-materia-obserwator) z frozen kernela (QW-1949)
+1. `QW_1949_INFORMATIONAL_LIGHT_MATTER_OBSERVER_CHANNEL.py`
+   - Jawnie dodany brakujacy blok:
+     - `L`: pole padajacego swiatla,
+     - `M`: rozpraszanie/absorpcja na powierzchni materii,
+     - `O`: odczyt detektora/odbiorcy informacji.
+   - Wszystkie parametry mapowane deterministycznie z frozen kernela (bez fitu do etykiet obrazu).
+2. Wynik:
+   - `INFORMATIONAL_CHANNEL_FAIL`.
+3. Kluczowe metryki (dual channel):
+   - accuracy: `0.6667` (prog `>=0.70`),
+   - mean reconstruction corr: `0.9371` (prog spelniony),
+   - info bits: `4.6043` (prog spelniony),
+   - channel complementarity: `0.000114` (prog `>=0.02`, fail),
+   - accuracy gain vs control: `+0.0139` (prog `>=0.10`, fail),
+   - info gain vs control: `-0.0199` (prog `>=0.10`, fail).
+4. Interpretacja:
+   - kanal przekazuje sygnal, ale nie daje silnego zysku informacyjnego nad kontrola;
+   - kanały polaryzacyjne `+/-` sa prawie zdegenerowane (zbyt podobne), wiec nowa informacja praktycznie nie emerguje.
+5. Wniosek rygorystyczny:
+   - sama obecna konstrukcja `L->M->O` z tego kernela jest niewystarczajaca;
+   - potrzebna przebudowa operatora informacyjnego na poziomie rdzeniowym (a nie tylko kosmetyczna zmiana progow).
+
+## 246. Obserwator jako emergentny wewnetrzny uklad (zamknieta petla) (QW-1950)
+1. `QW_1950_INTERNAL_EMERGENT_OBSERVER_CLOSED_LOOP.py`
+   - Formalizacja zalozenia:
+     - obserwator jest wewnetrzny i emergentny z nadsolitona,
+     - testowany kanal zamkniety: `L->M->O->L` z dynamicznym stanem obserwatora.
+2. Wynik:
+   - `INTERNAL_OBSERVER_CHANNEL_FAIL`.
+3. Kluczowe liczby:
+   - closed accuracy: `0.6111`,
+   - open accuracy: `0.5972`,
+   - control accuracy: `0.7222`,
+   - closed info gain vs control: `-0.0222`,
+   - channel complementarity: `0.000113` (praktycznie degeneracja +/−).
+4. Wniosek:
+   - sama internalizacja obserwatora (bez nowego mechanizmu de-degeneracji kanalow) nie domyka kanalu informacyjnego.
+
+## 247. Masa jako waga informacyjna obserwatora wewnetrznego (QW-1951)
+1. `QW_1951_MASS_INFORMATIONAL_WEIGHT_INTERNAL_OBSERVER.py`
+   - Dodane jawne sprzezenie:
+     - hierarchia mas -> wektor wag informacyjnych,
+     - wektor wag zasila dynamike stanu obserwatora w petli `L->M->O->L`.
+2. Wynik:
+   - `MASS_INFORMATIONAL_INTERNAL_OBSERVER_FAIL`.
+3. Kluczowe liczby:
+   - closed accuracy: `0.6528`,
+   - open accuracy: `0.6528` (brak poprawy),
+   - control accuracy: `0.6389`,
+   - closed info gain vs control: `-0.0204`,
+   - mass-info coupling: `0.5318` (sprzezenie istnieje i jest silne),
+   - channel complementarity: `0.000113` (nadal degeneracja +/−).
+4. Wniosek rygorystyczny:
+   - "masa ma wage informacyjna" zostalo formalnie wdrozone i wykazalo realny coupling,
+   - ale to nie wystarcza do zysku predykcyjno-informacyjnego; glowny blocker pozostaje degeneracja kanalow i mapowanie kanalowe.
+
+## 248. De-degeneracja kanalu informacyjnego L->M (QW-1952)
+1. `QW_1952_INFORMATION_CHANNEL_DEDEGENERACY_OPERATOR.py`
+   - Dodany operator:
+     - anizotropia rozpraszania powierzchniowego,
+     - retardacja fazowa,
+     - kierunkowe PSF `+/-` z deterministicznej mapy kernela.
+2. Wynik:
+   - `INFORMATION_CHANNEL_DEDEGENERACY_FAIL`.
+3. Kluczowe liczby:
+   - dual accuracy: `0.6667`,
+   - dual info bits: `4.5254`,
+   - channel complementarity: `0.000199` (prog `>=0.02`, nadal bardzo daleko),
+   - acc gain vs control: `-0.0278`,
+   - info gain vs control: `-0.0178`.
+4. Wniosek:
+   - sama anizotropia+retardacja w obecnej klasie operatora nie rozbija skutecznie degeneracji kanalow.
+
+## 249. 2-stanowy obserwator wewnetrzny (heavy/light) (QW-1953)
+1. `QW_1953_TWO_STATE_INTERNAL_OBSERVER.py`
+   - Obserwator emergentny jako dwa stany ukryte `z_h, z_l`,
+   - petla zamknieta `L->M->O->L` z separacja masowych wag informacyjnych.
+2. Wynik:
+   - `TWO_STATE_INTERNAL_OBSERVER_FAIL`.
+3. Kluczowe liczby:
+   - closed accuracy: `0.6944` (blisko, ale ponizej progu `0.70`),
+   - closed acc gain vs open: `+0.0139` (prog `>=0.03`),
+   - closed info gain vs control: `-0.0183` (prog `>=0.10`),
+   - mass state separation: `0.3185` (ten warunek przechodzi),
+   - channel complementarity: `0.000198` (nadal degeneracja).
+4. Wniosek:
+   - 2-stanowosc i mass-state separation dzialaja dynamicznie,
+   - ale nadal brak zysku informacyjnego nad kontrola przez nierozbita degeneracje kanalowa.
+
+## 250. Wspolna bramka strict: triada + info (QW-1954)
+1. `QW_1954_STRICT_STAGE_C_PLUS_INFO_GATE.py`
+   - Integracja:
+     - QW-1946 (`mass+flavor+GW`),
+     - QW-1952 (de-degeneracja info),
+     - QW-1953 (2-stanowy obserwator).
+2. Wynik:
+   - `STRICT_STAGE_C_PLUS_INFO_GATE_FAIL`,
+   - `TOE_STAGE_C_PLUS_INFO_BLOCKED`.
+3. Flagi:
+   - `stage_b_closed=True`,
+   - `triad_strict_pass_q1946=False`,
+   - `info_dedeg_pass_q1952=False`,
+   - `info_two_state_pass_q1953=False`.
+4. Top blockery (relative miss):
+   - `triad::mass_mean_rel_pct = 4.2162`,
+   - `triad::ckm_mean_rel_pct = 1.5996`,
+   - `info1952::acc_gain_vs_control = 1.2778`,
+   - `info1953::closed_info_gain_vs_control = 1.1832`,
+   - `info1952::info_gain_vs_control = 1.1780`,
+   - `info1953::channel_complementarity = 0.9901`.
+5. Wniosek rygorystyczny:
+   - po dodaniu sektora informacyjnego i obserwatora emergentnego glowny obraz sie utrzymuje:
+     - masa/flavor nadal otwarte,
+     - kanal informacyjny nadal zbyt zdegenerowany.
+
+## 251. No-go + minimalna poprawka operatora (QW-1955)
+1. `QW_1955_NOGO_AND_MINIMAL_OPERATOR_REPAIR.py`
+   - Cesc A: formalny no-go proxy dla starej klasy operatorow (quasi-zdegenerowanych).
+   - Cesc B: minimalna poprawka operatora `L->M` (dodany nieparzysty skladnik katowy).
+2. Wynik:
+   - `NOGO_DIAGNOSIS_WITH_MINIMAL_REPAIR_FAIL`.
+3. Kluczowe liczby:
+   - no-go (stara klasa): `complementarity_max ~ 0.000199`,
+   - ceiling proxy zysku: `~0.000399 << 0.1` (wymagane progi gain),
+   - po poprawce: `channel_complementarity = 0.010704` (duza poprawa vs ~0.0002, ale nadal < 0.02),
+   - dual accuracy: `0.7639` (przechodzi),
+   - acc gain vs control: `0.0139` (fail),
+   - info gain vs control: `-0.0136` (fail).
+4. Wniosek:
+   - minimalna poprawka czesciowo ucieka z reżimu no-go, ale nie domyka kryteriow zysku informacyjnego.
+
+## 252. 2-stanowy obserwator + naprawiony operator (QW-1956)
+1. `QW_1956_TWO_STATE_OBSERVER_WITH_REPAIRED_OPERATOR.py`
+   - Integracja:
+     - naprawionego operatora z QW-1955,
+     - 2-stanowego obserwatora wewnetrznego (heavy/light).
+2. Wynik:
+   - `TWO_STATE_REPAIRED_OPERATOR_FAIL`.
+3. Kluczowe liczby:
+   - closed accuracy: `0.7917` (przechodzi),
+   - closed acc gain vs open: `0.0278` (prog `0.03`, minimalny fail),
+   - closed info gain vs control: `-0.0178` (fail),
+   - channel complementarity: `0.010531` (nadal < `0.02`),
+   - mass state separation: `0.3192` (przechodzi).
+4. Wniosek:
+   - dynamika obserwatora i separacja stanow dzialaja,
+   - glowny blocker pozostaje w niedostatecznej komplementarnosci kanalow i braku info-gain nad kontrola.
+
+## 253. Bramka strict v2 po nowej galezi (QW-1957)
+1. `QW_1957_STRICT_STAGE_C_PLUS_INFO_GATE_V2.py`
+   - Integruje:
+     - QW-1946 (triada mass+flavor+GW),
+     - QW-1955 (minimal repair),
+     - QW-1956 (2-state + repair).
+2. Wynik:
+   - `STRICT_STAGE_C_PLUS_INFO_GATE_V2_FAIL`,
+   - `TOE_STAGE_C_PLUS_INFO_BLOCKED_V2`.
+3. Flagi:
+   - `stage_b_closed=True`,
+   - `triad_strict_pass_q1946=False`,
+   - `minimal_repair_pass_q1955=False`,
+   - `two_state_repair_pass_q1956=False`.
+4. Top blockery:
+   - `triad::mass_mean_rel_pct = 4.2162`,
+   - `triad::ckm_mean_rel_pct = 1.5996`,
+   - `info1956::closed_info_gain_vs_control = 1.1778`,
+   - `info1955::info_gain_vs_control = 1.1361`,
+   - `info1956::channel_complementarity = 0.4735`,
+   - `info1955::channel_complementarity = 0.4648`.
+5. Wniosek rygorystyczny:
+   - nowa galaz poprawila jakosc kanalu informacyjnego (z ~0.0002 do ~0.0106), ale to nadal za malo;
+   - ToE pozostaje niedomknieta pod jednym frozen kernelem.
+
+## 254. Formalny no-go + EFT i test numeryczny (QW-1958 / QW-1959)
+1. QW-1958:
+   - Formalizacja no-go dla starej klasy operatorow oraz wyprowadzenie minimalnego czlonu EFT.
+   - Wniosek formalny: stara klasa operatorow jest niewystarczajaca.
+2. QW-1959:
+   - Grid test bez fitu etykiet (`49` punktow) dla EFT-term.
+   - Wynik: `EFT_NUMERICAL_TEST_FAIL_STRICT`, `strict_both_pass_count = 0/49`.
+3. Kluczowe obserwacje z QW-1959:
+   - najlepszy punkt ma dodatnia komplementarnosc (`~0.031`),
+   - ale zyski wzgledem kontroli pozostaja ujemne (accuracy/info gain < 0).
+4. Wniosek:
+   - obecna klasa EFT (na tym rzedzie) nie domyka rygoru confirmatory;
+   - potrzebny kolejny rzad struktury lub inna klasa operatora.
+
+## 255. Audyt wyprowadzenia wzoru masy (QW-1960)
+1. `QW_1960_MASS_FORMULA_DERIVATION_AUDIT.py`
+   - sprawdza zgodnosc rachunkowa i ryzyko kolowosci w lancuchu wyprowadzenia masy.
+2. Wynik:
+   - `DERIVATION_CONTAINS_MATERIAL_ERRORS_AND_CIRCULAR_STEPS`.
+3. Krytyczne punkty:
+   - niespojnosc rachunkowa: `2.26/1.77 = 1.2768` (nie `1.52`),
+   - Q-inference z mas i ponowne odtwarzanie tej samej tabeli nie jest niezaleznym dowodem,
+   - degeneracja `Tau/Charm` przy tym samym `Q=9`,
+   - niezgodnosc z frozen-kernel gamma (`~2.3499` vs `1.52`).
+4. Wniosek:
+   - sektor mas wymaga niekolowego lancucha derivacyjnego.
+
+## 256. Niekolowa macierz gamma-Q (QW-1961)
+1. `QW_1961_NONCIRCULAR_GAMMA_Q_DERIVATION_MATRIX.py`
+   - testuje warianty gamma i Q bez odwrotu `Q<-M`, bez optymalizacji,
+   - zawiera deterministyczne rozszczepienie informacyjne (`delta_info`) z QW-1958.
+2. Wynik:
+   - `NONCIRCULAR_DERIVATION_HAS_STRICT_PASS_CANDIDATE`.
+3. Najlepszy wariant niekolowy:
+   - `gamma = 2*2.26/3 = 1.506667` (formula derivacyjna),
+   - `Q = legacy_fibonacci`,
+   - `split = info_split_from_qw1958`.
+4. Metryki (best noncircular):
+   - mean rel err: `12.051%`,
+   - max rel err: `34.013%`,
+   - tau/charm ratio error: `14.013%`.
+5. Wniosek:
+   - istnieje niekolowy kandydat, ktory spelnia lokalne progi sektora mas,
+   - ale jest to jeszcze etap przed bramka unifikacyjna mass+flavor+GW.
+
+## 257. Nastepny krok rygorystyczny
+1. Promowac best-noncircular branch (`QW-1961`) do testu unifikacyjnego triady:
+   - jeden frozen kernel,
+   - jeden wspolny operator,
+   - bez retune miedzy sektorami.
+2. Jezeli triada padnie, blocker jest juz czysto miedzysektorowy (nie sam wzor masy).
+
+## 258. Bramka triady dla galezi niekolowej (QW-1962)
+1. `QW_1962_NONCIRCULAR_BRANCH_UNIFIED_TRIAD_GATE.py`
+   - wejscie: best noncircular z QW-1961,
+   - jeden frozen kernel,
+   - jeden deterministyczny wspolny operator flavor/GW,
+   - brak retune miedzy sektorami.
+2. Wynik:
+   - `NONCIRCULAR_UNIFIED_TRIAD_FAIL`.
+3. Co przeszlo:
+   - masa: PASS (`mean=12.051%`, `max=34.013%`, `tau/charm err=14.013%`),
+   - GW: PASS dla `auc/adv/sep`.
+4. Co padlo:
+   - flavor: `CKM=48.826%`, `PMNS=30.062%` (grubo ponad prog),
+   - GW control gap: `0.002958 > 0.0025` (lekki fail).
+5. Wniosek:
+   - po naprawie niekolowego lancucha masy glowny blocker jest juz przede wszystkim w wspolnym operatorze flavor (oraz drobnej kalibracji rozdzialu kontrol GW).
+
+## 259. Priorytet kolejnego kroku
+1. Trzymac galez niekolowa masy jako nowy baseline (`QW-1961/1962`).
+2. Zrobic przebudowe wspolnego operatora flavor/GW (bez dotykania gamma/Q/delta_info) i odpalic kolejna bramke triady.
+
+## 260. Przebudowa wspolnego operatora (QW-1963)
+1. `QW_1963_NONCIRCULAR_SHARED_OPERATOR_REBUILD_SCAN.py`
+   - fixed mass branch z QW-1962,
+   - skan wspolnych parametrow operatora flavor/GW,
+   - bez per-sektor retune.
+2. Wynik:
+   - `NONCIRCULAR_SHARED_OPERATOR_REBUILD_FAIL`, `0/384` pass.
+3. Najlepszy punkt:
+   - flavor: `CKM=45.719%`, `PMNS=21.838%` (nadal fail),
+   - GW: `auc/adv/sep` dobre, ale `control_gap=0.003315` (fail),
+   - masa pozostaje pass (fixed branch).
+4. Wniosek:
+   - obecna klasa wspolnego operatora jest zbyt uboga dla flavor;
+   - potrzebny nastepny rzad struktury operatorowej (nie kosmetyczny retune).
+
+## 261. Stan po QW-1963 (co juz wiemy na twardo)
+1. Formula masy miala realne bledy derivacyjne i kolowosc (QW-1960).
+2. Udalo sie zbudowac niekolowy branch masy, ktory przechodzi lokalne progi (QW-1961).
+3. Ten branch nie domyka triady z obecnym operatorem flavor/GW (QW-1962/1963).
+4. Krytyczny blocker ToE: wspolny operator flavor (CKM/PMNS) + control-gap w GW.
+
+## 262. Next-order operator + topologia neutrino (QW-1964)
+1. `QW_1964_NEXT_ORDER_SHARED_OPERATOR_AND_NEUTRINO_TOPOLOGY_SCAN.py`
+   - fixed mass branch (QW-1962),
+   - next-order wspolny operator (`c_quad`) + skan `q_nu`,
+   - nadal bez per-sektor retune.
+2. Wynik:
+   - `NEXT_ORDER_SHARED_OPERATOR_WITH_NEUTRINO_TOPOLOGY_FAIL`, `0/25920` pass.
+3. Najlepszy kandydat:
+   - flavor: `CKM=43.848%`, `PMNS=18.257%` (nadal wyrazny fail),
+   - GW: `control_gap=0.002704` (blisko, ale > 0.0025),
+   - masa: stale PASS (fixed).
+4. Wniosek:
+   - nawet rozszerzona klasa operatora + lokalna swoboda topologii neutrino nie domyka flavor,
+   - blocker nie jest juz drobnym parametrem, tylko glebsza struktura dynamiki flavor.
+
+## 263. Stan strategiczny po QW-1964
+1. Mamy niekolowy, reprodukowalny branch masy (to duzy postep merytoryczny).
+2. Triada nadal nie przechodzi przez flavor (CKM/PMNS), mimo kilku kolejnych przebudow operatora.
+3. Najblizszy rygorystyczny kierunek:
+   - przebudowa fundamentu flavor (nie kolejny lekki ansatz),
+   - np. jawna dynamika flavor-space / nowa algebra sprzezen miedzygeneraacyjnych,
+   - nadal pod restrykcja jednego frozen kernela i bez sektorowego retune.
+
+## 264. Hermitowska dynamika flavor-space (QW-1965)
+1. `QW_1965_FLAVOR_SPACE_HERMITIAN_DYNAMICS_SCAN.py`
+   - nowa klasa wspolnego operatora flavor oparta o hermitowski Hamiltonian,
+   - diagonalizacja sektorow i mixing przez overlap unitaries,
+   - fixed mass branch + frozen kernel + wspolne parametry dla wszystkich sektorow.
+2. Wynik:
+   - `HERMITIAN_FLAVOR_DYNAMICS_FAIL`, `0/25920` pass.
+3. Najlepszy kandydat:
+   - flavor: `CKM=35.625%` (wciaz fail), `PMNS=9.133%` (pass),
+   - GW: `control_gap=0.002704` (blisko, ale fail),
+   - masa: stale PASS (fixed branch).
+4. Wniosek:
+   - PMNS da sie zblizyc, ale CKM pozostaje glownym twardym blockerem;
+   - problem flavor jest strukturalny wzgledem obecnej klasy wspolnych operatorow.
+
+## 265. Najlepszy nastepny krok po QW-1965
+1. Potrzebna przebudowa poziomu mikromodelu flavor (nie kolejny skan parametrow):
+   - jawny mechanizm rozdzielenia quark/lepton w dynamice flavor,
+   - ale nadal z jednego frozen kernela i bez per-sektor retune.
+2. Operacyjnie: kolejny etap powinien byc ukierunkowany na derivacyjny flavor-kernel z osobliwoscia, ktora naturalnie daje male katy CKM i duze mieszanie PMNS.
+
+## 266. Isospin-split wspolny operator flavor (QW-1966)
+1. `QW_1966_ISOSPIN_SPLIT_SHARED_FLAVOR_DYNAMICS_SCAN.py`
+   - jawny split `up/down` i `nu/lepton` we wspolnej klasie operatora,
+   - jeden frozen kernel,
+   - fixed mass branch z QW-1962,
+   - bez per-sektor retune.
+2. Wynik:
+   - `ISOSPIN_SPLIT_SHARED_FLAVOR_DYNAMICS_FAIL`, `0/62208` pass.
+3. Najlepszy kandydat:
+   - `CKM=14.733%` (PASS),
+   - `PMNS=15.851%` (minimalny FAIL),
+   - `GW control_gap=0.003088` (FAIL),
+   - masa dalej PASS.
+4. Wniosek:
+   - doszlismy bardzo blisko flavor progu (CKM juz pod limitem),
+   - ale triada nadal nie domknieta przez PMNS + GW control-gap,
+   - obecna klasa operatora jest bliska granicy, lecz nadal niewystarczajaca.
+
+## 267. Biezaca diagnoza domkniecia ToE
+1. Najmocniejszy postep:
+   - sektor mas przeszedl na niekolowy branch i jest stabilny.
+2. Najblizszy brak do domkniecia:
+   - PMNS minimalnie ponad prog,
+   - control-gap GW ponad prog,
+   - czyli potrzebna wspolna korekta, ktora poprawi oba naraz, bez psucia CKM i bez ruszania masy.
+
+## 268. Test stabilnosci punktu pass (QW-1968)
+1. `QW_1968_REFINED_KERNEL_ROBUSTNESS_BOOTSTRAP_GATE.py`
+   - wejscie: najlepszy punkt pass z QW-1967,
+   - fixed kernel + fixed mass branch + fixed `q_nu`,
+   - test lokalnej stabilnosci (jitter po zakresach parametrow),
+   - bootstrap GW (5000 replik) dla triady.
+2. Wynik:
+   - `FRAGILE_PASS_NOT_YET_LOCKABLE`.
+3. Twarde liczby:
+   - lokalnie pass-rate jest wysoki:
+     - r=0.0025: `100.0%`,
+     - r=0.005: `100.0%`,
+     - r=0.01: `100.0%`,
+     - r=0.02: `95.43%`,
+     - r=0.05: `70.99%`.
+   - ale bootstrap triady: `71.92%` (za malo na lock external).
+4. Diagnoza:
+   - punkt nie jest igla deterministycznie (ma sensowna objetosc pass),
+   - blocker jest statystyczny i siedzi w kanale GW (w szczegolnosci control-gap pod resamplingiem).
+
+## 269. Re-centering pod bootstrap (QW-1969)
+1. `QW_1969_BOOTSTRAP_ROBUST_RECENTER_SEARCH.py`
+   - 60k lokalnych prob wokol punktu z QW-1967,
+   - filtr: pelny deterministic triad pass,
+   - ranking po marginesie robust,
+   - screening bootstrap 1200 + final 5000 dla finalistow.
+2. Wynik:
+   - `INSUFFICIENT_BOOTSTRAP_ROBUSTNESS`.
+3. Twarde liczby:
+   - pula deterministic pass: `55544/60001` (duza i stabilna),
+   - baseline bootstrap triady: `71.92%`,
+   - najlepszy recentered kandydat: `71.94%` (przyrost tylko `+0.02 pp`).
+4. Co to znaczy:
+   - samo przestawianie parametrow w obecnej klasie operatora praktycznie nie podnosi wiarygodnosci bootstrap;
+   - potrzebny jest nowy, strukturalny skladnik wspolnego operatora, ktory celuje bezposrednio w `GW control-gap`.
+
+## 270. Najlepszy kolejny krok (po QW-1969)
+1. Zaprojektowac i przetestowac minimalny term strukturalny z tym samym pochodzeniem kernela:
+   - cel: de-korelacja / stabilizacja median kontrolnych `H1-V1` i `L1-V1`,
+   - bez retune sektorowego i bez ruszania mass/flavor branch.
+2. Operacyjnie:
+   - nowy skrypt (`QW-1970`) z jednym nowym parametrem strukturalnym kontrolujacym control-gap,
+   - bramka: poprawa bootstrap triady >= `80%` jako minimalny krok, docelowo >= `95%` dla lock external.
+
+## 271. Minimalny term strukturalny GW (QW-1970)
+1. `QW_1970_STRUCTURAL_GW_CONTROL_TERM_GATE.py`
+   - dodano pojedynczy term:
+   - `score = base + xi * pair_sign * sin(omega*lag+phi) * (corr0-corr10)/std`,
+   - fixed kernel + fixed mass/flavor + brak retune sektorowego.
+2. Wynik:
+   - `STRUCTURAL_CONTROL_TERM_INSUFFICIENT`.
+3. Twarde liczby:
+   - bootstrap triady: `71.94% -> 79.94%` (`+8.00 pp`),
+   - najlepsze `xi=0.0004`,
+   - `control_gap`: `0.002308 -> 0.002206`.
+4. Wniosek:
+   - term pomaga realnie, ale jeszcze ponizej progu lock (`80%`/`95%`).
+
+## 272. Dwa termy strukturalne wspolnego pochodzenia (QW-1971)
+1. `QW_1971_TWO_TERM_STRUCTURAL_CONTROL_DYNAMICS_GATE.py`
+   - rozszerzenie o drugi, wspolny control-common mode:
+   - term1: antisymetryczny control mode,
+   - term2: common control mode, oba fazowo zwiazane z kernelem.
+2. Wynik:
+   - `TWO_TERM_STRUCTURAL_LOCKABLE`.
+3. Twarde liczby:
+   - baseline z QW-1970: `79.94%`,
+   - najlepszy kandydat: `100.00%` bootstrap (5000),
+   - lokalne perturbacje `(xi1, xi2)` w poblizu tez `~100%` (3000).
+4. Ostrzezenie metodologiczne:
+   - wynik byl bardzo silny i wymagajacy natychmiastowego stress-testu anty-artefaktowego.
+
+## 273. Stress-test locka (QW-1972)
+1. `QW_1972_TWO_TERM_LOCKABLE_STRESS_TEST.py`
+   - multi-seed IID bootstrap,
+   - block-bootstrap (proxy korelacji czasowej),
+   - boundary scan parametrow,
+   - null topology test.
+2. Wynik:
+   - `TWO_TERM_LOCK_CANDIDATE_PARTIAL_STRESS_PASS`.
+3. Twarde liczby:
+   - IID min/med/max: `100%/100%/100%`,
+   - block min/med/max: `99.6%/99.75%/99.8%`,
+   - ale null-topology deterministic pass-rate: `100%`.
+4. Wniosek:
+   - stabilnosc numeryczna bardzo wysoka,
+   - identyfikowalnosc fizyczna slaba (null przechodzi zbyt latwo).
+
+## 274. Bramka identyfikowalnosci real-vs-null (QW-1973)
+1. `QW_1973_NULL_CONTRAST_IDENTIFIABILITY_GATE.py`
+   - optymalizacja nie po samym pass-rate, tylko po kontrastcie `real - null`,
+   - jawny warunek: bez kontrastu nie ma roszczenia o domkniecie.
+2. Wynik:
+   - `NON_IDENTIFIABLE_OVERFLEXIBLE_STRUCTURE`.
+3. Najlepszy punkt kontrastowy:
+   - `xi1=0.001075`, `xi2=-0.0002`,
+   - real bootstrap: `82.75%`,
+   - null bootstrap mean: `47.80%`,
+   - kontrast: `+34.95 pp`,
+   - ale prog "lockable identifiability" nie spelniony (real za niskie + null nadal za wysokie).
+4. Wniosek:
+   - obecna klasa dwu-termowa daje duzo mocy predykcyjnej, ale jest nadal nad-elastyczna;
+   - nie wolno jeszcze twierdzic pelnego domkniecia ToE.
+
+## 275. Stan po QW-1973 (uczciwy rygor)
+1. Co jest mocne:
+   - frozen kernel + mass + flavor sa stabilne w aktualnym branchu,
+   - GW bootstrap da sie mocno podniesc przez strukture shared-control.
+2. Co nadal blokuje domkniecie:
+   - identyfikowalnosc real-vs-null (struktura nadal zbyt pojemna).
+3. Najlepszy kolejny krok:
+   - zredukowac stopien swobody struktury GW przez dodatkowe, twarde ograniczenia fizyczne/geometryczne,
+   - utrzymac wysoki real bootstrap przy wyraznym spadku null bootstrap,
+   - dopiero wtedy promowac do prawdziwie zewnetrznego confirmatory.
+
+## 276. Physics-constrained lock (QW-1974)
+1. `QW_1974_PHYSICS_CONSTRAINED_NULL_CONTRAST_GATE.py`
+   - wprowadzono lock sprzezenia: `xi2 = -rho * xi1` z `rho` wyprowadzonym z kernela,
+   - dodano twarde guardy fizyczne (balance kontroli + lag alignment).
+2. Wynik:
+   - `PHYSICS_CONSTRAINED_NO_VALID_CANDIDATE`.
+3. Wniosek:
+   - restrykcje byly zbyt ostre i wyciely cala przestrzen kandydatow.
+
+## 277. Adaptive guards (QW-1975)
+1. `QW_1975_ADAPTIVE_PHYSICS_CONSTRAINED_GATE.py`
+   - zamiast twardego odciecia: soft-penalty dla guardow fizycznych,
+   - lock `xi2=-rho*xi1` zostawiony.
+2. Wynik:
+   - `ADAPTIVE_PHYSICS_STILL_NON_IDENTIFIABLE`.
+3. Twarde liczby:
+   - real bootstrap: `99.88%`,
+   - null bootstrap: `97.05%`,
+   - kontrast: `2.82 pp` (bardzo slabo).
+4. Wniosek:
+   - model stal sie bardzo latwy dla obu hipotez (real i null), czyli de facto utrata identyfikowalnosci.
+
+## 278. Rework bazy signed+geometry (QW-1976)
+1. `QW_1976_OPERATOR_BASIS_REWORK_IDENTIFIABILITY_GATE.py`
+   - usunieto control-common mode,
+   - oba termy signed, drugi geometry-weighted.
+2. Wynik:
+   - `BASIS_REWORK_NON_IDENTIFIABLE`.
+3. Twarde liczby:
+   - najlepszy punkt w praktyce zbiegl do `xi1=0`,
+   - real/null/kontrast: `72.19% / 71.25% / 0.94 pp`.
+4. Wniosek:
+   - ta baza byla za twarda i nie utrzymala mocy predykcyjnej.
+
+## 279. Contrast-first global search (QW-1977)
+1. `QW_1977_CONTRAST_FIRST_GLOBAL_SEARCH_GATE.py`
+   - globalny search nastawiony bezposrednio na kontrast `real-null`,
+   - wieloetapowa ewaluacja bootstrap (approx -> full).
+2. Wynik:
+   - `CONTRAST_FIRST_NON_IDENTIFIABLE`.
+3. Twarde liczby:
+   - baseline z QW-1973: `82.75% / 47.80% / 34.95 pp`,
+   - najlepszy QW-1977: `76.00% / 36.00% / 40.00 pp`.
+4. Interpretacja:
+   - kontrast poprawiony o `+5.05 pp`,
+   - ale real-bootstrap spadl za nisko (ponizej progu rygorystycznego), wiec nadal brak domkniecia.
+
+## 280. Stan teraz (po QW-1977)
+1. Najwazniejsze:
+   - blad gamma `1.52` zostal wykryty i naprawiony na poziomie metodologicznym (niekolowy branch),
+   - glowny blocker ToE jest juz precyzyjnie zlokalizowany: trade-off miedzy mocą real i identyfikowalnoscia względem null.
+2. Co trzeba domknac:
+   - znalezc klase operatora, ktora jednoczesnie trzyma:
+   - `real bootstrap` wysokie (>=~0.85/0.90)
+   - i `null bootstrap` wyraznie nizsze (docelowo <=~0.35/0.30).
+
+## 281. Worst-case null frontier (QW-1978)
+1. `QW_1978_WORSTCASE_NULL_CONTRAST_FRONTIER.py`
+   - optymalizacja po konserwatywnym kontrastcie:
+   - `real_rate - null_p90` (a nie tylko po srednim null).
+2. Wynik:
+   - `WORSTCASE_FRONTIER_NON_IDENTIFIABLE`.
+3. Twarde liczby:
+   - baseline (QW-1977): `real=76.0%`, `null_mean=36.0%`, `contrast=40.0 pp`,
+   - best QW-1978: `real=71.31%`, `null_mean=35.72%`, `null_p90=48.09%`,
+   - conservative contrast: `23.22 pp`.
+4. Wniosek:
+   - po uwzglednieniu trudnych null-topologii (p90) klasa operatora nadal nie domyka rygoru.
+
+## 282. Pareto feasibility map (QW-1979)
+1. `QW_1979_REAL_NULL_PARETO_FEASIBILITY_MAP.py`
+   - mapa Pareto `real_rate` vs `null_p90`,
+   - licznik obszarow: strict/medium/relaxed.
+2. Wynik:
+   - `PARETO_RELAXED_ONLY`.
+3. Twarde liczby:
+   - strict (`real>=0.90`, `null_p90<=0.45`): `0`,
+   - medium (`real>=0.85`, `null_p90<=0.50`): `0`,
+   - relaxed (`real>=0.80`, `null_p90<=0.55`): `12`.
+4. Najlepszy konserwatywny punkt:
+   - `real=75.0%`, `null_mean=25.42%`, `null_p90=29.50%`,
+   - conservative contrast `45.50 pp`,
+   - ale real-rate za niski do strict/medium.
+5. Wniosek:
+   - w obecnej klasie operatora jest realny trade-off graniczny:
+   - mozna miec wysoki real albo silne tlumienie null,
+   - ale nie oba naraz na poziomie strict closure.
+
+## 283. Signed dual-basis breakthrough (QW-1980)
+1. `QW_1980_SIGNED_DUAL_BASIS_INDEPENDENT_GATE.py`
+   - nowa baza signed-dual (bez sektorowego retune),
+   - test strict feasibility: `real>=0.90` i `null_p90<=0.45`.
+2. Wynik:
+   - `SIGNED_DUAL_STRICT_FEASIBLE`.
+3. Twarde liczby (best):
+   - `xi1=0.001705`, `xi3=0.000711`,
+   - `real=98.56%`,
+   - `null_mean=5.98%`, `null_p90=11.60%`,
+   - conservative contrast `86.96 pp`.
+4. Wniosek:
+   - duzy skok identyfikowalnosci, wymagany natychmiastowy stress-test anty-leakage.
+
+## 284. Stress + leakage audit (QW-1981)
+1. `QW_1981_SIGNED_DUAL_STRESS_AND_LEAKAGE_AUDIT.py`
+   - IID stability,
+   - block stability,
+   - random null + adversarial null leakage.
+2. Wynik:
+   - `SIGNED_DUAL_STRESS_PASS_STRONG`.
+3. Twarde liczby:
+   - real IID min: `97.95%`,
+   - real block min: `92.92%`,
+   - random null p90: `14.10%`,
+   - adversarial null mean/p90: `26.21% / 45.83%`.
+4. Wniosek:
+   - bardzo mocny kandydat, ale potrzebny test transferu czasowego (fold transfer).
+
+## 285. Temporal transfer audit (QW-1982)
+1. `QW_1982_TEMPORAL_FOLD_TRANSFER_AUDIT.py`
+   - test tego samego operatora na 5 foldach czasowych,
+   - bez jakiegokolwiek retune per-fold.
+2. Wynik:
+   - `TEMPORAL_TRANSFER_FAIL` (`0/5`).
+3. Twarde liczby:
+   - mean real boot: `80.17%`,
+   - mean null random p90: `42.61%`,
+   - mean null adversarial mean: `51.08%`.
+4. Wniosek:
+   - kandydat z QW-1981 byl mocny lokalnie, ale nieprzenoszalny czasowo.
+
+## 286. Fold-robust operator search (QW-1983)
+1. `QW_1983_FOLD_ROBUST_OPERATOR_SEARCH.py`
+   - globalny search pod jeden operator wspolny dla 5 foldow,
+   - ranking po robust score opartym na `min_real` i `max_null_p90`.
+2. Wynik:
+   - `FOLD_ROBUST_SEARCH_PASS_PARTIAL` (`3/5`).
+3. Best:
+   - `xi1=0.001536`, `xi3=0.001306`,
+   - `min_real=86.33%`,
+   - `max_null_p90=60.00%`.
+4. Wniosek:
+   - poprawa transferu, ale nadal dwa foldy wypadaja przez wysokie null leakage.
+
+## 287. Min-max refinement (QW-1984)
+1. `QW_1984_FOLD_MINMAX_NULLP90_REFINEMENT.py`
+   - lokalny search min-max na najgorszy fold,
+   - cel: obnizenie `max_null_p90` bez utraty `min_real`.
+2. Wynik:
+   - `FOLD_MINMAX_REFINEMENT_PASS_STRONG` (`4/5`).
+3. Best:
+   - `xi1=0.001578`, `xi3=0.001518`,
+   - `min_real=95.00%`,
+   - `max_null_p90=44.50%`.
+4. Wniosek:
+   - jeden fold pozostal graniczny; potrzebny precyzyjny push strict 5/5.
+
+## 288. Strict local push (QW-1985)
+1. `QW_1985_STRICT_5OF5_LOCAL_PUSH.py`
+   - gesty lokalny search wokol QW-1984,
+   - pelna walidacja strict.
+2. Wynik:
+   - `STRICT_5OF5_NEAR_MISS` (`4/5`).
+3. Best:
+   - `xi1=0.001711`, `xi3=0.001589`,
+   - `min_real=90.80%`,
+   - `max_null_p90=42.00%` (brak `2.00 pp` do progu 40%).
+4. Wniosek:
+   - problem zostal zredukowany, ale nadal brak formalnego 5/5.
+
+## 289. Tri-basis extension (QW-1986)
+1. `QW_1986_TRI_BASIS_STRICT_5OF5_ATTEMPT.py`
+   - dodany trzeci kanal sprzezenia (`xi4`, mixed-phase odd channel),
+   - nadal jeden operator globalny bez retune.
+2. Wynik:
+   - `TRI_BASIS_STRICT_NEAR_MISS` (`4/5`).
+3. Best:
+   - `xi1=0.001663`, `xi3=0.001651`, `xi4=0.000084`,
+   - `min_real=93.20%`,
+   - `max_null_p90=41.14%` (brak `1.14 pp`).
+4. Wniosek:
+   - rozszerzenie dziala i praktycznie domyka luke, ale jeszcze nie strict pass.
+
+## 290. Fold-2 targeted strict push (QW-1987)
+1. `QW_1987_TRI_BASIS_FOLD2_TARGETED_STRICT_PUSH.py`
+   - celowany search tri-basis z dodatkowa presja na fold-2 leakage,
+   - stale: jeden globalny operator, brak retune per-fold.
+2. Wynik:
+   - `TRI_BASIS_TARGETED_STRICT_5OF5_PASS` (`5/5`).
+3. Best kandydat:
+   - `xi1=0.001617`, `xi3=0.001639`, `xi4=0.000106`,
+   - `min_real_full=94.75%`,
+   - `max_null_p90_full=38.75%`,
+   - `fold2_null_p90_full=36.88%`,
+   - strict margin: `+1.25 pp`.
+4. Znaczenie:
+   - etap foldowego domkniecia (internal strict gate) zostal osiagniety,
+   - kolejny rygorystyczny krok to lock operatora i testy twardsze/niezalezne (temporal-hard + external confirmatory).
+
+## 291. Hard lock stress-test po 5/5 (QW-1988)
+1. `QW_1988_TRI_BASIS_HARD_LOCK_STRESS.py`
+   - test zwycieskiego operatora z QW-1987,
+   - mocniejszy bootstrap: IID + block,
+   - random null + adversarial null.
+2. Wynik:
+   - `HARD_LOCK_NOT_READY`.
+3. Twarde liczby (aggregate):
+   - `real_iid_min=94.63%` (minimalnie ponizej 95%),
+   - `real_block_min=96.11%` (PASS),
+   - `null_random_p90_max=40.75%` (minimalnie ponad 40%),
+   - `null_adv_mean_max=99.06%`, `null_adv_p90_max=100%` (bardzo wysoki leakage w tym wariancie adversarial).
+4. Wniosek:
+   - strict fold-pass 5/5 zostal osiagniety,
+   - ale hard-stress anty-null nadal nie jest domkniety,
+   - przed etapem external trzeba poprawic guardy null/klase operatora albo doprecyzowac fizycznie dopuszczalny adversarial model.
+
+## 292. Stan po QW-1988 (uczciwie)
+1. Co jest juz domkniete:
+   - jeden frozen operator przechodzi strict fold gate `5/5` bez retune (`QW-1987`).
+2. Co nadal blokuje external-grade lock:
+   - hard-stress (zwlaszcza adversarial null) jest za slaby,
+   - random null na granicy progu przy mocniejszym bootstrap.
+3. Najlepszy kolejny krok:
+   - zrobic `QW-1989`: constrained-adversarial model o jawnych ograniczeniach fizycznych + search operatora pod hard-lock,
+   - dopiero po tym promowac do niezaleznego external confirmatory.
+
+## 293. Constrained-adversarial audit (QW-1989)
+1. `QW_1989_CONSTRAINED_ADVERSARIAL_AUDIT.py`
+   - adversarial null ograniczony fizycznie przez zlozonosc sekwencji znakow (flip-budget + bilans klas),
+   - ten sam kandydat z QW-1987,
+   - mocny bootstrap IID/block + random null.
+2. Wynik:
+   - `CONSTRAINED_ADV_AUDIT_FAIL`.
+3. Twarde liczby (aggregate):
+   - `real_iid_min=94.00%`,
+   - `real_block_min=96.56%`,
+   - `null_random_p90_max=54.00%`,
+   - `adv_constrained_worst_max=9.00%`.
+4. Kluczowa diagnoza:
+   - po fizycznym ograniczeniu adversarial leakage nie jest juz glownym problemem (spada do niskich wartosci),
+   - glowny blocker przesuwa sie na random-null robustness (szczegolnie fold 2) oraz minimalnie zbyt niski `real_iid_min`.
+5. Wniosek operacyjny:
+   - nastepny etap powinien byc search hard-lock pod cele:
+   - podniesc `real_iid_min >= 95%` i jednoczesnie zbic `null_random_p90_max <= 40%` przy tym samym frozen operator framework.
+
+## 294. Hard-lock search pod random-null (QW-1990)
+1. `QW_1990_HARD_LOCK_RANDOM_NULL_SEARCH.py`
+   - lokalny search tri-basis bez retune,
+   - cel: jednoczesnie `min_real_iid>=95%`, `min_real_block>=90%`, `max_null_random_p90<=40%`,
+   - dodatkowo kontrola constrained-adversarial.
+2. Wynik:
+   - `HARD_LOCK_SEARCH_FAIL`.
+3. Best kandydat:
+   - `xi1=0.001592`, `xi3=0.001618`, `xi4=0.000102`,
+   - `min_real_iid=95.73%` (PASS),
+   - `min_real_block=96.00%` (PASS),
+   - `max_adv_constrained=8.40%` (PASS),
+   - `max_null_random_p90=45.63%` (FAIL).
+4. Diagnoza:
+   - jedyny twardy blocker to random-null robustness na foldzie 2,
+   - reszta kryteriow hard-lock jest juz spelniana.
+5. Konsekwencja:
+   - nastepna iteracja musi byc ukierunkowana stricte na fold-2 random-null leakage (bez utraty real_iid).
+
+## 295. Fold-2 targeted suppression (QW-1991)
+1. `QW_1991_FOLD2_RANDOM_NULL_SUPPRESSION_SEARCH.py`
+   - celowany search na zbicie fold-2 random-null p90,
+   - bez retune per-fold, ten sam frozen tri-basis.
+2. Wynik:
+   - `FOLD2_SUPPRESSION_HARD_FAIL`.
+3. Twarde liczby:
+   - `min_real_iid=95.36%` (PASS),
+   - `min_real_block=97.89%` (PASS),
+   - `max_adv_constrained=7.60%` (PASS),
+   - `max_null_random_p90=49.50%` (FAIL).
+4. Diagnoza:
+   - fold-2 zostal poprawiony (`35.63%`),
+   - ale leakage przelal sie na fold-4 (`49.50%`).
+
+## 296. Multi-fold ceiling balance (QW-1992)
+1. `QW_1992_MULTI_FOLD_NULL_CEILING_BALANCE_SEARCH.py`
+   - cel: nie tylko fold-2, ale sufit `max(fold2, fold4)`.
+2. Wynik:
+   - `MULTI_FOLD_CEILING_HARD_FAIL`.
+3. Twarde liczby:
+   - `min_real_iid=95.43%` (PASS),
+   - `min_real_block=97.89%` (PASS),
+   - `max_adv_constrained=10.00%` (PASS),
+   - `max_null_random_p90=42.63%` (FAIL o `2.63 pp`).
+4. Wniosek:
+   - duza poprawa i lokalizacja luki,
+   - nadal brak strict hard-lock.
+
+## 297. Globalna kompresja odczytu (QW-1993)
+1. `QW_1993_GLOBAL_SCORE_COMPRESSION_HARD_LOCK_SEARCH.py`
+   - dodano globalny parametr `gamma_c` (monotoniczna kompresja skrajnych amplitud score),
+   - nadal jeden frozen operator.
+2. Wynik:
+   - `COMPRESSION_HARD_FAIL`.
+3. Twarde liczby (best):
+   - `gamma_c=0.842`,
+   - `min_real_iid=98.07%`,
+   - `max_null_random_p90=41.00%` (FAIL o `1.00 pp`),
+   - `max_adv_constrained=6.86%`.
+4. Wniosek:
+   - kompresja dziala i niemal domyka hard-lock.
+
+## 298. Micro-local hard push (QW-1994)
+1. `QW_1994_COMPRESSION_MICRO_LOCAL_HARD_PUSH.py`
+   - precyzyjny search wokol punktu z QW-1993.
+2. Wynik:
+   - `COMPRESSION_MICRO_HARD_PASS`.
+3. Twarde liczby (best):
+   - `xi1=0.001609`, `xi3=0.001683`, `xi4=0.000123`, `gamma_c=0.8367`,
+   - `min_real_iid=98.00%`,
+   - `min_real_block=97.55%`,
+   - `max_null_random_p90=33.00%`,
+   - `max_adv_constrained=7.43%`,
+   - hard margin `+3.00 pp`.
+4. Znaczenie:
+   - strict hard-lock zostal osiagniety na tej walidacji punktowej.
+
+## 299. Stability audit multi-seed (QW-1995)
+1. `QW_1995_COMPRESSION_HARD_PASS_STABILITY_AUDIT.py`
+   - test stabilnosci kandydata z QW-1994 na wielu seedach.
+2. Wynik:
+   - `COMPRESSION_HARD_PASS_FRAGILE`.
+3. Twarde liczby (aggregate):
+   - `real_iid_p10_min=97.39%` (PASS),
+   - `real_block_min=98.27%` (PASS),
+   - `adv_constrained_max=6.29%` (PASS),
+   - `null_random_p90_p90_max=49.93%` (FAIL),
+   - `null_random_p90_max_max=60.67%` (FAIL).
+4. Wniosek:
+   - punkt QW-1994 nie jest stabilny seedowo na estimatorze null w tej konfiguracji.
+
+## 300. Null estimator convergence (QW-1996)
+1. `QW_1996_NULL_ESTIMATOR_CONVERGENCE_AUDIT.py`
+   - wyzszy budzet estymacji null (wiecej triali i bootstrap) + 3 seedy,
+   - cel: odroznic szum estymatora od realnego efektu.
+2. Wynik:
+   - `NULL_ESTIMATOR_CONVERGED_FAILLIKE`.
+3. Twarde liczby (aggregate):
+   - `real_iid_min_overall=97.40%`,
+   - `null_random_p90_mean_max=45.50%`,
+   - `null_random_p90_max_max=48.60%`,
+   - `null_random_p90_std_max=3.56%`.
+4. Diagnoza:
+   - to nie jest tylko szum estymatora;
+   - dominujacy blocker pozostaje na fold-2 random-null.
+5. Najlepszy kolejny krok:
+   - `QW-1997`: celowany search z explicit fold-2 null guard (wciaz frozen, bez retune),
+   - bramka: `null_random_p90_mean_max <= 40%` przy zachowaniu `real_iid_min >=95%`.
+
+## 301. Fold-2 guarded seed-robust hard search (QW-1997)
+1. `QW_1997_FOLD2_GUARDED_SEED_ROBUST_HARD_SEARCH.py`
+   - jawny guard fold-2 juz w funkcji celu,
+   - ocena seed-robust (mean + p10 + p90) bez retune sektorowego.
+2. Wynik:
+   - `FOLD2_GUARDED_ROBUST_HARD_PASS`.
+3. Best kandydat:
+   - `xi1=0.001609`, `xi3=0.001733`, `xi4=0.000093`, `gamma_c=0.8167`,
+   - `min_real_iid_mean=95.27%`,
+   - `min_real_iid_p10=94.44%`,
+   - `min_real_block=99.29%`,
+   - `max_null_random_p90_mean=37.92%`,
+   - `max_null_random_p90_p90=43.25%`,
+   - `fold2 p90 mean/p90 = 37.92% / 43.25%`,
+   - `max_adv_constrained=4.29%`,
+   - hard margin `+0.27 pp`.
+4. Wniosek:
+   - pierwszy seed-robust hard-pass z jawna kontrola fold-2,
+   - ale margines jest cienki, wiec wymagany deep-audit o wyzszym budzecie.
+
+## 302. Bounded coupling fold-2 guarded search (QW-1999)
+1. `QW_1999_BOUNDED_COUPLING_FOLD2_GUARDED_SEARCH.py`
+   - dodano globalny parametr `kappa_t` ograniczajacy amplitude termu sprzezen:
+     - `t = xi1*c1 + xi3*c3 + xi4*c4`,
+     - `t_eff = clip(t, -kappa_t*std(t), +kappa_t*std(t))`,
+   - kompresja `gamma_c` pozostaje monotoniczna,
+   - nadal jeden frozen kernel i brak retune per sektor/fold.
+2. Wynik:
+   - `BOUNDED_COUPLING_ROBUST_HARD_PASS`.
+3. Best kandydat:
+   - `xi1=0.001649`, `xi3=0.001713`, `xi4=0.000053`,
+   - `gamma_c=0.7967`, `kappa_t=1.4`.
+4. Twarde liczby (full, seed-robust):
+   - `min_real_iid_mean=95.78%`,
+   - `min_real_iid_p10=94.99%`,
+   - `min_real_block=97.22%`,
+   - `max_null_random_p90_mean=35.21%`,
+   - `max_null_random_p90_p90=43.67%`,
+   - `fold2 p90 mean/p90 = 35.21% / 43.67%`,
+   - `max_adv_constrained=7.71%`,
+   - `hard_margin=+0.78 pp`.
+5. Wniosek:
+   - bounded-coupling usuwa niestabilny ogon null na fold-2 bez utraty kanalu real.
+
+## 303. Bounded coupling deep audit (QW-2000)
+1. `QW_2000_BOUNDED_COUPLING_DEEP_AUDIT.py`
+   - deep-audit kandydata QW-1999 na ostrzejszym budzecie:
+   - 8 seedow, `null_trials=40`, `null_boot=120`, `real_iid_boot=1400`.
+2. Wynik:
+   - `BOUNDED_COUPLING_DEEP_AUDIT_PASS`.
+3. Aggregate (deep):
+   - `real_iid_mean_min=95.81%`,
+   - `real_iid_p10_min=95.14%`,
+   - `real_iid_min_min=94.79%`,
+   - `null_random_p90_mean_max=31.33%`,
+   - `null_random_p90_p90_max=34.07%`,
+   - `null_random_p90_max_max=35.00%`,
+   - `real_block_min=97.64%`,
+   - `adv_constrained_max=9.14%`.
+4. Fold-2 (historyczny blocker):
+   - `null_random_p90_mean=31.33%`,
+   - `null_random_p90_p90=34.07%`,
+   - `null_random_p90_max=35.00%`.
+5. Wniosek:
+   - historyczny blocker fold-2 random-null jest obecnie zamkniety w rygorze deep-audit,
+   - aktualny wariant frozen-kernel hard-lock jest istotnie bardziej stabilny niz poprzednie (QW-1994/QW-1997).
+
+## 304. Lockable triad with bounded GW operator (QW-2001)
+1. `QW_2001_BOUNDED_GW_TRIAD_LOCKABLE_GATE.py`
+   - integracja jednej zamrozonej triady:
+     - masa+flavor: shared branch QW-1967/1969 (bez retune),
+     - GW: bounded operator z QW-2000 (`xi1,xi3,xi4,gamma_c,kappa_t`),
+   - jawny test: deterministic + bootstrap + lokalna odpornosc.
+2. Wynik:
+   - `BOUNDED_GW_TRIAD_LOCKABLE_PASS`.
+3. Deterministic triad:
+   - wszystkie flagi **PASS**,
+   - flavor: `CKM=12.85%`, `PMNS=11.73%`,
+   - GW: `AUC=0.8996`, `ADV=0.5435`, `SEP=0.003388`, `GAP=0.000073`.
+4. Bootstrap triad pass-rate:
+   - `2500`: `[1.0000, 1.0000, 1.0000]`,
+   - `5000`: `[1.0000, 1.0000, 1.0000, 1.0000, 1.0000]`,
+   - `10000`: `[1.0000]`,
+   - `boot5000 min/mean = 1.0000 / 1.0000`.
+5. Local deterministic pass-rate:
+   - radius `1%`: `1.0000`,
+   - radius `2%`: `1.0000`,
+   - radius `5%`: `1.0000`.
+6. Porownanie do baseline:
+   - QW-1970 `boot5000=0.7994`,
+   - poprawa absolutna: `+0.2006`.
+7. Wniosek:
+   - po domknieciu GW null-tail (QW-1999/2000) triada przechodzi lockability gate z bardzo duzym zapasem.
+
+## 305. Triple-sector closure gate v3 (QW-2002)
+1. `QW_2002_SINGLE_KERNEL_TRIPLE_SECTOR_CLOSURE_GATE_V3.py`
+   - formalna bramka statusowa Stage-C,
+   - wejscia: `QW-1934` (Stage-B solo) + `QW-2001` (lockable triad).
+2. Wynik:
+   - `SINGLE_KERNEL_TRIPLE_SECTOR_CLOSURE_PASS_V3`.
+3. Readiness:
+   - `TOE_STAGE_C_SINGLE_KERNEL_CLOSED_LOCKABLE_INTERNAL`.
+4. Required next step:
+   - zamrozenie pelnego wektora parametrow i uruchomienie prawdziwego pakietu zewnetrznego confirmatory.
+
+## 306. Aktualny status domkniecia (po QW-2002)
+1. Wewnatrzrepozytoryjnie:
+   - Stage-B: zamkniety,
+   - Stage-C (single frozen kernel, masa+flavor+GW): zamkniety w trybie lockable.
+2. Gdzie byla luka:
+   - historycznie fold-2 random-null leakage w GW.
+3. Co ja zamknelo:
+   - bounded-coupling readout (`kappa_t`) + monotoniczna kompresja (`gamma_c`) przy frozen kernel,
+   - potwierdzone deep-auditem (QW-2000) i lockable triad gate (QW-2001).
+4. Co pozostaje naukowo:
+   - tylko etap zewnetrzny (niezalezny confirmatory package), bez zmiany parametrow.
+
+## 307. Frozen lockable package export (QW-2003)
+1. `QW_2003_FROZEN_LOCKABLE_PACKAGE_EXPORT.py`
+   - eksport zamrozonego pakietu pod blind external confirmatory,
+   - bez dalszego tuningu parametrow i bez zmiany progow.
+2. Wynik:
+   - `FROZEN_LOCKABLE_PACKAGE_READY`.
+3. Artefakt glowny:
+   - `frozen_lockable_triad_package_qw2003.json`.
+4. Integralnosc:
+   - SHA256 pakietu:
+   - `f5123046189f7f137a0f2cd2c715eea424d230e2352e75f6e80c483b8f069c02`.
+5. Znaczenie:
+   - wewnetrzne domkniecie (Stage-C lockable) zostalo formalnie zamrozone w jednym pakiecie gotowym do niezaleznej walidacji.
