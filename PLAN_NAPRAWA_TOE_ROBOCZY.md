@@ -2339,3 +2339,53 @@ Po tej rundzie:
 6. Artefakty:
    - `report_qw1924_lambda_tuning_and_transfer_retest.json`,
    - `RAPORT_QW1924_LAMBDA_TUNING_AND_TRANSFER_RETEST.md`.
+
+## 223. Spec true external beta-channel (QW-1925)
+1. `QW_1925_TRUE_EXTERNAL_BETA_CHANNEL_COLLECTION_SPEC.py`
+   - Zbudowano formalna specyfikacje zbierania danych true external dla kanalu beta.
+   - Wybrana obserwabla: `B7_local_resid_std` (z QW-1921).
+2. Twarde wymagania:
+   - pakiet plikow: `manifest_beta_channel.json`, `beta_channel_pairs.csv`,
+     `intervention_events.csv`, `protocol_freeze.json`,
+   - wymagana niezaleznosc providera i jawna externality statement,
+   - co najmniej dwa egzogeniczne kohorty interwencyjne.
+3. Cele sygnalowe (zamrozone):
+   - `effect_beta >= 0.60`,
+   - `effect_omega <= 0.25`,
+   - `contrast >= 0.35`,
+   - `contrast_boot_q05 >= 0.20`.
+4. Cele mocy (po korekcie rygoru):
+   - `n_holdout_min_for_power_0p80 = 400`,
+   - `n_holdout_min_for_power_0p90 = 500`,
+   - `n_total_pairs_recommended = 1200`.
+5. Werdykt:
+   - `TRUE_EXTERNAL_BETA_CHANNEL_COLLECTION_SPEC_READY`.
+
+## 224. Mapa mocy i ryzyka scenariuszy (QW-1926)
+1. `QW_1926_BETA_CHANNEL_POWER_REQUIREMENTS_MAP.py`
+   - Zrobiono scenariuszowa mape wymagan mocy (optimistic/reference/conservative/stress).
+2. Klucz metodologiczny:
+   - policzono `n_eff` (i.i.d.) i jawnie przeskalowano do `n_actual`
+     z rygorystycznymi minimami dla danych pair-level zaleznych.
+3. Wyniki rekomendowane:
+   - reference (90%): `n_holdout=500`,
+   - conservative (90%): `n_holdout=600`,
+   - total pairs: `1200` (reference), `1600` (conservative).
+4. Werdykt:
+   - `BETA_CHANNEL_POWER_REQUIREMENTS_MAP_READY`.
+
+## 225. Bramka gotowosci true external beta-channel (QW-1927)
+1. `QW_1927_TRUE_EXTERNAL_BETA_CHANNEL_READINESS_GATE.py`
+   - Automatyczna walidacja: komplet pakietu, schema, externality, role manifestu.
+2. Wynik aktualny:
+   - `TRUE_EXTERNAL_BETA_CHANNEL_BLOCKED_MISSING_PACKAGE`,
+   - brakujace pliki:
+     - `manifest_beta_channel.json`,
+     - `beta_channel_pairs.csv`,
+     - `intervention_events.csv`,
+     - `protocol_freeze.json`.
+3. Wniosek:
+   - luka jest domknieta metodologicznie (spec/progi/gate),
+   - pozostaje wykonanie etapu operacyjnego: dostarczenie rzeczywistego pakietu true external.
+4. Wymagany nastepny krok:
+   - `PROVIDE_COMPLETE_TRUE_EXTERNAL_BETA_CHANNEL_PACKAGE`.
