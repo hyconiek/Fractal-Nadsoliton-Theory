@@ -83,6 +83,21 @@ def main() -> None:
     p.add_argument("--hbar-si", type=float, default=None, help="Planck constant reduced in SI.")
     p.add_argument("--c-si", type=float, default=None, help="Speed of light in SI.")
     p.add_argument("--gev-to-j", type=float, default=None, help="GeV -> Joule conversion.")
+    p.add_argument(
+        "--strict-dimensionless-only",
+        action="store_true",
+        help="Reject bridge construction unless a direct external dimensionless observable is provided.",
+    )
+    p.add_argument(
+        "--omit-g-si-optional",
+        action="store_true",
+        help="Force g_si_input_optional=null in generated QW-2092 input to avoid SI-primary ambiguity.",
+    )
+    p.add_argument(
+        "--require-strict-ready",
+        action="store_true",
+        help="Return non-zero exit code unless strict provenance conditions are met.",
+    )
     args = p.parse_args()
 
     src_path = Path(args.source_file).resolve()
@@ -106,6 +121,10 @@ def main() -> None:
         raise ValueError("Provide at least one of g_si or g_dimensionless_mu_ref.")
 
     if g_dimless is None:
+        if args.strict_dimensionless_only:
+            raise ValueError(
+                "strict-dimensionless-only requires direct g_dimensionless_mu_ref (no backsolve from g_si)."
+            )
         if not is_finite_positive(g_si):
             raise ValueError("g_si must be finite and > 0.")
         g_dimless = g_dimless_from_g_si(float(g_si), mu_ref_gev, hbar_si, c_si, gev_to_j)
@@ -113,7 +132,12 @@ def main() -> None:
     elif not is_finite_positive(g_dimless):
         raise ValueError("g_dimensionless_mu_ref must be finite and > 0.")
     else:
-        bridge_observable_origin = "external_dimensionless_observable"
+        src_origin = str(src.get("bridge_observable_origin", "")).strip()
+        bridge_observable_origin = src_origin or "external_dimensionless_observable"
+        if args.strict_dimensionless_only and bridge_observable_origin != "external_dimensionless_observable":
+            raise ValueError(
+                "strict-dimensionless-only requires bridge_observable_origin=external_dimensionless_observable."
+            )
 
     g_dimless = float(g_dimless)
     g_si_from_dim = g_si_from_dimless(g_dimless, mu_ref_gev, hbar_si, c_si, gev_to_j)
@@ -129,6 +153,14 @@ def main() -> None:
         # Backsolving dimensionless bridge from G_SI is tautological for QW-2092 strict claim.
         provenance_anchor_free = False
 
+    g_si_optional_payload = None if args.omit_g_si_optional else (float(g_si) if g_si is not None else None)
+    strict_provenance_ready = bool(
+        bridge_observable_origin == "external_dimensionless_observable"
+        and provenance_anchor_free
+        and not seeded_from_registry
+        and g_si_optional_payload is None
+    )
+
     payload = {
         "source": str(args.source),
         "citation": str(args.citation),
@@ -140,7 +172,7 @@ def main() -> None:
         "bridge_observable_origin": bridge_observable_origin,
         "mu_ref_gev": float(mu_ref_gev),
         "g_dimensionless_mu_ref": float(g_dimless),
-        "g_si_input_optional": (float(g_si) if g_si is not None else None),
+        "g_si_input_optional": g_si_optional_payload,
         "hbar_si": float(hbar_si),
         "c_si": float(c_si),
         "gev_to_j": float(gev_to_j),
@@ -155,12 +187,14 @@ def main() -> None:
         "self_consistency_if_g_si_provided": bool(rel_delta_g_si is None or rel_delta_g_si <= 1e-6),
         "dimensionless_directly_provided": bool(g_dimless_direct),
         "backsolve_from_g_si_detected": bool(bridge_observable_origin == "backsolved_from_g_si"),
+        "strict_provenance_ready": strict_provenance_ready,
     }
-    verdict = (
-        "GNEWTON_BRIDGE_EXTERNAL_AUTOCOLLECTED_BACKSOLVED_NONSTRICT"
-        if bridge_observable_origin == "backsolved_from_g_si"
-        else "GNEWTON_BRIDGE_EXTERNAL_AUTOCOLLECTED"
-    )
+    if strict_provenance_ready:
+        verdict = "GNEWTON_BRIDGE_EXTERNAL_AUTOCOLLECTED_STRICT_READY"
+    elif bridge_observable_origin == "backsolved_from_g_si":
+        verdict = "GNEWTON_BRIDGE_EXTERNAL_AUTOCOLLECTED_BACKSOLVED_NONSTRICT"
+    else:
+        verdict = "GNEWTON_BRIDGE_EXTERNAL_AUTOCOLLECTED_NONSTRICT"
 
     report = {
         "generated_utc": datetime.now(timezone.utc).isoformat(),
@@ -172,14 +206,19 @@ def main() -> None:
             "mu_ref_gev": float(mu_ref_gev),
             "g_dimensionless_mu_ref": float(g_dimless),
             "g_si_from_dimensionless": float(g_si_from_dim),
-            "g_si_input_optional": (float(g_si) if g_si is not None else None),
+            "g_si_input_optional": g_si_optional_payload,
             "rel_delta_g_si_pct": rel_delta_g_si,
             "bridge_observable_origin": bridge_observable_origin,
+            "strict_provenance_ready": strict_provenance_ready,
         },
         "flags": flags,
         "pass_count": int(sum(1 for v in flags.values() if bool(v))),
         "total_flags": int(len(flags)),
-        "required_next_step": f"RUN_QW2092_WITH:{out_input.name}",
+        "required_next_step": (
+            f"RUN_QW2103_AND_QW2092_WITH:{out_input.name}"
+            if strict_provenance_ready
+            else "PROVIDE_EXTERNAL_DIMENSIONLESS_BRIDGE_WITH_ANCHOR_FREE_PROVENANCE_AND_RERUN_QW2101"
+        ),
     }
     OUT_JSON.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
 
@@ -197,6 +236,7 @@ def main() -> None:
         f"- g_dimensionless_mu_ref: `{g_dimless:.12e}`",
         f"- g_si_from_dimensionless: `{g_si_from_dim:.12e}`",
         f"- bridge_observable_origin: `{bridge_observable_origin}`",
+        f"- strict_provenance_ready: `{strict_provenance_ready}`",
         "",
         "## Output",
         f"- input JSON: `{out_input}`",
@@ -210,6 +250,8 @@ def main() -> None:
     print(
         f"[QW-2101] verdict={report['verdict']} pass_count={report['pass_count']}/{report['total_flags']}"
     )
+    if args.require_strict_ready and not strict_provenance_ready:
+        raise SystemExit(2)
 
 
 if __name__ == "__main__":

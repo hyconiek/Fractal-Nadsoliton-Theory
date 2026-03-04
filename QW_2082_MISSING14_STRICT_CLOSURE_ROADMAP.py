@@ -116,17 +116,25 @@ def main() -> None:
         "h0": row(
             "h0",
             "T3",
-            ["late_time_distance_ladder_independent", "early_time_cmb_independent"],
+            [
+                "late_time_distance_ladder_independent",
+                "early_time_cmb_independent",
+                "expanded_hz_node_set_n_ge_5_zspan_ge_0p8",
+            ],
             "H0 derived from internally fixed cosmological sector without external anchor in lambda-H0 pair.",
-            "QW_2090_H0_LAMBDA_DECOUPLING_GATE",
+            "QW_2102_HZ_DECOUPLING_IDENTIFIABILITY_GATE -> QW_2090_H0_LAMBDA_DECOUPLING_GATE",
             "Currently coupled-underdetermined with Lambda; must be decoupled.",
         ),
         "lambda_cosmological": row(
             "lambda_cosmological",
             "T3",
-            ["vacuum_response_observable", "independent_background_expansion_chain"],
+            [
+                "vacuum_response_observable",
+                "independent_background_expansion_chain",
+                "expanded_hz_node_set_n_ge_5_zspan_ge_0p8",
+            ],
             "Lambda derived from internal vacuum response observable and cross-validated against expansion history.",
-            "QW_2090_H0_LAMBDA_DECOUPLING_GATE",
+            "QW_2102_HZ_DECOUPLING_IDENTIFIABILITY_GATE -> QW_2090_H0_LAMBDA_DECOUPLING_GATE",
             "Cannot remain fixed from external anchor in strict final claim.",
         ),
         "m_nu1": row(
@@ -156,9 +164,13 @@ def main() -> None:
         "G_newton": row(
             "G_newton",
             "T4",
-            ["dimensionless_to_si_gravity_bridge_observable", "independent_planck_to_ir_scale_map"],
+            [
+                "dimensionless_to_si_gravity_bridge_observable",
+                "independent_planck_to_ir_scale_map",
+                "direct_external_dimensionless_observable_not_backsolved_from_g_si",
+            ],
             "G derived from internal dimensionless chain with explicit SI bridge and blind consistency checks.",
-            "QW_2092_GNEWTON_SI_BRIDGE_GATE",
+            "QW_2103_GNEWTON_DIMENSIONLESS_PROVENANCE_GATE -> QW_2101_GNEWTON_BRIDGE_EXTERNAL_AUTOCOLLECTOR -> QW_2092_GNEWTON_SI_BRIDGE_GATE",
             "Hardest unresolved: currently underdetermined without a new bridge observable.",
         ),
     }

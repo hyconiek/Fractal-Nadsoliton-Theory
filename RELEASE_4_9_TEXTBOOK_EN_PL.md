@@ -366,10 +366,12 @@ Meaning:
 
 - Verdict: `STRICT_RIGOR_DEFECT_SWEEP_PASS_NO_CRITICAL_DEFECTS`
 - Sweep scope:
-  - QW-2084/2085/2086/2087 internal consistency,
+  - internal consistency of QW-2084/2085/2086/2087/2090/2091/2092/2097/2098,
   - cross-report consistency between QW-2069 and QW-2071,
-  - strict-level/status integrity for T1 parameters in package report.
-- Result: `27` checks, `0` failed.
+  - pre-gate consistency for QW-2102 and QW-2103,
+  - merged preflight consistency for QW-2104,
+  - strict-level/status integrity in package report.
+- Result: `84` checks, `0` failed.
 
 Meaning:
 - no critical implementation mismatch was detected in the audited non-anchor T1 closure path,
@@ -823,8 +825,10 @@ Znaczenie:
 - Zakres sweepu:
   - spójność wewnętrzna QW-2084/2085/2086/2087/2090/2091/2092/2097/2098,
   - spójność między raportami QW-2069 i QW-2071,
-  - integralność strict-level/status dla parametrów T1 + T2 + EW-secondary w raporcie pakietowym.
-- Wynik: `59` kontroli, `0` błędów.
+  - spójność pre-gate dla QW-2102 i QW-2103,
+  - spójność scalonego preflightu QW-2104,
+  - integralność strict-level/status w raporcie pakietowym.
+- Wynik: `84` kontroli, `0` błędów.
 
 Znaczenie:
 - w audytowanej ścieżce domknięcia T1 non-anchor nie wykryto krytycznych niespójności implementacyjnych,
@@ -936,9 +940,16 @@ Wniosek:
     with new identifiability diagnostic showing weak two-parameter lever arm (`E` span `~0.487`); flatness-projection diagnostic is registry-compatible but non-closing for strict decoupling claim.
   - `QW-2091`: `NEUTRINO_ABSOLUTE_SCALE_GATE_PASS_STRICT` (`8/8`),
   - `QW-2092`: `GNEWTON_SI_BRIDGE_GATE_PENDING_NONCLOSING` (`6/8`) after tautology hardening blocks strict pass for backsolved bridge input.
+- Input builders for these channels were additionally hardened:
+  - `QW-2099` now reports strict identifiability readiness for H(z) input (`HZ_EXTERNAL_DECOUPLING_AUTOCOLLECTED_WEAK_LEVERARM` on current snapshot),
+  - `QW-2101` now supports strict provenance preflight (`--strict-dimensionless-only --omit-g-si-optional --require-strict-ready`) and remains non-strict for backsolved bridge snapshots.
 - New strict-input pre-gates (no-overclaim hardening):
   - `QW-2102`: `HZ_DECOUPLING_IDENTIFIABILITY_GATE_WEAK_LEVERARM_PENDING` (`3/7`), failed: `n_nodes_ge_5`, `z_span_ge_0p8`, `e_span_ge_1p0`, `design_condition_lt_8`.
   - `QW-2103`: `GNEWTON_DIMENSIONLESS_PROVENANCE_GATE_PENDING_NONCLOSING` (`5/8`), failed: `bridge_origin_external_dimensionless`, `provenance_anchor_free`, `g_si_not_primary_input`.
+- New merged preflight gate:
+  - `QW-2104`: `T3T4_STRICT_PREFLIGHT_GATE_PENDING` (`0/6`), combining readiness from `QW-2099/2102/2090` and `QW-2101/2103/2092` with logic-defect checks.
+- New deterministic gap quantification:
+  - `QW-2105`: `T3T4_STRICT_INPUT_GAPS_PRESENT`, explicitly listing what external inputs are still missing for strict-ready T3/T4.
 - EW secondary propagation gate was executed:
   - `QW-2098`: `EW_SECONDARY_NONANCHOR_CLOSURE_GATE_TARGET_MISS` (`8/10`),
   - strict-derived promotion: `v_higgs`, `sin2_theta_w_mz`,
@@ -947,7 +958,7 @@ Wniosek:
   - `QW-2069`: strict-derived `28/32`, direct missing `0/32`, strict-unresolved `7/32`.
   - `QW-2081`: strict-unresolved in missing-14 scope is `4/14`:
     `delta_cp_ckm`, `h0`, `lambda_cosmological`, `G_newton`.
-  - `QW-2094` defect sweep remains clean: `59` checks, `0` failed.
+  - `QW-2094` defect sweep remains clean: `84` checks, `0` failed (including `QW-2102/2103` pre-gates and `QW-2104` merged preflight consistency).
 
 ### PL
 
@@ -965,9 +976,16 @@ Wniosek:
     z nową diagnostyką identyfikowalności: słaba dźwignia dwupunktowego rozdziału (`E` span `~0.487`); diagnostyka flatness-projection jest zgodna z rejestrem, ale nie domyka ścisłej tezy decoupling.
   - `QW-2091`: `NEUTRINO_ABSOLUTE_SCALE_GATE_PASS_STRICT` (`8/8`),
   - `QW-2092`: `GNEWTON_SI_BRIDGE_GATE_PENDING_NONCLOSING` (`6/8`) po utwardzeniu anty-tautologicznym dla wejścia backsolved.
+- Budownicze wejść dla tych kanałów zostały dodatkowo uszczelnione:
+  - `QW-2099` raportuje gotowość strict identyfikowalności dla wejścia H(z) (`HZ_EXTERNAL_DECOUPLING_AUTOCOLLECTED_WEAK_LEVERARM` dla obecnej migawki),
+  - `QW-2101` wspiera ścisły preflight proweniencji (`--strict-dimensionless-only --omit-g-si-optional --require-strict-ready`) i dla migawki backsolved pozostaje non-strict.
 - Nowe pre-gate’y jakości wejścia (utwardzenie anty-overclaim):
   - `QW-2102`: `HZ_DECOUPLING_IDENTIFIABILITY_GATE_WEAK_LEVERARM_PENDING` (`3/7`), fail dla: `n_nodes_ge_5`, `z_span_ge_0p8`, `e_span_ge_1p0`, `design_condition_lt_8`.
   - `QW-2103`: `GNEWTON_DIMENSIONLESS_PROVENANCE_GATE_PENDING_NONCLOSING` (`5/8`), fail dla: `bridge_origin_external_dimensionless`, `provenance_anchor_free`, `g_si_not_primary_input`.
+- Nowa scalona bramka preflight:
+  - `QW-2104`: `T3T4_STRICT_PREFLIGHT_GATE_PENDING` (`0/6`), łącząca gotowość `QW-2099/2102/2090` oraz `QW-2101/2103/2092` wraz z kontrolą defektów logicznych.
+- Nowa deterministyczna kwantyfikacja luk:
+  - `QW-2105`: `T3T4_STRICT_INPUT_GAPS_PRESENT`, jawnie wyliczająca, jakich danych zewnętrznych brakuje do strict-ready T3/T4.
 - Bramka propagacji wtórnych parametrów EW została wykonana:
   - `QW-2098`: `EW_SECONDARY_NONANCHOR_CLOSURE_GATE_TARGET_MISS` (`8/10`),
   - promocja do strict-derived: `v_higgs`, `sin2_theta_w_mz`,
@@ -976,4 +994,4 @@ Wniosek:
   - `QW-2069`: strict-derived `28/32`, direct missing `0/32`, strict-unresolved `7/32`.
   - `QW-2081`: strict-unresolved w zakresie missing-14 to `4/14`:
     `delta_cp_ckm`, `h0`, `lambda_cosmological`, `G_newton`.
-  - `QW-2094` pozostaje czysty: `59` kontroli, `0` błędów.
+  - `QW-2094` pozostaje czysty: `84` kontrole, `0` błędów (w tym pre-gate `QW-2102/2103` i spójność scalonej bramki `QW-2104`).

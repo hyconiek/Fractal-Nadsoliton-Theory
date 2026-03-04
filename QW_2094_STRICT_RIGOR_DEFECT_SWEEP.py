@@ -43,8 +43,13 @@ def main() -> None:
     r2090 = load_optional_json("report_qw2090_h0_lambda_decoupling_gate.json")
     r2091 = load_optional_json("report_qw2091_neutrino_absolute_scale_gate.json")
     r2092 = load_optional_json("report_qw2092_gnewton_si_bridge_gate.json")
+    r2099 = load_optional_json("report_qw2099_hz_external_decoupling_autocollector.json")
+    r2101 = load_optional_json("report_qw2101_gnewton_bridge_external_autocollector.json")
     r2097 = load_optional_json("report_qw2097_ckm_cp_target_refinement_gate.json")
     r2098 = load_optional_json("report_qw2098_ew_secondary_nonanchor_closure_gate.json")
+    r2102 = load_optional_json("report_qw2102_hz_decoupling_identifiability_gate.json")
+    r2103 = load_optional_json("report_qw2103_gnewton_dimensionless_provenance_gate.json")
+    r2104 = load_optional_json("report_qw2104_t3t4_strict_preflight_gate.json")
     r2069 = load_json("report_qw2069_full_sm_gr_derivation_package.json")
     r2071 = load_json("report_qw2071_sm_gr_full_precision_closure_gate.json")
 
@@ -289,6 +294,178 @@ def main() -> None:
                 == str(upd98_map.get(pid, {}).get("method", ""))
             )
 
+    # 10) Optional H(z) identifiability pre-gate checks (QW-2102).
+    if r2102 is not None:
+        flags102 = r2102.get("flags", {})
+        met102 = r2102.get("metrics", {})
+        checks["QW-2102_pass_count_consistent"] = bool_pass_count(flags102) == int(
+            r2102.get("pass_count", -1)
+        )
+
+        verdict102 = str(r2102.get("verdict", ""))
+        checks["QW-2102_verdict_known"] = verdict102 in {
+            "HZ_DECOUPLING_IDENTIFIABILITY_GATE_PASS_STRICT_READY",
+            "HZ_DECOUPLING_IDENTIFIABILITY_GATE_WEAK_LEVERARM_PENDING",
+        }
+        if verdict102 == "HZ_DECOUPLING_IDENTIFIABILITY_GATE_WEAK_LEVERARM_PENDING":
+            checks["QW-2102_weak_blocks_qw2090_strict_pass"] = (
+                r2090 is None
+                or str(r2090.get("verdict", "")) != "H0_LAMBDA_DECOUPLING_GATE_PASS_STRICT"
+            )
+        elif verdict102 == "HZ_DECOUPLING_IDENTIFIABILITY_GATE_PASS_STRICT_READY":
+            checks["QW-2102_weak_blocks_qw2090_strict_pass"] = True
+        else:
+            checks["QW-2102_weak_blocks_qw2090_strict_pass"] = False
+
+        n_nodes = float(met102.get("n_nodes", -1.0))
+        z_span = met102.get("z_span")
+        e_span = met102.get("e_span")
+        cond = met102.get("design_condition_number")
+        checks["QW-2102_nodes_flag_matches_metric"] = (
+            bool(flags102.get("n_nodes_ge_5", False)) == bool(n_nodes >= 5.0)
+        )
+        checks["QW-2102_zspan_flag_matches_metric"] = (
+            bool(flags102.get("z_span_ge_0p8", False))
+            == bool(isinstance(z_span, (int, float)) and float(z_span) >= 0.8)
+        )
+        checks["QW-2102_espan_flag_matches_metric"] = (
+            bool(flags102.get("e_span_ge_1p0", False))
+            == bool(isinstance(e_span, (int, float)) and float(e_span) >= 1.0)
+        )
+        checks["QW-2102_cond_flag_matches_metric"] = (
+            bool(flags102.get("design_condition_lt_8", False))
+            == bool(isinstance(cond, (int, float)) and float(cond) < 8.0)
+        )
+        ctx102 = r2102.get("qw2090_context", {})
+        checks["QW-2102_qw2090_context_verdict_consistent"] = (
+            r2090 is None
+            or str(ctx102.get("qw2090_verdict", "")) == str(r2090.get("verdict", ""))
+        )
+
+    # 11) Optional G_newton provenance pre-gate checks (QW-2103).
+    if r2103 is not None:
+        flags103 = r2103.get("flags", {})
+        checks["QW-2103_pass_count_consistent"] = bool_pass_count(flags103) == int(
+            r2103.get("pass_count", -1)
+        )
+
+        verdict103 = str(r2103.get("verdict", ""))
+        checks["QW-2103_verdict_known"] = verdict103 in {
+            "GNEWTON_DIMENSIONLESS_PROVENANCE_GATE_PASS_STRICT_READY",
+            "GNEWTON_DIMENSIONLESS_PROVENANCE_GATE_PENDING_NONCLOSING",
+        }
+        if verdict103 == "GNEWTON_DIMENSIONLESS_PROVENANCE_GATE_PENDING_NONCLOSING":
+            checks["QW-2103_pending_blocks_qw2092_strict_pass"] = (
+                r2092 is None
+                or str(r2092.get("verdict", "")) != "GNEWTON_SI_BRIDGE_GATE_PASS_STRICT"
+            )
+        elif verdict103 == "GNEWTON_DIMENSIONLESS_PROVENANCE_GATE_PASS_STRICT_READY":
+            checks["QW-2103_pending_blocks_qw2092_strict_pass"] = True
+        else:
+            checks["QW-2103_pending_blocks_qw2092_strict_pass"] = False
+
+        summary103 = r2103.get("input_summary", {})
+        origin103 = str(summary103.get("bridge_observable_origin", ""))
+        checks["QW-2103_origin_matches_flag"] = (
+            (origin103 == "external_dimensionless_observable")
+            == bool(flags103.get("bridge_origin_external_dimensionless", False))
+        )
+        checks["QW-2103_anchor_free_matches_flag"] = (
+            bool(summary103.get("provenance_anchor_free", False))
+            == bool(flags103.get("provenance_anchor_free", False))
+        )
+        gsi_opt = summary103.get("g_si_input_optional", None)
+        checks["QW-2103_gsi_optional_matches_flag"] = (
+            (gsi_opt is None) == bool(flags103.get("g_si_not_primary_input", False))
+        )
+        if r2092 is not None:
+            flags92 = r2092.get("flags", {})
+            checks["QW-2103_matches_qw2092_backsolve_flag"] = (
+                (origin103 == "backsolved_from_g_si")
+                == (not bool(flags92.get("bridge_not_backsolved_from_g_si", False)))
+            )
+        else:
+            checks["QW-2103_matches_qw2092_backsolve_flag"] = True
+
+    # 12) Optional merged T3/T4 preflight meta-gate checks (QW-2104).
+    if r2104 is not None:
+        flags104 = r2104.get("flags", {})
+        checks["QW-2104_pass_count_consistent"] = bool_pass_count(flags104) == int(
+            r2104.get("pass_count", -1)
+        )
+        verdict104 = str(r2104.get("verdict", ""))
+        checks["QW-2104_verdict_known"] = verdict104 in {
+            "T3T4_STRICT_PREFLIGHT_GATE_PASS",
+            "T3T4_STRICT_PREFLIGHT_GATE_PENDING",
+            "T3T4_STRICT_PREFLIGHT_GATE_FAIL_LOGIC_DEFECT",
+        }
+        defects104 = r2104.get("defects", [])
+        checks["QW-2104_defects_list_type"] = isinstance(defects104, list)
+
+        if r2099 is not None:
+            checks["QW-2104_hz_input_ready_matches_qw2099"] = (
+                bool(flags104.get("hz_input_strict_ready", False))
+                == bool(r2099.get("strict_ready", False))
+            )
+        else:
+            checks["QW-2104_hz_input_ready_matches_qw2099"] = True
+
+        if r2102 is not None:
+            checks["QW-2104_hz_identifiability_matches_qw2102"] = (
+                bool(flags104.get("hz_identifiability_gate_pass", False))
+                == (
+                    str(r2102.get("verdict", ""))
+                    == "HZ_DECOUPLING_IDENTIFIABILITY_GATE_PASS_STRICT_READY"
+                )
+            )
+        else:
+            checks["QW-2104_hz_identifiability_matches_qw2102"] = True
+
+        if r2090 is not None:
+            checks["QW-2104_hz_decoupling_matches_qw2090"] = (
+                bool(flags104.get("hz_decoupling_gate_strict_pass", False))
+                == (str(r2090.get("verdict", "")) == "H0_LAMBDA_DECOUPLING_GATE_PASS_STRICT")
+            )
+        else:
+            checks["QW-2104_hz_decoupling_matches_qw2090"] = True
+
+        if r2101 is not None:
+            checks["QW-2104_g_bridge_ready_matches_qw2101"] = (
+                bool(flags104.get("g_bridge_input_strict_ready", False))
+                == bool(r2101.get("bridge", {}).get("strict_provenance_ready", False))
+            )
+        else:
+            checks["QW-2104_g_bridge_ready_matches_qw2101"] = True
+
+        if r2103 is not None:
+            checks["QW-2104_g_provenance_matches_qw2103"] = (
+                bool(flags104.get("g_provenance_gate_pass", False))
+                == (
+                    str(r2103.get("verdict", ""))
+                    == "GNEWTON_DIMENSIONLESS_PROVENANCE_GATE_PASS_STRICT_READY"
+                )
+            )
+        else:
+            checks["QW-2104_g_provenance_matches_qw2103"] = True
+
+        if r2092 is not None:
+            checks["QW-2104_g_si_bridge_matches_qw2092"] = (
+                bool(flags104.get("g_si_bridge_gate_strict_pass", False))
+                == (str(r2092.get("verdict", "")) == "GNEWTON_SI_BRIDGE_GATE_PASS_STRICT")
+            )
+        else:
+            checks["QW-2104_g_si_bridge_matches_qw2092"] = True
+
+        all104 = bool(all(bool(v) for v in flags104.values()))
+        if verdict104 == "T3T4_STRICT_PREFLIGHT_GATE_PASS":
+            checks["QW-2104_verdict_consistent_with_flags"] = all104 and len(defects104) == 0
+        elif verdict104 == "T3T4_STRICT_PREFLIGHT_GATE_PENDING":
+            checks["QW-2104_verdict_consistent_with_flags"] = (not all104) and len(defects104) == 0
+        elif verdict104 == "T3T4_STRICT_PREFLIGHT_GATE_FAIL_LOGIC_DEFECT":
+            checks["QW-2104_verdict_consistent_with_flags"] = len(defects104) > 0
+        else:
+            checks["QW-2104_verdict_consistent_with_flags"] = False
+
     # Build defect list.
     for name, ok in checks.items():
         if ok:
@@ -329,6 +506,16 @@ def main() -> None:
                 if r2092 is not None
                 else None
             ),
+            "qw2099": (
+                "report_qw2099_hz_external_decoupling_autocollector.json"
+                if r2099 is not None
+                else None
+            ),
+            "qw2101": (
+                "report_qw2101_gnewton_bridge_external_autocollector.json"
+                if r2101 is not None
+                else None
+            ),
             "qw2097": (
                 "report_qw2097_ckm_cp_target_refinement_gate.json"
                 if r2097 is not None
@@ -337,6 +524,21 @@ def main() -> None:
             "qw2098": (
                 "report_qw2098_ew_secondary_nonanchor_closure_gate.json"
                 if r2098 is not None
+                else None
+            ),
+            "qw2102": (
+                "report_qw2102_hz_decoupling_identifiability_gate.json"
+                if r2102 is not None
+                else None
+            ),
+            "qw2103": (
+                "report_qw2103_gnewton_dimensionless_provenance_gate.json"
+                if r2103 is not None
+                else None
+            ),
+            "qw2104": (
+                "report_qw2104_t3t4_strict_preflight_gate.json"
+                if r2104 is not None
                 else None
             ),
             "qw2069": "report_qw2069_full_sm_gr_derivation_package.json",

@@ -206,13 +206,15 @@ Below is the current closure status based on the newest internal gates/reports:
 - **QW-2090:** H0/Lambda decoupling gate executed in strict mode with metadata-hardened input checks; current run is explicit strict target-miss (`H0_LAMBDA_DECOUPLING_GATE_TARGET_MISS`, `7/9`) on current external H(z) snapshot. New identifiability diagnostics show weak two-parameter lever arm (`E` span ~`0.487`), while flatness-projection diagnostic is compatible with registry (`h0`/`lambda` both within tolerance) but remains non-closing for strict decoupling claim.
 - **QW-2091:** neutrino absolute-scale gate now strict-pass on externalized snapshot input (`NEUTRINO_ABSOLUTE_SCALE_GATE_PASS_STRICT`, `8/8`).
 - **QW-2092:** G_newton SI-bridge gate is currently non-closing (`GNEWTON_SI_BRIDGE_GATE_PENDING_NONCLOSING`, `6/8`) after tautology hardening blocks strict pass for backsolved `g_dimensionless_mu_ref`.
-- **QW-2099:** H(z) external decoupling autocollector builds `h0_lambda_decoupling_input_qw2090.json` with source hash and provenance metadata.
+- **QW-2099:** H(z) external decoupling autocollector now includes strict identifiability metrics/flags (`n_nodes`, `z_span`, `e_span`, `cond([E,1])`) and strict-ready verdicting; current snapshot is weak lever-arm (`HZ_EXTERNAL_DECOUPLING_AUTOCOLLECTED_WEAK_LEVERARM`).
 - **QW-2100:** neutrino absolute-scale external autocollector builds `neutrino_absolute_scale_input_qw2091.json` with source hash and metadata.
-- **QW-2101:** G_newton bridge external autocollector now labels bridge origin and emits non-strict verdict for backsolved inputs (`GNEWTON_BRIDGE_EXTERNAL_AUTOCOLLECTED_BACKSOLVED_NONSTRICT`).
+- **QW-2101:** G_newton bridge external autocollector now supports strict provenance mode (`--strict-dimensionless-only`, `--require-strict-ready`, `--omit-g-si-optional`) and explicit strict-ready verdicting; current snapshot remains backsolved non-strict (`GNEWTON_BRIDGE_EXTERNAL_AUTOCOLLECTED_BACKSOLVED_NONSTRICT`).
 - **QW-2102:** H(z) decoupling identifiability gate added; current input is weak-leverarm pending (`HZ_DECOUPLING_IDENTIFIABILITY_GATE_WEAK_LEVERARM_PENDING`, `3/7`), failing `n_nodes>=5`, `z_span>=0.8`, `e_span>=1.0`, and `cond<8`.
 - **QW-2103:** G_newton dimensionless provenance gate added; current bridge input remains non-closing (`GNEWTON_DIMENSIONLESS_PROVENANCE_GATE_PENDING_NONCLOSING`, `5/8`) because origin is `backsolved_from_g_si`, not direct external dimensionless observable.
+- **QW-2104:** T3/T4 strict preflight meta-gate added (`T3T4_STRICT_PREFLIGHT_GATE_PENDING`, `0/6`) to merge pre-gate + downstream readiness for `h0/lambda` and `G_newton` without overclaim.
+- **QW-2105:** T3/T4 strict input gap report added (`T3T4_STRICT_INPUT_GAPS_PRESENT`) with explicit blocking requirements for external data collection (H(z) lever-arm + dimensionless G provenance).
 - **QW-2098:** EW secondary non-anchor closure gate executed; `v_higgs` and `sin2_theta_w_mz` promoted to strict-derived, while `m_w` and `alpha_em_inv_mz` remain explicit strict target-miss (`EW_SECONDARY_NONANCHOR_CLOSURE_GATE_TARGET_MISS`, `8/10` flags).
-- **QW-2094:** strict-rigor defect sweep passes (`STRICT_RIGOR_DEFECT_SWEEP_PASS_NO_CRITICAL_DEFECTS`, `59` checks, `0` failed) for T1+T2+T3/T4 + EW-secondary consistency.
+- **QW-2094:** strict-rigor defect sweep passes (`STRICT_RIGOR_DEFECT_SWEEP_PASS_NO_CRITICAL_DEFECTS`, `84` checks, `0` failed) for T1+T2+T3/T4 + EW-secondary consistency, now including `QW-2102/2103` pre-gates and `QW-2104` meta-gate consistency checks.
 - **QW-2071:** full-precision closure gate remains partial strong internal (`3/6` pass flags), with `0` direct missing parameters, `7` strict-unresolved parameters, and `0` missing radiative channels.
 - **QW-1852 -> QW-2017 recheck after archive restoration:** QW-2014/2015/2016/2017 chain passes (`READY_STRICT` + strong blind external/intervention passes). QW-1852 readiness currently depends on expected candidate-dir presence (`EXTERNAL_DATASET_PENDING_COLLECTION` if missing).
 
@@ -225,6 +227,27 @@ Below is the current closure status based on the newest internal gates/reports:
 
 ### Practical interpretation
 FIN should currently be treated as an advanced, falsifiable unification candidate with strong partial results, not as a completed final theory.
+
+### Kernel -> Physical Values (Strict Derivation Chain)
+The derivation path is explicit and auditable:
+
+1. Freeze kernel and operator-level structure (`QW-2048`, `QW-2049`, `QW-2065`, `QW-2067`).
+2. Build deterministic non-anchor inputs from the frozen kernel (`QW-2093`, `QW-2095`) with no scan/no retune.
+3. Derive sector parameters in dedicated gates (T1/T2 + EW-secondary):
+   - `QW-2085` (`G_F`), `QW-2086` (`M_Z`), `QW-2087` (`alpha_s(M_Z)`),
+   - `QW-2088` (light quarks), `QW-2089` (Higgs self-coupling),
+   - `QW-2098` (EW-secondary closure gate).
+4. For non-anchor-sensitive channels, require external provenance-hardened inputs and pre-gates:
+   - `QW-2099 -> QW-2102 -> QW-2090` for `h0/lambda`,
+   - `QW-2101 -> QW-2103 -> QW-2092` for `G_newton`.
+5. Aggregate and stress-check consistency:
+   - package closure map (`QW-2069`),
+   - full-precision closure gate (`QW-2071`),
+   - defect sweep (`QW-2094`).
+
+Scientific meaning:
+- a value is treated as strict-derived only when the full chain above (including provenance/pre-gates where required) passes without anchor feedback loops or tautological backsolves.
+- this is exactly why `h0/lambda` and `G_newton` are still marked non-closing in the present snapshot.
 
 ### How Others Can Check It Now (Minimal Reproduction)
 Use the exact sequence below in a clean environment:
@@ -265,9 +288,13 @@ python3 QW_2101_GNEWTON_BRIDGE_EXTERNAL_AUTOCOLLECTOR.py \
   --citation "CODATA recommended value of Newtonian constant of gravitation" \
   --reference-url "https://physics.nist.gov/cgi-bin/cuu/Value?bg" \
   --source-version "CODATA_G_CURATED_SNAPSHOT_V1"
+python3 QW_2102_HZ_DECOUPLING_IDENTIFIABILITY_GATE.py --input h0_lambda_decoupling_input_qw2090.json
+python3 QW_2103_GNEWTON_DIMENSIONLESS_PROVENANCE_GATE.py --input gnewton_si_bridge_input_qw2092.json
 python3 QW_2090_H0_LAMBDA_DECOUPLING_GATE.py --input h0_lambda_decoupling_input_qw2090.json
 python3 QW_2091_NEUTRINO_ABSOLUTE_SCALE_GATE.py --input neutrino_absolute_scale_input_qw2091.json
 python3 QW_2092_GNEWTON_SI_BRIDGE_GATE.py --input gnewton_si_bridge_input_qw2092.json
+python3 QW_2104_T3T4_STRICT_PREFLIGHT_GATE.py
+python3 QW_2105_T3T4_STRICT_INPUT_GAP_REPORT.py
 python3 QW_2098_EW_SECONDARY_NONANCHOR_CLOSURE_GATE.py
 python3 QW_2069_FULL_SM_GR_DERIVATION_PACKAGE.py
 python3 QW_2070_FULL_RADIATIVE_PROGRAM_BASELINE.py
@@ -281,8 +308,28 @@ Expected interpretation:
 - after QW-2093 + QW-2085/2086/2087, T1 aggregate non-anchor gate (QW-2084) should pass in strict mode,
 - dedicated G_F/M_Z/alpha_s non-anchor gates should pass in strict mode using generated kernel-derived inputs,
 - QW-2091 can pass strict with externalized, metadata-hardened snapshot inputs; QW-2090 is currently strict target-miss on H(z), and QW-2092 remains non-closing when bridge input is backsolved from `g_si`,
-- strict-rigor defect sweep (QW-2094) should pass with no critical consistency defects,
+- strict-rigor defect sweep (QW-2094) should pass with no critical consistency defects (including `QW-2102/2103` pre-gates and `QW-2104` merged preflight checks),
 - missing-14 strict frontier remains partial by construction (`4/14` unresolved; no hidden retune).
+
+Optional strict preflight (expected to fail on current placeholder snapshots):
+
+```bash
+python3 QW_2099_HZ_EXTERNAL_DECOUPLING_AUTOCOLLECTOR.py \
+  --nodes-csv external_hz_nodes_qw2099.csv \
+  --citation "Alam et al. (BOSS DR12), MNRAS 470 (2017) 2617" \
+  --reference-url "https://arxiv.org/abs/1607.03155" \
+  --source-version "BOSS_DR12_2017_curated_snapshot_v1" \
+  --require-strict-ready
+
+python3 QW_2101_GNEWTON_BRIDGE_EXTERNAL_AUTOCOLLECTOR.py \
+  --source-file external_gnewton_bridge_qw2101.json \
+  --citation "CODATA recommended value of Newtonian constant of gravitation" \
+  --reference-url "https://physics.nist.gov/cgi-bin/cuu/Value?bg" \
+  --source-version "CODATA_G_CURATED_SNAPSHOT_V1" \
+  --strict-dimensionless-only \
+  --omit-g-si-optional \
+  --require-strict-ready
+```
 
 ---
 
@@ -294,6 +341,7 @@ Expected interpretation:
 - **[gemini_sum.md](gemini_sum.md)** — Research summary in Polish
 - **[DATA_SOURCES_EXTERNAL_DOWNLOADS.md](DATA_SOURCES_EXTERNAL_DOWNLOADS.md)** — Canonical external download sources (large raw files are not pushed to git)
 - **[INDEPENDENT_CHECK_GUIDE_EN_PL.md](INDEPENDENT_CHECK_GUIDE_EN_PL.md)** — Practical independent replication checklist (EN/PL)
+- **[STRICT_INPUT_PRECHECK_GUIDE_EN_PL.md](STRICT_INPUT_PRECHECK_GUIDE_EN_PL.md)** — Strict-ready input requirements for `h0/lambda` and `G_newton` channels (EN/PL)
 
 ---
 

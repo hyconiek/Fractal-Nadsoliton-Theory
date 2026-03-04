@@ -12,9 +12,12 @@ import argparse
 import csv
 import hashlib
 import json
+import math
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict, List
+
+import numpy as np
 
 
 ROOT = Path(__file__).resolve().parent
@@ -51,6 +54,26 @@ def load_nodes(csv_path: Path) -> List[Dict]:
     return rows
 
 
+def identifiability_metrics(nodes: List[Dict], omega_m: float, omega_r: float) -> Dict[str, float]:
+    z_vals = np.array([float(r["z"]) for r in nodes], dtype=float)
+    e_vals = np.array(
+        [omega_m * (1.0 + float(r["z"])) ** 3 + omega_r * (1.0 + float(r["z"])) ** 4 for r in nodes],
+        dtype=float,
+    )
+    a = np.column_stack((e_vals, np.ones_like(e_vals)))
+    cond = float(np.linalg.cond(a))
+    return {
+        "n_nodes": int(len(nodes)),
+        "z_min": float(np.min(z_vals)),
+        "z_max": float(np.max(z_vals)),
+        "z_span": float(np.max(z_vals) - np.min(z_vals)),
+        "e_min": float(np.min(e_vals)),
+        "e_max": float(np.max(e_vals)),
+        "e_span": float(np.max(e_vals) - np.min(e_vals)),
+        "design_condition_number": cond,
+    }
+
+
 def main() -> None:
     p = argparse.ArgumentParser(description="QW-2099 external H(z) decoupling autocollector")
     p.add_argument("--nodes-csv", default=str(DEFAULT_CSV), help="CSV with columns z,h_km_s_mpc,sigma_total")
@@ -61,6 +84,11 @@ def main() -> None:
     p.add_argument("--source-version", required=True, help="Dataset/paper version or release tag")
     p.add_argument("--omega-m", type=float, default=0.315, help="Omega_m used in decoupling model")
     p.add_argument("--omega-r", type=float, default=9.0e-5, help="Omega_r used in decoupling model")
+    p.add_argument(
+        "--require-strict-ready",
+        action="store_true",
+        help="Return non-zero exit code unless strict H(z) identifiability thresholds are met.",
+    )
     args = p.parse_args()
 
     csv_path = Path(args.nodes_csv).resolve()
@@ -70,6 +98,26 @@ def main() -> None:
 
     nodes = load_nodes(csv_path)
     sha = sha256_file(csv_path)
+    omega_m = float(args.omega_m)
+    omega_r = float(args.omega_r)
+
+    metrics = identifiability_metrics(nodes, omega_m=omega_m, omega_r=omega_r)
+    thresholds = {
+        "min_nodes": 5,
+        "min_z_span": 0.8,
+        "min_e_span": 1.0,
+        "max_design_condition_number": 8.0,
+    }
+    strict_flags = {
+        "n_nodes_ge_5": bool(metrics["n_nodes"] >= thresholds["min_nodes"]),
+        "z_span_ge_0p8": bool(metrics["z_span"] >= thresholds["min_z_span"]),
+        "e_span_ge_1p0": bool(metrics["e_span"] >= thresholds["min_e_span"]),
+        "design_condition_lt_8": bool(
+            math.isfinite(metrics["design_condition_number"])
+            and metrics["design_condition_number"] < thresholds["max_design_condition_number"]
+        ),
+    }
+    strict_ready = bool(all(strict_flags.values()))
 
     payload = {
         "source": str(args.source),
@@ -78,24 +126,37 @@ def main() -> None:
         "source_version": str(args.source_version),
         "source_sha256": sha,
         "provenance_anchor_free": True,
-        "omega_m": float(args.omega_m),
-        "omega_r": float(args.omega_r),
+        "omega_m": omega_m,
+        "omega_r": omega_r,
         "h_of_z_nodes": nodes,
     }
     out_input.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
     z_vals = [r["z"] for r in nodes]
     h_vals = [r["h_km_s_mpc"] for r in nodes]
+    verdict = (
+        "HZ_EXTERNAL_DECOUPLING_AUTOCOLLECTED_STRICT_READY"
+        if strict_ready
+        else "HZ_EXTERNAL_DECOUPLING_AUTOCOLLECTED_WEAK_LEVERARM"
+    )
     report = {
         "generated_utc": datetime.now(timezone.utc).isoformat(),
-        "verdict": "HZ_EXTERNAL_DECOUPLING_AUTOCOLLECTED",
+        "verdict": verdict,
         "nodes_csv": str(csv_path),
         "nodes_csv_sha256": sha,
         "n_nodes": len(nodes),
         "z_range": [float(min(z_vals)), float(max(z_vals))],
         "h_range_km_s_mpc": [float(min(h_vals)), float(max(h_vals))],
+        "strict_thresholds": thresholds,
+        "strict_identifiability_metrics": metrics,
+        "strict_identifiability_flags": strict_flags,
+        "strict_ready": strict_ready,
         "output_input_json": str(out_input),
-        "required_next_step": f"RUN_QW2090_WITH:{out_input.name}",
+        "required_next_step": (
+            f"RUN_QW2102_AND_QW2090_WITH:{out_input.name}"
+            if strict_ready
+            else "EXPAND_HZ_NODES_TO_STRICT_THRESHOLD_AND_RERUN_QW2099"
+        ),
     }
     OUT_JSON.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
 
@@ -109,6 +170,14 @@ def main() -> None:
         f"- n_nodes: `{len(nodes)}`",
         f"- z_range: `{report['z_range'][0]:.6g} .. {report['z_range'][1]:.6g}`",
         f"- h_range_km_s_mpc: `{report['h_range_km_s_mpc'][0]:.6g} .. {report['h_range_km_s_mpc'][1]:.6g}`",
+        f"- strict_ready: `{strict_ready}`",
+        "",
+        "## Strict Identifiability",
+        f"- n_nodes_ge_5: `{strict_flags['n_nodes_ge_5']}` (n={metrics['n_nodes']})",
+        f"- z_span_ge_0p8: `{strict_flags['z_span_ge_0p8']}` (z_span={metrics['z_span']:.6g})",
+        f"- e_span_ge_1p0: `{strict_flags['e_span_ge_1p0']}` (e_span={metrics['e_span']:.6g})",
+        f"- design_condition_lt_8: `{strict_flags['design_condition_lt_8']}` "
+        f"(cond={metrics['design_condition_number']:.6g})",
         "",
         "## Output",
         f"- input JSON: `{out_input}`",
@@ -119,7 +188,10 @@ def main() -> None:
     print(f"[QW-2099] Saved input JSON: {out_input}")
     print(f"[QW-2099] Saved report JSON: {OUT_JSON.name}")
     print(f"[QW-2099] Saved report MD:   {OUT_MD.name}")
-    print(f"[QW-2099] verdict={report['verdict']} n_nodes={len(nodes)}")
+    print(f"[QW-2099] verdict={report['verdict']} n_nodes={len(nodes)} strict_ready={strict_ready}")
+
+    if args.require_strict_ready and not strict_ready:
+        raise SystemExit(2)
 
 
 if __name__ == "__main__":

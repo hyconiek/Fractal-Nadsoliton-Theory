@@ -148,7 +148,8 @@ Current top-line status:
 
 28. `QW_2094_STRICT_RIGOR_DEFECT_SWEEP.py`
 - verdict: `STRICT_RIGOR_DEFECT_SWEEP_PASS_NO_CRITICAL_DEFECTS`
-- consistency checks: `59`, failed: `0`.
+- consistency checks: `84`, failed: `0` (including `QW-2104` merged preflight checks).
+- sweep now includes pre-gate consistency checks for `QW-2102` (H(z) identifiability), `QW-2103` (G_newton dimensionless provenance), and merged T3/T4 preflight consistency (`QW-2104`).
 
 29. `QW_2095_KERNEL_DERIVED_T2_NONANCHOR_INPUTS_PLAN_EXECUTOR.py`
 - verdict: `KERNEL_DERIVED_T2_NONANCHOR_INPUTS_BUILT_FROZEN_PLAN`
@@ -193,8 +194,9 @@ Current top-line status:
 - strict pass is blocked when bridge observable is backsolved from `g_si` (tautology hardening).
 
 37. `QW_2099_HZ_EXTERNAL_DECOUPLING_AUTOCOLLECTOR.py`
-- verdict: `HZ_EXTERNAL_DECOUPLING_AUTOCOLLECTED`
+- verdict: `HZ_EXTERNAL_DECOUPLING_AUTOCOLLECTED_WEAK_LEVERARM` (current snapshot)
 - strict input builder for QW-2090 (`h0_lambda_decoupling_input_qw2090.json`) with source hash and provenance metadata.
+- now reports strict identifiability metrics/flags (`n_nodes`, `z_span`, `e_span`, `cond([E,1])`) and supports hard preflight via `--require-strict-ready`.
 
 38. `QW_2100_NEUTRINO_ABSOLUTE_SCALE_EXTERNAL_AUTOCOLLECTOR.py`
 - verdict: `NEUTRINO_ABSOLUTE_SCALE_EXTERNAL_AUTOCOLLECTED`
@@ -203,6 +205,7 @@ Current top-line status:
 39. `QW_2101_GNEWTON_BRIDGE_EXTERNAL_AUTOCOLLECTOR.py`
 - verdict: `GNEWTON_BRIDGE_EXTERNAL_AUTOCOLLECTED_BACKSOLVED_NONSTRICT`
 - strict input builder for QW-2092 (`gnewton_si_bridge_input_qw2092.json`) now labels bridge origin and marks backsolved inputs as non-strict.
+- supports strict provenance mode via `--strict-dimensionless-only --omit-g-si-optional --require-strict-ready` for no-tautology/no-SI-primary preflight.
 
 40. `QW_2098_EW_SECONDARY_NONANCHOR_CLOSURE_GATE.py`
 - verdict: `EW_SECONDARY_NONANCHOR_CLOSURE_GATE_TARGET_MISS`
@@ -222,6 +225,17 @@ Current top-line status:
 - pass_count: `5/8`
 - strict-ready provenance for QW-2092 is not met:
   - failed: `bridge_origin_external_dimensionless`, `provenance_anchor_free`, `g_si_not_primary_input`.
+
+43. `QW_2104_T3T4_STRICT_PREFLIGHT_GATE.py`
+- verdict: `T3T4_STRICT_PREFLIGHT_GATE_PENDING`
+- pass_count: `0/6`
+- deterministic meta-gate merges `QW-2099/2102/2090` and `QW-2101/2103/2092` into one strict readiness verdict with contradiction checks.
+
+44. `QW_2105_T3T4_STRICT_INPUT_GAP_REPORT.py`
+- verdict: `T3T4_STRICT_INPUT_GAPS_PRESENT`
+- deterministic gap report quantifies exact external-input blockers:
+  - H(z): missing nodes/span/condition thresholds,
+  - G_newton: dimensionless provenance still backsolved/SI-primary.
 
 ## Fixed Kernel in This Closure Path
 

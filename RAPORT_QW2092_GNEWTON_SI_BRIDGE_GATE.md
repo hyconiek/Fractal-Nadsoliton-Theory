@@ -1,6 +1,6 @@
 # RAPORT QW-2092: GNEWTON SI BRIDGE GATE
 
-- Date UTC: 2026-03-04T10:46:13.072055+00:00
+- Date UTC: 2026-03-04T11:27:53.191001+00:00
 - Verdict: **GNEWTON_SI_BRIDGE_GATE_PENDING_NONCLOSING**
 - pass_count: 6/8
 - candidate_source: codata_gnewton_bridge_snapshot
