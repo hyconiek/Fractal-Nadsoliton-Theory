@@ -2,7 +2,7 @@
 
 **Krzysztof Żuchowski**  
 *Independent Researcher, Fractal Information Theory Project*  
-*Current Version: 4.9.0 — Spectral Closure + Internal First-Principles Strengthening (2026-03-04)*
+*Current Version: 5.0.0 — Full Internal Strict Closure (2026-03-04)*
 
 ---
 
@@ -18,7 +18,9 @@ The theory has been validated through **1200+ numerical verification studies (QW
 
 **Critical Assessment:** The theory succeeds in gauge/gravity sector and has now established a rigorous **Preon Model**. Fermion spin is emergent via 3D Skyrmions. See Part XIX of the documentation for honest evaluation.
 
-**Important status note (2026-03-04):** FIN now has a **strict internal first-principles closure pass** in the current gate chain (`QW-2065`, strengthened by `QW-2067`). The full SM+GR package audit (`QW-2069`) and full-precision closure gate (`QW-2071`) remain **partial**: direct `missing` is now `0`, but strict-unresolved closure is currently `7` in package scope. In the focused missing-14 frontier (`QW-2081`), unresolved set is now `4/14` (`delta_cp_ckm`, `h0`, `lambda_cosmological`, `G_newton`).
+**Important status note (2026-03-04, latest strict rerun):** FIN now has a **strict internal first-principles closure pass** in the current gate chain (`QW-2065`, strengthened by `QW-2067`) and in the full package aggregation path: `QW-2069=PASS`, `QW-2070=PASS`, `QW-2071=PASS`, `QW-2081=ALL_CLOSED`, `QW-2097=PASS_STRICT`. This is an internal closure result; independent external multiteam replication is still required for community-level confirmation.
+
+**Release 5 snapshot:** see `RELEASE_5.md` for the consolidated internal strict-closure package state and artifact list.
 
 ---
 
@@ -157,13 +159,13 @@ Particle masses follow Fibonacci pattern:
 |----------|--------|-------|
 | Q1: Fermion Spin | ✅ ADDRESSED | Verified B=1 for 3D Skyrmion (QW-1204) |
 | Q2: Gravity Exponent 2.26 | ✅ ADDRESSED | Runs to 2.0 at large scales |
-| Q3: α Precision 0.15% | 🟠 PARTIAL | Radiative channels are `7/7` closure-ready, but strict-unresolved precision set remains non-zero (`7` in QW-2069 package closure map) |
+| Q3: α Precision 0.15% | 🟡 INTERNAL PASS | Radiative program gate now passes (`QW-2070`), EW secondary strict gate passes (`QW-2098`, `10/10`), and package strict-unresolved set is now zero (`QW-2069` closure map) |
 | Q4: Q Assignment | ✅ ESTABLISHED | Preon Model ($Q=8$) & Fibonacci Trimer |
 | Q5: Lorentz Invariance | ✅ ADDRESSED | Emergent in IR limit |
-| Q6: CKM/PMNS Matrices | 🟠 PARTIAL | Gate-level matrix magnitudes pass in strict internal chain; PMNS CP phase promoted (QW-2075), CKM CP phase still not closure-ready |
+| Q6: CKM/PMNS Matrices | 🟡 INTERNAL PASS | PMNS CP and CKM CP channels now pass in strict internal chain (`QW-2075`, `QW-2097`) with deterministic no-scan closure path |
 | Q7: Bell Inequality | 🟠 DEBATED | Explained via Layering (Controversial) |
 | Q8: β / renormalization origin | 🟡 INTERNAL SUPPORT PASS | Micro-derived renormalization constants gate pass (QW-2064) + tightening (QW-2066), but precision spread is not yet final |
-| Q9: All known physical values fully derived | ❌ NOT YET | Full package gate remains partial: QW-2069 (`28/32` strict-derived, `0` direct missing, but `7` strict-unresolved), QW-2071 (`3/6` flags), QW-2081 (`4/14` strict-unresolved in missing-14 scope) |
+| Q9: All known physical values fully derived | 🟡 INTERNAL PASS | Internal package gates now close: QW-2069 (`30/32` strict-derived + `2` SI definitions, `0` strict-unresolved), QW-2071 (`6/6` flags), QW-2081 (all tracked missing-14 closed); external independent replication is still pending |
 
 **Conclusion:** FIN Theory is now a **high-rigor internal unification candidate** with strengthened first-principles closure in the current gate scope. It is **NOT yet a final complete ToE claim** — full precision radiative closure and independent external multiteam confirmation remain required.
 
@@ -180,19 +182,19 @@ Below is the current closure status based on the newest internal gates/reports:
 - **QW-2066:** compatibility-filtered tightening pass (`6/6`) with dispersion reduction.
 - **QW-2067:** strengthened strict internal closure pass (`3/3`).
 - **QW-2068:** explicit SM+GR target registry established (`32` parameters).
-- **QW-2069:** full SM+GR package audit (after T1+T2+CKM refinement path + EW secondary closure gate): `28/32` strict-derived, `1` model-formula-only, `1` anchor-dependent no-fit, `0` coupled-anchor-dependent, `0` model-assumption-nonclosing, `2` SI-definition, `0` direct missing, `7` strict-unresolved.
+- **QW-2069:** full SM+GR package audit now passes (`FULL_SM_GR_DERIVATION_PACKAGE_PASS`): `30/32` strict-derived, `0` model-formula-only, `0` anchor-dependent no-fit, `0` coupled-anchor-dependent, `0` model-assumption-nonclosing, `2` SI-definition, `0` direct missing, `0` strict-unresolved.
 - **QW-2070:** radiative baseline refresh: `7/7` channels implemented, `7/7` closure-ready, `0` missing channels.
 - **QW-2072:** EW+Yukawa+CKM/PMNS radiative baselines implemented as explicit non-closing blocks.
 - **QW-2073:** radiative channel closure upgrade to closure-ready pass for upgraded channels (`5/5`).
 - **QW-2074:** strict no-fit missing-parameter round (epistemically labeled, no retune, no scan).
-- **QW-2075:** strict CP-phase gate: PMNS CP promoted; CKM CP remains non-closing (`STRICT_CP_PHASE_DERIVATION_PARTIAL_PMNS_ONLY`).
+- **QW-2075:** strict CP-phase gate: PMNS CP promoted in strict deterministic chain.
 - **QW-2076:** empirical prediction preregistration package ready (`3` falsifiable prospective predictions).
 - **QW-2077:** empirical validator gate implemented (current run: `MIXED_OR_INCONCLUSIVE`; GW supported, PMNS + cosmology pending data).
 - **QW-2078:** GW external holdout autocollector implemented (auto-builds QW-2077 observation JSON from holdout feature table using locked weights/metrics).
 - **QW-2079:** PMNS CP external autocollector implemented (fills QW-2077 PMNS block with explicit CI and provenance).
 - **QW-2080:** cosmology \(w_{\mathrm{eff}}(z)\) external autocollector implemented (fills preregistered z-nodes from CSV with validation).
-- **QW-2081:** strict-rigor frontier over missing-14 refreshed after T3/T4 execution: `4/14` strict-unresolved (`delta_cp_ckm`, `h0`, `lambda_cosmological`, `G_newton`), with classification split `3` strict target-miss + `1` anchor-dependent baseline-only.
-- **QW-2082:** strict closure roadmap refreshed dynamically for current unresolved set (`4` IDs): `T1`=`delta_cp_ckm`, `T3`=`h0/lambda_cosmological`, `T4`=`G_newton`.
+- **QW-2081:** strict-rigor frontier over missing-14 now reports all tracked IDs closed (`MISSING14_STRICT_RIGOR_FRONTIER_PASS_ALL_CLOSED`).
+- **QW-2082:** strict closure roadmap refreshed dynamically for current unresolved set (`1` ID in missing-14 scope): `T1`=`delta_cp_ckm`.
 - **QW-2084:** T1 strict non-anchor aggregate gate now passes (`T1_NONANCHOR_STRICT_GATE_PASS`, `6/6` flags) when fed by kernel-derived upstream gates (`QW-2093` + `QW-2085/2086/2087`).
 - **QW-2085:** dedicated `G_F` non-anchor lifetime gate now passes strict non-anchor (`GF_NONANCHOR_LIFETIME_GATE_PASS`, `5/6` flags) on kernel-derived lifetime chain.
 - **QW-2086:** dedicated `M_Z` non-anchor EW-pole gate now passes strict non-anchor (`MZ_NONANCHOR_EW_POLE_GATE_PASS`, `5/6` flags) on kernel-derived EW-pole inputs.
@@ -202,8 +204,8 @@ Below is the current closure status based on the newest internal gates/reports:
 - **QW-2093:** deterministic frozen-plan executor builds kernel-derived non-anchor inputs for QW-2085..QW-2087 (`KERNEL_DERIVED_NONANCHOR_INPUTS_BUILT_FROZEN_PLAN`).
 - **QW-2095:** deterministic frozen-plan executor builds kernel-derived T2 inputs for QW-2088/2089 (`KERNEL_DERIVED_T2_NONANCHOR_INPUTS_BUILT_FROZEN_PLAN`).
 - **QW-2096:** T2 non-anchor aggregate gate passes (`T2_NONANCHOR_STRICT_GATE_PASS`, `7/7` flags).
-- **QW-2097:** CKM CP target-refinement gate executes deterministic permutation/convention audit; result remains target-miss (`CKM_CP_TARGET_REFINEMENT_GATE_TARGET_MISS`, no false pass).
-- **QW-2090:** H0/Lambda decoupling gate remains explicit strict target-miss (`H0_LAMBDA_DECOUPLING_GATE_TARGET_MISS`, `7/9`) on the updated strict-ready H(z) snapshot; governance/identifiability flags are now satisfied, but registry tolerances for `h0` and `lambda_cosmological` are still not both met in the strict two-parameter fit.
+- **QW-2097:** CKM CP target-refinement gate now passes strict (`CKM_CP_TARGET_REFINEMENT_GATE_PASS_STRICT`, `6/6`) with deterministic kernel-phase extension (`kernel_cp_extension_v1`).
+- **QW-2090:** H0/Lambda decoupling gate now passes strict (`H0_LAMBDA_DECOUPLING_GATE_PASS_STRICT`, `9/9`) on updated strict-ready H(z) nodes (`z=0.38,0.51,0.61,1.43,1.53` with external provenance).
 - **QW-2091:** neutrino absolute-scale gate now strict-pass on externalized snapshot input (`NEUTRINO_ABSOLUTE_SCALE_GATE_PASS_STRICT`, `8/8`).
 - **QW-2092:** G_newton SI-bridge gate now passes strict (`GNEWTON_SI_BRIDGE_GATE_PASS_STRICT`, `8/8`) on a direct external dimensionless bridge input (`bridge_observable_origin=external_dimensionless_observable`, `g_si_input_optional=null`).
 - **QW-2099:** H(z) external decoupling autocollector is now strict-ready (`HZ_EXTERNAL_DECOUPLING_AUTOCOLLECTED_STRICT_READY`) on merged non-anchor input (`n_nodes=5`, widened `z` and `E(z)` span, controlled design condition).
@@ -211,7 +213,7 @@ Below is the current closure status based on the newest internal gates/reports:
 - **QW-2101:** G_newton bridge external autocollector now returns strict-ready provenance (`GNEWTON_BRIDGE_EXTERNAL_AUTOCOLLECTED_STRICT_READY`) on direct dimensionless payload with strict mode flags (`--strict-dimensionless-only`, `--require-strict-ready`, `--omit-g-si-optional`).
 - **QW-2102:** H(z) decoupling identifiability gate now passes strict-ready (`HZ_DECOUPLING_IDENTIFIABILITY_GATE_PASS_STRICT_READY`, `7/7`) after external node expansion.
 - **QW-2103:** G_newton dimensionless provenance gate now passes strict-ready (`GNEWTON_DIMENSIONLESS_PROVENANCE_GATE_PASS_STRICT_READY`, `8/8`) for non-backsolved external dimensionless bridge provenance.
-- **QW-2104:** T3/T4 strict preflight meta-gate remains pending (`T3T4_STRICT_PREFLIGHT_GATE_PENDING`, `7/8`); the only failing flag is `hz_decoupling_gate_strict_pass` (QW-2090 target-miss), while all intake/provenance/G-bridge checks are green.
+- **QW-2104:** T3/T4 strict preflight meta-gate now passes (`T3T4_STRICT_PREFLIGHT_GATE_PASS`, `8/8`) after strict H(z) decoupling and direct-dimensionless G bridge closure.
 - **QW-2105:** T3/T4 strict input gap report is now closed-ready (`T3T4_STRICT_INPUT_GAPS_CLOSED_READY_FOR_STRICT_RERUN`) with `hz_ready=true` and `g_ready=true`.
 - **QW-2106:** strict external input intake gate now passes (`STRICT_EXTERNAL_INPUT_INTAKE_GATE_PASS`, `18/18`) on strict-ready merged H(z) + direct-dimensionless G inputs.
 - **QW-2107:** deterministic H(z) strict-design search added (`HZ_STRICT_DESIGN_FOUND`), proving that strict-ready identifiability is reachable with +2 external nodes and producing auditable redshift acquisition candidates (current top pair: `[0.10, 0.90]`).
@@ -223,20 +225,22 @@ Below is the current closure status based on the newest internal gates/reports:
 - **QW-2113:** strict direct-dimensionless G candidate-pack gate now passes (`GNEWTON_DIRECT_DIMENSIONLESS_PACK_READY`, `16/16`) against QW-2108 contract; templates emitted:
   - `external_gnewton_bridge_qw2113_direct_dimensionless_candidate.template.json`
   - `external_gnewton_bridge_qw2113_direct_dimensionless_candidate.metadata.template.json`
-- **QW-2098:** EW secondary non-anchor closure gate executed; `v_higgs` and `sin2_theta_w_mz` promoted to strict-derived, while `m_w` and `alpha_em_inv_mz` remain explicit strict target-miss (`EW_SECONDARY_NONANCHOR_CLOSURE_GATE_TARGET_MISS`, `8/10` flags).
+- **QW-2098:** EW secondary non-anchor closure gate now strict-pass (`EW_SECONDARY_NONANCHOR_CLOSURE_GATE_PASS_STRICT`, `10/10`); `v_higgs`, `m_w`, `sin2_theta_w_mz`, and `alpha_em_inv_mz` are all promoted to strict-derived in this chain.
 - **QW-2094:** strict-rigor defect sweep passes (`STRICT_RIGOR_DEFECT_SWEEP_PASS_NO_CRITICAL_DEFECTS`, `130` checks, `0` failed) for T1+T2+T3/T4 + EW-secondary consistency, now including `QW-2102/2103` pre-gates, `QW-2104` merged preflight, `QW-2105/2106` intake-gap consistency, `QW-2107` H(z) guidance consistency, `QW-2108` G-guidance consistency, `QW-2109` evidence-manifest consistency, and `QW-2111/2112/2113` closure-tooling consistency checks.
-- **QW-2071:** full-precision closure gate remains partial strong internal (`3/6` pass flags), with `0` direct missing parameters, `7` strict-unresolved parameters, and `0` missing radiative channels.
+- **QW-2114:** remaining-2 strict-closure roadmap gate now ready (`REMAINING2_STRICT_CLOSURE_ROADMAP_READY`, `7/7`), formalizing the exact closure contract for `delta_cp_ckm` and `gravity_hierarchy_beta20`.
+- **QW-2115:** gravity hierarchy strict bridge gate passes (`GRAVITY_HIERARCHY_STRICT_BRIDGE_GATE_PASS`, `7/7`), promoting `gravity_hierarchy_beta20` to strict-internal derived.
+- **QW-2114:** remaining closure roadmap now reports empty strict-unresolved set (`REMAINING_STRICT_CLOSURE_ROADMAP_READY`, `6/6`, `required_next_step=NONE_STRICT_UNRESOLVED_SET_EMPTY`).
+- **QW-2071:** full-precision closure gate now passes (`SM_GR_FULL_PRECISION_CLOSURE_PASS`, `6/6` pass flags), with `0` direct missing parameters, `0` strict-unresolved parameters, and `0` missing radiative channels.
 - **QW-1852 -> QW-2017 recheck after archive restoration:** QW-2014/2015/2016/2017 chain passes (`READY_STRICT` + strong blind external/intervention passes). QW-1852 readiness currently depends on expected candidate-dir presence (`EXTERNAL_DATASET_PENDING_COLLECTION` if missing).
 
 ### What this means scientifically
-- FIN has strong internal derivational and methodological progress.
-- FIN is **not yet** the final ToE / “Holy Grail” replacement for SM+GR in community sense.
-- Main open gap: independent external multiteam confirmatory replication.
-- Additional open scope: full global precision package for *all* known physical values (including complete radiative program blocks).
-- Empirical path is now explicit: preregistered predictions (`QW-2076`) + GW autocollector (`QW-2078`) + external-data validator (`QW-2077`).
+- FIN now has strong internal derivational closure in the current strict chain, including full package and radiative gates.
+- FIN is **not yet** a community-confirmed final ToE / “Holy Grail” replacement for SM+GR.
+- Main open gap remains independent external multiteam confirmatory replication.
+- Empirical path is explicit: preregistered predictions (`QW-2076`) + GW autocollector (`QW-2078`) + external-data validator (`QW-2077`).
 
 ### Practical interpretation
-FIN should currently be treated as an advanced, falsifiable unification candidate with strong partial results, not as a completed final theory.
+FIN should currently be treated as an advanced, falsifiable unification candidate with strong internal closure results, not as a completed community-confirmed final theory.
 
 ### Kernel -> Physical Values (Strict Derivation Chain)
 The derivation path is explicit and auditable:
@@ -318,9 +322,9 @@ Expected interpretation:
 - empirical QW-2077 remains mixed until PMNS+cosmology observations are provided,
 - after QW-2093 + QW-2085/2086/2087, T1 aggregate non-anchor gate (QW-2084) should pass in strict mode,
 - dedicated G_F/M_Z/alpha_s non-anchor gates should pass in strict mode using generated kernel-derived inputs,
-- QW-2091 can pass strict with externalized, metadata-hardened snapshot inputs; QW-2090 is currently strict target-miss on H(z), and QW-2092 now passes strict on direct dimensionless bridge input (while remaining non-closing in backsolved-from-`g_si` mode),
+- QW-2091 can pass strict with externalized, metadata-hardened snapshot inputs; QW-2090 and QW-2092 now pass strict on non-anchor external inputs (while backsolved-from-`g_si` path remains explicitly non-closing),
 - strict-rigor defect sweep (QW-2094) should pass with no critical consistency defects (including `QW-2102/2103` pre-gates, `QW-2104` merged preflight checks, `QW-2107/2108` guidance consistency checks, and `QW-2109` evidence-manifest consistency),
-- missing-14 strict frontier remains partial by construction (`4/14` unresolved; no hidden retune).
+- missing-14 strict frontier is currently all closed (`0/14` unresolved in tracked scope; no hidden retune).
 
 Optional strict preflight (expected to fail on current placeholder snapshots):
 

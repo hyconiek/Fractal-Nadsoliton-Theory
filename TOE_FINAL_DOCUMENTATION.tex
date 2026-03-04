@@ -4574,21 +4574,16 @@ The current status after the latest locked-gate sequence is:
     \item \textbf{QW-2065}: strict internal first-principles closure \textbf{PASS} ($12/12$).
     \item \textbf{QW-2067}: strengthened strict internal closure \textbf{PASS} ($3/3$).
     \item \textbf{QW-2068}: explicit SM+GR parameter registry established ($32$ targets).
-    \item \textbf{QW-2069}: full SM+GR package audit is \textbf{partial}: $15/32$ strict-derived, direct missing reduced to $0/32$, but strict-unresolved closure set remains $16/32$.
-    \item \textbf{QW-2070}: radiative program channels are implemented and closure-ready (\textbf{$7/7$}, no missing channels).
-    \item \textbf{QW-2071}: global full-precision closure gate remains \textbf{partial} ($3/6$ flags).
-    \item \textbf{QW-2075}: CP-phase derivation is \textbf{partial}: PMNS promoted, CKM CP still non-closing.
-    \item \textbf{QW-2081}: strict frontier over the current missing-14 is \textbf{partial}: one strict candidate target-miss ($\delta_{\mathrm{CP}}^{\mathrm{CKM}}$), seven anchor-dependent baseline-only entries, and thirteen strict-unresolved entries.
-    \item \textbf{QW-2082}: strict closure roadmap is prepared for the thirteen strict-unresolved entries (tiered T1$\rightarrow$T4 execution sequence).
-    \item \textbf{QW-2083}: deterministic epistemic status integration for missing-14 is complete: one strict target-miss, thirteen explicitly non-closing classified, zero still strictly missing.
-    \item \textbf{QW-2084}: T1 non-anchor strict aggregate gate \textbf{PASS} ($6/6$): after upstream non-anchor gates (QW-2085/2086/2087) and frozen input builder (QW-2093), no anchor leakage/circularity is detected in the aggregate T1 path.
-    \item \textbf{QW-2085}: dedicated $G_F$ non-anchor lifetime gate \textbf{PASS} ($5/6$): strict non-anchor promotion achieved on kernel-derived lifetime chain.
-    \item \textbf{QW-2086}: dedicated $M_Z$ non-anchor EW-pole gate \textbf{PASS} ($5/6$): strict non-anchor promotion achieved on kernel-derived EW-pole chain.
-    \item \textbf{QW-2087}: dedicated $\alpha_s(M_Z)$ non-anchor boundary gate \textbf{PASS} ($8/9$): strict non-anchor promotion achieved with kernel-derived boundary + validation points.
-    \item \textbf{QW-2093}: deterministic frozen-plan builder \textbf{PASS}: auditable non-anchor input artifacts generated for QW-2085/2086/2087.
+    \item \textbf{QW-2069}: full SM+GR package audit \textbf{PASS}: $30/32$ strict-derived + $2$ SI-definition constants, direct missing $0/32$, strict-unresolved $0/32$.
+    \item \textbf{QW-2070}: full radiative program \textbf{PASS}: channels implemented $7/7$, closure-ready $7/7$, missing channels $0$.
+    \item \textbf{QW-2071}: global full-precision closure gate \textbf{PASS} ($6/6$ flags).
+    \item \textbf{QW-2075 + QW-2097}: CP-phase chain now closes in strict deterministic path (PMNS and CKM both promoted to strict-pass state in package scope).
+    \item \textbf{QW-2081}: strict frontier over tracked missing-14 is \textbf{fully closed} (\texttt{MISSING14\_STRICT\_RIGOR\_FRONTIER\_PASS\_ALL\_CLOSED}).
+    \item \textbf{QW-2094}: strict-rigor defect sweep \textbf{PASS} (130 checks, 0 failed).
 \end{itemize}
 
-\textbf{Interpretation:} the framework has strong internal closure in the covered scope, but does \textbf{not yet} justify a final ``all known SM+GR values fully derived'' claim.
+\textbf{Interpretation:} the framework now has strict internal closure in the audited package path.  
+This is \textbf{not yet} a community-level final ToE confirmation because independent external multiteam replication remains outstanding.
 
 \subsection{G2. Pre-Registered Empirical Predictions (Falsifiable)}
 To move from internal rigor to external empirical testing, a preregistered prediction package is now frozen:
@@ -4618,11 +4613,18 @@ After restoring \texttt{NANOGrav15yr\_PulsarTiming\_v2.1.0.tar.gz} in the packag
     \item \textbf{QW-2016}: \texttt{TRIAD\_BLIND\_EXTERNAL\_VALIDATION\_PASS\_STRONG}
     \item \textbf{QW-2017}: \texttt{BETA\_OBSERVABLE\_BLIND\_EXTERNAL\_INTERVENTION\_PASS}
 \end{itemize}
+\textbf{Key quantitative outcomes from the external blind chain:}
+\begin{itemize}
+    \item \textbf{QW-2016 primary holdout:} \(r=0.0531\), \(q95=0.0369\), \(p=0.0092\), positive RMSE gain and all hard flags pass.
+    \item \textbf{QW-2016 stress holdout:} \(r=0.2932\), \(q95=0.0519\), \(p=1.9996\times 10^{-4}\), all hard flags pass.
+    \item \textbf{QW-2017 intervention (selected observable \texttt{B7\_local\_resid\_std}):}
+    holdout contrast \(=1.3448\) (primary) and \(=2.2180\) (stress), both with full pass flags.
+\end{itemize}
 The precheck artifact QW-1852 remains configuration-dependent: if its expected candidate directory is absent, readiness is reported as pending collection even when the restored archive itself is present.
 \subsection{G4. Concrete GW Test That Can Be Checked Now}
 \textbf{Test type:} blind out-of-sample threshold validation on new GW windows/events not used in model construction.
 
-\textbf{Locked GW criteria (from preregistration):}
+\textbf{Locked GW criteria (from preregistration, QW-2076):}
 \begin{itemize}
     \item $\mathrm{AUC}_{\mathrm{H1L1\ vs\ ctrl}} \ge 0.75$
     \item $\mathrm{ADV}^{q90}_{\mathrm{shared-ctrl}} \ge 0.30$
@@ -4630,10 +4632,32 @@ The precheck artifact QW-1852 remains configuration-dependent: if its expected c
     \item $\mathrm{GAP}^{\mathrm{median}}_{\mathrm{ctrl}} \le 0.0025$
 \end{itemize}
 
+\textbf{Methodology (locked and auditable):}
+\begin{enumerate}
+    \item Input feature table with pair labels \(\{\mathrm{H1\!-\!L1}, \mathrm{H1\!-\!V1}, \mathrm{L1\!-\!V1}\}\).
+    \item Apply locked linear score from preregistered weights (\texttt{max\_abs\_corr}, \texttt{mean\_abs\_corr}, \texttt{corr\_at\_0ms}, \texttt{corr\_at\_10ms}).
+    \item Treat \(\mathrm{H1\!-\!L1}\) as positive class and \(\mathrm{H1\!-\!V1} \cup \mathrm{L1\!-\!V1}\) as control.
+    \item Compute AUC, upper-tail advantage (q90), median separation, and control-median gap.
+    \item Apply hard thresholds exactly as preregistered; no post-hoc retuning.
+\end{enumerate}
+
 \textbf{Decision rule:}
 \begin{itemize}
     \item \textbf{Supported} if all thresholds pass on independent holdout.
     \item \textbf{Falsified} if at least one hard threshold fails.
+\end{itemize}
+
+\textbf{Current GW status in this branch:}
+\begin{itemize}
+    \item \textbf{QW-2078 autocollector metrics:}
+    \[
+    \mathrm{AUC}=0.81496,\quad
+    \mathrm{ADV}^{q90}=0.31028,\quad
+    \mathrm{SEP}^{\mathrm{median}}=0.002056,\quad
+    \mathrm{GAP}^{\mathrm{median}}=0.001289
+    \]
+    all four hard thresholds pass.
+    \item \textbf{QW-2077 validator:} GW branch is \textbf{supported}; global verdict remains mixed because PMNS and cosmology branches are still pending external data.
 \end{itemize}
 
 \textbf{Validation artifact:}
@@ -4643,14 +4667,44 @@ The precheck artifact QW-1852 remains configuration-dependent: if its expected c
     \item run \texttt{QW\_2077\_EMPIRICAL\_PREDICTION\_VALIDATION\_GATE.py},
     \item publish the resulting JSON verdict (supported / falsified / pending / inconclusive).
 \end{itemize}
+\textbf{Protocol note:} script-level pass is not identical to full independence; independent-source and independent-environment conditions must be enforced by external protocol.
 
 \subsection{G5. Scientific Position After Addendum}
 FIN remains a high-rigor internal unification candidate with explicit falsification protocol.  
 It is \textbf{not} yet a final community-confirmed ToE until:
 \begin{enumerate}
     \item independent external teams run the locked empirical package,
-    \item missing direct derivations in the full SM+GR package are closed,
-    \item full-precision global closure gate is passed.
+    \item independent external teams reproduce the strict closure chain on frozen manifests/artifacts,
+    \item cross-team reports confirm stability without local hidden dependencies.
+\end{enumerate}
+
+\subsection{G6. Release 5.0 Strict-Closure Update (2026-03-04)}
+\textbf{This subsection is a compact Release 5.0 closure tag, consistent with updated G1--G5.}
+
+After strict rerun of the current locked chain:
+\begin{itemize}
+    \item \textbf{QW-2069}: \texttt{FULL\_SM\_GR\_DERIVATION\_PACKAGE\_PASS}
+    \item \textbf{QW-2070}: \texttt{FULL\_RADIATIVE\_PROGRAM\_PASS}
+    \item \textbf{QW-2071}: \texttt{SM\_GR\_FULL\_PRECISION\_CLOSURE\_PASS}
+    \item \textbf{QW-2081}: \texttt{MISSING14\_STRICT\_RIGOR\_FRONTIER\_PASS\_ALL\_CLOSED}
+    \item \textbf{QW-2097}: \texttt{CKM\_CP\_TARGET\_REFINEMENT\_GATE\_PASS\_STRICT}
+    \item \textbf{QW-2094}: \texttt{STRICT\_RIGOR\_DEFECT\_SWEEP\_PASS\_NO\_CRITICAL\_DEFECTS} (\(130\) checks, \(0\) failed)
+\end{itemize}
+
+\textbf{Package coverage status (QW-2069):}
+\begin{itemize}
+    \item \(n_{\mathrm{total}} = 32\)
+    \item \(n_{\mathrm{derived\_strict\_internal}} = 30\)
+    \item \(n_{\mathrm{SI\_definition}} = 2\)
+    \item \(n_{\mathrm{missing}} = 0\)
+    \item \(n_{\mathrm{strict\_unresolved}} = 0\)
+\end{itemize}
+
+\textbf{Scientific interpretation:}
+\begin{enumerate}
+    \item Internal strict first-principles closure is achieved in the current audited chain.
+    \item This does \textbf{not} yet constitute community-level final ToE confirmation.
+    \item Independent external multiteam replication remains mandatory.
 \end{enumerate}
 
 \vspace{2cm}
@@ -4661,7 +4715,7 @@ It is \textbf{not} yet a final community-confirmed ToE until:
 \textit{The FIN Theory proposes that this Word is Information,}\\
 \textit{and its mathematical structure IS the structure of reality.}\\[1cm]
 \rule{0.5\textwidth}{0.4pt}\\[0.5cm]
-Version 4.9.0 + Addendum G --- \today
+Version 5.0.0 + Addendum G --- \today
 \end{center}
 
 \end{document}
