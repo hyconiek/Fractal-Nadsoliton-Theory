@@ -148,8 +148,8 @@ Current top-line status:
 
 28. `QW_2094_STRICT_RIGOR_DEFECT_SWEEP.py`
 - verdict: `STRICT_RIGOR_DEFECT_SWEEP_PASS_NO_CRITICAL_DEFECTS`
-- consistency checks: `113`, failed: `0` (including `QW-2104` merged preflight, `QW-2105/2106` intake-gap checks, `QW-2107` H(z) design-guidance checks, and `QW-2108` G-guidance checks).
-- sweep now includes pre-gate consistency checks for `QW-2102` (H(z) identifiability), `QW-2103` (G_newton dimensionless provenance), merged T3/T4 preflight consistency (`QW-2104`), intake/gap consistency (`QW-2105/2106`), deterministic H(z) design consistency (`QW-2107`), and deterministic G acquisition-spec consistency (`QW-2108`).
+- consistency checks: `130`, failed: `0` (including `QW-2104` merged preflight, `QW-2105/2106` intake-gap checks, `QW-2107` H(z) design-guidance checks, `QW-2108` G-guidance checks, `QW-2109` evidence-manifest checks, and closure-tooling checks for `QW-2111/2112/2113`).
+- sweep now includes pre-gate consistency checks for `QW-2102` (H(z) identifiability), `QW-2103` (G_newton dimensionless provenance), merged T3/T4 preflight consistency (`QW-2104`), intake/gap consistency (`QW-2105/2106`), deterministic H(z) design consistency (`QW-2107`), deterministic G acquisition-spec consistency (`QW-2108`), strict evidence-manifest consistency (`QW-2109`), and operational closure tooling consistency (`QW-2111/2112/2113`).
 
 29. `QW_2095_KERNEL_DERIVED_T2_NONANCHOR_INPUTS_PLAN_EXECUTOR.py`
 - verdict: `KERNEL_DERIVED_T2_NONANCHOR_INPUTS_BUILT_FROZEN_PLAN`
@@ -256,6 +256,44 @@ Current top-line status:
   - `g_dimensionless_target = 6.708830750342e-39`,
   - accepted range: `[6.373389212825e-39, 7.044272287859e-39]`.
 
+48. `QW_2109_STRICT_EXTERNAL_EVIDENCE_MANIFEST_GATE.py`
+- verdict: `STRICT_EXTERNAL_EVIDENCE_MANIFEST_GATE_PASS`
+- pass_count: `29/29`
+- enforces strict evidence-sidecar integrity for external T3/T4 artifacts:
+  - required evidence fields (`acquired_utc`, `artifact_sha256`, acquisition protocol/command, analyst),
+  - sidecar hash consistency (`artifact_sha256 == sha256(payload)`),
+  - sidecar schema/key consistency (`columns_schema` / `json_keys`).
+
+49. `QW_2110_EXTERNAL_EVIDENCE_SIDECAR_TEMPLATE_BUILDER.py`
+- deterministic strict sidecar-template builder for QW-2109.
+- outputs:
+  - `external_hz_nodes_qw2099.metadata.strict.template.json`
+  - `external_gnewton_bridge_qw2101.metadata.strict.template.json`
+- templates auto-fill payload hashes and schema/key snapshots while preserving explicit manual fields for citation-grade provenance.
+
+50. `QW_2111_T3T4_STRICT_EXTERNAL_ACQUISITION_PACKET.py`
+- verdict: `T3T4_STRICT_EXTERNAL_ACQUISITION_PACKET_READY`
+- deterministic closure packet for externally blocked T3/T4 channels:
+  - converts QW-2105 gaps into operational acquisition requirements,
+  - includes top-10 H(z) redshift candidate pairs from QW-2107,
+  - includes direct dimensionless G contract from QW-2108,
+  - includes strict rerun protocol after data refresh.
+
+51. `QW_2112_HZ_STRICT_NODE_PACK_GATE.py`
+- verdict: `HZ_STRICT_NODE_PACK_PENDING`
+- pass_count: `2/12`
+- validates externally collected H(z) candidate nodes with per-node provenance, performs non-destructive merge with baseline nodes, and checks strict-ready thresholds (`n_nodes/z_span/e_span/cond` + `z>=1.18` coverage).
+- emits candidate template:
+  - `external_hz_nodes_qw2112_candidates.template.csv`
+
+52. `QW_2113_GNEWTON_DIRECT_DIMENSIONLESS_PACK_GATE.py`
+- verdict: `GNEWTON_DIRECT_DIMENSIONLESS_PACK_PENDING`
+- pass_count: `1/16`
+- validates direct external dimensionless bridge payload against QW-2108 contract (`mu_ref=1 GeV`, accepted range, `origin=external_dimensionless_observable`, `g_si` null) with metadata constraints.
+- emits candidate templates:
+  - `external_gnewton_bridge_qw2113_direct_dimensionless_candidate.template.json`
+  - `external_gnewton_bridge_qw2113_direct_dimensionless_candidate.metadata.template.json`
+
 ## Fixed Kernel in This Closure Path
 
 - `omega = 0.185750`
@@ -296,3 +334,21 @@ Status as of this release:
 For the full high-school textbook style explanation in English and Polish, see:
 
 - `RELEASE_4_9_TEXTBOOK_EN_PL.md`
+
+## Web-Fetch Strict Update (2026-03-04 UTC)
+
+After external web-fetch completion and strict candidate ingestion:
+
+- `QW-2112`: `HZ_STRICT_NODE_PACK_READY` (`12/12`)
+- `QW-2113`: `GNEWTON_DIRECT_DIMENSIONLESS_PACK_READY` (`16/16`)
+- `QW-2099`: `HZ_EXTERNAL_DECOUPLING_AUTOCOLLECTED_STRICT_READY`
+- `QW-2102`: `HZ_DECOUPLING_IDENTIFIABILITY_GATE_PASS_STRICT_READY` (`7/7`)
+- `QW-2101`: `GNEWTON_BRIDGE_EXTERNAL_AUTOCOLLECTED_STRICT_READY`
+- `QW-2103`: `GNEWTON_DIMENSIONLESS_PROVENANCE_GATE_PASS_STRICT_READY` (`8/8`)
+- `QW-2092`: `GNEWTON_SI_BRIDGE_GATE_PASS_STRICT` (`8/8`)
+- `QW-2106`: `STRICT_EXTERNAL_INPUT_INTAKE_GATE_PASS` (`18/18`)
+- `QW-2109`: `STRICT_EXTERNAL_EVIDENCE_MANIFEST_GATE_PASS` (`29/29`)
+- `QW-2105`: `T3T4_STRICT_INPUT_GAPS_CLOSED_READY_FOR_STRICT_RERUN`
+- `QW-2104`: still pending (`7/8`) due only to `QW-2090` strict target miss
+- `QW-2090`: still `H0_LAMBDA_DECOUPLING_GATE_TARGET_MISS` (`7/9`)
+- `QW-2094`: `STRICT_RIGOR_DEFECT_SWEEP_PASS_NO_CRITICAL_DEFECTS` (`130`, failed `0`)

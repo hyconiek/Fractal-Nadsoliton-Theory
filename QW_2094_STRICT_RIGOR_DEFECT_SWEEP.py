@@ -54,6 +54,10 @@ def main() -> None:
     r2106 = load_optional_json("report_qw2106_strict_external_input_intake_gate.json")
     r2107 = load_optional_json("report_qw2107_hz_strict_design_search.json")
     r2108 = load_optional_json("report_qw2108_gnewton_dimensionless_acquisition_spec.json")
+    r2109 = load_optional_json("report_qw2109_strict_external_evidence_manifest_gate.json")
+    r2111 = load_optional_json("report_qw2111_t3t4_strict_external_acquisition_packet.json")
+    r2112 = load_optional_json("report_qw2112_hz_strict_node_pack_gate.json")
+    r2113 = load_optional_json("report_qw2113_gnewton_direct_dimensionless_pack_gate.json")
     r2069 = load_json("report_qw2069_full_sm_gr_derivation_package.json")
     r2071 = load_json("report_qw2071_sm_gr_full_precision_closure_gate.json")
 
@@ -665,6 +669,120 @@ def main() -> None:
             checks["QW-2108_verdict_matches_qw2105_guidance"] = True
             checks["QW-2108_target_matches_qw2105_guidance"] = True
 
+    # 17) Optional strict external evidence-manifest checks (QW-2109).
+    if r2109 is not None:
+        hz109 = r2109.get("hz_flags", {})
+        g109 = r2109.get("g_flags", {})
+        all109 = {**hz109, **g109}
+
+        checks["QW-2109_pass_count_consistent"] = bool_pass_count(all109) == int(
+            r2109.get("pass_count", -1)
+        )
+        verdict109 = str(r2109.get("verdict", ""))
+        checks["QW-2109_verdict_known"] = verdict109 in {
+            "STRICT_EXTERNAL_EVIDENCE_MANIFEST_GATE_PASS",
+            "STRICT_EXTERNAL_EVIDENCE_MANIFEST_GATE_PENDING",
+        }
+        all_flags_true109 = all(bool(v) for v in all109.values()) if all109 else False
+        if verdict109 == "STRICT_EXTERNAL_EVIDENCE_MANIFEST_GATE_PASS":
+            checks["QW-2109_verdict_consistent_with_flags"] = all_flags_true109
+        elif verdict109 == "STRICT_EXTERNAL_EVIDENCE_MANIFEST_GATE_PENDING":
+            checks["QW-2109_verdict_consistent_with_flags"] = not all_flags_true109
+        else:
+            checks["QW-2109_verdict_consistent_with_flags"] = False
+
+        hz_manifest = r2109.get("hz_manifest", {})
+        g_manifest = r2109.get("g_manifest", {})
+        checks["QW-2109_hz_sha_flag_matches_manifest"] = (
+            bool(hz109.get("hz_sha_matches_payload", False))
+            == (
+                str(hz_manifest.get("sha256_declared", "")) == str(hz_manifest.get("sha256_actual", ""))
+                and bool(str(hz_manifest.get("sha256_actual", "")))
+            )
+        )
+        checks["QW-2109_g_sha_flag_matches_manifest"] = (
+            bool(g109.get("g_sha_matches_payload", False))
+            == (
+                str(g_manifest.get("sha256_declared", "")) == str(g_manifest.get("sha256_actual", ""))
+                and bool(str(g_manifest.get("sha256_actual", "")))
+            )
+        )
+
+        if r2106 is not None:
+            verdict106 = str(r2106.get("verdict", ""))
+            checks["QW-2109_pending_blocks_qw2106_pass"] = not (
+                verdict109 == "STRICT_EXTERNAL_EVIDENCE_MANIFEST_GATE_PENDING"
+                and verdict106 == "STRICT_EXTERNAL_INPUT_INTAKE_GATE_PASS"
+            )
+        else:
+            checks["QW-2109_pending_blocks_qw2106_pass"] = True
+
+    # 18) Optional T3/T4 external acquisition packet checks (QW-2111).
+    if r2111 is not None:
+        checks["QW-2111_verdict_known"] = str(r2111.get("verdict", "")) in {
+            "T3T4_STRICT_EXTERNAL_ACQUISITION_PACKET_READY",
+        }
+        snap = r2111.get("status_snapshot", {})
+        if r2105 is not None:
+            checks["QW-2111_snapshot_qw2105_consistent"] = (
+                str(snap.get("qw2105_verdict", "")) == str(r2105.get("verdict", ""))
+            )
+        else:
+            checks["QW-2111_snapshot_qw2105_consistent"] = True
+        if r2106 is not None:
+            checks["QW-2111_snapshot_qw2106_consistent"] = (
+                str(snap.get("qw2106_verdict", "")) == str(r2106.get("verdict", ""))
+            )
+        else:
+            checks["QW-2111_snapshot_qw2106_consistent"] = True
+        if r2109 is not None:
+            checks["QW-2111_snapshot_qw2109_consistent"] = (
+                str(snap.get("qw2109_verdict", "")) == str(r2109.get("verdict", ""))
+            )
+        else:
+            checks["QW-2111_snapshot_qw2109_consistent"] = True
+
+        rerun = r2111.get("rerun_protocol_after_data_refresh", [])
+        checks["QW-2111_rerun_protocol_nonempty"] = isinstance(rerun, list) and len(rerun) >= 8
+
+    # 19) Optional H(z) candidate-pack gate checks (QW-2112).
+    if r2112 is not None:
+        flags112 = r2112.get("flags", {})
+        checks["QW-2112_pass_count_consistent"] = bool_pass_count(flags112) == int(
+            r2112.get("pass_count", -1)
+        )
+        checks["QW-2112_verdict_known"] = str(r2112.get("verdict", "")) in {
+            "HZ_STRICT_NODE_PACK_READY",
+            "HZ_STRICT_NODE_PACK_PENDING",
+        }
+        if r2102 is not None:
+            met112 = r2112.get("merged_metrics", {})
+            f102 = r2102.get("flags", {})
+            checks["QW-2112_nodes_match_qw2102_logic"] = (
+                bool(met112.get("n_nodes", 0) >= 5) == bool(f102.get("n_nodes_ge_5", False))
+            )
+        else:
+            checks["QW-2112_nodes_match_qw2102_logic"] = True
+
+    # 20) Optional direct dimensionless G candidate-pack checks (QW-2113).
+    if r2113 is not None:
+        flags113 = r2113.get("flags", {})
+        checks["QW-2113_pass_count_consistent"] = bool_pass_count(flags113) == int(
+            r2113.get("pass_count", -1)
+        )
+        checks["QW-2113_verdict_known"] = str(r2113.get("verdict", "")) in {
+            "GNEWTON_DIRECT_DIMENSIONLESS_PACK_READY",
+            "GNEWTON_DIRECT_DIMENSIONLESS_PACK_PENDING",
+        }
+        if r2108 is not None:
+            c113 = r2113.get("qw2108_contract", {})
+            s108 = r2108.get("bridge_spec", {})
+            checks["QW-2113_contract_mu_ref_matches_qw2108"] = (
+                c113.get("mu_ref_target_gev") == s108.get("mu_ref_gev")
+            )
+        else:
+            checks["QW-2113_contract_mu_ref_matches_qw2108"] = True
+
     # Build defect list.
     for name, ok in checks.items():
         if ok:
@@ -758,6 +876,26 @@ def main() -> None:
             "qw2108": (
                 "report_qw2108_gnewton_dimensionless_acquisition_spec.json"
                 if r2108 is not None
+                else None
+            ),
+            "qw2109": (
+                "report_qw2109_strict_external_evidence_manifest_gate.json"
+                if r2109 is not None
+                else None
+            ),
+            "qw2111": (
+                "report_qw2111_t3t4_strict_external_acquisition_packet.json"
+                if r2111 is not None
+                else None
+            ),
+            "qw2112": (
+                "report_qw2112_hz_strict_node_pack_gate.json"
+                if r2112 is not None
+                else None
+            ),
+            "qw2113": (
+                "report_qw2113_gnewton_direct_dimensionless_pack_gate.json"
+                if r2113 is not None
                 else None
             ),
             "qw2069": "report_qw2069_full_sm_gr_derivation_package.json",

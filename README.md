@@ -203,21 +203,28 @@ Below is the current closure status based on the newest internal gates/reports:
 - **QW-2095:** deterministic frozen-plan executor builds kernel-derived T2 inputs for QW-2088/2089 (`KERNEL_DERIVED_T2_NONANCHOR_INPUTS_BUILT_FROZEN_PLAN`).
 - **QW-2096:** T2 non-anchor aggregate gate passes (`T2_NONANCHOR_STRICT_GATE_PASS`, `7/7` flags).
 - **QW-2097:** CKM CP target-refinement gate executes deterministic permutation/convention audit; result remains target-miss (`CKM_CP_TARGET_REFINEMENT_GATE_TARGET_MISS`, no false pass).
-- **QW-2090:** H0/Lambda decoupling gate executed in strict mode with metadata-hardened input checks; current run is explicit strict target-miss (`H0_LAMBDA_DECOUPLING_GATE_TARGET_MISS`, `7/9`) on current external H(z) snapshot. New identifiability diagnostics show weak two-parameter lever arm (`E` span ~`0.487`), while flatness-projection diagnostic is compatible with registry (`h0`/`lambda` both within tolerance) but remains non-closing for strict decoupling claim.
+- **QW-2090:** H0/Lambda decoupling gate remains explicit strict target-miss (`H0_LAMBDA_DECOUPLING_GATE_TARGET_MISS`, `7/9`) on the updated strict-ready H(z) snapshot; governance/identifiability flags are now satisfied, but registry tolerances for `h0` and `lambda_cosmological` are still not both met in the strict two-parameter fit.
 - **QW-2091:** neutrino absolute-scale gate now strict-pass on externalized snapshot input (`NEUTRINO_ABSOLUTE_SCALE_GATE_PASS_STRICT`, `8/8`).
-- **QW-2092:** G_newton SI-bridge gate is currently non-closing (`GNEWTON_SI_BRIDGE_GATE_PENDING_NONCLOSING`, `6/8`) after tautology hardening blocks strict pass for backsolved `g_dimensionless_mu_ref`.
-- **QW-2099:** H(z) external decoupling autocollector now includes strict identifiability metrics/flags (`n_nodes`, `z_span`, `e_span`, `cond([E,1])`) and strict-ready verdicting; current snapshot is weak lever-arm (`HZ_EXTERNAL_DECOUPLING_AUTOCOLLECTED_WEAK_LEVERARM`).
+- **QW-2092:** G_newton SI-bridge gate now passes strict (`GNEWTON_SI_BRIDGE_GATE_PASS_STRICT`, `8/8`) on a direct external dimensionless bridge input (`bridge_observable_origin=external_dimensionless_observable`, `g_si_input_optional=null`).
+- **QW-2099:** H(z) external decoupling autocollector is now strict-ready (`HZ_EXTERNAL_DECOUPLING_AUTOCOLLECTED_STRICT_READY`) on merged non-anchor input (`n_nodes=5`, widened `z` and `E(z)` span, controlled design condition).
 - **QW-2100:** neutrino absolute-scale external autocollector builds `neutrino_absolute_scale_input_qw2091.json` with source hash and metadata.
-- **QW-2101:** G_newton bridge external autocollector now supports strict provenance mode (`--strict-dimensionless-only`, `--require-strict-ready`, `--omit-g-si-optional`) and explicit strict-ready verdicting; current snapshot remains backsolved non-strict (`GNEWTON_BRIDGE_EXTERNAL_AUTOCOLLECTED_BACKSOLVED_NONSTRICT`).
-- **QW-2102:** H(z) decoupling identifiability gate added; current input is weak-leverarm pending (`HZ_DECOUPLING_IDENTIFIABILITY_GATE_WEAK_LEVERARM_PENDING`, `3/7`), failing `n_nodes>=5`, `z_span>=0.8`, `e_span>=1.0`, and `cond<8`.
-- **QW-2103:** G_newton dimensionless provenance gate added; current bridge input remains non-closing (`GNEWTON_DIMENSIONLESS_PROVENANCE_GATE_PENDING_NONCLOSING`, `5/8`) because origin is `backsolved_from_g_si`, not direct external dimensionless observable.
-- **QW-2104:** T3/T4 strict preflight meta-gate added (`T3T4_STRICT_PREFLIGHT_GATE_PENDING`, `0/8`) to merge intake + pre-gate + downstream readiness for `h0/lambda` and `G_newton` without overclaim.
-- **QW-2105:** T3/T4 strict input gap report added (`T3T4_STRICT_INPUT_GAPS_PRESENT`) with explicit blocking requirements for external data collection (H(z) lever-arm + dimensionless G provenance), now including top recommended H(z) acquisition redshift pairs from `QW-2107`.
-- **QW-2106:** strict external input intake gate added (`STRICT_EXTERNAL_INPUT_INTAKE_GATE_PENDING`, current `10/18`) to validate raw files + sidecar metadata before autocollectors.
+- **QW-2101:** G_newton bridge external autocollector now returns strict-ready provenance (`GNEWTON_BRIDGE_EXTERNAL_AUTOCOLLECTED_STRICT_READY`) on direct dimensionless payload with strict mode flags (`--strict-dimensionless-only`, `--require-strict-ready`, `--omit-g-si-optional`).
+- **QW-2102:** H(z) decoupling identifiability gate now passes strict-ready (`HZ_DECOUPLING_IDENTIFIABILITY_GATE_PASS_STRICT_READY`, `7/7`) after external node expansion.
+- **QW-2103:** G_newton dimensionless provenance gate now passes strict-ready (`GNEWTON_DIMENSIONLESS_PROVENANCE_GATE_PASS_STRICT_READY`, `8/8`) for non-backsolved external dimensionless bridge provenance.
+- **QW-2104:** T3/T4 strict preflight meta-gate remains pending (`T3T4_STRICT_PREFLIGHT_GATE_PENDING`, `7/8`); the only failing flag is `hz_decoupling_gate_strict_pass` (QW-2090 target-miss), while all intake/provenance/G-bridge checks are green.
+- **QW-2105:** T3/T4 strict input gap report is now closed-ready (`T3T4_STRICT_INPUT_GAPS_CLOSED_READY_FOR_STRICT_RERUN`) with `hz_ready=true` and `g_ready=true`.
+- **QW-2106:** strict external input intake gate now passes (`STRICT_EXTERNAL_INPUT_INTAKE_GATE_PASS`, `18/18`) on strict-ready merged H(z) + direct-dimensionless G inputs.
 - **QW-2107:** deterministic H(z) strict-design search added (`HZ_STRICT_DESIGN_FOUND`), proving that strict-ready identifiability is reachable with +2 external nodes and producing auditable redshift acquisition candidates (current top pair: `[0.10, 0.90]`).
 - **QW-2108:** deterministic G-dimensionless acquisition spec added (`GNEWTON_DIMENSIONLESS_ACQUISITION_SPEC_READY`), providing strict target/range for external `g_dimensionless_mu_ref` at `mu_ref=1 GeV`: target `6.708830750342e-39`, accepted range `[6.373389212825e-39, 7.044272287859e-39]`.
+- **QW-2109:** strict external evidence-manifest gate now passes (`STRICT_EXTERNAL_EVIDENCE_MANIFEST_GATE_PASS`, `29/29`) with sidecar evidence fields (`acquired_utc`, `artifact_sha256`, protocol/command/analyst) and sidecar↔payload integrity checks.
+- **QW-2110:** deterministic strict sidecar-template builder added for QW-2109 (`external_hz_nodes_qw2099.metadata.strict.template.json`, `external_gnewton_bridge_qw2101.metadata.strict.template.json`) with auto-filled `artifact_sha256`, schema/key snapshots, and `record_count`.
+- **QW-2111:** deterministic T3/T4 strict external acquisition packet added (`T3T4_STRICT_EXTERNAL_ACQUISITION_PACKET_READY`) to operationalize closure requirements (top H(z) acquisition pairs + direct dimensionless G contract + rerun protocol).
+- **QW-2112:** strict H(z) candidate-pack gate now passes (`HZ_STRICT_NODE_PACK_READY`, `12/12`) with non-destructive merge and full threshold/provenance satisfaction.
+- **QW-2113:** strict direct-dimensionless G candidate-pack gate now passes (`GNEWTON_DIRECT_DIMENSIONLESS_PACK_READY`, `16/16`) against QW-2108 contract; templates emitted:
+  - `external_gnewton_bridge_qw2113_direct_dimensionless_candidate.template.json`
+  - `external_gnewton_bridge_qw2113_direct_dimensionless_candidate.metadata.template.json`
 - **QW-2098:** EW secondary non-anchor closure gate executed; `v_higgs` and `sin2_theta_w_mz` promoted to strict-derived, while `m_w` and `alpha_em_inv_mz` remain explicit strict target-miss (`EW_SECONDARY_NONANCHOR_CLOSURE_GATE_TARGET_MISS`, `8/10` flags).
-- **QW-2094:** strict-rigor defect sweep passes (`STRICT_RIGOR_DEFECT_SWEEP_PASS_NO_CRITICAL_DEFECTS`, `113` checks, `0` failed) for T1+T2+T3/T4 + EW-secondary consistency, now including `QW-2102/2103` pre-gates, `QW-2104` merged preflight, `QW-2105/2106` intake-gap consistency, `QW-2107` H(z) guidance consistency, and `QW-2108` G-guidance consistency checks.
+- **QW-2094:** strict-rigor defect sweep passes (`STRICT_RIGOR_DEFECT_SWEEP_PASS_NO_CRITICAL_DEFECTS`, `130` checks, `0` failed) for T1+T2+T3/T4 + EW-secondary consistency, now including `QW-2102/2103` pre-gates, `QW-2104` merged preflight, `QW-2105/2106` intake-gap consistency, `QW-2107` H(z) guidance consistency, `QW-2108` G-guidance consistency, `QW-2109` evidence-manifest consistency, and `QW-2111/2112/2113` closure-tooling consistency checks.
 - **QW-2071:** full-precision closure gate remains partial strong internal (`3/6` pass flags), with `0` direct missing parameters, `7` strict-unresolved parameters, and `0` missing radiative channels.
 - **QW-1852 -> QW-2017 recheck after archive restoration:** QW-2014/2015/2016/2017 chain passes (`READY_STRICT` + strong blind external/intervention passes). QW-1852 readiness currently depends on expected candidate-dir presence (`EXTERNAL_DATASET_PENDING_COLLECTION` if missing).
 
@@ -311,8 +318,8 @@ Expected interpretation:
 - empirical QW-2077 remains mixed until PMNS+cosmology observations are provided,
 - after QW-2093 + QW-2085/2086/2087, T1 aggregate non-anchor gate (QW-2084) should pass in strict mode,
 - dedicated G_F/M_Z/alpha_s non-anchor gates should pass in strict mode using generated kernel-derived inputs,
-- QW-2091 can pass strict with externalized, metadata-hardened snapshot inputs; QW-2090 is currently strict target-miss on H(z), and QW-2092 remains non-closing when bridge input is backsolved from `g_si`,
-- strict-rigor defect sweep (QW-2094) should pass with no critical consistency defects (including `QW-2102/2103` pre-gates, `QW-2104` merged preflight checks, and `QW-2107/2108` guidance consistency checks),
+- QW-2091 can pass strict with externalized, metadata-hardened snapshot inputs; QW-2090 is currently strict target-miss on H(z), and QW-2092 now passes strict on direct dimensionless bridge input (while remaining non-closing in backsolved-from-`g_si` mode),
+- strict-rigor defect sweep (QW-2094) should pass with no critical consistency defects (including `QW-2102/2103` pre-gates, `QW-2104` merged preflight checks, `QW-2107/2108` guidance consistency checks, and `QW-2109` evidence-manifest consistency),
 - missing-14 strict frontier remains partial by construction (`4/14` unresolved; no hidden retune).
 
 Optional strict preflight (expected to fail on current placeholder snapshots):
@@ -335,6 +342,11 @@ python3 QW_2101_GNEWTON_BRIDGE_EXTERNAL_AUTOCOLLECTOR.py \
   --require-strict-ready
 
 python3 QW_2106_STRICT_EXTERNAL_INPUT_INTAKE_GATE.py
+python3 QW_2110_EXTERNAL_EVIDENCE_SIDECAR_TEMPLATE_BUILDER.py
+python3 QW_2109_STRICT_EXTERNAL_EVIDENCE_MANIFEST_GATE.py
+python3 QW_2111_T3T4_STRICT_EXTERNAL_ACQUISITION_PACKET.py
+python3 QW_2112_HZ_STRICT_NODE_PACK_GATE.py
+python3 QW_2113_GNEWTON_DIRECT_DIMENSIONLESS_PACK_GATE.py
 ```
 
 ---
@@ -350,6 +362,8 @@ python3 QW_2106_STRICT_EXTERNAL_INPUT_INTAKE_GATE.py
 - **[STRICT_INPUT_PRECHECK_GUIDE_EN_PL.md](STRICT_INPUT_PRECHECK_GUIDE_EN_PL.md)** — Strict-ready input requirements for `h0/lambda` and `G_newton` channels (EN/PL)
 - **`external_hz_nodes_qw2099.metadata.template.json`** — sidecar metadata template for H(z) raw input
 - **`external_gnewton_bridge_qw2101.metadata.template.json`** — sidecar metadata template for G_newton bridge raw input
+- **`external_hz_nodes_qw2099.metadata.strict.template.json`** — strict evidence-manifest sidecar template for H(z) raw input (QW-2110)
+- **`external_gnewton_bridge_qw2101.metadata.strict.template.json`** — strict evidence-manifest sidecar template for G_newton bridge raw input (QW-2110)
 
 ---
 

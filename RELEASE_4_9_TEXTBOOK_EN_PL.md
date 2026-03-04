@@ -372,8 +372,9 @@ Meaning:
   - merged preflight consistency for QW-2104,
   - intake/gap consistency for QW-2105 and QW-2106,
   - design-guidance consistency for QW-2107 and QW-2108,
+  - evidence-manifest consistency for QW-2109,
   - strict-level/status integrity in package report.
-- Result: `113` checks, `0` failed.
+- Result: `130` checks, `0` failed.
 
 Meaning:
 - no critical implementation mismatch was detected in the audited non-anchor T1 closure path,
@@ -831,8 +832,9 @@ Znaczenie:
   - spójność scalonego preflightu QW-2104,
   - spójność intake/gap dla QW-2105 i QW-2106,
   - spójność guidance design dla QW-2107 i QW-2108,
+  - spójność evidence-manifest dla QW-2109,
   - integralność strict-level/status w raporcie pakietowym.
-- Wynik: `113` kontrole, `0` błędów.
+- Wynik: `130` kontroli, `0` błędów.
 
 Znaczenie:
 - w audytowanej ścieżce domknięcia T1 non-anchor nie wykryto krytycznych niespójności implementacyjnych,
@@ -958,6 +960,18 @@ Wniosek:
   - `QW-2107`: `HZ_STRICT_DESIGN_FOUND`, showing strict identifiability can be reached with +2 external nodes and providing auditable redshift candidates (current top pair: `[0.10, 0.90]`).
 - New deterministic G dimensionless acquisition specification:
   - `QW-2108`: `GNEWTON_DIMENSIONLESS_ACQUISITION_SPEC_READY`, defining strict external contract for `g_dimensionless_mu_ref` at `mu_ref=1 GeV`: target `6.708830750342e-39`, accepted range `[6.373389212825e-39, 7.044272287859e-39]`.
+- New strict evidence-manifest gate for external artifacts:
+  - `QW-2109`: `STRICT_EXTERNAL_EVIDENCE_MANIFEST_GATE_PASS` (`29/29`) after sidecar evidence completion (`acquired_utc` + `artifact_sha256` + acquisition protocol/command/analyst and schema/key consistency).
+- New deterministic strict sidecar-template builder:
+  - `QW-2110`: auto-builds strict sidecar templates with payload hashes for QW-2109:
+    `external_hz_nodes_qw2099.metadata.strict.template.json`,
+    `external_gnewton_bridge_qw2101.metadata.strict.template.json`.
+- New deterministic external acquisition packet for blocked T3/T4 closure:
+  - `QW-2111`: `T3T4_STRICT_EXTERNAL_ACQUISITION_PACKET_READY`, operationalizing exact H(z) + direct dimensionless G requirements and rerun protocol.
+- New strict H(z) candidate-pack gate:
+  - `QW-2112`: `HZ_STRICT_NODE_PACK_PENDING` (`2/12`), adding non-destructive merge + per-node provenance validation + strict threshold checks for candidate external H(z) nodes.
+- New strict direct-dimensionless G candidate-pack gate:
+  - `QW-2113`: `GNEWTON_DIRECT_DIMENSIONLESS_PACK_PENDING` (`1/16`), enforcing QW-2108 contract for direct external bridge candidate payloads and metadata.
 - New raw-input intake gate:
   - `QW-2106`: `STRICT_EXTERNAL_INPUT_INTAKE_GATE_PENDING` (`10/18`), requiring metadata sidecars and strict-ready raw input structure before T3/T4 autocollectors.
 - EW secondary propagation gate was executed:
@@ -968,7 +982,7 @@ Wniosek:
   - `QW-2069`: strict-derived `28/32`, direct missing `0/32`, strict-unresolved `7/32`.
   - `QW-2081`: strict-unresolved in missing-14 scope is `4/14`:
     `delta_cp_ckm`, `h0`, `lambda_cosmological`, `G_newton`.
-  - `QW-2094` defect sweep remains clean: `113` checks, `0` failed (including `QW-2102/2103` pre-gates, `QW-2104` merged preflight consistency, `QW-2105/2106` intake-gap consistency, and design-guidance consistency for `QW-2107/2108`).
+  - `QW-2094` defect sweep remains clean: `130` checks, `0` failed (including `QW-2102/2103` pre-gates, `QW-2104` merged preflight consistency, `QW-2105/2106` intake-gap consistency, design-guidance consistency for `QW-2107/2108`, evidence-manifest consistency for `QW-2109`, and closure-tooling consistency for `QW-2111/2112/2113`).
 
 ### PL
 
@@ -1000,6 +1014,18 @@ Wniosek:
   - `QW-2107`: `HZ_STRICT_DESIGN_FOUND`, pokazujący, że strict identyfikowalność można osiągnąć przy +2 zewnętrznych węzłach i podający audytowalne kandydaty redshift (obecnie para top: `[0.10, 0.90]`).
 - Nowa deterministyczna specyfikacja akwizycji bezwymiarowego mostu G:
   - `QW-2108`: `GNEWTON_DIMENSIONLESS_ACQUISITION_SPEC_READY`, definiująca ścisły kontrakt zewnętrzny dla `g_dimensionless_mu_ref` przy `mu_ref=1 GeV`: target `6.708830750342e-39`, zakres akceptacji `[6.373389212825e-39, 7.044272287859e-39]`.
+- Nowa bramka strict evidence-manifest dla artefaktów zewnętrznych:
+  - `QW-2109`: `STRICT_EXTERNAL_EVIDENCE_MANIFEST_GATE_PASS` (`29/29`) po uzupełnieniu pól dowodowych sidecar i weryfikacji zgodności hash/schema/key.
+- Nowy deterministyczny generator strict sidecar-template:
+  - `QW-2110`: automatycznie buduje template sidecar z hashami payloadów dla QW-2109:
+    `external_hz_nodes_qw2099.metadata.strict.template.json`,
+    `external_gnewton_bridge_qw2101.metadata.strict.template.json`.
+- Nowy deterministyczny pakiet akwizycji danych dla blokowanych kanałów T3/T4:
+  - `QW-2111`: `T3T4_STRICT_EXTERNAL_ACQUISITION_PACKET_READY`, zamienia luki diagnostyczne w operacyjną listę pomiarową i protokół rerun.
+- Nowa bramka strict candidate-pack dla H(z):
+  - `QW-2112`: `HZ_STRICT_NODE_PACK_PENDING` (`2/12`), dodająca nieinwazyjny merge + walidację proweniencji per-węzeł + kontrolę progów strict dla kandydatów H(z).
+- Nowa bramka strict candidate-pack dla bezpośredniego mostu bezwymiarowego G:
+  - `QW-2113`: `GNEWTON_DIRECT_DIMENSIONLESS_PACK_PENDING` (`1/16`), wymuszająca kontrakt QW-2108 dla kandydatów payload+metadata.
 - Nowa bramka intake dla surowych wejść:
   - `QW-2106`: `STRICT_EXTERNAL_INPUT_INTAKE_GATE_PENDING` (`10/18`), wymagająca metadanych sidecar i struktury strict-ready przed autocollectorami T3/T4.
 - Bramka propagacji wtórnych parametrów EW została wykonana:
@@ -1010,4 +1036,32 @@ Wniosek:
   - `QW-2069`: strict-derived `28/32`, direct missing `0/32`, strict-unresolved `7/32`.
   - `QW-2081`: strict-unresolved w zakresie missing-14 to `4/14`:
     `delta_cp_ckm`, `h0`, `lambda_cosmological`, `G_newton`.
-  - `QW-2094` pozostaje czysty: `113` kontrole, `0` błędów (w tym pre-gate `QW-2102/2103`, spójność scalonej bramki `QW-2104`, spójność intake/gap `QW-2105/2106` oraz spójność guidance dla `QW-2107/2108`).
+  - `QW-2094` pozostaje czysty: `130` kontroli, `0` błędów (w tym pre-gate `QW-2102/2103`, spójność scalonej bramki `QW-2104`, spójność intake/gap `QW-2105/2106`, spójność guidance dla `QW-2107/2108`, spójność evidence-manifest dla `QW-2109` oraz spójność narzędzi domykania `QW-2111/2112/2113`).
+
+## 14) Web-Fetch Update (2026-03-04 UTC)
+
+### EN
+
+Post web-fetch strict-ingestion update:
+
+1. `QW-2112` is now `HZ_STRICT_NODE_PACK_READY` (`12/12`).
+2. `QW-2113` is now `GNEWTON_DIRECT_DIMENSIONLESS_PACK_READY` (`16/16`).
+3. `QW-2099` + `QW-2102` are now strict-ready/pass for H(z) identifiability.
+4. `QW-2101` + `QW-2103` + `QW-2092` are now strict-ready/pass for direct dimensionless `G_newton` bridge.
+5. `QW-2106` (`18/18`) and `QW-2109` (`29/29`) both pass on strict evidence sidecars.
+6. `QW-2105` is now gap-closed ready.
+7. `QW-2104` remains pending only because `QW-2090` is still strict target-miss (`7/9`) for `h0/lambda`.
+8. `QW-2094` remains clean (`130` checks, `0` failed).
+
+### PL
+
+Po web-fetch i wpięciu danych strict:
+
+1. `QW-2112` ma teraz `HZ_STRICT_NODE_PACK_READY` (`12/12`).
+2. `QW-2113` ma teraz `GNEWTON_DIRECT_DIMENSIONLESS_PACK_READY` (`16/16`).
+3. `QW-2099` + `QW-2102` są już strict-ready/pass dla identyfikowalności H(z).
+4. `QW-2101` + `QW-2103` + `QW-2092` są już strict-ready/pass dla bezpośredniego mostu bezwymiarowego `G_newton`.
+5. `QW-2106` (`18/18`) i `QW-2109` (`29/29`) przechodzą z pełnym sidecar evidence.
+6. `QW-2105` jest zamknięte jako gap-closed ready.
+7. `QW-2104` pozostaje pending wyłącznie dlatego, że `QW-2090` nadal jest strict target-miss (`7/9`) dla `h0/lambda`.
+8. `QW-2094` pozostaje czysty (`130` kontroli, `0` błędów).

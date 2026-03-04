@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-03-04T12:35:49.567870+00:00",
+  "generated_utc": "2026-03-04T13:11:41.074103+00:00",
   "sources": {
     "qw2106": "report_qw2106_strict_external_input_intake_gate.json",
     "qw2107": "report_qw2107_hz_strict_design_search.json",
@@ -11,18 +11,13 @@
     "qw2104": "report_qw2104_t3t4_strict_preflight_gate.json"
   },
   "hz_path": {
-    "strict_ready": false,
-    "gaps": [
-      "add_nodes: at least 2 more valid H(z) nodes",
-      "extend_redshift_span: include at least one validated node at z >= 1.180",
-      "increase_E_span: add validated nodes at sufficiently separated z so E(z) span >= 1.0",
-      "improve_design_condition: reduce cond([E,1]) below 8 (current 10.956) via wider z coverage"
-    ],
+    "strict_ready": true,
+    "gaps": [],
     "current_metrics": {
-      "n_nodes": 3,
-      "z_span": 0.22999999999999998,
-      "e_span": 0.48701913687450005,
-      "design_condition_number": 10.956177494448182
+      "n_nodes": 5,
+      "z_span": 1.585,
+      "e_span": 7.389570990162656,
+      "design_condition_number": 6.474915521452492
     },
     "thresholds": {
       "min_nodes": 5,
@@ -64,17 +59,11 @@
     }
   },
   "gnewton_path": {
-    "strict_ready": false,
-    "gaps": [
-      "set_gnewton_provenance_anchor_free_true",
-      "provide_direct_dimensionless_bridge: g_dimensionless_mu_ref must come from external observable, not backsolve",
-      "set_bridge_observable_origin_external_dimensionless",
-      "set_provenance_anchor_free_true",
-      "set_g_si_input_optional_null"
-    ],
+    "strict_ready": true,
+    "gaps": [],
     "current_bridge": {
-      "bridge_observable_origin": "backsolved_from_g_si",
-      "strict_provenance_ready": false
+      "bridge_observable_origin": "external_dimensionless_observable",
+      "strict_provenance_ready": true
     }
   },
   "gnewton_design_guidance": {
@@ -88,14 +77,14 @@
   },
   "t3t4_meta_gate": {
     "qw2104_verdict": "T3T4_STRICT_PREFLIGHT_GATE_PENDING",
-    "qw2104_pass_count": 0,
+    "qw2104_pass_count": 7,
     "qw2104_total_flags": 8
   },
   "intake_gate": {
-    "qw2106_verdict": "STRICT_EXTERNAL_INPUT_INTAKE_GATE_PENDING",
-    "qw2106_pass_count": 10,
+    "qw2106_verdict": "STRICT_EXTERNAL_INPUT_INTAKE_GATE_PASS",
+    "qw2106_pass_count": 18,
     "qw2106_total_flags": 18
   },
-  "verdict": "T3T4_STRICT_INPUT_GAPS_PRESENT",
-  "required_next_step": "COLLECT_STRICT_READY_RAW_AND_DOWNSTREAM_INPUTS_THEN_RERUN_QW2106_QW2099_QW2101_QW2102_QW2103_QW2090_QW2092_QW2104_QW2094"
+  "verdict": "T3T4_STRICT_INPUT_GAPS_CLOSED_READY_FOR_STRICT_RERUN",
+  "required_next_step": "RERUN_T3T4_STRICT_CHAIN_AND_PROMOTE_CLOSURE"
 }

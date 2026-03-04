@@ -1,0 +1,66 @@
+{
+  "generated_utc": "2026-03-04T13:11:14.789963+00:00",
+  "inputs": {
+    "base_csv": "/home/krzysiek/Pobrane/TOE/edison/external_hz_nodes_qw2099.csv",
+    "candidate_csv": "/home/krzysiek/Pobrane/TOE/edison/external_hz_nodes_qw2112_candidates.csv",
+    "candidate_template_csv": "/home/krzysiek/Pobrane/TOE/edison/external_hz_nodes_qw2112_candidates.template.csv"
+  },
+  "errors": {
+    "base_error": "",
+    "candidate_error": ""
+  },
+  "counts": {
+    "n_base_rows": 3,
+    "n_candidate_rows": 2,
+    "n_added_unique": 2,
+    "n_merged_rows": 5
+  },
+  "merged_metrics": {
+    "n_nodes": 5,
+    "z_span": 1.585,
+    "e_span": 7.389570990162656,
+    "design_condition_number": 6.474915521452492
+  },
+  "candidate_rows_preview": [
+    {
+      "z": 1.363,
+      "h_km_s_mpc": 160.0,
+      "sigma_total": 33.6,
+      "citation": "Moresco et al., MNRAS 450 (2015) L16-L20",
+      "reference_url": "https://arxiv.org/abs/1503.01116",
+      "source_version": "MNRAS_450_L16_2015_v1",
+      "source_dataset_name": "Cosmic chronometers high-z H(z) points"
+    },
+    {
+      "z": 1.965,
+      "h_km_s_mpc": 186.5,
+      "sigma_total": 50.4,
+      "citation": "Moresco et al., MNRAS 450 (2015) L16-L20",
+      "reference_url": "https://arxiv.org/abs/1503.01116",
+      "source_version": "MNRAS_450_L16_2015_v1",
+      "source_dataset_name": "Cosmic chronometers high-z H(z) points"
+    }
+  ],
+  "flags": {
+    "base_csv_exists": true,
+    "base_csv_parse_ok": true,
+    "candidate_csv_exists": true,
+    "candidate_csv_parse_ok": true,
+    "candidate_rows_ge_2": true,
+    "candidate_provenance_per_row_complete": true,
+    "merged_added_unique_ge_2": true,
+    "merged_n_nodes_ge_5": true,
+    "merged_z_span_ge_0p8": true,
+    "merged_e_span_ge_1p0": true,
+    "merged_design_condition_lt_8": true,
+    "merged_has_node_z_ge_1p18": true
+  },
+  "pass_count": 12,
+  "total_flags": 12,
+  "output_artifacts": {
+    "merged_csv": "/home/krzysiek/Pobrane/TOE/edison/external_hz_nodes_qw2099.strict_candidate_merged.csv",
+    "merged_metadata": "/home/krzysiek/Pobrane/TOE/edison/external_hz_nodes_qw2099.strict_candidate_merged.metadata.json"
+  },
+  "verdict": "HZ_STRICT_NODE_PACK_READY",
+  "required_next_step": "USE_MERGED_HZ_FILE_IN_QW2099_AND_RERUN_QW2102_QW2090_QW2104_QW2105_QW2094"
+}

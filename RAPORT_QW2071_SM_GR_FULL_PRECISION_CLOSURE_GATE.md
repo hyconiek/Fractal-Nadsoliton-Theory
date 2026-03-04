@@ -1,6 +1,6 @@
 # RAPORT QW-2071: SM+GR FULL PRECISION CLOSURE GATE
 
-- Data UTC: 2026-03-04T10:56:25.714680+00:00
+- Data UTC: 2026-03-04T13:12:44.488258+00:00
 - Verdict: **SM_GR_FULL_PRECISION_CLOSURE_PARTIAL_STRONG_INTERNAL**
 - Gate pass count: 3/6
 
@@ -13,10 +13,10 @@
 - all_radiative_channels_implemented: True
 
 ## Coverage Summary
-- strict-derived parameters: 28
+- strict-derived parameters: 29
 - model-formula-only parameters: 1
 - missing parameters: 0
-- strict-unresolved parameters: 7
+- strict-unresolved parameters: 6
 - implemented radiative channels: 7
 - missing radiative channels: 0
 - implemented but non-closing radiative channels: 0

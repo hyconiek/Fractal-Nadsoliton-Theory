@@ -114,12 +114,17 @@ Expected current state (2026-03-04):
 - `QW-2106`: strict external input intake pending (`10/18`) until strict-ready raw inputs are provided,
 - `QW-2107`: deterministic H(z) strict-design search finds feasible +2 node acquisition plans (`HZ_STRICT_DESIGN_FOUND`),
 - `QW-2108`: deterministic G dimensionless acquisition spec provides strict target/range contract (`GNEWTON_DIMENSIONLESS_ACQUISITION_SPEC_READY`),
+- `QW-2109`: strict external evidence-manifest gate passes (`29/29`) after sidecars include full evidence fields + SHA256 + schema/key consistency,
+- `QW-2110`: deterministic strict sidecar-template builder is available for QW-2109 (`external_*strict.template.json`),
+- `QW-2111`: deterministic strict external acquisition packet is ready for T3/T4 (`T3T4_STRICT_EXTERNAL_ACQUISITION_PACKET_READY`),
+- `QW-2112`: strict H(z) candidate-pack gate is pending (`2/12`) and provides merge/threshold checks plus candidate template (`external_hz_nodes_qw2112_candidates.template.csv`),
+- `QW-2113`: strict direct-dimensionless G candidate-pack gate is pending (`1/16`) and provides strict contract templates for external bridge ingestion,
 - `QW-2069`: partial strong internal (`28/32` strict-derived, `0` direct missing, `7` strict-unresolved),
 - `QW-2072`: EW/Yukawa/CKM-PMNS baselines created,
 - `QW-2073`: channel upgrade checks executed,
 - `QW-2070`: radiative baseline (`7/7` implemented and `7/7` closure-ready),
 - `QW-2071`: partial strong internal (`3/6` closure flags; `0` direct missing parameters, strict-unresolved remains nonzero, `0` missing radiative channels).
-- `QW-2094`: strict-rigor defect sweep pass (`113` checks, `0` failed).
+- `QW-2094`: strict-rigor defect sweep pass (`130` checks, `0` failed).
 
 This extension is the transparent path for community teams to track progress from strong internal closure toward full SM+GR precision closure.
 
@@ -254,12 +259,17 @@ Oczekiwany obecny stan (2026-03-04):
 - `QW-2106`: bramka intake surowych wejść: pending (`10/18`) do czasu dostarczenia strict-ready raw inputs,
 - `QW-2107`: deterministyczny search projektu strict dla H(z) znajduje wykonalne plany akwizycji +2 węzłów (`HZ_STRICT_DESIGN_FOUND`),
 - `QW-2108`: deterministyczna specyfikacja akwizycji wymiaru bezwymiarowego G daje ścisły kontrakt target/range (`GNEWTON_DIMENSIONLESS_ACQUISITION_SPEC_READY`),
+- `QW-2109`: bramka strict evidence-manifest przechodzi (`29/29`) po uzupełnieniu sidecar o pełne pola dowodowe + SHA256 + spójność schema/key,
+- `QW-2110`: dostępny jest deterministyczny generator strict sidecar-template dla QW-2109 (`external_*strict.template.json`),
+- `QW-2111`: gotowy jest deterministyczny pakiet akwizycji danych strict dla T3/T4 (`T3T4_STRICT_EXTERNAL_ACQUISITION_PACKET_READY`),
+- `QW-2112`: bramka strict candidate-pack dla H(z) jest pending (`2/12`) i dostarcza walidację merge/progów oraz template kandydatów (`external_hz_nodes_qw2112_candidates.template.csv`),
+- `QW-2113`: bramka strict candidate-pack dla bezpośredniego mostu bezwymiarowego G jest pending (`1/16`) i dostarcza template’y zgodne z kontraktem strict,
 - `QW-2069`: status częściowy strong internal (`28/32` ścisłe derivacje, `0` direct missing, `7` strict-unresolved),
 - `QW-2072`: utworzono baseline EW/Yukawa/CKM-PMNS,
 - `QW-2073`: wykonano upgrade kanałów radiacyjnych,
 - `QW-2070`: radiative baseline (`7/7` zaimplementowanych i `7/7` closure-ready),
 - `QW-2071`: status częściowy strong internal (`3/6` flag domknięcia; `0` direct missing, strict-unresolved pozostaje > 0, `0` brakujących kanałów radiacyjnych).
-- `QW-2094`: PASS sweepu usterek rygoru ścisłego (`113` kontrole, `0` błędów).
+- `QW-2094`: PASS sweepu usterek rygoru ścisłego (`130` kontroli, `0` błędów).
 
 To rozszerzenie daje przejrzystą ścieżkę dla zespołów zewnętrznych od mocnego domknięcia wewnętrznego do pełnego domknięcia precyzyjnego SM+GR.
 
