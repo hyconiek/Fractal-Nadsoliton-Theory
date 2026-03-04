@@ -237,6 +237,11 @@ Current top-line status:
   - H(z): missing nodes/span/condition thresholds,
   - G_newton: dimensionless provenance still backsolved/SI-primary.
 
+45. `QW_2106_STRICT_EXTERNAL_INPUT_INTAKE_GATE.py`
+- verdict: `STRICT_EXTERNAL_INPUT_INTAKE_GATE_PENDING`
+- pass_count: `5/18`
+- raw external-input intake now enforces sidecar metadata + strict-ready structure before autocollector stages.
+
 ## Fixed Kernel in This Closure Path
 
 - `omega = 0.185750`

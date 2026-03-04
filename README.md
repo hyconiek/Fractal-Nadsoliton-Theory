@@ -213,6 +213,7 @@ Below is the current closure status based on the newest internal gates/reports:
 - **QW-2103:** G_newton dimensionless provenance gate added; current bridge input remains non-closing (`GNEWTON_DIMENSIONLESS_PROVENANCE_GATE_PENDING_NONCLOSING`, `5/8`) because origin is `backsolved_from_g_si`, not direct external dimensionless observable.
 - **QW-2104:** T3/T4 strict preflight meta-gate added (`T3T4_STRICT_PREFLIGHT_GATE_PENDING`, `0/6`) to merge pre-gate + downstream readiness for `h0/lambda` and `G_newton` without overclaim.
 - **QW-2105:** T3/T4 strict input gap report added (`T3T4_STRICT_INPUT_GAPS_PRESENT`) with explicit blocking requirements for external data collection (H(z) lever-arm + dimensionless G provenance).
+- **QW-2106:** strict external input intake gate added (`STRICT_EXTERNAL_INPUT_INTAKE_GATE_PENDING`, current `5/18`) to validate raw files + sidecar metadata before autocollectors.
 - **QW-2098:** EW secondary non-anchor closure gate executed; `v_higgs` and `sin2_theta_w_mz` promoted to strict-derived, while `m_w` and `alpha_em_inv_mz` remain explicit strict target-miss (`EW_SECONDARY_NONANCHOR_CLOSURE_GATE_TARGET_MISS`, `8/10` flags).
 - **QW-2094:** strict-rigor defect sweep passes (`STRICT_RIGOR_DEFECT_SWEEP_PASS_NO_CRITICAL_DEFECTS`, `84` checks, `0` failed) for T1+T2+T3/T4 + EW-secondary consistency, now including `QW-2102/2103` pre-gates and `QW-2104` meta-gate consistency checks.
 - **QW-2071:** full-precision closure gate remains partial strong internal (`3/6` pass flags), with `0` direct missing parameters, `7` strict-unresolved parameters, and `0` missing radiative channels.
@@ -295,6 +296,7 @@ python3 QW_2091_NEUTRINO_ABSOLUTE_SCALE_GATE.py --input neutrino_absolute_scale_
 python3 QW_2092_GNEWTON_SI_BRIDGE_GATE.py --input gnewton_si_bridge_input_qw2092.json
 python3 QW_2104_T3T4_STRICT_PREFLIGHT_GATE.py
 python3 QW_2105_T3T4_STRICT_INPUT_GAP_REPORT.py
+python3 QW_2106_STRICT_EXTERNAL_INPUT_INTAKE_GATE.py
 python3 QW_2098_EW_SECONDARY_NONANCHOR_CLOSURE_GATE.py
 python3 QW_2069_FULL_SM_GR_DERIVATION_PACKAGE.py
 python3 QW_2070_FULL_RADIATIVE_PROGRAM_BASELINE.py
@@ -329,6 +331,8 @@ python3 QW_2101_GNEWTON_BRIDGE_EXTERNAL_AUTOCOLLECTOR.py \
   --strict-dimensionless-only \
   --omit-g-si-optional \
   --require-strict-ready
+
+python3 QW_2106_STRICT_EXTERNAL_INPUT_INTAKE_GATE.py
 ```
 
 ---
@@ -342,6 +346,8 @@ python3 QW_2101_GNEWTON_BRIDGE_EXTERNAL_AUTOCOLLECTOR.py \
 - **[DATA_SOURCES_EXTERNAL_DOWNLOADS.md](DATA_SOURCES_EXTERNAL_DOWNLOADS.md)** — Canonical external download sources (large raw files are not pushed to git)
 - **[INDEPENDENT_CHECK_GUIDE_EN_PL.md](INDEPENDENT_CHECK_GUIDE_EN_PL.md)** — Practical independent replication checklist (EN/PL)
 - **[STRICT_INPUT_PRECHECK_GUIDE_EN_PL.md](STRICT_INPUT_PRECHECK_GUIDE_EN_PL.md)** — Strict-ready input requirements for `h0/lambda` and `G_newton` channels (EN/PL)
+- **`external_hz_nodes_qw2099.metadata.template.json`** — sidecar metadata template for H(z) raw input
+- **`external_gnewton_bridge_qw2101.metadata.template.json`** — sidecar metadata template for G_newton bridge raw input
 
 ---
 

@@ -950,6 +950,8 @@ Wniosek:
   - `QW-2104`: `T3T4_STRICT_PREFLIGHT_GATE_PENDING` (`0/6`), combining readiness from `QW-2099/2102/2090` and `QW-2101/2103/2092` with logic-defect checks.
 - New deterministic gap quantification:
   - `QW-2105`: `T3T4_STRICT_INPUT_GAPS_PRESENT`, explicitly listing what external inputs are still missing for strict-ready T3/T4.
+- New raw-input intake gate:
+  - `QW-2106`: `STRICT_EXTERNAL_INPUT_INTAKE_GATE_PENDING` (`5/18`), requiring metadata sidecars and strict-ready raw input structure before T3/T4 autocollectors.
 - EW secondary propagation gate was executed:
   - `QW-2098`: `EW_SECONDARY_NONANCHOR_CLOSURE_GATE_TARGET_MISS` (`8/10`),
   - strict-derived promotion: `v_higgs`, `sin2_theta_w_mz`,
@@ -986,6 +988,8 @@ Wniosek:
   - `QW-2104`: `T3T4_STRICT_PREFLIGHT_GATE_PENDING` (`0/6`), łącząca gotowość `QW-2099/2102/2090` oraz `QW-2101/2103/2092` wraz z kontrolą defektów logicznych.
 - Nowa deterministyczna kwantyfikacja luk:
   - `QW-2105`: `T3T4_STRICT_INPUT_GAPS_PRESENT`, jawnie wyliczająca, jakich danych zewnętrznych brakuje do strict-ready T3/T4.
+- Nowa bramka intake dla surowych wejść:
+  - `QW-2106`: `STRICT_EXTERNAL_INPUT_INTAKE_GATE_PENDING` (`5/18`), wymagająca metadanych sidecar i struktury strict-ready przed autocollectorami T3/T4.
 - Bramka propagacji wtórnych parametrów EW została wykonana:
   - `QW-2098`: `EW_SECONDARY_NONANCHOR_CLOSURE_GATE_TARGET_MISS` (`8/10`),
   - promocja do strict-derived: `v_higgs`, `sin2_theta_w_mz`,

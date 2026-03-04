@@ -8,6 +8,12 @@ This guide defines strict precheck requirements for the two currently non-closin
 - `h0` + `lambda_cosmological` (`QW-2099 -> QW-2102 -> QW-2090`)
 - `G_newton` (`QW-2101 -> QW-2103 -> QW-2092`)
 
+Raw-input intake gate (recommended first):
+- `QW-2106` validates raw files + metadata sidecars before autocollectors.
+- metadata templates:
+  - `external_hz_nodes_qw2099.metadata.template.json`
+  - `external_gnewton_bridge_qw2101.metadata.template.json`
+
 ### A) H(z) channel strict-ready requirements
 
 Input artifact: `h0_lambda_decoupling_input_qw2090.json` (built by `QW_2099_*`).
@@ -26,6 +32,8 @@ Metadata/provenance requirements:
 Run:
 
 ```bash
+python3 QW_2106_STRICT_EXTERNAL_INPUT_INTAKE_GATE.py
+
 python3 QW_2099_HZ_EXTERNAL_DECOUPLING_AUTOCOLLECTOR.py \
   --nodes-csv external_hz_nodes_qw2099.csv \
   --citation "YOUR_DATASET_CITATION" \
@@ -54,6 +62,8 @@ Hard provenance requirements (`QW-2103`):
 Run:
 
 ```bash
+python3 QW_2106_STRICT_EXTERNAL_INPUT_INTAKE_GATE.py
+
 python3 QW_2101_GNEWTON_BRIDGE_EXTERNAL_AUTOCOLLECTOR.py \
   --source-file external_gnewton_bridge_qw2101.json \
   --citation "YOUR_DIMENSIONLESS_BRIDGE_CITATION" \
@@ -79,6 +89,12 @@ Ten przewodnik definiuje ścisłe wymagania wejściowe dla dwóch obecnie niedom
 - `h0` + `lambda_cosmological` (`QW-2099 -> QW-2102 -> QW-2090`)
 - `G_newton` (`QW-2101 -> QW-2103 -> QW-2092`)
 
+Zalecana bramka intake surowych wejść:
+- `QW-2106` waliduje surowe pliki + metadane sidecar przed autocollectorami.
+- szablony metadanych:
+  - `external_hz_nodes_qw2099.metadata.template.json`
+  - `external_gnewton_bridge_qw2101.metadata.template.json`
+
 ### A) Kanał H(z): wymagania strict-ready
 
 Artefakt wejściowy: `h0_lambda_decoupling_input_qw2090.json` (budowany przez `QW_2099_*`).
@@ -97,6 +113,8 @@ Wymagania metadanych/proweniencji:
 Uruchomienie:
 
 ```bash
+python3 QW_2106_STRICT_EXTERNAL_INPUT_INTAKE_GATE.py
+
 python3 QW_2099_HZ_EXTERNAL_DECOUPLING_AUTOCOLLECTOR.py \
   --nodes-csv external_hz_nodes_qw2099.csv \
   --citation "YOUR_DATASET_CITATION" \
@@ -125,6 +143,8 @@ Wymagania twarde proweniencji (`QW-2103`):
 Uruchomienie:
 
 ```bash
+python3 QW_2106_STRICT_EXTERNAL_INPUT_INTAKE_GATE.py
+
 python3 QW_2101_GNEWTON_BRIDGE_EXTERNAL_AUTOCOLLECTOR.py \
   --source-file external_gnewton_bridge_qw2101.json \
   --citation "YOUR_DIMENSIONLESS_BRIDGE_CITATION" \

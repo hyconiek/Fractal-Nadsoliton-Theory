@@ -74,21 +74,22 @@ After the locked confirmatory path, run:
 13. `python3 QW_2089_HIGGS_SELFCOUPLING_STRICT_GATE.py --input t2_nonanchor_higgs_input_qw2089.json`
 14. `python3 QW_2096_T2_NONANCHOR_STRICT_GATE.py`
 15. `python3 QW_2097_CKM_CP_TARGET_REFINEMENT_GATE.py`
-16. `python3 QW_2099_HZ_EXTERNAL_DECOUPLING_AUTOCOLLECTOR.py --nodes-csv external_hz_nodes_qw2099.csv --citation \"Alam et al. (BOSS DR12), MNRAS 470 (2017) 2617\" --reference-url \"https://arxiv.org/abs/1607.03155\" --source-version \"BOSS_DR12_2017_curated_snapshot_v1\"`
-17. `python3 QW_2101_GNEWTON_BRIDGE_EXTERNAL_AUTOCOLLECTOR.py --source-file external_gnewton_bridge_qw2101.json --citation \"CODATA recommended value of Newtonian constant of gravitation\" --reference-url \"https://physics.nist.gov/cgi-bin/cuu/Value?bg\" --source-version \"CODATA_G_CURATED_SNAPSHOT_V1\"`
-18. `python3 QW_2102_HZ_DECOUPLING_IDENTIFIABILITY_GATE.py`
-19. `python3 QW_2103_GNEWTON_DIMENSIONLESS_PROVENANCE_GATE.py`
-20. `python3 QW_2090_H0_LAMBDA_DECOUPLING_GATE.py`
-21. `python3 QW_2091_NEUTRINO_ABSOLUTE_SCALE_GATE.py`
-22. `python3 QW_2092_GNEWTON_SI_BRIDGE_GATE.py`
-23. `python3 QW_2098_EW_SECONDARY_NONANCHOR_CLOSURE_GATE.py`
-24. `python3 QW_2104_T3T4_STRICT_PREFLIGHT_GATE.py`
-25. `python3 QW_2105_T3T4_STRICT_INPUT_GAP_REPORT.py`
-26. `python3 QW_2069_FULL_SM_GR_DERIVATION_PACKAGE.py`
-27. `python3 QW_2072_EW_YUKAWA_FLAVOR_RADIATIVE_BASELINES.py`
-28. `python3 QW_2070_FULL_RADIATIVE_PROGRAM_BASELINE.py`
-29. `python3 QW_2071_SM_GR_FULL_PRECISION_CLOSURE_GATE.py`
-30. `python3 QW_2094_STRICT_RIGOR_DEFECT_SWEEP.py`
+16. `python3 QW_2106_STRICT_EXTERNAL_INPUT_INTAKE_GATE.py`
+17. `python3 QW_2099_HZ_EXTERNAL_DECOUPLING_AUTOCOLLECTOR.py --nodes-csv external_hz_nodes_qw2099.csv --citation \"Alam et al. (BOSS DR12), MNRAS 470 (2017) 2617\" --reference-url \"https://arxiv.org/abs/1607.03155\" --source-version \"BOSS_DR12_2017_curated_snapshot_v1\"`
+18. `python3 QW_2101_GNEWTON_BRIDGE_EXTERNAL_AUTOCOLLECTOR.py --source-file external_gnewton_bridge_qw2101.json --citation \"CODATA recommended value of Newtonian constant of gravitation\" --reference-url \"https://physics.nist.gov/cgi-bin/cuu/Value?bg\" --source-version \"CODATA_G_CURATED_SNAPSHOT_V1\"`
+19. `python3 QW_2102_HZ_DECOUPLING_IDENTIFIABILITY_GATE.py`
+20. `python3 QW_2103_GNEWTON_DIMENSIONLESS_PROVENANCE_GATE.py`
+21. `python3 QW_2090_H0_LAMBDA_DECOUPLING_GATE.py`
+22. `python3 QW_2091_NEUTRINO_ABSOLUTE_SCALE_GATE.py`
+23. `python3 QW_2092_GNEWTON_SI_BRIDGE_GATE.py`
+24. `python3 QW_2098_EW_SECONDARY_NONANCHOR_CLOSURE_GATE.py`
+25. `python3 QW_2104_T3T4_STRICT_PREFLIGHT_GATE.py`
+26. `python3 QW_2105_T3T4_STRICT_INPUT_GAP_REPORT.py`
+27. `python3 QW_2069_FULL_SM_GR_DERIVATION_PACKAGE.py`
+28. `python3 QW_2072_EW_YUKAWA_FLAVOR_RADIATIVE_BASELINES.py`
+29. `python3 QW_2070_FULL_RADIATIVE_PROGRAM_BASELINE.py`
+30. `python3 QW_2071_SM_GR_FULL_PRECISION_CLOSURE_GATE.py`
+31. `python3 QW_2094_STRICT_RIGOR_DEFECT_SWEEP.py`
 
 Expected current state (2026-03-04):
 - `QW-2075`: strict CP phase round partial (`PMNS promoted`, `CKM still non-closing`),
@@ -108,6 +109,7 @@ Expected current state (2026-03-04):
 - `QW-2103`: G_newton provenance pre-gate pending (`5/8`),
 - `QW-2104`: merged T3/T4 preflight pending (`0/6`),
 - `QW-2105`: strict input gap report indicates explicit external data gaps,
+- `QW-2106`: strict external input intake pending (`5/18`) until metadata sidecars and strict-ready raw inputs are provided,
 - `QW-2069`: partial strong internal (`28/32` strict-derived, `0` direct missing, `7` strict-unresolved),
 - `QW-2072`: EW/Yukawa/CKM-PMNS baselines created,
 - `QW-2073`: channel upgrade checks executed,
@@ -208,21 +210,22 @@ Po ścieżce locked confirmatory uruchomić:
 13. `python3 QW_2089_HIGGS_SELFCOUPLING_STRICT_GATE.py --input t2_nonanchor_higgs_input_qw2089.json`
 14. `python3 QW_2096_T2_NONANCHOR_STRICT_GATE.py`
 15. `python3 QW_2097_CKM_CP_TARGET_REFINEMENT_GATE.py`
-16. `python3 QW_2099_HZ_EXTERNAL_DECOUPLING_AUTOCOLLECTOR.py --nodes-csv external_hz_nodes_qw2099.csv --citation \"Alam et al. (BOSS DR12), MNRAS 470 (2017) 2617\" --reference-url \"https://arxiv.org/abs/1607.03155\" --source-version \"BOSS_DR12_2017_curated_snapshot_v1\"`
-17. `python3 QW_2101_GNEWTON_BRIDGE_EXTERNAL_AUTOCOLLECTOR.py --source-file external_gnewton_bridge_qw2101.json --citation \"CODATA recommended value of Newtonian constant of gravitation\" --reference-url \"https://physics.nist.gov/cgi-bin/cuu/Value?bg\" --source-version \"CODATA_G_CURATED_SNAPSHOT_V1\"`
-18. `python3 QW_2102_HZ_DECOUPLING_IDENTIFIABILITY_GATE.py`
-19. `python3 QW_2103_GNEWTON_DIMENSIONLESS_PROVENANCE_GATE.py`
-20. `python3 QW_2090_H0_LAMBDA_DECOUPLING_GATE.py`
-21. `python3 QW_2091_NEUTRINO_ABSOLUTE_SCALE_GATE.py`
-22. `python3 QW_2092_GNEWTON_SI_BRIDGE_GATE.py`
-23. `python3 QW_2098_EW_SECONDARY_NONANCHOR_CLOSURE_GATE.py`
-24. `python3 QW_2104_T3T4_STRICT_PREFLIGHT_GATE.py`
-25. `python3 QW_2105_T3T4_STRICT_INPUT_GAP_REPORT.py`
-26. `python3 QW_2069_FULL_SM_GR_DERIVATION_PACKAGE.py`
-27. `python3 QW_2072_EW_YUKAWA_FLAVOR_RADIATIVE_BASELINES.py`
-28. `python3 QW_2070_FULL_RADIATIVE_PROGRAM_BASELINE.py`
-29. `python3 QW_2071_SM_GR_FULL_PRECISION_CLOSURE_GATE.py`
-30. `python3 QW_2094_STRICT_RIGOR_DEFECT_SWEEP.py`
+16. `python3 QW_2106_STRICT_EXTERNAL_INPUT_INTAKE_GATE.py`
+17. `python3 QW_2099_HZ_EXTERNAL_DECOUPLING_AUTOCOLLECTOR.py --nodes-csv external_hz_nodes_qw2099.csv --citation \"Alam et al. (BOSS DR12), MNRAS 470 (2017) 2617\" --reference-url \"https://arxiv.org/abs/1607.03155\" --source-version \"BOSS_DR12_2017_curated_snapshot_v1\"`
+18. `python3 QW_2101_GNEWTON_BRIDGE_EXTERNAL_AUTOCOLLECTOR.py --source-file external_gnewton_bridge_qw2101.json --citation \"CODATA recommended value of Newtonian constant of gravitation\" --reference-url \"https://physics.nist.gov/cgi-bin/cuu/Value?bg\" --source-version \"CODATA_G_CURATED_SNAPSHOT_V1\"`
+19. `python3 QW_2102_HZ_DECOUPLING_IDENTIFIABILITY_GATE.py`
+20. `python3 QW_2103_GNEWTON_DIMENSIONLESS_PROVENANCE_GATE.py`
+21. `python3 QW_2090_H0_LAMBDA_DECOUPLING_GATE.py`
+22. `python3 QW_2091_NEUTRINO_ABSOLUTE_SCALE_GATE.py`
+23. `python3 QW_2092_GNEWTON_SI_BRIDGE_GATE.py`
+24. `python3 QW_2098_EW_SECONDARY_NONANCHOR_CLOSURE_GATE.py`
+25. `python3 QW_2104_T3T4_STRICT_PREFLIGHT_GATE.py`
+26. `python3 QW_2105_T3T4_STRICT_INPUT_GAP_REPORT.py`
+27. `python3 QW_2069_FULL_SM_GR_DERIVATION_PACKAGE.py`
+28. `python3 QW_2072_EW_YUKAWA_FLAVOR_RADIATIVE_BASELINES.py`
+29. `python3 QW_2070_FULL_RADIATIVE_PROGRAM_BASELINE.py`
+30. `python3 QW_2071_SM_GR_FULL_PRECISION_CLOSURE_GATE.py`
+31. `python3 QW_2094_STRICT_RIGOR_DEFECT_SWEEP.py`
 
 Oczekiwany obecny stan (2026-03-04):
 - `QW-2075`: częściowy status ścisłej rundy faz CP (`PMNS promoted`, `CKM nadal non-closing`),
@@ -242,6 +245,7 @@ Oczekiwany obecny stan (2026-03-04):
 - `QW-2103`: pre-gate proweniencji G_newton: pending (`5/8`),
 - `QW-2104`: scalony preflight T3/T4: pending (`0/6`),
 - `QW-2105`: raport luk wejściowych wskazuje jawne braki danych zewnętrznych,
+- `QW-2106`: bramka intake surowych wejść: pending (`5/18`) do czasu dostarczenia metadanych sidecar i strict-ready raw inputs,
 - `QW-2069`: status częściowy strong internal (`28/32` ścisłe derivacje, `0` direct missing, `7` strict-unresolved),
 - `QW-2072`: utworzono baseline EW/Yukawa/CKM-PMNS,
 - `QW-2073`: wykonano upgrade kanałów radiacyjnych,
