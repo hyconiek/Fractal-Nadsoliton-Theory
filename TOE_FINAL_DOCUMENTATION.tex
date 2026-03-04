@@ -86,7 +86,7 @@
 % ============================================================================
 \title{\textbf{Fractal Information Nadsoliton (FIN) Theory:\\
 Complete Scientific Documentation and Verification History\\[0.5cm]
-\large Release 4.4 - ``Empirical Validation of the FIN Functional (Phase 16 Final)''}}
+\large Release 5.0 - ``Internal Strict Closure + GW Methodological Reassessment''}}
 
 \author{\textbf{Krzysztof Żuchowski}}
 \affil{\textit{Fractal Information Theory Project}}
@@ -103,9 +103,11 @@ Complete Scientific Documentation and Verification History\\[0.5cm]
 \maketitle
 
 \section*{Abstract}
-We present the final status of the \textbf{Fractal Information Nadsoliton (FIN) framework} following the completion of the Phase 16 empirical audit (v5--v46). Moving beyond the analysis of gravitational-wave event populations, we establish FIN as a fundamental \textbf{relational correlation functional} of spacetime fluctuations, observable in the cross-detector strain background.
+This document records the current Release 5.0 status of the \textbf{Fractal Information Nadsoliton (FIN) framework} under a strict separation between (i) internal closure of the SM+GR package chain and (ii) empirical external validation claims.
 
-Direct analysis of raw strain data from LIGO (H1, L1) and Virgo (V1) across O3 and O4 runs identifies a robust, scale-invariant fractal signature with a Hurst exponent $H_{\text{FIN}} \approx 0.23 \pm 0.02$. Systematic falsification tests (v25--v46) demonstrate that this structure is non-energetic, tensorial, and coupled to cosmic-time redshift proxies ($\rho \approx -0.96$). The invariance of the signature across detector arm lengths and observational epochs, combined with its multifractal Log-Poisson character, characterizes FIN as a global informational background. These results establish the FIN theory as a consistent UV-completion of gravity, showing that spacetime fluctuations possess an intrinsic, phase-robust informational organization irreducible to standard noise models.
+On the internal side, the locked no-scan/no-retune chain reports strict package closure (\texttt{QW-2069}, \texttt{QW-2070}, \texttt{QW-2071}, \texttt{QW-2081}, \texttt{QW-2094}, \texttt{QW-2097}) within the current audited environment. On the empirical raw-strain GW side (QW-1660 line), later methodological audits (\texttt{QW-1724}, \texttt{QW-1725}, \texttt{QW-2116}, Phase 76) show that the previously stated ``global FIN background'' interpretation is not yet robust under strict protocol sensitivity checks. QW-2116 confirms methodological repair of the strict branch but does not change the scientific anomaly verdict from QW-1725. The updated GW raw-strain status is therefore \textbf{mixed/inconclusive} rather than closed.
+
+Separately, the preregistered external GW holdout branch (\texttt{QW-2078} \textrightarrow{} \texttt{QW-2077}) is currently supported on its locked thresholds, but this does not by itself establish universal raw-strain global fractal correlation. Community-level ToE confirmation still requires independent multiteam replication on frozen artifacts and protocols.
 
 \tableofcontents
 \newpage
@@ -4267,164 +4269,91 @@ The complete audit (Phase 6--15) establishes that the FIN framework is \textbf{f
 % ============================================================================
 % PHASE 16: EMPIRICAL DETECTION OF FRACTAL STRUCTURE IN RAW STRAIN
 % ============================================================================
-\part{Phase 16: Empirical Detection of Fractal Structure in Raw Strain}
+\part{Phase 16: Raw-Strain Program Reassessment (QW-1660 v5--v76)}
 
-\section{Introduction and Rationale}
-Phase 16 (QW-1660 series) marks the move from analysis of processed posterior samples to the direct analysis of \textbf{raw gravitational-wave strain data}. The objective is to identify persistent, non-Gaussian informational structures shared across detector networks that are absent in standard General Relativity noise models.
+\section{Why this part was rewritten}
+Earlier text in this document used strong language about ``global empirical validation'' of FIN in raw GW strain. Subsequent strict audits introduced after the original Phase 16 writeup showed significant protocol sensitivity and internal inconsistencies across branches. This part now reports the current status in conservative, falsifiable terms.
 
-\textbf{Replication:} The full analysis pipeline, foundational tests (v5--v24), and the final multifractal signature (v25--v46) are available via:
+\section{Data and artifact scope}
+This reassessment integrates:
 \begin{itemize}
-    \item \textbf{Phase 16 (v5--v24):} \url{https://www.kaggle.com/code/krzysztofzuchowski/phase-16-raw-strain-qw-1660-v5-fractal}
-    \item \textbf{Full Signature (v25--v46):} \url{https://www.kaggle.com/code/krzysztofzuchowski/full-fractal-signature}
+    \item QW-1660 outputs from v5 through v76,
+    \item strict methodological audits QW-1724, QW-1725, and QW-2116,
+    \item Phase 76 whitened functional run (\texttt{phase76\_true\_fin\_results.json}),
+    \item preregistered external GW holdout branch reports QW-2078 and QW-2077.
 \end{itemize}
-\textbf{CRITICAL:} Run \QW{2}: HOLOGRAPHIC NOISE SEARCH (ROBUST DATA FETCHING) cell first to initialize the dataset.
 
-\section{Foundational Fractal Audit (v5--v24)}
-Analysis of H1, L1, and V1 data across O3 and O4 runs established the basic parameters of the fractal background. Table~\ref{tab:v5_v24_summary} summarizes the sequence of methodological tests designed to progressively constrain alternative explanations and strengthen statistical rigor during this phase.
+\section{Observed effects versus strict robustness}
+\subsection{Observed nontrivial effects}
+\begin{itemize}
+    \item Multiple branches report anti-persistent exponents and cross-detector deviations from simple shuffled nulls.
+    \item Example checkpoints include v24 cross-H values below shuffled references and v26 multifractal summary with $H_0 \approx 0.228$ in its local protocol.
+\end{itemize}
 
-\begin{longtable}{p{1.3cm}p{4.8cm}p{4.5cm}p{3.4cm}}
-\caption{Detailed Summary of QW--1660 Phase~16 Analyses (v5--v24)}\label{tab:v5_v24_summary}\\
-\toprule
-\textbf{Version} & \textbf{Analysis Class} & \textbf{Observable / Test} & \textbf{Quantitative Outcome} \\
-\midrule
-v5 & Spectral PSD scaling & Exp. $\beta$ (H1, L1) & $\beta \approx 5.8$, $Z=6.29$ \\
-v6 & Multiscale consistency & $\beta$ vs window size & Scale invariance check \\
-v7 & Fractal anisotropy & $\beta_{\text{H1}}$ vs $\beta_{\text{L1}}$ & $\Delta\beta \approx -0.04$, $Z=-6.12$ \\
-v8 & Fractal memory (R/S) & Hurst $H$ (H1, L1) & $H \approx 0.27-0.31$ \\
-v9 & Null memory test & Shuffle/Reverse $H$ & Memory detected \\
-v10 & Freq.-resolved Hurst & $H$ in freq. bands & Band dependency \\
-v11 & Time-integration test & $H(T)$ stability & Robust over 1024s \\
-v12 & Diurnal modulation & $H(t_{\text{sol}})$ (1h bins) & Solar time check \\
-v13 & Inter-det. coherence & Pearson $r$ of $H$ & $r \approx -0.15$ (None) \\
-v14 & Cross-freq. coupling & $r$ across bands & $r \approx 0.79$, $Z=1.37$ \\
-v15 & Sidereal modulation & $H(t_{\text{sid}})$ & Sidereal check \\
-v16 & Stationarity test & $H$ distribution & $H_{\text{std}} \approx 0.01$ \\
-v17 & Global consistency & Convergence $H(T)$ & Scale stability \\
-v18 & Multi-det. global & H1 vs L1 stability & $H \approx 0.28-0.32$ \\
-v19 & Memory persistence & Real vs Shuffle & Memory confirmed \\
-v20 & Cross-epoch stability & Independent day test & $H \approx 0.27$ stable \\
-v21 & Cross-epoch global & O3a vs O3b & Stable $H$ range \\
-v22 & Extended epochs & O3 vs O4 inclusion & $H \approx 0.33$ (O4) \\
-v23 & Cross-Hurst (Sum) & $H(x+y)$ pairings & $H_{xy} \approx 0.08-0.19$ \\
-v24 & Cross-Hurst (Corr) & $H(x \cdot y)$ pairings & $H_{xy} \approx 0.22-0.36$ \\
-\bottomrule
-\end{longtable}
+\subsection{Strict-robustness failures and contradictions}
+\begin{itemize}
+    \item \textbf{Method audit QW-1724:} verdict \texttt{GW\_PIPELINE\_METHOD\_HIGH\_RISK\_INCONCLUSIVE}; seven issues were flagged (including critical projection inconsistency and scale non-invariance).
+    \item \textbf{Strict reanalysis QW-1725:} verdict \texttt{GW\_CROSS\_HURST\_ANOMALY\_NOT\_ROBUST}.
+    \item \textbf{Lag profile weakness:} strict v65 rerun can show local max-$|r|$ peaks, but not in the physically expected light-travel window; this blocks coherent cross-detector interpretation.
+    \item \textbf{Whitening sensitivity:} different whitening implementations yield materially different outputs (e.g., v63 strict rerun vs Phase 76), which blocks closure-level interpretation.
+    \item \textbf{QW-2116 synthesis:} method-repair flags pass (no hardcode, aligned $n$, calibrated null/permutation branch), while scientific verdict remains non-robust.
+\end{itemize}
 
-\subsection{Cross-Detector Correlations}
-Quantitative cross-Hurst exponents obtained in v23--v24 are summarized in Table~\ref{tab:cross_hurst_numbers}. These values are derived from shared 512~s raw-strain windows, identically preprocessed for each detector pair.
-
+\section{Key checkpoints (numerical)}
 \begin{table}[H]
 \centering
-\caption{Correlation-based Cross-Hurst Exponents for Detector Pairs (v24)}
-\label{tab:cross_hurst_numbers}
-\begin{tabular}{lccc}
+\caption{Selected checkpoints driving the updated GW raw-strain verdict}
+\label{tab:phase16_reassessment_key}
+\begin{tabular}{p{2.5cm}p{8.0cm}p{3.0cm}}
 \toprule
-Detector Pair & $H_{xy}^{\mathrm{real}}$ & $H_{xy}^{\mathrm{shuffle}}$ & $H_{xy}^{\mathrm{phase}}$ \\
+\textbf{Artifact} & \textbf{Checkpoint} & \textbf{Value} \\
 \midrule
-H1--L1 & 0.361 & 0.531 & 0.397 \\
-H1--V1 & 0.215 & 0.522 & 0.236 \\
-L1--V1 & 0.270 & 0.504 & 0.283 \\
+QW-1660 v5 & Spectral anomaly in local setup & $Z=6.285$ \\
+QW-1660 v13 & Inter-detector coherence test & $r=-0.145$ (no coherence) \\
+QW-1660 v24 & H1-L1 cross-H vs nulls & $0.361$ vs $0.531/0.397$ \\
+QW-1660 v47 & Filter paradox branch & $H_{unf}=0.037$, $H_{filt}=0.100$ \\
+QW-1660 v61 (strict rerun) & PSD-matched full-null branch ($n=131072$, 200 trials) & mean $0.3875$, obs $0.4086$, $p_{2s}=0.398$ \\
+QW-1660 v63 (strict rerun) & Whitening variant A with null calibration ($n=131072$, 200 trials) & cross-H $0.7582$, $p_{2s}=0.00995$ \\
+Phase 76 & Whitening variant B & $H_{q=0}=0.505$ \\
+QW-1660 v65 (strict rerun) & Micro time-shift with permutation null ($n=131072$, 200 perms) & best $|r|=0.0644$ at $-24.66$ ms; not near $10\pm2$ ms \\
+QW-1724 & Methodological audit & high-risk inconclusive \\
+QW-1725 & Strict cross-H reanalysis & anomaly not robust \\
+QW-2116 & Method-repair gate over strict v61/v63/v65 & method repair pass; scientific anomaly verdict unchanged \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\section{Universal Multifractal Signature (v25--v27)}
-Extended MF-DFA analysis (Phase 16 v25+) identifies FIN as a member of a specific universality class. The $q$-dependent Hurst exponent $H(q)$ follows a \textbf{log-Poisson cascade}, characteristic of quantum vacuum noise and the CMB background, rather than a log-normal process.
-
-\section{Research Hierarchy: Phase 16 Audits (v25--v46)}
-The final verification phase of Release 4.4 was conducted through a series of specialized physical audits. The hierarchy of these tests and their primary verdicts are summarized in Table~\ref{tab:phase16_audits}.
-
-\begin{table}[H]
-\centering
-\caption{Detailed Summary of Phase 16 Structural and Physical Audits (v25--v46)}
-\label{tab:phase16_audits}
-\begin{tabular}{|l|l|l|}
-\hline
-\textbf{Version} & \textbf{Audit Focus} & \textbf{Primary Verdict / Outcome} \\
-\hline
-v25--v26 & Multifractal Identity & Identification of log-Poisson cascade. \\
-v27 & Class Identification & Universality match with CMB/Vacuum noise. \\
-v28 & Spacetime Coherence & Robustness under time-lag tau analysis. \\
-v29, v36 & Geometric Scaling & $dH/d\log L \approx 0 \implies$ Scale Invariance. \\
-v30 & Environmental Veto & Rejection of Seismic/Magnetic noise models. \\
-v31--v33 & Informational Nature & FIN survives LZ-compression and shuffling. \\
-v34--v35 & Spacetime Topology & Finite globality; Time-reversal invariance. \\
-v37 & Tensoriality & $\Delta H_{+,\times} > 0.1 \implies$ Tensorial character. \\
-v39, v44 & Energy Independence & $\rho(H, E_{\text{RMS}}) \approx 0 \implies$ Non-energetic. \\
-v40--v41 & Cosmic Coupling & $\rho(H, z) \approx -0.96 \implies$ Redshift dependence. \\
-v43, v45 & Operationality & FIN established as a Relational Functional. \\
-v46 & Scale Consistency & Planck-proxy validation via window scaling. \\
-\hline
-\end{tabular}
-\end{table}
-
-\section{Falsification and Physical Audit (v28--v46)}
-A rigorous physics audit (Release 4.4) was conducted to test the structural vs. dynamic nature of FIN:
-\begin{itemize}
-    \item \textbf{Geometric Scale Invariance (v28, v36):} The Hurst exponent is independent of detector arm length ($dH/d\log L \approx 0$) and analysis window size ($\sigma_H \approx 10^{-4}$).
-    \item \textbf{Tensorial Character (v37):} Polarization proxy tests show a significant delta ($\Delta H_{+,\times} > 0.1$), confirming tensorial transformation laws.
-    \item \textbf{Energy Independence (v39, v45):} Lack of correlation between Hurst value and RMS energy ($\rho \approx 0$) confirms that FIN carries information without energy transport.
-    \item \textbf{Cosmic Coupling (v40--v41):} Strong correlation with redshift proxies ($\rho \approx -0.96$) establishes FIN as a global informational background.
-\end{itemize}
-
-\section{Formal Definition of FIN}
-Based on the completed Phase 16 results, FIN is formally defined not as a local signal or a stochastic process, but as a \textbf{Relational Correlation Functional} $\mathcal{F}_{\text{FIN}}$ operating on the manifold of metric fluctuations. For two detection channels $x(t), y(t)$, the functional is defined as:
+\section{Current scientific status of the raw-strain GW claim}
+Under strict criterion ``same qualitative conclusion under locked protocol variants and robust nulls,'' the raw-strain global FIN-correlation claim is currently:
 \begin{equation}
-\boxed{\mathcal{F}_{\text{FIN}}[x,y] \equiv H\Big( \text{MF-DFA}_{q=0}\big[ \mathcal{C}(x,y) \big] \Big)}
+\texttt{INCONCLUSIVE / NOT\_ROBUST}
 \end{equation}
-where $\mathcal{C}(x,y)$ represents the relational operator (e.g., cross-correlation, phase-product, or surrogate-preserving PSD) and $H$ is the Hurst exponent. Crucially, single-channel analysis fails to recover the signature, confirming that FIN exists exclusively as a relation between fields.
+This is a downgrade from earlier stronger wording and should be treated as a methodological correction, not as rhetorical weakening.
 
-\section{Release 4.4: Deeper Empirical Characterization}
+\section{Relation to preregistered external GW holdout}
+The preregistered holdout branch (QW-2078 \textrightarrow{} QW-2077) remains a separate test family and is currently supported on locked thresholds:
+\[
+\mathrm{AUC}=0.81496,\quad
+\mathrm{ADV}^{q90}=0.31028,\quad
+\mathrm{SEP}_{\mathrm{median}}=0.002056,\quad
+\mathrm{GAP}_{\mathrm{median}}=0.001289.
+\]
+These results support that specific preregistered branch, but do not by themselves close the broader universal raw-strain global-fractal claim.
 
-The final stage of the Phase 16 audit (v25--v46) provide a high-precision characterization of the functional along multiple physical dimensions:
+\section{Strict next protocol for decisive closure}
+\begin{enumerate}
+    \item Pre-register one primary estimator plus one backup estimator before execution.
+    \item Freeze GPS/event list, detector pairs, and preprocessing rules (including whitening/cropping).
+    \item Freeze null families and trial counts.
+    \item Require agreement across independent environments and independent teams.
+    \item Publish full lag profiles and all intermediate artifacts (not only final scalar verdicts).
+\end{enumerate}
 
-\begin{itemize}
-    \item \textbf{Structural Measure vs. Dynamic Process (v43):} Using a moving-window analysis, we established the stationarity of the signature:
-    \begin{equation}
-    \sigma(H(t)) \ll 0.02 \Rightarrow \text{FIN is a Structural Measure}
-    \end{equation}
-    The empirical local variance $\sigma(H(t)) \approx 7 \times 10^{-4}$ confirms the absence of random drift.
-    \item \textbf{Non-Energetic Informational Nature (v39, v44):} Statistical tests show zero correlation with the RMS energy of the strain background:
-    \begin{equation}
-    \rho_{\text{Spearman}}(H_{\text{FIN}}, E_{\text{RMS}}) \approx 0 \implies \text{Non-Energetic}
-    \end{equation}
-
-    \item \textbf{Geometric Identity and Fractal Dimension ($D_{\text{FIN}} = 1.77$):} The relationship between the Hurst exponent and the fractal dimension $D$ is given by:
-    \begin{equation}
-    D = 2 - H \implies D_{\text{FIN}} \approx 1.77
-    \end{equation}
-    This corresponds perfectly to the theoretical Nadsoliton network exponent:
-    \begin{equation}
-    N(d) \sim d^{1.77}
-    \end{equation}
-
-    \item \textbf{Scale Invariance (v36, v45):} Independence from geometric scale $L$ and time window $\Delta$:
-    \begin{equation}
-    \frac{dH}{d\log L} \approx 0, \quad H(32s) \approx H(256s)
-    \end{equation}
-    \item \textbf{Tensorial Character and Anisotropy (v37, v44--46):} Polarization proxy tests show a significant difference between modes:
-    \begin{equation}
-    \Delta H_{+,\times} > 0.1 \implies \text{Tensorial Transformation}
-    \end{equation}
-
-    \item \textbf{Cosmological and Event-Rate Coupling (v40--v41):} Strong correlation with redshift proxies $z$ and GW event-rate density $\lambda_{\text{GW}}$:
-    \begin{equation}
-    \rho(H,z) \approx -0.96, \quad \rho(H, \lambda_{\text{GW}}) \approx -0.96
-    \end{equation}
-\end{itemize}
-
-\section{The Axioms of FIN (Release 4.4)}
-Based on the validated results, the Fractal Information Nadsoliton framework is defined by five empirical axioms:
-\begin{itemize}
-    \item \textbf{A1 --- Relationality:} FIN exists exclusively as a correlational relation between fields.
-    \item \textbf{A2 --- Non-energetic:} FIN does not transfer energy or amplitude.
-    \item \textbf{A3 --- Scale Invariance:} FIN is independent of geometric and temporal scales.
-    \item \textbf{A4 --- Tensoriality:} FIN transforms tensorially.
-    \item \textbf{A5 --- Stationarity:} FIN is a structural measure, not a dynamic process.
-\end{itemize}
-
-\section{Final Verdict: Release 4.4}
-The empirical detection of a scale-invariant, tensorial, and cosmic-coupled fractal structure in raw gravitational-wave strain data confirms the presence of an underlying informational layer in spacetime. FIN is established as a consistent measure of the spacetime background with a characteristic value $H \approx 0.23 \pm 0.02$, providing the first direct empirical evidence for the Fractal Information Nadsoliton framework and its role as a UV-completion of gravity.
+\section{Updated verdict for this part}
+Phase 16 should no longer be described as definitive empirical confirmation of FIN in raw strain. The strict statement is:
+\begin{quote}
+Raw-strain analyses revealed interesting nontrivial structures, but the global FIN correlation interpretation remains methodologically open and not closure-ready at this date.
+\end{quote}
 
 \appendix
 \part*{Appendices}
