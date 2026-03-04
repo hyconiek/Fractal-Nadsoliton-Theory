@@ -52,6 +52,14 @@ This is a major scientific maturity milestone, but not yet a final community-con
 
 - `RUN_TRULY_INDEPENDENT_MULTITEAM_CONFIRMATORY_PACKAGE`
 
+## External Data Policy (No Large Binary Push)
+
+- Large external payloads are not part of the git freeze bundle.
+- Official download sources and commands are documented in:
+  - `DATA_SOURCES_EXTERNAL_DOWNLOADS.md`
+- Independent teams should acquire raw archives from the listed public providers,
+  then run frozen scripts with fixed manifests/hashes.
+
 ## Textbook Edition
 
 For the full high-school textbook style explanation in English and Polish, see:

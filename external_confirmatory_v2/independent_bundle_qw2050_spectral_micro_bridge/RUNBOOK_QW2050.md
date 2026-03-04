@@ -1,6 +1,6 @@
 # RUNBOOK QW-2050: Spectral Micro Bridge Independent Confirmatory
 
-- Bundle generated UTC: 2026-03-03T23:59:22.226068+00:00
+- Bundle generated UTC: 2026-03-04T01:00:04.514738+00:00
 - Source verdict: SPECTRAL_MICRO_STAGEC_INTERSECTION_GATE_PASS
 - Source readiness: TOE_INTERNAL_BRIDGE_STRICTLY_CLOSED_PENDING_EXTERNAL_MULTITEAM_AUDIT
 
@@ -10,6 +10,11 @@
 ## Integrity Step
 1. Verify all SHA256 entries from `manifest_qw2050.json`.
 2. Reject bundle if any hash mismatch is found.
+
+## External Data Sources (Not Frozen In Git)
+- Large public raw archives are intentionally not included in this bundle.
+- Source list and download commands: `DATA_SOURCES_EXTERNAL_DOWNLOADS.md`
+- Reproducibility is based on fixed scripts/manifests plus external source provenance.
 
 ## Independent Execution
 1. Run `python3 QW_2048_SPECTRAL_PHASE_LOCKED_POINTWISE_DERIVATION.py`.

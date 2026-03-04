@@ -4213,3 +4213,33 @@ Po tej rundzie:
    - wszystkie flagi TRUE: hash integrity, rerun 2048/2049, stabilnosc kernela i metryk.
 6. Znaczenie:
    - pakiet freeze jest teraz nie tylko gotowy formalnie, ale rowniez potwierdzony proceduralnie jako reprodukowalny w izolacji.
+
+## 345. Source-only governance i dokumentacja pobierania duzych danych (QW-2052)
+1. Dodano:
+   - `DATA_SOURCES_EXTERNAL_DOWNLOADS.md` (kanoniczna lista zrodel + komendy pobrania),
+   - `QW_2052_EXTERNAL_SOURCE_ONLY_GOVERNANCE_GATE.py`,
+   - `RAPORT_QW2052_EXTERNAL_SOURCE_ONLY_GOVERNANCE_GATE.md`,
+   - `report_qw2052_external_source_only_governance_gate.json`.
+2. Zmiany metodologiczne:
+   - runbooki freeze (`QW-2033`, `QW-2050`) odwoluja sie jawnie do zrodel zewnetrznych zamiast wymagac binarnych payloadow w gicie,
+   - `QW_2033...` i `QW_2050...` rozszerzono o kontrole obecnosci dokumentu zrodel.
+3. Wyniki:
+   - `QW-2033`: `INDEPENDENT_CONFIRMATORY_FREEZE_BUNDLE_READY` (`4/4`),
+   - `QW-2050`: `SPECTRAL_MICRO_BRIDGE_FREEZE_BUNDLE_READY` (`5/5`),
+   - `QW-2052`: `EXTERNAL_SOURCE_ONLY_GOVERNANCE_PASS` (`8/8`).
+4. Klucz:
+   - niezalezne bundle nie zawieraja duzych payloadow (`large_files_in_independent_bundle_dirs = 0`),
+   - polityka source-only jest formalnie sprawdzona i przechodzi gate.
+5. Znaczenie:
+   - mozna kontynuowac sciezke rygoru bez pchania duzych plikow do gita,
+   - krok zewnetrzny (prawdziwie niezalezny multiteam confirmatory run) ma teraz czystszy, audytowalny protokol danych.
+
+## 346. Re-validation rehearsal po zmianie polityki danych (QW-2051 rerun)
+1. Dzialanie:
+   - ponownie uruchomiono `QW_2051_INDEPENDENT_REHEARSAL_GATE.py` po wdrozeniu source-only governance.
+2. Wynik:
+   - `INDEPENDENT_REHEARSAL_GATE_PASS`,
+   - `pass_count=7/7`.
+3. Znaczenie:
+   - modyfikacje dokumentacyjne/protokolarne (source-only) nie naruszyly reprodukowalnosci izolowanego bundle,
+   - sciezka do niezaleznego multiteam handoff pozostaje stabilna.

@@ -193,6 +193,7 @@ FIN should currently be treated as an advanced, falsifiable unification candidat
 - **[QW Studies](.)** — 1160+ verification scripts (Python)
 - **[Zenodo Archive (DOI)](https://doi.org/10.5281/zenodo.17645737)** — Permanent citation record
 - **[gemini_sum.md](gemini_sum.md)** — Research summary in Polish
+- **[DATA_SOURCES_EXTERNAL_DOWNLOADS.md](DATA_SOURCES_EXTERNAL_DOWNLOADS.md)** — Canonical external download sources (large raw files are not pushed to git)
 
 ---
 

@@ -16,6 +16,22 @@
 - verdict: `COMBINED_BRANCH_CONFIRMATORY_GATE_PASS_STRONG`
 - readiness: `STAGE_C_PLUS_EXTERNAL_PRECONFIRMATORY_CLOSED`
 
+## External Data Sources (Not Frozen In Git)
+- Large raw archives are external by policy (no binary payload push in the bundle).
+- Canonical source list: `DATA_SOURCES_EXTERNAL_DOWNLOADS.md`
+
+### Required public sources
+- NANOGrav 15yr timing archive:
+  - dataset: `NANOGrav15yr_PulsarTiming_v2.1.0.tar.gz`
+  - url: `https://zenodo.org/records/16051178/files/NANOGrav15yr_PulsarTiming_v2.1.0.tar.gz?download=1`
+  - local example: `external_data/NANOGrav15yr_PulsarTiming_v2.1.0.tar.gz`
+  - note: Keep outside git; pass via --nanograv-archive in autocollector scripts.
+- GWOSC GWTC event catalog API:
+  - dataset: `GWTC event metadata (JSON)`
+  - url: `https://www.gw-openscience.org/eventapi/json/GWTC/`
+  - local example: `external_data/gwosc_gwtc_eventapi.json`
+  - note: Used as external intervention-event source for beta-channel builds.
+
 ## Frozen File List
 - [OK] `QW_2015_TRUE_EXTERNAL_BETA_CHANNEL_V2_READINESS_GATE.py`
 - [OK] `QW_2017_V2_BETA_OBSERVABLE_BLIND_EXTERNAL_INTERVENTION.py`
@@ -38,4 +54,3 @@
 - [OK] `external_confirmatory_v2/beta_channel_true_external_v2/manifest_beta_channel.json`
 - [OK] `external_confirmatory_v2/beta_channel_true_external_v2/protocol_freeze.json`
 - [OK] `gw1831_window_features.csv`
-- [OK] `NANOGrav15yr_PulsarTiming_v2.1.0.tar.gz`

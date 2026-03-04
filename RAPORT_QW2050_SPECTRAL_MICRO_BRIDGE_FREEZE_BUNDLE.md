@@ -1,9 +1,9 @@
 # RAPORT QW-2050: SPECTRAL MICRO BRIDGE FREEZE BUNDLE
 
-- Data UTC: 2026-03-03T23:59:22.226068+00:00
+- Data UTC: 2026-03-04T01:00:04.514738+00:00
 - Verdict: **SPECTRAL_MICRO_BRIDGE_FREEZE_BUNDLE_READY**
 - Readiness: **READY_FOR_TRUE_INDEPENDENT_MULTITEAM_RUN**
-- pass_count: 4/4
+- pass_count: 5/5
 
 ## Bundle
 - dir: `external_confirmatory_v2/independent_bundle_qw2050_spectral_micro_bridge`
@@ -16,6 +16,7 @@
 ## Flags
 - source_gate_pass: True
 - all_required_files_present: True
+- data_sources_doc_present: True
 - manifest_written: True
 - runbook_written: True
 

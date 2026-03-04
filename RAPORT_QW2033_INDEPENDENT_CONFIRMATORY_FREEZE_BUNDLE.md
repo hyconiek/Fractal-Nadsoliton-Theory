@@ -1,12 +1,13 @@
 # RAPORT QW-2033: INDEPENDENT CONFIRMATORY FREEZE BUNDLE
 
-- Data UTC: 2026-03-03T19:51:10.989920+00:00
+- Data UTC: 2026-03-04T01:00:02.281039+00:00
 - Readiness: **READY_FOR_TRUE_INDEPENDENT_MULTITEAM_RUN**
 - Verdict: **INDEPENDENT_CONFIRMATORY_FREEZE_BUNDLE_READY**
-- pass_count: 3/3
+- pass_count: 4/4
 
 ## Flags
 - all_required_files_present: True
+- data_sources_doc_present: True
 - bundle_manifest_written: True
 - bundle_runbook_written: True
 

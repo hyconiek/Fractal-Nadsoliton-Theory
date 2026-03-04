@@ -174,6 +174,16 @@ The framework would be seriously weakened if independent multiteam runs show one
 
 That is the shortest scientifically correct path from "strong internal closure" to "credible external confirmation".
 
+## 11) External Data Rule (No Large Binaries in Git)
+
+- Large raw payloads are treated as external sources, not frozen git artifacts.
+- Canonical source list and download commands:
+  - `DATA_SOURCES_EXTERNAL_DOWNLOADS.md`
+- Practical meaning:
+1. freeze scripts/manifests/reports in git,
+2. fetch heavy public archives from official providers,
+3. verify integrity locally, then run fixed gates.
+
 ---
 
 ## WERSJA POLSKA
@@ -339,3 +349,13 @@ Teoria zostałaby istotnie osłabiona, gdyby niezależne zespoły wykazały:
 - Z procedurą rehearsal potwierdzoną przez QW-2051
 
 To jest najkrótsza poprawna naukowo droga od "bardzo mocnego domknięcia wewnętrznego" do "wiarygodnego potwierdzenia zewnętrznego".
+
+## 11) Zasada danych zewnętrznych (bez dużych binarek w gicie)
+
+- Duże surowe paczki danych traktujemy jako źródła zewnętrzne, nie jako artefakty freeze w repo.
+- Kanoniczna lista źródeł i komendy pobrania:
+  - `DATA_SOURCES_EXTERNAL_DOWNLOADS.md`
+- Znaczenie praktyczne:
+1. w gicie zamrażamy skrypty/manifesty/raporty,
+2. ciężkie archiwa pobieramy z oficjalnych źródeł publicznych,
+3. lokalnie sprawdzamy integralność i uruchamiamy niezmienione bramki.

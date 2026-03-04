@@ -24,6 +24,7 @@ MANIFEST = BUNDLE_DIR / "manifest_qw2050.json"
 RUNBOOK = BUNDLE_DIR / "RUNBOOK_QW2050.md"
 OUT_JSON = ROOT / "report_qw2050_spectral_micro_bridge_freeze_bundle.json"
 OUT_MD = ROOT / "RAPORT_QW2050_SPECTRAL_MICRO_BRIDGE_FREEZE_BUNDLE.md"
+DATA_SOURCES_DOC = "DATA_SOURCES_EXTERNAL_DOWNLOADS.md"
 
 
 REQUIRED_FILES = [
@@ -79,6 +80,7 @@ def main() -> None:
         "source_gate": "report_qw2049_spectral_micro_stagec_intersection_gate.json",
         "source_verdict": d2049.get("verdict"),
         "source_readiness": d2049.get("readiness"),
+        "external_sources_document": DATA_SOURCES_DOC,
         "selected_kernel": selected_kernel,
         "required_files_count": len(REQUIRED_FILES),
         "present_files_count": len(manifest_rows),
@@ -105,6 +107,11 @@ def main() -> None:
         "1. Verify all SHA256 entries from `manifest_qw2050.json`.",
         "2. Reject bundle if any hash mismatch is found.",
         "",
+        "## External Data Sources (Not Frozen In Git)",
+        "- Large public raw archives are intentionally not included in this bundle.",
+        f"- Source list and download commands: `{DATA_SOURCES_DOC}`",
+        "- Reproducibility is based on fixed scripts/manifests plus external source provenance.",
+        "",
         "## Independent Execution",
         "1. Run `python3 QW_2048_SPECTRAL_PHASE_LOCKED_POINTWISE_DERIVATION.py`.",
         "2. Run `python3 QW_2049_SPECTRAL_MICRO_STAGEC_INTERSECTION_GATE.py`.",
@@ -123,6 +130,7 @@ def main() -> None:
     flags = {
         "source_gate_pass": bool(d2049.get("verdict") == "SPECTRAL_MICRO_STAGEC_INTERSECTION_GATE_PASS"),
         "all_required_files_present": bool(len(missing) == 0),
+        "data_sources_doc_present": bool((ROOT / DATA_SOURCES_DOC).exists()),
         "manifest_written": bool(MANIFEST.exists()),
         "runbook_written": bool(RUNBOOK.exists()),
     }

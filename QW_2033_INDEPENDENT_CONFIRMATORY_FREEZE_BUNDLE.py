@@ -20,6 +20,24 @@ ROOT = Path(__file__).resolve().parent
 BUNDLE_DIR = ROOT / "external_confirmatory_v2" / "independent_bundle_qw2033"
 OUT_JSON = ROOT / "report_qw2033_independent_confirmatory_freeze_bundle.json"
 OUT_MD = ROOT / "RAPORT_QW2033_INDEPENDENT_CONFIRMATORY_FREEZE_BUNDLE.md"
+DATA_SOURCES_DOC = "DATA_SOURCES_EXTERNAL_DOWNLOADS.md"
+
+EXTERNAL_REQUIRED_SOURCES = [
+    {
+        "name": "NANOGrav 15yr timing archive",
+        "dataset": "NANOGrav15yr_PulsarTiming_v2.1.0.tar.gz",
+        "url": "https://zenodo.org/records/16051178/files/NANOGrav15yr_PulsarTiming_v2.1.0.tar.gz?download=1",
+        "local_example_path": "external_data/NANOGrav15yr_PulsarTiming_v2.1.0.tar.gz",
+        "note": "Keep outside git; pass via --nanograv-archive in autocollector scripts.",
+    },
+    {
+        "name": "GWOSC GWTC event catalog API",
+        "dataset": "GWTC event metadata (JSON)",
+        "url": "https://www.gw-openscience.org/eventapi/json/GWTC/",
+        "local_example_path": "external_data/gwosc_gwtc_eventapi.json",
+        "note": "Used as external intervention-event source for beta-channel builds.",
+    },
+]
 
 
 def sha256_file(path: Path) -> str:
@@ -46,7 +64,7 @@ def collect_file_entry(path: Path) -> Dict:
     }
 
 
-def write_runbook(bundle_dir: Path, files: List[Dict]) -> Path:
+def write_runbook(bundle_dir: Path, files: List[Dict], external_sources: List[Dict]) -> Path:
     runbook = bundle_dir / "RUNBOOK_QW2033.md"
     lines = [
         "# RUNBOOK QW-2033: Independent Confirmatory Replication",
@@ -67,8 +85,28 @@ def write_runbook(bundle_dir: Path, files: List[Dict]) -> Path:
         "- verdict: `COMBINED_BRANCH_CONFIRMATORY_GATE_PASS_STRONG`",
         "- readiness: `STAGE_C_PLUS_EXTERNAL_PRECONFIRMATORY_CLOSED`",
         "",
-        "## Frozen File List",
+        "## External Data Sources (Not Frozen In Git)",
+        "- Large raw archives are external by policy (no binary payload push in the bundle).",
+        f"- Canonical source list: `{DATA_SOURCES_DOC}`",
+        "",
+        "### Required public sources",
     ]
+    for src in external_sources:
+        lines.extend(
+            [
+                f"- {src['name']}:",
+                f"  - dataset: `{src['dataset']}`",
+                f"  - url: `{src['url']}`",
+                f"  - local example: `{src['local_example_path']}`",
+                f"  - note: {src['note']}",
+            ]
+        )
+    lines.extend(
+        [
+            "",
+        "## Frozen File List",
+        ]
+    )
     for f in files:
         status = "OK" if f["exists"] else "MISSING"
         lines.append(f"- [{status}] `{f['path']}`")
@@ -101,13 +139,12 @@ def main() -> None:
         "external_confirmatory_v2/beta_channel_true_external_v2/manifest_beta_channel.json",
         "external_confirmatory_v2/beta_channel_true_external_v2/protocol_freeze.json",
         "gw1831_window_features.csv",
-        "NANOGrav15yr_PulsarTiming_v2.1.0.tar.gz",
     ]
 
     entries = [collect_file_entry(ROOT / rel) for rel in tracked_rel_paths]
     missing = [x["path"] for x in entries if not x["exists"]]
 
-    runbook_path = write_runbook(BUNDLE_DIR, entries)
+    runbook_path = write_runbook(BUNDLE_DIR, entries, EXTERNAL_REQUIRED_SOURCES)
     manifest_path = BUNDLE_DIR / "manifest_qw2033.json"
 
     manifest = {
@@ -115,6 +152,8 @@ def main() -> None:
         "bundle_id": "QW2033_INDEPENDENT_CONFIRMATORY_FREEZE",
         "source_root": str(ROOT),
         "files": entries,
+        "external_required_sources": EXTERNAL_REQUIRED_SOURCES,
+        "external_sources_document": DATA_SOURCES_DOC,
         "missing_files": missing,
         "runbook": str(runbook_path.relative_to(ROOT)),
     }
@@ -122,6 +161,7 @@ def main() -> None:
 
     flags = {
         "all_required_files_present": bool(len(missing) == 0),
+        "data_sources_doc_present": bool((ROOT / DATA_SOURCES_DOC).exists()),
         "bundle_manifest_written": bool(manifest_path.exists()),
         "bundle_runbook_written": bool(runbook_path.exists()),
     }
