@@ -21,6 +21,7 @@ from typing import Dict, List
 ROOT = Path(__file__).resolve().parent
 R2106 = ROOT / "report_qw2106_strict_external_input_intake_gate.json"
 R2107 = ROOT / "report_qw2107_hz_strict_design_search.json"
+R2108 = ROOT / "report_qw2108_gnewton_dimensionless_acquisition_spec.json"
 R2099 = ROOT / "report_qw2099_hz_external_decoupling_autocollector.json"
 R2102 = ROOT / "report_qw2102_hz_decoupling_identifiability_gate.json"
 R2101 = ROOT / "report_qw2101_gnewton_bridge_external_autocollector.json"
@@ -43,6 +44,7 @@ def append_if_missing(lst: List[str], item: str) -> None:
 def main() -> None:
     d2106 = load(R2106) if R2106.exists() else None
     d2107 = load(R2107) if R2107.exists() else None
+    d2108 = load(R2108) if R2108.exists() else None
     d2099 = load(R2099)
     d2102 = load(R2102)
     d2101 = load(R2101)
@@ -147,6 +149,7 @@ def main() -> None:
         "sources": {
             "qw2106": R2106.name if d2106 is not None else None,
             "qw2107": R2107.name if d2107 is not None else None,
+            "qw2108": R2108.name if d2108 is not None else None,
             "qw2099": R2099.name,
             "qw2102": R2102.name,
             "qw2101": R2101.name,
@@ -185,6 +188,14 @@ def main() -> None:
                 "bridge_observable_origin": s2101.get("bridge_observable_origin"),
                 "strict_provenance_ready": s2101.get("strict_provenance_ready"),
             },
+        },
+        "gnewton_design_guidance": {
+            "qw2108_verdict": (d2108 or {}).get("verdict"),
+            "mu_ref_gev": ((d2108 or {}).get("bridge_spec") or {}).get("mu_ref_gev"),
+            "g_dimensionless_target": ((d2108 or {}).get("bridge_spec") or {}).get("g_dimensionless_target"),
+            "g_dimensionless_acceptance_range": (
+                ((d2108 or {}).get("bridge_spec") or {}).get("g_dimensionless_acceptance_range")
+            ),
         },
         "t3t4_meta_gate": {
             "qw2104_verdict": d2104.get("verdict"),
@@ -256,6 +267,19 @@ def main() -> None:
         lines.extend([f"  - {g}" for g in g_gaps])
     else:
         lines.append("  - none")
+
+    gspec = ((d2108 or {}).get("bridge_spec") or {})
+    grng = gspec.get("g_dimensionless_acceptance_range") or {}
+    lines.extend(
+        [
+            "",
+            "## G_newton Design Guidance",
+            f"- QW-2108 verdict: `{(d2108 or {}).get('verdict')}`",
+            f"- mu_ref_gev: `{gspec.get('mu_ref_gev')}`",
+            f"- g_dimensionless_target: `{gspec.get('g_dimensionless_target')}`",
+            f"- g_dimensionless_acceptance_range: `[{grng.get('min')}, {grng.get('max')}]`",
+        ]
+    )
 
     lines.extend(
         [

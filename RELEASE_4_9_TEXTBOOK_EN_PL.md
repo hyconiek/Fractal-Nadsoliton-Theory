@@ -371,8 +371,9 @@ Meaning:
   - pre-gate consistency for QW-2102 and QW-2103,
   - merged preflight consistency for QW-2104,
   - intake/gap consistency for QW-2105 and QW-2106,
+  - design-guidance consistency for QW-2107 and QW-2108,
   - strict-level/status integrity in package report.
-- Result: `107` checks, `0` failed.
+- Result: `113` checks, `0` failed.
 
 Meaning:
 - no critical implementation mismatch was detected in the audited non-anchor T1 closure path,
@@ -829,8 +830,9 @@ Znaczenie:
   - spójność pre-gate dla QW-2102 i QW-2103,
   - spójność scalonego preflightu QW-2104,
   - spójność intake/gap dla QW-2105 i QW-2106,
+  - spójność guidance design dla QW-2107 i QW-2108,
   - integralność strict-level/status w raporcie pakietowym.
-- Wynik: `107` kontrole, `0` błędów.
+- Wynik: `113` kontrole, `0` błędów.
 
 Znaczenie:
 - w audytowanej ścieżce domknięcia T1 non-anchor nie wykryto krytycznych niespójności implementacyjnych,
@@ -954,6 +956,8 @@ Wniosek:
   - `QW-2105`: `T3T4_STRICT_INPUT_GAPS_PRESENT`, explicitly listing what external inputs are still missing for strict-ready T3/T4.
 - New deterministic H(z) acquisition design search:
   - `QW-2107`: `HZ_STRICT_DESIGN_FOUND`, showing strict identifiability can be reached with +2 external nodes and providing auditable redshift candidates (current top pair: `[0.10, 0.90]`).
+- New deterministic G dimensionless acquisition specification:
+  - `QW-2108`: `GNEWTON_DIMENSIONLESS_ACQUISITION_SPEC_READY`, defining strict external contract for `g_dimensionless_mu_ref` at `mu_ref=1 GeV`: target `6.708830750342e-39`, accepted range `[6.373389212825e-39, 7.044272287859e-39]`.
 - New raw-input intake gate:
   - `QW-2106`: `STRICT_EXTERNAL_INPUT_INTAKE_GATE_PENDING` (`10/18`), requiring metadata sidecars and strict-ready raw input structure before T3/T4 autocollectors.
 - EW secondary propagation gate was executed:
@@ -964,7 +968,7 @@ Wniosek:
   - `QW-2069`: strict-derived `28/32`, direct missing `0/32`, strict-unresolved `7/32`.
   - `QW-2081`: strict-unresolved in missing-14 scope is `4/14`:
     `delta_cp_ckm`, `h0`, `lambda_cosmological`, `G_newton`.
-  - `QW-2094` defect sweep remains clean: `107` checks, `0` failed (including `QW-2102/2103` pre-gates, `QW-2104` merged preflight consistency, `QW-2105/2106` intake-gap consistency, and `QW-2107` design-guidance consistency).
+  - `QW-2094` defect sweep remains clean: `113` checks, `0` failed (including `QW-2102/2103` pre-gates, `QW-2104` merged preflight consistency, `QW-2105/2106` intake-gap consistency, and design-guidance consistency for `QW-2107/2108`).
 
 ### PL
 
@@ -994,6 +998,8 @@ Wniosek:
   - `QW-2105`: `T3T4_STRICT_INPUT_GAPS_PRESENT`, jawnie wyliczająca, jakich danych zewnętrznych brakuje do strict-ready T3/T4.
 - Nowy deterministyczny search projektu akwizycji H(z):
   - `QW-2107`: `HZ_STRICT_DESIGN_FOUND`, pokazujący, że strict identyfikowalność można osiągnąć przy +2 zewnętrznych węzłach i podający audytowalne kandydaty redshift (obecnie para top: `[0.10, 0.90]`).
+- Nowa deterministyczna specyfikacja akwizycji bezwymiarowego mostu G:
+  - `QW-2108`: `GNEWTON_DIMENSIONLESS_ACQUISITION_SPEC_READY`, definiująca ścisły kontrakt zewnętrzny dla `g_dimensionless_mu_ref` przy `mu_ref=1 GeV`: target `6.708830750342e-39`, zakres akceptacji `[6.373389212825e-39, 7.044272287859e-39]`.
 - Nowa bramka intake dla surowych wejść:
   - `QW-2106`: `STRICT_EXTERNAL_INPUT_INTAKE_GATE_PENDING` (`10/18`), wymagająca metadanych sidecar i struktury strict-ready przed autocollectorami T3/T4.
 - Bramka propagacji wtórnych parametrów EW została wykonana:
@@ -1004,4 +1010,4 @@ Wniosek:
   - `QW-2069`: strict-derived `28/32`, direct missing `0/32`, strict-unresolved `7/32`.
   - `QW-2081`: strict-unresolved w zakresie missing-14 to `4/14`:
     `delta_cp_ckm`, `h0`, `lambda_cosmological`, `G_newton`.
-  - `QW-2094` pozostaje czysty: `107` kontrole, `0` błędów (w tym pre-gate `QW-2102/2103`, spójność scalonej bramki `QW-2104`, spójność intake/gap `QW-2105/2106` oraz spójność guidance z `QW-2107`).
+  - `QW-2094` pozostaje czysty: `113` kontrole, `0` błędów (w tym pre-gate `QW-2102/2103`, spójność scalonej bramki `QW-2104`, spójność intake/gap `QW-2105/2106` oraz spójność guidance dla `QW-2107/2108`).

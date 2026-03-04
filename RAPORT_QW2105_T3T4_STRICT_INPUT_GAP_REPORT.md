@@ -1,6 +1,6 @@
 # RAPORT QW-2105: T3T4 STRICT INPUT GAP REPORT
 
-- Date UTC: 2026-03-04T12:24:47.647520+00:00
+- Date UTC: 2026-03-04T12:35:49.567870+00:00
 - Verdict: **T3T4_STRICT_INPUT_GAPS_PRESENT**
 
 ## H(z) Path
@@ -33,6 +33,12 @@
   - set_bridge_observable_origin_external_dimensionless
   - set_provenance_anchor_free_true
   - set_g_si_input_optional_null
+
+## G_newton Design Guidance
+- QW-2108 verdict: `GNEWTON_DIMENSIONLESS_ACQUISITION_SPEC_READY`
+- mu_ref_gev: `1.0`
+- g_dimensionless_target: `6.708830750342087e-39`
+- g_dimensionless_acceptance_range: `[6.373389212824983e-39, 7.044272287859191e-39]`
 
 ## Meta
 - QW-2104 verdict: `T3T4_STRICT_PREFLIGHT_GATE_PENDING` (0/8)

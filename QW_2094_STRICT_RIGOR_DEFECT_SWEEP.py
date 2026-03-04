@@ -53,6 +53,7 @@ def main() -> None:
     r2105 = load_optional_json("report_qw2105_t3t4_strict_input_gap_report.json")
     r2106 = load_optional_json("report_qw2106_strict_external_input_intake_gate.json")
     r2107 = load_optional_json("report_qw2107_hz_strict_design_search.json")
+    r2108 = load_optional_json("report_qw2108_gnewton_dimensionless_acquisition_spec.json")
     r2069 = load_json("report_qw2069_full_sm_gr_derivation_package.json")
     r2071 = load_json("report_qw2071_sm_gr_full_precision_closure_gate.json")
 
@@ -630,6 +631,40 @@ def main() -> None:
             checks["QW-2107_verdict_matches_qw2105_guidance"] = True
             checks["QW-2107_top5_matches_qw2105_guidance"] = True
 
+    # 16) Optional G_newton strict acquisition-spec consistency checks (QW-2108).
+    if r2108 is not None:
+        verdict108 = str(r2108.get("verdict", ""))
+        bspec = r2108.get("bridge_spec", {})
+        gtgt = bspec.get("g_dimensionless_target")
+        grng = bspec.get("g_dimensionless_acceptance_range", {})
+        gmin = grng.get("min")
+        gmax = grng.get("max")
+
+        checks["QW-2108_verdict_known"] = verdict108 in {
+            "GNEWTON_DIMENSIONLESS_ACQUISITION_SPEC_READY",
+        }
+        checks["QW-2108_target_positive"] = isinstance(gtgt, (int, float)) and float(gtgt) > 0.0
+        checks["QW-2108_range_ordered"] = (
+            isinstance(gmin, (int, float))
+            and isinstance(gmax, (int, float))
+            and isinstance(gtgt, (int, float))
+            and float(gmin) > 0.0
+            and float(gmin) <= float(gtgt) <= float(gmax)
+        )
+        checks["QW-2108_mu_ref_positive"] = isinstance(bspec.get("mu_ref_gev"), (int, float)) and float(
+            bspec.get("mu_ref_gev")
+        ) > 0.0
+
+        if r2105 is not None:
+            gg = r2105.get("gnewton_design_guidance", {})
+            checks["QW-2108_verdict_matches_qw2105_guidance"] = (
+                str(gg.get("qw2108_verdict", "")) == verdict108
+            )
+            checks["QW-2108_target_matches_qw2105_guidance"] = gg.get("g_dimensionless_target") == gtgt
+        else:
+            checks["QW-2108_verdict_matches_qw2105_guidance"] = True
+            checks["QW-2108_target_matches_qw2105_guidance"] = True
+
     # Build defect list.
     for name, ok in checks.items():
         if ok:
@@ -718,6 +753,11 @@ def main() -> None:
             "qw2107": (
                 "report_qw2107_hz_strict_design_search.json"
                 if r2107 is not None
+                else None
+            ),
+            "qw2108": (
+                "report_qw2108_gnewton_dimensionless_acquisition_spec.json"
+                if r2108 is not None
                 else None
             ),
             "qw2069": "report_qw2069_full_sm_gr_derivation_package.json",

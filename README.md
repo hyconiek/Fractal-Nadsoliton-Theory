@@ -215,8 +215,9 @@ Below is the current closure status based on the newest internal gates/reports:
 - **QW-2105:** T3/T4 strict input gap report added (`T3T4_STRICT_INPUT_GAPS_PRESENT`) with explicit blocking requirements for external data collection (H(z) lever-arm + dimensionless G provenance), now including top recommended H(z) acquisition redshift pairs from `QW-2107`.
 - **QW-2106:** strict external input intake gate added (`STRICT_EXTERNAL_INPUT_INTAKE_GATE_PENDING`, current `10/18`) to validate raw files + sidecar metadata before autocollectors.
 - **QW-2107:** deterministic H(z) strict-design search added (`HZ_STRICT_DESIGN_FOUND`), proving that strict-ready identifiability is reachable with +2 external nodes and producing auditable redshift acquisition candidates (current top pair: `[0.10, 0.90]`).
+- **QW-2108:** deterministic G-dimensionless acquisition spec added (`GNEWTON_DIMENSIONLESS_ACQUISITION_SPEC_READY`), providing strict target/range for external `g_dimensionless_mu_ref` at `mu_ref=1 GeV`: target `6.708830750342e-39`, accepted range `[6.373389212825e-39, 7.044272287859e-39]`.
 - **QW-2098:** EW secondary non-anchor closure gate executed; `v_higgs` and `sin2_theta_w_mz` promoted to strict-derived, while `m_w` and `alpha_em_inv_mz` remain explicit strict target-miss (`EW_SECONDARY_NONANCHOR_CLOSURE_GATE_TARGET_MISS`, `8/10` flags).
-- **QW-2094:** strict-rigor defect sweep passes (`STRICT_RIGOR_DEFECT_SWEEP_PASS_NO_CRITICAL_DEFECTS`, `107` checks, `0` failed) for T1+T2+T3/T4 + EW-secondary consistency, now including `QW-2102/2103` pre-gates, `QW-2104` merged preflight, `QW-2105/2106` intake-gap consistency, and `QW-2107` design-guidance consistency checks.
+- **QW-2094:** strict-rigor defect sweep passes (`STRICT_RIGOR_DEFECT_SWEEP_PASS_NO_CRITICAL_DEFECTS`, `113` checks, `0` failed) for T1+T2+T3/T4 + EW-secondary consistency, now including `QW-2102/2103` pre-gates, `QW-2104` merged preflight, `QW-2105/2106` intake-gap consistency, `QW-2107` H(z) guidance consistency, and `QW-2108` G-guidance consistency checks.
 - **QW-2071:** full-precision closure gate remains partial strong internal (`3/6` pass flags), with `0` direct missing parameters, `7` strict-unresolved parameters, and `0` missing radiative channels.
 - **QW-1852 -> QW-2017 recheck after archive restoration:** QW-2014/2015/2016/2017 chain passes (`READY_STRICT` + strong blind external/intervention passes). QW-1852 readiness currently depends on expected candidate-dir presence (`EXTERNAL_DATASET_PENDING_COLLECTION` if missing).
 
@@ -311,7 +312,7 @@ Expected interpretation:
 - after QW-2093 + QW-2085/2086/2087, T1 aggregate non-anchor gate (QW-2084) should pass in strict mode,
 - dedicated G_F/M_Z/alpha_s non-anchor gates should pass in strict mode using generated kernel-derived inputs,
 - QW-2091 can pass strict with externalized, metadata-hardened snapshot inputs; QW-2090 is currently strict target-miss on H(z), and QW-2092 remains non-closing when bridge input is backsolved from `g_si`,
-- strict-rigor defect sweep (QW-2094) should pass with no critical consistency defects (including `QW-2102/2103` pre-gates and `QW-2104` merged preflight checks),
+- strict-rigor defect sweep (QW-2094) should pass with no critical consistency defects (including `QW-2102/2103` pre-gates, `QW-2104` merged preflight checks, and `QW-2107/2108` guidance consistency checks),
 - missing-14 strict frontier remains partial by construction (`4/14` unresolved; no hidden retune).
 
 Optional strict preflight (expected to fail on current placeholder snapshots):
