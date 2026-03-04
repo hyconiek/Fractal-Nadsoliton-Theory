@@ -42,6 +42,24 @@ def load_optional_json(name: str) -> Dict | None:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def is_closure_resolved_entry(e: Dict) -> bool:
+    lvl = str(e.get("strict_level", ""))
+    st = str(e.get("status", ""))
+
+    # SI definitions are treated as explicitly resolved-by-definition in package logic.
+    if lvl == "si_definition" and st == "definition_constant":
+        return True
+
+    # Strict internal derivation must not be a target-miss and must satisfy tolerance when numeric.
+    if lvl == "strict_internal_gate" and st.startswith("derived") and st != "derived_strict_target_miss":
+        within = e.get("within_tolerance")
+        if isinstance(within, bool):
+            return within
+        return True
+
+    return False
+
+
 def main() -> None:
     reg = load_json("report_qw2068_sm_gr_parameter_registry.json")
     r2063 = load_json("report_qw2063_derivational_reconstruction_shared_flavor_basis.json")
@@ -49,6 +67,19 @@ def main() -> None:
     r2067 = load_json("report_qw2067_strict_first_principles_internal_closure_strengthened_gate.json")
     r2074 = load_optional_json("report_qw2074_strict_nofit_missing_parameter_derivations.json")
     r2075 = load_optional_json("report_qw2075_strict_cp_phase_derivation_gate.json")
+    r2083 = load_optional_json("report_qw2083_missing14_epistemic_status_gate.json")
+    r2084 = load_optional_json("report_qw2084_t1_nonanchor_strict_gate.json")
+    r2085 = load_optional_json("report_qw2085_gf_nonanchor_lifetime_gate.json")
+    r2086 = load_optional_json("report_qw2086_mz_nonanchor_ew_pole_gate.json")
+    r2087 = load_optional_json("report_qw2087_alpha_s_nonanchor_boundary_gate.json")
+    r2088 = load_optional_json("report_qw2088_light_quark_mass_nonanchor_gate.json")
+    r2089 = load_optional_json("report_qw2089_higgs_selfcoupling_strict_gate.json")
+    r2090 = load_optional_json("report_qw2090_h0_lambda_decoupling_gate.json")
+    r2091 = load_optional_json("report_qw2091_neutrino_absolute_scale_gate.json")
+    r2092 = load_optional_json("report_qw2092_gnewton_si_bridge_gate.json")
+    r2096 = load_optional_json("report_qw2096_t2_nonanchor_strict_gate.json")
+    r2097 = load_optional_json("report_qw2097_ckm_cp_target_refinement_gate.json")
+    r2098 = load_optional_json("report_qw2098_ew_secondary_nonanchor_closure_gate.json")
 
     # Canonical bridge constants (project-level formula anchors, not strict independent derivation claims).
     alpha_geo = 4.0 * math.log(2.0)
@@ -274,13 +305,117 @@ def main() -> None:
                 if isinstance(tol, (int, float)):
                     e["within_tolerance"] = bool(rel <= float(tol))
 
+    # Optional missing-14 epistemic status gate updates (QW-2083).
+    if r2083 is not None:
+        upd_map = {u["id"]: u for u in r2083.get("updates", []) if isinstance(u, dict) and "id" in u}
+        for e in entries:
+            # QW-2083 may update entries even if they were previously touched by QW-2074/2075.
+            u = upd_map.get(e["id"])
+            if u is None:
+                continue
+            e["predicted_value"] = u.get("predicted_value")
+            e["method"] = u.get("method", e["method"])
+            e["status"] = u.get("status", e["status"])
+            e["strict_level"] = u.get("strict_level", e["strict_level"])
+            e["notes"] = u.get("notes", e["notes"])
+
+            ref_val = e.get("reference_value")
+            pred_val = e.get("predicted_value")
+            tol = e.get("tolerance_rel_pct")
+            if isinstance(ref_val, (int, float)) and isinstance(pred_val, (int, float)):
+                rel = rel_err_pct(float(pred_val), float(ref_val))
+                e["rel_err_pct"] = rel
+                if isinstance(tol, (int, float)):
+                    e["within_tolerance"] = bool(rel <= float(tol))
+
+    # Optional T1 strict non-anchor audit updates (QW-2084).
+    if r2084 is not None:
+        upd_map = {u["id"]: u for u in r2084.get("updates", []) if isinstance(u, dict) and "id" in u}
+        for e in entries:
+            u = upd_map.get(e["id"])
+            if u is None:
+                continue
+            e["predicted_value"] = u.get("predicted_value")
+            e["method"] = u.get("method", e["method"])
+            e["status"] = u.get("status", e["status"])
+            e["strict_level"] = u.get("strict_level", e["strict_level"])
+            e["notes"] = u.get("notes", e["notes"])
+
+            ref_val = e.get("reference_value")
+            pred_val = e.get("predicted_value")
+            tol = e.get("tolerance_rel_pct")
+            if isinstance(ref_val, (int, float)) and isinstance(pred_val, (int, float)):
+                rel = rel_err_pct(float(pred_val), float(ref_val))
+                e["rel_err_pct"] = rel
+                if isinstance(tol, (int, float)):
+                    e["within_tolerance"] = bool(rel <= float(tol))
+
+    # Optional single-update gates (QW-2085/QW-2086).
+    for rsingle in [r2085, r2086, r2087, r2092, r2097]:
+        if rsingle is None:
+            continue
+        u = rsingle.get("update")
+        if not (isinstance(u, dict) and "id" in u):
+            continue
+        for e in entries:
+            if e.get("id") != u.get("id"):
+                continue
+            e["predicted_value"] = u.get("predicted_value")
+            e["method"] = u.get("method", e["method"])
+            e["status"] = u.get("status", e["status"])
+            e["strict_level"] = u.get("strict_level", e["strict_level"])
+            e["notes"] = u.get("notes", e["notes"])
+
+            ref_val = e.get("reference_value")
+            pred_val = e.get("predicted_value")
+            tol = e.get("tolerance_rel_pct")
+            if isinstance(ref_val, (int, float)) and isinstance(pred_val, (int, float)):
+                rel = rel_err_pct(float(pred_val), float(ref_val))
+                e["rel_err_pct"] = rel
+                if isinstance(tol, (int, float)):
+                    e["within_tolerance"] = bool(rel <= float(tol))
+
+    # Optional multi-update T2 gates (QW-2088/QW-2089/QW-2096).
+    for rmulti in [r2088, r2089, r2090, r2091, r2096, r2098]:
+        if rmulti is None:
+            continue
+        updates = rmulti.get("updates")
+        if not isinstance(updates, list):
+            upd_single = rmulti.get("update")
+            updates = [upd_single] if isinstance(upd_single, dict) else []
+        upd_map = {u["id"]: u for u in updates if isinstance(u, dict) and "id" in u}
+        if not upd_map:
+            continue
+        for e in entries:
+            u = upd_map.get(e["id"])
+            if u is None:
+                continue
+            e["predicted_value"] = u.get("predicted_value")
+            e["method"] = u.get("method", e["method"])
+            e["status"] = u.get("status", e["status"])
+            e["strict_level"] = u.get("strict_level", e["strict_level"])
+            e["notes"] = u.get("notes", e["notes"])
+
+            ref_val = e.get("reference_value")
+            pred_val = e.get("predicted_value")
+            tol = e.get("tolerance_rel_pct")
+            if isinstance(ref_val, (int, float)) and isinstance(pred_val, (int, float)):
+                rel = rel_err_pct(float(pred_val), float(ref_val))
+                e["rel_err_pct"] = rel
+                if isinstance(tol, (int, float)):
+                    e["within_tolerance"] = bool(rel <= float(tol))
+
     # Coverage summary.
     n_total = int(reg["n_total_parameters"])
     n_derived_strict = sum(1 for e in entries if e["strict_level"] == "strict_internal_gate" and e["status"].startswith("derived"))
     n_model_formula = sum(1 for e in entries if e["strict_level"] == "model_formula")
     n_anchor_dependent = sum(1 for e in entries if e["strict_level"] == "physical_relation_anchor_dependent")
+    n_coupled_anchor_dependent = sum(1 for e in entries if e["strict_level"] == "coupled_anchor_dependent")
+    n_model_assumption = sum(1 for e in entries if e["strict_level"] == "model_assumption_anchor")
     n_definition_constants = sum(1 for e in entries if e["strict_level"] == "si_definition")
     n_missing = sum(1 for e in entries if e["status"] == "missing")
+    strict_unresolved_ids = sorted([e["id"] for e in entries if not is_closure_resolved_entry(e)])
+    n_strict_unresolved = len(strict_unresolved_ids)
 
     # Tolerance stats only where numeric comparison exists.
     numeric_comp = [e for e in entries if isinstance(e.get("rel_err_pct"), float)]
@@ -288,7 +423,7 @@ def main() -> None:
     n_numeric_within = sum(1 for e in numeric_comp if bool(e.get("within_tolerance")))
 
     strict_internal_strengthened_pass = bool(r2067.get("strengthened_pass", False))
-    full_smgr_package_pass = bool(strict_internal_strengthened_pass and n_missing == 0)
+    full_smgr_package_pass = bool(strict_internal_strengthened_pass and n_missing == 0 and n_strict_unresolved == 0)
 
     if full_smgr_package_pass:
         verdict = "FULL_SM_GR_DERIVATION_PACKAGE_PASS"
@@ -314,6 +449,71 @@ def main() -> None:
                 if r2075 is not None
                 else None
             ),
+            "missing14_epistemic_status_gate_optional": (
+                "report_qw2083_missing14_epistemic_status_gate.json"
+                if r2083 is not None
+                else None
+            ),
+            "t1_nonanchor_strict_gate_optional": (
+                "report_qw2084_t1_nonanchor_strict_gate.json"
+                if r2084 is not None
+                else None
+            ),
+            "gf_nonanchor_lifetime_gate_optional": (
+                "report_qw2085_gf_nonanchor_lifetime_gate.json"
+                if r2085 is not None
+                else None
+            ),
+            "mz_nonanchor_ew_pole_gate_optional": (
+                "report_qw2086_mz_nonanchor_ew_pole_gate.json"
+                if r2086 is not None
+                else None
+            ),
+            "alpha_s_nonanchor_boundary_gate_optional": (
+                "report_qw2087_alpha_s_nonanchor_boundary_gate.json"
+                if r2087 is not None
+                else None
+            ),
+            "light_quark_mass_nonanchor_gate_optional": (
+                "report_qw2088_light_quark_mass_nonanchor_gate.json"
+                if r2088 is not None
+                else None
+            ),
+            "higgs_selfcoupling_strict_gate_optional": (
+                "report_qw2089_higgs_selfcoupling_strict_gate.json"
+                if r2089 is not None
+                else None
+            ),
+            "h0_lambda_decoupling_gate_optional": (
+                "report_qw2090_h0_lambda_decoupling_gate.json"
+                if r2090 is not None
+                else None
+            ),
+            "neutrino_absolute_scale_gate_optional": (
+                "report_qw2091_neutrino_absolute_scale_gate.json"
+                if r2091 is not None
+                else None
+            ),
+            "gnewton_si_bridge_gate_optional": (
+                "report_qw2092_gnewton_si_bridge_gate.json"
+                if r2092 is not None
+                else None
+            ),
+            "t2_nonanchor_strict_gate_optional": (
+                "report_qw2096_t2_nonanchor_strict_gate.json"
+                if r2096 is not None
+                else None
+            ),
+            "ckm_cp_target_refinement_gate_optional": (
+                "report_qw2097_ckm_cp_target_refinement_gate.json"
+                if r2097 is not None
+                else None
+            ),
+            "ew_secondary_nonanchor_closure_gate_optional": (
+                "report_qw2098_ew_secondary_nonanchor_closure_gate.json"
+                if r2098 is not None
+                else None
+            ),
         },
         "entries": entries,
         "coverage": {
@@ -322,8 +522,12 @@ def main() -> None:
             "n_derived_strict_internal": n_derived_strict,
             "n_model_formula_only": n_model_formula,
             "n_anchor_dependent_nofit": n_anchor_dependent,
+            "n_coupled_anchor_dependent": n_coupled_anchor_dependent,
+            "n_model_assumption_nonclosing": n_model_assumption,
             "n_definition_constants": n_definition_constants,
             "n_missing": n_missing,
+            "n_strict_unresolved": n_strict_unresolved,
+            "strict_unresolved_ids": strict_unresolved_ids,
             "strict_internal_coverage_fraction": float(n_derived_strict / max(n_total, 1)),
             "numeric_comparisons": {
                 "n": n_numeric,
@@ -354,8 +558,11 @@ def main() -> None:
         f"- strict internal derived: {n_derived_strict}",
         f"- model-formula only: {n_model_formula}",
         f"- no-fit anchor-dependent derived: {n_anchor_dependent}",
+        f"- coupled anchor-dependent derived: {n_coupled_anchor_dependent}",
+        f"- model-assumption nonclosing derived: {n_model_assumption}",
         f"- SI definition constants mapped: {n_definition_constants}",
         f"- missing direct derivation: {n_missing}",
+        f"- strict unresolved (closure criterion): {n_strict_unresolved}",
         f"- strict internal coverage fraction: {out['coverage']['strict_internal_coverage_fraction']:.3f}",
         "",
         "## Numeric Comparison Stats",

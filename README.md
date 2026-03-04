@@ -18,7 +18,7 @@ The theory has been validated through **1200+ numerical verification studies (QW
 
 **Critical Assessment:** The theory succeeds in gauge/gravity sector and has now established a rigorous **Preon Model**. Fermion spin is emergent via 3D Skyrmions. See Part XIX of the documentation for honest evaluation.
 
-**Important status note (2026-03-04):** FIN now has a **strict internal first-principles closure pass** in the current gate chain (`QW-2065`, strengthened by `QW-2067`). The explicit full SM+GR package audit (`QW-2069`) and full-precision closure gate (`QW-2071`) still report **partial status**, so this is **not yet a final community-confirmed ToE**.
+**Important status note (2026-03-04):** FIN now has a **strict internal first-principles closure pass** in the current gate chain (`QW-2065`, strengthened by `QW-2067`). The full SM+GR package audit (`QW-2069`) and full-precision closure gate (`QW-2071`) remain **partial**: direct `missing` is now `0`, but strict-unresolved closure is currently `7` in package scope. In the focused missing-14 frontier (`QW-2081`), unresolved set is now `4/14` (`delta_cp_ckm`, `h0`, `lambda_cosmological`, `G_newton`).
 
 ---
 
@@ -157,13 +157,13 @@ Particle masses follow Fibonacci pattern:
 |----------|--------|-------|
 | Q1: Fermion Spin | ✅ ADDRESSED | Verified B=1 for 3D Skyrmion (QW-1204) |
 | Q2: Gravity Exponent 2.26 | ✅ ADDRESSED | Runs to 2.0 at large scales |
-| Q3: α Precision 0.15% | 🟠 PARTIAL | Radiative channel closure-ready is `7/7` (QW-2070/QW-2073), but `14` radiative-sensitive SM+GR parameters still lack direct derivation in package gate |
+| Q3: α Precision 0.15% | 🟠 PARTIAL | Radiative channels are `7/7` closure-ready, but strict-unresolved precision set remains non-zero (`7` in QW-2069 package closure map) |
 | Q4: Q Assignment | ✅ ESTABLISHED | Preon Model ($Q=8$) & Fibonacci Trimer |
 | Q5: Lorentz Invariance | ✅ ADDRESSED | Emergent in IR limit |
 | Q6: CKM/PMNS Matrices | 🟠 PARTIAL | Gate-level matrix magnitudes pass in strict internal chain; PMNS CP phase promoted (QW-2075), CKM CP phase still not closure-ready |
 | Q7: Bell Inequality | 🟠 DEBATED | Explained via Layering (Controversial) |
 | Q8: β / renormalization origin | 🟡 INTERNAL SUPPORT PASS | Micro-derived renormalization constants gate pass (QW-2064) + tightening (QW-2066), but precision spread is not yet final |
-| Q9: All known physical values fully derived | ❌ NOT YET | Full package gate is partial: QW-2069 (`11/32` strict-derived, `14` missing; plus `2` anchor-dependent + `2` SI-definition), QW-2071 (`2/5` global flags) |
+| Q9: All known physical values fully derived | ❌ NOT YET | Full package gate remains partial: QW-2069 (`28/32` strict-derived, `0` direct missing, but `7` strict-unresolved), QW-2071 (`3/6` flags), QW-2081 (`4/14` strict-unresolved in missing-14 scope) |
 
 **Conclusion:** FIN Theory is now a **high-rigor internal unification candidate** with strengthened first-principles closure in the current gate scope. It is **NOT yet a final complete ToE claim** — full precision radiative closure and independent external multiteam confirmation remain required.
 
@@ -180,25 +180,109 @@ Below is the current closure status based on the newest internal gates/reports:
 - **QW-2066:** compatibility-filtered tightening pass (`6/6`) with dispersion reduction.
 - **QW-2067:** strengthened strict internal closure pass (`3/3`).
 - **QW-2068:** explicit SM+GR target registry established (`32` parameters).
-- **QW-2069:** full SM+GR package audit: `11/32` strict-derived, `3` model-formula-only, `2` anchor-dependent no-fit, `2` SI-definition, `14` missing.
+- **QW-2069:** full SM+GR package audit (after T1+T2+CKM refinement path + EW secondary closure gate): `28/32` strict-derived, `1` model-formula-only, `1` anchor-dependent no-fit, `0` coupled-anchor-dependent, `0` model-assumption-nonclosing, `2` SI-definition, `0` direct missing, `7` strict-unresolved.
 - **QW-2070:** radiative baseline refresh: `7/7` channels implemented, `7/7` closure-ready, `0` missing channels.
 - **QW-2072:** EW+Yukawa+CKM/PMNS radiative baselines implemented as explicit non-closing blocks.
 - **QW-2073:** radiative channel closure upgrade to closure-ready pass for upgraded channels (`5/5`).
 - **QW-2074:** strict no-fit missing-parameter round (epistemically labeled, no retune, no scan).
 - **QW-2075:** strict CP-phase gate: PMNS CP promoted; CKM CP remains non-closing (`STRICT_CP_PHASE_DERIVATION_PARTIAL_PMNS_ONLY`).
 - **QW-2076:** empirical prediction preregistration package ready (`3` falsifiable prospective predictions).
-- **QW-2077:** empirical validator gate implemented (currently `PENDING_DATA` on template input).
-- **QW-2071:** full-precision closure gate remains partial strong internal (`2/5` pass flags), with `14` missing parameters and `0` missing radiative channels.
+- **QW-2077:** empirical validator gate implemented (current run: `MIXED_OR_INCONCLUSIVE`; GW supported, PMNS + cosmology pending data).
+- **QW-2078:** GW external holdout autocollector implemented (auto-builds QW-2077 observation JSON from holdout feature table using locked weights/metrics).
+- **QW-2079:** PMNS CP external autocollector implemented (fills QW-2077 PMNS block with explicit CI and provenance).
+- **QW-2080:** cosmology \(w_{\mathrm{eff}}(z)\) external autocollector implemented (fills preregistered z-nodes from CSV with validation).
+- **QW-2081:** strict-rigor frontier over missing-14 refreshed after T3/T4 execution: `4/14` strict-unresolved (`delta_cp_ckm`, `h0`, `lambda_cosmological`, `G_newton`), with classification split `3` strict target-miss + `1` anchor-dependent baseline-only.
+- **QW-2082:** strict closure roadmap refreshed dynamically for current unresolved set (`4` IDs): `T1`=`delta_cp_ckm`, `T3`=`h0/lambda_cosmological`, `T4`=`G_newton`.
+- **QW-2084:** T1 strict non-anchor aggregate gate now passes (`T1_NONANCHOR_STRICT_GATE_PASS`, `6/6` flags) when fed by kernel-derived upstream gates (`QW-2093` + `QW-2085/2086/2087`).
+- **QW-2085:** dedicated `G_F` non-anchor lifetime gate now passes strict non-anchor (`GF_NONANCHOR_LIFETIME_GATE_PASS`, `5/6` flags) on kernel-derived lifetime chain.
+- **QW-2086:** dedicated `M_Z` non-anchor EW-pole gate now passes strict non-anchor (`MZ_NONANCHOR_EW_POLE_GATE_PASS`, `5/6` flags) on kernel-derived EW-pole inputs.
+- **QW-2087:** dedicated `alpha_s_mz` non-anchor boundary gate now passes strict non-anchor (`ALPHA_S_NONANCHOR_BOUNDARY_GATE_PASS`, `8/9` flags) on kernel-derived boundary + validation points.
+- **QW-2088:** dedicated light-quark non-anchor gate passes (`LIGHT_QUARK_MASS_NONANCHOR_GATE_PASS`), promoting `m_up/m_down/m_strange` to strict internal non-anchor closure.
+- **QW-2089:** dedicated Higgs self-coupling strict gate passes (`HIGGS_SELFCOUPLING_STRICT_GATE_PASS`), promoting `m_h` to strict internal non-anchor closure.
+- **QW-2093:** deterministic frozen-plan executor builds kernel-derived non-anchor inputs for QW-2085..QW-2087 (`KERNEL_DERIVED_NONANCHOR_INPUTS_BUILT_FROZEN_PLAN`).
+- **QW-2095:** deterministic frozen-plan executor builds kernel-derived T2 inputs for QW-2088/2089 (`KERNEL_DERIVED_T2_NONANCHOR_INPUTS_BUILT_FROZEN_PLAN`).
+- **QW-2096:** T2 non-anchor aggregate gate passes (`T2_NONANCHOR_STRICT_GATE_PASS`, `7/7` flags).
+- **QW-2097:** CKM CP target-refinement gate executes deterministic permutation/convention audit; result remains target-miss (`CKM_CP_TARGET_REFINEMENT_GATE_TARGET_MISS`, no false pass).
+- **QW-2090:** H0/Lambda decoupling gate executed in strict mode with metadata-hardened input checks; current run is explicit strict target-miss (`H0_LAMBDA_DECOUPLING_GATE_TARGET_MISS`, `7/9`) on current external H(z) snapshot. New identifiability diagnostics show weak two-parameter lever arm (`E` span ~`0.487`), while flatness-projection diagnostic is compatible with registry (`h0`/`lambda` both within tolerance) but remains non-closing for strict decoupling claim.
+- **QW-2091:** neutrino absolute-scale gate now strict-pass on externalized snapshot input (`NEUTRINO_ABSOLUTE_SCALE_GATE_PASS_STRICT`, `8/8`).
+- **QW-2092:** G_newton SI-bridge gate is currently non-closing (`GNEWTON_SI_BRIDGE_GATE_PENDING_NONCLOSING`, `6/8`) after tautology hardening blocks strict pass for backsolved `g_dimensionless_mu_ref`.
+- **QW-2099:** H(z) external decoupling autocollector builds `h0_lambda_decoupling_input_qw2090.json` with source hash and provenance metadata.
+- **QW-2100:** neutrino absolute-scale external autocollector builds `neutrino_absolute_scale_input_qw2091.json` with source hash and metadata.
+- **QW-2101:** G_newton bridge external autocollector now labels bridge origin and emits non-strict verdict for backsolved inputs (`GNEWTON_BRIDGE_EXTERNAL_AUTOCOLLECTED_BACKSOLVED_NONSTRICT`).
+- **QW-2102:** H(z) decoupling identifiability gate added; current input is weak-leverarm pending (`HZ_DECOUPLING_IDENTIFIABILITY_GATE_WEAK_LEVERARM_PENDING`, `3/7`), failing `n_nodes>=5`, `z_span>=0.8`, `e_span>=1.0`, and `cond<8`.
+- **QW-2103:** G_newton dimensionless provenance gate added; current bridge input remains non-closing (`GNEWTON_DIMENSIONLESS_PROVENANCE_GATE_PENDING_NONCLOSING`, `5/8`) because origin is `backsolved_from_g_si`, not direct external dimensionless observable.
+- **QW-2098:** EW secondary non-anchor closure gate executed; `v_higgs` and `sin2_theta_w_mz` promoted to strict-derived, while `m_w` and `alpha_em_inv_mz` remain explicit strict target-miss (`EW_SECONDARY_NONANCHOR_CLOSURE_GATE_TARGET_MISS`, `8/10` flags).
+- **QW-2094:** strict-rigor defect sweep passes (`STRICT_RIGOR_DEFECT_SWEEP_PASS_NO_CRITICAL_DEFECTS`, `59` checks, `0` failed) for T1+T2+T3/T4 + EW-secondary consistency.
+- **QW-2071:** full-precision closure gate remains partial strong internal (`3/6` pass flags), with `0` direct missing parameters, `7` strict-unresolved parameters, and `0` missing radiative channels.
+- **QW-1852 -> QW-2017 recheck after archive restoration:** QW-2014/2015/2016/2017 chain passes (`READY_STRICT` + strong blind external/intervention passes). QW-1852 readiness currently depends on expected candidate-dir presence (`EXTERNAL_DATASET_PENDING_COLLECTION` if missing).
 
 ### What this means scientifically
 - FIN has strong internal derivational and methodological progress.
 - FIN is **not yet** the final ToE / “Holy Grail” replacement for SM+GR in community sense.
 - Main open gap: independent external multiteam confirmatory replication.
 - Additional open scope: full global precision package for *all* known physical values (including complete radiative program blocks).
-- Empirical path is now explicit: preregistered predictions (`QW-2076`) + external-data validator (`QW-2077`).
+- Empirical path is now explicit: preregistered predictions (`QW-2076`) + GW autocollector (`QW-2078`) + external-data validator (`QW-2077`).
 
 ### Practical interpretation
 FIN should currently be treated as an advanced, falsifiable unification candidate with strong partial results, not as a completed final theory.
+
+### How Others Can Check It Now (Minimal Reproduction)
+Use the exact sequence below in a clean environment:
+
+```bash
+python3 QW_1852_EXTERNAL_CONFIRMATORY_DATA_PRECHECK.py
+python3 QW_2014_TRUE_EXTERNAL_BETA_CHANNEL_AUTOCOLLECTOR_V2.py \
+  --nanograv-archive external_confirmatory_v2/beta_channel_true_external_v2/sources/NANOGrav15yr_PulsarTiming_v2.1.0.tar.gz
+python3 QW_2015_TRUE_EXTERNAL_BETA_CHANNEL_V2_READINESS_GATE.py
+python3 QW_2016_V2_TRIAD_BLIND_EXTERNAL_VALIDATION.py
+python3 QW_2017_V2_BETA_OBSERVABLE_BLIND_EXTERNAL_INTERVENTION.py
+python3 QW_2078_GW_EXTERNAL_HOLDOUT_AUTOCOLLECTOR.py
+python3 QW_2077_EMPIRICAL_PREDICTION_VALIDATION_GATE.py empirical_observations_input_qw2077.gw_autocollected.json
+python3 QW_2081_MISSING14_STRICT_RIGOR_FRONTIER.py
+python3 QW_2083_MISSING14_EPISTEMIC_STATUS_GATE.py
+python3 QW_2093_KERNEL_DERIVED_NONANCHOR_INPUTS_PLAN_EXECUTOR.py
+python3 QW_2085_GF_NONANCHOR_LIFETIME_GATE.py
+python3 QW_2086_MZ_NONANCHOR_EW_POLE_GATE.py
+python3 QW_2087_ALPHA_S_NONANCHOR_BOUNDARY_GATE.py
+python3 QW_2084_T1_NONANCHOR_STRICT_GATE.py
+python3 QW_2095_KERNEL_DERIVED_T2_NONANCHOR_INPUTS_PLAN_EXECUTOR.py
+python3 QW_2088_LIGHT_QUARK_MASS_NONANCHOR_GATE.py --input t2_nonanchor_light_quark_input_qw2088.json
+python3 QW_2089_HIGGS_SELFCOUPLING_STRICT_GATE.py --input t2_nonanchor_higgs_input_qw2089.json
+python3 QW_2096_T2_NONANCHOR_STRICT_GATE.py
+python3 QW_2097_CKM_CP_TARGET_REFINEMENT_GATE.py
+python3 QW_2099_HZ_EXTERNAL_DECOUPLING_AUTOCOLLECTOR.py \
+  --nodes-csv external_hz_nodes_qw2099.csv \
+  --citation "Alam et al. (BOSS DR12), MNRAS 470 (2017) 2617" \
+  --reference-url "https://arxiv.org/abs/1607.03155" \
+  --source-version "BOSS_DR12_2017_curated_snapshot_v1"
+python3 QW_2100_NEUTRINO_ABSOLUTE_SCALE_EXTERNAL_AUTOCOLLECTOR.py \
+  --source-file external_neutrino_absolute_scale_qw2100.json \
+  --citation "Planck Collaboration VI (2018 legacy), A&A 641 A6 (2020) + BAO bound context" \
+  --reference-url "https://arxiv.org/abs/1807.06209" \
+  --source-version "PLANCK2018_BAO_SUMMNU_CURATED_SNAPSHOT_V1"
+python3 QW_2101_GNEWTON_BRIDGE_EXTERNAL_AUTOCOLLECTOR.py \
+  --source-file external_gnewton_bridge_qw2101.json \
+  --citation "CODATA recommended value of Newtonian constant of gravitation" \
+  --reference-url "https://physics.nist.gov/cgi-bin/cuu/Value?bg" \
+  --source-version "CODATA_G_CURATED_SNAPSHOT_V1"
+python3 QW_2090_H0_LAMBDA_DECOUPLING_GATE.py --input h0_lambda_decoupling_input_qw2090.json
+python3 QW_2091_NEUTRINO_ABSOLUTE_SCALE_GATE.py --input neutrino_absolute_scale_input_qw2091.json
+python3 QW_2092_GNEWTON_SI_BRIDGE_GATE.py --input gnewton_si_bridge_input_qw2092.json
+python3 QW_2098_EW_SECONDARY_NONANCHOR_CLOSURE_GATE.py
+python3 QW_2069_FULL_SM_GR_DERIVATION_PACKAGE.py
+python3 QW_2070_FULL_RADIATIVE_PROGRAM_BASELINE.py
+python3 QW_2071_SM_GR_FULL_PRECISION_CLOSURE_GATE.py
+python3 QW_2094_STRICT_RIGOR_DEFECT_SWEEP.py
+```
+
+Expected interpretation:
+- external beta-channel validation can pass under locked protocol,
+- empirical QW-2077 remains mixed until PMNS+cosmology observations are provided,
+- after QW-2093 + QW-2085/2086/2087, T1 aggregate non-anchor gate (QW-2084) should pass in strict mode,
+- dedicated G_F/M_Z/alpha_s non-anchor gates should pass in strict mode using generated kernel-derived inputs,
+- QW-2091 can pass strict with externalized, metadata-hardened snapshot inputs; QW-2090 is currently strict target-miss on H(z), and QW-2092 remains non-closing when bridge input is backsolved from `g_si`,
+- strict-rigor defect sweep (QW-2094) should pass with no critical consistency defects,
+- missing-14 strict frontier remains partial by construction (`4/14` unresolved; no hidden retune).
 
 ---
 

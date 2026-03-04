@@ -1,6 +1,6 @@
 # RAPORT QW-2052: EXTERNAL SOURCE-ONLY GOVERNANCE GATE
 
-- Data UTC: 2026-03-04T01:00:06.777315+00:00
+- Data UTC: 2026-03-04T07:19:16.023361+00:00
 - Verdict: **EXTERNAL_SOURCE_ONLY_GOVERNANCE_PASS**
 - Readiness: **SOURCE_ONLY_CONFIRMATORY_GOVERNANCE_READY**
 - pass_count: 8/8
@@ -17,22 +17,8 @@
 - independent_bundle_dirs_have_no_large_payloads: True
 
 ## Tracked Large Files (>= 10485760 B)
-- count: 16
-- `raw_strain_unfiltered/H1_unfiltered_1266965117_long.h5` (20711424 B)
-- `raw_strain_unfiltered/L1_unfiltered_1266965117_long.h5` (20711424 B)
+- count: 2
 - `nadsoliton_scale10.gif` (20614806 B)
-- `raw_strain_unfiltered/H1_unfiltered.h5` (16779264 B)
-- `raw_strain_unfiltered/H1_unfiltered_1253326744.h5` (16779264 B)
-- `raw_strain_unfiltered/H1_unfiltered_1266965117.h5` (16779264 B)
-- `raw_strain_unfiltered/H1_unfiltered_1267051517.h5` (16779264 B)
-- `raw_strain_unfiltered/H1_unfiltered_1267137917.h5` (16779264 B)
-- `raw_strain_unfiltered/L1_unfiltered.h5` (16779264 B)
-- `raw_strain_unfiltered/L1_unfiltered_1253326744.h5` (16779264 B)
-- `raw_strain_unfiltered/L1_unfiltered_1266965117.h5` (16779264 B)
-- `raw_strain_unfiltered/L1_unfiltered_1267051517.h5` (16779264 B)
-- `raw_strain_unfiltered/L1_unfiltered_1267137917.h5` (16779264 B)
-- `raw_strain_unfiltered/L1_unfiltered_1267569917.h5` (16779264 B)
-- `raw_strain_unfiltered/V1_unfiltered_1266965117.h5` (16779264 B)
 - `Kopia_notatnika_12_(2)podsumow.ipynb` (11042592 B)
 
 ## Independent Bundle Large Payload Check

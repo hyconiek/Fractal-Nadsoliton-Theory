@@ -1,7 +1,7 @@
 {
-  "generated_utc": "2026-03-04T03:50:37.470445+00:00",
+  "generated_utc": "2026-03-04T07:40:32.686308+00:00",
   "preregistration": "report_qw2076_empirical_prediction_preregistration.json",
-  "observation_input": "/home/krzysiek/Pobrane/TOE/edison/empirical_observations_input_qw2077.template.json",
+  "observation_input": "/home/krzysiek/Pobrane/TOE/edison/empirical_observations_input_qw2077.gw_autocollected.json",
   "results": {
     "PRED-2076-PMNS-CP": {
       "status": "pending_data",
@@ -34,15 +34,28 @@
       ]
     },
     "PRED-2076-GW-HOLDOUT": {
-      "status": "pending_data",
-      "reason": "missing_gw_metrics"
+      "status": "supported",
+      "metrics": {
+        "auc_h1l1_vs_ctrl": 0.8149635207548939,
+        "adv_shared_minus_ctrl_q90": 0.3102766798418972,
+        "sep_median_h1l1_minus_ctrl": 0.002055894005291203,
+        "control_median_gap": 0.0012889825474168514,
+        "n_windows": 759,
+        "source": "autocollected_from:gw1831_window_features.csv"
+      },
+      "checks": {
+        "auc_ge_min": true,
+        "adv_ge_min": true,
+        "sep_ge_min": true,
+        "gap_le_max": true
+      }
     }
   },
   "status_counts": {
-    "supported": 0,
+    "supported": 1,
     "falsified": 0,
-    "pending_data": 3,
+    "pending_data": 2,
     "inconclusive": 0
   },
-  "verdict": "EMPIRICAL_VALIDATION_PENDING_DATA"
+  "verdict": "EMPIRICAL_VALIDATION_MIXED_OR_INCONCLUSIVE"
 }

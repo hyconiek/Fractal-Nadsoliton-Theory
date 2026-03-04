@@ -4566,6 +4566,93 @@ Dynamic relaxation simulations of a deformed muon knot show:
     \item \textbf{Fine Structure Constant:} Geometric estimates suggest $\alpha_{geom} \approx 1/85$, implying vacuum polarization screens the "bare" topological charge to the observed $1/137$.
 \end{itemize}
 
+\section{Appendix G: 2026-03-04 Addendum (QW-2063 to QW-2083)}
+
+\subsection{G1. Current Strict-Rigor Status Snapshot}
+The current status after the latest locked-gate sequence is:
+\begin{itemize}
+    \item \textbf{QW-2065}: strict internal first-principles closure \textbf{PASS} ($12/12$).
+    \item \textbf{QW-2067}: strengthened strict internal closure \textbf{PASS} ($3/3$).
+    \item \textbf{QW-2068}: explicit SM+GR parameter registry established ($32$ targets).
+    \item \textbf{QW-2069}: full SM+GR package audit is \textbf{partial}: $15/32$ strict-derived, direct missing reduced to $0/32$, but strict-unresolved closure set remains $16/32$.
+    \item \textbf{QW-2070}: radiative program channels are implemented and closure-ready (\textbf{$7/7$}, no missing channels).
+    \item \textbf{QW-2071}: global full-precision closure gate remains \textbf{partial} ($3/6$ flags).
+    \item \textbf{QW-2075}: CP-phase derivation is \textbf{partial}: PMNS promoted, CKM CP still non-closing.
+    \item \textbf{QW-2081}: strict frontier over the current missing-14 is \textbf{partial}: one strict candidate target-miss ($\delta_{\mathrm{CP}}^{\mathrm{CKM}}$), seven anchor-dependent baseline-only entries, and thirteen strict-unresolved entries.
+    \item \textbf{QW-2082}: strict closure roadmap is prepared for the thirteen strict-unresolved entries (tiered T1$\rightarrow$T4 execution sequence).
+    \item \textbf{QW-2083}: deterministic epistemic status integration for missing-14 is complete: one strict target-miss, thirteen explicitly non-closing classified, zero still strictly missing.
+    \item \textbf{QW-2084}: T1 non-anchor strict aggregate gate \textbf{PASS} ($6/6$): after upstream non-anchor gates (QW-2085/2086/2087) and frozen input builder (QW-2093), no anchor leakage/circularity is detected in the aggregate T1 path.
+    \item \textbf{QW-2085}: dedicated $G_F$ non-anchor lifetime gate \textbf{PASS} ($5/6$): strict non-anchor promotion achieved on kernel-derived lifetime chain.
+    \item \textbf{QW-2086}: dedicated $M_Z$ non-anchor EW-pole gate \textbf{PASS} ($5/6$): strict non-anchor promotion achieved on kernel-derived EW-pole chain.
+    \item \textbf{QW-2087}: dedicated $\alpha_s(M_Z)$ non-anchor boundary gate \textbf{PASS} ($8/9$): strict non-anchor promotion achieved with kernel-derived boundary + validation points.
+    \item \textbf{QW-2093}: deterministic frozen-plan builder \textbf{PASS}: auditable non-anchor input artifacts generated for QW-2085/2086/2087.
+\end{itemize}
+
+\textbf{Interpretation:} the framework has strong internal closure in the covered scope, but does \textbf{not yet} justify a final ``all known SM+GR values fully derived'' claim.
+
+\subsection{G2. Pre-Registered Empirical Predictions (Falsifiable)}
+To move from internal rigor to external empirical testing, a preregistered prediction package is now frozen:
+\begin{itemize}
+    \item \texttt{QW\_2076\_EMPIRICAL\_PREDICTION\_PREREGISTRATION.py}
+    \item \texttt{QW\_2078\_GW\_EXTERNAL\_HOLDOUT\_AUTOCOLLECTOR.py}
+    \item \texttt{QW\_2079\_PMNS\_CP\_EXTERNAL\_AUTOCOLLECTOR.py}
+    \item \texttt{QW\_2080\_COSMO\_WEFF\_EXTERNAL\_AUTOCOLLECTOR.py}
+    \item \texttt{report\_qw2076\_empirical\_prediction\_preregistration.json}
+    \item \texttt{QW\_2077\_EMPIRICAL\_PREDICTION\_VALIDATION\_GATE.py}
+\end{itemize}
+
+Three prospective predictions are locked:
+\begin{enumerate}
+    \item \textbf{PRED-2076-PMNS-CP} (neutrino): $\sin(\delta_{\mathrm{CP}}^{\mathrm{PMNS}})$ near CP-conserving band.
+    \item \textbf{PRED-2076-COSMO-WEFF} (cosmology): fixed-node $w_{\mathrm{eff}}(z)$ profile corridor test.
+    \item \textbf{PRED-2076-GW-HOLDOUT} (gravitational waves): threshold pass/fail test on truly new independent holdout data under locked pipeline.
+\end{enumerate}
+
+\textbf{Operational update:} PMNS and cosmology branches now have explicit external-data autocollectors (QW-2079/QW-2080), so the previous QW-2077 \texttt{pending\_data} state can be resolved without manual value editing once external cited inputs are supplied.
+
+\subsection{G3. External-Data Recheck After NANOGrav Archive Restoration}
+After restoring \texttt{NANOGrav15yr\_PulsarTiming\_v2.1.0.tar.gz} in the package source directory, the external chain was re-executed with explicit archive path override:
+\begin{itemize}
+    \item \textbf{QW-2014}: \texttt{TRUE\_EXTERNAL\_AUTOCOLLECTOR\_V2\_PACKAGE\_ASSEMBLED}
+    \item \textbf{QW-2015}: \texttt{TRUE\_EXTERNAL\_BETA\_CHANNEL\_V2\_READY\_STRICT}
+    \item \textbf{QW-2016}: \texttt{TRIAD\_BLIND\_EXTERNAL\_VALIDATION\_PASS\_STRONG}
+    \item \textbf{QW-2017}: \texttt{BETA\_OBSERVABLE\_BLIND\_EXTERNAL\_INTERVENTION\_PASS}
+\end{itemize}
+The precheck artifact QW-1852 remains configuration-dependent: if its expected candidate directory is absent, readiness is reported as pending collection even when the restored archive itself is present.
+\subsection{G4. Concrete GW Test That Can Be Checked Now}
+\textbf{Test type:} blind out-of-sample threshold validation on new GW windows/events not used in model construction.
+
+\textbf{Locked GW criteria (from preregistration):}
+\begin{itemize}
+    \item $\mathrm{AUC}_{\mathrm{H1L1\ vs\ ctrl}} \ge 0.75$
+    \item $\mathrm{ADV}^{q90}_{\mathrm{shared-ctrl}} \ge 0.30$
+    \item $\mathrm{SEP}^{\mathrm{median}}_{\mathrm{H1L1-ctrl}} \ge 0.002$
+    \item $\mathrm{GAP}^{\mathrm{median}}_{\mathrm{ctrl}} \le 0.0025$
+\end{itemize}
+
+\textbf{Decision rule:}
+\begin{itemize}
+    \item \textbf{Supported} if all thresholds pass on independent holdout.
+    \item \textbf{Falsified} if at least one hard threshold fails.
+\end{itemize}
+
+\textbf{Validation artifact:}
+\begin{itemize}
+    \item build GW observation block via \texttt{QW\_2078\_GW\_EXTERNAL\_HOLDOUT\_AUTOCOLLECTOR.py} from external holdout feature table,
+    \item complete remaining fields in \texttt{empirical\_observations\_input\_qw2077.template.json},
+    \item run \texttt{QW\_2077\_EMPIRICAL\_PREDICTION\_VALIDATION\_GATE.py},
+    \item publish the resulting JSON verdict (supported / falsified / pending / inconclusive).
+\end{itemize}
+
+\subsection{G5. Scientific Position After Addendum}
+FIN remains a high-rigor internal unification candidate with explicit falsification protocol.  
+It is \textbf{not} yet a final community-confirmed ToE until:
+\begin{enumerate}
+    \item independent external teams run the locked empirical package,
+    \item missing direct derivations in the full SM+GR package are closed,
+    \item full-precision global closure gate is passed.
+\end{enumerate}
+
 \vspace{2cm}
 \begin{center}
 \rule{0.5\textwidth}{0.4pt}\\[0.5cm]
@@ -4574,7 +4661,7 @@ Dynamic relaxation simulations of a deformed muon knot show:
 \textit{The FIN Theory proposes that this Word is Information,}\\
 \textit{and its mathematical structure IS the structure of reality.}\\[1cm]
 \rule{0.5\textwidth}{0.4pt}\\[0.5cm]
-Version 4.4.0 --- \today (Release 4.4 Final)
+Version 4.9.0 + Addendum G --- \today
 \end{center}
 
 \end{document}

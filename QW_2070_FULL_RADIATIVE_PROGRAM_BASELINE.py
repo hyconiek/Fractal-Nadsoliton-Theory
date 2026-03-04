@@ -33,6 +33,19 @@ def load_optional_json(name: str) -> Dict | None:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def is_closure_resolved_entry(e: Dict) -> bool:
+    lvl = str(e.get("strict_level", ""))
+    st = str(e.get("status", ""))
+    if lvl == "si_definition" and st == "definition_constant":
+        return True
+    if lvl == "strict_internal_gate" and st.startswith("derived") and st != "derived_strict_target_miss":
+        within = e.get("within_tolerance")
+        if isinstance(within, bool):
+            return within
+        return True
+    return False
+
+
 def active_qed_sum_q2(mu_gev: float) -> float:
     # Charged fermions; Nc * Q^2 contributes to the one-loop QED beta coefficient.
     fermions = [
@@ -217,8 +230,9 @@ def main() -> None:
     closure_ready_count = sum(1 for c in channels if bool(c.get("closure_ready", False)))
     missing_count = sum(1 for c in channels if c["status"] == "missing")
 
-    derivation_missing_ids = [
-        e["id"] for e in r2069["entries"] if e.get("status") == "missing"
+    derivation_missing_ids = [e["id"] for e in r2069["entries"] if e.get("status") == "missing"]
+    derivation_unresolved_ids = [
+        e["id"] for e in r2069["entries"] if not is_closure_resolved_entry(e)
     ]
     radiative_sensitive_ids = {
         "alpha_s_mz",
@@ -239,12 +253,13 @@ def main() -> None:
         "lambda_cosmological",
         "h0",
     }
-    radiative_sensitive_missing = sorted([x for x in derivation_missing_ids if x in radiative_sensitive_ids])
+    radiative_sensitive_missing_direct = sorted([x for x in derivation_missing_ids if x in radiative_sensitive_ids])
+    radiative_sensitive_unresolved = sorted([x for x in derivation_unresolved_ids if x in radiative_sensitive_ids])
 
     if (
         missing_count == 0
         and closure_ready_count == len(channels)
-        and len(radiative_sensitive_missing) == 0
+        and len(radiative_sensitive_unresolved) == 0
     ):
         verdict = "FULL_RADIATIVE_PROGRAM_PASS"
     elif implemented_count >= 2:
@@ -256,7 +271,7 @@ def main() -> None:
         required_next_step = "IMPLEMENT_MISSING_RADIATIVE_CHANNELS"
     elif closure_ready_count < len(channels):
         required_next_step = "UPGRADE_NONCLOSING_RADIATIVE_CHANNELS_TO_CLOSURE_READY"
-    elif len(radiative_sensitive_missing) > 0:
+    elif len(radiative_sensitive_unresolved) > 0:
         required_next_step = "DERIVE_REMAINING_RADIATIVE_SENSITIVE_SM_GR_PARAMETERS"
     else:
         required_next_step = "MERGE_WITH_FULL_PRECISION_CLOSURE_GATE"
@@ -293,8 +308,10 @@ def main() -> None:
             "n_channels_implemented": implemented_count,
             "n_channels_closure_ready": closure_ready_count,
             "n_channels_missing": missing_count,
-            "n_radiative_sensitive_missing_parameters": len(radiative_sensitive_missing),
-            "radiative_sensitive_missing_parameters": radiative_sensitive_missing,
+            "n_radiative_sensitive_missing_direct_parameters": len(radiative_sensitive_missing_direct),
+            "radiative_sensitive_missing_direct_parameters": radiative_sensitive_missing_direct,
+            "n_radiative_sensitive_unresolved_parameters": len(radiative_sensitive_unresolved),
+            "radiative_sensitive_unresolved_parameters": radiative_sensitive_unresolved,
         },
         "verdict": verdict,
         "required_next_step": required_next_step,
@@ -313,7 +330,8 @@ def main() -> None:
         f"- implemented: {implemented_count}",
         f"- closure-ready: {closure_ready_count}",
         f"- missing: {missing_count}",
-        f"- radiative-sensitive missing parameters from QW-2069: {len(radiative_sensitive_missing)}",
+        f"- radiative-sensitive missing-direct parameters from QW-2069: {len(radiative_sensitive_missing_direct)}",
+        f"- radiative-sensitive strict-unresolved parameters from QW-2069: {len(radiative_sensitive_unresolved)}",
         "",
         "## Implemented Baselines",
         "- QED one-loop running: implemented",
@@ -341,7 +359,7 @@ def main() -> None:
     print(
         f"[QW-2070] verdict={verdict} implemented={implemented_count}/{len(channels)} "
         f"closure_ready={closure_ready_count}/{len(channels)} "
-        f"radiative_missing={len(radiative_sensitive_missing)}"
+        f"radiative_unresolved={len(radiative_sensitive_unresolved)}"
     )
 
 

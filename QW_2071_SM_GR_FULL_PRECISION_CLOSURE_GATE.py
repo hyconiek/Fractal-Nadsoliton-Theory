@@ -24,12 +24,26 @@ def load_json(name: str) -> Dict:
     return json.loads((ROOT / name).read_text(encoding="utf-8"))
 
 
+def is_closure_resolved_entry(e: Dict) -> bool:
+    lvl = str(e.get("strict_level", ""))
+    st = str(e.get("status", ""))
+    if lvl == "si_definition" and st == "definition_constant":
+        return True
+    if lvl == "strict_internal_gate" and st.startswith("derived") and st != "derived_strict_target_miss":
+        within = e.get("within_tolerance")
+        if isinstance(within, bool):
+            return within
+        return True
+    return False
+
+
 def main() -> None:
     r2069 = load_json("report_qw2069_full_sm_gr_derivation_package.json")
     r2070 = load_json("report_qw2070_full_radiative_program_baseline.json")
 
     entries = r2069["entries"]
     missing_params: List[str] = sorted([e["id"] for e in entries if e.get("status") == "missing"])
+    strict_unresolved_params: List[str] = sorted([e["id"] for e in entries if not is_closure_resolved_entry(e)])
     model_formula_only: List[str] = sorted(
         [e["id"] for e in entries if e.get("strict_level") == "model_formula"]
     )
@@ -53,6 +67,7 @@ def main() -> None:
         "full_derivation_package_pass": r2069.get("verdict") == "FULL_SM_GR_DERIVATION_PACKAGE_PASS",
         "radiative_program_pass": r2070.get("verdict") == "FULL_RADIATIVE_PROGRAM_PASS",
         "no_missing_parameters": len(missing_params) == 0,
+        "no_strict_unresolved_parameters": len(strict_unresolved_params) == 0,
         "all_radiative_channels_implemented": len(missing_radiative_channels) == 0,
     }
     pass_count = sum(1 for v in gate_flags.values() if v)
@@ -70,6 +85,10 @@ def main() -> None:
     required_next_steps = []
     if missing_params:
         required_next_steps.append("Derive all currently missing SM+GR parameters from first principles chain.")
+    if strict_unresolved_params:
+        required_next_steps.append(
+            "Close all strict-unresolved parameters (non-missing but non-closing statuses still open)."
+        )
     if missing_radiative_channels:
         required_next_steps.append(
             "Implement currently missing radiative channels: " + ", ".join(missing_radiative_channels) + "."
@@ -96,6 +115,7 @@ def main() -> None:
         "strict_derived_parameters": strict_derived,
         "model_formula_only_parameters": model_formula_only,
         "missing_parameters": missing_params,
+        "strict_unresolved_parameters": strict_unresolved_params,
         "implemented_radiative_channels": implemented_radiative_channels,
         "missing_radiative_channels": missing_radiative_channels,
         "nonclosing_radiative_channels": nonclosing_radiative_channels,
@@ -124,6 +144,7 @@ def main() -> None:
             f"- strict-derived parameters: {len(strict_derived)}",
             f"- model-formula-only parameters: {len(model_formula_only)}",
             f"- missing parameters: {len(missing_params)}",
+            f"- strict-unresolved parameters: {len(strict_unresolved_params)}",
             f"- implemented radiative channels: {len(implemented_radiative_channels)}",
             f"- missing radiative channels: {len(missing_radiative_channels)}",
             f"- implemented but non-closing radiative channels: {len(nonclosing_radiative_channels)}",

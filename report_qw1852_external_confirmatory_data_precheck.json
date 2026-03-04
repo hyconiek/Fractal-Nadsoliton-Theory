@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-03-03T02:49:37.008413+00:00",
+  "generated_utc": "2026-03-04T07:33:48.626629+00:00",
   "protocol_hashes": {
     "pta_v2_protocol_sha256": "e5bcdc803f5587f790d9c1a70418463ed416760c4fcec72f6cd06b46a92b2f50",
     "gw_protocol_sha256": "b9cf21d3d32508e95c6f7cef2e8a953a12f6c7ea7732b6288605c518ab5db5af"
@@ -12,65 +12,18 @@
     "gw_template": "gw_windows_template.csv"
   },
   "design_reference_hashes": {
-    "gw1831_window_features.csv": "20b63aa8188e0a5a3e41fca687322ba0f66a4207f2fc307d73af95d81e3c92ce",
-    "NANOGrav15yr_PulsarTiming_v2.1.0.tar.gz": "91476bf20d4c8baa9f5ad39c6e114b581478a5a7e269876489cafc8f62c5708f"
+    "gw1831_window_features.csv": "20b63aa8188e0a5a3e41fca687322ba0f66a4207f2fc307d73af95d81e3c92ce"
   },
   "validation": {
-    "candidate_dir": "external_confirmatory_v2/confirmatory_dataset_external_source_alpha6_1831cfg",
-    "exists": true,
-    "errors": [],
+    "candidate_dir": "/home/krzysiek/Pobrane/TOE/edison/external_confirmatory_v2/confirmatory_dataset",
+    "exists": false,
+    "errors": [
+      "candidate_dir_missing"
+    ],
     "warnings": [],
-    "checks": {
-      "protocol_hash_match": true,
-      "externality_statement_present": true,
-      "gw_windows_hash_match": true,
-      "gw_windows_row_count": 759,
-      "pta_pairs_hash_match": true,
-      "pta_pairs_row_count": 2016
-    },
-    "manifest": {
-      "protocol": {
-        "pta_v2_protocol_sha256": "e5bcdc803f5587f790d9c1a70418463ed416760c4fcec72f6cd06b46a92b2f50",
-        "gw_protocol_sha256": "b9cf21d3d32508e95c6f7cef2e8a953a12f6c7ea7732b6288605c518ab5db5af"
-      },
-      "dataset": {
-        "dataset_id": "EXTERNAL_SOURCE_ALPHA_20260303",
-        "provider": "EXTERNAL_SOURCE_REBUILD_LOCAL_ARCHIVE",
-        "externality_statement": "Dataset rebuilt from external-source raw archives with a frozen deterministic script; independent from prior in-repo generated design tables.",
-        "license": "External-source raw archives (local copy)",
-        "prepared_utc": "2026-03-03T02:49:34.300486+00:00"
-      },
-      "build": {
-        "pta_hxy_augmentation": {
-          "formula": "hxy_clip = clip(hxy_base + alpha*scale*(0.60*z_autoc1 - 0.35*z_switch + 0.25*z_std), 0, 1)",
-          "alpha": 6.0,
-          "scale": 0.05
-        },
-        "gw_window_config": {
-          "window_sec": 8.0,
-          "step_sec": 2.0,
-          "band_hz": [
-            20.0,
-            400.0
-          ]
-        }
-      },
-      "files": [
-        {
-          "role": "pta_pairs",
-          "path": "pta_v2_pairs.csv",
-          "sha256": "b806699afc749b9111456a67614b05744b9610cad47a1cf8b7bb91e3d99bd603"
-        },
-        {
-          "role": "gw_windows",
-          "path": "gw_windows.csv",
-          "sha256": "00ddc9accd00ee7987f7b5247f52c26ca6e978e9d1cb86c3df968fb5f1b7f89c"
-        }
-      ]
-    },
-    "ok": true
+    "checks": {}
   },
-  "hard_gate": "PASS",
-  "readiness": "EXTERNAL_DATASET_READY_FOR_QW1853",
+  "hard_gate": "PARTIAL",
+  "readiness": "EXTERNAL_DATASET_PENDING_COLLECTION",
   "verdict": "EXTERNAL_CONFIRMATORY_DATA_PRECHECK_COMPLETE"
 }

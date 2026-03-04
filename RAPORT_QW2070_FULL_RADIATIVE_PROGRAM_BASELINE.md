@@ -1,6 +1,6 @@
 # RAPORT QW-2070: FULL RADIATIVE PROGRAM BASELINE
 
-- Data UTC: 2026-03-04T03:46:22.111831+00:00
+- Data UTC: 2026-03-04T08:28:43.883057+00:00
 - Verdict: **FULL_RADIATIVE_PROGRAM_PARTIAL_BASELINE**
 
 ## Channel Coverage
@@ -8,7 +8,8 @@
 - implemented: 7
 - closure-ready: 7
 - missing: 0
-- radiative-sensitive missing parameters from QW-2069: 14
+- radiative-sensitive missing-direct parameters from QW-2069: 0
+- radiative-sensitive strict-unresolved parameters from QW-2069: 13
 
 ## Implemented Baselines
 - QED one-loop running: implemented

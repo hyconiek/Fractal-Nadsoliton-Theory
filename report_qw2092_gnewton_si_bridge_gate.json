@@ -1,0 +1,44 @@
+{
+  "generated_utc": "2026-03-04T10:46:13.072055+00:00",
+  "sources": {
+    "registry": "report_qw2068_sm_gr_parameter_registry.json",
+    "radiative_upgrade": "report_qw2073_radiative_channels_closure_upgrade.json",
+    "input_json": "/home/krzysiek/Pobrane/TOE/edison/gnewton_si_bridge_input_qw2092.json"
+  },
+  "bridge": {
+    "candidate_source": "codata_gnewton_bridge_snapshot",
+    "bridge_failed_reason": "bridge_observable_backsolved_from_g_si_tautological_for_strict",
+    "g_dimensionless_mu_ref": 6.708830750342087e-39,
+    "mu_ref_gev": 1.0,
+    "bridge_observable_origin": "backsolved_from_g_si",
+    "g_nat_gev_m2": 6.708830750342087e-39,
+    "g_si": 6.6743e-11
+  },
+  "reference": {
+    "g_ref": 6.6743e-11,
+    "tol_rel_pct": 5.0,
+    "rel_err_pct": 0.0
+  },
+  "flags": {
+    "bridge_input_present": true,
+    "source_metadata_complete": true,
+    "independent_bridge_available": true,
+    "bridge_not_seeded_from_registry": true,
+    "bridge_not_backsolved_from_g_si": false,
+    "conversion_finite_positive": true,
+    "within_registry_tolerance": true,
+    "no_anchor_feedback_loop": false
+  },
+  "pass_count": 6,
+  "total_flags": 8,
+  "update": {
+    "id": "G_newton",
+    "predicted_value": 6.6743e-11,
+    "status": "derived_nofit_anchor_dependent",
+    "strict_level": "physical_relation_anchor_dependent",
+    "method": "qw2092_fallback_bridge_anchor_seeded",
+    "notes": "Bridge remains anchor-dependent/coupled; strict closure blocked until independent bridge observable is provided."
+  },
+  "verdict": "GNEWTON_SI_BRIDGE_GATE_PENDING_NONCLOSING",
+  "required_next_step": "PROVIDE_INDEPENDENT_DIMENSIONLESS_BRIDGE_OBSERVABLE_AND_RERUN_QW2092"
+}
