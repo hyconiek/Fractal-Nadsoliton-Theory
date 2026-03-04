@@ -1,0 +1,69 @@
+{
+  "generated_utc": "2026-03-04T03:43:33.009095+00:00",
+  "sources": {
+    "registry": "report_qw2068_sm_gr_parameter_registry.json",
+    "kernel_selection": "report_qw2049_spectral_micro_stagec_intersection_gate.json",
+    "mass_q_assignment": "report_qw1961_noncircular_gamma_q_derivation_matrix.json",
+    "deterministic_flavor_constructor": "QW_2063_DERIVATIONAL_RECONSTRUCTION_SHARED_FLAVOR_BASIS.py"
+  },
+  "kernel": {
+    "omega": 0.18575000000000005,
+    "phi": 0.1624999999999998,
+    "beta": 1.0,
+    "eta": 1.8
+  },
+  "q_assignment_name": "legacy_fibonacci",
+  "unitarity": {
+    "ckm_residual_max_abs": 5.551115123125783e-16,
+    "pmns_residual_max_abs": 6.661338147750939e-16
+  },
+  "ckm_phase": {
+    "s12": 0.31342967846489,
+    "s23": 0.03653916740599551,
+    "s13": 0.0037673810852052888,
+    "jarlskog": -2.1088562140235387e-05,
+    "denominator": 4.094378327647455e-05,
+    "sin_delta": -0.5150613952265725,
+    "delta_primary_rad": 2.6005133789890875,
+    "delta_secondary_rad": 0.5410792746007056,
+    "registry_reference_rad": 1.2,
+    "registry_tolerance_rel_pct": 20.0,
+    "rel_err_primary_pct": 116.70944824909064,
+    "rel_err_secondary_pct": 54.9100604499412
+  },
+  "pmns_phase": {
+    "s12": 0.6602945227188391,
+    "s23": 0.6958992232446141,
+    "s13": 0.15803790446668142,
+    "jarlskog": 0.0005953611437854572,
+    "denominator": 0.0381867986823037,
+    "sin_delta": 0.015590758176368314,
+    "delta_primary_rad": 0.015591389857586464,
+    "delta_secondary_rad": 3.1260012637322068
+  },
+  "flags": {
+    "deterministic_no_scan": true,
+    "no_retune": true,
+    "ckm_unitarity_ok": true,
+    "pmns_unitarity_ok": true,
+    "ckm_phase_numerically_stable": true,
+    "pmns_phase_numerically_stable": true,
+    "ckm_phase_matches_registry_tolerance_any_branch": false,
+    "pmns_phase_finite": true
+  },
+  "pass_count": 7,
+  "total_flags": 8,
+  "updates": [
+    {
+      "id": "delta_cp_pmns",
+      "predicted_value": 0.015591389857586464,
+      "status": "derived",
+      "strict_level": "strict_internal_gate",
+      "method": "qw2075_deterministic_complex_pmns_jarlskog_phase",
+      "notes": "Deterministic no-scan PMNS CP phase from complex mixing operator."
+    }
+  ],
+  "count_updates": 1,
+  "verdict": "STRICT_CP_PHASE_DERIVATION_PARTIAL_PMNS_ONLY",
+  "required_next_step": "IMPROVE_CKM_CP_PHASE_DERIVATION_WITHOUT_RETUNE_AND_INTEGRATE_PMNS_UPDATE"
+}

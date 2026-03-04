@@ -34,6 +34,7 @@ In plain language:
 ### 2.2 What is still missing
 
 1. A truly independent multiteam confirmatory run outside this local environment.
+2. Full precision SM+GR package closure (QW-2069/2070/2071 shows partial status).
 
 ### 2.3 Bottom line
 
@@ -169,6 +170,75 @@ Meaning:
 Meaning:
 - strict internal closure remains PASS and is additionally strengthened.
 
+### 5.10 QW-2068 (explicit SM+GR parameter registry)
+
+- Artifact: `report_qw2068_sm_gr_parameter_registry.json`
+- Target set size: `32` parameters
+
+Meaning:
+- the closure target is explicit, finite, and auditable.
+
+### 5.11 QW-2069 (full SM+GR derivation package audit)
+
+- Verdict: `FULL_SM_GR_DERIVATION_PACKAGE_PARTIAL_STRONG_INTERNAL`
+- Coverage:
+  - strict-derived: `11/32`
+  - model-formula-only: `3/32`
+  - anchor-dependent no-fit: `2/32`
+  - SI-definition constants: `2/32`
+  - missing direct derivation: `14/32`
+
+Meaning:
+- internal closure is strong in covered domains,
+- full all-parameter precision closure is not yet reached.
+
+### 5.12 QW-2070 (full radiative program baseline)
+
+- Verdict: `FULL_RADIATIVE_PROGRAM_PARTIAL_BASELINE`
+- Coverage:
+  - implemented channels: `7/7`
+  - closure-ready channels: `7/7` (after QW-2073 upgrade)
+  - missing channels: `0/7`
+
+Meaning:
+- radiative program is now formalized,
+- and channel-level closure is complete; remaining blocker is parameter-level direct derivation coverage.
+
+### 5.13 QW-2071 (full precision closure gate)
+
+- Verdict: `SM_GR_FULL_PRECISION_CLOSURE_PARTIAL_STRONG_INTERNAL`
+- Gate flags pass: `2/5`
+- Missing parameters: `14`
+- Missing radiative channels: `0`
+- Implemented but non-closing radiative channels: `0`
+
+Meaning:
+- strict internal foundation exists,
+- global full-precision SM+GR closure is still open.
+
+### 5.14 QW-2074 (strict no-fit missing-parameter derivation round)
+
+- Verdict: `STRICT_NOFIT_MISSING_PARAMETER_DERIVATION_ROUND1`
+- Updates: `4`
+- Epistemic impact on package map:
+  - `2` entries moved to `physical_relation_anchor_dependent`,
+  - `2` entries moved to `si_definition`,
+  - missing direct derivations reduced from `19` to `15`.
+
+Meaning:
+- this is an anti-overclaim step: no retune, no scan, explicit epistemic labeling,
+- these entries are **not** counted as strict first-principles derivations.
+
+### 5.15 QW-2075 (strict CP phase derivation gate)
+
+- Verdict: `STRICT_CP_PHASE_DERIVATION_PARTIAL_PMNS_ONLY`
+- Pass count: `7/8`
+- Updates promoted: `1` (`delta_cp_pmns`)
+
+Meaning:
+- PMNS CP phase is now derived in deterministic strict-internal mode,
+- CKM CP phase remains non-closing in this round (outside registry tolerance branches).
+
 ## 6) What "Internally Closed" Means (And What It Does Not Mean)
 
 ### 6.1 It means
@@ -240,13 +310,16 @@ Short answer: **No, not yet in full global strict form.**
 What is already derived in strict internal gate scope:
 1. mass-chain gate targets,
 2. CKM/PMNS gate-level flavor targets,
-3. GW discriminator targets,
-4. micro-supported renormalization constants (`Z_beta`, `delta_eta`) with tightening.
+3. PMNS CP phase from deterministic complex flavor operator,
+4. GW discriminator targets,
+5. micro-supported renormalization constants (`Z_beta`, `delta_eta`) with tightening.
+6. explicit package audit map and closure gate logic (`QW-2069`, `QW-2071`).
 
 What is still open for a full “all known values” claim:
-1. complete precision radiative program across all sectors,
-2. full exhaustive Standard Model parameter derivation package at final precision,
-3. independent external multiteam replication/audit.
+1. package coverage gap: only `11/32` parameters are strict-derived (`14/32` still missing direct derivation),
+2. direct derivation coverage gap remains large (`14/32` still missing in full package gate), even after radiative channels reached `7/7` closure-ready,
+3. full exhaustive Standard Model + GR parameter derivation package at final precision,
+4. independent external multiteam replication/audit.
 
 Therefore:
 - internal first-principles closure path is now very strong,
@@ -282,6 +355,7 @@ Po ludzku:
 ### 2.2 Czego jeszcze brakuje
 
 1. Prawdziwie niezależnej replikacji multiteam poza tym środowiskiem.
+2. Pełnego domknięcia precyzyjnego pakietu SM+GR (QW-2069/2070/2071 pokazuje status częściowy).
 
 ### 2.3 Wniosek
 
@@ -413,6 +487,75 @@ Znaczenie:
 Znaczenie:
 - ścisłe domknięcie wewnętrzne pozostaje PASS i jest dodatkowo wzmocnione.
 
+### 5.10 QW-2068 (jawny rejestr parametrów SM+GR)
+
+- Artefakt: `report_qw2068_sm_gr_parameter_registry.json`
+- Rozmiar zbioru docelowego: `32` parametry
+
+Znaczenie:
+- cel domknięcia jest jawny, skończony i audytowalny.
+
+### 5.11 QW-2069 (audyt pełnego pakietu derivacji SM+GR)
+
+- Werdykt: `FULL_SM_GR_DERIVATION_PACKAGE_PARTIAL_STRONG_INTERNAL`
+- Pokrycie:
+  - ścisłe derivacje: `11/32`
+  - tylko model-formula: `3/32`
+  - anchor-dependent no-fit: `2/32`
+  - stałe SI-definition: `2/32`
+  - brak bezpośredniej derivacji: `14/32`
+
+Znaczenie:
+- domknięcie wewnętrzne jest mocne w pokrytych domenach,
+- pełne precyzyjne domknięcie wszystkich parametrów nie jest jeszcze osiągnięte.
+
+### 5.12 QW-2070 (bazowy pełny program radiacyjny)
+
+- Werdykt: `FULL_RADIATIVE_PROGRAM_PARTIAL_BASELINE`
+- Pokrycie:
+  - zaimplementowane kanały: `7/7`
+  - kanały closure-ready: `7/7` (po upgrade QW-2073)
+  - brakujące kanały: `0/7`
+
+Znaczenie:
+- program radiacyjny został formalnie zdefiniowany,
+- a domknięcie na poziomie kanałów jest kompletne; blokerem pozostaje pokrycie bezpośrednich derivacji parametrów.
+
+### 5.13 QW-2071 (bramka pełnego domknięcia precyzyjnego)
+
+- Werdykt: `SM_GR_FULL_PRECISION_CLOSURE_PARTIAL_STRONG_INTERNAL`
+- Przejście flag: `2/5`
+- Brakujące parametry: `14`
+- Brakujące kanały radiacyjne: `0`
+- Kanały radiacyjne zaimplementowane, ale non-closing: `0`
+
+Znaczenie:
+- ścisła baza wewnętrzna istnieje,
+- globalne pełne domknięcie precyzyjne SM+GR pozostaje otwarte.
+
+### 5.14 QW-2074 (ścisła runda no-fit dla brakujących parametrów)
+
+- Werdykt: `STRICT_NOFIT_MISSING_PARAMETER_DERIVATION_ROUND1`
+- Liczba aktualizacji: `4`
+- Wpływ epistemiczny na mapę pakietu:
+  - `2` pozycje przeniesiono do `physical_relation_anchor_dependent`,
+  - `2` pozycje przeniesiono do `si_definition`,
+  - liczba braków bezpośredniej derivacji spadła z `19` do `15`.
+
+Znaczenie:
+- to krok anty-nadinterpretacyjny: brak retune, brak skanu, jawne etykiety epistemiczne,
+- te pozycje **nie** są liczone jako ścisłe derivacje first-principles.
+
+### 5.15 QW-2075 (ścisła bramka derywacji faz CP)
+
+- Werdykt: `STRICT_CP_PHASE_DERIVATION_PARTIAL_PMNS_ONLY`
+- Wynik: `7/8`
+- Promowane aktualizacje: `1` (`delta_cp_pmns`)
+
+Znaczenie:
+- faza CP PMNS została wyprowadzona w trybie deterministycznym strict-internal,
+- faza CP CKM pozostaje niedomknięta w tej rundzie (poza gałęziami tolerancji rejestru).
+
 ## 6) Co znaczy "domknięte wewnętrznie" i czego nie znaczy
 
 ### 6.1 Znaczy
@@ -484,13 +627,16 @@ Krótka odpowiedź: **Nie, jeszcze nie w pełnej globalnej wersji ścisłej.**
 Co jest już wyprowadzone w rygorze wewnętrznych bramek:
 1. cele masowe (mass-chain),
 2. cele flavor CKM/PMNS na poziomie gate,
-3. cele dyskryminatorów GW,
-4. wsparte mikro-derywacją stałe renormalizacyjne (`Z_beta`, `delta_eta`) po zawężeniu.
+3. faza CP PMNS z deterministycznego operatora flavor,
+4. cele dyskryminatorów GW,
+5. wsparte mikro-derywacją stałe renormalizacyjne (`Z_beta`, `delta_eta`) po zawężeniu.
+6. jawna mapa pakietu i logika bramki domknięcia (`QW-2069`, `QW-2071`).
 
 Czego wciąż brakuje do tezy „wszystkie znane wartości”:
-1. pełnego precyzyjnego programu radiacyjnego we wszystkich sektorach,
-2. kompletnego, wyczerpującego pakietu derivacji wszystkich parametrów SM z finalną precyzją,
-3. niezależnej replikacji/audytu multiteam poza tym środowiskiem.
+1. luki pokrycia pakietu: tylko `11/32` parametrów jest ścisle wyprowadzonych (`14/32` nadal bez bezpośredniej derivacji),
+2. duża luka pokrycia bezpośrednich derivacji pozostaje (`14/32` braków w pełnym gate pakietowym), mimo `7/7` kanałów radiacyjnych closure-ready,
+3. kompletnego, wyczerpującego pakietu derivacji wszystkich parametrów SM+GR z finalną precyzją,
+4. niezależnej replikacji/audytu multiteam poza tym środowiskiem.
 
 Wniosek:
 - ścieżka wewnętrznego domknięcia first-principles jest teraz bardzo mocna,

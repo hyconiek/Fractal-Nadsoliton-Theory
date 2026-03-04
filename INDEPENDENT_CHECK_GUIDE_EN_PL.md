@@ -55,6 +55,37 @@ Each team should publish:
 ## 7) What would count as a real independent confirmation
 At least 2-3 independent teams should reproduce the same locked verdicts from fresh environments.
 
+## 8) Extended full-precision package check (recommended)
+After the locked confirmatory path, run:
+1. `python3 QW_2068_SM_GR_PARAMETER_REGISTRY.py`
+2. `python3 QW_2074_STRICT_NOFIT_MISSING_PARAMETER_DERIVATIONS.py`
+3. `python3 QW_2075_STRICT_CP_PHASE_DERIVATION_GATE.py`
+4. `python3 QW_2069_FULL_SM_GR_DERIVATION_PACKAGE.py`
+5. `python3 QW_2072_EW_YUKAWA_FLAVOR_RADIATIVE_BASELINES.py`
+6. `python3 QW_2070_FULL_RADIATIVE_PROGRAM_BASELINE.py`
+7. `python3 QW_2071_SM_GR_FULL_PRECISION_CLOSURE_GATE.py`
+
+Expected current state (2026-03-04):
+- `QW-2075`: strict CP phase round partial (`PMNS promoted`, `CKM still non-closing`),
+- `QW-2069`: partial strong internal (`11/32` strict-derived, `14` missing; plus `2` anchor-dependent + `2` SI-definition),
+- `QW-2072`: EW/Yukawa/CKM-PMNS baselines created,
+- `QW-2073`: channel upgrade checks executed,
+- `QW-2070`: partial radiative baseline (`7/7` implemented and `7/7` closure-ready),
+- `QW-2071`: partial strong internal (`2/5` closure flags; `14` missing parameters, `0` missing radiative channels).
+
+This extension is the transparent path for community teams to track progress from strong internal closure toward full SM+GR precision closure.
+
+## 9) Empirical falsification package (prospective)
+Run:
+1. `python3 QW_2076_EMPIRICAL_PREDICTION_PREREGISTRATION.py`
+2. Fill `empirical_observations_input_qw2077.template.json` with truly new external observations.
+3. `python3 QW_2077_EMPIRICAL_PREDICTION_VALIDATION_GATE.py empirical_observations_input_qw2077.template.json`
+
+What this gives:
+- pre-registered predictions before new data arrival,
+- explicit support/falsification/pending verdicts,
+- reduced risk of post-hoc interpretation.
+
 ---
 
 ## PL: Jak inni ludzie mają to niezależnie sprawdzić
@@ -111,3 +142,34 @@ Każdy zespół publikuje:
 
 ## 7) Co uznajemy za realne niezależne potwierdzenie
 Co najmniej 2-3 niezależne zespoły muszą odtworzyć te same zablokowane werdykty na świeżych środowiskach.
+
+## 8) Rozszerzony check pełnego pakietu precyzyjnego (zalecane)
+Po ścieżce locked confirmatory uruchomić:
+1. `python3 QW_2068_SM_GR_PARAMETER_REGISTRY.py`
+2. `python3 QW_2074_STRICT_NOFIT_MISSING_PARAMETER_DERIVATIONS.py`
+3. `python3 QW_2075_STRICT_CP_PHASE_DERIVATION_GATE.py`
+4. `python3 QW_2069_FULL_SM_GR_DERIVATION_PACKAGE.py`
+5. `python3 QW_2072_EW_YUKAWA_FLAVOR_RADIATIVE_BASELINES.py`
+6. `python3 QW_2070_FULL_RADIATIVE_PROGRAM_BASELINE.py`
+7. `python3 QW_2071_SM_GR_FULL_PRECISION_CLOSURE_GATE.py`
+
+Oczekiwany obecny stan (2026-03-04):
+- `QW-2075`: częściowy status ścisłej rundy faz CP (`PMNS promoted`, `CKM nadal non-closing`),
+- `QW-2069`: status częściowy strong internal (`11/32` ścisłe derivacje, `14` braków; plus `2` anchor-dependent + `2` SI-definition),
+- `QW-2072`: utworzono baseline EW/Yukawa/CKM-PMNS,
+- `QW-2073`: wykonano upgrade kanałów radiacyjnych,
+- `QW-2070`: status częściowy radiative baseline (`7/7` zaimplementowanych i `7/7` closure-ready),
+- `QW-2071`: status częściowy strong internal (`2/5` flag domknięcia; `14` brakujących parametrów, `0` brakujących kanałów radiacyjnych).
+
+To rozszerzenie daje przejrzystą ścieżkę dla zespołów zewnętrznych od mocnego domknięcia wewnętrznego do pełnego domknięcia precyzyjnego SM+GR.
+
+## 9) Pakiet falsyfikacji empirycznej (prospektywny)
+Uruchomić:
+1. `python3 QW_2076_EMPIRICAL_PREDICTION_PREREGISTRATION.py`
+2. Uzupelnić `empirical_observations_input_qw2077.template.json` o rzeczywiście nowe obserwacje zewnętrzne.
+3. `python3 QW_2077_EMPIRICAL_PREDICTION_VALIDATION_GATE.py empirical_observations_input_qw2077.template.json`
+
+Co to daje:
+- pre-rejestrację predykcji przed pojawieniem się nowych danych,
+- jawne werdykty support/falsified/pending,
+- ograniczenie ryzyka interpretacji post-hoc.

@@ -4521,6 +4521,140 @@ Po tej rundzie:
 5. Required next step:
    - `RUN_TRULY_INDEPENDENT_MULTITEAM_CONFIRMATORY_PACKAGE`.
 
+## 363. SM+GR parameter registry for full-precision closure scope (QW-2068)
+1. Dodano:
+   - `QW_2068_SM_GR_PARAMETER_REGISTRY.py`,
+   - `RAPORT_QW2068_SM_GR_PARAMETER_REGISTRY.md`,
+   - `report_qw2068_sm_gr_parameter_registry.json`.
+2. Cel:
+   - jawnie zdefiniowac docelowy zbior parametrow dla claimu "pelny pakiet SM+GR",
+   - odseparowac parametry stricte wyprowadzone od referencyjnych anchorow.
+3. Wynik:
+   - zbudowano rejestr `32` parametrow w grupach:
+   - gauge/EW, fermion masses, flavor, GR/cosmology, project bridge quantities.
+4. Znaczenie:
+   - claim "all known values" ma teraz konkretna, audytowalna definicje zakresu.
+
+## 364. Full SM+GR derivation package audit (QW-2069)
+1. Dodano:
+   - `QW_2069_FULL_SM_GR_DERIVATION_PACKAGE.py`,
+   - `RAPORT_QW2069_FULL_SM_GR_DERIVATION_PACKAGE.md`,
+   - `report_qw2069_full_sm_gr_derivation_package.json`.
+2. Cel:
+   - policzyc, ile parametrow z rejestru QW-2068 jest faktycznie domknietych w aktualnym lancuchu strict internal.
+3. Wynik:
+   - `FULL_SM_GR_DERIVATION_PACKAGE_PARTIAL_STRONG_INTERNAL`,
+   - strict-derived: `11/32`,
+   - model-formula-only: `3/32`,
+   - anchor-dependent no-fit: `2/32`,
+   - SI-definition constants: `2/32`,
+   - missing direct derivation: `14/32`.
+4. Znaczenie:
+   - po raz pierwszy mamy liczbowy, formalny status "pelnego pakietu" zamiast opisu jakościowego.
+
+## 365. Full radiative program baseline (QW-2070)
+1. Dodano:
+   - `QW_2070_FULL_RADIATIVE_PROGRAM_BASELINE.py`,
+   - `RAPORT_QW2070_FULL_RADIATIVE_PROGRAM_BASELINE.md`,
+   - `report_qw2070_full_radiative_program_baseline.json`.
+2. Cel:
+   - zdefiniowac i uruchomic formalny program radiacyjny jako osobny blok domkniecia.
+3. Wynik:
+   - `FULL_RADIATIVE_PROGRAM_PARTIAL_BASELINE`,
+   - channels implemented: `7/7` (po QW-2073),
+   - channels closure-ready: `7/7`,
+   - channels missing: `0/7`,
+   - radiative-sensitive missing parameters from QW-2069: `14`.
+4. Znaczenie:
+   - program radiacyjny przestal byc "ogolnym postulatem" i dostal mierzalny status wykonania.
+
+## 366. SM+GR full precision closure gate (QW-2071)
+1. Dodano:
+   - `QW_2071_SM_GR_FULL_PRECISION_CLOSURE_GATE.py`,
+   - `RAPORT_QW2071_SM_GR_FULL_PRECISION_CLOSURE_GATE.md`,
+   - `report_qw2071_sm_gr_full_precision_closure_gate.json`.
+2. Cel:
+   - zintegrowac wynik pakietu derivacji (QW-2069) z programem radiacyjnym (QW-2070) w jednej bramce finalnej.
+3. Wynik:
+   - `SM_GR_FULL_PRECISION_CLOSURE_PARTIAL_STRONG_INTERNAL`,
+   - pass_count: `2/5`,
+   - missing parameters: `14`,
+   - missing radiative channels: `0`,
+   - implemented but non-closing radiative channels: `0`.
+4. Interpretacja:
+   - sciezka strict internal pozostaje mocna, ale pelne domkniecie precyzyjne SM+GR nie jest jeszcze osiagniete.
+5. Required next steps:
+   - domknac brakujace derivacje parametrow SM+GR (`14` pozycji),
+   - utrzymac closure-ready `7/7` kanalow radiacyjnych w kolejnych auditach odpornosci,
+   - utrzymac plan niezaleznej replikacji multiteam.
+
+## 367. EW/Yukawa/Flavor radiative baselines (QW-2072)
+1. Dodano:
+   - `QW_2072_EW_YUKAWA_FLAVOR_RADIATIVE_BASELINES.py`,
+   - `RAPORT_QW2072_EW_YUKAWA_FLAVOR_RADIATIVE_BASELINES.md`,
+   - `report_qw2072_ew_yukawa_flavor_radiative_baselines.json`.
+2. Cel:
+   - zaimplementowac jawne baseline'y radiacyjne dla brakujacych kanalow EW, Yukawa i CKM/PMNS RGE,
+   - bez falszywego claimu closure (status non-closing).
+3. Wynik:
+   - `EW_YUKAWA_FLAVOR_RADIATIVE_BASELINES_IMPLEMENTED_NONCLOSING`,
+   - oszacowano m.in. `delta_r_required_for_mw_ref=0.035525`,
+   - baseline transport flavor: `ckm_mean_drift_rel_pct=0.001343`.
+4. Znaczenie:
+   - postep implementacyjny radiative jest realny i byl baza do finalnego upgrade w QW-2073.
+
+## 368. Radiative channels closure upgrade (QW-2073)
+1. Dodano:
+   - `QW_2073_RADIATIVE_CHANNELS_CLOSURE_UPGRADE.py`,
+   - `RAPORT_QW2073_RADIATIVE_CHANNELS_CLOSURE_UPGRADE.md`,
+   - `report_qw2073_radiative_channels_closure_upgrade.json`.
+2. Cel:
+   - podniesc 3 kanaly non-closing do closure-ready,
+   - domknac 2 brakujace kanaly radiacyjne (GR EFT, kosmologia) na poziomie channel gate.
+3. Wynik:
+   - `RADIATIVE_CHANNELS_CLOSURE_READY_PASS`, `closure_ready=5/5` (dla kanalow upgrade'owanych),
+   - po przepieciu do QW-2070: `implemented=7/7`, `closure_ready=7/7`, `missing=0/7`.
+4. Znaczenie:
+   - zadanie domykania kanalow radiacyjnych zostalo wykonane na poziomie proceduralnym/gate,
+   - globalny bloker pozostaje na poziomie brakujacych bezposrednich derivacji parametrow (`15` w QW-2071).
+
+## 369. Strict no-fit missing-parameter derivation round (QW-2074)
+1. Dodano:
+   - `QW_2074_STRICT_NOFIT_MISSING_PARAMETER_DERIVATIONS.py`,
+   - `RAPORT_QW2074_STRICT_NOFIT_MISSING_PARAMETER_DERIVATIONS.md`,
+   - `report_qw2074_strict_nofit_missing_parameter_derivations.json`.
+2. Cel:
+   - zredukowac liczbe pozycji `not_derived` bez retune i bez skanowania,
+   - z jawnym oznaczeniem epistemicznym (bez falszywego awansu do strict first-principles).
+3. Wynik:
+   - `STRICT_NOFIT_MISSING_PARAMETER_DERIVATION_ROUND1`, `updates=4`,
+   - `2` pozycje sklasyfikowane jako `physical_relation_anchor_dependent`,
+   - `2` pozycje sklasyfikowane jako `si_definition`.
+4. Efekt na status pakietu:
+   - brakujace bezposrednie derivacje spadly z `19` do `15` (po integracji w QW-2069),
+   - w tej rundzie strict-derived pozostaje `10/32` (bez sztucznego pompowania).
+5. Znaczenie:
+   - krok poprawia transparentnosc i rygor epistemiczny,
+   - nie jest to nowy dowod pełnego first-principles.
+
+## 370. Strict CP phase derivation gate (QW-2075)
+1. Dodano:
+   - `QW_2075_STRICT_CP_PHASE_DERIVATION_GATE.py`,
+   - `RAPORT_QW2075_STRICT_CP_PHASE_DERIVATION_GATE.md`,
+   - `report_qw2075_strict_cp_phase_derivation_gate.json`.
+2. Cel:
+   - wyprowadzic fazy CP z deterministycznego operatora flavor (bez skanu, bez retune),
+   - promowac tylko te aktualizacje, ktore przechodza twarde kryteria gate.
+3. Wynik:
+   - `STRICT_CP_PHASE_DERIVATION_PARTIAL_PMNS_ONLY`, `pass_count=7/8`,
+   - promowana aktualizacja: `delta_cp_pmns`,
+   - `delta_cp_ckm` pozostaje non-closing (poza tolerancja rejestru, nawet z uwzglednieniem niejednoznacznosci galezi).
+4. Efekt na status pakietu:
+   - po integracji QW-2075 w QW-2069: `strict-derived: 11/32`, `missing: 14/32`,
+   - w QW-2071: `missing parameters: 14`.
+5. Znaczenie:
+   - realne domkniecie jednego kanalu brakujacej fizyki flavor (PMNS CP) bez sztucznego sukcesu CKM.
+
 ## 361. Compatibility-filtered micro constants tightening (QW-2066)
 1. Dodano:
    - `QW_2066_COMPATIBILITY_FILTERED_MICRO_CONSTANTS_TIGHTENING.py`,

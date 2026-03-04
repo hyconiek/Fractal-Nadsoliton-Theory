@@ -18,7 +18,7 @@ The theory has been validated through **1200+ numerical verification studies (QW
 
 **Critical Assessment:** The theory succeeds in gauge/gravity sector and has now established a rigorous **Preon Model**. Fermion spin is emergent via 3D Skyrmions. See Part XIX of the documentation for honest evaluation.
 
-**Important status note (2026-03-04):** FIN now has a **strict internal first-principles closure pass** in the current gate chain (`QW-2065`, strengthened by `QW-2067`). However, it is **not yet a final community-confirmed ToE**, because independent external multiteam replication is still required.
+**Important status note (2026-03-04):** FIN now has a **strict internal first-principles closure pass** in the current gate chain (`QW-2065`, strengthened by `QW-2067`). The explicit full SM+GR package audit (`QW-2069`) and full-precision closure gate (`QW-2071`) still report **partial status**, so this is **not yet a final community-confirmed ToE**.
 
 ---
 
@@ -157,13 +157,13 @@ Particle masses follow Fibonacci pattern:
 |----------|--------|-------|
 | Q1: Fermion Spin | ✅ ADDRESSED | Verified B=1 for 3D Skyrmion (QW-1204) |
 | Q2: Gravity Exponent 2.26 | ✅ ADDRESSED | Runs to 2.0 at large scales |
-| Q3: α Precision 0.15% | 🟠 PARTIAL | Needs radiative corrections |
+| Q3: α Precision 0.15% | 🟠 PARTIAL | Radiative channel closure-ready is `7/7` (QW-2070/QW-2073), but `14` radiative-sensitive SM+GR parameters still lack direct derivation in package gate |
 | Q4: Q Assignment | ✅ ESTABLISHED | Preon Model ($Q=8$) & Fibonacci Trimer |
 | Q5: Lorentz Invariance | ✅ ADDRESSED | Emergent in IR limit |
-| Q6: CKM/PMNS Matrices | 🟢 INTERNAL DERIVATION PASS | Gate-level quantitative derivation in strict internal chain (QW-2063/2065/2067); external independent replication still pending |
+| Q6: CKM/PMNS Matrices | 🟠 PARTIAL | Gate-level matrix magnitudes pass in strict internal chain; PMNS CP phase promoted (QW-2075), CKM CP phase still not closure-ready |
 | Q7: Bell Inequality | 🟠 DEBATED | Explained via Layering (Controversial) |
 | Q8: β / renormalization origin | 🟡 INTERNAL SUPPORT PASS | Micro-derived renormalization constants gate pass (QW-2064) + tightening (QW-2066), but precision spread is not yet final |
-| Q9: All known physical values fully derived | ❌ NOT YET | Internal closure is strong, but full global precision package and external confirmation are still open |
+| Q9: All known physical values fully derived | ❌ NOT YET | Full package gate is partial: QW-2069 (`11/32` strict-derived, `14` missing; plus `2` anchor-dependent + `2` SI-definition), QW-2071 (`2/5` global flags) |
 
 **Conclusion:** FIN Theory is now a **high-rigor internal unification candidate** with strengthened first-principles closure in the current gate scope. It is **NOT yet a final complete ToE claim** — full precision radiative closure and independent external multiteam confirmation remain required.
 
@@ -179,12 +179,23 @@ Below is the current closure status based on the newest internal gates/reports:
 - **QW-2065:** strict first-principles internal closure pass (`12/12`).
 - **QW-2066:** compatibility-filtered tightening pass (`6/6`) with dispersion reduction.
 - **QW-2067:** strengthened strict internal closure pass (`3/3`).
+- **QW-2068:** explicit SM+GR target registry established (`32` parameters).
+- **QW-2069:** full SM+GR package audit: `11/32` strict-derived, `3` model-formula-only, `2` anchor-dependent no-fit, `2` SI-definition, `14` missing.
+- **QW-2070:** radiative baseline refresh: `7/7` channels implemented, `7/7` closure-ready, `0` missing channels.
+- **QW-2072:** EW+Yukawa+CKM/PMNS radiative baselines implemented as explicit non-closing blocks.
+- **QW-2073:** radiative channel closure upgrade to closure-ready pass for upgraded channels (`5/5`).
+- **QW-2074:** strict no-fit missing-parameter round (epistemically labeled, no retune, no scan).
+- **QW-2075:** strict CP-phase gate: PMNS CP promoted; CKM CP remains non-closing (`STRICT_CP_PHASE_DERIVATION_PARTIAL_PMNS_ONLY`).
+- **QW-2076:** empirical prediction preregistration package ready (`3` falsifiable prospective predictions).
+- **QW-2077:** empirical validator gate implemented (currently `PENDING_DATA` on template input).
+- **QW-2071:** full-precision closure gate remains partial strong internal (`2/5` pass flags), with `14` missing parameters and `0` missing radiative channels.
 
 ### What this means scientifically
 - FIN has strong internal derivational and methodological progress.
 - FIN is **not yet** the final ToE / “Holy Grail” replacement for SM+GR in community sense.
 - Main open gap: independent external multiteam confirmatory replication.
-- Additional open scope: full global precision package for *all* known physical values.
+- Additional open scope: full global precision package for *all* known physical values (including complete radiative program blocks).
+- Empirical path is now explicit: preregistered predictions (`QW-2076`) + external-data validator (`QW-2077`).
 
 ### Practical interpretation
 FIN should currently be treated as an advanced, falsifiable unification candidate with strong partial results, not as a completed final theory.

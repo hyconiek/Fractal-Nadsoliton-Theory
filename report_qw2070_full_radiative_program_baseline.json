@@ -1,0 +1,142 @@
+{
+  "generated_utc": "2026-03-04T03:46:22.111831+00:00",
+  "sources": {
+    "registry": "report_qw2068_sm_gr_parameter_registry.json",
+    "full_derivation_package": "report_qw2069_full_sm_gr_derivation_package.json",
+    "ew_yukawa_flavor_baselines": "report_qw2072_ew_yukawa_flavor_radiative_baselines.json",
+    "radiative_channels_closure_upgrade": "report_qw2073_radiative_channels_closure_upgrade.json"
+  },
+  "channels": [
+    {
+      "id": "qed_running_one_loop",
+      "status": "implemented_one_loop_baseline",
+      "strict_level": "model_radiative_baseline",
+      "closure_ready": true,
+      "notes": "Piecewise one-loop QED running across charged-fermion thresholds."
+    },
+    {
+      "id": "qcd_running_one_loop",
+      "status": "implemented_one_loop_baseline",
+      "strict_level": "model_radiative_baseline",
+      "closure_ready": true,
+      "notes": "Piecewise one-loop QCD running with nf threshold switching."
+    },
+    {
+      "id": "electroweak_oblique_and_delta_r",
+      "status": "implemented_precision_baseline",
+      "strict_level": "model_radiative_precision_baseline",
+      "closure_ready": true,
+      "notes": "EW baseline upgraded with explicit closure checks (delta_r, MW, sin2 consistency)."
+    },
+    {
+      "id": "yukawa_running_and_threshold_matching",
+      "status": "implemented_precision_baseline",
+      "strict_level": "model_radiative_precision_baseline",
+      "closure_ready": true,
+      "notes": "Yukawa baseline upgraded with finite/positive/stability checks."
+    },
+    {
+      "id": "ckm_pmns_rge_transport",
+      "status": "implemented_precision_baseline",
+      "strict_level": "model_radiative_precision_baseline",
+      "closure_ready": true,
+      "notes": "Flavor transport upgraded with drift and row-norm closure checks."
+    },
+    {
+      "id": "gr_eft_running",
+      "status": "implemented_precision_baseline",
+      "strict_level": "model_radiative_precision_baseline",
+      "closure_ready": true,
+      "notes": "GR EFT running channel implemented via logistic UV-safe proxy checks."
+    },
+    {
+      "id": "cosmological_backreaction_radiative_chain",
+      "status": "implemented_precision_baseline",
+      "strict_level": "model_radiative_precision_baseline",
+      "closure_ready": true,
+      "notes": "Cosmological backreaction channel implemented with H(z), omega-lambda, w_eff checks."
+    }
+  ],
+  "qed_one_loop_baseline": {
+    "mu0_gev": 0.000511,
+    "alpha0": 0.0072973525692838015,
+    "samples": [
+      {
+        "mu_gev": 0.000511,
+        "alpha_em": 0.0072973525692838015,
+        "alpha_em_inv": 137.035999084
+      },
+      {
+        "mu_gev": 0.10566,
+        "alpha_em": 0.007430841477653035,
+        "alpha_em_inv": 134.57426093765105
+      },
+      {
+        "mu_gev": 1.77686,
+        "alpha_em": 0.007570966499806366,
+        "alpha_em_inv": 132.083532535189
+      },
+      {
+        "mu_gev": 91.1876,
+        "alpha_em": 0.007900590774721699,
+        "alpha_em_inv": 126.57281316221892
+      }
+    ]
+  },
+  "qcd_one_loop_baseline": {
+    "mu0_gev": 91.1876,
+    "alpha_s_mu0": 0.1179,
+    "samples": [
+      {
+        "mu_gev": 2.0,
+        "alpha_s": 0.2671861177453082,
+        "n_f_active": 4
+      },
+      {
+        "mu_gev": 10.0,
+        "alpha_s": 0.17286856800489353,
+        "n_f_active": 5
+      },
+      {
+        "mu_gev": 91.1876,
+        "alpha_s": 0.1179,
+        "n_f_active": 5
+      },
+      {
+        "mu_gev": 173.0,
+        "alpha_s": 0.10795476343872872,
+        "n_f_active": 6
+      },
+      {
+        "mu_gev": 1000.0,
+        "alpha_s": 0.08914435549101479,
+        "n_f_active": 6
+      }
+    ]
+  },
+  "coverage": {
+    "n_channels_total": 7,
+    "n_channels_implemented": 7,
+    "n_channels_closure_ready": 7,
+    "n_channels_missing": 0,
+    "n_radiative_sensitive_missing_parameters": 14,
+    "radiative_sensitive_missing_parameters": [
+      "G_newton",
+      "alpha_s_mz",
+      "delta_cp_ckm",
+      "g_f",
+      "h0",
+      "lambda_cosmological",
+      "m_down",
+      "m_h",
+      "m_nu1",
+      "m_nu2",
+      "m_nu3",
+      "m_strange",
+      "m_up",
+      "m_z"
+    ]
+  },
+  "verdict": "FULL_RADIATIVE_PROGRAM_PARTIAL_BASELINE",
+  "required_next_step": "DERIVE_REMAINING_RADIATIVE_SENSITIVE_SM_GR_PARAMETERS"
+}

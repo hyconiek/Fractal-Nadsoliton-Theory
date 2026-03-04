@@ -1,0 +1,121 @@
+{
+  "generated_utc": "2026-03-04T03:23:48.470721+00:00",
+  "sources": {
+    "registry": "report_qw2068_sm_gr_parameter_registry.json",
+    "ew_yukawa_flavor_baselines": "report_qw2072_ew_yukawa_flavor_radiative_baselines.json"
+  },
+  "checks": {
+    "electroweak": {
+      "mw_onshell_deltar0_rel_err_lt_2pct": true,
+      "delta_r_in_physical_window": true,
+      "sin2_consistency_abs_lt_0p02": true
+    },
+    "yukawa": {
+      "all_positive_low_scale": true,
+      "all_positive_high_scale": true,
+      "all_finite_high_scale": true,
+      "max_y_low_lt_2": true
+    },
+    "flavor_rge": {
+      "ckm_drift_rel_lt_1pct": true,
+      "pmns_drift_rel_lt_1pct": true,
+      "ckm_row_norm_dev_lt_1e_6": true,
+      "pmns_row_norm_dev_lt_1e_6": true
+    },
+    "gr_eft": {
+      "all_positive": true,
+      "all_finite": true,
+      "bounded_lt_1p2": true,
+      "monotonic_non_decreasing": true
+    },
+    "cosmology": {
+      "hz_positive_all_grid": true,
+      "omega_lambda_consistency_abs_lt_0p10": true,
+      "w_eff_window": true
+    }
+  },
+  "diagnostics": {
+    "delta_r_required_for_mw_ref": 0.035524655841476904,
+    "ckm_mean_drift_rel_pct": 0.0013427183923193778,
+    "pmns_mean_drift_rel_pct": 0.11450365670762391,
+    "gr_samples": [
+      {
+        "mu_gev": 0.001,
+        "g_dimensionless": 6.708722260045629e-45
+      },
+      {
+        "mu_gev": 1.0,
+        "g_dimensionless": 6.708722260045626e-39
+      },
+      {
+        "mu_gev": 1000.0,
+        "g_dimensionless": 6.708722260045623e-33
+      },
+      {
+        "mu_gev": 10000000000.0,
+        "g_dimensionless": 6.708722260045631e-19
+      },
+      {
+        "mu_gev": 1e+19,
+        "g_dimensionless": 0.4015101906438256
+      }
+    ],
+    "omega_lambda_from_lambda": 0.6942237679337855,
+    "omega_lambda_flat": 0.68491,
+    "hz_over_h0_grid": [
+      1.0,
+      1.322305042340836,
+      1.79062838132316,
+      3.0326885761647207,
+      4.568145137799367
+    ],
+    "w_eff_grid": [
+      -1.0,
+      -0.9972968992792789,
+      -0.9965342640972003,
+      -0.996337959037773,
+      -0.9965342640972003
+    ]
+  },
+  "channel_updates": [
+    {
+      "id": "electroweak_oblique_and_delta_r",
+      "status": "implemented_precision_baseline",
+      "strict_level": "model_radiative_precision_baseline",
+      "closure_ready": true,
+      "notes": "EW baseline upgraded with explicit closure checks (delta_r, MW, sin2 consistency)."
+    },
+    {
+      "id": "yukawa_running_and_threshold_matching",
+      "status": "implemented_precision_baseline",
+      "strict_level": "model_radiative_precision_baseline",
+      "closure_ready": true,
+      "notes": "Yukawa baseline upgraded with finite/positive/stability checks."
+    },
+    {
+      "id": "ckm_pmns_rge_transport",
+      "status": "implemented_precision_baseline",
+      "strict_level": "model_radiative_precision_baseline",
+      "closure_ready": true,
+      "notes": "Flavor transport upgraded with drift and row-norm closure checks."
+    },
+    {
+      "id": "gr_eft_running",
+      "status": "implemented_precision_baseline",
+      "strict_level": "model_radiative_precision_baseline",
+      "closure_ready": true,
+      "notes": "GR EFT running channel implemented via logistic UV-safe proxy checks."
+    },
+    {
+      "id": "cosmological_backreaction_radiative_chain",
+      "status": "implemented_precision_baseline",
+      "strict_level": "model_radiative_precision_baseline",
+      "closure_ready": true,
+      "notes": "Cosmological backreaction channel implemented with H(z), omega-lambda, w_eff checks."
+    }
+  ],
+  "closure_ready_count": 5,
+  "closure_total": 5,
+  "verdict": "RADIATIVE_CHANNELS_CLOSURE_READY_PASS",
+  "required_next_step": "FOCUS_ON_MISSING_SM_GR_PARAMETER_DERIVATIONS"
+}
