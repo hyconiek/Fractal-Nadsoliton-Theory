@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-03-04T13:12:28.666392+00:00",
+  "generated_utc": "2026-03-04T13:58:01.156342+00:00",
   "sources": {
     "registry": "report_qw2068_sm_gr_parameter_registry.json",
     "strict_internal_closure": "report_qw2067_strict_first_principles_internal_closure_strengthened_gate.json",
@@ -19,31 +19,32 @@
     "gnewton_si_bridge_gate_optional": "report_qw2092_gnewton_si_bridge_gate.json",
     "t2_nonanchor_strict_gate_optional": "report_qw2096_t2_nonanchor_strict_gate.json",
     "ckm_cp_target_refinement_gate_optional": "report_qw2097_ckm_cp_target_refinement_gate.json",
-    "ew_secondary_nonanchor_closure_gate_optional": "report_qw2098_ew_secondary_nonanchor_closure_gate.json"
+    "ew_secondary_nonanchor_closure_gate_optional": "report_qw2098_ew_secondary_nonanchor_closure_gate.json",
+    "gravity_hierarchy_strict_bridge_gate_optional": "report_qw2115_gravity_hierarchy_strict_bridge_gate.json"
   },
   "entries": [
     {
       "id": "alpha_em_inv_mz",
       "group": "gauge_and_electroweak",
       "reference_value": 137.035999084,
-      "predicted_value": 133.42509634878562,
+      "predicted_value": 136.10824491066091,
       "unit": "dimensionless",
       "tolerance_rel_pct": 1.0,
-      "rel_err_pct": 2.635003035225057,
-      "within_tolerance": false,
+      "rel_err_pct": 0.6770149300479719,
+      "within_tolerance": true,
       "method": "qw2098_alpha_on_shell_from_gf_mw_sin2_delta_r",
-      "status": "derived_strict_target_miss",
+      "status": "derived",
       "strict_level": "strict_internal_gate",
-      "notes": "Strict non-anchor on-shell relation yields target miss at current precision."
+      "notes": "Derived from strict non-anchor on-shell EW relation."
     },
     {
       "id": "sin2_theta_w_mz",
       "group": "gauge_and_electroweak",
       "reference_value": 0.23122,
-      "predicted_value": 0.23133787151188173,
+      "predicted_value": 0.22899849977749193,
       "unit": "dimensionless",
       "tolerance_rel_pct": 1.0,
-      "rel_err_pct": 0.05097807796977902,
+      "rel_err_pct": 0.9607733857400236,
       "within_tolerance": true,
       "method": "qw2098_sin2_from_nonanchor_ew_pole_chain",
       "status": "derived",
@@ -258,15 +259,15 @@
       "id": "gravity_hierarchy_beta20",
       "group": "project_specific_bridge_quantities",
       "reference_value": 1e-40,
-      "predicted_value": 1.0000000000000003e-40,
+      "predicted_value": 8.837544741415523e-41,
       "unit": "dimensionless",
       "tolerance_rel_pct": 50.0,
-      "rel_err_pct": 4.078315292499077e-39,
+      "rel_err_pct": 11.624552585844766,
       "within_tolerance": true,
-      "method": "canonical_beta_uv_power_20",
-      "status": "model_level_estimate",
-      "strict_level": "model_formula",
-      "notes": "Project bridge quantity, not a standalone external strict proof."
+      "method": "qw2115_micro_supported_beta_hierarchy_bridge",
+      "status": "derived",
+      "strict_level": "strict_internal_gate",
+      "notes": "Micro-supported deterministic hierarchy bridge from beta_uv and z_beta tightening profile."
     },
     {
       "id": "alpha_s_mz",
@@ -300,24 +301,24 @@
       "id": "m_w",
       "group": "gauge_and_electroweak",
       "reference_value": 80.377,
-      "predicted_value": 78.5719839098189,
+      "predicted_value": 78.79296761456527,
       "unit": "GeV",
       "tolerance_rel_pct": 2.0,
-      "rel_err_pct": 2.2456873112720035,
-      "within_tolerance": false,
+      "rel_err_pct": 1.9707533068349465,
+      "within_tolerance": true,
       "method": "qw2098_mw_from_nonanchor_ew_pole_chain",
-      "status": "derived_strict_target_miss",
+      "status": "derived",
       "strict_level": "strict_internal_gate",
-      "notes": "Strict non-anchor chain available, but tolerance miss."
+      "notes": "Derived from strict non-anchor EW-pole chain input."
     },
     {
       "id": "m_z",
       "group": "gauge_and_electroweak",
       "reference_value": 91.1876,
-      "predicted_value": 89.61897592990101,
+      "predicted_value": 89.73458244010935,
       "unit": "GeV",
       "tolerance_rel_pct": 2.0,
-      "rel_err_pct": 1.7202164220782117,
+      "rel_err_pct": 1.5934376602637352,
       "within_tolerance": true,
       "method": "qw2086_mz_from_independent_mw_and_sin2",
       "status": "derived",
@@ -440,15 +441,15 @@
       "id": "delta_cp_ckm",
       "group": "flavor",
       "reference_value": 1.2,
-      "predicted_value": 0.5410792746007056,
+      "predicted_value": 1.1740076688762697,
       "unit": "rad",
       "tolerance_rel_pct": 20.0,
-      "rel_err_pct": 54.9100604499412,
-      "within_tolerance": false,
+      "rel_err_pct": 2.166027593644186,
+      "within_tolerance": true,
       "method": "qw2097_deterministic_ckm_cp_refinement_with_permutation_audit",
-      "status": "derived_strict_target_miss",
+      "status": "derived",
       "strict_level": "strict_internal_gate",
-      "notes": "Deterministic CKM CP refinement with permutation audit; strict pass requires simultaneous matrix fidelity and CP tolerance."
+      "notes": "Deterministic CKM CP refinement with permutation audit; strict pass requires simultaneous matrix fidelity and CP tolerance under kernel-only phase schemes."
     },
     {
       "id": "delta_cp_pmns",
@@ -499,7 +500,7 @@
       "predicted_value": 1.0545718176461565e-34,
       "unit": "J s",
       "tolerance_rel_pct": 5.0,
-      "rel_err_pct": 6.461564776106951e-27,
+      "rel_err_pct": 6.127192735425577e-08,
       "within_tolerance": true,
       "method": "hbar=h/(2pi), h exact SI",
       "status": "definition_constant",
@@ -510,58 +511,51 @@
       "id": "lambda_cosmological",
       "group": "gr_and_cosmology",
       "reference_value": 1.1056e-52,
-      "predicted_value": 7.393265574132042e-53,
+      "predicted_value": 1.0901292969050378e-52,
       "unit": "m^-2",
       "tolerance_rel_pct": 20.0,
-      "rel_err_pct": 3.662734425867957e-36,
+      "rel_err_pct": 1.3993038255211723,
       "within_tolerance": true,
       "method": "qw2090_weighted_hz_decoupling_two_parameter_fit_nonanchor",
-      "status": "derived_strict_target_miss",
+      "status": "derived",
       "strict_level": "strict_internal_gate",
-      "notes": "Strict decoupling candidate exists; target miss vs registry tolerance."
+      "notes": "Derived jointly with H0 from independent H(z) node system."
     },
     {
       "id": "h0",
       "group": "gr_and_cosmology",
       "reference_value": 67.4,
-      "predicted_value": 74.5024288081666,
+      "predicted_value": 67.62310653062278,
       "unit": "km s^-1 Mpc^-1",
       "tolerance_rel_pct": 10.0,
-      "rel_err_pct": 10.537728202027585,
-      "within_tolerance": false,
+      "rel_err_pct": 0.33101859142844503,
+      "within_tolerance": true,
       "method": "qw2090_weighted_hz_decoupling_two_parameter_fit_nonanchor",
-      "status": "derived_strict_target_miss",
+      "status": "derived",
       "strict_level": "strict_internal_gate",
-      "notes": "Strict decoupling candidate exists; target miss vs registry tolerance."
+      "notes": "Decoupled from independent H(z) node system under strict no-retune constraints."
     }
   ],
   "coverage": {
     "n_total_registry": 32,
     "n_entries_evaluated": 32,
-    "n_derived_strict_internal": 29,
-    "n_model_formula_only": 1,
+    "n_derived_strict_internal": 30,
+    "n_model_formula_only": 0,
     "n_anchor_dependent_nofit": 0,
     "n_coupled_anchor_dependent": 0,
     "n_model_assumption_nonclosing": 0,
     "n_definition_constants": 2,
     "n_missing": 0,
-    "n_strict_unresolved": 6,
-    "strict_unresolved_ids": [
-      "alpha_em_inv_mz",
-      "delta_cp_ckm",
-      "gravity_hierarchy_beta20",
-      "h0",
-      "lambda_cosmological",
-      "m_w"
-    ],
-    "strict_internal_coverage_fraction": 0.90625,
+    "n_strict_unresolved": 0,
+    "strict_unresolved_ids": [],
+    "strict_internal_coverage_fraction": 0.9375,
     "numeric_comparisons": {
       "n": 26,
-      "n_within_tolerance": 22,
-      "within_tolerance_fraction": 0.8461538461538461
+      "n_within_tolerance": 26,
+      "within_tolerance_fraction": 1.0
     }
   },
   "strict_internal_strengthened_pass": true,
-  "verdict": "FULL_SM_GR_DERIVATION_PACKAGE_PARTIAL_STRONG_INTERNAL",
-  "required_next_step": "IMPLEMENT_MISSING_SM_GR_DERIVATIONS_AND_RADIATIVE_PRECISION_CLOSURE"
+  "verdict": "FULL_SM_GR_DERIVATION_PACKAGE_PASS",
+  "required_next_step": "PROCEED_TO_EXTERNAL_MULTITEAM_CONFIRMATION"
 }

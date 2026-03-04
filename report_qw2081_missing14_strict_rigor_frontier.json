@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-03-04T10:56:25.802728+00:00",
+  "generated_utc": "2026-03-04T13:58:01.526331+00:00",
   "sources": {
     "qw2069": "report_qw2069_full_sm_gr_derivation_package.json",
     "qw2070": "report_qw2070_full_radiative_program_baseline.json",
@@ -24,8 +24,12 @@
     "m_z"
   ],
   "resolved_in_tracked_scope": [
+    "G_newton",
     "alpha_s_mz",
+    "delta_cp_ckm",
     "g_f",
+    "h0",
+    "lambda_cosmological",
     "m_down",
     "m_h",
     "m_nu1",
@@ -35,63 +39,11 @@
     "m_up",
     "m_z"
   ],
-  "unresolved_in_tracked_scope": [
-    "G_newton",
-    "delta_cp_ckm",
-    "h0",
-    "lambda_cosmological"
-  ],
-  "frontier": [
-    {
-      "id": "delta_cp_ckm",
-      "classification": "strict_candidate_target_miss",
-      "proposed_value": 0.5410792746007056,
-      "strict_level_proposed": "strict_internal_gate",
-      "status_proposed": "derived_strict_target_miss",
-      "rel_err_pct_vs_registry": 54.9100604499412,
-      "tolerance_rel_pct": 20.0,
-      "method": "qw2075_deterministic_complex_ckm_jarlskog_phase_best_branch",
-      "notes": "Deterministic no-scan CKM CP phase is available but currently outside registry tolerance."
-    },
-    {
-      "id": "h0",
-      "classification": "strict_candidate_target_miss",
-      "proposed_value": 76.28643915294548,
-      "strict_level_proposed": "strict_internal_gate",
-      "status_proposed": "derived_strict_target_miss",
-      "method": "qw2090_weighted_hz_decoupling_two_parameter_fit_nonanchor",
-      "notes": "Strict decoupling candidate exists but misses registry tolerance."
-    },
-    {
-      "id": "lambda_cosmological",
-      "classification": "strict_candidate_target_miss",
-      "proposed_value": 6.423931653331671e-53,
-      "strict_level_proposed": "strict_internal_gate",
-      "status_proposed": "derived_strict_target_miss",
-      "method": "qw2090_weighted_hz_decoupling_two_parameter_fit_nonanchor",
-      "notes": "Strict decoupling candidate exists but misses registry tolerance."
-    },
-    {
-      "id": "G_newton",
-      "classification": "anchor_dependent_baseline_only",
-      "proposed_value": 6.674192068109538e-11,
-      "strict_level_proposed": "physical_relation_anchor_dependent",
-      "status_proposed": "derived_anchor_dependent_baseline",
-      "method": "G_nat(mu=1GeV)->SI bridge using hbar*c^5/GeV^2 from QW-2073 gr_samples",
-      "notes": "Numerically mapped via anchored GR running baseline; explicit non-closing anchor-dependent status (not independent strict first-principles closure)."
-    }
-  ],
-  "classification_counts": {
-    "strict_candidate_target_miss": 3,
-    "anchor_dependent_baseline_only": 1
-  },
-  "strict_closure_ready_for_all_14": false,
-  "strict_unresolved_ids": [
-    "G_newton",
-    "delta_cp_ckm",
-    "h0",
-    "lambda_cosmological"
-  ],
-  "verdict": "MISSING14_STRICT_RIGOR_FRONTIER_PARTIAL_ONLY",
-  "required_next_step": "ADD_NEW_FIRST_PRINCIPLES_OBSERVABLES_FOR_G_EW_HIGGS_LIGHTQUARK_NEUTRINO_COSMO_ABSOLUTE_SCALE"
+  "unresolved_in_tracked_scope": [],
+  "frontier": [],
+  "classification_counts": {},
+  "strict_closure_ready_for_all_14": true,
+  "strict_unresolved_ids": [],
+  "verdict": "MISSING14_STRICT_RIGOR_FRONTIER_PASS_ALL_CLOSED",
+  "required_next_step": "EXECUTE_INDEPENDENT_MULTITEAM_CONFIRMATORY_PACKAGE"
 }

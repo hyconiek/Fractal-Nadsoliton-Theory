@@ -1,6 +1,6 @@
 # RAPORT QW-2111: T3/T4 STRICT EXTERNAL ACQUISITION PACKET
 
-- Date UTC: 2026-03-04T13:12:28.437845+00:00
+- Date UTC: 2026-03-04T13:28:39.381496+00:00
 - Verdict: **T3T4_STRICT_EXTERNAL_ACQUISITION_PACKET_READY**
 
 ## Status Snapshot
@@ -10,9 +10,9 @@
 
 ## H(z) Acquisition
 - Current n_nodes: `5` (threshold `5`)
-- Current z_span: `1.585` (threshold `0.8`)
-- Current E_span: `7.389570990162656` (threshold `1.0`)
-- Current cond([E,1]): `6.474915521452492` (threshold `< 8.0`)
+- Current z_span: `1.15` (threshold `0.8`)
+- Current E_span: `4.276715605330501` (threshold `1.0`)
+- Current cond([E,1]): `5.7956053033256225` (threshold `< 8.0`)
 - Suggested added z pairs (top 10): `[[0.1, 0.9], [0.1, 0.92], [0.12, 0.92], [0.1, 0.94], [0.12, 0.94], [0.1, 0.96], [0.12, 0.96], [0.14, 0.96], [0.1, 0.98], [0.12, 0.98]]`
 
 ## G Bridge Acquisition

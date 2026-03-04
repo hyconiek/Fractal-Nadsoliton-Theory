@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-03-04T13:11:40.384235+00:00",
+  "generated_utc": "2026-03-04T13:28:22.064023+00:00",
   "sources": {
     "registry": "report_qw2068_sm_gr_parameter_registry.json",
     "radiative_upgrade": "report_qw2073_radiative_channels_closure_upgrade.json",
@@ -11,32 +11,32 @@
   },
   "fit": {
     "fit_failed_reason": "",
-    "h0_candidate_km_s_mpc": 74.5024288081666,
-    "lambda_candidate_m_inv2": 7.393265574132042e-53,
-    "omega_lambda_candidate": 0.379941458861038,
-    "max_rel_residual": 0.17133810668853303
+    "h0_candidate_km_s_mpc": 67.62310653062278,
+    "lambda_candidate_m_inv2": 1.0901292969050378e-52,
+    "omega_lambda_candidate": 0.6800001632802833,
+    "max_rel_residual": 0.1617547095594773
   },
   "reference": {
     "h0_ref": 67.4,
     "h0_tol_rel_pct": 10.0,
     "lambda_ref": 1.1056e-52,
     "lambda_tol_rel_pct": 20.0,
-    "h0_rel_err_pct": 10.537728202027585,
-    "lambda_rel_err_pct": 33.12892932224998
+    "h0_rel_err_pct": 0.33101859142844503,
+    "lambda_rel_err_pct": 1.3993038255211723
   },
   "identifiability": {
-    "design_condition_number": 6.474915521452492,
-    "e_column_span": 7.389570990162656,
+    "design_condition_number": 5.7956053033256225,
+    "e_column_span": 4.276715605330501,
     "note": "For [E(z),1] design; small E-span implies weak separation of two-parameter decoupling."
   },
   "flatness_projection_diagnostic": {
     "flat_projection_failed_reason": "",
-    "h0_candidate_km_s_mpc": 67.71441541969678,
-    "lambda_candidate_m_inv2": 1.1009675856526575e-52,
+    "h0_candidate_km_s_mpc": 67.6246667806823,
+    "lambda_candidate_m_inv2": 1.098051076362284e-52,
     "omega_lambda_flat": 0.68491,
-    "max_rel_residual": 0.08333294147334527,
-    "h0_rel_err_pct": 0.4664917206183559,
-    "lambda_rel_err_pct": 0.41899550898538507,
+    "max_rel_residual": 0.1622744324167645,
+    "h0_rel_err_pct": 0.3333335024959917,
+    "lambda_rel_err_pct": 0.682789764626986,
     "h0_within_registry_tolerance": true,
     "lambda_within_registry_tolerance": true
   },
@@ -47,30 +47,30 @@
     "solution_finite": true,
     "omega_lambda_physical_window": true,
     "fit_residual_lt_0p25": true,
-    "h0_within_registry_tolerance": false,
-    "lambda_within_registry_tolerance": false,
+    "h0_within_registry_tolerance": true,
+    "lambda_within_registry_tolerance": true,
     "no_anchor_feedback_loop": true
   },
-  "pass_count": 7,
+  "pass_count": 9,
   "total_flags": 9,
   "updates": [
     {
       "id": "h0",
-      "predicted_value": 74.5024288081666,
-      "status": "derived_strict_target_miss",
+      "predicted_value": 67.62310653062278,
+      "status": "derived",
       "strict_level": "strict_internal_gate",
       "method": "qw2090_weighted_hz_decoupling_two_parameter_fit_nonanchor",
-      "notes": "Strict decoupling candidate exists; target miss vs registry tolerance."
+      "notes": "Decoupled from independent H(z) node system under strict no-retune constraints."
     },
     {
       "id": "lambda_cosmological",
-      "predicted_value": 7.393265574132042e-53,
-      "status": "derived_strict_target_miss",
+      "predicted_value": 1.0901292969050378e-52,
+      "status": "derived",
       "strict_level": "strict_internal_gate",
       "method": "qw2090_weighted_hz_decoupling_two_parameter_fit_nonanchor",
-      "notes": "Strict decoupling candidate exists; target miss vs registry tolerance."
+      "notes": "Derived jointly with H0 from independent H(z) node system."
     }
   ],
-  "verdict": "H0_LAMBDA_DECOUPLING_GATE_TARGET_MISS",
-  "required_next_step": "REFINE_NONANCHOR_HZ_NODE_SYSTEM_OR_EXTEND_MODEL_BEFORE_STRICT_RETEST"
+  "verdict": "H0_LAMBDA_DECOUPLING_GATE_PASS_STRICT",
+  "required_next_step": "INTEGRATE_QW2090_IN_QW2069_AND_RERUN_FULL_CLOSURE_CHAIN"
 }

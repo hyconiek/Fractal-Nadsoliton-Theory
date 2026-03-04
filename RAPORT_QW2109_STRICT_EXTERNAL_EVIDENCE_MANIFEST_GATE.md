@@ -1,12 +1,12 @@
 # RAPORT QW-2109: STRICT EXTERNAL EVIDENCE MANIFEST GATE
 
-- Date UTC: 2026-03-04T13:12:28.352608+00:00
+- Date UTC: 2026-03-04T13:28:39.338546+00:00
 - Verdict: **STRICT_EXTERNAL_EVIDENCE_MANIFEST_GATE_PASS**
 - pass_count: `29/29`
 
 ## H(z) Manifest
-- sha256 declared: `69f73f9cefc927a29a4f476760cd54bb8f00e8ace76c08faa0389ce79c5742ea`
-- sha256 actual:   `69f73f9cefc927a29a4f476760cd54bb8f00e8ace76c08faa0389ce79c5742ea`
+- sha256 declared: `1c606de65a9fa4297bc2c26ea5ea7aeaa14abbe4cce69a082f6bc511520bea54`
+- sha256 actual:   `1c606de65a9fa4297bc2c26ea5ea7aeaa14abbe4cce69a082f6bc511520bea54`
 - rows: `5`
 - header: `['z', 'h_km_s_mpc', 'sigma_total']`
 

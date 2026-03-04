@@ -1,18 +1,18 @@
 {
-  "generated_utc": "2026-03-04T13:12:44.488258+00:00",
+  "generated_utc": "2026-03-04T13:59:34.958269+00:00",
   "sources": {
     "derivation_package": "report_qw2069_full_sm_gr_derivation_package.json",
     "radiative_program": "report_qw2070_full_radiative_program_baseline.json"
   },
   "gate_flags": {
     "strict_internal_strengthened_pass": true,
-    "full_derivation_package_pass": false,
-    "radiative_program_pass": false,
+    "full_derivation_package_pass": true,
+    "radiative_program_pass": true,
     "no_missing_parameters": true,
-    "no_strict_unresolved_parameters": false,
+    "no_strict_unresolved_parameters": true,
     "all_radiative_channels_implemented": true
   },
-  "pass_count": 3,
+  "pass_count": 6,
   "total_flags": 6,
   "strict_derived_parameters": [
     "G_newton",
@@ -23,6 +23,7 @@
     "delta_cp_pmns",
     "delta_eta",
     "g_f",
+    "gravity_hierarchy_beta20",
     "h0",
     "lambda_cosmological",
     "m_bottom",
@@ -45,18 +46,9 @@
     "v_higgs",
     "z_beta"
   ],
-  "model_formula_only_parameters": [
-    "gravity_hierarchy_beta20"
-  ],
+  "model_formula_only_parameters": [],
   "missing_parameters": [],
-  "strict_unresolved_parameters": [
-    "alpha_em_inv_mz",
-    "delta_cp_ckm",
-    "gravity_hierarchy_beta20",
-    "h0",
-    "lambda_cosmological",
-    "m_w"
-  ],
+  "strict_unresolved_parameters": [],
   "implemented_radiative_channels": [
     "ckm_pmns_rge_transport",
     "cosmological_backreaction_radiative_chain",
@@ -68,10 +60,8 @@
   ],
   "missing_radiative_channels": [],
   "nonclosing_radiative_channels": [],
-  "verdict": "SM_GR_FULL_PRECISION_CLOSURE_PARTIAL_STRONG_INTERNAL",
+  "verdict": "SM_GR_FULL_PRECISION_CLOSURE_PASS",
   "required_next_steps": [
-    "Close all strict-unresolved parameters (non-missing but non-closing statuses still open).",
-    "Upgrade model-formula-only entries to strict derivation status.",
     "Run truly independent multiteam external confirmation package."
   ]
 }

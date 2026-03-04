@@ -1,14 +1,14 @@
 # RAPORT QW-2105: T3T4 STRICT INPUT GAP REPORT
 
-- Date UTC: 2026-03-04T13:11:41.074103+00:00
+- Date UTC: 2026-03-04T13:28:22.202181+00:00
 - Verdict: **T3T4_STRICT_INPUT_GAPS_CLOSED_READY_FOR_STRICT_RERUN**
 
 ## H(z) Path
 - strict_ready: `True`
 - current n_nodes: `5`
-- current z_span: `1.585`
-- current e_span: `7.389570990162656`
-- current cond([E,1]): `6.474915521452492`
+- current z_span: `1.15`
+- current e_span: `4.276715605330501`
+- current cond([E,1]): `5.7956053033256225`
 - gaps:
   - none
 
@@ -34,7 +34,7 @@
 - g_dimensionless_acceptance_range: `[6.373389212824983e-39, 7.044272287859191e-39]`
 
 ## Meta
-- QW-2104 verdict: `T3T4_STRICT_PREFLIGHT_GATE_PENDING` (7/8)
+- QW-2104 verdict: `T3T4_STRICT_PREFLIGHT_GATE_PASS` (8/8)
 - QW-2106 verdict: `STRICT_EXTERNAL_INPUT_INTAKE_GATE_PASS` (18/18)
 
 ## Artifact

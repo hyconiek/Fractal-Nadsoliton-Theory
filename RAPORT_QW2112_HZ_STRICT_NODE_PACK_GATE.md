@@ -1,6 +1,6 @@
 # RAPORT QW-2112: HZ STRICT NODE PACK GATE
 
-- Date UTC: 2026-03-04T13:11:14.789963+00:00
+- Date UTC: 2026-03-04T13:28:21.384822+00:00
 - Verdict: **HZ_STRICT_NODE_PACK_READY**
 - pass_count: `12/12`
 
@@ -12,9 +12,9 @@
 
 ## Merged Metrics
 - n_nodes: `5`
-- z_span: `1.585`
-- e_span: `7.389570990162656`
-- design_condition_number: `6.474915521452492`
+- z_span: `1.15`
+- e_span: `4.276715605330501`
+- design_condition_number: `5.7956053033256225`
 
 ## Artifact
 - JSON: `report_qw2112_hz_strict_node_pack_gate.json`
