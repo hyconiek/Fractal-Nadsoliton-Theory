@@ -52,6 +52,7 @@ def main() -> None:
     r2104 = load_optional_json("report_qw2104_t3t4_strict_preflight_gate.json")
     r2105 = load_optional_json("report_qw2105_t3t4_strict_input_gap_report.json")
     r2106 = load_optional_json("report_qw2106_strict_external_input_intake_gate.json")
+    r2107 = load_optional_json("report_qw2107_hz_strict_design_search.json")
     r2069 = load_json("report_qw2069_full_sm_gr_derivation_package.json")
     r2071 = load_json("report_qw2071_sm_gr_full_precision_closure_gate.json")
 
@@ -583,6 +584,52 @@ def main() -> None:
         else:
             checks["QW-2105_closed_implies_qw2106_pass"] = True
 
+    # 15) Optional H(z) strict-design search consistency checks (QW-2107).
+    if r2107 is not None:
+        verdict107 = str(r2107.get("verdict", ""))
+        n_sol = int(r2107.get("n_solutions", 0))
+        top = r2107.get("top_solutions", [])
+        checks["QW-2107_verdict_known"] = verdict107 in {
+            "HZ_STRICT_DESIGN_FOUND",
+            "HZ_STRICT_DESIGN_NOT_FOUND_IN_SEARCH_GRID",
+        }
+        if verdict107 == "HZ_STRICT_DESIGN_FOUND":
+            checks["QW-2107_solutions_consistent_with_verdict"] = n_sol > 0
+        elif verdict107 == "HZ_STRICT_DESIGN_NOT_FOUND_IN_SEARCH_GRID":
+            checks["QW-2107_solutions_consistent_with_verdict"] = n_sol == 0
+        else:
+            checks["QW-2107_solutions_consistent_with_verdict"] = False
+
+        all_top_flags_true = True
+        if isinstance(top, list):
+            for item in top:
+                if not isinstance(item, dict):
+                    all_top_flags_true = False
+                    break
+                f = item.get("flags", {})
+                if not isinstance(f, dict) or not all(bool(v) for v in f.values()):
+                    all_top_flags_true = False
+                    break
+        else:
+            all_top_flags_true = False
+        checks["QW-2107_top_solutions_flags_all_true"] = all_top_flags_true
+
+        if r2105 is not None:
+            g = r2105.get("hz_design_guidance", {})
+            checks["QW-2107_verdict_matches_qw2105_guidance"] = (
+                str(g.get("qw2107_verdict", "")) == verdict107
+            )
+            top105 = g.get("suggested_added_z_top5", [])
+            top107 = [
+                item.get("added_nodes", [])
+                for item in (top if isinstance(top, list) else [])[:5]
+                if isinstance(item, dict)
+            ]
+            checks["QW-2107_top5_matches_qw2105_guidance"] = top105 == top107
+        else:
+            checks["QW-2107_verdict_matches_qw2105_guidance"] = True
+            checks["QW-2107_top5_matches_qw2105_guidance"] = True
+
     # Build defect list.
     for name, ok in checks.items():
         if ok:
@@ -666,6 +713,11 @@ def main() -> None:
             "qw2106": (
                 "report_qw2106_strict_external_input_intake_gate.json"
                 if r2106 is not None
+                else None
+            ),
+            "qw2107": (
+                "report_qw2107_hz_strict_design_search.json"
+                if r2107 is not None
                 else None
             ),
             "qw2069": "report_qw2069_full_sm_gr_derivation_package.json",

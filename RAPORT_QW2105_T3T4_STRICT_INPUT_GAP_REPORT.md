@@ -1,6 +1,6 @@
 # RAPORT QW-2105: T3T4 STRICT INPUT GAP REPORT
 
-- Date UTC: 2026-03-04T12:14:50.956184+00:00
+- Date UTC: 2026-03-04T12:24:47.647520+00:00
 - Verdict: **T3T4_STRICT_INPUT_GAPS_PRESENT**
 
 ## H(z) Path
@@ -14,6 +14,15 @@
   - extend_redshift_span: include at least one validated node at z >= 1.180
   - increase_E_span: add validated nodes at sufficiently separated z so E(z) span >= 1.0
   - improve_design_condition: reduce cond([E,1]) below 8 (current 10.956) via wider z coverage
+
+## H(z) Design Guidance
+- QW-2107 verdict: `HZ_STRICT_DESIGN_FOUND`
+- suggested_added_z_top5:
+  - [0.1, 0.9]
+  - [0.1, 0.92]
+  - [0.12, 0.92]
+  - [0.1, 0.94]
+  - [0.12, 0.94]
 
 ## G_newton Path
 - strict_ready: `False`

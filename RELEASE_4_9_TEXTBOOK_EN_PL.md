@@ -372,7 +372,7 @@ Meaning:
   - merged preflight consistency for QW-2104,
   - intake/gap consistency for QW-2105 and QW-2106,
   - strict-level/status integrity in package report.
-- Result: `102` checks, `0` failed.
+- Result: `107` checks, `0` failed.
 
 Meaning:
 - no critical implementation mismatch was detected in the audited non-anchor T1 closure path,
@@ -830,7 +830,7 @@ Znaczenie:
   - spójność scalonego preflightu QW-2104,
   - spójność intake/gap dla QW-2105 i QW-2106,
   - integralność strict-level/status w raporcie pakietowym.
-- Wynik: `102` kontrole, `0` błędów.
+- Wynik: `107` kontrole, `0` błędów.
 
 Znaczenie:
 - w audytowanej ścieżce domknięcia T1 non-anchor nie wykryto krytycznych niespójności implementacyjnych,
@@ -952,6 +952,8 @@ Wniosek:
   - `QW-2104`: `T3T4_STRICT_PREFLIGHT_GATE_PENDING` (`0/8`), combining intake readiness (`QW-2106`) with `QW-2099/2102/2090` and `QW-2101/2103/2092` plus logic-defect checks.
 - New deterministic gap quantification:
   - `QW-2105`: `T3T4_STRICT_INPUT_GAPS_PRESENT`, explicitly listing what external inputs are still missing for strict-ready T3/T4.
+- New deterministic H(z) acquisition design search:
+  - `QW-2107`: `HZ_STRICT_DESIGN_FOUND`, showing strict identifiability can be reached with +2 external nodes and providing auditable redshift candidates (current top pair: `[0.10, 0.90]`).
 - New raw-input intake gate:
   - `QW-2106`: `STRICT_EXTERNAL_INPUT_INTAKE_GATE_PENDING` (`10/18`), requiring metadata sidecars and strict-ready raw input structure before T3/T4 autocollectors.
 - EW secondary propagation gate was executed:
@@ -962,7 +964,7 @@ Wniosek:
   - `QW-2069`: strict-derived `28/32`, direct missing `0/32`, strict-unresolved `7/32`.
   - `QW-2081`: strict-unresolved in missing-14 scope is `4/14`:
     `delta_cp_ckm`, `h0`, `lambda_cosmological`, `G_newton`.
-  - `QW-2094` defect sweep remains clean: `102` checks, `0` failed (including `QW-2102/2103` pre-gates, `QW-2104` merged preflight consistency, and `QW-2105/2106` intake-gap consistency).
+  - `QW-2094` defect sweep remains clean: `107` checks, `0` failed (including `QW-2102/2103` pre-gates, `QW-2104` merged preflight consistency, `QW-2105/2106` intake-gap consistency, and `QW-2107` design-guidance consistency).
 
 ### PL
 
@@ -990,6 +992,8 @@ Wniosek:
   - `QW-2104`: `T3T4_STRICT_PREFLIGHT_GATE_PENDING` (`0/8`), łącząca gotowość intake (`QW-2106`) z `QW-2099/2102/2090` oraz `QW-2101/2103/2092` wraz z kontrolą defektów logicznych.
 - Nowa deterministyczna kwantyfikacja luk:
   - `QW-2105`: `T3T4_STRICT_INPUT_GAPS_PRESENT`, jawnie wyliczająca, jakich danych zewnętrznych brakuje do strict-ready T3/T4.
+- Nowy deterministyczny search projektu akwizycji H(z):
+  - `QW-2107`: `HZ_STRICT_DESIGN_FOUND`, pokazujący, że strict identyfikowalność można osiągnąć przy +2 zewnętrznych węzłach i podający audytowalne kandydaty redshift (obecnie para top: `[0.10, 0.90]`).
 - Nowa bramka intake dla surowych wejść:
   - `QW-2106`: `STRICT_EXTERNAL_INPUT_INTAKE_GATE_PENDING` (`10/18`), wymagająca metadanych sidecar i struktury strict-ready przed autocollectorami T3/T4.
 - Bramka propagacji wtórnych parametrów EW została wykonana:
@@ -1000,4 +1004,4 @@ Wniosek:
   - `QW-2069`: strict-derived `28/32`, direct missing `0/32`, strict-unresolved `7/32`.
   - `QW-2081`: strict-unresolved w zakresie missing-14 to `4/14`:
     `delta_cp_ckm`, `h0`, `lambda_cosmological`, `G_newton`.
-  - `QW-2094` pozostaje czysty: `102` kontrole, `0` błędów (w tym pre-gate `QW-2102/2103`, spójność scalonej bramki `QW-2104` oraz spójność intake/gap `QW-2105/2106`).
+  - `QW-2094` pozostaje czysty: `107` kontrole, `0` błędów (w tym pre-gate `QW-2102/2103`, spójność scalonej bramki `QW-2104`, spójność intake/gap `QW-2105/2106` oraz spójność guidance z `QW-2107`).

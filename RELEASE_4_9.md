@@ -148,8 +148,8 @@ Current top-line status:
 
 28. `QW_2094_STRICT_RIGOR_DEFECT_SWEEP.py`
 - verdict: `STRICT_RIGOR_DEFECT_SWEEP_PASS_NO_CRITICAL_DEFECTS`
-- consistency checks: `102`, failed: `0` (including `QW-2104` merged preflight and `QW-2105/2106` intake-gap checks).
-- sweep now includes pre-gate consistency checks for `QW-2102` (H(z) identifiability), `QW-2103` (G_newton dimensionless provenance), merged T3/T4 preflight consistency (`QW-2104`), and intake/gap consistency (`QW-2105/2106`).
+- consistency checks: `107`, failed: `0` (including `QW-2104` merged preflight, `QW-2105/2106` intake-gap checks, and `QW-2107` design-guidance checks).
+- sweep now includes pre-gate consistency checks for `QW-2102` (H(z) identifiability), `QW-2103` (G_newton dimensionless provenance), merged T3/T4 preflight consistency (`QW-2104`), intake/gap consistency (`QW-2105/2106`), and deterministic H(z) design consistency (`QW-2107`).
 
 29. `QW_2095_KERNEL_DERIVED_T2_NONANCHOR_INPUTS_PLAN_EXECUTOR.py`
 - verdict: `KERNEL_DERIVED_T2_NONANCHOR_INPUTS_BUILT_FROZEN_PLAN`
@@ -236,11 +236,17 @@ Current top-line status:
 - deterministic gap report quantifies exact external-input blockers:
   - H(z): intake metadata + nodes/span/condition thresholds,
   - G_newton: intake metadata + dimensionless provenance still backsolved/SI-primary.
+- now includes deterministic H(z) design guidance from `QW-2107` (top candidate pairs for new external acquisition nodes).
 
 45. `QW_2106_STRICT_EXTERNAL_INPUT_INTAKE_GATE.py`
 - verdict: `STRICT_EXTERNAL_INPUT_INTAKE_GATE_PENDING`
 - pass_count: `10/18`
 - raw external-input intake now enforces sidecar metadata + strict-ready structure before autocollector stages.
+
+46. `QW_2107_HZ_STRICT_DESIGN_SEARCH.py`
+- verdict: `HZ_STRICT_DESIGN_FOUND`
+- deterministic no-fit search over acquisition redshift grid proves strict-ready H(z) identifiability is reachable with +2 external nodes.
+- current top design suggestions: `[0.10, 0.90]`, `[0.10, 0.92]`, `[0.12, 0.92]` (to be filled with real external measurements, not synthetic values).
 
 ## Fixed Kernel in This Closure Path
 

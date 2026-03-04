@@ -20,6 +20,7 @@ from typing import Dict, List
 
 ROOT = Path(__file__).resolve().parent
 R2106 = ROOT / "report_qw2106_strict_external_input_intake_gate.json"
+R2107 = ROOT / "report_qw2107_hz_strict_design_search.json"
 R2099 = ROOT / "report_qw2099_hz_external_decoupling_autocollector.json"
 R2102 = ROOT / "report_qw2102_hz_decoupling_identifiability_gate.json"
 R2101 = ROOT / "report_qw2101_gnewton_bridge_external_autocollector.json"
@@ -41,6 +42,7 @@ def append_if_missing(lst: List[str], item: str) -> None:
 
 def main() -> None:
     d2106 = load(R2106) if R2106.exists() else None
+    d2107 = load(R2107) if R2107.exists() else None
     d2099 = load(R2099)
     d2102 = load(R2102)
     d2101 = load(R2101)
@@ -144,6 +146,7 @@ def main() -> None:
         "generated_utc": datetime.now(timezone.utc).isoformat(),
         "sources": {
             "qw2106": R2106.name if d2106 is not None else None,
+            "qw2107": R2107.name if d2107 is not None else None,
             "qw2099": R2099.name,
             "qw2102": R2102.name,
             "qw2101": R2101.name,
@@ -165,6 +168,15 @@ def main() -> None:
                 "min_e_span": t2099.get("min_e_span"),
                 "max_design_condition_number": t2099.get("max_design_condition_number"),
             },
+        },
+        "hz_design_guidance": {
+            "qw2107_verdict": (d2107 or {}).get("verdict"),
+            "suggested_added_z_top5": [
+                x.get("added_nodes", [])
+                for x in (d2107 or {}).get("top_solutions", [])[:5]
+                if isinstance(x, dict)
+            ],
+            "search_grid": (d2107 or {}).get("candidate_grid"),
         },
         "gnewton_path": {
             "strict_ready": g_ready,
@@ -212,6 +224,24 @@ def main() -> None:
         lines.extend([f"  - {g}" for g in hz_gaps])
     else:
         lines.append("  - none")
+
+    lines.extend(
+        [
+            "",
+            "## H(z) Design Guidance",
+            f"- QW-2107 verdict: `{(d2107 or {}).get('verdict')}`",
+            "- suggested_added_z_top5:",
+        ]
+    )
+    hz_recs = [
+        x.get("added_nodes", [])
+        for x in (d2107 or {}).get("top_solutions", [])[:5]
+        if isinstance(x, dict)
+    ]
+    if hz_recs:
+        lines.extend([f"  - {r}" for r in hz_recs])
+    else:
+        lines.append("  - []")
 
     lines.extend(
         [
