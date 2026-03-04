@@ -4197,3 +4197,19 @@ Po tej rundzie:
    - `external_confirmatory_v2/independent_bundle_qw2050_spectral_micro_bridge/RUNBOOK_QW2050.md`.
 5. Znaczenie:
    - lokalnie domkniety zostal maksymalny poziom rygoru; kolejny krok ma juz nature zewnetrznej replikacji.
+
+## 344. Rehearsal niezaleznej replikacji pakietu (QW-2051)
+1. Dodano:
+   - `QW_2051_INDEPENDENT_REHEARSAL_GATE.py`
+2. Cel:
+   - wykonac izolowany dry-run `/tmp` z hashowaniem manifestu i ponownym uruchomieniem `QW-2048` oraz `QW-2049`.
+3. Pierwszy przebieg:
+   - `INDEPENDENT_REHEARSAL_GATE_PARTIAL` (`6/7`),
+   - wykryta luka techniczna: brak zaleznosci przechodniej `QW_1739_SIGNED_DYNAMIC_MICROMODEL_DERIVATION.py` w bundlu 2050.
+4. Naprawa:
+   - rozszerzono `QW-2050` o zaleznosc `QW_1739...` i odswiezono manifest/runbook.
+5. Drugi przebieg:
+   - `INDEPENDENT_REHEARSAL_GATE_PASS` (`7/7`),
+   - wszystkie flagi TRUE: hash integrity, rerun 2048/2049, stabilnosc kernela i metryk.
+6. Znaczenie:
+   - pakiet freeze jest teraz nie tylko gotowy formalnie, ale rowniez potwierdzony proceduralnie jako reprodukowalny w izolacji.
