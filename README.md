@@ -2,13 +2,13 @@
 
 **Krzysztof Żuchowski**  
 *Independent Researcher, Fractal Information Theory Project*  
-*Current Version: 3.5.0 — Neural Genesis & Preon Unification (2025-12-30)*
+*Current Version: 4.9.0 — Spectral Closure + Internal First-Principles Strengthening (2026-03-04)*
 
 ---
 
 ## Abstract
 
-We present the **Fractal Information Nadsoliton (FIN) Theory**, a comprehensive framework for an **Algebraic Theory of Everything (ToE)**. This theory derives the laws of physics, the values of fundamental constants, and the structure of the cosmos from a single mathematical axiom: a universal coupling kernel $K(d)$ defined on a discrete, fractal octave lattice.
+We present the **Fractal Information Nadsoliton (FIN) Theory**, a comprehensive framework for an **Algebraic Theory of Everything (ToE)**. The program aims to derive the laws of physics, fundamental constants, and cosmic structure from a single mathematical axiom: a universal coupling kernel $K(d)$ defined on a discrete, fractal octave lattice.
 
 The theory has been validated through **1200+ numerical verification studies (QW series)** with the following key results:
 - **Weinberg Angle:** 0.00% error (exact match)
@@ -18,7 +18,7 @@ The theory has been validated through **1200+ numerical verification studies (QW
 
 **Critical Assessment:** The theory succeeds in gauge/gravity sector and has now established a rigorous **Preon Model**. Fermion spin is emergent via 3D Skyrmions. See Part XIX of the documentation for honest evaluation.
 
-**Important status note (2026-03-03):** FIN is a strong research program, but it is **not yet a closed ToE**. Stage A is closed, Stage B remains open (derivational core not fully closed; see QW-1916, QW-1919, QW-1927).
+**Important status note (2026-03-04):** FIN now has a **strict internal first-principles closure pass** in the current gate chain (`QW-2065`, strengthened by `QW-2067`). However, it is **not yet a final community-confirmed ToE**, because independent external multiteam replication is still required.
 
 ---
 
@@ -160,27 +160,31 @@ Particle masses follow Fibonacci pattern:
 | Q3: α Precision 0.15% | 🟠 PARTIAL | Needs radiative corrections |
 | Q4: Q Assignment | ✅ ESTABLISHED | Preon Model ($Q=8$) & Fibonacci Trimer |
 | Q5: Lorentz Invariance | ✅ ADDRESSED | Emergent in IR limit |
-| Q6: CKM/PMNS Matrices | ❌ NOT DERIVED | Qualitative only |
+| Q6: CKM/PMNS Matrices | 🟢 INTERNAL DERIVATION PASS | Gate-level quantitative derivation in strict internal chain (QW-2063/2065/2067); external independent replication still pending |
 | Q7: Bell Inequality | 🟠 DEBATED | Explained via Layering (Controversial) |
-| Q8: β = 0.01 Origin | 🟠 PARTIAL | Derived from gauge hierarchy |
+| Q8: β / renormalization origin | 🟡 INTERNAL SUPPORT PASS | Micro-derived renormalization constants gate pass (QW-2064) + tightening (QW-2066), but precision spread is not yet final |
+| Q9: All known physical values fully derived | ❌ NOT YET | Internal closure is strong, but full global precision package and external confirmation are still open |
 
-**Conclusion:** FIN Theory is a **promising phenomenological framework** with remarkable successes in the gauge/gravity sector. It is **NOT yet a complete theory** — flavor mixing and full radiative corrections require further development. The theory's strength lies in its **falsifiability** and **honest acknowledgment of limitations**.
+**Conclusion:** FIN Theory is now a **high-rigor internal unification candidate** with strengthened first-principles closure in the current gate scope. It is **NOT yet a final complete ToE claim** — full precision radiative closure and independent external multiteam confirmation remain required.
 
 ---
 
-## Current ToE Status (Honest, as of March 3, 2026)
+## Current ToE Status (Honest, as of March 4, 2026)
 
 Below is the current closure status based on the newest internal gates/reports:
 
-- **QW-1916:** `TOE_STAGE_A_CLOSED_STAGE_B_OPEN`.
-- **QW-1919:** derivational stage is partial (`TOE_STAGE_B_PARTIAL_EXTERNAL_PASS_DERIVATIONAL_PARTIAL`), not strong closure.
-- **QW-1920 / QW-1917:** triad identifiability in real data still shows boundary-pressure and poor conditioning in key fits.
-- **QW-1927:** true external beta-channel readiness currently `NOT_READY` in strict mode when external independence is not fully satisfied.
+- **QW-2048/2049/2050/2051:** spectral micro-bridge closure + reproducibility rehearsal pass.
+- **QW-2063:** deterministic no-scan physical triad pass (`11/12`).
+- **QW-2064:** micro-derived renormalization constants gate pass (`8/8`) with wide-CI warning.
+- **QW-2065:** strict first-principles internal closure pass (`12/12`).
+- **QW-2066:** compatibility-filtered tightening pass (`6/6`) with dispersion reduction.
+- **QW-2067:** strengthened strict internal closure pass (`3/3`).
 
 ### What this means scientifically
-- FIN has meaningful empirical and methodological progress.
-- FIN is **not yet** the final ToE / “Holy Grail” replacement for SM+GR.
-- The main open gap is full derivational closure under strict independent external confirmatory conditions.
+- FIN has strong internal derivational and methodological progress.
+- FIN is **not yet** the final ToE / “Holy Grail” replacement for SM+GR in community sense.
+- Main open gap: independent external multiteam confirmatory replication.
+- Additional open scope: full global precision package for *all* known physical values.
 
 ### Practical interpretation
 FIN should currently be treated as an advanced, falsifiable unification candidate with strong partial results, not as a completed final theory.
@@ -194,6 +198,7 @@ FIN should currently be treated as an advanced, falsifiable unification candidat
 - **[Zenodo Archive (DOI)](https://doi.org/10.5281/zenodo.17645737)** — Permanent citation record
 - **[gemini_sum.md](gemini_sum.md)** — Research summary in Polish
 - **[DATA_SOURCES_EXTERNAL_DOWNLOADS.md](DATA_SOURCES_EXTERNAL_DOWNLOADS.md)** — Canonical external download sources (large raw files are not pushed to git)
+- **[INDEPENDENT_CHECK_GUIDE_EN_PL.md](INDEPENDENT_CHECK_GUIDE_EN_PL.md)** — Practical independent replication checklist (EN/PL)
 
 ---
 

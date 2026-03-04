@@ -1,0 +1,110 @@
+{
+  "contract": {
+    "lock_id": "QW2053_INDEPENDENT_MULTITEAM_PROTOCOL_LOCK",
+    "generated_utc": "2026-03-04T01:31:45.936140+00:00",
+    "scope": "TRULY_INDEPENDENT_MULTITEAM_CONFIRMATORY_PACKAGE",
+    "fixed_kernel": {
+      "omega": 0.18575000000000005,
+      "phi": 0.1624999999999998,
+      "beta": 1.0,
+      "eta": 1.8
+    },
+    "hard_no_retune_rules": {
+      "forbid_sector_retune": true,
+      "forbid_kernel_change": true,
+      "forbid_threshold_change": true,
+      "forbid_posthoc_selection": true,
+      "forbid_internal_proxy_substitution": true
+    },
+    "hard_acceptance_criteria": {
+      "require_qw2049_verdict": "SPECTRAL_MICRO_STAGEC_INTERSECTION_GATE_PASS",
+      "require_qw2051_verdict": "INDEPENDENT_REHEARSAL_GATE_PASS",
+      "require_qw2052_verdict": "EXTERNAL_SOURCE_ONLY_GOVERNANCE_PASS",
+      "require_all_qw2049_flags_true": true,
+      "external_primary": {
+        "pearson_corr_min": 0.036682579424243494,
+        "rmse_gain_ratio_min": 0.0,
+        "p_corr_max": 0.01,
+        "p_rmse_gain_max": 0.01
+      },
+      "external_stress": {
+        "pearson_corr_min": 0.050699023685103414,
+        "rmse_gain_ratio_min": 0.0,
+        "p_corr_max": 0.01,
+        "p_rmse_gain_max": 0.01
+      }
+    },
+    "required_execution_order": [
+      "python3 QW_2048_SPECTRAL_PHASE_LOCKED_POINTWISE_DERIVATION.py",
+      "python3 QW_2049_SPECTRAL_MICRO_STAGEC_INTERSECTION_GATE.py",
+      "python3 QW_2051_INDEPENDENT_REHEARSAL_GATE.py",
+      "python3 QW_2052_EXTERNAL_SOURCE_ONLY_GOVERNANCE_GATE.py"
+    ],
+    "required_artifacts": [
+      "external_confirmatory_v2/independent_bundle_qw2050_spectral_micro_bridge/manifest_qw2050.json",
+      "external_confirmatory_v2/independent_bundle_qw2050_spectral_micro_bridge/RUNBOOK_QW2050.md",
+      "DATA_SOURCES_EXTERNAL_DOWNLOADS.md",
+      "report_qw2049_spectral_micro_stagec_intersection_gate.json",
+      "report_qw2051_independent_rehearsal_gate.json",
+      "report_qw2052_external_source_only_governance_gate.json"
+    ]
+  },
+  "artifact_hashes": [
+    {
+      "path": "report_qw2049_spectral_micro_stagec_intersection_gate.json",
+      "bytes": 4130,
+      "sha256": "adee425e5a2c8a57f7d2b98677188b84a199f77510ea8b45a75873456c15b86b"
+    },
+    {
+      "path": "report_qw2051_independent_rehearsal_gate.json",
+      "bytes": 1407,
+      "sha256": "1740a40b7db4a7d6f9132801fa8702617d400e2c0fd3b85d836c2b09ac484e64"
+    },
+    {
+      "path": "report_qw2052_external_source_only_governance_gate.json",
+      "bytes": 2417,
+      "sha256": "8d9457e574b3b42d11d7ce221237bd5808c5e41ccd8f3a6cfa316eef43c4615e"
+    },
+    {
+      "path": "external_confirmatory_v2/independent_bundle_qw2050_spectral_micro_bridge/manifest_qw2050.json",
+      "bytes": 3196,
+      "sha256": "79c6af162ffde5ca78412d99a1385815b1ba62b07c594899bb53cdf8fd526e23"
+    },
+    {
+      "path": "external_confirmatory_v2/independent_bundle_qw2050_spectral_micro_bridge/RUNBOOK_QW2050.md",
+      "bytes": 1250,
+      "sha256": "4d955a6e6939b61636a7b2936b1a6f55e48591a60d0d5158fa7a26f6be01f477"
+    },
+    {
+      "path": "DATA_SOURCES_EXTERNAL_DOWNLOADS.md",
+      "bytes": 2258,
+      "sha256": "3ef1a3abd392891691af61bffbf88eed6c8d91cd8b726bdabee102dc18c8fdaf"
+    },
+    {
+      "path": "QW_2048_SPECTRAL_PHASE_LOCKED_POINTWISE_DERIVATION.py",
+      "bytes": 14936,
+      "sha256": "1a28bd84e220e33c0707111087824fb233dbdaef4342471938d2c614c4ed17b1"
+    },
+    {
+      "path": "QW_2049_SPECTRAL_MICRO_STAGEC_INTERSECTION_GATE.py",
+      "bytes": 10869,
+      "sha256": "af77a3fa5b94d7f749b313eb16eaa44054197d5ea3dbaee4e444940a8f7b9be3"
+    },
+    {
+      "path": "QW_2051_INDEPENDENT_REHEARSAL_GATE.py",
+      "bytes": 7519,
+      "sha256": "ab2ab8133d35a7e3f22b997eebfaf16aab2cdd67a94ce2421ea6207a72137e25"
+    },
+    {
+      "path": "QW_2052_EXTERNAL_SOURCE_ONLY_GOVERNANCE_GATE.py",
+      "bytes": 6815,
+      "sha256": "c6fc0b53b88e8d7282e32d19d7306a0954c4f815dac83446b9826f53a7b0adea"
+    }
+  ],
+  "source_reports": {
+    "qw2049": "report_qw2049_spectral_micro_stagec_intersection_gate.json",
+    "qw2051": "report_qw2051_independent_rehearsal_gate.json",
+    "qw2052": "report_qw2052_external_source_only_governance_gate.json"
+  },
+  "lock_sha256": "2b49385e38a9985b7cf031992da821c3da23a6c0390e4643d56b111adf07c880"
+}

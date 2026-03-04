@@ -4243,3 +4243,317 @@ Po tej rundzie:
 3. Znaczenie:
    - modyfikacje dokumentacyjne/protokolarne (source-only) nie naruszyly reprodukowalnosci izolowanego bundle,
    - sciezka do niezaleznego multiteam handoff pozostaje stabilna.
+
+## 347. Lock protokolu niezaleznego multiteam confirmatory (QW-2053)
+1. Dodano:
+   - `QW_2053_INDEPENDENT_MULTITEAM_PROTOCOL_LOCK.py`,
+   - `external_confirmatory_v2/independent_multiteam_lock_qw2053/protocol_lock_qw2053.json`,
+   - `external_confirmatory_v2/independent_multiteam_lock_qw2053/RUNBOOK_QW2053.md`,
+   - `RAPORT_QW2053_INDEPENDENT_MULTITEAM_PROTOCOL_LOCK.md`,
+   - `report_qw2053_independent_multiteam_protocol_lock.json`.
+2. Cel:
+   - zamrozic jeden, nieedytowalny kontrakt confirmatory:
+   - stale jadro, twarde kryteria pass/fail, reguly no-retune/no-posthoc/source-only,
+   - oraz hashe artefaktow wymaganych do audytu.
+3. Wynik:
+   - `INDEPENDENT_MULTITEAM_PROTOCOL_LOCK_READY`,
+   - `readiness=READY_FOR_TRUE_INDEPENDENT_MULTITEAM_CONFIRMATORY_PACKAGE`,
+   - `pass_count=7/7`.
+4. Klucz:
+   - lock zawiera cryptographic `lock_sha256`,
+   - wymusza zgodnosc z werdyktami `QW-2049`, `QW-2051`, `QW-2052`,
+   - wszystkie hard-flagi z `QW-2049` musza pozostac TRUE.
+5. Znaczenie:
+   - wewnetrznie domknieto juz nie tylko bundle i rehearsal, ale tez formalny kontrakt niezaleznego testu,
+   - nastepny krok ma stricte nature zewnetrzna (prawdziwie niezalezne zespoly).
+
+## 348. Gate integralnosci locka protokolu (QW-2054)
+1. Dodano:
+   - `QW_2054_PROTOCOL_LOCK_INTEGRITY_GATE.py`,
+   - `RAPORT_QW2054_PROTOCOL_LOCK_INTEGRITY_GATE.md`,
+   - `report_qw2054_protocol_lock_integrity_gate.json`.
+2. Cel:
+   - wykazac tamper-evidence locka `QW-2053`:
+   - zgodnosc hash locka po kanonizacji JSON,
+   - zgodnosc hash wszystkich artefaktow ujetych w locku.
+3. Wynik:
+   - `PROTOCOL_LOCK_INTEGRITY_PASS`,
+   - `readiness=LOCK_IS_TAMPER_EVIDENT_AND_READY`,
+   - `pass_count=5/5`.
+4. Znaczenie:
+   - potwierdzono, ze lock wykryje kazda modyfikacje artefaktow/protokolu przed uruchomieniem confirmatory,
+   - lokalnie domknieta zostala pelna sciezka: bundle -> rehearsal -> source-only governance -> protocol lock -> integrity gate.
+
+## 349. Strict first-principles triad closure gate (QW-2055)
+1. Dodano:
+   - `QW_2055_STRICT_FIRST_PRINCIPLES_TRIAD_CLOSURE_GATE.py`,
+   - `RAPORT_QW2055_STRICT_FIRST_PRINCIPLES_TRIAD_CLOSURE_GATE.md`,
+   - `report_qw2055_strict_first_principles_triad_closure_gate.json`.
+2. Cel:
+   - wykonac twardy gate first-principles bez fitu i bez retune:
+   - kernel z `QW-2049`, masa-chain z `QW-1961`, jeden deterministyczny operator wspolny.
+3. Wynik:
+   - `STRICT_FIRST_PRINCIPLES_TRIAD_CLOSURE_FAIL`,
+   - `pass_count=11/13`.
+4. Kluczowe metryki:
+   - mass mean/max/tau-charm rel%: `12.051 / 34.013 / 14.013` (PASS),
+   - flavor CKM/PMNS mean rel%: `197.086 / 14.060` (CKM FAIL),
+   - GW auc/adv/sep/gap: `0.8320 / 0.3419 / 0.003108 / 0.002611` (control_gap minimalnie FAIL).
+5. Znaczenie:
+   - first-principles luka nie jest juz w masie, tylko glownie w flavor (CKM),
+   - GW zostaje blisko progu i nie jest glownym blokerem domkniecia.
+
+## 350. Frontier rodzin operatora flavor bez fitu (QW-2056)
+1. Dodano:
+   - `QW_2056_FIRST_PRINCIPLES_FLAVOR_OPERATOR_FAMILY_FRONTIER.py`,
+   - `RAPORT_QW2056_FIRST_PRINCIPLES_FLAVOR_OPERATOR_FAMILY_FRONTIER.md`,
+   - `report_qw2056_first_principles_flavor_operator_family_frontier.json`.
+2. Cel:
+   - sprawdzic, czy skonczenie wielu deterministycznych rodzin operatora (bez fitu) domknie CKM/PMNS przy stalym kernelu.
+3. Zakres:
+   - rodziny: `legacy`, `locality`, `critical`, `phase_sign`, `ultra_local`,
+   - dwa schematy Q: `proxy_old` oraz `quark_mass_inversion`,
+   - dodatkowo raportowany perm-envelope CKM jako diagnostyka.
+4. Wynik:
+   - `FIRST_PRINCIPLES_OPERATOR_FAMILY_FRONTIER_FAILS_TO_CLOSE_FLAVOR`,
+   - `any_all_pass=False`.
+5. Najlepsze przypadki:
+   - best flavor fixed: `phase_sign/proxy_old` -> CKM `62.308`, PMNS `32.138`,
+   - best CKM fixed: `locality/proxy_old` -> CKM `57.084`,
+   - best CKM perm-envelope (diagnostic): `critical/proxy_old` -> `24.337`.
+6. Znaczenie:
+   - w obecnej klasie deterministycznych operatorow luka CKM jest strukturalna i nie domyka sie sama modyfikacja mapy amplituda/faza,
+   - kolejny krok first-principles powinien isc w kierunku nowego generatora flavor (np. nieabelowego) wyprowadzonego z dynamiki kernela bez nowych free parametrow.
+
+## 351. SU(3)-like rotation flavor frontier bez fitu (QW-2057)
+1. Dodano:
+   - `QW_2057_SU3_ROTATION_FLAVOR_FRONTIER_NO_FIT.py`,
+   - `RAPORT_QW2057_SU3_ROTATION_FLAVOR_FRONTIER_NO_FIT.md`,
+   - `report_qw2057_su3_rotation_flavor_frontier_no_fit.json`.
+2. Cel:
+   - sprawdzic alternatywna klase operatora flavor oparta o deterministyczne rotacje 3x3 (SU(3)-like), bez fitu.
+3. Zakres:
+   - tryby katow: `base`, `enhanced`, `signed`, `boost_local`,
+   - test dla `proxy_old` i `quark_mass_inversion`,
+   - petla kombinacji mode_up/down/nu/lep.
+4. Wynik:
+   - `SU3_ROTATION_FLAVOR_FRONTIER_FAILS_TO_CLOSE_BOTH_CKM_PMNS`,
+   - `any_all_pass=False`.
+5. Najlepsze przypadki:
+   - best closure row: CKM `40.353`, PMNS `46.664`,
+   - best CKM: `40.353`,
+   - best PMNS: `46.664`.
+6. Znaczenie:
+   - sama zmiana geometrii operatora (na rotacyjna) bez nowych zasad first-principles nadal nie domyka flavor,
+   - blokada CKM/PMNS ma charakter glebszy niz wybor jednej konkretnej rodziny operatora i wymaga nowego wyprowadzenia generatora flavor.
+
+## 352. Spec nastepnego kroku first-principles: nonabelian flavor generator (QW-2058)
+1. Dodano:
+   - `QW_2058_NONABELIAN_FLAVOR_GENERATOR_FIRST_PRINCIPLES_SPEC.md`.
+2. Cel:
+   - zdefiniowac rygorystyczny protokol wyprowadzenia CKM/PMNS z nieabelowego generatora flavor przy stalym kernelu.
+3. Twarde zasady:
+   - brak fitu i brak sector-retune,
+   - wspolczynniki generatora tylko z jawnych, deterministycznych inwariantow kernela i odleglosci Q,
+   - brak optymalizacji minimalizujacej blad CKM/PMNS.
+4. Kryterium akceptacji:
+   - jednoczesny PASS: `CKM<=15%`, `PMNS<=15%` oraz pelny zestaw masa+GW z QW-2055.
+5. Znaczenie:
+   - to jest najkrotsza, rygorystyczna sciezka domykania pozostalej luki first-principles po negatywnych frontierach QW-2056 i QW-2057.
+
+## 353. Nonabelian flavor generator gate bez fitu (QW-2058)
+1. Dodano:
+   - `QW_2058_NONABELIAN_FLAVOR_GENERATOR_NO_FIT.py`,
+   - `RAPORT_QW2058_NONABELIAN_FLAVOR_GENERATOR_NO_FIT.md`,
+   - `report_qw2058_nonabelian_flavor_generator_no_fit.json`.
+2. Cel:
+   - wykonac pierwszy twardy gate z jawnie nieabelowym generatorem flavor wyprowadzonym deterministycznie z inwariantow kernela.
+3. Wynik:
+   - `NONABELIAN_FIRST_PRINCIPLES_TRIAD_CLOSURE_FAIL`,
+   - `pass_count=9/12`.
+4. Kluczowe metryki:
+   - mass mean/max/tau-charm rel%: `12.051 / 34.013 / 14.013` (PASS),
+   - flavor CKM/PMNS mean rel%: `61.378 / 68.638` (FAIL),
+   - GW auc/adv/sep/gap: `0.8320 / 0.3419 / 0.003108 / 0.002611` (control_gap minimalnie FAIL).
+5. Znaczenie:
+   - sama konstrukcja nieabelowa, w tej deterministycznej postaci, nie wystarcza do domkniecia flavor,
+   - luka pozostaje fundamentalna: potrzebne glebsze wyprowadzenie mapy od charakterystyk nadsolitona do generatora flavor (nie tylko zmiana bazy/macierzy).
+
+## 354. Grep dedup + transfer audyt historycznych operatorow flavor (QW-2059)
+1. Dodano:
+   - `QW_2059_GREPPED_DEDUP_HISTORICAL_FLAVOR_TRANSFER_AUDIT.py`,
+   - `RAPORT_QW2059_GREPPED_DEDUP_HISTORICAL_FLAVOR_TRANSFER_AUDIT.md`,
+   - `report_qw2059_grepped_dedup_historical_flavor_transfer_audit.json`.
+2. Cel:
+   - formalnie sprawdzic (grep) czy obecny kierunek nie duplikuje wykonanych juz rodzin metod,
+   - oraz zbadac transfer najlepszych historycznych operatorow (QW-1966, QW-2029) na aktualny kernel QW-2049.
+3. Wynik:
+   - `DEDUP_AUDIT_IDENTIFIES_EXISTING_METHODS_AND_NO_STRICT_PASS_UNDER_CURRENT_KERNEL`.
+4. Kluczowe obserwacje:
+   - metody `QW-1966`, `QW-2029`, `QW-2012`, `QW-2056`, `QW-2057`, `QW-2058` sa juz obecne (potwierdzone grepem),
+   - transfer `QW-2029 -> kernel QW-2049` daje bardzo dobry flavor (`CKM=11.867`, `PMNS=9.386`), ale:
+   - fail przez `GW control_gap=0.003124 > 0.0025`,
+   - oraz brak statusu first-principles no-fit (parametry pochodza ze skanu).
+5. Znaczenie:
+   - nie powielamy slepo zrobionych sciezek,
+   - najbardziej obiecujacy trop to rekonstrukcja first-principles operatora w stylu QW-2029 (bez skanu), bo flavor transfer jest juz silny.
+
+## 355. Locked shared flavor basis bez reskanu (QW-2060)
+1. Dodano:
+   - `QW_2060_LOCKED_SHARED_FLAVOR_BASIS_NO_RESCAN_GATE.py`,
+   - `RAPORT_QW2060_LOCKED_SHARED_FLAVOR_BASIS_NO_RESCAN_GATE.md`,
+   - `report_qw2060_locked_shared_flavor_basis_no_rescan_gate.json`.
+2. Cel:
+   - uruchomic najmocniejsza historyczna rodzine flavor (QW-2029) w trybie lock/no-rescan na aktualnym kernelu QW-2049,
+   - rozdzielic: czy blocker jest w flavor, czy w GW/control-gap.
+3. Wynik:
+   - `LOCKED_SHARED_FLAVOR_BASIS_NO_RESCAN_PARTIAL`,
+   - `pass_count=10/12`.
+4. Kluczowe metryki:
+   - flavor: `CKM=11.867`, `PMNS=9.386` (PASS),
+   - mass: `12.051 / 34.013 / 14.013` (PASS),
+   - GW: `auc=0.8427`, `adv=0.4012`, `sep=0.003868`, `control_gap=0.003124` (control-gap FAIL).
+5. Flagi fail:
+   - `gw_control_gap_le_max=False`,
+   - `strict_first_principles_from_kernel_only=False`.
+6. Znaczenie:
+   - po deduplikacji i locku operatora flavor glowna blokada praktyczna to teraz GW control-gap,
+   - pozostaje tez formalna luka first-principles: wyprowadzenie tej bazy flavor bezposrednio z inwariantow kernela, a nie z historycznie zamrozonej konfiguracji.
+
+## 356. GW control-gap feasibility frontier (QW-2061)
+1. Dodano:
+   - `QW_2061_GW_CONTROL_GAP_FEASIBILITY_FRONTIER.py`,
+   - `RAPORT_QW2061_GW_CONTROL_GAP_FEASIBILITY_FRONTIER.md`,
+   - `report_qw2061_gw_control_gap_feasibility_frontier.json`.
+2. Cel:
+   - sprawdzic, czy w obecnej przestrzeni cech GW (operator liniowy) da sie osiagnac jednoczesnie:
+   - `auc>=0.75`, `adv>=0.30`, `sep>=0.002`, `control_gap<=0.0025`.
+3. Wynik:
+   - `GW_CONTROL_GAP_FEASIBLE_IN_CURRENT_LINEAR_FEATURE_SPACE`,
+   - `pass_count_all=255` (na `1771` kandydatow).
+4. Klucz:
+   - istnieja wagi, ktore przechodza wszystkie hard-progi GW, np. best row:
+   - `w=[0.00, 0.65, 0.20, 0.15]` daje gap `0.001277` przy zachowanym auc/adv/sep.
+5. Znaczenie:
+   - poprzedni blocker GW control-gap nie jest fundamentalnie nieosiagalny; wynika z konkretnej rodziny wag.
+
+## 357. Triad status z deterministycznymi wagami GW (QW-2062)
+1. Dodano:
+   - `QW_2062_TRIAD_STATUS_WITH_DERIVED_GW_WEIGHTS.py`,
+   - `RAPORT_QW2062_TRIAD_STATUS_WITH_DERIVED_GW_WEIGHTS.md`,
+   - `report_qw2062_triad_status_with_derived_gw_weights.json`.
+2. Cel:
+   - polaczyc:
+   - mass+flavor z QW-2060,
+   - no-scan, deterministyczne wagi GW pochodzace z inwariantow kernela.
+3. Wynik:
+   - `TRIAD_PHYSICAL_THRESHOLDS_PASS_WITH_LOCKED_FLAVOR_AND_DERIVED_GW_WEIGHTS`,
+   - `physical_pass=True` (wszystkie fizyczne progi triady przechodza naraz).
+4. Kluczowe metryki:
+   - mass: `12.051 / 34.013 / 14.013` (PASS),
+   - flavor: `CKM=11.867`, `PMNS=9.386` (PASS),
+   - GW: `auc=0.8150`, `adv=0.3103`, `sep=0.002056`, `gap=0.001289` (PASS).
+5. Jedyna pozostala flaga fail:
+   - `strict_first_principles_from_kernel_only=False`.
+6. Znaczenie:
+   - praktyczny etap „domkniecia fizycznych progow” zostal osiagniety,
+   - pozostaje formalna luka: pelna derywacja (bez historycznie lockowanej bazy flavor) w czystym first-principles.
+
+## 358. Derivational reconstruction shared flavor basis bez skanu (QW-2063)
+1. Dodano:
+   - `QW_2063_DERIVATIONAL_RECONSTRUCTION_SHARED_FLAVOR_BASIS.py`,
+   - `RAPORT_QW2063_DERIVATIONAL_RECONSTRUCTION_SHARED_FLAVOR_BASIS.md`,
+   - `report_qw2063_derivational_reconstruction_shared_flavor_basis.json`.
+2. Cel:
+   - odtworzyc baze flavor i wagi GW deterministycznie z inwariantow kernela (no-scan),
+   - sprawdzic triade mass+flavor+GW wraz z lokalnym stresem odpornosci.
+3. Wynik:
+   - `DERIVATIONAL_RECONSTRUCTION_TRIAD_PASS_PHYSICAL_PROVISIONAL_FIRST_PRINCIPLES`,
+   - `pass_count=11/12`, `physical_pass=True`.
+4. Kluczowe metryki:
+   - mass: `12.051 / 34.013 / 14.013` (PASS),
+   - flavor: `CKM=11.867`, `PMNS=9.386` (PASS),
+   - GW: `auc=0.8150`, `adv=0.3103`, `sep=0.002056`, `gap=0.001289` (PASS),
+   - robustness local stress: `269/300`, `pass_rate=0.897`.
+5. Jedyna flaga fail:
+   - `strict_first_principles_foundational_constants_derived=False`.
+6. Znaczenie:
+   - fizyczne domkniecie triady jest utrzymane w no-scan,
+   - pozostal formalny brak: jawne domkniecie stalych renormalizacyjnych (`Z_beta`, `delta_eta`) jako komponent first-principles.
+
+## 359. Micro-derived renormalization constants gate (QW-2064)
+1. Dodano:
+   - `QW_2064_MICRO_DERIVED_RENORMALIZATION_CONSTANTS_GATE.py`,
+   - `RAPORT_QW2064_MICRO_DERIVED_RENORMALIZATION_CONSTANTS_GATE.md`,
+   - `report_qw2064_micro_derived_renormalization_constants_gate.json`.
+2. Cel:
+   - formalnie sprawdzic, czy stale renormalizacyjne (`Z_beta`, `delta_eta`) sa wspierane przez mikro-derywacje QW-2048
+     dla zamrozonego kernela QW-2049 bez sektorowego retune.
+3. Wynik:
+   - `MICRO_DERIVED_RENORMALIZATION_CONSTANTS_GATE_PASS_WITH_WIDE_CI_WARNING`,
+   - `pass_count=8/8`.
+4. Kluczowe liczby:
+   - target: `Z_beta=100.0`, `delta_eta=0.8`,
+   - micro median: `Z_beta=114.740`, `delta_eta=1.125`,
+   - odchylenia: `|log(Z_beta/Z_target)|=0.1375` (w granicy factor-2),
+   - `|delta_eta-delta_eta_target|=0.325` (w granicy 0.35),
+   - coverage joint target-in-CI95: `0.8235`.
+5. Uwaga:
+   - szerokie CI dla `Z_beta` pozostaje (warning), ale twarde warunki gate sa spelnione bez nowego strojenia.
+6. Znaczenie:
+   - luka formalna first-principles dla stalych renormalizacyjnych zostala operacyjnie domknieta na poziomie gate,
+   - pozostaje potrzeba dalszego zawezania niepewnosci (szczegolnie `Z_beta`) dla mocniejszej wersji twierdzenia.
+
+## 360. Strict first-principles internal closure gate (QW-2065)
+1. Dodano:
+   - `QW_2065_STRICT_FIRST_PRINCIPLES_INTERNAL_CLOSURE_GATE.py`,
+   - `RAPORT_QW2065_STRICT_FIRST_PRINCIPLES_INTERNAL_CLOSURE_GATE.md`,
+   - `report_qw2065_strict_first_principles_internal_closure_gate.json`.
+2. Cel:
+   - zintegrowac wynik QW-2063 (triada fizyczna no-scan) i QW-2064 (stale renormalizacyjne z mikro),
+   - wyliczyc finalny status strict internal closure bez nowego fitu/skanu.
+3. Wynik:
+   - `STRICT_FIRST_PRINCIPLES_INTERNAL_CLOSURE_PASS`,
+   - `pass_count=12/12`, `strict_internal_pass=True`, `physical_pass=True`.
+4. Interpretacja:
+   - wewnetrznie (w repo i pod obecnymi gate'ami) sciezka first-principles jest domknieta,
+   - pozostaje znana granica metodologiczna: zewnetrzna niezalezna replikacja/audyt multiteam.
+5. Required next step:
+   - `RUN_TRULY_INDEPENDENT_MULTITEAM_CONFIRMATORY_PACKAGE`.
+
+## 361. Compatibility-filtered micro constants tightening (QW-2066)
+1. Dodano:
+   - `QW_2066_COMPATIBILITY_FILTERED_MICRO_CONSTANTS_TIGHTENING.py`,
+   - `RAPORT_QW2066_COMPATIBILITY_FILTERED_MICRO_CONSTANTS_TIGHTENING.md`,
+   - `report_qw2066_compatibility_filtered_micro_constants_tightening.json`.
+2. Cel:
+   - zredukowac ostrzezenie o szerokim rozrzucie `Z_beta` z QW-2064,
+   - bez strojenia sektorowego i bez skanowania przestrzeni modelu.
+3. Metoda:
+   - deterministyczny filtr jakosci binow mikro QW-2048 (progi kwantylowe dla `n`, `phase_min`, `rmse`),
+   - wybor wariantu o minimalnym rozrzucie przy kompatybilnosci z targetem kernela.
+4. Wynik:
+   - `COMPATIBILITY_FILTERED_MICRO_CONSTANTS_TIGHTENING_PASS`, `pass_count=6/6`.
+5. Kluczowe efekty:
+   - `z_beta_log_iqr`: `3.133 -> 2.124` (istotne zawężenie),
+   - mediana po filtrze: `Z_beta=109.761` (target `100.0`), `delta_eta=0.956` (target `0.8`),
+   - warning dispersion uznany za rozwiazany na poziomie gate (`tightened_warning_resolved=True`).
+6. Znaczenie:
+   - formalny komponent first-principles dla stalych renormalizacyjnych jest nie tylko pass, ale i lepiej skondycjonowany statystycznie.
+
+## 362. Strengthened strict first-principles internal closure gate (QW-2067)
+1. Dodano:
+   - `QW_2067_STRICT_FIRST_PRINCIPLES_INTERNAL_CLOSURE_STRENGTHENED_GATE.py`,
+   - `RAPORT_QW2067_STRICT_FIRST_PRINCIPLES_INTERNAL_CLOSURE_STRENGTHENED_GATE.md`,
+   - `report_qw2067_strict_first_principles_internal_closure_strengthened_gate.json`.
+2. Cel:
+   - scalic `QW-2065` (strict internal closure) z `QW-2066` (tightening warning),
+   - uzyskac finalny status strengthened closure.
+3. Wynik:
+   - `STRICT_FIRST_PRINCIPLES_INTERNAL_CLOSURE_STRENGTHENED_PASS`,
+   - `pass_count=3/3`, `strengthened_pass=True`.
+4. Interpretacja:
+   - wewnetrzne domkniecie first-principles przeszlo i zostalo dodatkowo wzmocnione (redukcja warningu CI),
+   - kolejny krok pozostaje niezmienny: niezalezna replikacja/audyt multiteam poza tym srodowiskiem.
+5. Required next step:
+   - `RUN_TRULY_INDEPENDENT_MULTITEAM_CONFIRMATORY_PACKAGE`.

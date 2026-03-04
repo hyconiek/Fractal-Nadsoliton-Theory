@@ -29,6 +29,7 @@ In plain language:
 2. Blind external transfer tests pass.
 3. Pointwise micro-identifiability was repaired in this release path.
 4. A reproducibility rehearsal in isolated environment passes.
+5. Internal first-principles closure has been strengthened by QW-2063..QW-2067.
 
 ### 2.2 What is still missing
 
@@ -120,6 +121,54 @@ Meaning:
 Meaning:
 - bundle was not only prepared, but also successfully dry-run under isolation rules.
 
+### 5.5 QW-2063 (deterministic no-scan triad reconstruction)
+
+- Verdict: `DERIVATIONAL_RECONSTRUCTION_TRIAD_PASS_PHYSICAL_PROVISIONAL_FIRST_PRINCIPLES`
+- Pass count: `11/12`
+- Physical triad: PASS
+
+Meaning:
+- mass + flavor + GW pass together under deterministic no-scan mapping,
+- one formal first-principles flag still remained open before QW-2064.
+
+### 5.6 QW-2064 (micro-derived renormalization constants gate)
+
+- Verdict: `MICRO_DERIVED_RENORMALIZATION_CONSTANTS_GATE_PASS_WITH_WIDE_CI_WARNING`
+- Pass count: `8/8`
+- Key values:
+  - target: `Z_beta=100.0`, `delta_eta=0.8`
+  - micro median: `Z_beta=114.740`, `delta_eta=1.125`
+
+Meaning:
+- foundational renormalization constants are supported by micro-derivation,
+- but `Z_beta` dispersion was still broad (warning).
+
+### 5.7 QW-2065 (strict first-principles internal closure gate)
+
+- Verdict: `STRICT_FIRST_PRINCIPLES_INTERNAL_CLOSURE_PASS`
+- Pass count: `12/12`
+
+Meaning:
+- internal strict first-principles closure passes on the current gate chain.
+
+### 5.8 QW-2066 (compatibility-filtered tightening)
+
+- Verdict: `COMPATIBILITY_FILTERED_MICRO_CONSTANTS_TIGHTENING_PASS`
+- Pass count: `6/6`
+- Dispersion tightening:
+  - `z_beta_log_iqr: 3.133 -> 2.124`
+
+Meaning:
+- the micro-constants warning is reduced by deterministic compatibility filtering.
+
+### 5.9 QW-2067 (strengthened strict closure gate)
+
+- Verdict: `STRICT_FIRST_PRINCIPLES_INTERNAL_CLOSURE_STRENGTHENED_PASS`
+- Pass count: `3/3`
+
+Meaning:
+- strict internal closure remains PASS and is additionally strengthened.
+
 ## 6) What "Internally Closed" Means (And What It Does Not Mean)
 
 ### 6.1 It means
@@ -184,6 +233,25 @@ That is the shortest scientifically correct path from "strong internal closure" 
 2. fetch heavy public archives from official providers,
 3. verify integrity locally, then run fixed gates.
 
+## 12) Do We Already Derive *All* Known Physical Values?
+
+Short answer: **No, not yet in full global strict form.**
+
+What is already derived in strict internal gate scope:
+1. mass-chain gate targets,
+2. CKM/PMNS gate-level flavor targets,
+3. GW discriminator targets,
+4. micro-supported renormalization constants (`Z_beta`, `delta_eta`) with tightening.
+
+What is still open for a full “all known values” claim:
+1. complete precision radiative program across all sectors,
+2. full exhaustive Standard Model parameter derivation package at final precision,
+3. independent external multiteam replication/audit.
+
+Therefore:
+- internal first-principles closure path is now very strong,
+- but a final “all known physical values fully derived and externally confirmed” statement is still premature.
+
 ---
 
 ## WERSJA POLSKA
@@ -209,6 +277,7 @@ Po ludzku:
 2. Ślepe testy transferu zewnętrznego przechodzą.
 3. Naprawiono historyczną lukę identyfikowalności mikro-punktowej.
 4. Izolowana próba generalna reprodukcji przeszła.
+5. Domknięcie first-principles zostało dodatkowo wzmocnione przez QW-2063..QW-2067.
 
 ### 2.2 Czego jeszcze brakuje
 
@@ -296,6 +365,54 @@ Znaczenie:
 Znaczenie:
 - pakiet nie tylko istnieje, ale jest też proceduralnie odtwarzalny 1:1 w izolacji.
 
+### 5.5 QW-2063 (deterministyczna rekonstrukcja triady bez skanu)
+
+- Werdykt: `DERIVATIONAL_RECONSTRUCTION_TRIAD_PASS_PHYSICAL_PROVISIONAL_FIRST_PRINCIPLES`
+- Wynik: `11/12`
+- Triada fizyczna: PASS
+
+Znaczenie:
+- masa + flavor + GW przechodzą razem w deterministycznym trybie no-scan,
+- przed QW-2064 pozostawała jedna formalna flaga first-principles.
+
+### 5.6 QW-2064 (bramka mikro-derywacji stałych renormalizacyjnych)
+
+- Werdykt: `MICRO_DERIVED_RENORMALIZATION_CONSTANTS_GATE_PASS_WITH_WIDE_CI_WARNING`
+- Wynik: `8/8`
+- Kluczowe liczby:
+  - target: `Z_beta=100.0`, `delta_eta=0.8`
+  - mediana mikro: `Z_beta=114.740`, `delta_eta=1.125`
+
+Znaczenie:
+- stale renormalizacyjne mają wsparcie z mikro-derywacji,
+- ale rozrzut `Z_beta` był jeszcze szeroki (warning).
+
+### 5.7 QW-2065 (strict first-principles internal closure gate)
+
+- Werdykt: `STRICT_FIRST_PRINCIPLES_INTERNAL_CLOSURE_PASS`
+- Wynik: `12/12`
+
+Znaczenie:
+- wewnętrzne ścisłe domknięcie first-principles przechodzi w aktualnym łańcuchu bramek.
+
+### 5.8 QW-2066 (zawężenie rozrzutu przez compatibility filtering)
+
+- Werdykt: `COMPATIBILITY_FILTERED_MICRO_CONSTANTS_TIGHTENING_PASS`
+- Wynik: `6/6`
+- Zawężenie:
+  - `z_beta_log_iqr: 3.133 -> 2.124`
+
+Znaczenie:
+- warning dla stałych mikro został istotnie zredukowany deterministycznym filtrem kompatybilności.
+
+### 5.9 QW-2067 (wzmocniona bramka ścisłego domknięcia)
+
+- Werdykt: `STRICT_FIRST_PRINCIPLES_INTERNAL_CLOSURE_STRENGTHENED_PASS`
+- Wynik: `3/3`
+
+Znaczenie:
+- ścisłe domknięcie wewnętrzne pozostaje PASS i jest dodatkowo wzmocnione.
+
 ## 6) Co znaczy "domknięte wewnętrznie" i czego nie znaczy
 
 ### 6.1 Znaczy
@@ -359,3 +476,22 @@ To jest najkrótsza poprawna naukowo droga od "bardzo mocnego domknięcia wewnę
 1. w gicie zamrażamy skrypty/manifesty/raporty,
 2. ciężkie archiwa pobieramy z oficjalnych źródeł publicznych,
 3. lokalnie sprawdzamy integralność i uruchamiamy niezmienione bramki.
+
+## 12) Czy mamy już wyprowadzenie *wszystkich* znanych wartości fizycznych?
+
+Krótka odpowiedź: **Nie, jeszcze nie w pełnej globalnej wersji ścisłej.**
+
+Co jest już wyprowadzone w rygorze wewnętrznych bramek:
+1. cele masowe (mass-chain),
+2. cele flavor CKM/PMNS na poziomie gate,
+3. cele dyskryminatorów GW,
+4. wsparte mikro-derywacją stałe renormalizacyjne (`Z_beta`, `delta_eta`) po zawężeniu.
+
+Czego wciąż brakuje do tezy „wszystkie znane wartości”:
+1. pełnego precyzyjnego programu radiacyjnego we wszystkich sektorach,
+2. kompletnego, wyczerpującego pakietu derivacji wszystkich parametrów SM z finalną precyzją,
+3. niezależnej replikacji/audytu multiteam poza tym środowiskiem.
+
+Wniosek:
+- ścieżka wewnętrznego domknięcia first-principles jest teraz bardzo mocna,
+- ale finalne twierdzenie „wszystkie znane wartości fizyczne w pełni wyprowadzone i potwierdzone zewnętrznie” jest jeszcze przedwczesne.
