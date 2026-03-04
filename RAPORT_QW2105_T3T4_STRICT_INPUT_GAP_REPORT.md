@@ -1,6 +1,6 @@
 # RAPORT QW-2105: T3T4 STRICT INPUT GAP REPORT
 
-- Date UTC: 2026-03-04T12:03:07.642233+00:00
+- Date UTC: 2026-03-04T12:14:50.956184+00:00
 - Verdict: **T3T4_STRICT_INPUT_GAPS_PRESENT**
 
 ## H(z) Path
@@ -19,14 +19,16 @@
 - strict_ready: `False`
 - bridge_observable_origin: `backsolved_from_g_si`
 - gaps:
+  - set_gnewton_provenance_anchor_free_true
   - provide_direct_dimensionless_bridge: g_dimensionless_mu_ref must come from external observable, not backsolve
   - set_bridge_observable_origin_external_dimensionless
   - set_provenance_anchor_free_true
   - set_g_si_input_optional_null
 
 ## Meta
-- QW-2104 verdict: `T3T4_STRICT_PREFLIGHT_GATE_PENDING` (0/6)
+- QW-2104 verdict: `T3T4_STRICT_PREFLIGHT_GATE_PENDING` (0/8)
+- QW-2106 verdict: `STRICT_EXTERNAL_INPUT_INTAKE_GATE_PENDING` (10/18)
 
 ## Artifact
 - JSON: `report_qw2105_t3t4_strict_input_gap_report.json`
-- required_next_step: `COLLECT_STRICT_READY_HZ_AND_GNEWTON_EXTERNAL_INPUTS_THEN_RERUN_QW2099_QW2101_QW2102_QW2103_QW2090_QW2092_QW2104_QW2094`
+- required_next_step: `COLLECT_STRICT_READY_RAW_AND_DOWNSTREAM_INPUTS_THEN_RERUN_QW2106_QW2099_QW2101_QW2102_QW2103_QW2090_QW2092_QW2104_QW2094`

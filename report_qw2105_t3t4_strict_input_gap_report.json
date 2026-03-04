@@ -1,6 +1,7 @@
 {
-  "generated_utc": "2026-03-04T12:03:07.642233+00:00",
+  "generated_utc": "2026-03-04T12:14:50.956184+00:00",
   "sources": {
+    "qw2106": "report_qw2106_strict_external_input_intake_gate.json",
     "qw2099": "report_qw2099_hz_external_decoupling_autocollector.json",
     "qw2102": "report_qw2102_hz_decoupling_identifiability_gate.json",
     "qw2101": "report_qw2101_gnewton_bridge_external_autocollector.json",
@@ -31,6 +32,7 @@
   "gnewton_path": {
     "strict_ready": false,
     "gaps": [
+      "set_gnewton_provenance_anchor_free_true",
       "provide_direct_dimensionless_bridge: g_dimensionless_mu_ref must come from external observable, not backsolve",
       "set_bridge_observable_origin_external_dimensionless",
       "set_provenance_anchor_free_true",
@@ -44,8 +46,13 @@
   "t3t4_meta_gate": {
     "qw2104_verdict": "T3T4_STRICT_PREFLIGHT_GATE_PENDING",
     "qw2104_pass_count": 0,
-    "qw2104_total_flags": 6
+    "qw2104_total_flags": 8
+  },
+  "intake_gate": {
+    "qw2106_verdict": "STRICT_EXTERNAL_INPUT_INTAKE_GATE_PENDING",
+    "qw2106_pass_count": 10,
+    "qw2106_total_flags": 18
   },
   "verdict": "T3T4_STRICT_INPUT_GAPS_PRESENT",
-  "required_next_step": "COLLECT_STRICT_READY_HZ_AND_GNEWTON_EXTERNAL_INPUTS_THEN_RERUN_QW2099_QW2101_QW2102_QW2103_QW2090_QW2092_QW2104_QW2094"
+  "required_next_step": "COLLECT_STRICT_READY_RAW_AND_DOWNSTREAM_INPUTS_THEN_RERUN_QW2106_QW2099_QW2101_QW2102_QW2103_QW2090_QW2092_QW2104_QW2094"
 }

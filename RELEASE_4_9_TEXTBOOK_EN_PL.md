@@ -370,8 +370,9 @@ Meaning:
   - cross-report consistency between QW-2069 and QW-2071,
   - pre-gate consistency for QW-2102 and QW-2103,
   - merged preflight consistency for QW-2104,
+  - intake/gap consistency for QW-2105 and QW-2106,
   - strict-level/status integrity in package report.
-- Result: `84` checks, `0` failed.
+- Result: `102` checks, `0` failed.
 
 Meaning:
 - no critical implementation mismatch was detected in the audited non-anchor T1 closure path,
@@ -827,8 +828,9 @@ Znaczenie:
   - spójność między raportami QW-2069 i QW-2071,
   - spójność pre-gate dla QW-2102 i QW-2103,
   - spójność scalonego preflightu QW-2104,
+  - spójność intake/gap dla QW-2105 i QW-2106,
   - integralność strict-level/status w raporcie pakietowym.
-- Wynik: `84` kontroli, `0` błędów.
+- Wynik: `102` kontrole, `0` błędów.
 
 Znaczenie:
 - w audytowanej ścieżce domknięcia T1 non-anchor nie wykryto krytycznych niespójności implementacyjnych,
@@ -947,7 +949,7 @@ Wniosek:
   - `QW-2102`: `HZ_DECOUPLING_IDENTIFIABILITY_GATE_WEAK_LEVERARM_PENDING` (`3/7`), failed: `n_nodes_ge_5`, `z_span_ge_0p8`, `e_span_ge_1p0`, `design_condition_lt_8`.
   - `QW-2103`: `GNEWTON_DIMENSIONLESS_PROVENANCE_GATE_PENDING_NONCLOSING` (`5/8`), failed: `bridge_origin_external_dimensionless`, `provenance_anchor_free`, `g_si_not_primary_input`.
 - New merged preflight gate:
-  - `QW-2104`: `T3T4_STRICT_PREFLIGHT_GATE_PENDING` (`0/6`), combining readiness from `QW-2099/2102/2090` and `QW-2101/2103/2092` with logic-defect checks.
+  - `QW-2104`: `T3T4_STRICT_PREFLIGHT_GATE_PENDING` (`0/8`), combining intake readiness (`QW-2106`) with `QW-2099/2102/2090` and `QW-2101/2103/2092` plus logic-defect checks.
 - New deterministic gap quantification:
   - `QW-2105`: `T3T4_STRICT_INPUT_GAPS_PRESENT`, explicitly listing what external inputs are still missing for strict-ready T3/T4.
 - New raw-input intake gate:
@@ -960,7 +962,7 @@ Wniosek:
   - `QW-2069`: strict-derived `28/32`, direct missing `0/32`, strict-unresolved `7/32`.
   - `QW-2081`: strict-unresolved in missing-14 scope is `4/14`:
     `delta_cp_ckm`, `h0`, `lambda_cosmological`, `G_newton`.
-  - `QW-2094` defect sweep remains clean: `84` checks, `0` failed (including `QW-2102/2103` pre-gates and `QW-2104` merged preflight consistency).
+  - `QW-2094` defect sweep remains clean: `102` checks, `0` failed (including `QW-2102/2103` pre-gates, `QW-2104` merged preflight consistency, and `QW-2105/2106` intake-gap consistency).
 
 ### PL
 
@@ -985,7 +987,7 @@ Wniosek:
   - `QW-2102`: `HZ_DECOUPLING_IDENTIFIABILITY_GATE_WEAK_LEVERARM_PENDING` (`3/7`), fail dla: `n_nodes_ge_5`, `z_span_ge_0p8`, `e_span_ge_1p0`, `design_condition_lt_8`.
   - `QW-2103`: `GNEWTON_DIMENSIONLESS_PROVENANCE_GATE_PENDING_NONCLOSING` (`5/8`), fail dla: `bridge_origin_external_dimensionless`, `provenance_anchor_free`, `g_si_not_primary_input`.
 - Nowa scalona bramka preflight:
-  - `QW-2104`: `T3T4_STRICT_PREFLIGHT_GATE_PENDING` (`0/6`), łącząca gotowość `QW-2099/2102/2090` oraz `QW-2101/2103/2092` wraz z kontrolą defektów logicznych.
+  - `QW-2104`: `T3T4_STRICT_PREFLIGHT_GATE_PENDING` (`0/8`), łącząca gotowość intake (`QW-2106`) z `QW-2099/2102/2090` oraz `QW-2101/2103/2092` wraz z kontrolą defektów logicznych.
 - Nowa deterministyczna kwantyfikacja luk:
   - `QW-2105`: `T3T4_STRICT_INPUT_GAPS_PRESENT`, jawnie wyliczająca, jakich danych zewnętrznych brakuje do strict-ready T3/T4.
 - Nowa bramka intake dla surowych wejść:
@@ -998,4 +1000,4 @@ Wniosek:
   - `QW-2069`: strict-derived `28/32`, direct missing `0/32`, strict-unresolved `7/32`.
   - `QW-2081`: strict-unresolved w zakresie missing-14 to `4/14`:
     `delta_cp_ckm`, `h0`, `lambda_cosmological`, `G_newton`.
-  - `QW-2094` pozostaje czysty: `84` kontrole, `0` błędów (w tym pre-gate `QW-2102/2103` i spójność scalonej bramki `QW-2104`).
+  - `QW-2094` pozostaje czysty: `102` kontrole, `0` błędów (w tym pre-gate `QW-2102/2103`, spójność scalonej bramki `QW-2104` oraz spójność intake/gap `QW-2105/2106`).

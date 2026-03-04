@@ -19,6 +19,7 @@ from typing import Dict, List
 
 
 ROOT = Path(__file__).resolve().parent
+R2106 = ROOT / "report_qw2106_strict_external_input_intake_gate.json"
 R2099 = ROOT / "report_qw2099_hz_external_decoupling_autocollector.json"
 R2102 = ROOT / "report_qw2102_hz_decoupling_identifiability_gate.json"
 R2101 = ROOT / "report_qw2101_gnewton_bridge_external_autocollector.json"
@@ -39,6 +40,7 @@ def append_if_missing(lst: List[str], item: str) -> None:
 
 
 def main() -> None:
+    d2106 = load(R2106) if R2106.exists() else None
     d2099 = load(R2099)
     d2102 = load(R2102)
     d2101 = load(R2101)
@@ -50,8 +52,20 @@ def main() -> None:
     t2099 = d2099.get("strict_thresholds", {})
     f2099 = d2099.get("strict_identifiability_flags", {})
     f2102 = d2102.get("flags", {})
+    hz_intake_flags = (d2106 or {}).get("hz_flags", {})
+    g_intake_flags = (d2106 or {}).get("g_flags", {})
 
     hz_gaps: List[str] = []
+    if d2106 is None:
+        append_if_missing(hz_gaps, "run_qw2106_intake_gate")
+    else:
+        if not bool(hz_intake_flags.get("hz_meta_exists", False)):
+            append_if_missing(hz_gaps, "provide_hz_metadata_sidecar_file")
+        if not bool(hz_intake_flags.get("hz_meta_complete", False)):
+            append_if_missing(hz_gaps, "complete_hz_metadata_sidecar")
+        if not bool(hz_intake_flags.get("hz_provenance_anchor_free", False)):
+            append_if_missing(hz_gaps, "set_hz_provenance_anchor_free_true")
+
     if not bool(f2099.get("n_nodes_ge_5", False)):
         cur = float(m2099.get("n_nodes", 0.0))
         req = int(t2099.get("min_nodes", 5))
@@ -92,6 +106,15 @@ def main() -> None:
     f2101 = d2101.get("flags", {})
     f2103 = d2103.get("flags", {})
     g_gaps: List[str] = []
+    if d2106 is None:
+        append_if_missing(g_gaps, "run_qw2106_intake_gate")
+    else:
+        if not bool(g_intake_flags.get("g_meta_exists", False)):
+            append_if_missing(g_gaps, "provide_gnewton_metadata_sidecar_file")
+        if not bool(g_intake_flags.get("g_meta_complete", False)):
+            append_if_missing(g_gaps, "complete_gnewton_metadata_sidecar")
+        if not bool(g_intake_flags.get("g_provenance_anchor_free", False)):
+            append_if_missing(g_gaps, "set_gnewton_provenance_anchor_free_true")
 
     if not bool(f2101.get("dimensionless_directly_provided", False)):
         append_if_missing(
@@ -120,6 +143,7 @@ def main() -> None:
     out = {
         "generated_utc": datetime.now(timezone.utc).isoformat(),
         "sources": {
+            "qw2106": R2106.name if d2106 is not None else None,
             "qw2099": R2099.name,
             "qw2102": R2102.name,
             "qw2101": R2101.name,
@@ -155,9 +179,14 @@ def main() -> None:
             "qw2104_pass_count": d2104.get("pass_count"),
             "qw2104_total_flags": d2104.get("total_flags"),
         },
+        "intake_gate": {
+            "qw2106_verdict": (d2106 or {}).get("verdict"),
+            "qw2106_pass_count": (d2106 or {}).get("pass_count"),
+            "qw2106_total_flags": (d2106 or {}).get("total_flags"),
+        },
         "verdict": verdict,
         "required_next_step": (
-            "COLLECT_STRICT_READY_HZ_AND_GNEWTON_EXTERNAL_INPUTS_THEN_RERUN_QW2099_QW2101_QW2102_QW2103_QW2090_QW2092_QW2104_QW2094"
+            "COLLECT_STRICT_READY_RAW_AND_DOWNSTREAM_INPUTS_THEN_RERUN_QW2106_QW2099_QW2101_QW2102_QW2103_QW2090_QW2092_QW2104_QW2094"
             if verdict == "T3T4_STRICT_INPUT_GAPS_PRESENT"
             else "RERUN_T3T4_STRICT_CHAIN_AND_PROMOTE_CLOSURE"
         ),
@@ -203,6 +232,8 @@ def main() -> None:
             "",
             "## Meta",
             f"- QW-2104 verdict: `{d2104.get('verdict')}` ({d2104.get('pass_count')}/{d2104.get('total_flags')})",
+            f"- QW-2106 verdict: `{(d2106 or {}).get('verdict')}` "
+            f"({(d2106 or {}).get('pass_count')}/{(d2106 or {}).get('total_flags')})",
             "",
             "## Artifact",
             f"- JSON: `{OUT_JSON.name}`",

@@ -107,7 +107,7 @@ Expected current state (2026-03-04):
 - `QW-2092`: G_newton SI bridge remains pending non-closing (`6/8`) for backsolved input,
 - `QW-2102`: H(z) identifiability pre-gate pending (`3/7`),
 - `QW-2103`: G_newton provenance pre-gate pending (`5/8`),
-- `QW-2104`: merged T3/T4 preflight pending (`0/6`),
+- `QW-2104`: merged T3/T4 preflight pending (`0/8`),
 - `QW-2105`: strict input gap report indicates explicit external data gaps,
 - `QW-2106`: strict external input intake pending (`10/18`) until strict-ready raw inputs are provided,
 - `QW-2069`: partial strong internal (`28/32` strict-derived, `0` direct missing, `7` strict-unresolved),
@@ -115,7 +115,7 @@ Expected current state (2026-03-04):
 - `QW-2073`: channel upgrade checks executed,
 - `QW-2070`: radiative baseline (`7/7` implemented and `7/7` closure-ready),
 - `QW-2071`: partial strong internal (`3/6` closure flags; `0` direct missing parameters, strict-unresolved remains nonzero, `0` missing radiative channels).
-- `QW-2094`: strict-rigor defect sweep pass (`84` checks, `0` failed).
+- `QW-2094`: strict-rigor defect sweep pass (`102` checks, `0` failed).
 
 This extension is the transparent path for community teams to track progress from strong internal closure toward full SM+GR precision closure.
 
@@ -243,7 +243,7 @@ Oczekiwany obecny stan (2026-03-04):
 - `QW-2092`: G_newton SI bridge: pending non-closing (`6/8`) dla wejścia backsolved,
 - `QW-2102`: pre-gate identyfikowalności H(z): pending (`3/7`),
 - `QW-2103`: pre-gate proweniencji G_newton: pending (`5/8`),
-- `QW-2104`: scalony preflight T3/T4: pending (`0/6`),
+- `QW-2104`: scalony preflight T3/T4: pending (`0/8`),
 - `QW-2105`: raport luk wejściowych wskazuje jawne braki danych zewnętrznych,
 - `QW-2106`: bramka intake surowych wejść: pending (`10/18`) do czasu dostarczenia strict-ready raw inputs,
 - `QW-2069`: status częściowy strong internal (`28/32` ścisłe derivacje, `0` direct missing, `7` strict-unresolved),
@@ -251,7 +251,7 @@ Oczekiwany obecny stan (2026-03-04):
 - `QW-2073`: wykonano upgrade kanałów radiacyjnych,
 - `QW-2070`: radiative baseline (`7/7` zaimplementowanych i `7/7` closure-ready),
 - `QW-2071`: status częściowy strong internal (`3/6` flag domknięcia; `0` direct missing, strict-unresolved pozostaje > 0, `0` brakujących kanałów radiacyjnych).
-- `QW-2094`: PASS sweepu usterek rygoru ścisłego (`84` kontrole, `0` błędów).
+- `QW-2094`: PASS sweepu usterek rygoru ścisłego (`102` kontrole, `0` błędów).
 
 To rozszerzenie daje przejrzystą ścieżkę dla zespołów zewnętrznych od mocnego domknięcia wewnętrznego do pełnego domknięcia precyzyjnego SM+GR.
 

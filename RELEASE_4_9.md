@@ -148,8 +148,8 @@ Current top-line status:
 
 28. `QW_2094_STRICT_RIGOR_DEFECT_SWEEP.py`
 - verdict: `STRICT_RIGOR_DEFECT_SWEEP_PASS_NO_CRITICAL_DEFECTS`
-- consistency checks: `84`, failed: `0` (including `QW-2104` merged preflight checks).
-- sweep now includes pre-gate consistency checks for `QW-2102` (H(z) identifiability), `QW-2103` (G_newton dimensionless provenance), and merged T3/T4 preflight consistency (`QW-2104`).
+- consistency checks: `102`, failed: `0` (including `QW-2104` merged preflight and `QW-2105/2106` intake-gap checks).
+- sweep now includes pre-gate consistency checks for `QW-2102` (H(z) identifiability), `QW-2103` (G_newton dimensionless provenance), merged T3/T4 preflight consistency (`QW-2104`), and intake/gap consistency (`QW-2105/2106`).
 
 29. `QW_2095_KERNEL_DERIVED_T2_NONANCHOR_INPUTS_PLAN_EXECUTOR.py`
 - verdict: `KERNEL_DERIVED_T2_NONANCHOR_INPUTS_BUILT_FROZEN_PLAN`
@@ -228,14 +228,14 @@ Current top-line status:
 
 43. `QW_2104_T3T4_STRICT_PREFLIGHT_GATE.py`
 - verdict: `T3T4_STRICT_PREFLIGHT_GATE_PENDING`
-- pass_count: `0/6`
-- deterministic meta-gate merges `QW-2099/2102/2090` and `QW-2101/2103/2092` into one strict readiness verdict with contradiction checks.
+- pass_count: `0/8`
+- deterministic meta-gate merges intake (`QW-2106`) + `QW-2099/2102/2090` and `QW-2101/2103/2092` into one strict readiness verdict with contradiction checks.
 
 44. `QW_2105_T3T4_STRICT_INPUT_GAP_REPORT.py`
 - verdict: `T3T4_STRICT_INPUT_GAPS_PRESENT`
 - deterministic gap report quantifies exact external-input blockers:
-  - H(z): missing nodes/span/condition thresholds,
-  - G_newton: dimensionless provenance still backsolved/SI-primary.
+  - H(z): intake metadata + nodes/span/condition thresholds,
+  - G_newton: intake metadata + dimensionless provenance still backsolved/SI-primary.
 
 45. `QW_2106_STRICT_EXTERNAL_INPUT_INTAKE_GATE.py`
 - verdict: `STRICT_EXTERNAL_INPUT_INTAKE_GATE_PENDING`

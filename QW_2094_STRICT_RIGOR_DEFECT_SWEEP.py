@@ -50,6 +50,8 @@ def main() -> None:
     r2102 = load_optional_json("report_qw2102_hz_decoupling_identifiability_gate.json")
     r2103 = load_optional_json("report_qw2103_gnewton_dimensionless_provenance_gate.json")
     r2104 = load_optional_json("report_qw2104_t3t4_strict_preflight_gate.json")
+    r2105 = load_optional_json("report_qw2105_t3t4_strict_input_gap_report.json")
+    r2106 = load_optional_json("report_qw2106_strict_external_input_intake_gate.json")
     r2069 = load_json("report_qw2069_full_sm_gr_derivation_package.json")
     r2071 = load_json("report_qw2071_sm_gr_full_precision_closure_gate.json")
 
@@ -466,6 +468,121 @@ def main() -> None:
         else:
             checks["QW-2104_verdict_consistent_with_flags"] = False
 
+    # 13) Optional strict external raw-input intake checks (QW-2106).
+    if r2106 is not None:
+        hz106 = r2106.get("hz_flags", {})
+        g106 = r2106.get("g_flags", {})
+        all106 = {**hz106, **g106}
+        checks["QW-2106_pass_count_consistent"] = bool_pass_count(all106) == int(
+            r2106.get("pass_count", -1)
+        )
+        verdict106 = str(r2106.get("verdict", ""))
+        checks["QW-2106_verdict_known"] = verdict106 in {
+            "STRICT_EXTERNAL_INPUT_INTAKE_GATE_PASS",
+            "STRICT_EXTERNAL_INPUT_INTAKE_GATE_PENDING",
+        }
+        all_flags_true106 = all(bool(v) for v in all106.values()) if all106 else False
+        if verdict106 == "STRICT_EXTERNAL_INPUT_INTAKE_GATE_PASS":
+            checks["QW-2106_verdict_consistent_with_flags"] = all_flags_true106
+        elif verdict106 == "STRICT_EXTERNAL_INPUT_INTAKE_GATE_PENDING":
+            checks["QW-2106_verdict_consistent_with_flags"] = not all_flags_true106
+        else:
+            checks["QW-2106_verdict_consistent_with_flags"] = False
+
+        if r2102 is not None:
+            f102 = r2102.get("flags", {})
+            checks["QW-2106_hz_nodes_flag_matches_qw2102"] = (
+                bool(hz106.get("hz_n_nodes_ge_5", False)) == bool(f102.get("n_nodes_ge_5", False))
+            )
+            checks["QW-2106_hz_zspan_flag_matches_qw2102"] = (
+                bool(hz106.get("hz_z_span_ge_0p8", False)) == bool(f102.get("z_span_ge_0p8", False))
+            )
+            checks["QW-2106_hz_espan_flag_matches_qw2102"] = (
+                bool(hz106.get("hz_e_span_ge_1p0", False)) == bool(f102.get("e_span_ge_1p0", False))
+            )
+            checks["QW-2106_hz_cond_flag_matches_qw2102"] = (
+                bool(hz106.get("hz_design_condition_lt_8", False))
+                == bool(f102.get("design_condition_lt_8", False))
+            )
+        else:
+            checks["QW-2106_hz_nodes_flag_matches_qw2102"] = True
+            checks["QW-2106_hz_zspan_flag_matches_qw2102"] = True
+            checks["QW-2106_hz_espan_flag_matches_qw2102"] = True
+            checks["QW-2106_hz_cond_flag_matches_qw2102"] = True
+
+        if r2103 is not None:
+            f103 = r2103.get("flags", {})
+            checks["QW-2106_g_origin_flag_matches_qw2103"] = (
+                bool(g106.get("g_origin_external_dimensionless", False))
+                == bool(f103.get("bridge_origin_external_dimensionless", False))
+            )
+            checks["QW-2106_g_anchor_free_flag_matches_qw2103"] = (
+                bool(g106.get("g_provenance_anchor_free", False))
+                == bool(f103.get("provenance_anchor_free", False))
+            )
+            checks["QW-2106_g_not_seeded_flag_matches_qw2103"] = (
+                bool(g106.get("g_not_seeded_from_registry", False))
+                == bool(f103.get("not_seeded_from_registry", False))
+            )
+            checks["QW-2106_g_si_primary_flag_matches_qw2103"] = (
+                bool(g106.get("g_si_not_primary", False)) == bool(f103.get("g_si_not_primary_input", False))
+            )
+        else:
+            checks["QW-2106_g_origin_flag_matches_qw2103"] = True
+            checks["QW-2106_g_anchor_free_flag_matches_qw2103"] = True
+            checks["QW-2106_g_not_seeded_flag_matches_qw2103"] = True
+            checks["QW-2106_g_si_primary_flag_matches_qw2103"] = True
+
+        if r2104 is not None:
+            verdict104 = str(r2104.get("verdict", ""))
+            checks["QW-2106_pending_blocks_qw2104_pass"] = not (
+                verdict106 == "STRICT_EXTERNAL_INPUT_INTAKE_GATE_PENDING"
+                and verdict104 == "T3T4_STRICT_PREFLIGHT_GATE_PASS"
+            )
+        else:
+            checks["QW-2106_pending_blocks_qw2104_pass"] = True
+
+    # 14) Optional T3/T4 gap-report consistency checks (QW-2105).
+    if r2105 is not None:
+        verdict105 = str(r2105.get("verdict", ""))
+        checks["QW-2105_verdict_known"] = verdict105 in {
+            "T3T4_STRICT_INPUT_GAPS_PRESENT",
+            "T3T4_STRICT_INPUT_GAPS_CLOSED_READY_FOR_STRICT_RERUN",
+        }
+        hz_path = r2105.get("hz_path", {})
+        g_path = r2105.get("gnewton_path", {})
+        hz_gaps = hz_path.get("gaps", [])
+        g_gaps = g_path.get("gaps", [])
+        hz_ready = bool(hz_path.get("strict_ready", False))
+        g_ready = bool(g_path.get("strict_ready", False))
+        checks["QW-2105_hz_ready_matches_gaps"] = isinstance(hz_gaps, list) and (hz_ready == (len(hz_gaps) == 0))
+        checks["QW-2105_g_ready_matches_gaps"] = isinstance(g_gaps, list) and (g_ready == (len(g_gaps) == 0))
+
+        if verdict105 == "T3T4_STRICT_INPUT_GAPS_CLOSED_READY_FOR_STRICT_RERUN":
+            checks["QW-2105_verdict_consistent_with_ready"] = hz_ready and g_ready
+        elif verdict105 == "T3T4_STRICT_INPUT_GAPS_PRESENT":
+            checks["QW-2105_verdict_consistent_with_ready"] = not (hz_ready and g_ready)
+        else:
+            checks["QW-2105_verdict_consistent_with_ready"] = False
+
+        if r2104 is not None:
+            verdict104 = str(r2104.get("verdict", ""))
+            checks["QW-2105_gaps_present_blocks_qw2104_pass"] = not (
+                verdict105 == "T3T4_STRICT_INPUT_GAPS_PRESENT"
+                and verdict104 == "T3T4_STRICT_PREFLIGHT_GATE_PASS"
+            )
+        else:
+            checks["QW-2105_gaps_present_blocks_qw2104_pass"] = True
+
+        if r2106 is not None:
+            intake106 = r2106.get("verdict", "")
+            checks["QW-2105_closed_implies_qw2106_pass"] = not (
+                verdict105 == "T3T4_STRICT_INPUT_GAPS_CLOSED_READY_FOR_STRICT_RERUN"
+                and intake106 != "STRICT_EXTERNAL_INPUT_INTAKE_GATE_PASS"
+            )
+        else:
+            checks["QW-2105_closed_implies_qw2106_pass"] = True
+
     # Build defect list.
     for name, ok in checks.items():
         if ok:
@@ -539,6 +656,16 @@ def main() -> None:
             "qw2104": (
                 "report_qw2104_t3t4_strict_preflight_gate.json"
                 if r2104 is not None
+                else None
+            ),
+            "qw2105": (
+                "report_qw2105_t3t4_strict_input_gap_report.json"
+                if r2105 is not None
+                else None
+            ),
+            "qw2106": (
+                "report_qw2106_strict_external_input_intake_gate.json"
+                if r2106 is not None
                 else None
             ),
             "qw2069": "report_qw2069_full_sm_gr_derivation_package.json",

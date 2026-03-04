@@ -1,6 +1,7 @@
 {
-  "generated_utc": "2026-03-04T12:03:07.562386+00:00",
+  "generated_utc": "2026-03-04T12:14:50.909197+00:00",
   "sources": {
+    "qw2106": "report_qw2106_strict_external_input_intake_gate.json",
     "qw2099": "report_qw2099_hz_external_decoupling_autocollector.json",
     "qw2102": "report_qw2102_hz_decoupling_identifiability_gate.json",
     "qw2090": "report_qw2090_h0_lambda_decoupling_gate.json",
@@ -9,16 +10,18 @@
     "qw2092": "report_qw2092_gnewton_si_bridge_gate.json"
   },
   "flags": {
+    "intake_hz_strict_ready": false,
     "hz_input_strict_ready": false,
     "hz_identifiability_gate_pass": false,
     "hz_decoupling_gate_strict_pass": false,
+    "intake_g_strict_ready": false,
     "g_bridge_input_strict_ready": false,
     "g_provenance_gate_pass": false,
     "g_si_bridge_gate_strict_pass": false
   },
   "pass_count": 0,
-  "total_flags": 6,
+  "total_flags": 8,
   "defects": [],
   "verdict": "T3T4_STRICT_PREFLIGHT_GATE_PENDING",
-  "required_next_step": "PROVIDE_STRICT_READY_HZ_AND_DIMENSIONLESS_GNEWTON_INPUTS_THEN_RERUN_QW2099_QW2101_QW2102_QW2103_QW2090_QW2092"
+  "required_next_step": "PROVIDE_STRICT_READY_RAW_INPUTS_AND_DIMENSIONLESS_GNEWTON_BRIDGE_THEN_RERUN_QW2106_QW2099_QW2101_QW2102_QW2103_QW2090_QW2092"
 }
