@@ -1,0 +1,65 @@
+{
+  "generated_utc": "2026-03-04T20:18:26.849107+00:00",
+  "declared_symbols": [
+    "AbsError",
+    "AllOrdersInduction",
+    "An",
+    "ConeClosure",
+    "D",
+    "Delta0",
+    "Dn",
+    "FiniteOrderBase",
+    "GammaMinus",
+    "GammaPlus",
+    "K",
+    "LocalCountertermBasis",
+    "MachineChecker",
+    "Nn",
+    "Obstruction",
+    "Pairing",
+    "ProofObject",
+    "QW2135",
+    "QW2136",
+    "QW2137",
+    "QW2138",
+    "QW2141",
+    "QW2142",
+    "Rn",
+    "Support",
+    "TailBound",
+    "n",
+    "phi"
+  ],
+  "theorem_statements": [
+    {
+      "id": "THM_L13_ALL_ORDERS_PACKAGE",
+      "text": "forall n, FiniteOrderBase and AllOrdersInduction and LocalCountertermBasis and ConeClosure implies Obstruction n = 0",
+      "source_chain": [
+        "QW2135",
+        "QW2136",
+        "QW2137",
+        "QW2138",
+        "QW2142"
+      ]
+    },
+    {
+      "id": "THM_L14_WEAK_DISTRIBUTION_PROXY",
+      "text": "forall phi, Pairing(D*K, phi) approx Delta0 phi with AbsError <= TailBound under QW2141 localized test family",
+      "source_chain": [
+        "QW2141"
+      ]
+    }
+  ],
+  "source_reports": [
+    "report_qw2141_continuum_weak_distribution_proxy_gate.json",
+    "report_qw2142_l13_formal_proof_obligation_export_gate.json"
+  ],
+  "status_inputs": {
+    "q2141_verdict": "CONTINUUM_WEAK_DISTRIBUTION_PROXY_GATE_PASS_PARTIAL",
+    "q2142_verdict": "L13_FORMAL_PROOF_OBLIGATION_EXPORT_GATE_PASS_PARTIAL"
+  },
+  "proof_templates": {
+    "lean": "FIN_L13_L14_FORMAL_THEOREMS_QW2143.lean",
+    "coq": "FIN_L13_L14_FORMAL_THEOREMS_QW2143.v"
+  }
+}

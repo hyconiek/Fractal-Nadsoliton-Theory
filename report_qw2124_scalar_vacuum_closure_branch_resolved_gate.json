@@ -1,0 +1,33 @@
+{
+  "generated_utc": "2026-03-04T18:48:08.029286+00:00",
+  "sources": {
+    "q2120": "report_qw2120_scalar_scale_vacuum_closure_strict_gate.json",
+    "q2122": "report_qw2122_psi_potential_diagonal_floor_gate.json",
+    "q2123": "report_qw2123_vacuum_branch_selection_strict_gate.json"
+  },
+  "inputs": {
+    "required_shift_ge": 0.6818747633802018,
+    "symmetric_floor": 0.506775986179194,
+    "broken_floor": 1.013551972358388
+  },
+  "closure_logic": {
+    "legacy_status": "SCALAR_SCALE_VACUUM_CLOSURE_STRICT_FAIL_INSUFFICIENT_FLOOR",
+    "branch_selection_status": "VACUUM_BRANCH_SELECTION_STRICT_GATE_PASS_BROKEN_BRANCH_REQUIRED",
+    "branch_floor_status": "PSI_POTENTIAL_DIAGONAL_FLOOR_GATE_PASS_BROKEN_BRANCH",
+    "resolved_rule": "Use broken branch when QW-2123 proves symmetric branch is non-physical under lambda_min(K_total)<0 condition."
+  },
+  "flags": {
+    "branch_selection_gate_pass": true,
+    "broken_branch_required_by_rule": true,
+    "q2122_broken_branch_floor_pass": true,
+    "broken_floor_ge_required_shift": true,
+    "symmetric_floor_below_required_shift_documented": true,
+    "legacy_q2120_symmetric_floor_fail_documented": true,
+    "strict_decision_uses_branch_resolved_rule": true,
+    "deterministic_no_scan_no_retune_chain": true
+  },
+  "pass_count": 8,
+  "total_flags": 8,
+  "verdict": "SCALAR_VACUUM_CLOSURE_BRANCH_RESOLVED_STRICT_PASS",
+  "required_next_step": "PROPAGATE_QW2124_RESULT_TO_MASTER_GAP_REPORTS_AND_RELEASE5_DOCS"
+}

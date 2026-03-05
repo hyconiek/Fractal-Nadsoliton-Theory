@@ -1,0 +1,85 @@
+{
+  "generated_utc": "2026-03-04T19:41:00.280438+00:00",
+  "sources": {
+    "q2127": "report_qw2127_nonabelian_spinor_gauge_action_bridge_gate.json",
+    "q2129": "report_qw2129_anomaly_cancellation_kernel_anchored_gate.json",
+    "q2131": "report_qw2131_hypercharge_template_kernel_uniqueness_gate.json",
+    "q2133": "report_qw2133_ktotal_microcausality_free_sector_gate.json",
+    "q2134": "report_qw2134_interacting_microcausality_perturbative_gate.json",
+    "q2135": "report_qw2135_interacting_microcausality_constructive_finite_order_gate.json",
+    "q2136": "report_qw2136_interacting_microcausality_all_orders_scaffold_gate.json",
+    "q2137": "report_qw2137_interacting_microcausality_distribution_level_schema_gate.json"
+  },
+  "obligation_matrix": [
+    {
+      "id": "O1_local_action_blocks",
+      "description": "Action-level locality and dim-4 audit (QW-2127).",
+      "source_verdict": "NONABELIAN_SPINOR_GAUGE_ACTION_BRIDGE_GATE_PASS_PARTIAL",
+      "satisfied": true
+    },
+    {
+      "id": "O2_anomaly_free_template",
+      "description": "Gauge anomaly cancellation + Witten global check (QW-2129).",
+      "source_verdict": "ANOMALY_CANCELLATION_KERNEL_ANCHORED_GATE_PASS_PARTIAL",
+      "satisfied": true
+    },
+    {
+      "id": "O3_hypercharge_uniqueness_anchored",
+      "description": "Kernel-anchored hypercharge uniqueness (QW-2131).",
+      "source_verdict": "HYPERCHARGE_TEMPLATE_KERNEL_UNIQUENESS_GATE_PASS_ANCHORED_DOMAIN",
+      "satisfied": true
+    },
+    {
+      "id": "O4_free_sector_microcausality",
+      "description": "Free quadratic microcausality closure (QW-2133).",
+      "source_verdict": "KTOTAL_MICROCAUSALITY_FREE_SECTOR_GATE_PASS_PARTIAL",
+      "satisfied": true
+    },
+    {
+      "id": "O5_interacting_perturbative_conditions",
+      "description": "Perturbative interacting microcausality conditions (QW-2134).",
+      "source_verdict": "INTERACTING_MICROCAUSALITY_PERTURBATIVE_GATE_PASS_PARTIAL_CONDITIONAL",
+      "satisfied": true
+    },
+    {
+      "id": "O6_constructive_finite_order",
+      "description": "Constructive recursion obstruction-free for n<=4 (QW-2135).",
+      "source_verdict": "INTERACTING_MICROCAUSALITY_CONSTRUCTIVE_FINITE_ORDER_GATE_PASS_PARTIAL",
+      "satisfied": true
+    },
+    {
+      "id": "O7_all_orders_scaffold",
+      "description": "All-orders scaffold and weighted combinatorial control (QW-2136).",
+      "source_verdict": "INTERACTING_MICROCAUSALITY_ALL_ORDERS_SCAFFOLD_GATE_PASS_PARTIAL",
+      "satisfied": true
+    },
+    {
+      "id": "O8_distribution_schema",
+      "description": "Distribution-level schema + cone closure audit (QW-2137).",
+      "source_verdict": "INTERACTING_MICROCAUSALITY_DISTRIBUTION_LEVEL_SCHEMA_GATE_PASS_PARTIAL",
+      "satisfied": true
+    }
+  ],
+  "obligation_pass_count": 8,
+  "obligation_total": 8,
+  "all_orders_remainder_control": {
+    "n_rem": 80,
+    "partial_sum": 2.9524924420125593,
+    "closed_form": 2.9524924420125593,
+    "abs_error": 0.0,
+    "tail_bound": 4.275045809493178e-97,
+    "condition_abs_error_le_tail_bound": true
+  },
+  "flags": {
+    "all_obligations_matrix_declared": true,
+    "all_8_obligations_satisfied": true,
+    "high_order_remainder_control_n80": true,
+    "q2137_distribution_schema_pass_present": true,
+    "deterministic_no_scan_no_retune": true,
+    "full_distribution_level_constructive_all_orders_proof_completed": false
+  },
+  "pass_count": 5,
+  "total_flags": 6,
+  "verdict": "INTERACTING_MICROCAUSALITY_PROOF_COMPLETION_GATE_PASS_PARTIAL",
+  "required_next_step": "COMPLETE_MACHINE_CHECKED_DISTRIBUTION_LEVEL_ALL_ORDERS_PROOF_EXPORT_AND_VERIFICATION"
+}

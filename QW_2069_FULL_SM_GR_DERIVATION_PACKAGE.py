@@ -23,7 +23,8 @@ OUT_MD = ROOT / "RAPORT_QW2069_FULL_SM_GR_DERIVATION_PACKAGE.md"
 
 
 def rel_err_pct(pred: float, ref: float) -> float:
-    return abs(pred - ref) / max(abs(ref), 1e-15) * 100.0
+    denom = abs(ref) if ref != 0.0 else 1e-300
+    return abs(pred - ref) / denom * 100.0
 
 
 def mean_matrix_rel_pct(pred: np.ndarray, ref: np.ndarray) -> float:
@@ -80,6 +81,7 @@ def main() -> None:
     r2096 = load_optional_json("report_qw2096_t2_nonanchor_strict_gate.json")
     r2097 = load_optional_json("report_qw2097_ckm_cp_target_refinement_gate.json")
     r2098 = load_optional_json("report_qw2098_ew_secondary_nonanchor_closure_gate.json")
+    r2115 = load_optional_json("report_qw2115_gravity_hierarchy_strict_bridge_gate.json")
 
     # Canonical bridge constants (project-level formula anchors, not strict independent derivation claims).
     alpha_geo = 4.0 * math.log(2.0)
@@ -351,7 +353,7 @@ def main() -> None:
                     e["within_tolerance"] = bool(rel <= float(tol))
 
     # Optional single-update gates (QW-2085/QW-2086).
-    for rsingle in [r2085, r2086, r2087, r2092, r2097]:
+    for rsingle in [r2085, r2086, r2087, r2092, r2097, r2115]:
         if rsingle is None:
             continue
         u = rsingle.get("update")
@@ -512,6 +514,11 @@ def main() -> None:
             "ew_secondary_nonanchor_closure_gate_optional": (
                 "report_qw2098_ew_secondary_nonanchor_closure_gate.json"
                 if r2098 is not None
+                else None
+            ),
+            "gravity_hierarchy_strict_bridge_gate_optional": (
+                "report_qw2115_gravity_hierarchy_strict_bridge_gate.json"
+                if r2115 is not None
                 else None
             ),
         },

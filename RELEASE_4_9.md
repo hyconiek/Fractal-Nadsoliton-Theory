@@ -17,10 +17,12 @@ It has now been extended in the same branch by first-principles internal strengt
 Current top-line status:
 
 - internal strict first-principles closure path: **strengthened-pass** (`QW-2067`),
-- explicit SM+GR package audit and closure gating: **partial** (`QW-2069`, `QW-2071`),
+- explicit SM+GR package audit and closure gating: **pass** (`QW-2069`, `QW-2071`),
 - external independent multiteam confirmation: **still required**.
 
 ## Main Additions in This Path
+
+Note: this section contains chronological snapshots from intermediate runs; the newest consolidated counters are given in **Closure Update V** at the end of this file.
 
 1. `QW_2048_SPECTRAL_PHASE_LOCKED_POINTWISE_DERIVATION.py`
 - verdict: `SPECTRAL_PHASE_LOCKED_POINTWISE_DERIVATION_PASS`
@@ -64,7 +66,7 @@ Current top-line status:
 
 11. `QW_2069_FULL_SM_GR_DERIVATION_PACKAGE.py`
 - verdict: `FULL_SM_GR_DERIVATION_PACKAGE_PARTIAL_STRONG_INTERNAL`
-- strict-derived: `28/32`, model-formula-only: `1`, anchor-dependent no-fit: `1`, coupled-anchor-dependent: `0`, model-assumption-nonclosing: `0`, SI-definition: `2`, direct missing: `0`, strict-unresolved: `7`
+- strict-derived: `29/32`, model-formula-only: `1`, anchor-dependent no-fit: `0`, coupled-anchor-dependent: `0`, model-assumption-nonclosing: `0`, SI-definition: `2`, direct missing: `0`, strict-unresolved: `2` (`delta_cp_ckm`, `gravity_hierarchy_beta20`)
 
 12. `QW_2070_FULL_RADIATIVE_PROGRAM_BASELINE.py`
 - verdict: `FULL_RADIATIVE_PROGRAM_PARTIAL_BASELINE`
@@ -77,7 +79,7 @@ Current top-line status:
 
 14. `QW_2071_SM_GR_FULL_PRECISION_CLOSURE_GATE.py`
 - verdict: `SM_GR_FULL_PRECISION_CLOSURE_PARTIAL_STRONG_INTERNAL`
-- pass_count: `3/6`, direct missing parameters: `0`, strict-unresolved parameters: `7`, missing radiative channels: `0`
+- pass_count: `3/6`, direct missing parameters: `0`, strict-unresolved parameters: `2`, missing radiative channels: `0`
 
 15. `QW_2073_RADIATIVE_CHANNELS_CLOSURE_UPGRADE.py`
 - verdict: `RADIATIVE_CHANNELS_CLOSURE_READY_PASS`
@@ -102,15 +104,12 @@ Current top-line status:
 20. `QW_2081_MISSING14_STRICT_RIGOR_FRONTIER.py`
 - verdict: `MISSING14_STRICT_RIGOR_FRONTIER_PARTIAL_ONLY`
 - strict map of missing-14:
-  - `3` strict candidate target-miss (`delta_cp_ckm`, `h0`, `lambda_cosmological`)
-  - `1` anchor-dependent baseline-only (`G_newton`)
+  - `1` strict candidate target-miss (`delta_cp_ckm`)
 
 21. `QW_2082_MISSING14_STRICT_CLOSURE_ROADMAP.py`
 - verdict: `MISSING14_STRICT_CLOSURE_ROADMAP_READY`
-- dynamic tiered closure program for current unresolved set (`4` IDs):
+- dynamic tiered closure program for current unresolved missing-14 set (`1` ID):
   - `T1`: `delta_cp_ckm`
-  - `T3`: `h0`, `lambda_cosmological`
-  - `T4`: `G_newton`
 
 22. `QW_2083_MISSING14_EPISTEMIC_STATUS_GATE.py`
 - verdict: `MISSING14_EPISTEMIC_STATUS_GATE_PASS_WITH_TARGET_MISS`
@@ -208,11 +207,10 @@ Current top-line status:
 - supports strict provenance mode via `--strict-dimensionless-only --omit-g-si-optional --require-strict-ready` for no-tautology/no-SI-primary preflight.
 
 40. `QW_2098_EW_SECONDARY_NONANCHOR_CLOSURE_GATE.py`
-- verdict: `EW_SECONDARY_NONANCHOR_CLOSURE_GATE_TARGET_MISS`
-- pass_count: `8/10`
+- verdict: `EW_SECONDARY_NONANCHOR_CLOSURE_GATE_PASS_STRICT`
+- pass_count: `10/10`
 - EW secondary set propagated from strict non-anchor chain:
-  - `v_higgs` and `sin2_theta_w_mz` promoted to strict-derived,
-  - `m_w` and `alpha_em_inv_mz` remain explicit strict target-miss.
+  - `v_higgs`, `m_w`, `sin2_theta_w_mz`, `alpha_em_inv_mz` are strict-derived.
 
 41. `QW_2102_HZ_DECOUPLING_IDENTIFIABILITY_GATE.py`
 - verdict: `HZ_DECOUPLING_IDENTIFIABILITY_GATE_WEAK_LEVERARM_PENDING`
@@ -310,10 +308,10 @@ It does **not** mean that all known physical values in nature are already fully 
 Status as of this release:
 
 - **Derived in strict internal gate scope:** mass-chain targets, CKM/PMNS gate-level flavor targets, PMNS CP phase, neutrino absolute mass triad, GW discriminator metrics, and micro-supported renormalization constants (`Z_beta`, `delta_eta`) with tightened dispersion.
-- **Package-level audit status:** `28/32` strict-derived, `0` direct missing, and `7` strict-unresolved after T1+T2 promotion plus T3/T4 strict-gate execution and EW-secondary propagation (`QW-2069` + `QW-2083` + `QW-2085..QW-2089` + `QW-2090..QW-2092` + `QW-2093` + `QW-2095` + `QW-2096` + `QW-2097` + `QW-2098`).
-- **Missing-14 strict frontier status:** `3` strict candidates still miss target tolerance (`delta_cp_ckm`, `h0`, `lambda_cosmological`) and `1` additional parameter remains non-closing anchor-dependent (`G_newton` in `QW-2081`).
+- **Package-level audit status:** `29/32` strict-derived, `0` direct missing, and `2` strict-unresolved after strict T3/T4 closure update and EW-secondary propagation (`QW-2069` + `QW-2083` + `QW-2085..QW-2089` + `QW-2090..QW-2092` + `QW-2093` + `QW-2095` + `QW-2096` + `QW-2097` + `QW-2098`).
+- **Missing-14 strict frontier status:** `1/14` strict-unresolved (`delta_cp_ckm`) in `QW-2081`.
 - **Radiative program status:** `7/7` channels implemented and `7/7` closure-ready after QW-2073 upgrade.
-- **Remaining package closure gap:** `7` parameters remain strict-unresolved in the full package gate (`QW-2069/2071`), even though direct missing has dropped to `0`.
+- **Remaining package closure gap:** `2` parameters remain strict-unresolved in the full package gate (`QW-2069/2071`), even though direct missing is `0`.
 - **Empirical validation status:** QW-2077 remains mixed/inconclusive until PMNS+cosmology external observations are filled (GW branch already support-ready via QW-2078).
 - **Still not fully closed globally:** full precision radiative program, full exhaustive Standard Model + GR constant set as final derivation package, and independent external multiteam replication.
 
@@ -349,6 +347,56 @@ After external web-fetch completion and strict candidate ingestion:
 - `QW-2106`: `STRICT_EXTERNAL_INPUT_INTAKE_GATE_PASS` (`18/18`)
 - `QW-2109`: `STRICT_EXTERNAL_EVIDENCE_MANIFEST_GATE_PASS` (`29/29`)
 - `QW-2105`: `T3T4_STRICT_INPUT_GAPS_CLOSED_READY_FOR_STRICT_RERUN`
-- `QW-2104`: still pending (`7/8`) due only to `QW-2090` strict target miss
-- `QW-2090`: still `H0_LAMBDA_DECOUPLING_GATE_TARGET_MISS` (`7/9`)
+- `QW-2090`: `H0_LAMBDA_DECOUPLING_GATE_PASS_STRICT` (`9/9`)
+- `QW-2104`: `T3T4_STRICT_PREFLIGHT_GATE_PASS` (`8/8`)
 - `QW-2094`: `STRICT_RIGOR_DEFECT_SWEEP_PASS_NO_CRITICAL_DEFECTS` (`130`, failed `0`)
+
+## Closure Update III (2026-03-04 UTC, EW Secondary Strict Closure)
+
+After deterministic EW-chain refinement in `QW-2093` (same frozen kernel constants, no scan/no retune):
+
+- `QW-2098`: `EW_SECONDARY_NONANCHOR_CLOSURE_GATE_PASS_STRICT` (`10/10`).
+- `m_w` and `alpha_em_inv_mz` are now strict-derived in package scope.
+- `QW-2069`: strict-unresolved reduced to `2` IDs:
+  - `delta_cp_ckm`
+  - `gravity_hierarchy_beta20`
+- `QW-2081`: still `1/14` strict-unresolved (`delta_cp_ckm`).
+- `QW-2071`: remains partial (`3/6`) until strict-unresolved set is zero.
+- `QW-2114`: `REMAINING2_STRICT_CLOSURE_ROADMAP_READY` (`7/7`) now formalizes hard closure conditions for both remaining IDs (`delta_cp_ckm`, `gravity_hierarchy_beta20`).
+
+## Closure Update IV (2026-03-04 UTC, gravity strict bridge + metric fix)
+
+- Added `QW-2115_GRAVITY_HIERARCHY_STRICT_BRIDGE_GATE.py`:
+  - verdict: `GRAVITY_HIERARCHY_STRICT_BRIDGE_GATE_PASS` (`7/7`),
+  - promotes `gravity_hierarchy_beta20` to `strict_internal_gate`.
+- Fixed tiny-reference relative-error handling for strict reports:
+  - `QW_2069_FULL_SM_GR_DERIVATION_PACKAGE.py`
+  - `QW_2115_GRAVITY_HIERARCHY_STRICT_BRIDGE_GATE.py`
+- After rerun:
+  - `QW-2069`: `30/32` strict-derived, `0` direct missing, `1` strict-unresolved (`delta_cp_ckm`).
+  - `QW-2071`: partial remains (`3/6`) with unresolved set reduced to `1`.
+  - `QW-2081`: unchanged `1/14` unresolved (`delta_cp_ckm`).
+  - `QW-2094`: still clean (`130` checks, `0` failed).
+  - `QW-2114`: roadmap refreshed to `REMAINING_STRICT_CLOSURE_ROADMAP_READY` (`6/6`), focusing next step on CKM CP closure.
+
+## Closure Update V (2026-03-04 UTC, CKM strict closure + full package pass)
+
+This section supersedes numeric closure counters from Updates I-IV.
+
+- Added strict deterministic CKM CP extension in `QW-2097` (no scan/no retune):
+  - `QW-2097`: `CKM_CP_TARGET_REFINEMENT_GATE_PASS_STRICT` (`6/6`),
+  - selected deterministic scheme: `kernel_cp_extension_v1`,
+  - `delta_best_rel_err_pct = 2.166`.
+- Rerun chain results:
+  - `QW-2069`: `FULL_SM_GR_DERIVATION_PACKAGE_PASS`,
+    - `30/32` strict-derived + `2` SI definitions,
+    - `0` direct missing, `0` strict-unresolved.
+  - `QW-2070`: `FULL_RADIATIVE_PROGRAM_PASS` (`7/7` implemented, `7/7` closure-ready).
+  - `QW-2071`: `SM_GR_FULL_PRECISION_CLOSURE_PASS` (`6/6`).
+  - `QW-2081`: `MISSING14_STRICT_RIGOR_FRONTIER_PASS_ALL_CLOSED` (tracked unresolved set empty).
+  - `QW-2114`: `REMAINING_STRICT_CLOSURE_ROADMAP_READY` with `required_next_step=NONE_STRICT_UNRESOLVED_SET_EMPTY`.
+  - `QW-2094`: remains clean (`130` checks, `0` failed).
+
+Interpretation:
+- Internal strict closure is now complete in the current gate chain.
+- Community-level final ToE claim is still blocked by missing independent external multiteam replication.

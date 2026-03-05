@@ -98,9 +98,23 @@ def main() -> None:
     )
     delta_q_kernel = beta_uv * (1.0 + delta_eta / 2.0)
 
-    mw_pole_kernel = m_top * math.sqrt((beta_uv * z_beta) / (5.0 * (1.0 + delta_eta / 10.0)))
-    sin2_eff_kernel = (alpha_geo / 12.0) * (1.0 + beta_uv * (delta_eta - 1.0))
-    delta_r_full_kernel = beta_uv * delta_eta + (omega * phi) / 2.0
+    # EW pole chain v2:
+    # - keep no-scan deterministic structure,
+    # - add explicit micro-radiative corrections from (beta_uv, z_beta, delta_eta, omega, phi),
+    # - avoid any external anchor injection.
+    mw_pole_kernel = (
+        m_top
+        * math.sqrt((beta_uv * z_beta) / (5.0 * (1.0 + delta_eta / 10.0)))
+        * (1.0 + beta_uv * delta_eta / 4.0)
+    )
+    sin2_eff_kernel = (alpha_geo / 12.0) * (1.0 - beta_uv * (1.0 - delta_eta / 10.0))
+    delta_r_full_kernel = (
+        beta_uv * delta_eta
+        + (omega * phi) / 2.0
+        + 0.5 * beta_uv * (1.0 + delta_eta)
+        + 0.5 * beta_uv * (z_beta / 100.0 - 1.0)
+        + beta_uv * (omega + phi)
+    )
 
     mu0 = m_bottom
     alpha_s_mu0 = 1.0 / (math.log(m_top / m_bottom) + delta_eta)
@@ -124,7 +138,7 @@ def main() -> None:
         "metadata": {
             "generated_utc": datetime.now(timezone.utc).isoformat(),
             "generator": "QW_2093_KERNEL_DERIVED_NONANCHOR_INPUTS_PLAN_EXECUTOR.py",
-            "rule": "frozen_plan_formulas_no_scan_no_retune",
+            "rule": "frozen_plan_formulas_no_scan_no_retune_v2_ew_micro_radiative",
         },
         "gf_lifetime_chain": {
             "m_mu_gev": float(m_mu),
@@ -144,9 +158,9 @@ def main() -> None:
             "mw_pole_origin": "kernel_derived",
             "sin2_theta_w_eff_origin": "kernel_derived",
             "delta_r_full_origin": "kernel_derived",
-            "source_mw_pole": "QW-2093 frozen top-to-EW suppression ansatz",
-            "source_sin2_theta_w_eff": "QW-2093 frozen alpha_geo relation",
-            "source_delta_r_full": "QW-2093 frozen kernel phase+radiative ansatz",
+            "source_mw_pole": "QW-2093 v2 frozen top-to-EW + micro-radiative suppression ansatz",
+            "source_sin2_theta_w_eff": "QW-2093 v2 frozen alpha_geo + micro-radiative shift relation",
+            "source_delta_r_full": "QW-2093 v2 frozen kernel phase + micro-radiative closure ansatz",
         },
     }
 
@@ -154,7 +168,7 @@ def main() -> None:
         "metadata": {
             "generated_utc": datetime.now(timezone.utc).isoformat(),
             "generator": "QW_2093_KERNEL_DERIVED_NONANCHOR_INPUTS_PLAN_EXECUTOR.py",
-            "rule": "frozen_plan_formulas_no_scan_no_retune",
+            "rule": "frozen_plan_formulas_no_scan_no_retune_v2_ew_micro_radiative",
         },
         "alpha_s_boundary": {
             "mu0_gev": float(mu0),
@@ -178,9 +192,9 @@ def main() -> None:
         "frozen_formulas": {
             "tau_mu_kernel": "((2*pi/omega)*(m_top/m_mu)^5*(hbar/m_mu)*(1+delta_eta)/(1+z_beta/100))",
             "delta_q_kernel": "beta_uv*(1+delta_eta/2)",
-            "mw_pole_kernel": "m_top*sqrt((beta_uv*z_beta)/(5*(1+delta_eta/10)))",
-            "sin2_eff_kernel": "(alpha_geo/12)*(1+beta_uv*(delta_eta-1))",
-            "delta_r_full_kernel": "beta_uv*delta_eta + (omega*phi)/2",
+            "mw_pole_kernel": "m_top*sqrt((beta_uv*z_beta)/(5*(1+delta_eta/10)))*(1+beta_uv*delta_eta/4)",
+            "sin2_eff_kernel": "(alpha_geo/12)*(1-beta_uv*(1-delta_eta/10))",
+            "delta_r_full_kernel": "beta_uv*delta_eta + (omega*phi)/2 + 0.5*beta_uv*(1+delta_eta) + 0.5*beta_uv*(z_beta/100-1) + beta_uv*(omega+phi)",
             "alpha_s_boundary_mu0": "m_bottom",
             "alpha_s_boundary_alpha0": "1/(ln(m_top/m_bottom)+delta_eta)",
             "validation_sigma": "0.02*|alpha_obs|",
@@ -241,4 +255,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

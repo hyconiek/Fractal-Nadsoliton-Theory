@@ -1,0 +1,85 @@
+{
+  "generated_utc": "2026-03-05T00:22:44.107828+00:00",
+  "packet_name": "QW2167_L13_FINAL_ALL_ORDERS_THEOREM_PACKET",
+  "inputs": {
+    "q2165": "report_qw2165_l13_exhaustive_canonical_eom_gate.json",
+    "q2163": "report_qw2163_l13_full_canonical_action_variational_gate.json",
+    "q2161": "report_qw2161_l13_variational_proxy_gate.json",
+    "q2159": "report_qw2159_l13_action_origin_witness_gate.json",
+    "lean_file": "FIN_L13_FINAL_ALL_ORDERS_THEOREM_PACKET_QW2167.lean"
+  },
+  "obligations": [
+    {
+      "id": "F1",
+      "name": "canonical_action_complete_template",
+      "status": "satisfied",
+      "source": "QW-2163"
+    },
+    {
+      "id": "F2",
+      "name": "exhaustive_local_eom_all_fields",
+      "status": "satisfied",
+      "source": "QW-2165"
+    },
+    {
+      "id": "F3",
+      "name": "index_mixing_locality_boundary_explicit",
+      "status": "satisfied",
+      "source": "QW-2165"
+    },
+    {
+      "id": "F4",
+      "name": "action_origin_bridge_without_hidden_placeholders",
+      "status": "satisfied",
+      "source": "QW-2159/QW-2161/QW-2165"
+    },
+    {
+      "id": "F5",
+      "name": "all_orders_variational_completion_from_complete_fin_action",
+      "status": "open",
+      "source": "final theorem"
+    }
+  ],
+  "dependency_graph": {
+    "nodes": [
+      "F1",
+      "F2",
+      "F3",
+      "F4",
+      "F5"
+    ],
+    "edges": [
+      [
+        "F1",
+        "F2"
+      ],
+      [
+        "F2",
+        "F3"
+      ],
+      [
+        "F3",
+        "F4"
+      ],
+      [
+        "F4",
+        "F5"
+      ]
+    ],
+    "topological_order": [
+      "F1",
+      "F2",
+      "F3",
+      "F4",
+      "F5"
+    ]
+  },
+  "assumption_boundary": {
+    "explicit_final_assumption": "F5",
+    "meaning": "full all-orders variational completion from complete FIN action",
+    "is_open": true
+  },
+  "hashes": {
+    "lean_sha256": "4474754ed7f05c340a0ed540b3fbd1be8444455fc5fab597807e6022065b3c3f"
+  }
+}

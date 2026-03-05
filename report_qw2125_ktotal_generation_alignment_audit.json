@@ -1,0 +1,167 @@
+{
+  "generated_utc": "2026-03-04T18:50:55.801079+00:00",
+  "sources": {
+    "q2118_tripartition": "report_qw2118_ktotal_spectral_tripartition_gate.json"
+  },
+  "kernel": {
+    "omega": 0.18575000000000005,
+    "phi": 0.1624999999999998,
+    "beta": 1.0,
+    "eta": 1.8
+  },
+  "templates": {
+    "mod3_4x3_template": {
+      "0": [
+        0,
+        3,
+        6,
+        9
+      ],
+      "1": [
+        1,
+        4,
+        7,
+        10
+      ],
+      "2": [
+        2,
+        5,
+        8,
+        11
+      ]
+    },
+    "contiguous_4x3_template": {
+      "0": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "1": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "2": [
+        8,
+        9,
+        10,
+        11
+      ]
+    }
+  },
+  "base_tripartition_labels": [
+    0,
+    2,
+    2,
+    0,
+    1,
+    1,
+    0,
+    2,
+    2,
+    0,
+    1,
+    1
+  ],
+  "base_alignment": {
+    "mod3_4x3_template": {
+      "best_score_12": 8,
+      "best_overlap_fraction": 0.6666666666666666,
+      "cluster_permutation_for_targets": [
+        0,
+        1,
+        2
+      ],
+      "rows": [
+        {
+          "target_group": 0,
+          "cluster_id": 0,
+          "intersection_size": 4,
+          "intersection_members": [
+            0,
+            3,
+            6,
+            9
+          ]
+        },
+        {
+          "target_group": 1,
+          "cluster_id": 1,
+          "intersection_size": 2,
+          "intersection_members": [
+            4,
+            10
+          ]
+        },
+        {
+          "target_group": 2,
+          "cluster_id": 2,
+          "intersection_size": 2,
+          "intersection_members": [
+            2,
+            8
+          ]
+        }
+      ]
+    },
+    "contiguous_4x3_template": {
+      "best_score_12": 5,
+      "best_overlap_fraction": 0.4166666666666667,
+      "cluster_permutation_for_targets": [
+        0,
+        1,
+        2
+      ],
+      "rows": [
+        {
+          "target_group": 0,
+          "cluster_id": 0,
+          "intersection_size": 2,
+          "intersection_members": [
+            0,
+            3
+          ]
+        },
+        {
+          "target_group": 1,
+          "cluster_id": 1,
+          "intersection_size": 2,
+          "intersection_members": [
+            4,
+            5
+          ]
+        },
+        {
+          "target_group": 2,
+          "cluster_id": 2,
+          "intersection_size": 1,
+          "intersection_members": [
+            8
+          ]
+        }
+      ]
+    }
+  },
+  "perturbation_robustness": {
+    "n_perturb": 300,
+    "mod3_overlap_fraction_mean": 0.6572222222222223,
+    "mod3_overlap_fraction_p10": 0.6666666666666666,
+    "mod3_overlap_fraction_p90": 0.6666666666666666
+  },
+  "flags": {
+    "q2118_tripartition_is_balanced_4_4_4": true,
+    "three_group_template_defined_without_fit": true,
+    "base_mod3_overlap_ge_0p66": true,
+    "base_mod3_beats_contiguous_template": true,
+    "mod3_overlap_mean_ge_0p60_under_kernel_perturb": true,
+    "mod3_overlap_p10_ge_0p50_under_kernel_perturb": true,
+    "deterministic_no_scan_no_retune": true,
+    "generation_mapping_is_unique_and_physical": false
+  },
+  "pass_count": 7,
+  "total_flags": 8,
+  "verdict": "KTOTAL_GENERATION_ALIGNMENT_AUDIT_PASS_STRUCTURAL_PARTIAL",
+  "required_next_step": "DEFINE_CANONICAL_STATE_TO_OCTAVE_MAPPING_AND_PROMOTE_TO_PHYSICAL_GENERATION_DERIVATION_GATE"
+}

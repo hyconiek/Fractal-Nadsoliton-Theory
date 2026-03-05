@@ -1,0 +1,85 @@
+{
+  "generated_utc": "2026-03-05T00:22:44.121860+00:00",
+  "packet_name": "QW2168_L14_FINAL_CONTINUUM_THEOREM_PACKET",
+  "inputs": {
+    "q2166": "report_qw2166_l14_exhaustive_canonical_hessian_gate.json",
+    "q2164": "report_qw2164_l14_full_canonical_continuum_variational_gate.json",
+    "q2162": "report_qw2162_l14_variational_proxy_gate.json",
+    "q2160": "report_qw2160_l14_action_origin_witness_gate.json",
+    "lean_file": "FIN_L14_FINAL_CONTINUUM_THEOREM_PACKET_QW2168.lean"
+  },
+  "obligations": [
+    {
+      "id": "C1",
+      "name": "canonical_hessian_complete_template",
+      "status": "satisfied",
+      "source": "QW-2164"
+    },
+    {
+      "id": "C2",
+      "name": "exhaustive_operator_hessian_consistency_all_fields",
+      "status": "satisfied",
+      "source": "QW-2166"
+    },
+    {
+      "id": "C3",
+      "name": "continuum_proxy_chain_c1_c2_c3_closed",
+      "status": "satisfied",
+      "source": "QW-2162/QW-2164/QW-2166"
+    },
+    {
+      "id": "C4",
+      "name": "action_origin_bridge_without_hidden_placeholders",
+      "status": "satisfied",
+      "source": "QW-2160/QW-2162/QW-2166"
+    },
+    {
+      "id": "C5",
+      "name": "final_continuum_theorem_from_complete_fin_action",
+      "status": "open",
+      "source": "final theorem"
+    }
+  ],
+  "dependency_graph": {
+    "nodes": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5"
+    ],
+    "edges": [
+      [
+        "C1",
+        "C2"
+      ],
+      [
+        "C2",
+        "C3"
+      ],
+      [
+        "C3",
+        "C4"
+      ],
+      [
+        "C4",
+        "C5"
+      ]
+    ],
+    "topological_order": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5"
+    ]
+  },
+  "assumption_boundary": {
+    "explicit_final_assumption": "C5",
+    "meaning": "final continuum theorem from complete FIN action",
+    "is_open": true
+  },
+  "hashes": {
+    "lean_sha256": "5a5044c349dfba2f6ee1b3210d420610ca255ca50fcff380289995598c42cd25"
+  }
+}

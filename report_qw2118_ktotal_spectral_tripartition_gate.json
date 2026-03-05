@@ -1,0 +1,105 @@
+{
+  "generated_utc": "2026-03-04T18:31:59.037498+00:00",
+  "source_kernel": "report_qw2049_spectral_micro_stagec_intersection_gate.json:stagec_pool.selected_kernel",
+  "kernel": {
+    "omega": 0.18575000000000005,
+    "phi": 0.1624999999999998,
+    "beta": 1.0,
+    "eta": 1.8
+  },
+  "matrix_spec": {
+    "n_octaves": 12,
+    "diagonal_convention": "zero_self_coupling",
+    "distance": "cyclic_octave_distance"
+  },
+  "distance_profile": {
+    "1": 0.46998567264502017,
+    "2": 0.19204355169010282,
+    "3": 0.09142861427792497,
+    "4": 0.0470291687456504,
+    "5": 0.02413122336363006,
+    "6": 0.011070817321442113,
+    "7": 0.003152835507864693,
+    "8": -0.0017958784054379028,
+    "9": -0.00489542488700594,
+    "10": -0.006774996025210847,
+    "11": -0.007814314930515773
+  },
+  "eigen_spectrum": {
+    "eigvals": [
+      -0.6818747623802018,
+      -0.6382989933129987,
+      -0.6382989933129984,
+      -0.5392615705671117,
+      -0.5392615705671113,
+      -0.30109958321034724,
+      -0.30109958321034697,
+      0.08325776433848915,
+      0.0832577643384896,
+      0.9061861245590189,
+      0.9061861245590193,
+      1.6603072787660986
+    ],
+    "lambda_min": -0.6818747623802018,
+    "lambda_max": 1.6603072787660986,
+    "gershgorin_lower_bound": -1.6603072787660993,
+    "gershgorin_upper_bound": 1.6603072787660993
+  },
+  "band_partition": {
+    "band_eps": 0.1,
+    "counts": {
+      "neg": 7,
+      "near_zero": 2,
+      "pos": 3
+    },
+    "tripartition": {
+      "labels": [
+        0,
+        2,
+        2,
+        0,
+        1,
+        1,
+        0,
+        2,
+        2,
+        0,
+        1,
+        1
+      ],
+      "cluster_sizes": [
+        4,
+        4,
+        4
+      ],
+      "cluster_sizes_sorted": [
+        4,
+        4,
+        4
+      ]
+    }
+  },
+  "robustness": {
+    "n_perturb": 300,
+    "tripartition_size_stability": 0.96,
+    "band_count_stability": 0.9466666666666667
+  },
+  "vacuum_shift_condition": {
+    "k_alone_psd": false,
+    "required_uniform_mass_shift_ge": 0.6818747633802018,
+    "interpretation": "Need diagonal positive mass floor m0^2 >= -lambda_min(K_total) to guarantee PSD(A=K_total+m0^2 I)."
+  },
+  "flags": {
+    "matrix_symmetric": true,
+    "three_nonempty_spectral_bands": true,
+    "balanced_tripartition_4_4_4": true,
+    "tripartition_size_stability_ge_0p90": true,
+    "spectral_band_count_stability_ge_0p90": true,
+    "deterministic_no_scan_no_retune": true,
+    "k_alone_not_psd_requires_mass_shift": true
+  },
+  "pass_count": 7,
+  "total_flags": 7,
+  "verdict": "KTOTAL_SPECTRAL_TRIPARTITION_GATE_PASS_WITH_CONDITIONAL_VACUUM_SHIFT",
+  "required_next_step": "CONNECT_REQUIRED_MASS_SHIFT_TO_EXPLICIT_SCALAR_SECTOR_AND_RUN_QW2119"
+}

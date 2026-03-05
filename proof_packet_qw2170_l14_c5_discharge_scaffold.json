@@ -1,0 +1,61 @@
+{
+  "generated_utc": "2026-03-05T00:36:29.711740+00:00",
+  "packet_name": "QW2170_L14_C5_DISCHARGE_SCAFFOLD",
+  "inputs": {
+    "q2168": "report_qw2168_l14_final_continuum_theorem_packet_gate.json",
+    "q2166": "report_qw2166_l14_exhaustive_canonical_hessian_gate.json",
+    "q2148": "report_qw2148_continuum_dg_delta_extrapolation_gate.json",
+    "q2141": "report_qw2141_continuum_weak_distribution_proxy_gate.json",
+    "lean_file": "FIN_L14_C5_DISCHARGE_SCAFFOLD_QW2170.lean"
+  },
+  "obligations": [
+    {
+      "id": "C5a",
+      "name": "finite_grid_to_continuum_support_from_strict_chain",
+      "status": "satisfied",
+      "source": "QW-2166/QW-2148/QW-2141"
+    },
+    {
+      "id": "C5b",
+      "name": "exact_distributional_limit_directly_from_complete_fin_action",
+      "status": "open",
+      "source": "terminal theorem"
+    },
+    {
+      "id": "C5",
+      "name": "final_continuum_theorem_from_complete_fin_action",
+      "status": "open",
+      "source": "C5a + C5b"
+    }
+  ],
+  "dependency_graph": {
+    "nodes": [
+      "C5a",
+      "C5b",
+      "C5"
+    ],
+    "edges": [
+      [
+        "C5a",
+        "C5"
+      ],
+      [
+        "C5b",
+        "C5"
+      ]
+    ],
+    "topological_order": [
+      "C5a",
+      "C5b",
+      "C5"
+    ]
+  },
+  "decomposition": {
+    "c5a_finite_continuum_support_closed": true,
+    "c5b_exact_distribution_limit_closed": false,
+    "c5_closed": false
+  },
+  "hashes": {
+    "lean_sha256": "498ad1169c09dbe3e0107d5adff75d67174087c503bbb521efbc7a2f7254ab35"
+  }
+}
