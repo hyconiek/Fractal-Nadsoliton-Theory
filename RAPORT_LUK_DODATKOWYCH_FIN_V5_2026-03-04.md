@@ -1653,3 +1653,35 @@ Nowe bramki strict:
   - `o1c_fully_closed=False`.
 - Znaczenie:
   - luka przechodzi z klasy \"candidate missing\" do klasy \"axiomatic dependency formally certified\".
+
+## Aktualizacja 2026-03-05: QW-2249 (L12 export obligation packet)
+
+- Artefakt: `report_qw2249_rg_export_axiom_free_obligation_packet_gate.json`
+- Werdykt: `RG_EXPORT_AXIOM_FREE_OBLIGATION_PACKET_GATE_PASS_PACKET_READY_EXPORT_PENDING` (`5/7`)
+- Co zostalo domkniete:
+  1. zdefiniowano kompletny packet obligacji `RG_EXPORT_O1..O4`,
+  2. packet jest hashowany i gotowy do execution-runbook,
+  3. packet jest jawnie powiazany z blocker stack (`QW-2243`,`QW-2245`,`QW-2247`).
+- Granica:
+  - brak non-axiomatic export theorem pozostaje bez zmiany,
+  - `dax1_non_axiomatic_provider_completed=False`,
+  - `c1_theorem_discharge_completed=False`,
+  - `o1c_fully_closed=False`.
+- Znaczenie:
+  - warstwa execution-ready dla finalnej konstrukcji export theorem jest przygotowana; pozostaje sam dowod.
+
+## Aktualizacja 2026-03-05: QW-2250 (L5 export obligation packet)
+
+- Artefakt: `report_qw2250_qft_export_axiom_free_obligation_packet_gate.json`
+- Werdykt: `QFT_EXPORT_AXIOM_FREE_OBLIGATION_PACKET_GATE_PASS_PACKET_READY_EXPORT_PENDING` (`5/7`)
+- Co zostalo domkniete:
+  1. zdefiniowano kompletny packet obligacji `QFT_EXPORT_O1..O4`,
+  2. packet jest hashowany i gotowy do execution-runbook,
+  3. packet jest jawnie powiazany z blocker stack (`QW-2244`,`QW-2246`,`QW-2248`).
+- Granica:
+  - brak non-axiomatic export theorem pozostaje bez zmiany,
+  - `dax1_non_axiomatic_provider_completed=False`,
+  - `c1_theorem_discharge_completed=False`,
+  - `o1c_fully_closed=False`.
+- Znaczenie:
+  - warstwa execution-ready dla finalnej konstrukcji export theorem jest przygotowana; pozostaje sam dowod.

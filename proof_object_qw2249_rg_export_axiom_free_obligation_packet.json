@@ -1,0 +1,44 @@
+{
+  "generated_utc": "2026-03-05T04:42:50.837610+00:00",
+  "sources": {
+    "q2243": "report_qw2243_rg_dax1_non_axiomatic_provider_attempt_gate.json",
+    "q2245": "report_qw2245_rg_dax1_axiom_free_candidate_scan_gate.json",
+    "q2247": "report_qw2247_rg_export_axiomatic_dependency_gate.json"
+  },
+  "obligations": {
+    "RG_EXPORT_O1": {
+      "statement": "theorem RG_CanonicalAction_to_WellPosedness_EXPORT : (FINActionComplete ∧ RGConstructiveMap) -> RGGlobalWellPosednessAllScales",
+      "required": true,
+      "acceptance": "symbol exists in *.lean"
+    },
+    "RG_EXPORT_O2": {
+      "statement": "proof of RG_CanonicalAction_to_WellPosedness_EXPORT uses no *DerivedOrPending symbol",
+      "required": true,
+      "acceptance": "static proof refs contain zero tokens ending with _DerivedOrPending"
+    },
+    "RG_EXPORT_O3": {
+      "statement": "proof of RG_CanonicalAction_to_WellPosedness_EXPORT is axiom-free",
+      "required": true,
+      "acceptance": "no local/global axiom dependency in theorem dependency chain"
+    },
+    "RG_EXPORT_O4": {
+      "statement": "QW-2243 rerun passes with canonical_export_symbol_exists=True",
+      "required": true,
+      "acceptance": "report_qw2243... flags.canonical_export_symbol_exists == true"
+    }
+  },
+  "current_state": {
+    "q2243_verdict": "RG_DAX1_NON_AXIOMATIC_PROVIDER_ATTEMPT_GATE_PASS_PARTIAL_CANONICAL_EXPORT_MISSING",
+    "q2245_verdict": "RG_DAX1_AXIOM_FREE_CANDIDATE_SCAN_GATE_PASS_PARTIAL_NO_AXIOM_FREE_CANDIDATE",
+    "q2247_verdict": "RG_EXPORT_AXIOMATIC_DEPENDENCY_GATE_PASS_PARTIAL_AXIOM_FREE_EXPORT_ABSENT",
+    "canonical_export_symbol_exists": false,
+    "axiom_free_candidates_found": 0,
+    "axiom_dependency_certified": true
+  },
+  "scope_boundary": {
+    "dax1_non_axiomatic_provider_completed": false,
+    "c1_theorem_discharge_completed": false,
+    "o1c_fully_closed": false,
+    "overclaim_forbidden": true
+  }
+}

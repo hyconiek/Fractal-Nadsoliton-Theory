@@ -2010,6 +2010,34 @@ Ten punkt jest nadrzedny wzgledem historycznych wpisow etapowych `PARTIAL` dla t
    - Granica:
      - `n_non_axiomatic_candidates=0`,
      - `canonical_export_symbol_non_axiomatic_exists=False`,
+   - `dax1_non_axiomatic_provider_completed=False`,
+   - `c1_theorem_discharge_completed=False`,
+   - `o1c_fully_closed=False`.
+
+## 137) Aktualizacja wykonawcza: QW-2249
+
+1. `QW-2249` (`report_qw2249_rg_export_axiom_free_obligation_packet_gate.json`)
+   - Verdict: `RG_EXPORT_AXIOM_FREE_OBLIGATION_PACKET_GATE_PASS_PACKET_READY_EXPORT_PENDING` (`5/7`)
+   - Wynik:
+     - zbudowano jawny packet obligacji dla export theorem RG (`RG_EXPORT_O1..O4`),
+     - packet jest machine-readable i hashowany,
+     - packet spina caly known blocker stack (`QW-2243`,`QW-2245`,`QW-2247`).
+   - Granica:
+     - export theorem nadal nieistniejacy w warstwie non-axiomatic,
+     - `dax1_non_axiomatic_provider_completed=False`,
+     - `c1_theorem_discharge_completed=False`,
+     - `o1c_fully_closed=False`.
+
+## 138) Aktualizacja wykonawcza: QW-2250
+
+1. `QW-2250` (`report_qw2250_qft_export_axiom_free_obligation_packet_gate.json`)
+   - Verdict: `QFT_EXPORT_AXIOM_FREE_OBLIGATION_PACKET_GATE_PASS_PACKET_READY_EXPORT_PENDING` (`5/7`)
+   - Wynik:
+     - zbudowano jawny packet obligacji dla export theorem QFT (`QFT_EXPORT_O1..O4`),
+     - packet jest machine-readable i hashowany,
+     - packet spina caly known blocker stack (`QW-2244`,`QW-2246`,`QW-2248`).
+   - Granica:
+     - export theorem nadal nieistniejacy w warstwie non-axiomatic,
      - `dax1_non_axiomatic_provider_completed=False`,
      - `c1_theorem_discharge_completed=False`,
      - `o1c_fully_closed=False`.

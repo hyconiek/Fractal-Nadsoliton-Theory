@@ -1020,3 +1020,25 @@ Granica pozostaje jawna:
 - `dax1_non_axiomatic_provider_completed=False`,
 - `c1_theorem_discharge_completed=False`,
 - `o1c_fully_closed=False`.
+
+123. `L12` - packet-ready obligations dla axiom-free export RG
+Status: `PARTIAL_L12_EXPORT_OBLIGATION_PACKET_READY`
+Uzasadnienie: `QW-2249` przechodzi `RG_EXPORT_AXIOM_FREE_OBLIGATION_PACKET_GATE_PASS_PACKET_READY_EXPORT_PENDING` (`5/7`) i formalizuje:
+- jawny pakiet czterech obligacji eksportowych (`RG_EXPORT_O1..O4`) z kryteriami acceptance,
+- spiecie z potwierdzonym blockerem (`QW-2243`) + scanem (`QW-2245`) + dependency certificate (`QW-2247`),
+- gotowosc do bezposredniego wykonania proof-construction bez zmiany granicy overclaim.
+Granica pozostaje jawna:
+- `dax1_non_axiomatic_provider_completed=False`,
+- `c1_theorem_discharge_completed=False`,
+- `o1c_fully_closed=False`.
+
+124. `L5` - packet-ready obligations dla axiom-free export QFT
+Status: `PARTIAL_L5_EXPORT_OBLIGATION_PACKET_READY`
+Uzasadnienie: `QW-2250` przechodzi `QFT_EXPORT_AXIOM_FREE_OBLIGATION_PACKET_GATE_PASS_PACKET_READY_EXPORT_PENDING` (`5/7`) i formalizuje:
+- jawny pakiet czterech obligacji eksportowych (`QFT_EXPORT_O1..O4`) z kryteriami acceptance,
+- spiecie z potwierdzonym blockerem (`QW-2244`) + scanem (`QW-2246`) + dependency certificate (`QW-2248`),
+- gotowosc do bezposredniego wykonania proof-construction bez zmiany granicy overclaim.
+Granica pozostaje jawna:
+- `dax1_non_axiomatic_provider_completed=False`,
+- `c1_theorem_discharge_completed=False`,
+- `o1c_fully_closed=False`.
