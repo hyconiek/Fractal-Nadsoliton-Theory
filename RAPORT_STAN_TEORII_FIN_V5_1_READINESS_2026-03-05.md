@@ -1,7 +1,7 @@
 # RAPORT STANU TEORII FIN (Release 5.1 readiness)
 
 **Data:** 2026-03-05  
-**Zakres audytu:** strict chain do `QW-2203` + raporty luk (`L1..L23`)  
+**Zakres audytu:** strict chain do `QW-2204` + raporty luk (`L1..L23`)  
 **Decyzja:** `RELEASE_5_1_FULL_CLOSURE_NOT_READY`
 
 ## 1) Werdykt główny
@@ -46,7 +46,8 @@ Stan na dziś:
    - `QW-2200`: low-energy SM+GR reduction scope stratification (`L16`) z domknietym scope strict i jawnie otwartym theorem-level fundamentem,
    - `QW-2201`: GR-limit conditions catalog layer (`L4`) z jawnie skatalogowanymi warunkami i jawnie otwartym foundational derivation,
    - `QW-2202`: QFT strict scope stratification (`L5`) z integracja warstw lokalnych i jawna lista globalnych theorem-level luk,
-   - `QW-2203`: empirical prediction stack status (`L9`) z prereg/falsification stackiem i jawnie utrzymanym pending multidomain data.
+   - `QW-2203`: empirical prediction stack status (`L9`) z prereg/falsification stackiem i jawnie utrzymanym pending multidomain data,
+   - `QW-2204`: external multiteam execution status (`L10`) z packet-ready chain i jawnie otwartym execution/signed-reports boundary.
 
 ## 3) Co pozostaje realnie otwarte (pytania recenzenckie)
 
@@ -62,7 +63,7 @@ Stan na dziś:
 
 ### C. Falsyfikacja i status społecznościowy
 1. `L9`: po `QW-2203` stack predykcji/falsyfikacji jest formalnie gotowy (prereg + 1 kanał supported), ale brak jednej centralnej predykcji high-impact potwierdzonej niezależnie multidomain.
-2. `L10`: niezależna replikacja multiteam (warunek konieczny dla community-confirmed ToE).
+2. `L10`: po `QW-2204` packet/protocol readiness jest domkniete, ale realna niezalezna egzekucja multiteam i publiczne signed reports pozostaja warunkiem koniecznym.
 
 ## 4) Tabela statusu luk (kanoniczna)
 
@@ -77,7 +78,7 @@ Stan na dziś:
 | L7 | PARTIAL++ | integrated robustness envelope domkniety w strict scope (`QW-2197`), global unbounded robustness nadal otwarta |
 | L8 | PARTIAL | poprawa duża, ale sektor mas nadal recenzencko wrażliwy |
 | L9 | PARTIAL+ | strict prereg/falsification stack zintegrowany (`QW-2203`), ale brak jednej centralnej wysokowplywowej predykcji potwierdzonej multidomain |
-| L10 | OPEN | brak niezależnego multiteam rerun |
+| L10 | PARTIAL+ | external packet/protocol chain domkniety (`QW-2204`), ale brak realnego niezaleznego multiteam rerun z publicznymi signed reports |
 | L11 | PARTIAL+ | strict Planck bridge domkniety (`QW-2198`), ale fully-internal (bez external bridge) nadal otwarte |
 | L12 | PARTIAL++ | strict proxy + obstruction + finite-scope declaration + anchored extended-scope feasibility (`t_probe=30`) |
 | L13 | CLOSED (strict internal) | domknięte przez QW-2179 + QW-2181 |

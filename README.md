@@ -88,7 +88,7 @@ Interpretation:
 
 ### Scientific validation boundary
 - one central high-impact prediction fully confirmed across independent multidomain data (`L9`; prereg stack already integrated, but full confirmation still open),
-- independent external multiteam replication (`L10`).
+- independent external multiteam replication execution with public signed reports (`L10`; packet/protocol chain already integrated, execution still open).
 
 Canonical gap list:
 - [`LISTA_LUK_DO_UZUPELNIENIA_FIN_V5.md`](LISTA_LUK_DO_UZUPELNIENIA_FIN_V5.md)
@@ -109,6 +109,7 @@ Canonical gap list:
 - `L4` (GR-limit conditions catalog): `QW-2201` (strict catalog of GR-limit support conditions and evidence layers; foundational direct derivation/equivalence theorem still open).
 - `L5` (QFT global closure): `QW-2202` (strict-scope stack integrated across local action + causality + renormalization schema + stability layers; global nonperturbative existence / S-matrix unitarity / reconstruction theorem still open).
 - `L9` (prediction/falsifiability): `QW-2203` (preregistered falsification stack + mixed validation status integrated; one channel supported, PMNS/cosmology pending, no single high-impact full confirmation claim).
+- `L10` (independent replication): `QW-2204` (external freeze/rehearsal/governance/lock chain integrated and packet-ready; truly independent multiteam execution and public signed reports still pending).
 - `L16` (SM+GR reduction scope): `QW-2200` (low-energy reduction scope closed in strict package+bridge layers; foundational full reduction theorem still open).
 - `L20` (generation mapping): `QW-2125`, `QW-2195` (structural 3-way alignment + deterministic axiom-augmented mapping rule; axiom-free physical uniqueness still open).
 - `L21` (derivation/calibration separation in mass hierarchy): `QW-2119`, `QW-2194` (strong non-top log-linear derivational support + explicit top singleton-anchor boundary; full anchor-free mass-chain still open).
