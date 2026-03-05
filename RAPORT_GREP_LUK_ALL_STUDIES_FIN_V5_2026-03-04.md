@@ -1553,5 +1553,29 @@ Ten punkt jest nadrzedny wzgledem historycznych wpisow etapowych `PARTIAL` dla t
      - `L5_O1b` zredukowano do jednego kroku terminalnego:
        - `L5_O1b_O1`: unitary S-matrix + asymptotic/scattering completeness theorem.
    - Znaczenie:
-     - status `L5` przechodzi z \"partial terminalized only for O1a\" do \"fully terminalized on both branches\",
+   - status `L5` przechodzi z \"partial terminalized only for O1a\" do \"fully terminalized on both branches\",
        przy utrzymanym theorem-level boundary bez overclaimu.
+
+## 105) Aktualizacja wykonawcza: QW-2217
+
+1. `QW-2217` (`report_qw2217_rg_terminal_theorem_spec_gate.json`)
+   - Verdict: `RG_TERMINAL_THEOREM_SPEC_GATE_PASS_PARTIAL_TERMINAL_LAYER_READY` (`10/13`)
+   - Wynik:
+     - zintegrowano terminalna warstwe L12 (`QW-2213` + `QW-2215`) do jednolitej specyfikacji theorem-level,
+     - jawnie zdefiniowano dependency DAG (`L12_O1a_O1 -> L12_O1b_O1`),
+     - jawnie zdefiniowano kryteria akceptacyjne (`T1..T5`) pod machine-check package.
+   - Znaczenie:
+     - L12 ma teraz nie tylko terminal obligations, ale tez kompletna specyfikacje domkniecia theorem-level
+       (co uszczelnia rygor metodologiczny i audytowalnosc finalnego kroku).
+
+## 106) Aktualizacja wykonawcza: QW-2218
+
+1. `QW-2218` (`report_qw2218_qft_terminal_theorem_spec_gate.json`)
+   - Verdict: `QFT_TERMINAL_THEOREM_SPEC_GATE_PASS_PARTIAL_TERMINAL_LAYER_READY` (`10/13`)
+   - Wynik:
+     - zintegrowano terminalna warstwe L5 (`QW-2214` + `QW-2216`) do jednolitej specyfikacji theorem-level,
+     - jawnie zdefiniowano dependency DAG (`L5_O1a_O1 -> L5_O1b_O1`),
+     - jawnie zdefiniowano kryteria akceptacyjne (`Q1..Q5`) pod machine-check package.
+   - Znaczenie:
+     - L5 ma teraz nie tylko terminal obligations, ale tez kompletna specyfikacje domkniecia theorem-level
+       (co uszczelnia rygor metodologiczny i audytowalnosc finalnego kroku).

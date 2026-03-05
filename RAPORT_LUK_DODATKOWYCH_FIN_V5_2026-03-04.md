@@ -1193,3 +1193,33 @@ Nowe bramki strict:
 - Znaczenie:
   - L5 przechodzi do poziomu \"terminal-obligation ready\" dla obu galezi
     (`L5_O1a_O1`, `L5_O1b_O1`) bez overclaimu globalnej closure.
+
+## Aktualizacja 2026-03-05: QW-2217 (L12 terminal theorem spec)
+
+- Artefakt: `report_qw2217_rg_terminal_theorem_spec_gate.json`
+- Werdykt: `RG_TERMINAL_THEOREM_SPEC_GATE_PASS_PARTIAL_TERMINAL_LAYER_READY` (`10/13`)
+- Co zostalo domkniete:
+  1. formalna integracja obu terminalnych galezi L12 do jednej warstwy theorem-spec,
+  2. jawny dependency DAG (`L12_O1a_O1 -> L12_O1b_O1`),
+  3. jawne kryteria akceptacyjne (`T1..T5`) dla finalnego proof package.
+- Granica:
+  - `L12_O1a_O1=False`,
+  - `L12_O1b_O1=False`,
+  - `L12` nadal niezamkniete.
+- Znaczenie:
+  - L12 ma kompletna, audytowalna specyfikacje finalnego domkniecia theorem-level.
+
+## Aktualizacja 2026-03-05: QW-2218 (L5 terminal theorem spec)
+
+- Artefakt: `report_qw2218_qft_terminal_theorem_spec_gate.json`
+- Werdykt: `QFT_TERMINAL_THEOREM_SPEC_GATE_PASS_PARTIAL_TERMINAL_LAYER_READY` (`10/13`)
+- Co zostalo domkniete:
+  1. formalna integracja obu terminalnych galezi L5 do jednej warstwy theorem-spec,
+  2. jawny dependency DAG (`L5_O1a_O1 -> L5_O1b_O1`),
+  3. jawne kryteria akceptacyjne (`Q1..Q5`) dla finalnego proof package.
+- Granica:
+  - `L5_O1a_O1=False`,
+  - `L5_O1b_O1=False`,
+  - `L5` nadal niezamkniete.
+- Znaczenie:
+  - L5 ma kompletna, audytowalna specyfikacje finalnego domkniecia theorem-level.

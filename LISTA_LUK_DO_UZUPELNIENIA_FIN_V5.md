@@ -628,3 +628,27 @@ Granica pozostaje jawna:
 - `L5_O1b_O1=False`,
 - `L5_O1b=False`,
 - `L5` pozostaje niezamkniete.
+
+91. `L12` - terminal theorem spec layer (acceptance criteria + dependency DAG)
+Status: `PARTIAL_L12_TERMINAL_LAYER_SPEC_READY`
+Uzasadnienie: `QW-2217` przechodzi `RG_TERMINAL_THEOREM_SPEC_GATE_PASS_PARTIAL_TERMINAL_LAYER_READY` (`10/13`) i formalizuje:
+- pelna specyfikacje theorem-layer dla L12:
+  - terminal obligations: `L12_O1a_O1`, `L12_O1b_O1`,
+  - dependency DAG: `L12_O1a_O1 -> L12_O1b_O1`,
+  - jawne kryteria akceptacyjne (`T1..T5`) pod machine-check closure package.
+Granica pozostaje jawna:
+- `L12_O1a_O1=False`,
+- `L12_O1b_O1=False`,
+- `L12` pozostaje niezamkniete.
+
+92. `L5` - terminal theorem spec layer (acceptance criteria + dependency DAG)
+Status: `PARTIAL_L5_TERMINAL_LAYER_SPEC_READY`
+Uzasadnienie: `QW-2218` przechodzi `QFT_TERMINAL_THEOREM_SPEC_GATE_PASS_PARTIAL_TERMINAL_LAYER_READY` (`10/13`) i formalizuje:
+- pelna specyfikacje theorem-layer dla L5:
+  - terminal obligations: `L5_O1a_O1`, `L5_O1b_O1`,
+  - dependency DAG: `L5_O1a_O1 -> L5_O1b_O1`,
+  - jawne kryteria akceptacyjne (`Q1..Q5`) pod machine-check closure package.
+Granica pozostaje jawna:
+- `L5_O1a_O1=False`,
+- `L5_O1b_O1=False`,
+- `L5` pozostaje niezamkniete.
