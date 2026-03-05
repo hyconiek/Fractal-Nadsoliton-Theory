@@ -722,3 +722,27 @@ Uzasadnienie: `QW-2224` przechodzi `QFT_AXIOM_FREE_DISCHARGE_SPEC_GATE_PASS_PART
 Granica pozostaje jawna:
 - `l5_axiom_free_fully_closed=False`,
 - `L5` pozostaje niezamkniete na poziomie theorem-level axiom-free.
+
+99. `L12` - axiom-free O1a provenance map (strict accounting)
+Status: `PARTIAL_L12_AXIOM_FREE_O1A_PROVENANCE_MAPPED`
+Uzasadnienie: `QW-2225` przechodzi `RG_AXIOM_FREE_O1A_PROVENANCE_GATE_PASS_PARTIAL_UNRESOLVED_THEOREM` (`8/9`) i formalizuje:
+- pelne mapowanie provenance dla targetow `L12_AXIOM_FREE_O1a`:
+  - `FINActionComplete` -> strict canonical action/EoM chain,
+  - `RGConstructiveMap` -> strict declared-domain constructive RG chain,
+  - `RGGlobalWellPosednessAllScales` -> jawnie unresolved theorem-level,
+  - `L12O1aWitness` -> jawnie syntactic witness.
+Granica pozostaje jawna:
+- `l12_axiom_free_o1a_fully_closed=False`,
+- brak overclaimu globalnego well-posedness.
+
+100. `L5` - axiom-free O1a provenance map (strict accounting)
+Status: `PARTIAL_L5_AXIOM_FREE_O1A_PROVENANCE_MAPPED`
+Uzasadnienie: `QW-2226` przechodzi `QFT_AXIOM_FREE_O1A_PROVENANCE_GATE_PASS_PARTIAL_UNRESOLVED_THEOREM` (`8/9`) i formalizuje:
+- pelne mapowanie provenance dla targetow `L5_AXIOM_FREE_O1a`:
+  - `FINActionComplete` -> strict canonical action/EoM chain,
+  - `ConstructiveNonPerturbativeScheme` -> strict QFT scope + terminalization chain,
+  - `PositivityToReconstruction` -> jawnie unresolved theorem-level,
+  - `L5O1aWitness` -> jawnie syntactic witness.
+Granica pozostaje jawna:
+- `l5_axiom_free_o1a_fully_closed=False`,
+- brak overclaimu theorem-level positivity/reconstruction.

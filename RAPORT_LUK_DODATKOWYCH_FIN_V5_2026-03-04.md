@@ -1305,3 +1305,29 @@ Nowe bramki strict:
   - wszystkie subobligacje pozostaja jawnie otwarte.
 - Znaczenie:
   - L5 przechodzi do etapu wykonawczego axiom-free discharge z jawnym harmonogramem zaleznosci.
+
+## Aktualizacja 2026-03-05: QW-2225 (L12 O1a provenance)
+
+- Artefakt: `report_qw2225_rg_axiom_free_o1a_provenance_gate.json`
+- Werdykt: `RG_AXIOM_FREE_O1A_PROVENANCE_GATE_PASS_PARTIAL_UNRESOLVED_THEOREM` (`8/9`)
+- Co zostalo domkniete:
+  1. formalna mapa provenance dla kazdego targetu `L12_AXIOM_FREE_O1a`,
+  2. formalne rozroznienie targetow strict-grounded vs theorem-level unresolved.
+- Granica:
+  - unresolved: `RGGlobalWellPosednessAllScales`, `L12O1aWitness`,
+  - `l12_axiom_free_o1a_fully_closed=False`.
+- Znaczenie:
+  - L12 O1a ma teraz audytowalny ledger pochodzenia i jawny remaining theorem gap.
+
+## Aktualizacja 2026-03-05: QW-2226 (L5 O1a provenance)
+
+- Artefakt: `report_qw2226_qft_axiom_free_o1a_provenance_gate.json`
+- Werdykt: `QFT_AXIOM_FREE_O1A_PROVENANCE_GATE_PASS_PARTIAL_UNRESOLVED_THEOREM` (`8/9`)
+- Co zostalo domkniete:
+  1. formalna mapa provenance dla kazdego targetu `L5_AXIOM_FREE_O1a`,
+  2. formalne rozroznienie targetow strict-grounded vs theorem-level unresolved.
+- Granica:
+  - unresolved: `PositivityToReconstruction`, `L5O1aWitness`,
+  - `l5_axiom_free_o1a_fully_closed=False`.
+- Znaczenie:
+  - L5 O1a ma teraz audytowalny ledger pochodzenia i jawny remaining theorem gap.

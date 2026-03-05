@@ -1665,3 +1665,27 @@ Ten punkt jest nadrzedny wzgledem historycznych wpisow etapowych `PARTIAL` dla t
    - Znaczenie:
      - L5 przechodzi z etapu \"single axiom-free gap\" do etapu
        \"subobligation-driven axiom-free discharge\", bez overclaimu full closure.
+
+## 113) Aktualizacja wykonawcza: QW-2225
+
+1. `QW-2225` (`report_qw2225_rg_axiom_free_o1a_provenance_gate.json`)
+   - Verdict: `RG_AXIOM_FREE_O1A_PROVENANCE_GATE_PASS_PARTIAL_UNRESOLVED_THEOREM` (`8/9`)
+   - Wynik:
+     - pelna, jawna mapa provenance dla targetow `L12_AXIOM_FREE_O1a`,
+     - strict-grounded: `FINActionComplete`, `RGConstructiveMap`,
+     - jawnie unresolved theorem-level: `RGGlobalWellPosednessAllScales`, `L12O1aWitness`.
+   - Znaczenie:
+     - L12 axiom-free przechodzi z etapu \"decomposition-only\" do etapu
+       \"decomposition + strict provenance accounting\" dla galezi `O1a`.
+
+## 114) Aktualizacja wykonawcza: QW-2226
+
+1. `QW-2226` (`report_qw2226_qft_axiom_free_o1a_provenance_gate.json`)
+   - Verdict: `QFT_AXIOM_FREE_O1A_PROVENANCE_GATE_PASS_PARTIAL_UNRESOLVED_THEOREM` (`8/9`)
+   - Wynik:
+     - pelna, jawna mapa provenance dla targetow `L5_AXIOM_FREE_O1a`,
+     - strict-grounded: `FINActionComplete`, `ConstructiveNonPerturbativeScheme`,
+     - jawnie unresolved theorem-level: `PositivityToReconstruction`, `L5O1aWitness`.
+   - Znaczenie:
+     - L5 axiom-free przechodzi z etapu \"decomposition-only\" do etapu
+       \"decomposition + strict provenance accounting\" dla galezi `O1a`.
