@@ -1,0 +1,75 @@
+{
+  "generated_utc": "2026-03-05T02:54:33.778276+00:00",
+  "sources": {
+    "q2069": "report_qw2069_full_sm_gr_derivation_package.json",
+    "q2063": "report_qw2063_derivational_reconstruction_shared_flavor_basis.json",
+    "q2088": "report_qw2088_light_quark_mass_nonanchor_gate.json",
+    "q2119": "report_qw2119_mass_hierarchy_vacuum_conditional_gate.json",
+    "q2194": "report_qw2194_mass_derivation_calibration_separation_gate.json"
+  },
+  "stats": {
+    "core6": {
+      "n": 6,
+      "mean_rel_err_pct": 12.050820702359331,
+      "median_rel_err_pct": 7.918104033990816,
+      "max_rel_err_pct": 34.01344713765796,
+      "min_rel_err_pct": 0.0
+    },
+    "non_top5": {
+      "n": 5,
+      "mean_rel_err_pct": 14.460984842831198,
+      "median_rel_err_pct": 13.00912558624037,
+      "max_rel_err_pct": 34.01344713765796,
+      "min_rel_err_pct": 2.4352774469016087
+    },
+    "light3": {
+      "n": 3,
+      "mean_rel_err_pct": 13.55854225090244,
+      "median_rel_err_pct": 12.423380620984984,
+      "max_rel_err_pct": 17.355255390981608,
+      "min_rel_err_pct": 10.896990740740726
+    },
+    "all9": {
+      "n": 9,
+      "mean_rel_err_pct": 12.553394551873701,
+      "median_rel_err_pct": 12.423380620984984,
+      "max_rel_err_pct": 34.01344713765796,
+      "min_rel_err_pct": 0.0
+    },
+    "n_under_5pct_all9": 3,
+    "n_under_2pct_all9": 1
+  },
+  "reviewer_sensitive_outlier": {
+    "id": "m_electron",
+    "rel_err_pct": 34.01344713765796,
+    "notes": "Reference exp=0.000511 GeV in mass-chain report."
+  },
+  "open_frontier_components": [
+    "reduce_non_top5_mean_error_below_10pct",
+    "reduce_non_top5_max_error_below_20pct",
+    "increase_high_precision_counts_below_5pct_and_2pct",
+    "close_full_mass_chain_anchor_free_without_singleton_anchor"
+  ],
+  "flags": {
+    "q2069_mass_rows_complete_for_all9": true,
+    "q2069_declared_tolerance_all9_pass": true,
+    "q2063_core6_chain_pass_present": true,
+    "q2088_light_quark_nonanchor_pass_present": true,
+    "q2119_hierarchy_quality_core_pass": true,
+    "q2194_derivation_calibration_boundary_explicit": true,
+    "all9_mean_rel_err_le_15pct": true,
+    "all9_max_rel_err_le_20pct": false,
+    "non_top5_mean_rel_err_le_10pct": false,
+    "non_top5_max_rel_err_le_20pct": false,
+    "light3_max_rel_err_le_20pct": true,
+    "at_least_4_of_9_masses_below_5pct_error": false,
+    "at_least_3_of_9_masses_below_2pct_error": false,
+    "full_mass_chain_anchor_free_without_singleton_anchor": false,
+    "deterministic_no_scan_no_retune": true,
+    "no_overclaim_scope_boundary_explicit": true
+  },
+  "pass_count": 10,
+  "total_flags": 16,
+  "verdict": "MASS_PRECISION_SCOPE_STRATIFICATION_GATE_PASS_PARTIAL_FRONTIER_EXPLICIT",
+  "required_next_step": "TARGET_ELECTRON_MUON_CHARM_FRONTIER_WITHOUT_RETUNE_AND_CLOSE_ANCHOR_FREE_TOP_BOUNDARY"
+}

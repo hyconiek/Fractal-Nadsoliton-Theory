@@ -1372,4 +1372,45 @@ Ten punkt jest nadrzedny wzgledem historycznych wpisow etapowych `PARTIAL` dla t
    - Znaczenie:
      - `L10` przechodzi z `OPEN` do formalnego `PARTIAL`:
        pakiet i protokol sa gotowe, ale sama niezalezna egzekucja multiteam
-       i publiczne signed reports nadal sa warunkiem otwartym.
+     i publiczne signed reports nadal sa warunkiem otwartym.
+
+## 93) Aktualizacja wykonawcza: QW-2205
+
+1. `QW-2205` (`report_qw2205_mass_precision_scope_stratification_gate.json`)
+   - Verdict: `MASS_PRECISION_SCOPE_STRATIFICATION_GATE_PASS_PARTIAL_FRONTIER_EXPLICIT` (`10/16`)
+   - Wynik:
+     - wykonano scope-stratified audit precyzji mas spinajacy chain:
+       `QW-2069`, `QW-2063`, `QW-2088`, `QW-2119`, `QW-2194`,
+     - declared tolerance scope dla `all9` jest domkniety:
+       `mean_rel_err=12.55% <= 15%`,
+     - light-quark non-anchor warstwa pozostaje zamknieta:
+       `light3 max_rel_err=17.36% <= 20%`.
+   - Frontier recenzencki (jawnie otwarty):
+     - `non_top5 mean_rel_err=14.46%` (`target <=10%`: fail),
+     - `non_top5 max_rel_err=34.01%` (`target <=20%`: fail),
+     - `n_under_5pct_all9=3` (`target >=4`: fail),
+     - `n_under_2pct_all9=1` (`target >=3`: fail),
+     - `full_mass_chain_anchor_free_without_singleton_anchor=False`.
+   - Znaczenie:
+     - `L8` przechodzi z ogolnego `PARTIAL` do formalnego
+       `PARTIAL_STRICT_SCOPE_CLOSED_FRONTIER_EXPLICIT`:
+       strict scope jest domkniety i audytowalny, ale high-precision/anchor-free frontier
+       pozostaje jawnie otwarty bez overclaimu.
+
+## 94) Aktualizacja wykonawcza: QW-2206
+
+1. `QW-2206` (`report_qw2206_foundational_entity_topology_scope_gate.json`)
+   - Verdict: `FOUNDATIONAL_ENTITY_TOPOLOGY_SCOPE_GATE_PASS_PARTIAL_LOCAL_PROTECTION_ONLY` (`9/11`)
+   - Wynik:
+     - zintegrowano warstwe `L1`:
+       canonical action + exhaustive EoM evidence (`QW-2165`) z lokalnoscia spacetime na poziomie rownan,
+     - zintegrowano warstwe `L2/L17`:
+       - `QW-1204`: topological charge close to one (`B≈0.999823`),
+       - `QW-1611`: radial convergence close to one (`Q_inf≈0.998332`),
+       - `QW-1622`: FR quantization (`spin=1/2`, `g=2`).
+   - Granica foundational:
+     - `single_fundamental_field_reduction_closed=False`,
+     - `global_full_object_topological_protection_theorem_closed=False`.
+   - Znaczenie:
+     - `L1/L2/L17` przechodza z niestrukturalnego `PARTIAL` do formalnego
+       `PARTIAL+` z domknieta warstwa lokalna i jawnie utrzymana granica theorem-level global closure.

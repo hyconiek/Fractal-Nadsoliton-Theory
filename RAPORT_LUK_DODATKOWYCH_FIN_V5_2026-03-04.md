@@ -1003,3 +1003,45 @@ Nowe bramki strict:
   - `L10` przechodzi z `OPEN` do formalnego `PARTIAL`:
     infrastruktura i protokol sa gotowe, ale warunek spolecznosciowy (realny niezalezny rerun)
     pozostaje jawnie otwarty.
+
+## Aktualizacja 2026-03-05: QW-2205 (L8)
+
+- Artefakt: `report_qw2205_mass_precision_scope_stratification_gate.json`
+- Werdykt: `MASS_PRECISION_SCOPE_STRATIFICATION_GATE_PASS_PARTIAL_FRONTIER_EXPLICIT` (`10/16`)
+- Co zostalo domkniete:
+  1. formalna stratification precyzji mas zintegrowana przez:
+     `QW-2069`, `QW-2063`, `QW-2088`, `QW-2119`, `QW-2194`,
+  2. declared strict tolerance scope dla `all9` jest domkniety:
+     `mean_rel_err=12.55% <= 15%`,
+  3. warstwa light non-anchor pozostaje domknieta:
+     `light3 max_rel_err=17.36% <= 20%`.
+- Granica:
+  - `non_top5 mean_rel_err=14.46%` (target `<=10%` nieosiagniety),
+  - `non_top5 max_rel_err=34.01%` (target `<=20%` nieosiagniety),
+  - `n_under_5pct_all9=3` (target `>=4` nieosiagniety),
+  - `n_under_2pct_all9=1` (target `>=3` nieosiagniety),
+  - `full_mass_chain_anchor_free_without_singleton_anchor=False`.
+- Znaczenie:
+  - `L8` przechodzi z ogolnego `PARTIAL` do formalnego
+    `PARTIAL_STRICT_SCOPE_CLOSED_FRONTIER_EXPLICIT`:
+    scope jest audytowalnie domkniety, ale reviewer-sensitive frontier precyzji
+    pozostaje jawnie otwarty bez overclaimu.
+
+## Aktualizacja 2026-03-05: QW-2206 (L1/L2/L17)
+
+- Artefakt: `report_qw2206_foundational_entity_topology_scope_gate.json`
+- Werdykt: `FOUNDATIONAL_ENTITY_TOPOLOGY_SCOPE_GATE_PASS_PARTIAL_LOCAL_PROTECTION_ONLY` (`9/11`)
+- Co zostalo domkniete:
+  1. `L1` warstwa canonical action + exhaustive EoM jest formalnie zintegrowana
+     (`QW-2165`, lokalnosc spacetime utrzymana),
+  2. `L2/L17` lokalna warstwa topologiczna jest formalnie zintegrowana:
+     - `QW-1204`: `B≈0.999823`,
+     - `QW-1611`: `Q_inf≈0.998332`,
+     - `QW-1622`: FR (`spin=1/2`, `g=2`).
+- Granica:
+  - `single_fundamental_field_reduction_closed=False`,
+  - `global_full_object_topological_protection_theorem_closed=False`.
+- Znaczenie:
+  - `L1/L2/L17` przechodza z nieustrukturyzowanego `PARTIAL`
+    do `PARTIAL+` z domknietym local evidence layer i jawnie utrzymanym
+    theorem-level global boundary.

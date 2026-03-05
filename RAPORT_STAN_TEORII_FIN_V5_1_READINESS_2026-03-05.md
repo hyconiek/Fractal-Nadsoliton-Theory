@@ -1,7 +1,7 @@
 # RAPORT STANU TEORII FIN (Release 5.1 readiness)
 
 **Data:** 2026-03-05  
-**Zakres audytu:** strict chain do `QW-2204` + raporty luk (`L1..L23`)  
+**Zakres audytu:** strict chain do `QW-2206` + raporty luk (`L1..L23`)  
 **Decyzja:** `RELEASE_5_1_FULL_CLOSURE_NOT_READY`
 
 ## 1) Werdykt główny
@@ -47,18 +47,20 @@ Stan na dziś:
    - `QW-2201`: GR-limit conditions catalog layer (`L4`) z jawnie skatalogowanymi warunkami i jawnie otwartym foundational derivation,
    - `QW-2202`: QFT strict scope stratification (`L5`) z integracja warstw lokalnych i jawna lista globalnych theorem-level luk,
    - `QW-2203`: empirical prediction stack status (`L9`) z prereg/falsification stackiem i jawnie utrzymanym pending multidomain data,
-   - `QW-2204`: external multiteam execution status (`L10`) z packet-ready chain i jawnie otwartym execution/signed-reports boundary.
+   - `QW-2204`: external multiteam execution status (`L10`) z packet-ready chain i jawnie otwartym execution/signed-reports boundary,
+   - `QW-2205`: mass precision scope stratification (`L8`) z jawnie zamknietym declared tolerance scope i jawnie otwartym reviewer-sensitive frontier,
+   - `QW-2206`: foundational entity + topology scope stratification (`L1/L2/L17`) z domknieta warstwa lokalna i jawnie otwarta warstwa global theorem-level.
 
 ## 3) Co pozostaje realnie otwarte (pytania recenzenckie)
 
 ### A. Fundament teorii pola
-1. `L1/L2`: pełna ontologia jednego bytu fundamentalnego + kompletny dowód solitonowości/topologicznej ochrony globalnej.
+1. `L1/L2/L17`: po `QW-2206` lokalna warstwa action+EoM+topologia jest formalnie zintegrowana (B~1, FR spin/g), ale pełna ontologia jednego bytu i globalny theorem ochrony topologicznej pozostają otwarte.
 2. `L3/L18/L19`: pełne wyprowadzenie spinor+gauge bez ograniczenia do anchored-domain/mostów częściowych.
 3. `L4/L16/L23`: pełny most action-level do GR (nie tylko zgodność metryk/gate-level).
 
 ### B. Rygor matematyczny globalny
 1. `L5`: po `QW-2202` warstwa strict-scope jest zintegrowana, ale pelne globalne twierdzenia (nonperturbative existence, S-matrix unitarity, reflection-positivity/Wightman reconstruction) pozostaja otwarte.
-2. `L6/L7/L20/L21`: globalna unikalność mapowania kernel->observables, odporność i separacja „derivation vs calibration”.
+2. `L6/L7/L8/L20/L21`: globalna unikalność mapowania kernel->observables, odporność i separacja „derivation vs calibration”, plus recenzencki frontier precyzji mas (non-top/high-precision counts/anchor-free top).
 3. `L12`: pełny nieperturbacyjny fixed-point RG (obecnie strict proxy + Jacobian).
 
 ### C. Falsyfikacja i status społecznościowy
@@ -69,14 +71,14 @@ Stan na dziś:
 
 | Luka | Status 2026-03-05 | Uwagi |
 |---|---|---|
-| L1 | PARTIAL | formalne EoM są, ontologia 1-byt nadal otwarta |
-| L2 | PARTIAL | lokalne wyniki topologiczne są, globalny dowód ochrony niepełny |
+| L1 | PARTIAL+ | canonical action+exhaustive EoM warstwa zintegrowana (`QW-2206`), ale single fundamental field ontology nadal otwarta |
+| L2 | PARTIAL+ | lokalna solitonowosc/topologia domknieta (`QW-2206`: B~1, FR spin/g), ale globalny theorem ochrony niepelny |
 | L3 | PARTIAL+++ | kernel-mode scaffold + obstruction theorem + axiom-augmented closure + robustness family (`QW-2193`); axiom-free unikalnosc nadal otwarta |
 | L4 | PARTIAL++ | GR-limit conditions catalog domkniety (`QW-2201`), ale direct foundational derivation/equivalence theorem nadal otwarte |
 | L5 | PARTIAL++ | strict QFT scope zintegrowany (`QW-2202`), ale globalne theorem-level closure nadal otwarte |
 | L6 | PARTIAL++ | scope-stratified identifiability domkniete (`QW-2196`), axiom-free global closure nadal otwarta |
 | L7 | PARTIAL++ | integrated robustness envelope domkniety w strict scope (`QW-2197`), global unbounded robustness nadal otwarta |
-| L8 | PARTIAL | poprawa duża, ale sektor mas nadal recenzencko wrażliwy |
+| L8 | PARTIAL+ | scope-stratified mass precision domkniete (`QW-2205`), ale non-top/high-precision/anchor-free frontier nadal otwarty |
 | L9 | PARTIAL+ | strict prereg/falsification stack zintegrowany (`QW-2203`), ale brak jednej centralnej wysokowplywowej predykcji potwierdzonej multidomain |
 | L10 | PARTIAL+ | external packet/protocol chain domkniety (`QW-2204`), ale brak realnego niezaleznego multiteam rerun z publicznymi signed reports |
 | L11 | PARTIAL+ | strict Planck bridge domkniety (`QW-2198`), ale fully-internal (bez external bridge) nadal otwarte |
@@ -85,7 +87,7 @@ Stan na dziś:
 | L14 | CLOSED (strict internal) | domknięte przez QW-2180 + QW-2181 |
 | L15 | PARTIAL+ | theorem-level branch-scope stability margin (`QW-2186`), poza-scope perturbacje nadal otwarte |
 | L16 | PARTIAL++ | low-energy SM+GR reduction scope domkniety (`QW-2200`), theorem-level full reduction nadal otwarta |
-| L17 | PARTIAL | lokalne topologiczne bloki tak, globalna ochrona bytu niepełna |
+| L17 | PARTIAL+ | lokalna ochrona topologiczna formalnie zintegrowana (`QW-2206`), ale global full-object proof pozostaje otwarty |
 | L18 | PARTIAL+++ | de-anchored consistency + mode-scaffold + obstruction theorem + axiom-augmented closure + robustness family (`QW-2193`); axiom-free pelna unikalnosc nadal otwarta |
 | L19 | PARTIAL+++ | gauge bridge + symbolic `Y_H` + de-anchored anomaly/charge + mode-scaffold + obstruction theorem + axiom-augmented closure + robustness family (`QW-2193`) |
 | L20 | PARTIAL+ | rule-layer axiom-augmented domkniety (`QW-2195`), ale pelna unikalnosc fizyczna axiom-free nadal otwarta |

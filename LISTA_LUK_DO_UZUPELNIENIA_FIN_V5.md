@@ -488,3 +488,31 @@ Granice pozostaja jawne:
 `truly_independent_multiteam_execution_completed=False`,
 `at_least_two_external_teams_completed_and_reported=False`,
 `independent_team_reports_public_and_signed=False`.
+
+79. `L8` - mass precision scope stratification (reviewer-sensitive frontier)
+Status: `PARTIAL_STRICT_SCOPE_CLOSED_FRONTIER_EXPLICIT`
+Uzasadnienie: `QW-2205` przechodzi `MASS_PRECISION_SCOPE_STRATIFICATION_GATE_PASS_PARTIAL_FRONTIER_EXPLICIT` (`10/16`) i formalizuje:
+- domkniecie declared strict tolerance scope dla `all9` (`mean_rel_err=12.55% <= 15%`) oraz light-quark non-anchor support (`light3 max=17.36% <= 20%`),
+- jawne spiecie z wczesniejszym chainem: `QW-2069` (mass rows complete), `QW-2063` (core6 chain), `QW-2088` (light non-anchor), `QW-2119` (hierarchy quality), `QW-2194` (derivation/calibration boundary),
+- jawna ekspozycja reviewer-sensitive frontier bez overclaimu:
+  `non_top5 mean=14.46%` (target `<10%` nieosiagniety),
+  `non_top5 max=34.01%` (target `<20%` nieosiagniety),
+  `n_under_5pct_all9=3` (target `>=4` nieosiagniety),
+  `n_under_2pct_all9=1` (target `>=3` nieosiagniety),
+  `full_mass_chain_anchor_free_without_singleton_anchor=False`.
+Granica pozostaje jawna: sektor mas nie jest jeszcze domkniety na poziomie recenzenckiej precyzji high-precision + anchor-free.
+
+80. `L1/L2/L17` - foundational entity + topology scope stratification
+Status: `PARTIAL_LOCAL_LAYER_CLOSED_GLOBAL_THEOREM_OPEN`
+Uzasadnienie: `QW-2206` przechodzi `FOUNDATIONAL_ENTITY_TOPOLOGY_SCOPE_GATE_PASS_PARTIAL_LOCAL_PROTECTION_ONLY` (`9/11`) i formalizuje:
+- `L1` (fundamental action/EoM layer):
+  - canonical single-action template + exhaustive EoM dla `12xPsi + Phi` sa obecne (`QW-2165`),
+  - lokalnosc spacetime na poziomie rownan (`no_spacetime_nonlocal_tokens=True`) jest jawnie utrzymana.
+- `L2/L17` (local topological protection layer):
+  - lokalny ladunek topologiczny bliski `1` (`QW-1204`: `B≈0.999823`),
+  - radialna zbieznosc skyrmionowa bliska `1` (`QW-1611`: `Q_inf≈0.998332`),
+  - FR-kwantyzacja daje `spin=1/2` i `g=2` (`QW-1622`).
+- Granica globalna pozostaje jawna:
+  - `single_fundamental_field_reduction_closed=False`,
+  - `global_full_object_topological_protection_theorem_closed=False`.
+Znaczenie: lokalna warstwa fundament+topologia jest mocno podparta, ale pelny theorem-level global closure jednego bytu i ochrony topologicznej pozostaje otwarty.

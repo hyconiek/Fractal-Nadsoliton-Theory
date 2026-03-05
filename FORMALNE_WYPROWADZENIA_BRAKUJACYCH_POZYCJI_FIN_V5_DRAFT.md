@@ -3031,3 +3031,101 @@ Czyli:
 
 Werdykt:
 - `EXTERNAL_MULTITEAM_EXECUTION_STATUS_GATE_PASS_PARTIAL_PACKET_READY_EXECUTION_PENDING` (`11/14`).
+
+## 98) QW-2205: mass precision scope stratification (`L8`)
+
+Krok `QW-2205` formalizuje status `L8` przez rozdzial:
+\[
+\text{declared strict mass scope closed}
+\quad\land\quad
+\text{reviewer-sensitive precision frontier explicit}.
+\]
+
+### 98.1. Warstwa strict-scope (zamknieta)
+
+Zintegrowane artefakty:
+- `QW-2069` (mass rows complete + declared tolerance pass in package),
+- `QW-2063` (core6 chain),
+- `QW-2088` (light-quark non-anchor gate),
+- `QW-2119` (mass hierarchy quality),
+- `QW-2194` (derivation/calibration boundary).
+
+Wyniki metryczne:
+\[
+\texttt{all9\_mean\_rel\_err}=12.553\% \le 15\%,
+\]
+\[
+\texttt{light3\_max\_rel\_err}=17.355\% \le 20\%.
+\]
+
+### 98.2. Frontier recenzencki (jawnie otwarty)
+
+Pozostaja otwarte:
+\[
+\texttt{non\_top5\_mean\_rel\_err}=14.461\% > 10\%,
+\]
+\[
+\texttt{non\_top5\_max\_rel\_err}=34.013\% > 20\%,
+\]
+\[
+\texttt{n\_under\_5pct\_all9}=3 < 4,\qquad
+\texttt{n\_under\_2pct\_all9}=1 < 3,
+\]
+\[
+\texttt{full\_mass\_chain\_anchor\_free\_without\_singleton\_anchor}=\texttt{False}.
+\]
+
+### 98.3. Znaczenie dla L8
+
+`QW-2205` nie udaje pelnej high-precision closure.  
+On:
+1. domyka audytowalnie warstwe strict declared scope,
+2. przenosi otwarty problem do jawnego i mierzalnego frontieru recenzenckiego.
+
+Werdykt:
+- `MASS_PRECISION_SCOPE_STRATIFICATION_GATE_PASS_PARTIAL_FRONTIER_EXPLICIT` (`10/16`).
+
+## 99) QW-2206: foundational entity + topology scope stratification (`L1/L2/L17`)
+
+Krok `QW-2206` formalizuje rozdzial:
+\[
+\text{local foundational/topological evidence closed}
+\quad\land\quad
+\text{global theorem-level closure still open}.
+\]
+
+### 99.1. Warstwa L1 (dzialanie + EoM)
+
+Zintegrowany komponent:
+- `QW-2165` (`L13_EXHAUSTIVE_CANONICAL_EOM_GATE_PASS_PARTIAL_ALL_ORDERS_OPEN`):
+  - canonical action template jest jawnie obecny,
+  - Euler-Lagrange policzone dla wszystkich `13` pol (`12xPsi + Phi`),
+  - lokalnosc spacetime utrzymana (`no_spacetime_nonlocal_tokens_in_all_13_eom=True`).
+
+### 99.2. Warstwa L2/L17 (lokalna topologia/solitonowosc)
+
+Zintegrowane komponenty:
+- `QW-1204`: `B≈0.999823` (topological charge close to one),
+- `QW-1611`: `Q_inf≈0.998332` (radial convergence close to one),
+- `QW-1622`: FR quantization gives `spin=1/2` and `g=2`.
+
+To domyka lokalny evidence layer ochrony topologicznej i fermionowej natury
+na poziomie skyrmion + FR.
+
+### 99.3. Granica foundational (jawnie otwarta)
+
+Pozostaja otwarte:
+\[
+\texttt{single\_fundamental\_field\_reduction\_closed}=\texttt{False},
+\]
+\[
+\texttt{global\_full\_object\_topological\_protection\_theorem\_closed}=\texttt{False}.
+\]
+
+Czyli:
+- lokalna warstwa jest mocno podparta i audytowalna,
+- pelna ontologia jednego bytu i globalny theorem-level proof ochrony
+  nie sa jeszcze domkniete.
+
+Werdykt:
+- `FOUNDATIONAL_ENTITY_TOPOLOGY_SCOPE_GATE_PASS_PARTIAL_LOCAL_PROTECTION_ONLY` (`9/11`).
