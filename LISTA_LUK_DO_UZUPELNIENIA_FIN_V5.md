@@ -992,3 +992,31 @@ Granica pozostaje jawna:
 - `dax1_non_axiomatic_provider_completed=False`,
 - `c1_theorem_discharge_completed=False`,
 - `o1c_fully_closed=False`.
+
+121. `L12` - certyfikat zaleznosci eksportu RG od warstwy aksjomatycznej
+Status: `PARTIAL_L12_EXPORT_AXIOMATIC_DEPENDENCY_CERTIFIED`
+Uzasadnienie: `QW-2247` przechodzi `RG_EXPORT_AXIOMATIC_DEPENDENCY_GATE_PASS_PARTIAL_AXIOM_FREE_EXPORT_ABSENT` (`6/10`) i formalizuje:
+- target theoremy DAX1 sa wykryte (`n_matching_theorems=6`),
+- formalnie wykazano dependency chain do warstwy aksjomatycznej (`dependency_chain_hits_axiom_layer=True`),
+- formalnie wykazano dependency chain do `*_DerivedOrPending` (`dependency_chain_hits_derived_or_pending=True`),
+- brak axiom-free kandydatow i brak non-axiomatic export symbolu.
+Granica pozostaje jawna:
+- `n_non_axiomatic_candidates=0`,
+- `canonical_export_symbol_non_axiomatic_exists=False`,
+- `dax1_non_axiomatic_provider_completed=False`,
+- `c1_theorem_discharge_completed=False`,
+- `o1c_fully_closed=False`.
+
+122. `L5` - certyfikat zaleznosci eksportu QFT od warstwy aksjomatycznej
+Status: `PARTIAL_L5_EXPORT_AXIOMATIC_DEPENDENCY_CERTIFIED`
+Uzasadnienie: `QW-2248` przechodzi `QFT_EXPORT_AXIOMATIC_DEPENDENCY_GATE_PASS_PARTIAL_AXIOM_FREE_EXPORT_ABSENT` (`6/10`) i formalizuje:
+- target theoremy DAX1 sa wykryte (`n_matching_theorems=6`),
+- formalnie wykazano dependency chain do warstwy aksjomatycznej (`dependency_chain_hits_axiom_layer=True`),
+- formalnie wykazano dependency chain do `*_DerivedOrPending` (`dependency_chain_hits_derived_or_pending=True`),
+- brak axiom-free kandydatow i brak non-axiomatic export symbolu.
+Granica pozostaje jawna:
+- `n_non_axiomatic_candidates=0`,
+- `canonical_export_symbol_non_axiomatic_exists=False`,
+- `dax1_non_axiomatic_provider_completed=False`,
+- `c1_theorem_discharge_completed=False`,
+- `o1c_fully_closed=False`.

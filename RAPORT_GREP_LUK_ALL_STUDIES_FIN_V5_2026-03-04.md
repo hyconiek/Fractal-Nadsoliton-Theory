@@ -1978,6 +1978,38 @@ Ten punkt jest nadrzedny wzgledem historycznych wpisow etapowych `PARTIAL` dla t
      - brak axiom-free kandydatow (`n_axiom_free_candidates=0`),
      - brak non-axiomatic lokalizacji export symbolu (`n_export_symbol_locations_non_axiomatic=0`).
    - Granica:
+   - `dax1_non_axiomatic_provider_completed=False`,
+   - `c1_theorem_discharge_completed=False`,
+   - `o1c_fully_closed=False`.
+
+## 135) Aktualizacja wykonawcza: QW-2247
+
+1. `QW-2247` (`report_qw2247_rg_export_axiomatic_dependency_gate.json`)
+   - Verdict: `RG_EXPORT_AXIOMATIC_DEPENDENCY_GATE_PASS_PARTIAL_AXIOM_FREE_EXPORT_ABSENT` (`6/10`)
+   - Wynik:
+     - formalny certyfikat zaleznosci export-target od warstwy aksjomatycznej,
+     - target theoremy wykryte (`n_matching_theorems=6`),
+     - dependency chain potwierdzony na poziomie `axiom` i `*_DerivedOrPending`,
+     - brak non-axiomatic export symbol oraz brak axiom-free kandydatow.
+   - Granica:
+     - `n_non_axiomatic_candidates=0`,
+     - `canonical_export_symbol_non_axiomatic_exists=False`,
+     - `dax1_non_axiomatic_provider_completed=False`,
+     - `c1_theorem_discharge_completed=False`,
+     - `o1c_fully_closed=False`.
+
+## 136) Aktualizacja wykonawcza: QW-2248
+
+1. `QW-2248` (`report_qw2248_qft_export_axiomatic_dependency_gate.json`)
+   - Verdict: `QFT_EXPORT_AXIOMATIC_DEPENDENCY_GATE_PASS_PARTIAL_AXIOM_FREE_EXPORT_ABSENT` (`6/10`)
+   - Wynik:
+     - formalny certyfikat zaleznosci export-target od warstwy aksjomatycznej,
+     - target theoremy wykryte (`n_matching_theorems=6`),
+     - dependency chain potwierdzony na poziomie `axiom` i `*_DerivedOrPending`,
+     - brak non-axiomatic export symbol oraz brak axiom-free kandydatow.
+   - Granica:
+     - `n_non_axiomatic_candidates=0`,
+     - `canonical_export_symbol_non_axiomatic_exists=False`,
      - `dax1_non_axiomatic_provider_completed=False`,
      - `c1_theorem_discharge_completed=False`,
      - `o1c_fully_closed=False`.

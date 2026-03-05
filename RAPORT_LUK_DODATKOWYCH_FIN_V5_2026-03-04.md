@@ -1619,3 +1619,37 @@ Nowe bramki strict:
   - `o1c_fully_closed=False`.
 - Znaczenie:
   - stan luki zostaje uscislniony: nie tylko brakuje export theorem, ale takze brak jakiegokolwiek axiom-free kandydata w aktualnym repo.
+
+## Aktualizacja 2026-03-05: QW-2247 (L12 export dependency certificate)
+
+- Artefakt: `report_qw2247_rg_export_axiomatic_dependency_gate.json`
+- Werdykt: `RG_EXPORT_AXIOMATIC_DEPENDENCY_GATE_PASS_PARTIAL_AXIOM_FREE_EXPORT_ABSENT` (`6/10`)
+- Co zostalo domkniete:
+  1. formalny certyfikat dependency-chain dla export-target RG,
+  2. wykazano uderzenie chainu w warstwe aksjomatyczna i `*_DerivedOrPending`,
+  3. utrzymano brak axiom-free kandydatow i brak non-axiomatic export symbol.
+- Granica:
+  - `n_non_axiomatic_candidates=0`,
+  - `canonical_export_symbol_non_axiomatic_exists=False`,
+  - `dax1_non_axiomatic_provider_completed=False`,
+  - `c1_theorem_discharge_completed=False`,
+  - `o1c_fully_closed=False`.
+- Znaczenie:
+  - luka przechodzi z klasy \"candidate missing\" do klasy \"axiomatic dependency formally certified\".
+
+## Aktualizacja 2026-03-05: QW-2248 (L5 export dependency certificate)
+
+- Artefakt: `report_qw2248_qft_export_axiomatic_dependency_gate.json`
+- Werdykt: `QFT_EXPORT_AXIOMATIC_DEPENDENCY_GATE_PASS_PARTIAL_AXIOM_FREE_EXPORT_ABSENT` (`6/10`)
+- Co zostalo domkniete:
+  1. formalny certyfikat dependency-chain dla export-target QFT,
+  2. wykazano uderzenie chainu w warstwe aksjomatyczna i `*_DerivedOrPending`,
+  3. utrzymano brak axiom-free kandydatow i brak non-axiomatic export symbol.
+- Granica:
+  - `n_non_axiomatic_candidates=0`,
+  - `canonical_export_symbol_non_axiomatic_exists=False`,
+  - `dax1_non_axiomatic_provider_completed=False`,
+  - `c1_theorem_discharge_completed=False`,
+  - `o1c_fully_closed=False`.
+- Znaczenie:
+  - luka przechodzi z klasy \"candidate missing\" do klasy \"axiomatic dependency formally certified\".
