@@ -1773,3 +1773,37 @@ Ten punkt jest nadrzedny wzgledem historycznych wpisow etapowych `PARTIAL` dla t
    - Znaczenie:
      - L5 przechodzi z etapu samej specyfikacji O1c do etapu wykonawczego witness-free candidate;
        finalny theorem-discharge pozostaje jawnie pending.
+
+## 121) Aktualizacja wykonawcza: QW-2233
+
+1. `QW-2233` (`report_qw2233_rg_axiom_free_o1c_theorem_discharge_spec_gate.json`)
+   - Verdict: `RG_AXIOM_FREE_O1C_THEOREM_DISCHARGE_SPEC_GATE_PASS_PARTIAL_PROOFS_PENDING` (`11/13`)
+   - Wynik:
+     - sformalizowano jawny pakiet theorem-discharge obligations dla L12 O1c:
+       - `RG_C1_1`, `RG_C1_2`, `RG_C1_3`,
+     - wyeksportowano plik obligacji + hashowany proof object spec:
+       - `spec_qw2233_rg_o1c_theorem_discharge_obligations.json`,
+       - `proof_object_qw2233_rg_o1c_theorem_discharge_spec.json`.
+   - Granica:
+     - `c1_theorem_discharge_completed=False`,
+     - `o1c_fully_closed=False`.
+   - Znaczenie:
+     - remaining gap jest zredukowany do wykonania jawnie nazwanych dowodow C1
+       (bez niejawnych placeholderow witness).
+
+## 122) Aktualizacja wykonawcza: QW-2234
+
+1. `QW-2234` (`report_qw2234_qft_axiom_free_o1c_theorem_discharge_spec_gate.json`)
+   - Verdict: `QFT_AXIOM_FREE_O1C_THEOREM_DISCHARGE_SPEC_GATE_PASS_PARTIAL_PROOFS_PENDING` (`11/13`)
+   - Wynik:
+     - sformalizowano jawny pakiet theorem-discharge obligations dla L5 O1c:
+       - `QFT_C1_1`, `QFT_C1_2`, `QFT_C1_3`,
+     - wyeksportowano plik obligacji + hashowany proof object spec:
+       - `spec_qw2234_qft_o1c_theorem_discharge_obligations.json`,
+       - `proof_object_qw2234_qft_o1c_theorem_discharge_spec.json`.
+   - Granica:
+     - `c1_theorem_discharge_completed=False`,
+     - `o1c_fully_closed=False`.
+   - Znaczenie:
+     - remaining gap jest zredukowany do wykonania jawnie nazwanych dowodow C1
+       (bez niejawnych placeholderow witness).

@@ -1413,3 +1413,31 @@ Nowe bramki strict:
 - Znaczenie:
   - L5 przechodzi z poziomu "attachment-spec ready" do poziomu "witness-free execution step done",
     ale finalny theorem-discharge pozostaje jawnie otwarty.
+
+## Aktualizacja 2026-03-05: QW-2233 (L12 O1c theorem-discharge spec)
+
+- Artefakt: `report_qw2233_rg_axiom_free_o1c_theorem_discharge_spec_gate.json`
+- Werdykt: `RG_AXIOM_FREE_O1C_THEOREM_DISCHARGE_SPEC_GATE_PASS_PARTIAL_PROOFS_PENDING` (`11/13`)
+- Co zostalo domkniete:
+  1. jawna specyfikacja theorem-discharge C1 jako trzy obligacje (`RG_C1_1..RG_C1_3`),
+  2. jawny DAG zaleznosci i kryteria akceptacyjne `D1..D4`,
+  3. hashowany proof-object spec dla finalnego etapu discharge.
+- Granica:
+  - `c1_theorem_discharge_completed=False`,
+  - `o1c_fully_closed=False`.
+- Znaczenie:
+  - remaining gap dla L12 O1c zostaje sformalizowany do jawnych, wykonywalnych dowodow theorem-level.
+
+## Aktualizacja 2026-03-05: QW-2234 (L5 O1c theorem-discharge spec)
+
+- Artefakt: `report_qw2234_qft_axiom_free_o1c_theorem_discharge_spec_gate.json`
+- Werdykt: `QFT_AXIOM_FREE_O1C_THEOREM_DISCHARGE_SPEC_GATE_PASS_PARTIAL_PROOFS_PENDING` (`11/13`)
+- Co zostalo domkniete:
+  1. jawna specyfikacja theorem-discharge C1 jako trzy obligacje (`QFT_C1_1..QFT_C1_3`),
+  2. jawny DAG zaleznosci i kryteria akceptacyjne `D1..D4`,
+  3. hashowany proof-object spec dla finalnego etapu discharge.
+- Granica:
+  - `c1_theorem_discharge_completed=False`,
+  - `o1c_fully_closed=False`.
+- Znaczenie:
+  - remaining gap dla L5 O1c zostaje sformalizowany do jawnych, wykonywalnych dowodow theorem-level.

@@ -814,3 +814,33 @@ Granica pozostaje jawna:
 - `c1_theorem_discharge_completed=False`,
 - `o1c_fully_closed=False`,
 - finalna luka to theorem-level discharge replacement dla `DerivedOrPending`.
+
+107. `L12` - axiom-free O1c theorem-discharge obligations spec
+Status: `PARTIAL_L12_AXIOM_FREE_O1C_THEOREM_DISCHARGE_SPEC_READY`
+Uzasadnienie: `QW-2233` przechodzi `RG_AXIOM_FREE_O1C_THEOREM_DISCHARGE_SPEC_GATE_PASS_PARTIAL_PROOFS_PENDING` (`11/13`) i formalizuje:
+- jawny pakiet obligacji theorem-level dla C1:
+  - `RG_C1_1`: `(FINActionComplete ∧ RGConstructiveMap) -> RGGlobalWellPosednessAllScales`,
+  - `RG_C1_2`: `RGGlobalWellPosednessAllScales -> RGGlobalFixedPointStabilityAllT`,
+  - `RG_C1_3`: kompozycja domykajaca finalny attachment O1c,
+- jawny DAG zaleznosci i kryteria akceptacyjne `D1..D4`,
+- hashowany proof object:
+  - `proof_object_qw2233_rg_o1c_theorem_discharge_spec.json`.
+Granica pozostaje jawna:
+- `c1_theorem_discharge_completed=False`,
+- `o1c_fully_closed=False`,
+- finalny krok to wykonanie dowodow dla `RG_C1_1..RG_C1_3`.
+
+108. `L5` - axiom-free O1c theorem-discharge obligations spec
+Status: `PARTIAL_L5_AXIOM_FREE_O1C_THEOREM_DISCHARGE_SPEC_READY`
+Uzasadnienie: `QW-2234` przechodzi `QFT_AXIOM_FREE_O1C_THEOREM_DISCHARGE_SPEC_GATE_PASS_PARTIAL_PROOFS_PENDING` (`11/13`) i formalizuje:
+- jawny pakiet obligacji theorem-level dla C1:
+  - `QFT_C1_1`: `(FINActionComplete ∧ ConstructiveNonPerturbativeScheme) -> PositivityToReconstruction`,
+  - `QFT_C1_2`: `PositivityToReconstruction -> UnitarySMatrixAndScatteringCompleteness`,
+  - `QFT_C1_3`: kompozycja domykajaca finalny attachment O1c,
+- jawny DAG zaleznosci i kryteria akceptacyjne `D1..D4`,
+- hashowany proof object:
+  - `proof_object_qw2234_qft_o1c_theorem_discharge_spec.json`.
+Granica pozostaje jawna:
+- `c1_theorem_discharge_completed=False`,
+- `o1c_fully_closed=False`,
+- finalny krok to wykonanie dowodow dla `QFT_C1_1..QFT_C1_3`.
