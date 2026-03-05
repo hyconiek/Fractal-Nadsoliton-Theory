@@ -513,6 +513,19 @@ Uzasadnienie: `QW-2206` przechodzi `FOUNDATIONAL_ENTITY_TOPOLOGY_SCOPE_GATE_PASS
   - radialna zbieznosc skyrmionowa bliska `1` (`QW-1611`: `Q_inf≈0.998332`),
   - FR-kwantyzacja daje `spin=1/2` i `g=2` (`QW-1622`).
 - Granica globalna pozostaje jawna:
-  - `single_fundamental_field_reduction_closed=False`,
-  - `global_full_object_topological_protection_theorem_closed=False`.
+- `single_fundamental_field_reduction_closed=False`,
+- `global_full_object_topological_protection_theorem_closed=False`.
 Znaczenie: lokalna warstwa fundament+topologia jest mocno podparta, ale pelny theorem-level global closure jednego bytu i ochrony topologicznej pozostaje otwarty.
+
+81. `L11` - Planck internalization obstruction/decomposition
+Status: `PARTIAL_STRICT_BRIDGE_CLOSED_SINGLE_INTERNAL_OBLIGATION_OPEN`
+Uzasadnienie: `QW-2207` przechodzi `PLANCK_INTERNALIZATION_OBSTRUCTION_GATE_PASS_PARTIAL_SINGLE_INTERNAL_ORIGIN_OBLIGATION_OPEN` (`10/11`) i formalizuje:
+- warstwa strict bridge pozostaje domknieta:
+  - `QW-2092`: `GNEWTON_SI_BRIDGE_GATE_PASS_STRICT`,
+  - `QW-2198`: bardzo wysoka zgodnosc Plancka (`m/l/t` z bledami << `1%`) bez recznego wpisania skali,
+- jawnie utrzymane pochodzenie bridge observable:
+  - `bridge_observable_origin=external_dimensionless_observable`,
+  - brak backsolve/feedback loop (`bridge_not_backsolved_from_g_si=True`, `no_anchor_feedback_loop=True`),
+- luka foundational zostaje zredukowana do jednej jawnej obligacji:
+  - `L11_O1`: wewnetrzne wyprowadzenie dimensionless bridge observable dla `G` bez external anchor.
+Granica pozostaje jawna: `full_internal_gnewton_origin_closed=False`.

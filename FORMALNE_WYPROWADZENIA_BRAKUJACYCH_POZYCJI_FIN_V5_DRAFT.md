@@ -3129,3 +3129,47 @@ Czyli:
 
 Werdykt:
 - `FOUNDATIONAL_ENTITY_TOPOLOGY_SCOPE_GATE_PASS_PARTIAL_LOCAL_PROTECTION_ONLY` (`9/11`).
+
+## 100) QW-2207: Planck internalization obstruction gate (`L11`)
+
+Krok `QW-2207` formalizuje:
+\[
+\text{strict Planck/G bridge closed}
+\quad\land\quad
+\text{single foundational internal-origin obligation open}.
+\]
+
+### 100.1. Warstwa domknieta
+
+Zintegrowane komponenty:
+- `QW-2092`: `GNEWTON_SI_BRIDGE_GATE_PASS_STRICT`,
+- `QW-2198`: `PLANCK_SCALE_BRIDGE_GATE_PASS_PARTIAL_EXTERNAL_BRIDGE_DEPENDENCE_EXPLICIT`.
+
+Wynik:
+- bridge numerycznie stabilny i wysokiej dokladnosci (`m/l/t` bledy relatywne << `1%`),
+- brak recznego wpisywania skali Plancka.
+
+### 100.2. Warstwa otwarta (zredukowana do jednej obligacji)
+
+Jawnie:
+\[
+\texttt{bridge\_observable\_origin}=\texttt{external\_dimensionless\_observable},
+\]
+\[
+\texttt{full\_internal\_gnewton\_origin\_closed}=\texttt{False}.
+\]
+
+Po dekompozycji `QW-2207` pozostaje jedna obligacja:
+\[
+\texttt{L11\_O1}:\ 
+\text{derive dimensionless }G\text{-bridge observable fully internal, without external anchor}.
+\]
+
+### 100.3. Znaczenie dla L11
+
+`L11` zostaje podniesione z ogolnego `PARTIAL+` do `PARTIAL++`:
+- bridge quality jest domknieta i audytowalna,
+- remaining foundational gap jest pojedyncza, jawnie nazwana i testowalna.
+
+Werdykt:
+- `PLANCK_INTERNALIZATION_OBSTRUCTION_GATE_PASS_PARTIAL_SINGLE_INTERNAL_ORIGIN_OBLIGATION_OPEN` (`10/11`).

@@ -1045,3 +1045,18 @@ Nowe bramki strict:
   - `L1/L2/L17` przechodza z nieustrukturyzowanego `PARTIAL`
     do `PARTIAL+` z domknietym local evidence layer i jawnie utrzymanym
     theorem-level global boundary.
+
+## Aktualizacja 2026-03-05: QW-2207 (L11)
+
+- Artefakt: `report_qw2207_planck_internalization_obstruction_gate.json`
+- Werdykt: `PLANCK_INTERNALIZATION_OBSTRUCTION_GATE_PASS_PARTIAL_SINGLE_INTERNAL_ORIGIN_OBLIGATION_OPEN` (`10/11`)
+- Co zostalo domkniete:
+  1. formalna integracja strict `G` bridge (`QW-2092`) z Planck bridge (`QW-2198`),
+  2. potwierdzenie, ze bridge jest numerycznie stabilny i high-accuracy,
+  3. jawna separacja: "bridge quality closed" vs "origin fully internal still open".
+- Granica:
+  - `bridge_observable_origin=external_dimensionless_observable`,
+  - `full_internal_gnewton_origin_closed=False`.
+- Znaczenie:
+  - `L11` przechodzi do `PARTIAL++` z pojedyncza, jawnie nazwana obligacja (`L11_O1`),
+    zamiast rozproszonej listy niejawnych otwarc.

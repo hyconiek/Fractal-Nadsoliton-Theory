@@ -1,7 +1,7 @@
 # RAPORT STANU TEORII FIN (Release 5.1 readiness)
 
 **Data:** 2026-03-05  
-**Zakres audytu:** strict chain do `QW-2206` + raporty luk (`L1..L23`)  
+**Zakres audytu:** strict chain do `QW-2207` + raporty luk (`L1..L23`)  
 **Decyzja:** `RELEASE_5_1_FULL_CLOSURE_NOT_READY`
 
 ## 1) Werdykt główny
@@ -49,7 +49,8 @@ Stan na dziś:
    - `QW-2203`: empirical prediction stack status (`L9`) z prereg/falsification stackiem i jawnie utrzymanym pending multidomain data,
    - `QW-2204`: external multiteam execution status (`L10`) z packet-ready chain i jawnie otwartym execution/signed-reports boundary,
    - `QW-2205`: mass precision scope stratification (`L8`) z jawnie zamknietym declared tolerance scope i jawnie otwartym reviewer-sensitive frontier,
-   - `QW-2206`: foundational entity + topology scope stratification (`L1/L2/L17`) z domknieta warstwa lokalna i jawnie otwarta warstwa global theorem-level.
+   - `QW-2206`: foundational entity + topology scope stratification (`L1/L2/L17`) z domknieta warstwa lokalna i jawnie otwarta warstwa global theorem-level,
+   - `QW-2207`: Planck internalization obstruction gate (`L11`) z izolacja jednej jawnej obligacji internal-origin dla `G` bridge observable.
 
 ## 3) Co pozostaje realnie otwarte (pytania recenzenckie)
 
@@ -62,6 +63,7 @@ Stan na dziś:
 1. `L5`: po `QW-2202` warstwa strict-scope jest zintegrowana, ale pelne globalne twierdzenia (nonperturbative existence, S-matrix unitarity, reflection-positivity/Wightman reconstruction) pozostaja otwarte.
 2. `L6/L7/L8/L20/L21`: globalna unikalność mapowania kernel->observables, odporność i separacja „derivation vs calibration”, plus recenzencki frontier precyzji mas (non-top/high-precision counts/anchor-free top).
 3. `L12`: pełny nieperturbacyjny fixed-point RG (obecnie strict proxy + Jacobian).
+4. `L11`: po `QW-2207` pozostaje jedna jawna obligacja foundational (`L11_O1`: wewnetrzne wyprowadzenie dimensionless bridge observable dla `G`).
 
 ### C. Falsyfikacja i status społecznościowy
 1. `L9`: po `QW-2203` stack predykcji/falsyfikacji jest formalnie gotowy (prereg + 1 kanał supported), ale brak jednej centralnej predykcji high-impact potwierdzonej niezależnie multidomain.
@@ -81,7 +83,7 @@ Stan na dziś:
 | L8 | PARTIAL+ | scope-stratified mass precision domkniete (`QW-2205`), ale non-top/high-precision/anchor-free frontier nadal otwarty |
 | L9 | PARTIAL+ | strict prereg/falsification stack zintegrowany (`QW-2203`), ale brak jednej centralnej wysokowplywowej predykcji potwierdzonej multidomain |
 | L10 | PARTIAL+ | external packet/protocol chain domkniety (`QW-2204`), ale brak realnego niezaleznego multiteam rerun z publicznymi signed reports |
-| L11 | PARTIAL+ | strict Planck bridge domkniety (`QW-2198`), ale fully-internal (bez external bridge) nadal otwarte |
+| L11 | PARTIAL++ | strict Planck bridge + obstruction/decomposition (`QW-2198`,`QW-2207`): jedna jawna obligacja internal-origin (`L11_O1`) pozostaje otwarta |
 | L12 | PARTIAL++ | strict proxy + obstruction + finite-scope declaration + anchored extended-scope feasibility (`t_probe=30`) |
 | L13 | CLOSED (strict internal) | domknięte przez QW-2179 + QW-2181 |
 | L14 | CLOSED (strict internal) | domknięte przez QW-2180 + QW-2181 |

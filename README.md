@@ -107,7 +107,7 @@ Canonical gap list:
 - `L7` (robustness envelope): `QW-2197` (integrated robustness metrics across alignment/q-assignment/selection-family/mass-slope/spectral-margin in declared strict scope; global unbounded robustness still open).
 - `L8` (mass precision stratification): `QW-2205` (declared strict tolerance scope integrated and closed; reviewer-sensitive frontier explicit for non-top/high-precision counts and anchor-free mass-chain).
 - `L1/L2/L17` (foundational entity + topology): `QW-2206` (canonical action/EoM layer integrated + local Skyrmion/FR topological evidence integrated; single-field ontological reduction and global full-object topological theorem remain open).
-- `L11` (Planck-scale bridge): `QW-2198` (strict derivation of Planck quantities from chain constants `G,c,hbar`; external-bridge dependency for `G` remains explicit).
+- `L11` (Planck-scale bridge/internalization): `QW-2198`, `QW-2207` (strict Planck reconstruction remains high-accuracy; foundational gap reduced to one explicit obligation: internal origin of the dimensionless `G` bridge observable).
 - `L4` (GR-limit conditions catalog): `QW-2201` (strict catalog of GR-limit support conditions and evidence layers; foundational direct derivation/equivalence theorem still open).
 - `L5` (QFT global closure): `QW-2202` (strict-scope stack integrated across local action + causality + renormalization schema + stability layers; global nonperturbative existence / S-matrix unitarity / reconstruction theorem still open).
 - `L9` (prediction/falsifiability): `QW-2203` (preregistered falsification stack + mixed validation status integrated; one channel supported, PMNS/cosmology pending, no single high-impact full confirmation claim).
