@@ -1066,3 +1066,25 @@ Granica pozostaje jawna:
 - `dax1_non_axiomatic_provider_completed=False`,
 - `c1_theorem_discharge_completed=False`,
 - `o1c_fully_closed=False`.
+
+127. `L12` - minimal blocker-cut dla export theorem RG
+Status: `PARTIAL_L12_EXPORT_MINIMAL_BLOCKER_CUT_COMPUTED`
+Uzasadnienie: `QW-2253` przechodzi `RG_EXPORT_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_BLOCKER_CUT_COMPUTED` (`6/9`) i formalizuje:
+- formalny extraction minimalnego cutu z realnych instancji theorem-target,
+- wynik: `n_unique_blockers=2`,
+- minimalny cut: `L12O1aWitness`, `RGGlobalWellPosednessAllScales_DerivedOrPending`.
+Granica pozostaje jawna:
+- `dax1_non_axiomatic_provider_completed=False`,
+- `c1_theorem_discharge_completed=False`,
+- `o1c_fully_closed=False`.
+
+128. `L5` - minimal blocker-cut dla export theorem QFT
+Status: `PARTIAL_L5_EXPORT_MINIMAL_BLOCKER_CUT_COMPUTED`
+Uzasadnienie: `QW-2254` przechodzi `QFT_EXPORT_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_BLOCKER_CUT_COMPUTED` (`6/9`) i formalizuje:
+- formalny extraction minimalnego cutu z realnych instancji theorem-target,
+- wynik: `n_unique_blockers=2`,
+- minimalny cut: `L5O1aWitness`, `PositivityToReconstruction_DerivedOrPending`.
+Granica pozostaje jawna:
+- `dax1_non_axiomatic_provider_completed=False`,
+- `c1_theorem_discharge_completed=False`,
+- `o1c_fully_closed=False`.

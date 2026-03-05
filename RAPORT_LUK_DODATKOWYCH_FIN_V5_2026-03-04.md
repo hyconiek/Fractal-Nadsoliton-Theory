@@ -1717,3 +1717,35 @@ Nowe bramki strict:
   - `o1c_fully_closed=False`.
 - Znaczenie:
   - od tej chwili stan eksportu QFT jest nie tylko packet-ready, ale tez execution-quantified (`0/4`).
+
+## Aktualizacja 2026-03-05: QW-2253 (L12 minimal blocker-cut)
+
+- Artefakt: `report_qw2253_rg_export_minimal_blocker_cut_gate.json`
+- Werdykt: `RG_EXPORT_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_BLOCKER_CUT_COMPUTED` (`6/9`)
+- Co zostalo domkniete:
+  1. formalny extraction minimalnego blocker-cutu dla targetu eksportu RG,
+  2. policzony cut zawiera 2 symbole:
+     - `L12O1aWitness`,
+     - `RGGlobalWellPosednessAllScales_DerivedOrPending`.
+- Granica:
+  - `dax1_non_axiomatic_provider_completed=False`,
+  - `c1_theorem_discharge_completed=False`,
+  - `o1c_fully_closed=False`.
+- Znaczenie:
+  - frontier problemu zostal uscisniony do dwoch konkretnych symboli blokujacych.
+
+## Aktualizacja 2026-03-05: QW-2254 (L5 minimal blocker-cut)
+
+- Artefakt: `report_qw2254_qft_export_minimal_blocker_cut_gate.json`
+- Werdykt: `QFT_EXPORT_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_BLOCKER_CUT_COMPUTED` (`6/9`)
+- Co zostalo domkniete:
+  1. formalny extraction minimalnego blocker-cutu dla targetu eksportu QFT,
+  2. policzony cut zawiera 2 symbole:
+     - `L5O1aWitness`,
+     - `PositivityToReconstruction_DerivedOrPending`.
+- Granica:
+  - `dax1_non_axiomatic_provider_completed=False`,
+  - `c1_theorem_discharge_completed=False`,
+  - `o1c_fully_closed=False`.
+- Znaczenie:
+  - frontier problemu zostal uscisniony do dwoch konkretnych symboli blokujacych.

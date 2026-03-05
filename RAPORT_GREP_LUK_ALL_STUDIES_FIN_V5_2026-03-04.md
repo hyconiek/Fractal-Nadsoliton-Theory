@@ -2066,6 +2066,32 @@ Ten punkt jest nadrzedny wzgledem historycznych wpisow etapowych `PARTIAL` dla t
      - brak overclaim: status pending pozostaje jawny.
    - Granica:
      - `all_obligations_satisfied=False`,
+   - `dax1_non_axiomatic_provider_completed=False`,
+   - `c1_theorem_discharge_completed=False`,
+   - `o1c_fully_closed=False`.
+
+## 141) Aktualizacja wykonawcza: QW-2253
+
+1. `QW-2253` (`report_qw2253_rg_export_minimal_blocker_cut_gate.json`)
+   - Verdict: `RG_EXPORT_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_BLOCKER_CUT_COMPUTED` (`6/9`)
+   - Wynik:
+     - wykonano formalny extraction blocker-cut dla theorem target RG,
+     - `n_unique_blockers=2`,
+     - minimalny cut: `L12O1aWitness`, `RGGlobalWellPosednessAllScales_DerivedOrPending`.
+   - Granica:
+     - `dax1_non_axiomatic_provider_completed=False`,
+     - `c1_theorem_discharge_completed=False`,
+     - `o1c_fully_closed=False`.
+
+## 142) Aktualizacja wykonawcza: QW-2254
+
+1. `QW-2254` (`report_qw2254_qft_export_minimal_blocker_cut_gate.json`)
+   - Verdict: `QFT_EXPORT_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_BLOCKER_CUT_COMPUTED` (`6/9`)
+   - Wynik:
+     - wykonano formalny extraction blocker-cut dla theorem target QFT,
+     - `n_unique_blockers=2`,
+     - minimalny cut: `L5O1aWitness`, `PositivityToReconstruction_DerivedOrPending`.
+   - Granica:
      - `dax1_non_axiomatic_provider_completed=False`,
      - `c1_theorem_discharge_completed=False`,
      - `o1c_fully_closed=False`.

@@ -1,0 +1,82 @@
+{
+  "generated_utc": "2026-03-05T04:49:52.526057+00:00",
+  "sources": {
+    "q2247": "report_qw2247_rg_export_axiomatic_dependency_gate.json",
+    "q2251": "report_qw2251_rg_export_obligation_execution_status_gate.json"
+  },
+  "target_expr": "(FINActionComplete ∧ RGConstructiveMap) -> RGGlobalWellPosednessAllScales",
+  "n_theorem_instances": 6,
+  "theorem_instances": [
+    {
+      "file": "FIN_L12_DAX1_NON_AXIOMATIC_PROVIDER_ATTEMPT.lean",
+      "theorem": "RG_DAX1_PROVIDER_NON_AXIOMATIC_ATTEMPT",
+      "refs": [
+        "RG_CanonicalAction_to_WellPosedness_EXPORT"
+      ],
+      "blockers": []
+    },
+    {
+      "file": "FIN_L12_O1A_O1_O1C_STEP.lean",
+      "theorem": "L12_O1A_O1_O1C_STEP",
+      "refs": [
+        "RGGlobalWellPosednessAllScales_DerivedOrPending"
+      ],
+      "blockers": [
+        "RGGlobalWellPosednessAllScales_DerivedOrPending"
+      ]
+    },
+    {
+      "file": "FIN_L12_O1A_O1_TERMINAL.lean",
+      "theorem": "L12_O1A_O1_TERMINAL",
+      "refs": [
+        "L12O1aWitness"
+      ],
+      "blockers": [
+        "L12O1aWitness"
+      ]
+    },
+    {
+      "file": "FIN_L12_O1C_PROVIDER_LAYER.lean",
+      "theorem": "RG_C1_1_DERIVED",
+      "refs": [
+        "RGGlobalWellPosednessAllScales_DerivedOrPending"
+      ],
+      "blockers": [
+        "RGGlobalWellPosednessAllScales_DerivedOrPending"
+      ]
+    },
+    {
+      "file": "FIN_L12_O1C_THEOREM_DISCHARGE_ATTEMPT.lean",
+      "theorem": "RG_C1_1_PROVIDER",
+      "refs": [
+        "RG_C1_1_DERIVED"
+      ],
+      "blockers": []
+    },
+    {
+      "file": "FIN_L12_O1C_THEOREM_DISCHARGE_PROVIDER_ATTEMPT.lean",
+      "theorem": "RG_C1_1_DERIVED",
+      "refs": [
+        "RGGlobalWellPosednessAllScales_DerivedOrPending"
+      ],
+      "blockers": [
+        "RGGlobalWellPosednessAllScales_DerivedOrPending"
+      ]
+    }
+  ],
+  "unique_blockers": [
+    "L12O1aWitness",
+    "RGGlobalWellPosednessAllScales_DerivedOrPending"
+  ],
+  "common_blockers": [],
+  "minimal_blocker_cut": [
+    "L12O1aWitness",
+    "RGGlobalWellPosednessAllScales_DerivedOrPending"
+  ],
+  "scope_boundary": {
+    "dax1_non_axiomatic_provider_completed": false,
+    "c1_theorem_discharge_completed": false,
+    "o1c_fully_closed": false,
+    "overclaim_forbidden": true
+  }
+}
