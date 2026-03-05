@@ -1807,3 +1807,33 @@ Ten punkt jest nadrzedny wzgledem historycznych wpisow etapowych `PARTIAL` dla t
    - Znaczenie:
      - remaining gap jest zredukowany do wykonania jawnie nazwanych dowodow C1
        (bez niejawnych placeholderow witness).
+
+## 123) Aktualizacja wykonawcza: QW-2235
+
+1. `QW-2235` (`report_qw2235_rg_axiom_free_o1c_theorem_discharge_execution_gate.json`)
+   - Verdict: `RG_AXIOM_FREE_O1C_THEOREM_DISCHARGE_EXECUTION_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_SOURCE_THEOREMS` (`10/13`)
+   - Wynik:
+     - wykonano realny discharge-attempt dla L12 O1c i machine-check run,
+     - formalny scan providerow theorem-level w `*.lean` wykazal brak provider-theorems,
+     - blocker zostal potwierdzony przez Lean (`unknown identifier` dla provider symbols).
+   - Granica:
+     - `source_theorem_providers_available=False`,
+     - `c1_theorem_discharge_completed=False`,
+     - `o1c_fully_closed=False`.
+   - Znaczenie:
+     - remaining gap nie jest juz \"niesprecyzowany\"; jest jawnie sklasyfikowany jako brak provider-theorems.
+
+## 124) Aktualizacja wykonawcza: QW-2236
+
+1. `QW-2236` (`report_qw2236_qft_axiom_free_o1c_theorem_discharge_execution_gate.json`)
+   - Verdict: `QFT_AXIOM_FREE_O1C_THEOREM_DISCHARGE_EXECUTION_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_SOURCE_THEOREMS` (`10/13`)
+   - Wynik:
+     - wykonano realny discharge-attempt dla L5 O1c i machine-check run,
+     - formalny scan providerow theorem-level w `*.lean` wykazal brak provider-theorems,
+     - blocker zostal potwierdzony przez Lean (`unknown identifier` dla provider symbols).
+   - Granica:
+     - `source_theorem_providers_available=False`,
+     - `c1_theorem_discharge_completed=False`,
+     - `o1c_fully_closed=False`.
+   - Znaczenie:
+     - remaining gap nie jest juz \"niesprecyzowany\"; jest jawnie sklasyfikowany jako brak provider-theorems.

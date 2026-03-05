@@ -844,3 +844,29 @@ Granica pozostaje jawna:
 - `c1_theorem_discharge_completed=False`,
 - `o1c_fully_closed=False`,
 - finalny krok to wykonanie dowodow dla `QFT_C1_1..QFT_C1_3`.
+
+109. `L12` - axiom-free O1c theorem-discharge execution attempt (blocker classified)
+Status: `PARTIAL_L12_AXIOM_FREE_O1C_DISCHARGE_BLOCKER_CLASSIFIED`
+Uzasadnienie: `QW-2235` przechodzi `RG_AXIOM_FREE_O1C_THEOREM_DISCHARGE_EXECUTION_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_SOURCE_THEOREMS` (`10/13`) i formalizuje:
+- realny machine-check attempt discharge (`FIN_L12_O1C_THEOREM_DISCHARGE_ATTEMPT.lean`),
+- formalny skan providerow theorem-level w repo (`*.lean`) wykazuje brak zrodel dla:
+  - `RG_C1_1` provider,
+  - `RG_C1_2` provider,
+- blocker potwierdzony przez Lean (`unknown identifier` dla wymaganych provider names).
+Granica pozostaje jawna:
+- `source_theorem_providers_available=False`,
+- `c1_theorem_discharge_completed=False`,
+- `o1c_fully_closed=False`.
+
+110. `L5` - axiom-free O1c theorem-discharge execution attempt (blocker classified)
+Status: `PARTIAL_L5_AXIOM_FREE_O1C_DISCHARGE_BLOCKER_CLASSIFIED`
+Uzasadnienie: `QW-2236` przechodzi `QFT_AXIOM_FREE_O1C_THEOREM_DISCHARGE_EXECUTION_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_SOURCE_THEOREMS` (`10/13`) i formalizuje:
+- realny machine-check attempt discharge (`FIN_L5_O1C_THEOREM_DISCHARGE_ATTEMPT.lean`),
+- formalny skan providerow theorem-level w repo (`*.lean`) wykazuje brak zrodel dla:
+  - `QFT_C1_1` provider,
+  - `QFT_C1_2` provider,
+- blocker potwierdzony przez Lean (`unknown identifier` dla wymaganych provider names).
+Granica pozostaje jawna:
+- `source_theorem_providers_available=False`,
+- `c1_theorem_discharge_completed=False`,
+- `o1c_fully_closed=False`.

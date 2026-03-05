@@ -1441,3 +1441,35 @@ Nowe bramki strict:
   - `o1c_fully_closed=False`.
 - Znaczenie:
   - remaining gap dla L5 O1c zostaje sformalizowany do jawnych, wykonywalnych dowodow theorem-level.
+
+## Aktualizacja 2026-03-05: QW-2235 (L12 O1c theorem-discharge execution attempt)
+
+- Artefakt: `report_qw2235_rg_axiom_free_o1c_theorem_discharge_execution_gate.json`
+- Werdykt: `RG_AXIOM_FREE_O1C_THEOREM_DISCHARGE_EXECUTION_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_SOURCE_THEOREMS` (`10/13`)
+- Co zostalo domkniete:
+  1. wykonano realny machine-check discharge attempt dla L12 O1c,
+  2. wykonano skan providerow theorem-level w repo (`*.lean`),
+  3. formalnie sklasyfikowano blocker jako brak theorem-providerow (potwierdzony przez Lean).
+- Granica:
+  - `source_theorem_providers_available=False`,
+  - `c1_theorem_discharge_completed=False`,
+  - `o1c_fully_closed=False`.
+- Znaczenie:
+  - remaining gap przechodzi z poziomu \"proofs pending\" na poziom
+    \"proofs pending with formally classified missing-provider blocker\".
+
+## Aktualizacja 2026-03-05: QW-2236 (L5 O1c theorem-discharge execution attempt)
+
+- Artefakt: `report_qw2236_qft_axiom_free_o1c_theorem_discharge_execution_gate.json`
+- Werdykt: `QFT_AXIOM_FREE_O1C_THEOREM_DISCHARGE_EXECUTION_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_SOURCE_THEOREMS` (`10/13`)
+- Co zostalo domkniete:
+  1. wykonano realny machine-check discharge attempt dla L5 O1c,
+  2. wykonano skan providerow theorem-level w repo (`*.lean`),
+  3. formalnie sklasyfikowano blocker jako brak theorem-providerow (potwierdzony przez Lean).
+- Granica:
+  - `source_theorem_providers_available=False`,
+  - `c1_theorem_discharge_completed=False`,
+  - `o1c_fully_closed=False`.
+- Znaczenie:
+  - remaining gap przechodzi z poziomu \"proofs pending\" na poziom
+    \"proofs pending with formally classified missing-provider blocker\".
