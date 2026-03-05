@@ -1,0 +1,84 @@
+{
+  "generated_utc": "2026-03-05T03:55:59.151774+00:00",
+  "sources": {
+    "q2222": "report_qw2222_qft_terminal_proof_object_execution_gate.json",
+    "file_a": "FIN_L5_O1A_O1_TERMINAL.lean",
+    "file_b": "FIN_L5_O1B_O1_TERMINAL.lean"
+  },
+  "axiom_audit": {
+    "file_a_axioms": [
+      "FINActionComplete",
+      "ConstructiveNonPerturbativeScheme",
+      "PositivityToReconstruction",
+      "L5O1aWitness"
+    ],
+    "file_b_axioms": [
+      "PositivityToReconstruction",
+      "UnitarySMatrixAndScatteringCompleteness",
+      "L5O1bWitness"
+    ],
+    "n_axioms_total": 7
+  },
+  "sub_obligations": {
+    "L5_AXIOM_FREE_O1a": {
+      "description": "Replace axioms in L5_O1a theorem by derived constructive/reconstruction lemmas.",
+      "depends_on": [],
+      "closed": false,
+      "targets": [
+        "FINActionComplete",
+        "ConstructiveNonPerturbativeScheme",
+        "PositivityToReconstruction",
+        "L5O1aWitness"
+      ]
+    },
+    "L5_AXIOM_FREE_O1b": {
+      "description": "Replace axioms in L5_O1b theorem by derived unitarity/scattering-completeness lemmas.",
+      "depends_on": [
+        "L5_AXIOM_FREE_O1a"
+      ],
+      "closed": false,
+      "targets": [
+        "PositivityToReconstruction",
+        "UnitarySMatrixAndScatteringCompleteness",
+        "L5O1bWitness"
+      ]
+    },
+    "L5_AXIOM_FREE_O1c": {
+      "description": "Produce end-to-end axiom-free machine-check object for both L5 terminal theorems.",
+      "depends_on": [
+        "L5_AXIOM_FREE_O1a",
+        "L5_AXIOM_FREE_O1b"
+      ],
+      "closed": false,
+      "targets": [
+        "L5_O1A_O1_TERMINAL",
+        "L5_O1B_O1_TERMINAL"
+      ]
+    }
+  },
+  "dependency_dag": {
+    "L5_AXIOM_FREE_O1a": [],
+    "L5_AXIOM_FREE_O1b": [
+      "L5_AXIOM_FREE_O1a"
+    ],
+    "L5_AXIOM_FREE_O1c": [
+      "L5_AXIOM_FREE_O1a",
+      "L5_AXIOM_FREE_O1b"
+    ]
+  },
+  "flags": {
+    "source_q2222_execution_pass_present": true,
+    "l5_exec_o1_closed": true,
+    "terminal_lean_files_present": true,
+    "axioms_detected_in_terminal_files": true,
+    "l5_axiom_free_subobligations_declared": true,
+    "subobligation_dependency_dag_acyclic": true,
+    "all_subobligations_open_explicit": true,
+    "no_overclaim_boundary_explicit": true,
+    "l5_axiom_free_fully_closed": false
+  },
+  "pass_count": 8,
+  "total_flags": 9,
+  "verdict": "QFT_AXIOM_FREE_DISCHARGE_SPEC_GATE_PASS_PARTIAL_SUBOBLIGATIONS_OPEN",
+  "required_next_step": "DISCHARGE_L5_AXIOM_FREE_O1A_THEN_O1B_AND_ATTACH_AXIOM_FREE_PROOF_OBJECT"
+}

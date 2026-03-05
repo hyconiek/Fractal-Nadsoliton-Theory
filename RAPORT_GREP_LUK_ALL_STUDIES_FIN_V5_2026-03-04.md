@@ -1637,3 +1637,31 @@ Ten punkt jest nadrzedny wzgledem historycznych wpisow etapowych `PARTIAL` dla t
    - Znaczenie:
      - L5 przechodzi z etapu \"execution-ready\" do etapu \"execution-done\",
        a remaining gap jest jawnie zawezony do axiom-free discharge.
+
+## 111) Aktualizacja wykonawcza: QW-2223
+
+1. `QW-2223` (`report_qw2223_rg_axiom_free_discharge_spec_gate.json`)
+   - Verdict: `RG_AXIOM_FREE_DISCHARGE_SPEC_GATE_PASS_PARTIAL_SUBOBLIGATIONS_OPEN` (`8/9`)
+   - Wynik:
+     - audyt terminalnych plikow Lean L12 wykazuje jawne aksjomaty (`n_axioms_total=7`),
+     - luka `L12_AXIOM_FREE_O1` zostala zdekomponowana do wykonawczego DAG:
+       - `L12_AXIOM_FREE_O1a`,
+       - `L12_AXIOM_FREE_O1b`,
+       - `L12_AXIOM_FREE_O1c`.
+   - Znaczenie:
+     - L12 przechodzi z etapu \"single axiom-free gap\" do etapu
+       \"subobligation-driven axiom-free discharge\", bez overclaimu full closure.
+
+## 112) Aktualizacja wykonawcza: QW-2224
+
+1. `QW-2224` (`report_qw2224_qft_axiom_free_discharge_spec_gate.json`)
+   - Verdict: `QFT_AXIOM_FREE_DISCHARGE_SPEC_GATE_PASS_PARTIAL_SUBOBLIGATIONS_OPEN` (`8/9`)
+   - Wynik:
+     - audyt terminalnych plikow Lean L5 wykazuje jawne aksjomaty (`n_axioms_total=7`),
+     - luka `L5_AXIOM_FREE_O1` zostala zdekomponowana do wykonawczego DAG:
+       - `L5_AXIOM_FREE_O1a`,
+       - `L5_AXIOM_FREE_O1b`,
+       - `L5_AXIOM_FREE_O1c`.
+   - Znaczenie:
+     - L5 przechodzi z etapu \"single axiom-free gap\" do etapu
+       \"subobligation-driven axiom-free discharge\", bez overclaimu full closure.

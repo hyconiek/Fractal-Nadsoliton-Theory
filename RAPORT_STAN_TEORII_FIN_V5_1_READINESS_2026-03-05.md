@@ -1,7 +1,7 @@
 # RAPORT STANU TEORII FIN (Release 5.1 readiness)
 
 **Data:** 2026-03-05  
-**Zakres audytu:** strict chain do `QW-2222` + raporty luk (`L1..L23`)  
+**Zakres audytu:** strict chain do `QW-2224` + raporty luk (`L1..L23`)  
 **Decyzja:** `RELEASE_5_1_FULL_CLOSURE_NOT_READY`
 
 ## 1) Werdykt główny
@@ -65,7 +65,9 @@ Stan na dziś:
    - `QW-2219`: terminal proof-packet readiness dla `L12` (execution pending),
    - `QW-2220`: terminal proof-packet readiness dla `L5` (execution pending),
    - `QW-2221`: terminal proof-object execution dla `L12` (`L12_EXEC_O1` zamkniete, boundary aksjomatyczna jawna),
-   - `QW-2222`: terminal proof-object execution dla `L5` (`L5_EXEC_O1` zamkniete, boundary aksjomatyczna jawna).
+   - `QW-2222`: terminal proof-object execution dla `L5` (`L5_EXEC_O1` zamkniete, boundary aksjomatyczna jawna),
+   - `QW-2223`: axiom-free decomposition spec dla `L12` (`L12_AXIOM_FREE_O1a/b/c` jawnie otwarte),
+   - `QW-2224`: axiom-free decomposition spec dla `L5` (`L5_AXIOM_FREE_O1a/b/c` jawnie otwarte).
 
 ## 3) Co pozostaje realnie otwarte (pytania recenzenckie)
 
@@ -75,9 +77,9 @@ Stan na dziś:
 3. `L4/L16/L23`: pełny most action-level do GR (nie tylko zgodność metryk/gate-level).
 
 ### B. Rygor matematyczny globalny
-1. `L5`: po chainie do `QW-2222` warstwa strict-scope jest zintegrowana; obie galezie sa zterminalizowane, theorem-spec jest jawny i proof-object execution jest wykonane (`L5_EXEC_O1` zamkniete), a finalnie otwarta pozostaje luka axiom-free (`L5_AXIOM_FREE_O1`).
+1. `L5`: po chainie do `QW-2224` warstwa strict-scope jest zintegrowana; obie galezie sa zterminalizowane, theorem-spec jest jawny i proof-object execution jest wykonane (`L5_EXEC_O1` zamkniete), a luka axiom-free zostala zdekomponowana do jawnych subobligacji (`L5_AXIOM_FREE_O1a/b/c`) i pozostaje otwarta.
 2. `L6/L7/L8/L20/L21`: globalna unikalność mapowania kernel->observables, odporność i separacja „derivation vs calibration”, plus recenzencki frontier precyzji mas (non-top/high-precision counts/anchor-free top).
-3. `L12`: po chainie do `QW-2221` dwa terminalne theorem targets (`L12_O1a_O1`, `L12_O1b_O1`) maja wykonany machine-check execution i hashowany proof object (`L12_EXEC_O1` zamkniete), a finalnie otwarta pozostaje luka axiom-free (`L12_AXIOM_FREE_O1`).
+3. `L12`: po chainie do `QW-2223` dwa terminalne theorem targets (`L12_O1a_O1`, `L12_O1b_O1`) maja wykonany machine-check execution i hashowany proof object (`L12_EXEC_O1` zamkniete), a luka axiom-free zostala zdekomponowana do jawnych subobligacji (`L12_AXIOM_FREE_O1a/b/c`) i pozostaje otwarta.
 4. `L11`: po `QW-2207` pozostaje jedna jawna obligacja foundational (`L11_O1`: wewnetrzne wyprowadzenie dimensionless bridge observable dla `G`).
 5. `L15`: po `QW-2208` pozostaje jedna jawna obligacja global stability (`L15_O1`) poza bounded symmetric perturbation scope.
 
@@ -93,14 +95,14 @@ Stan na dziś:
 | L2 | PARTIAL+ | lokalna solitonowosc/topologia domknieta (`QW-2206`: B~1, FR spin/g), ale globalny theorem ochrony niepelny |
 | L3 | PARTIAL+++ | kernel-mode scaffold + obstruction theorem + axiom-augmented closure + robustness family (`QW-2193`); axiom-free unikalnosc nadal otwarta |
 | L4 | PARTIAL++ | GR-limit conditions catalog domkniety (`QW-2201`), ale direct foundational derivation/equivalence theorem nadal otwarte |
-| L5 | PARTIAL+++++++++ | strict QFT scope zintegrowany + terminal theorem spec (`QW-2218`) + execution proof-object (`QW-2222`), z jawna granica axiom-free |
+| L5 | PARTIAL++++++++++ | strict QFT scope zintegrowany + terminal theorem spec (`QW-2218`) + execution proof-object (`QW-2222`) + axiom-free decomposition (`QW-2224`) |
 | L6 | PARTIAL++ | scope-stratified identifiability domkniete (`QW-2196`), axiom-free global closure nadal otwarta |
 | L7 | PARTIAL++ | integrated robustness envelope domkniety w strict scope (`QW-2197`), global unbounded robustness nadal otwarta |
 | L8 | PARTIAL+ | scope-stratified mass precision domkniete (`QW-2205`), ale non-top/high-precision/anchor-free frontier nadal otwarty |
 | L9 | PARTIAL+ | strict prereg/falsification stack zintegrowany (`QW-2203`), ale brak jednej centralnej wysokowplywowej predykcji potwierdzonej multidomain |
 | L10 | PARTIAL+ | external packet/protocol chain domkniety (`QW-2204`), ale brak realnego niezaleznego multiteam rerun z publicznymi signed reports |
 | L11 | PARTIAL++ | strict Planck bridge + obstruction/decomposition (`QW-2198`,`QW-2207`): jedna jawna obligacja internal-origin (`L11_O1`) pozostaje otwarta |
-| L12 | PARTIAL+++++++++ | strict proxy + obstruction + finite-scope + dekompozycja/terminalizacja + terminal theorem spec (`QW-2217`) + execution proof-object (`QW-2221`), z jawna granica axiom-free |
+| L12 | PARTIAL++++++++++ | strict proxy + obstruction + finite-scope + dekompozycja/terminalizacja + terminal theorem spec (`QW-2217`) + execution proof-object (`QW-2221`) + axiom-free decomposition (`QW-2223`) |
 | L13 | CLOSED (strict internal) | domknięte przez QW-2179 + QW-2181 |
 | L14 | CLOSED (strict internal) | domknięte przez QW-2180 + QW-2181 |
 | L15 | PARTIAL++ | branch-scope closure + obstruction/decomposition (`QW-2186`,`QW-2208`): jedna jawna obligacja global stability (`L15_O1`) pozostaje otwarta |

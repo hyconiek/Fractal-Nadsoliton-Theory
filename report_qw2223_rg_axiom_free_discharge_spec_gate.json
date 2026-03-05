@@ -1,0 +1,84 @@
+{
+  "generated_utc": "2026-03-05T03:55:59.047665+00:00",
+  "sources": {
+    "q2221": "report_qw2221_rg_terminal_proof_object_execution_gate.json",
+    "file_a": "FIN_L12_O1A_O1_TERMINAL.lean",
+    "file_b": "FIN_L12_O1B_O1_TERMINAL.lean"
+  },
+  "axiom_audit": {
+    "file_a_axioms": [
+      "FINActionComplete",
+      "RGConstructiveMap",
+      "RGGlobalWellPosednessAllScales",
+      "L12O1aWitness"
+    ],
+    "file_b_axioms": [
+      "RGGlobalWellPosednessAllScales",
+      "RGGlobalFixedPointStabilityAllT",
+      "L12O1bWitness"
+    ],
+    "n_axioms_total": 7
+  },
+  "sub_obligations": {
+    "L12_AXIOM_FREE_O1a": {
+      "description": "Replace axioms in L12_O1a theorem by derived lemmas from canonical FIN action/RG chain.",
+      "depends_on": [],
+      "closed": false,
+      "targets": [
+        "FINActionComplete",
+        "RGConstructiveMap",
+        "RGGlobalWellPosednessAllScales",
+        "L12O1aWitness"
+      ]
+    },
+    "L12_AXIOM_FREE_O1b": {
+      "description": "Replace axioms in L12_O1b theorem by derived all-t fixed-point/stability lemmas.",
+      "depends_on": [
+        "L12_AXIOM_FREE_O1a"
+      ],
+      "closed": false,
+      "targets": [
+        "RGGlobalWellPosednessAllScales",
+        "RGGlobalFixedPointStabilityAllT",
+        "L12O1bWitness"
+      ]
+    },
+    "L12_AXIOM_FREE_O1c": {
+      "description": "Produce end-to-end axiom-free machine-check object for both L12 terminal theorems.",
+      "depends_on": [
+        "L12_AXIOM_FREE_O1a",
+        "L12_AXIOM_FREE_O1b"
+      ],
+      "closed": false,
+      "targets": [
+        "L12_O1A_O1_TERMINAL",
+        "L12_O1B_O1_TERMINAL"
+      ]
+    }
+  },
+  "dependency_dag": {
+    "L12_AXIOM_FREE_O1a": [],
+    "L12_AXIOM_FREE_O1b": [
+      "L12_AXIOM_FREE_O1a"
+    ],
+    "L12_AXIOM_FREE_O1c": [
+      "L12_AXIOM_FREE_O1a",
+      "L12_AXIOM_FREE_O1b"
+    ]
+  },
+  "flags": {
+    "source_q2221_execution_pass_present": true,
+    "l12_exec_o1_closed": true,
+    "terminal_lean_files_present": true,
+    "axioms_detected_in_terminal_files": true,
+    "l12_axiom_free_subobligations_declared": true,
+    "subobligation_dependency_dag_acyclic": true,
+    "all_subobligations_open_explicit": true,
+    "no_overclaim_boundary_explicit": true,
+    "l12_axiom_free_fully_closed": false
+  },
+  "pass_count": 8,
+  "total_flags": 9,
+  "verdict": "RG_AXIOM_FREE_DISCHARGE_SPEC_GATE_PASS_PARTIAL_SUBOBLIGATIONS_OPEN",
+  "required_next_step": "DISCHARGE_L12_AXIOM_FREE_O1A_THEN_O1B_AND_ATTACH_AXIOM_FREE_PROOF_OBJECT"
+}

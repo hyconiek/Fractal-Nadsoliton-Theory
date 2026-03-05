@@ -698,3 +698,27 @@ Granica pozostaje jawna:
 - `full_l5_closed=False`,
 - nowa finalna luka theorem-level:
   - `L5_AXIOM_FREE_O1`: zastapic witness-axioms dowodami wyprowadzonymi z complete FIN action + reconstruction chain.
+
+97. `L12` - axiom-free discharge decomposition (subobligations open)
+Status: `PARTIAL_L12_AXIOM_FREE_DECOMPOSED`
+Uzasadnienie: `QW-2223` przechodzi `RG_AXIOM_FREE_DISCHARGE_SPEC_GATE_PASS_PARTIAL_SUBOBLIGATIONS_OPEN` (`8/9`) i formalizuje:
+- audyt terminalnych plikow Lean wykrywa jawne aksjomaty (`n_axioms_total=7`),
+- dekompozycja `L12_AXIOM_FREE_O1` do wykonywalnego DAG:
+  - `L12_AXIOM_FREE_O1a` (derywacja aksjomatow galezi O1a),
+  - `L12_AXIOM_FREE_O1b` (derywacja aksjomatow galezi O1b; zalezne od O1a),
+  - `L12_AXIOM_FREE_O1c` (finalny axiom-free proof object; zalezne od O1a i O1b).
+Granica pozostaje jawna:
+- `l12_axiom_free_fully_closed=False`,
+- `L12` pozostaje niezamkniete na poziomie theorem-level axiom-free.
+
+98. `L5` - axiom-free discharge decomposition (subobligations open)
+Status: `PARTIAL_L5_AXIOM_FREE_DECOMPOSED`
+Uzasadnienie: `QW-2224` przechodzi `QFT_AXIOM_FREE_DISCHARGE_SPEC_GATE_PASS_PARTIAL_SUBOBLIGATIONS_OPEN` (`8/9`) i formalizuje:
+- audyt terminalnych plikow Lean wykrywa jawne aksjomaty (`n_axioms_total=7`),
+- dekompozycja `L5_AXIOM_FREE_O1` do wykonywalnego DAG:
+  - `L5_AXIOM_FREE_O1a` (derywacja aksjomatow galezi O1a),
+  - `L5_AXIOM_FREE_O1b` (derywacja aksjomatow galezi O1b; zalezne od O1a),
+  - `L5_AXIOM_FREE_O1c` (finalny axiom-free proof object; zalezne od O1a i O1b).
+Granica pozostaje jawna:
+- `l5_axiom_free_fully_closed=False`,
+- `L5` pozostaje niezamkniete na poziomie theorem-level axiom-free.

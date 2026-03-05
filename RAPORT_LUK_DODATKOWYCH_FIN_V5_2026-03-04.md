@@ -1279,3 +1279,29 @@ Nowe bramki strict:
   - finalna luka przeniesiona na `L5_AXIOM_FREE_O1` (eliminacja witness-axioms).
 - Znaczenie:
   - L5 opuszcza stan \"execution pending\" i przechodzi do \"execution done with explicit axiomatic boundary\".
+
+## Aktualizacja 2026-03-05: QW-2223 (L12 axiom-free decomposition)
+
+- Artefakt: `report_qw2223_rg_axiom_free_discharge_spec_gate.json`
+- Werdykt: `RG_AXIOM_FREE_DISCHARGE_SPEC_GATE_PASS_PARTIAL_SUBOBLIGATIONS_OPEN` (`8/9`)
+- Co zostalo domkniete:
+  1. formalny audit aksjomatow w terminalnych plikach Lean L12 (`n_axioms_total=7`),
+  2. formalna dekompozycja `L12_AXIOM_FREE_O1` do DAG subobligacji `O1a/O1b/O1c`.
+- Granica:
+  - `l12_axiom_free_fully_closed=False`,
+  - wszystkie subobligacje pozostaja jawnie otwarte.
+- Znaczenie:
+  - L12 przechodzi do etapu wykonawczego axiom-free discharge z jawnym harmonogramem zaleznosci.
+
+## Aktualizacja 2026-03-05: QW-2224 (L5 axiom-free decomposition)
+
+- Artefakt: `report_qw2224_qft_axiom_free_discharge_spec_gate.json`
+- Werdykt: `QFT_AXIOM_FREE_DISCHARGE_SPEC_GATE_PASS_PARTIAL_SUBOBLIGATIONS_OPEN` (`8/9`)
+- Co zostalo domkniete:
+  1. formalny audit aksjomatow w terminalnych plikach Lean L5 (`n_axioms_total=7`),
+  2. formalna dekompozycja `L5_AXIOM_FREE_O1` do DAG subobligacji `O1a/O1b/O1c`.
+- Granica:
+  - `l5_axiom_free_fully_closed=False`,
+  - wszystkie subobligacje pozostaja jawnie otwarte.
+- Znaczenie:
+  - L5 przechodzi do etapu wykonawczego axiom-free discharge z jawnym harmonogramem zaleznosci.
