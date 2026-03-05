@@ -1074,3 +1074,32 @@ Nowe bramki strict:
 - Znaczenie:
   - `L15` przechodzi do `PARTIAL++`: scope theorem jest zamkniety i audytowalny,
     a globalna luka zostaje jednoznacznie zredukowana do pojedynczego theorem-level kroku.
+
+## Aktualizacja 2026-03-05: QW-2209 (L12)
+
+- Artefakt: `report_qw2209_rg_global_closure_obligation_gate.json`
+- Werdykt: `RG_GLOBAL_CLOSURE_OBLIGATION_GATE_PASS_PARTIAL_SINGLE_GLOBAL_OBLIGATION_OPEN` (`11/12`)
+- Co zostalo domkniete:
+  1. formalna integracja RG chain (`QW-2132` + `QW-2185` + `QW-2187` + `QW-2188`),
+  2. jawne utrzymanie granic claimu (`global all-t` nie jest deklarowane),
+  3. jawne utrzymanie obstruction source (`U(1)` Landau-pole w aktualnym proxy).
+- Granica:
+  - `full_global_all_t_rg_closure_theorem_closed=False`,
+  - pozostaje jedna obligacja `L12_O1` (pelny nieperturbacyjny theorem RG/fixed-point all-`t` z kompletnego dzialania FIN).
+- Znaczenie:
+  - `L12` przechodzi do `PARTIAL+++`: strict scope pozostaje domkniety,
+    a luka foundational jest pojedyncza, jawna i audytowalna.
+
+## Aktualizacja 2026-03-05: QW-2210 (L5)
+
+- Artefakt: `report_qw2210_qft_global_obligation_reduction_gate.json`
+- Werdykt: `QFT_GLOBAL_OBLIGATION_REDUCTION_GATE_PASS_PARTIAL_SINGLE_PACKAGE_OBLIGATION_OPEN` (`9/10`)
+- Co zostalo domkniete:
+  1. utrzymanie strict-scope closure QFT z `QW-2202`,
+  2. formalna konsolidacja trzech globalnych theorem-level brakow do jednego pakietu obligacji.
+- Granica:
+  - `full_global_qft_closure_theorem_closed=False`,
+  - pozostaje jedna obligacja `L5_O1` (existence/uniqueness + S-matrix unitarity + reflection-positivity/Wightman reconstruction z kompletnego dzialania FIN).
+- Znaczenie:
+  - `L5` przechodzi do `PARTIAL+++`: lokalny stack pozostaje domkniety,
+    a globalna luka theorem-level jest pojedynczym, jasno zdefiniowanym pakietem.

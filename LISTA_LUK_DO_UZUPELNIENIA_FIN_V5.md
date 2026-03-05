@@ -542,3 +542,27 @@ Uzasadnienie: `QW-2208` przechodzi `SPECTRAL_GLOBAL_STABILITY_OBSTRUCTION_GATE_P
 - luka foundational zostaje zredukowana do jednej jawnej obligacji:
   - `L15_O1`: globalny dowod stabilnosci dla klas perturbacji poza bounded branch-scope.
 Granica pozostaje jawna: `full_global_stability_theorem_closed=False`.
+
+83. `L12` - RG global closure obligation reduction
+Status: `PARTIAL_STRICT_PROXY_EXTENDED_SCOPE_SINGLE_GLOBAL_OBLIGATION_OPEN`
+Uzasadnienie: `QW-2209` przechodzi `RG_GLOBAL_CLOSURE_OBLIGATION_GATE_PASS_PARTIAL_SINGLE_GLOBAL_OBLIGATION_OPEN` (`11/12`) i formalizuje:
+- warstwa strict RG jest jednoczesnie domknieta i jawnie ograniczona:
+  - `QW-2132`: fixed-point/Jacobian proxy,
+  - `QW-2185`: jawny obstruction theorem (Landau pole dla aktualnego proxy),
+  - `QW-2187`: strict finite-UV scope declaration bez global all-`t` claim,
+  - `QW-2188`: UV-correction frontier (`b*`) rozszerzajacy wykonalny scope bez overclaimu globalnego.
+- luka foundational zostaje zredukowana do jednej jawnej obligacji:
+  - `L12_O1`: pelny nieperturbacyjny all-coupling all-`t` theorem RG/fixed-point/stability z kompletnego dzialania FIN.
+Granica pozostaje jawna: `full_global_all_t_rg_closure_theorem_closed=False`.
+
+84. `L5` - global QFT obligation reduction
+Status: `PARTIAL_STRICT_SCOPE_CLOSED_SINGLE_GLOBAL_PACKAGE_OBLIGATION_OPEN`
+Uzasadnienie: `QW-2210` przechodzi `QFT_GLOBAL_OBLIGATION_REDUCTION_GATE_PASS_PARTIAL_SINGLE_PACKAGE_OBLIGATION_OPEN` (`9/10`) i formalizuje:
+- warstwa strict-scope QFT pozostaje domknieta (`QW-2202`: lokalny stack kwantyzacja/kauzalnosc/renormalizacja),
+- trzy jawne otwarte komponenty theorem-level zostaja skonsolidowane do jednego pakietu:
+  - existence/uniqueness (nonperturbative),
+  - S-matrix unitarity,
+  - reflection-positivity lub rownowazna rekonstrukcja Wightmana.
+- luka foundational zostaje zredukowana do jednej jawnej obligacji:
+  - `L5_O1`: jeden spojny, konstruktywny pakiet global QFT theorem z kompletnego dzialania FIN.
+Granica pozostaje jawna: `full_global_qft_closure_theorem_closed=False`.

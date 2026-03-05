@@ -1445,6 +1445,39 @@ Ten punkt jest nadrzedny wzgledem historycznych wpisow etapowych `PARTIAL` dla t
      - `L15` zostaje zredukowane do jednej jawnej obligacji:
        `L15_O1` = globalny dowod stabilnosci poza bounded symmetric branch-scope.
    - Znaczenie:
-     - status `L15` podnosi sie do `PARTIAL++`:
+   - status `L15` podnosi sie do `PARTIAL++`:
        branch-scope closure jest twarde i audytowalne, a remaining global theorem gap
        jest pojedynczy, jawny i testowalny.
+
+## 97) Aktualizacja wykonawcza: QW-2209
+
+1. `QW-2209` (`report_qw2209_rg_global_closure_obligation_gate.json`)
+   - Verdict: `RG_GLOBAL_CLOSURE_OBLIGATION_GATE_PASS_PARTIAL_SINGLE_GLOBAL_OBLIGATION_OPEN` (`11/12`)
+   - Wynik:
+     - zsynchronizowano RG chain: `QW-2132` (proxy fixed points + Jacobian), `QW-2185` (obstruction theorem), `QW-2187` (finite strict scope), `QW-2188` (UV-correction frontier),
+     - jawnie utrzymano granice metodologiczne:
+       brak claimu global all-`t` (`q2187_global_all_t_not_claimed=True`, `q2188_global_all_t_not_claimed=True`),
+     - jawnie utrzymano obstruction source:
+       `U(1)` Landau-pole dla aktualnego proxy.
+   - Redukcja luki:
+     - `L12` zostaje zredukowane do jednej jawnej obligacji:
+       `L12_O1` = pelny nieperturbacyjny theorem RG/fixed-point/stability all-coupling all-`t` z kompletnego dzialania FIN.
+   - Znaczenie:
+     - status `L12` podnosi sie do `PARTIAL+++`: strict scope jest domkniety i audytowalny, a pozostala luka theorem-level jest pojedyncza, jawna i testowalna.
+
+## 98) Aktualizacja wykonawcza: QW-2210
+
+1. `QW-2210` (`report_qw2210_qft_global_obligation_reduction_gate.json`)
+   - Verdict: `QFT_GLOBAL_OBLIGATION_REDUCTION_GATE_PASS_PARTIAL_SINGLE_PACKAGE_OBLIGATION_OPEN` (`9/10`)
+   - Wynik:
+     - utrzymano strict-scope closure z `QW-2202`:
+       `strict_scope_quantization_causality_renorm_stack_closed=True`,
+     - jawnie skonsolidowano trzy globalne theorem-level luki:
+       - nonperturbative existence/uniqueness,
+       - S-matrix unitarity,
+       - reflection-positivity/Wightman reconstruction.
+   - Redukcja luki:
+     - `L5` zostaje zredukowane do jednej spojnej obligacji:
+       `L5_O1` = pelny konstruktywny pakiet global QFT theorem z kompletnego dzialania FIN.
+   - Znaczenie:
+     - status `L5` podnosi sie do `PARTIAL+++`: warstwa strict-scope pozostaje domknieta, a remaining global closure gap jest pojedynczym pakietem theorem-level.
