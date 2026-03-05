@@ -1042,3 +1042,27 @@ Granica pozostaje jawna:
 - `dax1_non_axiomatic_provider_completed=False`,
 - `c1_theorem_discharge_completed=False`,
 - `o1c_fully_closed=False`.
+
+125. `L12` - execution status pakietu export obligations RG
+Status: `PARTIAL_L12_EXPORT_OBLIGATION_EXECUTION_STATUS_0_OF_4`
+Uzasadnienie: `QW-2251` przechodzi `RG_EXPORT_OBLIGATION_EXECUTION_STATUS_GATE_PASS_PARTIAL_EXPORT_PENDING` (`5/8`) i formalizuje:
+- jawna egzekucja statusu `RG_EXPORT_O1..O4`,
+- wynik twardy: `n_obligations_satisfied=0`, `n_obligations_total=4`,
+- packet wykonawczy pozostaje w trybie pending do czasu konstrukcji non-axiomatic export theorem.
+Granica pozostaje jawna:
+- `all_obligations_satisfied=False`,
+- `dax1_non_axiomatic_provider_completed=False`,
+- `c1_theorem_discharge_completed=False`,
+- `o1c_fully_closed=False`.
+
+126. `L5` - execution status pakietu export obligations QFT
+Status: `PARTIAL_L5_EXPORT_OBLIGATION_EXECUTION_STATUS_0_OF_4`
+Uzasadnienie: `QW-2252` przechodzi `QFT_EXPORT_OBLIGATION_EXECUTION_STATUS_GATE_PASS_PARTIAL_EXPORT_PENDING` (`5/8`) i formalizuje:
+- jawna egzekucja statusu `QFT_EXPORT_O1..O4`,
+- wynik twardy: `n_obligations_satisfied=0`, `n_obligations_total=4`,
+- packet wykonawczy pozostaje w trybie pending do czasu konstrukcji non-axiomatic export theorem.
+Granica pozostaje jawna:
+- `all_obligations_satisfied=False`,
+- `dax1_non_axiomatic_provider_completed=False`,
+- `c1_theorem_discharge_completed=False`,
+- `o1c_fully_closed=False`.

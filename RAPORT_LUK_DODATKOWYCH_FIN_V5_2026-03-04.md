@@ -1685,3 +1685,35 @@ Nowe bramki strict:
   - `o1c_fully_closed=False`.
 - Znaczenie:
   - warstwa execution-ready dla finalnej konstrukcji export theorem jest przygotowana; pozostaje sam dowod.
+
+## Aktualizacja 2026-03-05: QW-2251 (L12 export obligation execution status)
+
+- Artefakt: `report_qw2251_rg_export_obligation_execution_status_gate.json`
+- Werdykt: `RG_EXPORT_OBLIGATION_EXECUTION_STATUS_GATE_PASS_PARTIAL_EXPORT_PENDING` (`5/8`)
+- Co zostalo domkniete:
+  1. wykonano formalny status-run dla `RG_EXPORT_O1..O4`,
+  2. policzono twardy execution-score: `0/4`,
+  3. utrzymano no-overclaim boundary z jawna klasyfikacja pending.
+- Granica:
+  - `all_obligations_satisfied=False`,
+  - `dax1_non_axiomatic_provider_completed=False`,
+  - `c1_theorem_discharge_completed=False`,
+  - `o1c_fully_closed=False`.
+- Znaczenie:
+  - od tej chwili stan eksportu RG jest nie tylko packet-ready, ale tez execution-quantified (`0/4`).
+
+## Aktualizacja 2026-03-05: QW-2252 (L5 export obligation execution status)
+
+- Artefakt: `report_qw2252_qft_export_obligation_execution_status_gate.json`
+- Werdykt: `QFT_EXPORT_OBLIGATION_EXECUTION_STATUS_GATE_PASS_PARTIAL_EXPORT_PENDING` (`5/8`)
+- Co zostalo domkniete:
+  1. wykonano formalny status-run dla `QFT_EXPORT_O1..O4`,
+  2. policzono twardy execution-score: `0/4`,
+  3. utrzymano no-overclaim boundary z jawna klasyfikacja pending.
+- Granica:
+  - `all_obligations_satisfied=False`,
+  - `dax1_non_axiomatic_provider_completed=False`,
+  - `c1_theorem_discharge_completed=False`,
+  - `o1c_fully_closed=False`.
+- Znaczenie:
+  - od tej chwili stan eksportu QFT jest nie tylko packet-ready, ale tez execution-quantified (`0/4`).

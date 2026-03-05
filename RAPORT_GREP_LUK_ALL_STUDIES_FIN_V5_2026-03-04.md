@@ -2038,6 +2038,34 @@ Ten punkt jest nadrzedny wzgledem historycznych wpisow etapowych `PARTIAL` dla t
      - packet spina caly known blocker stack (`QW-2244`,`QW-2246`,`QW-2248`).
    - Granica:
      - export theorem nadal nieistniejacy w warstwie non-axiomatic,
+   - `dax1_non_axiomatic_provider_completed=False`,
+   - `c1_theorem_discharge_completed=False`,
+   - `o1c_fully_closed=False`.
+
+## 139) Aktualizacja wykonawcza: QW-2251
+
+1. `QW-2251` (`report_qw2251_rg_export_obligation_execution_status_gate.json`)
+   - Verdict: `RG_EXPORT_OBLIGATION_EXECUTION_STATUS_GATE_PASS_PARTIAL_EXPORT_PENDING` (`5/8`)
+   - Wynik:
+     - wykonano status-run pakietu `RG_EXPORT_O1..O4`,
+     - twardy wynik: `0/4` obligations satisfied,
+     - brak overclaim: status pending pozostaje jawny.
+   - Granica:
+     - `all_obligations_satisfied=False`,
+     - `dax1_non_axiomatic_provider_completed=False`,
+     - `c1_theorem_discharge_completed=False`,
+     - `o1c_fully_closed=False`.
+
+## 140) Aktualizacja wykonawcza: QW-2252
+
+1. `QW-2252` (`report_qw2252_qft_export_obligation_execution_status_gate.json`)
+   - Verdict: `QFT_EXPORT_OBLIGATION_EXECUTION_STATUS_GATE_PASS_PARTIAL_EXPORT_PENDING` (`5/8`)
+   - Wynik:
+     - wykonano status-run pakietu `QFT_EXPORT_O1..O4`,
+     - twardy wynik: `0/4` obligations satisfied,
+     - brak overclaim: status pending pozostaje jawny.
+   - Granica:
+     - `all_obligations_satisfied=False`,
      - `dax1_non_axiomatic_provider_completed=False`,
      - `c1_theorem_discharge_completed=False`,
      - `o1c_fully_closed=False`.
