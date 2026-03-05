@@ -1689,3 +1689,27 @@ Ten punkt jest nadrzedny wzgledem historycznych wpisow etapowych `PARTIAL` dla t
    - Znaczenie:
      - L5 axiom-free przechodzi z etapu \"decomposition-only\" do etapu
        \"decomposition + strict provenance accounting\" dla galezi `O1a`.
+
+## 115) Aktualizacja wykonawcza: QW-2227
+
+1. `QW-2227` (`report_qw2227_rg_axiom_free_o1b_provenance_gate.json`)
+   - Verdict: `RG_AXIOM_FREE_O1B_PROVENANCE_GATE_PASS_PARTIAL_UNRESOLVED_THEOREM` (`8/9`)
+   - Wynik:
+     - pelna, jawna mapa provenance dla targetow `L12_AXIOM_FREE_O1b`,
+     - jawny dependency na `O1a provenance` (`QW-2225`),
+     - wszystkie targety O1b pozostaja jawnie unresolved theorem-level.
+   - Znaczenie:
+     - L12 axiom-free ma juz provenance accounting dla obu galezi (`O1a` + `O1b`),
+       a remaining gap pozostaje skupiony na theorem discharge + final attachment (`O1c`).
+
+## 116) Aktualizacja wykonawcza: QW-2228
+
+1. `QW-2228` (`report_qw2228_qft_axiom_free_o1b_provenance_gate.json`)
+   - Verdict: `QFT_AXIOM_FREE_O1B_PROVENANCE_GATE_PASS_PARTIAL_UNRESOLVED_THEOREM` (`8/9`)
+   - Wynik:
+     - pelna, jawna mapa provenance dla targetow `L5_AXIOM_FREE_O1b`,
+     - jawny dependency na `O1a provenance` (`QW-2226`),
+     - wszystkie targety O1b pozostaja jawnie unresolved theorem-level.
+   - Znaczenie:
+     - L5 axiom-free ma juz provenance accounting dla obu galezi (`O1a` + `O1b`),
+       a remaining gap pozostaje skupiony na theorem discharge + final attachment (`O1c`).

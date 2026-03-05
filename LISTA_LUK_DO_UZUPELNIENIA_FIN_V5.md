@@ -746,3 +746,23 @@ Uzasadnienie: `QW-2226` przechodzi `QFT_AXIOM_FREE_O1A_PROVENANCE_GATE_PASS_PART
 Granica pozostaje jawna:
 - `l5_axiom_free_o1a_fully_closed=False`,
 - brak overclaimu theorem-level positivity/reconstruction.
+
+101. `L12` - axiom-free O1b provenance map (strict accounting)
+Status: `PARTIAL_L12_AXIOM_FREE_O1B_PROVENANCE_MAPPED`
+Uzasadnienie: `QW-2227` przechodzi `RG_AXIOM_FREE_O1B_PROVENANCE_GATE_PASS_PARTIAL_UNRESOLVED_THEOREM` (`8/9`) i formalizuje:
+- pelne mapowanie provenance dla targetow `L12_AXIOM_FREE_O1b`,
+- jawny dependency-layer: `O1b` zalezy od `O1a provenance`,
+- wszystkie targety O1b pozostaja jawnie unresolved theorem-level (`RGGlobalWellPosednessAllScales`, `RGGlobalFixedPointStabilityAllT`, `L12O1bWitness`).
+Granica pozostaje jawna:
+- `l12_axiom_free_o1b_fully_closed=False`,
+- brak overclaimu global all-`t` stability/well-posedness.
+
+102. `L5` - axiom-free O1b provenance map (strict accounting)
+Status: `PARTIAL_L5_AXIOM_FREE_O1B_PROVENANCE_MAPPED`
+Uzasadnienie: `QW-2228` przechodzi `QFT_AXIOM_FREE_O1B_PROVENANCE_GATE_PASS_PARTIAL_UNRESOLVED_THEOREM` (`8/9`) i formalizuje:
+- pelne mapowanie provenance dla targetow `L5_AXIOM_FREE_O1b`,
+- jawny dependency-layer: `O1b` zalezy od `O1a provenance`,
+- wszystkie targety O1b pozostaja jawnie unresolved theorem-level (`PositivityToReconstruction`, `UnitarySMatrixAndScatteringCompleteness`, `L5O1bWitness`).
+Granica pozostaje jawna:
+- `l5_axiom_free_o1b_fully_closed=False`,
+- brak overclaimu theorem-level unitarity/scattering/positivity.

@@ -1,0 +1,73 @@
+{
+  "generated_utc": "2026-03-05T04:01:58.337933+00:00",
+  "sources": {
+    "q2223": "report_qw2223_rg_axiom_free_discharge_spec_gate.json",
+    "q2225": "report_qw2225_rg_axiom_free_o1a_provenance_gate.json",
+    "q2213": "report_qw2213_rg_flow_existence_scope_gate.json",
+    "q2215": "report_qw2215_rg_global_stability_scope_gate.json",
+    "l12_file": "FIN_L12_O1B_O1_TERMINAL.lean"
+  },
+  "target_symbols": [
+    "RGGlobalWellPosednessAllScales",
+    "RGGlobalFixedPointStabilityAllT",
+    "L12O1bWitness"
+  ],
+  "provenance_map": {
+    "RGGlobalWellPosednessAllScales": {
+      "sources": [
+        {
+          "report": "report_qw2213_rg_flow_existence_scope_gate.json",
+          "checks": [
+            "single_terminal_obligation_for_l12_o1a_isolated"
+          ]
+        }
+      ],
+      "status": "unresolved_global_theorem",
+      "notes": "Inherited unresolved theorem from L12_O1a_O1 layer."
+    },
+    "RGGlobalFixedPointStabilityAllT": {
+      "sources": [
+        {
+          "report": "report_qw2215_rg_global_stability_scope_gate.json",
+          "checks": [
+            "single_terminal_obligation_for_l12_o1b_isolated"
+          ]
+        }
+      ],
+      "status": "unresolved_global_theorem",
+      "notes": "Global all-t fixed-point/stability remains terminal open theorem (`L12_O1b_O1`)."
+    },
+    "L12O1bWitness": {
+      "sources": [
+        {
+          "report": "FIN_L12_O1B_O1_TERMINAL.lean",
+          "checks": [
+            "axiomatic_witness_symbol_present"
+          ]
+        }
+      ],
+      "status": "syntactic_witness_only",
+      "notes": "Witness currently axiomatic and must be replaced by derived proof."
+    }
+  },
+  "unresolved_targets": [
+    "RGGlobalWellPosednessAllScales",
+    "RGGlobalFixedPointStabilityAllT",
+    "L12O1bWitness"
+  ],
+  "flags": {
+    "q2223_l12_o1b_subobligation_present": true,
+    "q2225_o1a_provenance_layer_present": true,
+    "target_set_exact_match": true,
+    "provenance_entries_cover_all_targets": true,
+    "wellposedness_explicitly_unresolved": true,
+    "fixed_point_stability_explicitly_unresolved": true,
+    "axiomatic_witness_present_in_terminal_file": true,
+    "no_overclaim_boundary_explicit": true,
+    "l12_axiom_free_o1b_fully_closed": false
+  },
+  "pass_count": 8,
+  "total_flags": 9,
+  "verdict": "RG_AXIOM_FREE_O1B_PROVENANCE_GATE_PASS_PARTIAL_UNRESOLVED_THEOREM",
+  "required_next_step": "DERIVE_L12_O1B_AXIOM_FREE_THEOREMS_AND_REPLACE_L12O1B_WITNESS"
+}

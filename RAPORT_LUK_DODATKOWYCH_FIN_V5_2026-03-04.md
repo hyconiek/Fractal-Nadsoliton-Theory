@@ -1331,3 +1331,29 @@ Nowe bramki strict:
   - `l5_axiom_free_o1a_fully_closed=False`.
 - Znaczenie:
   - L5 O1a ma teraz audytowalny ledger pochodzenia i jawny remaining theorem gap.
+
+## Aktualizacja 2026-03-05: QW-2227 (L12 O1b provenance)
+
+- Artefakt: `report_qw2227_rg_axiom_free_o1b_provenance_gate.json`
+- Werdykt: `RG_AXIOM_FREE_O1B_PROVENANCE_GATE_PASS_PARTIAL_UNRESOLVED_THEOREM` (`8/9`)
+- Co zostalo domkniete:
+  1. formalna mapa provenance dla targetow `L12_AXIOM_FREE_O1b`,
+  2. formalne spiecie dependency `O1b <- O1a provenance`.
+- Granica:
+  - unresolved: `RGGlobalWellPosednessAllScales`, `RGGlobalFixedPointStabilityAllT`, `L12O1bWitness`,
+  - `l12_axiom_free_o1b_fully_closed=False`.
+- Znaczenie:
+  - L12 ma provenance-ledger dla `O1a` i `O1b`; remaining gap to theorem discharge + final `O1c`.
+
+## Aktualizacja 2026-03-05: QW-2228 (L5 O1b provenance)
+
+- Artefakt: `report_qw2228_qft_axiom_free_o1b_provenance_gate.json`
+- Werdykt: `QFT_AXIOM_FREE_O1B_PROVENANCE_GATE_PASS_PARTIAL_UNRESOLVED_THEOREM` (`8/9`)
+- Co zostalo domkniete:
+  1. formalna mapa provenance dla targetow `L5_AXIOM_FREE_O1b`,
+  2. formalne spiecie dependency `O1b <- O1a provenance`.
+- Granica:
+  - unresolved: `PositivityToReconstruction`, `UnitarySMatrixAndScatteringCompleteness`, `L5O1bWitness`,
+  - `l5_axiom_free_o1b_fully_closed=False`.
+- Znaczenie:
+  - L5 ma provenance-ledger dla `O1a` i `O1b`; remaining gap to theorem discharge + final `O1c`.
