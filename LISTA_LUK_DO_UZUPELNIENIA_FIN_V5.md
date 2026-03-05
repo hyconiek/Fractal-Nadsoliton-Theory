@@ -870,3 +870,49 @@ Granica pozostaje jawna:
 - `source_theorem_providers_available=False`,
 - `c1_theorem_discharge_completed=False`,
 - `o1c_fully_closed=False`.
+
+111. `L12` - axiom-free O1c provider-layer (missing-provider blocker removed)
+Status: `PARTIAL_L12_AXIOM_FREE_O1C_PROVIDER_LAYER_READY`
+Uzasadnienie: `QW-2237` przechodzi `RG_AXIOM_FREE_O1C_PROVIDER_LAYER_GATE_PASS_PARTIAL_AXIOMATIC_PROVIDER_OPEN` (`11/13`) i formalizuje:
+- jawne provider theorems:
+  - `RG_C1_1_DERIVED`,
+  - `RG_C1_2_DERIVED`,
+- machine-check provider-layer pliku `FIN_L12_O1C_PROVIDER_LAYER.lean`.
+Granica pozostaje jawna:
+- provider source nadal oparty o `DerivedOrPending`,
+- `c1_theorem_discharge_completed=False`,
+- `o1c_fully_closed=False`.
+
+112. `L5` - axiom-free O1c provider-layer (missing-provider blocker removed)
+Status: `PARTIAL_L5_AXIOM_FREE_O1C_PROVIDER_LAYER_READY`
+Uzasadnienie: `QW-2238` przechodzi `QFT_AXIOM_FREE_O1C_PROVIDER_LAYER_GATE_PASS_PARTIAL_AXIOMATIC_PROVIDER_OPEN` (`11/13`) i formalizuje:
+- jawne provider theorems:
+  - `QFT_C1_1_DERIVED`,
+  - `QFT_C1_2_DERIVED`,
+- machine-check provider-layer pliku `FIN_L5_O1C_PROVIDER_LAYER.lean`.
+Granica pozostaje jawna:
+- provider source nadal oparty o `DerivedOrPending`,
+- `c1_theorem_discharge_completed=False`,
+- `o1c_fully_closed=False`.
+
+113. `L12` - axiom-free O1c execution with provider-layer (axiomatic source boundary)
+Status: `PARTIAL_L12_AXIOM_FREE_O1C_PROVIDER_EXECUTION_DONE`
+Uzasadnienie: `QW-2239` przechodzi `RG_AXIOM_FREE_O1C_PROVIDER_EXECUTION_GATE_PASS_PARTIAL_PROVIDER_OK_AXIOMATIC_SOURCE_OPEN` (`11/13`) i formalizuje:
+- execution-attempt z provider-layer przechodzi machine-check,
+- missing-provider blocker zostaje usuniety,
+- remaining gap zostaje zawężony do non-axiomatic provider provenance.
+Granica pozostaje jawna:
+- `provider_layer_still_axiomatic=True`,
+- `c1_theorem_discharge_completed=False`,
+- `o1c_fully_closed=False`.
+
+114. `L5` - axiom-free O1c execution with provider-layer (axiomatic source boundary)
+Status: `PARTIAL_L5_AXIOM_FREE_O1C_PROVIDER_EXECUTION_DONE`
+Uzasadnienie: `QW-2240` przechodzi `QFT_AXIOM_FREE_O1C_PROVIDER_EXECUTION_GATE_PASS_PARTIAL_PROVIDER_OK_AXIOMATIC_SOURCE_OPEN` (`11/13`) i formalizuje:
+- execution-attempt z provider-layer przechodzi machine-check,
+- missing-provider blocker zostaje usuniety,
+- remaining gap zostaje zawężony do non-axiomatic provider provenance.
+Granica pozostaje jawna:
+- `provider_layer_still_axiomatic=True`,
+- `c1_theorem_discharge_completed=False`,
+- `o1c_fully_closed=False`.

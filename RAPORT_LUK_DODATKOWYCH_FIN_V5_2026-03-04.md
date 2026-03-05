@@ -1473,3 +1473,55 @@ Nowe bramki strict:
 - Znaczenie:
   - remaining gap przechodzi z poziomu \"proofs pending\" na poziom
     \"proofs pending with formally classified missing-provider blocker\".
+
+## Aktualizacja 2026-03-05: QW-2237 (L12 O1c provider-layer)
+
+- Artefakt: `report_qw2237_rg_axiom_free_o1c_provider_layer_gate.json`
+- Werdykt: `RG_AXIOM_FREE_O1C_PROVIDER_LAYER_GATE_PASS_PARTIAL_AXIOMATIC_PROVIDER_OPEN` (`11/13`)
+- Co zostalo domkniete:
+  1. utworzono jawny provider-layer (`FIN_L12_O1C_PROVIDER_LAYER.lean`) z theoremami `RG_C1_1_DERIVED`, `RG_C1_2_DERIVED`,
+  2. provider-layer przeszedl machine-check.
+- Granica:
+  - provider provenance nadal axiomatic (`DerivedOrPending`),
+  - `c1_theorem_discharge_completed=False`,
+  - `o1c_fully_closed=False`.
+- Znaczenie:
+  - usunieto blocker missing-provider; remaining gap przesuniety na poziom provenance provider theoremow.
+
+## Aktualizacja 2026-03-05: QW-2238 (L5 O1c provider-layer)
+
+- Artefakt: `report_qw2238_qft_axiom_free_o1c_provider_layer_gate.json`
+- Werdykt: `QFT_AXIOM_FREE_O1C_PROVIDER_LAYER_GATE_PASS_PARTIAL_AXIOMATIC_PROVIDER_OPEN` (`11/13`)
+- Co zostalo domkniete:
+  1. utworzono jawny provider-layer (`FIN_L5_O1C_PROVIDER_LAYER.lean`) z theoremami `QFT_C1_1_DERIVED`, `QFT_C1_2_DERIVED`,
+  2. provider-layer przeszedl machine-check.
+- Granica:
+  - provider provenance nadal axiomatic (`DerivedOrPending`),
+  - `c1_theorem_discharge_completed=False`,
+  - `o1c_fully_closed=False`.
+- Znaczenie:
+  - usunieto blocker missing-provider; remaining gap przesuniety na poziom provenance provider theoremow.
+
+## Aktualizacja 2026-03-05: QW-2239 (L12 provider execution)
+
+- Artefakt: `report_qw2239_rg_axiom_free_o1c_provider_execution_gate.json`
+- Werdykt: `RG_AXIOM_FREE_O1C_PROVIDER_EXECUTION_GATE_PASS_PARTIAL_PROVIDER_OK_AXIOMATIC_SOURCE_OPEN` (`11/13`)
+- Co zostalo domkniete:
+  1. execution-attempt z provider-layer przechodzi machine-check,
+  2. missing-provider blocker formalnie usuniety.
+- Granica:
+  - `provider_layer_still_axiomatic=True`,
+  - `c1_theorem_discharge_completed=False`,
+  - `o1c_fully_closed=False`.
+
+## Aktualizacja 2026-03-05: QW-2240 (L5 provider execution)
+
+- Artefakt: `report_qw2240_qft_axiom_free_o1c_provider_execution_gate.json`
+- Werdykt: `QFT_AXIOM_FREE_O1C_PROVIDER_EXECUTION_GATE_PASS_PARTIAL_PROVIDER_OK_AXIOMATIC_SOURCE_OPEN` (`11/13`)
+- Co zostalo domkniete:
+  1. execution-attempt z provider-layer przechodzi machine-check,
+  2. missing-provider blocker formalnie usuniety.
+- Granica:
+  - `provider_layer_still_axiomatic=True`,
+  - `c1_theorem_discharge_completed=False`,
+  - `o1c_fully_closed=False`.
