@@ -82,9 +82,9 @@ Interpretation:
 - full gravity action-level closure and rigorous SM+GR reduction theorem (`L4/L16/L23`).
 
 ### Mathematical global rigor
-- complete global quantization/unitarity/renormalization/causality theorem package (`L5`; after `QW-2210`/`QW-2212`/`QW-2214` reduced to `L5_O1a_O1` + `L5_O1b`),
+- complete global quantization/unitarity/renormalization/causality theorem package (`L5`; after `QW-2210`/`QW-2212`/`QW-2214`/`QW-2216` reduced to terminal obligations `L5_O1a_O1` + `L5_O1b_O1`),
 - global (not domain-limited) uniqueness and identifiability of kernel->observable map (`L6/L7/L20/L21`),
-- nonperturbative RG fixed-point proof (`L12`; after `QW-2209`/`QW-2211`/`QW-2213` reduced to `L12_O1a_O1` + `L12_O1b`).
+- nonperturbative RG fixed-point proof (`L12`; after `QW-2209`/`QW-2211`/`QW-2213`/`QW-2215` reduced to terminal obligations `L12_O1a_O1` + `L12_O1b_O1`).
 
 ### Scientific validation boundary
 - one central high-impact prediction fully confirmed across independent multidomain data (`L9`; prereg stack already integrated, but full confirmation still open),
@@ -101,7 +101,7 @@ Canonical gap list:
 - `L22` (vacuum stability branch rule): `QW-2118`, `QW-2122`, `QW-2123`, `QW-2124`.
 - `L18/L19` (spinor+gauge bridge): `QW-2121`, `QW-2126`, `QW-2127`, `QW-2128`, `QW-2129`, `QW-2130`, `QW-2131`, `QW-2189`, `QW-2190`, `QW-2191`, `QW-2192`, `QW-2193` (de-anchored consistency + kernel-mode scaffold closed; uniqueness obstruction theorem proved; axiom-augmented uniqueness closed and robust across declared admissible family; axiom-free uniqueness still open).
 - `L19` (hypercharge completion step): `QW-2183`, `QW-2184` (from derived neutrino neutrality to symbolic no-scan global uniqueness of `Y_H` over reals within declared formula class; boundary outside class explicit).
-- `L12` (RG fixed point): `QW-2132`, `QW-2182`, `QW-2185`, `QW-2187`, `QW-2188`, `QW-2209`, `QW-2211`, `QW-2213` (proxy chain + obstruction theorem + strict finite-scope declaration + anchored UV-correction frontier + reduction `L12_O1` -> `L12_O1a/L12_O1b` and terminalization `L12_O1a -> L12_O1a_O1`; global all-t closure still open).
+- `L12` (RG fixed point): `QW-2132`, `QW-2182`, `QW-2185`, `QW-2187`, `QW-2188`, `QW-2209`, `QW-2211`, `QW-2213`, `QW-2215` (proxy chain + obstruction theorem + strict finite-scope declaration + anchored UV-correction frontier + reduction/decomposition of `L12_O1`, then terminalization `L12_O1a -> L12_O1a_O1` and `L12_O1b -> L12_O1b_O1`; global all-t closure still open).
 - `L15` (spectral stability of `K_total`): `QW-2118`, `QW-2124`, `QW-2186`, `QW-2208` (branch-resolved positive-definite margin remains closed; global gap reduced to one explicit obligation `L15_O1` beyond bounded symmetric perturbation scope).
 - `L6` (global identifiability stratification): `QW-2196` (integrated scope-closed vs axiom-free-open component map with explicit no-overclaim boundary).
 - `L7` (robustness envelope): `QW-2197` (integrated robustness metrics across alignment/q-assignment/selection-family/mass-slope/spectral-margin in declared strict scope; global unbounded robustness still open).
@@ -109,7 +109,7 @@ Canonical gap list:
 - `L1/L2/L17` (foundational entity + topology): `QW-2206` (canonical action/EoM layer integrated + local Skyrmion/FR topological evidence integrated; single-field ontological reduction and global full-object topological theorem remain open).
 - `L11` (Planck-scale bridge/internalization): `QW-2198`, `QW-2207` (strict Planck reconstruction remains high-accuracy; foundational gap reduced to one explicit obligation: internal origin of the dimensionless `G` bridge observable).
 - `L4` (GR-limit conditions catalog): `QW-2201` (strict catalog of GR-limit support conditions and evidence layers; foundational direct derivation/equivalence theorem still open).
-- `L5` (QFT global closure): `QW-2202`, `QW-2210`, `QW-2212`, `QW-2214` (strict-scope stack integrated, global theorem-level gaps consolidated into `L5_O1`, decomposed to `L5_O1a/L5_O1b`, then terminalized for `L5_O1a -> L5_O1a_O1`).
+- `L5` (QFT global closure): `QW-2202`, `QW-2210`, `QW-2212`, `QW-2214`, `QW-2216` (strict-scope stack integrated, global theorem-level gaps consolidated into `L5_O1`, decomposed to `L5_O1a/L5_O1b`, then terminalized for `L5_O1a -> L5_O1a_O1` and `L5_O1b -> L5_O1b_O1`).
 - `L9` (prediction/falsifiability): `QW-2203` (preregistered falsification stack + mixed validation status integrated; one channel supported, PMNS/cosmology pending, no single high-impact full confirmation claim).
 - `L10` (independent replication): `QW-2204` (external freeze/rehearsal/governance/lock chain integrated and packet-ready; truly independent multiteam execution and public signed reports still pending).
 - `L16` (SM+GR reduction scope): `QW-2200` (low-energy reduction scope closed in strict package+bridge layers; foundational full reduction theorem still open).

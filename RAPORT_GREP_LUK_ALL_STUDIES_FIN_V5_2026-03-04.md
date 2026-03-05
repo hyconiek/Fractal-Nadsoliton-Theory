@@ -1529,5 +1529,29 @@ Ten punkt jest nadrzedny wzgledem historycznych wpisow etapowych `PARTIAL` dla t
      - `L5_O1a` zredukowano do jednego kroku terminalnego:
        - `L5_O1a_O1`: constructive existence/uniqueness + positivity-to-reconstruction theorem dla kompletnego dzialania FIN.
    - Znaczenie:
-     - status `L5` przechodzi z \"decomposition-level\" do \"terminal-obligation-level\" dla galezi `O1a`,
+   - status `L5` przechodzi z \"decomposition-level\" do \"terminal-obligation-level\" dla galezi `O1a`,
        przy zachowaniu jawnego theorem-level boundary bez overclaimu.
+
+## 103) Aktualizacja wykonawcza: QW-2215
+
+1. `QW-2215` (`report_qw2215_rg_global_stability_scope_gate.json`)
+   - Verdict: `RG_GLOBAL_STABILITY_SCOPE_GATE_PASS_PARTIAL_SINGLE_TERMINAL_OBLIGATION_OPEN` (`9/12`)
+   - Wynik:
+     - utrzymano wszystkie granice i prerequisites dla galezi `L12_O1b` (`QW-2211`, `QW-2213`, `QW-2209`, `QW-2208`, `QW-2186`),
+     - `L12_O1b` zredukowano do jednego kroku terminalnego:
+       - `L12_O1b_O1`: globalny all-`t` fixed-point/stability theorem dla pelnego all-coupling FIN RG system.
+   - Znaczenie:
+     - status `L12` przechodzi z \"partial terminalized only for O1a\" do \"fully terminalized on both branches\",
+       przy utrzymanym no-overclaim boundary.
+
+## 104) Aktualizacja wykonawcza: QW-2216
+
+1. `QW-2216` (`report_qw2216_qft_unitary_scattering_scope_gate.json`)
+   - Verdict: `QFT_UNITARY_SCATTERING_SCOPE_GATE_PASS_PARTIAL_SINGLE_TERMINAL_OBLIGATION_OPEN` (`9/12`)
+   - Wynik:
+     - utrzymano wszystkie granice i prerequisites dla galezi `L5_O1b` (`QW-2212`, `QW-2214`, `QW-2202`, `QW-2127`, `QW-2097`),
+     - `L5_O1b` zredukowano do jednego kroku terminalnego:
+       - `L5_O1b_O1`: unitary S-matrix + asymptotic/scattering completeness theorem.
+   - Znaczenie:
+     - status `L5` przechodzi z \"partial terminalized only for O1a\" do \"fully terminalized on both branches\",
+       przy utrzymanym theorem-level boundary bez overclaimu.

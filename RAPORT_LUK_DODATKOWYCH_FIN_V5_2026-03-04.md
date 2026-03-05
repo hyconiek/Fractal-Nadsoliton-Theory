@@ -1163,3 +1163,33 @@ Nowe bramki strict:
 - Znaczenie:
   - L5 przechodzi do poziomu \"terminal-obligation ready\" dla galezi `O1a`
     bez overclaimu globalnej pelnej closure.
+
+## Aktualizacja 2026-03-05: QW-2215 (L12_O1b terminalizacja)
+
+- Artefakt: `report_qw2215_rg_global_stability_scope_gate.json`
+- Werdykt: `RG_GLOBAL_STABILITY_SCOPE_GATE_PASS_PARTIAL_SINGLE_TERMINAL_OBLIGATION_OPEN` (`9/12`)
+- Co zostalo domkniete:
+  1. formalna terminalizacja galezi `L12_O1b` do pojedynczego kroku theorem-level,
+  2. jawne spiecie z granicami L12/L15 (`QW-2209`, `QW-2208`) i certyfikatem branch-scope (`QW-2186`).
+- Granica:
+  - `L12_O1b_O1=False`,
+  - `L12_O1b=False`,
+  - `L12` nadal niezamkniete.
+- Znaczenie:
+  - L12 przechodzi do poziomu \"terminal-obligation ready\" dla obu galezi
+    (`L12_O1a_O1`, `L12_O1b_O1`) bez globalnego overclaimu.
+
+## Aktualizacja 2026-03-05: QW-2216 (L5_O1b terminalizacja)
+
+- Artefakt: `report_qw2216_qft_unitary_scattering_scope_gate.json`
+- Werdykt: `QFT_UNITARY_SCATTERING_SCOPE_GATE_PASS_PARTIAL_SINGLE_TERMINAL_OBLIGATION_OPEN` (`9/12`)
+- Co zostalo domkniete:
+  1. formalna terminalizacja galezi `L5_O1b` do pojedynczego kroku theorem-level,
+  2. jawne spiecie z strict-scope stack i prerequisites (`QW-2202`, `QW-2127`, `QW-2097`, `QW-2214`).
+- Granica:
+  - `L5_O1b_O1=False`,
+  - `L5_O1b=False`,
+  - `L5` nadal niezamkniete.
+- Znaczenie:
+  - L5 przechodzi do poziomu \"terminal-obligation ready\" dla obu galezi
+    (`L5_O1a_O1`, `L5_O1b_O1`) bez overclaimu globalnej closure.

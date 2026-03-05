@@ -606,3 +606,25 @@ Granica pozostaje jawna:
 - `L5_O1a_O1=False`,
 - `L5_O1a=False`,
 - `L5_O1b` pozostaje niezamkniete.
+
+89. `L12` - terminalizacja `L12_O1b` (single terminal global stability theorem obligation)
+Status: `PARTIAL_L12_O1B_REDUCED_TO_SINGLE_TERMINAL_OBLIGATION`
+Uzasadnienie: `QW-2215` przechodzi `RG_GLOBAL_STABILITY_SCOPE_GATE_PASS_PARTIAL_SINGLE_TERMINAL_OBLIGATION_OPEN` (`9/12`) i formalizuje:
+- utrzymanie prerequisites i granic (`QW-2211`, `QW-2213`, `QW-2209`, `QW-2208`, `QW-2186`),
+- jawna redukcja `L12_O1b` do jednego kroku terminalnego:
+  - `L12_O1b_O1`: globalny all-`t` fixed-point/stability theorem dla pelnego nonperturbative all-coupling FIN RG system.
+Granica pozostaje jawna:
+- `L12_O1b_O1=False`,
+- `L12_O1b=False`,
+- `L12` pozostaje niezamkniete.
+
+90. `L5` - terminalizacja `L5_O1b` (single terminal unitary scattering theorem obligation)
+Status: `PARTIAL_L5_O1B_REDUCED_TO_SINGLE_TERMINAL_OBLIGATION`
+Uzasadnienie: `QW-2216` przechodzi `QFT_UNITARY_SCATTERING_SCOPE_GATE_PASS_PARTIAL_SINGLE_TERMINAL_OBLIGATION_OPEN` (`9/12`) i formalizuje:
+- utrzymanie prerequisites i granic (`QW-2212`, `QW-2214`, `QW-2202`, `QW-2127`, `QW-2097`),
+- jawna redukcja `L5_O1b` do jednego kroku terminalnego:
+  - `L5_O1b_O1`: unitary S-matrix + asymptotic/scattering completeness theorem dla teorii zrekonstruowanej z kompletnego dzialania FIN.
+Granica pozostaje jawna:
+- `L5_O1b_O1=False`,
+- `L5_O1b=False`,
+- `L5` pozostaje niezamkniete.

@@ -1,7 +1,7 @@
 # RAPORT STANU TEORII FIN (Release 5.1 readiness)
 
 **Data:** 2026-03-05  
-**Zakres audytu:** strict chain do `QW-2214` + raporty luk (`L1..L23`)  
+**Zakres audytu:** strict chain do `QW-2216` + raporty luk (`L1..L23`)  
 **Decyzja:** `RELEASE_5_1_FULL_CLOSURE_NOT_READY`
 
 ## 1) Werdykt główny
@@ -57,7 +57,9 @@ Stan na dziś:
    - `QW-2211`: decomposition gate dla `L12_O1` (`L12_O1a` -> `L12_O1b`),
    - `QW-2212`: decomposition gate dla `L5_O1` (`L5_O1a` -> `L5_O1b`),
    - `QW-2213`: terminalizacja `L12_O1a` do jednego kroku theorem-level (`L12_O1a_O1`),
-   - `QW-2214`: terminalizacja `L5_O1a` do jednego kroku theorem-level (`L5_O1a_O1`).
+   - `QW-2214`: terminalizacja `L5_O1a` do jednego kroku theorem-level (`L5_O1a_O1`),
+   - `QW-2215`: terminalizacja `L12_O1b` do jednego kroku theorem-level (`L12_O1b_O1`),
+   - `QW-2216`: terminalizacja `L5_O1b` do jednego kroku theorem-level (`L5_O1b_O1`).
 
 ## 3) Co pozostaje realnie otwarte (pytania recenzenckie)
 
@@ -67,9 +69,9 @@ Stan na dziś:
 3. `L4/L16/L23`: pełny most action-level do GR (nie tylko zgodność metryk/gate-level).
 
 ### B. Rygor matematyczny globalny
-1. `L5`: po `QW-2202` + `QW-2210` + `QW-2212` + `QW-2214` warstwa strict-scope jest zintegrowana; `L5_O1a` jest zterminalizowane do jednego kroku (`L5_O1a_O1`), a `L5_O1b` pozostaje otwarte.
+1. `L5`: po `QW-2202` + `QW-2210` + `QW-2212` + `QW-2214` + `QW-2216` warstwa strict-scope jest zintegrowana; obie galezie (`L5_O1a`, `L5_O1b`) sa zterminalizowane do krokow (`L5_O1a_O1`, `L5_O1b_O1`), ktore pozostaja otwarte.
 2. `L6/L7/L8/L20/L21`: globalna unikalność mapowania kernel->observables, odporność i separacja „derivation vs calibration”, plus recenzencki frontier precyzji mas (non-top/high-precision counts/anchor-free top).
-3. `L12`: po `QW-2209` + `QW-2211` + `QW-2213` pozostaja dwa jawne otwarte kroki: `L12_O1a_O1` (terminal dla `L12_O1a`) oraz `L12_O1b`.
+3. `L12`: po `QW-2209` + `QW-2211` + `QW-2213` + `QW-2215` pozostaja dwa jawne otwarte kroki terminalne: `L12_O1a_O1` i `L12_O1b_O1`.
 4. `L11`: po `QW-2207` pozostaje jedna jawna obligacja foundational (`L11_O1`: wewnetrzne wyprowadzenie dimensionless bridge observable dla `G`).
 5. `L15`: po `QW-2208` pozostaje jedna jawna obligacja global stability (`L15_O1`) poza bounded symmetric perturbation scope.
 
@@ -85,14 +87,14 @@ Stan na dziś:
 | L2 | PARTIAL+ | lokalna solitonowosc/topologia domknieta (`QW-2206`: B~1, FR spin/g), ale globalny theorem ochrony niepelny |
 | L3 | PARTIAL+++ | kernel-mode scaffold + obstruction theorem + axiom-augmented closure + robustness family (`QW-2193`); axiom-free unikalnosc nadal otwarta |
 | L4 | PARTIAL++ | GR-limit conditions catalog domkniety (`QW-2201`), ale direct foundational derivation/equivalence theorem nadal otwarte |
-| L5 | PARTIAL+++++ | strict QFT scope zintegrowany (`QW-2202`), zredukowany/dekomponowany (`QW-2210/2212`) i zterminalizowany dla `L5_O1a` (`QW-2214`: `L5_O1a_O1`) |
+| L5 | PARTIAL++++++ | strict QFT scope zintegrowany (`QW-2202`), zredukowany/dekomponowany (`QW-2210/2212`) i zterminalizowany dla obu galezi (`QW-2214/2216`: `L5_O1a_O1`, `L5_O1b_O1`) |
 | L6 | PARTIAL++ | scope-stratified identifiability domkniete (`QW-2196`), axiom-free global closure nadal otwarta |
 | L7 | PARTIAL++ | integrated robustness envelope domkniety w strict scope (`QW-2197`), global unbounded robustness nadal otwarta |
 | L8 | PARTIAL+ | scope-stratified mass precision domkniete (`QW-2205`), ale non-top/high-precision/anchor-free frontier nadal otwarty |
 | L9 | PARTIAL+ | strict prereg/falsification stack zintegrowany (`QW-2203`), ale brak jednej centralnej wysokowplywowej predykcji potwierdzonej multidomain |
 | L10 | PARTIAL+ | external packet/protocol chain domkniety (`QW-2204`), ale brak realnego niezaleznego multiteam rerun z publicznymi signed reports |
 | L11 | PARTIAL++ | strict Planck bridge + obstruction/decomposition (`QW-2198`,`QW-2207`): jedna jawna obligacja internal-origin (`L11_O1`) pozostaje otwarta |
-| L12 | PARTIAL+++++ | strict proxy + obstruction + finite-scope + anchored extended-scope (`QW-2209`), dekompozycja (`QW-2211`) i terminalizacja `L12_O1a` (`QW-2213`: `L12_O1a_O1`) |
+| L12 | PARTIAL++++++ | strict proxy + obstruction + finite-scope + anchored extended-scope (`QW-2209`), dekompozycja (`QW-2211`) i terminalizacja obu galezi (`QW-2213/2215`: `L12_O1a_O1`, `L12_O1b_O1`) |
 | L13 | CLOSED (strict internal) | domknięte przez QW-2179 + QW-2181 |
 | L14 | CLOSED (strict internal) | domknięte przez QW-2180 + QW-2181 |
 | L15 | PARTIAL++ | branch-scope closure + obstruction/decomposition (`QW-2186`,`QW-2208`): jedna jawna obligacja global stability (`L15_O1`) pozostaje otwarta |
