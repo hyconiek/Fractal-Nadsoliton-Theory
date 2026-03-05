@@ -584,3 +584,25 @@ Uzasadnienie: `QW-2212` przechodzi `QFT_GLOBAL_OBLIGATION_DECOMPOSITION_GATE_PAS
   - `L5_O1a`: konstruktywna nonperturbative existence/uniqueness + positivity/reconstruction,
   - `L5_O1b`: unitary S-matrix + scattering completeness oparte na `L5_O1a`.
 Granica pozostaje jawna: oba podkroki sa nadal otwarte (`L5_O1a=False`, `L5_O1b=False`).
+
+87. `L12` - terminalizacja `L12_O1a` (single terminal theorem obligation)
+Status: `PARTIAL_L12_O1A_REDUCED_TO_SINGLE_TERMINAL_OBLIGATION`
+Uzasadnienie: `QW-2213` przechodzi `RG_FLOW_EXISTENCE_SCOPE_GATE_PASS_PARTIAL_SINGLE_TERMINAL_OBLIGATION_OPEN` (`9/11`) i formalizuje:
+- utrzymanie granic z `QW-2211` (decomposition) oraz `QW-2185/2188` (obstruction/frontier),
+- jawna redukcja `L12_O1a` do jednego kroku terminalnego:
+  - `L12_O1a_O1`: nonperturbative global existence/uniqueness theorem dla full all-coupling FIN RG flow z kompletnego dzialania FIN.
+Granica pozostaje jawna:
+- `L12_O1a_O1=False`,
+- `L12_O1a=False`,
+- `L12_O1b` pozostaje niezamkniete.
+
+88. `L5` - terminalizacja `L5_O1a` (single terminal constructive theorem obligation)
+Status: `PARTIAL_L5_O1A_REDUCED_TO_SINGLE_TERMINAL_OBLIGATION`
+Uzasadnienie: `QW-2214` przechodzi `QFT_CONSTRUCTIVE_BASE_SCOPE_GATE_PASS_PARTIAL_SINGLE_TERMINAL_OBLIGATION_OPEN` (`9/11`) i formalizuje:
+- utrzymanie granic z `QW-2212` oraz strict-scope prerequisites (`QW-2202`, `QW-2165`, `QW-2166`, `QW-2136`, `QW-2181`),
+- jawna redukcja `L5_O1a` do jednego kroku terminalnego:
+  - `L5_O1a_O1`: constructive existence/uniqueness + positivity-to-reconstruction theorem dla kompletnego dzialania FIN.
+Granica pozostaje jawna:
+- `L5_O1a_O1=False`,
+- `L5_O1a=False`,
+- `L5_O1b` pozostaje niezamkniete.

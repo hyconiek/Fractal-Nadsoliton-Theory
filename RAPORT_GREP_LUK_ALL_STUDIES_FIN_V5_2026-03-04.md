@@ -1505,5 +1505,29 @@ Ten punkt jest nadrzedny wzgledem historycznych wpisow etapowych `PARTIAL` dla t
        - `L5_O1a`: constructive existence/uniqueness + positivity/reconstruction layer,
        - `L5_O1b`: unitary S-matrix + scattering completeness na bazie `L5_O1a`.
    - Znaczenie:
-     - status `L5` przechodzi z poziomu "single package obligation" do "sequenced executable obligations",
+   - status `L5` przechodzi z poziomu "single package obligation" do "sequenced executable obligations",
        co porzadkuje sciezke domykania global QFT bez overclaimu.
+
+## 101) Aktualizacja wykonawcza: QW-2213
+
+1. `QW-2213` (`report_qw2213_rg_flow_existence_scope_gate.json`)
+   - Verdict: `RG_FLOW_EXISTENCE_SCOPE_GATE_PASS_PARTIAL_SINGLE_TERMINAL_OBLIGATION_OPEN` (`9/11`)
+   - Wynik:
+     - utrzymano granice i prerequisites z `QW-2211` oraz RG stack (`QW-2132`, `QW-2185`, `QW-2188`, `QW-2136`),
+     - `L12_O1a` zredukowano do jednego kroku terminalnego:
+       - `L12_O1a_O1`: nonperturbative global existence/uniqueness theorem dla pelnego all-coupling FIN RG flow.
+   - Znaczenie:
+     - status `L12` przechodzi z \"decomposition-level\" do \"terminal-obligation-level\" dla galezi `O1a`,
+       przy zachowaniu jawnego braku overclaimu global all-`t`.
+
+## 102) Aktualizacja wykonawcza: QW-2214
+
+1. `QW-2214` (`report_qw2214_qft_constructive_base_scope_gate.json`)
+   - Verdict: `QFT_CONSTRUCTIVE_BASE_SCOPE_GATE_PASS_PARTIAL_SINGLE_TERMINAL_OBLIGATION_OPEN` (`9/11`)
+   - Wynik:
+     - utrzymano strict-scope prerequisites (`QW-2202`, `QW-2165`, `QW-2166`, `QW-2136`, `QW-2181`),
+     - `L5_O1a` zredukowano do jednego kroku terminalnego:
+       - `L5_O1a_O1`: constructive existence/uniqueness + positivity-to-reconstruction theorem dla kompletnego dzialania FIN.
+   - Znaczenie:
+     - status `L5` przechodzi z \"decomposition-level\" do \"terminal-obligation-level\" dla galezi `O1a`,
+       przy zachowaniu jawnego theorem-level boundary bez overclaimu.

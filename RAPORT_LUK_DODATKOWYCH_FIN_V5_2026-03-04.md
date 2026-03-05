@@ -1133,3 +1133,33 @@ Nowe bramki strict:
 - Znaczenie:
   - przejscie z etapu \"single package obligation\" do etapu \"sequenced theorem steps\"
     dla dalszego domykania L5.
+
+## Aktualizacja 2026-03-05: QW-2213 (L12_O1a terminalizacja)
+
+- Artefakt: `report_qw2213_rg_flow_existence_scope_gate.json`
+- Werdykt: `RG_FLOW_EXISTENCE_SCOPE_GATE_PASS_PARTIAL_SINGLE_TERMINAL_OBLIGATION_OPEN` (`9/11`)
+- Co zostalo domkniete:
+  1. formalna terminalizacja galezi `L12_O1a` do pojedynczego kroku theorem-level,
+  2. utrzymanie jawnych granic proxy/obstruction/frontier z poprzedniego chainu.
+- Granica:
+  - `L12_O1a_O1=False`,
+  - `L12_O1a=False`,
+  - `L12_O1b=False`.
+- Znaczenie:
+  - L12 przechodzi do poziomu \"terminal-obligation ready\" dla galezi `O1a`
+    bez zmiany granic rygoru i bez overclaimu global all-`t`.
+
+## Aktualizacja 2026-03-05: QW-2214 (L5_O1a terminalizacja)
+
+- Artefakt: `report_qw2214_qft_constructive_base_scope_gate.json`
+- Werdykt: `QFT_CONSTRUCTIVE_BASE_SCOPE_GATE_PASS_PARTIAL_SINGLE_TERMINAL_OBLIGATION_OPEN` (`9/11`)
+- Co zostalo domkniete:
+  1. formalna terminalizacja galezi `L5_O1a` do pojedynczego kroku theorem-level,
+  2. utrzymanie strict-scope prerequisites i jawnego boundary theorem-level.
+- Granica:
+  - `L5_O1a_O1=False`,
+  - `L5_O1a=False`,
+  - `L5_O1b=False`.
+- Znaczenie:
+  - L5 przechodzi do poziomu \"terminal-obligation ready\" dla galezi `O1a`
+    bez overclaimu globalnej pelnej closure.
