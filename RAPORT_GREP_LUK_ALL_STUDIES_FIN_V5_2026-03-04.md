@@ -1577,5 +1577,31 @@ Ten punkt jest nadrzedny wzgledem historycznych wpisow etapowych `PARTIAL` dla t
      - jawnie zdefiniowano dependency DAG (`L5_O1a_O1 -> L5_O1b_O1`),
      - jawnie zdefiniowano kryteria akceptacyjne (`Q1..Q5`) pod machine-check package.
    - Znaczenie:
-     - L5 ma teraz nie tylko terminal obligations, ale tez kompletna specyfikacje domkniecia theorem-level
+   - L5 ma teraz nie tylko terminal obligations, ale tez kompletna specyfikacje domkniecia theorem-level
        (co uszczelnia rygor metodologiczny i audytowalnosc finalnego kroku).
+
+## 107) Aktualizacja wykonawcza: QW-2219
+
+1. `QW-2219` (`report_qw2219_rg_terminal_proof_packet_ready_gate.json`)
+   - Verdict: `RG_TERMINAL_PROOF_PACKET_READY_GATE_PASS_PARTIAL_EXECUTION_PENDING` (`9/12`)
+   - Wynik:
+     - terminal theorem layer `L12` zostal podniesiony do execution-ready packet layer,
+     - jawnie zdefiniowano machine-check targets, required artifacts i dependency order,
+     - finalna luka zostala zredukowana do jednej obligacji wykonawczej:
+       - `L12_EXEC_O1` (dolaczenie hashowanych proof objects dla `L12_O1a_O1`, `L12_O1b_O1`).
+   - Znaczenie:
+     - L12 przechodzi z etapu \"spec-ready\" do etapu \"execution-ready\"
+       przy zachowaniu rygoru i bez overclaimu theorem-closure.
+
+## 108) Aktualizacja wykonawcza: QW-2220
+
+1. `QW-2220` (`report_qw2220_qft_terminal_proof_packet_ready_gate.json`)
+   - Verdict: `QFT_TERMINAL_PROOF_PACKET_READY_GATE_PASS_PARTIAL_EXECUTION_PENDING` (`9/12`)
+   - Wynik:
+     - terminal theorem layer `L5` zostal podniesiony do execution-ready packet layer,
+     - jawnie zdefiniowano machine-check targets, required artifacts i dependency order,
+     - finalna luka zostala zredukowana do jednej obligacji wykonawczej:
+       - `L5_EXEC_O1` (dolaczenie hashowanych proof objects dla `L5_O1a_O1`, `L5_O1b_O1`).
+   - Znaczenie:
+     - L5 przechodzi z etapu \"spec-ready\" do etapu \"execution-ready\"
+       przy zachowaniu rygoru i bez overclaimu theorem-closure.

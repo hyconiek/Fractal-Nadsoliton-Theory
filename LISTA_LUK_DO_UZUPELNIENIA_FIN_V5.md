@@ -652,3 +652,25 @@ Granica pozostaje jawna:
 - `L5_O1a_O1=False`,
 - `L5_O1b_O1=False`,
 - `L5` pozostaje niezamkniete.
+
+93. `L12` - terminal proof-packet readiness (execution pending)
+Status: `PARTIAL_L12_EXECUTION_PACKET_READY`
+Uzasadnienie: `QW-2219` przechodzi `RG_TERMINAL_PROOF_PACKET_READY_GATE_PASS_PARTIAL_EXECUTION_PENDING` (`9/12`) i formalizuje:
+- proof-packet targets dla `L12_O1a_O1` i `L12_O1b_O1` (pliki machine-check + required artifacts + dependency order),
+- jawna finalna obligacja wykonawcza:
+  - `L12_EXEC_O1`: wygenerowac i dolaczyc hashowane machine-checked proof objects.
+Granica pozostaje jawna:
+- `proof_objects_attached=False`,
+- `terminal_theorems_closed=False`,
+- `L12` pozostaje niezamkniete.
+
+94. `L5` - terminal proof-packet readiness (execution pending)
+Status: `PARTIAL_L5_EXECUTION_PACKET_READY`
+Uzasadnienie: `QW-2220` przechodzi `QFT_TERMINAL_PROOF_PACKET_READY_GATE_PASS_PARTIAL_EXECUTION_PENDING` (`9/12`) i formalizuje:
+- proof-packet targets dla `L5_O1a_O1` i `L5_O1b_O1` (pliki machine-check + required artifacts + dependency order),
+- jawna finalna obligacja wykonawcza:
+  - `L5_EXEC_O1`: wygenerowac i dolaczyc hashowane machine-checked proof objects.
+Granica pozostaje jawna:
+- `proof_objects_attached=False`,
+- `terminal_theorems_closed=False`,
+- `L5` pozostaje niezamkniete.

@@ -1223,3 +1223,33 @@ Nowe bramki strict:
   - `L5` nadal niezamkniete.
 - Znaczenie:
   - L5 ma kompletna, audytowalna specyfikacje finalnego domkniecia theorem-level.
+
+## Aktualizacja 2026-03-05: QW-2219 (L12 proof-packet readiness)
+
+- Artefakt: `report_qw2219_rg_terminal_proof_packet_ready_gate.json`
+- Werdykt: `RG_TERMINAL_PROOF_PACKET_READY_GATE_PASS_PARTIAL_EXECUTION_PENDING` (`9/12`)
+- Co zostalo domkniete:
+  1. formalny execution-ready packet layer dla terminalnych twierdzen L12,
+  2. jawne machine-check targets i required artifacts,
+  3. jawna finalna obligacja wykonawcza `L12_EXEC_O1`.
+- Granica:
+  - `proof_objects_attached=False`,
+  - `terminal_theorems_closed=False`,
+  - `L12` nadal niezamkniete.
+- Znaczenie:
+  - L12 przechodzi z poziomu \"spec-ready\" na \"execution-ready\".
+
+## Aktualizacja 2026-03-05: QW-2220 (L5 proof-packet readiness)
+
+- Artefakt: `report_qw2220_qft_terminal_proof_packet_ready_gate.json`
+- Werdykt: `QFT_TERMINAL_PROOF_PACKET_READY_GATE_PASS_PARTIAL_EXECUTION_PENDING` (`9/12`)
+- Co zostalo domkniete:
+  1. formalny execution-ready packet layer dla terminalnych twierdzen L5,
+  2. jawne machine-check targets i required artifacts,
+  3. jawna finalna obligacja wykonawcza `L5_EXEC_O1`.
+- Granica:
+  - `proof_objects_attached=False`,
+  - `terminal_theorems_closed=False`,
+  - `L5` nadal niezamkniete.
+- Znaczenie:
+  - L5 przechodzi z poziomu \"spec-ready\" na \"execution-ready\".

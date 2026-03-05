@@ -1,0 +1,54 @@
+{
+  "generated_utc": "2026-03-05T03:37:36.283503+00:00",
+  "sources": {
+    "q2217": "report_qw2217_rg_terminal_theorem_spec_gate.json"
+  },
+  "proof_packet": {
+    "theorem_targets": {
+      "L12_O1a_O1": {
+        "statement_short": "Global nonperturbative existence/uniqueness for full FIN RG flow.",
+        "machine_check_file": "FIN_L12_O1A_O1_TERMINAL.lean",
+        "proof_attached": false
+      },
+      "L12_O1b_O1": {
+        "statement_short": "Global all-t fixed-point/stability for full FIN RG flow.",
+        "machine_check_file": "FIN_L12_O1B_O1_TERMINAL.lean",
+        "proof_attached": false
+      }
+    },
+    "dependency_order": [
+      "L12_O1a_O1",
+      "L12_O1b_O1"
+    ],
+    "required_artifacts": [
+      "terminal theorem files",
+      "machine-check logs",
+      "proof object hashes",
+      "manifest SHA256"
+    ],
+    "proof_packet_ready": true
+  },
+  "open_obligation": {
+    "id": "L12_EXEC_O1",
+    "description": "Execute machine-checked theorem proofs and attach hashed proof objects for L12_O1a_O1 and L12_O1b_O1.",
+    "currently_closed": false
+  },
+  "flags": {
+    "q2217_terminal_spec_layer_pass_present": true,
+    "terminal_obligations_present": true,
+    "dependency_dag_present": true,
+    "dependency_order_consistent": true,
+    "acceptance_criteria_complete_ge_5": true,
+    "proof_packet_targets_defined": true,
+    "machine_check_plan_explicit": true,
+    "proof_packet_ready": true,
+    "proof_objects_attached": false,
+    "terminal_theorems_closed": false,
+    "full_l12_closed": false,
+    "no_overclaim_boundary_explicit": true
+  },
+  "pass_count": 9,
+  "total_flags": 12,
+  "verdict": "RG_TERMINAL_PROOF_PACKET_READY_GATE_PASS_PARTIAL_EXECUTION_PENDING",
+  "required_next_step": "GENERATE_AND_ATTACH_MACHINE_CHECKED_PROOF_OBJECTS_FOR_L12_TERMINAL_THEOREMS"
+}
