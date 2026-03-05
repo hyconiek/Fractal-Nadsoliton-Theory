@@ -766,3 +766,25 @@ Uzasadnienie: `QW-2228` przechodzi `QFT_AXIOM_FREE_O1B_PROVENANCE_GATE_PASS_PART
 Granica pozostaje jawna:
 - `l5_axiom_free_o1b_fully_closed=False`,
 - brak overclaimu theorem-level unitarity/scattering/positivity.
+
+103. `L12` - axiom-free O1c attachment spec (discharge bundle)
+Status: `PARTIAL_L12_AXIOM_FREE_O1C_ATTACHMENT_SPEC_READY`
+Uzasadnienie: `QW-2229` przechodzi `RG_AXIOM_FREE_O1C_ATTACHMENT_SPEC_GATE_PASS_PARTIAL_DISCHARGE_PENDING` (`8/9`) i formalizuje:
+- finalna warstwe O1c:
+  - unresolved union,
+  - theorem/witness discharge bundle,
+  - acceptance criteria `C1..C5` dla finalnego axiom-free attachment.
+Granica pozostaje jawna:
+- `o1c_attachment_fully_closed=False`,
+- finalny krok to wykonanie theorem discharge + proof-object attachment.
+
+104. `L5` - axiom-free O1c attachment spec (discharge bundle)
+Status: `PARTIAL_L5_AXIOM_FREE_O1C_ATTACHMENT_SPEC_READY`
+Uzasadnienie: `QW-2230` przechodzi `QFT_AXIOM_FREE_O1C_ATTACHMENT_SPEC_GATE_PASS_PARTIAL_DISCHARGE_PENDING` (`8/9`) i formalizuje:
+- finalna warstwe O1c:
+  - unresolved union,
+  - theorem/witness discharge bundle,
+  - acceptance criteria `C1..C5` dla finalnego axiom-free attachment.
+Granica pozostaje jawna:
+- `o1c_attachment_fully_closed=False`,
+- finalny krok to wykonanie theorem discharge + proof-object attachment.

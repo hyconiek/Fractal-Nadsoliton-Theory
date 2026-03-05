@@ -1713,3 +1713,29 @@ Ten punkt jest nadrzedny wzgledem historycznych wpisow etapowych `PARTIAL` dla t
    - Znaczenie:
      - L5 axiom-free ma juz provenance accounting dla obu galezi (`O1a` + `O1b`),
        a remaining gap pozostaje skupiony na theorem discharge + final attachment (`O1c`).
+
+## 117) Aktualizacja wykonawcza: QW-2229
+
+1. `QW-2229` (`report_qw2229_rg_axiom_free_o1c_attachment_spec_gate.json`)
+   - Verdict: `RG_AXIOM_FREE_O1C_ATTACHMENT_SPEC_GATE_PASS_PARTIAL_DISCHARGE_PENDING` (`8/9`)
+   - Wynik:
+     - finalna warstwa `O1c` dla L12 jest formalnie zdefiniowana:
+       - unresolved union,
+       - discharge bundle (theorem targets + witness replacements),
+       - acceptance criteria `C1..C5`.
+   - Znaczenie:
+     - L12 axiom-free jest gotowe do finalnego kroku wykonawczego
+       (theorem discharge + final proof-object attachment), bez overclaimu closure.
+
+## 118) Aktualizacja wykonawcza: QW-2230
+
+1. `QW-2230` (`report_qw2230_qft_axiom_free_o1c_attachment_spec_gate.json`)
+   - Verdict: `QFT_AXIOM_FREE_O1C_ATTACHMENT_SPEC_GATE_PASS_PARTIAL_DISCHARGE_PENDING` (`8/9`)
+   - Wynik:
+     - finalna warstwa `O1c` dla L5 jest formalnie zdefiniowana:
+       - unresolved union,
+       - discharge bundle (theorem targets + witness replacements),
+       - acceptance criteria `C1..C5`.
+   - Znaczenie:
+     - L5 axiom-free jest gotowe do finalnego kroku wykonawczego
+       (theorem discharge + final proof-object attachment), bez overclaimu closure.

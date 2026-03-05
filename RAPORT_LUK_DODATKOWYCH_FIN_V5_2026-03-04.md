@@ -1357,3 +1357,31 @@ Nowe bramki strict:
   - `l5_axiom_free_o1b_fully_closed=False`.
 - Znaczenie:
   - L5 ma provenance-ledger dla `O1a` i `O1b`; remaining gap to theorem discharge + final `O1c`.
+
+## Aktualizacja 2026-03-05: QW-2229 (L12 O1c attachment spec)
+
+- Artefakt: `report_qw2229_rg_axiom_free_o1c_attachment_spec_gate.json`
+- Werdykt: `RG_AXIOM_FREE_O1C_ATTACHMENT_SPEC_GATE_PASS_PARTIAL_DISCHARGE_PENDING` (`8/9`)
+- Co zostalo domkniete:
+  1. formalny O1c attachment layer (dependencies + unresolved union),
+  2. jawny discharge bundle (theorem targets, witness replacements, artifacts),
+  3. jawna macierz kryteriow `C1..C5`.
+- Granica:
+  - `o1c_attachment_fully_closed=False`,
+  - wykonawczo pozostaje theorem discharge i final axiom-free proof object.
+- Znaczenie:
+  - L12 ma kompletna specyfikacje finalnego kroku domkniecia axiom-free.
+
+## Aktualizacja 2026-03-05: QW-2230 (L5 O1c attachment spec)
+
+- Artefakt: `report_qw2230_qft_axiom_free_o1c_attachment_spec_gate.json`
+- Werdykt: `QFT_AXIOM_FREE_O1C_ATTACHMENT_SPEC_GATE_PASS_PARTIAL_DISCHARGE_PENDING` (`8/9`)
+- Co zostalo domkniete:
+  1. formalny O1c attachment layer (dependencies + unresolved union),
+  2. jawny discharge bundle (theorem targets, witness replacements, artifacts),
+  3. jawna macierz kryteriow `C1..C5`.
+- Granica:
+  - `o1c_attachment_fully_closed=False`,
+  - wykonawczo pozostaje theorem discharge i final axiom-free proof object.
+- Znaczenie:
+  - L5 ma kompletna specyfikacje finalnego kroku domkniecia axiom-free.

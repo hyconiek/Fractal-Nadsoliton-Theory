@@ -1,0 +1,68 @@
+{
+  "generated_utc": "2026-03-05T04:04:34.897251+00:00",
+  "sources": {
+    "q2224": "report_qw2224_qft_axiom_free_discharge_spec_gate.json",
+    "q2226": "report_qw2226_qft_axiom_free_o1a_provenance_gate.json",
+    "q2228": "report_qw2228_qft_axiom_free_o1b_provenance_gate.json"
+  },
+  "o1c_subobligation": {
+    "description": "Produce end-to-end axiom-free machine-check object for both L5 terminal theorems.",
+    "depends_on": [
+      "L5_AXIOM_FREE_O1a",
+      "L5_AXIOM_FREE_O1b"
+    ],
+    "closed": false,
+    "targets": [
+      "L5_O1A_O1_TERMINAL",
+      "L5_O1B_O1_TERMINAL"
+    ]
+  },
+  "unresolved_union": [
+    "L5O1aWitness",
+    "L5O1bWitness",
+    "PositivityToReconstruction",
+    "UnitarySMatrixAndScatteringCompleteness"
+  ],
+  "discharge_bundle": {
+    "theorem_targets": [
+      "PositivityToReconstruction",
+      "UnitarySMatrixAndScatteringCompleteness"
+    ],
+    "witness_replacements": [
+      "L5O1aWitness",
+      "L5O1bWitness"
+    ],
+    "terminal_files_to_update": [
+      "FIN_L5_O1A_O1_TERMINAL.lean",
+      "FIN_L5_O1B_O1_TERMINAL.lean"
+    ],
+    "required_artifacts": [
+      "axiom-free theorem proof files",
+      "machine-check logs (Lean/Coq)",
+      "proof object hash manifest",
+      "cross-link report to O1a/O1b provenance"
+    ]
+  },
+  "acceptance_criteria": {
+    "C1": "All unresolved O1a/O1b theorem targets discharged by derived lemmas.",
+    "C2": "No `axiom ...Witness` statements remain in updated L5 terminal files.",
+    "C3": "Machine checker exits zero on updated L5 O1A/O1B files.",
+    "C4": "Hashed axiom-free proof object attached and linked to QW-2226/QW-2228.",
+    "C5": "No-overclaim boundary maintained until all C1..C4 are true."
+  },
+  "flags": {
+    "q2224_o1c_subobligation_present": true,
+    "q2226_o1a_provenance_pass_present": true,
+    "q2228_o1b_provenance_pass_present": true,
+    "o1c_dependency_exact": true,
+    "unresolved_union_nonempty": true,
+    "discharge_bundle_declared": true,
+    "acceptance_criteria_complete_ge_5": true,
+    "o1c_attachment_fully_closed": false,
+    "no_overclaim_boundary_explicit": true
+  },
+  "pass_count": 8,
+  "total_flags": 9,
+  "verdict": "QFT_AXIOM_FREE_O1C_ATTACHMENT_SPEC_GATE_PASS_PARTIAL_DISCHARGE_PENDING",
+  "required_next_step": "EXECUTE_QFT_AXIOM_FREE_THEOREM_DISCHARGE_AND_ATTACH_FINAL_O1C_PROOF_OBJECT"
+}
