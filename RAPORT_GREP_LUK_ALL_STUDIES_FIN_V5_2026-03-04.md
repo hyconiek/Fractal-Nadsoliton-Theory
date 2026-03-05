@@ -1919,7 +1919,65 @@ Ten punkt jest nadrzedny wzgledem historycznych wpisow etapowych `PARTIAL` dla t
      - brak non-axiomatic provider theoremow w Lean dla `QFT_C1_1_DERIVED`/`QFT_C1_2_DERIVED` poza provider-layer,
      - wyeksportowano source-map + obligations (`QFT_DAX_1..QFT_DAX_3`).
    - Granica:
-     - `non_axiomatic_source_exists_for_qft_c1_1=False`,
-     - `non_axiomatic_source_exists_for_qft_c1_2=False`,
+   - `non_axiomatic_source_exists_for_qft_c1_1=False`,
+   - `non_axiomatic_source_exists_for_qft_c1_2=False`,
+   - `c1_theorem_discharge_completed=False`,
+   - `o1c_fully_closed=False`.
+
+## 131) Aktualizacja wykonawcza: QW-2243
+
+1. `QW-2243` (`report_qw2243_rg_dax1_non_axiomatic_provider_attempt_gate.json`)
+   - Verdict: `RG_DAX1_NON_AXIOMATIC_PROVIDER_ATTEMPT_GATE_PASS_PARTIAL_CANONICAL_EXPORT_MISSING` (`10/13`)
+   - Wynik:
+     - wykonano bezposredni DAX1 machine-check attempt dla L12 (`FIN_L12_DAX1_NON_AXIOMATIC_PROVIDER_ATTEMPT.lean`),
+     - checker potwierdza brak canonical export symbol `RG_CanonicalAction_to_WellPosedness_EXPORT`,
+     - wygenerowano hashowany proof object attempt-layer.
+   - Granica:
+     - `canonical_export_symbol_exists=False`,
+     - `checker_confirms_missing_export_symbol=True`,
+     - `dax1_non_axiomatic_provider_completed=False`,
+     - `c1_theorem_discharge_completed=False`,
+     - `o1c_fully_closed=False`.
+
+## 132) Aktualizacja wykonawcza: QW-2244
+
+1. `QW-2244` (`report_qw2244_qft_dax1_non_axiomatic_provider_attempt_gate.json`)
+   - Verdict: `QFT_DAX1_NON_AXIOMATIC_PROVIDER_ATTEMPT_GATE_PASS_PARTIAL_CANONICAL_EXPORT_MISSING` (`10/13`)
+   - Wynik:
+     - wykonano bezposredni DAX1 machine-check attempt dla L5 (`FIN_L5_DAX1_NON_AXIOMATIC_PROVIDER_ATTEMPT.lean`),
+     - checker potwierdza brak canonical export symbol `QFT_CanonicalAction_to_Positivity_EXPORT`,
+     - wygenerowano hashowany proof object attempt-layer.
+   - Granica:
+     - `canonical_export_symbol_exists=False`,
+     - `checker_confirms_missing_export_symbol=True`,
+   - `dax1_non_axiomatic_provider_completed=False`,
+   - `c1_theorem_discharge_completed=False`,
+   - `o1c_fully_closed=False`.
+
+## 133) Aktualizacja wykonawcza: QW-2245
+
+1. `QW-2245` (`report_qw2245_rg_dax1_axiom_free_candidate_scan_gate.json`)
+   - Verdict: `RG_DAX1_AXIOM_FREE_CANDIDATE_SCAN_GATE_PASS_PARTIAL_NO_AXIOM_FREE_CANDIDATE` (`4/8`)
+   - Wynik:
+     - wykonano pelny scan `*.lean` (`n_lean_files=48`) dla targetu DAX1 i export symbolu RG,
+     - target statement jest obecny (`n_target_files=6`),
+     - brak axiom-free kandydatow (`n_axiom_free_candidates=0`),
+     - brak non-axiomatic lokalizacji export symbolu (`n_export_symbol_locations_non_axiomatic=0`).
+   - Granica:
+     - `dax1_non_axiomatic_provider_completed=False`,
+     - `c1_theorem_discharge_completed=False`,
+     - `o1c_fully_closed=False`.
+
+## 134) Aktualizacja wykonawcza: QW-2246
+
+1. `QW-2246` (`report_qw2246_qft_dax1_axiom_free_candidate_scan_gate.json`)
+   - Verdict: `QFT_DAX1_AXIOM_FREE_CANDIDATE_SCAN_GATE_PASS_PARTIAL_NO_AXIOM_FREE_CANDIDATE` (`4/8`)
+   - Wynik:
+     - wykonano pelny scan `*.lean` (`n_lean_files=48`) dla targetu DAX1 i export symbolu QFT,
+     - target statement jest obecny (`n_target_files=6`),
+     - brak axiom-free kandydatow (`n_axiom_free_candidates=0`),
+     - brak non-axiomatic lokalizacji export symbolu (`n_export_symbol_locations_non_axiomatic=0`).
+   - Granica:
+     - `dax1_non_axiomatic_provider_completed=False`,
      - `c1_theorem_discharge_completed=False`,
      - `o1c_fully_closed=False`.

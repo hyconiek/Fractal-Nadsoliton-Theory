@@ -1549,7 +1549,73 @@ Nowe bramki strict:
   2. jawna klasyfikacja: brak non-axiomatic provider theoremow poza provider-layer,
   3. jawna mapa zrodel i obligations `QFT_DAX_1..QFT_DAX_3`.
 - Granica:
-  - `non_axiomatic_source_exists_for_qft_c1_1=False`,
-  - `non_axiomatic_source_exists_for_qft_c1_2=False`,
+- `non_axiomatic_source_exists_for_qft_c1_1=False`,
+- `non_axiomatic_source_exists_for_qft_c1_2=False`,
+- `c1_theorem_discharge_completed=False`,
+- `o1c_fully_closed=False`.
+
+## Aktualizacja 2026-03-05: QW-2243 (L12 direct DAX1 attempt)
+
+- Artefakt: `report_qw2243_rg_dax1_non_axiomatic_provider_attempt_gate.json`
+- Werdykt: `RG_DAX1_NON_AXIOMATIC_PROVIDER_ATTEMPT_GATE_PASS_PARTIAL_CANONICAL_EXPORT_MISSING` (`10/13`)
+- Co zostalo domkniete:
+  1. wykonano bezposredni machine-check attempt DAX1 (`FIN_L12_DAX1_NON_AXIOMATIC_PROVIDER_ATTEMPT.lean`),
+  2. potwierdzono brak canonical export symbol `RG_CanonicalAction_to_WellPosedness_EXPORT`,
+  3. wygenerowano hashowany proof-object attempt-layer.
+- Granica:
+  - `canonical_export_symbol_exists=False`,
+  - `checker_confirms_missing_export_symbol=True`,
+  - `dax1_non_axiomatic_provider_completed=False`,
   - `c1_theorem_discharge_completed=False`,
   - `o1c_fully_closed=False`.
+- Znaczenie:
+  - granica de-axiomatization zostaje zawężona z poziomu "missing non-axiomatic provider source" do precyzyjnego brakujacego export theorem symbolu.
+
+## Aktualizacja 2026-03-05: QW-2244 (L5 direct DAX1 attempt)
+
+- Artefakt: `report_qw2244_qft_dax1_non_axiomatic_provider_attempt_gate.json`
+- Werdykt: `QFT_DAX1_NON_AXIOMATIC_PROVIDER_ATTEMPT_GATE_PASS_PARTIAL_CANONICAL_EXPORT_MISSING` (`10/13`)
+- Co zostalo domkniete:
+  1. wykonano bezposredni machine-check attempt DAX1 (`FIN_L5_DAX1_NON_AXIOMATIC_PROVIDER_ATTEMPT.lean`),
+  2. potwierdzono brak canonical export symbol `QFT_CanonicalAction_to_Positivity_EXPORT`,
+  3. wygenerowano hashowany proof-object attempt-layer.
+- Granica:
+  - `canonical_export_symbol_exists=False`,
+  - `checker_confirms_missing_export_symbol=True`,
+  - `dax1_non_axiomatic_provider_completed=False`,
+  - `c1_theorem_discharge_completed=False`,
+  - `o1c_fully_closed=False`.
+- Znaczenie:
+  - granica de-axiomatization zostaje zawężona z poziomu "missing non-axiomatic provider source" do precyzyjnego brakujacego export theorem symbolu.
+
+## Aktualizacja 2026-03-05: QW-2245 (L12 axiom-free candidate scan)
+
+- Artefakt: `report_qw2245_rg_dax1_axiom_free_candidate_scan_gate.json`
+- Werdykt: `RG_DAX1_AXIOM_FREE_CANDIDATE_SCAN_GATE_PASS_PARTIAL_NO_AXIOM_FREE_CANDIDATE` (`4/8`)
+- Co zostalo domkniete:
+  1. wykonano pelny scan `*.lean` pod target DAX1 i export symbol RG (`n_lean_files=48`),
+  2. target statement wykryty (`n_target_files=6`),
+  3. brak axiom-free kandydatow (`n_axiom_free_candidates=0`),
+  4. brak non-axiomatic export symbol localization (`n_export_symbol_locations_non_axiomatic=0`).
+- Granica:
+  - `dax1_non_axiomatic_provider_completed=False`,
+  - `c1_theorem_discharge_completed=False`,
+  - `o1c_fully_closed=False`.
+- Znaczenie:
+  - stan luki zostaje uscislniony: nie tylko brakuje export theorem, ale takze brak jakiegokolwiek axiom-free kandydata w aktualnym repo.
+
+## Aktualizacja 2026-03-05: QW-2246 (L5 axiom-free candidate scan)
+
+- Artefakt: `report_qw2246_qft_dax1_axiom_free_candidate_scan_gate.json`
+- Werdykt: `QFT_DAX1_AXIOM_FREE_CANDIDATE_SCAN_GATE_PASS_PARTIAL_NO_AXIOM_FREE_CANDIDATE` (`4/8`)
+- Co zostalo domkniete:
+  1. wykonano pelny scan `*.lean` pod target DAX1 i export symbol QFT (`n_lean_files=48`),
+  2. target statement wykryty (`n_target_files=6`),
+  3. brak axiom-free kandydatow (`n_axiom_free_candidates=0`),
+  4. brak non-axiomatic export symbol localization (`n_export_symbol_locations_non_axiomatic=0`).
+- Granica:
+  - `dax1_non_axiomatic_provider_completed=False`,
+  - `c1_theorem_discharge_completed=False`,
+  - `o1c_fully_closed=False`.
+- Znaczenie:
+  - stan luki zostaje uscislniony: nie tylko brakuje export theorem, ale takze brak jakiegokolwiek axiom-free kandydata w aktualnym repo.

@@ -940,3 +940,55 @@ Granica pozostaje jawna:
 - `non_axiomatic_source_exists_for_qft_c1_2=False`,
 - `c1_theorem_discharge_completed=False`,
 - `o1c_fully_closed=False`.
+
+117. `L12` - direct DAX1 non-axiomatic provider attempt (canonical export missing)
+Status: `PARTIAL_L12_DAX1_DIRECT_ATTEMPT_EXECUTED_CANONICAL_EXPORT_MISSING`
+Uzasadnienie: `QW-2243` przechodzi `RG_DAX1_NON_AXIOMATIC_PROVIDER_ATTEMPT_GATE_PASS_PARTIAL_CANONICAL_EXPORT_MISSING` (`10/13`) i formalizuje:
+- bezposredni machine-check attempt DAX1 (`FIN_L12_DAX1_NON_AXIOMATIC_PROVIDER_ATTEMPT.lean`),
+- potwierdzony brak canonical export symbol `RG_CanonicalAction_to_WellPosedness_EXPORT`,
+- hashowany proof object attempt-layer:
+  - `proof_object_qw2243_rg_dax1_non_axiomatic_provider_attempt.json`.
+Granica pozostaje jawna:
+- `canonical_export_symbol_exists=False`,
+- `checker_confirms_missing_export_symbol=True`,
+- `dax1_non_axiomatic_provider_completed=False`,
+- `c1_theorem_discharge_completed=False`,
+- `o1c_fully_closed=False`.
+
+118. `L5` - direct DAX1 non-axiomatic provider attempt (canonical export missing)
+Status: `PARTIAL_L5_DAX1_DIRECT_ATTEMPT_EXECUTED_CANONICAL_EXPORT_MISSING`
+Uzasadnienie: `QW-2244` przechodzi `QFT_DAX1_NON_AXIOMATIC_PROVIDER_ATTEMPT_GATE_PASS_PARTIAL_CANONICAL_EXPORT_MISSING` (`10/13`) i formalizuje:
+- bezposredni machine-check attempt DAX1 (`FIN_L5_DAX1_NON_AXIOMATIC_PROVIDER_ATTEMPT.lean`),
+- potwierdzony brak canonical export symbol `QFT_CanonicalAction_to_Positivity_EXPORT`,
+- hashowany proof object attempt-layer:
+  - `proof_object_qw2244_qft_dax1_non_axiomatic_provider_attempt.json`.
+Granica pozostaje jawna:
+- `canonical_export_symbol_exists=False`,
+- `checker_confirms_missing_export_symbol=True`,
+- `dax1_non_axiomatic_provider_completed=False`,
+- `c1_theorem_discharge_completed=False`,
+- `o1c_fully_closed=False`.
+
+119. `L12` - pelny scan axiom-free kandydatow DAX1 (brak kandydatow)
+Status: `PARTIAL_L12_DAX1_AXIOM_FREE_SCAN_NO_CANDIDATE`
+Uzasadnienie: `QW-2245` przechodzi `RG_DAX1_AXIOM_FREE_CANDIDATE_SCAN_GATE_PASS_PARTIAL_NO_AXIOM_FREE_CANDIDATE` (`4/8`) i formalizuje:
+- pelny scan `*.lean` (`n_lean_files=48`) pod target DAX1 i canonical export symbol,
+- target statement jest obecny (`n_target_files=6`),
+- brak axiom-free kandydatow (`n_axiom_free_candidates=0`),
+- brak non-axiomatic lokalizacji export symbolu (`n_export_symbol_locations_non_axiomatic=0`).
+Granica pozostaje jawna:
+- `dax1_non_axiomatic_provider_completed=False`,
+- `c1_theorem_discharge_completed=False`,
+- `o1c_fully_closed=False`.
+
+120. `L5` - pelny scan axiom-free kandydatow DAX1 (brak kandydatow)
+Status: `PARTIAL_L5_DAX1_AXIOM_FREE_SCAN_NO_CANDIDATE`
+Uzasadnienie: `QW-2246` przechodzi `QFT_DAX1_AXIOM_FREE_CANDIDATE_SCAN_GATE_PASS_PARTIAL_NO_AXIOM_FREE_CANDIDATE` (`4/8`) i formalizuje:
+- pelny scan `*.lean` (`n_lean_files=48`) pod target DAX1 i canonical export symbol,
+- target statement jest obecny (`n_target_files=6`),
+- brak axiom-free kandydatow (`n_axiom_free_candidates=0`),
+- brak non-axiomatic lokalizacji export symbolu (`n_export_symbol_locations_non_axiomatic=0`).
+Granica pozostaje jawna:
+- `dax1_non_axiomatic_provider_completed=False`,
+- `c1_theorem_discharge_completed=False`,
+- `o1c_fully_closed=False`.
