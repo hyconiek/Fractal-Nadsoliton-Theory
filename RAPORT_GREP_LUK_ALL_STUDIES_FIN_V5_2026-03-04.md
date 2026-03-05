@@ -1480,4 +1480,30 @@ Ten punkt jest nadrzedny wzgledem historycznych wpisow etapowych `PARTIAL` dla t
      - `L5` zostaje zredukowane do jednej spojnej obligacji:
        `L5_O1` = pelny konstruktywny pakiet global QFT theorem z kompletnego dzialania FIN.
    - Znaczenie:
-     - status `L5` podnosi sie do `PARTIAL+++`: warstwa strict-scope pozostaje domknieta, a remaining global closure gap jest pojedynczym pakietem theorem-level.
+   - status `L5` podnosi sie do `PARTIAL+++`: warstwa strict-scope pozostaje domknieta, a remaining global closure gap jest pojedynczym pakietem theorem-level.
+
+## 99) Aktualizacja wykonawcza: QW-2211
+
+1. `QW-2211` (`report_qw2211_rg_global_obligation_decomposition_gate.json`)
+   - Verdict: `RG_GLOBAL_OBLIGATION_DECOMPOSITION_GATE_PASS_PARTIAL_TWO_SUBOBLIGATIONS_OPEN` (`8/11`)
+   - Wynik:
+     - zachowano jawne granice z `QW-2209` (obstruction + finite/extended strict scopes + brak global all-`t` claim),
+     - rozbito pojedyncza obligacje `L12_O1` na dwa wykonawcze kroki theorem-level:
+       - `L12_O1a`: pelny nonperturbative derivation RG flow z kompletnego dzialania FIN,
+       - `L12_O1b`: globalny all-`t` fixed-point/stability theorem oparty o `L12_O1a`.
+   - Znaczenie:
+     - status `L12` przechodzi z poziomu "single open obligation" do "sequenced executable obligations",
+       co pozwala domykac luke etapowo bez zmiany granic rygoru.
+
+## 100) Aktualizacja wykonawcza: QW-2212
+
+1. `QW-2212` (`report_qw2212_qft_global_obligation_decomposition_gate.json`)
+   - Verdict: `QFT_GLOBAL_OBLIGATION_DECOMPOSITION_GATE_PASS_PARTIAL_TWO_SUBOBLIGATIONS_OPEN` (`8/11`)
+   - Wynik:
+     - zachowano strict-scope closure i jawne globalne boundary z `QW-2210`,
+     - rozbito pakiet `L5_O1` na dwa wykonawcze kroki theorem-level:
+       - `L5_O1a`: constructive existence/uniqueness + positivity/reconstruction layer,
+       - `L5_O1b`: unitary S-matrix + scattering completeness na bazie `L5_O1a`.
+   - Znaczenie:
+     - status `L5` przechodzi z poziomu "single package obligation" do "sequenced executable obligations",
+       co porzadkuje sciezke domykania global QFT bez overclaimu.

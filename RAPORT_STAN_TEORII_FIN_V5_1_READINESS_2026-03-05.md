@@ -1,7 +1,7 @@
 # RAPORT STANU TEORII FIN (Release 5.1 readiness)
 
 **Data:** 2026-03-05  
-**Zakres audytu:** strict chain do `QW-2210` + raporty luk (`L1..L23`)  
+**Zakres audytu:** strict chain do `QW-2212` + raporty luk (`L1..L23`)  
 **Decyzja:** `RELEASE_5_1_FULL_CLOSURE_NOT_READY`
 
 ## 1) Werdykt główny
@@ -53,7 +53,9 @@ Stan na dziś:
    - `QW-2207`: Planck internalization obstruction gate (`L11`) z izolacja jednej jawnej obligacji internal-origin dla `G` bridge observable,
    - `QW-2208`: spectral global-stability obstruction gate (`L15`) z izolacja jednej jawnej obligacji theorem-level poza bounded branch-scope,
    - `QW-2209`: RG global closure obligation gate (`L12`) z izolacja jednej jawnej obligacji theorem-level (`L12_O1`) poza proxy/finite-scope,
-   - `QW-2210`: QFT global obligation reduction gate (`L5`) z redukcja 3 globalnych twierdzen do jednego spojnego pakietu obligacji (`L5_O1`).
+   - `QW-2210`: QFT global obligation reduction gate (`L5`) z redukcja 3 globalnych twierdzen do jednego spojnego pakietu obligacji (`L5_O1`),
+   - `QW-2211`: decomposition gate dla `L12_O1` (`L12_O1a` -> `L12_O1b`),
+   - `QW-2212`: decomposition gate dla `L5_O1` (`L5_O1a` -> `L5_O1b`).
 
 ## 3) Co pozostaje realnie otwarte (pytania recenzenckie)
 
@@ -63,9 +65,9 @@ Stan na dziś:
 3. `L4/L16/L23`: pełny most action-level do GR (nie tylko zgodność metryk/gate-level).
 
 ### B. Rygor matematyczny globalny
-1. `L5`: po `QW-2202` + `QW-2210` warstwa strict-scope jest zintegrowana, a globalne theorem-level braki sa zredukowane do jednej jawnej obligacji pakietowej (`L5_O1`), ktora nadal pozostaje otwarta.
+1. `L5`: po `QW-2202` + `QW-2210` + `QW-2212` warstwa strict-scope jest zintegrowana, a globalne theorem-level braki sa zredukowane do dwoch jawnych pod-obligacji wykonywalnych (`L5_O1a`, `L5_O1b`), ktore nadal pozostaja otwarte.
 2. `L6/L7/L8/L20/L21`: globalna unikalność mapowania kernel->observables, odporność i separacja „derivation vs calibration”, plus recenzencki frontier precyzji mas (non-top/high-precision counts/anchor-free top).
-3. `L12`: po `QW-2209` pozostaje jedna jawna obligacja (`L12_O1`) na pelny nieperturbacyjny all-`t` theorem RG z kompletnego dzialania FIN.
+3. `L12`: po `QW-2209` + `QW-2211` pozostaja dwie jawne pod-obligacje wykonywalne (`L12_O1a`, `L12_O1b`) na pelny nieperturbacyjny all-`t` theorem RG z kompletnego dzialania FIN.
 4. `L11`: po `QW-2207` pozostaje jedna jawna obligacja foundational (`L11_O1`: wewnetrzne wyprowadzenie dimensionless bridge observable dla `G`).
 5. `L15`: po `QW-2208` pozostaje jedna jawna obligacja global stability (`L15_O1`) poza bounded symmetric perturbation scope.
 
@@ -81,14 +83,14 @@ Stan na dziś:
 | L2 | PARTIAL+ | lokalna solitonowosc/topologia domknieta (`QW-2206`: B~1, FR spin/g), ale globalny theorem ochrony niepelny |
 | L3 | PARTIAL+++ | kernel-mode scaffold + obstruction theorem + axiom-augmented closure + robustness family (`QW-2193`); axiom-free unikalnosc nadal otwarta |
 | L4 | PARTIAL++ | GR-limit conditions catalog domkniety (`QW-2201`), ale direct foundational derivation/equivalence theorem nadal otwarte |
-| L5 | PARTIAL+++ | strict QFT scope zintegrowany (`QW-2202`) i zredukowany do jednej jawnej obligacji pakietowej (`QW-2210`: `L5_O1`) |
+| L5 | PARTIAL++++ | strict QFT scope zintegrowany (`QW-2202`), zredukowany do `L5_O1` (`QW-2210`) i zdekomponowany do krokow wykonywalnych (`QW-2212`: `L5_O1a`, `L5_O1b`) |
 | L6 | PARTIAL++ | scope-stratified identifiability domkniete (`QW-2196`), axiom-free global closure nadal otwarta |
 | L7 | PARTIAL++ | integrated robustness envelope domkniety w strict scope (`QW-2197`), global unbounded robustness nadal otwarta |
 | L8 | PARTIAL+ | scope-stratified mass precision domkniete (`QW-2205`), ale non-top/high-precision/anchor-free frontier nadal otwarty |
 | L9 | PARTIAL+ | strict prereg/falsification stack zintegrowany (`QW-2203`), ale brak jednej centralnej wysokowplywowej predykcji potwierdzonej multidomain |
 | L10 | PARTIAL+ | external packet/protocol chain domkniety (`QW-2204`), ale brak realnego niezaleznego multiteam rerun z publicznymi signed reports |
 | L11 | PARTIAL++ | strict Planck bridge + obstruction/decomposition (`QW-2198`,`QW-2207`): jedna jawna obligacja internal-origin (`L11_O1`) pozostaje otwarta |
-| L12 | PARTIAL+++ | strict proxy + obstruction + finite-scope + anchored extended-scope (`QW-2209`), zredukowane do jednej jawnej obligacji (`L12_O1`) |
+| L12 | PARTIAL++++ | strict proxy + obstruction + finite-scope + anchored extended-scope (`QW-2209`), zredukowane do `L12_O1` i zdekomponowane do krokow wykonywalnych (`QW-2211`: `L12_O1a`, `L12_O1b`) |
 | L13 | CLOSED (strict internal) | domknięte przez QW-2179 + QW-2181 |
 | L14 | CLOSED (strict internal) | domknięte przez QW-2180 + QW-2181 |
 | L15 | PARTIAL++ | branch-scope closure + obstruction/decomposition (`QW-2186`,`QW-2208`): jedna jawna obligacja global stability (`L15_O1`) pozostaje otwarta |

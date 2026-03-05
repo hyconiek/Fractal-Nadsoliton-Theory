@@ -1103,3 +1103,33 @@ Nowe bramki strict:
 - Znaczenie:
   - `L5` przechodzi do `PARTIAL+++`: lokalny stack pozostaje domkniety,
     a globalna luka theorem-level jest pojedynczym, jasno zdefiniowanym pakietem.
+
+## Aktualizacja 2026-03-05: QW-2211 (L12 decomposition)
+
+- Artefakt: `report_qw2211_rg_global_obligation_decomposition_gate.json`
+- Werdykt: `RG_GLOBAL_OBLIGATION_DECOMPOSITION_GATE_PASS_PARTIAL_TWO_SUBOBLIGATIONS_OPEN` (`8/11`)
+- Co zostalo domkniete:
+  1. formalna dekompozycja `L12_O1` do sekwencji krokow wykonawczych,
+  2. jawny DAG zaleznosci (`L12_O1a -> L12_O1b`) bez overclaimu globalnego.
+- Granica:
+  - `L12_O1a=False`,
+  - `L12_O1b=False`,
+  - `full_l12_global_closure_closed=False`.
+- Znaczenie:
+  - przejscie z etapu \"single open obligation\" do etapu \"sequenced theorem steps\"
+    dla dalszego domykania L12.
+
+## Aktualizacja 2026-03-05: QW-2212 (L5 decomposition)
+
+- Artefakt: `report_qw2212_qft_global_obligation_decomposition_gate.json`
+- Werdykt: `QFT_GLOBAL_OBLIGATION_DECOMPOSITION_GATE_PASS_PARTIAL_TWO_SUBOBLIGATIONS_OPEN` (`8/11`)
+- Co zostalo domkniete:
+  1. formalna dekompozycja `L5_O1` do sekwencji krokow wykonawczych,
+  2. jawny DAG zaleznosci (`L5_O1a -> L5_O1b`) bez overclaimu globalnego.
+- Granica:
+  - `L5_O1a=False`,
+  - `L5_O1b=False`,
+  - `full_l5_global_qft_package_closed=False`.
+- Znaczenie:
+  - przejscie z etapu \"single package obligation\" do etapu \"sequenced theorem steps\"
+    dla dalszego domykania L5.

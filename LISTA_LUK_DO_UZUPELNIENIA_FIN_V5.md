@@ -566,3 +566,21 @@ Uzasadnienie: `QW-2210` przechodzi `QFT_GLOBAL_OBLIGATION_REDUCTION_GATE_PASS_PA
 - luka foundational zostaje zredukowana do jednej jawnej obligacji:
   - `L5_O1`: jeden spojny, konstruktywny pakiet global QFT theorem z kompletnego dzialania FIN.
 Granica pozostaje jawna: `full_global_qft_closure_theorem_closed=False`.
+
+85. `L12` - decomposition of `L12_O1` into executable theorem steps
+Status: `PARTIAL_SINGLE_OBLIGATION_DECOMPOSED_TO_TWO_SUBOBLIGATIONS`
+Uzasadnienie: `QW-2211` przechodzi `RG_GLOBAL_OBLIGATION_DECOMPOSITION_GATE_PASS_PARTIAL_TWO_SUBOBLIGATIONS_OPEN` (`8/11`) i formalizuje:
+- zachowanie wszystkich granic strict/no-overclaim z `QW-2209`,
+- jawny graf zaleznosci:
+  - `L12_O1a`: pelne nieperturbacyjne wyprowadzenie all-coupling RG flow z kompletnego dzialania FIN,
+  - `L12_O1b`: globalny all-`t` theorem fixed-point/stability oparty na `L12_O1a`.
+Granica pozostaje jawna: oba podkroki sa nadal otwarte (`L12_O1a=False`, `L12_O1b=False`).
+
+86. `L5` - decomposition of `L5_O1` into executable theorem steps
+Status: `PARTIAL_SINGLE_PACKAGE_OBLIGATION_DECOMPOSED_TO_TWO_SUBOBLIGATIONS`
+Uzasadnienie: `QW-2212` przechodzi `QFT_GLOBAL_OBLIGATION_DECOMPOSITION_GATE_PASS_PARTIAL_TWO_SUBOBLIGATIONS_OPEN` (`8/11`) i formalizuje:
+- utrzymanie strict-scope closure z `QW-2210` bez overclaimu globalnego,
+- jawny graf zaleznosci:
+  - `L5_O1a`: konstruktywna nonperturbative existence/uniqueness + positivity/reconstruction,
+  - `L5_O1b`: unitary S-matrix + scattering completeness oparte na `L5_O1a`.
+Granica pozostaje jawna: oba podkroki sa nadal otwarte (`L5_O1a=False`, `L5_O1b=False`).
