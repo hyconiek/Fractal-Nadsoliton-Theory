@@ -3173,3 +3173,52 @@ Po dekompozycji `QW-2207` pozostaje jedna obligacja:
 
 Werdykt:
 - `PLANCK_INTERNALIZATION_OBSTRUCTION_GATE_PASS_PARTIAL_SINGLE_INTERNAL_ORIGIN_OBLIGATION_OPEN` (`10/11`).
+
+## 101) QW-2208: spectral global-stability obstruction gate (`L15`)
+
+Krok `QW-2208` formalizuje:
+\[
+\text{branch-scope spectral theorem closed}
+\quad\land\quad
+\text{single global stability obligation open}.
+\]
+
+### 101.1. Warstwa domknieta
+
+Zintegrowane komponenty:
+- `QW-2186`: branch-scope spectral margin theorem (`lambda_min(A)>0`, Weyl radius, MC checks),
+- `QW-2197`: integrated robustness envelope (scope-level consistency).
+
+Kluczowe punkty:
+- certified class:
+\[
+||\Delta||_2 < \lambda_{\min}(A),\quad \Delta=\Delta^T,
+\]
+- inside certified class stabilnosc pozostaje dodatnia,
+- sharpness witness pokazuje break po przekroczeniu promienia certyfikowanego.
+
+### 101.2. Warstwa otwarta (zredukowana do jednej obligacji)
+
+Jawnie:
+\[
+\texttt{outside\_scope}=
+\texttt{unbounded\_or\_nonlinear\_nonlocal\_perturbation\_classes},
+\]
+\[
+\texttt{full\_global\_stability\_theorem\_closed}=\texttt{False}.
+\]
+
+Pozostaje jedna obligacja:
+\[
+\texttt{L15\_O1}:\ 
+\text{prove global stability beyond bounded symmetric branch-scope}.
+\]
+
+### 101.3. Znaczenie dla L15
+
+`L15` zostaje podniesione do `PARTIAL++`:
+- branch-scope theorem closure jest domknieta i audytowalna,
+- remaining global theorem gap jest pojedynczy i jawny.
+
+Werdykt:
+- `SPECTRAL_GLOBAL_STABILITY_OBSTRUCTION_GATE_PASS_PARTIAL_SINGLE_GLOBAL_OBLIGATION_OPEN` (`10/11`).

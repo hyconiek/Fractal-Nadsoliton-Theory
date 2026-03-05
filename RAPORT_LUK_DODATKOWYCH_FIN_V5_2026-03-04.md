@@ -1060,3 +1060,17 @@ Nowe bramki strict:
 - Znaczenie:
   - `L11` przechodzi do `PARTIAL++` z pojedyncza, jawnie nazwana obligacja (`L11_O1`),
     zamiast rozproszonej listy niejawnych otwarc.
+
+## Aktualizacja 2026-03-05: QW-2208 (L15)
+
+- Artefakt: `report_qw2208_spectral_global_stability_obstruction_gate.json`
+- Werdykt: `SPECTRAL_GLOBAL_STABILITY_OBSTRUCTION_GATE_PASS_PARTIAL_SINGLE_GLOBAL_OBLIGATION_OPEN` (`10/11`)
+- Co zostalo domkniete:
+  1. formalna integracja branch-scope closure z `QW-2186` (Weyl radius + MC stability + sharpness witness),
+  2. jawna separacja certified perturbation class od outside-scope class.
+- Granica:
+  - `full_global_stability_theorem_closed=False`,
+  - pozostaje jedna obligacja `L15_O1` dla perturbacji unbounded/nonlinear/nonlocal.
+- Znaczenie:
+  - `L15` przechodzi do `PARTIAL++`: scope theorem jest zamkniety i audytowalny,
+    a globalna luka zostaje jednoznacznie zredukowana do pojedynczego theorem-level kroku.

@@ -1431,3 +1431,20 @@ Ten punkt jest nadrzedny wzgledem historycznych wpisow etapowych `PARTIAL` dla t
      - status `L11` podnosi sie do `PARTIAL++`:
        strict bridge layer jest domknieta i stabilna, a pozostajaca luka foundational
        jest pojedyncza, jawna i audytowalna.
+
+## 96) Aktualizacja wykonawcza: QW-2208
+
+1. `QW-2208` (`report_qw2208_spectral_global_stability_obstruction_gate.json`)
+   - Verdict: `SPECTRAL_GLOBAL_STABILITY_OBSTRUCTION_GATE_PASS_PARTIAL_SINGLE_GLOBAL_OBLIGATION_OPEN` (`10/11`)
+   - Wynik:
+     - utrzymano theorem-level domkniecie branch-scope z `QW-2186`:
+       dodatnia definite matrix `A`, jawny certyfikat radiusa Weyla, stabilnosc MC inside-safe-radius,
+     - jawnie utrzymano boundary:
+       outside-scope perturbation class = `unbounded_or_nonlinear_nonlocal_perturbation_classes`.
+   - Redukcja luki:
+     - `L15` zostaje zredukowane do jednej jawnej obligacji:
+       `L15_O1` = globalny dowod stabilnosci poza bounded symmetric branch-scope.
+   - Znaczenie:
+     - status `L15` podnosi sie do `PARTIAL++`:
+       branch-scope closure jest twarde i audytowalne, a remaining global theorem gap
+       jest pojedynczy, jawny i testowalny.

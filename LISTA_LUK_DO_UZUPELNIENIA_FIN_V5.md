@@ -529,3 +529,16 @@ Uzasadnienie: `QW-2207` przechodzi `PLANCK_INTERNALIZATION_OBSTRUCTION_GATE_PASS
 - luka foundational zostaje zredukowana do jednej jawnej obligacji:
   - `L11_O1`: wewnetrzne wyprowadzenie dimensionless bridge observable dla `G` bez external anchor.
 Granica pozostaje jawna: `full_internal_gnewton_origin_closed=False`.
+
+82. `L15` - spectral global-stability obstruction/decomposition
+Status: `PARTIAL_STRICT_SCOPE_CLOSED_SINGLE_GLOBAL_OBLIGATION_OPEN`
+Uzasadnienie: `QW-2208` przechodzi `SPECTRAL_GLOBAL_STABILITY_OBSTRUCTION_GATE_PASS_PARTIAL_SINGLE_GLOBAL_OBLIGATION_OPEN` (`10/11`) i formalizuje:
+- warstwa strict branch-scope jest domknieta theorem-level:
+  - `QW-2186`: dodatni margines `lambda_min(A)>0`, certyfikat Weyla, stabilnosc MC wewnatrz `epsilon_safe`,
+  - jawny witness sharpness poza promieniem certyfikowanym.
+- jawna separacja klas perturbacji:
+  - certified class: bounded symmetric perturbations (`||Delta||_2 < lambda_min(A)`),
+  - outside scope: unbounded/nonlinear/nonlocal perturbation classes.
+- luka foundational zostaje zredukowana do jednej jawnej obligacji:
+  - `L15_O1`: globalny dowod stabilnosci dla klas perturbacji poza bounded branch-scope.
+Granica pozostaje jawna: `full_global_stability_theorem_closed=False`.

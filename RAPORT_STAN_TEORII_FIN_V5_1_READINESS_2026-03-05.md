@@ -1,7 +1,7 @@
 # RAPORT STANU TEORII FIN (Release 5.1 readiness)
 
 **Data:** 2026-03-05  
-**Zakres audytu:** strict chain do `QW-2207` + raporty luk (`L1..L23`)  
+**Zakres audytu:** strict chain do `QW-2208` + raporty luk (`L1..L23`)  
 **Decyzja:** `RELEASE_5_1_FULL_CLOSURE_NOT_READY`
 
 ## 1) Werdykt główny
@@ -50,7 +50,8 @@ Stan na dziś:
    - `QW-2204`: external multiteam execution status (`L10`) z packet-ready chain i jawnie otwartym execution/signed-reports boundary,
    - `QW-2205`: mass precision scope stratification (`L8`) z jawnie zamknietym declared tolerance scope i jawnie otwartym reviewer-sensitive frontier,
    - `QW-2206`: foundational entity + topology scope stratification (`L1/L2/L17`) z domknieta warstwa lokalna i jawnie otwarta warstwa global theorem-level,
-   - `QW-2207`: Planck internalization obstruction gate (`L11`) z izolacja jednej jawnej obligacji internal-origin dla `G` bridge observable.
+   - `QW-2207`: Planck internalization obstruction gate (`L11`) z izolacja jednej jawnej obligacji internal-origin dla `G` bridge observable,
+   - `QW-2208`: spectral global-stability obstruction gate (`L15`) z izolacja jednej jawnej obligacji theorem-level poza bounded branch-scope.
 
 ## 3) Co pozostaje realnie otwarte (pytania recenzenckie)
 
@@ -64,6 +65,7 @@ Stan na dziś:
 2. `L6/L7/L8/L20/L21`: globalna unikalność mapowania kernel->observables, odporność i separacja „derivation vs calibration”, plus recenzencki frontier precyzji mas (non-top/high-precision counts/anchor-free top).
 3. `L12`: pełny nieperturbacyjny fixed-point RG (obecnie strict proxy + Jacobian).
 4. `L11`: po `QW-2207` pozostaje jedna jawna obligacja foundational (`L11_O1`: wewnetrzne wyprowadzenie dimensionless bridge observable dla `G`).
+5. `L15`: po `QW-2208` pozostaje jedna jawna obligacja global stability (`L15_O1`) poza bounded symmetric perturbation scope.
 
 ### C. Falsyfikacja i status społecznościowy
 1. `L9`: po `QW-2203` stack predykcji/falsyfikacji jest formalnie gotowy (prereg + 1 kanał supported), ale brak jednej centralnej predykcji high-impact potwierdzonej niezależnie multidomain.
@@ -87,7 +89,7 @@ Stan na dziś:
 | L12 | PARTIAL++ | strict proxy + obstruction + finite-scope declaration + anchored extended-scope feasibility (`t_probe=30`) |
 | L13 | CLOSED (strict internal) | domknięte przez QW-2179 + QW-2181 |
 | L14 | CLOSED (strict internal) | domknięte przez QW-2180 + QW-2181 |
-| L15 | PARTIAL+ | theorem-level branch-scope stability margin (`QW-2186`), poza-scope perturbacje nadal otwarte |
+| L15 | PARTIAL++ | branch-scope closure + obstruction/decomposition (`QW-2186`,`QW-2208`): jedna jawna obligacja global stability (`L15_O1`) pozostaje otwarta |
 | L16 | PARTIAL++ | low-energy SM+GR reduction scope domkniety (`QW-2200`), theorem-level full reduction nadal otwarta |
 | L17 | PARTIAL+ | lokalna ochrona topologiczna formalnie zintegrowana (`QW-2206`), ale global full-object proof pozostaje otwarty |
 | L18 | PARTIAL+++ | de-anchored consistency + mode-scaffold + obstruction theorem + axiom-augmented closure + robustness family (`QW-2193`); axiom-free pelna unikalnosc nadal otwarta |
