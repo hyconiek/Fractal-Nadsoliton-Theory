@@ -1,7 +1,7 @@
 # RAPORT STANU TEORII FIN (Release 5.1 readiness)
 
 **Data:** 2026-03-05  
-**Zakres audytu:** strict chain do `QW-2240` + raporty luk (`L1..L23`)  
+**Zakres audytu:** strict chain do `QW-2242` + raporty luk (`L1..L23`)  
 **Decyzja:** `RELEASE_5_1_FULL_CLOSURE_NOT_READY`
 
 ## 1) Werdykt główny
@@ -83,7 +83,9 @@ Stan na dziś:
    - `QW-2237`: provider-layer dla `L12` (jawne `RG_C1_1_DERIVED`, `RG_C1_2_DERIVED`, granica axiomatic source jawna),
    - `QW-2238`: provider-layer dla `L5` (jawne `QFT_C1_1_DERIVED`, `QFT_C1_2_DERIVED`, granica axiomatic source jawna),
    - `QW-2239`: execution z provider-layer dla `L12` (missing-provider blocker usuniety, pozostaje axiomatic source open),
-   - `QW-2240`: execution z provider-layer dla `L5` (missing-provider blocker usuniety, pozostaje axiomatic source open).
+   - `QW-2240`: execution z provider-layer dla `L5` (missing-provider blocker usuniety, pozostaje axiomatic source open),
+   - `QW-2241`: de-axiomatization obstruction map dla `L12` (jawny brak non-axiomatic provider sources + obligations `RG_DAX_*`),
+   - `QW-2242`: de-axiomatization obstruction map dla `L5` (jawny brak non-axiomatic provider sources + obligations `QFT_DAX_*`).
 
 ## 3) Co pozostaje realnie otwarte (pytania recenzenckie)
 
@@ -93,9 +95,9 @@ Stan na dziś:
 3. `L4/L16/L23`: pełny most action-level do GR (nie tylko zgodność metryk/gate-level).
 
 ### B. Rygor matematyczny globalny
-1. `L5`: po chainie do `QW-2240` warstwa strict-scope jest zintegrowana; obie galezie sa zterminalizowane, theorem-spec jest jawny i proof-object execution jest wykonane (`L5_EXEC_O1` zamkniete), luka axiom-free jest zdekomponowana (`L5_AXIOM_FREE_O1a/b/c`), `O1a/O1b` maja jawne mapy provenance, `O1c` ma jawny attachment spec, krok execution usuwajacy witness-axioms jest wykonany, theorem-discharge obligations (`QFT_C1_1..QFT_C1_3`) sa jawnie wyeksportowane, missing-provider blocker zostal usuniety przez provider-layer, a remaining gap jest zawezony do non-axiomatic provider provenance; theorem-level discharge pozostaje jedynym krokiem otwartym.
+1. `L5`: po chainie do `QW-2242` warstwa strict-scope jest zintegrowana; obie galezie sa zterminalizowane, theorem-spec jest jawny i proof-object execution jest wykonane (`L5_EXEC_O1` zamkniete), luka axiom-free jest zdekomponowana (`L5_AXIOM_FREE_O1a/b/c`), `O1a/O1b` maja jawne mapy provenance, `O1c` ma jawny attachment spec, krok execution usuwajacy witness-axioms jest wykonany, theorem-discharge obligations (`QFT_C1_1..QFT_C1_3`) sa jawnie wyeksportowane, missing-provider blocker zostal usuniety przez provider-layer, a de-axiomatization obstruction map jawnie wykazuje brak non-axiomatic provider sources; theorem-level discharge pozostaje jedynym krokiem otwartym.
 2. `L6/L7/L8/L20/L21`: globalna unikalność mapowania kernel->observables, odporność i separacja „derivation vs calibration”, plus recenzencki frontier precyzji mas (non-top/high-precision counts/anchor-free top).
-3. `L12`: po chainie do `QW-2239` dwa terminalne theorem targets (`L12_O1a_O1`, `L12_O1b_O1`) maja wykonany machine-check execution i hashowany proof object (`L12_EXEC_O1` zamkniete), luka axiom-free jest zdekomponowana (`L12_AXIOM_FREE_O1a/b/c`), `O1a/O1b` maja jawne mapy provenance, `O1c` ma jawny attachment spec, krok execution usuwajacy witness-axioms jest wykonany, theorem-discharge obligations (`RG_C1_1..RG_C1_3`) sa jawnie wyeksportowane, missing-provider blocker zostal usuniety przez provider-layer, a remaining gap jest zawezony do non-axiomatic provider provenance; theorem-level discharge pozostaje jedynym krokiem otwartym.
+3. `L12`: po chainie do `QW-2241` dwa terminalne theorem targets (`L12_O1a_O1`, `L12_O1b_O1`) maja wykonany machine-check execution i hashowany proof object (`L12_EXEC_O1` zamkniete), luka axiom-free jest zdekomponowana (`L12_AXIOM_FREE_O1a/b/c`), `O1a/O1b` maja jawne mapy provenance, `O1c` ma jawny attachment spec, krok execution usuwajacy witness-axioms jest wykonany, theorem-discharge obligations (`RG_C1_1..RG_C1_3`) sa jawnie wyeksportowane, missing-provider blocker zostal usuniety przez provider-layer, a de-axiomatization obstruction map jawnie wykazuje brak non-axiomatic provider sources; theorem-level discharge pozostaje jedynym krokiem otwartym.
 4. `L11`: po `QW-2207` pozostaje jedna jawna obligacja foundational (`L11_O1`: wewnetrzne wyprowadzenie dimensionless bridge observable dla `G`).
 5. `L15`: po `QW-2208` pozostaje jedna jawna obligacja global stability (`L15_O1`) poza bounded symmetric perturbation scope.
 
@@ -111,14 +113,14 @@ Stan na dziś:
 | L2 | PARTIAL+ | lokalna solitonowosc/topologia domknieta (`QW-2206`: B~1, FR spin/g), ale globalny theorem ochrony niepelny |
 | L3 | PARTIAL+++ | kernel-mode scaffold + obstruction theorem + axiom-augmented closure + robustness family (`QW-2193`); axiom-free unikalnosc nadal otwarta |
 | L4 | PARTIAL++ | GR-limit conditions catalog domkniety (`QW-2201`), ale direct foundational derivation/equivalence theorem nadal otwarte |
-| L5 | PARTIAL+++++++++++++++++ | strict QFT scope zintegrowany + terminal theorem spec (`QW-2218`) + execution proof-object (`QW-2222`) + axiom-free decomposition (`QW-2224`) + O1a/O1b provenance (`QW-2226`,`QW-2228`) + O1c attachment spec (`QW-2230`) + O1c execution step (`QW-2232`) + theorem-discharge spec (`QW-2234`) + blocker classification (`QW-2236`) + provider-layer (`QW-2238`) + provider execution (`QW-2240`) |
+| L5 | PARTIAL++++++++++++++++++ | strict QFT scope zintegrowany + terminal theorem spec (`QW-2218`) + execution proof-object (`QW-2222`) + axiom-free decomposition (`QW-2224`) + O1a/O1b provenance (`QW-2226`,`QW-2228`) + O1c attachment spec (`QW-2230`) + O1c execution step (`QW-2232`) + theorem-discharge spec (`QW-2234`) + blocker classification (`QW-2236`) + provider-layer (`QW-2238`) + provider execution (`QW-2240`) + de-axiomatization obstruction map (`QW-2242`) |
 | L6 | PARTIAL++ | scope-stratified identifiability domkniete (`QW-2196`), axiom-free global closure nadal otwarta |
 | L7 | PARTIAL++ | integrated robustness envelope domkniety w strict scope (`QW-2197`), global unbounded robustness nadal otwarta |
 | L8 | PARTIAL+ | scope-stratified mass precision domkniete (`QW-2205`), ale non-top/high-precision/anchor-free frontier nadal otwarty |
 | L9 | PARTIAL+ | strict prereg/falsification stack zintegrowany (`QW-2203`), ale brak jednej centralnej wysokowplywowej predykcji potwierdzonej multidomain |
 | L10 | PARTIAL+ | external packet/protocol chain domkniety (`QW-2204`), ale brak realnego niezaleznego multiteam rerun z publicznymi signed reports |
 | L11 | PARTIAL++ | strict Planck bridge + obstruction/decomposition (`QW-2198`,`QW-2207`): jedna jawna obligacja internal-origin (`L11_O1`) pozostaje otwarta |
-| L12 | PARTIAL+++++++++++++++++ | strict proxy + obstruction + finite-scope + dekompozycja/terminalizacja + terminal theorem spec (`QW-2217`) + execution proof-object (`QW-2221`) + axiom-free decomposition (`QW-2223`) + O1a/O1b provenance (`QW-2225`,`QW-2227`) + O1c attachment spec (`QW-2229`) + O1c execution step (`QW-2231`) + theorem-discharge spec (`QW-2233`) + blocker classification (`QW-2235`) + provider-layer (`QW-2237`) + provider execution (`QW-2239`) |
+| L12 | PARTIAL++++++++++++++++++ | strict proxy + obstruction + finite-scope + dekompozycja/terminalizacja + terminal theorem spec (`QW-2217`) + execution proof-object (`QW-2221`) + axiom-free decomposition (`QW-2223`) + O1a/O1b provenance (`QW-2225`,`QW-2227`) + O1c attachment spec (`QW-2229`) + O1c execution step (`QW-2231`) + theorem-discharge spec (`QW-2233`) + blocker classification (`QW-2235`) + provider-layer (`QW-2237`) + provider execution (`QW-2239`) + de-axiomatization obstruction map (`QW-2241`) |
 | L13 | CLOSED (strict internal) | domknięte przez QW-2179 + QW-2181 |
 | L14 | CLOSED (strict internal) | domknięte przez QW-2180 + QW-2181 |
 | L15 | PARTIAL++ | branch-scope closure + obstruction/decomposition (`QW-2186`,`QW-2208`): jedna jawna obligacja global stability (`L15_O1`) pozostaje otwarta |

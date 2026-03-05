@@ -916,3 +916,27 @@ Granica pozostaje jawna:
 - `provider_layer_still_axiomatic=True`,
 - `c1_theorem_discharge_completed=False`,
 - `o1c_fully_closed=False`.
+
+115. `L12` - provider de-axiomatization obstruction (non-axiomatic sources missing)
+Status: `PARTIAL_L12_PROVIDER_DEAXIOMATIZATION_OBSTRUCTION_MAPPED`
+Uzasadnienie: `QW-2241` przechodzi `RG_PROVIDER_DEAXIOMATIZATION_OBSTRUCTION_GATE_PASS_PARTIAL_NON_AXIOMATIC_SOURCE_MISSING` (`11/13`) i formalizuje:
+- skan Lean potwierdza brak non-axiomatic provider theoremow dla `RG_C1_1_DERIVED`/`RG_C1_2_DERIVED` poza provider-layer,
+- jawna mapa kandydatow z canonical FIN chain do formalizacji (`spec_qw2241_rg_provider_deaxiomatization_source_map.json`),
+- jawne obligations `RG_DAX_1..RG_DAX_3` (`spec_qw2241_rg_provider_deaxiomatization_obligations.json`).
+Granica pozostaje jawna:
+- `non_axiomatic_source_exists_for_rg_c1_1=False`,
+- `non_axiomatic_source_exists_for_rg_c1_2=False`,
+- `c1_theorem_discharge_completed=False`,
+- `o1c_fully_closed=False`.
+
+116. `L5` - provider de-axiomatization obstruction (non-axiomatic sources missing)
+Status: `PARTIAL_L5_PROVIDER_DEAXIOMATIZATION_OBSTRUCTION_MAPPED`
+Uzasadnienie: `QW-2242` przechodzi `QFT_PROVIDER_DEAXIOMATIZATION_OBSTRUCTION_GATE_PASS_PARTIAL_NON_AXIOMATIC_SOURCE_MISSING` (`11/13`) i formalizuje:
+- skan Lean potwierdza brak non-axiomatic provider theoremow dla `QFT_C1_1_DERIVED`/`QFT_C1_2_DERIVED` poza provider-layer,
+- jawna mapa kandydatow z canonical FIN chain do formalizacji (`spec_qw2242_qft_provider_deaxiomatization_source_map.json`),
+- jawne obligations `QFT_DAX_1..QFT_DAX_3` (`spec_qw2242_qft_provider_deaxiomatization_obligations.json`).
+Granica pozostaje jawna:
+- `non_axiomatic_source_exists_for_qft_c1_1=False`,
+- `non_axiomatic_source_exists_for_qft_c1_2=False`,
+- `c1_theorem_discharge_completed=False`,
+- `o1c_fully_closed=False`.

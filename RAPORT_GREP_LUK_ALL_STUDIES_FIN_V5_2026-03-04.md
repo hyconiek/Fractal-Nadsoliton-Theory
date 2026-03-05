@@ -1895,3 +1895,31 @@ Ten punkt jest nadrzedny wzgledem historycznych wpisow etapowych `PARTIAL` dla t
      - `provider_layer_still_axiomatic=True`,
      - `c1_theorem_discharge_completed=False`,
      - `o1c_fully_closed=False`.
+
+## 129) Aktualizacja wykonawcza: QW-2241
+
+1. `QW-2241` (`report_qw2241_rg_provider_deaxiomatization_obstruction_gate.json`)
+   - Verdict: `RG_PROVIDER_DEAXIOMATIZATION_OBSTRUCTION_GATE_PASS_PARTIAL_NON_AXIOMATIC_SOURCE_MISSING` (`11/13`)
+   - Wynik:
+     - wykonano formalny scan de-axiomatization dla provider-layer L12,
+     - brak non-axiomatic provider theoremow w Lean dla `RG_C1_1_DERIVED`/`RG_C1_2_DERIVED` poza provider-layer,
+     - wyeksportowano source-map + obligations (`RG_DAX_1..RG_DAX_3`).
+   - Granica:
+     - `non_axiomatic_source_exists_for_rg_c1_1=False`,
+     - `non_axiomatic_source_exists_for_rg_c1_2=False`,
+     - `c1_theorem_discharge_completed=False`,
+     - `o1c_fully_closed=False`.
+
+## 130) Aktualizacja wykonawcza: QW-2242
+
+1. `QW-2242` (`report_qw2242_qft_provider_deaxiomatization_obstruction_gate.json`)
+   - Verdict: `QFT_PROVIDER_DEAXIOMATIZATION_OBSTRUCTION_GATE_PASS_PARTIAL_NON_AXIOMATIC_SOURCE_MISSING` (`11/13`)
+   - Wynik:
+     - wykonano formalny scan de-axiomatization dla provider-layer L5,
+     - brak non-axiomatic provider theoremow w Lean dla `QFT_C1_1_DERIVED`/`QFT_C1_2_DERIVED` poza provider-layer,
+     - wyeksportowano source-map + obligations (`QFT_DAX_1..QFT_DAX_3`).
+   - Granica:
+     - `non_axiomatic_source_exists_for_qft_c1_1=False`,
+     - `non_axiomatic_source_exists_for_qft_c1_2=False`,
+     - `c1_theorem_discharge_completed=False`,
+     - `o1c_fully_closed=False`.

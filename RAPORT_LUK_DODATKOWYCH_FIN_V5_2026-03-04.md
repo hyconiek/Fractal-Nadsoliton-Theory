@@ -1525,3 +1525,31 @@ Nowe bramki strict:
   - `provider_layer_still_axiomatic=True`,
   - `c1_theorem_discharge_completed=False`,
   - `o1c_fully_closed=False`.
+
+## Aktualizacja 2026-03-05: QW-2241 (L12 provider de-axiomatization obstruction)
+
+- Artefakt: `report_qw2241_rg_provider_deaxiomatization_obstruction_gate.json`
+- Werdykt: `RG_PROVIDER_DEAXIOMATIZATION_OBSTRUCTION_GATE_PASS_PARTIAL_NON_AXIOMATIC_SOURCE_MISSING` (`11/13`)
+- Co zostalo domkniete:
+  1. formalny de-axiomatization scan provider-layer L12,
+  2. jawna klasyfikacja: brak non-axiomatic provider theoremow poza provider-layer,
+  3. jawna mapa zrodel i obligations `RG_DAX_1..RG_DAX_3`.
+- Granica:
+  - `non_axiomatic_source_exists_for_rg_c1_1=False`,
+  - `non_axiomatic_source_exists_for_rg_c1_2=False`,
+  - `c1_theorem_discharge_completed=False`,
+  - `o1c_fully_closed=False`.
+
+## Aktualizacja 2026-03-05: QW-2242 (L5 provider de-axiomatization obstruction)
+
+- Artefakt: `report_qw2242_qft_provider_deaxiomatization_obstruction_gate.json`
+- Werdykt: `QFT_PROVIDER_DEAXIOMATIZATION_OBSTRUCTION_GATE_PASS_PARTIAL_NON_AXIOMATIC_SOURCE_MISSING` (`11/13`)
+- Co zostalo domkniete:
+  1. formalny de-axiomatization scan provider-layer L5,
+  2. jawna klasyfikacja: brak non-axiomatic provider theoremow poza provider-layer,
+  3. jawna mapa zrodel i obligations `QFT_DAX_1..QFT_DAX_3`.
+- Granica:
+  - `non_axiomatic_source_exists_for_qft_c1_1=False`,
+  - `non_axiomatic_source_exists_for_qft_c1_2=False`,
+  - `c1_theorem_discharge_completed=False`,
+  - `o1c_fully_closed=False`.
