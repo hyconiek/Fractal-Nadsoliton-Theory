@@ -674,3 +674,27 @@ Granica pozostaje jawna:
 - `proof_objects_attached=False`,
 - `terminal_theorems_closed=False`,
 - `L5` pozostaje niezamkniete.
+
+95. `L12` - terminal proof-object execution (axiomatic boundary explicit)
+Status: `PARTIAL_L12_EXECUTION_DONE_AXIOMATIC_BOUNDARY`
+Uzasadnienie: `QW-2221` przechodzi `RG_TERMINAL_PROOF_OBJECT_EXECUTION_GATE_PASS_PARTIAL_AXIOMATIC_BOUNDARY` (`12/13`) i formalizuje:
+- wykonanie `L12_EXEC_O1`:
+  - wygenerowano `FIN_L12_O1A_O1_TERMINAL.lean`, `FIN_L12_O1B_O1_TERMINAL.lean`,
+  - wykonano checker Lean na obu targetach (`exit_code=0`),
+  - dolaczono hashowany proof object (`proof_object_qw2221_l12_terminal_machine_checked.json`).
+Granica pozostaje jawna:
+- `full_l12_closed=False`,
+- nowa finalna luka theorem-level:
+  - `L12_AXIOM_FREE_O1`: zastapic witness-axioms dowodami wyprowadzonymi z canonical FIN action chain.
+
+96. `L5` - terminal proof-object execution (axiomatic boundary explicit)
+Status: `PARTIAL_L5_EXECUTION_DONE_AXIOMATIC_BOUNDARY`
+Uzasadnienie: `QW-2222` przechodzi `QFT_TERMINAL_PROOF_OBJECT_EXECUTION_GATE_PASS_PARTIAL_AXIOMATIC_BOUNDARY` (`12/13`) i formalizuje:
+- wykonanie `L5_EXEC_O1`:
+  - wygenerowano `FIN_L5_O1A_O1_TERMINAL.lean`, `FIN_L5_O1B_O1_TERMINAL.lean`,
+  - wykonano checker Lean na obu targetach (`exit_code=0`),
+  - dolaczono hashowany proof object (`proof_object_qw2222_l5_terminal_machine_checked.json`).
+Granica pozostaje jawna:
+- `full_l5_closed=False`,
+- nowa finalna luka theorem-level:
+  - `L5_AXIOM_FREE_O1`: zastapic witness-axioms dowodami wyprowadzonymi z complete FIN action + reconstruction chain.

@@ -1605,3 +1605,35 @@ Ten punkt jest nadrzedny wzgledem historycznych wpisow etapowych `PARTIAL` dla t
    - Znaczenie:
      - L5 przechodzi z etapu \"spec-ready\" do etapu \"execution-ready\"
        przy zachowaniu rygoru i bez overclaimu theorem-closure.
+
+## 109) Aktualizacja wykonawcza: QW-2221
+
+1. `QW-2221` (`report_qw2221_rg_terminal_proof_object_execution_gate.json`)
+   - Verdict: `RG_TERMINAL_PROOF_OBJECT_EXECUTION_GATE_PASS_PARTIAL_AXIOMATIC_BOUNDARY` (`12/13`)
+   - Wynik:
+     - domknieto wykonawczo `L12_EXEC_O1`:
+       - wygenerowano terminalne pliki Lean (`FIN_L12_O1A_O1_TERMINAL.lean`, `FIN_L12_O1B_O1_TERMINAL.lean`),
+       - checker Lean wykonany dla obu targetow (`exit_code=0`),
+       - dolaczono hashowany proof object (`proof_object_qw2221_l12_terminal_machine_checked.json`),
+     - jawnie utrzymano boundary:
+       - `full_l12_closed=False`,
+       - nowa finalna luka theorem-level `L12_AXIOM_FREE_O1`.
+   - Znaczenie:
+     - L12 przechodzi z etapu \"execution-ready\" do etapu \"execution-done\",
+       a remaining gap jest jawnie zawezony do axiom-free discharge.
+
+## 110) Aktualizacja wykonawcza: QW-2222
+
+1. `QW-2222` (`report_qw2222_qft_terminal_proof_object_execution_gate.json`)
+   - Verdict: `QFT_TERMINAL_PROOF_OBJECT_EXECUTION_GATE_PASS_PARTIAL_AXIOMATIC_BOUNDARY` (`12/13`)
+   - Wynik:
+     - domknieto wykonawczo `L5_EXEC_O1`:
+       - wygenerowano terminalne pliki Lean (`FIN_L5_O1A_O1_TERMINAL.lean`, `FIN_L5_O1B_O1_TERMINAL.lean`),
+       - checker Lean wykonany dla obu targetow (`exit_code=0`),
+       - dolaczono hashowany proof object (`proof_object_qw2222_l5_terminal_machine_checked.json`),
+     - jawnie utrzymano boundary:
+       - `full_l5_closed=False`,
+       - nowa finalna luka theorem-level `L5_AXIOM_FREE_O1`.
+   - Znaczenie:
+     - L5 przechodzi z etapu \"execution-ready\" do etapu \"execution-done\",
+       a remaining gap jest jawnie zawezony do axiom-free discharge.

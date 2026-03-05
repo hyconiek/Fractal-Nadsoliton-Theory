@@ -1253,3 +1253,29 @@ Nowe bramki strict:
   - `L5` nadal niezamkniete.
 - Znaczenie:
   - L5 przechodzi z poziomu \"spec-ready\" na \"execution-ready\".
+
+## Aktualizacja 2026-03-05: QW-2221 (L12 proof-object execution)
+
+- Artefakt: `report_qw2221_rg_terminal_proof_object_execution_gate.json`
+- Werdykt: `RG_TERMINAL_PROOF_OBJECT_EXECUTION_GATE_PASS_PARTIAL_AXIOMATIC_BOUNDARY` (`12/13`)
+- Co zostalo domkniete:
+  1. wykonanie `L12_EXEC_O1` (wygenerowane pliki Lean + machine-check run + hashowany proof object),
+  2. reprodukowalny command-trail checker execution dla obu targetow terminalnych.
+- Granica:
+  - `full_l12_closed=False`,
+  - finalna luka przeniesiona na `L12_AXIOM_FREE_O1` (eliminacja witness-axioms).
+- Znaczenie:
+  - L12 opuszcza stan \"execution pending\" i przechodzi do \"execution done with explicit axiomatic boundary\".
+
+## Aktualizacja 2026-03-05: QW-2222 (L5 proof-object execution)
+
+- Artefakt: `report_qw2222_qft_terminal_proof_object_execution_gate.json`
+- Werdykt: `QFT_TERMINAL_PROOF_OBJECT_EXECUTION_GATE_PASS_PARTIAL_AXIOMATIC_BOUNDARY` (`12/13`)
+- Co zostalo domkniete:
+  1. wykonanie `L5_EXEC_O1` (wygenerowane pliki Lean + machine-check run + hashowany proof object),
+  2. reprodukowalny command-trail checker execution dla obu targetow terminalnych.
+- Granica:
+  - `full_l5_closed=False`,
+  - finalna luka przeniesiona na `L5_AXIOM_FREE_O1` (eliminacja witness-axioms).
+- Znaczenie:
+  - L5 opuszcza stan \"execution pending\" i przechodzi do \"execution done with explicit axiomatic boundary\".
