@@ -1,0 +1,59 @@
+{
+  "generated_utc": "2026-03-05T00:48:37.474559+00:00",
+  "packet_name": "QW2173_L13_F5B_UNCONDITIONAL_DECOMPOSITION",
+  "inputs": {
+    "q2171": "report_qw2171_l13_f5b_terminal_bound_reduction_gate.json",
+    "q2169": "report_qw2169_l13_f5_discharge_scaffold_gate.json",
+    "lean_file": "FIN_L13_F5B_UNCONDITIONAL_DECOMPOSITION_QW2173.lean"
+  },
+  "obligations": [
+    {
+      "id": "U1",
+      "name": "conditional_bundle_transport_to_f5b_node",
+      "status": "satisfied",
+      "source": "QW-2171"
+    },
+    {
+      "id": "U2",
+      "name": "unconditional_uniform_tail_bound_from_complete_fin_action",
+      "status": "open",
+      "source": "terminal lemma"
+    },
+    {
+      "id": "F5b",
+      "name": "terminal_uniform_tail_bound_unconditional",
+      "status": "open",
+      "source": "U1 + U2"
+    }
+  ],
+  "dependency_graph": {
+    "nodes": [
+      "U1",
+      "U2",
+      "F5b"
+    ],
+    "edges": [
+      [
+        "U1",
+        "F5b"
+      ],
+      [
+        "U2",
+        "F5b"
+      ]
+    ],
+    "topological_order": [
+      "U1",
+      "U2",
+      "F5b"
+    ]
+  },
+  "decomposition": {
+    "u1_closed": true,
+    "u2_closed": false,
+    "f5b_closed": false
+  },
+  "hashes": {
+    "lean_sha256": "fc602a7a06253e8b11ebd819a5ab36fb48524320fedb7b63db4ed2fc6f197fa6"
+  }
+}

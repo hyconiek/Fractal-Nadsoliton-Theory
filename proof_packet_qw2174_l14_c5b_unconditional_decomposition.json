@@ -1,0 +1,59 @@
+{
+  "generated_utc": "2026-03-05T00:48:37.550675+00:00",
+  "packet_name": "QW2174_L14_C5B_UNCONDITIONAL_DECOMPOSITION",
+  "inputs": {
+    "q2172": "report_qw2172_l14_c5b_terminal_limit_reduction_gate.json",
+    "q2170": "report_qw2170_l14_c5_discharge_scaffold_gate.json",
+    "lean_file": "FIN_L14_C5B_UNCONDITIONAL_DECOMPOSITION_QW2174.lean"
+  },
+  "obligations": [
+    {
+      "id": "V1",
+      "name": "conditional_proxy_transfer_to_c5b_node",
+      "status": "satisfied",
+      "source": "QW-2172"
+    },
+    {
+      "id": "V2",
+      "name": "unconditional_exact_distribution_limit_from_complete_fin_action",
+      "status": "open",
+      "source": "terminal lemma"
+    },
+    {
+      "id": "C5b",
+      "name": "terminal_exact_distribution_limit_unconditional",
+      "status": "open",
+      "source": "V1 + V2"
+    }
+  ],
+  "dependency_graph": {
+    "nodes": [
+      "V1",
+      "V2",
+      "C5b"
+    ],
+    "edges": [
+      [
+        "V1",
+        "C5b"
+      ],
+      [
+        "V2",
+        "C5b"
+      ]
+    ],
+    "topological_order": [
+      "V1",
+      "V2",
+      "C5b"
+    ]
+  },
+  "decomposition": {
+    "v1_closed": true,
+    "v2_closed": false,
+    "c5b_closed": false
+  },
+  "hashes": {
+    "lean_sha256": "f7cfdd2ddf4e46541e4071d7c1483beedceaa87b4554109f525476454f8fa09f"
+  }
+}
