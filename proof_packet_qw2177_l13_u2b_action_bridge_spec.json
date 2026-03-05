@@ -1,0 +1,59 @@
+{
+  "generated_utc": "2026-03-05T00:58:13.345765+00:00",
+  "packet_name": "QW2177_L13_U2B_ACTION_BRIDGE_SPEC",
+  "inputs": {
+    "q2175": "report_qw2175_l13_u2_terminal_lemma_decomposition_gate.json",
+    "q2165": "report_qw2165_l13_exhaustive_canonical_eom_gate.json",
+    "lean_file": "FIN_L13_U2B_ACTION_BRIDGE_SPEC_QW2177.lean"
+  },
+  "obligations": [
+    {
+      "id": "U2b1",
+      "name": "canonical_action_vertex_structure_exhaustive_layer_closed",
+      "status": "satisfied",
+      "source": "QW-2165"
+    },
+    {
+      "id": "U2b2",
+      "name": "exact_action_to_majorant_weight_matching_identity",
+      "status": "open",
+      "source": "terminal matching"
+    },
+    {
+      "id": "U2b",
+      "name": "action_to_majorant_identification_from_complete_fin_action",
+      "status": "open",
+      "source": "U2b1 + U2b2"
+    }
+  ],
+  "dependency_graph": {
+    "nodes": [
+      "U2b1",
+      "U2b2",
+      "U2b"
+    ],
+    "edges": [
+      [
+        "U2b1",
+        "U2b"
+      ],
+      [
+        "U2b2",
+        "U2b"
+      ]
+    ],
+    "topological_order": [
+      "U2b1",
+      "U2b2",
+      "U2b"
+    ]
+  },
+  "decomposition": {
+    "u2b1_closed": true,
+    "u2b2_closed": false,
+    "u2b_closed": false
+  },
+  "hashes": {
+    "lean_sha256": "4b015b6ffcba5e3000c7764d4b2646356888f3178282fd320d63930fd9e108cb"
+  }
+}

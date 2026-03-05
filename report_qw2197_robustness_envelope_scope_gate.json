@@ -1,0 +1,42 @@
+{
+  "generated_utc": "2026-03-05T02:29:38.994232+00:00",
+  "sources": {
+    "q2125": "report_qw2125_ktotal_generation_alignment_audit.json",
+    "q2128": "report_qw2128_kernel_rep_assignment_uniqueness_gate.json",
+    "q2186": "report_qw2186_ktotal_spectral_stability_margin_gate.json",
+    "q2193": "report_qw2193_selection_axiom_family_robustness_gate.json",
+    "q2194": "report_qw2194_mass_derivation_calibration_separation_gate.json",
+    "q2196": "report_qw2196_global_identifiability_scope_stratification_gate.json"
+  },
+  "robustness_metrics": {
+    "mod3_overlap_mean": 0.6572222222222223,
+    "mod3_overlap_p10": 0.6666666666666666,
+    "delta_info_winner_frequency": 5,
+    "delta_info_n_tests": 5,
+    "delta_info_min_score_gap": 1.3161408712234275,
+    "selection_family_all_theta_zero": true,
+    "non_top_slope_rel_diff": 0.033915024899939715,
+    "epsilon_safe": 0.24875790748363902,
+    "min_lambda_safe_mc": 0.13951615946964221,
+    "witness_min_lambda_over": -0.01658386049890787
+  },
+  "flags": {
+    "q2125_mod3_overlap_mean_ge_0p60": true,
+    "q2125_mod3_overlap_p10_ge_0p50": true,
+    "q2128_delta_info_winner_frequency_full": true,
+    "q2128_delta_info_min_score_gap_ge_0p25": true,
+    "q2193_selection_family_all_theta_zero": true,
+    "q2194_non_top_slope_rel_diff_le_10pct": true,
+    "q2186_weyl_safe_radius_positive": true,
+    "q2186_mc_inside_safe_radius_stable": true,
+    "q2186_sharpness_witness_detected_above_radius": true,
+    "q2196_scope_stratification_present": true,
+    "scope_boundaries_explicit": true,
+    "global_unbounded_robustness_closed": false,
+    "deterministic_no_scan_no_retune": true
+  },
+  "pass_count": 12,
+  "total_flags": 13,
+  "verdict": "ROBUSTNESS_ENVELOPE_SCOPE_GATE_PASS_STRICT_PARTIAL_GLOBAL_UNBOUNDED_OPEN",
+  "required_next_step": "EXTEND_FROM_DECLARED_SCOPE_ROBUSTNESS_TO_GLOBAL_UNBOUNDED_ROBUSTNESS_OR_KEEP_SCOPE_BOUNDARY_EXPLICIT"
+}

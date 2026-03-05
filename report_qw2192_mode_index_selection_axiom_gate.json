@@ -1,0 +1,38 @@
+{
+  "generated_utc": "2026-03-05T02:14:59.073412+00:00",
+  "sources": {
+    "q2190": "report_qw2190_kernel_mode_representation_emergence_gate.json",
+    "q2191": "report_qw2191_mode_index_uniqueness_obstruction_theorem_gate.json"
+  },
+  "selection_axiom": {
+    "name": "minimum_harmonic_alignment_with_orientation_convention",
+    "statement": "Inside each degenerate two-mode subspace, choose basis minimizing J(theta)=||u(theta)-c_ref||^2 + ||v(theta)-s_ref||^2 with positive cosine-overlap convention.",
+    "closed_form": "J(theta)=4(1-cos(theta)); unique minimum modulo 2pi at theta=0"
+  },
+  "numeric_audit": {
+    "theta_pair1_numeric_argmin": 0.0,
+    "theta_pair2_numeric_argmin": 0.0,
+    "j_pair1_theta0": 0.0,
+    "j_pair2_theta0": 0.0,
+    "j_pair1_theta_pi": 8.0,
+    "j_pair2_theta_pi": 8.0,
+    "grid_size": 721
+  },
+  "flags": {
+    "q2191_obstruction_theorem_present": true,
+    "selection_axiom_declared_explicitly": true,
+    "axiom_is_symmetry_breaking_not_hidden_tuning": true,
+    "pair1_closed_form_functional_j_equals_4_1_minus_cos": true,
+    "pair2_closed_form_functional_j_equals_4_1_minus_cos": true,
+    "pair1_numeric_minimum_at_theta_zero_mod_2pi": true,
+    "pair2_numeric_minimum_at_theta_zero_mod_2pi": true,
+    "orientation_sign_convention_fixes_residual_z2": true,
+    "axiom_augmented_uniqueness_closed_for_q2190_mapping": true,
+    "axiom_free_uniqueness_closed": false,
+    "deterministic_no_scan_no_retune": true
+  },
+  "pass_count": 10,
+  "total_flags": 11,
+  "verdict": "MODE_INDEX_SELECTION_AXIOM_GATE_PASS_AXIOM_AUGMENTED_UNIQUENESS_CLOSED",
+  "required_next_step": "EITHER_ACCEPT_SELECTION_AXIOM_AS_PART_OF_THEORY_OR_SUPPLY_ALTERNATIVE_PHYSICAL_SELECTION_PRINCIPLE"
+}

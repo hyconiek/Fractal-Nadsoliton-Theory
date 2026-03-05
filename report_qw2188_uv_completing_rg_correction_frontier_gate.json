@@ -1,0 +1,76 @@
+{
+  "generated_utc": "2026-03-05T02:03:28.618471+00:00",
+  "sources": {
+    "q2066": "report_qw2066_compatibility_filtered_micro_constants_tightening.json",
+    "q2132": "report_qw2132_rg_fixed_point_jacobian_gate.json",
+    "q2187": "report_qw2187_rg_proxy_finite_uv_scope_declaration_gate.json"
+  },
+  "anchors": {
+    "g1_cap_from_zbeta_q50": 1.0476710888351346,
+    "b_corr_interval_from_delta_eta_q25_q75": [
+      0.04687500000000011,
+      0.48437499999999994
+    ],
+    "delta_eta_q25_q75": [
+      0.8375000000000001,
+      1.1875
+    ],
+    "delta_eta_target": 0.8
+  },
+  "probe_setup": {
+    "n_points": 729,
+    "dt": 0.01,
+    "t_probe": 30.0,
+    "bisection_iterations": 12
+  },
+  "frontier_results": {
+    "baseline_b0": {
+      "finite_all": true,
+      "any_lambda_cross": true,
+      "first_lambda_cross_t": 6.34,
+      "lambda_min": -0.20867175665488122,
+      "max_abs": 1.3,
+      "passes_probe": false
+    },
+    "anchor_upper_bmax": {
+      "finite_all": true,
+      "any_lambda_cross": false,
+      "first_lambda_cross_t": null,
+      "lambda_min": 0.016931206086598764,
+      "max_abs": 3.9248487865243784,
+      "passes_probe": true
+    },
+    "feasible_in_anchor_interval": true,
+    "b_star_min_feasible": 0.4631195068359375,
+    "b_star_diagnostics": {
+      "finite_all": true,
+      "any_lambda_cross": false,
+      "first_lambda_cross_t": null,
+      "lambda_min": 1.7557605518969094e-05,
+      "max_abs": 3.1355925902177018,
+      "passes_probe": true
+    }
+  },
+  "reference_low_energy_distortion": {
+    "beta_lambda_base": -0.027834936341566894,
+    "beta_lambda_star": -0.00975834072787202,
+    "relative_shift_beta_lambda": 0.6494211228606424
+  },
+  "flags": {
+    "micro_anchors_loaded": true,
+    "anchored_interval_defined_nonempty": true,
+    "baseline_crossing_reproduced_before_t_probe": true,
+    "feasible_solution_exists_within_anchor_interval": true,
+    "minimal_feasible_b_star_found": true,
+    "b_star_within_anchor_interval": true,
+    "b_star_removes_crossing_to_t_probe": true,
+    "b_star_flow_finite_to_t_probe": true,
+    "low_energy_beta_lambda_shift_le_0p75": true,
+    "deterministic_no_scan_no_retune": true,
+    "global_all_t_rg_closure_claimed": false
+  },
+  "pass_count": 10,
+  "total_flags": 11,
+  "verdict": "UV_COMPLETING_RG_CORRECTION_FRONTIER_GATE_PASS_EXTENDED_SCOPE_PARTIAL",
+  "required_next_step": "PROMOTE_EXTENDED_SCOPE_TO_RELEASE_STATUS_AND_SEPARATELY_PROVE_OR_REJECT_GLOBAL_ALL_T_CLOSURE_UNDER_UV_COMPLETING_FAMILY"
+}

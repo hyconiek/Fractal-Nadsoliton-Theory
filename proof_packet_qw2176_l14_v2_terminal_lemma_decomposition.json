@@ -1,0 +1,67 @@
+{
+  "generated_utc": "2026-03-05T00:54:56.898032+00:00",
+  "packet_name": "QW2176_L14_V2_TERMINAL_LEMMA_DECOMPOSITION",
+  "inputs": {
+    "q2174": "report_qw2174_l14_c5b_unconditional_obligation_decomposition_gate.json",
+    "q2148": "report_qw2148_continuum_dg_delta_extrapolation_gate.json",
+    "q2141": "report_qw2141_continuum_weak_distribution_proxy_gate.json",
+    "lean_file": "FIN_L14_V2_TERMINAL_LEMMA_DECOMPOSITION_QW2176.lean"
+  },
+  "obligations": [
+    {
+      "id": "V2a",
+      "name": "continuum_proxy_inverse_limit_package_closed",
+      "status": "satisfied",
+      "source": "QW-2148/QW-2141"
+    },
+    {
+      "id": "V2b",
+      "name": "action_level_identification_for_exact_distribution_limit",
+      "status": "open",
+      "source": "terminal bridge"
+    },
+    {
+      "id": "V2",
+      "name": "unconditional_exact_distribution_limit_from_complete_fin_action",
+      "status": "open",
+      "source": "V2a + V2b"
+    }
+  ],
+  "dependency_graph": {
+    "nodes": [
+      "V2a",
+      "V2b",
+      "V2"
+    ],
+    "edges": [
+      [
+        "V2a",
+        "V2"
+      ],
+      [
+        "V2b",
+        "V2"
+      ]
+    ],
+    "topological_order": [
+      "V2a",
+      "V2b",
+      "V2"
+    ]
+  },
+  "metrics": {
+    "best_fit_r2": 0.9874532782362961,
+    "extrapolated_error_n_to_infinity": 3.6412957720483837e-07,
+    "max_abs_error_reg": 6.452065534068296e-07,
+    "max_boundary_sup_norm_local_only": 8.364834722972752e-05,
+    "aggregate_max_boundary_sup_norm": 8.364834722972752e-05
+  },
+  "decomposition": {
+    "v2a_closed": true,
+    "v2b_closed": false,
+    "v2_closed": false
+  },
+  "hashes": {
+    "lean_sha256": "1bb29e5f57a4262db5ac80d3e1949246fe00c5c84d4c972912b83280894f5cf1"
+  }
+}

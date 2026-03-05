@@ -1,0 +1,45 @@
+{
+  "generated_utc": "2026-03-05T02:45:18.252862+00:00",
+  "sources": {
+    "q2076": "report_qw2076_empirical_prediction_preregistration.json",
+    "q2077": "report_qw2077_empirical_prediction_validation_gate.json",
+    "q2078": "report_qw2078_gw_external_holdout_autocollector.json",
+    "q2116": "report_qw2116_gw1660_method_repair_gate.json"
+  },
+  "status_counts_q2077": {
+    "supported": 1,
+    "pending_data": 2,
+    "falsified": 0
+  },
+  "gw_threshold_checks_q2078": {
+    "auc_ge_min": true,
+    "adv_ge_min": true,
+    "sep_ge_min": true,
+    "gap_le_max": true
+  },
+  "open_components": [
+    "all_prediction_channels_independently_resolved",
+    "single_high_impact_new_prediction_fully_confirmed",
+    "external_multiteam_prediction_confirmation"
+  ],
+  "flags": {
+    "q2076_preregistration_ready_present": true,
+    "preregistered_predictions_count_ge_3": true,
+    "all_predictions_have_explicit_falsification_and_support_rules": true,
+    "all_predictions_have_required_future_input_schema": true,
+    "q2078_gw_holdout_autocollector_thresholds_all_pass": true,
+    "q2077_contains_supported_prediction": true,
+    "q2077_contains_pending_channels_explicitly": true,
+    "no_prediction_channel_marked_falsified_currently": true,
+    "gw_method_repair_gate_pass_present": true,
+    "gw_scientific_anomaly_nonrobust_boundary_explicit": true,
+    "all_prediction_channels_independently_resolved": false,
+    "single_high_impact_new_prediction_fully_confirmed": false,
+    "deterministic_protocol_hash_and_locking_present": true,
+    "no_overclaim_scope_boundary_explicit": true
+  },
+  "pass_count": 12,
+  "total_flags": 14,
+  "verdict": "EMPIRICAL_PREDICTION_STACK_STATUS_GATE_PASS_PARTIAL_PENDING_MULTIDOMAIN_DATA",
+  "required_next_step": "ACQUIRE_INDEPENDENT_PMNS_AND_COSMOLOGY_INPUTS_AND_EXECUTE_EXTERNAL_MULTITEAM_VALIDATION_WITH_LOCKED_PROTOCOL"
+}

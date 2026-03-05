@@ -25,7 +25,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \lhead{FIN Theory Documentation}
-\rhead{Release 5.0}
+\rhead{Release 5 Status (2026-03-05)}
 \cfoot{\thepage}
 \setlength{\headheight}{14pt}
 
@@ -46,9 +46,9 @@
 % TITLE
 % =============================================================================
 \title{\textbf{Fractal Information Nadsoliton (FIN) Theory}\\
-\large Canonical Scientific Documentation --- Release 5.0}
+\large Canonical Scientific Documentation --- Release 5 Status Update}
 \author{Krzysztof Żuchowski}
-\date{2026-03-04}
+\date{2026-03-05}
 
 \begin{document}
 \maketitle
@@ -61,16 +61,17 @@ DOI: \url{https://doi.org/10.5281/zenodo.17645737}
 \end{center}
 
 \section*{Abstract}
-This paper provides a canonical Release 5.0 summary of FIN in scientific form.
+This paper provides a canonical Release 5 status summary of FIN in scientific form.
 
 \textbf{Current core status:}
 \begin{itemize}[leftmargin=1.4em]
     \item \textbf{Internal strict closure: achieved} in the audited locked chain.
-    \item \textbf{Only missing step for community-level confirmation:} independent external multiteam audit/replication.
+    \item \textbf{Release 5.1 full-closure readiness: not yet} (foundational gaps remain open/partial).
+    \item \textbf{Community-level confirmation still missing:} independent external multiteam audit/replication.
     \item \textbf{GW raw-strain branch:} treated as a late empirical search test for Nadsoliton signatures, not as definitional core of closure.
 \end{itemize}
 
-The internal closure statement is anchored in: \QW{2069}, \QW{2070}, \QW{2071}, \QW{2081}, \QW{2097}, \QW{2094}, with post-chain consolidation updates in \QW{2115} and refreshed \QW{2114}.
+The internal closure statement is anchored in: \QW{2069}, \QW{2070}, \QW{2071}, \QW{2081}, \QW{2097}, \QW{2094}, with post-chain consolidation updates in \QW{2115}, refreshed \QW{2114}, and terminal theorem-chain closure by \QW{2179}, \QW{2180}, and \QW{2181}.
 Section~\ref{sec:kernel_to_observable_pipeline} states the deterministic kernel-to-observable mapping used in the strict chain.
 
 \tableofcontents
@@ -216,6 +217,29 @@ where $d=|o-o'|$ is octave distance.
     \item same functional form is reused across audited branches in strict chain.
 \end{itemize}
 
+\subsection{Canonical Effective FIN Lagrangian (Strict Internal Layer)}
+The strict internal derivation stack uses the following canonical effective Lagrangian template:
+\begin{equation}
+\mathcal{L}_{\mathrm{FIN}}=
+\sum_{o=0}^{11}\left(\frac{1}{2}\partial_\mu\Psi_o^\dagger\partial^\mu\Psi_o - V_\Psi(\Psi_o)\right)
++\frac{1}{2}\partial_\mu\Phi\,\partial^\mu\Phi - V_\Phi(\Phi)-\mathcal{L}_{\mathrm{int}}.
+\label{eq:fin_lagrangian_full}
+\end{equation}
+\begin{equation}
+\mathcal{L}_{\mathrm{int}}=
+\sum_{o=0}^{11} g_Y(\mathrm{gen}(o))\,|\Phi|^2|\Psi_o|^2
++\frac{1}{2}\sum_{o\neq o'}K_{\mathrm{total}}(o,o')\,\Psi_o^\dagger\Psi_{o'}.
+\label{eq:fin_lagrangian_interaction}
+\end{equation}
+\begin{itemize}[leftmargin=1.4em]
+    \item $\Psi_o$: octave-indexed matter modes,
+    \item $\Phi$: scalar vacuum/order-parameter mode,
+    \item $K_{\mathrm{total}}$: structured mixing operator induced by the frozen kernel branch.
+\end{itemize}
+\begin{remark}
+Equation-level closure of this effective template in strict internal scope is strong; however, full fundamental closure (including global reviewer-facing objections listed later) is not claimed yet.
+\end{remark}
+
 % =============================================================================
 \section{Kernel-to-Observable Derivation Pipeline}
 \label{sec:kernel_to_observable_pipeline}
@@ -282,7 +306,7 @@ In the current strict scope, FIN generates in gate-audited form:
 \subsection{Methodology Used for Closure Assessment}
 The closure table below is not a standalone declaration; it is the last layer of a locked methodology:
 \begin{enumerate}[leftmargin=1.5em]
-    \item \textbf{Source locking}: all closure claims are sourced from explicit artifacts (\QW{2069}, \QW{2070}, \QW{2071}, \QW{2081}, \QW{2097}, \QW{2094}, and consolidation \QW{2115}/\QW{2114}).
+    \item \textbf{Source locking}: all closure claims are sourced from explicit artifacts (\QW{2069}, \QW{2070}, \QW{2071}, \QW{2081}, \QW{2097}, \QW{2094}, consolidation \QW{2115}/\QW{2114}, and terminal theorem-chain closure \QW{2179}/\QW{2180}/\QW{2181}).
     \item \textbf{No-retune protocol}: after kernel lock, no sector-specific post-hoc retune is accepted.
     \item \textbf{Status typing}: entries are tagged by strict level (\texttt{strict\_internal\_gate}, \texttt{si\_definition}) and by outcome (\texttt{derived}, \texttt{derived\_with\_warning\_reduced}, \texttt{definition\_constant}).
     \item \textbf{Coverage accounting}: the package coverage report must simultaneously satisfy \texttt{n\_missing = 0} and \texttt{n\_strict\_unresolved = 0} in tracked scope.
@@ -301,6 +325,19 @@ The closure table below is not a standalone declaration; it is the last layer of
 \QW{2081} & \Verdict{MISSING14\_STRICT\_RIGOR\_FRONTIER\_PASS\_ALL\_CLOSED} & PASS \\
 \QW{2097} & \Verdict{CKM\_CP\_TARGET\_REFINEMENT\_GATE\_PASS\_STRICT} & PASS \\
 \QW{2094} & \Verdict{STRICT\_RIGOR\_DEFECT\_SWEEP\_PASS\_NO\_CRITICAL\_DEFECTS} & PASS \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Terminal Theorem-Chain Closure Gates}
+\begin{center}
+\begin{tabular}{p{2.2cm}p{8.8cm}p{2.6cm}}
+\toprule
+\textbf{Gate} & \textbf{Verdict} & \textbf{Status} \\
+\midrule
+\QW{2179} & \Verdict{L13\_U2B2\_EXACT\_MATCHING\_IDENTITY\_GATE\_PASS\_TERMINAL\_CHAIN\_CLOSED} & PASS \\
+\QW{2180} & \Verdict{L14\_V2B2\_EXACT\_ACTION\_IDENTIFICATION\_GATE\_PASS\_TERMINAL\_CHAIN\_CLOSED} & PASS \\
+\QW{2181} & \Verdict{DUAL\_TERMINAL\_MATCHING\_CLOSURE\_GATE\_PASS} & PASS \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -450,6 +487,38 @@ A positive result in this branch would strengthen empirical relevance, but inter
 \end{enumerate}
 
 % =============================================================================
+\section{Reviewer-Facing Open Gaps (Release 5.1 Readiness Boundary)}
+% =============================================================================
+\textbf{Important boundary statement:} despite strong strict internal closure, the full ``Release 5.1 complete fundamental closure'' label is not used yet.
+
+\begin{center}
+\begin{tabular}{p{2.0cm}p{3.2cm}p{7.2cm}}
+\toprule
+\textbf{Gap} & \textbf{Status} & \textbf{What remains} \\
+\midrule
+L1/L2 & PARTIAL & single-fundamental-entity completion and global soliton/topological-protection proof \\
+L3/L18/L19 & PARTIAL & full spinor+gauge closure beyond anchored domains and bridge-level partials \\
+L4/L16/L23 & PARTIAL/OPEN & full gravity action-level bridge and theorem-level SM+GR reduction \\
+L5 & PARTIAL & complete quantization/unitarity/renormalization/causality closure in one global theorem package \\
+L6/L7/L20/L21 & PARTIAL & global uniqueness/identifiability and robust derivation-vs-calibration separation \\
+L9 & OPEN & one strong new falsifiable prediction beyond the current closed set \\
+L10 & OPEN & independent external multiteam replication \\
+L11 & OPEN/PARTIAL & Planck-scale first-principles derivation without external anchor dependence \\
+L12 & PARTIAL & nonperturbative RG fixed-point proof \\
+L13/L14 & CLOSED (strict internal) & terminal theorem chains closed via \QW{2179}/\QW{2180}/\QW{2181} \\
+L22 & CLOSED (strict branch rule) & vacuum branch closure resolved in strict branch logic \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+These gaps are tracked operationally in:
+\begin{itemize}[leftmargin=1.4em]
+    \item \texttt{LISTA\_LUK\_DO\_UZUPELNIENIA\_FIN\_V5.md},
+    \item \texttt{RAPORT\_GREP\_LUK\_ALL\_STUDIES\_FIN\_V5\_2026-03-04.md},
+    \item \texttt{RAPORT\_STAN\_TEORII\_FIN\_V5\_1\_READINESS\_2026-03-05.md}.
+\end{itemize}
+
+% =============================================================================
 \section{Where Latest Closures Are Fully Listed}
 % =============================================================================
 For end-of-document consolidated closure notes, see Appendix G:
@@ -461,7 +530,7 @@ For end-of-document consolidated closure notes, see Appendix G:
 % =============================================================================
 \appendix
 
-\section{Appendix G: 2026-03-04 Addendum (QW-2063 to QW-2083)}
+\section{Appendix G: 2026-03-05 Addendum (QW-2063 to QW-2181)}
 \label{sec:addendum_latest_closure}
 
 \subsection{G1. Strict-Rigor Snapshot}
@@ -474,6 +543,9 @@ For end-of-document consolidated closure notes, see Appendix G:
     \item \QW{2071}: full precision closure PASS ($6/6$).
     \item \QW{2081}: missing-14 strict frontier fully closed.
     \item \QW{2094}: defect sweep PASS (130 checks, 0 failed).
+    \item \QW{2179}: L13 terminal theorem-chain closure PASS.
+    \item \QW{2180}: L14 terminal theorem-chain closure PASS.
+    \item \QW{2181}: dual terminal synchronization closure PASS.
 \end{itemize}
 
 \subsection{G2. Scientific Position}
@@ -494,6 +566,9 @@ Current holdout branch can be operationally run and audited under locked thresho
     \item \QW{2081}: \Verdict{MISSING14\_STRICT\_RIGOR\_FRONTIER\_PASS\_ALL\_CLOSED}
     \item \QW{2097}: \Verdict{CKM\_CP\_TARGET\_REFINEMENT\_GATE\_PASS\_STRICT}
     \item \QW{2094}: \Verdict{STRICT\_RIGOR\_DEFECT\_SWEEP\_PASS\_NO\_CRITICAL\_DEFECTS}
+    \item \QW{2179}: \Verdict{L13\_U2B2\_EXACT\_MATCHING\_IDENTITY\_GATE\_PASS\_TERMINAL\_CHAIN\_CLOSED}
+    \item \QW{2180}: \Verdict{L14\_V2B2\_EXACT\_ACTION\_IDENTIFICATION\_GATE\_PASS\_TERMINAL\_CHAIN\_CLOSED}
+    \item \QW{2181}: \Verdict{DUAL\_TERMINAL\_MATCHING\_CLOSURE\_GATE\_PASS}
 \end{itemize}
 
 \section{Appendix H: Release 5 Scalar Parameter Table (Theory vs Readout)}
@@ -521,10 +596,10 @@ Current holdout branch can be operationally run and audited under locked thresho
 \input{appendix_h_release5_parameter_rows.tex}
 \end{longtable}
 
-\section{Appendix I: Historical Legacy of the Program (Release 4.4 to Release 5.0)}
+\section{Appendix I: Historical Legacy of the Program (Release 4.4 to Release 5 Status)}
 \label{sec:appendix_i_legacy_44}
 
-This appendix summarizes the historical development of the research program from the Release 4.4 era to the present Release 5.0 state. It replaces raw source embedding with a method-centered narrative. The full archival source snapshot remains available in the repository as:
+This appendix summarizes the historical development of the research program from the Release 4.4 era to the present Release 5 status. It replaces raw source embedding with a method-centered narrative. The full archival source snapshot remains available in the repository as:
 \texttt{TOE\_FINAL\_DOCUMENTATION\_RELEASE\_4\_4\_LEGACY\_FULL.tex}.
 
 \subsection{A. Origin and Early Research Direction (Pre-Strict Era)}
@@ -543,7 +618,7 @@ A key strength of the legacy program was explicit falsification rather than sile
     \item non-robust interpretations were reclassified from ``claim'' to ``open'' or ``legacy'',
     \item methodological risk labels were progressively introduced.
 \end{itemize}
-This phase established a core principle kept in Release 5.0: preserve negative results as first-class scientific outputs.
+This phase established a core principle kept in Release 5 status: preserve negative results as first-class scientific outputs.
 
 \subsection{C. Kernel Formalization and Freeze Discipline}
 Across late 4.x, the program migrated from broad exploratory forms to a frozen-kernel protocol:
@@ -561,7 +636,7 @@ The 4.9 to 5.0 transition reorganized legacy findings into explicit gate chains:
     \item full SM+GR package accounting with explicit unresolved counters,
     \item radiative-channel coverage and defect sweeps under locked protocol.
 \end{itemize}
-In Release 5.0 this yields internal strict closure status in audited scope, with remaining requirement of independent external replication.
+In Release 5 status this yields internal strict closure in audited scope, with remaining requirement of independent external replication.
 
 \subsection{E. Evolution of GW Branch Interpretation}
 The GW branch remained an empirical test channel, not the starting axiom of the theory:
@@ -570,21 +645,21 @@ The GW branch remained an empirical test channel, not the starting axiom of the 
     \item strict reruns (including method-repair gates) retained robust local/statistical controls,
     \item non-robust global anomaly language was downgraded where strict calibration did not sustain prior strength.
 \end{itemize}
-This is consistent with Release 5.0 policy: observational claims are graded by strict protocol outcome, not by narrative priority.
+This is consistent with Release 5 policy: observational claims are graded by strict protocol outcome, not by narrative priority.
 
 \subsection{F. Legacy-to-Current Mapping Rule}
-For traceable scientific continuity, Release 5.0 uses the following mapping:
+For traceable scientific continuity, Release 5 uses the following mapping:
 \begin{itemize}[leftmargin=1.4em]
     \item \textbf{Legacy insight} $\rightarrow$ \textbf{strictly typed status} (derived / warning-reduced / pending-data),
     \item \textbf{legacy positive claim} $\rightarrow$ retained only if passing locked gate criteria,
     \item \textbf{legacy conceptual content} $\rightarrow$ preserved as historical motivation, not counted as closure evidence.
 \end{itemize}
-Therefore, the legacy corpus is preserved historically, while closure statements are anchored exclusively in strict Release 5.0 gate outputs.
+Therefore, the legacy corpus is preserved historically, while closure statements are anchored exclusively in strict Release 5 gate outputs.
 
 \vspace{1cm}
 \begin{center}
 \rule{0.5\textwidth}{0.4pt}\\[0.4cm]
-Version 5.0.0 Canonical Scientific Paper --- \today
+Release 5 Status Canonical Scientific Paper --- \today
 \end{center}
 
 \end{document}

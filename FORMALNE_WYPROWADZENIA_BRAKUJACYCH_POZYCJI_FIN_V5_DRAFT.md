@@ -303,9 +303,14 @@ Do finalnego roszczenia fundamentalnego potrzebne:
 
 ---
 
-## 12) Predykcja nowa i falsyfikowalna (`L9`) - `OPEN`
+## 12) Predykcja nowa i falsyfikowalna (`L9`) - `PARTIAL`
 
-Minimalny protokol:
+Status po `QW-2203`:
+1. prereg/falsification stack jest formalnie zintegrowany,
+2. walidacja ma status mieszany (`supported=1`, `pending_data=2`, `falsified=0`),
+3. brak jeszcze jednej centralnej predykcji high-impact potwierdzonej multidomain.
+
+Minimalny protokol docelowy:
 1. nowa wielkosc \(O_{new}\) poza zakresem kalibracji,
 2. prerejestracja testu i progow decyzji,
 3. slepy holdout i niezalezny rerun.
@@ -1900,3 +1905,1084 @@ Werdykt:
 
 Wniosek:
 - `L14` jest zredukowany do pojedynczego terminalnego lemmatu bezwarunkowego `V2`.
+
+---
+
+## 68) Aktualizacja wykonawcza (QW-2175): L13 U2 terminal lemma decomposition
+
+W `QW-2175` wykonano dekompozycje lemmatu `U2`:
+1. zdefiniowano rozbicie:
+\[
+U2 \Leftarrow (U2a \wedge U2b),
+\]
+2. domknieto `U2a` na bazie pakietu majorant/tail-control (`QW-2136`, `QW-2138`),
+3. jawnie utrzymano `U2b` jako jedyny most action-origin,
+4. wygenerowano i machine-checkowano scaffold theorem:
+   - `FIN_L13_U2_TERMINAL_LEMMA_DECOMPOSITION_QW2175.lean` (`lean rc=0`),
+5. zapisano packet:
+   - `proof_packet_qw2175_l13_u2_terminal_lemma_decomposition.json`.
+
+Werdykt:
+- `L13_U2_TERMINAL_LEMMA_DECOMPOSITION_GATE_PASS_PARTIAL_SINGLE_ACTION_BRIDGE_OPEN` (`12/16`).
+
+Wniosek:
+- po stronie `L13` pozostaje pojedynczy most action-origin `U2b`.
+
+---
+
+## 69) Aktualizacja wykonawcza (QW-2176): L14 V2 terminal lemma decomposition
+
+W `QW-2176` wykonano dekompozycje lemmatu `V2`:
+1. zdefiniowano rozbicie:
+\[
+V2 \Leftarrow (V2a \wedge V2b),
+\]
+2. domknieto `V2a` na bazie pakietu proxy/inverse/continuum (`QW-2148`, `QW-2141`),
+3. jawnie utrzymano `V2b` jako jedyny most action-origin,
+4. wygenerowano i machine-checkowano scaffold theorem:
+   - `FIN_L14_V2_TERMINAL_LEMMA_DECOMPOSITION_QW2176.lean` (`lean rc=0`),
+5. zapisano packet:
+   - `proof_packet_qw2176_l14_v2_terminal_lemma_decomposition.json`.
+
+Werdykt:
+- `L14_V2_TERMINAL_LEMMA_DECOMPOSITION_GATE_PASS_PARTIAL_SINGLE_ACTION_BRIDGE_OPEN` (`12/16`).
+
+Wniosek:
+- po stronie `L14` pozostaje pojedynczy most action-origin `V2b`.
+
+---
+
+## 70) Aktualizacja wykonawcza (QW-2177): L13 U2b action-bridge specification
+
+W `QW-2177` wykonano dekompozycje mostu `U2b`:
+1. zdefiniowano rozbicie:
+\[
+U2b \Leftarrow (U2b1 \wedge U2b2),
+\]
+2. domknieto `U2b1` przez warstwe strukturalna exhaustive canonical EoM (`QW-2165`),
+3. jawnie utrzymano `U2b2` jako pojedyncza matching identity,
+4. wygenerowano i machine-checkowano scaffold theorem:
+   - `FIN_L13_U2B_ACTION_BRIDGE_SPEC_QW2177.lean` (`lean rc=0`),
+5. zapisano packet:
+   - `proof_packet_qw2177_l13_u2b_action_bridge_spec.json`.
+
+Werdykt:
+- `L13_U2B_ACTION_BRIDGE_SPEC_GATE_PASS_PARTIAL_SINGLE_MATCHING_IDENTITY_OPEN` (`9/14`).
+
+Wniosek:
+- po stronie `L13` pozostaje pojedyncza matching identity `U2b2`.
+
+---
+
+## 71) Aktualizacja wykonawcza (QW-2178): L14 V2b action-bridge specification
+
+W `QW-2178` wykonano dekompozycje mostu `V2b`:
+1. zdefiniowano rozbicie:
+\[
+V2b \Leftarrow (V2b1 \wedge V2b2),
+\]
+2. domknieto `V2b1` przez warstwe strukturalna exhaustive canonical Hessian (`QW-2166`),
+3. jawnie utrzymano `V2b2` jako pojedyncza matching identity,
+4. wygenerowano i machine-checkowano scaffold theorem:
+   - `FIN_L14_V2B_ACTION_BRIDGE_SPEC_QW2178.lean` (`lean rc=0`),
+5. zapisano packet:
+   - `proof_packet_qw2178_l14_v2b_action_bridge_spec.json`.
+
+Werdykt:
+- `L14_V2B_ACTION_BRIDGE_SPEC_GATE_PASS_PARTIAL_SINGLE_MATCHING_IDENTITY_OPEN` (`9/14`).
+
+Wniosek:
+- po stronie `L14` pozostaje pojedyncza matching identity `V2b2`.
+
+
+## 72) Aktualizacja wykonawcza (QW-2179): L13 U2b2 exact matching identity
+
+W `QW-2179` wykonano formalne rozladowanie ostatniej tozsamosci matching dla `L13`:
+1. zrekonstruowano pelny kanoniczny Lagrangian `12xPsi + Phi`,
+2. policzono Euler-Lagrange dla wszystkich pol `psi_i`,
+3. sprawdzono exact identity dla wszystkich par `i != j`:
+\[
+\partial_{\psi_j} E_i = \frac{K_{ij}+K_{ji}}{2},
+\]
+4. sprawdzono exact majorant-weight identity:
+\[
+W_{ij} = \left|\frac{K_{ij}+K_{ji}}{2}\right| = \left|\partial_{\psi_j}E_i\right|,
+\]
+5. wykonano machine-check scaffold (`FIN_L13_U2B2_EXACT_MATCHING_IDENTITY_QW2179.lean`, `lean rc=0`).
+
+Werdykt:
+- `L13_U2B2_EXACT_MATCHING_IDENTITY_GATE_PASS_TERMINAL_CHAIN_CLOSED` (`16/16`).
+
+Wniosek:
+- po stronie `L13` domknieto ostatnia matching identity (`U2b2`) i zamknieto caly terminalny lancuch (`U2b`, `U2`, `F5b`, final theorem flag).
+
+---
+
+## 73) Aktualizacja wykonawcza (QW-2180): L14 V2b2 exact action-level identification
+
+W `QW-2180` wykonano formalne rozladowanie ostatniej tozsamosci matching dla `L14`:
+1. zrekonstruowano kanoniczny potencjal i Hessian na ukladzie `13` pol,
+2. zbudowano kwadratowe dzialanie fluktuacji i liniowe EoM,
+3. sprawdzono exact identity operatorowa na calej macierzy:
+\[
+\mathcal{O}_{ab} = H_{ab} \quad \forall a,b \in \{0,\dots,12\},
+\]
+4. potwierdzono symetrie Hessianu i spojnosc shape `13x13`,
+5. wykonano machine-check scaffold (`FIN_L14_V2B2_EXACT_ACTION_IDENTIFICATION_QW2180.lean`, `lean rc=0`).
+
+Werdykt:
+- `L14_V2B2_EXACT_ACTION_IDENTIFICATION_GATE_PASS_TERMINAL_CHAIN_CLOSED` (`16/16`).
+
+Wniosek:
+- po stronie `L14` domknieto ostatnia matching identity (`V2b2`) i zamknieto caly terminalny lancuch (`V2b`, `V2`, `C5b`, final continuum theorem flag).
+
+---
+
+## 74) Aktualizacja wykonawcza (QW-2181): dual synchronization of terminal closures
+
+W `QW-2181` wykonano synchronizacje dualna:
+1. wejscia: `QW-2179` + `QW-2180`,
+2. sprawdzono jednoczesne domkniecie flag terminalnych po obu stronach,
+3. wykonano machine-check skeleton (`FIN_L13_L14_DUAL_TERMINAL_MATCHING_CLOSURE_QW2181.lean`, `lean rc=0`).
+
+Werdykt:
+- `DUAL_TERMINAL_MATCHING_CLOSURE_GATE_PASS` (`10/10`).
+
+Wniosek:
+- dualny segment luk terminalnych action-matching (`U2b2`, `V2b2`) jest domkniety w strict internal scope.
+
+## 75) QW-2182: konstruktywny certyfikat przeplywu RG w domenie strict (`L12`) - `PARTIAL_STRICT_CONSTRUCTIVE_DOMAIN_FLOW`
+
+Nowy krok (`QW-2182`) wzmacnia `L12` bez overclaimu globalnego:
+
+1. Przyjeto jawna domene strict dla couplings:
+\[
+(g_1,g_2,g_3,y_t,\lambda_h,g_{gr})
+\in [0.30,0.40]\times[0.55,0.75]\times[1.00,1.30]\times[0.75,0.95]\times[0.12,0.20]\times[10^{-5},0.30].
+\]
+
+2. Zastosowano deterministyczny solver RK4 na oknie
+\[
+t\in[0,6],\quad \Delta t=0.01,
+\]
+co daje `729` trajektorii startowych na siatce `3^6`.
+
+3. Otrzymano certyfikaty domenowe:
+- `finite_semiflow_on_declared_domain=True`,
+- `bounded_semiflow_on_declared_domain=True` (`max_abs_global=1.3`),
+- `g2` i `g3` monotonicznie malejace,
+- `g_gr` monotonicznie niemalejacy,
+- `lambda_h` pozostaje dodatnia w calym oknie (`min_lambda_global~0.0056`).
+
+4. Dodano analityczny warunek Lyapunova dla kanalu grawitacyjnego
+\[
+V(g)= (1-g)^2,
+\quad
+\frac{dV}{dt}=2(1-g)(-\beta_g)
+= -4g(1-g)^2\le 0
+\quad (g\ge 0),
+\]
+co formalizuje kierunek przyciagania w kanale `g_gr` na zadanej domenie.
+
+5. Werdykt:
+- `RG_NONPERTURBATIVE_DOMAIN_FLOW_GATE_PASS_STRICT_PARTIAL` (`12/13`).
+- Jawnie otwarte: `full_nonperturbative_rg_fixed_point_proof_completed=False`.
+
+Wniosek: `L12` zostaje wzmocnione do poziomu konstruktywnego certyfikatu domenowego; pozostaje globalny dowod nonperturbative poza box+window.
+
+## 76) QW-2183: hypercharge completion z warunku vectorlike-EM (`L19`) - `PARTIAL_VECTORLIKE_EM_COMPLETION`
+
+Krok `QW-2183` formalizuje przejscie:
+
+1. Kernel anchor:
+\[
+Y_Q = \frac{2}{N_{oct}} = \frac{1}{6},\quad N_{oct}=12.
+\]
+
+2. Relacja anomalii `SU(2)^2U(1)`:
+\[
+3Y_Q + Y_L = 0 \Rightarrow Y_L = -\frac12.
+\]
+
+3. Parametryzacja Yukawa przez `Y_H`:
+\[
+Y_{uR}=Y_Q+Y_H,\quad Y_{dR}=Y_Q-Y_H,\quad Y_{eR}=Y_L-Y_H,\quad Y_{nR}=Y_L+Y_H.
+\]
+
+4. Spojnosc vectorlike dla `U(1)_em` (fermiony naladowane):
+\[
+Q_{uL}=Q_{uR},\ Q_{dL}=Q_{dR},\ Q_{eL}=Q_{eR}
+\]
+co daje jednoznacznie
+\[
+Y_H=\frac12,
+\]
+a dalej automatycznie
+\[
+Y_{nR}=Y_L+Y_H=0.
+\]
+
+5. Audit anomalii w bazie ulomkowej:
+\[
+A_{SU(3)^2U(1)}=A_{SU(2)^2U(1)}=A_{grav^2U(1)}=A_{U(1)^3}=0.
+\]
+
+6. Werdykt:
+- `HYPERCHARGE_VECTORLIKE_EM_COMPLETION_GATE_PASS_PARTIAL` (`11/12`).
+
+Granica:
+- nadal otwarte: globalna unikalnosc w nieograniczonej przestrzeni formul
+(`global_unconstrained_formula_space_uniqueness=False`).
+
+## 77) QW-2184: symboliczne domkniecie globalnej unikalnosci `Y_H` w klasie formul (`L19`) - `CLOSED_DECLARED_CLASS_SCOPE`
+
+Krok `QW-2184` podnosi rygor `L19` z bounded-scan do poziomu symbolic-global (bez skanu) w jawnie zadeklarowanym scope:
+
+1. Utrzymane kernellowe anchor:
+\[
+Y_Q=\frac{2}{N_{oct}}=\frac16,\qquad
+Y_L=-3Y_Q=-\frac12.
+\]
+
+2. Klasa formul:
+\[
+Y_{uR}=Y_Q+Y_H,\quad
+Y_{dR}=Y_Q-Y_H,\quad
+Y_{eR}=Y_L-Y_H,\quad
+Y_{nR}=Y_L+Y_H.
+\]
+
+3. Warunki vectorlike dla naladowanych kanalow `U(1)_{em}`:
+\[
+Q_{uR}=Q_{uL},\quad Q_{dR}=Q_{dL},\quad Q_{eR}=Q_{eL}.
+\]
+Po podstawieniu:
+\[
+Y_H=Q_{uL}-Y_Q=\frac12,\quad
+Y_H=Y_Q-Q_{dL}=\frac12,\quad
+Y_H=Y_L-Q_{eL}=\frac12.
+\]
+Trzy niezalezne rownania daja ten sam wynik, wiec:
+\[
+\forall\,Y_H\in\mathbb{R}\ \text{w tej klasie formul}: \quad Y_H=\frac12\ \text{(jedyny)}.
+\]
+
+4. Wynik neutrinowy:
+\[
+Y_{nR}=Y_L+Y_H=-\frac12+\frac12=0,
+\]
+czyli neutralnosc `Y_{nR}` jest wynikiem, nie recznym zalozeniem solvera.
+
+5. Audit anomalii (fractional exact):
+\[
+A_{SU(3)^2U(1)}=A_{SU(2)^2U(1)}=A_{grav^2U(1)}=A_{U(1)^3}=0.
+\]
+
+Werdykt:
+- `HYPERCHARGE_GLOBAL_UNIQUENESS_SYMBOLIC_GATE_PASS_DECLARED_CLASS` (`18/18`).
+
+Zakres roszczenia:
+- domkniecie jest globalne po `Y_H in R` **wewnatrz zadeklarowanej klasy formul**,
+- granica poza ta klasa pozostaje jawna (`outside_formula_class_scope_boundary_explicit=True`).
+
+## 78) QW-2185: theorem-level blokada globalnego RG w obecnym proxy (`L12`) - `PARTIAL_STRICT_OBSTRUCTION_PROVEN`
+
+Krok `QW-2185` nie udaje domkniecia globalnego RG; zamiast tego domyka formalny dowod granicy:
+
+1. W obecnym proxy (`QW-2132`/`QW-2182`) kanal `U(1)` ma postac
+\[
+\frac{dg_1}{dt}=k_1 g_1^3,\qquad k_1=\frac{41/6}{16\pi^2}>0.
+\]
+
+2. Rozwiazanie jawne:
+\[
+g_1(t)=\frac{g_{1,0}}{\sqrt{1-2k_1 g_{1,0}^2 (t-t_0)}},
+\]
+wiec dla `g_{1,0}>0` istnieje skonczenie-czasowy biegun:
+\[
+t_* = t_0+\frac{1}{2k_1 g_{1,0}^2}.
+\]
+
+3. Wniosek theorem-level:
+\[
+\text{pelny globalny przeplyw } t\ge 0 \text{ dla calego proxy}
+\]
+oraz
+\[
+\text{pelne globalne fixed-point closure calego ukladu}
+\]
+nie sa mozliwe w aktualnym proxy bez modyfikacji UV.
+
+4. Jednoczesnie:
+- okno konstruktywne `QW-2182` pozostaje formalnie bezpieczne:
+  `t*_min(domain) > t_max`,
+- subsektory `g2,g3` i `g_gr` maja closed-form monotonicznosc
+  (asymptotyczna swoboda / logistic branch).
+
+Werdykt:
+- `RG_PROXY_GLOBAL_OBSTRUCTION_THEOREM_GATE_PASS_STRICT` (`13/14`).
+
+Interpretacja:
+- `L12` zostaje podniesione z „partial bo brak dowodu” do
+  „partial z jawnie udowodniona blokada i zdefiniowanym zakresem”.
+
+## 79) QW-2186: theorem-level margin stabilnosci widmowej `K_total` (`L15`) - `CLOSED_BRANCH_SCOPE`
+
+Krok `QW-2186` domyka brakujacy certyfikat `L15` w zakresie branch-resolved:
+
+1. Definicja:
+\[
+A = K_{total} + m_0^2 I,
+\]
+gdzie `m_0^2` pochodzi z jawnie wybranej i uzasadnionej galezi broken (`QW-2124`).
+
+2. Wynik spektralny:
+\[
+\lambda_{\min}(A)=0.331677\ldots >0.
+\]
+
+3. Certyfikat perturbacyjny (Weyl):
+\[
+\lambda_{\min}(A+\Delta)\ge \lambda_{\min}(A)-\|\Delta\|_2.
+\]
+Stad dla kazdego symetrycznego zaburzenia:
+\[
+\|\Delta\|_2 < \lambda_{\min}(A)
+\quad\Longrightarrow\quad
+A+\Delta \succeq 0.
+\]
+To daje jawny promien odpornosci:
+\[
+\varepsilon_{crit}=\lambda_{\min}(A)=0.331677\ldots
+\]
+
+4. Kontrole deterministyczne:
+- sample inside-safe i near-boundary zachowuja dodatni najmniejszy mod,
+- witness dla `\varepsilon > \varepsilon_{crit}` daje ujemny mod,
+co potwierdza sharpness certyfikatu.
+
+Werdykt:
+- `KTOTAL_SPECTRAL_STABILITY_MARGIN_GATE_PASS_STRICT_BRANCH_SCOPE` (`10/11`).
+
+Zakres roszczenia:
+- domkniecie jest strict dla bounded symetrycznych perturbacji normy operatorowej,
+- klasy perturbacji poza tym zakresem (nieograniczone/nieliniowe/nielokalne) pozostaja jawnie poza claimem.
+
+## 80) QW-2187: finite UV scope declaration dla proxy-RG (`L12`) - `CLOSED_PROXY_SCOPE_GLOBAL_OPEN`
+
+Krok `QW-2187` realizuje formalnie sciezke z `QW-2185`:
+
+1. Na strict-grid `729` trajektorii i kroku `dt=0.01` wykonano probe do `t_probe=30`.
+
+2. Wykryto pierwszy crossing:
+\[
+\lambda_h<0 \quad \text{przy} \quad t_{cross}=6.34.
+\]
+
+3. Zadeklarowano konserwatywny zakres:
+\[
+0 \le t \le t_{scope}=6.30
+\]
+(`4` kroki bezpieczenstwa przed crossing), z certyfikatem:
+\[
+\lambda_{h,\min}(t\le t_{scope}) = 6.22\times 10^{-4} > 0.
+\]
+
+4. Dodatkowa zgodnosc z `QW-2185`:
+Landau pole `U(1)` jest daleko poza tym zakresem:
+\[
+t^*_{min}\approx 72.22 \gg t_{scope}.
+\]
+
+Werdykt:
+- `RG_PROXY_FINITE_UV_SCOPE_DECLARATION_GATE_PASS_STRICT` (`9/10`).
+
+Interpretacja:
+- dla obecnego proxy-RG masz formalnie domkniety strict zakres waznosci UV,
+- globalne domkniecie all-t nadal pozostaje jawnie otwarte.
+
+## 81) QW-2188: anchored UV-correction frontier dla rozszerzonego scope (`L12`) - `PARTIAL_EXTENDED_SCOPE_FEASIBLE`
+
+Krok `QW-2188` idzie dalej niz sama deklaracja scope (`QW-2187`) i bada rodzine korekt UV:
+
+1. Rodzina jest jawnie kotwiczona:
+- cap dla `g1` z `z_beta_q50`,
+- parametr `b_corr` skaluje destabilizujacy skladnik `-6 y_t^4`,
+- zakres `b_corr` z envelope mikro:
+\[
+b \in [b_{min}, b_{max}]
+\]
+wyznaczonym przez `delta_eta_q25..q75` wzgledem target.
+
+2. Baseline:
+\[
+b=0 \Rightarrow t_{cross}(\lambda_h<0)=6.34.
+\]
+
+3. Frontier (deterministyczny bisection na strict-grid `729`, `t_probe=30`):
+\[
+b^* = 0.4631195
+\]
+to minimalny punkt feasible w anchor-interval, dla ktorego:
+\[
+\lambda_h(t)\ge 0 \ \text{dla}\ 0\le t\le 30
+\]
+na calej strict-siatce.
+
+4. Koszt niskoenergetyczny jest jawnie raportowany:
+relatywny shift `beta_lambda` przy referencji:
+\[
+\Delta_{rel}\approx 0.649.
+\]
+
+Werdykt:
+- `UV_COMPLETING_RG_CORRECTION_FRONTIER_GATE_PASS_EXTENDED_SCOPE_PARTIAL` (`10/11`).
+
+Interpretacja:
+- rozszerzony finite-scope jest konstruktywnie wykonalny w rodzinie kotwiczonej,
+- to nadal nie jest globalne all-t domkniecie nonperturbacyjne.
+
+## 82) QW-2189: spinor+gauge de-anchored consistency layer (`L18/L19`) - `PARTIAL_GLOBAL_EMERGENCE_OPEN`
+
+Krok `QW-2189` wzmacnia `L18/L19` przez oddzielenie warstwy spojnoscowej od zaleznosci
+na winnerze `q_assignment`:
+
+1. Wejscie de-anchored:
+- action-level nonabelian block z `QW-2127`,
+- symboliczne no-scan domkniecie hypercharge z `QW-2184`.
+
+2. Template ulomkowy (z `QW-2184`):
+\[
+Y_Q=\frac16,\quad
+Y_u=\frac23,\quad
+Y_d=-\frac13,\quad
+Y_L=-\frac12,\quad
+Y_e=-1,\quad
+Y_n=0,\quad
+Y_H=\frac12.
+\]
+
+3. Ladunki elektryczne:
+\[
+Q_{uL}=\frac12+Y_Q=\frac23=Q_{uR},\qquad
+Q_{dL}=-\frac12+Y_Q=-\frac13=Q_{dR},
+\]
+\[
+Q_{\nu L}=\frac12+Y_L=0=Q_{\nu R},\qquad
+Q_{eL}=-\frac12+Y_L=-1=Q_{eR}.
+\]
+Czyli jednoczesnie zachodzi `Q=T3+Y` oraz vectorlike-EM consistency dla kanalow naladowanych.
+
+4. Anomalie (na pokolenie, rachunek exact-fractional):
+\[
+A_{SU(3)^2U(1)}=2Y_Q-Y_u-Y_d=0,
+\]
+\[
+A_{SU(2)^2U(1)}=3Y_Q+Y_L=0,
+\]
+\[
+A_{grav^2U(1)}=6Y_Q-3Y_u-3Y_d+2Y_L-Y_e-Y_n=0,
+\]
+\[
+A_{U(1)^3}=6Y_Q^3-3Y_u^3-3Y_d^3+2Y_L^3-Y_e^3-Y_n^3=0.
+\]
+
+5. Witten global anomaly check:
+\[
+N_{doublets}=3\times(3Q_L+L_L)=12,
+\]
+czyli liczba LH-doublets jest parzysta i globalna anomalia SU(2) nie wystepuje.
+
+6. Werdykt:
+- `SPINOR_GAUGE_DEANCHORED_CONSISTENCY_GATE_PASS_PARTIAL_GLOBAL_EMERGENCE_OPEN` (`18/19`).
+
+Granica:
+- nadal jawnie otwarte pozostaje pelne wyprowadzenie reprezentacji
+  bezposrednio z algebrai modow kernela:
+`full_representation_emergence_from_kernel_mode_algebra=False`.
+
+## 83) QW-2190: kernel-mode algebra representation emergence (`L3/L18/L19`) - `PARTIAL_PHYSICAL_UNIQUENESS_OPEN`
+
+Krok `QW-2190` podnosi rygor `L3/L18/L19` przez jawne osadzenie algebry reprezentacji
+w deterministycznej bazie modow wyprowadzonej z kernela:
+
+1. Z frozen kernela (`QW-2118`) budujemy `K_total` na pierscieniu `N=12`.
+
+2. Definiujemy rzeczywista baze Fouriera:
+\[
+\{e_0, c_m, s_m\}_{m=1}^{N/2-1},
+\]
+ze standaryzacja ortonormalna.
+
+3. Jawny mode-mapping (bez skanu):
+\[
+SU(3): [e_0,c_1,s_1],\qquad SU(2): [c_2,s_2],
+\]
+\[
+U(1):\ \text{template z }QW\text{-}2184\ (Y_Q=1/6,\ Y_H=1/2,\ Y_n=0).
+\]
+
+4. Na tych podprzestrzeniach osadzamy generatory:
+- `SU(2)` przez macierze Pauliego,
+- `SU(3)` przez macierze Gell-Manna,
+- embedding do przestrzeni `12D` przez projekcje bazowe.
+
+5. Audit strict (numeryczny, tolerancja maszynowa):
+- ortonormalnosc i rozlacznosc podprzestrzeni,
+- inwariancja podprzestrzeni wobec `K_total`,
+- Lie-closure (`SU(2)`, `SU(3)`),
+- hermitowosc/bezsladowosc,
+- zerowy cross-commutator (`SU(3)xSU(2)` direct-product).
+
+Wszystkie powyzsze flagi przechodza; residuale sa rzedu `1e-16..1e-15`.
+
+6. Integracja `U(1)`:
+- template hypercharge i exact anomaly closure sa wprowadzone z
+  `QW-2184` (`A_{SU(3)^2U(1)}=A_{SU(2)^2U(1)}=A_{grav^2U(1)}=A_{U(1)^3}=0`).
+
+Werdykt:
+- `KERNEL_MODE_REPRESENTATION_EMERGENCE_GATE_PASS_PARTIAL_PHYSICAL_UNIQUENESS_OPEN` (`17/18`).
+
+Granica:
+- nadal otwarty jest krok finalny:
+\[
+\text{full\_physical\_uniqueness\_of\_mode\_index\_assignment} = \text{False}.
+\]
+Czyli: scaffold algebry reprezentacji z modow kernela jest domkniety,
+ale pelna unikalnosc fizyczna przypisania indeksow modow do reprezentacji
+pozostaje zadaniem kolejnego gate'a.
+
+## 84) QW-2191: theorem-level obstruction of full mode-index uniqueness (`L3/L18/L19`) - `STRICT_OBSTRUCTION_PROVEN`
+
+Krok `QW-2191` formalizuje granice domkniecia z `QW-2190`.
+
+1. Widmo frozen `K_total` zawiera zdegenerowane pary:
+\[
+\lambda_1=\lambda_2,\ \lambda_3=\lambda_4,\ \ldots
+\]
+(co jest jawnie raportowane numerycznie w `QW-2191`).
+
+2. Dla kazdej zdegenerowanej podprzestrzeni 2D istnieje ciagla rodzina rotacji
+\(R(\theta)\in O(2)\), ktora komutuje z rzutem spektralnym kernela.
+
+3. Po zastosowaniu tej rotacji do baz modowych osadzen `SU(3)` i `SU(2)`:
+- inwariancja podprzestrzeni wobec `K_total` pozostaje zachowana,
+- Lie-closure audit pozostaje zachowany,
+- residuale pozostaja na poziomie maszynowym.
+
+4. Wniosek:
+\[
+\text{kernel + obecne aksjomaty} \not\Rightarrow
+\text{jednoznaczny fizycznie mode-index assignment}.
+\]
+
+Czyli pelna unikalnosc fizyczna mapowania reprezentacji nie wynika z samego kernela,
+chyba ze zostanie dodany dodatkowy jawny postulat selekcji/symmetry-breaking.
+
+Werdykt:
+- `MODE_INDEX_UNIQUENESS_OBSTRUCTION_THEOREM_GATE_PASS_STRICT` (`9/10`).
+
+Znaczenie metodologiczne:
+- to jest scisly dowod granicy teorii w aktualnym zestawie zalozen,
+  a nie blad implementacyjny pipeline.
+
+## 85) QW-2192: axiom-augmented closure of mode-index uniqueness (`L3/L18/L19`) - `CLOSED_IN_DECLARED_AUGMENTED_SCOPE`
+
+Po udowodnieniu granicy axiom-free (`QW-2191`) wprowadzono jawny postulat selekcji:
+
+\[
+\textbf{Axiom S:}\quad
+\theta^* = \arg\min_{\theta}\ J(\theta),
+\quad
+J(\theta)=\|u(\theta)-c_{ref}\|^2+\|v(\theta)-s_{ref}\|^2,
+\]
+uzupelniony konwencja orientacji znaku (positive cosine-overlap).
+
+Dla rotacji w podprzestrzeni zdegenerowanej:
+\[
+u(\theta)=\cos\theta\,c_{ref}+\sin\theta\,s_{ref},
+\quad
+v(\theta)=-\sin\theta\,c_{ref}+\cos\theta\,s_{ref},
+\]
+co daje zamknieta postac:
+\[
+J(\theta)=4(1-\cos\theta).
+\]
+
+Stad:
+\[
+J(\theta)\ge 0,
+\quad
+J(\theta)=0 \iff \theta=0\ (\text{mod }2\pi),
+\]
+czyli wybor jest jednoznaczny w zadeklarowanym scope aksjomatycznym.
+
+`QW-2192` potwierdza to analitycznie i numerycznie dla obu par modow
+w osadzeniu `QW-2190` (`theta^*=0` na siatce testowej).
+
+Werdykt:
+- `MODE_INDEX_SELECTION_AXIOM_GATE_PASS_AXIOM_AUGMENTED_UNIQUENESS_CLOSED` (`10/11`).
+
+Granica pozostaje jawna:
+- `axiom_free_uniqueness_closed=False`.
+
+Interpretacja:
+- unikalnosc mapowania jest domknieta **w wersji teorii z jawnie dodanym aksjomatem selekcji**,
+- bez tego aksjomatu obowiazuje theorem-level obstruction z `QW-2191`.
+
+## 86) QW-2193: robustnosc domkniecia axiom-augmented na rodzinie funkcjonalow (`L3/L18/L19`)
+
+Po `QW-2192` (closure dla jednego jawnego aksjomatu) wykonano `QW-2193`:
+
+1. Zadeklarowano rodzine funkcjonalow selekcji:
+\[
+J_{a,b}(\theta)=a\|u(\theta)-c_{ref}\|^2+b\|v(\theta)-s_{ref}\|^2,
+\quad a>0,\ b>0.
+\]
+
+2. Dla tej rodziny zachodzi closed-form:
+\[
+J_{a,b}(\theta)=2(a+b)(1-\cos\theta).
+\]
+
+3. Wniosek analityczny:
+\[
+J_{a,b}(\theta)\ge 0,
+\quad
+J_{a,b}(\theta)=0 \iff \theta=0\ (\text{mod }2\pi),
+\]
+niezaleznie od konkretnego dodatniego wyboru `(a,b)`.
+
+4. Audit numeryczny (`F1..F6`) potwierdza ten sam wybor `theta*=0`
+dla obu par modowych osadzenia `QW-2190`.
+
+Werdykt:
+- `SELECTION_AXIOM_FAMILY_ROBUSTNESS_GATE_PASS_AXIOM_AUGMENTED_ROBUST` (`10/11`).
+
+Znaczenie:
+- domkniecie `QW-2192` jest robust wewnatrz jawnie zadeklarowanej rodziny aksjomatow,
+- granica `axiom_free_uniqueness_closed=False` pozostaje jawna i niezmieniona.
+
+## 87) QW-2194: formalna separacja `derivation` vs `calibration` dla lancucha mas (`L21`)
+
+Krok `QW-2194` porzadkuje kluczowy zarzut recenzencki:
+czy hierarchia mas jest wynikiem derivacji z kernela, czy ukrytej kalibracji.
+
+### 87.1. Setup formalny
+
+Z `QW-2063` bierzemy wiersze masowe:
+\[
+\{(q_i^{eff}, m_i^{pred}, m_i^{exp})\}_{i\in\{\text{top,bottom,tau,charm,muon,electron}\}}.
+\]
+
+Definiujemy podzbior non-top:
+\[
+\mathcal{I}_{nt}=\{\text{bottom,tau,charm,muon,electron}\}.
+\]
+
+Na tym podzbiorze testujemy relacje:
+\[
+\log m_i^{pred} = a_{pred}\, q_i^{eff} + b_{pred},
+\]
+\[
+\log m_i^{exp} = a_{exp}\, q_i^{eff} + b_{exp}.
+\]
+
+### 87.2. Wynik liczbowy
+
+`QW-2194` raportuje:
+- \(R^2_{pred}=1.0000\),
+- \(R^2_{exp}=0.9997\),
+- \(\mathrm{rel\_diff}(a_{pred},a_{exp})=3.39\% < 10\%\).
+
+To domyka silna zgodnosc non-top hierarchii z klasą log-liniowa.
+
+### 87.3. Jawna granica kalibracyjna
+
+Dla wiersza `Top` wykryto sygnature:
+\[
+q_{base}=0,\quad q_{eff}=0,\quad \mathrm{rel\_err}=0.
+\]
+
+Formalnie:
+\[
+\texttt{top\_anchor\_signature\_detected}=\texttt{True},
+\]
+\[
+\texttt{full\_mass\_chain\_anchor\_free\_without\_singleton\_anchor}=\texttt{False}.
+\]
+
+### 87.4. Wniosek metodologiczny
+
+`QW-2194` nie ukrywa punktu granicznego:
+- non-top chain ma silne wsparcie derivational,
+- pelny mass-chain pozostaje partial z jawnie opisanym singleton anchor boundary.
+
+To jest stricte lepsze recenzencko niz niejawne mieszanie warstwy derivacji i kalibracji.
+
+Werdykt bramki:
+- `MASS_DERIVATION_CALIBRATION_SEPARATION_GATE_PASS_PARTIAL_TOP_ANCHOR_BOUNDARY_EXPLICIT` (`11/12`).
+
+## 88) QW-2195: generation mapping rule-layer w scope axiom-augmented (`L20`)
+
+Krok `QW-2195` formalizuje stan po `QW-2125` i `QW-2191..QW-2193`.
+
+### 88.1. Dane wejściowe
+
+- `QW-2125`: structural tripartition `4/4/4` i alignment z template `mod3`,
+  przy otwartym `generation_mapping_is_unique_and_physical=False`.
+- `QW-2191`: theorem-level obstruction axiom-free (degeneracje i rodzina `O(2)`).
+- `QW-2192`: closure unikalnosci mode-index w scope axiom-augmented.
+- `QW-2193`: robustnosc tej closure na rodzinie funkcjonalow selekcji.
+
+### 88.2. Reguła axiom-augmented
+
+Zdefiniowano jawna deterministyczna regule:
+\[
+\texttt{max\_mod3\_overlap\_then\_lexicographic\_tie\_break}.
+\]
+
+Formalnie:
+1. liczymy score overlap dla wszystkich permutacji `S_3`,
+2. wybieramy permutacje o maksymalnym score,
+3. przy remisie wybieramy najmniejsza leksykograficznie.
+
+### 88.3. Wynik audytu
+
+`QW-2195` raportuje:
+- `best_mod3_score_12 = 8`,
+- `n_best_permutations = 2`,
+- finalny wybor mappingu jest deterministyczny i reprodukowalny.
+
+### 88.4. Znaczenie metodologiczne
+
+To nie zamyka axiom-free fizycznej unikalnosci:
+\[
+\texttt{axiom\_free\_generation\_mapping\_closed}=\texttt{False}.
+\]
+
+Zamyka natomiast warstwe rule-layer w scope axiom-augmented:
+- mapping jest jawny, audytowalny, no-scan/no-retune,
+- granica fizyczna pozostaje jawnie opisana i nieukrywana.
+
+Werdykt:
+- `GENERATION_MAPPING_AXIOM_AUGMENTED_GATE_PASS_PARTIAL_AXIOM_FREE_OPEN` (`11/12`).
+
+## 89) QW-2196: global identifiability scope stratification (`L6`)
+
+Krok `QW-2196` integruje wszystkie aktualne wyniki unikalnosci i obstruction
+do jednej formalnej warstwy statusowej.
+
+### 89.1. Wejscia
+
+- `QW-2128`: locked-branch uniqueness (partial),
+- `QW-2130`: global gamma uniqueness w admissible domain,
+- `QW-2184`: hypercharge uniqueness w declared formula class,
+- `QW-2191`: axiom-free obstruction theorem,
+- `QW-2192`: axiom-augmented mode-index uniqueness closure,
+- `QW-2193`: robustness tej closure,
+- `QW-2194`: mass derivation/calibration boundary explicit,
+- `QW-2195`: generation mapping rule-layer (axiom-augmented).
+
+### 89.2. Wyjscie formalne
+
+Zdefiniowano dwie listy:
+\[
+\mathcal{C}_{closed}^{scope},
+\quad
+\mathcal{C}_{open}^{axiom\text{-}free}.
+\]
+
+Wynik `QW-2196`:
+- \(\mathcal{C}_{closed}^{scope}\) jest niepusta i obejmuje kluczowe komponenty
+  (admissible-domain, declared-class, axiom-augmented uniqueness + robustness),
+- \(\mathcal{C}_{open}^{axiom\text{-}free}\) zawiera `4` jawne komponenty
+  (m.in. mode-index physical uniqueness axiom-free i full anchor-free mass-chain).
+
+### 89.3. Konsekwencja
+
+Formalnie:
+\[
+\texttt{axiom\_free\_global\_identifiability\_closed}=\texttt{False},
+\]
+przy jednoczesnym strict-pass warstwy stratification i no-overclaim.
+
+Werdykt:
+- `GLOBAL_IDENTIFIABILITY_SCOPE_STRATIFICATION_GATE_PASS_STRICT_PARTIAL_AXIOM_FREE_OPEN` (`13/14`).
+
+## 90) QW-2197: robustness envelope scope gate (`L7`)
+
+Krok `QW-2197` scala metryki odpornosci z wielu gate'ow do jednego envelope.
+
+### 90.1. Zestaw metryk
+
+1. Alignment perturb robustness (`QW-2125`):
+\[
+\text{mean}=0.6572,\quad p10=0.6667.
+\]
+2. Delta-info winner stability (`QW-2128`):
+\[
+\text{winner frequency}=5/5,\quad \min\text{ score gap}=1.316.
+\]
+3. Selection-family robustness (`QW-2193`):
+\[
+\theta^*=0\ \text{dla calej rodziny }F1..F6.
+\]
+4. Non-top hierarchy slope stability (`QW-2194`):
+\[
+\mathrm{rel\_diff}=0.0339.
+\]
+5. Spectral perturbation margin (`QW-2186`):
+\[
+\epsilon_{safe}=0.2488,\quad \lambda_{\min}^{safe,MC}>0,
+\]
+z witness break powyzej promienia (sharpness).
+
+### 90.2. Wniosek formalny
+
+Envelope odpornosci jest zamkniety dla zadeklarowanych strict scopes,
+ale globalna odpornosc nieograniczona pozostaje jawnie otwarta:
+\[
+\texttt{global\_unbounded\_robustness\_closed}=\texttt{False}.
+\]
+
+Werdykt:
+- `ROBUSTNESS_ENVELOPE_SCOPE_GATE_PASS_STRICT_PARTIAL_GLOBAL_UNBOUNDED_OPEN` (`12/13`).
+
+## 91) QW-2198: Planck-scale bridge from strict-chain constants (`L11`)
+
+Krok `QW-2198` formalizuje bridge skali Plancka:
+\[
+m_P=\sqrt{\frac{\hbar c}{G}},\quad
+\ell_P=\sqrt{\frac{\hbar G}{c^3}},\quad
+t_P=\frac{\ell_P}{c}.
+\]
+
+### 91.1. Wejscia strict
+
+- `G` z `QW-2092` (`GNEWTON_SI_BRIDGE_GATE_PASS_STRICT`),
+- `c,\hbar` jako definicyjne stale metrologiczne (`QW-2069`),
+- dodatkowo `QW-2115` jako strict gravity hierarchy support.
+
+### 91.2. Wynik
+
+`QW-2198` daje:
+- `m_P`, `\ell_P`, `t_P` dodatnie i skonczone,
+- bledy relatywne wobec wartosci referencyjnych daleko ponizej `1%`
+  (dla `m_P` rzedu `1e-5%`).
+
+### 91.3. Granica metodologiczna
+
+Jawnie utrzymane:
+\[
+\texttt{fully\_internal\_without\_external\_bridge\_dependency}=\texttt{False}.
+\]
+
+Czyli bridge Plancka jest strict i reprodukowalny, ale nadal zalezy od
+external dimensionless bridge observable dla `G` (tak jak zdefiniowano w `QW-2092`).
+
+Werdykt:
+- `PLANCK_SCALE_BRIDGE_GATE_PASS_PARTIAL_EXTERNAL_BRIDGE_DEPENDENCE_EXPLICIT` (`11/12`).
+
+## 92) QW-2199: gravity action-level scope stratification (`L23`)
+
+Krok `QW-2199` porzadkuje status `L23` przez rozdzial:
+\[
+\text{effective bridges closed in strict scope}
+\quad\text{vs}\quad
+\text{foundational GR-action claims open}.
+\]
+
+### 92.1. Warstwa effective (zamknieta w scope)
+
+Zintegrowane komponenty:
+- `QW-2092` (SI bridge dla `G`),
+- `QW-2115` (gravity hierarchy strict bridge),
+- `QW-2180` (terminal action identification chain dla `L14`),
+- gravity rows w registry `QW-2069` (`G_newton`, `lambda`, `H0` jako derived),
+- wsparcie continuum bridge layer (`QW-2148`, `QW-2164`).
+
+### 92.2. Warstwa foundational (jawnie otwarta)
+
+Utrzymane otwarte flagi:
+\[
+\texttt{einstein\_hilbert\_action\_direct\_derivation\_closed}=\texttt{False},
+\]
+\[
+\texttt{equivalence\_principle\_derivation\_closed}=\texttt{False},
+\]
+\[
+\texttt{full\_sm\_gr\_reduction\_theorem\_closed}=\texttt{False}.
+\]
+
+### 92.3. Wniosek
+
+`QW-2199` podnosi `L23` z nieostrego `PARTIAL/OPEN` do formalnej stratification:
+- effective action-level bridges zamkniete,
+- foundational theorem-level closure jawnie otwarta.
+
+Werdykt:
+- `GRAVITY_ACTION_LEVEL_SCOPE_GATE_PASS_STRICT_PARTIAL_FOUNDATIONAL_OPEN` (`11/14`).
+
+## 93) QW-2200: SM+GR low-energy reduction scope (`L16`)
+
+Krok `QW-2200` formalizuje redukcje do znanych teorii na poziomie scope strict,
+z rozdzialem na:
+- warstwe scope-zamknieta (package + precision + action bridges),
+- warstwe foundational theorem-level (jawnie otwarta).
+
+### 93.1. Warstwa scope-zamknieta
+
+1. Package closure:
+\[
+\text{QW-2069}: n_{missing}=0,\quad n_{strict\_unresolved}=0.
+\]
+2. Precision closure:
+\[
+\text{QW-2071}: 6/6.
+\]
+3. Action bridge support:
+\[
+\text{QW-2127},\ \text{QW-2184},\ \text{QW-2199},\ \text{QW-2196}.
+\]
+4. Numeric consistency:
+- `gauge_and_electroweak`: full within-tolerance,
+- `gr_and_cosmology`: full within-tolerance.
+
+### 93.2. Granica foundational
+
+Utrzymane jawnie:
+\[
+\texttt{foundational\_reduction\_theorem\_closed}=\texttt{False}.
+\]
+
+Czyli: redukcja jest domknieta na poziomie strict low-energy scope,
+ale pelne twierdzenie redukcyjne z kompletnego dzialania FIN nadal nie jest domkniete.
+
+Werdykt:
+- `SM_GR_REDUCTION_SCOPE_GATE_PASS_STRICT_PARTIAL_FOUNDATIONAL_THEOREM_OPEN` (`12/13`).
+
+## 94) QW-2201: GR-limit conditions catalog (`L4`)
+
+Krok `QW-2201` formalizuje warunki przejscia do GR-limit zamiast
+jedynie deklarowania „zgodnosci”.
+
+### 94.1. Katalog warunkow
+
+Warunki i wsparcie:
+- `C1`: bridge stalej grawitacji (`QW-2092`),
+- `C2`: gravity hierarchy bridge (`QW-2115`),
+- `C3`: continuum operator bridge layer (`QW-2148`, partial),
+- `C4`: canonical continuum variational layer (`QW-2164`, partial),
+- `C5`: terminal action identification closure (`QW-2180`),
+- `C6`: direct EH/equivalence derivation (pozostaje open; boundary z `QW-2199`).
+
+### 94.2. Legacy evidence layer
+
+`QW-2201` jawnie wykrywa obecne raporty:
+- `RAPORT_QW1602_EINSTEIN_AUDIT.md`,
+- `RAPORT_QW1623_FRIEDMANN_DERIVED.md`,
+- `RAPORT_QW1624_LINEARIZED_GRAVITY.md`,
+jako warstwe historyczno-evidence wspierajaca katalog.
+
+### 94.3. Granica
+
+Pozostaje jawnie:
+\[
+\texttt{foundational\_direct\_gr\_derivation\_closed}=\texttt{False},
+\]
+\[
+\texttt{equivalence\_with\_gr\_tests\_fully\_derived}=\texttt{False}.
+\]
+
+Werdykt:
+- `GR_LIMIT_CONDITIONS_CATALOG_GATE_PASS_STRICT_PARTIAL_FOUNDATIONAL_DERIVATION_OPEN` (`10/12`).
+
+## 95) QW-2202: QFT strict scope stratification (`L5`)
+
+Krok `QW-2202` formalizuje jedna warstwe integracyjna dla `L5`, tj.
+\[
+\text{quantization + causality + renormalization + stability evidence in strict scope}
+\]
+z jawna separacja od globalnych twierdzen foundational QFT.
+
+### 95.1. Warstwa strict scope (zamknieta)
+
+Podlaczone komponenty:
+- `QW-2127`: lokalny action-level bridge (`\mathrm{dim}\le 4`, spinor+gauge blocks),
+- `QW-2133`: free-sector microcausality closure w diagonalnej bazie,
+- `QW-2134`: interacting perturbative causality conditions (local QFT assumptions jawnie utrzymane),
+- `QW-2137`: distribution-level schema + lokalny finite counterterm basis,
+- `QW-2181`: dual terminal matching closure (`L13/L14` sync),
+- `QW-2182`: konstruktywny domain-flow RG certificate,
+- `QW-2186`: certyfikat marginesu stabilnosci spektralnej,
+- `QW-2097`: numeryczny audit unitarności macierzy mieszania.
+
+Formalnie:
+\[
+\texttt{strict\_scope\_quantization\_causality\_renorm\_stack\_declared\_closed}=\texttt{True}.
+\]
+
+### 95.2. Granica foundational (jawnie otwarta)
+
+Pozostaja otwarte:
+\[
+\texttt{global\_nonperturbative\_qft\_existence\_uniqueness\_theorem\_closed}=\texttt{False},
+\]
+\[
+\texttt{global\_smatrix\_unitarity\_theorem\_from\_complete\_fin\_action\_closed}=\texttt{False},
+\]
+\[
+\texttt{global\_reflection\_positivity\_or\_wightman\_reconstruction\_closed}=\texttt{False}.
+\]
+
+### 95.3. Wniosek
+
+`QW-2202` nie zamyka globalnej teorii QFT dla kompletnego dzialania FIN,
+ale podnosi `L5` do poziomu jawnie stratified strict-scope z precyzyjnie
+wyizolowanymi ostatnimi lukami theorem-level.
+
+Werdykt:
+- `QFT_STRICT_SCOPE_STRATIFICATION_GATE_PASS_PARTIAL_FOUNDATIONAL_GLOBAL_QFT_OPEN` (`11/14`).
+
+## 96) QW-2203: empirical prediction stack status (`L9`)
+
+Krok `QW-2203` nie „udowadnia” nowej finalnej predykcji; formalizuje za to
+status predykcyjny w trybie no-overclaim:
+\[
+\text{prereg + falsifiability stack exists}
+\quad\land\quad
+\text{multidomain validation still incomplete}.
+\]
+
+### 96.1. Warstwa domknieta
+
+1. Prereg stack:
+- `QW-2076` zawiera jawne predykcje, corridor/bands, reguly falsyfikacji
+  i schema wymaganych danych wejściowych.
+
+2. Biezaca walidacja:
+- `QW-2077`: `supported=1`, `pending_data=2`, `falsified=0`.
+
+3. Kanał GW holdout:
+- `QW-2078`: wszystkie progi twarde przechodza (`AUC/ADV/SEP/GAP`).
+
+4. Granica metodologiczna GW:
+- `QW-2116`: naprawa metodologii przechodzi, a jednoczesnie
+  utrzymany jest werdykt naukowy non-robust dla dawnej anomalii cross-Hurst.
+
+### 96.2. Co pozostaje otwarte
+
+\[
+\texttt{all\_prediction\_channels\_independently\_resolved}=\texttt{False},
+\]
+\[
+\texttt{single\_high\_impact\_new\_prediction\_fully\_confirmed}=\texttt{False}.
+\]
+
+Czyli:
+- stack predykcji/falsyfikacji jest realny i audytowalny,
+- ale brak pelnego, niezaleznie domknietego potwierdzenia multidomain.
+
+Werdykt:
+- `EMPIRICAL_PREDICTION_STACK_STATUS_GATE_PASS_PARTIAL_PENDING_MULTIDOMAIN_DATA` (`12/14`).

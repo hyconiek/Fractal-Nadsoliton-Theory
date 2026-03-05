@@ -1,0 +1,59 @@
+{
+  "generated_utc": "2026-03-05T00:58:13.330801+00:00",
+  "packet_name": "QW2178_L14_V2B_ACTION_BRIDGE_SPEC",
+  "inputs": {
+    "q2176": "report_qw2176_l14_v2_terminal_lemma_decomposition_gate.json",
+    "q2166": "report_qw2166_l14_exhaustive_canonical_hessian_gate.json",
+    "lean_file": "FIN_L14_V2B_ACTION_BRIDGE_SPEC_QW2178.lean"
+  },
+  "obligations": [
+    {
+      "id": "V2b1",
+      "name": "canonical_hessian_continuum_structure_layer_closed",
+      "status": "satisfied",
+      "source": "QW-2166"
+    },
+    {
+      "id": "V2b2",
+      "name": "exact_action_level_identification_for_distribution_limit",
+      "status": "open",
+      "source": "terminal matching"
+    },
+    {
+      "id": "V2b",
+      "name": "action_level_identification_for_exact_distribution_limit",
+      "status": "open",
+      "source": "V2b1 + V2b2"
+    }
+  ],
+  "dependency_graph": {
+    "nodes": [
+      "V2b1",
+      "V2b2",
+      "V2b"
+    ],
+    "edges": [
+      [
+        "V2b1",
+        "V2b"
+      ],
+      [
+        "V2b2",
+        "V2b"
+      ]
+    ],
+    "topological_order": [
+      "V2b1",
+      "V2b2",
+      "V2b"
+    ]
+  },
+  "decomposition": {
+    "v2b1_closed": true,
+    "v2b2_closed": false,
+    "v2b_closed": false
+  },
+  "hashes": {
+    "lean_sha256": "94edc04643bef79fd7ba3ab34c15c8b54f0ace9034e3ffd7b24b0153ae852637"
+  }
+}

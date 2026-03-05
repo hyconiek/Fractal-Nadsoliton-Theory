@@ -1,0 +1,126 @@
+{
+  "generated_utc": "2026-03-05T02:18:07.731313+00:00",
+  "sources": {
+    "q2191": "report_qw2191_mode_index_uniqueness_obstruction_theorem_gate.json",
+    "q2192": "report_qw2192_mode_index_selection_axiom_gate.json"
+  },
+  "family_definition": {
+    "name": "positive_weight_harmonic_alignment_family",
+    "objective": "J_ab(theta)=a||u(theta)-c_ref||^2 + b||v(theta)-s_ref||^2, a>0, b>0",
+    "members": [
+      {
+        "id": "F1",
+        "a": 1.0,
+        "b": 1.0
+      },
+      {
+        "id": "F2",
+        "a": 2.0,
+        "b": 1.0
+      },
+      {
+        "id": "F3",
+        "a": 1.0,
+        "b": 2.0
+      },
+      {
+        "id": "F4",
+        "a": 0.5,
+        "b": 1.5
+      },
+      {
+        "id": "F5",
+        "a": 3.0,
+        "b": 0.7
+      },
+      {
+        "id": "F6",
+        "a": 1.2,
+        "b": 2.8
+      }
+    ],
+    "closed_form": "J_ab(theta)=2(a+b)(1-cos(theta))"
+  },
+  "numeric_audit": {
+    "grid_size": 721,
+    "rows": [
+      {
+        "family_id": "F1",
+        "a": 1.0,
+        "b": 1.0,
+        "theta_pair1_argmin": 0.0,
+        "theta_pair2_argmin": 0.0,
+        "closed_form_J_theta0": 0.0,
+        "closed_form_J_theta_pi": 8.0,
+        "closed_form_second_derivative_at_0": 4.0
+      },
+      {
+        "family_id": "F2",
+        "a": 2.0,
+        "b": 1.0,
+        "theta_pair1_argmin": 0.0,
+        "theta_pair2_argmin": 0.0,
+        "closed_form_J_theta0": 0.0,
+        "closed_form_J_theta_pi": 12.0,
+        "closed_form_second_derivative_at_0": 6.0
+      },
+      {
+        "family_id": "F3",
+        "a": 1.0,
+        "b": 2.0,
+        "theta_pair1_argmin": 0.0,
+        "theta_pair2_argmin": 0.0,
+        "closed_form_J_theta0": 0.0,
+        "closed_form_J_theta_pi": 12.0,
+        "closed_form_second_derivative_at_0": 6.0
+      },
+      {
+        "family_id": "F4",
+        "a": 0.5,
+        "b": 1.5,
+        "theta_pair1_argmin": 0.0,
+        "theta_pair2_argmin": 0.0,
+        "closed_form_J_theta0": 0.0,
+        "closed_form_J_theta_pi": 8.0,
+        "closed_form_second_derivative_at_0": 4.0
+      },
+      {
+        "family_id": "F5",
+        "a": 3.0,
+        "b": 0.7,
+        "theta_pair1_argmin": 0.0,
+        "theta_pair2_argmin": 0.0,
+        "closed_form_J_theta0": 0.0,
+        "closed_form_J_theta_pi": 14.8,
+        "closed_form_second_derivative_at_0": 7.4
+      },
+      {
+        "family_id": "F6",
+        "a": 1.2,
+        "b": 2.8,
+        "theta_pair1_argmin": 0.0,
+        "theta_pair2_argmin": 0.0,
+        "closed_form_J_theta0": 0.0,
+        "closed_form_J_theta_pi": 16.0,
+        "closed_form_second_derivative_at_0": 8.0
+      }
+    ]
+  },
+  "flags": {
+    "q2192_axiom_augmented_uniqueness_present": true,
+    "q2191_axiom_free_obstruction_present": true,
+    "admissible_axiom_family_declared_explicitly": true,
+    "all_family_weights_positive": true,
+    "all_family_closed_forms_match_positive_curvature_minimum": true,
+    "all_family_members_select_theta0_pair1": true,
+    "all_family_members_select_theta0_pair2": true,
+    "axiom_family_robustness_closed_for_q2190_mapping": true,
+    "axiom_family_choice_still_declared_extra_postulate": true,
+    "axiom_free_uniqueness_closed": false,
+    "deterministic_no_scan_no_retune": true
+  },
+  "pass_count": 10,
+  "total_flags": 11,
+  "verdict": "SELECTION_AXIOM_FAMILY_ROBUSTNESS_GATE_PASS_AXIOM_AUGMENTED_ROBUST",
+  "required_next_step": "PROVIDE_PHYSICAL_JUSTIFICATION_FOR_SELECTED_AXIOM_FAMILY_OR_REPLACE_WITH_ALTERNATIVE_DECLARED_FAMILY"
+}

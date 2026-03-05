@@ -1,0 +1,66 @@
+{
+  "generated_utc": "2026-03-05T00:54:56.906092+00:00",
+  "packet_name": "QW2175_L13_U2_TERMINAL_LEMMA_DECOMPOSITION",
+  "inputs": {
+    "q2173": "report_qw2173_l13_f5b_unconditional_obligation_decomposition_gate.json",
+    "q2136": "report_qw2136_interacting_microcausality_all_orders_scaffold_gate.json",
+    "q2138": "report_qw2138_interacting_microcausality_proof_completion_gate.json",
+    "lean_file": "FIN_L13_U2_TERMINAL_LEMMA_DECOMPOSITION_QW2175.lean"
+  },
+  "obligations": [
+    {
+      "id": "U2a",
+      "name": "majorant_tail_control_all_orders_closed",
+      "status": "satisfied",
+      "source": "QW-2136/QW-2138"
+    },
+    {
+      "id": "U2b",
+      "name": "action_to_majorant_identification_from_complete_fin_action",
+      "status": "open",
+      "source": "terminal bridge"
+    },
+    {
+      "id": "U2",
+      "name": "unconditional_uniform_tail_bound_from_complete_fin_action",
+      "status": "open",
+      "source": "U2a + U2b"
+    }
+  ],
+  "dependency_graph": {
+    "nodes": [
+      "U2a",
+      "U2b",
+      "U2"
+    ],
+    "edges": [
+      [
+        "U2a",
+        "U2"
+      ],
+      [
+        "U2b",
+        "U2"
+      ]
+    ],
+    "topological_order": [
+      "U2a",
+      "U2b",
+      "U2"
+    ]
+  },
+  "metrics": {
+    "ratio_max_n_ge_4": 0.5833333333333334,
+    "tail_bound_from_next_term": 6.902242228301231e-38,
+    "tail_bound_n80": 4.275045809493178e-97,
+    "abs_error_n80": 0.0
+  },
+  "decomposition": {
+    "u2a_closed": true,
+    "u2b_closed": false,
+    "u2_closed": false
+  },
+  "hashes": {
+    "lean_sha256": "8a62b6b0e8ae08f103eb1ed3ced5363e2f1dcc1c89a9f4943efea632465cb740"
+  }
+}
