@@ -1385,3 +1385,31 @@ Nowe bramki strict:
   - wykonawczo pozostaje theorem discharge i final axiom-free proof object.
 - Znaczenie:
   - L5 ma kompletna specyfikacje finalnego kroku domkniecia axiom-free.
+
+## Aktualizacja 2026-03-05: QW-2231 (L12 O1c execution step)
+
+- Artefakt: `report_qw2231_rg_axiom_free_o1c_execution_step_gate.json`
+- Werdykt: `RG_AXIOM_FREE_O1C_EXECUTION_STEP_GATE_PASS_PARTIAL_WITNESS_REMOVED_THEOREM_PENDING` (`11/13`)
+- Co zostalo domkniete:
+  1. wykonawczy krok O1c po usunieciu witness-axioms w kandydatach Lean L12,
+  2. machine-check execution i dolaczenie hashowanego proof object.
+- Granica:
+  - `c1_theorem_discharge_completed=False`,
+  - `o1c_fully_closed=False`.
+- Znaczenie:
+  - L12 przechodzi z poziomu "attachment-spec ready" do poziomu "witness-free execution step done",
+    ale finalny theorem-discharge pozostaje jawnie otwarty.
+
+## Aktualizacja 2026-03-05: QW-2232 (L5 O1c execution step)
+
+- Artefakt: `report_qw2232_qft_axiom_free_o1c_execution_step_gate.json`
+- Werdykt: `QFT_AXIOM_FREE_O1C_EXECUTION_STEP_GATE_PASS_PARTIAL_WITNESS_REMOVED_THEOREM_PENDING` (`11/13`)
+- Co zostalo domkniete:
+  1. wykonawczy krok O1c po usunieciu witness-axioms w kandydatach Lean L5,
+  2. machine-check execution i dolaczenie hashowanego proof object.
+- Granica:
+  - `c1_theorem_discharge_completed=False`,
+  - `o1c_fully_closed=False`.
+- Znaczenie:
+  - L5 przechodzi z poziomu "attachment-spec ready" do poziomu "witness-free execution step done",
+    ale finalny theorem-discharge pozostaje jawnie otwarty.

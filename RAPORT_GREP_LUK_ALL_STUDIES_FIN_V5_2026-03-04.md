@@ -1739,3 +1739,37 @@ Ten punkt jest nadrzedny wzgledem historycznych wpisow etapowych `PARTIAL` dla t
    - Znaczenie:
      - L5 axiom-free jest gotowe do finalnego kroku wykonawczego
        (theorem discharge + final proof-object attachment), bez overclaimu closure.
+
+## 119) Aktualizacja wykonawcza: QW-2231
+
+1. `QW-2231` (`report_qw2231_rg_axiom_free_o1c_execution_step_gate.json`)
+   - Verdict: `RG_AXIOM_FREE_O1C_EXECUTION_STEP_GATE_PASS_PARTIAL_WITNESS_REMOVED_THEOREM_PENDING` (`11/13`)
+   - Wynik:
+     - wykonano krok O1c dla L12 po usunieciu witness-axioms w kandydatach:
+       - `FIN_L12_O1A_O1_O1C_STEP.lean`,
+       - `FIN_L12_O1B_O1_O1C_STEP.lean`,
+     - wykonano machine-check i dolaczono hashowany proof object:
+       - `proof_object_qw2231_rg_o1c_step.json`.
+   - Granica:
+     - `c1_theorem_discharge_completed=False`,
+     - `o1c_fully_closed=False`.
+   - Znaczenie:
+     - L12 przechodzi z etapu samej specyfikacji O1c do etapu wykonawczego witness-free candidate;
+       finalny theorem-discharge pozostaje jawnie pending.
+
+## 120) Aktualizacja wykonawcza: QW-2232
+
+1. `QW-2232` (`report_qw2232_qft_axiom_free_o1c_execution_step_gate.json`)
+   - Verdict: `QFT_AXIOM_FREE_O1C_EXECUTION_STEP_GATE_PASS_PARTIAL_WITNESS_REMOVED_THEOREM_PENDING` (`11/13`)
+   - Wynik:
+     - wykonano krok O1c dla L5 po usunieciu witness-axioms w kandydatach:
+       - `FIN_L5_O1A_O1_O1C_STEP.lean`,
+       - `FIN_L5_O1B_O1_O1C_STEP.lean`,
+     - wykonano machine-check i dolaczono hashowany proof object:
+       - `proof_object_qw2232_qft_o1c_step.json`.
+   - Granica:
+     - `c1_theorem_discharge_completed=False`,
+     - `o1c_fully_closed=False`.
+   - Znaczenie:
+     - L5 przechodzi z etapu samej specyfikacji O1c do etapu wykonawczego witness-free candidate;
+       finalny theorem-discharge pozostaje jawnie pending.

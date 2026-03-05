@@ -788,3 +788,29 @@ Uzasadnienie: `QW-2230` przechodzi `QFT_AXIOM_FREE_O1C_ATTACHMENT_SPEC_GATE_PASS
 Granica pozostaje jawna:
 - `o1c_attachment_fully_closed=False`,
 - finalny krok to wykonanie theorem discharge + proof-object attachment.
+
+105. `L12` - axiom-free O1c execution step (witness-removed candidate)
+Status: `PARTIAL_L12_AXIOM_FREE_O1C_EXECUTION_STEP_DONE`
+Uzasadnienie: `QW-2231` przechodzi `RG_AXIOM_FREE_O1C_EXECUTION_STEP_GATE_PASS_PARTIAL_WITNESS_REMOVED_THEOREM_PENDING` (`11/13`) i formalizuje:
+- wykonanie kroku O1c na kandydatach z usunietymi witness-axioms:
+  - `FIN_L12_O1A_O1_O1C_STEP.lean`,
+  - `FIN_L12_O1B_O1_O1C_STEP.lean`,
+- checker execution i hashowany proof object:
+  - `proof_object_qw2231_rg_o1c_step.json`.
+Granica pozostaje jawna:
+- `c1_theorem_discharge_completed=False`,
+- `o1c_fully_closed=False`,
+- finalna luka to theorem-level discharge replacement dla `DerivedOrPending`.
+
+106. `L5` - axiom-free O1c execution step (witness-removed candidate)
+Status: `PARTIAL_L5_AXIOM_FREE_O1C_EXECUTION_STEP_DONE`
+Uzasadnienie: `QW-2232` przechodzi `QFT_AXIOM_FREE_O1C_EXECUTION_STEP_GATE_PASS_PARTIAL_WITNESS_REMOVED_THEOREM_PENDING` (`11/13`) i formalizuje:
+- wykonanie kroku O1c na kandydatach z usunietymi witness-axioms:
+  - `FIN_L5_O1A_O1_O1C_STEP.lean`,
+  - `FIN_L5_O1B_O1_O1C_STEP.lean`,
+- checker execution i hashowany proof object:
+  - `proof_object_qw2232_qft_o1c_step.json`.
+Granica pozostaje jawna:
+- `c1_theorem_discharge_completed=False`,
+- `o1c_fully_closed=False`,
+- finalna luka to theorem-level discharge replacement dla `DerivedOrPending`.
