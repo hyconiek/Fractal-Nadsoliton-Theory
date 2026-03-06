@@ -7685,3 +7685,31 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - albo zapisac minimalny admissibility spec dla przyszlego `K_obs`,
    - albo utrzymac `H1` jako audit pomocniczy bez promowania do strict core.
+
+## 489. H2 minimal internal light-feedback operator admissibility spec (2026-03-06)
+
+1. Cel:
+   - zapisac minimalny prog dopuszczalnosci dla przyszlego operatora `K_obs`,
+   - odroznic prawdziwy kandydat operatorowy od narracyjnej petli lub konstrukcji przemycajacej selektor.
+2. Wynik:
+   - zapisano packet-ready admissibility spec dla przyszlego `K_obs`,
+   - wymagania obejmuja:
+     internal-only construction,
+     explicit kernel/operator-level form,
+     emergent observer only as internal channel,
+     no selector smuggling,
+     test przeciw `QW-2191`,
+     switch-off consistency,
+     jawne oznaczenie lane axiom-augmented, jesli sukces zalezy od dodatkowego aksjomatu.
+3. Frontier po kroku:
+   - `H2_B1 := no concrete admissible operator ansatz K_obs satisfying the H2 constraints has yet been defined`,
+   - `H1_B1`,
+   - `T12_B1`,
+   - `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/H2_MINIMAL_INTERNAL_LIGHT_FEEDBACK_OPERATOR_ADMISSIBILITY_SPEC.md`,
+   - dodano `fundamental_action_reconstruction/h2_minimal_internal_light_feedback_operator_admissibility_spec.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h2_minimal_internal_light_feedback_operator_admissibility_spec_summary.json`.
+5. Nastepny poprawny ruch:
+   - albo zapisac pierwszy minimalny ansatz `K_obs`,
+   - albo zatrzymac sie na `H2` i nie promowac hipotezy dalej bez konkretnego operatora.

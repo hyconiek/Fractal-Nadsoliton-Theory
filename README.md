@@ -759,5 +759,7 @@ Current status:
 - this assembles `AX1..AX7` into one communication-ready packet while keeping that result explicitly outside strict core,
 - `H1` completed as a retrospective operator-hypothesis audit,
 - this records that an internal light-matter-observer feedback loop was already explored in prior repo work and remains a live kernel-level rework hypothesis, but not a current strict-core selector mechanism,
+- `H2` completed as a minimal admissibility spec for a future internal light-feedback operator,
+- this records the minimum methodological bar any future `K_obs` must satisfy before it can count as a strict-lane candidate rather than a narrative or an axiom-smuggling construction,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

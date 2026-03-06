@@ -1954,3 +1954,20 @@ Frontier po `H1`:
 - `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
 - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
 - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.
+
+Co realnie zostalo dodane przez `H2`:
+- zapisano minimalny admissibility spec dla przyszlego operatora `K_obs`,
+- jawnie oddzielono:
+  internal-only operator candidate,
+  emergent observer as internal channel,
+  explicite zapisany kernel/operator term,
+  brak przemycania `theta*=0`,
+  test przeciw `QW-2191`,
+  oraz dopuszczalne wyniki `STRICT_BREAKING_SUCCESS / STRICT_BREAKING_FAIL / AXIOM_OVERLAY_ONLY`.
+
+Frontier po `H2`:
+- `H2_B1 := no concrete admissible operator ansatz K_obs satisfying the H2 constraints has yet been defined`,
+- `H1_B1 := no strict-core admissible kernel-level operator K_obs has yet been defined that turns the internal light-matter-observer loop hypothesis into a testable selector mechanism without smuggling the selector by hand`,
+- `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.
