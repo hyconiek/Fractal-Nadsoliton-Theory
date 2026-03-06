@@ -670,5 +670,7 @@ Current status:
 - this moves the theory forward only by showing that an actual phase source branch exists on the axiom-augmented lane, while strict core still does not export `theta_1,theta_2`,
 - `C36` completed as the thirty-sixth step of the next micro-cycle,
 - this moves the theory forward only by separating an existing control-route overlay bridge from the still-missing strict-core internalization,
+- `C37` completed as the thirty-seventh step of the next micro-cycle,
+- this moves the theory forward only by isolating a packet-ready candidate internalization of the residual orientation datum, while strict-core equivalence is still missing,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

@@ -771,6 +771,8 @@ Status nowego toru:
 - `C35` pokazuje, ze source branch dla aktualnych faz istnieje juz tylko na warstwie axiom-augmented (`QW-2192/2193`), podczas gdy strict core nadal nie eksportuje jawnych `theta_1`, `theta_2`,
 - `C36` wykonane jako trzydziesty szosty krok trzeciego mikrocyklu,
 - `C36` pokazuje, ze most z branchu axiom-augmented do selector track jest juz obecny jako control-route overlay (`B6/B7`), ale nadal brak strict-core internalization tego branchu,
+- `C37` wykonane jako trzydziesty siodmy krok trzeciego mikrocyklu,
+- `C37` pokazuje, ze kandydat internalizacji residualnego `orientation_sign_convention` jest juz packet-ready jako `sigma_int_candidate`, ale nadal brak strict-core theorem-equivalence tego residualnego datum,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -1382,6 +1384,17 @@ Co realnie zostalo dodane przez `C36`:
   - `B8`: jawny zakaz traktowania tego jako strict-core discharge,
 - pierwszy residualny blocker zawęża sie dalej do:
   - `C36_B1 := no_packet_ready_strict_core_bridge_internalizing_the_axiom_augmented_theta_star_source_branch_into_the_current_selector_track; only_control_route_overlay_compatibility_is_available`,
+- drugi residualny blocker pozostaje:
+  - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
+- trzeci residualny blocker pozostaje:
+  - `C26_B2 := no_explicit_basis_level_embedding_or_extraction_of_the_candidate_two_dimensional_orientation_slice_inside_that_reduced_plane`,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C37`:
+- residualny `Z2` orientation slot jest juz jawnie oddzielony od continuous selector lane,
+- `sigma_int_candidate := chi_FR(gamma_pi1)` jest juz packet-ready kandydatem internalizacji tego slotu,
+- pierwszy residualny blocker zawęża sie dalej do:
+  - `C37_B1 := no_packet_ready_strict_core_equivalence_or_export_theorem_identifying_the_residual_orientation_sign_convention_with_an_internal_topological_datum_sigma_int_candidate; only_candidate_fit_on_the_overlay_lane_is_available`,
 - drugi residualny blocker pozostaje:
   - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
 - trzeci residualny blocker pozostaje:

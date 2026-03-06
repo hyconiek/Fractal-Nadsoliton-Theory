@@ -6508,3 +6508,31 @@ Po tej rundzie:
    - przejsc do `C37` i sprawdzic, czy strict core ma juz packet-ready kandydat
      internalizacji residualnego `orientation_sign_convention` lub jego
      topologicznego odpowiednika.
+
+## 445. C37 residual orientation datum internalization candidate audit wykonane (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy residualny `orientation_sign_convention` ma juz packet-ready
+     kandydata internalizacji jako wewnetrzny datum topologiczny, nawet jesli
+     brak jeszcze strict-core theorem-equivalence.
+2. Wynik:
+   - residualny `Z2` slot jest juz jawnie wyodrebniony przez `B6`,
+   - `sigma_int_candidate` jest juz packet-ready kandydatem internalizacji tego slotu,
+   - aktywny blocker zawęża sie dalej do braku strict-core identyfikacji
+     `sigma_int_candidate <-> residual orientation datum`,
+   - finalny slice extraction nadal pozostaje otwarty.
+3. Twarde granice:
+   - brak theorem-level PASS,
+   - brak full-closure PASS,
+   - brak theorem-level identyfikacji residualnego datum,
+   - brak claimu, ze `QW-2191` jest rozladowane,
+   - brak claimu, ze `A6` uniqueness jest zamkniete,
+   - brak finalnej orientation slice.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C37_RESIDUAL_ORIENTATION_DATUM_INTERNALIZATION_CANDIDATE_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/c37_residual_orientation_datum_internalization_candidate_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c37_residual_orientation_datum_internalization_candidate_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `C38` i sprawdzic, czy strict core ma juz packet-ready theorem-spec
+     dla identyfikacji `sigma_int_candidate <-> residual orientation datum`.
