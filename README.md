@@ -608,5 +608,7 @@ Current status:
 - this moves the theory forward only by reducing the local quadratic mismatch problem kinematically: the `J_ab` closed form follows on the rotation orbit once a positive local metric exists, but the physical origin of that metric remains open,
 - `C5` completed as the fifth step of the next micro-cycle,
 - this moves the theory forward only by showing that a projected local Hessian would generate the same orbital selector family without requiring diagonality, but the actual projection and positivity certificate are still open,
+- `C6` completed as the sixth step of the next micro-cycle,
+- this moves the theory forward only by showing that packet-ready source components for the projected second variation already exist, while the exported map and plane-specific positivity certificate are still missing,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

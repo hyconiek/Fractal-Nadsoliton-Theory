@@ -5666,3 +5666,34 @@ Po tej rundzie:
 6. Nastepny poprawny ruch:
    - przejsc do `C6` i sprawdzic, czy strict core zawiera choc packet-ready kandydat projekcji drugiej wariacji na kandydacka plaszczyzne orientacji,
    - albo zamrozic frontier i zacommitowac.
+
+## 414. C6 projected second variation source audit wykonane (2026-03-06)
+1. Zakres:
+   - podjeto probe packet-ready audytu zrodel dla projected second variation,
+   - strict-admissible support: `A3`, `A4`, `A7`, `QW-2190`, `QW-2191`, `C3`, `C5`, `A10`.
+2. Co zostalo realnie ustalone:
+   - strict core zawiera juz packet-ready source tuple:
+     - mode-plane candidate z `QW-2190/C3`,
+     - fluctuation-space container z `A3`,
+     - Hessian container `H_V(mu)` z `A4`,
+     - positivity discipline z `A7`,
+   - ale nie ma jeszcze jawnego eksportu:
+     - `mode plane -> projected orientation fluctuation subspace`,
+   - ani jawnego plane-specific positivity-certified second-variation block.
+3. Co pozostaje zablokowane:
+   - brak strict-exported dictionary z pary modowej do subprzestrzeni fluktuacyjnej,
+   - brak explicite projected block z certyfikatem dodatniosci,
+   - brak discharge `C5_B1`,
+   - brak axiom-free uniqueness.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C6_PROJECTED_SECOND_VARIATION_SOURCE_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/c6_projected_second_variation_source_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c6_projected_second_variation_source_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Twardy rygor:
+   - brak `C5_B1` PASS,
+   - brak theorem-level PASS,
+   - brak full-closure PASS.
+6. Nastepny poprawny ruch:
+   - przejsc do `C7` i sprobowac `C6_B1`,
+   - albo zamrozic frontier i zacommitowac.

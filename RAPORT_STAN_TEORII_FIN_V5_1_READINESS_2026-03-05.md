@@ -709,6 +709,8 @@ Status nowego toru:
 - `C4` redukuje kinematycznie problem lokalnego mismatch: forma `J_ab(theta)=2(a+b)(1-cos theta)` wynika na orbicie `O(2)` z diagonalnego dodatniego kosztu lokalnego, ale fizyczne zrodlo tej metryki pozostaje otwarte,
 - `C5` wykonane jako piaty krok trzeciego mikrocyklu,
 - `C5` wzmacnia `C4`: selector family jest orbitalna forma standardowej lokalnej symetrycznej formy projected Hessianu, ale brak jeszcze explicite wycietej projekcji i jej certyfikatu dodatniosci,
+- `C6` wykonane jako szosty krok trzeciego mikrocyklu,
+- `C6` pokazuje, ze strict core zawiera juz packet-ready komponenty projected second variation, ale nadal nie eksportuje mapy do kandydackiej subprzestrzeni orientacji ani certyfikatu dodatniosci na tej subprzestrzeni,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -952,5 +954,22 @@ Co realnie zostalo dodane przez `C5`:
 - aktualny frontier zostaje zawężony do:
   - `C5_B1 := no_explicit_projected_second_variation_with_strict_scope_positivity_certificate_on_candidate_orientation_plane`,
 - nadal brak discharge `C2_B2`,
+- nadal brak axiom-free uniqueness PASS,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C6`:
+- pojedynczy blocker z `C5` zostaje rozlozony na dwa mniejsze braki eksportowe,
+- strict core ma juz packet-ready source tuple:
+  - kandydacka para modowa,
+  - pojemnik fluktuacyjny `delta n_perp^A`,
+  - pojemnik krzywiznowy `H_V(mu)`,
+  - discipline dodatniosci z `A7`,
+- nadal brak jawnej mapy:
+  - `deterministic mode pair -> projected orientation fluctuation subspace`,
+- nadal brak jawnego positivity-certified projected second-variation block na tej subprzestrzeni,
+- aktualny frontier rozbija sie na:
+  - `C6_B1 := no_strict_exported_dictionary_from_deterministic_mode_pair_to_projected_orientation_fluctuation_subspace`,
+  - `C6_B2 := no_explicit_positivity_certified_second_variation_block_on_that_exported_subspace`,
+- nadal brak discharge `C5_B1`,
 - nadal brak axiom-free uniqueness PASS,
 - nadal brak theorem-level/full-closure PASS.
