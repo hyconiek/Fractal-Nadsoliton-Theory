@@ -652,5 +652,7 @@ Current status:
 - this moves the theory forward only by splitting that last residual orientation-slice restriction into two explicit missing exports: a quotient map and a final slice-extraction map,
 - `C27` completed as the twenty-seventh step of the next micro-cycle,
 - this moves the theory forward only by showing that the quotient target is already present as a packet-ready class after zero-mode projection, leaving control-coordinate realization and final slice extraction open,
+- `C28` completed as the twenty-eighth step of the next micro-cycle,
+- this moves the theory forward only by showing that a local orbit-frame quotient schema is already present in control coordinates, leaving serialized projector export, global gluing, and final slice extraction open,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

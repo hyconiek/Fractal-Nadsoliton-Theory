@@ -753,6 +753,8 @@ Status nowego toru:
 - `C26` pokazuje, ze ostatni residualny restriction blocker po `C25` nie jest juz monolitem, tylko rozbija sie na brak quotient map oraz brak finalnego slice-extraction map; to jest postep redukcyjny, nie closure,
 - `C27` wykonane jako dwudziesty siodmy krok trzeciego mikrocyklu,
 - `C27` pokazuje, ze quotient target po odjeciu modow zerowych jest juz packet-ready jako klasa (`delta n_perp^A after zero-mode projection`), a active blocker redukuje sie dalej do braku jawnej realizacji tego quotientu w control coordinates oraz nadal otwartego finalnego slice extraction,
+- `C28` wykonane jako dwudziesty osmy krok trzeciego mikrocyklu,
+- `C28` pokazuje, ze w bazie `(c_i,s_i)` istnieje juz packet-ready lokalny orbit-frame quotient schema (kierunek tangent i kierunek transverse mismatch), a active blocker redukuje sie dalej do braku jawnie zserializowanego projektora lub globalnego gluing rule oraz nadal otwartego finalnego slice extraction,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -1257,6 +1259,17 @@ Co realnie zostalo dodane przez `C27`:
   - `ambient orientation-related fluctuations -> delta n_perp^A after zero-mode projection`,
 - pierwszy residualny blocker po `C26` zawęża sie dalej do:
   - `C27_B1 := no_explicit_control_coordinate_realization_of_the_zero_mode_quotient_candidate_on_the_control_pullback_orbit_family`,
+- drugi residualny blocker pozostaje:
+  - `C26_B2 := no_explicit_basis_level_embedding_or_extraction_of_the_candidate_two_dimensional_orientation_slice_inside_that_reduced_plane`,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C28`:
+- strict core ma juz packet-ready lokalny control-coordinate quotient schema
+  na kazdej parze `(c_i,s_i)`:
+  - orbit tangent direction,
+  - transverse mismatch direction,
+- pierwszy residualny blocker zawęża sie dalej do:
+  - `C28_B1 := no_explicit_serialized_local_orbit_frame_projector_formula_or_global_gluing_rule_for_the_control_coordinate_quotient_candidate`,
 - drugi residualny blocker pozostaje:
   - `C26_B2 := no_explicit_basis_level_embedding_or_extraction_of_the_candidate_two_dimensional_orientation_slice_inside_that_reduced_plane`,
 - nadal brak theorem-level/full-closure PASS.

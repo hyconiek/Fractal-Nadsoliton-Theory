@@ -6266,3 +6266,31 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - przejsc do `C28` i sprawdzic, czy strict core ma juz packet-ready
      control-coordinate realization quotient candidate.
+
+## 436. C28 local orbit-frame quotient schema wykonane (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy strict core ma juz lokalny control-coordinate schema
+     dla quotientu na kazdej parze `(c_i,s_i)`, nawet jesli brak jeszcze
+     jawnie zserializowanego projektora i globalnego gluing rule.
+2. Wynik:
+   - `C4` daje lokalna geometrie orbity `O(2)` i naturalny split:
+     tangent vs transverse mismatch direction,
+   - po zlozeniu z `C14` i `C15` daje to packet-ready lokalny quotient schema
+     w control coordinates,
+   - aktywny blocker zawęża sie dalej do braku serialized projector formula
+     lub globalnego gluing rule.
+3. Twarde granice:
+   - brak theorem-level PASS,
+   - brak full-closure PASS,
+   - brak jawnej macierzy projektora,
+   - brak globalnego quotient map,
+   - brak finalnego slice extraction.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C28_LOCAL_ORBIT_FRAME_QUOTIENT_SCHEMA.md`,
+   - dodano `fundamental_action_reconstruction/c28_local_orbit_frame_quotient_schema.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c28_local_orbit_frame_quotient_schema_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `C29` i sprawdzic, czy strict core ma juz packet-ready
+     serialized formula dla lokalnego orbit-frame projector.

@@ -1,6 +1,6 @@
 # Fundamental Action Reconstruction
 
-Status: `PROGRAM_PHASE1_COMPLETE_C27_EXPORT_CLOSED_QUOTIENT_CANDIDATE_OPEN`
+Status: `PROGRAM_PHASE1_COMPLETE_C28_EXPORT_CLOSED_LOCAL_QUOTIENT_SCHEMA_OPEN`
 As of: `2026-03-06`
 
 Ten katalog otwiera rownolegly tor konstrukcyjny poza drabinka `L5/L12`.
@@ -136,6 +136,8 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
    - sprawdzic, czy ostatni residualny blocker po `C25` da sie juz uczciwie rozbic na jawny quotient map oraz jawny slice-extraction map, nawet jesli zadna z tych map nie jest jeszcze wyeksportowana.
 35. `C27`: zero-mode quotient candidate packet
    - sprawdzic, czy strict core ma juz packet-ready kandydat klasy quotientu po odjeciu modow zerowych, nawet jesli brak jeszcze jawnej realizacji tego quotientu w control coordinates.
+36. `C28`: local orbit-frame quotient schema
+   - sprawdzic, czy strict core ma juz lokalny control-coordinate schema `orbit tangent / transverse mismatch direction` na kazdej parze `(c_i,s_i)`, nawet jesli brak jeszcze jawnie zserializowanego projektora i globalnego gluing rule.
 
 ## Aktualny status
 
@@ -184,6 +186,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `C25`: wykonane jako dwudziesty piaty krok trzeciego mikrocyklu; lane serializacji `12` rows jest zamkniete w zadeklarowanym scope, a aktywny blocker pozostaje juz tylko na restriction do orientation slice.
 - `C26`: wykonane jako dwudziesty szosty krok trzeciego mikrocyklu; residualny restriction blocker zostaje rozbity dalej na brak quotient map od control pullback orbit family oraz brak basis-level extraction finalnej dwuwymiarowej orientation slice.
 - `C27`: wykonane jako dwudziesty siodmy krok trzeciego mikrocyklu; pierwszy z dwoch residualnych blockerow zostaje zawężony dalej do braku control-coordinate realization quotient candidate po odjeciu modow zerowych, podczas gdy sama klasa quotient target jest juz packet-ready.
+- `C28`: wykonane jako dwudziesty osmy krok trzeciego mikrocyklu; local orbit-frame quotient schema w bazie `(c_i,s_i)` jest juz packet-ready, a pierwszy residualny blocker zawęża sie dalej do braku jawnie zserializowanego projektora lub globalnego gluing rule.
 
 ## Twarde ograniczenia rygoru
 
@@ -231,6 +234,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - brak claimu, ze `C25` rozladowuje orientation-slice restriction albo daje theorem-level closure.
 - brak claimu, ze `C26` daje juz jawny quotient map albo jawny orientation-slice operator.
 - brak claimu, ze `C27` daje juz jawny projector `Q_zero` albo jawna realizacje quotientu na control pullback.
+- brak claimu, ze `C28` daje juz jawny projector matrix albo globalny quotient map.
 
 ## Zasada korzystania z poprzednich badan
 
@@ -292,6 +296,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `C25_APPLIED_PATCH_RERUN_EXPORT_AUDIT.md`
 - `C26_QUOTIENT_FIRST_ORIENTATION_SLICE_RESTRICTION_AUDIT.md`
 - `C27_ZERO_MODE_QUOTIENT_CANDIDATE_PACKET.md`
+- `C28_LOCAL_ORBIT_FRAME_QUOTIENT_SCHEMA.md`
 - `a1_minimal_action_ansatz.py`
 - `a2_supersoliton_matching.py`
 - `a3_kernel_analysis.py`
@@ -337,6 +342,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `c25_applied_patch_rerun_export_audit.py`
 - `c26_quotient_first_orientation_slice_restriction_audit.py`
 - `c27_zero_mode_quotient_candidate_packet.py`
+- `c28_local_orbit_frame_quotient_schema.py`
 - `generated/a1_minimal_action_ansatz_summary.json`
 - `generated/a2_supersoliton_matching_summary.json`
 - `generated/a3_kernel_analysis_summary.json`
