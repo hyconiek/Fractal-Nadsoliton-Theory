@@ -7541,3 +7541,31 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - dalej rozwijac pozytywny lane `axiom-augmented`,
    - albo wrocic do `T12_B1`, jesli celem pozostaje strict-core theorem-level closure.
+
+## 484. AX5 compatibility z mode scaffold i granica `A6` na lane aksjomatycznym (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy stabilny wynik `AX4` jest zgodny z deterministycznym mode scaffold `QW-2190`,
+   - nie przeczy obstruction theorem `QW-2191`,
+   - i pozostaje jawnie poza strict core zgodnie z granica `A6`.
+2. Wynik:
+   - utworzono persisted compatibility certificate:
+     `fundamental_action_reconstruction/generated/axiom_lane_mode_scaffold_compatibility_certificate.json`
+   - na lane `axiom-augmented` certyfikowano:
+     kompatybilnosc z `QW-2190` jako selector overlay,
+     kompatybilnosc z `QW-2191` jako external-selector slot,
+     kompatybilnosc z `A6` tylko jako overlay poza strict core.
+3. Frontier po kroku:
+   - strict core pozostaje bez zmian:
+     `T12_B1`,
+     `T2_B1`,
+     `C32_B2`,
+   - `AX5` dodaje tylko compatibility certificate poza strict core.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/AX5_AXIOM_LANE_MODE_SCAFFOLD_COMPATIBILITY_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/ax5_axiom_lane_mode_scaffold_compatibility_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/ax5_axiom_lane_mode_scaffold_compatibility_audit_summary.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/axiom_lane_mode_scaffold_compatibility_certificate.json`.
+5. Nastepny poprawny ruch:
+   - dalej rozwijac pozytywny lane `axiom-augmented`,
+   - albo wrocic do `T12_B1`, jesli celem pozostaje strict-core theorem-level closure.

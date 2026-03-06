@@ -749,5 +749,7 @@ Current status:
 - this creates a persisted bridge-instance linking `sigma_int_candidate` to the residual orientation-datum role under the `AX1` selector axiom, while keeping that result explicitly outside strict core,
 - `AX4` completed as the selector-family robustness step on the axiom-augmented lane,
 - this certifies that the `AX3` bridge-instance and the actual orientation slice remain stable across the declared positive-weight selector family, while keeping that result explicitly outside strict core,
+- `AX5` completed as the mode-scaffold compatibility step on the axiom-augmented lane,
+- this certifies that the stable axiom-lane basis pair and orientation slice remain compatible with `QW-2190`, `QW-2191`, and the `A6` boundary only as an external overlay, while keeping that result explicitly outside strict core,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.
