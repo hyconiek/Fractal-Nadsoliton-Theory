@@ -6165,3 +6165,30 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - przejsc do `C24` i sprawdzic, czy wolno juz wykonac minimalny non-destructive patch w osobnym packet-candidate,
    - albo jawnie utrzymac blocker na warstwie `patch-not-applied`.
+
+## 432. C24 non-destructive patch admission audit wykonane (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy minimalny patch-candidate wolno juz traktowac jako dopuszczalny ruch niedestrukcyjny,
+     bez twierdzenia, ze patch zostal juz zastosowany.
+2. Wynik:
+   - admission jest dozwolone,
+   - poniewaz patch:
+     - rozszerza tylko serializacje,
+     - nie zmienia akcji ani rodziny EoM,
+     - utrzymuje anti-overclaim boundary,
+   - aktualny frontier zawęza sie do:
+     - braku zastosowania patcha i rerunu,
+     - braku restriction do candidate orientation slice.
+3. Twarde granice:
+   - brak `C23_B1` PASS,
+   - brak theorem-level PASS,
+   - brak full-closure PASS.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C24_NON_DESTRUCTIVE_PATCH_ADMISSION_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/c24_non_destructive_patch_admission_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c24_non_destructive_patch_admission_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `C25` i wykonac minimalny patch-candidate w osobnym kontrolowanym kroku,
+   - albo jawnie utrzymac blocker na warstwie `admitted_but_not_executed`.

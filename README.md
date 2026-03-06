@@ -644,5 +644,7 @@ Current status:
 - this moves the theory forward only by making explicit that the export carrier still lacks both a static all-12-row model clause and a finite key-family schema for all Psi entries, plus the still-missing restriction to the candidate orientation slice,
 - `C23` completed as the twenty-third step of the next micro-cycle,
 - this moves the theory forward only by reducing that schema-absence problem to a not-yet-applied patch-ready all-12-row model clause packet, plus the still-missing restriction to the candidate orientation slice,
+- `C24` completed as the twenty-fourth step of the next micro-cycle,
+- this moves the theory forward only by reducing that patch-readiness problem to a patch-admitted-but-not-applied state, plus the still-missing restriction to the candidate orientation slice,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

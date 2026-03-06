@@ -1,6 +1,6 @@
 # Fundamental Action Reconstruction
 
-Status: `PROGRAM_PHASE1_COMPLETE_C23_PATCH_READY_SCHEMA_REDUCED`
+Status: `PROGRAM_PHASE1_COMPLETE_C24_PATCH_ADMISSION_REDUCED`
 As of: `2026-03-06`
 
 Ten katalog otwiera rownolegly tor konstrukcyjny poza drabinka `L5/L12`.
@@ -128,6 +128,8 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
    - sprawdzic, czy strict core ma juz statyczny all-12-row clause albo finite key-family schema dla wpisow `eom_psi_i` wewnatrz istniejacego export carrier.
 31. `C23`: patch-ready model clause packet
    - skonstruowac minimalny patch-ready schema dla pelnej klauzuli `model["eom_psi_i"]`, bez twierdzenia ze patch zostal juz zastosowany.
+32. `C24`: non-destructive patch admission audit
+   - sprawdzic, czy minimalny patch-candidate wolno juz traktowac jako dopuszczalny ruch niedestrukcyjny bez falszywego PASS.
 
 ## Aktualny status
 
@@ -172,6 +174,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `C21`: wykonane jako dwudziesty pierwszy krok trzeciego mikrocyklu; executed-run blocker zostaje zawężony dalej do braku pelnej klauzuli serializacji `12` rows wewnatrz juz istniejacego export carrier, oraz braku restriction do orientation slice.
 - `C22`: wykonane jako dwudziesty drugi krok trzeciego mikrocyklu; brak pelnej klauzuli serializacji zostaje uszczegolowiony dalej do braku zarowno statycznego all-12-row clause, jak i jawnego finite key-family schema, oraz braku restriction do orientation slice.
 - `C23`: wykonane jako dwudziesty trzeci krok trzeciego mikrocyklu; schema blocker zostaje zawężony dalej do braku zastosowania patch-ready packetu i rerunu, oraz braku restriction do orientation slice.
+- `C24`: wykonane jako dwudziesty czwarty krok trzeciego mikrocyklu; blocker zostaje zawężony dalej do warstwy `patch admitted but not applied`, oraz braku restriction do orientation slice.
 
 ## Twarde ograniczenia rygoru
 
@@ -215,6 +218,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - brak claimu, ze `C21` daje juz pelny `12`-row `model` payload albo rozladowuje `C20_B1`.
 - brak claimu, ze `C22` daje juz jakikolwiek pelny schema eksportu albo rozladowuje `C21_B1`.
 - brak claimu, ze `C23` daje juz zastosowany patch albo rozladowuje `C22_B1`.
+- brak claimu, ze `C24` daje juz zastosowany patch albo rozladowuje `C23_B1`.
 
 ## Zasada korzystania z poprzednich badan
 
@@ -272,6 +276,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `C21_EXISTING_EXPORT_CARRIER_AUDIT.md`
 - `C22_MODEL_CLAUSE_SCHEMA_ABSENCE_AUDIT.md`
 - `C23_PATCH_READY_MODEL_CLAUSE_PACKET.md`
+- `C24_NON_DESTRUCTIVE_PATCH_ADMISSION_AUDIT.md`
 - `a1_minimal_action_ansatz.py`
 - `a2_supersoliton_matching.py`
 - `a3_kernel_analysis.py`
@@ -313,6 +318,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `c21_existing_export_carrier_audit.py`
 - `c22_model_clause_schema_absence_audit.py`
 - `c23_patch_ready_model_clause_packet.py`
+- `c24_non_destructive_patch_admission_audit.py`
 - `generated/a1_minimal_action_ansatz_summary.json`
 - `generated/a2_supersoliton_matching_summary.json`
 - `generated/a3_kernel_analysis_summary.json`

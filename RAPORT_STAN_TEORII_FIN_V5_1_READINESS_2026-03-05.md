@@ -745,6 +745,8 @@ Status nowego toru:
 - `C22` pokazuje, ze w istniejacym export carrier nadal nie ma ani statycznego all-`12` model clause, ani jawnego finite key-family schema dla wpisow `Psi`, a frontier pozostaje na braku takiego schema oraz braku restriction do candidate orientation slice,
 - `C23` wykonane jako dwudziesty trzeci krok trzeciego mikrocyklu,
 - `C23` pokazuje, ze minimalny patch-ready schema packet dla pelnej klauzuli `model["eom_psi_i"]` jest juz obecny, a frontier redukuje sie dalej do braku zastosowania patcha i rerunu oraz braku restriction do candidate orientation slice,
+- `C24` wykonane jako dwudziesty czwarty krok trzeciego mikrocyklu,
+- `C24` pokazuje, ze minimalny patch-candidate jest juz metodologicznie dopuszczalny jako ruch niedestrukcyjny, a frontier redukuje sie dalej do braku zastosowania patcha i rerunu oraz braku restriction do candidate orientation slice,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -1215,4 +1217,14 @@ Co realnie zostalo dodane przez `C23`:
   - `C23_B2 := no_explicit_restriction_from_the_control_pullback_orbits_to_the_candidate_orientation_slice`,
 - nadal brak discharge `C22_B1`,
 - nadal brak discharge `C22_B2`,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C24`:
+- admission dla minimalnego patch-candidate jest juz dozwolone,
+- patch rozszerza tylko warstwe serializacji i nie zmienia akcji ani rodziny EoM,
+- aktualny frontier zawęża sie do:
+  - `C24_B1 := no_applied_patch_candidate_and_no_rerun_validated_report_for_the_full_12_row_model_clause_even_though_non_destructive_patch_admission_is_allowed`,
+  - `C24_B2 := no_explicit_restriction_from_the_control_pullback_orbits_to_the_candidate_orientation_slice`,
+- nadal brak discharge `C23_B1`,
+- nadal brak discharge `C23_B2`,
 - nadal brak theorem-level/full-closure PASS.
