@@ -1,0 +1,77 @@
+{
+  "stage": "C14",
+  "status": "C14_EXECUTED_CONTROL_TRANSPORT_SCHEMA_NO_FALSE_PASS",
+  "as_of": "2026-03-06",
+  "goal": "Reduce the mode-to-Psi transport blocker by showing that the strict core already contains a control transport schema from deterministic mode basis to the canonical Psi carrier, even if no physical canonicalization is available yet.",
+  "inputs": {
+    "strict_admissible": [
+      "QW-2190",
+      "QW-2163",
+      "QW-2164",
+      "QW-2166",
+      "C13",
+      "A10"
+    ]
+  },
+  "control_transport": {
+    "shared_cardinality": 12,
+    "mode_basis_indices": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "psi_basis_indices": [
+      "psi0",
+      "psi1",
+      "psi2",
+      "psi3",
+      "psi4",
+      "psi5",
+      "psi6",
+      "psi7",
+      "psi8",
+      "psi9",
+      "psi10",
+      "psi11"
+    ],
+    "control_index_sets": {
+      "I_mode_1": [
+        "c1",
+        "s1"
+      ],
+      "I_mode_2": [
+        "c2",
+        "s2"
+      ]
+    },
+    "statement": "The real Fourier mode vectors of QW-2190 live in R^12 and can be read as coefficient columns over the canonical 12-field Psi carrier."
+  },
+  "result": {
+    "control_transport_schema_present": "yes",
+    "strict_physical_justification_present": "not_shown",
+    "assembled_submatrix_present": "not_shown"
+  },
+  "residual_blockers": {
+    "C14_B1": "no_strict_physical_justification_that_the_qw2190_octave_label_carrier_is_the_canonical_Psi_basis_for_selector_relevant_block_extraction",
+    "C14_B2": "no_assembled_Psi_x_Psi_submatrix_after_adopting_the_control_transport_schema",
+    "C9_B2": "no_explicit_restriction_from_that_Psi_sector_quadratic_carrier_to_the_candidate_orientation_slice"
+  },
+  "hard_limits": [
+    "no_theorem_level_pass",
+    "no_full_closure_pass",
+    "no_c13_b1_pass",
+    "no_physical_canonical_transport_claim",
+    "no_assembled_submatrix_claim",
+    "no_qw2191_discharge_claim"
+  ],
+  "next_step": "C15"
+}

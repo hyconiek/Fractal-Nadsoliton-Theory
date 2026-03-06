@@ -1,6 +1,6 @@
 # Fundamental Action Reconstruction
 
-Status: `PROGRAM_PHASE1_COMPLETE_C13_MODE_CONTROL_INDEX_SET_REDUCED`
+Status: `PROGRAM_PHASE1_COMPLETE_C14_CONTROL_TRANSPORT_SCHEMA_REDUCED`
 As of: `2026-03-06`
 
 Ten katalog otwiera rownolegly tor konstrukcyjny poza drabinka `L5/L12`.
@@ -108,6 +108,8 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
    - sprawdzic, czy strict core ma juz reprezentatywny seed i jawny packet ekstrakcyjny dla `Psi-sector block`, nawet jesli brak jeszcze assembled submatrix.
 21. `C13`: mode-basis control index-set audit
    - sprawdzic, czy strict core ma juz deterministyczny control index-set w bazie modowej, nawet jesli brak jeszcze transportu do canonical `Psi` basis.
+22. `C14`: control mode-to-Psi transport schema
+   - sprawdzic, czy strict core ma juz jawny control transport `mode basis -> Psi basis`, nawet jesli brak jeszcze fizycznej kanonizacji tego mostu.
 
 ## Aktualny status
 
@@ -142,6 +144,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `C11`: wykonane jako jedenasty krok trzeciego mikrocyklu; block-matching blocker zostaje zawężony dalej do braku jawnego extraction/export package dla konkretnego `Psi-sector quadratic block`.
 - `C12`: wykonane jako dwunasty krok trzeciego mikrocyklu; extraction/export blocker zostaje zawężony dalej do braku assembled `Psi x Psi` submatrix i coefficient table dla jawnie wybranego index-set.
 - `C13`: wykonane jako trzynasty krok trzeciego mikrocyklu; index-set blocker zostaje zawężony dalej do braku transportu z control mode basis do canonical `Psi` basis oraz braku assembled submatrix po tym transporcie.
+- `C14`: wykonane jako czternasty krok trzeciego mikrocyklu; transport blocker zostaje zawężony dalej do braku fizycznej kanonizacji control transportu i braku assembled submatrix po jego przyjeciu.
 
 ## Twarde ograniczenia rygoru
 
@@ -175,6 +178,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - brak claimu, ze `C11` wydobywa juz konkretny block w postaci gotowej do matchingu albo rozladowuje `C10_B1`.
 - brak claimu, ze `C12` ma juz assembled submatrix albo rozladowuje `C11_B1`.
 - brak claimu, ze `C13` daje juz canonical `Psi` index-set albo rozladowuje `C12_B1`.
+- brak claimu, ze `C14` daje juz fizycznie kanoniczny transport albo rozladowuje `C13_B1`.
 
 ## Zasada korzystania z poprzednich badan
 
@@ -222,6 +226,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `C11_PSI_SECTOR_BLOCK_EXTRACTION_AUDIT.md`
 - `C12_MINIMAL_PSI_BLOCK_EXTRACTION_PACKET.md`
 - `C13_MODE_BASIS_CONTROL_INDEX_SET_AUDIT.md`
+- `C14_CONTROL_MODE_TO_PSI_TRANSPORT_SCHEMA.md`
 - `a1_minimal_action_ansatz.py`
 - `a2_supersoliton_matching.py`
 - `a3_kernel_analysis.py`
@@ -253,6 +258,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `c11_psi_sector_block_extraction_audit.py`
 - `c12_minimal_psi_block_extraction_packet.py`
 - `c13_mode_basis_control_index_set_audit.py`
+- `c14_control_mode_to_psi_transport_schema.py`
 - `generated/a1_minimal_action_ansatz_summary.json`
 - `generated/a2_supersoliton_matching_summary.json`
 - `generated/a3_kernel_analysis_summary.json`
@@ -284,4 +290,5 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `generated/c11_psi_sector_block_extraction_audit_summary.json`
 - `generated/c12_minimal_psi_block_extraction_packet_summary.json`
 - `generated/c13_mode_basis_control_index_set_audit_summary.json`
+- `generated/c14_control_mode_to_psi_transport_schema_summary.json`
 - `manifest_action_reconstruction.json`

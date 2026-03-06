@@ -5894,3 +5894,31 @@ Po tej rundzie:
 6. Nastepny poprawny ruch:
    - przejsc do `C14` i sprobowac minimalnego transport schema,
    - albo zamrozic frontier i zacommitowac.
+
+## 422. C14 control mode-to-Psi transport schema wykonane (2026-03-06)
+1. Zakres:
+   - podjeto probe `C13_B1`,
+   - strict-admissible support: `QW-2190`, `QW-2163`, `QW-2164`, `QW-2166`, `C13`, `A10`.
+2. Co zostalo realnie ustalone:
+   - `QW-2190` i canonical `Psi` carrier dziela ten sam rozmiar `12`,
+   - jawny control transport schema `mode basis -> Psi basis` istnieje jako identyfikacja kolumn real-Fourier basis z wspolczynnikami w carrierze `psi0..psi11`,
+   - brak nie dotyczy juz istnienia control transportu,
+   - aktualny brak dotyczy jego fizycznej kanonizacji oraz assembled submatrix po jego przyjeciu.
+3. Co pozostaje zablokowane:
+   - brak strict physical justification dla tego transportu,
+   - brak assembled `Psi x Psi` submatrix po przyjeciu control transportu,
+   - brak discharge `C13_B1`,
+   - brak discharge `C13_B2`,
+   - brak discharge `C9_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C14_CONTROL_MODE_TO_PSI_TRANSPORT_SCHEMA.md`,
+   - dodano `fundamental_action_reconstruction/c14_control_mode_to_psi_transport_schema.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c14_control_mode_to_psi_transport_schema_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Twardy rygor:
+   - brak `C13_B1` PASS,
+   - brak theorem-level PASS,
+   - brak full-closure PASS.
+6. Nastepny poprawny ruch:
+   - przejsc do `C15` i sprobowac assembled submatrix w trybie control-only,
+   - albo zamrozic frontier i zacommitowac.

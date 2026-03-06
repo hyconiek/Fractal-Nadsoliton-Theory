@@ -725,6 +725,8 @@ Status nowego toru:
 - `C12` pokazuje, ze extraction/export blocker redukuje sie dalej do braku assembled `Psi x Psi` submatrix i coefficient table dla wybranego index-set,
 - `C13` wykonane jako trzynasty krok trzeciego mikrocyklu,
 - `C13` pokazuje, ze index-set blocker redukuje sie dalej do braku transportu z control mode basis do canonical `Psi` basis oraz braku assembled submatrix po takim transporcie,
+- `C14` wykonane jako czternasty krok trzeciego mikrocyklu,
+- `C14` pokazuje, ze control transport `mode basis -> Psi basis` jest juz jawny, a frontier redukuje sie dalej do braku fizycznej kanonizacji tego transportu oraz braku assembled submatrix po jego przyjeciu,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -1068,6 +1070,18 @@ Co realnie zostalo dodane przez `C13`:
   - `C13_B1 := no_explicit_transport_from_the_deterministic_mode_basis_control_index_set_to_a_canonical_Psi_index_set_inside_the_exhaustive_Hessian_carrier`,
   - `C13_B2 := no_assembled_Psi_x_Psi_submatrix_after_such_transport`,
 - nadal brak discharge `C12_B1`,
+- nadal brak discharge `C9_B2`,
+- nadal brak axiom-free uniqueness PASS,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C14`:
+- `QW-2190` i canonical carrier `psi0..psi11` dziela wspolny liczebny carrier `12`,
+- control transport schema `mode basis -> Psi basis` jest juz jawny na poziomie control identification,
+- aktualny frontier zawęża sie do:
+  - `C14_B1 := no_strict_physical_justification_that_the_qw2190_octave_label_carrier_is_the_canonical_Psi_basis_for_selector_relevant_block_extraction`,
+  - `C14_B2 := no_assembled_Psi_x_Psi_submatrix_after_adopting_the_control_transport_schema`,
+- nadal brak discharge `C13_B1`,
+- nadal brak discharge `C13_B2`,
 - nadal brak discharge `C9_B2`,
 - nadal brak axiom-free uniqueness PASS,
 - nadal brak theorem-level/full-closure PASS.
