@@ -713,6 +713,8 @@ Status nowego toru:
 - `C6` pokazuje, ze strict core zawiera juz packet-ready komponenty projected second variation, ale nadal nie eksportuje mapy do kandydackiej subprzestrzeni orientacji ani certyfikatu dodatniosci na tej subprzestrzeni,
 - `C7` wykonane jako siodmy krok trzeciego mikrocyklu,
 - `C7` pokazuje, ze class-level schema slownika `mode pair -> orientation-related slice` jest juz jawna, ale basis-level export pozostaje otwarty,
+- `C8` wykonane jako osmy krok trzeciego mikrocyklu,
+- `C8` pokazuje, ze dodatniosc projected block redukuje sie do jawnego problemu relacji kompresji do certyfikowanego host-operatora z `QW-2186`,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -986,5 +988,16 @@ Co realnie zostalo dodane przez `C7`:
 - aktualny frontier zawęża sie do:
   - `C7_B1 := no_basis_level_export_of_orientation_slice_inside_n_sector_for_each_deterministic_mode_pair`,
 - nadal brak discharge `C6_B1`,
+- nadal brak axiom-free uniqueness PASS,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C8`:
+- `C6_B2` nie jest juz ogolnym problemem "znajdz dodatniosc projected block od zera",
+- `QW-2186` dostarcza realny host-level positivity certificate w branch scope,
+- przez standardowy fakt kompresji operatora dodatniego projected block moze dziedziczyc dodatniosc warunkowo,
+- aktualny frontier zawęża sie do:
+  - `C8_B1 := no_explicit_compression_or_restriction_relation_between_candidate_orientation_slice_and_branch_scope_certified_positive_host_operator`,
+- nadal brak jawnej relacji kompresji,
+- nadal brak discharge `C6_B2`,
 - nadal brak axiom-free uniqueness PASS,
 - nadal brak theorem-level/full-closure PASS.

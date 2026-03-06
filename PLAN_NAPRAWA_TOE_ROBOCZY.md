@@ -5729,3 +5729,30 @@ Po tej rundzie:
 6. Nastepny poprawny ruch:
    - przejsc do `C8` i sprobowac `C6_B2`,
    - albo zamrozic frontier i zacommitowac.
+
+## 416. C8 projected block positivity descent audit wykonane (2026-03-06)
+1. Zakres:
+   - podjeto probe `C6_B2`,
+   - strict-admissible support: `QW-2186`, `A7`, `A3`, `C5`, `C6`, `A10`.
+2. Co zostalo realnie ustalone:
+   - `QW-2186` daje realny host-level branch-scope positivity certificate,
+   - dodatniosc projected block nie musi byc juz konstruowana od zera:
+     - jesli projected block jest kompresja / restrykcja certyfikowanego operatora host, dodatniosc schodzi automatycznie,
+   - frontier zostaje zawężony do jawnego braku relacji kompresji.
+3. Co pozostaje zablokowane:
+   - brak jawnej relacji `projected block -> certified positive host operator`,
+   - brak plane-specific positivity certificate,
+   - brak discharge `C6_B2`,
+   - brak axiom-free uniqueness.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C8_PROJECTED_BLOCK_POSITIVITY_DESCENT_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/c8_projected_block_positivity_descent_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c8_projected_block_positivity_descent_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Twardy rygor:
+   - brak `C6_B2` PASS,
+   - brak theorem-level PASS,
+   - brak full-closure PASS.
+6. Nastepny poprawny ruch:
+   - przejsc do `C9` i sprobowac packet-ready host relation,
+   - albo zamrozic frontier i zacommitowac.

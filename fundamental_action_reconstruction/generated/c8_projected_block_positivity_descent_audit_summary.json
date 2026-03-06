@@ -1,0 +1,36 @@
+{
+  "stage": "C8",
+  "status": "C8_EXECUTED_CONDITIONAL_POSITIVITY_DESCENT_REDUCTION_NO_FALSE_PASS",
+  "as_of": "2026-03-06",
+  "goal": "Reduce the plane-specific positivity blocker by showing that positivity would descend automatically if the projected block were exhibited as a compression of a branch-scope certified positive host operator.",
+  "inputs": {
+    "strict_admissible": [
+      "QW-2186",
+      "A7",
+      "A3",
+      "C5",
+      "C6",
+      "A10"
+    ]
+  },
+  "host_certificate": {
+    "status": "present_branch_scope",
+    "object": "A = K_total + m0^2 I with Weyl-margin certificate from QW-2186"
+  },
+  "conditional_bridge": {
+    "lemma": "If A is positive on the certified branch-scope class and A_proj = P A P|(Ran P), then positivity descends to the projected block.",
+    "status": "available_conditional_bridge"
+  },
+  "residual_blocker": {
+    "C7_B1": "no_basis_level_export_of_orientation_slice_inside_n_sector_for_each_deterministic_mode_pair",
+    "C8_B1": "no_explicit_compression_or_restriction_relation_between_candidate_orientation_slice_and_branch_scope_certified_positive_host_operator"
+  },
+  "hard_limits": [
+    "no_theorem_level_pass",
+    "no_full_closure_pass",
+    "no_c6_b2_pass",
+    "no_compression_relation_found_claim",
+    "no_qw2191_discharge_claim"
+  ],
+  "next_step": "C9"
+}
