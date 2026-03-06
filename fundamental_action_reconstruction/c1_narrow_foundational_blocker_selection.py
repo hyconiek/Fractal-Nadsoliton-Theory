@@ -1,0 +1,48 @@
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+root = Path(__file__).resolve().parent
+
+payload = {
+    "stage": "C1",
+    "status": "C1_EXECUTED_DOMINANT_FOUNDATIONAL_BLOCKER_ISOLATED_NO_FALSE_PASS",
+    "as_of": "2026-03-06",
+    "goal": "Choose one narrow foundational blocker after the selector-track audit instead of keeping a diffuse 'uniqueness open' frontier.",
+    "inputs": {
+        "strict_admissible": [
+            "B6",
+            "B7",
+            "B8",
+            "QW-2191",
+            "QW-2192",
+            "QW-2193",
+            "A10",
+        ],
+        "repo_grep_result": "no_strict_internal_derivation_of_positive_weight_selector_family_found"
+    },
+    "candidate_blockers": {
+        "strict_derivation_of_sigma_int_candidate": "important_but_not_dominant",
+        "gauge_quotient_safety_for_sigma_int_candidate": "important_but_not_dominant",
+        "sigma_to_theta_standalone_derivation": "misposed_as_primary_next_step",
+        "internal_derivation_of_Jab_family": "dominant_narrow_blocker",
+        "broad_axiom_free_uniqueness_closure": "too_coarse"
+    },
+    "selected_blocker": {
+        "id": "C1_B",
+        "name": "no_internal_derivation_of_positive_weight_selector_family",
+        "statement": "Derive the positive-weight selector family J_ab from single-nadsoliton ontology, or explicitly keep uniqueness only in axiom-augmented/control scope."
+    },
+    "hard_limits": [
+        "no_theorem_level_pass",
+        "no_full_closure_pass",
+        "no_internal_derivation_found",
+        "no_uniqueness_closure_claim"
+    ],
+    "next_step": "C2"
+}
+
+out = root / "generated" / "c1_narrow_foundational_blocker_selection_summary.json"
+out.write_text(json.dumps(payload, indent=2) + "\n", encoding="ascii")
+print(out)

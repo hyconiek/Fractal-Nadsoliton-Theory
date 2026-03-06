@@ -1,6 +1,6 @@
 # Fundamental Action Reconstruction
 
-Status: `PROGRAM_PHASE1_COMPLETE_B4_CANDIDATE_IDENTIFIED_NO_FULL_CLOSURE_CLAIM`
+Status: `PROGRAM_PHASE1_COMPLETE_C1_DOMINANT_FOUNDATIONAL_BLOCKER_ISOLATED`
 As of: `2026-03-06`
 
 Ten katalog otwiera rownolegly tor konstrukcyjny poza drabinka `L5/L12`.
@@ -74,6 +74,16 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
    - zbudowac minimalny packet derivation `topological sign / FR branch -> selector`, bez udawania discharge.
 4. `B4`: minimal sigma_int candidate
    - wskazac jeden kanoniczny kandydat `sigma_int`, bez udawania strict derivation.
+5. `B5`: sigma_int local stability audit
+   - sprawdzic, czy kandydat ma choc lokalna stabilnosc deformacyjna i jak daleko jest od full gauge-safety.
+6. `B6`: sigma to selector factorized bridge
+   - sprawdzic, czy `sigma_int_candidate` da sie uczciwie osadzic jako residualny `Z2` datum w selector route bez falszywego discharge.
+7. `B7`: factorized selector mode scaffold compatibility audit
+   - sprawdzic, czy factorized bridge jest zgodny z `QW-2190`, `QW-2191` i granicami `A6`.
+8. `B8`: selector track anti-overclaim audit
+   - zamknac mini-pakiet `B3_O1..B3_O5` bez falszywego PASS i z jawna lista residualnych blockerow.
+9. `C1`: narrow foundational blocker selection
+   - wskazac jeden dominujacy waski blocker po selector-track, zamiast trzymac zbyt szerokie `uniqueness open`.
 
 ## Aktualny status
 
@@ -91,6 +101,11 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `B2`: wykonane jako drugi krok drugiego cyklu; w obecnym strict core nie znaleziono wyprowadzonego `internal orientation datum`.
 - `B3`: wykonane jako trzeci krok drugiego cyklu; istnieje juz packet `B3_O1..B3_O5`, ale derivation pozostaje pending.
 - `B4`: wykonane jako czwarty krok drugiego cyklu; istnieje juz jeden kanoniczny kandydat `sigma_int`, ale strict bridge pozostaje open.
+- `B5`: wykonane jako piaty krok drugiego cyklu; lokalna stabilnosc kandydata jest wsparta, ale pelny gauge quotient pozostaje open.
+- `B6`: wykonane jako szosty krok drugiego cyklu; istnieje pierwszy jawny factorized bridge `(sigma_int_candidate, J_ab family) -> theta*=0`, ale `sigma_int` alone nadal nie wyprowadza selectora.
+- `B7`: wykonane jako siodmy krok drugiego cyklu; factorized bridge jest zgodny ze scaffoldem `QW-2190` i z obstrukcja `QW-2191`, ale tylko jako control-route overlay.
+- `B8`: wykonane jako osmy krok drugiego cyklu; selector-track ma juz audit `no false pass`, a residualne blockery pozostaja jawne.
+- `C1`: wykonane jako pierwszy krok trzeciego mikrocyklu; dominujacy waski blocker to brak internal derivation rodziny selectorow `J_ab`.
 
 ## Twarde ograniczenia rygoru
 
@@ -106,7 +121,12 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - brak claimu, ze `B1` domknelo axiom-free uniqueness,
 - brak claimu, ze `B2` znalazlo internal selector,
 - brak claimu, ze `B3` rozladowalo topological-selector bridge,
-- brak claimu, ze `B4` wyprowadzilo `sigma_int` theorem-level.
+- brak claimu, ze `B4` wyprowadzilo `sigma_int` theorem-level,
+- brak claimu, ze `B5` rozladowalo `B3_O2`.
+- brak claimu, ze `B6` rozladowalo `B3_O3`.
+- brak claimu, ze `B7` rozladowalo `B3_O4`.
+- brak claimu, ze `B8` oznacza uniqueness closure.
+- brak claimu, ze `C1` rozladowalo blocker foundational.
 
 ## Zasada korzystania z poprzednich badan
 
@@ -137,6 +157,11 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `B2_INTERNAL_ORIENTATION_DATUM_SOURCE_AUDIT.md`
 - `B3_TOPOLOGICAL_SELECTOR_BRIDGE_PACKET.md`
 - `B4_MINIMAL_SIGMA_INT_CANDIDATE.md`
+- `B5_SIGMA_INT_LOCAL_STABILITY_AUDIT.md`
+- `B6_SIGMA_TO_SELECTOR_FACTORIZED_BRIDGE.md`
+- `B7_FACTORIZED_SELECTOR_MODE_SCAFFOLD_COMPATIBILITY_AUDIT.md`
+- `B8_SELECTOR_TRACK_ANTI_OVERCLAIM_AUDIT.md`
+- `C1_NARROW_FOUNDATIONAL_BLOCKER_SELECTION.md`
 - `a1_minimal_action_ansatz.py`
 - `a2_supersoliton_matching.py`
 - `a3_kernel_analysis.py`
@@ -151,6 +176,11 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `b2_internal_orientation_datum_source_audit.py`
 - `b3_topological_selector_bridge_packet.py`
 - `b4_minimal_sigma_int_candidate.py`
+- `b5_sigma_int_local_stability_audit.py`
+- `b6_sigma_to_selector_factorized_bridge.py`
+- `b7_factorized_selector_mode_scaffold_compatibility_audit.py`
+- `b8_selector_track_anti_overclaim_audit.py`
+- `c1_narrow_foundational_blocker_selection.py`
 - `generated/a1_minimal_action_ansatz_summary.json`
 - `generated/a2_supersoliton_matching_summary.json`
 - `generated/a3_kernel_analysis_summary.json`
@@ -165,4 +195,9 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `generated/b2_internal_orientation_datum_source_audit_summary.json`
 - `generated/b3_topological_selector_bridge_packet_summary.json`
 - `generated/b4_minimal_sigma_int_candidate_summary.json`
+- `generated/b5_sigma_int_local_stability_audit_summary.json`
+- `generated/b6_sigma_to_selector_factorized_bridge_summary.json`
+- `generated/b7_factorized_selector_mode_scaffold_compatibility_audit_summary.json`
+- `generated/b8_selector_track_anti_overclaim_audit_summary.json`
+- `generated/c1_narrow_foundational_blocker_selection_summary.json`
 - `manifest_action_reconstruction.json`

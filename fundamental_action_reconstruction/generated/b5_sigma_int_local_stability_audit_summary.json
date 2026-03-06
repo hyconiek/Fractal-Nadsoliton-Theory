@@ -1,0 +1,62 @@
+{
+  "program_id": "fundamental_action_reconstruction",
+  "as_of": "2026-03-06",
+  "status": "B5_EXECUTED_LOCAL_DEFORMATION_STABILITY_SUPPORTED_GAUGE_QUOTIENT_DISCHARGE_PENDING_NO_FALSE_PASS",
+  "source_policy": {
+    "strict_admissible_support": [
+      "QW-2206",
+      "A2",
+      "A3",
+      "B4",
+      "A10"
+    ],
+    "hybrid_support": [
+      "QW-1622"
+    ]
+  },
+  "anti_overclaim": {
+    "b3_o2_discharged_claim": false,
+    "full_gauge_safety_claim": false,
+    "axiom_free_uniqueness_closed_claim": false
+  },
+  "b5": {
+    "goal": "Assess whether sigma_int_candidate survives local topological deformations and whether gauge-choice dependence is already ruled out.",
+    "findings": [
+      {
+        "object": "local deformation stability in fixed topological sector",
+        "status": "supported_partial",
+        "basis": [
+          "QW-2206",
+          "QW-1622"
+        ]
+      },
+      {
+        "object": "independence from simple parametrization choice",
+        "status": "supported_partial",
+        "basis": [
+          "B4"
+        ]
+      },
+      {
+        "object": "full gauge quotient safety",
+        "status": "open",
+        "basis": [
+          "A2",
+          "A3"
+        ]
+      },
+      {
+        "object": "B3_O2 discharge",
+        "status": "partial_local_support_only"
+      }
+    ],
+    "obligation_status": {
+      "B3_O1": "candidate_identified",
+      "B3_O2": "partial_local_support_only",
+      "B3_O3": "open",
+      "B3_O4": "open",
+      "B3_O5": "pending_after_O3_to_O4"
+    },
+    "next_step": "B6"
+  }
+}

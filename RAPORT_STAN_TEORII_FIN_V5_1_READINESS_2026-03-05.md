@@ -691,6 +691,16 @@ Status nowego toru:
 - `B3` podnosi frontier do packet-ready mostu `local topology / FR branch -> selector`, ale bez derivation claim,
 - `B4` wykonane jako czwarty krok drugiego cyklu,
 - `B4` identyfikuje jeden kanoniczny kandydat `sigma_int`, ale bez strict discharge,
+- `B5` wykonane jako piaty krok drugiego cyklu,
+- `B5` wspiera lokalna stabilnosc kandydata, ale nie rozladowuje jeszcze quotient przez gauge i degeneracje modowe,
+- `B6` wykonane jako szosty krok drugiego cyklu,
+- `B6` identyfikuje pierwszy jawny factorized bridge `(sigma_int_candidate, J_ab family) -> theta*=0`, ale nie rozladowuje `B3_O3` theorem-level,
+- `B7` wykonane jako siodmy krok drugiego cyklu,
+- `B7` potwierdza zgodnosc factorized bridge z `QW-2190` i `QW-2191`, ale tylko jako control-route overlay nad granica `A6`,
+- `B8` wykonane jako osmy krok drugiego cyklu,
+- `B8` zamyka selector-track audytem `no false pass`, przy jawnie utrzymanych residualnych blockerach,
+- `C1` wykonane jako pierwszy krok trzeciego mikrocyklu,
+- `C1` izoluje dominujacy waski blocker foundational: brak internal derivation rodziny selectorow `J_ab`,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -827,4 +837,57 @@ Co realnie zostalo dodane przez `B4`:
   - brak mapy `sigma_int_candidate -> selector`,
 - nadal brak bridge PASS,
 - nadal brak axiom-free uniqueness PASS,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `B5`:
+- istnieje uczciwe lokalne wsparcie dla tezy, ze `sigma_int_candidate` przetrwa male deformacje w ustalonym sektorze topologicznym,
+- kandydat nie jest juz tylko symbolem ani czystym convention token,
+- ale pelny quotient przez gauge / parametryzacje / degeneracje modowe pozostaje nierozladowany,
+- wynik jest wiec tylko `partial_local_support`,
+- nadal brak `B3_O2` theorem-level PASS,
+- nadal brak bridge PASS,
+- nadal brak axiom-free uniqueness PASS,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `B6`:
+- istnieje juz pierwszy jawny sposob osadzenia `sigma_int_candidate` w selector route,
+- `sigma_int_candidate` jest wsparty jako kandydat na residualny `Z2` orientation datum,
+- rodzina `J_ab` z `QW-2192/2193` pozostaje nosnikiem ciaglego wyboru `theta*=0`,
+- otrzymany most ma forme zfaktoryzowana:
+  - `(sigma_int_candidate, J_ab family) -> theta*=0 mod 2pi`,
+- nadal brak dowodu `sigma_int_candidate -> theta*=0` as standalone derivation,
+- nadal brak `B3_O3` theorem-level PASS,
+- nadal brak axiom-free uniqueness PASS,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `B7`:
+- factorized bridge nie koliduje z deterministycznym mode scaffold `QW-2190`,
+- nie przeczy obstruction theorem `QW-2191`,
+- jest zgodny z granica `A6` tylko jako control-route overlay, a nie strict-core theorem,
+- nadal brak `B3_O4` theorem-level PASS,
+- nadal brak axiom-free uniqueness PASS,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `B8`:
+- selector-track `B3_O1..B3_O5` ma juz uczciwy audit koncowy bez falszywego PASS,
+- residualne blockery zostaly jawnie wypisane i nie sa maskowane przez deklaratywny postep,
+- program ma teraz zamkniety mini-pakiet:
+  - candidate,
+  - partial support,
+  - partial control route,
+  - partial control compatibility,
+  - anti-overclaim audit,
+- nadal brak theorem-level PASS,
+- nadal brak full-closure PASS,
+- nadal brak axiom-free uniqueness PASS.
+
+Co realnie zostalo dodane przez `C1`:
+- broad frontier `uniqueness open` zostal zastapiony jednym waskim blockerem foundational,
+- najsilniejszy aktualny blocker nie brzmi juz:
+  - `sigma_int` itself,
+  - ani `sigma_int -> theta` standalone,
+- tylko:
+  - brak internal derivation dodatnio-wagowej rodziny selectorow `J_ab`,
+- repo grep nie ujawnia zadnego strict internal-origin package dla tej rodziny,
+- nadal brak discharge,
 - nadal brak theorem-level/full-closure PASS.

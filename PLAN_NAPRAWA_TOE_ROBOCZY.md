@@ -5411,3 +5411,143 @@ Po tej rundzie:
 6. Nastepny poprawny ruch:
    - przejsc do `B5` i testowac deformation/gauge stability kandydata,
    - albo zamrozic frontier i zacommitowac bez fałszywego postepu.
+
+## 405. B5 sigma_int local stability audit wykonane (2026-03-06)
+1. Zakres:
+   - podjeto probe `B3_O2`,
+   - strict-admissible support: `QW-2206`, `A2`, `A3`, `B4`, `A10`,
+   - hybrid support: `QW-1622`.
+2. Co zostalo realnie ustalone:
+   - `sigma_int_candidate` ma lokalne wsparcie stabilnosci w ustalonym sektorze topologicznym,
+   - kandydat nie wyglada na czysty artefakt prostej parametryzacji,
+   - pelna gauge-safety i quotient przez degeneracje modowe pozostaja nieudowodnione.
+3. Co pozostaje zablokowane:
+   - theorem-level discharge `B3_O2`,
+   - full gauge quotient safety,
+   - most `sigma_int_candidate -> selector`,
+   - axiom-free uniqueness.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/B5_SIGMA_INT_LOCAL_STABILITY_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/b5_sigma_int_local_stability_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/b5_sigma_int_local_stability_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Twardy rygor:
+   - brak `B3_O2` PASS,
+   - brak full gauge-safety claim,
+   - postep jest tylko lokalny i czesciowy.
+6. Nastepny poprawny ruch:
+   - przejsc do `B6` i sprobowac pierwszego jawnego mostu
+     `sigma_int_candidate -> selector / theta-choice`,
+   - albo zamrozic frontier i zacommitowac.
+
+## 406. B6 sigma to selector factorized bridge wykonane (2026-03-06)
+1. Zakres:
+   - podjeto probe `B3_O3`,
+   - strict-admissible support: `B4`, `B5`, `QW-2191`, `QW-2192`, `QW-2193`, `A10`.
+2. Co zostalo realnie ustalone:
+   - `sigma_int_candidate` nie wyprowadza samodzielnie `theta`,
+   - ale jest dobrym kandydatem na residualny `Z2` orientation datum uzywany przez control route `QW-2192`,
+   - rodzina `J_ab` z `QW-2193` wykonuje ciagly wybor `theta*=0`,
+   - razem daja pierwszy jawny factorized bridge:
+     - `(sigma_int_candidate, J_ab family) -> theta*=0 mod 2pi`.
+3. Co pozostaje zablokowane:
+   - theorem-level discharge `B3_O3`,
+   - internal derivation samej rodziny selectorow,
+   - `sigma_int_candidate -> theta*=0` as standalone derivation,
+   - axiom-free uniqueness.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/B6_SIGMA_TO_SELECTOR_FACTORIZED_BRIDGE.md`,
+   - dodano `fundamental_action_reconstruction/b6_sigma_to_selector_factorized_bridge.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/b6_sigma_to_selector_factorized_bridge_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Twardy rygor:
+   - brak `B3_O3` PASS,
+   - brak claimu `sigma_int` alone -> `theta*=0`,
+   - postep jest tylko factorized i control-route partial.
+6. Nastepny poprawny ruch:
+   - przejsc do `B7` i sprawdzic zgodnosc factorized bridge z `QW-2190` i granicami `A6`,
+   - albo zamrozic frontier i zacommitowac bez falszywego postepu.
+
+## 407. B7 factorized selector mode scaffold compatibility audit wykonane (2026-03-06)
+1. Zakres:
+   - podjeto probe `B3_O4`,
+   - strict-admissible support: `QW-2190`, `QW-2191`, `A6`, `B6`, `A10`.
+2. Co zostalo realnie ustalone:
+   - factorized bridge nie psuje mode scaffold `QW-2190`,
+   - nie przeczy obstruction theorem `QW-2191`,
+   - jest zgodny z `A6` tylko jako control-route overlay, a nie strict-core discharge.
+3. Co pozostaje zablokowane:
+   - theorem-level discharge `B3_O4`,
+   - internalizacja selector family do strict core,
+   - axiom-free uniqueness.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/B7_FACTORIZED_SELECTOR_MODE_SCAFFOLD_COMPATIBILITY_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/b7_factorized_selector_mode_scaffold_compatibility_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/b7_factorized_selector_mode_scaffold_compatibility_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Twardy rygor:
+   - brak `B3_O4` PASS,
+   - brak claimu `A6` uniqueness discharge,
+   - wynik jest tylko `partial_control_compatibility_only`.
+6. Nastepny poprawny ruch:
+   - przejsc do `B8` i wykonac audit `no false pass`,
+   - albo zamrozic frontier i zacommitowac.
+
+## 408. B8 selector track anti-overclaim audit wykonane (2026-03-06)
+1. Zakres:
+   - wykonano `B3_O5`,
+   - wejscie: `B4`, `B5`, `B6`, `B7`, `A10`.
+2. Co zostalo realnie ustalone:
+   - mini-pakiet selector-track ma juz uczciwy stan koncowy:
+     - `candidate identified`,
+     - `partial local support`,
+     - `partial control route`,
+     - `partial control compatibility`,
+     - `no false pass audit`,
+   - residualne blockery sa jawne i nie zostaly zamaskowane.
+3. Co pozostaje zablokowane:
+   - strict derivation `sigma_int_candidate`,
+   - theorem-level gauge quotient safety,
+   - `sigma_int -> theta` as standalone derivation,
+   - internal derivation rodziny `J_ab`,
+   - axiom-free uniqueness.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/B8_SELECTOR_TRACK_ANTI_OVERCLAIM_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/b8_selector_track_anti_overclaim_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/b8_selector_track_anti_overclaim_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Twardy rygor:
+   - brak theorem-level PASS,
+   - brak full-closure PASS,
+   - zero falszywego PASS dla selector-track.
+6. Nastepny poprawny ruch:
+   - wejsc w `C1` i wybrac jeden waski blocker foundational,
+   - albo zamrozic ten pakiet i zacommitowac.
+
+## 409. C1 narrow foundational blocker selection wykonane (2026-03-06)
+1. Zakres:
+   - po `B8` wybrano jeden dominujacy waski blocker foundational,
+   - wejscie: `B6`, `B7`, `B8`, `QW-2191`, `QW-2192`, `QW-2193`, `A10`,
+   - wykonano grep repo pod internal-origin selector family.
+2. Co zostalo realnie ustalone:
+   - repo nie zawiera strict internal derivation rodziny `J_ab`,
+   - `sigma_int_candidate` nie jest juz glownym blockerem dominujacym,
+   - standalone cel `sigma_int -> theta` jest zle postawiony,
+   - dominujacy waski blocker brzmi:
+     - `no_internal_derivation_of_positive_weight_selector_family`.
+3. Co pozostaje zablokowane:
+   - internal derivation `J_ab`,
+   - axiom-free uniqueness,
+   - discharge `QW-2191`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C1_NARROW_FOUNDATIONAL_BLOCKER_SELECTION.md`,
+   - dodano `fundamental_action_reconstruction/c1_narrow_foundational_blocker_selection.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c1_narrow_foundational_blocker_selection_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Twardy rygor:
+   - brak discharge,
+   - brak theorem-level PASS,
+   - brak full-closure PASS.
+6. Nastepny poprawny ruch:
+   - przejsc do `C2` i zbudowac packet internal-origin dla `J_ab`,
+   - albo zamrozic frontier i zacommitowac.
