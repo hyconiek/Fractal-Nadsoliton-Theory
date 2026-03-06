@@ -7253,3 +7253,29 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - zapisac theorem-spec dla brakujacej route-role typing rule / admissibility-by-role declaration,
    - albo wracac do lane `T2`, jesli priorytetem jest konstrukcja brakujacych strict-core objectow.
+
+## 473. T10 theorem-spec dla route-role typing rule wykonane (2026-03-06)
+
+1. Cel:
+   - zapisac packet-ready theorem spec dla brakujacej route-role typing rule
+     / admissibility-by-role declaration wskazanej przez `T9`,
+   - tj. formalnej zasady, ze kazda obecna admissible trasa eksportu `theta_i`
+     ma dokladnie jeden typ roli z biezacego slowownika szesciu rol.
+2. Wynik:
+   - theorem spec istnieje,
+   - actual discharge nadal nie istnieje.
+3. Frontier po kroku:
+   - aktywny theorem-lane blocker brzmi:
+     `T10_B1 := the route-role typing rule is specified but not discharged for the current selector track`,
+   - niezaleznie pozostaje:
+     `T2_B1`,
+   - oraz:
+     `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/T10_ROUTE_ROLE_TYPING_RULE_THEOREM_SPEC.md`,
+   - dodano `fundamental_action_reconstruction/t10_route_role_typing_rule_theorem_spec.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/t10_route_role_typing_rule_theorem_spec_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - wykonac pierwszy discharge attempt dla `T10`,
+   - albo wracac do lane `T2`, jesli priorytetem jest konstrukcja brakujacych strict-core objectow.
