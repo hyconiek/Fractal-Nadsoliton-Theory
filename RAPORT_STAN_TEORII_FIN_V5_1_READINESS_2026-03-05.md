@@ -679,6 +679,10 @@ Status nowego toru:
 - `A7` integruje tylko branch-scope positivity, strict-scope causality stack oraz jawne terminalne obligacje globalne,
 - `A8` wykonane jako `strict-scope partial gravity bridge`,
 - `A8` integruje tylko effective gravity bridge, GR-limit catalog i low-energy SM+GR reduction scope z jawnymi foundational blockers,
+- `A9` wykonane jako `strict-scope partial SM+GR effective reduction`,
+- `A9` sklada tylko wykonane warstwy matter/gauge/gravity do jednego effective package bez theorem-level unified reduction claim,
+- `A10` wykonane jako finalny `calibration boundary + anti-overclaim audit`,
+- `A10` domyka pierwszy cykl programu tylko metodologicznie, nie fizycznie,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -736,4 +740,30 @@ Co realnie zostalo dodane przez `A8`:
   - Einstein-Hilbert direct derivation,
   - equivalence principle derivation,
   - full SM+GR reduction theorem,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `A9`:
+- istnieje jedna jawna warstwa effective integrujaca:
+  - matter-route boundary (`A5` + `QW-2196`),
+  - gauge scaffold (`A6`),
+  - positivity/unitarity admissibility (`A7`),
+  - gravity bridge (`A8`),
+- low-energy `SM+GR` pozostaje domkniete tylko w zadeklarowanym scope (`QW-2200`),
+- unified theorem-level reduction pozostaje jawnie otwarta:
+  - full matter-sector uniqueness,
+  - full constructive global QFT package,
+  - foundational GR theorem package,
+  - full SM+GR reduction theorem,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `A10`:
+- istnieje finalna klasyfikacja claimow dla pierwszego cyklu `action-first`,
+- poprzednie badania kalibracyjne/anchor-heavy zostaly jawnie zdegradowane do roli methodological negative control, nie proof input,
+- audit koncowy oddziela:
+  - `derived-in-scope`,
+  - `scope-closed`,
+  - `anchor/calibration-dependent`,
+  - `open`,
+  - `forbidden claims`,
+- pierwszy cykl programu jest teraz metodologicznie kompletny,
 - nadal brak theorem-level/full-closure PASS.

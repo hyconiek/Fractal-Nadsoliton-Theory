@@ -5238,3 +5238,59 @@ Po tej rundzie:
    - postep jest tylko do poziomu strict-scope partial gravity bridge.
 6. Nastepny poprawny ruch:
    - przejsc do `A9` i skladac uczciwa warstwe `SM+GR effective reduction`.
+
+## 399. A9 SM+GR effective reduction wykonane (2026-03-06)
+1. Zakres:
+   - wykonano `A9` jako warstwe `SM+GR effective reduction`,
+   - uzyto tylko `A5`, `A6`, `A7`, `A8`, `QW-2200`, `QW-2196`,
+   - jawnie nie liczono theorem-level unified reduction jako rozladowanej.
+2. Co zostalo realnie ustalone:
+   - istnieje jedna uczciwa warstwa effective laczaca matter-route boundary, gauge scaffold, QFT admissibility i gravity bridge,
+   - low-energy `SM+GR` scope pozostaje closed w zadeklarowanym zakresie,
+   - nie ma sprzecznosci scope przy sklejeniu wykonanych warstw.
+3. Co pozostaje zablokowane:
+   - full matter-sector uniqueness,
+   - full constructive global QFT package,
+   - foundational GR theorem package,
+   - full SM+GR theorem-level reduction.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/A9_SM_GR_EFFECTIVE_REDUCTION_SPEC.md`,
+   - dodano `fundamental_action_reconstruction/a9_sm_gr_effective_reduction.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/a9_sm_gr_effective_reduction_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Twardy rygor:
+   - brak theorem-level/full-closure PASS,
+   - brak claimu unified SM+GR closure,
+   - postep jest tylko do poziomu strict-scope partial effective reduction.
+6. Nastepny poprawny ruch:
+   - przejsc do `A10` i wystawic finalny calibration boundary + anti-overclaim audit.
+
+## 400. A10 calibration boundary + anti-overclaim audit wykonane (2026-03-06)
+1. Zakres:
+   - wykonano `A10` jako finalny audit pierwszego cyklu `fundamental_action_reconstruction`,
+   - uzyto `A1-A9`, `QW-2194`, `QW-2196`, `QW-2197`, `QW-2205`, `QW-2068`,
+   - `QW-1875` i `QW-1821` wykorzystano tylko jako negative controls metodologiczne.
+2. Co zostalo realnie ustalone:
+   - istnieje finalna klasyfikacja `derived-in-scope / scope-closed / anchor-calibration-boundary / open / forbidden claims`,
+   - pierwszy cykl programu jest metodologicznie kompletny,
+   - nie oznacza to domkniecia fizycznego ani foundational.
+3. Co pozostaje zablokowane:
+   - pelny lagranzian theorem-level,
+   - pelna spinor/gamma derivation,
+   - pelna gauge uniqueness,
+   - pelne `L5`,
+   - pelne foundational `GR`,
+   - full `SM+GR` theorem-level reduction,
+   - full ToE closure.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/A10_CALIBRATION_BOUNDARY_AND_ANTI_OVERCLAIM_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/a10_calibration_boundary_and_anti_overclaim_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/a10_calibration_boundary_and_anti_overclaim_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Twardy rygor:
+   - brak theorem-level/full-closure PASS,
+   - brak claimu, ze audit = closure,
+   - postep jest metodologiczny, nie foundational.
+6. Nastepny poprawny ruch:
+   - albo rozpoczac drugi cykl od jednego waskiego blockera,
+   - albo skomitowac i zamrozic `phase-1 constructive audit`.

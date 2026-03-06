@@ -578,6 +578,9 @@ Current status:
 - this moves the theory forward only to an integrated local/branch-scope positivity-causality layer with explicit terminal global blockers `L5_O1a_O1` and `L5_O1b_O1`,
 - `A8` completed as a strict-scope partial gravity bridge,
 - this moves the theory forward only to an integrated effective/scope-closed gravity layer with explicit foundational blockers for `G`, Einstein-Hilbert derivation and full SM+GR reduction,
-- `A9` is now the next explicit stage,
+- `A9` completed as a strict-scope partial SM+GR effective reduction layer,
+- this moves the theory forward only to an integrated effective material/gauge/gravity package with theorem-level unification still open,
+- `A10` completed as the final calibration-boundary and anti-overclaim audit for the first constructive cycle,
+- this moves the theory forward only methodologically: the first `action-first` cycle is now fully audited, not physically closed,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.
