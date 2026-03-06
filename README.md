@@ -552,3 +552,18 @@ Canonical gap list:
 - `L5/L12` dual kernel-identity-continuity-provider counterexample-search layer: `QW-2587` (bounded-domain strict regime: no counterexample found; boundary-regime violations confirm assumption necessity; still not a proof-level closure).
 - `L5/L12` non-axiomatic dual kernel-identity-continuity-provider derivation-attempt layer: `QW-2588` (axiom-token-free attempt executed after theorem-spec+counterexample layers; blocked by kernel-identity-coherence provider theorems).
 - `L5/L12` strict anti-false-pass identity-coherence-frontier layer: `QW-2589` (cross-check `QW-2586..QW-2588`; blocker-explicit continuation preserved, overclaim forbidden).
+
+## Parallel Constructive Track (opened 2026-03-06)
+
+A separate construction program is now open at `fundamental_action_reconstruction/`.
+
+Purpose:
+- reconstruct a candidate action first,
+- match a supersoliton background,
+- derive the fluctuation kernel,
+- test RG emergence before making stronger claims about spinors, gauge structure, or SM+GR bridge.
+
+Current status:
+- `A1` completed as specification/ansatz layer,
+- no theorem-level closure claim,
+- no full-lagrangian closure claim.

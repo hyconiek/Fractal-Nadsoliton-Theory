@@ -5029,3 +5029,26 @@ Po tej rundzie:
    - dopiero po rozpisaniu coherence lemmas i bounded falsification search wolno wykonywac kolejny machine-check attempt,
    - brak strict counterexample w bounded domain nie jest dowodem, ale jest potrzebnym filtrem przed dalsza eskalacja claimow,
    - `all_strict_obligations_fully_closed=false` pozostaje warunkiem publikacyjnym do czasu rozladowania aktualnego frontu.
+
+## 390. Rownolegly tor konstrukcyjny poza drabinka (2026-03-06)
+1. Decyzja strategiczna:
+   - dalsza drabinka `L5/L12` pozostaje warstwa audytu i anti-overclaim,
+   - glowny nowy tor konstrukcyjny zostaje otwarty jako `fundamental_action_reconstruction`.
+2. Najlepsza sciezka poza drabinka:
+   - `A1`: minimal action ansatz,
+   - `A2`: supersoliton matching,
+   - `A3`: kernel analysis,
+   - `A4`: RG emergence,
+   - `A5..A10`: spinor route, gauge reconstruction, positivity/unitarity package, gravity bridge, SM+GR reduction, calibration boundary.
+3. Wykonane teraz:
+   - utworzono katalog `fundamental_action_reconstruction/`,
+   - zapisano formalny plan `A1..A10`,
+   - wykonano `A1` jako warstwe spec/ansatz,
+   - wygenerowano manifest `generated/a1_minimal_action_ansatz_summary.json`.
+4. Twardy rygor:
+   - brak theorem-level PASS,
+   - brak full-closure PASS,
+   - brak claimu, ze `SU(3)xSU(2)xU(1)` lub spinory zostaly juz wyprowadzone z nowego toru.
+5. Kolejny poprawny ruch poza drabinka:
+   - wykonac `A2_SUPERSOLITON_MATCHING_SPEC` i rozpisac warunki `forced / optional / gauge-choice-dependent`,
+   - potem przejsc do `A3_KERNEL_ANALYSIS_SPEC` z poprawnym rozdzialem `zero/gauge/physical modes`.

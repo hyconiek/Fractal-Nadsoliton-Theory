@@ -655,3 +655,21 @@ Stan na dziś:
 
 Rekomendowana etykieta naukowa na dziś:
 > High-rigor internal unification candidate with closed strict internal chains (including L13/L14 terminals), pending foundational closures and independent external replication.
+
+## 6) Rownolegly tor konstrukcyjny poza drabinka
+
+Na dzien `2026-03-06` zostal jawnie otwarty osobny program `fundamental_action_reconstruction/`.
+
+Jego rola:
+- nie zastapic drabinki `L5/L12`,
+- tylko przeniesc glowny wysilek konstrukcyjny na tor `action-first -> supersoliton matching -> kernel analysis -> RG emergence -> SM+GR bridge`.
+
+Status nowego toru:
+- `A1` wykonane jako warstwa spec/ansatz,
+- `A2-A5` przygotowane jako jawne specy kolejnych etapow,
+- brak theorem-level/full-closure claim,
+- brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
+
+Znaczenie operacyjne:
+- drabinka pozostaje narzedziem audytu, walidacji i anti-overclaim,
+- nowy tor jest glowna sciezka konstrukcji pelnego kandydackiego lagranzianu.

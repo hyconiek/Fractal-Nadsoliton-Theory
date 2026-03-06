@@ -1,0 +1,78 @@
+# A1 Minimal Action Ansatz
+
+Status: `A1_SPEC_READY`
+As of: `2026-03-06`
+
+## Cel
+
+Zapisac najmniejszy recenzencko-obronny ansatz dzialania, ktory:
+- jest lokalny,
+- ma maksymalnie drugi rzad pochodnych w warstwie bazowej,
+- dopuszcza tlo supersolitonowe jako przyszly target etapu `A2`,
+- zostawia miejsce na sektor gauge i grawitacyjny,
+- nie udaje jeszcze pelnego SM+GR closure.
+
+## Minimalna zawartosc pol
+
+1. `Psi^A`
+   - podstawowe wieloskladowe pole bosonowe, kandydat na nosnik struktury supersolitonowej.
+2. `Phi`
+   - pole porzadku / vacuum-order parameter.
+3. `A_mu^I`
+   - rezerwowe pole polaczenia dla przyszlego sektora cechowania; grupa nie jest jeszcze ustalona.
+4. `g_{mu nu}`
+   - sektor metryczny, traktowany na tym etapie jako dopuszczony do sprzezenia.
+
+Sektor fermionowy nie jest uznany za domkniety w `A1`.
+Zostaje odlozony do pozniejszego rozgalezienia `A5`.
+
+## Ansatzu nie wolno mylic z finalnym lagranzianem
+
+`A1` nie twierdzi, ze finalna teoria ma juz postac ponizej. To jest najmniejsza klasa kandydatow, od ktorej sensownie zaczac dalsza rekonstrukcje.
+
+## Bazowy ansatz
+
+\[
+\mathcal{L}_{A1} =
+\frac12 G_{AB}(\Psi,\Phi) D_\mu \Psi^A D^\mu \Psi^B
++ \frac12 \partial_\mu \Phi\, \partial^\mu \Phi
+- V(\Psi,\Phi)
+- U_{\mathrm{mix}}(\Psi,\Phi)
+- \frac14 Z_{IJ}(\Psi,\Phi) F^I_{\mu\nu} F^{J\mu\nu}
++ \frac{M^2_{\mathrm{eff}}(\Psi,\Phi)}{2} R
+- \Lambda_{\mathrm{eff}}(\Psi,\Phi)
++ \Delta \mathcal{L}_{\mathrm{EFT}}.
+\]
+
+Gdzie:
+- `D_mu` jest zwykla pochodna w wariancie bez aktywnego gauge sector albo pochodna kowariantna po aktywacji `A_mu^I`,
+- `F^I_{mu nu}` jest krzywizna polaczenia,
+- `Delta L_EFT` reprezentuje wylacznie jawnie oznaczone wyzsze operatory tlumione skala `Lambda`.
+
+## Twarde restrykcje na A1
+
+1. lokalnosc,
+2. Lorentz-covariance,
+3. brak niejawnych nielokalnych kernel terms w samym ansatzu bazowym,
+4. bazowo najwyzej drugi rzad pochodnych,
+5. kazdy wyzszy operator musi byc jawnie wpisany jako EFT correction,
+6. zaden wybor grupy gauge nie moze byc jeszcze sprzedawany jako wyprowadzony,
+7. brak roszczenia, ze fermiony Diraca sa juz uzyskane.
+
+## Obowiazki recenzenckie odlozone poza A1
+
+- istnienie rzeczywistego tla supersolitonowego jako rozwiazania E-L,
+- identyfikacja fizycznego kernela fluktuacji,
+- kontrola zero modes / gauge fixing,
+- RG emergence,
+- spinor/gamma emergence lub spin-bundle extension,
+- anomaly closure,
+- GR-limit equivalence.
+
+## Kryterium zaliczenia A1
+
+`A1` jest zaliczone wtedy i tylko wtedy, gdy:
+- klasa dzialan jest jawnie zapisana,
+- zalozenia sa jawnie oznaczone jako `physical` albo `technical`,
+- nie ma falszywego claimu unikalnosci albo full closure,
+- dokument daje czysty punkt wejscia do `A2` i `A3`.
