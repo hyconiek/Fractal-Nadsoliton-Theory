@@ -7355,3 +7355,28 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - albo sformulowac globalne twierdzenie niemosliwosci / koniecznosci aksjomatu,
    - albo przejsc na jawnie `axiom-augmented` pozytywny most.
+
+## 477. N2 globalny theorem-spec dla niemozliwosci lub koniecznosci aksjomatu (2026-03-06)
+
+1. Cel:
+   - wybrac sciezke o wiekszej szansie powodzenia po `N1`,
+   - zapisac globalny theorem-spec dla biezacego strict core:
+     albo nie ma internal `theta` source,
+     albo kazde skuteczne wyprowadzenie wymaga dodatkowego aksjomatu /
+     admissibility principle nieobecnego obecnie w rdzeniu strict.
+2. Wynik:
+   - theorem spec istnieje,
+   - actual discharge nadal nie istnieje.
+3. Frontier po kroku:
+   - `N2_B1 := global_dichotomy_theorem_is_specified_but_not_discharged`,
+   - `T12_B1 := globalization_to_all_current_strict_core_routes_remains_undischarged`,
+   - `T2_B1`,
+   - `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/N2_GLOBAL_STRICT_CORE_IMPOSSIBILITY_OR_AXIOM_NECESSITY_THEOREM_SPEC.md`,
+   - dodano `fundamental_action_reconstruction/n2_global_strict_core_impossibility_or_axiom_necessity_theorem_spec.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n2_global_strict_core_impossibility_or_axiom_necessity_theorem_spec_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - wykonac pierwszy discharge attempt dla `N2`,
+   - albo jesli failure natychmiast wraca do `T12_B1`, jawnie zatrzymac theorem-lane i zapisac koniecznosc aksjomatu jako aktualnie najlepiej wsparty wniosek projektowy.

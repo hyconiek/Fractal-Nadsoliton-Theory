@@ -1765,3 +1765,17 @@ Frontier po `N1`:
 - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
 - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
 - nadal brak globalnego theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `N2`:
+- po wyborze sciezki o wiekszej szansie powodzenia zapisano globalny theorem-spec zamiast rozwijac `T13+`,
+- theorem-spec formuluje uczciwa dychotomie dla biezacego strict core:
+  albo internal `theta` source nie istnieje,
+  albo jego wyprowadzenie wymaga dodatkowego aksjomatu / admissibility principle nieobecnego obecnie w rdzeniu strict,
+- jest to krok theorem-spec, nie discharge.
+
+Frontier po `N2`:
+- `N2_B1 := global_dichotomy_theorem_is_specified_but_not_discharged`,
+- `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
+- nadal brak globalnego theorem-level/full-closure PASS.

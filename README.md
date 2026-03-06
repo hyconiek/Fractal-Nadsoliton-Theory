@@ -735,5 +735,7 @@ Current status:
 - this moves the theory forward only by isolating a packet-ready theorem spec for the missing formal typing judgment with totality and uniqueness required by `T11`, while that judgment itself remains undischarge,
 - `N1` completed as a scoped negative-theorem step after stopping further `T13+` meta-ladder expansion,
 - this moves the theory forward by actually discharging a weaker but honest theorem: within the already audited six-route theta-export family, no route exports actual strict-core `theta_1,theta_2`; the global strict-core statement remains open because `T12_B1` is still not discharged,
+- `N2` completed as a global negative-theorem specification step,
+- this moves the theory forward only by replacing open-ended `T13+` meta-ladder growth with an explicit global dichotomy theorem spec: either the present strict core has no internal theta-source, or any successful theta-source derivation requires an additional selector/admissibility axiom not currently present in the declared strict core,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.
