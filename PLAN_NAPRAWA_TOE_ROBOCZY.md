@@ -7840,3 +7840,26 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - zapisac minimalny construction/export spec dla carrierow `E_1`, `G_light`, `R_mat`, `O_obs`,
    - albo pokazac, ze przyszly extraction musi zaczynac od composite representative `A_1`.
+
+## 495. H8 minimal component carrier construction spec (2026-03-06)
+
+1. Cel:
+   - zapisac minimalna dopuszczalna forme przyszlego carrieru, tak aby pair-level extraction dla `pair1` byl juz problemem instancjonowania, a nie niejasnej architektury.
+2. Wynik:
+   - zapisano dwie dopuszczalne trasy:
+     - `Route A`: bezposredni eksport `A_1` jako symetrycznego bloku `2x2` na `V_1`,
+     - `Route B`: jawny lancuch carrierow `E_1 : V_1 -> L_1`, `G_light : L_1 -> L_1`, `R_mat : L_1 -> M_1`, `O_obs : M_1 -> M_1`,
+   - problem zostaje zredukowany do pytania, czy dla `pair1` zainstancjonowano juz Route A albo Route B.
+3. Frontier po kroku:
+   - `H8_B1 := no explicit chosen construction route (direct composite export A_1 or finite factored carrier chain) has yet been instantiated for pair1`,
+   - `H7_B1` zostaje zredukowane do construction-route absence level,
+   - `T12_B1`,
+   - `T2_B1`,
+   - `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/H8_MINIMAL_COMPONENT_CARRIER_CONSTRUCTION_SPEC.md`,
+   - dodano `fundamental_action_reconstruction/h8_minimal_component_carrier_construction_spec.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h8_minimal_component_carrier_construction_spec_summary.json`.
+5. Nastepny poprawny ruch:
+   - sprobowac znalezc lub zbudowac jedna rzeczywista instancje Route A lub Route B dla `pair1`,
+   - albo jawnie potwierdzic, ze repo nie ma jeszcze zadnej instancji takiej trasy.

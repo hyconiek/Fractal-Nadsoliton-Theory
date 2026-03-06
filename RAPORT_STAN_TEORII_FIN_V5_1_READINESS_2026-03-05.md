@@ -1984,6 +1984,20 @@ Frontier po `H7`:
 - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
 - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.
 
+Co realnie zostalo dodane przez `H8`:
+- zapisano minimalny construction/export spec dla przyszlego carrieru na `pair1`,
+- jawnie dopuszczono tylko dwie trasy:
+  `Route A` jako bezposredni eksport `A_1` na `V_1`,
+  albo `Route B` jako jawny lancuch carrierow `E_1`, `G_light`, `R_mat`, `O_obs`,
+- problem redukuje sie juz nie do architektury carrieru, tylko do tego, ze dla `pair1` nie zainstancjonowano jeszcze ani Route A, ani Route B.
+
+Frontier po `H8`:
+- `H8_B1 := no explicit chosen construction route (direct composite export A_1 or finite factored carrier chain) has yet been instantiated for pair1`,
+- `H7_B1` zostaje zredukowane do construction-route absence level,
+- `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.
+
 Co realnie zostalo dodane przez `H2`:
 - zapisano minimalny admissibility spec dla przyszlego operatora `K_obs`,
 - jawnie oddzielono:

@@ -1,0 +1,63 @@
+#!/usr/bin/env python3
+import json
+from pathlib import Path
+
+summary = {
+    "id": "H8",
+    "title": "minimal component carrier construction spec",
+    "status": "PASS_PARTIAL_COMPONENT_CARRIER_CONSTRUCTION_SPEC_READY",
+    "as_of": "2026-03-06",
+    "pair": {
+        "label": "pair1",
+        "basis": ["c1", "s1"],
+        "plane": "V_1 = span{c1, s1}"
+    },
+    "minimal_routes": {
+        "Route_A": {
+            "type": "direct_composite_export",
+            "required_object": "A_1 = [[a_1, b_1], [b_1, d_1]]",
+            "basis": ["c1", "s1"]
+        },
+        "Route_B": {
+            "type": "factored_carrier_chain",
+            "maps": [
+                "E_1 : V_1 -> L_1",
+                "G_light : L_1 -> L_1",
+                "R_mat : L_1 -> M_1",
+                "O_obs : M_1 -> M_1"
+            ],
+            "requirements": [
+                "finite carrier bases for V_1, L_1, M_1",
+                "explicit matrix representatives or symbolic action rules",
+                "explicit pullback rule yielding A_1"
+            ]
+        }
+    },
+    "required_declarations": [
+        "pair1 declared",
+        "V_1 declared",
+        "chosen construction route declared",
+        "explicit exported carrier objects present",
+        "basis labels present on each carrier",
+        "provenance link to H3 ansatz declared",
+        "no selector smuggling statement present"
+    ],
+    "frontier": {
+        "H8_B1": "no explicit chosen construction route (direct composite export A_1 or finite factored carrier chain) has yet been instantiated for pair1",
+        "H7_B1": "no explicit component-action carrier exists for E_1, G_light, R_mat, O_obs on pair1 or V_1, and no exported composite representative A_1 is present is reduced to construction-route absence level",
+        "T12_B1": "strict-core typing judgment with totality and uniqueness remains undischarged",
+        "T2_B1": "bridge theorem still specified but not discharged",
+        "C32_B2": "raw cross-pair overlap route remains degenerate"
+    },
+    "hard_limits": {
+        "theorem_level_pass": False,
+        "full_closure_pass": False,
+        "route_A_exists": False,
+        "route_B_exists": False,
+        "coefficients_computed": False
+    }
+}
+
+out = Path("fundamental_action_reconstruction/generated/h8_minimal_component_carrier_construction_spec_summary.json")
+out.write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
+print(out)

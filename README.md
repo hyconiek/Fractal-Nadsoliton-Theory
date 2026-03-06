@@ -771,5 +771,7 @@ Current status:
 - this reduces the next step to exporting the operator-component actions needed to evaluate `(a_1, b_1, d_1)`, while keeping explicit that no such coefficients have yet been computed,
 - `H7` completed as the first component-action carrier audit for `pair1 = (c1,s1)`,
 - this reduces the next step to constructing or exporting actual carriers for `E_1`, `G_light`, `R_mat`, `O_obs` or the composite `A_1`, while keeping explicit that no such carrier currently exists in repo exports,
+- `H8` completed as the minimal construction/export spec for those missing carriers,
+- this reduces the next step to instantiating either a direct composite export `A_1` or a factored carrier chain for `pair1`, while keeping explicit that neither route currently exists,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.
