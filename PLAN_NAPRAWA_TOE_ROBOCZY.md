@@ -6371,3 +6371,55 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - przejsc do `C32` i sprawdzic, czy strict core ma juz packet-ready
      overlap scalar typu `atan2(<s_2,c_1>,<c_2,c_1>)`.
+
+## 440. C32 cross-pair overlap scalar degeneracy audit wykonane (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy kandydat typu `atan2(cross overlaps)` daje w strict core
+     nieosobliwe zrodlo `alpha_12`, czy formalnie degeneruje sie do `0/0`.
+2. Wynik:
+   - surowa sciezka overlap-scalar jest formalnie zdegenerowana pod
+     strict orthonormal-disjoint mode scaffold,
+   - aktywny blocker zawęża sie dalej do braku jawnego eksportu
+     lokalnych faz `theta_1`, `theta_2`,
+   - finalny slice extraction nadal pozostaje otwarty.
+3. Twarde granice:
+   - brak theorem-level PASS,
+   - brak full-closure PASS,
+   - brak jawnego `alpha_12`,
+   - brak jawnych `theta_1`, `theta_2`,
+   - brak finalnej orientation slice.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C32_CROSS_PAIR_OVERLAP_SCALAR_DEGENERACY_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/c32_cross_pair_overlap_scalar_degeneracy_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c32_cross_pair_overlap_scalar_degeneracy_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `C33` i sprawdzic, czy strict core ma juz packet-ready
+     kandydat eksportu lokalnych faz `theta_1`, `theta_2`.
+
+## 441. C33 local phase export class audit wykonane (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy strict core ma juz packet-ready formule klasy eksportu
+     lokalnych faz `theta_i`, nawet jesli brak jeszcze jawnych reprezentantow
+     `u_i` dla aktualnych par.
+2. Wynik:
+   - formula klasy `theta_i = atan2(<s_i,u_i>,<c_i,u_i>)` jest juz packet-ready,
+   - aktywny blocker zawęża sie dalej do braku jawnych reprezentantow
+     `u_1`, `u_2`,
+   - finalny slice extraction nadal pozostaje otwarty.
+3. Twarde granice:
+   - brak theorem-level PASS,
+   - brak full-closure PASS,
+   - brak jawnych `u_1`, `u_2`,
+   - brak jawnych `theta_1`, `theta_2`,
+   - brak finalnej orientation slice.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C33_LOCAL_PHASE_EXPORT_CLASS_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/c33_local_phase_export_class_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c33_local_phase_export_class_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `C34` i sprawdzic, czy strict core ma juz packet-ready
+     kandydat jawnego reprezentanta `u_i` w lokalnej reduced line.

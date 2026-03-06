@@ -761,6 +761,10 @@ Status nowego toru:
 - `C30` pokazuje, ze local overlap compatibility law dla projectorow pod transformacja `G(alpha)` jest juz packet-ready, a active blocker redukuje sie dalej do braku jawnie wyeksportowanego transition matrix / transition angle oraz nadal otwartego finalnego slice extraction,
 - `C31` wykonane jako trzydziesty pierwszy krok trzeciego mikrocyklu,
 - `C31` pokazuje, ze klasa zrodla `alpha_12 = theta_2 - theta_1` jest juz packet-ready, a active blocker redukuje sie dalej do braku jawnego eksportu lokalnych faz / overlap scalar oraz nadal otwartego finalnego slice extraction,
+- `C32` wykonane jako trzydziesty drugi krok trzeciego mikrocyklu,
+- `C32` pokazuje, ze surowa sciezka `atan2(cross overlaps)` degeneruje sie formalnie do `atan2(0,0)` pod strict orthonormal-disjoint mode scaffold, a active blocker redukuje sie dalej do braku jawnego eksportu lokalnych faz oraz nadal otwartego finalnego slice extraction,
+- `C33` wykonane jako trzydziesty trzeci krok trzeciego mikrocyklu,
+- `C33` pokazuje, ze formula klasy `theta_i = atan2(<s_i,u_i>,<c_i,u_i>)` jest juz packet-ready, a active blocker redukuje sie dalej do braku jawnych reprezentantow `u_1`, `u_2` oraz nadal otwartego finalnego slice extraction,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -1306,5 +1310,33 @@ Co realnie zostalo dodane przez `C31`:
 - pierwszy residualny blocker zawęża sie dalej do:
   - `C31_B1 := no_explicit_export_of_local_phase_coordinates_theta_1_theta_2_or_equivalent_pair_overlap_scalar_for_serializing_alpha_12_between_the_two_local_pair_frames`,
 - drugi residualny blocker pozostaje:
+  - `C26_B2 := no_explicit_basis_level_embedding_or_extraction_of_the_candidate_two_dimensional_orientation_slice_inside_that_reduced_plane`,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C32`:
+- strict core pokazuje juz jawnie, ze:
+  - `<c_2,c_1> = 0`,
+  - `<s_2,c_1> = 0`,
+  - `<c_2,s_1> = 0`,
+  - `<s_2,s_1> = 0`
+  w strict disjoint scaffold,
+- zatem surowa sciezka overlap-scalar typu
+  `atan2(<s_2,c_1>,<c_2,c_1>)`
+  degeneruje sie do `atan2(0,0)`,
+- pierwszy residualny blocker zawęża sie dalej do:
+  - `C32_B1 := no_explicit_export_of_local_phase_coordinates_theta_1_theta_2_for_actual_pair_frames`,
+  - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
+- trzeci residualny blocker pozostaje:
+  - `C26_B2 := no_explicit_basis_level_embedding_or_extraction_of_the_candidate_two_dimensional_orientation_slice_inside_that_reduced_plane`,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C33`:
+- strict core ma juz packet-ready formule klasy lokalnej fazy:
+  - `theta_i = atan2(<s_i,u_i>,<c_i,u_i>)`,
+- pierwszy residualny blocker zawęża sie dalej do:
+  - `C33_B1 := no_explicit_export_of_normalized_local_reduced_representatives_u_1_u_2_for_the_actual_pair_frames_from_which_theta_1_theta_2_could_be_serialized_via_atan2`,
+- drugi residualny blocker pozostaje:
+  - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
+- trzeci residualny blocker pozostaje:
   - `C26_B2 := no_explicit_basis_level_embedding_or_extraction_of_the_candidate_two_dimensional_orientation_slice_inside_that_reduced_plane`,
 - nadal brak theorem-level/full-closure PASS.
