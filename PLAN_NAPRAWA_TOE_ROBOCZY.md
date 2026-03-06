@@ -7512,3 +7512,32 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - rozwijac pozytywny lane `axiom-augmented`,
    - albo wrocic do `T12_B1`, jesli celem pozostaje strict-core theorem-level closure.
+
+## 483. AX4 robustnosc bridge-instance i orientation slice na lane aksjomatycznym (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy actual selection z `AX3` pozostaje stabilna na calej zadeklarowanej dodatnio-wagowej rodzinie selectorow,
+   - nie promowac tego wyniku do strict core.
+2. Wynik:
+   - utworzono persisted robustness certificate:
+     `fundamental_action_reconstruction/generated/axiom_lane_selector_family_robustness_certificate.json`
+   - na lane `axiom-augmented` certyfikowano:
+     `J_ab(theta)=2(a+b)(1-cos theta)`, `a>0`, `b>0`,
+     `theta_1 = theta_2 = 0 mod 2pi`,
+     `u_1 = c_1`,
+     `u_2 = c_2`,
+     `S_orient_axiom = span{c_1,c_2}`.
+3. Frontier po kroku:
+   - strict core pozostaje bez zmian:
+     `T12_B1`,
+     `T2_B1`,
+     `C32_B2`,
+   - `AX4` dodaje tylko robustness certificate poza strict core.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/AX4_AXIOM_LANE_SELECTOR_FAMILY_ROBUSTNESS_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/ax4_axiom_lane_selector_family_robustness_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/ax4_axiom_lane_selector_family_robustness_audit_summary.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/axiom_lane_selector_family_robustness_certificate.json`.
+5. Nastepny poprawny ruch:
+   - dalej rozwijac pozytywny lane `axiom-augmented`,
+   - albo wrocic do `T12_B1`, jesli celem pozostaje strict-core theorem-level closure.

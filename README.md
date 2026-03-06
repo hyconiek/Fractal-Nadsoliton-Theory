@@ -747,5 +747,7 @@ Current status:
 - this creates a persisted actual basis-pair and orientation-slice instance under the `AX1` selector axiom, while keeping that result explicitly outside strict core,
 - `AX3` completed as the first materialized sigma-int bridge-instance step on the axiom-augmented lane,
 - this creates a persisted bridge-instance linking `sigma_int_candidate` to the residual orientation-datum role under the `AX1` selector axiom, while keeping that result explicitly outside strict core,
+- `AX4` completed as the selector-family robustness step on the axiom-augmented lane,
+- this certifies that the `AX3` bridge-instance and the actual orientation slice remain stable across the declared positive-weight selector family, while keeping that result explicitly outside strict core,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.
