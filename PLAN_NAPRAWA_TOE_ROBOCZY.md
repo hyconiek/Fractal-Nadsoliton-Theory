@@ -6480,3 +6480,31 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - przejsc do `C36` i sprawdzic, czy strict core ma juz packet-ready most
      z branchu axiom-augmented do strict selector track.
+
+## 444. C36 axiom branch to strict track bridge audit wykonane (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy branch axiom-augmented ma juz packet-ready most do
+     aktualnego selector track, i czy jest to strict-core bridge czy tylko
+     control-route overlay.
+2. Wynik:
+   - most istnieje juz jako control-route overlay przez `B6/B7`,
+   - `B8` utrzymuje zakaz traktowania tego jako strict-core discharge,
+   - aktywny blocker zawęża sie dalej do braku strict-core internalization
+     branchu `theta*=0` oraz nadal otwartego finalnego slice extraction.
+3. Twarde granice:
+   - brak theorem-level PASS,
+   - brak full-closure PASS,
+   - brak strict-core bridge,
+   - brak claimu, ze `QW-2191` jest rozladowane,
+   - brak claimu, ze `A6` uniqueness jest zamkniete,
+   - brak finalnej orientation slice.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C36_AXIOM_BRANCH_TO_STRICT_TRACK_BRIDGE_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/c36_axiom_branch_to_strict_track_bridge_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c36_axiom_branch_to_strict_track_bridge_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `C37` i sprawdzic, czy strict core ma juz packet-ready kandydat
+     internalizacji residualnego `orientation_sign_convention` lub jego
+     topologicznego odpowiednika.

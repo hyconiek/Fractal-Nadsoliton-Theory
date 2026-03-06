@@ -769,6 +769,8 @@ Status nowego toru:
 - `C34` pokazuje, ze klasa jawnego reprezentanta `u_i(theta_i)=cos(theta_i)c_i+sin(theta_i)s_i` jest juz packet-ready, a active blocker redukuje sie dalej do braku jawnych aktualnych faz `theta_1`, `theta_2` oraz nadal otwartego finalnego slice extraction,
 - `C35` wykonane jako trzydziesty piaty krok trzeciego mikrocyklu,
 - `C35` pokazuje, ze source branch dla aktualnych faz istnieje juz tylko na warstwie axiom-augmented (`QW-2192/2193`), podczas gdy strict core nadal nie eksportuje jawnych `theta_1`, `theta_2`,
+- `C36` wykonane jako trzydziesty szosty krok trzeciego mikrocyklu,
+- `C36` pokazuje, ze most z branchu axiom-augmented do selector track jest juz obecny jako control-route overlay (`B6/B7`), ale nadal brak strict-core internalization tego branchu,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -1366,6 +1368,20 @@ Co realnie zostalo dodane przez `C35`:
 - strict core nadal nie daje jawnego eksportu aktualnych `theta_1`, `theta_2`,
 - pierwszy residualny blocker zawęża sie dalej do:
   - `C35_B1 := no_strict_core_export_of_actual_local_phase_coordinates_theta_1_theta_2_for_the_actual_pair_frames; only an axiom_augmented_source_branch_theta_star_equals_0_is_currently_available`,
+- drugi residualny blocker pozostaje:
+  - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
+- trzeci residualny blocker pozostaje:
+  - `C26_B2 := no_explicit_basis_level_embedding_or_extraction_of_the_candidate_two_dimensional_orientation_slice_inside_that_reduced_plane`,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C36`:
+- repo ma juz most z branchu axiom-augmented do selector track,
+  ale tylko jako control-route overlay:
+  - `B6`: `(sigma_int_candidate, J_ab family) -> theta*=0`,
+  - `B7`: zgodnosc tego route z `QW-2190` i granicami `A6`,
+  - `B8`: jawny zakaz traktowania tego jako strict-core discharge,
+- pierwszy residualny blocker zawęża sie dalej do:
+  - `C36_B1 := no_packet_ready_strict_core_bridge_internalizing_the_axiom_augmented_theta_star_source_branch_into_the_current_selector_track; only_control_route_overlay_compatibility_is_available`,
 - drugi residualny blocker pozostaje:
   - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
 - trzeci residualny blocker pozostaje:
