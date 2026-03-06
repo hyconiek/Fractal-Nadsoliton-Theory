@@ -731,6 +731,8 @@ Status nowego toru:
 - `C15` pokazuje, ze control-only formula `M_control = T_control^T H_PsiPsi T_control` jest juz jawna, a frontier redukuje sie dalej do braku coefficient-filled canonical `H_PsiPsi` oraz braku restriction do candidate orientation slice,
 - `C16` wykonane jako szesnasty krok trzeciego mikrocyklu,
 - `C16` pokazuje, ze jawne coefficient-class rows dla `eta0` i `eta6` juz istnieja, a frontier redukuje sie dalej do braku exhaustive `12 x 12` coefficient table oraz braku restriction do candidate orientation slice,
+- `C17` wykonane jako siedemnasty krok trzeciego mikrocyklu,
+- `C17` pokazuje, ze index-complete row stencil schema dla wszystkich `12` pol `Psi` jest juz obecny, a frontier redukuje sie dalej do braku explicit row-by-row exportu oraz braku restriction do candidate orientation slice,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -1114,4 +1116,18 @@ Co realnie zostalo dodane przez `C16`:
   - `C16_B2 := no_explicit_restriction_from_the_control_pullback_orbits_to_the_candidate_orientation_slice`,
 - nadal brak discharge `C15_B1`,
 - nadal brak discharge `C15_B2`,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C17`:
+- `QW-2163`, `QW-2165` i `QW-2166` daja juz index-complete row stencil schema dla wszystkich `12` pol `Psi`,
+- stencil obejmuje:
+  - diagonal self/vacuum-shift/Yukawa/mass class,
+  - off-diagonal symmetric `K`-mixing class,
+  - kinetic identity term,
+- exhaustive-table blocker nie dotyczy juz braku samego wzoru wiersza,
+- aktualny frontier zawęża sie do:
+  - `C17_B1 := no_explicit_row_by_row_export_instantiating_the_index_complete_Psi_row_stencil_for_all_i_0_to_11`,
+  - `C17_B2 := no_explicit_restriction_from_the_control_pullback_orbits_to_the_candidate_orientation_slice`,
+- nadal brak discharge `C16_B1`,
+- nadal brak discharge `C16_B2`,
 - nadal brak theorem-level/full-closure PASS.

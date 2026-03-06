@@ -5974,3 +5974,30 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - przejsc do `C17` i sprawdzic, czy strict core daje finite index-complete stencil dla wszystkich `12` rows,
    - albo jawnie potwierdzic, ze exhaustive coefficient export nadal nie jest obecny.
+
+## 425. C17 index-complete Psi row stencil audit wykonane (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy strict core ma juz skonczony wzor wiersza dla wszystkich `12` pol `Psi`,
+     bez udawania explicit row-by-row exportu.
+2. Wynik:
+   - index-complete row stencil schema jest juz obecny,
+   - obejmuje:
+     - diagonal self/vacuum-shift/Yukawa/mass class,
+     - off-diagonal symmetric `K`-mixing class,
+     - kinetic identity term,
+   - aktualny frontier zawęza sie do:
+     - braku explicit row-by-row exportu dla wszystkich `i=0..11`,
+     - braku restriction do candidate orientation slice.
+3. Twarde granice:
+   - brak `C16_B1` PASS,
+   - brak theorem-level PASS,
+   - brak full-closure PASS.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C17_INDEX_COMPLETE_PSI_ROW_STENCIL_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/c17_index_complete_psi_row_stencil_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c17_index_complete_psi_row_stencil_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `C18` i sprawdzic, czy strict core daje finite row-by-row export packet dla wszystkich `12` rows,
+   - albo jawnie potwierdzic, ze exhaustive row export nadal nie jest obecny.
