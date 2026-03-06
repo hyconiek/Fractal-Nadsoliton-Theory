@@ -5052,3 +5052,109 @@ Po tej rundzie:
 5. Kolejny poprawny ruch poza drabinka:
    - wykonac `A2_SUPERSOLITON_MATCHING_SPEC` i rozpisac warunki `forced / optional / gauge-choice-dependent`,
    - potem przejsc do `A3_KERNEL_ANALYSIS_SPEC` z poprawnym rozdzialem `zero/gauge/physical modes`.
+
+## 391. A2 supersoliton matching wykonane (2026-03-06)
+1. Zakres:
+   - wykonano `A2` na minimalnej galezi `single-foundation / gauge-off / metric-spectator`,
+   - zredukowano matching do radialnej akcji dla profili `rho(r)` i `phi(r)`,
+   - zapisano jawne rownania Eulera-Lagrange'a dla tej galezi,
+   - rozdzielono warunki `forced / optional / gauge-choice-dependent`.
+2. Artefakty:
+   - zaktualizowano `fundamental_action_reconstruction/A2_SUPERSOLITON_MATCHING_SPEC.md`,
+   - dodano skrypt `fundamental_action_reconstruction/a2_supersoliton_matching.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/a2_supersoliton_matching_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+3. Co zostalo realnie ustalone:
+   - matching widzi tylko `V_eff = V + U_mix` wzdluz wykonanej galezi tla,
+   - `G_AB` jest wymuszony tylko przez dodatnia projekcje tangentowa `K(rho,phi)`,
+   - sektor gauge i metryczny pozostaja na tej galezi nieaktywne, a nie zamkniete.
+4. Twardy rygor:
+   - brak theorem-level PASS,
+   - brak full-closure PASS,
+   - brak claimu o wyprowadzeniu spinorow, konkretnej grupy gauge albo GR-limit.
+5. Nastepny poprawny ruch:
+   - wykonac `A3` na dokladnie tej samej galezi tla i zbudowac operator drugiej wariacji z rozdzialem `zero / gauge / physical modes`.
+
+## 392. A3 kernel analysis wykonane (2026-03-06)
+1. Zakres:
+   - wykonano `A3` na tej samej galezi minimalnej co `A2`,
+   - zapisano jawny operator drugiej wariacji `O_phys = -d/dr[K_2 d/dr] + M_2`,
+   - rozdzielono oczekiwane `zero / gauge / physical modes`,
+   - dopisano projection-before-claim constraints dla wszelkich przyszlych claimow o stabilnosci.
+2. Artefakty:
+   - zaktualizowano `fundamental_action_reconstruction/A3_KERNEL_ANALYSIS_SPEC.md`,
+   - dodano skrypt `fundamental_action_reconstruction/a3_kernel_analysis.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/a3_kernel_analysis_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+3. Co zostalo realnie ustalone:
+   - fizyczny kernel na tej galezi jest macierzowym operatorem, a nie skalarna liczba,
+   - zero modes i przyszle gauge modes musza byc projektowane przed claimem coercivity,
+   - kanal fizyczny zaczyna sie od dubletu `delta rho / delta phi` plus ortogonalne shape modes.
+4. Twardy rygor:
+   - brak global-stability PASS,
+   - brak fermionic-kernel PASS,
+   - brak Lorentzian unitarity PASS,
+   - brak theorem-level/full-closure PASS.
+5. Nastepny poprawny ruch:
+   - wykonac `A4` i zbadac, czy z `O_phys` wynika rzeczywisty emergentny coarse-graining, a nie recznie wszyty proxy-RG.
+
+## 393. Ontologiczne doprecyzowanie toru konstrukcyjnego (2026-03-06)
+1. Doprecyzowanie kierunku pracy:
+   - warstwa pierwotna jest traktowana heurystycznie jako informacyjna,
+   - jednym fundamentalnym obiektem konstrukcyjnym pozostaje nadsoliton,
+   - `Phi`, sektor gauge i sektor metryczny sa na tym etapie traktowane jako warstwy efektywne albo emergentne.
+2. Konsekwencja dla `A1..A3`:
+   - `Psi` pozostaje jedynym polem traktowanym jako ontologicznie fundamentalne,
+   - `phi(r)` w `A2` nie jest interpretowane jako drugi byt wspolfundamentalny,
+   - `delta phi` w `A3` jest fluktuacja warstwy porzadku zwiazanej z ta sama ontologia jednego nadsolitonu.
+3. Twardy rygor:
+   - nie podnosi to statusu do theorem-level closure,
+   - nie podnosi to statusu do full-closure PASS,
+   - pozostaje to konstrukcyjna wskazowka programu, nie recenzencki dowod domkniecia `L1`.
+
+## 394. A4 RG emergence wykonane (2026-03-06)
+1. Zakres:
+   - wykonano jednokrokowy Wilsonowski coarse-graining na tej samej galezi minimalnej `single-foundation / gauge-off / metric-spectator`,
+   - shell integration jest wykonywana tylko na fizycznym podprzestrzennym pakiecie modow z `A3`,
+   - zapisano `S_eff[xi_<] = S_phys[xi_<] + 1/2 Tr_shell log O_phys + Delta S_local + Delta S_EFT`.
+2. Artefakty:
+   - zaktualizowano `fundamental_action_reconstruction/A4_RG_EMERGENCE_SPEC.md`,
+   - dodano skrypt `fundamental_action_reconstruction/a4_rg_emergence.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/a4_rg_emergence_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+3. Co zostalo realnie ustalone:
+   - `K_tan(mu)`, `H_V(mu)`, `C_top(mu)` i ogon `c_4, c_6, ...` sa klasyfikowane jako lokalnie emergentne na wykonanej galezi,
+   - predeklarowane `Delta L_EFT` pozostaje warstwa wpisana recznie,
+   - `Z_IJ(mu)`, `M_eff(mu)`, `Lambda_eff(mu)` oraz running fermionowy pozostaja nierozstrzygniete.
+4. Twardy rygor:
+   - brak globalnego RG-closure PASS,
+   - brak automatycznego zamkniecia `L12`,
+   - brak theorem-level/full-closure PASS.
+5. Nastepny poprawny ruch:
+   - przejsc do `A5` i rozdzielic droge spinor-emergent od minimal spin-bundle extension.
+
+## 395. A5 spinor route split wykonane (2026-03-06)
+1. Zakres:
+   - wykonano grep-audit w repo dla tematow `spinor / Dirac / gamma / spin-bundle / anomaly / gauge emergence`,
+   - rozdzielono `strict-admissible internal references` od `legacy / exploratory / methodology-risk`,
+   - wykonano formalny split `spinor-emergent route` vs `minimal spin-bundle extension`.
+2. Co zostalo uznane za admissible internal references:
+   - `QW-2121`, `QW-2126`, `QW-2127`, `QW-2189`, `QW-2190`, `QW-2191`.
+3. Co zostalo zdegradowane metodologicznie:
+   - starsze lub niestrektowe badania typu `QW-1200` oraz legacy hydrodynamic/vortex routes,
+   - wolno ich uzywac tylko jako heurystyki albo negatywnej kontroli, nie jako proof input.
+4. Rozstrzygniecie konstrukcyjne:
+   - glowna droga pozostaje `3D topological spinor emergence`, bo jest zgodna z ontologia jednego nadsolitonu,
+   - droga kontrolna pozostaje `minimal spin-bundle extension`, bo jest lepiej podparta admissible strict references.
+5. Artefakty:
+   - zaktualizowano `fundamental_action_reconstruction/A5_SM_GR_BRIDGE_SPEC.md`,
+   - dodano `fundamental_action_reconstruction/a5_spinor_route_split.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/a5_spinor_route_split_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+6. Twardy rygor:
+   - brak theorem-level derivation spinorow,
+   - brak derivation gamma matrices,
+   - brak full-closure PASS,
+   - brak traktowania legacy prior art jako dowodu.
+7. Nastepny poprawny ruch:
+   - przejsc do `A6` i budowac `gauge reconstruction` tylko na admissible strict references, z legacy korpusem pozostawionym poza warstwa proof-level.

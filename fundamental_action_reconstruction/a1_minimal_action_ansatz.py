@@ -9,8 +9,13 @@ AS_OF = "2026-03-06"
 summary = {
     "program_id": "fundamental_action_reconstruction",
     "as_of": AS_OF,
-    "status": "A1_SPEC_READY_NO_FULL_CLOSURE_CLAIM",
+    "status": "A1_SPEC_READY_SINGLE_NADSOLITON_GUIDED_NO_FULL_CLOSURE_CLAIM",
     "primary_route": "action-first with supersoliton matching, kernel analysis, and RG emergence",
+    "ontological_guidance": {
+        "primordial_layer": "information",
+        "fundamental_object": "single nadsoliton",
+        "scope_note": "constructive guidance only; not a theorem-level closure claim",
+    },
     "anti_overclaim": {
         "theorem_level_closure_claim": False,
         "full_lagrangian_closed_claim": False,
@@ -22,23 +27,23 @@ summary = {
         "field_content": [
             {
                 "id": "Psi",
-                "kind": "primary multicomponent bosonic field",
-                "status": "assumed in A1",
+                "kind": "ontologically fundamental multicomponent bosonic field",
+                "status": "assumed in A1 as the single foundational field",
             },
             {
                 "id": "Phi",
-                "kind": "order-parameter scalar",
-                "status": "assumed in A1",
+                "kind": "effective order-parameter scalar or Psi-functional",
+                "status": "admitted in A1 as non-cofundamental layer",
             },
             {
                 "id": "A_mu^I",
-                "kind": "gauge connection placeholder",
-                "status": "admitted but gauge group not fixed in A1",
+                "kind": "effective gauge connection placeholder",
+                "status": "admitted but not treated as cofundamental; gauge group not fixed in A1",
             },
             {
                 "id": "g_mu_nu",
-                "kind": "metric / gravitational sector",
-                "status": "admitted but not closed in A1",
+                "kind": "effective metric / gravitational layer",
+                "status": "admitted but not treated as cofundamental and not closed in A1",
             },
             {
                 "id": "psi_F",
@@ -52,16 +57,17 @@ summary = {
             "base derivative order <= 2",
             "no hidden nonlocal kernel term in the base ansatz",
             "all higher operators explicit as EFT corrections",
+            "Psi is the only ontologically fundamental field in A1",
+            "Phi/A_mu/g_mu_nu are effective or emergent layers in A1",
             "no fixed SM gauge group claim in A1",
             "no spinor/gamma closure claim in A1",
         ],
         "lagrangian_sectors": [
-            "primary kinetic sector G_AB(Psi,Phi) D_mu Psi^A D^mu Psi^B",
-            "order-parameter kinetic sector (d Phi)^2",
-            "potential sector V(Psi,Phi)",
-            "mixing sector U_mix(Psi,Phi)",
-            "gauge-curvature sector Z_IJ(Psi,Phi) F^I F^J",
-            "gravitational coupling sector M_eff(Psi,Phi)^2 R / 2 - Lambda_eff(Psi,Phi)",
+            "base Psi sector as the single foundational carrier of nadsoliton structure",
+            "effective order-parameter sector for Phi tied to Psi",
+            "effective potential sector V_eff(Psi,Phi)",
+            "effective gauge-curvature placeholder sector Z_IJ(Psi,Phi) F^I F^J",
+            "effective gravitational coupling sector M_eff(Psi,Phi)^2 R / 2 - Lambda_eff(Psi,Phi)",
             "explicit EFT correction sector Delta L_EFT",
         ],
         "reviewer_open_obligations": [

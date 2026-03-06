@@ -1,0 +1,150 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+AS_OF = "2026-03-06"
+
+summary = {
+    "program_id": "fundamental_action_reconstruction",
+    "as_of": AS_OF,
+    "status": "A5_EXECUTED_SPINOR_ROUTE_SPLIT_WITH_REPO_PRIOR_ART_NO_FULL_CLOSURE_CLAIM",
+    "ontological_guidance": {
+        "fundamental_object": "single nadsoliton",
+        "preferred_spinor_route": "emergent from 3D topology",
+        "control_route": "minimal spin-bundle extension",
+        "scope_note": "constructive routing decision only; not a theorem-level spinor derivation",
+    },
+    "prior_art_method_policy": {
+        "strict_admissible_internal_references_can_support_construction": True,
+        "legacy_or_exploratory_results_can_only_support_heuristics": True,
+        "legacy_or_exploratory_results_can_serve_as_negative_controls": True,
+        "legacy_or_exploratory_results_count_as_proof_inputs": False,
+    },
+    "prior_art": [
+        {
+            "id": "QW-2121",
+            "role": "formal spinor+gauge extension spec",
+            "status": "formal_extension_not_strict_derived",
+            "evidence_tier": "strict_admissible_internal_reference",
+        },
+        {
+            "id": "QW-2126",
+            "role": "numeric gauge and Yukawa bridge",
+            "status": "partial_bridge",
+            "evidence_tier": "strict_admissible_internal_reference",
+        },
+        {
+            "id": "QW-2127",
+            "role": "nonabelian action-level spinor+gauge bridge",
+            "status": "partial_bridge_with_kernel_uniqueness_open",
+            "evidence_tier": "strict_admissible_internal_reference",
+        },
+        {
+            "id": "QW-2189",
+            "role": "de-anchored spinor+gauge consistency and anomaly closure",
+            "status": "partial_consistency_global_emergence_open",
+            "evidence_tier": "strict_admissible_internal_reference",
+        },
+        {
+            "id": "QW-2190",
+            "role": "kernel-mode representation emergence scaffold",
+            "status": "partial_scaffold_physical_uniqueness_open",
+            "evidence_tier": "strict_admissible_internal_reference",
+        },
+        {
+            "id": "QW-2191",
+            "role": "mode-index uniqueness obstruction theorem",
+            "status": "strict_obstruction",
+            "evidence_tier": "strict_admissible_internal_reference",
+        },
+        {
+            "id": "QW-1200",
+            "role": "3D skyrmion/Hopf/F-R/Jackiw-Rebbi spinor-emergence route",
+            "status": "legacy_constructive_signal_not_admitted_as_proof",
+            "evidence_tier": "legacy_heuristic",
+        },
+        {
+            "id": "hydro_2d_vortex",
+            "role": "negative result: 2D vortex route fails for fermionic spin-1/2",
+            "status": "legacy_negative_control_signal",
+            "evidence_tier": "legacy_negative_control",
+        },
+    ],
+    "routes": {
+        "primary": {
+            "id": "spinor_emergent",
+            "fit_to_single_nadsoliton_ontology": "high",
+            "readiness": "low_to_medium",
+            "current_status": "hypothesis_branch_with_partial_support_not_closed",
+            "required_structures": [
+                "3D Skyrmion/Hopf topology",
+                "Finkelstein-Rubinstein exchange sign",
+                "Jackiw-Rebbi-like zero modes or equivalent operator mechanism",
+                "Dirac-like operator from linearization around nadsoliton background",
+                "compatibility with kernel-mode gauge scaffold",
+            ],
+        },
+        "control": {
+            "id": "minimal_spin_bundle_extension",
+            "fit_to_single_nadsoliton_ontology": "moderate",
+            "readiness": "high",
+            "current_status": "operational_bridge_not_emergent",
+            "required_structures": [
+                "effective tetrad/spin connection",
+                "Dirac block bar(psi)(i gamma^mu D_mu - m)psi",
+                "compatibility with QW-2121/2126/2127",
+                "compatibility with QW-2189 anomaly and charge closure",
+            ],
+        },
+    },
+    "status_matrix": [
+        {
+            "object": "3D topological origin of spin-1/2",
+            "status": "hypothesis_branch_with_partial_support",
+        },
+        {
+            "object": "2D vortex route for fermions",
+            "status": "legacy_negative_control_signal",
+        },
+        {
+            "object": "Dirac-like action block",
+            "status": "partially_derived_or_extension_backed",
+        },
+        {
+            "object": "gamma matrices from nadsoliton linearization",
+            "status": "unresolved",
+        },
+        {
+            "object": "anomaly and charge closure",
+            "status": "partially_derived",
+        },
+        {
+            "object": "kernel-mode gauge scaffold",
+            "status": "partially_derived",
+        },
+        {
+            "object": "full uniqueness of representation map",
+            "status": "blocked",
+        },
+        {
+            "object": "minimal spin-bundle extension",
+            "status": "available_as_control_route",
+        },
+    ],
+    "next_step": "A6",
+    "anti_overclaim": {
+        "dirac_spinor_derivation_closed_claim": False,
+        "gamma_matrix_derivation_closed_claim": False,
+        "full_kernel_origin_gauge_uniqueness_claim": False,
+        "full_gr_bridge_claim": False,
+        "legacy_prior_art_treated_as_proof": False,
+    },
+}
+
+root = Path(__file__).resolve().parent
+out = root / "generated" / "a5_spinor_route_split_summary.json"
+out.parent.mkdir(parents=True, exist_ok=True)
+out.write_text(json.dumps(summary, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
+print(f"wrote {out}")

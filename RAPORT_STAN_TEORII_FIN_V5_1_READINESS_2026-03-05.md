@@ -666,10 +666,40 @@ Jego rola:
 
 Status nowego toru:
 - `A1` wykonane jako warstwa spec/ansatz,
-- `A2-A5` przygotowane jako jawne specy kolejnych etapow,
+- `A2` wykonane na minimalnej galezi matchingu `single-foundation / gauge-off / metric-spectator`,
+- `A3` wykonane jako minimalna analiza operatora drugiej wariacji i split `zero / gauge / physical modes`,
+- tor jest teraz jawnie prowadzony pod ontologiczna wskazowka: `informacja` jako warstwa pierwotna i `jeden nadsoliton` jako pojedynczy fundament konstrukcyjny,
+- `Phi`, sektor gauge i sektor metryczny sa na tym etapie traktowane jako warstwy efektywne albo emergentne, a nie wspolfundamentalne byty,
+- `A4` wykonane jako jednokrokowa warstwa coarse-graining / RG emergence na tej samej galezi minimalnej,
+- `A5` wykonane jako split `spinor-emergent route` vs `minimal spin-bundle extension`,
+- w `A5` wprowadzono jawny audit metodologiczny: legacy/non-strict prior art nie jest traktowany jako proof input,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
 Znaczenie operacyjne:
 - drabinka pozostaje narzedziem audytu, walidacji i anti-overclaim,
 - nowy tor jest glowna sciezka konstrukcji pelnego kandydackiego lagranzianu.
+
+Co realnie zostalo dodane przez `A2`:
+- jawny minimalny ansatz tla `Psi^A(x) = rho(r) n^A(Omega)`, `Phi(x) = phi(r)`,
+- jawna zredukowana akcja radialna i dwa rownania E-L dla wykonanej galezi,
+- rozdzial `forced / optional / gauge-choice-dependent` dla `G_AB`, `V+U_mix`, `Z_IJ`, `M_eff`,
+- nadal bez claimu, ze gauge sector, spinor sector albo gravity bridge zostaly zamkniete.
+
+Co realnie zostalo dodane przez `A3`:
+- jawny operator drugiej wariacji `O_phys = -d/dr[K_2 d/dr] + M_2` na minimalnej galezi,
+- jawny split `zero / gauge / physical modes`,
+- potwierdzenie, ze poprawny claim o stabilnosci wymaga najpierw projekcji modow zerowych i gauge,
+- nadal bez claimu globalnej coercivity, fermionic closure ani Lorentzian unitarity.
+
+Co realnie zostalo dodane przez `A4`:
+- jawny jednokrokowy Wilsonowski coarse-graining dla fizycznego operatora z `A3`,
+- symboliczne beta-functions dla `K_tan`, `H_V`, `C_top` i ogona `c_n`,
+- tabela `emergent / inserted by hand / unresolved`,
+- nadal bez claimu globalnego RG closure, automatycznego zamkniecia `L12`, spinorowego runningu albo gravity-running closure.
+
+Co realnie zostalo dodane przez `A5`:
+- jawny split dwoch drog dla sektora fermionowego: `3D topological spinor emergence` oraz `minimal spin-bundle extension`,
+- lista admissible internal references (`QW-2121/2126/2127/2189/2190/2191`),
+- jawna degradacja legacy badań do roli heurystyki albo negatywnej kontroli,
+- nadal bez claimu theorem-level derivation spinorow lub gamma matrices.

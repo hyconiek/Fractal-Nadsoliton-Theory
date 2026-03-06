@@ -1,26 +1,143 @@
 # A4 RG Emergence Spec
 
-Status: `READY_NOT_EXECUTED`
+Status: `A4_EXECUTED_ONE_STEP_MINIMAL_BRANCH_COARSE_GRAINING`
+As of: `2026-03-06`
 
 ## Cel
 
-Sprawdzic, czy z operatora fluktuacji i rozdzialu skal wynika naturalnie Wilsonowski przeplyw, a nie tylko recznie dosztukowany proxy-RG.
+Sprawdzic, czy z operatora fluktuacji z `A3` i jawnego rozdzialu skal wynika pierwszy uczciwy krok Wilsonowskiego coarse-graining, a nie tylko recznie dosztukowany proxy-RG.
 
-## Minimalna procedura
+Etap `A4` jest wykonany tylko na tej samej galezi minimalnej:
+- `single-foundation`,
+- `gauge-off`,
+- `metric-spectator`.
 
-1. zdefiniowac rozdzial modow UV/IR,
-2. zintegrowac szybkie mody w jawnie zadeklarowanym schemacie,
-3. zapisac efektywne sprzezenia po coarse-graining,
-4. sklasyfikowac operatory jako relevant / marginal / irrelevant,
-5. sprawdzic, czy przeplyw utrzymuje strukture pozwalajaca na tlo supersolitonowe.
+## Ontologiczna wskazowka etapu
 
-## Produkt etapu
+Ten etap jest prowadzony przy tej samej konstrukcyjnej ontologii:
+- `Psi` jest jedynym polem traktowanym jako fundamentalne,
+- `Phi` jest efektywna warstwa porzadku zwiazana z `Psi`,
+- sektor gauge i metryczny pozostaja warstwami emergentnymi albo efektywnymi,
+- to nadal nie jest theorem-level closure ontologii jednego nadsolitonu.
 
-- jawny schemat coarse-graining,
-- efektywna akcja po jednym kroku RG,
-- kandydackie beta-functions,
-- tabela: `emergent / inserted by hand / unresolved`.
+## Wejscie z A3
+
+`A3` dostarczylo:
+- operator fizyczny `O_phys = - d/dr [ K_2(r) d/dr ] + M_2(r)`,
+- split `zero / gauge / physical modes`,
+- warunek, ze przyszle claimy o stabilnosci i RG wolno stawiac dopiero po projekcji na kanal fizyczny.
+
+W `A4` pracujemy tylko na fizycznym podprzestrzennym pakiecie modow.
+
+## Jednokrokowy coarse-graining
+
+Rozdzielamy fizyczne fluktuacje:
+
+```text
+xi = xi_< + xi_>
+```
+
+gdzie:
+- `xi_<` zbiera mody o skali `|p| < mu / b`,
+- `xi_>` zbiera mody z shellu `mu / b <= |p| <= mu`,
+- `b > 1` jest jednym krokiem coarse-graining.
+
+Po scalkowaniu shellu `xi_>` zapisujemy:
+
+```text
+S_eff[xi_<] =
+  S_phys[xi_<]
+  + 1/2 Tr_shell log O_phys
+  + Delta S_local
+  + Delta S_EFT
+```
+
+Interpretacja:
+- `S_phys` to wejscie z minimalnego kernela `A3`,
+- `Tr_shell log O_phys` jest pierwszym uczciwym krokiem Wilsonowskiego przeplywu,
+- `Delta S_local` zbiera lokalne renormalizacje operatorow juz obecnych,
+- `Delta S_EFT` zbiera wyzsze operatory generowane przez coarse-graining.
+
+## Co jest emergentne, co wstawione recznie, a co nadal otwarte
+
+| Obiekt | Status po A4 | Znaczenie |
+|---|---|---|
+| `K_tan(mu)` | `emergent` | efektywna tangensowa metryka kernela po shell integration |
+| `H_V(mu)` | `emergent` | efektywny Hessian potencjalu na wykonanej galezi |
+| `C_top(mu)` | `emergent` | efektywny topologiczny skladnik radialny po coarse-graining |
+| `c_4(mu), c_6(mu), ...` | `emergent` | wyzsze lokalne operatory generowane jako ogon EFT |
+| predeklarowane `Delta L_EFT` | `inserted_by_hand` | pozostaje jawnie wpisanym miejscem na wyzsze operatory |
+| `Z_IJ(mu)` | `unresolved` | sektor gauge nie jest aktywny na tej galezi |
+| `M_eff(mu), Lambda_eff(mu)` | `unresolved` | sektor grawitacyjny pozostaje spectator-only |
+| fermionowe sprzezenia biezace | `unresolved` | brak aktywnej galezi fermionowej w `A4` |
+
+## Symboliczne beta-functions
+
+Na poziomie wykonanej galezi wolno zapisac tylko symboliczne relacje:
+
+```text
+beta_K = Delta_K[ Tr_shell log O_phys ]
+beta_H = Delta_H[ Tr_shell log O_phys ]
+beta_top = Delta_top[ Tr_shell log O_phys ]
+beta_c_n = canonical_part + shell_induced_part
+```
+
+To znaczy:
+- `A4` pokazuje, skad ma sie brac running,
+- ale nie twierdzi jeszcze, ze policzono globalny RG package,
+- nie twierdzi tez, ze running jest juz unikalny poza wykonana minimalna gala.
+
+## Relevant / marginal / irrelevant
+
+Na wykonanej galezi dostajemy minimalna klasyfikacje:
+
+| Klasa | Kandydaci |
+|---|---|
+| `relevant` | masowe przesuniecia efektywnego Hessianu, skladniki prozniowe, niskowymiarowe deformacje radialne |
+| `marginal` | dwupochodne skladniki bazowe w kanale fizycznym, wybrane sprzezenia bezwymiarowe jesli przetrwaja aktywacje dalszych sektorow |
+| `irrelevant` | operatory wyzszego rzedu `c_4, c_6, ...` tlumione przez skale odciecia |
+
+Ta tabela jest na razie lokalna dla wykonanej galezi i nie moze byc sprzedawana jako finalna klasyfikacja calej teorii.
+
+## Co A4 rzeczywiscie zamyka
+
+`A4` zamyka tylko tyle:
+- istnieje jawny jednokrokowy schemat Wilsonowskiego coarse-graining dla minimalnego kernela z `A3`,
+- wiadomo, ktore elementy runningu sa rzeczywiscie emergentne na tej galezi,
+- wiadomo, ktore elementy pozostaja nadal wstawione recznie albo nierozstrzygniete,
+- powstaje poprawny punkt wejscia do dalszego mostu `A5`.
+
+## Co pozostaje otwarte po A4
+
+- globalny, wieloskalowy RG closure,
+- aktywacja sektora gauge w runningu,
+- aktywacja sektora fermionowego,
+- running sektora grawitacyjnego,
+- powiazanie z historycznym `L12` bez dodatkowych theorem-level krokow,
+- unikalnosc przeplywu poza wykonana minimalna gala.
 
 ## Anti-overclaim
 
-Brak counterexample w ograniczonej domenie nie bedzie traktowany jako dowod globalnego nonperturbative RG closure.
+`A4` nie twierdzi, ze:
+- zamknieto globalny nonperturbative RG,
+- z automatu zamknieto `L12`,
+- z runningu juz wynika `SU(3)xSU(2)xU(1)`,
+- zamknieto fermionowy albo grawitacyjny sektor przeplywu,
+- uzyskano theorem-level/full-closure PASS.
+
+Brak kontrprzykladu albo lokalna zgodnosc shell integration nie sa traktowane jako dowod globalnego closure.
+
+## Produkt etapu
+
+- jawny jednokrokowy schemat coarse-graining,
+- efektywna akcja po jednym kroku RG,
+- symboliczne beta-functions dla `K_tan`, `H_V`, `C_top`, `c_n`,
+- tabela `emergent / inserted by hand / unresolved`,
+- lista granic, ktorych nie wolno nadinterpretowac.
+
+## Nastepny krok
+
+Naturalnym kolejnym ruchem jest `A5`:
+- rozdzielic droge spinor-emergent od minimal spin-bundle extension,
+- ustalic, ktore dane z `A1..A4` rzeczywiscie wspieraja sektor fermionowy,
+- i dopiero potem wracac do mostu SM+GR.

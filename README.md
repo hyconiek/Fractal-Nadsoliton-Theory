@@ -565,5 +565,13 @@ Purpose:
 
 Current status:
 - `A1` completed as specification/ansatz layer,
+- `A2` completed on a minimal supersoliton matching branch (`single-foundation`, `gauge-off`, `metric-spectator`),
+- `A3` completed as the minimal-branch fluctuation-operator and mode-split layer,
+- the track is now explicitly guided by a `single nadsoliton` ontology with `information` treated as the primordial heuristic layer,
+- `A4` completed as a one-step coarse-graining / RG-emergence layer on the same minimal branch,
+- `A5` completed as a spinor-route split with a methodological audit of prior local studies,
+- legacy/non-strict prior studies are now treated only as heuristics or negative controls, not as proof inputs,
+- the primary route is now `3D topological spinor emergence`, with `minimal spin-bundle extension` retained as a control route,
+- `A6` remains the next explicit stage,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

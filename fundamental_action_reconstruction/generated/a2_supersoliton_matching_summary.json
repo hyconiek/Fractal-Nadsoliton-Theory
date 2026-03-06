@@ -1,0 +1,138 @@
+{
+  "program_id": "fundamental_action_reconstruction",
+  "as_of": "2026-03-06",
+  "status": "A2_MINIMAL_MATCHING_BRANCH_COMPLETED_NO_FULL_CLOSURE_CLAIM",
+  "anti_overclaim": {
+    "theorem_level_closure_claim": false,
+    "full_lagrangian_closed_claim": false,
+    "spinor_derivation_claim": false,
+    "gauge_group_derivation_claim": false,
+    "gr_limit_claim": false
+  },
+  "branch": {
+    "id": "single_foundation_minimal_matching_branch",
+    "description": "minimal supersoliton matching branch with gauge-off and metric-spectator assumptions",
+    "assumptions": [
+      "Psi^A(x) = rho(r) n^A(Omega)",
+      "Phi(x) = phi(r)",
+      "A_mu^I = 0 on the executed branch",
+      "g_mu_nu = eta_mu_nu on the executed branch"
+    ]
+  },
+  "reduced_action": {
+    "formula": "S_red = Omega_(d-1) int dt dr [ r^(d-1) ( 1/2 K(rho,phi) (rho')^2 + 1/2 (phi')^2 - V_eff(rho,phi) ) - r^(d-3) T_top(rho,phi; n, B) ]",
+    "effective_objects": {
+      "K": "projection of G_AB onto the background tangent",
+      "V_eff": "V + U_mix evaluated on the executed background branch",
+      "T_top": "angular/topological stress term induced by n^A(Omega) and winding/topological data"
+    }
+  },
+  "euler_lagrange": {
+    "rho": "d/dr [ r^(d-1) K(rho,phi) rho' ] - r^(d-1) [ 1/2 (partial_rho K) (rho')^2 - partial_rho V_eff ] + r^(d-3) partial_rho T_top = 0",
+    "phi": "d/dr [ r^(d-1) phi' ] - r^(d-1) [ 1/2 (partial_phi K) (rho')^2 - partial_phi V_eff ] + r^(d-3) partial_phi T_top = 0"
+  },
+  "boundary_conditions": {
+    "core": [
+      "rho'(0) = 0",
+      "phi'(0) = 0",
+      "T_top finite at r = 0",
+      "core data compatible with chosen topological branch"
+    ],
+    "infinity": [
+      "rho(r) -> rho_inf",
+      "phi(r) -> phi_inf",
+      "partial_rho V_eff(rho_inf, phi_inf) = 0",
+      "partial_phi V_eff(rho_inf, phi_inf) = 0",
+      "T_top / r^2 -> 0"
+    ]
+  },
+  "classification": [
+    {
+      "object": "radial profiles rho(r), phi(r)",
+      "class": "forced",
+      "reason": "without them there is no supersoliton background to match"
+    },
+    {
+      "object": "positive regular K(rho,phi) along the background branch",
+      "class": "forced",
+      "reason": "required as the A3 input kernel metric"
+    },
+    {
+      "object": "critical point of V_eff at infinity",
+      "class": "forced",
+      "reason": "required by finite-energy asymptotics"
+    },
+    {
+      "object": "separate split of V and U_mix",
+      "class": "optional",
+      "reason": "A2 only constrains their sum along the background branch"
+    },
+    {
+      "object": "full off-branch tensor structure of G_AB",
+      "class": "optional",
+      "reason": "A2 needs only the projection onto the background tangent"
+    },
+    {
+      "object": "nontrivial gauge profile A_mu^I",
+      "class": "optional",
+      "reason": "minimal executed branch is gauge-off"
+    },
+    {
+      "object": "internal orientation n^A(Omega)",
+      "class": "gauge-choice-dependent",
+      "reason": "orientation basis is not fixed by matching alone"
+    },
+    {
+      "object": "A_mu^I = 0 vs A_mu^I pure gauge",
+      "class": "gauge-choice-dependent",
+      "reason": "both realize the minimal branch before physical flux is turned on"
+    }
+  ],
+  "functional_status": {
+    "G_AB": {
+      "forced": [
+        "positive tangent projection K(rho,phi)",
+        "regularity on the core and on the vacuum boundary"
+      ],
+      "optional": [
+        "transverse field-space completion remains open"
+      ]
+    },
+    "V_plus_U_mix": {
+      "forced": [
+        "must admit an asymptotic critical point compatible with finite energy"
+      ],
+      "optional": [
+        "no unique decomposition into V and U_mix from A2 alone"
+      ]
+    },
+    "Z_IJ": {
+      "forced": [
+        "no leading-order constraint on the executed gauge-off branch"
+      ],
+      "optional": [
+        "specific gauge kinetic completion remains open"
+      ]
+    },
+    "M_eff_and_Lambda_eff": {
+      "forced": [
+        "only compatibility with future metric backreaction branch"
+      ],
+      "optional": [
+        "specific functional form remains open in A2"
+      ]
+    }
+  },
+  "open_obligations": [
+    "prove actual existence of a global solution for a concrete K/V_eff/T_top choice",
+    "decide whether gauge-on branch is needed for stabilization",
+    "extract the quadratic fluctuation operator on the executed branch",
+    "separate zero modes, gauge modes, and physical modes in A3",
+    "test whether the same branch survives fermionic and gravitational extensions"
+  ],
+  "next_steps": [
+    "A3",
+    "A4",
+    "A5"
+  ]
+}
