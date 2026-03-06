@@ -743,5 +743,7 @@ Current status:
 - this records the strongest honest interpretation now supported by the evidence: selector closure is not achieved in strict core, and the project must either discharge `T12_B1` directly or accept selector-axiom necessity / strict-core incompleteness as the active design conclusion,
 - `AX1` completed as an explicit axiom-augmented positive lane,
 - this opens actual `theta_1`, `theta_2`, `u_1`, `u_2`, and an actual orientation-slice carrier under the minimal selector axiom already known from `QW-2192/QW-2193`, while keeping that result explicitly outside strict core,
+- `AX2` completed as the first materialized actual-instance step on the axiom-augmented lane,
+- this creates a persisted actual basis-pair and orientation-slice instance under the `AX1` selector axiom, while keeping that result explicitly outside strict core,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

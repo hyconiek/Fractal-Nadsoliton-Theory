@@ -7451,3 +7451,32 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - zmaterializowac actual basis pair i orientation slice na lane `AX1`,
    - albo wrocic do `T12_B1`, ale juz tylko jesli celem jest strict-core theorem-level closure.
+
+## 481. AX2 actual basis pair i orientation slice na lane aksjomatycznym (2026-03-06)
+
+1. Cel:
+   - wykonac pierwszy materialny krok po `AX1`,
+   - zmaterializowac actual `u_1`, `u_2` oraz `S_orient_axiom`,
+   - przy jawnej separacji od strict core.
+2. Wynik:
+   - utworzono persisted instance:
+     `fundamental_action_reconstruction/generated/axiom_lane_actual_basis_pair_orientation_slice_instance.json`
+   - w lane `axiom-augmented` zapisano:
+     `theta_1 = theta_2 = 0 mod 2pi`,
+     `u_1 = c_1`,
+     `u_2 = c_2`,
+     `S_orient_axiom = span{c_1,c_2}`.
+3. Frontier po kroku:
+   - strict core pozostaje bez zmian:
+     `T12_B1`,
+     `T2_B1`,
+     `C32_B2`,
+   - `AX2` dodaje tylko actual-instance carrier poza strict core.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/AX2_AXIOM_LANE_ACTUAL_BASIS_PAIR_AND_ORIENTATION_SLICE_INSTANCE.md`,
+   - dodano `fundamental_action_reconstruction/ax2_axiom_lane_actual_basis_pair_and_orientation_slice_instance.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/ax2_axiom_lane_actual_basis_pair_and_orientation_slice_instance_summary.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/axiom_lane_actual_basis_pair_orientation_slice_instance.json`.
+5. Nastepny poprawny ruch:
+   - rozwijac pozytywny lane `axiom-augmented`,
+   - albo wrocic do `T12_B1`, jesli celem pozostaje strict-core theorem-level closure.
