@@ -7069,3 +7069,30 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - zdecydowac, czy priorytetem jest discharge `T1`, czy konstrukcja
      brakujacych slot/map objects wymaganych przez `T2`.
+
+## 466. T3 discharge attempt dla T1 wykonane (2026-03-06)
+
+1. Cel:
+   - wykonac pierwszy realny discharge attempt dla theorem-lane `T1`,
+   - bez falszywego PASS,
+   - i sprawdzic, czy obecny audit chain wystarcza juz do theorem-level
+     no-internal-theta-source result.
+2. Wynik:
+   - discharge attempt zostal wykonany,
+   - `T1` nie jest discharged,
+   - failure redukuje sie do jednego meta-level blockera.
+3. Frontier po kroku:
+   - aktywny theorem-lane blocker brzmi:
+     `T3_B1 := no formal export-completeness bridge turning the current not_shown / absent / fallback_only audit chain into a theorem-level strict-core no-internal-theta-source result`,
+   - niezaleznie pozostaje:
+     `T2_B1`,
+   - oraz:
+     `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/T3_STRICT_CORE_NO_INTERNAL_THETA_SOURCE_DISCHARGE_ATTEMPT.md`,
+   - dodano `fundamental_action_reconstruction/t3_strict_core_no_internal_theta_source_discharge_attempt.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/t3_strict_core_no_internal_theta_source_discharge_attempt_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - zapisac theorem-spec dla brakujacego export-completeness principle,
+   - albo przerwac theorem-lane `T1` i wracac do konstrukcji brakujacych strict-core objectow na lane `T2`.

@@ -1644,3 +1644,14 @@ Co realnie zostalo dodane przez `T2`:
 - nadal niezaleznie pozostaje:
   - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
 - nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `T3`:
+- pierwszy realny discharge attempt dla `T1`,
+- jawne rozdzielenie `audit-level evidence strong` od `theorem-level non-availability result not yet lifted`,
+- redukcja failure do jednego meta-level blockera.
+
+Co nadal pozostaje jawnie otwarte po `T3`:
+- `T3_B1 := no formal export-completeness bridge turning the current not_shown / absent / fallback_only audit chain into a theorem-level strict-core no-internal-theta-source result`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
+- nadal brak theorem-level/full-closure PASS.
