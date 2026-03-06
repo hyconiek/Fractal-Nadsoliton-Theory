@@ -7663,3 +7663,25 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - albo wypychac lane aksjomatyczny do osobnego materialu publikacyjnego,
    - albo wracac do `T12_B1`, jesli celem pozostaje strict-core theorem-level closure.
+
+## 488. H1 internal light-feedback kernel term hypothesis audit (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy hipoteza wewnetrznego sprzezenia informacyjnego
+     `nadsoliton -> light -> matter -> emergent observer -> nadsoliton`
+     jest nowa, zamknieta, czy nadal zywa jako kandydat operatorowy.
+2. Wynik:
+   - hipoteza nie jest nowa; byla juz eksplorowana m.in. przez
+     `QW-1948..1953` oraz `QW-684/687/688`,
+   - dotychczasowe proby tej rodziny konczyly sie FAIL-ami,
+   - obecnie pozostaje tylko `live operator hypothesis`, nie strict-core source.
+3. Frontier po kroku:
+   - `H1_B1 := no strict-core admissible kernel-level operator K_obs has yet been defined that turns the internal light-matter-observer loop hypothesis into a testable selector mechanism without smuggling the selector by hand`,
+   - `T12_B1`,
+   - `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/H1_INTERNAL_LIGHT_FEEDBACK_KERNEL_TERM_HYPOTHESIS_AUDIT.md`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h1_internal_light_feedback_kernel_term_hypothesis_audit_summary.json`.
+5. Nastepny poprawny ruch:
+   - albo zapisac minimalny admissibility spec dla przyszlego `K_obs`,
+   - albo utrzymac `H1` jako audit pomocniczy bez promowania do strict core.

@@ -757,5 +757,7 @@ Current status:
 - this certifies that `AX1..AX6` remain an external positive lane only, with explicit prohibition on promotion into strict-core theorem-level or full-closure claims,
 - `AX8` completed as the publication-ready summary packet on the axiom-augmented lane,
 - this assembles `AX1..AX7` into one communication-ready packet while keeping that result explicitly outside strict core,
+- `H1` completed as a retrospective operator-hypothesis audit,
+- this records that an internal light-matter-observer feedback loop was already explored in prior repo work and remains a live kernel-level rework hypothesis, but not a current strict-core selector mechanism,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.
