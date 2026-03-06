@@ -1955,6 +1955,22 @@ Frontier po `H1`:
 - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
 - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.
 
+Co realnie zostalo dodane przez `H6`:
+- wykonano pierwszy pair-level extraction attempt dla aktualnej pary `pair1 = (c1,s1)`,
+- zapisano jawny cel:
+  `A_1 = P_1 E_1^* G_light^* R_mat^* O_obs R_mat G_light E_1 P_1`,
+  `a_1 = lambda_obs <c1, A_1 c1>`,
+  `b_1 = lambda_obs <c1, A_1 s1>`,
+  `d_1 = lambda_obs <s1, A_1 s1>`,
+- extraction attempt zatrzymuje sie juz nie na wyborze pary, lecz na braku jawnych eksportow dzialania `E_1`, `G_light`, `R_mat`, `O_obs` na carrierze `pair1`.
+
+Frontier po `H6`:
+- `H6_B1 := no explicit exported component action tables or matrix representatives for E_1, G_light, R_mat, O_obs on the actual pair1 carrier, so the pair1 coefficient triple (a_1, b_1, d_1) remains unevaluated`,
+- `H5_B1 := no explicit extracted triple (a_i, b_i, d_i) has yet been computed or exported for any actual current mode pair` zostaje zredukowane do poziomu pair1 component-export level,
+- `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.
+
 Co realnie zostalo dodane przez `H2`:
 - zapisano minimalny admissibility spec dla przyszlego operatora `K_obs`,
 - jawnie oddzielono:

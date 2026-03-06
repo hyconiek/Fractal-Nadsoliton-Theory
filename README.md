@@ -767,5 +767,7 @@ Current status:
 - this reduces the test of `K_obs` to an explicit `2x2` anisotropy question on the residual `O(2)` selector sector, while keeping explicit that no coefficients have yet been computed,
 - `H5` completed as the first finite coefficient-extraction packet for that reduced `2x2` test,
 - this reduces the next step to computing the three scalars `(a_i, b_i, d_i)` for one actual mode pair, while keeping explicit that no such coefficients have yet been exported,
+- `H6` completed as the first actual pair-level extraction attempt for `pair1 = (c1,s1)`,
+- this reduces the next step to exporting the operator-component actions needed to evaluate `(a_1, b_1, d_1)`, while keeping explicit that no such coefficients have yet been computed,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

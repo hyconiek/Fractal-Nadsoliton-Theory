@@ -7790,3 +7790,30 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - sprobowac wybrac jedna realna pare modow,
    - i dla niej wyeksportowac lub policzyc `(a_i, b_i, d_i)`.
+
+## 493. H6 pair1 coefficient extraction attempt (2026-03-06)
+
+1. Cel:
+   - wykonac pierwszy rzeczywisty extraction attempt dla jednej aktualnej pary modow,
+   - sprawdzic, czy repo eksportuje juz dosc danych operatorowych, aby policzyc `(a_1,b_1,d_1)` dla `pair1 = (c1,s1)`.
+2. Wynik:
+   - wybrano kanoniczna aktualna pare `pair1 = (c1,s1)`,
+   - zapisano pair-level target:
+     `A_1 = P_1 E_1^* G_light^* R_mat^* O_obs R_mat G_light E_1 P_1`,
+     `a_1 = lambda_obs <c1, A_1 c1>`,
+     `b_1 = lambda_obs <c1, A_1 s1>`,
+     `d_1 = lambda_obs <s1, A_1 s1>`,
+   - extraction attempt zatrzymuje sie na braku jawnych eksportow dzialania `E_1`, `G_light`, `R_mat`, `O_obs` na carrierze `pair1`.
+3. Frontier po kroku:
+   - `H6_B1 := no explicit exported component action tables or matrix representatives for E_1, G_light, R_mat, O_obs on the actual pair1 carrier, so the pair1 coefficient triple (a_1, b_1, d_1) remains unevaluated`,
+   - `H5_B1` zostaje zredukowane do poziomu pair1 component-export level,
+   - `T12_B1`,
+   - `T2_B1`,
+   - `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/H6_PAIR1_COEFFICIENT_EXTRACTION_ATTEMPT.md`,
+   - dodano `fundamental_action_reconstruction/h6_pair1_coefficient_extraction_attempt.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h6_pair1_coefficient_extraction_attempt_summary.json`.
+5. Nastepny poprawny ruch:
+   - sprobowac wyeksportowac lub zapisac component actions `E_1`, `G_light`, `R_mat`, `O_obs`,
+   - albo jawnie potwierdzic, ze obecny ansatz nie ma jeszcze zadnego komponentowego carrieru do pair1 extraction.

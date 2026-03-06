@@ -342,6 +342,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `H3`: wykonane jako pierwszy konkretny ansatz operatora `K_obs`; zapisuje w pelni wewnetrzna kompozycje `K_obs = lambda_obs * E^* G_light R_mat O_obs R_mat^* G_light^* E`, ale nadal bez testu na residualnym sektorze `O(2)` i bez claimu strict-core closure.
 - `H4`: wykonane jako redukcja `H3` do residualnego sektora `O(2)`; problem zostaje sprowadzony do pytania, czy projected blok `2x2` jest izotropowy czy anizotropowy, ale wspolczynniki tego bloku nie sa jeszcze policzone.
 - `H5`: wykonane jako jawny packet ekstrakcji wspolczynnikow projected bloku `2x2`; nastepny test sprowadza sie juz do wyznaczenia trzech skalarow `a_i, b_i, d_i` dla jednej realnej pary modow.
+- `H6`: wykonane jako pierwszy pair-level extraction attempt dla `pair1 = (c1,s1)`; problem redukuje sie juz nie do wyboru pary, lecz do braku jawnych eksportow dzialania `E_1`, `G_light`, `R_mat`, `O_obs` na carrierze tej pary.
 
 ## Twarde ograniczenia rygoru
 
@@ -442,6 +443,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - brak claimu, ze `AX8` daje strict-core closure; to jest tylko publication-ready summary packet lane axiom-augmented.
 - brak claimu, ze `H1` identyfikuje prawdziwy brakujacy term; to jest tylko audit zywej hipotezy operatorowej.
 - brak claimu, ze `H2` oznacza istnienie poprawnego `K_obs`; to jest tylko spec dopuszczalnosci.
+- brak claimu, ze `H6` daje juz policzone `(a_1,b_1,d_1)`; to jest tylko pair-level extraction attempt.
 - brak claimu, ze `H3` rozbija degeneracje `O(2)`; to jest tylko packet-ready ansatz operatora.
 - brak claimu, ze `H4` daje symmetry-breaking; to jest tylko packet-ready redukcja do testu anizotropii `2x2`.
 - brak claimu, ze `H5` daje juz jakikolwiek policzony blok `2x2`; to jest tylko packet ekstrakcji wspolczynnikow.
@@ -564,6 +566,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `H3_MINIMAL_INTERNAL_LIGHT_FEEDBACK_OPERATOR_ANSATZ_PACKET.md`
 - `H4_RESIDUAL_O2_REDUCTION_OF_LIGHT_FEEDBACK_ANSATZ.md`
 - `H5_PROJECTED_2X2_COEFFICIENT_EXTRACTION_PACKET.md`
+- `H6_PAIR1_COEFFICIENT_EXTRACTION_ATTEMPT.md`
 - `C43_FILENAME_PATH_CONVENTION_AUDIT.md`
 - `a1_minimal_action_ansatz.py`
 - `a2_supersoliton_matching.py`
