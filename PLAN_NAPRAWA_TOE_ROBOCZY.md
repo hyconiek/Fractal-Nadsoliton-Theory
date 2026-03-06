@@ -5607,3 +5607,33 @@ Po tej rundzie:
 6. Nastepny poprawny ruch:
    - przejsc do `C4` i sprobowac `C2_B2`,
    - albo zamrozic frontier i zacommitowac.
+
+## 412. C4 local quadratic mismatch kinematic reduction wykonane (2026-03-06)
+1. Zakres:
+   - podjeto probe `C2_B2`,
+   - strict-admissible support: `QW-2190`, `QW-2191`, `QW-2192`, `QW-2193`, `A3`, `A7`, `C2`, `C3`, `A10`.
+2. Co zostalo realnie ustalone:
+   - na orbicie rotacyjnej `O(2)` zachodza identycznosci:
+     - `||Delta u(theta)||^2 = 2(1-cos theta)`,
+     - `||Delta v(theta)||^2 = 2(1-cos theta)`,
+     - `<Delta u(theta), Delta v(theta)> = 0`,
+   - wiec kazdy diagonalny dodatni lokalny koszt mismatch na tej orbicie redukuje sie do:
+     - `J_ab(theta)=2(a+b)(1-cos theta)`,
+   - `C2_B2` zostaje zawężony z ogolnego pytania o mismatch principle do pytania o fizyczna identyfikacje dodatniej lokalnej metryki na kandydackiej plaszczyznie orientacji.
+3. Co pozostaje zablokowane:
+   - brak internal origin tej metryki,
+   - brak dynamicznego wyprowadzenia wag `a,b`,
+   - brak discharge `C2_B2`,
+   - brak axiom-free uniqueness.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C4_LOCAL_QUADRATIC_MISMATCH_KINEMATIC_REDUCTION.md`,
+   - dodano `fundamental_action_reconstruction/c4_local_quadratic_mismatch_kinematic_reduction.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c4_local_quadratic_mismatch_kinematic_reduction_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Twardy rygor:
+   - brak `C2_B2` PASS,
+   - brak theorem-level PASS,
+   - brak full-closure PASS.
+6. Nastepny poprawny ruch:
+   - przejsc do `C5` i sprobowac powiazac lokalna metryke mismatch z rzeczywistym Hessianem / druga wariacja na kandydackiej plaszczyznie orientacji,
+   - albo zamrozic frontier i zacommitowac.

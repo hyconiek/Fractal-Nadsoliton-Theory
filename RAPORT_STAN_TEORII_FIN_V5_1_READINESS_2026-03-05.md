@@ -705,6 +705,8 @@ Status nowego toru:
 - `C2` redukuje warunkowo pochodzenie `J_ab` do dwoch sub-blockerow `C2_B1/C2_B2`, ale nie daje internal derivation tej rodziny,
 - `C3` wykonane jako trzeci krok trzeciego mikrocyklu,
 - `C3` wydobywa z `QW-2190` techniczny kandydat pary referencyjnej, ale nie daje jeszcze physical orientation datum,
+- `C4` wykonane jako czwarty krok trzeciego mikrocyklu,
+- `C4` redukuje kinematycznie problem lokalnego mismatch: forma `J_ab(theta)=2(a+b)(1-cos theta)` wynika na orbicie `O(2)` z diagonalnego dodatniego kosztu lokalnego, ale fizyczne zrodlo tej metryki pozostaje otwarte,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -919,5 +921,21 @@ Co realnie zostalo dodane przez `C3`:
   do pytania:
   - `what physically elevates this deterministic pair to an internal orientation datum?`,
 - nadal brak `C2_B1` discharge,
+- nadal brak axiom-free uniqueness PASS,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C4`:
+- drugi z dwoch sub-blockerow z `C2` nie jest juz pytaniem o dowolny koszt mismatch,
+- na orbicie rotacyjnej `O(2)` zachodzi juz pelna redukcja kinematyczna:
+  - `||Delta u||^2 = 2(1-cos theta)`,
+  - `||Delta v||^2 = 2(1-cos theta)`,
+  - `<Delta u,Delta v> = 0`,
+- dzieki temu dowolny diagonalny dodatni lokalny koszt mismatch redukuje sie do:
+  - `J_ab(theta)=2(a+b)(1-cos theta)`,
+- aktualny frontier zostaje zawężony z:
+  - `C2_B2 := no_derived_positive_local_quadratic_mismatch_principle`
+  do:
+  - `C4_B1 := no_internal_identification_of_the_physical_positive_local_metric_on_candidate_orientation_plane`,
+- nadal brak discharge `C2_B2`,
 - nadal brak axiom-free uniqueness PASS,
 - nadal brak theorem-level/full-closure PASS.

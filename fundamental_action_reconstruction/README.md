@@ -1,6 +1,6 @@
 # Fundamental Action Reconstruction
 
-Status: `PROGRAM_PHASE1_COMPLETE_C3_REFERENCE_PAIR_CANDIDATE_EXTRACTED`
+Status: `PROGRAM_PHASE1_COMPLETE_C4_MISMATCH_KINEMATICS_REDUCED`
 As of: `2026-03-06`
 
 Ten katalog otwiera rownolegly tor konstrukcyjny poza drabinka `L5/L12`.
@@ -88,6 +88,8 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
    - sprawdzic, czy pochodzenie rodziny `J_ab` daje sie przynajmniej zredukowac warunkowo do mniejszych obligacji.
 11. `C3`: internal reference pair candidate from mode scaffold
    - sprawdzic, czy `QW-2190` zawiera juz techniczny kandydat pary referencyjnej, nawet jesli nie jest jeszcze fizycznym orientation datum.
+12. `C4`: local quadratic mismatch kinematic reduction
+   - sprawdzic, czy forma `J_ab` wynika juz kinematycznie z orbity rotacyjnej i lokalnego kosztu kwadratowego, nawet jesli metryka tego kosztu nie jest jeszcze wyprowadzona.
 
 ## Aktualny status
 
@@ -112,6 +114,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `C1`: wykonane jako pierwszy krok trzeciego mikrocyklu; dominujacy waski blocker to brak internal derivation rodziny selectorow `J_ab`.
 - `C2`: wykonane jako drugi krok trzeciego mikrocyklu; pochodzenie `J_ab` zostalo zredukowane warunkowo do dwoch mniejszych sub-blockerow: brak wewnetrznej pary referencyjnej i brak dodatniego lokalnego kosztu kwadratowego.
 - `C3`: wykonane jako trzeci krok trzeciego mikrocyklu; `QW-2190` dostarcza techniczny kandydat pary referencyjnej `(c1,s1)` / `(c2,s2)`, ale jego fizyczne podniesienie pozostaje open.
+- `C4`: wykonane jako czwarty krok trzeciego mikrocyklu; forma `J_ab(theta)=2(a+b)(1-cos theta)` zostaje zredukowana kinematycznie na orbicie `O(2)`, ale fizyczna identyfikacja dodatniej lokalnej metryki mismatch pozostaje open.
 
 ## Twarde ograniczenia rygoru
 
@@ -135,6 +138,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - brak claimu, ze `C1` rozladowalo blocker foundational.
 - brak claimu, ze `C2` dalo internal derivation `J_ab`.
 - brak claimu, ze `C3` rozladowalo `C2_B1`.
+- brak claimu, ze `C4` rozladowalo `C2_B2`.
 
 ## Zasada korzystania z poprzednich badan
 
@@ -172,6 +176,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `C1_NARROW_FOUNDATIONAL_BLOCKER_SELECTION.md`
 - `C2_SELECTOR_FAMILY_INTERNAL_ORIGIN_PACKET.md`
 - `C3_INTERNAL_REFERENCE_PAIR_CANDIDATE_FROM_MODE_SCAFFOLD.md`
+- `C4_LOCAL_QUADRATIC_MISMATCH_KINEMATIC_REDUCTION.md`
 - `a1_minimal_action_ansatz.py`
 - `a2_supersoliton_matching.py`
 - `a3_kernel_analysis.py`
@@ -193,6 +198,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `c1_narrow_foundational_blocker_selection.py`
 - `c2_selector_family_internal_origin_packet.py`
 - `c3_internal_reference_pair_candidate_from_mode_scaffold.py`
+- `c4_local_quadratic_mismatch_kinematic_reduction.py`
 - `generated/a1_minimal_action_ansatz_summary.json`
 - `generated/a2_supersoliton_matching_summary.json`
 - `generated/a3_kernel_analysis_summary.json`
@@ -214,4 +220,5 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `generated/c1_narrow_foundational_blocker_selection_summary.json`
 - `generated/c2_selector_family_internal_origin_packet_summary.json`
 - `generated/c3_internal_reference_pair_candidate_from_mode_scaffold_summary.json`
+- `generated/c4_local_quadratic_mismatch_kinematic_reduction_summary.json`
 - `manifest_action_reconstruction.json`

@@ -1,0 +1,83 @@
+{
+  "stage": "C4",
+  "status": "C4_EXECUTED_KINEMATIC_REDUCTION_OF_C2_B2_LOCAL_METRIC_IDENTIFICATION_PENDING_NO_FALSE_PASS",
+  "as_of": "2026-03-06",
+  "goal": "Reduce C2_B2 by showing that on the O(2) rotation orbit the J_ab family follows kinematically from any diagonal positive local quadratic mismatch metric.",
+  "inputs": {
+    "strict_admissible": [
+      "QW-2190",
+      "QW-2191",
+      "QW-2192",
+      "QW-2193",
+      "A3",
+      "A7",
+      "C2",
+      "C3",
+      "A10"
+    ]
+  },
+  "kinematic_identities": {
+    "du_norm_sq": "2(1-cos(theta))",
+    "dv_norm_sq": "2(1-cos(theta))",
+    "du_dv_inner": "0 on the rotation orbit"
+  },
+  "conditional_result": {
+    "assumption": "a positive diagonal local mismatch metric exists on the candidate orientation plane",
+    "result": "Q_loc(theta)=a||Delta u||^2 + b||Delta v||^2 = 2(a+b)(1-cos(theta))",
+    "status": "derived_conditionally"
+  },
+  "numeric_samples": [
+    {
+      "theta": 0.0,
+      "a": 1.0,
+      "b": 1.0,
+      "du_norm_sq": 0.0,
+      "dv_norm_sq": 0.0,
+      "du_dv_inner": 0.0,
+      "q_local": 0.0,
+      "closed_form": 0.0
+    },
+    {
+      "theta": 1.0471975511965976,
+      "a": 1.0,
+      "b": 1.0,
+      "du_norm_sq": 0.9999999999999998,
+      "dv_norm_sq": 0.9999999999999998,
+      "du_dv_inner": 0.0,
+      "q_local": 1.9999999999999996,
+      "closed_form": 1.9999999999999996
+    },
+    {
+      "theta": 1.5707963267948966,
+      "a": 2.0,
+      "b": 1.0,
+      "du_norm_sq": 1.9999999999999998,
+      "dv_norm_sq": 1.9999999999999998,
+      "du_dv_inner": 0.0,
+      "q_local": 5.999999999999999,
+      "closed_form": 5.999999999999999
+    },
+    {
+      "theta": 3.141592653589793,
+      "a": 1.2,
+      "b": 2.8,
+      "du_norm_sq": 4.0,
+      "dv_norm_sq": 4.0,
+      "du_dv_inner": 0.0,
+      "q_local": 16.0,
+      "closed_form": 16.0
+    }
+  ],
+  "frontier_reduction": {
+    "C3_B1": "no_physical_elevation_of_deterministic_mode_pair_to_internal_orientation_datum",
+    "C4_B1": "no_internal_identification_of_the_physical_positive_local_metric_on_candidate_orientation_plane"
+  },
+  "hard_limits": [
+    "no_theorem_level_pass",
+    "no_full_closure_pass",
+    "no_c2_b2_pass",
+    "no_internal_origin_of_metric_claim",
+    "no_qw2191_discharge_claim"
+  ],
+  "next_step": "C5"
+}
