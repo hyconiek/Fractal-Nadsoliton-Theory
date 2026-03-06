@@ -1,0 +1,39 @@
+{
+  "stage": "C21",
+  "status": "C21_EXECUTED_EXISTING_EXPORT_CARRIER_AUDIT_NO_FALSE_PASS",
+  "as_of": "2026-03-06",
+  "goal": "Reduce the missing executed serialization-run blocker by showing that the strict core already contains an existing persisted export carrier for the Psi family, even if the model payload still serializes only three sample rows instead of all 12 rows.",
+  "inputs": {
+    "strict_admissible": [
+      "QW-2165",
+      "QW-2166",
+      "QW-2180",
+      "C20",
+      "A10"
+    ]
+  },
+  "existing_export_carrier": {
+    "out_json_path_present": true,
+    "json_write_present": true,
+    "existing_model_payload_present": true,
+    "sample_row_serialization_keys_present": true,
+    "sample_key_count_in_persisted_report": 3
+  },
+  "result": {
+    "persisted_export_carrier_present": "yes",
+    "all_rows_model_serialization_clause_present": "not_shown",
+    "frontier_can_be_reduced_from_missing_executed_run_to_missing_full_model_clause_inside_existing_export_carrier": "yes"
+  },
+  "residual_blockers": {
+    "C21_B1": "no_explicit_all_12_rows_model_serialization_clause_inside_the_already_existing_qw2165_persisted_export_carrier",
+    "C21_B2": "no_explicit_restriction_from_the_control_pullback_orbits_to_the_candidate_orientation_slice"
+  },
+  "hard_limits": [
+    "no_theorem_level_pass",
+    "no_full_closure_pass",
+    "no_claim_that_the_existing_export_carrier_already_serializes_all_12_rows",
+    "no_claim_that_the_full_12x12_table_is_already_present",
+    "no_orientation_slice_restriction_claim"
+  ],
+  "next_step": "C22"
+}

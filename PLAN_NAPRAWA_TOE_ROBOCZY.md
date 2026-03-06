@@ -6083,3 +6083,30 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - przejsc do `C21` i sprawdzic, czy strict core ma juz jawny packet wykonania tego serialization run bez schodzenia do orientation slice,
    - albo jawnie potwierdzic, ze taki executed export packet nadal nie jest obecny.
+
+## 429. C21 existing export carrier audit wykonane (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy strict core ma juz istniejacy persisted export carrier dla `QW-2165`,
+     nawet jesli payload `model` nadal serializuje tylko trzy sample rows.
+2. Wynik:
+   - istniejacy persisted export carrier jest juz obecny,
+   - opiera sie na:
+     - `OUT_JSON`,
+     - `write_text(json.dumps(out, ...))`,
+     - istniejacym bloku `"model": {...}`,
+   - aktualny frontier zawęza sie do:
+     - braku pelnej klauzuli serializacji `12` rows wewnatrz `model`,
+     - braku restriction do candidate orientation slice.
+3. Twarde granice:
+   - brak `C20_B1` PASS,
+   - brak theorem-level PASS,
+   - brak full-closure PASS.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C21_EXISTING_EXPORT_CARRIER_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/c21_existing_export_carrier_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c21_existing_export_carrier_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `C22` i sprawdzic, czy strict core ma juz jawny finite schema dla pelnej klauzuli `model["eom_psi_i"]`,
+   - albo jawnie potwierdzic, ze taki schema nadal nie jest zapisany.

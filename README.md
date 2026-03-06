@@ -638,5 +638,7 @@ Current status:
 - this moves the theory forward only by reducing that serialization problem to a missing persisted 12-row artifact despite the already-present generator-level exhaustive source, plus the still-missing restriction to the candidate orientation slice,
 - `C20` completed as the twentieth step of the next micro-cycle,
 - this moves the theory forward only by reducing that persisted-artifact problem to a missing executed and stored 12-row serialization run despite the already-present finite materialization recipe, plus the still-missing restriction to the candidate orientation slice,
+- `C21` completed as the twenty-first step of the next micro-cycle,
+- this moves the theory forward only by reducing that executed-run problem to a missing full 12-row model-serialization clause inside the already-existing export carrier, plus the still-missing restriction to the candidate orientation slice,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

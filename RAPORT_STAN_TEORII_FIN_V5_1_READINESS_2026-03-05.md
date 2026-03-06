@@ -739,6 +739,8 @@ Status nowego toru:
 - `C19` pokazuje, ze generator-level exhaustive source dla calej rodziny `12` rows `Psi` jest juz obecny, a frontier redukuje sie dalej do braku persisted `12`-row serialization artifact oraz braku restriction do candidate orientation slice,
 - `C20` wykonane jako dwudziesty krok trzeciego mikrocyklu,
 - `C20` pokazuje, ze skonczony persisted recipe do materializacji calej rodziny `12` rows `Psi` jest juz obecny, a frontier redukuje sie dalej do braku wykonanego persisted `12`-row serialization run oraz braku restriction do candidate orientation slice,
+- `C21` wykonane jako dwudziesty pierwszy krok trzeciego mikrocyklu,
+- `C21` pokazuje, ze istniejacy persisted export carrier dla `QW-2165` jest juz obecny, a frontier redukuje sie dalej do braku pelnej klauzuli serializacji `12` rows wewnatrz `model` oraz braku restriction do candidate orientation slice,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -1174,4 +1176,17 @@ Co realnie zostalo dodane przez `C20`:
   - `C20_B2 := no_explicit_restriction_from_the_control_pullback_orbits_to_the_candidate_orientation_slice`,
 - nadal brak discharge `C19_B1`,
 - nadal brak discharge `C19_B2`,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C21`:
+- `QW-2165` ma juz istniejacy persisted export carrier:
+  - `OUT_JSON`,
+  - `write_text(json.dumps(out, ...))`,
+  - blok `"model": {...}`,
+- blocker nie dotyczy juz braku samego carriera wykonawczego,
+- aktualny frontier zawęża sie do:
+  - `C21_B1 := no_explicit_all_12_rows_model_serialization_clause_inside_the_already_existing_qw2165_persisted_export_carrier`,
+  - `C21_B2 := no_explicit_restriction_from_the_control_pullback_orbits_to_the_candidate_orientation_slice`,
+- nadal brak discharge `C20_B1`,
+- nadal brak discharge `C20_B2`,
 - nadal brak theorem-level/full-closure PASS.
