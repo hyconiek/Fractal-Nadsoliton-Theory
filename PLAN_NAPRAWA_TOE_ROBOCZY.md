@@ -7279,3 +7279,29 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - wykonac pierwszy discharge attempt dla `T10`,
    - albo wracac do lane `T2`, jesli priorytetem jest konstrukcja brakujacych strict-core objectow.
+
+## 474. T11 discharge attempt dla route-role typing rule wykonane (2026-03-06)
+
+1. Cel:
+   - wykonac pierwszy realny discharge attempt dla `T10`,
+   - sprawdzic, czy obecne audyty juz implikuja formalny typing judgment
+     z totality i uniqueness dla admissible tras eksportu `theta_i`.
+2. Wynik:
+   - `T10` nie zostaje rozladowane,
+   - failure redukuje sie dalej do jednego nowego meta-level blockera:
+     braku formalnego typing judgment z totality i uniqueness.
+3. Frontier po kroku:
+   - aktywny theorem-lane blocker brzmi:
+     `T11_B1 := no formal typing judgment or totality-and-uniqueness clause showing that every current admissible strict-core theta-export route has exactly one route-role label in the six-role vocabulary`,
+   - niezaleznie pozostaje:
+     `T2_B1`,
+   - oraz:
+     `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/T11_ROUTE_ROLE_TYPING_RULE_DISCHARGE_ATTEMPT.md`,
+   - dodano `fundamental_action_reconstruction/t11_route_role_typing_rule_discharge_attempt.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/t11_route_role_typing_rule_discharge_attempt_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - zapisac theorem-spec dla brakujacego typing judgment / totality-and-uniqueness clause,
+   - albo wracac do lane `T2`, jesli priorytetem jest konstrukcja brakujacych strict-core objectow.

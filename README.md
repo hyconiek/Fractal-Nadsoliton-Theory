@@ -729,5 +729,7 @@ Current status:
 - this moves the theory forward only by performing the first real discharge attempt for `T8` and reducing its failure to a single meta-level blocker: the absence of a formal route-role typing rule or admissibility-by-role declaration showing that every current admissible theta-export route instantiates exactly one of the six named route roles,
 - `T10` completed as the tenth theorem-lane step,
 - this moves the theory forward only by isolating a packet-ready theorem spec for the missing route-role typing rule / admissibility-by-role declaration required by `T9`, while that typing rule itself remains undischarge,
+- `T11` completed as the eleventh theorem-lane step,
+- this moves the theory forward only by performing the first real discharge attempt for `T10` and reducing its failure to a single meta-level blocker: the absence of a formal typing judgment with totality and uniqueness for current admissible theta-export routes,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.
