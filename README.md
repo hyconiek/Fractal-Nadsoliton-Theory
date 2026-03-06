@@ -674,5 +674,7 @@ Current status:
 - this moves the theory forward only by isolating a packet-ready candidate internalization of the residual orientation datum, while strict-core equivalence is still missing,
 - `C38` completed as the thirty-eighth step of the next micro-cycle,
 - this moves the theory forward only by making explicit that candidate-fit is present while packet-ready theorem-spec and export-spec are still absent for identifying `sigma_int_candidate` with the residual orientation datum,
+- `C39` completed as the thirty-ninth step of the next micro-cycle,
+- this moves the theory forward only by making explicit that even an acceptance skeleton is still absent for that identification, so the active layer remains candidate-fit only,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

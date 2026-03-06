@@ -6564,3 +6564,30 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - przejsc do `C39` i sprawdzic, czy strict core ma juz packet-ready
      acceptance skeleton dla tej identyfikacji, mimo braku theorem-spec/export-spec.
+
+## 447. C39 sigma-int acceptance skeleton audit wykonane (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy strict core ma juz chociaz packet-ready acceptance skeleton
+     dla przyszlej theorem/export spec identyfikacji
+     `sigma_int_candidate <-> residual orientation datum`.
+2. Wynik:
+   - candidate-fit pozostaje jawny przez `B6` i `C37`,
+   - theorem-spec i export-spec pozostaja nieobecne po `C38`,
+   - nie znaleziono takze packet-ready acceptance skeleton dla tej identyfikacji,
+   - aktywny blocker zawęża sie dalej do braku nawet minimalnej acceptance layer.
+3. Twarde granice:
+   - brak theorem-level PASS,
+   - brak full-closure PASS,
+   - brak claimu, ze candidate-fit jest wystarczajacy do strict closure,
+   - brak claimu, ze istnieje ukryty acceptance skeleton,
+   - brak claimu, ze `QW-2191` jest rozladowane,
+   - brak finalnej orientation slice.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C39_SIGMA_INT_ACCEPTANCE_SKELETON_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/c39_sigma_int_acceptance_skeleton_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c39_sigma_int_acceptance_skeleton_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `C40` i sprawdzic, czy strict core ma juz packet-ready
+     minimal field list dla takiego acceptance skeletonu, mimo jego nieobecnosci.
