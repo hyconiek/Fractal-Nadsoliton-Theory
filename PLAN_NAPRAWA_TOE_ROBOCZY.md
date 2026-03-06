@@ -5865,3 +5865,32 @@ Po tej rundzie:
 6. Nastepny poprawny ruch:
    - przejsc do `C13` i sprobowac wybrac jeden index-set `I`,
    - albo zamrozic frontier i zacommitowac.
+
+## 421. C13 mode-basis control index-set audit wykonane (2026-03-06)
+1. Zakres:
+   - podjeto probe `C12_B1`,
+   - strict-admissible support: `QW-2190`, `C3`, `C7`, `C12`, `A10`.
+2. Co zostalo realnie ustalone:
+   - deterministic control index-sets w bazie modowej sa juz jawne:
+     - `I_mode_1={c1,s1}`,
+     - `I_mode_2={c2,s2}`,
+   - brak nie dotyczy juz wyboru `I` w ogole,
+   - aktualny brak dotyczy transportu `mode basis -> canonical Psi basis` oraz assembled submatrix po takim transporcie.
+3. Co pozostaje zablokowane:
+   - brak canonical `Psi` index-set,
+   - brak jawnego transportu do carrieru Hessianu,
+   - brak assembled `Psi x Psi` submatrix,
+   - brak discharge `C12_B1`,
+   - brak discharge `C9_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C13_MODE_BASIS_CONTROL_INDEX_SET_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/c13_mode_basis_control_index_set_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c13_mode_basis_control_index_set_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Twardy rygor:
+   - brak `C12_B1` PASS,
+   - brak theorem-level PASS,
+   - brak full-closure PASS.
+6. Nastepny poprawny ruch:
+   - przejsc do `C14` i sprobowac minimalnego transport schema,
+   - albo zamrozic frontier i zacommitowac.

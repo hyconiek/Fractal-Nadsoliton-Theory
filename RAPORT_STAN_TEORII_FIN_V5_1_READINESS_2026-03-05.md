@@ -723,6 +723,8 @@ Status nowego toru:
 - `C11` pokazuje, ze ten block-level matcher redukuje sie dalej do braku jawnego extraction/export package dla konkretnego `Psi-sector quadratic block`,
 - `C12` wykonane jako dwunasty krok trzeciego mikrocyklu,
 - `C12` pokazuje, ze extraction/export blocker redukuje sie dalej do braku assembled `Psi x Psi` submatrix i coefficient table dla wybranego index-set,
+- `C13` wykonane jako trzynasty krok trzeciego mikrocyklu,
+- `C13` pokazuje, ze index-set blocker redukuje sie dalej do braku transportu z control mode basis do canonical `Psi` basis oraz braku assembled submatrix po takim transporcie,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -1053,6 +1055,19 @@ Co realnie zostalo dodane przez `C12`:
 - aktualny frontier zawęża sie do:
   - `C12_B1 := no_explicit_assembled_Psi_x_Psi_submatrix_and_no_coefficient_table_for_a_chosen_index_set_ready_for_matching_against_qw2186`,
 - nadal brak discharge `C11_B1`,
+- nadal brak discharge `C9_B2`,
+- nadal brak axiom-free uniqueness PASS,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C13`:
+- `QW-2190` daje juz dwa deterministyczne control index-sets w bazie modowej:
+  - `I_mode_1={c1,s1}`,
+  - `I_mode_2={c2,s2}`,
+- dzieki temu brak nie dotyczy juz wyboru `I` w ogole,
+- aktualny frontier zawęża sie do:
+  - `C13_B1 := no_explicit_transport_from_the_deterministic_mode_basis_control_index_set_to_a_canonical_Psi_index_set_inside_the_exhaustive_Hessian_carrier`,
+  - `C13_B2 := no_assembled_Psi_x_Psi_submatrix_after_such_transport`,
+- nadal brak discharge `C12_B1`,
 - nadal brak discharge `C9_B2`,
 - nadal brak axiom-free uniqueness PASS,
 - nadal brak theorem-level/full-closure PASS.
