@@ -5581,3 +5581,29 @@ Po tej rundzie:
 6. Nastepny poprawny ruch:
    - przejsc do `C3` i sprobowac `C2_B1`,
    - albo zamrozic frontier i zacommitowac.
+
+## 411. C3 internal reference pair candidate from mode scaffold wykonane (2026-03-06)
+1. Zakres:
+   - podjeto probe `C2_B1`,
+   - strict-admissible support: `QW-2190`, `QW-2191`, `C2`, `A10`.
+2. Co zostalo realnie ustalone:
+   - `QW-2190` zawiera jawny deterministyczny kandydat par referencyjnych:
+     - `(c1,s1)` oraz `(c2,s2)`,
+   - `C2_A1` nie jest juz pusta zmienna logiczna,
+   - ale `QW-2191` blokuje podniesienie tego kandydata do pelnego physical orientation datum.
+3. Co pozostaje zablokowane:
+   - physical elevation of deterministic pair,
+   - discharge `C2_B1`,
+   - axiom-free uniqueness.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C3_INTERNAL_REFERENCE_PAIR_CANDIDATE_FROM_MODE_SCAFFOLD.md`,
+   - dodano `fundamental_action_reconstruction/c3_internal_reference_pair_candidate_from_mode_scaffold.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c3_internal_reference_pair_candidate_from_mode_scaffold_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Twardy rygor:
+   - brak `C2_B1` PASS,
+   - brak physical selector claim,
+   - brak theorem-level PASS.
+6. Nastepny poprawny ruch:
+   - przejsc do `C4` i sprobowac `C2_B2`,
+   - albo zamrozic frontier i zacommitowac.

@@ -703,6 +703,8 @@ Status nowego toru:
 - `C1` izoluje dominujacy waski blocker foundational: brak internal derivation rodziny selectorow `J_ab`,
 - `C2` wykonane jako drugi krok trzeciego mikrocyklu,
 - `C2` redukuje warunkowo pochodzenie `J_ab` do dwoch sub-blockerow `C2_B1/C2_B2`, ale nie daje internal derivation tej rodziny,
+- `C3` wykonane jako trzeci krok trzeciego mikrocyklu,
+- `C3` wydobywa z `QW-2190` techniczny kandydat pary referencyjnej, ale nie daje jeszcze physical orientation datum,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -904,5 +906,18 @@ Co realnie zostalo dodane przez `C2`:
   - `C2_B1`: brak wyprowadzonej wewnetrznej pary referencyjnej,
   - `C2_B2`: brak wyprowadzonej dodatniej lokalnej zasady mismatch,
 - nadal brak internal derivation `J_ab`,
+- nadal brak axiom-free uniqueness PASS,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C3`:
+- pierwszy z dwoch sub-blockerow z `C2` nie jest juz calkowicie pusty,
+- `QW-2190` dostarcza jawny kandydat pary referencyjnej:
+  - `(c1,s1)` dla pierwszej pary,
+  - `(c2,s2)` dla drugiej pary,
+- dzieki temu frontier przesuwa sie z pytania:
+  - `does a pair exist at all?`
+  do pytania:
+  - `what physically elevates this deterministic pair to an internal orientation datum?`,
+- nadal brak `C2_B1` discharge,
 - nadal brak axiom-free uniqueness PASS,
 - nadal brak theorem-level/full-closure PASS.

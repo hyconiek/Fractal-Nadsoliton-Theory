@@ -602,5 +602,7 @@ Current status:
 - this moves the theory forward only by isolating one dominant narrow foundational blocker: the missing internal derivation of the selector family `J_ab`,
 - `C2` completed as the second step of the next micro-cycle,
 - this moves the theory forward only by conditionally reducing the `J_ab` origin problem to two narrower sub-blockers, not by deriving `J_ab` internally,
+- `C3` completed as the third step of the next micro-cycle,
+- this moves the theory forward only by extracting a technical reference-pair candidate from `QW-2190`, not by elevating it to a physical orientation datum,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.
