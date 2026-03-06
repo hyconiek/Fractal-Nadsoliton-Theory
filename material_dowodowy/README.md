@@ -17,6 +17,9 @@ Podkatalogi:
 - `strict_chain_qw2560_qw2564`: rozszerzenie strict chain dla pakietu `QW-2560..QW-2564`
 - `strict_chain_qw2565_qw2569`: rozszerzenie strict chain dla pakietu `QW-2565..QW-2569`
 - `strict_chain_qw2570_qw2574`: rozszerzenie strict chain dla pakietu `QW-2570..QW-2574`
+- `strict_chain_qw2575_qw2579`: rozszerzenie strict chain dla pakietu `QW-2575..QW-2579`
+- `strict_chain_qw2580_qw2584`: rozszerzenie strict chain dla pakietu `QW-2580..QW-2584`
+- `strict_chain_qw2585_qw2589`: rozszerzenie strict chain dla pakietu `QW-2585..QW-2589`
 - `lean_fin_dowody`: artefakty dowodowe Lean i dokumenty `FIN_*` przeniesione z katalogu glownego
 
 Polityka kompatybilnosci:

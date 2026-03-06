@@ -4978,3 +4978,54 @@ Po tej rundzie:
    - dopiero po rozpisaniu closure lemmas i bounded falsification search wolno wykonywac kolejny machine-check attempt,
    - brak strict counterexample w bounded domain nie jest dowodem, ale jest potrzebnym filtrem przed dalsza eskalacja claimow,
    - `all_strict_obligations_fully_closed=false` pozostaje warunkiem publikacyjnym do czasu rozladowania aktualnego frontu.
+
+## 387. Aktualizacja frontier po QW-2579
+1. Stan aktualny:
+   - aktualny jawny blocker frontier to:
+     - `RG_KernelIdentityLocalityToWellPosedness_Theorem`,
+     - `QFT_KernelIdentityLocalityToPositivity_Theorem`,
+   - warstwa `identity-closure` zostala przepracowana do anti-overclaim auditu bez theorem-level PASS.
+2. Kolejny pakiet w rygorze strict:
+   - `EXTRACT_DUAL_KERNEL_IDENTITY_LOCALITY_PROVIDER_MINIMAL_BLOCKER_CUT`,
+   - `BUILD_DUAL_KERNEL_IDENTITY_LOCALITY_PROVIDER_THEOREM_SPEC`,
+   - `RUN_DUAL_KERNEL_IDENTITY_LOCALITY_PROVIDER_COUNTEREXAMPLE_SEARCH`,
+   - `ATTEMPT_NON_AXIOMATIC_DUAL_KERNEL_IDENTITY_LOCALITY_PROVIDER_DERIVATION`,
+   - `RUN_STRICT_ANTI_FALSE_PASS_IDENTITY_CONTINUITY_FRONTIER_AUDIT`.
+3. Uzasadnienie merytoryczne:
+   - dopiero po rozpisaniu locality lemmas i bounded falsification search wolno wykonywac kolejny machine-check attempt,
+   - brak strict counterexample w bounded domain nie jest dowodem, ale jest potrzebnym filtrem przed dalsza eskalacja claimow,
+   - `all_strict_obligations_fully_closed=false` pozostaje warunkiem publikacyjnym do czasu rozladowania aktualnego frontu.
+
+## 388. Aktualizacja frontier po QW-2584
+1. Stan aktualny:
+   - aktualny jawny blocker frontier to:
+     - `RG_KernelIdentityContinuityToWellPosedness_Theorem`,
+     - `QFT_KernelIdentityContinuityToPositivity_Theorem`,
+   - warstwa `identity-locality` zostala przepracowana do anti-overclaim auditu bez theorem-level PASS.
+2. Kolejny pakiet w rygorze strict:
+   - `EXTRACT_DUAL_KERNEL_IDENTITY_CONTINUITY_PROVIDER_MINIMAL_BLOCKER_CUT`,
+   - `BUILD_DUAL_KERNEL_IDENTITY_CONTINUITY_PROVIDER_THEOREM_SPEC`,
+   - `RUN_DUAL_KERNEL_IDENTITY_CONTINUITY_PROVIDER_COUNTEREXAMPLE_SEARCH`,
+   - `ATTEMPT_NON_AXIOMATIC_DUAL_KERNEL_IDENTITY_CONTINUITY_PROVIDER_DERIVATION`,
+   - `RUN_STRICT_ANTI_FALSE_PASS_IDENTITY_COHERENCE_FRONTIER_AUDIT`.
+3. Uzasadnienie merytoryczne:
+   - dopiero po rozpisaniu continuity lemmas i bounded falsification search wolno wykonywac kolejny machine-check attempt,
+   - brak strict counterexample w bounded domain nie jest dowodem, ale jest potrzebnym filtrem przed dalsza eskalacja claimow,
+   - `all_strict_obligations_fully_closed=false` pozostaje warunkiem publikacyjnym do czasu rozladowania aktualnego frontu.
+
+## 389. Aktualizacja frontier po QW-2589
+1. Stan aktualny:
+   - aktualny jawny blocker frontier to:
+     - `RG_KernelIdentityCoherenceToWellPosedness_Theorem`,
+     - `QFT_KernelIdentityCoherenceToPositivity_Theorem`,
+   - warstwa `identity-continuity` zostala przepracowana do anti-overclaim auditu bez theorem-level PASS.
+2. Kolejny pakiet w rygorze strict:
+   - `EXTRACT_DUAL_KERNEL_IDENTITY_COHERENCE_PROVIDER_MINIMAL_BLOCKER_CUT`,
+   - `BUILD_DUAL_KERNEL_IDENTITY_COHERENCE_PROVIDER_THEOREM_SPEC`,
+   - `RUN_DUAL_KERNEL_IDENTITY_COHERENCE_PROVIDER_COUNTEREXAMPLE_SEARCH`,
+   - `ATTEMPT_NON_AXIOMATIC_DUAL_KERNEL_IDENTITY_COHERENCE_PROVIDER_DERIVATION`,
+   - `RUN_STRICT_ANTI_FALSE_PASS_IDENTITY_REGULARITY_FRONTIER_AUDIT`.
+3. Uzasadnienie merytoryczne:
+   - dopiero po rozpisaniu coherence lemmas i bounded falsification search wolno wykonywac kolejny machine-check attempt,
+   - brak strict counterexample w bounded domain nie jest dowodem, ale jest potrzebnym filtrem przed dalsza eskalacja claimow,
+   - `all_strict_obligations_fully_closed=false` pozostaje warunkiem publikacyjnym do czasu rozladowania aktualnego frontu.

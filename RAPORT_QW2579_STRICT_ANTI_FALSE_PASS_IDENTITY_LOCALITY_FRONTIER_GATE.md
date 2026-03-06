@@ -1,0 +1,1 @@
+material_dowodowy/strict_chain_qw2575_qw2579/raporty_md/RAPORT_QW2579_STRICT_ANTI_FALSE_PASS_IDENTITY_LOCALITY_FRONTIER_GATE.md

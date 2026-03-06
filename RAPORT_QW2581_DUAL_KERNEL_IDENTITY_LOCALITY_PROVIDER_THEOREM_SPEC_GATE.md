@@ -1,0 +1,1 @@
+material_dowodowy/strict_chain_qw2580_qw2584/raporty_md/RAPORT_QW2581_DUAL_KERNEL_IDENTITY_LOCALITY_PROVIDER_THEOREM_SPEC_GATE.md

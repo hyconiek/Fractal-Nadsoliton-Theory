@@ -1,0 +1,1 @@
+material_dowodowy/strict_chain_qw2580_qw2584/raporty_md/RAPORT_QW2584_STRICT_ANTI_FALSE_PASS_IDENTITY_CONTINUITY_FRONTIER_GATE.md
