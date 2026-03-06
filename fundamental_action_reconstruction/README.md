@@ -1,6 +1,6 @@
 # Fundamental Action Reconstruction
 
-Status: `PROGRAM_PHASE1_COMPLETE_C33_LOCAL_PHASE_FORMULA_OPEN`
+Status: `PROGRAM_PHASE1_COMPLETE_C34_REDUCED_REPRESENTATIVE_CLASS_OPEN`
 As of: `2026-03-06`
 
 Ten katalog otwiera rownolegly tor konstrukcyjny poza drabinka `L5/L12`.
@@ -148,6 +148,8 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
    - sprawdzic, czy kandydat typu `atan2(cross overlaps)` w ogole daje nieosobliwe zrodlo `alpha_12`, czy formalnie degeneruje sie do `0/0` pod strict disjoint mode scaffold.
 41. `C33`: local phase export class audit
    - sprawdzic, czy strict core ma juz packet-ready formule klasy `theta_i = atan2(<s_i,u_i>,<c_i,u_i>)`, nawet jesli brak jeszcze jawnych reprezentantow `u_1`, `u_2` dla aktualnych par.
+42. `C34`: local reduced representative class audit
+   - sprawdzic, czy strict core ma juz packet-ready klase jawnego, znormalizowanego reprezentanta lokalnej reduced line, nawet jesli brak jeszcze jawnych aktualnych faz `theta_1`, `theta_2` dla aktualnych par.
 
 ## Aktualny status
 
@@ -202,6 +204,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `C31`: wykonane jako trzydziesty pierwszy krok trzeciego mikrocyklu; klasa zrodla `alpha_12 = theta_2 - theta_1` jest juz packet-ready, a pierwszy residualny blocker zawęża sie dalej do braku jawnego eksportu lokalnych faz lub overlap scalar dla aktualnych par.
 - `C32`: wykonane jako trzydziesty drugi krok trzeciego mikrocyklu; surowa sciezka `atan2(cross overlaps)` zostaje jawnie zablokowana przez degeneracje `atan2(0,0)` pod strict orthonormal-disjoint mode scaffold, a pierwszy residualny blocker zawęża sie dalej do braku eksportu lokalnych faz `theta_1`, `theta_2`.
 - `C33`: wykonane jako trzydziesty trzeci krok trzeciego mikrocyklu; formula klasy `theta_i = atan2(<s_i,u_i>,<c_i,u_i>)` jest juz packet-ready, a pierwszy residualny blocker zawęża sie dalej do braku jawnych reprezentantow `u_1`, `u_2` dla aktualnych par.
+- `C34`: wykonane jako trzydziesty czwarty krok trzeciego mikrocyklu; klasa jawnego reprezentanta `u_i(theta_i)=cos(theta_i)c_i+sin(theta_i)s_i` jest juz packet-ready, a pierwszy residualny blocker zawęża sie dalej do braku jawnych aktualnych faz `theta_1`, `theta_2`, z ktorych te reprezentanty moglyby zostac zmaterializowane dla aktualnych par.
 
 ## Twarde ograniczenia rygoru
 
@@ -255,6 +258,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - brak claimu, ze `C31` daje juz jawny `theta_1`, `theta_2`, overlap scalar albo policzone `alpha_12` dla aktualnych par.
 - brak claimu, ze `C32` daje juz wyeksportowane lokalne fazy, jawny `alpha_12`, globalny reduced control plane albo finalna orientation slice.
 - brak claimu, ze `C33` daje juz jawne reprezentanty `u_1`, `u_2`, wyeksportowane lokalne fazy, jawny `alpha_12` albo finalna orientation slice.
+- brak claimu, ze `C34` daje juz jawne aktualne fazy `theta_1`, `theta_2`, zmaterializowane `u_1`, `u_2`, jawny `alpha_12` albo finalna orientation slice.
 
 ## Zasada korzystania z poprzednich badan
 
@@ -322,6 +326,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `C31_TRANSITION_ANGLE_SOURCE_CANDIDATE_AUDIT.md`
 - `C32_CROSS_PAIR_OVERLAP_SCALAR_DEGENERACY_AUDIT.md`
 - `C33_LOCAL_PHASE_EXPORT_CLASS_AUDIT.md`
+- `C34_LOCAL_REDUCED_REPRESENTATIVE_CLASS_AUDIT.md`
 - `a1_minimal_action_ansatz.py`
 - `a2_supersoliton_matching.py`
 - `a3_kernel_analysis.py`

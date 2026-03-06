@@ -765,6 +765,8 @@ Status nowego toru:
 - `C32` pokazuje, ze surowa sciezka `atan2(cross overlaps)` degeneruje sie formalnie do `atan2(0,0)` pod strict orthonormal-disjoint mode scaffold, a active blocker redukuje sie dalej do braku jawnego eksportu lokalnych faz oraz nadal otwartego finalnego slice extraction,
 - `C33` wykonane jako trzydziesty trzeci krok trzeciego mikrocyklu,
 - `C33` pokazuje, ze formula klasy `theta_i = atan2(<s_i,u_i>,<c_i,u_i>)` jest juz packet-ready, a active blocker redukuje sie dalej do braku jawnych reprezentantow `u_1`, `u_2` oraz nadal otwartego finalnego slice extraction,
+- `C34` wykonane jako trzydziesty czwarty krok trzeciego mikrocyklu,
+- `C34` pokazuje, ze klasa jawnego reprezentanta `u_i(theta_i)=cos(theta_i)c_i+sin(theta_i)s_i` jest juz packet-ready, a active blocker redukuje sie dalej do braku jawnych aktualnych faz `theta_1`, `theta_2` oraz nadal otwartego finalnego slice extraction,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -1335,6 +1337,20 @@ Co realnie zostalo dodane przez `C33`:
   - `theta_i = atan2(<s_i,u_i>,<c_i,u_i>)`,
 - pierwszy residualny blocker zawęża sie dalej do:
   - `C33_B1 := no_explicit_export_of_normalized_local_reduced_representatives_u_1_u_2_for_the_actual_pair_frames_from_which_theta_1_theta_2_could_be_serialized_via_atan2`,
+- drugi residualny blocker pozostaje:
+  - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
+- trzeci residualny blocker pozostaje:
+  - `C26_B2 := no_explicit_basis_level_embedding_or_extraction_of_the_candidate_two_dimensional_orientation_slice_inside_that_reduced_plane`,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C34`:
+- strict core ma juz packet-ready klase jawnego reprezentanta lokalnej reduced line:
+  - `u_i(theta_i)=cos(theta_i)c_i+sin(theta_i)s_i`,
+- kompatybilnosc projektorowa jest juz jawna:
+  - `P_red(theta_i)u_i=u_i`,
+  - `P_tan(theta_i)u_i=0`,
+- pierwszy residualny blocker zawęża sie dalej do:
+  - `C34_B1 := no_explicit_export_of_actual_local_phase_coordinates_theta_1_theta_2_needed_to_materialize_the_normalized_local_reduced_representatives_u_1_u_2_for_the_actual_pair_frames`,
 - drugi residualny blocker pozostaje:
   - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
 - trzeci residualny blocker pozostaje:
