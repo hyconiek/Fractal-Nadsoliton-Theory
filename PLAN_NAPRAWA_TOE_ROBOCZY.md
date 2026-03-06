@@ -8156,3 +8156,27 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - sprobowac zbudowac minimalny value-export packet dla jednego wspolczynnika,
    - albo uczciwie potwierdzic, ze nawet packet semantyczny nie daje jeszcze zadnej obliczalnej zawartosci.
+
+
+## 508. H21 trace value export packet (2026-03-06)
+
+1. Cel:
+   - zapisac minimalny packet eksportu wartosci dla pierwszego skalaru `tr(A_1)`.
+2. Wynik:
+   - zdefiniowano `trace_A_1 := a_1 + d_1` jako pierwszy scalar export target,
+   - nadal brak jakiejkolwiek wyeksportowanej lub policzonej wartosci.
+3. Frontier po kroku:
+   - `H21_B1 := a packet-ready value-export object for trace_A_1 now exists, but no actual exported or evaluated value for trace_A_1 is present yet`,
+   - `H20_B1`,
+   - `H15_B1`,
+   - `T12_B1`,
+   - `T2_B1`,
+   - `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/H21_TRACE_VALUE_EXPORT_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/h21_trace_value_export_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h21_trace_value_export_packet.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h21_trace_value_export_packet_summary.json`.
+5. Nastepny poprawny ruch:
+   - sprobowac zbudowac pierwszy actual value-export witness dla `trace_A_1`,
+   - albo uczciwie potwierdzic, ze nawet pierwszy scalar export target nie ma jeszcze zadnej wartosci.

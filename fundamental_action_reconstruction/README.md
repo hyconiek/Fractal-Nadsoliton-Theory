@@ -357,6 +357,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `H18`: wykonane jako materializacja tego jednego brakujacego kroku; od teraz problem redukuje sie juz nie do poziomu provenance binding, lecz do braku wyciagnietego i policzonego trojki wspolczynnikow `(a_1,b_1,d_1)` z pierwszego provenance-valid `Route A` witness na lane rozszerzenia hipotezy.
 - `H19`: wykonane jako pierwszy test wyciagniecia wspolczynnika lub inwariantu z provenance-valid `Route A` witness; od teraz problem redukuje sie juz nie do samej obecnosci witnessa, lecz do braku coefficient-level albo invariant-level export semantics dla `A_1_cand`.
 - `H20`: wykonane jako minimalny packet semantyki eksportu wspolczynnikow dla `A_1_cand`; od teraz problem redukuje sie juz nie do znaczenia wspolczynnikow, lecz do braku ich rzeczywiscie wyeksportowanych lub policzonych wartosci.
+- `H21`: wykonane jako minimalny value-export packet dla `tr(A_1)`; od teraz problem redukuje sie juz nie do definicji tego pierwszego skalaru, lecz do braku jego rzeczywistej wartosci.
 
 ## Twarde ograniczenia rygoru
 
@@ -472,6 +473,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - brak claimu, ze `H18` daje policzone `(a_1,b_1,d_1)` albo symmetry breaking; to jest tylko pierwszy provenance-valid witness na lane rozszerzenia hipotezy.
 - brak claimu, ze `H19` daje jakikolwiek policzony wspolczynnik albo inwariant; to jest tylko audit, ze witness jest jeszcze coefficient-semantically opaque.
 - brak claimu, ze `H20` daje policzone wartosci `a_1`, `b_1`, `d_1`; to jest tylko packet semantyczny.
+- brak claimu, ze `H21` daje policzone `tr(A_1)`; to jest tylko packet eksportu wartosci.
 - brak claimu, ze `H3` rozbija degeneracje `O(2)`; to jest tylko packet-ready ansatz operatora.
 - brak claimu, ze `H4` daje symmetry-breaking; to jest tylko packet-ready redukcja do testu anizotropii `2x2`.
 - brak claimu, ze `H5` daje juz jakikolwiek policzony blok `2x2`; to jest tylko packet ekstrakcji wspolczynnikow.
@@ -609,6 +611,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `H18_COMPOSITE_ROUTE_A_PROVENANCE_BINDING_INSTANCE.md`
 - `H19_FIRST_COEFFICIENT_OR_INVARIANT_EXTRACTION_ATTEMPT.md`
 - `H20_COEFFICIENT_EXPORT_SEMANTICS_PACKET.md`
+- `H21_TRACE_VALUE_EXPORT_PACKET.md`
 - `C43_FILENAME_PATH_CONVENTION_AUDIT.md`
 - `a1_minimal_action_ansatz.py`
 - `a2_supersoliton_matching.py`
