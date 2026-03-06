@@ -733,5 +733,7 @@ Current status:
 - this moves the theory forward only by performing the first real discharge attempt for `T10` and reducing its failure to a single meta-level blocker: the absence of a formal typing judgment with totality and uniqueness for current admissible theta-export routes,
 - `T12` completed as the twelfth theorem-lane step,
 - this moves the theory forward only by isolating a packet-ready theorem spec for the missing formal typing judgment with totality and uniqueness required by `T11`, while that judgment itself remains undischarge,
+- `N1` completed as a scoped negative-theorem step after stopping further `T13+` meta-ladder expansion,
+- this moves the theory forward by actually discharging a weaker but honest theorem: within the already audited six-route theta-export family, no route exports actual strict-core `theta_1,theta_2`; the global strict-core statement remains open because `T12_B1` is still not discharged,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

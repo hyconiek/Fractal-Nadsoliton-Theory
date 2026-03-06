@@ -325,6 +325,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `T10`: wykonane jako dziesiaty krok theorem-lane; packet-ready theorem spec zapisuje brakujaca route-role typing rule / admissibility-by-role declaration dla obecnego selector track, bez claimu discharge i bez twierdzenia, ze `T8`, `T6`, `T4` albo `T1` sa juz rozladowane.
 - `T11`: wykonane jako jedenasty krok theorem-lane; pierwszy realny discharge attempt dla `T10` redukuje failure do jednego nowego meta-level blockera: braku formalnego typing judgment z totality i uniqueness dla obecnego selector track.
 - `T12`: wykonane jako dwunasty krok theorem-lane; packet-ready theorem spec zapisuje brakujacy formalny typing judgment z totality i uniqueness dla obecnego selector track, bez claimu discharge i bez twierdzenia, ze `T10`, `T8`, `T6`, `T4` albo `T1` sa juz rozladowane.
+- `N1`: wykonane jako scope-bounded negative theorem po zatrzymaniu dalszej meta-drabinki `T13+`; w zakresie juz audytowanej szesciotrasowej rodziny eksportu `theta_i` theorem jest rzeczywiscie discharged: zadna z tych tras nie eksportuje actual strict-core `theta_1`, `theta_2`, ale wynik nie globalizuje sie jeszcze do calego strict core, bo `T12_B1` pozostaje otwarty.
 
 ## Twarde ograniczenia rygoru
 
@@ -411,6 +412,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - brak claimu, ze `T10` jest juz udowodniona route-role typing rule albo ze rozladowuje `T8`.
 - brak claimu, ze `T11` rozladowuje `T10`; `T11` tylko lokalizuje residualny typing-judgment blocker.
 - brak claimu, ze `T12` jest juz udowodnionym typing judgment z totality i uniqueness albo ze rozladowuje `T10`.
+- brak claimu, ze `N1` daje globalny strict-core no-internal-theta-source theorem; `N1` jest domkniety tylko w zakresie juz audytowanej rodziny tras.
 - brak claimu, ze `C42` daje juz theorem-spec, export-spec, discharge `QW-2191`, closure `A6` albo finalna orientation slice.
 
 ## Zasada korzystania z poprzednich badan
@@ -513,6 +515,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `T10_ROUTE_ROLE_TYPING_RULE_THEOREM_SPEC.md`
 - `T11_ROUTE_ROLE_TYPING_RULE_DISCHARGE_ATTEMPT.md`
 - `T12_TYPING_JUDGMENT_TOTALITY_UNIQUENESS_THEOREM_SPEC.md`
+- `N1_AUDITED_ROUTE_FAMILY_NO_INTERNAL_THETA_SOURCE_THEOREM.md`
 - `C43_FILENAME_PATH_CONVENTION_AUDIT.md`
 - `a1_minimal_action_ansatz.py`
 - `a2_supersoliton_matching.py`

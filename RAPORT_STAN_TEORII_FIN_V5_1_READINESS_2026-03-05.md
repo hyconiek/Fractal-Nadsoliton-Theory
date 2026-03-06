@@ -1750,3 +1750,18 @@ Co nadal pozostaje jawnie otwarte po `T12`:
 - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
 - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
 - nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `N1`:
+- theorem-lane meta-drabinka zostala zatrzymana na `T12`,
+- zamiast `T13+` wykonano slabsze, ale rozstrzygalne twierdzenie negatywne:
+  w juz audytowanej szesciotrasowej rodzinie eksportu `theta_i`
+  zadna trasa nie eksportuje actual strict-core `theta_1`, `theta_2`,
+- jest to realny discharge theorem-level, ale tylko w zakresie `F_audited`,
+- globalizacja tego wyniku do calego current strict core nadal pozostaje otwarta przez `T12_B1`.
+
+Frontier po `N1`:
+- `N1_scope_result := within_the_audited_six_route_family_no_internal_strict_core_theta_source_exists`,
+- `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
+- nadal brak globalnego theorem-level/full-closure PASS.

@@ -7329,5 +7329,29 @@ Po tej rundzie:
    - wygenerowano `fundamental_action_reconstruction/generated/t12_typing_judgment_totality_uniqueness_theorem_spec_summary.json`,
    - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
 5. Nastepny poprawny ruch:
-   - wykonac pierwszy discharge attempt dla `T12`,
+   - zamiast rozwijac `T13+` jako kolejna meta-drabinke, zapisac scope-bounded negative theorem nad juz audytowana rodzina tras,
    - albo wracac do lane `T2`, jesli priorytetem jest konstrukcja brakujacych strict-core objectow.
+
+## 476. N1 scope-bounded negative theorem nad audytowana rodzina tras (2026-03-06)
+
+1. Cel:
+   - przerwac meta-drabinke `T13+`,
+   - rozladowac slabsze, ale rozstrzygalne twierdzenie:
+     w juz audytowanej szesciotrasowej rodzinie eksportu `theta_i`
+     zadna trasa nie eksportuje actual strict-core `theta_1`, `theta_2`.
+2. Wynik:
+   - theorem jest discharged w zakresie `F_audited`,
+   - globalny strict-core wynik nadal nie jest discharged, bo `T12_B1` pozostaje otwarty.
+3. Frontier po kroku:
+   - `N1_scope_result := within_the_audited_six_route_family_no_internal_strict_core_theta_source_exists`,
+   - `T12_B1 := globalization_to_all_current_strict_core_routes_remains_undischarged`,
+   - `T2_B1`,
+   - `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/N1_AUDITED_ROUTE_FAMILY_NO_INTERNAL_THETA_SOURCE_THEOREM.md`,
+   - dodano `fundamental_action_reconstruction/n1_audited_route_family_no_internal_theta_source_theorem.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n1_audited_route_family_no_internal_theta_source_theorem_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - albo sformulowac globalne twierdzenie niemosliwosci / koniecznosci aksjomatu,
+   - albo przejsc na jawnie `axiom-augmented` pozytywny most.

@@ -1,0 +1,62 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent
+
+
+def main() -> None:
+    summary = {
+        "step": "N1",
+        "status": "N1_DISCHARGED_IN_AUDITED_ROUTE_FAMILY_SCOPE_NO_FALSE_PASS",
+        "goal": "Discharge a scoped negative theorem: within the six audited strict-core theta-export route archetypes, none exports actual theta_1, theta_2.",
+        "audited_route_family": {
+            "size": 6,
+            "routes": [
+                "R_raw_overlap",
+                "R_phase_formula_class",
+                "R_reduced_representative_class",
+                "R_conditional_population_schema",
+                "R_strict_source_skeleton",
+                "R_strict_to_axiom_bridge_spec"
+            ]
+        },
+        "sources": {
+            "C32": "raw overlap route degenerates",
+            "C33": "phase formula class exists but is not an actual-value source",
+            "C34": "representative class depends on actual theta_i",
+            "C49": "conditional population schema is downstream of actual theta_i",
+            "C50": "strict-core source skeleton absent",
+            "C51": "strict-to-axiom bridge spec absent"
+        },
+        "findings": {
+            "scoped_negative_theorem_discharged": True,
+            "global_strict_core_negative_theorem_discharged": False,
+            "route_family_completeness_discharged": False,
+            "globalization_blocker": "T12_B1"
+        },
+        "frontier_after_N1": {
+            "N1_scope_result": "within_the_audited_six_route_family_no_internal_strict_core_theta_source_exists",
+            "T12_B1": "globalization_to_all_current_strict_core_routes_remains_undischarged",
+            "T2_B1": "bridge_theorem_remains_specified_but_not_discharged",
+            "C32_B2": "raw_overlap_route_remains_a_separate_negative_result"
+        },
+        "hard_limits": [
+            "no theorem-level PASS for the global strict-core no-theta-source statement",
+            "no full-closure PASS",
+            "no claim that T12 is discharged",
+            "no claim that T2 is discharged",
+            "no claim that QW-2191 is discharged"
+        ],
+        "next_step": "Decide between a global impossibility theorem and an explicit axiom-augmented positive bridge lane"
+    }
+
+    out = ROOT / "generated" / "n1_audited_route_family_no_internal_theta_source_theorem_summary.json"
+    out.write_text(json.dumps(summary, indent=2, ensure_ascii=True) + "\n", encoding="ascii")
+    print(out)
+
+
+if __name__ == "__main__":
+    main()
