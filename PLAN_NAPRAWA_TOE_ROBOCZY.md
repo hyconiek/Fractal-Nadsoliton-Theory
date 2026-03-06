@@ -7765,3 +7765,28 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - sprobowac wyciagnac pierwszy jawny projected blok `2x2`,
    - i sprawdzic, czy jest izotropowy czy anizotropowy.
+
+## 492. H5 projected 2x2 coefficient extraction packet (2026-03-06)
+
+1. Cel:
+   - zapisac jawny packet ekstrakcji wspolczynnikow `a_i, b_i, d_i`,
+   - zredukowac kolejny krok do policzenia trzech skalarow dla jednej pary modow.
+2. Wynik:
+   - zapisano wzory:
+     `a_i = lambda_obs <c_i, A_i c_i>`,
+     `b_i = lambda_obs <c_i, A_i s_i>`,
+     `d_i = lambda_obs <s_i, A_i s_i>`,
+   - zapisano minimalny extraction packet:
+     pair label, basis vectors, projector, action of `E_i`, `G_light`, `R_mat`, `O_obs`, oraz trzy kontrakcje skalarne.
+3. Frontier po kroku:
+   - `H5_B1 := no explicit extracted triple (a_i, b_i, d_i) has yet been computed or exported for any actual current mode pair`,
+   - `H4_B1` zostaje zredukowane do poziomu scalar extraction,
+   - `T12_B1`,
+   - `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/H5_PROJECTED_2X2_COEFFICIENT_EXTRACTION_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/h5_projected_2x2_coefficient_extraction_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h5_projected_2x2_coefficient_extraction_packet_summary.json`.
+5. Nastepny poprawny ruch:
+   - sprobowac wybrac jedna realna pare modow,
+   - i dla niej wyeksportowac lub policzyc `(a_i, b_i, d_i)`.

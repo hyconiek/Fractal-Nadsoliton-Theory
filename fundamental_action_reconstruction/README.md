@@ -1,6 +1,6 @@
 # Fundamental Action Reconstruction
 
-Status: `PROGRAM_PHASE1_COMPLETE_C55_T1_T12_PLUS_N1_N2_N3_D1_AX1_AX2_AX3_AX4_AX5_AX6_AX7_AX8_AND_H1_H2_H3_H4_NO_FALSE_PASS`
+Status: `PROGRAM_PHASE1_COMPLETE_C55_T1_T12_PLUS_N1_N2_N3_D1_AX1_AX2_AX3_AX4_AX5_AX6_AX7_AX8_AND_H1_H2_H3_H4_H5_NO_FALSE_PASS`
 As of: `2026-03-06`
 
 Ten katalog otwiera rownolegly tor konstrukcyjny poza drabinka `L5/L12`.
@@ -341,6 +341,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `H2`: wykonane jako minimalny admissibility spec dla przyszlego `K_obs`; zapisuje najnizszy dopuszczalny prog metodologiczny dla operatora sprzezenia informacyjnego przez swiatlo, bez promowania tej hipotezy do strict core.
 - `H3`: wykonane jako pierwszy konkretny ansatz operatora `K_obs`; zapisuje w pelni wewnetrzna kompozycje `K_obs = lambda_obs * E^* G_light R_mat O_obs R_mat^* G_light^* E`, ale nadal bez testu na residualnym sektorze `O(2)` i bez claimu strict-core closure.
 - `H4`: wykonane jako redukcja `H3` do residualnego sektora `O(2)`; problem zostaje sprowadzony do pytania, czy projected blok `2x2` jest izotropowy czy anizotropowy, ale wspolczynniki tego bloku nie sa jeszcze policzone.
+- `H5`: wykonane jako jawny packet ekstrakcji wspolczynnikow projected bloku `2x2`; nastepny test sprowadza sie juz do wyznaczenia trzech skalarow `a_i, b_i, d_i` dla jednej realnej pary modow.
 
 ## Twarde ograniczenia rygoru
 
@@ -443,6 +444,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - brak claimu, ze `H2` oznacza istnienie poprawnego `K_obs`; to jest tylko spec dopuszczalnosci.
 - brak claimu, ze `H3` rozbija degeneracje `O(2)`; to jest tylko packet-ready ansatz operatora.
 - brak claimu, ze `H4` daje symmetry-breaking; to jest tylko packet-ready redukcja do testu anizotropii `2x2`.
+- brak claimu, ze `H5` daje juz jakikolwiek policzony blok `2x2`; to jest tylko packet ekstrakcji wspolczynnikow.
 - brak claimu, ze `C42` daje juz theorem-spec, export-spec, discharge `QW-2191`, closure `A6` albo finalna orientation slice.
 
 ## Zasada korzystania z poprzednich badan
@@ -561,6 +563,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `H2_MINIMAL_INTERNAL_LIGHT_FEEDBACK_OPERATOR_ADMISSIBILITY_SPEC.md`
 - `H3_MINIMAL_INTERNAL_LIGHT_FEEDBACK_OPERATOR_ANSATZ_PACKET.md`
 - `H4_RESIDUAL_O2_REDUCTION_OF_LIGHT_FEEDBACK_ANSATZ.md`
+- `H5_PROJECTED_2X2_COEFFICIENT_EXTRACTION_PACKET.md`
 - `C43_FILENAME_PATH_CONVENTION_AUDIT.md`
 - `a1_minimal_action_ansatz.py`
 - `a2_supersoliton_matching.py`

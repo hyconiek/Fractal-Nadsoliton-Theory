@@ -765,5 +765,7 @@ Current status:
 - this records a minimal fully internal operator composition for a future `K_obs`, while keeping explicit that no residual-sector test or selector export has yet been shown,
 - `H4` completed as the first residual-sector reduction of the light-feedback ansatz,
 - this reduces the test of `K_obs` to an explicit `2x2` anisotropy question on the residual `O(2)` selector sector, while keeping explicit that no coefficients have yet been computed,
+- `H5` completed as the first finite coefficient-extraction packet for that reduced `2x2` test,
+- this reduces the next step to computing the three scalars `(a_i, b_i, d_i)` for one actual mode pair, while keeping explicit that no such coefficients have yet been exported,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

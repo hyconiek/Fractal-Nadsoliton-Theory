@@ -2001,3 +2001,18 @@ Frontier po `H4`:
 - `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
 - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
 - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.
+
+Co realnie zostalo dodane przez `H5`:
+- zapisano jawny packet ekstrakcji wspolczynnikow projected bloku `2x2`,
+- problem zostal zredukowany do trzech skalarow:
+  `a_i = lambda_obs <c_i, A_i c_i>`,
+  `b_i = lambda_obs <c_i, A_i s_i>`,
+  `d_i = lambda_obs <s_i, A_i s_i>`,
+- nastepny krok nie wymaga juz nowej narracji, tylko wybrania realnej pary modow i policzenia / wyeksportowania tych kontrakcji.
+
+Frontier po `H5`:
+- `H5_B1 := no explicit extracted triple (a_i, b_i, d_i) has yet been computed or exported for any actual current mode pair`,
+- `H4_B1` zostaje zredukowane do poziomu scalar extraction,
+- `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.
