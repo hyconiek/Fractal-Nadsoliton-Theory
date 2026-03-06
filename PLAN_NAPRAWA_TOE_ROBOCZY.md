@@ -6110,3 +6110,29 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - przejsc do `C22` i sprawdzic, czy strict core ma juz jawny finite schema dla pelnej klauzuli `model["eom_psi_i"]`,
    - albo jawnie potwierdzic, ze taki schema nadal nie jest zapisany.
+
+## 430. C22 model clause schema absence audit wykonane (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy strict core ma juz statyczny all-`12` model clause
+     albo jawny finite key-family schema dla wpisow `eom_psi_i`.
+2. Wynik:
+   - istniejacy export carrier pozostaje obecny,
+   - ale nie znaleziono:
+     - statycznej listy wszystkich `12` entries,
+     - ani jawnego finite schema generujacego wszystkie entries,
+   - aktualny frontier zawęza sie do:
+     - braku jawnego schema klauzuli `model` dla wszystkich `12` rows,
+     - braku restriction do candidate orientation slice.
+3. Twarde granice:
+   - brak `C21_B1` PASS,
+   - brak theorem-level PASS,
+   - brak full-closure PASS.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C22_MODEL_CLAUSE_SCHEMA_ABSENCE_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/c22_model_clause_schema_absence_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c22_model_clause_schema_absence_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `C23` i sprawdzic, czy strict core ma juz minimalny patch-ready schema,
+   - albo jawnie potwierdzic, ze nawet taki schema nie jest jeszcze zapisany.
