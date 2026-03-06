@@ -5838,3 +5838,30 @@ Po tej rundzie:
 6. Nastepny poprawny ruch:
    - przejsc do `C12` i sprobowac minimalnego extraction packet,
    - albo zamrozic frontier i zacommitowac.
+
+## 420. C12 minimal Psi-block extraction packet wykonane (2026-03-06)
+1. Zakres:
+   - podjeto probe `C11_B1`,
+   - strict-admissible support: `QW-2164`, `QW-2166`, `QW-2180`, `QW-2186`, `C11`, `A10`.
+2. Co zostalo realnie ustalone:
+   - `eta0` jest reprezentatywnym seedem `Psi-sector`,
+   - `eta6` daje dodatkowy cross-check z exhaustive layer,
+   - jawne klasy wspolczynnikow do eksportu sa juz znane: `K_{i,j}`, self/vacuum-shift, Yukawa, kinetic identity,
+   - zatem minimalny extraction packet istnieje juz dla reprezentatywnego `Psi-sector block`.
+3. Co pozostaje zablokowane:
+   - brak jawnego assembled `Psi x Psi` submatrix dla wybranego index-set,
+   - brak coefficient table gotowej do matchingu z `QW-2186`,
+   - brak discharge `C11_B1`,
+   - brak discharge `C9_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C12_MINIMAL_PSI_BLOCK_EXTRACTION_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/c12_minimal_psi_block_extraction_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c12_minimal_psi_block_extraction_packet_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Twardy rygor:
+   - brak `C11_B1` PASS,
+   - brak theorem-level PASS,
+   - brak full-closure PASS.
+6. Nastepny poprawny ruch:
+   - przejsc do `C13` i sprobowac wybrac jeden index-set `I`,
+   - albo zamrozic frontier i zacommitowac.

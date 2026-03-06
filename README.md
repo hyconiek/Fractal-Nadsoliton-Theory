@@ -620,5 +620,7 @@ Current status:
 - this moves the theory forward only by reducing the host-identification problem to a missing concrete coefficient-level or block-level match to a Psi-sector quadratic Hessian block,
 - `C11` completed as the eleventh step of the next micro-cycle,
 - this moves the theory forward only by reducing that block-matching problem to a missing explicit extraction and coefficient export package for a concrete Psi-sector quadratic block,
+- `C12` completed as the twelfth step of the next micro-cycle,
+- this moves the theory forward only by reducing that extraction problem to a missing assembled Psi x Psi submatrix and coefficient table for a chosen index-set,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

@@ -721,6 +721,8 @@ Status nowego toru:
 - `C10` pokazuje, ze pierwszy z tych dwoch blockerow redukuje sie dalej do braku jawnego coefficient-level lub block-level matchingu z konkretnym Psi-sector quadratic Hessian blockiem,
 - `C11` wykonane jako jedenasty krok trzeciego mikrocyklu,
 - `C11` pokazuje, ze ten block-level matcher redukuje sie dalej do braku jawnego extraction/export package dla konkretnego `Psi-sector quadratic block`,
+- `C12` wykonane jako dwunasty krok trzeciego mikrocyklu,
+- `C12` pokazuje, ze extraction/export blocker redukuje sie dalej do braku assembled `Psi x Psi` submatrix i coefficient table dla wybranego index-set,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -1037,6 +1039,20 @@ Co realnie zostalo dodane przez `C11`:
 - aktualny frontier zawęża sie do:
   - `C11_B1 := no_explicit_extraction_and_coefficient_export_of_a_concrete_Psi_sector_quadratic_Hessian_block_from_the_exhaustive_canonical_13_field_Hessian_for_matching_against_qw2186`,
 - nadal brak discharge `C10_B1`,
+- nadal brak discharge `C9_B2`,
+- nadal brak axiom-free uniqueness PASS,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C12`:
+- `QW-2164` i `QW-2166` daja juz reprezentatywny seed `eta0` oraz cross-check `eta6` dla `Psi` sektora,
+- klasy wspolczynnikow przyszlego eksportu sa juz jawne:
+  - `K_{i,j}`,
+  - self/vacuum-shift diagonal terms,
+  - Yukawa cross-couplings,
+  - kinetic identity term,
+- aktualny frontier zawęża sie do:
+  - `C12_B1 := no_explicit_assembled_Psi_x_Psi_submatrix_and_no_coefficient_table_for_a_chosen_index_set_ready_for_matching_against_qw2186`,
+- nadal brak discharge `C11_B1`,
 - nadal brak discharge `C9_B2`,
 - nadal brak axiom-free uniqueness PASS,
 - nadal brak theorem-level/full-closure PASS.

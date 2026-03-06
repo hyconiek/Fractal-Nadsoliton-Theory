@@ -1,0 +1,57 @@
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+root = Path(__file__).resolve().parent
+
+payload = {
+    "stage": "C12",
+    "status": "C12_EXECUTED_MINIMAL_BLOCK_EXTRACTION_PACKET_NO_FALSE_PASS",
+    "as_of": "2026-03-06",
+    "goal": "Reduce the Psi-sector block blocker by showing that the strict core already contains a minimal extraction packet for a representative Psi-sector block, even if no assembled submatrix is exported yet.",
+    "inputs": {
+        "strict_admissible": [
+            "QW-2164",
+            "QW-2166",
+            "QW-2180",
+            "QW-2186",
+            "C11",
+            "A10",
+        ]
+    },
+    "minimal_packet": {
+        "seed_row": "eta0",
+        "cross_check_row": "eta6",
+        "expected_coefficient_classes": [
+            "kernel_mixing_K_ij",
+            "self_polynomial_or_vacuum_shift_diagonal_terms",
+            "yukawa_cross_couplings",
+            "kinetic_second_derivative_identity_term"
+        ],
+        "target": "concrete Psi x Psi quadratic submatrix on a chosen index-set I"
+    },
+    "result": {
+        "representative_seed_present": "yes",
+        "extraction_packet_present": "yes_partial",
+        "assembled_submatrix_exported": "not_shown",
+        "coefficient_table_exported": "not_shown"
+    },
+    "residual_blockers": {
+        "C12_B1": "no_explicit_assembled_Psi_x_Psi_submatrix_and_no_coefficient_table_for_a_chosen_index_set_ready_for_matching_against_qw2186",
+        "C9_B2": "no_explicit_restriction_from_that_Psi_sector_quadratic_carrier_to_the_candidate_orientation_slice"
+    },
+    "hard_limits": [
+        "no_theorem_level_pass",
+        "no_full_closure_pass",
+        "no_c11_b1_pass",
+        "no_assembled_submatrix_found_claim",
+        "no_qw2186_matching_claim",
+        "no_qw2191_discharge_claim"
+    ],
+    "next_step": "C13"
+}
+
+out = root / "generated" / "c12_minimal_psi_block_extraction_packet_summary.json"
+out.write_text(json.dumps(payload, indent=2) + "\n", encoding="ascii")
+print(out)
