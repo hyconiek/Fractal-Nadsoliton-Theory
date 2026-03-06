@@ -773,5 +773,7 @@ Current status:
 - this reduces the next step to constructing or exporting actual carriers for `E_1`, `G_light`, `R_mat`, `O_obs` or the composite `A_1`, while keeping explicit that no such carrier currently exists in repo exports,
 - `H8` completed as the minimal construction/export spec for those missing carriers,
 - this reduces the next step to instantiating either a direct composite export `A_1` or a factored carrier chain for `pair1`, while keeping explicit that neither route currently exists,
+- `H9` completed as the first audit of real route instances for `pair1`,
+- this reduces the next step to actually constructing one instance of Route A or Route B, while keeping explicit that neither route is currently instantiated anywhere in repo exports,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

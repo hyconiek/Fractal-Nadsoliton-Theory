@@ -1,0 +1,46 @@
+#!/usr/bin/env python3
+import json
+from pathlib import Path
+
+summary = {
+    "id": "H9",
+    "title": "route instance absence audit",
+    "status": "PASS_PARTIAL_NO_ROUTE_A_OR_ROUTE_B_INSTANCE_FOR_PAIR1",
+    "as_of": "2026-03-06",
+    "pair": {
+        "label": "pair1",
+        "basis": ["c1", "s1"],
+        "plane": "V_1 = span{c1, s1}"
+    },
+    "audited_routes": {
+        "Route_A": "no_persisted_exported_A_1_instance_present",
+        "Route_B": "no_instantiated_finite_carrier_chain_present"
+    },
+    "findings": {
+        "A_1": "target_only_no_exported_object",
+        "L_1": "absent",
+        "M_1": "absent",
+        "E_1": "named_slot_only",
+        "G_light": "named_slot_only",
+        "R_mat": "named_slot_only",
+        "O_obs": "named_slot_only"
+    },
+    "frontier": {
+        "H9_B1": "no actual Route A instance and no actual Route B instance exists for pair1 in the current repository exports",
+        "H8_B1": "no explicit chosen construction route (direct composite export A_1 or finite factored carrier chain) has yet been instantiated for pair1 is reduced to route-instance absence",
+        "T12_B1": "strict-core typing judgment with totality and uniqueness remains undischarged",
+        "T2_B1": "bridge theorem still specified but not discharged",
+        "C32_B2": "raw cross-pair overlap route remains degenerate"
+    },
+    "hard_limits": {
+        "theorem_level_pass": False,
+        "full_closure_pass": False,
+        "route_A_impossible": False,
+        "route_B_impossible": False,
+        "q_w_2191_discharged": False
+    }
+}
+
+out = Path("fundamental_action_reconstruction/generated/h9_route_instance_absence_audit_summary.json")
+out.write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
+print(out)

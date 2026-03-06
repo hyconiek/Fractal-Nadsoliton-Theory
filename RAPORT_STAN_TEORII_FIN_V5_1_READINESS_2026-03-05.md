@@ -1998,6 +1998,20 @@ Frontier po `H8`:
 - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
 - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.
 
+Co realnie zostalo dodane przez `H9`:
+- wykonano pierwszy jawny audit rzeczywistych instancji `Route A` i `Route B` dla `pair1 = (c1,s1)`,
+- wynik jest negatywny:
+  brak persisted exported object dla `Route A`,
+  brak zainstancjonowanego faktoryzowanego lancucha carrierow dla `Route B`,
+- problem redukuje sie juz nie do construction spec, tylko do nieobecnosci realnej instancji jednej z dwoch dopuszczalnych tras.
+
+Frontier po `H9`:
+- `H9_B1 := no actual Route A instance and no actual Route B instance exists for pair1 in the current repository exports`,
+- `H8_B1` zostaje zredukowane do route-instance absence,
+- `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.
+
 Co realnie zostalo dodane przez `H2`:
 - zapisano minimalny admissibility spec dla przyszlego operatora `K_obs`,
 - jawnie oddzielono:

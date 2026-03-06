@@ -7863,3 +7863,25 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - sprobowac znalezc lub zbudowac jedna rzeczywista instancje Route A lub Route B dla `pair1`,
    - albo jawnie potwierdzic, ze repo nie ma jeszcze zadnej instancji takiej trasy.
+
+## 496. H9 route instance absence audit (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy repo ma juz jakakolwiek rzeczywista instancje `Route A` lub `Route B` dla `pair1 = (c1,s1)`.
+2. Wynik:
+   - brak persisted exported object realizujacego `Route A`,
+   - brak zainstancjonowanego faktoryzowanego lancucha carrierow realizujacego `Route B`,
+   - problem redukuje sie zatem do nieobecnosci realnej instancji trasy, nie do niejasnosci samego construction spec.
+3. Frontier po kroku:
+   - `H9_B1 := no actual Route A instance and no actual Route B instance exists for pair1 in the current repository exports`,
+   - `H8_B1` zostaje zredukowane do route-instance absence,
+   - `T12_B1`,
+   - `T2_B1`,
+   - `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/H9_ROUTE_INSTANCE_ABSENCE_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/h9_route_instance_absence_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h9_route_instance_absence_audit_summary.json`.
+5. Nastepny poprawny ruch:
+   - sprobowac skonstruowac pierwsza rzeczywista instancje `Route A`,
+   - albo zredukowac problem do brakujacego minimalnego carrieru wejsciowego dla `Route B`.
