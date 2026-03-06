@@ -349,6 +349,8 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `H10`: wykonane jako minimalny persisted candidate dla `Route A`; od teraz problem redukuje sie juz nie do braku jakiegokolwiek obiektu `A_1`, lecz do braku provenance-valid eksportu `A_1` z operatorowego lancucha `E_1/G_light/R_mat/O_obs`.
 - `H11`: wykonane jako minimalny provenance spec dla `Route A`; od teraz problem redukuje sie juz nie do ksztaltu poprawnej proweniencji, lecz do braku jakiejkolwiek wypelnionej provenance-valid instancji dla `A_1` na `pair1`.
 - `H12`: wykonane jako pierwszy wypelniony provenance record dla `A_1_cand`; od teraz problem redukuje sie juz nie do ogolnego braku rekordu proweniencji, lecz do jednego rozstrzygajacego pola `operator_origin`, ktore pozostaje nierozwiazane.
+- `H13`: wykonane jako audit skonczonego zbioru dopuszczalnych wartosci `operator_origin`; od teraz problem redukuje sie juz nie do otwartego placeholdera, lecz do dwoch jawnych kandydatow: `exported_composite_A_1` albo `pullback_from_E_1_G_light_R_mat_O_obs`, z utrzymanym brakiem ich instancjonowania.
+- `H14`: wykonane jako audit separacji miedzy juz istniejacym feedbackiem w `K_total -> K(d)` a nowa hipoteza `K_obs`; od teraz problem redukuje sie juz nie do ogolnego pytania "czy feedback juz byl", lecz do braku explicit equivalence map albo selector-sector reduction identyfikujacej stary feedback z `K_obs`.
 
 ## Twarde ograniczenia rygoru
 
@@ -456,6 +458,8 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - brak claimu, ze `H10` daje juz wyprowadzony `A_1`; to jest tylko persisted candidate carrier na lane rozszerzenia hipotezy operatorowej.
 - brak claimu, ze `H11` daje juz provenance-valid `A_1`; to jest tylko minimalny spec i template proweniencji dla przyszlego eksportu.
 - brak claimu, ze `H12` daje juz provenance-valid `A_1`; to jest tylko czesciowo wypelniony provenance record z jawnie nierozstrzygnietym `operator_origin`.
+- brak claimu, ze `H13` rozwiazuje `operator_origin`; to jest tylko skonczony audit dopuszczalnych wartosci bez zadnej provenance-valid instancji.
+- brak claimu, ze `H14` pokazuje juz, iz bazowy kernel zawiera `K_obs`; to jest tylko audit rozdzielajacy istniejacy feedback kernela od nowej hipotezy operatorowej.
 - brak claimu, ze `H3` rozbija degeneracje `O(2)`; to jest tylko packet-ready ansatz operatora.
 - brak claimu, ze `H4` daje symmetry-breaking; to jest tylko packet-ready redukcja do testu anizotropii `2x2`.
 - brak claimu, ze `H5` daje juz jakikolwiek policzony blok `2x2`; to jest tylko packet ekstrakcji wspolczynnikow.
@@ -585,6 +589,8 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `H10_MINIMAL_ROUTE_A_CANDIDATE_INSTANCE.md`
 - `H11_MINIMAL_ROUTE_A_PROVENANCE_SPEC.md`
 - `H12_PARTIAL_ROUTE_A_PROVENANCE_RECORD.md`
+- `H13_OPERATOR_ORIGIN_VALUE_SET_AUDIT.md`
+- `H14_EXISTING_KERNEL_FEEDBACK_VS_NEW_KOBS_SEPARATION_AUDIT.md`
 - `C43_FILENAME_PATH_CONVENTION_AUDIT.md`
 - `a1_minimal_action_ansatz.py`
 - `a2_supersoliton_matching.py`

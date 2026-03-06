@@ -2055,6 +2055,32 @@ Frontier po `H12`:
 - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
 - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.
 
+Co realnie zostalo dodane przez `H13`:
+- pole `operator_origin` nie jest juz otwartym placeholderem,
+- zostalo zawężone do dwoch metodologicznie dopuszczalnych wartosci:
+  `exported_composite_A_1` oraz `pullback_from_E_1_G_light_R_mat_O_obs`,
+- nadal brak provenance-valid instancji dla ktorejkolwiek z tych dwoch wartosci.
+
+Frontier po `H13`:
+- `H13_B1 := operator_origin is reduced to a finite two-value admissible set, but neither admissible value is instantiated by a provenance-valid Route A export for pair1`,
+- `H12_B1` zostaje zredukowane do finite-value unresolved level,
+- `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `C32_B2 := raw_cross_pair_overlap_scalar_route is formally degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.
+
+Co realnie zostalo dodane przez `H14`:
+- potwierdzono, ze w konstrukcji `K_total -> K(d)` istnieje juz feedback-like structure:
+  dynamic equilibrium, modulacje miedzy komponentami kernela i zaleznosci parametrow efektywnych,
+- ale brak jawnej podstawy do utozsamienia tego starego feedbacku z nowym lane `K_obs`,
+- brak jawnej selector-sector reduction albo equivalence map dla tej identyfikacji.
+
+Frontier po `H14`:
+- `H14_B1 := existing kernel feedback is real but no explicit equivalence map or selector-sector reduction identifies it with the H-lane operator K_obs`,
+- `H13_B1 := operator_origin is reduced to a finite two-value admissible set, but neither admissible value is instantiated by a provenance-valid Route A export for pair1`,
+- `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `C32_B2 := raw cross-pair overlap route is formally degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.
+
 Co realnie zostalo dodane przez `H2`:
 - zapisano minimalny admissibility spec dla przyszlego operatora `K_obs`,
 - jawnie oddzielono:

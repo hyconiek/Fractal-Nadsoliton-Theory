@@ -7960,3 +7960,57 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - sprobowac zredukowac `operator_origin` do skonczonej listy dopuszczalnych wartosci,
    - albo sprobowac wyeksportowac pierwszy partial operator-origin witness.
+
+## 500. H13 operator-origin value-set audit (2026-03-06)
+
+1. Cel:
+   - zredukowac nierozstrzygniete pole `operator_origin` z otwartego placeholdera
+     do skonczonego, metodologicznie dopuszczalnego zbioru wartosci.
+2. Wynik:
+   - zawężono `operator_origin` do dwoch dopuszczalnych kandydatow:
+     `exported_composite_A_1` oraz `pullback_from_E_1_G_light_R_mat_O_obs`,
+   - jawnie wykluczono klasy wartosci typu:
+     `strict_core_native`, `base_kernel_hidden_obs`, `selector_fixed_by_definition`,
+     `heuristic_narrative_only`, `observer_language_without_operator_export`.
+3. Frontier po kroku:
+   - `H13_B1 := operator_origin is reduced to a finite two-value admissible set, but neither admissible value is instantiated by a provenance-valid Route A export for pair1`,
+   - `H12_B1` zostaje zredukowane do finite-value unresolved level,
+   - `T12_B1`,
+   - `T2_B1`,
+   - `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/H13_OPERATOR_ORIGIN_VALUE_SET_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/h13_operator_origin_value_set_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/route_a_operator_origin_value_set.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h13_operator_origin_value_set_audit_summary.json`.
+5. Nastepny poprawny ruch:
+   - sprobowac zmaterializowac pierwszy provenance-valid witness dla jednej z dwoch wartosci,
+   - albo wykonac audit, czy ktorakolwiek z tych dwoch wartosci ma juz jakikolwiek partial witness w repo.
+
+
+## 501. H14 existing kernel feedback vs new K_obs separation audit (2026-03-06)
+
+1. Cel:
+   - rozdzielic istniejacy feedback-like structure w `K_total -> K(d)` od nowej hipotezy operatorowej `K_obs`.
+2. Wynik:
+   - potwierdzono obecnosc internal feedback-like structure:
+     dynamic equilibrium, modulacje miedzy `K_geo`, `K_res`, `K_tors`, `K_topo`,
+     oraz wzajemne zaleznosci parametrow efektywnych,
+   - jednoczesnie potwierdzono brak:
+     jawnego `light -> matter -> readout/backreaction` chain,
+     jawnego eksportu na residualny selector sector,
+     i jawnej equivalence map identyfikujacej ten stary feedback z `K_obs`.
+3. Frontier po kroku:
+   - `H14_B1 := existing kernel feedback is real but no explicit equivalence map or selector-sector reduction identifies it with the H-lane operator K_obs`,
+   - `H13_B1`,
+   - `T12_B1`,
+   - `T2_B1`,
+   - `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/H14_EXISTING_KERNEL_FEEDBACK_VS_NEW_KOBS_SEPARATION_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/h14_existing_kernel_feedback_vs_new_kobs_separation_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h14_existing_feedback_vs_kobs_separation.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h14_existing_kernel_feedback_vs_new_kobs_separation_audit_summary.json`.
+5. Nastepny poprawny ruch:
+   - sprawdzic, czy jakakolwiek czesc starego feedbacku ma packet-ready selector-sector reduction,
+   - albo potraktowac `K_obs` jawnie jako nowy extension term bez prob utozsamiania go ze starym feedbackiem.
