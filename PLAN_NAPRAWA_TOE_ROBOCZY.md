@@ -7227,3 +7227,29 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - wykonac pierwszy discharge attempt dla `T8`,
    - albo wracac do lane `T2`, jesli priorytetem jest konstrukcja brakujacych strict-core objectow.
+
+## 472. T9 discharge attempt dla route admissibility grammar wykonane (2026-03-06)
+
+1. Cel:
+   - wykonac pierwszy realny discharge attempt dla `T8`,
+   - sprawdzic, czy obecny selector-track audit vocabulary juz definiuje
+     admissibility przez jawne route-role labels.
+2. Wynik:
+   - `T8` nie zostaje rozladowane,
+   - failure redukuje sie dalej do jednego nowego meta-level blockera:
+     braku formalnej route-role typing rule albo admissibility-by-role declaration.
+3. Frontier po kroku:
+   - aktywny theorem-lane blocker brzmi:
+     `T9_B1 := no formal route-role typing rule or admissibility-by-role declaration showing that every current strict-core theta-export route must instantiate exactly one of the six named route roles`,
+   - niezaleznie pozostaje:
+     `T2_B1`,
+   - oraz:
+     `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/T9_ROUTE_ADMISSIBILITY_GRAMMAR_DISCHARGE_ATTEMPT.md`,
+   - dodano `fundamental_action_reconstruction/t9_route_admissibility_grammar_discharge_attempt.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/t9_route_admissibility_grammar_discharge_attempt_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - zapisac theorem-spec dla brakujacej route-role typing rule / admissibility-by-role declaration,
+   - albo wracac do lane `T2`, jesli priorytetem jest konstrukcja brakujacych strict-core objectow.

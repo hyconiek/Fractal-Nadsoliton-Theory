@@ -725,5 +725,7 @@ Current status:
 - this moves the theory forward only by performing the first real discharge attempt for `T6` and reducing its failure to a single meta-level blocker: the absence of a formal route admissibility grammar or constructor-closure rule showing that every current admissible theta-export route instantiates one of the six audited archetypes,
 - `T8` completed as the eighth theorem-lane step,
 - this moves the theory forward only by isolating a packet-ready theorem spec for the missing route admissibility grammar / constructor-closure rule required by `T7`, while the grammar itself remains undischarge,
+- `T9` completed as the ninth theorem-lane step,
+- this moves the theory forward only by performing the first real discharge attempt for `T8` and reducing its failure to a single meta-level blocker: the absence of a formal route-role typing rule or admissibility-by-role declaration showing that every current admissible theta-export route instantiates exactly one of the six named route roles,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

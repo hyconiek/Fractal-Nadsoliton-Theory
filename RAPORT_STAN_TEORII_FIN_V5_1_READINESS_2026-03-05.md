@@ -1708,3 +1708,14 @@ Co nadal pozostaje jawnie otwarte po `T8`:
 - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
 - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
 - nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `T9`:
+- pierwszy realny discharge attempt dla `T8`,
+- jawne rozdzielenie `finite explicit route-role vocabulary present` od `formal route-role typing rule absent`,
+- redukcja failure do jednego nowego meta-level blockera.
+
+Co nadal pozostaje jawnie otwarte po `T9`:
+- `T9_B1 := no formal route-role typing rule or admissibility-by-role declaration showing that every current strict-core theta-export route must instantiate exactly one of the six named route roles`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
+- nadal brak theorem-level/full-closure PASS.
