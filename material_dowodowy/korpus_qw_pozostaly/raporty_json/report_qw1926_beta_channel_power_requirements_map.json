@@ -1,0 +1,82 @@
+{
+  "generated_utc": "2026-03-03T19:06:54.097440+00:00",
+  "inputs": {
+    "base_effect_min_from_qw1922": 1.3174147792415205,
+    "base_sigma_conservative": 0.1,
+    "alpha_one_sided": 0.025,
+    "powers": [
+      0.8,
+      0.9,
+      0.95
+    ]
+  },
+  "scenario_rows": [
+    {
+      "scenario": "optimistic",
+      "effect_assumed": 1.1198025623552923,
+      "sigma_assumed": 0.09000000000000001,
+      "n_holdout_required_effective_iid": {
+        "power_0.80": 1,
+        "power_0.90": 1,
+        "power_0.95": 1
+      },
+      "n_holdout_required_actual": {
+        "power_0.80": 400,
+        "power_0.90": 500,
+        "power_0.95": 500
+      }
+    },
+    {
+      "scenario": "reference",
+      "effect_assumed": 0.7904488675449123,
+      "sigma_assumed": 0.1,
+      "n_holdout_required_effective_iid": {
+        "power_0.80": 1,
+        "power_0.90": 1,
+        "power_0.95": 1
+      },
+      "n_holdout_required_actual": {
+        "power_0.80": 400,
+        "power_0.90": 500,
+        "power_0.95": 500
+      }
+    },
+    {
+      "scenario": "conservative",
+      "effect_assumed": 0.5928366506586843,
+      "sigma_assumed": 0.125,
+      "n_holdout_required_effective_iid": {
+        "power_0.80": 1,
+        "power_0.90": 1,
+        "power_0.95": 1
+      },
+      "n_holdout_required_actual": {
+        "power_0.80": 400,
+        "power_0.90": 600,
+        "power_0.95": 600
+      }
+    },
+    {
+      "scenario": "stress",
+      "effect_assumed": 0.39522443377245614,
+      "sigma_assumed": 0.16000000000000003,
+      "n_holdout_required_effective_iid": {
+        "power_0.80": 2,
+        "power_0.90": 2,
+        "power_0.95": 3
+      },
+      "n_holdout_required_actual": {
+        "power_0.80": 400,
+        "power_0.90": 800,
+        "power_0.95": 800
+      }
+    }
+  ],
+  "recommended_targets": {
+    "n_holdout_reference_power_0p90": 500,
+    "n_holdout_conservative_power_0p90": 600,
+    "n_total_pairs_reference": 1200,
+    "n_total_pairs_conservative": 1600
+  },
+  "verdict": "BETA_CHANNEL_POWER_REQUIREMENTS_MAP_READY"
+}

@@ -1,0 +1,71 @@
+{
+  "generated_utc": "2026-03-03T07:14:43.845372+00:00",
+  "kernel_source": "report_qw1932_physical_reparameterization_eta_scan.json:selected",
+  "kernel": {
+    "omega": 0.37341399972174283,
+    "phi": -1.310233577483508,
+    "beta": 0.6159380564131874,
+    "eta": 2.8
+  },
+  "thresholds": {
+    "dual_accuracy_min": 0.7,
+    "dual_mean_corr_min": 0.45,
+    "dual_info_bits_min": 0.2,
+    "acc_gain_vs_control_min": 0.1,
+    "info_gain_vs_control_min": 0.1,
+    "channel_complementarity_min": 0.02
+  },
+  "derived_params": {
+    "eps_pol": 0.07509374679450517,
+    "noise_sigma": 0.024027461308246637,
+    "incident_amp": 0.09268182251162145,
+    "absorption": 0.1916519315118045,
+    "anisotropy_strength": 0.4451716653343556,
+    "retard_phase": 0.11376650634004519,
+    "orientation_psi0": 5.926799718215227,
+    "flip_rate": 0.08695652173913043,
+    "parity_imbalance": 0.3839817610645057
+  },
+  "metrics": {
+    "dual": {
+      "accuracy": 0.6666666666666666,
+      "mean_reconstruction_corr": 0.9452702957377661,
+      "fisher_ratio": 529.3686912009528,
+      "info_bits": 4.525425901181326,
+      "plus_minus_corr_mean": 0.9998006794507451,
+      "channel_complementarity": 0.00019932054925486664,
+      "n_samples": 240
+    },
+    "single": {
+      "accuracy": 0.6527777777777778,
+      "mean_reconstruction_corr": 0.943401526295077,
+      "fisher_ratio": 509.904885214404,
+      "info_bits": 4.498455460232091,
+      "plus_minus_corr_mean": 0.9998006794507451,
+      "channel_complementarity": 0.00019932054925486664,
+      "n_samples": 240
+    },
+    "control": {
+      "accuracy": 0.6944444444444444,
+      "mean_reconstruction_corr": 0.9543959163098776,
+      "fisher_ratio": 593.2348095681297,
+      "info_bits": 4.607444654391213,
+      "plus_minus_corr_mean": 1.0,
+      "channel_complementarity": 0.0,
+      "n_samples": 240
+    },
+    "acc_gain_dual_vs_control": -0.02777777777777779,
+    "info_gain_dual_vs_control": -0.017801353974315787
+  },
+  "flags": {
+    "dual_accuracy_ge_min": false,
+    "dual_mean_corr_ge_min": true,
+    "dual_info_bits_ge_min": true,
+    "acc_gain_vs_control_ge_min": false,
+    "info_gain_vs_control_ge_min": false,
+    "channel_complementarity_ge_min": false
+  },
+  "dedeg_pass": false,
+  "verdict": "INFORMATION_CHANNEL_DEDEGENERACY_FAIL",
+  "required_next_step": "REWORK_ANGULAR_SCATTERING_AND_RETRADATION_MAPPING"
+}

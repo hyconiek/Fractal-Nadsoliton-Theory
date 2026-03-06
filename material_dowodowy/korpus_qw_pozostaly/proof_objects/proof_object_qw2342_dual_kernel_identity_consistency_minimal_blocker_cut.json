@@ -1,0 +1,24 @@
+{
+  "generated_utc": "2026-03-05T07:59:55.320724+00:00",
+  "sources": {
+    "q2341": "report_qw2341_dual_kernel_identity_integrity_execution_status_gate.json",
+    "spec": "spec_qw2342_dual_kernel_identity_consistency_minimal_blocker_cut.json"
+  },
+  "minimal_blocker_cut": [
+    {
+      "id": "L12_KERNEL_IDENTITY_CONSISTENCY_CORE_O1",
+      "branch": "L12",
+      "symbol": "RG_KernelIdentityConsistencyToWellPosedness_Theorem",
+      "required_statement": "(FINActionComplete ∧ RGConstructiveMap) -> RGGlobalWellPosednessAllScales",
+      "proof_kind": "kernel_identity_consistency_derivation"
+    },
+    {
+      "id": "L5_KERNEL_IDENTITY_CONSISTENCY_CORE_O1",
+      "branch": "L5",
+      "symbol": "QFT_KernelIdentityConsistencyToPositivity_Theorem",
+      "required_statement": "(FINActionComplete ∧ ConstructiveNonPerturbativeScheme) -> PositivityToReconstruction",
+      "proof_kind": "kernel_identity_consistency_derivation"
+    }
+  ],
+  "n_obligations": 2
+}

@@ -1,0 +1,8 @@
+# RAPORT QW-2173: L13 F5B UNCONDITIONAL OBLIGATION DECOMPOSITION GATE
+
+- Date UTC: 2026-03-05T00:48:37.474948+00:00
+- Verdict: **L13_F5B_UNCONDITIONAL_OBLIGATION_DECOMPOSITION_GATE_PASS_PARTIAL_SINGLE_TERMINAL_OPEN**
+- pass_count: `10/13`
+
+## Boundary
+- Unconditional F5b is decomposed to U1 (closed) + U2 (single terminal open lemma).

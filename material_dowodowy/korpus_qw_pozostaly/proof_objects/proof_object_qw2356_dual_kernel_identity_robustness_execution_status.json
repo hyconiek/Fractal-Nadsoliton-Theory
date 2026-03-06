@@ -1,0 +1,46 @@
+{
+  "generated_utc": "2026-03-05T08:19:24.130688+00:00",
+  "source": "report_qw2355_dual_kernel_identity_robustness_discharge_packet_gate.json",
+  "attempt_files": {
+    "l12": {
+      "name": "FIN_L12_KERNEL_IDENTITY_ROBUSTNESS_DISCHARGE_ATTEMPT.lean",
+      "sha256": "8ab74a2cd524da19bb89c8f3452aee308a3c65a9c160ce8094ed35e28041b422",
+      "target_theorem": "RG_KernelIdentityRobustnessToWellPosedness_Theorem",
+      "missing_identity_resilience_symbol": "RG_KernelIdentityResilienceToWellPosedness_Theorem"
+    },
+    "l5": {
+      "name": "FIN_L5_KERNEL_IDENTITY_ROBUSTNESS_DISCHARGE_ATTEMPT.lean",
+      "sha256": "a53c00539a7b09fed75c1b9246706ac1f4957a936f1f680fb7f274a0eb6987e2",
+      "target_theorem": "QFT_KernelIdentityRobustnessToPositivity_Theorem",
+      "missing_identity_resilience_symbol": "QFT_KernelIdentityResilienceToPositivity_Theorem"
+    }
+  },
+  "machine_check": {
+    "lean_binary": "/tmp/lean4/lean-4.28.0-linux/bin/lean",
+    "l12": {
+      "exit_code": 1,
+      "stdout": "FIN_L12_KERNEL_IDENTITY_ROBUSTNESS_DISCHARGE_ATTEMPT.lean:8:8: error(lean.unknownIdentifier): Unknown identifier `RG_KernelIdentityResilienceToWellPosedness_Theorem`\n",
+      "stderr": ""
+    },
+    "l5": {
+      "exit_code": 1,
+      "stdout": "FIN_L5_KERNEL_IDENTITY_ROBUSTNESS_DISCHARGE_ATTEMPT.lean:8:8: error(lean.unknownIdentifier): Unknown identifier `QFT_KernelIdentityResilienceToPositivity_Theorem`\n",
+      "stderr": ""
+    }
+  },
+  "blocker_cut": [
+    {
+      "branch": "L12",
+      "symbol": "RG_KernelIdentityResilienceToWellPosedness_Theorem"
+    },
+    {
+      "branch": "L5",
+      "symbol": "QFT_KernelIdentityResilienceToPositivity_Theorem"
+    }
+  ],
+  "scope_boundary": {
+    "execution_completed": false,
+    "all_strict_obligations_fully_closed": false,
+    "overclaim_forbidden": true
+  }
+}

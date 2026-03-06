@@ -1,0 +1,45 @@
+{
+  "generated_utc": "2026-03-05T10:41:21.809817+00:00",
+  "sources": {
+    "q2396": "report_qw2396_dual_fundamental_chain_reuse_admission_gate.json",
+    "q2397": "report_qw2397_dual_fundamental_noncyclic_anchor_obligation_packet_gate.json"
+  },
+  "attempt_files": {
+    "l12": "FIN_L12_FUNDAMENTAL_KERNEL_NONCYCLIC_ANCHOR_ATTEMPT.lean",
+    "l5": "FIN_L5_FUNDAMENTAL_KERNEL_NONCYCLIC_ANCHOR_ATTEMPT.lean"
+  },
+  "proof_object_file": "proof_object_qw2398_dual_fundamental_anchor_execution_status.json",
+  "proof_object_sha256": "e216217982b0f0a54e1884284d7d0929b2ddeffa41e551a2a16e733614df191e",
+  "machine_check_exit_codes": {
+    "l12": 1,
+    "l5": 1
+  },
+  "blocker_cut": [
+    {
+      "branch": "L12",
+      "symbol": "RG_KernelOperatorClosureToWellPosedness_Theorem"
+    },
+    {
+      "branch": "L5",
+      "symbol": "QFT_KernelOperatorClosureToPositivity_Theorem"
+    }
+  ],
+  "flags": {
+    "q2396_admission_allowed": true,
+    "q2397_packet_ready": true,
+    "l12_candidate_exists": true,
+    "l5_candidate_exists": true,
+    "l12_candidate_hard_hygiene": true,
+    "l5_candidate_hard_hygiene": true,
+    "lean_binary_detected": true,
+    "machine_check_executed_both": true,
+    "l12_blocker_confirmed_missing_kernel_operator_symbol": true,
+    "l5_blocker_confirmed_missing_kernel_operator_symbol": true,
+    "execution_completed": false,
+    "all_strict_obligations_fully_closed": false
+  },
+  "pass_count": 10,
+  "total_flags": 12,
+  "verdict": "DUAL_FUNDAMENTAL_ANCHOR_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_OPERATOR_CLOSURE_THEOREMS",
+  "required_next_step": "CHECK_KERNEL_OPERATOR_FRONTIER_ALIGNMENT_WITH_QW2302"
+}

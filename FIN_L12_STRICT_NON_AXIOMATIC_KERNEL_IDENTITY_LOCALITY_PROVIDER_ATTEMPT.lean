@@ -1,7 +1,1 @@
--- QW-2483 strict non-axiomatic kernel-identity-locality provider attempt (L12/RG)
-set_option autoImplicit false
-variable (FINActionComplete RGConstructiveMap RGGlobalWellPosednessAllScales : Prop)
-
-theorem RG_KernelIdentityLocalityToWellPosedness_Theorem_NON_AXIOMATIC :
-  (FINActionComplete ∧ RGConstructiveMap) -> RGGlobalWellPosednessAllScales := by
-  exact RG_KernelIdentityContinuityToWellPosedness_Theorem
+material_dowodowy/lean_fin_dowody/lean/FIN_L12_STRICT_NON_AXIOMATIC_KERNEL_IDENTITY_LOCALITY_PROVIDER_ATTEMPT.lean

@@ -1,0 +1,39 @@
+{
+  "generated_utc": "2026-03-05T05:29:01.287975+00:00",
+  "sources": {
+    "q2258": "report_qw2258_qft_active_single_blocker_discharge_packet_gate.json",
+    "q2256": "report_qw2256_qft_active_path_blocker_reduction_gate.json",
+    "q2244": "report_qw2244_qft_dax1_non_axiomatic_provider_attempt_gate.json",
+    "spec": "spec_qw2258_qft_active_single_blocker_discharge_packet.json"
+  },
+  "obligation_status": {
+    "QFT_ACTIVE_CORE_O1": {
+      "required": true,
+      "satisfied": false,
+      "evidence": {
+        "canonical_export_symbol_exists": false,
+        "source_report": "report_qw2244_qft_dax1_non_axiomatic_provider_attempt_gate.json"
+      }
+    },
+    "QFT_ACTIVE_CORE_O2": {
+      "required": true,
+      "satisfied": false,
+      "evidence": {
+        "canonical_export_symbol_exists": false,
+        "active_blockers_empty": false,
+        "source_reports": [
+          "report_qw2244_qft_dax1_non_axiomatic_provider_attempt_gate.json",
+          "report_qw2256_qft_active_path_blocker_reduction_gate.json"
+        ]
+      }
+    }
+  },
+  "n_obligations_total": 2,
+  "n_obligations_satisfied": 0,
+  "scope_boundary": {
+    "single_core_blocker_eliminated": false,
+    "dax1_non_axiomatic_provider_completed": false,
+    "o1c_fully_closed": false,
+    "overclaim_forbidden": true
+  }
+}

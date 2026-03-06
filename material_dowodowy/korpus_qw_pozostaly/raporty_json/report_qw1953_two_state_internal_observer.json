@@ -1,0 +1,98 @@
+{
+  "generated_utc": "2026-03-03T07:16:59.629153+00:00",
+  "kernel_source": "report_qw1932_physical_reparameterization_eta_scan.json:selected",
+  "kernel": {
+    "omega": 0.37341399972174283,
+    "phi": -1.310233577483508,
+    "beta": 0.6159380564131874,
+    "eta": 2.8
+  },
+  "thresholds": {
+    "closed_accuracy_min": 0.7,
+    "closed_info_bits_min": 0.2,
+    "closed_mean_corr_min": 0.45,
+    "closed_acc_gain_vs_open_min": 0.03,
+    "closed_info_gain_vs_control_min": 0.1,
+    "observer_loop_gain_min": 0.02,
+    "observer_state_stability_max": 0.4,
+    "mass_state_separation_min": 0.02
+  },
+  "derived_params": {
+    "eps_pol": 0.07509374679450517,
+    "noise_sigma": 0.024027461308246637,
+    "incident_amp": 0.09268182251162145,
+    "absorption": 0.1916519315118045,
+    "anisotropy_strength": 0.4451716653343556,
+    "retard_phase": 0.11376650634004519,
+    "orientation_psi0": 5.926799718215227,
+    "tau_h": 8.378052013002534,
+    "tau_l": 2.08129865799831,
+    "g_h": 0.3036144860490187,
+    "g_l": 0.07478347378507595,
+    "th_h": 0.37679635221290114,
+    "th_l": 0.2673913043478261,
+    "flip_rate": 0.08695652173913043,
+    "parity_imbalance": 0.3839817610645057
+  },
+  "mass_weights": {
+    "Top": 0.41721491411254114,
+    "Bottom": 0.21956265781942705,
+    "Tau": 0.16332201336172186,
+    "Charm": 0.16332201336172186,
+    "Muon": 0.03655993598043213,
+    "Electron": 1.8465364155919632e-05
+  },
+  "metrics": {
+    "closed": {
+      "accuracy": 0.6944444444444444,
+      "mean_reconstruction_corr": 0.942294921493774,
+      "fisher_ratio": 698.517319612565,
+      "info_bits": 4.725107983918206,
+      "plus_minus_corr_mean": 0.9998017640134392,
+      "channel_complementarity": 0.00019823598656076857,
+      "observer_loop_gain": 0.09844511010293194,
+      "observer_state_stability": 0.03612054695645866,
+      "mass_state_separation": 0.3184823179218779,
+      "n_samples": 240
+    },
+    "open": {
+      "accuracy": 0.6805555555555556,
+      "mean_reconstruction_corr": 0.9424701564532114,
+      "fisher_ratio": 704.5044663130682,
+      "info_bits": 4.731255702923238,
+      "plus_minus_corr_mean": 0.9998017234050671,
+      "channel_complementarity": 0.00019827659493287797,
+      "observer_loop_gain": 0.09823061565119243,
+      "observer_state_stability": 0.03605692034120138,
+      "mass_state_separation": 0.3178177315559401,
+      "n_samples": 240
+    },
+    "control": {
+      "accuracy": 0.7638888888888888,
+      "mean_reconstruction_corr": 0.9533551294022335,
+      "fisher_ratio": 789.4715435598964,
+      "info_bits": 4.813284858624494,
+      "plus_minus_corr_mean": 1.0,
+      "channel_complementarity": 0.0,
+      "observer_loop_gain": 0.09436501250917693,
+      "observer_state_stability": 0.03453863756712719,
+      "mass_state_separation": 0.30117188827897734,
+      "n_samples": 240
+    },
+    "closed_acc_gain_vs_open": 0.01388888888888884,
+    "closed_info_gain_vs_control": -0.018319479793158597
+  },
+  "flags": {
+    "closed_accuracy_ge_min": false,
+    "closed_info_bits_ge_min": true,
+    "closed_mean_corr_ge_min": true,
+    "closed_acc_gain_vs_open_ge_min": false,
+    "closed_info_gain_vs_control_ge_min": false,
+    "observer_loop_gain_ge_min": true,
+    "observer_state_stability_le_max": true,
+    "mass_state_separation_ge_min": true
+  },
+  "two_state_pass": false,
+  "verdict": "TWO_STATE_INTERNAL_OBSERVER_FAIL",
+  "required_next_step": "REWORK_TWO_STATE_MAPPING_AND_CHANNEL_DEGENERACY"
+}

@@ -1,8 +1,1 @@
-# RAPORT QW-2278: QFT RESIDUAL STRICT NON-AXIOMATIC PROVIDER CONSTRUCTION GATE
-
-- Date UTC: 2026-03-05T05:56:45.239400+00:00
-- Verdict: **QFT_RESIDUAL_STRICT_NON_AXIOMATIC_PROVIDER_CONSTRUCTION_GATE_PASS_PARTIAL_OBSTRUCTION_CONFIRMED**
-- pass_count: `10/13`
-- machine_check_exit_code: `1`
-- n_unknown_identifiers: `1`
-- unknown_identifiers: `['QFT_CanonicalAction_to_Positivity_EXPORT']`
+material_dowodowy/korpus_qw_pozostaly/raporty_md/RAPORT_QW2278_QFT_RESIDUAL_STRICT_NON_AXIOMATIC_PROVIDER_CONSTRUCTION_GATE.md

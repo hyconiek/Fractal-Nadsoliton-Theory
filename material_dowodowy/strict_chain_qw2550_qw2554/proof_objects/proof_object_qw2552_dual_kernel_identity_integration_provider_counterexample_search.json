@@ -1,0 +1,96 @@
+{
+  "generated_utc": "2026-03-05T23:37:08.277679+00:00",
+  "source": "report_qw2551_dual_kernel_identity_integration_provider_theorem_spec_gate.json",
+  "search_protocol": {
+    "model": "2x2 symmetric operator toy model",
+    "strict_regime": "alpha_min=0.80, perturbation_norm<=0.035",
+    "boundary_regime": "perturbation bound intentionally violated",
+    "lemma_families": [
+      "integration_domain_invariance",
+      "self_adjointness_positivity_preservation",
+      "integration_coercive_lower_bound",
+      "bounded_integration_preservation"
+    ],
+    "bounded_domain_note": "search is heuristic/falsification-oriented, not theorem proof"
+  },
+  "rg": {
+    "seed": 25521,
+    "n_strict": 36000,
+    "n_boundary": 10000,
+    "alpha_min": 0.8,
+    "eps_max": 0.035,
+    "strict_counterexamples": {
+      "integration_domain_invariance": 0,
+      "self_adjointness_positivity_preservation": 0,
+      "integration_coercive_lower_bound": 0,
+      "bounded_integration_preservation": 0
+    },
+    "strict_witness": {},
+    "boundary_violations": {
+      "integration_domain_invariance": 10000,
+      "self_adjointness_positivity_preservation": 0,
+      "integration_coercive_lower_bound": 10000,
+      "bounded_integration_preservation": 0
+    },
+    "boundary_witness": {
+      "integration_domain_invariance": {
+        "amin": 0.10290941153060351,
+        "smin": -0.26516008551203857,
+        "e_norm": 0.43418905401907426,
+        "l1": 0.10290941153060361,
+        "l2": 1.2276451719153734,
+        "e1": -0.3680694970426421,
+        "e2": -0.4341890540190743
+      },
+      "integration_coercive_lower_bound": {
+        "amin": 0.10290941153060351,
+        "smin": -0.26516008551203857,
+        "e_norm": 0.43418905401907426,
+        "l1": 0.10290941153060361,
+        "l2": 1.2276451719153734,
+        "e1": -0.3680694970426421,
+        "e2": -0.4341890540190743
+      }
+    }
+  },
+  "qft": {
+    "seed": 25522,
+    "n_strict": 36000,
+    "n_boundary": 10000,
+    "alpha_min": 0.8,
+    "eps_max": 0.035,
+    "strict_counterexamples": {
+      "integration_domain_invariance": 0,
+      "self_adjointness_positivity_preservation": 0,
+      "integration_coercive_lower_bound": 0,
+      "bounded_integration_preservation": 0
+    },
+    "strict_witness": {},
+    "boundary_violations": {
+      "integration_domain_invariance": 10000,
+      "self_adjointness_positivity_preservation": 0,
+      "integration_coercive_lower_bound": 10000,
+      "bounded_integration_preservation": 0
+    },
+    "boundary_witness": {
+      "integration_domain_invariance": {
+        "amin": 0.04919700920126338,
+        "smin": -0.5938699636061899,
+        "e_norm": 0.6430669728074534,
+        "l1": 0.0491970092012634,
+        "l2": 0.34109785827170197,
+        "e1": -0.6430669728074534,
+        "e2": -0.21090288310595245
+      },
+      "integration_coercive_lower_bound": {
+        "amin": 0.04919700920126338,
+        "smin": -0.5938699636061899,
+        "e_norm": 0.6430669728074534,
+        "l1": 0.0491970092012634,
+        "l2": 0.34109785827170197,
+        "e1": -0.6430669728074534,
+        "e2": -0.21090288310595245
+      }
+    }
+  }
+}

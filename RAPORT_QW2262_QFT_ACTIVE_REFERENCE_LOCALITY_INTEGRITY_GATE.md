@@ -1,8 +1,1 @@
-# RAPORT QW-2262: QFT ACTIVE REFERENCE LOCALITY INTEGRITY GATE
-
-- Date UTC: 2026-03-05T05:29:01.374176+00:00
-- Verdict: **QFT_ACTIVE_REFERENCE_LOCALITY_INTEGRITY_GATE_PASS_PARTIAL_DANGLING_REFS_DETECTED**
-- pass_count: `3/7`
-- n_active_instances: `6`
-- n_refs_total: `6`
-- n_dangling_refs: `1`
+material_dowodowy/korpus_qw_pozostaly/raporty_md/RAPORT_QW2262_QFT_ACTIVE_REFERENCE_LOCALITY_INTEGRITY_GATE.md

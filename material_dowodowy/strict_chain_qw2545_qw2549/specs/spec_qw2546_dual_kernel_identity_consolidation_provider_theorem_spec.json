@@ -1,0 +1,104 @@
+{
+  "generated_utc": "2026-03-05T23:29:14.448944+00:00",
+  "sources": {
+    "q2545": "report_qw2545_dual_kernel_identity_consolidation_provider_minimal_blocker_cut_gate.json",
+    "q2544": "report_qw2544_strict_anti_false_pass_identity_consolidation_frontier_gate.json"
+  },
+  "theorem_targets": {
+    "L12_target": "RG_KernelIdentityConsolidationToWellPosedness_Theorem",
+    "L5_target": "QFT_KernelIdentityConsolidationToPositivity_Theorem"
+  },
+  "acceptance_criteria": {
+    "C1": "Identity-consolidation domain invariance theorem in declared operator class.",
+    "C2": "Self-adjointness/positivity preservation under consolidation constraints.",
+    "C3": "Consolidation coercive lower-bound theorem with explicit constants.",
+    "C4": "Spectral/graph persistence under bounded consolidation-preserving perturbations.",
+    "C5": "Bridge theorem: consolidation lemmas imply well-posedness/positivity targets.",
+    "C6": "Machine-check package with reproducible proof hashes and dependency DAG."
+  },
+  "lemma_dag": {
+    "RG_KICONS_L1_ConsolidationDomainInvariance": [],
+    "RG_KICONS_L2_SelfAdjointPositivityPreservation": [
+      "RG_KICONS_L1_ConsolidationDomainInvariance"
+    ],
+    "RG_KICONS_L3_ConsolidationCoerciveLowerBound": [
+      "RG_KICONS_L2_SelfAdjointPositivityPreservation"
+    ],
+    "RG_KICONS_L4_BoundedConsolidationPreservation": [
+      "RG_KICONS_L3_ConsolidationCoerciveLowerBound"
+    ],
+    "RG_KernelIdentityConsolidationToWellPosedness_Theorem": [
+      "RG_KICONS_L4_BoundedConsolidationPreservation"
+    ],
+    "QFT_KICONS_L1_ConsolidationDomainInvariance": [],
+    "QFT_KICONS_L2_SelfAdjointPositivityPreservation": [
+      "QFT_KICONS_L1_ConsolidationDomainInvariance"
+    ],
+    "QFT_KICONS_L3_ConsolidationCoerciveLowerBound": [
+      "QFT_KICONS_L2_SelfAdjointPositivityPreservation"
+    ],
+    "QFT_KICONS_L4_BoundedConsolidationPreservation": [
+      "QFT_KICONS_L3_ConsolidationCoerciveLowerBound"
+    ],
+    "QFT_KernelIdentityConsolidationToPositivity_Theorem": [
+      "QFT_KICONS_L4_BoundedConsolidationPreservation"
+    ]
+  },
+  "assumptions": {
+    "A_phys_1": {
+      "class": "physical",
+      "statement": "Complete FIN action and declared branch selection remain fixed.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_phys_2": {
+      "class": "physical",
+      "statement": "Constructive RG/QFT mapping in strict scope is preserved.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_1": {
+      "class": "technical",
+      "statement": "Consolidation-constrained domain is dense and graph-closed.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_2": {
+      "class": "technical",
+      "statement": "Self-adjoint extension uniqueness in declared consolidation class.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_3": {
+      "class": "technical",
+      "statement": "Explicit coercive lower-bound constants in consolidation norm.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_4": {
+      "class": "technical",
+      "statement": "Perturbation bound below consolidation-preservation threshold.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    }
+  },
+  "scope_boundary": {
+    "theorem_spec_only": true,
+    "counterexample_search_pending": true,
+    "provider_discharge_completed": false,
+    "all_strict_obligations_fully_closed": false,
+    "overclaim_forbidden": true
+  }
+}

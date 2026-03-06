@@ -1,0 +1,72 @@
+{
+  "generated_utc": "2026-03-04T19:37:53.700689+00:00",
+  "sources": {
+    "q2136_all_orders_scaffold": "report_qw2136_interacting_microcausality_all_orders_scaffold_gate.json",
+    "q2135_constructive_finite_order": "report_qw2135_interacting_microcausality_constructive_finite_order_gate.json",
+    "q2127_action_bridge": "report_qw2127_nonabelian_spinor_gauge_action_bridge_gate.json"
+  },
+  "distribution_level_schema": {
+    "D_n_definition": "D_n = R'_n - A'_n (causal difference from lower orders).",
+    "support_statement": "supp(D_n) subset Gamma_n^+ union Gamma_n^-",
+    "splitting_statement": "R_n = split_plus(D_n)+N_n, A_n = split_minus(D_n)-N_n",
+    "normalization_statement": "N_n finite local polynomial in derivatives of delta up to omega_n"
+  },
+  "numeric_cone_closure_audit": {
+    "n_test": 20000,
+    "future_closure_rate": 1.0,
+    "past_closure_rate": 1.0
+  },
+  "local_counterterm_basis": {
+    "max_omega_assumed": 4,
+    "multiindex_count_dim4_upto_omega": 70
+  },
+  "induction_package_schema": {
+    "base_order_n2_declared": true,
+    "induction_hypothesis_declared": true,
+    "induction_step_with_causal_split_declared": true,
+    "renormalization_freedom_local_finite_declared": true,
+    "ward_brst_placeholder_declared": true
+  },
+  "finite_order_carryover": {
+    "obstruction_count_total": 0,
+    "rows": [
+      {
+        "order_n": 2,
+        "nontrivial_causal_partitions": 2,
+        "obstruction_count": 0,
+        "obstruction_free": true
+      },
+      {
+        "order_n": 3,
+        "nontrivial_causal_partitions": 6,
+        "obstruction_count": 0,
+        "obstruction_free": true
+      },
+      {
+        "order_n": 4,
+        "nontrivial_causal_partitions": 14,
+        "obstruction_count": 0,
+        "obstruction_free": true
+      }
+    ]
+  },
+  "flags": {
+    "q2136_all_orders_scaffold_pass_present": true,
+    "q2135_constructive_finite_order_pass_present": true,
+    "dimension4_local_basis_present": true,
+    "distribution_schema_declared": true,
+    "support_union_statement_declared": true,
+    "causal_splitting_with_local_normalization_declared": true,
+    "future_cone_closure_numeric_rate_ge_0p999": true,
+    "past_cone_closure_numeric_rate_ge_0p999": true,
+    "finite_order_obstruction_zero_carryover": true,
+    "finite_local_counterterm_basis_bound_nonzero": true,
+    "induction_package_complete_schema_level": true,
+    "deterministic_no_scan_no_retune": true,
+    "full_distribution_level_constructive_all_orders_proof_completed": false
+  },
+  "pass_count": 12,
+  "total_flags": 13,
+  "verdict": "INTERACTING_MICROCAUSALITY_DISTRIBUTION_LEVEL_SCHEMA_GATE_PASS_PARTIAL",
+  "required_next_step": "IMPLEMENT_EXPLICIT_DISTRIBUTION_CONSTRUCTION_ORDER_BY_ORDER_WITH_SYMBOLIC_OR_FORMAL_PROOF_ASSISTANT_EXPORT"
+}

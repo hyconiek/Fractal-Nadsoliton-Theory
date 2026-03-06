@@ -1,0 +1,30 @@
+{
+  "generated_utc": "2026-03-05T10:50:11.601155+00:00",
+  "sources": {
+    "q2400": "report_qw2400_dual_kernel_operator_chain_reuse_admission_gate.json",
+    "spec": "spec_qw2401_dual_kernel_operator_noncyclic_anchor_obligation_packet.json"
+  },
+  "obligations": [
+    {
+      "id": "L12_KERNEL_OPERATOR_NONCYCLIC_ANCHOR_O1",
+      "branch": "L12",
+      "anchor_symbol": "RG_KernelOperatorClosureToWellPosedness_Theorem",
+      "acceptance_rules": [
+        "proof_term must not be single-symbol exact to historical kernel-operator chain step",
+        "proof must be machine-checkable without `axiom` and without `_DerivedOrPending`",
+        "dependency graph delta must not re-enter confirmed identity-cycle frontier"
+      ]
+    },
+    {
+      "id": "L5_KERNEL_OPERATOR_NONCYCLIC_ANCHOR_O1",
+      "branch": "L5",
+      "anchor_symbol": "QFT_KernelOperatorClosureToPositivity_Theorem",
+      "acceptance_rules": [
+        "proof_term must not be single-symbol exact to historical kernel-operator chain step",
+        "proof must be machine-checkable without `axiom` and without `_DerivedOrPending`",
+        "dependency graph delta must not re-enter confirmed identity-cycle frontier"
+      ]
+    }
+  ],
+  "n_obligations": 2
+}

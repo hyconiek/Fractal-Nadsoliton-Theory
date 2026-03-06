@@ -1,0 +1,46 @@
+{
+  "generated_utc": "2026-03-05T06:37:33.805810+00:00",
+  "source": "report_qw2307_dual_kernel_spectral_closure_discharge_packet_gate.json",
+  "attempt_files": {
+    "l12": "FIN_L12_KERNEL_SPECTRAL_CLOSURE_DISCHARGE_ATTEMPT.lean",
+    "l5": "FIN_L5_KERNEL_SPECTRAL_CLOSURE_DISCHARGE_ATTEMPT.lean"
+  },
+  "proof_object_file": "proof_object_qw2308_dual_kernel_spectral_closure_execution_status.json",
+  "proof_object_sha256": "17a18eae8ad766605bb0ce8a8b245dfae6fe312bf6c8cab227c147cbc859ad5c",
+  "machine_check_exit_codes": {
+    "l12": 1,
+    "l5": 1
+  },
+  "blocker_cut": [
+    {
+      "branch": "L12",
+      "symbol": "RG_KernelSpectralInvarianceToWellPosedness_Theorem"
+    },
+    {
+      "branch": "L5",
+      "symbol": "QFT_KernelSpectralInvarianceToPositivity_Theorem"
+    }
+  ],
+  "flags": {
+    "q2307_packet_ready": true,
+    "l12_attempt_file_written": true,
+    "l5_attempt_file_written": true,
+    "l12_target_theorem_defined": true,
+    "l5_target_theorem_defined": true,
+    "l12_contains_no_axiom_tokens": true,
+    "l5_contains_no_axiom_tokens": true,
+    "l12_contains_no_derived_or_pending_tokens": true,
+    "l5_contains_no_derived_or_pending_tokens": true,
+    "lean_binary_detected": true,
+    "machine_check_executed_both": true,
+    "l12_blocker_confirmed_missing_spectral_invariance_symbol": true,
+    "l5_blocker_confirmed_missing_spectral_invariance_symbol": true,
+    "traceability_to_spectral_invariance_symbols_explicit": true,
+    "execution_completed": false,
+    "all_strict_obligations_fully_closed": false
+  },
+  "pass_count": 14,
+  "total_flags": 16,
+  "verdict": "DUAL_KERNEL_SPECTRAL_CLOSURE_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_SPECTRAL_INVARIANCE_THEOREMS",
+  "required_next_step": "EXTRACT_MINIMAL_KERNEL_SPECTRAL_INVARIANCE_BLOCKER_CUT"
+}

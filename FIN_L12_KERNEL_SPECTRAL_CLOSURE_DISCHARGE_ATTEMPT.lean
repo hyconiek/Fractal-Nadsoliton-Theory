@@ -1,9 +1,1 @@
--- FIN Release 5.1: QW-2308 L12 kernel-spectral-closure discharge attempt
--- Scope: derive kernel-spectral closure theorem from spectral-invariance theorem.
-
-variable (FINActionComplete RGConstructiveMap RGGlobalWellPosednessAllScales : Prop)
-
-theorem RG_KernelSpectralClosureToWellPosedness_Theorem :
-  (FINActionComplete ∧ RGConstructiveMap) -> RGGlobalWellPosednessAllScales := by
-  exact RG_KernelSpectralInvarianceToWellPosedness_Theorem
-
+material_dowodowy/lean_fin_dowody/lean/FIN_L12_KERNEL_SPECTRAL_CLOSURE_DISCHARGE_ATTEMPT.lean

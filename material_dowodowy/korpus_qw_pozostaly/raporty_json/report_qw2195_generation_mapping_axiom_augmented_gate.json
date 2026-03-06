@@ -1,0 +1,116 @@
+{
+  "generated_utc": "2026-03-05T02:26:24.683661+00:00",
+  "sources": {
+    "q2125": "report_qw2125_ktotal_generation_alignment_audit.json",
+    "q2191": "report_qw2191_mode_index_uniqueness_obstruction_theorem_gate.json",
+    "q2192": "report_qw2192_mode_index_selection_axiom_gate.json",
+    "q2193": "report_qw2193_selection_axiom_family_robustness_gate.json"
+  },
+  "axiom_augmented_rule": {
+    "name": "max_mod3_overlap_then_lexicographic_tie_break",
+    "description": "Choose permutation with maximal mod3 overlap score; if multiple, choose lexicographically smallest.",
+    "best_mod3_score_12": 8,
+    "n_best_permutations": 2,
+    "selected_permutation_targets_to_cluster": [
+      0,
+      1,
+      2
+    ]
+  },
+  "audit": {
+    "base_labels": [
+      0,
+      2,
+      2,
+      0,
+      1,
+      1,
+      0,
+      2,
+      2,
+      0,
+      1,
+      1
+    ],
+    "permutation_scores": [
+      {
+        "perm_targets_to_cluster": [
+          0,
+          1,
+          2
+        ],
+        "mod3_score_12": 8,
+        "contig_score_12": 5
+      },
+      {
+        "perm_targets_to_cluster": [
+          0,
+          2,
+          1
+        ],
+        "mod3_score_12": 8,
+        "contig_score_12": 5
+      },
+      {
+        "perm_targets_to_cluster": [
+          1,
+          0,
+          2
+        ],
+        "mod3_score_12": 2,
+        "contig_score_12": 2
+      },
+      {
+        "perm_targets_to_cluster": [
+          1,
+          2,
+          0
+        ],
+        "mod3_score_12": 2,
+        "contig_score_12": 2
+      },
+      {
+        "perm_targets_to_cluster": [
+          2,
+          0,
+          1
+        ],
+        "mod3_score_12": 2,
+        "contig_score_12": 5
+      },
+      {
+        "perm_targets_to_cluster": [
+          2,
+          1,
+          0
+        ],
+        "mod3_score_12": 2,
+        "contig_score_12": 5
+      }
+    ],
+    "q2125_perturbation_robustness": {
+      "n_perturb": 300,
+      "mod3_overlap_fraction_mean": 0.6572222222222223,
+      "mod3_overlap_fraction_p10": 0.6666666666666666,
+      "mod3_overlap_fraction_p90": 0.6666666666666666
+    }
+  },
+  "flags": {
+    "q2125_structural_tripartition_present": true,
+    "q2125_mod3_template_beats_contiguous": true,
+    "q2125_physical_uniqueness_open": true,
+    "q2191_axiom_free_obstruction_present": true,
+    "q2192_axiom_augmented_mode_uniqueness_closed": true,
+    "q2193_axiom_family_robustness_present": true,
+    "axiom_augmented_generation_rule_declared": true,
+    "axiom_augmented_generation_mapping_computable": true,
+    "axiom_augmented_generation_mapping_deterministic": true,
+    "axiom_augmented_generation_mapping_selected": true,
+    "axiom_free_generation_mapping_closed": false,
+    "deterministic_no_scan_no_retune": true
+  },
+  "pass_count": 11,
+  "total_flags": 12,
+  "verdict": "GENERATION_MAPPING_AXIOM_AUGMENTED_GATE_PASS_PARTIAL_AXIOM_FREE_OPEN",
+  "required_next_step": "PROVIDE_PHYSICAL_JUSTIFICATION_FOR_AXIOM_AUGMENTED_GENERATION_RULE_OR_DERIVE_AXIOM_FREE_MAPPING"
+}

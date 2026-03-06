@@ -1,0 +1,104 @@
+{
+  "generated_utc": "2026-03-05T22:39:16.110892+00:00",
+  "sources": {
+    "q2520": "report_qw2520_dual_kernel_identity_completeness_provider_minimal_blocker_cut_gate.json",
+    "q2519": "report_qw2519_strict_anti_false_pass_identity_completeness_frontier_gate.json"
+  },
+  "theorem_targets": {
+    "L12_target": "RG_KernelIdentityCompletenessToWellPosedness_Theorem",
+    "L5_target": "QFT_KernelIdentityCompletenessToPositivity_Theorem"
+  },
+  "acceptance_criteria": {
+    "C1": "Identity-completeness domain invariance theorem in declared operator class.",
+    "C2": "Self-adjointness/positivity preservation under completeness constraints.",
+    "C3": "Completeness coercive lower-bound theorem with explicit constants.",
+    "C4": "Spectral/graph stability under bounded completeness-preserving perturbations.",
+    "C5": "Bridge theorem: completeness lemmas imply well-posedness/positivity targets.",
+    "C6": "Machine-check package with reproducible proof hashes and dependency DAG."
+  },
+  "lemma_dag": {
+    "RG_KICOMPLETE_L1_CompletenessDomainInvariance": [],
+    "RG_KICOMPLETE_L2_SelfAdjointPositivityPreservation": [
+      "RG_KICOMPLETE_L1_CompletenessDomainInvariance"
+    ],
+    "RG_KICOMPLETE_L3_CompletenessCoerciveLowerBound": [
+      "RG_KICOMPLETE_L2_SelfAdjointPositivityPreservation"
+    ],
+    "RG_KICOMPLETE_L4_BoundedCompletenessPerturbationStability": [
+      "RG_KICOMPLETE_L3_CompletenessCoerciveLowerBound"
+    ],
+    "RG_KernelIdentityCompletenessToWellPosedness_Theorem": [
+      "RG_KICOMPLETE_L4_BoundedCompletenessPerturbationStability"
+    ],
+    "QFT_KICOMPLETE_L1_CompletenessDomainInvariance": [],
+    "QFT_KICOMPLETE_L2_SelfAdjointPositivityPreservation": [
+      "QFT_KICOMPLETE_L1_CompletenessDomainInvariance"
+    ],
+    "QFT_KICOMPLETE_L3_CompletenessCoerciveLowerBound": [
+      "QFT_KICOMPLETE_L2_SelfAdjointPositivityPreservation"
+    ],
+    "QFT_KICOMPLETE_L4_BoundedCompletenessPerturbationStability": [
+      "QFT_KICOMPLETE_L3_CompletenessCoerciveLowerBound"
+    ],
+    "QFT_KernelIdentityCompletenessToPositivity_Theorem": [
+      "QFT_KICOMPLETE_L4_BoundedCompletenessPerturbationStability"
+    ]
+  },
+  "assumptions": {
+    "A_phys_1": {
+      "class": "physical",
+      "statement": "Complete FIN action and declared branch selection remain fixed.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_phys_2": {
+      "class": "physical",
+      "statement": "Constructive RG/QFT mapping in strict scope is preserved.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_1": {
+      "class": "technical",
+      "statement": "Completeness-constrained domain is dense and graph-closed.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_2": {
+      "class": "technical",
+      "statement": "Self-adjoint extension uniqueness in declared completeness class.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_3": {
+      "class": "technical",
+      "statement": "Explicit coercive lower-bound constants in completeness norm.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_4": {
+      "class": "technical",
+      "statement": "Perturbation bound below completeness-stability threshold.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    }
+  },
+  "scope_boundary": {
+    "theorem_spec_only": true,
+    "counterexample_search_pending": true,
+    "provider_discharge_completed": false,
+    "all_strict_obligations_fully_closed": false,
+    "overclaim_forbidden": true
+  }
+}

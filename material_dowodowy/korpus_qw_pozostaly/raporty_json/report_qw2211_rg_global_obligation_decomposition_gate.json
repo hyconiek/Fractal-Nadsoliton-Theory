@@ -1,0 +1,49 @@
+{
+  "generated_utc": "2026-03-05T03:21:27.374163+00:00",
+  "sources": {
+    "q2209": "report_qw2209_rg_global_closure_obligation_gate.json",
+    "q2185": "report_qw2185_rg_proxy_global_obstruction_theorem_gate.json",
+    "q2188": "report_qw2188_uv_completing_rg_correction_frontier_gate.json"
+  },
+  "summary": {
+    "l12_o1_prior": {
+      "id": "L12_O1",
+      "description": "Prove full nonperturbative all-coupling all-t RG fixed-point/stability closure from complete FIN action (beyond current proxy and finite-scope declarations).",
+      "currently_closed": false
+    },
+    "landau_pole_t_star_reference": 96.49102481759346,
+    "extended_scope_t_probe": 30.0,
+    "b_star": 0.4631195068359375
+  },
+  "decomposition": {
+    "L12_O1a": {
+      "description": "Derive a full nonperturbative all-coupling FIN RG flow system from complete FIN action (beyond current proxy truncation) with well-posed existence/uniqueness of flow.",
+      "currently_closed": false,
+      "depends_on": []
+    },
+    "L12_O1b": {
+      "description": "Prove global all-t fixed-point/stability closure for the full derived RG system, including UV behavior without hidden scope restriction.",
+      "currently_closed": false,
+      "depends_on": [
+        "L12_O1a"
+      ]
+    }
+  },
+  "flags": {
+    "q2209_single_obligation_pass_present": true,
+    "l12_o1_id_is_explicit": true,
+    "proxy_landau_obstruction_explicit": true,
+    "extended_scope_frontier_present": true,
+    "global_all_t_not_claimed_in_current_chain": true,
+    "decomposition_to_two_subobligations_explicit": true,
+    "dependency_graph_acyclic": true,
+    "l12_o1a_closed": false,
+    "l12_o1b_closed": false,
+    "full_l12_global_closure_closed": false,
+    "no_overclaim_boundary_explicit": true
+  },
+  "pass_count": 8,
+  "total_flags": 11,
+  "verdict": "RG_GLOBAL_OBLIGATION_DECOMPOSITION_GATE_PASS_PARTIAL_TWO_SUBOBLIGATIONS_OPEN",
+  "required_next_step": "CLOSE_L12_O1A_FULL_NONPERTURBATIVE_FIN_RG_FLOW_DERIVATION_THEN_CLOSE_L12_O1B_GLOBAL_ALL_T_FIXED_POINT_STABILITY"
+}

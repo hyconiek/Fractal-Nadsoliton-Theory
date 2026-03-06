@@ -1,0 +1,39 @@
+{
+  "generated_utc": "2026-03-02T23:06:09.476492+00:00",
+  "inputs": {
+    "qw1842_hard_gate": "PASS",
+    "qw1844_hard_gate": "PARTIAL",
+    "qw1847_recommended_target_n": 76,
+    "qw1847_additional_needed": 62,
+    "qw1848_verdict": "PTA_UNIT_MISMATCH_REQUIRES_CRITERION_REDESIGN"
+  },
+  "diagnostics": {
+    "split_level_prob_positive": 0.9875,
+    "pair_level_prob_positive": 0.8202247191011236,
+    "compression_gap": 0.16727528089887644,
+    "pvalue_h0_prob_le_0p90": 0.9933063590670801
+  },
+  "flags": {
+    "ops_ready": true,
+    "strict_ready_v1": false,
+    "unit_mismatch": true,
+    "severe_gap": true,
+    "threshold_0p9_not_supported": true
+  },
+  "decision": {
+    "best_path": "PATH_B_VERSIONED_CRITERION_REPARAM_WITH_EXTERNAL_CONFIRMATORY",
+    "rationale": "Current PTA V1 probability criterion (0.9) is not supported under pair-level analysis; split-level positivity appears inflated by averaging compression.",
+    "alternative_path_a_keep_v1": {
+      "target_n": 76,
+      "additional_needed": 62
+    },
+    "alternative_path_b_reparam": {
+      "requires_new_prereg_version": true,
+      "requires_external_confirmatory_dataset": true
+    }
+  },
+  "strict_score": 0.25,
+  "hard_gate": "PARTIAL",
+  "readiness": "REPARAM_PROTOCOL_REQUIRED_BEFORE_STRICT_CONFIRMATORY",
+  "verdict": "PTA_STRICT_PATH_SELECTION_COMPLETE"
+}

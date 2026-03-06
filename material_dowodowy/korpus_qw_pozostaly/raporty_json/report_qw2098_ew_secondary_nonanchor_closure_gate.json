@@ -1,0 +1,77 @@
+{
+  "generated_utc": "2026-03-04T13:40:47.714390+00:00",
+  "sources": {
+    "registry": "report_qw2068_sm_gr_parameter_registry.json",
+    "qw2085": "report_qw2085_gf_nonanchor_lifetime_gate.json",
+    "qw2086": "report_qw2086_mz_nonanchor_ew_pole_gate.json",
+    "input_observables": "/home/krzysiek/Pobrane/TOE/edison/t1_nonanchor_observables_input_qw2085_2086.json"
+  },
+  "derived": {
+    "g_f_pred": 1.1973161026756928e-05,
+    "v_higgs_pred": 243.01780249211853,
+    "m_w_pred": 78.79296761456527,
+    "sin2_theta_w_mz_pred": 0.22899849977749193,
+    "alpha_em_inv_mz_pred": 136.10824491066091,
+    "delta_r_used": 0.04118666649969208
+  },
+  "checks": {
+    "v_higgs_rel_err_pct": 1.3005432165873874,
+    "m_w_rel_err_pct": 1.9707533068349465,
+    "sin2_theta_w_mz_rel_err_pct": 0.9607733857400236,
+    "alpha_em_inv_mz_rel_err_pct": 0.6770149300479719,
+    "v_higgs_tolerance_rel_pct": 2.0,
+    "m_w_tolerance_rel_pct": 2.0,
+    "sin2_theta_w_mz_tolerance_rel_pct": 1.0,
+    "alpha_em_inv_mz_tolerance_rel_pct": 1.0
+  },
+  "updates": [
+    {
+      "id": "v_higgs",
+      "predicted_value": 243.01780249211853,
+      "method": "qw2098_v_from_gf_nonanchor_chain",
+      "status": "derived",
+      "strict_level": "strict_internal_gate",
+      "notes": "Derived from strict non-anchor G_F chain."
+    },
+    {
+      "id": "m_w",
+      "predicted_value": 78.79296761456527,
+      "method": "qw2098_mw_from_nonanchor_ew_pole_chain",
+      "status": "derived",
+      "strict_level": "strict_internal_gate",
+      "notes": "Derived from strict non-anchor EW-pole chain input."
+    },
+    {
+      "id": "sin2_theta_w_mz",
+      "predicted_value": 0.22899849977749193,
+      "method": "qw2098_sin2_from_nonanchor_ew_pole_chain",
+      "status": "derived",
+      "strict_level": "strict_internal_gate",
+      "notes": "Derived from strict non-anchor EW-pole chain input."
+    },
+    {
+      "id": "alpha_em_inv_mz",
+      "predicted_value": 136.10824491066091,
+      "method": "qw2098_alpha_on_shell_from_gf_mw_sin2_delta_r",
+      "status": "derived",
+      "strict_level": "strict_internal_gate",
+      "notes": "Derived from strict non-anchor on-shell EW relation."
+    }
+  ],
+  "flags": {
+    "upstream_qw2085_strict_pass": true,
+    "upstream_qw2086_strict_pass": true,
+    "g_f_available": true,
+    "chain_inputs_available": true,
+    "chain_provenance_kernel": true,
+    "strict_chain_ready": true,
+    "v_higgs_within_tolerance": true,
+    "m_w_within_tolerance": true,
+    "sin2_theta_w_mz_within_tolerance": true,
+    "alpha_em_inv_mz_within_tolerance": true
+  },
+  "pass_count": 10,
+  "total_flags": 10,
+  "verdict": "EW_SECONDARY_NONANCHOR_CLOSURE_GATE_PASS_STRICT",
+  "required_next_step": "PIPE_QW2098_UPDATES_TO_QW2069_AND_RERUN_QW2071"
+}

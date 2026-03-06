@@ -1,0 +1,104 @@
+{
+  "generated_utc": "2026-03-06T00:02:42.968412+00:00",
+  "sources": {
+    "q2565": "report_qw2565_dual_kernel_identity_totality_provider_minimal_blocker_cut_gate.json",
+    "q2564": "report_qw2564_strict_anti_false_pass_identity_totality_frontier_gate.json"
+  },
+  "theorem_targets": {
+    "L12_target": "RG_KernelIdentityTotalityToWellPosedness_Theorem",
+    "L5_target": "QFT_KernelIdentityTotalityToPositivity_Theorem"
+  },
+  "acceptance_criteria": {
+    "C1": "Identity-totality domain invariance theorem in declared operator class.",
+    "C2": "Self-adjointness/positivity preservation under totality constraints.",
+    "C3": "Totality coercive lower-bound theorem with explicit constants.",
+    "C4": "Spectral/graph persistence under bounded totality-preserving perturbations.",
+    "C5": "Bridge theorem: totality lemmas imply well-posedness/positivity targets.",
+    "C6": "Machine-check package with reproducible proof hashes and dependency DAG."
+  },
+  "lemma_dag": {
+    "RG_KITOT_L1_TotalityDomainInvariance": [],
+    "RG_KITOT_L2_SelfAdjointPositivityPreservation": [
+      "RG_KITOT_L1_TotalityDomainInvariance"
+    ],
+    "RG_KITOT_L3_TotalityCoerciveLowerBound": [
+      "RG_KITOT_L2_SelfAdjointPositivityPreservation"
+    ],
+    "RG_KITOT_L4_BoundedTotalityPreservation": [
+      "RG_KITOT_L3_TotalityCoerciveLowerBound"
+    ],
+    "RG_KernelIdentityTotalityToWellPosedness_Theorem": [
+      "RG_KITOT_L4_BoundedTotalityPreservation"
+    ],
+    "QFT_KITOT_L1_TotalityDomainInvariance": [],
+    "QFT_KITOT_L2_SelfAdjointPositivityPreservation": [
+      "QFT_KITOT_L1_TotalityDomainInvariance"
+    ],
+    "QFT_KITOT_L3_TotalityCoerciveLowerBound": [
+      "QFT_KITOT_L2_SelfAdjointPositivityPreservation"
+    ],
+    "QFT_KITOT_L4_BoundedTotalityPreservation": [
+      "QFT_KITOT_L3_TotalityCoerciveLowerBound"
+    ],
+    "QFT_KernelIdentityTotalityToPositivity_Theorem": [
+      "QFT_KITOT_L4_BoundedTotalityPreservation"
+    ]
+  },
+  "assumptions": {
+    "A_phys_1": {
+      "class": "physical",
+      "statement": "Complete FIN action and declared branch selection remain fixed.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_phys_2": {
+      "class": "physical",
+      "statement": "Constructive RG/QFT mapping in strict scope is preserved.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_1": {
+      "class": "technical",
+      "statement": "Totality-constrained domain is dense and graph-closed.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_2": {
+      "class": "technical",
+      "statement": "Self-adjoint extension uniqueness in declared totality class.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_3": {
+      "class": "technical",
+      "statement": "Explicit coercive lower-bound constants in totality norm.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_4": {
+      "class": "technical",
+      "statement": "Perturbation bound below totality-preservation threshold.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    }
+  },
+  "scope_boundary": {
+    "theorem_spec_only": true,
+    "counterexample_search_pending": true,
+    "provider_discharge_completed": false,
+    "all_strict_obligations_fully_closed": false,
+    "overclaim_forbidden": true
+  }
+}

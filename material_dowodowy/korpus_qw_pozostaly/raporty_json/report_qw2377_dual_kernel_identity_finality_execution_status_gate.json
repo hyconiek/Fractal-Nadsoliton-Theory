@@ -1,0 +1,46 @@
+{
+  "generated_utc": "2026-03-05T09:00:57.451609+00:00",
+  "source": "report_qw2376_dual_kernel_identity_finality_discharge_packet_gate.json",
+  "attempt_files": {
+    "l12": "FIN_L12_KERNEL_IDENTITY_FINALITY_DISCHARGE_ATTEMPT.lean",
+    "l5": "FIN_L5_KERNEL_IDENTITY_FINALITY_DISCHARGE_ATTEMPT.lean"
+  },
+  "proof_object_file": "proof_object_qw2377_dual_kernel_identity_finality_execution_status.json",
+  "proof_object_sha256": "6e96288f99cccf9130d7ab8ae4f579282561bae6f417b7b1892dda5f05662a5a",
+  "machine_check_exit_codes": {
+    "l12": 1,
+    "l5": 1
+  },
+  "blocker_cut": [
+    {
+      "branch": "L12",
+      "symbol": "RG_KernelIdentityClosureToWellPosedness_Theorem"
+    },
+    {
+      "branch": "L5",
+      "symbol": "QFT_KernelIdentityClosureToPositivity_Theorem"
+    }
+  ],
+  "flags": {
+    "q2376_packet_ready": true,
+    "l12_attempt_file_written": true,
+    "l5_attempt_file_written": true,
+    "l12_target_theorem_defined": true,
+    "l5_target_theorem_defined": true,
+    "l12_contains_no_axiom_tokens": true,
+    "l5_contains_no_axiom_tokens": true,
+    "l12_contains_no_derived_or_pending_tokens": true,
+    "l5_contains_no_derived_or_pending_tokens": true,
+    "lean_binary_detected": true,
+    "machine_check_executed_both": true,
+    "l12_blocker_confirmed_missing_identity_closure_symbol": true,
+    "l5_blocker_confirmed_missing_identity_closure_symbol": true,
+    "traceability_to_identity_closure_symbols_explicit": true,
+    "execution_completed": false,
+    "all_strict_obligations_fully_closed": false
+  },
+  "pass_count": 14,
+  "total_flags": 16,
+  "verdict": "DUAL_KERNEL_IDENTITY_FINALITY_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_IDENTITY_CLOSURE_THEOREMS",
+  "required_next_step": "EXTRACT_MINIMAL_KERNEL_IDENTITY_CLOSURE_BLOCKER_CUT"
+}

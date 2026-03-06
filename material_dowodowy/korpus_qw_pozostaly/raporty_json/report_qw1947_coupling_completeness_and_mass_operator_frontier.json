@@ -1,0 +1,1875 @@
+{
+  "generated_utc": "2026-03-03T06:53:57.092400+00:00",
+  "kernel_source": "report_qw1932_physical_reparameterization_eta_scan.json:selected",
+  "kernel": {
+    "omega": 0.37341399972174283,
+    "phi": -1.310233577483508,
+    "beta": 0.6159380564131874,
+    "eta": 2.8
+  },
+  "thresholds": {
+    "mass_mean_rel_pct_max": 15.0,
+    "mass_max_rel_pct_max": 75.0
+  },
+  "canonical_couplings": [
+    "amplitude_decay",
+    "sign_oscillation",
+    "phase_offset",
+    "parity_structure",
+    "local_gradient",
+    "local_curvature",
+    "memory_cumulative",
+    "nonlocal_scale_mix"
+  ],
+  "kernel_characteristics": {
+    "diagnostics": {
+      "short_slope_mean": 0.8832112523732629,
+      "short_curvature_mean": 0.1061256080386338,
+      "sign_flip_rate": 0.08695652173913043,
+      "short_memory_fraction_d1_to_d6": 0.9796753355004225,
+      "parity_imbalance": 0.3839817610645057,
+      "chi_curvature": 0.12015880431036784
+    },
+    "gamma_recipes": {
+      "local_1_to_2": 2.395103762447637,
+      "local_1_to_4": 2.349948185375845,
+      "wls_1_to_6": 2.3559520758072288,
+      "short_slope_mean": -2.5484089877124743,
+      "curvature_modulated": 2.412569752695534
+    },
+    "gamma_wls_fit_quality": {
+      "slope": -0.8165107694400655,
+      "intercept": -0.19307570071223057,
+      "r2_weighted": 0.9995674967608038
+    }
+  },
+  "mass_scenarios": {
+    "baseline_assignment": {
+      "Top": 0,
+      "Charm": 9,
+      "Bottom": 7,
+      "Electron": 24,
+      "Muon": 14,
+      "Tau": 9
+    },
+    "audit_best_mass_assignment": {
+      "Top": 0,
+      "Charm": 8,
+      "Bottom": 6,
+      "Electron": 23,
+      "Muon": 13,
+      "Tau": 8
+    },
+    "audit_best_joint_assignment": {
+      "Top": 0,
+      "Charm": 9,
+      "Bottom": 6,
+      "Electron": 24,
+      "Muon": 13,
+      "Tau": 8
+    }
+  },
+  "legacy_mass_operator_qw1939": {
+    "features": [
+      "amplitude_decay"
+    ],
+    "missing_canonical_features": [
+      "local_curvature",
+      "local_gradient",
+      "memory_cumulative",
+      "nonlocal_scale_mix",
+      "parity_structure",
+      "phase_offset",
+      "sign_oscillation"
+    ]
+  },
+  "operator_scan": [
+    {
+      "operator": {
+        "op_id": "O1_hard_linear_local14",
+        "s_map": "linear",
+        "gamma_key": "local_1_to_4",
+        "gamma_value": 2.349948185375845,
+        "complexity_k": 1,
+        "features": [
+          "amplitude_decay"
+        ],
+        "feature_coverage_ratio": 0.125
+      },
+      "strict": {
+        "scenario": "baseline_assignment",
+        "mean_rel_err_pct": 78.15206252278094,
+        "max_rel_err_pct": 99.89015848904087,
+        "normalized_mass_loss": 6.542006281372608,
+        "bic_like": 17.315324051981825,
+        "aic_like": 17.52356458275377,
+        "strict_mass_pass": false,
+        "complexity_k": 1
+      },
+      "exploratory_best_scenario": {
+        "scenario": "audit_best_mass_assignment",
+        "mean_rel_err_pct": 71.63460278256382,
+        "max_rel_err_pct": 99.75199014161099,
+        "normalized_mass_loss": 6.1056667207257345,
+        "strict_mass_pass": false
+      },
+      "per_scenario": [
+        {
+          "scenario": "baseline_assignment",
+          "metrics": {
+            "rows": [
+              {
+                "particle": "Top",
+                "q": 0,
+                "s_q": 0.0,
+                "exp_mev": 173000.0,
+                "pred_mev": 173000.0,
+                "rel_err_pct": 0.0
+              },
+              {
+                "particle": "Bottom",
+                "q": 7,
+                "s_q": 7.0,
+                "exp_mev": 4180.0,
+                "pred_mev": 578.2677614094965,
+                "rel_err_pct": 86.16584302848095
+              },
+              {
+                "particle": "Tau",
+                "q": 9,
+                "s_q": 9.0,
+                "exp_mev": 1776.9,
+                "pred_mev": 113.42899622952719,
+                "rel_err_pct": 93.61646709271612
+              },
+              {
+                "particle": "Charm",
+                "q": 9,
+                "s_q": 9.0,
+                "exp_mev": 1270.0,
+                "pred_mev": 113.42899622952719,
+                "rel_err_pct": 91.06858297405297
+              },
+              {
+                "particle": "Muon",
+                "q": 14,
+                "s_q": 14.0,
+                "exp_mev": 105.7,
+                "pred_mev": 1.9329110051187883,
+                "rel_err_pct": 98.17132355239472
+              },
+              {
+                "particle": "Electron",
+                "q": 24,
+                "s_q": 24.0,
+                "exp_mev": 0.511,
+                "pred_mev": 0.0005612901210011186,
+                "rel_err_pct": 99.89015848904087
+              }
+            ],
+            "mean_rel_err_pct": 78.15206252278094,
+            "max_rel_err_pct": 99.89015848904087,
+            "normalized_mass_loss": 6.542006281372608,
+            "bic_like": 17.315324051981825,
+            "aic_like": 17.52356458275377,
+            "strict_mass_pass": false
+          }
+        },
+        {
+          "scenario": "audit_best_mass_assignment",
+          "metrics": {
+            "rows": [
+              {
+                "particle": "Top",
+                "q": 0,
+                "s_q": 0.0,
+                "exp_mev": 173000.0,
+                "pred_mev": 173000.0,
+                "rel_err_pct": 0.0
+              },
+              {
+                "particle": "Bottom",
+                "q": 6,
+                "s_q": 6.0,
+                "exp_mev": 4180.0,
+                "pred_mev": 1305.6639913799702,
+                "rel_err_pct": 68.76401934497679
+              },
+              {
+                "particle": "Tau",
+                "q": 8,
+                "s_q": 8.0,
+                "exp_mev": 1776.9,
+                "pred_mev": 256.10999927487194,
+                "rel_err_pct": 85.5866959719246
+              },
+              {
+                "particle": "Charm",
+                "q": 8,
+                "s_q": 8.0,
+                "exp_mev": 1270.0,
+                "pred_mev": 256.10999927487194,
+                "rel_err_pct": 79.83385832481324
+              },
+              {
+                "particle": "Muon",
+                "q": 13,
+                "s_q": 13.0,
+                "exp_mev": 105.7,
+                "pred_mev": 4.364297071955399,
+                "rel_err_pct": 95.87105291205734
+              },
+              {
+                "particle": "Electron",
+                "q": 23,
+                "s_q": 23.0,
+                "exp_mev": 0.511,
+                "pred_mev": 0.0012673303763678073,
+                "rel_err_pct": 99.75199014161099
+              }
+            ],
+            "mean_rel_err_pct": 71.63460278256382,
+            "max_rel_err_pct": 99.75199014161099,
+            "normalized_mass_loss": 6.1056667207257345,
+            "bic_like": 14.95519940205288,
+            "aic_like": 15.163439932824826,
+            "strict_mass_pass": false
+          }
+        },
+        {
+          "scenario": "audit_best_joint_assignment",
+          "metrics": {
+            "rows": [
+              {
+                "particle": "Top",
+                "q": 0,
+                "s_q": 0.0,
+                "exp_mev": 173000.0,
+                "pred_mev": 173000.0,
+                "rel_err_pct": 0.0
+              },
+              {
+                "particle": "Bottom",
+                "q": 6,
+                "s_q": 6.0,
+                "exp_mev": 4180.0,
+                "pred_mev": 1305.6639913799702,
+                "rel_err_pct": 68.76401934497679
+              },
+              {
+                "particle": "Tau",
+                "q": 8,
+                "s_q": 8.0,
+                "exp_mev": 1776.9,
+                "pred_mev": 256.10999927487194,
+                "rel_err_pct": 85.5866959719246
+              },
+              {
+                "particle": "Charm",
+                "q": 9,
+                "s_q": 9.0,
+                "exp_mev": 1270.0,
+                "pred_mev": 113.42899622952719,
+                "rel_err_pct": 91.06858297405297
+              },
+              {
+                "particle": "Muon",
+                "q": 13,
+                "s_q": 13.0,
+                "exp_mev": 105.7,
+                "pred_mev": 4.364297071955399,
+                "rel_err_pct": 95.87105291205734
+              },
+              {
+                "particle": "Electron",
+                "q": 24,
+                "s_q": 24.0,
+                "exp_mev": 0.511,
+                "pred_mev": 0.0005612901210011186,
+                "rel_err_pct": 99.89015848904087
+              }
+            ],
+            "mean_rel_err_pct": 73.53008494867542,
+            "max_rel_err_pct": 99.89015848904087,
+            "normalized_mass_loss": 6.233874443098907,
+            "bic_like": 16.316462880419895,
+            "aic_like": 16.52470341119184,
+            "strict_mass_pass": false
+          }
+        }
+      ]
+    },
+    {
+      "operator": {
+        "op_id": "O2_hard_linear_wls16",
+        "s_map": "linear",
+        "gamma_key": "wls_1_to_6",
+        "gamma_value": 2.3559520758072288,
+        "complexity_k": 2,
+        "features": [
+          "amplitude_decay",
+          "local_gradient"
+        ],
+        "feature_coverage_ratio": 0.25
+      },
+      "strict": {
+        "scenario": "baseline_assignment",
+        "mean_rel_err_pct": 78.24240099307963,
+        "max_rel_err_pct": 99.895509144472,
+        "normalized_mass_loss": 6.548100188131602,
+        "bic_like": 19.194391926167565,
+        "aic_like": 19.610872987711456,
+        "strict_mass_pass": false,
+        "complexity_k": 2
+      },
+      "exploratory_best_scenario": {
+        "scenario": "audit_best_mass_assignment",
+        "mean_rel_err_pct": 71.81463388019317,
+        "max_rel_err_pct": 99.76357989460752,
+        "normalized_mass_loss": 6.1178233239409785,
+        "strict_mass_pass": false
+      },
+      "per_scenario": [
+        {
+          "scenario": "baseline_assignment",
+          "metrics": {
+            "rows": [
+              {
+                "particle": "Top",
+                "q": 0,
+                "s_q": 0.0,
+                "exp_mev": 173000.0,
+                "pred_mev": 173000.0,
+                "rel_err_pct": 0.0
+              },
+              {
+                "particle": "Bottom",
+                "q": 7,
+                "s_q": 7.0,
+                "exp_mev": 4180.0,
+                "pred_mev": 569.9060298921904,
+                "rel_err_pct": 86.36588445233994
+              },
+              {
+                "particle": "Tau",
+                "q": 9,
+                "s_q": 9.0,
+                "exp_mev": 1776.9,
+                "pred_mev": 111.32456553405724,
+                "rel_err_pct": 93.7348997954833
+              },
+              {
+                "particle": "Charm",
+                "q": 9,
+                "s_q": 9.0,
+                "exp_mev": 1270.0,
+                "pred_mev": 111.32456553405724,
+                "rel_err_pct": 91.23428617842069
+              },
+              {
+                "particle": "Muon",
+                "q": 14,
+                "s_q": 14.0,
+                "exp_mev": 105.7,
+                "pred_mev": 1.8774155081357122,
+                "rel_err_pct": 98.22382638776186
+              },
+              {
+                "particle": "Electron",
+                "q": 24,
+                "s_q": 24.0,
+                "exp_mev": 0.511,
+                "pred_mev": 0.0005339482717481775,
+                "rel_err_pct": 99.895509144472
+              }
+            ],
+            "mean_rel_err_pct": 78.24240099307963,
+            "max_rel_err_pct": 99.895509144472,
+            "normalized_mass_loss": 6.548100188131602,
+            "bic_like": 19.194391926167565,
+            "aic_like": 19.610872987711456,
+            "strict_mass_pass": false
+          }
+        },
+        {
+          "scenario": "audit_best_mass_assignment",
+          "metrics": {
+            "rows": [
+              {
+                "particle": "Top",
+                "q": 0,
+                "s_q": 0.0,
+                "exp_mev": 173000.0,
+                "pred_mev": 173000.0,
+                "rel_err_pct": 0.0
+              },
+              {
+                "particle": "Bottom",
+                "q": 6,
+                "s_q": 6.0,
+                "exp_mev": 4180.0,
+                "pred_mev": 1289.4644509326392,
+                "rel_err_pct": 69.15156815950625
+              },
+              {
+                "particle": "Tau",
+                "q": 8,
+                "s_q": 8.0,
+                "exp_mev": 1776.9,
+                "pred_mev": 251.8819985091978,
+                "rel_err_pct": 85.82463849911657
+              },
+              {
+                "particle": "Charm",
+                "q": 8,
+                "s_q": 8.0,
+                "exp_mev": 1270.0,
+                "pred_mev": 251.8819985091978,
+                "rel_err_pct": 80.1667717709293
+              },
+              {
+                "particle": "Muon",
+                "q": 13,
+                "s_q": 13.0,
+                "exp_mev": 105.7,
+                "pred_mev": 4.247824080451639,
+                "rel_err_pct": 95.9812449569994
+              },
+              {
+                "particle": "Electron",
+                "q": 23,
+                "s_q": 23.0,
+                "exp_mev": 0.511,
+                "pred_mev": 0.001208106738555546,
+                "rel_err_pct": 99.76357989460752
+              }
+            ],
+            "mean_rel_err_pct": 71.81463388019317,
+            "max_rel_err_pct": 99.76357989460752,
+            "normalized_mass_loss": 6.1178233239409785,
+            "bic_like": 16.846160532425763,
+            "aic_like": 17.262641593969654,
+            "strict_mass_pass": false
+          }
+        },
+        {
+          "scenario": "audit_best_joint_assignment",
+          "metrics": {
+            "rows": [
+              {
+                "particle": "Top",
+                "q": 0,
+                "s_q": 0.0,
+                "exp_mev": 173000.0,
+                "pred_mev": 173000.0,
+                "rel_err_pct": 0.0
+              },
+              {
+                "particle": "Bottom",
+                "q": 6,
+                "s_q": 6.0,
+                "exp_mev": 4180.0,
+                "pred_mev": 1289.4644509326392,
+                "rel_err_pct": 69.15156815950625
+              },
+              {
+                "particle": "Tau",
+                "q": 8,
+                "s_q": 8.0,
+                "exp_mev": 1776.9,
+                "pred_mev": 251.8819985091978,
+                "rel_err_pct": 85.82463849911657
+              },
+              {
+                "particle": "Charm",
+                "q": 9,
+                "s_q": 9.0,
+                "exp_mev": 1270.0,
+                "pred_mev": 111.32456553405724,
+                "rel_err_pct": 91.23428617842069
+              },
+              {
+                "particle": "Muon",
+                "q": 13,
+                "s_q": 13.0,
+                "exp_mev": 105.7,
+                "pred_mev": 4.247824080451639,
+                "rel_err_pct": 95.9812449569994
+              },
+              {
+                "particle": "Electron",
+                "q": 24,
+                "s_q": 24.0,
+                "exp_mev": 0.511,
+                "pred_mev": 0.0005339482717481775,
+                "rel_err_pct": 99.895509144472
+              }
+            ],
+            "mean_rel_err_pct": 73.68120782308581,
+            "max_rel_err_pct": 99.895509144472,
+            "normalized_mass_loss": 6.244020643465348,
+            "bic_like": 18.200012364800624,
+            "aic_like": 18.616493426344512,
+            "strict_mass_pass": false
+          }
+        }
+      ]
+    },
+    {
+      "operator": {
+        "op_id": "O3_memory_cumulative_wls16",
+        "s_map": "memory",
+        "gamma_key": "wls_1_to_6",
+        "gamma_value": 2.3559520758072288,
+        "complexity_k": 2,
+        "features": [
+          "amplitude_decay",
+          "memory_cumulative"
+        ],
+        "feature_coverage_ratio": 0.25
+      },
+      "strict": {
+        "scenario": "baseline_assignment",
+        "mean_rel_err_pct": 83.3158090232322,
+        "max_rel_err_pct": 99.99998198077436,
+        "normalized_mass_loss": 6.887720361292471,
+        "bic_like": 33.37337708519116,
+        "aic_like": 33.78985814673505,
+        "strict_mass_pass": false,
+        "complexity_k": 2
+      },
+      "exploratory_best_scenario": {
+        "scenario": "audit_best_mass_assignment",
+        "mean_rel_err_pct": 83.31578315862572,
+        "max_rel_err_pct": 99.99998097621564,
+        "normalized_mass_loss": 6.887718623591256,
+        "strict_mass_pass": false
+      },
+      "per_scenario": [
+        {
+          "scenario": "baseline_assignment",
+          "metrics": {
+            "rows": [
+              {
+                "particle": "Top",
+                "q": 0,
+                "s_q": 0.0,
+                "exp_mev": 173000.0,
+                "pred_mev": 173000.0,
+                "rel_err_pct": 0.0
+              },
+              {
+                "particle": "Bottom",
+                "q": 7,
+                "s_q": 23.578650195366777,
+                "exp_mev": 4180.0,
+                "pred_mev": 0.0007532036313999482,
+                "rel_err_pct": 99.99998198077436
+              },
+              {
+                "particle": "Tau",
+                "q": 9,
+                "s_q": 23.654738358764632,
+                "exp_mev": 1776.9,
+                "pred_mev": 0.0007078334410235515,
+                "rel_err_pct": 99.99996016470027
+              },
+              {
+                "particle": "Charm",
+                "q": 9,
+                "s_q": 23.654738358764632,
+                "exp_mev": 1270.0,
+                "pred_mev": 0.0007078334410235515,
+                "rel_err_pct": 99.99994426508339
+              },
+              {
+                "particle": "Muon",
+                "q": 14,
+                "s_q": 23.915098485548345,
+                "exp_mev": 105.7,
+                "pred_mev": 0.0005722763280778991,
+                "rel_err_pct": 99.99945858436323
+              },
+              {
+                "particle": "Electron",
+                "q": 24,
+                "s_q": 23.999999999999993,
+                "exp_mev": 0.511,
+                "pred_mev": 0.0005339482717481802,
+                "rel_err_pct": 99.895509144472
+              }
+            ],
+            "mean_rel_err_pct": 83.3158090232322,
+            "max_rel_err_pct": 99.99998198077436,
+            "normalized_mass_loss": 6.887720361292471,
+            "bic_like": 33.37337708519116,
+            "aic_like": 33.78985814673505,
+            "strict_mass_pass": false
+          }
+        },
+        {
+          "scenario": "audit_best_mass_assignment",
+          "metrics": {
+            "rows": [
+              {
+                "particle": "Top",
+                "q": 0,
+                "s_q": 0.0,
+                "exp_mev": 173000.0,
+                "pred_mev": 173000.0,
+                "rel_err_pct": 0.0
+              },
+              {
+                "particle": "Bottom",
+                "q": 6,
+                "s_q": 23.51220805201014,
+                "exp_mev": 4180.0,
+                "pred_mev": 0.000795194185773416,
+                "rel_err_pct": 99.99998097621564
+              },
+              {
+                "particle": "Tau",
+                "q": 8,
+                "s_q": 23.59706219273299,
+                "exp_mev": 1776.9,
+                "pred_mev": 0.0007419649641535682,
+                "rel_err_pct": 99.99995824385367
+              },
+              {
+                "particle": "Charm",
+                "q": 8,
+                "s_q": 23.59706219273299,
+                "exp_mev": 1270.0,
+                "pred_mev": 0.0007419649641535682,
+                "rel_err_pct": 99.99994157756188
+              },
+              {
+                "particle": "Muon",
+                "q": 13,
+                "s_q": 23.88914829783898,
+                "exp_mev": 105.7,
+                "pred_mev": 0.0005845314426178861,
+                "rel_err_pct": 99.99944699012052
+              },
+              {
+                "particle": "Electron",
+                "q": 23,
+                "s_q": 23.99838381590065,
+                "exp_mev": 0.511,
+                "pred_mev": 0.0005346533519465368,
+                "rel_err_pct": 99.89537116400263
+              }
+            ],
+            "mean_rel_err_pct": 83.31578315862572,
+            "max_rel_err_pct": 99.99998097621564,
+            "normalized_mass_loss": 6.887718623591256,
+            "bic_like": 33.33871220213081,
+            "aic_like": 33.7551932636747,
+            "strict_mass_pass": false
+          }
+        },
+        {
+          "scenario": "audit_best_joint_assignment",
+          "metrics": {
+            "rows": [
+              {
+                "particle": "Top",
+                "q": 0,
+                "s_q": 0.0,
+                "exp_mev": 173000.0,
+                "pred_mev": 173000.0,
+                "rel_err_pct": 0.0
+              },
+              {
+                "particle": "Bottom",
+                "q": 6,
+                "s_q": 23.51220805201014,
+                "exp_mev": 4180.0,
+                "pred_mev": 0.000795194185773416,
+                "rel_err_pct": 99.99998097621564
+              },
+              {
+                "particle": "Tau",
+                "q": 8,
+                "s_q": 23.59706219273299,
+                "exp_mev": 1776.9,
+                "pred_mev": 0.0007419649641535682,
+                "rel_err_pct": 99.99995824385367
+              },
+              {
+                "particle": "Charm",
+                "q": 9,
+                "s_q": 23.654738358764632,
+                "exp_mev": 1270.0,
+                "pred_mev": 0.0007078334410235515,
+                "rel_err_pct": 99.99994426508339
+              },
+              {
+                "particle": "Muon",
+                "q": 13,
+                "s_q": 23.88914829783898,
+                "exp_mev": 105.7,
+                "pred_mev": 0.0005845314426178861,
+                "rel_err_pct": 99.99944699012052
+              },
+              {
+                "particle": "Electron",
+                "q": 24,
+                "s_q": 23.999999999999993,
+                "exp_mev": 0.511,
+                "pred_mev": 0.0005339482717481802,
+                "rel_err_pct": 99.895509144472
+              }
+            ],
+            "mean_rel_err_pct": 83.31580660329087,
+            "max_rel_err_pct": 99.99998097621564,
+            "normalized_mass_loss": 6.887720186568933,
+            "bic_like": 33.348335244380706,
+            "aic_like": 33.7648163059246,
+            "strict_mass_pass": false
+          }
+        }
+      ]
+    },
+    {
+      "operator": {
+        "op_id": "O4_weighted_nonlocal_shortslope",
+        "s_map": "weighted_memory",
+        "gamma_key": "short_slope_mean",
+        "gamma_value": -2.5484089877124743,
+        "complexity_k": 3,
+        "features": [
+          "amplitude_decay",
+          "local_gradient",
+          "nonlocal_scale_mix"
+        ],
+        "feature_coverage_ratio": 0.375
+      },
+      "strict": {
+        "scenario": "baseline_assignment",
+        "mean_rel_err_pct": 9084300246774298.0,
+        "max_rel_err_pct": 5.437456069990915e+16,
+        "normalized_mass_loss": 1330614159117075.2,
+        "bic_like": 43.71006929591045,
+        "aic_like": 44.33479088822629,
+        "strict_mass_pass": false,
+        "complexity_k": 3
+      },
+      "exploratory_best_scenario": {
+        "scenario": "audit_best_mass_assignment",
+        "mean_rel_err_pct": 8923223868221803.0,
+        "max_rel_err_pct": 5.342829107936868e+16,
+        "normalized_mass_loss": 1307258805606369.2,
+        "strict_mass_pass": false
+      },
+      "per_scenario": [
+        {
+          "scenario": "baseline_assignment",
+          "metrics": {
+            "rows": [
+              {
+                "particle": "Top",
+                "q": 0,
+                "s_q": 0.0,
+                "exp_mev": 173000.0,
+                "pred_mev": 173000.0,
+                "rel_err_pct": 0.0
+              },
+              {
+                "particle": "Bottom",
+                "q": 7,
+                "s_q": 21.283720542540433,
+                "exp_mev": 4180.0,
+                "pred_mev": 25230339861441.82,
+                "rel_err_pct": 603596647302.9143
+              },
+              {
+                "particle": "Tau",
+                "q": 9,
+                "s_q": 21.625213732442283,
+                "exp_mev": 1776.9,
+                "pred_mev": 34112294472354.47,
+                "rel_err_pct": 1919764447666.0232
+              },
+              {
+                "particle": "Charm",
+                "q": 9,
+                "s_q": 21.625213732442283,
+                "exp_mev": 1270.0,
+                "pred_mev": 34112294472354.47,
+                "rel_err_pct": 2686007438668.0684
+              },
+              {
+                "particle": "Muon",
+                "q": 14,
+                "s_q": 23.167662406285693,
+                "exp_mev": 105.7,
+                "pred_mev": 133215202698678.05,
+                "rel_err_pct": 126031412203001.27
+              },
+              {
+                "particle": "Electron",
+                "q": 24,
+                "s_q": 24.00000000000002,
+                "exp_mev": 0.511,
+                "pred_mev": 277854005176536.25,
+                "rel_err_pct": 5.437456069990915e+16
+              }
+            ],
+            "mean_rel_err_pct": 9084300246774298.0,
+            "max_rel_err_pct": 5.437456069990915e+16,
+            "normalized_mass_loss": 1330614159117075.2,
+            "bic_like": 43.71006929591045,
+            "aic_like": 44.33479088822629,
+            "strict_mass_pass": false
+          }
+        },
+        {
+          "scenario": "audit_best_mass_assignment",
+          "metrics": {
+            "rows": [
+              {
+                "particle": "Top",
+                "q": 0,
+                "s_q": 0.0,
+                "exp_mev": 173000.0,
+                "pred_mev": 173000.0,
+                "rel_err_pct": 0.0
+              },
+              {
+                "particle": "Bottom",
+                "q": 6,
+                "s_q": 21.04537841759319,
+                "exp_mev": 4180.0,
+                "pred_mev": 20440961133626.812,
+                "rel_err_pct": 489018208838.4405
+              },
+              {
+                "particle": "Tau",
+                "q": 8,
+                "s_q": 21.35920369404791,
+                "exp_mev": 1776.9,
+                "pred_mev": 26969721258814.996,
+                "rel_err_pct": 1517796232598.2383
+              },
+              {
+                "particle": "Charm",
+                "q": 8,
+                "s_q": 21.35920369404791,
+                "exp_mev": 1270.0,
+                "pred_mev": 26969721258814.996,
+                "rel_err_pct": 2123600099019.291
+              },
+              {
+                "particle": "Muon",
+                "q": 13,
+                "s_q": 22.981484701324177,
+                "exp_mev": 105.7,
+                "pred_mev": 113016253200823.08,
+                "rel_err_pct": 106921715421681.53
+              },
+              {
+                "particle": "Electron",
+                "q": 23,
+                "s_q": 23.980122525523733,
+                "exp_mev": 0.511,
+                "pred_mev": 273018567415574.47,
+                "rel_err_pct": 5.342829107936868e+16
+              }
+            ],
+            "mean_rel_err_pct": 8923223868221803.0,
+            "max_rel_err_pct": 5.342829107936868e+16,
+            "normalized_mass_loss": 1307258805606369.2,
+            "bic_like": 43.638994910191734,
+            "aic_like": 44.26371650250757,
+            "strict_mass_pass": false
+          }
+        },
+        {
+          "scenario": "audit_best_joint_assignment",
+          "metrics": {
+            "rows": [
+              {
+                "particle": "Top",
+                "q": 0,
+                "s_q": 0.0,
+                "exp_mev": 173000.0,
+                "pred_mev": 173000.0,
+                "rel_err_pct": 0.0
+              },
+              {
+                "particle": "Bottom",
+                "q": 6,
+                "s_q": 21.04537841759319,
+                "exp_mev": 4180.0,
+                "pred_mev": 20440961133626.812,
+                "rel_err_pct": 489018208838.4405
+              },
+              {
+                "particle": "Tau",
+                "q": 8,
+                "s_q": 21.35920369404791,
+                "exp_mev": 1776.9,
+                "pred_mev": 26969721258814.996,
+                "rel_err_pct": 1517796232598.2383
+              },
+              {
+                "particle": "Charm",
+                "q": 9,
+                "s_q": 21.625213732442283,
+                "exp_mev": 1270.0,
+                "pred_mev": 34112294472354.47,
+                "rel_err_pct": 2686007438668.0684
+              },
+              {
+                "particle": "Muon",
+                "q": 13,
+                "s_q": 22.981484701324177,
+                "exp_mev": 105.7,
+                "pred_mev": 113016253200823.08,
+                "rel_err_pct": 106921715421681.53
+              },
+              {
+                "particle": "Electron",
+                "q": 24,
+                "s_q": 24.00000000000002,
+                "exp_mev": 0.511,
+                "pred_mev": 277854005176536.25,
+                "rel_err_pct": 5.437456069990915e+16
+              }
+            ],
+            "mean_rel_err_pct": 9081029206201822.0,
+            "max_rel_err_pct": 5.437456069990915e+16,
+            "normalized_mass_loss": 1330396089745577.0,
+            "bic_like": 43.660067871214906,
+            "aic_like": 44.28478946353074,
+            "strict_mass_pass": false
+          }
+        }
+      ]
+    },
+    {
+      "operator": {
+        "op_id": "O5_oscillatory_phase_wls16",
+        "s_map": "oscillatory",
+        "gamma_key": "wls_1_to_6",
+        "gamma_value": 2.3559520758072288,
+        "complexity_k": 3,
+        "features": [
+          "amplitude_decay",
+          "sign_oscillation",
+          "phase_offset"
+        ],
+        "feature_coverage_ratio": 0.375
+      },
+      "strict": {
+        "scenario": "baseline_assignment",
+        "mean_rel_err_pct": 78.4589081488412,
+        "max_rel_err_pct": 99.90989968206982,
+        "normalized_mass_loss": 6.562725872350344,
+        "bic_like": 21.24178230691551,
+        "aic_like": 21.866503899231347,
+        "strict_mass_pass": false,
+        "complexity_k": 3
+      },
+      "exploratory_best_scenario": {
+        "scenario": "audit_best_mass_assignment",
+        "mean_rel_err_pct": 72.31142350409439,
+        "max_rel_err_pct": 99.79619700293921,
+        "normalized_mass_loss": 6.151377526978815,
+        "strict_mass_pass": false
+      },
+      "per_scenario": [
+        {
+          "scenario": "baseline_assignment",
+          "metrics": {
+            "rows": [
+              {
+                "particle": "Top",
+                "q": 0,
+                "s_q": 0.0,
+                "exp_mev": 173000.0,
+                "pred_mev": 173000.0,
+                "rel_err_pct": 0.0
+              },
+              {
+                "particle": "Bottom",
+                "q": 7,
+                "s_q": 7.0,
+                "exp_mev": 4180.0,
+                "pred_mev": 569.9060298921904,
+                "rel_err_pct": 86.36588445233994
+              },
+              {
+                "particle": "Tau",
+                "q": 9,
+                "s_q": 9.097826086956522,
+                "exp_mev": 1776.9,
+                "pred_mev": 102.7782644122765,
+                "rel_err_pct": 94.21586671099801
+              },
+              {
+                "particle": "Charm",
+                "q": 9,
+                "s_q": 9.097826086956522,
+                "exp_mev": 1270.0,
+                "pred_mev": 102.7782644122765,
+                "rel_err_pct": 91.90722327462389
+              },
+              {
+                "particle": "Muon",
+                "q": 14,
+                "s_q": 14.093645484949832,
+                "exp_mev": 105.7,
+                "pred_mev": 1.7392144649225734,
+                "rel_err_pct": 98.35457477301554
+              },
+              {
+                "particle": "Electron",
+                "q": 24,
+                "s_q": 24.18147448015123,
+                "exp_mev": 0.511,
+                "pred_mev": 0.00046041262462325296,
+                "rel_err_pct": 99.90989968206982
+              }
+            ],
+            "mean_rel_err_pct": 78.4589081488412,
+            "max_rel_err_pct": 99.90989968206982,
+            "normalized_mass_loss": 6.562725872350344,
+            "bic_like": 21.24178230691551,
+            "aic_like": 21.866503899231347,
+            "strict_mass_pass": false
+          }
+        },
+        {
+          "scenario": "audit_best_mass_assignment",
+          "metrics": {
+            "rows": [
+              {
+                "particle": "Top",
+                "q": 0,
+                "s_q": 0.0,
+                "exp_mev": 173000.0,
+                "pred_mev": 173000.0,
+                "rel_err_pct": 0.0
+              },
+              {
+                "particle": "Bottom",
+                "q": 6,
+                "s_q": 6.0,
+                "exp_mev": 4180.0,
+                "pred_mev": 1289.4644509326392,
+                "rel_err_pct": 69.15156815950625
+              },
+              {
+                "particle": "Tau",
+                "q": 8,
+                "s_q": 8.099378881987578,
+                "exp_mev": 1776.9,
+                "pred_mev": 232.2505603891932,
+                "rel_err_pct": 86.92945239522803
+              },
+              {
+                "particle": "Charm",
+                "q": 8,
+                "s_q": 8.099378881987578,
+                "exp_mev": 1270.0,
+                "pred_mev": 232.2505603891932,
+                "rel_err_pct": 81.71255430006352
+              },
+              {
+                "particle": "Muon",
+                "q": 13,
+                "s_q": 13.094202898550725,
+                "exp_mev": 105.7,
+                "pred_mev": 3.933340990661362,
+                "rel_err_pct": 96.27876916682936
+              },
+              {
+                "particle": "Electron",
+                "q": 23,
+                "s_q": 23.18181818181818,
+                "exp_mev": 0.511,
+                "pred_mev": 0.0010414333149806549,
+                "rel_err_pct": 99.79619700293921
+              }
+            ],
+            "mean_rel_err_pct": 72.31142350409439,
+            "max_rel_err_pct": 99.79619700293921,
+            "normalized_mass_loss": 6.151377526978815,
+            "bic_like": 18.948887387664087,
+            "aic_like": 19.573608979979923,
+            "strict_mass_pass": false
+          }
+        },
+        {
+          "scenario": "audit_best_joint_assignment",
+          "metrics": {
+            "rows": [
+              {
+                "particle": "Top",
+                "q": 0,
+                "s_q": 0.0,
+                "exp_mev": 173000.0,
+                "pred_mev": 173000.0,
+                "rel_err_pct": 0.0
+              },
+              {
+                "particle": "Bottom",
+                "q": 6,
+                "s_q": 6.0,
+                "exp_mev": 4180.0,
+                "pred_mev": 1289.4644509326392,
+                "rel_err_pct": 69.15156815950625
+              },
+              {
+                "particle": "Tau",
+                "q": 8,
+                "s_q": 8.099378881987578,
+                "exp_mev": 1776.9,
+                "pred_mev": 232.2505603891932,
+                "rel_err_pct": 86.92945239522803
+              },
+              {
+                "particle": "Charm",
+                "q": 9,
+                "s_q": 9.097826086956522,
+                "exp_mev": 1270.0,
+                "pred_mev": 102.7782644122765,
+                "rel_err_pct": 91.90722327462389
+              },
+              {
+                "particle": "Muon",
+                "q": 13,
+                "s_q": 13.094202898550725,
+                "exp_mev": 105.7,
+                "pred_mev": 3.933340990661362,
+                "rel_err_pct": 96.27876916682936
+              },
+              {
+                "particle": "Electron",
+                "q": 24,
+                "s_q": 24.18147448015123,
+                "exp_mev": 0.511,
+                "pred_mev": 0.00046041262462325296,
+                "rel_err_pct": 99.90989968206982
+              }
+            ],
+            "mean_rel_err_pct": 74.02948544637623,
+            "max_rel_err_pct": 99.90989968206982,
+            "normalized_mass_loss": 6.267431025519346,
+            "bic_like": 20.27173972416407,
+            "aic_like": 20.896461316479904,
+            "strict_mass_pass": false
+          }
+        }
+      ]
+    },
+    {
+      "operator": {
+        "op_id": "O6_parity_augmented_wls16",
+        "s_map": "parity",
+        "gamma_key": "wls_1_to_6",
+        "gamma_value": 2.3559520758072288,
+        "complexity_k": 3,
+        "features": [
+          "amplitude_decay",
+          "parity_structure",
+          "sign_oscillation"
+        ],
+        "feature_coverage_ratio": 0.375
+      },
+      "strict": {
+        "scenario": "baseline_assignment",
+        "mean_rel_err_pct": 82.91974137446655,
+        "max_rel_err_pct": 99.9998254371208,
+        "normalized_mass_loss": 6.861313764126048,
+        "bic_like": 28.953634989084065,
+        "aic_like": 29.578356581399902,
+        "strict_mass_pass": false,
+        "complexity_k": 3
+      },
+      "exploratory_best_scenario": {
+        "scenario": "audit_best_mass_assignment",
+        "mean_rel_err_pct": 79.46742230193226,
+        "max_rel_err_pct": 99.9998254371208,
+        "normalized_mass_loss": 6.631159159290428,
+        "strict_mass_pass": false
+      },
+      "per_scenario": [
+        {
+          "scenario": "baseline_assignment",
+          "metrics": {
+            "rows": [
+              {
+                "particle": "Top",
+                "q": 0,
+                "s_q": 0.0,
+                "exp_mev": 173000.0,
+                "pred_mev": 173000.0,
+                "rel_err_pct": 0.0
+              },
+              {
+                "particle": "Bottom",
+                "q": 7,
+                "s_q": 9.68787232745154,
+                "exp_mev": 4180.0,
+                "pred_mev": 63.48443674031691,
+                "rel_err_pct": 98.48123357080583
+              },
+              {
+                "particle": "Tau",
+                "q": 9,
+                "s_q": 12.455835849580552,
+                "exp_mev": 1776.9,
+                "pred_mev": 6.624154624755568,
+                "rel_err_pct": 99.62720723593024
+              },
+              {
+                "particle": "Charm",
+                "q": 9,
+                "s_q": 12.455835849580552,
+                "exp_mev": 1270.0,
+                "pred_mev": 6.624154624755568,
+                "rel_err_pct": 99.47841302167278
+              },
+              {
+                "particle": "Muon",
+                "q": 14,
+                "s_q": 17.991762893838576,
+                "exp_mev": 105.7,
+                "pred_mev": 0.07212018679793507,
+                "rel_err_pct": 99.9317689812697
+              },
+              {
+                "particle": "Electron",
+                "q": 24,
+                "s_q": 31.831580504483632,
+                "exp_mev": 0.511,
+                "pred_mev": 8.920163127213607e-07,
+                "rel_err_pct": 99.9998254371208
+              }
+            ],
+            "mean_rel_err_pct": 82.91974137446655,
+            "max_rel_err_pct": 99.9998254371208,
+            "normalized_mass_loss": 6.861313764126048,
+            "bic_like": 28.953634989084065,
+            "aic_like": 29.578356581399902,
+            "strict_mass_pass": false
+          }
+        },
+        {
+          "scenario": "audit_best_mass_assignment",
+          "metrics": {
+            "rows": [
+              {
+                "particle": "Top",
+                "q": 0,
+                "s_q": 0.0,
+                "exp_mev": 173000.0,
+                "pred_mev": 173000.0,
+                "rel_err_pct": 0.0
+              },
+              {
+                "particle": "Bottom",
+                "q": 6,
+                "s_q": 6.919908805322529,
+                "exp_mev": 4180.0,
+                "pred_mev": 608.4208380603754,
+                "rel_err_pct": 85.44447755836423
+              },
+              {
+                "particle": "Tau",
+                "q": 8,
+                "s_q": 9.68787232745154,
+                "exp_mev": 1776.9,
+                "pred_mev": 63.48443674031691,
+                "rel_err_pct": 96.42723638132045
+              },
+              {
+                "particle": "Charm",
+                "q": 8,
+                "s_q": 9.68787232745154,
+                "exp_mev": 1270.0,
+                "pred_mev": 63.48443674031691,
+                "rel_err_pct": 95.00122545351836
+              },
+              {
+                "particle": "Muon",
+                "q": 13,
+                "s_q": 17.991762893838576,
+                "exp_mev": 105.7,
+                "pred_mev": 0.07212018679793507,
+                "rel_err_pct": 99.9317689812697
+              },
+              {
+                "particle": "Electron",
+                "q": 23,
+                "s_q": 31.831580504483632,
+                "exp_mev": 0.511,
+                "pred_mev": 8.920163127213607e-07,
+                "rel_err_pct": 99.9998254371208
+              }
+            ],
+            "mean_rel_err_pct": 79.46742230193226,
+            "max_rel_err_pct": 99.9998254371208,
+            "normalized_mass_loss": 6.631159159290428,
+            "bic_like": 27.818429122469638,
+            "aic_like": 28.443150714785475,
+            "strict_mass_pass": false
+          }
+        },
+        {
+          "scenario": "audit_best_joint_assignment",
+          "metrics": {
+            "rows": [
+              {
+                "particle": "Top",
+                "q": 0,
+                "s_q": 0.0,
+                "exp_mev": 173000.0,
+                "pred_mev": 173000.0,
+                "rel_err_pct": 0.0
+              },
+              {
+                "particle": "Bottom",
+                "q": 6,
+                "s_q": 6.919908805322529,
+                "exp_mev": 4180.0,
+                "pred_mev": 608.4208380603754,
+                "rel_err_pct": 85.44447755836423
+              },
+              {
+                "particle": "Tau",
+                "q": 8,
+                "s_q": 9.68787232745154,
+                "exp_mev": 1776.9,
+                "pred_mev": 63.48443674031691,
+                "rel_err_pct": 96.42723638132045
+              },
+              {
+                "particle": "Charm",
+                "q": 9,
+                "s_q": 12.455835849580552,
+                "exp_mev": 1270.0,
+                "pred_mev": 6.624154624755568,
+                "rel_err_pct": 99.47841302167278
+              },
+              {
+                "particle": "Muon",
+                "q": 13,
+                "s_q": 17.991762893838576,
+                "exp_mev": 105.7,
+                "pred_mev": 0.07212018679793507,
+                "rel_err_pct": 99.9317689812697
+              },
+              {
+                "particle": "Electron",
+                "q": 24,
+                "s_q": 31.831580504483632,
+                "exp_mev": 0.511,
+                "pred_mev": 8.920163127213607e-07,
+                "rel_err_pct": 99.9998254371208
+              }
+            ],
+            "mean_rel_err_pct": 80.21362022995801,
+            "max_rel_err_pct": 99.9998254371208,
+            "normalized_mass_loss": 6.6809056878254784,
+            "bic_like": 28.24563826897718,
+            "aic_like": 28.870359861293014,
+            "strict_mass_pass": false
+          }
+        }
+      ]
+    },
+    {
+      "operator": {
+        "op_id": "O7_curvature_augmented_wls16",
+        "s_map": "curvature",
+        "gamma_key": "wls_1_to_6",
+        "gamma_value": 2.3559520758072288,
+        "complexity_k": 3,
+        "features": [
+          "amplitude_decay",
+          "local_curvature"
+        ],
+        "feature_coverage_ratio": 0.25
+      },
+      "strict": {
+        "scenario": "baseline_assignment",
+        "mean_rel_err_pct": 78.89615704251958,
+        "max_rel_err_pct": 99.99008115409438,
+        "normalized_mass_loss": 6.59294488488923,
+        "bic_like": 23.60300483783584,
+        "aic_like": 24.227726430151677,
+        "strict_mass_pass": false,
+        "complexity_k": 3
+      },
+      "exploratory_best_scenario": {
+        "scenario": "audit_best_mass_assignment",
+        "mean_rel_err_pct": 72.33682968497864,
+        "max_rel_err_pct": 99.97265924204024,
+        "normalized_mass_loss": 6.155424102225779,
+        "strict_mass_pass": false
+      },
+      "per_scenario": [
+        {
+          "scenario": "baseline_assignment",
+          "metrics": {
+            "rows": [
+              {
+                "particle": "Top",
+                "q": 0,
+                "s_q": 0.0,
+                "exp_mev": 173000.0,
+                "pred_mev": 173000.0,
+                "rel_err_pct": 0.0
+              },
+              {
+                "particle": "Bottom",
+                "q": 7,
+                "s_q": 7.037506716298866,
+                "exp_mev": 4180.0,
+                "pred_mev": 552.717405225881,
+                "rel_err_pct": 86.77709556875882
+              },
+              {
+                "particle": "Tau",
+                "q": 9,
+                "s_q": 9.246722507576385,
+                "exp_mev": 1776.9,
+                "pred_mev": 91.01263691012666,
+                "rel_err_pct": 94.87801019133735
+              },
+              {
+                "particle": "Charm",
+                "q": 9,
+                "s_q": 9.246722507576385,
+                "exp_mev": 1270.0,
+                "pred_mev": 91.01263691012666,
+                "rel_err_pct": 92.8336506369979
+              },
+              {
+                "particle": "Muon",
+                "q": 14,
+                "s_q": 14.584719416721615,
+                "exp_mev": 105.7,
+                "pred_mev": 1.1647033279470416,
+                "rel_err_pct": 98.89810470392901
+              },
+              {
+                "particle": "Electron",
+                "q": 24,
+                "s_q": 26.88381130344883,
+                "exp_mev": 0.511,
+                "pred_mev": 5.068530257764598e-05,
+                "rel_err_pct": 99.99008115409438
+              }
+            ],
+            "mean_rel_err_pct": 78.89615704251958,
+            "max_rel_err_pct": 99.99008115409438,
+            "normalized_mass_loss": 6.59294488488923,
+            "bic_like": 23.60300483783584,
+            "aic_like": 24.227726430151677,
+            "strict_mass_pass": false
+          }
+        },
+        {
+          "scenario": "audit_best_mass_assignment",
+          "metrics": {
+            "rows": [
+              {
+                "particle": "Top",
+                "q": 0,
+                "s_q": 0.0,
+                "exp_mev": 173000.0,
+                "pred_mev": 173000.0,
+                "rel_err_pct": 0.0
+              },
+              {
+                "particle": "Bottom",
+                "q": 6,
+                "s_q": 6.011166046512642,
+                "exp_mev": 4180.0,
+                "pred_mev": 1277.7615789737613,
+                "rel_err_pct": 69.43154117287654
+              },
+              {
+                "particle": "Tau",
+                "q": 8,
+                "s_q": 8.045607182959467,
+                "exp_mev": 1776.9,
+                "pred_mev": 242.67472391144835,
+                "rel_err_pct": 86.34280353922851
+              },
+              {
+                "particle": "Charm",
+                "q": 8,
+                "s_q": 8.045607182959467,
+                "exp_mev": 1270.0,
+                "pred_mev": 242.67472391144835,
+                "rel_err_pct": 80.89175402272059
+              },
+              {
+                "particle": "Muon",
+                "q": 13,
+                "s_q": 13.524972358454441,
+                "exp_mev": 105.7,
+                "pred_mev": 2.766993319412719,
+                "rel_err_pct": 97.38222013300593
+              },
+              {
+                "particle": "Electron",
+                "q": 23,
+                "s_q": 25.64201264265253,
+                "exp_mev": 0.511,
+                "pred_mev": 0.00013971127317432536,
+                "rel_err_pct": 99.97265924204024
+              }
+            ],
+            "mean_rel_err_pct": 72.33682968497864,
+            "max_rel_err_pct": 99.97265924204024,
+            "normalized_mass_loss": 6.155424102225779,
+            "bic_like": 21.535772928664215,
+            "aic_like": 22.16049452098005,
+            "strict_mass_pass": false
+          }
+        },
+        {
+          "scenario": "audit_best_joint_assignment",
+          "metrics": {
+            "rows": [
+              {
+                "particle": "Top",
+                "q": 0,
+                "s_q": 0.0,
+                "exp_mev": 173000.0,
+                "pred_mev": 173000.0,
+                "rel_err_pct": 0.0
+              },
+              {
+                "particle": "Bottom",
+                "q": 6,
+                "s_q": 6.011166046512642,
+                "exp_mev": 4180.0,
+                "pred_mev": 1277.7615789737613,
+                "rel_err_pct": 69.43154117287654
+              },
+              {
+                "particle": "Tau",
+                "q": 8,
+                "s_q": 8.045607182959467,
+                "exp_mev": 1776.9,
+                "pred_mev": 242.67472391144835,
+                "rel_err_pct": 86.34280353922851
+              },
+              {
+                "particle": "Charm",
+                "q": 9,
+                "s_q": 9.246722507576385,
+                "exp_mev": 1270.0,
+                "pred_mev": 91.01263691012666,
+                "rel_err_pct": 92.8336506369979
+              },
+              {
+                "particle": "Muon",
+                "q": 13,
+                "s_q": 13.524972358454441,
+                "exp_mev": 105.7,
+                "pred_mev": 2.766993319412719,
+                "rel_err_pct": 97.38222013300593
+              },
+              {
+                "particle": "Electron",
+                "q": 24,
+                "s_q": 26.88381130344883,
+                "exp_mev": 0.511,
+                "pred_mev": 5.068530257764598e-05,
+                "rel_err_pct": 99.99008115409438
+              }
+            ],
+            "mean_rel_err_pct": 74.33004943936722,
+            "max_rel_err_pct": 99.99008115409438,
+            "normalized_mass_loss": 6.2885377113457395,
+            "bic_like": 22.858427215472666,
+            "aic_like": 23.4831488077885,
+            "strict_mass_pass": false
+          }
+        }
+      ]
+    },
+    {
+      "operator": {
+        "op_id": "O8_hybrid_full_curvmod",
+        "s_map": "hybrid",
+        "gamma_key": "curvature_modulated",
+        "gamma_value": 2.412569752695534,
+        "complexity_k": 6,
+        "features": [
+          "amplitude_decay",
+          "sign_oscillation",
+          "phase_offset",
+          "parity_structure",
+          "local_curvature",
+          "memory_cumulative",
+          "nonlocal_scale_mix"
+        ],
+        "feature_coverage_ratio": 0.875
+      },
+      "strict": {
+        "scenario": "baseline_assignment",
+        "mean_rel_err_pct": 83.32569812734958,
+        "max_rel_err_pct": 99.99628469732322,
+        "normalized_mass_loss": 6.888330337787615,
+        "bic_like": 36.84204416936922,
+        "aic_like": 38.09148735400089,
+        "strict_mass_pass": false,
+        "complexity_k": 6
+      },
+      "exploratory_best_scenario": {
+        "scenario": "audit_best_mass_assignment",
+        "mean_rel_err_pct": 83.32229539596077,
+        "max_rel_err_pct": 99.99350270083099,
+        "normalized_mass_loss": 6.888066395741797,
+        "strict_mass_pass": false
+      },
+      "per_scenario": [
+        {
+          "scenario": "baseline_assignment",
+          "metrics": {
+            "rows": [
+              {
+                "particle": "Top",
+                "q": 0,
+                "s_q": 0.0,
+                "exp_mev": 173000.0,
+                "pred_mev": 173000.0,
+                "rel_err_pct": 0.0
+              },
+              {
+                "particle": "Bottom",
+                "q": 7,
+                "s_q": 16.645995608388517,
+                "exp_mev": 4180.0,
+                "pred_mev": 0.15610620169984307,
+                "rel_err_pct": 99.9962654018732
+              },
+              {
+                "particle": "Tau",
+                "q": 9,
+                "s_q": 17.67528291178519,
+                "exp_mev": 1776.9,
+                "pred_mev": 0.06601721326383309,
+                "rel_err_pct": 99.99628469732322
+              },
+              {
+                "particle": "Charm",
+                "q": 9,
+                "s_q": 17.67528291178519,
+                "exp_mev": 1270.0,
+                "pred_mev": 0.06601721326383309,
+                "rel_err_pct": 99.9948017942312
+              },
+              {
+                "particle": "Muon",
+                "q": 14,
+                "s_q": 20.23857739955933,
+                "exp_mev": 105.7,
+                "pred_mev": 0.007742003506631405,
+                "rel_err_pct": 99.99267549337121
+              },
+              {
+                "particle": "Electron",
+                "q": 24,
+                "s_q": 25.107834076823494,
+                "exp_mev": 0.511,
+                "pred_mev": 0.0001320353620041392,
+                "rel_err_pct": 99.97416137729861
+              }
+            ],
+            "mean_rel_err_pct": 83.32569812734958,
+            "max_rel_err_pct": 99.99628469732322,
+            "normalized_mass_loss": 6.888330337787615,
+            "bic_like": 36.84204416936922,
+            "aic_like": 38.09148735400089,
+            "strict_mass_pass": false
+          }
+        },
+        {
+          "scenario": "audit_best_mass_assignment",
+          "metrics": {
+            "rows": [
+              {
+                "particle": "Top",
+                "q": 0,
+                "s_q": 0.0,
+                "exp_mev": 173000.0,
+                "pred_mev": 173000.0,
+                "rel_err_pct": 0.0
+              },
+              {
+                "particle": "Bottom",
+                "q": 6,
+                "s_q": 15.983724907785362,
+                "exp_mev": 4180.0,
+                "pred_mev": 0.271587105265138,
+                "rel_err_pct": 99.99350270083099
+              },
+              {
+                "particle": "Tau",
+                "q": 8,
+                "s_q": 16.99199641840714,
+                "exp_mev": 1776.9,
+                "pred_mev": 0.11689006456358872,
+                "rel_err_pct": 99.99342168582567
+              },
+              {
+                "particle": "Charm",
+                "q": 8,
+                "s_q": 16.99199641840714,
+                "exp_mev": 1270.0,
+                "pred_mev": 0.11689006456358872,
+                "rel_err_pct": 99.99079605790837
+              },
+              {
+                "particle": "Muon",
+                "q": 13,
+                "s_q": 19.877087184514135,
+                "exp_mev": 105.7,
+                "pred_mev": 0.010474192651203213,
+                "rel_err_pct": 99.99009064082195
+              },
+              {
+                "particle": "Electron",
+                "q": 23,
+                "s_q": 24.778187918023413,
+                "exp_mev": 0.511,
+                "pred_mev": 0.00017393780617047783,
+                "rel_err_pct": 99.9659612903776
+              }
+            ],
+            "mean_rel_err_pct": 83.32229539596077,
+            "max_rel_err_pct": 99.99350270083099,
+            "normalized_mass_loss": 6.888066395741797,
+            "bic_like": 36.25309247200717,
+            "aic_like": 37.502535656638834,
+            "strict_mass_pass": false
+          }
+        },
+        {
+          "scenario": "audit_best_joint_assignment",
+          "metrics": {
+            "rows": [
+              {
+                "particle": "Top",
+                "q": 0,
+                "s_q": 0.0,
+                "exp_mev": 173000.0,
+                "pred_mev": 173000.0,
+                "rel_err_pct": 0.0
+              },
+              {
+                "particle": "Bottom",
+                "q": 6,
+                "s_q": 15.983724907785362,
+                "exp_mev": 4180.0,
+                "pred_mev": 0.271587105265138,
+                "rel_err_pct": 99.99350270083099
+              },
+              {
+                "particle": "Tau",
+                "q": 8,
+                "s_q": 16.99199641840714,
+                "exp_mev": 1776.9,
+                "pred_mev": 0.11689006456358872,
+                "rel_err_pct": 99.99342168582567
+              },
+              {
+                "particle": "Charm",
+                "q": 9,
+                "s_q": 17.67528291178519,
+                "exp_mev": 1270.0,
+                "pred_mev": 0.06601721326383309,
+                "rel_err_pct": 99.9948017942312
+              },
+              {
+                "particle": "Muon",
+                "q": 13,
+                "s_q": 19.877087184514135,
+                "exp_mev": 105.7,
+                "pred_mev": 0.010474192651203213,
+                "rel_err_pct": 99.99009064082195
+              },
+              {
+                "particle": "Electron",
+                "q": 24,
+                "s_q": 25.107834076823494,
+                "exp_mev": 0.511,
+                "pred_mev": 0.0001320353620041392,
+                "rel_err_pct": 99.97416137729861
+              }
+            ],
+            "mean_rel_err_pct": 83.32432969983473,
+            "max_rel_err_pct": 99.9948017942312,
+            "normalized_mass_loss": 6.888219337245398,
+            "bic_like": 36.46906622921401,
+            "aic_like": 37.71850941384568,
+            "strict_mass_pass": false
+          }
+        }
+      ]
+    }
+  ],
+  "pareto_frontier_strict": [
+    {
+      "op_id": "O1_hard_linear_local14",
+      "strict_mean_rel_err_pct": 78.15206252278094,
+      "strict_max_rel_err_pct": 99.89015848904087,
+      "complexity_k": 1
+    }
+  ],
+  "coupling_completeness_audit": {
+    "tested_feature_union": [
+      "amplitude_decay",
+      "local_curvature",
+      "local_gradient",
+      "memory_cumulative",
+      "nonlocal_scale_mix",
+      "parity_structure",
+      "phase_offset",
+      "sign_oscillation"
+    ],
+    "never_tested_canonical_features": [],
+    "best_strict_operator_features": [
+      "amplitude_decay"
+    ],
+    "best_strict_missing_canonical_features": [
+      "local_curvature",
+      "local_gradient",
+      "memory_cumulative",
+      "nonlocal_scale_mix",
+      "parity_structure",
+      "phase_offset",
+      "sign_oscillation"
+    ]
+  },
+  "summary": {
+    "strict_pass_exists": false,
+    "exploratory_pass_exists": false,
+    "best_strict_operator": {
+      "op_id": "O1_hard_linear_local14",
+      "mean_rel_err_pct": 78.15206252278094,
+      "max_rel_err_pct": 99.89015848904087,
+      "complexity_k": 1,
+      "feature_coverage_ratio": 0.125
+    },
+    "best_exploratory_operator": {
+      "op_id": "O1_hard_linear_local14",
+      "scenario": "audit_best_mass_assignment",
+      "mean_rel_err_pct": 71.63460278256382,
+      "max_rel_err_pct": 99.75199014161099
+    }
+  },
+  "verdict": "COUPLING_AUDIT_AND_MASS_OPERATOR_FRONTIER_STRICT_FAIL",
+  "required_next_step": "MASS_LINK_REWORK_REQUIRED_BEYOND_TESTED_DETERMINISTIC_OPERATOR_CLASSES"
+}

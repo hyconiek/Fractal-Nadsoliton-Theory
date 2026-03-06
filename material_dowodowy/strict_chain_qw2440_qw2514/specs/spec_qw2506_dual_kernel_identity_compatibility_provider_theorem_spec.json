@@ -1,0 +1,104 @@
+{
+  "generated_utc": "2026-03-05T21:57:11.011002+00:00",
+  "sources": {
+    "q2505": "report_qw2505_dual_kernel_identity_compatibility_provider_minimal_blocker_cut_gate.json",
+    "q2504": "report_qw2504_strict_anti_false_pass_identity_compatibility_frontier_gate.json"
+  },
+  "theorem_targets": {
+    "L12_target": "RG_KernelIdentityCompatibilityToWellPosedness_Theorem",
+    "L5_target": "QFT_KernelIdentityCompatibilityToPositivity_Theorem"
+  },
+  "acceptance_criteria": {
+    "C1": "Identity-compatibility domain invariance theorem in declared operator class.",
+    "C2": "Self-adjointness/positivity preservation under compatibility constraints.",
+    "C3": "Compatibility coercive lower-bound theorem with explicit constants.",
+    "C4": "Spectral/graph stability under bounded compatibility-preserving perturbations.",
+    "C5": "Bridge theorem: compatibility lemmas imply well-posedness/positivity targets.",
+    "C6": "Machine-check package with reproducible proof hashes and dependency DAG."
+  },
+  "lemma_dag": {
+    "RG_KICOMP_L1_CompatibilityDomainInvariance": [],
+    "RG_KICOMP_L2_SelfAdjointPositivityPreservation": [
+      "RG_KICOMP_L1_CompatibilityDomainInvariance"
+    ],
+    "RG_KICOMP_L3_CompatibilityCoerciveLowerBound": [
+      "RG_KICOMP_L2_SelfAdjointPositivityPreservation"
+    ],
+    "RG_KICOMP_L4_BoundedCompatibilityPerturbationStability": [
+      "RG_KICOMP_L3_CompatibilityCoerciveLowerBound"
+    ],
+    "RG_KernelIdentityCompatibilityToWellPosedness_Theorem": [
+      "RG_KICOMP_L4_BoundedCompatibilityPerturbationStability"
+    ],
+    "QFT_KICOMP_L1_CompatibilityDomainInvariance": [],
+    "QFT_KICOMP_L2_SelfAdjointPositivityPreservation": [
+      "QFT_KICOMP_L1_CompatibilityDomainInvariance"
+    ],
+    "QFT_KICOMP_L3_CompatibilityCoerciveLowerBound": [
+      "QFT_KICOMP_L2_SelfAdjointPositivityPreservation"
+    ],
+    "QFT_KICOMP_L4_BoundedCompatibilityPerturbationStability": [
+      "QFT_KICOMP_L3_CompatibilityCoerciveLowerBound"
+    ],
+    "QFT_KernelIdentityCompatibilityToPositivity_Theorem": [
+      "QFT_KICOMP_L4_BoundedCompatibilityPerturbationStability"
+    ]
+  },
+  "assumptions": {
+    "A_phys_1": {
+      "class": "physical",
+      "statement": "Complete FIN action and declared branch selection remain fixed.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_phys_2": {
+      "class": "physical",
+      "statement": "Constructive RG/QFT mapping in strict scope is preserved.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_1": {
+      "class": "technical",
+      "statement": "Compatibility-constrained domain is dense and graph-closed.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_2": {
+      "class": "technical",
+      "statement": "Self-adjoint extension uniqueness in declared compatibility class.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_3": {
+      "class": "technical",
+      "statement": "Explicit coercive lower-bound constants in compatibility norm.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_4": {
+      "class": "technical",
+      "statement": "Perturbation bound below compatibility-stability threshold.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    }
+  },
+  "scope_boundary": {
+    "theorem_spec_only": true,
+    "counterexample_search_pending": true,
+    "provider_discharge_completed": false,
+    "all_strict_obligations_fully_closed": false,
+    "overclaim_forbidden": true
+  }
+}

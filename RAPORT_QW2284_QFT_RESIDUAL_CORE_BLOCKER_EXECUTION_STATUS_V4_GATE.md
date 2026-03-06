@@ -1,7 +1,1 @@
-# RAPORT QW-2284: QFT RESIDUAL CORE BLOCKER EXECUTION STATUS V4 GATE
-
-- Date UTC: 2026-03-05T06:02:35.655518+00:00
-- Verdict: **QFT_RESIDUAL_CORE_BLOCKER_EXECUTION_STATUS_V4_GATE_PASS_PARTIAL_SINGLE_SYMBOL_MINIMAL_OBSTRUCTION**
-- pass_count: `4/7`
-- obligations satisfied v4: `0/1`
-- isolated_unknown_identifiers: `['QFT_CanonicalAction_to_Positivity_EXPORT']`
+material_dowodowy/korpus_qw_pozostaly/raporty_md/RAPORT_QW2284_QFT_RESIDUAL_CORE_BLOCKER_EXECUTION_STATUS_V4_GATE.md

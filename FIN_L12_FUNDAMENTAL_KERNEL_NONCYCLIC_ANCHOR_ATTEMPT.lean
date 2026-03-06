@@ -1,10 +1,1 @@
--- FIN Release 5.1: QW-2398 L12 fundamental noncyclic anchor attempt
--- Scope: execute fundamental-kernel theorem attempt with explicit operator trace.
-
-variable (FINActionComplete RGConstructiveMap RGGlobalWellPosednessAllScales : Prop)
-
-theorem RG_FundamentalKernelDynamicsToWellPosedness_Theorem :
-  (FINActionComplete ∧ RGConstructiveMap) -> RGGlobalWellPosednessAllScales := by
-  intro h
-  exact RG_KernelOperatorClosureToWellPosedness_Theorem h
-
+material_dowodowy/lean_fin_dowody/lean/FIN_L12_FUNDAMENTAL_KERNEL_NONCYCLIC_ANCHOR_ATTEMPT.lean

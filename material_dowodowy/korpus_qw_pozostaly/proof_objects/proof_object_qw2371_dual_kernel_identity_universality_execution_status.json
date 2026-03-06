@@ -1,0 +1,46 @@
+{
+  "generated_utc": "2026-03-05T08:44:58.941793+00:00",
+  "source": "report_qw2370_dual_kernel_identity_universality_discharge_packet_gate.json",
+  "attempt_files": {
+    "l12": {
+      "name": "FIN_L12_KERNEL_IDENTITY_UNIVERSALITY_DISCHARGE_ATTEMPT.lean",
+      "sha256": "ab97cad92c3efcc3ac94379de0105343f775ee04b14bec3ac54b13339d61170a",
+      "target_theorem": "RG_KernelIdentityUniversalityToWellPosedness_Theorem",
+      "missing_identity_totality_symbol": "RG_KernelIdentityTotalityToWellPosedness_Theorem"
+    },
+    "l5": {
+      "name": "FIN_L5_KERNEL_IDENTITY_UNIVERSALITY_DISCHARGE_ATTEMPT.lean",
+      "sha256": "839d31680486ec6f34c9291015bee812732217691ce6197e5e2422f02feb1228",
+      "target_theorem": "QFT_KernelIdentityUniversalityToPositivity_Theorem",
+      "missing_identity_totality_symbol": "QFT_KernelIdentityTotalityToPositivity_Theorem"
+    }
+  },
+  "machine_check": {
+    "lean_binary": "/tmp/lean4/lean-4.28.0-linux/bin/lean",
+    "l12": {
+      "exit_code": 1,
+      "stdout": "FIN_L12_KERNEL_IDENTITY_UNIVERSALITY_DISCHARGE_ATTEMPT.lean:8:8: error(lean.unknownIdentifier): Unknown identifier `RG_KernelIdentityTotalityToWellPosedness_Theorem`\n",
+      "stderr": ""
+    },
+    "l5": {
+      "exit_code": 1,
+      "stdout": "FIN_L5_KERNEL_IDENTITY_UNIVERSALITY_DISCHARGE_ATTEMPT.lean:8:8: error(lean.unknownIdentifier): Unknown identifier `QFT_KernelIdentityTotalityToPositivity_Theorem`\n",
+      "stderr": ""
+    }
+  },
+  "blocker_cut": [
+    {
+      "branch": "L12",
+      "symbol": "RG_KernelIdentityTotalityToWellPosedness_Theorem"
+    },
+    {
+      "branch": "L5",
+      "symbol": "QFT_KernelIdentityTotalityToPositivity_Theorem"
+    }
+  ],
+  "scope_boundary": {
+    "execution_completed": false,
+    "all_strict_obligations_fully_closed": false,
+    "overclaim_forbidden": true
+  }
+}

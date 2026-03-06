@@ -1,7 +1,1 @@
--- QW-2488 strict non-axiomatic kernel-identity-continuity provider attempt (L5/QFT)
-set_option autoImplicit false
-variable (FINActionComplete ConstructiveNonPerturbativeScheme PositivityToReconstruction : Prop)
-
-theorem QFT_KernelIdentityContinuityToPositivity_Theorem_NON_AXIOMATIC :
-  (FINActionComplete ∧ ConstructiveNonPerturbativeScheme) -> PositivityToReconstruction := by
-  exact QFT_KernelIdentityCoherenceToPositivity_Theorem
+material_dowodowy/lean_fin_dowody/lean/FIN_L5_STRICT_NON_AXIOMATIC_KERNEL_IDENTITY_CONTINUITY_PROVIDER_ATTEMPT.lean

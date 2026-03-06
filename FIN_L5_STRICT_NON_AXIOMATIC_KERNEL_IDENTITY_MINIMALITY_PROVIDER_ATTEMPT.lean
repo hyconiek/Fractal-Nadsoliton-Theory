@@ -1,7 +1,1 @@
--- QW-2473 strict non-axiomatic kernel-identity-minimality provider attempt (L5/QFT)
-set_option autoImplicit false
-variable (FINActionComplete ConstructiveNonPerturbativeScheme PositivityToReconstruction : Prop)
-
-theorem QFT_KernelIdentityMinimalityToPositivity_Theorem_NON_AXIOMATIC :
-  (FINActionComplete ∧ ConstructiveNonPerturbativeScheme) -> PositivityToReconstruction := by
-  exact QFT_KernelIdentityClosureToPositivity_Theorem
+material_dowodowy/lean_fin_dowody/lean/FIN_L5_STRICT_NON_AXIOMATIC_KERNEL_IDENTITY_MINIMALITY_PROVIDER_ATTEMPT.lean

@@ -1,0 +1,27 @@
+{
+  "generated_utc": "2026-03-05T08:23:28.102882+00:00",
+  "source": "report_qw2356_dual_kernel_identity_robustness_execution_status_gate.json",
+  "minimal_blocker_cut": [
+    {
+      "id": "L12_KERNEL_IDENTITY_RESILIENCE_CORE_O1",
+      "branch": "L12",
+      "symbol": "RG_KernelIdentityResilienceToWellPosedness_Theorem",
+      "required_statement": "(FINActionComplete ∧ RGConstructiveMap) -> RGGlobalWellPosednessAllScales",
+      "proof_kind": "kernel_identity_resilience_derivation"
+    },
+    {
+      "id": "L5_KERNEL_IDENTITY_RESILIENCE_CORE_O1",
+      "branch": "L5",
+      "symbol": "QFT_KernelIdentityResilienceToPositivity_Theorem",
+      "required_statement": "(FINActionComplete ∧ ConstructiveNonPerturbativeScheme) -> PositivityToReconstruction",
+      "proof_kind": "kernel_identity_resilience_derivation"
+    }
+  ],
+  "n_obligations": 2,
+  "scope_boundary": {
+    "minimal_blocker_cut_extracted": true,
+    "execution_completed": false,
+    "all_strict_obligations_fully_closed": false,
+    "overclaim_forbidden": true
+  }
+}

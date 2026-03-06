@@ -1,0 +1,72 @@
+{
+  "generated_utc": "2026-03-02T20:29:26.824238+00:00",
+  "checks": [
+    {
+      "domain": "Campaign robustness (1786)",
+      "score": 0.9657498781676414,
+      "status": "PASS",
+      "note": "EMPIRICAL_CAMPAIGN_ROBUSTNESS_CONFIRMED"
+    },
+    {
+      "domain": "Hyperparameter lock (1788+1789)",
+      "score": 1.0,
+      "status": "PASS",
+      "note": "q_width=0.2, criteria=K0_base"
+    },
+    {
+      "domain": "Negative-control extension rejected (1790)",
+      "score": 1.0,
+      "status": "PASS",
+      "note": "delta_M3-M2=-0.8776"
+    },
+    {
+      "domain": "Likelihood alternatives vs baseline (1791+1792)",
+      "score": 1.0,
+      "status": "PASS",
+      "note": "delta_t-gauss=-0.0948, delta_hetero-homo=-0.1012"
+    }
+  ],
+  "global_score": 0.9914374695419104,
+  "hard_gate": "PASS",
+  "readiness": "MODEL_LOCKIN_CONFIRMED",
+  "operational_protocol": {
+    "signal_model": "M2_reparam_HDq_plus_constant",
+    "noise_model": "homoscedastic_gaussian",
+    "fraction": 0.95,
+    "q_width": 0.2,
+    "cohort": {
+      "name": "K0_base",
+      "n_match_min": 120,
+      "stability_max": 0.65,
+      "n_pairs": 91,
+      "full_logB_legacy": -0.45783137669738494,
+      "full_logB_reparam": 0.18581410146602906,
+      "full_delta_logB": 0.643645478163414,
+      "replications": 16,
+      "prob_logB_reparam_positive": 1.0,
+      "prob_delta_logB_positive": 1.0,
+      "std_logB_reparam": 0.070020723210884,
+      "std_delta_logB": 0.13215616600467184,
+      "median_logB_reparam": 0.18777176144229912,
+      "median_delta_logB": 0.59663631982216,
+      "pass_basic": true,
+      "selection_score": 0.7914221248486722,
+      "verdict": "SUPPORTED"
+    },
+    "frozen_after_qw": 1793
+  },
+  "model_competitors_rejected": {
+    "angular_P2_augmentation_qw1790": {
+      "delta_M3_minus_M2": -0.8776344369288225,
+      "verdict": "ANGULAR_AUGMENTATION_WEAK"
+    },
+    "student_t_likelihood_qw1791": {
+      "delta_t_minus_gauss": -0.09475759484620738,
+      "verdict": "ROBUST_LIKELIHOOD_PARTIAL"
+    },
+    "heteroscedastic_likelihood_qw1792": {
+      "delta_hetero_minus_homo": -0.10120426636501634,
+      "verdict": "HETEROSCEDASTIC_REPARAM_PARTIAL"
+    }
+  }
+}

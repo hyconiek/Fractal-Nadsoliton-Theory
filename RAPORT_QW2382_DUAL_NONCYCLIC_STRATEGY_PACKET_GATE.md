@@ -1,6 +1,1 @@
-# RAPORT QW-2382: DUAL NONCYCLIC STRATEGY PACKET GATE
-
-- Date UTC: 2026-03-05T09:32:12.291723+00:00
-- Verdict: **DUAL_NONCYCLIC_STRATEGY_PACKET_GATE_PASS_PACKET_READY**
-- pass_count: `5/6`
-- constraints_count: `4`
+material_dowodowy/korpus_qw_pozostaly/raporty_md/RAPORT_QW2382_DUAL_NONCYCLIC_STRATEGY_PACKET_GATE.md

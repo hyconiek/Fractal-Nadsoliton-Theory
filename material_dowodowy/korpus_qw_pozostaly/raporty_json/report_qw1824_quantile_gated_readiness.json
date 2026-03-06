@@ -1,0 +1,28 @@
+{
+  "generated_utc": "2026-03-02T21:58:23.180075+00:00",
+  "checks": [
+    {
+      "domain": "Legacy LL gate (1819)",
+      "status": "FAIL",
+      "score": 0.0,
+      "note": "SEQUENCE_BRANCH_NOT_READY"
+    },
+    {
+      "domain": "Likelihood misspecification signal (1821)",
+      "status": "PASS",
+      "score": 1.0,
+      "note": "LIKELIHOOD_MISSPECIFICATION_SIGNAL_STRONG"
+    },
+    {
+      "domain": "Robust quantile gate (1823)",
+      "status": "PASS",
+      "score": 1.0,
+      "note": "QUANTILE_SCORE_OOS_SUPPORTED"
+    }
+  ],
+  "global_score": 0.6666666666666666,
+  "hard_gate": "PASS",
+  "readiness": "SEQUENCE_BRANCH_CONDITIONAL_READY_UNDER_QUANTILE_GATING",
+  "recommendation": "ADOPT_QUANTILE_SCORE_AS_PRIMARY_GATE_AND_FREEZE_PROTOCOL_FOR_NEXT_EMPIRICAL_STAGE",
+  "transition_note": "Decision is made under revised robust predictive criterion due confirmed LL misspecification."
+}

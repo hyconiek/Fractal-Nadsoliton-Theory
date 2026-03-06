@@ -1,7 +1,1 @@
--- QW-2468 strict non-axiomatic kernel-invariance-identity provider attempt (L12/RG)
-set_option autoImplicit false
-variable (FINActionComplete RGConstructiveMap RGGlobalWellPosednessAllScales : Prop)
-
-theorem RG_KernelInvarianceIdentityToWellPosedness_Theorem_NON_AXIOMATIC :
-  (FINActionComplete ∧ RGConstructiveMap) -> RGGlobalWellPosednessAllScales := by
-  exact RG_KernelIdentityMinimalityToWellPosedness_Theorem
+material_dowodowy/lean_fin_dowody/lean/FIN_L12_STRICT_NON_AXIOMATIC_KERNEL_INVARIANCE_IDENTITY_PROVIDER_ATTEMPT.lean

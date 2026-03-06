@@ -1,7 +1,1 @@
--- FIN Release 5: L14 full canonical continuum variational gate (QW-2164)
-
-theorem l14_full_canonical_continuum_variational_bundle
-  {a b c d e : Prop}
-  (ha : a) (hb : b) (hc : c) (hd : d) (he : e) :
-  a ∧ b ∧ c ∧ d ∧ e := by
-  exact And.intro ha (And.intro hb (And.intro hc (And.intro hd he)))
+material_dowodowy/lean_fin_dowody/lean/FIN_L14_FULL_CANONICAL_CONTINUUM_VARIATIONAL_QW2164.lean

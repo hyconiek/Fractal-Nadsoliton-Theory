@@ -1,0 +1,1 @@
+material_dowodowy/strict_chain_qw2570_qw2574/raporty_md/RAPORT_QW2571_DUAL_KERNEL_IDENTITY_FINALITY_PROVIDER_THEOREM_SPEC_GATE.md

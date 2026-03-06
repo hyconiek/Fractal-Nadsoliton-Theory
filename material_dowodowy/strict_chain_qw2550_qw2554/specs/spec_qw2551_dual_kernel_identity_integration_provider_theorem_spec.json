@@ -1,0 +1,104 @@
+{
+  "generated_utc": "2026-03-05T23:37:07.862124+00:00",
+  "sources": {
+    "q2550": "report_qw2550_dual_kernel_identity_integration_provider_minimal_blocker_cut_gate.json",
+    "q2549": "report_qw2549_strict_anti_false_pass_identity_integration_frontier_gate.json"
+  },
+  "theorem_targets": {
+    "L12_target": "RG_KernelIdentityIntegrationToWellPosedness_Theorem",
+    "L5_target": "QFT_KernelIdentityIntegrationToPositivity_Theorem"
+  },
+  "acceptance_criteria": {
+    "C1": "Identity-integration domain invariance theorem in declared operator class.",
+    "C2": "Self-adjointness/positivity preservation under integration constraints.",
+    "C3": "Integration coercive lower-bound theorem with explicit constants.",
+    "C4": "Spectral/graph persistence under bounded integration-preserving perturbations.",
+    "C5": "Bridge theorem: integration lemmas imply well-posedness/positivity targets.",
+    "C6": "Machine-check package with reproducible proof hashes and dependency DAG."
+  },
+  "lemma_dag": {
+    "RG_KIINT_L1_IntegrationDomainInvariance": [],
+    "RG_KIINT_L2_SelfAdjointPositivityPreservation": [
+      "RG_KIINT_L1_IntegrationDomainInvariance"
+    ],
+    "RG_KIINT_L3_IntegrationCoerciveLowerBound": [
+      "RG_KIINT_L2_SelfAdjointPositivityPreservation"
+    ],
+    "RG_KIINT_L4_BoundedIntegrationPreservation": [
+      "RG_KIINT_L3_IntegrationCoerciveLowerBound"
+    ],
+    "RG_KernelIdentityIntegrationToWellPosedness_Theorem": [
+      "RG_KIINT_L4_BoundedIntegrationPreservation"
+    ],
+    "QFT_KIINT_L1_IntegrationDomainInvariance": [],
+    "QFT_KIINT_L2_SelfAdjointPositivityPreservation": [
+      "QFT_KIINT_L1_IntegrationDomainInvariance"
+    ],
+    "QFT_KIINT_L3_IntegrationCoerciveLowerBound": [
+      "QFT_KIINT_L2_SelfAdjointPositivityPreservation"
+    ],
+    "QFT_KIINT_L4_BoundedIntegrationPreservation": [
+      "QFT_KIINT_L3_IntegrationCoerciveLowerBound"
+    ],
+    "QFT_KernelIdentityIntegrationToPositivity_Theorem": [
+      "QFT_KIINT_L4_BoundedIntegrationPreservation"
+    ]
+  },
+  "assumptions": {
+    "A_phys_1": {
+      "class": "physical",
+      "statement": "Complete FIN action and declared branch selection remain fixed.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_phys_2": {
+      "class": "physical",
+      "statement": "Constructive RG/QFT mapping in strict scope is preserved.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_1": {
+      "class": "technical",
+      "statement": "Integration-constrained domain is dense and graph-closed.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_2": {
+      "class": "technical",
+      "statement": "Self-adjoint extension uniqueness in declared integration class.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_3": {
+      "class": "technical",
+      "statement": "Explicit coercive lower-bound constants in integration norm.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_4": {
+      "class": "technical",
+      "statement": "Perturbation bound below integration-preservation threshold.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    }
+  },
+  "scope_boundary": {
+    "theorem_spec_only": true,
+    "counterexample_search_pending": true,
+    "provider_discharge_completed": false,
+    "all_strict_obligations_fully_closed": false,
+    "overclaim_forbidden": true
+  }
+}

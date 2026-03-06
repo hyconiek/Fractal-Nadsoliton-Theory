@@ -1,8 +1,1 @@
--- FIN Release 5.1: QW-2387 L5 noncircular anchor candidate
--- Intent: break identity-cycle by referencing an external action-level provider symbol.
-
-variable (FINActionComplete ConstructiveNonPerturbativeScheme PositivityToReconstruction : Prop)
-
- theorem QFT_KernelIdentityLocalityToPositivity_Theorem :
-  (FINActionComplete ∧ ConstructiveNonPerturbativeScheme) -> PositivityToReconstruction := by
-  exact QFT_ActionLevel_PhysicalBridge_Derivation
+material_dowodowy/lean_fin_dowody/lean/FIN_L5_KERNEL_IDENTITY_LOCALITY_ANCHOR_ATTEMPT.lean

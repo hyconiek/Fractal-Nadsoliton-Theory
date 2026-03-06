@@ -1,6 +1,1 @@
--- FIN Release 5.1: QW-2282 QFT residual core-blocker isolation attempt
-variable (FINActionComplete ConstructiveNonPerturbativeScheme PositivityToReconstruction : Prop)
-
-theorem PositivityToReconstruction_Derived :
-  (FINActionComplete ∧ ConstructiveNonPerturbativeScheme) -> PositivityToReconstruction := by
-  exact QFT_CanonicalAction_to_Positivity_EXPORT
+material_dowodowy/lean_fin_dowody/lean/FIN_L5_RESIDUAL_CORE_BLOCKER_ISOLATION_ATTEMPT.lean

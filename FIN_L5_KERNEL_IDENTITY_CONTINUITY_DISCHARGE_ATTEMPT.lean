@@ -1,9 +1,1 @@
--- FIN Release 5.1: QW-2326 L5 kernel-identity-continuity discharge attempt
--- Scope: derive identity-continuity theorem from identity-coherence theorem.
-
-variable (FINActionComplete ConstructiveNonPerturbativeScheme PositivityToReconstruction : Prop)
-
-theorem QFT_KernelIdentityContinuityToPositivity_Theorem :
-  (FINActionComplete ∧ ConstructiveNonPerturbativeScheme) -> PositivityToReconstruction := by
-  exact QFT_KernelIdentityCoherenceToPositivity_Theorem
-
+material_dowodowy/lean_fin_dowody/lean/FIN_L5_KERNEL_IDENTITY_CONTINUITY_DISCHARGE_ATTEMPT.lean

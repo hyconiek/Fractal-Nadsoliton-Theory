@@ -1,0 +1,87 @@
+{
+  "generated_utc": "2026-03-03T07:17:58.240996+00:00",
+  "inputs": {
+    "q1946_readiness": "TOE_STAGE_C_BLOCKED_V2",
+    "q1952_verdict": "INFORMATION_CHANNEL_DEDEGENERACY_FAIL",
+    "q1953_verdict": "TWO_STATE_INTERNAL_OBSERVER_FAIL"
+  },
+  "flags": {
+    "stage_b_closed": true,
+    "triad_strict_pass_q1946": false,
+    "info_dedeg_pass_q1952": false,
+    "info_two_state_pass_q1953": false
+  },
+  "blocker_ranking": [
+    {
+      "metric": "triad::mass_mean_rel_pct",
+      "relative_miss": 4.216160066205308
+    },
+    {
+      "metric": "triad::ckm_mean_rel_pct",
+      "relative_miss": 1.599561016306239
+    },
+    {
+      "metric": "info1952::acc_gain_vs_control",
+      "relative_miss": 1.277777777777778
+    },
+    {
+      "metric": "info1953::closed_info_gain_vs_control",
+      "relative_miss": 1.183194797931586
+    },
+    {
+      "metric": "info1952::info_gain_vs_control",
+      "relative_miss": 1.178013539743158
+    },
+    {
+      "metric": "triad::q_assignment_joint_feasibility",
+      "relative_miss": 1.0
+    },
+    {
+      "metric": "info1953::channel_complementarity",
+      "relative_miss": 0.9900882006719616
+    },
+    {
+      "metric": "info1952::channel_complementarity",
+      "relative_miss": 0.9900339725372567
+    },
+    {
+      "metric": "info1953::closed_acc_gain_vs_open",
+      "relative_miss": 0.5370370370370386
+    },
+    {
+      "metric": "triad::gw_control_gap",
+      "relative_miss": 0.4028009556107747
+    },
+    {
+      "metric": "triad::mass_max_rel_pct",
+      "relative_miss": 0.33194012192629335
+    },
+    {
+      "metric": "info1952::dual_accuracy",
+      "relative_miss": 0.04761904761904761
+    },
+    {
+      "metric": "triad::pmns_mean_rel_pct",
+      "relative_miss": 0.03232994637354002
+    },
+    {
+      "metric": "info1953::closed_accuracy",
+      "relative_miss": 0.007936507936507908
+    },
+    {
+      "metric": "triad::gw_auc",
+      "relative_miss": 0.0
+    },
+    {
+      "metric": "triad::gw_adv",
+      "relative_miss": 0.0
+    },
+    {
+      "metric": "triad::gw_sep",
+      "relative_miss": 0.0
+    }
+  ],
+  "readiness": "TOE_STAGE_C_PLUS_INFO_BLOCKED",
+  "verdict": "STRICT_STAGE_C_PLUS_INFO_GATE_FAIL",
+  "required_next_step": "REWORK_INFORMATION_CHANNEL_DEGENERACY_AND_MASS_LINK_UNDER_FROZEN_KERNEL"
+}

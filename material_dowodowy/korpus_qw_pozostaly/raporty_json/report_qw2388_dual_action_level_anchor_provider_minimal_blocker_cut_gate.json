@@ -1,0 +1,41 @@
+{
+  "generated_utc": "2026-03-05T10:06:48.390856+00:00",
+  "sources": {
+    "q2387": "report_qw2387_dual_kernel_identity_anchor_execution_status_gate.json",
+    "spec": "spec_qw2388_dual_action_level_anchor_provider_minimal_blocker_cut.json"
+  },
+  "spec_file": "spec_qw2388_dual_action_level_anchor_provider_minimal_blocker_cut.json",
+  "spec_sha256": "3469db85c154aa99ac3e12bc599a528dfb51f4e13180dbe124c698575ce66ea9",
+  "proof_object_file": "proof_object_qw2388_dual_action_level_anchor_provider_minimal_blocker_cut.json",
+  "proof_object_sha256": "cafb4bae900b88a147b2c115bcc9d751da4354a4b2310243992fb8f3a322884b",
+  "minimal_blocker_cut": [
+    {
+      "id": "L12_ACTION_LEVEL_ANCHOR_PROVIDER_CORE_O1",
+      "branch": "L12",
+      "symbol": "RG_ActionLevel_PhysicalBridge_Derivation",
+      "required_statement": "(FINActionComplete ∧ RGConstructiveMap) -> RGGlobalWellPosednessAllScales",
+      "proof_kind": "action_level_anchor_provider_derivation"
+    },
+    {
+      "id": "L5_ACTION_LEVEL_ANCHOR_PROVIDER_CORE_O1",
+      "branch": "L5",
+      "symbol": "QFT_ActionLevel_PhysicalBridge_Derivation",
+      "required_statement": "(FINActionComplete ∧ ConstructiveNonPerturbativeScheme) -> PositivityToReconstruction",
+      "proof_kind": "action_level_anchor_provider_derivation"
+    }
+  ],
+  "n_obligations": 2,
+  "flags": {
+    "q2387_execution_status_present": true,
+    "q2387_blocker_cut_size_two": true,
+    "contains_rg_action_level_anchor_provider": true,
+    "contains_qft_action_level_anchor_provider": true,
+    "minimal_blocker_cut_size_two": true,
+    "one_core_obligation_per_branch": true,
+    "all_strict_obligations_fully_closed": false
+  },
+  "pass_count": 6,
+  "total_flags": 7,
+  "verdict": "DUAL_ACTION_LEVEL_ANCHOR_PROVIDER_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED",
+  "required_next_step": "BUILD_DUAL_ACTION_LEVEL_ANCHOR_PROVIDER_DISCHARGE_PACKET"
+}

@@ -1,0 +1,46 @@
+{
+  "generated_utc": "2026-03-05T08:50:19.026461+00:00",
+  "source": "report_qw2373_dual_kernel_identity_totality_discharge_packet_gate.json",
+  "attempt_files": {
+    "l12": "FIN_L12_KERNEL_IDENTITY_TOTALITY_DISCHARGE_ATTEMPT.lean",
+    "l5": "FIN_L5_KERNEL_IDENTITY_TOTALITY_DISCHARGE_ATTEMPT.lean"
+  },
+  "proof_object_file": "proof_object_qw2374_dual_kernel_identity_totality_execution_status.json",
+  "proof_object_sha256": "f5e481066698f5e60103467a07df4d82532f1096981bf292104a332e05ae71ef",
+  "machine_check_exit_codes": {
+    "l12": 1,
+    "l5": 1
+  },
+  "blocker_cut": [
+    {
+      "branch": "L12",
+      "symbol": "RG_KernelIdentityFinalityToWellPosedness_Theorem"
+    },
+    {
+      "branch": "L5",
+      "symbol": "QFT_KernelIdentityFinalityToPositivity_Theorem"
+    }
+  ],
+  "flags": {
+    "q2373_packet_ready": true,
+    "l12_attempt_file_written": true,
+    "l5_attempt_file_written": true,
+    "l12_target_theorem_defined": true,
+    "l5_target_theorem_defined": true,
+    "l12_contains_no_axiom_tokens": true,
+    "l5_contains_no_axiom_tokens": true,
+    "l12_contains_no_derived_or_pending_tokens": true,
+    "l5_contains_no_derived_or_pending_tokens": true,
+    "lean_binary_detected": true,
+    "machine_check_executed_both": true,
+    "l12_blocker_confirmed_missing_identity_finality_symbol": true,
+    "l5_blocker_confirmed_missing_identity_finality_symbol": true,
+    "traceability_to_identity_finality_symbols_explicit": true,
+    "execution_completed": false,
+    "all_strict_obligations_fully_closed": false
+  },
+  "pass_count": 14,
+  "total_flags": 16,
+  "verdict": "DUAL_KERNEL_IDENTITY_TOTALITY_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_IDENTITY_FINALITY_THEOREMS",
+  "required_next_step": "EXTRACT_MINIMAL_KERNEL_IDENTITY_FINALITY_BLOCKER_CUT"
+}

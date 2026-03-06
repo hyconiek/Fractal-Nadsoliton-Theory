@@ -1,0 +1,104 @@
+{
+  "generated_utc": "2026-03-05T22:31:24.989877+00:00",
+  "sources": {
+    "q2515": "report_qw2515_dual_kernel_identity_consistency_provider_minimal_blocker_cut_gate.json",
+    "q2514": "report_qw2514_strict_anti_false_pass_identity_consistency_frontier_gate.json"
+  },
+  "theorem_targets": {
+    "L12_target": "RG_KernelIdentityConsistencyToWellPosedness_Theorem",
+    "L5_target": "QFT_KernelIdentityConsistencyToPositivity_Theorem"
+  },
+  "acceptance_criteria": {
+    "C1": "Identity-consistency domain invariance theorem in declared operator class.",
+    "C2": "Self-adjointness/positivity preservation under consistency constraints.",
+    "C3": "Consistency coercive lower-bound theorem with explicit constants.",
+    "C4": "Spectral/graph stability under bounded consistency-preserving perturbations.",
+    "C5": "Bridge theorem: consistency lemmas imply well-posedness/positivity targets.",
+    "C6": "Machine-check package with reproducible proof hashes and dependency DAG."
+  },
+  "lemma_dag": {
+    "RG_KICONS_L1_ConsistencyDomainInvariance": [],
+    "RG_KICONS_L2_SelfAdjointPositivityPreservation": [
+      "RG_KICONS_L1_ConsistencyDomainInvariance"
+    ],
+    "RG_KICONS_L3_ConsistencyCoerciveLowerBound": [
+      "RG_KICONS_L2_SelfAdjointPositivityPreservation"
+    ],
+    "RG_KICONS_L4_BoundedConsistencyPerturbationStability": [
+      "RG_KICONS_L3_ConsistencyCoerciveLowerBound"
+    ],
+    "RG_KernelIdentityConsistencyToWellPosedness_Theorem": [
+      "RG_KICONS_L4_BoundedConsistencyPerturbationStability"
+    ],
+    "QFT_KICONS_L1_ConsistencyDomainInvariance": [],
+    "QFT_KICONS_L2_SelfAdjointPositivityPreservation": [
+      "QFT_KICONS_L1_ConsistencyDomainInvariance"
+    ],
+    "QFT_KICONS_L3_ConsistencyCoerciveLowerBound": [
+      "QFT_KICONS_L2_SelfAdjointPositivityPreservation"
+    ],
+    "QFT_KICONS_L4_BoundedConsistencyPerturbationStability": [
+      "QFT_KICONS_L3_ConsistencyCoerciveLowerBound"
+    ],
+    "QFT_KernelIdentityConsistencyToPositivity_Theorem": [
+      "QFT_KICONS_L4_BoundedConsistencyPerturbationStability"
+    ]
+  },
+  "assumptions": {
+    "A_phys_1": {
+      "class": "physical",
+      "statement": "Complete FIN action and declared branch selection remain fixed.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_phys_2": {
+      "class": "physical",
+      "statement": "Constructive RG/QFT mapping in strict scope is preserved.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_1": {
+      "class": "technical",
+      "statement": "Consistency-constrained domain is dense and graph-closed.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_2": {
+      "class": "technical",
+      "statement": "Self-adjoint extension uniqueness in declared consistency class.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_3": {
+      "class": "technical",
+      "statement": "Explicit coercive lower-bound constants in consistency norm.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_4": {
+      "class": "technical",
+      "statement": "Perturbation bound below consistency-stability threshold.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    }
+  },
+  "scope_boundary": {
+    "theorem_spec_only": true,
+    "counterexample_search_pending": true,
+    "provider_discharge_completed": false,
+    "all_strict_obligations_fully_closed": false,
+    "overclaim_forbidden": true
+  }
+}

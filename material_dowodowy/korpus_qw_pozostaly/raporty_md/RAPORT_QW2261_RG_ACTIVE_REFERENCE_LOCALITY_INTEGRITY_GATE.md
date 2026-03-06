@@ -1,0 +1,8 @@
+# RAPORT QW-2261: RG ACTIVE REFERENCE LOCALITY INTEGRITY GATE
+
+- Date UTC: 2026-03-05T05:29:01.331480+00:00
+- Verdict: **RG_ACTIVE_REFERENCE_LOCALITY_INTEGRITY_GATE_PASS_PARTIAL_DANGLING_REFS_DETECTED**
+- pass_count: `3/7`
+- n_active_instances: `6`
+- n_refs_total: `6`
+- n_dangling_refs: `1`

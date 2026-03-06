@@ -1,0 +1,48 @@
+{
+  "generated_utc": "2026-03-05T10:58:11.862180+00:00",
+  "sources": {
+    "q2404": "report_qw2404_dual_kernel_spectral_chain_reuse_admission_gate.json",
+    "spec": "spec_qw2405_dual_kernel_spectral_noncyclic_anchor_obligation_packet.json"
+  },
+  "spec_file": "spec_qw2405_dual_kernel_spectral_noncyclic_anchor_obligation_packet.json",
+  "spec_sha256": "1042995538299b8741a1acc878638e02789b625e96e13a9323e5cf73f353ca90",
+  "proof_object_file": "proof_object_qw2405_dual_kernel_spectral_noncyclic_anchor_obligation_packet.json",
+  "proof_object_sha256": "d680414c2a0ed1a57e82ac40e5013d3a48f80d91c868078ce54f9fe45cdf7af0",
+  "obligations": [
+    {
+      "id": "L12_KERNEL_SPECTRAL_NONCYCLIC_ANCHOR_O1",
+      "branch": "L12",
+      "anchor_symbol": "RG_KernelSpectralClosureToWellPosedness_Theorem",
+      "acceptance_rules": [
+        "proof_term must not be single-symbol exact to historical kernel-spectral chain step",
+        "proof must be machine-checkable without `axiom` and without `_DerivedOrPending`",
+        "dependency graph delta must not re-enter confirmed identity-cycle frontier"
+      ]
+    },
+    {
+      "id": "L5_KERNEL_SPECTRAL_NONCYCLIC_ANCHOR_O1",
+      "branch": "L5",
+      "anchor_symbol": "QFT_KernelSpectralClosureToPositivity_Theorem",
+      "acceptance_rules": [
+        "proof_term must not be single-symbol exact to historical kernel-spectral chain step",
+        "proof must be machine-checkable without `axiom` and without `_DerivedOrPending`",
+        "dependency graph delta must not re-enter confirmed identity-cycle frontier"
+      ]
+    }
+  ],
+  "n_obligations": 2,
+  "flags": {
+    "q2404_reuse_guard_active": true,
+    "q2404_admission_state_valid": true,
+    "n_obligations_eq_two": true,
+    "one_obligation_per_branch": true,
+    "all_rules_require_noncircularity": true,
+    "all_rules_require_axiom_free_machine_check": true,
+    "execution_completed": false,
+    "all_strict_obligations_fully_closed": false
+  },
+  "pass_count": 6,
+  "total_flags": 8,
+  "verdict": "DUAL_KERNEL_SPECTRAL_NONCYCLIC_ANCHOR_OBLIGATION_PACKET_GATE_PASS_PACKET_READY",
+  "required_next_step": "AUTHOR_DUAL_KERNEL_SPECTRAL_NONCYCLIC_ANCHOR_CANDIDATE_FILES"
+}

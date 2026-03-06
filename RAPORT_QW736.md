@@ -1,4 +1,1 @@
-# RAPORT QW-736: RIGOROUS EMERGENCE
-Exponent n: 1.7616
-Beta: 15860301.8518
-Outcome: FAIL_FAST
+material_dowodowy/korpus_qw_pozostaly/raporty_md/RAPORT_QW736.md

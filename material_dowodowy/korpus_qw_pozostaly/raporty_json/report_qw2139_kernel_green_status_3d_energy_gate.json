@@ -1,0 +1,76 @@
+{
+  "generated_utc": "2026-03-04T19:44:20.197163+00:00",
+  "kernel_parameters": {
+    "omega": 0.18575,
+    "phi": 0.1625,
+    "beta": 1.0,
+    "eta": 1.8,
+    "formula": "K(d)=cos(omega*d+phi)/(1+beta*d^eta)"
+  },
+  "green_status_checks": {
+    "laplace_residual_ratio_l2": 6.740236211880557,
+    "helmholtz_best_lambda": 4.730126246931277,
+    "helmholtz_residual_ratio_l2": 4.801738214442535,
+    "interpretation": "K does not satisfy classical local Laplace/Helmholtz Green profile in tested radial diagnostics away from source."
+  },
+  "energy_3d_checks": {
+    "radii_tested": [
+      20.0,
+      40.0,
+      80.0,
+      120.0,
+      160.0,
+      200.0
+    ],
+    "integral_abs_r2_absK": [
+      19.240028991739756,
+      43.711094054408946,
+      97.24781830989761,
+      165.79517794982817,
+      231.68143732743093,
+      301.92222599148937
+    ],
+    "integral_l2_r2_K2": [
+      0.613372756587315,
+      0.6520983586952014,
+      0.6797264717882392,
+      0.6943868842291684,
+      0.7013470878366803,
+      0.7061352894529523
+    ],
+    "integral_grad_r2_dK2": [
+      0.3640018678822519,
+      0.3662208224086009,
+      0.3673862662781685,
+      0.3677798472219661,
+      0.3680603130676033,
+      0.36823616546817767
+    ],
+    "abs_growth_loglog_slope": 1.1986035875314003,
+    "expected_abs_growth_slope_3_minus_eta": 1.2,
+    "l2_tail_last_increment": 0.004788201616272025,
+    "grad_tail_last_increment": 0.00017585240057438334
+  },
+  "operator_artifacts_found": [],
+  "flags": {
+    "frozen_kernel_release5_parameters_used": true,
+    "laplace_green_condition_violated_away_from_source": true,
+    "helmholtz_green_condition_violated_best_fit_lambda": true,
+    "asymptotic_decay_not_classical_1_over_r": true,
+    "l1_3d_absolute_integral_diverges_for_eta_le_3": true,
+    "l2_3d_energy_finite_for_eta_gt_1p5": true,
+    "gradient_energy_finite_for_eta_gt_0p5": true,
+    "numerical_abs_integral_growth_matches_3_minus_eta": true,
+    "no_constructive_green_operator_artifact_in_strict_chain": true,
+    "full_constructive_green_operator_derived_from_fin_action": false
+  },
+  "pass_count": 9,
+  "total_flags": 10,
+  "verdict": "KERNEL_GREEN_STATUS_3D_ENERGY_GATE_PASS_PARTIAL_ROLE_CLARIFIED",
+  "classification": {
+    "kernel_role_in_strict_chain": "STRUCTURAL_MIXING_KERNEL",
+    "classical_local_green_function_claim": "NOT_SUPPORTED_IN_STRICT_CHAIN",
+    "energy_statement_3d": "ABSOLUTE_R2_WEIGHTED_INTEGRAL_DIVERGES_BUT_L2_AND_GRADIENT_ENERGY_ARE_FINITE_FOR_ETA_1P8"
+  },
+  "required_next_step": "CONSTRUCT_EXPLICIT_OPERATOR_D_SUCH_THAT_DG_EQUALS_DELTA_OR_DECLARE_PERMANENT_NON_GREEN_ROLE_IN_CANONICAL_DOCS"
+}

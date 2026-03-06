@@ -1,0 +1,33 @@
+{
+  "generated_utc": "2026-03-02T21:52:50.771096+00:00",
+  "qw1817": {
+    "n_rep": 14,
+    "mean_delta_ll": 5.409386337982233,
+    "std_delta_ll": 4.089444839248823,
+    "prob_delta_ll_positive": 0.9285714285714286,
+    "mean_rmse_gain": 0.2588343042025994,
+    "std_rmse_gain": 0.07798178277409044,
+    "prob_rmse_gain_positive": 1.0,
+    "discordance_rate": 0.07142857142857142,
+    "corr_delta_vs_rmse_gain": 0.8943689534076046
+  },
+  "qw1818": {
+    "n_rep": 14,
+    "mean_delta_ll": 7.708289592040365,
+    "std_delta_ll": 5.656193986744458,
+    "prob_delta_ll_positive": 0.8571428571428571,
+    "mean_rmse_gain": 0.3160214247353287,
+    "std_rmse_gain": 0.09773912578835493,
+    "prob_rmse_gain_positive": 1.0,
+    "discordance_rate": 0.14285714285714285,
+    "corr_delta_vs_rmse_gain": 0.9028295608440751
+  },
+  "miscalibration_index": 0.5535714285714286,
+  "flags": {
+    "ll_unstable": true,
+    "rmse_stable_positive": true,
+    "metric_discordance_present": true
+  },
+  "verdict": "LIKELIHOOD_MISSPECIFICATION_SIGNAL_STRONG",
+  "recommendation": "Switch primary gate metric to predictive score robust to variance tails (e.g., CRPS / quantile loss / Student-t with calibrated df), then retest."
+}

@@ -1,0 +1,47 @@
+{
+  "generated_utc": "2026-03-05T11:42:25.780285+00:00",
+  "sources": {
+    "q2424": "report_qw2424_dual_kernel_identity_locality_chain_reuse_admission_gate.json",
+    "q2425": "report_qw2425_dual_kernel_identity_locality_noncyclic_anchor_obligation_packet_gate.json"
+  },
+  "attempt_files": {
+    "l12": {
+      "name": "FIN_L12_KERNEL_IDENTITY_LOCALITY_NONCYCLIC_ANCHOR_ATTEMPT.lean",
+      "sha256": "b2655c20bae0e13817fca9e26d4d495abd34b3578b5381d90f805028d7356d4f"
+    },
+    "l5": {
+      "name": "FIN_L5_KERNEL_IDENTITY_LOCALITY_NONCYCLIC_ANCHOR_ATTEMPT.lean",
+      "sha256": "09366fce0d0b2bc23a496ab93c73a7b0d1f845d8aae91d1a3ac1dfea4a01f27e"
+    }
+  },
+  "machine_check": {
+    "lean_binary": "/tmp/lean4/lean-4.28.0-linux/bin/lean",
+    "l12": {
+      "exit_code": 1,
+      "stdout": "FIN_L12_KERNEL_IDENTITY_LOCALITY_NONCYCLIC_ANCHOR_ATTEMPT.lean:8:8: error(lean.unknownIdentifier): Unknown identifier `RG_KernelIdentityContinuityToWellPosedness_Theorem`\n",
+      "stderr": "",
+      "unknown_identifier": "RG_KernelIdentityContinuityToWellPosedness_Theorem"
+    },
+    "l5": {
+      "exit_code": 1,
+      "stdout": "FIN_L5_KERNEL_IDENTITY_LOCALITY_NONCYCLIC_ANCHOR_ATTEMPT.lean:8:8: error(lean.unknownIdentifier): Unknown identifier `QFT_KernelIdentityContinuityToPositivity_Theorem`\n",
+      "stderr": "",
+      "unknown_identifier": "QFT_KernelIdentityContinuityToPositivity_Theorem"
+    }
+  },
+  "blocker_cut": [
+    {
+      "branch": "L12",
+      "symbol": "RG_KernelIdentityContinuityToWellPosedness_Theorem"
+    },
+    {
+      "branch": "L5",
+      "symbol": "QFT_KernelIdentityContinuityToPositivity_Theorem"
+    }
+  ],
+  "scope_boundary": {
+    "execution_completed": false,
+    "all_strict_obligations_fully_closed": false,
+    "overclaim_forbidden": true
+  }
+}

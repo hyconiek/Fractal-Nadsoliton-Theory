@@ -1,0 +1,45 @@
+{
+  "generated_utc": "2026-03-05T11:59:17.796966+00:00",
+  "sources": {
+    "q2432": "report_qw2432_dual_kernel_identity_coherence_chain_reuse_admission_gate.json",
+    "q2433": "report_qw2433_dual_kernel_identity_coherence_noncyclic_anchor_obligation_packet_gate.json"
+  },
+  "attempt_files": {
+    "l12": "FIN_L12_KERNEL_IDENTITY_COHERENCE_NONCYCLIC_ANCHOR_ATTEMPT.lean",
+    "l5": "FIN_L5_KERNEL_IDENTITY_COHERENCE_NONCYCLIC_ANCHOR_ATTEMPT.lean"
+  },
+  "proof_object_file": "proof_object_qw2434_dual_kernel_identity_coherence_anchor_execution_status.json",
+  "proof_object_sha256": "444ff722f7953697f6db7dc0739308650f3b9dfdcfb652f3072b017ded9b4935",
+  "machine_check_exit_codes": {
+    "l12": 1,
+    "l5": 1
+  },
+  "blocker_cut": [
+    {
+      "branch": "L12",
+      "symbol": "RG_KernelIdentityRegularityToWellPosedness_Theorem"
+    },
+    {
+      "branch": "L5",
+      "symbol": "QFT_KernelIdentityRegularityToPositivity_Theorem"
+    }
+  ],
+  "flags": {
+    "q2432_admission_allowed": true,
+    "q2433_packet_ready": true,
+    "l12_candidate_exists": true,
+    "l5_candidate_exists": true,
+    "l12_candidate_hard_hygiene": true,
+    "l5_candidate_hard_hygiene": true,
+    "lean_binary_detected": true,
+    "machine_check_executed_both": true,
+    "l12_blocker_confirmed_missing_identity_regularity_symbol": true,
+    "l5_blocker_confirmed_missing_identity_regularity_symbol": true,
+    "execution_completed": false,
+    "all_strict_obligations_fully_closed": false
+  },
+  "pass_count": 10,
+  "total_flags": 12,
+  "verdict": "DUAL_KERNEL_IDENTITY_COHERENCE_ANCHOR_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_IDENTITY_REGULARITY_THEOREMS",
+  "required_next_step": "CHECK_IDENTITY_REGULARITY_FRONTIER_ALIGNMENT_WITH_QW2329"
+}

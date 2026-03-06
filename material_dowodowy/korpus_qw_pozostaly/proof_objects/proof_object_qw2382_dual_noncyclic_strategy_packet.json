@@ -1,0 +1,51 @@
+{
+  "generated_utc": "2026-03-05T09:32:12.291415+00:00",
+  "sources": {
+    "q2381": "report_qw2381_dual_kernel_cycle_recurrence_gate.json",
+    "q2320": "report_qw2320_dual_kernel_identity_closure_execution_status_gate.json",
+    "q2380": "report_qw2380_dual_kernel_identity_closure_execution_status_gate.json",
+    "spec": "spec_qw2382_dual_noncyclic_strategy_packet.json"
+  },
+  "constraints": [
+    {
+      "id": "NC1_REPEAT_STEP_FORBIDDEN",
+      "rule": "required_next_step must differ from last historical step for identical blocker-cut",
+      "severity": "hard"
+    },
+    {
+      "id": "NC2_BLOCKER_NOVELTY_REQUIRED",
+      "rule": "new execution attempt must include at least one blocker symbol outside baseline recurrence set",
+      "severity": "hard"
+    },
+    {
+      "id": "NC3_DUAL_BRANCH_PROGRESS_GUARD",
+      "rule": "both L12 and L5 branches must show non-repeating transition evidence",
+      "severity": "hard"
+    },
+    {
+      "id": "NC4_NO_FALSE_CLOSURE_CLAIM",
+      "rule": "all_strict_obligations_fully_closed remains false until theorem-level discharge exists",
+      "severity": "hard"
+    }
+  ],
+  "baseline_cut_normalized": [
+    [
+      "L12",
+      "RG_KernelIdentityLocalityToWellPosedness_Theorem"
+    ],
+    [
+      "L5",
+      "QFT_KernelIdentityLocalityToPositivity_Theorem"
+    ]
+  ],
+  "current_cut_normalized": [
+    [
+      "L12",
+      "RG_KernelIdentityLocalityToWellPosedness_Theorem"
+    ],
+    [
+      "L5",
+      "QFT_KernelIdentityLocalityToPositivity_Theorem"
+    ]
+  ]
+}

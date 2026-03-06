@@ -1,0 +1,1 @@
+material_dowodowy/strict_chain_qw2570_qw2574/raporty_md/RAPORT_QW2574_STRICT_ANTI_FALSE_PASS_IDENTITY_CLOSURE_FRONTIER_GATE.md

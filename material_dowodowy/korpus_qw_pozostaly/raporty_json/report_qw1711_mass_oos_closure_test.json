@@ -1,0 +1,87 @@
+{
+  "generated_utc": "2026-03-02T15:33:20.945273+00:00",
+  "frozen_core": {
+    "gamma": 1.52,
+    "m_top_mev": 173000.0
+  },
+  "model": {
+    "delta_formula": "Delta = l1*(Q/24) + l2*sector + l3*(gen-2)",
+    "lambda": {
+      "l1": -0.0966699377242448,
+      "l2": -0.031034817559904098,
+      "l3": 0.023792868680604096
+    }
+  },
+  "split": {
+    "train": [
+      "Bottom",
+      "Muon",
+      "Electron"
+    ],
+    "test": [
+      "Tau",
+      "Charm",
+      "Top"
+    ]
+  },
+  "train_rows": [
+    {
+      "particle": "Bottom",
+      "exp_mev": 4180.0,
+      "base_pred_mev": 4330.784025718894,
+      "corr_pred_mev": 4180.0,
+      "base_err_pct": 3.607273342557264,
+      "corr_err_pct": 0.0
+    },
+    {
+      "particle": "Muon",
+      "exp_mev": 105.7,
+      "base_pred_mev": 108.41439466717887,
+      "corr_pred_mev": 105.7,
+      "base_err_pct": 2.568017660528728,
+      "corr_err_pct": 0.0
+    },
+    {
+      "particle": "Electron",
+      "exp_mev": 0.511,
+      "base_pred_mev": 0.5588033258007699,
+      "corr_pred_mev": 0.511,
+      "base_err_pct": 9.354858278037153,
+      "corr_err_pct": 0.0
+    }
+  ],
+  "test_rows": [
+    {
+      "particle": "Top",
+      "exp_mev": 173000.0,
+      "base_pred_mev": 173000.0,
+      "corr_pred_mev": 177165.52466543944,
+      "base_err_pct": 0.0,
+      "corr_err_pct": 2.4078177256875395
+    },
+    {
+      "particle": "Tau",
+      "exp_mev": 1776.9,
+      "base_pred_mev": 1510.0833975507348,
+      "corr_pred_mev": 1538.3975751285045,
+      "base_err_pct": 15.015847962702756,
+      "corr_err_pct": 13.422388703443952
+    },
+    {
+      "particle": "Charm",
+      "exp_mev": 1270.0,
+      "base_pred_mev": 1510.0833975507348,
+      "corr_pred_mev": 1411.8188466421534,
+      "base_err_pct": 18.904204531553926,
+      "corr_err_pct": 11.166838318279796
+    }
+  ],
+  "metrics": {
+    "train_mean_err_pct": 0.0,
+    "test_mean_err_pct": 8.999014915803762,
+    "generalization_gap_pct": 8.999014915803762,
+    "closure_test_threshold_pct": 10.0,
+    "gap_threshold_pct": 7.0
+  },
+  "verdict": "MASS_SECTOR_NOT_OOS_CLOSED"
+}

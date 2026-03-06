@@ -1,0 +1,1 @@
+material_dowodowy/strict_chain_qw2520_qw2524/raporty_md/RAPORT_QW2524_STRICT_ANTI_FALSE_PASS_IDENTITY_SATURATION_FRONTIER_GATE.md

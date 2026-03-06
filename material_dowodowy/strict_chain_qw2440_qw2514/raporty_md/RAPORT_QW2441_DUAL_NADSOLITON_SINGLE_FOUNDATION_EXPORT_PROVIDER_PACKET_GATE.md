@@ -1,0 +1,7 @@
+# RAPORT QW-2441: DUAL NADSOLITON SINGLE FOUNDATION EXPORT PROVIDER PACKET GATE
+
+- Date UTC: 2026-03-05T12:24:47.938838+00:00
+- Verdict: **DUAL_NADSOLITON_SINGLE_FOUNDATION_EXPORT_PROVIDER_PACKET_GATE_PASS_PACKET_READY**
+- pass_count: `3/4`
+- n_obligations: `2`
+- Ontology: `NadsolitonSingleFoundation` explicit in both branches.

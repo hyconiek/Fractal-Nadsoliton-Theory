@@ -1,0 +1,40 @@
+{
+  "generated_utc": "2026-03-05T08:39:53.080091+00:00",
+  "source": "report_qw2366_dual_kernel_identity_unification_minimal_blocker_cut_gate.json",
+  "obligations": [
+    {
+      "id": "L12_KERNEL_IDENTITY_UNIFICATION_CORE_O1",
+      "branch": "L12",
+      "provider_symbol": "RG_KernelIdentityUnificationToWellPosedness_Theorem",
+      "required_statement": "(FINActionComplete ∧ RGConstructiveMap) -> RGGlobalWellPosednessAllScales",
+      "proof_kind": "kernel_identity_unification_derivation",
+      "acceptance_criteria": [
+        "THEOREM_SYMBOL_EXISTS",
+        "NO_AXIOM_TOKENS_IN_PROVIDER_FILE",
+        "NO_DERIVED_OR_PENDING_TOKENS_IN_PROVIDER_FILE",
+        "LEAN_MACHINE_CHECK_EXIT_ZERO",
+        "TRACEABILITY_TO_KERNEL_IDENTITY_UNIFICATION_LAYER_EXPLICIT"
+      ]
+    },
+    {
+      "id": "L5_KERNEL_IDENTITY_UNIFICATION_CORE_O1",
+      "branch": "L5",
+      "provider_symbol": "QFT_KernelIdentityUnificationToPositivity_Theorem",
+      "required_statement": "(FINActionComplete ∧ ConstructiveNonPerturbativeScheme) -> PositivityToReconstruction",
+      "proof_kind": "kernel_identity_unification_derivation",
+      "acceptance_criteria": [
+        "THEOREM_SYMBOL_EXISTS",
+        "NO_AXIOM_TOKENS_IN_PROVIDER_FILE",
+        "NO_DERIVED_OR_PENDING_TOKENS_IN_PROVIDER_FILE",
+        "LEAN_MACHINE_CHECK_EXIT_ZERO",
+        "TRACEABILITY_TO_KERNEL_IDENTITY_UNIFICATION_LAYER_EXPLICIT"
+      ]
+    }
+  ],
+  "scope_boundary": {
+    "packet_ready": true,
+    "execution_completed": false,
+    "all_strict_obligations_fully_closed": false,
+    "overclaim_forbidden": true
+  }
+}

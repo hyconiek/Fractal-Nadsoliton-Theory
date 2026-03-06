@@ -1,0 +1,1 @@
+material_dowodowy/strict_chain_qw2525_qw2529/raporty_md/RAPORT_QW2529_STRICT_ANTI_FALSE_PASS_IDENTITY_STABILITY_FRONTIER_GATE.md

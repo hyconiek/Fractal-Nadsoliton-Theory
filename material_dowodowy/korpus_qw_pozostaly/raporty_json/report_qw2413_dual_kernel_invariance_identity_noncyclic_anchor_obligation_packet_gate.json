@@ -1,0 +1,48 @@
+{
+  "generated_utc": "2026-03-05T11:11:54.287243+00:00",
+  "sources": {
+    "q2412": "report_qw2412_dual_kernel_invariance_identity_chain_reuse_admission_gate.json",
+    "spec": "spec_qw2413_dual_kernel_invariance_identity_noncyclic_anchor_obligation_packet.json"
+  },
+  "spec_file": "spec_qw2413_dual_kernel_invariance_identity_noncyclic_anchor_obligation_packet.json",
+  "spec_sha256": "22b81721a471f6bd35a1229291c62164dbcf8600951984702612c26d031d9291",
+  "proof_object_file": "proof_object_qw2413_dual_kernel_invariance_identity_noncyclic_anchor_obligation_packet.json",
+  "proof_object_sha256": "0c698f1a5a962a6a7d07295450d48468ea1c4641151ac85829d460be59f4ddfd",
+  "obligations": [
+    {
+      "id": "L12_KERNEL_INVARIANCE_IDENTITY_NONCYCLIC_ANCHOR_O1",
+      "branch": "L12",
+      "anchor_symbol": "RG_KernelInvarianceIdentityToWellPosedness_Theorem",
+      "acceptance_rules": [
+        "proof_term must not be single-symbol exact to historical invariance-identity chain step",
+        "proof must be machine-checkable without `axiom` and without `_DerivedOrPending`",
+        "dependency graph delta must not re-enter confirmed identity-cycle frontier"
+      ]
+    },
+    {
+      "id": "L5_KERNEL_INVARIANCE_IDENTITY_NONCYCLIC_ANCHOR_O1",
+      "branch": "L5",
+      "anchor_symbol": "QFT_KernelInvarianceIdentityToPositivity_Theorem",
+      "acceptance_rules": [
+        "proof_term must not be single-symbol exact to historical invariance-identity chain step",
+        "proof must be machine-checkable without `axiom` and without `_DerivedOrPending`",
+        "dependency graph delta must not re-enter confirmed identity-cycle frontier"
+      ]
+    }
+  ],
+  "n_obligations": 2,
+  "flags": {
+    "q2412_reuse_guard_active": true,
+    "q2412_admission_state_valid": true,
+    "n_obligations_eq_two": true,
+    "one_obligation_per_branch": true,
+    "all_rules_require_noncircularity": true,
+    "all_rules_require_axiom_free_machine_check": true,
+    "execution_completed": false,
+    "all_strict_obligations_fully_closed": false
+  },
+  "pass_count": 6,
+  "total_flags": 8,
+  "verdict": "DUAL_KERNEL_INVARIANCE_IDENTITY_NONCYCLIC_ANCHOR_OBLIGATION_PACKET_GATE_PASS_PACKET_READY",
+  "required_next_step": "AUTHOR_DUAL_KERNEL_INVARIANCE_IDENTITY_NONCYCLIC_ANCHOR_CANDIDATE_FILES"
+}

@@ -1,0 +1,1 @@
+material_dowodowy/lean_fin_dowody/lean/FIN_L12_STRICT_NON_AXIOMATIC_KERNEL_IDENTITY_STABILITY_PROVIDER_ATTEMPT.lean

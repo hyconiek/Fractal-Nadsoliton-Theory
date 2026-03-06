@@ -1,0 +1,41 @@
+{
+  "generated_utc": "2026-03-05T06:37:32.493109+00:00",
+  "sources": {
+    "q2305": "report_qw2305_dual_kernel_operator_closure_execution_status_gate.json",
+    "spec": "spec_qw2306_dual_kernel_spectral_closure_minimal_blocker_cut.json"
+  },
+  "spec_file": "spec_qw2306_dual_kernel_spectral_closure_minimal_blocker_cut.json",
+  "spec_sha256": "df226444660f240adb162e70eb9040785b5917e433aebe42038f71af1e1eb16d",
+  "proof_object_file": "proof_object_qw2306_dual_kernel_spectral_closure_minimal_blocker_cut.json",
+  "proof_object_sha256": "4ece4dffb434d9b3f2509f94a3952ac88b3f3ab4cdee7f02ebfe2e73a73eab4e",
+  "minimal_blocker_cut": [
+    {
+      "id": "L12_KERNEL_SPECTRAL_CORE_O1",
+      "branch": "L12",
+      "symbol": "RG_KernelSpectralClosureToWellPosedness_Theorem",
+      "required_statement": "(FINActionComplete ∧ RGConstructiveMap) -> RGGlobalWellPosednessAllScales",
+      "proof_kind": "kernel_spectral_closure_derivation"
+    },
+    {
+      "id": "L5_KERNEL_SPECTRAL_CORE_O1",
+      "branch": "L5",
+      "symbol": "QFT_KernelSpectralClosureToPositivity_Theorem",
+      "required_statement": "(FINActionComplete ∧ ConstructiveNonPerturbativeScheme) -> PositivityToReconstruction",
+      "proof_kind": "kernel_spectral_closure_derivation"
+    }
+  ],
+  "n_obligations": 2,
+  "flags": {
+    "q2305_execution_status_present": true,
+    "q2305_blocker_cut_size_two": true,
+    "contains_rg_kernel_spectral_blocker": true,
+    "contains_qft_kernel_spectral_blocker": true,
+    "minimal_blocker_cut_size_two": true,
+    "one_core_obligation_per_branch": true,
+    "all_strict_obligations_fully_closed": false
+  },
+  "pass_count": 6,
+  "total_flags": 7,
+  "verdict": "DUAL_KERNEL_SPECTRAL_CLOSURE_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED",
+  "required_next_step": "BUILD_DUAL_KERNEL_SPECTRAL_CLOSURE_DISCHARGE_PACKET"
+}

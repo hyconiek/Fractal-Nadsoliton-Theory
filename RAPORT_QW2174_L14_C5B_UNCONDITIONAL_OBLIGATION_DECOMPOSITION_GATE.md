@@ -1,8 +1,1 @@
-# RAPORT QW-2174: L14 C5B UNCONDITIONAL OBLIGATION DECOMPOSITION GATE
-
-- Date UTC: 2026-03-05T00:48:37.551116+00:00
-- Verdict: **L14_C5B_UNCONDITIONAL_OBLIGATION_DECOMPOSITION_GATE_PASS_PARTIAL_SINGLE_TERMINAL_OPEN**
-- pass_count: `10/13`
-
-## Boundary
-- Unconditional C5b is decomposed to V1 (closed) + V2 (single terminal open lemma).
+material_dowodowy/korpus_qw_pozostaly/raporty_md/RAPORT_QW2174_L14_C5B_UNCONDITIONAL_OBLIGATION_DECOMPOSITION_GATE.md

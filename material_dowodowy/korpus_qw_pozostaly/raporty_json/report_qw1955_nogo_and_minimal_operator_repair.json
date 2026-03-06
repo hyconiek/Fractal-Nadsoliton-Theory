@@ -1,0 +1,86 @@
+{
+  "generated_utc": "2026-03-03T07:26:17.556075+00:00",
+  "kernel_source": "report_qw1932_physical_reparameterization_eta_scan.json:selected",
+  "kernel": {
+    "omega": 0.37341399972174283,
+    "phi": -1.310233577483508,
+    "beta": 0.6159380564131874,
+    "eta": 2.8
+  },
+  "thresholds": {
+    "dual_accuracy_min": 0.7,
+    "dual_mean_corr_min": 0.45,
+    "dual_info_bits_min": 0.2,
+    "acc_gain_vs_control_min": 0.1,
+    "info_gain_vs_control_min": 0.1,
+    "channel_complementarity_min": 0.02
+  },
+  "no_go_proxy": {
+    "complementarity_q1952_dual": 0.00019932054925486664,
+    "complementarity_q1953_closed": 0.00019823598656076857,
+    "complementarity_max": 0.00019932054925486664,
+    "required_acc_gain_min": 0.1,
+    "required_info_gain_min": 0.1,
+    "degenerate_class_gain_ceiling_proxy": 0.0003986410985097333,
+    "no_go_acc": true,
+    "no_go_info": true,
+    "no_go_active_for_old_class": true
+  },
+  "minimal_repair_params": {
+    "eps_pol": 0.07509374679450517,
+    "noise_sigma": 0.024027461308246637,
+    "incident_amp": 0.09268182251162145,
+    "absorption": 0.1916519315118045,
+    "a2_even_mode": 0.34453092291381016,
+    "b1_odd_mode": 0.21258583266717784,
+    "b3_odd_mode": 0.19667590341735297,
+    "retard_phase": 0.11376650634004519,
+    "orientation_psi0": 5.926799718215227,
+    "flip_rate": 0.08695652173913043,
+    "parity_imbalance": 0.3839817610645057,
+    "odd_fraction": 0.6919908805322529
+  },
+  "metrics": {
+    "dual": {
+      "accuracy": 0.7638888888888888,
+      "mean_reconstruction_corr": 0.9434821377513646,
+      "fisher_ratio": 529.755795878212,
+      "info_bits": 4.525952205144492,
+      "plus_minus_corr_mean": 0.9892955927252963,
+      "channel_complementarity": 0.010704407274703676,
+      "n_samples": 240
+    },
+    "single": {
+      "accuracy": 0.7361111111111112,
+      "mean_reconstruction_corr": 0.941788247896173,
+      "fisher_ratio": 523.9651081850614,
+      "info_bits": 4.518038863494639,
+      "plus_minus_corr_mean": 0.9892955927252963,
+      "channel_complementarity": 0.010704407274703676,
+      "n_samples": 240
+    },
+    "control": {
+      "accuracy": 0.75,
+      "mean_reconstruction_corr": 0.9532199143939674,
+      "fisher_ratio": 577.7460549484517,
+      "info_bits": 4.588393321988959,
+      "plus_minus_corr_mean": 1.0,
+      "channel_complementarity": 0.0,
+      "n_samples": 240
+    },
+    "acc_gain_dual_vs_control": 0.01388888888888884,
+    "info_gain_dual_vs_control": -0.013608492660215198
+  },
+  "flags": {
+    "dual_accuracy_ge_min": true,
+    "dual_mean_corr_ge_min": true,
+    "dual_info_bits_ge_min": true,
+    "acc_gain_vs_control_ge_min": false,
+    "info_gain_vs_control_ge_min": false,
+    "channel_complementarity_ge_min": false
+  },
+  "escaped_no_go_proxy": true,
+  "repair_pass": false,
+  "verdict": "NOGO_DIAGNOSIS_WITH_MINIMAL_REPAIR_FAIL",
+  "required_next_step": "REWORK_MINIMAL_REPAIR_COEFFICIENT_MAP_OR_OPERATOR_FORM"
+}

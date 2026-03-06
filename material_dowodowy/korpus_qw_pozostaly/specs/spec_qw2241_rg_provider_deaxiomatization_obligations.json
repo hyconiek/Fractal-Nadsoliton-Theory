@@ -1,0 +1,30 @@
+{
+  "scope": "L12_O1C_PROVIDER_DEAXIOMATIZATION",
+  "generated_utc": "2026-03-05T04:27:04.010962+00:00",
+  "obligations": [
+    {
+      "id": "RG_DAX_1",
+      "statement": "construct non-axiomatic Lean theorem source for RG_C1_1_DERIVED from canonical action/EoM chain",
+      "depends_on": [
+        "report_qw2165_l13_exhaustive_canonical_eom_gate.json",
+        "report_qw2179_l13_u2b2_exact_matching_identity_gate.json"
+      ]
+    },
+    {
+      "id": "RG_DAX_2",
+      "statement": "construct non-axiomatic Lean theorem source for RG_C1_2_DERIVED from global stability chain",
+      "depends_on": [
+        "report_qw2186_spectral_global_stability_margin_gate.json",
+        "report_qw2209_rg_global_closure_obligation_gate.json"
+      ]
+    },
+    {
+      "id": "RG_DAX_3",
+      "statement": "replace DerivedOrPending axioms by RG_DAX_1 and RG_DAX_2 providers and rerun O1c discharge",
+      "depends_on": [
+        "RG_DAX_1",
+        "RG_DAX_2"
+      ]
+    }
+  ]
+}

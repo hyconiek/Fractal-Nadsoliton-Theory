@@ -1,0 +1,27 @@
+{
+  "generated_utc": "2026-03-05T06:37:32.492459+00:00",
+  "source": "report_qw2305_dual_kernel_operator_closure_execution_status_gate.json",
+  "minimal_blocker_cut": [
+    {
+      "id": "L12_KERNEL_SPECTRAL_CORE_O1",
+      "branch": "L12",
+      "symbol": "RG_KernelSpectralClosureToWellPosedness_Theorem",
+      "required_statement": "(FINActionComplete ∧ RGConstructiveMap) -> RGGlobalWellPosednessAllScales",
+      "proof_kind": "kernel_spectral_closure_derivation"
+    },
+    {
+      "id": "L5_KERNEL_SPECTRAL_CORE_O1",
+      "branch": "L5",
+      "symbol": "QFT_KernelSpectralClosureToPositivity_Theorem",
+      "required_statement": "(FINActionComplete ∧ ConstructiveNonPerturbativeScheme) -> PositivityToReconstruction",
+      "proof_kind": "kernel_spectral_closure_derivation"
+    }
+  ],
+  "n_obligations": 2,
+  "scope_boundary": {
+    "minimal_blocker_cut_extracted": true,
+    "execution_completed": false,
+    "all_strict_obligations_fully_closed": false,
+    "overclaim_forbidden": true
+  }
+}

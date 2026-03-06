@@ -1,9 +1,1 @@
--- FIN Release 5.1: QW-2302 L5 fundamental-kernel-dynamics discharge attempt
--- Scope: derive kernel dynamics theorem from kernel-operator-closure theorem.
-
-variable (FINActionComplete ConstructiveNonPerturbativeScheme PositivityToReconstruction : Prop)
-
-theorem QFT_FundamentalKernelDynamicsToPositivity_Theorem :
-  (FINActionComplete ∧ ConstructiveNonPerturbativeScheme) -> PositivityToReconstruction := by
-  exact QFT_KernelOperatorClosureToPositivity_Theorem
-
+material_dowodowy/lean_fin_dowody/lean/FIN_L5_FUNDAMENTAL_KERNEL_DYNAMICS_DISCHARGE_ATTEMPT.lean

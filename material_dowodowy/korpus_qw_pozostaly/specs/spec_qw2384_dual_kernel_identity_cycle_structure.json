@@ -1,0 +1,99 @@
+{
+  "generated_utc": "2026-03-05T09:50:07.063805+00:00",
+  "sources": {
+    "q2381": "report_qw2381_dual_kernel_cycle_recurrence_gate.json",
+    "q2383": "report_qw2383_dual_noncyclic_step_admission_gate.json"
+  },
+  "analysis_method": {
+    "graph_basis": "theorem -> exact dependency edges from FIN_L12/L5_KERNEL_*_DISCHARGE_ATTEMPT.lean",
+    "scc_algorithm": "kosaraju",
+    "anchor_criterion": "at least one blocker-SCC theorem with dependency outside SCC or non-single-symbol-exact proof"
+  },
+  "l12": {
+    "blocker": "RG_KernelIdentityLocalityToWellPosedness_Theorem",
+    "n_edges": 21,
+    "assessment": {
+      "blocker_in_graph": true,
+      "scc_size": 20,
+      "all_deps_inside_scc": true,
+      "all_exact_edges_present": true,
+      "noncircular_anchor_candidates": [],
+      "blocker_scc_nodes": [
+        "RG_KernelIdentityClosureToWellPosedness_Theorem",
+        "RG_KernelIdentityCoherenceToWellPosedness_Theorem",
+        "RG_KernelIdentityCompatibilityToWellPosedness_Theorem",
+        "RG_KernelIdentityCompletenessToWellPosedness_Theorem",
+        "RG_KernelIdentityConservationToWellPosedness_Theorem",
+        "RG_KernelIdentityConsistencyToWellPosedness_Theorem",
+        "RG_KernelIdentityConsolidationToWellPosedness_Theorem",
+        "RG_KernelIdentityContinuityToWellPosedness_Theorem",
+        "RG_KernelIdentityFinalityToWellPosedness_Theorem",
+        "RG_KernelIdentityIntegrationToWellPosedness_Theorem",
+        "RG_KernelIdentityIntegrityToWellPosedness_Theorem",
+        "RG_KernelIdentityLocalityToWellPosedness_Theorem",
+        "RG_KernelIdentityRegularityToWellPosedness_Theorem",
+        "RG_KernelIdentityResilienceToWellPosedness_Theorem",
+        "RG_KernelIdentityRobustnessToWellPosedness_Theorem",
+        "RG_KernelIdentitySaturationToWellPosedness_Theorem",
+        "RG_KernelIdentityStabilityToWellPosedness_Theorem",
+        "RG_KernelIdentityTotalityToWellPosedness_Theorem",
+        "RG_KernelIdentityUnificationToWellPosedness_Theorem",
+        "RG_KernelIdentityUniversalityToWellPosedness_Theorem"
+      ],
+      "proof_kind_sample": {
+        "RG_KernelIdentityClosureToWellPosedness_Theorem": "exact_plus_extra",
+        "RG_KernelIdentityCoherenceToWellPosedness_Theorem": "exact_plus_extra",
+        "RG_KernelIdentityCompatibilityToWellPosedness_Theorem": "exact_plus_extra",
+        "RG_KernelIdentityCompletenessToWellPosedness_Theorem": "exact_plus_extra",
+        "RG_KernelIdentityConservationToWellPosedness_Theorem": "exact_plus_extra"
+      }
+    }
+  },
+  "l5": {
+    "blocker": "QFT_KernelIdentityLocalityToPositivity_Theorem",
+    "n_edges": 21,
+    "assessment": {
+      "blocker_in_graph": true,
+      "scc_size": 20,
+      "all_deps_inside_scc": true,
+      "all_exact_edges_present": true,
+      "noncircular_anchor_candidates": [],
+      "blocker_scc_nodes": [
+        "QFT_KernelIdentityClosureToPositivity_Theorem",
+        "QFT_KernelIdentityCoherenceToPositivity_Theorem",
+        "QFT_KernelIdentityCompatibilityToPositivity_Theorem",
+        "QFT_KernelIdentityCompletenessToPositivity_Theorem",
+        "QFT_KernelIdentityConservationToPositivity_Theorem",
+        "QFT_KernelIdentityConsistencyToPositivity_Theorem",
+        "QFT_KernelIdentityConsolidationToPositivity_Theorem",
+        "QFT_KernelIdentityContinuityToPositivity_Theorem",
+        "QFT_KernelIdentityFinalityToPositivity_Theorem",
+        "QFT_KernelIdentityIntegrationToPositivity_Theorem",
+        "QFT_KernelIdentityIntegrityToPositivity_Theorem",
+        "QFT_KernelIdentityLocalityToPositivity_Theorem",
+        "QFT_KernelIdentityRegularityToPositivity_Theorem",
+        "QFT_KernelIdentityResilienceToPositivity_Theorem",
+        "QFT_KernelIdentityRobustnessToPositivity_Theorem",
+        "QFT_KernelIdentitySaturationToPositivity_Theorem",
+        "QFT_KernelIdentityStabilityToPositivity_Theorem",
+        "QFT_KernelIdentityTotalityToPositivity_Theorem",
+        "QFT_KernelIdentityUnificationToPositivity_Theorem",
+        "QFT_KernelIdentityUniversalityToPositivity_Theorem"
+      ],
+      "proof_kind_sample": {
+        "QFT_KernelIdentityClosureToPositivity_Theorem": "exact_plus_extra",
+        "QFT_KernelIdentityCoherenceToPositivity_Theorem": "exact_plus_extra",
+        "QFT_KernelIdentityCompatibilityToPositivity_Theorem": "exact_plus_extra",
+        "QFT_KernelIdentityCompletenessToPositivity_Theorem": "exact_plus_extra",
+        "QFT_KernelIdentityConservationToPositivity_Theorem": "exact_plus_extra"
+      }
+    }
+  },
+  "scope_boundary": {
+    "structural_cycle_confirmed": true,
+    "noncircular_anchor_found": false,
+    "execution_completed": false,
+    "all_strict_obligations_fully_closed": false,
+    "overclaim_forbidden": true
+  }
+}

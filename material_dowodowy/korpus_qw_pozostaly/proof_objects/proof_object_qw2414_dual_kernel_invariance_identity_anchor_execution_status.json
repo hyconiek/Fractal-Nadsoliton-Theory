@@ -1,0 +1,47 @@
+{
+  "generated_utc": "2026-03-05T11:11:54.932870+00:00",
+  "sources": {
+    "q2412": "report_qw2412_dual_kernel_invariance_identity_chain_reuse_admission_gate.json",
+    "q2413": "report_qw2413_dual_kernel_invariance_identity_noncyclic_anchor_obligation_packet_gate.json"
+  },
+  "attempt_files": {
+    "l12": {
+      "name": "FIN_L12_KERNEL_INVARIANCE_IDENTITY_NONCYCLIC_ANCHOR_ATTEMPT.lean",
+      "sha256": "18e3c7edbfa9376d0d3e626481710d49da40c97dec91b03994a52d1985dbb93b"
+    },
+    "l5": {
+      "name": "FIN_L5_KERNEL_INVARIANCE_IDENTITY_NONCYCLIC_ANCHOR_ATTEMPT.lean",
+      "sha256": "f0f6683019ea28b092a7112c65ef414a87a55275e5b334c4167ae2d67890884f"
+    }
+  },
+  "machine_check": {
+    "lean_binary": "/tmp/lean4/lean-4.28.0-linux/bin/lean",
+    "l12": {
+      "exit_code": 1,
+      "stdout": "FIN_L12_KERNEL_INVARIANCE_IDENTITY_NONCYCLIC_ANCHOR_ATTEMPT.lean:8:8: error(lean.unknownIdentifier): Unknown identifier `RG_KernelIdentityMinimalityToWellPosedness_Theorem`\n",
+      "stderr": "",
+      "unknown_identifier": "RG_KernelIdentityMinimalityToWellPosedness_Theorem"
+    },
+    "l5": {
+      "exit_code": 1,
+      "stdout": "FIN_L5_KERNEL_INVARIANCE_IDENTITY_NONCYCLIC_ANCHOR_ATTEMPT.lean:8:8: error(lean.unknownIdentifier): Unknown identifier `QFT_KernelIdentityMinimalityToPositivity_Theorem`\n",
+      "stderr": "",
+      "unknown_identifier": "QFT_KernelIdentityMinimalityToPositivity_Theorem"
+    }
+  },
+  "blocker_cut": [
+    {
+      "branch": "L12",
+      "symbol": "RG_KernelIdentityMinimalityToWellPosedness_Theorem"
+    },
+    {
+      "branch": "L5",
+      "symbol": "QFT_KernelIdentityMinimalityToPositivity_Theorem"
+    }
+  ],
+  "scope_boundary": {
+    "execution_completed": false,
+    "all_strict_obligations_fully_closed": false,
+    "overclaim_forbidden": true
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "generated_utc": "2026-03-05T03:28:20.529436+00:00",
+  "sources": {
+    "q2211": "report_qw2211_rg_global_obligation_decomposition_gate.json",
+    "q2213": "report_qw2213_rg_flow_existence_scope_gate.json",
+    "q2209": "report_qw2209_rg_global_closure_obligation_gate.json",
+    "q2208": "report_qw2208_spectral_global_stability_obstruction_gate.json",
+    "q2186": "report_qw2186_ktotal_spectral_stability_margin_gate.json"
+  },
+  "summary": {
+    "l12_o1b_prior": {
+      "description": "Prove global all-t fixed-point/stability closure for the full derived RG system, including UV behavior without hidden scope restriction.",
+      "currently_closed": false,
+      "depends_on": [
+        "L12_O1a"
+      ]
+    },
+    "l12_o1a_terminal_obligation": {
+      "id": "L12_O1a_O1",
+      "description": "Prove nonperturbative global existence/uniqueness theorem for the full all-coupling FIN RG flow derived from complete FIN action (beyond proxy truncation).",
+      "currently_closed": false
+    },
+    "l15_o1_boundary": {
+      "id": "L15_O1",
+      "description": "Prove global stability for unbounded/nonlinear/nonlocal perturbation classes from complete FIN action (beyond bounded symmetric operator-norm scope).",
+      "currently_closed": false
+    },
+    "l12_o1_boundary": {
+      "id": "L12_O1",
+      "description": "Prove full nonperturbative all-coupling all-t RG fixed-point/stability closure from complete FIN action (beyond current proxy and finite-scope declarations).",
+      "currently_closed": false
+    }
+  },
+  "open_obligation": {
+    "id": "L12_O1b_O1",
+    "description": "Prove global all-t fixed-point/stability theorem for the full nonperturbative all-coupling FIN RG system derived from complete FIN action (including UV behavior without hidden truncation/scope restriction).",
+    "currently_closed": false
+  },
+  "flags": {
+    "q2211_decomposition_pass_present": true,
+    "l12_o1b_subobligation_present": true,
+    "q2213_l12_o1a_terminalized": true,
+    "q2209_l12_single_obligation_scope_pass_present": true,
+    "q2208_global_stability_boundary_explicit": true,
+    "q2186_branch_scope_stability_certificate_present": true,
+    "q2209_global_all_t_not_claimed": true,
+    "single_terminal_obligation_for_l12_o1b_isolated": true,
+    "l12_o1b_terminal_obligation_closed": false,
+    "l12_o1b_closed": false,
+    "full_l12_closed": false,
+    "no_overclaim_boundary_explicit": true
+  },
+  "pass_count": 9,
+  "total_flags": 12,
+  "verdict": "RG_GLOBAL_STABILITY_SCOPE_GATE_PASS_PARTIAL_SINGLE_TERMINAL_OBLIGATION_OPEN",
+  "required_next_step": "PROVE_L12_O1B_O1_GLOBAL_ALL_T_FIXED_POINT_STABILITY_AND_RERUN_QW2215"
+}

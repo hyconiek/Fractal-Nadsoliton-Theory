@@ -1,0 +1,24 @@
+{
+  "generated_utc": "2026-03-05T07:21:29.281194+00:00",
+  "sources": {
+    "q2317": "report_qw2317_dual_kernel_identity_minimality_execution_status_gate.json",
+    "spec": "spec_qw2318_dual_kernel_identity_closure_minimal_blocker_cut.json"
+  },
+  "minimal_blocker_cut": [
+    {
+      "id": "L12_KERNEL_IDENTITY_CLOSURE_CORE_O1",
+      "branch": "L12",
+      "symbol": "RG_KernelIdentityClosureToWellPosedness_Theorem",
+      "required_statement": "(FINActionComplete ∧ RGConstructiveMap) -> RGGlobalWellPosednessAllScales",
+      "proof_kind": "kernel_identity_closure_derivation"
+    },
+    {
+      "id": "L5_KERNEL_IDENTITY_CLOSURE_CORE_O1",
+      "branch": "L5",
+      "symbol": "QFT_KernelIdentityClosureToPositivity_Theorem",
+      "required_statement": "(FINActionComplete ∧ ConstructiveNonPerturbativeScheme) -> PositivityToReconstruction",
+      "proof_kind": "kernel_identity_closure_derivation"
+    }
+  ],
+  "n_obligations": 2
+}

@@ -1,9 +1,1 @@
--- FIN Release 5.1: QW-2356 L5 kernel-identity-robustness discharge attempt
--- Scope: derive identity-robustness theorem from identity-resilience theorem.
-
-variable (FINActionComplete ConstructiveNonPerturbativeScheme PositivityToReconstruction : Prop)
-
-theorem QFT_KernelIdentityRobustnessToPositivity_Theorem :
-  (FINActionComplete ∧ ConstructiveNonPerturbativeScheme) -> PositivityToReconstruction := by
-  exact QFT_KernelIdentityResilienceToPositivity_Theorem
-
+material_dowodowy/lean_fin_dowody/lean/FIN_L5_KERNEL_IDENTITY_ROBUSTNESS_DISCHARGE_ATTEMPT.lean

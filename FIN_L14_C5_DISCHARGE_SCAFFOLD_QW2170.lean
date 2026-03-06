@@ -1,13 +1,1 @@
--- FIN Release 5: L14 C5 discharge scaffold (QW-2170)
-
-theorem l14_c5_discharge_scaffold
-  {C5a C5b : Prop}
-  (ha : C5a) (hb : C5b) :
-  C5a ∧ C5b := by
-  exact And.intro ha hb
-
-theorem l14_c5_composition
-  {C5a C5b C5 : Prop}
-  (hcomp : C5a -> C5b -> C5)
-  (ha : C5a) (hb : C5b) : C5 := by
-  exact hcomp ha hb
+material_dowodowy/lean_fin_dowody/lean/FIN_L14_C5_DISCHARGE_SCAFFOLD_QW2170.lean

@@ -1,0 +1,77 @@
+{
+  "generated_utc": "2026-03-04T08:47:13.152003+00:00",
+  "sources": {
+    "qw2088_optional": "report_qw2088_light_quark_mass_nonanchor_gate.json",
+    "qw2089_optional": "report_qw2089_higgs_selfcoupling_strict_gate.json",
+    "qw2095_optional": "report_qw2095_kernel_derived_t2_nonanchor_inputs_plan_executor.json"
+  },
+  "checks": {
+    "m_up": {
+      "update_available": true,
+      "strict_internal_gate": true,
+      "derived_status": true
+    },
+    "m_down": {
+      "update_available": true,
+      "strict_internal_gate": true,
+      "derived_status": true
+    },
+    "m_strange": {
+      "update_available": true,
+      "strict_internal_gate": true,
+      "derived_status": true
+    },
+    "m_h": {
+      "update_available": true,
+      "strict_internal_gate": true,
+      "derived_status": true
+    }
+  },
+  "updates": [
+    {
+      "id": "m_up",
+      "predicted_value": 0.0019246250000000003,
+      "method": "qw2088_kernel_derived_light_quark_chain",
+      "status": "derived",
+      "strict_level": "strict_internal_gate",
+      "notes": "Strict non-anchor pass from kernel-derived light-quark chain + independent hadronic checks."
+    },
+    {
+      "id": "m_down",
+      "predicted_value": 0.004089828125000001,
+      "method": "qw2088_kernel_derived_light_quark_chain",
+      "status": "derived",
+      "strict_level": "strict_internal_gate",
+      "notes": "Strict non-anchor pass from kernel-derived light-quark chain + independent hadronic checks."
+    },
+    {
+      "id": "m_strange",
+      "predicted_value": 0.0768596124863871,
+      "method": "qw2088_kernel_derived_light_quark_chain",
+      "status": "derived",
+      "strict_level": "strict_internal_gate",
+      "notes": "Strict non-anchor pass from kernel-derived light-quark chain + independent hadronic checks."
+    },
+    {
+      "id": "m_h",
+      "predicted_value": 126.36359067644547,
+      "method": "qw2089_kernel_derived_higgs_chain",
+      "status": "derived",
+      "strict_level": "strict_internal_gate",
+      "notes": "Strict non-anchor pass from kernel-derived Higgs self-coupling chain + independent lambda validation."
+    }
+  ],
+  "flags": {
+    "deterministic_no_retune_no_scan": true,
+    "q2095_kernel_input_artifacts_present": true,
+    "m_up_strict_nonanchor_pass": true,
+    "m_down_strict_nonanchor_pass": true,
+    "m_strange_strict_nonanchor_pass": true,
+    "m_h_strict_nonanchor_pass": true,
+    "no_anchor_or_circularity_detected": true
+  },
+  "pass_count": 7,
+  "total_flags": 7,
+  "verdict": "T2_NONANCHOR_STRICT_GATE_PASS",
+  "required_next_step": "PIPE_T2_UPDATES_TO_QW2069_AND_RERUN_QW2071"
+}

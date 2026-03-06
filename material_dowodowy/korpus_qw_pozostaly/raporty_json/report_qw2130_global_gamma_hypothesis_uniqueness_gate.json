@@ -1,0 +1,88 @@
+{
+  "generated_utc": "2026-03-04T19:11:33.349069+00:00",
+  "sources": {
+    "q1961_matrix": "report_qw1961_noncircular_gamma_q_derivation_matrix.json",
+    "q2128_locked_branch": "report_qw2128_kernel_rep_assignment_uniqueness_gate.json"
+  },
+  "domain_definition": {
+    "admissible_gamma_sources": [
+      "derived_force_energy_2n_over_3",
+      "derived_kernel_d1_to_d4"
+    ],
+    "excluded_gamma_sources": [
+      "canonical_frozen_1p52_reference",
+      "derived_ratio_n_over_df_minus_1"
+    ],
+    "note": "Admissible domain excludes non-derivational canonical reference and arithmetically inconsistent documented path."
+  },
+  "per_gamma_assignment_ranking": [
+    {
+      "gamma_source": "derived_force_energy_2n_over_3",
+      "rows_sorted": [
+        {
+          "q_assignment": "legacy_fibonacci",
+          "score": 2.475861409807653,
+          "split_mode": "info_split_from_qw1958",
+          "all_pass": true
+        },
+        {
+          "q_assignment": "charm_split_fibonacci",
+          "score": 2.630118435599691,
+          "split_mode": "no_info_split",
+          "all_pass": false
+        }
+      ],
+      "winner_q_assignment": "legacy_fibonacci",
+      "winner_score": 2.475861409807653,
+      "runnerup_q_assignment": "charm_split_fibonacci",
+      "runnerup_score": 2.630118435599691,
+      "winner_score_gap": 0.15425702579203815
+    },
+    {
+      "gamma_source": "derived_kernel_d1_to_d4",
+      "rows_sorted": [
+        {
+          "q_assignment": "legacy_fibonacci",
+          "score": 8.315229270516134,
+          "split_mode": "info_split_from_qw1958",
+          "all_pass": false
+        },
+        {
+          "q_assignment": "charm_split_fibonacci",
+          "score": 11.18830697195095,
+          "split_mode": "no_info_split",
+          "all_pass": false
+        }
+      ],
+      "winner_q_assignment": "legacy_fibonacci",
+      "winner_score": 8.315229270516134,
+      "runnerup_q_assignment": "charm_split_fibonacci",
+      "runnerup_score": 11.18830697195095,
+      "winner_score_gap": 2.8730777014348163
+    }
+  ],
+  "winner_summary": {
+    "unique_winners_set": [
+      "legacy_fibonacci"
+    ],
+    "winner_if_unique": "legacy_fibonacci",
+    "winner_allpass_rows_count": 1
+  },
+  "flags": {
+    "admissible_gamma_domain_declared_explicitly": true,
+    "canonical_reference_excluded_from_derivational_domain": true,
+    "arithmetically_inconsistent_gamma_path_excluded": true,
+    "all_admissible_gamma_sources_present_in_variants": true,
+    "unique_q_assignment_winner_across_admissible_gammas": true,
+    "winner_matches_q2128_locked_branch_winner": true,
+    "winner_allpass_in_at_least_one_admissible_gamma": true,
+    "primary_admissible_gamma_has_strict_winner_dominance": true,
+    "q2128_locked_branch_gap_ge_0p25": true,
+    "global_unconstrained_formula_space_uniqueness": false,
+    "deterministic_no_scan_no_retune": true
+  },
+  "pass_count": 10,
+  "total_flags": 11,
+  "verdict": "GLOBAL_GAMMA_HYPOTHESIS_UNIQUENESS_GATE_PASS_STRICT_ADMISSIBLE_DOMAIN",
+  "required_next_step": "EXTEND_ADMISSIBLE_DOMAIN_WITH_FORMAL_JUSTIFICATION_IF_NEEDED_OR_KEEP_SCOPE_BOUNDARY_EXPLICIT"
+}

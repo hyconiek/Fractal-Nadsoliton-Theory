@@ -1,0 +1,35 @@
+{
+  "scope": "L5_AXIOM_FREE_O1C",
+  "generated_utc": "2026-03-05T04:13:50.732204+00:00",
+  "obligations": [
+    {
+      "id": "QFT_C1_1",
+      "statement": "(FINActionComplete AND ConstructiveNonPerturbativeScheme) -> PositivityToReconstruction",
+      "source_symbol": "PositivityToReconstruction_DerivedOrPending",
+      "depends_on": []
+    },
+    {
+      "id": "QFT_C1_2",
+      "statement": "PositivityToReconstruction -> UnitarySMatrixAndScatteringCompleteness",
+      "source_symbol": "UnitarySMatrixAndScatteringCompleteness_DerivedOrPending",
+      "depends_on": [
+        "QFT_C1_1"
+      ]
+    },
+    {
+      "id": "QFT_C1_3",
+      "statement": "compose QFT_C1_1 + QFT_C1_2 into final O1c theorem attachment",
+      "source_symbol": "L5_O1A_O1_O1C_STEP + L5_O1B_O1_O1C_STEP",
+      "depends_on": [
+        "QFT_C1_1",
+        "QFT_C1_2"
+      ]
+    }
+  ],
+  "acceptance_criteria": {
+    "D1": "all obligations have machine-checkable theorem statements",
+    "D2": "dependency DAG is acyclic",
+    "D3": "all DerivedOrPending symbols have mapped replacement obligations",
+    "D4": "final proof object hash is attached after discharge"
+  }
+}

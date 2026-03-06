@@ -1,0 +1,104 @@
+{
+  "generated_utc": "2026-03-05T22:50:29.591104+00:00",
+  "sources": {
+    "q2525": "report_qw2525_dual_kernel_identity_saturation_provider_minimal_blocker_cut_gate.json",
+    "q2524": "report_qw2524_strict_anti_false_pass_identity_saturation_frontier_gate.json"
+  },
+  "theorem_targets": {
+    "L12_target": "RG_KernelIdentitySaturationToWellPosedness_Theorem",
+    "L5_target": "QFT_KernelIdentitySaturationToPositivity_Theorem"
+  },
+  "acceptance_criteria": {
+    "C1": "Identity-saturation domain invariance theorem in declared operator class.",
+    "C2": "Self-adjointness/positivity preservation under saturation constraints.",
+    "C3": "Saturation coercive lower-bound theorem with explicit constants.",
+    "C4": "Spectral/graph stability under bounded saturation-preserving perturbations.",
+    "C5": "Bridge theorem: saturation lemmas imply well-posedness/positivity targets.",
+    "C6": "Machine-check package with reproducible proof hashes and dependency DAG."
+  },
+  "lemma_dag": {
+    "RG_KISAT_L1_SaturationDomainInvariance": [],
+    "RG_KISAT_L2_SelfAdjointPositivityPreservation": [
+      "RG_KISAT_L1_SaturationDomainInvariance"
+    ],
+    "RG_KISAT_L3_SaturationCoerciveLowerBound": [
+      "RG_KISAT_L2_SelfAdjointPositivityPreservation"
+    ],
+    "RG_KISAT_L4_BoundedSaturationPerturbationStability": [
+      "RG_KISAT_L3_SaturationCoerciveLowerBound"
+    ],
+    "RG_KernelIdentitySaturationToWellPosedness_Theorem": [
+      "RG_KISAT_L4_BoundedSaturationPerturbationStability"
+    ],
+    "QFT_KISAT_L1_SaturationDomainInvariance": [],
+    "QFT_KISAT_L2_SelfAdjointPositivityPreservation": [
+      "QFT_KISAT_L1_SaturationDomainInvariance"
+    ],
+    "QFT_KISAT_L3_SaturationCoerciveLowerBound": [
+      "QFT_KISAT_L2_SelfAdjointPositivityPreservation"
+    ],
+    "QFT_KISAT_L4_BoundedSaturationPerturbationStability": [
+      "QFT_KISAT_L3_SaturationCoerciveLowerBound"
+    ],
+    "QFT_KernelIdentitySaturationToPositivity_Theorem": [
+      "QFT_KISAT_L4_BoundedSaturationPerturbationStability"
+    ]
+  },
+  "assumptions": {
+    "A_phys_1": {
+      "class": "physical",
+      "statement": "Complete FIN action and declared branch selection remain fixed.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_phys_2": {
+      "class": "physical",
+      "statement": "Constructive RG/QFT mapping in strict scope is preserved.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_1": {
+      "class": "technical",
+      "statement": "Saturation-constrained domain is dense and graph-closed.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_2": {
+      "class": "technical",
+      "statement": "Self-adjoint extension uniqueness in declared saturation class.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_3": {
+      "class": "technical",
+      "statement": "Explicit coercive lower-bound constants in saturation norm.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_4": {
+      "class": "technical",
+      "statement": "Perturbation bound below saturation-stability threshold.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    }
+  },
+  "scope_boundary": {
+    "theorem_spec_only": true,
+    "counterexample_search_pending": true,
+    "provider_discharge_completed": false,
+    "all_strict_obligations_fully_closed": false,
+    "overclaim_forbidden": true
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "generated_utc": "2026-03-03T03:35:49.261454+00:00",
+  "inputs": {
+    "q1891_report": "report_qw1891_derivational_constraints_from_nadsoliton.json",
+    "q1911_report": "report_qw1911_external_source_dataset_assembly_alpha.json",
+    "q1913_report": "report_qw1913_external_pta_multisplit_transfer_stress.json",
+    "scale": 0.05
+  },
+  "derivational_mapping": {
+    "formula": "alpha = lambda_b / scale",
+    "tuning_rows": [
+      {
+        "lambda_b": 0.1,
+        "val_objective": 0.2722705778272646,
+        "weight_inv_objective": 3.672816974850484,
+        "alpha_pred": 2.0
+      },
+      {
+        "lambda_b": 0.2,
+        "val_objective": 0.3181080713907855,
+        "weight_inv_objective": 3.1435857494115225,
+        "alpha_pred": 4.0
+      },
+      {
+        "lambda_b": 0.35,
+        "val_objective": 0.26990896760291316,
+        "weight_inv_objective": 3.704952854576818,
+        "alpha_pred": 6.999999999999999
+      },
+      {
+        "lambda_b": 0.5,
+        "val_objective": 0.307737146415772,
+        "weight_inv_objective": 3.24952645997987,
+        "alpha_pred": 10.0
+      }
+    ],
+    "lambda_weighted_inv_objective": 0.28447673616084707,
+    "alpha_weighted_inv_objective": 5.689534723216941,
+    "lambda_selected_q1891": 0.35,
+    "alpha_selected_q1891": 6.999999999999999,
+    "alpha_grid_range_from_q1891": [
+      2.0,
+      10.0
+    ]
+  },
+  "empirical_reference": {
+    "alpha_selected_multisplit_median": 6.0,
+    "alpha_selected_multisplit_values": [
+      6.0,
+      6.0,
+      6.0
+    ],
+    "alpha_selected_multisplit_std": 0.0
+  },
+  "compatibility": {
+    "abs_diff_weighted_vs_empirical": 0.31046527678305935,
+    "abs_diff_selected_vs_empirical": 0.9999999999999991,
+    "flags": {
+      "empirical_alpha_inside_derivational_grid": true,
+      "weighted_bridge_abs_diff_le_1": true,
+      "selected_bridge_abs_diff_le_1p5": true,
+      "empirical_alpha_stable_multisplit": true
+    }
+  },
+  "verdict": "ALPHA_DERIVATIONAL_BRIDGE_COMPATIBLE"
+}

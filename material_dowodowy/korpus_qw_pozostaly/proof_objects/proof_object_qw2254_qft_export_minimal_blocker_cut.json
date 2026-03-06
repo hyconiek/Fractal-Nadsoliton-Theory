@@ -1,0 +1,92 @@
+{
+  "generated_utc": "2026-03-05T05:29:00.983257+00:00",
+  "sources": {
+    "q2248": "report_qw2248_qft_export_axiomatic_dependency_gate.json",
+    "q2252": "report_qw2252_qft_export_obligation_execution_status_gate.json"
+  },
+  "target_expr": "(FINActionComplete ∧ ConstructiveNonPerturbativeScheme) -> PositivityToReconstruction",
+  "n_theorem_instances": 7,
+  "theorem_instances": [
+    {
+      "file": "FIN_L5_DAX1_NON_AXIOMATIC_PROVIDER_ATTEMPT.lean",
+      "theorem": "QFT_DAX1_PROVIDER_NON_AXIOMATIC_ATTEMPT",
+      "refs": [
+        "QFT_CanonicalAction_to_Positivity_EXPORT"
+      ],
+      "blockers": []
+    },
+    {
+      "file": "FIN_L5_O1A_O1_O1C_STEP.lean",
+      "theorem": "L5_O1A_O1_O1C_STEP",
+      "refs": [
+        "PositivityToReconstruction_DerivedOrPending"
+      ],
+      "blockers": [
+        "PositivityToReconstruction_DerivedOrPending"
+      ]
+    },
+    {
+      "file": "FIN_L5_O1A_O1_TERMINAL.lean",
+      "theorem": "L5_O1A_O1_TERMINAL",
+      "refs": [
+        "L5O1aWitness"
+      ],
+      "blockers": [
+        "L5O1aWitness"
+      ]
+    },
+    {
+      "file": "FIN_L5_O1C_PROVIDER_LAYER.lean",
+      "theorem": "QFT_C1_1_DERIVED",
+      "refs": [
+        "PositivityToReconstruction_DerivedOrPending"
+      ],
+      "blockers": [
+        "PositivityToReconstruction_DerivedOrPending"
+      ]
+    },
+    {
+      "file": "FIN_L5_O1C_THEOREM_DISCHARGE_ATTEMPT.lean",
+      "theorem": "QFT_C1_1_DERIVED",
+      "refs": [
+        "PositivityToReconstruction_DerivedOrPending"
+      ],
+      "blockers": [
+        "PositivityToReconstruction_DerivedOrPending"
+      ]
+    },
+    {
+      "file": "FIN_L5_O1C_THEOREM_DISCHARGE_ATTEMPT.lean",
+      "theorem": "QFT_C1_1_PROVIDER",
+      "refs": [
+        "QFT_C1_1_DERIVED"
+      ],
+      "blockers": []
+    },
+    {
+      "file": "FIN_L5_O1C_THEOREM_DISCHARGE_PROVIDER_ATTEMPT.lean",
+      "theorem": "QFT_C1_1_DERIVED",
+      "refs": [
+        "PositivityToReconstruction_DerivedOrPending"
+      ],
+      "blockers": [
+        "PositivityToReconstruction_DerivedOrPending"
+      ]
+    }
+  ],
+  "unique_blockers": [
+    "L5O1aWitness",
+    "PositivityToReconstruction_DerivedOrPending"
+  ],
+  "common_blockers": [],
+  "minimal_blocker_cut": [
+    "L5O1aWitness",
+    "PositivityToReconstruction_DerivedOrPending"
+  ],
+  "scope_boundary": {
+    "dax1_non_axiomatic_provider_completed": false,
+    "c1_theorem_discharge_completed": false,
+    "o1c_fully_closed": false,
+    "overclaim_forbidden": true
+  }
+}

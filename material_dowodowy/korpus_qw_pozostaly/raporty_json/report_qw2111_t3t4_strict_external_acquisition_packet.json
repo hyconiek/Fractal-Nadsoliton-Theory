@@ -1,0 +1,155 @@
+{
+  "generated_utc": "2026-03-04T13:28:39.381496+00:00",
+  "sources": {
+    "qw2105": "report_qw2105_t3t4_strict_input_gap_report.json",
+    "qw2106": "report_qw2106_strict_external_input_intake_gate.json",
+    "qw2107": "report_qw2107_hz_strict_design_search.json",
+    "qw2108": "report_qw2108_gnewton_dimensionless_acquisition_spec.json",
+    "qw2109": "report_qw2109_strict_external_evidence_manifest_gate.json"
+  },
+  "status_snapshot": {
+    "qw2105_verdict": "T3T4_STRICT_INPUT_GAPS_CLOSED_READY_FOR_STRICT_RERUN",
+    "qw2106_verdict": "STRICT_EXTERNAL_INPUT_INTAKE_GATE_PASS",
+    "qw2106_pass_count": 18,
+    "qw2106_total_flags": 18,
+    "qw2109_verdict": "STRICT_EXTERNAL_EVIDENCE_MANIFEST_GATE_PASS",
+    "qw2109_pass_count": 29,
+    "qw2109_total_flags": 29
+  },
+  "hz_acquisition_plan": {
+    "objective": "Reach strict-ready H(z) identifiability for QW-2090/QW-2102.",
+    "current_metrics": {
+      "n_nodes": 5,
+      "z_span": 1.15,
+      "e_span": 4.276715605330501,
+      "design_condition_number": 5.7956053033256225
+    },
+    "thresholds": {
+      "min_nodes": 5,
+      "min_z_span": 0.8,
+      "min_e_span": 1.0,
+      "max_design_condition_number": 8.0
+    },
+    "gaps": [],
+    "recommended_added_z_pairs_top10": [
+      [
+        0.1,
+        0.9
+      ],
+      [
+        0.1,
+        0.92
+      ],
+      [
+        0.12,
+        0.92
+      ],
+      [
+        0.1,
+        0.94
+      ],
+      [
+        0.12,
+        0.94
+      ],
+      [
+        0.1,
+        0.96
+      ],
+      [
+        0.12,
+        0.96
+      ],
+      [
+        0.14,
+        0.96
+      ],
+      [
+        0.1,
+        0.98
+      ],
+      [
+        0.12,
+        0.98
+      ]
+    ],
+    "required_fields_per_new_node": [
+      "z",
+      "h_km_s_mpc",
+      "sigma_total",
+      "citation",
+      "reference_url",
+      "source_version"
+    ],
+    "hard_rule": "New nodes must be external measurements; no synthetic/interpolated/manual-fit points."
+  },
+  "gnewton_acquisition_plan": {
+    "objective": "Replace SI-backsolved bridge with direct external dimensionless observable for QW-2092/QW-2103.",
+    "current_gaps": [],
+    "target_mu_ref_gev": 1.0,
+    "g_dimensionless_target": 6.708830750342087e-39,
+    "g_dimensionless_acceptance_range": {
+      "min": 6.373389212824983e-39,
+      "max": 7.044272287859191e-39
+    },
+    "strict_contract": {
+      "required_bridge_observable_origin": "external_dimensionless_observable",
+      "must_not_be_backsolved_from_g_si": true,
+      "must_not_be_seeded_from_registry": true,
+      "provenance_anchor_free_required": true,
+      "g_si_input_optional_must_be_null_for_strict": true,
+      "required_metadata_fields": [
+        "source_dataset_name",
+        "citation",
+        "reference_url",
+        "source_version",
+        "provenance_anchor_free",
+        "seeded_from_registry",
+        "bridge_observable_origin"
+      ]
+    },
+    "required_payload_keys": [
+      "mu_ref_gev",
+      "g_dimensionless_mu_ref",
+      "bridge_observable_origin",
+      "notes"
+    ],
+    "hard_rule": "bridge_observable_origin must be external_dimensionless_observable (never backsolved_from_g_si)."
+  },
+  "evidence_sidecar_minimum": {
+    "status": "PASS",
+    "required_fields": [
+      "source_dataset_name",
+      "citation",
+      "reference_url",
+      "source_version",
+      "acquired_utc",
+      "artifact_sha256",
+      "acquisition_protocol",
+      "acquisition_command",
+      "analyst"
+    ],
+    "consistency_requirements": [
+      "artifact_sha256 must equal SHA256(payload)",
+      "H(z): metadata record_count and columns_schema must match CSV",
+      "G bridge: metadata json_keys must match payload keys"
+    ]
+  },
+  "rerun_protocol_after_data_refresh": [
+    "python3 QW_2112_HZ_STRICT_NODE_PACK_GATE.py",
+    "python3 QW_2113_GNEWTON_DIRECT_DIMENSIONLESS_PACK_GATE.py",
+    "python3 QW_2109_STRICT_EXTERNAL_EVIDENCE_MANIFEST_GATE.py",
+    "python3 QW_2106_STRICT_EXTERNAL_INPUT_INTAKE_GATE.py",
+    "python3 QW_2099_HZ_EXTERNAL_DECOUPLING_AUTOCOLLECTOR.py --nodes-csv external_hz_nodes_qw2099.csv --citation \"...\" --reference-url \"...\" --source-version \"...\" --require-strict-ready",
+    "python3 QW_2101_GNEWTON_BRIDGE_EXTERNAL_AUTOCOLLECTOR.py --source-file external_gnewton_bridge_qw2101.json --citation \"...\" --reference-url \"...\" --source-version \"...\" --strict-dimensionless-only --omit-g-si-optional --require-strict-ready",
+    "python3 QW_2102_HZ_DECOUPLING_IDENTIFIABILITY_GATE.py",
+    "python3 QW_2103_GNEWTON_DIMENSIONLESS_PROVENANCE_GATE.py",
+    "python3 QW_2090_H0_LAMBDA_DECOUPLING_GATE.py",
+    "python3 QW_2092_GNEWTON_SI_BRIDGE_GATE.py",
+    "python3 QW_2104_T3T4_STRICT_PREFLIGHT_GATE.py",
+    "python3 QW_2105_T3T4_STRICT_INPUT_GAP_REPORT.py",
+    "python3 QW_2094_STRICT_RIGOR_DEFECT_SWEEP.py"
+  ],
+  "verdict": "T3T4_STRICT_EXTERNAL_ACQUISITION_PACKET_READY",
+  "required_next_step": "COLLECT_REAL_EXTERNAL_MEASUREMENTS_ACCORDING_TO_PACKET_AND_RERUN_PROTOCOL"
+}

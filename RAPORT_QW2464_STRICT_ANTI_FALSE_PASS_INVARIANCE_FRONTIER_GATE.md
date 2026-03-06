@@ -1,10 +1,1 @@
-# RAPORT QW-2464: STRICT ANTI FALSE PASS INVARIANCE FRONTIER GATE
-
-- Date UTC: 2026-03-05T14:52:36.430215+00:00
-- Verdict: **STRICT_ANTI_FALSE_PASS_INVARIANCE_FRONTIER_GATE_PASS_WITH_BLOCKERS_EXPLICIT**
-- pass_count: `6/7`
-
-## Core result
-- Theorem-spec + counterexample-search + execution-attempt sa spojne i blocker-explicit.
-- `all_strict_obligations_fully_closed=false` utrzymane twardo.
-- Brak podstaw do theorem-level/full-closure PASS.
+material_dowodowy/strict_chain_qw2440_qw2514/raporty_md/RAPORT_QW2464_STRICT_ANTI_FALSE_PASS_INVARIANCE_FRONTIER_GATE.md

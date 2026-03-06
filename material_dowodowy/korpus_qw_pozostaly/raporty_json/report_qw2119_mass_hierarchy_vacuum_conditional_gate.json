@@ -1,0 +1,44 @@
+{
+  "generated_utc": "2026-03-04T18:31:59.208628+00:00",
+  "sources": {
+    "mass_rows": "report_qw2063_derivational_reconstruction_shared_flavor_basis.json:metrics.mass.rows",
+    "kernel": "report_qw2049_spectral_micro_stagec_intersection_gate.json:stagec_pool.selected_kernel",
+    "tripartition_gate": "report_qw2118_ktotal_spectral_tripartition_gate.json"
+  },
+  "hierarchy_fit": {
+    "pred": {
+      "log_fit_intercept": 12.061046873479922,
+      "log_fit_slope": -0.5221708760218258,
+      "r2": 1.0
+    },
+    "exp": {
+      "log_fit_intercept": 12.11991851315644,
+      "log_fit_slope": -0.5364563187085291,
+      "r2": 0.9997582252239415
+    },
+    "slope_rel_diff_pct": 2.66292747209954,
+    "maxmin_ratio_pred": 252625.2897233854,
+    "maxmin_ratio_exp": 338551.8590998043,
+    "maxmin_ratio_rel_err_pct": 25.380622515231256
+  },
+  "vacuum_condition": {
+    "lambda_min_ktotal": -0.6818747623802018,
+    "required_uniform_mass_shift_ge": 0.6818747633802018,
+    "has_absolute_scalar_scale_input": false,
+    "vacuum_closed_without_scale_input": false,
+    "note": "Absolute vacuum closure requires explicit scalar-sector scale in units compatible with K_total."
+  },
+  "flags": {
+    "hierarchy_pred_r2_ge_0p999": true,
+    "hierarchy_exp_r2_ge_0p98": true,
+    "hierarchy_slope_rel_diff_le_10pct": true,
+    "hierarchy_maxmin_ratio_rel_err_le_30pct": true,
+    "required_mass_shift_quantified": true,
+    "vacuum_closed_without_scale_input": false,
+    "tripartition_gate_consistent": true
+  },
+  "pass_count": 6,
+  "total_flags": 7,
+  "verdict": "MASS_HIERARCHY_PASS_VACUUM_CLOSURE_CONDITIONAL_ON_SCALE_INPUT",
+  "required_next_step": "PROVIDE_EXPLICIT_SCALAR_SCALE_AND_CLOSE_VACUUM_STABILITY_WITH_QW2120"
+}

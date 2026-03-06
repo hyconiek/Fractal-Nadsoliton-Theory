@@ -1,7 +1,1 @@
--- QW-2458 strict non-axiomatic kernel-spectral-closure provider attempt (L5/QFT)
-set_option autoImplicit false
-variable (FINActionComplete ConstructiveNonPerturbativeScheme PositivityToReconstruction : Prop)
-
-theorem QFT_KernelSpectralClosureToPositivity_Theorem_NON_AXIOMATIC :
-  (FINActionComplete ∧ ConstructiveNonPerturbativeScheme) -> PositivityToReconstruction := by
-  exact QFT_KernelSpectralInvarianceToPositivity_Theorem
+material_dowodowy/lean_fin_dowody/lean/FIN_L5_STRICT_NON_AXIOMATIC_KERNEL_SPECTRAL_CLOSURE_PROVIDER_ATTEMPT.lean

@@ -1,0 +1,7 @@
+# RAPORT QW-2283: RG RESIDUAL CORE BLOCKER EXECUTION STATUS V4 GATE
+
+- Date UTC: 2026-03-05T06:02:35.594159+00:00
+- Verdict: **RG_RESIDUAL_CORE_BLOCKER_EXECUTION_STATUS_V4_GATE_PASS_PARTIAL_SINGLE_SYMBOL_MINIMAL_OBSTRUCTION**
+- pass_count: `4/7`
+- obligations satisfied v4: `0/1`
+- isolated_unknown_identifiers: `['RG_CanonicalAction_to_WellPosedness_EXPORT']`

@@ -1,0 +1,46 @@
+{
+  "generated_utc": "2026-03-05T06:41:16.558553+00:00",
+  "source": "report_qw2310_dual_kernel_spectral_invariance_discharge_packet_gate.json",
+  "attempt_files": {
+    "l12": {
+      "name": "FIN_L12_KERNEL_SPECTRAL_INVARIANCE_DISCHARGE_ATTEMPT.lean",
+      "sha256": "f4db20cfd91d63f4b779dc06b27fe3c7ac3dbb67e76fe9cf3024c4bf513440f8",
+      "target_theorem": "RG_KernelSpectralInvarianceToWellPosedness_Theorem",
+      "missing_invariance_identity_symbol": "RG_KernelInvarianceIdentityToWellPosedness_Theorem"
+    },
+    "l5": {
+      "name": "FIN_L5_KERNEL_SPECTRAL_INVARIANCE_DISCHARGE_ATTEMPT.lean",
+      "sha256": "dee4e83fab8c48770f713de67b3dcf3fbb2be2fe341e1a218fafae4e92c0d54a",
+      "target_theorem": "QFT_KernelSpectralInvarianceToPositivity_Theorem",
+      "missing_invariance_identity_symbol": "QFT_KernelInvarianceIdentityToPositivity_Theorem"
+    }
+  },
+  "machine_check": {
+    "lean_binary": "/tmp/lean4/lean-4.28.0-linux/bin/lean",
+    "l12": {
+      "exit_code": 1,
+      "stdout": "FIN_L12_KERNEL_SPECTRAL_INVARIANCE_DISCHARGE_ATTEMPT.lean:8:8: error(lean.unknownIdentifier): Unknown identifier `RG_KernelInvarianceIdentityToWellPosedness_Theorem`\n",
+      "stderr": ""
+    },
+    "l5": {
+      "exit_code": 1,
+      "stdout": "FIN_L5_KERNEL_SPECTRAL_INVARIANCE_DISCHARGE_ATTEMPT.lean:8:8: error(lean.unknownIdentifier): Unknown identifier `QFT_KernelInvarianceIdentityToPositivity_Theorem`\n",
+      "stderr": ""
+    }
+  },
+  "blocker_cut": [
+    {
+      "branch": "L12",
+      "symbol": "RG_KernelInvarianceIdentityToWellPosedness_Theorem"
+    },
+    {
+      "branch": "L5",
+      "symbol": "QFT_KernelInvarianceIdentityToPositivity_Theorem"
+    }
+  ],
+  "scope_boundary": {
+    "execution_completed": false,
+    "all_strict_obligations_fully_closed": false,
+    "overclaim_forbidden": true
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "generated_utc": "2026-03-05T15:39:34.795162+00:00",
+  "sources": {
+    "q2470": "report_qw2470_dual_kernel_identity_minimality_provider_minimal_blocker_cut_gate.json",
+    "q2469": "report_qw2469_strict_anti_false_pass_identity_minimality_frontier_gate.json"
+  },
+  "theorem_targets": {
+    "L12_target": "RG_KernelIdentityMinimalityToWellPosedness_Theorem",
+    "L5_target": "QFT_KernelIdentityMinimalityToPositivity_Theorem"
+  },
+  "acceptance_criteria": {
+    "C1": "Identity-minimal domain invariance theorem in declared operator class.",
+    "C2": "Self-adjointness/positivity preservation under minimality constraints.",
+    "C3": "Minimality-consistency lower-bound theorem with explicit constants.",
+    "C4": "Spectral/graph stability under bounded minimality-preserving perturbations.",
+    "C5": "Bridge theorem: minimality lemmas imply well-posedness/positivity targets.",
+    "C6": "Machine-check package with reproducible proof hashes and dependency DAG."
+  },
+  "lemma_dag": {
+    "RG_KIM_L1_MinimalDomainInvariance": [],
+    "RG_KIM_L2_SelfAdjointPositivityPreservation": [
+      "RG_KIM_L1_MinimalDomainInvariance"
+    ],
+    "RG_KIM_L3_MinimalityConsistencyLowerBound": [
+      "RG_KIM_L2_SelfAdjointPositivityPreservation"
+    ],
+    "RG_KIM_L4_BoundedMinimalityPerturbationStability": [
+      "RG_KIM_L3_MinimalityConsistencyLowerBound"
+    ],
+    "RG_KernelIdentityMinimalityToWellPosedness_Theorem": [
+      "RG_KIM_L4_BoundedMinimalityPerturbationStability"
+    ],
+    "QFT_KIM_L1_MinimalDomainInvariance": [],
+    "QFT_KIM_L2_SelfAdjointPositivityPreservation": [
+      "QFT_KIM_L1_MinimalDomainInvariance"
+    ],
+    "QFT_KIM_L3_MinimalityConsistencyLowerBound": [
+      "QFT_KIM_L2_SelfAdjointPositivityPreservation"
+    ],
+    "QFT_KIM_L4_BoundedMinimalityPerturbationStability": [
+      "QFT_KIM_L3_MinimalityConsistencyLowerBound"
+    ],
+    "QFT_KernelIdentityMinimalityToPositivity_Theorem": [
+      "QFT_KIM_L4_BoundedMinimalityPerturbationStability"
+    ]
+  },
+  "assumptions": {
+    "A_phys_1": {
+      "class": "physical",
+      "statement": "Complete FIN action and declared branch selection remain fixed.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_phys_2": {
+      "class": "physical",
+      "statement": "Constructive RG/QFT mapping in strict scope is preserved.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_1": {
+      "class": "technical",
+      "statement": "Minimality-constrained domain is dense and graph-closed.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_2": {
+      "class": "technical",
+      "statement": "Self-adjoint extension uniqueness in declared minimality class.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_3": {
+      "class": "technical",
+      "statement": "Explicit positive lower-bound/coercivity constants.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_4": {
+      "class": "technical",
+      "statement": "Perturbation bound below minimality-stability threshold.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    }
+  },
+  "scope_boundary": {
+    "theorem_spec_only": true,
+    "counterexample_search_pending": true,
+    "provider_discharge_completed": false,
+    "all_strict_obligations_fully_closed": false,
+    "overclaim_forbidden": true
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "generated_utc": "2026-03-05T10:41:20.967678+00:00",
+  "sources": {
+    "q2396": "report_qw2396_dual_fundamental_chain_reuse_admission_gate.json",
+    "spec": "spec_qw2397_dual_fundamental_noncyclic_anchor_obligation_packet.json"
+  },
+  "obligations": [
+    {
+      "id": "L12_FUNDAMENTAL_NONCYCLIC_ANCHOR_O1",
+      "branch": "L12",
+      "anchor_symbol": "RG_FundamentalKernelDynamicsToWellPosedness_Theorem",
+      "acceptance_rules": [
+        "proof_term must not be single-symbol exact to historical fundamental chain step",
+        "proof must be machine-checkable without `axiom` and without `_DerivedOrPending`",
+        "dependency graph delta must not re-enter confirmed identity-cycle frontier"
+      ]
+    },
+    {
+      "id": "L5_FUNDAMENTAL_NONCYCLIC_ANCHOR_O1",
+      "branch": "L5",
+      "anchor_symbol": "QFT_FundamentalKernelDynamicsToPositivity_Theorem",
+      "acceptance_rules": [
+        "proof_term must not be single-symbol exact to historical fundamental chain step",
+        "proof must be machine-checkable without `axiom` and without `_DerivedOrPending`",
+        "dependency graph delta must not re-enter confirmed identity-cycle frontier"
+      ]
+    }
+  ],
+  "n_obligations": 2
+}

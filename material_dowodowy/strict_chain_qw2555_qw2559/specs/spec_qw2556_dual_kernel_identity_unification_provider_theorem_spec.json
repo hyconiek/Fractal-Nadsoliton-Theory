@@ -1,0 +1,104 @@
+{
+  "generated_utc": "2026-03-05T23:46:48.899045+00:00",
+  "sources": {
+    "q2555": "report_qw2555_dual_kernel_identity_unification_provider_minimal_blocker_cut_gate.json",
+    "q2554": "report_qw2554_strict_anti_false_pass_identity_unification_frontier_gate.json"
+  },
+  "theorem_targets": {
+    "L12_target": "RG_KernelIdentityUnificationToWellPosedness_Theorem",
+    "L5_target": "QFT_KernelIdentityUnificationToPositivity_Theorem"
+  },
+  "acceptance_criteria": {
+    "C1": "Identity-unification domain invariance theorem in declared operator class.",
+    "C2": "Self-adjointness/positivity preservation under unification constraints.",
+    "C3": "Unification coercive lower-bound theorem with explicit constants.",
+    "C4": "Spectral/graph persistence under bounded unification-preserving perturbations.",
+    "C5": "Bridge theorem: unification lemmas imply well-posedness/positivity targets.",
+    "C6": "Machine-check package with reproducible proof hashes and dependency DAG."
+  },
+  "lemma_dag": {
+    "RG_KIUNI_L1_UnificationDomainInvariance": [],
+    "RG_KIUNI_L2_SelfAdjointPositivityPreservation": [
+      "RG_KIUNI_L1_UnificationDomainInvariance"
+    ],
+    "RG_KIUNI_L3_UnificationCoerciveLowerBound": [
+      "RG_KIUNI_L2_SelfAdjointPositivityPreservation"
+    ],
+    "RG_KIUNI_L4_BoundedUnificationPreservation": [
+      "RG_KIUNI_L3_UnificationCoerciveLowerBound"
+    ],
+    "RG_KernelIdentityUnificationToWellPosedness_Theorem": [
+      "RG_KIUNI_L4_BoundedUnificationPreservation"
+    ],
+    "QFT_KIUNI_L1_UnificationDomainInvariance": [],
+    "QFT_KIUNI_L2_SelfAdjointPositivityPreservation": [
+      "QFT_KIUNI_L1_UnificationDomainInvariance"
+    ],
+    "QFT_KIUNI_L3_UnificationCoerciveLowerBound": [
+      "QFT_KIUNI_L2_SelfAdjointPositivityPreservation"
+    ],
+    "QFT_KIUNI_L4_BoundedUnificationPreservation": [
+      "QFT_KIUNI_L3_UnificationCoerciveLowerBound"
+    ],
+    "QFT_KernelIdentityUnificationToPositivity_Theorem": [
+      "QFT_KIUNI_L4_BoundedUnificationPreservation"
+    ]
+  },
+  "assumptions": {
+    "A_phys_1": {
+      "class": "physical",
+      "statement": "Complete FIN action and declared branch selection remain fixed.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_phys_2": {
+      "class": "physical",
+      "statement": "Constructive RG/QFT mapping in strict scope is preserved.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_1": {
+      "class": "technical",
+      "statement": "Unification-constrained domain is dense and graph-closed.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_2": {
+      "class": "technical",
+      "statement": "Self-adjoint extension uniqueness in declared unification class.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_3": {
+      "class": "technical",
+      "statement": "Explicit coercive lower-bound constants in unification norm.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_4": {
+      "class": "technical",
+      "statement": "Perturbation bound below unification-preservation threshold.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    }
+  },
+  "scope_boundary": {
+    "theorem_spec_only": true,
+    "counterexample_search_pending": true,
+    "provider_discharge_completed": false,
+    "all_strict_obligations_fully_closed": false,
+    "overclaim_forbidden": true
+  }
+}

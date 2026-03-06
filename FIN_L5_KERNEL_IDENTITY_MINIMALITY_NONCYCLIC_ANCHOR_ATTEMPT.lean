@@ -1,8 +1,1 @@
--- FIN Release 5.1: QW-2418 L5 kernel-identity-minimality noncyclic anchor attempt
-
-variable (FINActionComplete ConstructiveNonPerturbativeScheme PositivityToReconstruction : Prop)
-
-theorem QFT_KernelIdentityMinimalityToPositivity_Theorem :
-  (FINActionComplete ∧ ConstructiveNonPerturbativeScheme) -> PositivityToReconstruction := by
-  intro h
-  exact QFT_KernelIdentityClosureToPositivity_Theorem h
+material_dowodowy/lean_fin_dowody/lean/FIN_L5_KERNEL_IDENTITY_MINIMALITY_NONCYCLIC_ANCHOR_ATTEMPT.lean

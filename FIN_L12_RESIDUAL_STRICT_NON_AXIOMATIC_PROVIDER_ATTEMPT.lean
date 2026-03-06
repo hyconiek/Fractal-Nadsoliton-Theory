@@ -1,6 +1,1 @@
--- FIN Release 5.1: QW-2277 strict non-axiomatic residual provider attempt (RG)
--- File intentionally contains no explicit `axiom` declarations.
-
-theorem RGGlobalWellPosednessAllScales_Derived :
-  (FINActionComplete ∧ RGConstructiveMap) -> RGGlobalWellPosednessAllScales := by
-  exact RG_CanonicalAction_to_WellPosedness_EXPORT
+material_dowodowy/lean_fin_dowody/lean/FIN_L12_RESIDUAL_STRICT_NON_AXIOMATIC_PROVIDER_ATTEMPT.lean

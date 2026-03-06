@@ -1,0 +1,33 @@
+{
+  "generated_utc": "2026-03-05T05:29:01.202477+00:00",
+  "scope": "QFT_ACTIVE_PATH_SINGLE_BLOCKER_DISCHARGE",
+  "source_reports": {
+    "q2256": "report_qw2256_qft_active_path_blocker_reduction_gate.json",
+    "q2252": "report_qw2252_qft_export_obligation_execution_status_gate.json",
+    "q2250": "report_qw2250_qft_export_axiom_free_obligation_packet_gate.json"
+  },
+  "core_blocker": "PositivityToReconstruction_DerivedOrPending",
+  "active_blockers": [
+    "PositivityToReconstruction_DerivedOrPending"
+  ],
+  "obligations": {
+    "QFT_ACTIVE_CORE_O1": {
+      "statement": "construct theorem QFT_CanonicalAction_to_Positivity_EXPORT : (FINActionComplete ∧ ConstructiveNonPerturbativeScheme) -> PositivityToReconstruction",
+      "target_replacement_symbol": "PositivityToReconstruction_DerivedOrPending",
+      "required": true,
+      "acceptance": "symbol exists and is machine-checkable in *.lean"
+    },
+    "QFT_ACTIVE_CORE_O2": {
+      "statement": "prove QFT_CanonicalAction_to_Positivity_EXPORT without local/global axioms and without *_DerivedOrPending references, then rerun QW-2256 with active_blockers=[]",
+      "target_replacement_symbol": "PositivityToReconstruction_DerivedOrPending",
+      "required": true,
+      "acceptance": "axiom-free proof refs + QW-2256 rerun active_blockers empty"
+    }
+  },
+  "scope_boundary": {
+    "single_core_blocker_eliminated": false,
+    "dax1_non_axiomatic_provider_completed": false,
+    "o1c_fully_closed": false,
+    "overclaim_forbidden": true
+  }
+}

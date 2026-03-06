@@ -1,9 +1,1 @@
--- FIN Release 5.1: QW-2371 L12 kernel-identity-universality discharge attempt
--- Scope: derive identity-universality theorem from identity-totality theorem.
-
-variable (FINActionComplete RGConstructiveMap RGGlobalWellPosednessAllScales : Prop)
-
-theorem RG_KernelIdentityUniversalityToWellPosedness_Theorem :
-  (FINActionComplete ∧ RGConstructiveMap) -> RGGlobalWellPosednessAllScales := by
-  exact RG_KernelIdentityTotalityToWellPosedness_Theorem
-
+material_dowodowy/lean_fin_dowody/lean/FIN_L12_KERNEL_IDENTITY_UNIVERSALITY_DISCHARGE_ATTEMPT.lean

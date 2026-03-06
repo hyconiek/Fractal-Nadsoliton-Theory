@@ -1,7 +1,1 @@
-# RAPORT QW-2292: DUAL PHYSICAL PREMISE DISCHARGE PACKET GATE
-
-- Date UTC: 2026-03-05T06:15:19.380641+00:00
-- Verdict: **DUAL_PHYSICAL_PREMISE_DISCHARGE_PACKET_GATE_PASS_PACKET_READY**
-- pass_count: `3/4`
-- n_frontier_items: `2`
-- n_obligations: `2`
+material_dowodowy/korpus_qw_pozostaly/raporty_md/RAPORT_QW2292_DUAL_PHYSICAL_PREMISE_DISCHARGE_PACKET_GATE.md

@@ -1,0 +1,41 @@
+{
+  "generated_utc": "2026-03-05T06:30:22.746814+00:00",
+  "sources": {
+    "q2299": "report_qw2299_dual_foundational_derivation_execution_status_gate.json",
+    "spec": "spec_qw2300_dual_fundamental_kernel_dynamics_minimal_blocker_cut.json"
+  },
+  "spec_file": "spec_qw2300_dual_fundamental_kernel_dynamics_minimal_blocker_cut.json",
+  "spec_sha256": "69585fc5437847b3f05d9344ccc7dd45f455b954dcc4de030b186a08c24edb7f",
+  "proof_object_file": "proof_object_qw2300_dual_fundamental_kernel_dynamics_minimal_blocker_cut.json",
+  "proof_object_sha256": "59356c860468de5c6d73181e54bb87ab0097ac6bbea70e5d0d01b0b34e8e20bb",
+  "minimal_blocker_cut": [
+    {
+      "id": "L12_FUNDAMENTAL_KERNEL_CORE_O1",
+      "branch": "L12",
+      "symbol": "RG_FundamentalKernelDynamicsToWellPosedness_Theorem",
+      "required_statement": "(FINActionComplete ∧ RGConstructiveMap) -> RGGlobalWellPosednessAllScales",
+      "proof_kind": "fundamental_kernel_dynamics_derivation"
+    },
+    {
+      "id": "L5_FUNDAMENTAL_KERNEL_CORE_O1",
+      "branch": "L5",
+      "symbol": "QFT_FundamentalKernelDynamicsToPositivity_Theorem",
+      "required_statement": "(FINActionComplete ∧ ConstructiveNonPerturbativeScheme) -> PositivityToReconstruction",
+      "proof_kind": "fundamental_kernel_dynamics_derivation"
+    }
+  ],
+  "n_obligations": 2,
+  "flags": {
+    "q2299_execution_status_present": true,
+    "q2299_blocker_cut_size_two": true,
+    "contains_rg_fundamental_kernel_blocker": true,
+    "contains_qft_fundamental_kernel_blocker": true,
+    "minimal_blocker_cut_size_two": true,
+    "one_core_obligation_per_branch": true,
+    "all_strict_obligations_fully_closed": false
+  },
+  "pass_count": 6,
+  "total_flags": 7,
+  "verdict": "DUAL_FUNDAMENTAL_KERNEL_DYNAMICS_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED",
+  "required_next_step": "BUILD_DUAL_FUNDAMENTAL_KERNEL_DYNAMICS_DISCHARGE_PACKET"
+}

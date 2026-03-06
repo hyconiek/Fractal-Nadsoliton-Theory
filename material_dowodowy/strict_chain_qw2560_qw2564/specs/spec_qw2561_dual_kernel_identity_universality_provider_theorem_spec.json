@@ -1,0 +1,104 @@
+{
+  "generated_utc": "2026-03-05T23:55:03.148038+00:00",
+  "sources": {
+    "q2560": "report_qw2560_dual_kernel_identity_universality_provider_minimal_blocker_cut_gate.json",
+    "q2559": "report_qw2559_strict_anti_false_pass_identity_universality_frontier_gate.json"
+  },
+  "theorem_targets": {
+    "L12_target": "RG_KernelIdentityUniversalityToWellPosedness_Theorem",
+    "L5_target": "QFT_KernelIdentityUniversalityToPositivity_Theorem"
+  },
+  "acceptance_criteria": {
+    "C1": "Identity-universality domain invariance theorem in declared operator class.",
+    "C2": "Self-adjointness/positivity preservation under universality constraints.",
+    "C3": "Universality coercive lower-bound theorem with explicit constants.",
+    "C4": "Spectral/graph persistence under bounded universality-preserving perturbations.",
+    "C5": "Bridge theorem: universality lemmas imply well-posedness/positivity targets.",
+    "C6": "Machine-check package with reproducible proof hashes and dependency DAG."
+  },
+  "lemma_dag": {
+    "RG_KIUNIV_L1_UniversalityDomainInvariance": [],
+    "RG_KIUNIV_L2_SelfAdjointPositivityPreservation": [
+      "RG_KIUNIV_L1_UniversalityDomainInvariance"
+    ],
+    "RG_KIUNIV_L3_UniversalityCoerciveLowerBound": [
+      "RG_KIUNIV_L2_SelfAdjointPositivityPreservation"
+    ],
+    "RG_KIUNIV_L4_BoundedUniversalityPreservation": [
+      "RG_KIUNIV_L3_UniversalityCoerciveLowerBound"
+    ],
+    "RG_KernelIdentityUniversalityToWellPosedness_Theorem": [
+      "RG_KIUNIV_L4_BoundedUniversalityPreservation"
+    ],
+    "QFT_KIUNIV_L1_UniversalityDomainInvariance": [],
+    "QFT_KIUNIV_L2_SelfAdjointPositivityPreservation": [
+      "QFT_KIUNIV_L1_UniversalityDomainInvariance"
+    ],
+    "QFT_KIUNIV_L3_UniversalityCoerciveLowerBound": [
+      "QFT_KIUNIV_L2_SelfAdjointPositivityPreservation"
+    ],
+    "QFT_KIUNIV_L4_BoundedUniversalityPreservation": [
+      "QFT_KIUNIV_L3_UniversalityCoerciveLowerBound"
+    ],
+    "QFT_KernelIdentityUniversalityToPositivity_Theorem": [
+      "QFT_KIUNIV_L4_BoundedUniversalityPreservation"
+    ]
+  },
+  "assumptions": {
+    "A_phys_1": {
+      "class": "physical",
+      "statement": "Complete FIN action and declared branch selection remain fixed.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_phys_2": {
+      "class": "physical",
+      "statement": "Constructive RG/QFT mapping in strict scope is preserved.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_1": {
+      "class": "technical",
+      "statement": "Universality-constrained domain is dense and graph-closed.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_2": {
+      "class": "technical",
+      "statement": "Self-adjoint extension uniqueness in declared universality class.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_3": {
+      "class": "technical",
+      "statement": "Explicit coercive lower-bound constants in universality norm.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_4": {
+      "class": "technical",
+      "statement": "Perturbation bound below universality-preservation threshold.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    }
+  },
+  "scope_boundary": {
+    "theorem_spec_only": true,
+    "counterexample_search_pending": true,
+    "provider_discharge_completed": false,
+    "all_strict_obligations_fully_closed": false,
+    "overclaim_forbidden": true
+  }
+}

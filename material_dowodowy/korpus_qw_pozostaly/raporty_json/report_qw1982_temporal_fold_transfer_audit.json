@@ -1,0 +1,143 @@
+{
+  "generated_utc": "2026-03-03T09:45:42.184103+00:00",
+  "source_reports": [
+    "report_qw1970_structural_gw_control_term_gate.json",
+    "report_qw1981_signed_dual_stress_and_leakage_audit.json"
+  ],
+  "candidate": {
+    "xi1": 0.0017053879748270668,
+    "xi3": 0.0007108832453038897
+  },
+  "thresholds_transfer_gate": {
+    "real_boot_min": 0.85,
+    "null_random_p90_max": 0.4,
+    "null_adversarial_mean_max": 0.45,
+    "required_folds_to_pass": 4
+  },
+  "fold_results": [
+    {
+      "fold": 0,
+      "n_rows": 153,
+      "deterministic_gw": {
+        "auc_h1l1_vs_ctrl": 0.8731257208765859,
+        "adv_shared_minus_ctrl_q90": 0.4215686274509804,
+        "sep_median_h1l1_minus_ctrl": 0.003375794621404419,
+        "control_median_gap": 0.0014303221696346999
+      },
+      "deterministic_flags": {
+        "gw_sep_ge_min": true,
+        "gw_adv_ge_min": true,
+        "gw_auc_ge_min": true,
+        "gw_control_gap_le_max": true
+      },
+      "real_boot_pass_rate_1200": 0.9375,
+      "null_det_pass_rate": 0.175,
+      "null_random_mean": 0.262,
+      "null_random_p90": 0.48400000000000004,
+      "null_adversarial_mean": 0.6083333333333333,
+      "null_adversarial_p90": 0.7195,
+      "fold_pass": false
+    },
+    {
+      "fold": 1,
+      "n_rows": 153,
+      "deterministic_gw": {
+        "auc_h1l1_vs_ctrl": 0.890234525182622,
+        "adv_shared_minus_ctrl_q90": 0.5196078431372548,
+        "sep_median_h1l1_minus_ctrl": 0.003153063353813634,
+        "control_median_gap": 1.0196530394577835e-05
+      },
+      "deterministic_flags": {
+        "gw_sep_ge_min": true,
+        "gw_adv_ge_min": true,
+        "gw_auc_ge_min": true,
+        "gw_control_gap_le_max": true
+      },
+      "real_boot_pass_rate_1200": 0.8466666666666667,
+      "null_det_pass_rate": 0.025,
+      "null_random_mean": 0.16075,
+      "null_random_p90": 0.4005,
+      "null_adversarial_mean": 0.43958333333333327,
+      "null_adversarial_p90": 0.7310000000000001,
+      "fold_pass": false
+    },
+    {
+      "fold": 2,
+      "n_rows": 153,
+      "deterministic_gw": {
+        "auc_h1l1_vs_ctrl": 0.8742791234140715,
+        "adv_shared_minus_ctrl_q90": 0.4803921568627451,
+        "sep_median_h1l1_minus_ctrl": 0.0030168659453149575,
+        "control_median_gap": 0.0017288704319555377
+      },
+      "deterministic_flags": {
+        "gw_sep_ge_min": true,
+        "gw_adv_ge_min": true,
+        "gw_auc_ge_min": true,
+        "gw_control_gap_le_max": true
+      },
+      "real_boot_pass_rate_1200": 0.8291666666666667,
+      "null_det_pass_rate": 0.1,
+      "null_random_mean": 0.42687500000000006,
+      "null_random_p90": 0.5965,
+      "null_adversarial_mean": 0.6204166666666667,
+      "null_adversarial_p90": 0.8185,
+      "fold_pass": false
+    },
+    {
+      "fold": 3,
+      "n_rows": 150,
+      "deterministic_gw": {
+        "auc_h1l1_vs_ctrl": 0.8466,
+        "adv_shared_minus_ctrl_q90": 0.26,
+        "sep_median_h1l1_minus_ctrl": 0.002844993954782646,
+        "control_median_gap": 0.00044046031970415133
+      },
+      "deterministic_flags": {
+        "gw_sep_ge_min": true,
+        "gw_adv_ge_min": false,
+        "gw_auc_ge_min": true,
+        "gw_control_gap_le_max": true
+      },
+      "real_boot_pass_rate_1200": 0.5166666666666667,
+      "null_det_pass_rate": 0.0,
+      "null_random_mean": 0.131,
+      "null_random_p90": 0.25700000000000006,
+      "null_adversarial_mean": 0.365,
+      "null_adversarial_p90": 0.464,
+      "fold_pass": false
+    },
+    {
+      "fold": 4,
+      "n_rows": 150,
+      "deterministic_gw": {
+        "auc_h1l1_vs_ctrl": 0.8892,
+        "adv_shared_minus_ctrl_q90": 0.42000000000000004,
+        "sep_median_h1l1_minus_ctrl": 0.003173103056660277,
+        "control_median_gap": 0.00013153756832891598
+      },
+      "deterministic_flags": {
+        "gw_sep_ge_min": true,
+        "gw_adv_ge_min": true,
+        "gw_auc_ge_min": true,
+        "gw_control_gap_le_max": true
+      },
+      "real_boot_pass_rate_1200": 0.8783333333333333,
+      "null_det_pass_rate": 0.025,
+      "null_random_mean": 0.195625,
+      "null_random_p90": 0.39250000000000007,
+      "null_adversarial_mean": 0.5204166666666666,
+      "null_adversarial_p90": 0.6255000000000001,
+      "fold_pass": false
+    }
+  ],
+  "summary": {
+    "n_folds": 5,
+    "pass_count": 0,
+    "real_boot_mean": 0.8016666666666665,
+    "null_random_p90_mean": 0.4261000000000001,
+    "null_adversarial_mean_mean": 0.51075
+  },
+  "verdict": "TEMPORAL_TRANSFER_FAIL",
+  "required_next_step": "REJECT_FREEZE_AND_REWORK_OPERATOR"
+}

@@ -1,0 +1,90 @@
+{
+  "generated_utc": "2026-03-04T13:28:22.202181+00:00",
+  "sources": {
+    "qw2106": "report_qw2106_strict_external_input_intake_gate.json",
+    "qw2107": "report_qw2107_hz_strict_design_search.json",
+    "qw2108": "report_qw2108_gnewton_dimensionless_acquisition_spec.json",
+    "qw2099": "report_qw2099_hz_external_decoupling_autocollector.json",
+    "qw2102": "report_qw2102_hz_decoupling_identifiability_gate.json",
+    "qw2101": "report_qw2101_gnewton_bridge_external_autocollector.json",
+    "qw2103": "report_qw2103_gnewton_dimensionless_provenance_gate.json",
+    "qw2104": "report_qw2104_t3t4_strict_preflight_gate.json"
+  },
+  "hz_path": {
+    "strict_ready": true,
+    "gaps": [],
+    "current_metrics": {
+      "n_nodes": 5,
+      "z_span": 1.15,
+      "e_span": 4.276715605330501,
+      "design_condition_number": 5.7956053033256225
+    },
+    "thresholds": {
+      "min_nodes": 5,
+      "min_z_span": 0.8,
+      "min_e_span": 1.0,
+      "max_design_condition_number": 8.0
+    }
+  },
+  "hz_design_guidance": {
+    "qw2107_verdict": "HZ_STRICT_DESIGN_FOUND",
+    "suggested_added_z_top5": [
+      [
+        0.1,
+        0.9
+      ],
+      [
+        0.1,
+        0.92
+      ],
+      [
+        0.12,
+        0.92
+      ],
+      [
+        0.1,
+        0.94
+      ],
+      [
+        0.12,
+        0.94
+      ]
+    ],
+    "search_grid": {
+      "z_min": 0.1,
+      "z_max": 3.0,
+      "step": 0.02,
+      "min_separation": 0.015,
+      "n_candidates": 141
+    }
+  },
+  "gnewton_path": {
+    "strict_ready": true,
+    "gaps": [],
+    "current_bridge": {
+      "bridge_observable_origin": "external_dimensionless_observable",
+      "strict_provenance_ready": true
+    }
+  },
+  "gnewton_design_guidance": {
+    "qw2108_verdict": "GNEWTON_DIMENSIONLESS_ACQUISITION_SPEC_READY",
+    "mu_ref_gev": 1.0,
+    "g_dimensionless_target": 6.708830750342087e-39,
+    "g_dimensionless_acceptance_range": {
+      "min": 6.373389212824983e-39,
+      "max": 7.044272287859191e-39
+    }
+  },
+  "t3t4_meta_gate": {
+    "qw2104_verdict": "T3T4_STRICT_PREFLIGHT_GATE_PASS",
+    "qw2104_pass_count": 8,
+    "qw2104_total_flags": 8
+  },
+  "intake_gate": {
+    "qw2106_verdict": "STRICT_EXTERNAL_INPUT_INTAKE_GATE_PASS",
+    "qw2106_pass_count": 18,
+    "qw2106_total_flags": 18
+  },
+  "verdict": "T3T4_STRICT_INPUT_GAPS_CLOSED_READY_FOR_STRICT_RERUN",
+  "required_next_step": "RERUN_T3T4_STRICT_CHAIN_AND_PROMOTE_CLOSURE"
+}

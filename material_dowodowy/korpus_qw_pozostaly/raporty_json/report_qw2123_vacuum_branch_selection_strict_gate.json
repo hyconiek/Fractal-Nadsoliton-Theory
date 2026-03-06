@@ -1,0 +1,36 @@
+{
+  "generated_utc": "2026-03-04T18:48:07.994011+00:00",
+  "sources": {
+    "q2118": "report_qw2118_ktotal_spectral_tripartition_gate.json",
+    "q2120": "report_qw2120_scalar_scale_vacuum_closure_strict_gate.json",
+    "q2122": "report_qw2122_psi_potential_diagonal_floor_gate.json"
+  },
+  "inputs": {
+    "lambda_min_k_total": -0.6818747623802018,
+    "required_shift_ge": 0.6818747633802018,
+    "strict_floor_qw2120": 0.506775986179194,
+    "symmetric_floor_qw2122": 0.506775986179194,
+    "broken_floor_qw2122": 1.013551972358388,
+    "broken_branch_rho_star_sq": 3.77972441525249
+  },
+  "selection_rule": {
+    "definition": "If lambda_min(K_total)<0 and symmetric_floor<required_shift<=broken_floor, select broken branch as strict physical closure branch.",
+    "result": "broken_branch_required"
+  },
+  "flags": {
+    "q2118_conditional_vacuum_shift_loaded": true,
+    "k_total_has_negative_mode": true,
+    "required_shift_positive": true,
+    "symmetric_floor_matches_qw2120_floor": true,
+    "symmetric_floor_below_required_shift": true,
+    "broken_floor_ge_required_shift": true,
+    "broken_branch_vacuum_defined": true,
+    "q2122_deterministic_no_scan_no_retune": true,
+    "branch_selection_rule_satisfied": true,
+    "selection_independent_of_exploratory_channel": true
+  },
+  "pass_count": 10,
+  "total_flags": 10,
+  "verdict": "VACUUM_BRANCH_SELECTION_STRICT_GATE_PASS_BROKEN_BRANCH_REQUIRED",
+  "required_next_step": "RUN_QW2124_SCALAR_VACUUM_CLOSURE_BRANCH_RESOLVED_GATE"
+}

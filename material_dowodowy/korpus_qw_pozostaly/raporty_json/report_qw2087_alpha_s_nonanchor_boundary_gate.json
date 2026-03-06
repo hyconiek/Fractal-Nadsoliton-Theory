@@ -1,0 +1,46 @@
+{
+  "generated_utc": "2026-03-04T13:44:03.560304+00:00",
+  "input_observables": "/home/krzysiek/Pobrane/TOE/edison/t1_nonanchor_alpha_s_input_qw2087.json",
+  "sources": {
+    "registry": "report_qw2068_sm_gr_parameter_registry.json",
+    "qcd_baseline": "report_qw2070_full_radiative_program_baseline.json",
+    "template": "t1_nonanchor_alpha_s_input_qw2087.template.json"
+  },
+  "checks": {
+    "alpha_s_mz_candidate": 0.11538425426330588,
+    "alpha_s_mz_reference": 0.1179,
+    "rel_err_pct": 2.133796214329196,
+    "tolerance_rel_pct": 5.0,
+    "boundary_mu0_gev": 4.0782054027195125,
+    "boundary_alpha_s_mu0": 0.20522778564407015,
+    "boundary_n_f_active": 4,
+    "boundary_origin": "kernel_derived",
+    "boundary_source": "QW-2093 frozen hierarchy-log boundary ansatz",
+    "n_validation_points": 3,
+    "z_mean": 0.4293919675966323,
+    "z_max": 0.4948267239157502
+  },
+  "update": {
+    "id": "alpha_s_mz",
+    "predicted_value": 0.11538425426330588,
+    "method": "qw2087_nonanchor_boundary_running",
+    "status": "derived",
+    "strict_level": "strict_internal_gate",
+    "notes": "Strict non-anchor pass from kernel-derived alpha_s boundary and validation points."
+  },
+  "flags": {
+    "deterministic_no_retune_no_scan": true,
+    "boundary_available": true,
+    "boundary_kernel_derived": true,
+    "validation_points_available": true,
+    "validation_kernel_derived": true,
+    "validation_consistency_pass": true,
+    "within_tolerance": true,
+    "strict_nonanchor_pass": true,
+    "anchor_leak_detected": false
+  },
+  "pass_count": 8,
+  "total_flags": 9,
+  "verdict": "ALPHA_S_NONANCHOR_BOUNDARY_GATE_PASS",
+  "required_next_step": "PIPE_UPDATE_TO_QW2069_AND_RERUN_QW2071"
+}

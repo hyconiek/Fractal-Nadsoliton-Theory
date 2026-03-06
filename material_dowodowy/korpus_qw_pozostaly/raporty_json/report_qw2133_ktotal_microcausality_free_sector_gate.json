@@ -1,0 +1,82 @@
+{
+  "generated_utc": "2026-03-04T19:18:41.071878+00:00",
+  "sources": {
+    "q2117_locality_audit": "report_qw2117_ktotal_locality_operator_audit.json",
+    "q2118_spectral": "report_qw2118_ktotal_spectral_tripartition_gate.json",
+    "q2124_branch_resolved": "report_qw2124_scalar_vacuum_closure_branch_resolved_gate.json"
+  },
+  "kernel": {
+    "n_octaves": 12,
+    "omega": 0.18575000000000005,
+    "phi": 0.1624999999999998,
+    "beta": 1.0,
+    "eta": 1.8
+  },
+  "branch_floor_inputs": {
+    "required_shift_ge": 0.6818747633802018,
+    "broken_floor": 1.013551972358388
+  },
+  "spectral_audit": {
+    "lambda_min_a": 0.33167720997818534,
+    "mode_m2_values": [
+      0.33167720997818534,
+      0.37525297904538923,
+      0.37525297904538957,
+      0.4742904017912762,
+      0.4742904017912768,
+      0.7124523891480408,
+      0.712452389148041,
+      1.0968097366968763,
+      1.096809736696877,
+      1.9197380969174067,
+      1.9197380969174078,
+      2.6738592511244867
+    ],
+    "orthonormal_residual": 2.9332057694042646e-15,
+    "reconstruction_residual": 4.6752374672319205e-15
+  },
+  "microcausality_free_sector": {
+    "statement": "For local quadratic action with constant index-space mixing, orthogonal diagonalization yields independent local KG modes; Pauli-Jordan commutator vanishes for spacelike separation.",
+    "spacelike_checks": [
+      {
+        "t": 0.1,
+        "r": 0.5,
+        "invariant_t2_minus_r2": -0.24,
+        "theta_timelike": 0.0,
+        "mode_commutator_outside_lightcone_theorem_value": 0.0
+      },
+      {
+        "t": 0.2,
+        "r": 1.0,
+        "invariant_t2_minus_r2": -0.96,
+        "theta_timelike": 0.0,
+        "mode_commutator_outside_lightcone_theorem_value": 0.0
+      },
+      {
+        "t": 0.3,
+        "r": 1.2,
+        "invariant_t2_minus_r2": -1.3499999999999999,
+        "theta_timelike": 0.0,
+        "mode_commutator_outside_lightcone_theorem_value": 0.0
+      }
+    ]
+  },
+  "flags": {
+    "q2117_locality_audit_pass": true,
+    "q2124_branch_resolved_strict_pass": true,
+    "broken_floor_ge_required_shift": true,
+    "ktotal_matrix_symmetric": true,
+    "a_matrix_psd_after_broken_floor": true,
+    "orthonormal_mode_basis_residual_le_1e_10": true,
+    "mode_reconstruction_residual_le_1e_10": true,
+    "free_mode_microcausality_theorem_applicable": true,
+    "spacelike_points_all_invariant_negative": true,
+    "index_space_orthogonal_mixing_preserves_microcausality": true,
+    "full_interacting_microcausality_proof": false,
+    "deterministic_no_scan_no_retune": true
+  },
+  "pass_count": 11,
+  "total_flags": 12,
+  "verdict": "KTOTAL_MICROCAUSALITY_FREE_SECTOR_GATE_PASS_PARTIAL",
+  "required_next_step": "EXTEND_TO_INTERACTING_MICROCAUSALITY_PROOF_WITH_LOOP_LEVEL_CAUSAL_SUPPORT_ANALYSIS"
+}

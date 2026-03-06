@@ -1,0 +1,96 @@
+{
+  "generated_utc": "2026-03-02T16:34:59.080358+00:00",
+  "mapping": [
+    {
+      "kernel_component": "amplitude_alpha_geo",
+      "formula_piece": "alpha_geo",
+      "nadsoliton_characteristic": "4-bit informational capacity / info-geometry identity",
+      "current_value": 2.772588722239781,
+      "status": "postulated_consistency_supported",
+      "evidence_anchor": [
+        "QW-624",
+        "QW-483",
+        "QW-1106..1116"
+      ],
+      "critical_note": "Strong cross-sector consistency; no independent first-principles derivation proven.",
+      "epistemic_score": 0.65
+    },
+    {
+      "kernel_component": "oscillation_frequency",
+      "formula_piece": "omega = pi/4",
+      "nadsoliton_characteristic": "octave resonance periodicity / 8-octave cycle",
+      "current_value": 0.7853981633974483,
+      "status": "geometric_ansatz",
+      "evidence_anchor": [
+        "QW-V46..V50",
+        "QW-611"
+      ],
+      "critical_note": "Motivated by symmetry and resonance pattern; not strictly derived from microscopic dynamics.",
+      "epistemic_score": 0.5
+    },
+    {
+      "kernel_component": "phase_offset",
+      "formula_piece": "phi = pi/6",
+      "nadsoliton_characteristic": "hexagonal lattice/vacuum symmetry",
+      "current_value": 0.5235987755982988,
+      "status": "geometric_ansatz",
+      "evidence_anchor": [
+        "QW-1..50",
+        "QW-47"
+      ],
+      "critical_note": "Geometrically plausible but remains ansatz-level.",
+      "epistemic_score": 0.5
+    },
+    {
+      "kernel_component": "damping_scale",
+      "formula_piece": "beta_tors = 0.01",
+      "nadsoliton_characteristic": "inter-layer torsion damping",
+      "current_value": 0.01,
+      "status": "calibrated_then_frozen",
+      "evidence_anchor": [
+        "QW-48",
+        "QW-480",
+        "QW-557"
+      ],
+      "critical_note": "Important practical freeze point; fundamental origin remains open.",
+      "epistemic_score": 0.45
+    },
+    {
+      "kernel_component": "hyperbolic_denominator",
+      "formula_piece": "1/(1 + beta_tors*d)",
+      "nadsoliton_characteristic": "fractal topology + topological tunneling path summation",
+      "current_value": null,
+      "status": "mechanistic_reduction",
+      "evidence_anchor": [
+        "QW-V46..V50",
+        "Wilson-loop inverse hierarchy analyses"
+      ],
+      "critical_note": "Mechanism plausible and explanatory; formal derivation still heuristic.",
+      "epistemic_score": 0.55
+    },
+    {
+      "kernel_component": "combined_effective_form",
+      "formula_piece": "K(d)=alpha_geo*cos(omega*d+phi)/(1+beta_tors*d)",
+      "nadsoliton_characteristic": "joint effect of info capacity, resonance, torsion, topology",
+      "current_value": null,
+      "status": "effective_model",
+      "evidence_anchor": [
+        "QW-47",
+        "QW-480",
+        "QW-482",
+        "QW-1159",
+        "QW-1660-series"
+      ],
+      "critical_note": "Strongly useful phenomenologically; full closure blocked by flavor and empirical GW inconsistencies.",
+      "epistemic_score": 0.48
+    }
+  ],
+  "kernel_closure_score": 0.5216666666666666,
+  "verdict": "KERNEL_CHARACTERISTICS_NOT_CLOSED",
+  "unresolved_items": [
+    "Microscopic derivation of beta_tors (not only calibration).",
+    "First-principles derivation of (omega, phi) from Nadsoliton dynamics.",
+    "Formal proof of hyperbolic denominator from path integral on fractal manifold.",
+    "Flavor-sector derivation (CKM/PMNS) from the same kernel with shared parameters."
+  ]
+}

@@ -1,9 +1,1 @@
--- FIN Release 5.1: QW-2305 L12 kernel-operator-closure discharge attempt
--- Scope: derive kernel-operator theorem from kernel-spectral-closure theorem.
-
-variable (FINActionComplete RGConstructiveMap RGGlobalWellPosednessAllScales : Prop)
-
-theorem RG_KernelOperatorClosureToWellPosedness_Theorem :
-  (FINActionComplete ∧ RGConstructiveMap) -> RGGlobalWellPosednessAllScales := by
-  exact RG_KernelSpectralClosureToWellPosedness_Theorem
-
+material_dowodowy/lean_fin_dowody/lean/FIN_L12_KERNEL_OPERATOR_CLOSURE_DISCHARGE_ATTEMPT.lean

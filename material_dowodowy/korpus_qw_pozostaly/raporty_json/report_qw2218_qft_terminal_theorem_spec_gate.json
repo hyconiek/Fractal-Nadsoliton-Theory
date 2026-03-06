@@ -1,0 +1,52 @@
+{
+  "generated_utc": "2026-03-05T03:31:26.164159+00:00",
+  "sources": {
+    "q2214": "report_qw2214_qft_constructive_base_scope_gate.json",
+    "q2216": "report_qw2216_qft_unitary_scattering_scope_gate.json",
+    "q2210": "report_qw2210_qft_global_obligation_reduction_gate.json"
+  },
+  "terminal_obligations": {
+    "L5_O1a_O1": {
+      "id": "L5_O1a_O1",
+      "description": "Prove constructive nonperturbative existence/uniqueness with positivity-to-reconstruction theorem for complete FIN action (theorem-level, beyond current strict-scope stack).",
+      "currently_closed": false
+    },
+    "L5_O1b_O1": {
+      "id": "L5_O1b_O1",
+      "description": "Prove unitary S-matrix with asymptotic/scattering completeness theorem for the reconstructed nonperturbative QFT from complete FIN action (without hidden truncation or scope restriction).",
+      "currently_closed": false
+    }
+  },
+  "dependency_dag": {
+    "L5_O1a_O1": [],
+    "L5_O1b_O1": [
+      "L5_O1a_O1"
+    ]
+  },
+  "acceptance_criteria": {
+    "Q1": "Constructive nonperturbative existence/uniqueness theorem for complete FIN action.",
+    "Q2": "Positivity-to-reconstruction theorem (reflection-positivity/Wightman-equivalent) with explicit assumptions.",
+    "Q3": "Unitary S-matrix theorem for reconstructed theory.",
+    "Q4": "Asymptotic/scattering completeness theorem with explicit domain of validity.",
+    "Q5": "Machine-checkable theorem package with reproducible proof object hashes and dependency graph."
+  },
+  "flags": {
+    "q2214_terminal_obligation_present": true,
+    "q2216_terminal_obligation_present": true,
+    "l5_o1a_o1_id_match": true,
+    "l5_o1b_o1_id_match": true,
+    "terminal_obligations_distinct": true,
+    "dependency_order_explicit": true,
+    "acceptance_criteria_complete_ge_5": true,
+    "global_qft_closure_still_not_claimed": true,
+    "l5_terminal_theorem_layer_ready": true,
+    "l5_o1a_o1_closed": false,
+    "l5_o1b_o1_closed": false,
+    "l5_full_closed": false,
+    "no_overclaim_boundary_explicit": true
+  },
+  "pass_count": 10,
+  "total_flags": 13,
+  "verdict": "QFT_TERMINAL_THEOREM_SPEC_GATE_PASS_PARTIAL_TERMINAL_LAYER_READY",
+  "required_next_step": "PROVE_AND_ATTACH_MACHINE_CHECKED_THEOREM_PACKAGES_FOR_L5_O1A_O1_AND_L5_O1B_O1"
+}
