@@ -793,6 +793,7 @@ Current status:
 - `H21` completed as the minimal value-export packet for `tr(A_1)`, isolating the first scalar export target while keeping explicit that no value has been exported or evaluated,
 - `H22` completed as the actual-value audit for `trace_A_1`, confirming that the repository now has semantics and a packet-ready target but still no populated value witness anywhere in the current state,
 - `H23` completed as the conditional populated witness schema for `trace_A_1`, reducing the next missing step to the absence of actual inputs `a_1` and `d_1`,
+- `H24` completed as the minimal source-value packet for `a_1`, isolating the first missing upstream coefficient without claiming any actual exported or evaluated value,
 - this reduces the next step to proving or refuting an explicit equivalence map from old kernel feedback to the new selector-facing operator lane, while keeping explicit that no such identification currently exists,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

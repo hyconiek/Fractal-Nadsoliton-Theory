@@ -8231,3 +8231,30 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - sprobowac zbudowac minimalny source packet dla `a_1` lub `d_1`,
    - albo uczciwie potwierdzic, ze populated witness pozostaje pusty z powodu braku actual coefficient inputs.
+
+
+## 511. H24 a_1 source value packet (2026-03-06)
+
+1. Cel:
+   - odseparowac pierwszy upstream input dla `trace_A_1`, czyli `a_1`.
+2. Wynik:
+   - zdefiniowano minimalny source-value packet dla `a_1 := <c_1, A_1 c_1>`,
+   - nadal brak jakiejkolwiek actual exported lub evaluated wartosci `a_1`.
+3. Frontier po kroku:
+   - `H24_B1 := a packet-ready source-value object for a_1 now exists, but no actual exported or evaluated value for a_1 is present yet`,
+   - `H23_B1`,
+   - `H22_B1`,
+   - `H21_B1`,
+   - `H20_B1`,
+   - `H15_B1`,
+   - `T12_B1`,
+   - `T2_B1`,
+   - `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/H24_A1_SOURCE_VALUE_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/h24_a1_source_value_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h24_a1_source_value_packet.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h24_a1_source_value_packet_summary.json`.
+5. Nastepny poprawny ruch:
+   - sprobowac wykonac actual value audit dla `a_1`,
+   - albo uczciwie potwierdzic, ze nawet pierwszy upstream coefficient nie ma jeszcze zadnego value witness.

@@ -1,6 +1,6 @@
 # Fundamental Action Reconstruction
 
-Status: `PROGRAM_PHASE1_COMPLETE_C55_T1_T12_PLUS_N1_N2_N3_D1_AX1_AX2_AX3_AX4_AX5_AX6_AX7_AX8_AND_H1_H2_H3_H4_H5_H6_H7_H8_H9_H10_H11_H12_H13_H14_H15_H16_H17_H18_H19_H20_H21_H22_H23_NO_FALSE_PASS`
+Status: `PROGRAM_PHASE1_COMPLETE_C55_T1_T12_PLUS_N1_N2_N3_D1_AX1_AX2_AX3_AX4_AX5_AX6_AX7_AX8_AND_H1_H2_H3_H4_H5_H6_H7_H8_H9_H10_H11_H12_H13_H14_H15_H16_H17_H18_H19_H20_H21_H22_H23_H24_NO_FALSE_PASS`
 As of: `2026-03-06`
 
 Ten katalog otwiera rownolegly tor konstrukcyjny poza drabinka `L5/L12`.
@@ -360,6 +360,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `H21`: wykonane jako minimalny value-export packet dla `tr(A_1)`; od teraz problem redukuje sie juz nie do definicji tego pierwszego skalaru, lecz do braku jego rzeczywistej wartosci.
 - `H22`: wykonane jako audit actual value witness dla `trace_A_1`; od teraz problem redukuje sie juz nie do packet-ready targetu, lecz do twardego braku jakiegokolwiek populated export lub evaluated value witness dla tego pierwszego skalaru.
 - `H23`: wykonane jako conditional populated witness schema dla `trace_A_1`; od teraz problem redukuje sie juz nie do ksztaltu populated witnessa, lecz do braku actual inputs `a_1` i `d_1`.
+- `H24`: wykonane jako minimalny source-value packet dla `a_1`; od teraz problem redukuje sie juz nie do niejasnosci pierwszego upstream inputu, lecz do braku jego rzeczywistej wartosci.
 
 ## Twarde ograniczenia rygoru
 
@@ -616,6 +617,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `H21_TRACE_VALUE_EXPORT_PACKET.md`
 - `H22_TRACE_VALUE_ACTUAL_EXPORT_AUDIT.md`
 - `H23_TRACE_VALUE_CONDITIONAL_POPULATED_WITNESS_SCHEMA.md`
+- `H24_A1_SOURCE_VALUE_PACKET.md`
 - `C43_FILENAME_PATH_CONVENTION_AUDIT.md`
 - `a1_minimal_action_ansatz.py`
 - `a2_supersoliton_matching.py`
