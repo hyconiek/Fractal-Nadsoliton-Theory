@@ -715,5 +715,7 @@ Current status:
 - this moves the theory forward only by isolating a packet-ready conditional bridge theorem spec from `sigma_int_candidate` to the residual orientation datum, while the target slot and equivalence/export map remain absent,
 - `T3` completed as the third theorem-lane step,
 - this moves the theory forward only by performing the first real discharge attempt for `T1` and reducing its failure to a single meta-level blocker: the absence of a strict-core export-completeness bridge from the current audit chain to a theorem-level non-availability result,
+- `T4` completed as the fourth theorem-lane step,
+- this moves the theory forward only by isolating a packet-ready theorem spec for the missing strict-core export-completeness principle required by `T3`, while the principle itself remains undischarge,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

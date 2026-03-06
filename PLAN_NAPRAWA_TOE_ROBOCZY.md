@@ -7096,3 +7096,29 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - zapisac theorem-spec dla brakujacego export-completeness principle,
    - albo przerwac theorem-lane `T1` i wracac do konstrukcji brakujacych strict-core objectow na lane `T2`.
+
+## 467. T4 theorem-spec dla strict-core export-completeness principle wykonane (2026-03-06)
+
+1. Cel:
+   - zapisac packet-ready theorem spec dla brakujacego meta-kroku
+     wskazanego przez `T3`,
+   - tj. zasady, ktora podnosilaby obecny audit chain do theorem-level
+     no-internal-theta-source result.
+2. Wynik:
+   - theorem spec istnieje,
+   - actual discharge nadal nie istnieje.
+3. Frontier po kroku:
+   - aktywny theorem-lane blocker brzmi:
+     `T4_B1 := the export-completeness principle is specified but not discharged for the current strict-core selector track`,
+   - niezaleznie pozostaje:
+     `T2_B1`,
+   - oraz:
+     `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/T4_STRICT_CORE_EXPORT_COMPLETENESS_PRINCIPLE_THEOREM_SPEC.md`,
+   - dodano `fundamental_action_reconstruction/t4_strict_core_export_completeness_principle_theorem_spec.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/t4_strict_core_export_completeness_principle_theorem_spec_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - wykonac pierwszy discharge attempt dla `T4`,
+   - albo przerwac theorem-lane `T1/T4` i wracac do brakujacych strict-core objectow na lane `T2`.

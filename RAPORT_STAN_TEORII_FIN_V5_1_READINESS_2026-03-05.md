@@ -1655,3 +1655,14 @@ Co nadal pozostaje jawnie otwarte po `T3`:
 - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
 - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
 - nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `T4`:
+- theorem-lane ma juz packet-ready theorem spec dla brakujacej zasady
+  export-completeness dla obecnego selector track,
+- meta-level blocker z `T3` zostaje podniesiony do jawnego theorem-spec targetu.
+
+Co nadal pozostaje jawnie otwarte po `T4`:
+- `T4_B1 := the export-completeness principle is specified but not discharged for the current strict-core selector track`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
+- nadal brak theorem-level/full-closure PASS.
