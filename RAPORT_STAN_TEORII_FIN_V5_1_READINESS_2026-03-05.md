@@ -719,6 +719,8 @@ Status nowego toru:
 - `C9` pokazuje, ze compression blocker redukuje sie dalej do dwoch brakujacych eksportow: `QW-2186 host -> Psi-sector quadratic carrier` oraz `Psi-sector quadratic carrier -> candidate orientation slice`,
 - `C10` wykonane jako dziesiaty krok trzeciego mikrocyklu,
 - `C10` pokazuje, ze pierwszy z tych dwoch blockerow redukuje sie dalej do braku jawnego coefficient-level lub block-level matchingu z konkretnym Psi-sector quadratic Hessian blockiem,
+- `C11` wykonane jako jedenasty krok trzeciego mikrocyklu,
+- `C11` pokazuje, ze ten block-level matcher redukuje sie dalej do braku jawnego extraction/export package dla konkretnego `Psi-sector quadratic block`,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -1025,6 +1027,16 @@ Co realnie zostalo dodane przez `C10`:
 - dzieki temu aktualny frontier zawęża sie do:
   - `C10_B1 := no_explicit_coefficient_level_or_block_level_identification_between_the_qw2186_certified_host_operator_and_a_concrete_Psi_sector_quadratic_Hessian_block_inside_the_canonical_13_field_carrier`,
 - nadal brak discharge `C9_B1`,
+- nadal brak discharge `C9_B2`,
+- nadal brak axiom-free uniqueness PASS,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C11`:
+- `QW-2164` i `QW-2166` daja juz canonical Hessian carrier z kernel-mixing entries w `Psi` sektorze,
+- dzieki temu konkretny `Psi-sector quadratic block` nie jest juz obiektem hipotetycznym, tylko packet-ready schema wewnatrz exhaustive canonical Hessian,
+- aktualny frontier zawęża sie do:
+  - `C11_B1 := no_explicit_extraction_and_coefficient_export_of_a_concrete_Psi_sector_quadratic_Hessian_block_from_the_exhaustive_canonical_13_field_Hessian_for_matching_against_qw2186`,
+- nadal brak discharge `C10_B1`,
 - nadal brak discharge `C9_B2`,
 - nadal brak axiom-free uniqueness PASS,
 - nadal brak theorem-level/full-closure PASS.

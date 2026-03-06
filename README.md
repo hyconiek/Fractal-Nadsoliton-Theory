@@ -618,5 +618,7 @@ Current status:
 - this moves the theory forward only by reducing that compression problem further to two missing exports: host operator to Psi-sector quadratic carrier, and quadratic carrier to the candidate orientation slice,
 - `C10` completed as the tenth step of the next micro-cycle,
 - this moves the theory forward only by reducing the host-identification problem to a missing concrete coefficient-level or block-level match to a Psi-sector quadratic Hessian block,
+- `C11` completed as the eleventh step of the next micro-cycle,
+- this moves the theory forward only by reducing that block-matching problem to a missing explicit extraction and coefficient export package for a concrete Psi-sector quadratic block,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

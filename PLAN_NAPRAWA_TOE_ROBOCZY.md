@@ -5811,3 +5811,30 @@ Po tej rundzie:
 6. Nastepny poprawny ruch:
    - przejsc do `C11` i sprobowac wydobyc packet-ready konkretny `Psi-sector quadratic block`,
    - albo zamrozic frontier i zacommitowac.
+
+## 419. C11 Psi-sector block extraction audit wykonane (2026-03-06)
+1. Zakres:
+   - podjeto probe `C10_B1`,
+   - strict-admissible support: `QW-2164`, `QW-2166`, `QW-2180`, `QW-2186`, `A3`, `C10`, `A10`.
+2. Co zostalo realnie ustalone:
+   - canonical Hessian carrier istnieje,
+   - exhaustive canonical Hessian zawiera kernel-mixing entries w `Psi` sektorze,
+   - zatem konkretny `Psi-sector quadratic block` istnieje juz jako schema wewnatrz canonical Hessian carrier,
+   - aktualny brak dotyczy juz nie istnienia blocku, lecz jego jawnego extraction/export package.
+3. Co pozostaje zablokowane:
+   - brak jawnego wyodrebnienia konkretnego `Psi-sector quadratic block`,
+   - brak coefficient-level eksportu tego bloku do matchingu z `QW-2186`,
+   - brak discharge `C10_B1`,
+   - brak discharge `C9_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C11_PSI_SECTOR_BLOCK_EXTRACTION_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/c11_psi_sector_block_extraction_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c11_psi_sector_block_extraction_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Twardy rygor:
+   - brak `C10_B1` PASS,
+   - brak theorem-level PASS,
+   - brak full-closure PASS.
+6. Nastepny poprawny ruch:
+   - przejsc do `C12` i sprobowac minimalnego extraction packet,
+   - albo zamrozic frontier i zacommitowac.
