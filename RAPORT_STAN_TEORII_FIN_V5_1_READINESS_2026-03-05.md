@@ -785,6 +785,8 @@ Status nowego toru:
 - `C42` pokazuje, ze schema artifact pozostaje packet-ready, ale nadal brak dedykowanego persisted template albo file-level carriera dla tej instancji,
 - `C43` wykonane jako czterdziesty trzeci krok trzeciego mikrocyklu,
 - `C43` pokazuje, ze minimalna konwencja filename/path dla takiego carrieru jest juz packet-ready, ale nadal brak samego utworzonego carrier file,
+- `C44` wykonane jako czterdziesty czwarty krok trzeciego mikrocyklu,
+- `C44` pokazuje, ze minimalna tresc template'u dla takiego carrieru jest juz packet-ready, ale nadal brak persisted file zawierajacego te tresc,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -1475,6 +1477,16 @@ Co realnie zostalo dodane przez `C43`:
 - minimalna konwencja filename/path dla dedykowanego carrieru jest juz packet-ready,
 - pierwszy residualny blocker zawęża sie dalej do:
   - `C43_B1 := no_explicit_created_file_instance_following_the_now_packet_ready_minimal_filename_path_convention_for_a_dedicated_acceptance_artifact_carrier_identifying_sigma_int_candidate_with_the_residual_orientation_datum`,
+- drugi residualny blocker pozostaje:
+  - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
+- trzeci residualny blocker pozostaje:
+  - `C26_B2 := no_explicit_basis_level_embedding_or_extraction_of_the_candidate_two_dimensional_orientation_slice_inside_that_reduced_plane`,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C44`:
+- minimalna tresc template'u dla dedykowanego carrieru jest juz packet-ready,
+- pierwszy residualny blocker zawęża sie dalej do:
+  - `C44_B1 := no_explicit_created_persisted_file_instance_populated_with_the_now_packet_ready_minimal_template_content_and_filename_path_convention_for_identifying_sigma_int_candidate_with_the_residual_orientation_datum`,
 - drugi residualny blocker pozostaje:
   - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
 - trzeci residualny blocker pozostaje:

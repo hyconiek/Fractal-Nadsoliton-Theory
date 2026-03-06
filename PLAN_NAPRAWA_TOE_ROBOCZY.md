@@ -6702,3 +6702,37 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - przejsc do `C44` i sprawdzic, czy strict core ma juz packet-ready
      minimalny template content dla takiego carrieru.
+
+## 452. C44 minimal template content audit wykonane (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy strict core ma juz packet-ready minimalna tresc template'u
+     dla acceptance artifact carrieru identyfikacji
+     `sigma_int_candidate <-> residual orientation datum`,
+     nawet jesli sam plik carrieru jeszcze nie istnieje.
+2. Wynik:
+   - `C40` i `C41` razem daja juz komplet minimalnych pol:
+     `object`,
+     `target`,
+     `support_lane`,
+     `current_absence`,
+     `forbidden_claims`,
+     `residual_blockers`,
+   - `C43` daje juz packet-ready konwencje filename/path,
+   - najwezsza uczciwa minimalna tresc template'u jest juz packet-ready,
+   - sam persisted carrier file nadal nie istnieje.
+3. Redukcja frontu:
+   - aktywny pierwszy residualny blocker zawęża sie do:
+     `C44_B1 := no_explicit_created_persisted_file_instance_populated_with_the_now_packet_ready_minimal_template_content_and_filename_path_convention_for_identifying_sigma_int_candidate_with_the_residual_orientation_datum`,
+   - pozostaja tez:
+     `C32_B2`,
+     `C26_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C44_MINIMAL_TEMPLATE_CONTENT_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/c44_minimal_template_content_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c44_minimal_template_content_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `C45` i sprawdzic, czy wolno juz utworzyc minimalny persisted
+     template file jako non-destructive carrier instance, czy trzeba utrzymac
+     blocker na warstwie `file-not-created`.

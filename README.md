@@ -376,6 +376,7 @@ Canonical gap list:
 - [`TOE_FINAL_DOCUMENTATION.pdf`](TOE_FINAL_DOCUMENTATION.pdf)
 - [`RELEASE_5.md`](RELEASE_5.md)
 - [`RELEASE_5_TEXTBOOK_EN_PL.md`](RELEASE_5_TEXTBOOK_EN_PL.md)
+- [`RELEASE_5_1_TEXTBOOK_EN_PL.md`](RELEASE_5_1_TEXTBOOK_EN_PL.md)
 - [`INDEPENDENT_CHECK_GUIDE_EN_PL.md`](INDEPENDENT_CHECK_GUIDE_EN_PL.md)
 - [`DATA_SOURCES_EXTERNAL_DOWNLOADS.md`](DATA_SOURCES_EXTERNAL_DOWNLOADS.md)
 
@@ -684,5 +685,7 @@ Current status:
 - this moves the theory forward only by making explicit that even a dedicated persisted template or file-level carrier for that artifact instance is still absent,
 - `C43` completed as the forty-third step of the next micro-cycle,
 - this moves the theory forward only by making explicit that a minimal filename/path convention for such a carrier is already packet-ready while the carrier file itself is still absent,
+- `C44` completed as the forty-fourth step of the next micro-cycle,
+- this moves the theory forward only by making explicit that a minimal template content for such a carrier is already packet-ready while the persisted file itself is still absent,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.
