@@ -729,6 +729,8 @@ Status nowego toru:
 - `C14` pokazuje, ze control transport `mode basis -> Psi basis` jest juz jawny, a frontier redukuje sie dalej do braku fizycznej kanonizacji tego transportu oraz braku assembled submatrix po jego przyjeciu,
 - `C15` wykonane jako pietnasty krok trzeciego mikrocyklu,
 - `C15` pokazuje, ze control-only formula `M_control = T_control^T H_PsiPsi T_control` jest juz jawna, a frontier redukuje sie dalej do braku coefficient-filled canonical `H_PsiPsi` oraz braku restriction do candidate orientation slice,
+- `C16` wykonane jako szesnasty krok trzeciego mikrocyklu,
+- `C16` pokazuje, ze jawne coefficient-class rows dla `eta0` i `eta6` juz istnieja, a frontier redukuje sie dalej do braku exhaustive `12 x 12` coefficient table oraz braku restriction do candidate orientation slice,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -1098,4 +1100,18 @@ Co realnie zostalo dodane przez `C15`:
 - nadal brak discharge `C14_B2`,
 - nadal brak discharge `C9_B2`,
 - nadal brak axiom-free uniqueness PASS,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C16`:
+- `QW-2164` i `QW-2166` daja juz reprezentatywne coefficient-class rows dla `eta0` i `eta6`,
+- jawne klasy obejmuja:
+  - off-diagonal `(K_i_j + K_j_i)/2`,
+  - diagonal self/vacuum-shift/Yukawa/mass terms,
+  - kinetic identity term,
+- coefficient-filling blocker nie dotyczy juz braku jakiegokolwiek row-level coefficient schema,
+- aktualny frontier zawęża sie do:
+  - `C16_B1 := no_exhaustive_index_complete_coefficient_table_for_the_canonical_12x12_Psi_x_Psi_block_H_PsiPsi`,
+  - `C16_B2 := no_explicit_restriction_from_the_control_pullback_orbits_to_the_candidate_orientation_slice`,
+- nadal brak discharge `C15_B1`,
+- nadal brak discharge `C15_B2`,
 - nadal brak theorem-level/full-closure PASS.

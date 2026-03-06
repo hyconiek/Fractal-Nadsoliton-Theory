@@ -1,6 +1,6 @@
 # Fundamental Action Reconstruction
 
-Status: `PROGRAM_PHASE1_COMPLETE_C15_CONTROL_ONLY_PULLBACK_PACKET_REDUCED`
+Status: `PROGRAM_PHASE1_COMPLETE_C16_MINIMAL_COEFFICIENT_CLASS_TABLE_REDUCED`
 As of: `2026-03-06`
 
 Ten katalog otwiera rownolegly tor konstrukcyjny poza drabinka `L5/L12`.
@@ -112,6 +112,8 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
    - sprawdzic, czy strict core ma juz jawny control transport `mode basis -> Psi basis`, nawet jesli brak jeszcze fizycznej kanonizacji tego mostu.
 23. `C15`: control-only pullback submatrix packet
    - sprawdzic, czy strict core ma juz formalny packet assembly `M_control = T_control^T H_PsiPsi T_control`, nawet jesli brak jeszcze coefficient-filled canonical `H_PsiPsi`.
+24. `C16`: minimal Psi-Hessian coefficient-class table
+   - sprawdzic, czy strict core ma juz reprezentatywne rows coefficient-class dla canonical `H_PsiPsi`, nawet jesli brak jeszcze exhaustive `12 x 12` coefficient table.
 
 ## Aktualny status
 
@@ -148,6 +150,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `C13`: wykonane jako trzynasty krok trzeciego mikrocyklu; index-set blocker zostaje zawężony dalej do braku transportu z control mode basis do canonical `Psi` basis oraz braku assembled submatrix po tym transporcie.
 - `C14`: wykonane jako czternasty krok trzeciego mikrocyklu; transport blocker zostaje zawężony dalej do braku fizycznej kanonizacji control transportu i braku assembled submatrix po jego przyjeciu.
 - `C15`: wykonane jako pietnasty krok trzeciego mikrocyklu; assembled-submatrix blocker zostaje zawężony dalej do braku coefficient-filled canonical `H_PsiPsi` dla control-only pullback oraz braku restriction do orientation slice.
+- `C16`: wykonane jako szesnasty krok trzeciego mikrocyklu; coefficient-filling blocker zostaje zawężony dalej do braku exhaustive `12 x 12` coefficient table oraz braku restriction do orientation slice.
 
 ## Twarde ograniczenia rygoru
 
@@ -183,6 +186,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - brak claimu, ze `C13` daje juz canonical `Psi` index-set albo rozladowuje `C12_B1`.
 - brak claimu, ze `C14` daje juz fizycznie kanoniczny transport albo rozladowuje `C13_B1`.
 - brak claimu, ze `C15` daje juz coefficient-filled `Psi x Psi` submatrix albo rozladowuje `C14_B2`.
+- brak claimu, ze `C16` daje juz exhaustive `12 x 12` coefficient table albo rozladowuje `C15_B1`.
 
 ## Zasada korzystania z poprzednich badan
 
@@ -232,6 +236,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `C13_MODE_BASIS_CONTROL_INDEX_SET_AUDIT.md`
 - `C14_CONTROL_MODE_TO_PSI_TRANSPORT_SCHEMA.md`
 - `C15_CONTROL_ONLY_PULLBACK_SUBMATRIX_PACKET.md`
+- `C16_MINIMAL_PSI_HESSIAN_COEFFICIENT_CLASS_TABLE.md`
 - `a1_minimal_action_ansatz.py`
 - `a2_supersoliton_matching.py`
 - `a3_kernel_analysis.py`
@@ -265,6 +270,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `c13_mode_basis_control_index_set_audit.py`
 - `c14_control_mode_to_psi_transport_schema.py`
 - `c15_control_only_pullback_submatrix_packet.py`
+- `c16_minimal_psi_hessian_coefficient_class_table.py`
 - `generated/a1_minimal_action_ansatz_summary.json`
 - `generated/a2_supersoliton_matching_summary.json`
 - `generated/a3_kernel_analysis_summary.json`

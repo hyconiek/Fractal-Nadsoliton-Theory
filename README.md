@@ -628,5 +628,7 @@ Current status:
 - this moves the theory forward only by reducing the transport problem to a missing strict physical justification of the control transport schema, plus the still-missing assembled submatrix,
 - `C15` completed as the fifteenth step of the next micro-cycle,
 - this moves the theory forward only by reducing the assembled-submatrix problem to a missing coefficient-filled canonical Psi x Psi block for the control-only pullback, plus the still-missing restriction to the candidate orientation slice,
+- `C16` completed as the sixteenth step of the next micro-cycle,
+- this moves the theory forward only by reducing the coefficient-filling problem to a missing exhaustive 12x12 canonical Psi x Psi coefficient table, plus the still-missing restriction to the candidate orientation slice,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

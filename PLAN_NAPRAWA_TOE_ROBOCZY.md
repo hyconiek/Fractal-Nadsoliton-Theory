@@ -5947,3 +5947,30 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - przejsc do `C16` i sprobowac minimalnego coefficient-class table dla canonical `H_PsiPsi`,
    - albo jawnie potwierdzic, ze strict core nie eksportuje jeszcze coefficient filling.
+
+## 424. C16 minimal Psi-Hessian coefficient-class table wykonane (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy strict core ma juz reprezentatywna tabele klas wspolczynnikow
+     dla canonical `H_PsiPsi`, bez udawania exhaustive `12 x 12` exportu.
+2. Wynik:
+   - jawne coefficient-class rows istnieja juz dla `eta0` i `eta6`,
+   - klasy obejmuja:
+     - off-diagonal `K`-mixing,
+     - diagonal self/vacuum-shift/Yukawa/mass terms,
+     - kinetic identity term,
+   - aktualny frontier zawęza sie do:
+     - braku exhaustive `12 x 12` coefficient table,
+     - braku restriction do candidate orientation slice.
+3. Twarde granice:
+   - brak `C15_B1` PASS,
+   - brak theorem-level PASS,
+   - brak full-closure PASS.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C16_MINIMAL_PSI_HESSIAN_COEFFICIENT_CLASS_TABLE.md`,
+   - dodano `fundamental_action_reconstruction/c16_minimal_psi_hessian_coefficient_class_table.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c16_minimal_psi_hessian_coefficient_class_table_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `C17` i sprawdzic, czy strict core daje finite index-complete stencil dla wszystkich `12` rows,
+   - albo jawnie potwierdzic, ze exhaustive coefficient export nadal nie jest obecny.
