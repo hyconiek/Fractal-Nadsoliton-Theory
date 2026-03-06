@@ -1,11 +1,11 @@
 {
-  "generated_utc": "2026-03-05T04:49:52.645923+00:00",
+  "generated_utc": "2026-03-05T05:29:00.983257+00:00",
   "sources": {
     "q2248": "report_qw2248_qft_export_axiomatic_dependency_gate.json",
     "q2252": "report_qw2252_qft_export_obligation_execution_status_gate.json"
   },
   "target_expr": "(FINActionComplete ∧ ConstructiveNonPerturbativeScheme) -> PositivityToReconstruction",
-  "n_theorem_instances": 6,
+  "n_theorem_instances": 7,
   "theorem_instances": [
     {
       "file": "FIN_L5_DAX1_NON_AXIOMATIC_PROVIDER_ATTEMPT.lean",
@@ -37,6 +37,16 @@
     },
     {
       "file": "FIN_L5_O1C_PROVIDER_LAYER.lean",
+      "theorem": "QFT_C1_1_DERIVED",
+      "refs": [
+        "PositivityToReconstruction_DerivedOrPending"
+      ],
+      "blockers": [
+        "PositivityToReconstruction_DerivedOrPending"
+      ]
+    },
+    {
+      "file": "FIN_L5_O1C_THEOREM_DISCHARGE_ATTEMPT.lean",
       "theorem": "QFT_C1_1_DERIVED",
       "refs": [
         "PositivityToReconstruction_DerivedOrPending"

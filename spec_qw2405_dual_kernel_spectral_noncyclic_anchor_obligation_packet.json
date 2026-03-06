@@ -1,0 +1,32 @@
+{
+  "generated_utc": "2026-03-05T10:58:11.861695+00:00",
+  "source": "report_qw2404_dual_kernel_spectral_chain_reuse_admission_gate.json",
+  "obligations": [
+    {
+      "id": "L12_KERNEL_SPECTRAL_NONCYCLIC_ANCHOR_O1",
+      "branch": "L12",
+      "anchor_symbol": "RG_KernelSpectralClosureToWellPosedness_Theorem",
+      "acceptance_rules": [
+        "proof_term must not be single-symbol exact to historical kernel-spectral chain step",
+        "proof must be machine-checkable without `axiom` and without `_DerivedOrPending`",
+        "dependency graph delta must not re-enter confirmed identity-cycle frontier"
+      ]
+    },
+    {
+      "id": "L5_KERNEL_SPECTRAL_NONCYCLIC_ANCHOR_O1",
+      "branch": "L5",
+      "anchor_symbol": "QFT_KernelSpectralClosureToPositivity_Theorem",
+      "acceptance_rules": [
+        "proof_term must not be single-symbol exact to historical kernel-spectral chain step",
+        "proof must be machine-checkable without `axiom` and without `_DerivedOrPending`",
+        "dependency graph delta must not re-enter confirmed identity-cycle frontier"
+      ]
+    }
+  ],
+  "scope_boundary": {
+    "packet_ready": true,
+    "execution_completed": false,
+    "all_strict_obligations_fully_closed": false,
+    "overclaim_forbidden": true
+  }
+}

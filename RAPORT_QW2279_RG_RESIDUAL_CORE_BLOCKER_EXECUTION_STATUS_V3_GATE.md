@@ -1,0 +1,8 @@
+# RAPORT QW-2279: RG RESIDUAL CORE BLOCKER EXECUTION STATUS V3 GATE
+
+- Date UTC: 2026-03-05T05:56:50.049715+00:00
+- Verdict: **RG_RESIDUAL_CORE_BLOCKER_EXECUTION_STATUS_V3_GATE_PASS_PARTIAL_PENDING_MACHINE_CHECKABLE_NON_AXIOMATIC**
+- pass_count: `3/7`
+- strict lexical candidates: `0`
+- machine_check_exit_code: `1`
+- obligations satisfied (strict v3): `0/1`

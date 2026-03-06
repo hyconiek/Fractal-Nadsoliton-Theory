@@ -4691,3 +4691,47 @@ Po tej rundzie:
    - kolejny krok pozostaje niezmienny: niezalezna replikacja/audyt multiteam poza tym srodowiskiem.
 5. Required next step:
    - `RUN_TRULY_INDEPENDENT_MULTITEAM_CONFIRMATORY_PACKAGE`.
+
+## 371. Operator frontier po QW-2499: plan fizyka teoretycznego
+1. Stan aktualny:
+   - lokalny chain strict provider jest wykonany do `QW-2499`,
+   - aktualny jawny blocker frontier to:
+     - `RG_KernelIdentityConservationToWellPosedness_Theorem`,
+     - `QFT_KernelIdentityConservationToPositivity_Theorem`,
+   - `all_strict_obligations_fully_closed=false` pozostaje warunkiem twardym.
+2. Co zrobiłby fizyk teoretyczny:
+   - zatrzymałby iterację na aktualnym froncie `identity-conservation`,
+   - rozpisałby minimalne lematy operatorowe zamiast powtarzac ogolny packet ladder.
+3. Minimalny pakiet lematow dla kolejnej warstwy:
+   - conservation-domain-invariance,
+   - self-adjointness/positivity-preservation,
+   - conservation-coercive-lower-bound,
+   - bounded-conservation-stability,
+   - bridge theorem: conservation lemmas imply well-posedness/positivity.
+4. Twarda kolejnosc wykonawcza:
+   - `EXTRACT_DUAL_KERNEL_IDENTITY_CONSERVATION_PROVIDER_MINIMAL_BLOCKER_CUT`,
+   - `BUILD_DUAL_KERNEL_IDENTITY_CONSERVATION_PROVIDER_THEOREM_SPEC`,
+   - `RUN_DUAL_KERNEL_IDENTITY_CONSERVATION_PROVIDER_COUNTEREXAMPLE_SEARCH`,
+   - `ATTEMPT_NON_AXIOMATIC_DUAL_KERNEL_IDENTITY_CONSERVATION_PROVIDER_DERIVATION`,
+   - `RUN_STRICT_ANTI_FALSE_PASS_IDENTITY_COMPATIBILITY_FRONTIER_AUDIT`.
+5. Reguly rygoru:
+   - brak theorem-level/full-closure PASS bez rozladowania wszystkich lematow i machine-check execution,
+   - bounded counterexample search sluzy falsyfikacji sciezek, nie proof-level closure,
+   - kazda bramka ma utrzymac `all_strict_obligations_fully_closed=false`, dopoki frontier nie zostanie realnie rozladowany.
+
+## 372. Aktualizacja frontier po QW-2504
+1. Stan aktualny:
+   - aktualny jawny blocker frontier to:
+     - `RG_KernelIdentityCompatibilityToWellPosedness_Theorem`,
+     - `QFT_KernelIdentityCompatibilityToPositivity_Theorem`,
+   - warstwa `identity-conservation` zostala przepracowana do anti-overclaim auditu bez theorem-level PASS.
+2. Kolejny pakiet w rygorze strict:
+   - `EXTRACT_DUAL_KERNEL_IDENTITY_COMPATIBILITY_PROVIDER_MINIMAL_BLOCKER_CUT`,
+   - `BUILD_DUAL_KERNEL_IDENTITY_COMPATIBILITY_PROVIDER_THEOREM_SPEC`,
+   - `RUN_DUAL_KERNEL_IDENTITY_COMPATIBILITY_PROVIDER_COUNTEREXAMPLE_SEARCH`,
+   - `ATTEMPT_NON_AXIOMATIC_DUAL_KERNEL_IDENTITY_COMPATIBILITY_PROVIDER_DERIVATION`,
+   - `RUN_STRICT_ANTI_FALSE_PASS_IDENTITY_INTEGRITY_FRONTIER_AUDIT`.
+3. Uzasadnienie merytoryczne:
+   - dopiero po rozpisaniu compatibility lemmas i bounded falsification search wolno wykonywac kolejny machine-check attempt,
+   - brak strict counterexample w bounded domain nie jest dowodem, ale jest potrzebnym filtrem przed dalsza eskalacja claimow,
+   - `all_strict_obligations_fully_closed=false` pozostaje warunkiem publikacyjnym do czasu rozladowania aktualnego frontu.

@@ -1,0 +1,8 @@
+# RAPORT QW-2277: RG RESIDUAL STRICT NON-AXIOMATIC PROVIDER CONSTRUCTION GATE
+
+- Date UTC: 2026-03-05T05:56:45.010878+00:00
+- Verdict: **RG_RESIDUAL_STRICT_NON_AXIOMATIC_PROVIDER_CONSTRUCTION_GATE_PASS_PARTIAL_OBSTRUCTION_CONFIRMED**
+- pass_count: `10/13`
+- machine_check_exit_code: `1`
+- n_unknown_identifiers: `1`
+- unknown_identifiers: `['RG_CanonicalAction_to_WellPosedness_EXPORT']`

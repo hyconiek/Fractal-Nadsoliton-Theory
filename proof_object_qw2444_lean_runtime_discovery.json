@@ -1,0 +1,64 @@
+{
+  "generated_utc": "2026-03-05T13:32:40.219291+00:00",
+  "candidates": [
+    "/usr/bin/lean",
+    "/home/krzysiek/Pobrane/TOE/edison/.elan/bin/lean",
+    "/home/krzysiek/.elan/bin/lean",
+    "/usr/local/bin/lean",
+    "/opt/lean/bin/lean"
+  ],
+  "probes": [
+    {
+      "path": "/usr/bin/lean",
+      "exists": true,
+      "executable": true,
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "error: could not create home directory: '/home/krzysiek/.elan'\ninfo: caused by: Permission denied (os error 13)",
+      "ok": false
+    },
+    {
+      "path": "/home/krzysiek/Pobrane/TOE/edison/.elan/bin/lean",
+      "exists": true,
+      "executable": true,
+      "exit_code": 0,
+      "stdout": "Lean (version 4.28.0, x86_64-unknown-linux-gnu, commit 7e01a1bf5c70fc6167d49c345d3bf80596e9a79b, Release)",
+      "stderr": "warning: failed to query latest release, using existing version 'leanprover/lean4:v4.28.0'",
+      "ok": true
+    },
+    {
+      "path": "/home/krzysiek/.elan/bin/lean",
+      "exists": false,
+      "executable": false,
+      "exit_code": 127,
+      "stdout": "",
+      "stderr": "[Errno 2] No such file or directory: '/home/krzysiek/.elan/bin/lean'",
+      "ok": false
+    },
+    {
+      "path": "/usr/local/bin/lean",
+      "exists": false,
+      "executable": false,
+      "exit_code": 127,
+      "stdout": "",
+      "stderr": "[Errno 2] No such file or directory: '/usr/local/bin/lean'",
+      "ok": false
+    },
+    {
+      "path": "/opt/lean/bin/lean",
+      "exists": false,
+      "executable": false,
+      "exit_code": 127,
+      "stdout": "",
+      "stderr": "[Errno 2] No such file or directory: '/opt/lean/bin/lean'",
+      "ok": false
+    }
+  ],
+  "selected_runtime": "/home/krzysiek/Pobrane/TOE/edison/.elan/bin/lean",
+  "scope_boundary": {
+    "environment_diagnostics_only": true,
+    "theorem_discharge_completed": false,
+    "all_strict_obligations_fully_closed": false,
+    "overclaim_forbidden": true
+  }
+}

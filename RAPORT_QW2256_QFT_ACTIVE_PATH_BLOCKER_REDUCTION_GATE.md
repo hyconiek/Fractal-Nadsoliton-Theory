@@ -1,0 +1,6 @@
+# RAPORT QW-2256: QFT ACTIVE-PATH BLOCKER REDUCTION GATE
+
+- Date UTC: 2026-03-05T05:29:01.116745+00:00
+- Verdict: **QFT_ACTIVE_PATH_BLOCKER_REDUCTION_GATE_PASS_PARTIAL_SINGLE_CORE_BLOCKER**
+- pass_count: `7/9`
+- active_blockers: `['PositivityToReconstruction_DerivedOrPending']`

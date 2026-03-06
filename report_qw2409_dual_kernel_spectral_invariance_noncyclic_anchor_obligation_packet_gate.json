@@ -1,0 +1,48 @@
+{
+  "generated_utc": "2026-03-05T11:04:26.997049+00:00",
+  "sources": {
+    "q2408": "report_qw2408_dual_kernel_spectral_invariance_chain_reuse_admission_gate.json",
+    "spec": "spec_qw2409_dual_kernel_spectral_invariance_noncyclic_anchor_obligation_packet.json"
+  },
+  "spec_file": "spec_qw2409_dual_kernel_spectral_invariance_noncyclic_anchor_obligation_packet.json",
+  "spec_sha256": "bd9db9c272931b087ca701f442ac59a0e687a4d2cfed27a193f168d3ef1f96c7",
+  "proof_object_file": "proof_object_qw2409_dual_kernel_spectral_invariance_noncyclic_anchor_obligation_packet.json",
+  "proof_object_sha256": "c398d614d699a687c7f156e64f461e0c545c1a37bf805216c5c2a66abadab411",
+  "obligations": [
+    {
+      "id": "L12_KERNEL_SPECTRAL_INVARIANCE_NONCYCLIC_ANCHOR_O1",
+      "branch": "L12",
+      "anchor_symbol": "RG_KernelSpectralInvarianceToWellPosedness_Theorem",
+      "acceptance_rules": [
+        "proof_term must not be single-symbol exact to historical spectral-invariance chain step",
+        "proof must be machine-checkable without `axiom` and without `_DerivedOrPending`",
+        "dependency graph delta must not re-enter confirmed identity-cycle frontier"
+      ]
+    },
+    {
+      "id": "L5_KERNEL_SPECTRAL_INVARIANCE_NONCYCLIC_ANCHOR_O1",
+      "branch": "L5",
+      "anchor_symbol": "QFT_KernelSpectralInvarianceToPositivity_Theorem",
+      "acceptance_rules": [
+        "proof_term must not be single-symbol exact to historical spectral-invariance chain step",
+        "proof must be machine-checkable without `axiom` and without `_DerivedOrPending`",
+        "dependency graph delta must not re-enter confirmed identity-cycle frontier"
+      ]
+    }
+  ],
+  "n_obligations": 2,
+  "flags": {
+    "q2408_reuse_guard_active": true,
+    "q2408_admission_state_valid": true,
+    "n_obligations_eq_two": true,
+    "one_obligation_per_branch": true,
+    "all_rules_require_noncircularity": true,
+    "all_rules_require_axiom_free_machine_check": true,
+    "execution_completed": false,
+    "all_strict_obligations_fully_closed": false
+  },
+  "pass_count": 6,
+  "total_flags": 8,
+  "verdict": "DUAL_KERNEL_SPECTRAL_INVARIANCE_NONCYCLIC_ANCHOR_OBLIGATION_PACKET_GATE_PASS_PACKET_READY",
+  "required_next_step": "AUTHOR_DUAL_KERNEL_SPECTRAL_INVARIANCE_NONCYCLIC_ANCHOR_CANDIDATE_FILES"
+}

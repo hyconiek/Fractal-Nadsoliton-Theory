@@ -1,0 +1,24 @@
+{
+  "generated_utc": "2026-03-05T06:41:14.093245+00:00",
+  "sources": {
+    "q2308": "report_qw2308_dual_kernel_spectral_closure_execution_status_gate.json",
+    "spec": "spec_qw2309_dual_kernel_spectral_invariance_minimal_blocker_cut.json"
+  },
+  "minimal_blocker_cut": [
+    {
+      "id": "L12_KERNEL_SPECTRAL_INVARIANCE_CORE_O1",
+      "branch": "L12",
+      "symbol": "RG_KernelSpectralInvarianceToWellPosedness_Theorem",
+      "required_statement": "(FINActionComplete ∧ RGConstructiveMap) -> RGGlobalWellPosednessAllScales",
+      "proof_kind": "kernel_spectral_invariance_derivation"
+    },
+    {
+      "id": "L5_KERNEL_SPECTRAL_INVARIANCE_CORE_O1",
+      "branch": "L5",
+      "symbol": "QFT_KernelSpectralInvarianceToPositivity_Theorem",
+      "required_statement": "(FINActionComplete ∧ ConstructiveNonPerturbativeScheme) -> PositivityToReconstruction",
+      "proof_kind": "kernel_spectral_invariance_derivation"
+    }
+  ],
+  "n_obligations": 2
+}

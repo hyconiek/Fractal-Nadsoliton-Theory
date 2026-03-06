@@ -2095,3 +2095,2882 @@ Ten punkt jest nadrzedny wzgledem historycznych wpisow etapowych `PARTIAL` dla t
      - `dax1_non_axiomatic_provider_completed=False`,
      - `c1_theorem_discharge_completed=False`,
      - `o1c_fully_closed=False`.
+
+## 143) Aktualizacja wykonawcza: QW-2255
+
+1. `QW-2255` (`report_qw2255_rg_active_path_blocker_reduction_gate.json`)
+   - Verdict: `RG_ACTIVE_PATH_BLOCKER_REDUCTION_GATE_PASS_PARTIAL_SINGLE_CORE_BLOCKER` (`7/9`)
+   - Wynik:
+     - rozdzielono instancje legacy (z witness) od aktywnej sciezki theorem-target,
+     - aktywna sciezka RG ma juz tylko jeden blocker:
+       - `RGGlobalWellPosednessAllScales_DerivedOrPending`.
+   - Granica:
+     - `active_path_reduced_to_single_core_blocker=True`,
+     - `dax1_non_axiomatic_provider_completed=False`,
+     - `o1c_fully_closed=False`.
+
+## 144) Aktualizacja wykonawcza: QW-2256
+
+1. `QW-2256` (`report_qw2256_qft_active_path_blocker_reduction_gate.json`)
+   - Verdict: `QFT_ACTIVE_PATH_BLOCKER_REDUCTION_GATE_PASS_PARTIAL_SINGLE_CORE_BLOCKER` (`7/9`)
+   - Wynik:
+     - rozdzielono instancje legacy (z witness) od aktywnej sciezki theorem-target,
+     - aktywna sciezka QFT ma juz tylko jeden blocker:
+       - `PositivityToReconstruction_DerivedOrPending`.
+   - Granica:
+     - `active_path_reduced_to_single_core_blocker=True`,
+     - `dax1_non_axiomatic_provider_completed=False`,
+     - `o1c_fully_closed=False`.
+
+## 145) Aktualizacja wykonawcza: QW-2257
+
+1. `QW-2257` (`report_qw2257_rg_active_single_blocker_discharge_packet_gate.json`)
+   - Verdict: `RG_ACTIVE_SINGLE_BLOCKER_DISCHARGE_PACKET_GATE_PASS_PACKET_READY_CORE_BLOCKER_PENDING` (`7/9`)
+   - Wynik:
+     - zbudowano zredukowany packet discharge dla jednego aktywnego blockera RG:
+       - `RG_ACTIVE_CORE_O1`, `RG_ACTIVE_CORE_O2`,
+     - packet jest machine-readable i hashowany.
+   - Granica:
+     - `single_core_blocker_eliminated=False`,
+     - `dax1_non_axiomatic_provider_completed=False`,
+     - `o1c_fully_closed=False`.
+
+## 146) Aktualizacja wykonawcza: QW-2258
+
+1. `QW-2258` (`report_qw2258_qft_active_single_blocker_discharge_packet_gate.json`)
+   - Verdict: `QFT_ACTIVE_SINGLE_BLOCKER_DISCHARGE_PACKET_GATE_PASS_PACKET_READY_CORE_BLOCKER_PENDING` (`7/9`)
+   - Wynik:
+     - zbudowano zredukowany packet discharge dla jednego aktywnego blockera QFT:
+       - `QFT_ACTIVE_CORE_O1`, `QFT_ACTIVE_CORE_O2`,
+     - packet jest machine-readable i hashowany.
+   - Granica:
+     - `single_core_blocker_eliminated=False`,
+     - `dax1_non_axiomatic_provider_completed=False`,
+     - `o1c_fully_closed=False`.
+
+## 147) Aktualizacja wykonawcza: QW-2259
+
+1. `QW-2259` (`report_qw2259_rg_active_single_blocker_execution_status_gate.json`)
+   - Verdict: `RG_ACTIVE_SINGLE_BLOCKER_EXECUTION_STATUS_GATE_PASS_PARTIAL_CORE_BLOCKER_PENDING` (`5/8`)
+   - Wynik:
+     - wykonano status-run zredukowanego pakietu `RG_ACTIVE_CORE_O1..O2`,
+     - twardy wynik: `0/2` obligations satisfied.
+   - Granica:
+     - `all_obligations_satisfied=False`,
+     - `single_core_blocker_eliminated=False`,
+     - `dax1_non_axiomatic_provider_completed=False`,
+     - `o1c_fully_closed=False`.
+
+## 148) Aktualizacja wykonawcza: QW-2260
+
+1. `QW-2260` (`report_qw2260_qft_active_single_blocker_execution_status_gate.json`)
+   - Verdict: `QFT_ACTIVE_SINGLE_BLOCKER_EXECUTION_STATUS_GATE_PASS_PARTIAL_CORE_BLOCKER_PENDING` (`5/8`)
+   - Wynik:
+     - wykonano status-run zredukowanego pakietu `QFT_ACTIVE_CORE_O1..O2`,
+     - twardy wynik: `0/2` obligations satisfied.
+   - Granica:
+     - `all_obligations_satisfied=False`,
+     - `single_core_blocker_eliminated=False`,
+     - `dax1_non_axiomatic_provider_completed=False`,
+     - `o1c_fully_closed=False`.
+
+## 149) Aktualizacja wykonawcza: QW-2261
+
+1. `QW-2261` (`report_qw2261_rg_active_reference_locality_integrity_gate.json`)
+   - Verdict: `RG_ACTIVE_REFERENCE_LOCALITY_INTEGRITY_GATE_PASS_PARTIAL_DANGLING_REFS_DETECTED` (`3/7`)
+   - Wynik:
+     - wykonano strict locality-scan referencji `exact/apply` dla aktywnej sciezki RG,
+     - wykryto `n_dangling_refs=1`.
+   - Granica:
+     - `method_integrity_strict_locality_holds=False`,
+     - `single_core_blocker_eliminated=False`,
+     - `o1c_fully_closed=False`.
+
+## 150) Aktualizacja wykonawcza: QW-2262
+
+1. `QW-2262` (`report_qw2262_qft_active_reference_locality_integrity_gate.json`)
+   - Verdict: `QFT_ACTIVE_REFERENCE_LOCALITY_INTEGRITY_GATE_PASS_PARTIAL_DANGLING_REFS_DETECTED` (`3/7`)
+   - Wynik:
+     - wykonano strict locality-scan referencji `exact/apply` dla aktywnej sciezki QFT,
+     - wykryto `n_dangling_refs=1`.
+   - Granica:
+     - `method_integrity_strict_locality_holds=False`,
+     - `single_core_blocker_eliminated=False`,
+     - `o1c_fully_closed=False`.
+
+## 151) Aktualizacja wykonawcza: QW-2263
+
+1. `QW-2263` (`report_qw2263_rg_effective_active_blocker_set_gate.json`)
+   - Verdict: `RG_EFFECTIVE_ACTIVE_BLOCKER_SET_GATE_PASS_PARTIAL_EXPANDED_BLOCKER_SET` (`5/7`)
+   - Wynik:
+     - wykonano konserwatywna korekte frontiera RG: declared blocker-set (`1`) + locality dangling refs,
+     - effective active blocker-set = `2`.
+   - Granica:
+     - `effective_set_equals_declared_singleton=False`,
+     - `single_core_blocker_eliminated=False`,
+     - `o1c_fully_closed=False`.
+
+## 152) Aktualizacja wykonawcza: QW-2264
+
+1. `QW-2264` (`report_qw2264_qft_effective_active_blocker_set_gate.json`)
+   - Verdict: `QFT_EFFECTIVE_ACTIVE_BLOCKER_SET_GATE_PASS_PARTIAL_EXPANDED_BLOCKER_SET` (`5/7`)
+   - Wynik:
+     - wykonano konserwatywna korekte frontiera QFT: declared blocker-set (`1`) + locality dangling refs,
+     - effective active blocker-set = `2`.
+   - Granica:
+     - `effective_set_equals_declared_singleton=False`,
+     - `single_core_blocker_eliminated=False`,
+     - `o1c_fully_closed=False`.
+
+## 153) Aktualizacja wykonawcza: QW-2265
+
+1. `QW-2265` (`report_qw2265_rg_canonical_export_bridge_availability_gate.json`)
+   - Verdict: `RG_CANONICAL_EXPORT_BRIDGE_AVAILABILITY_GATE_PASS_PARTIAL_AXIOMATIC_BRIDGE_AVAILABLE` (`6/7`)
+   - Wynik:
+     - unresolved export ref z `QW-2261` zostal jawnie pokryty w bridge file `FIN_L12_CANONICAL_EXPORT_AXIOMATIC_BRIDGE.lean`,
+     - twardy wynik: `n_unresolved_refs=1`, `n_unresolved_refs_not_bridged=0`.
+   - Granica:
+     - `bridge_is_axiomatic_only=True`,
+     - `non_axiomatic_closure_claimed=False`,
+     - `o1c_fully_closed=False`.
+
+## 154) Aktualizacja wykonawcza: QW-2266
+
+1. `QW-2266` (`report_qw2266_qft_canonical_export_bridge_availability_gate.json`)
+   - Verdict: `QFT_CANONICAL_EXPORT_BRIDGE_AVAILABILITY_GATE_PASS_PARTIAL_AXIOMATIC_BRIDGE_AVAILABLE` (`6/7`)
+   - Wynik:
+     - unresolved export ref z `QW-2262` zostal jawnie pokryty w bridge file `FIN_L5_CANONICAL_EXPORT_AXIOMATIC_BRIDGE.lean`,
+     - twardy wynik: `n_unresolved_refs=1`, `n_unresolved_refs_not_bridged=0`.
+   - Granica:
+     - `bridge_is_axiomatic_only=True`,
+     - `non_axiomatic_closure_claimed=False`,
+     - `o1c_fully_closed=False`.
+
+## 155) Aktualizacja wykonawcza: QW-2267
+
+1. `QW-2267` (`report_qw2267_rg_effective_active_blocker_set_v2_gate.json`)
+   - Verdict: `RG_EFFECTIVE_ACTIVE_BLOCKER_SET_V2_GATE_PASS_PARTIAL_SINGLE_NON_AXIOMATIC_CORE_BLOCKER` (`5/6`)
+   - Wynik:
+     - wykonano redukcje frontiera RG po bridge availability: `2 -> 1`,
+     - residual core blocker: `RGGlobalWellPosednessAllScales_DerivedOrPending`.
+   - Granica:
+     - `bridge_reduction_is_axiomatic_layer_only=True`,
+     - `non_axiomatic_core_blocker_remaining=True`,
+     - `o1c_fully_closed=False`.
+
+## 156) Aktualizacja wykonawcza: QW-2268
+
+1. `QW-2268` (`report_qw2268_qft_effective_active_blocker_set_v2_gate.json`)
+   - Verdict: `QFT_EFFECTIVE_ACTIVE_BLOCKER_SET_V2_GATE_PASS_PARTIAL_SINGLE_NON_AXIOMATIC_CORE_BLOCKER` (`5/6`)
+   - Wynik:
+     - wykonano redukcje frontiera QFT po bridge availability: `2 -> 1`,
+     - residual core blocker: `PositivityToReconstruction_DerivedOrPending`.
+   - Granica:
+     - `bridge_reduction_is_axiomatic_layer_only=True`,
+     - `non_axiomatic_core_blocker_remaining=True`,
+     - `o1c_fully_closed=False`.
+
+## 157) Aktualizacja wykonawcza: QW-2269
+
+1. `QW-2269` (`report_qw2269_rg_residual_core_blocker_discharge_spec_gate.json`)
+   - Verdict: `RG_RESIDUAL_CORE_BLOCKER_DISCHARGE_SPEC_GATE_PASS_SINGLE_OBLIGATION_PACKET_READY` (`4/5`)
+   - Wynik:
+     - residual RG blocker zostal zredukowany do pojedynczej jawnej obligacji discharge,
+     - twardy wynik: `n_residual_core_blockers=1`, `n_obligations=1`.
+   - Granica:
+     - `non_axiomatic_discharge_completed=False`,
+     - `o1c_fully_closed=False`.
+
+## 158) Aktualizacja wykonawcza: QW-2270
+
+1. `QW-2270` (`report_qw2270_qft_residual_core_blocker_discharge_spec_gate.json`)
+   - Verdict: `QFT_RESIDUAL_CORE_BLOCKER_DISCHARGE_SPEC_GATE_PASS_SINGLE_OBLIGATION_PACKET_READY` (`4/5`)
+   - Wynik:
+     - residual QFT blocker zostal zredukowany do pojedynczej jawnej obligacji discharge,
+     - twardy wynik: `n_residual_core_blockers=1`, `n_obligations=1`.
+   - Granica:
+     - `non_axiomatic_discharge_completed=False`,
+     - `o1c_fully_closed=False`.
+
+## 159) Aktualizacja wykonawcza: QW-2271
+
+1. `QW-2271` (`report_qw2271_rg_residual_core_blocker_execution_status_gate.json`)
+   - Verdict: `RG_RESIDUAL_CORE_BLOCKER_EXECUTION_STATUS_GATE_PASS_PARTIAL_PENDING` (`2/4`)
+   - Wynik:
+     - wykonano status-run pojedynczej obligacji residualnej RG,
+     - twardy wynik: `0/1` obligations satisfied.
+   - Granica:
+     - `all_obligations_satisfied=False`,
+     - `o1c_fully_closed=False`.
+
+## 160) Aktualizacja wykonawcza: QW-2272
+
+1. `QW-2272` (`report_qw2272_qft_residual_core_blocker_execution_status_gate.json`)
+   - Verdict: `QFT_RESIDUAL_CORE_BLOCKER_EXECUTION_STATUS_GATE_PASS_PARTIAL_PENDING` (`2/4`)
+   - Wynik:
+     - wykonano status-run pojedynczej obligacji residualnej QFT,
+     - twardy wynik: `0/1` obligations satisfied.
+   - Granica:
+     - `all_obligations_satisfied=False`,
+     - `o1c_fully_closed=False`.
+
+## 161) Aktualizacja wykonawcza: QW-2273
+
+1. `QW-2273` (`report_qw2273_rg_residual_non_axiomatic_provider_evidence_gate.json`)
+   - Verdict: `RG_RESIDUAL_NON_AXIOMATIC_PROVIDER_EVIDENCE_GATE_PASS_PARTIAL_NO_STRICT_CANDIDATE` (`3/6`)
+   - Wynik:
+     - wykonano strict evidence audit dla symbolu `RGGlobalWellPosednessAllScales_Derived`,
+     - twardy wynik: `n_candidate_files=0`, `n_strict_non_axiomatic_candidates=0`.
+   - Granica:
+     - `strict_non_axiomatic_provider_found=False`,
+     - `non_axiomatic_discharge_completed=False`,
+     - `o1c_fully_closed=False`.
+
+## 162) Aktualizacja wykonawcza: QW-2274
+
+1. `QW-2274` (`report_qw2274_qft_residual_non_axiomatic_provider_evidence_gate.json`)
+   - Verdict: `QFT_RESIDUAL_NON_AXIOMATIC_PROVIDER_EVIDENCE_GATE_PASS_PARTIAL_NO_STRICT_CANDIDATE` (`3/6`)
+   - Wynik:
+     - wykonano strict evidence audit dla symbolu `PositivityToReconstruction_Derived`,
+     - twardy wynik: `n_candidate_files=0`, `n_strict_non_axiomatic_candidates=0`.
+   - Granica:
+     - `strict_non_axiomatic_provider_found=False`,
+     - `non_axiomatic_discharge_completed=False`,
+     - `o1c_fully_closed=False`.
+
+## 163) Aktualizacja wykonawcza: QW-2275
+
+1. `QW-2275` (`report_qw2275_rg_residual_core_blocker_execution_status_v2_gate.json`)
+   - Verdict: `RG_RESIDUAL_CORE_BLOCKER_EXECUTION_STATUS_V2_GATE_PASS_PARTIAL_PENDING_STRICT_NON_AXIOMATIC` (`3/6`)
+   - Wynik:
+     - wykonano status-run v2 po filtrze strict non-axiomatic evidence,
+     - twardy wynik: `0/1` obligations satisfied (strict).
+   - Granica:
+     - `strict_non_axiomatic_provider_found=False`,
+     - `all_obligations_satisfied_strict=False`,
+     - `o1c_fully_closed=False`.
+
+## 164) Aktualizacja wykonawcza: QW-2276
+
+1. `QW-2276` (`report_qw2276_qft_residual_core_blocker_execution_status_v2_gate.json`)
+   - Verdict: `QFT_RESIDUAL_CORE_BLOCKER_EXECUTION_STATUS_V2_GATE_PASS_PARTIAL_PENDING_STRICT_NON_AXIOMATIC` (`3/6`)
+   - Wynik:
+     - wykonano status-run v2 po filtrze strict non-axiomatic evidence,
+     - twardy wynik: `0/1` obligations satisfied (strict).
+   - Granica:
+     - `strict_non_axiomatic_provider_found=False`,
+     - `all_obligations_satisfied_strict=False`,
+     - `o1c_fully_closed=False`.
+
+## 165) Aktualizacja wykonawcza: QW-2277
+
+1. `QW-2277` (`report_qw2277_rg_residual_strict_non_axiomatic_provider_construction_gate.json`)
+   - Verdict: `RG_RESIDUAL_STRICT_NON_AXIOMATIC_PROVIDER_CONSTRUCTION_GATE_PASS_PARTIAL_OBSTRUCTION_CONFIRMED` (`10/12`)
+   - Wynik:
+     - wykonano machine-check strict construction attempt dla residual RG providera,
+     - attempt jest axiom-token-free i bez `_DerivedOrPending`,
+     - twardy wynik: `exit_code=1`, `unknown_identifiers=['RG_CanonicalAction_to_WellPosedness_EXPORT']`, proposition-kind obstruction wykryta.
+   - Granica:
+     - `machine_check_exit_zero=False`,
+     - `strict_non_axiomatic_provider_constructed=False`,
+     - `o1c_fully_closed=False`.
+
+## 166) Aktualizacja wykonawcza: QW-2278
+
+1. `QW-2278` (`report_qw2278_qft_residual_strict_non_axiomatic_provider_construction_gate.json`)
+   - Verdict: `QFT_RESIDUAL_STRICT_NON_AXIOMATIC_PROVIDER_CONSTRUCTION_GATE_PASS_PARTIAL_OBSTRUCTION_CONFIRMED` (`10/12`)
+   - Wynik:
+     - wykonano machine-check strict construction attempt dla residual QFT providera,
+     - attempt jest axiom-token-free i bez `_DerivedOrPending`,
+     - twardy wynik: `exit_code=1`, `unknown_identifiers=['QFT_CanonicalAction_to_Positivity_EXPORT']`, proposition-kind obstruction wykryta.
+   - Granica:
+     - `machine_check_exit_zero=False`,
+     - `strict_non_axiomatic_provider_constructed=False`,
+     - `o1c_fully_closed=False`.
+
+## 167) Aktualizacja wykonawcza: QW-2279
+
+1. `QW-2279` (`report_qw2279_rg_residual_core_blocker_execution_status_v3_gate.json`)
+   - Verdict: `RG_RESIDUAL_CORE_BLOCKER_EXECUTION_STATUS_V3_GATE_PASS_PARTIAL_PENDING_MACHINE_CHECKABLE_NON_AXIOMATIC` (`3/7`)
+   - Wynik:
+     - execution-status RG policzony w kryterium lacznym lexical+machine,
+     - twardy wynik: `n_obligations_satisfied_strict_v3=0/1`.
+   - Granica:
+     - `lexical_strict_candidate_found=False`,
+     - `machine_checkable_provider_constructed=False`,
+     - `o1c_fully_closed=False`.
+
+## 168) Aktualizacja wykonawcza: QW-2280
+
+1. `QW-2280` (`report_qw2280_qft_residual_core_blocker_execution_status_v3_gate.json`)
+   - Verdict: `QFT_RESIDUAL_CORE_BLOCKER_EXECUTION_STATUS_V3_GATE_PASS_PARTIAL_PENDING_MACHINE_CHECKABLE_NON_AXIOMATIC` (`3/7`)
+   - Wynik:
+     - execution-status QFT policzony w kryterium lacznym lexical+machine,
+     - twardy wynik: `n_obligations_satisfied_strict_v3=0/1`.
+   - Granica:
+     - `lexical_strict_candidate_found=False`,
+     - `machine_checkable_provider_constructed=False`,
+     - `o1c_fully_closed=False`.
+
+## 169) Aktualizacja wykonawcza: QW-2281
+
+1. `QW-2281` (`report_qw2281_rg_residual_core_blocker_isolation_gate.json`)
+   - Verdict: `RG_RESIDUAL_CORE_BLOCKER_ISOLATION_GATE_PASS_PARTIAL_CORE_BLOCKER_ISOLATED` (`11/14`)
+   - Wynik:
+     - wykonano kind-corrected machine-check attempt dla RG,
+     - proposition-kind mismatch usuniety,
+     - pozostaje pojedynczy blocker: `RG_CanonicalAction_to_WellPosedness_EXPORT`.
+   - Granica:
+     - `machine_check_exit_zero=False`,
+     - `strict_non_axiomatic_provider_constructed=False`,
+     - `o1c_fully_closed=False`.
+
+## 170) Aktualizacja wykonawcza: QW-2282
+
+1. `QW-2282` (`report_qw2282_qft_residual_core_blocker_isolation_gate.json`)
+   - Verdict: `QFT_RESIDUAL_CORE_BLOCKER_ISOLATION_GATE_PASS_PARTIAL_CORE_BLOCKER_ISOLATED` (`11/14`)
+   - Wynik:
+     - wykonano kind-corrected machine-check attempt dla QFT,
+     - proposition-kind mismatch usuniety,
+     - pozostaje pojedynczy blocker: `QFT_CanonicalAction_to_Positivity_EXPORT`.
+   - Granica:
+     - `machine_check_exit_zero=False`,
+     - `strict_non_axiomatic_provider_constructed=False`,
+     - `o1c_fully_closed=False`.
+
+## 171) Aktualizacja wykonawcza: QW-2283
+
+1. `QW-2283` (`report_qw2283_rg_residual_core_blocker_execution_status_v4_gate.json`)
+   - Verdict: `RG_RESIDUAL_CORE_BLOCKER_EXECUTION_STATUS_V4_GATE_PASS_PARTIAL_SINGLE_SYMBOL_MINIMAL_OBSTRUCTION` (`4/7`)
+   - Wynik:
+     - status v4 RG potwierdza minimalny singleton blocker,
+     - twardy wynik: `0/1` obligations satisfied (strict v4).
+   - Granica:
+     - `machine_check_exit_zero=False`,
+     - `all_obligations_satisfied_strict_v4=False`,
+     - `o1c_fully_closed=False`.
+
+## 172) Aktualizacja wykonawcza: QW-2284
+
+1. `QW-2284` (`report_qw2284_qft_residual_core_blocker_execution_status_v4_gate.json`)
+   - Verdict: `QFT_RESIDUAL_CORE_BLOCKER_EXECUTION_STATUS_V4_GATE_PASS_PARTIAL_SINGLE_SYMBOL_MINIMAL_OBSTRUCTION` (`4/7`)
+   - Wynik:
+     - status v4 QFT potwierdza minimalny singleton blocker,
+     - twardy wynik: `0/1` obligations satisfied (strict v4).
+   - Granica:
+     - `machine_check_exit_zero=False`,
+     - `all_obligations_satisfied_strict_v4=False`,
+     - `o1c_fully_closed=False`.
+
+## 173) Aktualizacja wykonawcza: QW-2285
+
+1. `QW-2285` (`report_qw2285_rg_export_provider_logical_nonderivability_gate.json`)
+   - Verdict: `RG_EXPORT_PROVIDER_LOGICAL_NONDERIVABILITY_GATE_PASS_OBSTRUCTION_FORMALLY_PROVED` (`8/8`)
+   - Wynik:
+     - formalny truth-table check dla formuly export-provider RG,
+     - istnieje jawny countermodel (`A=1,B=1,C=0`), formula nie jest tautologia.
+   - Granica:
+     - z pustego kontekstu logicznego formula nie jest wyprowadzalna,
+     - wymagana jest nie-logiczna (fizyczna) tresc derivacyjna.
+
+## 174) Aktualizacja wykonawcza: QW-2286
+
+1. `QW-2286` (`report_qw2286_qft_export_provider_logical_nonderivability_gate.json`)
+   - Verdict: `QFT_EXPORT_PROVIDER_LOGICAL_NONDERIVABILITY_GATE_PASS_OBSTRUCTION_FORMALLY_PROVED` (`8/8`)
+   - Wynik:
+     - formalny truth-table check dla formuly export-provider QFT,
+     - istnieje jawny countermodel (`A=1,B=1,C=0`), formula nie jest tautologia.
+   - Granica:
+     - z pustego kontekstu logicznego formula nie jest wyprowadzalna,
+     - wymagana jest nie-logiczna (fizyczna) tresc derivacyjna.
+
+## 175) Aktualizacja wykonawcza: QW-2287
+
+1. `QW-2287` (`report_qw2287_rg_residual_core_blocker_execution_status_v5_gate.json`)
+   - Verdict: `RG_RESIDUAL_CORE_BLOCKER_EXECUTION_STATUS_V5_GATE_PASS_PARTIAL_SINGLE_NONLOGICAL_OBLIGATION` (`5/7`)
+   - Wynik:
+     - status v5 RG klasyfikuje pozostaly blocker jako pojedyncza obligacje nie-logiczna,
+     - `0/1` obligations satisfied (strict v5).
+   - Granica:
+     - `all_obligations_satisfied_strict_v5=False`,
+     - `o1c_fully_closed=False`.
+
+## 176) Aktualizacja wykonawcza: QW-2288
+
+1. `QW-2288` (`report_qw2288_qft_residual_core_blocker_execution_status_v5_gate.json`)
+   - Verdict: `QFT_RESIDUAL_CORE_BLOCKER_EXECUTION_STATUS_V5_GATE_PASS_PARTIAL_SINGLE_NONLOGICAL_OBLIGATION` (`5/7`)
+   - Wynik:
+     - status v5 QFT klasyfikuje pozostaly blocker jako pojedyncza obligacje nie-logiczna,
+     - `0/1` obligations satisfied (strict v5).
+   - Granica:
+     - `all_obligations_satisfied_strict_v5=False`,
+     - `o1c_fully_closed=False`.
+
+## 177) Aktualizacja wykonawcza: QW-2289
+
+1. `QW-2289` (`report_qw2289_rg_export_provider_single_premise_conditional_gate.json`)
+   - Verdict: `RG_EXPORT_PROVIDER_SINGLE_PREMISE_CONDITIONAL_GATE_PASS_PARTIAL_CONDITIONAL_PROVIDER_MACHINE_CHECKED` (`9/10`)
+   - Wynik:
+     - conditional provider RG jest machine-checkable,
+     - brak tokenow `axiom`, brak `_DerivedOrPending`.
+   - Granica:
+     - provider pozostaje conditional (single premise),
+     - brak unconditional non-axiomatic discharge.
+
+## 178) Aktualizacja wykonawcza: QW-2290
+
+1. `QW-2290` (`report_qw2290_qft_export_provider_single_premise_conditional_gate.json`)
+   - Verdict: `QFT_EXPORT_PROVIDER_SINGLE_PREMISE_CONDITIONAL_GATE_PASS_PARTIAL_CONDITIONAL_PROVIDER_MACHINE_CHECKED` (`9/10`)
+   - Wynik:
+     - conditional provider QFT jest machine-checkable,
+     - brak tokenow `axiom`, brak `_DerivedOrPending`.
+   - Granica:
+     - provider pozostaje conditional (single premise),
+     - brak unconditional non-axiomatic discharge.
+
+## 179) Aktualizacja wykonawcza: QW-2291
+
+1. `QW-2291` (`report_qw2291_dual_single_premise_frontier_gate.json`)
+   - Verdict: `DUAL_SINGLE_PREMISE_FRONTIER_GATE_PASS_PARTIAL_FRONTIER_EXPLICIT` (`5/6`)
+   - Wynik:
+     - dual frontier formalnie zredukowany do 2 jawnych physical premises,
+     - `n_remaining_frontier_items=2`.
+   - Granica:
+     - `all_strict_obligations_fully_closed=False`.
+
+## 180) Aktualizacja wykonawcza: QW-2292
+
+1. `QW-2292` (`report_qw2292_dual_physical_premise_discharge_packet_gate.json`)
+   - Verdict: `DUAL_PHYSICAL_PREMISE_DISCHARGE_PACKET_GATE_PASS_PACKET_READY` (`3/4`)
+   - Wynik:
+     - przygotowano jawny packet discharge dla 2 remaining premises fizycznych,
+     - `n_obligations=2`, `n_frontier_items=2`.
+   - Granica:
+     - `nonlogical_discharge_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 181) Aktualizacja wykonawcza: QW-2293
+
+1. `QW-2293` (`report_qw2293_dual_physical_premise_execution_status_gate.json`)
+   - Verdict: `DUAL_PHYSICAL_PREMISE_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_ACTION_LEVEL_PROVIDER_THEOREMS` (`15/17`)
+   - Wynik:
+     - wykonano realny machine-check dla obu premises fizycznych z pakietu `QW-2292`,
+     - obie galezie zwracaja `exit=1` i potwierdzaja action-level blocker,
+     - jawny blocker-cut: `RG_ActionLevel_PhysicalBridge_Derivation`, `QFT_ActionLevel_PhysicalBridge_Derivation`.
+   - Granica:
+     - `nonlogical_discharge_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 182) Aktualizacja wykonawcza: QW-2294
+
+1. `QW-2294` (`report_qw2294_dual_physical_premise_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_PHYSICAL_PREMISE_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`6/7`)
+   - Wynik:
+     - minimalny dual blocker-cut zostal sformalizowany do 2 core-obligacji,
+     - po jednej core-obligacji na galaz (`L12`, `L5`).
+   - Granica:
+     - `all_strict_obligations_fully_closed=False`.
+
+## 183) Aktualizacja wykonawcza: QW-2295
+
+1. `QW-2295` (`report_qw2295_dual_action_level_provider_discharge_packet_gate.json`)
+   - Verdict: `DUAL_ACTION_LEVEL_PROVIDER_DISCHARGE_PACKET_GATE_PASS_PACKET_READY` (`3/4`)
+   - Wynik:
+     - packet wykonawczy dla 2 action-level provider obligations jest gotowy,
+     - `n_obligations=2`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 184) Aktualizacja wykonawcza: QW-2296
+
+1. `QW-2296` (`report_qw2296_dual_action_level_provider_execution_status_gate.json`)
+   - Verdict: `DUAL_ACTION_LEVEL_PROVIDER_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_FOUNDATIONAL_DERIVATION_SYMBOLS` (`14/16`)
+   - Wynik:
+     - realny machine-check wykonany dla obu action-level provider obligations,
+     - oba przebiegi zwracaja `exit=1` i wskazuja foundational blocker-cut,
+     - jawny blocker-cut: `RG_FundamentalActionToWellPosedness_Derivation`, `QFT_FundamentalActionToPositivity_Derivation`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 185) Aktualizacja wykonawcza: QW-2297
+
+1. `QW-2297` (`report_qw2297_dual_foundational_derivation_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_FOUNDATIONAL_DERIVATION_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`6/7`)
+   - Wynik:
+     - foundational blocker-cut z `QW-2296` zostal zredukowany do 2 core-obligacji,
+     - po jednej core-obligacji na galaz (`L12`, `L5`).
+   - Granica:
+     - `all_strict_obligations_fully_closed=False`.
+
+## 186) Aktualizacja wykonawcza: QW-2298
+
+1. `QW-2298` (`report_qw2298_dual_foundational_derivation_discharge_packet_gate.json`)
+   - Verdict: `DUAL_FOUNDATIONAL_DERIVATION_DISCHARGE_PACKET_GATE_PASS_PACKET_READY` (`3/4`)
+   - Wynik:
+     - packet wykonawczy dla 2 foundational obligations jest gotowy,
+     - `n_obligations=2`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 187) Aktualizacja wykonawcza: QW-2299
+
+1. `QW-2299` (`report_qw2299_dual_foundational_derivation_execution_status_gate.json`)
+   - Verdict: `DUAL_FOUNDATIONAL_DERIVATION_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_FUNDAMENTAL_KERNEL_DYNAMICS_THEOREMS` (`14/16`)
+   - Wynik:
+     - realny machine-check wykonany dla obu foundational obligations,
+     - oba przebiegi zwracaja `exit=1` i wskazuja fundamental-kernel blocker-cut,
+     - jawny blocker-cut: `RG_FundamentalKernelDynamicsToWellPosedness_Theorem`, `QFT_FundamentalKernelDynamicsToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 188) Aktualizacja wykonawcza: QW-2300
+
+1. `QW-2300` (`report_qw2300_dual_fundamental_kernel_dynamics_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_FUNDAMENTAL_KERNEL_DYNAMICS_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`6/7`)
+   - Wynik:
+     - blocker-cut z `QW-2299` zostal zredukowany do 2 core-obligacji,
+     - po jednej core-obligacji na galaz (`L12`, `L5`).
+   - Granica:
+     - `all_strict_obligations_fully_closed=False`.
+
+## 189) Aktualizacja wykonawcza: QW-2301
+
+1. `QW-2301` (`report_qw2301_dual_fundamental_kernel_dynamics_discharge_packet_gate.json`)
+   - Verdict: `DUAL_FUNDAMENTAL_KERNEL_DYNAMICS_DISCHARGE_PACKET_GATE_PASS_PACKET_READY` (`3/4`)
+   - Wynik:
+     - packet wykonawczy dla 2 obligations warstwy fundamental-kernel-dynamics jest gotowy,
+     - `n_obligations=2`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 190) Aktualizacja wykonawcza: QW-2302
+
+1. `QW-2302` (`report_qw2302_dual_fundamental_kernel_dynamics_execution_status_gate.json`)
+   - Verdict: `DUAL_FUNDAMENTAL_KERNEL_DYNAMICS_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_OPERATOR_CLOSURE_THEOREMS` (`14/16`)
+   - Wynik:
+     - realny machine-check wykonany dla obu obligations,
+     - oba przebiegi zwracaja `exit=1` i wskazuja kernel-operator blocker-cut,
+     - jawny blocker-cut: `RG_KernelOperatorClosureToWellPosedness_Theorem`, `QFT_KernelOperatorClosureToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 191) Aktualizacja wykonawcza: QW-2303
+
+1. `QW-2303` (`report_qw2303_dual_kernel_operator_closure_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_OPERATOR_CLOSURE_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`6/7`)
+   - Wynik:
+     - blocker-cut z `QW-2302` zostal zredukowany do 2 core-obligacji,
+     - po jednej core-obligacji na galaz (`L12`, `L5`).
+   - Granica:
+     - `all_strict_obligations_fully_closed=False`.
+
+## 192) Aktualizacja wykonawcza: QW-2304
+
+1. `QW-2304` (`report_qw2304_dual_kernel_operator_closure_discharge_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_OPERATOR_CLOSURE_DISCHARGE_PACKET_GATE_PASS_PACKET_READY` (`3/4`)
+   - Wynik:
+     - packet wykonawczy dla 2 obligations warstwy kernel-operator-closure jest gotowy,
+     - `n_obligations=2`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 193) Aktualizacja wykonawcza: QW-2305
+
+1. `QW-2305` (`report_qw2305_dual_kernel_operator_closure_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_OPERATOR_CLOSURE_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_SPECTRAL_CLOSURE_THEOREMS` (`14/16`)
+   - Wynik:
+     - realny machine-check wykonany dla obu obligations,
+     - oba przebiegi zwracaja `exit=1` i wskazuja kernel-spectral blocker-cut,
+     - jawny blocker-cut: `RG_KernelSpectralClosureToWellPosedness_Theorem`, `QFT_KernelSpectralClosureToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 194) Aktualizacja wykonawcza: QW-2306
+
+1. `QW-2306` (`report_qw2306_dual_kernel_spectral_closure_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_SPECTRAL_CLOSURE_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`6/7`)
+   - Wynik:
+     - blocker-cut z `QW-2305` zostal zredukowany do 2 core-obligacji,
+     - po jednej core-obligacji na galaz (`L12`, `L5`).
+   - Granica:
+     - `all_strict_obligations_fully_closed=False`.
+
+## 195) Aktualizacja wykonawcza: QW-2307
+
+1. `QW-2307` (`report_qw2307_dual_kernel_spectral_closure_discharge_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_SPECTRAL_CLOSURE_DISCHARGE_PACKET_GATE_PASS_PACKET_READY` (`3/4`)
+   - Wynik:
+     - packet wykonawczy dla 2 obligations warstwy kernel-spectral-closure jest gotowy,
+     - `n_obligations=2`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 196) Aktualizacja wykonawcza: QW-2308
+
+1. `QW-2308` (`report_qw2308_dual_kernel_spectral_closure_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_SPECTRAL_CLOSURE_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_SPECTRAL_INVARIANCE_THEOREMS` (`14/16`)
+   - Wynik:
+     - realny machine-check wykonany dla obu obligations,
+     - oba przebiegi zwracaja `exit=1` i wskazuja spectral-invariance blocker-cut,
+     - jawny blocker-cut: `RG_KernelSpectralInvarianceToWellPosedness_Theorem`, `QFT_KernelSpectralInvarianceToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 197) Aktualizacja wykonawcza: QW-2309
+
+1. `QW-2309` (`report_qw2309_dual_kernel_spectral_invariance_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_SPECTRAL_INVARIANCE_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`6/7`)
+   - Wynik:
+     - blocker-cut z `QW-2308` zostal zredukowany do 2 core-obligacji,
+     - po jednej core-obligacji na galaz (`L12`, `L5`).
+   - Granica:
+     - `all_strict_obligations_fully_closed=False`.
+
+## 198) Aktualizacja wykonawcza: QW-2310
+
+1. `QW-2310` (`report_qw2310_dual_kernel_spectral_invariance_discharge_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_SPECTRAL_INVARIANCE_DISCHARGE_PACKET_GATE_PASS_PACKET_READY` (`3/4`)
+   - Wynik:
+     - packet wykonawczy dla 2 obligations warstwy kernel-spectral-invariance jest gotowy,
+     - `n_obligations=2`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 199) Aktualizacja wykonawcza: QW-2311
+
+1. `QW-2311` (`report_qw2311_dual_kernel_spectral_invariance_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_SPECTRAL_INVARIANCE_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_INVARIANCE_IDENTITY_THEOREMS` (`14/16`)
+   - Wynik:
+     - realny machine-check wykonany dla obu obligations,
+     - oba przebiegi zwracaja `exit=1` i wskazuja invariance-identity blocker-cut,
+     - jawny blocker-cut: `RG_KernelInvarianceIdentityToWellPosedness_Theorem`, `QFT_KernelInvarianceIdentityToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 200) Aktualizacja wykonawcza: QW-2312
+
+1. `QW-2312` (`report_qw2312_dual_kernel_invariance_identity_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_INVARIANCE_IDENTITY_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`6/7`)
+   - Wynik:
+     - blocker-cut z `QW-2311` zostal zredukowany do 2 core-obligacji,
+     - po jednej core-obligacji na galaz (`L12`, `L5`).
+   - Granica:
+     - `all_strict_obligations_fully_closed=False`.
+
+## 201) Aktualizacja wykonawcza: QW-2313
+
+1. `QW-2313` (`report_qw2313_dual_kernel_invariance_identity_discharge_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_INVARIANCE_IDENTITY_DISCHARGE_PACKET_GATE_PASS_PACKET_READY` (`3/4`)
+   - Wynik:
+     - packet wykonawczy dla 2 obligations warstwy kernel-invariance-identity jest gotowy,
+     - `n_obligations=2`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 202) Aktualizacja wykonawcza: QW-2314
+
+1. `QW-2314` (`report_qw2314_dual_kernel_invariance_identity_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_INVARIANCE_IDENTITY_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_IDENTITY_MINIMALITY_THEOREMS` (`14/16`)
+   - Wynik:
+     - realny machine-check wykonany dla obu obligations,
+     - oba przebiegi zwracaja `exit=1` i wskazuja identity-minimality blocker-cut,
+     - jawny blocker-cut: `RG_KernelIdentityMinimalityToWellPosedness_Theorem`, `QFT_KernelIdentityMinimalityToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 203) Aktualizacja wykonawcza: QW-2315
+
+1. `QW-2315` (`report_qw2315_dual_kernel_identity_minimality_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_MINIMALITY_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`6/7`)
+   - Wynik:
+     - blocker-cut z `QW-2314` zostal zredukowany do 2 core-obligacji,
+     - po jednej core-obligacji na galaz (`L12`, `L5`).
+   - Granica:
+     - `all_strict_obligations_fully_closed=False`.
+
+## 204) Aktualizacja wykonawcza: QW-2316
+
+1. `QW-2316` (`report_qw2316_dual_kernel_identity_minimality_discharge_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_MINIMALITY_DISCHARGE_PACKET_GATE_PASS_PACKET_READY` (`3/4`)
+   - Wynik:
+     - packet wykonawczy dla 2 obligations warstwy kernel-identity-minimality jest gotowy,
+     - `n_obligations=2`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 205) Aktualizacja wykonawcza: QW-2317
+
+1. `QW-2317` (`report_qw2317_dual_kernel_identity_minimality_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_MINIMALITY_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_IDENTITY_CLOSURE_THEOREMS` (`14/16`)
+   - Wynik:
+     - realny machine-check wykonany dla obu obligations,
+     - oba przebiegi zwracaja `exit=1` i wskazuja identity-closure blocker-cut,
+     - jawny blocker-cut: `RG_KernelIdentityClosureToWellPosedness_Theorem`, `QFT_KernelIdentityClosureToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 206) Aktualizacja wykonawcza: QW-2318
+
+1. `QW-2318` (`report_qw2318_dual_kernel_identity_closure_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CLOSURE_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`6/7`)
+   - Wynik:
+     - blocker-cut z `QW-2317` zostal zredukowany do 2 core-obligacji,
+     - po jednej core-obligacji na galaz (`L12`, `L5`).
+   - Granica:
+     - `all_strict_obligations_fully_closed=False`.
+
+## 207) Aktualizacja wykonawcza: QW-2319
+
+1. `QW-2319` (`report_qw2319_dual_kernel_identity_closure_discharge_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CLOSURE_DISCHARGE_PACKET_GATE_PASS_PACKET_READY` (`3/4`)
+   - Wynik:
+     - packet wykonawczy dla 2 obligations warstwy kernel-identity-closure jest gotowy,
+     - `n_obligations=2`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 208) Aktualizacja wykonawcza: QW-2320
+
+1. `QW-2320` (`report_qw2320_dual_kernel_identity_closure_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CLOSURE_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_IDENTITY_LOCALITY_THEOREMS` (`14/16`)
+   - Wynik:
+     - realny machine-check wykonany dla obu obligations,
+     - oba przebiegi zwracaja `exit=1` i wskazuja identity-locality blocker-cut,
+     - jawny blocker-cut: `RG_KernelIdentityLocalityToWellPosedness_Theorem`, `QFT_KernelIdentityLocalityToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 209) Aktualizacja wykonawcza: QW-2321
+
+1. `QW-2321` (`report_qw2321_dual_kernel_identity_locality_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_LOCALITY_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`6/7`)
+   - Wynik:
+     - blocker-cut z `QW-2320` zostal zredukowany do 2 core-obligacji,
+     - po jednej core-obligacji na galaz (`L12`, `L5`).
+   - Granica:
+     - `all_strict_obligations_fully_closed=False`.
+
+## 210) Aktualizacja wykonawcza: QW-2322
+
+1. `QW-2322` (`report_qw2322_dual_kernel_identity_locality_discharge_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_LOCALITY_DISCHARGE_PACKET_GATE_PASS_PACKET_READY` (`3/4`)
+   - Wynik:
+     - packet wykonawczy dla 2 obligations warstwy kernel-identity-locality jest gotowy,
+     - `n_obligations=2`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 211) Aktualizacja wykonawcza: QW-2323
+
+1. `QW-2323` (`report_qw2323_dual_kernel_identity_locality_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_LOCALITY_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_IDENTITY_CONTINUITY_THEOREMS` (`14/16`)
+   - Wynik:
+     - realny machine-check wykonany dla obu obligations,
+     - oba przebiegi zwracaja `exit=1` i wskazuja identity-continuity blocker-cut,
+     - jawny blocker-cut: `RG_KernelIdentityContinuityToWellPosedness_Theorem`, `QFT_KernelIdentityContinuityToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 212) Aktualizacja wykonawcza: QW-2324
+
+1. `QW-2324` (`report_qw2324_dual_kernel_identity_continuity_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CONTINUITY_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`6/7`)
+   - Wynik:
+     - blocker-cut z `QW-2323` zostal zredukowany do 2 core-obligacji,
+     - po jednej core-obligacji na galaz (`L12`, `L5`).
+   - Granica:
+     - `all_strict_obligations_fully_closed=False`.
+
+## 213) Aktualizacja wykonawcza: QW-2325
+
+1. `QW-2325` (`report_qw2325_dual_kernel_identity_continuity_discharge_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CONTINUITY_DISCHARGE_PACKET_GATE_PASS_PACKET_READY` (`3/4`)
+   - Wynik:
+     - packet wykonawczy dla 2 obligations warstwy kernel-identity-continuity jest gotowy,
+     - `n_obligations=2`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 214) Aktualizacja wykonawcza: QW-2326
+
+1. `QW-2326` (`report_qw2326_dual_kernel_identity_continuity_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CONTINUITY_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_IDENTITY_COHERENCE_THEOREMS` (`14/16`)
+   - Wynik:
+     - realny machine-check wykonany dla obu obligations,
+     - oba przebiegi zwracaja `exit=1` i wskazuja identity-coherence blocker-cut,
+     - jawny blocker-cut: `RG_KernelIdentityCoherenceToWellPosedness_Theorem`, `QFT_KernelIdentityCoherenceToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 215) Aktualizacja wykonawcza: QW-2327
+
+1. `QW-2327` (`report_qw2327_dual_kernel_identity_coherence_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_COHERENCE_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`6/7`)
+   - Wynik:
+     - blocker-cut z `QW-2326` zostal zredukowany do 2 core-obligacji,
+     - po jednej core-obligacji na galaz (`L12`, `L5`).
+   - Granica:
+     - `all_strict_obligations_fully_closed=False`.
+
+## 216) Aktualizacja wykonawcza: QW-2328
+
+1. `QW-2328` (`report_qw2328_dual_kernel_identity_coherence_discharge_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_COHERENCE_DISCHARGE_PACKET_GATE_PASS_PACKET_READY` (`3/4`)
+   - Wynik:
+     - packet wykonawczy dla 2 obligations warstwy kernel-identity-coherence jest gotowy,
+     - `n_obligations=2`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 217) Aktualizacja wykonawcza: QW-2329
+
+1. `QW-2329` (`report_qw2329_dual_kernel_identity_coherence_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_COHERENCE_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_IDENTITY_REGULARITY_THEOREMS` (`14/16`)
+   - Wynik:
+     - realny machine-check wykonany dla obu obligations,
+     - oba przebiegi zwracaja `exit=1` i wskazuja identity-regularity blocker-cut,
+     - jawny blocker-cut: `RG_KernelIdentityRegularityToWellPosedness_Theorem`, `QFT_KernelIdentityRegularityToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 218) Aktualizacja wykonawcza: QW-2330
+
+1. `QW-2330` (`report_qw2330_dual_kernel_identity_regularity_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_REGULARITY_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`6/7`)
+   - Wynik:
+     - blocker-cut z `QW-2329` zostal zredukowany do 2 core-obligacji,
+     - po jednej core-obligacji na galaz (`L12`, `L5`).
+   - Granica:
+     - `all_strict_obligations_fully_closed=False`.
+
+## 219) Aktualizacja wykonawcza: QW-2331
+
+1. `QW-2331` (`report_qw2331_dual_kernel_identity_regularity_discharge_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_REGULARITY_DISCHARGE_PACKET_GATE_PASS_PACKET_READY` (`3/4`)
+   - Wynik:
+     - packet wykonawczy dla 2 obligations warstwy kernel-identity-regularity jest gotowy,
+     - `n_obligations=2`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 220) Aktualizacja wykonawcza: QW-2332
+
+1. `QW-2332` (`report_qw2332_dual_kernel_identity_regularity_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_REGULARITY_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_IDENTITY_CONSERVATION_THEOREMS` (`14/16`)
+   - Wynik:
+     - realny machine-check wykonany dla obu obligations,
+     - oba przebiegi zwracaja `exit=1` i wskazuja identity-conservation blocker-cut,
+     - jawny blocker-cut: `RG_KernelIdentityConservationToWellPosedness_Theorem`, `QFT_KernelIdentityConservationToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 221) Aktualizacja wykonawcza: QW-2333
+
+1. `QW-2333` (`report_qw2333_dual_kernel_identity_conservation_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CONSERVATION_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`6/7`)
+   - Wynik:
+     - blocker-cut z `QW-2332` zostal zredukowany do 2 core-obligacji,
+     - po jednej core-obligacji na galaz (`L12`, `L5`).
+   - Granica:
+     - `all_strict_obligations_fully_closed=False`.
+
+## 222) Aktualizacja wykonawcza: QW-2334
+
+1. `QW-2334` (`report_qw2334_dual_kernel_identity_conservation_discharge_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CONSERVATION_DISCHARGE_PACKET_GATE_PASS_PACKET_READY` (`3/4`)
+   - Wynik:
+     - packet wykonawczy dla 2 obligations warstwy kernel-identity-conservation jest gotowy,
+     - `n_obligations=2`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 223) Aktualizacja wykonawcza: QW-2335
+
+1. `QW-2335` (`report_qw2335_dual_kernel_identity_conservation_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CONSERVATION_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_IDENTITY_COMPATIBILITY_THEOREMS` (`14/16`)
+   - Wynik:
+     - realny machine-check wykonany dla obu obligations,
+     - oba przebiegi zwracaja `exit=1` i wskazuja identity-compatibility blocker-cut,
+     - jawny blocker-cut: `RG_KernelIdentityCompatibilityToWellPosedness_Theorem`, `QFT_KernelIdentityCompatibilityToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 224) Aktualizacja wykonawcza: QW-2336
+
+1. `QW-2336` (`report_qw2336_dual_kernel_identity_compatibility_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_COMPATIBILITY_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`6/7`)
+   - Wynik:
+     - blocker-cut z `QW-2335` zostal zredukowany do 2 core-obligacji,
+     - po jednej core-obligacji na galaz (`L12`, `L5`).
+   - Granica:
+     - `all_strict_obligations_fully_closed=False`.
+
+## 225) Aktualizacja wykonawcza: QW-2337
+
+1. `QW-2337` (`report_qw2337_dual_kernel_identity_compatibility_discharge_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_COMPATIBILITY_DISCHARGE_PACKET_GATE_PASS_PACKET_READY` (`3/4`)
+   - Wynik:
+     - packet wykonawczy dla 2 obligations warstwy kernel-identity-compatibility jest gotowy,
+     - `n_obligations=2`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 226) Aktualizacja wykonawcza: QW-2338
+
+1. `QW-2338` (`report_qw2338_dual_kernel_identity_compatibility_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_COMPATIBILITY_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_IDENTITY_INTEGRITY_THEOREMS` (`14/16`)
+   - Wynik:
+     - realny machine-check wykonany dla obu obligations,
+     - oba przebiegi zwracaja `exit=1` i wskazuja identity-integrity blocker-cut,
+     - jawny blocker-cut: `RG_KernelIdentityIntegrityToWellPosedness_Theorem`, `QFT_KernelIdentityIntegrityToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 227) Aktualizacja wykonawcza: QW-2339
+
+1. `QW-2339` (`report_qw2339_dual_kernel_identity_integrity_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_INTEGRITY_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`6/7`)
+   - Wynik:
+     - blocker-cut z `QW-2338` zostal zredukowany do 2 core-obligacji,
+     - po jednej core-obligacji na galaz (`L12`, `L5`).
+   - Granica:
+     - `all_strict_obligations_fully_closed=False`.
+
+## 228) Aktualizacja wykonawcza: QW-2340
+
+1. `QW-2340` (`report_qw2340_dual_kernel_identity_integrity_discharge_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_INTEGRITY_DISCHARGE_PACKET_GATE_PASS_PACKET_READY` (`3/4`)
+   - Wynik:
+     - packet wykonawczy dla 2 obligations warstwy kernel-identity-integrity jest gotowy,
+     - `n_obligations=2`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 229) Aktualizacja wykonawcza: QW-2341
+
+1. `QW-2341` (`report_qw2341_dual_kernel_identity_integrity_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_INTEGRITY_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_IDENTITY_CONSISTENCY_THEOREMS` (`14/16`)
+   - Wynik:
+     - realny machine-check wykonany dla obu obligations,
+     - oba przebiegi zwracaja `exit=1` i wskazuja identity-consistency blocker-cut,
+     - jawny blocker-cut: `RG_KernelIdentityConsistencyToWellPosedness_Theorem`, `QFT_KernelIdentityConsistencyToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 230) Aktualizacja wykonawcza: QW-2342
+
+1. `QW-2342` (`report_qw2342_dual_kernel_identity_consistency_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CONSISTENCY_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`6/7`)
+   - Wynik:
+     - blocker-cut z `QW-2341` zostal zredukowany do 2 core-obligacji,
+     - po jednej core-obligacji na galaz (`L12`, `L5`).
+   - Granica:
+     - `all_strict_obligations_fully_closed=False`.
+
+## 231) Aktualizacja wykonawcza: QW-2343
+
+1. `QW-2343` (`report_qw2343_dual_kernel_identity_consistency_discharge_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CONSISTENCY_DISCHARGE_PACKET_GATE_PASS_PACKET_READY` (`3/4`)
+   - Wynik:
+     - packet wykonawczy dla 2 obligations warstwy kernel-identity-consistency jest gotowy,
+     - `n_obligations=2`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 232) Aktualizacja wykonawcza: QW-2344
+
+1. `QW-2344` (`report_qw2344_dual_kernel_identity_consistency_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CONSISTENCY_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_IDENTITY_COMPLETENESS_THEOREMS` (`14/16`)
+   - Wynik:
+     - realny machine-check wykonany dla obu obligations,
+     - oba przebiegi zwracaja `exit=1` i wskazuja identity-completeness blocker-cut,
+     - jawny blocker-cut: `RG_KernelIdentityCompletenessToWellPosedness_Theorem`, `QFT_KernelIdentityCompletenessToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 233) Aktualizacja wykonawcza: QW-2345
+
+1. `QW-2345` (`report_qw2345_dual_kernel_identity_completeness_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_COMPLETENESS_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`6/7`)
+   - Wynik:
+     - blocker-cut z `QW-2344` zostal zredukowany do 2 core-obligacji,
+     - po jednej core-obligacji na galaz (`L12`, `L5`).
+   - Granica:
+     - `all_strict_obligations_fully_closed=False`.
+
+## 234) Aktualizacja wykonawcza: QW-2346
+
+1. `QW-2346` (`report_qw2346_dual_kernel_identity_completeness_discharge_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_COMPLETENESS_DISCHARGE_PACKET_GATE_PASS_PACKET_READY` (`3/4`)
+   - Wynik:
+     - packet wykonawczy dla 2 obligations warstwy kernel-identity-completeness jest gotowy,
+     - `n_obligations=2`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 235) Aktualizacja wykonawcza: QW-2347
+
+1. `QW-2347` (`report_qw2347_dual_kernel_identity_completeness_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_COMPLETENESS_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_IDENTITY_SATURATION_THEOREMS` (`14/16`)
+   - Wynik:
+     - realny machine-check wykonany dla obu obligations,
+     - oba przebiegi zwracaja `exit=1` i wskazuja identity-saturation blocker-cut,
+     - jawny blocker-cut: `RG_KernelIdentitySaturationToWellPosedness_Theorem`, `QFT_KernelIdentitySaturationToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 236) Aktualizacja wykonawcza: QW-2348
+
+1. `QW-2348` (`report_qw2348_dual_kernel_identity_saturation_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_SATURATION_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`6/7`)
+   - Wynik:
+     - blocker-cut z `QW-2347` zostal zredukowany do 2 core-obligacji,
+     - po jednej core-obligacji na galaz (`L12`, `L5`).
+   - Granica:
+     - `all_strict_obligations_fully_closed=False`.
+
+## 237) Aktualizacja wykonawcza: QW-2349
+
+1. `QW-2349` (`report_qw2349_dual_kernel_identity_saturation_discharge_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_SATURATION_DISCHARGE_PACKET_GATE_PASS_PACKET_READY` (`3/4`)
+   - Wynik:
+     - packet wykonawczy dla 2 obligations warstwy kernel-identity-saturation jest gotowy,
+     - `n_obligations=2`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 238) Aktualizacja wykonawcza: QW-2350
+
+1. `QW-2350` (`report_qw2350_dual_kernel_identity_saturation_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_SATURATION_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_IDENTITY_STABILITY_THEOREMS` (`14/16`)
+   - Wynik:
+     - realny machine-check wykonany dla obu obligations,
+     - oba przebiegi zwracaja `exit=1` i wskazuja identity-stability blocker-cut,
+     - jawny blocker-cut: `RG_KernelIdentityStabilityToWellPosedness_Theorem`, `QFT_KernelIdentityStabilityToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 239) Aktualizacja wykonawcza: QW-2351
+
+1. `QW-2351` (`report_qw2351_dual_kernel_identity_stability_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_STABILITY_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`6/7`)
+   - Wynik:
+     - blocker-cut z `QW-2350` zostal zredukowany do 2 core-obligacji,
+     - po jednej core-obligacji na galaz (`L12`, `L5`).
+   - Granica:
+     - `all_strict_obligations_fully_closed=False`.
+
+## 240) Aktualizacja wykonawcza: QW-2352
+
+1. `QW-2352` (`report_qw2352_dual_kernel_identity_stability_discharge_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_STABILITY_DISCHARGE_PACKET_GATE_PASS_PACKET_READY` (`3/4`)
+   - Wynik:
+     - packet wykonawczy dla 2 obligations warstwy kernel-identity-stability jest gotowy,
+     - `n_obligations=2`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 241) Aktualizacja wykonawcza: QW-2353
+
+1. `QW-2353` (`report_qw2353_dual_kernel_identity_stability_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_STABILITY_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_IDENTITY_ROBUSTNESS_THEOREMS` (`14/16`)
+   - Wynik:
+     - realny machine-check wykonany dla obu obligations,
+     - oba przebiegi zwracaja `exit=1` i wskazuja identity-robustness blocker-cut,
+     - jawny blocker-cut: `RG_KernelIdentityRobustnessToWellPosedness_Theorem`, `QFT_KernelIdentityRobustnessToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 242) Aktualizacja wykonawcza: QW-2354
+
+1. `QW-2354` (`report_qw2354_dual_kernel_identity_robustness_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_ROBUSTNESS_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`6/7`)
+   - Wynik:
+     - blocker-cut z `QW-2353` zostal zredukowany do 2 core-obligacji,
+     - po jednej core-obligacji na galaz (`L12`, `L5`).
+   - Granica:
+     - `all_strict_obligations_fully_closed=False`.
+
+## 243) Aktualizacja wykonawcza: QW-2355
+
+1. `QW-2355` (`report_qw2355_dual_kernel_identity_robustness_discharge_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_ROBUSTNESS_DISCHARGE_PACKET_GATE_PASS_PACKET_READY` (`3/4`)
+   - Wynik:
+     - packet wykonawczy dla 2 obligations warstwy kernel-identity-robustness jest gotowy,
+     - `n_obligations=2`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 244) Aktualizacja wykonawcza: QW-2356
+
+1. `QW-2356` (`report_qw2356_dual_kernel_identity_robustness_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_ROBUSTNESS_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_IDENTITY_RESILIENCE_THEOREMS` (`14/16`)
+   - Wynik:
+     - realny machine-check wykonany dla obu obligations,
+     - oba przebiegi zwracaja `exit=1` i wskazuja identity-resilience blocker-cut,
+     - jawny blocker-cut: `RG_KernelIdentityResilienceToWellPosedness_Theorem`, `QFT_KernelIdentityResilienceToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 245) Aktualizacja wykonawcza: QW-2357
+
+1. `QW-2357` (`report_qw2357_dual_kernel_identity_resilience_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_RESILIENCE_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`6/7`)
+   - Wynik:
+     - blocker-cut z `QW-2356` zostal zredukowany do 2 core-obligacji,
+     - po jednej core-obligacji na galaz (`L12`, `L5`).
+   - Granica:
+     - `all_strict_obligations_fully_closed=False`.
+
+## 246) Aktualizacja wykonawcza: QW-2358
+
+1. `QW-2358` (`report_qw2358_dual_kernel_identity_resilience_discharge_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_RESILIENCE_DISCHARGE_PACKET_GATE_PASS_PACKET_READY` (`3/4`)
+   - Wynik:
+     - packet wykonawczy dla 2 obligations warstwy kernel-identity-resilience jest gotowy,
+     - `n_obligations=2`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 247) Aktualizacja wykonawcza: QW-2359
+
+1. `QW-2359` (`report_qw2359_dual_kernel_identity_resilience_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_RESILIENCE_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_IDENTITY_CONSOLIDATION_THEOREMS` (`14/16`)
+   - Wynik:
+     - realny machine-check wykonany dla obu obligations,
+     - oba przebiegi zwracaja `exit=1` i wskazuja identity-consolidation blocker-cut,
+     - jawny blocker-cut: `RG_KernelIdentityConsolidationToWellPosedness_Theorem`, `QFT_KernelIdentityConsolidationToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 248) Aktualizacja wykonawcza: QW-2360
+
+1. `QW-2360` (`report_qw2360_dual_kernel_identity_consolidation_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CONSOLIDATION_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`6/7`)
+   - Wynik:
+     - blocker-cut z `QW-2359` zostal zredukowany do 2 core-obligacji,
+     - po jednej core-obligacji na galaz (`L12`, `L5`).
+   - Granica:
+     - `all_strict_obligations_fully_closed=False`.
+
+## 249) Aktualizacja wykonawcza: QW-2361
+
+1. `QW-2361` (`report_qw2361_dual_kernel_identity_consolidation_discharge_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CONSOLIDATION_DISCHARGE_PACKET_GATE_PASS_PACKET_READY` (`3/4`)
+   - Wynik:
+     - packet wykonawczy dla 2 obligations warstwy kernel-identity-consolidation jest gotowy,
+     - `n_obligations=2`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 250) Aktualizacja wykonawcza: QW-2362
+
+1. `QW-2362` (`report_qw2362_dual_kernel_identity_consolidation_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CONSOLIDATION_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_IDENTITY_INTEGRATION_THEOREMS` (`14/16`)
+   - Wynik:
+     - realny machine-check wykonany dla obu obligations,
+     - oba przebiegi zwracaja `exit=1` i wskazuja identity-integration blocker-cut,
+     - jawny blocker-cut: `RG_KernelIdentityIntegrationToWellPosedness_Theorem`, `QFT_KernelIdentityIntegrationToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 251) Aktualizacja wykonawcza: QW-2363
+
+1. `QW-2363` (`report_qw2363_dual_kernel_identity_integration_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_INTEGRATION_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`6/7`)
+   - Wynik:
+     - blocker-cut z `QW-2362` zostal zredukowany do 2 core-obligacji,
+     - po jednej core-obligacji na galaz (`L12`, `L5`).
+   - Granica:
+     - `all_strict_obligations_fully_closed=False`.
+
+## 252) Aktualizacja wykonawcza: QW-2364
+
+1. `QW-2364` (`report_qw2364_dual_kernel_identity_integration_discharge_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_INTEGRATION_DISCHARGE_PACKET_GATE_PASS_PACKET_READY` (`3/4`)
+   - Wynik:
+     - packet wykonawczy dla 2 obligations warstwy kernel-identity-integration jest gotowy,
+     - `n_obligations=2`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 253) Aktualizacja wykonawcza: QW-2365
+
+1. `QW-2365` (`report_qw2365_dual_kernel_identity_integration_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_INTEGRATION_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_IDENTITY_UNIFICATION_THEOREMS` (`14/16`)
+   - Wynik:
+     - realny machine-check wykonany dla obu obligations,
+     - oba przebiegi zwracaja `exit=1` i wskazuja identity-unification blocker-cut,
+     - jawny blocker-cut: `RG_KernelIdentityUnificationToWellPosedness_Theorem`, `QFT_KernelIdentityUnificationToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 254) Aktualizacja wykonawcza: QW-2366
+
+1. `QW-2366` (`report_qw2366_dual_kernel_identity_unification_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_UNIFICATION_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`6/7`)
+   - Wynik:
+     - blocker-cut z `QW-2365` zostal zredukowany do 2 core-obligacji,
+     - po jednej core-obligacji na galaz (`L12`, `L5`).
+   - Granica:
+     - `all_strict_obligations_fully_closed=False`.
+
+## 255) Aktualizacja wykonawcza: QW-2367
+
+1. `QW-2367` (`report_qw2367_dual_kernel_identity_unification_discharge_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_UNIFICATION_DISCHARGE_PACKET_GATE_PASS_PACKET_READY` (`3/4`)
+   - Wynik:
+     - packet wykonawczy dla 2 obligations warstwy kernel-identity-unification jest gotowy,
+     - `n_obligations=2`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 256) Aktualizacja wykonawcza: QW-2368
+
+1. `QW-2368` (`report_qw2368_dual_kernel_identity_unification_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_UNIFICATION_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_IDENTITY_UNIVERSALITY_THEOREMS` (`14/16`)
+   - Wynik:
+     - realny machine-check wykonany dla obu obligations,
+     - oba przebiegi zwracaja `exit=1` i wskazuja identity-universality blocker-cut,
+     - jawny blocker-cut: `RG_KernelIdentityUniversalityToWellPosedness_Theorem`, `QFT_KernelIdentityUniversalityToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 257) Aktualizacja wykonawcza: QW-2369
+
+1. `QW-2369` (`report_qw2369_dual_kernel_identity_universality_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_UNIVERSALITY_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`6/7`)
+   - Wynik:
+     - blocker-cut z `QW-2368` zostal zredukowany do 2 core-obligacji,
+     - po jednej core-obligacji na galaz (`L12`, `L5`).
+   - Granica:
+     - `all_strict_obligations_fully_closed=False`.
+
+## 258) Aktualizacja wykonawcza: QW-2370
+
+1. `QW-2370` (`report_qw2370_dual_kernel_identity_universality_discharge_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_UNIVERSALITY_DISCHARGE_PACKET_GATE_PASS_PACKET_READY` (`3/4`)
+   - Wynik:
+     - packet wykonawczy dla 2 obligations warstwy kernel-identity-universality jest gotowy,
+     - `n_obligations=2`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 259) Aktualizacja wykonawcza: QW-2371
+
+1. `QW-2371` (`report_qw2371_dual_kernel_identity_universality_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_UNIVERSALITY_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_IDENTITY_TOTALITY_THEOREMS` (`14/16`)
+   - Wynik:
+     - realny machine-check wykonany dla obu obligations,
+     - oba przebiegi zwracaja `exit=1` i wskazuja identity-totality blocker-cut,
+     - jawny blocker-cut: `RG_KernelIdentityTotalityToWellPosedness_Theorem`, `QFT_KernelIdentityTotalityToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 260) Aktualizacja wykonawcza: QW-2372
+
+1. `QW-2372` (`report_qw2372_dual_kernel_identity_totality_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_TOTALITY_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`6/7`)
+   - Wynik:
+     - blocker-cut z `QW-2371` zostal zredukowany do 2 core-obligacji,
+     - po jednej core-obligacji na galaz (`L12`, `L5`).
+   - Granica:
+     - `all_strict_obligations_fully_closed=False`.
+
+## 261) Aktualizacja wykonawcza: QW-2373
+
+1. `QW-2373` (`report_qw2373_dual_kernel_identity_totality_discharge_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_TOTALITY_DISCHARGE_PACKET_GATE_PASS_PACKET_READY` (`3/4`)
+   - Wynik:
+     - packet wykonawczy dla 2 obligations warstwy kernel-identity-totality jest gotowy,
+     - `n_obligations=2`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 262) Aktualizacja wykonawcza: QW-2374
+
+1. `QW-2374` (`report_qw2374_dual_kernel_identity_totality_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_TOTALITY_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_IDENTITY_FINALITY_THEOREMS` (`14/16`)
+   - Wynik:
+     - realny machine-check wykonany dla obu obligations,
+     - oba przebiegi zwracaja `exit=1` i wskazuja identity-finality blocker-cut,
+     - jawny blocker-cut: `RG_KernelIdentityFinalityToWellPosedness_Theorem`, `QFT_KernelIdentityFinalityToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 263) Aktualizacja wykonawcza: QW-2375
+
+1. `QW-2375` (`report_qw2375_dual_kernel_identity_finality_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_FINALITY_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`6/7`)
+   - Wynik:
+     - blocker-cut z `QW-2374` zostal zredukowany do 2 core-obligacji,
+     - po jednej core-obligacji na galaz (`L12`, `L5`).
+   - Granica:
+     - `all_strict_obligations_fully_closed=False`.
+
+## 264) Aktualizacja wykonawcza: QW-2376
+
+1. `QW-2376` (`report_qw2376_dual_kernel_identity_finality_discharge_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_FINALITY_DISCHARGE_PACKET_GATE_PASS_PACKET_READY` (`3/4`)
+   - Wynik:
+     - packet wykonawczy dla 2 obligations warstwy kernel-identity-finality jest gotowy,
+     - `n_obligations=2`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 265) Aktualizacja wykonawcza: QW-2377
+
+1. `QW-2377` (`report_qw2377_dual_kernel_identity_finality_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_FINALITY_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_IDENTITY_CLOSURE_THEOREMS` (`14/16`)
+   - Wynik:
+     - realny machine-check wykonany dla obu obligations,
+     - oba przebiegi zwracaja `exit=1` i wskazuja identity-closure blocker-cut,
+     - jawny blocker-cut: `RG_KernelIdentityClosureToWellPosedness_Theorem`, `QFT_KernelIdentityClosureToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 266) Aktualizacja wykonawcza: QW-2378
+
+1. `QW-2378` (`report_qw2378_dual_kernel_identity_closure_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CLOSURE_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`6/7`)
+   - Wynik:
+     - blocker-cut z `QW-2377` zostal zredukowany do 2 core-obligacji,
+     - po jednej core-obligacji na galaz (`L12`, `L5`).
+   - Granica:
+     - `all_strict_obligations_fully_closed=False`.
+
+## 267) Aktualizacja wykonawcza: QW-2379
+
+1. `QW-2379` (`report_qw2379_dual_kernel_identity_closure_discharge_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CLOSURE_DISCHARGE_PACKET_GATE_PASS_PACKET_READY` (`3/4`)
+   - Wynik:
+     - packet wykonawczy dla 2 obligations warstwy kernel-identity-closure jest gotowy,
+     - `n_obligations=2`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 268) Aktualizacja wykonawcza: QW-2380
+
+1. `QW-2380` (`report_qw2380_dual_kernel_identity_closure_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CLOSURE_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_IDENTITY_LOCALITY_THEOREMS` (`14/16`)
+   - Wynik:
+     - realny machine-check wykonany dla obu obligations,
+     - oba przebiegi zwracaja `exit=1` i wskazuja identity-locality blocker-cut,
+     - jawny blocker-cut: `RG_KernelIdentityLocalityToWellPosedness_Theorem`, `QFT_KernelIdentityLocalityToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 269) Aktualizacja wykonawcza: QW-2381
+
+1. `QW-2381` (`report_qw2381_dual_kernel_cycle_recurrence_gate.json`)
+   - Verdict: `DUAL_KERNEL_CYCLE_RECURRENCE_GATE_PASS_BLOCKER_LOOP_CONFIRMED` (`7/7`)
+   - Wynik:
+     - blocker-cut z `QW-2380` jest identyczny z blocker-cut bazowym `QW-2320` (branch+symbol),
+     - petla blockerow zostala formalnie potwierdzona (brak netto nowego theorem-level discharge w tej petli).
+   - Granica:
+     - `theorem_level_progress_assessed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 270) Aktualizacja wykonawcza: QW-2382
+
+1. `QW-2382` (`report_qw2382_dual_noncyclic_strategy_packet_gate.json`)
+   - Verdict: `DUAL_NONCYCLIC_STRATEGY_PACKET_GATE_PASS_PACKET_READY` (`5/6`)
+   - Wynik:
+     - zbudowano formalny pakiet strategii niecyklicznej (`NC1..NC4`),
+     - pakiet jawnie zabrania powtorzenia kroku historycznego przy identycznym blocker-cut.
+   - Granica:
+     - `execution_admitted=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 271) Aktualizacja wykonawcza: QW-2383
+
+1. `QW-2383` (`report_qw2383_dual_noncyclic_step_admission_gate.json`)
+   - Verdict: `DUAL_NONCYCLIC_STEP_ADMISSION_GATE_PASS_REPEAT_STEP_REJECTED` (`9/9`)
+   - Wynik:
+     - kandydat kroku (`EXTRACT_MINIMAL_KERNEL_IDENTITY_LOCALITY_BLOCKER_CUT`) zostal formalnie odrzucony jako powtorka historyczna,
+     - hard violations (`NC1/NC2/NC3`) zostaly jawnie potwierdzone.
+   - Granica:
+     - `admission_denied=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 272) Aktualizacja wykonawcza: QW-2384
+
+1. `QW-2384` (`report_qw2384_dual_kernel_identity_cycle_structure_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CYCLE_STRUCTURE_GATE_PASS_STRUCTURAL_CYCLE_CONFIRMED` (`10/12`)
+   - Wynik:
+     - zbudowano dual graf theorem-zaleznosci (`theorem -> exact dependency`) dla warstwy identity,
+     - potwierdzono SCC recurrencyjny dla obu blocker symboli (`scc_size=20` na `L12` i `L5`),
+     - w aktualnym grafie nie wykryto niecyklicznych anchor-candidate.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 273) Aktualizacja wykonawcza: QW-2385
+
+1. `QW-2385` (`report_qw2385_dual_kernel_identity_anchor_obligation_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_ANCHOR_OBLIGATION_PACKET_GATE_PASS_PACKET_READY` (`5/7`)
+   - Wynik:
+     - zdefiniowano minimalny pakiet `2` niecyklicznych obligacji anchor (`L12`,`L5`),
+     - acceptance-rules wymagaja proof-termu niecyklicznego, machine-checkable i axiom-free.
+   - Granica:
+     - `anchor_evidence_present=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 274) Aktualizacja wykonawcza: QW-2386
+
+1. `QW-2386` (`report_qw2386_dual_kernel_identity_anchor_evidence_admission_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_ANCHOR_EVIDENCE_ADMISSION_GATE_PASS_ADMITTED` (`6/9`)
+   - Wynik:
+     - po dostarczeniu plikow anchor dla obu galezi admission zostalo otwarte,
+     - hard hygiene kandydatow jest spelnione (`no axiom`, `no _DerivedOrPending`).
+   - Granica:
+     - `admission_allowed=True`,
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 275) Aktualizacja wykonawcza: QW-2387
+
+1. `QW-2387` (`report_qw2387_dual_kernel_identity_anchor_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_ANCHOR_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_ACTION_LEVEL_ANCHOR_PROVIDERS` (`9/11`)
+   - Wynik:
+     - wykonano realny machine-check dla obu kandydatow anchor (`exit=1/1`),
+     - blocker-cut przesuniety poza petle identity-SCC do warstwy action-level provider:
+       - `RG_ActionLevel_PhysicalBridge_Derivation`,
+       - `QFT_ActionLevel_PhysicalBridge_Derivation`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 276) Aktualizacja wykonawcza: QW-2388
+
+1. `QW-2388` (`report_qw2388_dual_action_level_anchor_provider_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_ACTION_LEVEL_ANCHOR_PROVIDER_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`6/7`)
+   - Wynik:
+     - blocker-cut z `QW-2387` zostal zredukowany do 2 core-obligacji,
+     - po jednej core-obligacji na galaz (`L12`, `L5`) w warstwie action-level provider.
+   - Granica:
+     - `all_strict_obligations_fully_closed=False`.
+
+## 277) Aktualizacja wykonawcza: QW-2389
+
+1. `QW-2389` (`report_qw2389_dual_action_level_anchor_provider_discharge_packet_gate.json`)
+   - Verdict: `DUAL_ACTION_LEVEL_ANCHOR_PROVIDER_DISCHARGE_PACKET_GATE_PASS_PACKET_READY` (`3/4`)
+   - Wynik:
+     - packet wykonawczy dla 2 obligations warstwy action-level anchor provider jest gotowy,
+     - `n_obligations=2`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 278) Aktualizacja wykonawcza: QW-2390
+
+1. `QW-2390` (`report_qw2390_dual_action_level_anchor_provider_execution_status_gate.json`)
+   - Verdict: `DUAL_ACTION_LEVEL_ANCHOR_PROVIDER_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_FOUNDATIONAL_DERIVATION_SYMBOLS` (`14/16`)
+   - Wynik:
+     - realny machine-check wykonany dla obu obligations,
+     - oba przebiegi zwracaja `exit=1` i wskazuja foundational blocker-cut,
+     - jawny blocker-cut: `RG_FundamentalActionToWellPosedness_Derivation`, `QFT_FundamentalActionToPositivity_Derivation`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 279) Aktualizacja wykonawcza: QW-2391
+
+1. `QW-2391` (`report_qw2391_dual_action_level_anchor_frontier_alignment_gate.json`)
+   - Verdict: `DUAL_ACTION_LEVEL_ANCHOR_FRONTIER_ALIGNMENT_GATE_PASS_ALIGNED_WITH_FOUNDATIONAL_CHAIN` (`6/8`)
+   - Wynik:
+     - blocker-cut z anchor branch (`QW-2390`) jest identyczny z historycznym foundational frontier (`QW-2296`),
+     - formalnie potwierdzono brak nowego theorem-level closure claim na tej warstwie.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 280) Aktualizacja wykonawcza: QW-2392
+
+1. `QW-2392` (`report_qw2392_dual_foundational_chain_reuse_admission_gate.json`)
+   - Verdict: `DUAL_FOUNDATIONAL_CHAIN_REUSE_ADMISSION_GATE_PASS_ADMITTED` (`8/11`)
+   - Wynik:
+     - formalnie zabroniono reuse historycznej sciezki foundational bez nowego niecyklicznego evidence,
+     - po dostarczeniu foundational anchor candidates admission zostalo otwarte.
+   - Granica:
+     - `admission_allowed=True`,
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 281) Aktualizacja wykonawcza: QW-2393
+
+1. `QW-2393` (`report_qw2393_dual_foundational_noncyclic_anchor_obligation_packet_gate.json`)
+   - Verdict: `DUAL_FOUNDATIONAL_NONCYCLIC_ANCHOR_OBLIGATION_PACKET_GATE_PASS_PACKET_READY` (`6/8`)
+   - Wynik:
+     - zbudowano minimalny pakiet `2` foundational noncyclic obligations (`L12`,`L5`),
+     - acceptance-rules wymagaja proof-termow niecyklicznych, machine-checkable i axiom-free.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 282) Aktualizacja wykonawcza: QW-2394
+
+1. `QW-2394` (`report_qw2394_dual_foundational_anchor_execution_status_gate.json`)
+   - Verdict: `DUAL_FOUNDATIONAL_ANCHOR_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_FUNDAMENTAL_KERNEL_DYNAMICS_THEOREMS` (`9/11`)
+   - Wynik:
+     - realny machine-check wykonany dla obu foundational anchor candidates (`exit=1/1`),
+     - jawny blocker-cut: `RG_FundamentalKernelDynamicsToWellPosedness_Theorem`, `QFT_FundamentalKernelDynamicsToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 283) Aktualizacja wykonawcza: QW-2395
+
+1. `QW-2395` (`report_qw2395_dual_foundational_anchor_frontier_alignment_gate.json`)
+   - Verdict: `DUAL_FOUNDATIONAL_ANCHOR_FRONTIER_ALIGNMENT_GATE_PASS_ALIGNED_WITH_FUNDAMENTAL_KERNEL_CHAIN` (`6/8`)
+   - Wynik:
+     - blocker-cut z foundational anchor branch (`QW-2394`) jest identyczny z historycznym frontierem fundamental-kernel (`QW-2299`),
+     - formalnie potwierdzono brak nowego theorem-level closure claim na tej warstwie.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 284) Aktualizacja wykonawcza: QW-2396
+
+1. `QW-2396` (`report_qw2396_dual_fundamental_chain_reuse_admission_gate.json`)
+   - Verdict: `DUAL_FUNDAMENTAL_CHAIN_REUSE_ADMISSION_GATE_PASS_ADMITTED` (`9/12`)
+   - Wynik:
+     - formalnie utrzymano zakaz reuse historycznej sciezki fundamental-kernel bez nowego niecyklicznego evidence,
+     - po dostarczeniu fundamental noncyclic anchor candidates admission zostalo otwarte (`admission_allowed=True`).
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 285) Aktualizacja wykonawcza: QW-2397
+
+1. `QW-2397` (`report_qw2397_dual_fundamental_noncyclic_anchor_obligation_packet_gate.json`)
+   - Verdict: `DUAL_FUNDAMENTAL_NONCYCLIC_ANCHOR_OBLIGATION_PACKET_GATE_PASS_PACKET_READY` (`6/8`)
+   - Wynik:
+     - zbudowano minimalny pakiet `2` fundamental noncyclic obligations (`L12`,`L5`),
+     - acceptance-rules wymagaja proof-termow niecyklicznych, machine-checkable i axiom-free.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 286) Aktualizacja wykonawcza: QW-2398
+
+1. `QW-2398` (`report_qw2398_dual_fundamental_anchor_execution_status_gate.json`)
+   - Verdict: `DUAL_FUNDAMENTAL_ANCHOR_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_OPERATOR_CLOSURE_THEOREMS` (`10/12`)
+   - Wynik:
+     - realny machine-check wykonany dla obu fundamental anchor candidates (`exit=1/1`),
+     - jawny blocker-cut: `RG_KernelOperatorClosureToWellPosedness_Theorem`, `QFT_KernelOperatorClosureToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 287) Aktualizacja wykonawcza: QW-2399
+
+1. `QW-2399` (`report_qw2399_dual_fundamental_anchor_frontier_alignment_gate.json`)
+   - Verdict: `DUAL_FUNDAMENTAL_ANCHOR_FRONTIER_ALIGNMENT_GATE_PASS_ALIGNED_WITH_KERNEL_OPERATOR_CHAIN` (`6/8`)
+   - Wynik:
+     - blocker-cut z fundamental anchor branch (`QW-2398`) jest identyczny z historycznym frontierem kernel-operator (`QW-2302`),
+     - formalnie potwierdzono brak nowego theorem-level closure claim na tej warstwie.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 288) Aktualizacja wykonawcza: QW-2400
+
+1. `QW-2400` (`report_qw2400_dual_kernel_operator_chain_reuse_admission_gate.json`)
+   - Verdict: `DUAL_KERNEL_OPERATOR_CHAIN_REUSE_ADMISSION_GATE_PASS_ADMITTED` (`9/12`)
+   - Wynik:
+     - formalnie utrzymano zakaz reuse historycznej sciezki kernel-operator bez nowego niecyklicznego evidence,
+     - po dostarczeniu kernel-operator noncyclic anchor candidates admission zostalo otwarte (`admission_allowed=True`).
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 289) Aktualizacja wykonawcza: QW-2401
+
+1. `QW-2401` (`report_qw2401_dual_kernel_operator_noncyclic_anchor_obligation_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_OPERATOR_NONCYCLIC_ANCHOR_OBLIGATION_PACKET_GATE_PASS_PACKET_READY` (`6/8`)
+   - Wynik:
+     - zbudowano minimalny pakiet `2` kernel-operator noncyclic obligations (`L12`,`L5`),
+     - acceptance-rules wymagaja proof-termow niecyklicznych, machine-checkable i axiom-free.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 290) Aktualizacja wykonawcza: QW-2402
+
+1. `QW-2402` (`report_qw2402_dual_kernel_operator_anchor_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_OPERATOR_ANCHOR_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_SPECTRAL_CLOSURE_THEOREMS` (`10/12`)
+   - Wynik:
+     - realny machine-check wykonany dla obu kernel-operator anchor candidates (`exit=1/1`),
+     - jawny blocker-cut: `RG_KernelSpectralClosureToWellPosedness_Theorem`, `QFT_KernelSpectralClosureToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 291) Aktualizacja wykonawcza: QW-2403
+
+1. `QW-2403` (`report_qw2403_dual_kernel_operator_anchor_frontier_alignment_gate.json`)
+   - Verdict: `DUAL_KERNEL_OPERATOR_ANCHOR_FRONTIER_ALIGNMENT_GATE_PASS_ALIGNED_WITH_KERNEL_SPECTRAL_CHAIN` (`6/8`)
+   - Wynik:
+     - blocker-cut z kernel-operator anchor branch (`QW-2402`) jest identyczny z historycznym frontierem kernel-spectral (`QW-2305`),
+     - formalnie potwierdzono brak nowego theorem-level closure claim na tej warstwie.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 292) Aktualizacja wykonawcza: QW-2404
+
+1. `QW-2404` (`report_qw2404_dual_kernel_spectral_chain_reuse_admission_gate.json`)
+   - Verdict: `DUAL_KERNEL_SPECTRAL_CHAIN_REUSE_ADMISSION_GATE_PASS_ADMITTED` (`9/12`)
+   - Wynik:
+     - formalnie utrzymano zakaz reuse historycznej sciezki kernel-spectral bez nowego niecyklicznego evidence,
+     - po dostarczeniu kernel-spectral noncyclic anchor candidates admission zostalo otwarte (`admission_allowed=True`).
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 293) Aktualizacja wykonawcza: QW-2405
+
+1. `QW-2405` (`report_qw2405_dual_kernel_spectral_noncyclic_anchor_obligation_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_SPECTRAL_NONCYCLIC_ANCHOR_OBLIGATION_PACKET_GATE_PASS_PACKET_READY` (`6/8`)
+   - Wynik:
+     - zbudowano minimalny pakiet `2` kernel-spectral noncyclic obligations (`L12`,`L5`),
+     - acceptance-rules wymagaja proof-termow niecyklicznych, machine-checkable i axiom-free.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 294) Aktualizacja wykonawcza: QW-2406
+
+1. `QW-2406` (`report_qw2406_dual_kernel_spectral_anchor_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_SPECTRAL_ANCHOR_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_SPECTRAL_INVARIANCE_THEOREMS` (`10/12`)
+   - Wynik:
+     - realny machine-check wykonany dla obu kernel-spectral anchor candidates (`exit=1/1`),
+     - jawny blocker-cut: `RG_KernelSpectralInvarianceToWellPosedness_Theorem`, `QFT_KernelSpectralInvarianceToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 295) Aktualizacja wykonawcza: QW-2407
+
+1. `QW-2407` (`report_qw2407_dual_kernel_spectral_anchor_frontier_alignment_gate.json`)
+   - Verdict: `DUAL_KERNEL_SPECTRAL_ANCHOR_FRONTIER_ALIGNMENT_GATE_PASS_ALIGNED_WITH_SPECTRAL_INVARIANCE_CHAIN` (`6/8`)
+   - Wynik:
+     - blocker-cut z kernel-spectral anchor branch (`QW-2406`) jest identyczny z historycznym frontierem spectral-invariance (`QW-2308`),
+     - formalnie potwierdzono brak nowego theorem-level closure claim na tej warstwie.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 296) Aktualizacja wykonawcza: QW-2408
+
+1. `QW-2408` (`report_qw2408_dual_kernel_spectral_invariance_chain_reuse_admission_gate.json`)
+   - Verdict: `DUAL_KERNEL_SPECTRAL_INVARIANCE_CHAIN_REUSE_ADMISSION_GATE_PASS_ADMITTED` (`9/12`)
+   - Wynik:
+     - formalnie utrzymano zakaz reuse historycznej sciezki kernel-spectral-invariance bez nowego niecyklicznego evidence,
+     - po dostarczeniu kernel-spectral-invariance noncyclic anchor candidates admission zostalo otwarte (`admission_allowed=True`).
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 297) Aktualizacja wykonawcza: QW-2409
+
+1. `QW-2409` (`report_qw2409_dual_kernel_spectral_invariance_noncyclic_anchor_obligation_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_SPECTRAL_INVARIANCE_NONCYCLIC_ANCHOR_OBLIGATION_PACKET_GATE_PASS_PACKET_READY` (`6/8`)
+   - Wynik:
+     - zbudowano minimalny pakiet `2` kernel-spectral-invariance noncyclic obligations (`L12`,`L5`),
+     - acceptance-rules wymagaja proof-termow niecyklicznych, machine-checkable i axiom-free.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 298) Aktualizacja wykonawcza: QW-2410
+
+1. `QW-2410` (`report_qw2410_dual_kernel_spectral_invariance_anchor_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_SPECTRAL_INVARIANCE_ANCHOR_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_INVARIANCE_IDENTITY_THEOREMS` (`10/12`)
+   - Wynik:
+     - realny machine-check wykonany dla obu kernel-spectral-invariance anchor candidates (`exit=1/1`),
+     - jawny blocker-cut: `RG_KernelInvarianceIdentityToWellPosedness_Theorem`, `QFT_KernelInvarianceIdentityToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 299) Aktualizacja wykonawcza: QW-2411
+
+1. `QW-2411` (`report_qw2411_dual_kernel_spectral_invariance_anchor_frontier_alignment_gate.json`)
+   - Verdict: `DUAL_KERNEL_SPECTRAL_INVARIANCE_ANCHOR_FRONTIER_ALIGNMENT_GATE_PASS_ALIGNED_WITH_INVARIANCE_IDENTITY_CHAIN` (`6/8`)
+   - Wynik:
+     - blocker-cut z kernel-spectral-invariance anchor branch (`QW-2410`) jest identyczny z historycznym frontierem invariance-identity (`QW-2311`),
+     - formalnie potwierdzono brak nowego theorem-level closure claim na tej warstwie.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 300) Aktualizacja wykonawcza: QW-2412
+
+1. `QW-2412` (`report_qw2412_dual_kernel_invariance_identity_chain_reuse_admission_gate.json`)
+   - Verdict: `DUAL_KERNEL_INVARIANCE_IDENTITY_CHAIN_REUSE_ADMISSION_GATE_PASS_ADMITTED` (`9/12`)
+   - Wynik:
+     - formalnie utrzymano zakaz reuse historycznej sciezki kernel-invariance-identity bez nowego niecyklicznego evidence,
+     - po dostarczeniu kernel-invariance-identity noncyclic anchor candidates admission zostalo otwarte (`admission_allowed=True`).
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 301) Aktualizacja wykonawcza: QW-2413
+
+1. `QW-2413` (`report_qw2413_dual_kernel_invariance_identity_noncyclic_anchor_obligation_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_INVARIANCE_IDENTITY_NONCYCLIC_ANCHOR_OBLIGATION_PACKET_GATE_PASS_PACKET_READY` (`6/8`)
+   - Wynik:
+     - zbudowano minimalny pakiet `2` kernel-invariance-identity noncyclic obligations (`L12`,`L5`),
+     - acceptance-rules wymagaja proof-termow niecyklicznych, machine-checkable i axiom-free.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 302) Aktualizacja wykonawcza: QW-2414
+
+1. `QW-2414` (`report_qw2414_dual_kernel_invariance_identity_anchor_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_INVARIANCE_IDENTITY_ANCHOR_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_IDENTITY_MINIMALITY_THEOREMS` (`10/12`)
+   - Wynik:
+     - realny machine-check wykonany dla obu kernel-invariance-identity anchor candidates (`exit=1/1`),
+     - jawny blocker-cut: `RG_KernelIdentityMinimalityToWellPosedness_Theorem`, `QFT_KernelIdentityMinimalityToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 303) Aktualizacja wykonawcza: QW-2415
+
+1. `QW-2415` (`report_qw2415_dual_kernel_invariance_identity_anchor_frontier_alignment_gate.json`)
+   - Verdict: `DUAL_KERNEL_INVARIANCE_IDENTITY_ANCHOR_FRONTIER_ALIGNMENT_GATE_PASS_ALIGNED_WITH_IDENTITY_MINIMALITY_CHAIN` (`6/8`)
+   - Wynik:
+     - blocker-cut z kernel-invariance-identity anchor branch (`QW-2414`) jest identyczny z historycznym frontierem identity-minimality (`QW-2314`),
+     - formalnie potwierdzono brak nowego theorem-level closure claim na tej warstwie.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 304) Aktualizacja wykonawcza: QW-2416
+
+1. `QW-2416` (`report_qw2416_dual_kernel_identity_minimality_chain_reuse_admission_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_MINIMALITY_CHAIN_REUSE_ADMISSION_GATE_PASS_ADMITTED` (`9/12`)
+   - Wynik:
+     - formalnie utrzymano zakaz reuse historycznej sciezki kernel-identity-minimality bez nowego niecyklicznego evidence,
+     - po dostarczeniu kernel-identity-minimality noncyclic anchor candidates admission zostalo otwarte (`admission_allowed=True`).
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 305) Aktualizacja wykonawcza: QW-2417
+
+1. `QW-2417` (`report_qw2417_dual_kernel_identity_minimality_noncyclic_anchor_obligation_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_MINIMALITY_NONCYCLIC_ANCHOR_OBLIGATION_PACKET_GATE_PASS_PACKET_READY` (`6/8`)
+   - Wynik:
+     - zbudowano minimalny pakiet `2` kernel-identity-minimality noncyclic obligations (`L12`,`L5`),
+     - acceptance-rules wymagaja proof-termow niecyklicznych, machine-checkable i axiom-free.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 306) Aktualizacja wykonawcza: QW-2418
+
+1. `QW-2418` (`report_qw2418_dual_kernel_identity_minimality_anchor_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_MINIMALITY_ANCHOR_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_IDENTITY_CLOSURE_THEOREMS` (`10/12`)
+   - Wynik:
+     - realny machine-check wykonany dla obu kernel-identity-minimality anchor candidates (`exit=1/1`),
+     - jawny blocker-cut: `RG_KernelIdentityClosureToWellPosedness_Theorem`, `QFT_KernelIdentityClosureToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 307) Aktualizacja wykonawcza: QW-2419
+
+1. `QW-2419` (`report_qw2419_dual_kernel_identity_minimality_anchor_frontier_alignment_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_MINIMALITY_ANCHOR_FRONTIER_ALIGNMENT_GATE_PASS_ALIGNED_WITH_IDENTITY_CLOSURE_CHAIN` (`6/8`)
+   - Wynik:
+     - blocker-cut z kernel-identity-minimality anchor branch (`QW-2418`) jest identyczny z historycznym frontierem identity-closure (`QW-2317`),
+     - formalnie potwierdzono brak nowego theorem-level closure claim na tej warstwie.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 308) Aktualizacja wykonawcza: QW-2420
+
+1. `QW-2420` (`report_qw2420_dual_kernel_identity_closure_chain_reuse_admission_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CLOSURE_CHAIN_REUSE_ADMISSION_GATE_PASS_ADMITTED` (`9/12`)
+   - Wynik:
+     - formalnie utrzymano zakaz reuse historycznej sciezki kernel-identity-closure bez nowego niecyklicznego evidence,
+     - po dostarczeniu kernel-identity-closure noncyclic anchor candidates admission zostalo otwarte (`admission_allowed=True`).
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 309) Aktualizacja wykonawcza: QW-2421
+
+1. `QW-2421` (`report_qw2421_dual_kernel_identity_closure_noncyclic_anchor_obligation_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CLOSURE_NONCYCLIC_ANCHOR_OBLIGATION_PACKET_GATE_PASS_PACKET_READY` (`6/8`)
+   - Wynik:
+     - zbudowano minimalny pakiet `2` kernel-identity-closure noncyclic obligations (`L12`,`L5`),
+     - acceptance-rules wymagaja proof-termow niecyklicznych, machine-checkable i axiom-free.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 310) Aktualizacja wykonawcza: QW-2422
+
+1. `QW-2422` (`report_qw2422_dual_kernel_identity_closure_anchor_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CLOSURE_ANCHOR_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_IDENTITY_LOCALITY_THEOREMS` (`10/12`)
+   - Wynik:
+     - realny machine-check wykonany dla obu kernel-identity-closure anchor candidates (`exit=1/1`),
+     - jawny blocker-cut: `RG_KernelIdentityLocalityToWellPosedness_Theorem`, `QFT_KernelIdentityLocalityToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 311) Aktualizacja wykonawcza: QW-2423
+
+1. `QW-2423` (`report_qw2423_dual_kernel_identity_closure_anchor_frontier_alignment_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CLOSURE_ANCHOR_FRONTIER_ALIGNMENT_GATE_PASS_ALIGNED_WITH_IDENTITY_LOCALITY_CHAIN` (`6/8`)
+   - Wynik:
+     - blocker-cut z kernel-identity-closure anchor branch (`QW-2422`) jest identyczny z historycznym frontierem identity-locality (`QW-2320`),
+     - formalnie potwierdzono brak nowego theorem-level closure claim na tej warstwie.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 312) Aktualizacja wykonawcza: QW-2424
+
+1. `QW-2424` (`report_qw2424_dual_kernel_identity_locality_chain_reuse_admission_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_LOCALITY_CHAIN_REUSE_ADMISSION_GATE_PASS_ADMITTED` (`9/12`)
+   - Wynik:
+     - formalnie utrzymano zakaz reuse historycznej sciezki kernel-identity-locality bez nowego niecyklicznego evidence,
+     - po dostarczeniu kernel-identity-locality noncyclic anchor candidates admission zostalo otwarte (`admission_allowed=True`).
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 313) Aktualizacja wykonawcza: QW-2425
+
+1. `QW-2425` (`report_qw2425_dual_kernel_identity_locality_noncyclic_anchor_obligation_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_LOCALITY_NONCYCLIC_ANCHOR_OBLIGATION_PACKET_GATE_PASS_PACKET_READY` (`6/8`)
+   - Wynik:
+     - zbudowano minimalny pakiet `2` kernel-identity-locality noncyclic obligations (`L12`,`L5`),
+     - acceptance-rules wymagaja proof-termow niecyklicznych, machine-checkable i axiom-free.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 314) Aktualizacja wykonawcza: QW-2426
+
+1. `QW-2426` (`report_qw2426_dual_kernel_identity_locality_anchor_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_LOCALITY_ANCHOR_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_IDENTITY_CONTINUITY_THEOREMS` (`10/12`)
+   - Wynik:
+     - realny machine-check wykonany dla obu kernel-identity-locality anchor candidates (`exit=1/1`),
+     - jawny blocker-cut: `RG_KernelIdentityContinuityToWellPosedness_Theorem`, `QFT_KernelIdentityContinuityToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 315) Aktualizacja wykonawcza: QW-2427
+
+1. `QW-2427` (`report_qw2427_dual_kernel_identity_locality_anchor_frontier_alignment_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_LOCALITY_ANCHOR_FRONTIER_ALIGNMENT_GATE_PASS_ALIGNED_WITH_IDENTITY_CONTINUITY_CHAIN` (`6/8`)
+   - Wynik:
+     - blocker-cut z kernel-identity-locality anchor branch (`QW-2426`) jest identyczny z historycznym frontierem identity-continuity (`QW-2323`),
+     - formalnie potwierdzono brak nowego theorem-level closure claim na tej warstwie.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 316) Aktualizacja wykonawcza: QW-2428
+
+1. `QW-2428` (`report_qw2428_dual_kernel_identity_continuity_chain_reuse_admission_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CONTINUITY_CHAIN_REUSE_ADMISSION_GATE_PASS_ADMITTED` (`9/12`)
+   - Wynik:
+     - formalnie utrzymano zakaz reuse historycznej sciezki kernel-identity-continuity bez nowego niecyklicznego evidence,
+     - po dostarczeniu kernel-identity-continuity noncyclic anchor candidates admission zostalo otwarte (`admission_allowed=True`).
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 317) Aktualizacja wykonawcza: QW-2429
+
+1. `QW-2429` (`report_qw2429_dual_kernel_identity_continuity_noncyclic_anchor_obligation_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CONTINUITY_NONCYCLIC_ANCHOR_OBLIGATION_PACKET_GATE_PASS_PACKET_READY` (`6/8`)
+   - Wynik:
+     - zbudowano minimalny pakiet `2` kernel-identity-continuity noncyclic obligations (`L12`,`L5`),
+     - acceptance-rules wymagaja proof-termow niecyklicznych, machine-checkable i axiom-free.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 318) Aktualizacja wykonawcza: QW-2430
+
+1. `QW-2430` (`report_qw2430_dual_kernel_identity_continuity_anchor_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CONTINUITY_ANCHOR_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_IDENTITY_COHERENCE_THEOREMS` (`10/12`)
+   - Wynik:
+     - realny machine-check wykonany dla obu kernel-identity-continuity anchor candidates (`exit=1/1`),
+     - jawny blocker-cut: `RG_KernelIdentityCoherenceToWellPosedness_Theorem`, `QFT_KernelIdentityCoherenceToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 319) Aktualizacja wykonawcza: QW-2431
+
+1. `QW-2431` (`report_qw2431_dual_kernel_identity_continuity_anchor_frontier_alignment_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CONTINUITY_ANCHOR_FRONTIER_ALIGNMENT_GATE_PASS_ALIGNED_WITH_IDENTITY_COHERENCE_CHAIN` (`6/8`)
+   - Wynik:
+     - blocker-cut z kernel-identity-continuity anchor branch (`QW-2430`) jest identyczny z historycznym frontierem identity-coherence (`QW-2326`),
+     - formalnie potwierdzono brak nowego theorem-level closure claim na tej warstwie.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 320) Aktualizacja wykonawcza: QW-2432
+
+1. `QW-2432` (`report_qw2432_dual_kernel_identity_coherence_chain_reuse_admission_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_COHERENCE_CHAIN_REUSE_ADMISSION_GATE_PASS_ADMITTED` (`9/12`)
+   - Wynik:
+     - formalnie utrzymano zakaz reuse historycznej sciezki kernel-identity-coherence bez nowego niecyklicznego evidence,
+     - po dostarczeniu kernel-identity-coherence noncyclic anchor candidates admission zostalo otwarte (`admission_allowed=True`).
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 321) Aktualizacja wykonawcza: QW-2433
+
+1. `QW-2433` (`report_qw2433_dual_kernel_identity_coherence_noncyclic_anchor_obligation_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_COHERENCE_NONCYCLIC_ANCHOR_OBLIGATION_PACKET_GATE_PASS_PACKET_READY` (`6/8`)
+   - Wynik:
+     - zbudowano minimalny pakiet `2` kernel-identity-coherence noncyclic obligations (`L12`,`L5`),
+     - acceptance-rules wymagaja proof-termow niecyklicznych, machine-checkable i axiom-free.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 322) Aktualizacja wykonawcza: QW-2434
+
+1. `QW-2434` (`report_qw2434_dual_kernel_identity_coherence_anchor_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_COHERENCE_ANCHOR_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_IDENTITY_REGULARITY_THEOREMS` (`10/12`)
+   - Wynik:
+     - realny machine-check wykonany dla obu kernel-identity-coherence anchor candidates (`exit=1/1`),
+     - jawny blocker-cut: `RG_KernelIdentityRegularityToWellPosedness_Theorem`, `QFT_KernelIdentityRegularityToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 323) Aktualizacja wykonawcza: QW-2435
+
+1. `QW-2435` (`report_qw2435_dual_kernel_identity_coherence_anchor_frontier_alignment_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_COHERENCE_ANCHOR_FRONTIER_ALIGNMENT_GATE_PASS_ALIGNED_WITH_IDENTITY_REGULARITY_CHAIN` (`6/8`)
+   - Wynik:
+     - blocker-cut z kernel-identity-coherence anchor branch (`QW-2434`) jest identyczny z historycznym frontierem identity-regularity (`QW-2329`),
+     - formalnie potwierdzono brak nowego theorem-level closure claim na tej warstwie.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 324) Aktualizacja wykonawcza: QW-2436
+
+1. `QW-2436` (`report_qw2436_dual_kernel_identity_regularity_chain_reuse_admission_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_REGULARITY_CHAIN_REUSE_ADMISSION_GATE_PASS_ADMITTED` (`9/12`)
+   - Wynik:
+     - formalnie utrzymano zakaz reuse historycznej sciezki kernel-identity-regularity bez nowego niecyklicznego evidence,
+     - po dostarczeniu kernel-identity-regularity noncyclic anchor candidates admission zostalo otwarte (`admission_allowed=True`).
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 325) Aktualizacja wykonawcza: QW-2437
+
+1. `QW-2437` (`report_qw2437_dual_kernel_identity_regularity_noncyclic_anchor_obligation_packet_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_REGULARITY_NONCYCLIC_ANCHOR_OBLIGATION_PACKET_GATE_PASS_PACKET_READY` (`6/8`)
+   - Wynik:
+     - zbudowano minimalny pakiet `2` kernel-identity-regularity noncyclic obligations (`L12`,`L5`),
+     - acceptance-rules wymagaja proof-termow niecyklicznych, machine-checkable i axiom-free.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 326) Aktualizacja wykonawcza: QW-2438
+
+1. `QW-2438` (`report_qw2438_dual_kernel_identity_regularity_anchor_execution_status_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_REGULARITY_ANCHOR_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_KERNEL_IDENTITY_CONSERVATION_THEOREMS` (`10/12`)
+   - Wynik:
+     - realny machine-check wykonany dla obu kernel-identity-regularity anchor candidates (`exit=1/1`),
+     - jawny blocker-cut: `RG_KernelIdentityConservationToWellPosedness_Theorem`, `QFT_KernelIdentityConservationToPositivity_Theorem`.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 327) Aktualizacja wykonawcza: QW-2439
+
+1. `QW-2439` (`report_qw2439_dual_kernel_identity_regularity_anchor_frontier_alignment_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_REGULARITY_ANCHOR_FRONTIER_ALIGNMENT_GATE_PASS_ALIGNED_WITH_IDENTITY_CONSERVATION_CHAIN` (`6/8`)
+   - Wynik:
+     - blocker-cut z kernel-identity-regularity anchor branch (`QW-2438`) jest identyczny z historycznym frontierem identity-conservation (`QW-2332`),
+     - formalnie potwierdzono brak nowego theorem-level closure claim na tej warstwie.
+   - Granica:
+     - `execution_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 328) Aktualizacja wykonawcza: QW-2440
+
+1. `QW-2440` (`report_qw2440_grep_frontier_single_foundation_audit_gate.json`)
+   - Verdict: `GREP_FRONTIER_SINGLE_FOUNDATION_AUDIT_GATE_PASS_WITH_BLOCKERS_EXPLICIT` (`6/7`)
+   - Wynik:
+     - grep-frontier potwierdza jednoczesnie: cycle evidence + dual canonical export blockers + brak sygnalu falszywego full-closure claim,
+     - jawnie utrzymano granice: audit tekstowy nie jest theorem-level discharge.
+   - Granica:
+     - `textual_audit_only=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 329) Aktualizacja wykonawcza: QW-2441
+
+1. `QW-2441` (`report_qw2441_dual_nadsoliton_single_foundation_export_provider_packet_gate.json`)
+   - Verdict: `DUAL_NADSOLITON_SINGLE_FOUNDATION_EXPORT_PROVIDER_PACKET_GATE_PASS_PACKET_READY` (`3/4`)
+   - Wynik:
+     - zbudowano packet `2` obligacji provider dla ontologii `NadsolitonSingleFoundation` (`L12`,`L5`),
+     - target: dual canonical export symbols RG/QFT.
+   - Granica:
+     - `provider_discharge_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 330) Aktualizacja wykonawcza: QW-2442
+
+1. `QW-2442` (`report_qw2442_dual_nadsoliton_single_foundation_provider_execution_status_gate.json`)
+   - Verdict: `DUAL_NADSOLITON_SINGLE_FOUNDATION_PROVIDER_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_CANONICAL_EXPORT_SYMBOLS` (`6/7`)
+   - Wynik:
+     - execution step uruchomiony i wykonany na aktywnym runtime,
+     - dual blocker po machine-check zostal zredukowany do canonical export symbols RG/QFT,
+     - brak podstaw do theorem-level discharge claim.
+   - Granica:
+     - `lean_binary_available=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 331) Aktualizacja wykonawcza: QW-2443
+
+1. `QW-2443` (`report_qw2443_dual_nadsoliton_single_foundation_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_NADSOLITON_SINGLE_FOUNDATION_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`4/5`)
+   - Wynik:
+     - minimal blocker-cut extraction wykonany po machine-check `QW-2442`,
+     - izolowane dwa symbole: `RG_CanonicalAction_to_WellPosedness_EXPORT` i `QFT_CanonicalAction_to_Positivity_EXPORT`.
+   - Granica:
+     - `overclaim_forbidden=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 332) Aktualizacja wykonawcza: QW-2444
+
+1. `QW-2444` (`report_qw2444_lean_runtime_discovery_gate.json`)
+   - Verdict: `LEAN_RUNTIME_DISCOVERY_GATE_PASS_RUNTIME_AVAILABLE`
+   - Wynik:
+     - strict discovery runtime wykonany (`n_candidates=5`),
+     - runtime dostepny (`selected_runtime=/home/krzysiek/Pobrane/TOE/edison/.elan/bin/lean`).
+   - Granica:
+     - `environment_diagnostics_only=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 333) Aktualizacja wykonawcza: QW-2445
+
+1. `QW-2445` (`report_qw2445_dual_nadsoliton_single_foundation_provider_execution_status_v2_gate.json`)
+   - Verdict: `DUAL_NADSOLITON_SINGLE_FOUNDATION_PROVIDER_EXECUTION_STATUS_V2_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_CANONICAL_EXPORT_SYMBOLS`
+   - Wynik:
+     - execution v2 podlaczony do runtime discovery i wykonany,
+     - blocker runtime usuniety, pozostaje dual canonical export frontier.
+   - Granica:
+     - `execution_attempt_performed=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 334) Aktualizacja wykonawcza: QW-2446
+
+1. `QW-2446` (`report_qw2446_lean_runtime_provisioning_attempt_gate.json`)
+   - Verdict: `LEAN_RUNTIME_PROVISIONING_ATTEMPT_GATE_PASS_SKIPPED_RUNTIME_ALREADY_AVAILABLE` (`3/9`)
+   - Wynik:
+     - bramka provisioning jawnie wykrywa, ze runtime byl juz dostepny przed attempt (`runtime_available_before_attempt=True`),
+     - krok provisioning zostaje poprawnie pominiety bez falszywego claimu o runtime-blockerze.
+   - Granica:
+     - `environment_provisioning_only=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 335) Aktualizacja wykonawcza: QW-2447
+
+1. `QW-2447` (`report_qw2447_strict_anti_false_pass_integrity_gate.json`)
+   - Verdict: `STRICT_ANTI_FALSE_PASS_INTEGRITY_GATE_PASS_WITH_BLOCKERS_EXPLICIT` (`12/13`)
+   - Wynik:
+     - chain `QW-2440..QW-2446` przechodzi twardy audit spojnosc + overclaim-guard,
+     - dual canonical export blockery pozostaja jawne, a `all_strict_obligations_fully_closed=False` jest utrzymane.
+   - Granica:
+     - `integrity_audit_only=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 336) Aktualizacja wykonawcza: QW-2448
+
+1. `QW-2448` (`report_qw2448_dual_single_foundation_v2_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_SINGLE_FOUNDATION_V2_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`5/6`)
+   - Wynik:
+     - minimal blocker-cut v2 zostal jawnie wyekstrahowany po runtime-backed execution (`QW-2445`),
+     - cut pozostaje dwu-symbolowy (RG/QFT canonical export).
+   - Granica:
+     - `minimal_cut_extracted=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 337) Aktualizacja wykonawcza: QW-2449
+
+1. `QW-2449` (`report_qw2449_non_axiomatic_dual_canonical_export_provider_derivation_attempt_gate.json`)
+   - Verdict: `NON_AXIOMATIC_DUAL_CANONICAL_EXPORT_PROVIDER_DERIVATION_ATTEMPT_GATE_PASS_PARTIAL_BLOCKED_BY_NO_NON_AXIOMATIC_PROVIDER_DEFINITION` (`3/6`)
+   - Wynik:
+     - strict lexical+definition scan wykonany dla dual canonical export provider symbols,
+     - brak strict non-axiomatic definicji providerow (`n_rg_non_axiomatic_definitions=0`, `n_qft_non_axiomatic_definitions=0`).
+   - Granica:
+     - `lexical_definition_scan_only=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 338) Aktualizacja wykonawcza: QW-2450
+
+1. `QW-2450` (`report_qw2450_strict_anti_false_pass_extension_gate.json`)
+   - Verdict: `STRICT_ANTI_FALSE_PASS_EXTENSION_GATE_PASS_WITH_BLOCKERS_EXPLICIT` (`7/8`)
+   - Wynik:
+     - rozszerzony audit anty-overclaim (`QW-2447 -> QW-2449`) przechodzi z blockerami jawnymi,
+     - potwierdzono spojnosc: brak full-closure claim i utrzymanie granicy theorem-level.
+   - Granica:
+     - `integrity_extension_only=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 339) Aktualizacja wykonawcza: QW-2451
+
+1. `QW-2451` (`report_qw2451_strict_non_axiomatic_dual_export_provider_authoring_and_discharge_attempt_gate.json`)
+   - Verdict: `STRICT_NON_AXIOMATIC_DUAL_EXPORT_PROVIDER_AUTHORING_AND_DISCHARGE_ATTEMPT_GATE_PASS_PARTIAL_BLOCKED_BY_DEEPER_NON_AXIOMATIC_PROVIDER_THEOREMS` (`9/10`)
+   - Wynik:
+     - wykonano dual strict non-axiomatic authoring+machine-check attempt (axiom-token-free, bez `_DerivedOrPending`) na aktywnym runtime,
+     - blocker-cut przesuniety jawnie do warstwy deeper provider theorem symbols:
+       - `RG_KernelOperatorClosureToWellPosedness_Theorem`,
+       - `QFT_KernelOperatorClosureToPositivity_Theorem`.
+   - Granica:
+     - `provider_discharge_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 340) Aktualizacja wykonawcza: QW-2452
+
+1. `QW-2452` (`report_qw2452_dual_deeper_provider_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_DEEPER_PROVIDER_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`5/6`)
+   - Wynik:
+     - po `QW-2451` wyekstrahowano minimalny dual deeper-provider blocker-cut,
+     - cut pozostaje dwu-symbolowy (po `1` symbolu na galaz RG/QFT):
+       - `RG_KernelOperatorClosureToWellPosedness_Theorem`,
+       - `QFT_KernelOperatorClosureToPositivity_Theorem`.
+   - Granica:
+     - `minimal_cut_extracted=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 341) Aktualizacja wykonawcza: QW-2453
+
+1. `QW-2453` (`report_qw2453_non_axiomatic_dual_kernel_operator_closure_provider_derivation_attempt_gate.json`)
+   - Verdict: `NON_AXIOMATIC_DUAL_KERNEL_OPERATOR_CLOSURE_PROVIDER_DERIVATION_ATTEMPT_GATE_PASS_PARTIAL_BLOCKED_BY_KERNEL_SPECTRAL_CLOSURE_PROVIDER_THEOREMS` (`9/10`)
+   - Wynik:
+     - wykonano dual strict non-axiomatic derivation+machine-check attempt dla kernel-operator closure provider layer (axiom-token-free, bez `_DerivedOrPending`),
+     - blocker-cut przesuniety jawnie do warstwy kernel-spectral closure provider symbols:
+       - `RG_KernelSpectralClosureToWellPosedness_Theorem`,
+       - `QFT_KernelSpectralClosureToPositivity_Theorem`.
+   - Granica:
+     - `provider_discharge_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 342) Aktualizacja wykonawcza: QW-2454
+
+1. `QW-2454` (`report_qw2454_dual_kernel_spectral_provider_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_SPECTRAL_PROVIDER_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`5/6`)
+   - Wynik:
+     - po `QW-2453` wyekstrahowano minimalny dual kernel-spectral-provider blocker-cut,
+     - cut pozostaje dwu-symbolowy (po `1` symbolu na galaz RG/QFT):
+       - `RG_KernelSpectralClosureToWellPosedness_Theorem`,
+       - `QFT_KernelSpectralClosureToPositivity_Theorem`.
+   - Granica:
+     - `minimal_cut_extracted=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 343) Aktualizacja wykonawcza: QW-2455
+
+1. `QW-2455` (`report_qw2455_dual_kernel_spectral_provider_theorem_spec_gate.json`)
+   - Verdict: `DUAL_KERNEL_SPECTRAL_PROVIDER_THEOREM_SPEC_GATE_PASS_PARTIAL_TERMINAL_LAYER_READY` (`9/10`)
+   - Wynik:
+     - zdefiniowano 2 target twierdzen aktualnego frontu (`RG_KernelSpectralClosureToWellPosedness_Theorem`, `QFT_KernelSpectralClosureToPositivity_Theorem`),
+     - zbudowano minimalny acykliczny DAG lematow RG/QFT,
+     - jawnie rozdzielono zalozenia `physical` vs `technical` (mapa assumptions).
+   - Granica:
+     - `theorem_spec_only=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 344) Aktualizacja wykonawcza: QW-2456
+
+1. `QW-2456` (`report_qw2456_dual_kernel_spectral_provider_counterexample_search_gate.json`)
+   - Verdict: `DUAL_KERNEL_SPECTRAL_PROVIDER_COUNTEREXAMPLE_SEARCH_GATE_PASS_PARTIAL_NO_STRICT_COUNTEREXAMPLE_IN_BOUNDED_DOMAIN` (`8/9`)
+   - Wynik:
+     - wykonano bounded-domain adversarial counterexample search (model `2x2` symmetric operators),
+     - strict regime: `rg_strict_counterexamples=0`, `qft_strict_counterexamples=0`,
+     - boundary regime (po zlamaniu perturbation bounds): znalezione naruszenia (`rg_boundary_violations=6000`, `qft_boundary_violations=6000`) potwierdzaja role zalozen.
+   - Granica:
+     - `search_domain_explicit_and_bounded=True`,
+     - to nie jest theorem-level dowod,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 345) Aktualizacja wykonawcza: QW-2457
+
+1. `QW-2457` (`report_qw2457_strict_anti_false_pass_spectral_extension_gate.json`)
+   - Verdict: `STRICT_ANTI_FALSE_PASS_SPECTRAL_EXTENSION_GATE_PASS_WITH_BLOCKERS_EXPLICIT` (`7/8`)
+   - Wynik:
+     - chain `QW-2453..QW-2456` przechodzi rozszerzony anti-overclaim audit,
+     - utrzymano `all_strict_obligations_fully_closed=False` na calej warstwie,
+     - brak forbidden overclaim tokens w verdictach chainu.
+   - Granica:
+     - `integrity_audit_only=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 346) Aktualizacja wykonawcza: QW-2458
+
+1. `QW-2458` (`report_qw2458_non_axiomatic_dual_kernel_spectral_closure_provider_derivation_attempt_gate.json`)
+   - Verdict: `NON_AXIOMATIC_DUAL_KERNEL_SPECTRAL_CLOSURE_PROVIDER_DERIVATION_ATTEMPT_GATE_PASS_PARTIAL_BLOCKED_BY_KERNEL_SPECTRAL_INVARIANCE_PROVIDER_THEOREMS` (`9/10`)
+   - Wynik:
+     - wykonano dual strict non-axiomatic derivation+machine-check attempt dla kernel-spectral-closure provider layer,
+     - blocker-cut przesuniety jawnie do warstwy kernel-spectral-invariance provider symbols:
+       - `RG_KernelSpectralInvarianceToWellPosedness_Theorem`,
+       - `QFT_KernelSpectralInvarianceToPositivity_Theorem`.
+   - Granica:
+     - `provider_discharge_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 347) Aktualizacja wykonawcza: QW-2459
+
+1. `QW-2459` (`report_qw2459_dual_kernel_spectral_invariance_provider_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_SPECTRAL_INVARIANCE_PROVIDER_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`5/6`)
+   - Wynik:
+     - po `QW-2458` wyekstrahowano minimalny dual kernel-spectral-invariance-provider blocker-cut,
+     - cut pozostaje dwu-symbolowy (po `1` symbolu na galaz RG/QFT):
+       - `RG_KernelSpectralInvarianceToWellPosedness_Theorem`,
+       - `QFT_KernelSpectralInvarianceToPositivity_Theorem`.
+   - Granica:
+     - `minimal_cut_extracted=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 348) Aktualizacja wykonawcza: QW-2460
+
+1. `QW-2460` (`report_qw2460_strict_anti_false_pass_spectral_chain_continuation_gate.json`)
+   - Verdict: `STRICT_ANTI_FALSE_PASS_SPECTRAL_CHAIN_CONTINUATION_GATE_PASS_WITH_BLOCKERS_EXPLICIT` (`6/7`)
+   - Wynik:
+     - chain `QW-2457..QW-2459` przechodzi kontynuacyjny anti-overclaim audit,
+     - utrzymano `all_strict_obligations_fully_closed=False` na calej warstwie,
+     - brak forbidden overclaim tokens w verdictach chainu.
+   - Granica:
+     - `integrity_audit_only=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 349) Aktualizacja wykonawcza: QW-2461
+
+1. `QW-2461` (`report_qw2461_dual_kernel_spectral_invariance_provider_theorem_spec_gate.json`)
+   - Verdict: `DUAL_KERNEL_SPECTRAL_INVARIANCE_PROVIDER_THEOREM_SPEC_GATE_PASS_PARTIAL_TERMINAL_LAYER_READY` (`9/10`)
+   - Wynik:
+     - zdefiniowano 2 target twierdzen aktualnego frontu (`RG_KernelSpectralInvarianceToWellPosedness_Theorem`, `QFT_KernelSpectralInvarianceToPositivity_Theorem`),
+     - zbudowano minimalny acykliczny DAG lematow RG/QFT,
+     - jawnie rozdzielono zalozenia `physical` vs `technical` (mapa assumptions).
+   - Granica:
+     - `theorem_spec_only=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 350) Aktualizacja wykonawcza: QW-2462
+
+1. `QW-2462` (`report_qw2462_dual_kernel_spectral_invariance_provider_counterexample_search_gate.json`)
+   - Verdict: `DUAL_KERNEL_SPECTRAL_INVARIANCE_PROVIDER_COUNTEREXAMPLE_SEARCH_GATE_PASS_PARTIAL_NO_STRICT_COUNTEREXAMPLE_IN_BOUNDED_DOMAIN` (`8/9`)
+   - Wynik:
+     - wykonano bounded-domain adversarial counterexample search (model `2x2` symmetric operators) dla rodzin lematow: domain-invariance, self-adjointness-preservation, positivity/coercivity, spectral-stability,
+     - strict regime: `rg_strict_counterexamples_total=0`, `qft_strict_counterexamples_total=0`,
+     - boundary regime (po zlamaniu perturbation bounds): znalezione naruszenia (`rg_boundary_violations_total=14475`, `qft_boundary_violations_total=14531`) potwierdzaja role zalozen.
+   - Granica:
+     - `search_domain_explicit_and_bounded=True`,
+     - to nie jest theorem-level dowod,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 351) Aktualizacja wykonawcza: QW-2463
+
+1. `QW-2463` (`report_qw2463_non_axiomatic_dual_kernel_spectral_invariance_provider_derivation_attempt_gate.json`)
+   - Verdict: `NON_AXIOMATIC_DUAL_KERNEL_SPECTRAL_INVARIANCE_PROVIDER_DERIVATION_ATTEMPT_GATE_PASS_PARTIAL_BLOCKED_BY_KERNEL_INVARIANCE_IDENTITY_PROVIDER_THEOREMS` (`10/11`)
+   - Wynik:
+     - wykonano dual strict non-axiomatic derivation+machine-check attempt dopiero po theorem-spec (`QW-2461`) i counterexample-search (`QW-2462`),
+     - blocker-cut przesuniety jawnie do warstwy kernel-invariance-identity provider symbols:
+       - `RG_KernelInvarianceIdentityToWellPosedness_Theorem`,
+       - `QFT_KernelInvarianceIdentityToPositivity_Theorem`.
+   - Granica:
+     - `provider_discharge_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 352) Aktualizacja wykonawcza: QW-2464
+
+1. `QW-2464` (`report_qw2464_strict_anti_false_pass_invariance_frontier_gate.json`)
+   - Verdict: `STRICT_ANTI_FALSE_PASS_INVARIANCE_FRONTIER_GATE_PASS_WITH_BLOCKERS_EXPLICIT` (`6/7`)
+   - Wynik:
+     - chain `QW-2461..QW-2463` przechodzi anti-overclaim audit,
+     - utrzymano `all_strict_obligations_fully_closed=False` na calej warstwie,
+     - brak forbidden overclaim tokens w verdictach chainu.
+   - Granica:
+     - `integrity_audit_only=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 353) Aktualizacja wykonawcza: QW-2465
+
+1. `QW-2465` (`report_qw2465_dual_kernel_invariance_identity_provider_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_INVARIANCE_IDENTITY_PROVIDER_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`5/6`)
+   - Wynik:
+     - po `QW-2463` wyekstrahowano minimalny dual kernel-invariance-identity-provider blocker-cut,
+     - cut pozostaje dwu-symbolowy (po `1` symbolu na galaz RG/QFT):
+       - `RG_KernelInvarianceIdentityToWellPosedness_Theorem`,
+       - `QFT_KernelInvarianceIdentityToPositivity_Theorem`.
+   - Granica:
+     - `minimal_cut_extracted=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 354) Aktualizacja wykonawcza: QW-2466
+
+1. `QW-2466` (`report_qw2466_dual_kernel_invariance_identity_provider_theorem_spec_gate.json`)
+   - Verdict: `DUAL_KERNEL_INVARIANCE_IDENTITY_PROVIDER_THEOREM_SPEC_GATE_PASS_PARTIAL_TERMINAL_LAYER_READY` (`9/10`)
+   - Wynik:
+     - zdefiniowano 2 target twierdzen aktualnego frontu (`RG_KernelInvarianceIdentityToWellPosedness_Theorem`, `QFT_KernelInvarianceIdentityToPositivity_Theorem`),
+     - zbudowano minimalny acykliczny DAG lematow RG/QFT,
+     - jawnie rozdzielono zalozenia `physical` vs `technical` (mapa assumptions).
+   - Granica:
+     - `theorem_spec_only=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 355) Aktualizacja wykonawcza: QW-2467
+
+1. `QW-2467` (`report_qw2467_dual_kernel_invariance_identity_provider_counterexample_search_gate.json`)
+   - Verdict: `DUAL_KERNEL_INVARIANCE_IDENTITY_PROVIDER_COUNTEREXAMPLE_SEARCH_GATE_PASS_PARTIAL_NO_STRICT_COUNTEREXAMPLE_IN_BOUNDED_DOMAIN` (`8/9`)
+   - Wynik:
+     - wykonano bounded-domain adversarial counterexample search (model `2x2` symmetric operators) dla rodzin lematow: domain-invariance, self-adjointness-positivity, identity-consistency, bounded-identity-stability,
+     - strict regime: `rg_strict_counterexamples_total=0`, `qft_strict_counterexamples_total=0`,
+     - boundary regime (po zlamaniu perturbation bounds): znalezione naruszenia (`rg_boundary_violations_total=17198`, `qft_boundary_violations_total=17187`) potwierdzaja role zalozen.
+   - Granica:
+     - `search_domain_explicit_and_bounded=True`,
+     - to nie jest theorem-level dowod,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 356) Aktualizacja wykonawcza: QW-2468
+
+1. `QW-2468` (`report_qw2468_non_axiomatic_dual_kernel_invariance_identity_provider_derivation_attempt_gate.json`)
+   - Verdict: `NON_AXIOMATIC_DUAL_KERNEL_INVARIANCE_IDENTITY_PROVIDER_DERIVATION_ATTEMPT_GATE_PASS_PARTIAL_BLOCKED_BY_KERNEL_IDENTITY_MINIMALITY_PROVIDER_THEOREMS` (`10/11`)
+   - Wynik:
+     - wykonano dual strict non-axiomatic derivation+machine-check attempt dopiero po theorem-spec (`QW-2466`) i counterexample-search (`QW-2467`),
+     - blocker-cut przesuniety jawnie do warstwy kernel-identity-minimality provider symbols:
+       - `RG_KernelIdentityMinimalityToWellPosedness_Theorem`,
+       - `QFT_KernelIdentityMinimalityToPositivity_Theorem`.
+   - Granica:
+     - `provider_discharge_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 357) Aktualizacja wykonawcza: QW-2469
+
+1. `QW-2469` (`report_qw2469_strict_anti_false_pass_identity_minimality_frontier_gate.json`)
+   - Verdict: `STRICT_ANTI_FALSE_PASS_IDENTITY_MINIMALITY_FRONTIER_GATE_PASS_WITH_BLOCKERS_EXPLICIT` (`6/7`)
+   - Wynik:
+     - chain `QW-2466..QW-2468` przechodzi anti-overclaim audit,
+     - utrzymano `all_strict_obligations_fully_closed=False` na calej warstwie,
+     - brak forbidden overclaim tokens w verdictach chainu.
+   - Granica:
+     - `integrity_audit_only=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 358) Aktualizacja wykonawcza: QW-2470
+
+1. `QW-2470` (`report_qw2470_dual_kernel_identity_minimality_provider_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_MINIMALITY_PROVIDER_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`5/6`)
+   - Wynik:
+     - po `QW-2468` wyekstrahowano minimalny dual kernel-identity-minimality-provider blocker-cut,
+     - cut pozostaje dwu-symbolowy (po `1` symbolu na galaz RG/QFT):
+       - `RG_KernelIdentityMinimalityToWellPosedness_Theorem`,
+       - `QFT_KernelIdentityMinimalityToPositivity_Theorem`.
+   - Granica:
+     - `minimal_cut_extracted=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 359) Aktualizacja wykonawcza: QW-2471
+
+1. `QW-2471` (`report_qw2471_dual_kernel_identity_minimality_provider_theorem_spec_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_MINIMALITY_PROVIDER_THEOREM_SPEC_GATE_PASS_PARTIAL_TERMINAL_LAYER_READY` (`9/10`)
+   - Wynik:
+     - zdefiniowano 2 target twierdzen aktualnego frontu (`RG_KernelIdentityMinimalityToWellPosedness_Theorem`, `QFT_KernelIdentityMinimalityToPositivity_Theorem`),
+     - zbudowano minimalny acykliczny DAG lematow RG/QFT,
+     - jawnie rozdzielono zalozenia `physical` vs `technical` (mapa assumptions).
+   - Granica:
+     - `theorem_spec_only=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 360) Aktualizacja wykonawcza: QW-2472
+
+1. `QW-2472` (`report_qw2472_dual_kernel_identity_minimality_provider_counterexample_search_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_MINIMALITY_PROVIDER_COUNTEREXAMPLE_SEARCH_GATE_PASS_PARTIAL_NO_STRICT_COUNTEREXAMPLE_IN_BOUNDED_DOMAIN` (`8/9`)
+   - Wynik:
+     - wykonano bounded-domain adversarial counterexample search (model `2x2` symmetric operators) dla rodzin lematow: minimal-domain-invariance, self-adjointness-positivity-preservation, minimality-consistency-lower-bound, bounded-minimality-stability,
+     - strict regime: `rg_strict_counterexamples_total=0`, `qft_strict_counterexamples_total=0`,
+     - boundary regime (po zlamaniu perturbation bounds): znalezione naruszenia (`rg_boundary_violations_total=18569`, `qft_boundary_violations_total=18550`) potwierdzaja role zalozen.
+   - Granica:
+     - `search_domain_explicit_and_bounded=True`,
+     - to nie jest theorem-level dowod,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 361) Aktualizacja wykonawcza: QW-2473
+
+1. `QW-2473` (`report_qw2473_non_axiomatic_dual_kernel_identity_minimality_provider_derivation_attempt_gate.json`)
+   - Verdict: `NON_AXIOMATIC_DUAL_KERNEL_IDENTITY_MINIMALITY_PROVIDER_DERIVATION_ATTEMPT_GATE_PASS_PARTIAL_BLOCKED_BY_KERNEL_IDENTITY_CLOSURE_PROVIDER_THEOREMS` (`10/11`)
+   - Wynik:
+     - wykonano dual strict non-axiomatic derivation+machine-check attempt dopiero po theorem-spec (`QW-2471`) i counterexample-search (`QW-2472`),
+     - blocker-cut przesuniety jawnie do warstwy kernel-identity-closure provider symbols:
+       - `RG_KernelIdentityClosureToWellPosedness_Theorem`,
+       - `QFT_KernelIdentityClosureToPositivity_Theorem`.
+   - Granica:
+     - `provider_discharge_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 362) Aktualizacja wykonawcza: QW-2474
+
+1. `QW-2474` (`report_qw2474_strict_anti_false_pass_identity_closure_frontier_gate.json`)
+   - Verdict: `STRICT_ANTI_FALSE_PASS_IDENTITY_CLOSURE_FRONTIER_GATE_PASS_WITH_BLOCKERS_EXPLICIT` (`6/7`)
+   - Wynik:
+     - chain `QW-2471..QW-2473` przechodzi anti-overclaim audit,
+     - utrzymano `all_strict_obligations_fully_closed=False` na calej warstwie,
+     - brak forbidden overclaim tokens w verdictach chainu.
+   - Granica:
+     - `integrity_audit_only=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 363) Aktualizacja wykonawcza: QW-2475
+
+1. `QW-2475` (`report_qw2475_dual_kernel_identity_closure_provider_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CLOSURE_PROVIDER_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`5/6`)
+   - Wynik:
+     - po `QW-2473` wyekstrahowano minimalny dual kernel-identity-closure-provider blocker-cut,
+     - cut pozostaje dwu-symbolowy (po `1` symbolu na galaz RG/QFT):
+       - `RG_KernelIdentityClosureToWellPosedness_Theorem`,
+       - `QFT_KernelIdentityClosureToPositivity_Theorem`.
+   - Granica:
+     - `minimal_cut_extracted=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 364) Aktualizacja wykonawcza: QW-2476
+
+1. `QW-2476` (`report_qw2476_dual_kernel_identity_closure_provider_theorem_spec_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CLOSURE_PROVIDER_THEOREM_SPEC_GATE_PASS_PARTIAL_TERMINAL_LAYER_READY` (`9/10`)
+   - Wynik:
+     - zdefiniowano 2 target twierdzen aktualnego frontu (`RG_KernelIdentityClosureToWellPosedness_Theorem`, `QFT_KernelIdentityClosureToPositivity_Theorem`),
+     - zbudowano minimalny acykliczny DAG lematow RG/QFT,
+     - jawnie rozdzielono zalozenia `physical` vs `technical` (mapa assumptions).
+   - Granica:
+     - `theorem_spec_only=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 365) Aktualizacja wykonawcza: QW-2477
+
+1. `QW-2477` (`report_qw2477_dual_kernel_identity_closure_provider_counterexample_search_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CLOSURE_PROVIDER_COUNTEREXAMPLE_SEARCH_GATE_PASS_PARTIAL_NO_STRICT_COUNTEREXAMPLE_IN_BOUNDED_DOMAIN` (`8/9`)
+   - Wynik:
+     - wykonano bounded-domain adversarial counterexample search (model `2x2` symmetric operators) dla rodzin lematow: closure-domain-invariance, self-adjointness-positivity-preservation, closure-consistency-lower-bound, bounded-closure-stability,
+     - strict regime: `rg_strict_counterexamples_total=0`, `qft_strict_counterexamples_total=0`,
+     - boundary regime (po zlamaniu perturbation bounds): znalezione naruszenia (`rg_boundary_violations_total=19375`, `qft_boundary_violations_total=19338`) potwierdzaja role zalozen.
+   - Granica:
+     - `search_domain_explicit_and_bounded=True`,
+     - to nie jest theorem-level dowod,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 366) Aktualizacja wykonawcza: QW-2478
+
+1. `QW-2478` (`report_qw2478_non_axiomatic_dual_kernel_identity_closure_provider_derivation_attempt_gate.json`)
+   - Verdict: `NON_AXIOMATIC_DUAL_KERNEL_IDENTITY_CLOSURE_PROVIDER_DERIVATION_ATTEMPT_GATE_PASS_PARTIAL_BLOCKED_BY_KERNEL_IDENTITY_LOCALITY_PROVIDER_THEOREMS` (`10/11`)
+   - Wynik:
+     - wykonano dual strict non-axiomatic derivation+machine-check attempt dopiero po theorem-spec (`QW-2476`) i counterexample-search (`QW-2477`),
+     - blocker-cut przesuniety jawnie do warstwy kernel-identity-locality provider symbols:
+       - `RG_KernelIdentityLocalityToWellPosedness_Theorem`,
+       - `QFT_KernelIdentityLocalityToPositivity_Theorem`.
+   - Granica:
+     - `provider_discharge_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 367) Aktualizacja wykonawcza: QW-2479
+
+1. `QW-2479` (`report_qw2479_strict_anti_false_pass_identity_locality_frontier_gate.json`)
+   - Verdict: `STRICT_ANTI_FALSE_PASS_IDENTITY_LOCALITY_FRONTIER_GATE_PASS_WITH_BLOCKERS_EXPLICIT` (`6/7`)
+   - Wynik:
+     - chain `QW-2476..QW-2478` przechodzi anti-overclaim audit,
+     - utrzymano `all_strict_obligations_fully_closed=False` na calej warstwie,
+     - brak forbidden overclaim tokens w verdictach chainu.
+   - Granica:
+     - `integrity_audit_only=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 368) Aktualizacja wykonawcza: QW-2480
+
+1. `QW-2480` (`report_qw2480_dual_kernel_identity_locality_provider_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_LOCALITY_PROVIDER_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`5/6`)
+   - Wynik:
+     - po `QW-2478` wyekstrahowano minimalny dual kernel-identity-locality-provider blocker-cut,
+     - cut pozostaje dwu-symbolowy (po `1` symbolu na galaz RG/QFT):
+       - `RG_KernelIdentityLocalityToWellPosedness_Theorem`,
+       - `QFT_KernelIdentityLocalityToPositivity_Theorem`.
+   - Granica:
+     - `minimal_cut_extracted=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 369) Aktualizacja wykonawcza: QW-2481
+
+1. `QW-2481` (`report_qw2481_dual_kernel_identity_locality_provider_theorem_spec_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_LOCALITY_PROVIDER_THEOREM_SPEC_GATE_PASS_PARTIAL_TERMINAL_LAYER_READY` (`9/10`)
+   - Wynik:
+     - zdefiniowano 2 target twierdzen aktualnego frontu (`RG_KernelIdentityLocalityToWellPosedness_Theorem`, `QFT_KernelIdentityLocalityToPositivity_Theorem`),
+     - zbudowano minimalny acykliczny DAG lematow RG/QFT,
+     - jawnie rozdzielono zalozenia `physical` vs `technical` (mapa assumptions).
+   - Granica:
+     - `theorem_spec_only=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 370) Aktualizacja wykonawcza: QW-2482
+
+1. `QW-2482` (`report_qw2482_dual_kernel_identity_locality_provider_counterexample_search_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_LOCALITY_PROVIDER_COUNTEREXAMPLE_SEARCH_GATE_PASS_PARTIAL_NO_STRICT_COUNTEREXAMPLE_IN_BOUNDED_DOMAIN` (`8/9`)
+   - Wynik:
+     - wykonano bounded-domain adversarial counterexample search (model `2x2` symmetric operators) dla rodzin lematow: locality-domain-invariance, self-adjointness-positivity-preservation, locality-consistency-lower-bound, bounded-locality-stability,
+     - strict regime: `rg_strict_counterexamples_total=0`, `qft_strict_counterexamples_total=0`,
+     - boundary regime (po zlamaniu perturbation bounds): znalezione naruszenia (`rg_boundary_violations_total=19874`, `qft_boundary_violations_total=19889`) potwierdzaja role zalozen.
+   - Granica:
+     - `search_domain_explicit_and_bounded=True`,
+     - to nie jest theorem-level dowod,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 371) Aktualizacja wykonawcza: QW-2483
+
+1. `QW-2483` (`report_qw2483_non_axiomatic_dual_kernel_identity_locality_provider_derivation_attempt_gate.json`)
+   - Verdict: `NON_AXIOMATIC_DUAL_KERNEL_IDENTITY_LOCALITY_PROVIDER_DERIVATION_ATTEMPT_GATE_PASS_PARTIAL_BLOCKED_BY_KERNEL_IDENTITY_CONTINUITY_PROVIDER_THEOREMS` (`10/11`)
+   - Wynik:
+     - wykonano dual strict non-axiomatic derivation+machine-check attempt dopiero po theorem-spec (`QW-2481`) i counterexample-search (`QW-2482`),
+     - blocker-cut przesuniety jawnie do warstwy kernel-identity-continuity provider symbols:
+       - `RG_KernelIdentityContinuityToWellPosedness_Theorem`,
+       - `QFT_KernelIdentityContinuityToPositivity_Theorem`.
+   - Granica:
+     - `provider_discharge_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 372) Aktualizacja wykonawcza: QW-2484
+
+1. `QW-2484` (`report_qw2484_strict_anti_false_pass_identity_continuity_frontier_gate.json`)
+   - Verdict: `STRICT_ANTI_FALSE_PASS_IDENTITY_CONTINUITY_FRONTIER_GATE_PASS_WITH_BLOCKERS_EXPLICIT` (`6/7`)
+   - Wynik:
+     - chain `QW-2481..QW-2483` przechodzi anti-overclaim audit,
+     - utrzymano `all_strict_obligations_fully_closed=False` na calej warstwie,
+     - brak forbidden overclaim tokens w verdictach chainu.
+   - Granica:
+     - `integrity_audit_only=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 373) Aktualizacja wykonawcza: QW-2485
+
+1. `QW-2485` (`report_qw2485_dual_kernel_identity_continuity_provider_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CONTINUITY_PROVIDER_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`5/6`)
+   - Wynik:
+     - po `QW-2483` wyekstrahowano minimalny dual kernel-identity-continuity-provider blocker-cut,
+     - cut pozostaje dwu-symbolowy (po `1` symbolu na galaz RG/QFT):
+       - `RG_KernelIdentityContinuityToWellPosedness_Theorem`,
+       - `QFT_KernelIdentityContinuityToPositivity_Theorem`.
+   - Granica:
+     - `minimal_cut_extracted=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 374) Aktualizacja wykonawcza: QW-2486
+
+1. `QW-2486` (`report_qw2486_dual_kernel_identity_continuity_provider_theorem_spec_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CONTINUITY_PROVIDER_THEOREM_SPEC_GATE_PASS_PARTIAL_TERMINAL_LAYER_READY` (`9/10`)
+   - Wynik:
+     - zdefiniowano 2 target twierdzen aktualnego frontu (`RG_KernelIdentityContinuityToWellPosedness_Theorem`, `QFT_KernelIdentityContinuityToPositivity_Theorem`),
+     - zbudowano minimalny acykliczny DAG lematow RG/QFT,
+     - jawnie rozdzielono zalozenia `physical` vs `technical` (mapa assumptions).
+   - Granica:
+     - `theorem_spec_only=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 375) Aktualizacja wykonawcza: QW-2487
+
+1. `QW-2487` (`report_qw2487_dual_kernel_identity_continuity_provider_counterexample_search_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CONTINUITY_PROVIDER_COUNTEREXAMPLE_SEARCH_GATE_PASS_PARTIAL_NO_STRICT_COUNTEREXAMPLE_IN_BOUNDED_DOMAIN` (`8/9`)
+   - Wynik:
+     - wykonano bounded-domain adversarial counterexample search (model `2x2` symmetric operators) dla rodzin lematow: continuity-domain-invariance, self-adjointness-positivity-preservation, continuity-consistency-lower-bound, bounded-continuity-stability,
+     - strict regime: `rg_strict_counterexamples_total=0`, `qft_strict_counterexamples_total=0`,
+     - boundary regime (po zlamaniu perturbation bounds): znalezione naruszenia (`rg_boundary_violations_total=19955`, `qft_boundary_violations_total=19935`) potwierdzaja role zalozen.
+   - Granica:
+     - `search_domain_explicit_and_bounded=True`,
+     - to nie jest theorem-level dowod,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 376) Aktualizacja wykonawcza: QW-2488
+
+1. `QW-2488` (`report_qw2488_non_axiomatic_dual_kernel_identity_continuity_provider_derivation_attempt_gate.json`)
+   - Verdict: `NON_AXIOMATIC_DUAL_KERNEL_IDENTITY_CONTINUITY_PROVIDER_DERIVATION_ATTEMPT_GATE_PASS_PARTIAL_BLOCKED_BY_KERNEL_IDENTITY_COHERENCE_PROVIDER_THEOREMS` (`10/11`)
+   - Wynik:
+     - wykonano dual strict non-axiomatic derivation+machine-check attempt dopiero po theorem-spec (`QW-2486`) i counterexample-search (`QW-2487`),
+     - blocker-cut przesuniety jawnie do warstwy kernel-identity-coherence provider symbols:
+       - `RG_KernelIdentityCoherenceToWellPosedness_Theorem`,
+       - `QFT_KernelIdentityCoherenceToPositivity_Theorem`.
+   - Granica:
+     - `provider_discharge_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 377) Aktualizacja wykonawcza: QW-2489
+
+1. `QW-2489` (`report_qw2489_strict_anti_false_pass_identity_coherence_frontier_gate.json`)
+   - Verdict: `STRICT_ANTI_FALSE_PASS_IDENTITY_COHERENCE_FRONTIER_GATE_PASS_WITH_BLOCKERS_EXPLICIT` (`6/7`)
+   - Wynik:
+     - chain `QW-2486..QW-2488` przechodzi anti-overclaim audit,
+     - utrzymano `all_strict_obligations_fully_closed=False` na calej warstwie,
+     - brak forbidden overclaim tokens w verdictach chainu.
+   - Granica:
+     - `integrity_audit_only=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 378) Aktualizacja wykonawcza: QW-2490
+
+1. `QW-2490` (`report_qw2490_dual_kernel_identity_coherence_provider_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_COHERENCE_PROVIDER_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`5/6`)
+   - Wynik:
+     - po `QW-2493` potwierdzono minimalny dual kernel-identity-coherence-provider blocker-cut,
+     - cut pozostaje dwu-symbolowy (po `1` symbolu na galaz RG/QFT):
+       - `RG_KernelIdentityCoherenceToWellPosedness_Theorem`,
+       - `QFT_KernelIdentityCoherenceToPositivity_Theorem`.
+   - Granica:
+     - `minimal_cut_extracted=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 379) Aktualizacja wykonawcza: QW-2491
+
+1. `QW-2491` (`report_qw2491_dual_kernel_identity_coherence_provider_theorem_spec_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_COHERENCE_PROVIDER_THEOREM_SPEC_GATE_PASS_PARTIAL_TERMINAL_LAYER_READY` (`9/10`)
+   - Wynik:
+     - zdefiniowano 2 target twierdzen aktualnego frontu (`RG_KernelIdentityCoherenceToWellPosedness_Theorem`, `QFT_KernelIdentityCoherenceToPositivity_Theorem`),
+     - zbudowano minimalny acykliczny DAG lematow RG/QFT,
+     - jawnie rozdzielono zalozenia `physical` vs `technical` (mapa assumptions).
+   - Granica:
+     - `theorem_spec_only=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 380) Aktualizacja wykonawcza: QW-2492
+
+1. `QW-2492` (`report_qw2492_dual_kernel_identity_coherence_provider_counterexample_search_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_COHERENCE_PROVIDER_COUNTEREXAMPLE_SEARCH_GATE_PASS_PARTIAL_NO_STRICT_COUNTEREXAMPLE_IN_BOUNDED_DOMAIN` (`8/9`)
+   - Wynik:
+     - wykonano bounded-domain adversarial counterexample search (model `2x2` symmetric operators) dla rodzin lematow: coherence-domain-invariance, self-adjointness-positivity-preservation, coherence-consistency-lower-bound, bounded-coherence-stability,
+     - strict regime: `rg_strict_counterexamples_total=0`, `qft_strict_counterexamples_total=0`,
+     - boundary regime (po zlamaniu perturbation bounds): znalezione naruszenia (`rg_boundary_violations_total=19972`, `qft_boundary_violations_total=19973`) potwierdzaja role zalozen.
+   - Granica:
+     - `search_domain_explicit_and_bounded=True`,
+     - to nie jest theorem-level dowod,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 381) Aktualizacja wykonawcza: QW-2493
+
+1. `QW-2493` (`report_qw2493_non_axiomatic_dual_kernel_identity_coherence_provider_derivation_attempt_gate.json`)
+   - Verdict: `NON_AXIOMATIC_DUAL_KERNEL_IDENTITY_COHERENCE_PROVIDER_DERIVATION_ATTEMPT_GATE_PASS_PARTIAL_BLOCKED_BY_KERNEL_IDENTITY_REGULARITY_PROVIDER_THEOREMS` (`10/11`)
+   - Wynik:
+     - wykonano dual strict non-axiomatic derivation+machine-check attempt dopiero po theorem-spec (`QW-2491`) i counterexample-search (`QW-2492`),
+     - blocker-cut przesuniety jawnie do warstwy kernel-identity-regularity provider symbols:
+       - `RG_KernelIdentityRegularityToWellPosedness_Theorem`,
+       - `QFT_KernelIdentityRegularityToPositivity_Theorem`.
+   - Granica:
+     - `provider_discharge_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 382) Aktualizacja wykonawcza: QW-2494
+
+1. `QW-2494` (`report_qw2494_strict_anti_false_pass_identity_regularity_frontier_gate.json`)
+   - Verdict: `STRICT_ANTI_FALSE_PASS_IDENTITY_REGULARITY_FRONTIER_GATE_PASS_WITH_BLOCKERS_EXPLICIT` (`6/7`)
+   - Wynik:
+     - chain `QW-2491..QW-2493` przechodzi anti-overclaim audit,
+     - utrzymano `all_strict_obligations_fully_closed=False` na calej warstwie,
+     - brak forbidden overclaim tokens w verdictach chainu.
+   - Granica:
+     - `integrity_audit_only=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 383) Aktualizacja wykonawcza: QW-2495
+
+1. `QW-2495` (`report_qw2495_dual_kernel_identity_regularity_provider_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_REGULARITY_PROVIDER_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`5/6`)
+   - Wynik:
+     - po `QW-2493` wyekstrahowano minimalny dual kernel-identity-regularity-provider blocker-cut,
+     - cut pozostaje dwu-symbolowy (po `1` symbolu na galaz RG/QFT):
+       - `RG_KernelIdentityRegularityToWellPosedness_Theorem`,
+       - `QFT_KernelIdentityRegularityToPositivity_Theorem`.
+   - Granica:
+     - `minimal_cut_extracted=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 384) Aktualizacja wykonawcza: QW-2496
+
+1. `QW-2496` (`report_qw2496_dual_kernel_identity_regularity_provider_theorem_spec_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_REGULARITY_PROVIDER_THEOREM_SPEC_GATE_PASS_PARTIAL_TERMINAL_LAYER_READY` (`9/10`)
+   - Wynik:
+     - zdefiniowano 2 target twierdzen aktualnego frontu (`RG_KernelIdentityRegularityToWellPosedness_Theorem`, `QFT_KernelIdentityRegularityToPositivity_Theorem`),
+     - zbudowano minimalny acykliczny DAG lematow RG/QFT,
+     - jawnie rozdzielono zalozenia `physical` vs `technical` (mapa assumptions).
+   - Granica:
+     - `theorem_spec_only=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 385) Aktualizacja wykonawcza: QW-2497
+
+1. `QW-2497` (`report_qw2497_dual_kernel_identity_regularity_provider_counterexample_search_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_REGULARITY_PROVIDER_COUNTEREXAMPLE_SEARCH_GATE_PASS_PARTIAL_NO_STRICT_COUNTEREXAMPLE_IN_BOUNDED_DOMAIN` (`8/9`)
+   - Wynik:
+     - wykonano bounded-domain adversarial counterexample search (model `2x2` symmetric operators) dla rodzin lematow: regularity-domain-invariance, self-adjointness-positivity-preservation, regularity-coercive-lower-bound, bounded-regularity-stability,
+     - strict regime: `rg_strict_counterexamples_total=0`, `qft_strict_counterexamples_total=0`,
+     - boundary regime (po zlamaniu perturbation bounds): znalezione naruszenia (`rg_boundary_violations_total=20000`, `qft_boundary_violations_total=20000`) potwierdzaja role zalozen.
+   - Granica:
+     - `search_domain_explicit_and_bounded=True`,
+     - to nie jest theorem-level dowod,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 386) Aktualizacja wykonawcza: QW-2498
+
+1. `QW-2498` (`report_qw2498_non_axiomatic_dual_kernel_identity_regularity_provider_derivation_attempt_gate.json`)
+   - Verdict: `NON_AXIOMATIC_DUAL_KERNEL_IDENTITY_REGULARITY_PROVIDER_DERIVATION_ATTEMPT_GATE_PASS_PARTIAL_BLOCKED_BY_KERNEL_IDENTITY_CONSERVATION_PROVIDER_THEOREMS` (`10/11`)
+   - Wynik:
+     - wykonano dual strict non-axiomatic derivation+machine-check attempt dopiero po theorem-spec (`QW-2496`) i counterexample-search (`QW-2497`),
+     - blocker-cut przesuniety jawnie do warstwy kernel-identity-conservation provider symbols:
+       - `RG_KernelIdentityConservationToWellPosedness_Theorem`,
+       - `QFT_KernelIdentityConservationToPositivity_Theorem`.
+   - Granica:
+     - `provider_discharge_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 387) Aktualizacja wykonawcza: QW-2499
+
+1. `QW-2499` (`report_qw2499_strict_anti_false_pass_identity_conservation_frontier_gate.json`)
+   - Verdict: `STRICT_ANTI_FALSE_PASS_IDENTITY_CONSERVATION_FRONTIER_GATE_PASS_WITH_BLOCKERS_EXPLICIT` (`6/7`)
+   - Wynik:
+     - chain `QW-2496..QW-2498` przechodzi anti-overclaim audit,
+     - utrzymano `all_strict_obligations_fully_closed=False` na calej warstwie,
+     - brak forbidden overclaim tokens w verdictach chainu.
+   - Granica:
+     - `integrity_audit_only=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 388) Aktualizacja wykonawcza: QW-2500
+
+1. `QW-2500` (`report_qw2500_dual_kernel_identity_conservation_provider_minimal_blocker_cut_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CONSERVATION_PROVIDER_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED` (`5/6`)
+   - Wynik:
+     - po `QW-2498` wyekstrahowano minimalny dual kernel-identity-conservation-provider blocker-cut,
+     - cut pozostaje dwu-symbolowy (po `1` symbolu na galaz RG/QFT):
+       - `RG_KernelIdentityConservationToWellPosedness_Theorem`,
+       - `QFT_KernelIdentityConservationToPositivity_Theorem`.
+   - Granica:
+     - `minimal_cut_extracted=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 389) Aktualizacja wykonawcza: QW-2501
+
+1. `QW-2501` (`report_qw2501_dual_kernel_identity_conservation_provider_theorem_spec_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CONSERVATION_PROVIDER_THEOREM_SPEC_GATE_PASS_PARTIAL_TERMINAL_LAYER_READY` (`9/10`)
+   - Wynik:
+     - zdefiniowano 2 target twierdzen aktualnego frontu (`RG_KernelIdentityConservationToWellPosedness_Theorem`, `QFT_KernelIdentityConservationToPositivity_Theorem`),
+     - zbudowano minimalny acykliczny DAG lematow RG/QFT,
+     - jawnie rozdzielono zalozenia `physical` vs `technical` (mapa assumptions).
+   - Granica:
+     - `theorem_spec_only=True`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 390) Aktualizacja wykonawcza: QW-2502
+
+1. `QW-2502` (`report_qw2502_dual_kernel_identity_conservation_provider_counterexample_search_gate.json`)
+   - Verdict: `DUAL_KERNEL_IDENTITY_CONSERVATION_PROVIDER_COUNTEREXAMPLE_SEARCH_GATE_PASS_PARTIAL_NO_STRICT_COUNTEREXAMPLE_IN_BOUNDED_DOMAIN` (`8/9`)
+   - Wynik:
+     - wykonano bounded-domain adversarial counterexample search (model `2x2` symmetric operators) dla rodzin lematow: conservation-domain-invariance, self-adjointness-positivity-preservation, conservation-coercive-lower-bound, bounded-conservation-stability,
+     - strict regime: `rg_strict_counterexamples_total=0`, `qft_strict_counterexamples_total=0`,
+     - boundary regime (po zlamaniu perturbation bounds): znalezione naruszenia (`rg_boundary_violations_total=20000`, `qft_boundary_violations_total=20000`) potwierdzaja role zalozen.
+   - Granica:
+     - `search_domain_explicit_and_bounded=True`,
+     - to nie jest theorem-level dowod,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 391) Aktualizacja wykonawcza: QW-2503
+
+1. `QW-2503` (`report_qw2503_non_axiomatic_dual_kernel_identity_conservation_provider_derivation_attempt_gate.json`)
+   - Verdict: `NON_AXIOMATIC_DUAL_KERNEL_IDENTITY_CONSERVATION_PROVIDER_DERIVATION_ATTEMPT_GATE_PASS_PARTIAL_BLOCKED_BY_KERNEL_IDENTITY_COMPATIBILITY_PROVIDER_THEOREMS` (`10/11`)
+   - Wynik:
+     - wykonano dual strict non-axiomatic derivation+machine-check attempt dopiero po theorem-spec (`QW-2501`) i counterexample-search (`QW-2502`),
+     - blocker-cut przesuniety jawnie do warstwy kernel-identity-compatibility provider symbols:
+       - `RG_KernelIdentityCompatibilityToWellPosedness_Theorem`,
+       - `QFT_KernelIdentityCompatibilityToPositivity_Theorem`.
+   - Granica:
+     - `provider_discharge_completed=False`,
+     - `all_strict_obligations_fully_closed=False`.
+
+## 392) Aktualizacja wykonawcza: QW-2504
+
+1. `QW-2504` (`report_qw2504_strict_anti_false_pass_identity_compatibility_frontier_gate.json`)
+   - Verdict: `STRICT_ANTI_FALSE_PASS_IDENTITY_COMPATIBILITY_FRONTIER_GATE_PASS_WITH_BLOCKERS_EXPLICIT` (`6/7`)
+   - Wynik:
+     - chain `QW-2501..QW-2503` przechodzi anti-overclaim audit,
+     - utrzymano `all_strict_obligations_fully_closed=False` na calej warstwie,
+     - brak forbidden overclaim tokens w verdictach chainu.
+   - Granica:
+     - `integrity_audit_only=True`,
+     - `all_strict_obligations_fully_closed=False`.

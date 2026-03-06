@@ -1,0 +1,41 @@
+{
+  "generated_utc": "2026-03-05T10:00:36.968409+00:00",
+  "source": "report_qw2386_dual_kernel_identity_anchor_evidence_admission_gate.json",
+  "attempt_files": {
+    "l12": "FIN_L12_KERNEL_IDENTITY_LOCALITY_ANCHOR_ATTEMPT.lean",
+    "l5": "FIN_L5_KERNEL_IDENTITY_LOCALITY_ANCHOR_ATTEMPT.lean"
+  },
+  "proof_object_file": "proof_object_qw2387_dual_kernel_identity_anchor_execution_status.json",
+  "proof_object_sha256": "5646f2639bad413d9854c26a26eddde50d8995f7adc807951595d5287ec1bf84",
+  "machine_check_exit_codes": {
+    "l12": 1,
+    "l5": 1
+  },
+  "blocker_cut": [
+    {
+      "branch": "L12",
+      "symbol": "RG_ActionLevel_PhysicalBridge_Derivation"
+    },
+    {
+      "branch": "L5",
+      "symbol": "QFT_ActionLevel_PhysicalBridge_Derivation"
+    }
+  ],
+  "flags": {
+    "q2386_admission_allowed": true,
+    "l12_candidate_exists": true,
+    "l5_candidate_exists": true,
+    "l12_candidate_hard_hygiene": true,
+    "l5_candidate_hard_hygiene": true,
+    "lean_binary_detected": true,
+    "machine_check_executed_both": true,
+    "l12_expected_provider_missing_blocker_confirmed": true,
+    "l5_expected_provider_missing_blocker_confirmed": true,
+    "execution_completed": false,
+    "all_strict_obligations_fully_closed": false
+  },
+  "pass_count": 9,
+  "total_flags": 11,
+  "verdict": "DUAL_KERNEL_IDENTITY_ANCHOR_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_ACTION_LEVEL_ANCHOR_PROVIDERS",
+  "required_next_step": "EXTRACT_DUAL_ACTION_LEVEL_ANCHOR_PROVIDER_BLOCKER_CUT"
+}

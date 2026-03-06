@@ -1,0 +1,46 @@
+{
+  "generated_utc": "2026-03-05T10:06:49.207534+00:00",
+  "source": "report_qw2389_dual_action_level_anchor_provider_discharge_packet_gate.json",
+  "attempt_files": {
+    "l12": {
+      "name": "FIN_L12_ACTION_LEVEL_ANCHOR_PROVIDER_DISCHARGE_ATTEMPT.lean",
+      "sha256": "8ccfef07cddbd05db9f487e6a377000096965e795c11339936476865e68f6f74",
+      "target_theorem": "RG_ActionLevel_PhysicalBridge_Derivation",
+      "missing_foundational_symbol": "RG_FundamentalActionToWellPosedness_Derivation"
+    },
+    "l5": {
+      "name": "FIN_L5_ACTION_LEVEL_ANCHOR_PROVIDER_DISCHARGE_ATTEMPT.lean",
+      "sha256": "8d8c2024e2db8f406619def4cb06ca1998d290ccbada3b2cdef43a0b151e876b",
+      "target_theorem": "QFT_ActionLevel_PhysicalBridge_Derivation",
+      "missing_foundational_symbol": "QFT_FundamentalActionToPositivity_Derivation"
+    }
+  },
+  "machine_check": {
+    "lean_binary": "/tmp/lean4/lean-4.28.0-linux/bin/lean",
+    "l12": {
+      "exit_code": 1,
+      "stdout": "FIN_L12_ACTION_LEVEL_ANCHOR_PROVIDER_DISCHARGE_ATTEMPT.lean:8:8: error(lean.unknownIdentifier): Unknown identifier `RG_FundamentalActionToWellPosedness_Derivation`\n",
+      "stderr": ""
+    },
+    "l5": {
+      "exit_code": 1,
+      "stdout": "FIN_L5_ACTION_LEVEL_ANCHOR_PROVIDER_DISCHARGE_ATTEMPT.lean:8:8: error(lean.unknownIdentifier): Unknown identifier `QFT_FundamentalActionToPositivity_Derivation`\n",
+      "stderr": ""
+    }
+  },
+  "blocker_cut": [
+    {
+      "branch": "L12",
+      "symbol": "RG_FundamentalActionToWellPosedness_Derivation"
+    },
+    {
+      "branch": "L5",
+      "symbol": "QFT_FundamentalActionToPositivity_Derivation"
+    }
+  ],
+  "scope_boundary": {
+    "execution_completed": false,
+    "all_strict_obligations_fully_closed": false,
+    "overclaim_forbidden": true
+  }
+}

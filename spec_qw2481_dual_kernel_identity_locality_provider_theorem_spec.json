@@ -1,0 +1,104 @@
+{
+  "generated_utc": "2026-03-05T21:01:05.718589+00:00",
+  "sources": {
+    "q2480": "report_qw2480_dual_kernel_identity_locality_provider_minimal_blocker_cut_gate.json",
+    "q2479": "report_qw2479_strict_anti_false_pass_identity_locality_frontier_gate.json"
+  },
+  "theorem_targets": {
+    "L12_target": "RG_KernelIdentityLocalityToWellPosedness_Theorem",
+    "L5_target": "QFT_KernelIdentityLocalityToPositivity_Theorem"
+  },
+  "acceptance_criteria": {
+    "C1": "Identity-locality domain invariance theorem in declared operator class.",
+    "C2": "Self-adjointness/positivity preservation under locality constraints.",
+    "C3": "Locality-consistency lower-bound theorem with explicit constants.",
+    "C4": "Spectral/graph stability under bounded locality-preserving perturbations.",
+    "C5": "Bridge theorem: locality lemmas imply well-posedness/positivity targets.",
+    "C6": "Machine-check package with reproducible proof hashes and dependency DAG."
+  },
+  "lemma_dag": {
+    "RG_KIL_L1_LocalityDomainInvariance": [],
+    "RG_KIL_L2_SelfAdjointPositivityPreservation": [
+      "RG_KIL_L1_LocalityDomainInvariance"
+    ],
+    "RG_KIL_L3_LocalityConsistencyLowerBound": [
+      "RG_KIL_L2_SelfAdjointPositivityPreservation"
+    ],
+    "RG_KIL_L4_BoundedLocalityPerturbationStability": [
+      "RG_KIL_L3_LocalityConsistencyLowerBound"
+    ],
+    "RG_KernelIdentityLocalityToWellPosedness_Theorem": [
+      "RG_KIL_L4_BoundedLocalityPerturbationStability"
+    ],
+    "QFT_KIL_L1_LocalityDomainInvariance": [],
+    "QFT_KIL_L2_SelfAdjointPositivityPreservation": [
+      "QFT_KIL_L1_LocalityDomainInvariance"
+    ],
+    "QFT_KIL_L3_LocalityConsistencyLowerBound": [
+      "QFT_KIL_L2_SelfAdjointPositivityPreservation"
+    ],
+    "QFT_KIL_L4_BoundedLocalityPerturbationStability": [
+      "QFT_KIL_L3_LocalityConsistencyLowerBound"
+    ],
+    "QFT_KernelIdentityLocalityToPositivity_Theorem": [
+      "QFT_KIL_L4_BoundedLocalityPerturbationStability"
+    ]
+  },
+  "assumptions": {
+    "A_phys_1": {
+      "class": "physical",
+      "statement": "Complete FIN action and declared branch selection remain fixed.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_phys_2": {
+      "class": "physical",
+      "statement": "Constructive RG/QFT mapping in strict scope is preserved.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_1": {
+      "class": "technical",
+      "statement": "Locality-constrained domain is dense and graph-closed.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_2": {
+      "class": "technical",
+      "statement": "Self-adjoint extension uniqueness in declared locality class.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_3": {
+      "class": "technical",
+      "statement": "Explicit positive lower-bound/coercivity constants.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_4": {
+      "class": "technical",
+      "statement": "Perturbation bound below locality-stability threshold.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    }
+  },
+  "scope_boundary": {
+    "theorem_spec_only": true,
+    "counterexample_search_pending": true,
+    "provider_discharge_completed": false,
+    "all_strict_obligations_fully_closed": false,
+    "overclaim_forbidden": true
+  }
+}

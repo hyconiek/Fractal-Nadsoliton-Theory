@@ -1,0 +1,71 @@
+{
+  "generated_utc": "2026-03-05T13:36:07.604357+00:00",
+  "inputs": {
+    "reports": {
+      "q2440": "report_qw2440_grep_frontier_single_foundation_audit_gate.json",
+      "q2442": "report_qw2442_dual_nadsoliton_single_foundation_provider_execution_status_gate.json",
+      "q2443": "report_qw2443_dual_nadsoliton_single_foundation_minimal_blocker_cut_gate.json",
+      "q2444": "report_qw2444_lean_runtime_discovery_gate.json",
+      "q2445": "report_qw2445_dual_nadsoliton_single_foundation_provider_execution_status_v2_gate.json",
+      "q2446": "report_qw2446_lean_runtime_provisioning_attempt_gate.json"
+    },
+    "spec_2443": "spec_qw2443_dual_nadsoliton_single_foundation_minimal_blocker_cut.json",
+    "readiness": "RAPORT_STAN_TEORII_FIN_V5_1_READINESS_2026-03-05.md"
+  },
+  "missing_reports": [],
+  "verdicts": {
+    "q2440": "GREP_FRONTIER_SINGLE_FOUNDATION_AUDIT_GATE_PASS_WITH_BLOCKERS_EXPLICIT",
+    "q2442": "DUAL_NADSOLITON_SINGLE_FOUNDATION_PROVIDER_EXECUTION_STATUS_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_CANONICAL_EXPORT_SYMBOLS",
+    "q2443": "DUAL_NADSOLITON_SINGLE_FOUNDATION_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED",
+    "q2444": "LEAN_RUNTIME_DISCOVERY_GATE_PASS_RUNTIME_AVAILABLE",
+    "q2445": "DUAL_NADSOLITON_SINGLE_FOUNDATION_PROVIDER_EXECUTION_STATUS_V2_GATE_PASS_PARTIAL_BLOCKED_BY_MISSING_CANONICAL_EXPORT_SYMBOLS",
+    "q2446": "LEAN_RUNTIME_PROVISIONING_ATTEMPT_GATE_PASS_SKIPPED_RUNTIME_ALREADY_AVAILABLE"
+  },
+  "unknown_identifiers": {
+    "q2442_l12": [
+      "RG_CanonicalAction_to_WellPosedness_EXPORT"
+    ],
+    "q2442_l5": [
+      "QFT_CanonicalAction_to_Positivity_EXPORT"
+    ]
+  },
+  "cut_symbols_q2443": [
+    "QFT_CanonicalAction_to_Positivity_EXPORT",
+    "RG_CanonicalAction_to_WellPosedness_EXPORT"
+  ],
+  "hard_requirements": [
+    "all_required_reports_present",
+    "q2443_spec_present",
+    "readiness_declares_not_ready",
+    "readiness_no_ready_overclaim",
+    "no_overclaim_tokens_in_verdicts",
+    "q2442_expected_unknown_symbols_isolated",
+    "q2443_minimal_cut_matches_expected_dual_symbols",
+    "q2445_coherent_with_q2444",
+    "q2446_coherent_with_q2444",
+    "q2446_verdict_allowed_under_strict_runtime_semantics",
+    "all_strict_obligations_fully_closed_false_everywhere",
+    "core_blockers_still_explicit"
+  ],
+  "flags": {
+    "all_required_reports_present": true,
+    "q2443_spec_present": true,
+    "readiness_declares_not_ready": true,
+    "readiness_no_ready_overclaim": true,
+    "no_overclaim_tokens_in_verdicts": true,
+    "q2442_expected_unknown_symbols_isolated": true,
+    "q2443_minimal_cut_matches_expected_dual_symbols": true,
+    "q2445_coherent_with_q2444": true,
+    "q2446_coherent_with_q2444": true,
+    "q2446_verdict_allowed_under_strict_runtime_semantics": true,
+    "all_strict_obligations_fully_closed_false_everywhere": true,
+    "core_blockers_still_explicit": true,
+    "all_strict_obligations_fully_closed": false
+  },
+  "scope_boundary": {
+    "integrity_audit_only": true,
+    "theorem_discharge_completed": false,
+    "all_strict_obligations_fully_closed": false,
+    "overclaim_forbidden": true
+  }
+}

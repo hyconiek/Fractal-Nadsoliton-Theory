@@ -1,0 +1,41 @@
+{
+  "generated_utc": "2026-03-05T08:23:28.103282+00:00",
+  "sources": {
+    "q2356": "report_qw2356_dual_kernel_identity_robustness_execution_status_gate.json",
+    "spec": "spec_qw2357_dual_kernel_identity_resilience_minimal_blocker_cut.json"
+  },
+  "spec_file": "spec_qw2357_dual_kernel_identity_resilience_minimal_blocker_cut.json",
+  "spec_sha256": "b1a47bac1691436bfa35fb91c94e2da07cb0780e527c1c1d94e404318bfdb7bc",
+  "proof_object_file": "proof_object_qw2357_dual_kernel_identity_resilience_minimal_blocker_cut.json",
+  "proof_object_sha256": "a9182c15716816e2bd1b05e43d7640ee118a0e5070bf7f0e9747f384ba3c3172",
+  "minimal_blocker_cut": [
+    {
+      "id": "L12_KERNEL_IDENTITY_RESILIENCE_CORE_O1",
+      "branch": "L12",
+      "symbol": "RG_KernelIdentityResilienceToWellPosedness_Theorem",
+      "required_statement": "(FINActionComplete ∧ RGConstructiveMap) -> RGGlobalWellPosednessAllScales",
+      "proof_kind": "kernel_identity_resilience_derivation"
+    },
+    {
+      "id": "L5_KERNEL_IDENTITY_RESILIENCE_CORE_O1",
+      "branch": "L5",
+      "symbol": "QFT_KernelIdentityResilienceToPositivity_Theorem",
+      "required_statement": "(FINActionComplete ∧ ConstructiveNonPerturbativeScheme) -> PositivityToReconstruction",
+      "proof_kind": "kernel_identity_resilience_derivation"
+    }
+  ],
+  "n_obligations": 2,
+  "flags": {
+    "q2356_execution_status_present": true,
+    "q2356_blocker_cut_size_two": true,
+    "contains_rg_kernel_identity_resilience_blocker": true,
+    "contains_qft_kernel_identity_resilience_blocker": true,
+    "minimal_blocker_cut_size_two": true,
+    "one_core_obligation_per_branch": true,
+    "all_strict_obligations_fully_closed": false
+  },
+  "pass_count": 6,
+  "total_flags": 7,
+  "verdict": "DUAL_KERNEL_IDENTITY_RESILIENCE_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED",
+  "required_next_step": "BUILD_DUAL_KERNEL_IDENTITY_RESILIENCE_DISCHARGE_PACKET"
+}

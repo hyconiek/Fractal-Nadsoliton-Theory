@@ -1,0 +1,104 @@
+{
+  "generated_utc": "2026-03-05T21:26:17.759965+00:00",
+  "sources": {
+    "q2495": "report_qw2495_dual_kernel_identity_regularity_provider_minimal_blocker_cut_gate.json",
+    "q2494": "report_qw2494_strict_anti_false_pass_identity_regularity_frontier_gate.json"
+  },
+  "theorem_targets": {
+    "L12_target": "RG_KernelIdentityRegularityToWellPosedness_Theorem",
+    "L5_target": "QFT_KernelIdentityRegularityToPositivity_Theorem"
+  },
+  "acceptance_criteria": {
+    "C1": "Identity-regularity domain invariance theorem in declared operator class.",
+    "C2": "Self-adjointness/positivity preservation under regularity constraints.",
+    "C3": "Regularity coercive lower-bound theorem with explicit constants.",
+    "C4": "Spectral/graph stability under bounded regularity-preserving perturbations.",
+    "C5": "Bridge theorem: regularity lemmas imply well-posedness/positivity targets.",
+    "C6": "Machine-check package with reproducible proof hashes and dependency DAG."
+  },
+  "lemma_dag": {
+    "RG_KIREG_L1_RegularityDomainInvariance": [],
+    "RG_KIREG_L2_SelfAdjointPositivityPreservation": [
+      "RG_KIREG_L1_RegularityDomainInvariance"
+    ],
+    "RG_KIREG_L3_RegularityCoerciveLowerBound": [
+      "RG_KIREG_L2_SelfAdjointPositivityPreservation"
+    ],
+    "RG_KIREG_L4_BoundedRegularityPerturbationStability": [
+      "RG_KIREG_L3_RegularityCoerciveLowerBound"
+    ],
+    "RG_KernelIdentityRegularityToWellPosedness_Theorem": [
+      "RG_KIREG_L4_BoundedRegularityPerturbationStability"
+    ],
+    "QFT_KIREG_L1_RegularityDomainInvariance": [],
+    "QFT_KIREG_L2_SelfAdjointPositivityPreservation": [
+      "QFT_KIREG_L1_RegularityDomainInvariance"
+    ],
+    "QFT_KIREG_L3_RegularityCoerciveLowerBound": [
+      "QFT_KIREG_L2_SelfAdjointPositivityPreservation"
+    ],
+    "QFT_KIREG_L4_BoundedRegularityPerturbationStability": [
+      "QFT_KIREG_L3_RegularityCoerciveLowerBound"
+    ],
+    "QFT_KernelIdentityRegularityToPositivity_Theorem": [
+      "QFT_KIREG_L4_BoundedRegularityPerturbationStability"
+    ]
+  },
+  "assumptions": {
+    "A_phys_1": {
+      "class": "physical",
+      "statement": "Complete FIN action and declared branch selection remain fixed.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_phys_2": {
+      "class": "physical",
+      "statement": "Constructive RG/QFT mapping in strict scope is preserved.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_1": {
+      "class": "technical",
+      "statement": "Regularity-constrained domain is dense and graph-closed.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_2": {
+      "class": "technical",
+      "statement": "Self-adjoint extension uniqueness in declared regularity class.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_3": {
+      "class": "technical",
+      "statement": "Explicit coercive lower-bound constants in regularity norm.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    },
+    "A_tech_4": {
+      "class": "technical",
+      "statement": "Perturbation bound below regularity-stability threshold.",
+      "applies_to": [
+        "L12_target",
+        "L5_target"
+      ]
+    }
+  },
+  "scope_boundary": {
+    "theorem_spec_only": true,
+    "counterexample_search_pending": true,
+    "provider_discharge_completed": false,
+    "all_strict_obligations_fully_closed": false,
+    "overclaim_forbidden": true
+  }
+}

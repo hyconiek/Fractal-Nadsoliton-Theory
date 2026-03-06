@@ -1,0 +1,7 @@
+# RAPORT QW-2275: RG RESIDUAL CORE BLOCKER EXECUTION STATUS V2 GATE
+
+- Date UTC: 2026-03-05T05:47:17.884527+00:00
+- Verdict: **RG_RESIDUAL_CORE_BLOCKER_EXECUTION_STATUS_V2_GATE_PASS_PARTIAL_PENDING_STRICT_NON_AXIOMATIC**
+- pass_count: `3/6`
+- obligations satisfied (strict): `0/1`
+- n_strict_non_axiomatic_candidates: `0`

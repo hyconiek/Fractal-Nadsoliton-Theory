@@ -1,0 +1,41 @@
+{
+  "generated_utc": "2026-03-05T07:52:42.099264+00:00",
+  "sources": {
+    "q2338": "report_qw2338_dual_kernel_identity_compatibility_execution_status_gate.json",
+    "spec": "spec_qw2339_dual_kernel_identity_integrity_minimal_blocker_cut.json"
+  },
+  "spec_file": "spec_qw2339_dual_kernel_identity_integrity_minimal_blocker_cut.json",
+  "spec_sha256": "1b3c0c5bbb16faca143602a76f17496647f388b4fe563e1e5cb496aaa25cdd16",
+  "proof_object_file": "proof_object_qw2339_dual_kernel_identity_integrity_minimal_blocker_cut.json",
+  "proof_object_sha256": "f94ec9a6bb3bc81d5bec15a039378e246e7d3189a86ede66df0efee057aba17d",
+  "minimal_blocker_cut": [
+    {
+      "id": "L12_KERNEL_IDENTITY_INTEGRITY_CORE_O1",
+      "branch": "L12",
+      "symbol": "RG_KernelIdentityIntegrityToWellPosedness_Theorem",
+      "required_statement": "(FINActionComplete ∧ RGConstructiveMap) -> RGGlobalWellPosednessAllScales",
+      "proof_kind": "kernel_identity_integrity_derivation"
+    },
+    {
+      "id": "L5_KERNEL_IDENTITY_INTEGRITY_CORE_O1",
+      "branch": "L5",
+      "symbol": "QFT_KernelIdentityIntegrityToPositivity_Theorem",
+      "required_statement": "(FINActionComplete ∧ ConstructiveNonPerturbativeScheme) -> PositivityToReconstruction",
+      "proof_kind": "kernel_identity_integrity_derivation"
+    }
+  ],
+  "n_obligations": 2,
+  "flags": {
+    "q2338_execution_status_present": true,
+    "q2338_blocker_cut_size_two": true,
+    "contains_rg_kernel_identity_integrity_blocker": true,
+    "contains_qft_kernel_identity_integrity_blocker": true,
+    "minimal_blocker_cut_size_two": true,
+    "one_core_obligation_per_branch": true,
+    "all_strict_obligations_fully_closed": false
+  },
+  "pass_count": 6,
+  "total_flags": 7,
+  "verdict": "DUAL_KERNEL_IDENTITY_INTEGRITY_MINIMAL_BLOCKER_CUT_GATE_PASS_PARTIAL_TWO_SYMBOLS_ISOLATED",
+  "required_next_step": "BUILD_DUAL_KERNEL_IDENTITY_INTEGRITY_DISCHARGE_PACKET"
+}

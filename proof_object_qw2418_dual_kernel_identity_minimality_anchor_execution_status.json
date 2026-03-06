@@ -1,0 +1,47 @@
+{
+  "generated_utc": "2026-03-05T11:26:17.193057+00:00",
+  "sources": {
+    "q2416": "report_qw2416_dual_kernel_identity_minimality_chain_reuse_admission_gate.json",
+    "q2417": "report_qw2417_dual_kernel_identity_minimality_noncyclic_anchor_obligation_packet_gate.json"
+  },
+  "attempt_files": {
+    "l12": {
+      "name": "FIN_L12_KERNEL_IDENTITY_MINIMALITY_NONCYCLIC_ANCHOR_ATTEMPT.lean",
+      "sha256": "faa04603162ba1f9d9d9f1e249585f5852df5a3281242907e0115deb59d94426"
+    },
+    "l5": {
+      "name": "FIN_L5_KERNEL_IDENTITY_MINIMALITY_NONCYCLIC_ANCHOR_ATTEMPT.lean",
+      "sha256": "0f5b2400b5c513f82c2d8254b8b45d064c4bce0a7f470ac8d83655f1b3b0da53"
+    }
+  },
+  "machine_check": {
+    "lean_binary": "/tmp/lean4/lean-4.28.0-linux/bin/lean",
+    "l12": {
+      "exit_code": 1,
+      "stdout": "FIN_L12_KERNEL_IDENTITY_MINIMALITY_NONCYCLIC_ANCHOR_ATTEMPT.lean:8:8: error(lean.unknownIdentifier): Unknown identifier `RG_KernelIdentityClosureToWellPosedness_Theorem`\n",
+      "stderr": "",
+      "unknown_identifier": "RG_KernelIdentityClosureToWellPosedness_Theorem"
+    },
+    "l5": {
+      "exit_code": 1,
+      "stdout": "FIN_L5_KERNEL_IDENTITY_MINIMALITY_NONCYCLIC_ANCHOR_ATTEMPT.lean:8:8: error(lean.unknownIdentifier): Unknown identifier `QFT_KernelIdentityClosureToPositivity_Theorem`\n",
+      "stderr": "",
+      "unknown_identifier": "QFT_KernelIdentityClosureToPositivity_Theorem"
+    }
+  },
+  "blocker_cut": [
+    {
+      "branch": "L12",
+      "symbol": "RG_KernelIdentityClosureToWellPosedness_Theorem"
+    },
+    {
+      "branch": "L5",
+      "symbol": "QFT_KernelIdentityClosureToPositivity_Theorem"
+    }
+  ],
+  "scope_boundary": {
+    "execution_completed": false,
+    "all_strict_obligations_fully_closed": false,
+    "overclaim_forbidden": true
+  }
+}

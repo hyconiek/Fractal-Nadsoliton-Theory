@@ -1,0 +1,24 @@
+{
+  "generated_utc": "2026-03-05T07:47:43.727102+00:00",
+  "sources": {
+    "q2335": "report_qw2335_dual_kernel_identity_conservation_execution_status_gate.json",
+    "spec": "spec_qw2336_dual_kernel_identity_compatibility_minimal_blocker_cut.json"
+  },
+  "minimal_blocker_cut": [
+    {
+      "id": "L12_KERNEL_IDENTITY_COMPATIBILITY_CORE_O1",
+      "branch": "L12",
+      "symbol": "RG_KernelIdentityCompatibilityToWellPosedness_Theorem",
+      "required_statement": "(FINActionComplete ∧ RGConstructiveMap) -> RGGlobalWellPosednessAllScales",
+      "proof_kind": "kernel_identity_compatibility_derivation"
+    },
+    {
+      "id": "L5_KERNEL_IDENTITY_COMPATIBILITY_CORE_O1",
+      "branch": "L5",
+      "symbol": "QFT_KernelIdentityCompatibilityToPositivity_Theorem",
+      "required_statement": "(FINActionComplete ∧ ConstructiveNonPerturbativeScheme) -> PositivityToReconstruction",
+      "proof_kind": "kernel_identity_compatibility_derivation"
+    }
+  ],
+  "n_obligations": 2
+}

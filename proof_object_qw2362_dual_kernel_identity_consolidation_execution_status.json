@@ -1,0 +1,46 @@
+{
+  "generated_utc": "2026-03-05T08:29:17.967235+00:00",
+  "source": "report_qw2361_dual_kernel_identity_consolidation_discharge_packet_gate.json",
+  "attempt_files": {
+    "l12": {
+      "name": "FIN_L12_KERNEL_IDENTITY_CONSOLIDATION_DISCHARGE_ATTEMPT.lean",
+      "sha256": "f6b3f8448d404580a284df704e730c2fdfb22afc1dfba1cd7ca797b58540952c",
+      "target_theorem": "RG_KernelIdentityConsolidationToWellPosedness_Theorem",
+      "missing_identity_integration_symbol": "RG_KernelIdentityIntegrationToWellPosedness_Theorem"
+    },
+    "l5": {
+      "name": "FIN_L5_KERNEL_IDENTITY_CONSOLIDATION_DISCHARGE_ATTEMPT.lean",
+      "sha256": "6b89f5227d3255bcc697949a674f6ad4007ef3546d9aa65ef251316efbd4d7ea",
+      "target_theorem": "QFT_KernelIdentityConsolidationToPositivity_Theorem",
+      "missing_identity_integration_symbol": "QFT_KernelIdentityIntegrationToPositivity_Theorem"
+    }
+  },
+  "machine_check": {
+    "lean_binary": "/tmp/lean4/lean-4.28.0-linux/bin/lean",
+    "l12": {
+      "exit_code": 1,
+      "stdout": "FIN_L12_KERNEL_IDENTITY_CONSOLIDATION_DISCHARGE_ATTEMPT.lean:8:8: error(lean.unknownIdentifier): Unknown identifier `RG_KernelIdentityIntegrationToWellPosedness_Theorem`\n",
+      "stderr": ""
+    },
+    "l5": {
+      "exit_code": 1,
+      "stdout": "FIN_L5_KERNEL_IDENTITY_CONSOLIDATION_DISCHARGE_ATTEMPT.lean:8:8: error(lean.unknownIdentifier): Unknown identifier `QFT_KernelIdentityIntegrationToPositivity_Theorem`\n",
+      "stderr": ""
+    }
+  },
+  "blocker_cut": [
+    {
+      "branch": "L12",
+      "symbol": "RG_KernelIdentityIntegrationToWellPosedness_Theorem"
+    },
+    {
+      "branch": "L5",
+      "symbol": "QFT_KernelIdentityIntegrationToPositivity_Theorem"
+    }
+  ],
+  "scope_boundary": {
+    "execution_completed": false,
+    "all_strict_obligations_fully_closed": false,
+    "overclaim_forbidden": true
+  }
+}
