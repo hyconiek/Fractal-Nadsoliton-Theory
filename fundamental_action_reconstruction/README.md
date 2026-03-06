@@ -1,6 +1,6 @@
 # Fundamental Action Reconstruction
 
-Status: `PROGRAM_PHASE1_COMPLETE_C19_GENERATOR_LEVEL_SOURCE_REDUCED`
+Status: `PROGRAM_PHASE1_COMPLETE_C20_MATERIALIZATION_RECIPE_REDUCED`
 As of: `2026-03-06`
 
 Ten katalog otwiera rownolegly tor konstrukcyjny poza drabinka `L5/L12`.
@@ -120,6 +120,8 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
    - sprawdzic, czy strict core ma juz skonczony witness packet dla calej rodziny `12` rows `Psi`, nawet jesli brak jeszcze pelnej serializacji wszystkich `12` rows.
 27. `C19`: generator-level all-rows source audit
    - sprawdzic, czy strict core ma juz generator-level exhaustive source dla wszystkich `12` rows `Psi`, nawet jesli brak jeszcze jawnego persisted serialization artifact.
+28. `C20`: finite materialization recipe audit
+   - sprawdzic, czy strict core ma juz skonczony persisted recipe do materializacji wszystkich `12` rows `Psi`, nawet jesli brak jeszcze wykonanego persisted serialization run.
 
 ## Aktualny status
 
@@ -160,6 +162,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `C17`: wykonane jako siedemnasty krok trzeciego mikrocyklu; exhaustive-table blocker zostaje zawężony dalej do braku explicit row-by-row exportu dla wszystkich `12` wierszy oraz braku restriction do orientation slice.
 - `C18`: wykonane jako osiemnasty krok trzeciego mikrocyklu; row-export blocker zostaje zawężony dalej do braku pelnej serializacji `12` rows mimo obecnosci skonczonego witness packet dla calej rodziny, oraz braku restriction do orientation slice.
 - `C19`: wykonane jako dziewietnasty krok trzeciego mikrocyklu; serializacyjny blocker zostaje zawężony dalej do braku persisted `12`-row artifact mimo obecnosci generator-level exhaustive source, oraz braku restriction do orientation slice.
+- `C20`: wykonane jako dwudziesty krok trzeciego mikrocyklu; persisted-serialization blocker zostaje zawężony dalej do braku wykonanego i zapisanego `12`-row serialization run mimo obecnosci skonczonego persisted recipe, oraz braku restriction do orientation slice.
 
 ## Twarde ograniczenia rygoru
 
@@ -199,6 +202,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - brak claimu, ze `C17` daje juz explicit row-by-row export albo rozladowuje `C16_B1`.
 - brak claimu, ze `C18` daje juz pelna serializacje `12` rows albo rozladowuje `C17_B1`.
 - brak claimu, ze `C19` daje juz persisted `12`-row export artifact albo rozladowuje `C18_B1`.
+- brak claimu, ze `C20` daje juz executed persisted `12`-row serialization run albo rozladowuje `C19_B1`.
 
 ## Zasada korzystania z poprzednich badan
 
@@ -252,6 +256,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `C17_INDEX_COMPLETE_PSI_ROW_STENCIL_AUDIT.md`
 - `C18_FINITE_PSI_ROW_EXPORT_WITNESS_PACKET.md`
 - `C19_GENERATOR_LEVEL_ALL_ROWS_SOURCE_AUDIT.md`
+- `C20_FINITE_MATERIALIZATION_RECIPE_AUDIT.md`
 - `a1_minimal_action_ansatz.py`
 - `a2_supersoliton_matching.py`
 - `a3_kernel_analysis.py`
@@ -289,6 +294,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `c17_index_complete_psi_row_stencil_audit.py`
 - `c18_finite_psi_row_export_witness_packet.py`
 - `c19_generator_level_all_rows_source_audit.py`
+- `c20_finite_materialization_recipe_audit.py`
 - `generated/a1_minimal_action_ansatz_summary.json`
 - `generated/a2_supersoliton_matching_summary.json`
 - `generated/a3_kernel_analysis_summary.json`

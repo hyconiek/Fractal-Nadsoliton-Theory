@@ -6054,3 +6054,32 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - przejsc do `C20` i sprawdzic, czy strict core daje juz jawny materialized `12`-row serialization packet z istniejacego generator-level source,
    - albo jawnie potwierdzic, ze taki packet nadal nie jest obecny.
+
+## 428. C20 finite materialization recipe audit wykonane (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy strict core ma juz skonczony persisted recipe do materializacji wszystkich `12` rows `Psi`,
+     nawet jesli brak jeszcze wykonanego persisted serialization run.
+2. Wynik:
+   - finite persisted materialization recipe jest juz obecny,
+   - opiera sie na:
+     - `N = 12`,
+     - rodzinie `psi[i]`,
+     - persisted `lagrangian_density`,
+     - funkcji `euler_lagrange`,
+     - finite comprehension `eom_psi[i]`,
+   - aktualny frontier zawęza sie do:
+     - braku wykonanego i zapisanego `12`-row serialization run,
+     - braku restriction do candidate orientation slice.
+3. Twarde granice:
+   - brak `C19_B1` PASS,
+   - brak theorem-level PASS,
+   - brak full-closure PASS.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C20_FINITE_MATERIALIZATION_RECIPE_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/c20_finite_materialization_recipe_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c20_finite_materialization_recipe_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `C21` i sprawdzic, czy strict core ma juz jawny packet wykonania tego serialization run bez schodzenia do orientation slice,
+   - albo jawnie potwierdzic, ze taki executed export packet nadal nie jest obecny.

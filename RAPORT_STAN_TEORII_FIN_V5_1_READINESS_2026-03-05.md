@@ -737,6 +737,8 @@ Status nowego toru:
 - `C18` pokazuje, ze finite witness packet dla calej rodziny `12` rows `Psi` jest juz obecny, a frontier redukuje sie dalej do braku pelnej serializacji `12` rows oraz braku restriction do candidate orientation slice,
 - `C19` wykonane jako dziewietnasty krok trzeciego mikrocyklu,
 - `C19` pokazuje, ze generator-level exhaustive source dla calej rodziny `12` rows `Psi` jest juz obecny, a frontier redukuje sie dalej do braku persisted `12`-row serialization artifact oraz braku restriction do candidate orientation slice,
+- `C20` wykonane jako dwudziesty krok trzeciego mikrocyklu,
+- `C20` pokazuje, ze skonczony persisted recipe do materializacji calej rodziny `12` rows `Psi` jest juz obecny, a frontier redukuje sie dalej do braku wykonanego persisted `12`-row serialization run oraz braku restriction do candidate orientation slice,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -1157,4 +1159,19 @@ Co realnie zostalo dodane przez `C19`:
   - `C19_B2 := no_explicit_restriction_from_the_control_pullback_orbits_to_the_candidate_orientation_slice`,
 - nadal brak discharge `C18_B1`,
 - nadal brak discharge `C18_B2`,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C20`:
+- `QW-2165` zawiera juz skonczony persisted recipe do materializacji wszystkich `12` rows `Psi`:
+  - `N = 12`,
+  - rodzina `psi[i]`,
+  - persisted `lagrangian_density`,
+  - funkcja `euler_lagrange`,
+  - finite comprehension `eom_psi[i]`,
+- blocker nie dotyczy juz braku samego recipe,
+- aktualny frontier zawęża sie do:
+  - `C20_B1 := no_explicit_executed_and_persisted_12_row_serialization_run_from_the_already_present_finite_materialization_recipe`,
+  - `C20_B2 := no_explicit_restriction_from_the_control_pullback_orbits_to_the_candidate_orientation_slice`,
+- nadal brak discharge `C19_B1`,
+- nadal brak discharge `C19_B2`,
 - nadal brak theorem-level/full-closure PASS.
