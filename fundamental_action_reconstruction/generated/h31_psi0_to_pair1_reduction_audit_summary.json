@@ -1,0 +1,30 @@
+{
+  "step": "H31",
+  "status": "PASS_PARTIAL_COORDINATE_EMBEDDING_ONLY",
+  "frontier": "H31_B1 := psi0 admits a formal coordinate-level embedding into pair1 via u_psi0_pair1 = cos(psi0)c_1 + sin(psi0)s_1, but there is no strict-core justification that this embedding is the selector-relevant reduction rather than a coordinate choice",
+  "inputs": {
+    "psi0_formula": "mod(0.5*phi + 0.8*omega, 2*pi)",
+    "pair1_basis": [
+      "c_1",
+      "s_1"
+    ],
+    "local_representative_formula": "u_1(theta_1) = cos(theta_1)c_1 + sin(theta_1)s_1"
+  },
+  "reduction": {
+    "candidate_embedding": "u_psi0_pair1 = cos(psi0)c_1 + sin(psi0)s_1",
+    "vector_space": "V_1 = span{c_1, s_1}"
+  },
+  "classification": {
+    "coordinate_level_embedding_present": true,
+    "strict_core_selector_reduction_present": false,
+    "pair1_as_selector_target_proven": false,
+    "psi0_equals_theta1_proven": false
+  },
+  "hard_limits": {
+    "theorem_level_pass": false,
+    "full_closure_pass": false,
+    "psi0_equals_theta1_claim": false,
+    "pair1_target_proven_claim": false,
+    "qw2191_discharged": false
+  }
+}
