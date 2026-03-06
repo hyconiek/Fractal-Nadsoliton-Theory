@@ -7935,3 +7935,28 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - sprobowac wypelnic pierwszy provenance-valid record dla `A_1`,
    - albo sprobowac uzyskac chociaz czesciowy eksport operatorowego pochodzenia `A_1`.
+
+## 499. H12 partial Route A provenance record (2026-03-06)
+
+1. Cel:
+   - utworzyc pierwszy wypelniony provenance record dla `A_1_cand` bez falszywego udawania, ze jest on juz provenance-valid.
+2. Wynik:
+   - utworzono persisted record z wypelnionymi polami:
+     `object_id`, `basis`, `carrier`, `lane`, `base_kernel_contains_obs`, `construction_mode`,
+     `selector_smuggling`, `strict_core_reinterpretation`, `coefficient_status`, `provenance_gap_statement`,
+   - jedyne rozstrzygajace pole pozostaje nierozwiazane:
+     `operator_origin = UNRESOLVED`.
+3. Frontier po kroku:
+   - `H12_B1 := a partially populated provenance record exists for A_1_cand, but no provenance-valid Route A instance exists because operator_origin remains unresolved`,
+   - `H11_B1` zostaje zredukowane do decisive-origin unresolved level,
+   - `T12_B1`,
+   - `T2_B1`,
+   - `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/H12_PARTIAL_ROUTE_A_PROVENANCE_RECORD.md`,
+   - dodano `fundamental_action_reconstruction/h12_partial_route_a_provenance_record.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/route_a_partial_provenance_record.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h12_partial_route_a_provenance_record_summary.json`.
+5. Nastepny poprawny ruch:
+   - sprobowac zredukowac `operator_origin` do skonczonej listy dopuszczalnych wartosci,
+   - albo sprobowac wyeksportowac pierwszy partial operator-origin witness.

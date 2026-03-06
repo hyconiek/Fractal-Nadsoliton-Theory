@@ -2042,6 +2042,19 @@ Frontier po `H11`:
 - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
 - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.
 
+Co realnie zostalo dodane przez `H12`:
+- utworzono pierwszy wypelniony provenance record dla `A_1_cand`,
+- wypelniono wszystkie pola poza jednym rozstrzygajacym:
+  `operator_origin = UNRESOLVED`,
+- problem redukuje sie juz nie do braku ogolnego rekordu proweniencji, lecz do nierozstrzygnietego operatorowego pochodzenia `A_1`.
+
+Frontier po `H12`:
+- `H12_B1 := a partially populated provenance record exists for A_1_cand, but no provenance-valid Route A instance exists because operator_origin remains unresolved`,
+- `H11_B1` zostaje zredukowane do decisive-origin unresolved level,
+- `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.
+
 Co realnie zostalo dodane przez `H2`:
 - zapisano minimalny admissibility spec dla przyszlego operatora `K_obs`,
 - jawnie oddzielono:

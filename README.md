@@ -779,5 +779,7 @@ Current status:
 - this reduces the next step to proving operator-chain provenance for `A_1`, while keeping explicit that the current `A_1` candidate is only a hypothesis-lane carrier placeholder,
 - `H11` completed as the minimal provenance spec for Route A,
 - this reduces the next step to populating one provenance-valid `A_1` instance, while keeping explicit that no such populated provenance record exists yet,
+- `H12` completed as the first partially populated provenance record for Route A,
+- this reduces the next step to resolving the decisive `operator_origin` field, while keeping explicit that the current record is not yet provenance-valid,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.
