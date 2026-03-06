@@ -7305,3 +7305,29 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - zapisac theorem-spec dla brakujacego typing judgment / totality-and-uniqueness clause,
    - albo wracac do lane `T2`, jesli priorytetem jest konstrukcja brakujacych strict-core objectow.
+
+## 475. T12 theorem-spec dla typing judgment totality uniqueness wykonane (2026-03-06)
+
+1. Cel:
+   - zapisac packet-ready theorem spec dla brakujacego formalnego typing judgment
+     z totality i uniqueness wskazanego przez `T11`,
+   - tj. formalnej zasady, ze kazda obecna admissible trasa eksportu `theta_i`
+     ma dokladnie jedna role z biezacego six-role vocabulary.
+2. Wynik:
+   - theorem spec istnieje,
+   - actual discharge nadal nie istnieje.
+3. Frontier po kroku:
+   - aktywny theorem-lane blocker brzmi:
+     `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
+   - niezaleznie pozostaje:
+     `T2_B1`,
+   - oraz:
+     `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/T12_TYPING_JUDGMENT_TOTALITY_UNIQUENESS_THEOREM_SPEC.md`,
+   - dodano `fundamental_action_reconstruction/t12_typing_judgment_totality_uniqueness_theorem_spec.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/t12_typing_judgment_totality_uniqueness_theorem_spec_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - wykonac pierwszy discharge attempt dla `T12`,
+   - albo wracac do lane `T2`, jesli priorytetem jest konstrukcja brakujacych strict-core objectow.
