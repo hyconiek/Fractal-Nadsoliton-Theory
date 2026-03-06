@@ -8478,6 +8478,7 @@ Po tej rundzie:
 - `H32`: lane `psi0` zostal jawnie ustawiony jako primary working anchor candidate, a `informational viscosity` pozostaje secondary lane bez zamykania tej slabszej drogi.
 - `H33`: `pair1=(c_1,s_1)` pozostaje tylko deterministic local chart dla lane `psi0`, bez strict-core uzasadnienia, ze jest fizycznie selector-relevant target.
 - `H34`: strict core ma lokalne embeddingi `psi0`, ale nie ma jeszcze argumentu `basis-covariance / target-independence`, ktory podnosilby redukcje ponad zaleznosc od chartu.
+- `H35`: strict core ma tylko coordinate-level direction `u_psi0_pair1` wewnatrz `pair1`, ale nie ma jeszcze argumentu, ze `psi0` wybiera tam fizycznie uprzywilejowana os.
 - `V1`: `informational viscosity` zostaje utrzymane jako konkurencyjna hipoteza extension lane, ale bez jawnego operatora selektora i bez redukcji do `pair1`.
 - `V2`: istniejace proxy `lepkość/damping/memory` pozostaja tylko coarse-grained modyfikatorami odpowiedzi i nadal nie daja redukcji do `pair1=(c_1,s_1)`.
 - `V3`: minimalny pair-level operator lepkości jest dopuszczalny tylko jako izotropowy `nu_iso * I_2` albo anizotropowy z importowanym anchorem `psi0`, wiec sam nie domyka selektora.
