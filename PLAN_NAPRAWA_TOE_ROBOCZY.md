@@ -8392,3 +8392,28 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - stworzyc pierwsza persisted computable instance `A_1_ext`,
    - albo zatrzymac lane `H` do czasu jawnego operatorowego rozszerzenia kernela.
+
+
+## 517. O2 exported composite A1_ext instance (2026-03-06)
+
+1. Cel:
+   - zmaterializowac pierwszy rzeczywisty obiekt operatorowy `A_1_ext` zamiast zatrzymywac sie na samej specyfikacji `O1`.
+2. Wynik:
+   - utworzono persisted instancje `A_1_ext` dla `pair1` w trybie `exported_composite_A_1`,
+   - carrier: `V_1 = span{c_1,s_1}`,
+   - macierz: `[[a_1,b_1],[b_1,d_1]]`,
+   - wspolczynniki pozostaja symboliczne i nierozwiazane.
+3. Frontier po kroku:
+   - `O2_B1 := a persisted exported_composite_A_1 instance for A_1_ext on pair1 now exists, but its coefficient entries remain symbolic and unevaluated, so no selector-breaking test can yet be executed`,
+   - `H28_B1`,
+   - `T12_B1`,
+   - `T2_B1`,
+   - `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/O2_EXPORTED_COMPOSITE_A1_EXT_INSTANCE.md`,
+   - dodano `fundamental_action_reconstruction/o2_exported_composite_a1_ext_instance.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/o2_exported_composite_a1_ext_instance.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/o2_exported_composite_a1_ext_instance_summary.json`.
+5. Nastepny poprawny ruch:
+   - albo policzyc pierwszy entry tej macierzy,
+   - albo zapisac jawnie, ze bez dalszej definicji operatorowej entries pozostaja nieobliczalne.
