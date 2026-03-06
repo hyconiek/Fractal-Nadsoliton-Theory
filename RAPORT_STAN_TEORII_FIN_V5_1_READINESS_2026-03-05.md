@@ -801,6 +801,8 @@ Status nowego toru:
 - `C50` pokazuje, ze strict core nadal nie ma packet-ready minimalnego source skeletonu dla actual `theta_1`, `theta_2`, a jedyny packet-ready source branch pozostaje na lane axiom-augmented,
 - `C51` wykonane jako piecdziesiaty pierwszy krok trzeciego mikrocyklu,
 - `C51` pokazuje, ze fallback lane do `QW-2192/2193` jest juz jawny, ale strict core nadal nie ma packet-ready bridge-spec packet redukujacego `C50_B1` do tej lane,
+- `C52` wykonane jako piecdziesiaty drugi krok trzeciego mikrocyklu,
+- `C52` pokazuje, ze minimal field list dla strict-to-axiom bridge artifactu jest juz packet-ready, ale sam assembled bridge artifact nadal nie istnieje,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -1572,6 +1574,19 @@ Co realnie zostalo dodane przez `C51`:
 - `C36` pozostaje tylko overlay bridge do selector track, nie source bridge-spec,
 - `C50_B1` zawęża sie dalej do:
   - `C51_B1 := no_packet_ready_strict_to_axiom_source_bridge_spec_for_reducing_C50_B1; only_fallback_branch_citation_to_QW_2192_QW_2193_is_available`,
+- nadal niezaleznie pozostaje:
+  - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C52`:
+- strict core ma juz packet-ready minimal field list dla bridge artifactu:
+  - `source_blocker`,
+  - `fallback_lane`,
+  - `current_bridge_class`,
+  - `strict_absence_claim`,
+  - `forbidden_overclaim_set`,
+- `C51_B1` zawęża sie dalej do:
+  - `C52_B1 := no_explicit_assembled_strict_to_axiom_bridge_artifact_built_from_the_now_packet_ready_minimal_field_list_for_reducing_C50_B1`,
 - nadal niezaleznie pozostaje:
   - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
 - nadal brak theorem-level/full-closure PASS.
