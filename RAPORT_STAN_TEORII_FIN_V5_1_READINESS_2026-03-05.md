@@ -2130,6 +2130,18 @@ Frontier po `H18`:
 - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
 - `C32_B2 := raw cross-pair overlap route is formally degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.
 
+Co realnie zostalo dodane przez `H19`:
+- istnieje juz provenance-valid witness, ale nie ma jeszcze zadnej coefficient-level semantyki eksportu dla `A_1_cand`,
+- nie mozna wyciagnac ani pierwszego wspolczynnika, ani pierwszego inwariantu, ani pierwszego testu anizotropii,
+- problem redukuje sie juz nie do provenance, lecz do braku coefficient/invariant export semantics.
+
+Frontier po `H19`:
+- `H19_B1 := a provenance-valid Route A witness exists for pair1, but no coefficient-level export semantics or invariant-level export rule is attached to it, so neither a_1 nor tr(A_1) nor Delta_1 can yet be extracted`,
+- `H15_B1 := existing kernel feedback has no explicit residual-selector-sector reduction or projected selector-block export in the current repository, so K_obs remains a distinct extension hypothesis rather than an identified reformulation of existing kernel feedback`,
+- `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `C32_B2 := raw cross-pair overlap route is formally degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.
+
 Co realnie zostalo dodane przez `H2`:
 - zapisano minimalny admissibility spec dla przyszlego operatora `K_obs`,
 - jawnie oddzielono:

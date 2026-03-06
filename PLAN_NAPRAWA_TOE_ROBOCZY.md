@@ -8109,3 +8109,27 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - sprobowac wyciagnac pierwszy rzeczywisty wspolczynnik z tego witnessa,
    - albo pokazac, ze nawet provenance-valid witness nie daje jeszcze zadnego obliczalnego bloku `2x2`.
+
+
+## 506. H19 first coefficient or invariant extraction attempt (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy z pierwszego provenance-valid `Route A` witness da sie wyciagnac chociaz pierwszy wspolczynnik albo pierwszy niebanalny inwariant.
+2. Wynik:
+   - witness istnieje, ale nadal jest coefficient-semantically opaque,
+   - nie ma eksportu `a_1`, `b_1`, `d_1`,
+   - nie ma tez reguly eksportu `tr(A_1)` ani `Delta_1 = (a_1-d_1,b_1)`.
+3. Frontier po kroku:
+   - `H19_B1 := a provenance-valid Route A witness exists for pair1, but no coefficient-level export semantics or invariant-level export rule is attached to it, so neither a_1 nor tr(A_1) nor Delta_1 can yet be extracted`,
+   - `H15_B1`,
+   - `T12_B1`,
+   - `T2_B1`,
+   - `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/H19_FIRST_COEFFICIENT_OR_INVARIANT_EXTRACTION_ATTEMPT.md`,
+   - dodano `fundamental_action_reconstruction/h19_first_coefficient_or_invariant_extraction_attempt.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h19_first_coefficient_or_invariant_extraction.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h19_first_coefficient_or_invariant_extraction_attempt_summary.json`.
+5. Nastepny poprawny ruch:
+   - sprobowac zbudowac minimalny coefficient-export semantics packet dla `A_1_cand`,
+   - albo uczciwie zapisac, ze nawet provenance-valid witness nie jest jeszcze obiektem obliczalnym.
