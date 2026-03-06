@@ -8085,3 +8085,27 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - wypelnic ten jeden provenance-binding step,
    - albo pokazac, ze nawet ten krok nie jest dopuszczalny bez ukrytego selector smuggling.
+
+
+## 505. H18 composite Route A provenance binding instance (2026-03-06)
+
+1. Cel:
+   - wykonac ten jeden brakujacy provenance-binding step dla dominujacego composite witnessa `exported_composite_A_1`.
+2. Wynik:
+   - utworzono pierwszy provenance-valid `Route A` witness dla `pair1`,
+   - ale tylko na lane `hypothesis_extension_only`,
+   - bez claimu policzonych wspolczynnikow `(a_1,b_1,d_1)` i bez claimu selector breaking.
+3. Frontier po kroku:
+   - `H18_B1 := a provenance-valid Route A witness now exists on the hypothesis-extension lane for pair1, but no evaluated coefficient triple (a_1,b_1,d_1) has yet been extracted from it, so no O(2)-breaking test has been executed`,
+   - `H15_B1`,
+   - `T12_B1`,
+   - `T2_B1`,
+   - `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/H18_COMPOSITE_ROUTE_A_PROVENANCE_BINDING_INSTANCE.md`,
+   - dodano `fundamental_action_reconstruction/h18_composite_route_a_provenance_binding_instance.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/route_a_provenance_valid_binding_instance.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h18_composite_route_a_provenance_binding_instance_summary.json`.
+5. Nastepny poprawny ruch:
+   - sprobowac wyciagnac pierwszy rzeczywisty wspolczynnik z tego witnessa,
+   - albo pokazac, ze nawet provenance-valid witness nie daje jeszcze zadnego obliczalnego bloku `2x2`.

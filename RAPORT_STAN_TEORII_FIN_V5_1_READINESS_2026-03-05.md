@@ -2118,6 +2118,18 @@ Frontier po `H17`:
 - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
 - `C32_B2 := raw cross-pair overlap route is formally degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.
 
+Co realnie zostalo dodane przez `H18`:
+- wykonano ten jeden brakujacy provenance-binding step dla dominujacego composite witnessa,
+- istnieje juz pierwszy provenance-valid `Route A` witness dla `pair1`, ale wyłącznie na lane rozszerzenia hipotezy,
+- nadal brak policzonych wspolczynnikow `(a_1,b_1,d_1)` i brak testu symmetry-breaking.
+
+Frontier po `H18`:
+- `H18_B1 := a provenance-valid Route A witness now exists on the hypothesis-extension lane for pair1, but no evaluated coefficient triple (a_1,b_1,d_1) has yet been extracted from it, so no O(2)-breaking test has been executed`,
+- `H15_B1 := existing kernel feedback has no explicit residual-selector-sector reduction or projected selector-block export in the current repository, so K_obs remains a distinct extension hypothesis rather than an identified reformulation of existing kernel feedback`,
+- `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `C32_B2 := raw cross-pair overlap route is formally degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.
+
 Co realnie zostalo dodane przez `H2`:
 - zapisano minimalny admissibility spec dla przyszlego operatora `K_obs`,
 - jawnie oddzielono:
