@@ -2401,6 +2401,7 @@ Frontier po `H5`:
 - `H31`: `psi0` ma formalny embedding do `pair1=(c_1,s_1)`, ale nadal nie ma dowodu, ze jest to strict-core redukcja selektora, a nie tylko wybor wspolrzednych.
 - `H32`: lane `psi0` jest teraz primary working anchor candidate, a `informational viscosity` zostaje secondary lane bez jego metodologicznego zamykania.
 - `H33`: `pair1=(c_1,s_1)` pozostaje deterministic local chart dla lane `psi0`, ale nie ma jeszcze strict-core uzasadnienia, ze jest to fizycznie uprzywilejowany target redukcji selektora.
+- `H34`: strict core ma lokalne embeddingi `psi0`, ale nadal nie ma argumentu `basis-covariance / target-independence`, ktory uniezaleznialby redukcje od wyboru chartu.
 - `V1`: `informational viscosity` zostaje utrzymane jako konkurencyjna hipoteza extension lane, ale bez jawnego operatora selektora i bez redukcji do `pair1`.
 - `V2`: istniejace proxy `lepkość/damping/memory` pozostaja tylko coarse-grained modyfikatorami odpowiedzi i nadal nie daja redukcji do `pair1=(c_1,s_1)`.
 - `V3`: minimalny pair-level operator lepkości jest dopuszczalny tylko jako izotropowy `nu_iso * I_2` albo anizotropowy z importowanym anchorem `psi0`, wiec sam nie domyka selektora.
