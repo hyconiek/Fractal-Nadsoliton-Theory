@@ -1,6 +1,6 @@
 # Fundamental Action Reconstruction
 
-Status: `PROGRAM_OPENED_A1_A10_COMPLETED_NO_FULL_CLOSURE_CLAIM`
+Status: `PROGRAM_PHASE1_COMPLETE_B4_CANDIDATE_IDENTIFIED_NO_FULL_CLOSURE_CLAIM`
 As of: `2026-03-06`
 
 Ten katalog otwiera rownolegly tor konstrukcyjny poza drabinka `L5/L12`.
@@ -64,6 +64,17 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 10. `A10`: calibration boundary and anti-overclaim audit
    - finalnie oddzielic realna derivation od calibration i wystawic jawny raport granic.
 
+## Drugi cykl
+
+1. `B1`: mode uniqueness minimal extra structure audit
+   - zawezic blocker `QW-2191` do jednego pytania fizycznego o pochodzenie selektora.
+2. `B2`: internal orientation datum source audit
+   - sprawdzic, czy strict core rzeczywiscie zawiera juz wewnetrzne zrodlo selectora, czy tylko control-route.
+3. `B3`: topological selector bridge packet
+   - zbudowac minimalny packet derivation `topological sign / FR branch -> selector`, bez udawania discharge.
+4. `B4`: minimal sigma_int candidate
+   - wskazac jeden kanoniczny kandydat `sigma_int`, bez udawania strict derivation.
+
 ## Aktualny status
 
 - `A1`: wykonane jako warstwa spec/ansatz + wygenerowany manifest.
@@ -76,6 +87,10 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `A8`: wykonane jako strict-scope partial gravity bridge z jawnymi foundational blockers dla `G`, EH i full SM+GR reduction.
 - `A9`: wykonane jako strict-scope partial SM+GR effective reduction.
 - `A10`: wykonane jako finalny audit pierwszego cyklu programu.
+- `B1`: wykonane jako pierwszy krok drugiego cyklu; blocker gauge uniqueness zawężony do pytania o internal selector.
+- `B2`: wykonane jako drugi krok drugiego cyklu; w obecnym strict core nie znaleziono wyprowadzonego `internal orientation datum`.
+- `B3`: wykonane jako trzeci krok drugiego cyklu; istnieje juz packet `B3_O1..B3_O5`, ale derivation pozostaje pending.
+- `B4`: wykonane jako czwarty krok drugiego cyklu; istnieje juz jeden kanoniczny kandydat `sigma_int`, ale strict bridge pozostaje open.
 
 ## Twarde ograniczenia rygoru
 
@@ -87,7 +102,11 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - brak claimu, ze `A7` domknelo globalne `L5`,
 - brak claimu, ze `A8` domknelo foundational GR bridge,
 - brak claimu, ze `A9` domknelo unified SM+GR theorem package,
-- brak claimu, ze wykonanie `A10` oznacza full ToE closure.
+- brak claimu, ze wykonanie `A10` oznacza full ToE closure,
+- brak claimu, ze `B1` domknelo axiom-free uniqueness,
+- brak claimu, ze `B2` znalazlo internal selector,
+- brak claimu, ze `B3` rozladowalo topological-selector bridge,
+- brak claimu, ze `B4` wyprowadzilo `sigma_int` theorem-level.
 
 ## Zasada korzystania z poprzednich badan
 
@@ -114,6 +133,10 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `A8_GRAVITY_BRIDGE_SPEC.md`
 - `A9_SM_GR_EFFECTIVE_REDUCTION_SPEC.md`
 - `A10_CALIBRATION_BOUNDARY_AND_ANTI_OVERCLAIM_AUDIT.md`
+- `B1_MODE_UNIQUENESS_MINIMAL_EXTRA_STRUCTURE_AUDIT.md`
+- `B2_INTERNAL_ORIENTATION_DATUM_SOURCE_AUDIT.md`
+- `B3_TOPOLOGICAL_SELECTOR_BRIDGE_PACKET.md`
+- `B4_MINIMAL_SIGMA_INT_CANDIDATE.md`
 - `a1_minimal_action_ansatz.py`
 - `a2_supersoliton_matching.py`
 - `a3_kernel_analysis.py`
@@ -124,6 +147,10 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `a8_gravity_bridge.py`
 - `a9_sm_gr_effective_reduction.py`
 - `a10_calibration_boundary_and_anti_overclaim_audit.py`
+- `b1_mode_uniqueness_minimal_extra_structure_audit.py`
+- `b2_internal_orientation_datum_source_audit.py`
+- `b3_topological_selector_bridge_packet.py`
+- `b4_minimal_sigma_int_candidate.py`
 - `generated/a1_minimal_action_ansatz_summary.json`
 - `generated/a2_supersoliton_matching_summary.json`
 - `generated/a3_kernel_analysis_summary.json`
@@ -134,4 +161,8 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `generated/a8_gravity_bridge_summary.json`
 - `generated/a9_sm_gr_effective_reduction_summary.json`
 - `generated/a10_calibration_boundary_and_anti_overclaim_audit_summary.json`
+- `generated/b1_mode_uniqueness_minimal_extra_structure_audit_summary.json`
+- `generated/b2_internal_orientation_datum_source_audit_summary.json`
+- `generated/b3_topological_selector_bridge_packet_summary.json`
+- `generated/b4_minimal_sigma_int_candidate_summary.json`
 - `manifest_action_reconstruction.json`

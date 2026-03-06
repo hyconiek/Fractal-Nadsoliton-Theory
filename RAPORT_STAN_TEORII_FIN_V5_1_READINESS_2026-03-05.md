@@ -683,6 +683,14 @@ Status nowego toru:
 - `A9` sklada tylko wykonane warstwy matter/gauge/gravity do jednego effective package bez theorem-level unified reduction claim,
 - `A10` wykonane jako finalny `calibration boundary + anti-overclaim audit`,
 - `A10` domyka pierwszy cykl programu tylko metodologicznie, nie fizycznie,
+- `B1` wykonane jako pierwszy krok drugiego cyklu,
+- `B1` zawęża blocker unikalnosci gauge do pytania o wewnetrzne pochodzenie selektora modowego,
+- `B2` wykonane jako drugi krok drugiego cyklu,
+- `B2` usuwa niejednoznacznosc co do zrodel: w obecnym strict core nie ma jeszcze wyprowadzonego `internal orientation datum`,
+- `B3` wykonane jako trzeci krok drugiego cyklu,
+- `B3` podnosi frontier do packet-ready mostu `local topology / FR branch -> selector`, ale bez derivation claim,
+- `B4` wykonane jako czwarty krok drugiego cyklu,
+- `B4` identyfikuje jeden kanoniczny kandydat `sigma_int`, ale bez strict discharge,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -766,4 +774,57 @@ Co realnie zostalo dodane przez `A10`:
   - `open`,
   - `forbidden claims`,
 - pierwszy cykl programu jest teraz metodologicznie kompletny,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `B1`:
+- zamiast ogolnego hasla "gauge uniqueness open" istnieje teraz waska postac blockera:
+  - kernel alone jest niewystarczajacy (`QW-2191`),
+  - explicit selector zamyka problem tylko w control scope (`QW-2192`),
+  - selector family jest robustna (`QW-2193`),
+  - realny otwarty problem brzmi: skad ma pochodzic internal selector zgodny z single-nadsoliton ontology,
+- nadal brak axiom-free uniqueness PASS,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `B2`:
+- wykonano waski audit pytania, czy strict core rzeczywiscie zawiera juz zrodlo `internal orientation datum`,
+- wynik jest negatywny w sensie strict:
+  - brak theorem-level derivation,
+  - brak action-level derivation,
+  - brak jawnego kernel invariant wybierajacego jeden punkt z rodziny `O(2)`,
+- `QW-2192/2193` pozostaja tylko control route / control family,
+- FR/topological route i slabe nadsoliton constraints pozostaja heurystycznie ciekawe, ale nie sa jeszcze strict-ready,
+- realny frontier zostaje zawężony dalej:
+  - problem nie brzmi juz "moze selector jest ukryty w repo",
+  - tylko "strict core nie zawiera jeszcze wewnetrznego zrodla selectora",
+- nadal brak axiom-free uniqueness PASS,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `B3`:
+- wykonano packetyzacje najblizszego realistycznego mostu derivacyjnego:
+  - `local topology / FR sign data -> selector`,
+- strict core daje juz dwa konce mostu:
+  - lokalna topologia (`QW-2206`),
+  - obstruction `O(2)` (`QW-2191`),
+- brakujacy srodek zostal rozpisany na piec jawnych obligacji `B3_O1..B3_O5`,
+- to jest realny postep strukturalny:
+  - problem nie jest juz luźna intuicja FR,
+  - tylko packet wykonawczy z jawna lista brakow,
+- nadal brak bridge PASS,
+- nadal brak axiom-free uniqueness PASS,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `B4`:
+- `B3_O1` nie jest juz pustym slotem:
+  - istnieje jeden kanoniczny kandydat `sigma_int_candidate := chi_FR(gamma_pi1)`,
+- kandydat jest minimalny:
+  - binarny,
+  - topologiczny,
+  - wewnetrzny,
+- w lokalnym sektorze jednostkowej topologii przyjmuje naturalnie wartosc `-1`,
+- nadal jest to tylko kandydat hybrydowy:
+  - brak strict derivation,
+  - brak deformation/gauge stability proof,
+  - brak mapy `sigma_int_candidate -> selector`,
+- nadal brak bridge PASS,
+- nadal brak axiom-free uniqueness PASS,
 - nadal brak theorem-level/full-closure PASS.

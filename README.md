@@ -582,5 +582,13 @@ Current status:
 - this moves the theory forward only to an integrated effective material/gauge/gravity package with theorem-level unification still open,
 - `A10` completed as the final calibration-boundary and anti-overclaim audit for the first constructive cycle,
 - this moves the theory forward only methodologically: the first `action-first` cycle is now fully audited, not physically closed,
+- `B1` completed as the first step of the second cycle,
+- this narrows the gauge-uniqueness blocker from a broad “uniqueness open” statement to one specific unresolved question: the internal physical origin of a mode-selection principle,
+- `B2` completed as the second step of the second cycle,
+- this moves the theory forward only by eliminating an ambiguity: no derived `internal orientation datum` is currently present in the strict core, so uniqueness remains either axiom-augmented or open,
+- `B3` completed as the third step of the second cycle,
+- this moves the theory forward only to a packet-ready bridge `local topology / FR branch -> selector`, with derivation still pending,
+- `B4` completed as the fourth step of the second cycle,
+- this moves the theory forward only to one canonical `sigma_int` candidate based on the FR-sign branch, with strict discharge still pending,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

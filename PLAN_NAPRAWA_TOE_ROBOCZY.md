@@ -5294,3 +5294,120 @@ Po tej rundzie:
 6. Nastepny poprawny ruch:
    - albo rozpoczac drugi cykl od jednego waskiego blockera,
    - albo skomitowac i zamrozic `phase-1 constructive audit`.
+
+## 401. B1 minimal extra structure audit dla mode uniqueness wykonane (2026-03-06)
+1. Zakres:
+   - rozpoczęto drugi cykl od najwęższego blockera `QW-2191`,
+   - użyto `QW-2190/2191/2192/2193`, `A6` i `A10`,
+   - `QW-2192/2193` potraktowano jako control route, nie axiom-free proof.
+2. Co zostało realnie ustalone:
+   - kernel alone jest niewystarczający dla pełnej unikalności,
+   - explicit selection axiom zamyka problem tylko w scope axiom-augmented,
+   - rodzina dodatnio-wagowych selectorów jest stabilna,
+   - realny blocker redukuje się do pytania o wewnętrzne pochodzenie selektora.
+3. Co pozostaje zablokowane:
+   - axiom-free uniqueness,
+   - physical derivation of internal selector from single-nadsoliton ontology.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/B1_MODE_UNIQUENESS_MINIMAL_EXTRA_STRUCTURE_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/b1_mode_uniqueness_minimal_extra_structure_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/b1_mode_uniqueness_minimal_extra_structure_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Twardy rygor:
+   - brak axiom-free uniqueness PASS,
+   - brak awansu `QW-2192/2193` do strict core,
+   - postęp polega na zawężeniu blockera, nie jego discharge.
+6. Nastepny poprawny ruch:
+   - przejsc do `B2` i szukac `internal orientation datum` lub jawnie utrzymac uniqueness jako otwarte.
+
+## 402. B2 internal orientation datum source audit wykonane (2026-03-06)
+1. Zakres:
+   - wykonano waski audit pytania, czy w strict core istnieje juz zrodlo `internal orientation datum`,
+   - strict-admissible rdzen: `QW-2190/2191/2192/2193`, `A1`, `A5`, `A6`, `A10`,
+   - `TOE_FINAL_DOCUMENTATION.tex` potraktowano jako ontology-context only,
+   - `QW-1622`, `QW-1210`, `QW-1891` potraktowano tylko jako heurystyke / negative control.
+2. Co zostalo realnie ustalone:
+   - w obecnym strict core nie ma theorem-level ani action-level derivation `internal orientation datum`,
+   - nie ma jawnego kernel invariant wybierajacego jeden punkt z rodziny `O(2)`,
+   - `QW-2192/2193` pozostaja tylko control route / control family,
+   - FR/topological route pozostaje fizycznie ciekawa, ale nie jest jeszcze strict-ready,
+   - `QW-1891` daje tylko weak-compatible constraints, nie selector derivation.
+3. Co pozostaje zablokowane:
+   - axiom-free uniqueness,
+   - internal selector source in strict core,
+   - theorem-level map `topological sign -> mode selector`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/B2_INTERNAL_ORIENTATION_DATUM_SOURCE_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/b2_internal_orientation_datum_source_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/b2_internal_orientation_datum_source_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Twardy rygor:
+   - brak internal-selector PASS,
+   - brak axiom-free uniqueness PASS,
+   - brak awansu FR route do strict core,
+   - postep polega na usunieciu niejednoznacznosci: strict core nie zawiera jeszcze gotowego zrodla selectora.
+6. Nastepny poprawny ruch:
+   - przejsc do `B3` i sprobowac zbudowac waski pakiet `topological/FR sign -> orientation datum -> mode selector`,
+   - albo jawnie zamrozic gauge uniqueness jako zamkniete tylko w scope axiom-augmented.
+
+## 403. B3 topological selector bridge packet wykonane (2026-03-06)
+1. Zakres:
+   - zbudowano minimalny packet wykonawczy dla mostu
+     `local topological / FR sign data -> mode selector`,
+   - strict-admissible core: `QW-2191`, `QW-2206`, `A5`, `A6`, `A10`, `B1`, `B2`,
+   - `QW-1622` i `QW-1210` pozostaly tylko heuristic support.
+2. Co zostalo realnie ustalone:
+   - lokalna warstwa topologiczna istnieje w strict core (`QW-2206`),
+   - obstrukcja `O(2)` jest jawna (`QW-2191`),
+   - da sie juz zapisac zamkniety packet pieciu obligacji:
+     - `B3_O1` define internal datum,
+     - `B3_O2` prove deformation/gauge stability,
+     - `B3_O3` map datum to selector,
+     - `B3_O4` prove compatibility with mode scaffold,
+     - `B3_O5` anti-overclaim closure test.
+3. Co pozostaje zablokowane:
+   - sam internal datum,
+   - sam bridge theorem,
+   - axiom-free uniqueness.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/B3_TOPOLOGICAL_SELECTOR_BRIDGE_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/b3_topological_selector_bridge_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/b3_topological_selector_bridge_packet_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Twardy rygor:
+   - packet-ready nie znaczy derivation-ready,
+   - brak bridge PASS,
+   - brak axiom-free uniqueness PASS.
+6. Nastepny poprawny ruch:
+   - przejsc do `B4` i podjac probe `B3_O1`,
+   - albo jawnie zatrzymac sie na packet-ready frontier bez fałszywego postepu.
+
+## 404. B4 minimal sigma_int candidate wykonane (2026-03-06)
+1. Zakres:
+   - podjeto probe `B3_O1`,
+   - strict-admissible support: `QW-2206`, `B3`, `A10`,
+   - hybrid support: `QW-1622`.
+2. Co zostalo realnie ustalone:
+   - istnieje jeden minimalny kandydat:
+     - `sigma_int_candidate := chi_FR(gamma_pi1)`,
+   - w lokalnym sektorze jednostkowej topologii kandydat ma naturalnie wartosc `-1`,
+   - kandydat jest binarny, topologiczny i wewnetrzny,
+   - `B3_O1` ma teraz kanoniczny obiekt, a nie abstrakcyjny placeholder.
+3. Co pozostaje zablokowane:
+   - strict derivation samego `sigma_int_candidate`,
+   - `B3_O2` deformation/gauge stability,
+   - `B3_O3` mapowanie `sigma_int_candidate -> selector`,
+   - axiom-free uniqueness.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/B4_MINIMAL_SIGMA_INT_CANDIDATE.md`,
+   - dodano `fundamental_action_reconstruction/b4_minimal_sigma_int_candidate.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/b4_minimal_sigma_int_candidate_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Twardy rygor:
+   - kandydat nie oznacza discharge,
+   - brak `sigma_int` theorem-level PASS,
+   - brak bridge PASS,
+   - brak axiom-free uniqueness PASS.
+6. Nastepny poprawny ruch:
+   - przejsc do `B5` i testowac deformation/gauge stability kandydata,
+   - albo zamrozic frontier i zacommitowac bez fałszywego postepu.
