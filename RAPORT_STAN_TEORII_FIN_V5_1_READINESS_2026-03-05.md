@@ -717,6 +717,8 @@ Status nowego toru:
 - `C8` pokazuje, ze dodatniosc projected block redukuje sie do jawnego problemu relacji kompresji do certyfikowanego host-operatora z `QW-2186`,
 - `C9` wykonane jako dziewiaty krok trzeciego mikrocyklu,
 - `C9` pokazuje, ze compression blocker redukuje sie dalej do dwoch brakujacych eksportow: `QW-2186 host -> Psi-sector quadratic carrier` oraz `Psi-sector quadratic carrier -> candidate orientation slice`,
+- `C10` wykonane jako dziesiaty krok trzeciego mikrocyklu,
+- `C10` pokazuje, ze pierwszy z tych dwoch blockerow redukuje sie dalej do braku jawnego coefficient-level lub block-level matchingu z konkretnym Psi-sector quadratic Hessian blockiem,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -1013,5 +1015,16 @@ Co realnie zostalo dodane przez `C9`:
   - `C9_B1 := no_explicit_action_origin_identification_between_qw2186_certified_host_operator_and_the_Psi_sector_quadratic_second_variation_carrier`,
   - `C9_B2 := no_explicit_restriction_from_that_Psi_sector_quadratic_carrier_to_the_candidate_orientation_slice`,
 - nadal brak discharge `C8_B1`,
+- nadal brak axiom-free uniqueness PASS,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C10`:
+- `C9_B1` nie jest juz traktowany jako brak `Psi-sector` quadratic carrier family,
+- `QW-2165` wzmacnia canonical carrier do exhaustive all-13-field EoM z bidirectional kernel mixing,
+- `QW-2166` wraz z terminalnym mostem `QW-2180` daje exhaustive canonical Hessian/operator carrier,
+- dzieki temu aktualny frontier zawęża sie do:
+  - `C10_B1 := no_explicit_coefficient_level_or_block_level_identification_between_the_qw2186_certified_host_operator_and_a_concrete_Psi_sector_quadratic_Hessian_block_inside_the_canonical_13_field_carrier`,
+- nadal brak discharge `C9_B1`,
+- nadal brak discharge `C9_B2`,
 - nadal brak axiom-free uniqueness PASS,
 - nadal brak theorem-level/full-closure PASS.

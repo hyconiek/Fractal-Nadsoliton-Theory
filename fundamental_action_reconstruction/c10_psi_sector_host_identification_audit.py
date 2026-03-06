@@ -1,0 +1,53 @@
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+root = Path(__file__).resolve().parent
+
+payload = {
+    "stage": "C10",
+    "status": "C10_EXECUTED_PSI_SECTOR_HOST_IDENTIFICATION_REDUCTION_NO_FALSE_PASS",
+    "as_of": "2026-03-06",
+    "goal": "Reduce the host-identification blocker by checking whether the strict core already contains a packet-ready Psi-sector quadratic carrier family linking the QW-2186 host operator to the canonical Hessian route.",
+    "inputs": {
+        "strict_admissible": [
+            "QW-2163",
+            "QW-2165",
+            "QW-2166",
+            "QW-2180",
+            "QW-2186",
+            "A3",
+            "C9",
+            "A10",
+        ]
+    },
+    "carrier_schema": {
+        "canonical_action": "QW-2163 exports the local canonical 12xPsi + Phi carrier with K_{i,j}.",
+        "exhaustive_eom": "QW-2165 exports exhaustive second-order local EoM for all 13 fields with bidirectional kernel mixing.",
+        "canonical_hessian": "QW-2166 plus QW-2180 export the exhaustive canonical Hessian/operator carrier.",
+        "host_operator": "QW-2186 exports the branch-scope positive host operator A = K_total + m0^2 I."
+    },
+    "result": {
+        "psi_sector_carrier_schema_present": "yes",
+        "host_to_concrete_psi_block_identification": "not_shown",
+        "orientation_slice_restriction": "still_open"
+    },
+    "residual_blockers": {
+        "C10_B1": "no_explicit_coefficient_level_or_block_level_identification_between_the_qw2186_certified_host_operator_and_a_concrete_Psi_sector_quadratic_Hessian_block_inside_the_canonical_13_field_carrier",
+        "C9_B2": "no_explicit_restriction_from_that_Psi_sector_quadratic_carrier_to_the_candidate_orientation_slice"
+    },
+    "hard_limits": [
+        "no_theorem_level_pass",
+        "no_full_closure_pass",
+        "no_c9_b1_pass",
+        "no_concrete_psi_block_found_claim",
+        "no_qw2186_equals_hessian_block_claim",
+        "no_qw2191_discharge_claim"
+    ],
+    "next_step": "C11"
+}
+
+out = root / "generated" / "c10_psi_sector_host_identification_audit_summary.json"
+out.write_text(json.dumps(payload, indent=2) + "\n", encoding="ascii")
+print(out)

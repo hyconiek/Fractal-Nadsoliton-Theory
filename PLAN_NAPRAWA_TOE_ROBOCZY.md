@@ -5783,3 +5783,31 @@ Po tej rundzie:
 6. Nastepny poprawny ruch:
    - przejsc do `C10` i sprobowac `C9_B1`,
    - albo zamrozic frontier i zacommitowac.
+
+## 418. C10 Psi-sector host identification audit wykonane (2026-03-06)
+1. Zakres:
+   - podjeto probe `C9_B1`,
+   - strict-admissible support: `QW-2163`, `QW-2165`, `QW-2166`, `QW-2180`, `QW-2186`, `A3`, `C9`, `A10`.
+2. Co zostalo realnie ustalone:
+   - canonical action-level carrier z `K_{i,j}` istnieje,
+   - exhaustive canonical EoM carrier dla wszystkich `13` pol istnieje,
+   - exhaustive canonical Hessian/operator carrier istnieje,
+   - host positivity `QW-2186` zyje w tej samej rodzinie kernel-mixing operatorow,
+   - aktualny brak dotyczy juz nie carrier-family, lecz jawnego block-level matchingu.
+3. Co pozostaje zablokowane:
+   - brak jawnego `Psi-sector quadratic Hessian block` w formie nadajacej sie do matchingu z `QW-2186`,
+   - brak coefficient-level identyfikacji hosta z takim blokiem,
+   - brak discharge `C9_B1`,
+   - brak discharge `C9_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C10_PSI_SECTOR_HOST_IDENTIFICATION_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/c10_psi_sector_host_identification_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c10_psi_sector_host_identification_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Twardy rygor:
+   - brak `C9_B1` PASS,
+   - brak theorem-level PASS,
+   - brak full-closure PASS.
+6. Nastepny poprawny ruch:
+   - przejsc do `C11` i sprobowac wydobyc packet-ready konkretny `Psi-sector quadratic block`,
+   - albo zamrozic frontier i zacommitowac.
