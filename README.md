@@ -699,5 +699,7 @@ Current status:
 - this moves the theory forward only by isolating a packet-ready conditional populated-instance schema for `u_1,u_2` and `S_orient_cand`, while the actual strict-core supply of `theta_1,theta_2` and the residual mathematical blockers remain open,
 - `C50` completed as the fiftieth step of the next micro-cycle,
 - this moves the theory forward only by making explicit that no packet-ready strict-core source skeleton for actual `theta_1,theta_2` exists, while an axiom-augmented source branch remains the only available source lane,
+- `C51` completed as the fifty-first step of the next micro-cycle,
+- this moves the theory forward only by making explicit that the fallback lane to `QW-2192/2193` exists but no packet-ready strict-to-axiom source bridge specification is present for reducing `C50_B1`,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

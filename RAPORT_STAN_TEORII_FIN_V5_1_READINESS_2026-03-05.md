@@ -799,6 +799,8 @@ Status nowego toru:
 - `C49` pokazuje, ze conditional populated-instance schema dla `u_1`, `u_2` i `S_orient_cand` jest juz packet-ready, ale strict core nadal nie dostarcza actual `theta_1`, `theta_2`,
 - `C50` wykonane jako piecdziesiaty krok trzeciego mikrocyklu,
 - `C50` pokazuje, ze strict core nadal nie ma packet-ready minimalnego source skeletonu dla actual `theta_1`, `theta_2`, a jedyny packet-ready source branch pozostaje na lane axiom-augmented,
+- `C51` wykonane jako piecdziesiaty pierwszy krok trzeciego mikrocyklu,
+- `C51` pokazuje, ze fallback lane do `QW-2192/2193` jest juz jawny, ale strict core nadal nie ma packet-ready bridge-spec packet redukujacego `C50_B1` do tej lane,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -1560,6 +1562,16 @@ Co realnie zostalo dodane przez `C50`:
   - `QW-2192/2193`,
 - `C49_B1` zawęża sie dalej do:
   - `C50_B1 := no_packet_ready_strict_core_minimal_source_skeleton_for_actual_theta_1_theta_2; only_axiom_augmented_source_branch_is_available`,
+- nadal niezaleznie pozostaje:
+  - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C51`:
+- fallback lane do actual phases jest juz jawnie zidentyfikowany:
+  - `QW-2192/2193`,
+- `C36` pozostaje tylko overlay bridge do selector track, nie source bridge-spec,
+- `C50_B1` zawęża sie dalej do:
+  - `C51_B1 := no_packet_ready_strict_to_axiom_source_bridge_spec_for_reducing_C50_B1; only_fallback_branch_citation_to_QW_2192_QW_2193_is_available`,
 - nadal niezaleznie pozostaje:
   - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
 - nadal brak theorem-level/full-closure PASS.

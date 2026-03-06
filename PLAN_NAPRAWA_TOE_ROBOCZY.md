@@ -6897,3 +6897,30 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - przejsc do `C51` i sprawdzic, czy strict core ma juz packet-ready bridge
      specification od residualnego source blockera do lane axiom-augmented.
+
+## 459. C51 strict-to-axiom source bridge spec audit wykonane (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy strict core ma juz packet-ready bridge specification od
+     residualnego blockera `C50_B1` do lane axiom-augmented,
+   - albo jawnie potwierdzic, ze pozostaje tylko fallback branch citation do
+     `QW-2192/2193`.
+2. Wynik:
+   - fallback lane jest obecny:
+     `QW-2192/2193`,
+   - `C36` daje tylko `control-route overlay` do selector track,
+   - brak packet-ready strict-to-axiom source bridge spec dla redukcji
+     `C50_B1`.
+3. Frontier po kroku:
+   - aktywny pierwszy residualny blocker zawęża sie do:
+     `C51_B1 := no_packet_ready_strict_to_axiom_source_bridge_spec_for_reducing_C50_B1; only_fallback_branch_citation_to_QW_2192_QW_2193_is_available`,
+   - niezaleznie pozostaje:
+     `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C51_STRICT_TO_AXIOM_SOURCE_BRIDGE_SPEC_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/c51_strict_to_axiom_source_bridge_spec_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c51_strict_to_axiom_source_bridge_spec_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `C52` i sprawdzic, czy strict core ma juz packet-ready minimal
+     field list dla takiego bridge-spec packet.
