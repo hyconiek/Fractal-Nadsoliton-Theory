@@ -7201,3 +7201,29 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - zapisac theorem-spec dla brakujacej admissibility grammar / route-constructor closure rule,
    - albo wracac do lane `T2`, jesli priorytetem jest konstrukcja brakujacych strict-core objectow.
+
+## 471. T8 theorem-spec dla route admissibility grammar wykonane (2026-03-06)
+
+1. Cel:
+   - zapisac packet-ready theorem spec dla brakujacej admissibility grammar
+     / constructor-closure rule wskazanej przez `T7`,
+   - tj. formalnej zasady, ze kazda obecna admissible trasa eksportu `theta_i`
+     instancjonuje jedna z szesciu audytowanych rodzin konstruktorow.
+2. Wynik:
+   - theorem spec istnieje,
+   - actual discharge nadal nie istnieje.
+3. Frontier po kroku:
+   - aktywny theorem-lane blocker brzmi:
+     `T8_B1 := the route admissibility grammar is specified but not discharged for the current selector track`,
+   - niezaleznie pozostaje:
+     `T2_B1`,
+   - oraz:
+     `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/T8_ROUTE_ADMISSIBILITY_GRAMMAR_THEOREM_SPEC.md`,
+   - dodano `fundamental_action_reconstruction/t8_route_admissibility_grammar_theorem_spec.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/t8_route_admissibility_grammar_theorem_spec_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - wykonac pierwszy discharge attempt dla `T8`,
+   - albo wracac do lane `T2`, jesli priorytetem jest konstrukcja brakujacych strict-core objectow.

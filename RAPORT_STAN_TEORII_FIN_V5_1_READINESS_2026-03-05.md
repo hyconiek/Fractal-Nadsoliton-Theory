@@ -1698,3 +1698,13 @@ Co nadal pozostaje jawnie otwarte po `T7`:
 - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
 - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
 - nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `T8`:
+- theorem-lane ma juz packet-ready theorem spec dla brakujacej admissibility grammar / constructor-closure rule,
+- residualny blocker z `T7` zostaje podniesiony do jawnego theorem-spec targetu.
+
+Co nadal pozostaje jawnie otwarte po `T8`:
+- `T8_B1 := the route admissibility grammar is specified but not discharged for the current selector track`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
+- nadal brak theorem-level/full-closure PASS.

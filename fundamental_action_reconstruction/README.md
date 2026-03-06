@@ -1,6 +1,6 @@
 # Fundamental Action Reconstruction
 
-Status: `PROGRAM_PHASE1_COMPLETE_C55_T1_T7_THEOREM_LANE_ACTIVE_NO_FALSE_PASS`
+Status: `PROGRAM_PHASE1_COMPLETE_C55_T1_T8_THEOREM_LANE_ACTIVE_NO_FALSE_PASS`
 As of: `2026-03-06`
 
 Ten katalog otwiera rownolegly tor konstrukcyjny poza drabinka `L5/L12`.
@@ -220,6 +220,9 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
    - wykonac pierwszy realny discharge attempt dla `T6`,
    - i sprawdzic, czy obecny selector-track syntax oraz audit vocabulary
      juz indukuja skonczony admissible route universe.
+71. `T8`: route admissibility grammar theorem spec
+   - zapisac packet-ready theorem spec dla brakujacej admissibility grammar
+     / constructor-closure rule wskazanej przez `T7`.
 
 ## Aktualny status
 
@@ -303,6 +306,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `T5`: wykonane jako piaty krok theorem-lane; pierwszy realny discharge attempt dla `T4` redukuje failure do jednego meta-level blockera: braku formalnego route-family closure certificate, ktory dowodzilby, ze audytowana rodzina tras eksportu jest wyczerpujaca.
 - `T6`: wykonane jako szosty krok theorem-lane; packet-ready theorem spec zapisuje brakujacy route-family closure certificate dla obecnego selector track, bez claimu discharge i bez twierdzenia, ze `T4` albo `T1` sa juz rozladowane.
 - `T7`: wykonane jako siodmy krok theorem-lane; pierwszy realny discharge attempt dla `T6` redukuje failure do jednego nowego meta-level blockera: braku formalnej admissibility grammar albo route-constructor closure rule dla obecnego selector track.
+- `T8`: wykonane jako osmy krok theorem-lane; packet-ready theorem spec zapisuje brakujaca admissibility grammar / constructor-closure rule dla obecnego selector track, bez claimu discharge i bez twierdzenia, ze `T6`, `T4` albo `T1` sa juz rozladowane.
 
 ## Twarde ograniczenia rygoru
 
@@ -384,6 +388,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - brak claimu, ze `T5` rozladowuje `T4`; `T5` tylko lokalizuje residualny route-family closure blocker.
 - brak claimu, ze `T6` jest juz udowodnionym closure certificate.
 - brak claimu, ze `T7` rozladowuje `T6`; `T7` tylko lokalizuje residualny admissibility-grammar blocker.
+- brak claimu, ze `T8` jest juz udowodniona admissibility grammar albo ze rozladowuje `T6`.
 - brak claimu, ze `C42` daje juz theorem-spec, export-spec, discharge `QW-2191`, closure `A6` albo finalna orientation slice.
 
 ## Zasada korzystania z poprzednich badan
@@ -481,6 +486,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `T5_EXPORT_COMPLETENESS_PRINCIPLE_DISCHARGE_ATTEMPT.md`
 - `T6_ROUTE_FAMILY_CLOSURE_CERTIFICATE_THEOREM_SPEC.md`
 - `T7_ROUTE_FAMILY_CLOSURE_CERTIFICATE_DISCHARGE_ATTEMPT.md`
+- `T8_ROUTE_ADMISSIBILITY_GRAMMAR_THEOREM_SPEC.md`
 - `C43_FILENAME_PATH_CONVENTION_AUDIT.md`
 - `a1_minimal_action_ansatz.py`
 - `a2_supersoliton_matching.py`
