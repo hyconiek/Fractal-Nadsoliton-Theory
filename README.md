@@ -650,5 +650,7 @@ Current status:
 - this moves the theory forward by actually closing the 12-row serialization lane in declared scope, leaving the orientation-slice restriction as the active residual blocker,
 - `C26` completed as the twenty-sixth step of the next micro-cycle,
 - this moves the theory forward only by splitting that last residual orientation-slice restriction into two explicit missing exports: a quotient map and a final slice-extraction map,
+- `C27` completed as the twenty-seventh step of the next micro-cycle,
+- this moves the theory forward only by showing that the quotient target is already present as a packet-ready class after zero-mode projection, leaving control-coordinate realization and final slice extraction open,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

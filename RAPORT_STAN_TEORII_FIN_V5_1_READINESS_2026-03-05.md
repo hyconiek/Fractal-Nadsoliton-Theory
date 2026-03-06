@@ -751,6 +751,8 @@ Status nowego toru:
 - `C25` pokazuje, ze patch serializacji zostal zastosowany, `QW-2165` zostalo rerunowane, a report zawiera juz `eom_psi0..eom_psi11`; lane serializacji jest zamkniete w zadeklarowanym scope, a aktywny blocker pozostaje na restriction do candidate orientation slice,
 - `C26` wykonane jako dwudziesty szosty krok trzeciego mikrocyklu,
 - `C26` pokazuje, ze ostatni residualny restriction blocker po `C25` nie jest juz monolitem, tylko rozbija sie na brak quotient map oraz brak finalnego slice-extraction map; to jest postep redukcyjny, nie closure,
+- `C27` wykonane jako dwudziesty siodmy krok trzeciego mikrocyklu,
+- `C27` pokazuje, ze quotient target po odjeciu modow zerowych jest juz packet-ready jako klasa (`delta n_perp^A after zero-mode projection`), a active blocker redukuje sie dalej do braku jawnej realizacji tego quotientu w control coordinates oraz nadal otwartego finalnego slice extraction,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -1247,5 +1249,14 @@ Co realnie zostalo dodane przez `C26`:
   - `control pullback orbit family -> quotient/projection -> candidate orientation slice`,
 - residualny blocker po `C25` zostaje rozbity dalej na:
   - `C26_B1 := no_explicit_zero_mode_or_orbit_tangent_quotient_map_from_the_control_pullback_orbit_family_to_a_reduced_orientation_related_control_plane`,
+  - `C26_B2 := no_explicit_basis_level_embedding_or_extraction_of_the_candidate_two_dimensional_orientation_slice_inside_that_reduced_plane`,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C27`:
+- strict core ma juz packet-ready quotient candidate class:
+  - `ambient orientation-related fluctuations -> delta n_perp^A after zero-mode projection`,
+- pierwszy residualny blocker po `C26` zawęża sie dalej do:
+  - `C27_B1 := no_explicit_control_coordinate_realization_of_the_zero_mode_quotient_candidate_on_the_control_pullback_orbit_family`,
+- drugi residualny blocker pozostaje:
   - `C26_B2 := no_explicit_basis_level_embedding_or_extraction_of_the_candidate_two_dimensional_orientation_slice_inside_that_reduced_plane`,
 - nadal brak theorem-level/full-closure PASS.
