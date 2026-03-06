@@ -7149,3 +7149,29 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - zapisac theorem-spec dla brakujacego route-family closure certificate,
    - albo wracac do lane `T2`, jesli priorytetem jest konstrukcja brakujacych strict-core objectow.
+
+## 469. T6 theorem-spec dla route-family closure certificate wykonane (2026-03-06)
+
+1. Cel:
+   - zapisac packet-ready theorem spec dla brakujacego closure certificate
+     wskazanego przez `T5`,
+   - tj. formalnej zasady, ze audytowana rodzina tras
+     `{C32,C33,C34,C49,C50,C51}` jest wyczerpujaca dla present selector track.
+2. Wynik:
+   - theorem spec istnieje,
+   - actual discharge nadal nie istnieje.
+3. Frontier po kroku:
+   - aktywny theorem-lane blocker brzmi:
+     `T6_B1 := the route-family closure certificate is specified but not discharged for the current strict-core selector track`,
+   - niezaleznie pozostaje:
+     `T2_B1`,
+   - oraz:
+     `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/T6_ROUTE_FAMILY_CLOSURE_CERTIFICATE_THEOREM_SPEC.md`,
+   - dodano `fundamental_action_reconstruction/t6_route_family_closure_certificate_theorem_spec.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/t6_route_family_closure_certificate_theorem_spec_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - wykonac pierwszy discharge attempt dla `T6`,
+   - albo wracac do lane `T2`, jesli priorytetem jest konstrukcja brakujacych strict-core objectow.
