@@ -680,5 +680,7 @@ Current status:
 - this moves the theory forward only by making explicit that the minimal field list is already present while the assembled acceptance artifact is still absent,
 - `C41` completed as the forty-first step of the next micro-cycle,
 - this moves the theory forward only by making explicit that a minimal acceptance artifact schema is now packet-ready while a persisted artifact instance is still absent,
+- `C42` completed as the forty-second step of the next micro-cycle,
+- this moves the theory forward only by making explicit that even a dedicated persisted template or file-level carrier for that artifact instance is still absent,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

@@ -6647,3 +6647,30 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - przejsc do `C42` i sprawdzic, czy strict core ma juz packet-ready
      persisted template albo file-level carrier dla takiej artifact instance.
+
+## 450. C42 persisted template carrier audit wykonane (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy strict core ma juz dedykowany persisted template albo
+     file-level carrier dla acceptance artifact instance identyfikacji
+     `sigma_int_candidate <-> residual orientation datum`.
+2. Wynik:
+   - schema artifact pozostaje packet-ready po `C41`,
+   - nie znaleziono dedykowanego persisted template dla tej identyfikacji,
+   - nie znaleziono dedykowanego file-level carriera dla tej identyfikacji,
+   - aktywny blocker zawęża sie dalej do braku jawnego nośnika instancji.
+3. Twarde granice:
+   - brak theorem-level PASS,
+   - brak full-closure PASS,
+   - brak claimu, ze schema artifact implikuje dedykowany carrier,
+   - brak claimu, ze istnieje ukryty persisted template,
+   - brak claimu, ze `QW-2191` jest rozladowane,
+   - brak finalnej orientation slice.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C42_PERSISTED_TEMPLATE_CARRIER_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/c42_persisted_template_carrier_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c42_persisted_template_carrier_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `C43` i sprawdzic, czy strict core ma juz packet-ready
+     minimal filename/path convention dla takiego carrieru.
