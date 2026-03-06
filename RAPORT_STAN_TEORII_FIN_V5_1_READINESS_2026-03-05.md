@@ -711,6 +711,8 @@ Status nowego toru:
 - `C5` wzmacnia `C4`: selector family jest orbitalna forma standardowej lokalnej symetrycznej formy projected Hessianu, ale brak jeszcze explicite wycietej projekcji i jej certyfikatu dodatniosci,
 - `C6` wykonane jako szosty krok trzeciego mikrocyklu,
 - `C6` pokazuje, ze strict core zawiera juz packet-ready komponenty projected second variation, ale nadal nie eksportuje mapy do kandydackiej subprzestrzeni orientacji ani certyfikatu dodatniosci na tej subprzestrzeni,
+- `C7` wykonane jako siodmy krok trzeciego mikrocyklu,
+- `C7` pokazuje, ze class-level schema slownika `mode pair -> orientation-related slice` jest juz jawna, ale basis-level export pozostaje otwarty,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -971,5 +973,18 @@ Co realnie zostalo dodane przez `C6`:
   - `C6_B1 := no_strict_exported_dictionary_from_deterministic_mode_pair_to_projected_orientation_fluctuation_subspace`,
   - `C6_B2 := no_explicit_positivity_certified_second_variation_block_on_that_exported_subspace`,
 - nadal brak discharge `C5_B1`,
+- nadal brak axiom-free uniqueness PASS,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C7`:
+- `C6_B1` nie oznacza juz kompletnego braku slownika,
+- po stronie zrodla istnieja jawne etykiety par modowych,
+- po stronie celu istnieje jawna klasa orientacyjnych kierunkow w sektorze `n^A`,
+- dzieki temu istnieje packet-ready schema:
+  - `pair_i -> slice_i`,
+  ale jeszcze bez basis-level eksportu,
+- aktualny frontier zawęża sie do:
+  - `C7_B1 := no_basis_level_export_of_orientation_slice_inside_n_sector_for_each_deterministic_mode_pair`,
+- nadal brak discharge `C6_B1`,
 - nadal brak axiom-free uniqueness PASS,
 - nadal brak theorem-level/full-closure PASS.

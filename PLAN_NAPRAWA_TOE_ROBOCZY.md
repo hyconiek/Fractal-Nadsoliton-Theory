@@ -5697,3 +5697,35 @@ Po tej rundzie:
 6. Nastepny poprawny ruch:
    - przejsc do `C7` i sprobowac `C6_B1`,
    - albo zamrozic frontier i zacommitowac.
+
+## 415. C7 mode pair to orientation slice schema packet wykonane (2026-03-06)
+1. Zakres:
+   - podjeto probe `C6_B1`,
+   - strict-admissible support: `QW-2190`, `QW-2191`, `A3`, `C3`, `C6`, `A10`.
+2. Co zostalo realnie ustalone:
+   - po stronie zrodla sa jawne etykiety:
+     - `pair1=(c1,s1)`,
+     - `pair2=(c2,s2)`,
+   - po stronie celu istnieje jawna class-level target:
+     - orientation-related directions in `n^A` sector,
+     - ujete w `A3` jako internal orientation moduli / orthogonal shape sector po projekcji,
+   - istnieje zatem packet-ready schema slownika:
+     - `pair_i -> slice_i`,
+     ale jeszcze nie basis-level export.
+3. Co pozostaje zablokowane:
+   - brak jawnej bazy `slice_i` dla kazdej pary,
+   - brak strict dictionary export,
+   - brak discharge `C6_B1`,
+   - brak axiom-free uniqueness.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C7_MODE_PAIR_TO_ORIENTATION_SLICE_SCHEMA_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/c7_mode_pair_to_orientation_slice_schema_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c7_mode_pair_to_orientation_slice_schema_packet_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Twardy rygor:
+   - brak `C6_B1` PASS,
+   - brak theorem-level PASS,
+   - brak full-closure PASS.
+6. Nastepny poprawny ruch:
+   - przejsc do `C8` i sprobowac `C6_B2`,
+   - albo zamrozic frontier i zacommitowac.

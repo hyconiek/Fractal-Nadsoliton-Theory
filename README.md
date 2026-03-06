@@ -610,5 +610,7 @@ Current status:
 - this moves the theory forward only by showing that a projected local Hessian would generate the same orbital selector family without requiring diagonality, but the actual projection and positivity certificate are still open,
 - `C6` completed as the sixth step of the next micro-cycle,
 - this moves the theory forward only by showing that packet-ready source components for the projected second variation already exist, while the exported map and plane-specific positivity certificate are still missing,
+- `C7` completed as the seventh step of the next micro-cycle,
+- this moves the theory forward only by identifying a class-level schema for the dictionary from deterministic mode pairs to orientation-related fluctuation slices, while the basis-level export is still missing,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.
