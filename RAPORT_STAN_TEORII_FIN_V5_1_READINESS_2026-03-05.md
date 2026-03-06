@@ -2081,6 +2081,31 @@ Frontier po `H14`:
 - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
 - `C32_B2 := raw cross-pair overlap route is formally degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.
 
+Co realnie zostalo dodane przez `H15`:
+- potwierdzono, ze istniejacy feedback kernela nie ma jawnego residualnego eksportu do sektora selektora,
+- brak projected selector-block, brak exported `A_i`-typu operatora i brak equivalence map do lane `K_obs`,
+- najbardziej uczciwa klasyfikacja pozostaje: `K_obs` to distinct extension hypothesis, a nie jawnie juz obecny skladnik bazowego kernela.
+
+Frontier po `H15`:
+- `H15_B1 := existing kernel feedback has no explicit residual-selector-sector reduction or projected selector-block export in the current repository, so K_obs remains a distinct extension hypothesis rather than an identified reformulation of existing kernel feedback`,
+- `H13_B1 := operator_origin is reduced to a finite two-value admissible set, but neither admissible value is instantiated by a provenance-valid Route A export for pair1`,
+- `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `C32_B2 := raw cross-pair overlap route is formally degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.
+
+Co realnie zostalo dodane przez `H16`:
+- obie dopuszczalne wartosci `operator_origin` maja juz partial witness, ale o roznej sile,
+- `exported_composite_A_1` ma silniejszy witness na poziomie composite formula i candidate object,
+- `pullback_from_E_1_G_light_R_mat_O_obs` ma slabszy witness na poziomie factor-chain slots,
+- nadal brak provenance-valid instancji dla obu kandydatow.
+
+Frontier po `H16`:
+- `H16_B1 := both admissible operator_origin values now have partial witnesses, but only at unequal strength (composite-formula/candidate-object vs factor-chain-slot), and neither witness reaches a provenance-valid Route A instance for pair1`,
+- `H15_B1 := existing kernel feedback has no explicit residual-selector-sector reduction or projected selector-block export in the current repository, so K_obs remains a distinct extension hypothesis rather than an identified reformulation of existing kernel feedback`,
+- `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `C32_B2 := raw cross-pair overlap route is formally degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.
+
 Co realnie zostalo dodane przez `H2`:
 - zapisano minimalny admissibility spec dla przyszlego operatora `K_obs`,
 - jawnie oddzielono:

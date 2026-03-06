@@ -784,6 +784,8 @@ Current status:
 - `H13` completed as the finite admissible value-set audit for `operator_origin`,
 - this reduces the next step to instantiating one of two explicit admissible provenance origins, while keeping explicit that neither value is yet realized in repo exports,
 - `H14` completed as the separation audit between already existing kernel feedback and the new `K_obs` hypothesis lane,
+- `H15` completed as the audit of whether already existing kernel feedback has any explicit selector-sector reduction, finding that no such export is currently present and that `K_obs` remains a distinct extension hypothesis,
+- `H16` completed as the partial-witness audit for the two admissible `operator_origin` values, finding an asymmetric witness structure (stronger composite-formula witness versus weaker factor-chain-slot witness) but still no provenance-valid Route A instance,
 - this reduces the next step to proving or refuting an explicit equivalence map from old kernel feedback to the new selector-facing operator lane, while keeping explicit that no such identification currently exists,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

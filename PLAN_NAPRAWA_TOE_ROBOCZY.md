@@ -8014,3 +8014,50 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - sprawdzic, czy jakakolwiek czesc starego feedbacku ma packet-ready selector-sector reduction,
    - albo potraktowac `K_obs` jawnie jako nowy extension term bez prob utozsamiania go ze starym feedbackiem.
+
+
+## 502. H15 existing feedback selector-sector reduction audit (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy istniejacy feedback kernela w `K_total -> K(d)` ma jakikolwiek jawny eksport do residualnego sektora selektora.
+2. Wynik:
+   - potwierdzono brak exported selector-sector reduction, brak projected selector-block i brak equivalence map do lane `K_obs`,
+   - w obecnym repo stary feedback pozostaje feedbackiem dynamicznej rownowagi i modulacji, ale nie selector-facing operatorem.
+3. Frontier po kroku:
+   - `H15_B1 := existing kernel feedback has no explicit residual-selector-sector reduction or projected selector-block export in the current repository, so K_obs remains a distinct extension hypothesis rather than an identified reformulation of existing kernel feedback`,
+   - `H13_B1`,
+   - `T12_B1`,
+   - `T2_B1`,
+   - `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/H15_EXISTING_FEEDBACK_SELECTOR_SECTOR_REDUCTION_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/h15_existing_feedback_selector_sector_reduction_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h15_existing_feedback_selector_sector_reduction.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h15_existing_feedback_selector_sector_reduction_audit_summary.json`.
+5. Nastepny poprawny ruch:
+   - sprobowac rozstrzygnac, czy `K_obs` trzeba traktowac juz jawnie jako nowy extension term,
+   - albo budowac pierwszy provenance-valid witness dla jednej z dwoch dopuszczalnych wartosci `operator_origin`.
+
+
+## 503. H16 operator-origin partial witness audit (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy jedna z dwoch dopuszczalnych wartosci `operator_origin` ma juz jakikolwiek partial witness zgodny z rozdzieleniem `base feedback` vs `extension K_obs`.
+2. Wynik:
+   - `exported_composite_A_1` ma silniejszy witness na poziomie composite formula + candidate object `A_1_cand`,
+   - `pullback_from_E_1_G_light_R_mat_O_obs` ma tylko slabszy witness na poziomie named slots i factor-chain schema,
+   - zadna z tych dwoch wartosci nie daje provenance-valid `Route A` instance dla `pair1`.
+3. Frontier po kroku:
+   - `H16_B1 := both admissible operator_origin values now have partial witnesses, but only at unequal strength (composite-formula/candidate-object vs factor-chain-slot), and neither witness reaches a provenance-valid Route A instance for pair1`,
+   - `H15_B1`,
+   - `T12_B1`,
+   - `T2_B1`,
+   - `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/H16_OPERATOR_ORIGIN_PARTIAL_WITNESS_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/h16_operator_origin_partial_witness_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h16_operator_origin_partial_witnesses.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h16_operator_origin_partial_witness_audit_summary.json`.
+5. Nastepny poprawny ruch:
+   - sprobowac zredukowac `H16_B1` do jednego dominujacego origin lane,
+   - albo zbadac, czy silniejszy composite witness da sie podniesc do provenance-valid witness bez falszywej reinterpretacji strict core.
