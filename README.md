@@ -614,5 +614,7 @@ Current status:
 - this moves the theory forward only by identifying a class-level schema for the dictionary from deterministic mode pairs to orientation-related fluctuation slices, while the basis-level export is still missing,
 - `C8` completed as the eighth step of the next micro-cycle,
 - this moves the theory forward only by reducing the projected-block positivity problem to an explicit missing compression/restriction relation to the already certified positive host operator from `QW-2186`,
+- `C9` completed as the ninth step of the next micro-cycle,
+- this moves the theory forward only by reducing that compression problem further to two missing exports: host operator to Psi-sector quadratic carrier, and quadratic carrier to the candidate orientation slice,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

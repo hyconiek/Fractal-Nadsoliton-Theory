@@ -715,6 +715,8 @@ Status nowego toru:
 - `C7` pokazuje, ze class-level schema slownika `mode pair -> orientation-related slice` jest juz jawna, ale basis-level export pozostaje otwarty,
 - `C8` wykonane jako osmy krok trzeciego mikrocyklu,
 - `C8` pokazuje, ze dodatniosc projected block redukuje sie do jawnego problemu relacji kompresji do certyfikowanego host-operatora z `QW-2186`,
+- `C9` wykonane jako dziewiaty krok trzeciego mikrocyklu,
+- `C9` pokazuje, ze compression blocker redukuje sie dalej do dwoch brakujacych eksportow: `QW-2186 host -> Psi-sector quadratic carrier` oraz `Psi-sector quadratic carrier -> candidate orientation slice`,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -999,5 +1001,17 @@ Co realnie zostalo dodane przez `C8`:
   - `C8_B1 := no_explicit_compression_or_restriction_relation_between_candidate_orientation_slice_and_branch_scope_certified_positive_host_operator`,
 - nadal brak jawnej relacji kompresji,
 - nadal brak discharge `C6_B2`,
+- nadal brak axiom-free uniqueness PASS,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C9`:
+- `C8_B1` nie jest juz traktowany jako czysty brak wspolnego nosnika operatorowego,
+- `QW-2163` daje canonical action `12xPsi + Phi` z jawnym mixingiem `K_{i,j}` na poziomie action-origin,
+- `QW-2186` daje branch-scope certyfikat dodatniego host-operatora zbudowanego z `K_total`,
+- `A3` daje fluctuation carrier z sektorem `delta n_perp^A`,
+- dzieki temu aktualny frontier rozbija sie na dwa mniejsze blockery:
+  - `C9_B1 := no_explicit_action_origin_identification_between_qw2186_certified_host_operator_and_the_Psi_sector_quadratic_second_variation_carrier`,
+  - `C9_B2 := no_explicit_restriction_from_that_Psi_sector_quadratic_carrier_to_the_candidate_orientation_slice`,
+- nadal brak discharge `C8_B1`,
 - nadal brak axiom-free uniqueness PASS,
 - nadal brak theorem-level/full-closure PASS.

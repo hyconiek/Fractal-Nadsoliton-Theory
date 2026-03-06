@@ -5756,3 +5756,30 @@ Po tej rundzie:
 6. Nastepny poprawny ruch:
    - przejsc do `C9` i sprobowac packet-ready host relation,
    - albo zamrozic frontier i zacommitowac.
+
+## 417. C9 action-origin host carrier audit wykonane (2026-03-06)
+1. Zakres:
+   - podjeto probe `C8_B1`,
+   - strict-admissible support: `QW-2163`, `QW-2186`, `A3`, `A7`, `C7`, `C8`, `A10`.
+2. Co zostalo realnie ustalone:
+   - `QW-2163` daje canonical action `12xPsi + Phi` z jawnym index-mixing `K_{i,j}`,
+   - `QW-2186` daje branch-scope pozytywny host operator `A = K_total + m0^2 I`,
+   - `A3` daje fluctuation carrier z sektorem `delta n_perp^A`,
+   - zatem istnieje juz wspolny action-origin schema dla hosta i projected second-variation route.
+3. Co pozostaje zablokowane:
+   - brak jawnej identyfikacji `QW-2186 host -> Psi-sector quadratic second-variation carrier`,
+   - brak jawnej restrykcji `Psi-sector quadratic carrier -> candidate orientation slice`,
+   - brak discharge `C8_B1`,
+   - brak axiom-free uniqueness.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C9_ACTION_ORIGIN_HOST_CARRIER_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/c9_action_origin_host_carrier_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c9_action_origin_host_carrier_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Twardy rygor:
+   - brak `C8_B1` PASS,
+   - brak theorem-level PASS,
+   - brak full-closure PASS.
+6. Nastepny poprawny ruch:
+   - przejsc do `C10` i sprobowac `C9_B1`,
+   - albo zamrozic frontier i zacommitowac.

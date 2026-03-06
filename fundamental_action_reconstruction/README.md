@@ -1,6 +1,6 @@
 # Fundamental Action Reconstruction
 
-Status: `PROGRAM_PHASE1_COMPLETE_C8_POSITIVITY_DESCENT_REDUCED`
+Status: `PROGRAM_PHASE1_COMPLETE_C9_ACTION_ORIGIN_CARRIER_REDUCED`
 As of: `2026-03-06`
 
 Ten katalog otwiera rownolegly tor konstrukcyjny poza drabinka `L5/L12`.
@@ -98,6 +98,8 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
    - sprawdzic, czy istnieje juz class-level schema slownika `mode pair -> orientation slice`, nawet jesli brak jeszcze basis-level eksportu.
 16. `C8`: projected block positivity descent audit
    - sprawdzic, czy dodatniosc projected block moze schodzic z juz certyfikowanego host-operatora, nawet jesli brak jeszcze relacji kompresji.
+17. `C9`: action-origin host carrier audit
+   - sprawdzic, czy host-operator z `QW-2186` i orientation slice z `C7` maja juz wspolny action-origin carrier, nawet jesli brak jeszcze jawnej identyfikacji host-to-Hessian i restrykcji do slice.
 
 ## Aktualny status
 
@@ -127,6 +129,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `C6`: wykonane jako szosty krok trzeciego mikrocyklu; strict core zawiera juz packet-ready komponenty dla projected second variation, ale nie zawiera jeszcze ani jawnej mapy `mode plane -> fluctuation subspace`, ani plane-specific positivity certificate.
 - `C7`: wykonane jako siodmy krok trzeciego mikrocyklu; class-level schema slownika `mode pair -> orientation-related slice` jest juz jawna, ale brak basis-level eksportu pozostaje.
 - `C8`: wykonane jako osmy krok trzeciego mikrocyklu; dodatniosc projected block zostaje zawężona do problemu jawnej relacji kompresji do host-operatora z certyfikatem `QW-2186`.
+- `C9`: wykonane jako dziewiaty krok trzeciego mikrocyklu; compression blocker zostaje zawężony dalej do dwoch brakujacych eksportow: host-operator -> Psi-sector quadratic carrier oraz carrier -> orientation slice.
 
 ## Twarde ograniczenia rygoru
 
@@ -155,6 +158,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - brak claimu, ze `C6` znalazlo eksport projekcji albo rozladowalo `C5_B1`.
 - brak claimu, ze `C7` daje basis-level dictionary albo rozladowuje `C6_B1`.
 - brak claimu, ze `C8` daje plane-specific positivity certificate albo rozladowuje `C6_B2`.
+- brak claimu, ze `C9` identyfikuje juz `QW-2186` host z Psi-sector Hessianem albo rozladowuje `C8_B1`.
 
 ## Zasada korzystania z poprzednich badan
 
@@ -197,6 +201,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `C6_PROJECTED_SECOND_VARIATION_SOURCE_AUDIT.md`
 - `C7_MODE_PAIR_TO_ORIENTATION_SLICE_SCHEMA_PACKET.md`
 - `C8_PROJECTED_BLOCK_POSITIVITY_DESCENT_AUDIT.md`
+- `C9_ACTION_ORIGIN_HOST_CARRIER_AUDIT.md`
 - `a1_minimal_action_ansatz.py`
 - `a2_supersoliton_matching.py`
 - `a3_kernel_analysis.py`
@@ -223,6 +228,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `c6_projected_second_variation_source_audit.py`
 - `c7_mode_pair_to_orientation_slice_schema_packet.py`
 - `c8_projected_block_positivity_descent_audit.py`
+- `c9_action_origin_host_carrier_audit.py`
 - `generated/a1_minimal_action_ansatz_summary.json`
 - `generated/a2_supersoliton_matching_summary.json`
 - `generated/a3_kernel_analysis_summary.json`
@@ -249,4 +255,5 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `generated/c6_projected_second_variation_source_audit_summary.json`
 - `generated/c7_mode_pair_to_orientation_slice_schema_packet_summary.json`
 - `generated/c8_projected_block_positivity_descent_audit_summary.json`
+- `generated/c9_action_origin_host_carrier_audit_summary.json`
 - `manifest_action_reconstruction.json`
