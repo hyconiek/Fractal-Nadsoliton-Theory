@@ -7425,3 +7425,29 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - albo atakowac `T12_B1` bezposrednio,
    - albo przejsc na jawnie `axiom-augmented` pozytywny lane z rozdzieleniem claimow.
+
+## 480. AX1 minimalny pozytywny lane aksjomatyczny (2026-03-06)
+
+1. Cel:
+   - wybrac sciezke o wiekszej szansie lokalnego domkniecia niz dalsze `T13+`,
+   - otworzyc jawnie `axiom-augmented` pozytywny lane bez udawania strict-core closure.
+2. Wynik:
+   - przy minimalnym aksjomacie selekcji `minimum_harmonic_alignment_with_orientation_convention`
+     lane daje:
+     `theta_1 = theta_2 = 0 mod 2pi`,
+     `u_1 = c_1`,
+     `u_2 = c_2`,
+     `S_orient_axiom = span{c_1,c_2}`.
+3. Frontier po kroku:
+   - `T12_B1`,
+   - `T2_B1`,
+   - `C32_B2`,
+   - przy jawnej separacji: `AX1` nie nalezy do strict core.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/AX1_MINIMAL_SELECTOR_AXIOM_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/ax1_minimal_selector_axiom_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/ax1_minimal_selector_axiom_packet_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - zmaterializowac actual basis pair i orientation slice na lane `AX1`,
+   - albo wrocic do `T12_B1`, ale juz tylko jesli celem jest strict-core theorem-level closure.
