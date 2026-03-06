@@ -1,0 +1,41 @@
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+root = Path(__file__).resolve().parent
+
+summary = {
+    "step": "C50",
+    "status": "C50_EXECUTED_ACTUAL_PHASE_SOURCE_SKELETON_AUDIT_NO_FALSE_PASS",
+    "goal": "Reduce C49_B1 by checking whether strict core already contains a packet-ready minimal source skeleton for actual theta_1, theta_2, or whether only the axiom-augmented branch remains available.",
+    "sources": {
+        "C31": "source class alpha_12 = theta_2 - theta_1",
+        "C33": "formula class theta_i = atan2(<s_i,u_i>,<c_i,u_i>)",
+        "C35": "strict-core actual phase source absent, axiom-augmented branch present",
+        "C49": "conditional populated-instance schema depends on actual theta_1, theta_2",
+        "A10": "anti-overclaim boundary"
+    },
+    "findings": {
+        "strict_core_minimal_source_skeleton": "not_shown",
+        "axiom_augmented_source_branch": "present_non_strict_branch",
+        "actual_theta_export": "not_shown",
+        "actual_populated_instance": "not_shown"
+    },
+    "frontier_after_C50": {
+        "C50_B1": "no_packet_ready_strict_core_minimal_source_skeleton_for_actual_theta_1_theta_2; only_axiom_augmented_source_branch_is_available",
+        "C32_B2": "raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12"
+    },
+    "hard_limits": [
+        "no_theorem_level_pass",
+        "no_full_closure_pass",
+        "no_claim_that_strict_core_exports_theta_1_theta_2",
+        "no_claim_that_axiom_augmented_branch_discharges_strict_core_blocker",
+        "no_claim_that_qw_2191_is_discharged"
+    ],
+    "next_step": "C51"
+}
+
+out = root / "generated" / "c50_actual_phase_source_skeleton_audit_summary.json"
+out.write_text(json.dumps(summary, indent=2) + "\n", encoding="ascii")
+print(out)

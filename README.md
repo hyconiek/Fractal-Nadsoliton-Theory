@@ -695,5 +695,9 @@ Current status:
 - this moves the theory forward only by isolating a packet-ready class-level basis candidate for the two-dimensional orientation slice, while actual exported `theta_1,theta_2`, actual `u_1,u_2`, and the final slice extraction remain open,
 - `C48` completed as the forty-eighth step of the next micro-cycle,
 - this moves the theory forward only by isolating a packet-ready minimal export skeleton for the actual basis pair `u_1,u_2`, while the populated actual export instance and the residual mathematical blockers remain open,
+- `C49` completed as the forty-ninth step of the next micro-cycle,
+- this moves the theory forward only by isolating a packet-ready conditional populated-instance schema for `u_1,u_2` and `S_orient_cand`, while the actual strict-core supply of `theta_1,theta_2` and the residual mathematical blockers remain open,
+- `C50` completed as the fiftieth step of the next micro-cycle,
+- this moves the theory forward only by making explicit that no packet-ready strict-core source skeleton for actual `theta_1,theta_2` exists, while an axiom-augmented source branch remains the only available source lane,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

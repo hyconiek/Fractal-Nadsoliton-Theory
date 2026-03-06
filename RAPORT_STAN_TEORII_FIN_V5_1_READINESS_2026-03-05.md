@@ -795,6 +795,10 @@ Status nowego toru:
 - `C47` pokazuje, ze class-level kandydat basis-level dla dwuwymiarowej orientation slice jest juz packet-ready jako `span{u_1(theta_1),u_2(theta_2)}`, ale actual export `u_1`, `u_2` pozostaje otwarty,
 - `C48` wykonane jako czterdziesty osmy krok trzeciego mikrocyklu,
 - `C48` pokazuje, ze minimalny export skeleton dla actual basis pair `u_1`, `u_2` jest juz packet-ready, ale wypelniona actual export instance pozostaje otwarta,
+- `C49` wykonane jako czterdziesty dziewiaty krok trzeciego mikrocyklu,
+- `C49` pokazuje, ze conditional populated-instance schema dla `u_1`, `u_2` i `S_orient_cand` jest juz packet-ready, ale strict core nadal nie dostarcza actual `theta_1`, `theta_2`,
+- `C50` wykonane jako piecdziesiaty krok trzeciego mikrocyklu,
+- `C50` pokazuje, ze strict core nadal nie ma packet-ready minimalnego source skeletonu dla actual `theta_1`, `theta_2`, a jedyny packet-ready source branch pozostaje na lane axiom-augmented,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -1535,6 +1539,27 @@ Co realnie zostalo dodane przez `C48`:
   - `required_inputs = [theta_1, theta_2]`,
 - `C47_B1` zawęża sie dalej do:
   - `C48_B1 := no_explicit_populated_actual_basis_pair_export_instance_even_though_a_minimal_export_skeleton_for_u_1_u_2_is_now_packet_ready; population_remains_blocked_by_C35_B1`,
+- nadal niezaleznie pozostaje:
+  - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C49`:
+- strict core ma juz packet-ready conditional populated-instance schema:
+  - przy danych `theta_1`, `theta_2` wyznacza jednoznacznie:
+    `u_1`, `u_2`, `S_orient_cand=span{u_1,u_2}`,
+- `C48_B1` zawęża sie dalej do:
+  - `C49_B1 := no_strict_core_supplied_actual_theta_1_theta_2_values_for_instantiating_the_now_packet_ready_conditional_populated_instance_schema_of_u_1_u_2_and_S_orient_cand`,
+- nadal niezaleznie pozostaje:
+  - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C50`:
+- strict core ma juz jawnie zlokalizowany residualny source-layer blocker:
+  - brak packet-ready strict-core minimal source skeletonu dla actual `theta_1`, `theta_2`,
+- jedyny packet-ready source branch pozostaje na lane axiom-augmented:
+  - `QW-2192/2193`,
+- `C49_B1` zawęża sie dalej do:
+  - `C50_B1 := no_packet_ready_strict_core_minimal_source_skeleton_for_actual_theta_1_theta_2; only_axiom_augmented_source_branch_is_available`,
 - nadal niezaleznie pozostaje:
   - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
 - nadal brak theorem-level/full-closure PASS.

@@ -6844,3 +6844,56 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - przejsc do `C49` i sprawdzic, czy strict core ma juz packet-ready minimalny
      populated-instance schema warunkowy na `theta_1`, `theta_2`.
+
+## 457. C49 conditional populated-instance schema audit wykonane (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy strict core ma juz packet-ready warunkowy schema
+     wypelnienia actual basis pair `u_1`, `u_2` oraz `S_orient_cand`,
+     nawet jesli brak jeszcze actual strict-core supply `theta_1`, `theta_2`.
+2. Wynik:
+   - po `C48` skeleton exportu jest juz jawny,
+   - po `C34 + C47` role `u_1`, `u_2` i `S_orient_cand` sa juz jawne,
+   - strict core ma juz packet-ready conditional schema:
+     jesli `theta_1`, `theta_2` sa dane, to `u_1`, `u_2` oraz
+     `S_orient_cand=span{u_1,u_2}` sa jednoznacznie wyznaczone,
+   - actual strict-core supply `theta_1`, `theta_2` nadal nie istnieje.
+3. Redukcja frontu:
+   - aktywny pierwszy residualny blocker zawęża sie do:
+     `C49_B1 := no_strict_core_supplied_actual_theta_1_theta_2_values_for_instantiating_the_now_packet_ready_conditional_populated_instance_schema_of_u_1_u_2_and_S_orient_cand`,
+   - niezaleznie pozostaje:
+     `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C49_CONDITIONAL_POPULATED_INSTANCE_SCHEMA_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/c49_conditional_populated_instance_schema_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c49_conditional_populated_instance_schema_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `C50` i sprawdzic, czy strict core ma juz packet-ready minimalny
+     source skeleton dla actual `theta_1`, `theta_2`, czy pozostaje tylko branch axiom-augmented.
+
+## 458. C50 actual phase source skeleton audit wykonane (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy strict core ma juz packet-ready minimalny source skeleton
+     dla actual `theta_1`, `theta_2`, czy nadal jedyny packet-ready source branch
+     pozostaje po stronie axiom-augmented lane.
+2. Wynik:
+   - strict core ma juz formule klasy dla `theta_i` i dla `u_i(theta_i)`,
+   - strict core nadal nie ma packet-ready minimalnego source skeletonu
+     dostarczajacego actual `theta_1`, `theta_2`,
+   - jedyny packet-ready source branch dla actual faz pozostaje na lane
+     axiom-augmented (`QW-2192/2193`).
+3. Redukcja frontu:
+   - aktywny pierwszy residualny blocker zawęża sie do:
+     `C50_B1 := no_packet_ready_strict_core_minimal_source_skeleton_for_actual_theta_1_theta_2; only_axiom_augmented_source_branch_is_available`,
+   - niezaleznie pozostaje:
+     `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C50_ACTUAL_PHASE_SOURCE_SKELETON_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/c50_actual_phase_source_skeleton_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c50_actual_phase_source_skeleton_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `C51` i sprawdzic, czy strict core ma juz packet-ready bridge
+     specification od residualnego source blockera do lane axiom-augmented.
