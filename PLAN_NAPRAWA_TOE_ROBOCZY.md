@@ -8258,3 +8258,30 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - sprobowac wykonac actual value audit dla `a_1`,
    - albo uczciwie potwierdzic, ze nawet pierwszy upstream coefficient nie ma jeszcze zadnego value witness.
+
+
+## 512. H25 a_1 actual value audit (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy dla `a_1` istnieje juz jakikolwiek actual, evaluated albo partial value witness.
+2. Wynik:
+   - istnieje packet-ready source-value object dla `a_1`,
+   - nie istnieje zaden actual, evaluated ani partial value witness dla `a_1`.
+3. Frontier po kroku:
+   - `H25_B1 := a_1 now has packet-ready source semantics and a packet-ready source-value object, but no actual exported, evaluated, or partially populated value witness exists anywhere in the current repository state`,
+   - `H24_B1`,
+   - `H23_B1`,
+   - `H22_B1`,
+   - `H20_B1`,
+   - `H15_B1`,
+   - `T12_B1`,
+   - `T2_B1`,
+   - `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/H25_A1_ACTUAL_VALUE_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/h25_a1_actual_value_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h25_a1_actual_value_audit.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h25_a1_actual_value_audit_summary.json`.
+5. Nastepny poprawny ruch:
+   - sprobowac odseparowac kolejny brakujacy upstream fragment dla `a_1`,
+   - albo uczciwie potwierdzic, ze lane `H` nadal nie daje nawet partial value witness dla pierwszego wspolczynnika.
