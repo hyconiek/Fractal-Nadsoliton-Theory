@@ -727,6 +727,8 @@ Status nowego toru:
 - `C13` pokazuje, ze index-set blocker redukuje sie dalej do braku transportu z control mode basis do canonical `Psi` basis oraz braku assembled submatrix po takim transporcie,
 - `C14` wykonane jako czternasty krok trzeciego mikrocyklu,
 - `C14` pokazuje, ze control transport `mode basis -> Psi basis` jest juz jawny, a frontier redukuje sie dalej do braku fizycznej kanonizacji tego transportu oraz braku assembled submatrix po jego przyjeciu,
+- `C15` wykonane jako pietnasty krok trzeciego mikrocyklu,
+- `C15` pokazuje, ze control-only formula `M_control = T_control^T H_PsiPsi T_control` jest juz jawna, a frontier redukuje sie dalej do braku coefficient-filled canonical `H_PsiPsi` oraz braku restriction do candidate orientation slice,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -1082,6 +1084,18 @@ Co realnie zostalo dodane przez `C14`:
   - `C14_B2 := no_assembled_Psi_x_Psi_submatrix_after_adopting_the_control_transport_schema`,
 - nadal brak discharge `C13_B1`,
 - nadal brak discharge `C13_B2`,
+- nadal brak discharge `C9_B2`,
+- nadal brak axiom-free uniqueness PASS,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C15`:
+- po zlozeniu `C12` i `C14` istnieje juz jawny control-only pullback packet
+  `M_control = T_control^T H_PsiPsi T_control`,
+- assembled-submatrix blocker nie dotyczy juz samej formuly assembly,
+- aktualny frontier zawęża sie do:
+  - `C15_B1 := no_explicit_coefficient_filled_canonical_Psi_x_Psi_block_H_PsiPsi_for_evaluating_the_control_pullback`,
+  - `C15_B2 := no_explicit_restriction_from_M_control_to_the_candidate_orientation_slice`,
+- nadal brak discharge `C14_B2`,
 - nadal brak discharge `C9_B2`,
 - nadal brak axiom-free uniqueness PASS,
 - nadal brak theorem-level/full-closure PASS.

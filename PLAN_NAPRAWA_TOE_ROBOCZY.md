@@ -5922,3 +5922,28 @@ Po tej rundzie:
 6. Nastepny poprawny ruch:
    - przejsc do `C15` i sprobowac assembled submatrix w trybie control-only,
    - albo zamrozic frontier i zacommitowac.
+
+## 423. C15 control-only pullback submatrix packet wykonane (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy po `C14` strict core daje juz choc formalny packet assembly
+     `M_control = T_control^T H_PsiPsi T_control`,
+     bez udawania coefficient-filled canonical `H_PsiPsi`.
+2. Wynik:
+   - control-only pullback formula jest juz jawna,
+   - brak nie dotyczy juz samej formuly assembly,
+   - aktualny frontier zawęza sie do:
+     - braku coefficient-filled canonical `H_PsiPsi`,
+     - braku restriction `M_control -> orientation slice`.
+3. Twarde granice:
+   - brak `C14_B2` PASS,
+   - brak theorem-level PASS,
+   - brak full-closure PASS.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C15_CONTROL_ONLY_PULLBACK_SUBMATRIX_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/c15_control_only_pullback_submatrix_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c15_control_only_pullback_submatrix_packet_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `C16` i sprobowac minimalnego coefficient-class table dla canonical `H_PsiPsi`,
+   - albo jawnie potwierdzic, ze strict core nie eksportuje jeszcze coefficient filling.

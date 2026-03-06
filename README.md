@@ -626,5 +626,7 @@ Current status:
 - this moves the theory forward only by reducing the index-set problem to a missing transport from deterministic mode-basis control sets to canonical Psi-basis indices, plus the still-missing assembled submatrix,
 - `C14` completed as the fourteenth step of the next micro-cycle,
 - this moves the theory forward only by reducing the transport problem to a missing strict physical justification of the control transport schema, plus the still-missing assembled submatrix,
+- `C15` completed as the fifteenth step of the next micro-cycle,
+- this moves the theory forward only by reducing the assembled-submatrix problem to a missing coefficient-filled canonical Psi x Psi block for the control-only pullback, plus the still-missing restriction to the candidate orientation slice,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.
