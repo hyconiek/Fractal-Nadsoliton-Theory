@@ -1,0 +1,39 @@
+{
+  "stage": "C23",
+  "status": "C23_EXECUTED_PATCH_READY_MODEL_CLAUSE_PACKET_NO_FALSE_PASS",
+  "as_of": "2026-03-06",
+  "goal": "Reduce the missing model-clause-schema blocker by constructing a minimal patch-ready all-12-rows model clause for QW-2165, without claiming that the patch has already been applied or rerun.",
+  "inputs": {
+    "strict_admissible": [
+      "QW-2165",
+      "QW-2166",
+      "QW-2180",
+      "C22",
+      "A10"
+    ]
+  },
+  "patch_ready_packet": {
+    "existing_model_clause_present": true,
+    "finite_family_size_present": true,
+    "eom_family_present": true,
+    "patch_ready_schema_present_in_packet": true,
+    "patch_ready_schema": "\"model\": {\n    \"n_psi_fields\": N,\n    \"lagrangian_density\": str(l_density),\n    \"eom_phi\": str(eom_phi),\n    **{f\"eom_psi{i}\": str(eom_psi[i]) for i in range(N)},\n},"
+  },
+  "result": {
+    "minimal_patch_ready_schema_packet_present": "yes",
+    "patch_applied_inside_qw2165": "not_shown",
+    "rerun_and_persisted_full_12_row_export": "not_shown"
+  },
+  "residual_blockers": {
+    "C23_B1": "no_applied_and_rerun_materialization_of_the_patch_ready_all_12_rows_model_clause_inside_qw2165_export_carrier",
+    "C23_B2": "no_explicit_restriction_from_the_control_pullback_orbits_to_the_candidate_orientation_slice"
+  },
+  "hard_limits": [
+    "no_theorem_level_pass",
+    "no_full_closure_pass",
+    "no_claim_that_the_patch_has_been_applied",
+    "no_claim_that_qw2165_has_been_rerun_with_full_12_row_export",
+    "no_orientation_slice_restriction_claim"
+  ],
+  "next_step": "C24"
+}

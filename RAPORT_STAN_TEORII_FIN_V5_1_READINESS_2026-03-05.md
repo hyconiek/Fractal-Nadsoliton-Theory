@@ -743,6 +743,8 @@ Status nowego toru:
 - `C21` pokazuje, ze istniejacy persisted export carrier dla `QW-2165` jest juz obecny, a frontier redukuje sie dalej do braku pelnej klauzuli serializacji `12` rows wewnatrz `model` oraz braku restriction do candidate orientation slice,
 - `C22` wykonane jako dwudziesty drugi krok trzeciego mikrocyklu,
 - `C22` pokazuje, ze w istniejacym export carrier nadal nie ma ani statycznego all-`12` model clause, ani jawnego finite key-family schema dla wpisow `Psi`, a frontier pozostaje na braku takiego schema oraz braku restriction do candidate orientation slice,
+- `C23` wykonane jako dwudziesty trzeci krok trzeciego mikrocyklu,
+- `C23` pokazuje, ze minimalny patch-ready schema packet dla pelnej klauzuli `model["eom_psi_i"]` jest juz obecny, a frontier redukuje sie dalej do braku zastosowania patcha i rerunu oraz braku restriction do candidate orientation slice,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -1202,4 +1204,15 @@ Co realnie zostalo dodane przez `C22`:
   - `C22_B2 := no_explicit_restriction_from_the_control_pullback_orbits_to_the_candidate_orientation_slice`,
 - nadal brak discharge `C21_B1`,
 - nadal brak discharge `C21_B2`,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C23`:
+- istnieje juz minimalny patch-ready schema packet:
+  - `**{f"eom_psi{i}": str(eom_psi[i]) for i in range(N)}`,
+- blocker nie dotyczy juz braku samego schema packet,
+- aktualny frontier zawęża sie do:
+  - `C23_B1 := no_applied_and_rerun_materialization_of_the_patch_ready_all_12_rows_model_clause_inside_qw2165_export_carrier`,
+  - `C23_B2 := no_explicit_restriction_from_the_control_pullback_orbits_to_the_candidate_orientation_slice`,
+- nadal brak discharge `C22_B1`,
+- nadal brak discharge `C22_B2`,
 - nadal brak theorem-level/full-closure PASS.

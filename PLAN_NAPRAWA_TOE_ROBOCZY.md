@@ -6136,3 +6136,32 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - przejsc do `C23` i sprawdzic, czy strict core ma juz minimalny patch-ready schema,
    - albo jawnie potwierdzic, ze nawet taki schema nie jest jeszcze zapisany.
+
+## 431. C23 patch-ready model clause packet wykonane (2026-03-06)
+
+1. Cel:
+   - skonstruowac minimalny patch-ready schema dla pelnej klauzuli `model["eom_psi_i"]`,
+     bez twierdzenia, ze patch zostal juz zastosowany.
+2. Wynik:
+   - minimalny patch-ready schema packet jest juz obecny,
+   - opiera sie na:
+     - istniejacym `model` clause,
+     - `N = 12`,
+     - rodzinie `eom_psi[i]`,
+     - jednym finite key-family schema:
+       - `**{f"eom_psi{i}": str(eom_psi[i]) for i in range(N)}`,
+   - aktualny frontier zawęza sie do:
+     - braku zastosowania patcha i rerunu,
+     - braku restriction do candidate orientation slice.
+3. Twarde granice:
+   - brak `C22_B1` PASS,
+   - brak theorem-level PASS,
+   - brak full-closure PASS.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C23_PATCH_READY_MODEL_CLAUSE_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/c23_patch_ready_model_clause_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c23_patch_ready_model_clause_packet_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `C24` i sprawdzic, czy wolno juz wykonac minimalny non-destructive patch w osobnym packet-candidate,
+   - albo jawnie utrzymac blocker na warstwie `patch-not-applied`.
