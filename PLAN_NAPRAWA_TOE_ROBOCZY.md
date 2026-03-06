@@ -6591,3 +6591,32 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - przejsc do `C40` i sprawdzic, czy strict core ma juz packet-ready
      minimal field list dla takiego acceptance skeletonu, mimo jego nieobecnosci.
+
+## 448. C40 minimal field list audit wykonane (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy strict core ma juz packet-ready minimal field list dla
+     przyszlego acceptance skeletonu identyfikacji
+     `sigma_int_candidate <-> residual orientation datum`.
+2. Wynik:
+   - `candidate_object` jest juz jawny,
+   - `target_slot_or_target_datum` jest juz jawny,
+   - `current_support_lane` jest juz jawny,
+   - `strict_absence_claim` jest juz jawny,
+   - `forbidden_overclaim_set` jest juz jawny,
+   - ale nadal brak jednego jawnego artifactu scalajacego te pola.
+3. Twarde granice:
+   - brak theorem-level PASS,
+   - brak full-closure PASS,
+   - brak claimu, ze field list rowna sie acceptance skeletonowi,
+   - brak claimu, ze theorem-spec albo export-spec istnieje,
+   - brak claimu, ze `QW-2191` jest rozladowane,
+   - brak finalnej orientation slice.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C40_MINIMAL_FIELD_LIST_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/c40_minimal_field_list_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c40_minimal_field_list_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `C41` i sprawdzic, czy strict core ma juz packet-ready
+     assembled acceptance artifact schema dla tej identyfikacji.
