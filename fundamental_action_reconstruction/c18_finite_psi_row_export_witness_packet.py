@@ -1,0 +1,59 @@
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+root = Path(__file__).resolve().parent
+
+payload = {
+    "stage": "C18",
+    "status": "C18_EXECUTED_FINITE_ROW_EXPORT_WITNESS_PACKET_NO_FALSE_PASS",
+    "as_of": "2026-03-06",
+    "goal": "Reduce the missing row-by-row export blocker by showing that the strict core already contains a finite witness packet for the full 12-row Psi family, even if no explicit serialized 12-row export exists yet.",
+    "inputs": {
+        "strict_admissible": [
+            "QW-2165",
+            "QW-2166",
+            "QW-2180",
+            "C17",
+            "A10",
+        ]
+    },
+    "finite_witness_packet": {
+        "n_psi_fields": 12,
+        "sample_rows": ["psi0", "psi6", "psi11"],
+        "exhaustive_flags": {
+            "euler_lagrange_executed_for_all_13_fields": True,
+            "all_psi_eom_local_second_order": True,
+            "all_psi_eom_contain_self_polynomial_terms": True,
+            "all_psi_eom_contain_yukawa_cross_terms": True,
+            "all_psi_eom_contain_bidirectional_kernel_mixing_terms": True,
+            "hessian_constructed_for_all_13_fields": True,
+            "linearized_eom_executed_for_all_13_fluctuation_fields": True,
+            "linear_operator_matrix_matches_canonical_hessian": True,
+        },
+    },
+    "result": {
+        "finite_family_level_witness_packet_present": "yes",
+        "explicit_serialized_12_row_export_present": "not_shown",
+        "exhaustive_12x12_canonical_table_present": "not_shown",
+        "orientation_slice_restriction_present": "not_shown",
+    },
+    "residual_blockers": {
+        "C18_B1": "no_explicit_serialized_12_row_export_table_for_the_Psi_family_despite_the_existing_finite_family_witness_packet",
+        "C18_B2": "no_explicit_restriction_from_the_control_pullback_orbits_to_the_candidate_orientation_slice",
+        "C9_B2": "no_explicit_restriction_from_that_Psi_sector_quadratic_carrier_to_the_candidate_orientation_slice",
+    },
+    "hard_limits": [
+        "no_theorem_level_pass",
+        "no_full_closure_pass",
+        "no_explicit_12_row_export_claim",
+        "no_exhaustive_12x12_table_claim",
+        "no_orientation_slice_restriction_claim",
+    ],
+    "next_step": "C19",
+}
+
+out = root / "generated" / "c18_finite_psi_row_export_witness_packet_summary.json"
+out.write_text(json.dumps(payload, indent=2) + "\n", encoding="ascii")
+print(out)

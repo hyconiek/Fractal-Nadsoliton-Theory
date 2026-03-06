@@ -1,6 +1,6 @@
 # Fundamental Action Reconstruction
 
-Status: `PROGRAM_PHASE1_COMPLETE_C17_INDEX_COMPLETE_ROW_STENCIL_REDUCED`
+Status: `PROGRAM_PHASE1_COMPLETE_C18_FINITE_ROW_WITNESS_PACKET_REDUCED`
 As of: `2026-03-06`
 
 Ten katalog otwiera rownolegly tor konstrukcyjny poza drabinka `L5/L12`.
@@ -116,6 +116,8 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
    - sprawdzic, czy strict core ma juz reprezentatywne rows coefficient-class dla canonical `H_PsiPsi`, nawet jesli brak jeszcze exhaustive `12 x 12` coefficient table.
 25. `C17`: index-complete Psi row stencil audit
    - sprawdzic, czy strict core ma juz wspolny skonczony stencil wiersza dla wszystkich `12` pol `Psi`, nawet jesli brak jeszcze explicit row-by-row exportu.
+26. `C18`: finite Psi-row export witness packet
+   - sprawdzic, czy strict core ma juz skonczony witness packet dla calej rodziny `12` rows `Psi`, nawet jesli brak jeszcze pelnej serializacji wszystkich `12` rows.
 
 ## Aktualny status
 
@@ -154,6 +156,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `C15`: wykonane jako pietnasty krok trzeciego mikrocyklu; assembled-submatrix blocker zostaje zawężony dalej do braku coefficient-filled canonical `H_PsiPsi` dla control-only pullback oraz braku restriction do orientation slice.
 - `C16`: wykonane jako szesnasty krok trzeciego mikrocyklu; coefficient-filling blocker zostaje zawężony dalej do braku exhaustive `12 x 12` coefficient table oraz braku restriction do orientation slice.
 - `C17`: wykonane jako siedemnasty krok trzeciego mikrocyklu; exhaustive-table blocker zostaje zawężony dalej do braku explicit row-by-row exportu dla wszystkich `12` wierszy oraz braku restriction do orientation slice.
+- `C18`: wykonane jako osiemnasty krok trzeciego mikrocyklu; row-export blocker zostaje zawężony dalej do braku pelnej serializacji `12` rows mimo obecnosci skonczonego witness packet dla calej rodziny, oraz braku restriction do orientation slice.
 
 ## Twarde ograniczenia rygoru
 
@@ -191,6 +194,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - brak claimu, ze `C15` daje juz coefficient-filled `Psi x Psi` submatrix albo rozladowuje `C14_B2`.
 - brak claimu, ze `C16` daje juz exhaustive `12 x 12` coefficient table albo rozladowuje `C15_B1`.
 - brak claimu, ze `C17` daje juz explicit row-by-row export albo rozladowuje `C16_B1`.
+- brak claimu, ze `C18` daje juz pelna serializacje `12` rows albo rozladowuje `C17_B1`.
 
 ## Zasada korzystania z poprzednich badan
 
@@ -242,6 +246,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `C15_CONTROL_ONLY_PULLBACK_SUBMATRIX_PACKET.md`
 - `C16_MINIMAL_PSI_HESSIAN_COEFFICIENT_CLASS_TABLE.md`
 - `C17_INDEX_COMPLETE_PSI_ROW_STENCIL_AUDIT.md`
+- `C18_FINITE_PSI_ROW_EXPORT_WITNESS_PACKET.md`
 - `a1_minimal_action_ansatz.py`
 - `a2_supersoliton_matching.py`
 - `a3_kernel_analysis.py`
@@ -277,6 +282,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `c15_control_only_pullback_submatrix_packet.py`
 - `c16_minimal_psi_hessian_coefficient_class_table.py`
 - `c17_index_complete_psi_row_stencil_audit.py`
+- `c18_finite_psi_row_export_witness_packet.py`
 - `generated/a1_minimal_action_ansatz_summary.json`
 - `generated/a2_supersoliton_matching_summary.json`
 - `generated/a3_kernel_analysis_summary.json`

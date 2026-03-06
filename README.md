@@ -632,5 +632,7 @@ Current status:
 - this moves the theory forward only by reducing the coefficient-filling problem to a missing exhaustive 12x12 canonical Psi x Psi coefficient table, plus the still-missing restriction to the candidate orientation slice,
 - `C17` completed as the seventeenth step of the next micro-cycle,
 - this moves the theory forward only by reducing the exhaustive-table problem to a missing explicit row-by-row export for all 12 Psi rows, plus the still-missing restriction to the candidate orientation slice,
+- `C18` completed as the eighteenth step of the next micro-cycle,
+- this moves the theory forward only by reducing the row-export problem to a missing fully serialized 12-row export table despite the existing finite family witness packet, plus the still-missing restriction to the candidate orientation slice,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

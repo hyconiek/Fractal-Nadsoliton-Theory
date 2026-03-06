@@ -733,6 +733,8 @@ Status nowego toru:
 - `C16` pokazuje, ze jawne coefficient-class rows dla `eta0` i `eta6` juz istnieja, a frontier redukuje sie dalej do braku exhaustive `12 x 12` coefficient table oraz braku restriction do candidate orientation slice,
 - `C17` wykonane jako siedemnasty krok trzeciego mikrocyklu,
 - `C17` pokazuje, ze index-complete row stencil schema dla wszystkich `12` pol `Psi` jest juz obecny, a frontier redukuje sie dalej do braku explicit row-by-row exportu oraz braku restriction do candidate orientation slice,
+- `C18` wykonane jako osiemnasty krok trzeciego mikrocyklu,
+- `C18` pokazuje, ze finite witness packet dla calej rodziny `12` rows `Psi` jest juz obecny, a frontier redukuje sie dalej do braku pelnej serializacji `12` rows oraz braku restriction do candidate orientation slice,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -1130,4 +1132,15 @@ Co realnie zostalo dodane przez `C17`:
   - `C17_B2 := no_explicit_restriction_from_the_control_pullback_orbits_to_the_candidate_orientation_slice`,
 - nadal brak discharge `C16_B1`,
 - nadal brak discharge `C16_B2`,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C18`:
+- `QW-2165` dostarcza trzy sample rows `psi0`, `psi6`, `psi11`,
+- `QW-2165/2166` dostarczaja exhaustive all-fields flags dla calej rodziny `12` rows `Psi`,
+- row-export blocker nie dotyczy juz braku family-level witness packet,
+- aktualny frontier zawęża sie do:
+  - `C18_B1 := no_explicit_serialized_12_row_export_table_for_the_Psi_family_despite_the_existing_finite_family_witness_packet`,
+  - `C18_B2 := no_explicit_restriction_from_the_control_pullback_orbits_to_the_candidate_orientation_slice`,
+- nadal brak discharge `C17_B1`,
+- nadal brak discharge `C17_B2`,
 - nadal brak theorem-level/full-closure PASS.

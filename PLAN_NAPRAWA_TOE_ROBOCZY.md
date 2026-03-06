@@ -6001,3 +6001,29 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - przejsc do `C18` i sprawdzic, czy strict core daje finite row-by-row export packet dla wszystkich `12` rows,
    - albo jawnie potwierdzic, ze exhaustive row export nadal nie jest obecny.
+
+## 426. C18 finite Psi-row export witness packet wykonane (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy strict core ma juz skonczony witness packet dla calej rodziny `12` rows `Psi`,
+     bez udawania pelnej serializacji wszystkich `12` rows.
+2. Wynik:
+   - finite family-level witness packet jest juz obecny,
+   - opiera sie na:
+     - sample rows `psi0`, `psi6`, `psi11`,
+     - exhaustive all-fields flags z `QW-2165/2166`,
+   - aktualny frontier zawęza sie do:
+     - braku pelnej serializacji `12` rows,
+     - braku restriction do candidate orientation slice.
+3. Twarde granice:
+   - brak `C17_B1` PASS,
+   - brak theorem-level PASS,
+   - brak full-closure PASS.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C18_FINITE_PSI_ROW_EXPORT_WITNESS_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/c18_finite_psi_row_export_witness_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c18_finite_psi_row_export_witness_packet_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `C19` i sprawdzic, czy strict core daje jawna serializacje `12` rows bez schodzenia do orientation slice,
+   - albo jawnie potwierdzic, ze taki export nadal nie jest obecny.
