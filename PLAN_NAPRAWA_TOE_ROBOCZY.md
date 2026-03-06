@@ -7175,3 +7175,29 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - wykonac pierwszy discharge attempt dla `T6`,
    - albo wracac do lane `T2`, jesli priorytetem jest konstrukcja brakujacych strict-core objectow.
+
+## 470. T7 discharge attempt dla route-family closure certificate wykonane (2026-03-06)
+
+1. Cel:
+   - wykonac pierwszy realny discharge attempt dla `T6`,
+   - sprawdzic, czy obecny selector-track syntax i audit vocabulary
+     juz indukuja skonczony admissible route universe.
+2. Wynik:
+   - `T6` nie zostaje rozladowane,
+   - failure redukuje sie dalej do jednego nowego meta-level blockera:
+     braku formalnej admissibility grammar albo route-constructor closure rule.
+3. Frontier po kroku:
+   - aktywny theorem-lane blocker brzmi:
+     `T7_B1 := no formal admissibility grammar or route-constructor closure rule showing that every current strict-core theta-export route must instantiate one of the six audited route archetypes`,
+   - niezaleznie pozostaje:
+     `T2_B1`,
+   - oraz:
+     `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/T7_ROUTE_FAMILY_CLOSURE_CERTIFICATE_DISCHARGE_ATTEMPT.md`,
+   - dodano `fundamental_action_reconstruction/t7_route_family_closure_certificate_discharge_attempt.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/t7_route_family_closure_certificate_discharge_attempt_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - zapisac theorem-spec dla brakujacej admissibility grammar / route-constructor closure rule,
+   - albo wracac do lane `T2`, jesli priorytetem jest konstrukcja brakujacych strict-core objectow.

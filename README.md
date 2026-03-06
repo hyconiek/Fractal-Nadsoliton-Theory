@@ -721,5 +721,7 @@ Current status:
 - this moves the theory forward only by performing the first real discharge attempt for `T4` and reducing its failure to a single meta-level blocker: the absence of a formal route-family closure certificate proving that the audited theta-export routes are exhaustive for the present selector track,
 - `T6` completed as the sixth theorem-lane step,
 - this moves the theory forward only by isolating a packet-ready theorem spec for the missing route-family closure certificate required by `T5`, while the certificate itself remains undischarge,
+- `T7` completed as the seventh theorem-lane step,
+- this moves the theory forward only by performing the first real discharge attempt for `T6` and reducing its failure to a single meta-level blocker: the absence of a formal route admissibility grammar or constructor-closure rule showing that every current admissible theta-export route instantiates one of the six audited archetypes,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.
