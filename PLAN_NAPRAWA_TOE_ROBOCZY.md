@@ -7817,3 +7817,26 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - sprobowac wyeksportowac lub zapisac component actions `E_1`, `G_light`, `R_mat`, `O_obs`,
    - albo jawnie potwierdzic, ze obecny ansatz nie ma jeszcze zadnego komponentowego carrieru do pair1 extraction.
+
+## 494. H7 component action carrier audit (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy repo ma juz jakikolwiek jawny carrier lub eksport dzialania dla komponentow `E_1`, `G_light`, `R_mat`, `O_obs`,
+   - oraz czy istnieje juz zlozony carrier `A_1` na `V_1 = span{c1,s1}`.
+2. Wynik:
+   - wszystkie cztery komponenty istnieja obecnie tylko jako nazwane sloty w ansatzu i redukcjach `H2-H6`,
+   - nie ma jawnej macierzowej reprezentacji, jawnej reguly dzialania ani wyeksportowanego composite representative `A_1`,
+   - blokada pary `pair1` zostaje zredukowana do czystej nieobecnosci carrieru komponentowego.
+3. Frontier po kroku:
+   - `H7_B1 := no explicit component-action carrier exists for E_1, G_light, R_mat, O_obs on pair1 or V_1, and no exported composite representative A_1 is present`,
+   - `H6_B1` zostaje zredukowane do poziomu carrier-absence level,
+   - `T12_B1`,
+   - `T2_B1`,
+   - `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/H7_COMPONENT_ACTION_CARRIER_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/h7_component_action_carrier_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h7_component_action_carrier_audit_summary.json`.
+5. Nastepny poprawny ruch:
+   - zapisac minimalny construction/export spec dla carrierow `E_1`, `G_light`, `R_mat`, `O_obs`,
+   - albo pokazac, ze przyszly extraction musi zaczynac od composite representative `A_1`.

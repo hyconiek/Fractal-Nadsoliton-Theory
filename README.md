@@ -769,5 +769,7 @@ Current status:
 - this reduces the next step to computing the three scalars `(a_i, b_i, d_i)` for one actual mode pair, while keeping explicit that no such coefficients have yet been exported,
 - `H6` completed as the first actual pair-level extraction attempt for `pair1 = (c1,s1)`,
 - this reduces the next step to exporting the operator-component actions needed to evaluate `(a_1, b_1, d_1)`, while keeping explicit that no such coefficients have yet been computed,
+- `H7` completed as the first component-action carrier audit for `pair1 = (c1,s1)`,
+- this reduces the next step to constructing or exporting actual carriers for `E_1`, `G_light`, `R_mat`, `O_obs` or the composite `A_1`, while keeping explicit that no such carrier currently exists in repo exports,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.
