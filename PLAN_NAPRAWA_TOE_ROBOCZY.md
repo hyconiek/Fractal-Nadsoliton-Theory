@@ -6996,3 +6996,76 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - przejsc do `C55` i sprawdzic, czy strict core ma juz packet-ready minimalny
      filename/path convention dla takiego bridge carrieru.
+
+## 463. C55 strict-to-axiom bridge filename/path audit wykonane (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy strict core ma juz packet-ready minimalna konwencje
+     filename/path dla dedykowanego strict-to-axiom bridge carrieru,
+   - bez twierdzenia, ze taki carrier file juz istnieje.
+2. Wynik:
+   - minimalna konwencja filename/path jest juz packet-ready,
+   - proponowany carrier path brzmi:
+     `fundamental_action_reconstruction/generated/strict_to_axiom_sigma_int_residual_orientation_datum_bridge_artifact_instance.json`,
+   - nadal brak utworzonego bridge carrier file i persisted bridge artifact instance.
+3. Frontier po kroku:
+   - aktywny pierwszy residualny blocker zawęża sie do:
+     `C55_B1 := no_explicit_created_file_instance_following_the_now_packet_ready_minimal_filename_path_convention_for_a_dedicated_strict_to_axiom_bridge_carrier_reducing_C50_B1`,
+   - niezaleznie pozostaje:
+     `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C55_STRICT_TO_AXIOM_BRIDGE_FILENAME_PATH_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/c55_strict_to_axiom_bridge_filename_path_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c55_strict_to_axiom_bridge_filename_path_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `C56` i sprawdzic, czy strict core ma juz packet-ready minimalny
+     template content dla takiego bridge carrieru.
+
+## 464. T1 theorem-spec dla braku strict-core theta source wykonane (2026-03-06)
+
+1. Cel:
+   - zapisac theorem-lane packet-ready theorem spec dla tezy, ze obecny strict
+     core nie ma wewnetrznego zrodla actual `theta_1`, `theta_2`,
+   - bez twierdzenia, ze theorem zostal juz discharged.
+2. Wynik:
+   - theorem spec istnieje,
+   - minimalny lemma DAG istnieje,
+   - actual discharge nadal nie istnieje.
+3. Frontier po kroku:
+   - aktywny theorem-lane blocker brzmi:
+     `T1_B1 := the theorem is specified but not discharged; current strict core still has no internal actual-theta source`,
+   - niezaleznie pozostaje:
+     `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/T1_STRICT_CORE_NO_INTERNAL_THETA_SOURCE_THEOREM_SPEC.md`,
+   - dodano `fundamental_action_reconstruction/t1_strict_core_no_internal_theta_source_theorem_spec.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/t1_strict_core_no_internal_theta_source_theorem_spec_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `T2` i zapisac warunkowy theorem spec dla mostu
+     `sigma_int_candidate -> residual orientation datum`.
+
+## 465. T2 theorem-spec dla mostu sigma_int -> residual datum wykonane (2026-03-06)
+
+1. Cel:
+   - zapisac theorem-lane packet-ready conditional bridge theorem spec dla mostu
+     `sigma_int_candidate -> residual orientation datum`,
+   - bez twierdzenia, ze target slot albo equivalence/export map juz istnieja.
+2. Wynik:
+   - theorem spec istnieje,
+   - minimalny assumption map istnieje,
+   - actual discharge nadal nie istnieje.
+3. Frontier po kroku:
+   - aktywny theorem-lane blocker brzmi:
+     `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+   - niezaleznie pozostaje:
+     `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/T2_SIGMA_INT_TO_RESIDUAL_DATUM_BRIDGE_THEOREM_SPEC.md`,
+   - dodano `fundamental_action_reconstruction/t2_sigma_int_to_residual_datum_bridge_theorem_spec.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/t2_sigma_int_to_residual_datum_bridge_theorem_spec_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - zdecydowac, czy priorytetem jest discharge `T1`, czy konstrukcja
+     brakujacych slot/map objects wymaganych przez `T2`.

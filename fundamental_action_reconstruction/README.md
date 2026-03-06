@@ -1,6 +1,6 @@
 # Fundamental Action Reconstruction
 
-Status: `PROGRAM_PHASE1_COMPLETE_C54_STRICT_TO_AXIOM_CARRIER_ABSENT_NO_FALSE_PASS`
+Status: `PROGRAM_PHASE1_COMPLETE_C55_T1_T2_THEOREM_LANE_PACKET_READY_NO_FALSE_PASS`
 As of: `2026-03-06`
 
 Ten katalog otwiera rownolegly tor konstrukcyjny poza drabinka `L5/L12`.
@@ -190,6 +190,15 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
    - sprawdzic, czy z juz obecnej field list da sie zlozyc packet-ready schema bridge artifactu redukujacego `C50_B1`, nawet jesli nie ma jeszcze jego persisted instancji.
 62. `C54`: strict-to-axiom bridge carrier audit
    - sprawdzic, czy strict core ma juz packet-ready persisted template albo file-level carrier dla bridge artifact instance redukujacej `C50_B1`, nawet jesli sama instancja nie zostala jeszcze wypelniona.
+63. `C55`: strict-to-axiom bridge filename/path audit
+   - sprawdzic, czy strict core ma juz packet-ready minimalna konwencje filename/path dla takiego bridge carrieru, nawet jesli sam carrier file jeszcze nie istnieje.
+64. `T1`: strict-core no-internal-theta-source theorem spec
+   - zapisac packet-ready theorem spec dla tezy, ze obecny strict core nie
+     zawiera wewnetrznego zrodla actual `theta_1`, `theta_2`.
+65. `T2`: sigma-int to residual datum bridge theorem spec
+   - zapisac packet-ready conditional theorem spec dla mostu
+     `sigma_int_candidate -> residual orientation datum`,
+   - bez twierdzenia, ze most zostal juz discharged.
 
 ## Aktualny status
 
@@ -265,6 +274,9 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `C52`: wykonane jako piecdziesiaty drugi krok trzeciego mikrocyklu; minimal field list dla strict-to-axiom bridge artifactu jest juz packet-ready, ale sam assembled bridge artifact nadal nie istnieje.
 - `C53`: wykonane jako piecdziesiaty trzeci krok trzeciego mikrocyklu; minimalny schema bridge artifactu dla redukcji `C50_B1` jest juz packet-ready, ale jego persisted instancja nadal nie istnieje.
 - `C54`: wykonane jako piecdziesiaty czwarty krok trzeciego mikrocyklu; schema bridge artifactu pozostaje packet-ready, ale nadal brak dedykowanego persisted template albo file-level carrier dla tej redukcji.
+- `C55`: wykonane jako piecdziesiaty piaty krok trzeciego mikrocyklu; minimalna konwencja filename/path dla dedykowanego strict-to-axiom bridge carrieru jest juz packet-ready, ale sam carrier file nadal nie istnieje.
+- `T1`: wykonane jako pierwszy krok theorem-lane; packet-ready theorem spec zapisuje, ze obecny strict core nie eksportuje actual `theta_1`, `theta_2`, a jedyny packet-ready source lane pozostaje axiom-augmented.
+- `T2`: wykonane jako drugi krok theorem-lane; packet-ready conditional bridge theorem spec zapisuje, jakie target-slot i equivalence/export map bylyby potrzebne, aby utozsamic `sigma_int_candidate` z residual orientation datum, bez claimu discharge.
 
 ## Twarde ograniczenia rygoru
 
@@ -338,6 +350,9 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - brak claimu, ze `C52` daje juz assembled strict-to-axiom bridge artifact, discharge `C50_B1`, discharge `QW-2191` albo finalna orientation slice.
 - brak claimu, ze `C53` daje juz persisted strict-to-axiom bridge artifact instance, discharge `C50_B1`, discharge `QW-2191` albo finalna orientation slice.
 - brak claimu, ze `C54` daje juz dedicated carrier, persisted bridge artifact instance, discharge `C50_B1`, discharge `QW-2191` albo finalna orientation slice.
+- brak claimu, ze `C55` daje juz dedicated bridge carrier file, persisted bridge artifact instance, discharge `C50_B1`, discharge `QW-2191` albo finalna orientation slice.
+- brak claimu, ze `T1` jest juz udowodnione theorem-level.
+- brak claimu, ze `T2` jest juz udowodnionym mostem strict-core.
 - brak claimu, ze `C42` daje juz theorem-spec, export-spec, discharge `QW-2191`, closure `A6` albo finalna orientation slice.
 
 ## Zasada korzystania z poprzednich badan
@@ -427,6 +442,9 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `C52_STRICT_TO_AXIOM_BRIDGE_FIELD_LIST_AUDIT.md`
 - `C53_STRICT_TO_AXIOM_BRIDGE_ARTIFACT_SCHEMA_AUDIT.md`
 - `C54_STRICT_TO_AXIOM_BRIDGE_CARRIER_AUDIT.md`
+- `C55_STRICT_TO_AXIOM_BRIDGE_FILENAME_PATH_AUDIT.md`
+- `T1_STRICT_CORE_NO_INTERNAL_THETA_SOURCE_THEOREM_SPEC.md`
+- `T2_SIGMA_INT_TO_RESIDUAL_DATUM_BRIDGE_THEOREM_SPEC.md`
 - `C43_FILENAME_PATH_CONVENTION_AUDIT.md`
 - `a1_minimal_action_ansatz.py`
 - `a2_supersoliton_matching.py`
