@@ -682,5 +682,7 @@ Current status:
 - this moves the theory forward only by making explicit that a minimal acceptance artifact schema is now packet-ready while a persisted artifact instance is still absent,
 - `C42` completed as the forty-second step of the next micro-cycle,
 - this moves the theory forward only by making explicit that even a dedicated persisted template or file-level carrier for that artifact instance is still absent,
+- `C43` completed as the forty-third step of the next micro-cycle,
+- this moves the theory forward only by making explicit that a minimal filename/path convention for such a carrier is already packet-ready while the carrier file itself is still absent,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

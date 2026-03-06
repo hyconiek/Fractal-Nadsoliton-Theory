@@ -6674,3 +6674,31 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - przejsc do `C43` i sprawdzic, czy strict core ma juz packet-ready
      minimal filename/path convention dla takiego carrieru.
+
+## 451. C43 filename/path convention audit wykonane (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy strict core ma juz packet-ready minimalna konwencje
+     filename/path dla dedykowanego acceptance artifact carrieru identyfikacji
+     `sigma_int_candidate <-> residual orientation datum`,
+     nawet jesli sam carrier file jeszcze nie istnieje.
+2. Wynik:
+   - katalog `generated/` pozostaje stabilnym carrierem machine-readable outputs,
+   - snake_case basename + `.json` pozostaje stabilna gramatyka nazewnicza,
+   - packet-ready minimalna konwencja moze byc juz zapisana jako:
+     `fundamental_action_reconstruction/generated/sigma_int_residual_orientation_datum_acceptance_artifact_instance.json`,
+   - sam dedykowany carrier file nadal nie istnieje.
+3. Redukcja frontu:
+   - aktywny pierwszy residualny blocker zawęża sie do:
+     `C43_B1 := no_explicit_created_file_instance_following_the_now_packet_ready_minimal_filename_path_convention_for_a_dedicated_acceptance_artifact_carrier_identifying_sigma_int_candidate_with_the_residual_orientation_datum`,
+   - pozostaja tez:
+     `C32_B2`,
+     `C26_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C43_FILENAME_PATH_CONVENTION_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/c43_filename_path_convention_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c43_filename_path_convention_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `C44` i sprawdzic, czy strict core ma juz packet-ready
+     minimalny template content dla takiego carrieru.
