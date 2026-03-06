@@ -8205,3 +8205,29 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - zbudowac pierwszy minimalny populated value witness dla `trace_A_1`,
    - albo uczciwie potwierdzic, ze nawet pierwszy scalar target nadal nie ma zadnego actual value exportu.
+
+
+## 510. H23 trace value conditional populated witness schema (2026-03-06)
+
+1. Cel:
+   - zapisac minimalny conditional populated witness schema dla `trace_A_1`.
+2. Wynik:
+   - zdefiniowano populated witness shape dla `trace_A_1`,
+   - jawnie wskazano brakujace actual inputs: `a_1`, `d_1`.
+3. Frontier po kroku:
+   - `H23_B1 := a conditional populated witness schema for trace_A_1 now exists, but no actual values for a_1 and d_1 have been exported or evaluated, so the witness remains unpopulated`,
+   - `H22_B1`,
+   - `H21_B1`,
+   - `H20_B1`,
+   - `H15_B1`,
+   - `T12_B1`,
+   - `T2_B1`,
+   - `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/H23_TRACE_VALUE_CONDITIONAL_POPULATED_WITNESS_SCHEMA.md`,
+   - dodano `fundamental_action_reconstruction/h23_trace_value_conditional_populated_witness_schema.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h23_trace_value_conditional_populated_witness_schema.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h23_trace_value_conditional_populated_witness_schema_summary.json`.
+5. Nastepny poprawny ruch:
+   - sprobowac zbudowac minimalny source packet dla `a_1` lub `d_1`,
+   - albo uczciwie potwierdzic, ze populated witness pozostaje pusty z powodu braku actual coefficient inputs.
