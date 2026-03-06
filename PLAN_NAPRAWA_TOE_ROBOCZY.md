@@ -7122,3 +7122,30 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - wykonac pierwszy discharge attempt dla `T4`,
    - albo przerwac theorem-lane `T1/T4` i wracac do brakujacych strict-core objectow na lane `T2`.
+
+## 468. T5 discharge attempt dla T4 wykonane (2026-03-06)
+
+1. Cel:
+   - wykonac pierwszy realny discharge attempt dla theorem-lane `T4`,
+   - bez falszywego PASS,
+   - i sprawdzic, czy obecna audytowana rodzina tras eksportu jest juz
+     formalnie wyczerpujaca dla present selector track.
+2. Wynik:
+   - discharge attempt zostal wykonany,
+   - `T4` nie jest discharged,
+   - failure redukuje sie do jednego nowego meta-level blockera.
+3. Frontier po kroku:
+   - aktywny theorem-lane blocker brzmi:
+     `T5_B1 := no formal route-family closure certificate or route-universe declaration showing that the audited family {C32,C33,C34,C49,C50,C51} exhausts all current strict-core actual-theta export routes for the selector track`,
+   - niezaleznie pozostaje:
+     `T2_B1`,
+   - oraz:
+     `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/T5_EXPORT_COMPLETENESS_PRINCIPLE_DISCHARGE_ATTEMPT.md`,
+   - dodano `fundamental_action_reconstruction/t5_export_completeness_principle_discharge_attempt.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/t5_export_completeness_principle_discharge_attempt_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - zapisac theorem-spec dla brakujacego route-family closure certificate,
+   - albo wracac do lane `T2`, jesli priorytetem jest konstrukcja brakujacych strict-core objectow.

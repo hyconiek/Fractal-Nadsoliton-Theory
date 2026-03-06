@@ -717,5 +717,7 @@ Current status:
 - this moves the theory forward only by performing the first real discharge attempt for `T1` and reducing its failure to a single meta-level blocker: the absence of a strict-core export-completeness bridge from the current audit chain to a theorem-level non-availability result,
 - `T4` completed as the fourth theorem-lane step,
 - this moves the theory forward only by isolating a packet-ready theorem spec for the missing strict-core export-completeness principle required by `T3`, while the principle itself remains undischarge,
+- `T5` completed as the fifth theorem-lane step,
+- this moves the theory forward only by performing the first real discharge attempt for `T4` and reducing its failure to a single meta-level blocker: the absence of a formal route-family closure certificate proving that the audited theta-export routes are exhaustive for the present selector track,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

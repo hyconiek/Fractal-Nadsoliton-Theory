@@ -1666,3 +1666,14 @@ Co nadal pozostaje jawnie otwarte po `T4`:
 - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
 - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
 - nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `T5`:
+- pierwszy realny discharge attempt dla `T4`,
+- jawne rozdzielenie `route-wise classification is strong` od `formal route-family exhaustiveness not yet certified`,
+- redukcja failure do jednego nowego meta-level blockera.
+
+Co nadal pozostaje jawnie otwarte po `T5`:
+- `T5_B1 := no formal route-family closure certificate or route-universe declaration showing that the audited family {C32,C33,C34,C49,C50,C51} exhausts all current strict-core actual-theta export routes for the selector track`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
+- nadal brak theorem-level/full-closure PASS.

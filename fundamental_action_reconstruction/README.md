@@ -1,6 +1,6 @@
 # Fundamental Action Reconstruction
 
-Status: `PROGRAM_PHASE1_COMPLETE_C55_T1_T4_THEOREM_LANE_ACTIVE_NO_FALSE_PASS`
+Status: `PROGRAM_PHASE1_COMPLETE_C55_T1_T5_THEOREM_LANE_ACTIVE_NO_FALSE_PASS`
 As of: `2026-03-06`
 
 Ten katalog otwiera rownolegly tor konstrukcyjny poza drabinka `L5/L12`.
@@ -208,6 +208,10 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
    - zapisac packet-ready theorem spec dla brakujacej zasady kompletności
      eksportów strict core,
    - ktora podnosilaby obecny audit chain do theorem-level no-internal-theta-source result.
+68. `T5`: export-completeness principle discharge attempt
+   - wykonac pierwszy realny discharge attempt dla `T4`,
+   - i sprawdzic, czy obecna rodzina tras eksportu jest juz formalnie
+     wyczerpujaca dla present selector track.
 
 ## Aktualny status
 
@@ -288,6 +292,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `T2`: wykonane jako drugi krok theorem-lane; packet-ready conditional bridge theorem spec zapisuje, jakie target-slot i equivalence/export map bylyby potrzebne, aby utozsamic `sigma_int_candidate` z residual orientation datum, bez claimu discharge.
 - `T3`: wykonane jako trzeci krok theorem-lane; pierwszy realny discharge attempt dla `T1` redukuje failure do jednego meta-level blockera: braku formalnego export-completeness bridge, ktory zamienialby obecny audit chain w theorem-level non-availability result.
 - `T4`: wykonane jako czwarty krok theorem-lane; packet-ready theorem spec zapisuje brakujaca zasade export-completeness dla obecnego selector track, bez claimu discharge i bez twierdzenia, ze `T1` jest juz rozladowane.
+- `T5`: wykonane jako piaty krok theorem-lane; pierwszy realny discharge attempt dla `T4` redukuje failure do jednego meta-level blockera: braku formalnego route-family closure certificate, ktory dowodzilby, ze audytowana rodzina tras eksportu jest wyczerpujaca.
 
 ## Twarde ograniczenia rygoru
 
@@ -366,6 +371,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - brak claimu, ze `T2` jest juz udowodnionym mostem strict-core.
 - brak claimu, ze `T3` rozladowuje `T1`; `T3` tylko lokalizuje residualny meta-level blocker.
 - brak claimu, ze `T4` jest juz udowodnionym export-completeness principle.
+- brak claimu, ze `T5` rozladowuje `T4`; `T5` tylko lokalizuje residualny route-family closure blocker.
 - brak claimu, ze `C42` daje juz theorem-spec, export-spec, discharge `QW-2191`, closure `A6` albo finalna orientation slice.
 
 ## Zasada korzystania z poprzednich badan
@@ -460,6 +466,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `T2_SIGMA_INT_TO_RESIDUAL_DATUM_BRIDGE_THEOREM_SPEC.md`
 - `T3_STRICT_CORE_NO_INTERNAL_THETA_SOURCE_DISCHARGE_ATTEMPT.md`
 - `T4_STRICT_CORE_EXPORT_COMPLETENESS_PRINCIPLE_THEOREM_SPEC.md`
+- `T5_EXPORT_COMPLETENESS_PRINCIPLE_DISCHARGE_ATTEMPT.md`
 - `C43_FILENAME_PATH_CONVENTION_AUDIT.md`
 - `a1_minimal_action_ansatz.py`
 - `a2_supersoliton_matching.py`
