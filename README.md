@@ -791,6 +791,7 @@ Current status:
 - `H19` completed as the first coefficient/invariant extraction attempt from that witness, finding that no coefficient-level or invariant-level export semantics is yet attached to `A_1_cand`,
 - `H20` completed as the minimal coefficient-export semantics packet for `A_1_cand`, defining the meanings of `a_1`, `b_1`, `d_1`, `tr(A_1)`, and `Delta_1` without claiming any evaluated values,
 - `H21` completed as the minimal value-export packet for `tr(A_1)`, isolating the first scalar export target while keeping explicit that no value has been exported or evaluated,
+- `H22` completed as the actual-value audit for `trace_A_1`, confirming that the repository now has semantics and a packet-ready target but still no populated value witness anywhere in the current state,
 - this reduces the next step to proving or refuting an explicit equivalence map from old kernel feedback to the new selector-facing operator lane, while keeping explicit that no such identification currently exists,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.
