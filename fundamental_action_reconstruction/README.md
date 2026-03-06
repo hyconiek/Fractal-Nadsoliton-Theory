@@ -353,6 +353,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `H14`: wykonane jako audit separacji miedzy juz istniejacym feedbackiem w `K_total -> K(d)` a nowa hipoteza `K_obs`; od teraz problem redukuje sie juz nie do ogolnego pytania "czy feedback juz byl", lecz do braku explicit equivalence map albo selector-sector reduction identyfikujacej stary feedback z `K_obs`.
 - `H15`: wykonane jako audit redukcji starego feedbacku kernela do residualnego sektora selektora; od teraz problem redukuje sie juz nie do ogolnego pytania o podobienstwo feedbacku, lecz do twardego braku exported selector-sector reduction lub projected selector-block dla starego feedbacku, co utrzymuje `K_obs` jako odrebna hipoteze rozszerzenia.
 - `H16`: wykonane jako audit partial witnesses dla dwoch dopuszczalnych wartosci `operator_origin`; od teraz problem redukuje sie juz nie do nieokreslonego braku witnessa, lecz do asymetrii miedzy silniejszym composite-formula witness dla `exported_composite_A_1` i slabszym factor-chain-slot witness dla `pullback_from_E_1_G_light_R_mat_O_obs`, przy utrzymanym braku provenance-valid instancji.
+- `H17`: wykonane jako audit podniesienia silniejszego composite witnessa do provenance-valid `Route A`; od teraz problem redukuje sie juz nie do ogolnego braku provenance-valid witnessa, lecz do jednego brakujacego kroku wiazacego `A_1_cand` z `operator_origin = exported_composite_A_1` w jednym provenance-valid rekordzie.
 
 ## Twarde ograniczenia rygoru
 
@@ -464,6 +465,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - brak claimu, ze `H14` pokazuje juz, iz bazowy kernel zawiera `K_obs`; to jest tylko audit rozdzielajacy istniejacy feedback kernela od nowej hipotezy operatorowej.
 - brak claimu, ze `H15` pokazuje selector-sector action starego feedbacku; to jest tylko audit, ze taki eksport nie jest obecnie jawnie wyeksportowany.
 - brak claimu, ze `H16` daje provenance-valid `operator_origin`; to jest tylko audit partial witnesses o roznej sile.
+- brak claimu, ze `H17` daje juz provenance-valid `Route A`; to jest tylko audit, ze dla dominujacego composite witnessa zostal juz tylko jeden jawny krok wiazacy.
 - brak claimu, ze `H3` rozbija degeneracje `O(2)`; to jest tylko packet-ready ansatz operatora.
 - brak claimu, ze `H4` daje symmetry-breaking; to jest tylko packet-ready redukcja do testu anizotropii `2x2`.
 - brak claimu, ze `H5` daje juz jakikolwiek policzony blok `2x2`; to jest tylko packet ekstrakcji wspolczynnikow.
@@ -597,6 +599,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `H14_EXISTING_KERNEL_FEEDBACK_VS_NEW_KOBS_SEPARATION_AUDIT.md`
 - `H15_EXISTING_FEEDBACK_SELECTOR_SECTOR_REDUCTION_AUDIT.md`
 - `H16_OPERATOR_ORIGIN_PARTIAL_WITNESS_AUDIT.md`
+- `H17_COMPOSITE_WITNESS_ELEVATION_AUDIT.md`
 - `C43_FILENAME_PATH_CONVENTION_AUDIT.md`
 - `a1_minimal_action_ansatz.py`
 - `a2_supersoliton_matching.py`

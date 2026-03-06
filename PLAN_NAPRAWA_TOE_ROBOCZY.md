@@ -8061,3 +8061,27 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - sprobowac zredukowac `H16_B1` do jednego dominujacego origin lane,
    - albo zbadac, czy silniejszy composite witness da sie podniesc do provenance-valid witness bez falszywej reinterpretacji strict core.
+
+
+## 504. H17 composite witness elevation audit (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy silniejszy witness `exported_composite_A_1` da sie juz podniesc do provenance-valid `Route A` bez falszywej reinterpretacji strict core.
+2. Wynik:
+   - composite witness jest dominujacy wzgledem factor-chain witness,
+   - spelnione sa juz warunki lane/boundary/anti-smuggling,
+   - pozostaje jeden brakujacy krok: jawne zwiazanie `A_1_cand` z `operator_origin = exported_composite_A_1` w jednym provenance-valid rekordzie.
+3. Frontier po kroku:
+   - `H17_B1 := the stronger composite witness for exported_composite_A_1 is one explicit provenance-binding step away from a provenance-valid Route A witness, but that binding has not yet been populated in the current record`,
+   - `H15_B1`,
+   - `T12_B1`,
+   - `T2_B1`,
+   - `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/H17_COMPOSITE_WITNESS_ELEVATION_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/h17_composite_witness_elevation_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h17_composite_witness_elevation_audit.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h17_composite_witness_elevation_audit_summary.json`.
+5. Nastepny poprawny ruch:
+   - wypelnic ten jeden provenance-binding step,
+   - albo pokazac, ze nawet ten krok nie jest dopuszczalny bez ukrytego selector smuggling.
