@@ -1,6 +1,6 @@
 # Fundamental Action Reconstruction
 
-Status: `PROGRAM_PHASE1_COMPLETE_C34_REDUCED_REPRESENTATIVE_CLASS_OPEN`
+Status: `PROGRAM_PHASE1_COMPLETE_C35_ACTUAL_PHASE_SOURCE_BRANCH_OPEN`
 As of: `2026-03-06`
 
 Ten katalog otwiera rownolegly tor konstrukcyjny poza drabinka `L5/L12`.
@@ -150,6 +150,8 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
    - sprawdzic, czy strict core ma juz packet-ready formule klasy `theta_i = atan2(<s_i,u_i>,<c_i,u_i>)`, nawet jesli brak jeszcze jawnych reprezentantow `u_1`, `u_2` dla aktualnych par.
 42. `C34`: local reduced representative class audit
    - sprawdzic, czy strict core ma juz packet-ready klase jawnego, znormalizowanego reprezentanta lokalnej reduced line, nawet jesli brak jeszcze jawnych aktualnych faz `theta_1`, `theta_2` dla aktualnych par.
+43. `C35`: actual phase source branch audit
+   - sprawdzic, czy jakikolwiek packet-ready source branch dla aktualnych faz `theta_1`, `theta_2` juz istnieje, i czy nalezy do strict core czy tylko do branchu axiom-augmented.
 
 ## Aktualny status
 
@@ -205,6 +207,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `C32`: wykonane jako trzydziesty drugi krok trzeciego mikrocyklu; surowa sciezka `atan2(cross overlaps)` zostaje jawnie zablokowana przez degeneracje `atan2(0,0)` pod strict orthonormal-disjoint mode scaffold, a pierwszy residualny blocker zawęża sie dalej do braku eksportu lokalnych faz `theta_1`, `theta_2`.
 - `C33`: wykonane jako trzydziesty trzeci krok trzeciego mikrocyklu; formula klasy `theta_i = atan2(<s_i,u_i>,<c_i,u_i>)` jest juz packet-ready, a pierwszy residualny blocker zawęża sie dalej do braku jawnych reprezentantow `u_1`, `u_2` dla aktualnych par.
 - `C34`: wykonane jako trzydziesty czwarty krok trzeciego mikrocyklu; klasa jawnego reprezentanta `u_i(theta_i)=cos(theta_i)c_i+sin(theta_i)s_i` jest juz packet-ready, a pierwszy residualny blocker zawęża sie dalej do braku jawnych aktualnych faz `theta_1`, `theta_2`, z ktorych te reprezentanty moglyby zostac zmaterializowane dla aktualnych par.
+- `C35`: wykonane jako trzydziesty piaty krok trzeciego mikrocyklu; branch source dla aktualnych faz istnieje juz na warstwie axiom-augmented (`QW-2192/2193`), ale strict core nadal nie eksportuje jawnych `theta_1`, `theta_2` dla aktualnych par.
 
 ## Twarde ograniczenia rygoru
 
@@ -259,6 +262,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - brak claimu, ze `C32` daje juz wyeksportowane lokalne fazy, jawny `alpha_12`, globalny reduced control plane albo finalna orientation slice.
 - brak claimu, ze `C33` daje juz jawne reprezentanty `u_1`, `u_2`, wyeksportowane lokalne fazy, jawny `alpha_12` albo finalna orientation slice.
 - brak claimu, ze `C34` daje juz jawne aktualne fazy `theta_1`, `theta_2`, zmaterializowane `u_1`, `u_2`, jawny `alpha_12` albo finalna orientation slice.
+- brak claimu, ze `C35` daje juz strict-core eksport `theta_1`, `theta_2` albo ze branch axiom-augmented rozladowuje strict-core blocker.
 
 ## Zasada korzystania z poprzednich badan
 
@@ -327,6 +331,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `C32_CROSS_PAIR_OVERLAP_SCALAR_DEGENERACY_AUDIT.md`
 - `C33_LOCAL_PHASE_EXPORT_CLASS_AUDIT.md`
 - `C34_LOCAL_REDUCED_REPRESENTATIVE_CLASS_AUDIT.md`
+- `C35_ACTUAL_PHASE_SOURCE_BRANCH_AUDIT.md`
 - `a1_minimal_action_ansatz.py`
 - `a2_supersoliton_matching.py`
 - `a3_kernel_analysis.py`

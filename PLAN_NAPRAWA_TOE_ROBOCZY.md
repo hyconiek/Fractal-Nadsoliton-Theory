@@ -6452,3 +6452,31 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - przejsc do `C35` i sprawdzic, czy strict core ma juz packet-ready
      kandydat zrodla jawnych aktualnych faz `theta_1`, `theta_2`.
+
+## 443. C35 actual phase source branch audit wykonane (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy jakikolwiek packet-ready source branch dla aktualnych faz
+     `theta_1`, `theta_2` juz istnieje, i ostro rozdzielic strict core od
+     branchu axiom-augmented.
+2. Wynik:
+   - strict core nadal nie eksportuje jawnych `theta_1`, `theta_2` dla
+     aktualnych par,
+   - branch source istnieje juz na warstwie axiom-augmented przez `QW-2192`
+     oraz `QW-2193`,
+   - aktywny blocker zawęża sie dalej do braku strict-core eksportu aktualnych
+     faz oraz nadal otwartego finalnego slice extraction.
+3. Twarde granice:
+   - brak theorem-level PASS,
+   - brak full-closure PASS,
+   - brak strict-core eksportu `theta_1`, `theta_2`,
+   - brak claimu, ze branch axiom-augmented rozladowuje strict-core blocker,
+   - brak finalnej orientation slice.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C35_ACTUAL_PHASE_SOURCE_BRANCH_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/c35_actual_phase_source_branch_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c35_actual_phase_source_branch_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `C36` i sprawdzic, czy strict core ma juz packet-ready most
+     z branchu axiom-augmented do strict selector track.
