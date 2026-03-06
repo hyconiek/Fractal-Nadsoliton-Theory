@@ -646,5 +646,7 @@ Current status:
 - this moves the theory forward only by reducing that schema-absence problem to a not-yet-applied patch-ready all-12-row model clause packet, plus the still-missing restriction to the candidate orientation slice,
 - `C24` completed as the twenty-fourth step of the next micro-cycle,
 - this moves the theory forward only by reducing that patch-readiness problem to a patch-admitted-but-not-applied state, plus the still-missing restriction to the candidate orientation slice,
+- `C25` completed as the twenty-fifth step of the next micro-cycle,
+- this moves the theory forward by actually closing the 12-row serialization lane in declared scope, leaving the orientation-slice restriction as the active residual blocker,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

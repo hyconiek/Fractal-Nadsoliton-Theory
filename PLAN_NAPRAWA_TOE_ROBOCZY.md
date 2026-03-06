@@ -6192,3 +6192,27 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - przejsc do `C25` i wykonac minimalny patch-candidate w osobnym kontrolowanym kroku,
    - albo jawnie utrzymac blocker na warstwie `admitted_but_not_executed`.
+
+## 433. C25 applied patch rerun export audit wykonane (2026-03-06)
+
+1. Cel:
+   - potwierdzic, ze minimalny patch serializacji zostal rzeczywiscie zastosowany,
+     a `QW-2165` zostalo rerunowane z pelnym eksportem `12` rows `Psi`.
+2. Wynik:
+   - patch jest zastosowany w `QW_2165_L13_EXHAUSTIVE_CANONICAL_EOM_GATE.py`,
+   - rerun zostal wykonany,
+   - report zawiera `eom_psi0..eom_psi11`,
+   - sample rows zostaly zachowane,
+   - `QW-2165` wraca do `PASS_PARTIAL_ALL_ORDERS_OPEN`.
+3. Twarde granice:
+   - brak theorem-level PASS,
+   - brak full-closure PASS,
+   - brak restriction do candidate orientation slice.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C25_APPLIED_PATCH_RERUN_EXPORT_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/c25_applied_patch_rerun_export_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c25_applied_patch_rerun_export_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`,
+   - zaktualizowano `QW_2165_L13_EXHAUSTIVE_CANONICAL_EOM_GATE.py` oraz jego report artefacts.
+5. Nastepny poprawny ruch:
+   - przejsc do `C26` i wracac juz tylko do restriction `control pullback -> candidate orientation slice`.

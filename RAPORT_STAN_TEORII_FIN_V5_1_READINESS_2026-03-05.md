@@ -747,6 +747,8 @@ Status nowego toru:
 - `C23` pokazuje, ze minimalny patch-ready schema packet dla pelnej klauzuli `model["eom_psi_i"]` jest juz obecny, a frontier redukuje sie dalej do braku zastosowania patcha i rerunu oraz braku restriction do candidate orientation slice,
 - `C24` wykonane jako dwudziesty czwarty krok trzeciego mikrocyklu,
 - `C24` pokazuje, ze minimalny patch-candidate jest juz metodologicznie dopuszczalny jako ruch niedestrukcyjny, a frontier redukuje sie dalej do braku zastosowania patcha i rerunu oraz braku restriction do candidate orientation slice,
+- `C25` wykonane jako dwudziesty piaty krok trzeciego mikrocyklu,
+- `C25` pokazuje, ze patch serializacji zostal zastosowany, `QW-2165` zostalo rerunowane, a report zawiera juz `eom_psi0..eom_psi11`; lane serializacji jest zamkniete w zadeklarowanym scope, a aktywny blocker pozostaje na restriction do candidate orientation slice,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -1227,4 +1229,13 @@ Co realnie zostalo dodane przez `C24`:
   - `C24_B2 := no_explicit_restriction_from_the_control_pullback_orbits_to_the_candidate_orientation_slice`,
 - nadal brak discharge `C23_B1`,
 - nadal brak discharge `C23_B2`,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C25`:
+- `QW_2165_L13_EXHAUSTIVE_CANONICAL_EOM_GATE.py` serializuje juz pelna rodzine `eom_psi0..eom_psi11`,
+- rerun `QW-2165` przeszedl z werdyktem `L13_EXHAUSTIVE_CANONICAL_EOM_GATE_PASS_PARTIAL_ALL_ORDERS_OPEN`,
+- report zachowuje rowniez sample rows dla kompatybilnosci,
+- lane serializacji `12` rows jest zamkniete w zadeklarowanym scope,
+- aktualny frontier redukuje sie do:
+  - `C25_B1 := no_explicit_restriction_from_the_control_pullback_orbits_to_the_candidate_orientation_slice`,
 - nadal brak theorem-level/full-closure PASS.

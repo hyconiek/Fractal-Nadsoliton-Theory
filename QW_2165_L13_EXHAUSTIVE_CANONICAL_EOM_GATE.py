@@ -224,6 +224,7 @@ def main() -> None:
             "n_psi_fields": N,
             "lagrangian_density": str(l_density),
             "eom_phi": str(eom_phi),
+            **{f"eom_psi{i}": str(eom_psi[i]) for i in range(N)},
             "sample_eom_psi0": str(eom_psi[0]),
             "sample_eom_psi6": str(eom_psi[6]),
             "sample_eom_psi11": str(eom_psi[11]),

@@ -1,0 +1,36 @@
+{
+  "stage": "C25",
+  "status": "C25_EXECUTED_APPLIED_PATCH_RERUN_EXPORT_AUDIT_NO_FALSE_PASS",
+  "as_of": "2026-03-06",
+  "goal": "Confirm that the minimal serialization-only patch was actually applied to QW-2165 and that a rerun produced a persisted report containing all 12 Psi-row exports, without claiming anything about the still-open orientation-slice restriction.",
+  "inputs": {
+    "strict_admissible": [
+      "QW-2165",
+      "C24",
+      "A10"
+    ]
+  },
+  "applied_patch_and_rerun": {
+    "full_model_patch_present_in_source": true,
+    "persisted_report_contains_all_12_rows": true,
+    "persisted_report_row_count": 12,
+    "sample_rows_preserved": true,
+    "verdict": "L13_EXHAUSTIVE_CANONICAL_EOM_GATE_PASS_PARTIAL_ALL_ORDERS_OPEN",
+    "lean_binary": "/tmp/lean4/lean-4.28.0-linux/bin/lean",
+    "lean_exit_code": 0
+  },
+  "result": {
+    "serialization_lane_closed_in_declared_scope": "yes",
+    "orientation_slice_restriction_present": "not_shown"
+  },
+  "residual_blockers": {
+    "C25_B1": "no_explicit_restriction_from_the_control_pullback_orbits_to_the_candidate_orientation_slice"
+  },
+  "hard_limits": [
+    "no_theorem_level_pass",
+    "no_full_closure_pass",
+    "no_claim_that_orientation_slice_restriction_is_resolved",
+    "no_claim_that_full_12x12_hessian_table_is_resolved"
+  ],
+  "next_step": "C26"
+}
