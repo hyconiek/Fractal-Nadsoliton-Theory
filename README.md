@@ -693,5 +693,7 @@ Current status:
 - this moves the theory forward only by closing the carrier-instance lane in declared scope while leaving theorem-spec, export-spec, and the residual mathematical blockers explicitly open,
 - `C47` completed as the forty-seventh step of the next micro-cycle,
 - this moves the theory forward only by isolating a packet-ready class-level basis candidate for the two-dimensional orientation slice, while actual exported `theta_1,theta_2`, actual `u_1,u_2`, and the final slice extraction remain open,
+- `C48` completed as the forty-eighth step of the next micro-cycle,
+- this moves the theory forward only by isolating a packet-ready minimal export skeleton for the actual basis pair `u_1,u_2`, while the populated actual export instance and the residual mathematical blockers remain open,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

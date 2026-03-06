@@ -1,6 +1,6 @@
 # Fundamental Action Reconstruction
 
-Status: `PROGRAM_PHASE1_COMPLETE_C47_BASIS_CLASS_CANDIDATE_PACKET_READY_NO_FALSE_PASS`
+Status: `PROGRAM_PHASE1_COMPLETE_C48_BASIS_EXPORT_SKELETON_PACKET_READY_NO_FALSE_PASS`
 As of: `2026-03-06`
 
 Ten katalog otwiera rownolegly tor konstrukcyjny poza drabinka `L5/L12`.
@@ -176,6 +176,8 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
    - wykonac minimalny persisted template file jako osobny kontrolowany krok i sprawdzic, czy lane carrier-instance zamyka sie juz w zadeklarowanym scope.
 55. `C47`: basis-level orientation slice candidate audit
    - sprawdzic, czy strict core ma juz packet-ready class-level kandydat basis-level dla dwuwymiarowej orientation slice, nawet jesli brak jeszcze actual exportu `u_1`, `u_2`.
+56. `C48`: minimal actual basis pair export skeleton audit
+   - sprawdzic, czy strict core ma juz packet-ready minimalny export skeleton dla actual basis pair `u_1`, `u_2`, nawet jesli brak jeszcze wypelnionej instancji exportu.
 
 ## Aktualny status
 
@@ -244,6 +246,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `C45`: wykonane jako czterdziesty piaty krok trzeciego mikrocyklu; niedestrukcyjne utworzenie minimalnego persisted template file jest juz dopuszczalne metodologicznie, ale sam plik nadal nie istnieje.
 - `C46`: wykonane jako czterdziesty szosty krok trzeciego mikrocyklu; minimalny persisted template file zostal juz utworzony, a lane carrier-instance zamyka sie w zadeklarowanym scope bez nowych claimow theorem/export.
 - `C47`: wykonane jako czterdziesty siodmy krok trzeciego mikrocyklu; class-level kandydat basis-level dla dwuwymiarowej orientation slice jest juz packet-ready jako `span{u_1(theta_1),u_2(theta_2)}`, ale actual export `u_1`, `u_2` pozostaje zablokowany przez brak strict-core `theta_1`, `theta_2`.
+- `C48`: wykonane jako czterdziesty osmy krok trzeciego mikrocyklu; minimalny export skeleton dla actual basis pair `u_1`, `u_2` jest juz packet-ready, ale wypelniona actual export instance pozostaje zablokowana przez brak strict-core `theta_1`, `theta_2`.
 
 ## Twarde ograniczenia rygoru
 
@@ -310,6 +313,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - brak claimu, ze `C45` daje juz utworzony carrier file, theorem-spec, export-spec, discharge `QW-2191`, closure `A6` albo finalna orientation slice.
 - brak claimu, ze `C46` daje juz theorem-spec, export-spec, discharge `QW-2191`, closure `A6` albo finalna orientation slice.
 - brak claimu, ze `C47` eksportuje juz actual `theta_1`, `theta_2`, actual `u_1`, `u_2` albo finalna orientation slice.
+- brak claimu, ze `C48` daje juz actual export `theta_1`, `theta_2`, actual `u_1`, `u_2`, theorem-spec, export-spec albo finalna orientation slice.
 - brak claimu, ze `C42` daje juz theorem-spec, export-spec, discharge `QW-2191`, closure `A6` albo finalna orientation slice.
 
 ## Zasada korzystania z poprzednich badan
@@ -392,6 +396,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `C45_NON_DESTRUCTIVE_TEMPLATE_FILE_ADMISSION_AUDIT.md`
 - `C46_MINIMAL_TEMPLATE_FILE_CREATION_AUDIT.md`
 - `C47_BASIS_LEVEL_ORIENTATION_SLICE_CANDIDATE_AUDIT.md`
+- `C48_MINIMAL_ACTUAL_BASIS_PAIR_EXPORT_SKELETON_AUDIT.md`
 - `C43_FILENAME_PATH_CONVENTION_AUDIT.md`
 - `a1_minimal_action_ansatz.py`
 - `a2_supersoliton_matching.py`

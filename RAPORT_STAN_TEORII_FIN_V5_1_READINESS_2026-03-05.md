@@ -793,6 +793,8 @@ Status nowego toru:
 - `C46` pokazuje, ze minimalny persisted template file zostal juz utworzony, a lane carrier-instance zamyka sie w zadeklarowanym scope,
 - `C47` wykonane jako czterdziesty siodmy krok trzeciego mikrocyklu,
 - `C47` pokazuje, ze class-level kandydat basis-level dla dwuwymiarowej orientation slice jest juz packet-ready jako `span{u_1(theta_1),u_2(theta_2)}`, ale actual export `u_1`, `u_2` pozostaje otwarty,
+- `C48` wykonane jako czterdziesty osmy krok trzeciego mikrocyklu,
+- `C48` pokazuje, ze minimalny export skeleton dla actual basis pair `u_1`, `u_2` jest juz packet-ready, ale wypelniona actual export instance pozostaje otwarta,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -1522,6 +1524,17 @@ Co realnie zostalo dodane przez `C47`:
   - `S_orient_cand(theta_1,theta_2)=span{u_1(theta_1),u_2(theta_2)}`,
 - `C26_B2` zawęża sie dalej do:
   - `C47_B1 := no_explicit_export_of_actual_normalized_basis_pair_u_1_u_2_spanning_the_candidate_two_dimensional_orientation_slice_inside_the_reduced_plane; materialization_remains_blocked_by_C35_B1`,
+- nadal niezaleznie pozostaje:
+  - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C48`:
+- strict core ma juz packet-ready minimalny export skeleton dla actual basis pair:
+  - `u_1_formula = cos(theta_1)c_1 + sin(theta_1)s_1`,
+  - `u_2_formula = cos(theta_2)c_2 + sin(theta_2)s_2`,
+  - `required_inputs = [theta_1, theta_2]`,
+- `C47_B1` zawęża sie dalej do:
+  - `C48_B1 := no_explicit_populated_actual_basis_pair_export_instance_even_though_a_minimal_export_skeleton_for_u_1_u_2_is_now_packet_ready; population_remains_blocked_by_C35_B1`,
 - nadal niezaleznie pozostaje:
   - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
 - nadal brak theorem-level/full-closure PASS.

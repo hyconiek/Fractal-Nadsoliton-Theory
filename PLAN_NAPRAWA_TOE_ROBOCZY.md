@@ -6818,3 +6818,29 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - przejsc do `C48` i sprawdzic, czy strict core ma juz packet-ready minimalny
      export skeleton dla actual basis pair `u_1`, `u_2`.
+
+## 456. C48 minimal actual basis pair export skeleton audit wykonane (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy strict core ma juz packet-ready minimalny export skeleton
+     dla actual basis pair `u_1`, `u_2`, nawet jesli brak jeszcze wypelnionej
+     actual export instance.
+2. Wynik:
+   - po `C34` klasy formul `u_1(theta_1)` i `u_2(theta_2)` sa juz jawne,
+   - po `C47` ich rola jako basis pair spanujacej `S_orient_cand` jest juz jawna,
+   - po `C40 + C41` wolno juz mowic o minimalnym skeletonie exportu jako klasie danych,
+   - strict core nadal nie eksportuje actual `theta_1`, `theta_2`, wiec skeleton
+     nie jest jeszcze wypelniony actual values.
+3. Redukcja frontu:
+   - aktywny pierwszy residualny blocker zawęża sie do:
+     `C48_B1 := no_explicit_populated_actual_basis_pair_export_instance_even_though_a_minimal_export_skeleton_for_u_1_u_2_is_now_packet_ready; population_remains_blocked_by_C35_B1`,
+   - niezaleznie pozostaje:
+     `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C48_MINIMAL_ACTUAL_BASIS_PAIR_EXPORT_SKELETON_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/c48_minimal_actual_basis_pair_export_skeleton_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c48_minimal_actual_basis_pair_export_skeleton_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `C49` i sprawdzic, czy strict core ma juz packet-ready minimalny
+     populated-instance schema warunkowy na `theta_1`, `theta_2`.
