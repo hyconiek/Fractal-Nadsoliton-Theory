@@ -6791,3 +6791,30 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - przejsc do `C47` i wrócic do residualnego blockera `C26_B2`,
      czyli basis-level candidate extraction dla dwuwymiarowej orientation slice.
+
+## 455. C47 basis-level orientation slice candidate audit wykonane (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy strict core ma juz packet-ready class-level kandydat
+     basis-level dla dwuwymiarowej orientation slice w reduced plane,
+     nawet jesli brak jeszcze actual exportu `u_1`, `u_2`.
+2. Wynik:
+   - po `C28 + C29 + C34` strict core ma juz jawna klase lokalnych reduced
+     representatives `u_i(theta_i)=cos(theta_i)c_i+sin(theta_i)s_i`,
+   - z tego wynika packet-ready class-level kandydat:
+     `S_orient_cand(theta_1,theta_2)=span{u_1(theta_1),u_2(theta_2)}`,
+   - actual export `theta_1`, `theta_2` pozostaje nadal zablokowany przez `C35_B1`,
+   - actual basis pair `u_1`, `u_2` nadal nie jest wyeksportowany.
+3. Redukcja frontu:
+   - aktywny blocker `C26_B2` zawęża sie dalej do:
+     `C47_B1 := no_explicit_export_of_actual_normalized_basis_pair_u_1_u_2_spanning_the_candidate_two_dimensional_orientation_slice_inside_the_reduced_plane; materialization_remains_blocked_by_C35_B1`,
+   - niezaleznie pozostaje:
+     `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C47_BASIS_LEVEL_ORIENTATION_SLICE_CANDIDATE_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/c47_basis_level_orientation_slice_candidate_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c47_basis_level_orientation_slice_candidate_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `C48` i sprawdzic, czy strict core ma juz packet-ready minimalny
+     export skeleton dla actual basis pair `u_1`, `u_2`.
