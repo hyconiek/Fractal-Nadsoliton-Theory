@@ -1907,3 +1907,18 @@ Frontier po `AX6`:
 - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
 - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`,
 - `AX6` pozostaje closure-packet lane axiom-augmented, nie strict-core closure.
+
+Co realnie zostalo dodane przez `AX7`:
+- utworzono jawny boundary certificate dla calego lane `axiom-augmented`,
+- certyfikat zapisuje, ze `AX1..AX6` pozostaje wyłącznie pozytywnym lane poza strict core,
+- zakazane sa promocje do:
+  theorem-level PASS,
+  full-closure PASS,
+  strict-core selector closure,
+- residualny strict-core frontier pozostaje bez zmian.
+
+Frontier po `AX7`:
+- `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`,
+- `AX7` pozostaje boundary-certificate lane axiom-augmented, nie strict-core closure.

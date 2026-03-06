@@ -7600,3 +7600,33 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - albo robic `AX7` jako finalny anti-overclaim audit lane `axiom-augmented`,
    - albo wrocic do `T12_B1`, jesli celem pozostaje strict-core theorem-level closure.
+
+## 486. AX7 anti-overclaim i boundary audit dla calego lane aksjomatycznego (2026-03-06)
+
+1. Cel:
+   - zapisac jawny boundary certificate dla `AX1..AX6`,
+   - formalnie oddzielic lane `axiom-augmented` od strict core,
+   - zablokowac falszywa promocje closure packetu do theorem-level/full-closure.
+2. Wynik:
+   - utworzono persisted boundary certificate:
+     `fundamental_action_reconstruction/generated/axiom_lane_boundary_certificate.json`
+   - certyfikat zapisuje:
+     lane `axiom-augmented`,
+     source packet `AX6`,
+     jawny status `outside_strict_core`,
+     zakazane overclaimy,
+     niezmieniony residual frontier strict core.
+3. Frontier po kroku:
+   - strict core pozostaje bez zmian:
+     `T12_B1`,
+     `T2_B1`,
+     `C32_B2`,
+   - `AX7` dodaje tylko boundary/anti-overclaim certificate poza strict core.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/AX7_AXIOM_LANE_ANTI_OVERCLAIM_BOUNDARY_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/ax7_axiom_lane_anti_overclaim_boundary_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/ax7_axiom_lane_anti_overclaim_boundary_audit_summary.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/axiom_lane_boundary_certificate.json`.
+5. Nastepny poprawny ruch:
+   - albo domknac lane aksjomatyczny przez `AX8` jako publication-ready summary packet,
+   - albo wrocic do `T12_B1`, jesli celem pozostaje strict-core theorem-level closure.

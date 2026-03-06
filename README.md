@@ -753,5 +753,7 @@ Current status:
 - this certifies that the stable axiom-lane basis pair and orientation slice remain compatible with `QW-2190`, `QW-2191`, and the `A6` boundary only as an external overlay, while keeping that result explicitly outside strict core,
 - `AX6` completed as the assembled closure-packet step on the axiom-augmented lane,
 - this assembles `AX1..AX5` into one persisted positive-lane closure packet containing actual theta values, actual basis pair, actual orientation slice, bridge, robustness, and compatibility, while keeping that result explicitly outside strict core,
+- `AX7` completed as the anti-overclaim and boundary audit on the axiom-augmented lane,
+- this certifies that `AX1..AX6` remain an external positive lane only, with explicit prohibition on promotion into strict-core theorem-level or full-closure claims,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.
