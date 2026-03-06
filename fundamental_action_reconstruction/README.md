@@ -347,6 +347,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `H8`: wykonane jako minimalny construction/export spec dla carrierow komponentowych; od teraz problem redukuje sie juz nie do tego, *jak* carrier ma wygladac, lecz do tego, ze dla `pair1` nie zainstancjonowano jeszcze ani bezposredniego eksportu `A_1`, ani jawnego lancucha carrierow `E_1/G_light/R_mat/O_obs`.
 - `H9`: wykonane jako audit realnych instancji `Route A` i `Route B`; wynik jest negatywny i zawęza blocker juz nie do niejasnosci trasy, lecz do braku jakiejkolwiek rzeczywistej instancji eksportu `A_1` albo jawnego faktoryzowanego lancucha carrierow dla `pair1`.
 - `H10`: wykonane jako minimalny persisted candidate dla `Route A`; od teraz problem redukuje sie juz nie do braku jakiegokolwiek obiektu `A_1`, lecz do braku provenance-valid eksportu `A_1` z operatorowego lancucha `E_1/G_light/R_mat/O_obs`.
+- `H11`: wykonane jako minimalny provenance spec dla `Route A`; od teraz problem redukuje sie juz nie do ksztaltu poprawnej proweniencji, lecz do braku jakiejkolwiek wypelnionej provenance-valid instancji dla `A_1` na `pair1`.
 
 ## Twarde ograniczenia rygoru
 
@@ -452,6 +453,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - brak claimu, ze `H8` oznacza istnienie Route A albo Route B; to jest tylko minimalny construction spec dla przyszlego pair-level carrieru.
 - brak claimu, ze `H9` dowodzi niemozliwosci Route A albo Route B; to jest tylko audit obecnej nieobecnosci ich rzeczywistych instancji w repo.
 - brak claimu, ze `H10` daje juz wyprowadzony `A_1`; to jest tylko persisted candidate carrier na lane rozszerzenia hipotezy operatorowej.
+- brak claimu, ze `H11` daje juz provenance-valid `A_1`; to jest tylko minimalny spec i template proweniencji dla przyszlego eksportu.
 - brak claimu, ze `H3` rozbija degeneracje `O(2)`; to jest tylko packet-ready ansatz operatora.
 - brak claimu, ze `H4` daje symmetry-breaking; to jest tylko packet-ready redukcja do testu anizotropii `2x2`.
 - brak claimu, ze `H5` daje juz jakikolwiek policzony blok `2x2`; to jest tylko packet ekstrakcji wspolczynnikow.
@@ -579,6 +581,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `H8_MINIMAL_COMPONENT_CARRIER_CONSTRUCTION_SPEC.md`
 - `H9_ROUTE_INSTANCE_ABSENCE_AUDIT.md`
 - `H10_MINIMAL_ROUTE_A_CANDIDATE_INSTANCE.md`
+- `H11_MINIMAL_ROUTE_A_PROVENANCE_SPEC.md`
 - `C43_FILENAME_PATH_CONVENTION_AUDIT.md`
 - `a1_minimal_action_ansatz.py`
 - `a2_supersoliton_matching.py`

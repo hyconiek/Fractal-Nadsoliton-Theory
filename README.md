@@ -777,5 +777,7 @@ Current status:
 - this reduces the next step to actually constructing one instance of Route A or Route B, while keeping explicit that neither route is currently instantiated anywhere in repo exports,
 - `H10` completed as the first minimal persisted candidate for Route A,
 - this reduces the next step to proving operator-chain provenance for `A_1`, while keeping explicit that the current `A_1` candidate is only a hypothesis-lane carrier placeholder,
+- `H11` completed as the minimal provenance spec for Route A,
+- this reduces the next step to populating one provenance-valid `A_1` instance, while keeping explicit that no such populated provenance record exists yet,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

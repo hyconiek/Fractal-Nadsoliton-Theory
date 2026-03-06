@@ -2025,6 +2025,23 @@ Frontier po `H10`:
 - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
 - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.
 
+Co realnie zostalo dodane przez `H11`:
+- zapisano minimalny provenance spec dla `Route A`,
+- jawnie wymuszono, aby provenance dla `A_1` zawierala:
+  `lane = hypothesis_extension_only`,
+  `base_kernel_contains_obs = false`,
+  `operator_origin`,
+  `selector_smuggling = false`,
+  `strict_core_reinterpretation = false`,
+- problem redukuje sie juz nie do ksztaltu poprawnej proweniencji, lecz do braku wypelnionej provenance-valid instancji.
+
+Frontier po `H11`:
+- `H11_B1 := no populated provenance-valid Route A instance exists yet for pair1 even though the minimal provenance spec is now packet-ready`,
+- `H10_B1` zostaje zredukowane do provenance-instance absence under explicit spec,
+- `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.
+
 Co realnie zostalo dodane przez `H2`:
 - zapisano minimalny admissibility spec dla przyszlego operatora `K_obs`,
 - jawnie oddzielono:

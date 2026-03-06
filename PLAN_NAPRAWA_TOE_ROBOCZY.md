@@ -7908,3 +7908,30 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - sprobowac rozpisac minimalny provenance spec dla `A_1_cand`,
    - albo sprawdzic, czy da sie wyeksportowac choc jeden z komponentow `E_1`, `G_light`, `R_mat`, `O_obs`.
+
+## 498. H11 minimal Route A provenance spec (2026-03-06)
+
+1. Cel:
+   - zapisac minimalny provenance spec potrzebny do tego, aby `A_1_cand` moglo byc traktowane jako provenance-valid export na lane rozszerzenia hipotezy operatorowej.
+2. Wynik:
+   - zapisano jawny zestaw pol proweniencyjnych, w tym:
+     `lane = hypothesis_extension_only`,
+     `base_kernel_contains_obs = false`,
+     `operator_origin`,
+     `selector_smuggling = false`,
+     `strict_core_reinterpretation = false`,
+   - wygenerowano packet-ready template proweniencji dla przyszlego `A_1`.
+3. Frontier po kroku:
+   - `H11_B1 := no populated provenance-valid Route A instance exists yet for pair1 even though the minimal provenance spec is now packet-ready`,
+   - `H10_B1` zostaje zredukowane do provenance-instance absence under explicit spec,
+   - `T12_B1`,
+   - `T2_B1`,
+   - `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/H11_MINIMAL_ROUTE_A_PROVENANCE_SPEC.md`,
+   - dodano `fundamental_action_reconstruction/h11_minimal_route_a_provenance_spec.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/route_a_provenance_template.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h11_minimal_route_a_provenance_spec_summary.json`.
+5. Nastepny poprawny ruch:
+   - sprobowac wypelnic pierwszy provenance-valid record dla `A_1`,
+   - albo sprobowac uzyskac chociaz czesciowy eksport operatorowego pochodzenia `A_1`.
