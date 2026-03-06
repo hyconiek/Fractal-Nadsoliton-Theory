@@ -689,5 +689,7 @@ Current status:
 - this moves the theory forward only by making explicit that a minimal template content for such a carrier is already packet-ready while the persisted file itself is still absent,
 - `C45` completed as the forty-fifth step of the next micro-cycle,
 - this moves the theory forward only by making explicit that creating such a minimal persisted template file is now methodologically admissible while the file itself is still absent,
+- `C46` completed as the forty-sixth step of the next micro-cycle,
+- this moves the theory forward only by closing the carrier-instance lane in declared scope while leaving theorem-spec, export-spec, and the residual mathematical blockers explicitly open,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

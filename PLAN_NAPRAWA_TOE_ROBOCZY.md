@@ -6765,3 +6765,29 @@ Po tej rundzie:
    - przejsc do `C46` i zdecydowac, czy wykonac minimalny persisted template file
      jako osobny kontrolowany krok, czy utrzymac blocker na warstwie
      `allowed_but_not_created`.
+
+## 454. C46 minimal template file creation audit wykonane (2026-03-06)
+
+1. Cel:
+   - wykonac minimalny persisted template file dla acceptance artifact carrieru
+     identyfikacji `sigma_int_candidate <-> residual orientation datum`
+     jako osobny kontrolowany krok nośnikowy.
+2. Wynik:
+   - utworzono plik:
+     `fundamental_action_reconstruction/generated/sigma_int_residual_orientation_datum_acceptance_artifact_instance.json`,
+   - plik zawiera juz minimalna tresc packet-ready z `C44`,
+   - krok jest addytywny i nie zmienia warstwy theorem/export ani tresci teorii.
+3. Redukcja frontu:
+   - lane carrier-instance zamyka sie w zadeklarowanym scope,
+   - aktywne residualne blockery pozostaja juz tylko:
+     `C32_B2`,
+     `C26_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C46_MINIMAL_TEMPLATE_FILE_CREATION_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/c46_minimal_template_file_creation_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/sigma_int_residual_orientation_datum_acceptance_artifact_instance.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c46_minimal_template_file_creation_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `C47` i wrócic do residualnego blockera `C26_B2`,
+     czyli basis-level candidate extraction dla dwuwymiarowej orientation slice.

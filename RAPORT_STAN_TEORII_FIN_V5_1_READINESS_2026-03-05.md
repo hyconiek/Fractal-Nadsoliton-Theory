@@ -789,6 +789,8 @@ Status nowego toru:
 - `C44` pokazuje, ze minimalna tresc template'u dla takiego carrieru jest juz packet-ready, ale nadal brak persisted file zawierajacego te tresc,
 - `C45` wykonane jako czterdziesty piaty krok trzeciego mikrocyklu,
 - `C45` pokazuje, ze utworzenie takiego minimalnego persisted template file jest juz metodologicznie dopuszczalne, ale sam plik nadal nie istnieje,
+- `C46` wykonane jako czterdziesty szosty krok trzeciego mikrocyklu,
+- `C46` pokazuje, ze minimalny persisted template file zostal juz utworzony, a lane carrier-instance zamyka sie w zadeklarowanym scope,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -1502,5 +1504,13 @@ Co realnie zostalo dodane przez `C45`:
 - drugi residualny blocker pozostaje:
   - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
 - trzeci residualny blocker pozostaje:
+  - `C26_B2 := no_explicit_basis_level_embedding_or_extraction_of_the_candidate_two_dimensional_orientation_slice_inside_that_reduced_plane`,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C46`:
+- minimalny persisted template file zostal juz utworzony,
+- lane carrier-instance zamyka sie w zadeklarowanym scope,
+- aktywny frontier redukuje sie juz do:
+  - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
   - `C26_B2 := no_explicit_basis_level_embedding_or_extraction_of_the_candidate_two_dimensional_orientation_slice_inside_that_reduced_plane`,
 - nadal brak theorem-level/full-closure PASS.
