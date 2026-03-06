@@ -1889,3 +1889,21 @@ Frontier po `AX5`:
 - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
 - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`,
 - `AX5` pozostaje compatibility-certificate lane axiom-augmented, nie strict-core closure.
+
+Co realnie zostalo dodane przez `AX6`:
+- utworzono jawny persisted closure packet dla calego biezacego lane `axiom-augmented`,
+- packet scala w jednym carrierze:
+  `theta_1 = theta_2 = 0 mod 2pi`,
+  `u_1 = c_1`,
+  `u_2 = c_2`,
+  `S_orient_axiom = span{c_1,c_2}`,
+  bridge `sigma_int_candidate -> residual orientation datum`,
+  robustness na dodatnio-wagowej rodzinie selectorow,
+  compatibility z `QW-2190`, `QW-2191` i granica `A6`,
+- wynik pozostaje jawnie poza strict core i nie rozladowuje `T12_B1`.
+
+Frontier po `AX6`:
+- `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`,
+- `AX6` pozostaje closure-packet lane axiom-augmented, nie strict-core closure.

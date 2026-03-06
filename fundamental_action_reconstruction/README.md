@@ -1,6 +1,6 @@
 # Fundamental Action Reconstruction
 
-Status: `PROGRAM_PHASE1_COMPLETE_C55_T1_T12_PLUS_N1_N2_N3_D1_AND_AX1_AX2_AX3_AX4_AX5_NO_FALSE_PASS`
+Status: `PROGRAM_PHASE1_COMPLETE_C55_T1_T12_PLUS_N1_N2_N3_D1_AND_AX1_AX2_AX3_AX4_AX5_AX6_NO_FALSE_PASS`
 As of: `2026-03-06`
 
 Ten katalog otwiera rownolegly tor konstrukcyjny poza drabinka `L5/L12`.
@@ -334,6 +334,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `AX3`: wykonane jako materializacja bridge-instance `sigma_int_candidate -> residual orientation datum` na lane `axiom-augmented`; do bridge carrieru dolaczono actual `theta_1=theta_2=0 mod 2pi`, `u_1=c_1`, `u_2=c_2` i `S_orient_axiom=span{c_1,c_2}`, nadal jawnie poza strict core.
 - `AX4`: wykonane jako robustness audit na lane `axiom-augmented`; bridge-instance z `AX3` oraz actual orientation slice pozostaja stabilne na calej zadeklarowanej dodatnio-wagowej rodzinie selectorow `J_ab(theta)=2(a+b)(1-cos theta)`, nadal jawnie poza strict core.
 - `AX5`: wykonane jako compatibility audit na lane `axiom-augmented`; stabilny actual basis pair i actual orientation slice sa zgodne z `QW-2190`, `QW-2191` i granica `A6`, ale tylko jako overlay poza strict core.
+- `AX6`: wykonane jako closure packet na lane `axiom-augmented`; `AX1..AX5` zostaly scalone do jednego persisted carrieru zawierajacego actual theta, basis pair, orientation slice, bridge, robustness i compatibility, nadal jawnie poza strict core.
 
 ## Twarde ograniczenia rygoru
 
@@ -429,6 +430,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - brak claimu, ze `AX3` nalezy do strict core; to jest tylko bridge-instance lane axiom-augmented.
 - brak claimu, ze `AX4` nalezy do strict core; to jest tylko robustness certificate lane axiom-augmented.
 - brak claimu, ze `AX5` nalezy do strict core; to jest tylko compatibility certificate lane axiom-augmented.
+- brak claimu, ze `AX6` nalezy do strict core; to jest tylko closure-packet lane axiom-augmented.
 - brak claimu, ze `C42` daje juz theorem-spec, export-spec, discharge `QW-2191`, closure `A6` albo finalna orientation slice.
 
 ## Zasada korzystania z poprzednich badan
@@ -540,6 +542,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `AX3_AXIOM_LANE_SIGMA_INT_RESIDUAL_DATUM_BRIDGE_INSTANCE.md`
 - `AX4_AXIOM_LANE_SELECTOR_FAMILY_ROBUSTNESS_AUDIT.md`
 - `AX5_AXIOM_LANE_MODE_SCAFFOLD_COMPATIBILITY_AUDIT.md`
+- `AX6_AXIOM_LANE_CLOSURE_PACKET.md`
 - `C43_FILENAME_PATH_CONVENTION_AUDIT.md`
 - `a1_minimal_action_ansatz.py`
 - `a2_supersoliton_matching.py`
@@ -619,6 +622,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `generated/ax3_axiom_lane_sigma_int_residual_datum_bridge_instance_summary.json`
 - `generated/ax4_axiom_lane_selector_family_robustness_audit_summary.json`
 - `generated/ax5_axiom_lane_mode_scaffold_compatibility_audit_summary.json`
+- `generated/ax6_axiom_lane_closure_packet_summary.json`
 - `generated/c11_psi_sector_block_extraction_audit_summary.json`
 - `generated/c12_minimal_psi_block_extraction_packet_summary.json`
 - `generated/c13_mode_basis_control_index_set_audit_summary.json`

@@ -7569,3 +7569,34 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - dalej rozwijac pozytywny lane `axiom-augmented`,
    - albo wrocic do `T12_B1`, jesli celem pozostaje strict-core theorem-level closure.
+
+## 485. AX6 closure packet dla calego biezacego lane aksjomatycznego (2026-03-06)
+
+1. Cel:
+   - scalic `AX1..AX5` do jednego jawnego persisted carrieru,
+   - zachowac jawna granice: tylko lane `axiom-augmented`, bez promowania do strict core.
+2. Wynik:
+   - utworzono persisted closure packet:
+     `fundamental_action_reconstruction/generated/axiom_lane_closure_packet.json`
+   - packet zawiera:
+     `theta_1 = theta_2 = 0 mod 2pi`,
+     `u_1 = c_1`,
+     `u_2 = c_2`,
+     `S_orient_axiom = span{c_1,c_2}`,
+     bridge `sigma_int_candidate -> residual orientation datum`,
+     robustness na dodatnio-wagowej rodzinie selectorow,
+     compatibility z `QW-2190`, `QW-2191` i `A6`.
+3. Frontier po kroku:
+   - strict core pozostaje bez zmian:
+     `T12_B1`,
+     `T2_B1`,
+     `C32_B2`,
+   - `AX6` dodaje tylko closure packet poza strict core.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/AX6_AXIOM_LANE_CLOSURE_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/ax6_axiom_lane_closure_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/ax6_axiom_lane_closure_packet_summary.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/axiom_lane_closure_packet.json`.
+5. Nastepny poprawny ruch:
+   - albo robic `AX7` jako finalny anti-overclaim audit lane `axiom-augmented`,
+   - albo wrocic do `T12_B1`, jesli celem pozostaje strict-core theorem-level closure.
