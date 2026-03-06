@@ -761,5 +761,7 @@ Current status:
 - this records that an internal light-matter-observer feedback loop was already explored in prior repo work and remains a live kernel-level rework hypothesis, but not a current strict-core selector mechanism,
 - `H2` completed as a minimal admissibility spec for a future internal light-feedback operator,
 - this records the minimum methodological bar any future `K_obs` must satisfy before it can count as a strict-lane candidate rather than a narrative or an axiom-smuggling construction,
+- `H3` completed as the first concrete internal light-feedback operator ansatz packet,
+- this records a minimal fully internal operator composition for a future `K_obs`, while keeping explicit that no residual-sector test or selector export has yet been shown,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

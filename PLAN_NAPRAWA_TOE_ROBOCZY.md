@@ -7713,3 +7713,28 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - albo zapisac pierwszy minimalny ansatz `K_obs`,
    - albo zatrzymac sie na `H2` i nie promowac hipotezy dalej bez konkretnego operatora.
+
+## 490. H3 minimal internal light-feedback operator ansatz packet (2026-03-06)
+
+1. Cel:
+   - zapisac pierwszy konkretny operator `K_obs` zgodny z `H2`,
+   - utrzymac go w pelni wewnetrznym i bez przemycania selektora.
+2. Wynik:
+   - zapisano packet-ready ansatz:
+     `K_obs = lambda_obs * E^* G_light R_mat O_obs R_mat^* G_light^* E`,
+   - wszystkie mapy i nosniki pozostaja wewnetrzne:
+     `M_pair`, `L_int`, `Q_mat`, `O_em`,
+   - zero `theta*=0` w definicji,
+   - limit `lambda_obs -> 0` wraca do obecnego statusu strict core.
+3. Frontier po kroku:
+   - `H3_B1 := no tested reduction of the H3 ansatz onto the residual O(2) selector sector has yet been constructed`,
+   - `H2_B1` zostaje zredukowane do poziomu packet-ready ansatz,
+   - `T12_B1`,
+   - `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/H3_MINIMAL_INTERNAL_LIGHT_FEEDBACK_OPERATOR_ANSATZ_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/h3_minimal_internal_light_feedback_operator_ansatz_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h3_minimal_internal_light_feedback_operator_ansatz_packet_summary.json`.
+5. Nastepny poprawny ruch:
+   - zredukowac `H3` na residualny sektor `O(2)`,
+   - i sprawdzic, czy ansatz daje niezerowy efekt symmetry-breaking bez selector smuggling.

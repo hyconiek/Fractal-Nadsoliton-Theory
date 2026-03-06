@@ -1971,3 +1971,18 @@ Frontier po `H2`:
 - `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
 - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
 - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.
+
+Co realnie zostalo dodane przez `H3`:
+- zapisano pierwszy konkretny ansatz operatora `K_obs`,
+- operator ma postac kompozycji:
+  `K_obs = lambda_obs * E^* G_light R_mat O_obs R_mat^* G_light^* E`,
+- wszystkie mapy i nosniki zostaly zadeklarowane jako wewnetrzne,
+- nie ma w definicji zakodowanego `theta*=0`,
+- istnieje poprawny limit `lambda_obs -> 0` wracajacy do obecnego strict-core status.
+
+Frontier po `H3`:
+- `H3_B1 := no tested reduction of the H3 ansatz onto the residual O(2) selector sector has yet been constructed`,
+- `H2_B1` zostaje zredukowane do poziomu packet-ready ansatz,
+- `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.

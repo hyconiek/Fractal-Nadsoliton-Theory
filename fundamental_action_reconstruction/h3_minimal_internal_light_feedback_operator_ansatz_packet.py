@@ -1,0 +1,43 @@
+#!/usr/bin/env python3
+import json
+from pathlib import Path
+
+summary = {
+    "id": "H3",
+    "title": "minimal internal light-feedback operator ansatz packet",
+    "status": "PASS_PARTIAL_MINIMAL_OPERATOR_ANSATZ_PACKET_READY",
+    "as_of": "2026-03-06",
+    "scope": "first concrete admissible operator ansatz for internal light-matter-observer feedback",
+    "ansatz": "K_obs = lambda_obs * E^* G_light R_mat O_obs R_mat^* G_light^* E",
+    "carriers": ["M_pair", "L_int", "Q_mat", "O_em"],
+    "maps": ["E", "G_light", "R_mat", "O_obs", "E^*", "R_mat^*", "G_light^*"],
+    "admissibility_satisfied": [
+        "internal_only",
+        "operator_level_explicitness",
+        "no_selector_smuggling",
+        "switch_off_consistency"
+    ],
+    "open_tests": [
+        "nontrivial_action_on_residual_O2_sector",
+        "symmetry_breaking_vs_preserving",
+        "effective_selector_minimum",
+        "independence_from_selector_smuggling",
+        "strict_core_recovery_at_lambda_zero"
+    ],
+    "frontier": {
+        "H3_B1": "no tested reduction of the H3 ansatz onto the residual O(2) selector sector has yet been constructed",
+        "H2_B1": "no concrete admissible operator ansatz K_obs satisfying the H2 constraints has yet been defined is reduced to packet-ready ansatz level",
+        "T12_B1": "strict-core typing judgment with totality and uniqueness remains undischarged",
+        "C32_B2": "raw cross-pair overlap route remains degenerate"
+    },
+    "hard_limits": {
+        "theorem_level_pass": False,
+        "full_closure_pass": False,
+        "q_w_2191_discharged": False,
+        "strict_core_theta_export_present": False
+    }
+}
+
+out = Path("fundamental_action_reconstruction/generated/h3_minimal_internal_light_feedback_operator_ansatz_packet_summary.json")
+out.write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
+print(out)
