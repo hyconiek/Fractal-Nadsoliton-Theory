@@ -6345,3 +6345,29 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - przejsc do `C31` i sprawdzic, czy strict core ma juz packet-ready
      kandydat zrodla transition angle `alpha_12`.
+
+## 439. C31 transition-angle source candidate audit wykonane (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy strict core ma juz packet-ready klase zrodla dla
+     transition angle `alpha_12`, nawet jesli brak jeszcze jawnego eksportu
+     jego wartosci dla aktualnych dwoch par.
+2. Wynik:
+   - klasa zrodla `alpha_12 = theta_2 - theta_1` jest juz packet-ready,
+   - aktywny blocker zawęża sie dalej do braku jawnego eksportu
+     `theta_1`, `theta_2` lub rownowaznego overlap scalar,
+   - finalny slice extraction nadal pozostaje otwarty.
+3. Twarde granice:
+   - brak theorem-level PASS,
+   - brak full-closure PASS,
+   - brak jawnego `alpha_12` dla aktualnych par,
+   - brak globalnego reduced control plane,
+   - brak finalnej orientation slice.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C31_TRANSITION_ANGLE_SOURCE_CANDIDATE_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/c31_transition_angle_source_candidate_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c31_transition_angle_source_candidate_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `C32` i sprawdzic, czy strict core ma juz packet-ready
+     overlap scalar typu `atan2(<s_2,c_1>,<c_2,c_1>)`.

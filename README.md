@@ -658,5 +658,7 @@ Current status:
 - this moves the theory forward only by making the local projector formulas explicit, leaving global gluing and final slice extraction open,
 - `C30` completed as the thirtieth step of the next micro-cycle,
 - this moves the theory forward only by making the pair-to-pair overlap compatibility law explicit under an orthogonal transition, leaving explicit `G_12` export and final slice extraction open,
+- `C31` completed as the thirty-first step of the next micro-cycle,
+- this moves the theory forward only by isolating a packet-ready source class for `alpha_12` as a relative phase difference, leaving explicit phase export and final slice extraction open,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

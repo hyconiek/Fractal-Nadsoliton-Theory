@@ -1,0 +1,140 @@
+{
+  "stage": "C31",
+  "status": "C31_EXECUTED_TRANSITION_ANGLE_SOURCE_CANDIDATE_AUDIT_NO_FALSE_PASS",
+  "as_of": "2026-03-06",
+  "goal": "Reduce C30_B1 by checking whether strict core already supports a packet-ready source class for the pair-to-pair transition angle, even if no explicit exported value is present for the actual pair frames.",
+  "inputs": {
+    "strict_admissible": [
+      "C4",
+      "C29",
+      "C30",
+      "C3",
+      "C13",
+      "A10"
+    ]
+  },
+  "source_class": {
+    "candidate": "alpha_12 = theta_2 - theta_1 (mod 2pi)",
+    "interpretation": "relative phase difference between the two local orbit coordinates"
+  },
+  "numeric_samples": [
+    {
+      "theta_1": 0.0,
+      "theta_2": 0.0,
+      "alpha_12": 0.0,
+      "G(alpha_12) e(theta_1)": [
+        1.0,
+        0.0
+      ],
+      "e(theta_2)": [
+        1.0,
+        0.0
+      ],
+      "G(alpha_12) P_red(theta_1) G(alpha_12)^T": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "P_red(theta_2)": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "theta_1": 0.5235987755982988,
+      "theta_2": 1.5707963267948966,
+      "alpha_12": 1.0471975511965979,
+      "G(alpha_12) e(theta_1)": [
+        -0.0,
+        1.0
+      ],
+      "e(theta_2)": [
+        0.0,
+        1.0
+      ],
+      "G(alpha_12) P_red(theta_1) G(alpha_12)^T": [
+        [
+          -0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          1.0
+        ]
+      ],
+      "P_red(theta_2)": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "theta_1": 0.6283185307179586,
+      "theta_2": 2.199114857512855,
+      "alpha_12": 1.5707963267948966,
+      "G(alpha_12) e(theta_1)": [
+        -0.587785252292,
+        0.809016994375
+      ],
+      "e(theta_2)": [
+        -0.587785252292,
+        0.809016994375
+      ],
+      "G(alpha_12) P_red(theta_1) G(alpha_12)^T": [
+        [
+          0.345491502813,
+          -0.475528258148
+        ],
+        [
+          -0.475528258148,
+          0.654508497187
+        ]
+      ],
+      "P_red(theta_2)": [
+        [
+          0.345491502813,
+          -0.475528258148
+        ],
+        [
+          -0.475528258148,
+          0.654508497187
+        ]
+      ]
+    }
+  ],
+  "result": {
+    "transition_angle_source_class_present": "yes_partial",
+    "explicit_theta_1_theta_2_export_for_actual_pair_frames": "not_shown",
+    "explicit_overlap_scalar_for_actual_pair_frames": "not_shown",
+    "explicit_serialized_alpha_12_for_actual_pair_frames": "not_shown",
+    "final_basis_level_slice_extraction_present": "not_shown"
+  },
+  "residual_blockers": {
+    "C31_B1": "no_explicit_export_of_local_phase_coordinates_theta_1_theta_2_or_equivalent_pair_overlap_scalar_for_serializing_alpha_12_between_the_two_local_pair_frames",
+    "C26_B2": "no_explicit_basis_level_embedding_or_extraction_of_the_candidate_two_dimensional_orientation_slice_inside_that_reduced_plane"
+  },
+  "hard_limits": [
+    "no_theorem_level_pass",
+    "no_full_closure_pass",
+    "no_claim_that_alpha_12_is_exported_for_actual_pair_frames",
+    "no_claim_that_global_gluing_is_resolved",
+    "no_claim_that_final_slice_extraction_is_resolved"
+  ],
+  "next_step": "C32"
+}

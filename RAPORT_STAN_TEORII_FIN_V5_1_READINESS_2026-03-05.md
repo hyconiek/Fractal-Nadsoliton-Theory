@@ -759,6 +759,8 @@ Status nowego toru:
 - `C29` pokazuje, ze jawna serialized lokalna formula projektorow `P_tan(theta)` i `P_red(theta)` jest juz obecna, a active blocker redukuje sie dalej do braku pair-to-pair global gluing rule oraz nadal otwartego finalnego slice extraction,
 - `C30` wykonane jako trzydziesty krok trzeciego mikrocyklu,
 - `C30` pokazuje, ze local overlap compatibility law dla projectorow pod transformacja `G(alpha)` jest juz packet-ready, a active blocker redukuje sie dalej do braku jawnie wyeksportowanego transition matrix / transition angle oraz nadal otwartego finalnego slice extraction,
+- `C31` wykonane jako trzydziesty pierwszy krok trzeciego mikrocyklu,
+- `C31` pokazuje, ze klasa zrodla `alpha_12 = theta_2 - theta_1` jest juz packet-ready, a active blocker redukuje sie dalej do braku jawnego eksportu lokalnych faz / overlap scalar oraz nadal otwartego finalnego slice extraction,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -1294,6 +1296,15 @@ Co realnie zostalo dodane przez `C30`:
   - `G(alpha) P_tan(theta) G(alpha)^T = P_tan(theta+alpha)`,
 - pierwszy residualny blocker zawęża sie dalej do:
   - `C30_B1 := no_explicit_serialized_transition_matrix_or_transition_angle_between_the_two_local_pair_frames_for_assembling_a_single_reduced_control_plane`,
+- drugi residualny blocker pozostaje:
+  - `C26_B2 := no_explicit_basis_level_embedding_or_extraction_of_the_candidate_two_dimensional_orientation_slice_inside_that_reduced_plane`,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C31`:
+- strict core ma juz packet-ready source class dla transition angle:
+  - `alpha_12 = theta_2 - theta_1`,
+- pierwszy residualny blocker zawęża sie dalej do:
+  - `C31_B1 := no_explicit_export_of_local_phase_coordinates_theta_1_theta_2_or_equivalent_pair_overlap_scalar_for_serializing_alpha_12_between_the_two_local_pair_frames`,
 - drugi residualny blocker pozostaje:
   - `C26_B2 := no_explicit_basis_level_embedding_or_extraction_of_the_candidate_two_dimensional_orientation_slice_inside_that_reduced_plane`,
 - nadal brak theorem-level/full-closure PASS.

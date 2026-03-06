@@ -1,6 +1,6 @@
 # Fundamental Action Reconstruction
 
-Status: `PROGRAM_PHASE1_COMPLETE_C30_LOCAL_GLUING_COMPATIBILITY_OPEN`
+Status: `PROGRAM_PHASE1_COMPLETE_C31_RELATIVE_PHASE_CLASS_OPEN`
 As of: `2026-03-06`
 
 Ten katalog otwiera rownolegly tor konstrukcyjny poza drabinka `L5/L12`.
@@ -142,6 +142,8 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
    - sprawdzic, czy strict core ma juz jawna serialized formule lokalnych projektorow `P_tan(theta)` i `P_red(theta)` na kazdej parze `(c_i,s_i)`, nawet jesli brak jeszcze pair-to-pair global gluing rule.
 38. `C30`: pair-to-pair gluing compatibility packet
    - sprawdzic, czy strict core ma juz packet-ready overlap compatibility law dla dwoch lokalnych reduced lines pod ortogonalna transformacja przejscia, nawet jesli brak jeszcze jawnego eksportu `G_12` lub transition angle.
+39. `C31`: transition-angle source candidate audit
+   - sprawdzic, czy strict core ma juz packet-ready klase zrodla dla `alpha_12`, nawet jesli brak jeszcze jawnego eksportu `theta_1`, `theta_2` lub overlap scalar dla aktualnych par.
 
 ## Aktualny status
 
@@ -193,6 +195,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `C28`: wykonane jako dwudziesty osmy krok trzeciego mikrocyklu; local orbit-frame quotient schema w bazie `(c_i,s_i)` jest juz packet-ready, a pierwszy residualny blocker zawęża sie dalej do braku jawnie zserializowanego projektora lub globalnego gluing rule.
 - `C29`: wykonane jako dwudziesty dziewiaty krok trzeciego mikrocyklu; jawna serialized formula lokalnych projektorow `P_tan(theta)` i `P_red(theta)` jest juz packet-ready, a pierwszy residualny blocker zawęża sie dalej do braku pair-to-pair global gluing rule.
 - `C30`: wykonane jako trzydziesty krok trzeciego mikrocyklu; overlap compatibility law dla lokalnych projectorow pod transformacja `G(alpha)` jest juz packet-ready, a pierwszy residualny blocker zawęża sie dalej do braku jawnie wyeksportowanego transition matrix lub transition angle miedzy dwiema parami.
+- `C31`: wykonane jako trzydziesty pierwszy krok trzeciego mikrocyklu; klasa zrodla `alpha_12 = theta_2 - theta_1` jest juz packet-ready, a pierwszy residualny blocker zawęża sie dalej do braku jawnego eksportu lokalnych faz lub overlap scalar dla aktualnych par.
 
 ## Twarde ograniczenia rygoru
 
@@ -243,6 +246,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - brak claimu, ze `C28` daje juz jawny projector matrix albo globalny quotient map.
 - brak claimu, ze `C29` daje juz globalny reduced control plane albo finalna orientation slice.
 - brak claimu, ze `C30` daje juz jawny `G_12`, globalny reduced control plane albo finalna orientation slice.
+- brak claimu, ze `C31` daje juz jawny `theta_1`, `theta_2`, overlap scalar albo policzone `alpha_12` dla aktualnych par.
 
 ## Zasada korzystania z poprzednich badan
 
@@ -307,6 +311,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `C28_LOCAL_ORBIT_FRAME_QUOTIENT_SCHEMA.md`
 - `C29_LOCAL_PROJECTOR_FORMULA_PACKET.md`
 - `C30_PAIR_TO_PAIR_GLUING_COMPATIBILITY_PACKET.md`
+- `C31_TRANSITION_ANGLE_SOURCE_CANDIDATE_AUDIT.md`
 - `a1_minimal_action_ansatz.py`
 - `a2_supersoliton_matching.py`
 - `a3_kernel_analysis.py`
