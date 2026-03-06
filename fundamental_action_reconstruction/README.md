@@ -1,6 +1,6 @@
 # Fundamental Action Reconstruction
 
-Status: `PROGRAM_PHASE1_COMPLETE_C55_T1_T12_PLUS_N1_N2_N3_D1_AX1_AX2_AX3_AX4_AX5_AX6_AX7_AX8_AND_H1_H2_H3_H4_H5_H6_H7_H8_H9_H10_H11_H12_H13_H14_H15_H16_H17_H18_H19_H20_H21_H22_H23_H24_H25_H26_H27_H28_O1_O2_NO_FALSE_PASS`
+Status: `PROGRAM_PHASE1_COMPLETE_C55_T1_T12_PLUS_N1_N2_N3_D1_AX1_AX2_AX3_AX4_AX5_AX6_AX7_AX8_AND_H1_H2_H3_H4_H5_H6_H7_H8_H9_H10_H11_H12_H13_H14_H15_H16_H17_H18_H19_H20_H21_H22_H23_H24_H25_H26_H27_H28_O1_O2_O3_NO_FALSE_PASS`
 As of: `2026-03-06`
 
 Ten katalog otwiera rownolegly tor konstrukcyjny poza drabinka `L5/L12`.
@@ -367,6 +367,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `H28`: wykonane jako jawny wniosek projektowy; obecny stan repo nie zawiera jeszcze obliczalnego operatorowego zrodla wspolczynnikow `a_1,b_1,d_1`, nawet mimo istnienia provenance witness i semantyki wspolczynnikow.
 - `O1`: wykonane jako minimalna specyfikacja brakujacego obiektu; od teraz brakujacy krok nie jest juz mglisty, tylko ma postac jawnej definicji `A_1_ext` na `V_1 = span{c_1,s_1}` w jednej z dwoch dopuszczalnych form.
 - `O2`: wykonane jako pierwsza persisted instancja `A_1_ext` w trybie `exported_composite_A_1`; problem redukuje sie juz nie do braku obiektu operatorowego, lecz do braku wyznaczonych wartosci `a_1,b_1,d_1`.
+- `O3`: wykonane jako pierwszy jawny rule-packet odczytu wspolczynnikow z persisted `A_1_ext`; problem redukuje sie juz nie do braku reguly odczytu, lecz do tego, ze entries pozostaja symboliczne i nie daja jeszcze zadnych wartosci.
 
 ## Twarde ograniczenia rygoru
 
@@ -630,6 +631,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `H28_NO_COMPUTABLE_COEFFICIENT_SOURCE_CONCLUSION.md`
 - `O1_EXPLICIT_A1_OPERATOR_DEFINITION_SPEC.md`
 - `O2_EXPORTED_COMPOSITE_A1_EXT_INSTANCE.md`
+- `O3_A1_EXT_COEFFICIENT_EVALUATION_RULE.md`
 - `C43_FILENAME_PATH_CONVENTION_AUDIT.md`
 - `a1_minimal_action_ansatz.py`
 - `a2_supersoliton_matching.py`

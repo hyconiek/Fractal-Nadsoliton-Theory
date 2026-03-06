@@ -8417,3 +8417,31 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - albo policzyc pierwszy entry tej macierzy,
    - albo zapisac jawnie, ze bez dalszej definicji operatorowej entries pozostaja nieobliczalne.
+
+518. O3 coefficient evaluation rule for `A_1_ext` (2026-03-06)
+1. Cel:
+   - dopiac pierwszy jawny rule-packet odczytu wspolczynnikow z persisted `A_1_ext`.
+2. Wynik:
+   - zapisano regule:
+     - `a_1 := read_entry(A_1_ext,0,0)`
+     - `b_1 := read_entry(A_1_ext,0,1)`
+     - `d_1 := read_entry(A_1_ext,1,1)`
+   - oraz pochodne:
+     - `tr(A_1)`
+     - `Delta_1`
+   - entries pozostaja symboliczne placeholdery.
+3. Frontier po kroku:
+   - `O3_B1 := the persisted A_1_ext instance now has an explicit coefficient-evaluation rule, but its entries remain symbolic placeholders, so no actual values for a_1, b_1, d_1, tr(A_1), or Delta_1 are produced yet`,
+   - `O2_B1`,
+   - `H28_B1`,
+   - `T12_B1`,
+   - `T2_B1`,
+   - `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/O3_A1_EXT_COEFFICIENT_EVALUATION_RULE.md`,
+   - dodano `fundamental_action_reconstruction/o3_a1_ext_coefficient_evaluation_rule.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/o3_a1_ext_coefficient_evaluation_rule.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/o3_a1_ext_coefficient_evaluation_rule_summary.json`.
+5. Nastepny poprawny ruch:
+   - albo podpiac pierwszy actual coefficient witness,
+   - albo uczciwie zatrzymac lane na symbolicznym operator instance bez value exportu.

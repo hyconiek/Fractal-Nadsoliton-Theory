@@ -2296,6 +2296,23 @@ Frontier po `O2`:
 - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
 - `C32_B2 := raw cross-pair overlap route is formally degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.
 
+Co realnie zostalo dodane przez `O3`:
+- zapisano pierwszy jawny rule-packet odczytu wspolczynnikow z persisted `A_1_ext(pair1)`,
+- ustalono:
+  - `a_1 := read_entry(A_1_ext,0,0)`,
+  - `b_1 := read_entry(A_1_ext,0,1)`,
+  - `d_1 := read_entry(A_1_ext,1,1)`,
+  - oraz pochodne `tr(A_1)` i `Delta_1`,
+- nadal bez overclaimu: entries macierzy pozostaja symbolicznymi placeholderami.
+
+Frontier po `O3`:
+- `O3_B1 := the persisted A_1_ext instance now has an explicit coefficient-evaluation rule, but its entries remain symbolic placeholders, so no actual values for a_1, b_1, d_1, tr(A_1), or Delta_1 are produced yet`,
+- `O2_B1 := a persisted exported_composite_A_1 instance for A_1_ext on pair1 now exists, but its coefficient entries remain symbolic and unevaluated, so no selector-breaking test can yet be executed`,
+- `H28_B1 := the current repository state contains no computable operator-level source from which a_1, b_1, d_1 can be actually exported or evaluated for pair1, even though Route A provenance and coefficient semantics are already in place`,
+- `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `C32_B2 := raw cross-pair overlap route is formally degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.
+
 Co realnie zostalo dodane przez `H2`:
 - zapisano minimalny admissibility spec dla przyszlego operatora `K_obs`,
 - jawnie oddzielono:
