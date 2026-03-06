@@ -1,6 +1,6 @@
 # Fundamental Action Reconstruction
 
-Status: `PROGRAM_PHASE1_COMPLETE_C37_INTERNALIZATION_CANDIDATE_WITHOUT_EQUIVALENCE`
+Status: `PROGRAM_PHASE1_COMPLETE_C38_SPEC_ABSENCE_EXPLICIT`
 As of: `2026-03-06`
 
 Ten katalog otwiera rownolegly tor konstrukcyjny poza drabinka `L5/L12`.
@@ -156,6 +156,8 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
    - sprawdzic, czy branch axiom-augmented ma juz packet-ready most do aktualnego selector track, i czy ten most jest strict-core bridge czy tylko control-route overlay.
 45. `C37`: residual orientation datum internalization candidate audit
    - sprawdzic, czy residualny `orientation_sign_convention` ma juz packet-ready kandydata internalizacji jako wewnetrzny datum topologiczny, nawet jesli brak jeszcze strict-core equivalence theorem.
+46. `C38`: sigma-int residual datum theorem-spec audit
+   - sprawdzic, czy strict core ma juz packet-ready theorem-spec albo export-spec dla identyfikacji `sigma_int_candidate <-> residual orientation datum`, czy nadal istnieje tylko candidate-fit.
 
 ## Aktualny status
 
@@ -214,6 +216,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `C35`: wykonane jako trzydziesty piaty krok trzeciego mikrocyklu; branch source dla aktualnych faz istnieje juz na warstwie axiom-augmented (`QW-2192/2193`), ale strict core nadal nie eksportuje jawnych `theta_1`, `theta_2` dla aktualnych par.
 - `C36`: wykonane jako trzydziesty szosty krok trzeciego mikrocyklu; most z branchu axiom-augmented do aktualnego selector track istnieje juz jako control-route overlay, ale strict-core internalization nadal nie jest wyeksportowana.
 - `C37`: wykonane jako trzydziesty siodmy krok trzeciego mikrocyklu; kandydat internalizacji residualnego `orientation_sign_convention` jest juz packet-ready jako `sigma_int_candidate`, ale nadal brak strict-core theorem-equivalence i jawnego eksportu residualnego internal datum.
+- `C38`: wykonane jako trzydziesty osmy krok trzeciego mikrocyklu; candidate-fit `sigma_int_candidate ~ residual datum` jest juz jawny, ale nadal brak packet-ready theorem-spec i export-spec dla tej identyfikacji.
 
 ## Twarde ograniczenia rygoru
 
@@ -271,6 +274,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - brak claimu, ze `C35` daje juz strict-core eksport `theta_1`, `theta_2` albo ze branch axiom-augmented rozladowuje strict-core blocker.
 - brak claimu, ze `C36` daje juz strict-core bridge, discharge `QW-2191`, closure `A6` albo finalna orientation slice.
 - brak claimu, ze `C37` daje juz theorem-level identyfikacje `sigma_int_candidate <-> residual orientation datum`, discharge `QW-2191`, closure `A6` albo finalna orientation slice.
+- brak claimu, ze `C38` daje juz theorem-spec, export-spec, discharge `QW-2191`, closure `A6` albo finalna orientation slice.
 
 ## Zasada korzystania z poprzednich badan
 
@@ -342,6 +346,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `C35_ACTUAL_PHASE_SOURCE_BRANCH_AUDIT.md`
 - `C36_AXIOM_BRANCH_TO_STRICT_TRACK_BRIDGE_AUDIT.md`
 - `C37_RESIDUAL_ORIENTATION_DATUM_INTERNALIZATION_CANDIDATE_AUDIT.md`
+- `C38_SIGMA_INT_RESIDUAL_DATUM_THEOREM_SPEC_AUDIT.md`
 - `a1_minimal_action_ansatz.py`
 - `a2_supersoliton_matching.py`
 - `a3_kernel_analysis.py`

@@ -773,6 +773,8 @@ Status nowego toru:
 - `C36` pokazuje, ze most z branchu axiom-augmented do selector track jest juz obecny jako control-route overlay (`B6/B7`), ale nadal brak strict-core internalization tego branchu,
 - `C37` wykonane jako trzydziesty siodmy krok trzeciego mikrocyklu,
 - `C37` pokazuje, ze kandydat internalizacji residualnego `orientation_sign_convention` jest juz packet-ready jako `sigma_int_candidate`, ale nadal brak strict-core theorem-equivalence tego residualnego datum,
+- `C38` wykonane jako trzydziesty osmy krok trzeciego mikrocyklu,
+- `C38` pokazuje, ze candidate-fit `sigma_int_candidate ~ residual datum` jest juz jawny, ale nadal brak packet-ready theorem-spec i export-spec dla tej identyfikacji,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -1395,6 +1397,18 @@ Co realnie zostalo dodane przez `C37`:
 - `sigma_int_candidate := chi_FR(gamma_pi1)` jest juz packet-ready kandydatem internalizacji tego slotu,
 - pierwszy residualny blocker zawęża sie dalej do:
   - `C37_B1 := no_packet_ready_strict_core_equivalence_or_export_theorem_identifying_the_residual_orientation_sign_convention_with_an_internal_topological_datum_sigma_int_candidate; only_candidate_fit_on_the_overlay_lane_is_available`,
+- drugi residualny blocker pozostaje:
+  - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
+- trzeci residualny blocker pozostaje:
+  - `C26_B2 := no_explicit_basis_level_embedding_or_extraction_of_the_candidate_two_dimensional_orientation_slice_inside_that_reduced_plane`,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C38`:
+- candidate-fit `sigma_int_candidate ~ residual datum` zostaje rozdzielony od formalnej warstwy specyfikacyjnej,
+- audit potwierdza brak packet-ready theorem-spec dla tej identyfikacji,
+- audit potwierdza brak packet-ready export-spec dla tej identyfikacji,
+- pierwszy residualny blocker zawęża sie dalej do:
+  - `C38_B1 := no_packet_ready_strict_core_theorem_spec_or_export_spec_for_identifying_sigma_int_candidate_with_the_residual_orientation_datum; only_candidate_fit_on_overlay_lane_exists`,
 - drugi residualny blocker pozostaje:
   - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
 - trzeci residualny blocker pozostaje:

@@ -672,5 +672,7 @@ Current status:
 - this moves the theory forward only by separating an existing control-route overlay bridge from the still-missing strict-core internalization,
 - `C37` completed as the thirty-seventh step of the next micro-cycle,
 - this moves the theory forward only by isolating a packet-ready candidate internalization of the residual orientation datum, while strict-core equivalence is still missing,
+- `C38` completed as the thirty-eighth step of the next micro-cycle,
+- this moves the theory forward only by making explicit that candidate-fit is present while packet-ready theorem-spec and export-spec are still absent for identifying `sigma_int_candidate` with the residual orientation datum,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

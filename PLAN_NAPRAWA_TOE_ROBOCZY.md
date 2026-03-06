@@ -6536,3 +6536,31 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - przejsc do `C38` i sprawdzic, czy strict core ma juz packet-ready theorem-spec
      dla identyfikacji `sigma_int_candidate <-> residual orientation datum`.
+
+## 446. C38 sigma-int residual datum theorem-spec audit wykonane (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy strict core ma juz packet-ready theorem-spec albo export-spec
+     dla identyfikacji `sigma_int_candidate <-> residual orientation datum`,
+     czy nadal istnieje tylko candidate-fit na overlay lane.
+2. Wynik:
+   - candidate-fit jest juz jawny przez `B6` i `C37`,
+   - overlay compatibility pozostaje jawna przez `B7` i `C36`,
+   - nie znaleziono packet-ready theorem-spec dla tej identyfikacji,
+   - nie znaleziono packet-ready export-spec dla tej identyfikacji,
+   - aktywny blocker zawęża sie dalej do braku spec-layer dla tej identyfikacji.
+3. Twarde granice:
+   - brak theorem-level PASS,
+   - brak full-closure PASS,
+   - brak claimu, ze candidate-fit jest juz theorem-spec,
+   - brak claimu, ze overlay lane jest strict-core bridge,
+   - brak claimu, ze `QW-2191` jest rozladowane,
+   - brak finalnej orientation slice.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C38_SIGMA_INT_RESIDUAL_DATUM_THEOREM_SPEC_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/c38_sigma_int_residual_datum_theorem_spec_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c38_sigma_int_residual_datum_theorem_spec_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `C39` i sprawdzic, czy strict core ma juz packet-ready
+     acceptance skeleton dla tej identyfikacji, mimo braku theorem-spec/export-spec.
