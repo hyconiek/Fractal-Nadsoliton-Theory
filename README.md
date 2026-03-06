@@ -796,6 +796,9 @@ Current status:
 - `H24` completed as the minimal source-value packet for `a_1`, isolating the first missing upstream coefficient without claiming any actual exported or evaluated value,
 - `H25` completed as the actual-value audit for `a_1`, confirming that even this first upstream coefficient still has no exported, evaluated, or partial value witness anywhere in the current state,
 - `H26` completed as the coordinate-level diagonal-entry source packet for `A1_cc = (A_1)_{c_1 c_1}`, reducing the next missing step to the absence of any actual diagonal-entry witness,
+- `H27` completed as the actual-value audit for `A1_cc`, confirming that even the coordinate-level diagonal entry still has no exported, evaluated, or partial value witness anywhere in the current state,
+- `H28` completed as the direct project-level conclusion that the current repository still has no computable operator-level source for `a_1,b_1,d_1`,
+- `O1` completed as the minimal explicit operator-definition spec for `A_1_ext`, turning the next step from more audits into one concrete missing operator object,
 - this reduces the next step to proving or refuting an explicit equivalence map from old kernel feedback to the new selector-facing operator lane, while keeping explicit that no such identification currently exists,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

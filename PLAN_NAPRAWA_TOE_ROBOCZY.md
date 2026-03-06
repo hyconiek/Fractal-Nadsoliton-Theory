@@ -8313,3 +8313,82 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - sprawdzic, czy istnieje jakikolwiek actual witness dla `A1_cc`,
    - albo uczciwie potwierdzic, ze nawet coordinate-level diagonal entry nie ma jeszcze zadnego value witness.
+
+
+## 514. H27 A1_cc actual value audit (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy dla `A1_cc = (A_1)_{c_1 c_1}` istnieje juz jakikolwiek actual, evaluated albo partial value witness.
+2. Wynik:
+   - istnieje packet-ready coordinate-level source target dla `A1_cc`,
+   - nie istnieje zaden actual, evaluated ani partial value witness dla `A1_cc`.
+3. Frontier po kroku:
+   - `H27_B1 := A1_cc now has a packet-ready coordinate-level source target, but no actual exported, evaluated, or partially populated value witness exists anywhere in the current repository state`,
+   - `H26_B1`,
+   - `H25_B1`,
+   - `H24_B1`,
+   - `H23_B1`,
+   - `H20_B1`,
+   - `H15_B1`,
+   - `T12_B1`,
+   - `T2_B1`,
+   - `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/H27_A1_CC_ACTUAL_VALUE_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/h27_a1_cc_actual_value_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h27_a1_cc_actual_value_audit.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h27_a1_cc_actual_value_audit_summary.json`.
+5. Nastepny poprawny ruch:
+   - sprobowac odseparowac jeszcze bardziej elementarny witness dla `A1_cc`,
+   - albo uczciwie uznac, ze lane `H` nadal nie ma zadnego actual diagonal-entry witness.
+
+
+## 515. H28 no computable coefficient source conclusion (2026-03-06)
+
+1. Cel:
+   - zapisac wprost, ze lane `H` nie daje jeszcze obliczalnego zrodla dla `a_1,b_1,d_1`.
+2. Wynik:
+   - provenance witness istnieje,
+   - semantyka wspolczynnikow istnieje,
+   - ale repo nadal nie zawiera operatorowego zrodla, z ktorego da sie te wspolczynniki policzyc lub wyeksportowac.
+3. Frontier po kroku:
+   - `H28_B1 := the current repository state contains no computable operator-level source from which a_1, b_1, d_1 can be actually exported or evaluated for pair1, even though Route A provenance and coefficient semantics are already in place`,
+   - `H27_B1`,
+   - `H15_B1`,
+   - `T12_B1`,
+   - `T2_B1`,
+   - `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/H28_NO_COMPUTABLE_COEFFICIENT_SOURCE_CONCLUSION.md`,
+   - dodano `fundamental_action_reconstruction/h28_no_computable_coefficient_source_conclusion.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h28_no_computable_coefficient_source_conclusion.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h28_no_computable_coefficient_source_conclusion_summary.json`.
+5. Nastepny poprawny ruch:
+   - zdefiniowac jawny brakujacy obiekt operatorowy,
+   - zamiast dokladac kolejne audity downstream witnessow bez zrodla liczb.
+
+
+## 516. O1 explicit A1 operator definition spec (2026-03-06)
+
+1. Cel:
+   - zapisac minimalna definicje brakujacego operatora, bez ktorego nie da sie przejsc do liczb.
+2. Wynik:
+   - zdefiniowano brakujacy obiekt `A_1_ext` na `V_1 = span{c_1,s_1}`,
+   - dopuszczone sa tylko dwie sciezki:
+     - `exported_composite_A_1`,
+     - `P_1 E_1^* G_light^* R_mat^* O_readout R_mat G_light E_1 P_1`,
+   - zapisano warunki akceptacji i warunek obliczalnosci `a_1,b_1,d_1`.
+3. Frontier po kroku:
+   - `O1_B1 := the minimal explicit operator definition needed to compute a_1, b_1, d_1 is now specified, but no persisted computable A_1_ext instance exists yet in either admissible mode`,
+   - `H28_B1`,
+   - `T12_B1`,
+   - `T2_B1`,
+   - `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/O1_EXPLICIT_A1_OPERATOR_DEFINITION_SPEC.md`,
+   - dodano `fundamental_action_reconstruction/o1_explicit_a1_operator_definition_spec.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/o1_explicit_a1_operator_definition_spec.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/o1_explicit_a1_operator_definition_spec_summary.json`.
+5. Nastepny poprawny ruch:
+   - stworzyc pierwsza persisted computable instance `A_1_ext`,
+   - albo zatrzymac lane `H` do czasu jawnego operatorowego rozszerzenia kernela.

@@ -2237,6 +2237,51 @@ Frontier po `H26`:
 - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
 - `C32_B2 := raw cross-pair overlap route is formally degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.
 
+Co realnie zostalo dodane przez `H27`:
+- `A1_cc` ma juz nie tylko coordinate-level source target, ale tez jawny audit braku actual value witness,
+- problem redukuje sie juz nie do identyfikacji diagonalnej składowej, lecz do twardego braku jakiegokolwiek exported, evaluated albo partial witness tej diagonalnej wartosci.
+
+Frontier po `H27`:
+- `H27_B1 := A1_cc now has a packet-ready coordinate-level source target, but no actual exported, evaluated, or partially populated value witness exists anywhere in the current repository state`,
+- `H26_B1 := a coordinate-level upstream source target A1_cc for a_1 now exists, but no actual exported or evaluated diagonal-entry witness for (A_1)_{c_1 c_1} is present yet`,
+- `H25_B1 := a_1 now has packet-ready source semantics and a packet-ready source-value object, but no actual exported, evaluated, or partially populated value witness exists anywhere in the current repository state`,
+- `H24_B1 := a packet-ready source-value object for a_1 now exists, but no actual exported or evaluated value for a_1 is present yet`,
+- `H23_B1 := a conditional populated witness schema for trace_A_1 now exists, but no actual values for a_1 and d_1 have been exported or evaluated, so the witness remains unpopulated`,
+- `H22_B1 := trace_A_1 now has packet-ready semantics and a packet-ready export target, but no actual exported or evaluated value witness exists anywhere in the current repository state`,
+- `H20_B1 := coefficient-export semantics for A_1_cand is now packet-ready, but no actual evaluated or exported values for (a_1, b_1, d_1), tr(A_1), or Delta_1 exist yet`,
+- `H15_B1 := existing kernel feedback has no explicit residual-selector-sector reduction or projected selector-block export in the current repository, so K_obs remains a distinct extension hypothesis rather than an identified reformulation of existing kernel feedback`,
+- `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `C32_B2 := raw cross-pair overlap route is formally degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.
+
+Co realnie zostalo dodane przez `H28`:
+- jawnie zapisano, ze lane `H` nie utknal juz na semantyce ani provenance,
+- lecz na braku obliczalnego operatorowego zrodla dla `a_1,b_1,d_1`,
+- i ze `QW-2165` sam z siebie nie eksportuje obiektu typu `A_1`, `E_1`, `G_light`, `R_mat`, `O_obs/O_readout` ani projected selector block.
+
+Frontier po `H28`:
+- `H28_B1 := the current repository state contains no computable operator-level source from which a_1, b_1, d_1 can be actually exported or evaluated for pair1, even though Route A provenance and coefficient semantics are already in place`,
+- `H27_B1 := A1_cc now has a packet-ready coordinate-level source target, but no actual exported, evaluated, or partially populated value witness exists anywhere in the current repository state`,
+- `H15_B1 := existing kernel feedback has no explicit residual-selector-sector reduction or projected selector-block export in the current repository, so K_obs remains a distinct extension hypothesis rather than an identified reformulation of existing kernel feedback`,
+- `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `C32_B2 := raw cross-pair overlap route is formally degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.
+
+Co realnie zostalo dodane przez `O1`:
+- pierwszy jawny zapis brakujacego obiektu operatorowego:
+  - `A_1_ext` na `V_1 = span{c_1,s_1}`,
+- dopuszczone zostaly tylko dwie konstrukcje:
+  - `exported_composite_A_1`,
+  - `P_1 E_1^* G_light^* R_mat^* O_readout R_mat G_light E_1 P_1`,
+- problem przesuwa sie juz nie do kolejnych auditow witnessow, lecz do zainstancjonowania jednego obliczalnego operatora.
+
+Frontier po `O1`:
+- `O1_B1 := the minimal explicit operator definition needed to compute a_1, b_1, d_1 is now specified, but no persisted computable A_1_ext instance exists yet in either admissible mode`,
+- `H28_B1 := the current repository state contains no computable operator-level source from which a_1, b_1, d_1 can be actually exported or evaluated for pair1, even though Route A provenance and coefficient semantics are already in place`,
+- `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `C32_B2 := raw cross-pair overlap route is formally degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.
+
 Co realnie zostalo dodane przez `H2`:
 - zapisano minimalny admissibility spec dla przyszlego operatora `K_obs`,
 - jawnie oddzielono:

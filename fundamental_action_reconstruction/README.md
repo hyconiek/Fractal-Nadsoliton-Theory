@@ -1,6 +1,6 @@
 # Fundamental Action Reconstruction
 
-Status: `PROGRAM_PHASE1_COMPLETE_C55_T1_T12_PLUS_N1_N2_N3_D1_AX1_AX2_AX3_AX4_AX5_AX6_AX7_AX8_AND_H1_H2_H3_H4_H5_H6_H7_H8_H9_H10_H11_H12_H13_H14_H15_H16_H17_H18_H19_H20_H21_H22_H23_H24_H25_H26_NO_FALSE_PASS`
+Status: `PROGRAM_PHASE1_COMPLETE_C55_T1_T12_PLUS_N1_N2_N3_D1_AX1_AX2_AX3_AX4_AX5_AX6_AX7_AX8_AND_H1_H2_H3_H4_H5_H6_H7_H8_H9_H10_H11_H12_H13_H14_H15_H16_H17_H18_H19_H20_H21_H22_H23_H24_H25_H26_H27_H28_O1_NO_FALSE_PASS`
 As of: `2026-03-06`
 
 Ten katalog otwiera rownolegly tor konstrukcyjny poza drabinka `L5/L12`.
@@ -363,6 +363,9 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `H24`: wykonane jako minimalny source-value packet dla `a_1`; od teraz problem redukuje sie juz nie do niejasnosci pierwszego upstream inputu, lecz do braku jego rzeczywistej wartosci.
 - `H25`: wykonane jako actual value audit dla `a_1`; od teraz problem redukuje sie juz nie do packet-ready source targetu, lecz do twardego braku jakiegokolwiek populated lub partial witness dla tego pierwszego wspolczynnika.
 - `H26`: wykonane jako coordinate-level diagonal-entry source packet dla `A1_cc = (A_1)_{c_1 c_1}`; od teraz problem redukuje sie juz nie do ogolnego braku upstream source dla `a_1`, lecz do braku actual diagonal-entry witness.
+- `H27`: wykonane jako actual value audit dla `A1_cc`; od teraz problem redukuje sie juz nie do samej obecnosci coordinate-level source target, lecz do twardego braku jakiegokolwiek populated lub partial witness diagonalnej składowej.
+- `H28`: wykonane jako jawny wniosek projektowy; obecny stan repo nie zawiera jeszcze obliczalnego operatorowego zrodla wspolczynnikow `a_1,b_1,d_1`, nawet mimo istnienia provenance witness i semantyki wspolczynnikow.
+- `O1`: wykonane jako minimalna specyfikacja brakujacego obiektu; od teraz brakujacy krok nie jest juz mglisty, tylko ma postac jawnej definicji `A_1_ext` na `V_1 = span{c_1,s_1}` w jednej z dwoch dopuszczalnych form.
 
 ## Twarde ograniczenia rygoru
 
@@ -622,6 +625,9 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `H24_A1_SOURCE_VALUE_PACKET.md`
 - `H25_A1_ACTUAL_VALUE_AUDIT.md`
 - `H26_DIAGONAL_ENTRY_SOURCE_PACKET.md`
+- `H27_A1_CC_ACTUAL_VALUE_AUDIT.md`
+- `H28_NO_COMPUTABLE_COEFFICIENT_SOURCE_CONCLUSION.md`
+- `O1_EXPLICIT_A1_OPERATOR_DEFINITION_SPEC.md`
 - `C43_FILENAME_PATH_CONVENTION_AUDIT.md`
 - `a1_minimal_action_ansatz.py`
 - `a2_supersoliton_matching.py`
