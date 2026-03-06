@@ -707,6 +707,8 @@ Status nowego toru:
 - `C3` wydobywa z `QW-2190` techniczny kandydat pary referencyjnej, ale nie daje jeszcze physical orientation datum,
 - `C4` wykonane jako czwarty krok trzeciego mikrocyklu,
 - `C4` redukuje kinematycznie problem lokalnego mismatch: forma `J_ab(theta)=2(a+b)(1-cos theta)` wynika na orbicie `O(2)` z diagonalnego dodatniego kosztu lokalnego, ale fizyczne zrodlo tej metryki pozostaje otwarte,
+- `C5` wykonane jako piaty krok trzeciego mikrocyklu,
+- `C5` wzmacnia `C4`: selector family jest orbitalna forma standardowej lokalnej symetrycznej formy projected Hessianu, ale brak jeszcze explicite wycietej projekcji i jej certyfikatu dodatniosci,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -936,6 +938,19 @@ Co realnie zostalo dodane przez `C4`:
   - `C2_B2 := no_derived_positive_local_quadratic_mismatch_principle`
   do:
   - `C4_B1 := no_internal_identification_of_the_physical_positive_local_metric_on_candidate_orientation_plane`,
+- nadal brak discharge `C2_B2`,
+- nadal brak axiom-free uniqueness PASS,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C5`:
+- zalozenie diagonalnosci z `C4` zostaje usuniete,
+- wystarcza juz standardowa lokalna symetryczna forma kwadratowa projected Hessianu:
+  - `Q_H = a<Delta u,Delta u> + 2c<Delta u,Delta v> + b<Delta v,Delta v>`,
+- na orbicie `O(2)` mieszany skladnik zanika identycznie, wiec:
+  - `Q_H(theta)=2(a+b)(1-cos theta)`,
+- selector family `J_ab` staje sie zatem naturalna orbitalna forma projected-Hessian picture,
+- aktualny frontier zostaje zawężony do:
+  - `C5_B1 := no_explicit_projected_second_variation_with_strict_scope_positivity_certificate_on_candidate_orientation_plane`,
 - nadal brak discharge `C2_B2`,
 - nadal brak axiom-free uniqueness PASS,
 - nadal brak theorem-level/full-closure PASS.

@@ -1,6 +1,6 @@
 # Fundamental Action Reconstruction
 
-Status: `PROGRAM_PHASE1_COMPLETE_C4_MISMATCH_KINEMATICS_REDUCED`
+Status: `PROGRAM_PHASE1_COMPLETE_C5_PROJECTED_HESSIAN_BRIDGE_CONDITIONAL`
 As of: `2026-03-06`
 
 Ten katalog otwiera rownolegly tor konstrukcyjny poza drabinka `L5/L12`.
@@ -90,6 +90,8 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
    - sprawdzic, czy `QW-2190` zawiera juz techniczny kandydat pary referencyjnej, nawet jesli nie jest jeszcze fizycznym orientation datum.
 12. `C4`: local quadratic mismatch kinematic reduction
    - sprawdzic, czy forma `J_ab` wynika juz kinematycznie z orbity rotacyjnej i lokalnego kosztu kwadratowego, nawet jesli metryka tego kosztu nie jest jeszcze wyprowadzona.
+13. `C5`: projected Hessian selector-metric bridge
+   - sprawdzic, czy selector family jest orbitalna forma projected second variation, nawet jesli ta projekcja nie jest jeszcze explicite wyeksportowana.
 
 ## Aktualny status
 
@@ -115,6 +117,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `C2`: wykonane jako drugi krok trzeciego mikrocyklu; pochodzenie `J_ab` zostalo zredukowane warunkowo do dwoch mniejszych sub-blockerow: brak wewnetrznej pary referencyjnej i brak dodatniego lokalnego kosztu kwadratowego.
 - `C3`: wykonane jako trzeci krok trzeciego mikrocyklu; `QW-2190` dostarcza techniczny kandydat pary referencyjnej `(c1,s1)` / `(c2,s2)`, ale jego fizyczne podniesienie pozostaje open.
 - `C4`: wykonane jako czwarty krok trzeciego mikrocyklu; forma `J_ab(theta)=2(a+b)(1-cos theta)` zostaje zredukowana kinematycznie na orbicie `O(2)`, ale fizyczna identyfikacja dodatniej lokalnej metryki mismatch pozostaje open.
+- `C5`: wykonane jako piaty krok trzeciego mikrocyklu; selector family zostaje zwiazana warunkowo z projected Hessianem na kandydackiej plaszczyznie orientacji, ale brak jeszcze explicite wycietej projekcji i jej certyfikatu dodatniosci.
 
 ## Twarde ograniczenia rygoru
 
@@ -139,6 +142,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - brak claimu, ze `C2` dalo internal derivation `J_ab`.
 - brak claimu, ze `C3` rozladowalo `C2_B1`.
 - brak claimu, ze `C4` rozladowalo `C2_B2`.
+- brak claimu, ze `C5` znalazlo projected Hessian albo rozladowalo `C2_B2`.
 
 ## Zasada korzystania z poprzednich badan
 
@@ -177,6 +181,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `C2_SELECTOR_FAMILY_INTERNAL_ORIGIN_PACKET.md`
 - `C3_INTERNAL_REFERENCE_PAIR_CANDIDATE_FROM_MODE_SCAFFOLD.md`
 - `C4_LOCAL_QUADRATIC_MISMATCH_KINEMATIC_REDUCTION.md`
+- `C5_PROJECTED_HESSIAN_SELECTOR_METRIC_BRIDGE.md`
 - `a1_minimal_action_ansatz.py`
 - `a2_supersoliton_matching.py`
 - `a3_kernel_analysis.py`
@@ -199,6 +204,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `c2_selector_family_internal_origin_packet.py`
 - `c3_internal_reference_pair_candidate_from_mode_scaffold.py`
 - `c4_local_quadratic_mismatch_kinematic_reduction.py`
+- `c5_projected_hessian_selector_metric_bridge.py`
 - `generated/a1_minimal_action_ansatz_summary.json`
 - `generated/a2_supersoliton_matching_summary.json`
 - `generated/a3_kernel_analysis_summary.json`
@@ -221,4 +227,5 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `generated/c2_selector_family_internal_origin_packet_summary.json`
 - `generated/c3_internal_reference_pair_candidate_from_mode_scaffold_summary.json`
 - `generated/c4_local_quadratic_mismatch_kinematic_reduction_summary.json`
+- `generated/c5_projected_hessian_selector_metric_bridge_summary.json`
 - `manifest_action_reconstruction.json`

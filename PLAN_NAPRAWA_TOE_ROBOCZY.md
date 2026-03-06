@@ -5637,3 +5637,32 @@ Po tej rundzie:
 6. Nastepny poprawny ruch:
    - przejsc do `C5` i sprobowac powiazac lokalna metryke mismatch z rzeczywistym Hessianem / druga wariacja na kandydackiej plaszczyznie orientacji,
    - albo zamrozic frontier i zacommitowac.
+
+## 413. C5 projected Hessian selector-metric bridge wykonane (2026-03-06)
+1. Zakres:
+   - podjeto probe powiazania `C2_B2` z projected second variation,
+   - strict-admissible support: `A3`, `A7`, `QW-2190`, `QW-2191`, `C3`, `C4`, `A10`.
+2. Co zostalo realnie ustalone:
+   - selector family nie wymaga juz nawet zalozenia diagonalnosci lokalnej metryki,
+   - kazda standardowa lokalna symetryczna forma kwadratowa projected Hessianu:
+     - `Q_H = a<Delta u,Delta u> + 2c<Delta u,Delta v> + b<Delta v,Delta v>`
+     redukuje sie na orbicie `O(2)` do:
+     - `Q_H(theta)=2(a+b)(1-cos theta)`,
+   - dzieki temu `J_ab` jest zgodna z naturalnym projected-Hessian picture, o ile taka projekcja i jej dodatniosc zostana rzeczywiscie wyeksportowane.
+3. Co pozostaje zablokowane:
+   - brak explicite wycietej projekcji drugiej wariacji na kandydacka plaszczyzne orientacji,
+   - brak strict-scope certyfikatu dodatniosci dla tej projekcji,
+   - brak discharge `C2_B2`,
+   - brak axiom-free uniqueness.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C5_PROJECTED_HESSIAN_SELECTOR_METRIC_BRIDGE.md`,
+   - dodano `fundamental_action_reconstruction/c5_projected_hessian_selector_metric_bridge.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c5_projected_hessian_selector_metric_bridge_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Twardy rygor:
+   - brak `C2_B2` PASS,
+   - brak theorem-level PASS,
+   - brak full-closure PASS.
+6. Nastepny poprawny ruch:
+   - przejsc do `C6` i sprawdzic, czy strict core zawiera choc packet-ready kandydat projekcji drugiej wariacji na kandydacka plaszczyzne orientacji,
+   - albo zamrozic frontier i zacommitowac.

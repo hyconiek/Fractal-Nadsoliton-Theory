@@ -606,5 +606,7 @@ Current status:
 - this moves the theory forward only by extracting a technical reference-pair candidate from `QW-2190`, not by elevating it to a physical orientation datum,
 - `C4` completed as the fourth step of the next micro-cycle,
 - this moves the theory forward only by reducing the local quadratic mismatch problem kinematically: the `J_ab` closed form follows on the rotation orbit once a positive local metric exists, but the physical origin of that metric remains open,
+- `C5` completed as the fifth step of the next micro-cycle,
+- this moves the theory forward only by showing that a projected local Hessian would generate the same orbital selector family without requiring diagonality, but the actual projection and positivity certificate are still open,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.
