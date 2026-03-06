@@ -1,0 +1,29 @@
+{
+  "step": "V4",
+  "status": "PASS_PARTIAL_COMPETING_EXTENSION_HYPOTHESIS_ONLY",
+  "date": "2026-03-06",
+  "carrier": {
+    "space": "V_1 = span{c_1,s_1}",
+    "basis": [
+      "c_1",
+      "s_1"
+    ],
+    "anchor": "psi0"
+  },
+  "coupled_operator": "K_visc_aniso^(1)(psi0) = R(psi0) diag(nu_parallel, nu_perp) R(-psi0)",
+  "pair_level_consequence": {
+    "parallel_mode": "u_parallel(psi0) = cos(psi0)c_1 + sin(psi0)s_1",
+    "perp_mode": "u_perp(psi0) = -sin(psi0)c_1 + cos(psi0)s_1",
+    "anchor_generating": false,
+    "anchor_amplifying": true,
+    "can_split_response_relative_to_anchor": true
+  },
+  "frontier": "V4_B1 := coupling anisotropic viscosity to psi0 yields a nontrivial pair-level anchor-amplifying operator on V_1, but it does not generate the anchor itself and therefore cannot by itself close the selector problem",
+  "hard_limits": {
+    "theorem_level_pass": false,
+    "full_closure_pass": false,
+    "viscosity_generates_psi0": false,
+    "coupled_lane_replaces_primary_psi0_lane": false,
+    "qw2191_discharged": false
+  }
+}

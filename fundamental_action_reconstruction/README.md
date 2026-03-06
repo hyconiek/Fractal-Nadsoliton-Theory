@@ -1,6 +1,6 @@
 # Fundamental Action Reconstruction
 
-Status: `PROGRAM_PHASE1_COMPLETE_C55_T1_T12_PLUS_N1_N2_N3_D1_AX1_AX2_AX3_AX4_AX5_AX6_AX7_AX8_AND_H1_H2_H3_H4_H5_H6_H7_H8_H9_H10_H11_H12_H13_H14_H15_H16_H17_H18_H19_H20_H21_H22_H23_H24_H25_H26_H27_H28_H29_H30_H31_V1_V2_V3_O1_O2_O3_O4_NO_FALSE_PASS`
+Status: `PROGRAM_PHASE1_COMPLETE_C55_T1_T12_PLUS_N1_N2_N3_D1_AX1_AX2_AX3_AX4_AX5_AX6_AX7_AX8_AND_H1_H2_H3_H4_H5_H6_H7_H8_H9_H10_H11_H12_H13_H14_H15_H16_H17_H18_H19_H20_H21_H22_H23_H24_H25_H26_H27_H28_H29_H30_H31_V1_V2_V3_V4_O1_O2_O3_O4_NO_FALSE_PASS`
 As of: `2026-03-06`
 
 Ten katalog otwiera rownolegly tor konstrukcyjny poza drabinka `L5/L12`.
@@ -43,6 +43,11 @@ Aktualizacja `V3`:
   - izotropowej `nu_iso * I_2`, ktora nie rozbija `O(2)`,
   - anizotropowej z importowanym anchorem `psi0`, ktora nie rozwiazuje selektora sama z siebie,
 - lane `informational viscosity` pozostaje slabszy od lane `psi0`.
+
+Aktualizacja `V4`:
+- sprzezenie `psi0 + anizotropowa viscosity` daje rzeczywisty pair-level operator na `V_1`,
+- ale jest to tylko efekt `anchor-amplifying` / `anchor-refining`,
+- ten lane nie generuje `psi0` samodzielnie i nie zastępuje glownego lane `psi0`.
 
 ## Ontologiczna wskazowka programu
 

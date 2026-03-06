@@ -2402,3 +2402,4 @@ Frontier po `H5`:
 - `V1`: `informational viscosity` zostaje utrzymane jako konkurencyjna hipoteza extension lane, ale bez jawnego operatora selektora i bez redukcji do `pair1`.
 - `V2`: istniejace proxy `lepkość/damping/memory` pozostaja tylko coarse-grained modyfikatorami odpowiedzi i nadal nie daja redukcji do `pair1=(c_1,s_1)`.
 - `V3`: minimalny pair-level operator lepkości jest dopuszczalny tylko jako izotropowy `nu_iso * I_2` albo anizotropowy z importowanym anchorem `psi0`, wiec sam nie domyka selektora.
+- `V4`: sprzezenie `psi0 + anizotropowa viscosity` daje pair-level efekt, ale tylko jako wzmacniacz/refiner juz importowanego anchoru, nie jako niezalezne zrodlo selekcji.
