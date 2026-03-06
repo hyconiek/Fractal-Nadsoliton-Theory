@@ -6027,3 +6027,30 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - przejsc do `C19` i sprawdzic, czy strict core daje jawna serializacje `12` rows bez schodzenia do orientation slice,
    - albo jawnie potwierdzic, ze taki export nadal nie jest obecny.
+
+## 427. C19 generator-level all-rows source audit wykonane (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy strict core ma juz generator-level exhaustive source dla calej rodziny `12` rows `Psi`,
+     nawet jesli brak jeszcze jawnego persisted serialization artifact.
+2. Wynik:
+   - generator-level all-rows source jest juz obecny,
+   - opiera sie na:
+     - `QW-2165`: `eom_psi[i]` dla wszystkich `12` pol,
+     - `QW-2166`: pelny Hessian dla wszystkich `13` pol,
+     - `lagrangian_density` i `potential_total` jako pelne source objects,
+   - aktualny frontier zawęza sie do:
+     - braku persisted `12`-row serialization artifact,
+     - braku restriction do candidate orientation slice.
+3. Twarde granice:
+   - brak `C18_B1` PASS,
+   - brak theorem-level PASS,
+   - brak full-closure PASS.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C19_GENERATOR_LEVEL_ALL_ROWS_SOURCE_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/c19_generator_level_all_rows_source_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c19_generator_level_all_rows_source_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `C20` i sprawdzic, czy strict core daje juz jawny materialized `12`-row serialization packet z istniejacego generator-level source,
+   - albo jawnie potwierdzic, ze taki packet nadal nie jest obecny.

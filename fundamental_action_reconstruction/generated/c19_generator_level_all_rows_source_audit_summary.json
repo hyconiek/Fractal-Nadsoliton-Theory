@@ -1,0 +1,53 @@
+{
+  "stage": "C19",
+  "status": "C19_EXECUTED_GENERATOR_LEVEL_ALL_ROWS_SOURCE_AUDIT_NO_FALSE_PASS",
+  "as_of": "2026-03-06",
+  "goal": "Reduce the missing 12-row serialization blocker by showing that the strict core already contains generator-level all-rows source objects for the Psi family, even if no persisted row-by-row 12-row export artifact has been materialized.",
+  "inputs": {
+    "strict_admissible": [
+      "QW-2165",
+      "QW-2166",
+      "QW-2180",
+      "C18",
+      "A10"
+    ]
+  },
+  "generator_level_source": {
+    "q2165_all_rows_generator_present": true,
+    "q2166_full_hessian_generator_present": true,
+    "n_psi_fields_q2165": 12,
+    "n_psi_fields_q2166": 12,
+    "q2165_all_fields_flag": true,
+    "q2166_all_fields_flag": true,
+    "q2166_all_linearized_flag": true,
+    "lagrangian_density_mentions_all_psi_symbols": true,
+    "potential_total_mentions_all_psi_symbols": true
+  },
+  "persisted_artifacts": {
+    "q2165_sample_keys": [
+      "sample_eom_psi0",
+      "sample_eom_psi11",
+      "sample_eom_psi6"
+    ],
+    "persisted_12_row_export_present": false,
+    "persisted_full_12x12_hessian_table_present": false,
+    "orientation_slice_restriction_present": false
+  },
+  "result": {
+    "generator_level_all_rows_source_present": "yes",
+    "persisted_row_by_row_12_row_export_present": "not_shown",
+    "generator_level_source_vs_persisted_serialization_gap_is_now_explicit": "yes"
+  },
+  "residual_blockers": {
+    "C19_B1": "no_explicit_persisted_12_row_serialization_artifact_even_though_generator_level_all_rows_source_is_present",
+    "C19_B2": "no_explicit_restriction_from_the_control_pullback_orbits_to_the_candidate_orientation_slice"
+  },
+  "hard_limits": [
+    "no_theorem_level_pass",
+    "no_full_closure_pass",
+    "no_claim_that_the_12_rows_are_already_persisted",
+    "no_claim_that_the_full_12x12_canonical_table_is_already_materialized",
+    "no_orientation_slice_restriction_claim"
+  ],
+  "next_step": "C20"
+}
