@@ -8285,3 +8285,31 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - sprobowac odseparowac kolejny brakujacy upstream fragment dla `a_1`,
    - albo uczciwie potwierdzic, ze lane `H` nadal nie daje nawet partial value witness dla pierwszego wspolczynnika.
+
+
+## 513. H26 diagonal entry source packet (2026-03-06)
+
+1. Cel:
+   - odseparowac bardziej elementarny coordinate-level source dla `a_1`.
+2. Wynik:
+   - zdefiniowano `A1_cc := (A_1)_{c_1 c_1}`,
+   - jawnie zapisano `a_1 = A1_cc`,
+   - nadal brak jakiejkolwiek actual exported albo evaluated wartosci `A1_cc`.
+3. Frontier po kroku:
+   - `H26_B1 := a coordinate-level upstream source target A1_cc for a_1 now exists, but no actual exported or evaluated diagonal-entry witness for (A_1)_{c_1 c_1} is present yet`,
+   - `H25_B1`,
+   - `H24_B1`,
+   - `H23_B1`,
+   - `H20_B1`,
+   - `H15_B1`,
+   - `T12_B1`,
+   - `T2_B1`,
+   - `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/H26_DIAGONAL_ENTRY_SOURCE_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/h26_diagonal_entry_source_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h26_diagonal_entry_source_packet.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h26_diagonal_entry_source_packet_summary.json`.
+5. Nastepny poprawny ruch:
+   - sprawdzic, czy istnieje jakikolwiek actual witness dla `A1_cc`,
+   - albo uczciwie potwierdzic, ze nawet coordinate-level diagonal entry nie ma jeszcze zadnego value witness.
