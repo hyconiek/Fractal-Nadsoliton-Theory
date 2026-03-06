@@ -6216,3 +6216,27 @@ Po tej rundzie:
    - zaktualizowano `QW_2165_L13_EXHAUSTIVE_CANONICAL_EOM_GATE.py` oraz jego report artefacts.
 5. Nastepny poprawny ruch:
    - przejsc do `C26` i wracac juz tylko do restriction `control pullback -> candidate orientation slice`.
+
+## 434. C26 quotient-first orientation slice restriction audit wykonane (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy ostatni residualny blocker po `C25` da sie uczciwie rozbic
+     na dwa bardziej konkretne eksporty geometryczne:
+     quotient map oraz finalny slice-extraction map.
+2. Wynik:
+   - strict core wspiera juz packet-ready schema:
+     `control pullback orbit family -> quotient/projection -> candidate orientation slice`,
+   - ale nadal brak:
+     - jawnego quotient map,
+     - jawnego basis-level extraction map.
+3. Twarde granice:
+   - brak theorem-level PASS,
+   - brak full-closure PASS,
+   - brak jawnej restrykcji do candidate orientation slice.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C26_QUOTIENT_FIRST_ORIENTATION_SLICE_RESTRICTION_AUDIT.md`,
+   - dodano `fundamental_action_reconstruction/c26_quotient_first_orientation_slice_restriction_audit.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c26_quotient_first_orientation_slice_restriction_audit_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `C27` i szukac packet-ready quotient map dla `C26_B1`.

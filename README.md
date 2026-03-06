@@ -648,5 +648,7 @@ Current status:
 - this moves the theory forward only by reducing that patch-readiness problem to a patch-admitted-but-not-applied state, plus the still-missing restriction to the candidate orientation slice,
 - `C25` completed as the twenty-fifth step of the next micro-cycle,
 - this moves the theory forward by actually closing the 12-row serialization lane in declared scope, leaving the orientation-slice restriction as the active residual blocker,
+- `C26` completed as the twenty-sixth step of the next micro-cycle,
+- this moves the theory forward only by splitting that last residual orientation-slice restriction into two explicit missing exports: a quotient map and a final slice-extraction map,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

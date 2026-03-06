@@ -1,0 +1,49 @@
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+root = Path(__file__).resolve().parent
+
+payload = {
+    "stage": "C26",
+    "status": "C26_EXECUTED_QUOTIENT_FIRST_RESTRICTION_SPLIT_NO_FALSE_PASS",
+    "as_of": "2026-03-06",
+    "goal": "Reduce the last residual blocker after C25 by checking whether the strict core already supports a quotient-first decomposition of the control-pullback-to-orientation-slice restriction problem into a quotient map and a final slice extraction map.",
+    "inputs": {
+        "strict_admissible": [
+            "A3",
+            "C7",
+            "C15",
+            "C25",
+            "A10",
+        ]
+    },
+    "quotient_first_schema": {
+        "source": "control pullback orbit family carried by M_control",
+        "intermediate_step": "quotient or projection away from zero modes and orbit tangents following A3 projection-before-claim discipline",
+        "target": "candidate two-dimensional orientation slice consistent with the class-level C7 schema",
+        "schema_present": "yes_partial",
+    },
+    "result": {
+        "monolithic_restriction_blocker_can_be_split": "yes",
+        "explicit_quotient_map_present": "not_shown",
+        "explicit_basis_level_slice_extraction_present": "not_shown",
+    },
+    "residual_blockers": {
+        "C26_B1": "no_explicit_zero_mode_or_orbit_tangent_quotient_map_from_the_control_pullback_orbit_family_to_a_reduced_orientation_related_control_plane",
+        "C26_B2": "no_explicit_basis_level_embedding_or_extraction_of_the_candidate_two_dimensional_orientation_slice_inside_that_reduced_plane",
+    },
+    "hard_limits": [
+        "no_theorem_level_pass",
+        "no_full_closure_pass",
+        "no_claim_that_an_explicit_restriction_operator_exists",
+        "no_claim_that_plane_level_positivity_is_resolved",
+        "no_claim_that_selector_track_is_closed",
+    ],
+    "next_step": "C27",
+}
+
+out = root / "generated" / "c26_quotient_first_orientation_slice_restriction_audit_summary.json"
+out.write_text(json.dumps(payload, indent=2) + "\n", encoding="ascii")
+print(out)

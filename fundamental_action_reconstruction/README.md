@@ -1,6 +1,6 @@
 # Fundamental Action Reconstruction
 
-Status: `PROGRAM_PHASE1_COMPLETE_C25_12_ROW_EXPORT_CLOSED_SLICE_OPEN`
+Status: `PROGRAM_PHASE1_COMPLETE_C26_EXPORT_CLOSED_RESTRICTION_SPLIT_OPEN`
 As of: `2026-03-06`
 
 Ten katalog otwiera rownolegly tor konstrukcyjny poza drabinka `L5/L12`.
@@ -132,6 +132,8 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
    - sprawdzic, czy minimalny patch-candidate wolno juz traktowac jako dopuszczalny ruch niedestrukcyjny bez falszywego PASS.
 33. `C25`: applied patch rerun export audit
    - potwierdzic, ze patch serializacji zostal zastosowany, rerun wykonany, a report zawiera pelny export `eom_psi0..11`.
+34. `C26`: quotient-first orientation slice restriction audit
+   - sprawdzic, czy ostatni residualny blocker po `C25` da sie juz uczciwie rozbic na jawny quotient map oraz jawny slice-extraction map, nawet jesli zadna z tych map nie jest jeszcze wyeksportowana.
 
 ## Aktualny status
 
@@ -178,6 +180,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `C23`: wykonane jako dwudziesty trzeci krok trzeciego mikrocyklu; schema blocker zostaje zawężony dalej do braku zastosowania patch-ready packetu i rerunu, oraz braku restriction do orientation slice.
 - `C24`: wykonane jako dwudziesty czwarty krok trzeciego mikrocyklu; blocker zostaje zawężony dalej do warstwy `patch admitted but not applied`, oraz braku restriction do orientation slice.
 - `C25`: wykonane jako dwudziesty piaty krok trzeciego mikrocyklu; lane serializacji `12` rows jest zamkniete w zadeklarowanym scope, a aktywny blocker pozostaje juz tylko na restriction do orientation slice.
+- `C26`: wykonane jako dwudziesty szosty krok trzeciego mikrocyklu; residualny restriction blocker zostaje rozbity dalej na brak quotient map od control pullback orbit family oraz brak basis-level extraction finalnej dwuwymiarowej orientation slice.
 
 ## Twarde ograniczenia rygoru
 
@@ -223,6 +226,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - brak claimu, ze `C23` daje juz zastosowany patch albo rozladowuje `C22_B1`.
 - brak claimu, ze `C24` daje juz zastosowany patch albo rozladowuje `C23_B1`.
 - brak claimu, ze `C25` rozladowuje orientation-slice restriction albo daje theorem-level closure.
+- brak claimu, ze `C26` daje juz jawny quotient map albo jawny orientation-slice operator.
 
 ## Zasada korzystania z poprzednich badan
 
@@ -282,6 +286,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `C23_PATCH_READY_MODEL_CLAUSE_PACKET.md`
 - `C24_NON_DESTRUCTIVE_PATCH_ADMISSION_AUDIT.md`
 - `C25_APPLIED_PATCH_RERUN_EXPORT_AUDIT.md`
+- `C26_QUOTIENT_FIRST_ORIENTATION_SLICE_RESTRICTION_AUDIT.md`
 - `a1_minimal_action_ansatz.py`
 - `a2_supersoliton_matching.py`
 - `a3_kernel_analysis.py`
@@ -325,6 +330,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `c23_patch_ready_model_clause_packet.py`
 - `c24_non_destructive_patch_admission_audit.py`
 - `c25_applied_patch_rerun_export_audit.py`
+- `c26_quotient_first_orientation_slice_restriction_audit.py`
 - `generated/a1_minimal_action_ansatz_summary.json`
 - `generated/a2_supersoliton_matching_summary.json`
 - `generated/a3_kernel_analysis_summary.json`
