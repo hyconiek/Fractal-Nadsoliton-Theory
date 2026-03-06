@@ -1,6 +1,6 @@
 # Fundamental Action Reconstruction
 
-Status: `PROGRAM_PHASE1_COMPLETE_C1_DOMINANT_FOUNDATIONAL_BLOCKER_ISOLATED`
+Status: `PROGRAM_PHASE1_COMPLETE_C2_SELECTOR_FAMILY_ORIGIN_REDUCED`
 As of: `2026-03-06`
 
 Ten katalog otwiera rownolegly tor konstrukcyjny poza drabinka `L5/L12`.
@@ -84,6 +84,8 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
    - zamknac mini-pakiet `B3_O1..B3_O5` bez falszywego PASS i z jawna lista residualnych blockerow.
 9. `C1`: narrow foundational blocker selection
    - wskazac jeden dominujacy waski blocker po selector-track, zamiast trzymac zbyt szerokie `uniqueness open`.
+10. `C2`: selector family internal origin packet
+   - sprawdzic, czy pochodzenie rodziny `J_ab` daje sie przynajmniej zredukowac warunkowo do mniejszych obligacji.
 
 ## Aktualny status
 
@@ -106,6 +108,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `B7`: wykonane jako siodmy krok drugiego cyklu; factorized bridge jest zgodny ze scaffoldem `QW-2190` i z obstrukcja `QW-2191`, ale tylko jako control-route overlay.
 - `B8`: wykonane jako osmy krok drugiego cyklu; selector-track ma juz audit `no false pass`, a residualne blockery pozostaja jawne.
 - `C1`: wykonane jako pierwszy krok trzeciego mikrocyklu; dominujacy waski blocker to brak internal derivation rodziny selectorow `J_ab`.
+- `C2`: wykonane jako drugi krok trzeciego mikrocyklu; pochodzenie `J_ab` zostalo zredukowane warunkowo do dwoch mniejszych sub-blockerow: brak wewnetrznej pary referencyjnej i brak dodatniego lokalnego kosztu kwadratowego.
 
 ## Twarde ograniczenia rygoru
 
@@ -127,6 +130,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - brak claimu, ze `B7` rozladowalo `B3_O4`.
 - brak claimu, ze `B8` oznacza uniqueness closure.
 - brak claimu, ze `C1` rozladowalo blocker foundational.
+- brak claimu, ze `C2` dalo internal derivation `J_ab`.
 
 ## Zasada korzystania z poprzednich badan
 
@@ -162,6 +166,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `B7_FACTORIZED_SELECTOR_MODE_SCAFFOLD_COMPATIBILITY_AUDIT.md`
 - `B8_SELECTOR_TRACK_ANTI_OVERCLAIM_AUDIT.md`
 - `C1_NARROW_FOUNDATIONAL_BLOCKER_SELECTION.md`
+- `C2_SELECTOR_FAMILY_INTERNAL_ORIGIN_PACKET.md`
 - `a1_minimal_action_ansatz.py`
 - `a2_supersoliton_matching.py`
 - `a3_kernel_analysis.py`
@@ -181,6 +186,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `b7_factorized_selector_mode_scaffold_compatibility_audit.py`
 - `b8_selector_track_anti_overclaim_audit.py`
 - `c1_narrow_foundational_blocker_selection.py`
+- `c2_selector_family_internal_origin_packet.py`
 - `generated/a1_minimal_action_ansatz_summary.json`
 - `generated/a2_supersoliton_matching_summary.json`
 - `generated/a3_kernel_analysis_summary.json`
@@ -200,4 +206,5 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `generated/b7_factorized_selector_mode_scaffold_compatibility_audit_summary.json`
 - `generated/b8_selector_track_anti_overclaim_audit_summary.json`
 - `generated/c1_narrow_foundational_blocker_selection_summary.json`
+- `generated/c2_selector_family_internal_origin_packet_summary.json`
 - `manifest_action_reconstruction.json`

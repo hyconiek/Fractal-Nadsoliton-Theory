@@ -5551,3 +5551,33 @@ Po tej rundzie:
 6. Nastepny poprawny ruch:
    - przejsc do `C2` i zbudowac packet internal-origin dla `J_ab`,
    - albo zamrozic frontier i zacommitowac.
+
+## 410. C2 selector family internal origin packet wykonane (2026-03-06)
+1. Zakres:
+   - podjeto probe redukcji blockera `C1_B`,
+   - strict-admissible support: `QW-2191`, `QW-2192`, `QW-2193`, `B6`, `C1`, `A10`,
+   - ontologiczna wskazowka tylko heurystycznie: `TOE_FINAL_DOCUMENTATION.tex`, `A1`.
+2. Co zostalo realnie ustalone:
+   - jesli istnieje wewnetrzna para referencyjna w degenerowanym subspace,
+   - i jesli koszt mismatch jest lokalny, dodatni i kwadratowy,
+   - to rodzina `J_ab(theta)=2(a+b)(1-cos theta)` jest wymuszona warunkowo,
+   - blocker `J_ab origin` redukuje sie do dwoch sub-blockerow:
+     - `C2_B1`: brak wyprowadzonej wewnetrznej pary referencyjnej,
+     - `C2_B2`: brak wyprowadzonej dodatniej lokalnej zasady mismatch kwadratowego.
+3. Co pozostaje zablokowane:
+   - internal derivation `C2_A1`,
+   - internal derivation `C2_A2`,
+   - full internal origin `J_ab`,
+   - axiom-free uniqueness.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C2_SELECTOR_FAMILY_INTERNAL_ORIGIN_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/c2_selector_family_internal_origin_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c2_selector_family_internal_origin_packet_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Twardy rygor:
+   - brak internal derivation `J_ab`,
+   - brak theorem-level PASS,
+   - brak full-closure PASS.
+6. Nastepny poprawny ruch:
+   - przejsc do `C3` i sprobowac `C2_B1`,
+   - albo zamrozic frontier i zacommitowac.

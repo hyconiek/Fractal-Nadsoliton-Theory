@@ -600,5 +600,7 @@ Current status:
 - this moves the theory forward only to a clean `no false pass` audit of the selector-track packet, with residual blockers still explicit,
 - `C1` completed as the first step of the next micro-cycle,
 - this moves the theory forward only by isolating one dominant narrow foundational blocker: the missing internal derivation of the selector family `J_ab`,
+- `C2` completed as the second step of the next micro-cycle,
+- this moves the theory forward only by conditionally reducing the `J_ab` origin problem to two narrower sub-blockers, not by deriving `J_ab` internally,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

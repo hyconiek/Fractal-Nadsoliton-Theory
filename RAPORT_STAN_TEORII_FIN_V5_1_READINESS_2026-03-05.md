@@ -701,6 +701,8 @@ Status nowego toru:
 - `B8` zamyka selector-track audytem `no false pass`, przy jawnie utrzymanych residualnych blockerach,
 - `C1` wykonane jako pierwszy krok trzeciego mikrocyklu,
 - `C1` izoluje dominujacy waski blocker foundational: brak internal derivation rodziny selectorow `J_ab`,
+- `C2` wykonane jako drugi krok trzeciego mikrocyklu,
+- `C2` redukuje warunkowo pochodzenie `J_ab` do dwoch sub-blockerow `C2_B1/C2_B2`, ale nie daje internal derivation tej rodziny,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -890,4 +892,17 @@ Co realnie zostalo dodane przez `C1`:
   - brak internal derivation dodatnio-wagowej rodziny selectorow `J_ab`,
 - repo grep nie ujawnia zadnego strict internal-origin package dla tej rodziny,
 - nadal brak discharge,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C2`:
+- rodzina `J_ab` nie jest juz traktowana jako calkowicie nieredukowalny axiom,
+- pod dwoma jawnie zapisanymi warunkami:
+  - istnienie wewnetrznej pary referencyjnej,
+  - dodatni lokalny koszt mismatch kwadratowego,
+  forma `J_ab(theta)=2(a+b)(1-cos theta)` jest wymuszona warunkowo,
+- dzieki temu blocker `J_ab origin` rozpada sie na dwa mniejsze sub-fronty:
+  - `C2_B1`: brak wyprowadzonej wewnetrznej pary referencyjnej,
+  - `C2_B2`: brak wyprowadzonej dodatniej lokalnej zasady mismatch,
+- nadal brak internal derivation `J_ab`,
+- nadal brak axiom-free uniqueness PASS,
 - nadal brak theorem-level/full-closure PASS.
