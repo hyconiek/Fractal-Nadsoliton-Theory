@@ -755,5 +755,7 @@ Current status:
 - this assembles `AX1..AX5` into one persisted positive-lane closure packet containing actual theta values, actual basis pair, actual orientation slice, bridge, robustness, and compatibility, while keeping that result explicitly outside strict core,
 - `AX7` completed as the anti-overclaim and boundary audit on the axiom-augmented lane,
 - this certifies that `AX1..AX6` remain an external positive lane only, with explicit prohibition on promotion into strict-core theorem-level or full-closure claims,
+- `AX8` completed as the publication-ready summary packet on the axiom-augmented lane,
+- this assembles `AX1..AX7` into one communication-ready packet while keeping that result explicitly outside strict core,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

@@ -1922,3 +1922,22 @@ Frontier po `AX7`:
 - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
 - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`,
 - `AX7` pozostaje boundary-certificate lane axiom-augmented, nie strict-core closure.
+
+Co realnie zostalo dodane przez `AX8`:
+- utworzono jawny publication-ready summary packet dla calego biezacego lane `axiom-augmented`,
+- packet zbiera:
+  selector axiom,
+  actual theta,
+  actual basis pair,
+  actual orientation slice,
+  bridge instance,
+  robustness,
+  compatibility,
+  boundary certificate,
+- wynik pozostaje jawnie poza strict core i nie rozladowuje `T12_B1`.
+
+Frontier po `AX8`:
+- `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`,
+- `AX8` pozostaje publication-ready lane axiom-augmented, nie strict-core closure.

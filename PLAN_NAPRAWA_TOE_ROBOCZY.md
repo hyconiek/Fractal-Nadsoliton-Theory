@@ -7630,3 +7630,36 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - albo domknac lane aksjomatyczny przez `AX8` jako publication-ready summary packet,
    - albo wrocic do `T12_B1`, jesli celem pozostaje strict-core theorem-level closure.
+
+## 487. AX8 publication-ready summary packet dla calego lane aksjomatycznego (2026-03-06)
+
+1. Cel:
+   - zebrac `AX1..AX7` do jednego packetu komunikacyjnego,
+   - zachowac jawna granice: tylko lane `axiom-augmented`, bez promowania do strict core.
+2. Wynik:
+   - utworzono persisted summary packet:
+     `fundamental_action_reconstruction/generated/axiom_lane_publication_ready_summary_packet.json`
+   - packet zawiera:
+     selector axiom,
+     actual theta,
+     actual basis pair,
+     actual orientation slice,
+     bridge instance,
+     robustness,
+     compatibility,
+     boundary certificate,
+     niezmieniony strict-core frontier.
+3. Frontier po kroku:
+   - strict core pozostaje bez zmian:
+     `T12_B1`,
+     `T2_B1`,
+     `C32_B2`,
+   - `AX8` dodaje tylko publication-ready packet poza strict core.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/AX8_AXIOM_LANE_PUBLICATION_READY_SUMMARY_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/ax8_axiom_lane_publication_ready_summary_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/ax8_axiom_lane_publication_ready_summary_packet_summary.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/axiom_lane_publication_ready_summary_packet.json`.
+5. Nastepny poprawny ruch:
+   - albo wypychac lane aksjomatyczny do osobnego materialu publikacyjnego,
+   - albo wracac do `T12_B1`, jesli celem pozostaje strict-core theorem-level closure.
