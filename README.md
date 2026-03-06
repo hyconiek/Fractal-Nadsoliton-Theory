@@ -745,5 +745,7 @@ Current status:
 - this opens actual `theta_1`, `theta_2`, `u_1`, `u_2`, and an actual orientation-slice carrier under the minimal selector axiom already known from `QW-2192/QW-2193`, while keeping that result explicitly outside strict core,
 - `AX2` completed as the first materialized actual-instance step on the axiom-augmented lane,
 - this creates a persisted actual basis-pair and orientation-slice instance under the `AX1` selector axiom, while keeping that result explicitly outside strict core,
+- `AX3` completed as the first materialized sigma-int bridge-instance step on the axiom-augmented lane,
+- this creates a persisted bridge-instance linking `sigma_int_candidate` to the residual orientation-datum role under the `AX1` selector axiom, while keeping that result explicitly outside strict core,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

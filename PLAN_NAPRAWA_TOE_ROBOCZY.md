@@ -7480,3 +7480,35 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - rozwijac pozytywny lane `axiom-augmented`,
    - albo wrocic do `T12_B1`, jesli celem pozostaje strict-core theorem-level closure.
+
+## 482. AX3 bridge-instance `sigma_int_candidate -> residual orientation datum` na lane aksjomatycznym (2026-03-06)
+
+1. Cel:
+   - wykonac pierwszy dodatni bridge-step po `AX2`,
+   - zmaterializowac jawny carrier mostu `sigma_int_candidate -> residual orientation datum`,
+   - przy zachowaniu granicy: tylko lane `axiom-augmented`.
+2. Wynik:
+   - utworzono persisted instance:
+     `fundamental_action_reconstruction/generated/axiom_lane_sigma_int_residual_datum_bridge_instance.json`
+   - bridge zapisuje:
+     `sigma_int_role = residual_orientation_datum_candidate`,
+     `theta_1 = theta_2 = 0 mod 2pi`,
+     `u_1 = c_1`,
+     `u_2 = c_2`,
+     `orientation_slice = span{c_1,c_2}`.
+3. Frontier po kroku:
+   - strict core pozostaje bez zmian:
+     `T12_B1`,
+     `T2_B1`,
+     `C32_B2`,
+   - `AX3` dodaje tylko bridge-instance carrier poza strict core.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/AX3_AXIOM_LANE_SIGMA_INT_RESIDUAL_DATUM_BRIDGE_INSTANCE.md`,
+   - dodano `fundamental_action_reconstruction/ax3_axiom_lane_sigma_int_residual_datum_bridge_instance.py`,
+   - wygenerowano
+     `fundamental_action_reconstruction/generated/ax3_axiom_lane_sigma_int_residual_datum_bridge_instance_summary.json`,
+   - wygenerowano
+     `fundamental_action_reconstruction/generated/axiom_lane_sigma_int_residual_datum_bridge_instance.json`.
+5. Nastepny poprawny ruch:
+   - rozwijac pozytywny lane `axiom-augmented`,
+   - albo wrocic do `T12_B1`, jesli celem pozostaje strict-core theorem-level closure.
