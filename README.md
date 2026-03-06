@@ -763,5 +763,7 @@ Current status:
 - this records the minimum methodological bar any future `K_obs` must satisfy before it can count as a strict-lane candidate rather than a narrative or an axiom-smuggling construction,
 - `H3` completed as the first concrete internal light-feedback operator ansatz packet,
 - this records a minimal fully internal operator composition for a future `K_obs`, while keeping explicit that no residual-sector test or selector export has yet been shown,
+- `H4` completed as the first residual-sector reduction of the light-feedback ansatz,
+- this reduces the test of `K_obs` to an explicit `2x2` anisotropy question on the residual `O(2)` selector sector, while keeping explicit that no coefficients have yet been computed,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

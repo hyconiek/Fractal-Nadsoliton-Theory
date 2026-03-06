@@ -1986,3 +1986,18 @@ Frontier po `H3`:
 - `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
 - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
 - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.
+
+Co realnie zostalo dodane przez `H4`:
+- zredukowano `H3` do residualnego sektora selektora `O(2)`,
+- zapisano projected operator:
+  `A_i = P_i E_i^* G_light^* R_mat^* O_obs R_mat G_light E_i P_i`,
+- zapisano zredukowana energie:
+  `q_i(theta_i) = lambda_obs <u_i(theta_i), A_i u_i(theta_i)>`,
+- pokazano, ze test operatora sprowadza sie do pytania o izotropie / anizotropie projected bloku `2x2`.
+
+Frontier po `H4`:
+- `H4_B1 := no explicit computed projected 2x2 coefficient block A_i = [[a_i,b_i],[b_i,d_i]] has yet been extracted for any actual mode pair`,
+- `H3_B1` zostaje zredukowane do poziomu extraction wspolczynnikow,
+- `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.

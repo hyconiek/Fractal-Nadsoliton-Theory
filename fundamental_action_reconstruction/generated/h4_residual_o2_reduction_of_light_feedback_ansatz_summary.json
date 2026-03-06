@@ -1,0 +1,28 @@
+{
+  "id": "H4",
+  "title": "residual O2 reduction of light-feedback ansatz",
+  "status": "PASS_PARTIAL_REDUCED_SELECTOR_TEST_PACKET_READY",
+  "as_of": "2026-03-06",
+  "scope": "reduce H3 ansatz to a projected 2x2 selector-sector test",
+  "reduced_operator": "A_i = P_i E_i^* G_light^* R_mat^* O_obs R_mat G_light E_i P_i",
+  "reduced_energy": "q_i(theta_i) = lambda_obs <u_i(theta_i), A_i u_i(theta_i)>",
+  "u_i": "u_i(theta_i) = cos(theta_i) c_i + sin(theta_i) s_i",
+  "matrix_form": "A_i = [[a_i, b_i], [b_i, d_i]]",
+  "normal_form": "q_i(theta_i) = lambda_obs((a_i+d_i)/2 + (a_i-d_i)/2 cos(2 theta_i) + b_i sin(2 theta_i))",
+  "test_dichotomy": {
+    "isotropic": "a_i = d_i and b_i = 0 implies no residual O(2) breaking on the pair",
+    "anisotropic": "(a_i-d_i, b_i) != (0,0) implies orientation-selecting effective energy on the pair"
+  },
+  "frontier": {
+    "H4_B1": "no explicit computed projected 2x2 coefficient block A_i = [[a_i,b_i],[b_i,d_i]] has yet been extracted for any actual mode pair",
+    "H3_B1": "no tested reduction of the H3 ansatz onto the residual O(2) selector sector has yet been constructed is reduced to coefficient extraction level",
+    "T12_B1": "strict-core typing judgment with totality and uniqueness remains undischarged",
+    "C32_B2": "raw cross-pair overlap route remains degenerate"
+  },
+  "hard_limits": {
+    "theorem_level_pass": false,
+    "full_closure_pass": false,
+    "q_w_2191_discharged": false,
+    "strict_core_theta_export_present": false
+  }
+}

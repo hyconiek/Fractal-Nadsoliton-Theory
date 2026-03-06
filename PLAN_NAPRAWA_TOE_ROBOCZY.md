@@ -7738,3 +7738,30 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - zredukowac `H3` na residualny sektor `O(2)`,
    - i sprawdzic, czy ansatz daje niezerowy efekt symmetry-breaking bez selector smuggling.
+
+## 491. H4 residual O(2) reduction of light-feedback ansatz (2026-03-06)
+
+1. Cel:
+   - zredukowac `H3` na residualny sektor selektora `O(2)`,
+   - zapisac pierwszy rzeczywisty test operatora `K_obs`.
+2. Wynik:
+   - zapisano projected operator:
+     `A_i = P_i E_i^* G_light^* R_mat^* O_obs R_mat G_light E_i P_i`,
+   - zapisano zredukowana energie:
+     `q_i(theta_i) = lambda_obs <u_i(theta_i), A_i u_i(theta_i)>`,
+   - w bazie `{c_i,s_i}` problem redukuje sie do bloku:
+     `A_i = [[a_i,b_i],[b_i,d_i]]`,
+   - oraz do dychotomii:
+     izotropia `a_i=d_i, b_i=0` versus anizotropia `(a_i-d_i,b_i) != (0,0)`.
+3. Frontier po kroku:
+   - `H4_B1 := no explicit computed projected 2x2 coefficient block A_i = [[a_i,b_i],[b_i,d_i]] has yet been extracted for any actual mode pair`,
+   - `H3_B1` zostaje zredukowane do poziomu extraction wspolczynnikow,
+   - `T12_B1`,
+   - `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/H4_RESIDUAL_O2_REDUCTION_OF_LIGHT_FEEDBACK_ANSATZ.md`,
+   - dodano `fundamental_action_reconstruction/h4_residual_o2_reduction_of_light_feedback_ansatz.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h4_residual_o2_reduction_of_light_feedback_ansatz_summary.json`.
+5. Nastepny poprawny ruch:
+   - sprobowac wyciagnac pierwszy jawny projected blok `2x2`,
+   - i sprawdzic, czy jest izotropowy czy anizotropowy.
