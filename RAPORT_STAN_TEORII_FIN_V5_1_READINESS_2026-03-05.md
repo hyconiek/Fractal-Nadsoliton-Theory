@@ -779,6 +779,8 @@ Status nowego toru:
 - `C39` pokazuje, ze candidate-fit pozostaje jedyna jawna warstwa dla tej identyfikacji, a packet-ready acceptance skeleton takze nie istnieje,
 - `C40` wykonane jako czterdziesty krok trzeciego mikrocyklu,
 - `C40` pokazuje, ze minimal field list dla przyszlego acceptance skeletonu jest juz jawna, ale nadal brak assembled acceptance artifact,
+- `C41` wykonane jako czterdziesty pierwszy krok trzeciego mikrocyklu,
+- `C41` pokazuje, ze minimalny acceptance artifact schema jest juz packet-ready, ale nadal brak jego persisted instancji,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -1439,6 +1441,16 @@ Co realnie zostalo dodane przez `C40`:
   - `forbidden_overclaim_set`,
 - pierwszy residualny blocker zawęża sie dalej do:
   - `C40_B1 := no_explicit_assembled_acceptance_artifact_built_from_the_already_present_minimal_field_list_for_identifying_sigma_int_candidate_with_the_residual_orientation_datum`,
+- drugi residualny blocker pozostaje:
+  - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
+- trzeci residualny blocker pozostaje:
+  - `C26_B2 := no_explicit_basis_level_embedding_or_extraction_of_the_candidate_two_dimensional_orientation_slice_inside_that_reduced_plane`,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `C41`:
+- minimalny acceptance artifact schema dla identyfikacji `sigma_int_candidate <-> residual datum` jest juz skladalny z jawnych pol,
+- pierwszy residualny blocker zawęża sie dalej do:
+  - `C41_B1 := no_explicit_persisted_acceptance_artifact_instance_for_identifying_sigma_int_candidate_with_the_residual_orientation_datum_even_though_a_minimal_schema_is_now_packet_ready`,
 - drugi residualny blocker pozostaje:
   - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
 - trzeci residualny blocker pozostaje:

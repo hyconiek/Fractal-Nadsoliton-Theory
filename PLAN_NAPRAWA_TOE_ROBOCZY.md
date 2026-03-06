@@ -6620,3 +6620,30 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - przejsc do `C41` i sprawdzic, czy strict core ma juz packet-ready
      assembled acceptance artifact schema dla tej identyfikacji.
+
+## 449. C41 acceptance artifact schema packet wykonane (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy z juz obecnej minimal field list da sie zlozyc packet-ready
+     schema acceptance artifactu dla identyfikacji
+     `sigma_int_candidate <-> residual orientation datum`.
+2. Wynik:
+   - wszystkie potrzebne pola semantyczne sa juz obecne,
+   - minimalny schema artifact da sie uczciwie zapisac,
+   - nadal brak persisted instancji tego artifactu jako osobnego obiektu roboczego,
+   - aktywny blocker zawęża sie dalej do braku jawnej instancji artifactu.
+3. Twarde granice:
+   - brak theorem-level PASS,
+   - brak full-closure PASS,
+   - brak claimu, ze schema artifact rowna sie theorem-spec,
+   - brak claimu, ze schema artifact rowna sie export-spec,
+   - brak claimu, ze `QW-2191` jest rozladowane,
+   - brak finalnej orientation slice.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C41_ACCEPTANCE_ARTIFACT_SCHEMA_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/c41_acceptance_artifact_schema_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c41_acceptance_artifact_schema_packet_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `C42` i sprawdzic, czy strict core ma juz packet-ready
+     persisted template albo file-level carrier dla takiej artifact instance.

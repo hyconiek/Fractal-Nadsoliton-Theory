@@ -678,5 +678,7 @@ Current status:
 - this moves the theory forward only by making explicit that even an acceptance skeleton is still absent for that identification, so the active layer remains candidate-fit only,
 - `C40` completed as the fortieth step of the next micro-cycle,
 - this moves the theory forward only by making explicit that the minimal field list is already present while the assembled acceptance artifact is still absent,
+- `C41` completed as the forty-first step of the next micro-cycle,
+- this moves the theory forward only by making explicit that a minimal acceptance artifact schema is now packet-ready while a persisted artifact instance is still absent,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.
