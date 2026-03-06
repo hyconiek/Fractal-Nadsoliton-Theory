@@ -8470,3 +8470,6 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - albo stworzyc pierwszy actual witness `Route P1` lub `Route P2`,
    - albo uczciwie zatrzymac lane na poziomie symbolicznym bez populated entries.
+
+
+- `H29`: stare proxy `retard_phase/tau/gain` moduluja preorientowany kanal, ale nie dostarczaja same wewnetrznego strict-core anchoru orientacji.

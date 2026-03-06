@@ -1,0 +1,27 @@
+{
+  "step": "H29",
+  "title": "wave_retardation_proxy_selector_reduction_audit",
+  "inputs": {
+    "anisotropic_psf_term": "cos(2*(th-psi0)+phase)",
+    "retardation_proxy": "retard_phase",
+    "memory_proxy": "observer_tau",
+    "feedback_gain_proxy": "observer_feedback_gain",
+    "orientation_anchor": "orientation_psi0"
+  },
+  "reduction": {
+    "expanded_angular_term": "cos(2*(th-psi0))*cos(phase) - sin(2*(th-psi0))*sin(phase)",
+    "proxy_roles": {
+      "retard_phase": "reweights_existing_angular_harmonics",
+      "observer_tau": "sets_response_time_or_memory_scale",
+      "observer_feedback_gain": "sets_feedback_amplitude",
+      "orientation_psi0": "supplies_preoriented_directional_anchor"
+    }
+  },
+  "selector_sector_result": {
+    "wave_and_memory_proxies_alone_generate_anchor": false,
+    "wave_and_memory_proxies_only_modulate_preanchored_channel": true,
+    "strict_core_internal_theta_source_recovered": false
+  },
+  "frontier": "H29_B1",
+  "status": "PASS_PARTIAL_PREORIENTED_PROXY_REDUCTION_ONLY"
+}
