@@ -739,5 +739,7 @@ Current status:
 - this moves the theory forward only by replacing open-ended `T13+` meta-ladder growth with an explicit global dichotomy theorem spec: either the present strict core has no internal theta-source, or any successful theta-source derivation requires an additional selector/admissibility axiom not currently present in the declared strict core,
 - `N3` completed as the first global discharge attempt for `N2`,
 - this moves the theory forward only by showing that the global negative theorem now fails exactly at the globalization step through `T12_B1`, not at the scoped negative theorem itself,
+- `D1` completed as the current best-supported project conclusion after `N3`,
+- this records the strongest honest interpretation now supported by the evidence: selector closure is not achieved in strict core, and the project must either discharge `T12_B1` directly or accept selector-axiom necessity / strict-core incompleteness as the active design conclusion,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

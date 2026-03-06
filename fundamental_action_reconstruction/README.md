@@ -1,6 +1,6 @@
 # Fundamental Action Reconstruction
 
-Status: `PROGRAM_PHASE1_COMPLETE_C55_T1_T12_PLUS_N1_N2_N3_NEGATIVE_THEOREM_LANE_NO_FALSE_PASS`
+Status: `PROGRAM_PHASE1_COMPLETE_C55_T1_T12_PLUS_N1_N2_N3_AND_D1_SELECTOR_AXIOM_CONCLUSION_NO_FALSE_PASS`
 As of: `2026-03-06`
 
 Ten katalog otwiera rownolegly tor konstrukcyjny poza drabinka `L5/L12`.
@@ -328,6 +328,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `N1`: wykonane jako scope-bounded negative theorem po zatrzymaniu dalszej meta-drabinki `T13+`; w zakresie juz audytowanej szesciotrasowej rodziny eksportu `theta_i` theorem jest rzeczywiscie discharged: zadna z tych tras nie eksportuje actual strict-core `theta_1`, `theta_2`, ale wynik nie globalizuje sie jeszcze do calego strict core, bo `T12_B1` pozostaje otwarty.
 - `N2`: wykonane jako globalny theorem-spec po wyborze sciezki o wiekszej szansie powodzenia; zapisuje uczciwa dychotomie dla biezacego strict core: albo brak internal `theta` source, albo kazde udane wyprowadzenie wymaga dodatkowego aksjomatu/admissibility principle nieobecnego obecnie w rdzeniu strict. To nadal jest tylko theorem-spec, bez discharge.
 - `N3`: wykonane jako pierwszy globalny discharge attempt dla `N2`; failure wraca dokladnie do globalizacji przez `T12_B1`, czyli brakujacego theorem-level kroku, ktory podnosilby `N1` plus zewnetrznosc lane axiom-augmented do globalnej dychotomii na calym current strict core.
+- `D1`: wykonane jako jawny projektowy wniosek po `N3`; obecnie najlepiej wsparty stan brzmi: strict core nie ma domknietego selector closure, a najbardziej uczciwa interpretacja to selector-axiom necessity albo strict-core incompleteness. To nie jest theorem-level wynik.
 
 ## Twarde ograniczenia rygoru
 
@@ -417,6 +418,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - brak claimu, ze `N1` daje globalny strict-core no-internal-theta-source theorem; `N1` jest domkniety tylko w zakresie juz audytowanej rodziny tras.
 - brak claimu, ze `N2` jest juz discharged albo ze rozstrzyga, ktora galaz dychotomii jest prawdziwa.
 - brak claimu, ze `N3` discharge'uje `N2`; `N3` tylko potwierdza, ze failure siedzi w globalizacji przez `T12_B1`.
+- brak claimu, ze `D1` jest twierdzeniem; to jest current best-supported project conclusion.
 - brak claimu, ze `C42` daje juz theorem-spec, export-spec, discharge `QW-2191`, closure `A6` albo finalna orientation slice.
 
 ## Zasada korzystania z poprzednich badan
@@ -522,6 +524,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `N1_AUDITED_ROUTE_FAMILY_NO_INTERNAL_THETA_SOURCE_THEOREM.md`
 - `N2_GLOBAL_STRICT_CORE_IMPOSSIBILITY_OR_AXIOM_NECESSITY_THEOREM_SPEC.md`
 - `N3_GLOBAL_IMPOSSIBILITY_OR_AXIOM_NECESSITY_DISCHARGE_ATTEMPT.md`
+- `D1_SELECTOR_AXIOM_NECESSITY_CURRENT_BEST_SUPPORTED_CONCLUSION.md`
 - `C43_FILENAME_PATH_CONVENTION_AUDIT.md`
 - `a1_minimal_action_ansatz.py`
 - `a2_supersoliton_matching.py`

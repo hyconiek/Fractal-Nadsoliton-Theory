@@ -1793,3 +1793,17 @@ Frontier po `N3`:
 - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
 - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
 - nadal brak globalnego theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `D1`:
+- po `N3` theorem-lane nie jest juz rozwijane mechanicznie dalej,
+- jawnie zapisano obecnie najlepiej wsparty wniosek projektowy:
+  strict core nie ma domknietego selector closure,
+  a najbardziej uczciwa interpretacja to selector-axiom necessity
+  albo strict-core incompleteness,
+- nie jest to theorem-level wynik, tylko skondensowany projektowy wniosek z `N1`, `N2`, `N3`, `T12`, `T2`.
+
+Frontier po `D1`:
+- `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`,
+- nadal brak globalnego theorem-level/full-closure PASS.

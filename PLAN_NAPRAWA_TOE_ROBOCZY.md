@@ -7403,3 +7403,25 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - zatrzymac theorem-lane, jesli `T12_B1` nie bedzie atakowane bezposrednio,
    - albo jawnie zapisac koniecznosc aksjomatu jako aktualnie najlepiej wsparty wniosek projektowy.
+
+## 479. D1 aktualnie najlepiej wsparty wniosek projektowy po N3 (2026-03-06)
+
+1. Cel:
+   - nie rozwijac dalej theorem-lane bez nowego obiektu rozstrzygalnego,
+   - zapisac na twardo najlepszy obecnie wsparty wniosek projektowy.
+2. Wynik:
+   - strict core nie ma obecnie domknietego selector closure,
+   - najlepiej wsparty wniosek projektowy brzmi:
+     selector-axiom necessity albo strict-core incompleteness.
+3. Frontier po kroku:
+   - `T12_B1`,
+   - `T2_B1`,
+   - `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/D1_SELECTOR_AXIOM_NECESSITY_CURRENT_BEST_SUPPORTED_CONCLUSION.md`,
+   - dodano `fundamental_action_reconstruction/d1_selector_axiom_necessity_current_best_supported_conclusion.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/d1_selector_axiom_necessity_current_best_supported_conclusion_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - albo atakowac `T12_B1` bezposrednio,
+   - albo przejsc na jawnie `axiom-augmented` pozytywny lane z rozdzieleniem claimow.

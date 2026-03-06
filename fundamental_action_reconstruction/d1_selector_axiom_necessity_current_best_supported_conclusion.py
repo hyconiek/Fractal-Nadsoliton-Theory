@@ -1,0 +1,49 @@
+#!/usr/bin/env python3
+import json
+from pathlib import Path
+
+root = Path(__file__).resolve().parent
+out = root / "generated" / "d1_selector_axiom_necessity_current_best_supported_conclusion_summary.json"
+out.parent.mkdir(parents=True, exist_ok=True)
+
+payload = {
+    "step": "D1",
+    "status": "D1_CURRENT_BEST_SUPPORTED_PROJECT_CONCLUSION_SELECTOR_AXIOM_NECESSITY_NO_FALSE_PASS",
+    "date": "2026-03-06",
+    "result_kind": "best_supported_project_conclusion_not_theorem",
+    "supports": [
+        "N1",
+        "N2",
+        "N3",
+        "T12",
+        "T2",
+        "C35",
+        "C51",
+        "C52",
+        "C53",
+        "C54",
+        "C55",
+        "A10"
+    ],
+    "project_conclusion": "strict_core_selector_closure_not_achieved_current_best_supported_design_conclusion_is_selector_axiom_necessity_or_strict_core_incompleteness",
+    "frontier": [
+        "T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track",
+        "T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent",
+        "C32_B2 := raw overlap route remains degenerate"
+    ],
+    "recommended_next_moves": [
+        "attack_T12_B1_directly",
+        "switch_to_explicit_axiom_augmented_selector_closure_lane"
+    ],
+    "theorem_level_pass": False,
+    "full_closure_pass": False,
+    "anti_overclaim": [
+        "no claim that D1 is a theorem",
+        "no claim that selector axiom is uniquely identified",
+        "no claim that QW-2191 is discharged",
+        "no claim of full TOE closure"
+    ]
+}
+
+out.write_text(json.dumps(payload, indent=2) + "\n", encoding="ascii")
+print(out)
