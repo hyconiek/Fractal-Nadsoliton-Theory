@@ -8480,3 +8480,4 @@ Po tej rundzie:
 - `V3`: minimalny pair-level operator lepkości jest dopuszczalny tylko jako izotropowy `nu_iso * I_2` albo anizotropowy z importowanym anchorem `psi0`, wiec sam nie domyka selektora.
 - `V4`: sprzezenie `psi0 + anizotropowa viscosity` daje pair-level efekt, ale tylko jako wzmacniacz/refiner juz importowanego anchoru, nie jako niezalezne zrodlo selekcji.
 - `V5`: lane `psi0 + viscosity` ma juz jawny boundary certificate i pozostaje tylko pomocniczym lane `anchor-amplifying / anchor-refining`, bez promocji do strict core ani theorem-level/full-closure.
+- `V6`: lane `psi0 + viscosity` daje rzeczywisty spectral/response split ponad samo `psi0`, ale nie wnosi nowego zrodla orientacji i nie zastępuje glownego lane `psi0`.
