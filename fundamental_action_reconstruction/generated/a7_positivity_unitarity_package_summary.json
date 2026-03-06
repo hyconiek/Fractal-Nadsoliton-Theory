@@ -1,0 +1,108 @@
+{
+  "program_id": "fundamental_action_reconstruction",
+  "as_of": "2026-03-06",
+  "status": "A7_EXECUTED_STRICT_SCOPE_PARTIAL_WITH_TERMINAL_POSITIVITY_AND_UNITARITY_OBLIGATIONS_OPEN_NO_FULL_CLOSURE_CLAIM",
+  "strict_reference_policy": {
+    "allowed_sources": [
+      "A3",
+      "QW-2186",
+      "QW-2133",
+      "QW-2134",
+      "QW-2138",
+      "QW-2202",
+      "QW-2214",
+      "QW-2216"
+    ],
+    "excluded_from_strict_core": [
+      "legacy_or_exploratory_prior_art",
+      "full_L5_provider_chain_as_a_closed_result",
+      "A8_plus_bridge_layers"
+    ],
+    "reason_for_exclusion": "A7 integrates only executed local/branch-scope evidence and explicit theorem-level boundaries."
+  },
+  "anti_overclaim": {
+    "global_nonperturbative_existence_uniqueness_claim": false,
+    "global_reflection_positivity_reconstruction_claim": false,
+    "global_smatrix_unitarity_claim": false,
+    "fermionic_theorem_level_closure_claim": false,
+    "lorentzian_hyperbolic_ghost_free_closure_claim": false,
+    "full_L5_closed_claim": false
+  },
+  "a7": {
+    "goal": "Integrate the strongest admissible positivity/unitarity package without false global closure claims.",
+    "sector_matrix": [
+      {
+        "object": "bosonic Euclidean positivity margin",
+        "status": "partial_strict_branch_scope",
+        "source": "QW-2186",
+        "scope": "bounded symmetric perturbations only"
+      },
+      {
+        "object": "projection-before-claim kernel discipline",
+        "status": "established",
+        "source": "A3"
+      },
+      {
+        "object": "free-sector microcausality",
+        "status": "partial_strict_scope",
+        "source": "QW-2133"
+      },
+      {
+        "object": "perturbative interacting microcausality",
+        "status": "partial_conditional",
+        "source": "QW-2134"
+      },
+      {
+        "object": "all-orders microcausality scaffold",
+        "status": "partial_proof_completion",
+        "source": "QW-2138"
+      },
+      {
+        "object": "local action + microcausality + renormalization stack",
+        "status": "integrated_strict_scope",
+        "source": "QW-2202"
+      },
+      {
+        "object": "positivity-to-reconstruction theorem",
+        "status": "blocked_by_single_terminal_obligation",
+        "source": "QW-2214",
+        "obligation": "L5_O1a_O1"
+      },
+      {
+        "object": "unitary scattering completeness theorem",
+        "status": "blocked_by_single_terminal_obligation",
+        "source": "QW-2216",
+        "obligation": "L5_O1b_O1"
+      },
+      {
+        "object": "global reflection positivity / Wightman reconstruction",
+        "status": "open",
+        "source": "QW-2202"
+      },
+      {
+        "object": "full Lorentzian hyperbolicity / ghost-free package",
+        "status": "unresolved_in_A7",
+        "source": "A3"
+      }
+    ],
+    "global_open_components": [
+      "global_nonperturbative_qft_existence_uniqueness_theorem_from_complete_fin_action",
+      "global_smatrix_unitarity_theorem_from_complete_fin_action",
+      "global_reflection_positivity_or_wightman_reconstruction_for_complete_fin_action"
+    ],
+    "terminal_blockers": [
+      {
+        "id": "L5_O1a_O1",
+        "description": "constructive nonperturbative existence/uniqueness with positivity-to-reconstruction theorem",
+        "status": "open"
+      },
+      {
+        "id": "L5_O1b_O1",
+        "description": "unitary S-matrix with asymptotic/scattering completeness",
+        "status": "open"
+      }
+    ],
+    "verdict": "strict-scope positivity/unitarity package integrated; global theorem-level closure remains open",
+    "next_step": "A8"
+  }
+}

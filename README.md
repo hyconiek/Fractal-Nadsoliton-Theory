@@ -572,6 +572,12 @@ Current status:
 - `A5` completed as a spinor-route split with a methodological audit of prior local studies,
 - legacy/non-strict prior studies are now treated only as heuristics or negative controls, not as proof inputs,
 - the primary route is now `3D topological spinor emergence`, with `minimal spin-bundle extension` retained as a control route,
-- `A6` remains the next explicit stage,
+- `A6` completed as a strict-core gauge reconstruction layer using only admissible internal references,
+- this moves the theory forward only to `strict-core partial SU(3)xSU(2)xU(1) scaffold`, not to full unique gauge closure,
+- `A7` completed as a strict-scope positivity/unitarity package,
+- this moves the theory forward only to an integrated local/branch-scope positivity-causality layer with explicit terminal global blockers `L5_O1a_O1` and `L5_O1b_O1`,
+- `A8` completed as a strict-scope partial gravity bridge,
+- this moves the theory forward only to an integrated effective/scope-closed gravity layer with explicit foundational blockers for `G`, Einstein-Hilbert derivation and full SM+GR reduction,
+- `A9` is now the next explicit stage,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

@@ -5158,3 +5158,83 @@ Po tej rundzie:
    - brak traktowania legacy prior art jako dowodu.
 7. Nastepny poprawny ruch:
    - przejsc do `A6` i budowac `gauge reconstruction` tylko na admissible strict references, z legacy korpusem pozostawionym poza warstwa proof-level.
+
+## 396. A6 gauge reconstruction wykonane (2026-03-06)
+1. Zakres:
+   - wykonano `A6` jako warstwe `gauge reconstruction`,
+   - uzyto tylko `strict-admissible internal references`: `QW-2126`, `QW-2127`, `QW-2184`, `QW-2189`, `QW-2190`, `QW-2191`,
+   - jawnie wykluczono z rdzenia strict `QW-2192`, `QW-2193` oraz legacy korpus.
+2. Co zostalo realnie ustalone:
+   - `SU(3)` i `SU(2)` maja strict-core kernel-mode Lie scaffold,
+   - `U(1)` ma strict-core hypercharge closure w zadeklarowanej klasie formul,
+   - anomaly/charge closure pozostaje w strict-core partial,
+   - numeric/action-level coupling bridge dla `g`, `g'`, `g3` pozostaje realnie dostepny.
+3. Co pozostaje zablokowane:
+   - pelna fizyczna unikalnosc representation map jest zablokowana przez `QW-2191`,
+   - axiom-augmented uniqueness z `QW-2192/2193` nie jest liczona do rdzenia strict,
+   - bezposrednia gauge derivation z `A1-A4` alone pozostaje nierozstrzygnieta.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/A6_GAUGE_RECONSTRUCTION_SPEC.md`,
+   - dodano `fundamental_action_reconstruction/a6_gauge_reconstruction.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/a6_gauge_reconstruction_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Twardy rygor:
+   - brak theorem-level/full-closure PASS,
+   - brak claimu pelnej unikalnosci `SU(3)xSU(2)xU(1)`,
+   - postep jest tylko do poziomu `strict-core partial scaffold`.
+6. Nastepny poprawny ruch:
+   - przejsc do `A7` i domykac `positivity/unitarity package` bez eskalacji claimow o gauge uniqueness.
+
+## 397. A7 positivity/unitarity package wykonane (2026-03-06)
+1. Zakres:
+   - wykonano `A7` jako warstwe `positivity / unitarity package`,
+   - uzyto tylko `A3`, `QW-2186`, `QW-2133`, `QW-2134`, `QW-2138`, `QW-2202`, `QW-2214`, `QW-2216`,
+   - jawnie nie liczono globalnego `L5` jako rozladowanego.
+2. Co zostalo realnie ustalone:
+   - istnieje branch-scope bosonic positivity margin dla `A = K_total + m0^2 I`,
+   - istnieje strict-scope free + perturbative causality stack,
+   - istnieje proof-completion scaffold dla interacting microcausality,
+   - strict local action + microcausality + renormalization stack jest zintegrowany.
+3. Co pozostaje zablokowane:
+   - `L5_O1a_O1`: positivity-to-reconstruction theorem dla complete FIN action,
+   - `L5_O1b_O1`: unitary scattering completeness theorem,
+   - global reflection positivity / Wightman reconstruction,
+   - pelny Lorentzian hyperbolic / ghost-free package.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/A7_POSITIVITY_UNITARITY_PACKAGE_SPEC.md`,
+   - dodano `fundamental_action_reconstruction/a7_positivity_unitarity_package.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/a7_positivity_unitarity_package_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Twardy rygor:
+   - brak theorem-level/full-closure PASS,
+   - brak claimu rozladowania `L5`,
+   - postep jest tylko do poziomu zintegrowanego strict-scope positivity/unitarity package.
+6. Nastepny poprawny ruch:
+   - przejsc do `A8` i budowac `gravity bridge` bez mieszania go z falszywym domknieciem `L5`.
+
+## 398. A8 gravity bridge wykonane (2026-03-06)
+1. Zakres:
+   - wykonano `A8` jako warstwe `gravity bridge`,
+   - uzyto tylko `A1-A4`, `A7`, `QW-2198`, `QW-2199`, `QW-2200`, `QW-2201`, `QW-2207`,
+   - jawnie nie liczono foundational GR bridge jako rozladowanego.
+2. Co zostalo realnie ustalone:
+   - istnieje strict partial Planck bridge,
+   - effective gravity action-level bridge jest jawny i zintegrowany,
+   - GR-limit conditions sa jawnie skatalogowane,
+   - low-energy SM+GR reduction jest zamknieta w zadeklarowanym strict scope.
+3. Co pozostaje zablokowane:
+   - internal origin of `G` bridge observable,
+   - Einstein-Hilbert direct derivation,
+   - equivalence principle derivation,
+   - full SM+GR reduction theorem.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/A8_GRAVITY_BRIDGE_SPEC.md`,
+   - dodano `fundamental_action_reconstruction/a8_gravity_bridge.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/a8_gravity_bridge_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Twardy rygor:
+   - brak theorem-level/full-closure PASS,
+   - brak claimu foundational GR closure,
+   - postep jest tylko do poziomu strict-scope partial gravity bridge.
+6. Nastepny poprawny ruch:
+   - przejsc do `A9` i skladac uczciwa warstwe `SM+GR effective reduction`.

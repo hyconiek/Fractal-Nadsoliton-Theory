@@ -673,6 +673,12 @@ Status nowego toru:
 - `A4` wykonane jako jednokrokowa warstwa coarse-graining / RG emergence na tej samej galezi minimalnej,
 - `A5` wykonane jako split `spinor-emergent route` vs `minimal spin-bundle extension`,
 - w `A5` wprowadzono jawny audit metodologiczny: legacy/non-strict prior art nie jest traktowany jako proof input,
+- `A6` wykonane jako `strict-core gauge reconstruction`,
+- `A6` uzywa tylko admissible internal references i jawnie wyklucza axiom-augmented uniqueness z rdzenia strict,
+- `A7` wykonane jako `strict-scope positivity/unitarity package`,
+- `A7` integruje tylko branch-scope positivity, strict-scope causality stack oraz jawne terminalne obligacje globalne,
+- `A8` wykonane jako `strict-scope partial gravity bridge`,
+- `A8` integruje tylko effective gravity bridge, GR-limit catalog i low-energy SM+GR reduction scope z jawnymi foundational blockers,
 - brak theorem-level/full-closure claim,
 - brak claimu, ze nowy tor juz wyprowadzil spinory, gamma, `SU(3)xSU(2)xU(1)` albo GR.
 
@@ -703,3 +709,31 @@ Co realnie zostalo dodane przez `A5`:
 - lista admissible internal references (`QW-2121/2126/2127/2189/2190/2191`),
 - jawna degradacja legacy badań do roli heurystyki albo negatywnej kontroli,
 - nadal bez claimu theorem-level derivation spinorow lub gamma matrices.
+
+Co realnie zostalo dodane przez `A6`:
+- `SU(3)xSU(2)xU(1)` zostalo podniesione do poziomu strict-core partial scaffold,
+- algebra kernel-mode + hypercharge-class + anomaly consistency + coupling bridge zostaly scalone w jedna warstwe gauge reconstruction,
+- pelna fizyczna unikalnosc reconstruction pozostaje jawnie zablokowana przez obstruction `QW-2191`,
+- axiom-augmented closure `QW-2192/2193` nie jest liczona do rdzenia strict,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `A7`:
+- istnieje branch-scope bosonic positivity margin (`QW-2186`) po poprawnym rozroznieniu projekcji modow z `A3`,
+- istnieje strict-scope causality stack: free-sector (`QW-2133`), perturbative interacting (`QW-2134`) i proof-completion scaffold (`QW-2138`),
+- strict local action + microcausality + renormalization schema sa jawnie zintegrowane (`QW-2202`),
+- globalny pakiet `L5` pozostaje jawnie otwarty i jest rozdzielony co najmniej na dwa terminalne blockery:
+  - `L5_O1a_O1` (`QW-2214`),
+  - `L5_O1b_O1` (`QW-2216`),
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `A8`:
+- istnieje strict partial Planck bridge z jawnie utrzymana zaleznoscia od zewnetrznego bridge dla `G` (`QW-2198`, `QW-2207`),
+- effective gravity action-level bridge jest jawnie zintegrowany (`QW-2199`),
+- GR-limit conditions sa jawnie skatalogowane (`QW-2201`),
+- low-energy SM+GR reduction jest jawnie domknieta w zadeklarowanym scope (`QW-2200`),
+- foundational gravity package pozostaje jawnie otwarty:
+  - internal origin of `G`,
+  - Einstein-Hilbert direct derivation,
+  - equivalence principle derivation,
+  - full SM+GR reduction theorem,
+- nadal brak theorem-level/full-closure PASS.
