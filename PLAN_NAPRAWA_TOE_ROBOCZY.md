@@ -6318,3 +6318,30 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - przejsc do `C30` i sprawdzic, czy strict core ma juz packet-ready
      pair-to-pair global gluing rule dla dwoch lokalnych reduced lines.
+
+## 438. C30 pair-to-pair gluing compatibility packet wykonane (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy strict core ma juz packet-ready overlap compatibility law
+     dla dwoch lokalnych reduced lines pod ortogonalna transformacja przejscia,
+     nawet jesli brak jeszcze jawnego eksportu `G_12`.
+2. Wynik:
+   - lokalna relacja kompatybilnosci overlapowej jest jawna:
+     `G(alpha) P_red(theta) G(alpha)^T = P_red(theta+alpha)`,
+   - aktywny blocker zawęża sie dalej do braku jawnie zserializowanego
+     transition matrix / transition angle oraz nadal otwartego finalnego
+     slice extraction.
+3. Twarde granice:
+   - brak theorem-level PASS,
+   - brak full-closure PASS,
+   - brak jawnego `G_12`,
+   - brak globalnego reduced control plane,
+   - brak finalnej orientation slice.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C30_PAIR_TO_PAIR_GLUING_COMPATIBILITY_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/c30_pair_to_pair_gluing_compatibility_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c30_pair_to_pair_gluing_compatibility_packet_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `C31` i sprawdzic, czy strict core ma juz packet-ready
+     kandydat zrodla transition angle `alpha_12`.

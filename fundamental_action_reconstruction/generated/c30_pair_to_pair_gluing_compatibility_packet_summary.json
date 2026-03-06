@@ -1,0 +1,233 @@
+{
+  "stage": "C30",
+  "status": "C30_EXECUTED_PAIR_TO_PAIR_GLUING_COMPATIBILITY_PACKET_NO_FALSE_PASS",
+  "as_of": "2026-03-06",
+  "goal": "Reduce C29_B1 by checking whether strict core already supports a packet-ready pair-to-pair overlap compatibility law for local reduced lines under orthogonal transition, even if no explicit exported transition matrix is present.",
+  "inputs": {
+    "strict_admissible": [
+      "C4",
+      "C28",
+      "C29",
+      "C14",
+      "A10"
+    ]
+  },
+  "compatibility_law": {
+    "transition": "G(alpha) in O(2)",
+    "vector_rule": "G(alpha)e(theta) = e(theta+alpha)",
+    "reduced_projector_rule": "G(alpha) P_red(theta) G(alpha)^T = P_red(theta+alpha)",
+    "tangent_projector_rule": "G(alpha) P_tan(theta) G(alpha)^T = P_tan(theta+alpha)"
+  },
+  "numeric_samples": [
+    {
+      "theta": 0.0,
+      "alpha": 0.0,
+      "P_red(theta)": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "G(alpha)": [
+        [
+          1.0,
+          -0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "G P_red(theta) G^T": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "P_red(theta+alpha)": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "G P_tan(theta) G^T": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "P_tan(theta+alpha)": [
+        [
+          0.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "theta": 0.5235987755982988,
+      "alpha": 0.7853981633974483,
+      "P_red(theta)": [
+        [
+          0.75,
+          0.433012701892
+        ],
+        [
+          0.433012701892,
+          0.25
+        ]
+      ],
+      "G(alpha)": [
+        [
+          0.707106781187,
+          -0.707106781187
+        ],
+        [
+          0.707106781187,
+          0.707106781187
+        ]
+      ],
+      "G P_red(theta) G^T": [
+        [
+          0.066987298108,
+          0.25
+        ],
+        [
+          0.25,
+          0.933012701892
+        ]
+      ],
+      "P_red(theta+alpha)": [
+        [
+          0.066987298108,
+          0.25
+        ],
+        [
+          0.25,
+          0.933012701892
+        ]
+      ],
+      "G P_tan(theta) G^T": [
+        [
+          0.933012701892,
+          -0.25
+        ],
+        [
+          -0.25,
+          0.066987298108
+        ]
+      ],
+      "P_tan(theta+alpha)": [
+        [
+          0.933012701892,
+          -0.25
+        ],
+        [
+          -0.25,
+          0.066987298108
+        ]
+      ]
+    },
+    {
+      "theta": 0.6283185307179586,
+      "alpha": 1.0471975511965976,
+      "P_red(theta)": [
+        [
+          0.654508497187,
+          0.475528258148
+        ],
+        [
+          0.475528258148,
+          0.345491502813
+        ]
+      ],
+      "G(alpha)": [
+        [
+          0.5,
+          -0.866025403784
+        ],
+        [
+          0.866025403784,
+          0.5
+        ]
+      ],
+      "G P_red(theta) G^T": [
+        [
+          0.010926199633,
+          -0.103955845409
+        ],
+        [
+          -0.103955845409,
+          0.989073800367
+        ]
+      ],
+      "P_red(theta+alpha)": [
+        [
+          0.010926199633,
+          -0.103955845409
+        ],
+        [
+          -0.103955845409,
+          0.989073800367
+        ]
+      ],
+      "G P_tan(theta) G^T": [
+        [
+          0.989073800367,
+          0.103955845409
+        ],
+        [
+          0.103955845409,
+          0.010926199633
+        ]
+      ],
+      "P_tan(theta+alpha)": [
+        [
+          0.989073800367,
+          0.103955845409
+        ],
+        [
+          0.103955845409,
+          0.010926199633
+        ]
+      ]
+    }
+  ],
+  "result": {
+    "local_pair_to_pair_overlap_compatibility_present": "yes_partial",
+    "explicit_serialized_transition_matrix_between_actual_pair1_and_pair2": "not_shown",
+    "explicit_transition_angle_between_actual_pair1_and_pair2": "not_shown",
+    "final_basis_level_slice_extraction_present": "not_shown"
+  },
+  "residual_blockers": {
+    "C30_B1": "no_explicit_serialized_transition_matrix_or_transition_angle_between_the_two_local_pair_frames_for_assembling_a_single_reduced_control_plane",
+    "C26_B2": "no_explicit_basis_level_embedding_or_extraction_of_the_candidate_two_dimensional_orientation_slice_inside_that_reduced_plane"
+  },
+  "hard_limits": [
+    "no_theorem_level_pass",
+    "no_full_closure_pass",
+    "no_claim_that_global_gluing_is_resolved",
+    "no_claim_that_transition_matrix_G12_is_exported",
+    "no_claim_that_final_slice_extraction_is_resolved"
+  ],
+  "next_step": "C31"
+}

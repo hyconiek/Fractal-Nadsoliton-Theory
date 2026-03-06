@@ -656,5 +656,7 @@ Current status:
 - this moves the theory forward only by showing that a local orbit-frame quotient schema is already present in control coordinates, leaving serialized projector export, global gluing, and final slice extraction open,
 - `C29` completed as the twenty-ninth step of the next micro-cycle,
 - this moves the theory forward only by making the local projector formulas explicit, leaving global gluing and final slice extraction open,
+- `C30` completed as the thirtieth step of the next micro-cycle,
+- this moves the theory forward only by making the pair-to-pair overlap compatibility law explicit under an orthogonal transition, leaving explicit `G_12` export and final slice extraction open,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.
