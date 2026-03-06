@@ -8445,3 +8445,28 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - albo podpiac pierwszy actual coefficient witness,
    - albo uczciwie zatrzymac lane na symbolicznym operator instance bez value exportu.
+
+519. O4 entry population rule for `A_1_ext` (2026-03-06)
+1. Cel:
+   - dopiac jawne kryterium, kiedy wpis `a_1`, `b_1` lub `d_1` liczy sie jako legalnie populated.
+2. Wynik:
+   - zapisano dwie dopuszczalne trasy:
+     - `Route P1`: direct matrix-entry export,
+     - `Route P2`: basis-scalar export,
+   - obie wymagaja provenance zgodnego z `hypothesis_extension_only` i `operator_origin = exported_composite_A_1`.
+3. Frontier po kroku:
+   - `O4_B1 := the persisted A_1_ext instance now has an explicit admissible entry-population rule, but no actual Route P1 or Route P2 witness exists yet for a_1, b_1, or d_1`,
+   - `O3_B1`,
+   - `O2_B1`,
+   - `H28_B1`,
+   - `T12_B1`,
+   - `T2_B1`,
+   - `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/O4_A1_EXT_ENTRY_POPULATION_RULE.md`,
+   - dodano `fundamental_action_reconstruction/o4_a1_ext_entry_population_rule.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/o4_a1_ext_entry_population_rule.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/o4_a1_ext_entry_population_rule_summary.json`.
+5. Nastepny poprawny ruch:
+   - albo stworzyc pierwszy actual witness `Route P1` lub `Route P2`,
+   - albo uczciwie zatrzymac lane na poziomie symbolicznym bez populated entries.

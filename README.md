@@ -801,6 +801,7 @@ Current status:
 - `O1` completed as the minimal explicit operator-definition spec for `A_1_ext`, turning the next step from more audits into one concrete missing operator object,
 - `O2` completed as the first persisted `A_1_ext` instance in `exported_composite_A_1` mode, while keeping all coefficient entries symbolic and unresolved,
 - `O3` completed as the first explicit coefficient-readout rule attached to the persisted `A_1_ext` instance, while keeping all entries symbolic and therefore still non-evaluable,
+- `O4` completed as the first explicit entry-population rule for the persisted `A_1_ext` instance, while still having no actual populated witness for `a_1`, `b_1`, or `d_1`,
 - this reduces the next step to proving or refuting an explicit equivalence map from old kernel feedback to the new selector-facing operator lane, while keeping explicit that no such identification currently exists,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.

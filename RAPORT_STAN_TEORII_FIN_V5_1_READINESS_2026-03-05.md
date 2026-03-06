@@ -2313,6 +2313,26 @@ Frontier po `O3`:
 - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
 - `C32_B2 := raw cross-pair overlap route is formally degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.
 
+Co realnie zostalo dodane przez `O4`:
+- zapisano jawne kryterium, kiedy wpis `a_1`, `b_1` lub `d_1` liczy sie jako legalnie populated,
+- dopuszczalne pozostaja tylko:
+  - `Route P1`: direct matrix-entry export,
+  - `Route P2`: basis-scalar export,
+- obie trasy wymagaja zachowania proweniencji:
+  `hypothesis_extension_only`, `operator_origin = exported_composite_A_1`,
+  `base_kernel_contains_obs = false`,
+  `strict_core_reinterpretation = false`,
+  `selector_smuggling = false`.
+
+Frontier po `O4`:
+- `O4_B1 := the persisted A_1_ext instance now has an explicit admissible entry-population rule, but no actual Route P1 or Route P2 witness exists yet for a_1, b_1, or d_1`,
+- `O3_B1 := the persisted A_1_ext instance now has an explicit coefficient-evaluation rule, but its entries remain symbolic placeholders, so no actual values for a_1, b_1, d_1, tr(A_1), or Delta_1 are produced yet`,
+- `O2_B1 := a persisted exported_composite_A_1 instance for A_1_ext on pair1 now exists, but its coefficient entries remain symbolic and unevaluated, so no selector-breaking test can yet be executed`,
+- `H28_B1 := the current repository state contains no computable operator-level source from which a_1, b_1, d_1 can be actually exported or evaluated for pair1, even though Route A provenance and coefficient semantics are already in place`,
+- `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `C32_B2 := raw cross-pair overlap route is formally degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`.
+
 Co realnie zostalo dodane przez `H2`:
 - zapisano minimalny admissibility spec dla przyszlego operatora `K_obs`,
 - jawnie oddzielono:
