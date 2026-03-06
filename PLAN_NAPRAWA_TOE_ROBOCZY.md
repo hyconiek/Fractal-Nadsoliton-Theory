@@ -7885,3 +7885,26 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - sprobowac skonstruowac pierwsza rzeczywista instancje `Route A`,
    - albo zredukowac problem do brakujacego minimalnego carrieru wejsciowego dla `Route B`.
+
+## 497. H10 minimal Route A candidate instance (2026-03-06)
+
+1. Cel:
+   - utworzyc minimalny persisted candidate dla `Route A`, tak aby problem przesunal sie z poziomu braku obiektu do poziomu braku jego operatorowej proveniencji.
+2. Wynik:
+   - utworzono carrier `A_1_cand = [[a_1,b_1],[b_1,d_1]]` na bazie `{c1,s1}`,
+   - wszystkie wpisy oznaczono jawnie jako `UNRESOLVED_FROM_OPERATOR_EXPORT_CHAIN`,
+   - lane pozostaje hipoteza rozszerzenia operatorowego, a nie reinterpretacja strict core.
+3. Frontier po kroku:
+   - `H10_B1 := a minimal Route A candidate instance exists, but no provenance-valid exported A_1 derived from the operator chain exists yet`,
+   - `H9_B1` zostaje zredukowane do provenance-validity level dla `Route A`,
+   - `T12_B1`,
+   - `T2_B1`,
+   - `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/H10_MINIMAL_ROUTE_A_CANDIDATE_INSTANCE.md`,
+   - dodano `fundamental_action_reconstruction/h10_minimal_route_a_candidate_instance.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/route_a_minimal_candidate_instance.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/h10_minimal_route_a_candidate_instance_summary.json`.
+5. Nastepny poprawny ruch:
+   - sprobowac rozpisac minimalny provenance spec dla `A_1_cand`,
+   - albo sprawdzic, czy da sie wyeksportowac choc jeden z komponentow `E_1`, `G_light`, `R_mat`, `O_obs`.

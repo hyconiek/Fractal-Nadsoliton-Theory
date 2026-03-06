@@ -775,5 +775,7 @@ Current status:
 - this reduces the next step to instantiating either a direct composite export `A_1` or a factored carrier chain for `pair1`, while keeping explicit that neither route currently exists,
 - `H9` completed as the first audit of real route instances for `pair1`,
 - this reduces the next step to actually constructing one instance of Route A or Route B, while keeping explicit that neither route is currently instantiated anywhere in repo exports,
+- `H10` completed as the first minimal persisted candidate for Route A,
+- this reduces the next step to proving operator-chain provenance for `A_1`, while keeping explicit that the current `A_1` candidate is only a hypothesis-lane carrier placeholder,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.
