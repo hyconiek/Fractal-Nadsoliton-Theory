@@ -1779,3 +1779,17 @@ Frontier po `N2`:
 - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
 - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
 - nadal brak globalnego theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `N3`:
+- wykonano pierwszy globalny discharge attempt dla dychotomii `N2`,
+- scoped negative theorem `N1` oraz zewnetrznosc lane axiom-augmented nie wystarczyly jeszcze do globalnego theorem-level wyniku,
+- failure wraca dokladnie do jednego kroku globalizacji:
+  `T12_B1`,
+- to jest realny postep redukcyjny, bo wiadomo juz, ze dalsze theorem-lane growth bez ataku na `T12_B1` bedzie tylko meta-dokumentacja.
+
+Frontier po `N3`:
+- `N3_B1 := no discharged globalization step upgrades N1 plus external axiom lane into a global strict-core impossibility-or-axiom-necessity theorem`,
+- `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`,
+- nadal brak globalnego theorem-level/full-closure PASS.

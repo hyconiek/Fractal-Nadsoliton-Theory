@@ -7380,3 +7380,26 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - wykonac pierwszy discharge attempt dla `N2`,
    - albo jesli failure natychmiast wraca do `T12_B1`, jawnie zatrzymac theorem-lane i zapisac koniecznosc aksjomatu jako aktualnie najlepiej wsparty wniosek projektowy.
+
+## 478. N3 pierwszy globalny discharge attempt dla dychotomii N2 (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy scoped negative theorem `N1` plus zewnetrznosc lane axiom-augmented
+     wystarczaja juz do theorem-level globalnej dychotomii zapisanej w `N2`,
+   - bez produkowania kolejnego pustego carrier/schema kroku.
+2. Wynik:
+   - `N2` nie jest discharged,
+   - failure wraca dokladnie do globalizacji przez `T12_B1`.
+3. Frontier po kroku:
+   - `N3_B1 := no discharged globalization step upgrades N1 plus external axiom lane into a global strict-core impossibility-or-axiom-necessity theorem`,
+   - `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
+   - `T2_B1`,
+   - `C32_B2`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/N3_GLOBAL_IMPOSSIBILITY_OR_AXIOM_NECESSITY_DISCHARGE_ATTEMPT.md`,
+   - dodano `fundamental_action_reconstruction/n3_global_impossibility_or_axiom_necessity_discharge_attempt.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n3_global_impossibility_or_axiom_necessity_discharge_attempt_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - zatrzymac theorem-lane, jesli `T12_B1` nie bedzie atakowane bezposrednio,
+   - albo jawnie zapisac koniecznosc aksjomatu jako aktualnie najlepiej wsparty wniosek projektowy.

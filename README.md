@@ -737,5 +737,7 @@ Current status:
 - this moves the theory forward by actually discharging a weaker but honest theorem: within the already audited six-route theta-export family, no route exports actual strict-core `theta_1,theta_2`; the global strict-core statement remains open because `T12_B1` is still not discharged,
 - `N2` completed as a global negative-theorem specification step,
 - this moves the theory forward only by replacing open-ended `T13+` meta-ladder growth with an explicit global dichotomy theorem spec: either the present strict core has no internal theta-source, or any successful theta-source derivation requires an additional selector/admissibility axiom not currently present in the declared strict core,
+- `N3` completed as the first global discharge attempt for `N2`,
+- this moves the theory forward only by showing that the global negative theorem now fails exactly at the globalization step through `T12_B1`, not at the scoped negative theorem itself,
 - no theorem-level closure claim,
 - no full-lagrangian closure claim.
