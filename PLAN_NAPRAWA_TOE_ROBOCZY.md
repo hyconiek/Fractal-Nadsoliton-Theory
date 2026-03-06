@@ -6294,3 +6294,27 @@ Po tej rundzie:
 5. Nastepny poprawny ruch:
    - przejsc do `C29` i sprawdzic, czy strict core ma juz packet-ready
      serialized formula dla lokalnego orbit-frame projector.
+
+## 437. C29 local projector formula packet wykonane (2026-03-06)
+
+1. Cel:
+   - sprawdzic, czy strict core ma juz jawna serialized formule lokalnych
+     projektorow `P_tan(theta)` i `P_red(theta)` na parze `(c_ref,s_ref)`,
+     nawet jesli brak jeszcze pair-to-pair global gluing rule.
+2. Wynik:
+   - lokalna formula projektorow jest jawna i packet-ready,
+   - aktywny blocker zawęża sie dalej do braku globalnego gluing rule
+     oraz nadal otwartego finalnego slice extraction.
+3. Twarde granice:
+   - brak theorem-level PASS,
+   - brak full-closure PASS,
+   - brak globalnego reduced control plane,
+   - brak finalnej orientation slice.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/C29_LOCAL_PROJECTOR_FORMULA_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/c29_local_projector_formula_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/c29_local_projector_formula_packet_summary.json`,
+   - zaktualizowano `fundamental_action_reconstruction/README.md` i `manifest_action_reconstruction.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do `C30` i sprawdzic, czy strict core ma juz packet-ready
+     pair-to-pair global gluing rule dla dwoch lokalnych reduced lines.
