@@ -587,6 +587,32 @@ Aktualizacja `N23`:
   ale nadal brak coefficient specialization + diagonal matching + canonicalization,
   bez falszywego PASS.
 
+Aktualizacja `R14`:
+- zmaterializowano jawny `frozen-kernel specialization witness`:
+  `(K_i_j + K_j_i)/2 -> K_total[i,j]` na wspolnym `12`-slot carrierze,
+- packet rozladowuje juz wprost shared kernel/light-facing channel na poziomie
+  wspolczynnikow,
+- packet nadal nie twierdzi, ze diagonal sector jest zmatchowany ani ze
+  `QW-2191` jest rozladowane.
+
+Aktualizacja `P21`:
+- wykonano rerun trasy `host matching witness` po `R14`,
+- wynik:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_WITNESS_ROUTE_AFTER_R14_KERNEL_SPECIALIZATION_PACKET`,
+- probe rozladowuje pierwszy techniczny blocker z `P20`,
+  czyli `kernel coefficient specialization witness`,
+- po tym rerunie zostaja juz tylko:
+  diagonal-sector matching witness oraz `QW-2191` canonicalization boundary.
+
+Aktualizacja `N24`:
+- wykonano theorem-level wynik dla zaktualizowanej trasy po `R14/P21`,
+- `R14/P21/QW-2191/C10` razem wymuszaja wniosek:
+  kernel/light-facing specialization jest juz obecna, ale repo nadal nie
+  identyfikuje hosta `QW-2186` z exported canonical blockiem,
+- to jest dalszy realny progres redukcyjny:
+  host route zostal zwężony juz tylko do diagonal matching + canonicalization,
+  bez falszywego PASS.
+
 ## Ontologiczna wskazowka programu
 
 Program jest prowadzony pod robocza ontologia:

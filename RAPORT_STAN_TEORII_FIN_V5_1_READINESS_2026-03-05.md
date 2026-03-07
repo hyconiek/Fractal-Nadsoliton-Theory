@@ -2304,6 +2304,32 @@ Frontier po `R13/P20/N23`:
 - `N23_route_result := current repo still does not identify existing kernel feedback host with the exported canonical Psi block even after the partial overlap packet`,
 - nadal brak globalnego theorem-level/full-closure PASS.
 
+Co realnie zostalo dodane przez `R14`, `P21` i `N24`:
+- `R14` tworzy jawny `frozen-kernel specialization witness`:
+  symboliczny kanal `(K_i_j + K_j_i)/2` zostaje wyspecjalizowany do frozen
+  numeric `K_total[i,j]` na tym samym `12`-slot carrierze,
+- `R14` domyka tym samym shared kernel/light-facing blocker na poziomie
+  wspolczynnikow, ale nie rusza diagonalu ani `QW-2191`,
+- `P21` rerunuje bezposrednio trase `host matching witness` po `R14`,
+- wynik `P21`:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_WITNESS_ROUTE_AFTER_R14_KERNEL_SPECIALIZATION_PACKET`,
+- `P21` rozladowuje pierwszy techniczny blocker z `P20`,
+  a po stronie missing objects zostaja juz tylko:
+  diagonal-sector matching witness oraz `QW-2191` canonicalization boundary,
+- `N24` daje theorem-level updated-route wynik:
+  nawet po explicit kernel specialization repo nadal nie identyfikuje hosta
+  `QW-2186` z exported canonical blockiem, ale host route zostal juz zwężony
+  do dwoch ostatnich blockerow.
+
+Frontier po `R14/P21/N24`:
+- `R14_result := explicit frozen-kernel specialization witness is present`,
+- `R14_light_facing_result := shared kernel/light-facing channel is specialized coefficient-level`,
+- `P21_route_result := current host matching witness route is still not computable after R14`,
+- `P21_missing_objects := explicit diagonal-sector equality or matching witness linking the host floor m0^2 I to the canonical local diagonal sector or to a declared control pullback of it`,
+- `P21_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+- `N24_route_result := current repo still does not identify existing kernel feedback host with the exported canonical Psi block even after kernel specialization`,
+- nadal brak globalnego theorem-level/full-closure PASS.
+
 Co realnie zostalo dodane przez `AX1`:
 - otwarto jawny pozytywny lane `axiom-augmented`,
 - pod minimalnym aksjomacie selekcji z `QW-2192/QW-2193` uzyskano packet-ready actual:

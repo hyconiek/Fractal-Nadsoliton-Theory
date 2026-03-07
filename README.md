@@ -129,6 +129,11 @@ Primary state report:
   `K_total` carrier and the canonical kernel-mixing channel; the host route
   stays negative, but the last matching blocker is now decomposed into kernel
   specialization, diagonal matching, and the still-open `QW-2191` boundary.
+- The next honest move after that has now also been executed: `R14` plus
+  `P21/N24` add an explicit frozen-kernel specialization witness for the shared
+  light-facing channel and close that blocker completely; the host route still
+  stays negative, but now only diagonal matching and the still-open `QW-2191`
+  boundary remain.
 - This is real progress on the selector problem at extension level, but it does not upgrade strict-core closure and does not change `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 - Details: [`fundamental_action_reconstruction/README.md`](fundamental_action_reconstruction/README.md), [`fundamental_action_reconstruction/generated/pair1_operator_probe_report.json`](fundamental_action_reconstruction/generated/pair1_operator_probe_report.json).
 
