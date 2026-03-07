@@ -708,6 +708,44 @@ Aktualizacja `N27`:
   dla canonical residual declared pullback + canonicalization,
   bez falszywego PASS.
 
+Aktualizacja `R18`:
+- zmaterializowano jawny `pair1 coefficient-class reduction packet` dla
+  residualnego declared pullback,
+- packet eksportuje exact finite zero-system na trzech niezaleznych wpisach
+  `pair1`:
+  `c1c1`, `c1s1 = s1c1`, `s1s1`,
+- packet grupuje residualny declared block do szesciu jawnych
+  transport-induced coefficient classes na carrierze `psi0..psi11`,
+- packet nadal utrzymuje rozdzial:
+  shared kernel/light-facing channel pozostaje juz zamkniety przez `R14`,
+  a `R18` dotyka tylko non-light residual local diagonal complement,
+- packet nadal nie twierdzi, ze jakiekolwiek z tych rownan zerowych sa
+  spelnione ani ze `QW-2191` jest rozladowane.
+
+Aktualizacja `P25`:
+- wykonano rerun trasy `host matching witness` po `R18`,
+- wynik:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_WITNESS_ROUTE_AFTER_R18_PAIR1_COEFFICIENT_CLASS_REDUCTION_PACKET`,
+- probe rozladowuje ogolny blocker
+  `explicit zero witness for the canonical residual declared pullback`
+  do trzech jawnych brakow:
+  `explicit zero witness for the declared pair1 residual c1c1 equation`,
+  `explicit zero witness for the declared pair1 residual c1s1 equation`,
+  `explicit zero witness for the declared pair1 residual s1s1 equation`,
+- po tym rerunie zostaja juz tylko:
+  te trzy pair1 zero witnesses oraz
+  `QW-2191` canonicalization boundary.
+
+Aktualizacja `N28`:
+- wykonano theorem-level wynik dla zaktualizowanej trasy po `R18/P25`,
+- `R18/P25/QW-2191/C10` razem wymuszaja wniosek:
+  repo ma juz exact pair1 zero-system dla residualnego declared pullback,
+  ale nadal nie identyfikuje hosta `QW-2186` z exported canonical blockiem,
+- to jest dalszy realny progres redukcyjny:
+  host route zostal zwężony z jednego ogolnego zero-witness gap
+  do trzech jawnych rownan na `pair1` + canonicalization,
+  bez falszywego PASS.
+
 ## Ontologiczna wskazowka programu
 
 Program jest prowadzony pod robocza ontologia:

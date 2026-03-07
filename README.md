@@ -152,6 +152,13 @@ Primary state report:
   the host route still stays negative, but now the only missing pieces are an
   explicit zero witness for the canonical residual declared pullback and the
   still-open `QW-2191` boundary.
+- The next honest move after that has now also been executed: `R18` plus
+  `P25/N28` reduce that generic zero-witness blocker to three exact `pair1`
+  zero equations (`c1c1`, `c1s1`, `s1s1`) on transport-induced coefficient
+  classes, while again leaving the already closed light-facing kernel channel
+  untouched; the host route still stays negative, but now the missing pieces
+  are exactly those three zero witnesses plus the still-open `QW-2191`
+  boundary.
 - This is real progress on the selector problem at extension level, but it does not upgrade strict-core closure and does not change `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 - Details: [`fundamental_action_reconstruction/README.md`](fundamental_action_reconstruction/README.md), [`fundamental_action_reconstruction/generated/pair1_operator_probe_report.json`](fundamental_action_reconstruction/generated/pair1_operator_probe_report.json).
 

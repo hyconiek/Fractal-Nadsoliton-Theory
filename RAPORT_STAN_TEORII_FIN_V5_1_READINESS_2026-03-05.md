@@ -2419,6 +2419,39 @@ Frontier po `R17/P24/N27`:
 - `N27_route_result := current repo still does not identify existing kernel feedback host with the exported canonical Psi block even after closing the host-side correction branch`,
 - nadal brak globalnego theorem-level/full-closure PASS.
 
+Co realnie zostalo dodane przez `R18`, `P25` i `N28`:
+- `R18` tworzy jawny `pair1 coefficient-class reduction packet` dla
+  residualnego declared pullback,
+- `R18` eksportuje exact finite zero-system na trzech niezaleznych wpisach
+  `pair1`:
+  `c1c1`, `c1s1 = s1c1`, `s1s1`,
+- `R18` redukuje residualny declared pair1 block do szesciu jawnych
+  transport-induced coefficient classes na carrierze `psi0..psi11`,
+- `R18` nie rusza warstwy swiatlo/kernel:
+  shared kernel/light-facing channel pozostaje dokladnie tym samym
+  juz zamknietym kanalem z `R14`,
+- `P25` rerunuje bezposrednio trase `host matching witness` po `R18`,
+- wynik `P25`:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_WITNESS_ROUTE_AFTER_R18_PAIR1_COEFFICIENT_CLASS_REDUCTION_PACKET`,
+- `P25` rozklada ogolny zero-witness gap z `P24`
+  do trzech jawnych pair1 rownan zerowych,
+- `N28` daje theorem-level updated-route wynik:
+  obecny repo nadal nie identyfikuje hosta `QW-2186` z exported canonical
+  blockiem, ale luka jest juz jawnie skonczonym układem trzech
+  pair1 zero-witnesses + `QW-2191`.
+
+Frontier po `R18/P25/N28`:
+- `R18_result := explicit pair1 coefficient-class reduction packet is present`,
+- `R18_pair1_zero_system := exact finite zero-equation system on pair1 is explicitly exported`,
+- `R18_light_boundary := shared kernel/light-facing channel remains exactly the already closed R14 channel`,
+- `P25_route_result := current host matching witness route is still not computable after R18`,
+- `P25_missing_objects := explicit zero witness for the declared pair1 residual c1c1 equation`,
+- `P25_missing_objects += explicit zero witness for the declared pair1 residual c1s1 equation`,
+- `P25_missing_objects += explicit zero witness for the declared pair1 residual s1s1 equation`,
+- `P25_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+- `N28_route_result := current repo still does not identify existing kernel feedback host with the exported canonical Psi block even after pair1 coefficient-class reduction`,
+- nadal brak globalnego theorem-level/full-closure PASS.
+
 Co realnie zostalo dodane przez `AX1`:
 - otwarto jawny pozytywny lane `axiom-augmented`,
 - pod minimalnym aksjomacie selekcji z `QW-2192/QW-2193` uzyskano packet-ready actual:

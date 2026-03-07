@@ -9450,6 +9450,43 @@ Po tej rundzie:
    - albo probowac rozladowac `QW-2191` canonicalization boundary,
    - ale bez mieszania zero witness z canonicalization w jeden pseudo-witness.
 
+531. `R18/P25/N28` explicit pair1 coefficient-class reduction po `R17/P24/N27`.
+1. Co zostalo zrobione:
+   - `R18` materializuje jawny `pair1 coefficient-class reduction packet`,
+   - `P25` rerunuje trase `host matching witness` po `R18`,
+   - `N28` formalizuje theorem-level wynik dla tej zaktualizowanej trasy.
+2. Wynik:
+   - `R18` daje realny partial packet:
+     exact finite zero-system na trzech niezaleznych wpisach `pair1`:
+     `c1c1`, `c1s1 = s1c1`, `s1s1`,
+   - `P25` zwraca:
+     `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_WITNESS_ROUTE_AFTER_R18_PAIR1_COEFFICIENT_CLASS_REDUCTION_PACKET`,
+   - `N28` utrzymuje route negatywny bez falszywego PASS.
+3. Frontier po kroku:
+   - `R18_result := explicit pair1 coefficient-class reduction packet is now present`,
+   - `R18_boundary := shared kernel/light-facing channel remains the already closed R14 channel`,
+   - `P25_missing_objects := explicit zero witness for the declared pair1 residual c1c1 equation`,
+   - `P25_missing_objects += explicit zero witness for the declared pair1 residual c1s1 equation`,
+   - `P25_missing_objects += explicit zero witness for the declared pair1 residual s1s1 equation`,
+   - `P25_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+   - `N28_route_result := current repo still does not identify the existing-feedback host with the exported canonical Psi block even after pair1 coefficient-class reduction`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/R18_PAIR1_RESIDUAL_DECLARED_PULLBACK_COEFFICIENT_CLASS_REDUCTION_PACKET_FOR_HOST_MATCHING_ROUTE.md`,
+   - dodano `fundamental_action_reconstruction/r18_pair1_residual_declared_pullback_coefficient_class_reduction_packet_for_host_matching_route.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r18_pair1_residual_declared_pullback_coefficient_class_reduction_packet_for_host_matching_route.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r18_pair1_residual_declared_pullback_coefficient_class_reduction_packet_for_host_matching_route_summary.json`,
+   - dodano `fundamental_action_reconstruction/P25_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_WITNESS_RERUN_AFTER_PAIR1_COEFFICIENT_CLASS_REDUCTION_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/p25_existing_kernel_feedback_host_matching_witness_rerun_after_pair1_coefficient_class_reduction_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p25_existing_kernel_feedback_host_matching_witness_rerun_after_pair1_coefficient_class_reduction_packet.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p25_existing_kernel_feedback_host_matching_witness_rerun_after_pair1_coefficient_class_reduction_packet_summary.json`,
+   - dodano `fundamental_action_reconstruction/N28_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_OBSTRUCTION_AFTER_PAIR1_COEFFICIENT_CLASS_REDUCTION_PACKET_THEOREM.md`,
+   - dodano `fundamental_action_reconstruction/n28_current_existing_kernel_feedback_host_matching_obstruction_after_pair1_coefficient_class_reduction_packet_theorem.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n28_current_existing_kernel_feedback_host_matching_obstruction_after_pair1_coefficient_class_reduction_packet_theorem_summary.json`.
+5. Nastepny poprawny ruch:
+   - albo uderzyc juz bardzo wasko w trzy jawne `pair1` zero witnesses,
+   - albo probowac rozladowac `QW-2191` canonicalization boundary,
+   - ale bez sklejania tych brakow w jeden pseudo-witness.
+
 
 - `H29`: stare proxy `retard_phase/tau/gain` moduluja preorientowany kanal, ale nie dostarczaja same wewnetrznego strict-core anchoru orientacji.
 - `H30`: `orientation_psi0 = mod(0.5*phi + 0.8*omega, 2*pi)` jest deterministycznym kandydatem anchoru z kernel invariants, ale nie jest jeszcze strict-core eksportem `theta_i`.
