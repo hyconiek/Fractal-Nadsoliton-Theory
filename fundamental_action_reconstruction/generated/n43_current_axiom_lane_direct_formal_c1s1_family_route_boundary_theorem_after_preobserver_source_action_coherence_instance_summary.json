@@ -1,0 +1,54 @@
+{
+  "step": "N43",
+  "status": "N43_DISCHARGED_CURRENT_CANONICAL_ONTOLOGY_SUPPORTED_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_BOUNDARY_AFTER_AX10_NO_FALSE_PASS",
+  "scope": "current_canonical_ontology_supported_direct_formal_c1s1_family_route_after_AX10_only",
+  "checks": [
+    {
+      "id": "ax10_local_canonical_ontology_supported_closure_present",
+      "actual": "AX10_EXECUTED_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_SOURCE_ACTION_USE_INSTANCE_NO_FALSE_PASS",
+      "expected": "AX10_EXECUTED_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_SOURCE_ACTION_USE_INSTANCE_NO_FALSE_PASS",
+      "pass": true,
+      "meaning": "AX10 adds the local pre-observer source-action use-instance on the canonical-ontology-supported lane"
+    },
+    {
+      "id": "p40_route_still_not_closed",
+      "actual": "CANONICAL_ONTOLOGY_SUPPORTED_ONLY_ATTACKED_SOURCE_ACTION_BLOCKER_CLOSED_ROUTE_STILL_NOT_CLOSED_AFTER_AX10",
+      "expected": "CANONICAL_ONTOLOGY_SUPPORTED_ONLY_ATTACKED_SOURCE_ACTION_BLOCKER_CLOSED_ROUTE_STILL_NOT_CLOSED_AFTER_AX10",
+      "pass": true,
+      "meaning": "P40 keeps the route non-closed as a whole after AX10"
+    },
+    {
+      "id": "p40_strict_core_promotion_forbidden",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "P40 explicitly preserves the outside-strict-core boundary"
+    }
+  ],
+  "theorem_result": {
+    "discharged": true,
+    "attacked_R32_blocker_closed_on_canonical_ontology_supported_lane_only": true,
+    "strict_core_route_closed": false,
+    "full_closure_pass": false
+  },
+  "missing_structure_classes": [
+    "explicit_source_eom_role_assignment_witness_for_m2_psi1_to_mu_m2_plus3_segment_psi1_psi4",
+    "explicit_assignment_witness_of_m2_psi4_to_mu_m2_plus3_segment_psi1_psi4",
+    "explicit_zero_witness_for_direct_quartic_like_g4_family_c1s1_shift_defect",
+    "explicit_zero_witness_for_direct_quintic_like_g6_family_c1s1_shift_defect",
+    "explicit_zero_witness_for_direct_yukawa_like_gY_family_c1s1_shift_defect",
+    "explicit_pairwise_matching_witness_for_m2_psi7_equals_m2_psi10",
+    "explicit_pairwise_matching_witness_for_m2_psi2_equals_m2_psi5",
+    "explicit_pairwise_matching_witness_for_m2_psi8_equals_m2_psi11",
+    "explicit_zero_witness_for_the_declared_pair1_residual_c1c1_equation",
+    "explicit_zero_witness_for_the_declared_pair1_residual_s1s1_equation",
+    "full_physical_uniqueness_or_selector_relevant_canonicalization_of_the_explicit_declared_control_transport_within_the_QW2191_O2_family"
+  ],
+  "hard_limits": [
+    "no_strict_core_closure",
+    "no_theorem_level_strict_core_pass",
+    "no_full_closure_pass",
+    "no_claim_that_QW2191_is_discharged",
+    "no_claim_that_ToE_is_closed"
+  ]
+}

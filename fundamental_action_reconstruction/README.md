@@ -1314,6 +1314,103 @@ Aktualizacja `N41`:
   nie twierdzi, ze `QW-2191` jest rozladowane,
   bez falszywego PASS.
 
+Aktualizacja `R32`:
+- zmaterializowano jawny `direct m2 psi1 source action coefficient defect polynomial packet`,
+- packet nie dowodzi zadnej rownosci ani zadnego zaniku; rozbija tylko brak
+  `explicit_source_action_monomial_coefficient_identification_witness_for_m2_psi1_and_mu_m2_plus3_segment_psi1_psi4_on_common_psi1_squared_over_2_support`
+  do jednego wezszejszego braku:
+  `explicit_zero_witness_for_the_direct_m2_psi1_source_action_coefficient_defect_polynomial_on_common_psi1_squared_over_2_support`,
+- packet jawnie nie dzieli przez `psi1**2/2` i nie udaje zadnego
+  nonzero-factor argumentu,
+- kanal swiatlo/kernel pozostaje dokladnie tym samym juz zamknietym kanalem z
+  `R14`; `R32` dotyka tylko jednej pre-observer non-light source action-side
+  coefficient lane.
+
+Aktualizacja `P39`:
+- wykonano rerun direct formal family route po dodaniu `R32`,
+- wynik:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_AFTER_R32_DIRECT_M2_PSI1_SOURCE_ACTION_COEFFICIENT_DEFECT_POLYNOMIAL_PACKET`,
+- probe nie twierdzi, ze `m2_psi1 = mu_m2_plus3_segment_psi1_psi4` ani
+  `m2_psi1 = m2_psi4`;
+  twierdzi tylko, ze source action-side brak dla `m2_psi1` zostal zwezony do
+  jednego explicit zero witness dla exact coefficient defect polynomial na
+  wspolnym support `psi1**2/2`,
+- po tym rerunie na tej trasie zostaja:
+  `direct g4` zero witness,
+  `direct g6` zero witness,
+  `direct gY` zero witness,
+  source action coefficient-defect zero witness dla `m2_psi1`,
+  source eom-role assignment witness dla `m2_psi1`,
+  target slot assignment witness dla `m2_psi4`,
+  trzy pozostale direct `m2` pairwise witnesses,
+  `c1c1` zero witness,
+  `s1s1` zero witness,
+  oraz `QW-2191` canonicalization boundary.
+
+Aktualizacja `N42`:
+- wykonano theorem-level wynik dla direct formal family route po `R32/P39`,
+- `R32/P39/QW-2191/C10` razem wymuszaja wniosek:
+  obecny repo nadal nie identyfikuje hosta `QW-2186` z exported canonical
+  blockiem nawet po exact coefficient-defect reduction dla source action-side
+  `m2_psi1`,
+- theorem jest jawnie `route-specific only`:
+  nie daje globalnej redukcji glownego frontiera z `R21/P28`,
+  nie twierdzi, ze direct `m2 psi1` source action coefficient defect
+  polynomial znika,
+  nie twierdzi, ze `m2_psi1 = mu_m2_plus3_segment_psi1_psi4`,
+  nie twierdzi, ze `m2_psi1 = m2_psi4`,
+  nie twierdzi, ze source eom-side witness jest obecny,
+  nie twierdzi, ze inne direct `m2` pairwise witnesses zachodza,
+  nie twierdzi, ze direct `g4/g6/gY` defects znikaja,
+  nie twierdzi, ze `QW-2191` jest rozladowane,
+  bez falszywego PASS.
+
+Aktualizacja `AX9`:
+- przywrocono poprawne provenance z
+  `TOE_FINAL_DOCUMENTATION.tex` oraz `TOE_FINAL_DOCUMENTATION 4.4.pdf` dla
+  istniejacej ontologii programu:
+  `informational nadsoliton primacy`,
+- aktywny pewnik brzmi:
+  `nadsoliton jest pierwotna informacja wszechswiata w stanie solitonowym`,
+- to jawnie usuwa ontologiczna dwuznacznosc miedzy
+  `informational layer + nadsoliton`
+  a
+  `informational nadsoliton without separate layer`,
+- packet nie promuje niczego do strict core i nie twierdzi, ze z samej
+  ontologii wynika juz selector closure; poprawna etykieta to
+  `canonical-ontology-supported`, nie `new axiom introduced now`.
+
+Aktualizacja `AX10`:
+- wykonano pierwszy waski current-frontier instance na nowym lane
+  `canonical-ontology-supported`,
+- z `AX9 + H2 + R28 + R32` zmaterializowano local pre-observer source-action
+  coherence instance:
+  `m2_psi1 := mu_m2_plus3_segment_psi1_psi4`
+  tylko na attacked source-action lane i tylko na lane
+  `canonical-ontology-supported`,
+- ten krok zamyka lokalny blocker `R32_B1` tylko na tym lane,
+  ale nie zamyka source eom-side witness, target-side witness, innych direct
+  `m2` pairwise witnesses, `g4/g6/gY`, `c1c1/s1s1` ani `QW-2191`,
+- kanal swiatlo/kernel pozostaje jawnie przed obserwatorem i pozostaje
+  nienaruszony; ruch dotyczy tylko pre-observer source side.
+
+Aktualizacja `P40`:
+- wykonano rerun direct formal family route po `AX10`,
+- wynik:
+  `CANONICAL_ONTOLOGY_SUPPORTED_ONLY_ATTACKED_SOURCE_ACTION_BLOCKER_CLOSED_ROUTE_STILL_NOT_CLOSED_AFTER_AX10`,
+- probe utrzymuje, ze dodatni efekt jest realny, ale tylko
+  `canonical-ontology-supported only`;
+  strict core pozostaje nierozladowany.
+
+Aktualizacja `N43`:
+- wykonano boundary theorem dla nowego lane
+  `canonical-ontology-supported` po `AX10/P40`,
+- theorem zapisuje najmocniejszy uczciwy wniosek:
+  `AX9/AX10` zamykaja tylko attacked `R32` source-action blocker na
+  canonical-ontology-supported pre-observer lane,
+  ale cala trasa nadal nie jest domknieta i nadal pozostaje poza strict core,
+- brak claimu, ze `QW-2191` jest rozladowane albo ze ToE jest zamknieta.
+
 ## Ontologiczna wskazowka programu
 
 Program jest prowadzony pod robocza ontologia:

@@ -10103,6 +10103,129 @@ Po tej rundzie:
    - albo osobno atakowac jeden z `direct g4/g6/gY` zero witnesses,
    - albo probowac rozladowac `QW-2191`,
    - ale bez udawania, ze exact common-support reduction dowodzi obecnosci
+
+531. `R32/P39/N42`: direct `m2 psi1` source action coefficient-defect reduction without false pass
+1. Zakres:
+   - nie probowac udowadniac od razu
+     `m2_psi1 = mu_m2_plus3_segment_psi1_psi4`
+     ani `m2_psi1 = m2_psi4`,
+   - nie dzielic przez `psi1**2/2` i nie wprowadzac zadnego
+     nonzero-factor argumentu,
+   - rozbic tylko source action-side brak
+     `explicit_source_action_monomial_coefficient_identification_witness_for_m2_psi1_and_mu_m2_plus3_segment_psi1_psi4_on_common_psi1_squared_over_2_support`
+     do jednego wezszejszego zero witness dla exact coefficient defect
+     polynomial,
+   - utrzymac jawnie, ze kanal swiatlo/kernel pozostaje tym samym zamknietym
+     kanalem z `R14` i ze ruch dotyczy pre-observer source action-side.
+2. Wynik:
+   - `R32` daje realny partial packet:
+     exact coefficient-defect reduction dla source action-side `m2_psi1`,
+   - `P39` zwraca:
+     `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_AFTER_R32_DIRECT_M2_PSI1_SOURCE_ACTION_COEFFICIENT_DEFECT_POLYNOMIAL_PACKET`,
+   - `N42` utrzymuje direct route negatywny bez falszywego PASS.
+3. Frontier po kroku:
+   - `R32_result := explicit direct m2 psi1 source action coefficient defect polynomial packet is now present`,
+   - `R32_scope := single direct mass-like m2 source action coefficient defect only`,
+   - `R32_boundary := shared kernel/light-facing channel remains the already closed R14 channel`,
+   - `P39_missing_objects := explicit zero witness for direct quartic-like g4 family c1s1 shift defect`,
+   - `P39_missing_objects += explicit zero witness for direct quintic-like g6 family c1s1 shift defect`,
+   - `P39_missing_objects += explicit zero witness for direct yukawa-like gY family c1s1 shift defect`,
+   - `P39_missing_objects += explicit_zero_witness_for_the_direct_m2_psi1_source_action_coefficient_defect_polynomial_on_common_psi1_squared_over_2_support`,
+   - `P39_missing_objects += explicit_source_eom_role_assignment_witness_for_m2_psi1_to_mu_m2_plus3_segment_psi1_psi4`,
+   - `P39_missing_objects += explicit_assignment_witness_of_m2_psi4_to_mu_m2_plus3_segment_psi1_psi4`,
+   - `P39_missing_objects += explicit_pairwise_matching_witness_for_m2_psi7_equals_m2_psi10`,
+   - `P39_missing_objects += explicit_pairwise_matching_witness_for_m2_psi2_equals_m2_psi5`,
+   - `P39_missing_objects += explicit_pairwise_matching_witness_for_m2_psi8_equals_m2_psi11`,
+   - `P39_missing_objects += explicit zero witness for the declared pair1 residual c1c1 equation`,
+   - `P39_missing_objects += explicit zero witness for the declared pair1 residual s1s1 equation`,
+   - `P39_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+   - `N42_route_result := current repo still does not identify the existing-feedback host with the exported canonical Psi block even after the direct m2 psi1 source action coefficient-defect packet`,
+   - brak claimu, ze glowny frontier `R21/P28` zostal globalnie rozladowany.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/R32_DIRECT_M2_PSI1_SOURCE_ACTION_COEFFICIENT_DEFECT_POLYNOMIAL_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/r32_direct_m2_psi1_source_action_coefficient_defect_polynomial_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r32_direct_m2_psi1_source_action_coefficient_defect_polynomial_packet.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r32_direct_m2_psi1_source_action_coefficient_defect_polynomial_packet_summary.json`,
+   - dodano `fundamental_action_reconstruction/P39_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_PROBE_AFTER_DIRECT_M2_PSI1_SOURCE_ACTION_COEFFICIENT_DEFECT_POLYNOMIAL_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/p39_existing_kernel_feedback_host_matching_direct_formal_c1s1_family_route_probe_after_direct_m2_psi1_source_action_coefficient_defect_polynomial_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p39_existing_kernel_feedback_host_matching_direct_formal_c1s1_family_route_probe_after_direct_m2_psi1_source_action_coefficient_defect_polynomial_packet.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p39_existing_kernel_feedback_host_matching_direct_formal_c1s1_family_route_probe_after_direct_m2_psi1_source_action_coefficient_defect_polynomial_packet_summary.json`,
+   - dodano `fundamental_action_reconstruction/N42_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_OBSTRUCTION_AFTER_DIRECT_M2_PSI1_SOURCE_ACTION_COEFFICIENT_DEFECT_POLYNOMIAL_PACKET_THEOREM.md`,
+   - dodano `fundamental_action_reconstruction/n42_current_existing_kernel_feedback_host_matching_direct_formal_c1s1_family_route_obstruction_after_direct_m2_psi1_source_action_coefficient_defect_polynomial_packet_theorem.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n42_current_existing_kernel_feedback_host_matching_direct_formal_c1s1_family_route_obstruction_after_direct_m2_psi1_source_action_coefficient_defect_polynomial_packet_theorem_summary.json`.
+5. Nastepny poprawny ruch:
+   - albo uderzyc juz bardzo wasko w
+     `explicit_zero_witness_for_the_direct_m2_psi1_source_action_coefficient_defect_polynomial_on_common_psi1_squared_over_2_support`,
+   - albo osobno uderzyc w
+     `explicit_source_eom_role_assignment_witness_for_m2_psi1_to_mu_m2_plus3_segment_psi1_psi4`,
+   - albo osobno uderzyc w
+     `explicit_assignment_witness_of_m2_psi4_to_mu_m2_plus3_segment_psi1_psi4`,
+   - albo osobno atakowac jeden z pozostalych `direct m2` pairwise witnesses,
+   - albo osobno atakowac jeden z `direct g4/g6/gY` zero witnesses,
+   - albo probowac rozladowac `QW-2191`,
+   - ale bez udawania, ze exact coefficient-defect reduction dowodzi obecnosci
+
+532. `AX9/AX10/P40/N43`: canonical informational nadsoliton ontology provenance plus local pre-observer source-action closure without false pass
+1. Zakres:
+   - przywrocic jawnie kanoniczne provenance z
+     `TOE_FINAL_DOCUMENTATION.tex` oraz `TOE_FINAL_DOCUMENTATION 4.4.pdf`
+     dla tezy:
+     `nadsoliton jest pierwotna informacja wszechswiata w stanie solitonowym`,
+   - nie opisywac tego jako nowego aksjomatu wprowadzonego teraz,
+   - nie promowac tego do strict core,
+   - wykorzystac ta istniejaca ontologie programu tylko na jednym waskim current-frontier lane:
+     attacked pre-observer source action-side `m2_psi1`,
+   - utrzymac jawnie, ze swiatlo pozostaje przed obserwatorem i ze observer
+     niczego tu nie zamyka.
+2. Wynik:
+   - `AX9` otwiera jawny `canonical-ontology-supported` lane zewnetrzny,
+   - `AX10` daje realny partial packet:
+     local pre-observer source-action coherence instance
+     `m2_psi1 := mu_m2_plus3_segment_psi1_psi4`,
+     ale tylko na lane `canonical-ontology-supported`,
+   - `P40` zwraca:
+     `CANONICAL_ONTOLOGY_SUPPORTED_ONLY_ATTACKED_SOURCE_ACTION_BLOCKER_CLOSED_ROUTE_STILL_NOT_CLOSED_AFTER_AX10`,
+   - `N43` utrzymuje najostrzejsza granice bez falszywego PASS:
+     local closure jest realna, ale tylko `canonical-ontology-supported`
+     i lokalna.
+3. Frontier po kroku:
+   - `AX9_result := canonical informational nadsoliton ontology provenance restored from tex plus pdf on an explicit external lane only`,
+   - `AX10_result := attacked R32 source-action blocker closed on canonical-ontology-supported pre-observer lane only`,
+   - `P40_missing_objects := explicit_source_eom_role_assignment_witness_for_m2_psi1_to_mu_m2_plus3_segment_psi1_psi4`,
+   - `P40_missing_objects += explicit_assignment_witness_of_m2_psi4_to_mu_m2_plus3_segment_psi1_psi4`,
+   - `P40_missing_objects += explicit zero witness for direct quartic-like g4 family c1s1 shift defect`,
+   - `P40_missing_objects += explicit zero witness for direct quintic-like g6 family c1s1 shift defect`,
+   - `P40_missing_objects += explicit zero witness for direct yukawa-like gY family c1s1 shift defect`,
+   - `P40_missing_objects += explicit_pairwise_matching_witness_for_m2_psi7_equals_m2_psi10`,
+   - `P40_missing_objects += explicit_pairwise_matching_witness_for_m2_psi2_equals_m2_psi5`,
+   - `P40_missing_objects += explicit_pairwise_matching_witness_for_m2_psi8_equals_m2_psi11`,
+   - `P40_missing_objects += explicit zero witness for the declared pair1 residual c1c1 equation`,
+   - `P40_missing_objects += explicit zero witness for the declared pair1 residual s1s1 equation`,
+   - `P40_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+   - `N43_route_result := current repo still has only a local canonical-ontology-supported closure of the attacked source-action blocker and no strict-core closure`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/AX9_INFORMATIONAL_NADSOLITON_PRIMACY_AXIOM_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/ax9_informational_nadsoliton_primacy_axiom_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/ax9_informational_nadsoliton_primacy_axiom_packet.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/ax9_informational_nadsoliton_primacy_axiom_packet_summary.json`,
+   - dodano `fundamental_action_reconstruction/AX10_AXIOM_LANE_PREOBSERVER_SOURCE_ACTION_COHERENCE_INSTANCE.md`,
+   - dodano `fundamental_action_reconstruction/ax10_axiom_lane_preobserver_source_action_coherence_instance.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/ax10_axiom_lane_preobserver_source_action_coherence_instance.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/ax10_axiom_lane_preobserver_source_action_coherence_instance_summary.json`,
+   - dodano `fundamental_action_reconstruction/P40_AXIOM_LANE_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_PROBE_AFTER_PREOBSERVER_SOURCE_ACTION_COHERENCE_INSTANCE.md`,
+   - dodano `fundamental_action_reconstruction/p40_axiom_lane_direct_formal_c1s1_family_route_probe_after_preobserver_source_action_coherence_instance.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p40_axiom_lane_direct_formal_c1s1_family_route_probe_after_preobserver_source_action_coherence_instance.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p40_axiom_lane_direct_formal_c1s1_family_route_probe_after_preobserver_source_action_coherence_instance_summary.json`,
+   - dodano `fundamental_action_reconstruction/N43_CURRENT_AXIOM_LANE_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_BOUNDARY_THEOREM_AFTER_PREOBSERVER_SOURCE_ACTION_COHERENCE_INSTANCE.md`,
+   - dodano `fundamental_action_reconstruction/n43_current_axiom_lane_direct_formal_c1s1_family_route_boundary_theorem_after_preobserver_source_action_coherence_instance.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n43_current_axiom_lane_direct_formal_c1s1_family_route_boundary_theorem_after_preobserver_source_action_coherence_instance_summary.json`.
+5. Nastepny poprawny ruch:
+   - albo uderzyc na tym samym lane `canonical-ontology-supported` w
+     `explicit_source_eom_role_assignment_witness_for_m2_psi1_to_mu_m2_plus3_segment_psi1_psi4`,
+   - albo uderzyc w
+     `explicit_assignment_witness_of_m2_psi4_to_mu_m2_plus3_segment_psi1_psi4`,
+   - albo zostawic ten lane jako local positive support only i dalej
+     trzymac strict route jako nierozladowany.
      coefficient-identification witnessa albo zadnego globalnego skrocenia.
 
 

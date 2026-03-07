@@ -262,6 +262,30 @@ Primary state report:
   `g4/g6/gY` family blockers, the other direct `m2` pairwise blockers, the
   main host route, and the already closed light-facing kernel channel remain
   otherwise unchanged.
+- The next honest move after that has now also been executed, still only on
+  that direct route and still only on the attacked pre-observer source action
+  side: `R32` plus `P39/N42` do not prove
+  `m2_psi1 = mu_m2_plus3_segment_psi1_psi4` or `m2_psi1 = m2_psi4`. They only
+  export the exact coefficient-defect reduction of that one still-missing
+  source action coefficient-identification witness into one still-missing zero
+  witness for the formal defect polynomial
+  `(m2_psi1) - (mu_m2_plus3_segment_psi1_psi4)` on fixed support `psi1**2/2`,
+  while the source eom witness, the target-side assignment witness, the direct
+  `g4/g6/gY` family blockers, the other direct `m2` pairwise blockers, the
+  main host route, and the already closed light-facing kernel channel remain
+  otherwise unchanged.
+- The next honest move after that has now also been executed on a correctly
+  reclassified canonical-ontology-supported external lane: `AX9` does not add
+  a fresh axiom, but restores provenance from
+  `TOE_FINAL_DOCUMENTATION.tex` plus `TOE_FINAL_DOCUMENTATION 4.4.pdf` that
+  the nadsoliton itself is the primordial information of the universe in a
+  solitonic state, with no separate informational layer underneath it. `AX10`
+  then uses that existing canonical ontology only on the attacked
+  pre-observer source-action lane to instantiate the local coherence
+  assignment `m2_psi1 := mu_m2_plus3_segment_psi1_psi4`, and `P40/N43`
+  certify the exact boundary: this closes only the attacked `R32` blocker on
+  the canonical-ontology-supported lane, keeps light before observer, and
+  still does not close the direct route, strict core, `QW-2191`, or ToE.
 - This is real progress on the selector problem at extension level, but it does not upgrade strict-core closure and does not change `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 - Details: [`fundamental_action_reconstruction/README.md`](fundamental_action_reconstruction/README.md), [`fundamental_action_reconstruction/generated/pair1_operator_probe_report.json`](fundamental_action_reconstruction/generated/pair1_operator_probe_report.json).
 

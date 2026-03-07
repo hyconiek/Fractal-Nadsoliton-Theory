@@ -2959,6 +2959,98 @@ Frontier po `R31/P38/N41`:
 - `N41_route_result := current repo still does not identify existing kernel feedback host with the exported canonical Psi block even after the direct m2 psi1 source action common-support packet`,
 - nadal brak globalnego theorem-level/full-closure PASS i nadal brak globalnej redukcji glownego frontiera `R21/P28`.
 
+Co realnie zostalo dodane przez `R32`, `P39` i `N42`:
+- `R32` tworzy jawny `direct m2 psi1 source action coefficient defect polynomial packet`,
+- `R32` nie dowodzi zadnej rownosci ani zadnego zaniku;
+  rozbija tylko brak
+  `explicit_source_action_monomial_coefficient_identification_witness_for_m2_psi1_and_mu_m2_plus3_segment_psi1_psi4_on_common_psi1_squared_over_2_support`
+  do jednego dokladniejszego braku:
+  `explicit_zero_witness_for_the_direct_m2_psi1_source_action_coefficient_defect_polynomial_on_common_psi1_squared_over_2_support`,
+- `R32` jawnie nie dzieli przez `psi1**2/2` i nie wprowadza zadnego
+  nonzero-factor argumentu,
+- `R32` nie rusza warstwy swiatlo/kernel:
+  shared kernel/light-facing channel pozostaje dokladnie tym samym
+  juz zamknietym kanalem z `R14`,
+- `P39` rerunuje direct formal family route po `R32`,
+- wynik `P39`:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_AFTER_R32_DIRECT_M2_PSI1_SOURCE_ACTION_COEFFICIENT_DEFECT_POLYNOMIAL_PACKET`,
+- `P39` rozklada source action-side brak dla `m2_psi1` do jednego jeszcze
+  wezszejszego zero witness dla exact coefficient defect polynomial na
+  wspolnym support `psi1**2/2`,
+- `N42` daje theorem-level updated-route wynik:
+  nawet po exact coefficient-defect reduction dla source action-side `m2_psi1`
+  obecny repo nadal nie identyfikuje hosta `QW-2186` z exported canonical
+  blockiem.
+
+Frontier po `R32/P39/N42`:
+- `R32_result := explicit direct m2 psi1 source action coefficient defect polynomial packet is present`,
+- `R32_scope := single direct mass-like m2 source action coefficient defect only`,
+- `R32_light_boundary := shared kernel/light-facing channel remains exactly the already closed R14 channel`,
+- `P39_route_result := current direct formal c1s1 family route is still not computable after R32`,
+- `P39_missing_objects := explicit zero witness for direct quartic-like g4 family c1s1 shift defect`,
+- `P39_missing_objects += explicit zero witness for direct quintic-like g6 family c1s1 shift defect`,
+- `P39_missing_objects += explicit zero witness for direct yukawa-like gY family c1s1 shift defect`,
+- `P39_missing_objects += explicit_zero_witness_for_the_direct_m2_psi1_source_action_coefficient_defect_polynomial_on_common_psi1_squared_over_2_support`,
+- `P39_missing_objects += explicit_source_eom_role_assignment_witness_for_m2_psi1_to_mu_m2_plus3_segment_psi1_psi4`,
+- `P39_missing_objects += explicit_assignment_witness_of_m2_psi4_to_mu_m2_plus3_segment_psi1_psi4`,
+- `P39_missing_objects += explicit_pairwise_matching_witness_for_m2_psi7_equals_m2_psi10`,
+- `P39_missing_objects += explicit_pairwise_matching_witness_for_m2_psi2_equals_m2_psi5`,
+- `P39_missing_objects += explicit_pairwise_matching_witness_for_m2_psi8_equals_m2_psi11`,
+- `P39_missing_objects += explicit zero witness for the declared pair1 residual c1c1 equation`,
+- `P39_missing_objects += explicit zero witness for the declared pair1 residual s1s1 equation`,
+- `P39_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+- `N42_route_result := current repo still does not identify existing kernel feedback host with the exported canonical Psi block even after the direct m2 psi1 source action coefficient-defect packet`,
+- nadal brak globalnego theorem-level/full-closure PASS i nadal brak globalnej redukcji glownego frontiera `R21/P28`.
+
+Co realnie zostalo dodane przez `AX9`, `AX10`, `P40` i `N43`:
+- `AX9` nie wprowadza nowego aksjomatu, tylko przywraca kanoniczne provenance
+  ontologii programu z
+  `TOE_FINAL_DOCUMENTATION.tex` i `TOE_FINAL_DOCUMENTATION 4.4.pdf` pod
+  mocniejszym pewnikiem:
+  `nadsoliton jest pierwotna informacja wszechswiata w stanie solitonowym`,
+- `AX9` nie daje strict-core derivation; tylko ustawia jawny
+  `canonical-ontology-supported` external lane i
+  usuwa ontologiczna dwuznacznosc
+  `informational layer + nadsoliton` vs
+  `informational nadsoliton without separate layer`,
+- `AX10` wykorzystuje `AX9` tylko na jednym waskim current-frontier lane:
+  pre-observer source action-side `m2_psi1`,
+- `AX10` instancjuje local coherence assignment
+  `m2_psi1 := mu_m2_plus3_segment_psi1_psi4`
+  tylko na lane `canonical-ontology-supported` i tylko dla attacked
+  source-action lane,
+- `AX10` zamyka lokalny blocker
+  `explicit_zero_witness_for_the_direct_m2_psi1_source_action_coefficient_defect_polynomial_on_common_psi1_squared_over_2_support`
+  tylko na lane `canonical-ontology-supported`,
+- `P40` rerunuje direct formal family route po tej lokalnej
+  ontology-supported closure,
+- wynik `P40`:
+  `CANONICAL_ONTOLOGY_SUPPORTED_ONLY_ATTACKED_SOURCE_ACTION_BLOCKER_CLOSED_ROUTE_STILL_NOT_CLOSED_AFTER_AX10`,
+- `N43` daje najmocniejszy uczciwy theorem-level boundary wynik:
+  kanonicznie udokumentowana ontologia programu zamyka tylko attacked `R32`
+  blocker na lokalnym lane zewnetrznym,
+  ale nie zamyka source eom-side witness, target-side witness, innych
+  direct `m2` pairwise witnesses, `g4/g6/gY`, `pair1 c1c1/s1s1` ani
+  `QW-2191`.
+
+Frontier po `AX9/AX10/P40/N43`:
+- `AX9_result := canonical informational nadsoliton ontology provenance restored from tex plus pdf on an explicit external lane only`,
+- `AX10_result := attacked R32 source-action blocker closed on the canonical-ontology-supported pre-observer lane only`,
+- `P40_route_result := route still not closed as a whole after local canonical-ontology-supported source-action closure`,
+- `P40_missing_objects := explicit_source_eom_role_assignment_witness_for_m2_psi1_to_mu_m2_plus3_segment_psi1_psi4`,
+- `P40_missing_objects += explicit_assignment_witness_of_m2_psi4_to_mu_m2_plus3_segment_psi1_psi4`,
+- `P40_missing_objects += explicit zero witness for direct quartic-like g4 family c1s1 shift defect`,
+- `P40_missing_objects += explicit zero witness for direct quintic-like g6 family c1s1 shift defect`,
+- `P40_missing_objects += explicit zero witness for direct yukawa-like gY family c1s1 shift defect`,
+- `P40_missing_objects += explicit_pairwise_matching_witness_for_m2_psi7_equals_m2_psi10`,
+- `P40_missing_objects += explicit_pairwise_matching_witness_for_m2_psi2_equals_m2_psi5`,
+- `P40_missing_objects += explicit_pairwise_matching_witness_for_m2_psi8_equals_m2_psi11`,
+- `P40_missing_objects += explicit zero witness for the declared pair1 residual c1c1 equation`,
+- `P40_missing_objects += explicit zero witness for the declared pair1 residual s1s1 equation`,
+- `P40_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+- `N43_route_result := current repo still has only a local canonical-ontology-supported closure of the attacked source-action blocker and no strict-core closure`,
+- nadal brak globalnego theorem-level/full-closure PASS.
+
 Co realnie zostalo dodane przez `AX1`:
 - otwarto jawny pozytywny lane `axiom-augmented`,
 - pod minimalnym aksjomacie selekcji z `QW-2192/QW-2193` uzyskano packet-ready actual:

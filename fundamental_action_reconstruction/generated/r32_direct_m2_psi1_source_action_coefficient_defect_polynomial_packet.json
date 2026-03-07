@@ -1,0 +1,91 @@
+{
+  "stage": "R32",
+  "packet_goal": "materialize_the_exact_source_action_coefficient_defect_polynomial_whose_zero_would_give_the_missing_m2_psi1_coefficient_identification_witness_on_common_psi1_squared_over_2_support_without_dividing_by_that_support",
+  "source_reports": [
+    "R31"
+  ],
+  "direct_m2_psi1_source_action_coefficient_defect_packet": {
+    "slot_under_attack": "m2_psi1",
+    "role_under_attack": "source_action_role",
+    "source_action_term": "m2_psi1*psi1**2/2",
+    "lifted_action_term": "mu_m2_plus3_segment_psi1_psi4*psi1**2/2",
+    "common_fixed_action_monomial_support": "psi1**2/2",
+    "source_action_coefficient_symbol": "m2_psi1",
+    "lifted_action_coefficient_symbol": "mu_m2_plus3_segment_psi1_psi4",
+    "exact_coefficient_defect_polynomial": "(m2_psi1) - (mu_m2_plus3_segment_psi1_psi4)",
+    "exact_action_term_defect_expression": "((m2_psi1) - (mu_m2_plus3_segment_psi1_psi4))*(psi1**2/2)",
+    "equivalent_zero_equation_on_coefficient_level": "(m2_psi1) - (mu_m2_plus3_segment_psi1_psi4) = 0",
+    "reduction_statement": "on this route-scoped source-action lane only, the missing coefficient-identification witness between m2_psi1 and mu_m2_plus3_segment_psi1_psi4 is reduced to one still-missing zero witness for the exact coefficient defect polynomial (m2_psi1) - (mu_m2_plus3_segment_psi1_psi4), while the common monomial support psi1**2/2 remains fixed and is not divided out",
+    "reduced_missing_object": "explicit_zero_witness_for_the_direct_m2_psi1_source_action_coefficient_defect_polynomial_on_common_psi1_squared_over_2_support",
+    "scope": "single_direct_m2_source_action_coefficient_defect_only",
+    "non_factor_clause": "R32 does not divide by psi1**2/2, does not claim that support is nonzero, and does not claim that the coefficient defect polynomial vanishes"
+  },
+  "result": {
+    "explicit_source_action_coefficient_defect_polynomial_present": true,
+    "explicit_zero_witness_for_source_action_coefficient_defect_polynomial_present": false,
+    "explicit_source_action_monomial_coefficient_identification_witness_present": false,
+    "global_reduction_of_main_R21_c1s1_blocker_claimed": false
+  },
+  "light_boundary": {
+    "status": "shared_kernel_light_facing_channel_already_closed_by_R14_and_left_unchanged_by_R32",
+    "shared_light_channel_source": "R14 specialization of the symmetric kernel-mixing channel",
+    "current_packet_scope": "one pre-observer non-light direct m2 source action coefficient on the already fixed common monomial support",
+    "boundary": "R32 does not alter the already matched light-facing kernel channel and does not touch observer-side packets; it only materializes the exact source-action coefficient defect whose vanishing would give the missing witness for m2_psi1 on psi1**2/2"
+  },
+  "classification": "explicit_source_action_coefficient_defect_polynomial_present_but_no_zero_witness",
+  "frontier": "R32_B1",
+  "frontier_text": "on the route-scoped direct m2 sufficient lane only, the single source action-side coefficient-identification witness for m2_psi1 is sharpened into one still-missing zero witness for the exact coefficient defect polynomial on common psi1**2/2 support, while the other direct family blockers, the main host route, and QW-2191 remain unchanged",
+  "consistency_checks": [
+    {
+      "id": "r31_common_support_packet_present",
+      "actual": true,
+      "expected": true,
+      "meaning": "R31 already exports the exact common-support packet for the source action lane",
+      "pass": true
+    },
+    {
+      "id": "source_action_term_is_fixed",
+      "actual": "m2_psi1*psi1**2/2",
+      "expected": "m2_psi1*psi1**2/2",
+      "meaning": "R31 exports the exact source action term for the attacked m2_psi1 lane",
+      "pass": true
+    },
+    {
+      "id": "lifted_action_term_is_fixed",
+      "actual": "mu_m2_plus3_segment_psi1_psi4*psi1**2/2",
+      "expected": "mu_m2_plus3_segment_psi1_psi4*psi1**2/2",
+      "meaning": "R31 exports the exact lifted action term on the same monomial support",
+      "pass": true
+    },
+    {
+      "id": "common_support_is_fixed",
+      "actual": "psi1**2/2",
+      "expected": "psi1**2/2",
+      "meaning": "the attacked source action lane is already fixed on common support psi1**2/2",
+      "pass": true
+    },
+    {
+      "id": "light_boundary_unchanged",
+      "actual": "shared_kernel_light_facing_channel_already_closed_by_R14_and_left_unchanged_by_R31",
+      "expected": "shared_kernel_light_facing_channel_already_closed_by_R14_and_left_unchanged_by_R31",
+      "meaning": "the already closed light-facing channel remains separate from this pre-observer source action coefficient packet",
+      "pass": true
+    }
+  ],
+  "hard_limits": [
+    "no_theorem_level_pass",
+    "no_full_closure_pass",
+    "no_claim_that_the_direct_m2_psi1_source_action_coefficient_defect_polynomial_vanishes",
+    "no_claim_that_m2_psi1_equals_mu_m2_plus3_segment_psi1_psi4",
+    "no_claim_that_m2_psi1_equals_m2_psi4",
+    "no_claim_that_any_nonzero_factor_argument_on_psi1_squared_over_2_holds",
+    "no_claim_that_the_source_eom_role_assignment_witness_is_present",
+    "no_claim_that_the_target_side_assignment_witness_is_present",
+    "no_claim_that_any_other_direct_m2_pairwise_equality_holds",
+    "no_claim_that_any_direct_g4_g6_gY_family_defect_vanishes",
+    "no_claim_that_any_pair1_c1c1_or_s1s1_zero_equation_holds",
+    "no_claim_that_QW2191_is_discharged",
+    "no_claim_that_selector_closure_is_obtained"
+  ],
+  "no_false_pass": true
+}
