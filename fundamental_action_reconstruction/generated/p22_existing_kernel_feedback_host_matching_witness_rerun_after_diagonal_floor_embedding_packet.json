@@ -1,0 +1,89 @@
+{
+  "stage": "P22",
+  "goal": "rerun_compute_or_fail_existing_kernel_feedback_host_matching_witness_after_R15",
+  "status": "NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_WITNESS_ROUTE_AFTER_R15_DIAGONAL_FLOOR_EMBEDDING_PACKET",
+  "reason": "the repo now contains an explicit embedding of the host scalar floor into the canonical diagonal sector, but it still lacks a witness that the residual local diagonal sector cancels or equals a declared control pullback, and the QW-2191 canonicalization boundary remains open",
+  "lane": "existing_kernel_feedback_host_matching_witness_route_after_R15",
+  "route_under_test": [
+    "partial_host_to_canonical_block_overlap_packet",
+    "kernel_coefficient_specialization_witness",
+    "host_scalar_floor_embedding_packet",
+    "residual_local_diagonal_sector_cancellation_witness",
+    "full_physical_uniqueness_or_selector_relevant_canonicalization",
+    "host_to_concrete_Psi_block_identification"
+  ],
+  "route_checks": [
+    {
+      "id": "p21_diagonal_matching_gap_was_still_missing",
+      "actual": true,
+      "expected": true,
+      "meaning": "P21 still had the diagonal matching witness as a missing object",
+      "pass": true
+    },
+    {
+      "id": "r15_host_scalar_floor_embedding_packet_present",
+      "actual": true,
+      "expected": true,
+      "meaning": "R15 adds the explicit scalar-floor embedding packet",
+      "pass": true
+    },
+    {
+      "id": "r15_residual_local_diagonal_sector_present",
+      "actual": true,
+      "expected": true,
+      "meaning": "R15 keeps the residual local diagonal sector explicit",
+      "pass": true
+    },
+    {
+      "id": "r15_full_diagonal_matching_still_absent",
+      "actual": false,
+      "expected": false,
+      "meaning": "R15 does not claim full diagonal-sector matching",
+      "pass": true
+    },
+    {
+      "id": "q2191_full_physical_uniqueness_still_open",
+      "actual": false,
+      "expected": false,
+      "meaning": "QW-2191 still blocks full physical uniqueness",
+      "pass": true
+    },
+    {
+      "id": "c10_host_identification_not_shown",
+      "actual": "not_shown",
+      "expected": "not_shown",
+      "meaning": "host-to-concrete Psi-block identification remains absent",
+      "pass": true
+    }
+  ],
+  "route_state": {
+    "partial_host_to_canonical_block_overlap_present": true,
+    "kernel_coefficient_specialization_witness_present": true,
+    "host_scalar_floor_embedding_packet_present": true,
+    "residual_local_diagonal_sector_cancellation_witness_present": false,
+    "full_physical_uniqueness_or_selector_relevant_canonicalization_present": false
+  },
+  "supporting_present_but_insufficient_objects": [
+    "R15_explicit_host_scalar_floor_embedding_packet",
+    "R14_explicit_frozen_kernel_specialization_packet",
+    "R13_partial_host_to_canonical_block_overlap_packet",
+    "R12_explicit_canonical_Psi_block_export"
+  ],
+  "decomposition_of_P21_diagonal_gap": {
+    "from_P21": "explicit_diagonal_sector_equality_or_matching_witness_linking_the_host_floor_m0_squared_I_to_the_canonical_local_diagonal_sector_or_to_a_declared_control_pullback_of_it",
+    "discharged_by_R15_as": "explicit_host_scalar_floor_embedding_into_the_canonical_diagonal_sector",
+    "remaining_matching_gap": "explicit_residual_local_diagonal_sector_equality_or_cancellation_witness_reducing_the_canonical_diagonal_sector_to_the_host_floor_m0_squared_I_or_to_a_declared_control_pullback_of_it"
+  },
+  "remaining_missing_upstream_objects": [
+    "explicit_residual_local_diagonal_sector_equality_or_cancellation_witness_reducing_the_canonical_diagonal_sector_to_the_host_floor_m0_squared_I_or_to_a_declared_control_pullback_of_it",
+    "full_physical_uniqueness_or_selector_relevant_canonicalization_of_the_explicit_declared_control_transport_within_the_QW2191_O2_family"
+  ],
+  "blocking_frontier": {
+    "R15_B1": "the repo now exports an explicit embedding of the host scalar floor into the canonical diagonal sector, but it still lacks a witness that the residual local diagonal sector cancels or equals a declared control pullback",
+    "QW2191_required_next_step": "ADD_EXPLICIT_SYMMETRY_BREAKING_OR_SELECTION_AXIOM_FOR_PHYSICAL_MODE_ASSIGNMENT_UNIQUENESS",
+    "C10_B1": "no_explicit_coefficient_level_or_block_level_identification_between_the_qw2186_certified_host_operator_and_a_concrete_Psi_sector_quadratic_Hessian_block_inside_the_canonical_13_field_carrier"
+  },
+  "required_next_step": "EITHER_PROVE_SELECTOR_RELEVANT_CANONICALIZATION_AND_ADD_A_RESIDUAL_LOCAL_DIAGONAL_CANCELLATION_WITNESS_OR_KEEP_THE_HOST_ROUTE_NEGATIVE",
+  "strict_core_promotion": false,
+  "no_false_pass": true
+}

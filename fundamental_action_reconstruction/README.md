@@ -613,6 +613,37 @@ Aktualizacja `N24`:
   host route zostal zwężony juz tylko do diagonal matching + canonicalization,
   bez falszywego PASS.
 
+Aktualizacja `R15`:
+- zmaterializowano jawny `host scalar-floor embedding packet`:
+  `D_canonical = m0^2 I + D_local_residual`,
+- packet korzysta z `QW-2122/QW-2124` po stronie floor oraz z `R13`
+  po stronie canonical local diagonal sector,
+- packet utrzymuje rozdzial:
+  shared kernel/light-facing channel jest juz zamkniety przez `R14`,
+  a `R15` dotyka tylko diagonalnego dopelnienia,
+- packet nadal nie twierdzi, ze residual local diagonal sector znika
+  ani ze `QW-2191` jest rozladowane.
+
+Aktualizacja `P22`:
+- wykonano rerun trasy `host matching witness` po `R15`,
+- wynik:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_WITNESS_ROUTE_AFTER_R15_DIAGONAL_FLOOR_EMBEDDING_PACKET`,
+- probe rozladowuje gruby blocker `diagonal-sector matching witness`
+  z `P21` do waskiego residualnego braku:
+  `residual local diagonal cancellation/equality witness`,
+- po tym rerunie zostaja juz tylko:
+  residual local diagonal gap oraz `QW-2191` canonicalization boundary.
+
+Aktualizacja `N25`:
+- wykonano theorem-level wynik dla zaktualizowanej trasy po `R15/P22`,
+- `R15/P22/QW-2191/C10` razem wymuszaja wniosek:
+  host scalar floor jest juz jawnie osadzony w canonical diagonal sector,
+  ale repo nadal nie identyfikuje hosta `QW-2186` z exported canonical blockiem,
+- to jest dalszy realny progres redukcyjny:
+  host route zostal zwężony juz tylko do residual local diagonal matching
+  + canonicalization,
+  bez falszywego PASS.
+
 ## Ontologiczna wskazowka programu
 
 Program jest prowadzony pod robocza ontologia:

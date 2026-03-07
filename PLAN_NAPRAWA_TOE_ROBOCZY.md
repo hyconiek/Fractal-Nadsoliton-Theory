@@ -9346,6 +9346,41 @@ Po tej rundzie:
    - albo probowac rozladowac `QW-2191` canonicalization boundary,
    - ale bez mieszania tych dwoch blokow w jeden pseudo-witness.
 
+528. `R15/P22/N25` explicit host scalar-floor embedding po `R14/P21/N24`.
+1. Co zostalo zrobione:
+   - `R15` materializuje jawny `host scalar-floor embedding packet`
+     wewnatrz canonical diagonal sector,
+   - `P22` rerunuje trase `host matching witness` po `R15`,
+   - `N25` formalizuje theorem-level wynik dla tej zaktualizowanej trasy.
+2. Wynik:
+   - `R15` daje realny partial packet:
+     `D_canonical = m0^2 I + D_local_residual`,
+   - `P22` zwraca:
+     `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_WITNESS_ROUTE_AFTER_R15_DIAGONAL_FLOOR_EMBEDDING_PACKET`,
+   - `N25` utrzymuje route negatywny bez falszywego PASS.
+3. Frontier po kroku:
+   - `R15_result := explicit host scalar-floor embedding packet is now present`,
+   - `R15_boundary := shared kernel/light-facing channel remains the already closed R14 channel`,
+   - `P22_missing_objects := explicit residual local diagonal sector equality or cancellation witness reducing the canonical diagonal sector to the host floor m0^2 I or to a declared control pullback of it`,
+   - `P22_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+   - `N25_route_result := current repo still does not identify the existing-feedback host with the exported canonical Psi block even after scalar-floor embedding`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/R15_EXPLICIT_HOST_SCALAR_FLOOR_EMBEDDING_PACKET_FOR_HOST_MATCHING_ROUTE.md`,
+   - dodano `fundamental_action_reconstruction/r15_explicit_host_scalar_floor_embedding_packet_for_host_matching_route.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r15_explicit_host_scalar_floor_embedding_packet_for_host_matching_route.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r15_explicit_host_scalar_floor_embedding_packet_for_host_matching_route_summary.json`,
+   - dodano `fundamental_action_reconstruction/P22_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_WITNESS_RERUN_AFTER_DIAGONAL_FLOOR_EMBEDDING_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/p22_existing_kernel_feedback_host_matching_witness_rerun_after_diagonal_floor_embedding_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p22_existing_kernel_feedback_host_matching_witness_rerun_after_diagonal_floor_embedding_packet.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p22_existing_kernel_feedback_host_matching_witness_rerun_after_diagonal_floor_embedding_packet_summary.json`,
+   - dodano `fundamental_action_reconstruction/N25_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_OBSTRUCTION_AFTER_DIAGONAL_FLOOR_EMBEDDING_PACKET_THEOREM.md`,
+   - dodano `fundamental_action_reconstruction/n25_current_existing_kernel_feedback_host_matching_obstruction_after_diagonal_floor_embedding_packet_theorem.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n25_current_existing_kernel_feedback_host_matching_obstruction_after_diagonal_floor_embedding_packet_theorem_summary.json`.
+5. Nastepny poprawny ruch:
+   - albo uderzyc juz bardzo wasko w `residual local diagonal cancellation/equality witness`,
+   - albo probowac rozladowac `QW-2191` canonicalization boundary,
+   - ale bez mieszania diagonalnego residuum z canonicalization w jeden pseudo-witness.
+
 
 - `H29`: stare proxy `retard_phase/tau/gain` moduluja preorientowany kanal, ale nie dostarczaja same wewnetrznego strict-core anchoru orientacji.
 - `H30`: `orientation_psi0 = mod(0.5*phi + 0.8*omega, 2*pi)` jest deterministycznym kandydatem anchoru z kernel invariants, ale nie jest jeszcze strict-core eksportem `theta_i`.

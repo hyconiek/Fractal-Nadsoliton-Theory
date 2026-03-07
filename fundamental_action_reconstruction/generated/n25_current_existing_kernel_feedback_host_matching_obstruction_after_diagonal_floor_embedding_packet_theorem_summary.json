@@ -1,0 +1,62 @@
+{
+  "step": "N25",
+  "status": "N25_DISCHARGED_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_OBSTRUCTION_AFTER_R15_NO_FALSE_PASS",
+  "goal": "Discharge a route-specific theorem: even after adding the explicit host scalar-floor embedding packet, the current repo still does not identify the QW-2186 existing-feedback host with the exported canonical Psi block.",
+  "scope": "current_existing_kernel_feedback_host_matching_route_after_R15_only",
+  "checks": [
+    {
+      "id": "r15_diagonal_floor_embedding_packet_present",
+      "actual": "PASS_PARTIAL_EXPLICIT_HOST_SCALAR_FLOOR_EMBEDDING_PACKET_READY",
+      "expected": "PASS_PARTIAL_EXPLICIT_HOST_SCALAR_FLOOR_EMBEDDING_PACKET_READY",
+      "pass": true,
+      "meaning": "R15 added the explicit host scalar-floor embedding packet"
+    },
+    {
+      "id": "p21_route_negative_before_r15",
+      "actual": "NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_WITNESS_ROUTE_AFTER_R14_KERNEL_SPECIALIZATION_PACKET",
+      "expected": "NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_WITNESS_ROUTE_AFTER_R14_KERNEL_SPECIALIZATION_PACKET",
+      "pass": true,
+      "meaning": "before R15, the route still lacked the diagonal matching witness"
+    },
+    {
+      "id": "p22_route_negative_after_r15",
+      "actual": "NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_WITNESS_ROUTE_AFTER_R15_DIAGONAL_FLOOR_EMBEDDING_PACKET",
+      "expected": "NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_WITNESS_ROUTE_AFTER_R15_DIAGONAL_FLOOR_EMBEDDING_PACKET",
+      "pass": true,
+      "meaning": "after R15, the host-matching route still remains noncomputable"
+    },
+    {
+      "id": "qw2191_full_physical_uniqueness_closed_false",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "QW-2191 still blocks full physical uniqueness"
+    },
+    {
+      "id": "c10_host_identification_not_shown",
+      "actual": "not_shown",
+      "expected": "not_shown",
+      "pass": true,
+      "meaning": "host-to-concrete Psi-block identification remains absent"
+    }
+  ],
+  "theorem_result": {
+    "discharged": true,
+    "shared_kernel_light_channel_specialized": true,
+    "host_scalar_floor_embedding_present": true,
+    "residual_local_diagonal_sector_cancellation_witness_present": false,
+    "full_physical_uniqueness_present": false,
+    "host_matching_witness_present": false
+  },
+  "missing_structure_classes": [
+    "explicit_residual_local_diagonal_sector_equality_or_cancellation_witness_reducing_the_canonical_diagonal_sector_to_the_host_floor_m0_squared_I_or_to_a_declared_control_pullback_of_it",
+    "full_physical_uniqueness_or_selector_relevant_canonicalization_of_the_explicit_declared_control_transport_within_the_QW2191_O2_family"
+  ],
+  "hard_limits": [
+    "no global impossibility theorem",
+    "no claim that future factorization routes are impossible",
+    "no claim that QW-2191 is discharged",
+    "no claim that ToE is closed"
+  ],
+  "required_next_step": "EITHER_PROVE_SELECTOR_RELEVANT_CANONICALIZATION_AND_ADD_A_RESIDUAL_LOCAL_DIAGONAL_CANCELLATION_WITNESS_OR_KEEP_THE_HOST_ROUTE_NEGATIVE"
+}

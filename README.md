@@ -134,6 +134,12 @@ Primary state report:
   light-facing channel and close that blocker completely; the host route still
   stays negative, but now only diagonal matching and the still-open `QW-2191`
   boundary remain.
+- The next honest move after that has now also been executed: `R15` plus
+  `P22/N25` add an explicit host scalar-floor embedding packet inside the
+  canonical diagonal sector, while keeping the already closed light-facing
+  kernel channel separate; the host route still stays negative, but now the
+  only missing pieces are residual local diagonal matching and the still-open
+  `QW-2191` boundary.
 - This is real progress on the selector problem at extension level, but it does not upgrade strict-core closure and does not change `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 - Details: [`fundamental_action_reconstruction/README.md`](fundamental_action_reconstruction/README.md), [`fundamental_action_reconstruction/generated/pair1_operator_probe_report.json`](fundamental_action_reconstruction/generated/pair1_operator_probe_report.json).
 
