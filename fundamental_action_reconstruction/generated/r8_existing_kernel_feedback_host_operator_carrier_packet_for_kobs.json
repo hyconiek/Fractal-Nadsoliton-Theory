@@ -1,0 +1,133 @@
+{
+  "stage": "R8",
+  "operator_scope": "existing_kernel_feedback_host_operator_carrier_packet",
+  "source_reports": [
+    "QW-2186",
+    "C9",
+    "C10",
+    "C14",
+    "P11"
+  ],
+  "host_operator_schema": {
+    "symbol": "A = K_total + m0^2 I",
+    "existing_feedback_role": "the existing kernel feedback lives inside the K_total component of the certified host operator",
+    "scope": "host_scope_branch_level",
+    "certificate_verdict": "KTOTAL_SPECTRAL_STABILITY_MARGIN_GATE_PASS_STRICT_BRANCH_SCOPE"
+  },
+  "declared_host_carrier": {
+    "carrier_label": "Psi_host_12",
+    "finite_state_space_size": 12,
+    "basis_order": [
+      "psi0",
+      "psi1",
+      "psi2",
+      "psi3",
+      "psi4",
+      "psi5",
+      "psi6",
+      "psi7",
+      "psi8",
+      "psi9",
+      "psi10",
+      "psi11"
+    ],
+    "basis_status": "declared_carrier_basis_only_not_selector_sector_projection",
+    "carrier_family_statement": "QW-2166 plus QW-2180 export the exhaustive canonical Hessian/operator carrier."
+  },
+  "spectral_certificate": {
+    "required_shift_ge": 0.6818747633802018,
+    "broken_floor_used": 1.013551972358388,
+    "lambda_min_A": 0.33167720997818534,
+    "lambda_max_A": 2.6738592511244867,
+    "condition_number_2": 8.061630919110627
+  },
+  "construction_rule": {
+    "type": "host_scope_packetization_of_existing_feedback_carrier",
+    "rule": "promote the already certified QW-2186 host operator into an explicit factorization-lane carrier packet by attaching its finite host size and declared canonical Psi-basis order, while keeping the packet strictly at host scope"
+  },
+  "consistency_checks": [
+    {
+      "id": "p11_originally_missing_explicit_legacy_carrier",
+      "actual": true,
+      "expected": true,
+      "meaning": "P11 indeed localized the explicit operator-level legacy carrier as one of the four missing factorization subobjects",
+      "pass": true
+    },
+    {
+      "id": "qw2186_strict_branch_scope_verdict",
+      "actual": "KTOTAL_SPECTRAL_STABILITY_MARGIN_GATE_PASS_STRICT_BRANCH_SCOPE",
+      "expected": "KTOTAL_SPECTRAL_STABILITY_MARGIN_GATE_PASS_STRICT_BRANCH_SCOPE",
+      "meaning": "QW-2186 exports a strict branch-scope certified host operator",
+      "pass": true
+    },
+    {
+      "id": "qw2186_has_finite_12_octave_host_carrier",
+      "actual": 12,
+      "expected": 12,
+      "meaning": "QW-2186 exports a finite host carrier with 12 octave slots",
+      "pass": true
+    },
+    {
+      "id": "c9_host_operator_present_branch_scope",
+      "actual": "QW-2186 exports a branch-scope positive host operator A = K_total + m0^2 I.",
+      "expected": "QW-2186 exports a branch-scope positive host operator A = K_total + m0^2 I.",
+      "meaning": "C9 already identifies the QW-2186 object as a real host operator",
+      "pass": true
+    },
+    {
+      "id": "c10_psi_sector_carrier_schema_present",
+      "actual": "yes",
+      "expected": "yes",
+      "meaning": "C10 already places the host inside the canonical Psi-sector carrier family",
+      "pass": true
+    },
+    {
+      "id": "c10_host_to_concrete_block_still_not_shown",
+      "actual": "not_shown",
+      "expected": "not_shown",
+      "meaning": "the host carrier is present, but concrete block identification is still absent",
+      "pass": true
+    },
+    {
+      "id": "c14_declared_psi_basis_available",
+      "actual": [
+        "psi0",
+        "psi1",
+        "psi2",
+        "psi3",
+        "psi4",
+        "psi5",
+        "psi6",
+        "psi7",
+        "psi8",
+        "psi9",
+        "psi10",
+        "psi11"
+      ],
+      "expected": [
+        "psi0",
+        "psi1",
+        "psi2",
+        "psi3",
+        "psi4",
+        "psi5",
+        "psi6",
+        "psi7",
+        "psi8",
+        "psi9",
+        "psi10",
+        "psi11"
+      ],
+      "meaning": "C14 already exports a declared canonical Psi-basis order on the 12-slot carrier",
+      "pass": true
+    }
+  ],
+  "projection_to_explicit_h3_chain_present": false,
+  "selector_sector_reduction_present": false,
+  "intertwiner_or_equality_witness_present": false,
+  "host_scope_only": true,
+  "factorization_status": "host_scope_operator_level_existing_kernel_feedback_carrier_present_but_not_yet_projected_to_the_explicit_h3_chain",
+  "classification": "explicit_operator_level_existing_kernel_feedback_host_carrier_present_but_host_scope_only_and_not_yet_projected_to_the_explicit_h3_chain",
+  "frontier": "R8_B1",
+  "no_false_pass": true
+}

@@ -361,6 +361,31 @@ Aktualizacja `N14`:
 - to jest realne zaostrzenie ostatniego blokera, ale nadal bez factorization
   discharge.
 
+Aktualizacja `R8`:
+- wykonano pierwszy realny factorization-subobject addition po `P11`:
+  host-scope operator-level existing-kernel-feedback carrier packet,
+- `QW-2186` dostarcza juz certyfikowany host `A = K_total + m0^2 I`,
+  `C10` daje carrier-family schema, a `C14` daje deklarowana baze
+  `psi0..psi11`,
+- to rozladowuje pierwszy z czterech subobject blockers z `P11`,
+  ale nadal tylko na poziomie host-scope packet, bez projekcji ani redukcji.
+
+Aktualizacja `P12`:
+- wykonano rerun compute-or-fail tej samej factorization route po `R8`,
+- wynik:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_TO_EXPLICIT_CHAIN_FACTORIZATION_ROUTE_AFTER_HOST_CARRIER_PACKET`,
+- missing-object list maleje z `4` do `3`:
+  typed projection / selector-sector reduction / intertwiner-equality witness.
+
+Aktualizacja `N15`:
+- wykonano theorem-level updated-route wynik po packetyzacji host carrier,
+- `R8/P12/R7/P10/H15/H16` razem wymuszaja wniosek:
+  nawet po zmaterializowaniu explicit operator-level existing-kernel-feedback
+  carrier obecny route nadal nie identyfikuje existing kernel feedback z
+  explicit selector-facing `H3` chain,
+- to jest realny progres redukcyjny bez factorization discharge i bez
+  falszywego PASS.
+
 ## Ontologiczna wskazowka programu
 
 Program jest prowadzony pod robocza ontologia:

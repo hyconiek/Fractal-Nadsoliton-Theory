@@ -68,6 +68,12 @@ Interpretacja rygorystyczna:
   materializuja shared frozen-kernel provenance witness, ale utrzymuja brak
   identyfikacji operatorowej i rozkladaja ostatni nominalny blocker na cztery
   jawne subobiekty operatorowe,
+- `R8`, `P12` i `N15` robia pierwszy konstruktywny ruch na tej czworkowej
+  dekompozycji:
+  materializuja host-scope operator-level existing-kernel-feedback carrier z
+  `QW-2186/C10/C14`, a potem pokazuja, ze route nadal nie przechodzi i zostaja
+  juz tylko trzy blockery:
+  typed projection / selector-sector reduction / intertwiner-equality witness,
 - nie zmienia to decyzji `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 
 Artefakty:
@@ -2079,6 +2085,24 @@ Frontier po `R7/P11/N14`:
 - `N14_route_result := current repo still does not identify existing kernel feedback with the explicit H3 chain even after shared provenance and explicit block export`,
 - `P11_decomposition_of_P10_missing_object := explicit legacy carrier / typed projection / selector-sector reduction / intertwiner-equality witness`,
 - `P11_missing_objects := explicit operator-level existing-kernel-feedback carrier / typed projection into explicit H3 chain / selector-sector reduction on legacy side / intertwiner-equality witness`,
+- nadal brak globalnego theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `R8`, `P12` i `N15`:
+- `R8` tworzy pierwszy realny packet dla pierwszego `P11` subobject blocker:
+  explicit operator-level existing-kernel-feedback host carrier z
+  `A = K_total + m0^2 I` na deklarowanym `12`-slotowym carrierze `psi0..psi11`,
+- `P12` testuje, czy po tej packetyzacji factorization route staje sie juz
+  liczony albo przynajmniej krotszy,
+- `N15` daje theorem-level updated-route wynik:
+  nawet po dodaniu host carrier packet obecny route nadal nie identyfikuje
+  existing kernel feedback z explicit selector-facing `H3` chain.
+
+Frontier po `R8/P12/N15`:
+- `R8_result := explicit operator-level existing-kernel-feedback host carrier is now present at host scope`,
+- `P12_route_result := current factorization route is still not computable after host-carrier packetization`,
+- `N15_route_result := current repo still does not identify existing kernel feedback with the explicit H3 chain even after host-carrier packetization`,
+- `P12_resolved_from_P11 := explicit operator-level existing-kernel-feedback carrier`,
+- `P12_missing_objects := typed projection into explicit H3 chain / selector-sector reduction on legacy side / intertwiner-equality witness`,
 - nadal brak globalnego theorem-level/full-closure PASS.
 
 Co realnie zostalo dodane przez `AX1`:
