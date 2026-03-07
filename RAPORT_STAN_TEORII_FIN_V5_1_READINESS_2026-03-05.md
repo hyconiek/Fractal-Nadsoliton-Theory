@@ -49,6 +49,9 @@ Interpretacja rygorystyczna:
 - `R2`, `P6` i `N9` robia to samo dla hipotezy `K_obs`:
   najpierw jawnie zbieraja istniejace parametry internal light/matter/observer,
   a potem sprawdzaja, czy to juz wystarcza do selector-facing operator chain,
+- `R3`, `P7` i `N10` robia pierwszy konstruktywny krok na tej samej trasie:
+  materializuja jawny `G_light`, redukuja blocker-set dokladnie o jeden obiekt
+  i utrzymuja negatywny current-route wynik bez overclaimu,
 - nie zmienia to decyzji `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 
 Artefakty:
@@ -1967,6 +1970,23 @@ Frontier po `R2/P6/N9`:
 - `N9_route_result := current kernel feedback does not yet instantiate selector-facing K_obs`,
 - `P6_missing_objects := explicit E / explicit G_light / explicit R_mat / explicit O_obs / factorization map / selector-sector projected block export`,
 - `H29_B1 := old wave-retardation-memory proxies remain preoriented only`,
+- nadal brak globalnego theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `R3`, `P7` i `N10`:
+- `R3` tworzy pierwszy jawny operator-chain object dla lane `K_obs`:
+  explicit finite `G_light^(1)` packet na `L_1 = span{ell_+,ell_-}`,
+- `P7` testuje, czy existing kernel feedback plus `R2` i ten jawny `G_light`
+  juz instancjuje selector-facing `K_obs`,
+- `N10` daje theorem-level current-route wynik:
+  nawet po dodaniu jawnego `G_light` obecny route nadal nie dochodzi do
+  selector-facing `K_obs`.
+
+Frontier po `R3/P7/N10`:
+- `R3_result := explicit internal light propagator packet is now present`,
+- `P7_route_result := current kernel-feedback-to-K_obs route still does not instantiate a selector-facing operator chain after adding G_light`,
+- `N10_route_result := current kernel feedback still does not instantiate selector-facing K_obs even after the explicit G_light packet`,
+- `P7_resolved_from_P6 := explicit G_light`,
+- `P7_missing_objects := explicit E / explicit R_mat / explicit O_obs / factorization map / selector-sector projected block export`,
 - nadal brak globalnego theorem-level/full-closure PASS.
 
 Co realnie zostalo dodane przez `AX1`:

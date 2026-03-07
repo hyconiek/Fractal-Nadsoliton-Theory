@@ -47,6 +47,11 @@ Primary state report:
   already existing internal light/matter/observer feedback parameters into one
   packet, while `P6` and `N9` show that this still does not instantiate a
   selector-facing operator chain from current kernel feedback.
+- One real operator-chain object has now been added on that route: `R3`
+  materializes an explicit finite `G_light` packet
+  `diag(0.9865147437, 0.9980085385)` on a light-eigenchannel carrier, while
+  `P7` and `N10` show that this reduces the blocker-set by exactly one object
+  but still does not instantiate a selector-facing `K_obs`.
 - This is real progress on the selector problem at extension level, but it does not upgrade strict-core closure and does not change `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 - Details: [`fundamental_action_reconstruction/README.md`](fundamental_action_reconstruction/README.md), [`fundamental_action_reconstruction/generated/pair1_operator_probe_report.json`](fundamental_action_reconstruction/generated/pair1_operator_probe_report.json).
 
@@ -786,6 +791,8 @@ Current status:
 - this moves the theory forward by adding a real packet-ready target-slot export object and proving that the updated route still fails only at the remaining bridge-map and beyond-overlay steps,
 - `R2`, `P6`, and `N9` completed as the sharp current-route test of the user's K_obs intuition,
 - this moves the theory forward by separating already-present internal feedback parameters from the still-missing operator maps and selector-facing projected block needed for a real K_obs,
+- `R3`, `P7`, and `N10` completed as the first constructive reduction of that K_obs blocker-set,
+- this moves the theory forward by materializing one explicit `G_light` operator and proving that the updated route still fails only at `E / R_mat / O_obs / factorization map / selector-facing projected block`,
 - `D1` completed as the current best-supported project conclusion after `N3`,
 - this records the strongest honest interpretation now supported by the evidence: selector closure is not achieved in strict core, and the project must either discharge `T12_B1` directly or accept selector-axiom necessity / strict-core incompleteness as the active design conclusion,
 - `AX1` completed as an explicit axiom-augmented positive lane,

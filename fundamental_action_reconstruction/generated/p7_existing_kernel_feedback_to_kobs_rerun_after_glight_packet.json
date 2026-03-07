@@ -1,0 +1,147 @@
+{
+  "stage": "P7",
+  "goal": "rerun_existing_kernel_feedback_to_selector_facing_kobs_after_explicit_glight_packet",
+  "status": "NOT_COMPUTABLE_FROM_CURRENT_KERNEL_FEEDBACK_TO_KOBS_ROUTE_AFTER_GLIGHT_PACKET",
+  "reason": "the route now contains an explicit finite G_light packet, but still lacks E, R_mat, O_obs, the factorization map, and the selector-facing projected block needed to instantiate K_obs from current kernel feedback",
+  "lane": "existing_kernel_feedback_to_kobs_operator_route_after_R3",
+  "route_under_test": [
+    "existing_kernel_feedback",
+    "internal_feedback_parameter_packet",
+    "explicit_G_light_packet",
+    "H3_operator_chain",
+    "selector_sector_projected_block"
+  ],
+  "route_checks": [
+    {
+      "id": "existing_kernel_feedback_present",
+      "pass": true,
+      "expected": true,
+      "actual": true,
+      "meaning": "the repo still contains internal feedback-like structure in K_total -> K(d)"
+    },
+    {
+      "id": "h3_operator_chain_required",
+      "pass": true,
+      "expected": 7,
+      "actual": 7,
+      "meaning": "the admissible K_obs route still requires the H3 operator chain"
+    },
+    {
+      "id": "r2_parameter_packet_present",
+      "pass": true,
+      "expected": "existing_internal_feedback_parameter_packet_present_but_not_yet_an_operator_level_kobs_factorization",
+      "actual": "existing_internal_feedback_parameter_packet_present_but_not_yet_an_operator_level_kobs_factorization",
+      "meaning": "existing internal feedback parameters remain packetized"
+    },
+    {
+      "id": "r3_explicit_glight_packet_present",
+      "pass": true,
+      "expected": "explicit_internal_light_propagator_packet_present_but_eigenchannel_only_and_not_yet_factorized_from_existing_kernel_feedback",
+      "actual": "explicit_internal_light_propagator_packet_present_but_eigenchannel_only_and_not_yet_factorized_from_existing_kernel_feedback",
+      "meaning": "an explicit G_light packet now exists"
+    },
+    {
+      "id": "r3_matrix_is_real_2x2",
+      "pass": true,
+      "expected": "diagonal_real_2x2",
+      "actual": [
+        [
+          0.986514743676376,
+          0.0
+        ],
+        [
+          0.0,
+          0.9980085385126205
+        ]
+      ],
+      "meaning": "the new G_light packet is an explicit finite matrix representative"
+    },
+    {
+      "id": "r3_matrix_does_not_use_psi0",
+      "pass": true,
+      "expected": false,
+      "actual": false,
+      "meaning": "the matrix does not smuggle selector orientation through psi0"
+    },
+    {
+      "id": "p6_originally_missing_glight",
+      "pass": true,
+      "expected": true,
+      "actual": true,
+      "meaning": "G_light was indeed one of the original finite missing objects in P6"
+    },
+    {
+      "id": "h14_no_equivalence_map_present",
+      "pass": true,
+      "expected": true,
+      "actual": true,
+      "meaning": "no explicit equivalence map identifies existing kernel feedback with K_obs"
+    },
+    {
+      "id": "h15_no_selector_sector_export",
+      "pass": true,
+      "expected": "existing_feedback_not_identified_with_kobs",
+      "actual": "existing_feedback_not_identified_with_kobs",
+      "meaning": "existing feedback still has no selector-sector export"
+    },
+    {
+      "id": "h29_proxies_preoriented_only",
+      "pass": true,
+      "expected": "PASS_PARTIAL_PREORIENTED_PROXY_REDUCTION_ONLY",
+      "actual": "PASS_PARTIAL_PREORIENTED_PROXY_REDUCTION_ONLY",
+      "meaning": "retardation proxies remain modulation-only and not anchor-generating"
+    }
+  ],
+  "route_state": {
+    "kernel_feedback_present": true,
+    "existing_internal_feedback_parameter_packet_present": true,
+    "explicit_internal_light_propagator_present": true,
+    "explicit_emission_map_present": false,
+    "explicit_light_to_matter_response_map_present": false,
+    "explicit_observer_readout_operator_present": false,
+    "equivalence_factorization_map_from_existing_feedback_present": false,
+    "selector_sector_projected_block_present": false,
+    "strict_core_kobs_instantiated": false
+  },
+  "supporting_present_but_insufficient_objects": [
+    "existing_kernel_feedback_inside_K_total",
+    "H3_admissible_K_obs_ansatz",
+    "R2_internal_feedback_parameter_packet",
+    "R3_explicit_internal_light_propagator_packet"
+  ],
+  "resolved_from_P6": [
+    "explicit_internal_light_propagator_G_light_on_L_int"
+  ],
+  "missing_upstream_objects": [
+    "explicit_emission_map_E_from_M_pair_to_L_int",
+    "explicit_light_to_matter_response_map_R_mat_from_L_int_to_Q_mat",
+    "explicit_observer_readout_operator_O_obs_on_Q_mat",
+    "equivalence_or_factorization_map_from_existing_kernel_feedback_and_R2_parameter_packet_to_H3_operator_chain",
+    "selector_sector_projected_2x2_block_export_on_an_actual_pair"
+  ],
+  "blocking_frontier": {
+    "R3_B1": "explicit_G_light_packet_present_but_eigenchannel_only_and_not_factorized",
+    "H14_B1": "existing kernel feedback is real but no explicit equivalence map or selector-sector reduction identifies it with the H-lane operator K_obs",
+    "H15_B1": "existing kernel feedback has no explicit residual-selector-sector reduction or projected selector-block export in the current repository, so K_obs remains a distinct extension hypothesis rather than an identified reformulation of existing kernel feedback",
+    "H29_B1": "H29_B1 := existing wave/retardation/memory proxies only modulate a pre-oriented anisotropic channel and do not by themselves generate an internal strict-core orientation anchor for theta_i"
+  },
+  "computed": {
+    "G_light_matrix": [
+      [
+        0.986514743676376,
+        0.0
+      ],
+      [
+        0.0,
+        0.9980085385126205
+      ]
+    ],
+    "G_light_basis_order": [
+      "ell_+",
+      "ell_-"
+    ]
+  },
+  "required_next_step": "IMPLEMENT_E_OR_R_MAT_OR_O_OBS_OR_THE_FACTORIZATION_MAP_AND_RERUN_P7_BEFORE_CLAIMING_EXISTING_KERNEL_FEEDBACK_ALREADY_CONTAINS_SELECTOR_FACING_KOBS",
+  "strict_core_promotion": false,
+  "no_false_pass": true
+}

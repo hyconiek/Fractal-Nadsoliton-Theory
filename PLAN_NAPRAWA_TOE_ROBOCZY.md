@@ -8743,6 +8743,52 @@ Po tej rundzie:
    - nie promowac samego packetu parametrow `R2` do selector-facing `K_obs`.
 
 
+## 528. Explicit G_light packet and rerun of the current K_obs route (2026-03-07)
+
+1. Cel:
+   - sprobowac zbudowac jeden realny operator-chain object zamiast pozostawac
+     na poziomie packetu parametrow,
+   - wybrac najwezszy uczciwy kandydat: `G_light`,
+   - sprawdzic, czy blocker-set po `P6` maleje dokladnie o jeden element.
+2. Wynik:
+   - `R3` tworzy explicit finite internal-light propagator packet
+     `G_light^(1)` na nosniku `L_1 = span{ell_+, ell_-}`,
+   - macierz:
+     `diag(0.986514743676376, 0.9980085385126205)`,
+   - operator jest policzony z `omega`, `retard_phase`,
+     `anisotropy_strength`,
+   - sama macierz nie uzywa `psi0`,
+   - `P7` rerunuje trase:
+     `existing kernel feedback + R2 + explicit G_light -> H3 chain -> selector-facing block`,
+   - wynik `P7`:
+     `NOT_COMPUTABLE_FROM_CURRENT_KERNEL_FEEDBACK_TO_KOBS_ROUTE_AFTER_GLIGHT_PACKET`,
+   - `N10` formalizuje theorem-level updated-route wynik:
+     nawet po dodaniu jawnego `G_light` obecna trasa nadal nie instancjuje
+     selector-facing `K_obs`.
+3. Frontier po kroku:
+   - `R3_result := explicit internal light propagator packet is now present`,
+   - `P7_resolved_from_P6 := explicit_internal_light_propagator_G_light_on_L_int`,
+   - `P7_missing_objects := explicit E / explicit R_mat / explicit O_obs / factorization map / selector-sector projected block export`,
+   - `N10_route_result := current kernel feedback still does not instantiate selector-facing K_obs after explicit G_light`,
+   - `R3_boundary := explicit G_light packet is not yet a factorization of current kernel feedback`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/R3_MINIMAL_INTERNAL_LIGHT_PROPAGATOR_PACKET_FOR_KOBS.md`,
+   - dodano `fundamental_action_reconstruction/r3_minimal_internal_light_propagator_packet_for_kobs.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r3_minimal_internal_light_propagator_packet_for_kobs.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r3_minimal_internal_light_propagator_packet_for_kobs_summary.json`,
+   - dodano `fundamental_action_reconstruction/P7_EXISTING_KERNEL_FEEDBACK_TO_KOBS_RERUN_AFTER_GLIGHT_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/p7_existing_kernel_feedback_to_kobs_rerun_after_glight_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p7_existing_kernel_feedback_to_kobs_rerun_after_glight_packet.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p7_existing_kernel_feedback_to_kobs_rerun_after_glight_packet_summary.json`,
+   - dodano `fundamental_action_reconstruction/N10_CURRENT_KERNEL_FEEDBACK_KOBS_OBSTRUCTION_AFTER_GLIGHT_PACKET_THEOREM.md`,
+   - dodano `fundamental_action_reconstruction/n10_current_kernel_feedback_kobs_obstruction_after_glight_packet_theorem.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n10_current_kernel_feedback_kobs_obstruction_after_glight_packet_theorem_summary.json`.
+5. Nastepny poprawny ruch:
+   - albo dodac jeden z pozostalych operator-chain objects `E / R_mat / O_obs`,
+   - albo zbudowac factorization map z existing kernel feedback do `H3`,
+   - nie promowac samego `G_light` packet do selector-facing `K_obs`.
+
+
 - `H29`: stare proxy `retard_phase/tau/gain` moduluja preorientowany kanal, ale nie dostarczaja same wewnetrznego strict-core anchoru orientacji.
 - `H30`: `orientation_psi0 = mod(0.5*phi + 0.8*omega, 2*pi)` jest deterministycznym kandydatem anchoru z kernel invariants, ale nie jest jeszcze strict-core eksportem `theta_i`.
 - `H31`: `psi0` ma formalny embedding do `pair1=(c_1,s_1)`, ale nadal nie ma dowodu, ze jest to strict-core redukcja selektora, a nie tylko wybor wspolrzednych.

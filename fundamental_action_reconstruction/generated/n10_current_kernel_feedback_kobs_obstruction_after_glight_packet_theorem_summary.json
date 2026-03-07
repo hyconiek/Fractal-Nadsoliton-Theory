@@ -1,0 +1,71 @@
+{
+  "step": "N10",
+  "status": "N10_DISCHARGED_CURRENT_KERNEL_FEEDBACK_KOBS_OBSTRUCTION_AFTER_GLIGHT_PACKET_NO_FALSE_PASS",
+  "goal": "Discharge an updated route-specific theorem: even after adding an explicit G_light packet, the current kernel-feedback route does not yet instantiate a selector-facing K_obs.",
+  "scope": "current_kernel_feedback_to_kobs_route_after_R3_only",
+  "checks": [
+    {
+      "id": "p7_route_negative",
+      "actual": "NOT_COMPUTABLE_FROM_CURRENT_KERNEL_FEEDBACK_TO_KOBS_ROUTE_AFTER_GLIGHT_PACKET",
+      "expected": "NOT_COMPUTABLE_FROM_CURRENT_KERNEL_FEEDBACK_TO_KOBS_ROUTE_AFTER_GLIGHT_PACKET",
+      "pass": true,
+      "meaning": "the rerun probe still does not instantiate a selector-facing K_obs"
+    },
+    {
+      "id": "r3_explicit_glight_packet_present",
+      "actual": "explicit_internal_light_propagator_packet_present_but_eigenchannel_only_and_not_yet_factorized_from_existing_kernel_feedback",
+      "expected": "explicit_internal_light_propagator_packet_present_but_eigenchannel_only_and_not_yet_factorized_from_existing_kernel_feedback",
+      "pass": true,
+      "meaning": "an explicit finite G_light packet exists"
+    },
+    {
+      "id": "r3_factorization_still_absent",
+      "actual": "not_identified_with_existing_kernel_feedback",
+      "expected": "not_identified_with_existing_kernel_feedback",
+      "pass": true,
+      "meaning": "the new packet is not yet a factorization of current kernel feedback"
+    },
+    {
+      "id": "r3_matrix_no_orientation_anchor",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "the explicit G_light matrix does not use psi0"
+    },
+    {
+      "id": "h15_selector_sector_export_absent",
+      "actual": "existing_feedback_not_identified_with_kobs",
+      "expected": "existing_feedback_not_identified_with_kobs",
+      "pass": true,
+      "meaning": "selector-sector export remains absent"
+    },
+    {
+      "id": "h29_proxies_preoriented_only",
+      "actual": "PASS_PARTIAL_PREORIENTED_PROXY_REDUCTION_ONLY",
+      "expected": "PASS_PARTIAL_PREORIENTED_PROXY_REDUCTION_ONLY",
+      "pass": true,
+      "meaning": "retardation proxies remain modulation-only and not anchor-generating"
+    }
+  ],
+  "theorem_result": {
+    "discharged": true,
+    "explicit_internal_light_propagator_packet_present": true,
+    "selector_facing_kobs_instantiated": false,
+    "explicit_glight_packet_is_not_factorization_discharge": true,
+    "preoriented_proxies_are_not_internal_anchor_generation": true
+  },
+  "missing_structure_classes": [
+    "explicit_emission_map_E_from_M_pair_to_L_int",
+    "explicit_light_to_matter_response_map_R_mat_from_L_int_to_Q_mat",
+    "explicit_observer_readout_operator_O_obs_on_Q_mat",
+    "equivalence_or_factorization_map_from_existing_kernel_feedback_and_R2_parameter_packet_to_H3_operator_chain",
+    "selector_sector_projected_2x2_block_export_on_an_actual_pair"
+  ],
+  "hard_limits": [
+    "no global impossibility theorem",
+    "no claim that future K_obs factorizations are impossible",
+    "no claim that QW-2191 is discharged",
+    "no claim that ToE is closed"
+  ],
+  "required_next_step": "ADD_ONE_REMAINING_OPERATOR_CHAIN_OBJECT_OR_THE_FACTORIZATION_MAP_AND_RERUN_P7"
+}

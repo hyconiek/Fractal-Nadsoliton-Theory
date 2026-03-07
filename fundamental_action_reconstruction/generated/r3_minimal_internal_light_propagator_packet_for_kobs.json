@@ -1,0 +1,74 @@
+{
+  "stage": "R3",
+  "operator_scope": "explicit_internal_light_propagator_packet",
+  "carrier": "L_1=span{ell_+,ell_-}",
+  "basis_order": [
+    "ell_+",
+    "ell_-"
+  ],
+  "basis_role": "ordered_light_eigenchannel_basis_only_not_selector_or_pair_basis",
+  "source_reports": [
+    "QW-1952",
+    "QW-1955",
+    "QW-1956"
+  ],
+  "unit_convention": {
+    "speed_of_signal_c": 1.0
+  },
+  "operator_formula": "G_light^(1)=diag(cos(omega*L_+/c),cos(omega*L_-/c))",
+  "input_scalars": {
+    "omega": 0.37341399972174283,
+    "retard_phase": 0.11376650634004519,
+    "anisotropy_strength": 0.4451716653343556
+  },
+  "derived_path_lengths": {
+    "L0": 0.30466588404510986,
+    "L_plus": 0.44029450301603507,
+    "L_minus": 0.16903726507418462,
+    "path_rule": {
+      "L0": "c*retard_phase/omega",
+      "L_plus": "L0*(1+anisotropy_strength)",
+      "L_minus": "L0*(1-anisotropy_strength)"
+    }
+  },
+  "matrix": [
+    [
+      0.986514743676376,
+      0.0
+    ],
+    [
+      0.0,
+      0.9980085385126205
+    ]
+  ],
+  "eigenvalues": {
+    "lambda_plus": 0.986514743676376,
+    "lambda_minus": 0.9980085385126205
+  },
+  "self_adjoint": true,
+  "uses_orientation_anchor_in_matrix": false,
+  "selector_sector_projected_block_present": false,
+  "factorization_status": "not_identified_with_existing_kernel_feedback",
+  "pair_projection_status": "absent",
+  "consistency_checks": [
+    {
+      "id": "retard_phase_q1952_q1955_match",
+      "actual": 0.11376650634004519,
+      "expected": 0.11376650634004519,
+      "tolerance": 1e-12,
+      "abs_delta": 0.0,
+      "consistent": true
+    },
+    {
+      "id": "retard_phase_q1955_q1956_match",
+      "actual": 0.11376650634004519,
+      "expected": 0.11376650634004519,
+      "tolerance": 1e-12,
+      "abs_delta": 0.0,
+      "consistent": true
+    }
+  ],
+  "classification": "explicit_internal_light_propagator_present_but_eigenchannel_only_and_not_kernel_factorized",
+  "frontier": "R3_B1",
+  "no_false_pass": true
+}
