@@ -1,7 +1,7 @@
 # Fundamental Action Reconstruction
 
-Status: `PROGRAM_PHASE1_COMPLETE_C55_T1_T12_PLUS_N1_N2_N3_D1_AX1_AX2_AX3_AX4_AX5_AX6_AX7_AX8_AND_H1_H2_H3_H4_H5_H6_H7_H8_H9_H10_H11_H12_H13_H14_H15_H16_H17_H18_H19_H20_H21_H22_H23_H24_H25_H26_H27_H28_H29_H30_H31_H32_H33_H34_H35_H36_H37_H38_H39_H40_V1_V2_V3_V4_V5_V6_V7_O1_O2_O3_O4_NO_FALSE_PASS`
-As of: `2026-03-06`
+Status: `PROGRAM_PHASE1_COMPLETE_C55_T1_T12_PLUS_N1_N2_N3_D1_AX1_AX2_AX3_AX4_AX5_AX6_AX7_AX8_AND_H1_H2_H3_H4_H5_H6_H7_H8_H9_H10_H11_H12_H13_H14_H15_H16_H17_H18_H19_H20_H21_H22_H23_H24_H25_H26_H27_H28_H29_H30_H31_H32_H33_H34_H35_H36_H37_H38_H39_H40_H41_H42_V1_V2_V3_V4_V5_V6_V7_O1_O2_O3_O4_NO_FALSE_PASS`
+As of: `2026-03-07`
 
 Ten katalog otwiera rownolegly tor konstrukcyjny poza drabinka `L5/L12`.
 
@@ -63,6 +63,15 @@ Aktualizacja `H39`:
 Aktualizacja `H40`:
 - strict core nie ma jeszcze zadnego globalnego transition/gluing object dla lokalnych chartow selektora,
 - lokalne compatibility laws i control-lane transition structures nie zostaly jeszcze podniesione do strict-core global selector transition object.
+
+Aktualizacja `H41`:
+- strict core nie ma jeszcze jawnego selector atlas, overlap-domain declaration ani selector-gluing data,
+- lokalne embeddingi chartowe i lokalne compatibility laws nie zostaly jeszcze podniesione do globalnej struktury atlasu lub cocycle danych selektora.
+
+Aktualizacja `H42`:
+- minimalny `c`-based retardation operator na `pair1 = (c_1,s_1)` jest selector-trivial bez importowanego anchoru,
+- z `psi0` daje rzeczywisty spectral/response split przez anizotropowe dane sciezek,
+- ale nadal importuje anchor i nie stanowi strict-core zrodla selekcji.
 
 Aktualizacja `V1`:
 - `informational viscosity` zostaje utrzymane jako slabsza hipoteza konkurencyjna,

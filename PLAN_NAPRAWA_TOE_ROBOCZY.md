@@ -8484,6 +8484,8 @@ Po tej rundzie:
 - `H38`: strict core wspiera teraz co najwyzej lokalny projektowy/ray-level reprezentant selektora na `pair1`, ale nadal nie daje fizycznie zindywidualizowanego skierowanego stanu selektora.
 - `H39`: strict core nie ma jeszcze globalnego obiektu fizycznego, ktory wynosilby lokalny projektowy/ray-level reprezentant selektora na `pair1` ponad chart lokalny.
 - `H40`: strict core nie ma jeszcze zadnego globalnego transition/gluing object dla lokalnych chartow selektora; istnieja tylko lokalne compatibility laws i control-lane transition structures, ale nie zostaly podniesione do strict-core selector transition object.
+- `H41`: strict core nie ma jeszcze jawnego selector atlas, overlap-domain declaration ani selector-gluing data; lokalne embeddingi i lokalne compatibility laws nie zostaly podniesione do globalnej struktury atlasu selektora.
+- `H42`: minimalny `c`-based retardation operator na `pair1=(c_1,s_1)` jest selector-trivial bez importowanego anchoru, a z `psi0` daje tylko nowy spectral/response split przez anizotropowe dane sciezek, nadal importujac anchor.
 - `V1`: `informational viscosity` zostaje utrzymane jako konkurencyjna hipoteza extension lane, ale bez jawnego operatora selektora i bez redukcji do `pair1`.
 - `V2`: istniejace proxy `lepkość/damping/memory` pozostaja tylko coarse-grained modyfikatorami odpowiedzi i nadal nie daja redukcji do `pair1=(c_1,s_1)`.
 - `V3`: minimalny pair-level operator lepkości jest dopuszczalny tylko jako izotropowy `nu_iso * I_2` albo anizotropowy z importowanym anchorem `psi0`, wiec sam nie domyka selektora.
