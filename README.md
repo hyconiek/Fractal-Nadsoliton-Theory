@@ -189,6 +189,12 @@ Primary state report:
   remains unchanged and the main host route stays negative. So the direct-route
   missing pieces are those four family witnesses, the `c1c1` and `s1s1` zero
   witnesses, and the still-open `QW-2191` boundary.
+- The next honest move after that has now also been executed, again only on
+  that direct route: `R23` plus `P30/N33` do not prove the direct `m2` family
+  vanishes. They only reduce the direct mass-like `m2` family zero-witness
+  blocker to one exact direct `m2` balance witness, while the direct `g4/g6/gY`
+  family blockers, the main host route, and the already closed light-facing
+  kernel channel remain otherwise unchanged.
 - This is real progress on the selector problem at extension level, but it does not upgrade strict-core closure and does not change `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 - Details: [`fundamental_action_reconstruction/README.md`](fundamental_action_reconstruction/README.md), [`fundamental_action_reconstruction/generated/pair1_operator_probe_report.json`](fundamental_action_reconstruction/generated/pair1_operator_probe_report.json).
 

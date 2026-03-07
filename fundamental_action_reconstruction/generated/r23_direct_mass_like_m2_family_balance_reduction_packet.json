@@ -1,0 +1,131 @@
+{
+  "stage": "R23",
+  "packet_goal": "reduce_the_direct_mass_like_m2_family_c1s1_shift_defect_zero_witness_to_one_exact_positive_negative_balance_equation_without_claiming_that_the_balance_holds",
+  "source_reports": [
+    "R20",
+    "R21",
+    "R22"
+  ],
+  "direct_mass_like_m2_family_balance_reduction": {
+    "family_defect_symbol": "mass_like_m2_family_defect",
+    "family_defect_expression": "((m2_psi1) + (m2_psi7) + (m2_psi2) + (m2_psi8)) - ((m2_psi4) + (m2_psi10) + (m2_psi5) + (m2_psi11))",
+    "positive_support_slots": [
+      "psi1",
+      "psi7",
+      "psi2",
+      "psi8"
+    ],
+    "negative_support_slots": [
+      "psi4",
+      "psi10",
+      "psi5",
+      "psi11"
+    ],
+    "positive_balance_sum_symbol": "M2_c1s1_positive",
+    "negative_balance_sum_symbol": "M2_c1s1_negative",
+    "positive_balance_sum_expression": "(m2_psi1) + (m2_psi7) + (m2_psi2) + (m2_psi8)",
+    "negative_balance_sum_expression": "(m2_psi4) + (m2_psi10) + (m2_psi5) + (m2_psi11)",
+    "exact_balance_equation": "M2_c1s1_positive - M2_c1s1_negative = 0.0",
+    "equivalent_balance_witness_needed": "M2_c1s1_positive = M2_c1s1_negative",
+    "declared_plus3_support_pairing": {
+      "positive_slots": [
+        "psi1",
+        "psi7",
+        "psi2",
+        "psi8"
+      ],
+      "plus3_images": [
+        "psi4",
+        "psi10",
+        "psi5",
+        "psi11"
+      ],
+      "negative_slots": [
+        "psi4",
+        "psi10",
+        "psi5",
+        "psi11"
+      ]
+    },
+    "scope": "direct_mass_like_m2_family_pair1_c1s1_route_only"
+  },
+  "result": {
+    "explicit_direct_mass_like_m2_family_balance_reduction_present": true,
+    "explicit_direct_mass_like_m2_family_balance_witness_present": false,
+    "global_reduction_of_main_R21_c1s1_blocker_claimed": false
+  },
+  "light_boundary": {
+    "status": "shared_kernel_light_facing_channel_already_closed_by_R14_and_left_unchanged_by_R23",
+    "shared_light_channel_source": "R14 specialization of the symmetric kernel-mixing channel",
+    "current_packet_scope": "direct non-light mass-like m2 family balance reduction on the already exported pair1 c1s1 support only",
+    "boundary": "R23 does not alter the light-facing kernel channel; it only rewrites the direct mass-like m2 family defect as one exact positive-negative balance equation on the declared support"
+  },
+  "classification": "explicit_direct_mass_like_m2_family_balance_equation_present_but_no_balance_witness",
+  "frontier": "R23_B1",
+  "frontier_text": "on the direct formal coefficient-family route only, the direct mass-like m2 family zero-witness blocker is sharpened into one exact balance witness, while the other direct family blockers, the main host route, and QW-2191 remain unchanged",
+  "consistency_checks": [
+    {
+      "id": "r22_direct_family_route_present",
+      "actual": true,
+      "expected": true,
+      "meaning": "R22 already exports the direct formal family route for the pair1 c1s1 defect",
+      "pass": true
+    },
+    {
+      "id": "r22_direct_m2_zero_witness_still_absent",
+      "actual": false,
+      "expected": false,
+      "meaning": "R22 does not already prove the direct mass-like m2 family defect vanishes",
+      "pass": true
+    },
+    {
+      "id": "positive_and_negative_mass_support_slot_counts_are_four",
+      "actual": [
+        4,
+        4
+      ],
+      "expected": [
+        4,
+        4
+      ],
+      "meaning": "the direct mass-like m2 family defect uses four positive and four negative pair1 c1s1 support slots",
+      "pass": true
+    },
+    {
+      "id": "plus3_shift_maps_positive_mass_support_slots_to_negative_mass_support_slots",
+      "actual": [
+        "psi10",
+        "psi11",
+        "psi4",
+        "psi5"
+      ],
+      "expected": [
+        "psi10",
+        "psi11",
+        "psi4",
+        "psi5"
+      ],
+      "meaning": "the declared +3 carrier shift maps the positive m2 support slots onto the negative support slots",
+      "pass": true
+    },
+    {
+      "id": "light_boundary_unchanged_from_r22",
+      "actual": "shared_kernel_light_facing_channel_already_closed_by_R14_and_left_unchanged_by_R22",
+      "expected": "shared_kernel_light_facing_channel_already_closed_by_R14_and_left_unchanged_by_R22",
+      "meaning": "the already closed light-facing kernel channel remains unchanged on the direct mass-like m2 route",
+      "pass": true
+    }
+  ],
+  "hard_limits": [
+    "no_theorem_level_pass",
+    "no_full_closure_pass",
+    "no_claim_that_the_direct_mass_like_m2_family_balance_holds",
+    "no_claim_that_the_direct_mass_like_m2_family_defect_vanishes",
+    "no_claim_that_any_other_direct_family_defect_vanishes",
+    "no_claim_that_the_main_R21_blocker_is_globally_reduced",
+    "no_claim_that_any_pair1_c1c1_or_s1s1_zero_equation_holds",
+    "no_claim_that_QW2191_is_discharged",
+    "no_claim_that_selector_closure_is_obtained"
+  ],
+  "no_false_pass": true
+}

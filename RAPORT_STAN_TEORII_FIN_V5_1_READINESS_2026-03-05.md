@@ -2594,6 +2594,47 @@ Frontier po `R22/P29/N32`:
 - `N32_route_result := current repo still does not identify existing kernel feedback host with the exported canonical Psi block even after adding the direct formal c1s1 family route`,
 - nadal brak globalnego theorem-level/full-closure PASS i nadal brak globalnej redukcji glownego frontiera `R21/P28`.
 
+Co realnie zostalo dodane przez `R23`, `P30` i `N33`:
+- `R23` tworzy jawny `direct mass-like m2 family balance reduction packet` na
+  direct formal family route,
+- `R23` eksportuje exact positive support sum:
+  `m2_psi1 + m2_psi7 + m2_psi2 + m2_psi8`,
+  exact negative support sum:
+  `m2_psi4 + m2_psi10 + m2_psi5 + m2_psi11`,
+  oraz exact balance equation
+  `M2_c1s1_positive - M2_c1s1_negative = 0`,
+- `R23` nie rusza warstwy swiatlo/kernel:
+  shared kernel/light-facing channel pozostaje dokladnie tym samym
+  juz zamknietym kanalem z `R14`,
+- `R23` jest jawnie route-scoped:
+  to nie jest globalna redukcja glownego frontiera `R21/P28`,
+  tylko direct `m2` family reduction wewnatrz
+  `current exported pair1 c1s1 coefficient-family decomposition only`,
+- `P30` rerunuje direct formal family route po `R23`,
+- wynik `P30`:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_AFTER_R23_DIRECT_M2_BALANCE_PACKET`,
+- `P30` rozklada brak
+  `explicit zero witness for direct mass-like m2 family c1s1 shift defect`
+  do jednego jawnego `direct m2 balance witness`,
+- `N33` daje theorem-level updated-route wynik:
+  nawet po exact direct `m2` balance reduction obecny repo nadal nie
+  identyfikuje hosta `QW-2186` z exported canonical blockiem.
+
+Frontier po `R23/P30/N33`:
+- `R23_result := explicit direct mass-like m2 family balance reduction packet is present`,
+- `R23_scope := direct mass-like m2 family pair1 c1s1 route only`,
+- `R23_light_boundary := shared kernel/light-facing channel remains exactly the already closed R14 channel`,
+- `P30_route_result := current direct formal c1s1 family route is still not computable after R23`,
+- `P30_missing_objects := explicit zero witness for direct quartic-like g4 family c1s1 shift defect`,
+- `P30_missing_objects += explicit zero witness for direct quintic-like g6 family c1s1 shift defect`,
+- `P30_missing_objects += explicit zero witness for direct yukawa-like gY family c1s1 shift defect`,
+- `P30_missing_objects += explicit balance witness for direct mass-like m2 family c1s1 shift defect`,
+- `P30_missing_objects += explicit zero witness for the declared pair1 residual c1c1 equation`,
+- `P30_missing_objects += explicit zero witness for the declared pair1 residual s1s1 equation`,
+- `P30_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+- `N33_route_result := current repo still does not identify existing kernel feedback host with the exported canonical Psi block even after direct m2 balance reduction`,
+- nadal brak globalnego theorem-level/full-closure PASS i nadal brak globalnej redukcji glownego frontiera `R21/P28`.
+
 Co realnie zostalo dodane przez `AX1`:
 - otwarto jawny pozytywny lane `axiom-augmented`,
 - pod minimalnym aksjomacie selekcji z `QW-2192/QW-2193` uzyskano packet-ready actual:

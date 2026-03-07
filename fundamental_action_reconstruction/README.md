@@ -908,6 +908,48 @@ Aktualizacja `N32`:
   nie twierdzi, ze `QW-2191` jest rozladowane,
   bez falszywego PASS.
 
+Aktualizacja `R23`:
+- zmaterializowano jawny `direct mass-like m2 family balance reduction packet`
+  na direct formal family route po `R22`,
+- packet eksportuje exact positive support sum:
+  `m2_psi1 + m2_psi7 + m2_psi2 + m2_psi8`,
+  exact negative support sum:
+  `m2_psi4 + m2_psi10 + m2_psi5 + m2_psi11`,
+  oraz exact balance equation:
+  `M2_c1s1_positive - M2_c1s1_negative = 0`,
+- packet nie twierdzi, ze ten balance zachodzi; redukuje tylko direct `m2`
+  family zero witness do jednego direct `m2` balance witness,
+- kanal swiatlo/kernel pozostaje dokladnie tym samym juz zamknietym kanalem z
+  `R14`; `R23` dotyka tylko non-light direct `m2` family support.
+
+Aktualizacja `P30`:
+- wykonano rerun direct formal family route po dodaniu `R23`,
+- wynik:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_AFTER_R23_DIRECT_M2_BALANCE_PACKET`,
+- probe nie twierdzi, ze direct family route sie domyka; twierdzi tylko, ze
+  direct `m2` family zero witness zostal zwężony do jednego exact balance
+  witness,
+- po tym rerunie na tej trasie zostaja:
+  `direct g4` zero witness,
+  `direct g6` zero witness,
+  `direct gY` zero witness,
+  `direct m2` balance witness,
+  `c1c1` zero witness,
+  `s1s1` zero witness,
+  oraz `QW-2191` canonicalization boundary.
+
+Aktualizacja `N33`:
+- wykonano theorem-level wynik dla direct formal family route po `R23/P30`,
+- `R23/P30/QW-2191/C10` razem wymuszaja wniosek:
+  obecny repo nadal nie identyfikuje hosta `QW-2186` z exported canonical
+  blockiem nawet po exact direct `m2` balance reduction,
+- theorem jest jawnie `route-specific only`:
+  nie daje globalnej redukcji glownego frontiera z `R21/P28`,
+  nie twierdzi, ze direct `m2` balance zachodzi,
+  nie twierdzi, ze direct `g4/g6/gY` defects znikaja,
+  nie twierdzi, ze `QW-2191` jest rozladowane,
+  bez falszywego PASS.
+
 ## Ontologiczna wskazowka programu
 
 Program jest prowadzony pod robocza ontologia:
