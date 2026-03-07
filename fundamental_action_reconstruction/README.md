@@ -1461,6 +1461,32 @@ Aktualizacja `N45`:
   `psi1(x)`, ale cala trasa nadal pozostaje poza strict core,
 - brak claimu, ze `QW-2191` jest rozladowane albo ze ToE jest zamknieta.
 
+Aktualizacja `AX11`:
+- wykonano nastepny najwezszy dodatni ruch na tym samym lane
+  `canonical-ontology-supported`,
+- z tej samej kanonicznej ontologii programu co w `AX10` zmaterializowano
+  local pre-observer source-eom coherence instance:
+  `m2_psi1 := mu_m2_plus3_segment_psi1_psi4`,
+  ale tylko na attacked source-eom lane i tylko poza strict core,
+- ten krok domyka lokalny blocker `R34_B1` na lane zewnetrznym only,
+  ale nie domyka target-side witness, innych direct `m2`, `g4/g6/gY`,
+  `c1c1/s1s1` ani `QW-2191`.
+
+Aktualizacja `P43`:
+- wykonano rerun direct formal family route po `AX11`,
+- wynik:
+  `CANONICAL_ONTOLOGY_SUPPORTED_ONLY_ATTACKED_SOURCE_ACTION_AND_SOURCE_EOM_BLOCKERS_CLOSED_ROUTE_STILL_NOT_CLOSED_AFTER_AX11`,
+- probe utrzymuje, ze dwa attacked source-side blockery sa lokalnie
+  domkniete, ale route nadal nie jest domkniety jako calosc.
+
+Aktualizacja `N46`:
+- wykonano boundary theorem po `AX11/P43`,
+- theorem zapisuje najmocniejszy uczciwy wniosek:
+  lokalne source-action closure z `AX10` i lokalne source-eom closure z
+  `AX11` sa realne, ale tylko `canonical-ontology-supported`; cala trasa nadal
+  pozostaje poza strict core,
+- brak claimu, ze `QW-2191` jest rozladowane albo ze ToE jest zamknieta.
+
 ## Ontologiczna wskazowka programu
 
 Program jest prowadzony pod robocza ontologia:

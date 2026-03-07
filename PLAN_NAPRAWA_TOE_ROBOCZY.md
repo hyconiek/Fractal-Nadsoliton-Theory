@@ -10329,6 +10329,56 @@ Po tej rundzie:
      `explicit_assignment_witness_of_m2_psi4_to_mu_m2_plus3_segment_psi1_psi4`,
    - albo zostawic ten lane jako local support only i dalej trzymac route
      jako nierozladowany.
+
+535. `AX11/P43/N46`: local source-eom closure on the canonical-ontology-supported lane without false pass
+1. Zakres:
+   - nie promowac niczego do strict core,
+   - wykorzystac te sama kanoniczna ontologie programu co w `AX10`,
+   - utrzymac jawnie, ze swiatlo pozostaje przed obserwatorem,
+   - domknac tylko jeden lokalny blocker:
+     `explicit_zero_witness_for_the_direct_m2_psi1_source_eom_coefficient_defect_polynomial_on_common_psi1_of_x_support`,
+   - nie twierdzic, ze target-side witness albo route jako calosc sa domkniete.
+2. Wynik:
+   - `AX11` daje realny partial packet:
+     local pre-observer source-eom coherence instance
+     `m2_psi1 := mu_m2_plus3_segment_psi1_psi4`
+     na lane `canonical-ontology-supported` only,
+   - `P43` zwraca:
+     `CANONICAL_ONTOLOGY_SUPPORTED_ONLY_ATTACKED_SOURCE_ACTION_AND_SOURCE_EOM_BLOCKERS_CLOSED_ROUTE_STILL_NOT_CLOSED_AFTER_AX11`,
+   - `N46` utrzymuje najostrzejsza granice bez falszywego PASS:
+     dwa attacked source-side blockery sa lokalnie domkniete tylko na lane
+     `canonical-ontology-supported`, a cala trasa nadal pozostaje poza strict core.
+3. Frontier po kroku:
+   - `AX11_result := attacked R34 source-eom blocker closed on the canonical-ontology-supported pre-observer lane only`,
+   - `P43_missing_objects := explicit_assignment_witness_of_m2_psi4_to_mu_m2_plus3_segment_psi1_psi4`,
+   - `P43_missing_objects += explicit zero witness for direct quartic-like g4 family c1s1 shift defect`,
+   - `P43_missing_objects += explicit zero witness for direct quintic-like g6 family c1s1 shift defect`,
+   - `P43_missing_objects += explicit zero witness for direct yukawa-like gY family c1s1 shift defect`,
+   - `P43_missing_objects += explicit_pairwise_matching_witness_for_m2_psi7_equals_m2_psi10`,
+   - `P43_missing_objects += explicit_pairwise_matching_witness_for_m2_psi2_equals_m2_psi5`,
+   - `P43_missing_objects += explicit_pairwise_matching_witness_for_m2_psi8_equals_m2_psi11`,
+   - `P43_missing_objects += explicit zero witness for the declared pair1 residual c1c1 equation`,
+   - `P43_missing_objects += explicit zero witness for the declared pair1 residual s1s1 equation`,
+   - `P43_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+   - `N46_route_result := current repo still has only local canonical-ontology-supported source-action plus source-eom closures and no strict-core closure`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/AX11_CANONICAL_ONTOLOGY_SUPPORTED_PREOBSERVER_SOURCE_EOM_COHERENCE_INSTANCE.md`,
+   - dodano `fundamental_action_reconstruction/ax11_canonical_ontology_supported_preobserver_source_eom_coherence_instance.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/ax11_canonical_ontology_supported_preobserver_source_eom_coherence_instance.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/ax11_canonical_ontology_supported_preobserver_source_eom_coherence_instance_summary.json`,
+   - dodano `fundamental_action_reconstruction/P43_CANONICAL_ONTOLOGY_SUPPORTED_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_PROBE_AFTER_PREOBSERVER_SOURCE_EOM_COHERENCE_INSTANCE.md`,
+   - dodano `fundamental_action_reconstruction/p43_canonical_ontology_supported_direct_formal_c1s1_family_route_probe_after_preobserver_source_eom_coherence_instance.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p43_canonical_ontology_supported_direct_formal_c1s1_family_route_probe_after_preobserver_source_eom_coherence_instance.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p43_canonical_ontology_supported_direct_formal_c1s1_family_route_probe_after_preobserver_source_eom_coherence_instance_summary.json`,
+   - dodano `fundamental_action_reconstruction/N46_CURRENT_CANONICAL_ONTOLOGY_SUPPORTED_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_BOUNDARY_THEOREM_AFTER_PREOBSERVER_SOURCE_EOM_COHERENCE_INSTANCE.md`,
+   - dodano `fundamental_action_reconstruction/n46_current_canonical_ontology_supported_direct_formal_c1s1_family_route_boundary_theorem_after_preobserver_source_eom_coherence_instance.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n46_current_canonical_ontology_supported_direct_formal_c1s1_family_route_boundary_theorem_after_preobserver_source_eom_coherence_instance_summary.json`.
+5. Nastepny poprawny ruch:
+   - albo uderzyc bezposrednio w
+     `explicit_assignment_witness_of_m2_psi4_to_mu_m2_plus3_segment_psi1_psi4`,
+   - albo osobno w jeden z `direct g4/g6/gY` zero witnesses,
+   - albo zostawic ten lane jako local support only i dalej trzymac route
+     jako nierozladowany.
      coefficient-identification witnessa albo zadnego globalnego skrocenia.
 
 
