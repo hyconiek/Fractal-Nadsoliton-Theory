@@ -57,6 +57,12 @@ Primary state report:
   show that this reduces the blocker-set by one further object, while keeping
   explicit that the resulting `E^*GE` matrix is only a partial pullback and not
   the full `H3` selector-facing block.
+- A third real operator-chain object has now been added: `R5` materializes an
+  explicit current-pair `R_mat^(1)` packet from the already exported
+  heavy/light mass-information split and repaired two-state gains, while `P9`
+  plus `N12` show that this reduces the blocker-set by one further object but
+  still does not instantiate a selector-facing `K_obs` without `O_obs`, the
+  factorization map, and the full projected block.
 - This is real progress on the selector problem at extension level, but it does not upgrade strict-core closure and does not change `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 - Details: [`fundamental_action_reconstruction/README.md`](fundamental_action_reconstruction/README.md), [`fundamental_action_reconstruction/generated/pair1_operator_probe_report.json`](fundamental_action_reconstruction/generated/pair1_operator_probe_report.json).
 
@@ -800,6 +806,8 @@ Current status:
 - this moves the theory forward by materializing one explicit `G_light` operator and proving that the updated route still fails only at `E / R_mat / O_obs / factorization map / selector-facing projected block`,
 - `R4`, `P8`, and `N11` completed as the second constructive reduction of that K_obs blocker-set,
 - this moves the theory forward by materializing one explicit current-pair `E` map, matching the known `P1` extension matrix as a partial pullback, and proving that the updated route still fails only at `R_mat / O_obs / factorization map / full H3 projected block`,
+- `R5`, `P9`, and `N12` completed as the third constructive reduction of that K_obs blocker-set,
+- this moves the theory forward by materializing one explicit current-pair `R_mat` map from already exported mass-information and repaired two-state data, and proving that the updated route still fails only at `O_obs / factorization map / full H3 projected block`,
 - `D1` completed as the current best-supported project conclusion after `N3`,
 - this records the strongest honest interpretation now supported by the evidence: selector closure is not achieved in strict core, and the project must either discharge `T12_B1` directly or accept selector-axiom necessity / strict-core incompleteness as the active design conclusion,
 - `AX1` completed as an explicit axiom-augmented positive lane,

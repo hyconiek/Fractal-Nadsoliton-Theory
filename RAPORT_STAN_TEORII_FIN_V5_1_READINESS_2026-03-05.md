@@ -56,6 +56,10 @@ Interpretacja rygorystyczna:
   materializuja jawny current-pair `E`, redukuja blocker-set o kolejny jeden
   obiekt i utrzymuja negatywny current-route wynik bez promowania partial
   pullback do pelnego `H3` block,
+- `R5`, `P9` i `N12` robia trzeci konstruktywny krok na tej samej trasie:
+  materializuja jawny current-pair `R_mat`, redukuja blocker-set o kolejny
+  jeden obiekt i utrzymuja negatywny current-route wynik bez promowania samego
+  packetu `R_mat` do factorization map albo selector-facing projected block,
 - nie zmienia to decyzji `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 
 Artefakty:
@@ -2009,6 +2013,25 @@ Frontier po `R4/P8/N11`:
 - `N11_route_result := current kernel feedback still does not instantiate selector-facing K_obs even after explicit E and G_light packets`,
 - `P8_resolved_from_P7 := explicit E`,
 - `P8_missing_objects := explicit R_mat / explicit O_obs / factorization map / full H3 selector-sector projected block export`,
+- nadal brak globalnego theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `R5`, `P9` i `N12`:
+- `R5` tworzy pierwszy jawny current-pair light-to-matter response packet
+  `R_mat^(1) : L_1 -> Q_1`,
+- `R5` uzywa tylko juz wyeksportowanych danych
+  `mass_gain`, `heavy_weight_sum`, `light_weight_sum`, `g_h`, `g_l`,
+- `P9` testuje, czy existing kernel feedback plus `R2`, `E`, `G_light` i
+  `R_mat` juz instancjuje selector-facing `K_obs`,
+- `N12` daje theorem-level current-route wynik:
+  nawet po dodaniu jawnych packetow `E`, `G_light` i `R_mat` obecny route
+  nadal nie dochodzi do selector-facing `K_obs`.
+
+Frontier po `R5/P9/N12`:
+- `R5_result := explicit current-pair light-to-matter response packet is now present`,
+- `P9_route_result := current kernel-feedback-to-K_obs route still does not instantiate a selector-facing operator chain after adding E, G_light and R_mat`,
+- `N12_route_result := current kernel feedback still does not instantiate selector-facing K_obs even after explicit E, G_light and R_mat packets`,
+- `P9_resolved_from_P8 := explicit R_mat`,
+- `P9_missing_objects := explicit O_obs / factorization map / full H3 selector-sector projected block export`,
 - nadal brak globalnego theorem-level/full-closure PASS.
 
 Co realnie zostalo dodane przez `AX1`:

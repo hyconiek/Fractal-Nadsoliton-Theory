@@ -1,0 +1,120 @@
+{
+  "step": "N12",
+  "status": "N12_DISCHARGED_CURRENT_KERNEL_FEEDBACK_KOBS_OBSTRUCTION_AFTER_E_GLIGHT_AND_RMAT_PACKETS_NO_FALSE_PASS",
+  "goal": "Discharge an updated route-specific theorem: even after adding explicit E, G_light, and R_mat packets, the current kernel-feedback route does not yet instantiate a selector-facing K_obs.",
+  "scope": "current_kernel_feedback_to_kobs_route_after_R5_only",
+  "checks": [
+    {
+      "id": "p9_route_negative",
+      "actual": "NOT_COMPUTABLE_FROM_CURRENT_KERNEL_FEEDBACK_TO_KOBS_ROUTE_AFTER_E_GLIGHT_AND_RMAT_PACKETS",
+      "expected": "NOT_COMPUTABLE_FROM_CURRENT_KERNEL_FEEDBACK_TO_KOBS_ROUTE_AFTER_E_GLIGHT_AND_RMAT_PACKETS",
+      "pass": true,
+      "meaning": "the rerun probe still does not instantiate a selector-facing K_obs"
+    },
+    {
+      "id": "r4_explicit_e_packet_present",
+      "actual": "explicit_local_chart_emission_map_packet_present_but_preoriented_and_not_yet_factorized_from_existing_kernel_feedback",
+      "expected": "explicit_local_chart_emission_map_packet_present_but_preoriented_and_not_yet_factorized_from_existing_kernel_feedback",
+      "pass": true,
+      "meaning": "an explicit local-chart emission packet exists"
+    },
+    {
+      "id": "r4_factorization_still_absent",
+      "actual": "not_identified_with_existing_kernel_feedback",
+      "expected": "not_identified_with_existing_kernel_feedback",
+      "pass": true,
+      "meaning": "the E packet is still not a factorization of current kernel feedback"
+    },
+    {
+      "id": "r5_explicit_rmat_packet_present",
+      "actual": "explicit_light_to_matter_response_packet_present_but_current_pair_scoped_and_not_yet_factorized_from_existing_kernel_feedback",
+      "expected": "explicit_light_to_matter_response_packet_present_but_current_pair_scoped_and_not_yet_factorized_from_existing_kernel_feedback",
+      "pass": true,
+      "meaning": "an explicit current-pair light-to-matter response packet exists"
+    },
+    {
+      "id": "r5_factorization_still_absent",
+      "actual": "not_identified_with_existing_kernel_feedback",
+      "expected": "not_identified_with_existing_kernel_feedback",
+      "pass": true,
+      "meaning": "the new R_mat packet is still not a factorization of current kernel feedback"
+    },
+    {
+      "id": "r5_pair_scope_only",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "the new R_mat packet remains only current-pair scoped"
+    },
+    {
+      "id": "h33_local_chart_only",
+      "actual": "PASS_PARTIAL_LOCAL_CHART_ONLY",
+      "expected": "PASS_PARTIAL_LOCAL_CHART_ONLY",
+      "pass": true,
+      "meaning": "pair1 remains only a local chart"
+    },
+    {
+      "id": "h34_no_covariance_argument",
+      "actual": "PASS_PARTIAL_NO_STRICT_COVARIANCE_ARGUMENT",
+      "expected": "PASS_PARTIAL_NO_STRICT_COVARIANCE_ARGUMENT",
+      "pass": true,
+      "meaning": "basis-covariance remains undischarged"
+    },
+    {
+      "id": "h35_no_axis_selection_argument",
+      "actual": "PASS_PARTIAL_NO_STRICT_AXIS_SELECTION_ARGUMENT",
+      "expected": "PASS_PARTIAL_NO_STRICT_AXIS_SELECTION_ARGUMENT",
+      "pass": true,
+      "meaning": "strict axis selection remains absent"
+    },
+    {
+      "id": "h36_no_directed_axis_selection",
+      "actual": "PASS_PARTIAL_NO_STRICT_DIRECTED_AXIS_SELECTION",
+      "expected": "PASS_PARTIAL_NO_STRICT_DIRECTED_AXIS_SELECTION",
+      "pass": true,
+      "meaning": "directed-axis discharge remains absent"
+    },
+    {
+      "id": "h37_no_sign_distinction",
+      "actual": "PASS_PARTIAL_NO_STRICT_SIGN_DISTINCTION_STATE_OBJECT",
+      "expected": "PASS_PARTIAL_NO_STRICT_SIGN_DISTINCTION_STATE_OBJECT",
+      "pass": true,
+      "meaning": "sign-distinction discharge remains absent"
+    },
+    {
+      "id": "h15_selector_sector_export_absent",
+      "actual": "existing_feedback_not_identified_with_kobs",
+      "expected": "existing_feedback_not_identified_with_kobs",
+      "pass": true,
+      "meaning": "selector-sector export remains absent"
+    },
+    {
+      "id": "h29_proxies_preoriented_only",
+      "actual": "PASS_PARTIAL_PREORIENTED_PROXY_REDUCTION_ONLY",
+      "expected": "PASS_PARTIAL_PREORIENTED_PROXY_REDUCTION_ONLY",
+      "pass": true,
+      "meaning": "retardation proxies remain modulation-only and not anchor-generating"
+    }
+  ],
+  "theorem_result": {
+    "discharged": true,
+    "explicit_emission_map_packet_present": true,
+    "explicit_internal_light_propagator_packet_present": true,
+    "explicit_light_to_matter_response_packet_present": true,
+    "emission_packet_remains_local_chart_preoriented": true,
+    "matter_response_packet_remains_current_pair_scoped": true,
+    "selector_facing_kobs_instantiated": false
+  },
+  "missing_structure_classes": [
+    "explicit_observer_readout_operator_O_obs_on_Q_mat",
+    "equivalence_or_factorization_map_from_existing_kernel_feedback_and_R2_parameter_packet_to_H3_operator_chain",
+    "full_H3_selector_sector_projected_2x2_block_export_on_an_actual_pair"
+  ],
+  "hard_limits": [
+    "no global impossibility theorem",
+    "no claim that future K_obs factorizations are impossible",
+    "no claim that QW-2191 is discharged",
+    "no claim that ToE is closed"
+  ],
+  "required_next_step": "ADD_O_OBS_OR_THE_FACTORIZATION_MAP_AND_RERUN_P9"
+}

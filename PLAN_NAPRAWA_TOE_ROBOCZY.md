@@ -8836,6 +8836,52 @@ Po tej rundzie:
    - nie promowac partial pullback `E^* G E` do pelnego `H3` selector-facing block.
 
 
+## 530. Explicit current-pair R_mat packet and rerun of the current K_obs route (2026-03-07)
+
+1. Cel:
+   - sprobowac zbudowac trzeci realny operator-chain object po `R4`,
+   - wybrac najwezszy uczciwy kandydat: `R_mat`,
+   - uzyc tylko juz wyeksportowanych danych `QW-1951/QW-1956/R2`,
+   - nie promowac packetu `R_mat` do factorization map ani observer closure.
+2. Wynik:
+   - `R5` tworzy explicit current-pair light-to-matter response packet
+     `R_mat^(1) : L_1 -> Q_1`,
+   - macierz:
+     `diag(0.0888492968560706, 0.005467726604849407)`,
+   - operator jest policzony tylko z
+     `mass_gain`, `heavy_weight_sum`, `light_weight_sum`, `g_h`, `g_l`,
+   - sama macierz nie uzywa `psi0`,
+   - `P9` rerunuje trase:
+     `existing kernel feedback + R2 + E + G_light + R_mat -> H3 chain -> selector-facing block`,
+   - wynik `P9`:
+     `NOT_COMPUTABLE_FROM_CURRENT_KERNEL_FEEDBACK_TO_KOBS_ROUTE_AFTER_E_GLIGHT_AND_RMAT_PACKETS`,
+   - `N12` formalizuje theorem-level updated-route wynik:
+     nawet po dodaniu jawnego `R_mat` obecna trasa nadal nie instancjuje
+     selector-facing `K_obs`.
+3. Frontier po kroku:
+   - `R5_result := explicit current-pair light-to-matter response packet is now present`,
+   - `P9_resolved_from_P8 := explicit_light_to_matter_response_map_R_mat_from_L_int_to_Q_mat`,
+   - `P9_missing_objects := explicit O_obs / factorization map / full H3 selector-sector projected block export`,
+   - `N12_route_result := current kernel feedback still does not instantiate selector-facing K_obs after explicit E, G_light and R_mat`,
+   - `R5_boundary := explicit R_mat packet is still only current-pair scoped and not yet a factorization of current kernel feedback`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/R5_MINIMAL_LIGHT_TO_MATTER_RESPONSE_PACKET_FOR_KOBS.md`,
+   - dodano `fundamental_action_reconstruction/r5_minimal_light_to_matter_response_packet_for_kobs.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r5_minimal_light_to_matter_response_packet_for_kobs.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r5_minimal_light_to_matter_response_packet_for_kobs_summary.json`,
+   - dodano `fundamental_action_reconstruction/P9_EXISTING_KERNEL_FEEDBACK_TO_KOBS_RERUN_AFTER_E_GLIGHT_AND_RMAT_PACKETS.md`,
+   - dodano `fundamental_action_reconstruction/p9_existing_kernel_feedback_to_kobs_rerun_after_e_glight_and_rmat_packets.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p9_existing_kernel_feedback_to_kobs_rerun_after_e_glight_and_rmat_packets.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p9_existing_kernel_feedback_to_kobs_rerun_after_e_glight_and_rmat_packets_summary.json`,
+   - dodano `fundamental_action_reconstruction/N12_CURRENT_KERNEL_FEEDBACK_KOBS_OBSTRUCTION_AFTER_E_GLIGHT_AND_RMAT_PACKETS_THEOREM.md`,
+   - dodano `fundamental_action_reconstruction/n12_current_kernel_feedback_kobs_obstruction_after_e_glight_and_rmat_packets_theorem.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n12_current_kernel_feedback_kobs_obstruction_after_e_glight_and_rmat_packets_theorem_summary.json`.
+5. Nastepny poprawny ruch:
+   - albo dodac brakujacy `O_obs`,
+   - albo zbudowac factorization map z existing kernel feedback do `H3`,
+   - nie promowac samego `R_mat` packet do selector-facing `K_obs`.
+
+
 - `H29`: stare proxy `retard_phase/tau/gain` moduluja preorientowany kanal, ale nie dostarczaja same wewnetrznego strict-core anchoru orientacji.
 - `H30`: `orientation_psi0 = mod(0.5*phi + 0.8*omega, 2*pi)` jest deterministycznym kandydatem anchoru z kernel invariants, ale nie jest jeszcze strict-core eksportem `theta_i`.
 - `H31`: `psi0` ma formalny embedding do `pair1=(c_1,s_1)`, ale nadal nie ma dowodu, ze jest to strict-core redukcja selektora, a nie tylko wybor wspolrzednych.
