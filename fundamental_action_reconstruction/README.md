@@ -829,6 +829,46 @@ Aktualizacja `N30`:
   shift-equivariance witness zamiast ogolnego balance gap,
   bez falszywego PASS.
 
+Aktualizacja `R21`:
+- zmaterializowano jawny `pair1 c1s1 shift-defect polynomial packet`,
+- packet eksportuje exact positive support sum:
+  `R_1 + R_7 + R_2 + R_8`,
+  exact negative support sum:
+  `R_4 + R_10 + R_5 + R_11`,
+  oraz ich exact defect,
+- packet eksportuje tez exact coefficient-family decomposition tego defektu
+  na warstwy:
+  `g4`, `g6`, `gY`, `m2`,
+- packet nadal utrzymuje rozdzial:
+  shared kernel/light-facing channel pozostaje juz zamkniety przez `R14`,
+  a `R21` dotyka tylko non-light diagonal defect na support `pair1 c1s1`,
+- packet nadal nie twierdzi, ze ten defect znika
+  ani ze `QW-2191` jest rozladowane.
+
+Aktualizacja `P28`:
+- wykonano rerun trasy `host matching witness` po `R21`,
+- wynik:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_WITNESS_ROUTE_AFTER_R21_EXPLICIT_PAIR1_C1S1_SHIFT_DEFECT_POLYNOMIAL_PACKET`,
+- probe rozladowuje brak
+  `explicit declared plus3 shift-equivariance witness for the pair1 c1s1 support sum`
+  do jednego jeszcze wezszego braku:
+  `explicit zero witness for the pair1 c1s1 shift-defect polynomial`,
+- po tym rerunie zostaja juz tylko:
+  `pair1 c1s1` defect-zero witness,
+  `c1c1` zero witness,
+  `s1s1` zero witness,
+  oraz `QW-2191` canonicalization boundary.
+
+Aktualizacja `N31`:
+- wykonano theorem-level wynik dla zaktualizowanej trasy po `R21/P28`,
+- `R21/P28/QW-2191/C10` razem wymuszaja wniosek:
+  repo ma juz exact coefficient-level `pair1 c1s1` shift defect,
+  ale nadal nie identyfikuje hosta `QW-2186` z exported canonical blockiem,
+- to jest dalszy realny progres redukcyjny:
+  brakujacy `c1s1` shift-equivariance witness zostal zwężony do jednego
+  jawnego defect-zero witness zamiast abstrakcyjnego symmetry witness,
+  bez falszywego PASS.
+
 ## Ontologiczna wskazowka programu
 
 Program jest prowadzony pod robocza ontologia:
