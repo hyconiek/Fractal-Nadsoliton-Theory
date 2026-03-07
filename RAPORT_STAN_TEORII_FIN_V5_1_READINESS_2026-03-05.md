@@ -3077,6 +3077,33 @@ Frontier po `R33/P41/N44`:
 - `P41_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
 - `N44_route_result := current repo still has only a local canonical-ontology-supported source-action closure plus one reduced source-eom coefficient gap and no strict-core closure`.
 
+Co realnie zostalo dodane przez `R34`, `P42` i `N45`:
+- `R34` nie zamyka nowego blockera pozytywnie; redukuje tylko
+  source eom-side coefficient-identification witness do jednego wezszejszego
+  zero-witness gap dla exact defect polynomial na wspolnym local support
+  `psi1(x)`,
+- `P42` utrzymuje route negatywny:
+  `CANONICAL_ONTOLOGY_SUPPORTED_ONLY_ATTACKED_SOURCE_ACTION_BLOCKER_CLOSED_AND_SOURCE_EOM_DEFECT_POLYNOMIAL_EXPORTED_ROUTE_STILL_NOT_CLOSED_AFTER_R34`,
+- `N45` daje najmocniejszy uczciwy boundary wynik:
+  lokalna closure z `AX10` zostaje zachowana, source eom-side luka zostaje
+  zaostrzona do jednego exact defect-polynomial zero-witness gap, ale cala
+  trasa nadal nie jest domknieta i nadal pozostaje poza strict core.
+
+Frontier po `R34/P42/N45`:
+- `R34_result := attacked source eom-side witness reduced to one exact defect-polynomial zero-witness gap on psi1(x)`,
+- `P42_missing_objects := explicit_zero_witness_for_the_direct_m2_psi1_source_eom_coefficient_defect_polynomial_on_common_psi1_of_x_support`,
+- `P42_missing_objects += explicit_assignment_witness_of_m2_psi4_to_mu_m2_plus3_segment_psi1_psi4`,
+- `P42_missing_objects += explicit zero witness for direct quartic-like g4 family c1s1 shift defect`,
+- `P42_missing_objects += explicit zero witness for direct quintic-like g6 family c1s1 shift defect`,
+- `P42_missing_objects += explicit zero witness for direct yukawa-like gY family c1s1 shift defect`,
+- `P42_missing_objects += explicit_pairwise_matching_witness_for_m2_psi7_equals_m2_psi10`,
+- `P42_missing_objects += explicit_pairwise_matching_witness_for_m2_psi2_equals_m2_psi5`,
+- `P42_missing_objects += explicit_pairwise_matching_witness_for_m2_psi8_equals_m2_psi11`,
+- `P42_missing_objects += explicit zero witness for the declared pair1 residual c1c1 equation`,
+- `P42_missing_objects += explicit zero witness for the declared pair1 residual s1s1 equation`,
+- `P42_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+- `N45_route_result := current repo still has only a local canonical-ontology-supported source-action closure plus one exported source-eom defect-polynomial gap and no strict-core closure`.
+
 Co realnie zostalo dodane przez `AX1`:
 - otwarto jawny pozytywny lane `axiom-augmented`,
 - pod minimalnym aksjomacie selekcji z `QW-2192/QW-2193` uzyskano packet-ready actual:

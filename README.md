@@ -294,6 +294,13 @@ Primary state report:
   while the target-side witness, the other direct `m2` pairwise blockers, the
   direct `g4/g6/gY` family blockers, `pair1 c1c1/s1s1`, `QW-2191`, and strict
   core remain unchanged.
+- The next honest move after that has now also been executed on the same lane,
+  still without a false pass: `R34/P42/N45` reduce that source eom-side
+  coefficient-identification gap one step further to one exact defect-
+  polynomial zero-witness gap on the same local support `psi1(x)`. The route
+  is sharper, but still not closed; the target-side witness, the other direct
+  `m2` pairwise blockers, the direct `g4/g6/gY` family blockers, `pair1`
+  residual equations, `QW-2191`, and strict core remain unchanged.
 - This is real progress on the selector problem at extension level, but it does not upgrade strict-core closure and does not change `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 - Details: [`fundamental_action_reconstruction/README.md`](fundamental_action_reconstruction/README.md), [`fundamental_action_reconstruction/generated/pair1_operator_probe_report.json`](fundamental_action_reconstruction/generated/pair1_operator_probe_report.json).
 
