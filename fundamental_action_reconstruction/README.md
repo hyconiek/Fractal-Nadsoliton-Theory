@@ -461,6 +461,29 @@ Aktualizacja `N18`:
 - to jest dalszy realny progres zawężający factorization frontier, nadal bez
   factorization discharge i bez falszywego PASS.
 
+Aktualizacja `P16`:
+- wykonano compute-or-fail probe bezposrednio na pierwszym residualnym blockerze
+  z `P15`, czyli na
+  `explicit coefficient-filled legacy chart-reduced operator object`,
+- wynik:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_LEGACY_CHART_REDUCED_OPERATOR_EXPORT_ROUTE`,
+- probe rozbija ten brak na trzy jawne upstream blockers:
+  host-to-concrete Psi block identification, executed coefficient-filled
+  Psi-block export oraz coefficient-filled control pullback `M_control`
+  z chart-reduced eksportem do `pair1`,
+- probe utrzymuje jawnie, ze sama obecnosc `R8/R9/R10` i formalnego
+  `M_control = T_control^T H_PsiPsi T_control` nie daje jeszcze matrix-level
+  legacy object na `pair1`.
+
+Aktualizacja `N19`:
+- wykonano theorem-level wynik dla tej jeszcze wezszej trasy legacy-side,
+- `R8/R9/R10/P15/P16/C10/C11/C15/C20` razem wymuszaja wniosek:
+  nawet po host-carrier packetization, typed pushforward i chart reduction repo
+  nadal nie eksportuje coefficient-filled legacy chart-reduced operator object
+  na `pair1`,
+- to jest dalszy realny progres redukcyjny po stronie lewego obiektu, nadal bez
+  factorization discharge i bez falszywego PASS.
+
 ## Ontologiczna wskazowka programu
 
 Program jest prowadzony pod robocza ontologia:

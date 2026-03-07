@@ -2172,6 +2172,28 @@ Frontier po `P15/N18`:
 - `N18_route_result := current repo still does not identify existing kernel feedback with the computed current-pair H3 block even after chart reduction`,
 - nadal brak globalnego theorem-level/full-closure PASS.
 
+Co realnie zostalo dodane przez `P16` i `N19`:
+- `P16` testuje juz bezposrednio pierwszy residualny blocker z `P15`, czyli
+  coefficient-filled legacy chart-reduced operator object na `pair1`,
+- wynik `P16`:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_LEGACY_CHART_REDUCED_OPERATOR_EXPORT_ROUTE`,
+- `P16` rozbija ten brak na trzy jawne upstream blockers:
+  host-to-concrete Psi block identification, executed coefficient-filled
+  Psi-block export oraz coefficient-filled control pullback `M_control`
+  z chart-reduced eksportem do `pair1`,
+- `N19` daje theorem-level updated-route wynik:
+  nawet po `R8/R9/R10` repo nadal nie eksportuje coefficient-filled legacy-side
+  matrix on `pair1` i route zatrzymuje sie upstream od samego chart-reduced
+  operator exportu.
+
+Frontier po `P16/N19`:
+- `P16_route_result := current legacy chart-reduced operator export route is not computable`,
+- `P16_missing_objects := host-to-concrete Psi-sector quadratic block identification for existing kernel feedback`,
+- `P16_missing_objects += executed coefficient-filled Psi-sector block export supporting H_PsiPsi evaluation`,
+- `P16_missing_objects += coefficient-filled control pullback M_control and its pair1 chart-reduced 2x2 block export`,
+- `N19_route_result := current repo still does not export a coefficient-filled legacy-side operator object on pair1 from existing kernel feedback`,
+- nadal brak globalnego theorem-level/full-closure PASS.
+
 Co realnie zostalo dodane przez `AX1`:
 - otwarto jawny pozytywny lane `axiom-augmented`,
 - pod minimalnym aksjomacie selekcji z `QW-2192/QW-2193` uzyskano packet-ready actual:

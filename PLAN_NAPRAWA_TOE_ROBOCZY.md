@@ -9150,6 +9150,34 @@ Po tej rundzie:
    - sprobowac wyeksportowac coefficient-filled legacy chart-reduced operator object na `pair1`,
    - albo utrzymac factorization lane negatywny i nie twierdzic, ze witness juz istnieje.
 
+522. `P16/N19` coefficient-filled legacy chart-reduced operator object po `P15/N18`.
+1. Co zostalo zrobione:
+   - `P16` wykonuje bezposredni `compute-or-fail` probe na pierwszym residualnym
+     blockerze z `P15`:
+     `explicit coefficient-filled legacy chart-reduced operator object on pair1`,
+   - `N19` formalizuje theorem-level wynik dla tej jeszcze wezszej trasy.
+2. Wynik:
+   - `P16` zwraca:
+     `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_LEGACY_CHART_REDUCED_OPERATOR_EXPORT_ROUTE`,
+   - `N19` utrzymuje route negatywny bez falszywego PASS.
+3. Frontier po kroku:
+   - `P16_result := host carrier, typed pushforward, formal control pullback formula and chosen current-pair chart reduction are present, but no coefficient-filled legacy chart-reduced operator exists`,
+   - `P16_missing_objects := host-to-concrete Psi-sector quadratic block identification for the existing kernel-feedback host operator`,
+   - `P16_missing_objects += explicit executed and persisted coefficient-filled Psi-sector block export supporting H_PsiPsi evaluation`,
+   - `P16_missing_objects += explicit coefficient-filled control pullback M_control and its pair1 chart-reduced 2x2 block export`,
+   - `N19_route_result := current existing-kernel-feedback route still fails before any coefficient-filled legacy-side matrix on pair1 is exported`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/P16_EXISTING_KERNEL_FEEDBACK_LEGACY_CHART_REDUCED_OPERATOR_EXPORT_PROBE.md`,
+   - dodano `fundamental_action_reconstruction/p16_existing_kernel_feedback_legacy_chart_reduced_operator_export_probe.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p16_existing_kernel_feedback_legacy_chart_reduced_operator_export_probe.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p16_existing_kernel_feedback_legacy_chart_reduced_operator_export_probe_summary.json`,
+   - dodano `fundamental_action_reconstruction/N19_CURRENT_EXISTING_KERNEL_FEEDBACK_LEGACY_CHART_REDUCED_OPERATOR_EXPORT_NONDERIVATION_THEOREM.md`,
+   - dodano `fundamental_action_reconstruction/n19_current_existing_kernel_feedback_legacy_chart_reduced_operator_export_nonderivation_theorem.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n19_current_existing_kernel_feedback_legacy_chart_reduced_operator_export_nonderivation_theorem_summary.json`.
+5. Nastepny poprawny ruch:
+   - sprobowac zmaterializowac concrete existing-feedback Psi-sector block i jego coefficient export,
+   - albo utrzymac legacy-side export lane negatywny i nie twierdzic, ze matrix on `pair1` juz istnieje.
+
 
 - `H29`: stare proxy `retard_phase/tau/gain` moduluja preorientowany kanal, ale nie dostarczaja same wewnetrznego strict-core anchoru orientacji.
 - `H30`: `orientation_psi0 = mod(0.5*phi + 0.8*omega, 2*pi)` jest deterministycznym kandydatem anchoru z kernel invariants, ale nie jest jeszcze strict-core eksportem `theta_i`.

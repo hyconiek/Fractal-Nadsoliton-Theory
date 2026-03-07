@@ -1,0 +1,119 @@
+{
+  "stage": "P16",
+  "goal": "compute_or_fail_existing_kernel_feedback_legacy_chart_reduced_operator_export_on_pair1_after_P15",
+  "status": "NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_LEGACY_CHART_REDUCED_OPERATOR_EXPORT_ROUTE",
+  "reason": "the repo now contains the host carrier, the typed host-to-control pushforward, the formal control pullback formula, and the chosen current-pair chart reduction, but it still exports no concrete Psi-sector block identified with the existing-feedback host, no executed coefficient-filled Psi-sector block export, and no coefficient-filled control pullback M_control from which a legacy chart-reduced operator on pair1 could be exported",
+  "lane": "existing_kernel_feedback_legacy_chart_reduced_operator_export_route_after_P15",
+  "route_under_test": [
+    "existing_kernel_feedback_host_operator",
+    "host_to_concrete_Psi_sector_block_identification",
+    "coefficient_filled_Psi_sector_block_export",
+    "formal_control_pullback_M_control",
+    "coefficient_filled_control_pullback_M_control",
+    "chosen_current_pair_chart_reduction_to_pair1",
+    "coefficient_filled_legacy_chart_reduced_operator_object_on_pair1"
+  ],
+  "route_checks": [
+    {
+      "id": "p15_originally_missing_legacy_chart_reduced_operator_object",
+      "pass": true,
+      "expected": true,
+      "actual": true,
+      "meaning": "P15 indeed localized the first remaining blocker as the missing coefficient-filled legacy chart-reduced operator object"
+    },
+    {
+      "id": "r8_host_operator_carrier_present",
+      "pass": true,
+      "expected": "explicit_operator_level_existing_kernel_feedback_host_carrier_present_but_host_scope_only_and_not_yet_projected_to_the_explicit_h3_chain",
+      "actual": "explicit_operator_level_existing_kernel_feedback_host_carrier_present_but_host_scope_only_and_not_yet_projected_to_the_explicit_h3_chain",
+      "meaning": "the legacy host operator carrier is present at host scope"
+    },
+    {
+      "id": "r9_typed_host_to_control_pushforward_present",
+      "pass": true,
+      "expected": "typed_host_to_control_pushforward_present_but_control_scope_only_and_not_yet_reduced_to_the_explicit_current_pair_chain",
+      "actual": "typed_host_to_control_pushforward_present_but_control_scope_only_and_not_yet_reduced_to_the_explicit_current_pair_chain",
+      "meaning": "the typed host-to-control pushforward is present"
+    },
+    {
+      "id": "r10_current_pair_chart_reduction_present",
+      "pass": true,
+      "expected": "explicit_current_pair_chart_reduction_present_but_chart_scoped_only_and_not_a_strict_selector_target_justification",
+      "actual": "explicit_current_pair_chart_reduction_present_but_chart_scoped_only_and_not_a_strict_selector_target_justification",
+      "meaning": "the chosen current-pair chart reduction is present"
+    },
+    {
+      "id": "c10_host_to_concrete_psi_block_identification_not_shown",
+      "pass": true,
+      "expected": "not_shown",
+      "actual": "not_shown",
+      "meaning": "the legacy host is still not identified with a concrete Psi-sector block"
+    },
+    {
+      "id": "c11_concrete_psi_block_not_extracted",
+      "pass": true,
+      "expected": "not_shown",
+      "actual": "not_shown",
+      "meaning": "no concrete Psi-sector block has been explicitly extracted"
+    },
+    {
+      "id": "c12_assembled_submatrix_not_exported",
+      "pass": true,
+      "expected": "not_shown",
+      "actual": "not_shown",
+      "meaning": "no assembled Psi-sector submatrix export is present"
+    },
+    {
+      "id": "c20_executed_12_row_serialization_run_not_shown",
+      "pass": true,
+      "expected": false,
+      "actual": false,
+      "meaning": "the finite materialization recipe has not been executed into a persisted 12-row serialization run"
+    },
+    {
+      "id": "c15_coefficient_filled_control_pullback_not_shown",
+      "pass": true,
+      "expected": "not_shown",
+      "actual": "not_shown",
+      "meaning": "the control pullback M_control is still not exported in coefficient-filled form"
+    }
+  ],
+  "route_state": {
+    "legacy_host_operator_carrier_present": true,
+    "typed_host_to_control_pushforward_present": true,
+    "chosen_current_pair_chart_reduction_present": true,
+    "formal_control_pullback_formula_present": true,
+    "host_to_concrete_psi_block_identification_present": false,
+    "coefficient_filled_psi_sector_block_export_present": false,
+    "coefficient_filled_control_pullback_present": false,
+    "coefficient_filled_legacy_chart_reduced_operator_present": false
+  },
+  "supporting_present_but_insufficient_objects": [
+    "R8_host_scope_existing_feedback_carrier",
+    "R9_typed_host_to_control_pushforward",
+    "C15_formal_control_pullback_formula",
+    "R10_current_pair_chart_reduction_map"
+  ],
+  "decomposition_of_P15_missing_object": {
+    "from_P15": "explicit_coefficient_filled_legacy_chart_reduced_operator_object_on_the_chosen_current_pair_chart_pair1_or_equivalent_actual_target",
+    "into_current_blockers": [
+      "host_to_concrete_Psi_sector_quadratic_block_identification_for_the_existing_kernel_feedback_host_operator",
+      "explicit_executed_and_persisted_coefficient_filled_Psi_sector_block_export_supporting_H_PsiPsi_evaluation",
+      "explicit_coefficient_filled_control_pullback_M_control_and_its_pair1_chart_reduced_2x2_block_export"
+    ]
+  },
+  "remaining_missing_upstream_objects": [
+    "host_to_concrete_Psi_sector_quadratic_block_identification_for_the_existing_kernel_feedback_host_operator",
+    "explicit_executed_and_persisted_coefficient_filled_Psi_sector_block_export_supporting_H_PsiPsi_evaluation",
+    "explicit_coefficient_filled_control_pullback_M_control_and_its_pair1_chart_reduced_2x2_block_export"
+  ],
+  "blocking_frontier": {
+    "C10_B1": "no_explicit_coefficient_level_or_block_level_identification_between_the_qw2186_certified_host_operator_and_a_concrete_Psi_sector_quadratic_Hessian_block_inside_the_canonical_13_field_carrier",
+    "C11_B1": "no_explicit_extraction_and_coefficient_export_of_a_concrete_Psi_sector_quadratic_Hessian_block_from_the_exhaustive_canonical_13_field_Hessian_for_matching_against_qw2186",
+    "C15_B1": "no_explicit_coefficient_filled_canonical_Psi_x_Psi_block_H_PsiPsi_for_evaluating_the_control_pullback",
+    "C20_B1": "no_explicit_executed_and_persisted_12_row_serialization_run_from_the_already_present_finite_materialization_recipe"
+  },
+  "required_next_step": "EITHER_EXPORT_A_CONCRETE_EXISTING_FEEDBACK_PSI_SECTOR_BLOCK_AND_EVALUATE_THE_CONTROL_PULLBACK_TO_PAIR1_OR_KEEP_THE_LEGACY_OPERATOR_EXPORT_ROUTE_NEGATIVE",
+  "strict_core_promotion": false,
+  "no_false_pass": true
+}

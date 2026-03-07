@@ -99,6 +99,12 @@ Primary state report:
   smaller missing objects: a coefficient-filled legacy chart-reduced operator
   object on `pair1` and the actual intertwiner/equality witness to the
   computed `P10` block.
+- The next honest move after that has now also been executed: `P16` plus `N19`
+  test the first of those two remaining objects directly and show that it still
+  does not compute; instead, that missing legacy-side `pair1` operator object
+  decomposes into three upstream blockers: host-to-Psi block identification,
+  executed coefficient-filled Psi-block export, and coefficient-filled control
+  pullback plus chart-reduced block export.
 - This is real progress on the selector problem at extension level, but it does not upgrade strict-core closure and does not change `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 - Details: [`fundamental_action_reconstruction/README.md`](fundamental_action_reconstruction/README.md), [`fundamental_action_reconstruction/generated/pair1_operator_probe_report.json`](fundamental_action_reconstruction/generated/pair1_operator_probe_report.json).
 
@@ -856,6 +862,8 @@ Current status:
 - this moves the theory forward by materializing the reduction from the legacy control carrier into the chosen explicit current-pair chart used by the `H3` chain and proving that the updated route now fails only at the single remaining `intertwiner/equality witness`,
 - `P15` and `N18` completed as the sharpest current analysis of that last nominal witness blocker,
 - this moves the theory forward by proving that the current repo still exports neither a coefficient-filled legacy chart-reduced operator object on `pair1` nor the corresponding equality/intertwiner witness to the computed `P10` block, so the last blocker is no longer vague but decomposed into two finite operator-identification gaps,
+- `P16` and `N19` completed as the sharpest current analysis of the first of those two remaining gaps,
+- this moves the theory forward by proving that the current repo still exports no coefficient-filled legacy-side matrix on `pair1`, and by reducing that missing object to three concrete upstream gaps in the existing-feedback carrier route,
 - `D1` completed as the current best-supported project conclusion after `N3`,
 - this records the strongest honest interpretation now supported by the evidence: selector closure is not achieved in strict core, and the project must either discharge `T12_B1` directly or accept selector-axiom necessity / strict-core incompleteness as the active design conclusion,
 - `AX1` completed as an explicit axiom-augmented positive lane,
