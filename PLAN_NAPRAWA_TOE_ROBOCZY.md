@@ -8472,6 +8472,37 @@ Po tej rundzie:
    - albo uczciwie zatrzymac lane na poziomie symbolicznym bez populated entries.
 
 
+## 520. Pair1 executable operator probe (2026-03-07)
+
+1. Cel:
+   - zastapic dalsze rozszerzanie audit ladder jednym wykonywalnym probe operatorowym na `pair1=(c_1,s_1)`,
+   - wymusic wynik typu `compute or fail` na lane `hypothesis_extension_only`.
+2. Wynik:
+   - zamrozono aktualny stan diagnostyczny `H41/H42`,
+   - uruchomiono probe z ustalona sekwencja testow `A/B/C/D`,
+   - `Test A`: izotropowy baseline pozostaje trywialny,
+   - `Test B`: samo `psi0` daje tylko embedding wspolrzednych, bez selector breaking,
+   - `Test C` z rownymi sciezkami pozostaje trywialny,
+   - `Test C` z anizotropowymi sciezkami liczonymi z repo-sourced `psi0`, `retard_phase` i `anisotropy_strength` daje:
+     `A_1_ext(pair1) = [[0.9879138108, 0.0037580848], [0.0037580848, 0.9966094714]]`,
+   - `Delta_1 = (-0.0086956606, 0.0037580848)`,
+   - klasyfikacja: `ANCHOR_IMPORTED_SPLIT`,
+   - `Test D` (`psi0 + viscosity`) pozostaje tylko wtornym porownaniem i nie zastępuje glownego lane `psi0 + c`.
+3. Frontier po kroku:
+   - `P1_B1 := the extension lane now exports a first concrete pair1 operator block and a first computed selector-sector split, but the split is anchor-imported through psi0 and does not furnish a strict-core selector source`,
+   - `H28_B1` pozostaje zamrozonym honest diagnostic dla starszego symbolicznego lane `O2/O3/O4` i nie zostaje retroaktywnie promowane do strict-core closure,
+   - `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
+   - `D1 := the best-supported strict-core conclusion remains selector-axiom necessity or strict-core incompleteness`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/pair1_operator_probe.py`,
+   - dodano `fundamental_action_reconstruction/pair1_operator_probe_config.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/pair1_operator_probe_report.json`.
+5. Nastepny poprawny ruch:
+   - przejsc do fizycznej interpretacji `anchor-imported` splitu na lane rozszerzenia,
+   - albo wracac do strict-core source problem tylko wtedy, gdy pojawi sie realny nowy obiekt odblokowujacy anchor,
+   - nie otwierac kolejnego audit ladder bez nowego obiektu liczacego albo nowego theorem-level unblocking input.
+
+
 - `H29`: stare proxy `retard_phase/tau/gain` moduluja preorientowany kanal, ale nie dostarczaja same wewnetrznego strict-core anchoru orientacji.
 - `H30`: `orientation_psi0 = mod(0.5*phi + 0.8*omega, 2*pi)` jest deterministycznym kandydatem anchoru z kernel invariants, ale nie jest jeszcze strict-core eksportem `theta_i`.
 - `H31`: `psi0` ma formalny embedding do `pair1=(c_1,s_1)`, ale nadal nie ma dowodu, ze jest to strict-core redukcja selektora, a nie tylko wybor wspolrzednych.
@@ -8493,3 +8524,4 @@ Po tej rundzie:
 - `V5`: lane `psi0 + viscosity` ma juz jawny boundary certificate i pozostaje tylko pomocniczym lane `anchor-amplifying / anchor-refining`, bez promocji do strict core ani theorem-level/full-closure.
 - `V6`: lane `psi0 + viscosity` daje rzeczywisty spectral/response split ponad samo `psi0`, ale nie wnosi nowego zrodla orientacji i nie zastępuje glownego lane `psi0`.
 - `V7`: `informational viscosity` ma juz najlepsza wsparta klasyfikacje jako wtorny lane `anchor-amplifying / response-splitting`, a nie jako primary selector source.
+- `P1`: executable probe na `pair1` policzyl pierwszy konkretny blok `A_1_ext` i pierwszy selector-sector split na lane rozszerzenia, ale wynik pozostaje `ANCHOR_IMPORTED_SPLIT` i nie zmienia frontieru strict core.

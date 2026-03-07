@@ -1,0 +1,310 @@
+{
+  "probe_id": "PAIR1_OPERATOR_PROBE_V1",
+  "as_of": "2026-03-07",
+  "lane": "hypothesis_extension_only",
+  "pair": "pair1",
+  "basis_order": [
+    "c_1",
+    "s_1"
+  ],
+  "selected_primary_test": "C_configured_path_split",
+  "status_if_missing": "NOT_COMPUTABLE_FROM_CURRENT_REPO_STATE",
+  "trivial_selector_tolerance": 1e-12,
+  "source_paths": {
+    "cf1": "fundamental_action_reconstruction/generated/compute_or_fail_a1_b1_d1.json",
+    "h28": "fundamental_action_reconstruction/generated/h28_no_computable_coefficient_source_conclusion.json",
+    "h30": "fundamental_action_reconstruction/generated/h30_kernel_invariant_psi0_anchor_audit.json",
+    "h31": "fundamental_action_reconstruction/generated/h31_psi0_to_pair1_reduction_audit.json",
+    "h32": "fundamental_action_reconstruction/generated/h32_primary_psi0_lane_priority_audit.json",
+    "h33": "fundamental_action_reconstruction/generated/h33_pair1_selector_target_justification_audit.json",
+    "h42": "fundamental_action_reconstruction/generated/h42_c_based_retardation_operator_on_pair1_audit.json",
+    "v4": "fundamental_action_reconstruction/generated/v4_psi0_coupled_viscosity_effect_audit.json",
+    "v6": "fundamental_action_reconstruction/generated/v6_psi0_viscosity_distinct_effect_audit.json",
+    "v7": "fundamental_action_reconstruction/generated/v7_informational_viscosity_current_best_supported_conclusion.json",
+    "q1949": "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1949_informational_light_matter_observer_channel.json",
+    "q1950": "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1950_internal_emergent_observer_closed_loop.json",
+    "q1951": "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1951_mass_informational_weight_internal_observer.json",
+    "q1952": "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1952_information_channel_dedegeneracy_operator.json",
+    "q1953": "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1953_two_state_internal_observer.json",
+    "q1954": "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1954_strict_stage_c_plus_info_gate.json",
+    "q1955": "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1955_nogo_and_minimal_operator_repair.json",
+    "q1956": "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1956_two_state_observer_with_repaired_operator.json",
+    "diagrams": "DIAGRAMS_KERNEL_TRANSFORMATION.md"
+  },
+  "required_numeric_inputs": [
+    {
+      "id": "omega",
+      "source": "q1952",
+      "path": [
+        "kernel",
+        "omega"
+      ]
+    },
+    {
+      "id": "retard_phase",
+      "source": "q1952",
+      "path": [
+        "derived_params",
+        "retard_phase"
+      ]
+    },
+    {
+      "id": "anisotropy_strength",
+      "source": "q1952",
+      "path": [
+        "derived_params",
+        "anisotropy_strength"
+      ]
+    },
+    {
+      "id": "psi0",
+      "source": "q1952",
+      "path": [
+        "derived_params",
+        "orientation_psi0"
+      ]
+    },
+    {
+      "id": "tau_h",
+      "source": "q1953",
+      "path": [
+        "derived_params",
+        "tau_h"
+      ]
+    },
+    {
+      "id": "tau_l",
+      "source": "q1953",
+      "path": [
+        "derived_params",
+        "tau_l"
+      ]
+    }
+  ],
+  "frozen_frontier_checks": [
+    {
+      "id": "cf1_repo_state_uncomputable",
+      "source": "cf1",
+      "path": [
+        "status"
+      ],
+      "equals": "NOT_COMPUTABLE_FROM_CURRENT_REPO_STATE"
+    },
+    {
+      "id": "h28_no_computable_operator_source",
+      "source": "h28",
+      "path": [
+        "computable_operator_level_source_present"
+      ],
+      "equals": false
+    },
+    {
+      "id": "h30_psi0_is_deterministic_anchor_candidate",
+      "source": "h30",
+      "path": [
+        "classification",
+        "deterministic_from_kernel_invariants"
+      ],
+      "equals": true
+    },
+    {
+      "id": "h31_coordinate_embedding_present",
+      "source": "h31",
+      "path": [
+        "classification",
+        "coordinate_level_embedding_present"
+      ],
+      "equals": true
+    },
+    {
+      "id": "h31_no_strict_core_selector_reduction",
+      "source": "h31",
+      "path": [
+        "classification",
+        "strict_core_selector_reduction_present"
+      ],
+      "equals": false
+    },
+    {
+      "id": "h32_psi0_primary_viscosity_secondary",
+      "source": "h32",
+      "path": [
+        "result"
+      ],
+      "equals": "psi0_is_set_as_the_primary_working_anchor_candidate_while_informational_viscosity_is_retained_as_a_secondary_lane"
+    },
+    {
+      "id": "h33_pair1_local_chart_only",
+      "source": "h33",
+      "path": [
+        "result"
+      ],
+      "equals": "pair1_is_available_as_a_deterministic_local_chart_for_the_primary_psi0_lane_but_not_yet_justified_as_a_uniquely_selector_relevant_target"
+    },
+    {
+      "id": "h42_c_without_anchor_trivial",
+      "source": "h42",
+      "path": [
+        "case_without_psi0",
+        "breaks_O2"
+      ],
+      "equals": false
+    },
+    {
+      "id": "h42_anchor_origin_imported_psi0",
+      "source": "h42",
+      "path": [
+        "case_with_psi0",
+        "anchor_origin"
+      ],
+      "equals": "imported_psi0"
+    },
+    {
+      "id": "v4_viscosity_anchor_amplifying_only",
+      "source": "v4",
+      "path": [
+        "pair_level_consequence",
+        "anchor_generating"
+      ],
+      "equals": false
+    },
+    {
+      "id": "v6_viscosity_only_adds_response_split",
+      "source": "v6",
+      "path": [
+        "result"
+      ],
+      "equals": "psi0_plus_viscosity_adds_response_splitting_but_not_new_orientation_information"
+    },
+    {
+      "id": "v7_viscosity_secondary_only",
+      "source": "v7",
+      "path": [
+        "result"
+      ],
+      "equals": "informational_viscosity_is_best_supported_only_as_a_secondary_anchor_amplifying_or_response_splitting_extension_lane"
+    }
+  ],
+  "operator_rules": {
+    "speed_of_signal_c": 1.0,
+    "baseline_path_length_rule": "L0 = c * retard_phase / omega",
+    "anisotropic_path_length_rule": {
+      "L_parallel": "L0 * (1 + anisotropy_strength)",
+      "L_perp": "L0 * (1 - anisotropy_strength)"
+    },
+    "viscosity_rule": {
+      "nu_parallel": "1 / tau_h",
+      "nu_perp": "1 / tau_l"
+    }
+  },
+  "consistency_checks": [
+    {
+      "id": "psi0_q1952_q1955_match",
+      "left": {
+        "source": "q1952",
+        "path": [
+          "derived_params",
+          "orientation_psi0"
+        ]
+      },
+      "right": {
+        "source": "q1955",
+        "path": [
+          "minimal_repair_params",
+          "orientation_psi0"
+        ]
+      },
+      "tolerance": 1e-12
+    },
+    {
+      "id": "retard_phase_q1952_q1955_match",
+      "left": {
+        "source": "q1952",
+        "path": [
+          "derived_params",
+          "retard_phase"
+        ]
+      },
+      "right": {
+        "source": "q1955",
+        "path": [
+          "minimal_repair_params",
+          "retard_phase"
+        ]
+      },
+      "tolerance": 1e-12
+    },
+    {
+      "id": "psi0_q1955_q1956_match",
+      "left": {
+        "source": "q1955",
+        "path": [
+          "minimal_repair_params",
+          "orientation_psi0"
+        ]
+      },
+      "right": {
+        "source": "q1956",
+        "path": [
+          "repaired_operator_params",
+          "orientation_psi0"
+        ]
+      },
+      "tolerance": 1e-12
+    },
+    {
+      "id": "retard_phase_q1955_q1956_match",
+      "left": {
+        "source": "q1955",
+        "path": [
+          "minimal_repair_params",
+          "retard_phase"
+        ]
+      },
+      "right": {
+        "source": "q1956",
+        "path": [
+          "repaired_operator_params",
+          "retard_phase"
+        ]
+      },
+      "tolerance": 1e-12
+    },
+    {
+      "id": "tau_h_q1953_q1956_match",
+      "left": {
+        "source": "q1953",
+        "path": [
+          "derived_params",
+          "tau_h"
+        ]
+      },
+      "right": {
+        "source": "q1956",
+        "path": [
+          "two_state_params",
+          "tau_h"
+        ]
+      },
+      "tolerance": 1e-12
+    },
+    {
+      "id": "tau_l_q1953_q1956_match",
+      "left": {
+        "source": "q1953",
+        "path": [
+          "derived_params",
+          "tau_l"
+        ]
+      },
+      "right": {
+        "source": "q1956",
+        "path": [
+          "two_state_params",
+          "tau_l"
+        ]
+      },
+      "tolerance": 1e-12
+    }
+  ]
+}

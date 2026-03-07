@@ -12,6 +12,29 @@ Stan na dziś:
 - **domknięcie rygoru wewnętrznego (internal strict closure): bardzo mocne**,
 - **domknięcie fundamentalne ToE (field-theory complete + social replication): jeszcze nie**.
 
+## 1a) Najnowsza aktualizacja selector frontier (2026-03-07)
+
+W katalogu `fundamental_action_reconstruction` wykonano pierwszy konfigurowalny probe operatorowy na
+`pair1 = (c_1,s_1)` bez otwierania nowej drabinki auditowej.
+
+Wynik:
+- `Test A`: trywialny izotropowy baseline,
+- `Test B`: tylko embedding wspolrzednych `psi0`, bez selector breaking,
+- `Test C`: policzony blok
+  `A_1_ext(pair1) = [[0.9879138108, 0.0037580848], [0.0037580848, 0.9966094714]]`,
+- `Delta_1 = (-0.0086956606, 0.0037580848)`,
+- klasyfikacja: `ANCHOR_IMPORTED_SPLIT`.
+
+Interpretacja rygorystyczna:
+- jest to pierwszy konkretny selector-sector split na lane `hypothesis_extension_only`,
+- split pozostaje importowany przez `psi0`, a nie wyprowadzony z `strict core`,
+- nie zmienia to decyzji `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
+
+Artefakty:
+- [`fundamental_action_reconstruction/README.md`](fundamental_action_reconstruction/README.md)
+- [`fundamental_action_reconstruction/pair1_operator_probe.py`](fundamental_action_reconstruction/pair1_operator_probe.py)
+- [`fundamental_action_reconstruction/generated/pair1_operator_probe_report.json`](fundamental_action_reconstruction/generated/pair1_operator_probe_report.json)
+
 ## 2) Co jest domknięte (najmocniejsze bloki)
 
 1. Pakiet strict SM+GR:

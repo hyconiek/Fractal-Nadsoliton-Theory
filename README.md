@@ -4,7 +4,7 @@
 **Repository:** https://github.com/hyconiek/Fractal-Nadsoliton-Theory  
 **DOI:** https://doi.org/10.5281/zenodo.17645737
 
-## Current Scientific Status (2026-03-05)
+## Current Scientific Status (2026-03-07)
 
 ### Executive verdict
 - **Internal strict closure:** achieved for the audited strict chain.
@@ -17,6 +17,13 @@
 
 Primary state report:
 - [`RAPORT_STAN_TEORII_FIN_V5_1_READINESS_2026-03-05.md`](RAPORT_STAN_TEORII_FIN_V5_1_READINESS_2026-03-05.md)
+
+### Latest selector frontier update (2026-03-07)
+- In `fundamental_action_reconstruction`, one executable `pair1` operator probe now computes the first concrete extension-lane block
+  `A_1_ext(pair1) = [[0.9879138108, 0.0037580848], [0.0037580848, 0.9966094714]]`.
+- The resulting split is `Delta_1 = (-0.0086956606, 0.0037580848)` with classifier `ANCHOR_IMPORTED_SPLIT`.
+- This is real progress on the selector problem at extension level, but it does not upgrade strict-core closure and does not change `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
+- Details: [`fundamental_action_reconstruction/README.md`](fundamental_action_reconstruction/README.md), [`fundamental_action_reconstruction/generated/pair1_operator_probe_report.json`](fundamental_action_reconstruction/generated/pair1_operator_probe_report.json).
 
 ---
 
@@ -80,6 +87,7 @@ Interpretation:
 - full single-fundamental-entity closure (`L1/L2` global scope),
 - full spinor + gauge derivation without domain anchoring shortcuts (`L3/L18/L19`),
 - full gravity action-level closure and rigorous SM+GR reduction theorem (`L4/L16/L23`).
+- strict-core selector/anchor source remains open; as of 2026-03-07 the `pair1` operator probe yields only an extension-lane `ANCHOR_IMPORTED_SPLIT`, not a strict-core derivation.
 
 ### Mathematical global rigor
 - complete global quantization/unitarity/renormalization/causality theorem package (`L5`; after `QW-2210`..`QW-2276` terminalized + theorem-specified + execution proof-object attached + axiom-free decomposition + O1a/O1b provenance accounting + O1c attachment spec + witness-removal execution step + theorem-discharge obligation spec + blocked execution classification + provider-layer execution + de-axiomatization obstruction map + direct DAX1 non-axiomatic provider attempt + full axiom-free candidate scan (`n=0`) + formal export dependency certification (axiom-layer hit) + explicit export obligation packet (`O1..O4`) + execution-status gate (`0/4` satisfied) + minimal blocker-cut extraction + active-path reduction to single core blocker + reduced single-blocker discharge packet (`2` core obligations) + reduced-packet execution-status gate (`0/2` satisfied) + active-reference locality integrity gate (`n_dangling_refs=1`) + effective blocker-set gate (`1 declared -> 2 effective`) + canonical-export bridge availability (`QW-2266`) + effective blocker-set v2 reduction (`QW-2268`: `2 -> 1 residual non-axiomatic core blocker`) + residual single-obligation discharge spec (`QW-2270`) + residual execution-status gate (`QW-2272`: `0/1` satisfied) + strict non-axiomatic evidence gate (`QW-2274`: `n_strict_non_axiomatic_candidates=0`) + residual execution-status v2 (`QW-2276`: `0/1` strict); remaining step is theorem-level non-axiomatic discharge of residual core blocker plus formal locality/import closure),

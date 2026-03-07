@@ -110,6 +110,16 @@ Aktualizacja `V7`:
 - pozostaje tylko `secondary_mechanism` oraz `anchor-amplifying / response-splitting extension lane`,
 - nie konkuruje juz z `psi0` jako primary anchor candidate.
 
+Aktualizacja `P1`:
+- uruchomiono jeden executable probe operatorowy na `pair1=(c_1,s_1)` z ustalona sekwencja testow `A/B/C/D`,
+- `Test A` i `Test B` pozostaja trywialnymi baseline'ami,
+- `Test C` z rownymi sciezkami pozostaje trywialny,
+- `Test C` z anizotropowymi sciezkami liczonymi z repo-sourced `psi0`, `retard_phase` i `anisotropy_strength` daje:
+  `A_1_ext(pair1) = [[0.9879138108, 0.0037580848], [0.0037580848, 0.9966094714]]`,
+- `Delta_1 = (-0.0086956606, 0.0037580848)`,
+- klasyfikacja: `ANCHOR_IMPORTED_SPLIT`,
+- jest to pierwszy konkretny selector-sector split na extension lane, ale nadal anchor-imported przez `psi0`, bez strict-core promotion.
+
 ## Ontologiczna wskazowka programu
 
 Program jest prowadzony pod robocza ontologia:
@@ -460,6 +470,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `O2`: wykonane jako pierwsza persisted instancja `A_1_ext` w trybie `exported_composite_A_1`; problem redukuje sie juz nie do braku obiektu operatorowego, lecz do braku wyznaczonych wartosci `a_1,b_1,d_1`.
 - `O3`: wykonane jako pierwszy jawny rule-packet odczytu wspolczynnikow z persisted `A_1_ext`; problem redukuje sie juz nie do braku reguly odczytu, lecz do tego, ze entries pozostaja symboliczne i nie daja jeszcze zadnych wartosci.
 - `O4`: wykonane jako jawna regula populacji wpisow `A_1_ext`; problem redukuje sie juz nie do braku kryterium poprawnego wpisu, lecz do tego, ze nie istnieje jeszcze zaden realny witness `Route P1` ani `Route P2` dla `a_1,b_1,d_1`.
+- `P1`: wykonane jako executable pair1 operator probe na lane rozszerzenia; zamrozona diagnoza `H28` pozostaje prawdziwa dla starszego symbolicznego carrieru `O2/O3/O4`, ale osobny probe oblicza pierwszy konkretny blok `A_1_ext(pair1)` i klasyfikuje go jako `ANCHOR_IMPORTED_SPLIT`, bez zmiany strict-core frontier.
 
 ## Twarde ograniczenia rygoru
 
@@ -472,6 +483,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - brak claimu, ze `A8` domknelo foundational GR bridge,
 - brak claimu, ze `A9` domknelo unified SM+GR theorem package,
 - brak claimu, ze wykonanie `A10` oznacza full ToE closure,
+- brak claimu, ze `P1` dostarcza strict-core source selectora albo theorem-level closure; wynik pozostaje `extension-only` i `anchor-imported`,
 - brak claimu, ze `B1` domknelo axiom-free uniqueness,
 - brak claimu, ze `B2` znalazlo internal selector,
 - brak claimu, ze `B3` rozladowalo topological-selector bridge,
@@ -809,4 +821,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `generated/c12_minimal_psi_block_extraction_packet_summary.json`
 - `generated/c13_mode_basis_control_index_set_audit_summary.json`
 - `generated/c14_control_mode_to_psi_transport_schema_summary.json`
+- `generated/pair1_operator_probe_report.json`
+- `pair1_operator_probe.py`
+- `pair1_operator_probe_config.json`
 - `manifest_action_reconstruction.json`

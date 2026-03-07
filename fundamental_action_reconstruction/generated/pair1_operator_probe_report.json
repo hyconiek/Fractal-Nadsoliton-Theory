@@ -1,0 +1,498 @@
+{
+  "probe_id": "PAIR1_OPERATOR_PROBE_V1",
+  "as_of": "2026-03-07",
+  "lane": "hypothesis_extension_only",
+  "pair": "pair1",
+  "basis_order": [
+    "c_1",
+    "s_1"
+  ],
+  "config_path": "fundamental_action_reconstruction/pair1_operator_probe_config.json",
+  "report_path": "fundamental_action_reconstruction/generated/pair1_operator_probe_report.json",
+  "no_false_pass": true,
+  "strict_core_promotion": false,
+  "context_digest": {
+    "q1949": {
+      "verdict": "INFORMATIONAL_CHANNEL_FAIL",
+      "channel_complementarity": 0.00011422185833565024
+    },
+    "q1950": {
+      "verdict": "INTERNAL_OBSERVER_CHANNEL_FAIL",
+      "observer_tau": 9.83740268400338,
+      "observer_feedback_gain": 0.30535361648380127
+    },
+    "q1951": {
+      "verdict": "MASS_INFORMATIONAL_INTERNAL_OBSERVER_FAIL",
+      "mass_gain": 0.3657526329054337
+    },
+    "q1952": {
+      "verdict": "INFORMATION_CHANNEL_DEDEGENERACY_FAIL",
+      "orientation_psi0": 5.926799718215227,
+      "retard_phase": 0.11376650634004519,
+      "anisotropy_strength": 0.4451716653343556
+    },
+    "q1953": {
+      "verdict": "TWO_STATE_INTERNAL_OBSERVER_FAIL",
+      "tau_h": 8.378052013002534,
+      "tau_l": 2.08129865799831
+    },
+    "q1954": {
+      "verdict": "STRICT_STAGE_C_PLUS_INFO_GATE_FAIL",
+      "readiness": "TOE_STAGE_C_PLUS_INFO_BLOCKED"
+    },
+    "q1955": {
+      "verdict": "NOGO_DIAGNOSIS_WITH_MINIMAL_REPAIR_FAIL",
+      "repair_pass": false
+    },
+    "q1956": {
+      "verdict": "TWO_STATE_REPAIRED_OPERATOR_FAIL",
+      "pass": false
+    },
+    "diagrams": {
+      "mentions_kernel_form": true,
+      "mentions_viscosity": true
+    }
+  },
+  "required_inputs": {
+    "omega": {
+      "value": 0.37341399972174283,
+      "source": "q1952",
+      "path": "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1952_information_channel_dedegeneracy_operator.json::kernel.omega"
+    },
+    "retard_phase": {
+      "value": 0.11376650634004519,
+      "source": "q1952",
+      "path": "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1952_information_channel_dedegeneracy_operator.json::derived_params.retard_phase"
+    },
+    "anisotropy_strength": {
+      "value": 0.4451716653343556,
+      "source": "q1952",
+      "path": "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1952_information_channel_dedegeneracy_operator.json::derived_params.anisotropy_strength"
+    },
+    "psi0": {
+      "value": 5.926799718215227,
+      "source": "q1952",
+      "path": "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1952_information_channel_dedegeneracy_operator.json::derived_params.orientation_psi0"
+    },
+    "tau_h": {
+      "value": 8.378052013002534,
+      "source": "q1953",
+      "path": "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1953_two_state_internal_observer.json::derived_params.tau_h"
+    },
+    "tau_l": {
+      "value": 2.08129865799831,
+      "source": "q1953",
+      "path": "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1953_two_state_internal_observer.json::derived_params.tau_l"
+    }
+  },
+  "frozen_frontier_checks": [
+    {
+      "id": "cf1_repo_state_uncomputable",
+      "status": "PASS",
+      "path": "fundamental_action_reconstruction/generated/compute_or_fail_a1_b1_d1.json::status",
+      "actual": "NOT_COMPUTABLE_FROM_CURRENT_REPO_STATE",
+      "expected": "NOT_COMPUTABLE_FROM_CURRENT_REPO_STATE"
+    },
+    {
+      "id": "h28_no_computable_operator_source",
+      "status": "PASS",
+      "path": "fundamental_action_reconstruction/generated/h28_no_computable_coefficient_source_conclusion.json::computable_operator_level_source_present",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "id": "h30_psi0_is_deterministic_anchor_candidate",
+      "status": "PASS",
+      "path": "fundamental_action_reconstruction/generated/h30_kernel_invariant_psi0_anchor_audit.json::classification.deterministic_from_kernel_invariants",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "id": "h31_coordinate_embedding_present",
+      "status": "PASS",
+      "path": "fundamental_action_reconstruction/generated/h31_psi0_to_pair1_reduction_audit.json::classification.coordinate_level_embedding_present",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "id": "h31_no_strict_core_selector_reduction",
+      "status": "PASS",
+      "path": "fundamental_action_reconstruction/generated/h31_psi0_to_pair1_reduction_audit.json::classification.strict_core_selector_reduction_present",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "id": "h32_psi0_primary_viscosity_secondary",
+      "status": "PASS",
+      "path": "fundamental_action_reconstruction/generated/h32_primary_psi0_lane_priority_audit.json::result",
+      "actual": "psi0_is_set_as_the_primary_working_anchor_candidate_while_informational_viscosity_is_retained_as_a_secondary_lane",
+      "expected": "psi0_is_set_as_the_primary_working_anchor_candidate_while_informational_viscosity_is_retained_as_a_secondary_lane"
+    },
+    {
+      "id": "h33_pair1_local_chart_only",
+      "status": "PASS",
+      "path": "fundamental_action_reconstruction/generated/h33_pair1_selector_target_justification_audit.json::result",
+      "actual": "pair1_is_available_as_a_deterministic_local_chart_for_the_primary_psi0_lane_but_not_yet_justified_as_a_uniquely_selector_relevant_target",
+      "expected": "pair1_is_available_as_a_deterministic_local_chart_for_the_primary_psi0_lane_but_not_yet_justified_as_a_uniquely_selector_relevant_target"
+    },
+    {
+      "id": "h42_c_without_anchor_trivial",
+      "status": "PASS",
+      "path": "fundamental_action_reconstruction/generated/h42_c_based_retardation_operator_on_pair1_audit.json::case_without_psi0.breaks_O2",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "id": "h42_anchor_origin_imported_psi0",
+      "status": "PASS",
+      "path": "fundamental_action_reconstruction/generated/h42_c_based_retardation_operator_on_pair1_audit.json::case_with_psi0.anchor_origin",
+      "actual": "imported_psi0",
+      "expected": "imported_psi0"
+    },
+    {
+      "id": "v4_viscosity_anchor_amplifying_only",
+      "status": "PASS",
+      "path": "fundamental_action_reconstruction/generated/v4_psi0_coupled_viscosity_effect_audit.json::pair_level_consequence.anchor_generating",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "id": "v6_viscosity_only_adds_response_split",
+      "status": "PASS",
+      "path": "fundamental_action_reconstruction/generated/v6_psi0_viscosity_distinct_effect_audit.json::result",
+      "actual": "psi0_plus_viscosity_adds_response_splitting_but_not_new_orientation_information",
+      "expected": "psi0_plus_viscosity_adds_response_splitting_but_not_new_orientation_information"
+    },
+    {
+      "id": "v7_viscosity_secondary_only",
+      "status": "PASS",
+      "path": "fundamental_action_reconstruction/generated/v7_informational_viscosity_current_best_supported_conclusion.json::result",
+      "actual": "informational_viscosity_is_best_supported_only_as_a_secondary_anchor_amplifying_or_response_splitting_extension_lane",
+      "expected": "informational_viscosity_is_best_supported_only_as_a_secondary_anchor_amplifying_or_response_splitting_extension_lane"
+    }
+  ],
+  "source_consistency_checks": [
+    {
+      "id": "psi0_q1952_q1955_match",
+      "left": {
+        "path": "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1952_information_channel_dedegeneracy_operator.json::derived_params.orientation_psi0",
+        "value": 5.926799718215227
+      },
+      "right": {
+        "path": "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1955_nogo_and_minimal_operator_repair.json::minimal_repair_params.orientation_psi0",
+        "value": 5.926799718215227
+      },
+      "abs_delta": 0.0,
+      "tolerance": 1e-12,
+      "consistent": true
+    },
+    {
+      "id": "retard_phase_q1952_q1955_match",
+      "left": {
+        "path": "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1952_information_channel_dedegeneracy_operator.json::derived_params.retard_phase",
+        "value": 0.11376650634004519
+      },
+      "right": {
+        "path": "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1955_nogo_and_minimal_operator_repair.json::minimal_repair_params.retard_phase",
+        "value": 0.11376650634004519
+      },
+      "abs_delta": 0.0,
+      "tolerance": 1e-12,
+      "consistent": true
+    },
+    {
+      "id": "psi0_q1955_q1956_match",
+      "left": {
+        "path": "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1955_nogo_and_minimal_operator_repair.json::minimal_repair_params.orientation_psi0",
+        "value": 5.926799718215227
+      },
+      "right": {
+        "path": "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1956_two_state_observer_with_repaired_operator.json::repaired_operator_params.orientation_psi0",
+        "value": 5.926799718215227
+      },
+      "abs_delta": 0.0,
+      "tolerance": 1e-12,
+      "consistent": true
+    },
+    {
+      "id": "retard_phase_q1955_q1956_match",
+      "left": {
+        "path": "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1955_nogo_and_minimal_operator_repair.json::minimal_repair_params.retard_phase",
+        "value": 0.11376650634004519
+      },
+      "right": {
+        "path": "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1956_two_state_observer_with_repaired_operator.json::repaired_operator_params.retard_phase",
+        "value": 0.11376650634004519
+      },
+      "abs_delta": 0.0,
+      "tolerance": 1e-12,
+      "consistent": true
+    },
+    {
+      "id": "tau_h_q1953_q1956_match",
+      "left": {
+        "path": "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1953_two_state_internal_observer.json::derived_params.tau_h",
+        "value": 8.378052013002534
+      },
+      "right": {
+        "path": "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1956_two_state_observer_with_repaired_operator.json::two_state_params.tau_h",
+        "value": 8.378052013002534
+      },
+      "abs_delta": 0.0,
+      "tolerance": 1e-12,
+      "consistent": true
+    },
+    {
+      "id": "tau_l_q1953_q1956_match",
+      "left": {
+        "path": "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1953_two_state_internal_observer.json::derived_params.tau_l",
+        "value": 2.08129865799831
+      },
+      "right": {
+        "path": "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1956_two_state_observer_with_repaired_operator.json::two_state_params.tau_l",
+        "value": 2.08129865799831
+      },
+      "abs_delta": 0.0,
+      "tolerance": 1e-12,
+      "consistent": true
+    }
+  ],
+  "status": "COMPUTED",
+  "operator_rules": {
+    "L0": 0.30466588404510986,
+    "speed_of_signal_c": 1.0,
+    "baseline_path_rule": "L0 = c * retard_phase / omega",
+    "anisotropic_path_rule": {
+      "L_parallel": "L0 * (1 + anisotropy_strength)",
+      "L_perp": "L0 * (1 - anisotropy_strength)"
+    },
+    "viscosity_rule": {
+      "nu_parallel": "1 / tau_h",
+      "nu_perp": "1 / tau_l"
+    }
+  },
+  "tests": {
+    "A": {
+      "id": "A",
+      "name": "isotropic_c_based_retardation_baseline",
+      "lane": "hypothesis_extension_only",
+      "inputs": {
+        "omega": 0.37341399972174283,
+        "c": 1.0,
+        "L": 0.30466588404510986,
+        "phase": 0.11376650634004519
+      },
+      "expected_outcome": "a_1 = d_1 and b_1 = 0",
+      "operator_form": "cos(omega * L / c) * I_2",
+      "result": {
+        "matrix": [
+          [
+            0.9935355678626889,
+            0.0
+          ],
+          [
+            0.0,
+            0.9935355678626889
+          ]
+        ],
+        "a_1": 0.9935355678626889,
+        "b_1": 0.0,
+        "d_1": 0.9935355678626889,
+        "trace_A_1": 1.9870711357253779,
+        "Delta_1": [
+          0.0,
+          0.0
+        ],
+        "classifier": "TRIVIAL_SELECTOR"
+      }
+    },
+    "B": {
+      "id": "B",
+      "name": "psi0_only_coordinate_embedding_baseline",
+      "lane": "hypothesis_extension_only",
+      "inputs": {
+        "psi0": 5.926799718215227
+      },
+      "expected_outcome": "chart embedding only and no selector-breaking",
+      "operator_form": "R(psi0) * I_2 * R(-psi0)",
+      "result": {
+        "matrix": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0
+          ]
+        ],
+        "a_1": 1.0,
+        "b_1": 0.0,
+        "d_1": 1.0,
+        "trace_A_1": 2.0,
+        "Delta_1": [
+          0.0,
+          0.0
+        ],
+        "classifier": "TRIVIAL_SELECTOR"
+      }
+    },
+    "C": {
+      "id": "C",
+      "name": "psi0_plus_c_based_anisotropic_retardation",
+      "lane": "hypothesis_extension_only",
+      "operator_form": "R(psi0) * diag(cos(omega * L_parallel / c), cos(omega * L_perp / c)) * R(-psi0)",
+      "equal_path_control": {
+        "inputs": {
+          "psi0": 5.926799718215227,
+          "omega": 0.37341399972174283,
+          "c": 1.0,
+          "L_parallel": 0.30466588404510986,
+          "L_perp": 0.30466588404510986
+        },
+        "result": {
+          "matrix": [
+            [
+              0.9935355678626889,
+              -0.0
+            ],
+            [
+              -0.0,
+              0.9935355678626889
+            ]
+          ],
+          "a_1": 0.9935355678626889,
+          "b_1": -0.0,
+          "d_1": 0.9935355678626889,
+          "trace_A_1": 1.9870711357253779,
+          "Delta_1": [
+            0.0,
+            -0.0
+          ],
+          "classifier": "TRIVIAL_SELECTOR"
+        }
+      },
+      "configured_path_split": {
+        "inputs": {
+          "psi0": 5.926799718215227,
+          "omega": 0.37341399972174283,
+          "c": 1.0,
+          "L0": 0.30466588404510986,
+          "L_parallel": 0.44029450301603507,
+          "L_perp": 0.16903726507418462,
+          "anisotropy_strength": 0.4451716653343556,
+          "lambda_parallel": 0.986514743676376,
+          "lambda_perp": 0.9980085385126205
+        },
+        "result": {
+          "matrix": [
+            [
+              0.9879138108013918,
+              0.0037580848416136326
+            ],
+            [
+              0.0037580848416136326,
+              0.9966094713876047
+            ]
+          ],
+          "a_1": 0.9879138108013918,
+          "b_1": 0.0037580848416136326,
+          "d_1": 0.9966094713876047,
+          "trace_A_1": 1.9845232821889964,
+          "Delta_1": [
+            -0.00869566058621285,
+            0.0037580848416136326
+          ],
+          "classifier": "ANCHOR_IMPORTED_SPLIT"
+        }
+      }
+    },
+    "D": {
+      "id": "D",
+      "name": "psi0_plus_viscosity_secondary_lane",
+      "lane": "hypothesis_extension_only",
+      "operator_form": "R(psi0) * diag(nu_parallel, nu_perp) * R(-psi0)",
+      "inputs": {
+        "psi0": 5.926799718215227,
+        "tau_h": 8.378052013002534,
+        "tau_l": 2.08129865799831,
+        "nu_parallel": 0.1193594881540511,
+        "nu_perp": 0.4804692474850056
+      },
+      "result": {
+        "matrix": [
+          [
+            0.16331510072590288,
+            0.1180707618358556
+          ],
+          [
+            0.1180707618358556,
+            0.43651363491315376
+          ]
+        ],
+        "a_1": 0.16331510072590288,
+        "b_1": 0.1180707618358556,
+        "d_1": 0.43651363491315376,
+        "trace_A_1": 0.5998287356390566,
+        "Delta_1": [
+          -0.2731985341872509,
+          0.1180707618358556
+        ],
+        "classifier": "ANCHOR_IMPORTED_SPLIT"
+      },
+      "difference_vs_test_C_configured": {
+        "matrix": [
+          [
+            -0.824598710075489,
+            0.11431267699424197
+          ],
+          [
+            0.11431267699424197,
+            -0.5600958364744509
+          ]
+        ],
+        "a_1": -0.824598710075489,
+        "b_1": 0.11431267699424197,
+        "d_1": -0.5600958364744509,
+        "trace_A_1": -1.38469454654994,
+        "Delta_1": [
+          -0.2645028736010381,
+          0.11431267699424197
+        ],
+        "classifier": "ANCHOR_IMPORTED_SPLIT"
+      }
+    }
+  },
+  "selected_operator": {
+    "source_test": "C_configured_path_split",
+    "lane": "hypothesis_extension_only",
+    "operator_object": "A_1_ext(pair1)",
+    "matrix": [
+      [
+        0.9879138108013918,
+        0.0037580848416136326
+      ],
+      [
+        0.0037580848416136326,
+        0.9966094713876047
+      ]
+    ],
+    "a_1": 0.9879138108013918,
+    "b_1": 0.0037580848416136326,
+    "d_1": 0.9966094713876047,
+    "trace_A_1": 1.9845232821889964,
+    "Delta_1": [
+      -0.00869566058621285,
+      0.0037580848416136326
+    ],
+    "classifier": "ANCHOR_IMPORTED_SPLIT"
+  },
+  "missing_upstream_objects": [],
+  "required_next_step": "PHYSICAL_INTERPRETATION_OF_ANCHOR_IMPORTED_SPLIT",
+  "project_conclusion": {
+    "result_type": "EXTENSION_LANE_CONCRETE_SELECTOR_SPLIT",
+    "summary": "the extension lane yields a concrete selector-sector split on pair1, but the split is anchor-imported and not strict-core generated",
+    "strict_core_frontier_unchanged": true,
+    "required_next_step": "PHYSICAL_INTERPRETATION_OF_ANCHOR_IMPORTED_SPLIT"
+  }
+}
