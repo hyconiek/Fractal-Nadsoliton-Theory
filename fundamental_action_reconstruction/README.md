@@ -1221,6 +1221,50 @@ Aktualizacja `N39`:
   nie twierdzi, ze `QW-2191` jest rozladowane,
   bez falszywego PASS.
 
+Aktualizacja `R30`:
+- zmaterializowano jawny `direct m2 psi1 common plus3 assignment role split packet`,
+- packet nie tworzy nowego parametru ani nie twierdzi, ze assignment zachodzi;
+  rozbija tylko brak
+  `explicit_assignment_witness_of_m2_psi1_to_mu_m2_plus3_segment_psi1_psi4`
+  na dwa węższe braki role-specific:
+  source action-role assignment witness i source eom-role assignment witness,
+- kanal swiatlo/kernel pozostaje dokladnie tym samym juz zamknietym kanalem z
+  `R14`; `R30` dotyka tylko jednej non-light source strony `m2_psi1`.
+
+Aktualizacja `P37`:
+- wykonano rerun direct formal family route po dodaniu `R30`,
+- wynik:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_AFTER_R30_DIRECT_M2_PSI1_COMMON_PLUS3_ASSIGNMENT_ROLE_SPLIT_PACKET`,
+- probe nie twierdzi, ze `m2_psi1 = m2_psi4` zachodzi;
+  twierdzi tylko, ze source-side brak dla `m2_psi1` zostal zwezony do dwoch
+  explicit role-specific assignment witnesses,
+- po tym rerunie na tej trasie zostaja:
+  `direct g4` zero witness,
+  `direct g6` zero witness,
+  `direct gY` zero witness,
+  source action-role assignment witness dla `m2_psi1`,
+  source eom-role assignment witness dla `m2_psi1`,
+  target slot assignment witness dla `m2_psi4`,
+  trzy pozostale direct `m2` pairwise witnesses,
+  `c1c1` zero witness,
+  `s1s1` zero witness,
+  oraz `QW-2191` canonicalization boundary.
+
+Aktualizacja `N40`:
+- wykonano theorem-level wynik dla direct formal family route po `R30/P37`,
+- `R30/P37/QW-2191/C10` razem wymuszaja wniosek:
+  obecny repo nadal nie identyfikuje hosta `QW-2186` z exported canonical
+  blockiem nawet po exact source-side role split dla `m2_psi1`,
+- theorem jest jawnie `route-specific only`:
+  nie daje globalnej redukcji glownego frontiera z `R21/P28`,
+  nie twierdzi, ze `m2_psi1 = m2_psi4`,
+  nie twierdzi, ze common plus3 parameter istnieje,
+  nie twierdzi, ze ktorykolwiek source-role assignment witness jest obecny,
+  nie twierdzi, ze inne direct `m2` pairwise witnesses zachodza,
+  nie twierdzi, ze direct `g4/g6/gY` defects znikaja,
+  nie twierdzi, ze `QW-2191` jest rozladowane,
+  bez falszywego PASS.
+
 ## Ontologiczna wskazowka programu
 
 Program jest prowadzony pod robocza ontologia:

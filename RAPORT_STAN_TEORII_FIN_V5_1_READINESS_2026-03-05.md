@@ -2880,6 +2880,45 @@ Frontier po `R29/P36/N39`:
 - `N39_route_result := current repo still does not identify existing kernel feedback host with the exported canonical Psi block even after the one-pair direct m2 assignment slot split packet`,
 - nadal brak globalnego theorem-level/full-closure PASS i nadal brak globalnej redukcji glownego frontiera `R21/P28`.
 
+Co realnie zostalo dodane przez `R30`, `P37` i `N40`:
+- `R30` tworzy jawny `direct m2 psi1 common plus3 assignment role split packet`,
+- `R30` nie dowodzi zadnego assignmentu; rozbija tylko brak
+  `explicit_assignment_witness_of_m2_psi1_to_mu_m2_plus3_segment_psi1_psi4`
+  na dwa dokladniejsze braki:
+  `explicit_source_action_role_assignment_witness_for_m2_psi1_to_mu_m2_plus3_segment_psi1_psi4`,
+  `explicit_source_eom_role_assignment_witness_for_m2_psi1_to_mu_m2_plus3_segment_psi1_psi4`,
+- `R30` nie rusza warstwy swiatlo/kernel:
+  shared kernel/light-facing channel pozostaje dokladnie tym samym
+  juz zamknietym kanalem z `R14`,
+- `P37` rerunuje direct formal family route po `R30`,
+- wynik `P37`:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_AFTER_R30_DIRECT_M2_PSI1_COMMON_PLUS3_ASSIGNMENT_ROLE_SPLIT_PACKET`,
+- `P37` rozklada source-side brak dla `m2_psi1` do dwoch wezszych brakow
+  role-specific,
+- `N40` daje theorem-level updated-route wynik:
+  nawet po exact source-side role split dla `m2_psi1` obecny repo nadal nie
+  identyfikuje hosta `QW-2186` z exported canonical blockiem.
+
+Frontier po `R30/P37/N40`:
+- `R30_result := explicit direct m2 psi1 common plus3 assignment role split packet is present`,
+- `R30_scope := single direct mass-like m2 source slot m2_psi1 assignment role split only`,
+- `R30_light_boundary := shared kernel/light-facing channel remains exactly the already closed R14 channel`,
+- `P37_route_result := current direct formal c1s1 family route is still not computable after R30`,
+- `P37_missing_objects := explicit zero witness for direct quartic-like g4 family c1s1 shift defect`,
+- `P37_missing_objects += explicit zero witness for direct quintic-like g6 family c1s1 shift defect`,
+- `P37_missing_objects += explicit zero witness for direct yukawa-like gY family c1s1 shift defect`,
+- `P37_missing_objects += explicit_source_action_role_assignment_witness_for_m2_psi1_to_mu_m2_plus3_segment_psi1_psi4`,
+- `P37_missing_objects += explicit_source_eom_role_assignment_witness_for_m2_psi1_to_mu_m2_plus3_segment_psi1_psi4`,
+- `P37_missing_objects += explicit_assignment_witness_of_m2_psi4_to_mu_m2_plus3_segment_psi1_psi4`,
+- `P37_missing_objects += explicit_pairwise_matching_witness_for_m2_psi7_equals_m2_psi10`,
+- `P37_missing_objects += explicit_pairwise_matching_witness_for_m2_psi2_equals_m2_psi5`,
+- `P37_missing_objects += explicit_pairwise_matching_witness_for_m2_psi8_equals_m2_psi11`,
+- `P37_missing_objects += explicit zero witness for the declared pair1 residual c1c1 equation`,
+- `P37_missing_objects += explicit zero witness for the declared pair1 residual s1s1 equation`,
+- `P37_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+- `N40_route_result := current repo still does not identify existing kernel feedback host with the exported canonical Psi block even after the direct m2 psi1 source-side role split packet`,
+- nadal brak globalnego theorem-level/full-closure PASS i nadal brak globalnej redukcji glownego frontiera `R21/P28`.
+
 Co realnie zostalo dodane przez `AX1`:
 - otwarto jawny pozytywny lane `axiom-augmented`,
 - pod minimalnym aksjomacie selekcji z `QW-2192/QW-2193` uzyskano packet-ready actual:
