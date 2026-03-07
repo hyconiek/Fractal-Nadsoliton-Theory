@@ -676,6 +676,38 @@ Aktualizacja `N26`:
   dla residualnego declared pullback + canonicalization,
   bez falszywego PASS.
 
+Aktualizacja `R17`:
+- zmaterializowano jawny `host-side residual diagonal correction absence packet`:
+  `A_host - K_total - m0^2 I = 0`,
+- packet eksportuje rowniez zerowy declared control pullback tej host-side
+  korekty, wiec zamyka alternatywna galaz `or host-side correction`,
+- packet nadal utrzymuje rozdzial:
+  shared kernel/light-facing channel pozostaje juz zamkniety przez `R14`,
+  a `R17` dotyka tylko host-side diagonal correction branch,
+- packet nadal nie twierdzi, ze canonical residual declared pullback jest zerowy
+  ani ze `QW-2191` jest rozladowane.
+
+Aktualizacja `P24`:
+- wykonano rerun trasy `host matching witness` po `R17`,
+- wynik:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_WITNESS_ROUTE_AFTER_R17_HOST_SIDE_RESIDUAL_ABSENCE_PACKET`,
+- probe rozladowuje blok `zero-or-host-side correction witness` z `P23`
+  do juz pojedynczego braku:
+  `explicit zero witness for the canonical residual declared pullback`,
+- po tym rerunie zostaja juz tylko:
+  explicit zero witness dla residualnego declared pullback oraz
+  `QW-2191` canonicalization boundary.
+
+Aktualizacja `N27`:
+- wykonano theorem-level wynik dla zaktualizowanej trasy po `R17/P24`,
+- `R17/P24/QW-2191/C10` razem wymuszaja wniosek:
+  host-side correction branch jest juz zamknieta, ale repo nadal nie
+  identyfikuje hosta `QW-2186` z exported canonical blockiem,
+- to jest dalszy realny progres redukcyjny:
+  host route zostal zwężony juz tylko do explicit zero witness
+  dla canonical residual declared pullback + canonicalization,
+  bez falszywego PASS.
+
 ## Ontologiczna wskazowka programu
 
 Program jest prowadzony pod robocza ontologia:

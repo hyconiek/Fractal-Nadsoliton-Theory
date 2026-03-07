@@ -146,6 +146,12 @@ Primary state report:
   kernel channel; the host route still stays negative, but now the only
   missing pieces are a zero-or-host-side cancellation witness for that
   residual declared pullback and the still-open `QW-2191` boundary.
+- The next honest move after that has now also been executed: `R17` plus
+  `P24/N27` close the host-side correction branch by showing that the current
+  host route has no residual diagonal correction beyond `K_total + m0^2 I`;
+  the host route still stays negative, but now the only missing pieces are an
+  explicit zero witness for the canonical residual declared pullback and the
+  still-open `QW-2191` boundary.
 - This is real progress on the selector problem at extension level, but it does not upgrade strict-core closure and does not change `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 - Details: [`fundamental_action_reconstruction/README.md`](fundamental_action_reconstruction/README.md), [`fundamental_action_reconstruction/generated/pair1_operator_probe_report.json`](fundamental_action_reconstruction/generated/pair1_operator_probe_report.json).
 
