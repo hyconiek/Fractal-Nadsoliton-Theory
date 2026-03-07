@@ -1,0 +1,87 @@
+{
+  "stage": "P108",
+  "lane": "current_selector_symmetry_breaking_requirement_probe_qw2191_frontier_only",
+  "goal": "test_whether_the_current_repo_supports_the_conclusion_that_the_qw2191_uniqueness_frontier_now_requires_an_explicit_selector_or_symmetry_breaking_premise_unless_a_new_internal_source_is_derived",
+  "status": "CURRENT_REPO_SUPPORTS_THE_SELECTOR_OR_SYMMETRY_BREAKING_REQUIREMENT_CONCLUSION_FOR_THE_QW2191_UNIQUENESS_FRONTIER_AFTER_P108",
+  "reason": "QW-2191 proves kernel-alone obstruction, QW-2192 closes uniqueness only after adding an explicit selector axiom, QW-2193 proves robustness of that axiom-augmented family, and B2 confirms that no strict-core internal orientation datum has yet been derived; therefore the current repo supports the selector/symmetry-breaking requirement conclusion for the QW-2191 frontier",
+  "q2191_state": {
+    "kernel_alone_obstructed": true,
+    "explicit_symmetry_breaking_required": true
+  },
+  "selector_route_state": {
+    "axiom_augmented_uniqueness_closed": true,
+    "axiom_free_uniqueness_closed": false,
+    "selector_family_robust": true
+  },
+  "strict_core_source_state": {
+    "internal_orientation_datum_status": "not_found_in_strict_core",
+    "explicit_selector_axiom_status": "control_route_only",
+    "robust_selector_family_status": "control_family_only",
+    "strict_internal_selector_derivations_found": 0
+  },
+  "remaining_missing_objects": [
+    "explicit_strict_core_internal_selector_source_derivation_discharge",
+    "explicit_theory_level_acceptance_of_selector_or_symmetry_breaking_requirement_if_no_internal_source_is_derived"
+  ],
+  "checks": [
+    {
+      "id": "q2191_kernel_alone_obstructed",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "QW-2191 proves that kernel alone obstructs full physical uniqueness"
+    },
+    {
+      "id": "q2191_explicit_symmetry_breaking_required",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "QW-2191 explicitly requires an extra symmetry-breaking postulate for uniqueness"
+    },
+    {
+      "id": "q2192_axiom_augmented_uniqueness_closed",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "QW-2192 closes uniqueness in axiom-augmented scope"
+    },
+    {
+      "id": "q2192_axiom_free_uniqueness_still_open",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "QW-2192 keeps axiom-free uniqueness explicitly open"
+    },
+    {
+      "id": "q2193_selector_family_robust",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "QW-2193 proves robustness of the selector family once the extra postulate is added"
+    },
+    {
+      "id": "b1_kernel_alone_ruled_out",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "B1 already narrows the blocker to the need for one internal symmetry-breaking selector"
+    },
+    {
+      "id": "b2_internal_orientation_datum_missing",
+      "actual": "not_found_in_strict_core",
+      "expected": "not_found_in_strict_core",
+      "pass": true,
+      "meaning": "B2 confirms that no strict-core internal orientation datum is currently derived"
+    },
+    {
+      "id": "b2_selector_axiom_control_route_only",
+      "actual": "control_route_only",
+      "expected": "control_route_only",
+      "pass": true,
+      "meaning": "B2 keeps the explicit selector only as a control route, not a strict-core derivation"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

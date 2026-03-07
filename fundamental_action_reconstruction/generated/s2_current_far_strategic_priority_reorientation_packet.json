@@ -1,0 +1,86 @@
+{
+  "stage": "S2",
+  "goal": "record_the_current_highest_level_far_priority_reorientation_after_kernel_split_correction_qw2191_and_l5_l12_cycle_analysis",
+  "priority_order": [
+    "legacy_to_strict_kernel_bridge_or_non_bridge",
+    "explicit_selector_requirement_or_symmetry_breaking_after_QW2191",
+    "noncyclic_anchor_for_L5_L12",
+    "further_local_direct_route_hyper_decomposition_only_as_auxiliary_lane"
+  ],
+  "priority_1_kernel_bridge": {
+    "current_state": "legacy_and_strict_kernels_are_both_exported_but_not_rigorously identified",
+    "source_reports": [
+      "K1",
+      "P47",
+      "N50"
+    ],
+    "highest_priority": true
+  },
+  "priority_2_selector_obstruction": {
+    "current_state": "QW2191 uniqueness obstruction remains active in strict core",
+    "source_reports": [
+      "QW-2191",
+      "AX1..AX8"
+    ],
+    "requires_explicit_new_premise_or_stronger_impossibility": true
+  },
+  "priority_3_noncyclic_anchor": {
+    "current_state": "L5/L12 recurrence under same blocker-cut is already rejected",
+    "source_reports": [
+      "QW-2381",
+      "QW-2382",
+      "QW-2383"
+    ],
+    "repeat_cycle_not_admitted": true
+  },
+  "direct_route_status": {
+    "local_direct_m2_route_still_valid": true,
+    "main_theoretical_priority_now": false,
+    "role": "auxiliary_sharpening_lane_only"
+  },
+  "checks": [
+    {
+      "id": "kernel_split_note_present",
+      "actual": true,
+      "expected": true,
+      "meaning": "K1 records the current legacy-vs-strict kernel split",
+      "pass": true
+    },
+    {
+      "id": "kernel_bridge_probe_present",
+      "actual": true,
+      "expected": true,
+      "meaning": "P47 asks the direct bridge question for the two kernels",
+      "pass": true
+    },
+    {
+      "id": "kernel_nonidentification_theorem_present",
+      "actual": true,
+      "expected": true,
+      "meaning": "N50 discharges the current-repo-state nonidentification theorem",
+      "pass": true
+    },
+    {
+      "id": "qw2191_obstruction_present",
+      "actual": true,
+      "expected": true,
+      "meaning": "QW-2191 explicitly records the selector/uniqueness obstruction",
+      "pass": true
+    },
+    {
+      "id": "qw2382_noncyclic_strategy_present",
+      "actual": true,
+      "expected": true,
+      "meaning": "QW-2382 records the hard noncyclic strategy constraints",
+      "pass": true
+    },
+    {
+      "id": "qw2383_repeat_step_rejection_present",
+      "actual": true,
+      "expected": true,
+      "meaning": "QW-2383 rejects repeated step admission under the same blocker-cut",
+      "pass": true
+    }
+  ],
+  "no_false_pass": true
+}

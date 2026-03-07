@@ -1,0 +1,67 @@
+{
+  "stage": "P100",
+  "lane": "legacy_gravity_hierarchy_replaced_successor_subbranch_probe_current_repo_state_only",
+  "goal": "test_whether_the_current_repo_exports_either_the_object_successor_or_method_successor_replaced_subbranch_for_the_legacy_gravity_hierarchy_role",
+  "status": "CURRENT_REPO_EXPORTS_STRICT_GRAVITY_HIERARCHY_SUCCESSOR_CANDIDATES_BUT_NEITHER_OBJECT_NOR_METHOD_REPLACED_SUCCESSOR_VERDICT_FOR_THE_LEGACY_GRAVITY_HIERARCHY_ROLE_AFTER_P100",
+  "reason": "the strict side exports both gravity_hierarchy_beta20 and qw2115_micro_supported_beta_hierarchy_bridge as real successor-candidate structures, but no current source upgrades either one into an explicit replaced verdict for the legacy gravity-hierarchy role",
+  "strict_side_sources_checked": [
+    "RELEASE_4_9_TEXTBOOK_EN_PL.md",
+    "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2069_full_sm_gr_derivation_package.json",
+    "material_dowodowy/korpus_qw_pozostaly/raporty_md/RAPORT_QW2115_GRAVITY_HIERARCHY_STRICT_BRIDGE_GATE.md",
+    "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2115_gravity_hierarchy_strict_bridge_gate.json",
+    "fundamental_action_reconstruction/A8_GRAVITY_BRIDGE_SPEC.md"
+  ],
+  "per_source_object_replaced_verdict_presence": {
+    "RELEASE_4_9_TEXTBOOK_EN_PL.md": false,
+    "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2069_full_sm_gr_derivation_package.json": false,
+    "material_dowodowy/korpus_qw_pozostaly/raporty_md/RAPORT_QW2115_GRAVITY_HIERARCHY_STRICT_BRIDGE_GATE.md": false,
+    "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2115_gravity_hierarchy_strict_bridge_gate.json": false,
+    "fundamental_action_reconstruction/A8_GRAVITY_BRIDGE_SPEC.md": false
+  },
+  "per_source_method_replaced_verdict_presence": {
+    "RELEASE_4_9_TEXTBOOK_EN_PL.md": false,
+    "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2069_full_sm_gr_derivation_package.json": false,
+    "material_dowodowy/korpus_qw_pozostaly/raporty_md/RAPORT_QW2115_GRAVITY_HIERARCHY_STRICT_BRIDGE_GATE.md": false,
+    "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2115_gravity_hierarchy_strict_bridge_gate.json": false,
+    "fundamental_action_reconstruction/A8_GRAVITY_BRIDGE_SPEC.md": false
+  },
+  "object_replaced_verdict_present": false,
+  "method_replaced_verdict_present": false,
+  "remaining_missing_objects": [
+    "explicit_object_successor_verdict_identifying_gravity_hierarchy_beta20_as_the_strict_side_successor_object_replacing_the_legacy_gravity_hierarchy_role",
+    "explicit_method_successor_semantics_verdict_identifying_qw2115_micro_supported_beta_hierarchy_bridge_as_the_strict_side_successor_semantics_replacing_the_legacy_gravity_hierarchy_role"
+  ],
+  "checks": [
+    {
+      "id": "f24_object_candidate_present",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "F24 already confirms that the strict side exports gravity_hierarchy_beta20"
+    },
+    {
+      "id": "f24_method_candidate_present",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "F24 already confirms that the strict side exports qw2115_micro_supported_beta_hierarchy_bridge"
+    },
+    {
+      "id": "object_replaced_verdict_present",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "the current repo exports no explicit object-successor replaced verdict for the legacy gravity-hierarchy role"
+    },
+    {
+      "id": "method_replaced_verdict_present",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "the current repo exports no explicit method-successor-semantics replaced verdict for the legacy gravity-hierarchy role"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

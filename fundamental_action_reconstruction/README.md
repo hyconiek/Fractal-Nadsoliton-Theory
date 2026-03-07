@@ -1682,6 +1682,767 @@ Aktualizacja `AX13/P51/N54`:
   juz poza attacked `m2_psi4` lane na pozostale direct `m2` pairwise
   witnesses oraz `g4/g6/gY`.
 
+Aktualizacja `R40/P52/N55`:
+- wykonano pierwszy neutralny packet dla nowej pary `m2_psi7 / m2_psi10`,
+- `R40` redukuje pairwise target `m2_psi7 = m2_psi10` do jednego declared
+  action/eom role-matching packet,
+- `P52/N55` utrzymuja route negatywny jako calosc, ale przesuwaja ten
+  pojedynczy pairwise frontier do wezszej luki
+  `explicit_coefficient_identification_witness_for_the_declared_role_matched_direct_m2_pair_m2_psi7_equals_m2_psi10`.
+
+Aktualizacja `R41/P53/N56`:
+- wykonano kolejna neutralna redukcje dla tej samej pary `m2_psi7 / m2_psi10`,
+- `R41` redukuje coefficient-identification gap do jednego declared formal
+  slot-separation packet,
+- `P53/N56` utrzymuja route negatywny jako calosc, ale przesuwaja ten
+  pojedynczy pairwise frontier do jeszcze wezszej luki
+  `explicit_common_parameter_source_or_symbol_identification_witness_for_the_declared_formal_m2_slots_m2_psi7_and_m2_psi10`.
+
+Aktualizacja `R42/P54/N57`:
+- wykonano kolejna neutralna redukcje dla tej samej pary `m2_psi7 / m2_psi10`,
+- `R42` redukuje common-source / symbol-identification gap do jednego common
+  plus3 carrier-segment sufficient route,
+- `P54/N57` utrzymuja route negatywny jako calosc, ale przesuwaja ten
+  pojedynczy pairwise frontier do jeszcze wezszej luki
+  `explicit_assignment_witness_of_m2_psi7_and_m2_psi10_to_one_common_plus3_carrier_segment_parameter`.
+
+Aktualizacja `R43/P55/N58`:
+- wykonano kolejna neutralna redukcje dla tej samej pary `m2_psi7 / m2_psi10`,
+- `R43` redukuje combined common-plus3 assignment gap do dwoch slotwise
+  assignment witnesses,
+- `P55/N58` utrzymuja route negatywny jako calosc, ale przesuwaja ten
+  pojedynczy pairwise frontier do jeszcze wezszych luk
+  `explicit_assignment_witness_of_m2_psi7_to_mu_m2_plus3_segment_psi7_psi10`
+  oraz
+  `explicit_assignment_witness_of_m2_psi10_to_mu_m2_plus3_segment_psi7_psi10`.
+
+Aktualizacja `R44/P56/N59`:
+- wykonano kolejna neutralna redukcje tylko po stronie `m2_psi7`,
+- `R44` redukuje source-slot assignment gap do dwoch source-role assignment
+  witnesses,
+- `P56/N59` utrzymuja route negatywny jako calosc, ale przesuwaja ten lokalny
+  frontier do:
+  `explicit_source_action_role_assignment_witness_for_m2_psi7_to_mu_m2_plus3_segment_psi7_psi10`
+  oraz
+  `explicit_source_eom_role_assignment_witness_for_m2_psi7_to_mu_m2_plus3_segment_psi7_psi10`.
+
+Aktualizacja `R45/P57/N60`:
+- wykonano kolejna neutralna redukcje tylko po stronie `m2_psi7` source-action,
+- `R45` redukuje source action-role gap do jednego common-monomial-support
+  coefficient-identification gap na `psi7**2/2`,
+- `P57/N60` utrzymuja route negatywny jako calosc, ale przesuwaja ten lokalny
+  frontier do:
+  `explicit_source_action_monomial_coefficient_identification_witness_for_m2_psi7_and_mu_m2_plus3_segment_psi7_psi10_on_common_psi7_squared_over_2_support`.
+
+Aktualizacja `R46/P58/N61`:
+- wykonano kolejna neutralna redukcje tylko po stronie `m2_psi7` source-action,
+- `R46` redukuje source action-side coefficient-identification gap do jednego
+  exact coefficient-defect-polynomial zero-witness gap na `psi7**2/2`,
+- `P58/N61` utrzymuja route negatywny jako calosc, ale przesuwaja ten lokalny
+  frontier do:
+  `explicit_zero_witness_for_the_direct_m2_psi7_source_action_coefficient_defect_polynomial_on_common_psi7_squared_over_2_support`.
+
+Aktualizacja `AX14/P59/N62`:
+- wykonano pierwszy uczciwy lokalny krok dodatni po `R46`, ale tylko na lane
+  `canonical-ontology-supported`,
+- `AX14` zamyka tylko lokalnie blocker
+  `explicit_zero_witness_for_the_direct_m2_psi7_source_action_coefficient_defect_polynomial_on_common_psi7_squared_over_2_support`,
+- `P59/N62` utrzymuja route negatywny jako calosc i przesuwaja lokalny frontier
+  dalej do:
+  `explicit_source_eom_role_assignment_witness_for_m2_psi7_to_mu_m2_plus3_segment_psi7_psi10`
+  oraz
+  `explicit_assignment_witness_of_m2_psi10_to_mu_m2_plus3_segment_psi7_psi10`.
+
+Aktualizacja `R47/P60/N63`:
+- wykonano kolejna neutralna redukcje tylko po stronie `m2_psi7` source-eom,
+- `R47` redukuje source eom-role gap do jednego common-monomial-support
+  coefficient-identification gap na `psi7(x)`,
+- `P60/N63` utrzymuja route negatywny jako calosc, ale przesuwaja ten lokalny
+  frontier do:
+  `explicit_source_eom_monomial_coefficient_identification_witness_for_m2_psi7_and_mu_m2_plus3_segment_psi7_psi10_on_common_psi7_of_x_support`.
+
+Aktualizacja `R48/P61/N64`:
+- wykonano kolejna neutralna redukcje tylko po stronie `m2_psi7` source-eom,
+- `R48` redukuje source eom-side coefficient-identification gap do jednego
+  exact coefficient-defect-polynomial zero-witness gap na `psi7(x)`,
+- `P61/N64` utrzymuja route negatywny jako calosc, ale przesuwaja ten lokalny
+  frontier do:
+  `explicit_zero_witness_for_the_direct_m2_psi7_source_eom_coefficient_defect_polynomial_on_common_psi7_of_x_support`.
+
+Aktualizacja `S2`:
+- zapisano jawna reorientacje priorytetow FAR po korekcie splitu kernela,
+  `QW-2191` i analizie petli `L5/L12`,
+- najwyzszy priorytet teoretyczny to teraz:
+  `legacy -> strict kernel bridge or non-bridge`,
+- drugi priorytet to jawne potraktowanie `QW-2191` jako realnej obstrukcji
+  wymagajacej symmetry-breaking / selector requirement poza samym strict core,
+- trzeci priorytet to `noncyclic anchor` dla `L5/L12`, zgodnie z
+  `QW-2381/QW-2382/QW-2383`,
+- dalsza lokalna dekompozycja `m2` pozostaje dozwolona, ale tylko jako lane
+  pomocniczy, nie glowny bottleneck calego FAR.
+
+Aktualizacja `F4/P62/N65`:
+- wykonano pierwszy jawny packet/probe/theorem dla transferu legacy fizycznych
+  rol z `K_legacy_ont` na `K_strict_gate`,
+- `F4` klasyfikuje trzy legacy role fizyczne:
+  `sin^2(theta_W)=alpha_geo/12`,
+  `alpha_EM^-1 = alpha_geo/(2*beta_tors)*(1-beta_tors)`,
+  oraz `beta^N` gravity hierarchy
+  jako nadal legacy-side only na current repo state,
+- `P62` utrzymuje route negatywny:
+  repo eksportuje legacy role claims oraz strict kernel pipeline, ale nadal nie
+  eksportuje rygorystycznego transferu tych legacy rol na `K_strict_gate`,
+- `N65` formalizuje theorem-level boundary:
+  strict operational outputs nie sa same przez sie bridge'em i nie wolno ich
+  cytowac jakby juz przenosily legacy role fizyczne na strict kernel,
+- to nie jest dowod, ze strict kernel jest falszywy; to jest tylko mocniejszy
+  non-transfer frontier dla current repo state.
+
+Aktualizacja `F5/P63/N66`:
+- wykonano kolejny najuczciwszy ruch na tym samym kernel-frontierze,
+  ale juz nie na poziomie transferu, tylko na poziomie
+  `retained-vs-replaced partition`,
+- `F5` pokazuje, ze `QW-2005` eksportuje tylko broad partition:
+  retained `Nadsoliton ontology / oscillatory+damped kernel idea /
+  laminar-vacuum interpretation`,
+  replaced-or-upgraded `strict closure stack / GW robustness / lockability /
+  frozen package formalization`,
+- `P63` utrzymuje route negatywny:
+  repo nadal nie eksportuje claim-specific strict-side partition verdicts dla
+  legacy `Weinberg / alpha_EM / gravity hierarchy` roles,
+- `N66` formalizuje theorem-level boundary:
+  broad `QW-2005` partition nie moze byc nadczytywany tak, jakby juz
+  rozstrzygal `C3/C4/C5` indywidualnie,
+- wspolny partition blocker zostaje teraz rozbity na trzy wezsze claim-specific
+  verdict gaps.
+
+Aktualizacja `F6/P64/N67`:
+- wykonano kolejny najuczciwszy ruch tylko dla pierwszego z tych trzech
+  claim-specific verdict gaps, czyli legacy Weinberg-angle role,
+- `F6` rozbija brak jednego strict-side verdict dla Weinberga na dwie jawne
+  galezie:
+  retained branch oraz replaced branch,
+- `P64` utrzymuje route negatywny:
+  repo nie eksportuje jeszcze ani retained verdict, ani replaced verdict dla
+  legacy Weinberg-angle role,
+- `N67` formalizuje theorem-level boundary:
+  obecne strict outputs nie moga byc nadczytywane ani jako retained verdict,
+  ani jako replaced verdict dla legacy Weinberga,
+- brak jednego claim-specific verdict zostaje teraz rozbity na dwa jeszcze
+  wezsze branch blockers.
+
+Aktualizacja `F7/P65/N68`:
+- wykonano kolejny najuczciwszy ruch tylko po stronie retained branch dla
+  legacy Weinberga,
+- `F7` rozbija retained branch na dwie retained sub-branches:
+  literal retention starej formuly `sin^2(theta_W)=alpha_geo/12`
+  oraz explicit role-equivalence retention,
+- `P65` utrzymuje route negatywny:
+  repo nie eksportuje jeszcze ani literal retention, ani explicit
+  role-equivalence retention dla legacy Weinberg-angle role,
+- `N68` formalizuje theorem-level boundary:
+  obecne strict-side materialy nie moga byc nadczytywane jakby retained branch
+  legacy Weinberga byl juz rozladowany,
+- retained branch zostaje teraz rozbity na dwa jeszcze wezsze retained
+  sub-branch blockers.
+
+Aktualizacja `P66/N69`:
+- wykonano bezposredni probe/theorem dla pierwszego z tych retained
+  sub-branch blockers, czyli literal retention starej formuly
+  `sin^2(theta_W)=alpha_geo/12` po stronie strict,
+- `P66` utrzymuje route negatywny:
+  strict-side authoritative source set nie eksportuje ani starej formuly,
+  ani algebraicznie identycznej literal form,
+- `N69` formalizuje theorem-level boundary:
+  literal-retention path dla legacy Weinberga jest zamkniety negatywnie na
+  current repo state,
+- retained frontier dla legacy Weinberga zostaje teraz zwazony juz tylko do
+  jednego branch blocker:
+  `explicit_strict_side_role_equivalence_verdict_for_the_legacy_weinberg_angle_role`.
+
+Aktualizacja `F8/P67/N70`:
+- retained-side frontier dla legacy Weinberga zostal jeszcze zawężony, ale bez
+  falszywego PASS:
+  current repo eksportuje realny strict-side candidate object
+  `sin2_theta_w_mz`,
+- `F8` rozdziela teraz uczciwie:
+  `candidate object present`
+  od
+  `explicit legacy-to-strict semantic-transfer verdict`,
+- `P67` utrzymuje wynik mieszany, ale nadal negatywny theorem-relewantnie:
+  repo eksportuje `sin2_theta_w_mz`, ale nadal nie eksportuje jawnego
+  verdictu, ze ten obiekt jest retained role-equivalent successor
+  legacy Weinberg-angle role,
+- `N70` formalizuje theorem-level boundary:
+  sama obecnosc `sin2_theta_w_mz` nie wystarcza do rozladowania retained
+  branch,
+- retained frontier dla legacy Weinberga zweza sie juz tylko do:
+  `explicit_legacy_to_strict_semantic_transfer_verdict_identifying_sin2_theta_w_mz_as_the_retained_strict_side_successor_of_the_legacy_weinberg_angle_role`.
+
+Aktualizacja `F9/P68/N71`:
+- wykonano kolejny najuczciwszy ruch juz tylko na tym jednym retained-side
+  semantic-transfer blockerze dla legacy Weinberga,
+- `F9` rozdziela ten blocker na dwie wezsze sub-branches:
+  `explicit textual retained-successor verdict`
+  oraz
+  `explicit lineage-upgrade verdict` wykorzystujacy realny `QW-2093`
+  `alpha_geo` touchpoint,
+- `P68` utrzymuje route negatywny:
+  current repo eksportuje zarówno strict-side candidate object `sin2_theta_w_mz`,
+  jak i `QW-2093` `alpha_geo` lineage touchpoint, ale nadal nie eksportuje ani
+  jawnego textual successor verdict, ani jawnego lineage-upgrade verdict,
+- `N71` formalizuje theorem-level boundary:
+  sama obecnosc `sin2_theta_w_mz` oraz samego `QW-2093` lineage string nie
+  wystarcza do retained semantic transfer legacy Weinberga,
+- retained semantic-transfer frontier dla legacy Weinberga zweza sie teraz do
+  dwoch jawnych sub-branch blockers:
+  `explicit_textual_retained_successor_verdict_identifying_sin2_theta_w_mz_as_the_retained_strict_side_successor_of_the_legacy_weinberg_angle_role`
+  oraz
+  `explicit_lineage_upgrade_verdict_elevating_the_qw2093_alpha_geo_touchpoint_into_retained_strict_side_weinberg_role_transfer`.
+
+Aktualizacja `P69/N72`:
+- wykonano bezposredni probe/theorem dla pierwszego z tych dwoch retained
+  semantic-transfer sub-branch blockers, czyli textual retained-successor
+  verdict dla `sin2_theta_w_mz`,
+- `P69` utrzymuje route negatywny:
+  current strict-side source set nie eksportuje jawnego textual verdictu, ze
+  `sin2_theta_w_mz` jest retained strict-side successor legacy Weinberg-angle
+  role,
+- `N72` formalizuje theorem-level boundary:
+  textual-successor path jest zamkniety negatywnie na current repo state,
+- retained semantic-transfer frontier dla legacy Weinberga zostaje teraz
+  zwazony juz tylko do jednego sub-branch blocker:
+  `explicit_lineage_upgrade_verdict_elevating_the_qw2093_alpha_geo_touchpoint_into_retained_strict_side_weinberg_role_transfer`.
+
+Aktualizacja `P70/N73`:
+- wykonano bezposredni probe/theorem dla ostatniego retained-side semantic-transfer
+  sub-branch blocker, czyli lineage-upgrade verdict z `QW-2093`
+  `alpha_geo` touchpoint,
+- `P70` utrzymuje route negatywny:
+  current strict-side source set nie eksportuje jawnego verdictu
+  podnoszacego `QW-2093` `alpha_geo` lineage touchpoint do retained
+  strict-side Weinberg-role transfer,
+- `N73` formalizuje theorem-level boundary:
+  retained branch dla legacy Weinberga jest teraz zamkniety negatywnie na
+  current repo state,
+- claim-specific frontier dla legacy Weinberga przechodzi juz tylko na
+  replaced branch:
+  `explicit_strict_side_replaced_verdict_for_the_legacy_weinberg_angle_role_by_an_explicit_strict_successor_semantics`.
+
+Aktualizacja `P71/N74`:
+- wykonano pierwszy bezposredni probe/theorem juz tylko dla replaced branch
+  legacy Weinberga,
+- `P71` utrzymuje route negatywny:
+  current strict-side source set nie eksportuje jawnego replaced-branch
+  verdictu, ze legacy Weinberg-angle role zostala zastapiona przez explicit
+  strict successor semantics,
+- `N74` formalizuje theorem-level boundary:
+  retained branch jest juz zamkniety negatywnie, ale replaced branch nadal nie
+  jest rozladowany na current repo state,
+- claim-specific frontier dla legacy Weinberga pozostaje teraz juz tylko:
+  `explicit_strict_side_replaced_verdict_for_the_legacy_weinberg_angle_role_by_an_explicit_strict_successor_semantics`.
+
+Aktualizacja `F10/P72/N75`:
+- replaced branch legacy Weinberga zostal dalej rozbity na dwa waskie
+  successor-semantics sub-branches:
+  `sin2_theta_w_mz` jako object-successor oraz
+  `qw2098_sin2_from_nonanchor_ew_pole_chain` jako method-successor semantics,
+- `P72` utrzymuje route negatywny:
+  repo eksportuje oba strict candidate structures, ale nadal nie eksportuje
+  jawnego verdictu replacement ani na object-side, ani na method-side,
+- `N75` formalizuje theorem-level boundary:
+  refined replaced branch pozostaje nierozladowany na current repo state,
+- claim-specific frontier dla legacy Weinberga zostaje juz tylko:
+  `explicit_object_successor_verdict_identifying_sin2_theta_w_mz_as_the_strict_side_successor_object_replacing_the_legacy_weinberg_angle_role`
+  oraz
+  `explicit_method_successor_semantics_verdict_identifying_qw2098_sin2_from_nonanchor_ew_pole_chain_as_the_strict_side_successor_semantics_replacing_the_legacy_weinberg_angle_role`.
+
+Aktualizacja `F11/P73/N76`:
+- object-successor branch wokol `sin2_theta_w_mz` zostal dalej rozbity na dwa
+  podbloki:
+  `textual object-successor verdict` oraz
+  `object-lineage upgrade verdict`,
+- `P73` utrzymuje route negatywny:
+  repo eksportuje realny `sin2_theta_w_mz` object chain
+  (`QW-2068 -> QW-2069 -> QW-2098 -> Release 4.9`), ale nadal nie eksportuje
+  ani jawnego textual object-successor verdict, ani jawnego object-lineage
+  upgrade verdict dla legacy Weinberga,
+- `N76` formalizuje theorem-level boundary:
+  object-successor branch pozostaje nierozladowany na current repo state,
+- najwezszy object-side frontier dla legacy Weinberga zostaje juz tylko:
+  `explicit_textual_object_successor_verdict_identifying_sin2_theta_w_mz_as_the_strict_side_successor_object_replacing_the_legacy_weinberg_angle_role`
+  oraz
+  `explicit_object_lineage_upgrade_verdict_elevating_the_existing_sin2_theta_w_mz_candidate_chain_into_replacement_semantics_for_the_legacy_weinberg_angle_role`.
+
+Aktualizacja `P74/N77`:
+- wykonano bezposredni probe/theorem dla textual object-successor sub-branch
+  legacy Weinberga,
+- `P74` utrzymuje route negatywny:
+  strict-side object sources nadal nie eksportuja jawnego textual verdictu, ze
+  `sin2_theta_w_mz` jest successor object zastępujacym legacy Weinberg-angle
+  role,
+- `N77` formalizuje theorem-level boundary:
+  textual object-successor sub-branch jest zamkniety negatywnie na current
+  repo state,
+- object-side frontier dla legacy Weinberga zostaje juz tylko:
+  `explicit_object_lineage_upgrade_verdict_elevating_the_existing_sin2_theta_w_mz_candidate_chain_into_replacement_semantics_for_the_legacy_weinberg_angle_role`,
+  przy osobno nadal otwartym method-successor branch.
+
+Aktualizacja `P75/N78`:
+- wykonano bezposredni probe/theorem dla ostatniego object-side blocker,
+  czyli `object-lineage upgrade verdict` dla `sin2_theta_w_mz`,
+- `P75` utrzymuje route negatywny:
+  strict-side object sources nadal nie eksportuja jawnego verdictu
+  podnoszacego istniejacy `sin2_theta_w_mz` chain do replacement semantics dla
+  legacy Weinberga,
+- `N78` formalizuje theorem-level boundary:
+  caly object-successor branch legacy Weinberga jest teraz zamkniety
+  negatywnie na current repo state,
+- remaining replaced-side frontier dla legacy Weinberga zostaje juz tylko:
+  `explicit_method_successor_semantics_verdict_identifying_qw2098_sin2_from_nonanchor_ew_pole_chain_as_the_strict_side_successor_semantics_replacing_the_legacy_weinberg_angle_role`.
+
+Aktualizacja `F12/P76/N79`:
+- remaining replaced-side frontier legacy Weinberga zostal dalej rozbity na
+  dwa method-side sub-branch'e:
+  `textual method-successor verdict` oraz
+  `method-lineage upgrade verdict`,
+- `P76` utrzymuje route negatywny:
+  repo eksportuje realny `qw2098_sin2_from_nonanchor_ew_pole_chain` method
+  chain, ale nadal nie eksportuje ani jawnego textual method-successor verdict,
+  ani jawnego method-lineage upgrade verdict dla legacy Weinberga,
+- `N79` formalizuje theorem-level boundary:
+  method-successor branch pozostaje nierozladowany na current repo state,
+- nowy najwezszy method-side frontier dla legacy Weinberga zostaje juz tylko:
+  `explicit_textual_method_successor_semantics_verdict_identifying_qw2098_sin2_from_nonanchor_ew_pole_chain_as_the_strict_side_successor_semantics_replacing_the_legacy_weinberg_angle_role`
+  oraz
+  `explicit_method_lineage_upgrade_verdict_elevating_the_existing_qw2098_sin2_from_nonanchor_ew_pole_chain_chain_into_replacement_semantics_for_the_legacy_weinberg_angle_role`.
+
+Aktualizacja `P77/N80`:
+- wykonano bezposredni probe/theorem dla textual method-successor sub-branch
+  legacy Weinberga,
+- `P77` utrzymuje route negatywny:
+  strict-side method sources nadal nie eksportuja jawnego textual verdictu, ze
+  `qw2098_sin2_from_nonanchor_ew_pole_chain` jest successor semantics
+  zastepujacym legacy Weinberg-angle role,
+- `N80` formalizuje theorem-level boundary:
+  textual method-successor sub-branch jest zamkniety negatywnie na current
+  repo state,
+- method-side frontier dla legacy Weinberga zostaje juz tylko:
+  `explicit_method_lineage_upgrade_verdict_elevating_the_existing_qw2098_sin2_from_nonanchor_ew_pole_chain_chain_into_replacement_semantics_for_the_legacy_weinberg_angle_role`.
+
+Aktualizacja `P78/N81`:
+- wykonano bezposredni probe/theorem dla remaining method-lineage-upgrade
+  sub-branch legacy Weinberga,
+- `P78` utrzymuje route negatywny:
+  strict-side method sources nadal nie eksportuja jawnego verdictu
+  upgrade'ujacego `qw2098_sin2_from_nonanchor_ew_pole_chain` do replacement
+  semantics dla legacy Weinberg-angle role,
+- `N81` formalizuje theorem-level boundary:
+  pelny method-successor branch dla legacy Weinberga jest juz zamkniety
+  negatywnie na current repo state,
+- po tym kroku kolejny uczciwy ruch to juz nie wracac do method-side
+  sub-branches, tylko laczyc `N78` i `N81` w pelniejszy replaced-branch
+  closure theorem albo przejsc do nastepnej legacy physical-role frontier.
+
+Aktualizacja `N82`:
+- wykonano theorem-level integracje `N78` i `N81`,
+- `N82` formalizuje:
+  pelny replaced branch dla legacy Weinberg-angle role jest juz zamkniety
+  negatywnie na current repo state,
+- po tym kroku kolejny uczciwy ruch to juz albo polaczyc `N73` i `N82` w
+  claim-specific full negative closure dla calego legacy Weinberg frontier,
+  albo przejsc do kolejnej legacy physical-role frontier.
+
+Aktualizacja `N83`:
+- wykonano theorem-level integracje `N73` i `N82`,
+- `N83` formalizuje:
+  caly claim-specific frontier legacy Weinberg-angle role jest juz zamkniety
+  negatywnie na current repo state,
+- po tym kroku kolejny uczciwy ruch to juz nie wracac do legacy Weinberga, tylko
+  przejsc do kolejnej legacy physical-role frontier, najczyściej fine-structure.
+
+Aktualizacja `F13/P79/N84`:
+- otwarto nastepna legacy physical-role frontier: `fine-structure`,
+- `F13` rozbija brakujacy claim-specific verdict na retained branch vs replaced
+  branch,
+- `P79` utrzymuje route negatywny:
+  current repo nadal nie eksportuje ani retained, ani replaced strict-side
+  branch dla legacy fine-structure role,
+- `N84` formalizuje theorem-level boundary:
+  strict-side branch verdict dla legacy fine-structure role pozostaje
+  nierozladowany i zredukowany do dwoch branch-specific blockerow.
+
+Aktualizacja `F14/P80/N85`:
+- wykonano retained-side refinement dla legacy fine-structure role,
+- `F14` rozbija retained branch na literal retention vs role-equivalence
+  retention,
+- `P80` utrzymuje route negatywny:
+  current repo nie eksportuje ani literal retention starej formuly
+  `alpha_EM^-1 = alpha_geo/(2*beta_tors)*(1-beta_tors)`, ani jawnego
+  role-equivalence retention,
+- `N85` formalizuje theorem-level boundary:
+  retained branch legacy fine-structure role zostaje zawęzony do dwoch
+  retained-subbranch blockerow.
+
+Aktualizacja `P81/N86`:
+- wykonano bezposredni literal-retention probe/theorem dla legacy
+  fine-structure formula,
+- `P81` utrzymuje route negatywny:
+  current strict-side authoritative sources nie eksportuja literal retention
+  starej formuly `alpha_EM^-1 = alpha_geo/(2*beta_tors)*(1-beta_tors)`,
+- `N86` formalizuje theorem-level boundary:
+  literal-retention path dla legacy fine-structure role jest juz zamkniety
+  negatywnie na current repo state,
+- retained frontier dla legacy fine-structure role zostaje juz tylko:
+  `explicit_strict_side_role_equivalence_verdict_for_the_legacy_fine_structure_role`.
+
+Aktualizacja `F15/P82/N87`:
+- wykonano role-equivalence refinement/probe/theorem dla legacy
+  fine-structure role,
+- `F15` pokazuje, ze strict side juz eksportuje realny candidate object
+  `alpha_em_inv_mz`,
+- `P82` utrzymuje route mieszany, ale theorem-relevant negatywny:
+  candidate object jest obecny, lecz current repo nadal nie eksportuje jawnego
+  legacy-to-strict semantic-transfer verdict dla tego obiektu,
+- `N87` formalizuje theorem-level boundary:
+  retained branch legacy fine-structure role jest juz zawezony do jednego
+  semantic-transfer blocker attached to `alpha_em_inv_mz`.
+
+Aktualizacja `F16/P83/N88`:
+- wykonano semantic-transfer refinement/probe/theorem dla retained-side
+  legacy fine-structure role,
+- `F16` rozbija remaining semantic-transfer blocker na dwa wezsze sub-branch'e:
+  textual retained-successor verdict vs object-lineage-upgrade verdict dla
+  istniejacego `alpha_em_inv_mz` candidate chain,
+- `P83` utrzymuje route negatywny:
+  current repo nie eksportuje ani textual retained-successor verdict, ani
+  object-lineage-upgrade verdict dla legacy fine-structure role,
+- `N88` formalizuje theorem-level boundary:
+  retained semantic-transfer branch legacy fine-structure role jest teraz
+  zawezony dokladnie do tych dwoch blockerow, bez promotion do strict closure.
+
+Aktualizacja `P84/N89`:
+- wykonano direct textual-successor probe/theorem dla retained-side
+  legacy fine-structure role,
+- `P84` utrzymuje route negatywny:
+  current strict-side sources nie eksportuja jawnego textual retained-successor
+  verdict dla `alpha_em_inv_mz`,
+- `N89` formalizuje theorem-level boundary:
+  textual retained-successor sub-branch dla legacy fine-structure role jest juz
+  zamkniety negatywnie na current repo state,
+- retained semantic-transfer frontier legacy fine-structure role zostaje juz
+  tylko:
+  `explicit_object_lineage_upgrade_verdict_elevating_the_existing_alpha_em_inv_mz_candidate_chain_into_retained_strict_side_fine_structure_role_transfer`.
+
+Aktualizacja `P85/N90`:
+- wykonano direct object-lineage-upgrade probe/theorem dla retained-side
+  legacy fine-structure role,
+- `P85` utrzymuje route negatywny:
+  current strict-side sources nie eksportuja jawnego object-lineage-upgrade
+  verdict dla `alpha_em_inv_mz`,
+- `N90` formalizuje theorem-level full negative closure:
+  retained branch legacy fine-structure role jest juz zamkniety negatywnie na
+  current repo state,
+- claim-specific fine-structure frontier przechodzi teraz juz tylko na
+  `replaced branch`.
+
+Aktualizacja `F17/P86/N91`:
+- wykonano replaced-branch refinement/probe/theorem dla legacy fine-structure
+  role,
+- `F17` rozbija remaining replaced frontier na dwa wezsze sub-branch'e:
+  object-successor verdict wokol `alpha_em_inv_mz` vs method-successor-semantics
+  verdict wokol `qw2098_alpha_on_shell_from_gf_mw_sin2_delta_r`,
+- `P86` utrzymuje route negatywny:
+  current repo eksportuje strict fine-structure successor candidates, ale nie
+  eksportuje ani object-side, ani method-side replaced verdict,
+- `N91` formalizuje theorem-level boundary:
+  replaced branch legacy fine-structure role jest teraz zawężony dokladnie do
+  tych dwoch blockerow, bez promotion do full closure.
+
+Aktualizacja `F18/P87/N92`:
+- wykonano object-successor refinement/probe/theorem dla replaced-side
+  legacy fine-structure role,
+- `F18` rozbija object-side blocker wokol `alpha_em_inv_mz` na dwa wezsze
+  sub-branch'e: textual object-successor verdict vs object-lineage-upgrade
+  verdict,
+- `P87` utrzymuje route negatywny:
+  current repo eksportuje `alpha_em_inv_mz` object chain, ale nie eksportuje
+  ani textual object-successor verdict, ani object-lineage-upgrade verdict,
+- `N92` formalizuje theorem-level boundary:
+  object-successor branch legacy fine-structure role jest teraz zawężony
+  dokladnie do tych dwoch blockerow, bez ruszania method-side branch.
+
+Aktualizacja `P88/N93`:
+- wykonano direct textual-object-successor probe/theorem dla object-side
+  replaced branch legacy fine-structure role,
+- `P88` utrzymuje route negatywny:
+  current strict-side object sources nie eksportuja jawnego textual
+  object-successor verdict, ze `alpha_em_inv_mz` zastępuje legacy
+  fine-structure role,
+- `N93` formalizuje theorem-level obstruction:
+  textual object-successor sub-branch jest juz negatywnie zamkniety na current
+  repo state,
+- object-side frontier zostaje dalej zawężony juz tylko do
+  `explicit_object_lineage_upgrade_verdict_elevating_the_existing_alpha_em_inv_mz_candidate_chain_into_replacement_semantics_for_the_legacy_fine_structure_role`,
+  przy nadal osobno otwartym method-side branch.
+
+Aktualizacja `P89/N94`:
+- wykonano direct object-lineage-upgrade probe/theorem dla object-side
+  replaced branch legacy fine-structure role,
+- `P89` utrzymuje route negatywny:
+  current strict-side object sources nie eksportuja jawnego
+  object-lineage-upgrade verdict dla `alpha_em_inv_mz`,
+- `N94` formalizuje theorem-level full negative closure:
+  caly object-successor branch legacy fine-structure role jest juz negatywnie
+  zamkniety na current repo state,
+- remaining replaced-side frontier przechodzi teraz juz tylko na
+  method-side branch
+  `explicit_method_successor_semantics_verdict_identifying_qw2098_alpha_on_shell_from_gf_mw_sin2_delta_r_as_the_strict_side_successor_semantics_replacing_the_legacy_fine_structure_role`.
+
+Aktualizacja `F19/P90/N95`:
+- wykonano method-successor refinement/probe/theorem dla remaining replaced
+  frontier legacy fine-structure role,
+- `F19` rozbija remaining method-side blocker na dwa wezsze sub-branch'e:
+  textual method-successor verdict vs method-lineage-upgrade verdict wokol
+  `qw2098_alpha_on_shell_from_gf_mw_sin2_delta_r`,
+- `P90` utrzymuje route negatywny:
+  current repo eksportuje strict `qw2098_alpha_on_shell_from_gf_mw_sin2_delta_r`
+  method chain, ale nie eksportuje ani textual method-successor verdict, ani
+  method-lineage-upgrade verdict,
+- `N95` formalizuje theorem-level boundary:
+  method-side branch legacy fine-structure role jest teraz zawężony dokladnie
+  do tych dwoch blockerow, bez promotion do full closure.
+
+Aktualizacja `P91/N96`:
+- wykonano direct textual-method-successor probe/theorem dla method-side
+  replaced branch legacy fine-structure role,
+- `P91` utrzymuje route negatywny:
+  current strict-side method sources nie eksportuja jawnego textual
+  method-successor verdict, ze `qw2098_alpha_on_shell_from_gf_mw_sin2_delta_r`
+  zastępuje legacy fine-structure role,
+- `N96` formalizuje theorem-level obstruction:
+  textual method-successor sub-branch jest juz negatywnie zamkniety na current
+  repo state,
+- method-side frontier zostaje dalej zawężony juz tylko do
+  `explicit_method_lineage_upgrade_verdict_elevating_the_existing_qw2098_alpha_on_shell_from_gf_mw_sin2_delta_r_chain_into_replacement_semantics_for_the_legacy_fine_structure_role`.
+
+Aktualizacja `P92/N97`:
+- wykonano direct method-lineage-upgrade probe/theorem dla method-side
+  replaced branch legacy fine-structure role,
+- `P92` utrzymuje route negatywny:
+  current strict-side method sources nie eksportuja jawnego
+  method-lineage-upgrade verdict dla
+  `qw2098_alpha_on_shell_from_gf_mw_sin2_delta_r`,
+- `N97` formalizuje theorem-level full negative closure:
+  caly method-successor branch legacy fine-structure role jest juz negatywnie
+  zamkniety na current repo state,
+- next honest move przechodzi teraz juz nie na method-side, tylko na
+  polaczenie `N94` i `N97` w full replaced-branch closure theorem dla legacy
+  fine-structure role.
+
+Aktualizacja `N98/N99`:
+- wykonano full replaced-branch closure theorem oraz full claim-specific
+  closure theorem dla legacy fine-structure role,
+- `N98` formalizuje theorem-level, ze object-side i method-side replaced
+  branches sa juz razem negatywnie zamkniete na current repo state,
+- `N99` formalizuje theorem-level, ze retained branch z `N90` i replaced
+  branch z `N98` razem zamykaja caly legacy fine-structure claim-specific
+  frontier negatywnie na current repo state,
+- next honest move przechodzi juz poza legacy fine-structure, najczyściej do
+  nastepnej legacy physical-role frontier.
+
+Aktualizacja `F20/P93/N100`:
+- otwarto nastepna legacy physical-role frontier: `gravity-hierarchy`,
+- `F20` rozbija brakujacy claim-specific strict-side verdict dla legacy
+  gravity-hierarchy role na retained vs replaced branch,
+- `P93` potwierdza, ze current repo nadal nie eksportuje ani retained, ani
+  replaced branch dla tego claimu,
+- `N100` formalizuje theorem-level, ze caly current gravity-hierarchy
+  branch frontier jest na tym etapie otwarty tylko jako te dwa jawne blockery.
+
+Aktualizacja `F21/P94/N101`:
+- wykonano retained-side refinement dla legacy gravity-hierarchy role,
+- `F21` rozbija retained branch na literal retention starego claimu
+  `exact gravity hierarchy from beta^N scaling` vs explicit role-equivalence
+  retention,
+- `P94` potwierdza, ze current repo nie eksportuje zadnej z tych dwoch
+  retained sub-branches,
+- `N101` formalizuje theorem-level, ze retained branch legacy
+  gravity-hierarchy role jest teraz zawężony dokladnie do tych dwoch
+  blockerow.
+
+Aktualizacja `P95/N102`:
+- wykonano literal-retention probe/theorem dla legacy gravity-hierarchy role,
+- `P95` potwierdza, ze current strict-side authoritative source set nie
+  eksportuje literal retention starego claimu `exact gravity hierarchy from
+  beta^N scaling` ani jego algebraicznie identycznej postaci,
+- `N102` formalizuje theorem-level, ze literal-retention path dla legacy
+  gravity-hierarchy role jest juz zamkniety negatywnie na current repo state,
+- retained frontier zostaje juz tylko: explicit role-equivalence verdict.
+
+Aktualizacja `F22/P96/N103`:
+- wykonano role-equivalence refinement/probe/theorem dla legacy
+  gravity-hierarchy role,
+- strict side eksportuje realny candidate object `gravity_hierarchy_beta20`
+  przez `QW-2068/QW-2069/QW-2115`,
+- `P96` potwierdza jednak, ze current repo nadal nie eksportuje jawnego
+  legacy-to-strict semantic-transfer verdict dla tej roli,
+- `N103` formalizuje theorem-level, ze retained frontier legacy
+  gravity-hierarchy role zostaje juz zawężony do jednego semantic-transfer
+  blockera.
+
+Aktualizacja `F23/P97/N104`:
+- wykonano semantic-transfer refinement/probe/theorem dla retained-side
+  gravity-hierarchy role,
+- remaining semantic-transfer blocker zostal rozbity na:
+  textual retained-successor verdict vs object-lineage-upgrade verdict,
+- `P97` potwierdza, ze current repo nie eksportuje zadnej z tych dwoch
+  semantic-transfer sub-branches,
+- `N104` formalizuje theorem-level, ze retained semantic-transfer frontier
+  legacy gravity-hierarchy role jest teraz zawężony dokladnie do tych dwoch
+  blockerow.
+
+Aktualizacja `P98/N105`:
+- wykonano textual retained-successor probe/theorem dla legacy
+  gravity-hierarchy role,
+- `P98` potwierdza, ze current strict-side source set nie eksportuje jawnego
+  textual retained-successor verdict dla `gravity_hierarchy_beta20`,
+- `N105` formalizuje theorem-level, ze textual-successor path dla legacy
+  gravity-hierarchy role jest juz zamkniety negatywnie na current repo state,
+- retained semantic-transfer frontier zostaje juz tylko: object-lineage-upgrade
+  verdict.
+
+Aktualizacja `P99/N106`:
+- wykonano object-lineage-upgrade probe/theorem dla retained-side legacy
+  gravity-hierarchy role,
+- `P99` potwierdza, ze current strict-side source set nie eksportuje jawnego
+  object-lineage-upgrade verdict dla `gravity_hierarchy_beta20`,
+- `N106` formalizuje theorem-level, ze retained branch dla legacy
+  gravity-hierarchy role jest juz w calosci zamkniety negatywnie na current
+  repo state,
+- claim-specific gravity frontier przechodzi teraz juz tylko na `replaced
+  branch`.
+
+Aktualizacja `F24/P100/N107`:
+- otwarto `replaced branch` dla legacy gravity-hierarchy role,
+- `F24` rozbija ten branch na dwa strict-side kandydaty:
+  object `gravity_hierarchy_beta20` vs method
+  `qw2115_micro_supported_beta_hierarchy_bridge`,
+- `P100` potwierdza, ze current repo nie eksportuje jeszcze ani object-side,
+  ani method-side replaced verdict dla tej roli,
+- `N107` formalizuje theorem-level, ze replaced branch legacy
+  gravity-hierarchy role jest teraz zawezony dokladnie do tych dwoch
+  blockerow.
+
+Aktualizacja `F25/P101/N108`:
+- wykonano object-side refinement dla replaced branch legacy
+  gravity-hierarchy role,
+- `F25` rozbija `gravity_hierarchy_beta20` blocker na:
+  textual object-successor verdict vs object-lineage-upgrade verdict,
+- `P101` potwierdza, ze current repo nie eksportuje zadnego z tych dwoch
+  object-side sub-branchy,
+- `N108` formalizuje theorem-level, ze object-successor branch jest teraz
+  zawezony dokladnie do tych dwoch blockerow.
+
+Aktualizacja `P102/N109`:
+- wykonano textual object-successor probe/theorem dla legacy
+  gravity-hierarchy role,
+- `P102` potwierdza, ze current strict-side object source set nie eksportuje
+  jawnego textual object-successor verdict dla `gravity_hierarchy_beta20`,
+- `N109` formalizuje theorem-level, ze textual object-successor path dla
+  legacy gravity-hierarchy role jest juz zamkniety negatywnie na current repo
+  state,
+- object-side frontier zostaje juz tylko: object-lineage-upgrade verdict.
+
+Aktualizacja `P103/N110`:
+- wykonano object-lineage-upgrade probe/theorem dla legacy
+  gravity-hierarchy role,
+- `P103` potwierdza, ze current strict-side object source set nie eksportuje
+  jawnego object-lineage-upgrade verdict dla `gravity_hierarchy_beta20`,
+- `N110` formalizuje theorem-level, ze caly object-successor branch dla
+  legacy gravity-hierarchy role jest juz zamkniety negatywnie na current repo
+  state,
+- replaced-side gravity frontier przechodzi juz tylko na method-side branch.
+
+Aktualizacja `F26/P104/N111`:
+- otwarto method-side branch dla replaced gravity-hierarchy role,
+- `F26` rozbija ten branch na:
+  textual method-successor verdict vs method-lineage-upgrade verdict,
+- `P104` potwierdza, ze current repo nie eksportuje zadnego z tych dwoch
+  method-side sub-branchy,
+- `N111` formalizuje theorem-level, ze method-successor branch legacy
+  gravity-hierarchy role jest teraz zawezony dokladnie do tych dwoch
+  blockerow.
+
+Aktualizacja `P105/N112`:
+- textual method-successor path dla `qw2115_micro_supported_beta_hierarchy_bridge`
+  jest juz zamkniety negatywnie na current repo state,
+- `P105` potwierdza, ze strict-side method sources nie eksportuja jawnego
+  textual-successor verdict dla legacy gravity-hierarchy role,
+- `N112` formalizuje theorem-level, ze method-side frontier zostal juz
+  zawezony tylko do remaining `method-lineage-upgrade verdict`.
+
+Aktualizacja `P106/N113/N114/N115`:
+- `P106` potwierdza, ze current strict-side method sources nie eksportuja
+  jawnego `method-lineage-upgrade verdict` dla
+  `qw2115_micro_supported_beta_hierarchy_bridge`,
+- `N113` formalizuje theorem-level, ze caly method-successor branch dla legacy
+  gravity-hierarchy role jest juz zamkniety negatywnie,
+- `N114` formalizuje theorem-level, ze caly replaced branch legacy
+  gravity-hierarchy role jest juz zamkniety negatywnie,
+- `N115` formalizuje theorem-level, ze caly legacy gravity-hierarchy
+  claim-specific frontier jest juz zamkniety negatywnie na current repo state.
+
+Aktualizacja `N116`:
+- `N116` sklada `N83`, `N99` i `N115` w jeden theorem-level wynik wyzszego
+  rzedu: caly legacy physical-role package jest juz claim-specifically
+  zamkniety negatywnie na current repo state,
+- to domyka lokalny frontier transferu trzech starych claimow bez udawania
+  bridge'a `K_legacy_ont -> K_strict_gate`,
+- najblizszy uczciwy frontier wraca teraz do `legacy -> strict kernel
+  bridge/non-bridge` albo do `QW-2191`.
+
+Aktualizacja `P107/N117`:
+- `P107` formalizuje package-level probe: current repo nie eksportuje ani
+  rigorystycznej identyfikacji `K_legacy_ont -> K_strict_gate`, ani pelnego
+  transferu legacy physical-role package na strict side,
+- `N117` sklada `N50`, `N116` i `P107` w jeden theorem-level wynik wyzszego
+  rzedu: current repo nadal nie uzasadnia traktowania istniejacego strict
+  pipeline jako theorem-level carrier calego legacy kernel/package,
+- po tym kroku jedyny uczciwy frontier zostaje juz naprawde wyzszego rzedu:
+  `legacy -> strict kernel bridge/non-bridge` albo `QW-2191`.
+
+Aktualizacja `P108/N118`:
+- `P108` sklada `QW-2191`, `QW-2192`, `QW-2193`, `B1` i `B2` w jeden current
+  repo state probe i potwierdza, ze repo juz wspiera conclusion:
+  selector/symmetry-breaking requirement jest aktywna granica dla `QW-2191`,
+- `N118` formalizuje theorem-level, ze kernel alone jest niewystarczajacy,
+  axiom-augmented selector route jest robust, a strict core nadal nie eksportuje
+  internal selector source,
+- po tym kroku glowny frontier jest juz bardzo czysty:
+  `derive internal selector source` albo `accept selector requirement`, plus
+  osobno `legacy -> strict kernel bridge/non-bridge`.
+
+Aktualizacja `F27/P109/N119`:
+- `F27` rozdziela brakujacy ruch projektowy po `N118` na dwie jawne galezie:
+  explicit theory-level `acceptance` verdict albo explicit theory-level
+  `deferral` verdict dla selector/symmetry-breaking requirement,
+- `P109` potwierdza, ze repo ma juz theorem-level support i decision inputs,
+  ale nadal nie eksportuje zadnego jawnego theory-level decision verdict,
+- `N119` formalizuje theorem-level granice: repo przekroczylo juz
+  `requirement-support boundary`, ale nadal nie przekroczylo
+  `theory-level decision boundary`,
+- po tym kroku najuczciwszy frontier nie jest juz `czy requirement jest
+  wspierany`, tylko `czy teoria go jawnie przyjmuje, czy jawnie odracza`.
+
+Aktualizacja `P110/N120`:
+- `P110` sprawdza tylko galez `acceptance` i potwierdza, ze current repo nadal
+  nie eksportuje jawnego theory-level acceptance verdict dla
+  selector/symmetry-breaking requirement,
+- `N120` zamyka cala galez `acceptance` negatywnie na current repo state,
+- po tym kroku zostaje juz tylko jedna jawna decision branch:
+  explicit theory-level `deferral` verdict.
+
 ## Ontologiczna wskazowka programu
 
 Program jest prowadzony pod robocza ontologia:

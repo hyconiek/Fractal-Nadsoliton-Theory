@@ -1,0 +1,53 @@
+{
+  "step": "N85",
+  "status": "N85_DISCHARGED_CURRENT_LEGACY_FINE_STRUCTURE_RETAINED_SUBBRANCH_OBSTRUCTION_THEOREM_NO_FALSE_PASS",
+  "scope": "current_legacy_fine_structure_retained_subbranch_question_only",
+  "checks": [
+    {
+      "id": "f14_retained_subbranch_refinement_present",
+      "actual": "F14_EXECUTED_LEGACY_FINE_STRUCTURE_RETAINED_BRANCH_REFINEMENT_PACKET_NO_FALSE_PASS",
+      "expected": "F14_EXECUTED_LEGACY_FINE_STRUCTURE_RETAINED_BRANCH_REFINEMENT_PACKET_NO_FALSE_PASS",
+      "pass": true,
+      "meaning": "F14 refines the retained branch into literal-retention and role-equivalence subbranches"
+    },
+    {
+      "id": "p80_probe_negative",
+      "actual": "CURRENT_REPO_EXPORTS_NEITHER_LITERAL_NOR_ROLE_EQUIVALENCE_RETAINED_SUBBRANCH_FOR_THE_LEGACY_FINE_STRUCTURE_ROLE_AFTER_P80",
+      "expected": "CURRENT_REPO_EXPORTS_NEITHER_LITERAL_NOR_ROLE_EQUIVALENCE_RETAINED_SUBBRANCH_FOR_THE_LEGACY_FINE_STRUCTURE_ROLE_AFTER_P80",
+      "pass": true,
+      "meaning": "P80 confirms that neither retained sub-branch is currently exported"
+    },
+    {
+      "id": "literal_retention_absent",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "literal retention is absent"
+    },
+    {
+      "id": "role_equivalence_retention_absent",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "role-equivalence retention is absent"
+    }
+  ],
+  "theorem_result": {
+    "discharged": true,
+    "literal_retention_present": false,
+    "role_equivalence_retention_present": false,
+    "retained_subbranch_is_unsupported": true,
+    "full_closure_pass": false
+  },
+  "missing_structure_classes": [
+    "explicit_strict_side_literal_retention_of_alpha_em_inverse_equals_alpha_geo_over_2beta_tors_times_1_minus_beta_tors",
+    "explicit_strict_side_role_equivalence_verdict_for_the_legacy_fine_structure_role"
+  ],
+  "hard_limits": [
+    "no_proof_that_literal_retention_is_impossible_forever",
+    "no_proof_that_role_equivalence_retention_is_impossible_forever",
+    "no_selector_closure",
+    "no_QW2191_discharge",
+    "no_ToE_closure"
+  ]
+}

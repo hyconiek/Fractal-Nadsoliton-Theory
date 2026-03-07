@@ -1,0 +1,57 @@
+{
+  "stage": "F10",
+  "lane": "legacy_weinberg_replaced_branch_refinement_current_repo_state_only",
+  "goal": "refine_the_missing_replaced_branch_into_object_successor_vs_method_successor_semantics_subbranches",
+  "status": "F10_EXECUTED_LEGACY_WEINBERG_REPLACED_BRANCH_REFINEMENT_PACKET_NO_FALSE_PASS",
+  "reason": "P71 keeps the replaced branch absent as a whole, while the strict side already exports both a successor-candidate object sin2_theta_w_mz and a successor-candidate method qw2098_sin2_from_nonanchor_ew_pole_chain; therefore the narrowest honest refinement is object-successor verdict vs method-successor-semantics verdict",
+  "candidate_state": {
+    "strict_object_candidate_present": true,
+    "strict_method_candidate_present": true,
+    "replaced_object_verdict_present": false,
+    "replaced_method_verdict_present": false
+  },
+  "remaining_missing_objects": [
+    "explicit_object_successor_verdict_identifying_sin2_theta_w_mz_as_the_strict_side_successor_object_replacing_the_legacy_weinberg_angle_role",
+    "explicit_method_successor_semantics_verdict_identifying_qw2098_sin2_from_nonanchor_ew_pole_chain_as_the_strict_side_successor_semantics_replacing_the_legacy_weinberg_angle_role"
+  ],
+  "checks": [
+    {
+      "id": "p71_replaced_branch_absent",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "P71 already shows the replaced branch is absent as a whole"
+    },
+    {
+      "id": "strict_object_candidate_present",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "the strict side exports sin2_theta_w_mz as a real successor-candidate object"
+    },
+    {
+      "id": "strict_method_candidate_present",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "the strict side exports qw2098_sin2_from_nonanchor_ew_pole_chain as a real successor-candidate method lineage"
+    },
+    {
+      "id": "replaced_object_verdict_present",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "no explicit strict-side object-successor verdict for the legacy Weinberg role is currently exported"
+    },
+    {
+      "id": "replaced_method_verdict_present",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "no explicit strict-side method-successor-semantics verdict for the legacy Weinberg role is currently exported"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

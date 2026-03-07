@@ -1,0 +1,52 @@
+{
+  "stage": "P96",
+  "lane": "strict_side_role_equivalence_probe_for_legacy_gravity_hierarchy_role_current_repo_state_only",
+  "goal": "test_whether_the_current_repo_exports_an_explicit_legacy_to_strict_role_equivalence_verdict_for_the_legacy_gravity_hierarchy_role",
+  "status": "CURRENT_REPO_EXPORTS_STRICT_SIDE_GRAVITY_HIERARCHY_BETA20_CANDIDATE_BUT_NO_EXPLICIT_LEGACY_GRAVITY_HIERARCHY_ROLE_EQUIVALENCE_VERDICT_AFTER_P96",
+  "reason": "the strict side exports gravity_hierarchy_beta20 as a real derived candidate object, but still no explicit semantic-transfer verdict identifies that object as the retained role-equivalent successor of the legacy gravity-hierarchy role",
+  "strict_side_candidate_object": {
+    "id": "gravity_hierarchy_beta20",
+    "present": true,
+    "candidate_chain": {
+      "q2068_registry_has_gravity_hierarchy_beta20": true,
+      "q2069_package_has_gravity_hierarchy_beta20": true,
+      "q2115_gate_has_gravity_hierarchy_beta20": true
+    }
+  },
+  "per_source_role_equivalence_verdict_presence": {
+    "report_qw2069_full_sm_gr_derivation_package.json": false,
+    "report_qw2115_gravity_hierarchy_strict_bridge_gate.json": false,
+    "A8_GRAVITY_BRIDGE_SPEC.md": false,
+    "a8_gravity_bridge_summary.json": false
+  },
+  "explicit_role_equivalence_verdict_present": false,
+  "remaining_missing_objects": [
+    "explicit_legacy_to_strict_semantic_transfer_verdict_identifying_gravity_hierarchy_beta20_as_the_retained_strict_side_successor_of_the_legacy_gravity_hierarchy_role"
+  ],
+  "checks": [
+    {
+      "id": "f22_candidate_present",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "F22 already identified a real strict-side candidate object"
+    },
+    {
+      "id": "strict_side_candidate_object_present",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "the current strict-side sources export a real gravity-hierarchy candidate object via gravity_hierarchy_beta20"
+    },
+    {
+      "id": "explicit_role_equivalence_verdict_present",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "the current strict-side sources still export no explicit legacy-to-strict role-equivalence verdict"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

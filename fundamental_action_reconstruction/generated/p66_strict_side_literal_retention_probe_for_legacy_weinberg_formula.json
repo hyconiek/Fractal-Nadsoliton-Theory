@@ -1,0 +1,58 @@
+{
+  "stage": "P66",
+  "lane": "strict_side_literal_retention_probe_for_legacy_weinberg_formula_current_repo_state_only",
+  "goal": "test_whether_the_current_strict_side_authoritative_sources_export_the_old_weinberg_formula_or_an_algebraically_identical_literal_form",
+  "status": "CURRENT_STRICT_SIDE_AUTHORITATIVE_SOURCES_DO_NOT_EXPORT_LITERAL_RETENTION_OF_THE_LEGACY_WEINBERG_FORMULA_AFTER_P66",
+  "reason": "the retained branch had already been reduced to literal retention versus role-equivalence retention, and the current strict-side authoritative source set exports no literal or algebraically identical form of sin^2(theta_W)=alpha_geo/12",
+  "strict_side_sources_checked": [
+    "RELEASE_4_9_TEXTBOOK_EN_PL.md",
+    "material_dowodowy/korpus_qw_pozostaly/raporty_md/RAPORT_QW2000_BOUNDED_COUPLING_DEEP_AUDIT.md",
+    "material_dowodowy/korpus_qw_pozostaly/raporty_md/RAPORT_QW2001_BOUNDED_GW_TRIAD_LOCKABLE_GATE.md",
+    "material_dowodowy/korpus_qw_pozostaly/raporty_md/RAPORT_QW2002_SINGLE_KERNEL_TRIPLE_SECTOR_CLOSURE_GATE_V3.md",
+    "material_dowodowy/korpus_qw_pozostaly/raporty_md/RAPORT_QW2003_FROZEN_LOCKABLE_PACKAGE_EXPORT.md",
+    "material_dowodowy/korpus_qw_pozostaly/raporty_md/RAPORT_QW2049_SPECTRAL_MICRO_STAGEC_INTERSECTION_GATE.md",
+    "material_dowodowy/korpus_qw_pozostaly/raporty_md/RAPORT_QW2064_MICRO_DERIVED_RENORMALIZATION_CONSTANTS_GATE.md"
+  ],
+  "literal_variants_checked": [
+    "sin^2(theta_W)=alpha_geo/12",
+    "sin^2(theta_W) = alpha_geo/12",
+    "sin^2\\theta_W = alpha_geo/12",
+    "sin^2(theta_W)=4 ln 2 / 12",
+    "sin^2(theta_W) = 4 ln 2 / 12",
+    "sin^2(theta_W)=ln 2 / 3",
+    "sin^2(theta_W) = ln 2 / 3",
+    "sin^2\\theta_W = \\ln 2 / 3"
+  ],
+  "per_source_literal_retention_presence": {
+    "RELEASE_4_9_TEXTBOOK_EN_PL.md": false,
+    "material_dowodowy/korpus_qw_pozostaly/raporty_md/RAPORT_QW2000_BOUNDED_COUPLING_DEEP_AUDIT.md": false,
+    "material_dowodowy/korpus_qw_pozostaly/raporty_md/RAPORT_QW2001_BOUNDED_GW_TRIAD_LOCKABLE_GATE.md": false,
+    "material_dowodowy/korpus_qw_pozostaly/raporty_md/RAPORT_QW2002_SINGLE_KERNEL_TRIPLE_SECTOR_CLOSURE_GATE_V3.md": false,
+    "material_dowodowy/korpus_qw_pozostaly/raporty_md/RAPORT_QW2003_FROZEN_LOCKABLE_PACKAGE_EXPORT.md": false,
+    "material_dowodowy/korpus_qw_pozostaly/raporty_md/RAPORT_QW2049_SPECTRAL_MICRO_STAGEC_INTERSECTION_GATE.md": false,
+    "material_dowodowy/korpus_qw_pozostaly/raporty_md/RAPORT_QW2064_MICRO_DERIVED_RENORMALIZATION_CONSTANTS_GATE.md": false
+  },
+  "literal_retention_present": false,
+  "remaining_missing_objects": [
+    "explicit_strict_side_role_equivalence_verdict_for_the_legacy_weinberg_angle_role"
+  ],
+  "checks": [
+    {
+      "id": "p65_literal_retention_subbranch_absent",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "P65 already isolates literal retention as one still-missing retained sub-branch"
+    },
+    {
+      "id": "strict_side_literal_retention_present",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "the strict-side authoritative source set does not export the old Weinberg formula or an algebraically identical literal form"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

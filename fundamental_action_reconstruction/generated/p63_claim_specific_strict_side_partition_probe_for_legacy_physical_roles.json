@@ -1,0 +1,50 @@
+{
+  "stage": "P63",
+  "lane": "claim_specific_strict_side_partition_probe_for_legacy_physical_roles_current_repo_state_only",
+  "goal": "test_whether_the_current_repo_already_exports_claim_specific_strict_side_retained_or_replaced_verdicts_for_the_three_legacy_physical_roles",
+  "status": "CURRENT_REPO_EXPORTS_BROAD_RETAINED_VS_REPLACED_PARTITION_BUT_NO_CLAIM_SPECIFIC_STRICT_SIDE_PARTITION_FOR_LEGACY_PHYSICAL_ROLES_AFTER_P63",
+  "reason": "F5 already reduces the broad partition blocker to three claim-specific verdict gaps, and the current repo still exports none of those three strict-side verdicts",
+  "claim_specific_partition_state": {
+    "legacy_weinberg_angle_role_partition_verdict_present": false,
+    "legacy_fine_structure_role_partition_verdict_present": false,
+    "legacy_gravity_hierarchy_role_partition_verdict_present": false
+  },
+  "remaining_missing_objects": [
+    "explicit_strict_side_retained_or_replaced_verdict_for_the_legacy_weinberg_angle_role",
+    "explicit_strict_side_retained_or_replaced_verdict_for_the_legacy_fine_structure_role",
+    "explicit_strict_side_retained_or_replaced_verdict_for_the_legacy_gravity_hierarchy_role"
+  ],
+  "checks": [
+    {
+      "id": "f5_partition_refinement_packet_present",
+      "actual": "F5_EXECUTED_LEGACY_PHYSICAL_ROLE_PARTITION_REFINEMENT_PACKET_NO_FALSE_PASS",
+      "expected": "F5_EXECUTED_LEGACY_PHYSICAL_ROLE_PARTITION_REFINEMENT_PACKET_NO_FALSE_PASS",
+      "pass": true,
+      "meaning": "F5 reduces the broad partition blocker to three claim-specific verdict gaps"
+    },
+    {
+      "id": "weinberg_partition_verdict_present",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "the repo does not yet export a strict-side partition verdict for the legacy Weinberg-angle role"
+    },
+    {
+      "id": "fine_structure_partition_verdict_present",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "the repo does not yet export a strict-side partition verdict for the legacy fine-structure role"
+    },
+    {
+      "id": "gravity_hierarchy_partition_verdict_present",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "the repo does not yet export a strict-side partition verdict for the legacy gravity-hierarchy role"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

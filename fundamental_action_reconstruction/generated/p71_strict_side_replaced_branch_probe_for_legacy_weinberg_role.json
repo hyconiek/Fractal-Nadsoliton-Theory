@@ -1,0 +1,44 @@
+{
+  "stage": "P71",
+  "lane": "strict_side_replaced_branch_probe_for_legacy_weinberg_role_current_repo_state_only",
+  "goal": "test_whether_the_current_strict_side_source_set_exports_an_explicit_replaced_branch_verdict_for_the_legacy_weinberg_angle_role",
+  "status": "CURRENT_STRICT_SIDE_SOURCES_DO_NOT_EXPORT_AN_EXPLICIT_REPLACED_BRANCH_VERDICT_FOR_THE_LEGACY_WEINBERG_ROLE_AFTER_P71",
+  "reason": "the retained branch is already closed negatively, but the current strict-side source set still exports no explicit replacement verdict linking the legacy Weinberg role to a named strict successor semantics",
+  "strict_side_sources_checked": [
+    "RELEASE_4_9_TEXTBOOK_EN_PL.md",
+    "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2069_full_sm_gr_derivation_package.json",
+    "material_dowodowy/korpus_qw_pozostaly/raporty_md/RAPORT_QW2098_EW_SECONDARY_NONANCHOR_CLOSURE_GATE.md",
+    "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2098_ew_secondary_nonanchor_closure_gate.json",
+    "t1_nonanchor_observables_input_qw2085_2086.json"
+  ],
+  "per_source_replaced_verdict_presence": {
+    "RELEASE_4_9_TEXTBOOK_EN_PL.md": false,
+    "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2069_full_sm_gr_derivation_package.json": false,
+    "material_dowodowy/korpus_qw_pozostaly/raporty_md/RAPORT_QW2098_EW_SECONDARY_NONANCHOR_CLOSURE_GATE.md": false,
+    "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2098_ew_secondary_nonanchor_closure_gate.json": false,
+    "t1_nonanchor_observables_input_qw2085_2086.json": false
+  },
+  "replaced_verdict_present": false,
+  "remaining_missing_objects": [
+    "explicit_strict_side_replaced_verdict_for_the_legacy_weinberg_angle_role_by_an_explicit_strict_successor_semantics"
+  ],
+  "checks": [
+    {
+      "id": "n73_retained_branch_closed",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "N73 already closes the retained branch negatively on the current repo state"
+    },
+    {
+      "id": "strict_side_replaced_verdict_present",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "the current strict-side source set exports no explicit replaced-branch verdict for the legacy Weinberg role"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

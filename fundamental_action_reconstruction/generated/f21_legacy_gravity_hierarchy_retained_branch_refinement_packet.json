@@ -1,0 +1,41 @@
+{
+  "stage": "F21",
+  "lane": "legacy_gravity_hierarchy_retained_branch_refinement_current_repo_state_only",
+  "goal": "refine_the_missing_retained_branch_for_the_legacy_gravity_hierarchy_role_into_literal_vs_role_equivalence_retention",
+  "status": "F21_EXECUTED_LEGACY_GRAVITY_HIERARCHY_RETAINED_BRANCH_REFINEMENT_PACKET_NO_FALSE_PASS",
+  "reason": "P93 already shows that the strict-side retained branch is absent, so the narrowest honest refinement is to split that missing retained verdict into literal retention vs role-equivalence retention, neither of which is currently exported",
+  "retained_subbranch_state": {
+    "literal_retention_present": false,
+    "role_equivalence_retention_present": false
+  },
+  "remaining_missing_objects": [
+    "explicit_strict_side_literal_retention_of_exact_gravity_hierarchy_from_beta_to_the_N_scaling",
+    "explicit_strict_side_role_equivalence_verdict_for_the_legacy_gravity_hierarchy_role"
+  ],
+  "checks": [
+    {
+      "id": "p93_retained_branch_absent",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "P93 already keeps the retained branch absent at branch level"
+    },
+    {
+      "id": "literal_retention_present",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "the repo does not yet export literal retention of the old gravity-hierarchy claim on the strict side"
+    },
+    {
+      "id": "role_equivalence_retention_present",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "the repo does not yet export role-equivalence retention for the gravity-hierarchy role on the strict side"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

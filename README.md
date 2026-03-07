@@ -936,6 +936,292 @@ Current status:
   still remains open and the next frontier shifts beyond the attacked
   `m2_psi4` lane to the remaining direct `m2` pairwise witnesses and
   `g4/g6/gY`,
+- `R40/P52/N55` now start reducing that next frontier on one concrete
+  remaining pair: the pairwise target `m2_psi7 = m2_psi10` is no longer kept
+  as a raw equality request but as one role-matched coefficient-identification
+  gap, while the route still remains non-closed as a whole,
+- `R41/P53/N56` now reduce that same pair one layer further: the remaining
+  `m2_psi7 = m2_psi10` gap is no longer kept as a raw coefficient-id request
+  but as one formal-slot common-source/symbol-identification gap, while the
+  route still remains non-closed as a whole,
+- `R42/P54/N57` now reduce that same pair one layer further again: the
+  remaining `m2_psi7 = m2_psi10` gap is no longer kept as a raw formal-slot
+  common-source request but as one common-plus3 assignment gap, while the
+  route still remains non-closed as a whole,
+- `R43/P55/N58` now reduce that same pair one layer further again: the
+  remaining combined common-plus3 assignment gap is no longer kept as one
+  joint witness but as two still-missing slotwise assignment witnesses for
+  `m2_psi7` and `m2_psi10`, while the route still remains non-closed as a
+  whole,
+- `R44/P56/N59` now reduce only the `m2_psi7` side of that remaining pair:
+  the `m2_psi7` slotwise assignment gap is no longer kept as one witness but
+  as two still-missing source-role assignment witnesses on the action and eom
+  supports, while the route still remains non-closed as a whole,
+- `R45/P57/N60` now reduce only the `m2_psi7` source-action side further:
+  the `m2_psi7` source action-role gap is no longer kept as one role witness
+  but as one still-missing coefficient-identification witness on the fixed
+  common monomial support `psi7**2/2`, while the route still remains
+  non-closed as a whole,
+- `R46/P58/N61` now reduce only that same `m2_psi7` source-action side one
+  layer further again: the remaining coefficient-identification gap is no
+  longer kept as such but as one still-missing zero witness for the exact
+  coefficient defect polynomial on common `psi7**2/2` support, while the
+  route still remains non-closed as a whole,
+- `AX14/P59/N62` now add the next honest local move on that same corrected
+  canonical-ontology-supported lane: the attacked direct `m2_psi7`
+  source-action defect blocker is locally closed on the pre-observer lane
+  only, while the whole route still remains non-closed and the frontier
+  shifts to the `m2_psi7` source-eom witness and the `m2_psi10` target-slot
+  assignment witness,
+- `R47/P60/N63` now reduce that same `m2_psi7` source-eom side one layer
+  further: the source eom-role gap is no longer kept as one role witness but
+  as one still-missing coefficient-identification witness on the fixed common
+  local support `psi7(x)`, while the whole route still remains non-closed,
+- `R48/P61/N64` now reduce that same `m2_psi7` source-eom side one layer
+  further again: the remaining coefficient-identification gap is no longer
+  kept as such but as one still-missing zero witness for the exact
+  coefficient defect polynomial on common `psi7(x)` support, while the whole
+  route still remains non-closed,
+- `S2` now records an explicit FAR strategic reorientation: the highest
+  theoretical priority is no longer another local `m2` micro-split but the
+  `legacy -> strict kernel` bridge or non-bridge question; `QW-2191` remains
+  a real selector obstruction requiring explicit symmetry-breaking or an
+  axiom-augmented route; and `L5/L12` may not honestly continue by repeating
+  the same blocker-cut loop without a noncyclic anchor,
+- `F4/P62/N65` now sharpen that priority one level further: even after the
+  kernel split is made explicit, the repo still does not export a rigorous
+  transfer of the legacy Weinberg-angle, fine-structure, or gravity-hierarchy
+  roles onto `K_strict_gate`, so strict-kernel operational outputs may not be
+  cited as if they already inherited the old `alpha_geo/beta_tors/beta^N`
+  physical-role package,
+- `F5/P63/N66` now sharpen the same frontier one level further again: the repo
+  exports only a broad retained-vs-replaced partition from `QW-2005`, but it
+  still does not export claim-specific strict-side partition verdicts for the
+  legacy Weinberg-angle, fine-structure, or gravity-hierarchy roles, so the
+  broad partition may not be overread as if it already settled `C3/C4/C5`
+  individually,
+- `F6/P64/N67` now sharpen the first of those three claim-specific gaps one
+  level further again: for the legacy Weinberg-angle role, the missing
+  strict-side verdict is now split into two explicit branches, retained vs
+  replaced, and the repo currently exports neither one, so current strict
+  outputs may not be overread as already settling the Weinberg role either way,
+- `F7/P65/N68` now sharpen the retained branch of that same Weinberg frontier
+  one level further again: the missing retained branch is now split into two
+  retained sub-branches, literal retention of `sin^2(theta_W)=alpha_geo/12`
+  vs explicit role-equivalence retention, and the repo currently exports
+  neither one, so current strict-side materials may not be overread as already
+  retaining the old Weinberg role,
+- `P66/N69` now close the first of those two retained sub-branches negatively
+  on the current repo state: the strict-side authoritative source set does not
+  export literal retention of `sin^2(theta_W)=alpha_geo/12` nor an
+  algebraically identical literal form, so the retained frontier for the
+  legacy Weinberg role is now reduced to explicit role-equivalence only,
+- `F8/P67/N70` now sharpen that last retained-side Weinberg frontier one level
+  further again: the repo really does export a strict-side candidate object
+  `sin2_theta_w_mz`, but it still does not export an explicit
+  legacy-to-strict semantic-transfer verdict identifying that object as the
+  retained strict-side successor of the old legacy Weinberg-angle role,
+- `F9/P68/N71` now sharpen that same semantic-transfer frontier one level
+  further again: the repo not only exports the strict-side candidate object
+  `sin2_theta_w_mz`, but also a real `QW-2093` `alpha_geo` lineage touchpoint;
+  however, it still exports neither an explicit textual retained-successor
+  verdict nor an explicit lineage-upgrade verdict, so retained semantic
+  transfer for the legacy Weinberg role remains non-discharged,
+- `P69/N72` now close the first of those two retained semantic-transfer
+  sub-branches negatively on the current repo state: the current strict-side
+  source set still exports no explicit textual retained-successor verdict for
+  `sin2_theta_w_mz`, so the retained semantic-transfer frontier for the legacy
+  Weinberg role is now reduced to the lineage-upgrade branch only,
+- `P70/N73` now close that last retained semantic-transfer sub-branch
+  negatively on the current repo state as well: the current strict-side source
+  set still exports no explicit verdict upgrading the `QW-2093` `alpha_geo`
+  touchpoint into retained strict-side Weinberg-role transfer, so the full
+  retained branch for the legacy Weinberg role is now closed negatively on the
+  current repo state and the remaining claim-specific Weinberg frontier moves
+  to the replaced branch only,
+- `P71/N74` now attack that remaining claim-specific Weinberg frontier
+  directly: the retained branch stays closed negatively, but the current
+  strict-side source set still exports no explicit replaced-branch verdict
+  saying that the old legacy Weinberg role has been replaced by an explicit
+  strict successor semantics,
+- `F10/P72/N75` now refine that remaining replaced branch into two narrower
+  strict-side successor sub-branches:
+  an object-successor verdict around `sin2_theta_w_mz` and a
+  method-successor-semantics verdict around
+  `qw2098_sin2_from_nonanchor_ew_pole_chain`,
+  and the repo still exports neither verdict on the current repo state,
+- `F11/P73/N76` now refine the `sin2_theta_w_mz` object-successor branch one
+  level further into:
+  a textual object-successor verdict vs an object-lineage-upgrade verdict,
+  and the repo still exports neither one on the current repo state even though
+  the `QW-2068 -> QW-2069 -> QW-2098 -> Release 4.9` object chain is real,
+- `P74/N77` now directly attack the textual object-successor sub-branch and
+  keep it negative on the current repo state:
+  the strict-side object sources still export no explicit textual verdict that
+  `sin2_theta_w_mz` is the successor object replacing the legacy
+  Weinberg-angle role,
+- `P75/N78` now attack the last remaining object-side blocker and keep it
+  negative as well:
+  the strict-side object sources still export no explicit verdict upgrading
+  the existing `sin2_theta_w_mz` chain into replacement semantics, so the full
+  object-successor branch for the legacy Weinberg-angle role is now closed
+  negatively on the current repo state,
+- `F12/P76/N79` now move the remaining replaced-side frontier fully onto the
+  `qw2098_sin2_from_nonanchor_ew_pole_chain` method lane and refine it into:
+  a textual method-successor verdict vs a method-lineage-upgrade verdict,
+  and the repo still exports neither one on the current repo state,
+- `P77/N80` now directly attack the textual method-successor sub-branch and
+  keep it negative on the current repo state:
+  the strict-side method sources still export no explicit textual verdict that
+  `qw2098_sin2_from_nonanchor_ew_pole_chain` is the successor semantics
+  replacing the legacy Weinberg-angle role,
+- `P78/N81` now attack the remaining method-lineage-upgrade sub-branch and
+  close the full method-successor branch negatively on the current repo state
+  without promoting the `qw2098` method chain into replacement semantics,
+- `N82` now combines `N78` and `N81` and closes the full replaced branch for
+  the legacy Weinberg-angle role negatively on the current repo state,
+- `N83` now combines `N73` and `N82` and closes the full claim-specific
+  legacy Weinberg-angle frontier negatively on the current repo state,
+- `F13/P79/N84` now open the next legacy physical-role frontier for
+  fine-structure semantics and reduce it to a retained branch vs replaced
+  branch without silently transferring legacy `alpha_EM` semantics onto the
+  strict side,
+- `F14/P80/N85` now refine the retained side of the legacy fine-structure
+  frontier into literal retention vs role-equivalence retention, and the repo
+  still exports neither one on the current repo state,
+- `P81/N86` now directly attack the literal-retention sub-branch for the old
+  legacy fine-structure formula and keep it negative on the current repo
+  state, leaving only retained-side role-equivalence on that branch,
+- `F15/P82/N87` now refine and probe retained-side role-equivalence for the
+  legacy fine-structure role, showing that `alpha_em_inv_mz` is a real strict
+  candidate object but still not an explicit retained semantic-transfer
+  verdict,
+- `F16/P83/N88` now refine that retained semantic-transfer blocker into a
+  textual retained-successor verdict vs an object-lineage-upgrade verdict for
+  the existing `alpha_em_inv_mz` chain, and the current repo still exports
+  neither one,
+- `P84/N89` now directly attack the textual retained-successor sub-branch for
+  legacy fine-structure and close that path negatively on the current repo
+  state, leaving only the object-lineage-upgrade retained sub-branch,
+- `P85/N90` now directly attack that remaining retained object-lineage-upgrade
+  sub-branch and close the full retained branch negatively on the current repo
+  state, so the legacy fine-structure frontier now passes only to the replaced
+  branch,
+- `F17/P86/N91` now refine that replaced fine-structure frontier into an
+  object-successor verdict around `alpha_em_inv_mz` vs a method-successor
+  verdict around `qw2098_alpha_on_shell_from_gf_mw_sin2_delta_r`, and the
+  current repo still exports neither one,
+- `F18/P87/N92` now refine the object-side fine-structure replaced branch into
+  a textual object-successor verdict vs an object-lineage-upgrade verdict for
+  the `alpha_em_inv_mz` chain, and the current repo still exports neither one,
+- `P88/N93` now directly attack the textual object-successor sub-branch for
+  legacy fine-structure and close that path negatively on the current repo
+  state, leaving only the object-lineage-upgrade blocker on the object side
+  while the method-side branch stays separate,
+- `P89/N94` now directly attack that remaining object-lineage-upgrade
+  sub-branch and close the full object-successor branch negatively on the
+  current repo state, so the fine-structure replaced frontier now passes only
+  to the method-successor-semantics branch,
+- `F19/P90/N95` now refine that remaining fine-structure method-side frontier
+  into a textual method-successor verdict vs a method-lineage-upgrade verdict
+  around `qw2098_alpha_on_shell_from_gf_mw_sin2_delta_r`, and the current repo
+  still exports neither one,
+- `P91/N96` now directly attack the textual method-successor sub-branch for
+  legacy fine-structure and close that path negatively on the current repo
+  state, leaving only the method-lineage-upgrade blocker on the method side,
+- `P92/N97` now directly attack that remaining method-lineage-upgrade
+  sub-branch and close the full method-successor branch negatively on the
+  current repo state, so the next honest move is no longer method-side
+  refinement but a full replaced-branch closure theorem for legacy
+  fine-structure,
+- `N98/N99` now discharge the full replaced-branch closure and then the full
+  claim-specific negative closure for legacy fine-structure on the current repo
+  state, so the next honest move passes beyond this claim to the next legacy
+  physical-role frontier,
+- `F20/P93/N100` now open that next legacy physical-role frontier for the
+  legacy gravity-hierarchy role: the missing strict-side verdict is split into
+  retained vs replaced, the current repo exports neither branch, and the
+  theorem-level boundary now keeps the gravity claim narrowed exactly to those
+  two branch-specific blockers,
+- `F21/P94/N101` now refine the retained branch of that gravity-hierarchy
+  frontier one level further: the missing retained verdict is split into
+  literal retention of the old `beta^N` gravity-hierarchy claim vs explicit
+  role-equivalence retention, and the current repo exports neither one,
+- `P95/N102` now close the first of those two retained sub-branches
+  negatively on the current repo state: the strict-side authoritative source
+  set does not literally retain the old `beta^N` gravity-hierarchy claim, so
+  the retained frontier for that role is now reduced to explicit
+  role-equivalence only,
+- `F22/P96/N103` now refine that remaining retained-side blocker one level
+  further: the strict side really does export a gravity-hierarchy candidate
+  object `gravity_hierarchy_beta20`, but the repo still exports no explicit
+  legacy-to-strict semantic-transfer verdict linking it to the old `beta^N`
+  gravity-hierarchy role,
+- `F23/P97/N104` now split that one remaining semantic-transfer blocker into
+  two narrower retained-side sub-branches: a textual retained-successor
+  verdict vs an object-lineage-upgrade verdict, while the current repo still
+  exports neither one,
+- `P98/N105` now close the first of those two retained semantic-transfer
+  sub-branches negatively on the current repo state: the strict-side source
+  set does not export an explicit textual retained-successor verdict for
+  `gravity_hierarchy_beta20`, so the retained gravity-hierarchy frontier is
+  now reduced to object-lineage-upgrade only,
+- `P99/N106` now close that remaining retained semantic-transfer blocker too:
+  the strict side still exports no explicit object-lineage-upgrade verdict for
+  the existing `gravity_hierarchy_beta20` chain, so the full retained branch
+  for the legacy gravity-hierarchy role is now closed negatively on the
+  current repo state,
+- `F24/P100/N107` now open the replaced branch for that same legacy
+  gravity-hierarchy role in the same strict way: the repo really does export a
+  strict gravity candidate object `gravity_hierarchy_beta20` and a named
+  method chain `qw2115_micro_supported_beta_hierarchy_bridge`, but it still
+  exports neither an explicit object-successor verdict nor an explicit
+  method-successor-semantics verdict for the old gravity-hierarchy role,
+- `F25/P101/N108` now refine the gravity object-side blocker one level
+  further: the repo exports the `gravity_hierarchy_beta20` object chain, but
+  still exports neither an explicit textual object-successor verdict nor an
+  explicit object-lineage-upgrade verdict for the old gravity-hierarchy role,
+- `P102/N109` now close the first of those two object-side gravity blockers
+  negatively on the current repo state: the strict-side object source set does
+  not export an explicit textual object-successor verdict for
+  `gravity_hierarchy_beta20`, so the gravity object-side frontier is now
+  reduced to object-lineage-upgrade only,
+- `P103/N110` now close that remaining gravity object-side blocker too: the
+  strict-side object source set still exports no explicit object-lineage-upgrade
+  verdict for the existing `gravity_hierarchy_beta20` chain, so the full
+  gravity object-successor branch is now closed negatively on the current repo
+  state,
+- `F26/P104/N111` now open the last remaining gravity replaced-side branch in
+  the same strict way: the repo really does export a named gravity method
+  chain `qw2115_micro_supported_beta_hierarchy_bridge`, but it still exports
+  neither an explicit textual method-successor verdict nor an explicit
+  method-lineage-upgrade verdict for the old gravity-hierarchy role,
+- `P105/N112` now close the textual half of that gravity method-side branch
+  negatively on the current repo state, so the remaining gravity
+  replaced-side frontier is reduced to one method-lineage-upgrade verdict only,
+- `P106/N113/N114/N115` now close that final gravity method-side blocker too
+  and discharge the whole legacy gravity-hierarchy frontier negatively on the
+  current repo state,
+- `N116` now combines `N83`, `N99`, and `N115` into one higher-order result:
+  the whole legacy physical-role package is claim-specifically closed
+  negatively on the current repo state, so the honest frontier returns to the
+  kernel-bridge question and `QW-2191`,
+- `P107/N117` now make that return explicit at theorem level: the current repo
+  exports neither a rigorous legacy-to-strict kernel identification nor a
+  package-level transfer of the legacy physical-role package onto the strict
+  side,
+- `P108/N118` now make the other last frontier explicit too: the current repo
+  already supports the conclusion that `QW-2191` requires an explicit selector
+  or symmetry-breaking premise unless a new internal selector source is
+  derived,
+- `F27/P109/N119` now split `selector requirement supported` from
+  `selector requirement accepted`: the current repo already exports the
+  requirement theorem and the strategic decision inputs, but still exports no
+  explicit theory-level verdict either to adopt that requirement or to defer
+  the decision while strict-core source search continues,
+- `P110/N120` now close the `acceptance` branch negatively on the current repo
+  state: the selector requirement is supported as an active boundary, but the
+  theory still exports no explicit verdict adopting it,
 - this moves the theory forward only to an integrated effective/scope-closed gravity layer with explicit foundational blockers for `G`, Einstein-Hilbert derivation and full SM+GR reduction,
 - `A9` completed as a strict-scope partial SM+GR effective reduction layer,
 - this moves the theory forward only to an integrated effective material/gauge/gravity package with theorem-level unification still open,

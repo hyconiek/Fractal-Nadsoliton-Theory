@@ -1,0 +1,54 @@
+{
+  "stage": "P82",
+  "lane": "strict_side_role_equivalence_probe_for_legacy_fine_structure_role_current_repo_state_only",
+  "goal": "test_whether_the_current_repo_exports_an_explicit_legacy_to_strict_role_equivalence_verdict_for_the_legacy_fine_structure_role",
+  "status": "CURRENT_REPO_EXPORTS_STRICT_SIDE_ALPHA_EM_INV_MZ_CANDIDATE_BUT_NO_EXPLICIT_LEGACY_FINE_STRUCTURE_ROLE_EQUIVALENCE_VERDICT_AFTER_P82",
+  "reason": "the strict side exports alpha_em_inv_mz as a real derived candidate object, but still no explicit semantic-transfer verdict identifies that object as the retained role-equivalent successor of the legacy fine-structure role",
+  "strict_side_candidate_object": {
+    "id": "alpha_em_inv_mz",
+    "present": true,
+    "candidate_chain": {
+      "q2068_registry_has_alpha_em_inv_mz": true,
+      "q2069_package_has_alpha_em_inv_mz": true,
+      "q2098_gate_has_alpha_em_inv_mz": true,
+      "q2094_status_matches_qw2098": true,
+      "q2094_method_matches_qw2098": true
+    }
+  },
+  "per_source_role_equivalence_verdict_presence": {
+    "report_qw2069_full_sm_gr_derivation_package.json": false,
+    "report_qw2094_strict_rigor_defect_sweep.json": false,
+    "RAPORT_QW2098_EW_SECONDARY_NONANCHOR_CLOSURE_GATE.md": false,
+    "report_qw2098_ew_secondary_nonanchor_closure_gate.json": false
+  },
+  "explicit_role_equivalence_verdict_present": false,
+  "remaining_missing_objects": [
+    "explicit_legacy_to_strict_semantic_transfer_verdict_identifying_alpha_em_inv_mz_as_the_retained_strict_side_successor_of_the_legacy_fine_structure_role"
+  ],
+  "checks": [
+    {
+      "id": "f15_candidate_present",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "F15 already identified a real strict-side candidate object"
+    },
+    {
+      "id": "strict_side_candidate_object_present",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "the current strict-side sources export a real fine-structure candidate object via alpha_em_inv_mz"
+    },
+    {
+      "id": "explicit_role_equivalence_verdict_present",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "the current strict-side sources still export no explicit legacy-to-strict role-equivalence verdict"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

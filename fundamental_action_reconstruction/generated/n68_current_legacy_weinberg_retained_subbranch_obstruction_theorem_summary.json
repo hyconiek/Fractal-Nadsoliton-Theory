@@ -1,0 +1,53 @@
+{
+  "step": "N68",
+  "status": "N68_DISCHARGED_CURRENT_LEGACY_WEINBERG_RETAINED_SUBBRANCH_OBSTRUCTION_THEOREM_NO_FALSE_PASS",
+  "scope": "current_legacy_weinberg_retained_subbranch_question_only",
+  "checks": [
+    {
+      "id": "f7_retained_subbranch_refinement_present",
+      "actual": "F7_EXECUTED_LEGACY_WEINBERG_RETAINED_BRANCH_REFINEMENT_PACKET_NO_FALSE_PASS",
+      "expected": "F7_EXECUTED_LEGACY_WEINBERG_RETAINED_BRANCH_REFINEMENT_PACKET_NO_FALSE_PASS",
+      "pass": true,
+      "meaning": "F7 refines the retained branch into literal-retention and role-equivalence subbranches"
+    },
+    {
+      "id": "p65_probe_negative",
+      "actual": "CURRENT_REPO_EXPORTS_NEITHER_LITERAL_NOR_ROLE_EQUIVALENCE_RETAINED_SUBBRANCH_FOR_THE_LEGACY_WEINBERG_ANGLE_ROLE_AFTER_P65",
+      "expected": "CURRENT_REPO_EXPORTS_NEITHER_LITERAL_NOR_ROLE_EQUIVALENCE_RETAINED_SUBBRANCH_FOR_THE_LEGACY_WEINBERG_ANGLE_ROLE_AFTER_P65",
+      "pass": true,
+      "meaning": "P65 confirms that neither retained sub-branch is currently exported"
+    },
+    {
+      "id": "literal_retention_absent",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "literal retention is absent"
+    },
+    {
+      "id": "role_equivalence_retention_absent",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "role-equivalence retention is absent"
+    }
+  ],
+  "theorem_result": {
+    "discharged": true,
+    "literal_retention_present": false,
+    "role_equivalence_retention_present": false,
+    "retained_subbranch_is_unsupported": true,
+    "full_closure_pass": false
+  },
+  "missing_structure_classes": [
+    "explicit_strict_side_literal_retention_of_sin2_thetaW_equals_alpha_geo_over_12",
+    "explicit_strict_side_role_equivalence_verdict_for_the_legacy_weinberg_angle_role"
+  ],
+  "hard_limits": [
+    "no_proof_that_literal_retention_is_impossible_forever",
+    "no_proof_that_role_equivalence_retention_is_impossible_forever",
+    "no_selector_closure",
+    "no_QW2191_discharge",
+    "no_ToE_closure"
+  ]
+}

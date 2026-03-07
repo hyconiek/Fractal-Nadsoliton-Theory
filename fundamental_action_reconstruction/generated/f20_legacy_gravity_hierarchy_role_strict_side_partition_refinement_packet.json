@@ -1,0 +1,48 @@
+{
+  "stage": "F20",
+  "lane": "legacy_gravity_hierarchy_role_strict_side_partition_refinement_current_repo_state_only",
+  "goal": "refine_the_missing_strict_side_gravity_hierarchy_verdict_into_retained_vs_replaced_branches",
+  "status": "F20_EXECUTED_LEGACY_GRAVITY_HIERARCHY_ROLE_STRICT_SIDE_PARTITION_REFINEMENT_PACKET_NO_FALSE_PASS",
+  "reason": "P62 keeps the gravity-hierarchy role-transfer branch absent and P63 keeps the claim-specific strict-side verdict absent, so the narrowest honest refinement is to split that one missing verdict into a retained branch and a replaced branch, neither of which is currently exported",
+  "branch_state": {
+    "retained_branch_present": false,
+    "replaced_branch_present": false
+  },
+  "remaining_missing_objects": [
+    "explicit_strict_side_retained_verdict_for_the_legacy_gravity_hierarchy_role",
+    "explicit_strict_side_replaced_verdict_for_the_legacy_gravity_hierarchy_role_by_an_explicit_strict_successor_semantics"
+  ],
+  "checks": [
+    {
+      "id": "p62_gravity_hierarchy_role_transfer_absent",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "the retained branch is not silently discharged through role transfer onto K_strict_gate"
+    },
+    {
+      "id": "p63_gravity_hierarchy_claim_specific_partition_verdict_absent",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "the repo still exports no claim-specific strict-side verdict for the gravity-hierarchy role"
+    },
+    {
+      "id": "retained_branch_present",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "no explicit strict-side retained verdict for the legacy gravity-hierarchy role is currently exported"
+    },
+    {
+      "id": "replaced_branch_present",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "no explicit strict-side replaced verdict for the legacy gravity-hierarchy role is currently exported"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

@@ -1,0 +1,35 @@
+{
+  "stage": "F23",
+  "lane": "legacy_gravity_hierarchy_semantic_transfer_refinement_current_repo_state_only",
+  "goal": "refine_the_missing_retained_semantic_transfer_verdict_into_textual_vs_object_lineage_upgrade_subbranches",
+  "status": "F23_EXECUTED_LEGACY_GRAVITY_HIERARCHY_SEMANTIC_TRANSFER_REFINEMENT_PACKET_NO_FALSE_PASS",
+  "reason": "P96 keeps the retained semantic-transfer verdict absent, while the repo already exports a real gravity_hierarchy_beta20 candidate object and a real strict-side candidate chain; therefore the narrowest honest refinement is textual retained-successor verdict vs object-lineage-upgrade verdict",
+  "candidate_state": {
+    "strict_side_candidate_object_present": true,
+    "strict_side_candidate_object": "gravity_hierarchy_beta20",
+    "object_chain_present": true
+  },
+  "remaining_missing_objects": [
+    "explicit_textual_retained_successor_verdict_identifying_gravity_hierarchy_beta20_as_the_retained_strict_side_successor_of_the_legacy_gravity_hierarchy_role",
+    "explicit_object_lineage_upgrade_verdict_elevating_the_existing_gravity_hierarchy_beta20_candidate_chain_into_retained_strict_side_gravity_hierarchy_role_transfer"
+  ],
+  "checks": [
+    {
+      "id": "p96_candidate_present",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "P96 already confirms that a real strict-side gravity-hierarchy candidate object is exported"
+    },
+    {
+      "id": "object_chain_present",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "the repo exports the gravity_hierarchy_beta20 candidate chain across QW-2068/QW-2069/QW-2115"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

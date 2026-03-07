@@ -1,0 +1,43 @@
+{
+  "step": "N90",
+  "status": "N90_DISCHARGED_CURRENT_LEGACY_FINE_STRUCTURE_RETAINED_BRANCH_FULL_NEGATIVE_CLOSURE_THEOREM_NO_FALSE_PASS",
+  "scope": "current_legacy_fine_structure_retained_branch_question_only",
+  "checks": [
+    {
+      "id": "literal_retention_closed",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "literal retention path is already closed negatively on the current repo state"
+    },
+    {
+      "id": "textual_successor_closed",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "textual retained-successor path is already closed negatively on the current repo state"
+    },
+    {
+      "id": "object_lineage_upgrade_absent",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "object-lineage-upgrade verdict is absent on the current repo state"
+    }
+  ],
+  "theorem_result": {
+    "discharged": true,
+    "retained_branch_closed_negatively_on_current_repo_state": true,
+    "full_closure_pass": false
+  },
+  "remaining_open_branch": [
+    "explicit_strict_side_replaced_verdict_for_the_legacy_fine_structure_role_by_an_explicit_strict_successor_semantics"
+  ],
+  "hard_limits": [
+    "no_proof_that_the_replaced_branch_is_solved",
+    "no_proof_that_the_retained_branch_is_impossible_forever",
+    "no_selector_closure",
+    "no_QW2191_discharge",
+    "no_ToE_closure"
+  ]
+}

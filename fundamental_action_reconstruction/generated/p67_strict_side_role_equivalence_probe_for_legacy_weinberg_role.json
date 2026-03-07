@@ -1,0 +1,55 @@
+{
+  "stage": "P67",
+  "lane": "strict_side_role_equivalence_probe_for_legacy_weinberg_role_current_repo_state_only",
+  "goal": "test_whether_the_current_repo_exports_an_explicit_legacy_to_strict_role_equivalence_verdict_for_the_legacy_weinberg_angle_role",
+  "status": "CURRENT_REPO_EXPORTS_STRICT_SIDE_SIN2_THETA_W_MZ_CANDIDATE_BUT_NO_EXPLICIT_LEGACY_WEINBERG_ROLE_EQUIVALENCE_VERDICT_AFTER_P67",
+  "reason": "the strict side exports sin2_theta_w_mz as a real derived candidate object, but still no explicit semantic-transfer verdict identifies that object as the retained role-equivalent successor of the legacy Weinberg-angle role",
+  "strict_side_candidate_object": {
+    "id": "sin2_theta_w_mz",
+    "present": true,
+    "candidate_chain": {
+      "release_49_promotes_sin2_theta_w_mz": true,
+      "q2068_registry_has_sin2_theta_w_mz": true,
+      "q2069_package_has_sin2_theta_w_mz": true,
+      "q2098_gate_has_sin2_theta_w_mz": true,
+      "q2093_has_strict_side_input_lineage": true
+    }
+  },
+  "per_source_role_equivalence_verdict_presence": {
+    "RELEASE_4_9_TEXTBOOK_EN_PL.md": false,
+    "report_qw2069_full_sm_gr_derivation_package.json": false,
+    "RAPORT_QW2098_EW_SECONDARY_NONANCHOR_CLOSURE_GATE.md": false,
+    "report_qw2098_ew_secondary_nonanchor_closure_gate.json": false,
+    "report_qw2093_kernel_derived_nonanchor_inputs_plan_executor.json": false
+  },
+  "explicit_role_equivalence_verdict_present": false,
+  "remaining_missing_objects": [
+    "explicit_legacy_to_strict_semantic_transfer_verdict_identifying_sin2_theta_w_mz_as_the_retained_strict_side_successor_of_the_legacy_weinberg_angle_role"
+  ],
+  "checks": [
+    {
+      "id": "f8_candidate_present",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "F8 already identified a real strict-side candidate object"
+    },
+    {
+      "id": "strict_side_candidate_object_present",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "the current strict-side sources export a real Weinberg candidate object via sin2_theta_w_mz"
+    },
+    {
+      "id": "explicit_role_equivalence_verdict_present",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "the current strict-side sources still export no explicit legacy-to-strict role-equivalence verdict"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

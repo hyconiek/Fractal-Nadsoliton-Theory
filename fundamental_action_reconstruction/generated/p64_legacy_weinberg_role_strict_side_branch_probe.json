@@ -1,0 +1,41 @@
+{
+  "stage": "P64",
+  "lane": "legacy_weinberg_role_strict_side_branch_probe_current_repo_state_only",
+  "goal": "test_whether_the_current_repo_already_exports_either_the_retained_or_the_replaced_strict_side_branch_for_the_legacy_weinberg_angle_role",
+  "status": "CURRENT_REPO_EXPORTS_NEITHER_RETAINED_NOR_REPLACED_STRICT_SIDE_BRANCH_FOR_THE_LEGACY_WEINBERG_ANGLE_ROLE_AFTER_P64",
+  "reason": "F6 already reduces the missing claim-specific Weinberg verdict to two branches, and the current repo exports neither one",
+  "branch_state": {
+    "retained_branch_present": false,
+    "replaced_branch_present": false
+  },
+  "remaining_missing_objects": [
+    "explicit_strict_side_retained_verdict_for_the_legacy_weinberg_angle_role",
+    "explicit_strict_side_replaced_verdict_for_the_legacy_weinberg_angle_role_by_an_explicit_strict_successor_semantics"
+  ],
+  "checks": [
+    {
+      "id": "f6_partition_refinement_present",
+      "actual": "F6_EXECUTED_LEGACY_WEINBERG_ROLE_STRICT_SIDE_PARTITION_REFINEMENT_PACKET_NO_FALSE_PASS",
+      "expected": "F6_EXECUTED_LEGACY_WEINBERG_ROLE_STRICT_SIDE_PARTITION_REFINEMENT_PACKET_NO_FALSE_PASS",
+      "pass": true,
+      "meaning": "F6 refines the missing Weinberg verdict into retained vs replaced branches"
+    },
+    {
+      "id": "retained_branch_present",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "the repo does not yet export the retained branch for the legacy Weinberg-angle role"
+    },
+    {
+      "id": "replaced_branch_present",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "the repo does not yet export the replaced branch for the legacy Weinberg-angle role"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

@@ -1,0 +1,64 @@
+{
+  "step": "N66",
+  "status": "N66_DISCHARGED_CURRENT_CLAIM_SPECIFIC_STRICT_SIDE_PARTITION_OBSTRUCTION_THEOREM_FOR_LEGACY_PHYSICAL_ROLES_NO_FALSE_PASS",
+  "scope": "current_claim_specific_strict_side_partition_question_only",
+  "checks": [
+    {
+      "id": "f5_packet_present",
+      "actual": "F5_EXECUTED_LEGACY_PHYSICAL_ROLE_PARTITION_REFINEMENT_PACKET_NO_FALSE_PASS",
+      "expected": "F5_EXECUTED_LEGACY_PHYSICAL_ROLE_PARTITION_REFINEMENT_PACKET_NO_FALSE_PASS",
+      "pass": true,
+      "meaning": "F5 refines the broad partition blocker into three claim-specific verdict gaps"
+    },
+    {
+      "id": "p63_probe_negative",
+      "actual": "CURRENT_REPO_EXPORTS_BROAD_RETAINED_VS_REPLACED_PARTITION_BUT_NO_CLAIM_SPECIFIC_STRICT_SIDE_PARTITION_FOR_LEGACY_PHYSICAL_ROLES_AFTER_P63",
+      "expected": "CURRENT_REPO_EXPORTS_BROAD_RETAINED_VS_REPLACED_PARTITION_BUT_NO_CLAIM_SPECIFIC_STRICT_SIDE_PARTITION_FOR_LEGACY_PHYSICAL_ROLES_AFTER_P63",
+      "pass": true,
+      "meaning": "P63 confirms that only the broad partition exists while claim-specific strict-side verdicts remain absent"
+    },
+    {
+      "id": "weinberg_partition_verdict_absent",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "no strict-side claim-specific partition verdict exists for the legacy Weinberg-angle role"
+    },
+    {
+      "id": "fine_structure_partition_verdict_absent",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "no strict-side claim-specific partition verdict exists for the legacy fine-structure role"
+    },
+    {
+      "id": "gravity_hierarchy_partition_verdict_absent",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "no strict-side claim-specific partition verdict exists for the legacy gravity-hierarchy role"
+    }
+  ],
+  "theorem_result": {
+    "discharged": true,
+    "only_broad_partition_present": true,
+    "claim_specific_weinberg_partition_verdict_present": false,
+    "claim_specific_fine_structure_partition_verdict_present": false,
+    "claim_specific_gravity_hierarchy_partition_verdict_present": false,
+    "claim_specific_strict_side_partition_is_unsupported": true,
+    "full_closure_pass": false
+  },
+  "missing_structure_classes": [
+    "explicit_strict_side_retained_or_replaced_verdict_for_the_legacy_weinberg_angle_role",
+    "explicit_strict_side_retained_or_replaced_verdict_for_the_legacy_fine_structure_role",
+    "explicit_strict_side_retained_or_replaced_verdict_for_the_legacy_gravity_hierarchy_role"
+  ],
+  "hard_limits": [
+    "no_proof_that_any_role_is_retained",
+    "no_proof_that_any_role_is_replaced",
+    "no_proof_that_no_future_claim_specific_partition_can_ever_exist",
+    "no_selector_closure",
+    "no_QW2191_discharge",
+    "no_ToE_closure"
+  ]
+}

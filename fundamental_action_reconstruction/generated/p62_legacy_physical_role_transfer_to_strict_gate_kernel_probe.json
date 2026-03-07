@@ -1,0 +1,93 @@
+{
+  "stage": "P62",
+  "lane": "legacy_physical_role_transfer_to_strict_gate_kernel_probe_current_repo_state_only",
+  "goal": "test_whether_the_current_repo_already_exports_a_rigorous_transfer_of_legacy_weinberg_fine_structure_and_gravity_hierarchy_roles_onto_the_strict_gate_kernel",
+  "status": "CURRENT_REPO_EXPORTS_LEGACY_PHYSICAL_ROLE_CLAIMS_AND_STRICT_KERNEL_PIPELINE_BUT_NO_RIGOROUS_LEGACY_ROLE_TRANSFER_TO_STRICT_GATE_KERNEL_AFTER_P62",
+  "reason": "the current repo exports the legacy physical-role package and the later strict kernel pipeline, but F4 keeps the three legacy physical roles on the legacy side only, P47/N50 keep the kernel bridge absent, and F2 keeps the strict gate kernel operational-only; therefore no rigorous role transfer from the legacy package to K_strict_gate is currently exported",
+  "legacy_roles_checked": {
+    "weinberg_angle_role": {
+      "legacy_formula": "sin^2(theta_W)=alpha_geo/12",
+      "q2005_status": "HEURISTIC / NOT STRICTLY DERIVED",
+      "current_carrier": "legacy_kernel_package_only",
+      "rigorous_transfer_to_strict_gate_supported": false
+    },
+    "fine_structure_role": {
+      "legacy_formula": "alpha_EM^-1 = alpha_geo/(2*beta_tors)*(1-beta_tors)",
+      "q2005_status": "PARTIAL / MODEL-LEVEL",
+      "current_carrier": "legacy_kernel_package_only",
+      "rigorous_transfer_to_strict_gate_supported": false
+    },
+    "gravity_hierarchy_role": {
+      "legacy_formula": "beta^N gravity hierarchy",
+      "q2005_status": "MODEL-CONSISTENT, NOT FULL INDEPENDENT PROOF",
+      "current_carrier": "legacy_kernel_package_only",
+      "rigorous_transfer_to_strict_gate_supported": false
+    }
+  },
+  "role_transfer_state": {
+    "weinberg_angle_role_transfer_present": false,
+    "fine_structure_role_transfer_present": false,
+    "gravity_hierarchy_role_transfer_present": false
+  },
+  "remaining_missing_objects": [
+    "explicit_legacy_to_strict_kernel_bridge_operator_or_theorem",
+    "explicit_claim_specific_role_transfer_theorem_for_legacy_weinberg_angle_semantics_onto_K_strict_gate",
+    "explicit_claim_specific_role_transfer_theorem_for_legacy_fine_structure_semantics_onto_K_strict_gate",
+    "explicit_claim_specific_role_transfer_theorem_for_legacy_gravity_hierarchy_semantics_onto_K_strict_gate",
+    "explicit_retained_vs_replaced_partition_theorem_for_legacy_physical_roles_on_the_strict_side"
+  ],
+  "checks": [
+    {
+      "id": "f4_role_transfer_classification_packet_present",
+      "actual": "F4_EXECUTED_LEGACY_PHYSICAL_ROLE_TRANSFER_CLASSIFICATION_PACKET_NO_FALSE_PASS",
+      "expected": "F4_EXECUTED_LEGACY_PHYSICAL_ROLE_TRANSFER_CLASSIFICATION_PACKET_NO_FALSE_PASS",
+      "pass": true,
+      "meaning": "F4 classifies the legacy physical roles and their non-transfer status on the current repo state"
+    },
+    {
+      "id": "p47_kernel_bridge_absent",
+      "actual": "CURRENT_REPO_EXPORTS_LEGACY_AND_STRICT_KERNELS_BUT_NO_RIGOROUS_LEGACY_TO_STRICT_KERNEL_BRIDGE_AFTER_P47",
+      "expected": "CURRENT_REPO_EXPORTS_LEGACY_AND_STRICT_KERNELS_BUT_NO_RIGOROUS_LEGACY_TO_STRICT_KERNEL_BRIDGE_AFTER_P47",
+      "pass": true,
+      "meaning": "P47 confirms that the kernel-level bridge is still absent"
+    },
+    {
+      "id": "n50_nonidentification_theorem_active",
+      "actual": "N50_DISCHARGED_CURRENT_LEGACY_TO_STRICT_KERNEL_NONIDENTIFICATION_THEOREM_NO_FALSE_PASS",
+      "expected": "N50_DISCHARGED_CURRENT_LEGACY_TO_STRICT_KERNEL_NONIDENTIFICATION_THEOREM_NO_FALSE_PASS",
+      "pass": true,
+      "meaning": "N50 confirms that no rigorous legacy-to-strict kernel identification exists on the current repo state"
+    },
+    {
+      "id": "f2_strict_kernel_still_operational_only",
+      "actual": "F2_EXECUTED_STRICT_GATE_KERNEL_PROVENANCE_AND_FAR_INPUT_CLASSIFICATION_PACKET_NO_FALSE_PASS",
+      "expected": "F2_EXECUTED_STRICT_GATE_KERNEL_PROVENANCE_AND_FAR_INPUT_CLASSIFICATION_PACKET_NO_FALSE_PASS",
+      "pass": true,
+      "meaning": "F2 still classifies the strict gate kernel as a later-pipeline operational object"
+    },
+    {
+      "id": "weinberg_role_transfer_supported",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "the legacy Weinberg-angle role is not rigorously transferred onto K_strict_gate"
+    },
+    {
+      "id": "fine_structure_role_transfer_supported",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "the legacy fine-structure role is not rigorously transferred onto K_strict_gate"
+    },
+    {
+      "id": "gravity_hierarchy_role_transfer_supported",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "the legacy gravity-hierarchy role is not rigorously transferred onto K_strict_gate"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}
