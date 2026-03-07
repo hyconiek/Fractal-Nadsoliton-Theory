@@ -2800,6 +2800,47 @@ Frontier po `R27/P34/N37`:
 - `N37_route_result := current repo still does not identify existing kernel feedback host with the exported canonical Psi block even after the one-pair direct m2 formal slot-separation packet`,
 - nadal brak globalnego theorem-level/full-closure PASS i nadal brak globalnej redukcji glownego frontiera `R21/P28`.
 
+Co realnie zostalo dodane przez `R28`, `P35` i `N38`:
+- `R28` tworzy jawny `one-pair direct m2 common plus3 carrier-segment parameter sufficient route packet`,
+- `R28` eksportuje jawne sufficient assignments:
+  `m2_psi1 = mu_m2_plus3_segment_psi1_psi4`,
+  `m2_psi4 = mu_m2_plus3_segment_psi1_psi4`,
+- `R28` nie rusza warstwy swiatlo/kernel:
+  shared kernel/light-facing channel pozostaje dokladnie tym samym
+  juz zamknietym kanalem z `R14`,
+- `R28` jest jawnie route-scoped:
+  nie dowodzi `m2_psi1 = m2_psi4`,
+  tylko materializuje narrower sufficient route dla tej jednej pary,
+- `P35` rerunuje direct formal family route po `R28`,
+- wynik `P35`:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_AFTER_R28_DIRECT_M2_PSI1_PSI4_COMMON_PLUS3_ORBIT_PARAMETER_PACKET`,
+- `P35` rozklada brak
+  `explicit_common_parameter_source_or_symbol_identification_witness_for_the_declared_formal_m2_slots_m2_psi1_and_m2_psi4`
+  do jednego wezszejszego braku:
+  `explicit_assignment_witness_of_m2_psi1_and_m2_psi4_to_one_common_plus3_carrier_segment_parameter`,
+- `N38` daje theorem-level updated-route wynik:
+  nawet po exact one-pair direct `m2` common plus3 parameter sufficient packet
+  obecny repo nadal nie identyfikuje hosta `QW-2186` z exported canonical
+  blockiem.
+
+Frontier po `R28/P35/N38`:
+- `R28_result := explicit direct m2 psi1/psi4 common plus3 carrier-segment parameter sufficient route packet is present`,
+- `R28_scope := single direct mass-like m2 pair m2_psi1 / m2_psi4 common plus3 carrier-segment sufficient route only`,
+- `R28_light_boundary := shared kernel/light-facing channel remains exactly the already closed R14 channel`,
+- `P35_route_result := current direct formal c1s1 family route is still not computable after R28`,
+- `P35_missing_objects := explicit zero witness for direct quartic-like g4 family c1s1 shift defect`,
+- `P35_missing_objects += explicit zero witness for direct quintic-like g6 family c1s1 shift defect`,
+- `P35_missing_objects += explicit zero witness for direct yukawa-like gY family c1s1 shift defect`,
+- `P35_missing_objects += explicit_assignment_witness_of_m2_psi1_and_m2_psi4_to_one_common_plus3_carrier_segment_parameter`,
+- `P35_missing_objects += explicit_pairwise_matching_witness_for_m2_psi7_equals_m2_psi10`,
+- `P35_missing_objects += explicit_pairwise_matching_witness_for_m2_psi2_equals_m2_psi5`,
+- `P35_missing_objects += explicit_pairwise_matching_witness_for_m2_psi8_equals_m2_psi11`,
+- `P35_missing_objects += explicit zero witness for the declared pair1 residual c1c1 equation`,
+- `P35_missing_objects += explicit zero witness for the declared pair1 residual s1s1 equation`,
+- `P35_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+- `N38_route_result := current repo still does not identify existing kernel feedback host with the exported canonical Psi block even after the one-pair direct m2 common plus3 parameter sufficient packet`,
+- nadal brak globalnego theorem-level/full-closure PASS i nadal brak globalnej redukcji glownego frontiera `R21/P28`.
+
 Co realnie zostalo dodane przez `AX1`:
 - otwarto jawny pozytywny lane `axiom-augmented`,
 - pod minimalnym aksjomacie selekcji z `QW-2192/QW-2193` uzyskano packet-ready actual:

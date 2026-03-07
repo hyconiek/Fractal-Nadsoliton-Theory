@@ -226,6 +226,14 @@ Primary state report:
   witness, while the direct `g4/g6/gY` family blockers, the other direct
   `m2` pairwise blockers, the main host route, and the already closed
   light-facing kernel channel remain otherwise unchanged.
+- The next honest move after that has now also been executed, still only on
+  that direct route and still only for the same one pair: `R28` plus
+  `P35/N38` do not prove `m2_psi1 = m2_psi4`. They only export one narrower
+  sufficient route through a hypothetical common plus3 carrier-segment
+  parameter for that pair, reducing the remaining gap to one still-missing
+  assignment witness, while the direct `g4/g6/gY` family blockers, the other
+  direct `m2` pairwise blockers, the main host route, and the already closed
+  light-facing kernel channel remain otherwise unchanged.
 - This is real progress on the selector problem at extension level, but it does not upgrade strict-core closure and does not change `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 - Details: [`fundamental_action_reconstruction/README.md`](fundamental_action_reconstruction/README.md), [`fundamental_action_reconstruction/generated/pair1_operator_probe_report.json`](fundamental_action_reconstruction/generated/pair1_operator_probe_report.json).
 

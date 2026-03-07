@@ -1130,6 +1130,52 @@ Aktualizacja `N37`:
   nie twierdzi, ze `QW-2191` jest rozladowane,
   bez falszywego PASS.
 
+Aktualizacja `R28`:
+- zmaterializowano jawny `one-pair direct m2 common plus3 carrier-segment parameter sufficient route packet`
+  dla `m2_psi1 / m2_psi4`,
+- packet eksportuje route-scoped sufficient assignments:
+  `m2_psi1 = mu_m2_plus3_segment_psi1_psi4`,
+  `m2_psi4 = mu_m2_plus3_segment_psi1_psi4`,
+- packet utrzymuje jawnie granice rygoru:
+  to nie jest witness, ze taki common parameter istnieje,
+  tylko narrower sufficient route dla tej jednej pary,
+- kanal swiatlo/kernel pozostaje dokladnie tym samym juz zamknietym kanalem z
+  `R14`; `R28` dotyka tylko jednej non-light direct `m2` pary.
+
+Aktualizacja `P35`:
+- wykonano rerun direct formal family route po dodaniu `R28`,
+- wynik:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_AFTER_R28_DIRECT_M2_PSI1_PSI4_COMMON_PLUS3_ORBIT_PARAMETER_PACKET`,
+- probe nie twierdzi, ze `m2_psi1 = m2_psi4` zachodzi;
+  twierdzi tylko, ze ten jeden brak zostal zwezony do:
+  explicit assignment witness obu slotow do jednego common plus3
+  carrier-segment parameter,
+- po tym rerunie na tej trasie zostaja:
+  `direct g4` zero witness,
+  `direct g6` zero witness,
+  `direct gY` zero witness,
+  assignment witness dla `m2_psi1 / m2_psi4`,
+  trzy pozostale direct `m2` pairwise witnesses,
+  `c1c1` zero witness,
+  `s1s1` zero witness,
+  oraz `QW-2191` canonicalization boundary.
+
+Aktualizacja `N38`:
+- wykonano theorem-level wynik dla direct formal family route po `R28/P35`,
+- `R28/P35/QW-2191/C10` razem wymuszaja wniosek:
+  obecny repo nadal nie identyfikuje hosta `QW-2186` z exported canonical
+  blockiem nawet po exact one-pair direct `m2` common plus3 parameter
+  sufficient packet,
+- theorem jest jawnie `route-specific only`:
+  nie daje globalnej redukcji glownego frontiera z `R21/P28`,
+  nie twierdzi, ze `m2_psi1 = m2_psi4`,
+  nie twierdzi, ze taki common parameter istnieje,
+  nie twierdzi, ze sufficient route jest konieczna albo rownowazna,
+  nie twierdzi, ze inne direct `m2` pairwise witnesses zachodza,
+  nie twierdzi, ze direct `g4/g6/gY` defects znikaja,
+  nie twierdzi, ze `QW-2191` jest rozladowane,
+  bez falszywego PASS.
+
 ## Ontologiczna wskazowka programu
 
 Program jest prowadzony pod robocza ontologia:
