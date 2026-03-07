@@ -1,0 +1,103 @@
+{
+  "stage": "P5",
+  "goal": "rerun_strict_core_sigma_int_to_residual_orientation_datum_after_target_slot_export",
+  "status": "NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_RESIDUAL_DATUM_ROUTE_AFTER_TARGET_SLOT_EXPORT",
+  "reason": "the route now reaches a packet-ready target-slot export object, but still stops before strict-core bridge-map identification and beyond-overlay selector-track discharge",
+  "lane": "strict_core_sigma_int_residual_datum_route_after_R1",
+  "route_under_test": [
+    "sigma_int_candidate",
+    "residual_orientation_datum_target_slot",
+    "residual_orientation_datum"
+  ],
+  "route_checks": [
+    {
+      "id": "b8_no_strict_derivation_of_sigma",
+      "pass": true,
+      "expected": true,
+      "actual": true,
+      "meaning": "sigma_int_candidate is still not strict-derived"
+    },
+    {
+      "id": "b5_gauge_quotient_safety_open",
+      "pass": true,
+      "expected": "open",
+      "actual": "open",
+      "meaning": "full gauge-quotient safety remains open"
+    },
+    {
+      "id": "b6_candidate_fit_present",
+      "pass": true,
+      "expected": "supported_candidate_fit",
+      "actual": "supported_candidate_fit",
+      "meaning": "sigma_int_candidate still reaches only candidate-fit at the residual slot"
+    },
+    {
+      "id": "r1_target_slot_export_packet_present",
+      "pass": true,
+      "expected": "strict_core_target_slot_export_packet_present_but_unpopulated_and_unbridged",
+      "actual": "strict_core_target_slot_export_packet_present_but_unpopulated_and_unbridged",
+      "meaning": "a packet-ready target-slot export object now exists"
+    },
+    {
+      "id": "t2_map_absent",
+      "pass": true,
+      "expected": false,
+      "actual": false,
+      "meaning": "the strict-core bridge map is still absent"
+    },
+    {
+      "id": "b7_overlay_only",
+      "pass": true,
+      "expected": "partial_control_route_only",
+      "actual": "partial_control_route_only",
+      "meaning": "selector-track compatibility remains overlay-only"
+    },
+    {
+      "id": "c46_acceptance_carrier_present",
+      "pass": true,
+      "expected": true,
+      "actual": true,
+      "meaning": "the acceptance carrier remains present"
+    },
+    {
+      "id": "ax3_axiom_lane_bridge_only",
+      "pass": true,
+      "expected": "yes_axiom_lane_only",
+      "actual": "yes_axiom_lane_only",
+      "meaning": "the only explicit positive bridge witness remains axiom-lane-only"
+    }
+  ],
+  "route_state": {
+    "strict_core_source_object_present": false,
+    "theorem_level_gauge_quotient_safety_present": false,
+    "candidate_fit_present": true,
+    "strict_core_target_slot_export_present": true,
+    "strict_core_equivalence_or_export_map_present": false,
+    "selector_track_identification_beyond_overlay_present": false,
+    "axiom_lane_bridge_instance_present": true,
+    "strict_core_bridge_discharged": false
+  },
+  "supporting_present_but_insufficient_objects": [
+    "sigma_int_candidate",
+    "residual_Z2_candidate_fit",
+    "strict_core_target_slot_export_packet",
+    "persisted_acceptance_artifact_carrier",
+    "axiom_lane_sigma_int_bridge_instance"
+  ],
+  "missing_upstream_objects": [
+    "strict_derivation_or_source_object_upgrade_for_sigma_int_candidate",
+    "theorem_level_gauge_quotient_safety_for_sigma_int_candidate",
+    "strict_core_equivalence_or_export_map_sigma_int_candidate_to_residual_orientation_datum",
+    "selector_track_identification_beyond_overlay_only_for_sigma_int_bridge"
+  ],
+  "blocking_frontier": {
+    "R1_B1": "packet_ready_target_slot_export_present_but_unpopulated_and_unbridged",
+    "B8": "no_strict_derivation_of_sigma_int_candidate / no_theorem_level_gauge_quotient_safety",
+    "T2_B1": "bridge_theorem_specified_target_slot_packet_now_present_but_equivalence_export_map_absent",
+    "AX3_result": "sigma_int_bridge_instance_is_materialized_on_axiom_lane_only_and_does_not_change_strict_core"
+  },
+  "computed": {},
+  "required_next_step": "IMPLEMENT_ONE_REMAINING_STRICT_CORE_BRIDGE_OBJECT_AND_RERUN_P5_BEFORE_CLAIMING_STRICT_CORE_INTERNALIZATION",
+  "strict_core_promotion": false,
+  "no_false_pass": true
+}

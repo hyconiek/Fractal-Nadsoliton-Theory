@@ -42,6 +42,10 @@ Interpretacja rygorystyczna:
 - `P4` i `N7` schodza jeszcze weziej do samego T2 choke point i pokazuja,
   ze aktualna trasa `sigma_int -> residual datum` nadal zatrzymuje sie na
   candidate-fit, carrier infrastructure i axiom-lane witness,
+- `R1` dodaje pierwszy realny strict-core object na tej trasie:
+  target-slot export packet dla residual orientation datum,
+- `P5` i `N8` pokazuja, ze po tej konstruktywnej redukcji route nadal nie
+  przechodzi do bridge mapy ani beyond-overlay identification,
 - nie zmienia to decyzji `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 
 Artefakty:
@@ -1926,6 +1930,23 @@ Frontier po `P4/N7`:
 - `P4_missing_objects := strict sigma source / gauge quotient safety / strict target-slot export / bridge map / beyond-overlay selector-track identification`,
 - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
 - `AX3_result := positive sigma-int bridge instance exists on axiom lane only and does not change strict core`,
+- nadal brak globalnego theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `R1`, `P5` i `N8`:
+- `R1` tworzy packet-ready strict-core target-slot export object dla
+  `residual_orientation_datum_target_slot`,
+- `P5` rerunuje probe po tej konstrukcji i potwierdza, ze missing-object list
+  kurczy sie dokladnie o target-slot export,
+- `N8` daje theorem-level updated-route wynik:
+  target slot jest juz obecny, ale strict-core bridge map i beyond-overlay
+  selector-track identification nadal nie istnieja.
+
+Frontier po `R1/P5/N8`:
+- `R1_result := strict-core target-slot export packet for residual orientation datum is now present`,
+- `P5_route_result := updated strict-core sigma-int route still does not reach a strict-core residual-datum bridge`,
+- `N8_route_result := even after target-slot export, the current route still does not derive a strict-core sigma-int-to-residual-datum bridge`,
+- `P5_missing_objects := strict sigma source / gauge quotient safety / bridge map / beyond-overlay selector-track identification`,
+- `T2_B1 := the bridge theorem is specified but not discharged; target slot is now packet-ready but equivalence/export map remains absent`,
 - nadal brak globalnego theorem-level/full-closure PASS.
 
 Co realnie zostalo dodane przez `AX1`:

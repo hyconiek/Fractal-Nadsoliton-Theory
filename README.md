@@ -38,6 +38,11 @@ Primary state report:
   exact T2 choke point: the current strict-core `sigma_int -> residual datum`
   route still stops at candidate-fit, carrier infrastructure, and axiom-lane
   witness, without a strict-core export or bridge map.
+- A constructive packet `R1` now adds one real missing bridge object: a
+  packet-ready strict-core target-slot export for the residual orientation
+  datum. The rerun probe `P5` and updated theorem `N8` show that this shrinks
+  the blocker-set by one, but the route still fails before a bridge map or
+  beyond-overlay selector-track identification.
 - This is real progress on the selector problem at extension level, but it does not upgrade strict-core closure and does not change `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 - Details: [`fundamental_action_reconstruction/README.md`](fundamental_action_reconstruction/README.md), [`fundamental_action_reconstruction/generated/pair1_operator_probe_report.json`](fundamental_action_reconstruction/generated/pair1_operator_probe_report.json).
 
@@ -773,6 +778,8 @@ Current status:
 - this moves the theory forward by showing, in both machine-readable and theorem-level form, that the current FR/topological route remains candidate/control only and still fails before a strict-core residual-datum or theta-source derivation,
 - `P4` and `N7` completed as the executable and theorem-level versions of the narrower residual-datum bridge question,
 - this moves the theory forward by separating semantic target fields, carrier infrastructure, and axiom-lane witness from an actual strict-core residual-datum bridge, which is still absent,
+- `R1`, `P5`, and `N8` completed as the first constructive reduction of that blocker-set,
+- this moves the theory forward by adding a real packet-ready target-slot export object and proving that the updated route still fails only at the remaining bridge-map and beyond-overlay steps,
 - `D1` completed as the current best-supported project conclusion after `N3`,
 - this records the strongest honest interpretation now supported by the evidence: selector closure is not achieved in strict core, and the project must either discharge `T12_B1` directly or accept selector-axiom necessity / strict-core incompleteness as the active design conclusion,
 - `AX1` completed as an explicit axiom-augmented positive lane,

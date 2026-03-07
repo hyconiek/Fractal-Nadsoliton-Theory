@@ -1,0 +1,18 @@
+{
+  "stage": "R1",
+  "export_target": "residual_orientation_datum_target_slot",
+  "target_object_class": "S_orient_cand(theta_1,theta_2)=span{u_1(theta_1),u_2(theta_2)}",
+  "source_formulas": {
+    "u_1": "cos(theta_1)c_1 + sin(theta_1)s_1",
+    "u_2": "cos(theta_2)c_2 + sin(theta_2)s_2"
+  },
+  "required_inputs": [
+    "theta_1",
+    "theta_2"
+  ],
+  "target_role": "strict_core_target_slot_for_future_sigma_int_to_residual_datum_bridge",
+  "population_state": "CONDITIONAL_PACKET_READY_TARGET_SLOT_UNPOPULATED",
+  "strict_core_status": "target_slot_export_present_bridge_map_absent",
+  "frontier": "R1_B1",
+  "no_false_pass": true
+}

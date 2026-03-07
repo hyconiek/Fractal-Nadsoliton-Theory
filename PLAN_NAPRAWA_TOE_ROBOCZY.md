@@ -8661,6 +8661,47 @@ Po tej rundzie:
    - nie liczyc semantic carrieru ani axiom-lane witness jako strict-core PASS.
 
 
+## 526. Strict-core target-slot export packet plus rerun after one real bridge-object addition (2026-03-07)
+
+1. Cel:
+   - wykonac wreszcie jeden realny object-addition z `P4_missing_objects`,
+   - nie udawac bridge mapy, tylko dodac najwezszy uczciwy obiekt:
+     `strict_core_target_slot_export_for_residual_orientation_datum`,
+   - potem od razu rerunowac route probe.
+2. Wynik:
+   - `R1` tworzy packet-ready strict-core target-slot export packet
+     `residual_orientation_datum_target_slot`,
+   - `P5` rerunuje probe po tej zmianie,
+   - wynik `P5`:
+     `NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_RESIDUAL_DATUM_ROUTE_AFTER_TARGET_SLOT_EXPORT`,
+   - `N8` formalizuje theorem-level updated-route wynik:
+     nawet po dodaniu target-slot export packet obecna trasa nadal nie daje
+     strict-core `sigma_int -> residual datum` bridge.
+3. Frontier po kroku:
+   - `R1_result := strict-core target-slot export packet is now present`,
+   - `P5_route_result := updated strict-core sigma-int route still does not reach a strict-core residual-datum bridge`,
+   - `N8_route_result := updated route still does not derive a strict-core sigma-int-to-residual-datum bridge`,
+   - `P5_missing_objects := strict sigma source / gauge quotient safety / bridge map / beyond-overlay selector-track identification`,
+   - `T2_B1 := target slot is now packet-ready but equivalence/export map remains absent`,
+   - `AX3_result := positive bridge witness remains axiom-lane-only`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/R1_STRICT_CORE_RESIDUAL_DATUM_TARGET_SLOT_EXPORT_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/r1_strict_core_residual_datum_target_slot_export_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r1_strict_core_residual_datum_target_slot_export_packet.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r1_strict_core_residual_datum_target_slot_export_packet_summary.json`,
+   - dodano `fundamental_action_reconstruction/P5_STRICT_CORE_SIGMA_INT_TO_RESIDUAL_DATUM_RERUN_AFTER_TARGET_SLOT_EXPORT.md`,
+   - dodano `fundamental_action_reconstruction/p5_strict_core_sigma_int_to_residual_datum_rerun_after_target_slot_export.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p5_strict_core_sigma_int_to_residual_datum_rerun_after_target_slot_export.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p5_strict_core_sigma_int_to_residual_datum_rerun_after_target_slot_export_summary.json`,
+   - dodano `fundamental_action_reconstruction/N8_CURRENT_STRICT_CORE_SIGMA_INT_RESIDUAL_DATUM_OBSTRUCTION_AFTER_TARGET_SLOT_EXPORT_THEOREM.md`,
+   - dodano `fundamental_action_reconstruction/n8_current_strict_core_sigma_int_residual_datum_obstruction_after_target_slot_export_theorem.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n8_current_strict_core_sigma_int_residual_datum_obstruction_after_target_slot_export_theorem_summary.json`.
+5. Nastepny poprawny ruch:
+   - albo dodac jeden z czterech pozostalych bridge objects i rerun `P5`,
+   - albo dopiero wtedy globalizowac wynik negatywny,
+   - nie traktowac `R1` jako bridge-map discharge.
+
+
 - `H29`: stare proxy `retard_phase/tau/gain` moduluja preorientowany kanal, ale nie dostarczaja same wewnetrznego strict-core anchoru orientacji.
 - `H30`: `orientation_psi0 = mod(0.5*phi + 0.8*omega, 2*pi)` jest deterministycznym kandydatem anchoru z kernel invariants, ale nie jest jeszcze strict-core eksportem `theta_i`.
 - `H31`: `psi0` ma formalny embedding do `pair1=(c_1,s_1)`, ale nadal nie ma dowodu, ze jest to strict-core redukcja selektora, a nie tylko wybor wspolrzednych.
