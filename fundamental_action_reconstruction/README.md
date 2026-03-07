@@ -1591,6 +1591,17 @@ Aktualizacja `P47/N50`:
 - to nie jest dowod, ze nowy kernel jest falszywy; to jest theorem-level
   nonidentification / noninheritance boundary.
 
+Aktualizacja `K2/F2`:
+- jawnie zapisano rzeczywisty chain wyprowadzenia nowego kernela:
+  `QW-2038 -> QW-2039 -> QW-2041 -> QW-2048 -> QW-2049 -> QW-2050 -> QW-2064`,
+- wniosek `K2`:
+  nowy kernel pochodzi z operational refreeze + micro/Stage-C gate chain, a
+  nie z domknietego bridge theorem od starego kernela `4.4`,
+- wniosek `F2`:
+  w current FAR `K_strict_gate` wolno traktowac tylko jako later-pipeline
+  operational import/control; `A1/A4/A8` nie moga go milczaco podstawic za
+  ontologiczna warstwe `K_legacy_ont / (D_f, alpha_geo, beta_tors)`.
+
 Aktualizacja `A1`:
 - ansatz nie pomija juz milczaco warstwy `D_f / alpha_geo / beta_tors`,
 - jawnie wpisano, ze `A1` musi miec co najmniej parameter slot albo structural
@@ -1608,6 +1619,37 @@ Aktualizacja `A8`:
   `alpha_geo/(2 beta_tors)`,
 - warstwa ta jest sledzona tylko jako canonical hierarchy bridge datum, nie
   jako strict derivation `G`, Einstein-Hilbert ani GR closure.
+
+Aktualizacja `F3`:
+- wykonano jawna klasyfikacje `artifact-sensitive vs kernel-split-robust`
+  dla current FAR frontiera po korekcie `K1/K2/F2`,
+- wniosek `F3`:
+  milczace podstawienia `K_strict_gate` za ontologiczna warstwe zrodlowa
+  `K_legacy_ont / (D_f, alpha_geo, beta_tors)` pozostaja tylko
+  artifact-sensitive upstream classes i nie wolno ich dalej atakowac jakby
+  byly uczciwym current frontierem,
+- jednoczesnie wniosek `F3` utrzymuje, ze aktualny route
+  `AX9 + AX10 + AX11 + R35 + R36 + R37 -> P46/N49` pozostaje
+  `kernel-split-robust` na current repo state,
+- dlatego najuczciwszy kolejny ruch nadal siedzi na lokalnym blockerze
+  `m2_psi4` target-action defect, a nie na ponownym mieszaniu ontologii
+  kernela.
+
+Aktualizacja `AX12`:
+- wykonano trzeci lokalny pozytywny ruch na lane
+  `canonical-ontology-supported`, tym razem dla attacked `m2_psi4`
+  `target-action` defect,
+- `AX12` zamyka tylko lokalnie blocker
+  `explicit_zero_witness_for_the_direct_m2_psi4_target_action_coefficient_defect_polynomial_on_common_psi4**2/2`,
+  bez strict-core promotion i bez wracania do cichego mieszania
+  `K_legacy_ont` z `K_strict_gate`.
+
+Aktualizacja `P48/N51`:
+- po `AX12` route pozostaje negatywny jako calosc,
+- zrodlowe local closures z `AX10/AX11` sa zachowane,
+- target-action local closure z `AX12` jest dodane,
+- najwezszy kolejny frontier przesuwa sie juz na
+  `m2_psi4` `target-eom` witness, a nie na target-action defect.
 
 ## Ontologiczna wskazowka programu
 

@@ -910,6 +910,18 @@ Current status:
   partial legacy revalidation downgrade, but still does not export a rigorous
   bridge identifying the strict gate kernel as the full ontological successor
   of the legacy kernel,
+- `K2/F2` now classify how the later strict gate kernel enters FAR: it comes
+  from an operational refreeze/micro/Stage-C chain rather than from a closed
+  bridge to the old ontological kernel, so `A1/A4/A8` may use it only as a
+  later-pipeline operational control/import unless a bridge is added,
+- `F3` now classifies the immediate FAR frontier under that correction:
+  silent ontological uses of `K_strict_gate` remain artifact-sensitive
+  upstream classes, while the current `AX9/AX10/AX11/R35/R36/R37 -> P46/N49`
+  direct-route blockers remain live on the corrected canonical-ontology-supported lane,
+- `AX12/P48/N51` now add the next honest local move on that corrected lane:
+  the attacked `m2_psi4` target-action defect blocker is locally closed only on
+  the canonical-ontology-supported pre-observer route, while the whole route
+  still remains open and the next narrow blocker is the `m2_psi4` target-eom witness,
 - this moves the theory forward only to an integrated effective/scope-closed gravity layer with explicit foundational blockers for `G`, Einstein-Hilbert derivation and full SM+GR reduction,
 - `A9` completed as a strict-scope partial SM+GR effective reduction layer,
 - this moves the theory forward only to an integrated effective material/gauge/gravity package with theorem-level unification still open,
