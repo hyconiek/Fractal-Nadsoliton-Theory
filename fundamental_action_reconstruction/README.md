@@ -1176,6 +1176,51 @@ Aktualizacja `N38`:
   nie twierdzi, ze `QW-2191` jest rozladowane,
   bez falszywego PASS.
 
+Aktualizacja `R29`:
+- zmaterializowano jawny `one-pair direct m2 common plus3 assignment slot split packet`
+  dla `m2_psi1 / m2_psi4`,
+- packet nie tworzy nowego parametru ani nie twierdzi, ze assignment zachodzi;
+  rozbija tylko jeden brak
+  `explicit_assignment_witness_of_m2_psi1_and_m2_psi4_to_one_common_plus3_carrier_segment_parameter`
+  na dwa węższe braki slotowe:
+  `m2_psi1 -> mu_m2_plus3_segment_psi1_psi4`,
+  `m2_psi4 -> mu_m2_plus3_segment_psi1_psi4`,
+- kanal swiatlo/kernel pozostaje dokladnie tym samym juz zamknietym kanalem z
+  `R14`; `R29` dotyka tylko jednej non-light direct `m2` pary.
+
+Aktualizacja `P36`:
+- wykonano rerun direct formal family route po dodaniu `R29`,
+- wynik:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_AFTER_R29_DIRECT_M2_PSI1_PSI4_COMMON_PLUS3_ASSIGNMENT_SLOT_SPLIT_PACKET`,
+- probe nie twierdzi, ze `m2_psi1 = m2_psi4` zachodzi;
+  twierdzi tylko, ze ten jeden brak zostal zwezony do dwoch explicit slotwise
+  assignment witnesses,
+- po tym rerunie na tej trasie zostaja:
+  `direct g4` zero witness,
+  `direct g6` zero witness,
+  `direct gY` zero witness,
+  slotwise assignment witness dla `m2_psi1`,
+  slotwise assignment witness dla `m2_psi4`,
+  trzy pozostale direct `m2` pairwise witnesses,
+  `c1c1` zero witness,
+  `s1s1` zero witness,
+  oraz `QW-2191` canonicalization boundary.
+
+Aktualizacja `N39`:
+- wykonano theorem-level wynik dla direct formal family route po `R29/P36`,
+- `R29/P36/QW-2191/C10` razem wymuszaja wniosek:
+  obecny repo nadal nie identyfikuje hosta `QW-2186` z exported canonical
+  blockiem nawet po exact one-pair direct `m2` assignment slot split packet,
+- theorem jest jawnie `route-specific only`:
+  nie daje globalnej redukcji glownego frontiera z `R21/P28`,
+  nie twierdzi, ze `m2_psi1 = m2_psi4`,
+  nie twierdzi, ze common plus3 parameter istnieje,
+  nie twierdzi, ze ktorykolwiek slotwise assignment witness jest obecny,
+  nie twierdzi, ze inne direct `m2` pairwise witnesses zachodza,
+  nie twierdzi, ze direct `g4/g6/gY` defects znikaja,
+  nie twierdzi, ze `QW-2191` jest rozladowane,
+  bez falszywego PASS.
+
 ## Ontologiczna wskazowka programu
 
 Program jest prowadzony pod robocza ontologia:
