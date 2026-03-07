@@ -1411,6 +1411,31 @@ Aktualizacja `N43`:
   ale cala trasa nadal nie jest domknieta i nadal pozostaje poza strict core,
 - brak claimu, ze `QW-2191` jest rozladowane albo ze ToE jest zamknieta.
 
+Aktualizacja `R33`:
+- wykonano najwezszy kolejny ruch na tym samym lane
+  `canonical-ontology-supported`,
+- source eom-side witness dla `m2_psi1` nie zostal zamkniety pozytywnie;
+  zostal zredukowany tylko do jednego wezszejszego
+  coefficient-identification witness na wspolnym local support:
+  `psi1(x)`,
+- kanal swiatlo/kernel pozostaje jawnie przed obserwatorem i pozostaje
+  nienaruszony; source action-side closure z `AX10` pozostaje lokalna.
+
+Aktualizacja `P41`:
+- wykonano rerun direct formal family route po `R33`,
+- wynik:
+  `CANONICAL_ONTOLOGY_SUPPORTED_ONLY_ATTACKED_SOURCE_ACTION_BLOCKER_CLOSED_AND_SOURCE_EOM_GAP_REDUCED_TO_COMMON_PSI1_OF_X_SUPPORT_ROUTE_STILL_NOT_CLOSED_AFTER_R33`,
+- probe utrzymuje, ze route nadal nie jest domkniety; zmienila sie tylko
+  lokalna postac source eom-side luki.
+
+Aktualizacja `N44`:
+- wykonano boundary theorem po `R33/P41`,
+- theorem zapisuje najmocniejszy uczciwy wniosek:
+  source action-side closure z `AX10` zostaje zachowana, source eom-side luka
+  zostaje zredukowana do jednego common-support coefficient gap na `psi1(x)`,
+  ale cala trasa nadal pozostaje poza strict core,
+- brak claimu, ze `QW-2191` jest rozladowane albo ze ToE jest zamknieta.
+
 ## Ontologiczna wskazowka programu
 
 Program jest prowadzony pod robocza ontologia:

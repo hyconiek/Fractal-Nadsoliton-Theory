@@ -286,6 +286,14 @@ Primary state report:
   certify the exact boundary: this closes only the attacked `R32` blocker on
   the canonical-ontology-supported lane, keeps light before observer, and
   still does not close the direct route, strict core, `QW-2191`, or ToE.
+- The next honest move after that has now also been executed on the same
+  canonical-ontology-supported lane, still with light before observer:
+  `R33/P41/N44` do not add a new positive closure. They only reduce the next
+  attacked blocker, the source eom-side witness for `m2_psi1`, to one still
+  missing coefficient-identification witness on common local support `psi1(x)`,
+  while the target-side witness, the other direct `m2` pairwise blockers, the
+  direct `g4/g6/gY` family blockers, `pair1 c1c1/s1s1`, `QW-2191`, and strict
+  core remain unchanged.
 - This is real progress on the selector problem at extension level, but it does not upgrade strict-core closure and does not change `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 - Details: [`fundamental_action_reconstruction/README.md`](fundamental_action_reconstruction/README.md), [`fundamental_action_reconstruction/generated/pair1_operator_probe_report.json`](fundamental_action_reconstruction/generated/pair1_operator_probe_report.json).
 

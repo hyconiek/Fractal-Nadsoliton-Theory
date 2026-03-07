@@ -10226,6 +10226,58 @@ Po tej rundzie:
      `explicit_assignment_witness_of_m2_psi4_to_mu_m2_plus3_segment_psi1_psi4`,
    - albo zostawic ten lane jako local positive support only i dalej
      trzymac strict route jako nierozladowany.
+
+533. `R33/P41/N44`: source `eom` common-support reduction on the canonical-ontology-supported lane without false pass
+1. Zakres:
+   - nie zamykac kolejnego blockera pozytywnie,
+   - nie promowac niczego do strict core,
+   - utrzymac jawnie, ze `AX10` zamyka tylko source action-side blocker,
+   - rozbic tylko kolejny wezszy blocker:
+     `explicit_source_eom_role_assignment_witness_for_m2_psi1_to_mu_m2_plus3_segment_psi1_psi4`
+     do jednego common-support coefficient-identification witness na
+     `psi1(x)`,
+   - utrzymac jawnie, ze swiatlo pozostaje przed obserwatorem.
+2. Wynik:
+   - `R33` daje realny partial packet:
+     source eom-side common-support reduction na `psi1(x)`,
+   - `P41` zwraca:
+     `CANONICAL_ONTOLOGY_SUPPORTED_ONLY_ATTACKED_SOURCE_ACTION_BLOCKER_CLOSED_AND_SOURCE_EOM_GAP_REDUCED_TO_COMMON_PSI1_OF_X_SUPPORT_ROUTE_STILL_NOT_CLOSED_AFTER_R33`,
+   - `N44` utrzymuje najostrzejsza granice bez falszywego PASS:
+     source action-side closure z `AX10` pozostaje lokalna, a source eom-side
+     zostaje tylko zredukowane do jednego coefficient gap.
+3. Frontier po kroku:
+   - `R33_result := attacked source eom-side witness reduced to one common-support coefficient-identification witness on psi1(x)`,
+   - `P41_missing_objects := explicit_source_eom_monomial_coefficient_identification_witness_for_m2_psi1_and_mu_m2_plus3_segment_psi1_psi4_on_common_psi1_of_x_support`,
+   - `P41_missing_objects += explicit_assignment_witness_of_m2_psi4_to_mu_m2_plus3_segment_psi1_psi4`,
+   - `P41_missing_objects += explicit zero witness for direct quartic-like g4 family c1s1 shift defect`,
+   - `P41_missing_objects += explicit zero witness for direct quintic-like g6 family c1s1 shift defect`,
+   - `P41_missing_objects += explicit zero witness for direct yukawa-like gY family c1s1 shift defect`,
+   - `P41_missing_objects += explicit_pairwise_matching_witness_for_m2_psi7_equals_m2_psi10`,
+   - `P41_missing_objects += explicit_pairwise_matching_witness_for_m2_psi2_equals_m2_psi5`,
+   - `P41_missing_objects += explicit_pairwise_matching_witness_for_m2_psi8_equals_m2_psi11`,
+   - `P41_missing_objects += explicit zero witness for the declared pair1 residual c1c1 equation`,
+   - `P41_missing_objects += explicit zero witness for the declared pair1 residual s1s1 equation`,
+   - `P41_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+   - `N44_route_result := current repo still has only local canonical-ontology-supported source-action closure plus one reduced source-eom coefficient gap and no strict-core closure`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/R33_DIRECT_M2_PSI1_SOURCE_EOM_COMMON_MONOMIAL_SUPPORT_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/r33_direct_m2_psi1_source_eom_common_monomial_support_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r33_direct_m2_psi1_source_eom_common_monomial_support_packet.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r33_direct_m2_psi1_source_eom_common_monomial_support_packet_summary.json`,
+   - dodano `fundamental_action_reconstruction/P41_CANONICAL_ONTOLOGY_SUPPORTED_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_PROBE_AFTER_DIRECT_M2_PSI1_SOURCE_EOM_COMMON_MONOMIAL_SUPPORT_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/p41_canonical_ontology_supported_direct_formal_c1s1_family_route_probe_after_direct_m2_psi1_source_eom_common_monomial_support_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p41_canonical_ontology_supported_direct_formal_c1s1_family_route_probe_after_direct_m2_psi1_source_eom_common_monomial_support_packet.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p41_canonical_ontology_supported_direct_formal_c1s1_family_route_probe_after_direct_m2_psi1_source_eom_common_monomial_support_packet_summary.json`,
+   - dodano `fundamental_action_reconstruction/N44_CURRENT_CANONICAL_ONTOLOGY_SUPPORTED_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_BOUNDARY_THEOREM_AFTER_DIRECT_M2_PSI1_SOURCE_EOM_COMMON_MONOMIAL_SUPPORT_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/n44_current_canonical_ontology_supported_direct_formal_c1s1_family_route_boundary_theorem_after_direct_m2_psi1_source_eom_common_monomial_support_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n44_current_canonical_ontology_supported_direct_formal_c1s1_family_route_boundary_theorem_after_direct_m2_psi1_source_eom_common_monomial_support_packet_summary.json`.
+5. Nastepny poprawny ruch:
+   - albo uderzyc bezposrednio w
+     `explicit_source_eom_monomial_coefficient_identification_witness_for_m2_psi1_and_mu_m2_plus3_segment_psi1_psi4_on_common_psi1_of_x_support`,
+   - albo osobno w
+     `explicit_assignment_witness_of_m2_psi4_to_mu_m2_plus3_segment_psi1_psi4`,
+   - albo zostawic ten lane jako local support only i dalej trzymac route
+     jako nierozladowany.
      coefficient-identification witnessa albo zadnego globalnego skrocenia.
 
 
