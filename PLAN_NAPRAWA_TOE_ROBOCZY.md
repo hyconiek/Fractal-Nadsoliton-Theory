@@ -8789,6 +8789,53 @@ Po tej rundzie:
    - nie promowac samego `G_light` packet do selector-facing `K_obs`.
 
 
+## 529. Explicit local-chart E packet and rerun of the current K_obs route (2026-03-07)
+
+1. Cel:
+   - sprobowac zbudowac drugi realny operator-chain object po `R3`,
+   - wybrac najwezszy uczciwy kandydat: `E`,
+   - nie promowac local-chart `psi0` embedding do strict-core selector source.
+2. Wynik:
+   - `R4` tworzy explicit current-pair emission packet
+     `E_1 : V_1 -> L_1`,
+   - macierz:
+     `E_1 = R(-psi0)`,
+   - packet jest jawnie local-chart scoped, preoriented i nie daje pair-target
+     privilege,
+   - `R4` sprawdza tez, ze partial pullback
+     `E_1^* G_light^(1) E_1`
+     odtwarza macierz z `P1/Test C configured`,
+   - `P8` rerunuje trase:
+     `existing kernel feedback + R2 + E + G_light -> H3 chain -> selector-facing block`,
+   - wynik `P8`:
+     `NOT_COMPUTABLE_FROM_CURRENT_KERNEL_FEEDBACK_TO_KOBS_ROUTE_AFTER_E_AND_GLIGHT_PACKETS`,
+   - `N11` formalizuje theorem-level updated-route wynik:
+     nawet po dodaniu jawnych packetow `E` i `G_light` obecna trasa nadal nie
+     instancjuje selector-facing `K_obs`.
+3. Frontier po kroku:
+   - `R4_result := explicit current-pair local-chart emission packet is now present`,
+   - `P8_resolved_from_P7 := explicit_emission_map_E_from_M_pair_to_L_int`,
+   - `P8_missing_objects := explicit R_mat / explicit O_obs / factorization map / full H3 selector-sector projected block export`,
+   - `N11_route_result := current kernel feedback still does not instantiate selector-facing K_obs after explicit E and G_light`,
+   - `R4_boundary := explicit E packet remains local-chart preoriented and not factorized`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/R4_LOCAL_CHART_EMISSION_MAP_PACKET_FOR_KOBS.md`,
+   - dodano `fundamental_action_reconstruction/r4_local_chart_emission_map_packet_for_kobs.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r4_local_chart_emission_map_packet_for_kobs.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r4_local_chart_emission_map_packet_for_kobs_summary.json`,
+   - dodano `fundamental_action_reconstruction/P8_EXISTING_KERNEL_FEEDBACK_TO_KOBS_RERUN_AFTER_E_AND_GLIGHT_PACKETS.md`,
+   - dodano `fundamental_action_reconstruction/p8_existing_kernel_feedback_to_kobs_rerun_after_e_and_glight_packets.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p8_existing_kernel_feedback_to_kobs_rerun_after_e_and_glight_packets.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p8_existing_kernel_feedback_to_kobs_rerun_after_e_and_glight_packets_summary.json`,
+   - dodano `fundamental_action_reconstruction/N11_CURRENT_KERNEL_FEEDBACK_KOBS_OBSTRUCTION_AFTER_E_AND_GLIGHT_PACKETS_THEOREM.md`,
+   - dodano `fundamental_action_reconstruction/n11_current_kernel_feedback_kobs_obstruction_after_e_and_glight_packets_theorem.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n11_current_kernel_feedback_kobs_obstruction_after_e_and_glight_packets_theorem_summary.json`.
+5. Nastepny poprawny ruch:
+   - albo dodac jeden z pozostalych operator-chain objects `R_mat / O_obs`,
+   - albo zbudowac factorization map z existing kernel feedback do `H3`,
+   - nie promowac partial pullback `E^* G E` do pelnego `H3` selector-facing block.
+
+
 - `H29`: stare proxy `retard_phase/tau/gain` moduluja preorientowany kanal, ale nie dostarczaja same wewnetrznego strict-core anchoru orientacji.
 - `H30`: `orientation_psi0 = mod(0.5*phi + 0.8*omega, 2*pi)` jest deterministycznym kandydatem anchoru z kernel invariants, ale nie jest jeszcze strict-core eksportem `theta_i`.
 - `H31`: `psi0` ma formalny embedding do `pair1=(c_1,s_1)`, ale nadal nie ma dowodu, ze jest to strict-core redukcja selektora, a nie tylko wybor wspolrzednych.

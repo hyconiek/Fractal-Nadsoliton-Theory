@@ -1,0 +1,15 @@
+{
+  "stage": "P8",
+  "status": "NOT_COMPUTABLE_FROM_CURRENT_KERNEL_FEEDBACK_TO_KOBS_ROUTE_AFTER_E_AND_GLIGHT_PACKETS",
+  "reason": "the route now contains explicit E and G_light packets, but E remains local-chart preoriented and the route still lacks R_mat, O_obs, the factorization map, and the full H3 selector-facing projected block needed to instantiate K_obs from current kernel feedback",
+  "resolved_from_P7": [
+    "explicit_emission_map_E_from_M_pair_to_L_int"
+  ],
+  "missing_upstream_objects": [
+    "explicit_light_to_matter_response_map_R_mat_from_L_int_to_Q_mat",
+    "explicit_observer_readout_operator_O_obs_on_Q_mat",
+    "equivalence_or_factorization_map_from_existing_kernel_feedback_and_R2_parameter_packet_to_H3_operator_chain",
+    "full_H3_selector_sector_projected_2x2_block_export_on_an_actual_pair"
+  ],
+  "required_next_step": "IMPLEMENT_R_MAT_OR_O_OBS_OR_THE_FACTORIZATION_MAP_AND_RERUN_P8_BEFORE_CLAIMING_EXISTING_KERNEL_FEEDBACK_ALREADY_CONTAINS_SELECTOR_FACING_KOBS"
+}

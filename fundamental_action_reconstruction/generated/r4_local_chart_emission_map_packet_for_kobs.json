@@ -1,0 +1,129 @@
+{
+  "stage": "R4",
+  "operator_scope": "explicit_local_chart_emission_map_packet",
+  "current_test_carrier_identification": {
+    "M_pair_current": "V_1 = span{c_1, s_1}",
+    "L_int_current": "L_1 = span{ell_+, ell_-}"
+  },
+  "domain_basis_order": [
+    "c_1",
+    "s_1"
+  ],
+  "codomain_basis_order": [
+    "ell_+",
+    "ell_-"
+  ],
+  "source_reports": [
+    "H30",
+    "H31",
+    "H33",
+    "H34",
+    "H35",
+    "H36",
+    "H37",
+    "QW-1952",
+    "QW-1955",
+    "QW-1956",
+    "R3",
+    "P1"
+  ],
+  "anchor_input": {
+    "psi0": 5.926799718215227,
+    "anchor_origin": "kernel_invariant_candidate_imported_as_local_chart_orientation"
+  },
+  "local_chart_vectors": {
+    "u_psi0_pair1": [
+      0.9371639715259273,
+      -0.3488892237856464
+    ],
+    "v_psi0_pair1": [
+      0.3488892237856464,
+      0.9371639715259273
+    ],
+    "u_formula": "u_psi0_pair1 = cos(psi0)c_1 + sin(psi0)s_1",
+    "v_formula": "v_psi0_pair1 = -sin(psi0)c_1 + cos(psi0)s_1"
+  },
+  "matrix": [
+    [
+      0.9371639715259273,
+      -0.3488892237856464
+    ],
+    [
+      0.3488892237856464,
+      0.9371639715259273
+    ]
+  ],
+  "map_formula": "E_1 = R(-psi0)",
+  "orthogonal": true,
+  "determinant": 1.0,
+  "uses_orientation_anchor_in_map": true,
+  "pair_target_status": "local_chart_only_not_physically_privileged",
+  "basis_covariance_status": "not_discharged",
+  "directed_orientation_status": "not_discharged",
+  "sign_distinction_status": "not_discharged",
+  "factorization_status": "not_identified_with_existing_kernel_feedback",
+  "partial_emission_propagation_pullback": {
+    "formula": "E_1^* G_light^(1) E_1",
+    "matrix": [
+      [
+        0.9879138108013918,
+        0.0037580848416136625
+      ],
+      [
+        0.0037580848416136625,
+        0.9966094713876047
+      ]
+    ],
+    "matches_p1_test_c_configured": true,
+    "difference_vs_p1_test_c_configured": [
+      [
+        0.0,
+        2.992397996059992e-17
+      ],
+      [
+        2.992397996059992e-17,
+        0.0
+      ]
+    ],
+    "max_abs_delta_vs_p1_test_c_configured": 2.992397996059992e-17,
+    "classification": "partial_pullback_only_not_full_H3_projected_block"
+  },
+  "consistency_checks": [
+    {
+      "id": "psi0_q1952_q1955_match",
+      "actual": 5.926799718215227,
+      "expected": 5.926799718215227,
+      "tolerance": 1e-12,
+      "abs_delta": 0.0,
+      "consistent": true
+    },
+    {
+      "id": "psi0_q1955_q1956_match",
+      "actual": 5.926799718215227,
+      "expected": 5.926799718215227,
+      "tolerance": 1e-12,
+      "abs_delta": 0.0,
+      "consistent": true
+    },
+    {
+      "id": "partial_pullback_matches_p1_configured_matrix",
+      "actual": 2.992397996059992e-17,
+      "expected": 0.0,
+      "tolerance": 1e-12,
+      "abs_delta": 2.992397996059992e-17,
+      "consistent": true
+    }
+  ],
+  "classification": "explicit_local_chart_emission_map_present_but_preoriented_and_not_yet_factorized_from_existing_kernel_feedback",
+  "frontier": "R4_B1",
+  "no_false_pass": true,
+  "supporting_boundaries": {
+    "h30_deterministic_candidate_only": true,
+    "h31_coordinate_embedding_only": true,
+    "h33_local_chart_only": "pair1_is_available_as_a_deterministic_local_chart_for_the_primary_psi0_lane_but_not_yet_justified_as_a_uniquely_selector_relevant_target",
+    "h34_no_covariance": "strict_core_supports_only_local_chart_embeddings_for_psi0_and_not_a_basis_covariant_or_target_independent_selector_reduction",
+    "h35_no_physical_axis_selection": "strict_core_supports_only_a_coordinate_level_direction_u_psi0_pair1_inside_pair1_and_not_a_strict_physical_axis_selection",
+    "h36_no_directed_axis_selection": "strict_core_supports_only_a_coordinate_level_undirected_axis_representative_u_psi0_pair1_inside_pair1_and_not_a_strict_directed_orientation_selection",
+    "h37_no_sign_distinction_state_object": "strict_core_contains_no_sign_sensitive_state_object_or_observable_on_pair1_and_therefore_does_not_distinguish_u_from_minus_u_as_physically_different_selector_states"
+  }
+}
