@@ -1,0 +1,43 @@
+#!/usr/bin/env python3
+import json
+from pathlib import Path
+
+
+def main() -> None:
+    root = Path(__file__).resolve().parent
+    out = root / "generated"
+    out.mkdir(parents=True, exist_ok=True)
+
+    data = {
+        "id": "H37",
+        "date": "2026-03-06",
+        "status": "PASS_PARTIAL_NO_STRICT_SIGN_DISTINCTION_STATE_OBJECT",
+        "result": "strict_core_contains_no_sign_sensitive_state_object_or_observable_on_pair1_and_therefore_does_not_distinguish_u_from_minus_u_as_physically_different_selector_states",
+        "frontier": "H37_B1",
+        "frontier_text": "strict core contains no sign-sensitive state object or observable on pair1 and therefore does not distinguish u from -u as physically different selector states",
+        "hard_limits": [
+            "no theorem-level pass",
+            "no full-closure pass",
+            "no claim that sign reversal inside pair1 is physically meaningful in strict core",
+            "no claim that u and -u are physically distinct selector states",
+            "no claim that QW-2191 is discharged",
+        ],
+    }
+
+    summary = {
+        "id": data["id"],
+        "status": data["status"],
+        "frontier": data["frontier"],
+        "result": data["result"],
+    }
+
+    (out / "h37_sign_distinction_state_audit.json").write_text(
+        json.dumps(data, indent=2) + "\n", encoding="utf-8"
+    )
+    (out / "h37_sign_distinction_state_audit_summary.json").write_text(
+        json.dumps(summary, indent=2) + "\n", encoding="utf-8"
+    )
+
+
+if __name__ == "__main__":
+    main()
