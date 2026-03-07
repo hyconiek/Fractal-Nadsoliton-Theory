@@ -1,0 +1,140 @@
+{
+  "stage": "R9",
+  "map_scope": "typed_host_to_control_pushforward_packet",
+  "source_reports": [
+    "R8",
+    "C14",
+    "C15",
+    "H8",
+    "H33",
+    "H34",
+    "P12"
+  ],
+  "domain_carrier": {
+    "label": "Psi_host_12",
+    "basis_order": [
+      "psi0",
+      "psi1",
+      "psi2",
+      "psi3",
+      "psi4",
+      "psi5",
+      "psi6",
+      "psi7",
+      "psi8",
+      "psi9",
+      "psi10",
+      "psi11"
+    ],
+    "dimension": 12
+  },
+  "codomain_carrier": {
+    "label": "M_control",
+    "basis_order": [
+      "c1",
+      "s1",
+      "c2",
+      "s2"
+    ],
+    "dimension": 4,
+    "interpretation": "control-side mode carrier family preceding any selector-sector reduction"
+  },
+  "transport_schema": {
+    "source_map_symbol": "T_control : B_control -> Psi_host_12",
+    "source_map_shape": [
+      12,
+      4
+    ],
+    "pushforward_map_symbol": "P_control = T_control^T : Psi_host_12 -> M_control",
+    "pushforward_map_shape": [
+      4,
+      12
+    ],
+    "assembly_formula_on_control_side": "M_control = T_control^T H_PsiPsi T_control"
+  },
+  "route_role": {
+    "resolved_subobject": "typed_projection_or_pushforward_map_from_existing_kernel_feedback_into_the_explicit_H3_slot_chain_or_current_pair_block",
+    "resolved_at_level": "host_to_control_carrier_pushforward_only",
+    "unresolved_downstream_step": "selector_sector_reduction_from_M_control_to_pair1_or_an_equivalent_actual_target"
+  },
+  "formal_operator_pushforward_status": {
+    "host_to_concrete_psi_block_identification_present": false,
+    "reason": "C10_B1 remains open, so R9 exports the typed carrier map itself and not a coefficient-level evaluated pushforward of the host operator"
+  },
+  "reaches_explicit_current_pair_chain_directly": false,
+  "selector_sector_reduction_present": false,
+  "intertwiner_or_equality_witness_present": false,
+  "control_scope_only": true,
+  "consistency_checks": [
+    {
+      "id": "p12_originally_missing_typed_projection",
+      "actual": true,
+      "expected": true,
+      "meaning": "P12 indeed localized the typed projection/pushforward as one of the remaining factorization blockers",
+      "pass": true
+    },
+    {
+      "id": "r8_host_carrier_present",
+      "actual": "explicit_operator_level_existing_kernel_feedback_host_carrier_present_but_host_scope_only_and_not_yet_projected_to_the_explicit_h3_chain",
+      "expected": "explicit_operator_level_existing_kernel_feedback_host_carrier_present_but_host_scope_only_and_not_yet_projected_to_the_explicit_h3_chain",
+      "meaning": "R8 already exports the host-side legacy carrier",
+      "pass": true
+    },
+    {
+      "id": "c14_control_transport_schema_present",
+      "actual": "yes",
+      "expected": "yes",
+      "meaning": "C14 already exports the control transport schema",
+      "pass": true
+    },
+    {
+      "id": "c15_control_pullback_formula_present",
+      "actual": "yes",
+      "expected": "yes",
+      "meaning": "C15 already exports the control-only pullback formula built from that transport",
+      "pass": true
+    },
+    {
+      "id": "c15_control_basis_matches_expected",
+      "actual": [
+        "c1",
+        "s1",
+        "c2",
+        "s2"
+      ],
+      "expected": [
+        "c1",
+        "s1",
+        "c2",
+        "s2"
+      ],
+      "meaning": "the control carrier basis is explicitly declared",
+      "pass": true
+    },
+    {
+      "id": "h8_explicit_h3_chain_starts_on_pair1",
+      "actual": "V_1 = span{c1, s1}",
+      "expected": "V_1 = span{c1, s1}",
+      "meaning": "the explicit H3 chain still starts on pair1 rather than on the full control carrier",
+      "pass": true
+    },
+    {
+      "id": "h33_pair1_still_local_chart_only",
+      "actual": "pair1_is_available_as_a_deterministic_local_chart_for_the_primary_psi0_lane_but_not_yet_justified_as_a_uniquely_selector_relevant_target",
+      "expected": "pair1_is_available_as_a_deterministic_local_chart_for_the_primary_psi0_lane_but_not_yet_justified_as_a_uniquely_selector_relevant_target",
+      "meaning": "pair1 remains only a local chart and not a privileged selector target",
+      "pass": true
+    },
+    {
+      "id": "h34_no_strict_covariance_argument",
+      "actual": "PASS_PARTIAL_NO_STRICT_COVARIANCE_ARGUMENT",
+      "expected": "PASS_PARTIAL_NO_STRICT_COVARIANCE_ARGUMENT",
+      "meaning": "no basis-covariant or target-independent selector reduction is present",
+      "pass": true
+    }
+  ],
+  "factorization_status": "typed_host_to_control_pushforward_present_but_no_legacy_selector_sector_reduction_to_pair1_or_equivalent_actual_target",
+  "classification": "typed_host_to_control_pushforward_present_but_control_scope_only_and_not_yet_reduced_to_the_explicit_current_pair_chain",
+  "frontier": "R9_B1",
+  "no_false_pass": true
+}

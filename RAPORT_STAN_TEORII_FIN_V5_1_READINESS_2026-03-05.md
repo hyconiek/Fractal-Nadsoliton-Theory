@@ -74,6 +74,11 @@ Interpretacja rygorystyczna:
   `QW-2186/C10/C14`, a potem pokazuja, ze route nadal nie przechodzi i zostaja
   juz tylko trzy blockery:
   typed projection / selector-sector reduction / intertwiner-equality witness,
+- `R9`, `P13` i `N16` robia drugi konstruktywny ruch na tej samej trasie:
+  materializuja typed host-to-control pushforward
+  `P_control = T_control^T : Psi_host_12 -> M_control`, a potem pokazuja,
+  ze route nadal nie przechodzi i zostaja juz tylko dwa blockery:
+  selector-sector reduction / intertwiner-equality witness,
 - nie zmienia to decyzji `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 
 Artefakty:
@@ -2103,6 +2108,24 @@ Frontier po `R8/P12/N15`:
 - `N15_route_result := current repo still does not identify existing kernel feedback with the explicit H3 chain even after host-carrier packetization`,
 - `P12_resolved_from_P11 := explicit operator-level existing-kernel-feedback carrier`,
 - `P12_missing_objects := typed projection into explicit H3 chain / selector-sector reduction on legacy side / intertwiner-equality witness`,
+- nadal brak globalnego theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `R9`, `P13` i `N16`:
+- `R9` tworzy drugi realny packet dla kolejnego `P12` blockera:
+  typed host-to-control pushforward
+  `P_control = T_control^T : Psi_host_12 -> M_control`,
+- `P13` testuje, czy po tej packetyzacji factorization route staje sie juz
+  liczony albo przynajmniej krotszy,
+- `N16` daje theorem-level updated-route wynik:
+  nawet po dodaniu typed host-to-control pushforward obecny route nadal nie
+  identyfikuje existing kernel feedback z explicit selector-facing `H3` chain.
+
+Frontier po `R9/P13/N16`:
+- `R9_result := typed host-to-control pushforward is now present at control-carrier level`,
+- `P13_route_result := current factorization route is still not computable after host-to-control pushforward packetization`,
+- `N16_route_result := current repo still does not identify existing kernel feedback with the explicit H3 chain even after host-to-control pushforward packetization`,
+- `P13_resolved_from_P12 := typed host-to-control pushforward from the legacy host carrier into M_control`,
+- `P13_missing_objects := selector-sector reduction on the legacy control side / intertwiner-equality witness`,
 - nadal brak globalnego theorem-level/full-closure PASS.
 
 Co realnie zostalo dodane przez `AX1`:

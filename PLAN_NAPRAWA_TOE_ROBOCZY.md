@@ -9024,6 +9024,55 @@ Po tej rundzie:
      selector-sector reduction albo factorization.
 
 
+## 534. Host-to-control pushforward packet for the second factorization subobject (2026-03-07)
+
+1. Cel:
+   - uderzyc w nastepny z trzech `P12` blockerow,
+   - sprawdzic, czy repo ma juz typed host-to-control pushforward z legacy host
+     carrier do control-side mode carrier family,
+   - potem rerunowac te sama factorization route bez promowania control carrier
+     do `pair1` ani do selector-sector reduction.
+2. Wynik:
+   - `R9` tworzy typed host-to-control pushforward packet:
+     `P_control = T_control^T : Psi_host_12 -> M_control`,
+     gdzie `R8` daje host carrier, `C14` daje transport schema,
+     a `C15` daje control-only pullback packet,
+   - `R9` rozladowuje kolejny `P12` missing object:
+     typed projection/pushforward, ale tylko na poziomie
+     `host -> control carrier`,
+   - `P13` rerunuje trase:
+     `existing kernel feedback + shared provenance + explicit current-pair H3 chain + host carrier + host-to-control pushforward -> factorization map`,
+   - wynik `P13`:
+     `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_TO_EXPLICIT_CHAIN_FACTORIZATION_ROUTE_AFTER_HOST_TO_CONTROL_PUSHFORWARD_PACKET`,
+   - `N16` formalizuje theorem-level updated-route wynik:
+     nawet po packetyzacji typed host-to-control pushforward obecny route nadal
+     nie identyfikuje existing kernel feedback z explicit selector-facing `H3`
+     chain.
+3. Frontier po kroku:
+   - `R9_result := typed host-to-control pushforward is now present at control-carrier level`,
+   - `P13_resolved_from_P12 := typed host-to-control pushforward from the legacy host carrier into M_control`,
+   - `P13_missing_objects := selector-sector reduction on the legacy control side / intertwiner-equality witness`,
+   - `N16_route_result := current existing-kernel-feedback to explicit-H3-chain factorization route is still noncomputable after host-to-control pushforward packetization`,
+   - `R9_boundary := typed pushforward remains control-scope only and is not yet a selector-sector reduction onto pair1 or an equivalent actual target`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/R9_EXISTING_KERNEL_FEEDBACK_HOST_TO_CONTROL_PUSHFORWARD_PACKET_FOR_KOBS.md`,
+   - dodano `fundamental_action_reconstruction/r9_existing_kernel_feedback_host_to_control_pushforward_packet_for_kobs.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r9_existing_kernel_feedback_host_to_control_pushforward_packet_for_kobs.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r9_existing_kernel_feedback_host_to_control_pushforward_packet_for_kobs_summary.json`,
+   - dodano `fundamental_action_reconstruction/P13_EXISTING_KERNEL_FEEDBACK_FACTORIZATION_RERUN_AFTER_HOST_TO_CONTROL_PUSHFORWARD_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/p13_existing_kernel_feedback_factorization_rerun_after_host_to_control_pushforward_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p13_existing_kernel_feedback_factorization_rerun_after_host_to_control_pushforward_packet.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p13_existing_kernel_feedback_factorization_rerun_after_host_to_control_pushforward_packet_summary.json`,
+   - dodano `fundamental_action_reconstruction/N16_CURRENT_EXISTING_KERNEL_FEEDBACK_FACTORIZATION_OBSTRUCTION_AFTER_HOST_TO_CONTROL_PUSHFORWARD_PACKET_THEOREM.md`,
+   - dodano `fundamental_action_reconstruction/n16_current_existing_kernel_feedback_factorization_obstruction_after_host_to_control_pushforward_packet_theorem.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n16_current_existing_kernel_feedback_factorization_obstruction_after_host_to_control_pushforward_packet_theorem_summary.json`.
+5. Nastepny poprawny ruch:
+   - sprobowac zmaterializowac selector-sector reduction legacy control side
+     onto `pair1` albo equivalent actual target,
+   - albo utrzymac lane negatywny i nie udawac, ze sam host-to-control
+     pushforward daje juz factorization.
+
+
 - `H29`: stare proxy `retard_phase/tau/gain` moduluja preorientowany kanal, ale nie dostarczaja same wewnetrznego strict-core anchoru orientacji.
 - `H30`: `orientation_psi0 = mod(0.5*phi + 0.8*omega, 2*pi)` jest deterministycznym kandydatem anchoru z kernel invariants, ale nie jest jeszcze strict-core eksportem `theta_i`.
 - `H31`: `psi0` ma formalny embedding do `pair1=(c_1,s_1)`, ale nadal nie ma dowodu, ze jest to strict-core redukcja selektora, a nie tylko wybor wspolrzednych.

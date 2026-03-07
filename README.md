@@ -81,6 +81,12 @@ Primary state report:
   first `P11` subobject and leaves only three route-specific blockers:
   typed projection, selector-sector reduction, and intertwiner/equality
   witness.
+- The next narrower move after that has now also been executed: `R9`
+  packetizes the typed host-to-control pushforward
+  `P_control = T_control^T : Psi_host_12 -> M_control`, while `P13` plus `N16`
+  show that this resolves the projection blocker at control-carrier level and
+  leaves only two route-specific blockers: selector-sector reduction and
+  intertwiner/equality witness.
 - This is real progress on the selector problem at extension level, but it does not upgrade strict-core closure and does not change `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 - Details: [`fundamental_action_reconstruction/README.md`](fundamental_action_reconstruction/README.md), [`fundamental_action_reconstruction/generated/pair1_operator_probe_report.json`](fundamental_action_reconstruction/generated/pair1_operator_probe_report.json).
 
@@ -832,6 +838,8 @@ Current status:
 - this moves the theory forward by proving that shared frozen-kernel provenance is real but still weaker than operator identification, and by decomposing the last nominal factorization blocker into four explicit subobjects,
 - `R8`, `P12`, and `N15` completed as the first honest constructive reduction of that four-part factorization blocker,
 - this moves the theory forward by materializing the host-scope operator-level legacy carrier from `QW-2186` and proving that the updated route now fails only at `typed projection / selector-sector reduction / intertwiner-equality witness`,
+- `R9`, `P13`, and `N16` completed as the second honest constructive reduction of that factorization blocker,
+- this moves the theory forward by materializing the typed host-to-control pushforward from the legacy host carrier into the control-side mode carrier family and proving that the updated route now fails only at `selector-sector reduction / intertwiner-equality witness`,
 - `D1` completed as the current best-supported project conclusion after `N3`,
 - this records the strongest honest interpretation now supported by the evidence: selector closure is not achieved in strict core, and the project must either discharge `T12_B1` directly or accept selector-axiom necessity / strict-core incompleteness as the active design conclusion,
 - `AX1` completed as an explicit axiom-augmented positive lane,

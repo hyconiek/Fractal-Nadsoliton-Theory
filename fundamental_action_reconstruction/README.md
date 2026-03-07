@@ -386,6 +386,32 @@ Aktualizacja `N15`:
 - to jest realny progres redukcyjny bez factorization discharge i bez
   falszywego PASS.
 
+Aktualizacja `R9`:
+- wykonano drugi realny factorization-subobject addition po `P12`:
+  typed host-to-control pushforward packet
+  `P_control = T_control^T : Psi_host_12 -> M_control`,
+- `R8` daje host carrier, `C14` daje transport schema,
+  `C15` daje control-only pullback packet,
+- to rozladowuje blocker `typed projection/pushforward`, ale tylko na poziomie
+  `host -> control carrier`, bez selector-sector reduction do `pair1`.
+
+Aktualizacja `P13`:
+- wykonano rerun compute-or-fail tej samej factorization route po `R9`,
+- wynik:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_TO_EXPLICIT_CHAIN_FACTORIZATION_ROUTE_AFTER_HOST_TO_CONTROL_PUSHFORWARD_PACKET`,
+- missing-object list maleje z `3` do `2`:
+  selector-sector reduction / intertwiner-equality witness.
+
+Aktualizacja `N16`:
+- wykonano theorem-level updated-route wynik po packetyzacji
+  host-to-control pushforward,
+- `R9/P13/H8/H15/H16/H33` razem wymuszaja wniosek:
+  nawet po zmaterializowaniu typed host-to-control pushforward obecny route
+  nadal nie identyfikuje existing kernel feedback z explicit selector-facing
+  `H3` chain,
+- to jest realny progres redukcyjny bez factorization discharge i bez
+  falszywego PASS.
+
 ## Ontologiczna wskazowka programu
 
 Program jest prowadzony pod robocza ontologia:

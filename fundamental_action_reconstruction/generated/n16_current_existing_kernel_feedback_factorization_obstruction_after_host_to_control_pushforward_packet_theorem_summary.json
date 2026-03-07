@@ -1,0 +1,82 @@
+{
+  "step": "N16",
+  "status": "N16_DISCHARGED_CURRENT_EXISTING_KERNEL_FEEDBACK_FACTORIZATION_OBSTRUCTION_AFTER_HOST_TO_CONTROL_PUSHFORWARD_PACKET_NO_FALSE_PASS",
+  "goal": "Discharge a route-specific theorem: even after materializing the typed host-to-control pushforward, the current repo still does not identify existing kernel feedback with the explicit selector-facing H3 chain.",
+  "scope": "current_existing_kernel_feedback_to_explicit_h3_chain_factorization_route_after_R9_only",
+  "checks": [
+    {
+      "id": "r8_host_carrier_present",
+      "actual": "explicit_operator_level_existing_kernel_feedback_host_carrier_present_but_host_scope_only_and_not_yet_projected_to_the_explicit_h3_chain",
+      "expected": "explicit_operator_level_existing_kernel_feedback_host_carrier_present_but_host_scope_only_and_not_yet_projected_to_the_explicit_h3_chain",
+      "pass": true,
+      "meaning": "the explicit operator-level host carrier is present"
+    },
+    {
+      "id": "r9_typed_host_to_control_pushforward_present",
+      "actual": "typed_host_to_control_pushforward_present_but_control_scope_only_and_not_yet_reduced_to_the_explicit_current_pair_chain",
+      "expected": "typed_host_to_control_pushforward_present_but_control_scope_only_and_not_yet_reduced_to_the_explicit_current_pair_chain",
+      "pass": true,
+      "meaning": "the typed host-to-control pushforward is present"
+    },
+    {
+      "id": "p10_full_block_still_present",
+      "actual": "CURRENT_PAIR_H3_BLOCK_COMPUTABLE_BUT_NOT_IDENTIFIED_WITH_EXISTING_KERNEL_FEEDBACK",
+      "expected": "CURRENT_PAIR_H3_BLOCK_COMPUTABLE_BUT_NOT_IDENTIFIED_WITH_EXISTING_KERNEL_FEEDBACK",
+      "pass": true,
+      "meaning": "the explicit current-pair H3 block is still present on the route"
+    },
+    {
+      "id": "p13_factorization_route_still_negative",
+      "actual": "NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_TO_EXPLICIT_CHAIN_FACTORIZATION_ROUTE_AFTER_HOST_TO_CONTROL_PUSHFORWARD_PACKET",
+      "expected": "NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_TO_EXPLICIT_CHAIN_FACTORIZATION_ROUTE_AFTER_HOST_TO_CONTROL_PUSHFORWARD_PACKET",
+      "pass": true,
+      "meaning": "the direct factorization route remains noncomputable after the host-to-control pushforward packet"
+    },
+    {
+      "id": "h8_explicit_chain_starts_on_pair1",
+      "actual": "V_1 = span{c1, s1}",
+      "expected": "V_1 = span{c1, s1}",
+      "pass": true,
+      "meaning": "the explicit H3 chain still starts on pair1 rather than on the full control carrier"
+    },
+    {
+      "id": "h15_no_selector_sector_export_present",
+      "actual": "existing_feedback_not_identified_with_kobs",
+      "expected": "existing_feedback_not_identified_with_kobs",
+      "pass": true,
+      "meaning": "existing kernel feedback still has no selector-sector reduction/export of its own"
+    },
+    {
+      "id": "h33_pair1_local_chart_only",
+      "actual": "pair1_is_available_as_a_deterministic_local_chart_for_the_primary_psi0_lane_but_not_yet_justified_as_a_uniquely_selector_relevant_target",
+      "expected": "pair1_is_available_as_a_deterministic_local_chart_for_the_primary_psi0_lane_but_not_yet_justified_as_a_uniquely_selector_relevant_target",
+      "pass": true,
+      "meaning": "pair1 remains only a local chart and not a privileged selector target"
+    },
+    {
+      "id": "h16_only_partial_witnesses_present",
+      "actual": "admissible_values_have_asymmetric_partial_witnesses_only",
+      "expected": "admissible_values_have_asymmetric_partial_witnesses_only",
+      "pass": true,
+      "meaning": "only partial operator-origin witnesses remain on the legacy side"
+    }
+  ],
+  "theorem_result": {
+    "discharged": true,
+    "host_scope_operator_level_existing_kernel_feedback_carrier_present": true,
+    "typed_host_to_control_pushforward_present": true,
+    "full_current_pair_h3_block_present": true,
+    "existing_kernel_feedback_identified_with_explicit_chain": false
+  },
+  "missing_structure_classes": [
+    "selector_sector_reduction_of_the_legacy_control_side_onto_pair1_or_an_equivalent_actual_target",
+    "intertwiner_or_equality_witness_identifying_the_reduced_legacy_object_with_the_computed_current_pair_H3_block"
+  ],
+  "hard_limits": [
+    "no global impossibility theorem",
+    "no claim that future factorization routes are impossible",
+    "no claim that QW-2191 is discharged",
+    "no claim that ToE is closed"
+  ],
+  "required_next_step": "IMPLEMENT_SELECTOR_SECTOR_REDUCTION_OF_THE_LEGACY_CONTROL_SIDE_AND_RERUN_P13"
+}
