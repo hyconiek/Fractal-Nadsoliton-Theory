@@ -1,0 +1,82 @@
+{
+  "step": "N36",
+  "status": "N36_DISCHARGED_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_OBSTRUCTION_AFTER_R26_NO_FALSE_PASS",
+  "goal": "Discharge a route-specific theorem: even after adding the one-pair direct m2 role-matching packet for psi1/psi4, the current repo still does not identify the QW-2186 existing-feedback host with the exported canonical Psi block.",
+  "scope": "current_existing_kernel_feedback_host_matching_direct_formal_c1s1_family_route_after_R26_only",
+  "checks": [
+    {
+      "id": "r26_role_matching_packet_present",
+      "actual": "PASS_PARTIAL_DIRECT_M2_PSI1_PSI4_ROLE_MATCHING_PACKET_READY",
+      "expected": "PASS_PARTIAL_DIRECT_M2_PSI1_PSI4_ROLE_MATCHING_PACKET_READY",
+      "pass": true,
+      "meaning": "R26 added the route-scoped role-matching packet for the single pair m2_psi1 / m2_psi4"
+    },
+    {
+      "id": "p32_route_negative_before_r26",
+      "actual": "NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_AFTER_R25_DIRECT_M2_PAIRWISE_SUFFICIENT_ROUTE",
+      "expected": "NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_AFTER_R25_DIRECT_M2_PAIRWISE_SUFFICIENT_ROUTE",
+      "pass": true,
+      "meaning": "before R26, the direct route still lacked the full pairwise witness m2_psi1 = m2_psi4"
+    },
+    {
+      "id": "p33_route_negative_after_r26",
+      "actual": "NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_AFTER_R26_DIRECT_M2_PSI1_PSI4_ROLE_MATCHING_PACKET",
+      "expected": "NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_AFTER_R26_DIRECT_M2_PSI1_PSI4_ROLE_MATCHING_PACKET",
+      "pass": true,
+      "meaning": "after R26, the direct route still remains noncomputable"
+    },
+    {
+      "id": "qw2191_full_physical_uniqueness_closed_false",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "QW-2191 still blocks full physical uniqueness"
+    },
+    {
+      "id": "c10_host_identification_not_shown",
+      "actual": "not_shown",
+      "expected": "not_shown",
+      "pass": true,
+      "meaning": "host-to-concrete Psi-block identification remains absent"
+    }
+  ],
+  "theorem_result": {
+    "discharged": true,
+    "main_route_after_R21_still_negative": true,
+    "direct_formal_c1s1_family_route_packet_present": true,
+    "direct_g4_family_zero_witness_present": false,
+    "direct_g6_family_zero_witness_present": false,
+    "direct_gY_family_zero_witness_present": false,
+    "direct_m2_psi1_psi4_role_matching_packet_present": true,
+    "direct_m2_psi1_psi4_coefficient_identification_witness_present": false,
+    "direct_m2_psi7_psi10_pairwise_witness_present": false,
+    "direct_m2_psi2_psi5_pairwise_witness_present": false,
+    "direct_m2_psi8_psi11_pairwise_witness_present": false,
+    "pair1_c1c1_zero_witness_present": false,
+    "pair1_s1s1_zero_witness_present": false,
+    "full_physical_uniqueness_present": false,
+    "host_matching_witness_present": false
+  },
+  "missing_structure_classes": [
+    "explicit_zero_witness_for_direct_quartic_like_g4_family_c1s1_shift_defect",
+    "explicit_zero_witness_for_direct_quintic_like_g6_family_c1s1_shift_defect",
+    "explicit_zero_witness_for_direct_yukawa_like_gY_family_c1s1_shift_defect",
+    "explicit_coefficient_identification_witness_for_the_declared_role_matched_direct_m2_pair_m2_psi1_equals_m2_psi4",
+    "explicit_pairwise_matching_witness_for_m2_psi7_equals_m2_psi10",
+    "explicit_pairwise_matching_witness_for_m2_psi2_equals_m2_psi5",
+    "explicit_pairwise_matching_witness_for_m2_psi8_equals_m2_psi11",
+    "explicit_zero_witness_for_the_declared_pair1_residual_c1c1_equation",
+    "explicit_zero_witness_for_the_declared_pair1_residual_s1s1_equation",
+    "full_physical_uniqueness_or_selector_relevant_canonicalization_of_the_explicit_declared_control_transport_within_the_QW2191_O2_family"
+  ],
+  "hard_limits": [
+    "no global reduction of the main R21/P28 host frontier",
+    "no claim that the direct family route is the unique physical route",
+    "no claim that m2_psi1 equals m2_psi4",
+    "no claim that any other direct m2 pairwise equality holds",
+    "no claim that any direct g4, g6, or gY family defect vanishes",
+    "no claim that QW-2191 is discharged",
+    "no claim that ToE is closed"
+  ],
+  "required_next_step": "EITHER_PROVE_THE_SINGLE_DIRECT_M2_COEFFICIENT_IDENTIFICATION_WITNESS_FOR_M2_PSI1_EQUALS_M2_PSI4_ON_THIS_ROUTE_OR_ATTACK_ONE_OF_THE_OTHER_DIRECT_M2_PAIRWISE_WITNESSES_OR_ATTACK_ONE_OF_THE_DIRECT_G4_G6_GY_ZERO_WITNESSES_AND_PROVE_THE_PAIR1_C1C1_AND_S1S1_ZERO_EQUATIONS_AND_DISCHARGE_SELECTOR_RELEVANT_CANONICALIZATION_OR_KEEP_BOTH_THE_MAIN_AND_DIRECT_ROUTES_NEGATIVE"
+}

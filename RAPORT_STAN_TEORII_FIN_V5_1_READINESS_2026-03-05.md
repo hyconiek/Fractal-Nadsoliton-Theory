@@ -2718,6 +2718,47 @@ Frontier po `R25/P32/N35`:
 - `N35_route_result := current repo still does not identify existing kernel feedback host with the exported canonical Psi block even after the direct m2 pairwise sufficient packet`,
 - nadal brak globalnego theorem-level/full-closure PASS i nadal brak globalnej redukcji glownego frontiera `R21/P28`.
 
+Co realnie zostalo dodane przez `R26`, `P33` i `N36`:
+- `R26` tworzy jawny `one-pair direct m2 role-matching packet`,
+- `R26` eksportuje exact canonical-action role match:
+  `m2_psi1*psi1**2/2 -> m2_psi4*psi4**2/2`,
+- `R26` eksportuje exact local-eom role match:
+  `m2_psi1*psi1(x) -> m2_psi4*psi4(x)`,
+- `R26` nie rusza warstwy swiatlo/kernel:
+  shared kernel/light-facing channel pozostaje dokladnie tym samym
+  juz zamknietym kanalem z `R14`,
+- `R26` jest jawnie route-scoped:
+  nie dowodzi `m2_psi1 = m2_psi4`,
+  tylko materializuje slot-role matching dla tej jednej pary,
+- `P33` rerunuje direct formal family route po `R26`,
+- wynik `P33`:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_AFTER_R26_DIRECT_M2_PSI1_PSI4_ROLE_MATCHING_PACKET`,
+- `P33` rozklada brak
+  `explicit_pairwise_matching_witness_for_m2_psi1_equals_m2_psi4`
+  do jednego wezszejszego braku:
+  `explicit_coefficient_identification_witness_for_the_declared_role_matched_direct_m2_pair_m2_psi1_equals_m2_psi4`,
+- `N36` daje theorem-level updated-route wynik:
+  nawet po exact one-pair direct `m2` role-matching packet obecny repo
+  nadal nie identyfikuje hosta `QW-2186` z exported canonical blockiem.
+
+Frontier po `R26/P33/N36`:
+- `R26_result := explicit direct m2 psi1/psi4 role-matching packet is present`,
+- `R26_scope := single direct mass-like m2 pair m2_psi1 / m2_psi4 role-matching route only`,
+- `R26_light_boundary := shared kernel/light-facing channel remains exactly the already closed R14 channel`,
+- `P33_route_result := current direct formal c1s1 family route is still not computable after R26`,
+- `P33_missing_objects := explicit zero witness for direct quartic-like g4 family c1s1 shift defect`,
+- `P33_missing_objects += explicit zero witness for direct quintic-like g6 family c1s1 shift defect`,
+- `P33_missing_objects += explicit zero witness for direct yukawa-like gY family c1s1 shift defect`,
+- `P33_missing_objects += explicit_coefficient_identification_witness_for_the_declared_role_matched_direct_m2_pair_m2_psi1_equals_m2_psi4`,
+- `P33_missing_objects += explicit_pairwise_matching_witness_for_m2_psi7_equals_m2_psi10`,
+- `P33_missing_objects += explicit_pairwise_matching_witness_for_m2_psi2_equals_m2_psi5`,
+- `P33_missing_objects += explicit_pairwise_matching_witness_for_m2_psi8_equals_m2_psi11`,
+- `P33_missing_objects += explicit zero witness for the declared pair1 residual c1c1 equation`,
+- `P33_missing_objects += explicit zero witness for the declared pair1 residual s1s1 equation`,
+- `P33_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+- `N36_route_result := current repo still does not identify existing kernel feedback host with the exported canonical Psi block even after the one-pair direct m2 role-matching packet`,
+- nadal brak globalnego theorem-level/full-closure PASS i nadal brak globalnej redukcji glownego frontiera `R21/P28`.
+
 Co realnie zostalo dodane przez `AX1`:
 - otwarto jawny pozytywny lane `axiom-augmented`,
 - pod minimalnym aksjomacie selekcji z `QW-2192/QW-2193` uzyskano packet-ready actual:

@@ -1039,6 +1039,51 @@ Aktualizacja `N35`:
   nie twierdzi, ze `QW-2191` jest rozladowane,
   bez falszywego PASS.
 
+Aktualizacja `R26`:
+- zmaterializowano jawny `one-pair direct m2 role-matching packet`
+  dla `m2_psi1 / m2_psi4`,
+- packet eksportuje exact role match na dwoch poziomach:
+  canonical action
+  `m2_psi1*psi1**2/2 -> m2_psi4*psi4**2/2`,
+  oraz local eom
+  `m2_psi1*psi1(x) -> m2_psi4*psi4(x)`,
+- packet utrzymuje jawnie granice rygoru:
+  to nie jest witness rownosci `m2_psi1 = m2_psi4`,
+  tylko route-scoped role matching dla tej jednej pary,
+- kanal swiatlo/kernel pozostaje dokladnie tym samym juz zamknietym kanalem z
+  `R14`; `R26` dotyka tylko jednej non-light direct `m2` pary.
+
+Aktualizacja `P33`:
+- wykonano rerun direct formal family route po dodaniu `R26`,
+- wynik:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_AFTER_R26_DIRECT_M2_PSI1_PSI4_ROLE_MATCHING_PACKET`,
+- probe nie twierdzi, ze pairwise witness `m2_psi1 = m2_psi4` zachodzi;
+  twierdzi tylko, ze ten jeden brak zostal zwezony do:
+  declared role-matching packet
+  plus jeden still-missing coefficient-identification witness,
+- po tym rerunie na tej trasie zostaja:
+  `direct g4` zero witness,
+  `direct g6` zero witness,
+  `direct gY` zero witness,
+  coefficient-identification witness dla `m2_psi1 = m2_psi4`,
+  trzy pozostale direct `m2` pairwise witnesses,
+  `c1c1` zero witness,
+  `s1s1` zero witness,
+  oraz `QW-2191` canonicalization boundary.
+
+Aktualizacja `N36`:
+- wykonano theorem-level wynik dla direct formal family route po `R26/P33`,
+- `R26/P33/QW-2191/C10` razem wymuszaja wniosek:
+  obecny repo nadal nie identyfikuje hosta `QW-2186` z exported canonical
+  blockiem nawet po exact one-pair direct `m2` role-matching packet,
+- theorem jest jawnie `route-specific only`:
+  nie daje globalnej redukcji glownego frontiera z `R21/P28`,
+  nie twierdzi, ze `m2_psi1 = m2_psi4`,
+  nie twierdzi, ze inne direct `m2` pairwise witnesses zachodza,
+  nie twierdzi, ze direct `g4/g6/gY` defects znikaja,
+  nie twierdzi, ze `QW-2191` jest rozladowane,
+  bez falszywego PASS.
+
 ## Ontologiczna wskazowka programu
 
 Program jest prowadzony pod robocza ontologia:

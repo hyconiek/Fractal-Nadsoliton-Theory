@@ -9782,6 +9782,56 @@ Po tej rundzie:
    - albo probowac rozladowac `QW-2191`,
    - ale bez udawania, ze sufficient route jest konieczna albo rownowazna z direct `m2` shift witness.
 
+525. `R26/P33/N36`: one-pair direct `m2` role-matching reduction without false pass
+1. Zakres:
+   - nie probowac udowadniac od razu `m2_psi1 = m2_psi4`,
+   - zmaterializowac tylko jawny one-pair declared role-matching packet
+     dla `m2_psi1 / m2_psi4`,
+   - utrzymac jawnie, ze kanal swiatlo/kernel pozostaje tym samym zamknietym
+     kanalem z `R14`.
+2. Wynik:
+   - `R26` daje realny partial packet:
+     exact canonical-action i local-eom role match dla jednej direct `m2`
+     pary,
+   - `P33` zwraca:
+     `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_AFTER_R26_DIRECT_M2_PSI1_PSI4_ROLE_MATCHING_PACKET`,
+   - `N36` utrzymuje direct route negatywny bez falszywego PASS.
+3. Frontier po kroku:
+   - `R26_result := explicit direct m2 psi1/psi4 role-matching packet is now present`,
+   - `R26_scope := single direct mass-like m2 pair role-matching route only`,
+   - `R26_boundary := shared kernel/light-facing channel remains the already closed R14 channel`,
+   - `P33_missing_objects := explicit zero witness for direct quartic-like g4 family c1s1 shift defect`,
+   - `P33_missing_objects += explicit zero witness for direct quintic-like g6 family c1s1 shift defect`,
+   - `P33_missing_objects += explicit zero witness for direct yukawa-like gY family c1s1 shift defect`,
+   - `P33_missing_objects += explicit_coefficient_identification_witness_for_the_declared_role_matched_direct_m2_pair_m2_psi1_equals_m2_psi4`,
+   - `P33_missing_objects += explicit_pairwise_matching_witness_for_m2_psi7_equals_m2_psi10`,
+   - `P33_missing_objects += explicit_pairwise_matching_witness_for_m2_psi2_equals_m2_psi5`,
+   - `P33_missing_objects += explicit_pairwise_matching_witness_for_m2_psi8_equals_m2_psi11`,
+   - `P33_missing_objects += explicit zero witness for the declared pair1 residual c1c1 equation`,
+   - `P33_missing_objects += explicit zero witness for the declared pair1 residual s1s1 equation`,
+   - `P33_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+   - `N36_route_result := current repo still does not identify the existing-feedback host with the exported canonical Psi block even after the one-pair direct m2 role-matching packet`,
+   - brak claimu, ze glowny frontier `R21/P28` zostal globalnie rozladowany.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/R26_DIRECT_M2_PSI1_PSI4_ROLE_MATCHING_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/r26_direct_m2_psi1_psi4_role_matching_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r26_direct_m2_psi1_psi4_role_matching_packet.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r26_direct_m2_psi1_psi4_role_matching_packet_summary.json`,
+   - dodano `fundamental_action_reconstruction/P33_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_PROBE_AFTER_DIRECT_M2_PSI1_PSI4_ROLE_MATCHING_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/p33_existing_kernel_feedback_host_matching_direct_formal_c1s1_family_route_probe_after_direct_m2_psi1_psi4_role_matching_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p33_existing_kernel_feedback_host_matching_direct_formal_c1s1_family_route_probe_after_direct_m2_psi1_psi4_role_matching_packet.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p33_existing_kernel_feedback_host_matching_direct_formal_c1s1_family_route_probe_after_direct_m2_psi1_psi4_role_matching_packet_summary.json`,
+   - dodano `fundamental_action_reconstruction/N36_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_OBSTRUCTION_AFTER_DIRECT_M2_PSI1_PSI4_ROLE_MATCHING_PACKET_THEOREM.md`,
+   - dodano `fundamental_action_reconstruction/n36_current_existing_kernel_feedback_host_matching_direct_formal_c1s1_family_route_obstruction_after_direct_m2_psi1_psi4_role_matching_packet_theorem.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n36_current_existing_kernel_feedback_host_matching_direct_formal_c1s1_family_route_obstruction_after_direct_m2_psi1_psi4_role_matching_packet_theorem_summary.json`.
+5. Nastepny poprawny ruch:
+   - albo uderzyc juz bardzo wasko w
+     `explicit_coefficient_identification_witness_for_the_declared_role_matched_direct_m2_pair_m2_psi1_equals_m2_psi4`,
+   - albo osobno atakowac jeden z pozostalych `direct m2` pairwise witnesses,
+   - albo osobno atakowac jeden z `direct g4/g6/gY` zero witnesses,
+   - albo probowac rozladowac `QW-2191`,
+   - ale bez udawania, ze one-pair role matching dowodzi rownosci wspolczynnikow.
+
 
 - `H29`: stare proxy `retard_phase/tau/gain` moduluja preorientowany kanal, ale nie dostarczaja same wewnetrznego strict-core anchoru orientacji.
 - `H30`: `orientation_psi0 = mod(0.5*phi + 0.8*omega, 2*pi)` jest deterministycznym kandydatem anchoru z kernel invariants, ale nie jest jeszcze strict-core eksportem `theta_i`.
