@@ -1651,6 +1651,37 @@ Aktualizacja `P48/N51`:
 - najwezszy kolejny frontier przesuwa sie juz na
   `m2_psi4` `target-eom` witness, a nie na target-action defect.
 
+Aktualizacja `R38/P49/N52`:
+- wykonano najwezsza kolejna redukcje na tym samym
+  `canonical-ontology-supported` lane,
+- `R38` redukuje attacked `m2_psi4` `target-eom` witness do jednego
+  coefficient-identification gap na wspolnym support `psi4(x)`,
+- `P49/N52` utrzymuja route negatywny jako calosc, ale przesuwaja frontier z
+  ogolnego `target-eom role assignment witness` do jeszcze wezszej luki
+  `explicit_target_eom_monomial_coefficient_identification_witness_for_m2_psi4_and_mu_m2_plus3_segment_psi1_psi4_on_common_psi4_of_x_support`.
+
+Aktualizacja `R39/P50/N53`:
+- wykonano kolejna neutralna redukcje na tym samym
+  `canonical-ontology-supported` lane,
+- `R39` redukuje attacked `m2_psi4` `target-eom` coefficient-identification
+  gap do jednego exact defect-polynomial zero-witness gap na wspolnym support
+  `psi4(x)`,
+- `P50/N53` utrzymuja route negatywny jako calosc, ale przesuwaja frontier z
+  coefficient-identification witness do jeszcze wezszej luki
+  `explicit_zero_witness_for_the_direct_m2_psi4_target_eom_coefficient_defect_polynomial_on_common_psi4_of_x_support`.
+
+Aktualizacja `AX13/P51/N54`:
+- wykonano czwarty lokalny pozytywny ruch na lane
+  `canonical-ontology-supported`, tym razem dla attacked `m2_psi4`
+  `target-eom` defect,
+- `AX13` zamyka tylko lokalnie blocker
+  `explicit_zero_witness_for_the_direct_m2_psi4_target_eom_coefficient_defect_polynomial_on_common_psi4_of_x_support`,
+  bez strict-core promotion i bez wracania do cichego mieszania
+  `K_legacy_ont` z `K_strict_gate`,
+- `P51/N54` utrzymuja route negatywny jako calosc, ale frontier przesuwa sie
+  juz poza attacked `m2_psi4` lane na pozostale direct `m2` pairwise
+  witnesses oraz `g4/g6/gY`.
+
 ## Ontologiczna wskazowka programu
 
 Program jest prowadzony pod robocza ontologia:

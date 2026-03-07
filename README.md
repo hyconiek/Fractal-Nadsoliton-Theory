@@ -922,6 +922,20 @@ Current status:
   the attacked `m2_psi4` target-action defect blocker is locally closed only on
   the canonical-ontology-supported pre-observer route, while the whole route
   still remains open and the next narrow blocker is the `m2_psi4` target-eom witness,
+- `R38/P49/N52` now reduce that next `m2_psi4` target-eom blocker one layer
+  further: it is no longer tracked as a generic role-assignment gap but as one
+  coefficient-identification gap on fixed common support `psi4(x)`, while the
+  route still remains non-closed as a whole,
+- `R39/P50/N53` now reduce that target-eom coefficient-identification gap one
+  layer further: it is no longer tracked as a generic coefficient-label gap
+  but as one exact defect-polynomial zero-witness gap on fixed common support
+  `psi4(x)`, while the route still remains non-closed as a whole,
+- `AX13/P51/N54` now add the next honest local move on that corrected lane:
+  the attacked `m2_psi4` target-eom defect blocker is locally closed only on
+  the canonical-ontology-supported pre-observer route, while the whole route
+  still remains open and the next frontier shifts beyond the attacked
+  `m2_psi4` lane to the remaining direct `m2` pairwise witnesses and
+  `g4/g6/gY`,
 - this moves the theory forward only to an integrated effective/scope-closed gravity layer with explicit foundational blockers for `G`, Einstein-Hilbert derivation and full SM+GR reduction,
 - `A9` completed as a strict-scope partial SM+GR effective reduction layer,
 - this moves the theory forward only to an integrated effective material/gauge/gravity package with theorem-level unification still open,
