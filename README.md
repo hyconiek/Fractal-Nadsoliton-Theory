@@ -252,6 +252,16 @@ Primary state report:
   blockers, the target-side assignment witness, the other direct `m2`
   pairwise blockers, the main host route, and the already closed
   light-facing kernel channel remain otherwise unchanged.
+- The next honest move after that has now also been executed, still only on
+  that direct route and still only on the attacked source action side:
+  `R31` plus `P38/N41` do not prove `m2_psi1 = m2_psi4`. They only export the
+  exact common-support reduction of the one still-missing source action-role
+  assignment witness for `m2_psi1` into one still-missing coefficient-
+  identification witness on the fixed monomial support `psi1**2/2`, while the
+  source eom witness, the target-side assignment witness, the direct
+  `g4/g6/gY` family blockers, the other direct `m2` pairwise blockers, the
+  main host route, and the already closed light-facing kernel channel remain
+  otherwise unchanged.
 - This is real progress on the selector problem at extension level, but it does not upgrade strict-core closure and does not change `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 - Details: [`fundamental_action_reconstruction/README.md`](fundamental_action_reconstruction/README.md), [`fundamental_action_reconstruction/generated/pair1_operator_probe_report.json`](fundamental_action_reconstruction/generated/pair1_operator_probe_report.json).
 

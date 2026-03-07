@@ -1265,6 +1265,55 @@ Aktualizacja `N40`:
   nie twierdzi, ze `QW-2191` jest rozladowane,
   bez falszywego PASS.
 
+Aktualizacja `R31`:
+- zmaterializowano jawny `direct m2 psi1 source action common monomial support packet`,
+- packet nie dowodzi zadnej rownosci ani zadnego skracania globalnego;
+  rozbija tylko brak
+  `explicit_source_action_role_assignment_witness_for_m2_psi1_to_mu_m2_plus3_segment_psi1_psi4`
+  do jednego wezszejszego braku coefficient-identification na juz wspolnym
+  support `psi1**2/2`,
+- kanal swiatlo/kernel pozostaje dokladnie tym samym juz zamknietym kanalem z
+  `R14`; `R31` dotyka tylko jednej non-light source action-role strony.
+
+Aktualizacja `P38`:
+- wykonano rerun direct formal family route po dodaniu `R31`,
+- wynik:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_AFTER_R31_DIRECT_M2_PSI1_SOURCE_ACTION_COMMON_MONOMIAL_SUPPORT_PACKET`,
+- probe nie twierdzi, ze `m2_psi1 = m2_psi4` zachodzi;
+  twierdzi tylko, ze source action-side brak dla `m2_psi1` zostal zwezony do
+  jednego explicit coefficient-identification witness na wspolnym support
+  `psi1**2/2`,
+- po tym rerunie na tej trasie zostaja:
+  `direct g4` zero witness,
+  `direct g6` zero witness,
+  `direct gY` zero witness,
+  source action-side coefficient-identification witness dla `m2_psi1`,
+  source eom-role assignment witness dla `m2_psi1`,
+  target slot assignment witness dla `m2_psi4`,
+  trzy pozostale direct `m2` pairwise witnesses,
+  `c1c1` zero witness,
+  `s1s1` zero witness,
+  oraz `QW-2191` canonicalization boundary.
+
+Aktualizacja `N41`:
+- wykonano theorem-level wynik dla direct formal family route po `R31/P38`,
+- `R31/P38/QW-2191/C10` razem wymuszaja wniosek:
+  obecny repo nadal nie identyfikuje hosta `QW-2186` z exported canonical
+  blockiem nawet po exact common-support reduction dla source action-side
+  `m2_psi1`,
+- theorem jest jawnie `route-specific only`:
+  nie daje globalnej redukcji glownego frontiera z `R21/P28`,
+  nie twierdzi, ze `m2_psi1 = m2_psi4`,
+  nie twierdzi, ze common plus3 parameter istnieje,
+  nie twierdzi, ze source action-side coefficient-identification witness jest
+  obecny,
+  nie twierdzi, ze dowolne globalne cancellation/nonzero-factor argumenty
+  zachodza,
+  nie twierdzi, ze inne direct `m2` pairwise witnesses zachodza,
+  nie twierdzi, ze direct `g4/g6/gY` defects znikaja,
+  nie twierdzi, ze `QW-2191` jest rozladowane,
+  bez falszywego PASS.
+
 ## Ontologiczna wskazowka programu
 
 Program jest prowadzony pod robocza ontologia:

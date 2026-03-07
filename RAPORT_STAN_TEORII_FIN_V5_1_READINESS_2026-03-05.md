@@ -2919,6 +2919,46 @@ Frontier po `R30/P37/N40`:
 - `N40_route_result := current repo still does not identify existing kernel feedback host with the exported canonical Psi block even after the direct m2 psi1 source-side role split packet`,
 - nadal brak globalnego theorem-level/full-closure PASS i nadal brak globalnej redukcji glownego frontiera `R21/P28`.
 
+Co realnie zostalo dodane przez `R31`, `P38` i `N41`:
+- `R31` tworzy jawny `direct m2 psi1 source action common monomial support packet`,
+- `R31` nie dowodzi zadnej rownosci ani zadnego skrocenia globalnego;
+  rozbija tylko brak
+  `explicit_source_action_role_assignment_witness_for_m2_psi1_to_mu_m2_plus3_segment_psi1_psi4`
+  do jednego dokladniejszego braku:
+  `explicit_source_action_monomial_coefficient_identification_witness_for_m2_psi1_and_mu_m2_plus3_segment_psi1_psi4_on_common_psi1_squared_over_2_support`,
+- `R31` nie rusza warstwy swiatlo/kernel:
+  shared kernel/light-facing channel pozostaje dokladnie tym samym
+  juz zamknietym kanalem z `R14`,
+- `P38` rerunuje direct formal family route po `R31`,
+- wynik `P38`:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_AFTER_R31_DIRECT_M2_PSI1_SOURCE_ACTION_COMMON_MONOMIAL_SUPPORT_PACKET`,
+- `P38` rozklada source action-side brak dla `m2_psi1` do jednego wezszejego
+  coefficient-identification witness na wspolnym support `psi1**2/2`,
+- `N41` daje theorem-level updated-route wynik:
+  nawet po exact common-support reduction dla source action-side `m2_psi1`
+  obecny repo nadal nie identyfikuje hosta `QW-2186` z exported canonical
+  blockiem.
+
+Frontier po `R31/P38/N41`:
+- `R31_result := explicit direct m2 psi1 source action common monomial support packet is present`,
+- `R31_scope := single direct mass-like m2 source action-role common support only`,
+- `R31_light_boundary := shared kernel/light-facing channel remains exactly the already closed R14 channel`,
+- `P38_route_result := current direct formal c1s1 family route is still not computable after R31`,
+- `P38_missing_objects := explicit zero witness for direct quartic-like g4 family c1s1 shift defect`,
+- `P38_missing_objects += explicit zero witness for direct quintic-like g6 family c1s1 shift defect`,
+- `P38_missing_objects += explicit zero witness for direct yukawa-like gY family c1s1 shift defect`,
+- `P38_missing_objects += explicit_source_action_monomial_coefficient_identification_witness_for_m2_psi1_and_mu_m2_plus3_segment_psi1_psi4_on_common_psi1_squared_over_2_support`,
+- `P38_missing_objects += explicit_source_eom_role_assignment_witness_for_m2_psi1_to_mu_m2_plus3_segment_psi1_psi4`,
+- `P38_missing_objects += explicit_assignment_witness_of_m2_psi4_to_mu_m2_plus3_segment_psi1_psi4`,
+- `P38_missing_objects += explicit_pairwise_matching_witness_for_m2_psi7_equals_m2_psi10`,
+- `P38_missing_objects += explicit_pairwise_matching_witness_for_m2_psi2_equals_m2_psi5`,
+- `P38_missing_objects += explicit_pairwise_matching_witness_for_m2_psi8_equals_m2_psi11`,
+- `P38_missing_objects += explicit zero witness for the declared pair1 residual c1c1 equation`,
+- `P38_missing_objects += explicit zero witness for the declared pair1 residual s1s1 equation`,
+- `P38_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+- `N41_route_result := current repo still does not identify existing kernel feedback host with the exported canonical Psi block even after the direct m2 psi1 source action common-support packet`,
+- nadal brak globalnego theorem-level/full-closure PASS i nadal brak globalnej redukcji glownego frontiera `R21/P28`.
+
 Co realnie zostalo dodane przez `AX1`:
 - otwarto jawny pozytywny lane `axiom-augmented`,
 - pod minimalnym aksjomacie selekcji z `QW-2192/QW-2193` uzyskano packet-ready actual:

@@ -10045,6 +10045,66 @@ Po tej rundzie:
    - ale bez udawania, ze exact source-role split dowodzi istnienia common
      plus3 parameter albo ktoregokolwiek source-role assignment witnessa.
 
+530. `R31/P38/N41`: direct `m2 psi1` source action common-support reduction without false pass
+1. Zakres:
+   - nie probowac udowadniac od razu `m2_psi1 = m2_psi4`,
+   - nie dodawac nowego parametru ani nie twierdzic, ze zachodzi jakiekolwiek
+     globalne skrocenie lub nonzero-factor argument,
+   - rozbic tylko source action-side brak
+     `explicit_source_action_role_assignment_witness_for_m2_psi1_to_mu_m2_plus3_segment_psi1_psi4`
+     do jednego wezszejszego coefficient-identification witness na juz
+     wspolnym support `psi1**2/2`,
+   - utrzymac jawnie, ze kanal swiatlo/kernel pozostaje tym samym zamknietym
+     kanalem z `R14`.
+2. Wynik:
+   - `R31` daje realny partial packet:
+     exact common-support reduction dla source action-side `m2_psi1`,
+   - `P38` zwraca:
+     `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_AFTER_R31_DIRECT_M2_PSI1_SOURCE_ACTION_COMMON_MONOMIAL_SUPPORT_PACKET`,
+   - `N41` utrzymuje direct route negatywny bez falszywego PASS.
+3. Frontier po kroku:
+   - `R31_result := explicit direct m2 psi1 source action common monomial support packet is now present`,
+   - `R31_scope := single direct mass-like m2 source action-role common support only`,
+   - `R31_boundary := shared kernel/light-facing channel remains the already closed R14 channel`,
+   - `P38_missing_objects := explicit zero witness for direct quartic-like g4 family c1s1 shift defect`,
+   - `P38_missing_objects += explicit zero witness for direct quintic-like g6 family c1s1 shift defect`,
+   - `P38_missing_objects += explicit zero witness for direct yukawa-like gY family c1s1 shift defect`,
+   - `P38_missing_objects += explicit_source_action_monomial_coefficient_identification_witness_for_m2_psi1_and_mu_m2_plus3_segment_psi1_psi4_on_common_psi1_squared_over_2_support`,
+   - `P38_missing_objects += explicit_source_eom_role_assignment_witness_for_m2_psi1_to_mu_m2_plus3_segment_psi1_psi4`,
+   - `P38_missing_objects += explicit_assignment_witness_of_m2_psi4_to_mu_m2_plus3_segment_psi1_psi4`,
+   - `P38_missing_objects += explicit_pairwise_matching_witness_for_m2_psi7_equals_m2_psi10`,
+   - `P38_missing_objects += explicit_pairwise_matching_witness_for_m2_psi2_equals_m2_psi5`,
+   - `P38_missing_objects += explicit_pairwise_matching_witness_for_m2_psi8_equals_m2_psi11`,
+   - `P38_missing_objects += explicit zero witness for the declared pair1 residual c1c1 equation`,
+   - `P38_missing_objects += explicit zero witness for the declared pair1 residual s1s1 equation`,
+   - `P38_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+   - `N41_route_result := current repo still does not identify the existing-feedback host with the exported canonical Psi block even after the direct m2 psi1 source action common-support packet`,
+   - brak claimu, ze glowny frontier `R21/P28` zostal globalnie rozladowany.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/R31_DIRECT_M2_PSI1_SOURCE_ACTION_COMMON_MONOMIAL_SUPPORT_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/r31_direct_m2_psi1_source_action_common_monomial_support_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r31_direct_m2_psi1_source_action_common_monomial_support_packet.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r31_direct_m2_psi1_source_action_common_monomial_support_packet_summary.json`,
+   - dodano `fundamental_action_reconstruction/P38_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_PROBE_AFTER_DIRECT_M2_PSI1_SOURCE_ACTION_COMMON_MONOMIAL_SUPPORT_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/p38_existing_kernel_feedback_host_matching_direct_formal_c1s1_family_route_probe_after_direct_m2_psi1_source_action_common_monomial_support_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p38_existing_kernel_feedback_host_matching_direct_formal_c1s1_family_route_probe_after_direct_m2_psi1_source_action_common_monomial_support_packet.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p38_existing_kernel_feedback_host_matching_direct_formal_c1s1_family_route_probe_after_direct_m2_psi1_source_action_common_monomial_support_packet_summary.json`,
+   - dodano `fundamental_action_reconstruction/N41_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_OBSTRUCTION_AFTER_DIRECT_M2_PSI1_SOURCE_ACTION_COMMON_MONOMIAL_SUPPORT_PACKET_THEOREM.md`,
+   - dodano `fundamental_action_reconstruction/n41_current_existing_kernel_feedback_host_matching_direct_formal_c1s1_family_route_obstruction_after_direct_m2_psi1_source_action_common_monomial_support_packet_theorem.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n41_current_existing_kernel_feedback_host_matching_direct_formal_c1s1_family_route_obstruction_after_direct_m2_psi1_source_action_common_monomial_support_packet_theorem_summary.json`.
+5. Nastepny poprawny ruch:
+   - albo uderzyc juz bardzo wasko w
+     `explicit_source_action_monomial_coefficient_identification_witness_for_m2_psi1_and_mu_m2_plus3_segment_psi1_psi4_on_common_psi1_squared_over_2_support`,
+   - albo osobno uderzyc w
+     `explicit_source_eom_role_assignment_witness_for_m2_psi1_to_mu_m2_plus3_segment_psi1_psi4`,
+   - albo osobno uderzyc w
+     `explicit_assignment_witness_of_m2_psi4_to_mu_m2_plus3_segment_psi1_psi4`,
+   - albo osobno atakowac jeden z pozostalych `direct m2` pairwise witnesses,
+   - albo osobno atakowac jeden z `direct g4/g6/gY` zero witnesses,
+   - albo probowac rozladowac `QW-2191`,
+   - ale bez udawania, ze exact common-support reduction dowodzi obecnosci
+     coefficient-identification witnessa albo zadnego globalnego skrocenia.
+
 
 - `H29`: stare proxy `retard_phase/tau/gain` moduluja preorientowany kanal, ale nie dostarczaja same wewnetrznego strict-core anchoru orientacji.
 - `H30`: `orientation_psi0 = mod(0.5*phi + 0.8*omega, 2*pi)` jest deterministycznym kandydatem anchoru z kernel invariants, ale nie jest jeszcze strict-core eksportem `theta_i`.
