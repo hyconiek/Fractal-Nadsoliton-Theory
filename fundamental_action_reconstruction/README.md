@@ -439,6 +439,28 @@ Aktualizacja `N17`:
 - to jest realny progres redukcyjny do jednego residualnego witnessa,
   bez factorization discharge i bez falszywego PASS.
 
+Aktualizacja `P15`:
+- wykonano compute-or-fail probe bezposrednio na ostatnim nominalnym blockerze
+  z `P14`, czyli na
+  `intertwiner/equality witness`,
+- wynik:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_INTERTWINER_EQUALITY_WITNESS_ROUTE`,
+- probe rozbija ten pojedynczy nominalny witness na dwa mniejsze missing
+  objects:
+  coefficient-filled legacy chart-reduced operator object oraz sam
+  intertwiner/equality witness,
+- dodatkowo utrzymuje jawnie, ze najmocniejszy extension-lane composite witness
+  `H18/O2` pozostaje unevaluated i nie moze byc uzyty jako falszywy PASS.
+
+Aktualizacja `N18`:
+- wykonano theorem-level wynik dla tej jeszcze ostrzej zlokalizowanej trasy,
+- `R10/P10/P14/P15/C10/C15/H15/H18/O2` razem wymuszaja wniosek:
+  nawet po doprowadzeniu route do wybranego current-pair chart i po policzeniu
+  target blocku repo nadal nie eksportuje ani coefficient-filled legacy object
+  na tym charcie, ani witnessa jego rownosci z blokiem `P10`,
+- to jest dalszy realny progres zawężający factorization frontier, nadal bez
+  factorization discharge i bez falszywego PASS.
+
 ## Ontologiczna wskazowka programu
 
 Program jest prowadzony pod robocza ontologia:

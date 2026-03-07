@@ -2152,6 +2152,26 @@ Frontier po `R10/P14/N17`:
 - `P14_missing_objects := intertwiner-equality witness identifying the chart-reduced legacy object with the computed current-pair H3 block`,
 - nadal brak globalnego theorem-level/full-closure PASS.
 
+Co realnie zostalo dodane przez `P15` i `N18`:
+- `P15` testuje juz nie cala factorization route, tylko sam ostatni nominalny
+  witness z `P14` w trybie `compute-or-fail`,
+- wynik `P15`:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_INTERTWINER_EQUALITY_WITNESS_ROUTE`,
+- `P15` rozbija ostatni nominalny blocker na dwa jawne brakujace obiekty:
+  coefficient-filled legacy chart-reduced operator object na `pair1`
+  oraz odpowiadajacy mu intertwiner-equality witness do policzonego bloku `P10`,
+- `N18` daje theorem-level updated-route wynik:
+  nawet po doprowadzeniu route do current-pair chart i po policzeniu target
+  blocku repo nadal nie eksportuje ani lewego legacy object na tym charcie,
+  ani witnessa jego identyfikacji z blokiem `P10`.
+
+Frontier po `P15/N18`:
+- `P15_route_result := current intertwiner-equality witness route is not computable`,
+- `P15_missing_objects := explicit coefficient-filled legacy chart-reduced operator object on pair1 or equivalent target`,
+- `P15_missing_objects += intertwiner-equality witness identifying that legacy object with the computed current-pair H3 block`,
+- `N18_route_result := current repo still does not identify existing kernel feedback with the computed current-pair H3 block even after chart reduction`,
+- nadal brak globalnego theorem-level/full-closure PASS.
+
 Co realnie zostalo dodane przez `AX1`:
 - otwarto jawny pozytywny lane `axiom-augmented`,
 - pod minimalnym aksjomacie selekcji z `QW-2192/QW-2193` uzyskano packet-ready actual:

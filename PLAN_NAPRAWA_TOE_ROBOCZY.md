@@ -9122,6 +9122,34 @@ Po tej rundzie:
    - albo utrzymac lane negatywny i nie udawac, ze sama chart reduction daje
      juz factorization.
 
+521. `P15/N18` ostatni nominalny witness po `R10/P14/N17`.
+1. Co zostalo zrobione:
+   - `P15` wykonuje bezposredni `compute-or-fail` probe na ostatnim nominalnym
+     blockerze:
+     `intertwiner_or_equality_witness_identifying_the_chart_reduced_legacy_object_with_the_computed_current_pair_H3_block`,
+   - `N18` formalizuje theorem-level wynik dla tej jeszcze wezszej trasy.
+2. Wynik:
+   - `P15` zwraca:
+     `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_INTERTWINER_EQUALITY_WITNESS_ROUTE`,
+   - `N18` utrzymuje route negatywny bez falszywego PASS.
+3. Frontier po kroku:
+   - `P15_result := chosen current-pair chart reduction and computed current-pair H3 block are both present, but no coefficient-filled legacy chart-reduced operator object is exported`,
+   - `P15_missing_objects := explicit coefficient-filled legacy chart-reduced operator object on pair1 or equivalent actual target`,
+   - `P15_missing_objects += intertwiner-equality witness identifying that legacy object with the computed current-pair H3 block`,
+   - `N18_route_result := current existing-kernel-feedback factorization route still fails before operator identification even after chart reduction`,
+   - `P15_boundary := the strongest extension-lane composite witness H18/O2 remains unevaluated and therefore cannot be promoted into a fake equality witness`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/P15_EXISTING_KERNEL_FEEDBACK_INTERTWINER_EQUALITY_WITNESS_PROBE.md`,
+   - dodano `fundamental_action_reconstruction/p15_existing_kernel_feedback_intertwiner_equality_witness_probe.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p15_existing_kernel_feedback_intertwiner_equality_witness_probe.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p15_existing_kernel_feedback_intertwiner_equality_witness_probe_summary.json`,
+   - dodano `fundamental_action_reconstruction/N18_CURRENT_EXISTING_KERNEL_FEEDBACK_INTERTWINER_EQUALITY_WITNESS_NONDERIVATION_THEOREM.md`,
+   - dodano `fundamental_action_reconstruction/n18_current_existing_kernel_feedback_intertwiner_equality_witness_nonderivation_theorem.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n18_current_existing_kernel_feedback_intertwiner_equality_witness_nonderivation_theorem_summary.json`.
+5. Nastepny poprawny ruch:
+   - sprobowac wyeksportowac coefficient-filled legacy chart-reduced operator object na `pair1`,
+   - albo utrzymac factorization lane negatywny i nie twierdzic, ze witness juz istnieje.
+
 
 - `H29`: stare proxy `retard_phase/tau/gain` moduluja preorientowany kanal, ale nie dostarczaja same wewnetrznego strict-core anchoru orientacji.
 - `H30`: `orientation_psi0 = mod(0.5*phi + 0.8*omega, 2*pi)` jest deterministycznym kandydatem anchoru z kernel invariants, ale nie jest jeszcze strict-core eksportem `theta_i`.
