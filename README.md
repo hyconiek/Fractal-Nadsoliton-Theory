@@ -28,6 +28,12 @@ Primary state report:
 - A further route-specific theorem `N5` now sharpens the strict-core frontier:
   the current strict-core `psi0` lane itself is obstructed and cannot close
   selector generation without extra symmetry-breaking structure.
+- A new executable `P2` probe now tests the best current strict-core
+  `sigma_int` route all the way toward `A_1(pair1)` and returns
+  `NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_ROUTE` with a finite missing-object list.
+- A new FR-route bridge probe `P3` and route-specific theorem `N6` now show
+  that the current strict-core FR/topological route still does not derive a
+  residual orientation datum or theta-source.
 - This is real progress on the selector problem at extension level, but it does not upgrade strict-core closure and does not change `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 - Details: [`fundamental_action_reconstruction/README.md`](fundamental_action_reconstruction/README.md), [`fundamental_action_reconstruction/generated/pair1_operator_probe_report.json`](fundamental_action_reconstruction/generated/pair1_operator_probe_report.json).
 
@@ -757,6 +763,10 @@ Current status:
 - this moves the theory forward by stating directly that the current repo still lacks a strict-core selector-source derivation for `psi0`, while every currently computed selector split remains extension-only and anchor-imported,
 - `N5` completed as a route-specific psi0 obstruction theorem,
 - this moves the theory forward by proving that the current strict-core psi0 lane cannot close selector generation without extra symmetry-breaking structure, while still avoiding a false global impossibility claim,
+- `P2` completed as a strict-core compute-or-fail bridge probe,
+- this moves the theory forward by reducing the best current sigma-int route to a finite blocker-set for reaching `A_1(pair1)` instead of leaving the failure at the level of general selector rhetoric,
+- `P3` and `N6` completed as the executable and theorem-level versions of the same FR-route question,
+- this moves the theory forward by showing, in both machine-readable and theorem-level form, that the current FR/topological route remains candidate/control only and still fails before a strict-core residual-datum or theta-source derivation,
 - `D1` completed as the current best-supported project conclusion after `N3`,
 - this records the strongest honest interpretation now supported by the evidence: selector closure is not achieved in strict core, and the project must either discharge `T12_B1` directly or accept selector-axiom necessity / strict-core incompleteness as the active design conclusion,
 - `AX1` completed as an explicit axiom-augmented positive lane,

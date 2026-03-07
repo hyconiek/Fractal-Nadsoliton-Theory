@@ -34,6 +34,11 @@ Interpretacja rygorystyczna:
 - `N5` idzie o krok dalej na poziomie route-specific:
   obecny strict-core lane `psi0` jest juz theorem-level obstructed i nie moze
   domknac selectora bez dodatkowej symmetry-breaking structure,
+- `P2` zamienia ten wniosek w executable strict-core probe dla najlepszej obecnej
+  trasy `sigma_int -> ... -> A_1(pair1)` i zwraca skonczony blocker-set,
+- `P3` i `N6` schodza jeszcze nizej do samego FR bridge layer i pokazuja,
+  ze aktualna trasa FR/topological nadal nie wyprowadza residual datum ani
+  theta-source w strict core,
 - nie zmienia to decyzji `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 
 Artefakty:
@@ -1865,6 +1870,42 @@ Frontier po `N5`:
 - `N5_requirement := any successful psi0-based selector closure requires extra symmetry-breaking structure beyond the current strict core`,
 - `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
 - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- nadal brak globalnego theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `P2`:
+- wykonano strict-core `compute-or-fail` probe dla trasy
+  `sigma_int_candidate -> residual datum -> theta_1/theta_2 -> u_1/u_2 -> A_1(pair1)`,
+- probe nie zatrzymuje sie na ogolnym `selector open`, tylko zwraca skonczona liste brakujacych obiektow,
+- wynik:
+  `NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_ROUTE`,
+- brakujace obiekty redukuja sie do:
+  strict-core source object, strict-core bridge map, actual `theta_1/theta_2`,
+  populated `u_1/u_2`, operator bridge do `A_1(pair1)`.
+
+Frontier po `P2`:
+- `P2_route_result := current strict-core sigma-int route does not reach A_1(pair1)`,
+- `P2_missing_objects := strict_core_source_object / strict_core_bridge_map / theta_supply / populated_basis_pair / operator_bridge`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `C35_B1 := no strict-core actual theta source for the current pair frames`,
+- `C49_B1 := no strict-core supplied theta_1 theta_2 values for populating u_1 u_2 and S_orient_cand`,
+- nadal brak globalnego theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `P3` i `N6`:
+- `P3` wykonuje waski strict-core `compute-or-fail` probe dla FR route:
+  `sigma_int_candidate -> residual datum -> theta-source`,
+- `N6` daje theorem-level current-route wynik dla tej samej trasy,
+- oba artefakty zgadzaja sie:
+  obecna FR/topological route pozostaje candidate/control only,
+  nie daje strict-core residual datum,
+  nie daje strict-core theta-source,
+  i wymaga dodatkowych bridge objects.
+
+Frontier po `P3/N6`:
+- `P3_route_result := current strict-core FR route does not reach residual datum or theta-source`,
+- `N6_route_result := current strict-core FR route does not derive an internal selector source`,
+- `P3_missing_objects := strict sigma source / gauge quotient safety / bridge map / sigma-to-theta or internal Jab derivation / actual theta source`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `C35_B1 := no strict-core actual theta source for the current pair frames`,
 - nadal brak globalnego theorem-level/full-closure PASS.
 
 Co realnie zostalo dodane przez `AX1`:

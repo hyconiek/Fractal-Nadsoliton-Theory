@@ -1,0 +1,139 @@
+{
+  "stage": "P2",
+  "goal": "compute_or_fail_strict_core_sigma_int_to_A1_pair1",
+  "status": "NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_ROUTE",
+  "reason": "the sigma_int route stops before strict-core theta supply, basis-pair materialization, and operator-level export on pair1",
+  "lane": "strict_core_candidate_route",
+  "route_under_test": [
+    "sigma_int_candidate",
+    "residual_orientation_datum",
+    "theta_1_theta_2",
+    "u_1_u_2_and_orientation_slice",
+    "A_1(pair1)"
+  ],
+  "route_checks": [
+    {
+      "id": "qw2191_extra_symmetry_breaking_required",
+      "pass": true,
+      "expected": true,
+      "actual": true,
+      "meaning": "kernel alone requires extra symmetry breaking before uniqueness can close"
+    },
+    {
+      "id": "b4_sigma_candidate_exists",
+      "pass": true,
+      "expected": "sigma_int_candidate",
+      "actual": "sigma_int_candidate",
+      "meaning": "a minimal internal datum candidate exists"
+    },
+    {
+      "id": "b2_no_strict_internal_orientation_datum",
+      "pass": true,
+      "expected": 0,
+      "actual": 0,
+      "meaning": "no strict-core internal orientation datum has yet been derived"
+    },
+    {
+      "id": "b6_residual_z2_fit_present",
+      "pass": true,
+      "expected": "supported_candidate_fit",
+      "actual": "supported_candidate_fit",
+      "meaning": "sigma_int_candidate fits the residual Z2 slot only at candidate-fit level"
+    },
+    {
+      "id": "b7_overlay_only",
+      "pass": true,
+      "expected": "partial_control_route_only",
+      "actual": "partial_control_route_only",
+      "meaning": "the bridge remains overlay/control-route only and not strict-core discharge"
+    },
+    {
+      "id": "t2_strict_core_map_absent",
+      "pass": true,
+      "expected": false,
+      "actual": false,
+      "meaning": "no strict-core equivalence/export map from sigma_int_candidate to residual datum is present"
+    },
+    {
+      "id": "c35_strict_core_actual_phase_source_absent",
+      "pass": true,
+      "expected": "not_shown",
+      "actual": "not_shown",
+      "meaning": "strict core still does not export actual theta_1, theta_2"
+    },
+    {
+      "id": "c37_candidate_internalization_only",
+      "pass": true,
+      "expected": "yes_candidate_fit",
+      "actual": "yes_candidate_fit",
+      "meaning": "internalization is still only candidate-fit, not strict equivalence"
+    },
+    {
+      "id": "c46_acceptance_carrier_exists",
+      "pass": true,
+      "expected": true,
+      "actual": true,
+      "meaning": "an acceptance-artifact carrier exists, but that is not yet a bridge theorem/export"
+    },
+    {
+      "id": "c47_orientation_slice_class_present",
+      "pass": true,
+      "expected": "present_partial",
+      "actual": "present_partial",
+      "meaning": "a class-level orientation-slice candidate exists"
+    },
+    {
+      "id": "c48_basis_pair_export_skeleton_present",
+      "pass": true,
+      "expected": "present_partial",
+      "actual": "present_partial",
+      "meaning": "a minimal basis-pair export skeleton exists"
+    },
+    {
+      "id": "c49_actual_theta_supply_absent",
+      "pass": true,
+      "expected": "not_shown",
+      "actual": "not_shown",
+      "meaning": "the basis-pair schema still lacks strict-core theta supply"
+    }
+  ],
+  "route_state": {
+    "sigma_int_candidate_exists": true,
+    "strict_core_source_object_present": false,
+    "residual_z2_candidate_fit_present": true,
+    "strict_core_equivalence_or_export_map_present": false,
+    "strict_core_actual_theta_supply_present": false,
+    "acceptance_artifact_carrier_exists": true,
+    "orientation_slice_candidate_class_present": true,
+    "basis_pair_export_skeleton_present": true,
+    "actual_basis_pair_export_present": false,
+    "conditional_basis_pair_population_schema_present": true,
+    "strict_core_route_reaches_operator_stage": false
+  },
+  "supporting_present_but_insufficient_objects": [
+    "sigma_int_candidate",
+    "residual_Z2_candidate_fit",
+    "acceptance_artifact_carrier",
+    "orientation_slice_candidate_class",
+    "basis_pair_export_skeleton",
+    "conditional_basis_pair_population_schema"
+  ],
+  "missing_upstream_objects": [
+    "strict_core_source_object_upgrading_sigma_int_candidate_beyond_candidate_only_status",
+    "strict_core_equivalence_or_export_map_sigma_int_candidate_to_residual_orientation_datum",
+    "strict_core_actual_theta_1_theta_2_supply_for_current_pair_frames",
+    "populated_actual_basis_pair_export_u_1_u_2_for_current_pair_frames",
+    "strict_core_operator_level_bridge_from_materialized_orientation_slice_to_A_1_pair1"
+  ],
+  "blocking_frontier": {
+    "B2_reduced_blocker": "no derived internal orientation datum exists in the current strict core to discharge QW-2191",
+    "T2_B1": "the_bridge_theorem_is_specified_but_not_discharged_strict_core_target_slot_and_equivalence_export_map_remain_absent",
+    "C35_B1": "no_strict_core_export_of_actual_local_phase_coordinates_theta_1_theta_2_for_the_actual_pair_frames; only an axiom_augmented_source_branch_theta_star_equals_0_is_currently_available",
+    "C49_B1": "no_strict_core_supplied_actual_theta_1_theta_2_values_for_instantiating_the_now_packet_ready_conditional_populated_instance_schema_of_u_1_u_2_and_S_orient_cand",
+    "C32_B2": "raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12"
+  },
+  "computed": {},
+  "required_next_step": "IMPLEMENT_ONE_OF_THE_MISSING_STRICT_CORE_OBJECTS_AND_RERUN_P2_BEFORE_CLAIMING_A1_PAIR1_STRICT_CORE_REACHABILITY",
+  "strict_core_promotion": false,
+  "no_false_pass": true
+}

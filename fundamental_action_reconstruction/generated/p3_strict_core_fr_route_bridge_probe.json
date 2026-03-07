@@ -1,0 +1,134 @@
+{
+  "stage": "P3",
+  "goal": "compute_or_fail_strict_core_fr_route_bridge",
+  "status": "NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_FR_ROUTE",
+  "reason": "the FR/topological route remains candidate/control only and does not yet export a strict-core residual-datum bridge or theta source",
+  "lane": "strict_core_fr_topological_route",
+  "route_under_test": [
+    "sigma_int_candidate",
+    "residual_orientation_datum",
+    "theta_1_theta_2"
+  ],
+  "route_checks": [
+    {
+      "id": "b4_sigma_candidate_exists",
+      "pass": true,
+      "expected": "sigma_int_candidate",
+      "actual": "sigma_int_candidate",
+      "meaning": "the FR route has a canonical candidate datum"
+    },
+    {
+      "id": "b8_no_strict_derivation_of_sigma",
+      "pass": true,
+      "expected": true,
+      "actual": true,
+      "meaning": "sigma_int_candidate is not yet strict-derived"
+    },
+    {
+      "id": "b5_full_gauge_quotient_safety_open",
+      "pass": true,
+      "expected": "open",
+      "actual": "open",
+      "meaning": "full gauge-quotient safety remains open"
+    },
+    {
+      "id": "b6_sigma_alone_to_theta_not_shown",
+      "pass": true,
+      "expected": "not_shown",
+      "actual": "not_shown",
+      "meaning": "sigma alone does not yet derive theta"
+    },
+    {
+      "id": "b6_factorized_bridge_only",
+      "pass": true,
+      "expected": "candidate_control_bridge_identified",
+      "actual": "candidate_control_bridge_identified",
+      "meaning": "the bridge exists only as a factorized control route"
+    },
+    {
+      "id": "b7_overlay_compatibility_only",
+      "pass": true,
+      "expected": "partial_control_route_only",
+      "actual": "partial_control_route_only",
+      "meaning": "compatibility is overlay-only, not strict-core discharge"
+    },
+    {
+      "id": "t2_map_absent",
+      "pass": true,
+      "expected": false,
+      "actual": false,
+      "meaning": "no strict-core bridge map exists"
+    },
+    {
+      "id": "c37_equivalence_bridge_not_shown",
+      "pass": true,
+      "expected": "not_shown",
+      "actual": "not_shown",
+      "meaning": "candidate internalization is not strict equivalence"
+    },
+    {
+      "id": "c38_theorem_spec_absent",
+      "pass": true,
+      "expected": false,
+      "actual": false,
+      "meaning": "no strict-core theorem-spec exists for the bridge"
+    },
+    {
+      "id": "c35_actual_theta_source_absent",
+      "pass": true,
+      "expected": "not_shown",
+      "actual": "not_shown",
+      "meaning": "the FR route does not yet supply actual theta_1, theta_2"
+    },
+    {
+      "id": "c46_carrier_exists_but_is_insufficient",
+      "pass": true,
+      "expected": true,
+      "actual": true,
+      "meaning": "a carrier exists, but carrier presence is not a bridge theorem/export"
+    }
+  ],
+  "route_state": {
+    "sigma_int_candidate_exists": true,
+    "strict_derivation_of_sigma_int_candidate_present": false,
+    "full_gauge_quotient_safety_present": false,
+    "strict_core_equivalence_or_export_map_present": false,
+    "standalone_sigma_to_theta_derivation_present": false,
+    "internal_derivation_of_selector_family_present": false,
+    "strict_core_actual_theta_source_present": false,
+    "carrier_exists": true,
+    "route_reaches_residual_datum": false,
+    "route_reaches_theta_source": false
+  },
+  "supporting_present_but_insufficient_objects": [
+    "sigma_int_candidate",
+    "partial_local_stability_support",
+    "factorized_control_bridge",
+    "overlay_compatibility",
+    "acceptance_artifact_carrier"
+  ],
+  "missing_upstream_objects": [
+    "strict_derivation_or_strict_core_source_object_upgrade_for_sigma_int_candidate",
+    "theorem_level_gauge_quotient_safety_for_sigma_int_candidate",
+    "strict_core_equivalence_or_export_map_sigma_int_candidate_to_residual_orientation_datum",
+    "strict_core_sigma_int_to_theta_map_or_internal_derivation_of_Jab_selector_family",
+    "strict_core_actual_theta_1_theta_2_source_for_current_pair_frames"
+  ],
+  "blocking_frontier": {
+    "B8_residual_blockers": [
+      "no_strict_derivation_of_sigma_int_candidate",
+      "no_theorem_level_gauge_quotient_safety",
+      "no_sigma_alone_to_theta_derivation",
+      "no_internal_derivation_of_Jab_selector_family",
+      "no_axiom_free_uniqueness_closure_after_QW_2191"
+    ],
+    "T2_B1": "the_bridge_theorem_is_specified_but_not_discharged_strict_core_target_slot_and_equivalence_export_map_remain_absent",
+    "C35_B1": "no_strict_core_export_of_actual_local_phase_coordinates_theta_1_theta_2_for_the_actual_pair_frames; only an axiom_augmented_source_branch_theta_star_equals_0_is_currently_available",
+    "C37_B1": "no_packet_ready_strict_core_equivalence_or_export_theorem_identifying_the_residual_orientation_sign_convention_with_an_internal_topological_datum_sigma_int_candidate; only_candidate_fit_on_the_overlay_lane_is_available",
+    "C38_B1": "no_packet_ready_strict_core_theorem_spec_or_export_spec_for_identifying_sigma_int_candidate_with_the_residual_orientation_datum; only_candidate_fit_on_overlay_lane_exists"
+  },
+  "computed": {},
+  "required_next_step": "IMPLEMENT_ONE_MISSING_STRICT_CORE_FR_BRIDGE_OBJECT_AND_RERUN_P3_BEFORE_CLAIMING_INTERNAL_SOURCE_REACHABILITY",
+  "strict_core_promotion": false,
+  "no_false_pass": true
+}

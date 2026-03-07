@@ -8557,6 +8557,72 @@ Po tej rundzie:
    - nie wracac do otwartej meta-drabinki theorem-spec bez nowej struktury.
 
 
+## 523. Strict-core sigma-int to A1(pair1) compute-or-fail probe (2026-03-07)
+
+1. Cel:
+   - przetestowac najlepsza obecna strict-core route od `sigma_int_candidate`
+     az do `A_1(pair1)`,
+   - nie zatrzymywac sie na ogolnym stwierdzeniu, ze selector jest open,
+   - wymusic jawny blocker-set.
+2. Wynik:
+   - uruchomiono probe dla trasy
+     `sigma_int_candidate -> residual datum -> theta_1/theta_2 -> u_1/u_2 -> A_1(pair1)`,
+   - `sigma_int_candidate` istnieje jako kandydat,
+   - residualny `Z2` fit istnieje,
+   - acceptance carrier i basis-level skeleton/schema istnieja,
+   - ale strict-core source object, strict-core bridge map i strict-core theta supply nadal nie istnieja,
+   - wynik probe:
+     `NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_ROUTE`.
+3. Frontier po kroku:
+   - `P2_route_result := current strict-core sigma-int route does not reach A_1(pair1)`,
+   - `P2_missing_objects := strict_core_source_object / strict_core_bridge_map / theta_supply / populated_basis_pair / operator_bridge`,
+   - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+   - `C35_B1 := no strict-core actual theta source for current pair frames`,
+   - `C49_B1 := no strict-core supplied theta_1 theta_2 values for populating u_1 u_2 and S_orient_cand`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/P2_STRICT_CORE_SIGMA_INT_TO_A1_PAIR1_PROBE.md`,
+   - dodano `fundamental_action_reconstruction/p2_strict_core_sigma_int_to_a1_pair1_probe.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p2_strict_core_sigma_int_to_a1_pair1_probe.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p2_strict_core_sigma_int_to_a1_pair1_probe_summary.json`.
+5. Nastepny poprawny ruch:
+   - albo rozladowac jeden konkretny element z `P2_missing_objects`,
+   - albo podniesc lane negatywny do mocniejszego route-level impossibility theorem,
+   - nie wracac do ogolnych audit ladder bez redukcji blocker-set.
+
+
+## 524. Strict-core FR route bridge probe and route-specific nonderivation theorem (2026-03-07)
+
+1. Cel:
+   - zejsc z ogolnego `sigma_int route` do samego bridge layer FR/topological:
+     `sigma_int_candidate -> residual datum -> theta-source`,
+   - dostac jednoczesnie wynik executable i theorem-level.
+2. Wynik:
+   - `P3` uruchamia strict-core `compute-or-fail` probe dla trasy FR,
+   - wynik `P3`:
+     `NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_FR_ROUTE`,
+   - `N6` formalizuje ten sam stan theorem-level:
+     obecna strict-core FR route nie wyprowadza residual orientation datum ani actual theta-source,
+   - carrier, candidate-fit i overlay compatibility pozostaja obecne, ale nadal sa niewystarczajace do strict-core bridge.
+3. Frontier po kroku:
+   - `P3_route_result := current strict-core FR route does not reach residual datum or theta-source`,
+   - `N6_route_result := current strict-core FR route does not derive an internal selector source`,
+   - `P3_missing_objects := strict sigma source / gauge quotient safety / bridge map / sigma-to-theta or internal Jab derivation / actual theta source`,
+   - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+   - `C35_B1 := no strict-core actual theta source for current pair frames`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/P3_STRICT_CORE_FR_ROUTE_BRIDGE_PROBE.md`,
+   - dodano `fundamental_action_reconstruction/p3_strict_core_fr_route_bridge_probe.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p3_strict_core_fr_route_bridge_probe.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p3_strict_core_fr_route_bridge_probe_summary.json`,
+   - dodano `fundamental_action_reconstruction/N6_CURRENT_STRICT_CORE_FR_ROUTE_NONDERIVATION_THEOREM.md`,
+   - dodano `fundamental_action_reconstruction/n6_current_strict_core_fr_route_nonderivation_theorem.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n6_current_strict_core_fr_route_nonderivation_theorem_summary.json`.
+5. Nastepny poprawny ruch:
+   - albo zbudowac jeden missing FR bridge object i rerun `P3`,
+   - albo dopiero wtedy probowac silniejszej globalizacji negatywnej,
+   - nie wracac do ogolnych audit ladder bez nowego bridge object.
+
+
 - `H29`: stare proxy `retard_phase/tau/gain` moduluja preorientowany kanal, ale nie dostarczaja same wewnetrznego strict-core anchoru orientacji.
 - `H30`: `orientation_psi0 = mod(0.5*phi + 0.8*omega, 2*pi)` jest deterministycznym kandydatem anchoru z kernel invariants, ale nie jest jeszcze strict-core eksportem `theta_i`.
 - `H31`: `psi0` ma formalny embedding do `pair1=(c_1,s_1)`, ale nadal nie ma dowodu, ze jest to strict-core redukcja selektora, a nie tylko wybor wspolrzednych.
