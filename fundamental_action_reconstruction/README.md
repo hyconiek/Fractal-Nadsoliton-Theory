@@ -52,6 +52,10 @@ Aktualizacja `H37`:
 - strict core nie ma jeszcze zadnego sign-sensitive state object ani observabla na `pair1`,
 - wiec nadal nie odroznia `u` od `-u` jako fizycznie roznych stanow selektora.
 
+Aktualizacja `H38`:
+- strict core wspiera teraz co najwyzej lokalny projektowy/ray-level reprezentant selektora na `pair1`,
+- ale nadal nie daje fizycznie zindywidualizowanego skierowanego stanu selektora.
+
 Aktualizacja `V1`:
 - `informational viscosity` zostaje utrzymane jako slabsza hipoteza konkurencyjna,
 - wsparta przez stare struktury damping/memory,

@@ -2405,6 +2405,7 @@ Frontier po `H5`:
 - `H35`: strict core ma tylko coordinate-level direction `u_psi0_pair1` wewnatrz `pair1`, ale nie ma jeszcze argumentu, ze `psi0` wybiera tam fizycznie uprzywilejowana os.
 - `H36`: strict core ma tylko undirected axis representative `u_psi0_pair1` wewnatrz `pair1`, ale nadal nie ma argumentu, ze wybiera zwrot osi i fizycznie odroznia `u_psi0_pair1` od `-u_psi0_pair1`.
 - `H37`: strict core nie ma jeszcze zadnego sign-sensitive state object ani observabla na `pair1`, wiec nadal nie odroznia `u` od `-u` jako fizycznie roznych stanow selektora.
+- `H38`: strict core wspiera teraz co najwyzej lokalny projektowy/ray-level reprezentant selektora na `pair1`, ale nadal nie daje fizycznie zindywidualizowanego skierowanego stanu selektora.
 - `V1`: `informational viscosity` zostaje utrzymane jako konkurencyjna hipoteza extension lane, ale bez jawnego operatora selektora i bez redukcji do `pair1`.
 - `V2`: istniejace proxy `lepkość/damping/memory` pozostaja tylko coarse-grained modyfikatorami odpowiedzi i nadal nie daja redukcji do `pair1=(c_1,s_1)`.
 - `V3`: minimalny pair-level operator lepkości jest dopuszczalny tylko jako izotropowy `nu_iso * I_2` albo anizotropowy z importowanym anchorem `psi0`, wiec sam nie domyka selektora.
