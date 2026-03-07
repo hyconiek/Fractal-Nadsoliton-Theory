@@ -9276,6 +9276,42 @@ Po tej rundzie:
    - albo probowac zbudowac jeden rzeczywisty `host-to-submatrix matching witness`,
      ale bez promowania full-support exportu do selector-relevant target bez dowodu.
 
+526. `R13/P20/N23` partial host/block overlap po `R12/P19/N22`.
+1. Co zostalo zrobione:
+   - `R13` materializuje jawny `partial host-to-canonical-block overlap packet`,
+   - packet utrzymuje wprost wspolny kernel/light-facing kanal oraz
+     provenance hostowego diagonal floor przez `QW-2124`,
+   - `P20` rerunuje trase `host matching witness` po `R13`,
+   - `N23` formalizuje theorem-level wynik dla tej zaktualizowanej trasy.
+2. Wynik:
+   - `R13` daje realny partial packet:
+     overlap host/block jest obecny,
+   - `P20` zwraca:
+     `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_WITNESS_ROUTE_AFTER_R13_PARTIAL_OVERLAP_PACKET`,
+   - `N23` utrzymuje route negatywny bez falszywego PASS.
+3. Frontier po kroku:
+   - `R13_result := partial host-to-canonical-block overlap is now present`,
+   - `P20_missing_objects := explicit coefficient specialization witness from the symbolic canonical kernel channel to the frozen numeric K_total matrix on the same 12-slot carrier`,
+   - `P20_missing_objects += explicit diagonal-sector equality or matching witness linking the host floor m0^2 I to the canonical local diagonal sector or to a declared control pullback of it`,
+   - `P20_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+   - `N23_route_result := current repo still does not identify the existing-feedback host with the exported canonical Psi block even after the partial overlap packet`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/R13_PARTIAL_HOST_TO_CANONICAL_BLOCK_OVERLAP_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/r13_partial_host_to_canonical_block_overlap_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r13_partial_host_to_canonical_block_overlap_packet.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r13_partial_host_to_canonical_block_overlap_packet_summary.json`,
+   - dodano `fundamental_action_reconstruction/P20_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_WITNESS_RERUN_AFTER_PARTIAL_OVERLAP_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/p20_existing_kernel_feedback_host_matching_witness_rerun_after_partial_overlap_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p20_existing_kernel_feedback_host_matching_witness_rerun_after_partial_overlap_packet.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p20_existing_kernel_feedback_host_matching_witness_rerun_after_partial_overlap_packet_summary.json`,
+   - dodano `fundamental_action_reconstruction/N23_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_OBSTRUCTION_AFTER_PARTIAL_OVERLAP_PACKET_THEOREM.md`,
+   - dodano `fundamental_action_reconstruction/n23_current_existing_kernel_feedback_host_matching_obstruction_after_partial_overlap_packet_theorem.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n23_current_existing_kernel_feedback_host_matching_obstruction_after_partial_overlap_packet_theorem_summary.json`.
+5. Nastepny poprawny ruch:
+   - albo uderzyc juz bardzo wasko w `kernel coefficient specialization witness`,
+   - albo probowac rozladowac `diagonal-sector matching witness`,
+   - przy utrzymaniu `QW-2191` jako osobnego aktywnego boundary.
+
 
 - `H29`: stare proxy `retard_phase/tau/gain` moduluja preorientowany kanal, ale nie dostarczaja same wewnetrznego strict-core anchoru orientacji.
 - `H30`: `orientation_psi0 = mod(0.5*phi + 0.8*omega, 2*pi)` jest deterministycznym kandydatem anchoru z kernel invariants, ale nie jest jeszcze strict-core eksportem `theta_i`.

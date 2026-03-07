@@ -560,6 +560,33 @@ Aktualizacja `N22`:
   kernel-mixing/light-facing channel jest juz jawny na poziomie canonical blocku,
   lecz nadal nie ma canonicalization + matching witness, bez falszywego PASS.
 
+Aktualizacja `R13`:
+- zmaterializowano jawny `partial host-to-canonical-block overlap packet`,
+- packet pokazuje, ze host `QW-2186` i canonical block `R12` dziela:
+  wspolny `12`-slot carrier,
+  wspolny kernel/light-facing kanal,
+  oraz osobna provenance hostowego diagonal floor przez `QW-2124`,
+- packet nadal nie twierdzi, ze istnieje pelna rownosc operatorow.
+
+Aktualizacja `P20`:
+- wykonano rerun trasy `host matching witness` po `R13`,
+- wynik:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_WITNESS_ROUTE_AFTER_R13_PARTIAL_OVERLAP_PACKET`,
+- probe rozbija dawny pojedynczy blocker matchingu na dwa realne sub-blockery:
+  kernel coefficient specialization witness oraz diagonal-sector matching
+  witness,
+- `QW-2191` pozostaje osobnym, nadal aktywnym blockerem canonicalization.
+
+Aktualizacja `N23`:
+- wykonano theorem-level wynik dla zaktualizowanej trasy po `R13/P20`,
+- `R13/P20/QW-2191/C10` razem wymuszaja wniosek:
+  partial host/block overlap jest juz obecny, ale repo nadal nie identyfikuje
+  hosta `QW-2186` z exported canonical blockiem,
+- to jest dalszy realny progres redukcyjny z zachowaniem watku swiatla:
+  shared kernel/light-facing content jest juz jawne po obu stronach,
+  ale nadal brak coefficient specialization + diagonal matching + canonicalization,
+  bez falszywego PASS.
+
 ## Ontologiczna wskazowka programu
 
 Program jest prowadzony pod robocza ontologia:

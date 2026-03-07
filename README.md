@@ -123,6 +123,12 @@ Primary state report:
   only through the strict-admissible kernel-mixing carrier; the host route
   stays negative, but the concrete submatrix blocker is discharged and only
   `QW-2191` canonicalization plus host matching remain.
+- The next honest move after that has now also been executed: `R13` plus
+  `P20/N23` materialize a partial host-to-canonical-block overlap packet,
+  keeping the shared light-facing content explicit through the frozen
+  `K_total` carrier and the canonical kernel-mixing channel; the host route
+  stays negative, but the last matching blocker is now decomposed into kernel
+  specialization, diagonal matching, and the still-open `QW-2191` boundary.
 - This is real progress on the selector problem at extension level, but it does not upgrade strict-core closure and does not change `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 - Details: [`fundamental_action_reconstruction/README.md`](fundamental_action_reconstruction/README.md), [`fundamental_action_reconstruction/generated/pair1_operator_probe_report.json`](fundamental_action_reconstruction/generated/pair1_operator_probe_report.json).
 

@@ -2275,6 +2275,35 @@ Frontier po `R12/P19/N22`:
 - `N22_route_result := current repo still does not identify existing kernel feedback host with the exported canonical Psi block`,
 - nadal brak globalnego theorem-level/full-closure PASS.
 
+Co realnie zostalo dodane przez `R13`, `P20` i `N23`:
+- `R13` tworzy jawny `partial host-to-canonical-block overlap packet`:
+  host `QW-2186` i canonical block `R12` maja wspolny `12`-slot carrier,
+  wspolny kernel/light-facing kanal i osobna provenance diagonal floor przez
+  `QW-2124`,
+- `R13` utrzymuje jednak jawnie, ze to tylko overlap packet, a nie pelny
+  matching witness,
+- `P20` rerunuje bezposrednio trase `host matching witness` po `R13`,
+- wynik `P20`:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_WITNESS_ROUTE_AFTER_R13_PARTIAL_OVERLAP_PACKET`,
+- `P20` rozbija dawny pojedynczy blocker matchingu na dwa wezsze matching
+  blockers:
+  coefficient specialization of the symbolic canonical kernel channel
+  plus diagonal-sector matching,
+  przy aktywnym nadal `QW-2191` boundary,
+- `N23` daje theorem-level updated-route wynik:
+  nawet po `R13` repo nadal nie identyfikuje hosta `QW-2186` z exported
+  canonical blockiem, ale frontier jest juz ostrzej rozbity.
+
+Frontier po `R13/P20/N23`:
+- `R13_result := partial host-to-canonical-block overlap is present`,
+- `R13_light_facing_result := shared kernel/light-facing content is explicit on both sides at structural level`,
+- `P20_route_result := current host matching witness route is still not computable after R13`,
+- `P20_missing_objects := explicit coefficient specialization witness from the symbolic canonical kernel channel to the frozen numeric K_total matrix on the same 12-slot carrier`,
+- `P20_missing_objects += explicit diagonal-sector equality or matching witness linking the host floor m0^2 I to the canonical local diagonal sector or to a declared control pullback of it`,
+- `P20_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+- `N23_route_result := current repo still does not identify existing kernel feedback host with the exported canonical Psi block even after the partial overlap packet`,
+- nadal brak globalnego theorem-level/full-closure PASS.
+
 Co realnie zostalo dodane przez `AX1`:
 - otwarto jawny pozytywny lane `axiom-augmented`,
 - pod minimalnym aksjomacie selekcji z `QW-2192/QW-2193` uzyskano packet-ready actual:
