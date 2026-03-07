@@ -39,6 +39,9 @@ Interpretacja rygorystyczna:
 - `P3` i `N6` schodza jeszcze nizej do samego FR bridge layer i pokazuja,
   ze aktualna trasa FR/topological nadal nie wyprowadza residual datum ani
   theta-source w strict core,
+- `P4` i `N7` schodza jeszcze weziej do samego T2 choke point i pokazuja,
+  ze aktualna trasa `sigma_int -> residual datum` nadal zatrzymuje sie na
+  candidate-fit, carrier infrastructure i axiom-lane witness,
 - nie zmienia to decyzji `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 
 Artefakty:
@@ -1906,6 +1909,23 @@ Frontier po `P3/N6`:
 - `P3_missing_objects := strict sigma source / gauge quotient safety / bridge map / sigma-to-theta or internal Jab derivation / actual theta source`,
 - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
 - `C35_B1 := no strict-core actual theta source for the current pair frames`,
+- nadal brak globalnego theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `P4` i `N7`:
+- `P4` wykonuje najwezszy strict-core `compute-or-fail` probe dla trasy
+  `sigma_int_candidate -> residual orientation datum`,
+- `N7` daje theorem-level current-route wynik dla tej samej trasy,
+- oba artefakty zgadzaja sie:
+  semantic target fields, acceptance carrier i axiom-lane bridge witness sa
+  obecne, ale nadal nie daja strict-core residual datum bridge,
+- current route nadal nie eksportuje residual orientation datum w strict core.
+
+Frontier po `P4/N7`:
+- `P4_route_result := current strict-core sigma-int route does not reach strict-core residual orientation datum`,
+- `N7_route_result := current strict-core sigma-int route does not derive a strict-core residual orientation datum`,
+- `P4_missing_objects := strict sigma source / gauge quotient safety / strict target-slot export / bridge map / beyond-overlay selector-track identification`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- `AX3_result := positive sigma-int bridge instance exists on axiom lane only and does not change strict core`,
 - nadal brak globalnego theorem-level/full-closure PASS.
 
 Co realnie zostalo dodane przez `AX1`:

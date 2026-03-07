@@ -8623,6 +8623,44 @@ Po tej rundzie:
    - nie wracac do ogolnych audit ladder bez nowego bridge object.
 
 
+## 525. Strict-core sigma-int to residual-datum bridge probe and route-specific nonderivation theorem (2026-03-07)
+
+1. Cel:
+   - uderzyc bezposrednio w najwezszy wspolny choke point dla `P2` i `P3`:
+     `sigma_int_candidate -> residual orientation datum`,
+   - rozdzielic jawnie:
+     `candidate-fit / carrier infrastructure / axiom-lane witness`
+     od
+     `strict-core residual-datum bridge`.
+2. Wynik:
+   - `P4` uruchamia najwezszy strict-core `compute-or-fail` probe dla tej trasy,
+   - wynik `P4`:
+     `NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_RESIDUAL_DATUM_ROUTE`,
+   - `N7` formalizuje ten sam stan theorem-level:
+     obecna strict-core trasa `sigma_int -> residual datum` nie wyprowadza
+     strict-core residual orientation datum,
+   - semantic target fields, persisted carrier i axiom-lane bridge instance sa
+     obecne, ale nadal nie daja strict-core exportu ani bridge mapy.
+3. Frontier po kroku:
+   - `P4_route_result := current strict-core sigma-int route does not reach strict-core residual orientation datum`,
+   - `N7_route_result := current strict-core sigma-int route does not derive a strict-core residual orientation datum`,
+   - `P4_missing_objects := strict sigma source / gauge quotient safety / strict target-slot export / bridge map / beyond-overlay selector-track identification`,
+   - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+   - `AX3_result := sigma_int bridge instance exists on axiom lane only and does not change strict core`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/P4_STRICT_CORE_SIGMA_INT_TO_RESIDUAL_DATUM_BRIDGE_PROBE.md`,
+   - dodano `fundamental_action_reconstruction/p4_strict_core_sigma_int_to_residual_datum_bridge_probe.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p4_strict_core_sigma_int_to_residual_datum_bridge_probe.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p4_strict_core_sigma_int_to_residual_datum_bridge_probe_summary.json`,
+   - dodano `fundamental_action_reconstruction/N7_CURRENT_STRICT_CORE_SIGMA_INT_RESIDUAL_DATUM_NONDERIVATION_THEOREM.md`,
+   - dodano `fundamental_action_reconstruction/n7_current_strict_core_sigma_int_residual_datum_nonderivation_theorem.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n7_current_strict_core_sigma_int_residual_datum_nonderivation_theorem_summary.json`.
+5. Nastepny poprawny ruch:
+   - albo zbudowac jeden missing strict-core residual-datum bridge object i rerun `P4`,
+   - albo dopiero wtedy probowac szerszej globalizacji negatywnej,
+   - nie liczyc semantic carrieru ani axiom-lane witness jako strict-core PASS.
+
+
 - `H29`: stare proxy `retard_phase/tau/gain` moduluja preorientowany kanal, ale nie dostarczaja same wewnetrznego strict-core anchoru orientacji.
 - `H30`: `orientation_psi0 = mod(0.5*phi + 0.8*omega, 2*pi)` jest deterministycznym kandydatem anchoru z kernel invariants, ale nie jest jeszcze strict-core eksportem `theta_i`.
 - `H31`: `psi0` ma formalny embedding do `pair1=(c_1,s_1)`, ale nadal nie ma dowodu, ze jest to strict-core redukcja selektora, a nie tylko wybor wspolrzednych.
