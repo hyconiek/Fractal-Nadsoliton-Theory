@@ -1,0 +1,156 @@
+{
+  "step": "N5",
+  "status": "N5_DISCHARGED_CURRENT_STRICT_CORE_PSI0_ROUTE_OBSTRUCTION_NO_FALSE_PASS",
+  "goal": "Discharge a route-specific theorem: the current strict-core psi0 lane cannot close selector generation without extra symmetry-breaking structure.",
+  "scope": "current_strict_core_psi0_route_only",
+  "checks": [
+    {
+      "id": "qw2191_kernel_uniqueness_obstructed",
+      "source": "QW2191",
+      "path": "flags.full_uniqueness_from_kernel_alone_obstructed",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "kernel alone is theorem-level obstructed from full uniqueness"
+    },
+    {
+      "id": "qw2191_extra_symmetry_breaking_required",
+      "source": "QW2191",
+      "path": "flags.obstruction_requires_explicit_symmetry_breaking_postulate",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "the obstruction requires extra symmetry breaking"
+    },
+    {
+      "id": "b2_no_internal_selector_derivation",
+      "source": "B2",
+      "path": "b2.strict_internal_selector_derivations_found",
+      "actual": 0,
+      "expected": 0,
+      "pass": true,
+      "meaning": "no internal orientation datum is derived in strict core"
+    },
+    {
+      "id": "h30_psi0_not_selector_datum",
+      "source": "H30",
+      "path": "classification.strict_core_selector_export",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "psi0 is not exported as strict-core selector datum"
+    },
+    {
+      "id": "h31_no_selector_reduction",
+      "source": "H31",
+      "path": "classification.strict_core_selector_reduction_present",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "psi0->pair1 is not a strict-core selector reduction"
+    },
+    {
+      "id": "h33_pair1_only_local_chart",
+      "source": "H33",
+      "path": "result",
+      "actual": "pair1_is_available_as_a_deterministic_local_chart_for_the_primary_psi0_lane_but_not_yet_justified_as_a_uniquely_selector_relevant_target",
+      "expected": "pair1_is_available_as_a_deterministic_local_chart_for_the_primary_psi0_lane_but_not_yet_justified_as_a_uniquely_selector_relevant_target",
+      "pass": true,
+      "meaning": "pair1 is only a local chart for the psi0 lane"
+    },
+    {
+      "id": "h34_no_chart_independent_reduction",
+      "source": "H34",
+      "path": "result",
+      "actual": "strict_core_supports_only_local_chart_embeddings_for_psi0_and_not_a_basis_covariant_or_target_independent_selector_reduction",
+      "expected": "strict_core_supports_only_local_chart_embeddings_for_psi0_and_not_a_basis_covariant_or_target_independent_selector_reduction",
+      "pass": true,
+      "meaning": "no basis-covariant / target-independent reduction exists"
+    },
+    {
+      "id": "h35_no_physical_axis",
+      "source": "H35",
+      "path": "result",
+      "actual": "strict_core_supports_only_a_coordinate_level_direction_u_psi0_pair1_inside_pair1_and_not_a_strict_physical_axis_selection",
+      "expected": "strict_core_supports_only_a_coordinate_level_direction_u_psi0_pair1_inside_pair1_and_not_a_strict_physical_axis_selection",
+      "pass": true,
+      "meaning": "no strict physical axis is selected"
+    },
+    {
+      "id": "h36_no_directed_orientation",
+      "source": "H36",
+      "path": "result",
+      "actual": "strict_core_supports_only_a_coordinate_level_undirected_axis_representative_u_psi0_pair1_inside_pair1_and_not_a_strict_directed_orientation_selection",
+      "expected": "strict_core_supports_only_a_coordinate_level_undirected_axis_representative_u_psi0_pair1_inside_pair1_and_not_a_strict_directed_orientation_selection",
+      "pass": true,
+      "meaning": "no strict directed orientation is selected"
+    },
+    {
+      "id": "h37_no_sign_sensitive_state",
+      "source": "H37",
+      "path": "result",
+      "actual": "strict_core_contains_no_sign_sensitive_state_object_or_observable_on_pair1_and_therefore_does_not_distinguish_u_from_minus_u_as_physically_different_selector_states",
+      "expected": "strict_core_contains_no_sign_sensitive_state_object_or_observable_on_pair1_and_therefore_does_not_distinguish_u_from_minus_u_as_physically_different_selector_states",
+      "pass": true,
+      "meaning": "no sign-sensitive selector state exists"
+    },
+    {
+      "id": "h38_only_projective_state",
+      "source": "H38",
+      "path": "result",
+      "actual": "strict_core_supports_at_most_a_local_projective_or_ray_level_selector_representative_on_pair1_and_does_not_furnish_a_physically_individuated_directed_selector_state",
+      "expected": "strict_core_supports_at_most_a_local_projective_or_ray_level_selector_representative_on_pair1_and_does_not_furnish_a_physically_individuated_directed_selector_state",
+      "pass": true,
+      "meaning": "only a projective/ray-level representative exists"
+    },
+    {
+      "id": "h42_psi0_plus_c_not_strict_core",
+      "source": "H42",
+      "path": "hard_limits.psi0_plus_c_is_strict_core",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "the first nontrivial c-based split is not strict core"
+    },
+    {
+      "id": "p1_split_is_anchor_imported",
+      "source": "P1",
+      "path": "selected_operator.classifier",
+      "actual": "ANCHOR_IMPORTED_SPLIT",
+      "expected": "ANCHOR_IMPORTED_SPLIT",
+      "pass": true,
+      "meaning": "the first computed nontrivial split is anchor-imported"
+    },
+    {
+      "id": "p1_split_not_promoted_to_strict_core",
+      "source": "P1",
+      "path": "strict_core_promotion",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "the computed split is not promoted to strict core"
+    }
+  ],
+  "theorem_result": {
+    "discharged": true,
+    "kernel_alone_is_sufficient": false,
+    "current_internal_orientation_datum_present": false,
+    "current_strict_core_psi0_route_closes_selector": false,
+    "extra_symmetry_breaking_structure_required": true
+  },
+  "minimal_missing_structure_classes": [
+    "internal_orientation_datum",
+    "chart_independent_selector_reduction",
+    "strict_physical_axis_or_equivalent_orientation_object",
+    "directed_or_sign_sensitive_selector_state",
+    "strict_core_operator_map_to_nontrivial_pair1_split"
+  ],
+  "hard_limits": [
+    "no global impossibility theorem",
+    "no claim that future strict-core extensions are impossible",
+    "no claim that a specific future selector mechanism is already known",
+    "no claim that QW-2191 is discharged",
+    "no claim that ToE is closed"
+  ],
+  "required_next_step": "ADD_ONE_CONCRETE_STRICT_CORE_SYMMETRY_BREAKING_STRUCTURE_OR_FIND_A_NEW_ARGUMENT_THAT_GLOBALIZES_BEYOND_THIS_ROUTE_WITHOUT_FALLING_BACK_TO_T12"
+}

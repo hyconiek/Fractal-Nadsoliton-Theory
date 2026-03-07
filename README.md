@@ -25,6 +25,9 @@ Primary state report:
 - A new current-repo theorem `N4` fixes the strict-core reading of that result:
   the repo still does not export `psi0` as a strict-core selector source, and
   every currently computable selector split remains extension-only.
+- A further route-specific theorem `N5` now sharpens the strict-core frontier:
+  the current strict-core `psi0` lane itself is obstructed and cannot close
+  selector generation without extra symmetry-breaking structure.
 - This is real progress on the selector problem at extension level, but it does not upgrade strict-core closure and does not change `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 - Details: [`fundamental_action_reconstruction/README.md`](fundamental_action_reconstruction/README.md), [`fundamental_action_reconstruction/generated/pair1_operator_probe_report.json`](fundamental_action_reconstruction/generated/pair1_operator_probe_report.json).
 
@@ -752,6 +755,8 @@ Current status:
 - this moves the theory forward only by showing that the global negative theorem now fails exactly at the globalization step through `T12_B1`, not at the scoped negative theorem itself,
 - `N4` completed as a current-repo strict-core psi0 nonderivation theorem,
 - this moves the theory forward by stating directly that the current repo still lacks a strict-core selector-source derivation for `psi0`, while every currently computed selector split remains extension-only and anchor-imported,
+- `N5` completed as a route-specific psi0 obstruction theorem,
+- this moves the theory forward by proving that the current strict-core psi0 lane cannot close selector generation without extra symmetry-breaking structure, while still avoiding a false global impossibility claim,
 - `D1` completed as the current best-supported project conclusion after `N3`,
 - this records the strongest honest interpretation now supported by the evidence: selector closure is not achieved in strict core, and the project must either discharge `T12_B1` directly or accept selector-axiom necessity / strict-core incompleteness as the active design conclusion,
 - `AX1` completed as an explicit axiom-augmented positive lane,

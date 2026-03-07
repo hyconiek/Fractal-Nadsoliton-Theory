@@ -31,6 +31,9 @@ Interpretacja rygorystyczna:
 - `N4` formalizuje juz teraz mocniejszy current-repo wniosek:
   repo nie eksportuje strict-core derivation, ktora robi z `psi0` selector source na `pair1`,
   a kazdy aktualnie obliczalny split pozostaje extension-only,
+- `N5` idzie o krok dalej na poziomie route-specific:
+  obecny strict-core lane `psi0` jest juz theorem-level obstructed i nie moze
+  domknac selectora bez dodatkowej symmetry-breaking structure,
 - nie zmienia to decyzji `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 
 Artefakty:
@@ -1845,6 +1848,21 @@ Co realnie zostalo dodane przez `N4`:
 Frontier po `N4`:
 - `N4_current_repo_result := no current strict-core derivation turns psi0 into a selector source on pair1`,
 - `P1_current_repo_corollary := every currently computable selector split on pair1 remains extension-only and anchor-imported`,
+- `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
+- nadal brak globalnego theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `N5`:
+- nie probowano znowu globalizowac wszystkiego przez `T12`,
+- zamiast tego zamknieto waski theorem o aktualnym strict-core lane `psi0`,
+- `QW-2191` daje theorem-level obstruction `kernel alone -> no full uniqueness`,
+- `B2` usuwa hipoteze ukrytego internal orientation datum,
+- `H30..H38` oraz `H42/P1` pokazuja, ze lane `psi0` dochodzi najwyzej do local/projective structure i extension-only imported splitu,
+- wniosek: obecny strict-core lane `psi0` nie moze domknac selectora bez dodatkowej symmetry-breaking structure.
+
+Frontier po `N5`:
+- `N5_route_result := current strict-core psi0 route is obstructed from selector closure`,
+- `N5_requirement := any successful psi0-based selector closure requires extra symmetry-breaking structure beyond the current strict core`,
 - `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
 - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
 - nadal brak globalnego theorem-level/full-closure PASS.

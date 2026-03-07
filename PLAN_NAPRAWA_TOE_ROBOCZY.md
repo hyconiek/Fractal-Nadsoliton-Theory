@@ -8530,6 +8530,33 @@ Po tej rundzie:
    - nie otwierac kolejnych audit ladder bez jednego z tych dwoch ruchow.
 
 
+## 522. Current strict-core psi0-route obstruction theorem (2026-03-07)
+
+1. Cel:
+   - wykonac wariant `2` w wersji waskiej i rygorystycznej,
+   - nie probowac jeszcze global impossibility theorem dla wszystkich route'ow,
+   - sprawdzic tylko, czy aktualny strict-core lane `psi0` moze sam domknac selector closure.
+2. Wynik:
+   - `QW-2191` daje theorem-level obstruction: kernel alone nie daje pelnej fizycznej unikalnosci i wymaga extra symmetry breaking,
+   - `B2` potwierdza, ze w aktualnym strict core nie ma internal orientation datum, ktory rozladowuje ten obstruction,
+   - `H30/H31/H33/H34/H35/H36/H37/H38` potwierdzaja, ze lane `psi0` daje co najwyzej candidate angle, local chart embedding i projective representative, ale nie strict selector object,
+   - `H42/P1` potwierdzaja, ze pierwszy nontrivial split pojawia sie dopiero jako imported extension effect,
+   - wniosek: obecny strict-core lane `psi0` jest obstructed i nie moze domknac selectora bez dodatkowej symmetry-breaking structure.
+3. Frontier po kroku:
+   - `N5_route_result := current strict-core psi0 route is obstructed from selector closure`,
+   - `N5_requirement := any successful psi0-based selector closure requires extra symmetry-breaking structure beyond the current strict core`,
+   - `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
+   - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/N5_CURRENT_STRICT_CORE_PSI0_ROUTE_OBSTRUCTION_THEOREM.md`,
+   - dodano `fundamental_action_reconstruction/n5_current_strict_core_psi0_route_obstruction_theorem.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n5_current_strict_core_psi0_route_obstruction_theorem_summary.json`.
+5. Nastepny poprawny ruch:
+   - albo zbudowac jeden konkretny strict-core symmetry-breaking object i zderzyc go z `N5`,
+   - albo szukac silniejszej globalizacji tylko wtedy, gdy nowy argument omija zaleznosc od `T12`,
+   - nie wracac do otwartej meta-drabinki theorem-spec bez nowej struktury.
+
+
 - `H29`: stare proxy `retard_phase/tau/gain` moduluja preorientowany kanal, ale nie dostarczaja same wewnetrznego strict-core anchoru orientacji.
 - `H30`: `orientation_psi0 = mod(0.5*phi + 0.8*omega, 2*pi)` jest deterministycznym kandydatem anchoru z kernel invariants, ale nie jest jeszcze strict-core eksportem `theta_i`.
 - `H31`: `psi0` ma formalny embedding do `pair1=(c_1,s_1)`, ale nadal nie ma dowodu, ze jest to strict-core redukcja selektora, a nie tylko wybor wspolrzednych.

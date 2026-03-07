@@ -1,6 +1,6 @@
 # Fundamental Action Reconstruction
 
-Status: `PROGRAM_PHASE1_COMPLETE_C55_T1_T12_PLUS_N1_N2_N3_N4_D1_AX1_AX2_AX3_AX4_AX5_AX6_AX7_AX8_AND_H1_H2_H3_H4_H5_H6_H7_H8_H9_H10_H11_H12_H13_H14_H15_H16_H17_H18_H19_H20_H21_H22_H23_H24_H25_H26_H27_H28_H29_H30_H31_H32_H33_H34_H35_H36_H37_H38_H39_H40_H41_H42_V1_V2_V3_V4_V5_V6_V7_O1_O2_O3_O4_NO_FALSE_PASS`
+Status: `PROGRAM_PHASE1_COMPLETE_C55_T1_T12_PLUS_N1_N2_N3_N4_N5_D1_AX1_AX2_AX3_AX4_AX5_AX6_AX7_AX8_AND_H1_H2_H3_H4_H5_H6_H7_H8_H9_H10_H11_H12_H13_H14_H15_H16_H17_H18_H19_H20_H21_H22_H23_H24_H25_H26_H27_H28_H29_H30_H31_H32_H33_H34_H35_H36_H37_H38_H39_H40_H41_H42_V1_V2_V3_V4_V5_V6_V7_O1_O2_O3_O4_NO_FALSE_PASS`
 As of: `2026-03-07`
 
 Ten katalog otwiera rownolegly tor konstrukcyjny poza drabinka `L5/L12`.
@@ -126,6 +126,13 @@ Aktualizacja `N4`:
   aktualny repo state nie eksportuje strict-core derivation, ktora robi z `psi0` selector source na `pair1`,
 - praktyczny corollary brzmi: kazdy aktualnie obliczalny selector split na `pair1` pozostaje extension-only i wymaga importu anchoru,
 - to nadal nie jest future-proof impossibility theorem i nie zamyka `QW-2191`.
+
+Aktualizacja `N5`:
+- wykonano route-specific obstruction theorem dla aktualnego strict-core lane `psi0`,
+- `QW-2191 + B2 + H30/H31/H33/H34/H35/H36/H37/H38 + H42/P1` wymuszaja mocniejszy wniosek niz `N4`:
+  obecny strict-core lane `psi0` nie moze domknac selectora bez dodatkowej symmetry-breaking structure,
+- to nadal nie jest global impossibility theorem dla wszystkich przyszlych route'ow,
+- ale zamyka sensowny wariant `2` bez cofania sie do `T12`.
 
 ## Ontologiczna wskazowka programu
 
@@ -437,6 +444,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `N2`: wykonane jako globalny theorem-spec po wyborze sciezki o wiekszej szansie powodzenia; zapisuje uczciwa dychotomie dla biezacego strict core: albo brak internal `theta` source, albo kazde udane wyprowadzenie wymaga dodatkowego aksjomatu/admissibility principle nieobecnego obecnie w rdzeniu strict. To nadal jest tylko theorem-spec, bez discharge.
 - `N3`: wykonane jako pierwszy globalny discharge attempt dla `N2`; failure wraca dokladnie do globalizacji przez `T12_B1`, czyli brakujacego theorem-level kroku, ktory podnosilby `N1` plus zewnetrznosc lane axiom-augmented do globalnej dychotomii na calym current strict core.
 - `N4`: wykonane jako current-repo theorem po `P1`; zamiast kolejnej meta-drabinki zapisuje wprost, ze aktualny repo state nie zawiera strict-core derivation zamieniajacej `psi0` w selector source na `pair1`, a kazdy aktualnie policzalny split pozostaje extension-only i anchor-imported.
+- `N5`: wykonane jako current strict-core `psi0` route obstruction theorem; wykorzystuje `QW-2191` jako theorem-level obstruction oraz `B2/H30..H38/H42/P1` jako route-specific evidence, z wnioskiem, ze obecny lane `psi0` nie domyka selectora bez dodatkowej symmetry-breaking structure.
 - `D1`: wykonane jako jawny projektowy wniosek po `N3`; obecnie najlepiej wsparty stan brzmi: strict core nie ma domknietego selector closure, a najbardziej uczciwa interpretacja to selector-axiom necessity albo strict-core incompleteness. To nie jest theorem-level wynik.
 - `AX1`: wykonane jako jawny pozytywny lane `axiom-augmented`; pod minimalnym aksjomatem selekcji `minimum_harmonic_alignment_with_orientation_convention` dostajemy actual `theta_1=theta_2=0 mod 2pi`, `u_1=c_1`, `u_2=c_2` i `S_orient_axiom=span{c_1,c_2}`, ale tylko poza strict core.
 - `AX2`: wykonane jako pierwszy materialny krok na lane `axiom-augmented`; utworzono persisted actual-instance dla `theta_1=theta_2=0 mod 2pi`, `u_1=c_1`, `u_2=c_2` i `S_orient_axiom=span{c_1,c_2}`, nadal jawnie poza strict core.
@@ -570,6 +578,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - brak claimu, ze `N2` jest juz discharged albo ze rozstrzyga, ktora galaz dychotomii jest prawdziwa.
 - brak claimu, ze `N3` discharge'uje `N2`; `N3` tylko potwierdza, ze failure siedzi w globalizacji przez `T12_B1`.
 - brak claimu, ze `N4` jest future-proof impossibility theorem; `N4` kwantyfikuje tylko po aktualnym repo state i nie blokuje przyszlego strict-core source addition.
+- brak claimu, ze `N5` jest global impossibility theorem; `N5` dotyczy tylko aktualnego strict-core lane `psi0` i nie zabrania nowych przyszlych strict-core structures.
 - brak claimu, ze `D1` jest twierdzeniem; to jest current best-supported project conclusion.
 - brak claimu, ze `AX1` nalezy do strict core; to jest jawnie lane axiom-augmented.
 - brak claimu, ze `AX2` nalezy do strict core; to jest tylko actual-instance lane axiom-augmented.
@@ -706,6 +715,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `N2_GLOBAL_STRICT_CORE_IMPOSSIBILITY_OR_AXIOM_NECESSITY_THEOREM_SPEC.md`
 - `N3_GLOBAL_IMPOSSIBILITY_OR_AXIOM_NECESSITY_DISCHARGE_ATTEMPT.md`
 - `N4_CURRENT_REPO_PSI0_STRICT_CORE_NONDERIVATION_THEOREM.md`
+- `N5_CURRENT_STRICT_CORE_PSI0_ROUTE_OBSTRUCTION_THEOREM.md`
 - `D1_SELECTOR_AXIOM_NECESSITY_CURRENT_BEST_SUPPORTED_CONCLUSION.md`
 - `AX1_MINIMAL_SELECTOR_AXIOM_PACKET.md`
 - `AX2_AXIOM_LANE_ACTUAL_BASIS_PAIR_AND_ORIENTATION_SLICE_INSTANCE.md`
