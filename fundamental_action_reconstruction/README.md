@@ -746,6 +746,47 @@ Aktualizacja `N28`:
   do trzech jawnych rownan na `pair1` + canonicalization,
   bez falszywego PASS.
 
+Aktualizacja `R19`:
+- zmaterializowano jawny `pair1 c1s1 balance reduction packet`,
+- packet eksportuje exact common transport factor dla `c1s1`:
+  `sqrt(3)/24`,
+- packet redukuje caly declared `pair1 c1s1` zero equation do jednego
+  balance equation:
+  `Sigma_c1s1_positive - Sigma_c1s1_negative = 0`,
+  gdzie
+  `Sigma_c1s1_positive = Sigma_psi1_psi7 + Sigma_psi2_psi8`,
+  `Sigma_c1s1_negative = Sigma_psi4_psi10 + Sigma_psi5_psi11`,
+- packet nadal utrzymuje rozdzial:
+  shared kernel/light-facing channel pozostaje juz zamkniety przez `R14`,
+  a `R19` dotyka tylko non-light residual local diagonal complement,
+- packet nadal nie twierdzi, ze ten balance equation jest spelniony
+  ani ze `QW-2191` jest rozladowane.
+
+Aktualizacja `P26`:
+- wykonano rerun trasy `host matching witness` po `R19`,
+- wynik:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_WITNESS_ROUTE_AFTER_R19_PAIR1_C1S1_BALANCE_REDUCTION_PACKET`,
+- probe rozladowuje brak
+  `explicit zero witness for the declared pair1 residual c1s1 equation`
+  do jednego waskiego braku:
+  `explicit balance witness for the declared pair1 residual c1s1 equation`,
+- po tym rerunie zostaja juz tylko:
+  `c1s1` balance witness,
+  `c1c1` zero witness,
+  `s1s1` zero witness,
+  oraz `QW-2191` canonicalization boundary.
+
+Aktualizacja `N29`:
+- wykonano theorem-level wynik dla zaktualizowanej trasy po `R19/P26`,
+- `R19/P26/QW-2191/C10` razem wymuszaja wniosek:
+  repo ma juz exact `pair1 c1s1` balance equation z niezerowym common
+  transport factor, ale nadal nie identyfikuje hosta `QW-2186`
+  z exported canonical blockiem,
+- to jest dalszy realny progres redukcyjny:
+  jedna z trzech rownosci `pair1` zostala zwężona do pojedynczego balance
+  witness zamiast ogolnego zero-witness gap,
+  bez falszywego PASS.
+
 ## Ontologiczna wskazowka programu
 
 Program jest prowadzony pod robocza ontologia:
