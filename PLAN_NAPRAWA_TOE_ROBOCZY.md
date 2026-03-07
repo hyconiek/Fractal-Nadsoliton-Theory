@@ -9735,6 +9735,53 @@ Po tej rundzie:
    - albo probowac rozladowac `QW-2191`,
    - ale bez udawania, ze direct `m2` shift packet domyka cala direct family route.
 
+524. `R25/P32/N35`: direct `m2` pairwise sufficient-route reduction without false pass
+1. Zakres:
+   - nie probowac udowadniac od razu direct `m2` shift-equivariance,
+   - zmaterializowac tylko jawna, route-scoped sufficient route
+     `direct m2 shift-equivariance -> four pairwise matches`,
+   - utrzymac jawnie, ze kanal swiatlo/kernel pozostaje tym samym zamknietym
+     kanalem z `R14`.
+2. Wynik:
+   - `R25` daje realny partial packet:
+     four direct `m2` pairwise sufficient conditions,
+   - `P32` zwraca:
+     `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_AFTER_R25_DIRECT_M2_PAIRWISE_SUFFICIENT_ROUTE`,
+   - `N35` utrzymuje direct route negatywny bez falszywego PASS.
+3. Frontier po kroku:
+   - `R25_result := explicit direct m2 pairwise matching sufficient route packet is now present`,
+   - `R25_scope := direct mass-like m2 pairwise matching sufficient route only`,
+   - `R25_boundary := shared kernel/light-facing channel remains the already closed R14 channel`,
+   - `P32_missing_objects := explicit zero witness for direct quartic-like g4 family c1s1 shift defect`,
+   - `P32_missing_objects += explicit zero witness for direct quintic-like g6 family c1s1 shift defect`,
+   - `P32_missing_objects += explicit zero witness for direct yukawa-like gY family c1s1 shift defect`,
+   - `P32_missing_objects += explicit_pairwise_matching_witness_for_m2_psi1_equals_m2_psi4`,
+   - `P32_missing_objects += explicit_pairwise_matching_witness_for_m2_psi7_equals_m2_psi10`,
+   - `P32_missing_objects += explicit_pairwise_matching_witness_for_m2_psi2_equals_m2_psi5`,
+   - `P32_missing_objects += explicit_pairwise_matching_witness_for_m2_psi8_equals_m2_psi11`,
+   - `P32_missing_objects += explicit zero witness for the declared pair1 residual c1c1 equation`,
+   - `P32_missing_objects += explicit zero witness for the declared pair1 residual s1s1 equation`,
+   - `P32_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+   - `N35_route_result := current repo still does not identify the existing-feedback host with the exported canonical Psi block even after the direct m2 pairwise sufficient packet`,
+   - brak claimu, ze glowny frontier `R21/P28` zostal globalnie rozladowany.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/R25_DIRECT_M2_SHIFT_EQUIVARIANCE_PAIRWISE_MATCHING_SUFFICIENT_ROUTE_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/r25_direct_m2_shift_equivariance_pairwise_matching_sufficient_route_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r25_direct_m2_shift_equivariance_pairwise_matching_sufficient_route_packet.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r25_direct_m2_shift_equivariance_pairwise_matching_sufficient_route_packet_summary.json`,
+   - dodano `fundamental_action_reconstruction/P32_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_PROBE_AFTER_DIRECT_M2_PAIRWISE_SUFFICIENT_ROUTE.md`,
+   - dodano `fundamental_action_reconstruction/p32_existing_kernel_feedback_host_matching_direct_formal_c1s1_family_route_probe_after_direct_m2_pairwise_route.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p32_existing_kernel_feedback_host_matching_direct_formal_c1s1_family_route_probe_after_direct_m2_pairwise_route.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p32_existing_kernel_feedback_host_matching_direct_formal_c1s1_family_route_probe_after_direct_m2_pairwise_route_summary.json`,
+   - dodano `fundamental_action_reconstruction/N35_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_OBSTRUCTION_AFTER_DIRECT_M2_PAIRWISE_SUFFICIENT_ROUTE_THEOREM.md`,
+   - dodano `fundamental_action_reconstruction/n35_current_existing_kernel_feedback_host_matching_direct_formal_c1s1_family_route_obstruction_after_direct_m2_pairwise_sufficient_route_theorem.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n35_current_existing_kernel_feedback_host_matching_direct_formal_c1s1_family_route_obstruction_after_direct_m2_pairwise_sufficient_route_theorem_summary.json`.
+5. Nastepny poprawny ruch:
+   - albo uderzyc juz bardzo wasko w jeden z four direct `m2` pairwise matching witnesses na tej sufficient route,
+   - albo osobno atakowac jeden z pozostalych `direct g4/g6/gY` zero witnesses,
+   - albo probowac rozladowac `QW-2191`,
+   - ale bez udawania, ze sufficient route jest konieczna albo rownowazna z direct `m2` shift witness.
+
 
 - `H29`: stare proxy `retard_phase/tau/gain` moduluja preorientowany kanal, ale nie dostarczaja same wewnetrznego strict-core anchoru orientacji.
 - `H30`: `orientation_psi0 = mod(0.5*phi + 0.8*omega, 2*pi)` jest deterministycznym kandydatem anchoru z kernel invariants, ale nie jest jeszcze strict-core eksportem `theta_i`.

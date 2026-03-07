@@ -202,6 +202,13 @@ Primary state report:
   support sum, while the direct `g4/g6/gY` family blockers, the main host
   route, and the already closed light-facing kernel channel remain otherwise
   unchanged.
+- The next honest move after that has now also been executed, still only on
+  that direct route and only as a sufficient-route reduction: `R25` plus
+  `P32/N35` do not prove the direct `m2` shift-equivariance. They only reduce
+  that direct `m2` shift witness to four route-scoped pairwise `m2` matching
+  witnesses, without claiming necessity or equivalence, while the direct
+  `g4/g6/gY` family blockers, the main host route, and the already closed
+  light-facing kernel channel remain otherwise unchanged.
 - This is real progress on the selector problem at extension level, but it does not upgrade strict-core closure and does not change `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 - Details: [`fundamental_action_reconstruction/README.md`](fundamental_action_reconstruction/README.md), [`fundamental_action_reconstruction/generated/pair1_operator_probe_report.json`](fundamental_action_reconstruction/generated/pair1_operator_probe_report.json).
 

@@ -996,6 +996,49 @@ Aktualizacja `N34`:
   nie twierdzi, ze `QW-2191` jest rozladowane,
   bez falszywego PASS.
 
+Aktualizacja `R25`:
+- zmaterializowano jawny `direct m2 pairwise matching sufficient route packet`
+  po `R24`,
+- packet eksportuje cztery jawne pairwise conditions:
+  `m2_psi1 = m2_psi4`,
+  `m2_psi7 = m2_psi10`,
+  `m2_psi2 = m2_psi5`,
+  `m2_psi8 = m2_psi11`,
+- packet utrzymuje jawnie granice rygoru:
+  to jest tylko `sufficient route`, a nie warunek konieczny i nie route
+  rownowazna z direct `m2` shift-equivariance target,
+- kanal swiatlo/kernel pozostaje dokladnie tym samym juz zamknietym kanalem z
+  `R14`; `R25` dotyka tylko non-light direct `m2` positive support.
+
+Aktualizacja `P32`:
+- wykonano rerun direct formal family route po dodaniu `R25`,
+- wynik:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_AFTER_R25_DIRECT_M2_PAIRWISE_SUFFICIENT_ROUTE`,
+- probe nie twierdzi, ze direct family route sie domyka; twierdzi tylko, ze
+  na jednej jawnej sufficient route direct `m2` shift witness zostal zwężony
+  do czterech pairwise matching witnesses,
+- po tym rerunie na tej trasie zostaja:
+  `direct g4` zero witness,
+  `direct g6` zero witness,
+  `direct gY` zero witness,
+  cztery direct `m2` pairwise matching witnesses,
+  `c1c1` zero witness,
+  `s1s1` zero witness,
+  oraz `QW-2191` canonicalization boundary.
+
+Aktualizacja `N35`:
+- wykonano theorem-level wynik dla direct formal family route po `R25/P32`,
+- `R25/P32/QW-2191/C10` razem wymuszaja wniosek:
+  obecny repo nadal nie identyfikuje hosta `QW-2186` z exported canonical
+  blockiem nawet po route-scoped direct `m2` pairwise sufficient packet,
+- theorem jest jawnie `route-specific only`:
+  nie daje globalnej redukcji glownego frontiera z `R21/P28`,
+  nie twierdzi, ze ktorykolwiek z four direct `m2` pairwise witnesses zachodzi,
+  nie twierdzi, ze sufficient route jest konieczna albo rownowazna,
+  nie twierdzi, ze direct `g4/g6/gY` defects znikaja,
+  nie twierdzi, ze `QW-2191` jest rozladowane,
+  bez falszywego PASS.
+
 ## Ontologiczna wskazowka programu
 
 Program jest prowadzony pod robocza ontologia:
