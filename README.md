@@ -140,6 +140,12 @@ Primary state report:
   kernel channel separate; the host route still stays negative, but now the
   only missing pieces are residual local diagonal matching and the still-open
   `QW-2191` boundary.
+- The next honest move after that has now also been executed: `R16` plus
+  `P23/N26` add the explicit declared control pullback of the residual local
+  diagonal sector, again without touching the already closed light-facing
+  kernel channel; the host route still stays negative, but now the only
+  missing pieces are a zero-or-host-side cancellation witness for that
+  residual declared pullback and the still-open `QW-2191` boundary.
 - This is real progress on the selector problem at extension level, but it does not upgrade strict-core closure and does not change `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 - Details: [`fundamental_action_reconstruction/README.md`](fundamental_action_reconstruction/README.md), [`fundamental_action_reconstruction/generated/pair1_operator_probe_report.json`](fundamental_action_reconstruction/generated/pair1_operator_probe_report.json).
 

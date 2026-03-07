@@ -2359,6 +2359,36 @@ Frontier po `R15/P22/N25`:
 - `N25_route_result := current repo still does not identify existing kernel feedback host with the exported canonical Psi block even after scalar-floor embedding`,
 - nadal brak globalnego theorem-level/full-closure PASS.
 
+Co realnie zostalo dodane przez `R16`, `P23` i `N26`:
+- `R16` tworzy jawny `declared control pullback` residualnego diagonalu:
+  `M_control_residual_diag_declared = T_control^T D_local_residual T_control`,
+- `R16` eksportuje pelna macierz `4 x 4` na carrierze `(c1,s1,c2,s2)` oraz
+  explicit declared `pair1` block `2 x 2`,
+- `R16` nie rusza warstwy swiatlo/kernel:
+  shared kernel/light-facing channel pozostaje dokladnie tym samym,
+  juz zamknietym kanalem z `R14`,
+- `P23` rerunuje bezposrednio trase `host matching witness` po `R16`,
+- wynik `P23`:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_WITNESS_ROUTE_AFTER_R16_RESIDUAL_DIAGONAL_PULLBACK_PACKET`,
+- `P23` rozladowuje gruby residualny blocker z `P22`,
+  a po stronie missing objects zostaja juz tylko:
+  zero-or-host-side cancellation witness dla residualnego declared pullback
+  oraz `QW-2191` canonicalization boundary,
+- `N26` daje theorem-level updated-route wynik:
+  nawet po explicit residual-diagonal declared pullback repo nadal nie
+  identyfikuje hosta `QW-2186` z exported canonical blockiem, ale host route
+  zostal juz zwężony do dwoch ostatnich blockerow.
+
+Frontier po `R16/P23/N26`:
+- `R16_result := explicit residual local diagonal declared control pullback packet is present`,
+- `R16_pair1_result := declared pair1 residual-diagonal block is explicitly exported`,
+- `R16_light_boundary := shared kernel/light-facing channel remains exactly the already closed R14 channel`,
+- `P23_route_result := current host matching witness route is still not computable after R16`,
+- `P23_missing_objects := explicit zero or host-side cancellation witness for the declared control pullback of the residual local diagonal sector`,
+- `P23_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+- `N26_route_result := current repo still does not identify existing kernel feedback host with the exported canonical Psi block even after residual-diagonal declared pullback export`,
+- nadal brak globalnego theorem-level/full-closure PASS.
+
 Co realnie zostalo dodane przez `AX1`:
 - otwarto jawny pozytywny lane `axiom-augmented`,
 - pod minimalnym aksjomacie selekcji z `QW-2192/QW-2193` uzyskano packet-ready actual:

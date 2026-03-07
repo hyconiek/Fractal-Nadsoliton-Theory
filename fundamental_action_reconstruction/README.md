@@ -644,6 +644,38 @@ Aktualizacja `N25`:
   + canonicalization,
   bez falszywego PASS.
 
+Aktualizacja `R16`:
+- zmaterializowano jawny `declared control pullback` residualnego diagonalu:
+  `M_control_residual_diag_declared = T_control^T D_local_residual T_control`,
+- packet eksportuje pelna macierz `4 x 4` na bazie `(c1,s1,c2,s2)` oraz
+  jawny declared `pair1` block `2 x 2`,
+- packet nadal utrzymuje rozdzial:
+  shared kernel/light-facing channel pozostaje juz zamkniety przez `R14`,
+  a `R16` dotyka tylko declared-control obrazu diagonalnego residuum,
+- packet nadal nie twierdzi, ze ten declared pullback znika ani ze
+  `QW-2191` jest rozladowane.
+
+Aktualizacja `P23`:
+- wykonano rerun trasy `host matching witness` po `R16`,
+- wynik:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_WITNESS_ROUTE_AFTER_R16_RESIDUAL_DIAGONAL_PULLBACK_PACKET`,
+- probe rozladowuje gruby residualny blocker z `P22`
+  do waskiego braku:
+  `zero-or-host-side cancellation witness for the residual declared pullback`,
+- po tym rerunie zostaja juz tylko:
+  zero/correction witness dla residualnego declared pullback oraz
+  `QW-2191` canonicalization boundary.
+
+Aktualizacja `N26`:
+- wykonano theorem-level wynik dla zaktualizowanej trasy po `R16/P23`,
+- `R16/P23/QW-2191/C10` razem wymuszaja wniosek:
+  residual local diagonal sector ma juz jawny declared control pullback,
+  ale repo nadal nie identyfikuje hosta `QW-2186` z exported canonical blockiem,
+- to jest dalszy realny progres redukcyjny:
+  host route zostal zwężony juz tylko do zero/correction witness
+  dla residualnego declared pullback + canonicalization,
+  bez falszywego PASS.
+
 ## Ontologiczna wskazowka programu
 
 Program jest prowadzony pod robocza ontologia:

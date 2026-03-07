@@ -9381,6 +9381,41 @@ Po tej rundzie:
    - albo probowac rozladowac `QW-2191` canonicalization boundary,
    - ale bez mieszania diagonalnego residuum z canonicalization w jeden pseudo-witness.
 
+529. `R16/P23/N26` explicit residual local diagonal declared control pullback po `R15/P22/N25`.
+1. Co zostalo zrobione:
+   - `R16` materializuje jawny `declared control pullback`
+     residualnego diagonalu,
+   - `P23` rerunuje trase `host matching witness` po `R16`,
+   - `N26` formalizuje theorem-level wynik dla tej zaktualizowanej trasy.
+2. Wynik:
+   - `R16` daje realny partial packet:
+     `M_control_residual_diag_declared = T_control^T D_local_residual T_control`,
+   - `P23` zwraca:
+     `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_WITNESS_ROUTE_AFTER_R16_RESIDUAL_DIAGONAL_PULLBACK_PACKET`,
+   - `N26` utrzymuje route negatywny bez falszywego PASS.
+3. Frontier po kroku:
+   - `R16_result := explicit residual local diagonal declared control pullback packet is now present`,
+   - `R16_boundary := shared kernel/light-facing channel remains the already closed R14 channel`,
+   - `P23_missing_objects := explicit zero or host-side cancellation witness for the declared control pullback of the residual local diagonal sector`,
+   - `P23_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+   - `N26_route_result := current repo still does not identify the existing-feedback host with the exported canonical Psi block even after residual-diagonal declared pullback export`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/R16_EXPLICIT_RESIDUAL_LOCAL_DIAGONAL_DECLARED_CONTROL_PULLBACK_PACKET_FOR_HOST_MATCHING_ROUTE.md`,
+   - dodano `fundamental_action_reconstruction/r16_explicit_residual_local_diagonal_declared_control_pullback_packet_for_host_matching_route.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r16_explicit_residual_local_diagonal_declared_control_pullback_packet_for_host_matching_route.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r16_explicit_residual_local_diagonal_declared_control_pullback_packet_for_host_matching_route_summary.json`,
+   - dodano `fundamental_action_reconstruction/P23_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_WITNESS_RERUN_AFTER_RESIDUAL_DIAGONAL_PULLBACK_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/p23_existing_kernel_feedback_host_matching_witness_rerun_after_residual_diagonal_pullback_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p23_existing_kernel_feedback_host_matching_witness_rerun_after_residual_diagonal_pullback_packet.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p23_existing_kernel_feedback_host_matching_witness_rerun_after_residual_diagonal_pullback_packet_summary.json`,
+   - dodano `fundamental_action_reconstruction/N26_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_OBSTRUCTION_AFTER_RESIDUAL_DIAGONAL_PULLBACK_PACKET_THEOREM.md`,
+   - dodano `fundamental_action_reconstruction/n26_current_existing_kernel_feedback_host_matching_obstruction_after_residual_diagonal_pullback_packet_theorem.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n26_current_existing_kernel_feedback_host_matching_obstruction_after_residual_diagonal_pullback_packet_theorem_summary.json`.
+5. Nastepny poprawny ruch:
+   - albo uderzyc juz bardzo wasko w `zero-or-host-side cancellation witness for the residual declared pullback`,
+   - albo probowac rozladowac `QW-2191` canonicalization boundary,
+   - ale bez mieszania cancellation witness z canonicalization w jeden pseudo-witness.
+
 
 - `H29`: stare proxy `retard_phase/tau/gain` moduluja preorientowany kanal, ale nie dostarczaja same wewnetrznego strict-core anchoru orientacji.
 - `H30`: `orientation_psi0 = mod(0.5*phi + 0.8*omega, 2*pi)` jest deterministycznym kandydatem anchoru z kernel invariants, ale nie jest jeszcze strict-core eksportem `theta_i`.
