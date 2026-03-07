@@ -2246,6 +2246,35 @@ Frontier po `R11/P18/N21`:
 - `N21_route_result := current repo still does not identify existing kernel feedback host with a concrete Psi-sector block even after explicit transport packetization`,
 - nadal brak globalnego theorem-level/full-closure PASS.
 
+Co realnie zostalo dodane przez `R12`, `P19` i `N22`:
+- `R12` tworzy jawny `coefficient-filled canonical Psi-Psi block`
+  na pelnym declared transport support `psi0..psi11`,
+- `R12` utrzymuje tez jawny `light-facing` boundary:
+  strict-admissible kanal swiatlo/transport jest obecny tylko przez
+  kernel-mixing entries `(K_i_j + K_j_i)/2`,
+  bez `K_obs` factorization i bez selector closure claim,
+- `P19` rerunuje te sama trase host-identification po `R12`,
+- wynik `P19`:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_TO_CONCRETE_PSI_BLOCK_IDENTIFICATION_ROUTE_AFTER_R11_AND_R12_EXPLICIT_CANONICAL_PSI_BLOCK_EXPORT`,
+- `P19` rozladowuje drugi `P18` blocker:
+  concrete coefficient-filled `Psi-sector` block jest juz present
+  na scope `full declared transport support`,
+  a po stronie missing objects zostaja tylko:
+  `QW-2191` uniqueness/canonicalization boundary i
+  host-to-submatrix matching witness,
+- `N22` daje theorem-level updated-route wynik:
+  nawet po explicit canonical block export i jawnej kernel-mixing warstwie
+  repo nadal nie identyfikuje hosta `QW-2186` z exported blockiem.
+
+Frontier po `R12/P19/N22`:
+- `R12_result := explicit coefficient-filled canonical Psi block on full declared transport support is present`,
+- `R12_light_facing_result := strict-admissible kernel-mixing channel is explicit across all off-diagonal entries`,
+- `P19_route_result := current host-to-concrete-Psi-block identification route is still not computable after R12`,
+- `P19_missing_objects := full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+- `P19_missing_objects += explicit host-to-submatrix matching witness identifying the QW-2186 certified host operator with the exported canonical Psi block or its declared control pullback`,
+- `N22_route_result := current repo still does not identify existing kernel feedback host with the exported canonical Psi block`,
+- nadal brak globalnego theorem-level/full-closure PASS.
+
 Co realnie zostalo dodane przez `AX1`:
 - otwarto jawny pozytywny lane `axiom-augmented`,
 - pod minimalnym aksjomacie selekcji z `QW-2192/QW-2193` uzyskano packet-ready actual:

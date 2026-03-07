@@ -117,6 +117,12 @@ Primary state report:
   and the first missing object is now sharpened to full physical uniqueness /
   selector-relevant canonicalization of that explicit transport, plus concrete
   Psi-submatrix export and host-to-submatrix matching.
+- The next honest move after that has now also been executed: `R12` plus
+  `P19/N22` export an explicit coefficient-filled canonical `Psi-Psi` block on
+  the full declared transport support and keep the light-facing content visible
+  only through the strict-admissible kernel-mixing carrier; the host route
+  stays negative, but the concrete submatrix blocker is discharged and only
+  `QW-2191` canonicalization plus host matching remain.
 - This is real progress on the selector problem at extension level, but it does not upgrade strict-core closure and does not change `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 - Details: [`fundamental_action_reconstruction/README.md`](fundamental_action_reconstruction/README.md), [`fundamental_action_reconstruction/generated/pair1_operator_probe_report.json`](fundamental_action_reconstruction/generated/pair1_operator_probe_report.json).
 

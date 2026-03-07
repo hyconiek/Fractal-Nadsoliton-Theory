@@ -9240,6 +9240,42 @@ Po tej rundzie:
    - albo probowac rozladowac juz tylko `QW-2191` uniqueness/canonicalization boundary dla jawnej trasy transportu,
    - albo przejsc do concrete Psi-submatrix export, jesli bezpiecznie da sie go utrzymac bez udawania physical canonicalization.
 
+525. `R12/P19/N22` explicit canonical Psi block export po `R11/P18/N21`.
+1. Co zostalo zrobione:
+   - `R12` materializuje jawny `coefficient-filled canonical Psi-Psi block`
+     na pelnym declared transport support `psi0..psi11`,
+   - `R12` utrzymuje wprost `light-facing` znaczenie tylko przez
+     strict-admissible kernel-mixing entries `(K_i_j + K_j_i)/2`,
+   - `P19` rerunuje te sama trase host-identification po `R12`,
+   - `N22` formalizuje theorem-level wynik dla tej zaktualizowanej trasy.
+2. Wynik:
+   - `R12` daje realny partial packet:
+     explicit canonical `Psi` block jest obecny,
+   - `P19` zwraca:
+     `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_TO_CONCRETE_PSI_BLOCK_IDENTIFICATION_ROUTE_AFTER_R11_AND_R12_EXPLICIT_CANONICAL_PSI_BLOCK_EXPORT`,
+   - `N22` utrzymuje route negatywny bez falszywego PASS.
+3. Frontier po kroku:
+   - `R12_result := explicit coefficient-filled canonical Psi block on full declared transport support is now present`,
+   - `P19_missing_objects := full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+   - `P19_missing_objects += explicit host-to-submatrix matching witness identifying the QW-2186 certified host operator with the exported canonical Psi block or its declared control pullback`,
+   - `N22_route_result := current repo still does not identify the existing-feedback host with the exported canonical Psi block`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/R12_EXPLICIT_CANONICAL_PSI_BLOCK_EXPORT_PACKET_WITH_KERNEL_MIXING_FOR_HOST_ROUTE.md`,
+   - dodano `fundamental_action_reconstruction/r12_explicit_canonical_psi_block_export_packet_with_kernel_mixing_for_host_route.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r12_explicit_canonical_psi_block_export_packet_with_kernel_mixing_for_host_route.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r12_explicit_canonical_psi_block_export_packet_with_kernel_mixing_for_host_route_summary.json`,
+   - dodano `fundamental_action_reconstruction/P19_EXISTING_KERNEL_FEEDBACK_HOST_TO_CONCRETE_PSI_BLOCK_IDENTIFICATION_RERUN_AFTER_EXPLICIT_CANONICAL_PSI_BLOCK_EXPORT.md`,
+   - dodano `fundamental_action_reconstruction/p19_existing_kernel_feedback_host_to_concrete_psi_block_identification_rerun_after_explicit_canonical_psi_block_export.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p19_existing_kernel_feedback_host_to_concrete_psi_block_identification_rerun_after_explicit_canonical_psi_block_export.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p19_existing_kernel_feedback_host_to_concrete_psi_block_identification_rerun_after_explicit_canonical_psi_block_export_summary.json`,
+   - dodano `fundamental_action_reconstruction/N22_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_TO_CONCRETE_PSI_BLOCK_OBSTRUCTION_AFTER_EXPLICIT_CANONICAL_PSI_BLOCK_EXPORT_THEOREM.md`,
+   - dodano `fundamental_action_reconstruction/n22_current_existing_kernel_feedback_host_to_concrete_psi_block_obstruction_after_explicit_canonical_psi_block_export_theorem.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n22_current_existing_kernel_feedback_host_to_concrete_psi_block_obstruction_after_explicit_canonical_psi_block_export_theorem_summary.json`.
+5. Nastepny poprawny ruch:
+   - albo uderzyc juz bezposrednio w `QW-2191` uniqueness/canonicalization boundary dla jawnej trasy transportu,
+   - albo probowac zbudowac jeden rzeczywisty `host-to-submatrix matching witness`,
+     ale bez promowania full-support exportu do selector-relevant target bez dowodu.
+
 
 - `H29`: stare proxy `retard_phase/tau/gain` moduluja preorientowany kanal, ale nie dostarczaja same wewnetrznego strict-core anchoru orientacji.
 - `H30`: `orientation_psi0 = mod(0.5*phi + 0.8*omega, 2*pi)` jest deterministycznym kandydatem anchoru z kernel invariants, ale nie jest jeszcze strict-core eksportem `theta_i`.

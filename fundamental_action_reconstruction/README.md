@@ -533,6 +533,33 @@ Aktualizacja `N21`:
   `transport canonicalization`, tylko ostro zlokalizowanym
   `QW-2191` uniqueness/canonicalization boundary, nadal bez falszywego PASS.
 
+Aktualizacja `R12`:
+- zmaterializowano jawny `coefficient-filled canonical Psi-Psi block`
+  na pelnym declared transport support `psi0..psi11`,
+- packet utrzymuje jawnie `light-facing` znaczenie tylko przez strict-admissible
+  `kernel-mixing (K_i_j + K_j_i)/2` w off-diagonal entries,
+- packet nie twierdzi, ze to jest juz selector-relevant target,
+  `K_obs` factorization albo host match.
+
+Aktualizacja `P19`:
+- wykonano rerun tej samej trasy host-identification po `R12`,
+- wynik:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_TO_CONCRETE_PSI_BLOCK_IDENTIFICATION_ROUTE_AFTER_R11_AND_R12_EXPLICIT_CANONICAL_PSI_BLOCK_EXPORT`,
+- probe rozladowuje drugi blocker z `P18` na scope
+  `full declared transport support`,
+- po tym rerunie zostaja juz tylko dwa missing objects:
+  `QW-2191` uniqueness/canonicalization boundary oraz
+  host-to-submatrix matching witness do `QW-2186`.
+
+Aktualizacja `N22`:
+- wykonano theorem-level wynik dla zaktualizowanej trasy po `R12/P19`,
+- `R11/R12/P19/QW-2191/C10` razem wymuszaja wniosek:
+  explicit declared transport packet i explicit canonical `Psi` block sa juz
+  present, ale repo nadal nie identyfikuje hosta `QW-2186` z tym blockiem,
+- to jest dalszy realny progres redukcyjny z zachowaniem watku swiatla:
+  kernel-mixing/light-facing channel jest juz jawny na poziomie canonical blocku,
+  lecz nadal nie ma canonicalization + matching witness, bez falszywego PASS.
+
 ## Ontologiczna wskazowka programu
 
 Program jest prowadzony pod robocza ontologia:
