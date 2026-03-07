@@ -1,6 +1,6 @@
 # Fundamental Action Reconstruction
 
-Status: `PROGRAM_PHASE1_COMPLETE_C55_T1_T12_PLUS_N1_N2_N3_N4_N5_N6_N7_N8_N9_N10_N11_N12_N13_D1_AX1_AX2_AX3_AX4_AX5_AX6_AX7_AX8_AND_H1_H2_H3_H4_H5_H6_H7_H8_H9_H10_H11_H12_H13_H14_H15_H16_H17_H18_H19_H20_H21_H22_H23_H24_H25_H26_H27_H28_H29_H30_H31_H32_H33_H34_H35_H36_H37_H38_H39_H40_H41_H42_V1_V2_V3_V4_V5_V6_V7_O1_O2_O3_O4_NO_FALSE_PASS`
+Status: `PROGRAM_PHASE1_COMPLETE_C55_T1_T12_PLUS_N1_N2_N3_N4_N5_N6_N7_N8_N9_N10_N11_N12_N13_N14_D1_AX1_AX2_AX3_AX4_AX5_AX6_AX7_AX8_AND_H1_H2_H3_H4_H5_H6_H7_H8_H9_H10_H11_H12_H13_H14_H15_H16_H17_H18_H19_H20_H21_H22_H23_H24_H25_H26_H27_H28_H29_H30_H31_H32_H33_H34_H35_H36_H37_H38_H39_H40_H41_H42_V1_V2_V3_V4_V5_V6_V7_O1_O2_O3_O4_NO_FALSE_PASS`
 As of: `2026-03-07`
 
 Ten katalog otwiera rownolegly tor konstrukcyjny poza drabinka `L5/L12`.
@@ -337,6 +337,30 @@ Aktualizacja `N13`:
 - to jest realna redukcja blocker-setu do jednego ostatniego missing object,
   ale nadal bez factorization discharge.
 
+Aktualizacja `R7`:
+- wykonano pierwszy realny provenance packet dla ostatniego factorization blocker:
+  stare `QW-1949..1956` i packetized explicit chain `R2/R3/R4/R5/R6` maja
+  wspolny `kernel_source` i wspolny frozen kernel vector,
+- to jest realny shared-provenance witness, ale nadal nie factorization map.
+
+Aktualizacja `P11`:
+- wykonano compute-or-fail probe dla samej factorization map po `P10`,
+- wynik:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_TO_EXPLICIT_CHAIN_FACTORIZATION_ROUTE`,
+- ostatni nominalny blocker z `P10` zostaje rozlozony na cztery jawne
+  subobiekty operatorowe:
+  explicit legacy carrier / typed projection / selector-sector reduction /
+  intertwiner-equality witness.
+
+Aktualizacja `N14`:
+- wykonano theorem-level current-route wynik po dodaniu shared provenance i po
+  eksporcie pelnego current-pair bloku,
+- `R7/P11/H14/H15/H16/P10` razem wymuszaja wniosek:
+  nawet po shared-provenance witness obecny route nadal nie identyfikuje
+  existing kernel feedback z explicit selector-facing `H3` chain,
+- to jest realne zaostrzenie ostatniego blokera, ale nadal bez factorization
+  discharge.
+
 ## Ontologiczna wskazowka programu
 
 Program jest prowadzony pod robocza ontologia:
@@ -656,6 +680,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `N11`: wykonane jako updated-route theorem po dodaniu jawnych packetow `E` i `G_light`; pokazuje, ze nawet po odtworzeniu partial pullback zgodnego z `P1` aktualna trasa `existing kernel feedback -> K_obs` nadal zatrzymuje sie przed `R_mat/O_obs`, factorization map i pelnym `H3` projected block.
 - `N12`: wykonane jako updated-route theorem po dodaniu jawnego `R_mat`; pokazuje, ze nawet po realnym dodaniu trzeciego operator-chain object aktualna trasa `existing kernel feedback -> K_obs` nadal zatrzymuje sie przed `O_obs`, factorization map i pelnym `H3` projected block.
 - `N13`: wykonane jako updated-route theorem po dodaniu jawnego `O_obs` i eksporcie pelnego current-pair bloku; pokazuje, ze nawet po realnym domknieciu local factor chain aktualna trasa `existing kernel feedback -> K_obs` nadal zatrzymuje sie juz tylko przed equivalence/factorization map.
+- `N14`: wykonane jako updated-route theorem po dodaniu shared frozen-kernel provenance packet; pokazuje, ze nawet po dodaniu realnego shared-provenance witness aktualna trasa `existing kernel feedback -> explicit H3 chain` nadal zatrzymuje sie na czterech operator-level factorization subobjects.
 - `P2`: wykonane jako strict-core compute-or-fail probe dla najlepszej obecnej trasy `sigma_int`; wynik pokazuje, ze nawet z `sigma_int_candidate`, residualnym `Z2` fit i packet-ready basis-carrier schema repo nie dochodzi jeszcze do `A_1(pair1)`, bo nadal brakuje strict-core source object, bridge map, actual `theta_1/theta_2`, populated `u_1/u_2` i operator bridge.
 - `P3`: wykonane jako strict-core compute-or-fail probe dla samego FR bridge layer; wynik pokazuje, ze route `sigma_int_candidate -> residual datum -> theta-source` pozostaje nieobliczalny i redukuje sie do skonczonego bridge-level blocker-set.
 - `P4`: wykonane jako strict-core compute-or-fail probe dla samego bridge jadra `sigma_int_candidate -> residual orientation datum`; wynik pokazuje, ze route zatrzymuje sie na candidate-fit, acceptance carrier i axiom-lane witness, bez strict-core exportu i bridge mapy.
@@ -665,12 +690,14 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `P8`: wykonane jako rerun `P7` po dodaniu jawnego `E`; wynik pokazuje, ze blocker-set maleje dokladnie o jeszcze jeden element, ale route nadal pozostaje nieobliczalny na poziomie selector-facing `K_obs`.
 - `P9`: wykonane jako rerun `P8` po dodaniu jawnego `R_mat`; wynik pokazuje, ze blocker-set maleje dokladnie o jeszcze jeden element, ale route nadal pozostaje nieobliczalny na poziomie selector-facing `K_obs`.
 - `P10`: wykonane jako rerun `P9` po dodaniu jawnego `O_obs`; wynik pokazuje, ze pelny current-pair `H3` block jest juz obliczalny, ale route nadal nie identyfikuje go z existing kernel feedback i redukuje sie do jednego missing factorization map object.
+- `P11`: wykonane jako compute-or-fail probe dla samej factorization map po `P10`; wynik pokazuje, ze ostatni nominalny factorization blocker nie jest atomowy i redukuje sie do czterech jawnych subobiektow operatorowych.
 - `R1`: wykonane jako strict-core target-slot export packet; residual orientation datum ma juz packet-ready target object w strict core, ale nadal bez actual population i bez sigma-to-slot bridge mapy.
 - `R2`: wykonane jako existing internal feedback parameter packet for `K_obs`; observer/light/matter parameter layer jest juz jawnie zebrana, ale nadal nie stanowi operator-level `K_obs`.
 - `R3`: wykonane jako minimalny explicit internal light propagator packet for `K_obs`; nosnik `L_1` i macierz `G_light^(1)` sa juz jawnie wyeksportowane, ale nadal bez factorization map do current kernel feedback i bez pair/selector projection.
 - `R4`: wykonane jako explicit current-pair local-chart emission map packet for `K_obs`; `E_1 = R(-psi0)` jest juz jawnie wyeksportowane i zgodne z `P1` jako partial pullback razem z `R3`, ale nadal bez factorization map i bez promocji do selector-source discharge.
 - `R5`: wykonane jako explicit current-pair light-to-matter response packet for `K_obs`; `R_mat^(1)` jest juz jawnie wyeksportowane z danych `QW-1951/QW-1956/R2`, ale nadal bez `O_obs`, bez factorization map i bez promocji do selector-facing projected block.
 - `R6`: wykonane jako explicit current-pair observer-readout packet for `K_obs`; `O_obs^(1)` jest juz jawnie wyeksportowane z danych `QW-1950/R2`, ale nadal bez factorization map i bez promocji do tozsamosci z existing kernel feedback.
+- `R7`: wykonane jako shared frozen-kernel provenance packet for `K_obs`; stare `QW-1949..1956` i explicit chain packets `R2/R3/R4/R5/R6` maja juz jawny wspolny provenance witness, ale nadal bez operator-level factorization map.
 - `D1`: wykonane jako jawny projektowy wniosek po `N3`; obecnie najlepiej wsparty stan brzmi: strict core nie ma domknietego selector closure, a najbardziej uczciwa interpretacja to selector-axiom necessity albo strict-core incompleteness. To nie jest theorem-level wynik.
 - `AX1`: wykonane jako jawny pozytywny lane `axiom-augmented`; pod minimalnym aksjomatem selekcji `minimum_harmonic_alignment_with_orientation_convention` dostajemy actual `theta_1=theta_2=0 mod 2pi`, `u_1=c_1`, `u_2=c_2` i `S_orient_axiom=span{c_1,c_2}`, ale tylko poza strict core.
 - `AX2`: wykonane jako pierwszy materialny krok na lane `axiom-augmented`; utworzono persisted actual-instance dla `theta_1=theta_2=0 mod 2pi`, `u_1=c_1`, `u_2=c_2` i `S_orient_axiom=span{c_1,c_2}`, nadal jawnie poza strict core.
@@ -813,6 +840,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - brak claimu, ze `N11` jest global impossibility theorem; `N11` dotyczy tylko zaktualizowanej trasy po dodaniu `E` i `G_light`.
 - brak claimu, ze `N12` jest global impossibility theorem; `N12` dotyczy tylko zaktualizowanej trasy po dodaniu `E`, `G_light` i `R_mat`.
 - brak claimu, ze `N13` jest global impossibility theorem; `N13` dotyczy tylko zaktualizowanej trasy po dodaniu jawnego current-pair chain `E/G/R/O` i pelnego current-pair bloku.
+- brak claimu, ze `N14` jest global impossibility theorem; `N14` dotyczy tylko zaktualizowanej trasy factorization-route po dodaniu shared frozen-kernel provenance i pelnego current-pair bloku.
 - brak claimu, ze `P2` dowodzi niemozliwosci future strict-core route; `P2` dotyczy tylko reachability z aktualnego strict-core sigma-int route i zwraca current blocker-set.
 - brak claimu, ze `P3` dowodzi niemozliwosci future FR bridge; `P3` dotyczy tylko aktualnego strict-core FR route i zwraca current bridge-level blocker-set.
 - brak claimu, ze `P4` dowodzi niemozliwosci future strict-core residual bridge; `P4` dotyczy tylko aktualnej trasy `sigma_int -> residual datum` i zwraca current bridge-level blocker-set.
@@ -822,12 +850,14 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - brak claimu, ze `P8` dowodzi niemozliwosci future `K_obs`; `P8` dotyczy tylko zaktualizowanej trasy po dodaniu jawnych packetow `E` i `G_light`.
 - brak claimu, ze `P9` dowodzi niemozliwosci future `K_obs`; `P9` dotyczy tylko zaktualizowanej trasy po dodaniu jawnych packetow `E`, `G_light` i `R_mat`.
 - brak claimu, ze `P10` dowodzi niemozliwosci future `K_obs`; `P10` dotyczy tylko zaktualizowanej trasy po dodaniu jawnego current-pair chain `E/G/R/O` i pokazuje jedynie, ze brakuje jeszcze factorization map.
+- brak claimu, ze `P11` dowodzi niemozliwosci future factorization route; `P11` dotyczy tylko aktualnej trasy `existing kernel feedback -> explicit H3 chain` i pokazuje jedynie obecny czteroelementowy blocker-set.
 - brak claimu, ze `R1` jest bridge discharge; `R1` daje tylko target-slot export packet.
 - brak claimu, ze `R2` jest operator discharge; `R2` daje tylko parameter packet dla hipotezy `K_obs`.
 - brak claimu, ze `R3` jest factorization discharge; `R3` daje tylko jawny packet `G_light` na finite light carrier.
 - brak claimu, ze `R4` jest selector-source discharge; `R4` daje tylko jawny local-chart emission packet `E_1`.
 - brak claimu, ze `R5` jest factorization discharge; `R5` daje tylko jawny current-pair packet `R_mat^(1)`.
 - brak claimu, ze `R6` jest factorization discharge; `R6` daje tylko jawny current-pair packet `O_obs^(1)`.
+- brak claimu, ze `R7` jest factorization discharge; `R7` daje tylko shared frozen-kernel provenance packet.
 - brak claimu, ze `D1` jest twierdzeniem; to jest current best-supported project conclusion.
 - brak claimu, ze `AX1` nalezy do strict core; to jest jawnie lane axiom-augmented.
 - brak claimu, ze `AX2` nalezy do strict core; to jest tylko actual-instance lane axiom-augmented.
@@ -973,6 +1003,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `N11_CURRENT_KERNEL_FEEDBACK_KOBS_OBSTRUCTION_AFTER_E_AND_GLIGHT_PACKETS_THEOREM.md`
 - `N12_CURRENT_KERNEL_FEEDBACK_KOBS_OBSTRUCTION_AFTER_E_GLIGHT_AND_RMAT_PACKETS_THEOREM.md`
 - `N13_CURRENT_KERNEL_FEEDBACK_KOBS_NONIDENTIFICATION_AFTER_EXPLICIT_CURRENT_PAIR_CHAIN_THEOREM.md`
+- `N14_CURRENT_EXISTING_KERNEL_FEEDBACK_TO_EXPLICIT_H3_CHAIN_NONFACTORIZATION_THEOREM.md`
 - `P2_STRICT_CORE_SIGMA_INT_TO_A1_PAIR1_PROBE.md`
 - `P3_STRICT_CORE_FR_ROUTE_BRIDGE_PROBE.md`
 - `P4_STRICT_CORE_SIGMA_INT_TO_RESIDUAL_DATUM_BRIDGE_PROBE.md`
@@ -982,12 +1013,14 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `P8_EXISTING_KERNEL_FEEDBACK_TO_KOBS_RERUN_AFTER_E_AND_GLIGHT_PACKETS.md`
 - `P9_EXISTING_KERNEL_FEEDBACK_TO_KOBS_RERUN_AFTER_E_GLIGHT_AND_RMAT_PACKETS.md`
 - `P10_EXISTING_KERNEL_FEEDBACK_TO_KOBS_RERUN_AFTER_EXPLICIT_CURRENT_PAIR_CHAIN.md`
+- `P11_EXISTING_KERNEL_FEEDBACK_TO_EXPLICIT_H3_CHAIN_FACTORIZATION_MAP_PROBE.md`
 - `R1_STRICT_CORE_RESIDUAL_DATUM_TARGET_SLOT_EXPORT_PACKET.md`
 - `R2_EXISTING_INTERNAL_FEEDBACK_PARAMETER_PACKET_FOR_KOBS.md`
 - `R3_MINIMAL_INTERNAL_LIGHT_PROPAGATOR_PACKET_FOR_KOBS.md`
 - `R4_LOCAL_CHART_EMISSION_MAP_PACKET_FOR_KOBS.md`
 - `R5_MINIMAL_LIGHT_TO_MATTER_RESPONSE_PACKET_FOR_KOBS.md`
 - `R6_MINIMAL_OBSERVER_READOUT_PACKET_FOR_KOBS.md`
+- `R7_SHARED_FROZEN_KERNEL_PROVENANCE_PACKET_FOR_KOBS.md`
 - `D1_SELECTOR_AXIOM_NECESSITY_CURRENT_BEST_SUPPORTED_CONCLUSION.md`
 - `AX1_MINIMAL_SELECTOR_AXIOM_PACKET.md`
 - `AX2_AXIOM_LANE_ACTUAL_BASIS_PAIR_AND_ORIENTATION_SLICE_INSTANCE.md`

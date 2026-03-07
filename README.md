@@ -68,6 +68,12 @@ Primary state report:
   data, while `P10` plus `N13` show that the full current-pair `H3` block is
   now computable but still not identified with existing kernel feedback because
   the equivalence/factorization map is still absent.
+- The next honest move has now also been executed on that final blocker:
+  `R7` records a real shared frozen-kernel provenance witness between the old
+  QW light/matter/observer family and the explicit chain packets, while `P11`
+  plus `N14` show that this still does not yield an identification map and
+  decomposes the last nominal blocker into four explicit operator-level
+  subobjects.
 - This is real progress on the selector problem at extension level, but it does not upgrade strict-core closure and does not change `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 - Details: [`fundamental_action_reconstruction/README.md`](fundamental_action_reconstruction/README.md), [`fundamental_action_reconstruction/generated/pair1_operator_probe_report.json`](fundamental_action_reconstruction/generated/pair1_operator_probe_report.json).
 
@@ -815,6 +821,8 @@ Current status:
 - this moves the theory forward by materializing one explicit current-pair `R_mat` map from already exported mass-information and repaired two-state data, and proving that the updated route still fails only at `O_obs / factorization map / full H3 projected block`,
 - `R6`, `P10`, and `N13` completed as the fourth constructive reduction of that K_obs blocker-set,
 - this moves the theory forward by materializing one explicit current-pair `O_obs` map, computing the first full current-pair `H3` block on `pair1`, and proving that the updated route now fails only at the equivalence/factorization map to existing kernel feedback,
+- `R7`, `P11`, and `N14` completed as the sharpest current analysis of that last factorization blocker,
+- this moves the theory forward by proving that shared frozen-kernel provenance is real but still weaker than operator identification, and by decomposing the last nominal factorization blocker into four explicit subobjects,
 - `D1` completed as the current best-supported project conclusion after `N3`,
 - this records the strongest honest interpretation now supported by the evidence: selector closure is not achieved in strict core, and the project must either discharge `T12_B1` directly or accept selector-axiom necessity / strict-core incompleteness as the active design conclusion,
 - `AX1` completed as an explicit axiom-augmented positive lane,

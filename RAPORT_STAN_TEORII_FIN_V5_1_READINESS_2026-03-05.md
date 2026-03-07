@@ -64,6 +64,10 @@ Interpretacja rygorystyczna:
   materializuja jawny current-pair `O_obs`, eksportuja pierwszy pelny
   current-pair `H3` projected block i utrzymuja negatywny wynik tylko na
   poziomie brakujacej equivalence/factorization map do existing kernel feedback,
+- `R7`, `P11` i `N14` robia najuczciwsza analize tego ostatniego blokera:
+  materializuja shared frozen-kernel provenance witness, ale utrzymuja brak
+  identyfikacji operatorowej i rozkladaja ostatni nominalny blocker na cztery
+  jawne subobiekty operatorowe,
 - nie zmienia to decyzji `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 
 Artefakty:
@@ -2058,6 +2062,23 @@ Frontier po `R6/P10/N13`:
 - `N13_route_result := current kernel feedback is still not identified with selector-facing K_obs even after explicit current-pair E/G/R/O chain export`,
 - `P10_resolved_from_P9 := explicit O_obs / full H3 selector-sector projected block export`,
 - `P10_missing_objects := equivalence or factorization map from existing kernel feedback to the explicit H3 chain`,
+- nadal brak globalnego theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `R7`, `P11` i `N14`:
+- `R7` tworzy pierwszy jawny shared frozen-kernel provenance packet laczacy
+  stare `QW-1949..1956` z packetami `R2/R3/R4/R5/R6`,
+- `P11` testuje, czy ten shared provenance oraz jawny current-pair block
+  wystarczaja juz do zbudowania equivalence/factorization map,
+- `N14` daje theorem-level current-route wynik:
+  nawet po dodaniu shared provenance obecny route nadal nie identyfikuje
+  existing kernel feedback z explicit selector-facing `H3` chain.
+
+Frontier po `R7/P11/N14`:
+- `R7_result := shared frozen-kernel provenance packet is now present`,
+- `P11_route_result := current factorization route is still not computable`,
+- `N14_route_result := current repo still does not identify existing kernel feedback with the explicit H3 chain even after shared provenance and explicit block export`,
+- `P11_decomposition_of_P10_missing_object := explicit legacy carrier / typed projection / selector-sector reduction / intertwiner-equality witness`,
+- `P11_missing_objects := explicit operator-level existing-kernel-feedback carrier / typed projection into explicit H3 chain / selector-sector reduction on legacy side / intertwiner-equality witness`,
 - nadal brak globalnego theorem-level/full-closure PASS.
 
 Co realnie zostalo dodane przez `AX1`:

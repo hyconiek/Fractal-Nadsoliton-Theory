@@ -8933,6 +8933,50 @@ Po tej rundzie:
    - nie promowac samego jawnego current-pair bloku do tozsamosci z existing kernel feedback.
 
 
+## 532. Shared frozen-kernel provenance packet and factorization-map probe (2026-03-07)
+
+1. Cel:
+   - uderzyc bezposrednio w ostatni nominalny missing object po `P10`,
+   - najpierw sprawdzic, czy repo ma chociaz realny shared-provenance witness
+     miedzy starym QW-family i explicit chain packets,
+   - potem uruchomic compute-or-fail probe dla samej factorization map,
+   - nie promowac shared provenance do operator-level identification.
+2. Wynik:
+   - `R7` tworzy shared frozen-kernel provenance packet:
+     `QW-1949..1956` i `R2/R3/R4/R5/R6` schodza z tego samego
+     `kernel_source` i tego samego frozen kernel vector,
+   - `P11` testuje trase:
+     `existing kernel feedback + shared provenance + explicit current-pair H3 chain -> factorization map`,
+   - wynik `P11`:
+     `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_TO_EXPLICIT_CHAIN_FACTORIZATION_ROUTE`,
+   - `P11` rozklada ostatni nominalny missing object z `P10` na cztery jawne
+     subblokery,
+   - `N14` formalizuje theorem-level updated-route wynik:
+     nawet po dodaniu shared provenance obecna trasa nadal nie identyfikuje
+     existing kernel feedback z explicit selector-facing `H3` chain.
+3. Frontier po kroku:
+   - `R7_result := shared frozen-kernel provenance packet is now present`,
+   - `P11_decomposition_of_P10_missing_object := explicit legacy carrier / typed projection / selector-sector reduction / intertwiner-equality witness`,
+   - `P11_missing_objects := explicit operator-level existing-kernel-feedback carrier / typed projection into explicit H3 chain / selector-sector reduction on legacy side / intertwiner-equality witness`,
+   - `N14_route_result := current existing-kernel-feedback to explicit-H3-chain factorization route is still noncomputable`,
+   - `R7_boundary := shared frozen-kernel provenance is still not an operator-level factorization map`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/R7_SHARED_FROZEN_KERNEL_PROVENANCE_PACKET_FOR_KOBS.md`,
+   - dodano `fundamental_action_reconstruction/r7_shared_frozen_kernel_provenance_packet_for_kobs.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r7_shared_frozen_kernel_provenance_packet_for_kobs.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r7_shared_frozen_kernel_provenance_packet_for_kobs_summary.json`,
+   - dodano `fundamental_action_reconstruction/P11_EXISTING_KERNEL_FEEDBACK_TO_EXPLICIT_H3_CHAIN_FACTORIZATION_MAP_PROBE.md`,
+   - dodano `fundamental_action_reconstruction/p11_existing_kernel_feedback_to_explicit_h3_chain_factorization_map_probe.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p11_existing_kernel_feedback_to_explicit_h3_chain_factorization_map_probe.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p11_existing_kernel_feedback_to_explicit_h3_chain_factorization_map_probe_summary.json`,
+   - dodano `fundamental_action_reconstruction/N14_CURRENT_EXISTING_KERNEL_FEEDBACK_TO_EXPLICIT_H3_CHAIN_NONFACTORIZATION_THEOREM.md`,
+   - dodano `fundamental_action_reconstruction/n14_current_existing_kernel_feedback_to_explicit_h3_chain_nonfactorization_theorem.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n14_current_existing_kernel_feedback_to_explicit_h3_chain_nonfactorization_theorem_summary.json`.
+5. Nastepny poprawny ruch:
+   - sprobowac zmaterializowac jeden z czterech factorization subobjects,
+   - albo utrzymac lane negatywny i nie udawac, ze shared provenance juz daje equivalence map.
+
+
 - `H29`: stare proxy `retard_phase/tau/gain` moduluja preorientowany kanal, ale nie dostarczaja same wewnetrznego strict-core anchoru orientacji.
 - `H30`: `orientation_psi0 = mod(0.5*phi + 0.8*omega, 2*pi)` jest deterministycznym kandydatem anchoru z kernel invariants, ale nie jest jeszcze strict-core eksportem `theta_i`.
 - `H31`: `psi0` ma formalny embedding do `pair1=(c_1,s_1)`, ale nadal nie ma dowodu, ze jest to strict-core redukcja selektora, a nie tylko wybor wspolrzednych.
