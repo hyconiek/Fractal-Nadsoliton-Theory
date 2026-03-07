@@ -1,0 +1,117 @@
+{
+  "stage": "R24",
+  "packet_goal": "reduce_the_direct_mass_like_m2_family_balance_witness_to_one_declared_plus3_shift_equivariance_witness_on_the_positive_support_sum_without_claiming_that_the_shift_equivariance_holds",
+  "source_reports": [
+    "R20",
+    "R23"
+  ],
+  "declared_plus3_shift_packet_for_direct_m2_family_route": {
+    "positive_support_sum_symbol": "M2_c1s1_positive",
+    "positive_support_sum_expression": "(m2_psi1) + (m2_psi7) + (m2_psi2) + (m2_psi8)",
+    "negative_support_sum_symbol": "M2_c1s1_negative",
+    "negative_support_sum_expression": "(m2_psi4) + (m2_psi10) + (m2_psi5) + (m2_psi11)",
+    "declared_basis_shift_restricted_to_positive_support": {
+      "psi1": "psi4",
+      "psi7": "psi10",
+      "psi2": "psi5",
+      "psi8": "psi11"
+    },
+    "declared_coefficient_relabeling_restricted_to_positive_support": {
+      "m2_psi1": "m2_psi4",
+      "m2_psi7": "m2_psi10",
+      "m2_psi2": "m2_psi5",
+      "m2_psi8": "m2_psi11"
+    },
+    "declared_shifted_positive_support_sum_expression": "(m2_psi4) + (m2_psi10) + (m2_psi5) + (m2_psi11)",
+    "equivalent_direct_m2_witness_reduction": {
+      "from_balance_equation": "M2_c1s1_positive = M2_c1s1_negative",
+      "to_shift_equivariance_equation": "S_plus3(M2_c1s1_positive) = M2_c1s1_positive",
+      "because": "the declared +3 shift sends the positive direct m2 support terms onto the negative direct m2 support terms on this route"
+    },
+    "scope": "declared_plus3_shift_on_direct_mass_like_m2_family_positive_support_only"
+  },
+  "result": {
+    "explicit_declared_plus3_shift_packet_for_direct_m2_family_present": true,
+    "explicit_declared_plus3_shift_equivariance_witness_for_direct_m2_positive_support_present": false,
+    "global_reduction_of_main_R21_c1s1_blocker_claimed": false
+  },
+  "light_boundary": {
+    "status": "shared_kernel_light_facing_channel_already_closed_by_R14_and_left_unchanged_by_R24",
+    "shared_light_channel_source": "R14 specialization of the symmetric kernel-mixing channel",
+    "current_packet_scope": "declared +3 shift structure on the direct non-light m2 family positive support only",
+    "boundary": "R24 does not alter the light-facing kernel channel; it only rewrites the direct m2 balance witness as one declared +3 shift-equivariance target on the positive support sum"
+  },
+  "classification": "explicit_declared_plus3_shift_packet_for_direct_m2_family_present_but_no_shift_equivariance_witness",
+  "frontier": "R24_B1",
+  "frontier_text": "on the direct formal coefficient-family route only, the direct mass-like m2 family balance witness is sharpened into one declared plus3 shift-equivariance witness, while the other direct family blockers, the main host route, and QW-2191 remain unchanged",
+  "consistency_checks": [
+    {
+      "id": "r23_direct_m2_balance_reduction_present",
+      "actual": true,
+      "expected": true,
+      "meaning": "R23 already exports the exact direct m2 family balance equation",
+      "pass": true
+    },
+    {
+      "id": "r23_direct_m2_balance_witness_still_absent",
+      "actual": false,
+      "expected": false,
+      "meaning": "R23 does not already prove the direct m2 family balance",
+      "pass": true
+    },
+    {
+      "id": "plus3_shift_maps_positive_direct_m2_support_slots_to_negative_support_slots",
+      "actual": [
+        "psi10",
+        "psi11",
+        "psi4",
+        "psi5"
+      ],
+      "expected": [
+        "psi10",
+        "psi11",
+        "psi4",
+        "psi5"
+      ],
+      "meaning": "the declared +3 carrier shift maps the positive direct m2 support slots onto the negative support slots",
+      "pass": true
+    },
+    {
+      "id": "declared_shifted_positive_m2_terms_match_negative_support_terms",
+      "actual": [
+        "m2_psi10",
+        "m2_psi11",
+        "m2_psi4",
+        "m2_psi5"
+      ],
+      "expected": [
+        "m2_psi10",
+        "m2_psi11",
+        "m2_psi4",
+        "m2_psi5"
+      ],
+      "meaning": "the declared +3 coefficient relabeling sends the positive direct m2 terms onto the negative direct m2 terms",
+      "pass": true
+    },
+    {
+      "id": "light_boundary_unchanged_from_r23",
+      "actual": "shared_kernel_light_facing_channel_already_closed_by_R14_and_left_unchanged_by_R23",
+      "expected": "shared_kernel_light_facing_channel_already_closed_by_R14_and_left_unchanged_by_R23",
+      "meaning": "the already closed light-facing kernel channel remains unchanged on the direct m2 shift route",
+      "pass": true
+    }
+  ],
+  "hard_limits": [
+    "no_theorem_level_pass",
+    "no_full_closure_pass",
+    "no_claim_that_the_direct_m2_shift_equivariance_holds",
+    "no_claim_that_the_direct_m2_balance_holds",
+    "no_claim_that_the_direct_m2_family_defect_vanishes",
+    "no_claim_that_any_other_direct_family_defect_vanishes",
+    "no_claim_that_the_main_R21_blocker_is_globally_reduced",
+    "no_claim_that_any_pair1_c1c1_or_s1s1_zero_equation_holds",
+    "no_claim_that_QW2191_is_discharged",
+    "no_claim_that_selector_closure_is_obtained"
+  ],
+  "no_false_pass": true
+}

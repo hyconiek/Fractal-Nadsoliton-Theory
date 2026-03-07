@@ -950,6 +950,52 @@ Aktualizacja `N33`:
   nie twierdzi, ze `QW-2191` jest rozladowane,
   bez falszywego PASS.
 
+Aktualizacja `R24`:
+- zmaterializowano jawny `declared plus3 shift packet` dla direct `m2` family
+  route po `R23`,
+- packet eksportuje exact restricted basis shift:
+  `psi1 -> psi4`,
+  `psi7 -> psi10`,
+  `psi2 -> psi5`,
+  `psi8 -> psi11`,
+  oraz induced coefficient relabeling
+  `m2_psi1 -> m2_psi4`,
+  `m2_psi7 -> m2_psi10`,
+  `m2_psi2 -> m2_psi5`,
+  `m2_psi8 -> m2_psi11`,
+- packet nie twierdzi, ze shift-equivariance zachodzi; redukuje tylko direct
+  `m2` balance witness do jednego declared `+3` shift-equivariance witness,
+- kanal swiatlo/kernel pozostaje dokladnie tym samym juz zamknietym kanalem z
+  `R14`; `R24` dotyka tylko non-light direct `m2` positive support.
+
+Aktualizacja `P31`:
+- wykonano rerun direct formal family route po dodaniu `R24`,
+- wynik:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_AFTER_R24_DIRECT_M2_SHIFT_PACKET`,
+- probe nie twierdzi, ze direct family route sie domyka; twierdzi tylko, ze
+  direct `m2` balance witness zostal zwężony do jednego declared
+  `+3` shift-equivariance witness,
+- po tym rerunie na tej trasie zostaja:
+  `direct g4` zero witness,
+  `direct g6` zero witness,
+  `direct gY` zero witness,
+  `direct m2` declared shift-equivariance witness,
+  `c1c1` zero witness,
+  `s1s1` zero witness,
+  oraz `QW-2191` canonicalization boundary.
+
+Aktualizacja `N34`:
+- wykonano theorem-level wynik dla direct formal family route po `R24/P31`,
+- `R24/P31/QW-2191/C10` razem wymuszaja wniosek:
+  obecny repo nadal nie identyfikuje hosta `QW-2186` z exported canonical
+  blockiem nawet po exact direct `m2` declared shift packet,
+- theorem jest jawnie `route-specific only`:
+  nie daje globalnej redukcji glownego frontiera z `R21/P28`,
+  nie twierdzi, ze direct `m2` shift-equivariance zachodzi,
+  nie twierdzi, ze direct `g4/g6/gY` defects znikaja,
+  nie twierdzi, ze `QW-2191` jest rozladowane,
+  bez falszywego PASS.
+
 ## Ontologiczna wskazowka programu
 
 Program jest prowadzony pod robocza ontologia:

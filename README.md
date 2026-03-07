@@ -195,6 +195,13 @@ Primary state report:
   blocker to one exact direct `m2` balance witness, while the direct `g4/g6/gY`
   family blockers, the main host route, and the already closed light-facing
   kernel channel remain otherwise unchanged.
+- The next honest move after that has now also been executed, still only on
+  that direct route: `R24` plus `P31/N34` do not prove the direct `m2` balance
+  or vanishing. They only reduce that direct `m2` balance witness further to
+  one declared `+3` shift-equivariance witness on the direct `m2` positive
+  support sum, while the direct `g4/g6/gY` family blockers, the main host
+  route, and the already closed light-facing kernel channel remain otherwise
+  unchanged.
 - This is real progress on the selector problem at extension level, but it does not upgrade strict-core closure and does not change `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 - Details: [`fundamental_action_reconstruction/README.md`](fundamental_action_reconstruction/README.md), [`fundamental_action_reconstruction/generated/pair1_operator_probe_report.json`](fundamental_action_reconstruction/generated/pair1_operator_probe_report.json).
 
