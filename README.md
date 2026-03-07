@@ -110,6 +110,13 @@ Primary state report:
   does not compute; instead, host-to-concrete-Psi-block identification now
   decomposes into physical transport canonicalization, concrete Psi-submatrix
   export, and host-to-submatrix matching.
+- The next honest move after that has now also been executed: `R11` plus
+  `P18/N21` materialize an explicit declared control-transport packet with a
+  real symmetry certificate from `QW-2190`, but they also keep the exact
+  `QW-2191` obstruction active; the host-identification route stays negative
+  and the first missing object is now sharpened to full physical uniqueness /
+  selector-relevant canonicalization of that explicit transport, plus concrete
+  Psi-submatrix export and host-to-submatrix matching.
 - This is real progress on the selector problem at extension level, but it does not upgrade strict-core closure and does not change `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 - Details: [`fundamental_action_reconstruction/README.md`](fundamental_action_reconstruction/README.md), [`fundamental_action_reconstruction/generated/pair1_operator_probe_report.json`](fundamental_action_reconstruction/generated/pair1_operator_probe_report.json).
 

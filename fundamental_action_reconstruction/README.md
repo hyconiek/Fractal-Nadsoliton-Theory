@@ -505,6 +505,34 @@ Aktualizacja `N20`:
 - to jest dalszy realny progres redukcyjny na samym wejsciu do legacy-side
   operator export lane, nadal bez falszywego PASS.
 
+Aktualizacja `R11`:
+- zmaterializowano jawny `declared control transport packet` z bazy
+  `c1,s1,c2,s2` do carrieru `psi0..psi11`,
+- packet niesie realny `symmetry certificate` z `QW-2190`:
+  deterministyczna baza, orthonormal/disjoint subspaces, kernel invariance i
+  embedded Lie closure,
+- packet utrzymuje jawnie granice `QW-2191`: to jest tylko
+  `symmetry-certified declared transport`, a nie physical canonicalization.
+
+Aktualizacja `P18`:
+- wykonano rerun tej samej trasy host-identification po `R11`,
+- wynik:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_TO_CONCRETE_PSI_BLOCK_IDENTIFICATION_ROUTE_AFTER_R11_SYMMETRY_CERTIFIED_TRANSPORT_PACKET`,
+- probe zaostrza pierwszy blocker z `P17`:
+  `explicit declared transport + symmetry certificate` sa juz present, ale
+  nadal brakuje full physical uniqueness / selector-relevant canonicalization
+  wewnatrz residualnej rodziny `QW-2191`, a takze concrete submatrix export i
+  host-to-submatrix matching witness.
+
+Aktualizacja `N21`:
+- wykonano theorem-level wynik dla zaktualizowanej trasy po `R11/P18`,
+- `P17/R11/P18/QW-2191/C10/C11/C12/C20` razem wymuszaja wniosek:
+  nawet po explicit declared transport packet i symmetry certificate repo nadal
+  nie identyfikuje hosta `QW-2186` z concrete `Psi-sector` blockiem,
+- to jest dalszy realny progres redukcyjny: pierwszy brak nie jest juz mglistym
+  `transport canonicalization`, tylko ostro zlokalizowanym
+  `QW-2191` uniqueness/canonicalization boundary, nadal bez falszywego PASS.
+
 ## Ontologiczna wskazowka programu
 
 Program jest prowadzony pod robocza ontologia:

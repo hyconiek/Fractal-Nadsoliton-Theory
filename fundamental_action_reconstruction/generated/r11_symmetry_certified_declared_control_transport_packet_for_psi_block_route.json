@@ -1,0 +1,226 @@
+{
+  "stage": "R11",
+  "packet_goal": "materialize_an_explicit_declared_control_transport_packet_with_symmetry_certificate_for_the_host_to_concrete_Psi_block_route",
+  "source_reports": [
+    "QW-2190",
+    "QW-2191",
+    "C3",
+    "C13",
+    "C14"
+  ],
+  "transport_packet": {
+    "domain_basis": [
+      "c1",
+      "s1",
+      "c2",
+      "s2"
+    ],
+    "target_basis": [
+      "psi0",
+      "psi1",
+      "psi2",
+      "psi3",
+      "psi4",
+      "psi5",
+      "psi6",
+      "psi7",
+      "psi8",
+      "psi9",
+      "psi10",
+      "psi11"
+    ],
+    "control_pairs": {
+      "pair1": [
+        "c1",
+        "s1"
+      ],
+      "pair2": [
+        "c2",
+        "s2"
+      ]
+    },
+    "matrix_shape": [
+      12,
+      4
+    ],
+    "matrix_columns": {
+      "c1": [
+        0.408248290463863,
+        0.353553390593274,
+        0.204124145231932,
+        0.0,
+        -0.204124145231931,
+        -0.353553390593274,
+        -0.408248290463863,
+        -0.353553390593274,
+        -0.204124145231932,
+        0.0,
+        0.204124145231932,
+        0.353553390593274
+      ],
+      "s1": [
+        0.0,
+        0.204124145231931,
+        0.353553390593274,
+        0.408248290463863,
+        0.353553390593274,
+        0.204124145231931,
+        0.0,
+        -0.204124145231931,
+        -0.353553390593274,
+        -0.408248290463863,
+        -0.353553390593274,
+        -0.204124145231932
+      ],
+      "c2": [
+        0.408248290463863,
+        0.204124145231932,
+        -0.204124145231931,
+        -0.408248290463863,
+        -0.204124145231932,
+        0.204124145231932,
+        0.408248290463863,
+        0.204124145231932,
+        -0.204124145231931,
+        -0.408248290463863,
+        -0.204124145231931,
+        0.204124145231931
+      ],
+      "s2": [
+        0.0,
+        0.353553390593274,
+        0.353553390593274,
+        0.0,
+        -0.353553390593274,
+        -0.353553390593274,
+        0.0,
+        0.353553390593274,
+        0.353553390593274,
+        0.0,
+        -0.353553390593274,
+        -0.353553390593274
+      ]
+    },
+    "matrix_rows": [
+      [
+        0.408248290463863,
+        0.0,
+        0.408248290463863,
+        0.0
+      ],
+      [
+        0.353553390593274,
+        0.204124145231931,
+        0.204124145231932,
+        0.353553390593274
+      ],
+      [
+        0.204124145231932,
+        0.353553390593274,
+        -0.204124145231931,
+        0.353553390593274
+      ],
+      [
+        0.0,
+        0.408248290463863,
+        -0.408248290463863,
+        0.0
+      ],
+      [
+        -0.204124145231931,
+        0.353553390593274,
+        -0.204124145231932,
+        -0.353553390593274
+      ],
+      [
+        -0.353553390593274,
+        0.204124145231931,
+        0.204124145231932,
+        -0.353553390593274
+      ],
+      [
+        -0.408248290463863,
+        0.0,
+        0.408248290463863,
+        0.0
+      ],
+      [
+        -0.353553390593274,
+        -0.204124145231931,
+        0.204124145231932,
+        0.353553390593274
+      ],
+      [
+        -0.204124145231932,
+        -0.353553390593274,
+        -0.204124145231931,
+        0.353553390593274
+      ],
+      [
+        0.0,
+        -0.408248290463863,
+        -0.408248290463863,
+        0.0
+      ],
+      [
+        0.204124145231932,
+        -0.353553390593274,
+        -0.204124145231931,
+        -0.353553390593274
+      ],
+      [
+        0.353553390593274,
+        -0.204124145231932,
+        0.204124145231931,
+        -0.353553390593274
+      ]
+    ],
+    "construction_rule": "real Fourier basis coefficients on the declared 12-octave carrier, read in canonical Psi-slot order psi0..psi11",
+    "scope": "declared_control_transport_only"
+  },
+  "symmetry_certificate": {
+    "deterministic_basis_declared": true,
+    "mode_subspaces_orthonormal": true,
+    "mode_subspaces_disjoint": true,
+    "kernel_invariance_of_relevant_subspaces": {
+      "su3": true,
+      "su2": true
+    },
+    "embedded_lie_closure": {
+      "su3": true,
+      "su2": true
+    },
+    "numeric_residuals": {
+      "orthonormal_residual_su3_basis": 3.94042403467092e-16,
+      "orthonormal_residual_su2_basis": 3.819081716400198e-16,
+      "subspace_disjoint_residual": 3.236014329385227e-16,
+      "kernel_invariance_residual_su3_subspace": 5.932836200875411e-16,
+      "kernel_invariance_residual_su2_subspace": 3.7629207285806033e-16
+    },
+    "verdict": "KERNEL_MODE_REPRESENTATION_EMERGENCE_GATE_PASS_PARTIAL_PHYSICAL_UNIQUENESS_OPEN"
+  },
+  "obstruction_boundary": {
+    "theorem_verdict": "MODE_INDEX_UNIQUENESS_OBSTRUCTION_THEOREM_GATE_PASS_STRICT",
+    "continuous_nonunique_embedding_family_exhibited": true,
+    "full_uniqueness_from_kernel_alone_obstructed": true,
+    "full_physical_uniqueness_closed": false,
+    "required_next_step": "ADD_EXPLICIT_SYMMETRY_BREAKING_OR_SELECTION_AXIOM_FOR_PHYSICAL_MODE_ASSIGNMENT_UNIQUENESS"
+  },
+  "result": {
+    "explicit_declared_control_transport_packet_present": true,
+    "symmetry_certificate_present": true,
+    "strict_selector_relevant_physical_canonicalization_present": false,
+    "chosen_transported_index_set_physically_canonicalized": false
+  },
+  "classification": "explicit_declared_control_transport_packet_present_and_symmetry_certified_but_not_fully_physically_canonicalized_for_selector_relevant_block_extraction",
+  "frontier": "R11_B1",
+  "frontier_text": "the repo now contains an explicit declared transport matrix and a symmetry certificate for the control route, but QW-2191 still blocks full physical uniqueness and thus no selector-relevant canonical representative is yet justified",
+  "hard_limits": [
+    "no_theorem_level_pass",
+    "no_full_closure_pass",
+    "no_claim_that_the_declared_transport_is_physically_canonical",
+    "no_claim_that_QW2191_is_discharged",
+    "no_claim_that_a_concrete_Psi_sector_block_is_already_extracted"
+  ],
+  "no_false_pass": true
+}

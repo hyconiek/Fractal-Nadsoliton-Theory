@@ -2216,6 +2216,36 @@ Frontier po `P17/N20`:
 - `N20_route_result := current repo still does not identify existing kernel feedback host with a concrete Psi-sector block`,
 - nadal brak globalnego theorem-level/full-closure PASS.
 
+Co realnie zostalo dodane przez `R11`, `P18` i `N21`:
+- `R11` tworzy jawny `declared control transport packet`:
+  wspolczynniki `c1,s1,c2,s2` sa juz zapisane na carrierze `psi0..psi11`,
+  a packet niesie symmetry certificate z `QW-2190`,
+- `R11` utrzymuje jednak jawnie, ze to tylko packet
+  `symmetry-certified / declared`, bo `QW-2191` nadal blokuje full physical
+  uniqueness,
+- `P18` rerunuje dokladnie te sama trase host-identification po `R11`,
+- wynik `P18`:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_TO_CONCRETE_PSI_BLOCK_IDENTIFICATION_ROUTE_AFTER_R11_SYMMETRY_CERTIFIED_TRANSPORT_PACKET`,
+- `P18` zaostrza pierwszy `P17` blocker:
+  explicit declared transport + symmetry certificate sa juz present,
+  ale nadal brakuje full physical uniqueness / selector-relevant
+  canonicalization tej jawnej trasy wewnatrz rodziny `QW-2191`,
+  concrete coefficient-filled `Psi-sector` submatrix i
+  host-to-submatrix matching witness,
+- `N21` daje theorem-level updated-route wynik:
+  nawet po `R11` repo nadal nie identyfikuje hosta `QW-2186` z concrete
+  `Psi-sector` blockiem, a granica route zostaje zaostrzona do
+  `QW-2191` uniqueness/canonicalization boundary.
+
+Frontier po `R11/P18/N21`:
+- `R11_result := explicit declared control transport packet and symmetry certificate are present`,
+- `P18_route_result := current host-to-concrete-Psi-block identification route is still not computable after R11`,
+- `P18_missing_objects := full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+- `P18_missing_objects += explicit assembled and coefficient-filled concrete Psi-sector quadratic submatrix on a chosen transported index-set`,
+- `P18_missing_objects += explicit host-to-submatrix matching witness identifying the QW-2186 certified host operator with that concrete block`,
+- `N21_route_result := current repo still does not identify existing kernel feedback host with a concrete Psi-sector block even after explicit transport packetization`,
+- nadal brak globalnego theorem-level/full-closure PASS.
+
 Co realnie zostalo dodane przez `AX1`:
 - otwarto jawny pozytywny lane `axiom-augmented`,
 - pod minimalnym aksjomacie selekcji z `QW-2192/QW-2193` uzyskano packet-ready actual:
