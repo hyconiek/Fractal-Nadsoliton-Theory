@@ -2554,6 +2554,46 @@ Frontier po `R21/P28/N31`:
 - `N31_route_result := current repo still does not identify existing kernel feedback host with the exported canonical Psi block even after explicit c1s1 shift-defect export`,
 - nadal brak globalnego theorem-level/full-closure PASS.
 
+Co realnie zostalo dodane przez `R22`, `P29` i `N32`:
+- `R22` tworzy jawny `direct formal coefficient-family route packet` dla juz
+  wyeksportowanego `pair1 c1s1` shift defect z `R21`,
+- `R22` rozklada ten jeden totalny `c1s1` defect target na cztery jawne
+  direct-route family defects:
+  `quartic_like_g4_family_defect`,
+  `quintic_like_g6_family_defect`,
+  `yukawa_like_gY_family_defect`,
+  `mass_like_m2_family_defect`,
+- `R22` nie rusza warstwy swiatlo/kernel:
+  shared kernel/light-facing channel pozostaje dokladnie tym samym
+  juz zamknietym kanalem z `R14`,
+- `R22` jest jawnie route-scoped:
+  to nie jest globalna redukcja glownego blockera `R21/P28`, tylko
+  `current_exported_pair1_c1s1_coefficient_family_decomposition_only`,
+- `P29` rerunuje host route po `R22`, ale tylko jako direct formal family route,
+- wynik `P29`:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_AFTER_R22_PACKET`,
+- `P29` rozklada brak
+  `explicit zero witness for the pair1 c1s1 shift-defect polynomial`
+  tylko na tej trasie do czterech jawnych family-specific zero witnesses,
+- `N32` daje theorem-level updated-route wynik:
+  nawet po dodaniu jawnej direct family route obecny repo nadal nie identyfikuje
+  hosta `QW-2186` z exported canonical blockiem.
+
+Frontier po `R22/P29/N32`:
+- `R22_result := explicit direct formal c1s1 family route packet is present`,
+- `R22_scope := current exported pair1 c1s1 coefficient-family decomposition only`,
+- `R22_light_boundary := shared kernel/light-facing channel remains exactly the already closed R14 channel`,
+- `P29_route_result := current direct formal c1s1 family route is still not computable after R22`,
+- `P29_missing_objects := explicit zero witness for direct quartic-like g4 family c1s1 shift defect`,
+- `P29_missing_objects += explicit zero witness for direct quintic-like g6 family c1s1 shift defect`,
+- `P29_missing_objects += explicit zero witness for direct yukawa-like gY family c1s1 shift defect`,
+- `P29_missing_objects += explicit zero witness for direct mass-like m2 family c1s1 shift defect`,
+- `P29_missing_objects += explicit zero witness for the declared pair1 residual c1c1 equation`,
+- `P29_missing_objects += explicit zero witness for the declared pair1 residual s1s1 equation`,
+- `P29_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+- `N32_route_result := current repo still does not identify existing kernel feedback host with the exported canonical Psi block even after adding the direct formal c1s1 family route`,
+- nadal brak globalnego theorem-level/full-closure PASS i nadal brak globalnej redukcji glownego frontiera `R21/P28`.
+
 Co realnie zostalo dodane przez `AX1`:
 - otwarto jawny pozytywny lane `axiom-augmented`,
 - pod minimalnym aksjomacie selekcji z `QW-2192/QW-2193` uzyskano packet-ready actual:

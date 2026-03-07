@@ -9599,6 +9599,53 @@ Po tej rundzie:
    - albo probowac rozladowac `QW-2191`,
    - ale bez sklejania tych brakow w jeden pseudo-witness.
 
+521. `R22/P29/N32`: direct formal `pair1 c1s1` coefficient-family route without false pass
+1. Zakres:
+   - nie probowac udawac globalnego zero witness dla `R21`,
+   - zmaterializowac tylko jawna, route-scoped formalna trase:
+     `total pair1 c1s1 defect -> g4/g6/gY/m2 family defects`,
+   - utrzymac jawnie, ze kanal swiatlo/kernel pozostaje tym samym zamknietym
+     kanalem z `R14`.
+2. Wynik:
+   - `R22` daje realny partial packet:
+     direct formal coefficient-family route dla juz wyeksportowanego
+     `pair1 c1s1` shift defect,
+   - `P29` zwraca:
+     `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_AFTER_R22_PACKET`,
+   - `N32` utrzymuje route negatywny bez falszywego PASS.
+3. Frontier po kroku:
+   - `R22_result := explicit direct formal c1s1 family route packet is now present`,
+   - `R22_scope := current exported pair1 c1s1 coefficient-family decomposition only`,
+   - `R22_boundary := shared kernel/light-facing channel remains the already closed R14 channel`,
+   - `P29_missing_objects := explicit zero witness for direct quartic-like g4 family c1s1 shift defect`,
+   - `P29_missing_objects += explicit zero witness for direct quintic-like g6 family c1s1 shift defect`,
+   - `P29_missing_objects += explicit zero witness for direct yukawa-like gY family c1s1 shift defect`,
+   - `P29_missing_objects += explicit zero witness for direct mass-like m2 family c1s1 shift defect`,
+   - `P29_missing_objects += explicit zero witness for the declared pair1 residual c1c1 equation`,
+   - `P29_missing_objects += explicit zero witness for the declared pair1 residual s1s1 equation`,
+   - `P29_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+   - `N32_route_result := current repo still does not identify the existing-feedback host with the exported canonical Psi block even after adding the direct formal c1s1 family route`,
+   - brak claimu, ze glowny frontier `R21/P28` zostal globalnie rozladowany.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/R22_DIRECT_FORMAL_C1S1_SHIFT_DEFECT_FAMILY_ROUTE_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/r22_direct_formal_c1s1_shift_defect_family_route_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r22_direct_formal_c1s1_shift_defect_family_route_packet.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r22_direct_formal_c1s1_shift_defect_family_route_packet_summary.json`,
+   - dodano `fundamental_action_reconstruction/P29_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_PROBE.md`,
+   - dodano `fundamental_action_reconstruction/p29_existing_kernel_feedback_host_matching_direct_formal_c1s1_family_route_probe.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p29_existing_kernel_feedback_host_matching_direct_formal_c1s1_family_route_probe.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p29_existing_kernel_feedback_host_matching_direct_formal_c1s1_family_route_probe_summary.json`,
+   - dodano `fundamental_action_reconstruction/N32_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_OBSTRUCTION_THEOREM.md`,
+   - dodano `fundamental_action_reconstruction/n32_current_existing_kernel_feedback_host_matching_direct_formal_c1s1_family_route_obstruction_theorem.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n32_current_existing_kernel_feedback_host_matching_direct_formal_c1s1_family_route_obstruction_theorem_summary.json`.
+5. Nastepny poprawny ruch:
+   - albo uderzyc juz bardzo wasko w jeden z czterech direct family-specific
+     `c1s1` zero witnesses na tej trasie,
+   - albo osobno probowac `c1c1` lub `s1s1` zero witness na glownej trasie,
+   - albo probowac rozladowac `QW-2191`,
+   - ale bez udawania, ze direct family route jest globalnie rownowazna z
+     glowna trasa host matching.
+
 
 - `H29`: stare proxy `retard_phase/tau/gain` moduluja preorientowany kanal, ale nie dostarczaja same wewnetrznego strict-core anchoru orientacji.
 - `H30`: `orientation_psi0 = mod(0.5*phi + 0.8*omega, 2*pi)` jest deterministycznym kandydatem anchoru z kernel invariants, ale nie jest jeszcze strict-core eksportem `theta_i`.

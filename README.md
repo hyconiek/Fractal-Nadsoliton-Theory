@@ -180,6 +180,15 @@ Primary state report:
   light-facing kernel channel; the host route still stays negative, but now
   the missing pieces are that one `c1s1` defect-zero witness, the `c1c1` and
   `s1s1` zero witnesses, and the still-open `QW-2191` boundary.
+- The next honest move after that has now also been executed, but only as a
+  route-scoped formal reduction: `R22` plus `P29/N32` do not globally
+  discharge the `pair1` `c1s1` defect-zero witness. They only show that, on
+  the explicit direct formal coefficient-family route exported from `R21`,
+  that single `c1s1` blocker splits into four family-specific zero witnesses
+  on `g4/g6/gY/m2`, while the already closed light-facing kernel channel
+  remains unchanged and the main host route stays negative. So the direct-route
+  missing pieces are those four family witnesses, the `c1c1` and `s1s1` zero
+  witnesses, and the still-open `QW-2191` boundary.
 - This is real progress on the selector problem at extension level, but it does not upgrade strict-core closure and does not change `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 - Details: [`fundamental_action_reconstruction/README.md`](fundamental_action_reconstruction/README.md), [`fundamental_action_reconstruction/generated/pair1_operator_probe_report.json`](fundamental_action_reconstruction/generated/pair1_operator_probe_report.json).
 
