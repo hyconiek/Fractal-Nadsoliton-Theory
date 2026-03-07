@@ -28,6 +28,9 @@ Wynik:
 Interpretacja rygorystyczna:
 - jest to pierwszy konkretny selector-sector split na lane `hypothesis_extension_only`,
 - split pozostaje importowany przez `psi0`, a nie wyprowadzony z `strict core`,
+- `N4` formalizuje juz teraz mocniejszy current-repo wniosek:
+  repo nie eksportuje strict-core derivation, ktora robi z `psi0` selector source na `pair1`,
+  a kazdy aktualnie obliczalny split pozostaje extension-only,
 - nie zmienia to decyzji `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 
 Artefakty:
@@ -1829,6 +1832,21 @@ Frontier po `D1`:
 - `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
 - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
 - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`,
+- nadal brak globalnego theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `N4`:
+- po `P1` zrezygnowano z dalszego rozwijania audit ladder i zapisano bezposredni current-repo theorem o `psi0`,
+- `H30/H31/H34/H35/H36/H37/H42/P1` razem daja juz theorem-level wynik scoped do obecnego repo:
+  brak strict-core derivation zamieniajacej `psi0` w selector source na `pair1`,
+- praktyczny corollary jest ostrzejszy niz samo `D1`:
+  kazdy aktualnie policzalny selector split na `pair1` pozostaje extension-only i anchor-imported,
+- nadal nie jest to future-proof impossibility theorem i nadal nie discharge'uje `QW-2191`.
+
+Frontier po `N4`:
+- `N4_current_repo_result := no current strict-core derivation turns psi0 into a selector source on pair1`,
+- `P1_current_repo_corollary := every currently computable selector split on pair1 remains extension-only and anchor-imported`,
+- `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`,
 - nadal brak globalnego theorem-level/full-closure PASS.
 
 Co realnie zostalo dodane przez `AX1`:

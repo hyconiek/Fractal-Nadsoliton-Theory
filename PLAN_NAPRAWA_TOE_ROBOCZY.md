@@ -8503,6 +8503,33 @@ Po tej rundzie:
    - nie otwierac kolejnego audit ladder bez nowego obiektu liczacego albo nowego theorem-level unblocking input.
 
 
+## 521. Current-repo psi0 strict-core nonderivation theorem (2026-03-07)
+
+1. Cel:
+   - uderzyc bezposrednio w pytanie, czy `psi0` jest juz w repo wyprowadzone jako strict-core selector source bez importu,
+   - nie rozwijac dalej `C/T/H` ladder, jesli nie daje ono nowych wspolczynnikow ani nowego strict-core source object.
+2. Wynik:
+   - wykonano theorem scoped do `current repo state`, a nie do wszystkich przyszlych rozszerzen,
+   - `H30` potwierdza, ze `psi0` jest deterministycznym kernel-invariant candidate, ale nie strict-core selector datum,
+   - `H31/H34` potwierdzaja, ze `psi0 -> pair1` pozostaje tylko coordinate embedding bez strict-core selector reduction i bez basis-covariance / target-independence,
+   - `H35/H36/H37` potwierdzaja brak strict physical axis, directed orientation i sign-sensitive selector state na `pair1`,
+   - `H42/P1` potwierdzaja, ze pierwszy realny nontrivial split pojawia sie dopiero jako `ANCHOR_IMPORTED_SPLIT` na lane `hypothesis_extension_only`,
+   - wniosek: aktualny repo state nie zawiera strict-core derivation, ktora robi z `psi0` selector source na `pair1`.
+3. Frontier po kroku:
+   - `N4_current_repo_result := no current strict-core derivation turns psi0 into a selector source on pair1`,
+   - `P1_current_repo_corollary := every currently computable selector split on pair1 remains extension-only and anchor-imported`,
+   - `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`,
+   - `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/N4_CURRENT_REPO_PSI0_STRICT_CORE_NONDERIVATION_THEOREM.md`,
+   - dodano `fundamental_action_reconstruction/n4_current_repo_psi0_strict_core_nonderivation_theorem.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n4_current_repo_psi0_strict_core_nonderivation_theorem_summary.json`.
+5. Nastepny poprawny ruch:
+   - albo dodac jeden realny strict-core anchor/source object i wtedy budowac strict-core map do `A_1(pair1)`,
+   - albo probowac silniejszego impossibility theorem wykraczajacego poza `current repo state`,
+   - nie otwierac kolejnych audit ladder bez jednego z tych dwoch ruchow.
+
+
 - `H29`: stare proxy `retard_phase/tau/gain` moduluja preorientowany kanal, ale nie dostarczaja same wewnetrznego strict-core anchoru orientacji.
 - `H30`: `orientation_psi0 = mod(0.5*phi + 0.8*omega, 2*pi)` jest deterministycznym kandydatem anchoru z kernel invariants, ale nie jest jeszcze strict-core eksportem `theta_i`.
 - `H31`: `psi0` ma formalny embedding do `pair1=(c_1,s_1)`, ale nadal nie ma dowodu, ze jest to strict-core redukcja selektora, a nie tylko wybor wspolrzednych.

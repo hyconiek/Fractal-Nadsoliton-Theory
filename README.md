@@ -22,6 +22,9 @@ Primary state report:
 - In `fundamental_action_reconstruction`, one executable `pair1` operator probe now computes the first concrete extension-lane block
   `A_1_ext(pair1) = [[0.9879138108, 0.0037580848], [0.0037580848, 0.9966094714]]`.
 - The resulting split is `Delta_1 = (-0.0086956606, 0.0037580848)` with classifier `ANCHOR_IMPORTED_SPLIT`.
+- A new current-repo theorem `N4` fixes the strict-core reading of that result:
+  the repo still does not export `psi0` as a strict-core selector source, and
+  every currently computable selector split remains extension-only.
 - This is real progress on the selector problem at extension level, but it does not upgrade strict-core closure and does not change `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 - Details: [`fundamental_action_reconstruction/README.md`](fundamental_action_reconstruction/README.md), [`fundamental_action_reconstruction/generated/pair1_operator_probe_report.json`](fundamental_action_reconstruction/generated/pair1_operator_probe_report.json).
 
@@ -747,6 +750,8 @@ Current status:
 - this moves the theory forward only by replacing open-ended `T13+` meta-ladder growth with an explicit global dichotomy theorem spec: either the present strict core has no internal theta-source, or any successful theta-source derivation requires an additional selector/admissibility axiom not currently present in the declared strict core,
 - `N3` completed as the first global discharge attempt for `N2`,
 - this moves the theory forward only by showing that the global negative theorem now fails exactly at the globalization step through `T12_B1`, not at the scoped negative theorem itself,
+- `N4` completed as a current-repo strict-core psi0 nonderivation theorem,
+- this moves the theory forward by stating directly that the current repo still lacks a strict-core selector-source derivation for `psi0`, while every currently computed selector split remains extension-only and anchor-imported,
 - `D1` completed as the current best-supported project conclusion after `N3`,
 - this records the strongest honest interpretation now supported by the evidence: selector closure is not achieved in strict core, and the project must either discharge `T12_B1` directly or accept selector-axiom necessity / strict-core incompleteness as the active design conclusion,
 - `AX1` completed as an explicit axiom-augmented positive lane,

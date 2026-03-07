@@ -1,0 +1,165 @@
+{
+  "step": "N4",
+  "status": "N4_DISCHARGED_CURRENT_REPO_PSI0_STRICT_CORE_NONDERIVATION_NO_FALSE_PASS",
+  "goal": "Discharge a current-repo theorem: psi0 is not currently exported as a strict-core selector source, and every current computable selector split still requires extension.",
+  "scope": "current_repo_state_only",
+  "checks": [
+    {
+      "id": "h30_deterministic_kernel_invariant_candidate",
+      "source": "H30",
+      "path": "classification.deterministic_from_kernel_invariants",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "psi0 is deterministic from kernel invariants"
+    },
+    {
+      "id": "h30_no_strict_core_selector_export",
+      "source": "H30",
+      "path": "classification.strict_core_selector_export",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "psi0 is not exported as a strict-core selector datum"
+    },
+    {
+      "id": "h31_coordinate_embedding_present",
+      "source": "H31",
+      "path": "classification.coordinate_level_embedding_present",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "psi0 admits a coordinate embedding into pair1"
+    },
+    {
+      "id": "h31_no_strict_core_selector_reduction",
+      "source": "H31",
+      "path": "classification.strict_core_selector_reduction_present",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "the embedding is not a strict-core selector reduction"
+    },
+    {
+      "id": "h31_pair1_not_proven_selector_target",
+      "source": "H31",
+      "path": "classification.pair1_as_selector_target_proven",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "pair1 is not proven to be the selector-relevant target"
+    },
+    {
+      "id": "h34_no_basis_covariance_target_independence",
+      "source": "H34",
+      "path": "result",
+      "actual": "strict_core_supports_only_local_chart_embeddings_for_psi0_and_not_a_basis_covariant_or_target_independent_selector_reduction",
+      "expected": "strict_core_supports_only_local_chart_embeddings_for_psi0_and_not_a_basis_covariant_or_target_independent_selector_reduction",
+      "pass": true,
+      "meaning": "no basis-covariant / target-independent selector reduction is exported"
+    },
+    {
+      "id": "h35_no_strict_axis_selection",
+      "source": "H35",
+      "path": "result",
+      "actual": "strict_core_supports_only_a_coordinate_level_direction_u_psi0_pair1_inside_pair1_and_not_a_strict_physical_axis_selection",
+      "expected": "strict_core_supports_only_a_coordinate_level_direction_u_psi0_pair1_inside_pair1_and_not_a_strict_physical_axis_selection",
+      "pass": true,
+      "meaning": "no strict physical axis selection is exported on pair1"
+    },
+    {
+      "id": "h36_no_directed_orientation_selection",
+      "source": "H36",
+      "path": "result",
+      "actual": "strict_core_supports_only_a_coordinate_level_undirected_axis_representative_u_psi0_pair1_inside_pair1_and_not_a_strict_directed_orientation_selection",
+      "expected": "strict_core_supports_only_a_coordinate_level_undirected_axis_representative_u_psi0_pair1_inside_pair1_and_not_a_strict_directed_orientation_selection",
+      "pass": true,
+      "meaning": "no strict directed orientation is exported on pair1"
+    },
+    {
+      "id": "h37_no_sign_sensitive_selector_state",
+      "source": "H37",
+      "path": "result",
+      "actual": "strict_core_contains_no_sign_sensitive_state_object_or_observable_on_pair1_and_therefore_does_not_distinguish_u_from_minus_u_as_physically_different_selector_states",
+      "expected": "strict_core_contains_no_sign_sensitive_state_object_or_observable_on_pair1_and_therefore_does_not_distinguish_u_from_minus_u_as_physically_different_selector_states",
+      "pass": true,
+      "meaning": "no sign-sensitive selector state or observable is exported on pair1"
+    },
+    {
+      "id": "h42_bare_c_operator_is_trivial",
+      "source": "H42",
+      "path": "case_without_psi0.breaks_O2",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "bare c-based retardation does not break O(2)"
+    },
+    {
+      "id": "h42_nontrivial_split_requires_imported_anchor",
+      "source": "H42",
+      "path": "case_with_psi0.anchor_origin",
+      "actual": "imported_psi0",
+      "expected": "imported_psi0",
+      "pass": true,
+      "meaning": "the nontrivial c-based split uses imported psi0"
+    },
+    {
+      "id": "h42_psi0_plus_c_not_strict_core",
+      "source": "H42",
+      "path": "hard_limits.psi0_plus_c_is_strict_core",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "psi0 plus c is not classified as strict core"
+    },
+    {
+      "id": "p1_extension_lane_only",
+      "source": "P1",
+      "path": "lane",
+      "actual": "hypothesis_extension_only",
+      "expected": "hypothesis_extension_only",
+      "pass": true,
+      "meaning": "the computed pair1 split is extension-only"
+    },
+    {
+      "id": "p1_anchor_imported_classifier",
+      "source": "P1",
+      "path": "selected_operator.classifier",
+      "actual": "ANCHOR_IMPORTED_SPLIT",
+      "expected": "ANCHOR_IMPORTED_SPLIT",
+      "pass": true,
+      "meaning": "the computed pair1 split is classified as anchor-imported"
+    },
+    {
+      "id": "p1_no_strict_core_promotion",
+      "source": "P1",
+      "path": "strict_core_promotion",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "the computed pair1 split is not promoted to strict core"
+    }
+  ],
+  "current_repo_theorem_result": {
+    "discharged": true,
+    "current_repo_strict_core_psi0_selector_source_present": false,
+    "current_repo_strict_core_map_to_nontrivial_A1_pair1_present": false,
+    "current_repo_computable_selector_split_requires_extension": true
+  },
+  "missing_strict_core_obligations": [
+    "strict_core_selector_datum_export_for_psi0",
+    "strict_core_selector_reduction_from_psi0_to_pair1_or_equivalent_target",
+    "basis_covariance_or_target_independence_for_selector_reduction",
+    "strict_physical_axis_selection_or_equivalent_orientation_object",
+    "directed_or_sign_sensitive_selector_state_or_observable",
+    "strict_core_operator_map_producing_nontrivial_A1_pair1_without_imported_anchor"
+  ],
+  "hard_limits": [
+    "no theorem-level pass beyond current repo state",
+    "no full-closure pass",
+    "no claim that future strict-core work cannot add a new source",
+    "no claim that QW-2191 is discharged",
+    "no claim that ToE is closed"
+  ],
+  "required_next_step": "ADD_ONE_REAL_STRICT_CORE_ANCHOR_SOURCE_OBJECT_OR_PROVE_A_STRONGER_IMPOSSIBILITY_THEOREM_BEYOND_CURRENT_REPO_SCOPE"
+}
