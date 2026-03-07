@@ -5,7 +5,7 @@ import json
 import math
 from pathlib import Path
 
-AS_OF = "2026-03-06"
+AS_OF = "2026-03-07"
 
 summary = {
     "program_id": "fundamental_action_reconstruction",
@@ -43,6 +43,12 @@ summary = {
             "fractal/torsion structural background for the gravity bridge",
         ],
         "anti_overclaim": "not a strict derivation of G, Einstein-Hilbert, equivalence principle, or full GR closure",
+    },
+    "kernel_source_classification": {
+        "legacy_hierarchy_layer": "canonical_ontology_supported_D_f_alpha_geo_beta_tors_and_Xi_grav_canon",
+        "strict_gate_kernel": "later_pipeline_operational_gravity_side_control_or_benchmark_only",
+        "silent_full_substitution_disallowed": True,
+        "A8_rule": "do_not_silently_inherit_alpha_geo_over_2beta_tors_hierarchy_semantics_into_K_strict_gate_without_bridge",
     },
     "anti_overclaim": {
         "einstein_hilbert_direct_derivation_claim": False,

@@ -5,7 +5,7 @@ import json
 import math
 from pathlib import Path
 
-AS_OF = "2026-03-06"
+AS_OF = "2026-03-07"
 
 summary = {
     "program_id": "fundamental_action_reconstruction",
@@ -13,7 +13,7 @@ summary = {
     "status": "A1_SPEC_READY_SINGLE_NADSOLITON_GUIDED_NO_FULL_CLOSURE_CLAIM",
     "primary_route": "action-first with supersoliton matching, kernel analysis, and RG emergence",
     "ontological_guidance": {
-        "primordial_layer": "information",
+        "primordial_information_mode": "nadsoliton_itself_in_solitonic_state",
         "fundamental_object": "single nadsoliton",
         "scope_note": "constructive guidance only; not a theorem-level closure claim",
     },
@@ -28,6 +28,12 @@ summary = {
             "inter-layer torsion damping parameter",
         ],
         "anti_overclaim": "present as structural parameter slot / constraint only, not as strict derivation",
+    },
+    "kernel_source_classification": {
+        "legacy_ontological_source_layer": "K_legacy_ont_or_its_parameter_layer_D_f_alpha_geo_beta_tors",
+        "strict_gate_kernel": "later_pipeline_operational_strict_working_kernel_only",
+        "silent_full_substitution_disallowed": True,
+        "A1_rule": "do_not_silently_replace_the_action_first_ontological_source_layer_with_K_strict_gate_without_bridge",
     },
     "anti_overclaim": {
         "theorem_level_closure_claim": False,
@@ -74,6 +80,7 @@ summary = {
             "Phi/A_mu/g_mu_nu are effective or emergent layers in A1",
             "no fixed SM gauge group claim in A1",
             "no spinor/gamma closure claim in A1",
+            "no silent identification of K_strict_gate with K_legacy_ont or with the ontological parameter layer",
         ],
         "lagrangian_sectors": [
             "base Psi sector as the single foundational carrier of nadsoliton structure",

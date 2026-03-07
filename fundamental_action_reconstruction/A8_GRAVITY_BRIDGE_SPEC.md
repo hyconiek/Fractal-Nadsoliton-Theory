@@ -1,7 +1,7 @@
 # A8 Gravity Bridge
 
 Status: `A8_EXECUTED_STRICT_SCOPE_PARTIAL_FOUNDATIONAL_GRAVITY_BOUNDARY_EXPLICIT`
-As of: `2026-03-06`
+As of: `2026-03-07`
 
 ## Cel
 
@@ -61,6 +61,25 @@ dimensionless hierarchy datum:
 
 Ten obiekt wolno interpretowac tylko jako canonical hierarchy bridge ratio,
 czyli provenance-level support dla gravity bridge, a nie theorem-level proof.
+
+## Kernel source classification after `K1/K2/F2`
+
+Po `K1`, `K2`, `P47/N50` i `F2` `A8` nie moze juz milczaco mieszac:
+
+1. starej ontologicznej hierarchy layer
+   `D_f / alpha_geo / beta_tors`,
+2. pozniejszego strict working kernela `K_strict_gate`.
+
+Na current repo state wolno:
+- sledzic `alpha_geo/(2 beta_tors)` jako canonical hierarchy datum,
+- uzywac `K_strict_gate` tylko jako downstream operational gravity-side
+  control lub strict-pipeline benchmark.
+
+Na current repo state nie wolno:
+- traktowac `K_strict_gate` jako automatycznego nosnika starej semantyki
+  `alpha_geo/(2 beta_tors)`,
+- twierdzic, ze pozniejszy strict kernel sam przez sie odziedziczyl juz
+  ontologiczna role legacy gravity hierarchy layer.
 
 ## Jawnie wykluczone z rdzenia A8
 

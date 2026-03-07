@@ -1,7 +1,7 @@
 # A1 Minimal Action Ansatz
 
 Status: `A1_SPEC_READY_SINGLE_NADSOLITON_GUIDED`
-As of: `2026-03-06`
+As of: `2026-03-07`
 
 ## Cel
 
@@ -15,8 +15,8 @@ Zapisac najmniejszy recenzencko-obronny ansatz dzialania, ktory:
 ## Ontologiczna wskazowka programu
 
 Ten tor konstrukcyjny jest prowadzony pod zalozeniem roboczym:
-- warstwa pierwotna ma charakter informacyjny,
-- fundamentalnym obiektem konstrukcyjnym jest jeden nadsoliton,
+- nadsoliton sam jest pierwotna informacja wszechswiata w stanie solitonowym,
+- nie zaklada sie osobnej `warstwy informacyjnej` pod nadsolitonem,
 - pozostale sektory fizycznego opisu moga byc emergentne albo efektywne wzgledem tej jednej struktury.
 
 To nie jest jeszcze theorem-level closure.
@@ -43,6 +43,29 @@ Konsekwencja dla `A1` jest minimalna, ale twarda:
   skalowania fraktalnego,
 - kinetic / potential / effective bridge sector nie moga byc opisywane tak,
   jakby ten parametr w ogole nie istnial.
+
+## Kernel source classification after `K1/K2/F2`
+
+Po `K1`, `K2`, `P47/N50` i `F2` nie wolno juz czytac pozniejszego strict gate
+kernela jako automatycznego ontologicznego zamiennika starego kernela
+historycznego.
+
+Na current repo state:
+
+```text
+K_legacy_ont / (D_f, alpha_geo, beta_tors)
+  = canonical-ontology-supported action-first source layer
+
+K_strict_gate
+  = later-pipeline operational strict working kernel
+```
+
+Konsekwencja dla `A1`:
+- wolno prowadzic action-first ansatz przez ontologiczna warstwe
+  `D_f / alpha_geo / beta_tors`,
+- nie wolno milczaco podstawic `QW-2049` kernela w miejsce tej warstwy,
+- jesli `K_strict_gate` pojawia sie w kontekscie `A1`, to tylko jako
+  downstream operational control import bez bridge theorem.
 
 ## Minimalna zawartosc pol
 
@@ -136,6 +159,9 @@ jeszcze formula.
 10. jesli `A1` odwoluje sie do ontologii informacyjnego nadsolitonu, to nie
     wolno juz milczaco pomijac `D_f`, `alpha_geo`, `beta_tors`; musza byc
     jawnie obecne przynajmniej jako parameter slot albo structural constraint.
+11. nie wolno milczaco utozsamiac pozniejszego `K_strict_gate` z historycznym
+    `K_legacy_ont` ani traktowac go jako ontologicznego zamiennika warstwy
+    `D_f / alpha_geo / beta_tors` bez jawnego bridge packet/theorem.
 
 ## Obowiazki recenzenckie odlozone poza A1
 

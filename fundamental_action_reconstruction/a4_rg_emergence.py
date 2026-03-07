@@ -5,7 +5,7 @@ import json
 import math
 from pathlib import Path
 
-AS_OF = "2026-03-06"
+AS_OF = "2026-03-07"
 
 summary = {
     "program_id": "fundamental_action_reconstruction",
@@ -35,6 +35,12 @@ summary = {
             "torsion-damping structural parameter for shell weighting",
         ],
         "anti_overclaim": "symbolic RG data only; not a globally derived unique shell measure",
+    },
+    "kernel_source_classification": {
+        "ontological_shell_data": "canonical_ontology_supported_D_f_alpha_geo_beta_tors_layer",
+        "strict_gate_kernel": "later_pipeline_operational_control_or_consistency_target_only",
+        "silent_full_substitution_disallowed": True,
+        "A4_rule": "do_not_treat_K_strict_gate_as_already_equivalent_to_the_ontological_shell_scaling_layer",
     },
     "anti_overclaim": {
         "global_rg_closure_claim": False,

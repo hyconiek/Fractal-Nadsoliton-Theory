@@ -1,7 +1,7 @@
 # A4 RG Emergence Spec
 
 Status: `A4_EXECUTED_ONE_STEP_MINIMAL_BRANCH_COARSE_GRAINING`
-As of: `2026-03-06`
+As of: `2026-03-07`
 
 ## Cel
 
@@ -37,6 +37,27 @@ Interpretacja:
 - `D_f` nosi substratowy ciezar skalowania dla coarse-graining,
 - `beta_tors` niesie warstwe tlumienia miedzy-layer / torsion-damping,
 - nadal nie jest to globalny RG theorem ani strict derivation shell measure.
+
+## Kernel source classification after `K1/K2/F2`
+
+Po `K1`, `K2`, `P47/N50` i `F2` `A4` musi odroznic dwie role kernela:
+
+1. ontologiczna warstwa action-first:
+   `D_f / alpha_geo / beta_tors`,
+2. pozniejszy strict working kernel:
+   `K_strict_gate`.
+
+Na current repo state wolno:
+- sledzic shell scaling przez canonical-ontology-supported warstwe
+  `D_f / beta_tors`,
+- uzywac `K_strict_gate` tylko jako downstream operational control,
+  benchmark albo consistency target.
+
+Na current repo state nie wolno:
+- traktowac `QW-2049` kernela jako dowodu, ze shell measure fraktalna jest juz
+  wyprowadzona,
+- milczaco podstawic `K_strict_gate` w miejsce ontologicznej warstwy
+  `D_f / alpha_geo / beta_tors`.
 
 ## Wejscie z A3
 
