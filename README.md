@@ -217,6 +217,15 @@ Primary state report:
   `g4/g6/gY` family blockers, the other direct `m2` pairwise blockers, the
   main host route, and the already closed light-facing kernel channel remain
   otherwise unchanged.
+- The next honest move after that has now also been executed, still only on
+  that direct route and still only for the same one pair: `R27` plus
+  `P34/N37` do not prove `m2_psi1 = m2_psi4`. They only export that the
+  current canonical packet still carries `m2_psi1` and `m2_psi4` as two
+  distinct named slots of the same `m2_psi` family, reducing the remaining
+  gap to one still-missing common-parameter-source or symbol-identification
+  witness, while the direct `g4/g6/gY` family blockers, the other direct
+  `m2` pairwise blockers, the main host route, and the already closed
+  light-facing kernel channel remain otherwise unchanged.
 - This is real progress on the selector problem at extension level, but it does not upgrade strict-core closure and does not change `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 - Details: [`fundamental_action_reconstruction/README.md`](fundamental_action_reconstruction/README.md), [`fundamental_action_reconstruction/generated/pair1_operator_probe_report.json`](fundamental_action_reconstruction/generated/pair1_operator_probe_report.json).
 

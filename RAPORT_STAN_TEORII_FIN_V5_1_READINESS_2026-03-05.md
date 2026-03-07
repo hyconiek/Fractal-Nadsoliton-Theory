@@ -2759,6 +2759,47 @@ Frontier po `R26/P33/N36`:
 - `N36_route_result := current repo still does not identify existing kernel feedback host with the exported canonical Psi block even after the one-pair direct m2 role-matching packet`,
 - nadal brak globalnego theorem-level/full-closure PASS i nadal brak globalnej redukcji glownego frontiera `R21/P28`.
 
+Co realnie zostalo dodane przez `R27`, `P34` i `N37`:
+- `R27` tworzy jawny `one-pair direct m2 declared formal slot-separation packet`,
+- `R27` eksportuje, ze current canonical export niesie cala rodzine
+  `m2_psi0..m2_psi11`,
+- `R27` eksportuje, ze `m2_psi1` i `m2_psi4` sa dwiema roznie nazwanymi slotami
+  tej samej declared family,
+- `R27` nie rusza warstwy swiatlo/kernel:
+  shared kernel/light-facing channel pozostaje dokladnie tym samym
+  juz zamknietym kanalem z `R14`,
+- `R27` jest jawnie route-scoped:
+  nie dowodzi `m2_psi1 = m2_psi4`,
+  tylko materializuje export-level slot separation dla tej jednej pary,
+- `P34` rerunuje direct formal family route po `R27`,
+- wynik `P34`:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_AFTER_R27_DIRECT_M2_PSI1_PSI4_SLOT_SEPARATION_PACKET`,
+- `P34` rozklada brak
+  `explicit_coefficient_identification_witness_for_the_declared_role_matched_direct_m2_pair_m2_psi1_equals_m2_psi4`
+  do jednego wezszejszego braku:
+  `explicit_common_parameter_source_or_symbol_identification_witness_for_the_declared_formal_m2_slots_m2_psi1_and_m2_psi4`,
+- `N37` daje theorem-level updated-route wynik:
+  nawet po exact one-pair direct `m2` formal slot-separation packet obecny repo
+  nadal nie identyfikuje hosta `QW-2186` z exported canonical blockiem.
+
+Frontier po `R27/P34/N37`:
+- `R27_result := explicit direct m2 psi1/psi4 declared formal slot-separation packet is present`,
+- `R27_scope := single direct mass-like m2 pair m2_psi1 / m2_psi4 declared formal slot-separation route only`,
+- `R27_light_boundary := shared kernel/light-facing channel remains exactly the already closed R14 channel`,
+- `P34_route_result := current direct formal c1s1 family route is still not computable after R27`,
+- `P34_missing_objects := explicit zero witness for direct quartic-like g4 family c1s1 shift defect`,
+- `P34_missing_objects += explicit zero witness for direct quintic-like g6 family c1s1 shift defect`,
+- `P34_missing_objects += explicit zero witness for direct yukawa-like gY family c1s1 shift defect`,
+- `P34_missing_objects += explicit_common_parameter_source_or_symbol_identification_witness_for_the_declared_formal_m2_slots_m2_psi1_and_m2_psi4`,
+- `P34_missing_objects += explicit_pairwise_matching_witness_for_m2_psi7_equals_m2_psi10`,
+- `P34_missing_objects += explicit_pairwise_matching_witness_for_m2_psi2_equals_m2_psi5`,
+- `P34_missing_objects += explicit_pairwise_matching_witness_for_m2_psi8_equals_m2_psi11`,
+- `P34_missing_objects += explicit zero witness for the declared pair1 residual c1c1 equation`,
+- `P34_missing_objects += explicit zero witness for the declared pair1 residual s1s1 equation`,
+- `P34_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+- `N37_route_result := current repo still does not identify existing kernel feedback host with the exported canonical Psi block even after the one-pair direct m2 formal slot-separation packet`,
+- nadal brak globalnego theorem-level/full-closure PASS i nadal brak globalnej redukcji glownego frontiera `R21/P28`.
+
 Co realnie zostalo dodane przez `AX1`:
 - otwarto jawny pozytywny lane `axiom-augmented`,
 - pod minimalnym aksjomacie selekcji z `QW-2192/QW-2193` uzyskano packet-ready actual:

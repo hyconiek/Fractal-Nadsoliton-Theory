@@ -1,0 +1,107 @@
+{
+  "stage": "P34",
+  "goal": "rerun_compute_or_fail_existing_kernel_feedback_host_matching_on_the_direct_formal_pair1_c1s1_family_route_after_R27_direct_m2_psi1_psi4_slot_separation_packet",
+  "status": "NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_AFTER_R27_DIRECT_M2_PSI1_PSI4_SLOT_SEPARATION_PACKET",
+  "reason": "on the route-scoped direct m2 sufficient lane only, the single coefficient-identification gap for m2_psi1 = m2_psi4 is reduced to one still-missing common-parameter-source or symbol-identification witness between two distinct named formal slots, but that witness is absent; the direct g4, g6, and gY family zero witnesses remain absent, the other direct m2 pairwise witnesses remain absent, the declared pair1 c1c1 and s1s1 zero equations remain unproved, and QW-2191 remains open",
+  "lane": "current_existing_kernel_feedback_host_matching_direct_formal_c1s1_family_route_after_R27_only",
+  "route_under_test": [
+    "main_host_matching_route_after_R21",
+    "direct_formal_pair1_c1s1_coefficient_family_route_packet",
+    "direct_g4_family_zero_witness",
+    "direct_g6_family_zero_witness",
+    "direct_gY_family_zero_witness",
+    "direct_m2_pairwise_matching_sufficient_route_packet",
+    "declared_formal_slot_separation_packet_for_m2_psi1_and_m2_psi4",
+    "explicit_common_parameter_source_or_symbol_identification_witness_for_the_declared_formal_m2_slots_m2_psi1_and_m2_psi4",
+    "explicit_pairwise_matching_witness_for_m2_psi7_equals_m2_psi10",
+    "explicit_pairwise_matching_witness_for_m2_psi2_equals_m2_psi5",
+    "explicit_pairwise_matching_witness_for_m2_psi8_equals_m2_psi11",
+    "explicit_zero_witness_for_the_declared_pair1_c1c1_equation",
+    "explicit_zero_witness_for_the_declared_pair1_s1s1_equation",
+    "full_physical_uniqueness_or_selector_relevant_canonicalization",
+    "host_to_concrete_Psi_block_identification"
+  ],
+  "route_checks": [
+    {
+      "id": "p33_single_coefficient_gap_was_still_missing",
+      "actual": true,
+      "expected": true,
+      "meaning": "P33 still had the single coefficient-identification witness m2_psi1 = m2_psi4 as a missing object",
+      "pass": true
+    },
+    {
+      "id": "r27_formal_slot_separation_packet_present",
+      "actual": true,
+      "expected": true,
+      "meaning": "R27 adds the exact one-pair declared formal slot-separation packet",
+      "pass": true
+    },
+    {
+      "id": "r27_common_source_or_symbol_identification_still_absent",
+      "actual": false,
+      "expected": false,
+      "meaning": "R27 does not claim a common parameter-source or symbol-identification witness",
+      "pass": true
+    },
+    {
+      "id": "q2191_full_physical_uniqueness_still_open",
+      "actual": false,
+      "expected": false,
+      "meaning": "QW-2191 still blocks full physical uniqueness",
+      "pass": true
+    },
+    {
+      "id": "c10_host_identification_not_shown",
+      "actual": "not_shown",
+      "expected": "not_shown",
+      "meaning": "host-to-concrete Psi-block identification remains absent",
+      "pass": true
+    }
+  ],
+  "route_state": {
+    "main_route_after_R21_still_negative": true,
+    "direct_formal_c1s1_family_route_packet_present": true,
+    "direct_g4_family_zero_witness_present": false,
+    "direct_g6_family_zero_witness_present": false,
+    "direct_gY_family_zero_witness_present": false,
+    "declared_formal_slot_separation_packet_for_m2_psi1_and_m2_psi4_present": true,
+    "explicit_common_parameter_source_or_symbol_identification_witness_present": false,
+    "explicit_pairwise_matching_witness_for_m2_psi7_equals_m2_psi10_present": false,
+    "explicit_pairwise_matching_witness_for_m2_psi2_equals_m2_psi5_present": false,
+    "explicit_pairwise_matching_witness_for_m2_psi8_equals_m2_psi11_present": false,
+    "pair1_c1c1_zero_witness_present": false,
+    "pair1_s1s1_zero_witness_present": false,
+    "full_physical_uniqueness_or_selector_relevant_canonicalization_present": false
+  },
+  "supporting_present_but_insufficient_objects": [
+    "R27_direct_m2_psi1_psi4_declared_formal_slot_separation_packet",
+    "R26_direct_m2_psi1_psi4_role_matching_packet",
+    "R25_direct_m2_pairwise_matching_sufficient_route_packet",
+    "R14_explicit_frozen_kernel_specialization_packet"
+  ],
+  "decomposition_of_P33_single_pair_gap": {
+    "from_P33": "explicit_coefficient_identification_witness_for_the_declared_role_matched_direct_m2_pair_m2_psi1_equals_m2_psi4",
+    "reduced_by_R27_into": "explicit_common_parameter_source_or_symbol_identification_witness_for_the_declared_formal_m2_slots_m2_psi1_and_m2_psi4",
+    "scope": "single_direct_m2_pair_m2_psi1_and_m2_psi4_declared_formal_slot_separation_only"
+  },
+  "remaining_missing_upstream_objects": [
+    "explicit_zero_witness_for_direct_quartic_like_g4_family_c1s1_shift_defect",
+    "explicit_zero_witness_for_direct_quintic_like_g6_family_c1s1_shift_defect",
+    "explicit_zero_witness_for_direct_yukawa_like_gY_family_c1s1_shift_defect",
+    "explicit_common_parameter_source_or_symbol_identification_witness_for_the_declared_formal_m2_slots_m2_psi1_and_m2_psi4",
+    "explicit_pairwise_matching_witness_for_m2_psi7_equals_m2_psi10",
+    "explicit_pairwise_matching_witness_for_m2_psi2_equals_m2_psi5",
+    "explicit_pairwise_matching_witness_for_m2_psi8_equals_m2_psi11",
+    "explicit_zero_witness_for_the_declared_pair1_residual_c1c1_equation",
+    "explicit_zero_witness_for_the_declared_pair1_residual_s1s1_equation",
+    "full_physical_uniqueness_or_selector_relevant_canonicalization_of_the_explicit_declared_control_transport_within_the_QW2191_O2_family"
+  ],
+  "blocking_frontier": {
+    "R27_B1": "on the route-scoped direct m2 sufficient lane only, the single coefficient-identification gap for m2_psi1 = m2_psi4 is sharpened into one still-missing common-parameter-source or symbol-identification witness between two distinct named formal slots of the same exported m2 family, while the other direct family blockers, the main host route, and QW-2191 remain unchanged",
+    "QW2191_required_next_step": "ADD_EXPLICIT_SYMMETRY_BREAKING_OR_SELECTION_AXIOM_FOR_PHYSICAL_MODE_ASSIGNMENT_UNIQUENESS",
+    "C10_B1": "no_explicit_coefficient_level_or_block_level_identification_between_the_qw2186_certified_host_operator_and_a_concrete_Psi_sector_quadratic_Hessian_block_inside_the_canonical_13_field_carrier"
+  },
+  "required_next_step": "EITHER_PROVE_THE_SINGLE_DIRECT_M2_COMMON_PARAMETER_SOURCE_OR_SYMBOL_IDENTIFICATION_WITNESS_FOR_M2_PSI1_AND_M2_PSI4_ON_THIS_ROUTE_OR_ATTACK_ONE_OF_THE_OTHER_DIRECT_M2_PAIRWISE_WITNESSES_OR_ATTACK_ONE_OF_THE_DIRECT_G4_G6_GY_ZERO_WITNESSES_AND_PROVE_THE_PAIR1_C1C1_AND_S1S1_ZERO_EQUATIONS_AND_DISCHARGE_SELECTOR_RELEVANT_CANONICALIZATION_OR_KEEP_BOTH_THE_MAIN_AND_DIRECT_ROUTES_NEGATIVE",
+  "strict_core_promotion": false,
+  "no_false_pass": true
+}
