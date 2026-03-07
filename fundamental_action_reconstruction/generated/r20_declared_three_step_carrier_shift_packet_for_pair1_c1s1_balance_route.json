@@ -1,0 +1,150 @@
+{
+  "stage": "R20",
+  "packet_goal": "materialize_the_exact_declared_plus3_carrier_shift_that_flips_the_pair1_c1s1_sign_and_maps_the_positive_support_classes_onto_the_negative_support_classes",
+  "source_reports": [
+    "R11",
+    "R18",
+    "R19"
+  ],
+  "declared_three_step_shift_packet": {
+    "carrier_basis": [
+      "psi0",
+      "psi1",
+      "psi2",
+      "psi3",
+      "psi4",
+      "psi5",
+      "psi6",
+      "psi7",
+      "psi8",
+      "psi9",
+      "psi10",
+      "psi11"
+    ],
+    "declared_basis_map": {
+      "psi0": "psi3",
+      "psi1": "psi4",
+      "psi2": "psi5",
+      "psi3": "psi6",
+      "psi4": "psi7",
+      "psi5": "psi8",
+      "psi6": "psi9",
+      "psi7": "psi10",
+      "psi8": "psi11",
+      "psi9": "psi0",
+      "psi10": "psi1",
+      "psi11": "psi2"
+    },
+    "transported_pair1_action": {
+      "S_plus3_c1": "s1",
+      "S_plus3_s1": "-c1",
+      "consequence_for_c1s1": "c1s1 -> -c1s1"
+    },
+    "support_class_shift_map": {
+      "Sigma_psi1_psi7": "Sigma_psi4_psi10",
+      "Sigma_psi2_psi8": "Sigma_psi5_psi11",
+      "Sigma_psi4_psi10": "Sigma_psi1_psi7",
+      "Sigma_psi5_psi11": "Sigma_psi2_psi8"
+    },
+    "equivalent_c1s1_witness_reduction": {
+      "from_balance_equation": "Sigma_c1s1_positive = Sigma_c1s1_negative",
+      "to_shift_equivariance_equation": "S_plus3(Sigma_c1s1_positive) = Sigma_c1s1_positive",
+      "because": "S_plus3(Sigma_c1s1_positive) = Sigma_c1s1_negative on the declared support"
+    },
+    "scope": "declared_pair1_c1s1_support_only"
+  },
+  "result": {
+    "explicit_declared_plus3_carrier_shift_packet_present": true,
+    "explicit_declared_plus3_shift_equivariance_witness_for_pair1_c1s1_support_present": false,
+    "full_physical_uniqueness_or_selector_relevant_canonicalization_present": false
+  },
+  "light_boundary": {
+    "status": "shared_kernel_light_facing_channel_already_closed_by_R14_and_left_unchanged_by_R20",
+    "shared_light_channel_source": "R14 specialization of the symmetric kernel-mixing channel",
+    "current_packet_scope": "declared +3 carrier-shift structure on the non-light pair1 c1s1 residual support only",
+    "boundary": "R20 does not modify the already matched light-facing kernel channel; it only materializes the declared carrier shift that flips the pair1 c1s1 sign"
+  },
+  "classification": "explicit_declared_plus3_shift_packet_present_but_no_c1s1_shift_equivariance_witness",
+  "frontier": "R20_B1",
+  "frontier_text": "the repo now exports the exact declared +3 carrier shift for the pair1 c1s1 branch, but it still lacks a witness that the residual c1s1 support sum is invariant under that shift and still leaves QW-2191 open",
+  "consistency_checks": [
+    {
+      "id": "target_basis_is_12_cycle",
+      "actual": 12,
+      "expected": 12,
+      "meaning": "the declared transport carrier is the 12-slot octave ring",
+      "pass": true
+    },
+    {
+      "id": "plus3_shift_maps_c1_to_s1",
+      "actual": true,
+      "expected": true,
+      "meaning": "the declared +3 carrier shift sends c1 to s1 on the transported pair1 plane",
+      "pass": true
+    },
+    {
+      "id": "plus3_shift_maps_s1_to_minus_c1",
+      "actual": true,
+      "expected": true,
+      "meaning": "the declared +3 carrier shift sends s1 to -c1 on the transported pair1 plane",
+      "pass": true
+    },
+    {
+      "id": "plus3_shift_maps_c2_to_minus_c2",
+      "actual": true,
+      "expected": true,
+      "meaning": "the declared +3 carrier shift preserves the second pair up to sign",
+      "pass": true
+    },
+    {
+      "id": "plus3_shift_maps_s2_to_minus_s2",
+      "actual": true,
+      "expected": true,
+      "meaning": "the declared +3 carrier shift preserves the second sine mode up to sign",
+      "pass": true
+    },
+    {
+      "id": "plus3_shift_maps_positive_c1s1_support_to_negative_support",
+      "actual": [
+        "Sigma_psi4_psi10",
+        "Sigma_psi5_psi11"
+      ],
+      "expected": [
+        "Sigma_psi4_psi10",
+        "Sigma_psi5_psi11"
+      ],
+      "meaning": "the declared +3 carrier shift maps the positive c1s1 support classes onto the negative support classes",
+      "pass": true
+    },
+    {
+      "id": "plus3_shift_maps_negative_c1s1_support_back_to_positive_support",
+      "actual": [
+        "Sigma_psi1_psi7",
+        "Sigma_psi2_psi8"
+      ],
+      "expected": [
+        "Sigma_psi1_psi7",
+        "Sigma_psi2_psi8"
+      ],
+      "meaning": "the declared +3 carrier shift maps the negative c1s1 support classes back onto the positive support classes",
+      "pass": true
+    },
+    {
+      "id": "light_boundary_unchanged",
+      "actual": "shared_kernel_light_facing_channel_already_closed_by_R14_and_left_unchanged_by_R19",
+      "expected": "shared_kernel_light_facing_channel_already_closed_by_R14_and_left_unchanged_by_R19",
+      "meaning": "the already matched light-facing kernel channel remains separate from this declared carrier-shift packet",
+      "pass": true
+    }
+  ],
+  "hard_limits": [
+    "no_theorem_level_pass",
+    "no_full_closure_pass",
+    "no_claim_that_the_declared_plus3_shift_is_physically_canonical",
+    "no_claim_that_the_pair1_c1s1_shift_equivariance_equation_holds",
+    "no_claim_that_any_other_pair1_zero_equation_holds",
+    "no_claim_that_QW2191_is_discharged",
+    "no_claim_that_selector_closure_is_obtained"
+  ],
+  "no_false_pass": true
+}

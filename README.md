@@ -166,6 +166,13 @@ Primary state report:
   still stays negative, but now the missing pieces are one `c1s1` balance
   witness, the `c1c1` and `s1s1` zero witnesses, and the still-open `QW-2191`
   boundary.
+- The next honest move after that has now also been executed: `R20` plus
+  `P27/N30` reduce that `pair1` `c1s1` balance witness further to one explicit
+  declared `+3` shift-equivariance witness on the `c1s1` support sum, again
+  without touching the already closed light-facing kernel channel; the host
+  route still stays negative, but now the missing pieces are that one
+  `c1s1` shift-equivariance witness, the `c1c1` and `s1s1` zero witnesses,
+  and the still-open `QW-2191` boundary.
 - This is real progress on the selector problem at extension level, but it does not upgrade strict-core closure and does not change `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 - Details: [`fundamental_action_reconstruction/README.md`](fundamental_action_reconstruction/README.md), [`fundamental_action_reconstruction/generated/pair1_operator_probe_report.json`](fundamental_action_reconstruction/generated/pair1_operator_probe_report.json).
 

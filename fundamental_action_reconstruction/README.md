@@ -787,6 +787,48 @@ Aktualizacja `N29`:
   witness zamiast ogolnego zero-witness gap,
   bez falszywego PASS.
 
+Aktualizacja `R20`:
+- zmaterializowano jawny `declared +3 carrier shift packet` dla
+  `pair1 c1s1` route,
+- packet eksportuje exact declared map:
+  `S_{+3} : psi_i -> psi_{i+3 mod 12}`,
+- packet eksportuje exact transported pair1 action:
+  `S_{+3}(c1) = s1`,
+  `S_{+3}(s1) = -c1`,
+  czyli na tej trasie `c1s1 -> -c1s1`,
+- packet eksportuje tez exact support-class map:
+  `Sigma_psi1_psi7 -> Sigma_psi4_psi10`,
+  `Sigma_psi2_psi8 -> Sigma_psi5_psi11`,
+- packet nadal utrzymuje rozdzial:
+  shared kernel/light-facing channel pozostaje juz zamkniety przez `R14`,
+  a `R20` dotyka tylko non-light `pair1 c1s1` support,
+- packet nadal nie twierdzi, ze residualny `c1s1` support sum jest
+  invariant pod tym shiftem ani ze `QW-2191` jest rozladowane.
+
+Aktualizacja `P27`:
+- wykonano rerun trasy `host matching witness` po `R20`,
+- wynik:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_MATCHING_WITNESS_ROUTE_AFTER_R20_DECLARED_THREE_STEP_CARRIER_SHIFT_PACKET`,
+- probe rozladowuje brak
+  `explicit balance witness for the declared pair1 residual c1s1 equation`
+  do jednego jeszcze wezszego braku:
+  `explicit declared plus3 shift-equivariance witness for the pair1 c1s1 support sum`,
+- po tym rerunie zostaja juz tylko:
+  `+3` shift-equivariance witness dla `pair1 c1s1`,
+  `c1c1` zero witness,
+  `s1s1` zero witness,
+  oraz `QW-2191` canonicalization boundary.
+
+Aktualizacja `N30`:
+- wykonano theorem-level wynik dla zaktualizowanej trasy po `R20/P27`,
+- `R20/P27/QW-2191/C10` razem wymuszaja wniosek:
+  repo ma juz exact declared `+3` shift packet dla `pair1 c1s1`,
+  ale nadal nie identyfikuje hosta `QW-2186` z exported canonical blockiem,
+- to jest dalszy realny progres redukcyjny:
+  brakujacy `c1s1` balance witness zostal zwężony do jednego jawnego
+  shift-equivariance witness zamiast ogolnego balance gap,
+  bez falszywego PASS.
+
 ## Ontologiczna wskazowka programu
 
 Program jest prowadzony pod robocza ontologia:
