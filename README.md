@@ -87,6 +87,12 @@ Primary state report:
   show that this resolves the projection blocker at control-carrier level and
   leaves only two route-specific blockers: selector-sector reduction and
   intertwiner/equality witness.
+- The next narrower move after that has now also been executed: `R10`
+  packetizes the typed reduction
+  `Pi_pair1 : M_control -> V_1 = span{c1,s1}` into the chosen explicit
+  current-pair chart used by the `H3` chain, while `P14` plus `N17` show that
+  this resolves the reduction blocker at chart scope and leaves only one
+  route-specific blocker: the intertwiner/equality witness.
 - This is real progress on the selector problem at extension level, but it does not upgrade strict-core closure and does not change `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 - Details: [`fundamental_action_reconstruction/README.md`](fundamental_action_reconstruction/README.md), [`fundamental_action_reconstruction/generated/pair1_operator_probe_report.json`](fundamental_action_reconstruction/generated/pair1_operator_probe_report.json).
 
@@ -840,6 +846,8 @@ Current status:
 - this moves the theory forward by materializing the host-scope operator-level legacy carrier from `QW-2186` and proving that the updated route now fails only at `typed projection / selector-sector reduction / intertwiner-equality witness`,
 - `R9`, `P13`, and `N16` completed as the second honest constructive reduction of that factorization blocker,
 - this moves the theory forward by materializing the typed host-to-control pushforward from the legacy host carrier into the control-side mode carrier family and proving that the updated route now fails only at `selector-sector reduction / intertwiner-equality witness`,
+- `R10`, `P14`, and `N17` completed as the third honest constructive reduction of that factorization blocker,
+- this moves the theory forward by materializing the reduction from the legacy control carrier into the chosen explicit current-pair chart used by the `H3` chain and proving that the updated route now fails only at the single remaining `intertwiner/equality witness`,
 - `D1` completed as the current best-supported project conclusion after `N3`,
 - this records the strongest honest interpretation now supported by the evidence: selector closure is not achieved in strict core, and the project must either discharge `T12_B1` directly or accept selector-axiom necessity / strict-core incompleteness as the active design conclusion,
 - `AX1` completed as an explicit axiom-augmented positive lane,

@@ -9073,6 +9073,56 @@ Po tej rundzie:
      pushforward daje juz factorization.
 
 
+## 535. Current-pair chart reduction packet for the third factorization subobject (2026-03-07)
+
+1. Cel:
+   - uderzyc w nastepny z dwoch `P13` blockerow,
+   - sprawdzic, czy repo ma juz typed reduction z legacy control carrier
+     do wybranego explicit current-pair chart `V_1 = span{c1,s1}`,
+   - potem rerunowac te sama factorization route bez promowania `pair1`
+     do strict selector target.
+2. Wynik:
+   - `R10` tworzy current-pair chart reduction packet:
+     `Pi_pair1 : M_control -> V_1`,
+     gdzie `R9` daje legacy control carrier,
+     `C15` daje jawna baze `(c1,s1,c2,s2)`,
+     `H8` daje explicit chain domain `V_1`,
+     a `C29` daje lokalny reduced-projector family na parze,
+   - `R10` rozladowuje kolejny `P13` missing object:
+     reduction legacy control side -> chosen explicit current-pair chart,
+     ale tylko chart-scoped,
+   - `P14` rerunuje trase:
+     `existing kernel feedback + shared provenance + explicit current-pair H3 chain + host carrier + host-to-control pushforward + current-pair chart reduction -> factorization map`,
+   - wynik `P14`:
+     `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_TO_EXPLICIT_CHAIN_FACTORIZATION_ROUTE_AFTER_CURRENT_PAIR_CHART_REDUCTION_PACKET`,
+   - `N17` formalizuje theorem-level updated-route wynik:
+     nawet po packetyzacji current-pair chart reduction obecny route nadal nie
+     identyfikuje existing kernel feedback z explicit selector-facing `H3`
+     chain.
+3. Frontier po kroku:
+   - `R10_result := chosen explicit current-pair chart reduction is now present`,
+   - `P14_resolved_from_P13 := selector-sector reduction of the legacy control side onto the chosen explicit current-pair chart pair1`,
+   - `P14_missing_objects := intertwiner-equality witness identifying the chart-reduced legacy object with the computed current-pair H3 block`,
+   - `N17_route_result := current existing-kernel-feedback to explicit-H3-chain factorization route is still noncomputable after current-pair chart reduction packetization`,
+   - `R10_boundary := current-pair chart reduction remains chart-scoped only and is not a strict selector-target justification`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/R10_LEGACY_CONTROL_TO_CURRENT_PAIR_CHART_REDUCTION_PACKET_FOR_KOBS.md`,
+   - dodano `fundamental_action_reconstruction/r10_legacy_control_to_current_pair_chart_reduction_packet_for_kobs.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r10_legacy_control_to_current_pair_chart_reduction_packet_for_kobs.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r10_legacy_control_to_current_pair_chart_reduction_packet_for_kobs_summary.json`,
+   - dodano `fundamental_action_reconstruction/P14_EXISTING_KERNEL_FEEDBACK_FACTORIZATION_RERUN_AFTER_CURRENT_PAIR_CHART_REDUCTION_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/p14_existing_kernel_feedback_factorization_rerun_after_current_pair_chart_reduction_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p14_existing_kernel_feedback_factorization_rerun_after_current_pair_chart_reduction_packet.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p14_existing_kernel_feedback_factorization_rerun_after_current_pair_chart_reduction_packet_summary.json`,
+   - dodano `fundamental_action_reconstruction/N17_CURRENT_EXISTING_KERNEL_FEEDBACK_FACTORIZATION_OBSTRUCTION_AFTER_CURRENT_PAIR_CHART_REDUCTION_PACKET_THEOREM.md`,
+   - dodano `fundamental_action_reconstruction/n17_current_existing_kernel_feedback_factorization_obstruction_after_current_pair_chart_reduction_packet_theorem.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n17_current_existing_kernel_feedback_factorization_obstruction_after_current_pair_chart_reduction_packet_theorem_summary.json`.
+5. Nastepny poprawny ruch:
+   - sprobowac zmaterializowac pojedynczy remaining intertwiner/equality witness,
+   - albo utrzymac lane negatywny i nie udawac, ze sama chart reduction daje
+     juz factorization.
+
+
 - `H29`: stare proxy `retard_phase/tau/gain` moduluja preorientowany kanal, ale nie dostarczaja same wewnetrznego strict-core anchoru orientacji.
 - `H30`: `orientation_psi0 = mod(0.5*phi + 0.8*omega, 2*pi)` jest deterministycznym kandydatem anchoru z kernel invariants, ale nie jest jeszcze strict-core eksportem `theta_i`.
 - `H31`: `psi0` ma formalny embedding do `pair1=(c_1,s_1)`, ale nadal nie ma dowodu, ze jest to strict-core redukcja selektora, a nie tylko wybor wspolrzednych.

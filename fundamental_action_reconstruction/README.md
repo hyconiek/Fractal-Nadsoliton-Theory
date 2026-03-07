@@ -412,6 +412,33 @@ Aktualizacja `N16`:
 - to jest realny progres redukcyjny bez factorization discharge i bez
   falszywego PASS.
 
+Aktualizacja `R10`:
+- wykonano trzeci realny factorization-subobject addition po `P13`:
+  legacy control to current-pair chart reduction packet
+  `Pi_pair1 : M_control -> V_1`,
+- `R9` daje legacy control carrier, `C15` daje jego jawna baze,
+  `H8` daje explicit current-pair chain domain `V_1 = span{c1,s1}`,
+  a `C29` daje lokalny reduced-projector family na parze,
+- to rozladowuje blocker reduction, ale tylko na poziomie wybranego explicit
+  current-pair chart, bez strict selector-target justification.
+
+Aktualizacja `P14`:
+- wykonano rerun compute-or-fail tej samej factorization route po `R10`,
+- wynik:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_TO_EXPLICIT_CHAIN_FACTORIZATION_ROUTE_AFTER_CURRENT_PAIR_CHART_REDUCTION_PACKET`,
+- missing-object list maleje z `2` do `1`:
+  intertwiner-equality witness.
+
+Aktualizacja `N17`:
+- wykonano theorem-level updated-route wynik po packetyzacji
+  current-pair chart reduction,
+- `R10/P14/P10/C10/H16/H33/H34` razem wymuszaja wniosek:
+  nawet po doprowadzeniu legacy route do wybranego explicit current-pair chart
+  obecny route nadal nie identyfikuje existing kernel feedback z explicit
+  selector-facing `H3` chain,
+- to jest realny progres redukcyjny do jednego residualnego witnessa,
+  bez factorization discharge i bez falszywego PASS.
+
 ## Ontologiczna wskazowka programu
 
 Program jest prowadzony pod robocza ontologia:

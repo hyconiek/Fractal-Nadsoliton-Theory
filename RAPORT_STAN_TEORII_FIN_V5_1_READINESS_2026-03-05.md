@@ -79,6 +79,12 @@ Interpretacja rygorystyczna:
   `P_control = T_control^T : Psi_host_12 -> M_control`, a potem pokazuja,
   ze route nadal nie przechodzi i zostaja juz tylko dwa blockery:
   selector-sector reduction / intertwiner-equality witness,
+- `R10`, `P14` i `N17` robia trzeci konstruktywny ruch na tej samej trasie:
+  materializuja reduction
+  `Pi_pair1 : M_control -> V_1 = span{c1,s1}` do wybranego explicit
+  current-pair chart, a potem pokazuja, ze route nadal nie przechodzi i zostaje
+  juz tylko jeden blocker:
+  intertwiner-equality witness,
 - nie zmienia to decyzji `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 
 Artefakty:
@@ -2126,6 +2132,24 @@ Frontier po `R9/P13/N16`:
 - `N16_route_result := current repo still does not identify existing kernel feedback with the explicit H3 chain even after host-to-control pushforward packetization`,
 - `P13_resolved_from_P12 := typed host-to-control pushforward from the legacy host carrier into M_control`,
 - `P13_missing_objects := selector-sector reduction on the legacy control side / intertwiner-equality witness`,
+- nadal brak globalnego theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `R10`, `P14` i `N17`:
+- `R10` tworzy trzeci realny packet dla kolejnego `P13` blockera:
+  legacy control to current-pair chart reduction
+  `Pi_pair1 : M_control -> V_1`,
+- `P14` testuje, czy po tej packetyzacji factorization route staje sie juz
+  liczony albo przynajmniej krotszy,
+- `N17` daje theorem-level updated-route wynik:
+  nawet po dodaniu current-pair chart reduction obecny route nadal nie
+  identyfikuje existing kernel feedback z explicit selector-facing `H3` chain.
+
+Frontier po `R10/P14/N17`:
+- `R10_result := chosen explicit current-pair chart reduction is now present`,
+- `P14_route_result := current factorization route is still not computable after current-pair chart reduction packetization`,
+- `N17_route_result := current repo still does not identify existing kernel feedback with the explicit H3 chain even after current-pair chart reduction packetization`,
+- `P14_resolved_from_P13 := selector-sector reduction of the legacy control side onto the chosen explicit current-pair chart pair1`,
+- `P14_missing_objects := intertwiner-equality witness identifying the chart-reduced legacy object with the computed current-pair H3 block`,
 - nadal brak globalnego theorem-level/full-closure PASS.
 
 Co realnie zostalo dodane przez `AX1`:

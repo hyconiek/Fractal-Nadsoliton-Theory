@@ -1,0 +1,148 @@
+{
+  "stage": "R10",
+  "map_scope": "legacy_control_to_current_pair_chart_reduction_packet",
+  "source_reports": [
+    "R9",
+    "C15",
+    "C29",
+    "H8",
+    "H33",
+    "H34",
+    "P13"
+  ],
+  "domain_carrier": {
+    "label": "M_control",
+    "basis_order": [
+      "c1",
+      "s1",
+      "c2",
+      "s2"
+    ],
+    "dimension": 4
+  },
+  "codomain_carrier": {
+    "label": "V_1",
+    "basis_order": [
+      "c1",
+      "s1"
+    ],
+    "plane": "V_1 = span{c1, s1}",
+    "dimension": 2
+  },
+  "chart_reduction_map": {
+    "symbol": "Pi_pair1 : M_control -> V_1",
+    "matrix": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "construction_rule": "coordinate_block_extraction_onto_the_first_declared_control_pair_matching_the_explicit_current_pair_chain_domain"
+  },
+  "supporting_local_reduced_projector_family": {
+    "source": "C29",
+    "P_red(theta)": "[[cos^2(theta), cos(theta)sin(theta)], [cos(theta)sin(theta), sin^2(theta)]]",
+    "status": "local_pair_level_only"
+  },
+  "route_role": {
+    "resolved_subobject": "selector_sector_reduction_of_the_legacy_control_side_onto_pair1_or_an_equivalent_actual_target",
+    "resolved_at_level": "chosen_explicit_current_pair_chart_only",
+    "unresolved_downstream_step": "intertwiner_or_equality_witness_identifying_the_chart_reduced_legacy_side_with_the_computed_current_pair_H3_block"
+  },
+  "strict_selector_target_justification_present": false,
+  "basis_covariant_target_independent_reduction_present": false,
+  "intertwiner_or_equality_witness_present": false,
+  "chart_scope_only": true,
+  "consistency_checks": [
+    {
+      "id": "p13_originally_missing_legacy_selector_sector_reduction",
+      "actual": true,
+      "expected": true,
+      "meaning": "P13 indeed localized the legacy selector-sector reduction as one remaining factorization blocker",
+      "pass": true
+    },
+    {
+      "id": "r9_control_carrier_present",
+      "actual": "typed_host_to_control_pushforward_present_but_control_scope_only_and_not_yet_reduced_to_the_explicit_current_pair_chain",
+      "expected": "typed_host_to_control_pushforward_present_but_control_scope_only_and_not_yet_reduced_to_the_explicit_current_pair_chain",
+      "meaning": "R9 already exports the legacy control-side carrier family",
+      "pass": true
+    },
+    {
+      "id": "c15_control_basis_matches_expected",
+      "actual": [
+        "c1",
+        "s1",
+        "c2",
+        "s2"
+      ],
+      "expected": [
+        "c1",
+        "s1",
+        "c2",
+        "s2"
+      ],
+      "meaning": "the control basis is explicitly declared as (c1,s1,c2,s2)",
+      "pass": true
+    },
+    {
+      "id": "h8_pair_basis_matches_expected",
+      "actual": [
+        "c1",
+        "s1"
+      ],
+      "expected": [
+        "c1",
+        "s1"
+      ],
+      "meaning": "the explicit H3 chain starts on pair1 basis (c1,s1)",
+      "pass": true
+    },
+    {
+      "id": "control_basis_prefix_matches_pair_basis",
+      "actual": [
+        "c1",
+        "s1"
+      ],
+      "expected": [
+        "c1",
+        "s1"
+      ],
+      "meaning": "the chosen pair1 basis matches the first control-basis block and therefore admits a typed chart extraction",
+      "pass": true
+    },
+    {
+      "id": "c29_local_projector_formula_present",
+      "actual": "yes_partial",
+      "expected": "yes_partial",
+      "meaning": "C29 already exports an explicit local reduced-projector formula on each pair plane",
+      "pass": true
+    },
+    {
+      "id": "h33_pair1_local_chart_only",
+      "actual": "pair1_is_available_as_a_deterministic_local_chart_for_the_primary_psi0_lane_but_not_yet_justified_as_a_uniquely_selector_relevant_target",
+      "expected": "pair1_is_available_as_a_deterministic_local_chart_for_the_primary_psi0_lane_but_not_yet_justified_as_a_uniquely_selector_relevant_target",
+      "meaning": "pair1 remains only a local chart and not a privileged selector target",
+      "pass": true
+    },
+    {
+      "id": "h34_no_covariance_argument",
+      "actual": "PASS_PARTIAL_NO_STRICT_COVARIANCE_ARGUMENT",
+      "expected": "PASS_PARTIAL_NO_STRICT_COVARIANCE_ARGUMENT",
+      "meaning": "no basis-covariant or target-independent selector reduction is present",
+      "pass": true
+    }
+  ],
+  "factorization_status": "legacy_control_to_chosen_current_pair_chart_reduction_present_but_no_intertwiner_or_equality_witness_to_the_computed_current_pair_block",
+  "classification": "explicit_current_pair_chart_reduction_present_but_chart_scoped_only_and_not_a_strict_selector_target_justification",
+  "frontier": "R10_B1",
+  "no_false_pass": true
+}
