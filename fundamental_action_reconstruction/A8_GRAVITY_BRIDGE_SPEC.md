@@ -35,6 +35,33 @@ tylko na pytanie:
 7. `QW-2207`
    - internalization obstruction dla `G` bridge observable.
 
+## Canonical ontology-supported fractal hierarchy layer
+
+`A8` nie moze juz pomijac faktu, ze historyczna ontologia FIN przypisuje
+gravity hierarchy co najmniej do warstwy:
+
+```text
+D_f ≡ alpha_geo ≡ 4 ln 2 ≈ 2.7726
+beta_tors ≈ 0.01
+```
+
+Na obecnym etapie wolno to utrzymac tylko jako:
+
+- `canonical-ontology-supported structural hierarchy layer`,
+- nie jako strict derivation of `G`,
+- nie jako already-closed Einstein-Hilbert derivation.
+
+W praktyce `A8` musi jawnie sledzic przynajmniej jeden historycznie istotny
+dimensionless hierarchy datum:
+
+\[
+\Xi_{\mathrm{grav}}^{\mathrm{canon}} :=
+\frac{\alpha_{\mathrm{geo}}}{2\,\beta_{\mathrm{tors}}}.
+\]
+
+Ten obiekt wolno interpretowac tylko jako canonical hierarchy bridge ratio,
+czyli provenance-level support dla gravity bridge, a nie theorem-level proof.
+
 ## Jawnie wykluczone z rdzenia A8
 
 `A8` nie liczy jako zamkniety proof input:
@@ -55,6 +82,8 @@ Z `QW-2198` i `QW-2207` wolno utrzymac:
 
 To daje:
 - strict partial Planck bridge,
+- z jawnie sledzonym background datum `Xi_grav^canon = alpha_geo/(2 beta_tors)`
+  jako canonical-ontology-supported hierarchy ratio,
 - ale nie full internalization of `G`.
 
 ### 2. Gravity action-level scope
@@ -118,6 +147,8 @@ Najuczciwszy wynik `A8` brzmi:
 - Einstein-Hilbert action zostala bezposrednio wyprowadzona z complete FIN action,
 - equivalence principle zostala wyprowadzona,
 - `G` ma juz w pelni wewnetrzne pochodzenie,
+- historyczne formuly typu `alpha_geo/(2 beta_tors)` albo ich warianty sa juz
+  strict-derivation proof dla `G`, `alpha_EM` albo Einstein-Hilbert layer,
 - GR jest juz theorem-level domkniete,
 - nowy tor domknal `L4`, `L16`, `L23` albo `L11`.
 

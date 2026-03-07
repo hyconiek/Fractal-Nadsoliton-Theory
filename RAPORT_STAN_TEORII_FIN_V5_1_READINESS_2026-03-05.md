@@ -745,6 +745,7 @@ Jego rola:
 - tylko przeniesc glowny wysilek konstrukcyjny na tor `action-first -> supersoliton matching -> kernel analysis -> RG emergence -> SM+GR bridge`.
 
 Status nowego toru:
+- `F1` wykonane jako packet provenance dla canonical informational fractal substrate parameters,
 - `A1` wykonane jako warstwa spec/ansatz,
 - `A2` wykonane na minimalnej galezi matchingu `single-foundation / gauge-off / metric-spectator`,
 - `A3` wykonane jako minimalna analiza operatora drugiej wariacji i split `zero / gauge / physical modes`,
@@ -758,6 +759,9 @@ Status nowego toru:
 - `A7` wykonane jako `strict-scope positivity/unitarity package`,
 - `A7` integruje tylko branch-scope positivity, strict-scope causality stack oraz jawne terminalne obligacje globalne,
 - `A8` wykonane jako `strict-scope partial gravity bridge`,
+- `A1/A4/A8` zostaly doprecyzowane tak, by nie pomijac juz canonical
+  structural layer `D_f / alpha_geo / beta_tors`, ale bez promocji tej warstwy
+  do strict-core derivation,
 - `A8` integruje tylko effective gravity bridge, GR-limit catalog i low-energy SM+GR reduction scope z jawnymi foundational blockers,
 - `A9` wykonane jako `strict-scope partial SM+GR effective reduction`,
 - `A9` sklada tylko wykonane warstwy matter/gauge/gravity do jednego effective package bez theorem-level unified reduction claim,
@@ -910,6 +914,8 @@ Co realnie zostalo dodane przez `A3`:
 
 Co realnie zostalo dodane przez `A4`:
 - jawny jednokrokowy Wilsonowski coarse-graining dla fizycznego operatora z `A3`,
+- jawny canonical-ontology-supported slot dla fraktalnego skalowania shellu:
+  `D_f ≡ alpha_geo ≡ 4 ln 2` oraz tlumienia `beta_tors`,
 - symboliczne beta-functions dla `K_tan`, `H_V`, `C_top` i ogona `c_n`,
 - tabela `emergent / inserted by hand / unresolved`,
 - nadal bez claimu globalnego RG closure, automatycznego zamkniecia `L12`, spinorowego runningu albo gravity-running closure.
@@ -938,6 +944,9 @@ Co realnie zostalo dodane przez `A7`:
 
 Co realnie zostalo dodane przez `A8`:
 - istnieje strict partial Planck bridge z jawnie utrzymana zaleznoscia od zewnetrznego bridge dla `G` (`QW-2198`, `QW-2207`),
+- istnieje jawnie sledzony canonical hierarchy datum
+  `Xi_grav^canon = alpha_geo/(2 beta_tors)` jako provenance-level struktura, bez
+  claimu strict-derivation `G`,
 - effective gravity action-level bridge jest jawnie zintegrowany (`QW-2199`),
 - GR-limit conditions sa jawnie skatalogowane (`QW-2201`),
 - low-energy SM+GR reduction jest jawnie domknieta w zadeklarowanym scope (`QW-2200`),
@@ -946,6 +955,18 @@ Co realnie zostalo dodane przez `A8`:
   - Einstein-Hilbert direct derivation,
   - equivalence principle derivation,
   - full SM+GR reduction theorem,
+- nadal brak theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `F1`:
+- jawnie przywrocono do FAR canonical ontology-supported parameter layer:
+  `D_f ≡ alpha_geo ≡ 4 ln 2 ≈ 2.7726`, `beta_tors ≈ 0.01`,
+- zapisano machine-readable provenance z `TOE_FINAL_DOCUMENTATION.tex`,
+  `TOE_FINAL_DOCUMENTATION 4.4.pdf`, `QW-1703`, `QW-1729`, `QW-1961`,
+- wymuszono jawne obowiazki integracyjne:
+  - `A1`: parameter slot / structural constraint,
+  - `A4`: fractal shell scaling + torsion damping as symbolic RG data,
+  - `A8`: `alpha_geo/(2 beta_tors)` tylko jako canonical hierarchy bridge ratio,
+  - `H/K_obs`: explicit alpha_geo / D_f operator-amplitude integration nadal otwarte,
 - nadal brak theorem-level/full-closure PASS.
 
 Co realnie zostalo dodane przez `A9`:
@@ -3127,6 +3148,87 @@ Frontier po `AX11/P43/N46`:
 - `P43_missing_objects += explicit zero witness for the declared pair1 residual s1s1 equation`,
 - `P43_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
 - `N46_route_result := current repo still has only local canonical-ontology-supported source-action plus source-eom closures and no strict-core closure`.
+
+Co realnie zostalo dodane przez `R35`, `P44` i `N47`:
+- `R35` nie domyka target-side witness pozytywnie; redukuje tylko
+  `m2_psi4` do dwoch wezszych role-specific gaps:
+  target action-role i target eom-role assignment witness,
+- `P44` utrzymuje route negatywny:
+  `CANONICAL_ONTOLOGY_SUPPORTED_SOURCE_SIDE_CLOSED_BUT_TARGET_M2_PSI4_ROLE_ASSIGNMENT_GAPS_REMAIN_AFTER_R35`,
+- `N47` daje najmocniejszy uczciwy boundary wynik:
+  source-side closures zostaja zachowane, ale target-side jest tylko
+  zredukowany do dwoch lokalnych role-specific luk i cala trasa nadal nie jest
+  domknieta.
+
+Frontier po `R35/P44/N47`:
+- `R35_result := attacked target-side witness reduced to target action-role plus target eom-role assignment gaps`,
+- `P44_missing_objects := explicit_target_action_role_assignment_witness_for_m2_psi4_to_mu_m2_plus3_segment_psi1_psi4`,
+- `P44_missing_objects += explicit_target_eom_role_assignment_witness_for_m2_psi4_to_mu_m2_plus3_segment_psi1_psi4`,
+- `P44_missing_objects += explicit zero witness for direct quartic-like g4 family c1s1 shift defect`,
+- `P44_missing_objects += explicit zero witness for direct quintic-like g6 family c1s1 shift defect`,
+- `P44_missing_objects += explicit zero witness for direct yukawa-like gY family c1s1 shift defect`,
+- `P44_missing_objects += explicit_pairwise_matching_witness_for_m2_psi7_equals_m2_psi10`,
+- `P44_missing_objects += explicit_pairwise_matching_witness_for_m2_psi2_equals_m2_psi5`,
+- `P44_missing_objects += explicit_pairwise_matching_witness_for_m2_psi8_equals_m2_psi11`,
+- `P44_missing_objects += explicit zero witness for the declared pair1 residual c1c1 equation`,
+- `P44_missing_objects += explicit zero witness for the declared pair1 residual s1s1 equation`,
+- `P44_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+- `N47_route_result := current repo still has local canonical-ontology-supported source-side closures plus a reduced target-side role split and no strict-core closure`.
+
+Co realnie zostalo dodane przez `R36`, `P45` i `N48`:
+- `R36` nie domyka target action-side witness pozytywnie; redukuje tylko
+  `explicit_target_action_role_assignment_witness_for_m2_psi4_to_mu_m2_plus3_segment_psi1_psi4`
+  do jednego wezszego coefficient-identification gap na wspolnym support
+  `psi4**2/2`,
+- `P45` utrzymuje route negatywny:
+  `CANONICAL_ONTOLOGY_SUPPORTED_SOURCE_SIDE_CLOSED_AND_TARGET_ACTION_GAP_REDUCED_TO_COMMON_PSI4_SQUARED_OVER_2_SUPPORT_ROUTE_STILL_NOT_CLOSED_AFTER_R36`,
+- `N48` daje najmocniejszy uczciwy boundary wynik:
+  source-side closures zostaja zachowane, target action-side jest tylko
+  zredukowany do jednego local common-support coefficient gap, target eom-side
+  nadal pozostaje osobnym brakujacym witnessem i cala trasa nadal nie jest
+  domknieta.
+
+Frontier po `R36/P45/N48`:
+- `R36_result := attacked target action-side witness reduced to one common-support coefficient-identification gap on psi4**2/2`,
+- `P45_missing_objects := explicit_target_action_monomial_coefficient_identification_witness_for_m2_psi4_and_mu_m2_plus3_segment_psi1_psi4_on_common_psi4_squared_over_2_support`,
+- `P45_missing_objects += explicit_target_eom_role_assignment_witness_for_m2_psi4_to_mu_m2_plus3_segment_psi1_psi4`,
+- `P45_missing_objects += explicit zero witness for direct quartic-like g4 family c1s1 shift defect`,
+- `P45_missing_objects += explicit zero witness for direct quintic-like g6 family c1s1 shift defect`,
+- `P45_missing_objects += explicit zero witness for direct yukawa-like gY family c1s1 shift defect`,
+- `P45_missing_objects += explicit_pairwise_matching_witness_for_m2_psi7_equals_m2_psi10`,
+- `P45_missing_objects += explicit_pairwise_matching_witness_for_m2_psi2_equals_m2_psi5`,
+- `P45_missing_objects += explicit_pairwise_matching_witness_for_m2_psi8_equals_m2_psi11`,
+- `P45_missing_objects += explicit zero witness for the declared pair1 residual c1c1 equation`,
+- `P45_missing_objects += explicit zero witness for the declared pair1 residual s1s1 equation`,
+- `P45_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+- `N48_route_result := current repo still has local canonical-ontology-supported source-side closures, a reduced target action-side gap, a still-open target eom-side gap, and no strict-core closure`.
+
+Co realnie zostalo dodane przez `R37`, `P46` i `N49`:
+- `R37` nie domyka target action-side witness pozytywnie; redukuje tylko
+  `explicit_target_action_monomial_coefficient_identification_witness_for_m2_psi4_and_mu_m2_plus3_segment_psi1_psi4_on_common_psi4_squared_over_2_support`
+  do jednego exact defect-polynomial zero-witness gap na tym samym support,
+- `P46` utrzymuje route negatywny:
+  `CANONICAL_ONTOLOGY_SUPPORTED_SOURCE_SIDE_CLOSED_AND_TARGET_ACTION_DEFECT_POLYNOMIAL_EXPORTED_ROUTE_STILL_NOT_CLOSED_AFTER_R37`,
+- `N49` daje najmocniejszy uczciwy boundary wynik:
+  source-side closures zostaja zachowane, target action-side jest tylko
+  zredukowany do jednego exact defect-polynomial zero-witness gap, target
+  eom-side nadal pozostaje osobnym brakujacym witnessem i cala trasa nadal nie
+  jest domknieta.
+
+Frontier po `R37/P46/N49`:
+- `R37_result := attacked target action-side witness reduced to one exact defect-polynomial zero-witness gap on psi4**2/2`,
+- `P46_missing_objects := explicit_zero_witness_for_the_direct_m2_psi4_target_action_coefficient_defect_polynomial_on_common_psi4_squared_over_2_support`,
+- `P46_missing_objects += explicit_target_eom_role_assignment_witness_for_m2_psi4_to_mu_m2_plus3_segment_psi1_psi4`,
+- `P46_missing_objects += explicit zero witness for direct quartic-like g4 family c1s1 shift defect`,
+- `P46_missing_objects += explicit zero witness for direct quintic-like g6 family c1s1 shift defect`,
+- `P46_missing_objects += explicit zero witness for direct yukawa-like gY family c1s1 shift defect`,
+- `P46_missing_objects += explicit_pairwise_matching_witness_for_m2_psi7_equals_m2_psi10`,
+- `P46_missing_objects += explicit_pairwise_matching_witness_for_m2_psi2_equals_m2_psi5`,
+- `P46_missing_objects += explicit_pairwise_matching_witness_for_m2_psi8_equals_m2_psi11`,
+- `P46_missing_objects += explicit zero witness for the declared pair1 residual c1c1 equation`,
+- `P46_missing_objects += explicit zero witness for the declared pair1 residual s1s1 equation`,
+- `P46_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+- `N49_route_result := current repo still has local canonical-ontology-supported source-side closures, a reduced target action-side exact defect-polynomial gap, a still-open target eom-side gap, and no strict-core closure`.
 
 Co realnie zostalo dodane przez `AX1`:
 - otwarto jawny pozytywny lane `axiom-augmented`,

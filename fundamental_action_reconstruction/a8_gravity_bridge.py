@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import math
 from pathlib import Path
 
 AS_OF = "2026-03-06"
@@ -31,6 +32,18 @@ summary = {
         ],
         "reason_for_exclusion": "A8 integrates only effective/scope-closed gravity evidence with foundational boundaries kept explicit.",
     },
+    "canonical_structural_parameters": {
+        "status": "canonical_ontology_supported_only",
+        "D_f": 4.0 * math.log(2.0),
+        "alpha_geo": 4.0 * math.log(2.0),
+        "beta_tors": 0.01,
+        "Xi_grav_canon": (4.0 * math.log(2.0)) / (2.0 * 0.01),
+        "role_in_A8": [
+            "canonical hierarchy bridge ratio for gravity-scale bookkeeping",
+            "fractal/torsion structural background for the gravity bridge",
+        ],
+        "anti_overclaim": "not a strict derivation of G, Einstein-Hilbert, equivalence principle, or full GR closure",
+    },
     "anti_overclaim": {
         "einstein_hilbert_direct_derivation_claim": False,
         "equivalence_principle_derivation_claim": False,
@@ -40,6 +53,10 @@ summary = {
     },
     "a8": {
         "goal": "Integrate the strongest admissible gravity bridge without false foundational GR claims.",
+        "fractal_hierarchy_layer": {
+            "status": "tracked_as_canonical_ontology_supported_only",
+            "statement": "A8 must explicitly track alpha_geo/(2*beta_tors) only as a canonical hierarchy bridge datum, not as a strict derivation of G or full gravity closure",
+        },
         "sector_matrix": [
             {
                 "object": "Planck-scale bridge",

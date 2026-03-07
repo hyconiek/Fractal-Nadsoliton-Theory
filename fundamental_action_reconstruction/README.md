@@ -1487,11 +1487,133 @@ Aktualizacja `N46`:
   pozostaje poza strict core,
 - brak claimu, ze `QW-2191` jest rozladowane albo ze ToE jest zamknieta.
 
+Aktualizacja `R35`:
+- wykonano najwezszy kolejny ruch na realnym target-side frontierze,
+- target-side witness dla `m2_psi4` nie zostal domkniety pozytywnie; zostal
+  zredukowany tylko do dwoch wezszych role-specific luk:
+  target action-role i target eom-role assignment witness,
+- kanal swiatlo/kernel pozostaje jawnie przed obserwatorem i pozostaje
+  nienaruszony; source-side closures z `AX10/AX11` pozostaja lokalne.
+
+Aktualizacja `P44`:
+- wykonano rerun direct formal family route po `R35`,
+- wynik:
+  `CANONICAL_ONTOLOGY_SUPPORTED_SOURCE_SIDE_CLOSED_BUT_TARGET_M2_PSI4_ROLE_ASSIGNMENT_GAPS_REMAIN_AFTER_R35`,
+- probe utrzymuje, ze source-side closures sa zachowane, ale target-side nadal
+  nie jest domkniety.
+
+Aktualizacja `N47`:
+- wykonano boundary theorem po `R35/P44`,
+- theorem zapisuje najmocniejszy uczciwy wniosek:
+  source-side closures sa zachowane, target-side jest tylko zredukowany do
+  dwoch role-specific luk i cala trasa nadal pozostaje poza strict core,
+- brak claimu, ze `QW-2191` jest rozladowane albo ze ToE jest zamknieta.
+
+Aktualizacja `R36`:
+- wykonano najwezszy kolejny ruch na target action-side frontierze po `R35`,
+- target action-side witness dla `m2_psi4` nie zostal domkniety pozytywnie;
+  zostal zredukowany tylko do jednego wezszego coefficient-identification gap
+  na wspolnym support `psi4**2/2`,
+- kanal swiatlo/kernel pozostaje jawnie przed obserwatorem i pozostaje
+  nienaruszony; source-side closures z `AX10/AX11` pozostaja lokalne.
+
+Aktualizacja `P45`:
+- wykonano rerun direct formal family route po `R36`,
+- wynik:
+  `CANONICAL_ONTOLOGY_SUPPORTED_SOURCE_SIDE_CLOSED_AND_TARGET_ACTION_GAP_REDUCED_TO_COMMON_PSI4_SQUARED_OVER_2_SUPPORT_ROUTE_STILL_NOT_CLOSED_AFTER_R36`,
+- probe utrzymuje, ze source-side closures sa zachowane, target action-side
+  jest tylko zredukowany do jednego local common-support coefficient gap, a
+  target eom-side nadal nie jest domkniety.
+
+Aktualizacja `N48`:
+- wykonano boundary theorem po `R36/P45`,
+- theorem zapisuje najmocniejszy uczciwy wniosek:
+  source-side closures sa zachowane, target action-side jest tylko zredukowany
+  do jednego coefficient-identification gap na `psi4**2/2`, target eom-side
+  pozostaje osobnym blockerem i cala trasa nadal pozostaje poza strict core,
+- brak claimu, ze `QW-2191` jest rozladowane albo ze ToE jest zamknieta.
+
+Aktualizacja `R37`:
+- wykonano najwezszy kolejny ruch na target action-side frontierze po `R36`,
+- target action-side coefficient gap dla `m2_psi4` nie zostal domkniety
+  pozytywnie; zostal zredukowany tylko do jednego exact defect-polynomial
+  zero-witness gap na wspolnym support `psi4**2/2`,
+- kanal swiatlo/kernel pozostaje jawnie przed obserwatorem i pozostaje
+  nienaruszony; source-side closures z `AX10/AX11` pozostaja lokalne.
+
+Aktualizacja `P46`:
+- wykonano rerun direct formal family route po `R37`,
+- wynik:
+  `CANONICAL_ONTOLOGY_SUPPORTED_SOURCE_SIDE_CLOSED_AND_TARGET_ACTION_DEFECT_POLYNOMIAL_EXPORTED_ROUTE_STILL_NOT_CLOSED_AFTER_R37`,
+- probe utrzymuje, ze source-side closures sa zachowane, target action-side
+  jest tylko zredukowany do jednego exact defect-polynomial gap, a target
+  eom-side nadal nie jest domkniety.
+
+Aktualizacja `N49`:
+- wykonano boundary theorem po `R37/P46`,
+- theorem zapisuje najmocniejszy uczciwy wniosek:
+  source-side closures sa zachowane, target action-side jest tylko zredukowany
+  do jednego exact defect-polynomial zero-witness gap na `psi4**2/2`, target
+  eom-side pozostaje osobnym blockerem i cala trasa nadal pozostaje poza
+  strict core,
+- brak claimu, ze `QW-2191` jest rozladowane albo ze ToE jest zamknieta.
+
+Aktualizacja `F1`:
+- przywrocono jawnie pomijany canonical informational fractal substrate layer:
+  `D_f ≡ alpha_geo ≡ 4 ln 2 ≈ 2.7726`, `beta_tors ≈ 0.01`,
+- provenance oparto o `TOE_FINAL_DOCUMENTATION.tex`, `TOE_FINAL_DOCUMENTATION 4.4.pdf`,
+  `QW-1703`, `QW-1729`, `QW-1961`,
+- status pozostaje twardo:
+  `canonical-ontology-supported only`, bez promocji do strict-core derivation.
+
+Aktualizacja `K1`:
+- jawnie rozdzielono dwa obiekty, ktore repo zbyt latwo zlewa pod jednym
+  symbolem `K(d)`:
+  `K_legacy_ont(d) = alpha_geo*cos(omega*d+phi)/(1+beta_tors*d)`
+  oraz
+  `K_strict_gate(d) = cos(omega*d+phi)/(1+beta*d^eta)`,
+- po `AX9` stary kernel nie jest juz czytany jako prawo na osobnej
+  `warstwie informacyjnej`, tylko jako wewnetrzny effective pattern jednego
+  informacyjnego nadsolitonu,
+- nadal brak bridge packet/theorem identyfikujacego legacy kernel ze strict
+  gate kernelem; split pozostaje jawnie otwarty.
+
+Aktualizacja `P47/N50`:
+- wykonano pierwszy formalny bridge probe dla pytania
+  `K_legacy_ont(d) -> K_strict_gate(d)`,
+- wynik `P47`:
+  repo eksportuje oba kernele oraz czesciowa rewalidacje legacy claims, ale
+  nadal nie eksportuje rygorystycznego bridge'a miedzy nimi,
+- wynik `N50`:
+  na current repo state nie wolno traktowac `K_strict_gate(d)` jako
+  rygorystycznie ustanowionego pelnego ontologicznego nastepcy
+  `K_legacy_ont(d)`,
+- to nie jest dowod, ze nowy kernel jest falszywy; to jest theorem-level
+  nonidentification / noninheritance boundary.
+
+Aktualizacja `A1`:
+- ansatz nie pomija juz milczaco warstwy `D_f / alpha_geo / beta_tors`,
+- jawnie wpisano, ze `A1` musi miec co najmniej parameter slot albo structural
+  constraint dla tej warstwy, jesli ma byc zgodny z ontologia informacyjnego
+  nadsolitonu.
+
+Aktualizacja `A4`:
+- jednokrokowy coarse-graining nie jest juz opisywany jak dla gladkiego
+  substratu bez fraktalnego ciezaru,
+- wpisano jawnie `Tr_shell^(D_f,beta_tors)` i symboliczna role shell scalingu
+  oraz torsion-damping, bez claimu globalnego RG closure.
+
+Aktualizacja `A8`:
+- gravity bridge nie pomija juz historycznej hierarchy layer
+  `alpha_geo/(2 beta_tors)`,
+- warstwa ta jest sledzona tylko jako canonical hierarchy bridge datum, nie
+  jako strict derivation `G`, Einstein-Hilbert ani GR closure.
+
 ## Ontologiczna wskazowka programu
 
 Program jest prowadzony pod robocza ontologia:
-- warstwa pierwotna ma charakter informacyjny,
-- jednym fundamentalnym obiektem konstrukcyjnym jest nadsoliton,
+- nadsoliton sam jest pierwotna informacja wszechswiata w stanie solitonowym,
+- nie zaklada sie juz osobnej `warstwy informacyjnej` pod nadsolitonem,
 - `Phi`, sektor gauge i sektor metryczny sa na tym etapie traktowane jako warstwy efektywne albo emergentne.
 
 To nie jest theorem-level closure ontologii jednego nadsolitonu.

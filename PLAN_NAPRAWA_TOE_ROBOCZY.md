@@ -5053,6 +5053,32 @@ Po tej rundzie:
    - wykonac `A2_SUPERSOLITON_MATCHING_SPEC` i rozpisac warunki `forced / optional / gauge-choice-dependent`,
    - potem przejsc do `A3_KERNEL_ANALYSIS_SPEC` z poprawnym rozdzialem `zero/gauge/physical modes`.
 
+## 391a. F1 canonical informational fractal substrate parameter packet (2026-03-07)
+1. Zakres:
+   - jawnie przywrocic pomijany w FAR canonical ontology-supported parameter layer:
+     `D_f ≡ alpha_geo ≡ 4 ln 2 ≈ 2.7726`, `beta_tors ≈ 0.01`,
+   - oprzec provenance o `TOE_FINAL_DOCUMENTATION.tex`, `TOE_FINAL_DOCUMENTATION 4.4.pdf`,
+     `QW-1703`, `QW-1729`, `QW-1961`,
+   - nie promowac tych parametrow do strict-core derivation.
+2. Wynik:
+   - wykonano `F1` jako machine-readable provenance packet,
+   - `A1` dostaje jawny parameter slot / structural constraint dla `D_f / alpha_geo / beta_tors`,
+   - `A4` dostaje jawny fractal shell scaling supplement,
+   - `A8` dostaje jawny canonical hierarchy datum `alpha_geo/(2 beta_tors)`,
+   - `H/K_obs` pozostaje jawnie otwarte co do explicit alpha-level operator insertion.
+3. Artefakty:
+   - dodano `fundamental_action_reconstruction/F1_CANONICAL_INFORMATIONAL_FRACTAL_SUBSTRATE_PARAMETER_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/f1_canonical_informational_fractal_substrate_parameter_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/f1_canonical_informational_fractal_substrate_parameter_packet.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/f1_canonical_informational_fractal_substrate_parameter_packet_summary.json`,
+   - zaktualizowano `A1`, `A4`, `A8`, `fundamental_action_reconstruction/README.md`,
+     `README.md`, raport stanu i manifest.
+4. Twardy rygor:
+   - brak theorem-level PASS,
+   - brak full-closure PASS,
+   - brak claimu, ze `D_f`, `alpha_geo`, `beta_tors` sa juz strict-derived,
+   - brak claimu, ze `alpha_geo/(2 beta_tors)` daje strict derivation `G` lub `alpha_EM`.
+
 ## 391. A2 supersoliton matching wykonane (2026-03-06)
 1. Zakres:
    - wykonano `A2` na minimalnej galezi `single-foundation / gauge-off / metric-spectator`,
@@ -10379,7 +10405,159 @@ Po tej rundzie:
    - albo osobno w jeden z `direct g4/g6/gY` zero witnesses,
    - albo zostawic ten lane jako local support only i dalej trzymac route
      jako nierozladowany.
+
+536. `R35/P44/N47`: target-side role split on the canonical-ontology-supported lane without false pass
+1. Zakres:
+   - nie wprowadzac nowego pozytywnego domkniecia,
+   - nie promowac niczego do strict core,
+   - zaatakowac bezposrednio najwezszy target-side blocker:
+     `explicit_assignment_witness_of_m2_psi4_to_mu_m2_plus3_segment_psi1_psi4`,
+   - rozbic go tylko do dwoch role-specific target witnesses,
+   - utrzymac jawnie, ze source-side closures z `AX10/AX11` pozostaja lokalne.
+2. Wynik:
+   - `R35` daje realny partial packet:
+     exact target action/eom role split dla `m2_psi4`,
+   - `P44` zwraca:
+     `CANONICAL_ONTOLOGY_SUPPORTED_SOURCE_SIDE_CLOSED_BUT_TARGET_M2_PSI4_ROLE_ASSIGNMENT_GAPS_REMAIN_AFTER_R35`,
+   - `N47` utrzymuje najostrzejsza granice bez falszywego PASS:
+     source-side closures sa zachowane, ale target-side jest tylko zredukowany
+     do dwoch role-specific luk.
+3. Frontier po kroku:
+   - `R35_result := attacked target-side witness reduced to target action-role plus target eom-role assignment gaps`,
+   - `P44_missing_objects := explicit_target_action_role_assignment_witness_for_m2_psi4_to_mu_m2_plus3_segment_psi1_psi4`,
+   - `P44_missing_objects += explicit_target_eom_role_assignment_witness_for_m2_psi4_to_mu_m2_plus3_segment_psi1_psi4`,
+   - `P44_missing_objects += explicit zero witness for direct quartic-like g4 family c1s1 shift defect`,
+   - `P44_missing_objects += explicit zero witness for direct quintic-like g6 family c1s1 shift defect`,
+   - `P44_missing_objects += explicit zero witness for direct yukawa-like gY family c1s1 shift defect`,
+   - `P44_missing_objects += explicit_pairwise_matching_witness_for_m2_psi7_equals_m2_psi10`,
+   - `P44_missing_objects += explicit_pairwise_matching_witness_for_m2_psi2_equals_m2_psi5`,
+   - `P44_missing_objects += explicit_pairwise_matching_witness_for_m2_psi8_equals_m2_psi11`,
+   - `P44_missing_objects += explicit zero witness for the declared pair1 residual c1c1 equation`,
+   - `P44_missing_objects += explicit zero witness for the declared pair1 residual s1s1 equation`,
+   - `P44_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+   - `N47_route_result := current repo still has local canonical-ontology-supported source-side closures plus a reduced target-side role split and no strict-core closure`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/R35_DIRECT_M2_PSI4_COMMON_PLUS3_ASSIGNMENT_ROLE_SPLIT_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/r35_direct_m2_psi4_common_plus3_assignment_role_split_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r35_direct_m2_psi4_common_plus3_assignment_role_split_packet.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r35_direct_m2_psi4_common_plus3_assignment_role_split_packet_summary.json`,
+   - dodano `fundamental_action_reconstruction/P44_CANONICAL_ONTOLOGY_SUPPORTED_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_PROBE_AFTER_DIRECT_M2_PSI4_COMMON_PLUS3_ASSIGNMENT_ROLE_SPLIT_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/p44_canonical_ontology_supported_direct_formal_c1s1_family_route_probe_after_direct_m2_psi4_common_plus3_assignment_role_split_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p44_canonical_ontology_supported_direct_formal_c1s1_family_route_probe_after_direct_m2_psi4_common_plus3_assignment_role_split_packet.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p44_canonical_ontology_supported_direct_formal_c1s1_family_route_probe_after_direct_m2_psi4_common_plus3_assignment_role_split_packet_summary.json`,
+   - dodano `fundamental_action_reconstruction/N47_CURRENT_CANONICAL_ONTOLOGY_SUPPORTED_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_BOUNDARY_THEOREM_AFTER_DIRECT_M2_PSI4_COMMON_PLUS3_ASSIGNMENT_ROLE_SPLIT_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/n47_current_canonical_ontology_supported_direct_formal_c1s1_family_route_boundary_theorem_after_direct_m2_psi4_common_plus3_assignment_role_split_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n47_current_canonical_ontology_supported_direct_formal_c1s1_family_route_boundary_theorem_after_direct_m2_psi4_common_plus3_assignment_role_split_packet_summary.json`.
+5. Nastepny poprawny ruch:
+   - albo uderzyc bezposrednio w
+     `explicit_target_action_role_assignment_witness_for_m2_psi4_to_mu_m2_plus3_segment_psi1_psi4`,
+   - albo osobno w
+     `explicit_target_eom_role_assignment_witness_for_m2_psi4_to_mu_m2_plus3_segment_psi1_psi4`,
+   - albo zostawic ten lane jako local support only i dalej trzymac route
+     jako nierozladowany.
      coefficient-identification witnessa albo zadnego globalnego skrocenia.
+
+537. `R36/P45/N48`: target action-side common-support reduction on the canonical-ontology-supported lane without false pass
+1. Zakres:
+   - nie wprowadzac nowego pozytywnego domkniecia,
+   - nie promowac niczego do strict core,
+   - zaatakowac bezposrednio najwezszy target action-side blocker:
+     `explicit_target_action_role_assignment_witness_for_m2_psi4_to_mu_m2_plus3_segment_psi1_psi4`,
+   - zredukowac go tylko do jednego common-support coefficient-identification gap,
+   - utrzymac jawnie, ze source-side closures z `AX10/AX11` pozostaja lokalne, a kanal swiatlo/kernel z `R14` pozostaje nienaruszony.
+2. Wynik:
+   - `R36` daje realny partial packet:
+     exact common target-action support reduction dla `m2_psi4` na `psi4**2/2`,
+   - `P45` zwraca:
+     `CANONICAL_ONTOLOGY_SUPPORTED_SOURCE_SIDE_CLOSED_AND_TARGET_ACTION_GAP_REDUCED_TO_COMMON_PSI4_SQUARED_OVER_2_SUPPORT_ROUTE_STILL_NOT_CLOSED_AFTER_R36`,
+   - `N48` utrzymuje najostrzejsza granice bez falszywego PASS:
+     source-side closures sa zachowane, target action-side jest tylko
+     zredukowany do jednego local coefficient gap, target eom-side pozostaje
+     osobnym brakujacym witnessem.
+3. Frontier po kroku:
+   - `R36_result := attacked target action-side witness reduced to one common-support coefficient-identification gap on psi4**2/2`,
+   - `P45_missing_objects := explicit_target_action_monomial_coefficient_identification_witness_for_m2_psi4_and_mu_m2_plus3_segment_psi1_psi4_on_common_psi4_squared_over_2_support`,
+   - `P45_missing_objects += explicit_target_eom_role_assignment_witness_for_m2_psi4_to_mu_m2_plus3_segment_psi1_psi4`,
+   - `P45_missing_objects += explicit zero witness for direct quartic-like g4 family c1s1 shift defect`,
+   - `P45_missing_objects += explicit zero witness for direct quintic-like g6 family c1s1 shift defect`,
+   - `P45_missing_objects += explicit zero witness for direct yukawa-like gY family c1s1 shift defect`,
+   - `P45_missing_objects += explicit_pairwise_matching_witness_for_m2_psi7_equals_m2_psi10`,
+   - `P45_missing_objects += explicit_pairwise_matching_witness_for_m2_psi2_equals_m2_psi5`,
+   - `P45_missing_objects += explicit_pairwise_matching_witness_for_m2_psi8_equals_m2_psi11`,
+   - `P45_missing_objects += explicit zero witness for the declared pair1 residual c1c1 equation`,
+   - `P45_missing_objects += explicit zero witness for the declared pair1 residual s1s1 equation`,
+   - `P45_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+   - `N48_route_result := current repo still has local canonical-ontology-supported source-side closures, a reduced target action-side gap, a still-open target eom-side gap, and no strict-core closure`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/R36_DIRECT_M2_PSI4_TARGET_ACTION_COMMON_MONOMIAL_SUPPORT_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/r36_direct_m2_psi4_target_action_common_monomial_support_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r36_direct_m2_psi4_target_action_common_monomial_support_packet.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r36_direct_m2_psi4_target_action_common_monomial_support_packet_summary.json`,
+   - dodano `fundamental_action_reconstruction/P45_CANONICAL_ONTOLOGY_SUPPORTED_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_PROBE_AFTER_DIRECT_M2_PSI4_TARGET_ACTION_COMMON_MONOMIAL_SUPPORT_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/p45_canonical_ontology_supported_direct_formal_c1s1_family_route_probe_after_direct_m2_psi4_target_action_common_monomial_support_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p45_canonical_ontology_supported_direct_formal_c1s1_family_route_probe_after_direct_m2_psi4_target_action_common_monomial_support_packet.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p45_canonical_ontology_supported_direct_formal_c1s1_family_route_probe_after_direct_m2_psi4_target_action_common_monomial_support_packet_summary.json`,
+   - dodano `fundamental_action_reconstruction/N48_CURRENT_CANONICAL_ONTOLOGY_SUPPORTED_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_BOUNDARY_THEOREM_AFTER_DIRECT_M2_PSI4_TARGET_ACTION_COMMON_MONOMIAL_SUPPORT_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/n48_current_canonical_ontology_supported_direct_formal_c1s1_family_route_boundary_theorem_after_direct_m2_psi4_target_action_common_monomial_support_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n48_current_canonical_ontology_supported_direct_formal_c1s1_family_route_boundary_theorem_after_direct_m2_psi4_target_action_common_monomial_support_packet_summary.json`.
+5. Nastepny poprawny ruch:
+   - albo uderzyc bezposrednio w
+     `explicit_target_action_monomial_coefficient_identification_witness_for_m2_psi4_and_mu_m2_plus3_segment_psi1_psi4_on_common_psi4_squared_over_2_support`,
+   - albo osobno w
+     `explicit_target_eom_role_assignment_witness_for_m2_psi4_to_mu_m2_plus3_segment_psi1_psi4`,
+   - albo zostawic ten lane jako local support only i dalej trzymac route
+     jako nierozladowany.
+
+538. `R37/P46/N49`: target action-side defect-polynomial reduction on the canonical-ontology-supported lane without false pass
+1. Zakres:
+   - nie wprowadzac nowego pozytywnego domkniecia,
+   - nie promowac niczego do strict core,
+   - zaatakowac bezposrednio najwezszy target action-side coefficient gap:
+     `explicit_target_action_monomial_coefficient_identification_witness_for_m2_psi4_and_mu_m2_plus3_segment_psi1_psi4_on_common_psi4_squared_over_2_support`,
+   - zredukowac go tylko do jednego exact defect-polynomial zero-witness gap,
+   - utrzymac jawnie, ze source-side closures z `AX10/AX11` pozostaja lokalne, a kanal swiatlo/kernel z `R14` pozostaje nienaruszony.
+2. Wynik:
+   - `R37` daje realny partial packet:
+     exact target-action coefficient defect polynomial dla `m2_psi4` na `psi4**2/2`,
+   - `P46` zwraca:
+     `CANONICAL_ONTOLOGY_SUPPORTED_SOURCE_SIDE_CLOSED_AND_TARGET_ACTION_DEFECT_POLYNOMIAL_EXPORTED_ROUTE_STILL_NOT_CLOSED_AFTER_R37`,
+   - `N49` utrzymuje najostrzejsza granice bez falszywego PASS:
+     source-side closures sa zachowane, target action-side jest tylko
+     zredukowany do jednego exact defect-polynomial zero-witness gap, target
+     eom-side pozostaje osobnym brakujacym witnessem.
+3. Frontier po kroku:
+   - `R37_result := attacked target action-side witness reduced to one exact defect-polynomial zero-witness gap on psi4**2/2`,
+   - `P46_missing_objects := explicit_zero_witness_for_the_direct_m2_psi4_target_action_coefficient_defect_polynomial_on_common_psi4_squared_over_2_support`,
+   - `P46_missing_objects += explicit_target_eom_role_assignment_witness_for_m2_psi4_to_mu_m2_plus3_segment_psi1_psi4`,
+   - `P46_missing_objects += explicit zero witness for direct quartic-like g4 family c1s1 shift defect`,
+   - `P46_missing_objects += explicit zero witness for direct quintic-like g6 family c1s1 shift defect`,
+   - `P46_missing_objects += explicit zero witness for direct yukawa-like gY family c1s1 shift defect`,
+   - `P46_missing_objects += explicit_pairwise_matching_witness_for_m2_psi7_equals_m2_psi10`,
+   - `P46_missing_objects += explicit_pairwise_matching_witness_for_m2_psi2_equals_m2_psi5`,
+   - `P46_missing_objects += explicit_pairwise_matching_witness_for_m2_psi8_equals_m2_psi11`,
+   - `P46_missing_objects += explicit zero witness for the declared pair1 residual c1c1 equation`,
+   - `P46_missing_objects += explicit zero witness for the declared pair1 residual s1s1 equation`,
+   - `P46_missing_objects += full physical uniqueness or selector-relevant canonicalization of the explicit declared control transport within the residual QW-2191 O(2) family`,
+   - `N49_route_result := current repo still has local canonical-ontology-supported source-side closures, a reduced target action-side exact defect-polynomial gap, a still-open target eom-side gap, and no strict-core closure`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/R37_DIRECT_M2_PSI4_TARGET_ACTION_COEFFICIENT_DEFECT_POLYNOMIAL_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/r37_direct_m2_psi4_target_action_coefficient_defect_polynomial_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r37_direct_m2_psi4_target_action_coefficient_defect_polynomial_packet.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r37_direct_m2_psi4_target_action_coefficient_defect_polynomial_packet_summary.json`,
+   - dodano `fundamental_action_reconstruction/P46_CANONICAL_ONTOLOGY_SUPPORTED_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_PROBE_AFTER_DIRECT_M2_PSI4_TARGET_ACTION_COEFFICIENT_DEFECT_POLYNOMIAL_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/p46_canonical_ontology_supported_direct_formal_c1s1_family_route_probe_after_direct_m2_psi4_target_action_coefficient_defect_polynomial_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p46_canonical_ontology_supported_direct_formal_c1s1_family_route_probe_after_direct_m2_psi4_target_action_coefficient_defect_polynomial_packet.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p46_canonical_ontology_supported_direct_formal_c1s1_family_route_probe_after_direct_m2_psi4_target_action_coefficient_defect_polynomial_packet_summary.json`,
+   - dodano `fundamental_action_reconstruction/N49_CURRENT_CANONICAL_ONTOLOGY_SUPPORTED_DIRECT_FORMAL_C1S1_FAMILY_ROUTE_BOUNDARY_THEOREM_AFTER_DIRECT_M2_PSI4_TARGET_ACTION_COEFFICIENT_DEFECT_POLYNOMIAL_PACKET.md`,
+   - dodano `fundamental_action_reconstruction/n49_current_canonical_ontology_supported_direct_formal_c1s1_family_route_boundary_theorem_after_direct_m2_psi4_target_action_coefficient_defect_polynomial_packet.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n49_current_canonical_ontology_supported_direct_formal_c1s1_family_route_boundary_theorem_after_direct_m2_psi4_target_action_coefficient_defect_polynomial_packet_summary.json`.
+5. Nastepny poprawny ruch:
+   - albo uderzyc bezposrednio w
+     `explicit_zero_witness_for_the_direct_m2_psi4_target_action_coefficient_defect_polynomial_on_common_psi4_squared_over_2_support`,
+   - albo osobno w
+     `explicit_target_eom_role_assignment_witness_for_m2_psi4_to_mu_m2_plus3_segment_psi1_psi4`,
+   - albo zostawic ten lane jako local support only i dalej trzymac route
+     jako nierozladowany.
 
 
 - `H29`: stare proxy `retard_phase/tau/gain` moduluja preorientowany kanal, ale nie dostarczaja same wewnetrznego strict-core anchoru orientacji.

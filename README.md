@@ -310,6 +310,26 @@ Primary state report:
   not close because the target-side witness, the other direct `m2` pairwise
   blockers, the direct `g4/g6/gY` family blockers, `pair1 c1c1/s1s1`,
   `QW-2191`, and strict core remain unchanged.
+- The next honest move after that has now also been executed on the real
+  frontier itself, not by importing a new positive closure: `R35/P44/N47`
+  attack the target-side witness `m2_psi4` and reduce it only to two narrower
+  target role-assignment gaps. The route is sharper again, but still not
+  closed; `g4/g6/gY`, the other direct `m2` pairwise blockers, `pair1`
+  residual equations, `QW-2191`, and strict core remain unchanged.
+- The next honest move after that has now also been executed on the same
+  canonical-ontology-supported lane, still without a false pass: `R36/P45/N48`
+  reduce only the attacked target action-side gap for `m2_psi4` to one still
+  missing coefficient-identification witness on common local support
+  `psi4**2/2`. The target eom-side gap, `g4/g6/gY`, the remaining direct `m2`
+  pairwise blockers, `pair1` residual equations, `QW-2191`, and strict core
+  remain unchanged.
+- The next honest move after that has now also been executed on the same
+  canonical-ontology-supported lane, still without a false pass: `R37/P46/N49`
+  reduce only that attacked target action-side coefficient gap one step
+  further to one exact defect-polynomial zero-witness gap on the same local
+  support `psi4**2/2`. The target eom-side gap, `g4/g6/gY`, the remaining
+  direct `m2` pairwise blockers, `pair1` residual equations, `QW-2191`, and
+  strict core remain unchanged.
 - This is real progress on the selector problem at extension level, but it does not upgrade strict-core closure and does not change `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 - Details: [`fundamental_action_reconstruction/README.md`](fundamental_action_reconstruction/README.md), [`fundamental_action_reconstruction/generated/pair1_operator_probe_report.json`](fundamental_action_reconstruction/generated/pair1_operator_probe_report.json).
 
@@ -861,10 +881,15 @@ Purpose:
 - test RG emergence before making stronger claims about spinors, gauge structure, or SM+GR bridge.
 
 Current status:
+- `F1` completed as a canonical informational fractal substrate parameter packet restoring
+  `D_f ≡ alpha_geo ≡ 4 ln 2` and `beta_tors` into the action-first lane as
+  canonical-ontology-supported structural parameters only,
 - `A1` completed as specification/ansatz layer,
 - `A2` completed on a minimal supersoliton matching branch (`single-foundation`, `gauge-off`, `metric-spectator`),
 - `A3` completed as the minimal-branch fluctuation-operator and mode-split layer,
-- the track is now explicitly guided by a `single nadsoliton` ontology with `information` treated as the primordial heuristic layer,
+- the track is now explicitly guided by a `single nadsoliton` ontology in
+  which the nadsoliton itself is the primordial information of the universe in
+  a solitonic state, with no separate informational layer underneath it,
 - `A4` completed as a one-step coarse-graining / RG-emergence layer on the same minimal branch,
 - `A5` completed as a spinor-route split with a methodological audit of prior local studies,
 - legacy/non-strict prior studies are now treated only as heuristics or negative controls, not as proof inputs,
@@ -874,6 +899,17 @@ Current status:
 - `A7` completed as a strict-scope positivity/unitarity package,
 - this moves the theory forward only to an integrated local/branch-scope positivity-causality layer with explicit terminal global blockers `L5_O1a_O1` and `L5_O1b_O1`,
 - `A8` completed as a strict-scope partial gravity bridge,
+- `A1/A4/A8` now explicitly track the canonical fractal substrate layer
+  (`D_f`, `alpha_geo`, `beta_tors`) as provenance-supported constraints or
+  hierarchy data, not as strict derivations,
+- `K1` now makes explicit that the repo currently contains a split between the
+  legacy ontological/effective kernel
+  `alpha_geo*cos(omega*d+phi)/(1+beta_tors*d)` and the later strict working
+  gate kernel `cos(omega*d+phi)/(1+beta*d^eta)`, with no rigorous bridge yet,
+- `P47/N50` now make this sharper: the current repo exports both kernels and a
+  partial legacy revalidation downgrade, but still does not export a rigorous
+  bridge identifying the strict gate kernel as the full ontological successor
+  of the legacy kernel,
 - this moves the theory forward only to an integrated effective/scope-closed gravity layer with explicit foundational blockers for `G`, Einstein-Hilbert derivation and full SM+GR reduction,
 - `A9` completed as a strict-scope partial SM+GR effective reduction layer,
 - this moves the theory forward only to an integrated effective material/gauge/gravity package with theorem-level unification still open,

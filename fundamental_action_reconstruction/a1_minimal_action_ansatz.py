@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import math
 from pathlib import Path
 
 AS_OF = "2026-03-06"
@@ -15,6 +16,18 @@ summary = {
         "primordial_layer": "information",
         "fundamental_object": "single nadsoliton",
         "scope_note": "constructive guidance only; not a theorem-level closure claim",
+    },
+    "canonical_structural_parameters": {
+        "status": "canonical_ontology_supported_only",
+        "D_f": 4.0 * math.log(2.0),
+        "alpha_geo": 4.0 * math.log(2.0),
+        "beta_tors": 0.01,
+        "meaning": [
+            "origin-layer fractal substrate dimension",
+            "info-geometry identity",
+            "inter-layer torsion damping parameter",
+        ],
+        "anti_overclaim": "present as structural parameter slot / constraint only, not as strict derivation",
     },
     "anti_overclaim": {
         "theorem_level_closure_claim": False,
@@ -70,6 +83,11 @@ summary = {
             "effective gravitational coupling sector M_eff(Psi,Phi)^2 R / 2 - Lambda_eff(Psi,Phi)",
             "explicit EFT correction sector Delta L_EFT",
         ],
+        "fractal_substrate_constraint": {
+            "required_if_claiming_consistency_with_canonical_informational_nadsoliton_ontology": True,
+            "constraint": "A1 must expose an explicit parameter slot or structural constraint for (D_f, alpha_geo, beta_tors)",
+            "allowed_scope": "canonical_ontology_supported_only",
+        },
         "reviewer_open_obligations": [
             "actual supersoliton background solution of Euler-Lagrange equations",
             "quadratic fluctuation operator extraction",

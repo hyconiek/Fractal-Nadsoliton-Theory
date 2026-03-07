@@ -20,6 +20,24 @@ Ten etap jest prowadzony przy tej samej konstrukcyjnej ontologii:
 - sektor gauge i metryczny pozostaja warstwami emergentnymi albo efektywnymi,
 - to nadal nie jest theorem-level closure ontologii jednego nadsolitonu.
 
+## Canonical fractal scaling supplement
+
+Jesli `A4` ma byc RG-emergence layer dla tej samej ontologii FIN, to shell
+integration nie moze juz byc opisywana tak, jakby podloze bylo zwyklym gladkim
+substratem bez jawnego parametru fraktalnego.
+
+Na obecnym etapie wolno wpisac tylko canonical-ontology-supported supplement:
+
+```text
+D_f ≡ alpha_geo ≡ 4 ln 2 ≈ 2.7726
+beta_tors ≈ 0.01
+```
+
+Interpretacja:
+- `D_f` nosi substratowy ciezar skalowania dla coarse-graining,
+- `beta_tors` niesie warstwe tlumienia miedzy-layer / torsion-damping,
+- nadal nie jest to globalny RG theorem ani strict derivation shell measure.
+
 ## Wejscie z A3
 
 `A3` dostarczylo:
@@ -47,16 +65,26 @@ Po scalkowaniu shellu `xi_>` zapisujemy:
 ```text
 S_eff[xi_<] =
   S_phys[xi_<]
-  + 1/2 Tr_shell log O_phys
+  + 1/2 Tr_shell^(D_f,beta_tors) log O_phys
   + Delta S_local
   + Delta S_EFT
 ```
 
 Interpretacja:
 - `S_phys` to wejscie z minimalnego kernela `A3`,
-- `Tr_shell log O_phys` jest pierwszym uczciwym krokiem Wilsonowskiego przeplywu,
+- `Tr_shell^(D_f,beta_tors) log O_phys` jest pierwszym uczciwym krokiem Wilsonowskiego przeplywu z jawnie zaznaczona warstwa fraktalnego skalowania i tlumienia,
 - `Delta S_local` zbiera lokalne renormalizacje operatorow juz obecnych,
 - `Delta S_EFT` zbiera wyzsze operatory generowane przez coarse-graining.
+
+Na tym etapie wolno jeszcze tylko symbolicznie wskazac wage shellu:
+
+\[
+d\mu_{\mathrm{shell}}^{(f)} \sim p^{D_f-1} \, dp \, d\Omega_f
+\cdot w_{\mathrm{tors}}(\beta_{\mathrm{tors}}),
+\]
+
+bez claimu, ze repo policzylo juz unikalna mikro-derewacje tej miary albo
+globalny wieloskalowy przeplyw.
 
 ## Co jest emergentne, co wstawione recznie, a co nadal otwarte
 
@@ -68,7 +96,7 @@ Interpretacja:
 | `c_4(mu), c_6(mu), ...` | `emergent` | wyzsze lokalne operatory generowane jako ogon EFT |
 | predeklarowane `Delta L_EFT` | `inserted_by_hand` | pozostaje jawnie wpisanym miejscem na wyzsze operatory |
 | `Z_IJ(mu)` | `unresolved` | sektor gauge nie jest aktywny na tej galezi |
-| `M_eff(mu), Lambda_eff(mu)` | `unresolved` | sektor grawitacyjny pozostaje spectator-only |
+| `M_eff(mu), Lambda_eff(mu)` | `unresolved_but_fractal_scaling_relevant` | sektor grawitacyjny pozostaje spectator-only, ale nie wolno juz ignorowac `D_f/beta_tors` jako structural RG data |
 | fermionowe sprzezenia biezace | `unresolved` | brak aktywnej galezi fermionowej w `A4` |
 
 ## Symboliczne beta-functions
@@ -76,14 +104,16 @@ Interpretacja:
 Na poziomie wykonanej galezi wolno zapisac tylko symboliczne relacje:
 
 ```text
-beta_K = Delta_K[ Tr_shell log O_phys ]
-beta_H = Delta_H[ Tr_shell log O_phys ]
-beta_top = Delta_top[ Tr_shell log O_phys ]
+beta_K = Delta_K[ Tr_shell^(D_f,beta_tors) log O_phys ]
+beta_H = Delta_H[ Tr_shell^(D_f,beta_tors) log O_phys ]
+beta_top = Delta_top[ Tr_shell^(D_f,beta_tors) log O_phys ]
 beta_c_n = canonical_part + shell_induced_part
 ```
 
 To znaczy:
 - `A4` pokazuje, skad ma sie brac running,
+- running jest teraz jawnie obwarowany przez canonical-ontology-supported
+  warstwe `D_f / beta_tors`,
 - ale nie twierdzi jeszcze, ze policzono globalny RG package,
 - nie twierdzi tez, ze running jest juz unikalny poza wykonana minimalna gala.
 

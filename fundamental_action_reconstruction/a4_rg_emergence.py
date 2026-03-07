@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import math
 from pathlib import Path
 
 AS_OF = "2026-03-06"
@@ -24,6 +25,17 @@ summary = {
         ],
         "scope_note": "constructive guidance only; not a theorem-level closure claim",
     },
+    "canonical_structural_parameters": {
+        "status": "canonical_ontology_supported_only",
+        "D_f": 4.0 * math.log(2.0),
+        "alpha_geo": 4.0 * math.log(2.0),
+        "beta_tors": 0.01,
+        "role_in_A4": [
+            "fractal scaling weight for the shell/coarse-graining layer",
+            "torsion-damping structural parameter for shell weighting",
+        ],
+        "anti_overclaim": "symbolic RG data only; not a globally derived unique shell measure",
+    },
     "anti_overclaim": {
         "global_rg_closure_claim": False,
         "l12_closure_claim": False,
@@ -38,8 +50,12 @@ summary = {
             "split": "xi = xi_< + xi_>",
             "shell": "mu / b <= |p| <= mu",
             "effective_action": (
-                "S_eff[xi_<] = S_phys[xi_<] + 1/2 Tr_shell log O_phys + Delta S_local + Delta S_EFT"
+                "S_eff[xi_<] = S_phys[xi_<] + 1/2 Tr_shell^(D_f,beta_tors) log O_phys + Delta S_local + Delta S_EFT"
             ),
+        },
+        "fractal_shell_constraint": {
+            "status": "symbolic_only",
+            "statement": "A4 must expose D_f-driven scaling weight and beta_tors-driven damping role in the shell integration if it is presented as RG emergence for the canonical informational nadsoliton ontology",
         },
         "running_objects": [
             {"id": "K_tan(mu)", "status": "emergent"},

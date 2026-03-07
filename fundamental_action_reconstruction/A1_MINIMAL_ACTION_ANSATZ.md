@@ -22,6 +22,28 @@ Ten tor konstrukcyjny jest prowadzony pod zalozeniem roboczym:
 To nie jest jeszcze theorem-level closure.
 To jest wskazowka konstrukcyjna dla `A1..A10`, a nie recenzencki dowod, ze single-nadsoliton ontology jest juz domknieta.
 
+## Canonical fractal substrate parameter layer
+
+Jesli `A1` ma pozostawac zgodny z kanoniczna ontologia FIN, to nie wolno juz
+milczaco pomijac origin-layer structural parameters:
+
+```text
+D_f ≡ alpha_geo ≡ 4 ln 2 ≈ 2.7726
+beta_tors ≈ 0.01
+```
+
+Na obecnym etapie wolno je traktowac tylko jako:
+
+- `canonical-ontology-supported structural parameters`,
+- nie jako strict-core derivation already closed,
+- nie jako gotowy dowod formul mas/grawitacji/stalej subtelnej.
+
+Konsekwencja dla `A1` jest minimalna, ale twarda:
+- ansatz musi zostawiac jawny slot albo constraint dla substratowego
+  skalowania fraktalnego,
+- kinetic / potential / effective bridge sector nie moga byc opisywane tak,
+  jakby ten parametr w ogole nie istnial.
+
 ## Minimalna zawartosc pol
 
 1. `Psi^A`
@@ -58,7 +80,9 @@ Najpierw zapisujemy strukture warstwowa:
 + \mathcal{L}^{\mathrm{eff}}_{\Phi}[\Psi]
 + \mathcal{L}^{\mathrm{eff}}_{A}[\Psi]
 + \mathcal{L}^{\mathrm{eff}}_{g}[\Psi]
-+ \Delta \mathcal{L}_{\mathrm{EFT}}.
++ \Delta \mathcal{L}_{\mathrm{EFT}}
+\quad;\quad
+(D_f,\alpha_{\mathrm{geo}},\beta_{\mathrm{tors}}).
 \]
 
 Minimalna realizacja tej klasy moze byc zapisana jako:
@@ -71,7 +95,9 @@ Minimalna realizacja tej klasy moze byc zapisana jako:
 - \frac14 Z_{IJ}(\Psi,\Phi) F^I_{\mu\nu} F^{J\mu\nu}
 + \frac{M^2_{\mathrm{eff}}(\Psi,\Phi)}{2} R
 - \Lambda_{\mathrm{eff}}(\Psi,\Phi)
-+ \Delta \mathcal{L}_{\mathrm{EFT}}.
++ \Delta \mathcal{L}_{\mathrm{EFT}}
+\quad;\quad
+(D_f,\alpha_{\mathrm{geo}},\beta_{\mathrm{tors}}).
 \]
 
 Gdzie:
@@ -81,6 +107,20 @@ Gdzie:
 - `D_mu` jest zwykla pochodna w wariancie bez aktywnego gauge sector albo pochodna kowariantna po aktywacji `A_mu^I`,
 - `F^I_{mu nu}` jest krzywizna polaczenia,
 - `Delta L_EFT` reprezentuje wylacznie jawnie oznaczone wyzsze operatory tlumione skala `Lambda`.
+
+Na canonical-ontology-supported lane wolno dodatkowo zapisac tylko tyle:
+
+\[
+\mathcal{C}^{A1}_{\mathrm{fractal}}:
+\{G_{AB},V_{\mathrm{eff}},Z_{IJ},M^2_{\mathrm{eff}},\Lambda_{\mathrm{eff}}\}
+\ \text{moga zalezec od}\ 
+(D_f,\alpha_{\mathrm{geo}},\beta_{\mathrm{tors}}),
+\]
+
+czyli `A1` musi przynajmniej dopuszczac, ze lokalny kinetic term, effective
+potential i bridge sectors niosa constraint substratowego skalowania
+fraktalnego. To jest constraint warstwy konstrukcyjnej, nie wyprowadzona
+jeszcze formula.
 
 ## Twarde restrykcje na A1
 
@@ -93,6 +133,9 @@ Gdzie:
 7. `Phi`, `A_mu^I`, `g_{mu nu}` nie moga byc na tym etapie sprzedawane jako wspolfundamentalne byty,
 8. zaden wybor grupy gauge nie moze byc jeszcze sprzedawany jako wyprowadzony,
 9. brak roszczenia, ze fermiony Diraca sa juz uzyskane.
+10. jesli `A1` odwoluje sie do ontologii informacyjnego nadsolitonu, to nie
+    wolno juz milczaco pomijac `D_f`, `alpha_geo`, `beta_tors`; musza byc
+    jawnie obecne przynajmniej jako parameter slot albo structural constraint.
 
 ## Obowiazki recenzenckie odlozone poza A1
 
