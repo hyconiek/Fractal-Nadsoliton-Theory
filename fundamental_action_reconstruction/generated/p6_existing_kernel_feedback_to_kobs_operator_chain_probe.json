@@ -1,0 +1,124 @@
+{
+  "stage": "P6",
+  "goal": "compute_or_fail_existing_kernel_feedback_to_selector_facing_kobs",
+  "status": "NOT_COMPUTABLE_FROM_CURRENT_KERNEL_FEEDBACK_TO_KOBS_ROUTE",
+  "reason": "the repo contains internal feedback parameters and a packet-ready K_obs ansatz, but still lacks the operator-level factorization maps and selector-facing projected block needed to instantiate K_obs from existing kernel feedback",
+  "lane": "existing_kernel_feedback_to_kobs_operator_route",
+  "route_under_test": [
+    "existing_kernel_feedback",
+    "internal_feedback_parameter_packet",
+    "H3_operator_chain",
+    "selector_sector_projected_block"
+  ],
+  "route_checks": [
+    {
+      "id": "existing_kernel_feedback_present",
+      "pass": true,
+      "expected": true,
+      "actual": true,
+      "meaning": "the repo already contains internal feedback-like structure in K_total -> K(d)"
+    },
+    {
+      "id": "h3_operator_chain_required",
+      "pass": true,
+      "expected": 7,
+      "actual": 7,
+      "meaning": "the admissible K_obs route requires an explicit operator chain with the H3 maps"
+    },
+    {
+      "id": "r2_parameter_packet_present",
+      "pass": true,
+      "expected": "existing_internal_feedback_parameter_packet_present_but_not_yet_an_operator_level_kobs_factorization",
+      "actual": "existing_internal_feedback_parameter_packet_present_but_not_yet_an_operator_level_kobs_factorization",
+      "meaning": "existing internal feedback parameters are now aggregated in one packet"
+    },
+    {
+      "id": "q1950_observer_loop_parameters_present",
+      "pass": true,
+      "expected": true,
+      "actual": true,
+      "meaning": "observer-loop parameters exist at scalar level"
+    },
+    {
+      "id": "q1951_mass_information_parameters_present",
+      "pass": true,
+      "expected": true,
+      "actual": true,
+      "meaning": "mass-information coupling parameters exist at scalar level"
+    },
+    {
+      "id": "q1952_anisotropy_parameters_present",
+      "pass": true,
+      "expected": true,
+      "actual": true,
+      "meaning": "anisotropy and retardation proxies exist at scalar level"
+    },
+    {
+      "id": "q1956_repaired_operator_parameters_present",
+      "pass": true,
+      "expected": true,
+      "actual": true,
+      "meaning": "repaired-operator parameters exist at scalar level"
+    },
+    {
+      "id": "h14_no_equivalence_map_present",
+      "pass": true,
+      "expected": true,
+      "actual": true,
+      "meaning": "no explicit equivalence map identifies existing kernel feedback with K_obs"
+    },
+    {
+      "id": "h15_no_selector_sector_export",
+      "pass": true,
+      "expected": "existing_feedback_not_identified_with_kobs",
+      "actual": "existing_feedback_not_identified_with_kobs",
+      "meaning": "existing feedback is not exported to the selector sector"
+    },
+    {
+      "id": "h29_proxies_preoriented_only",
+      "pass": true,
+      "expected": "PASS_PARTIAL_PREORIENTED_PROXY_REDUCTION_ONLY",
+      "actual": "PASS_PARTIAL_PREORIENTED_PROXY_REDUCTION_ONLY",
+      "meaning": "old proxies only modulate a pre-oriented channel and do not provide an internal anchor by themselves"
+    }
+  ],
+  "route_state": {
+    "kernel_feedback_present": true,
+    "existing_internal_feedback_parameter_packet_present": true,
+    "h3_operator_chain_spec_present": true,
+    "selector_sector_reduction_packet_present": true,
+    "explicit_emission_map_present": false,
+    "explicit_internal_light_propagator_present": false,
+    "explicit_light_to_matter_response_map_present": false,
+    "explicit_observer_readout_operator_present": false,
+    "equivalence_factorization_map_from_existing_feedback_present": false,
+    "selector_sector_projected_block_present": false,
+    "strict_core_kobs_instantiated": false
+  },
+  "supporting_present_but_insufficient_objects": [
+    "existing_kernel_feedback_inside_K_total",
+    "H3_admissible_K_obs_ansatz",
+    "H4_residual_O2_reduction_packet",
+    "R2_internal_feedback_parameter_packet",
+    "QW1950_QW1951_QW1952_QW1956_scalar_proxy_parameters"
+  ],
+  "missing_upstream_objects": [
+    "explicit_emission_map_E_from_M_pair_to_L_int",
+    "explicit_internal_light_propagator_G_light_on_L_int",
+    "explicit_light_to_matter_response_map_R_mat_from_L_int_to_Q_mat",
+    "explicit_observer_readout_operator_O_obs_on_Q_mat",
+    "equivalence_or_factorization_map_from_existing_kernel_feedback_and_R2_parameter_packet_to_H3_operator_chain",
+    "selector_sector_projected_2x2_block_export_on_an_actual_pair"
+  ],
+  "blocking_frontier": {
+    "R2_B1": "parameter_packet_present_but_not_yet_an_operator_level_kobs_factorization",
+    "H14_B1": "existing kernel feedback is real but no explicit equivalence map or selector-sector reduction identifies it with the H-lane operator K_obs",
+    "H15_B1": "existing kernel feedback has no explicit residual-selector-sector reduction or projected selector-block export in the current repository, so K_obs remains a distinct extension hypothesis rather than an identified reformulation of existing kernel feedback",
+    "H29_B1": "H29_B1 := existing wave/retardation/memory proxies only modulate a pre-oriented anisotropic channel and do not by themselves generate an internal strict-core orientation anchor for theta_i",
+    "H4_B1": "no explicit computed projected 2x2 coefficient block A_i = [[a_i,b_i],[b_i,d_i]] has yet been extracted for any actual mode pair"
+  },
+  "computed": {},
+  "required_next_step": "IMPLEMENT_ONE_OPERATOR_CHAIN_OBJECT_OR_ONE_FACTORIZATION_MAP_AND_RERUN_P6_BEFORE_CLAIMING_EXISTING_KERNEL_FEEDBACK_ALREADY_CONTAINS_KOBS",
+  "strict_core_promotion": false,
+  "no_false_pass": true
+}

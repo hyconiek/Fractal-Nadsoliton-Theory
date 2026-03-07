@@ -43,6 +43,10 @@ Primary state report:
   datum. The rerun probe `P5` and updated theorem `N8` show that this shrinks
   the blocker-set by one, but the route still fails before a bridge map or
   beyond-overlay selector-track identification.
+- The `K_obs` hypothesis has now been tested in the same way: `R2` collects the
+  already existing internal light/matter/observer feedback parameters into one
+  packet, while `P6` and `N9` show that this still does not instantiate a
+  selector-facing operator chain from current kernel feedback.
 - This is real progress on the selector problem at extension level, but it does not upgrade strict-core closure and does not change `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 - Details: [`fundamental_action_reconstruction/README.md`](fundamental_action_reconstruction/README.md), [`fundamental_action_reconstruction/generated/pair1_operator_probe_report.json`](fundamental_action_reconstruction/generated/pair1_operator_probe_report.json).
 
@@ -780,6 +784,8 @@ Current status:
 - this moves the theory forward by separating semantic target fields, carrier infrastructure, and axiom-lane witness from an actual strict-core residual-datum bridge, which is still absent,
 - `R1`, `P5`, and `N8` completed as the first constructive reduction of that blocker-set,
 - this moves the theory forward by adding a real packet-ready target-slot export object and proving that the updated route still fails only at the remaining bridge-map and beyond-overlay steps,
+- `R2`, `P6`, and `N9` completed as the sharp current-route test of the user's K_obs intuition,
+- this moves the theory forward by separating already-present internal feedback parameters from the still-missing operator maps and selector-facing projected block needed for a real K_obs,
 - `D1` completed as the current best-supported project conclusion after `N3`,
 - this records the strongest honest interpretation now supported by the evidence: selector closure is not achieved in strict core, and the project must either discharge `T12_B1` directly or accept selector-axiom necessity / strict-core incompleteness as the active design conclusion,
 - `AX1` completed as an explicit axiom-augmented positive lane,

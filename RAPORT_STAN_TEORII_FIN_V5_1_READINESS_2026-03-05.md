@@ -46,6 +46,9 @@ Interpretacja rygorystyczna:
   target-slot export packet dla residual orientation datum,
 - `P5` i `N8` pokazuja, ze po tej konstruktywnej redukcji route nadal nie
   przechodzi do bridge mapy ani beyond-overlay identification,
+- `R2`, `P6` i `N9` robia to samo dla hipotezy `K_obs`:
+  najpierw jawnie zbieraja istniejace parametry internal light/matter/observer,
+  a potem sprawdzaja, czy to juz wystarcza do selector-facing operator chain,
 - nie zmienia to decyzji `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 
 Artefakty:
@@ -1947,6 +1950,23 @@ Frontier po `R1/P5/N8`:
 - `N8_route_result := even after target-slot export, the current route still does not derive a strict-core sigma-int-to-residual-datum bridge`,
 - `P5_missing_objects := strict sigma source / gauge quotient safety / bridge map / beyond-overlay selector-track identification`,
 - `T2_B1 := the bridge theorem is specified but not discharged; target slot is now packet-ready but equivalence/export map remains absent`,
+- nadal brak globalnego theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `R2`, `P6` i `N9`:
+- `R2` tworzy packet-ready internal feedback parameter packet dla hipotezy
+  `light -> matter -> emergent observer -> feedback`,
+- `P6` testuje, czy existing kernel feedback plus ten packet juz instancjuje
+  admissible selector-facing `K_obs`,
+- `N9` daje theorem-level current-route wynik:
+  obecny feedback kernela i obecne parametry observer/light nie wystarczaja
+  jeszcze do selector-facing `K_obs`.
+
+Frontier po `R2/P6/N9`:
+- `R2_result := existing internal feedback parameter packet for K_obs is now present`,
+- `P6_route_result := current kernel-feedback-to-K_obs route does not instantiate a selector-facing operator chain`,
+- `N9_route_result := current kernel feedback does not yet instantiate selector-facing K_obs`,
+- `P6_missing_objects := explicit E / explicit G_light / explicit R_mat / explicit O_obs / factorization map / selector-sector projected block export`,
+- `H29_B1 := old wave-retardation-memory proxies remain preoriented only`,
 - nadal brak globalnego theorem-level/full-closure PASS.
 
 Co realnie zostalo dodane przez `AX1`:

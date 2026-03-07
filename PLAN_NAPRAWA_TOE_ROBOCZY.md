@@ -8702,6 +8702,47 @@ Po tej rundzie:
    - nie traktowac `R1` jako bridge-map discharge.
 
 
+## 527. Current kernel-feedback to K_obs route test after explicit parameter-packet construction (2026-03-07)
+
+1. Cel:
+   - potraktowac serio hipoteze uzytkownika:
+     `K_obs` moze byc juz zawarty w feedbacku, ktory kernel buduje przez
+     `light -> matter -> emergent observer`,
+   - ale sprawdzic to w rygorze operator-level rather than narrative.
+2. Wynik:
+   - `R2` tworzy packet-ready internal feedback parameter packet z `QW-1950`,
+     `QW-1951`, `QW-1952`, `QW-1956`,
+   - `P6` testuje trase:
+     `existing kernel feedback + R2 -> H3 operator chain -> selector-facing block`,
+   - wynik `P6`:
+     `NOT_COMPUTABLE_FROM_CURRENT_KERNEL_FEEDBACK_TO_KOBS_ROUTE`,
+   - `N9` formalizuje theorem-level current-route wynik:
+     obecny feedback kernela i obecne observer/light params nie instancjuja
+     jeszcze selector-facing `K_obs`.
+3. Frontier po kroku:
+   - `R2_result := existing internal feedback parameter packet for K_obs is now present`,
+   - `P6_route_result := current kernel-feedback route does not instantiate selector-facing K_obs`,
+   - `N9_route_result := current kernel feedback does not yet instantiate selector-facing K_obs`,
+   - `P6_missing_objects := explicit E / explicit G_light / explicit R_mat / explicit O_obs / factorization map / selector-sector projected block export`,
+   - `H29_B1 := old retardation-memory proxies remain preoriented only and do not generate an internal anchor`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/R2_EXISTING_INTERNAL_FEEDBACK_PARAMETER_PACKET_FOR_KOBS.md`,
+   - dodano `fundamental_action_reconstruction/r2_existing_internal_feedback_parameter_packet_for_kobs.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r2_existing_internal_feedback_parameter_packet_for_kobs.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r2_existing_internal_feedback_parameter_packet_for_kobs_summary.json`,
+   - dodano `fundamental_action_reconstruction/P6_EXISTING_KERNEL_FEEDBACK_TO_KOBS_OPERATOR_CHAIN_PROBE.md`,
+   - dodano `fundamental_action_reconstruction/p6_existing_kernel_feedback_to_kobs_operator_chain_probe.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p6_existing_kernel_feedback_to_kobs_operator_chain_probe.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p6_existing_kernel_feedback_to_kobs_operator_chain_probe_summary.json`,
+   - dodano `fundamental_action_reconstruction/N9_CURRENT_KERNEL_FEEDBACK_DOES_NOT_YET_INSTANTIATE_SELECTOR_FACING_KOBS_THEOREM.md`,
+   - dodano `fundamental_action_reconstruction/n9_current_kernel_feedback_does_not_yet_instantiate_selector_facing_kobs_theorem.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n9_current_kernel_feedback_does_not_yet_instantiate_selector_facing_kobs_theorem_summary.json`.
+5. Nastepny poprawny ruch:
+   - albo dodac jeden z missing operator-chain objects `E/G_light/R_mat/O_obs`,
+   - albo zbudowac factorization map z existing kernel feedback do `H3`,
+   - nie promowac samego packetu parametrow `R2` do selector-facing `K_obs`.
+
+
 - `H29`: stare proxy `retard_phase/tau/gain` moduluja preorientowany kanal, ale nie dostarczaja same wewnetrznego strict-core anchoru orientacji.
 - `H30`: `orientation_psi0 = mod(0.5*phi + 0.8*omega, 2*pi)` jest deterministycznym kandydatem anchoru z kernel invariants, ale nie jest jeszcze strict-core eksportem `theta_i`.
 - `H31`: `psi0` ma formalny embedding do `pair1=(c_1,s_1)`, ale nadal nie ma dowodu, ze jest to strict-core redukcja selektora, a nie tylko wybor wspolrzednych.

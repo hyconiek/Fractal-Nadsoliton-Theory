@@ -1,0 +1,65 @@
+{
+  "step": "N9",
+  "status": "N9_DISCHARGED_CURRENT_KERNEL_FEEDBACK_DOES_NOT_YET_INSTANTIATE_SELECTOR_FACING_KOBS_NO_FALSE_PASS",
+  "goal": "Discharge a current-route theorem: existing kernel feedback does not yet instantiate a selector-facing K_obs operator.",
+  "scope": "current_kernel_feedback_to_kobs_route_only",
+  "checks": [
+    {
+      "id": "p6_route_negative",
+      "actual": "NOT_COMPUTABLE_FROM_CURRENT_KERNEL_FEEDBACK_TO_KOBS_ROUTE",
+      "expected": "NOT_COMPUTABLE_FROM_CURRENT_KERNEL_FEEDBACK_TO_KOBS_ROUTE",
+      "pass": true,
+      "meaning": "the route still does not instantiate selector-facing K_obs"
+    },
+    {
+      "id": "r2_parameter_packet_present",
+      "actual": "existing_internal_feedback_parameter_packet_present_but_not_yet_an_operator_level_kobs_factorization",
+      "expected": "existing_internal_feedback_parameter_packet_present_but_not_yet_an_operator_level_kobs_factorization",
+      "pass": true,
+      "meaning": "internal feedback parameters are now collected in one packet"
+    },
+    {
+      "id": "h14_non_identification_active",
+      "actual": "PASS_PARTIAL_EXISTING_FEEDBACK_RECOGNIZED_BUT_NOT_IDENTIFIED_WITH_KOBS",
+      "expected": "PASS_PARTIAL_EXISTING_FEEDBACK_RECOGNIZED_BUT_NOT_IDENTIFIED_WITH_KOBS",
+      "pass": true,
+      "meaning": "existing kernel feedback is still not identified with K_obs"
+    },
+    {
+      "id": "h15_no_selector_sector_export",
+      "actual": "existing_feedback_not_identified_with_kobs",
+      "expected": "existing_feedback_not_identified_with_kobs",
+      "pass": true,
+      "meaning": "existing feedback is still not exported to the selector sector"
+    },
+    {
+      "id": "h29_preoriented_proxy_only",
+      "actual": "PASS_PARTIAL_PREORIENTED_PROXY_REDUCTION_ONLY",
+      "expected": "PASS_PARTIAL_PREORIENTED_PROXY_REDUCTION_ONLY",
+      "pass": true,
+      "meaning": "old proxies remain preoriented only and do not generate an internal anchor"
+    }
+  ],
+  "theorem_result": {
+    "discharged": true,
+    "existing_feedback_parameters_present": true,
+    "selector_facing_kobs_instantiated": false,
+    "parameter_packet_is_not_operator_factorization": true,
+    "preoriented_proxies_are_not_internal_anchor_generation": true
+  },
+  "missing_structure_classes": [
+    "explicit_emission_map_E",
+    "explicit_internal_light_propagator_G_light",
+    "explicit_light_to_matter_response_map_R_mat",
+    "explicit_observer_readout_operator_O_obs",
+    "equivalence_or_factorization_map_from_existing_feedback_to_H3_chain",
+    "selector_sector_projected_block_export"
+  ],
+  "hard_limits": [
+    "no global impossibility theorem",
+    "no claim that future kernel-feedback factorization into K_obs is impossible",
+    "no claim that QW-2191 is discharged",
+    "no claim that ToE is closed"
+  ],
+  "required_next_step": "ADD_ONE_OPERATOR_CHAIN_OBJECT_OR_FACTORIZATION_MAP_AND_RERUN_P6_BEFORE_PROMOTING_KOBS_BEYOND_LIVE_EXTENSION_HYPOTHESIS"
+}
