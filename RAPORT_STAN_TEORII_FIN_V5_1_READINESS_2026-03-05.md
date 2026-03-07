@@ -60,6 +60,10 @@ Interpretacja rygorystyczna:
   materializuja jawny current-pair `R_mat`, redukuja blocker-set o kolejny
   jeden obiekt i utrzymuja negatywny current-route wynik bez promowania samego
   packetu `R_mat` do factorization map albo selector-facing projected block,
+- `R6`, `P10` i `N13` robia czwarty konstruktywny krok na tej samej trasie:
+  materializuja jawny current-pair `O_obs`, eksportuja pierwszy pelny
+  current-pair `H3` projected block i utrzymuja negatywny wynik tylko na
+  poziomie brakujacej equivalence/factorization map do existing kernel feedback,
 - nie zmienia to decyzji `RELEASE_5_1_FULL_CLOSURE_NOT_READY`.
 
 Artefakty:
@@ -2032,6 +2036,28 @@ Frontier po `R5/P9/N12`:
 - `N12_route_result := current kernel feedback still does not instantiate selector-facing K_obs even after explicit E, G_light and R_mat packets`,
 - `P9_resolved_from_P8 := explicit R_mat`,
 - `P9_missing_objects := explicit O_obs / factorization map / full H3 selector-sector projected block export`,
+- nadal brak globalnego theorem-level/full-closure PASS.
+
+Co realnie zostalo dodane przez `R6`, `P10` i `N13`:
+- `R6` tworzy pierwszy jawny current-pair observer-readout packet
+  `O_obs^(1) : Q_1 -> Q_1`,
+- `R6` uzywa tylko juz wyeksportowanych danych
+  `observer_feedback_gain`, `short_memory_fraction`,
+  `observer_gain_plus`, `observer_gain_minus`,
+- `P10` testuje, czy existing kernel feedback plus `R2`, `E`, `G_light`,
+  `R_mat` i `O_obs` daje juz jawny current-pair `H3` block i czy ten block
+  jest juz zidentyfikowany z existing kernel feedback,
+- `N13` daje theorem-level current-route wynik:
+  nawet po dodaniu jawnych packetow `E`, `G_light`, `R_mat` i `O_obs`
+  obecny route nadal nie identyfikuje existing kernel feedback z
+  selector-facing `K_obs`.
+
+Frontier po `R6/P10/N13`:
+- `R6_result := explicit current-pair observer-readout packet is now present`,
+- `P10_route_result := current-pair H3 block is computable but not identified with existing kernel feedback`,
+- `N13_route_result := current kernel feedback is still not identified with selector-facing K_obs even after explicit current-pair E/G/R/O chain export`,
+- `P10_resolved_from_P9 := explicit O_obs / full H3 selector-sector projected block export`,
+- `P10_missing_objects := equivalence or factorization map from existing kernel feedback to the explicit H3 chain`,
 - nadal brak globalnego theorem-level/full-closure PASS.
 
 Co realnie zostalo dodane przez `AX1`:

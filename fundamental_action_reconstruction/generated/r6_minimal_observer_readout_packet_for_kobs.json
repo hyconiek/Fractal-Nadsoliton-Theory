@@ -1,0 +1,159 @@
+{
+  "stage": "R6",
+  "operator_scope": "explicit_observer_readout_packet",
+  "current_test_carrier_identification": {
+    "Q_mat_current": "Q_1 = span{q_h, q_l}",
+    "O_em_current": "Q_1 = span{q_h, q_l}"
+  },
+  "domain_basis_order": [
+    "q_h",
+    "q_l"
+  ],
+  "codomain_basis_order": [
+    "q_h",
+    "q_l"
+  ],
+  "basis_role": {
+    "q_h": "first current matter-response channel reused as first observer-readout channel",
+    "q_l": "second current matter-response channel reused as second observer-readout channel"
+  },
+  "source_reports": [
+    "H3",
+    "H8",
+    "QW-1950",
+    "QW-1956",
+    "R2",
+    "P9"
+  ],
+  "input_scalars": {
+    "observer_feedback_gain": 0.30535361648380127,
+    "short_memory_fraction": 0.9796753355004225,
+    "observer_gain_plus": 0.5175351695225925,
+    "observer_gain_minus": 0.48246483047740746
+  },
+  "operator_formula": "O_obs^(1)=observer_feedback_gain*short_memory_fraction*diag(observer_gain_plus,observer_gain_minus)",
+  "construction_rule": {
+    "type": "minimal_current_pair_packet_rule",
+    "rule": "the current observer-readout packet uses the already exported feedback amplitude and short-memory compression from QW-1950, distributed across the ordered plus/minus readout gains on the current two-channel matter carrier",
+    "channel_assignment_status": "ordered_two_channel_packet_only_not_a_global_heavy_light_to_plus_minus_identification"
+  },
+  "matrix": [
+    [
+      0.15481930382580833,
+      0.0
+    ],
+    [
+      0.0,
+      0.144328102849227
+    ]
+  ],
+  "channel_readout_strengths": {
+    "sigma_plus": 0.15481930382580833,
+    "sigma_minus": 0.144328102849227,
+    "plus_to_minus_ratio": 1.0726899388925037
+  },
+  "diagonal_in_current_bases": true,
+  "uses_orientation_anchor_in_map": false,
+  "uses_observer_phase_entry_rule": false,
+  "unused_observer_phase_parameter": {
+    "observer_feedback_theta": 0.39599544026612643,
+    "reason": "the repo exports no operator-level rule mapping observer_feedback_theta into entries of O_obs on Q_1 without introducing extra unvalidated structure"
+  },
+  "unused_observer_timescale_parameter": {
+    "observer_tau": 9.83740268400338,
+    "reason": "the repo exports observer_tau only as a memory-scale proxy and does not yet provide an operator-level entry rule from that scale to Q_1 matrix entries"
+  },
+  "factorization_status": "not_identified_with_existing_kernel_feedback",
+  "pair_projection_status": "absent",
+  "selector_sector_projected_block_present": false,
+  "current_pair_scope_only": true,
+  "consistency_checks": [
+    {
+      "id": "p9_originally_missing_o_obs",
+      "actual": true,
+      "expected": true,
+      "meaning": "P9 indeed localized O_obs as one remaining finite missing object",
+      "consistent": true
+    },
+    {
+      "id": "observer_loop_gain_threshold_met_q1950",
+      "actual": 0.08229749282021984,
+      "expected": 0.02,
+      "comparison": ">=",
+      "meaning": "the internal observer loop is active enough to justify a nonzero readout packet",
+      "margin": 0.06229749282021983,
+      "consistent": true
+    },
+    {
+      "id": "observer_state_stability_threshold_met_q1950",
+      "actual": 0.003880510362786175,
+      "expected": 0.4,
+      "comparison": "<=",
+      "meaning": "the internal observer channel is stable enough to justify a bounded finite readout packet",
+      "margin": 0.39611948963721383,
+      "consistent": true
+    },
+    {
+      "id": "observer_loop_gain_threshold_met_q1956",
+      "actual": 0.09941413208304714,
+      "expected": 0.02,
+      "comparison": ">=",
+      "meaning": "the repaired two-state observer lane remains active enough to support channelized readout",
+      "margin": 0.07941413208304714,
+      "consistent": true
+    },
+    {
+      "id": "observer_state_stability_threshold_met_q1956",
+      "actual": 0.03576015028179289,
+      "expected": 0.4,
+      "comparison": "<=",
+      "meaning": "the repaired two-state observer lane remains stable enough for a bounded finite packet",
+      "margin": 0.3642398497182071,
+      "consistent": true
+    },
+    {
+      "id": "r2_observer_feedback_gain_match",
+      "actual": 0.30535361648380127,
+      "expected": 0.30535361648380127,
+      "tolerance": 1e-12,
+      "meaning": "R2 and QW-1950 export the same observer feedback amplitude",
+      "abs_delta": 0.0,
+      "consistent": true
+    },
+    {
+      "id": "r2_observer_gain_plus_match",
+      "actual": 0.5175351695225925,
+      "expected": 0.5175351695225925,
+      "tolerance": 1e-12,
+      "meaning": "R2 and QW-1950 export the same plus-channel readout gain",
+      "abs_delta": 0.0,
+      "consistent": true
+    },
+    {
+      "id": "r2_observer_gain_minus_match",
+      "actual": 0.48246483047740746,
+      "expected": 0.48246483047740746,
+      "tolerance": 1e-12,
+      "meaning": "R2 and QW-1950 export the same minus-channel readout gain",
+      "abs_delta": 0.0,
+      "consistent": true
+    },
+    {
+      "id": "h3_ansatz_contains_o_obs_slot",
+      "actual": true,
+      "expected": true,
+      "meaning": "the H3 ansatz explicitly requires an O_obs slot",
+      "consistent": true
+    },
+    {
+      "id": "h8_route_b_contains_o_obs_slot",
+      "actual": true,
+      "expected": true,
+      "meaning": "the H8 factored route explicitly requires a finite O_obs component map",
+      "consistent": true
+    }
+  ],
+  "classification": "explicit_observer_readout_packet_present_but_current_pair_scoped_and_not_yet_factorized_from_existing_kernel_feedback",
+  "frontier": "R6_B1",
+  "no_false_pass": true
+}

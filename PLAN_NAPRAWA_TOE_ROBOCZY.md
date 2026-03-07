@@ -8882,6 +8882,57 @@ Po tej rundzie:
    - nie promowac samego `R_mat` packet do selector-facing `K_obs`.
 
 
+## 531. Explicit current-pair O_obs packet and full current-pair H3 block export (2026-03-07)
+
+1. Cel:
+   - sprobowac zbudowac czwarty realny operator-chain object po `R5`,
+   - wybrac najwezszy uczciwy kandydat: `O_obs`,
+   - uzyc tylko juz wyeksportowanych danych observer-loop z `QW-1950/R2`,
+   - sprawdzic, czy po tym kroku pelny current-pair `H3` projected block staje
+     sie jawnie obliczalny,
+   - nie promowac tego bloku do existing-kernel-feedback factorization.
+2. Wynik:
+   - `R6` tworzy explicit current-pair observer-readout packet
+     `O_obs^(1) : Q_1 -> Q_1`,
+   - macierz:
+     `diag(0.15481930382580833, 0.144328102849227)`,
+   - operator jest policzony tylko z
+     `observer_feedback_gain`, `short_memory_fraction`,
+     `observer_gain_plus`, `observer_gain_minus`,
+   - `P10` rerunuje trase:
+     `existing kernel feedback + R2 + E + G_light + R_mat + O_obs -> explicit current-pair H3 block -> identification with K_obs`,
+   - wynik `P10`:
+     `CURRENT_PAIR_H3_BLOCK_COMPUTABLE_BUT_NOT_IDENTIFIED_WITH_EXISTING_KERNEL_FEEDBACK`,
+   - `P10` eksportuje pelny current-pair block
+     `[[0.0010451746216248105, -0.0003874996937249066], [-0.0003874996937249066, 0.00014855680805613084]]`,
+   - `N13` formalizuje theorem-level updated-route wynik:
+     nawet po dodaniu jawnego `O_obs` i pelnego current-pair bloku obecna
+     trasa nadal nie identyfikuje existing kernel feedback z selector-facing
+     `K_obs`.
+3. Frontier po kroku:
+   - `R6_result := explicit current-pair observer-readout packet is now present`,
+   - `P10_resolved_from_P9 := explicit_observer_readout_operator_O_obs_on_Q_mat / full_H3_selector_sector_projected_2x2_block_export_on_an_actual_pair`,
+   - `P10_missing_objects := equivalence_or_factorization_map_from_existing_kernel_feedback_and_R2_parameter_packet_to_H3_operator_chain`,
+   - `N13_route_result := current kernel feedback still does not identify with selector-facing K_obs after explicit current-pair chain export`,
+   - `R6_boundary := explicit O_obs packet is still only current-pair scoped and not yet a factorization of current kernel feedback`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/R6_MINIMAL_OBSERVER_READOUT_PACKET_FOR_KOBS.md`,
+   - dodano `fundamental_action_reconstruction/r6_minimal_observer_readout_packet_for_kobs.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r6_minimal_observer_readout_packet_for_kobs.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/r6_minimal_observer_readout_packet_for_kobs_summary.json`,
+   - dodano `fundamental_action_reconstruction/P10_EXISTING_KERNEL_FEEDBACK_TO_KOBS_RERUN_AFTER_EXPLICIT_CURRENT_PAIR_CHAIN.md`,
+   - dodano `fundamental_action_reconstruction/p10_existing_kernel_feedback_to_kobs_rerun_after_explicit_current_pair_chain.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p10_existing_kernel_feedback_to_kobs_rerun_after_explicit_current_pair_chain.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p10_existing_kernel_feedback_to_kobs_rerun_after_explicit_current_pair_chain_summary.json`,
+   - dodano `fundamental_action_reconstruction/N13_CURRENT_KERNEL_FEEDBACK_KOBS_NONIDENTIFICATION_AFTER_EXPLICIT_CURRENT_PAIR_CHAIN_THEOREM.md`,
+   - dodano `fundamental_action_reconstruction/n13_current_kernel_feedback_kobs_nonidentification_after_explicit_current_pair_chain_theorem.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n13_current_kernel_feedback_kobs_nonidentification_after_explicit_current_pair_chain_theorem_summary.json`.
+5. Nastepny poprawny ruch:
+   - zbudowac jedyny pozostaly missing object:
+     equivalence/factorization map `existing kernel feedback -> explicit H3 chain`,
+   - nie promowac samego jawnego current-pair bloku do tozsamosci z existing kernel feedback.
+
+
 - `H29`: stare proxy `retard_phase/tau/gain` moduluja preorientowany kanal, ale nie dostarczaja same wewnetrznego strict-core anchoru orientacji.
 - `H30`: `orientation_psi0 = mod(0.5*phi + 0.8*omega, 2*pi)` jest deterministycznym kandydatem anchoru z kernel invariants, ale nie jest jeszcze strict-core eksportem `theta_i`.
 - `H31`: `psi0` ma formalny embedding do `pair1=(c_1,s_1)`, ale nadal nie ma dowodu, ze jest to strict-core redukcja selektora, a nie tylko wybor wspolrzednych.
