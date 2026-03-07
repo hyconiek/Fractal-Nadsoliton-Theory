@@ -9178,6 +9178,34 @@ Po tej rundzie:
    - sprobowac zmaterializowac concrete existing-feedback Psi-sector block i jego coefficient export,
    - albo utrzymac legacy-side export lane negatywny i nie twierdzic, ze matrix on `pair1` juz istnieje.
 
+523. `P17/N20` host-to-concrete-Psi-block identification po `P16/N19`.
+1. Co zostalo zrobione:
+   - `P17` wykonuje bezposredni `compute-or-fail` probe na pierwszym upstream
+     blockerze z `P16`:
+     `host_to_concrete_Psi_sector_quadratic_block_identification_for_the_existing_kernel_feedback_host_operator`,
+   - `N20` formalizuje theorem-level wynik dla tej jeszcze wezszej trasy.
+2. Wynik:
+   - `P17` zwraca:
+     `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_TO_CONCRETE_PSI_BLOCK_IDENTIFICATION_ROUTE`,
+   - `N20` utrzymuje route negatywny bez falszywego PASS.
+3. Frontier po kroku:
+   - `P17_result := deterministic control index-set and control transport schema are present, but no host-to-concrete-Psi-block identification exists`,
+   - `P17_missing_objects := strict physical canonicalization of the control transport from mode basis to canonical Psi basis for selector-relevant block extraction`,
+   - `P17_missing_objects += explicit assembled and coefficient-filled concrete Psi-sector quadratic submatrix on a chosen transported index-set`,
+   - `P17_missing_objects += explicit host-to-submatrix matching witness identifying the QW-2186 certified host operator with that concrete block`,
+   - `N20_route_result := current repo still does not identify the existing-feedback host with any concrete Psi-sector block`.
+4. Artefakty:
+   - dodano `fundamental_action_reconstruction/P17_EXISTING_KERNEL_FEEDBACK_HOST_TO_CONCRETE_PSI_BLOCK_IDENTIFICATION_PROBE.md`,
+   - dodano `fundamental_action_reconstruction/p17_existing_kernel_feedback_host_to_concrete_psi_block_identification_probe.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p17_existing_kernel_feedback_host_to_concrete_psi_block_identification_probe.json`,
+   - wygenerowano `fundamental_action_reconstruction/generated/p17_existing_kernel_feedback_host_to_concrete_psi_block_identification_probe_summary.json`,
+   - dodano `fundamental_action_reconstruction/N20_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_TO_CONCRETE_PSI_BLOCK_IDENTIFICATION_NONDERIVATION_THEOREM.md`,
+   - dodano `fundamental_action_reconstruction/n20_current_existing_kernel_feedback_host_to_concrete_psi_block_identification_nonderivation_theorem.py`,
+   - wygenerowano `fundamental_action_reconstruction/generated/n20_current_existing_kernel_feedback_host_to_concrete_psi_block_identification_nonderivation_theorem_summary.json`.
+5. Nastepny poprawny ruch:
+   - sprobowac zmaterializowac physical canonicalization + concrete transported Psi-sector submatrix,
+   - albo utrzymac host-identification lane negatywny i nie twierdzic, ze host `QW-2186` ma juz concrete canonical block match.
+
 
 - `H29`: stare proxy `retard_phase/tau/gain` moduluja preorientowany kanal, ale nie dostarczaja same wewnetrznego strict-core anchoru orientacji.
 - `H30`: `orientation_psi0 = mod(0.5*phi + 0.8*omega, 2*pi)` jest deterministycznym kandydatem anchoru z kernel invariants, ale nie jest jeszcze strict-core eksportem `theta_i`.

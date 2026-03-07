@@ -484,6 +484,27 @@ Aktualizacja `N19`:
 - to jest dalszy realny progres redukcyjny po stronie lewego obiektu, nadal bez
   factorization discharge i bez falszywego PASS.
 
+Aktualizacja `P17`:
+- wykonano compute-or-fail probe bezposrednio na pierwszym upstream blockerze z
+  `P16`, czyli na
+  `host -> concrete Psi-sector block identification`,
+- wynik:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_TO_CONCRETE_PSI_BLOCK_IDENTIFICATION_ROUTE`,
+- probe rozbija ten brak na trzy jeszcze wezsze classes:
+  physical canonicalization transportu `mode basis -> Psi basis`,
+  explicit assembled coefficient-filled concrete `Psi-sector` submatrix oraz
+  host-to-submatrix matching witness,
+- probe utrzymuje jawnie, ze same `C13/C14/C12/C20` daja tylko schema-level
+  route, nie gotowy host match.
+
+Aktualizacja `N20`:
+- wykonano theorem-level wynik dla tej najbardziej wezszej trasy host-side,
+- `P16/P17/C10/C11/C12/C13/C14/C20` razem wymuszaja wniosek:
+  nawet po control index-set declaration i control transport schema repo nadal
+  nie identyfikuje hosta `QW-2186` z concrete `Psi-sector` blockiem,
+- to jest dalszy realny progres redukcyjny na samym wejsciu do legacy-side
+  operator export lane, nadal bez falszywego PASS.
+
 ## Ontologiczna wskazowka programu
 
 Program jest prowadzony pod robocza ontologia:

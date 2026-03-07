@@ -2194,6 +2194,28 @@ Frontier po `P16/N19`:
 - `N19_route_result := current repo still does not export a coefficient-filled legacy-side operator object on pair1 from existing kernel feedback`,
 - nadal brak globalnego theorem-level/full-closure PASS.
 
+Co realnie zostalo dodane przez `P17` i `N20`:
+- `P17` testuje juz bezposrednio pierwszy upstream blocker z `P16`, czyli
+  `host -> concrete Psi-sector block identification`,
+- wynik `P17`:
+  `NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_TO_CONCRETE_PSI_BLOCK_IDENTIFICATION_ROUTE`,
+- `P17` rozbija ten brak na trzy jeszcze wezsze missing classes:
+  physical canonicalization of the control transport, explicit assembled
+  coefficient-filled concrete `Psi-sector` submatrix oraz explicit
+  host-to-submatrix matching witness,
+- `N20` daje theorem-level updated-route wynik:
+  nawet po `C13/C14` repo nadal nie identyfikuje hosta `QW-2186` z concrete
+  `Psi-sector` blockiem i route zatrzymuje sie przed canonicalized transport +
+  concrete submatrix + matching witness.
+
+Frontier po `P17/N20`:
+- `P17_route_result := current host-to-concrete-Psi-block identification route is not computable`,
+- `P17_missing_objects := strict physical canonicalization of the control transport from mode basis to canonical Psi basis for selector-relevant block extraction`,
+- `P17_missing_objects += explicit assembled and coefficient-filled concrete Psi-sector quadratic submatrix on a chosen transported index-set`,
+- `P17_missing_objects += explicit host-to-submatrix matching witness identifying the QW-2186 certified host operator with that block`,
+- `N20_route_result := current repo still does not identify existing kernel feedback host with a concrete Psi-sector block`,
+- nadal brak globalnego theorem-level/full-closure PASS.
+
 Co realnie zostalo dodane przez `AX1`:
 - otwarto jawny pozytywny lane `axiom-augmented`,
 - pod minimalnym aksjomacie selekcji z `QW-2192/QW-2193` uzyskano packet-ready actual:
