@@ -1,0 +1,66 @@
+{
+  "stage": "F93",
+  "lane": "first_emergent_observer_limit_readout_operator_only",
+  "goal": "export_one_downstream_observer_limit_readout_map_from_Y_obs_limit_v1_without_claiming_actual_observer",
+  "status": "F93_EXECUTED_FIRST_EMERGENT_OBSERVER_LIMIT_READOUT_OPERATOR_PACKET_NO_FALSE_PASS",
+  "source_object": "S_preLM_strict_core_source_object_v1",
+  "coarse_graining_input": "C_obs_limit_preLM_v1",
+  "observer_limit_readout_operator": {
+    "object": "L_obs_limit_preLM_v1",
+    "domain_basis": [
+      "y_bias",
+      "y_total"
+    ],
+    "codomain_basis": [
+      "z_commit",
+      "z_residual"
+    ],
+    "matrix": [
+      [
+        1.0,
+        1.0
+      ],
+      [
+        -1.0,
+        1.0
+      ]
+    ]
+  },
+  "observer_limit_readout_properties": {
+    "derived_only_from_coarse_graining": true,
+    "strict_core_only": true,
+    "observer_limit_only": true,
+    "actual_emergent_observer_constructed": false,
+    "kernel_split_safe": true,
+    "uses_imported_psi0": false,
+    "uses_observer_information": false,
+    "uses_external_selector_control": false,
+    "observer_information_deficit_is_downstream_symptom": true
+  },
+  "source_observer_limit_readout": {
+    "input_basis": [
+      "y_bias",
+      "y_total"
+    ],
+    "input_vector": [
+      0.7024644765408796,
+      0.7024644765408794
+    ],
+    "output_basis": [
+      "z_commit",
+      "z_residual"
+    ],
+    "output_vector": [
+      1.404928953081759,
+      -2.220446049250313e-16
+    ],
+    "z_commit_v1": 1.404928953081759,
+    "z_residual_v1": -2.220446049250313e-16,
+    "positive_commit": true,
+    "vanishing_residual": true
+  },
+  "actual_observer_limit_readout_constructed": true,
+  "emergent_observer_constructed": false,
+  "strict_core_selector_closure": false,
+  "no_false_pass": true
+}

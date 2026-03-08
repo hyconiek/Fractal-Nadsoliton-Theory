@@ -3023,6 +3023,92 @@ Aktualizacja `N181`:
   promocji do `constructed source object`, `S_sel_int`, `E_orient` ani
   closure.
 
+Aktualizacja `N182`:
+- `F76` i `P163` przechodza pierwszy raz z samego targetu do jawnej additive
+  construction attempt instancji:
+  `S_preLM_additive_candidate_v1 := exp(A_up) u_T`,
+- na carrierze `V_topo ⊕ L_int ⊕ M_int` dostajemy zamknieta forme
+  `u_T + cos(phi) u_L + (cos(phi)/4) u_M`,
+- observer pozostaje poza carrierem, `K_strict` pozostaje tylko operational
+  control, a caly ruch pozostaje `kernel_split_safe`,
+- `N182` utrzymuje ten obiekt jawnie tylko na poziomie
+  `additive construction attempt`, bez promocji do `constructed source object`,
+  `S_sel_int`, `E_orient` ani closure.
+
+Aktualizacja `N183`:
+- `F77` i `P164` zamrazaja teraz pierwszy jawny
+  `admissibility-upgrade target` nad tym addytywnym obiektem:
+  `upgrade_to_admissible_source_v1(S_preLM_additive_candidate_v1)`,
+- kontrakt admissibility jest jawnie odziedziczony z `F34`, ale osadzony juz
+  na nowym preobserver addytywnym obiekcie, a nie na dawnym seed packaging,
+- `N183` utrzymuje ten ruch na poziomie `admissibility-upgrade target`, bez
+  rozstrzygania zadnej klauzuli admissibility i bez promocji do
+  `admissible S_sel_int`, `E_orient` ani closure.
+
+Aktualizacja `N184`:
+- `F78` i `P165` redukuja admissibility-upgrade target do pierwszej klauzuli:
+  `genuinely_new_strict_core_source_object_required`,
+- to znaczy, ze nastepny uczciwy ruch nie dotyczy calego pakietu admissibility,
+  tylko wyłącznie pytania, czy `S_preLM_additive_candidate_v1` jest juz
+  rzeczywiscie nowym strict-core source object,
+- `N184` utrzymuje ten ruch jawnie na poziomie `first-clause target`, bez
+  twierdzenia, ze klauzula jest juz spelniona.
+
+Aktualizacja `N185`:
+- `P166` testuje juz bezposrednio te pierwsza klauzule dla
+  `S_preLM_additive_candidate_v1`,
+- wynik jest current-state negative: repo nie pokazuje jeszcze, ze ten obiekt
+  jest juz `genuinely_new_strict_core_source_object`,
+- `N185` utrzymuje to theorem-level bez cofania ruchu konstrukcyjnego:
+  nowy obiekt jako `additive construction attempt` pozostaje, ale pierwsza
+  klauzula admissibility nie jest jeszcze discharged.
+
+Aktualizacja `N186`:
+- `F79` i `P167` daja pierwszy jawny `nonreduction witness`:
+  `S_preLM_additive_candidate_v1` nie redukuje sie do
+  `S_preLM_target_packaged_realization_v1(d_*=1)` w tej samej bazie,
+- to usuwa najprostsza lekture, ze nowy obiekt jest tylko bezposrednim tuple
+  packaging z `F75`,
+- `N186` utrzymuje jednak granice: to nadal nie wystarcza do spelnienia
+  pierwszej klauzuli admissibility ani do promocji do `constructed source object`.
+
+Aktualizacja `N187`:
+- po `N185 + N186` pierwszy clause blocker zostal juz zwężony:
+  najprostsza redukcja do `F75` packagingu odpada,
+- pozostaje jeden pakiet brakow:
+  `realized_constructed_source_object_export_package`,
+- `N187` utrzymuje to theorem-level bez promocji do spelnionej klauzuli.
+
+Aktualizacja `N188`:
+- `F81` eksportuje teraz jawny strict-core object
+  `S_preLM_strict_core_source_object_v1`
+  ponad `S_preLM_additive_candidate_v1`,
+- `P169` rerunuje pierwsza klauzule juz nie dla future-only attempt, tylko dla
+  tego wyeksportowanego obiektu,
+- `N188` daje pierwszy rzeczywiscie dodatni wynik na nowym lane:
+  pierwsza klauzula
+  `genuinely_new_strict_core_source_object_required`
+  jest discharged,
+  ale tylko ta jedna klauzula; pelna admissibility nadal nie jest rozwiazana.
+
+Aktualizacja `N189`:
+- `F82` zamraza teraz minimalny typed carrier dla
+  `S_preLM_strict_core_source_object_v1`:
+  `V_topo ⊕ L_int ⊕ M_int` z basis `u_T,u_L,u_M`,
+- `P170` sprawdza juz tylko druga klauzule:
+  `carrier_typed_enough_for_later_export`,
+- `N189` daje drugi dodatni wynik:
+  obiekt jest juz typed enough dla pozniejszego `E_orient`,
+  ale `E_orient` samo nadal nie jest wyeksportowane.
+
+Aktualizacja `N190`:
+- `F83` zamraza jawnie, ze `S_preLM_strict_core_source_object_v1`
+  pozostaje `source_seed_only`,
+- `P171` sprawdza juz tylko trzecia klauzule:
+  brak ukrytego discharge `E_orient`, `B_sel`, `R_sel`, `O_sel`,
+- `N190` daje trzeci dodatni wynik:
+  obiekt pozostaje czystym source-seedem, bez downstream laundering.
+
 ## Ontologiczna wskazowka programu
 
 Program jest prowadzony pod robocza ontologia:
@@ -3812,3 +3898,18 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `pair1_operator_probe.py`
 - `pair1_operator_probe_config.json`
 - `manifest_action_reconstruction.json`
+- `N196`: `S_preLM_strict_core_source_object_v1` eksportuje pierwszy admissible preobserver orientation datum `E_orient_preLM_v1` na `span{u_T, u_L}`; export jest source-derived, strict-core only, selector-bearing bez `psi0`, quotient-safe i bridge-ready dla przyszlego `B_sel`, ale nadal bez samego `B_sel/R_sel/O_sel`, bez `QW-2191` discharge i bez closure.
+- `N197`: z `E_orient_preLM_v1` repo eksportuje juz pierwszy rzeczywisty preobserver selector bridge operator `B_sel_preLM_v1` na carrierze `V_topo ⊕ L_int ⊕ M_int`; operator jest symetryczny, bezsladowy na plaszczyznie topological-light, daje jawny signed selector decomposition `P_sel_plus_v1/P_sel_minus_v1` i dodatni source-alignment witness, ale nadal bez `R_sel`, `O_sel`, `QW-2191` discharge i bez closure.
+- `N198`: z `B_sel_preLM_v1` repo eksportuje juz pierwszy rzeczywisty preobserver selector reduction operator `R_sel_preLM_v1 : V_topo ⊕ L_int ⊕ M_int -> Q_sel_v1`; redukcja daje dodatni `q_+` channel i zanikajacy `q_-` channel dla `S_preLM_strict_core_source_object_v1`, pozostaje strict-core only i preobserver only, ale nadal bez `O_sel`, `QW-2191` discharge i bez closure.
+- `N199`: z `R_sel_preLM_v1` repo eksportuje juz pierwszy rzeczywisty preobserver selector output operator `O_sel_preLM_v1 : Q_sel_v1 -> Q_out_v1`; output zachowuje dodatni `o_+` channel i zanikajacy `o_-` channel dla `S_preLM_strict_core_source_object_v1`, pozostaje strict-core only i preobserver only, ale nadal bez actual emergent observer, bez `QW-2191` discharge i bez closure.
+- `N200`: z `O_sel_preLM_v1` repo eksportuje juz pierwszy rzeczywisty preobserver-to-emergent-observer coarse-graining operator `C_obs_limit_preLM_v1 : Q_out_v1 -> Y_obs_limit_v1`; wynik daje dodatni `y_bias` i dodatni `y_total`, a observer information deficit pozostaje downstream symptom, ale nadal bez actual emergent observer, bez `QW-2191` discharge i bez closure.
+- `N201`: z `C_obs_limit_preLM_v1` repo eksportuje juz pierwszy rzeczywisty observer-limit readout operator `L_obs_limit_preLM_v1 : Y_obs_limit_v1 -> Z_obs_limit_v1`; wynik daje dodatni `z_commit` i zanikajacy `z_residual`, a observer information deficit pozostaje downstream symptom, ale nadal bez actual emergent observer, bez `QW-2191` discharge i bez closure.
+- `N202`: z `L_obs_limit_preLM_v1` repo eksportuje juz pierwszy rzeczywisty emergent-observer construction candidate operator `G_obs_candidate_preLM_v1 : Z_obs_limit_v1 -> W_obs_candidate_v1`; wynik daje dodatni `w_commit` i zanikajacy `w_residual`, a observer information deficit pozostaje downstream symptom, ale nadal bez actual emergent observer, bez `QW-2191` discharge i bez closure.
+- `N203`: z `G_obs_candidate_preLM_v1` repo eksportuje juz pierwszy rzeczywisty emergent-observer realization map `H_obs_realization_preLM_v1 : W_obs_candidate_v1 -> X_obs_real_v1`; wynik daje dodatni `x_commit` i zanikajacy `x_residual`, a observer information deficit pozostaje downstream symptom, ale nadal bez actual emergent observer construction, bez `QW-2191` discharge i bez closure.
+- `N204`: z `H_obs_realization_preLM_v1` repo eksportuje juz pierwszy rzeczywisty emergent-observer self-consistency operator `J_obs_self_consistency_preLM_v1 : X_obs_real_v1 -> U_obs_cons_v1`; wynik daje dodatni `u_commit` i zanikajacy `u_residual`, operator jest idempotentny, a observer information deficit pozostaje downstream symptom, ale nadal bez actual emergent observer construction, bez `QW-2191` discharge i bez closure.
+- `N205`: z `J_obs_self_consistency_preLM_v1` repo eksportuje juz pierwszy rzeczywisty emergent-observer fixed-point reduction operator `K_obs_fixed_point_preLM_v1 : U_obs_cons_v1 -> F_obs_fix_v1`; wynik daje dodatni `f_commit`, redukuje do jednowymiarowego fixed-point sektora i utrzymuje observer information deficit jako downstream symptom, ale nadal bez actual emergent observer construction, bez `QW-2191` discharge i bez closure.
+- `N206`: z `K_obs_fixed_point_preLM_v1` repo eksportuje juz pierwszy rzeczywisty emergent-observer fixed-point object candidate map `M_obs_fixed_object_preLM_v1 : F_obs_fix_v1 -> P_obs_fix_obj_v1`; wynik daje dodatni `p_fix`, utrzymuje jednowymiarowy fixed-point object sector i dalej trzyma observer information deficit jako downstream symptom, ale nadal bez actual emergent observer construction, bez `QW-2191` discharge i bez closure.
+- `N207`: z `M_obs_fixed_object_preLM_v1` repo eksportuje juz pierwszy rzeczywisty emergent-observer closure candidate map `N_obs_closure_candidate_preLM_v1 : P_obs_fix_obj_v1 -> C_obs_closure_v1`; wynik daje dodatni `c_closure`, utrzymuje jednowymiarowy closure-candidate sector i dalej trzyma observer information deficit jako downstream symptom, ale nadal bez actual emergent observer closure, bez `QW-2191` discharge i bez closure.
+- `N208`: z `N_obs_closure_candidate_preLM_v1` repo eksportuje juz pierwszy rzeczywisty emergent-observer closure realization map `Q_obs_closure_realization_preLM_v1 : C_obs_closure_v1 -> D_obs_closure_real_v1`; wynik daje dodatni `d_closure`, utrzymuje jednowymiarowy closure-realization sector i dalej trzyma observer information deficit jako downstream symptom, ale nadal bez actual emergent observer closure, bez `QW-2191` discharge i bez closure.
+- `N209`: z `Q_obs_closure_realization_preLM_v1` repo eksportuje juz pierwszy rzeczywisty emergent-observer closure fixed-point test `R_obs_closure_fixed_point_test_preLM_v1 : D_obs_closure_real_v1 -> E_obs_closure_fix_v1`; wynik daje dodatni `e_closure_fix`, utrzymuje jednowymiarowy closure-fixed-point sector i dalej trzyma observer information deficit jako downstream symptom, ale nadal bez actual emergent observer closure, bez `QW-2191` discharge i bez closure.
+- `N210`: z `R_obs_closure_fixed_point_test_preLM_v1` repo eksportuje juz pierwszy rzeczywisty emergent-observer closure-support object `S_obs_closure_support_preLM_v1 : E_obs_closure_fix_v1 -> F_obs_closure_support_v1`; wynik daje dodatni `f_closure_support`, utrzymuje jednowymiarowy closure-support sector i dalej trzyma observer information deficit jako downstream symptom, ale nadal bez actual emergent observer closure, bez `QW-2191` discharge i bez closure.
