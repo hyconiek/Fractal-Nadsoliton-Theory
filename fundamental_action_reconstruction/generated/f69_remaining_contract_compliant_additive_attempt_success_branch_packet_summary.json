@@ -1,0 +1,27 @@
+{
+  "stage": "F69",
+  "status": "F69_EXECUTED_REMAINING_CONTRACT_COMPLIANT_ADDITIVE_ATTEMPT_SUCCESS_BRANCH_PACKET_NO_FALSE_PASS",
+  "selected_branch": {
+    "remaining_contract_compliant_additive_attempt_success_branch_active": true,
+    "selected_branch": "explicit_success_verdict_for_construct_attempt_v2(S_sel_int_future_additive_upstream_target_v2)"
+  },
+  "checks": [
+    {
+      "id": "n171_failure_branch_obstructed",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "N171 already obstructs the fixed failure branch"
+    },
+    {
+      "id": "n171_remaining_live_branch",
+      "actual": "explicit_success_verdict_for_construct_attempt_v2(S_sel_int_future_additive_upstream_target_v2)",
+      "expected": "explicit_success_verdict_for_construct_attempt_v2(S_sel_int_future_additive_upstream_target_v2)",
+      "pass": true,
+      "meaning": "N171 already fixes the remaining live branch as success"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

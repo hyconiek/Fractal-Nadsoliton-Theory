@@ -1222,6 +1222,50 @@ Current status:
 - `P110/N120` now close the `acceptance` branch negatively on the current repo
   state: the selector requirement is supported as an active boundary, but the
   theory still exports no explicit verdict adopting it,
+- `P111/N121/N122` now close the `deferral` branch negatively too and then
+  close the whole theory-level selector-decision frontier: the current repo
+  supports the selector requirement after `QW-2191`, but still exports no
+  explicit decision either to adopt it or to defer it,
+- `P112/N123` now make the other higher-order frontier explicit too: the
+  current repo no longer merely lacks a bridge, it now supports a scoped
+  package-level `nonbridge` theorem between the legacy kernel/package and the
+  strict side,
+- `F28/P113/N124` now close the last remaining higher-order strict-core source
+  frontier on the current repo state: no generic hidden source, no `psi0`
+  source, no FR source, no `sigma_int` bridge discharge, and no downstream
+  strict-core reachability to a selector operator are presently exported,
+- `AX15/P114/N125` now make the project-level move explicit too: the
+  selector/symmetry-breaking requirement is no longer merely supported after
+  `QW-2191`, it is now explicitly accepted in `axiom_augmented_only` scope,
+  while current strict core remains unchanged,
+- `F29/P115/N126` now convert the last constructive frontier into an explicit
+  admission gate: no currently exported object qualifies as an admissible
+  strict-core internal selector source, so any future positive move must add a
+  genuinely new one rather than reinterpret an existing partial route,
+- `F30/P116/N127` now reduce that final positive branch to one explicit future
+  construction target chain `S_sel_int -> E_orient -> B_sel -> R_sel -> O_sel`,
+  so current-repo theorem packaging is exhausted and only genuinely new
+  constructive work remains,
+- `F31/P117/N128` now reduce even that future chain to one forced first seed
+  target `S_sel_int -> E_orient`, while the downstream bridge/reduction/operator
+  completion remains explicitly open for later,
+- `F32/P118/N129` now freeze the admissible contract for `E_orient` and reduce
+  the last positive branch one step further to a single initial package:
+  admissible `S_sel_int` plus admissible `E_orient` export contract, with the
+  downstream `B_sel -> R_sel -> O_sel` chain still openly future,
+- `F33/P119/N130` now reduce that initial package one step further to a single
+  first construction target: build admissible `S_sel_int`; only after that do
+  the `E_orient` export branch and the downstream `B_sel -> R_sel -> O_sel`
+  chain remain future,
+- `F34/P120/N131` now freeze the minimal admissible construction contract for
+  `S_sel_int` itself, so the next constructive move is no longer a vague
+  source-seed slogan but one explicit contract-governed attempt to build
+  admissible `S_sel_int`,
+- `F35/P121/N132` now reduce even that attempted source-seed construction to
+  one explicit precursor route:
+  `local topological protection layer + sigma_int_candidate -> future S_sel_int`,
+  while keeping the key boundary explicit that this precursor route does not
+  itself count as a constructed strict-core source object,
 - this moves the theory forward only to an integrated effective/scope-closed gravity layer with explicit foundational blockers for `G`, Einstein-Hilbert derivation and full SM+GR reduction,
 - `A9` completed as a strict-scope partial SM+GR effective reduction layer,
 - this moves the theory forward only to an integrated effective material/gauge/gravity package with theorem-level unification still open,
@@ -1501,6 +1545,225 @@ Current status:
 - `H40`: strict core nie ma jeszcze zadnego globalnego transition/gluing object dla lokalnych chartow selektora; istnieja tylko lokalne compatibility laws i control-lane transition structures, ale nie zostaly podniesione do strict-core selector transition object.
 - `H41`: strict core nie ma jeszcze jawnego selector atlas, overlap-domain declaration ani selector-gluing data; lokalne embeddingi i lokalne compatibility laws nie zostaly podniesione do globalnej struktury atlasu selektora.
 - `H42`: minimalny `c`-based retardation operator na `pair1=(c_1,s_1)` jest selector-trivial bez importowanego anchoru, a z `psi0` daje tylko nowy spectral/response split przez anizotropowe dane sciezek, nadal importujac anchor.
+- `F36/P122/N133`: ostatni dodatni branch nie jest juz tylko precursor route, lecz jedna jawna first candidate construction instance
+  `S_sel_int_candidate_seed_v0 := (QW-2206_local_topological_protection_layer, sigma_int_candidate)`;
+  repo nadal nie promuje jej do admissible `S_sel_int`, `E_orient` ani strict-core closure.
+- `F37/P123/N134`: nastepny move nie jest juz ogolna "proba konstrukcji", lecz jeden jawny attempted admissibility-upgrade target:
+  `S_sel_int_candidate_seed_v0` przeciwko minimalnemu contractowi dla `S_sel_int`;
+  nadal nie ma sukcesu upgradu, `E_orient` ani downstream closure.
+- `F38/P124/N135`: nastepny move nie jest juz nawet ogolnym upgradem, lecz jednym first-clause admissibility test:
+  czy `S_sel_int_candidate_seed_v0` liczy sie jako `genuinely_new_strict_core_source_object`;
+  pozostale klauzule kontraktu i downstream closure sa nadal jawnie otwarte.
+- `P125/N136`: pierwszy clause test jest juz wykonany i na current repo state
+  wypada negatywnie:
+  `S_sel_int_candidate_seed_v0` nadal nie liczy sie jako genuinely new
+  strict-core source object, bo pozostaje tylko zapakowanym reuse'em obecnych
+  skladnikow trasy.
+- `F39/P126/N137`: po tym negatywnym wyniku nastepny ruch nie jest juz
+  dowolna "proba nowego obiektu", lecz jeden future lift/bind target:
+  `strict_core_single_object_lift_bind(QW-2206_local_topological_protection_layer, sigma_int_candidate) -> future S_sel_int`.
+- `F40/P127/N138`: po samym target-only stage nastepny ruch nie jest juz
+  rodzina future attempts, lecz jedna jawna first future attempted
+  construction instance:
+  `S_sel_int_new_object_lift_bind_attempt_v0 :=
+  strict_core_single_object_lift_bind_attempt_v0(QW-2206_local_topological_protection_layer, sigma_int_candidate)`;
+  nadal nie jest to constructed source object, admissible `S_sel_int`,
+  `E_orient` ani downstream closure.
+- `F41/P128/N139`: po attempt-instance stage nastepny ruch nie jest juz
+  rodzina realization targets, lecz jeden jawny future constructed-source-object
+  realization target:
+  `realize_as_constructed_source_object(S_sel_int_new_object_lift_bind_attempt_v0)
+  -> future_constructed_source_object_for_S_sel_int`;
+  nadal nie jest to constructed source object, admissible `S_sel_int`,
+  `E_orient` ani downstream closure.
+- `F42/P129/N140`: po realization-target stage nastepny ruch nie jest juz
+  rodzina realization attempts, lecz jedna jawna first future realization
+  attempt instance:
+  `S_sel_int_new_object_constructed_realization_attempt_v0 :=
+  realize_as_constructed_source_object_attempt_v0(S_sel_int_new_object_lift_bind_attempt_v0)`;
+  nadal nie jest to realized constructed source object, admissible `S_sel_int`,
+  `E_orient` ani downstream closure.
+- `F43/P130/N141`: po realization-attempt stage nastepny ruch nie jest juz
+  rodzina verdict targets, lecz jeden jawny future realization-verdict target:
+  `success_or_failure_verdict(S_sel_int_new_object_constructed_realization_attempt_v0)`;
+  nadal nie jest to success/failure verdict, constructed source object,
+  admissible `S_sel_int`, `E_orient` ani downstream closure.
+- `F44/P131/N142`: po verdict-target stage nastepny ruch nie jest juz rodzina
+  branch splits, lecz jedna jawna binary split:
+  `success_branch / failure_branch` dla
+  `success_or_failure_verdict(S_sel_int_new_object_constructed_realization_attempt_v0)`;
+  nadal nie jest to success verdict, failure verdict, constructed source
+  object, admissible `S_sel_int`, `E_orient` ani downstream closure.
+- `F45/P132/N143`: po tym binary split repo idzie najbardziej konserwatywnie:
+  najpierw `failure_branch`; current repo nadal nie eksportuje jawnego
+  `failure verdict` dla
+  `S_sel_int_new_object_constructed_realization_attempt_v0`, wiec branch nie
+  jest jeszcze discharged, a frontier zostaje otwarty po stronie `success`,
+  admissibility i downstream.
+- `F46/P133/N144`: po current-state obstruction failure side jedynym remaining
+  branch jest `success_branch`; current repo nadal nie eksportuje jawnego
+  `success verdict` dla
+  `S_sel_int_new_object_constructed_realization_attempt_v0`, wiec cala binary
+  verdict layer jest juz current-state negative, a frontier schodzi nizej do
+  admissibility i downstream po ewentualnym nowym source object.
+- `F47/P134/N145`: po wyczerpaniu binary verdict layer pierwszym remaining
+  lower branch jest `future_admissibility_test_of_a_future_constructed_source_object`;
+  current repo nadal nie eksportuje jawnego `admissibility-branch discharge`,
+  wiec current-state frontier schodzi juz tylko do `E_orient` i downstream po
+  ewentualnym nowym source object.
+- `F48/P135/N146`: po current-state obstruction na admissibility pierwszym
+  remaining lower branch jest
+  `future_derivation_of_admissible_E_orient_from_a_future_new_source_object`;
+  current repo nadal nie eksportuje jawnego `orientation-export branch discharge`,
+  wiec current-state frontier schodzi juz tylko do downstream
+  `B_sel -> R_sel -> O_sel`.
+- `F49/P136/N147`: po current-state obstruction na `E_orient` ostatnim
+  remaining lower branch jest
+  `future_completion_of_B_sel_R_sel_O_sel_after_new_source_object_construction`;
+  current repo nadal nie eksportuje jawnego `downstream-completion branch discharge`,
+  wiec current-state lower-branch list schodzi juz do pustego zbioru.
+- `N148`: po `N145 + N146 + N147` cala `post-verdict lower-branch frontier`
+  jest juz zamknieta negatywnie na current repo state; current repo nie
+  eksportuje discharge dla admissibility, `E_orient` ani downstream completion,
+  wiec kolejny uczciwy ruch musi byc juz genuinely addytywny wobec obecnych
+  eksportow.
+- `N149`: po `N123 + N125 + N126 + N148` current repo state jest juz
+  `constructively exhausted` na froncie selektora; jedyny remaining positive
+  move class to
+  `future_genuinely_additive_new_strict_core_source_object_construction`.
+- `F50/P137/N150`: ten jedyny remaining positive move class jest juz
+  zredukowany do jednego jawnego minimalnego kontraktu addytywnej konstrukcji;
+  nie ma dalszej uczciwej dekompozycji wewnatrz current exports, zostaje juz
+  tylko `future_attempted_genuinely_additive_new_strict_core_source_object_construction`.
+- `F51/P138/N151`: po tym kontrakcie nastepny ruch zostaje juz zamrozony jako
+  jeden jawny future additive-attempt target
+  `S_sel_int_additive_attempt_target_v1`; nie jest to jeszcze `constructed
+  source object`, `admissible S_sel_int`, `E_orient` ani strict-core selector
+  closure.
+- `F52/P139/N152`: po target-only stage nastepny ruch zostaje juz zawężony do
+  jednej jawnej future additive construction-attempt instance
+  `construct_attempt_v1(S_sel_int_additive_attempt_target_v1)`; nadal nie jest
+  to success/failure verdict, `constructed source object`, `admissible
+  S_sel_int` ani strict-core selector closure.
+- `F53/P140/N153`: po attempt-instance stage nastepny ruch zostaje juz
+  zawężony do jednego jawnego verdict target nad ta sama proba:
+  `success_or_failure_verdict(construct_attempt_v1(S_sel_int_additive_attempt_target_v1))`;
+  nadal nie jest to success, failure, `constructed source object`,
+  `admissible S_sel_int` ani strict-core selector closure.
+- `F54/P141/N154`: po verdict-target stage nastepny ruch zostaje juz
+  zawężony do jednej jawnej binary split na `failure` i `success` dla
+  `construct_attempt_v1(S_sel_int_additive_attempt_target_v1)`; nadal nie ma
+  verdictu, `constructed source object`, `admissible S_sel_int` ani
+  strict-core selector closure.
+- `F55/P142/N155`: po tym binary split repo idzie konserwatywnie najpierw w
+  `failure_branch`; current repo nadal nie eksportuje jawnego failure verdictu
+  dla `construct_attempt_v1(S_sel_int_additive_attempt_target_v1)`, wiec
+  failure side jest current-state obstructed, a success side pozostaje
+  osobno otwarty.
+- `F56/P143/N156`: po current-state obstruction na `failure_branch` repo idzie
+  juz tylko w remaining `success_branch`; current repo nadal nie eksportuje
+  jawnego success verdictu dla
+  `construct_attempt_v1(S_sel_int_additive_attempt_target_v1)`, wiec cala
+  binary verdict layer tej proby jest current-state negative.
+- `N157`: `N155` i `N156` sa teraz zlozone w jeden theorem-level wynik
+  pakietowy: cala binary verdict layer fixed first additive construction
+  attempt jest juz zamknieta negatywnie na current repo state; nadal nie ma
+  `constructed source object`, `admissible S_sel_int`, `admissible E_orient`
+  ani strict-core selector closure.
+- `F57/P144/N158`: po zamknieciu tej binary verdict layer pierwszym uczciwym
+  lower branch staje sie additive-specific `admissibility`; current repo nadal
+  nie eksportuje jawnego admissibility-branch discharge dla tej galezi, wiec
+  `E_orient` i downstream `B_sel -> R_sel -> O_sel` pozostaja wtórne.
+- `F58/P145/N159`: po additive-specific `admissibility` pierwszym remaining
+  lower branch staje sie additive-specific `E_orient`; current repo nadal nie
+  eksportuje jawnego orientation-export discharge dla tej galezi, a observer
+  pozostaje jawnie downstream.
+- `F59/P146/N160`: po additive-specific `E_orient` jedynym remaining lower
+  branch staje sie additive-specific downstream `B_sel -> R_sel -> O_sel`;
+  current repo nadal nie eksportuje jawnego downstream-completion discharge
+  dla tej galezi, a observer pozostaje downstream symptom, nie zrodlo
+  selektora.
+- `N161`: `N158 + N159 + N160` sa teraz zlozone w jeden theorem-level wynik
+  pakietowy; cala post-verdict lower-branch frontier fixed first additive
+  construction attempt jest juz current-state negative.
+- `N162`: `N157 + N161` sa teraz zlozone w jeden theorem-level wynik dla calej
+  fixed first additive construction attempt; ten fixed attempt jest juz
+  current-state negative jako calosc.
+- `F60/P147/N163`: repo ma teraz jawnie zapisany syntetyczny wniosek, ze w
+  porzadku `nadsoliton -> light -> matter -> emergent observer` observer-side
+  information deficit jest downstream symptom, a nie primary missing selector
+  source gap; to opiera sie na `R3/R5/R6 + N118/N149/N162` i nie zmienia
+  strict core.
+- `F61/P148/N164`: po `N149 + N162 + N163` repo ma juz jawny theorem-level
+  `stop condition`: obecny selector-construction lane powinien byc traktowany
+  jako zatrzymany na current repo state; jedyny uczciwy dodatni ruch zostaje
+  juz tylko genuinely additive future upstream source work.
+- `F62/P149/N165`: ten `stop condition` jest teraz juz jawnie zlozony w
+  theorem-level `handoff`: zatrzymany selector-construction lane ma byc
+  przekazany tylko do genuinely additive future upstream source work, bez
+  dalszego dodatniego mieleniem current exports.
+- `F63/P150/N166`: po `N123 + N163 + N165` repo ma juz jawny theorem-level
+  kontrakt dla jedynej uczciwej dodatniej pracy po handoffie: musi ona byc
+  genuinely additive, upstream-of-observer, kernel-split-safe, bez external
+  selector import i source-object-first.
+- `F64/P151/N167`: po `N166` repo ma juz jawny pierwszy target tej pracy:
+  `S_sel_int_future_additive_upstream_target_v2`; to nadal nie jest source
+  object ani admissible `S_sel_int`, tylko pierwszy kontraktowo poprawny
+  future upstream target.
+- `F65/P152/N168`: po `N167` repo ma juz jawna pierwsza future construction
+  attempt instance: `construct_attempt_v2(S_sel_int_future_additive_upstream_target_v2)`;
+  to nadal nie jest constructed source object ani admissible `S_sel_int`.
+- `F66/P153/N169`: po `N168` repo ma juz jawny future verdict target dla tego
+  attemptu:
+  `success_or_failure_verdict(construct_attempt_v2(S_sel_int_future_additive_upstream_target_v2))`;
+  nadal nie ma ani success verdict, ani failure verdict, ani source object.
+- `F67/P154/N170`: po `N169` repo ma juz jawny binary branch split dla tego
+  fixed verdict target; pozostaja juz tylko dwie galezie:
+  explicit success verdict albo explicit failure verdict dla
+  `construct_attempt_v2(S_sel_int_future_additive_upstream_target_v2)`.
+- `F68/P155/N171`: po `N170` konserwatywnie wybrano najpierw failure branch;
+  current repo nadal nie eksportuje jawnego failure verdict discharge dla
+  `construct_attempt_v2(S_sel_int_future_additive_upstream_target_v2)`, wiec
+  remaining live branch jest juz tylko success-side.
+- `F69/P156/N172`: po `N171` repo testuje juz tylko remaining success branch;
+  current repo nadal nie eksportuje jawnego success verdict discharge dla
+  `construct_attempt_v2(S_sel_int_future_additive_upstream_target_v2)`, wiec
+  cala binary verdict layer dla tego fixed attempt jest juz current-state
+  obstructed.
+- `F70/P157/N173`: po `N171 + N172` first remaining lower branch dla fixed
+  first contract-compliant additive attempt staje sie juz tylko
+  additive-specific admissibility; current repo nadal nie eksportuje jawnego
+  discharge tej galezi, a observer pozostaje downstream symptom, nie source.
+- `F71/P158/N174`: po `N173` first remaining lower branch dla fixed first
+  contract-compliant additive attempt staje sie juz tylko contract-compliant
+  `E_orient`; current repo nadal nie eksportuje jawnego discharge tej galezi,
+  a observer pozostaje downstream symptom, nie source.
+- `F72/P159/N175`: po `N174` last remaining lower branch dla fixed first
+  contract-compliant additive attempt staje sie juz tylko contract-compliant
+  downstream `B_sel -> R_sel -> O_sel`; current repo nadal nie eksportuje
+  jawnego discharge tej galezi, a observer pozostaje downstream symptom.
+- `N176`: `N173 + N174 + N175` sa teraz zlozone w jeden theorem-level wynik
+  pakietowy; cala contract-compliant post-verdict lower-branch frontier fixed
+  first contract-compliant additive attempt jest juz current-state negative.
+- `N177`: `N171 + N172 + N176` sa teraz zlozone w jeden theorem-level wynik
+  dla calej fixed first contract-compliant additive construction attempt; ten
+  fixed attempt jest juz current-state negative jako calosc.
+- `N178`: `N149 + N166 + N177` sa teraz zlozone w jeden theorem-level wynik
+  `nonreopening`; fixed first contract-compliant additive attempt nie otwiera
+  juz ponownie constructive selector frontier na current repo state.
+- `N179`: po `N163/N164/N166/N178` i `P160` jedyny uczciwy dodatni reopening
+  target zostal zredukowany do jednej provider class:
+  `preobserver_light_matter_source_provider_class_v1`.
+- `N180`: ta provider class ma teraz pierwszy jawny future provider packet:
+  `preobserver_light_matter_source_provider_packet_v1`; packet jest
+  guardrail-consistent, ale nadal nie jest `source object` ani closure.
+- `N181`: ten packet jest juz zredukowany do jednego jawnego future upstream
+  source-object target:
+  `preobserver_light_matter_source_object_target_v1`
+  na carrierze `V_topo ⊕ L_int ⊕ M_int`.
+- `N178`: `N149 + N166 + N177` sa teraz zlozone w jeden theorem-level wynik
+  `nonreopening`; fixed first contract-compliant additive attempt nie otwiera
+  juz ponownie constructive selector frontier na current repo state.
 - `V1`: `informational viscosity` zostaje utrzymane jako konkurencyjna hipoteza extension lane, ale bez jawnego operatora selektora i bez redukcji do `pair1`.
 - `V2`: istniejace proxy `lepkość/damping/memory` pozostaja tylko coarse-grained modyfikatorami odpowiedzi i nadal nie daja redukcji do `pair1=(c_1,s_1)`.
 - `V3`: minimalny pair-level operator lepkości jest dopuszczalny tylko jako izotropowy `nu_iso * I_2` albo anizotropowy z importowanym anchorem `psi0`, wiec sam nie domyka selektora.

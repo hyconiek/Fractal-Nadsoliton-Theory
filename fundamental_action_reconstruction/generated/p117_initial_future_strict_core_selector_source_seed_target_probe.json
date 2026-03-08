@@ -1,0 +1,51 @@
+{
+  "stage": "P117",
+  "lane": "initial_future_selector_source_seed_target_probe_only",
+  "goal": "test_whether_the_last_positive_branch_is_now_reduced_to_one_explicit_first_seed_target",
+  "status": "CURRENT_REPO_REDUCES_THE_LAST_POSITIVE_BRANCH_TO_ONE_INITIAL_FUTURE_STRICT_CORE_SELECTOR_SOURCE_SEED_TARGET_AFTER_P117",
+  "target_state": {
+    "last_positive_branch_reduced_to_one_initial_seed_target": true,
+    "initial_seed_target": {
+      "strict_core_source_object": "S_sel_int",
+      "internal_orientation_export": "E_orient"
+    },
+    "downstream_chain_left_open": {
+      "strict_core_bridge": "B_sel",
+      "selector_reduction": "R_sel",
+      "downstream_operator_reachability": "O_sel"
+    }
+  },
+  "checks": [
+    {
+      "id": "n127_full_target_chain_present",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "N127 already exports the full target chain"
+    },
+    {
+      "id": "f31_seed_source_name",
+      "actual": "S_sel_int",
+      "expected": "S_sel_int",
+      "pass": true,
+      "meaning": "F31 exports the seed source object name"
+    },
+    {
+      "id": "f31_seed_orientation_name",
+      "actual": "E_orient",
+      "expected": "E_orient",
+      "pass": true,
+      "meaning": "F31 exports the seed orientation-export name"
+    },
+    {
+      "id": "reduced_to_one_seed_target",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "the last branch is reduced to one explicit first seed target"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

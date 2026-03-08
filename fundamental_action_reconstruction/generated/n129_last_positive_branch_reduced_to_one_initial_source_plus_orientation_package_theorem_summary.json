@@ -1,0 +1,73 @@
+{
+  "step": "N129",
+  "status": "N129_DISCHARGED_LAST_POSITIVE_BRANCH_REDUCED_TO_ONE_INITIAL_SOURCE_PLUS_ORIENTATION_PACKAGE_THEOREM_NO_FALSE_PASS",
+  "scope": "initial_source_plus_orientation_package_only",
+  "checks": [
+    {
+      "id": "p118_initial_package_reduced",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "P118 already proves the last branch is reduced to one initial source-plus-orientation package"
+    },
+    {
+      "id": "package_source_name",
+      "actual": "S_sel_int",
+      "expected": "S_sel_int",
+      "pass": true,
+      "meaning": "the initial package begins with the future source object"
+    },
+    {
+      "id": "package_orientation_name",
+      "actual": "E_orient",
+      "expected": "E_orient",
+      "pass": true,
+      "meaning": "the initial package includes the future orientation export"
+    }
+  ],
+  "theorem_result": {
+    "discharged": true,
+    "last_positive_branch_reduced_to_one_initial_package": true,
+    "initial_package": {
+      "strict_core_source_object": "S_sel_int",
+      "source_admission_contract": {
+        "strict_core_source_export_required": true,
+        "internal_orientation_discharge_required": true,
+        "strict_core_bridge_discharge_required": true,
+        "selector_reduction_discharge_required": true,
+        "downstream_operator_reachability_required": true,
+        "silent_legacy_to_strict_substitution_forbidden": true,
+        "selector_acceptance_outside_strict_core_may_not_count_as_source_derivation": true
+      },
+      "internal_orientation_export": "E_orient",
+      "orientation_export_contract": {
+        "derived_from_future_source_object_required": true,
+        "strict_core_only_export_required": true,
+        "internal_orientation_datum_or_equivalent_required": true,
+        "selector_bearing_without_external_anchor_required": true,
+        "quotient_or_gauge_safe_required": true,
+        "bridge_ready_for_B_sel_required": true,
+        "silent_legacy_to_strict_substitution_forbidden": true,
+        "axiom_augmented_selector_acceptance_may_not_count_as_export": true
+      }
+    },
+    "downstream_chain_left_open": {
+      "strict_core_bridge": "B_sel",
+      "selector_reduction": "R_sel",
+      "downstream_operator_reachability": "O_sel"
+    },
+    "full_closure_pass": false
+  },
+  "remaining_open_branches": [
+    "future_construction_of_admissible_S_sel_int",
+    "future_derivation_of_admissible_E_orient_from_S_sel_int",
+    "future_completion_of_B_sel_R_sel_O_sel_after_seed_package"
+  ],
+  "hard_limits": [
+    "initial_package_not_yet_constructed",
+    "downstream_chain_not_yet_constructed",
+    "no_strict_core_selector_closure",
+    "no_QW2191_discharge",
+    "no_ToE_closure"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "step": "N135",
+  "status": "N135_DISCHARGED_FIRST_SOURCE_SEED_FIRST_CLAUSE_ADMISSIBILITY_TARGET_THEOREM_NO_FALSE_PASS",
+  "scope": "first_source_seed_first_clause_only",
+  "checks": [
+    {
+      "id": "p124_first_clause_reduced",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "P124 already proves the next clause-by-clause move is reduced to the first clause"
+    },
+    {
+      "id": "first_clause_name",
+      "actual": "genuinely_new_strict_core_source_object_required",
+      "expected": "genuinely_new_strict_core_source_object_required",
+      "pass": true,
+      "meaning": "the first clause is explicitly fixed"
+    },
+    {
+      "id": "candidate_seed_name",
+      "actual": "S_sel_int_candidate_seed_v0",
+      "expected": "S_sel_int_candidate_seed_v0",
+      "pass": true,
+      "meaning": "the first clause is anchored on the one candidate seed instance"
+    }
+  ],
+  "theorem_result": {
+    "discharged": true,
+    "next_clause_by_clause_move_reduced_to_first_clause": true,
+    "first_clause_target": {
+      "candidate_seed_name": "S_sel_int_candidate_seed_v0",
+      "target_admissible_source_name": "S_sel_int",
+      "first_clause_name": "genuinely_new_strict_core_source_object_required",
+      "first_clause_expected_value": true,
+      "why_first": [
+        "candidate_seed_still_reuses_current_route_material",
+        "minimal_contract_requires_genuinely_new_source_object",
+        "no_earlier_clause_ordering_ambiguity_remains"
+      ]
+    },
+    "later_clauses_left_open": [
+      "carrier_typed_enough_for_later_E_orient_export_required",
+      "source_seed_only_not_counted_as_E_orient_or_bridge",
+      "strict_core_only_required",
+      "silent_legacy_to_strict_substitution_forbidden",
+      "selector_acceptance_outside_strict_core_may_not_count_as_source_construction",
+      "future_bridge_compatible_required"
+    ],
+    "full_closure_pass": false
+  },
+  "remaining_open_branches": [
+    "future_test_of_whether_S_sel_int_candidate_seed_v0_counts_as_a_genuinely_new_strict_core_source_object",
+    "future_clause_by_clause_tests_for_the_remaining_F34_admissibility_requirements",
+    "future_derivation_of_admissible_E_orient_from_an_upgraded_source_seed",
+    "future_completion_of_B_sel_R_sel_O_sel_after_seed_upgrade"
+  ],
+  "hard_limits": [
+    "first_clause_not_yet_satisfied",
+    "admissible_S_sel_int_not_yet_constructed",
+    "admissible_E_orient_not_yet_constructed",
+    "downstream_chain_not_yet_constructed",
+    "no_strict_core_selector_closure",
+    "no_QW2191_discharge",
+    "no_ToE_closure"
+  ]
+}

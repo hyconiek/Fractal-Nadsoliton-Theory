@@ -1,0 +1,56 @@
+{
+  "stage": "F31",
+  "lane": "future_strict_core_selector_source_seed_target_only",
+  "goal": "reduce_the_last_positive_branch_to_the_narrowest_forced_first_construction_subtarget",
+  "status": "F31_EXECUTED_INITIAL_FUTURE_STRICT_CORE_SELECTOR_SOURCE_SEED_TARGET_PACKET_NO_FALSE_PASS",
+  "initial_seed_target": {
+    "strict_core_source_object": "S_sel_int",
+    "internal_orientation_export": "E_orient"
+  },
+  "downstream_chain_left_open": {
+    "strict_core_bridge": "B_sel",
+    "selector_reduction": "R_sel",
+    "downstream_operator_reachability": "O_sel"
+  },
+  "checks": [
+    {
+      "id": "n127_last_branch_reduced_to_one_target",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "N127 already reduces the last positive branch to one explicit target chain"
+    },
+    {
+      "id": "target_begins_with_source_object",
+      "actual": "S_sel_int",
+      "expected": "S_sel_int",
+      "pass": true,
+      "meaning": "the chain begins with the new strict-core source object"
+    },
+    {
+      "id": "target_second_node_is_orientation_export",
+      "actual": "E_orient",
+      "expected": "E_orient",
+      "pass": true,
+      "meaning": "the second node is the internal orientation export"
+    },
+    {
+      "id": "downstream_nodes_remain_later",
+      "actual": [
+        "B_sel",
+        "R_sel",
+        "O_sel"
+      ],
+      "expected": [
+        "B_sel",
+        "R_sel",
+        "O_sel"
+      ],
+      "pass": true,
+      "meaning": "the bridge, reduction, and downstream operator nodes remain downstream of the source seed"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

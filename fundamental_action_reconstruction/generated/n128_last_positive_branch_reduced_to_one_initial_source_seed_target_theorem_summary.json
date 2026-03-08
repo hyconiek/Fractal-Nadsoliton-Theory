@@ -1,0 +1,53 @@
+{
+  "step": "N128",
+  "status": "N128_DISCHARGED_LAST_POSITIVE_BRANCH_REDUCED_TO_ONE_INITIAL_SOURCE_SEED_TARGET_THEOREM_NO_FALSE_PASS",
+  "scope": "initial_future_source_seed_target_only",
+  "checks": [
+    {
+      "id": "p117_seed_target_reduced",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "P117 already proves the last branch is reduced to one initial seed target"
+    },
+    {
+      "id": "seed_source_name",
+      "actual": "S_sel_int",
+      "expected": "S_sel_int",
+      "pass": true,
+      "meaning": "the initial seed begins with the new source object"
+    },
+    {
+      "id": "seed_orientation_name",
+      "actual": "E_orient",
+      "expected": "E_orient",
+      "pass": true,
+      "meaning": "the initial seed includes the orientation export"
+    }
+  ],
+  "theorem_result": {
+    "discharged": true,
+    "initial_seed_target_reduced": true,
+    "initial_seed_target": {
+      "strict_core_source_object": "S_sel_int",
+      "internal_orientation_export": "E_orient"
+    },
+    "downstream_chain_left_open": {
+      "strict_core_bridge": "B_sel",
+      "selector_reduction": "R_sel",
+      "downstream_operator_reachability": "O_sel"
+    },
+    "full_closure_pass": false
+  },
+  "remaining_open_branches": [
+    "future_construction_of_S_sel_int_and_E_orient_seed",
+    "future_completion_of_B_sel_R_sel_O_sel_after_seed"
+  ],
+  "hard_limits": [
+    "seed_not_yet_constructed",
+    "downstream_chain_not_yet_constructed",
+    "no_strict_core_selector_closure",
+    "no_QW2191_discharge",
+    "no_ToE_closure"
+  ]
+}

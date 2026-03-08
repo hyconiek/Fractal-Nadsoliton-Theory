@@ -1,0 +1,83 @@
+{
+  "stage": "P118",
+  "lane": "initial_source_admission_and_orientation_export_contract_only",
+  "goal": "test_whether_the_last_positive_branch_is_now_reduced_to_one_initial_source_plus_orientation_contract_package",
+  "status": "CURRENT_REPO_REDUCES_THE_LAST_POSITIVE_BRANCH_TO_ONE_INITIAL_SOURCE_ADMISSION_AND_ORIENTATION_EXPORT_CONTRACT_PACKAGE_AFTER_P118",
+  "target_state": {
+    "last_positive_branch_reduced_to_one_initial_package": true,
+    "initial_package": {
+      "strict_core_source_object": "S_sel_int",
+      "source_admission_contract": {
+        "strict_core_source_export_required": true,
+        "internal_orientation_discharge_required": true,
+        "strict_core_bridge_discharge_required": true,
+        "selector_reduction_discharge_required": true,
+        "downstream_operator_reachability_required": true,
+        "silent_legacy_to_strict_substitution_forbidden": true,
+        "selector_acceptance_outside_strict_core_may_not_count_as_source_derivation": true
+      },
+      "internal_orientation_export": "E_orient",
+      "orientation_export_contract": {
+        "derived_from_future_source_object_required": true,
+        "strict_core_only_export_required": true,
+        "internal_orientation_datum_or_equivalent_required": true,
+        "selector_bearing_without_external_anchor_required": true,
+        "quotient_or_gauge_safe_required": true,
+        "bridge_ready_for_B_sel_required": true,
+        "silent_legacy_to_strict_substitution_forbidden": true,
+        "axiom_augmented_selector_acceptance_may_not_count_as_export": true
+      }
+    },
+    "downstream_chain_left_open": {
+      "strict_core_bridge": "B_sel",
+      "selector_reduction": "R_sel",
+      "downstream_operator_reachability": "O_sel"
+    }
+  },
+  "checks": [
+    {
+      "id": "f29_source_admission_present",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "the future source admission package is present"
+    },
+    {
+      "id": "f31_seed_source_name",
+      "actual": "S_sel_int",
+      "expected": "S_sel_int",
+      "pass": true,
+      "meaning": "the frozen seed package names the future source object"
+    },
+    {
+      "id": "f31_seed_orientation_name",
+      "actual": "E_orient",
+      "expected": "E_orient",
+      "pass": true,
+      "meaning": "the frozen seed package names the future orientation export"
+    },
+    {
+      "id": "f32_orientation_contract_bound_to_seed",
+      "actual": [
+        "S_sel_int",
+        "E_orient"
+      ],
+      "expected": [
+        "S_sel_int",
+        "E_orient"
+      ],
+      "pass": true,
+      "meaning": "the orientation-export contract is bound to the current seed pair"
+    },
+    {
+      "id": "reduced_to_one_initial_package",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "the last positive branch is reduced to one explicit initial source-plus-orientation package"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

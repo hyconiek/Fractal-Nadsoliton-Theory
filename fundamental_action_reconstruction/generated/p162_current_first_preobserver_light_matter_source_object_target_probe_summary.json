@@ -1,0 +1,62 @@
+{
+  "stage": "P162",
+  "lane": "future_preobserver_light_matter_source_object_target_probe_only",
+  "goal": "test_whether_the_first_preobserver_light_matter_source_object_target_stays_guardrail_consistent_and_upstream_of_observer",
+  "status": "CURRENT_REPO_EXPORTS_ONE_INTERNAL_GUARDRAIL_CONSISTENT_PREOBSERVER_LIGHT_MATTER_SOURCE_OBJECT_TARGET_AFTER_P162",
+  "provider_packet": "preobserver_light_matter_source_provider_packet_v1",
+  "source_object_target": "preobserver_light_matter_source_object_target_v1",
+  "checks": [
+    {
+      "id": "f74_provider_packet",
+      "actual": "preobserver_light_matter_source_provider_packet_v1",
+      "expected": "preobserver_light_matter_source_provider_packet_v1",
+      "pass": true,
+      "meaning": "F74 already exports the provider packet"
+    },
+    {
+      "id": "p161_provider_packet_consistent",
+      "actual": "preobserver_light_matter_source_provider_packet_v1",
+      "expected": "preobserver_light_matter_source_provider_packet_v1",
+      "pass": true,
+      "meaning": "P161 already confirms packet consistency"
+    },
+    {
+      "id": "n180_future_only",
+      "actual": [
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ],
+      "pass": true,
+      "meaning": "N180 already keeps the packet future-only and guardrail-consistent"
+    },
+    {
+      "id": "f75_target_exported",
+      "actual": "preobserver_light_matter_source_object_target_v1",
+      "expected": "preobserver_light_matter_source_object_target_v1",
+      "pass": true,
+      "meaning": "F75 exports one source-object target"
+    },
+    {
+      "id": "f75_observer_excluded",
+      "actual": [
+        true,
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true,
+        true
+      ],
+      "pass": true,
+      "meaning": "F75 keeps observer excluded and source-object-first"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

@@ -1,0 +1,44 @@
+{
+  "stage": "F32",
+  "lane": "initial_future_strict_core_orientation_export_admission_only",
+  "goal": "freeze_the_admissible_contract_for_the_orientation_export_node_of_the_future_seed",
+  "status": "F32_EXECUTED_INITIAL_FUTURE_STRICT_CORE_ORIENTATION_EXPORT_ADMISSION_PACKET_NO_FALSE_PASS",
+  "orientation_export_name": "E_orient",
+  "upstream_source_name": "S_sel_int",
+  "orientation_export_contract": {
+    "derived_from_future_source_object_required": true,
+    "strict_core_only_export_required": true,
+    "internal_orientation_datum_or_equivalent_required": true,
+    "selector_bearing_without_external_anchor_required": true,
+    "quotient_or_gauge_safe_required": true,
+    "bridge_ready_for_B_sel_required": true,
+    "silent_legacy_to_strict_substitution_forbidden": true,
+    "axiom_augmented_selector_acceptance_may_not_count_as_export": true
+  },
+  "checks": [
+    {
+      "id": "f29_requires_internal_orientation_discharge",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "the future source admission contract already requires an internal orientation discharge"
+    },
+    {
+      "id": "f31_seed_starts_with_future_source",
+      "actual": "S_sel_int",
+      "expected": "S_sel_int",
+      "pass": true,
+      "meaning": "the current seed target begins with the future source object"
+    },
+    {
+      "id": "f31_seed_second_node_is_orientation_export",
+      "actual": "E_orient",
+      "expected": "E_orient",
+      "pass": true,
+      "meaning": "the current seed target already names the required orientation export node"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

@@ -1,0 +1,54 @@
+{
+  "step": "N148",
+  "status": "N148_DISCHARGED_CURRENT_POST_VERDICT_LOWER_BRANCH_FULL_NEGATIVE_CLOSURE_THEOREM_NO_FALSE_PASS",
+  "scope": "current_post_verdict_lower_branch_frontier_only",
+  "checks": [
+    {
+      "id": "n145_admissibility_branch_closed",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "N145 already closes the admissibility branch negatively on the current repo state"
+    },
+    {
+      "id": "n146_orientation_export_branch_closed",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "N146 already closes the orientation-export branch negatively on the current repo state"
+    },
+    {
+      "id": "n147_downstream_branch_closed",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "N147 already closes the downstream-completion branch negatively on the current repo state"
+    },
+    {
+      "id": "n147_remaining_open_branches_empty",
+      "actual": [],
+      "expected": [],
+      "pass": true,
+      "meaning": "after N147 the lower-branch list is exhausted on the current repo state"
+    }
+  ],
+  "theorem_result": {
+    "discharged": true,
+    "admissibility_branch_closed_negatively_on_current_repo_state": true,
+    "orientation_export_branch_closed_negatively_on_current_repo_state": true,
+    "downstream_completion_branch_closed_negatively_on_current_repo_state": true,
+    "post_verdict_lower_branch_frontier_closed_negatively_on_current_repo_state": true,
+    "full_closure_pass": false
+  },
+  "remaining_open_branches": [],
+  "hard_limits": [
+    "no_proof_that_future_additive_source_object_construction_is_impossible_forever",
+    "constructed_source_object_not_yet_exported",
+    "admissible_S_sel_int_not_yet_constructed",
+    "admissible_E_orient_not_yet_constructed",
+    "downstream_chain_not_yet_constructed",
+    "no_strict_core_selector_closure",
+    "no_QW2191_discharge",
+    "no_ToE_closure"
+  ]
+}

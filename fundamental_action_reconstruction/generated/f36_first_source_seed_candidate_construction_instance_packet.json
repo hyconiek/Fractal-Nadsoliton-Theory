@@ -1,0 +1,75 @@
+{
+  "stage": "F36",
+  "lane": "first_source_seed_candidate_construction_instance_only",
+  "goal": "freeze_the_narrowest_first_candidate_construction_instance_on_the_fixed_precursor_route_to_future_S_sel_int",
+  "status": "F36_EXECUTED_FIRST_SOURCE_SEED_CANDIDATE_CONSTRUCTION_INSTANCE_PACKET_NO_FALSE_PASS",
+  "candidate_seed_instance": {
+    "candidate_seed_name": "S_sel_int_candidate_seed_v0",
+    "construction_route": {
+      "local_topological_protection_layer": "QW-2206_local_topological_protection_layer",
+      "internal_binary_candidate": "sigma_int_candidate",
+      "future_construction_target": "S_sel_int"
+    },
+    "assembled_seed_data": {
+      "protected_local_sector": "local_B_tilde_1_topological_sector",
+      "topological_protection_status": "PASS_PARTIAL_LOCAL_PROTECTION_ONLY",
+      "binary_internal_datum_name": "sigma_int_candidate",
+      "binary_internal_datum_codomain": [
+        "+1",
+        "-1"
+      ],
+      "binary_internal_datum_local_value": "-1",
+      "local_stability_support_status": "supported_partial"
+    },
+    "counts_only_as": "first_candidate_source_seed_construction_instance",
+    "does_not_count_as": [
+      "admissible_S_sel_int",
+      "strict_core_internal_selector_source_object",
+      "admissible_E_orient",
+      "B_sel",
+      "R_sel",
+      "O_sel",
+      "strict_core_selector_closure"
+    ]
+  },
+  "checks": [
+    {
+      "id": "n132_precursor_target_is_S_sel_int",
+      "actual": "S_sel_int",
+      "expected": "S_sel_int",
+      "pass": true,
+      "meaning": "N132 keeps the future source target anchored on S_sel_int"
+    },
+    {
+      "id": "n132_precursor_candidate_is_sigma_int_candidate",
+      "actual": "sigma_int_candidate",
+      "expected": "sigma_int_candidate",
+      "pass": true,
+      "meaning": "N132 keeps the precursor route anchored on sigma_int_candidate"
+    },
+    {
+      "id": "b4_candidate_name",
+      "actual": "sigma_int_candidate",
+      "expected": "sigma_int_candidate",
+      "pass": true,
+      "meaning": "B4 exports sigma_int_candidate as the canonical internal binary candidate"
+    },
+    {
+      "id": "b4_local_value",
+      "actual": "-1",
+      "expected": "-1",
+      "pass": true,
+      "meaning": "B4 fixes the local unit-sector seed value for sigma_int_candidate"
+    },
+    {
+      "id": "b5_local_stability_support",
+      "actual": "supported_partial",
+      "expected": "supported_partial",
+      "pass": true,
+      "meaning": "B5 keeps only local topological support and does not overclaim gauge-complete safety"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

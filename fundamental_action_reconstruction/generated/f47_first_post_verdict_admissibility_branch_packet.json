@@ -1,0 +1,39 @@
+{
+  "stage": "F47",
+  "lane": "post_verdict_admissibility_branch_first_only",
+  "goal": "freeze_the_admissibility_branch_as_the_first_remaining_lower_branch_below_the_exhausted_binary_verdict_layer",
+  "status": "F47_EXECUTED_FIRST_POST_VERDICT_ADMISSIBILITY_BRANCH_PACKET_NO_FALSE_PASS",
+  "first_lower_branch_to_attack": "future_admissibility_test_of_a_future_constructed_source_object",
+  "branch_ordering_basis": [
+    "failure_side_obstruction_already_packaged_by_N143",
+    "success_side_obstruction_already_packaged_by_N144",
+    "E_orient_requires_an_admissible_source_object",
+    "downstream_B_sel_R_sel_O_sel_requires_source_object_and_export_stage"
+  ],
+  "checks": [
+    {
+      "id": "n143_failure_branch_obstruction_discharged",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "N143 already packages the current failure-side obstruction"
+    },
+    {
+      "id": "n144_success_branch_obstruction_discharged",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "N144 already packages the current success-side obstruction"
+    },
+    {
+      "id": "n144_first_remaining_open_branch",
+      "actual": "future_admissibility_test_of_a_future_constructed_source_object",
+      "expected": "future_admissibility_test_of_a_future_constructed_source_object",
+      "pass": true,
+      "meaning": "after the verdict layer, the first remaining lower branch is admissibility"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

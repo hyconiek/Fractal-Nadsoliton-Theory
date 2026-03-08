@@ -1,0 +1,89 @@
+{
+  "stage": "P161",
+  "lane": "future_preobserver_light_matter_asymmetric_provider_packet_consistency_only",
+  "goal": "test_whether_the_first_preobserver_light_matter_asymmetric_provider_packet_stays_guardrail_consistent",
+  "status": "CURRENT_REPO_EXPORTS_ONE_INTERNAL_GUARDRAIL_CONSISTENT_PREOBSERVER_LIGHT_MATTER_ASYMMETRIC_PROVIDER_PACKET_AFTER_P161",
+  "provider_packet": "preobserver_light_matter_source_provider_packet_v1",
+  "checks": [
+    {
+      "id": "f73_provider_class_target",
+      "actual": "preobserver_light_matter_source_provider_class_v1",
+      "expected": "preobserver_light_matter_source_provider_class_v1",
+      "pass": true,
+      "meaning": "F73 already fixes the provider class target"
+    },
+    {
+      "id": "f74_kernel_split_safe",
+      "actual": [
+        true,
+        false
+      ],
+      "expected": [
+        true,
+        false
+      ],
+      "pass": true,
+      "meaning": "F74 keeps strict-kernel use operational and non-bridged"
+    },
+    {
+      "id": "f74_one_way_cascade",
+      "actual": [
+        true,
+        false
+      ],
+      "expected": [
+        true,
+        false
+      ],
+      "pass": true,
+      "meaning": "F74 keeps the cascade one-way"
+    },
+    {
+      "id": "f74_observer_nonparticipation",
+      "actual": [
+        true,
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true,
+        true
+      ],
+      "pass": true,
+      "meaning": "F74 keeps observer out of upstream couplings"
+    },
+    {
+      "id": "n163_observer_downstream",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "N163 already keeps observer deficit downstream"
+    },
+    {
+      "id": "n166_upstream_contract",
+      "actual": [
+        true,
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true,
+        true
+      ],
+      "pass": true,
+      "meaning": "N166 already fixes the additive upstream contract"
+    },
+    {
+      "id": "n179_reopening_target",
+      "actual": "preobserver_light_matter_source_provider_class_v1",
+      "expected": "preobserver_light_matter_source_provider_class_v1",
+      "pass": true,
+      "meaning": "N179 already reduces the reopening target to this provider class"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

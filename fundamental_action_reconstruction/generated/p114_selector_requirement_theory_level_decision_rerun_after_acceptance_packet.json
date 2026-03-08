@@ -1,0 +1,45 @@
+{
+  "stage": "P114",
+  "lane": "selector_requirement_theory_level_decision_rerun_after_acceptance_only",
+  "goal": "test_whether_the_updated_repo_now_exports_an_explicit_theory_level_selector_requirement_decision_verdict",
+  "status": "CURRENT_REPO_EXPORTS_AN_EXPLICIT_THEORY_LEVEL_ACCEPTANCE_VERDICT_FOR_SELECTOR_REQUIREMENT_AFTER_P114",
+  "decision_state": {
+    "theory_level_selector_requirement_decision_present": true,
+    "decision_kind": "acceptance",
+    "accepted_scope": "axiom_augmented_only",
+    "strict_core_changed": false
+  },
+  "checks": [
+    {
+      "id": "n118_requirement_supported",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "selector requirement support is present"
+    },
+    {
+      "id": "n124_no_strict_core_source_discharge",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "no strict-core internal selector source discharge is present"
+    },
+    {
+      "id": "ax15_acceptance_verdict_present",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "AX15 now exports an explicit theory-level acceptance verdict"
+    },
+    {
+      "id": "decision_present",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "the updated repo now exports a theory-level selector-requirement decision verdict"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

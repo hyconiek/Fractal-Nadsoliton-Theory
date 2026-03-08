@@ -1,0 +1,39 @@
+{
+  "stage": "P135",
+  "lane": "current_orientation_export_branch_discharge_only",
+  "goal": "test_whether_the_current_repo_already_exports_an_explicit_orientation_export_branch_discharge_for_the_first_remaining_future_E_orient_branch",
+  "status": "CURRENT_REPO_DOES_NOT_EXPORT_AN_EXPLICIT_ORIENTATION_EXPORT_BRANCH_DISCHARGE_FOR_THE_FUTURE_E_ORIENT_BRANCH_AFTER_P135",
+  "target_state": {
+    "orientation_export_branch_selected_as_next_attack": true,
+    "explicit_orientation_export_branch_discharge_exported": false,
+    "remaining_open_branches": [
+      "future_completion_of_B_sel_R_sel_O_sel_after_new_source_object_construction"
+    ]
+  },
+  "checks": [
+    {
+      "id": "f48_orientation_export_branch_first",
+      "actual": "future_derivation_of_admissible_E_orient_from_a_future_new_source_object",
+      "expected": "future_derivation_of_admissible_E_orient_from_a_future_new_source_object",
+      "pass": true,
+      "meaning": "F48 already freezes the orientation-export branch as the first remaining lower branch"
+    },
+    {
+      "id": "n145_admissibility_obstruction_discharged",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "N145 already packages the admissibility-branch obstruction"
+    },
+    {
+      "id": "explicit_orientation_export_branch_discharge_exported",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "the current repo does not yet export an explicit orientation-export branch discharge"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

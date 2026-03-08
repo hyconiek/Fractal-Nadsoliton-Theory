@@ -1,0 +1,80 @@
+{
+  "step": "N133",
+  "status": "N133_DISCHARGED_NEXT_CONSTRUCTIVE_MOVE_REDUCED_TO_ONE_FIRST_SOURCE_SEED_CANDIDATE_INSTANCE_THEOREM_NO_FALSE_PASS",
+  "scope": "first_source_seed_candidate_instance_only",
+  "checks": [
+    {
+      "id": "p122_candidate_instance_reduced",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "P122 already proves the next constructive move is reduced to one first candidate instance"
+    },
+    {
+      "id": "candidate_seed_name",
+      "actual": "S_sel_int_candidate_seed_v0",
+      "expected": "S_sel_int_candidate_seed_v0",
+      "pass": true,
+      "meaning": "the first candidate instance is explicitly named"
+    },
+    {
+      "id": "candidate_not_counted_as_admissible_source",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "the candidate instance is explicitly blocked from being counted as admissible S_sel_int"
+    }
+  ],
+  "theorem_result": {
+    "discharged": true,
+    "next_constructive_move_reduced_to_one_first_candidate_instance": true,
+    "candidate_seed_instance": {
+      "candidate_seed_name": "S_sel_int_candidate_seed_v0",
+      "construction_route": {
+        "local_topological_protection_layer": "QW-2206_local_topological_protection_layer",
+        "internal_binary_candidate": "sigma_int_candidate",
+        "future_construction_target": "S_sel_int"
+      },
+      "assembled_seed_data": {
+        "protected_local_sector": "local_B_tilde_1_topological_sector",
+        "topological_protection_status": "PASS_PARTIAL_LOCAL_PROTECTION_ONLY",
+        "binary_internal_datum_name": "sigma_int_candidate",
+        "binary_internal_datum_codomain": [
+          "+1",
+          "-1"
+        ],
+        "binary_internal_datum_local_value": "-1",
+        "local_stability_support_status": "supported_partial"
+      },
+      "counts_only_as": "first_candidate_source_seed_construction_instance",
+      "does_not_count_as": [
+        "admissible_S_sel_int",
+        "strict_core_internal_selector_source_object",
+        "admissible_E_orient",
+        "B_sel",
+        "R_sel",
+        "O_sel",
+        "strict_core_selector_closure"
+      ]
+    },
+    "later_open_branches": [
+      "future_admissibility_upgrade_of_S_sel_int_candidate_seed_v0_to_admissible_S_sel_int",
+      "future_derivation_of_admissible_E_orient_from_an_upgraded_source_seed",
+      "future_completion_of_B_sel_R_sel_O_sel_after_seed_upgrade"
+    ],
+    "full_closure_pass": false
+  },
+  "remaining_open_branches": [
+    "future_admissibility_upgrade_of_S_sel_int_candidate_seed_v0_to_admissible_S_sel_int",
+    "future_derivation_of_admissible_E_orient_from_an_upgraded_source_seed",
+    "future_completion_of_B_sel_R_sel_O_sel_after_seed_upgrade"
+  ],
+  "hard_limits": [
+    "candidate_seed_not_yet_admissible_source_object",
+    "candidate_seed_not_yet_E_orient",
+    "candidate_seed_not_yet_B_sel_R_sel_O_sel",
+    "no_strict_core_selector_closure",
+    "no_QW2191_discharge",
+    "no_ToE_closure"
+  ]
+}

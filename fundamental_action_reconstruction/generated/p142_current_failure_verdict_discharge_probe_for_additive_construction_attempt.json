@@ -1,0 +1,27 @@
+{
+  "stage": "P142",
+  "lane": "current_failure_verdict_discharge_only",
+  "goal": "test_whether_the_current_repo_already_exports_an_explicit_failure_verdict_for_the_fixed_first_future_additive_construction_attempt",
+  "status": "CURRENT_REPO_DOES_NOT_EXPORT_AN_EXPLICIT_FAILURE_VERDICT_DISCHARGE_FOR_THE_FIXED_FIRST_ADDITIVE_CONSTRUCTION_ATTEMPT_AFTER_P142",
+  "fixed_attempt_instance": "construct_attempt_v1(S_sel_int_additive_attempt_target_v1)",
+  "tested_failure_branch": "explicit_failure_verdict_for_construct_attempt_v1(S_sel_int_additive_attempt_target_v1)",
+  "checks": [
+    {
+      "id": "f55_first_branch_to_attack",
+      "actual": "explicit_failure_verdict_for_construct_attempt_v1(S_sel_int_additive_attempt_target_v1)",
+      "expected": "explicit_failure_verdict_for_construct_attempt_v1(S_sel_int_additive_attempt_target_v1)",
+      "pass": true,
+      "meaning": "F55 freezes the additive failure branch as first branch to attack"
+    },
+    {
+      "id": "n154_binary_branch_split_explicit",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "N154 already fixes the binary verdict split"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

@@ -1,0 +1,37 @@
+{
+  "stage": "P136",
+  "lane": "current_downstream_completion_branch_discharge_only",
+  "goal": "test_whether_the_current_repo_already_exports_an_explicit_downstream_completion_branch_discharge_for_the_last_remaining_lower_branch",
+  "status": "CURRENT_REPO_DOES_NOT_EXPORT_AN_EXPLICIT_DOWNSTREAM_COMPLETION_BRANCH_DISCHARGE_FOR_THE_LAST_REMAINING_LOWER_BRANCH_AFTER_P136",
+  "target_state": {
+    "downstream_completion_branch_selected_as_next_attack": true,
+    "explicit_downstream_completion_branch_discharge_exported": false,
+    "remaining_open_branches": []
+  },
+  "checks": [
+    {
+      "id": "f49_downstream_branch_last",
+      "actual": "future_completion_of_B_sel_R_sel_O_sel_after_new_source_object_construction",
+      "expected": "future_completion_of_B_sel_R_sel_O_sel_after_new_source_object_construction",
+      "pass": true,
+      "meaning": "F49 already freezes downstream completion as the last remaining lower branch"
+    },
+    {
+      "id": "n146_orientation_export_obstruction_discharged",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "N146 already packages the orientation-export obstruction"
+    },
+    {
+      "id": "explicit_downstream_completion_branch_discharge_exported",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "the current repo does not yet export an explicit downstream-completion branch discharge"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

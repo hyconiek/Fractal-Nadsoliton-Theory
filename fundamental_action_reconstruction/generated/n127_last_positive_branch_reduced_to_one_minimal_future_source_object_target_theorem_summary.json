@@ -1,0 +1,49 @@
+{
+  "step": "N127",
+  "status": "N127_DISCHARGED_LAST_POSITIVE_BRANCH_REDUCED_TO_ONE_MINIMAL_FUTURE_SOURCE_OBJECT_TARGET_THEOREM_NO_FALSE_PASS",
+  "scope": "last_positive_branch_reduction_only",
+  "checks": [
+    {
+      "id": "p116_branch_reduced_to_one_target",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "P116 already proves that the last positive branch is reduced to one target"
+    },
+    {
+      "id": "target_source_object_name",
+      "actual": "S_sel_int",
+      "expected": "S_sel_int",
+      "pass": true,
+      "meaning": "the reduced target starts with the new strict-core source object"
+    },
+    {
+      "id": "target_operator_reachability_name",
+      "actual": "O_sel",
+      "expected": "O_sel",
+      "pass": true,
+      "meaning": "the reduced target ends with downstream operator reachability"
+    }
+  ],
+  "theorem_result": {
+    "discharged": true,
+    "last_positive_branch_reduced_to_one_target": true,
+    "future_source_object_target_chain": {
+      "strict_core_source_object": "S_sel_int",
+      "internal_orientation_export": "E_orient",
+      "strict_core_bridge": "B_sel",
+      "selector_reduction": "R_sel",
+      "downstream_operator_reachability": "O_sel"
+    },
+    "full_closure_pass": false
+  },
+  "remaining_open_branches": [
+    "future_construction_of_S_sel_int_E_orient_B_sel_R_sel_O_sel_chain"
+  ],
+  "hard_limits": [
+    "target_not_yet_constructed",
+    "no_strict_core_selector_closure",
+    "no_QW2191_discharge",
+    "no_ToE_closure"
+  ]
+}

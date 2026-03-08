@@ -1,0 +1,39 @@
+{
+  "step": "N155",
+  "status": "N155_DISCHARGED_CURRENT_FAILURE_BRANCH_OBSTRUCTION_THEOREM_FOR_ADDITIVE_CONSTRUCTION_ATTEMPT_NO_FALSE_PASS",
+  "scope": "current_failure_verdict_discharge_only",
+  "checks": [
+    {
+      "id": "p142_fixed_attempt_instance",
+      "actual": "construct_attempt_v1(S_sel_int_additive_attempt_target_v1)",
+      "expected": "construct_attempt_v1(S_sel_int_additive_attempt_target_v1)",
+      "pass": true,
+      "meaning": "P142 fixes the additive construction attempt under test"
+    },
+    {
+      "id": "p142_tested_failure_branch",
+      "actual": "explicit_failure_verdict_for_construct_attempt_v1(S_sel_int_additive_attempt_target_v1)",
+      "expected": "explicit_failure_verdict_for_construct_attempt_v1(S_sel_int_additive_attempt_target_v1)",
+      "pass": true,
+      "meaning": "P142 fixes the failure branch under test"
+    }
+  ],
+  "theorem_result": {
+    "discharged": true,
+    "current_failure_branch_obstructed": true,
+    "tested_failure_branch": "explicit_failure_verdict_for_construct_attempt_v1(S_sel_int_additive_attempt_target_v1)",
+    "fixed_attempt_instance": "construct_attempt_v1(S_sel_int_additive_attempt_target_v1)",
+    "full_closure_pass": false
+  },
+  "hard_limits": [
+    "success_branch_not_tested_here",
+    "attempt_not_failed_in_absolute_future_independent_sense",
+    "constructed_source_object_not_yet_exported",
+    "admissible_S_sel_int_not_yet_constructed",
+    "admissible_E_orient_not_yet_constructed",
+    "downstream_chain_not_yet_constructed",
+    "no_strict_core_selector_closure",
+    "no_QW2191_discharge",
+    "no_ToE_closure"
+  ]
+}

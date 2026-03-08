@@ -1,0 +1,52 @@
+{
+  "stage": "P125",
+  "lane": "first_source_seed_first_clause_test_only",
+  "goal": "test_whether_S_sel_int_candidate_seed_v0_already_satisfies_the_genuinely_new_strict_core_source_object_clause",
+  "status": "CURRENT_REPO_DOES_NOT_YET_SHOW_THAT_S_SEL_INT_CANDIDATE_SEED_V0_SATISFIES_THE_GENUINELY_NEW_STRICT_CORE_SOURCE_OBJECT_CLAUSE_AFTER_P125",
+  "clause_test_result": {
+    "candidate_seed_name": "S_sel_int_candidate_seed_v0",
+    "first_clause_name": "genuinely_new_strict_core_source_object_required",
+    "currently_satisfied": false,
+    "current_reason": "candidate_seed_is_still_packaged_from_current_route_ingredients_rather_than_exported_as_a_genuinely_new_strict_core_source_object"
+  },
+  "checks": [
+    {
+      "id": "p124_first_clause_fixed",
+      "actual": "genuinely_new_strict_core_source_object_required",
+      "expected": "genuinely_new_strict_core_source_object_required",
+      "pass": true,
+      "meaning": "P124 already fixes the first clause to be tested"
+    },
+    {
+      "id": "f34_first_clause_required",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "F34 requires a genuinely new strict-core source object"
+    },
+    {
+      "id": "f36_candidate_built_from_current_sigma_candidate",
+      "actual": "sigma_int_candidate",
+      "expected": "sigma_int_candidate",
+      "pass": true,
+      "meaning": "F36 candidate seed still reuses the current sigma_int candidate"
+    },
+    {
+      "id": "f36_candidate_built_from_current_topological_layer",
+      "actual": "QW-2206_local_topological_protection_layer",
+      "expected": "QW-2206_local_topological_protection_layer",
+      "pass": true,
+      "meaning": "F36 candidate seed still reuses the current QW-2206 local protection layer"
+    },
+    {
+      "id": "first_clause_currently_satisfied",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "current repo does not yet show that the candidate seed is a genuinely new strict-core source object"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

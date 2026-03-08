@@ -1,0 +1,59 @@
+{
+  "step": "N178",
+  "status": "N178_DISCHARGED_CURRENT_FIXED_FIRST_CONTRACT_COMPLIANT_ADDITIVE_ATTEMPT_NONREOPENING_THEOREM_NO_FALSE_PASS",
+  "scope": "current_fixed_first_contract_compliant_additive_attempt_nonreopening_only",
+  "checks": [
+    {
+      "id": "n149_constructive_selector_frontier_exhausted",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "N149 already exhausts the constructive selector frontier on current exports"
+    },
+    {
+      "id": "n166_only_honest_positive_work_contract_active",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "N166 already restricts honest positive work to one explicit contract"
+    },
+    {
+      "id": "n166_remaining_positive_work_must_be_genuinely_additive",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "N166 already requires that remaining positive work be genuinely additive"
+    },
+    {
+      "id": "n177_fixed_attempt_closed_negatively",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "N177 already closes the fixed first contract-compliant additive attempt negatively"
+    },
+    {
+      "id": "n177_fixed_attempt_instance",
+      "actual": "construct_attempt_v2(S_sel_int_future_additive_upstream_target_v2)",
+      "expected": "construct_attempt_v2(S_sel_int_future_additive_upstream_target_v2)",
+      "pass": true,
+      "meaning": "N177 already fixes the same contract-compliant additive attempt"
+    }
+  ],
+  "theorem_result": {
+    "discharged": true,
+    "current_fixed_first_contract_compliant_additive_attempt_does_not_reopen_constructive_selector_frontier": true,
+    "constructive_selector_frontier_remains_exhausted_on_current_repo_state": true,
+    "only_remaining_positive_work_still_future_and_additive": true,
+    "fixed_attempt_instance": "construct_attempt_v2(S_sel_int_future_additive_upstream_target_v2)",
+    "full_closure_pass": false
+  },
+  "hard_limits": [
+    "constructed_source_object_not_yet_exported",
+    "admissible_S_sel_int_not_yet_constructed",
+    "admissible_E_orient_not_yet_constructed",
+    "downstream_chain_not_yet_constructed",
+    "no_strict_core_selector_closure",
+    "no_QW2191_discharge",
+    "no_ToE_closure"
+  ]
+}

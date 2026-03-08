@@ -1,0 +1,48 @@
+{
+  "stage": "F29",
+  "lane": "genuine_strict_core_internal_selector_source_admission_only",
+  "goal": "define_the_minimal_admission_contract_for_any_future_genuine_strict_core_internal_selector_source_object",
+  "status": "F29_EXECUTED_GENUINE_STRICT_CORE_INTERNAL_SELECTOR_SOURCE_ADMISSION_PACKET_NO_FALSE_PASS",
+  "admission_contract": {
+    "strict_core_source_export_required": true,
+    "internal_orientation_discharge_required": true,
+    "strict_core_bridge_discharge_required": true,
+    "selector_reduction_discharge_required": true,
+    "downstream_operator_reachability_required": true,
+    "silent_legacy_to_strict_substitution_forbidden": true,
+    "selector_acceptance_outside_strict_core_may_not_count_as_source_derivation": true
+  },
+  "checks": [
+    {
+      "id": "n124_no_current_source_discharge",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "N124 already shows that no current strict-core internal selector source discharge is exported"
+    },
+    {
+      "id": "p2_no_downstream_operator_reachability",
+      "actual": "NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_ROUTE",
+      "expected": "NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_ROUTE",
+      "pass": true,
+      "meaning": "P2 still shows no downstream strict-core operator reachability to A1(pair1)"
+    },
+    {
+      "id": "n123_nonbridge_explicit",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "N123 keeps hidden legacy-to-strict substitution forbidden"
+    },
+    {
+      "id": "n125_selector_acceptance_outside_strict_core",
+      "actual": "axiom_augmented_only",
+      "expected": "axiom_augmented_only",
+      "pass": true,
+      "meaning": "N125 keeps selector acceptance outside current strict core"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

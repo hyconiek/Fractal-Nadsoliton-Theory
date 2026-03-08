@@ -1,0 +1,45 @@
+{
+  "stage": "F42",
+  "lane": "first_future_constructed_source_object_realization_attempt_only",
+  "goal": "freeze_the_narrowest_first_attempted_realization_instance_on_the_fixed_future_constructed_source_object_realization_target",
+  "status": "F42_EXECUTED_FIRST_FUTURE_CONSTRUCTED_SOURCE_OBJECT_REALIZATION_ATTEMPT_PACKET_NO_FALSE_PASS",
+  "first_future_constructed_realization_attempt": {
+    "attempt_name": "S_sel_int_new_object_constructed_realization_attempt_v0",
+    "attempt_shape": "realize_as_constructed_source_object_attempt_v0",
+    "input_attempt_instance": "S_sel_int_new_object_lift_bind_attempt_v0",
+    "intended_target_output": "future_constructed_source_object_for_S_sel_int",
+    "counts_only_as": "first_future_constructed_source_object_realization_attempt",
+    "does_not_count_as": [
+      "constructed_source_object",
+      "admissible_S_sel_int",
+      "admissible_E_orient",
+      "strict_core_selector_closure"
+    ]
+  },
+  "checks": [
+    {
+      "id": "n139_realization_target_reduced",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "N139 already reduces the next constructive move to one first future realization target"
+    },
+    {
+      "id": "n139_target_name",
+      "actual": "S_sel_int_new_object_constructed_realization_target_v0",
+      "expected": "S_sel_int_new_object_constructed_realization_target_v0",
+      "pass": true,
+      "meaning": "the realization target name is fixed"
+    },
+    {
+      "id": "n139_input_attempt_instance",
+      "actual": "S_sel_int_new_object_lift_bind_attempt_v0",
+      "expected": "S_sel_int_new_object_lift_bind_attempt_v0",
+      "pass": true,
+      "meaning": "the input attempt instance is already frozen"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

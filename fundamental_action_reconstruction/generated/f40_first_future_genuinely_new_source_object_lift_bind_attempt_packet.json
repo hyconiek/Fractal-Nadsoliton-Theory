@@ -1,0 +1,48 @@
+{
+  "stage": "F40",
+  "lane": "first_future_genuinely_new_source_object_lift_bind_attempt_only",
+  "goal": "freeze_the_narrowest_first_attempted_construction_instance_on_the_fixed_future_genuinely_new_source_object_lift_bind_target",
+  "status": "F40_EXECUTED_FIRST_FUTURE_GENUINELY_NEW_SOURCE_OBJECT_LIFT_BIND_ATTEMPT_PACKET_NO_FALSE_PASS",
+  "first_future_lift_bind_attempt": {
+    "attempt_name": "S_sel_int_new_object_lift_bind_attempt_v0",
+    "attempt_shape": "strict_core_single_object_lift_bind_attempt_v0",
+    "input_materials": [
+      "QW-2206_local_topological_protection_layer",
+      "sigma_int_candidate"
+    ],
+    "intended_target_output": "future_S_sel_int",
+    "counts_only_as": "first_future_genuinely_new_source_object_lift_bind_attempt",
+    "does_not_count_as": [
+      "constructed_source_object",
+      "admissible_S_sel_int",
+      "admissible_E_orient",
+      "strict_core_selector_closure"
+    ]
+  },
+  "checks": [
+    {
+      "id": "n137_future_target_reduced",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "N137 already reduces the next constructive move to one future lift/bind target"
+    },
+    {
+      "id": "n137_target_name",
+      "actual": "S_sel_int_new_object_target_v0",
+      "expected": "S_sel_int_new_object_target_v0",
+      "pass": true,
+      "meaning": "the future target name is fixed"
+    },
+    {
+      "id": "n137_construction_shape",
+      "actual": "strict_core_single_object_lift_bind",
+      "expected": "strict_core_single_object_lift_bind",
+      "pass": true,
+      "meaning": "the target shape is already frozen as a single-object lift/bind target"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

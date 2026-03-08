@@ -1,0 +1,51 @@
+{
+  "step": "N125",
+  "status": "N125_DISCHARGED_CURRENT_SELECTOR_REQUIREMENT_THEORY_LEVEL_ACCEPTANCE_THEOREM_NO_FALSE_PASS",
+  "scope": "updated_repo_selector_requirement_decision_only",
+  "checks": [
+    {
+      "id": "p114_decision_present",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "P114 already proves that a theory-level selector-requirement decision is now present"
+    },
+    {
+      "id": "decision_kind_acceptance",
+      "actual": "acceptance",
+      "expected": "acceptance",
+      "pass": true,
+      "meaning": "the decision is acceptance, not deferral"
+    },
+    {
+      "id": "accepted_scope_axiom_augmented_only",
+      "actual": "axiom_augmented_only",
+      "expected": "axiom_augmented_only",
+      "pass": true,
+      "meaning": "the accepted scope stays outside current strict core"
+    },
+    {
+      "id": "strict_core_unchanged",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "strict core remains unchanged"
+    }
+  ],
+  "theorem_result": {
+    "discharged": true,
+    "selector_requirement_accepted_at_theory_level": true,
+    "accepted_scope": "axiom_augmented_only",
+    "strict_core_changed": false,
+    "full_closure_pass": false
+  },
+  "remaining_open_branches": [
+    "future_new_strict_core_internal_selector_source_object"
+  ],
+  "hard_limits": [
+    "no_strict_core_selector_closure",
+    "no_QW2191_discharge",
+    "no_legacy_to_strict_bridge",
+    "no_ToE_closure"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "stage": "P131",
+  "lane": "first_future_constructed_source_object_realization_verdict_branch_refinement_only",
+  "goal": "test_whether_the_next_constructive_move_is_now_reduced_to_one_explicit_binary_success_failure_branch_split",
+  "status": "CURRENT_REPO_REDUCES_THE_NEXT_CONSTRUCTIVE_MOVE_TO_ONE_EXPLICIT_SUCCESS_FAILURE_BRANCH_SPLIT_AFTER_P131",
+  "target_state": {
+    "next_constructive_move_reduced_to_binary_branch_split": true,
+    "verdict_target": {
+      "target_name": "S_sel_int_new_object_constructed_realization_verdict_target_v0",
+      "verdict_shape": "success_or_failure_verdict",
+      "input_realization_attempt": "S_sel_int_new_object_constructed_realization_attempt_v0",
+      "counts_only_as": "first_future_constructed_source_object_realization_verdict_target",
+      "does_not_count_as": [
+        "success_verdict",
+        "failure_verdict",
+        "constructed_source_object",
+        "admissible_S_sel_int",
+        "admissible_E_orient",
+        "strict_core_selector_closure"
+      ]
+    },
+    "verdict_branches": {
+      "success_branch": "explicit_success_verdict_for_S_sel_int_new_object_constructed_realization_attempt_v0",
+      "failure_branch": "explicit_failure_verdict_for_S_sel_int_new_object_constructed_realization_attempt_v0"
+    },
+    "later_open_branches": [
+      "future_success_verdict_discharge_for_S_sel_int_new_object_constructed_realization_attempt_v0",
+      "future_failure_verdict_discharge_for_S_sel_int_new_object_constructed_realization_attempt_v0",
+      "future_admissibility_test_of_a_future_constructed_source_object",
+      "future_derivation_of_admissible_E_orient_from_a_future_new_source_object",
+      "future_completion_of_B_sel_R_sel_O_sel_after_new_source_object_construction"
+    ]
+  },
+  "checks": [
+    {
+      "id": "n141_verdict_target_reduced",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "N141 already reduces the next constructive move to one verdict target"
+    },
+    {
+      "id": "success_branch_name",
+      "actual": "explicit_success_verdict_for_S_sel_int_new_object_constructed_realization_attempt_v0",
+      "expected": "explicit_success_verdict_for_S_sel_int_new_object_constructed_realization_attempt_v0",
+      "pass": true,
+      "meaning": "F44 exports one explicit success branch"
+    },
+    {
+      "id": "failure_branch_name",
+      "actual": "explicit_failure_verdict_for_S_sel_int_new_object_constructed_realization_attempt_v0",
+      "expected": "explicit_failure_verdict_for_S_sel_int_new_object_constructed_realization_attempt_v0",
+      "pass": true,
+      "meaning": "F44 exports one explicit failure branch"
+    },
+    {
+      "id": "reduced_to_binary_branch_split",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "the next constructive move is reduced to one explicit binary verdict split"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

@@ -1,0 +1,39 @@
+{
+  "stage": "P141",
+  "lane": "future_additive_attempt_verdict_branch_refinement_only",
+  "goal": "test_whether_the_next_constructive_move_is_now_reduced_to_one_explicit_binary_branch_split_on_the_fixed_additive_construction_verdict_target",
+  "status": "CURRENT_REPO_REDUCES_THE_NEXT_CONSTRUCTIVE_MOVE_TO_ONE_EXPLICIT_FUTURE_ADDITIVE_SUCCESS_FAILURE_BRANCH_SPLIT_AFTER_P141",
+  "target_state": {
+    "fixed_verdict_target": "success_or_failure_verdict(construct_attempt_v1(S_sel_int_additive_attempt_target_v1))",
+    "remaining_open_branches": [
+      "future_failure_branch_discharge_for_construct_attempt_v1(S_sel_int_additive_attempt_target_v1)",
+      "future_success_branch_discharge_for_construct_attempt_v1(S_sel_int_additive_attempt_target_v1)"
+    ]
+  },
+  "checks": [
+    {
+      "id": "n153_verdict_target",
+      "actual": "success_or_failure_verdict(construct_attempt_v1(S_sel_int_additive_attempt_target_v1))",
+      "expected": "success_or_failure_verdict(construct_attempt_v1(S_sel_int_additive_attempt_target_v1))",
+      "pass": true,
+      "meaning": "N153 fixes the additive-construction verdict target"
+    },
+    {
+      "id": "f54_success_branch",
+      "actual": "explicit_success_verdict_for_construct_attempt_v1(S_sel_int_additive_attempt_target_v1)",
+      "expected": "explicit_success_verdict_for_construct_attempt_v1(S_sel_int_additive_attempt_target_v1)",
+      "pass": true,
+      "meaning": "F54 freezes the success branch"
+    },
+    {
+      "id": "f54_failure_branch",
+      "actual": "explicit_failure_verdict_for_construct_attempt_v1(S_sel_int_additive_attempt_target_v1)",
+      "expected": "explicit_failure_verdict_for_construct_attempt_v1(S_sel_int_additive_attempt_target_v1)",
+      "pass": true,
+      "meaning": "F54 freezes the failure branch"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}
