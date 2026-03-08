@@ -213,6 +213,21 @@ The theorem spec is acceptable only if all of the following stay explicit:
 6. no step is described as current global `QW-2191` discharge;
 7. no step silently treats `sigma_int_candidate` as already sufficient.
 
+## Post-T17 boundary refinement
+
+After `T17`, one extra boundary clarification must stay explicit:
+
+1. `T14` does not require prior discharge of `T15` bridge,
+2. `T14` does not require prior discharge of `T16` strengthened nonbridge,
+3. `K_legacy_ont` may remain a macroscopic nadsoliton-identification tool,
+   while `K_strict_gate` remains the strict source-topology working kernel,
+4. therefore lack of cross-kernel absorption is not, by itself, a selector
+   failure marker,
+5. but `T14` still requires its own genuine strict-side closure ingredients.
+
+This refinement removes only one false prerequisite.
+It does not discharge `T14`.
+
 ## What this theorem would establish if discharged
 
 If discharged, `T14` would establish:

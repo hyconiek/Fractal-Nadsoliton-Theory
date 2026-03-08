@@ -78,6 +78,25 @@ Then inspect:
 50. `fundamental_action_reconstruction/F151_FIRST_LEGACY_TO_STRICT_KERNEL_BRIDGE_TARGET_PACKET.md`
 51. `fundamental_action_reconstruction/P241_CURRENT_LEGACY_TO_STRICT_KERNEL_BRIDGE_TARGET_PROBE.md`
 52. `fundamental_action_reconstruction/N261_CURRENT_FIRST_LEGACY_TO_STRICT_KERNEL_BRIDGE_TARGET_THEOREM.md`
+53. `fundamental_action_reconstruction/T16_LEGACY_TO_STRICT_KERNEL_NONBRIDGE_STRENGTHENING_THEOREM_SPEC.md`
+54. `fundamental_action_reconstruction/F152_FIRST_LEGACY_TO_STRICT_KERNEL_NONBRIDGE_STRENGTHENING_TARGET_PACKET.md`
+55. `fundamental_action_reconstruction/P242_CURRENT_LEGACY_TO_STRICT_KERNEL_NONBRIDGE_STRENGTHENING_TARGET_PROBE.md`
+56. `fundamental_action_reconstruction/N262_CURRENT_FIRST_LEGACY_TO_STRICT_KERNEL_NONBRIDGE_STRENGTHENING_TARGET_THEOREM.md`
+57. `fundamental_action_reconstruction/F153_FIRST_ACTUAL_LEGACY_TO_STRICT_KERNEL_BIFURCATED_FRONTIER_PACKET.md`
+58. `fundamental_action_reconstruction/P243_CURRENT_ACTUAL_LEGACY_TO_STRICT_KERNEL_BIFURCATED_FRONTIER_PROBE.md`
+59. `fundamental_action_reconstruction/N263_CURRENT_FIRST_ACTUAL_LEGACY_TO_STRICT_KERNEL_BIFURCATED_FRONTIER_THEOREM.md`
+60. `fundamental_action_reconstruction/F154_FIRST_ACTUAL_LEGACY_TO_STRICT_KERNEL_AMPLITUDE_NONABSORPTION_COMPONENT_WITNESS_PACKET.md`
+61. `fundamental_action_reconstruction/P244_CURRENT_ACTUAL_LEGACY_TO_STRICT_KERNEL_AMPLITUDE_NONABSORPTION_COMPONENT_WITNESS_PROBE.md`
+62. `fundamental_action_reconstruction/N264_CURRENT_FIRST_ACTUAL_LEGACY_TO_STRICT_KERNEL_AMPLITUDE_NONABSORPTION_COMPONENT_WITNESS_THEOREM.md`
+63. `fundamental_action_reconstruction/F155_FIRST_ACTUAL_LEGACY_TO_STRICT_KERNEL_CLAIM_SPECIFIC_AMPLITUDE_NONABSORPTION_WITNESS_PACKET.md`
+64. `fundamental_action_reconstruction/P245_CURRENT_ACTUAL_LEGACY_TO_STRICT_KERNEL_CLAIM_SPECIFIC_AMPLITUDE_NONABSORPTION_WITNESS_PROBE.md`
+65. `fundamental_action_reconstruction/N265_CURRENT_FIRST_ACTUAL_LEGACY_TO_STRICT_KERNEL_CLAIM_SPECIFIC_AMPLITUDE_NONABSORPTION_WITNESS_THEOREM.md`
+66. `fundamental_action_reconstruction/F156_FIRST_ACTUAL_LEGACY_TO_STRICT_KERNEL_AMPLITUDE_NONABSORPTION_COVERAGE_PACKET.md`
+67. `fundamental_action_reconstruction/P246_CURRENT_ACTUAL_LEGACY_TO_STRICT_KERNEL_AMPLITUDE_NONABSORPTION_COVERAGE_PACKET_PROBE.md`
+68. `fundamental_action_reconstruction/N266_CURRENT_FIRST_ACTUAL_LEGACY_TO_STRICT_KERNEL_AMPLITUDE_NONABSORPTION_COVERAGE_PACKET_THEOREM.md`
+69. `fundamental_action_reconstruction/F157_FIRST_ACTUAL_LEGACY_TO_STRICT_KERNEL_FULL_AMPLITUDE_NONABSORPTION_OBSTRUCTION_WITNESS_PACKET.md`
+70. `fundamental_action_reconstruction/P247_CURRENT_ACTUAL_LEGACY_TO_STRICT_KERNEL_FULL_AMPLITUDE_NONABSORPTION_OBSTRUCTION_WITNESS_PROBE.md`
+71. `fundamental_action_reconstruction/N267_CURRENT_FIRST_ACTUAL_LEGACY_TO_STRICT_KERNEL_FULL_AMPLITUDE_NONABSORPTION_OBSTRUCTION_WITNESS_THEOREM.md`
 
 ## Hard Guardrails
 
@@ -110,6 +129,26 @@ The current repo state already has:
    declared-scope theorem witness below closure
 5. the highest-priority post-`T14` frontier remains
    `legacy -> strict bridge or non-bridge`
+6. that highest-priority frontier is now explicit on both sides, but still
+   undecided on the present export set
+7. the `T16` nonbridge route now also contains one first actual amplitude
+   nonabsorption component witness below full nonbridge strengthening
+8. that same negative branch now also contains one actual claim-specific
+   amplitude nonabsorption witness above the first component tag
+9. that same negative branch now also contains one actual amplitude-coverage
+   packet over the currently closed `alpha_geo`-bearing legacy role package
+10. the amplitude layer of the `T16` route is now actually discharged
+11. the damping layer of the `T16` route is now also actually discharged,
+    while the phase layer remains open
+12. `T17` now exports one theorem-level nadsoliton role-separation principle
+    reclassifying `T15/T16` as optional comparison frontiers rather than a
+    mandatory `T14` closure gate
+13. the repo now also exports one first actual non-strict declared-scope
+    selector-closure theorem in `axiom_augmented_only` scope
+14. the repo now also exports one first actual non-strict declared-scope ToE
+    preclosure support packet, still below any actual ToE closure
+15. the repo now also exports one first explicit future-only non-strict
+    declared-scope ToE closure target, still below any actual ToE closure
 
 The latest honest `T14` advance is:
 
@@ -162,11 +201,40 @@ Only this stronger-but-limited statement:
     `B_legacy_strict_bridge_target_v1 : K_legacy_ont -> K_strict_gate`,
     while keeping the non-bridge branch explicit and leaving actual bridge
     derivation fully open
-18. they remain below:
+18. the current repo now also exports one future-only nonbridge strengthening
+    target, while still keeping the positive bridge branch open
+19. the current repo now also exports one actual bifurcated frontier packet
+    bundling those two future-only branches without selecting a winner
+20. the current repo does not justify current branch selection between the
+    positive bridge branch and the negative nonbridge-strengthening branch
+21. the current repo now also exports one actual claim-specific amplitude
+    nonabsorption component witness on the negative branch
+22. the current repo now also exports one actual claim-specific amplitude
+    nonabsorption witness above that component tag
+23. the current repo now also exports one actual amplitude-coverage packet
+    above that claim-specific witness
+24. the current repo now also exports one actual full amplitude-layer
+    obstruction witness `A_abs_nonbridge_actual_obstruction_witness_v1`
+25. the current repo now also exports one actual full damping-layer
+    obstruction witness `R_damp_nonbridge_actual_obstruction_witness_v1`
+26. the current repo now also exports one theorem-level role-separation
+    witness saying that legal macro/source role difference withdraws the
+    `T15/T16` deadlock as a mandatory `T14` closure gate
+27. the current repo now also exports one actual non-strict declared-scope
+    selector-closure witness in `axiom_augmented_only` scope
+28. the current repo now also exports one actual non-strict declared-scope
+    ToE preclosure support packet
+29. the current repo now also exports one explicit future-only non-strict
+    declared-scope ToE closure target
+30. they remain below:
    - current global selector closure
    - global `QW-2191` discharge
    - strict-core selector closure
    - actual legacy-to-strict bridge derivation
+   - actual strengthened nonbridge theorem
+   - actual phase/frequency non-conformal obstruction
+   - actual branch-selection theorem on the present export set
+   - actual non-strict declared-scope ToE closure
    - ToE closure
 
 ## What Is Not Yet Proven
@@ -178,6 +246,14 @@ Do not claim any of the following:
 3. actual global selector closure
 4. actual legacy-to-strict kernel bridge derivation
 5. legacy physical-role transfer onto `K_strict_gate`
+6. actual strengthened legacy-to-strict nonbridge theorem
+7. permanent impossibility of any future bridge
+8. actual current branch selection between bridge and nonbridge
+9. actual phase/frequency non-conformal obstruction
+10. actual strict-core selector closure from a new post-`N269`
+    strict-side closure ingredient
+11. actual non-strict declared-scope ToE closure
+12. actual ToE closure
 
 ## Exact Next Honest Move
 
@@ -187,8 +263,48 @@ Preferred next move:
 
 Only after that:
 
-2. if a stronger claim is still desired, work on the highest-priority
-   `bridge or non-bridge` frontier rather than repackage `N258/N259/N260`
+2. do not treat `T15/T16` as a mandatory prerequisite for future `T14`
+   closure after `T17/N269`
+
+Only after that:
+
+3. if a stronger selector claim is still desired, search for one genuinely new
+   strict-side closure ingredient rather than repackage `N258/N259/N260`
+
+Only after that:
+
+4. keep `T15/T16` explicit as optional comparison frontiers without silently
+   choosing a winner from the current export set
+
+Only after that:
+
+5. if closure work is continued, do not relabel the new non-strict
+   declared-scope selector closure as strict-core or global closure
+
+Only after that:
+
+6. either pursue a clearly marked non-strict closure lane further, or search
+   again for a genuinely new strict-side closure ingredient
+
+Only after that:
+
+7. if the non-strict lane is pursued, note that the repo now already exports
+   one explicit future-only non-strict declared-scope ToE closure target
+
+Only after that:
+
+8. if a stronger non-strict claim is desired, add one genuinely new discharge
+   ingredient rather than relabel the current target as actual closure
+
+Only after that:
+
+9. if the kernel-comparison frontier is still pursued, attempt actual
+   phase/frequency non-conformal obstruction
+
+Only after that:
+
+10. attempt the full strengthened nonbridge theorem only after amplitude,
+   damping, and phase layers are each actually discharged
 
 ## Working Style
 
@@ -208,7 +324,27 @@ observer remains downstream only,
 T14 now exports one declared-scope Source Topology Selector theorem,
 and `N260` freezes that lane as declared-scope complete but closure-incomplete;
 the repo also exports one future-only positive legacy-to-strict bridge target
-while keeping the non-bridge branch open;
+and one future-only nonbridge strengthening target, with both branches still
+open below actual discharge; `N263` now packages that frontier as explicit but
+still undecided on the present export set; `N264` now adds one first actual
+claim-specific amplitude nonabsorption component witness on the negative
+branch, still below full amplitude obstruction; `N265` lifts that result to
+one actual claim-specific amplitude nonabsorption witness, still below full
+amplitude obstruction and below strengthened nonbridge discharge; `N266` now
+adds one actual amplitude-coverage packet over the currently closed
+`alpha_geo`-bearing legacy role package, still below full amplitude
+obstruction; `N267` now discharges the full amplitude layer of the `T16`
+route; `N268` now also discharges the full damping layer of the `T16` route,
+still below phase and strengthened nonbridge discharge; `N269` now theorem-
+level reclassifies the `T15/T16` deadlock as non-mandatory for future `T14`
+closure while keeping both branches open and non-discharged;
+`N270` now exports one first actual non-strict declared-scope selector
+closure theorem in `axiom_augmented_only` scope, still without strict-core,
+global, or ToE closure claims; `N271` now exports one first actual non-strict
+declared-scope ToE preclosure support packet, still below any actual
+non-strict declared-scope ToE closure; `N272` now freezes one first explicit
+future-only non-strict declared-scope ToE closure target above that
+preclosure packet, but still far below any actual ToE closure;
 the newest honest source-topology state remains below
 global `QW-2191` discharge and strict-core selector closure.
 ```
