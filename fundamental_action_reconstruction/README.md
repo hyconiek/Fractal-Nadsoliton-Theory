@@ -3327,6 +3327,51 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 75. `T12`: typing judgment totality and uniqueness theorem spec
    - zapisac packet-ready theorem spec dla brakujacego typing judgment
      z totality i uniqueness wskazanego przez `T11`.
+76. `T14`: source topology selector theorem spec
+   - zapisac packet-ready future-only theorem spec dla route
+     `source topology invariant -> selector datum`,
+   - jawnie bez claimu obecnego PASS, bez globalnej promocji z observera
+     i bez obecnego discharge `QW-2191`.
+77. `F127/P215/N235`: first source topology invariant candidate packet
+   - wyeksportowac pierwszy future-only `tau_src_candidate_v1` na source/kernel
+     limit,
+   - jawnie utrzymac brak basis-independent promotion, brak quotient-safe
+     `QW-2191` promotion i brak obecnego selector closure.
+78. `F128/P216/N236`: first source topology selector promotion target
+   - wyeksportowac jeden jawny future-only target
+     `Pi_sel_src_target_v1 : tau_src_candidate_v1 -> Sigma_sel_src_target_v1`,
+   - jawnie utrzymac brak basis-independent selector-promotion discharge,
+   - jawnie utrzymac brak quotient-safe `QW-2191` resolution,
+   - traktowac obecny dodatni preobserver lane tylko jako mozliwy downstream
+     chart realization, a nie juz theorem-level promotion witness.
+79. `F129/P217/N237`: first source topology invariant nontriviality target
+   - wyeksportowac jeden jawny future-only target
+     `Nu_src_nontriv_target_v1 : tau_src_candidate_v1 -> Lambda_src_nontriv_target_v1`,
+   - jawnie utrzymac brak actual nontriviality discharge,
+   - jawnie utrzymac brak selector promotion,
+   - jawnie utrzymac brak quotient-safe `QW-2191` resolution i current selector
+     closure.
+80. `F130/P218/N238`: first source topology nonzero-flow subtarget
+   - wyeksportowac jeden jawny future-only subtarget
+     `Xi_src_nonzero_flow_target_v1 : tau_src_candidate_v1 -> source_limit_nonzero_flow_class_v1`,
+   - jawnie utrzymac brak actual nonzero-flow discharge,
+   - jawnie utrzymac brak full source-topology nontriviality,
+   - jawnie utrzymac brak selector promotion i brak quotient-safe `QW-2191`
+     resolution.
+81. `F131/P219/N239`: first source topology barrier-protected sign subtarget
+   - wyeksportowac jeden jawny future-only subtarget
+     `Psi_src_barrier_sign_target_v1 : tau_src_candidate_v1 -> barrier_protected_sign_class_v1`,
+   - jawnie utrzymac brak actual barrier-protected sign discharge,
+   - jawnie utrzymac brak full source-topology nontriviality,
+   - jawnie utrzymac brak selector promotion i brak quotient-safe `QW-2191`
+     resolution.
+82. `F132/P220/N240`: first source topology observer-free scope subtarget
+   - wyeksportowac jeden jawny future-only subtarget
+     `Omega_src_observer_free_scope_target_v1 : tau_src_candidate_v1 -> observer_free_scope_tag_v1`,
+   - jawnie utrzymac brak actual observer-free scope discharge,
+   - jawnie utrzymac brak full source-topology nontriviality,
+   - jawnie utrzymac brak selector promotion i brak quotient-safe `QW-2191`
+     resolution.
 
 ## Aktualny status
 
@@ -3415,6 +3460,13 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `T10`: wykonane jako dziesiaty krok theorem-lane; packet-ready theorem spec zapisuje brakujaca route-role typing rule / admissibility-by-role declaration dla obecnego selector track, bez claimu discharge i bez twierdzenia, ze `T8`, `T6`, `T4` albo `T1` sa juz rozladowane.
 - `T11`: wykonane jako jedenasty krok theorem-lane; pierwszy realny discharge attempt dla `T10` redukuje failure do jednego nowego meta-level blockera: braku formalnego typing judgment z totality i uniqueness dla obecnego selector track.
 - `T12`: wykonane jako dwunasty krok theorem-lane; packet-ready theorem spec zapisuje brakujacy formalny typing judgment z totality i uniqueness dla obecnego selector track, bez claimu discharge i bez twierdzenia, ze `T10`, `T8`, `T6`, `T4` albo `T1` sa juz rozladowane.
+- `T14`: wykonane jako future-only theorem-lane step; packet-ready theorem spec zapisuje warunkowy route `source topology invariant -> selector datum -> basis-independent promotion`, ale jawnie bez claimu obecnego selector closure, bez observer-based global promotion i bez obecnego discharge `QW-2191`.
+- `F127/P215/N235`: wykonane jako pierwszy future-route packet pod `T14`; repo eksportuje juz jeden jawny `tau_src_candidate_v1 = (d -> 0, fixed_nonzero_phi_kernel_core_barrier, T_flow^(0))`, ale nadal wyraznie pozostaje ponizej basis-independent promotion, ponizej quotient-safe `QW-2191` resolution i ponizej current selector closure.
+- `F128/P216/N236`: wykonane jako kolejny future-route packet pod `T14`; repo eksportuje juz jeden jawny future-only target `Pi_sel_src_target_v1 : tau_src_candidate_v1 -> Sigma_sel_src_target_v1`, ale nadal wyraznie pozostaje ponizej basis-independent selector-promotion discharge, ponizej quotient-safe `QW-2191` resolution i ponizej current selector closure. Istniejacy dodatni lane `E_orient_preLM_v1 -> B_sel_preLM_v1 -> R_sel_preLM_v1 -> O_sel_preLM_v1` pojawia sie tu tylko jako mozliwy downstream chart realization, a nie current promotion witness.
+- `F129/P217/N237`: wykonane jako kolejny future-route packet pod `T14`; repo eksportuje juz jeden jawny future-only target `Nu_src_nontriv_target_v1 : tau_src_candidate_v1 -> Lambda_src_nontriv_target_v1`, ale nadal wyraznie pozostaje ponizej actual nontriviality discharge, ponizej selector promotion, ponizej quotient-safe `QW-2191` resolution i ponizej current selector closure. To jest pierwszy uczciwy packet, ktory stoi jeszcze przed `Pi_sel_src_target_v1`, a nie juz na poziomie promotion target.
+- `F130/P218/N238`: wykonane jako kolejny future-route packet pod `T14`; repo eksportuje juz jeden jawny future-only subtarget `Xi_src_nonzero_flow_target_v1 : tau_src_candidate_v1 -> source_limit_nonzero_flow_class_v1`, ale nadal wyraznie pozostaje ponizej actual nonzero-flow discharge, ponizej full source-topology nontriviality, ponizej selector promotion, ponizej quotient-safe `QW-2191` resolution i ponizej current selector closure.
+- `F131/P219/N239`: wykonane jako kolejny future-route packet pod `T14`; repo eksportuje juz jeden jawny future-only subtarget `Psi_src_barrier_sign_target_v1 : tau_src_candidate_v1 -> barrier_protected_sign_class_v1`, ale nadal wyraznie pozostaje ponizej actual barrier-protected sign discharge, ponizej full source-topology nontriviality, ponizej selector promotion, ponizej quotient-safe `QW-2191` resolution i ponizej current selector closure.
+- `F132/P220/N240`: wykonane jako kolejny future-route packet pod `T14`; repo eksportuje juz jeden jawny future-only subtarget `Omega_src_observer_free_scope_target_v1 : tau_src_candidate_v1 -> observer_free_scope_tag_v1`, ale nadal wyraznie pozostaje ponizej actual observer-free scope discharge, ponizej full source-topology nontriviality, ponizej selector promotion, ponizej quotient-safe `QW-2191` resolution i ponizej current selector closure.
 - `N1`: wykonane jako scope-bounded negative theorem po zatrzymaniu dalszej meta-drabinki `T13+`; w zakresie juz audytowanej szesciotrasowej rodziny eksportu `theta_i` theorem jest rzeczywiscie discharged: zadna z tych tras nie eksportuje actual strict-core `theta_1`, `theta_2`, ale wynik nie globalizuje sie jeszcze do calego strict core, bo `T12_B1` pozostaje otwarty.
 - `N2`: wykonane jako globalny theorem-spec po wyborze sciezki o wiekszej szansie powodzenia; zapisuje uczciwa dychotomie dla biezacego strict core: albo brak internal `theta` source, albo kazde udane wyprowadzenie wymaga dodatkowego aksjomatu/admissibility principle nieobecnego obecnie w rdzeniu strict. To nadal jest tylko theorem-spec, bez discharge.
 - `N3`: wykonane jako pierwszy globalny discharge attempt dla `N2`; failure wraca dokladnie do globalizacji przez `T12_B1`, czyli brakujacego theorem-level kroku, ktory podnosilby `N1` plus zewnetrznosc lane axiom-augmented do globalnej dychotomii na calym current strict core.
@@ -3738,6 +3790,22 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `T10_ROUTE_ROLE_TYPING_RULE_THEOREM_SPEC.md`
 - `T11_ROUTE_ROLE_TYPING_RULE_DISCHARGE_ATTEMPT.md`
 - `T12_TYPING_JUDGMENT_TOTALITY_UNIQUENESS_THEOREM_SPEC.md`
+- `T14_SOURCE_TOPOLOGY_SELECTOR_THEOREM_SPEC.md`
+- `F127_FIRST_SOURCE_TOPOLOGY_INVARIANT_CANDIDATE_PACKET.md`
+- `F128_FIRST_SOURCE_TOPOLOGY_SELECTOR_PROMOTION_TARGET_PACKET.md`
+- `F129_FIRST_SOURCE_TOPOLOGY_INVARIANT_NONTRIVIALITY_TARGET_PACKET.md`
+- `F130_FIRST_SOURCE_TOPOLOGY_NONZERO_FLOW_SUBTARGET_PACKET.md`
+- `F131_FIRST_SOURCE_TOPOLOGY_BARRIER_PROTECTED_SIGN_SUBTARGET_PACKET.md`
+- `P216_CURRENT_SOURCE_TOPOLOGY_SELECTOR_PROMOTION_TARGET_PROBE.md`
+- `P217_CURRENT_SOURCE_TOPOLOGY_INVARIANT_NONTRIVIALITY_TARGET_PROBE.md`
+- `P218_CURRENT_SOURCE_TOPOLOGY_NONZERO_FLOW_SUBTARGET_PROBE.md`
+- `P219_CURRENT_SOURCE_TOPOLOGY_BARRIER_PROTECTED_SIGN_SUBTARGET_PROBE.md`
+- `N236_CURRENT_FIRST_SOURCE_TOPOLOGY_SELECTOR_PROMOTION_TARGET_THEOREM.md`
+- `N237_CURRENT_FIRST_SOURCE_TOPOLOGY_INVARIANT_NONTRIVIALITY_TARGET_THEOREM.md`
+- `N238_CURRENT_FIRST_SOURCE_TOPOLOGY_NONZERO_FLOW_SUBTARGET_THEOREM.md`
+- `N239_CURRENT_FIRST_SOURCE_TOPOLOGY_BARRIER_PROTECTED_SIGN_SUBTARGET_THEOREM.md`
+- `P215_CURRENT_SOURCE_TOPOLOGY_INVARIANT_CANDIDATE_PACKET_PROBE.md`
+- `N235_CURRENT_FIRST_SOURCE_TOPOLOGY_INVARIANT_CANDIDATE_PACKET_THEOREM.md`
 - `N1_AUDITED_ROUTE_FAMILY_NO_INTERNAL_THETA_SOURCE_THEOREM.md`
 - `N2_GLOBAL_STRICT_CORE_IMPOSSIBILITY_OR_AXIOM_NECESSITY_THEOREM_SPEC.md`
 - `N3_GLOBAL_IMPOSSIBILITY_OR_AXIOM_NECESSITY_DISCHARGE_ATTEMPT.md`
