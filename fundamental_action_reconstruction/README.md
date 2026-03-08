@@ -3372,6 +3372,39 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
    - jawnie utrzymac brak full source-topology nontriviality,
    - jawnie utrzymac brak selector promotion i brak quotient-safe `QW-2191`
      resolution.
+83. `F133/P221/N241`: first source topology nontriviality components package
+   - wyeksportowac jeden jawny future-only pakiet
+     `Kappa_src_nontriv_components_packet_v1 := (Xi_src_nonzero_flow_target_v1, Psi_src_barrier_sign_target_v1, Omega_src_observer_free_scope_target_v1)`,
+   - jawnie utrzymac brak actual component discharge,
+   - jawnie utrzymac brak full source-topology nontriviality,
+   - jawnie utrzymac brak selector promotion i brak quotient-safe `QW-2191`
+     resolution.
+84. `F134/P222/N242`: first source topology nontriviality assembly target
+   - wyeksportowac jeden jawny future-only assembly target
+     `Mu_src_nontriv_assembly_target_v1 : Kappa_src_nontriv_components_packet_v1 -> Lambda_src_nontriv_target_v1`,
+   - jawnie utrzymac brak actual component discharge,
+   - jawnie utrzymac brak actual full source-topology nontriviality discharge,
+   - jawnie utrzymac brak selector promotion i brak quotient-safe `QW-2191`
+     resolution.
+85. `F135/P223/N243`: first source topology full nontriviality discharge target
+   - wyeksportowac jeden jawny future-only discharge target
+     `Theta_src_nontriv_discharge_target_v1 : Mu_src_nontriv_assembly_target_v1 -> actual_full_source_topology_nontriviality_discharge_target_v1`,
+   - jawnie utrzymac brak actual full source-topology nontriviality discharge,
+   - jawnie utrzymac brak selector promotion i brak quotient-safe `QW-2191`
+     resolution.
+86. `F136/P224/N244`: first source topology basis-independent promotion target
+   - wyeksportowac jeden jawny future-only basis-independent promotion target
+     `Upsilon_sel_basis_target_v1 : (Theta_src_nontriv_discharge_target_v1, Pi_sel_src_target_v1) -> Sigma_sel_basis_free_target_v1`,
+   - jawnie utrzymac brak actual basis-independent selector-promotion
+     discharge,
+   - jawnie utrzymac brak quotient-safe `QW-2191` resolution i current
+     selector closure.
+87. `F137/P225/N245`: first source topology quotient-safe `QW-2191` resolution target
+   - wyeksportowac jeden jawny future-only quotient-safe target
+     `Phi_qw2191_safe_target_v1 : Upsilon_sel_basis_target_v1 -> actual_quotient_safe_qw2191_resolution_target_v1`,
+   - jawnie utrzymac brak actual quotient-safe `QW-2191` resolution,
+   - jawnie utrzymac brak current selector closure i current global `QW-2191`
+     discharge.
 
 ## Aktualny status
 
@@ -3467,6 +3500,12 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `F130/P218/N238`: wykonane jako kolejny future-route packet pod `T14`; repo eksportuje juz jeden jawny future-only subtarget `Xi_src_nonzero_flow_target_v1 : tau_src_candidate_v1 -> source_limit_nonzero_flow_class_v1`, ale nadal wyraznie pozostaje ponizej actual nonzero-flow discharge, ponizej full source-topology nontriviality, ponizej selector promotion, ponizej quotient-safe `QW-2191` resolution i ponizej current selector closure.
 - `F131/P219/N239`: wykonane jako kolejny future-route packet pod `T14`; repo eksportuje juz jeden jawny future-only subtarget `Psi_src_barrier_sign_target_v1 : tau_src_candidate_v1 -> barrier_protected_sign_class_v1`, ale nadal wyraznie pozostaje ponizej actual barrier-protected sign discharge, ponizej full source-topology nontriviality, ponizej selector promotion, ponizej quotient-safe `QW-2191` resolution i ponizej current selector closure.
 - `F132/P220/N240`: wykonane jako kolejny future-route packet pod `T14`; repo eksportuje juz jeden jawny future-only subtarget `Omega_src_observer_free_scope_target_v1 : tau_src_candidate_v1 -> observer_free_scope_tag_v1`, ale nadal wyraznie pozostaje ponizej actual observer-free scope discharge, ponizej full source-topology nontriviality, ponizej selector promotion, ponizej quotient-safe `QW-2191` resolution i ponizej current selector closure.
+- `F133/P221/N241`: wykonane jako kolejny future-route packet pod `T14`; repo eksportuje juz jeden jawny future-only pakiet `Kappa_src_nontriv_components_packet_v1 := (Xi_src_nonzero_flow_target_v1, Psi_src_barrier_sign_target_v1, Omega_src_observer_free_scope_target_v1)`, ale nadal wyraznie pozostaje ponizej actual component discharges, ponizej full source-topology nontriviality, ponizej selector promotion, ponizej quotient-safe `QW-2191` resolution i ponizej current selector closure.
+- `F134/P222/N242`: wykonane jako kolejny future-route packet pod `T14`; repo eksportuje juz jeden jawny future-only assembly target `Mu_src_nontriv_assembly_target_v1 : Kappa_src_nontriv_components_packet_v1 -> Lambda_src_nontriv_target_v1`, ale nadal wyraznie pozostaje ponizej actual component discharges, ponizej actual full source-topology nontriviality discharge, ponizej selector promotion, ponizej quotient-safe `QW-2191` resolution i ponizej current selector closure.
+- `F135/P223/N243`: wykonane jako kolejny future-route packet pod `T14`; repo eksportuje juz jeden jawny future-only discharge target `Theta_src_nontriv_discharge_target_v1 : Mu_src_nontriv_assembly_target_v1 -> actual_full_source_topology_nontriviality_discharge_target_v1`, ale nadal wyraznie pozostaje ponizej actual full source-topology nontriviality discharge, ponizej selector promotion, ponizej quotient-safe `QW-2191` resolution i ponizej current selector closure.
+- `F136/P224/N244`: wykonane jako kolejny future-route packet pod `T14`; repo eksportuje juz jeden jawny future-only basis-independent promotion target `Upsilon_sel_basis_target_v1 : (Theta_src_nontriv_discharge_target_v1, Pi_sel_src_target_v1) -> Sigma_sel_basis_free_target_v1`, ale nadal wyraznie pozostaje ponizej actual basis-independent selector-promotion discharge, ponizej quotient-safe `QW-2191` resolution i ponizej current selector closure.
+- `F137/P225/N245`: wykonane jako kolejny future-route packet pod `T14`; repo eksportuje juz jeden jawny future-only quotient-safe target `Phi_qw2191_safe_target_v1 : Upsilon_sel_basis_target_v1 -> actual_quotient_safe_qw2191_resolution_target_v1`, ale nadal wyraznie pozostaje ponizej actual quotient-safe `QW-2191` resolution, ponizej current selector closure i ponizej current global `QW-2191` discharge.
+- `F138/P226/N246`: wykonane jako pierwszy rzeczywisty component-level krok pod `T14`; repo eksportuje juz jeden actual source-side scalar witness `xi_src_nonzero_flow_component_witness_v1 := |cos(phi)| = 0.9868259031903286` dla `tau_src_candidate_v1`, ale nadal wyraznie pozostaje ponizej barrier-protected sign discharge, ponizej full source-topology nontriviality, ponizej basis-independent selector promotion, ponizej quotient-safe `QW-2191` resolution i ponizej current selector closure.
 - `N1`: wykonane jako scope-bounded negative theorem po zatrzymaniu dalszej meta-drabinki `T13+`; w zakresie juz audytowanej szesciotrasowej rodziny eksportu `theta_i` theorem jest rzeczywiscie discharged: zadna z tych tras nie eksportuje actual strict-core `theta_1`, `theta_2`, ale wynik nie globalizuje sie jeszcze do calego strict core, bo `T12_B1` pozostaje otwarty.
 - `N2`: wykonane jako globalny theorem-spec po wyborze sciezki o wiekszej szansie powodzenia; zapisuje uczciwa dychotomie dla biezacego strict core: albo brak internal `theta` source, albo kazde udane wyprowadzenie wymaga dodatkowego aksjomatu/admissibility principle nieobecnego obecnie w rdzeniu strict. To nadal jest tylko theorem-spec, bez discharge.
 - `N3`: wykonane jako pierwszy globalny discharge attempt dla `N2`; failure wraca dokladnie do globalizacji przez `T12_B1`, czyli brakujacego theorem-level kroku, ktory podnosilby `N1` plus zewnetrznosc lane axiom-augmented do globalnej dychotomii na calym current strict core.
@@ -3796,6 +3835,12 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `F129_FIRST_SOURCE_TOPOLOGY_INVARIANT_NONTRIVIALITY_TARGET_PACKET.md`
 - `F130_FIRST_SOURCE_TOPOLOGY_NONZERO_FLOW_SUBTARGET_PACKET.md`
 - `F131_FIRST_SOURCE_TOPOLOGY_BARRIER_PROTECTED_SIGN_SUBTARGET_PACKET.md`
+- `F132_FIRST_SOURCE_TOPOLOGY_OBSERVER_FREE_SCOPE_SUBTARGET_PACKET.md`
+- `F133_FIRST_SOURCE_TOPOLOGY_NONTRIVIALITY_COMPONENTS_PACKAGE_PACKET.md`
+- `F134_FIRST_SOURCE_TOPOLOGY_NONTRIVIALITY_ASSEMBLY_TARGET_PACKET.md`
+- `F135_FIRST_SOURCE_TOPOLOGY_FULL_NONTRIVIALITY_DISCHARGE_TARGET_PACKET.md`
+- `F136_FIRST_SOURCE_TOPOLOGY_BASIS_INDEPENDENT_PROMOTION_TARGET_PACKET.md`
+- `F137_FIRST_SOURCE_TOPOLOGY_QUOTIENT_SAFE_QW2191_RESOLUTION_TARGET_PACKET.md`
 - `P216_CURRENT_SOURCE_TOPOLOGY_SELECTOR_PROMOTION_TARGET_PROBE.md`
 - `P217_CURRENT_SOURCE_TOPOLOGY_INVARIANT_NONTRIVIALITY_TARGET_PROBE.md`
 - `P218_CURRENT_SOURCE_TOPOLOGY_NONZERO_FLOW_SUBTARGET_PROBE.md`
