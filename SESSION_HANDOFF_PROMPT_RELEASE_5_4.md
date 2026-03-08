@@ -34,6 +34,36 @@ Then inspect:
 6. `fundamental_action_reconstruction/F138_FIRST_ACTUAL_SOURCE_TOPOLOGY_NONZERO_FLOW_COMPONENT_WITNESS_PACKET.md`
 7. `fundamental_action_reconstruction/P226_CURRENT_ACTUAL_SOURCE_TOPOLOGY_NONZERO_FLOW_COMPONENT_WITNESS_PROBE.md`
 8. `fundamental_action_reconstruction/N246_CURRENT_FIRST_ACTUAL_SOURCE_TOPOLOGY_NONZERO_FLOW_COMPONENT_WITNESS_THEOREM.md`
+9. `fundamental_action_reconstruction/F139_FIRST_ACTUAL_SOURCE_TOPOLOGY_BARRIER_SIGN_COMPONENT_WITNESS_PACKET.md`
+10. `fundamental_action_reconstruction/P227_CURRENT_ACTUAL_SOURCE_TOPOLOGY_BARRIER_SIGN_COMPONENT_WITNESS_PROBE.md`
+11. `fundamental_action_reconstruction/N247_CURRENT_FIRST_ACTUAL_SOURCE_TOPOLOGY_BARRIER_SIGN_COMPONENT_WITNESS_THEOREM.md`
+12. `fundamental_action_reconstruction/F140_FIRST_ACTUAL_SOURCE_TOPOLOGY_LOCAL_BARRIER_SIGN_STABILITY_WITNESS_PACKET.md`
+13. `fundamental_action_reconstruction/P228_CURRENT_ACTUAL_SOURCE_TOPOLOGY_LOCAL_BARRIER_SIGN_STABILITY_WITNESS_PROBE.md`
+14. `fundamental_action_reconstruction/N248_CURRENT_FIRST_ACTUAL_SOURCE_TOPOLOGY_LOCAL_BARRIER_SIGN_STABILITY_WITNESS_THEOREM.md`
+15. `fundamental_action_reconstruction/F141_FIRST_ACTUAL_SOURCE_TOPOLOGY_BARRIER_PROTECTED_SIGN_WITNESS_PACKET.md`
+16. `fundamental_action_reconstruction/P229_CURRENT_ACTUAL_SOURCE_TOPOLOGY_BARRIER_PROTECTED_SIGN_WITNESS_PROBE.md`
+17. `fundamental_action_reconstruction/N249_CURRENT_FIRST_ACTUAL_SOURCE_TOPOLOGY_BARRIER_PROTECTED_SIGN_WITNESS_THEOREM.md`
+18. `fundamental_action_reconstruction/F142_FIRST_ACTUAL_SOURCE_TOPOLOGY_OBSERVER_FREE_SCOPE_WITNESS_PACKET.md`
+19. `fundamental_action_reconstruction/P230_CURRENT_ACTUAL_SOURCE_TOPOLOGY_OBSERVER_FREE_SCOPE_WITNESS_PROBE.md`
+20. `fundamental_action_reconstruction/N250_CURRENT_FIRST_ACTUAL_SOURCE_TOPOLOGY_OBSERVER_FREE_SCOPE_WITNESS_THEOREM.md`
+21. `fundamental_action_reconstruction/F143_FIRST_ACTUAL_SOURCE_TOPOLOGY_NONZERO_FLOW_WITNESS_PACKET.md`
+22. `fundamental_action_reconstruction/P231_CURRENT_ACTUAL_SOURCE_TOPOLOGY_NONZERO_FLOW_WITNESS_PROBE.md`
+23. `fundamental_action_reconstruction/N251_CURRENT_FIRST_ACTUAL_SOURCE_TOPOLOGY_NONZERO_FLOW_WITNESS_THEOREM.md`
+24. `fundamental_action_reconstruction/F144_FIRST_ACTUAL_SOURCE_TOPOLOGY_NONTRIVIALITY_COMPONENTS_PACKAGE_PACKET.md`
+25. `fundamental_action_reconstruction/P232_CURRENT_ACTUAL_SOURCE_TOPOLOGY_NONTRIVIALITY_COMPONENTS_PACKAGE_PROBE.md`
+26. `fundamental_action_reconstruction/N252_CURRENT_FIRST_ACTUAL_SOURCE_TOPOLOGY_NONTRIVIALITY_COMPONENTS_PACKAGE_THEOREM.md`
+27. `fundamental_action_reconstruction/F145_FIRST_ACTUAL_SOURCE_TOPOLOGY_NONTRIVIALITY_ASSEMBLY_WITNESS_PACKET.md`
+28. `fundamental_action_reconstruction/P233_CURRENT_ACTUAL_SOURCE_TOPOLOGY_NONTRIVIALITY_ASSEMBLY_WITNESS_PROBE.md`
+29. `fundamental_action_reconstruction/N253_CURRENT_FIRST_ACTUAL_SOURCE_TOPOLOGY_NONTRIVIALITY_ASSEMBLY_WITNESS_THEOREM.md`
+30. `fundamental_action_reconstruction/F146_FIRST_ACTUAL_SOURCE_TOPOLOGY_FULL_NONTRIVIALITY_WITNESS_PACKET.md`
+31. `fundamental_action_reconstruction/P234_CURRENT_ACTUAL_SOURCE_TOPOLOGY_FULL_NONTRIVIALITY_WITNESS_PROBE.md`
+32. `fundamental_action_reconstruction/N254_CURRENT_FIRST_ACTUAL_SOURCE_TOPOLOGY_FULL_NONTRIVIALITY_WITNESS_THEOREM.md`
+33. `fundamental_action_reconstruction/F147_FIRST_ACTUAL_SOURCE_TOPOLOGY_SELECTOR_WITNESS_PACKET.md`
+34. `fundamental_action_reconstruction/P235_CURRENT_ACTUAL_SOURCE_TOPOLOGY_SELECTOR_WITNESS_PROBE.md`
+35. `fundamental_action_reconstruction/N255_CURRENT_FIRST_ACTUAL_SOURCE_TOPOLOGY_SELECTOR_WITNESS_THEOREM.md`
+36. `fundamental_action_reconstruction/F148_FIRST_ACTUAL_SOURCE_TOPOLOGY_BASIS_INDEPENDENT_PROMOTION_WITNESS_PACKET.md`
+37. `fundamental_action_reconstruction/P236_CURRENT_ACTUAL_SOURCE_TOPOLOGY_BASIS_INDEPENDENT_PROMOTION_WITNESS_PROBE.md`
+38. `fundamental_action_reconstruction/N256_CURRENT_FIRST_ACTUAL_SOURCE_TOPOLOGY_BASIS_INDEPENDENT_PROMOTION_WITNESS_THEOREM.md`
 
 ## Hard Guardrails
 
@@ -67,10 +97,11 @@ The current repo state already has:
 The latest honest `T14` advance is:
 
 ```text
-xi_src_nonzero_flow_component_witness_v1 := |cos(phi)| = 0.9868259031903286 > 0
+Upsilon_sel_basis_actual_witness_v1 :
+tau_src_candidate_v1 -> Sigma_sel_basis_free_target_v1
 ```
 
-This is theorem-level packaged in `N246`.
+This is theorem-level packaged in `N256`.
 
 ## What Is Proven Right Now
 
@@ -78,11 +109,28 @@ Only this stronger-but-limited statement:
 
 1. `tau_src_candidate_v1` contains one actual source-side scalar nonzero-flow
    component witness
-2. that witness is observer-free in its witness domain
-3. it remains below:
-   - barrier-protected sign discharge
-   - full source-topology nontriviality
-   - basis-independent selector promotion
+2. `tau_src_candidate_v1` now has one actual source-side
+   `source_limit_nonzero_flow_class_v1` witness
+3. `tau_src_candidate_v1` contains one actual source-side scalar barrier-sign
+   component witness with positive barrier margin
+4. the declared core branch now has one actual positive-radius local
+   barrier-sign stability witness
+5. `tau_src_candidate_v1` now has one actual source-side
+   `barrier_protected_sign_class_v1` witness
+6. `tau_src_candidate_v1` now has one actual source-side
+   `observer_free_scope_tag_v1` witness
+7. the three actual witnesses are now bundled into one actual
+   source-topology components package
+8. that actual package now has one actual assembly witness into
+   `Lambda_src_nontriv_target_v1`
+9. `tau_src_candidate_v1` now has one actual full source-topology
+   nontriviality witness
+10. `tau_src_candidate_v1` now has one actual source-side selector witness
+    into `Sigma_sel_src_target_v1`
+11. `tau_src_candidate_v1` now has one actual source-side basis-independent
+    selector-promotion witness into `Sigma_sel_basis_free_target_v1`
+12. these witnesses remain observer-free in their witness domain
+13. they remain below:
    - quotient-safe `QW-2191` resolution
    - global `QW-2191` discharge
    - strict-core selector closure
@@ -92,26 +140,20 @@ Only this stronger-but-limited statement:
 
 Do not claim any of the following:
 
-1. actual barrier-protected sign discharge
-2. actual full source-topology nontriviality
-3. actual basis-independent `Pi_sel` promotion witness
-4. actual quotient-safe `QW-2191` resolution
-5. actual global `QW-2191` discharge
-6. actual strict-core selector closure
+1. actual quotient-safe `QW-2191` resolution
+2. actual global `QW-2191` discharge
+3. actual strict-core selector closure
 
 ## Exact Next Honest Move
 
 Preferred next move:
 
-1. attempt an actual barrier-protected sign witness on the `T14` route
+1. attempt an actual quotient-safe `QW-2191` resolution witness from the
+   actual basis-independent selector-promotion witness
 
 Only after that:
 
-2. attempt a basis-independent `Pi_sel` witness over `tau_src_candidate_v1`
-
-Only after both:
-
-3. attempt quotient-safe `QW-2191` resolution
+2. evaluate any stricter selector-closure claim
 
 ## Working Style
 
@@ -128,7 +170,9 @@ Current FAR state after Release 5.4:
 ```text
 positive preobserver selector lane exists,
 observer remains downstream only,
-T14 remains future-route only,
-and the newest honest source-topology result is one actual scalar nonzero-flow
-component witness below sign, basis-independence, and QW-2191 discharge.
+T14 remains open below quotient-safe `QW-2191` resolution,
+and the newest honest source-topology result is one actual
+`Sigma_sel_basis_free_target_v1` witness obtained by basis-class reduction
+from the actual source-side selector witness, still below quotient-safe
+`QW-2191` resolution and strict-core selector closure.
 ```
