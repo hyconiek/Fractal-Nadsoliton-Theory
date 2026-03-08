@@ -64,6 +64,20 @@ Then inspect:
 36. `fundamental_action_reconstruction/F148_FIRST_ACTUAL_SOURCE_TOPOLOGY_BASIS_INDEPENDENT_PROMOTION_WITNESS_PACKET.md`
 37. `fundamental_action_reconstruction/P236_CURRENT_ACTUAL_SOURCE_TOPOLOGY_BASIS_INDEPENDENT_PROMOTION_WITNESS_PROBE.md`
 38. `fundamental_action_reconstruction/N256_CURRENT_FIRST_ACTUAL_SOURCE_TOPOLOGY_BASIS_INDEPENDENT_PROMOTION_WITNESS_THEOREM.md`
+39. `fundamental_action_reconstruction/F149_FIRST_ACTUAL_SOURCE_TOPOLOGY_QUOTIENT_SAFE_QW2191_RESOLUTION_WITNESS_PACKET.md`
+40. `fundamental_action_reconstruction/P237_CURRENT_ACTUAL_SOURCE_TOPOLOGY_QUOTIENT_SAFE_QW2191_RESOLUTION_WITNESS_PROBE.md`
+41. `fundamental_action_reconstruction/N257_CURRENT_FIRST_ACTUAL_SOURCE_TOPOLOGY_QUOTIENT_SAFE_QW2191_RESOLUTION_WITNESS_THEOREM.md`
+42. `fundamental_action_reconstruction/F150_FIRST_ACTUAL_DECLARED_SCOPE_SOURCE_TOPOLOGY_SELECTOR_THEOREM_PACKET.md`
+43. `fundamental_action_reconstruction/P238_CURRENT_ACTUAL_DECLARED_SCOPE_SOURCE_TOPOLOGY_SELECTOR_THEOREM_PROBE.md`
+44. `fundamental_action_reconstruction/N258_CURRENT_FIRST_DECLARED_SCOPE_SOURCE_TOPOLOGY_SELECTOR_THEOREM.md`
+45. `fundamental_action_reconstruction/P239_CURRENT_DECLARED_SCOPE_SOURCE_TOPOLOGY_SELECTOR_THEOREM_PROMOTION_PROBE.md`
+46. `fundamental_action_reconstruction/N259_CURRENT_DECLARED_SCOPE_SOURCE_TOPOLOGY_SELECTOR_THEOREM_PROMOTION_OBSTRUCTION_THEOREM.md`
+47. `fundamental_action_reconstruction/P240_CURRENT_T14_DECLARED_SCOPE_COMPLETION_AND_CLOSURE_INCOMPLETENESS_PROBE.md`
+48. `fundamental_action_reconstruction/N260_CURRENT_T14_DECLARED_SCOPE_COMPLETION_AND_CLOSURE_INCOMPLETENESS_THEOREM.md`
+49. `fundamental_action_reconstruction/T15_LEGACY_TO_STRICT_KERNEL_BRIDGE_THEOREM_SPEC.md`
+50. `fundamental_action_reconstruction/F151_FIRST_LEGACY_TO_STRICT_KERNEL_BRIDGE_TARGET_PACKET.md`
+51. `fundamental_action_reconstruction/P241_CURRENT_LEGACY_TO_STRICT_KERNEL_BRIDGE_TARGET_PROBE.md`
+52. `fundamental_action_reconstruction/N261_CURRENT_FIRST_LEGACY_TO_STRICT_KERNEL_BRIDGE_TARGET_THEOREM.md`
 
 ## Hard Guardrails
 
@@ -92,16 +106,22 @@ The current repo state already has:
 2. a long downstream observer-side chain that remains downstream only
 3. `N234` blocking any premature promotion of downstream observer stability into
    global selector closure
-4. `T14` as the active future theorem-spec route for a source-topology selector
+4. `T14` as the active source-topology selector route, now containing one
+   declared-scope theorem witness below closure
+5. the highest-priority post-`T14` frontier remains
+   `legacy -> strict bridge or non-bridge`
 
 The latest honest `T14` advance is:
 
 ```text
-Upsilon_sel_basis_actual_witness_v1 :
-tau_src_candidate_v1 -> Sigma_sel_basis_free_target_v1
+T14_src_selector_declared_scope_actual_witness_v1 :
+tau_src_candidate_v1 -> declared_scope_source_topology_selector_theorem_target_v1
 ```
 
-This is theorem-level packaged in `N256`.
+This is theorem-level packaged in `N258`, and `N259` now blocks any false
+promotion of that theorem to current strict-core selector closure or current
+global `QW-2191` discharge; `N260` freezes the lane as declared-scope complete
+and closure-incomplete on the present export set.
 
 ## What Is Proven Right Now
 
@@ -129,31 +149,46 @@ Only this stronger-but-limited statement:
     into `Sigma_sel_src_target_v1`
 11. `tau_src_candidate_v1` now has one actual source-side basis-independent
     selector-promotion witness into `Sigma_sel_basis_free_target_v1`
-12. these witnesses remain observer-free in their witness domain
-13. they remain below:
-   - quotient-safe `QW-2191` resolution
+12. `tau_src_candidate_v1` now has one actual source-side quotient-safe
+    `QW-2191` resolution witness in the declared source-topology scope
+13. `tau_src_candidate_v1` now has one actual declared-scope Source Topology
+    Selector theorem witness
+14. these witnesses remain observer-free in their witness domain
+15. the current repo does not justify promoting that theorem to current
+    strict-core selector closure or to current global `QW-2191` discharge
+16. the current `T14` lane is now frozen as declared-scope complete and
+    closure-incomplete on the present export set
+17. the current repo also exports one future-only positive bridge-branch target
+    `B_legacy_strict_bridge_target_v1 : K_legacy_ont -> K_strict_gate`,
+    while keeping the non-bridge branch explicit and leaving actual bridge
+    derivation fully open
+18. they remain below:
+   - current global selector closure
    - global `QW-2191` discharge
    - strict-core selector closure
+   - actual legacy-to-strict bridge derivation
    - ToE closure
 
 ## What Is Not Yet Proven
 
 Do not claim any of the following:
 
-1. actual quotient-safe `QW-2191` resolution
-2. actual global `QW-2191` discharge
-3. actual strict-core selector closure
+1. actual global `QW-2191` discharge
+2. actual strict-core selector closure
+3. actual global selector closure
+4. actual legacy-to-strict kernel bridge derivation
+5. legacy physical-role transfer onto `K_strict_gate`
 
 ## Exact Next Honest Move
 
 Preferred next move:
 
-1. attempt an actual quotient-safe `QW-2191` resolution witness from the
-   actual basis-independent selector-promotion witness
+1. do not further promote the current `T14` lane on the present export set
 
 Only after that:
 
-2. evaluate any stricter selector-closure claim
+2. if a stronger claim is still desired, work on the highest-priority
+   `bridge or non-bridge` frontier rather than repackage `N258/N259/N260`
 
 ## Working Style
 
@@ -170,9 +205,10 @@ Current FAR state after Release 5.4:
 ```text
 positive preobserver selector lane exists,
 observer remains downstream only,
-T14 remains open below quotient-safe `QW-2191` resolution,
-and the newest honest source-topology result is one actual
-`Sigma_sel_basis_free_target_v1` witness obtained by basis-class reduction
-from the actual source-side selector witness, still below quotient-safe
-`QW-2191` resolution and strict-core selector closure.
+T14 now exports one declared-scope Source Topology Selector theorem,
+and `N260` freezes that lane as declared-scope complete but closure-incomplete;
+the repo also exports one future-only positive legacy-to-strict bridge target
+while keeping the non-bridge branch open;
+the newest honest source-topology state remains below
+global `QW-2191` discharge and strict-core selector closure.
 ```

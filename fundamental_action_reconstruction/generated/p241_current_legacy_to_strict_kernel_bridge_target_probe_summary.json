@@ -1,0 +1,62 @@
+{
+  "stage": "P241",
+  "lane": "kernel_bridge",
+  "status": "CURRENT_REPO_EXPORTS_ONE_FUTURE_ONLY_LEGACY_TO_STRICT_KERNEL_BRIDGE_TARGET_BELOW_ACTUAL_BRIDGE_DISCHARGE_AFTER_P241",
+  "checks": [
+    {
+      "id": "bridge_target_exported",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "id": "split_safety_maintained",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "id": "future_only_target_exported",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "id": "nonbridge_branch_still_open",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "id": "legacy_to_strict_bridge_NOT_claimed",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "id": "legacy_physical_role_transfer_NOT_claimed",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    {
+      "id": "bridge_sufficiency_for_global_qw2191_NOT_claimed",
+      "actual": false,
+      "expected": false,
+      "pass": true
+    }
+  ],
+  "blocking_mismatches": [],
+  "bridge_target_exported": true,
+  "future_only_target_exported": true,
+  "kernel_split_safe": true,
+  "nonbridge_branch_still_open": true,
+  "legacy_to_strict_bridge_claimed": false,
+  "actual_bridge_discharged": false,
+  "legacy_physical_role_transfer_claimed": false,
+  "current_strict_core_selector_closure": false,
+  "current_global_selector_closure": false,
+  "current_global_qw2191_discharge": false,
+  "bridge_sufficiency_for_global_qw2191_claimed": false,
+  "no_false_pass": true
+}
