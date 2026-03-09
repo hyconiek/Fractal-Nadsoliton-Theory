@@ -375,6 +375,12 @@ strict-core clause remains undischarged in strict core, but the same seed
 candidate now also has one explicit extension-scoped carrier-typed precursor
 for later export work, still below actual `E_orient`, admissible
 `S_sel_int`, and any closure claim;
+`N281` now adds the matching third-clause extension lift: the source-seed-only
+strict-core clause remains undischarged in strict core, but the same seed
+candidate now also has one explicit extension-scoped source-seed-only
+precursor for later work, still below actual `E_orient`, below actual
+`B_sel/R_sel/O_sel`, below admissible `S_sel_int`, and below any closure
+claim;
 the newest honest source-topology state remains below
 global `QW-2191` discharge and strict-core selector closure.
 ```
