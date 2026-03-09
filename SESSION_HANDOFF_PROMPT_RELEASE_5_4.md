@@ -381,6 +381,22 @@ candidate now also has one explicit extension-scoped source-seed-only
 precursor for later work, still below actual `E_orient`, below actual
 `B_sel/R_sel/O_sel`, below admissible `S_sel_int`, and below any closure
 claim;
+`N282` now packages the strongest honest current ToE answer after `N281` and
+the committed sandbox route `N18`: the present closure-facing stack is no
+longer only “unfinished,” but frozen theorem-level at one current-state
+incompatibility boundary. The non-strict lane remains target/preclosure only,
+the official strict-side lane remains extension-only below admissible
+`S_sel_int`, and the committed sandbox strict-core attempt remains
+nonentering on present inputs under the same blocker-cut. This is still not
+actual ToE closure and still not impossibility in principle;
+`N283` now freezes the next official strict-side move after `N281` as an
+incompatibility boundary on the same extension ladder: the remaining four
+`F34` clauses `strict-core only`, `non-substitutive`,
+`selector-acceptance independent`, and `future-bridge compatible` are now
+theorem-level nonentering on the present `strict_extension_only` lane. This
+does not retract the first three clause lifts, but blocks further same-lane
+positive lifting without one genuinely new strict-core ingredient or one
+different blocker-cut;
 the newest honest source-topology state remains below
 global `QW-2191` discharge and strict-core selector closure.
 ```
