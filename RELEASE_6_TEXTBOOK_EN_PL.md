@@ -102,111 +102,111 @@ Release 6 keeps two different kernels explicit.
 
 ### 4.1 Legacy ontological / effective kernel
 
-$$
+```math
 K_{legacy\_ont}(d)
 =
 \frac{\alpha_{geo}\cos(\omega d+\phi)}{1+\beta_{tors} d}
-$$
+```
 
 with canonical legacy values:
 
-$$
+```math
 \alpha_{geo}=4\ln 2 \approx 2.772588722239781
-$$
+```
 
-$$
+```math
 \omega_{legacy}=\frac{\pi}{4}\approx 0.785398163397448
-$$
+```
 
-$$
+```math
 \phi_{legacy}=\frac{\pi}{6}\approx 0.523598775598299
-$$
+```
 
-$$
+```math
 \beta_{tors}=0.01
-$$
+```
 
 Useful numerical values:
 
-$$
+```math
 \cos(\phi_{legacy})=\cos\!\left(\frac{\pi}{6}\right)\approx 0.866025403784439
-$$
+```
 
-$$
+```math
 \sin(\phi_{legacy})=\sin\!\left(\frac{\pi}{6}\right)=0.5
-$$
+```
 
-$$
+```math
 K_{legacy\_ont}(0)
 =
 \alpha_{geo}\cos(\phi_{legacy})
 \approx 2.401132267705887
-$$
+```
 
-$$
+```math
 K_{legacy\_ont}(1)
 =
 \frac{\alpha_{geo}\cos(\omega_{legacy}+\phi_{legacy})}{1+\beta_{tors}}
 \approx 0.710493827279326
-$$
+```
 
 ### 4.2 Strict operational kernel
 
-$$
+```math
 K_{strict\_gate}(d)
 =
 \frac{\cos(\omega d+\phi)}{1+\beta d^{\eta}}
-$$
+```
 
 with current strict working tuple:
 
-$$
+```math
 \omega_{strict}=0.18575
-$$
+```
 
-$$
+```math
 \phi_{strict}=0.16250
-$$
+```
 
-$$
+```math
 \beta_{strict}=1.0
-$$
+```
 
-$$
+```math
 \eta_{strict}=1.8
-$$
+```
 
 Useful numerical values:
 
-$$
+```math
 \cos(\phi_{strict})\approx 0.986825903190329
-$$
+```
 
-$$
+```math
 \sin(\phi_{strict})\approx 0.161785774382645
-$$
+```
 
-$$
+```math
 K_{strict\_gate}(0)=\cos(\phi_{strict})\approx 0.986825903190329
-$$
+```
 
-$$
+```math
 K_{strict\_gate}(1)
 =
-\frac{\cos(0.18575+0.16250)}{1+1^ {1.8}}
+\frac{\cos(0.18575+0.16250)}{1+1^{1.8}}
 \approx 0.469985672645020
-$$
+```
 
 At the origin the current local derivative witness is:
 
-$$
+```math
 K'_{strict\_gate}(0)
 =
 -\omega_{strict}\sin(\phi_{strict})
 =
 -0.18575\sin(0.16250)
 \approx -0.030051707591576
-$$
+```
 
 ### 4.3 Historical legacy physical-role formulas
 
@@ -215,19 +215,19 @@ These remain **legacy-side only** and are **not silently transferred** onto
 
 Legacy heuristic EW-angle relation:
 
-$$
+```math
 \sin^2(\theta_W)=\frac{\alpha_{geo}}{12}
 \approx 0.231049060186648
-$$
+```
 
 Legacy model-level EM relation:
 
-$$
+```math
 \alpha_{EM}^{-1}
 =
 \frac{\alpha_{geo}}{2\beta_{tors}}(1-\beta_{tors})
 \approx 137.243141750869171
-$$
+```
 
 These formulas may be cited only with epistemic labels such as:
 
@@ -243,15 +243,15 @@ Release 6 also makes explicit how constant-like quantities enter the program.
 
 The base geometric-information constant is:
 
-$$
+```math
 \alpha_{geo}=4\ln 2
-$$
+```
 
 Numerically:
 
-$$
+```math
 \alpha_{geo}\approx 2.772588722239781
-$$
+```
 
 This is the cleanest canonical scalar in the legacy ontological layer.
 
@@ -259,24 +259,24 @@ This is the cleanest canonical scalar in the legacy ontological layer.
 
 The legacy electroweak-angle formula is:
 
-$$
+```math
 \sin^2(\theta_W)=\frac{\alpha_{geo}}{12}
-$$
+```
 
 so numerically:
 
-$$
+```math
 \sin^2(\theta_W)
 =
 \frac{2.772588722239781}{12}
 \approx 0.231049060186648
-$$
+```
 
 Equivalently:
 
-$$
+```math
 12\sin^2(\theta_W)\approx 2.772588722239781=\alpha_{geo}
-$$
+```
 
 In the current no-false-pass reading this remains:
 
@@ -288,37 +288,37 @@ In the current no-false-pass reading this remains:
 
 The legacy EM inverse-coupling relation is:
 
-$$
+```math
 \alpha_{EM}^{-1}
 =
 \frac{\alpha_{geo}}{2\beta_{tors}}(1-\beta_{tors})
-$$
+```
 
 Using:
 
-$$
+```math
 \alpha_{geo}\approx 2.772588722239781,
 \qquad
 \beta_{tors}=0.01
-$$
+```
 
 we get:
 
-$$
+```math
 \frac{\alpha_{geo}}{2\beta_{tors}}
 =
 \frac{2.772588722239781}{0.02}
 \approx 138.62943611198906
-$$
+```
 
 and then:
 
-$$
+```math
 \alpha_{EM}^{-1}
 \approx
 138.62943611198906 \times 0.99
 \approx 137.243141750869171
-$$
+```
 
 Again, in the present guarded reading this is:
 
@@ -331,23 +331,23 @@ Again, in the present guarded reading this is:
 On the strict side, the constant-like pair entering the later operational
 chain is:
 
-$$
+```math
 Z_{\beta}^{target}=100
-$$
+```
 
-$$
+```math
 \Delta\eta^{target}=0.8
-$$
+```
 
 and historical micro medians cited in the strict chain are:
 
-$$
+```math
 Z_{\beta}^{micro,median}\approx 114.740
-$$
+```
 
-$$
+```math
 \Delta\eta^{micro,median}\approx 1.125
-$$
+```
 
 These are not legacy ontological constants.
 They belong to the later operational / renormalization layer of the strict
@@ -359,27 +359,27 @@ Release 6 keeps three classes separate:
 
 1. **canonical ontological constants**
 
-   $$
+   ```math
    \alpha_{geo},\ \beta_{tors},\ \omega_{legacy},\ \phi_{legacy}
-   $$
+   ```
 
 2. **strict operational working constants**
 
-   $$
+   ```math
    \omega_{strict},\ \phi_{strict},\ \beta_{strict},\ \eta_{strict}
-   $$
+   ```
 
 3. **historical legacy physical-role formulas not yet bridged**
 
-   $$
+   ```math
    \sin^2(\theta_W)=\frac{\alpha_{geo}}{12}
-   $$
+   ```
 
-   $$
+   ```math
    \alpha_{EM}^{-1}
    =
    \frac{\alpha_{geo}}{2\beta_{tors}}(1-\beta_{tors})
-   $$
+   ```
 
 This separation is one of the main textbook lessons of Release 6.
 
@@ -392,7 +392,7 @@ of the current repo.
 
 Using the strict phase:
 
-$$
+```math
 \delta_{src}^{barrier}
 =
 \frac{\pi}{2}-|\phi_{strict}|
@@ -400,35 +400,35 @@ $$
 \frac{\pi}{2}-0.16250
 \approx 1.408296326794897
 >0
-$$
+```
 
 The sign witness is:
 
-$$
+```math
 \psi_{src}^{sign}
 =
 \operatorname{sign}(\cos(\phi_{strict}))
 =
 1
-$$
+```
 
 ### 5.2 Local barrier radius
 
-$$
+```math
 \varepsilon_{src}^{local}
 =
 \frac{1}{2}\left(\frac{\pi}{2}-|\phi_{strict}|\right)
 \approx 0.704148163397448
 >0
-$$
+```
 
 and the local stability statement is:
 
-$$
+```math
 |\epsilon|\le \varepsilon_{src}^{local}
 \Longrightarrow
 \operatorname{sign}\!\big(\cos(\phi_{strict}+\epsilon)\big)=+1
-$$
+```
 
 ### 5.3 Nontriviality / selector chain
 
@@ -460,99 +460,99 @@ It still remains below:
 
 The constructive preobserver source attempt is:
 
-$$
+```math
 S_{preLM}^{(v1)}
 =
 u_T+\cos(\phi_{legacy})u_L+\frac{\cos(\phi_{legacy})}{4}u_M
-$$
+```
 
 Numerically:
 
-$$
+```math
 S_{preLM}^{(v1)}
 =
 u_T+0.866025403784439\,u_L+0.216506350946110\,u_M
-$$
+```
 
 Its Euclidean coefficient norm is:
 
-$$
+```math
 \left\|S_{preLM}^{(v1)}\right\|
 =
 \sqrt{1+\cos^2(\phi_{legacy})+\left(\frac{\cos(\phi_{legacy})}{4}\right)^2}
 \approx 1.340475661845451
-$$
+```
 
 ### 6.2 First admissible orientation datum
 
 With
 
-$$
+```math
 \sqrt{1+\cos^2(\phi_{legacy})}
 \approx 1.322875655532295
-$$
+```
 
 the current orientation basis is:
 
-$$
+```math
 e_{\parallel}
 =
 \frac{u_T+\cos(\phi_{legacy})u_L}{\sqrt{1+\cos^2(\phi_{legacy})}}
-$$
+```
 
-$$
+```math
 e_{\perp}
 =
 \frac{-\cos(\phi_{legacy})u_T+u_L}{\sqrt{1+\cos^2(\phi_{legacy})}}
-$$
+```
 
 Numerically:
 
-$$
+```math
 e_{\parallel}
 \approx
 0.755928946018454\,u_T
 +
 0.654653670707977\,u_L
-$$
+```
 
-$$
+```math
 e_{\perp}
 \approx
 -0.654653670707977\,u_T
 +
 0.755928946018454\,u_L
-$$
+```
 
 ### 6.3 First selector bridge
 
 The bridge operator is:
 
-$$
+```math
 B_{sel}^{(v1)}
 =
 |e_{\parallel}\rangle\langle e_{\parallel}|
 -|e_{\perp}\rangle\langle e_{\perp}|
-$$
+```
 
 In the basis $(u_T,u_L)$ this takes the matrix form:
 
-$$
+```math
 B_{sel}^{(v1)}
 \approx
 \begin{pmatrix}
 0.142857142857143 & 0.989743318610787 \\
 0.989743318610787 & -0.142857142857143
 \end{pmatrix}
-$$
+```
 
 ### 6.4 First reduction split
 
 The reduction output used in the repo is:
 
-$$
+```math
 [r_+,r_-]=[1.40492895308,0]
-$$
+```
 
 So the current constructive reading is:
 
@@ -667,18 +667,18 @@ Because the repo exports:
 
 In formal language:
 
-```text
-current-state nonentering boundary
+```math
+\text{current-state nonentering boundary}
 \neq
-impossibility in principle
+\text{impossibility in principle}
 ```
 
 and
 
-```text
-missing ingredient
+```math
+\text{missing ingredient}
 \neq
-proof that no future ingredient can exist
+\text{proof that no future ingredient can exist}
 ```
 
 So the strongest honest textbook statement is:
@@ -840,91 +840,91 @@ To znaczy:
 
 ### 4.1 Legacy ontological / effective kernel
 
-$$
+```math
 K_{legacy\_ont}(d)
 =
 \frac{\alpha_{geo}\cos(\omega d+\phi)}{1+\beta_{tors} d}
-$$
+```
 
 z kanonicznymi wartosciami:
 
-$$
+```math
 \alpha_{geo}=4\ln 2 \approx 2.772588722239781
-$$
+```
 
-$$
+```math
 \omega_{legacy}=\frac{\pi}{4}\approx 0.785398163397448
-$$
+```
 
-$$
+```math
 \phi_{legacy}=\frac{\pi}{6}\approx 0.523598775598299
-$$
+```
 
-$$
+```math
 \beta_{tors}=0.01
-$$
+```
 
 Przydatne wartosci:
 
-$$
+```math
 \cos(\phi_{legacy})\approx 0.866025403784439
-$$
+```
 
-$$
+```math
 \sin(\phi_{legacy})=0.5
-$$
+```
 
-$$
+```math
 K_{legacy\_ont}(0)\approx 2.401132267705887
-$$
+```
 
-$$
+```math
 K_{legacy\_ont}(1)\approx 0.710493827279326
-$$
+```
 
 ### 4.2 Strict operational kernel
 
-$$
+```math
 K_{strict\_gate}(d)
 =
 \frac{\cos(\omega d+\phi)}{1+\beta d^{\eta}}
-$$
+```
 
 z aktualna working tuple:
 
-$$
+```math
 \omega_{strict}=0.18575,\qquad
 \phi_{strict}=0.16250,\qquad
 \beta_{strict}=1.0,\qquad
 \eta_{strict}=1.8
-$$
+```
 
 Przydatne wartosci:
 
-$$
+```math
 \cos(\phi_{strict})\approx 0.986825903190329
-$$
+```
 
-$$
+```math
 \sin(\phi_{strict})\approx 0.161785774382645
-$$
+```
 
-$$
+```math
 K_{strict\_gate}(0)\approx 0.986825903190329
-$$
+```
 
-$$
+```math
 K_{strict\_gate}(1)\approx 0.469985672645020
-$$
+```
 
 W punkcie zerowym lokalny derivative witness brzmi:
 
-$$
+```math
 K'_{strict\_gate}(0)
 =
 -0.18575\sin(0.16250)
 \approx -0.030051707591576
-$$
+```
 
 ### 4.3 Historyczne legacy physical-role formulas
 
@@ -933,19 +933,19 @@ Te relacje pozostaja **tylko legacy-side** i **nie sa cicho przenoszone** na
 
 Legacy heuristic EW-angle:
 
-$$
+```math
 \sin^2(\theta_W)=\frac{\alpha_{geo}}{12}
 \approx 0.231049060186648
-$$
+```
 
 Legacy model-level EM relation:
 
-$$
+```math
 \alpha_{EM}^{-1}
 =
 \frac{\alpha_{geo}}{2\beta_{tors}}(1-\beta_{tors})
 \approx 137.243141750869171
-$$
+```
 
 To wolno cytowac tylko z etykietami:
 
@@ -962,15 +962,15 @@ wielkosci wchodza do programu.
 
 Bazowa stala geometryczno-informacyjna to:
 
-$$
+```math
 \alpha_{geo}=4\ln 2
-$$
+```
 
 Numerycznie:
 
-$$
+```math
 \alpha_{geo}\approx 2.772588722239781
-$$
+```
 
 To jest najczystszy kanoniczny skalar w legacy ontological layer.
 
@@ -978,24 +978,24 @@ To jest najczystszy kanoniczny skalar w legacy ontological layer.
 
 Legacy formula dla kata elektroslabego brzmi:
 
-$$
+```math
 \sin^2(\theta_W)=\frac{\alpha_{geo}}{12}
-$$
+```
 
 czyli numerycznie:
 
-$$
+```math
 \sin^2(\theta_W)
 =
 \frac{2.772588722239781}{12}
 \approx 0.231049060186648
-$$
+```
 
 Rownowaznie:
 
-$$
+```math
 12\sin^2(\theta_W)\approx 2.772588722239781=\alpha_{geo}
-$$
+```
 
 W aktualnym no-false-pass reading pozostaje to:
 
@@ -1007,37 +1007,37 @@ W aktualnym no-false-pass reading pozostaje to:
 
 Legacy formula dla odwrotnosci sprzezenia elektromagnetycznego to:
 
-$$
+```math
 \alpha_{EM}^{-1}
 =
 \frac{\alpha_{geo}}{2\beta_{tors}}(1-\beta_{tors})
-$$
+```
 
 Przy:
 
-$$
+```math
 \alpha_{geo}\approx 2.772588722239781,
 \qquad
 \beta_{tors}=0.01
-$$
+```
 
 dostajemy:
 
-$$
+```math
 \frac{\alpha_{geo}}{2\beta_{tors}}
 =
 \frac{2.772588722239781}{0.02}
 \approx 138.62943611198906
-$$
+```
 
 i dalej:
 
-$$
+```math
 \alpha_{EM}^{-1}
 \approx
 138.62943611198906 \times 0.99
 \approx 137.243141750869171
-$$
+```
 
 Znowu: w obecnym guarded reading to jest:
 
@@ -1050,23 +1050,23 @@ Znowu: w obecnym guarded reading to jest:
 Po stronie strict constant-like pair wchodzacy do pozniejszego operational
 chain to:
 
-$$
+```math
 Z_{\beta}^{target}=100
-$$
+```
 
-$$
+```math
 \Delta\eta^{target}=0.8
-$$
+```
 
 a historyczne micro medians cytowane w strict chain to:
 
-$$
+```math
 Z_{\beta}^{micro,median}\approx 114.740
-$$
+```
 
-$$
+```math
 \Delta\eta^{micro,median}\approx 1.125
-$$
+```
 
 To nie sa legacy ontological constants.
 Naleza do pozniejszej operational / renormalization layer strict pipeline.
@@ -1077,27 +1077,27 @@ Release 6 rozdziela trzy klasy:
 
 1. **canonical ontological constants**
 
-   $$
+   ```math
    \alpha_{geo},\ \beta_{tors},\ \omega_{legacy},\ \phi_{legacy}
-   $$
+   ```
 
 2. **strict operational working constants**
 
-   $$
+   ```math
    \omega_{strict},\ \phi_{strict},\ \beta_{strict},\ \eta_{strict}
-   $$
+   ```
 
 3. **historical legacy physical-role formulas not yet bridged**
 
-   $$
+   ```math
    \sin^2(\theta_W)=\frac{\alpha_{geo}}{12}
-   $$
+   ```
 
-   $$
+   ```math
    \alpha_{EM}^{-1}
    =
    \frac{\alpha_{geo}}{2\beta_{tors}}(1-\beta_{tors})
-   $$
+   ```
 
 Ten rozdzial jest jedna z glownych podrecznikowych lekcji Release 6.
 
@@ -1107,40 +1107,40 @@ Ten rozdzial jest jedna z glownych podrecznikowych lekcji Release 6.
 
 Uzywajac strict phase:
 
-$$
+```math
 \delta_{src}^{barrier}
 =
 \frac{\pi}{2}-|\phi_{strict}|
 \approx 1.408296326794897
 >0
-$$
+```
 
 Witness znaku:
 
-$$
+```math
 \psi_{src}^{sign}
 =
 \operatorname{sign}(\cos(\phi_{strict}))
 =1
-$$
+```
 
 ### 5.2 Local barrier radius
 
-$$
+```math
 \varepsilon_{src}^{local}
 =
 \frac{1}{2}\left(\frac{\pi}{2}-|\phi_{strict}|\right)
 \approx 0.704148163397448
 >0
-$$
+```
 
 oraz:
 
-$$
+```math
 |\epsilon|\le \varepsilon_{src}^{local}
 \Longrightarrow
 \operatorname{sign}\!\big(\cos(\phi_{strict}+\epsilon)\big)=+1
-$$
+```
 
 ### 5.3 Nontriviality / selector chain
 
@@ -1170,92 +1170,92 @@ Nadal pozostaje ponizej:
 
 ### 6.1 First additive preobserver source object
 
-$$
+```math
 S_{preLM}^{(v1)}
 =
 u_T+\cos(\phi_{legacy})u_L+\frac{\cos(\phi_{legacy})}{4}u_M
-$$
+```
 
 Numerycznie:
 
-$$
+```math
 S_{preLM}^{(v1)}
 =
 u_T+0.866025403784439\,u_L+0.216506350946110\,u_M
-$$
+```
 
 Norma wspolczynnikowa:
 
-$$
+```math
 \left\|S_{preLM}^{(v1)}\right\|
 \approx 1.340475661845451
-$$
+```
 
 ### 6.2 First admissible orientation datum
 
 Przy
 
-$$
+```math
 \sqrt{1+\cos^2(\phi_{legacy})}\approx 1.322875655532295
-$$
+```
 
 mamy:
 
-$$
+```math
 e_{\parallel}
 =
 \frac{u_T+\cos(\phi_{legacy})u_L}{\sqrt{1+\cos^2(\phi_{legacy})}}
-$$
+```
 
-$$
+```math
 e_{\perp}
 =
 \frac{-\cos(\phi_{legacy})u_T+u_L}{\sqrt{1+\cos^2(\phi_{legacy})}}
-$$
+```
 
 Numerycznie:
 
-$$
+```math
 e_{\parallel}
 \approx
 0.755928946018454\,u_T
 +
 0.654653670707977\,u_L
-$$
+```
 
-$$
+```math
 e_{\perp}
 \approx
 -0.654653670707977\,u_T
 +
 0.755928946018454\,u_L
-$$
+```
 
 ### 6.3 First selector bridge
 
-$$
+```math
 B_{sel}^{(v1)}
 =
 |e_{\parallel}\rangle\langle e_{\parallel}|
 -|e_{\perp}\rangle\langle e_{\perp}|
-$$
+```
 
 W bazie $(u_T,u_L)$:
 
-$$
+```math
 B_{sel}^{(v1)}
 \approx
 \begin{pmatrix}
 0.142857142857143 & 0.989743318610787 \\
 0.989743318610787 & -0.142857142857143
 \end{pmatrix}
-$$
+```
 
 ### 6.4 First reduction split
 
-$$
+```math
 [r_+,r_-]=[1.40492895308,0]
-$$
+```
 
 Czyli aktualny konstrukcyjny odczyt brzmi:
 
@@ -1368,18 +1368,18 @@ Bo repo eksportuje:
 
 W jezyku formalnym:
 
-```text
-current-state nonentering boundary
+```math
+\text{current-state nonentering boundary}
 \neq
-impossibility in principle
+\text{impossibility in principle}
 ```
 
 oraz
 
-```text
-missing ingredient
+```math
+\text{missing ingredient}
 \neq
-proof that no future ingredient can exist
+\text{proof that no future ingredient can exist}
 ```
 
 Wiec najmocniejsze uczciwe zdanie podrecznikowe brzmi:
