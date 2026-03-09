@@ -345,6 +345,36 @@ declared-scope ToE preclosure support packet, still below any actual
 non-strict declared-scope ToE closure; `N272` now freezes one first explicit
 future-only non-strict declared-scope ToE closure target above that
 preclosure packet, but still far below any actual ToE closure;
+`F163/P253/N273` have been rewritten guardrail-safe as a local
+source-derivative calculation plus a boundary theorem, not a closure theorem;
+`N274` now packages that derivative only as one additional candidate-support
+ingredient for the non-strict declared-scope ToE lane, still below any actual
+non-strict, strict-core, or global ToE closure;
+`N275` now answers the direct closure question theorem-level by freezing one
+exact current closure-frontier packet: rigorous ToE closure is still not in
+current exported reach, and the missing ingredients are now named explicitly
+instead of being left vague;
+`N276` now adds one first actual strict-side attack surface above that
+frontier by packaging a live first-clause support packet for the genuine
+strict-side selector ingredient, still explicitly below admissible
+`S_sel_int`, strict-core selector closure, and ToE closure;
+`N277` now adds one explicit strict-side admissibility-principle attempt
+above `N276`; this makes the strict-side lane more constructive than before,
+but the principle is still not accepted and no admissible `S_sel_int` or
+closure claim is justified;
+`N278` now turns that into an explicit theory-level decision only in
+`strict_extension_only` scope; strict core remains unchanged, and no
+admissible `S_sel_int`, strict-core selector closure, or ToE closure is
+licensed by that move;
+`N279` now adds one direct clause-lift under that accepted extension
+principle: the first strict-side clause remains undischarged in strict core,
+but the seed candidate now has one explicit extension-scoped precursor lift,
+still below admissible `S_sel_int` and below any closure claim;
+`N280` now adds the matching second-clause extension lift: the carrier-typed
+strict-core clause remains undischarged in strict core, but the same seed
+candidate now also has one explicit extension-scoped carrier-typed precursor
+for later export work, still below actual `E_orient`, admissible
+`S_sel_int`, and any closure claim;
 the newest honest source-topology state remains below
 global `QW-2191` discharge and strict-core selector closure.
 ```
