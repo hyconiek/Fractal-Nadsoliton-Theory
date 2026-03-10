@@ -22,7 +22,7 @@ or only the weaker admissible result:
 |---|---|---|
 | sigma-int object-support witness present | YES | `N387` |
 | provider-object object-support witness present | YES | `N405` |
-| actual object-support carrier above witness present | NO | `N302` remains in force |
+| actual object-support carrier above witness present | YES | `T146/F301/N413` exports a post-witness carrier above `N405` |
 | object-support carrier target named | YES | `T140/F295` |
 
 ## Exact verdict
@@ -30,7 +30,6 @@ or only the weaker admissible result:
 The strongest honest current verdict is:
 
 ```text
-actual bridge/export-map object-support carrier above witness: absent
-future-only object-support carrier target naming: exported
+actual bridge/export-map object-support carrier above witness: present (provider-object witness track)
+object-support carrier target naming: exported
 ```
-

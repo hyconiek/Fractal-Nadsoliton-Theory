@@ -1,0 +1,57 @@
+{
+  "object": "Epsilon_strict_provider_object_carrier_layer_v1",
+  "input": {
+    "tau_src_candidate_packet": "tau_src_candidate_v1"
+  },
+  "contraction_parameter_source_map": "A_strict_provider_object_contraction_parameter_source_map_v1",
+  "derived_parameters": {
+    "phi": 0.1625,
+    "a": 0.9868259031903286,
+    "b": 0.9868259031903286,
+    "note": "(a,b) := (cos(phi), cos(phi)) on declared strict core branch (see N410)"
+  },
+  "carrier_form": {
+    "carrier_space": "l2(Z)",
+    "gauge_symmetry_group": {
+      "group": "U(1)",
+      "action": "(g · ψ)_k := g ψ_k"
+    },
+    "pair_index_set": ["pair1", "pair2"],
+    "provider_operators": {
+      "pair1": {
+        "formula": "(P ψ)_k := a ψ_{k-1}",
+        "a": 0.9868259031903286
+      },
+      "pair2": {
+        "formula": "(P ψ)_k := b ψ_{k+1}",
+        "b": 0.9868259031903286
+      }
+    },
+    "seed_state": {
+      "object": "psi_src_delta_0_candidate_v1",
+      "formula": "ψ_src := δ_0",
+      "note": "carrier representative for tau_src_candidate_v1 (no physical identification claimed)"
+    },
+    "output_carrier": {
+      "pair1": "[ψ_src]_{pair1}",
+      "pair2": "[ψ_src]_{pair2}"
+    }
+  },
+  "bridge_facing_projection_layer": "Xi_residual_datum_provider_object_carrier_bridge_export_map_object_support_projection_v1",
+  "notes": [
+    "artifact instance only; not an export-map object; does not discharge N302",
+    "observer-free: internal U(1) gauge; no K_obs-indexed selection",
+    "noncyclic: strict contraction; no theta inputs; no populated-instance inputs",
+    "selector-neutral: no S_sel_int claim; no QW-2191 discharge claim"
+  ],
+  "current_absence": [
+    "no discharge of N302 (actual bridge/export-map object support remains absent)",
+    "no provider-object realization theorem",
+    "no actual E_orient",
+    "no admissible S_sel_int",
+    "no strict-core selector closure",
+    "no QW-2191 discharge",
+    "no ToE closure"
+  ]
+}
+

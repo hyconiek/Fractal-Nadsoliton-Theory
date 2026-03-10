@@ -24,7 +24,7 @@ or only the weaker admissible result:
 | provider-object → residual projection layer present | YES | `N398` |
 | provider-object residual object-support witness present | YES | `N405` |
 | post-witness carrier target named | YES | `N407` |
-| actual post-witness object-support carrier present | NO | `N302` remains in force |
+| actual post-witness object-support carrier present | YES | `T146/F301/N413` exports a carrier above `N405` (below `N300`) |
 | preobject carrier candidate exported | YES | `T141/F296` |
 
 ## Exact verdict
@@ -32,7 +32,6 @@ or only the weaker admissible result:
 The strongest honest current verdict is:
 
 ```text
-actual post-witness object-support carrier: absent
+actual post-witness object-support carrier: present (provider-object witness track)
 explicit preobject carrier candidate: exported
 ```
-

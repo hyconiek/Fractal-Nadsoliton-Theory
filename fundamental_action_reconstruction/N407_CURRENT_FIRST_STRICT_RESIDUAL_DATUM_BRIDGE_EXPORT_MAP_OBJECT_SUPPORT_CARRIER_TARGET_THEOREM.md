@@ -5,10 +5,11 @@ As of: `2026-03-10`
 
 ## Goal
 
-Package theorem-level the strongest honest current statement about the missing
+Package theorem-level the strongest honest current statement about the
 post-witness **object-support carrier** layer on the strict residual-datum
-bridge/export-map lane, without pretending that any such carrier is already
-exported.
+bridge/export-map lane after the first route-local discharge instance
+(`N413`), while staying explicitly below export-map export (`N300`), selector
+closure, and ToE closure.
 
 ## Theorem-level conclusion
 
@@ -25,12 +26,14 @@ with the following exact meaning:
 2. `N405` remains correct:
    - the provider-object carrier residual branch reaches one object-support
      witness layer,
-3. `N302` remains correct:
-   - no actual bridge/export-map object support carrier above those witnesses
-     is exported on the current repo state,
-4. therefore the missing post-witness carrier layer may now be sharply named
-   as one explicit future-only target object with explicit acceptance tests
-   (`T140`),
+3. `N413` now exports one actual post-witness carrier:
+   - `Omicron_residual_datum_bridge_export_map_object_support_carrier_v1`,
+   - discharging the target on the provider-object witness track (`N405`),
+   - without using `sigma_int_candidate` as a strict-core source datum,
+   - while keeping `N300` (export-map nonexport) in force,
+4. therefore the repo now has both:
+   - sharp target naming (`T140`), and
+   - one route-local discharge instance above witness (`N413`),
 5. no bridge/export-map export, theta export, selector closure, or ToE closure
    claim is implied.
 
@@ -38,16 +41,20 @@ with the following exact meaning:
 
 `N407` proves only this narrower statement:
 
-1. the repo now names one exact future-only target object for the missing
-   post-witness object-support carrier layer on the strict residual-datum
-   bridge/export-map lane.
+1. the repo names one explicit target object for the post-witness object-support
+   carrier layer (`T140`),
+2. the repo exports one explicit discharge instance above the provider-object
+   witness track (`N413`),
+3. no bridge/export-map export, theta export, selector closure, or ToE closure
+   claim is implied.
 
 ## What N407 does not prove
 
 `N407` does not prove:
 
-1. actual object-support carrier discharge,
-2. discharge of `N302`,
+1. that the post-witness carrier discharges the sigma-int witness track
+   (`N387`) without discharging `T123/T124`,
+2. discharge of `N302` on the sigma-int third-provider route,
 3. bridge/export-map export,
 4. theta export / pair population,
 5. admissible `S_sel_int`,
@@ -56,11 +63,12 @@ with the following exact meaning:
 
 ## Consequence (next honest step)
 
-After `N407`, the next honest move is no longer “name the missing carrier”.
-It must be one genuinely new ingredient:
+After `N407` (and `N413`), the next honest move is no longer “add a post-witness
+carrier”.
+It must be either:
 
-1. discharge of the carrier target on a declared strict domain, and/or
-2. one actual bridge/export-map object breaking the `N300` nonexport boundary,
+1. break the export-map nonexport boundary by exporting one actual bridge/export
+   map object (`N300`), or
+2. introduce a genuinely new blocker-cut changing the map-layer diagnosis,
 
-both noncyclically and observer-free.
-
+both noncyclically and observer-free, and without selector false-pass.

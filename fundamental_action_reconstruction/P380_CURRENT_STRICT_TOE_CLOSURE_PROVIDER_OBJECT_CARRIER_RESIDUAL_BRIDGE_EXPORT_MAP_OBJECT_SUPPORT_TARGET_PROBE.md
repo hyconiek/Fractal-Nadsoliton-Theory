@@ -25,7 +25,7 @@ with explicit acceptance tests (T139).
 |---|---|---|
 | object-support projection layer present | YES | `N398` |
 | object-support witness present | YES | `N405` |
-| actual object support present | NO | `N302` remains in force |
+| actual post-witness object-support carrier present | YES | `T146/F301/N413` exports a carrier above `N405` (below `N300`) |
 | actual object-support target named | YES | `T139/F294` |
 
 ## Exact verdict
@@ -33,7 +33,6 @@ with explicit acceptance tests (T139).
 The strongest honest current verdict is:
 
 ```text
-actual bridge/export-map object support: absent
-future-only object-support target naming: exported
+post-witness object-support carrier: present (provider-object witness track)
+object-support target naming: exported
 ```
-

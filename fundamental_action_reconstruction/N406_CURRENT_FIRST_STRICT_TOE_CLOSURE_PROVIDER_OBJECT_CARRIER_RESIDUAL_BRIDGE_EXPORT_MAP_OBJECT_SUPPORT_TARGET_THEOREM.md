@@ -5,14 +5,16 @@ As of: `2026-03-10`
 
 ## Goal
 
-Package theorem-level the strongest honest current statement about the next
-missing post-witness layer on the provider-object carrier residual route:
+Package theorem-level the strongest honest current statement about the
+provider-object carrier residual post-witness object-support target after the
+first post-witness carrier discharge (`N413`), while staying explicitly below:
 
 ```text
 actual bridge/export-map object support
 ```
 
-without pretending that the layer is already discharged.
+export-map export (`N300`), theta export (`N18`), selector closure, and ToE
+closure.
 
 ## Theorem-level conclusion
 
@@ -28,10 +30,13 @@ with the following exact meaning:
    - one object-support projection layer exists,
 2. `N405` remains correct:
    - one object-support witness layer exists,
-3. `N302` remains correct:
-   - actual bridge/export-map object support is still not exported,
-4. therefore the missing post-witness layer may now be sharply named as one
-   explicit future-only target object with explicit acceptance tests (`T139`),
+3. `N413` now exports one actual post-witness object-support carrier above
+   `N405`:
+   - `Omicron_residual_datum_bridge_export_map_object_support_carrier_v1`,
+   - discharging the provider-object post-witness object-support target,
+   - while keeping `N300` (export-map nonexport) in force,
+4. therefore the provider-object post-witness target from `T139` is now
+   discharged on the declared strict domain by an explicit carrier object,
 5. no bridge/export-map export, theta export, selector closure, or ToE closure
    claim is implied.
 
@@ -47,22 +52,21 @@ with the following exact meaning:
 
 `N406` does not prove:
 
-1. actual object support discharge,
-2. bridge/export-map export,
-3. theta export / pair population,
-4. admissible `S_sel_int`,
-5. selector closure or `QW-2191` discharge,
-6. ToE closure.
+1. any bridge/export-map export (`N300` remains in force),
+2. theta export / pair population,
+3. admissible `S_sel_int`,
+4. selector closure or `QW-2191` discharge,
+5. ToE closure.
 
 ## Consequence (next honest step)
 
-After `N406`, the next honest move is no longer “add more witness layers”.
+After `N406` (and `N413`), the next honest move is no longer “discharge the
+post-witness carrier target”.
 
-It must be one genuinely new ingredient:
+It must be either:
 
-1. discharge of the provider-object carrier object-support target on a declared
-   strict domain, and/or
-2. one actual bridge/export-map object breaking the `N300` nonexport boundary,
+1. break the export-map nonexport boundary by exporting one actual bridge/export
+   map object (`N300`), or
+2. introduce a genuinely new blocker-cut changing the map-layer diagnosis,
 
-both noncyclically and observer-free.
-
+both noncyclically and observer-free, and without selector false-pass.
