@@ -1,0 +1,115 @@
+{
+  "object": "Pi_residual_datum_provider_object_carrier_bridge_export_map_object_support_carrier_preobject_candidate_v1",
+  "input": {
+    "provider_object_carrier": "Pi_strict_provider_object_carrier_orbit_quotient_candidate_v1",
+    "a": 0.5,
+    "b": 0.6,
+    "K": 11
+  },
+  "carrier_space": "l2(Z)",
+  "gauge_symmetry_group": {
+    "object": "G_phase_v1",
+    "group": "U(1)",
+    "action": "(g · ψ)_k := g ψ_k"
+  },
+  "pair_index_set": [
+    "pair1",
+    "pair2"
+  ],
+  "provider_operators": {
+    "pair1": {
+      "formula": "(P ψ)_k := a ψ_{k-1}",
+      "a": 0.5
+    },
+    "pair2": {
+      "formula": "(P ψ)_k := b ψ_{k+1}",
+      "b": 0.6
+    }
+  },
+  "seed_state": {
+    "object": "psi_src_delta_0_candidate_v1",
+    "formula": "ψ_src := δ_0",
+    "note": "carrier representative for tau_src_candidate_v1 (not a discharged identification)"
+  },
+  "nad12_depth": {
+    "K": 11,
+    "pair1_weights": [
+      0.5001221001221001,
+      0.25006105006105006,
+      0.12503052503052503,
+      0.06251526251526252,
+      0.03125763125763126,
+      0.01562881562881563,
+      0.007814407814407814,
+      0.003907203907203907,
+      0.0019536019536019536,
+      0.0009768009768009768,
+      0.0004884004884004884,
+      0.0002442002442002442
+    ],
+    "pair2_weights": [
+      0.4008726124217058,
+      0.24052356745302347,
+      0.14431414047181407,
+      0.08658848428308843,
+      0.05195309056985307,
+      0.031171854341911834,
+      0.0187031126051471,
+      0.01122186756308826,
+      0.006733120537852955,
+      0.004039872322711774,
+      0.002423923393627064,
+      0.0014543540361762384
+    ]
+  },
+  "normalized_orbit_representatives": {
+    "pair1": "q_{1,k} := P_pair1^k(ψ_src)/||P_pair1^k(ψ_src)|| = δ_k",
+    "pair2": "q_{2,k} := P_pair2^k(ψ_src)/||P_pair2^k(ψ_src)|| = δ_{-k}"
+  },
+  "preobject_carrier_vectors": {
+    "pair1": {
+      "0": 0.5001221001221001,
+      "1": 0.25006105006105006,
+      "2": 0.12503052503052503,
+      "3": 0.06251526251526252,
+      "4": 0.03125763125763126,
+      "5": 0.01562881562881563,
+      "6": 0.007814407814407814,
+      "7": 0.003907203907203907,
+      "8": 0.0019536019536019536,
+      "9": 0.0009768009768009768,
+      "10": 0.0004884004884004884,
+      "11": 0.0002442002442002442
+    },
+    "pair2": {
+      "0": 0.4008726124217058,
+      "-1": 0.24052356745302347,
+      "-2": 0.14431414047181407,
+      "-3": 0.08658848428308843,
+      "-4": 0.05195309056985307,
+      "-5": 0.031171854341911834,
+      "-6": 0.0187031126051471,
+      "-7": 0.01122186756308826,
+      "-8": 0.006733120537852955,
+      "-9": 0.004039872322711774,
+      "-10": 0.002423923393627064,
+      "-11": 0.0014543540361762384
+    }
+  },
+  "notes": [
+    "candidate-only preobject; not an export-spec; not a discharge",
+    "noncyclic: uses no theta inputs and no populated-instance inputs",
+    "observer-free: no K_obs-indexed selection as primary source",
+    "intended as a bridge-facing carrier field under T127/F280, without upgrading status"
+  ],
+  "current_absence": [
+    "no discharge of N302",
+    "no actual post-witness object-support carrier",
+    "no export-map object",
+    "no actual theta export",
+    "no admissible S_sel_int",
+    "no strict-core selector closure",
+    "no QW-2191 discharge",
+    "no ToE closure"
+  ]
+}
