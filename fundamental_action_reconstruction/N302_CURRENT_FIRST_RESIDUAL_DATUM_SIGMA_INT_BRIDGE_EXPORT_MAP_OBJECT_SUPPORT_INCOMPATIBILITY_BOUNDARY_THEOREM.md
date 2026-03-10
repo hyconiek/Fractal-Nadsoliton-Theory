@@ -1,7 +1,7 @@
 # N302 Current First Residual Datum Sigma-Int Bridge Export Map Object Support Incompatibility Boundary Theorem
 
 Status: `N302_DISCHARGED_CURRENT_FIRST_RESIDUAL_DATUM_SIGMA_INT_BRIDGE_EXPORT_MAP_OBJECT_SUPPORT_INCOMPATIBILITY_BOUNDARY_THEOREM_NO_FALSE_PASS`
-As of: `2026-03-09`
+As of: `2026-03-10`
 
 ## Goal
 
@@ -37,10 +37,14 @@ with the following scoped meaning:
 5. the exact missing object remains sharply localized by `P4/P5`,
 6. the route still has only template-level carrier grammar and minimal
    persisted template carrier through `C40-C46`,
-7. no actual bridge/export-map object support witness is exported,
-8. no actual object-to-map support projection is exported,
-9. therefore another positive lift using only the same current exported
-   material is not the honest next move for this object layer.
+7. one object-to-map support projection candidate and projection layer are now
+   exported (`N384`, `N385`), but remain strictly below actual object support,
+8. one object-support witness candidate and witness are now exported
+   (`N386`, `N387`), but remain strictly below actual object support,
+9. no actual bridge/export-map object support is exported,
+10. therefore another positive lift into **actual** bridge/export-map object
+    support using only the same current exported
+    material is not the honest next move for this object layer.
 
 ## What N302 does prove
 
@@ -53,8 +57,9 @@ with the following scoped meaning:
 3. the exact remaining blocker is now named sharply as:
    - future-only object target only,
    - template-level carrier only,
-   - no actual bridge/export-map object support,
-   - no actual object-to-map support projection.
+   - projection present but still below actual object support,
+   - witness present but still below actual object support,
+   - no actual bridge/export-map object support.
 
 ## Why this is the honest theorem
 
@@ -70,8 +75,12 @@ Because on the current repo state:
 5. `P4/P5` already localize the exact missing strict-core object,
 6. `C40-C46` already add carrier grammar and one minimal persisted template
    file,
-7. but no actual bridge/export-map object support or actual object-to-map
-   support projection sits above that target layer.
+7. `N385` now exports an actual object-to-map support projection layer into the
+   object-support frontier,
+8. `N387` now exports one actual object-support witness layer above that
+   projection layer,
+9. but no actual bridge/export-map object support sits above that witness
+   layer.
 
 So the current repo can honestly name the blocker, but cannot honestly lift
 through it.

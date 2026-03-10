@@ -1,0 +1,51 @@
+{
+  "object": "Pi_strict_provider_object_carrier_orbit_quotient_candidate_v1",
+  "input": {
+    "tau_src_candidate_packet": "tau_src_candidate_v1"
+  },
+  "carrier_space": "l2(Z)",
+  "gauge_symmetry_group": {
+    "object": "G_phase_v1",
+    "group": "U(1)",
+    "action": "(g · ψ)_k := g ψ_k"
+  },
+  "pair_index_set": ["pair1", "pair2"],
+  "provider_operators": {
+    "pair1": {
+      "object": "P_pair1_shift_contraction_candidate_v1",
+      "formula": "(P ψ)_k := a ψ_{k-1}",
+      "a": 0.5
+    },
+    "pair2": {
+      "object": "P_pair2_shift_contraction_candidate_v1",
+      "formula": "(P ψ)_k := b ψ_{k+1}",
+      "b": 0.6
+    }
+  },
+  "seed_state": {
+    "object": "psi_src_delta_0_candidate_v1",
+    "formula": "ψ_src := δ_0",
+    "note": "carrier representative for tau_src_candidate_v1 (not a discharged identification)"
+  },
+  "orbit_quotient_relation": "ψ ~_pairi φ :⇔ ∃ m,n>=0, ∃ g∈U(1) such that P_pairi^m(ψ) = g · P_pairi^n(φ)",
+  "carrier": {
+    "pair1": "[ψ_src]_{pair1}",
+    "pair2": "[ψ_src]_{pair2}"
+  },
+  "notes": [
+    "candidate-only artifact; not an export-spec; not a discharge",
+    "noncyclic mechanism: strict contraction implies no nonzero finite cycles",
+    "no theta inputs; no populated-instance inputs",
+    "no K_obs-indexed selection as primary source"
+  ],
+  "current_absence": [
+    "no discharge of Epsilon_strict_provider_object_carrier_layer_target_v1",
+    "no provider-object realization theorem",
+    "no residual bridge/export-map object support witness (N302 remains in force)",
+    "no admissible S_sel_int",
+    "no strict-core selector closure",
+    "no QW-2191 discharge",
+    "no ToE closure"
+  ]
+}
+

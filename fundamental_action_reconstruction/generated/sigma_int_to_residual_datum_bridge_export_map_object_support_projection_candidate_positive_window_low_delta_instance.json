@@ -1,0 +1,103 @@
+{
+  "object": "Pi_sigma_int_to_residual_datum_bridge_export_map_object_support_projection_candidate_positive_window_low_delta_v1",
+  "input": {
+    "sigma_int_candidate": 1,
+    "eps": 0.5,
+    "delta_d": 0.05
+  },
+  "pair_family": ["pair1", "pair2"],
+  "strict_kernel": {
+    "omega": 0.18575,
+    "phi": 0.1625,
+    "beta": 1.0,
+    "eta": 1.8
+  },
+  "positive_window": {
+    "d_local": 3.7908380263658046,
+    "delta_max_for_12_slots": 0.3446216387605277,
+    "contract": "delta_d <= delta_max_for_12_slots => all paths satisfy d in [0,d_local]"
+  },
+  "E_pair_generator": {
+    "object": "G_sigma_int_to_E_pair_generator_candidate_positive_window_low_delta_v1",
+    "sign_mask_definition": {
+      "pair1": "b_{1,k} := (-1)^k",
+      "pair2": "b_{2,k} := (-1)^(k+1)"
+    },
+    "distance_law": "d_{i,k} := k*delta_d",
+    "weight_law": "w_{i,k} := (1 + sigma_int_candidate*eps*b_{i,k})/12"
+  },
+  "E_pair": {
+    "pair1": {
+      "paths": [
+        { "d": 0.0, "w": 0.125 },
+        { "d": 0.05, "w": 0.041666666666666664 },
+        { "d": 0.1, "w": 0.125 },
+        { "d": 0.15000000000000002, "w": 0.041666666666666664 },
+        { "d": 0.2, "w": 0.125 },
+        { "d": 0.25, "w": 0.041666666666666664 },
+        { "d": 0.30000000000000004, "w": 0.125 },
+        { "d": 0.35000000000000003, "w": 0.041666666666666664 },
+        { "d": 0.4, "w": 0.125 },
+        { "d": 0.45, "w": 0.041666666666666664 },
+        { "d": 0.5, "w": 0.125 },
+        { "d": 0.55, "w": 0.041666666666666664 }
+      ]
+    },
+    "pair2": {
+      "paths": [
+        { "d": 0.0, "w": 0.041666666666666664 },
+        { "d": 0.05, "w": 0.125 },
+        { "d": 0.1, "w": 0.041666666666666664 },
+        { "d": 0.15000000000000002, "w": 0.125 },
+        { "d": 0.2, "w": 0.041666666666666664 },
+        { "d": 0.25, "w": 0.125 },
+        { "d": 0.30000000000000004, "w": 0.041666666666666664 },
+        { "d": 0.35000000000000003, "w": 0.125 },
+        { "d": 0.4, "w": 0.041666666666666664 },
+        { "d": 0.45, "w": 0.125 },
+        { "d": 0.5, "w": 0.041666666666666664 },
+        { "d": 0.55, "w": 0.125 }
+      ]
+    }
+  },
+  "phasor_reduction": {
+    "object": "M_fractal_light_path_pair_map_rule_candidate_v1",
+    "pair1": {
+      "X_cand": 0.8819272509832096,
+      "Y_cand": 0.18648916198948262,
+      "theta_cand": 0.2083866708565345
+    },
+    "pair2": {
+      "X_cand": 0.8700903452270705,
+      "Y_cand": 0.1880349424250892,
+      "theta_cand": 0.2128365651850983
+    }
+  },
+  "residual_datum_target_slot_candidate_population_record": {
+    "stage": "candidate_only",
+    "theta_1_cand": 0.2083866708565345,
+    "theta_2_cand": 0.2128365651850983,
+    "u_1_cand_formula": "cos(theta_1_cand)c_1 + sin(theta_1_cand)s_1",
+    "u_2_cand_formula": "cos(theta_2_cand)c_2 + sin(theta_2_cand)s_2",
+    "S_orient_cand": "span{u_1_cand,u_2_cand}"
+  },
+  "notes": [
+    "candidate-only projection artifact; not a theorem; not an export-spec",
+    "positive-window contract: all d in [0,d_local] => no atan2 degeneracy",
+    "low-delta calibration: keeps theta_i^cand close to origin-phase scale",
+    "noncyclic: does not take theta inputs or populated instances as input",
+    "observer-free: no K_obs-indexed selection as primary source"
+  ],
+  "current_absence": [
+    "no strict-core equivalence/export theorem sigma_int_candidate <-> residual orientation datum",
+    "no discharge of T2",
+    "no discharge of N302",
+    "no bridge/export-map object support",
+    "no export-map object",
+    "no admissible S_sel_int",
+    "no strict-core selector closure",
+    "no QW-2191 discharge",
+    "no ToE closure"
+  ]
+}
+

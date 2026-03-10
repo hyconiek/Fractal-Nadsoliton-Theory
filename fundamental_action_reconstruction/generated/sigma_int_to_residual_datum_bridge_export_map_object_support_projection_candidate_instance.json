@@ -1,0 +1,91 @@
+{
+  "object": "Pi_sigma_int_to_residual_datum_bridge_export_map_object_support_projection_candidate_v1",
+  "input": {
+    "sigma_int_candidate": 1,
+    "eps": 0.5
+  },
+  "pair_family": ["pair1", "pair2"],
+  "strict_kernel": {
+    "omega": 0.18575,
+    "phi": 0.1625,
+    "beta": 1.0,
+    "eta": 1.8
+  },
+  "E_pair_generator": {
+    "object": "G_sigma_int_to_E_pair_generator_candidate_v1",
+    "sign_mask_definition": {
+      "pair1": "b_{1,k} := (-1)^k",
+      "pair2": "b_{2,k} := (-1)^(k+1)"
+    }
+  },
+  "E_pair": {
+    "pair1": {
+      "paths": [
+        { "d": 0.0, "w": 0.125 },
+        { "d": 1.0, "w": 0.041666666666666664 },
+        { "d": 2.0, "w": 0.125 },
+        { "d": 3.0, "w": 0.041666666666666664 },
+        { "d": 4.0, "w": 0.125 },
+        { "d": 5.0, "w": 0.041666666666666664 },
+        { "d": 6.0, "w": 0.125 },
+        { "d": 7.0, "w": 0.041666666666666664 },
+        { "d": 8.0, "w": 0.125 },
+        { "d": 9.0, "w": 0.041666666666666664 },
+        { "d": 10.0, "w": 0.125 },
+        { "d": 11.0, "w": 0.041666666666666664 }
+      ]
+    },
+    "pair2": {
+      "paths": [
+        { "d": 0.0, "w": 0.041666666666666664 },
+        { "d": 1.0, "w": 0.125 },
+        { "d": 2.0, "w": 0.041666666666666664 },
+        { "d": 3.0, "w": 0.125 },
+        { "d": 4.0, "w": 0.041666666666666664 },
+        { "d": 5.0, "w": 0.125 },
+        { "d": 6.0, "w": 0.041666666666666664 },
+        { "d": 7.0, "w": 0.125 },
+        { "d": 8.0, "w": 0.041666666666666664 },
+        { "d": 9.0, "w": 0.125 },
+        { "d": 10.0, "w": 0.041666666666666664 },
+        { "d": 11.0, "w": 0.125 }
+      ]
+    }
+  },
+  "phasor_reduction": {
+    "object": "M_fractal_light_path_pair_map_rule_candidate_v1",
+    "pair1": {
+      "X_cand": 0.17754934606364764,
+      "Y_cand": 0.0659155748743875,
+      "theta_cand": 0.355480834361171
+    },
+    "pair2": {
+      "X_cand": 0.12318184935198456,
+      "Y_cand": 0.0614165079110265,
+      "theta_cand": 0.46251422428967703
+    }
+  },
+  "residual_datum_target_slot_candidate_population_record": {
+    "stage": "candidate_only",
+    "theta_1_cand": 0.355480834361171,
+    "theta_2_cand": 0.46251422428967703,
+    "u_1_cand_formula": "cos(theta_1_cand)c_1 + sin(theta_1_cand)s_1",
+    "u_2_cand_formula": "cos(theta_2_cand)c_2 + sin(theta_2_cand)s_2",
+    "S_orient_cand": "span{u_1_cand,u_2_cand}"
+  },
+  "notes": [
+    "candidate-only projection artifact; not a theorem; not an export-spec",
+    "noncyclic: does not take theta inputs or populated instances as input",
+    "observer-free: no K_obs-indexed selection as primary source"
+  ],
+  "current_absence": [
+    "no strict-core equivalence/export theorem sigma_int_candidate <-> residual orientation datum",
+    "no discharge of T2",
+    "no residual bridge/export-map object support witness",
+    "no admissible S_sel_int",
+    "no strict-core selector closure",
+    "no QW-2191 discharge",
+    "no ToE closure"
+  ]
+}
+

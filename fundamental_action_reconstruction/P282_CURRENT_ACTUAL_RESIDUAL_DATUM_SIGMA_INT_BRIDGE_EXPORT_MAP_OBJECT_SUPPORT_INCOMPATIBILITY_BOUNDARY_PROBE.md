@@ -1,7 +1,7 @@
 # P282 Current Actual Residual Datum Sigma-Int Bridge Export Map Object Support Incompatibility Boundary Probe
 
 Status: `P282_EXECUTED_CURRENT_ACTUAL_RESIDUAL_DATUM_SIGMA_INT_BRIDGE_EXPORT_MAP_OBJECT_SUPPORT_INCOMPATIBILITY_BOUNDARY_PROBE_NO_FALSE_PASS`
-As of: `2026-03-09`
+As of: `2026-03-10`
 
 ## Goal
 
@@ -28,14 +28,16 @@ boundary packet introduced in `F191`, while keeping the result:
 4. the exact missing object remains sharply localized by `P4/P5`,
 5. template-level carrier grammar and minimal persisted template file remain
    present through `C40-C46`,
-6. no actual bridge/export-map object support witness is exported on the
-   current repo state,
-7. no actual object-to-map support projection is exported on the current repo
+6. one object-support witness candidate and witness are exported
+   (`N386`, `N387`) but remain strictly below actual object support,
+7. one object-to-map support projection candidate/layer is exported
+   (`N384`, `N385`) but remains strictly below actual object support,
+8. no actual bridge/export-map object support is exported on the current repo
    state,
-8. the strongest honest current answer is therefore one incompatibility
-   boundary between future-only object target and actual object support,
-9. no map export, theta export, component-2 support, or closure claim is
-   made.
+9. the strongest honest current answer is therefore still one incompatibility
+   boundary between the current witness layer and actual object support,
+10. no map export, theta export, component-2 support, or closure claim is
+    made.
 
 ## Result
 

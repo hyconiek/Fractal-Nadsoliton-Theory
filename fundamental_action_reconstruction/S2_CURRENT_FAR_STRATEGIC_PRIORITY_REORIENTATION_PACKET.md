@@ -42,13 +42,17 @@ The strict-side sources available are:
 1. `K_strict_gate(d) = cos(omega*d+phi)/(1+beta*d^eta)` with known parameters,
 2. Nadsoliton ontology (AX9/F1) as strict-side source (not legacy import),
 3. Shannon Information Void Asymmetry: `alpha_geo = 4*ln(2)` as the
-   nadsoliton-derived asymmetry measure,
+   strict-side asymmetry measure candidate (not legacy import),
 4. The full nad12-sigma residual route (N328-N345) as carrier infrastructure,
 5. Feeder law candidates using Shannon weighting (N345-N349).
 
-The agent MUST now treat `4*ln(2)` as a strict-side ontological constant
-(derived from the nadsoliton's informational nature), NOT as a legacy import.
-This removes the "actual strict derivation of 4 ln 2" blocker.
+The agent MUST treat `4*ln(2)` as a strict-side **strategic premise** for
+candidate construction, NOT as a legacy import.
+
+Status discipline: on the current repo state, `4*ln(2)` is still **not**
+exported as `actual strict-derived`. It must not be used to silently upgrade
+any `candidate` into an `actual` ingredient, and it must not be used to imply
+selector closure or `QW-2191` discharge.
 
 ## Priority 2: QW-2191 selector obstruction
 
@@ -101,7 +105,7 @@ The current priority order is now:
 But it DOES claim:
 
 - that legacy kernel bridge is no longer an open problem (retired by decree),
-- that `4*ln(2)` is a strict-side source (nadsoliton-derived, not legacy),
+- that `4*ln(2)` is a strict-side premise/source for strategy (not legacy),
 - that the agent must now pursue strict-only closure as Priority 1.
 
 ## Product

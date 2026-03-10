@@ -1,0 +1,74 @@
+{
+  "object": "M_fractal_light_path_pair_map_rule_candidate_v1",
+  "pair_family": ["pair1", "pair2"],
+  "strict_kernel": {
+    "omega": 0.18575,
+    "phi": 0.1625,
+    "beta": 1.0,
+    "eta": 1.8
+  },
+  "E_pair_generator": {
+    "object": "G_sigma_int_to_E_pair_generator_candidate_v1",
+    "sigma_int_candidate": 1,
+    "eps": 0.5,
+    "sign_mask_definition": {
+      "pair1": "b_{1,k} := (-1)^k",
+      "pair2": "b_{2,k} := (-1)^(k+1)"
+    },
+    "notes": [
+      "candidate-only generator; not strict-derived; not unique",
+      "noncyclic: does not take theta inputs or populated instances as input",
+      "observer-free: no K_obs-indexed selection as primary source"
+    ]
+  },
+  "E_pair": {
+    "pair1": {
+      "paths": [
+        { "d": 0.0, "w": 0.125 },
+        { "d": 1.0, "w": 0.041666666666666664 },
+        { "d": 2.0, "w": 0.125 },
+        { "d": 3.0, "w": 0.041666666666666664 },
+        { "d": 4.0, "w": 0.125 },
+        { "d": 5.0, "w": 0.041666666666666664 },
+        { "d": 6.0, "w": 0.125 },
+        { "d": 7.0, "w": 0.041666666666666664 },
+        { "d": 8.0, "w": 0.125 },
+        { "d": 9.0, "w": 0.041666666666666664 },
+        { "d": 10.0, "w": 0.125 },
+        { "d": 11.0, "w": 0.041666666666666664 }
+      ]
+    },
+    "pair2": {
+      "paths": [
+        { "d": 0.0, "w": 0.041666666666666664 },
+        { "d": 1.0, "w": 0.125 },
+        { "d": 2.0, "w": 0.041666666666666664 },
+        { "d": 3.0, "w": 0.125 },
+        { "d": 4.0, "w": 0.041666666666666664 },
+        { "d": 5.0, "w": 0.125 },
+        { "d": 6.0, "w": 0.041666666666666664 },
+        { "d": 7.0, "w": 0.125 },
+        { "d": 8.0, "w": 0.041666666666666664 },
+        { "d": 9.0, "w": 0.125 },
+        { "d": 10.0, "w": 0.041666666666666664 },
+        { "d": 11.0, "w": 0.125 }
+      ]
+    }
+  },
+  "notes": [
+    "template-level instance produced by a candidate generator; not a theorem",
+    "intended only for operational evaluation of T115 without cyclic inputs"
+  ],
+  "current_absence": [
+    "no actual fractal-to-pair map rule discharge",
+    "no actual theta export",
+    "no populated basis-pair instance",
+    "no component-2 support witness",
+    "no E_orient",
+    "no admissible S_sel_int",
+    "no strict-core selector closure",
+    "no QW-2191 discharge",
+    "no ToE closure"
+  ]
+}
+

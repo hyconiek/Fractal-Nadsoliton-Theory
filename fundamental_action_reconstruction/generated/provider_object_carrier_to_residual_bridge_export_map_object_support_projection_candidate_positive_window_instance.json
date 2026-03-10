@@ -1,0 +1,101 @@
+{
+  "object": "Pi_strict_provider_object_carrier_to_residual_bridge_export_map_object_support_projection_candidate_positive_window_v1",
+  "input": {
+    "provider_object_carrier": "Pi_strict_provider_object_carrier_orbit_quotient_candidate_v1",
+    "a": 0.5,
+    "b": 0.6,
+    "delta_d": 0.3
+  },
+  "pair_family": ["pair1", "pair2"],
+  "strict_kernel": {
+    "omega": 0.18575,
+    "phi": 0.1625,
+    "beta": 1.0,
+    "eta": 1.8
+  },
+  "positive_window": {
+    "d_local": 3.7908380263658046,
+    "delta_max_for_12_slots": 0.3446216387605277,
+    "contract": "delta_d <= delta_max_for_12_slots => all paths satisfy d in [0,d_local]"
+  },
+  "E_pair_generator": {
+    "object": "G_provider_object_carrier_to_E_pair_generator_candidate_positive_window_v1",
+    "distance_law": "d_{i,k} := k*delta_d",
+    "weight_law": "w_{i,k} := r_i^k / (sum_{j=0..11} r_i^j)",
+    "r_1": "|a|",
+    "r_2": "|b|"
+  },
+  "E_pair": {
+    "pair1": {
+      "paths": [
+        { "d": 0.0, "w": 0.5001221001221001 },
+        { "d": 0.3, "w": 0.25006105006105006 },
+        { "d": 0.6, "w": 0.12503052503052503 },
+        { "d": 0.8999999999999999, "w": 0.06251526251526252 },
+        { "d": 1.2, "w": 0.03125763125763126 },
+        { "d": 1.5, "w": 0.01562881562881563 },
+        { "d": 1.7999999999999998, "w": 0.007814407814407814 },
+        { "d": 2.1, "w": 0.003907203907203907 },
+        { "d": 2.4, "w": 0.0019536019536019536 },
+        { "d": 2.6999999999999997, "w": 0.0009768009768009768 },
+        { "d": 3.0, "w": 0.0004884004884004884 },
+        { "d": 3.3, "w": 0.0002442002442002442 }
+      ]
+    },
+    "pair2": {
+      "paths": [
+        { "d": 0.0, "w": 0.4008726124217058 },
+        { "d": 0.3, "w": 0.24052356745302347 },
+        { "d": 0.6, "w": 0.14431414047181407 },
+        { "d": 0.8999999999999999, "w": 0.08658848428308843 },
+        { "d": 1.2, "w": 0.05195309056985307 },
+        { "d": 1.5, "w": 0.031171854341911834 },
+        { "d": 1.7999999999999998, "w": 0.0187031126051471 },
+        { "d": 2.1, "w": 0.01122186756308826 },
+        { "d": 2.4, "w": 0.006733120537852955 },
+        { "d": 2.6999999999999997, "w": 0.004039872322711774 },
+        { "d": 3.0, "w": 0.002423923393627064 },
+        { "d": 3.3, "w": 0.0014543540361762384 }
+      ]
+    }
+  },
+  "phasor_reduction": {
+    "object": "M_fractal_light_path_pair_map_rule_candidate_v1",
+    "pair1": {
+      "X_cand": 0.8506422176686229,
+      "Y_cand": 0.17355850409771778,
+      "theta_cand": 0.2012697657817876
+    },
+    "pair2": {
+      "X_cand": 0.787731975650499,
+      "Y_cand": 0.17217846638915954,
+      "theta_cand": 0.21519062440228118
+    }
+  },
+  "residual_datum_target_slot_candidate_population_record": {
+    "stage": "candidate_only",
+    "theta_1_cand": 0.2012697657817876,
+    "theta_2_cand": 0.21519062440228118,
+    "u_1_cand_formula": "cos(theta_1_cand)c_1 + sin(theta_1_cand)s_1",
+    "u_2_cand_formula": "cos(theta_2_cand)c_2 + sin(theta_2_cand)s_2",
+    "S_orient_cand": "span{u_1_cand,u_2_cand}"
+  },
+  "notes": [
+    "candidate-only projection artifact; not a theorem; not an export-spec",
+    "positive-window contract: all d in [0,d_local] => X_i^cand>0, Y_i^cand>0 => no atan2 degeneracy",
+    "noncyclic: does not take theta inputs or populated instances as input",
+    "gauge/symmetry explicit: U(1) global phase quotient at provider layer",
+    "observer-free: no K_obs-indexed selection as primary source"
+  ],
+  "current_absence": [
+    "no discharge of N302",
+    "no bridge/export-map object support",
+    "no export-map object",
+    "no actual theta export",
+    "no admissible S_sel_int",
+    "no strict-core selector closure",
+    "no QW-2191 discharge",
+    "no ToE closure"
+  ]
+}
+

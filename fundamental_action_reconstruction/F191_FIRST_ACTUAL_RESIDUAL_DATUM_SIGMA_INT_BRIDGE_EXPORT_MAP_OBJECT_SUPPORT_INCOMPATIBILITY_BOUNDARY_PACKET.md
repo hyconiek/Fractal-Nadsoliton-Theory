@@ -1,7 +1,7 @@
 # F191 First Actual Residual Datum Sigma-Int Bridge Export Map Object Support Incompatibility Boundary Packet
 
 Status: `F191_EXECUTED_FIRST_ACTUAL_RESIDUAL_DATUM_SIGMA_INT_BRIDGE_EXPORT_MAP_OBJECT_SUPPORT_INCOMPATIBILITY_BOUNDARY_PACKET_NO_FALSE_PASS`
-As of: `2026-03-09`
+As of: `2026-03-10`
 
 ## Goal
 
@@ -72,15 +72,18 @@ The current repo now exports:
 5. one actual target-support packet for the bridge-map layer,
 6. one exact nonexport boundary for the bridge/export map itself,
 7. one sharply named future-only target object for the missing map,
-8. one template-level carrier grammar and minimal persisted template file.
+8. one template-level carrier grammar and minimal persisted template file,
+9. one corridor-protected object-to-map support projection candidate (`N384`),
+10. one actual object-to-map support projection layer (`N385`),
+11. one object-support witness candidate and witness (`N386`, `N387`),
+12. but all still strictly below actual object support.
 
 But the current repo still does not export:
 
-1. one actual bridge/export-map object-support witness,
-2. one actual object-to-map support projection,
-3. one actual bridge/export map,
-4. one actual theta source,
-5. one actual component-2 support witness.
+1. one actual bridge/export-map object support,
+2. one actual bridge/export map,
+3. one actual theta source,
+4. one actual component-2 support witness.
 
 So the strongest honest new statement is not:
 
@@ -108,8 +111,9 @@ Phi_residual_datum_sigma_int_bridge_export_map_object_support_incompatibility_bo
   Tau_residual_datum_sigma_int_bridge_export_map_nonexport_boundary_v1,
   sharp_missing_object_localization_present,
   template_level_carrier_only,
+  object_support_witness_present_but_below_object_support_on_current_repo_state,
   no_actual_bridge_export_map_object_support_on_current_repo_state,
-  no_object_to_map_support_projection_on_current_repo_state,
+  object_to_map_support_projection_present_but_below_object_support_on_current_repo_state,
   no_actual_bridge_export_map_on_current_repo_state,
   no_actual_theta_source_on_current_repo_state,
   route_specific_current_state_only_reopenable_boundary
@@ -123,7 +127,8 @@ The packet establishes only:
 1. the route is stronger than abstract third-provider targeting,
 2. the route is stronger than support-free missing-object language,
 3. the route now sharply names the exact missing object and its carrier lane,
-4. the current repo still stops at future-only object targeting,
+4. the current repo may project into the object-support frontier, but still
+   stops below actual object support,
 5. the exact missing upward layer is actual object support rather than only
    target naming or carrier grammar,
 6. another positive lift using only the same exported material would not be
@@ -143,14 +148,16 @@ The packet establishes only:
 1. the current repo now has enough information to name the exact remaining
    blocker above that target,
 2. that blocker is not merely “more support needed,”
-3. it is exactly the absence of actual bridge/export-map object support and
-   actual object-to-map support projection above the current target object.
+3. the route now reaches an object-support witness layer above the current
+   projection layer (`N387`),
+4. but the exact remaining blocker is still the absence of **actual**
+   bridge/export-map object support above that witness layer.
 
 ## Why this is still below route discharge
 
 `F191` remains below discharge because it still does not export:
 
-1. one actual bridge/export-map object support witness,
+1. one actual bridge/export-map object support,
 2. one actual bridge/export map,
 3. one actual theta source,
 4. one actual component-2 support witness,
@@ -186,5 +193,7 @@ The correct next move is:
 2. keep the result explicitly weaker than impossibility in principle,
 3. then either:
    - add one genuinely new actual bridge/export-map object,
-   - add one genuinely new object-support carrier or projection,
+   - lift the existing projection layer into an **actual** object-support
+     witness layer admissible under strict noncyclic + observer-free
+     constraints,
    - or leave this route frozen and move to a different blocker-cut.
