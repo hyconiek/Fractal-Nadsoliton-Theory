@@ -100,6 +100,28 @@ This means:
 
 Release 6 keeps two different kernels explicit.
 
+For current forward work, however, the legacy kernel is no longer treated as
+the live constructive kernel of the program.
+It is kept only as:
+
+1. a historical nadsoliton-identification attempt,
+2. a legacy comparison object,
+3. a bridge/non-bridge frontier object.
+
+So from this point onward the honest reading is:
+
+```text
+do not reactivate K_legacy_ont as the active forward constructive kernel
+for new closure-facing steps
+unless the task is explicitly bridge/non-bridge or historical audit
+```
+
+This is a forward-use demotion, not:
+
+1. a theorem that the legacy kernel was meaningless,
+2. a theorem that the strict kernel has inherited all legacy roles,
+3. a theorem that the bridge frontier has disappeared.
+
 ### 4.1 Legacy ontological / effective kernel
 
 ```math
@@ -407,7 +429,7 @@ The sign witness is:
 ```math
 \psi_{src}^{sign}
 =
-\operatorname{sign}(\cos(\phi_{strict}))
+\mathrm{sign}(\cos(\phi_{strict}))
 =
 1
 ```
@@ -427,7 +449,7 @@ and the local stability statement is:
 ```math
 |\epsilon|\le \varepsilon_{src}^{local}
 \Longrightarrow
-\operatorname{sign}\!\big(\cos(\phi_{strict}+\epsilon)\big)=+1
+\mathrm{sign}\!\big(\cos(\phi_{strict}+\epsilon)\big)=+1
 ```
 
 ### 5.3 Nontriviality / selector chain
@@ -730,7 +752,8 @@ It is one of:
    nonentering boundaries,
 3. add one actual non-strict declared-scope discharge ingredient,
 4. or work on the legacy-to-strict bridge / non-bridge frontier without
-   silently transferring ontological roles.
+   silently transferring ontological roles and without reactivating
+   `K_legacy_ont` as the live forward constructive kernel.
 
 ## 13) Main Artifacts
 
@@ -837,6 +860,28 @@ To znaczy:
 3. kazde realne closure musi szanowac upstream ordering.
 
 ## 4) Dyscyplina dwoch jader
+
+Dla aktualnej pracy do przodu legacy kernel nie jest juz traktowany jako
+aktywny konstrukcyjny kernel programu.
+Pozostaje tylko jako:
+
+1. historyczna proba identyfikacji Nadsolitonu,
+2. legacy comparison object,
+3. obiekt frontiera `bridge/non-bridge`.
+
+Czyli od tego miejsca uczciwy odczyt brzmi:
+
+```text
+nie reaktywowac K_legacy_ont jako aktywnego forward constructive kernel
+do nowych closure-facing krokow,
+chyba ze zadanie dotyczy wprost bridge/non-bridge albo historical audit
+```
+
+To jest democja uzycia na lane do przodu, a nie:
+
+1. theorem, ze legacy kernel byl bezsensowny,
+2. theorem, ze strict kernel odziedziczyl wszystkie legacy role,
+3. theorem, ze frontier bridge zniknal.
 
 ### 4.1 Legacy ontological / effective kernel
 
@@ -1120,7 +1165,7 @@ Witness znaku:
 ```math
 \psi_{src}^{sign}
 =
-\operatorname{sign}(\cos(\phi_{strict}))
+\mathrm{sign}(\cos(\phi_{strict}))
 =1
 ```
 
@@ -1139,7 +1184,7 @@ oraz:
 ```math
 |\epsilon|\le \varepsilon_{src}^{local}
 \Longrightarrow
-\operatorname{sign}\!\big(\cos(\phi_{strict}+\epsilon)\big)=+1
+\mathrm{sign}\!\big(\cos(\phi_{strict}+\epsilon)\big)=+1
 ```
 
 ### 5.3 Nontriviality / selector chain
@@ -1431,7 +1476,8 @@ Trzeba zrobic jedno z:
    nonentering boundaries,
 3. dodac jeden actual non-strict declared-scope discharge ingredient,
 4. albo pracowac dalej nad legacy-to-strict bridge / non-bridge frontier bez
-   cichego przenoszenia rol ontologicznych.
+   cichego przenoszenia rol ontologicznych i bez reaktywowania
+   `K_legacy_ont` jako live forward constructive kernel.
 
 ## 13) Glowne artefakty
 

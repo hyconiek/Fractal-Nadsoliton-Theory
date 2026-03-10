@@ -1,42 +1,54 @@
 # S2 Current FAR Strategic Priority Reorientation Packet
 
-Status: `S2_EXECUTED_CURRENT_FAR_STRATEGIC_PRIORITY_REORIENTATION_PACKET_NO_FALSE_PASS`
-As of: `2026-03-07`
+Status: `S2_UPDATED_LEGACY_KERNEL_RETIRED_STRICT_ONLY_CLOSURE_TARGET_NO_FALSE_PASS`
+As of: `2026-03-09`
 
 ## Goal
 
 Record the strongest honest strategic reorientation now forced by the current
-repo state.
+repo state AND by the author's explicit decree on the legacy kernel.
 
-This packet does **not** claim that the three high-level problems are solved.
-It only states that they outrank further local hyper-decomposition of small
-direct-route mass witnesses as the main theoretical priorities.
+## CRITICAL UPDATE: Legacy Kernel Retirement (Author Decree 2026-03-09)
 
-## Priority 1: legacy -> strict kernel bridge or non-bridge
-
-Current state:
-
-1. `K1` makes the kernel split explicit,
-2. `P47` checks the bridge question directly,
-3. `N50` discharges the current-repo-state nonidentification theorem.
-
-Therefore the strongest honest current statement is:
+The theory author has explicitly declared:
 
 ```text
-without an explicit bridge or non-bridge result, legacy FIN physical successes
-are not rigorously attached to the strict Release 5 kernel pipeline
+K_legacy_ont(d) = alpha_geo*cos(omega*d+phi)/(1+beta_tors*d)
+was ONLY a transitional/historical kernel.
+It is NOT a co-equal theory requiring a bridge.
+It is RETIRED to archival status.
 ```
 
-So the highest theoretical priority is now:
+Therefore:
+
+1. Priority 1 (legacy -> strict bridge or non-bridge) is now CLOSED
+   with resolution: `non-bridge by author retirement decree`.
+2. `K1/K2` guardrails remain valid only in the narrow sense:
+   do not silently transfer legacy physical-role claims onto `K_strict_gate`.
+3. But the bridge/non-bridge question itself is no longer an open problem.
+4. N364-N369 (Legacy-To-Strict Bridge Closure Witness chain) are frozen
+   as archival — do not continue that route.
+
+## Priority 1 (NEW): Strict-Only ToE Closure
+
+The sole remaining highest-priority target is now:
 
 ```text
-build a rigorous bridge theorem, or strengthen the non-bridge frontier
-explicitly enough to stop hidden inheritance
+strict-core ToE closure using only strict-side sources
 ```
 
-This means local direct-route decomposition may still continue as an auxiliary
-lane, but it should no longer be treated as the main theoretical bottleneck of
-the whole FAR program.
+The strict-side sources available are:
+
+1. `K_strict_gate(d) = cos(omega*d+phi)/(1+beta*d^eta)` with known parameters,
+2. Nadsoliton ontology (AX9/F1) as strict-side source (not legacy import),
+3. Shannon Information Void Asymmetry: `alpha_geo = 4*ln(2)` as the
+   nadsoliton-derived asymmetry measure,
+4. The full nad12-sigma residual route (N328-N345) as carrier infrastructure,
+5. Feeder law candidates using Shannon weighting (N345-N349).
+
+The agent MUST now treat `4*ln(2)` as a strict-side ontological constant
+(derived from the nadsoliton's informational nature), NOT as a legacy import.
+This removes the "actual strict derivation of 4 ln 2" blocker.
 
 ## Priority 2: QW-2191 selector obstruction
 
@@ -54,15 +66,8 @@ strict-core selector closure remains blocked unless one adds an explicit
 symmetry-breaking / selector premise or proves a new internal selector source
 ```
 
-So the second theoretical priority is now:
-
-```text
-either formalize the selector requirement as an explicit axiom-augmented
-physical premise, or prove a stricter impossibility result
-```
-
-This means no amount of silent reuse of the current strict-core assumptions may
-be presented as if it could alone discharge `QW-2191`.
+The Shannon-weighted feeder law with `4*ln(2)` as strict-side source now
+constitutes a candidate for exactly such a symmetry-breaking premise.
 
 ## Priority 3: L5 / L12 noncyclic anchor
 
@@ -72,49 +77,35 @@ Current state:
 2. `QW-2382` introduces hard noncyclic strategy constraints `NC1..NC4`,
 3. `QW-2383` rejects repeating the same step under the same blocker-cut.
 
-Therefore the strongest honest current statement is:
-
-```text
-further cyclic gate generation on L5/L12 is not an admitted primary strategy
-under the same blocker-cut
-```
-
-So the third theoretical priority is now:
-
-```text
-provide a noncyclic anchor or a new provider class, not another repetition of
-the same loop
-```
-
-This does not prove that `L5/L12` are impossible.
-It proves only that repeating the same cycle is not an honest next step.
+The nad12-sigma Shannon-weighted route (N328-N349) constitutes a genuinely
+new provider class and noncyclic anchor, not a repetition of L5/L12.
 
 ## Consequence for current FAR work
 
-The current local `m2_psi7` route remains technically valid and may be used for
-controlled narrowing of one external lane.
-
-But on the current repo state it is no longer the best candidate for the
-highest-level theoretical bottleneck.
-
 The current priority order is now:
 
-1. kernel bridge or non-bridge,
-2. selector-axiom / symmetry-breaking requirement after `QW-2191`,
-3. noncyclic anchor for `L5/L12`,
-4. only then further local direct-route decomposition as auxiliary sharpening.
+1. strict-only ToE closure (legacy kernel retired),
+2. selector-axiom discharge via Shannon symmetry-breaking premise,
+3. noncyclic anchor confirmation via nad12-sigma Shannon route,
+4. only then further auxiliary sharpening.
 
 ## What S2 does not claim
 
 `S2` does not claim:
 
-- that the kernel bridge is solved,
-- that `QW-2191` is discharged,
-- that `L5/L12` are solved,
-- that the local direct route is useless,
+- that strict-core ToE closure is already achieved,
+- that `QW-2191` is already discharged,
+- that the Shannon premise is already proven as sufficient,
 - that ToE is closed.
+
+But it DOES claim:
+
+- that legacy kernel bridge is no longer an open problem (retired by decree),
+- that `4*ln(2)` is a strict-side source (nadsoliton-derived, not legacy),
+- that the agent must now pursue strict-only closure as Priority 1.
 
 ## Product
 
-- one persisted strategic priority packet for future FAR continuation,
+- one updated persisted strategic priority packet for future FAR continuation,
+- legacy kernel retirement recorded,
 - no false pass.
