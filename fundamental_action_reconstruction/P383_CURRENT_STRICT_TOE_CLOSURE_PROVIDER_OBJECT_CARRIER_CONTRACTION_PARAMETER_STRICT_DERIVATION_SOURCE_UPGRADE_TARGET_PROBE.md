@@ -21,7 +21,7 @@ or only the weaker admissible result:
 | Check | Verdict | Meaning |
 |---|---|---|
 | provider-object carrier candidate exists | YES | `N391` |
-| contraction parameters `(a,b)` are strict-derived source-side outputs | NO | still free candidate knobs in `T126/F279` |
+| contraction parameters `(a,b)` are strict-derived source-side outputs | YES | `T143/F298/N410` exports `A_strict_provider_object_contraction_parameter_source_map_v1` |
 | explicit parameter-derivation/source-upgrade target is named | YES | `T142` |
 
 ## Exact verdict
@@ -29,7 +29,6 @@ or only the weaker admissible result:
 The strongest honest current verdict is:
 
 ```text
-strict derivation/source-upgrade for (a,b): absent
-future-only target naming the missing ingredient: exported
+strict derivation/source-upgrade for (a,b): exported (source-side map present)
+target naming the ingredient and acceptance tests: exported
 ```
-

@@ -14,9 +14,18 @@ contraction parameters:
 0 < |b| < 1.
 ```
 
-On the current repo state, `a,b` are **not** exported as strict-derived
-source-side outputs of `tau_src_candidate_v1`. They are only part of a
-permitted candidate construction form.
+On the current repo state, the carrier candidate lane is still parameterized by
+contraction parameters `(a,b)` as a *form* (`T126/F279`).
+
+However, as of `N410`, the repo also exports one explicit source-side map:
+
+```text
+A_strict_provider_object_contraction_parameter_source_map_v1 :
+  tau_src_candidate_v1 -> (a,b)
+```
+
+so `(a,b)` need not remain free external knobs on the strict provider-object
+carrier lane.
 
 This matters because:
 
@@ -34,9 +43,10 @@ This matters because:
 This is analogous in *role* (not in content) to the sigma-int missing
 strict-derivation/source-upgrade target (`T124/N389`).
 
-`T142` does **not** claim such a strict derivation exists.
+`T142` itself does **not** construct a derivation map.
 
-`T142` only names the missing ingredient as a target object.
+It only names the ingredient and its acceptance tests as a target object; see
+`T143/F298/N410` for one explicit discharge on the declared strict core branch.
 
 ## Scope
 
@@ -117,4 +127,3 @@ An **actual** discharge of this target must at minimum provide:
 5. admissible `S_sel_int`,
 6. strict-core selector closure or `QW-2191` discharge,
 7. ToE closure.
-
