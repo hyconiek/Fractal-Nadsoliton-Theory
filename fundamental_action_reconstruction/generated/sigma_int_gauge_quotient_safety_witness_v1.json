@@ -1,0 +1,42 @@
+{
+  "object": "sigma_int_gauge_quotient_safety_witness_v1",
+  "status": "actual_exported_theorem_level_gauge_quotient_safety_witness__no_gauge_fixing",
+  "as_of": "2026-03-11",
+  "intent": "Discharge theorem-level gauge-quotient safety for the strict sigma-int datum on a declared strict domain, as required by T123 for any honest strict-core sigma-int bridge/export-map attempt.",
+  "declared_domain": {
+    "configuration_space_object": "C_v1_void_configuration_space_in_local_B_tilde_1_sector_v1",
+    "model": "C_v1 := Map_*^deg=1(S^3, SU(2))"
+  },
+  "declared_gauge_action": {
+    "group": "G := Map_*(S^3, SU(2))",
+    "action": "(g ⋅ U)(x) = g(x) U(x) g(x)^(-1)",
+    "notes": [
+      "Action preserves based condition U(∞)=1.",
+      "Action preserves the degree component deg=1."
+    ]
+  },
+  "sigma_int_datum": {
+    "value_object": "sigma_int_strict_derived_v1",
+    "definition": "sigma_int_strict_derived_v1 := chi_FR_strict_v1(gamma_pi1_v1)",
+    "value": -1
+  },
+  "invariance_statement": "For all g in G and U in C_v1: sigma_int_strict_value(U) = sigma_int_strict_value(g⋅U). Therefore sigma_int descends to C_v1/G.",
+  "proof_core": [
+    "Gauge action induces automorphisms of pi_1(C_v1).",
+    "pi_1(C_v1) ≅ Z_2 has a unique nontrivial element, hence every automorphism fixes gamma_pi1_v1.",
+    "chi_FR_strict_v1 is the unique nontrivial character pi_1(C_v1)->{+1,-1}, so its value on gamma_pi1_v1 is invariant."
+  ],
+  "constraints": {
+    "no_gauge_fixing_used": true,
+    "no_axiom_lane_promotion": true,
+    "observer_free": true,
+    "noncyclic_inputs": true
+  },
+  "hard_limits": [
+    "Does not claim selector-track identification beyond overlay-only (T147/N414).",
+    "Does not export any residual-datum bridge/export-map object (N301) nor discharge N300.",
+    "Does not claim QW-2191 discharge nor strict-core selector closure.",
+    "Does not claim ToE closure."
+  ]
+}
+

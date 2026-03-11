@@ -1,0 +1,40 @@
+{
+  "object": "Upsilon_residual_datum_sigma_int_bridge_export_map_object_v1",
+  "status": "actual_exported_strict_core_bridge_export_map_object__residual_z2_population_only",
+  "as_of": "2026-03-11",
+  "intent": "Export an actual strict-core bridge/export-map object from strict sigma-int into the residual orientation datum target slot (R1), satisfying the acceptance tests of T148, without theta inputs and without implied selector closure.",
+  "typed_map_shape": "E_sigma_int_to_residual_datum_bridge_export_map_object_v1 : sigma_int_strict_derived_v1 -> residual_orientation_datum_target_slot",
+  "domain": {
+    "sigma_int_object": "sigma_int_strict_derived_v1",
+    "provenance": "premise_based_strict_source_upgrade (F307/N418)",
+    "gauge_quotient_safety": "discharged (F308/N419)"
+  },
+  "codomain": {
+    "target_slot": "residual_orientation_datum_target_slot (R1)",
+    "target_slot_export_packet": "fundamental_action_reconstruction/generated/r1_strict_core_residual_datum_target_slot_export_packet.json"
+  },
+  "map_rule": {
+    "residual_orientation_sign_convention": "sigma_int_strict_derived_v1 ∈ {+1,-1}",
+    "formal_basis_realization": [
+      "u_1 -> (sigma_int_strict_derived_v1) * u_1",
+      "u_2 -> u_2"
+    ],
+    "equivalent_formal_theta_realization": "theta_1 -> theta_1 + π when sigma_int_strict_derived_v1 = -1 (no theta inputs; no theta-source export claimed)"
+  },
+  "selector_track_identification": {
+    "witness": "Chi_sigma_int_residual_datum_selector_track_identification_witness_v1 (F310/N421)",
+    "QW_2191_status": "open",
+    "no_selector_closure_implied": true
+  },
+  "contracts": {
+    "noncyclic_inputs": true,
+    "observer_free": true
+  },
+  "hard_limits": [
+    "Does not export theta sources nor populate the residual target slot.",
+    "Does not claim admissible S_sel_int nor strict-core selector closure.",
+    "Does not claim QW-2191 discharge.",
+    "Does not claim ToE closure."
+  ]
+}
+

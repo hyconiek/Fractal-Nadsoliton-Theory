@@ -1,0 +1,28 @@
+{
+  "object": "Chi_sigma_int_residual_datum_selector_track_identification_witness_v1",
+  "status": "actual_exported_strict_core_selector_track_identification_witness__no_false_pass",
+  "as_of": "2026-03-11",
+  "intent": "Upgrade the sigma-int residual-datum bridge lane from overlay-only compatibility to selector-track identification, as required by T147, while explicitly keeping QW-2191 open (no implied selector closure).",
+  "certified_bridge_export_map_object_target": "Upsilon_residual_datum_sigma_int_bridge_export_map_object_target_v1",
+  "upgrade": {
+    "from": "overlay_only_selector_track_compatibility",
+    "to": "strict_core_selector_track_identification"
+  },
+  "basis": [
+    "sigma_int is exported as a strict-core source datum on a declared domain (F307/N418), with explicit premise-based provenance and no hybrid FR reuse.",
+    "sigma_int is exported as theorem-level gauge-quotient-safe under a declared gauge action, without gauge fixing (F308/N419).",
+    "observer-free + noncyclic input contract is preserved (no K_obs indexing; no theta inputs; no populated basis-pair inputs)."
+  ],
+  "q_w_2191_discipline": {
+    "QW_2191_status": "open",
+    "strict_core_selector_closure_present": false,
+    "admissible_S_sel_int_present": false
+  },
+  "hard_limits": [
+    "Does not export any bridge/export-map object (N301) nor discharge N300.",
+    "Does not export theta sources nor populate the residual target slot.",
+    "Does not claim QW-2191 discharge nor strict-core selector closure.",
+    "Does not claim ToE closure."
+  ]
+}
+

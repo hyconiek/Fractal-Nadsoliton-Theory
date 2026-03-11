@@ -1,0 +1,43 @@
+{
+  "object": "chi_FR_strict_v1",
+  "status": "actual_exported_map_object__explicit_strict_side_premise_nontrivial_character",
+  "as_of": "2026-03-11",
+  "intent": "Export a strict FR-sign map object chi_FR_strict_v1 : pi_1(C_v1) -> {+1,-1} on the declared strict domain C_v1, without hybrid FR reuse.",
+  "domain": {
+    "configuration_space_object": "C_v1_void_configuration_space_in_local_B_tilde_1_sector_v1",
+    "pi1_witness": "pi_1(C_v1) ≅ Z_2 (F306/N417)",
+    "generator_label": "gamma_pi1_v1 (nontrivial class)"
+  },
+  "codomain": {
+    "set": [
+      1,
+      -1
+    ],
+    "group_law": "multiplication",
+    "identification": "{+1,-1} ≅ Z_2"
+  },
+  "definition": {
+    "kind": "group_character",
+    "uniqueness": "unique nontrivial homomorphism pi_1(C_v1) -> {+1,-1}",
+    "characterization": [
+      "chi_FR_strict_v1(e) = +1",
+      "chi_FR_strict_v1(gamma_pi1_v1) = -1"
+    ]
+  },
+  "provenance": {
+    "type": "strict_side_premise",
+    "note": "Explicitly introduced as the minimal nontrivial character enabled by pi_1(C_v1) ≅ Z_2. No hybrid-only FR quantization (e.g. QW-1622) is used as a strict source and no theorem-level physical derivation is claimed."
+  },
+  "contracts": {
+    "noncyclic_inputs": true,
+    "observer_free": true,
+    "no_selector_closure_implied": true
+  },
+  "hard_limits": [
+    "Does not claim gauge-quotient safety (T123/N388).",
+    "Does not claim selector-track identification beyond overlay-only (T147/N414).",
+    "Does not claim QW-2191 discharge nor strict-core selector closure.",
+    "Does not export any residual-datum bridge/export-map object (N301) nor discharge N300."
+  ]
+}
+

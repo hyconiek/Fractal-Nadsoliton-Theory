@@ -1,0 +1,22 @@
+{
+  "object": "mu_eq_v1",
+  "status": "actual_exported_strict_equipartition_measure__forced_by_symmetry",
+  "as_of": "2026-03-11",
+  "intent": "Export an equipartition measure on Omega_16_v1 forced by an observer-free symmetry action, as required by T144.",
+  "space": "Omega_16_v1",
+  "definition": {
+    "type": "probability_measure",
+    "value_on_singletons": "mu_eq_v1({ω}) = 1/16 for all ω ∈ Omega_16_v1"
+  },
+  "forcing_symmetry": {
+    "group": "G_bit_v1 := (Z_2)^4",
+    "action": "g⋅ω := ω ⊕ g (bitwise XOR)",
+    "property": "transitive_action",
+    "forced_uniqueness_argument": "On a finite transitive G-set, any G-invariant probability measure assigns equal mass to every point; normalization gives 1/16."
+  },
+  "hard_limits": [
+    "Does not claim any physical microstate ontology beyond the exported strict object.",
+    "Does not claim selector closure nor QW-2191 discharge."
+  ]
+}
+
