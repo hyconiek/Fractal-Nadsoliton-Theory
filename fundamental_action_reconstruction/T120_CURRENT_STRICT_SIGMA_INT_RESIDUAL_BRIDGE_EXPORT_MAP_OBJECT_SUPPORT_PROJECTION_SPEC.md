@@ -10,8 +10,10 @@ below actual bridge/export-map object support.
 
 `N384` now exports one corridor-protected **candidate** object-to-map support
 projection artifact, i.e. a noncyclic, observer-free, pair-indexed mapping from
-`sigma_int_candidate` into a residual-datum target-slot *candidate* population
-record.
+`sigma_int_input ∈ {+1,-1}` into a residual-datum target-slot *candidate*
+population record (with admissible instantiations including
+`sigma_int_candidate` and `sigma_int_strict_derived_v1`, without implying any
+identification theorem between those two objects).
 
 The next honest question is therefore narrower than closure:
 
