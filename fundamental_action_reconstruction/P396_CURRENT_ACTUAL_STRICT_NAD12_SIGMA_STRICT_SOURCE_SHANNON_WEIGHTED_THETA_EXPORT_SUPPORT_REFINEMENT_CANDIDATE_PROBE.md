@@ -1,0 +1,60 @@
+# P396 Current Actual Strict Nad12-Sigma Strict-Source Shannon-Weighted Theta-Export Support Refinement Candidate Probe
+
+Status: `P396_CURRENT_ACTUAL_STRICT_NAD12_SIGMA_STRICT_SOURCE_SHANNON_WEIGHTED_THETA_EXPORT_SUPPORT_REFINEMENT_CANDIDATE_PROBE_NO_FALSE_PASS`  
+As of: `2026-03-11`
+
+## Goal
+
+Probe whether the current repo already contains enough material to export:
+
+```text
+ThetaPair_strict_nad12_sigma_residual_nonequality_shannon_weighted_support_refinement_candidate_v1
+```
+
+only as an actual packaged refinement candidate below actual theta export.
+
+This probe is the strict-source analogue of `P328` (canonical `4 ln 2`).
+
+## Probe matrix
+
+| Question | Verdict | Reason |
+|---|---|---|
+| strict-source Shannon-weighted theta-export refinement candidate present | YES | `N431` already exports one actual packaged strict-source Shannon-weighted theta-export refinement candidate |
+| strict-source Shannon-weighted pair-population refinement candidate present | YES | `N432` already exports one actual packaged strict-source Shannon-weighted pair-population refinement candidate |
+| residual bridge/export-map object-support witness present | YES | `N343` already exports one actual residual bridge/export-map object-support witness |
+| nad12-sigma object-support support witness present | YES | `N344` already exports one actual nad12-sigma object-support support witness |
+| pair-indexed target-slot language present | YES | `R1` already exports the packet-ready target role requiring `theta_1`, `theta_2` |
+| minimal basis-pair export skeleton present | YES | `C48` already exports one packet-ready basis-pair export skeleton |
+| conditional populated-instance schema present | YES | `C49` already exports one packet-ready conditional populated-instance schema |
+| strict-source Shannon-weighted theta-export support refinement candidate admissible | YES | theta-export refinement plus population refinement plus current object-support witness layers can be jointly packaged as candidate-only strict-source Shannon theta-export support refinement |
+| actual residual bridge/export-map object support present | NO | `N302` still freezes that layer below discharge |
+| actual theta export present | NO | no actual `theta_1/theta_2` export is present |
+| actual pair population present | NO | no actual populated basis-pair instance is present |
+| actual feeder support present | NO | no actual feeder support is present |
+| actual sandbox loop break present | NO | sandbox `N18` still remains in force |
+
+## Exact verdict
+
+The strongest honest current verdict is:
+
+```text
+actual packaged strict-source Shannon-weighted theta-export support refinement candidate export admissible
+actual theta-export theorem inadmissible
+```
+
+So the route may now already be packaged as:
+
+```text
+actual strict-source Shannon-weighted theta-export support refinement candidate
+```
+
+but not as:
+
+```text
+actual theta export
+actual pair population
+actual feeder support
+actual residual bridge/export-map object support
+actual loop break
+```
+
