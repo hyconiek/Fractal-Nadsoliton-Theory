@@ -1,0 +1,43 @@
+{
+  "step": "F315",
+  "status": "F315_EXECUTED_FIRST_ACTUAL_STRICT_SIGMA_INT_E_PAIR_EPS_PARAMETER_SOURCE_AUDIT_PACKET_NO_FALSE_PASS",
+  "as_of": "2026-03-11",
+  "goal": "Audit whether the current declared strict core exports any internal strict provenance value object supplying the amplitude parameter eps used in the sigma-int-driven E_pair generator weight law.",
+  "scope": {
+    "audit_paths": [
+      "fundamental_action_reconstruction/",
+      "fundamental_action_reconstruction/generated/"
+    ],
+    "audit_question": "Is a dedicated strict eps value object exported (strict-derived or strict-source-upgraded), distinct from unrelated epsilon/radius symbols used elsewhere?"
+  },
+  "findings": {
+    "dedicated_strict_eps_value_object_exported": false,
+    "eps_appears_as_candidate_parameter_only": true,
+    "eps_fixed_only_as_explicit_choice_in_candidate_instances": true,
+    "unrelated_epsilon_radius_symbols_present": true,
+    "bridge_identifying_radius_epsilons_with_generator_eps": "not_exported"
+  },
+  "evidence_refs": {
+    "generator_parameterization": "F270_FIRST_ACTUAL_STRICT_SIGMA_INT_DRIVEN_E_PAIR_GENERATOR_CANDIDATE_PACKET",
+    "operational_eps_choice_examples": [
+      "N382_CURRENT_FIRST_ACTUAL_STRICT_SIGMA_INT_DRIVEN_E_PAIR_GENERATOR_CANDIDATE_THEOREM",
+      "F312_FIRST_ACTUAL_STRICT_SIGMA_INT_STRICT_DERIVED_V1_THETA_CANDIDATE_POPULATION_RECORD_PACKET",
+      "F314_FIRST_ACTUAL_STRICT_SIGMA_INT_STRICT_DERIVED_V1_THETA_CANDIDATE_POPULATION_RECORD_POSITIVE_WINDOW_PACKET"
+    ],
+    "candidate_instances_fixing_eps": [
+      "generated/sigma_int_strict_derived_v1_to_residual_datum_bridge_export_map_object_support_projection_candidate_instance.json",
+      "generated/sigma_int_strict_derived_v1_to_residual_datum_bridge_export_map_object_support_projection_candidate_positive_window_instance.json",
+      "generated/sigma_int_to_residual_datum_bridge_export_map_object_support_projection_candidate_instance.json",
+      "generated/sigma_int_to_residual_datum_bridge_export_map_object_support_projection_candidate_positive_window_instance.json",
+      "generated/sigma_int_to_residual_datum_bridge_export_map_object_support_projection_candidate_positive_window_low_delta_instance.json"
+    ]
+  },
+  "hard_limits": [
+    "No theorem-level PASS.",
+    "No claim of strict-derived or unique eps.",
+    "No claim of actual strict-core theta_1/theta_2 export.",
+    "No implied admissible S_sel_int, strict-core selector closure, or QW-2191 discharge.",
+    "No ToE closure."
+  ]
+}
+
