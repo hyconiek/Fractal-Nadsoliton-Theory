@@ -1,0 +1,118 @@
+{
+  "object": "Pi_sigma_int_to_residual_datum_bridge_export_map_object_support_projection_candidate_positive_window_v1",
+  "status": "strict_input_instantiation__candidate_output_only__positive_window",
+  "as_of": "2026-03-11",
+  "input": {
+    "sigma_int_source": "sigma_int_strict_derived_v1",
+    "sigma_int_value": -1,
+    "eps": 0.5,
+    "delta_d": 0.3446216387605277,
+    "delta_d_provenance": "delta_d := d_local/11 (max admissible) from T119 positive-window corridor using strict kernel tuple"
+  },
+  "pair_family": ["pair1", "pair2"],
+  "strict_kernel": {
+    "omega": 0.18575,
+    "phi": 0.1625,
+    "beta": 1.0,
+    "eta": 1.8
+  },
+  "positive_window": {
+    "delta_barrier": 1.4082963267948965,
+    "eps_local": 0.7041481633974482,
+    "d_local": 3.7908380263658046,
+    "delta_max_for_12_slots": 0.3446216387605277,
+    "contract": "delta_d <= delta_max_for_12_slots => all paths satisfy d in [0,d_local] => cos,sin>0 => X_i,Y_i>0 => atan2 well-defined"
+  },
+  "E_pair_generator": {
+    "object": "G_sigma_int_to_E_pair_generator_candidate_positive_window_v1",
+    "sign_mask_definition": {
+      "pair1": "b_{1,k} := (-1)^k",
+      "pair2": "b_{2,k} := (-1)^(k+1)"
+    },
+    "distance_law": "d_{i,k} := k*delta_d",
+    "weight_law": "w_{i,k} := (1 + sigma_int_value*eps*b_{i,k})/12",
+    "notes": [
+      "candidate-only generator; not strict-derived; not unique",
+      "noncyclic: does not take theta inputs or populated instances as input",
+      "observer-free: no K_obs-indexed selection as primary source"
+    ]
+  },
+  "E_pair": {
+    "pair1": {
+      "paths": [
+        { "d": 0.0, "w": 0.041666666666666664 },
+        { "d": 0.3446216387605277, "w": 0.125 },
+        { "d": 0.6892432775210554, "w": 0.041666666666666664 },
+        { "d": 1.033864916281583, "w": 0.125 },
+        { "d": 1.3784865550421108, "w": 0.041666666666666664 },
+        { "d": 1.7231081938026386, "w": 0.125 },
+        { "d": 2.067729832563166, "w": 0.041666666666666664 },
+        { "d": 2.412351471323694, "w": 0.125 },
+        { "d": 2.7569731100842216, "w": 0.041666666666666664 },
+        { "d": 3.1015947488447494, "w": 0.125 },
+        { "d": 3.446216387605277, "w": 0.041666666666666664 },
+        { "d": 3.7908380263658046, "w": 0.125 }
+      ]
+    },
+    "pair2": {
+      "paths": [
+        { "d": 0.0, "w": 0.125 },
+        { "d": 0.3446216387605277, "w": 0.041666666666666664 },
+        { "d": 0.6892432775210554, "w": 0.125 },
+        { "d": 1.033864916281583, "w": 0.041666666666666664 },
+        { "d": 1.3784865550421108, "w": 0.125 },
+        { "d": 1.7231081938026386, "w": 0.041666666666666664 },
+        { "d": 2.067729832563166, "w": 0.125 },
+        { "d": 2.412351471323694, "w": 0.041666666666666664 },
+        { "d": 2.7569731100842216, "w": 0.125 },
+        { "d": 3.1015947488447494, "w": 0.041666666666666664 },
+        { "d": 3.446216387605277, "w": 0.125 },
+        { "d": 3.7908380263658046, "w": 0.041666666666666664 }
+      ]
+    }
+  },
+  "phasor_reduction": {
+    "object": "M_fractal_light_path_pair_map_rule_candidate_v1",
+    "pair1": {
+      "X_cand": 0.3242208494671118,
+      "Y_cand": 0.12305044665126647,
+      "theta_cand": 0.36273330535417875
+    },
+    "pair2": {
+      "X_cand": 0.3643945960648231,
+      "Y_cand": 0.12598414493076143,
+      "theta_cand": 0.3328706630500713
+    }
+  },
+  "residual_datum_target_slot_candidate_population_record": {
+    "stage": "candidate_only",
+    "theta_1_cand": 0.36273330535417875,
+    "theta_2_cand": 0.3328706630500713,
+    "u_1_cand_formula": "cos(theta_1_cand)c_1 + sin(theta_1_cand)s_1",
+    "u_2_cand_formula": "cos(theta_2_cand)c_2 + sin(theta_2_cand)s_2",
+    "S_orient_cand": "span{u_1_cand,u_2_cand}"
+  },
+  "notes": [
+    "candidate-only instantiation artifact; not a theorem; not an export-spec",
+    "strict input: sigma_int_value is read from sigma_int_strict_derived_v1",
+    "positive-window contract: all d in [0,d_local] => no atan2 degeneracy",
+    "noncyclic: does not take theta inputs or populated instances as input",
+    "observer-free: no K_obs-indexed selection as primary source"
+  ],
+  "hard_limits": [
+    "Does not export actual strict-core theta_1/theta_2.",
+    "Does not export a populated basis-pair instance.",
+    "Does not imply admissible S_sel_int nor strict-core selector closure.",
+    "Does not discharge QW-2191.",
+    "Does not imply ToE closure."
+  ],
+  "current_absence": [
+    "no actual strict-core theta export",
+    "no actual pair population",
+    "no admissible S_sel_int",
+    "no strict-core selector closure",
+    "no QW-2191 discharge",
+    "no ToE closure"
+  ]
+}
+
