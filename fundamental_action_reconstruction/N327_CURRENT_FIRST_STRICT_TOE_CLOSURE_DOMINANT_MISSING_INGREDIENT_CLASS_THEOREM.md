@@ -1,7 +1,7 @@
 # N327 Current First Strict ToE Closure Dominant Missing Ingredient Class Theorem
 
 Status: `N327_DISCHARGED_CURRENT_FIRST_STRICT_TOE_CLOSURE_DOMINANT_MISSING_INGREDIENT_CLASS_THEOREM_NO_FALSE_PASS`
-As of: `2026-03-11`
+As of: `2026-03-12`
 
 ## Goal
 
@@ -33,15 +33,20 @@ with the following exact meaning:
      closed negatively;
 4. `N289` remains correct:
    - component 1 still stops below any actual seed-object carrier;
-5. `N303` and `N326` remain correct:
-   - component 2 still stops below any actual entering provider/carrier layer;
+5. `N303` and `N326` remain correct at the provider-object realization level:
+   - component 2 still stops below any actual entering **provider object** export;
+   - however the repo now does export the carrier-layer and post-witness carrier layers:
+     `N412` (provider-object carrier layer) and `N413` (post-witness object-support carrier),
+     both explicitly below actual object support above the export-map object (`N302/N395`);
 6. therefore the dominant missing ingredient class on the strict closure lane
    is:
    - one genuine source-side,
    - observer-free,
    - pair-indexed,
    - noncyclic,
-   - strict selector/provider object-carrier layer;
+   - strict selector/provider object-support layer strong enough to upgrade the
+     current carrier/witness infrastructure into actual object support above the
+     export-map object (`N395`) without selector false-pass;
 7. the nearest already packetized candidate route toward such a layer is the
    residual-datum / `sigma_int_candidate` branch,
 8. but `N302` keeps that nearest route blocked below actual object support;
@@ -75,14 +80,18 @@ Because the current repo simultaneously contains:
 5. one component-1 object-support boundary `N289`,
 6. one component-2 three-branch frontier freeze `N303`,
 7. one newest omega-phi nonequality nonexport boundary `N326`,
-8. one nearest packetized residual-datum route with actual target-support
-   `N299`,
-9. but one blocker on that nearest route below actual object support `N302`.
+8. one actual provider-object carrier layer inhabitant (`F300/N412`) and one
+   actual post-witness object-support carrier (`F301/N413`), both explicitly
+   below actual bridge/export-map object support above the exported map object,
+9. one actual strict-core export-map object satisfying `T148` (`F311/N422`),
+10. one nearest packetized residual-datum route with actual target-support
+    `N299`,
+11. but one blocker on that nearest route below actual object support `N302`.
 
 This is enough for:
 
 ```text
-dominant missing ingredient class = strict selector/provider object-carrier
+dominant missing ingredient class = strict selector/provider object-support
 layer
 ```
 
@@ -122,9 +131,11 @@ The strongest honest reading after `N327` is:
 1. yes, the strict closure lane is now diagnosed more sharply than before,
 2. no, the repo still does not export the dominant missing ingredient itself,
 3. the next honest strict-side move must therefore either:
-   - add one genuinely new selector/provider object-carrier layer,
-   - or strengthen the nearest candidate route by one genuinely new
-     object-support carrier/projection,
+   - add one genuinely new selector/provider **object-support** layer above the
+     exported map object (i.e. discharge `N395` on a declared strict domain), or
+   - strengthen the nearest candidate route by one genuinely new ingredient
+     capable of upgrading carrier/witness infrastructure into that post-map
+     object-support layer,
    - or introduce one genuinely new blocker-cut,
    - but not repeat the same extension ladder and not repeat the same blocked
      component-2 route language.
