@@ -1,7 +1,7 @@
 # N383 Current First Actual Strict Sigma-Int To Residual Datum Bridge Export-Map Object-Support Projection Candidate Theorem
 
 Status: `N383_DISCHARGED_CURRENT_FIRST_ACTUAL_STRICT_SIGMA_INT_TO_RESIDUAL_DATUM_BRIDGE_EXPORT_MAP_OBJECT_SUPPORT_PROJECTION_CANDIDATE_THEOREM_NO_FALSE_PASS`  
-As of: `2026-03-10`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -10,7 +10,7 @@ without false pass, by exporting one concrete **candidate** object-to-map
 support projection artifact from:
 
 ```text
-sigma_int_candidate
+sigma_int_input ∈ {+1,-1}
 ```
 
 to:
@@ -48,7 +48,7 @@ with the following exact meaning:
 For one instance choice:
 
 ```text
-sigma_int_candidate = +1
+sigma_int_input = +1
 eps = 1/2
 ```
 
@@ -83,4 +83,3 @@ It is to either:
    admissible under the residual-route acceptance constraints,
 2. or prove that such an admissibility upgrade fails under strict noncyclic /
    observer-free constraints.
-

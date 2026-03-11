@@ -1,7 +1,7 @@
 # F271 First Actual Strict Sigma-Int To Residual Datum Bridge Export-Map Object-Support Projection Candidate Packet
 
 Status: `F271_EXECUTED_FIRST_ACTUAL_STRICT_SIGMA_INT_TO_RESIDUAL_DATUM_BRIDGE_EXPORT_MAP_OBJECT_SUPPORT_PROJECTION_CANDIDATE_PACKET_NO_FALSE_PASS`  
-As of: `2026-03-10`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -22,14 +22,16 @@ object-to-map support projection (candidate level only)
 ## Inputs reused
 
 1. `B4`
-   - `sigma_int_candidate := chi_FR(gamma_pi1) ∈ {+1,-1}`.
-2. `T117/F270/N382`
+   - `sigma_int_candidate := chi_FR(gamma_pi1) ∈ {+1,-1}` (candidate object; hybrid-supported).
+2. `F307/N418`
+   - `sigma_int_strict_derived_v1 := chi_FR_strict_v1(gamma_pi1_v1) ∈ {+1,-1}` (strict-side source upgrade; explicit premise provenance).
+3. `T117/F270/N382`
    - `G_sigma_int_to_E_pair_generator_candidate_v1`.
-3. `T115/F268/N380`
+4. `T115/F268/N380`
    - `M_fractal_light_path_pair_map_rule_candidate_v1`.
-4. `R1`
+5. `R1`
    - residual-datum target-slot export packet (codomain scaffold).
-5. `T118`
+6. `T118`
    - projection interface spec.
 
 ## Packet result
@@ -63,3 +65,7 @@ It claims only:
 2. it is noncyclic and observer-free by explicit contract,
 3. it can be evaluated operationally without inputting `theta`.
 
+No identification theorem between `sigma_int_candidate` (`B4`) and
+`sigma_int_strict_derived_v1` (`F307/N418`) is used or implied here; both are
+simply admissible instantiations of the `Z2` sigma-int input value
+`sigma_int_input ∈ {+1,-1}` for the projection-candidate pipeline.

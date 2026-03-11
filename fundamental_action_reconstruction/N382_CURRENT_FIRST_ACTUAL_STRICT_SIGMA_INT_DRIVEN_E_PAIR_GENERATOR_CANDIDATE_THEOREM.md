@@ -1,7 +1,7 @@
 # N382 Current First Actual Strict Sigma-Int Driven `E_pair` Generator Candidate Theorem
 
 Status: `N382_DISCHARGED_CURRENT_FIRST_ACTUAL_STRICT_SIGMA_INT_DRIVEN_E_PAIR_GENERATOR_CANDIDATE_THEOREM_NO_FALSE_PASS`  
-As of: `2026-03-10`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -25,14 +25,18 @@ G_sigma_int_to_E_pair_generator_candidate_v1
 with the following exact meaning:
 
 1. it takes as input the strict-core internal datum candidate
-   `sigma_int_candidate ∈ {+1,-1}` (`B4`),
+   `sigma_int_input ∈ {+1,-1}`,
 2. it outputs a finite normalized carrier field `E_pair` on `[pair1,pair2]`,
 3. it is explicitly noncyclic and observer-free by contract,
 4. it remains candidate-level (no strict derivation, no uniqueness).
 
+No identification theorem between `sigma_int_candidate` (`B4`) and
+`sigma_int_strict_derived_v1` (`F307/N418`) is used or implied here; both are
+admissible instantiations of the abstract input `sigma_int_input ∈ {+1,-1}`.
+
 ## Operational check (scope-limited)
 
-For one admissible parameter choice `eps = 1/2`, and for `sigma_int_candidate`
+For one admissible parameter choice `eps = 1/2`, and for `sigma_int_input`
 equal to `+1` or `-1`, the resulting `E_pair` can be plugged into the
 reduction form `T115` without hitting the `(X_i^cand,Y_i^cand)=(0,0)`
 degeneracy frontier on either pair slot.
@@ -40,11 +44,11 @@ degeneracy frontier on either pair slot.
 One operational evaluation gives:
 
 ```text
-sigma_int_candidate = +1, eps = 1/2:
+sigma_int_input = +1, eps = 1/2:
   pair1: theta^cand ≈ 0.3554808343611710
   pair2: theta^cand ≈ 0.4625142242896770
 
-sigma_int_candidate = -1, eps = 1/2:
+sigma_int_input = -1, eps = 1/2:
   pair1: theta^cand ≈ 0.4625142242896770
   pair2: theta^cand ≈ 0.3554808343611710
 ```

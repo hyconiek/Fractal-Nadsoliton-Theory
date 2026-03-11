@@ -1,7 +1,7 @@
 # T118 Current Strict Sigma-Int To Residual Datum Bridge Export-Map Object-Support Projection Candidate Spec
 
 Status: `T118_CURRENT_STRICT_SIGMA_INT_TO_RESIDUAL_DATUM_BRIDGE_EXPORT_MAP_OBJECT_SUPPORT_PROJECTION_CANDIDATE_SPEC_NO_FALSE_PASS`  
-As of: `2026-03-10`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -17,7 +17,7 @@ missing: actual object-to-map support projection
 
 1. a finite pair-indexed carrier field `E_pair`,
 2. a noncyclic reduction `E_pair -> (theta_1^cand, theta_2^cand)`,
-3. a sigma-int-driven generator `sigma_int_candidate -> E_pair`.
+3. a sigma-int-driven generator `sigma_int_input -> E_pair`.
 
 The next honest move is therefore not a closure relabel.
 It is to attempt a **typed projection** from the internal datum side into the
@@ -44,7 +44,7 @@ with intended type:
 
 ```text
 Pi_sigma_int_to_residual_datum_bridge_export_map_object_support_projection_candidate_v1 :
-  (sigma_int_candidate, eps)
+  (sigma_int_input, eps)
     -> residual_datum_bridge_export_map_object_support_projection_candidate_instance
 ```
 
@@ -52,7 +52,7 @@ Pi_sigma_int_to_residual_datum_bridge_export_map_object_support_projection_candi
 
 Inputs:
 
-1. `sigma_int_candidate ∈ {+1,-1}` (`B4`),
+1. `sigma_int_input ∈ {+1,-1}`,
 2. `eps ∈ [0,1]` (candidate parameter).
 
 Steps:
@@ -60,7 +60,7 @@ Steps:
 1. Generate `E_pair` without theta inputs:
 
    ```text
-   E_pair := G_sigma_int_to_E_pair_generator_candidate_v1(sigma_int_candidate, eps)
+   E_pair := G_sigma_int_to_E_pair_generator_candidate_v1(sigma_int_input, eps)
    ```
 
 2. Reduce `E_pair` through the strict kernel coupling channel:
@@ -84,7 +84,7 @@ Steps:
 
 4. Emit the object-support projection instance as a persisted artifact
    containing:
-   - inputs `(sigma_int_candidate, eps)`,
+   - inputs `(sigma_int_input, eps)`,
    - generated `E_pair`,
    - computed phasor components and `theta_i^cand`,
    - the target-slot candidate population record,
@@ -115,4 +115,3 @@ It must not be promoted into:
 4. strict-core selector closure,
 5. `QW-2191` discharge,
 6. ToE closure.
-

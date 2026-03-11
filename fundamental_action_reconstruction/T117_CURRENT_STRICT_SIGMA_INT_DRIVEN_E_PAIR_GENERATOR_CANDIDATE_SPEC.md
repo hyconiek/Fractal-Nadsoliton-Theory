@@ -1,7 +1,7 @@
 # T117 Current Strict Sigma-Int Driven `E_pair` Generator Candidate Spec
 
 Status: `T117_CURRENT_STRICT_SIGMA_INT_DRIVEN_E_PAIR_GENERATOR_CANDIDATE_SPEC_NO_FALSE_PASS`  
-As of: `2026-03-10`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -23,10 +23,18 @@ without theta inputs and without populated-instance inputs
 
 `T117` proposes one admissible **candidate** generator that uses:
 
-1. the internal `Z2` datum candidate `sigma_int_candidate` (`B4`),
+1. an internal `Z2` sigma-int datum value `sigma_int_input ∈ {+1,-1}`,
 2. a finite `12`-slot recurrence scaffold (nad12 motif),
 
 to generate a finite, normalized, pair-indexed carrier field `E_pair`.
+
+This spec does **not** assume any identification between candidate and strict
+sigma-int sources. The same `Z2` input can be instantiated by:
+
+1. `sigma_int_candidate` (`B4`) (candidate object; hybrid-supported), or
+2. `sigma_int_strict_derived_v1` (`F307/N418`) (strict-side source upgrade; premise provenance).
+
+No equality theorem between these two objects is used or implied here.
 
 This is intentionally weaker than any claim of:
 
@@ -41,11 +49,14 @@ This is intentionally weaker than any claim of:
 
 ### Inputs
 
-1. `sigma_int_candidate ∈ {+1,-1}` (internal topological datum candidate),
+1. `sigma_int_input ∈ {+1,-1}` (internal `Z2` sigma-int datum value),
 2. a fixed amplitude parameter `eps ∈ [0,1]` (candidate),
 3. a fixed pair-indexed sign mask `b_{i,k} ∈ {+1,-1}` for:
    - pair slot `i ∈ {1,2}`,
    - octave/path index `k ∈ {0,1,...,11}`.
+
+Notation: in the formulas below, `\sigma_{int}^{in}` denotes the chosen input
+value `sigma_int_input`.
 
 ### Output
 
@@ -86,7 +97,7 @@ For each pair slot `i ∈ {1,2}` and each `k ∈ {0,...,11}` define:
 ```math
 d_{i,k} := k,
 \qquad
-w_{i,k} := \frac{1 + \sigma_{int}^{cand}\, \varepsilon\, b_{i,k}}{12}.
+w_{i,k} := \frac{1 + \sigma_{int}^{in}\, \varepsilon\, b_{i,k}}{12}.
 ```
 
 Then define:
@@ -104,7 +115,7 @@ The only intended use of this generator is to supply a noncyclic input
 `E_pair` to the already exported reduction form `T115`, i.e.:
 
 ```text
-sigma_int_candidate
+sigma_int_input
   -> E_pair (T117 candidate generator)
   -> (theta_1^cand, theta_2^cand) (T115 candidate reduction)
   -> S_orient^cand (R1 target slot class)
@@ -124,4 +135,3 @@ actual strict-core theta export or into a discharge of `T2`.
 5. actual `theta_1`, `theta_2`,
 6. actual pair population,
 7. ToE closure.
-

@@ -1,7 +1,7 @@
 # N384 Current First Actual Strict Sigma-Int To Residual Datum Bridge Export-Map Object-Support Projection Candidate (Positive-Window) Theorem
 
 Status: `N384_DISCHARGED_CURRENT_FIRST_ACTUAL_STRICT_SIGMA_INT_TO_RESIDUAL_DATUM_BRIDGE_EXPORT_MAP_OBJECT_SUPPORT_PROJECTION_CANDIDATE_POSITIVE_WINDOW_THEOREM_NO_FALSE_PASS`  
-As of: `2026-03-10`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -60,7 +60,7 @@ with the following exact meaning:
 For the persisted instance choice:
 
 ```text
-sigma_int_candidate = +1
+sigma_int_input = +1
 eps = 1/2
 delta_d = 0.25
 ```
@@ -102,4 +102,3 @@ It is to either:
    bridge/export-map object appears),
 2. or prove that such an admissibility upgrade fails under strict noncyclic /
    observer-free constraints.
-

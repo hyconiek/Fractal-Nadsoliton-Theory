@@ -1,12 +1,12 @@
 # T119 Current Strict Sigma-Int To Residual Datum Bridge Export-Map Object-Support Projection Candidate (Positive-Window) Spec
 
 Status: `T119_CURRENT_STRICT_SIGMA_INT_TO_RESIDUAL_DATUM_BRIDGE_EXPORT_MAP_OBJECT_SUPPORT_PROJECTION_CANDIDATE_POSITIVE_WINDOW_SPEC_NO_FALSE_PASS`  
-As of: `2026-03-10`
+As of: `2026-03-11`
 
 ## Goal
 
 `T118/F271/N383` exported one explicit **candidate** object-to-map support
-projection artifact from `sigma_int_candidate` into a residual-datum target-slot
+projection artifact from `sigma_int_input ∈ {+1,-1}` into a residual-datum target-slot
 candidate population record.
 
 The honest weakness of that construction is also explicit in `T115`:
@@ -85,7 +85,7 @@ Then for all `d ∈ [0, d^{local}]`:
 
 Inputs:
 
-1. `sigma_int_candidate ∈ {+1,-1}` (`B4`),
+1. `sigma_int_input ∈ {+1,-1}`,
 2. `eps ∈ [0,1]` (candidate parameter),
 3. `delta_d ∈ (0, d^{local}/11]` (candidate step; enforces positive-window),
 4. fixed masks:
@@ -95,12 +95,15 @@ Inputs:
    \qquad k\in\{0,1,\dots,11\}.
    ```
 
+Notation: in the formulas below, `\sigma_{int}^{in}` denotes the chosen input
+value `sigma_int_input`.
+
 Define the delta-scaled distances and weights:
 
 ```math
 d_{i,k}:=k\,\delta_d,
 \qquad
-w_{i,k}:=\frac{1+\sigma_{int}^{cand}\,\varepsilon\,b_{i,k}}{12}.
+w_{i,k}:=\frac{1+\sigma_{int}^{in}\,\varepsilon\,b_{i,k}}{12}.
 ```
 
 Define:
@@ -131,7 +134,7 @@ with intended type:
 
 ```text
 Pi_sigma_int_to_residual_datum_bridge_export_map_object_support_projection_candidate_positive_window_v1 :
-  (sigma_int_candidate, eps, delta_d)
+  (sigma_int_input, eps, delta_d)
     -> residual_datum_bridge_export_map_object_support_projection_candidate_positive_window_instance
 ```
 
@@ -154,4 +157,3 @@ Construction:
 7. admissible `S_sel_int`,
 8. strict-core selector closure or `QW-2191` discharge,
 9. ToE closure.
-

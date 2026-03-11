@@ -1,7 +1,7 @@
 # F272 First Actual Strict Sigma-Int To Residual Datum Bridge Export-Map Object-Support Projection Candidate (Positive-Window) Packet
 
 Status: `F272_EXECUTED_FIRST_ACTUAL_STRICT_SIGMA_INT_TO_RESIDUAL_DATUM_BRIDGE_EXPORT_MAP_OBJECT_SUPPORT_PROJECTION_CANDIDATE_POSITIVE_WINDOW_PACKET_NO_FALSE_PASS`  
-As of: `2026-03-10`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -36,12 +36,14 @@ This remains:
 ## Inputs reused
 
 1. `B4`
-   - `sigma_int_candidate ∈ {+1,-1}`.
-2. `T115/F268/N380`
+   - `sigma_int_candidate ∈ {+1,-1}` (candidate object; hybrid-supported).
+2. `F307/N418`
+   - `sigma_int_strict_derived_v1 ∈ {+1,-1}` (strict-side source upgrade; explicit premise provenance).
+3. `T115/F268/N380`
    - `M_fractal_light_path_pair_map_rule_candidate_v1`.
-3. `R1`
+4. `R1`
    - residual-datum target-slot export packet (codomain scaffold).
-4. `T119`
+5. `T119`
    - positive-window corridor spec for a delta-scaled nad12 carrier.
 
 ## Packet result
@@ -79,3 +81,6 @@ It claims only:
 3. it is protected against the `atan2` degeneracy frontier by a typed
    positive-window corridor constraint.
 
+No identification theorem between `sigma_int_candidate` (`B4`) and
+`sigma_int_strict_derived_v1` (`F307/N418`) is used or implied here; both are
+admissible instantiations of the abstract `Z2` input `sigma_int_input ∈ {+1,-1}`.
