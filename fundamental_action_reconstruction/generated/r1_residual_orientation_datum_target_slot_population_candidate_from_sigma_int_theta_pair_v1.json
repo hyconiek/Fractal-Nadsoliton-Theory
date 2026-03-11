@@ -1,0 +1,64 @@
+{
+  "object": "R1_residual_orientation_datum_target_slot_population_candidate_from_sigma_int_theta_pair_v1",
+  "status": "candidate_inhabitant_instance_constructed_and_audited__no_false_pass",
+  "as_of": "2026-03-11",
+  "intent": "Construct one candidate inhabitant instance of the residual_orientation_datum_target_slot (R1) from the exported sigma_int->theta selector-ingredient theta pair, without promoting to strict-core theta export, strict-core target-slot population by an export-map object, selector closure, or QW-2191 discharge.",
+  "derived_from": {
+    "r1_target_slot_export_packet": "fundamental_action_reconstruction/generated/r1_strict_core_residual_datum_target_slot_export_packet.json",
+    "theta_pair_selector_ingredient_artifact": "fundamental_action_reconstruction/generated/theta_pair_sigma_int_strict_selector_ingredient_o2_cut_candidate_v1.json",
+    "qw2190_mode_scaffold": "report_qw2190_kernel_mode_representation_emergence_gate.json"
+  },
+  "inputs": {
+    "theta_1_cand": 0.3627333053541785,
+    "theta_2_cand": 0.33287066305007096,
+    "basis_formula": "S_orient_cand(theta_1,theta_2)=span{u_1(theta_1),u_2(theta_2)}"
+  },
+  "outputs": {
+    "u_1_cand": [
+      0.38168376028625145,
+      0.40297740841665763,
+      0.31629358539383373,
+      0.14485915159358773,
+      -0.06539017489241764,
+      -0.25811825682307,
+      -0.38168376028625145,
+      -0.4029774084166577,
+      -0.31629358539383384,
+      -0.14485915159358778,
+      0.06539017489241777,
+      0.25811825682306977
+    ],
+    "u_2_cand": [
+      0.38583881856063457,
+      0.30844561656161046,
+      -0.07739320199902405,
+      -0.38583881856063457,
+      -0.30844561656161057,
+      0.07739320199902422,
+      0.3858388185606345,
+      0.30844561656161057,
+      -0.07739320199902378,
+      -0.3858388185606345,
+      -0.3084456165616104,
+      0.07739320199902372
+    ],
+    "orientation_slice_candidate": "span{u_1_cand,u_2_cand}"
+  },
+  "audits": {
+    "u1_matches_r1_formula_residual": 0.0,
+    "u2_matches_r1_formula_residual": 0.0,
+    "slice_basis_orthonormal_residual": 5.460851617393978e-16,
+    "slice_basis_rank": 2,
+    "slice_basis_det_gram": 1.0000000000000004,
+    "pair_basis_orthonormal_residual_vs_identity": 5.460851617393978e-16
+  },
+  "hard_limits": [
+    "Does not claim strict-core theta export (theta values remain candidate-only).",
+    "Does not claim strict-core target-slot population by a strict-core export-map object (F311 remains sign-only).",
+    "Does not claim object-support above the export-map object (N302/N395 remain open).",
+    "Does not claim admissible S_sel_int nor strict-core selector closure.",
+    "Does not claim QW-2191 discharge.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}
