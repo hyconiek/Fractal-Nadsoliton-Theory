@@ -1,7 +1,7 @@
 # S2 Current FAR Strategic Priority Reorientation Packet
 
 Status: `S2_UPDATED_LEGACY_KERNEL_RETIRED_STRICT_ONLY_CLOSURE_TARGET_NO_FALSE_PASS`
-As of: `2026-03-09`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -43,16 +43,25 @@ The strict-side sources available are:
 2. Nadsoliton ontology (AX9/F1) as strict-side source (not legacy import),
 3. Shannon Information Void Asymmetry: `alpha_geo = 4*ln(2)` as the
    strict-side asymmetry measure candidate (not legacy import),
+   now also exported as a strict-derived source-upgrade value object:
+   `alpha_geo_strict_derived_v1 := 4 ln 2` via `F309/N420`,
 4. The full nad12-sigma residual route (N328-N345) as carrier infrastructure,
 5. Feeder law candidates using Shannon weighting (N345-N349).
 
 The agent MUST treat `4*ln(2)` as a strict-side **strategic premise** for
 candidate construction, NOT as a legacy import.
 
-Status discipline: on the current repo state, `4*ln(2)` is still **not**
-exported as `actual strict-derived`. It must not be used to silently upgrade
-any `candidate` into an `actual` ingredient, and it must not be used to imply
-selector closure or `QW-2191` discharge.
+Status discipline update (post-`T144` discharge): on the current repo state,
+the repo now **does** export one actual strict-derived source-upgrade object:
+
+```text
+alpha_geo_strict_derived_v1 := 4 ln 2  (F309/N420).
+```
+
+This removes the specific “no strict alpha-geo source” blocker, but it does
+**not** by itself upgrade any feeder-law, theta-export, pair-population, or
+selector-closure candidate into an actual ingredient, and it does **not**
+discharge `QW-2191`.
 
 ## Priority 2: QW-2191 selector obstruction
 
