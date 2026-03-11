@@ -1,7 +1,7 @@
 # N327 Current First Strict ToE Closure Dominant Missing Ingredient Class Theorem
 
 Status: `N327_DISCHARGED_CURRENT_FIRST_STRICT_TOE_CLOSURE_DOMINANT_MISSING_INGREDIENT_CLASS_THEOREM_NO_FALSE_PASS`
-As of: `2026-03-09`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -45,8 +45,9 @@ with the following exact meaning:
 7. the nearest already packetized candidate route toward such a layer is the
    residual-datum / `sigma_int_candidate` branch,
 8. but `N302` keeps that nearest route blocked below actual object support;
-9. this diagnosis remains local to the strict closure lane and does not erase
-   the higher theory-wide bridge/non-bridge priority from `S2`.
+9. this diagnosis remains local to the strict closure lane and is compatible
+   with the current `S2` strategic context (legacy kernel retired by decree;
+   strict-only closure priority; no legacy physical-role transfer).
 
 ## What N327 proves
 
@@ -110,7 +111,9 @@ ToE closure
 9. `QW-2191` discharge,
 10. ToE closure,
 11. that the residual-datum route is already sufficient,
-12. that the theory-wide bridge/non-bridge question has been superseded.
+12. that any legacy-to-strict bridge/non-bridge status is discharged as a
+    strict theorem (the project treats the legacy kernel frontier as retired
+    by decree in `S2`, but that is not a strict derivation).
 
 ## Consequence
 

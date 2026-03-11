@@ -1,7 +1,7 @@
 # T62 Current Strict ToE Closure Dominant Missing Ingredient Class Spec
 
 Status: `T62_CURRENT_STRICT_TOE_CLOSURE_DOMINANT_MISSING_INGREDIENT_CLASS_SPEC_NO_FALSE_PASS`
-As of: `2026-03-09`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -17,13 +17,15 @@ what missing ingredient class currently dominates the closure frontier?
 
 This spec is scoped only to the strict closure-facing lane.
 
-It does **not** override `S2`, which still keeps:
+Update (current repo state):
 
-```text
-legacy -> strict bridge or non-bridge
-```
+`S2` (`2026-03-11`) records an explicit author decree (`2026-03-09`) retiring
+`K_legacy_ont` to archival status and closing the
+`legacy -> strict bridge/non-bridge` frontier by decree (resolution: non-bridge).
 
-as the highest theory-wide FAR priority.
+Therefore `T62` is read only as a strict-lane diagnosis under the strict-only
+ToE-closure priority, without reopening the legacy bridge frontier and without
+any legacy physical-role transfer onto `K_strict_gate`.
 
 ## Scope
 
@@ -108,5 +110,5 @@ The intended diagnosis may additionally record, if supported:
 6. global selector closure,
 7. `QW-2191` discharge,
 8. ToE closure,
-9. that the global FAR bottleneck has ceased to include the bridge/non-bridge
-   frontier from `S2`.
+9. that the retirement decree itself is a theorem-level bridge/non-bridge
+   discharge or a legacy physical-role transfer theorem (it is not).

@@ -1770,12 +1770,15 @@ Aktualizacja `R48/P61/N64`:
   `explicit_zero_witness_for_the_direct_m2_psi7_source_eom_coefficient_defect_polynomial_on_common_psi7_of_x_support`.
 
 Aktualizacja `S2`:
-- zapisano jawna reorientacje priorytetow FAR po korekcie splitu kernela,
-  `QW-2191` i analizie petli `L5/L12`,
-- najwyzszy priorytet teoretyczny to teraz:
-  `legacy -> strict kernel bridge or non-bridge`,
+- zapisano jawna reorientacje priorytetow FAR (S2, as-of `2026-03-11`),
+- CRITICAL UPDATE: legacy kernel `K_legacy_ont` zostal wycofany do archival
+  (decyzja autora `2026-03-09`); frontier `legacy -> strict bridge/non-bridge`
+  jest zamkniety dekretem (rezolucja: non-bridge by retirement decree),
+- najwyzszy priorytet teoretyczny to teraz: `strict-only ToE closure` na
+  strict-side z jawnie zachowanymi guardrails (brak legacy role-transfer),
 - drugi priorytet to jawne potraktowanie `QW-2191` jako realnej obstrukcji
-  wymagajacej symmetry-breaking / selector requirement poza samym strict core,
+  wymagajacej symmetry-breaking / selector premise albo nowego strict-core
+  selector source,
 - trzeci priorytet to `noncyclic anchor` dla `L5/L12`, zgodnie z
   `QW-2381/QW-2382/QW-2383`,
 - dalsza lokalna dekompozycja `m2` pozostaje dozwolona, ale tylko jako lane
@@ -2399,8 +2402,9 @@ Aktualizacja `N116`:
   zamkniety negatywnie na current repo state,
 - to domyka lokalny frontier transferu trzech starych claimow bez udawania
   bridge'a `K_legacy_ont -> K_strict_gate`,
-- najblizszy uczciwy frontier wraca teraz do `legacy -> strict kernel
-  bridge/non-bridge` albo do `QW-2191`.
+- najblizszy uczciwy frontier wraca teraz do `QW-2191` (strict-only selector /
+  theta-supply bottleneck), a frontier `legacy -> strict kernel bridge/non-bridge`
+  jest dzis (`S2`, `2026-03-11`) retired do archival dekretem autora.
 
 Aktualizacja `P107/N117`:
 - `P107` formalizuje package-level probe: current repo nie eksportuje ani
@@ -2410,7 +2414,8 @@ Aktualizacja `P107/N117`:
   rzedu: current repo nadal nie uzasadnia traktowania istniejacego strict
   pipeline jako theorem-level carrier calego legacy kernel/package,
 - po tym kroku jedyny uczciwy frontier zostaje juz naprawde wyzszego rzedu:
-  `legacy -> strict kernel bridge/non-bridge` albo `QW-2191`.
+  `QW-2191` (strict-only), a frontier `legacy -> strict kernel bridge/non-bridge`
+  jest dzis (`S2`, `2026-03-11`) retired do archival dekretem autora.
 
 Aktualizacja `P108/N118`:
 - `P108` sklada `QW-2191`, `QW-2192`, `QW-2193`, `B1` i `B2` w jeden current
@@ -2421,7 +2426,7 @@ Aktualizacja `P108/N118`:
   internal selector source,
 - po tym kroku glowny frontier jest juz bardzo czysty:
   `derive internal selector source` albo `accept selector requirement`, plus
-  osobno `legacy -> strict kernel bridge/non-bridge`.
+  osobno: archival `legacy -> strict kernel bridge/non-bridge` (S2: retired by decree).
 
 Aktualizacja `F27/P109/N119`:
 - `F27` rozdziela brakujacy ruch projektowy po `N118` na dwie jawne galezie:
@@ -2452,8 +2457,8 @@ Aktualizacja `P111/N121/N122`:
   ale nadal nie eksportuje zadnej jawnej theory-level decyzji ani w strone
   `acceptance`, ani `deferral`,
 - po tym kroku zostaja juz tylko dwa frontiery wyzszego rzedu:
-  `strict-core internal selector source` oraz `legacy -> strict kernel
-  bridge/non-bridge`.
+  `strict-core internal selector source` oraz (historycznie) `legacy -> strict kernel
+  bridge/non-bridge` — dzis (`S2`, `2026-03-11`) retired do archival dekretem autora.
 
 Aktualizacja `P112/N123`:
 - `P112` sklada `N50`, `N116` i `N117` i potwierdza, ze repo juz wspiera jawny
@@ -3520,6 +3525,7 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `F150/P238/N258`: wykonane jako pierwszy rzeczywisty theorem-level `T14-L6` lift pod `T14`; repo eksportuje juz jeden actual declared-scope theorem witness `T14_src_selector_declared_scope_actual_witness_v1 : tau_src_candidate_v1 -> declared_scope_source_topology_selector_theorem_target_v1`, wsparty pakietem `W_src_topology_selector_theorem_support_packet_v1 = (tau_src_candidate_v1, Theta_src_nontriv_actual_discharge_witness_v1, Omega_src_observer_free_scope_actual_witness_v1, Pi_sel_src_actual_witness_v1, Upsilon_sel_basis_actual_witness_v1, Phi_qw2191_safe_actual_witness_v1, N163_downstream_symptom_boundary, N234_no_global_promotion_boundary, observer_downstream_only)`, gdzie komplet `T14-L1..L5` zostaje zapakowany tylko do declared-scope Source Topology Selector theorem, bez claimu admissible strict-core internal selector source object, bez current selector closure i bez current global `QW-2191` discharge.
 - `P239/N259`: wykonane jako pierwszy uczciwy audit po `N258`; repo stwierdza theorem-level, ze eksportowany declared-scope Source Topology Selector theorem jest realny, ale nie daje jeszcze uczciwej promocji do current strict-core selector closure ani do current global `QW-2191` discharge. To zamraza granice: `T14` jest declared-scope complete na obecnym export secie, ale pozostaje closure-incomplete bez nowego closure-level ingredient.
 - `P240/N260`: wykonane jako jawny freeze theorem dla biezacego export setu; repo stwierdza theorem-level, ze `T14` Source Topology Selector lane jest na obecnym repo state declared-scope complete i closure-incomplete. To jest uczciwe zatrzymanie dodatniej progresji na tym secie eksportu: dalszy ruch wymagalby jednego rzeczywiscie nowego closure-level ingredient, a nie kolejnego przepakowania `N258/N259`.
+- Update `2026-03-11` (`S2`): kernel legacy `K_legacy_ont` wycofany do archival (decyzja autora `2026-03-09`); frontier `legacy -> strict bridge/non-bridge` zamkniety dekretem (rezolucja: non-bridge). Ponizszy blok `T15..N269` zostaje zachowany jako archival record i nie jest juz aktywnym bottleneckiem FAR.
 - `T15/F151/P241/N261`: wykonane jako poprawiony future-only pozytywny branch najwyzszego frontiera `legacy -> strict bridge or non-bridge`; repo eksportuje juz jeden jawny future-only bridge target `B_legacy_strict_bridge_target_v1 : K_legacy_ont -> K_strict_gate`, ale tylko na poziomie structural-kernel-relation target. Nie ma tu actual bridge, nie ma legacy physical-role transfer, nie ma sufficiency claim do global `QW-2191` discharge, a non-bridge branch pozostaje jawnie otwarty.
 - `T16/F152/P242/N262`: wykonane jako symetryczny future-only negatywny branch tego samego najwyzszego frontiera; repo eksportuje juz jeden jawny future-only nonbridge strengthening target `NB_legacy_strict_strengthening_target_v1 : (K_legacy_ont, K_strict_gate) -> explicit_legacy_strict_kernel_nonbridge_strengthening_target_v1`, oparty na juz-discharged package-level `N123`, ale bez claimu actual strengthened nonbridge theorem i bez claimu permanent no-bridge. Pozytywny bridge branch pozostaje nadal otwarty.
 - `F153/P243/N263`: wykonane jako actual frontier-state packet dla najwyzszego frontiera `legacy -> strict bridge or non-bridge`; repo eksportuje juz jeden jawny bifurcated frontier packet `Xi_legacy_strict_frontier_bifurcation_packet_v1 := (B_legacy_strict_bridge_target_v1, NB_legacy_strict_strengthening_target_v1)` i theorem-level stwierdza, ze obie galezie sa na obecnym repo state realnie jawne, ale nadal future-only i bez uzasadnionego current branch selection. To zamraza frontier jako explicit-but-undecided bez actual bridge, bez actual strengthened nonbridge theorem i bez closure claimu.

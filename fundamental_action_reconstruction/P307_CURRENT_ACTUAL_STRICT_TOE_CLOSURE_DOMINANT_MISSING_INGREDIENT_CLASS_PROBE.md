@@ -1,7 +1,7 @@
 # P307 Current Actual Strict ToE Closure Dominant Missing Ingredient Class Probe
 
 Status: `P307_EXECUTED_CURRENT_ACTUAL_STRICT_TOE_CLOSURE_DOMINANT_MISSING_INGREDIENT_CLASS_PROBE_NO_FALSE_PASS`
-As of: `2026-03-09`
+As of: `2026-03-11`
 
 ## Probe question
 
@@ -103,4 +103,5 @@ and keep explicit:
 5. `component2_entering_provider_exported = false`,
 6. `nearest_packetized_candidate_route = residual_datum_sigma_int`,
 7. `nearest_candidate_route_still_blocked = true`,
-8. `global_bridge_nonbridge_priority_from_S2_still_active = true`.
+8. `global_strict_only_toe_closure_priority_from_S2_active = true` (legacy
+   kernel retired by decree; legacy bridge frontier frozen).

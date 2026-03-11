@@ -1,7 +1,7 @@
 # F216 First Actual Strict ToE Closure Dominant Missing Ingredient Class Packet
 
 Status: `F216_EXECUTED_FIRST_ACTUAL_STRICT_TOE_CLOSURE_DOMINANT_MISSING_INGREDIENT_CLASS_PACKET_NO_FALSE_PASS`
-As of: `2026-03-09`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -80,10 +80,10 @@ Phi_residual_datum_sigma_int_bridge_export_map_object_support_incompatibility_bo
 
 ### Strategic guardrail
 
-From `S2`:
+From `S2` (`2026-03-11`):
 
 ```text
-bridge or non-bridge remains the highest theory-wide FAR priority
+legacy kernel retired to archival; strict-only ToE closure is Priority 1
 ```
 
 ## Packet result
