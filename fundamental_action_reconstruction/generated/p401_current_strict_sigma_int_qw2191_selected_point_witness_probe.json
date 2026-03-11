@@ -1,0 +1,93 @@
+{
+  "generated_utc": "2026-03-11T16:59:45.095639+00:00",
+  "stage": "P401",
+  "goal": "selected_point_witness_for_sigma_int_theta_pair_against_qw2191_o2_family_audits",
+  "inputs": {
+    "theta_pair_artifact": "fundamental_action_reconstruction/generated/theta_pair_sigma_int_strict_selector_ingredient_o2_cut_candidate_v1.json",
+    "qw2190_kernel_mode_report": "report_qw2190_kernel_mode_representation_emergence_gate.json"
+  },
+  "selected_point": {
+    "theta_1_cand": 0.3627333053541785,
+    "theta_2_cand": 0.33287066305007096,
+    "basis": {
+      "n": 12,
+      "su3": [
+        "e0",
+        "rot(c1,s1;theta_1_cand)"
+      ],
+      "su2": [
+        "rot(c2,s2;theta_2_cand)"
+      ]
+    }
+  },
+  "computed": {
+    "orthonormal_residual_su3_basis": 4.226822322815191e-16,
+    "orthonormal_residual_su2_basis": 3.4364398582646454e-16,
+    "inv_res_su3": 5.888774599815025e-16,
+    "inv_res_su2": 3.9712099922218423e-16,
+    "su3_closure_res": 3.502341055894642e-16,
+    "su2_closure_res": 1.6109595277541272e-16,
+    "u1_match_residual": 0.0,
+    "u2_match_residual": 0.0
+  },
+  "tolerances": {
+    "qw2191_inv_residual": 1e-12,
+    "qw2191_su3_closure_residual": 1e-10,
+    "qw2191_su2_closure_residual": 1e-12,
+    "u_vector_match": 1e-12
+  },
+  "checks": [
+    {
+      "id": "selected_point_kernel_invariance_su3",
+      "pass": true,
+      "tolerance": 1e-12,
+      "value": 5.888774599815025e-16,
+      "meaning": "the selected (e0,c1,s1) rotated basis spans a kernel-invariant SU(3) subspace (selected point)"
+    },
+    {
+      "id": "selected_point_kernel_invariance_su2",
+      "pass": true,
+      "tolerance": 1e-12,
+      "value": 3.9712099922218423e-16,
+      "meaning": "the selected (c2,s2) rotated basis spans a kernel-invariant SU(2) subspace (selected point)"
+    },
+    {
+      "id": "selected_point_su3_lie_closure",
+      "pass": true,
+      "tolerance": 1e-10,
+      "value": 3.502341055894642e-16,
+      "meaning": "the embedded SU(3) generators close (selected point)"
+    },
+    {
+      "id": "selected_point_su2_lie_closure",
+      "pass": true,
+      "tolerance": 1e-12,
+      "value": 1.6109595277541272e-16,
+      "meaning": "the embedded SU(2) generators close (selected point)"
+    },
+    {
+      "id": "u1_matches_rotated_c1",
+      "pass": true,
+      "tolerance": 1e-12,
+      "value": 0.0,
+      "meaning": "exported u_1^cand matches the rotated Fourier c1 basis vector at theta_1^cand (internal consistency)"
+    },
+    {
+      "id": "u2_matches_rotated_c2",
+      "pass": true,
+      "tolerance": 1e-12,
+      "value": 0.0,
+      "meaning": "exported u_2^cand matches the rotated Fourier c2 basis vector at theta_2^cand (internal consistency)"
+    }
+  ],
+  "verdict": {
+    "compatible_with_qw2191_o2_family_at_selected_point": true,
+    "statement": "Selected-point compatibility witness passes: the exported (theta_1^cand,theta_2^cand) produces a rotated Fourier basis that satisfies the same QW-2191 invariance and Lie-closure audits. This does not imply uniqueness nor QW-2191 discharge."
+  },
+  "hard_limits": [
+    "Does not discharge QW-2191 (kernel-alone uniqueness obstruction remains true).",
+    "Does not prove strict-core selector closure nor export an admissible S_sel_int.",
+    "This is a compatibility-only witness at one selected representative point."
+  ],
+  "no_false_pass": true
+}
