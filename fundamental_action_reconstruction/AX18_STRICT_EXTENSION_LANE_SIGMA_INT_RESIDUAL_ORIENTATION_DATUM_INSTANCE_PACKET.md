@@ -13,17 +13,20 @@ The strict sigma-int lane now exports:
 4. one candidate inhabitant instance of the `R1` residual target slot built from that theta pair (`P402`),
 5. and an explicit nonuniqueness theorem: the theta-pair varies over admissible `delta_d` choices (`P403/N437`).
 
-After `AX16` and `AX17`, the theory is already allowed to proceed in an explicit
-`strict_extension_only` scope with:
+After `AX16` and the exported strict-side delta_d value object (`F328/N440`),
+the theory is already allowed to proceed in an explicit `strict_extension_only`
+scope with:
 
-- a strict-side admissibility principle accepted (AX16), and
-- an explicit positive-window corridor step convention `delta_d := delta_max` accepted (AX17).
+- a strict-side admissibility principle accepted (`AX16`), and
+- a dedicated strict-side delta_d value object
+  `delta_d_sigma_int_positive_window_step_strict_provenance_v1 := delta_max`
+  (`F328/N440`) (premise-based; not a uniqueness claim).
 
 `AX18` performs the next honest move on that separated scope:
 
 ```text
 materialize one explicit strict-extension-lane sigma_int -> residual orientation datum instance,
-by citing the exported sigma-int->theta candidate selector ingredient under the accepted delta_d convention,
+by citing the exported sigma-int->theta candidate selector ingredient together with the exported delta_d value object,
 and attaching the exported R1 target-slot candidate inhabitant instance.
 ```
 
@@ -53,4 +56,3 @@ This packet is **strict-extension only**:
 
 The purpose is to keep the sigma-int lane reproducible in one explicit extension
 scope while strict core remains unchanged and honest about its blockers.
-

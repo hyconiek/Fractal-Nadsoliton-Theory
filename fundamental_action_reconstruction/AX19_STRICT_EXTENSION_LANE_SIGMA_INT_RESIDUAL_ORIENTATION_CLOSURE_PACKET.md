@@ -5,12 +5,12 @@ As of: `2026-03-11`
 
 ## Goal
 
-After `AX16/AX17/AX18`, the repo now has one explicit, reproducible
+After `AX16/F328/AX18`, the repo now has one explicit, reproducible
 strict-extension-only realization of the strict sigma-int → residual
 orientation-datum **role**, assembled from:
 
 1. strict sigma-int provenance (`F307/N418`),
-2. a strict-extension-only corridor-step convention (`AX17`),
+2. a strict-side delta_d value object (`F328/N440`),
 3. a cited strict-side sigma-int → theta candidate selector ingredient (`F325/N436`),
 4. an attached `R1` target-slot candidate inhabitant instance (`P402`),
 5. explicit nonuniqueness hygiene (`P403/N437`).
@@ -42,4 +42,3 @@ This packet is `strict_extension_only`:
 - It does not claim strict-core selector closure nor `QW-2191` discharge.
 - It does not claim object-support discharge above the strict export-map object (`N302/N395` remain open).
 - It does not claim ToE closure.
-

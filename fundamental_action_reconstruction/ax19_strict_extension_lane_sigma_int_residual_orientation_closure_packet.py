@@ -23,7 +23,7 @@ packet = {
     "as_of": "2026-03-11",
     "assembled_from": {
         "extension_instance": "generated/strict_extension_lane_sigma_int_residual_orientation_datum_instance.json (AX18)",
-        "delta_d_convention": "AX17",
+        "delta_d_value_object": "generated/delta_d_sigma_int_positive_window_step_strict_provenance_v1.json (F328/N440)",
         "delta_d_nonuniqueness_hygiene": "P403/N437",
     },
     "inputs": ax18.get("inputs", {}),
@@ -61,4 +61,3 @@ summary = {
 
 out_summary.write_text(json.dumps(summary, indent=2) + "\n", encoding="ascii")
 print(out_summary)
-

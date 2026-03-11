@@ -5,7 +5,7 @@
   "as_of": "2026-03-11",
   "assembled_from": {
     "extension_instance": "generated/strict_extension_lane_sigma_int_residual_orientation_datum_instance.json (AX18)",
-    "delta_d_convention": "AX17",
+    "delta_d_value_object": "generated/delta_d_sigma_int_positive_window_step_strict_provenance_v1.json (F328/N440)",
     "delta_d_nonuniqueness_hygiene": "P403/N437"
   },
   "inputs": {
@@ -14,6 +14,12 @@
       "artifact": "generated/sigma_int_strict_derived_v1.json",
       "export": "F307/N418",
       "note": "Strict-side source upgrade by explicit premise; not a legacy->strict bridge."
+    },
+    "delta_d_sigma_int_positive_window_step_strict_provenance_v1": {
+      "value": 0.34462163876052765,
+      "artifact": "generated/delta_d_sigma_int_positive_window_step_strict_provenance_v1.json",
+      "export": "F328/N440",
+      "note": "Strict-side delta_d value object (strict-source-upgraded by explicit premise); not a uniqueness claim."
     }
   },
   "extension_scope_premises": {
@@ -22,12 +28,14 @@
       "packet": "AX16",
       "scope": "strict_extension_only"
     },
-    "positive_window_delta_d_convention": {
+    "delta_d_value_object": {
       "accepted": true,
-      "packet": "AX17",
-      "scope": "strict_extension_only",
-      "rule": "delta_d := delta_max = d_local/11 (corridor saturation)",
-      "note": "This fixes one corridor choice; it is not a strict-core derivation or uniqueness claim."
+      "packet": "F328/N440",
+      "scope": "strict_side__strict_source_upgraded",
+      "artifact": "generated/delta_d_sigma_int_positive_window_step_strict_provenance_v1.json",
+      "value": 0.34462163876052765,
+      "rule": "delta_d := delta_max = d_local/11 (corridor saturation premise)",
+      "note": "Dedicated strict-side delta_d value object; premise-based; not a strict-derived uniqueness claim."
     },
     "theta_supply_selector_ingredient": {
       "accepted": true,
@@ -70,7 +78,11 @@
         "eta": 1.8
       }
     },
-    "delta_d_recorded": 0.34462163876052765
+    "delta_d_recorded": 0.34462163876052765,
+    "delta_d_value_object": {
+      "artifact": "generated/delta_d_sigma_int_positive_window_step_strict_provenance_v1.json",
+      "export": "F328/N440"
+    }
   },
   "r1_target_slot_population": {
     "artifact": "generated/r1_residual_orientation_datum_target_slot_population_candidate_from_sigma_int_theta_pair_v1.json",
