@@ -1,46 +1,47 @@
 # N411 Current First Strict Alpha-Geo Equipartition Witness (16 Microstates) Strict-Derivation/Source-Upgrade Target Theorem
 
 Status: `N411_DISCHARGED_CURRENT_FIRST_STRICT_ALPHA_GEO_EQUIPARTITION_WITNESS_16_MICROSTATE_STRICT_DERIVATION_SOURCE_UPGRADE_TARGET_THEOREM_NO_FALSE_PASS`  
-As of: `2026-03-10`
+As of: `2026-03-11`
 
 ## Goal
 
-Package theorem-level the strongest honest current statement about the missing
-strict derivation/source-upgrade ingredient for `alpha_geo := 4 ln 2`, without
-pretending that the ingredient is already discharged.
+Package theorem-level the strongest honest current statement about the
+alpha-geo strict derivation/source-upgrade target object and its current
+discharge status, without false pass.
 
 ## Theorem-level conclusion
 
-From `T144/P384/F299`, the current repo exports one explicit future-only target
-object:
+From `T144/F299`, the repo exports one explicit target object name:
 
 ```text
 Delta_alpha_geo_equipartition_witness_16_microstate_strict_derivation_source_upgrade_target_v1
 ```
 
-with the following exact meaning:
+On the current repo state (`P384/P390`), the strict lane also exports the
+discharge witness package for that target via `F309/N420`, in particular:
 
-1. `F1` remains correct:
-   - `alpha_geo := 4 ln 2` is not exported as strict-derived;
-2. `S2` remains correct:
-   - `4 ln 2` may be used as a strict-side strategic premise for candidates,
-     but must not be silently promoted into actual discharge;
-3. `P384` remains correct:
-   - no strict microstate/equipartition witness of size `16` is currently
-     exported;
-4. therefore the next honest strict move is not to treat `4 ln 2` as already
-   strict-derived, but to attack the missing witness objects explicitly under
-   the acceptance tests of `T144`.
+```text
+alpha_geo_strict_derived_v1 := H(mu_eq_v1) = ln(16) = 4 ln 2.
+```
+
+Therefore the strongest honest current meaning is:
+
+1. `F1` remains correct as a canonical parameter-layer identity:
+   - `alpha_geo := 4 ln 2`,
+2. the repo now also exports a strict-side source upgrade for that constant:
+   - `alpha_geo_strict_derived_v1 := 4 ln 2` (`F309/N420`),
+3. the target naming remains admissible as a reference object name, but the
+   “future-only missing witness” reading is superseded by the actual export.
 
 ## What N411 proves
 
 `N411` proves only this narrower statement:
 
-1. the repo now names the missing alpha-geo strict derivation/source-upgrade
-   ingredient as one explicit future-only target object with explicit
-   acceptance tests (`T144`),
-2. this naming does not constitute discharge and does not upgrade any
-   candidate lane into an actual strict ingredient.
+1. the repo names the alpha-geo strict derivation/source-upgrade ingredient as
+   one explicit target object (`T144/F299`),
+2. the repo exports an actual strict discharge witness package for that target
+   (`F309/N420`),
+3. no downstream selector closure or ToE closure is implied.
 
 ## What N411 does not prove
 
@@ -56,7 +57,8 @@ with the following exact meaning:
 
 ## Consequence (next honest step)
 
-After `N411`, the next honest move (if this sublane is continued) is to
-construct at least one of the missing strict witness objects from `T144`,
-without importing legacy-only operator decompositions as strict-core sources.
+After `N411`, the next honest move is no longer to construct the missing
+equipartition witness.
 
+It is to use the exported strict witness package (`F309/N420`) in downstream
+strict-only closure work without implying selector closure or ToE closure.

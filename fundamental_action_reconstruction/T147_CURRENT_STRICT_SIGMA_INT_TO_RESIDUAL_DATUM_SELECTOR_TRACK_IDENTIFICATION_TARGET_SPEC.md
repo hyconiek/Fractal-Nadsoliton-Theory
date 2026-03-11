@@ -1,12 +1,12 @@
 # T147 Current Strict Sigma-Int to Residual Datum Selector-Track Identification Target Spec
 
 Status: `T147_CURRENT_STRICT_SIGMA_INT_TO_RESIDUAL_DATUM_SELECTOR_TRACK_IDENTIFICATION_TARGET_SPEC_NO_FALSE_PASS`  
-As of: `2026-03-10`
+As of: `2026-03-11`
 
 ## Goal
 
-After `R1` and the rerun probe `P5`, the strict-core residual-datum bridge lane
-is narrowed to four concrete missing objects:
+Before `F306..F311`, the strict-core residual-datum bridge lane was narrowed
+to four concrete missing objects:
 
 1. strict derivation/source upgrade for `sigma_int_candidate` (`T124/N389`),
 2. theorem-level gauge-quotient safety for `sigma_int_candidate` (`T123/N388`),
@@ -17,8 +17,12 @@ is narrowed to four concrete missing objects:
 
 `T147` targets item (4).
 
-`T147` does **not** claim that selector-track identification is already
-discharged.
+On the current repo state (`P388/P391`), items (1)-(3) are discharged on the
+strict sigma-int lane (`F307/N418`, `F308/N419`, `F311/N422`), and the strict
+selector-track identification witness is exported (`F310/N421`).
+
+Therefore `T147` is kept only as a historical target-spec / acceptance-test
+record for the selector-track identification ingredient.
 
 `T147` does something narrower and audit-safe:
 
@@ -96,9 +100,8 @@ must at minimum provide:
 
 `T147` must not claim:
 
-1. that the target is already discharged,
+1. that this spec by itself constitutes discharge,
 2. strict-core bridge/export-map object export,
 3. discharge of `N300`,
 4. admissible `S_sel_int`, selector closure, or `QW-2191` discharge,
 5. ToE closure.
-

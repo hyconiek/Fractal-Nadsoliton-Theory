@@ -1,13 +1,13 @@
 # F305 First Current Strict T144+T149 Pre-Bridge Discharge Roadmap Packet
 
 Status: `F305_EXECUTED_FIRST_CURRENT_STRICT_T144_T149_PREBRIDGE_DISCHARGE_ROADMAP_PACKET_NO_FALSE_PASS`  
-As of: `2026-03-10`
+As of: `2026-03-11`
 
 ## Goal
 
-The current strict closure-facing lane is blocked upstream of any honest
-bridge/export-map claim (`T148/N301`) by two explicit strict derivation/source
-upgrade targets:
+Before `F306..F311`, the strict closure-facing lane was blocked upstream of any
+honest bridge/export-map claim (`T148/N301`) by two explicit strict
+derivation/source-upgrade targets:
 
 1. `T144` — strict derivation/source-upgrade for `alpha_geo = 4 ln 2` via an
    **actual** equipartition witness of `16` microstates,
@@ -18,25 +18,39 @@ upgrade targets:
 This packet records one practical, audit-safe roadmap that is *strict-status
 compatible* with those targets.
 
-It does **not** claim:
+Update (current repo state):
 
-1. discharge of `T144` or `T149`,
-2. discharge of `T124/N389`, `T123/N388`, or `T147/N414`,
-3. discharge of `N300` or export of any strict-core bridge/export-map object,
-4. admissible `S_sel_int`, selector closure, `QW-2191` discharge, or ToE
+On the current repo state (`P390/P391`), the roadmap steps are now discharged:
+
+1. `T149`: discharged (`F306/N417`, `F307/N418`),
+2. `T144`: discharged (`F309/N420`),
+3. `T148`: discharged (`F311/N422`),
+4. selector-track identification witness: exported (`F310/N421`).
+
+So `F305` is now a historical pre-bridge roadmap record.
+
+It still does **not** claim:
+
+1. strict-core theta export,
+2. actual bridge/export-map object support above the map object,
+3. admissible `S_sel_int`, selector closure, `QW-2191` discharge, or ToE
    closure.
 
 ## Inputs reused
 
 1. `S2`
-   - `4 ln 2` is permitted only as strict-side strategic premise (no promotion).
-2. `T144/F299/P384`
-   - alpha-geo equipartition witness target is specified and probed missing.
-3. `T149/F304/P389`
+   - historical premise-only discipline (superseded by the strict discharge of
+     `T144` via `F309/N420` on the current repo state).
+2. `T144/F299/P384` + `F309/N420`
+   - alpha-geo equipartition witness target is specified and now discharged by
+     an actual strict witness package.
+3. `T149/F304/P389` + `F306/N417` + `F307/N418`
    - FR-sign strict derivation/source-upgrade target is specified and probed
-     missing.
-4. `T148/P388`
-   - map-object export remains blocked by upstream strict prerequisites.
+     missing (historical) / now discharged (current state).
+4. `T148/P388` + `F311/N422`
+   - strict-core map-object export is now present.
+5. `P390/P391`
+   - current discharge status + post-`T148` frontier.
 
 ## Roadmap (strict-status compatible)
 
@@ -89,17 +103,22 @@ without false pass.
 
 ## Next honest move (minimum)
 
-On current repo state (`P384/P389`), the next honest move is to discharge **at
-least one** of:
+On current repo state (`P391` + `N426`), the next honest move is no longer to
+discharge `T144/T149/T148`.
 
-1. the strict configuration-space + `pi_1(C_v1) ≅ Z_2` witness package (Step A),
-2. the strict `Omega_16_v1 + mu_eq_v1` equipartition witness package (Step B),
+It is to address the post-`T148` strict bottleneck explicitly, e.g.:
 
-while keeping:
+1. add a strict-side eps provenance source for the sigma-int-driven `E_pair`
+   generator (or keep eps explicitly free and remain candidate-only),
+2. and/or add a strict-side theta-supply / selector ingredient (keeps `QW-2191`
+   discipline explicit),
+3. and/or discharge the missing object-support layer above the now exported map
+   object (`N302/N395`).
+
+All while keeping:
 
 - noncyclic constraints (`N18`),
 - observer-free constraints,
 - and `QW-2191` selector discipline
 
 explicitly enforced.
-
