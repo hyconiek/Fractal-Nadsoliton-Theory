@@ -1,7 +1,7 @@
 # T121 Current Strict Sigma-Int Residual Bridge/Export-Map Object-Support Witness Candidate Spec
 
 Status: `T121_CURRENT_STRICT_SIGMA_INT_RESIDUAL_BRIDGE_EXPORT_MAP_OBJECT_SUPPORT_WITNESS_CANDIDATE_SPEC_NO_FALSE_PASS`  
-As of: `2026-03-10`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -26,8 +26,8 @@ for that missing bridge/export-map object-support layer, without claiming:
 `T121` is scoped only to the already exported sigma-int residual bridge lane:
 
 1. `N299` (bridge-map target support),
-2. `N300` (export-map nonexport boundary),
-3. `N301` (future-only export-map object target),
+2. `F311/N422` (export-map object exported; residual `Z2` population only),
+3. `N300/N301` (historical map-layer boundary/target; superseded/discharged),
 4. `N384` (corridor-protected projection candidate artifact),
 5. `N385` (actual projection layer into the object-support frontier),
 6. `R1` (residual-datum target-slot export packet).
@@ -41,8 +41,9 @@ residual_datum_sigma_int_bridge_export_map_object_support_witness_candidate := {
   provider_route: "sigma_int_third_provider_residual",
   residual_target_slot_export: present,
   bridge_map_target_support: present,
-  export_map_nonexport_boundary: present,
-  export_map_object_target: future_only_present,
+  export_map_object_exported: present,
+  export_map_nonexport_boundary: historical_superseded,
+  export_map_object_target: historical_discharged,
   object_to_map_support_projection_candidate: present,
   residual_object_support_projection_layer: present,
   status: "actual_witness_candidate_below_bridge_export_map_object_support"
@@ -68,13 +69,10 @@ Omega_residual_datum_sigma_int_bridge_export_map_object_support_witness_candidat
 `T121` must not claim:
 
 1. discharge of `T2`,
-2. satisfaction of the strict-core export-map object target `N301`,
-3. actual bridge/export-map object support,
-4. any bridge/export map export,
-5. actual `theta_1`, `theta_2`,
-6. actual pair population,
-7. admissible `S_sel_int`,
-8. strict-core selector closure,
-9. `QW-2191` discharge,
-10. ToE closure.
-
+2. actual bridge/export-map object support,
+3. actual `theta_1`, `theta_2`,
+4. actual pair population,
+5. admissible `S_sel_int`,
+6. strict-core selector closure,
+7. `QW-2191` discharge,
+8. ToE closure.

@@ -1,17 +1,22 @@
 # T37 Current Residual Datum Sigma-Int Bridge Export Map Object Support Incompatibility Boundary Spec
 
 Status: `T37_CURRENT_RESIDUAL_DATUM_SIGMA_INT_BRIDGE_EXPORT_MAP_OBJECT_SUPPORT_INCOMPATIBILITY_BOUNDARY_SPEC_NO_FALSE_PASS`
-As of: `2026-03-09`
+As of: `2026-03-11`
 
 ## Goal
 
-After `N301`, the residual-datum / `sigma_int_candidate` third-provider route
-already has all currently honest positive structure reachable on its
-object-facing layer:
+After `T148` is discharged by an actual strict-core export-map object
+(`F311/N422`), the residual-datum / `sigma_int_candidate` third-provider route
+already exports:
 
 1. actual bridge-map target support through `N299`,
-2. exact map-layer nonexport boundary through `N300`,
-3. one explicit future-only bridge/export-map object target through `N301`.
+2. an **actual** strict-core bridge/export-map object satisfying `T148`
+   (`F311/N422`; `N300/N301` become historical),
+3. projection + witness strata into the object-support frontier
+   (`N383..N387`),
+
+but it still does **not** export any **actual** bridge/export-map object
+support above the now exported map object (`N395` remains future-only).
 
 So the strongest honest next question is no longer:
 
@@ -24,8 +29,14 @@ It is narrower:
 
 ```text
 has the route now reached a current-state incompatibility boundary
-between future-only bridge/export-map object targeting
-and actual bridge/export-map object support?
+between:
+
+  actual bridge/export-map object export (T148 discharged)
+
+and:
+
+  actual bridge/export-map object support above the map object
+?
 ```
 
 `T37` does not decide the whole route in principle.
@@ -49,17 +60,18 @@ Assume:
       future-only third-provider-class route;
   A2. `N299` already exports one actual support packet for the
       bridge/export-map target layer;
-  A3. `N300` already freezes the exact bridge/export-map layer itself as
-      nonexported on the current repo state;
-  A4. `N301` already exports one future-only target object for the missing
-      bridge/export map;
+  A3. `F311/N422` export one actual strict-core bridge/export-map object
+      satisfying `T148` and discharging the historical target `N301`;
+  A4. no actual bridge/export-map object support above the map object is
+      exported on the current repo state (the target `N395` remains
+      future-only);
   A5. `P4/P5` still keep the exact missing strict-core object localized as
       `sigma_int_candidate -> residual orientation datum`;
   A6. `C40/C41/C42/C43/C44/C45/C46` export at most carrier grammar,
       template content, admission, and one minimal persisted template file,
       but not one actual bridge/export-map object support witness;
-  A7. no actual bridge/export map, actual theta source, or actual component-2
-      support witness is exported on the current repo state.
+  A7. no strict-core theta source or residual target-slot population is
+      exported on the current repo state (`C50/N1`).
 
 Then:
   C1. the route admits one current-state incompatibility-boundary theorem
@@ -77,11 +89,12 @@ Then:
 If later discharged, `T37` would establish only:
 
 1. the third-provider route is stronger than target-only on the map layer,
-2. the route is also stronger than abstract missing-object language because
-   the object is now sharply localized,
-3. the current repo still stops at future-only object targeting,
-4. the exact missing upward layer is actual object support rather than only
-   target naming,
+2. the route is also stronger than missing-map language because an **actual**
+   strict-core export-map object is now exported (`F311/N422`),
+3. the current repo still stops below **actual** object support above the map
+   object,
+4. the exact missing upward layer is now sharply named as **actual**
+   bridge/export-map object support,
 5. another same-material positive lift would overclaim the current repo state.
 
 It would not establish:
@@ -103,12 +116,12 @@ It would not establish:
 This spec is acceptable only if all of the following stay explicit:
 
 1. the boundary is current-state only,
-2. `N301` remains valid and is not weakened,
+2. `N300/N301` are treated as historical boundary/target (superseded/discharged),
 3. future-only object targeting is not silently relabeled as actual
    object-support,
 4. template/carrier grammar is not silently relabeled as an actual
    bridge/export-map object,
-5. no map export, theta export, or component-2 support is claimed,
+5. no theta export, target-slot population, or component-2 support is claimed,
 6. no closure claim is introduced.
 
 ## Recommended next move

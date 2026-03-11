@@ -1,7 +1,7 @@
 # F288 First Actual Strict Sigma-Int To Residual Datum Bridge Export-Map Object-Support Projection Candidate (Positive-Window Low-Delta) Packet
 
 Status: `F288_EXECUTED_FIRST_ACTUAL_STRICT_SIGMA_INT_TO_RESIDUAL_DATUM_BRIDGE_EXPORT_MAP_OBJECT_SUPPORT_PROJECTION_CANDIDATE_POSITIVE_WINDOW_LOW_DELTA_PACKET_NO_FALSE_PASS`  
-As of: `2026-03-10`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -14,7 +14,8 @@ comparison.
 `F288` packages such a variant, still strictly below:
 
 1. discharge of `N302`,
-2. bridge/export-map export (`N300` remains in force),
+2. actual bridge/export-map object support above the map object (`N395` remains
+   future-only),
 3. strict-core theta export / pair population (`N18` loop not broken),
 4. admissible `S_sel_int` / selector closure.
 
@@ -53,12 +54,11 @@ This packet does **not** claim:
 
 1. discharge of `T2`,
 2. discharge of `N302`,
-3. satisfaction of the `N301` bridge/export-map object target,
-4. actual bridge/export-map object support,
-5. actual bridge/export map export,
-6. admissible `S_sel_int`,
-7. strict-core selector closure or `QW-2191` discharge,
-8. ToE closure.
+3. actual bridge/export-map object support above the map object (`N395`),
+4. any new bridge/export-map object export beyond `F311/N422`,
+5. admissible `S_sel_int`,
+6. strict-core selector closure or `QW-2191` discharge,
+7. ToE closure.
 
 It claims only:
 
@@ -66,4 +66,3 @@ It claims only:
 2. it is noncyclic and observer-free by explicit contract,
 3. it is protected against the `atan2` degeneracy frontier by the same typed
    corridor constraint as `T119`.
-

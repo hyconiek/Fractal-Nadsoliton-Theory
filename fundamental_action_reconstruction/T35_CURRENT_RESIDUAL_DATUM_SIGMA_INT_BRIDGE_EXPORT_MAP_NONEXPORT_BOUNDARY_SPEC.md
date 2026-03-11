@@ -1,24 +1,36 @@
 # T35 Current Residual Datum Sigma-Int Bridge Export Map Nonexport Boundary Spec
 
 Status: `T35_CURRENT_RESIDUAL_DATUM_SIGMA_INT_BRIDGE_EXPORT_MAP_NONEXPORT_BOUNDARY_SPEC_NO_FALSE_PASS`
-As of: `2026-03-09`
+As of: `2026-03-11`
 
 ## Goal
 
-After `N299`, the residual-datum / `sigma_int_candidate` third-provider route
-already carries one actual support packet for its next missing layer:
+Before `F311/N422`, the residual-datum / `sigma_int_candidate` third-provider
+route already carried one actual support packet for its next missing layer:
 
 ```text
 actual bridge/export map
 ```
 
-The next honest question is now narrower:
+The next honest question was then narrower:
 
 ```text
 does the current repo already export the actual bridge/export map itself
 on this route,
 or must that exact layer now be frozen as a current-state nonexport boundary?
 ```
+
+On the updated repo state (`P388/P391`), the strict sigma-int lane now exports
+an **actual** strict-core bridge/export-map object satisfying `T148`
+(`F311/N422`).
+
+Therefore `T35` is no longer a “current missing-object boundary spec”.
+It is kept as:
+
+1. a historical boundary-spec / acceptance-test record for the pre-`T148`
+   map-layer nonexport boundary, and
+2. a guardrail against silently claiming a bridge/export map on routes that do
+   not actually export one.
 
 `T35` does not decide the whole route in principle.
 
@@ -71,9 +83,9 @@ It does **not** decide:
    - one target-slot export object exists for the residual datum codomain,
 5. `C48/C49`
    - one downstream pair/basis codomain scaffold exists,
-6. `P2/P3`
-   - the route still reports missing actual bridge/export map and missing
-     actual theta source,
+6. `P388/P391`
+   - the strict sigma-int lane exports an actual strict-core export-map object
+     (`F311/N422`) while theta-source export remains absent,
 7. `F188/P279/N299`
    - the route now has actual support for the bridge-map layer, but not the
      bridge/export map itself.
@@ -111,8 +123,18 @@ but still exports:
   - no actual bridge/export map,
   - no actual theta source,
   - no actual component-2 support,
-so the bridge/export-map layer remains nonexported on the current repo state
+so the bridge/export-map layer remained nonexported on the repo state as-of 2026-03-09
 ```
+
+Historical intended meaning (pre-`T148`):
+
+```text
+as-of 2026-03-09 the route did not yet export the actual bridge/export map,
+so the map layer was frozen as a nonexport boundary
+```
+
+On the updated repo state, this “nonexport boundary” description is superseded
+by the exported strict-core bridge/export-map object (`F311/N422`).
 
 ## Hard limits
 

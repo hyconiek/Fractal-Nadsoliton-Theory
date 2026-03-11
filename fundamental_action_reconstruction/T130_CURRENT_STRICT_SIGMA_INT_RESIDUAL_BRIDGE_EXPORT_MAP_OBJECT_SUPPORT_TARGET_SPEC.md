@@ -1,7 +1,7 @@
 # T130 Current Strict Sigma-Int Residual Bridge/Export-Map Actual Object Support Target Spec
 
 Status: `T130_CURRENT_STRICT_SIGMA_INT_RESIDUAL_BRIDGE_EXPORT_MAP_OBJECT_SUPPORT_TARGET_SPEC_NO_FALSE_PASS`  
-As of: `2026-03-10`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -22,9 +22,11 @@ As of the current repo state, the sigma-int residual branch exports:
 while remaining explicitly below:
 
 1. actual bridge/export-map object support,
-2. any bridge/export-map export (`N300` still in force),
-3. strict-core theta export / pair population (`N18` loop not broken),
-4. admissible `S_sel_int` / selector closure.
+2. strict-core theta export / pair population (`N18` loop not broken),
+3. admissible `S_sel_int` / selector closure.
+
+On the updated repo state, the strict-core bridge/export-map object is already
+exported (`F311/N422`), so `N300` is superseded and `N301` is discharged.
 
 The next honest question is therefore narrower than closure:
 
@@ -58,7 +60,8 @@ with the intended meaning:
 
 ```text
 one explicit future-only target object for the next missing layer
-above the current object-support witness (N387) and below actual export-map export
+above the current object-support witness (N387) and above the exported strict-core
+export-map object (F311/N422)
 on the sigma-int residual third-provider route
 ```
 
@@ -80,8 +83,10 @@ must at minimum provide:
      (no silent gauge fixing),
    - strict derivation/source upgrade (`N389`) must be discharged or explicitly
      kept open (no silent candidate→source upgrade).
-5. **Map-export neutrality:** no claim that the bridge/export map itself is
-   exported (`N300` remains in force unless explicitly broken by a new object).
+5. **Map-object compatibility:** no claim that the bridge/export map is
+   absent; the strict-core bridge/export-map object is already exported
+   (`F311/N422`), and this target concerns only the missing object-support
+   layer above that map object.
 6. **Selector neutrality:** no implied admissible `S_sel_int`, no implied
    selector closure, and no implied `QW-2191` discharge.
 
@@ -90,10 +95,9 @@ must at minimum provide:
 `T130` must not claim:
 
 1. actual object support is already present,
-2. actual bridge/export-map export,
+2. discharge of `Lambda_residual_datum_sigma_int_bridge_export_map_object_support_target_v1`,
 3. actual theta export / pair population,
 4. admissible `S_sel_int`,
 5. selector closure,
 6. `QW-2191` discharge,
 7. ToE closure.
-

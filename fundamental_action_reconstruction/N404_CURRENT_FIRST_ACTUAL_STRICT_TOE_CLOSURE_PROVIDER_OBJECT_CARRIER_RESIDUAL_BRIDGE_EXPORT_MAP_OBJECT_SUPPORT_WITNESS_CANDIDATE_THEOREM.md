@@ -1,7 +1,7 @@
 # N404 Current First Actual Strict ToE Closure Provider-Object Carrier Residual Bridge/Export-Map Object-Support Witness Candidate Theorem
 
 Status: `N404_DISCHARGED_CURRENT_FIRST_ACTUAL_STRICT_TOE_CLOSURE_PROVIDER_OBJECT_CARRIER_RESIDUAL_BRIDGE_EXPORT_MAP_OBJECT_SUPPORT_WITNESS_CANDIDATE_THEOREM_NO_FALSE_PASS`  
-As of: `2026-03-10`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -22,10 +22,12 @@ with the following exact meaning:
 
 1. `N299` remains correct:
    - the residual bridge-map target support packet is present;
-2. `N300` remains correct:
-   - the export-map layer remains nonexported on the current repo state;
-3. `N301` remains correct:
-   - one future-only export-map object target remains present;
+2. `F311/N422` is now exported:
+   - one strict-core bridge/export-map object exists satisfying `T148`
+     (discharges `N301`; supersedes `N300` as a current-state description);
+3. `N300/N301` are now historical:
+   - `N300` remains exported only as a historical map-layer nonexport boundary,
+   - `N301` remains exported only as a historical target object;
 4. `N397` remains correct:
    - the provider-orbit-quotient ↔ nad12-sigma weld is discharged at declared
      interface level only;
@@ -38,7 +40,6 @@ with the following exact meaning:
    object-support **witness candidate** on the provider-object carrier lane,
 8. but this still remains strictly below:
    - actual bridge/export-map object support (`N302`),
-   - any bridge/export map export (`N300`),
    - strict-core theta export / pair population (`N18`),
    - admissible `S_sel_int`,
    - selector closure,
@@ -59,25 +60,17 @@ with the following exact meaning:
 
 1. discharge of `N302`,
 2. actual bridge/export-map object support,
-3. any bridge/export map export,
-4. actual `theta_1`, `theta_2`,
-5. actual pair population,
-6. admissible `S_sel_int`,
-7. strict-core selector closure,
-8. `QW-2191` discharge,
-9. ToE closure.
+3. actual `theta_1`, `theta_2`,
+4. actual pair population,
+5. admissible `S_sel_int`,
+6. strict-core selector closure,
+7. `QW-2191` discharge,
+8. ToE closure.
 
 ## Consequence (next honest step)
 
 After `N404`, the next honest move is still not to claim discharge.
 
-It is to either:
-
-1. lift the witness-candidate layer into an **actual** bridge/export-map
-   object-support witness admissible under strict noncyclic + observer-free
-   constraints (still below `N302` unless a real new bridge/export-map object
-   appears), or
-2. prove that such a lift fails on the strict lane,
-3. or introduce one genuinely new bridge/export-map object (new ingredient
-   class) rather than more same-lane repackaging.
-
+It is to lift the witness-candidate layer into an **actual** object-support
+witness (exported as `N405`) and then attack the missing actual object-support
+layer above the map object (`N395`), without implying selector closure.

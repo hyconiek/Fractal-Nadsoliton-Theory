@@ -1,7 +1,7 @@
 # T146 Current Strict Residual Datum Bridge/Export-Map Object-Support Carrier Actual Inhabitant Spec
 
 Status: `T146_CURRENT_STRICT_RESIDUAL_DATUM_BRIDGE_EXPORT_MAP_OBJECT_SUPPORT_CARRIER_ACTUAL_INHABITANT_SPEC_NO_FALSE_PASS`  
-As of: `2026-03-10`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -14,8 +14,11 @@ The strict residual-datum bridge/export-map lane currently exports:
 
 while still remaining below:
 
-- export-map object export (`N300` remains in force),
+- actual bridge/export-map object support above the map object (`N395`),
 - any claim of selector closure or `QW-2191` discharge.
+
+On the updated repo state, the strict-core bridge/export-map object is already
+exported (`F311/N422`), so `N300/N301` are historical.
 
 After `N412`, the next honest move on the residual branch is no longer to name
 targets. It is to attempt a **post-witness carrier discharge**:
@@ -23,7 +26,7 @@ targets. It is to attempt a **post-witness carrier discharge**:
 ```text
 discharge Omicron_residual_datum_bridge_export_map_object_support_carrier_target_v1
 on a declared strict domain, at least on the provider-object witness track,
-without implying export-map export or closure.
+without implying actual object support above the map object or closure.
 ```
 
 `T146` specifies one minimal carrier inhabitant construction that is:
@@ -32,7 +35,8 @@ without implying export-map export or closure.
 2. observer-free (no `K_obs` as a primary selector source),
 3. pair-indexed,
 4. explicitly above the provider-object witness layer,
-5. explicitly below any export-map object export (`N300` remains in force).
+5. explicitly below actual bridge/export-map object support above the map object
+   (`N395` remains future-only).
 
 ## Output object
 
@@ -139,7 +143,8 @@ Xi_residual_datum_provider_object_carrier_bridge_export_map_object_support_proje
 ```
 
 as the declared bridge-facing interface. This does not export any bridge/export
-map object (`N300` remains in force).
+map object (exported by `F311/N422`) and does not export any actual object
+support above the map object (`N395` remains future-only).
 
 ## Acceptance alignment (T140 / T139)
 
@@ -151,14 +156,14 @@ map object (`N300` remains in force).
    (`T139/N406`),
 
 by exporting one typed post-witness carrier object above `N405` and below
-export-map export, with explicit noncyclic + observer-free contracts.
+actual bridge/export-map object support above the map object (`N395`), with
+explicit noncyclic + observer-free contracts.
 
 ## Hard limits
 
 `T146` must not claim:
 
-1. any bridge/export map export (`N300` remains in force),
+1. any actual bridge/export-map object support above the map object (`N395`),
 2. discharge of sigma-int strict prerequisites (`T123/T124`),
 3. admissible `S_sel_int`, selector closure, or `QW-2191` discharge,
 4. ToE closure.
-

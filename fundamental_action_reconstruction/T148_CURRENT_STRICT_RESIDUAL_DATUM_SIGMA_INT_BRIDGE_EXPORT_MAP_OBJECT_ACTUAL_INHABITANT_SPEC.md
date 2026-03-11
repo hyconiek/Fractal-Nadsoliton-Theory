@@ -1,19 +1,24 @@
 # T148 Current Strict Residual Datum Sigma-Int Bridge/Export-Map Object Actual Inhabitant Spec
 
 Status: `T148_CURRENT_STRICT_RESIDUAL_DATUM_SIGMA_INT_BRIDGE_EXPORT_MAP_OBJECT_ACTUAL_INHABITANT_SPEC_NO_FALSE_PASS`  
-As of: `2026-03-10`
+As of: `2026-03-11`
 
 ## Goal
 
-The strict-core residual-datum sigma-int bridge lane already exports:
+Historically, the strict-core residual-datum sigma-int bridge lane exported:
 
 1. a future-only target object naming the missing bridge/export-map object
    (`T36/F190/P281/N301`), and
 2. a theorem-level map-layer nonexport boundary (`T35/F189/P280/N300`).
 
-However, the lane still lacks a clear *discharge construction* spec for what
-would count as exporting that missing bridge/export-map object **as an actual
-strict-core object**, while keeping the strict discipline:
+On the updated repo state, the lane now exports an **actual** strict-core
+bridge/export-map object satisfying this spec (`F311/N422`), so:
+
+1. `N301` is discharged,
+2. `N300` is superseded as a current-state description (historical).
+
+`T148` is therefore kept as an acceptance-test / construction-spec record for
+what counted as an audit-safe discharge, while keeping the strict discipline:
 
 - no silent candidate→source upgrade,
 - no silent gauge fixing,
@@ -118,4 +123,3 @@ must at minimum provide:
 2. discharge of `N300` without exporting an actual map object,
 3. admissible `S_sel_int`, selector closure, or `QW-2191` discharge,
 4. ToE closure.
-

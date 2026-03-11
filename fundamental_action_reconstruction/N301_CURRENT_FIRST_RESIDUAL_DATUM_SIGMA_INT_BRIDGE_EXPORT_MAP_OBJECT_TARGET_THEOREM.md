@@ -5,9 +5,13 @@ As of: `2026-03-09`
 
 ## Goal
 
-Package theorem-level the strongest honest current statement about the exact
-missing bridge/export-map object on the residual-datum / `sigma_int_candidate`
-route.
+Package theorem-level the strongest honest statement (as-of `2026-03-09`)
+about the exact missing bridge/export-map object on the residual-datum /
+`sigma_int_candidate` route.
+
+On the updated repo state (`2026-03-11`), this future-only target is
+**discharged** by the exported strict-core bridge/export-map object
+(`F311/N422`; see `P388/P391`).
 
 ## Theorem-level conclusion
 
@@ -37,7 +41,8 @@ with the following exact meaning:
 1. the residual-datum third-provider route now names its exact missing
    bridge/export-map object sharply,
 2. this is stronger than speaking only about a generic missing map layer,
-3. but it remains strictly future-only and below actual export.
+3. but it remains strictly future-only and below actual export (as-of
+   `2026-03-09`).
 
 ## Why this is the honest theorem
 
@@ -80,7 +85,8 @@ The strongest honest reading after `N301` is:
 
 1. the third-provider route is now sharper both on the support side and on
    the object-target side,
-2. but the route still does not honestly export the bridge/export map itself,
+2. but the route still does not honestly export the bridge/export map itself
+   (as-of `2026-03-09`),
 3. the next honest move on this route must therefore either:
    - add one genuinely new actual bridge/export-map object,
    - or add one genuinely new blocker-cut changing this exact object-layer

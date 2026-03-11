@@ -1,7 +1,7 @@
 # T131 Current Strict ToE Closure Provider-Object Carrier Residual Bridge/Export-Map Object-Support Projection Spec
 
 Status: `T131_CURRENT_STRICT_TOE_CLOSURE_PROVIDER_OBJECT_CARRIER_RESIDUAL_BRIDGE_EXPORT_MAP_OBJECT_SUPPORT_PROJECTION_SPEC_NO_FALSE_PASS`  
-As of: `2026-03-10`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -14,7 +14,7 @@ After:
 the provider-object lane still does **not** export:
 
 1. actual bridge/export-map object support (`N302` remains in force),
-2. any bridge/export map export (`N300` remains in force),
+2. any new bridge/export-map object export beyond `F311/N422`,
 3. actual theta export / pair population (`N18` remains in force),
 4. admissible `S_sel_int` / selector closure (`QW-2191` remains in force).
 
@@ -84,9 +84,8 @@ below: actual bridge/export-map object support (N302)
 
 1. discharge of `N302`,
 2. actual bridge/export-map object support,
-3. actual bridge/export map export,
+3. any new export-map object export beyond `F311/N422`,
 4. actual theta export / pair population,
 5. admissible `S_sel_int`,
 6. strict-core selector closure / `QW-2191` discharge,
 7. ToE closure.
-

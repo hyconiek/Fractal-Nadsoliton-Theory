@@ -1,7 +1,7 @@
 # T140 Current Strict Residual Datum Bridge/Export-Map Actual Object-Support Carrier Target Spec
 
 Status: `T140_CURRENT_STRICT_RESIDUAL_DATUM_BRIDGE_EXPORT_MAP_OBJECT_SUPPORT_CARRIER_TARGET_SPEC_NO_FALSE_PASS`  
-As of: `2026-03-10`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -49,7 +49,7 @@ with the intended meaning:
 one explicit future-only target object for the next missing "actual object
 support carrier" layer above the current witness layer(s)
 (`N387` sigma-int witness and/or `N405` provider-object witness),
-and below actual bridge/export-map export (`N300` remains in force).
+and above the exported strict-core export-map object (`F311/N422`).
 ```
 
 This target is scoped to the strict residual-datum bridge/export-map lane and
@@ -59,6 +59,9 @@ is intended to be compatible with both route-local witnesses:
    (`N387`),
 2. `Kappa_residual_datum_provider_object_carrier_bridge_export_map_object_support_witness_v1`
    (`N405`).
+
+On the current repo state, this target is discharged by the exported carrier
+object `T146/F301/N413`.
 
 ## Acceptance tests (what would count as discharge)
 
@@ -72,9 +75,7 @@ must at minimum provide:
    - the sigma-int witness layer (`N387`), and/or
    - the provider-object carrier witness layer (`N405`),
    and strictly below:
-   - any export-map object export (`N300`),
-   - any export-map object discharge (`N301` remains future-only unless
-     explicitly discharged by a new object).
+   - actual bridge/export-map object support above the map object (`N395`).
 2. **Route reference discipline:** `O_support_v1` must carry, as explicit data,
    which strict witness layer it upgrades (sigma-int, provider-object, or both),
    by referencing the exact witness object name(s) above.
@@ -85,10 +86,9 @@ must at minimum provide:
    (respects sandbox `N18`).
 4. **Observer-free contract:** `O_support_v1` must not use `K_obs`-indexed
    selection as a primary source of uniqueness.
-5. **Map-export neutrality:** the construction must not silently claim that the
-   bridge/export map itself is exported:
-   - `N300` must remain in force unless the export-map is explicitly discharged
-     by a new theorem/object.
+5. **Map-object compatibility:** the construction must not silently claim that
+   the bridge/export map is absent. The strict-core export-map object is
+   already exported (`F311/N422`).
 6. **Sigma-int discipline (if used):** if the construction uses
    `sigma_int_candidate` as a strict-core source datum, it must keep the two
    missing prerequisites explicit:
@@ -108,9 +108,8 @@ must at minimum provide:
 
 1. discharge of `N302`,
 2. actual bridge/export-map object support,
-3. any export-map object export,
+3. any new export-map object export beyond `F311/N422`,
 4. actual theta export / pair population,
 5. admissible `S_sel_int`,
 6. strict-core selector closure or `QW-2191` discharge,
 7. ToE closure.
-

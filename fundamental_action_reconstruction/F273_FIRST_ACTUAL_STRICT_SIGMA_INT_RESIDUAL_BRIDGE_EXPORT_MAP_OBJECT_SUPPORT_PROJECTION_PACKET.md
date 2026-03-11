@@ -1,13 +1,14 @@
 # F273 First Actual Strict Sigma-Int Residual Bridge/Export-Map Object-Support Projection Packet
 
 Status: `F273_CURRENT_ACTUAL_STRICT_SIGMA_INT_RESIDUAL_BRIDGE_EXPORT_MAP_OBJECT_SUPPORT_PROJECTION_PACKET_NO_FALSE_PASS`  
-As of: `2026-03-10`
+As of: `2026-03-11`
 
 ## Goal
 
 Package the narrowest honest residual bridge/export-map object-support
-projection layer above `N384` without pretending that any actual bridge/export
-map or any actual bridge/export-map object support is already exported.
+projection layer above `N384` without pretending that any actual
+bridge/export-map **object support** is already exported above the now exported
+strict-core map object (`F311/N422`).
 
 ## Packet
 
@@ -25,15 +26,14 @@ for the residual-datum / sigma_int_candidate third-provider route
 
 R1 target-slot export
   + N299 bridge-map target support
-  + N300 export-map nonexport boundary
-  + N301 export-map object target (future-only)
+  + F311/N422 export-map object (actual; residual Z2 population only)
+  + N300/N301 historical map-layer boundary/target (superseded/discharged)
   + N384 corridor-protected projection candidate artifact
   + N302 boundary still in force below object support
     ->
 actual projection layer
 
 still below actual bridge/export-map object support
-still below actual bridge/export map export
 still below actual theta export
 still below actual pair population
 still below admissible S_sel_int
@@ -55,16 +55,20 @@ residual_target_slot_export_status = present_via_R1
 bridge_map_target_support_status = present_via_N299
 ```
 
-### 3. Export-map nonexport boundary field
+### 3. Export-map object export field
 
 ```text
-export_map_nonexport_boundary_status = present_via_N300
+export_map_object_export_status = present_via_F311
 ```
 
-### 4. Export-map object target field
+### 4. Historical map-layer boundary/target fields (superseded/discharged)
 
 ```text
-export_map_object_target_status = future_only_present_via_N301
+export_map_nonexport_boundary_status =
+  superseded_by_actual_export_map_object (F311/N422; historical N300)
+
+export_map_object_target_status =
+  discharged_by_actual_export_map_object (F311/N422; historical N301)
 ```
 
 ### 5. Corridor-protected projection-candidate field
@@ -89,7 +93,7 @@ bridge_export_map_object_support_boundary_status = N302_still_in_force_below_sup
 
 ```text
 projection_composition_status =
-joint_projection_of_target_slot_support_nonexport_boundary_future_object_target_and_projection_candidate
+joint_projection_of_target_slot_support_export_map_object_and_projection_candidate
 ```
 
 Meaning:
@@ -104,13 +108,12 @@ support.
 
 1. discharge of `T2`,
 2. actual bridge/export-map object support,
-3. actual bridge/export map export,
-4. actual `theta_1`, `theta_2`,
-5. actual pair population,
-6. admissible `S_sel_int`,
-7. strict-core selector closure,
-8. `QW-2191` discharge,
-9. ToE closure.
+3. actual `theta_1`, `theta_2`,
+4. actual pair population,
+5. admissible `S_sel_int`,
+6. strict-core selector closure,
+7. `QW-2191` discharge,
+8. ToE closure.
 
 ## Honest reading
 
@@ -120,6 +123,5 @@ The strongest honest reading is:
 the repo now exports one actual projection layer for the residual-datum / sigma_int_candidate
 third-provider route into the bridge/export-map object-support frontier,
 but this remains strictly below actual bridge/export-map object support
-and below any bridge/export map export
+and below strict-core theta export / pair population
 ```
-

@@ -1,7 +1,7 @@
 # T137 Current Strict ToE Closure Provider-Object Carrier Residual Bridge/Export-Map Object-Support Witness Candidate Spec
 
 Status: `T137_CURRENT_STRICT_TOE_CLOSURE_PROVIDER_OBJECT_CARRIER_RESIDUAL_BRIDGE_EXPORT_MAP_OBJECT_SUPPORT_WITNESS_CANDIDATE_SPEC_NO_FALSE_PASS`  
-As of: `2026-03-10`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -16,7 +16,8 @@ It is to package the provider-object carrier route as one explicit
 object-support layer, without claiming:
 
 1. actual bridge/export-map object support,
-2. export of the bridge/export map,
+2. that this packaging exports the bridge/export-map object (exported
+   separately by `F311/N422`),
 3. strict-core actual `theta_1,theta_2`,
 4. admissible `S_sel_int`,
 5. selector closure or `QW-2191` discharge,
@@ -27,8 +28,9 @@ object-support layer, without claiming:
 `T137` is scoped only to already exported lanes:
 
 1. `N299` (bridge-map target support),
-2. `N300` (export-map nonexport boundary),
-3. `N301` (future-only export-map object target),
+2. `F311/N422` (actual export-map object satisfying `T148`; supersedes `N300`
+   and discharges `N301`),
+3. `N300/N301` (historical map-layer boundary/target; superseded/discharged),
 4. `N397` (provider-orbit-quotient ↔ nad12-sigma weld discharged at declared interface level),
 5. `N399` (corridor-protected provider-carrier projection candidate),
 6. `N398` (actual provider-carrier projection layer into the object-support frontier),
@@ -44,8 +46,9 @@ residual_datum_provider_object_carrier_bridge_export_map_object_support_witness_
   weld_discharge_present: true,
   residual_target_slot_export: present,
   bridge_map_target_support: present,
-  export_map_nonexport_boundary: present,
-  export_map_object_target: future_only_present,
+  export_map_nonexport_boundary: historical_only,
+  export_map_object_target: discharged,
+  export_map_object_exported: true,
   object_to_map_support_projection_candidate: present,
   residual_object_support_projection_layer: present,
   status: "actual_witness_candidate_below_bridge_export_map_object_support"
@@ -71,13 +74,12 @@ Omega_residual_datum_provider_object_carrier_bridge_export_map_object_support_wi
 `T137` must not claim:
 
 1. discharge of `T2`,
-2. satisfaction of the strict-core export-map object target `N301`,
-3. actual bridge/export-map object support,
-4. any bridge/export map export,
+2. actual bridge/export-map object support (`N395` remains future-only),
+3. any new bridge/export-map object export beyond `F311/N422`,
+4. discharge of `N395`,
 5. actual `theta_1`, `theta_2`,
 6. actual pair population,
 7. admissible `S_sel_int`,
 8. strict-core selector closure,
 9. `QW-2191` discharge,
 10. ToE closure.
-

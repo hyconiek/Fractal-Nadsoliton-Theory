@@ -1,7 +1,7 @@
 # N408 Current First Actual Strict ToE Closure Provider-Object Carrier Residual Bridge/Export-Map Object-Support Carrier Preobject Candidate Theorem
 
 Status: `N408_DISCHARGED_CURRENT_FIRST_ACTUAL_STRICT_TOE_CLOSURE_PROVIDER_OBJECT_CARRIER_RESIDUAL_BRIDGE_EXPORT_MAP_OBJECT_SUPPORT_CARRIER_PREOBJECT_CANDIDATE_THEOREM_NO_FALSE_PASS`  
-As of: `2026-03-10`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -24,15 +24,15 @@ with the following exact meaning:
 1. `N405` remains correct:
    - the provider-object residual route reaches one object-support witness
      frontier layer,
-2. `N407` remains correct:
-   - the missing post-witness carrier layer is named as a future-only target,
-3. `N302` remains correct:
-   - no actual post-witness object-support carrier is exported on the current
-     repo state,
-4. therefore the strongest admissible positive move is only:
-   - export one explicit candidate *preobject* construction for a post-witness
-     carrier (`T141/F296`),
-   - while making no claim of discharge.
+2. `N407` is now historical:
+   - the post-witness carrier layer was named as a future-only target and is
+     now discharged by the exported carrier (`T146/F301/N413`),
+3. `N413` is now exported:
+   - one actual post-witness object-support carrier exists above `N405`,
+4. therefore the exported object is correctly read only as an auxiliary
+   **preobject candidate** record:
+   - a preobject candidate construction for a post-witness carrier (`T141/F296`),
+   - strictly weaker than the actual carrier export (`T146/F301/N413`).
 
 ## What N408 proves
 
@@ -47,7 +47,7 @@ with the following exact meaning:
 
 1. discharge of `N302`,
 2. actual bridge/export-map object support,
-3. any export-map object export,
+3. any new export-map object export beyond `F311/N422`,
 4. actual theta export / pair population,
 5. actual `E_orient`,
 6. admissible `S_sel_int`,
@@ -58,9 +58,5 @@ with the following exact meaning:
 
 After `N408`, the next honest move is still one genuinely new ingredient:
 
-1. discharge of the post-witness carrier target (`N407`) on a declared strict
-   domain, and/or
-2. one actual bridge/export-map object breaking the `N300` nonexport boundary,
-
-both noncyclically and observer-free.
-
+1. discharge/export of actual bridge/export-map object support above the map
+   object (`N395`), still noncyclically and observer-free.

@@ -1,7 +1,7 @@
 # T139 Current Strict ToE Closure Provider-Object Carrier Residual Bridge/Export-Map Actual Object Support Target Spec
 
 Status: `T139_CURRENT_STRICT_TOE_CLOSURE_PROVIDER_OBJECT_CARRIER_RESIDUAL_BRIDGE_EXPORT_MAP_OBJECT_SUPPORT_TARGET_SPEC_NO_FALSE_PASS`  
-As of: `2026-03-10`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -13,9 +13,16 @@ After `N405`, the provider-object carrier residual branch exports:
 while remaining explicitly below:
 
 1. actual bridge/export-map object support (`N302`),
-2. any bridge/export-map export (`N300` remains in force),
+2. actual bridge/export-map object support above the map object (`N395` remains
+   future-only),
 3. strict-core theta export / pair population (`N18` remains in force),
 4. admissible `S_sel_int` / selector closure / `QW-2191` discharge.
+
+On the updated repo state, the strict-core bridge/export-map object is already
+exported (`F311/N422`), so:
+
+1. `N300` is superseded as a current-state map-layer nonexport boundary,
+2. `N301` is discharged as a future-only export-map object target (`T148`).
 
 The next honest question is therefore narrower than closure:
 
@@ -51,7 +58,7 @@ with the intended meaning:
 ```text
 one explicit future-only target object for the next missing layer
 above the current provider-object carrier object-support witness (N405)
-and below actual export-map export (N300)
+and above the exported strict-core export-map object (F311/N422)
 on the provider-object carrier residual bridge lane
 ```
 
@@ -80,7 +87,9 @@ must at minimum provide:
    - strict derivation/source upgrade (`N389`) must be discharged or explicitly
      kept open (no silent candidate→source upgrade).
 6. **Map-export neutrality:** no claim that the bridge/export map itself is
-   exported (`N300` remains in force unless explicitly broken by a new object).
+   absent; the strict-core export-map object is already exported
+   (`F311/N422`), and this target concerns only the missing post-witness
+   object-support layer above that map object.
 7. **Selector neutrality:** no implied admissible `S_sel_int`, no implied
    selector closure, and no implied `QW-2191` discharge.
 
@@ -95,4 +104,3 @@ must at minimum provide:
 5. selector closure,
 6. `QW-2191` discharge,
 7. ToE closure.
-

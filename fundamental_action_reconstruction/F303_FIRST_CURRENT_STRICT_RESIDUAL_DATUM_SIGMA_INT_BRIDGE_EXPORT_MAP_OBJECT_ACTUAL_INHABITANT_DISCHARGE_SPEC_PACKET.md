@@ -1,7 +1,7 @@
 # F303 First Current Strict Residual Datum Sigma-Int Bridge/Export-Map Object Actual-Inhabitant Discharge-Spec Packet
 
 Status: `F303_EXECUTED_FIRST_CURRENT_STRICT_RESIDUAL_DATUM_SIGMA_INT_BRIDGE_EXPORT_MAP_OBJECT_ACTUAL_INHABITANT_DISCHARGE_SPEC_PACKET_NO_FALSE_PASS`  
-As of: `2026-03-10`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -19,24 +19,32 @@ failure mode is increasingly “false pass by omission”:
 
 ```text
 export one explicit discharge acceptance spec packet (T148)
-for the missing strict-core bridge/export-map object (N301),
-without claiming that the object exists.
+for the strict-core bridge/export-map object target (`T36/N301`),
+without silently weakening strict prerequisites.
 ```
+
+On the current repo state, this acceptance spec is **satisfied** by the
+exported strict-core map object `F311/N422`.
 
 ## Inputs reused
 
 1. `T36/N301`
-   - bridge/export-map object is sharply named as a future-only target
+   - bridge/export-map object target is sharply named (historical; discharged
+     by `F311/N422`)
 2. `T35/N300`
-   - map-layer nonexport boundary remains in force
+   - map-layer nonexport boundary (historical; superseded by `F311/N422`)
 3. `T124/N389`
-   - sigma-int strict derivation/source upgrade remains future-only
+   - strict sigma-int source upgrade is now exported (`F307/N418`; `T124` kept
+     as historical acceptance record)
 4. `T123/N388`
-   - sigma-int gauge-quotient safety remains future-only
+   - theorem-level sigma-int gauge-quotient safety is now discharged
+     (`F308/N419`)
 5. `T147/N414`
-   - selector-track identification remains future-only
+   - selector-track identification beyond overlay-only is now discharged
+     (`F310/N421`)
 6. `T148/P388`
-   - discharge acceptance spec exists and the object is probed as still absent
+   - discharge acceptance spec exists and the discharge is probed as achieved
+     (`F311/N422`)
 
 ## Packet result
 
@@ -66,7 +74,8 @@ residual_datum_sigma_int_bridge_export_map_object_actual_inhabitant_discharge_ac
 
 This packet does **not** claim:
 
-1. export of the bridge/export-map object itself (keeps `N300` in force),
+1. that `F303` itself exports the bridge/export-map object (exported by
+   `F311/N422`),
 2. discharge of `T124/N389`, `T123/N388`, or `T147/N414`,
 3. admissible `S_sel_int`, selector closure, or `QW-2191` discharge,
 4. ToE closure.
@@ -74,7 +83,6 @@ This packet does **not** claim:
 It claims only:
 
 1. the repo now exports an explicit discharge acceptance spec packet for what
-   would count as discharging `N301` without false pass (`T148`),
+   counted as discharging `N301` without false pass (`T148`),
 2. future work can reference this packet to keep sigma-int bridge attempts
    audit-safe and noncyclic.
-

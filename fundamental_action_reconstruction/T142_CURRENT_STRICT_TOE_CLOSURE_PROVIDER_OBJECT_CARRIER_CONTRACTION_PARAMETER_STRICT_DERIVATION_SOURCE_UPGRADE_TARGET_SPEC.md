@@ -1,7 +1,7 @@
 # T142 Current Strict ToE Closure Provider-Object Carrier Contraction-Parameter Strict-Derivation/Source-Upgrade Target Spec
 
 Status: `T142_CURRENT_STRICT_TOE_CLOSURE_PROVIDER_OBJECT_CARRIER_CONTRACTION_PARAMETER_STRICT_DERIVATION_SOURCE_UPGRADE_TARGET_SPEC_NO_FALSE_PASS`  
-As of: `2026-03-10`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -59,7 +59,8 @@ It does not decide:
 1. discharge of `Epsilon_strict_provider_object_carrier_layer_target_v1`
    (`T125/N390`),
 2. discharge of residual bridge/export-map object support (`N302`),
-3. export of any bridge/export map object (`N300` remains in force),
+3. export of the strict-core bridge/export-map object (exported by
+   `F311/N422`; `N300/N301` are historical),
 4. discharge of sigma-int prerequisites (`N388/N389`),
 5. admissible `S_sel_int`, selector closure, or `QW-2191` discharge,
 6. ToE closure.

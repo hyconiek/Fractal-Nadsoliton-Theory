@@ -1,7 +1,7 @@
 # P380 Current Strict ToE Closure Provider-Object Carrier Residual Bridge/Export-Map Actual Object Support Target Probe
 
 Status: `P380_EXECUTED_CURRENT_STRICT_TOE_CLOSURE_PROVIDER_OBJECT_CARRIER_RESIDUAL_BRIDGE_EXPORT_MAP_OBJECT_SUPPORT_TARGET_PROBE_NO_FALSE_PASS`  
-As of: `2026-03-10`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -25,7 +25,7 @@ with explicit acceptance tests (T139).
 |---|---|---|
 | object-support projection layer present | YES | `N398` |
 | object-support witness present | YES | `N405` |
-| actual post-witness object-support carrier present | YES | `T146/F301/N413` exports a carrier above `N405` (below `N300`) |
+| actual post-witness object-support carrier present | YES | `T146/F301/N413` exports a carrier above `N405` (post-`T148`; map object exported via `F311/N422`) |
 | actual object-support target named | YES | `T139/F294` |
 
 ## Exact verdict

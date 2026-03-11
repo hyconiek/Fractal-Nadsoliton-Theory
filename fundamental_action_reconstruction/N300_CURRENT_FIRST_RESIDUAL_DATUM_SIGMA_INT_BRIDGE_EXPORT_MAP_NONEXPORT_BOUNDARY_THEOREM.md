@@ -5,8 +5,13 @@ As of: `2026-03-09`
 
 ## Goal
 
-Package theorem-level the strongest honest current statement about the exact
-bridge/export-map layer on the residual-datum / `sigma_int_candidate` route.
+Package theorem-level the strongest honest statement (as-of `2026-03-09`)
+about the exact bridge/export-map layer on the residual-datum /
+`sigma_int_candidate` route.
+
+On the updated repo state (`2026-03-11`), this theorem is **superseded** as a
+current-state description by the exported strict-core bridge/export-map object
+(`F311/N422`; see `P388/P391`).
 
 ## Theorem-level conclusion
 
@@ -27,7 +32,7 @@ with the following exact meaning:
 6. but no actual bridge/export map is yet exported,
 7. no actual theta source is yet exported,
 8. therefore the bridge/export-map layer remains nonexported on this route
-   for the current repo state.
+   for the repo state as-of `2026-03-09`.
 
 ## What N300 proves
 
@@ -56,7 +61,8 @@ but still does **not** contain:
 2. one actual theta source,
 3. one actual component-2 support witness.
 
-So the strongest honest theorem is one exact current-state nonexport boundary.
+So the strongest honest theorem is one exact current-state nonexport boundary
+as-of `2026-03-09`.
 
 ## What N300 does not prove
 
@@ -79,7 +85,8 @@ So the strongest honest theorem is one exact current-state nonexport boundary.
 The strongest honest reading after `N300` is:
 
 1. yes, the third provider route remains live and sharper than before,
-2. no, the route still does not honestly export the bridge/export map itself,
+2. no, the route still does not honestly export the bridge/export map itself
+   (as-of `2026-03-09`),
 3. the next honest move on this route must therefore either:
    - add one genuinely new bridge/export-map object,
    - or add one genuinely new blocker-cut that changes this exact map-layer

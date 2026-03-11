@@ -1,13 +1,14 @@
 # F274 First Actual Strict Sigma-Int Residual Bridge/Export-Map Object-Support Witness Candidate Packet
 
 Status: `F274_CURRENT_ACTUAL_STRICT_SIGMA_INT_RESIDUAL_BRIDGE_EXPORT_MAP_OBJECT_SUPPORT_WITNESS_CANDIDATE_PACKET_NO_FALSE_PASS`  
-As of: `2026-03-10`
+As of: `2026-03-11`
 
 ## Goal
 
 Package one explicit **bridge/export-map object-support witness candidate**
 above `N385` without pretending that any actual bridge/export-map object
-support is already exported.
+support is already exported above the now exported strict-core map object
+(`F311/N422`).
 
 ## Packet
 
@@ -25,7 +26,6 @@ residual-datum / sigma_int_candidate third-provider route
   -> actual witness candidate (this packet)
 
 still below actual bridge/export-map object support
-still below bridge/export map export
 still below strict-core theta export
 still below admissible S_sel_int
 still below selector closure
@@ -49,8 +49,11 @@ bridge_map_target_support_status = present_via_N299
 ### 3. Export-map layer boundary fields
 
 ```text
-export_map_nonexport_boundary_status = present_via_N300
-export_map_object_target_status = future_only_present_via_N301
+export_map_object_export_status = present_via_F311
+export_map_nonexport_boundary_status =
+  superseded_by_actual_export_map_object (F311/N422; historical N300)
+export_map_object_target_status =
+  discharged_by_actual_export_map_object (F311/N422; historical N301)
 ```
 
 ### 4. Projection fields
@@ -79,4 +82,3 @@ packaged_above_projection_layer_below_object_support
 6. strict-core selector closure,
 7. `QW-2191` discharge,
 8. ToE closure.
-

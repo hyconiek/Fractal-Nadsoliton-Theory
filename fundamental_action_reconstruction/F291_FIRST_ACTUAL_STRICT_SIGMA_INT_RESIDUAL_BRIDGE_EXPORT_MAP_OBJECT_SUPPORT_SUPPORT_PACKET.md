@@ -1,7 +1,7 @@
 # F291 First Actual Strict Sigma-Int Residual Bridge/Export-Map Object-Support Support Packet
 
 Status: `F291_EXECUTED_FIRST_ACTUAL_STRICT_SIGMA_INT_RESIDUAL_BRIDGE_EXPORT_MAP_OBJECT_SUPPORT_SUPPORT_PACKET_NO_FALSE_PASS`  
-As of: `2026-03-10`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -27,10 +27,10 @@ explicitly below N302.
 
 1. `N299`
    - bridge-map target support present,
-2. `N300`
-   - export-map nonexport boundary present,
-3. `N301`
-   - export-map object target future-only present,
+2. `F311/N422`
+   - export-map object exported (actual; residual `Z2` population only),
+3. `N300/N301`
+   - historical map-layer boundary/target (superseded/discharged),
 4. `N385`
    - object-support projection layer present,
 5. `N387`
@@ -63,8 +63,6 @@ sigma-int object-support projection
 actual support packet for the next missing post-witness object-support layer
 
 still below actual object support (N302)
-still below export-map object export (N300)
-still below export-map object discharge (N301)
 still below selector closure / QW-2191 discharge
 ```
 
@@ -72,8 +70,11 @@ still below selector closure / QW-2191 discharge
 
 ```text
 bridge_map_target_support_status = present_via_N299
-export_map_nonexport_boundary_status = present_via_N300
-export_map_object_target_status = future_only_present_via_N301
+export_map_object_export_status = present_via_F311
+export_map_nonexport_boundary_status =
+  superseded_by_actual_export_map_object (F311/N422; historical N300)
+export_map_object_target_status =
+  discharged_by_actual_export_map_object (F311/N422; historical N301)
 
 object_support_projection_layer_status = present_via_N385
 object_support_witness_status = present_via_N387
@@ -96,4 +97,3 @@ actual_object_support_status = absent_via_N302
 5. admissible `S_sel_int`,
 6. strict-core selector closure or `QW-2191` discharge,
 7. ToE closure.
-

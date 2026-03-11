@@ -21,6 +21,10 @@ This is still below:
 2. actual theta source,
 3. actual component-2 support.
 
+On the updated repo state (`2026-03-11`), the strict-core bridge/export-map
+object is exported (`F311/N422`), so the “actual_bridge_export_map_present =
+false” clauses below are historical as-of `2026-03-09`.
+
 ## Inputs reused
 
 ### 1. Source candidate exists
@@ -43,13 +47,14 @@ From `T2`:
 1. one packet-ready theorem spec exists for a future bridge
    `sigma_int_candidate -> residual orientation datum`.
 
-### 4. Actual bridge/export map is still absent
+### 4. Actual bridge/export map was absent (as-of `2026-03-09`)
 
 From `P2/P3`:
 
-1. no actual bridge/export map is exported,
-2. no actual theta source is exported,
-3. the route remains below pair-level export.
+1. as-of `2026-03-09`, no actual bridge/export map is exported (superseded by
+   `F311/N422` on the updated repo state),
+2. as-of `2026-03-09`, no actual theta source is exported,
+3. as-of `2026-03-09`, the route remains below pair-level export.
 
 ## Packet result
 
