@@ -1,169 +1,135 @@
 # N7 Current Strict-Core Sigma-Int Residual Datum Nonderivation Theorem
 
 Status: `N7_DISCHARGED_CURRENT_STRICT_CORE_SIGMA_INT_RESIDUAL_DATUM_NONDERIVATION_NO_FALSE_PASS`
-As of: `2026-03-07`
+As of: `2026-03-11`
 
 ## Goal
 
-After `P4`, the relevant question is no longer whether the current route reaches
-`theta` or `A_1(pair1)`.
+After `P391` and `N302`, the sharp route-specific question is:
 
-The sharp route-specific theorem is narrower:
-
-does the current strict-core `sigma_int` route already derive a strict-core
-residual orientation datum?
+```text
+does the strict sigma-int lane already derive an actual strict-core population
+of the residual orientation datum target slot R1 (i.e. supply theta_1, theta_2),
+or does it still export only the residual Z2 sign convention layer?
+```
 
 ## Theorem
 
 ### Informal statement
 
-Within the current strict-core route:
+Within the current strict sigma-int lane:
 
-1. `sigma_int_candidate` exists only as a candidate object,
-2. full gauge-quotient safety remains open,
-3. the strongest current link to the residual datum is only candidate-fit,
-4. the acceptance carrier and semantic target fields exist only as carrier
-   infrastructure,
-5. the only explicit bridge instance is on the axiom lane and does not modify
-   strict core,
-6. strict-core export and strict-core equivalence/export map remain absent.
+1. strict sigma-int provenance is exported (`F307/N418`),
+2. theorem-level gauge-quotient safety is exported (`F308/N419`),
+3. an actual strict-core export-map object into the `R1` target slot is exported
+   (`F311/N422`), but it populates **only** the residual `Z2` sign convention
+   layer (no theta inputs),
+4. the `R1` residual orientation datum target slot remains unpopulated as an
+   actual strict-core datum because strict-core `theta_1`, `theta_2` remain
+   absent (`N1/C50`) and `QW-2191` remains open.
 
 Therefore the current strict-core route does not derive a strict-core residual
-orientation datum.
+orientation datum (as an actual `R1` target-slot population).
 
 Hence it cannot presently serve as a strict-core internalization bridge from
-`sigma_int_candidate` to the residual orientation datum.
+strict sigma-int to an actual residual orientation datum population.
 
 ### Formal statement
 
 ```text
 N7_CurrentStrictCore_SigmaIntResidualDatum_Nonderivation_Theorem
 
-Let R_sigma_res_current denote the current strict-core route consisting of:
-  sigma_int_candidate,
-  its currently supported stability properties,
-  the candidate-fit residual Z2 slot,
-  the current acceptance-carrier infrastructure,
-  and the currently exported bridge objects.
+Let R_sigma_res_current denote the current strict sigma-int lane consisting of:
+  sigma_int_strict_derived_v1,
+  theorem-level gauge-quotient safety for that datum,
+  the R1 residual orientation datum target-slot export,
+  and the exported sigma-int -> residual target-slot export-map object.
 
 If:
-  (i) sigma_int_candidate is candidate-only and not strict-derived,
-  (ii) full gauge-quotient safety remains open,
-  (iii) the route reaches only candidate-fit and overlay compatibility,
-  (iv) strict-core residual-datum export is absent,
-  (v) strict-core equivalence/export map is absent,
-  (vi) the only explicit bridge instance is axiom-lane-only and does not
-       change strict core,
+  (i) the exported map object populates only the residual Z2 sign convention
+      layer and exports no strict-core theta supply,
+  (ii) the strict core exports no internal theta source for actual theta_1, theta_2
+       on the declared selector-facing route family (N1/C50),
 
 then R_sigma_res_current does not derive a strict-core residual orientation
-datum.
+datum as an actual population of residual_orientation_datum_target_slot.
 
 Hence R_sigma_res_current cannot presently serve as a strict-core
-sigma_int-to-residual-datum bridge.
+sigma_int-to-residual-datum internalization bridge.
 ```
 
 ## Proof
 
-### Step 1. The route starts with a candidate, not a strict-derived source
+### Step 1. Strict sigma-int provenance is exported
 
-From `B4`:
+From `F307/N418`:
 
-- `sigma_int_candidate` is identified.
+- `sigma_int_strict_derived_v1` is exported as a strict-side source-upgraded
+  datum on a declared domain (explicit premise; no hybrid reuse).
 
-From `B8`:
+So sigma-int itself is no longer the missing strict provenance ingredient on
+this lane.
 
-- `no_strict_derivation_of_sigma_int_candidate` remains explicit.
+### Step 2. The route exports theorem-level gauge-quotient safety
 
-So the route does not start from a strict-derived source object.
+From `F308/N419`:
 
-### Step 2. The route lacks theorem-level quotient safety
+- a declared gauge action is exported,
+- a quotient-level invariance witness is exported (no gauge fixing).
 
-From `B5`:
+So gauge-quotient safety is no longer the missing prerequisite on this lane.
 
-- local deformation stability is only `supported_partial`,
-- full gauge-quotient safety is `open`.
+### Step 3. An actual strict-core export-map object exists, but it is sign-only
 
-From `B8`:
+From `F311/N422`:
 
-- `no_theorem_level_gauge_quotient_safety` remains explicit.
+- an actual strict-core export-map object
+  `E_sigma_int_to_residual_datum_bridge_export_map_object_v1 :
+    sigma_int_strict_derived_v1 -> residual_orientation_datum_target_slot`
+  is exported,
+- but its declared meaning is **only** population of the residual `Z2` sign
+  convention layer (no theta inputs; no theta outputs).
 
-So the route does not yet provide a theorem-level gauge-safe datum.
+So the strict lane crosses the pre-`T148` map-object nonexport boundary, but it
+still does not populate the residual orientation datum slot as an actual datum.
 
-### Step 3. The route reaches only candidate-fit, not strict-core export
+### Step 4. The residual target slot remains unpopulated from strict core
 
-From `B6`:
+From `R1`:
 
-- `sigma_int_candidate` fits the residual `Z2` slot only as
-  `supported_candidate_fit`.
+- the strict-core residual target slot explicitly requires inputs
+  `theta_1, theta_2`.
 
-From `C37`:
+From `N1` and `C50`:
 
-- candidate internalization is present only as `yes_candidate_fit`,
-- strict-core residual orientation datum export is `not_shown`,
-- strict-core equivalence bridge is `not_shown`.
+- no strict-core internal theta source is exported on the audited selector-facing
+  strict route family.
 
-So the route reaches candidate-fit only, not strict-core internalization.
+Therefore, even after exporting the map object, the `R1` slot remains
+unpopulated as an actual strict-core residual orientation datum.
 
-### Step 4. Carrier infrastructure is not bridge discharge
+### Step 5. Candidate theta instantiations do not upgrade strict core
 
-From `C40`:
+From `F312/F314`:
 
-- the target-slot semantic field is present in the acceptance grammar.
+- strict-input theta records exist only as candidate instantiations (no theta export).
 
-From `C46`:
+From `F315/N426`:
 
-- a persisted carrier file exists.
+- the sigma-int-driven theta pipeline remains parameterized by `eps`,
+  and no strict provenance eps value object is exported.
 
-But these steps explicitly do not provide:
+So theta instantiations remain candidate-only and do not populate the strict
+target slot as an actual strict-core datum.
 
-- theorem-spec discharge,
-- export-spec discharge,
-- strict-core bridge discharge.
+### Step 6. Object-support above the exported map object remains absent
 
-So carrier infrastructure is present, but the bridge is still absent.
+From `N302` and `N395`:
 
-### Step 5. The positive bridge witness exists only on the axiom lane
-
-From `AX3`:
-
-- an explicit bridge instance exists,
-- but only as `yes_axiom_lane_only`,
-- and `strict_core_changed` is `false`.
-
-So the current positive witness does not live in strict core and cannot be
-counted as a strict-core bridge.
-
-### Step 6. The strict-core bridge map remains absent
-
-From `T2`:
-
-- a conditional theorem spec exists,
-- but strict-core equivalence/export map remains absent.
-
-From `B7`:
-
-- compatibility with the selector scaffold remains only
-  `partial_control_route_only`.
-
-So the route does not cross from overlay compatibility to strict-core bridge.
+- no actual bridge/export-map object support is exported above the now exported
+  map object.
 
 ### Conclusion
-
-The current route contains:
-
-- a candidate object,
-- partial support,
-- candidate-fit,
-- carrier infrastructure,
-- an axiom-lane positive witness.
-
-But it lacks:
-
-- strict derivation,
-- theorem-level quotient safety,
-- strict-core residual-datum export,
-- strict-core equivalence/export map,
-- strict-core bridge promotion beyond overlay.
 
 Therefore:
 
@@ -211,6 +177,8 @@ sigma_int-to-residual-datum bridge.
 
 Only two serious routes remain:
 
-1. add one missing strict-core bridge object for `P4` and rerun `P4`,
-2. or, if no new bridge object appears, escalate from `N7` toward a broader
-   impossibility theorem only with a genuinely new argument.
+1. export one genuinely new strict-side theta-supply / selector ingredient
+   (explicitly keeping `QW-2191` discipline), and then attack actual target-slot
+   population / object-support above the map object, or
+2. proceed on an explicitly axiom-augmented closure track without claiming
+   strict-core internalization.

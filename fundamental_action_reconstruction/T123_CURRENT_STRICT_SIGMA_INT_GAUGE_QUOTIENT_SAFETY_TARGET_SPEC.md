@@ -1,18 +1,31 @@
 # T123 Current Strict Sigma-Int Candidate Gauge-Quotient Safety Target Spec
 
 Status: `T123_CURRENT_STRICT_SIGMA_INT_GAUGE_QUOTIENT_SAFETY_TARGET_SPEC_NO_FALSE_PASS`  
-As of: `2026-03-10`
+As of: `2026-03-11`
 
 ## Goal
 
-`P4/P5/N7/N8` keep one blocker explicit on the strict-core sigma-int route:
+Before `F308/N419`, the strict-core sigma-int bridge lane kept one explicit
+prerequisite blocker:
 
 ```text
 theorem-level gauge-quotient safety for sigma_int_candidate is still open
 ```
 
-This matters because the missing strict-core bridge/export map object from
-`T36/F190/N301` is scoped as:
+On the current repo state (`P390/P391`), the strict sigma-int lane exports a
+theorem-level gauge-quotient safety witness on a declared strict domain
+(`F308/N419`) for the strict sigma-int datum `sigma_int_strict_derived_v1`.
+
+Therefore `T123` is no longer a “current missing-object target spec” for the
+strict sigma-int lane. It is kept as:
+
+1. a historical target-spec / acceptance-test record for gauge-quotient safety,
+2. a guardrail against silently counting gauge-fixing as proof,
+3. a guardrail against promoting axiom-lane material into strict core.
+
+This still matters as an integrity constraint because any strict-core
+bridge/export-map use of a sigma-int datum must remain gauge-quotient-safe on a
+declared strict domain (no false pass via gauge choice).
 
 ```text
 strict_core_equivalence_or_export_map : sigma_int_candidate -> residual orientation datum
@@ -98,4 +111,3 @@ An **actual** discharge of this target must at minimum provide:
 5. strict-core selector closure,
 6. `QW-2191` discharge,
 7. ToE closure.
-

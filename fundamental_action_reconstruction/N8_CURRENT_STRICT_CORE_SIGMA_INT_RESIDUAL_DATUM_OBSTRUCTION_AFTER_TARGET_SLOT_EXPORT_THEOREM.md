@@ -1,54 +1,52 @@
 # N8 Current Strict-Core Sigma-Int Residual Datum Obstruction After Target-Slot Export Theorem
 
 Status: `N8_DISCHARGED_CURRENT_STRICT_CORE_SIGMA_INT_RESIDUAL_DATUM_OBSTRUCTION_AFTER_TARGET_SLOT_EXPORT_NO_FALSE_PASS`
-As of: `2026-03-07`
+As of: `2026-03-11`
 
 ## Goal
 
-After `R1` and `P5`, the residual-datum route has changed in one important way:
+After `R1` and the post-`T148` exports (`F307..F311`), the strict sigma-int lane
+changed in one important way:
 
-- the target-slot export packet now exists.
+- an actual strict-core export-map object into the residual target slot now exists,
+  but it is explicitly sign-only.
 
-`N8` states the strongest honest theorem for the **updated** route.
+`N8` states the strongest honest theorem for the updated route with the
+target-slot export in scope.
 
 ## Theorem
 
 ### Informal statement
 
-Within the current strict-core route:
+Within the current strict sigma-int lane:
 
-1. `sigma_int_candidate` is still candidate-only,
-2. full gauge-quotient safety is still open,
-3. a packet-ready target-slot export now exists,
-4. but the slot remains unpopulated from strict core,
-5. no strict-core equivalence/export map identifies `sigma_int_candidate` with
-   that slot,
-6. selector-track identification remains overlay-only,
-7. the only explicit positive bridge witness remains axiom-lane-only.
+1. strict sigma-int provenance is exported (`F307/N418`),
+2. theorem-level gauge-quotient safety is exported (`F308/N419`),
+3. a packet-ready target-slot export exists (`R1`),
+4. an actual strict-core export-map object into that slot exists (`F311/N422`),
+   but it populates only the residual `Z2` sign convention layer,
+5. strict-core theta supply remains absent (`N1/C50`), so the slot remains
+   unpopulated as an actual residual orientation datum,
+6. `QW-2191` remains open (no implied selector closure).
 
 Therefore the updated route still does not derive a strict-core
-`sigma_int -> residual datum` bridge.
+`sigma_int -> residual datum` internalization bridge (as an actual `R1` target-slot
+population).
 
 ### Formal statement
 
 ```text
 N8_CurrentStrictCore_SigmaIntResidualDatum_Obstruction_AfterTargetSlotExport
 
-Let R_sigma_res_updated denote the current strict-core route consisting of:
-  sigma_int_candidate,
-  its currently supported stability properties,
-  candidate-fit to the residual Z2 slot,
+Let R_sigma_res_updated denote the current strict sigma-int lane consisting of:
+  sigma_int_strict_derived_v1,
+  theorem-level gauge-quotient safety for that datum,
   the packet-ready target-slot export object,
-  and the currently exported bridge objects.
+  and the exported sigma-int -> residual target-slot export-map object.
 
 If:
-  (i) sigma_int_candidate is candidate-only and not strict-derived,
-  (ii) full gauge-quotient safety remains open,
-  (iii) a target-slot export packet exists,
-  (iv) no strict-core equivalence/export map identifies sigma_int_candidate
-       with that slot,
-  (v) selector-track identification remains overlay-only,
-  (vi) the only explicit positive bridge witness is axiom-lane-only,
+  (i) the exported map object is sign-only and exports no strict-core theta supply,
+  (ii) strict-core theta sources remain absent (N1/C50),
 
 then R_sigma_res_updated does not derive a strict-core sigma_int-to-residual-
 datum bridge.
@@ -62,72 +60,19 @@ From `R1`:
 
 - a packet-ready strict-core export object for
   `residual_orientation_datum_target_slot` exists,
-- but it is explicitly unpopulated and unbridged.
+- it is explicitly unpopulated and requires inputs `theta_1, theta_2`.
 
 So one previous blocker is genuinely reduced.
 
-### Step 2. The source object is still not strict-derived
+### Step 2. The slot still requires theta supply
 
-From `B8`:
+From `R1`, the residual target slot requires `theta_1, theta_2`.
 
-- `no_strict_derivation_of_sigma_int_candidate` remains explicit.
+From `N1/C50`, strict-core theta sources remain absent.
 
-So the route still does not start from a strict-derived source object.
-
-### Step 3. The route still lacks theorem-level gauge safety
-
-From `B5`:
-
-- full gauge-quotient safety is still `open`.
-
-So the route does not yet provide a theorem-level gauge-safe source datum.
-
-### Step 4. Candidate-fit is still not bridge-map identification
-
-From `B6`:
-
-- residual `Z2` fit remains only `supported_candidate_fit`.
-
-From `T2`:
-
-- the strict-core equivalence/export map is still absent.
-
-So the updated route still lacks the actual bridge map needed to identify
-`sigma_int_candidate` with the exported target slot.
-
-### Step 5. Overlay compatibility is still not strict-core discharge
-
-From `B7`:
-
-- selector-track compatibility remains only `partial_control_route_only`.
-
-So the route still does not cross from overlay compatibility into strict-core
-bridge discharge.
-
-### Step 6. The explicit positive witness remains outside strict core
-
-From `AX3`:
-
-- the explicit bridge instance is `yes_axiom_lane_only`,
-- `strict_core_changed` remains `false`.
-
-So the positive witness still cannot be promoted into strict core.
+So the slot remains unpopulated as an actual strict-core residual orientation datum.
 
 ### Conclusion
-
-The updated route now contains:
-
-- a target-slot export packet,
-- candidate-fit,
-- carrier infrastructure,
-- an axiom-lane positive witness.
-
-But it still lacks:
-
-- strict derivation of the source object,
-- theorem-level gauge safety,
-- strict-core bridge-map identification,
-- beyond-overlay selector-track discharge.
 
 Therefore:
 
@@ -169,6 +114,8 @@ bridge.
 
 Only two serious routes remain:
 
-1. add one of the remaining bridge objects and rerun `P5`,
-2. or, if no new bridge object appears, escalate from `N8` toward a broader
-   impossibility theorem only with a genuinely new argument.
+1. add one genuinely new strict-side theta-supply / selector ingredient and
+   then attack actual target-slot population / object support above the map
+   object, or
+2. proceed on an explicitly axiom-augmented closure track without claiming
+   strict-core internalization.

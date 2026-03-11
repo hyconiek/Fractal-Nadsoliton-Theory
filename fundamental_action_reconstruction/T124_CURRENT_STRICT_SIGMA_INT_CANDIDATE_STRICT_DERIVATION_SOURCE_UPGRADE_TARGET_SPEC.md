@@ -1,19 +1,40 @@
 # T124 Current Strict Sigma-Int Candidate Strict-Derivation/Source-Upgrade Target Spec
 
 Status: `T124_CURRENT_STRICT_SIGMA_INT_CANDIDATE_STRICT_DERIVATION_SOURCE_UPGRADE_TARGET_SPEC_NO_FALSE_PASS`  
-As of: `2026-03-10`
+As of: `2026-03-11`
 
 ## Goal
 
-`P4/P5` keep one upstream missing ingredient explicit on the strict-core
-sigma-int route:
+Before `F307/N418`, the strict-core sigma-int bridge lane kept one explicit
+upstream missing ingredient:
 
 ```text
 a strict derivation or source-object upgrade for sigma_int_candidate
 ```
 
-This missing ingredient is a prerequisite for any honest strict-core
-equivalence/export map of the form:
+On the current repo state (`P390/P391`), the strict sigma-int lane exports a
+strict-side FR-sign source-upgrade package and the upgraded strict datum:
+
+```text
+sigma_int_strict_derived_v1 := chi_FR_strict_v1(gamma_pi1_v1) ∈ {+1,-1}
+```
+
+via `F307/N418` (explicit strict-side premise; no hybrid reuse).
+
+Therefore `T124` is no longer a “current missing-object target spec” for the
+strict sigma-int lane. It is kept as:
+
+1. a historical target-spec / acceptance-test record for sigma-int
+   strict-derivation/source-upgrade,
+2. a guardrail against silently treating candidate-only sigma-int as strict,
+3. a guardrail against promoting axiom-lane-only material into strict core.
+
+This still matters as an integrity constraint because any strict-core
+bridge/export-map use of a sigma-int datum must keep its strict provenance
+explicit.
+
+Historically, this missing ingredient was treated as a prerequisite for any
+honest strict-core equivalence/export map of the form:
 
 ```text
 sigma_int_candidate -> residual orientation datum
@@ -92,4 +113,3 @@ An **actual** discharge of this target must at minimum provide:
 6. strict-core selector closure,
 7. `QW-2191` discharge,
 8. ToE closure.
-
