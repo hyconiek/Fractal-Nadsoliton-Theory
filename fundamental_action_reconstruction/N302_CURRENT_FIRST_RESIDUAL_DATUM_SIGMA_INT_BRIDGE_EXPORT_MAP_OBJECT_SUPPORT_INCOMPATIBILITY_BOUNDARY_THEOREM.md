@@ -41,8 +41,9 @@ with the following scoped meaning:
 2. the strict residual target-slot object exists (`R1`) but remains
    **unpopulated** above the export-map object because:
    - strict-core `theta_1`, `theta_2` remain absent (`C50/N1`),
-   - strict-core eps provenance for the sigma-int-driven `E_pair` generator is
-     absent (`N426`),
+   - eps strict provenance for the sigma-int-driven `E_pair` generator is now
+     exported (`F317/N428`), but it does not by itself upgrade strict-core
+     theta supply nor populate the target slot,
 3. the route still exports carrier grammar and template carrier through
    `C40-C46`,
 4. object-support projection and witness layers exist only below actual object

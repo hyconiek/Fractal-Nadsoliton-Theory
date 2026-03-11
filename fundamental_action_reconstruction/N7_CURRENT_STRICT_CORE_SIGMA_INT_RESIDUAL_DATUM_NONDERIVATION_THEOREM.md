@@ -114,10 +114,12 @@ From `F312/F314`:
 
 - strict-input theta records exist only as candidate instantiations (no theta export).
 
-From `F315/N426`:
+From `F317/N428`:
 
-- the sigma-int-driven theta pipeline remains parameterized by `eps`,
-  and no strict provenance eps value object is exported.
+- one dedicated eps value object is exported with explicit strict provenance
+  (strict-source upgrade by explicit premise), so the strict sigma-int driven
+  theta pipeline is no longer parameterized by a silent free `eps` choice on
+  the strict lane.
 
 So theta instantiations remain candidate-only and do not populate the strict
 target slot as an actual strict-core datum.

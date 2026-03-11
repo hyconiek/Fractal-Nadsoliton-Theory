@@ -18,26 +18,30 @@ fix an explicit parameter choice `eps = 1/2`.
 This theorem packages the narrowest honest conclusion about that parameter:
 
 ```text
-the current declared strict core exports no internal strict provenance source
-for the amplitude parameter eps used in the sigma-int-driven E_pair generator.
+the eps amplitude parameter must not remain a silent free input on the strict
+lane; it either remains an explicit parameter choice (pre-discharge), or is
+supplied by a dedicated eps value object with strict provenance.
 ```
 
 ## Theorem-level conclusion
 
-From `F315`, on the current repo state:
+From `F315`, the strict sigma-int lane previously exported no dedicated eps
+value object with strict provenance, and therefore all instantiations fixed
+`eps` only as an explicit numeric choice.
 
-1. the sigma-int driven `E_pair` generator uses `eps` only as a declared
-   candidate parameter `eps ∈ [0,1]` (`T117/F270/N382`),
-2. no dedicated strict-core eps value object with strict provenance is
-   exported,
-3. the strict-input instantiation artifacts fix `eps` only as an explicit
-   parameter choice (e.g. `eps = 1/2`) and remain candidate-only outputs.
+On the current repo state (`F317/N428`), the strict sigma-int lane now exports
+one dedicated eps value object with explicit strict provenance
+(strict-source-upgraded by explicit premise):
+
+```text
+eps_sigma_int_E_pair_amplitude_strict_provenance_v1 := 1/2.
+```
 
 Therefore the strict sigma-int → `E_pair` → theta pipeline remains:
 
 ```text
-parameterized by eps (candidate-only),
-and cannot be cited as strict-core theta export or strict-core selector closure.
+candidate-only with respect to generator/reduction status,
+but no longer parameterized by a silent free eps choice on the strict lane.
 ```
 
 ## What N426 does not prove
@@ -49,4 +53,3 @@ and cannot be cited as strict-core theta export or strict-core selector closure.
 3. actual populated basis-pair instance,
 4. admissible `S_sel_int`, strict-core selector closure, or `QW-2191` discharge,
 5. ToE closure.
-

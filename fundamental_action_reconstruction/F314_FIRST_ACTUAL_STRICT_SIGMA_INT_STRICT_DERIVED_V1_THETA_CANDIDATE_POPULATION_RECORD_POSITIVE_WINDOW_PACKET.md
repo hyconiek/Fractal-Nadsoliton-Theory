@@ -96,7 +96,9 @@ fundamental_action_reconstruction/generated/
 This artifact:
 
 1. uses `sigma_int_strict_derived_v1 = -1` as the sigma-int input value,
-2. fixes one explicit parameter choice `eps = 1/2` (candidate-only; not strict-derived),
+2. uses the exported eps value object
+   `eps_sigma_int_E_pair_amplitude_strict_provenance_v1 := 1/2` (`F317/N428`)
+   (strict-source upgrade by explicit premise; still no theta export),
 3. derives `delta_d` from the strict kernel tuple via the `T119` corridor,
 4. generates a finite `E_pair` carrier by the positive-window generator form,
 5. reduces `E_pair` to `(theta_1^cand, theta_2^cand)` via the `T115` candidate
@@ -120,4 +122,3 @@ This packet does **not** claim:
 2. actual populated basis-pair instance,
 3. admissible `S_sel_int`, selector closure, or `QW-2191` discharge,
 4. ToE closure.
-

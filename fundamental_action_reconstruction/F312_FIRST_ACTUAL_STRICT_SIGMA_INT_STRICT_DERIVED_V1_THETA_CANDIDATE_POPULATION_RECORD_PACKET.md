@@ -65,7 +65,8 @@ fundamental_action_reconstruction/generated/
 This artifact:
 
 1. uses `sigma_int_strict_derived_v1 = -1` as the sigma-int input value,
-2. fixes one explicit parameter choice `eps = 1/2`,
+2. uses the exported eps value object
+   `eps_sigma_int_E_pair_amplitude_strict_provenance_v1 := 1/2` (`F317/N428`),
 3. generates a finite `E_pair` carrier by the `T117` candidate generator,
 4. reduces `E_pair` to `(theta_1^cand, theta_2^cand)` via the `T115` candidate
    phasor rule,
@@ -88,4 +89,3 @@ This packet does **not** claim:
 2. actual populated basis-pair instance,
 3. admissible `S_sel_int`, selector closure, or `QW-2191` discharge,
 4. ToE closure.
-

@@ -74,13 +74,26 @@ parameter `eps` is exported.
 
 On the current repo state:
 
-1. no dedicated strict-core eps value object is exported,
-2. `eps` appears only as:
-   - a declared candidate parameter `eps ∈ [0,1]` in the generator definition, and
-   - an explicit numeric choice in candidate instantiation artifacts.
+1. a dedicated strict-core eps value object is exported:
 
-Therefore `eps` remains a free candidate parameter, and must not be treated as
-strict-derived or canonically fixed by the current strict core.
+   ```text
+   eps_sigma_int_E_pair_amplitude_strict_provenance_v1 := 1/2
+   ```
+
+   persisted as:
+
+   ```text
+   fundamental_action_reconstruction/generated/eps_sigma_int_E_pair_amplitude_strict_provenance_v1.json
+   ```
+
+2. `eps` still appears as a declared candidate parameter `eps ∈ [0,1]` in the
+   generator definition (the generator remains a candidate form),
+3. but the strict sigma-int lane no longer requires a silent free-parameter
+   choice for `eps` because a dedicated strict eps value object is now exported.
+
+Therefore `eps` is no longer a silent free parameter on the strict lane.
+The strict provenance classification remains explicit: `eps` is a
+strict-source upgrade by explicit premise (not strict-derived).
 
 ## Persisted summary
 
@@ -99,4 +112,3 @@ This packet does **not** claim:
 3. actual populated basis-pair instance,
 4. admissible `S_sel_int`, strict-core selector closure, or `QW-2191` discharge,
 5. ToE closure.
-

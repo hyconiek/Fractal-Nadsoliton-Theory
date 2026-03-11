@@ -37,6 +37,7 @@ the current repo state by re-probing the full object-support frontier.
 | previous “future-only export-map object target” still current | NO | `P388` records `N301` is discharged by the actual export-map object (`F311/N422`) |
 | strict-input theta-candidate projection instantiation present | YES (candidate-only) | `F312/N423` persist a strict-input candidate theta population record at `sigma_int_strict_derived_v1=-1` (no theta export) |
 | strict-input positive-window theta-candidate instantiation present | YES (candidate-only) | `F314/N425` persist a strict-input positive-window candidate theta population record (no theta export; no `atan2` degeneracy on declared corridor) |
+| strict eps provenance value object exported | YES | `F317/N428` export `eps_sigma_int_E_pair_amplitude_strict_provenance_v1 := 1/2` as a dedicated strict-source-upgraded eps value object (no theta export; `QW-2191` remains open) |
 | strict-to-axiom fallback bridge-artifact instance file present | YES (non-strict) | `F313/N424` persist `strict_to_axiom_sigma_int_residual_orientation_datum_bridge_artifact_instance.json` as fallback citation only |
 | actual strict-core `theta_1`, `theta_2` exported | NO | `C50` + `N1` remain: no strict-core internal theta-source; `F312/F314` are candidate-only records |
 | admissible `S_sel_int` / strict-core selector closure exported | NO | `N124` remains negative; `QW-2191` remains open (no strict internal selector source) |
@@ -65,4 +66,3 @@ remaining strict-core bottleneck explicitly:
    theta-supply status (still respecting `N18` noncyclic constraints), or
 2. an explicitly separated axiom-augmented closure track (already accepted in
    `axiom_augmented_only` scope) without claiming strict-core internalization.
-

@@ -13,20 +13,25 @@ generator depends on a free amplitude parameter:
 eps ∈ [0,1]
 ```
 
-After the strict sigma-int lane map export discharge (`P388/P391`), and after
-the strict eps-source audit (`F315/N426`), the next honest missing ingredient
-is no longer a bridge/export-map object.
+Before `F317/N428`, and after the strict eps-source audit (`F315/N426`), the
+strict sigma-int lane still exported no eps value object with strict
+provenance. All uses of `eps` remained explicit parameter choices (e.g.
+`eps = 1/2`), and therefore could not be silently read as strict-core theta
+supply.
 
-It is:
+On the current repo state (`F317/N428`), the strict sigma-int lane now exports
+one dedicated eps value object with explicit strict provenance
+(strict-source-upgraded by explicit premise):
 
 ```text
-a strict-provenance source for the amplitude parameter eps used by the
-sigma-int-driven E_pair generator weight law
+eps_sigma_int_E_pair_amplitude_strict_provenance_v1 := 1/2.
 ```
 
-`T150` names that missing ingredient as one explicit future-only target object
-with explicit acceptance tests, so that no parameter choice (e.g. `eps = 1/2`)
-can be silently read as strict-core theta supply.
+Therefore `T150` is no longer a “current missing-object naming” spec.
+It is kept as:
+
+1. a sharp historical target-spec for the eps provenance acceptance tests, and
+2. an admissible target-name record (now superseded by the actual eps export).
 
 ## Scope
 
@@ -60,6 +65,14 @@ observer-free, noncyclic eps value object supplying the amplitude parameter eps
 for the sigma-int-driven E_pair generator, so that the generator ceases to be a
 free-parameter family with respect to eps
 ```
+
+This target name is now superseded by the actual exported eps value object:
+
+```text
+eps_sigma_int_E_pair_amplitude_strict_provenance_v1
+```
+
+exported by `F317/N428`.
 
 ## Acceptance tests (what would count as discharge)
 
@@ -99,4 +112,3 @@ minimum provide:
 3. actual populated basis-pair instance,
 4. admissible `S_sel_int`, strict-core selector closure, or `QW-2191` discharge,
 5. ToE closure.
-

@@ -63,5 +63,9 @@ provenance on the strict sigma-int lane.
 
 It is to address the post-`T148` strict bottleneck explicitly (theta supply /
 object support / selector discipline), and in particular to keep the sigma-int
-driven theta pipeline explicitly parameterized until `eps` strict provenance is
-separately exported (`N426` + `T150/F316/N427`).
+driven theta pipeline explicitly below strict-core theta export and selector
+closure.
+
+On the current repo state, eps strict provenance is now exported on the strict
+lane (`F317/N428`), but strict-core theta-source export, object support above
+the map object, and `QW-2191` discipline remain the live bottlenecks.

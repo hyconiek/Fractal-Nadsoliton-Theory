@@ -103,16 +103,14 @@ without false pass.
 
 ## Next honest move (minimum)
 
-On current repo state (`P391` + `N426`), the next honest move is no longer to
+On current repo state (`P391` + `N428`), the next honest move is no longer to
 discharge `T144/T149/T148`.
 
 It is to address the post-`T148` strict bottleneck explicitly, e.g.:
 
-1. add a strict-side eps provenance source for the sigma-int-driven `E_pair`
-   generator (or keep eps explicitly free and remain candidate-only),
-2. and/or add a strict-side theta-supply / selector ingredient (keeps `QW-2191`
+1. add a strict-side theta-supply / selector ingredient (keeps `QW-2191`
    discipline explicit),
-3. and/or discharge the missing object-support layer above the now exported map
+2. and/or discharge the missing object-support layer above the now exported map
    object (`N302/N395`).
 
 All while keeping:

@@ -62,9 +62,7 @@ It is to address the post-`T148` strict bottleneck explicitly, e.g.:
 1. strict-core theta-source / selector ingredient export (`N1` + `QW-2191`
    discipline), and/or
 2. discharge of actual object-support above the exported map object
-   (`N302/N395`), and/or
-3. strict eps-provenance for the sigma-int-driven `E_pair` generator
-   (`N426` + `T150/F316/N427`),
+   (`N302/N395`),
 
 without importing `theta` inputs, populated-instance inputs, or observer-indexed
 selection as strict sources.
