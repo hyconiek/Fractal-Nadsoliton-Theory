@@ -1,0 +1,43 @@
+{
+  "object": "b_sigma_int_E_pair_sign_mask_strict_provenance_v1",
+  "status": "actual_exported_strict_provenance_value_object__premise_based",
+  "as_of": "2026-03-11",
+  "intent": "Provide an explicit, non-hybrid, observer-free provenance source for the fixed pair-indexed sign mask b_{i,k} used by the sigma-int-driven nad12 E_pair generator candidate (T117/F270), by deriving the mask from the exported strict FR-sign character chi_FR_strict_v1 on pi_1(C_v1).",
+  "declared_domain": {
+    "configuration_space_object": "C_v1_void_configuration_space_in_local_B_tilde_1_sector_v1",
+    "pi_1_witness": "pi_1(C_v1) ≅ Z_2",
+    "generator_label": "gamma_pi1_v1",
+    "index_set": {
+      "pair_slots": [1, 2],
+      "k_range_inclusive": [0, 11]
+    }
+  },
+  "definition": {
+    "s": "chi_FR_strict_v1(gamma_pi1_v1)",
+    "b_1k": "s^k",
+    "b_2k": "s^(k+1)"
+  },
+  "value": {
+    "s": -1,
+    "pair1": [1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1],
+    "pair2": [-1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1]
+  },
+  "depends_on": [
+    "chi_FR_strict_v1",
+    "gamma_pi1_v1",
+    "C_v1_void_configuration_space_in_local_B_tilde_1_sector_v1"
+  ],
+  "provenance": {
+    "chi_FR_strict_v1": "explicit_strict_side_premise_nontrivial_character (N418)",
+    "note": "Premise-based strict provenance source-upgrade; no hybrid FR source reuse. This does not derive theta_1/theta_2, does not populate the residual target slot, and does not claim selector closure."
+  },
+  "hard_limits": [
+    "Does not claim strict derivation (physics) of chi_FR_strict_v1.",
+    "Does not claim strict derivation/uniqueness of the full sigma-int-driven E_pair generator.",
+    "Does not export theta_1/theta_2 nor populate residual_orientation_datum_target_slot.",
+    "Does not discharge N302/N395 (object-support above the export-map object).",
+    "Does not claim admissible S_sel_int, strict-core selector closure, nor QW-2191 discharge.",
+    "Does not claim ToE closure."
+  ]
+}
+

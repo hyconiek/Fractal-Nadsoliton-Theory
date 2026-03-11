@@ -50,7 +50,9 @@ This is intentionally weaker than any claim of:
 ### Inputs
 
 1. `sigma_int_input ∈ {+1,-1}` (internal `Z2` sigma-int datum value),
-2. a fixed amplitude parameter `eps ∈ [0,1]` (candidate),
+2. a fixed amplitude parameter `eps ∈ [0,1]` (candidate; on the strict lane this
+   may be instantiated by the exported strict-provenance value object
+   `eps_sigma_int_E_pair_amplitude_strict_provenance_v1 := 1/2` from `N428`),
 3. a fixed pair-indexed sign mask `b_{i,k} ∈ {+1,-1}` for:
    - pair slot `i ∈ {1,2}`,
    - octave/path index `k ∈ {0,1,...,11}`.
@@ -83,6 +85,12 @@ b_{1,k} := (-1)^k,
 \qquad
 b_{2,k} := (-1)^{k+1}.
 ```
+
+On the strict sigma-int lane, this concrete mask no longer needs to be treated
+as a silent convention token:
+the repo exports an explicit strict-provenance (premise-based) mask value object
+`b_sigma_int_E_pair_sign_mask_strict_provenance_v1` sourced from
+`chi_FR_strict_v1 : pi_1(C_v1)->{+1,-1}` and `gamma_pi1_v1` (`N435`).
 
 This mask is:
 

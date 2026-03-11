@@ -65,6 +65,17 @@ G_sigma_int_to_E_pair_generator_candidate_v1 :=
 )
 ```
 
+On the strict sigma-int lane, two formerly silent free slots in this candidate
+generator now have explicit strict-side provenance:
+
+1. `eps` may be instantiated by the exported strict-provenance value object
+   `eps_sigma_int_E_pair_amplitude_strict_provenance_v1 := 1/2` (`N428`),
+2. the fixed sign mask may be instantiated by the exported strict-provenance
+   value object `b_sigma_int_E_pair_sign_mask_strict_provenance_v1` (`N435`).
+
+This is still not a strict derivation of the full generator and must not be
+promoted into theta export or closure.
+
 ## Meaning
 
 This packet means only:
