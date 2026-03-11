@@ -1,7 +1,7 @@
 # N124 Current Strict-Core Internal Selector Source Derivation Full Negative Closure Theorem
 
 Status: `N124_DISCHARGED_CURRENT_STRICT_CORE_INTERNAL_SELECTOR_SOURCE_DERIVATION_FULL_NEGATIVE_CLOSURE_THEOREM_NO_FALSE_PASS`
-As of: `2026-03-07`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -24,9 +24,11 @@ Consider the current repo state containing all of the following:
 3. `N6`:
    the current strict-core FR route does not serve as an internal selector
    source,
-4. `N7/N8`:
-   the current strict-core `sigma_int` bridge route does not derive a strict
-   residual-datum bridge,
+4. `N418/N419/N422`:
+   the strict-core sigma-int lane now exports a strict sigma-int source
+   upgrade, theorem-level gauge-quotient safety, and an actual residual
+   export-map object (residual `Z2` population only), but still exports no
+   strict-core `theta_1/theta_2` source and no actual target-slot population,
 5. `P2`:
    the best current strict-core downstream route still does not reach
    `A_1(pair1)`,
@@ -42,7 +44,8 @@ The theorem is:
 > 1. no generic hidden strict-core selector source is derived,
 > 2. no current strict-core `psi0` selector-source discharge is exported,
 > 3. no current strict-core FR selector-source discharge is exported,
-> 4. no current strict-core `sigma_int` bridge discharge is exported,
+> 4. the exported strict-core sigma-int residual export-map object does not
+>    yet yield strict-core theta-source supply nor a strict-core selector,
 > 5. and no strict-core downstream route presently reaches a strict-core
 >    selector operator on `pair1`.
 >

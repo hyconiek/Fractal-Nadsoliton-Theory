@@ -1,7 +1,7 @@
 # P113 Current Strict-Core Internal Selector Source Derivation Discharge Probe
 
 Status: `P113_EXECUTED_CURRENT_STRICT_CORE_INTERNAL_SELECTOR_SOURCE_DERIVATION_DISCHARGE_PROBE_NO_FALSE_PASS`
-As of: `2026-03-07`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -39,10 +39,19 @@ On the current repo state:
 
 1. `B2` already reports zero strict internal selector derivations,
 2. `N4/N5` already close the current strict-core `psi0` branch negatively,
-3. `N6` already closes the current strict-core FR route negatively,
-4. `N7/N8` already close the current strict-core `sigma_int` bridge route
-   negatively,
-5. `P2` still shows no strict-core route all the way to `A_1(pair1)`.
+3. the strict-core FR/topology lane still exports no strict-core
+   `sigma_int -> theta` selector-source derivation and no strict-core
+   theta-source supply (keeps `QW-2191` open),
+4. the strict-core sigma-int lane now exports:
+   - strict sigma-int source upgrade (`F307/N418`),
+   - theorem-level gauge-quotient safety (`F308/N419`),
+   - an actual residual export-map object (`F311/N422`, residual `Z2`
+     population only),
+   but it still exports no strict-core `theta_1/theta_2` source and no actual
+   target-slot population,
+5. therefore no strict-core downstream route presently reaches a strict-core
+   selector operator on `pair1` (the `P2` route still stops before theta/basis
+   population and operator export).
 
 Therefore the current repo still exports no package-level discharge of an
 internal strict-core selector source.
@@ -76,6 +85,8 @@ conclusion for strict-core internal selector source derivation
 
 The correct next move is now:
 
-1. formalize the current-repo-state strict-core source non-discharge theorem,
-2. and then stop pretending that any higher-order strict-core source frontier
-   remains unresolved inside the current repo state.
+1. keep the strict theta-source absence explicit (no silent axiom-lane
+   promotion),
+2. add one genuinely new strict-core selector/symmetry-breaking ingredient or
+   a new strict internal theta-source provider class, and only then rerun this
+   probe.
