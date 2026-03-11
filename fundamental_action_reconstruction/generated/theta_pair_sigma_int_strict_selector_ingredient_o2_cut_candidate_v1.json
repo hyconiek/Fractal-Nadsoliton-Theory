@@ -1,0 +1,133 @@
+{
+  "object": "ThetaPair_sigma_int_strict_selector_ingredient_o2_cut_candidate_v1",
+  "status": "actual_exported_strict_side_selector_ingredient_o2_cut_candidate__no_false_pass",
+  "as_of": "2026-03-11",
+  "intent": "Re-export the strict-input sigma-int theta-candidate pair (theta_1^cand,theta_2^cand) as a dedicated strict-side selector-ingredient object and attach an explicit O(2)-cut witness argument on the QW-2190 scaffold. This remains candidate-only and does not claim strict-core selector closure nor QW-2191 discharge.",
+  "scope": "strict_core_candidate_only",
+  "carrier_packet": "F325",
+  "derived_from": {
+    "carrier_packet": "F314",
+    "artifact": "fundamental_action_reconstruction/generated/sigma_int_strict_derived_v1_to_residual_datum_bridge_export_map_object_support_projection_candidate_positive_window_instance.json",
+    "note": "Numeric (theta_1^cand,theta_2^cand) and (X_i,Y_i) match the phasor-reduction record there (up to rounding). This artifact adds explicit O(2)-cut semantics and induced u_i^cand vectors."
+  },
+  "provenance": {
+    "sigma_int_strict_derived_v1": {
+      "source": "F307/N418",
+      "value": -1,
+      "note": "Premise-based strict-side sigma-int source upgrade; no hybrid FR reuse."
+    },
+    "eps_sigma_int_E_pair_amplitude_strict_provenance_v1": {
+      "source": "F317/N428",
+      "value": 0.5,
+      "note": "Premise-based strict-source upgrade value object for eps amplitude."
+    },
+    "b_sigma_int_E_pair_sign_mask_strict_provenance_v1": {
+      "source": "F324/N435",
+      "definition": {
+        "s": "chi_FR_strict_v1(gamma_pi1_v1) = -1",
+        "b_1_k": "s^k",
+        "b_2_k": "s^(k+1)",
+        "k_range": "0..11"
+      },
+      "note": "Premise-based strict provenance sourced from chi_FR_strict_v1 on pi_1(C_v1)≅Z2."
+    },
+    "strict_kernel_tuple": {
+      "source": "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2049_spectral_micro_stagec_intersection_gate.json (stagec_pool.selected_kernel)",
+      "omega": 0.18575000000000005,
+      "phi": 0.1624999999999998,
+      "beta": 1.0,
+      "eta": 1.8
+    }
+  },
+  "positive_window_corridor": {
+    "definition": {
+      "Theta(d)": "omega*d + phi",
+      "D(d)": "1 + beta*d^eta",
+      "delta_barrier": "(pi/2) - |phi|",
+      "eps_local": "delta_barrier/2",
+      "d_local": "eps_local/omega",
+      "delta_max": "d_local/11",
+      "delta_d_chosen": "delta_max"
+    },
+    "numeric": {
+      "delta_barrier": 1.4082963267948967,
+      "eps_local": 0.7041481633974483,
+      "d_local": 3.790838026365804,
+      "delta_d": 0.34462163876052765
+    },
+    "guarantee": "For all k∈{0..11}, d_k=k*delta_d ∈ [0,d_local] ⇒ 0<Theta(d_k)<pi/2 ⇒ cos(Theta)>0 and sin(Theta)>0 ⇒ X_i>0 and Y_i>0, so atan2 is well-defined (no degeneracy).",
+    "source": "T119"
+  },
+  "construction": {
+    "E_pair_generator": {
+      "distances": "d_{i,k} := k*delta_d",
+      "weights": "w_{i,k} := (1 + sigma_int*eps*b_{i,k})/12",
+      "note": "Noncyclic and observer-free by construction; uses only sigma_int, eps, and fixed sign masks."
+    },
+    "phasor_reduction": {
+      "X_i": "Σ_k w_{i,k} * cos(Theta(d_{i,k})) / D(d_{i,k})",
+      "Y_i": "Σ_k w_{i,k} * sin(Theta(d_{i,k})) / D(d_{i,k})",
+      "theta_i": "atan2(Y_i, X_i)"
+    },
+    "mode_basis_reconstruction": {
+      "pair1": "u_1 := cos(theta_1)c_1 + sin(theta_1)s_1",
+      "pair2": "u_2 := cos(theta_2)c_2 + sin(theta_2)s_2",
+      "note": "Uses the QW-2190 deterministic real Fourier mode scaffold (c1,s1,c2,s2)."
+    }
+  },
+  "outputs": {
+    "pair1": {
+      "X_1": 0.3242208494671119,
+      "Y_1": 0.12305044665126641,
+      "theta_1_cand": 0.3627333053541785,
+      "u_1_cand": [
+        0.38168376028625145,
+        0.40297740841665763,
+        0.31629358539383373,
+        0.14485915159358773,
+        -0.06539017489241764,
+        -0.25811825682307,
+        -0.38168376028625145,
+        -0.4029774084166577,
+        -0.31629358539383384,
+        -0.14485915159358778,
+        0.06539017489241777,
+        0.25811825682306977
+      ]
+    },
+    "pair2": {
+      "X_2": 0.36439459606482333,
+      "Y_2": 0.12598414493076138,
+      "theta_2_cand": 0.33287066305007096,
+      "u_2_cand": [
+        0.38583881856063457,
+        0.30844561656161046,
+        -0.07739320199902405,
+        -0.38583881856063457,
+        -0.30844561656161057,
+        0.07739320199902422,
+        0.3858388185606345,
+        0.30844561656161057,
+        -0.07739320199902378,
+        -0.3858388185606345,
+        -0.3084456165616104,
+        0.07739320199902372
+      ]
+    }
+  },
+  "o2_cut_argument": {
+    "statement": "QW-2191 exhibits a continuous O(2) basis-choice family inside each degenerate 2D mode subspace. Exporting explicit (theta_1^cand,theta_2^cand) and the induced u_1^cand,u_2^cand selects one declared representative basis point on the QW-2190 scaffold, thereby cutting the continuous O(2) family in that declared scope (up to the residual sign flip convention). This remains a candidate ingredient and is not promoted to strict-core selector closure.",
+    "references": [
+      "QW-2190",
+      "QW-2191",
+      "T157"
+    ]
+  },
+  "hard_limits": [
+    "Does not claim kernel-alone uniqueness (QW-2191 remains true).",
+    "Does not claim actual strict-core theta_1/theta_2 export; this is a candidate ingredient object.",
+    "Does not claim strict-core selector closure nor admissible S_sel_int; this is only a selector ingredient export in a declared scope.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}
