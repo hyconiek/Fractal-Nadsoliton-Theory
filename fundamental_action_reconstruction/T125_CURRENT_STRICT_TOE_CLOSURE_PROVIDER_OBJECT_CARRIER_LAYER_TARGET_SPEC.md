@@ -1,19 +1,36 @@
 # T125 Current Strict ToE Closure Provider-Object Carrier Layer Target Spec
 
 Status: `T125_CURRENT_STRICT_TOE_CLOSURE_PROVIDER_OBJECT_CARRIER_LAYER_TARGET_SPEC_NO_FALSE_PASS`  
-As of: `2026-03-10`
+As of: `2026-03-12`
 
 ## Goal
 
-`N327` sharpens the dominant missing strict-closure ingredient class as one:
+Update (current repo state):
+
+On the updated repo state, the provider-object carrier-layer target named by
+this spec is **discharged**:
 
 ```text
-source-side, observer-free, pair-indexed, noncyclic
-strict selector/provider object-carrier layer.
+Epsilon_strict_provider_object_carrier_layer_target_v1: DISCHARGED (F300/N412).
 ```
 
-`N370-N376` further isolate that gap as the provider-object realization-side
-arm, but they do not yet export the missing carrier layer itself.
+So `T125` is no longer a “current missing-object naming” spec.
+It remains as:
+
+1. the historical acceptance-test record for what counted as the carrier-layer
+   discharge, and
+2. a guardrail against silently promoting carrier/projection/witness layers
+   into post-map **actual object support** (`N395/T130`), which remains open.
+
+Historical framing (why this target existed):
+
+As of `2026-03-10`, the strict closure lane still treated the provider-object
+carrier-layer gap as a live missing layer and therefore introduced this
+future-only target with explicit acceptance tests.
+
+On the current repo state this carrier-layer target is discharged (`F300/N412`);
+what remains open is the post-`T148` bottleneck: **actual object support above
+the exported map object** (`N395/T130`), still under the `N302` boundary.
 
 `T125` does **not** claim any realization.
 
@@ -27,9 +44,9 @@ with an explicit minimal type-shape and explicit acceptance tests
 
 so that “provider object” does not remain a purely narrative placeholder.
 
-## Context (current strict closure lane)
+## Context (historical; pre-discharge)
 
-On the current repo state:
+On the pre-discharge repo state (as of `2026-03-10`):
 
 1. `N327` exports the dominant missing ingredient class diagnosis.
 2. `N370` exports the noncyclic realization split target
@@ -44,11 +61,14 @@ On the current repo state:
    that must not be silently assumed discharged if `sigma_int_candidate` is
    used as an internal source datum.
 
-Therefore the next honest strict-only move is still not a closure claim.
-It is to sharply name the missing provider-object carrier layer as a typed
-future-only target with explicit acceptance tests.
+Therefore, on that historical pre-discharge state, the next honest strict-only
+move was to sharply name the provider-object carrier layer as a typed future-only
+target with explicit acceptance tests (this spec).
+On the current repo state, that target is discharged (`F300/N412`).
 
 ## Target object
+
+Historical target naming (superseded on current repo state):
 
 If the repo cannot yet export an actual provider-object carrier layer but can
 still name it sharply, export:
@@ -120,3 +140,12 @@ provide:
 6. `QW-2191` discharge,
 7. ToE closure.
 
+## Current next honest step (post-discharge)
+
+After `F300/N412`, the next honest strict move is no longer to name or obtain
+the provider-object carrier layer.
+It is to address the remaining post-`T148` bottleneck explicitly:
+
+- discharge **actual** bridge/export-map object support above the exported map
+  object (`N395/T130`), noncyclically and observer-free, without selector
+  false-pass.
