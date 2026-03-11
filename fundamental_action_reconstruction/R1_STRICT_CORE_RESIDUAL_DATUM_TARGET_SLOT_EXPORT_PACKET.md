@@ -1,7 +1,7 @@
 # R1 Strict-Core Residual Datum Target-Slot Export Packet
 
 Status: `R1_EXECUTED_STRICT_CORE_RESIDUAL_DATUM_TARGET_SLOT_EXPORT_PACKET_NO_FALSE_PASS`
-As of: `2026-03-07`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -59,7 +59,7 @@ Minimal content:
     "u_2": "cos(theta_2)c_2 + sin(theta_2)s_2"
   },
   "population_state": "CONDITIONAL_PACKET_READY_TARGET_SLOT_UNPOPULATED",
-  "strict_core_status": "target_slot_export_present_bridge_map_absent"
+  "strict_core_status": "target_slot_export_present_population_absent"
 }
 ```
 
@@ -88,9 +88,9 @@ Minimal content:
 
 The honest residual frontier becomes:
 
-- `R1_B1 := a packet-ready strict-core target-slot export object now exists for the residual orientation datum, but it remains unpopulated and no strict-core bridge map identifies sigma_int_candidate with that slot`
+- `R1_B1 := a packet-ready strict-core target-slot export object exists for the residual orientation datum, but it remains unpopulated as an actual residual orientation datum (theta supply absent)`
 - `C50_B1 := no_packet_ready_strict_core_minimal_source_skeleton_for_actual_theta_1_theta_2; only_axiom_augmented_source_branch_is_available`
-- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot is now packet-ready but equivalence/export map remains absent`
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and sign-only export-map object exist, but target-slot population (theta_1,theta_2) remains absent`
 
 ## What `R1` does not claim
 

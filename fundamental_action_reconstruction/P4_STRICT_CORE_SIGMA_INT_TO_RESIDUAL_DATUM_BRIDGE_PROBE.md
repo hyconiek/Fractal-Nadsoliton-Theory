@@ -1,7 +1,7 @@
 # P4 Strict-Core Sigma-Int To Residual Datum Bridge Probe
 
 Status: `P4_EXECUTED_STRICT_CORE_SIGMA_INT_TO_RESIDUAL_DATUM_BRIDGE_PROBE_COMPUTE_OR_FAIL_NO_FALSE_PASS`
-As of: `2026-03-07`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -11,7 +11,7 @@ route to `theta` or `A_1(pair1)`.
 The narrowest honest question is now:
 
 ```text
-sigma_int_candidate -> residual orientation datum
+sigma_int_strict_derived_v1 -> residual_orientation_datum_target_slot (R1)
 ```
 
 `P4` tests that bridge in `compute-or-fail` mode:
@@ -49,11 +49,11 @@ NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_RESIDUAL_DATUM_ROUTE
 
 The current repo does contain all of the following:
 
-1. `sigma_int_candidate`,
-2. candidate-fit of `sigma_int_candidate` to the residual `Z2` slot,
-3. semantic target-slot fields in the acceptance carrier,
-4. a persisted acceptance-artifact carrier file,
-5. an explicit axiom-lane bridge instance.
+1. strict sigma-int provenance/value (`F307/N418`),
+2. theorem-level gauge-quotient safety for that datum (`F308/N419`),
+3. a strict-core target-slot export packet (`R1`),
+4. an actual strict-core sign-only export-map object into that slot (`F311/N422`),
+5. an explicit axiom-lane bridge instance (outside strict core).
 
 But these still do **not** amount to a strict-core bridge.
 
@@ -61,12 +61,9 @@ But these still do **not** amount to a strict-core bridge.
 
 The current strict-core route still lacks:
 
-1. a strict derivation or source-object upgrade for `sigma_int_candidate`,
-2. theorem-level gauge-quotient safety for `sigma_int_candidate`,
-3. a strict-core exported target slot for the residual orientation datum,
-4. a strict-core equivalence/export map
-   `sigma_int_candidate -> residual orientation datum`,
-5. selector-track identification beyond overlay-only compatibility.
+1. strict-core theta supply (`theta_1`, `theta_2`) for populating the target slot (`N1/C50`),
+2. an actual strict-core population of the target slot as a residual orientation datum (not just the residual `Z2` sign convention),
+3. any strict-core selector closure / symmetry-breaking ingredient discharging `QW-2191`.
 
 ## Honest frontier
 
@@ -102,6 +99,5 @@ strict-core residual datum bridge
 
 Only two serious routes remain:
 
-1. construct one missing strict-core bridge object for
-   `sigma_int_candidate -> residual orientation datum`,
-2. or formalize the route-specific negative theorem for this exact bridge lane.
+1. export one genuinely new strict-side theta-supply / selector ingredient and then attack actual target-slot population, or
+2. proceed explicitly on an axiom-augmented closure track without claiming strict-core internalization.

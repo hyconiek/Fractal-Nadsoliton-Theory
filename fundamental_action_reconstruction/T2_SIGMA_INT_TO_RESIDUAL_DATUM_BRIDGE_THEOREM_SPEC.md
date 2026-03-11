@@ -1,7 +1,7 @@
 # T2 Sigma-Int To Residual Datum Bridge Theorem Spec
 
 Status: `T2_PACKET_READY_SIGMA_INT_TO_RESIDUAL_DATUM_BRIDGE_THEOREM_SPEC_NO_FALSE_PASS`
-As of: `2026-03-06`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -9,7 +9,11 @@ After `B4`, `B6`, `C37`, and `C38`, the bridge lane is sharply localized:
 
 - `sigma_int_candidate` exists,
 - residual `Z2` slot fit exists on the overlay lane,
-- strict-core theorem-spec and export-spec are absent.
+- the strict core exports a sign-only export-map object into the residual target
+  slot (`F311/N422`),
+- but strict-core target-slot population (theta supply) remains absent (`N1/C50`)
+  and the current strict sigma-int lane does not derive an actual strict-core
+  residual orientation datum (`N7`).
 
 `T2` does not claim that the bridge theorem is already proved.
 
@@ -127,6 +131,12 @@ provide such a map.
 Support:
 - `C38`
 
+Update (post-`T148`):
+- `F311/N422` exports a sign-only export-map object into the residual target
+  slot, but it still does not provide a strict-core theta supply nor an actual
+  strict-core residual orientation datum population; so the full bridge theorem
+  remains conditional.
+
 ## Minimal assumption map
 
 ### Physical assumptions
@@ -173,8 +183,9 @@ It would not by itself establish:
 
 Even after `T2` is written, the following remain open:
 
-- explicit strict-core target slot for the residual datum,
-- explicit strict-core equivalence/export map,
+- strict-core target-slot population (theta supply) for the residual datum,
+- strict-core internalization beyond the sign-only export-map object (i.e. an
+  actual residual orientation datum population rather than only a residual sign convention),
 - discharge of `T1`,
 - discharge of `T2`,
 - `C32_B2` as a separate negative result about raw overlap export.

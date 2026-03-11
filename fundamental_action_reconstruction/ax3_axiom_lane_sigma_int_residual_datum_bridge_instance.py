@@ -12,7 +12,13 @@ instance = {
     "axiom": "minimum_harmonic_alignment_with_orientation_convention",
     "source_qw": ["QW-2192", "QW-2193"],
     "bridge_class": "factorized_control_route_axiom_lane_only",
-    "sigma_int_object": "sigma_int_candidate",
+    "sigma_int_object": "sigma_int_strict_derived_v1",
+    "sigma_int_provenance": {
+        "value_object": "sigma_int_strict_derived_v1",
+        "carrier_file": "generated/sigma_int_strict_derived_v1.json",
+        "export_packet": "F307/N418",
+        "note": "Strict sigma-int is premise-based but exported as an actual strict-core source-upgrade value; this axiom-lane bridge does not promote any theta supply into strict core.",
+    },
     "sigma_int_role": "residual_orientation_datum_candidate",
     "selector_family": "J_ab_positive_weight_family",
     "theta_choice": {
@@ -36,7 +42,7 @@ target.write_text(json.dumps(instance, indent=2) + "\n", encoding="ascii")
 summary = {
     "step": "AX3",
     "status": "AX3_EXECUTED_AXIOM_LANE_SIGMA_INT_RESIDUAL_DATUM_BRIDGE_INSTANCE_NO_FALSE_PASS",
-    "goal": "Materialize an explicit sigma_int-to-residual-orientation bridge instance on the axiom-augmented lane using AX1, AX2, and the factorized control-route bridge from B6/B7.",
+    "goal": "Materialize an explicit sigma_int-to-residual-orientation bridge instance on the axiom-augmented lane using strict sigma_int_strict_derived_v1 (F307/N418) and the selector-lane theta/basis data (AX1/AX2), without promoting theta supply into strict core.",
     "created_file": {
         "relative_path": "generated/axiom_lane_sigma_int_residual_datum_bridge_instance.json",
         "exists_after_step": target.exists(),
@@ -51,7 +57,7 @@ summary = {
     },
     "residual_frontier": {
         "T12_B1": "the typing judgment with totality and uniqueness is specified but not discharged for the current selector track",
-        "T2_B1": "the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent",
+        "T2_B1": "the bridge theorem is specified but not discharged; strict-core target slot and sign-only export-map object exist, but target-slot population (theta_1,theta_2) remains absent",
         "C32_B2": "raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12",
     },
     "hard_limits": [

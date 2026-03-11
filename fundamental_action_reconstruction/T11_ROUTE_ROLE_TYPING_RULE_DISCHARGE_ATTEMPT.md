@@ -118,13 +118,13 @@ has exactly one route-role label in the six-role vocabulary.
 Before `T11`:
 
 - `T10_B1 := the route-role typing rule is specified but not discharged for the current selector track`
-- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and sign-only export-map object exist, but target-slot population (theta_1,theta_2) remains absent`
 - `C32_B2 := raw overlap scalar route remains degenerate`
 
 After `T11`:
 
 - `T11_B1 := no formal typing judgment or totality-and-uniqueness clause showing that every current admissible strict-core theta-export route has exactly one route-role label in the six-role vocabulary`
-- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and sign-only export-map object exist, but target-slot population (theta_1,theta_2) remains absent`
 - `C32_B2 := raw overlap scalar route remains degenerate`
 
 ## What T11 does not claim

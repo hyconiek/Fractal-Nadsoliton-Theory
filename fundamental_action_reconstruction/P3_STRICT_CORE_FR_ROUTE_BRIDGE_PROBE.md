@@ -49,7 +49,7 @@ The current FR route still lacks:
 
 - `B8` already exposes the FR-route residual blockers.
 - `T2_B1` remains active:
-  strict-core target slot and equivalence/export map remain absent.
+  strict-core target slot and sign-only export-map object exist, but target-slot population (theta_1,theta_2) remains absent.
 - `C35_B1` remains active:
   only an axiom-augmented actual-theta source branch exists.
 

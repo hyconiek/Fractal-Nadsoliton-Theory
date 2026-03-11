@@ -78,7 +78,7 @@ The probe reduces the blocker to the following current missing objects:
 ## Honest frontier
 
 - `T2_B1` remains active:
-  strict-core target slot and equivalence/export map remain absent.
+  strict-core target slot and sign-only export-map object exist, but target-slot population (theta_1,theta_2) remains absent.
 - `C35_B1` remains active:
   strict core does not export actual `theta_1`, `theta_2`; only an
   axiom-augmented source branch exists.

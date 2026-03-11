@@ -9,76 +9,54 @@
       "actual": "NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_RESIDUAL_DATUM_ROUTE_AFTER_TARGET_SLOT_EXPORT",
       "expected": "NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_RESIDUAL_DATUM_ROUTE_AFTER_TARGET_SLOT_EXPORT",
       "pass": true,
-      "meaning": "the rerun probe still does not reach a strict-core bridge"
+      "meaning": "the rerun probe still does not reach a strict-core residual-datum bridge"
     },
     {
       "id": "r1_target_slot_export_present",
-      "actual": "strict_core_target_slot_export_packet_present_but_unpopulated_and_unbridged",
-      "expected": "strict_core_target_slot_export_packet_present_but_unpopulated_and_unbridged",
+      "actual": {
+        "stage": "R1",
+        "export_target": "residual_orientation_datum_target_slot",
+        "population_state": "CONDITIONAL_PACKET_READY_TARGET_SLOT_UNPOPULATED"
+      },
+      "expected": "target_slot_export_present_population_absent",
       "pass": true,
-      "meaning": "a packet-ready target-slot export packet exists"
+      "meaning": "a target-slot export packet exists (but remains unpopulated as an actual residual orientation datum)"
     },
     {
-      "id": "b8_no_strict_derivation_of_sigma",
+      "id": "export_map_object_present_sign_only",
+      "actual": {
+        "status": "actual_exported_strict_core_bridge_export_map_object__residual_z2_population_only",
+        "typed_map_shape": "E_sigma_int_to_residual_datum_bridge_export_map_object_v1 : sigma_int_strict_derived_v1 -> residual_orientation_datum_target_slot"
+      },
+      "expected": "sign_only_export_map_object",
+      "pass": true,
+      "meaning": "an actual strict-core export-map object into the target slot exists, but it is sign-only"
+    },
+    {
+      "id": "theta_supply_absent_scoped",
       "actual": true,
       "expected": true,
       "pass": true,
-      "meaning": "sigma_int_candidate is not strict-derived"
-    },
-    {
-      "id": "b5_gauge_quotient_safety_open",
-      "actual": "open",
-      "expected": "open",
-      "pass": true,
-      "meaning": "full gauge-quotient safety remains open"
-    },
-    {
-      "id": "t2_map_absent",
-      "actual": false,
-      "expected": false,
-      "pass": true,
-      "meaning": "strict-core equivalence/export map is absent"
-    },
-    {
-      "id": "b7_overlay_only",
-      "actual": "partial_control_route_only",
-      "expected": "partial_control_route_only",
-      "pass": true,
-      "meaning": "selector-track identification remains overlay-only"
-    },
-    {
-      "id": "ax3_axiom_lane_only",
-      "actual": "yes_axiom_lane_only",
-      "expected": "yes_axiom_lane_only",
-      "pass": true,
-      "meaning": "the explicit positive bridge witness remains axiom-lane-only"
-    },
-    {
-      "id": "ax3_strict_core_unchanged",
-      "actual": false,
-      "expected": false,
-      "pass": true,
-      "meaning": "the axiom-lane bridge witness does not change strict core"
+      "meaning": "scoped negative theorem: no strict-core internal theta source in the audited route family"
     }
   ],
   "theorem_result": {
     "discharged": true,
     "target_slot_export_packet_present": true,
+    "sign_only_export_map_object_present": true,
     "strict_core_sigma_int_route_derives_residual_datum_bridge": false,
-    "target_slot_export_is_not_bridge_map_discharge": true,
-    "axiom_lane_bridge_is_not_strict_core_bridge": true
+    "target_slot_export_is_not_population": true,
+    "export_map_object_is_not_theta_supply": true
   },
   "missing_structure_classes": [
-    "strict_derivation_or_source_object_upgrade_for_sigma_int_candidate",
-    "theorem_level_gauge_quotient_safety",
-    "strict_core_equivalence_or_export_map_to_residual_orientation_datum",
-    "selector_track_identification_beyond_overlay_only"
+    "strict_core_actual_theta_1_theta_2_supply_for_R1_population",
+    "strict_core_population_of_residual_orientation_datum_target_slot_as_actual_datum",
+    "strict_core_selector_closure_or_symmetry_breaking_ingredient (QW-2191 discipline)"
   ],
   "hard_limits": [
     "no global impossibility theorem",
-    "no claim that future strict-core sigma-int bridges are impossible",
     "no claim that QW-2191 is discharged",
     "no claim that ToE is closed"
   ],
-  "required_next_step": "ADD_ONE_REMAINING_STRICT_CORE_BRIDGE_OBJECT_AND_RERUN_P5_OR_FORMALIZE_A_STRONGER_NEGATIVE_THEOREM_IF_A_NEW_ARGUMENT_APPEARS"
+  "required_next_step": "EXPORT_ONE_GENUINELY_NEW_STRICT_SIDE_THETA_SUPPLY_OR_SELECTOR_INGREDIENT_OR_PROCEED_ON_EXPLICIT_AXIOM_LANE_WITHOUT_STRICT_CORE_PROMOTION"
 }

@@ -16,136 +16,125 @@ def load_json(repo_relative_path: str) -> dict[str, Any]:
     return json.loads((REPO / repo_relative_path).read_text(encoding="utf-8"))
 
 
-def blocker_present(items: list[str], needle: str) -> bool:
-    return needle in items
-
-
 def main() -> None:
     sources = {
-        "B5": load_json("fundamental_action_reconstruction/generated/b5_sigma_int_local_stability_audit_summary.json"),
-        "B6": load_json("fundamental_action_reconstruction/generated/b6_sigma_to_selector_factorized_bridge_summary.json"),
-        "B7": load_json("fundamental_action_reconstruction/generated/b7_factorized_selector_mode_scaffold_compatibility_audit_summary.json"),
-        "B8": load_json("fundamental_action_reconstruction/generated/b8_selector_track_anti_overclaim_audit_summary.json"),
-        "T2": load_json("fundamental_action_reconstruction/generated/t2_sigma_int_to_residual_datum_bridge_theorem_spec_summary.json"),
-        "C46": load_json("fundamental_action_reconstruction/generated/c46_minimal_template_file_creation_audit_summary.json"),
-        "AX3": load_json("fundamental_action_reconstruction/generated/ax3_axiom_lane_sigma_int_residual_datum_bridge_instance_summary.json"),
-        "R1": load_json("fundamental_action_reconstruction/generated/r1_strict_core_residual_datum_target_slot_export_packet_summary.json"),
+        "r1": load_json(
+            "fundamental_action_reconstruction/generated/r1_strict_core_residual_datum_target_slot_export_packet.json"
+        ),
+        "sigma_int": load_json("fundamental_action_reconstruction/generated/sigma_int_strict_derived_v1.json"),
+        "gauge_safety": load_json(
+            "fundamental_action_reconstruction/generated/sigma_int_gauge_quotient_safety_witness_v1.json"
+        ),
+        "export_map_object": load_json(
+            "fundamental_action_reconstruction/generated/upsilon_residual_datum_sigma_int_bridge_export_map_object_v1.json"
+        ),
+        "no_theta": load_json(
+            "fundamental_action_reconstruction/generated/n1_audited_route_family_no_internal_theta_source_theorem_summary.json"
+        ),
+        "t2": load_json("fundamental_action_reconstruction/generated/t2_sigma_int_to_residual_datum_bridge_theorem_spec_summary.json"),
     }
-
-    b8_blockers = sources["B8"]["residual_blockers"]
-    ax3_result = sources["AX3"]["result"]
 
     route_checks = [
         {
-            "id": "b8_no_strict_derivation_of_sigma",
-            "pass": blocker_present(b8_blockers, "no_strict_derivation_of_sigma_int_candidate"),
+            "id": "r1_target_slot_export_present",
+            "pass": sources["r1"].get("stage") == "R1"
+            and sources["r1"].get("export_target") == "residual_orientation_datum_target_slot",
             "expected": True,
-            "actual": blocker_present(b8_blockers, "no_strict_derivation_of_sigma_int_candidate"),
-            "meaning": "sigma_int_candidate is still not strict-derived",
+            "actual": {
+                "stage": sources["r1"].get("stage"),
+                "export_target": sources["r1"].get("export_target"),
+                "population_state": sources["r1"].get("population_state"),
+            },
+            "meaning": "a strict-core target-slot export packet for the residual orientation datum exists (population absent)",
         },
         {
-            "id": "b5_gauge_quotient_safety_open",
-            "pass": sources["B5"]["b5"]["findings"][2]["status"] == "open",
-            "expected": "open",
-            "actual": sources["B5"]["b5"]["findings"][2]["status"],
-            "meaning": "full gauge-quotient safety remains open",
-        },
-        {
-            "id": "b6_candidate_fit_present",
-            "pass": sources["B6"]["findings"]["sigma_fits_residual_z2_orientation_slot"]["status"] == "supported_candidate_fit",
-            "expected": "supported_candidate_fit",
-            "actual": sources["B6"]["findings"]["sigma_fits_residual_z2_orientation_slot"]["status"],
-            "meaning": "sigma_int_candidate still reaches only candidate-fit at the residual slot",
-        },
-        {
-            "id": "r1_target_slot_export_packet_present",
-            "pass": sources["R1"]["result"] == "strict_core_target_slot_export_packet_present_but_unpopulated_and_unbridged",
-            "expected": "strict_core_target_slot_export_packet_present_but_unpopulated_and_unbridged",
-            "actual": sources["R1"]["result"],
-            "meaning": "a packet-ready target-slot export object now exists",
-        },
-        {
-            "id": "t2_map_absent",
-            "pass": sources["T2"]["findings"]["strict_core_equivalence_or_export_map_present"] is False,
-            "expected": False,
-            "actual": sources["T2"]["findings"]["strict_core_equivalence_or_export_map_present"],
-            "meaning": "the strict-core bridge map is still absent",
-        },
-        {
-            "id": "b7_overlay_only",
-            "pass": sources["B7"]["findings"]["compatibility_with_a6_boundary"]["status"] == "partial_control_route_only",
-            "expected": "partial_control_route_only",
-            "actual": sources["B7"]["findings"]["compatibility_with_a6_boundary"]["status"],
-            "meaning": "selector-track compatibility remains overlay-only",
-        },
-        {
-            "id": "c46_acceptance_carrier_present",
-            "pass": bool(sources["C46"]["created_file"]["exists_after_step"]),
+            "id": "sigma_int_strict_derived_exported",
+            "pass": sources["sigma_int"].get("object") == "sigma_int_strict_derived_v1"
+            and sources["sigma_int"].get("value") in (-1, 1),
             "expected": True,
-            "actual": bool(sources["C46"]["created_file"]["exists_after_step"]),
-            "meaning": "the acceptance carrier remains present",
+            "actual": {
+                "object": sources["sigma_int"].get("object"),
+                "value": sources["sigma_int"].get("value"),
+            },
+            "meaning": "a strict-core sigma-int source-upgrade value object is exported",
         },
         {
-            "id": "ax3_axiom_lane_bridge_only",
-            "pass": ax3_result["sigma_int_bridge_instance_available"] == "yes_axiom_lane_only",
-            "expected": "yes_axiom_lane_only",
-            "actual": ax3_result["sigma_int_bridge_instance_available"],
-            "meaning": "the only explicit positive bridge witness remains axiom-lane-only",
+            "id": "theorem_level_gauge_quotient_safety_witness_exported",
+            "pass": str(sources["gauge_safety"].get("status", "")).startswith(
+                "actual_exported_theorem_level_gauge_quotient_safety_witness"
+            )
+            and sources["gauge_safety"].get("constraints", {}).get("no_gauge_fixing_used") is True,
+            "expected": True,
+            "actual": {
+                "status": sources["gauge_safety"].get("status"),
+                "no_gauge_fixing_used": sources["gauge_safety"].get("constraints", {}).get(
+                    "no_gauge_fixing_used"
+                ),
+            },
+            "meaning": "the strict sigma-int datum is exported with theorem-level gauge-quotient safety (no gauge fixing)",
+        },
+        {
+            "id": "export_map_object_exported_sign_only",
+            "pass": str(sources["export_map_object"].get("status", "")).endswith("residual_z2_population_only")
+            and any("theta" in s for s in sources["export_map_object"].get("hard_limits", [])),
+            "expected": True,
+            "actual": {
+                "status": sources["export_map_object"].get("status"),
+                "typed_map_shape": sources["export_map_object"].get("typed_map_shape"),
+            },
+            "meaning": "a strict-core export-map object into the residual target slot exists, but it is sign-only (no theta supply; no target-slot population)",
+        },
+        {
+            "id": "scoped_no_theta_source_theorem_present",
+            "pass": sources["no_theta"].get("findings", {}).get("scoped_negative_theorem_discharged") is True,
+            "expected": True,
+            "actual": sources["no_theta"].get("findings", {}).get("scoped_negative_theorem_discharged"),
+            "meaning": "in the audited strict route family, no internal strict-core theta source exists (scoped negative theorem)",
         },
     ]
 
     route_state = {
-        "strict_core_source_object_present": not blocker_present(b8_blockers, "no_strict_derivation_of_sigma_int_candidate"),
-        "theorem_level_gauge_quotient_safety_present": sources["B5"]["b5"]["findings"][2]["status"] != "open",
-        "candidate_fit_present": sources["B6"]["findings"]["sigma_fits_residual_z2_orientation_slot"]["status"] == "supported_candidate_fit",
-        "strict_core_target_slot_export_present": sources["R1"]["result"] == "strict_core_target_slot_export_packet_present_but_unpopulated_and_unbridged",
-        "strict_core_equivalence_or_export_map_present": bool(sources["T2"]["findings"]["strict_core_equivalence_or_export_map_present"]),
-        "selector_track_identification_beyond_overlay_present": sources["B7"]["findings"]["compatibility_with_a6_boundary"]["status"] != "partial_control_route_only",
-        "axiom_lane_bridge_instance_present": ax3_result["sigma_int_bridge_instance_available"] == "yes_axiom_lane_only",
-        "strict_core_bridge_discharged": False,
+        "strict_core_target_slot_export_present": bool(route_checks[0]["pass"]),
+        "strict_sigma_int_present": bool(route_checks[1]["pass"]),
+        "theorem_level_gauge_quotient_safety_present": bool(route_checks[2]["pass"]),
+        "strict_core_export_map_object_present_sign_only": bool(route_checks[3]["pass"]),
+        "strict_core_theta_supply_present": False,
+        "strict_core_target_slot_population_present": False,
     }
 
-    missing_upstream_objects: list[str] = []
-    if not route_state["strict_core_source_object_present"]:
-        missing_upstream_objects.append("strict_derivation_or_source_object_upgrade_for_sigma_int_candidate")
-    if not route_state["theorem_level_gauge_quotient_safety_present"]:
-        missing_upstream_objects.append("theorem_level_gauge_quotient_safety_for_sigma_int_candidate")
-    if not route_state["strict_core_equivalence_or_export_map_present"]:
-        missing_upstream_objects.append(
-            "strict_core_equivalence_or_export_map_sigma_int_candidate_to_residual_orientation_datum"
-        )
-    if not route_state["selector_track_identification_beyond_overlay_present"]:
-        missing_upstream_objects.append("selector_track_identification_beyond_overlay_only_for_sigma_int_bridge")
+    missing_upstream_objects = [
+        "strict_core_actual_theta_1_theta_2_supply_for_R1_population",
+        "strict_core_population_of_residual_orientation_datum_target_slot_as_actual_datum",
+    ]
 
     report = {
         "stage": "P5",
         "goal": "rerun_strict_core_sigma_int_to_residual_orientation_datum_after_target_slot_export",
         "status": "NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_RESIDUAL_DATUM_ROUTE_AFTER_TARGET_SLOT_EXPORT",
-        "reason": "the route now reaches a packet-ready target-slot export object, but still stops before strict-core bridge-map identification and beyond-overlay selector-track discharge",
-        "lane": "strict_core_sigma_int_residual_datum_route_after_R1",
+        "reason": "target-slot export and sign-only export-map object exist, but strict-core theta supply remains absent, so no actual residual orientation datum population is obtained",
+        "lane": "strict_core_sigma_int_residual_datum_route_after_R1_post_T148",
         "route_under_test": [
-            "sigma_int_candidate",
-            "residual_orientation_datum_target_slot",
-            "residual_orientation_datum",
+            "sigma_int_strict_derived_v1",
+            "residual_orientation_datum_target_slot (R1)",
+            "residual_orientation_datum (requires theta_1,theta_2)",
         ],
         "route_checks": route_checks,
         "route_state": route_state,
         "supporting_present_but_insufficient_objects": [
-            "sigma_int_candidate",
-            "residual_Z2_candidate_fit",
-            "strict_core_target_slot_export_packet",
-            "persisted_acceptance_artifact_carrier",
-            "axiom_lane_sigma_int_bridge_instance",
+            "R1 target-slot export packet",
+            "sigma_int_strict_derived_v1",
+            "sigma_int_gauge_quotient_safety_witness_v1",
+            "Upsilon_residual_datum_sigma_int_bridge_export_map_object_v1 (sign-only)",
         ],
         "missing_upstream_objects": missing_upstream_objects,
         "blocking_frontier": {
-            "R1_B1": "packet_ready_target_slot_export_present_but_unpopulated_and_unbridged",
-            "B8": "no_strict_derivation_of_sigma_int_candidate / no_theorem_level_gauge_quotient_safety",
-            "T2_B1": "bridge_theorem_specified_target_slot_packet_now_present_but_equivalence_export_map_absent",
-            "AX3_result": "sigma_int_bridge_instance_is_materialized_on_axiom_lane_only_and_does_not_change_strict_core",
+            "R1_B1": "target slot export present but population absent",
+            "C50_B1": "no_packet_ready_strict_core_minimal_source_skeleton_for_actual_theta_1_theta_2",
+            "T2_B1": sources["t2"]["frontier_after_T2"]["T2_B1"],
+            "QW_2191": "open (no implied selector closure)",
         },
         "computed": {},
-        "required_next_step": "IMPLEMENT_ONE_REMAINING_STRICT_CORE_BRIDGE_OBJECT_AND_RERUN_P5_BEFORE_CLAIMING_STRICT_CORE_INTERNALIZATION",
+        "required_next_step": "EXPORT_ONE_GENUINELY_NEW_STRICT_SIDE_THETA_SUPPLY_OR_SELECTOR_INGREDIENT_OR_PROCEED_ON_EXPLICIT_AXIOM_LANE_WITHOUT_STRICT_CORE_PROMOTION",
         "strict_core_promotion": False,
         "no_false_pass": True,
     }

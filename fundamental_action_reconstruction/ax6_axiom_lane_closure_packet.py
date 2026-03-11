@@ -18,7 +18,7 @@ packet = {
     "actual_basis_pair": ["c_1", "c_2"],
     "actual_orientation_slice": "span{c_1,c_2}",
     "bridge_instance": {
-        "source": "sigma_int_candidate",
+        "source": "sigma_int_strict_derived_v1",
         "target": "residual_orientation_datum",
         "status": "materialized_axiom_lane_only",
     },
@@ -34,7 +34,7 @@ packet = {
     "strict_core_status": "not_in_strict_core",
     "residual_frontier": {
         "T12_B1": "the typing judgment with totality and uniqueness is specified but not discharged for the current selector track",
-        "T2_B1": "the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent",
+        "T2_B1": "the bridge theorem is specified but not discharged; strict-core target slot and sign-only export-map object exist, but target-slot population (theta_1,theta_2) remains absent",
         "C32_B2": "raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12",
     },
     "forbidden_claims": [

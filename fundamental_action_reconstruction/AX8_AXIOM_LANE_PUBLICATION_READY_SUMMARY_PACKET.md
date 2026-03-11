@@ -1,7 +1,7 @@
 # AX8 Axiom Lane Publication-Ready Summary Packet
 
 Status: `AX8_EXECUTED_AXIOM_LANE_PUBLICATION_READY_SUMMARY_PACKET_NO_FALSE_PASS`
-As of: `2026-03-06`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -10,7 +10,7 @@ After `AX1..AX7`, the axiom-augmented lane already contains:
 - actual selected phases,
 - an actual basis pair,
 - an actual orientation slice,
-- a persisted `sigma_int_candidate -> residual orientation datum` bridge-instance,
+- a persisted `sigma_int_strict_derived_v1 -> residual orientation datum` bridge-instance,
 - robustness across the declared positive-weight selector family,
 - compatibility with `QW-2190`, `QW-2191`, and the `A6` boundary,
 - and a boundary certificate explicitly blocking promotion into strict core.
@@ -43,7 +43,7 @@ theta_1 = theta_2 = 0 mod 2pi
 u_1 = c_1
 u_2 = c_2
 S_orient_axiom = span{c_1,c_2}
-sigma_int_candidate -> residual orientation datum
+sigma_int_strict_derived_v1 -> residual orientation datum
 ```
 
 plus:
@@ -79,7 +79,7 @@ It is meant as a single handoff artifact for describing the current positive lan
 `AX8` does not change the strict-core blockers. The honest residual frontier remains:
 
 - `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`
-- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and sign-only export-map object exist, but target-slot population (theta_1,theta_2) remains absent`
 - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`
 
 Additionally:

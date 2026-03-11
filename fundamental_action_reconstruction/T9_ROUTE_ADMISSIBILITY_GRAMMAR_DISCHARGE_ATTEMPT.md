@@ -122,13 +122,13 @@ must instantiate exactly one of the six named route roles
 Before `T9`:
 
 - `T8_B1 := the route admissibility grammar is specified but not discharged for the current selector track`
-- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and sign-only export-map object exist, but target-slot population (theta_1,theta_2) remains absent`
 - `C32_B2 := raw overlap scalar route remains degenerate`
 
 After `T9`:
 
 - `T9_B1 := no formal route-role typing rule or admissibility-by-role declaration showing that every current strict-core theta-export route must instantiate exactly one of the six named route roles`
-- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and sign-only export-map object exist, but target-slot population (theta_1,theta_2) remains absent`
 - `C32_B2 := raw overlap scalar route remains degenerate`
 
 ## What T9 does not claim

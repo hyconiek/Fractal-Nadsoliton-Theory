@@ -9,7 +9,7 @@ out.parent.mkdir(parents=True, exist_ok=True)
 payload = {
     "step": "D1",
     "status": "D1_CURRENT_BEST_SUPPORTED_PROJECT_CONCLUSION_SELECTOR_AXIOM_NECESSITY_NO_FALSE_PASS",
-    "date": "2026-03-06",
+    "date": "2026-03-11",
     "result_kind": "best_supported_project_conclusion_not_theorem",
     "supports": [
         "N1",
@@ -17,6 +17,8 @@ payload = {
         "N3",
         "T12",
         "T2",
+        "F311",
+        "N7",
         "C35",
         "C51",
         "C52",
@@ -28,7 +30,7 @@ payload = {
     "project_conclusion": "strict_core_selector_closure_not_achieved_current_best_supported_design_conclusion_is_selector_axiom_necessity_or_strict_core_incompleteness",
     "frontier": [
         "T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track",
-        "T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent",
+        "T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and sign-only export-map object exist (F311/N422), but target-slot population (theta_1,theta_2) remains absent (N1/C50)",
         "C32_B2 := raw overlap route remains degenerate"
     ],
     "recommended_next_moves": [

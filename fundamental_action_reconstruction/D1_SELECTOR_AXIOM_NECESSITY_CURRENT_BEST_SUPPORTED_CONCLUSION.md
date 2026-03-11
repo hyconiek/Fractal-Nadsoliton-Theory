@@ -1,7 +1,7 @@
 # D1 Selector Axiom Necessity Current Best-Supported Conclusion
 
 Status: `D1_CURRENT_BEST_SUPPORTED_PROJECT_CONCLUSION_SELECTOR_AXIOM_NECESSITY_NO_FALSE_PASS`
-As of: `2026-03-06`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -64,8 +64,13 @@ So no honest global no-internal-theta theorem is currently available.
 From `T2`:
 - the bridge theorem from `sigma_int_candidate` to the residual orientation
   datum is specified,
-- but target slot and equivalence/export map remain absent,
-- so no honest positive strict-core closure is currently available either.
+- and the strict core now exports a sign-only export-map object into the
+  residual target slot (`F311/N422`),
+- but strict-core target-slot population (theta supply) remains absent
+  (`N1/C50`), hence the current strict sigma-int lane still does not derive an
+  actual strict-core residual orientation datum (`N7`).
+
+Therefore no honest positive strict-core closure is currently available either.
 
 ### 4. Axiom-augmented source lane remains the only packet-ready fallback
 
@@ -100,7 +105,8 @@ From `C35` and `C51..C55`:
 Only two serious routes remain:
 
 1. direct attack on `T12_B1`,
-2. explicit axiom-augmented selector closure lane with fully separated claims.
+2. export one genuinely new strict-side theta/selector ingredient, or proceed on
+   an explicit axiom-augmented selector closure lane with fully separated claims.
 
 Any further meta-ladder expansion beyond `N3` without attacking `T12_B1`
 should be treated as low-yield documentation rather than mathematical progress.

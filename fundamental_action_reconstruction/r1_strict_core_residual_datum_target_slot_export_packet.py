@@ -24,7 +24,7 @@ def main() -> None:
         "required_inputs": ["theta_1", "theta_2"],
         "target_role": "strict_core_target_slot_for_future_sigma_int_to_residual_datum_bridge",
         "population_state": "CONDITIONAL_PACKET_READY_TARGET_SLOT_UNPOPULATED",
-        "strict_core_status": "target_slot_export_present_bridge_map_absent",
+        "strict_core_status": "target_slot_export_present_population_absent",
         "frontier": "R1_B1",
         "no_false_pass": True,
     }
@@ -32,7 +32,7 @@ def main() -> None:
     summary = {
         "stage": "R1",
         "status": "PASS_PARTIAL_RESIDUAL_DATUM_TARGET_SLOT_EXPORT_PACKET_READY_POPULATION_ABSENT",
-        "result": "strict_core_target_slot_export_packet_present_but_unpopulated_and_unbridged",
+        "result": "strict_core_target_slot_export_packet_present_but_unpopulated",
         "frontier": [
             "R1_B1",
             "C50_B1",

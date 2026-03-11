@@ -1,7 +1,7 @@
 # AX7 Axiom Lane Anti-Overclaim Boundary Audit
 
 Status: `AX7_EXECUTED_AXIOM_LANE_ANTI_OVERCLAIM_BOUNDARY_AUDIT_NO_FALSE_PASS`
-As of: `2026-03-06`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -12,7 +12,7 @@ theta_1 = theta_2 = 0 mod 2pi
 u_1 = c_1
 u_2 = c_2
 S_orient_axiom = span{c_1,c_2}
-sigma_int_candidate -> residual orientation datum
+sigma_int_strict_derived_v1 -> residual orientation datum
 ```
 
 plus:
@@ -75,7 +75,7 @@ The full lane remains:
 
 The strict-core residual frontier is unchanged:
 - `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`
-- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and sign-only export-map object exist, but target-slot population (theta_1,theta_2) remains absent`
 - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`
 
 ## What was created
@@ -98,7 +98,7 @@ It records:
 `AX7` does not change the strict-core blockers. The honest residual frontier remains:
 
 - `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`
-- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and sign-only export-map object exist, but target-slot population (theta_1,theta_2) remains absent`
 - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`
 
 Additionally:

@@ -1,14 +1,14 @@
 # AX5 Axiom Lane Mode Scaffold Compatibility Audit
 
 Status: `AX5_EXECUTED_AXIOM_LANE_MODE_SCAFFOLD_COMPATIBILITY_AUDIT_NO_FALSE_PASS`
-As of: `2026-03-06`
+As of: `2026-03-11`
 
 ## Goal
 
 After `AX4`, the axiom-augmented lane already has:
 
 ```text
-sigma_int_candidate -> residual orientation datum
+sigma_int_strict_derived_v1 -> residual orientation datum
 ```
 
 with stable actual selected data across the declared positive-weight selector family:
@@ -94,7 +94,7 @@ It records:
 `AX5` does not change the strict-core blockers. The honest residual frontier remains:
 
 - `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`
-- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and sign-only export-map object exist, but target-slot population (theta_1,theta_2) remains absent`
 - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`
 
 Additionally:

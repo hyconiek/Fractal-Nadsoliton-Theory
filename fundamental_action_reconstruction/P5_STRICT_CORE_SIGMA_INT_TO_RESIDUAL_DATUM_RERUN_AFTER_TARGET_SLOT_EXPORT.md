@@ -1,7 +1,7 @@
 # P5 Strict-Core Sigma-Int To Residual Datum Rerun After Target-Slot Export
 
 Status: `P5_EXECUTED_STRICT_CORE_SIGMA_INT_TO_RESIDUAL_DATUM_RERUN_AFTER_TARGET_SLOT_EXPORT_NO_FALSE_PASS`
-As of: `2026-03-07`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -14,7 +14,7 @@ strict_core_target_slot_export_for_residual_orientation_datum
 `P5` reruns the same narrow route question:
 
 ```text
-sigma_int_candidate -> residual orientation datum
+sigma_int_strict_derived_v1 -> residual_orientation_datum_target_slot (R1)
 ```
 
 but now with the target-slot export packet explicitly in scope.
@@ -43,27 +43,25 @@ So the route no longer fails at:
 
 The current route still lacks:
 
-1. a strict derivation or source-object upgrade for `sigma_int_candidate`,
-2. theorem-level gauge-quotient safety for `sigma_int_candidate`,
-3. a strict-core equivalence/export map
-   `sigma_int_candidate -> residual orientation datum`,
-4. selector-track identification beyond overlay-only compatibility.
+1. strict-core theta supply (`theta_1`, `theta_2`) for populating the target slot (`N1/C50`),
+2. an actual strict-core population of the target slot as a residual orientation datum (not just the residual `Z2` sign convention),
+3. any strict-core selector closure / symmetry-breaking ingredient discharging `QW-2191`.
 
 ## Honest frontier
 
 The current route now contains:
 
-- `sigma_int_candidate`,
-- candidate-fit to the residual `Z2` slot,
-- a packet-ready strict-core target-slot export object,
-- a persisted acceptance carrier,
-- an axiom-lane bridge instance.
+- strict sigma-int provenance/value (`F307/N418`),
+- theorem-level gauge-quotient safety for that datum (`F308/N419`),
+- a packet-ready strict-core target-slot export object (`R1`),
+- an actual strict-core sign-only export-map object into that slot (`F311/N422`),
+- an axiom-lane bridge instance (outside strict core).
 
 But that still does **not** amount to a strict-core bridge because:
 
-- the target slot is still unpopulated from strict core,
-- no bridge map exists,
-- overlay compatibility is still not strict-core identification.
+- the target slot is still unpopulated as an actual residual orientation datum (strict-core theta supply is absent),
+- the exported map object is sign-only (residual `Z2` convention only), not a theta-supplying population,
+- `QW-2191` remains open (no implied selector closure).
 
 ## What `P5` does not claim
 
@@ -80,5 +78,5 @@ But that still does **not** amount to a strict-core bridge because:
 
 Only two serious routes remain:
 
-1. construct one of the remaining bridge objects and rerun `P5`,
-2. or formalize the updated route-specific obstruction theorem after `R1`.
+1. export one genuinely new strict-side theta-supply / selector ingredient and then attack actual target-slot population, or
+2. proceed explicitly on an axiom-augmented closure track without claiming strict-core internalization.

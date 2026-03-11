@@ -120,13 +120,13 @@ must instantiate one of the six audited route archetypes
 Before `T7`:
 
 - `T6_B1 := the route-family closure certificate is specified but not discharged for the current strict-core selector track`
-- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and sign-only export-map object exist, but target-slot population (theta_1,theta_2) remains absent`
 - `C32_B2 := raw overlap scalar route remains degenerate`
 
 After `T7`:
 
 - `T7_B1 := no formal admissibility grammar or route-constructor closure rule showing that every current strict-core theta-export route must instantiate one of the six audited route archetypes`
-- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and sign-only export-map object exist, but target-slot population (theta_1,theta_2) remains absent`
 - `C32_B2 := raw overlap scalar route remains degenerate`
 
 ## What T7 does not claim

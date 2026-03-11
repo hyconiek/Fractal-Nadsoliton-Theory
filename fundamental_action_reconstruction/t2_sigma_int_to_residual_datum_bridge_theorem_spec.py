@@ -19,18 +19,25 @@ def main() -> None:
             "B8": "anti-overclaim selector-track boundary",
             "C36": "overlay bridge exists but is not strict-core internalization",
             "C37": "candidate internalization present, strict equivalence absent",
-            "C38": "theorem-spec/export-spec absent before T2",
+            "F311": "strict-core sign-only export-map object into the residual target slot exists (no theta supply)",
+            "N7": "current strict-core sigma-int lane does not populate the residual target slot as an actual datum",
+            "C38": "theorem-level internalization / full equivalence/export remains absent before strict theta supply",
             "A10": "anti-overclaim boundary"
         },
         "findings": {
             "target_bridge_theorem_spec_present": True,
             "minimal_assumption_map_present": True,
             "candidate_fit_present": True,
-            "strict_core_equivalence_or_export_map_present": False,
+            "strict_core_equivalence_or_export_map_present": True,
+            "strict_core_target_slot_present": True,
+            "strict_core_export_map_object_present": True,
+            "strict_core_export_map_object_sign_only": True,
+            "strict_core_theta_supply_present": False,
+            "strict_core_equivalence_or_full_bridge_present": False,
             "theorem_discharge_present": False
         },
         "frontier_after_T2": {
-            "T2_B1": "the_bridge_theorem_is_specified_but_not_discharged_strict_core_target_slot_and_equivalence_export_map_remain_absent",
+            "T2_B1": "the_bridge_theorem_is_specified_but_not_discharged_target_slot_and_sign_only_export_map_object_exist_but_target_slot_population_remains_absent",
             "C32_B2": "raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12"
         },
         "hard_limits": [

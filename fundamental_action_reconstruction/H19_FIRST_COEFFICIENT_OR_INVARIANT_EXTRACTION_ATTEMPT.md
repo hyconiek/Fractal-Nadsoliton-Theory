@@ -54,7 +54,7 @@ The provenance-valid witness exists, but it is still coefficient-semantically op
 - `H19_B1 := a provenance-valid Route A witness exists for pair1, but no coefficient-level export semantics or invariant-level export rule is attached to it, so neither a_1 nor tr(A_1) nor Delta_1 can yet be extracted`
 - `H15_B1 := existing kernel feedback has no explicit residual-selector-sector reduction or projected selector-block export in the current repository, so K_obs remains a distinct extension hypothesis rather than an identified reformulation of existing kernel feedback`
 - `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`
-- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and sign-only export-map object exist, but target-slot population (theta_1,theta_2) remains absent`
 - `C32_B2 := raw cross-pair overlap route is formally degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`
 
 ## Negative Claims Maintained

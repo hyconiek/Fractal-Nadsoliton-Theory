@@ -5,88 +5,66 @@
   "scope": "current_strict_core_sigma_int_to_residual_datum_route_only",
   "checks": [
     {
+      "id": "strict_sigma_int_exported",
+      "actual": {
+        "object": "sigma_int_strict_derived_v1",
+        "value": -1
+      },
+      "expected": "sigma_int_strict_derived_v1 \u2208 {+1,-1}",
+      "pass": true,
+      "meaning": "strict sigma-int provenance/value is exported as a strict-core source-upgrade object"
+    },
+    {
+      "id": "gauge_quotient_safety_exported",
+      "actual": {
+        "status": "actual_exported_theorem_level_gauge_quotient_safety_witness__no_gauge_fixing",
+        "no_gauge_fixing_used": true
+      },
+      "expected": "theorem_level_witness_no_gauge_fixing",
+      "pass": true,
+      "meaning": "the strict sigma-int datum is gauge-quotient safe at theorem level"
+    },
+    {
+      "id": "export_map_object_present_sign_only",
+      "actual": {
+        "status": "actual_exported_strict_core_bridge_export_map_object__residual_z2_population_only",
+        "typed_map_shape": "E_sigma_int_to_residual_datum_bridge_export_map_object_v1 : sigma_int_strict_derived_v1 -> residual_orientation_datum_target_slot"
+      },
+      "expected": "sign_only_export_map_object",
+      "pass": true,
+      "meaning": "a strict-core export-map object into the residual target slot exists, but it is explicitly sign-only"
+    },
+    {
+      "id": "theta_supply_absent_scoped",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "scoped negative theorem: no strict-core internal theta source in the audited route family"
+    },
+    {
       "id": "p4_route_negative",
       "actual": "NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_RESIDUAL_DATUM_ROUTE",
       "expected": "NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_RESIDUAL_DATUM_ROUTE",
       "pass": true,
-      "meaning": "the executable bridge probe does not reach strict-core residual datum"
-    },
-    {
-      "id": "b8_no_strict_derivation_of_sigma",
-      "actual": true,
-      "expected": true,
-      "pass": true,
-      "meaning": "sigma_int_candidate is not strict-derived"
-    },
-    {
-      "id": "b5_gauge_quotient_safety_open",
-      "actual": "open",
-      "expected": "open",
-      "pass": true,
-      "meaning": "full gauge-quotient safety remains open"
-    },
-    {
-      "id": "b7_overlay_only",
-      "actual": "partial_control_route_only",
-      "expected": "partial_control_route_only",
-      "pass": true,
-      "meaning": "selector-track compatibility remains overlay-only"
-    },
-    {
-      "id": "c37_export_absent",
-      "actual": "not_shown",
-      "expected": "not_shown",
-      "pass": true,
-      "meaning": "strict-core residual-datum export is absent"
-    },
-    {
-      "id": "t2_map_absent",
-      "actual": false,
-      "expected": false,
-      "pass": true,
-      "meaning": "strict-core equivalence/export map is absent"
-    },
-    {
-      "id": "c46_carrier_present_but_not_bridge",
-      "actual": true,
-      "expected": true,
-      "pass": true,
-      "meaning": "a carrier exists, but it is still only carrier infrastructure"
-    },
-    {
-      "id": "ax3_axiom_lane_only",
-      "actual": "yes_axiom_lane_only",
-      "expected": "yes_axiom_lane_only",
-      "pass": true,
-      "meaning": "the only explicit bridge instance is on the axiom lane"
-    },
-    {
-      "id": "ax3_strict_core_unchanged",
-      "actual": false,
-      "expected": false,
-      "pass": true,
-      "meaning": "the axiom-lane bridge instance does not change strict core"
+      "meaning": "the executable bridge probe does not reach a strict-core residual orientation datum population"
     }
   ],
   "theorem_result": {
     "discharged": true,
     "strict_core_sigma_int_route_derives_residual_orientation_datum": false,
     "strict_core_sigma_int_route_serves_as_internal_residual_datum_bridge": false,
-    "carrier_infrastructure_is_not_bridge_discharge": true,
-    "axiom_lane_bridge_is_not_strict_core_bridge": true
+    "export_map_object_is_sign_only": true,
+    "theta_supply_absent": true
   },
   "missing_structure_classes": [
-    "strict_derivation_or_source_object_upgrade_for_sigma_int_candidate",
-    "theorem_level_gauge_quotient_safety",
-    "strict_core_target_slot_export_for_residual_orientation_datum",
-    "strict_core_equivalence_or_export_map_to_residual_orientation_datum",
-    "selector_track_identification_beyond_overlay_only"
+    "strict_core_actual_theta_1_theta_2_supply_for_R1_population",
+    "strict_core_population_of_residual_orientation_datum_target_slot_as_actual_datum",
+    "strict_core_selector_closure_or_symmetry_breaking_ingredient (QW-2191 discipline)"
   ],
   "hard_limits": [
     "no global impossibility theorem",
-    "no claim that future strict-core sigma-int bridges are impossible",
     "no claim that QW-2191 is discharged",
     "no claim that ToE is closed"
   ],
-  "required_next_step": "ADD_ONE_MISSING_STRICT_CORE_RESIDUAL_DATUM_BRIDGE_OBJECT_AND_RERUN_P4_OR_FORMALIZE_A_STRONGER_NEGATIVE_THEOREM_IF_A_NEW_ARGUMENT_APPEARS"
+  "required_next_step": "EXPORT_ONE_GENUINELY_NEW_STRICT_SIDE_THETA_SUPPLY_OR_SELECTOR_INGREDIENT_OR_PROCEED_ON_EXPLICIT_AXIOM_LANE_WITHOUT_STRICT_CORE_PROMOTION"
 }

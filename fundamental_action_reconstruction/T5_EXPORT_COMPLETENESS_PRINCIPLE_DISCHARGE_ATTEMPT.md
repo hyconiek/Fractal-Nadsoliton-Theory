@@ -120,13 +120,13 @@ for the selector track.
 Before `T5`:
 
 - `T4_B1 := the export-completeness principle is specified but not discharged for the current strict-core selector track`
-- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and sign-only export-map object exist, but target-slot population (theta_1,theta_2) remains absent`
 - `C32_B2 := raw overlap scalar route remains degenerate`
 
 After `T5`:
 
 - `T5_B1 := no formal route-family closure certificate or route-universe declaration proving exhaustiveness of the audited theta-export route family`
-- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and sign-only export-map object exist, but target-slot population (theta_1,theta_2) remains absent`
 - `C32_B2 := raw overlap scalar route remains degenerate`
 
 ## What T5 does not claim

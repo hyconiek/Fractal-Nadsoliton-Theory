@@ -96,7 +96,7 @@ It is precisely:
 - `O1_B1 := the minimal explicit operator definition needed to compute a_1, b_1, d_1 is now specified, but no persisted computable A_1_ext instance exists yet in either admissible mode`
 - `H28_B1 := the current repository state contains no computable operator-level source from which a_1, b_1, d_1 can be actually exported or evaluated for pair1, even though Route A provenance and coefficient semantics are already in place`
 - `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`
-- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and sign-only export-map object exist, but target-slot population (theta_1,theta_2) remains absent`
 - `C32_B2 := raw cross-pair overlap route is formally degenerate under the strict orthonormal-disjoint mode scaffold and thus does not export alpha_12`
 
 ## Negative Claims Maintained

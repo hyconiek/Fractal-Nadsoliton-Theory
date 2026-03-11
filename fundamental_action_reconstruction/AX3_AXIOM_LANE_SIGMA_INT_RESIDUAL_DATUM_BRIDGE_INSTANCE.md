@@ -1,7 +1,7 @@
 # AX3 Axiom Lane Sigma Int Residual Datum Bridge Instance
 
 Status: `AX3_EXECUTED_AXIOM_LANE_SIGMA_INT_RESIDUAL_DATUM_BRIDGE_INSTANCE_NO_FALSE_PASS`
-As of: `2026-03-06`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -15,7 +15,7 @@ S_orient_axiom = span{c_1, c_2}
 ```
 
 `AX3` performs the next positive step on that lane:
-- create a persisted bridge instance linking `sigma_int_candidate`
+- create a persisted bridge instance linking `sigma_int_strict_derived_v1`
   to the residual orientation-datum role,
 - attach the actual selected basis pair and actual orientation slice,
 - keep the whole result explicitly outside strict core.
@@ -32,6 +32,8 @@ S_orient_axiom = span{c_1, c_2}
    - compatibility of the factorized bridge with the mode scaffold
 5. `QW-2192`, `QW-2193`
    - axiom-augmented selector closure and robustness family
+6. `F307/N418`
+   - strict sigma-int source upgrade export (`sigma_int_strict_derived_v1`)
 
 ## What was created
 
@@ -47,6 +49,7 @@ Minimal content:
 {
   "lane": "axiom-augmented",
   "bridge_class": "factorized_control_route_axiom_lane_only",
+  "sigma_int_object": "sigma_int_strict_derived_v1",
   "sigma_int_role": "residual_orientation_datum_candidate",
   "selector_family": "J_ab_positive_weight_family",
   "theta_choice": {
@@ -63,7 +66,7 @@ Minimal content:
 
 `AX3` establishes, on the axiom-augmented lane only:
 
-1. an explicit bridge-instance carrier from `sigma_int_candidate` to the residual orientation-datum role,
+1. an explicit bridge-instance carrier from `sigma_int_strict_derived_v1` to the residual orientation-datum role,
 2. attachment of the actual selected basis pair,
 3. attachment of the actual selected orientation slice,
 4. a persisted file that downstream axiom-lane bridge work can reference.
@@ -73,12 +76,12 @@ Minimal content:
 `AX3` does not change the strict-core blockers. The honest residual frontier remains:
 
 - `T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track`
-- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and equivalence/export map remain absent`
+- `T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and sign-only export-map object exist, but target-slot population (theta_1,theta_2) remains absent`
 - `C32_B2 := raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12`
 
 And additionally:
 
-- `AX3_result := sigma_int_candidate is materialized as a residual-orientation bridge instance on the axiom-augmented lane only`
+- `AX3_result := sigma_int_strict_derived_v1 is materialized as a residual-orientation bridge instance on the axiom-augmented lane only`
 
 ## Matrix
 
@@ -99,11 +102,11 @@ And additionally:
 - strict-core discharge of `T12_B1`,
 - strict-core discharge of `QW-2191`,
 - equivalence between the axiom-augmented lane and strict core,
-- theorem-level identification of `sigma_int_candidate` with the residual orientation datum.
+- theorem-level identification of `sigma_int_strict_derived_v1` with a strict-core residual orientation datum population.
 
 ## Product
 
 - third step on the explicit axiom-augmented positive lane,
-- materialized bridge-instance carrier for `sigma_int_candidate`,
+- materialized bridge-instance carrier for `sigma_int_strict_derived_v1`,
 - persisted actual basis pair and actual orientation slice attached to that bridge,
 - no false pass.
