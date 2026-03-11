@@ -1,7 +1,7 @@
 # P386 Current Strict Residual Datum Bridge/Export-Map Object-Support Carrier Discharge Probe
 
 Status: `P386_EXECUTED_CURRENT_STRICT_RESIDUAL_DATUM_BRIDGE_EXPORT_MAP_OBJECT_SUPPORT_CARRIER_DISCHARGE_PROBE_NO_FALSE_PASS`  
-As of: `2026-03-10`
+As of: `2026-03-11`
 
 ## Goal
 
@@ -19,7 +19,12 @@ Omicron_residual_datum_bridge_export_map_object_support_carrier_target_v1 (T140/
 ```
 
 at least on the provider-object witness track (`N405`), while remaining below
-export-map export (`N300`).
+actual bridge/export-map object support above the map object (`N395`) and below
+selector closure.
+
+On the updated repo state, the strict-core bridge/export-map object is already
+exported (`F311/N422`), so `N300` is historical only and may not be used as a
+current-state “below export” clause.
 
 ## Probe table (T140 acceptance tests)
 
@@ -29,7 +34,7 @@ export-map export (`N300`).
 | route reference discipline | YES | carrier object records `upgrades_witness = Kappa_*_provider_object_*` |
 | noncyclic contract (no theta/populated inputs) | YES | finite nad12-depth orbit summary; no theta inputs; no populated-instance inputs |
 | observer-free contract | YES | explicit internal `U(1)` gauge; no `K_obs` |
-| map-export neutrality | YES | `N300` explicitly kept in force |
+| map-object compatibility | YES | carrier is explicitly scoped below actual object support (`N395`) and does not assert any new export-map object beyond `F311/N422` |
 | sigma-int discipline if used | N/A | this carrier is scoped to provider-object witness track only |
 | selector neutrality | YES | no `S_sel_int` or `QW-2191` claim |
 
@@ -48,6 +53,6 @@ thereby discharging:
 Omicron_residual_datum_bridge_export_map_object_support_carrier_target_v1.
 ```
 
-This discharge remains explicitly below export-map export (`N300`) and does
-not imply selector closure or ToE closure.
-
+This discharge remains explicitly below actual bridge/export-map object support
+above the map object (`N395`) and does not imply selector closure or ToE
+closure.
