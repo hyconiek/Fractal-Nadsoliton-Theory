@@ -1,0 +1,26 @@
+{
+  "step": "AX18",
+  "status": "AX18_EXECUTED_STRICT_EXTENSION_LANE_SIGMA_INT_RESIDUAL_ORIENTATION_DATUM_INSTANCE_PACKET_NO_FALSE_PASS",
+  "goal": "Create one strict-extension-only sigma_int -> residual orientation datum instance from the exported sigma_int->theta candidate ingredient, under the accepted delta_d=max convention.",
+  "created_files": [
+    "generated/strict_extension_lane_sigma_int_residual_orientation_datum_instance.json",
+    "generated/ax18_strict_extension_lane_sigma_int_residual_orientation_datum_instance_summary.json"
+  ],
+  "result": {
+    "extension_scope": "strict_extension_only",
+    "theta_supply_present_extension_only": true,
+    "r1_population_present_extension_only": true,
+    "strict_core_changed": false
+  },
+  "hard_limits": [
+    "strict_extension_is_not_strict_core",
+    "no_strict_core_theta_export",
+    "no_strict_core_target_slot_population_by_export_map_object",
+    "no_object_support_discharge_above_export_map_object",
+    "no_admissible_S_sel_int",
+    "no_strict_core_selector_closure",
+    "no_QW_2191_discharge",
+    "no_ToE_closure"
+  ],
+  "next_honest_step": "AX19_OR_DECLARE_NEW_STRICT_CORE_SELECTOR_SOURCE"
+}
