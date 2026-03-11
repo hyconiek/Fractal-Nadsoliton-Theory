@@ -27,12 +27,28 @@ The repo already accepts one **extension-scope** convention fixing this slot:
 AX17 (strict_extension_only): delta_d := delta_max.
 ```
 
-But strict core still lacks a dedicated delta_d value object with explicit
-strict provenance/selection method.
+Before `F328/N440`, strict core still lacked a dedicated delta_d value object
+with explicit strict provenance/selection method.
 
 `T158` makes that missing ingredient sharp, to prevent false pass by wording
 such as “delta_d is derived from the kernel tuple” without an explicit
 selection premise or an internal strict derivation.
+
+Update (current repo state):
+
+On the current repo state (`F328/N440`), the strict sigma-int lane now exports
+one dedicated delta_d value object with explicit strict provenance
+(strict-source-upgraded by explicit premise):
+
+```text
+delta_d_sigma_int_positive_window_step_strict_provenance_v1 := delta_max.
+```
+
+Therefore `T158` is no longer a “current missing-object naming” spec.
+It is kept as:
+
+1. a sharp historical target-spec for the delta_d provenance acceptance tests, and
+2. an admissible target-name record (now superseded by the actual delta_d export).
 
 ## Scope
 
@@ -64,6 +80,14 @@ so downstream strict sigma-int → theta candidate work cannot silently smuggle
 in a delta_d choice as if it were strict-derived.
 ```
 
+This target name is now superseded by the actual exported delta_d value object:
+
+```text
+delta_d_sigma_int_positive_window_step_strict_provenance_v1
+```
+
+exported by `F328/N440`.
+
 ## Acceptance tests (what would count as discharge)
 
 An **actual** discharge of
@@ -86,7 +110,7 @@ must at minimum provide:
 5. **Selector discipline:** the discharge must explicitly state whether it:
    - keeps `QW-2191` open (default), or
    - adds a separated selector/symmetry-breaking premise in a non-strict scope.
-   In either case, no implied strict-core selector closure is permitted.
+In either case, no implied strict-core selector closure is permitted.
 
 ## Relation to existing extension convention
 
@@ -106,4 +130,3 @@ object is exported with the required provenance classification.
 3. actual strict-core theta export / pair population,
 4. admissible `S_sel_int`, selector closure, or `QW-2191` discharge,
 5. ToE closure.
-

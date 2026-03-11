@@ -1,0 +1,46 @@
+{
+  "object": "delta_d_sigma_int_positive_window_step_strict_provenance_v1",
+  "status": "actual_exported_strict_provenance_value_object__premise_based",
+  "as_of": "2026-03-11",
+  "intent": "Provide an explicit, observer-free, noncyclic provenance source for the positive-window corridor step delta_d used by the strict sigma-int \u2192 theta candidate lane (T119), removing silent convention laundering.",
+  "inputs": {
+    "kernel_tuple_source": "report_qw2190_kernel_mode_representation_emergence_gate.json",
+    "corridor_spec": "T119",
+    "target_spec": "T158",
+    "carrier_packet": "F328"
+  },
+  "kernel": {
+    "omega": 0.18575000000000005,
+    "phi": 0.1624999999999998,
+    "beta": 1.0,
+    "eta": 1.8
+  },
+  "corridor": {
+    "delta_barrier": 1.4082963267948967,
+    "eps_local": 0.7041481633974483,
+    "d_local": 3.790838026365804,
+    "delta_max": 0.34462163876052765
+  },
+  "definition": {
+    "delta_max": "d_local/11 from T119 (computed from strict kernel tuple)",
+    "delta_d_sigma_int_positive_window_step_strict_provenance_v1": "delta_max",
+    "contract": "0 < delta_d <= delta_max",
+    "note": "Premise-based corridor saturation; not a strict-derived uniqueness claim."
+  },
+  "value": 0.34462163876052765,
+  "provenance": {
+    "classification": "strict_source_upgraded",
+    "method": "explicit_strict_side_premise_corridor_saturation",
+    "premise_id": "P_delta_d_sigma_int_positive_window_corridor_saturation_v1",
+    "note": "delta_max is computed from the strict kernel tuple via the T119 corridor; the choice delta_d := delta_max is an explicit premise."
+  },
+  "hard_limits": [
+    "Does not claim strict derivation or uniqueness of delta_d.",
+    "Does not export actual strict-core theta_1/theta_2.",
+    "Does not discharge object-support above the export-map object (N395/T130).",
+    "Does not imply admissible S_sel_int nor strict-core selector closure.",
+    "Does not claim QW-2191 discharge.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}

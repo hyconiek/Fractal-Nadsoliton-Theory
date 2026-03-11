@@ -17,8 +17,8 @@ and the current repo explicitly records that theta outputs depend on the
 admissible corridor step choice (`N437`).
 
 The repo also already accepts one **extension-scope** convention fixing this
-slot (`AX17`), but strict core still lacks a dedicated delta_d value object
-with explicit strict provenance/selection method.
+slot (`AX17`). Before `F328/N440`, strict core still lacked a dedicated delta_d
+value object with explicit strict provenance/selection method.
 
 `F327` performs the next honest no-false-pass move:
 
@@ -27,6 +27,17 @@ name the missing strict-provenance delta_d step ingredient
 as one explicit future-only target object with explicit acceptance tests (T158),
 so no downstream work can silently treat delta_d selection as strict-derived.
 ```
+
+Update (current repo state):
+
+On the current repo state (`F328/N440`), the strict sigma-int lane now exports
+one dedicated delta_d value object with explicit strict provenance, so the
+future-only “missing delta_d provenance” reading is superseded.
+
+Therefore `F327` is no longer a “current missing-object naming” packet.
+It is kept as an audit-safe target-name record with explicit acceptance tests
+(`T158`), without claiming any post-`T158` theta export, object support, selector
+closure, or ToE closure.
 
 ## Inputs reused (strict-admissible)
 
@@ -66,4 +77,3 @@ This packet does **not** claim:
 4. discharge of object-support above the exported map object (`N395/T130`),
 5. admissible `S_sel_int`, strict-core selector closure, or `QW-2191` discharge,
 6. ToE closure.
-
