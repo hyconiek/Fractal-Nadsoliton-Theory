@@ -52,7 +52,9 @@ fundamental_action_reconstruction/generated/theta_pair_sigma_int_strict_selector
 
 with exact meaning:
 
-1. define the positive-window corridor step `delta_d` from the strict working kernel tuple (as in `T119`),
+1. define the positive-window corridor bound `delta_max := d_local/11` from the strict working kernel
+   tuple (as in `T119`), and instantiate this packet at the **maximal-step convention**
+   `delta_d := delta_max` (one admissible corridor choice; not unique),
 2. generate a finite nad12 carrier `E_pair` from:
    - `sigma_int_strict_derived_v1`,
    - `eps_sigma_int_E_pair_amplitude_strict_provenance_v1`,
@@ -81,6 +83,11 @@ fundamental_action_reconstruction/generated/
 The novelty of `F325` is therefore **semantic packaging**, not new computation:
 we re-export the theta pair as a dedicated strict-side selector-ingredient object and attach an explicit
 `O(2)`-cut witness argument (with induced `u_1^cand,u_2^cand`).
+
+No false pass: `T119` admits the full corridor `delta_d ∈ (0, delta_max]`.
+`P403/N437` explicitly audit that different admissible `delta_d` choices produce different theta-pair
+outputs; `F325` fixes one corridor choice (`delta_d := delta_max`) only for the purpose of exporting
+one explicit candidate selector-ingredient representative.
 
 ## Status discipline
 

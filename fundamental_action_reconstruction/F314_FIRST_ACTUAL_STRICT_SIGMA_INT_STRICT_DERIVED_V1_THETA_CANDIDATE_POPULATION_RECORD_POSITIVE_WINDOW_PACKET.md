@@ -74,6 +74,11 @@ and instantiate the positive-window corridor with the maximal admissible step:
 delta_d := delta_max.
 ```
 
+Note (no false pass): `T119` admits the full corridor `delta_d ∈ (0, delta_max]`.
+`F314` uses only the **maximal-step convention** `delta_d := delta_max` for this one
+instantiated record. `P403/N437` explicitly audit that different admissible
+`delta_d` choices produce different theta-pair outputs; no uniqueness is implied.
+
 This guarantees:
 
 ```text

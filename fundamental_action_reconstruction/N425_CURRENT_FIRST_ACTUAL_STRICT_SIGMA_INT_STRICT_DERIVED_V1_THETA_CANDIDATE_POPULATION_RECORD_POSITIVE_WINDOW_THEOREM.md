@@ -33,7 +33,10 @@ with the following exact meaning:
 
 1. sigma-int input is the strict-core datum `sigma_int_strict_derived_v1 = -1`,
 2. the projection uses the `T119/F272` positive-window corridor discipline,
-3. `delta_d` is derived from the strict kernel tuple by the corridor formula,
+3. `delta_d` is set by the instantiation to the corridor-saturation value
+   `delta_d := d_local/11 = delta_max` computed from the strict kernel tuple,
+   but `delta_d` is not uniquely fixed by `T119` (full corridor is admitted);
+   `P403/N437` record explicit delta_d sensitivity,
 4. the reduction uses the `T115` **candidate** phasor rule,
 5. the output is a **candidate-only** residual target-slot population record
    (typed against the `R1` scaffold),
@@ -47,4 +50,3 @@ with the following exact meaning:
 2. actual populated basis-pair instance,
 3. admissible `S_sel_int`, selector closure, or `QW-2191` discharge,
 4. ToE closure.
-

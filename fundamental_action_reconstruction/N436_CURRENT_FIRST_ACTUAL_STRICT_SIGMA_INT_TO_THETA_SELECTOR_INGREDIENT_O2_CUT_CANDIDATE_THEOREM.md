@@ -40,12 +40,17 @@ with the following exact meaning:
 2. eps amplitude and the nad12 sign mask are imported only through the exported
    strict-provenance value objects (`F317/N428`, `F324/N435`),
 3. the construction uses a positive-window corridor (T119-style) derived from the strict
-   working kernel tuple (`QW-2049`) to guarantee `atan2` is well-defined (no degeneracy),
+   working kernel tuple (`QW-2049`) to guarantee `atan2` is well-defined (no degeneracy) **for the
+   chosen corridor step `delta_d` recorded in the exported artifact**,
 4. the output exports explicit candidate values `(theta_1^cand, theta_2^cand)` and the induced
    candidate basis vectors `u_1^cand,u_2^cand` on the `QW-2190` deterministic mode scaffold,
 5. therefore a single declared representative point in each degenerate `O(2)` rotation orbit
-   from `QW-2191` is selected in the declared scope: the continuous family is cut (up to the
-   residual sign convention).
+   from `QW-2191` is selected in the declared scope **for that chosen `delta_d`**: the continuous
+   family is cut only after the extra corridor-step choice (up to the residual sign convention).
+
+No false pass: `T119` admits `delta_d ∈ (0, delta_max]`, and `P403/N437` record explicit theta-pair
+dependence on admissible `delta_d` choices. Therefore `N436` remains a *candidate selector ingredient
+existence* statement, not a strict-core uniqueness claim.
 
 ## What N436 proves
 
