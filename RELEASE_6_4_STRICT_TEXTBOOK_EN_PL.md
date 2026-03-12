@@ -71,37 +71,37 @@ question.
 
 The current strict working kernel is:
 
-```math
+$$
 K_{\mathrm{sg}}(d)
 =
 \frac{\cos(\omega d+\phi)}{1+\beta d^{\eta}},
 \qquad
 (\omega,\phi,\beta,\eta)=(0.18575,\ 0.16250,\ 1.0,\ 1.8).
-```
+$$
 
 Define:
 
-```math
+$$
 \Theta(d):=\omega d+\phi,
 \qquad
 D(d):=1+\beta d^{\eta} = 1+d^{1.8},
-```
+$$
 
 so:
 
-```math
+$$
 K_{\mathrm{sg}}(d)=\frac{\cos(\Theta(d))}{D(d)}.
-```
+$$
 
 ## 3) `QW-2191` and the `pair1` `O(2)` family (context)
 
 On the 12-octave ring (`QW-2190`), each degenerate 2D mode subspace admits a continuous basis rotation:
 
-```math
+$$
 (c_1,s_1)\ \mapsto\ (c_1',s_1')=(c_1,s_1)\,R(\theta),
 \qquad
 R(\theta)=\begin{pmatrix}\cos\theta & -\sin\theta\\ \sin\theta & \cos\theta\end{pmatrix}.
-```
+$$
 
 `QW-2191` states that kernel-only data does not fix $\theta$ canonically; therefore any strict-core uniqueness must
 export an additional internal selector source or an explicit symmetry-breaking premise.
@@ -116,17 +116,17 @@ Can the certified host operator (or the canonical local diagonal residual sector
 
 Let the certified host operator be:
 
-```math
+$$
 A_{\mathrm{host}} := K_{\mathrm{total}} + m_0^2 I.
-```
+$$
 
 ### 4.1 Theorem (N465)
 
 On the current strict host route, the restriction of $A_{\mathrm{host}}$ to `pair1 = span{c_1,s_1}` is scalar:
 
-```math
+$$
 \left.A_{\mathrm{host}}\right|_{\mathrm{pair1}} = \lambda_1\, I_2.
-```
+$$
 
 Therefore it cannot supply an `O(2)` cut on `pair1`.
 
@@ -134,22 +134,22 @@ Therefore it cannot supply an `O(2)` cut on `pair1`.
 
 `P424` computes the explicit `pair1` block in basis `(c1,s1)`:
 
-```math
+$$
 \left[A_{\mathrm{host}}\right]_{\{c_1,s_1\}}
 =
 \begin{pmatrix}
 1.9197380969174072 & 5.144911710811878\times 10^{-17}\\
 5.144911710811878\times 10^{-17} & 1.9197380969174067
 \end{pmatrix},
-```
+$$
 
 with anisotropy signature:
 
-```math
+$$
 \Delta_1(A_{\mathrm{host}}) = (a_1-d_1,\ b_1)
 \approx
 (4.44\times 10^{-16},\ 5.14\times 10^{-17}),
-```
+$$
 
 consistent with isotropy at tolerance $10^{-12}$.
 
@@ -161,19 +161,19 @@ Let $D=\mathrm{diag}(d_0,\ldots,d_{n-1})$ be a diagonal operator in the site bas
 
 Define the mode‑2 Fourier coefficient:
 
-```math
+$$
 F_2(d) := \sum_{i=0}^{n-1} d_i\, e^{i\frac{4\pi i}{n}} \in \mathbb{C}.
-```
+$$
 
 ### 5.1 Theorem (N466)
 
 On `pair1`, the diagonal restriction is scalar **iff** $F_2(d)=0$.
 Equivalently, the `pair1` anisotropy signature is:
 
-```math
+$$
 \Delta_1(D) = (a_1-d_1,\ b_1) =
 \left(\frac{2}{n}\,\mathrm{Re}\,F_2(d),\ \frac{1}{n}\,\mathrm{Im}\,F_2(d)\right).
-```
+$$
 
 So a diagonal/local sector breaks `O(2)` on `pair1` **iff** $F_2(d)\neq 0$.
 
@@ -192,23 +192,23 @@ Now specialize to the FIN canonical 12-slot carrier (indices `k=0..11`).
 
 Let the diagonal profile of the **canonical local diagonal residual sector** be:
 
-```math
+$$
 d_k := (D_{\mathrm{loc}})_{kk},
 \qquad k=0,\ldots,11.
-```
+$$
 
 Define opposite-pair sums:
 
-```math
+$$
 S_k := d_k + d_{k+6},
 \qquad k=0,\ldots,5.
-```
+$$
 
 ### 6.1 Theorem (N467)
 
 For $n=12$:
 
-```math
+$$
 F_2(d)
 \;=\;
 \sum_{i=0}^{11} d_i\,e^{i\frac{4\pi i}{12}}
@@ -218,29 +218,29 @@ F_2(d)
 \sum_{k=0}^{5} (d_k+d_{k+6})\,e^{i\frac{\pi k}{3}}
 \;=\;
 \sum_{k=0}^{5} S_k\,e^{i\frac{\pi k}{3}}.
-```
+$$
 
 Writing the six phase factors out yields the explicit reduction:
 
-```math
+$$
 \mathrm{Re}\,F_2
 =
 (S_0 - S_3) + \frac{1}{2}(S_1 - S_2 - S_4 + S_5),
-```
+$$
 
-```math
+$$
 \mathrm{Im}\,F_2
 =
 \frac{\sqrt{3}}{2}(S_1 + S_2 - S_4 - S_5).
-```
+$$
 
 So the strict `pair1` diagonal `O(2)`-cut question for the canonical local diagonal residual sector reduces to:
 
-```math
+$$
 F_2(d)\neq 0
 \quad\Longleftrightarrow\quad
 (\mathrm{Re}\,F_2,\ \mathrm{Im}\,F_2)\neq (0,0),
-```
+$$
 
 and it depends only on the **six** opposite-pair sums $S_k$.
 
@@ -248,19 +248,19 @@ and it depends only on the **six** opposite-pair sums $S_k$.
 
 `R18` already exports the six opposite-pair sums as explicit coefficient classes:
 
-```math
+$$
 \Sigma_{0,6},\ \Sigma_{1,7},\ \Sigma_{2,8},\ \Sigma_{3,9},\ \Sigma_{4,10},\ \Sigma_{5,11},
-```
+$$
 
 where, for example,
 
-```math
+$$
 \Sigma_{0,6}
 =
 \left((3g4_{\psi0}v_{\psi0}^2+5g6_{\psi0}v_{\psi0}^4+2gY_0v_\phi^2+m2_{\psi0})-m_0^2\right)
 +
 \left((3g4_{\psi6}v_{\psi6}^2+5g6_{\psi6}v_{\psi6}^4+2gY_6v_\phi^2+m2_{\psi6})-m_0^2\right),
-```
+$$
 
 with the certified floor $m_0^2 = 1.013551972358388$ (`R15`).
 
@@ -269,13 +269,13 @@ exported classes.
 
 Concretely, identifying:
 
-```math
+$$
 S_0=\Sigma_{0,6},\ S_1=\Sigma_{1,7},\ S_2=\Sigma_{2,8},\ S_3=\Sigma_{3,9},\ S_4=\Sigma_{4,10},\ S_5=\Sigma_{5,11},
-```
+$$
 
 the reduction becomes a direct 6-class linear combination:
 
-```math
+$$
 \mathrm{Re}\,F_2
 =
 \Sigma_{0,6}
@@ -284,21 +284,21 @@ the reduction becomes a direct 6-class linear combination:
 \;-\;\Sigma_{3,9}
 \;-\;\frac{1}{2}\Sigma_{4,10}
 \;+\;\frac{1}{2}\Sigma_{5,11},
-```
+$$
 
-```math
+$$
 \mathrm{Im}\,F_2
 =
 \frac{\sqrt{3}}{2}\left(\Sigma_{1,7}+\Sigma_{2,8}-\Sigma_{4,10}-\Sigma_{5,11}\right).
-```
+$$
 
 And the induced `pair1` diagonal `O(2)`-cut signature is:
 
-```math
+$$
 a_1-d_1=\frac{1}{6}\mathrm{Re}\,F_2,
 \qquad
 b_1=\frac{1}{12}\mathrm{Im}\,F_2.
-```
+$$
 
 ### 6.3 Two strict negative closures (what does *not* cut `O(2)` on `pair1`)
 
@@ -404,26 +404,26 @@ Release 6.4 jest więc krokiem redukcyjnym: zastępuje retorykę selektora jedny
 
 Aktualny ścisły kernel roboczy:
 
-```math
+$$
 K_{\mathrm{sg}}(d)
 =
 \frac{\cos(\omega d+\phi)}{1+\beta d^{\eta}},
 \qquad
 (\omega,\phi,\beta,\eta)=(0.18575,\ 0.16250,\ 1.0,\ 1.8).
-```
+$$
 
 ## 3) Nowy wynik ścisły A: izotropia hosta na `pair1` (N465 + P424)
 
 W bazie `(c1,s1)` audit `P424` daje:
 
-```math
+$$
 \left[A_{\mathrm{host}}\right]_{\{c_1,s_1\}}
 =
 \begin{pmatrix}
 1.9197380969174072 & 5.144911710811878\times 10^{-17}\\
 5.144911710811878\times 10^{-17} & 1.9197380969174067
 \end{pmatrix},
-```
+$$
 
 co jest zgodne z izotropią w tolerancji $10^{-12}$.
 
@@ -431,9 +431,9 @@ co jest zgodne z izotropią w tolerancji $10^{-12}$.
 
 Dla $D=\mathrm{diag}(d_0,\ldots,d_{n-1})$:
 
-```math
+$$
 F_2(d) := \sum_{i=0}^{n-1} d_i\, e^{i\frac{4\pi i}{n}},
-```
+$$
 
 a sektor diagonalny tnie `O(2)` na `pair1` wtedy i tylko wtedy, gdy $F_2(d)\neq 0$.
 
@@ -441,32 +441,32 @@ a sektor diagonalny tnie `O(2)` na `pair1` wtedy i tylko wtedy, gdy $F_2(d)\neq 
 
 Dla `n=12`:
 
-```math
+$$
 F_2(d)=\sum_{k=0}^{5} S_k e^{i\frac{\pi k}{3}},
 \qquad
 S_k := d_k + d_{k+6}.
-```
+$$
 
 W szczególności:
 
-```math
+$$
 \mathrm{Re}\,F_2
 =
 (S_0 - S_3) + \frac{1}{2}(S_1 - S_2 - S_4 + S_5),
-```
+$$
 
-```math
+$$
 \mathrm{Im}\,F_2
 =
 \frac{\sqrt{3}}{2}(S_1 + S_2 - S_4 - S_5).
-```
+$$
 
 `R18` eksportuje dokładnie te 6 sum jako klasy `\Sigma_{k,k+6}`, a `P426` zapisuje jawne wyrażenia dla
 `Re(F2)` i `Im(F2)` wprost w tym języku.
 
 Konkretnie (dla identyfikacji `S_0=\Sigma_{0,6}`, ..., `S_5=\Sigma_{5,11}`):
 
-```math
+$$
 \mathrm{Re}\,F_2
 =
 \Sigma_{0,6}
@@ -475,21 +475,21 @@ Konkretnie (dla identyfikacji `S_0=\Sigma_{0,6}`, ..., `S_5=\Sigma_{5,11}`):
 \;-\;\Sigma_{3,9}
 \;-\;\frac{1}{2}\Sigma_{4,10}
 \;+\;\frac{1}{2}\Sigma_{5,11},
-```
+$$
 
-```math
+$$
 \mathrm{Im}\,F_2
 =
 \frac{\sqrt{3}}{2}\left(\Sigma_{1,7}+\Sigma_{2,8}-\Sigma_{4,10}-\Sigma_{5,11}\right).
-```
+$$
 
 Oraz:
 
-```math
+$$
 a_1-d_1=\frac{1}{6}\mathrm{Re}\,F_2,
 \qquad
 b_1=\frac{1}{12}\mathrm{Im}\,F_2.
-```
+$$
 
 ### 5.1 Dwa ścisłe domknięcia negatywne (co *nie* tnie `O(2)` na `pair1`)
 
