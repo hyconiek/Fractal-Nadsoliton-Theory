@@ -25,6 +25,9 @@ This probe does **not** claim such an objective is physically justified. It audi
    - strict obstruction: kernel-alone admits a continuous `O(2)` family in degenerate two-mode subspaces.
 3. `T165` + `P422`
    - the strict missing object is a typed Shannon symmetry-breaking selector ingredient; none is exported yet.
+4. `N463`
+   - theorem-level boundary: site-amplitude entropy objectives are periodic under ring translations, hence cannot yield a
+     unique `O(2)` cut.
 
 ## What is tested (naive objective family)
 
@@ -67,4 +70,3 @@ Therefore these naive Shannon objective forms do **not** (by themselves) supply 
 3. discharge `QW-2191`,
 4. claim strict-core theta export,
 5. claim ToE closure.
-

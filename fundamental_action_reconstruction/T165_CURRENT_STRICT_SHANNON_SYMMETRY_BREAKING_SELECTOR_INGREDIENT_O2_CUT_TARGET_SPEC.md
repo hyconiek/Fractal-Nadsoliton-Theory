@@ -111,9 +111,11 @@ An **actual discharge** of `S_shannon_symmetry_breaking_selector_ingredient_o2_c
 
 ## Current-state note (objective-shape slogans are not enough)
 
-`P423` audits several naive “Shannon objective” shapes on the `QW-2191` `O(2)` family (site-amplitude entropies and
-simple KL-divergence objectives on the 12-octave scaffold). Those objectives do vary with `theta`, but they do **not**
-yield a unique global minimizer; multiple near-minimum clusters remain.
+`N463` closes, at theorem level, the simplest “Shannon entropy of squared site‑amplitudes selects a unique theta” idea:
+such objectives are periodic under ring translations and therefore cannot have a unique minimizer.
+
+`P423` additionally audits several naive objective shapes numerically (including simple KL-based divergences): they do
+vary with `theta`, but they do **not** yield a unique global minimizer; multiple near-minimum clusters remain.
 
 So discharging `T165` will require a more specific typed `J_shannon_v1` (with explicit domain and uniqueness theorem),
 not just “entropy/KL” slogans.

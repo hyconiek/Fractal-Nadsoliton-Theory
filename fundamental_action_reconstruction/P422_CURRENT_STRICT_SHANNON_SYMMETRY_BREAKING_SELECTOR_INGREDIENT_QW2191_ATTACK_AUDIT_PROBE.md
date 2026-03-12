@@ -42,6 +42,9 @@ This probe answers only:
    - naive Shannon-type objective candidates on the `QW-2191` `O(2)` family do not yield a unique minimizer on a dense
      audit grid; therefore the missing `J_shannon_v1` (if it exists) must be richer than simple site-amplitude entropy/KL
      slogans.
+9. `N463`
+   - theorem-level boundary: Shannon entropy of squared site-amplitudes is periodic under ring translations and therefore
+     cannot yield a unique `O(2)` cut.
 
 ## Audit findings
 
@@ -81,6 +84,9 @@ on the current repo state.
 `P423` additionally shows that several *naive* Shannon objective shapes (built from squared site-amplitudes on the
 12-octave scaffold) do vary with `theta` but still do **not** produce a unique minimizer; multiple near-minimum
 clusters remain. So even at the “objective shape” level, the slogan needs a more specific typed construction.
+
+`N463` strengthens this for the simplest entropy-only slogan: entropy of squared site-amplitudes is *provably*
+periodic under ring translations, hence cannot have a unique minimizer and cannot serve as a canonical strict `O(2)` cut.
 
 ### 3) Exact missing object (next strict move)
 
