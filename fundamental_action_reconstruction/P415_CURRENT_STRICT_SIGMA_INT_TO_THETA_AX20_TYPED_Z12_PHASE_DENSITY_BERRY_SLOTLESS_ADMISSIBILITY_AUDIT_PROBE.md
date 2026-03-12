@@ -65,3 +65,15 @@ Either:
 1. export a new strict target spec naming the missing typed primitives + invariance tests for a typed-slotless projector variant of `T162`, **or**
 2. stop trying to “upgrade by rhetoric” and instead attack the already named strict missing-object targets (`T160/T161/T162`) with an explicit construction that proves slotlessness and `O(2)` cut.
 
+## Update (post-`N455`–`N458`)
+
+After the repo exported the typed `Phase_12_v1/Aut(Z_12_v1)` quotient carrier (`F333/N455`) and proved:
+
+1. no `Aut(Z_12)`-invariant “12-cycle successor map” exists on `Phase_12_v1` (`N456`),
+2. the quotient-orbit carrier by itself cannot support a nontrivial holonomy as a topological invariant
+   (`N457`),
+3. no `G_bit_v1`-invariant projection `Omega_16_v1 -> Phase_12_v1/Aut(Z_12)` exists beyond a constant map
+   (`N458`),
+
+the refined AI “global holonomy on quotient orbits” salvage attempt is audited explicitly in `P420` and remains
+**not** strict-core admissible as a theta-source / `QW-2191` selector ingredient.

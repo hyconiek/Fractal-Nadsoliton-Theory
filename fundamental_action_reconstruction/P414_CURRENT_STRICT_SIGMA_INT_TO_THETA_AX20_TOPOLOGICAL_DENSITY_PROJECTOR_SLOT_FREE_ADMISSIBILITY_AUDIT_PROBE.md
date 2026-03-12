@@ -84,3 +84,16 @@ If the intent is to explore AX20 anyway:
 
 - implement it only inside an explicitly separated **non-strict** scope (axiom/extension lane) and keep `T159/T162` strict-core status unchanged.
 
+## Update (post-`N455`–`N458`)
+
+After the typed `Phase_12_v1/Aut(Z_12_v1)` quotient-orbit export (`F333/N455`) and the subsequent strict
+boundary results:
+
+1. no canonical oriented 12-cycle successor map exists under `Aut(Z_12)` gauge discipline (`N456`),
+2. the quotient-orbit carrier alone cannot support a nontrivial holonomy as a topological invariant
+   (`pi_1` is trivial on the exported finite carrier; `N457`),
+3. no `G_bit_v1`-invariant projection `Omega_16_v1 -> Phase_12_v1/Aut(Z_12)` exists beyond a constant map
+   (`N458`),
+
+the common “global holonomy on the 6 quotient orbits” salvage attempt is also audited explicitly as
+**not** strict-core theta supply in `P420`.
