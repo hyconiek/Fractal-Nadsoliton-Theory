@@ -36,6 +36,22 @@ or change the construction class so the slot does not exist.
 `T160` names the missing **strict-derived eps selection** ingredient sharply,
 as a future-only target with explicit acceptance tests.
 
+## Extension-lane continuation note (explicitly non-strict)
+
+On the current repo state, the strict-core eps selection target remains open:
+no strict-derived eps law/value object is exported (`N446`, `P408`).
+
+If one insists on proceeding *today* with a single reproducible sigma-int → theta
+representative without false pass, the repo explicitly separates that move into
+`strict_extension_only` scope:
+
+1. `AX21` freezes `eps := 1/2` as a declared symmetry-breaking premise (premise-based; not strict-derived).
+2. `AX22` packages a publication-ready strict-extension summary of that lane.
+
+This does **not** discharge `T160`. It only records the explicit extension-scope
+premise needed for a reproducible representative while keeping strict-core eps
+selection open.
+
 ## Scope
 
 `T160` is scoped only to the amplitude parameter `eps` of the strict sigma-int
