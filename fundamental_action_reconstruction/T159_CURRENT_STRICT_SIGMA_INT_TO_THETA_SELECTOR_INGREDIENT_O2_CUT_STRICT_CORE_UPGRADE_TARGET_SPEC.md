@@ -30,6 +30,18 @@ in strict core (no remaining hidden selector slots).
 This is narrower than ToE closure. It targets only the missing **strict-core upgrade**
 needed if one wants to stop relying on “one chosen representative” language for `QW-2191`.
 
+## Current state note (no false pass)
+
+On the current repo state, the slot-elimination route (acceptance test 2A) is already blocked:
+
+1. `N437` proves theta-pair dependence on admissible `delta_d`,
+2. `N441` proves theta-pair dependence on admissible `eps`,
+3. therefore the current exported sigma-int → theta candidate pipeline cannot satisfy slot-elimination
+   by invariance (packaged as `N443`).
+
+So the only honest strict-core upgrade route left is to export a genuinely new strict derivation/selection
+source eliminating the slots (acceptance test 2B), or to change the construction class itself.
+
 ## Target object
 
 If achieved, export one strict-core upgraded selector ingredient object:
