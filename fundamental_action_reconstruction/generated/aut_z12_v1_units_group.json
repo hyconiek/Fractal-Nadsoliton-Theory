@@ -1,0 +1,32 @@
+{
+  "object": "Aut_Z12_v1",
+  "status": "actual_exported_strict_finite_group_object",
+  "as_of": "2026-03-12",
+  "intent": "Export the finite automorphism group Aut(Z_12_v1) ≅ (Z/12Z)^× as a typed strict object, so generator/orientation choice is represented as an explicit gauge symmetry in the typed AX20 phase-embedding layer.",
+  "carrier": {
+    "elements": [
+      1,
+      5,
+      7,
+      11
+    ],
+    "cardinality": 4
+  },
+  "group_law": {
+    "name": "multiplication_mod_12",
+    "formula": "(u * v) mod 12",
+    "identity": 1,
+    "inverse": "u^{-1} mod 12 within the unit set",
+    "commutative": true
+  },
+  "identification": {
+    "aut_z12": "Aut(Z_12_v1) ≅ (Z/12Z)^×",
+    "action_on_z12": "u acts by k ↦ (u*k) mod 12"
+  },
+  "hard_limits": [
+    "Does not provide a canonical generator/orientation selection.",
+    "Does not prove invariance of any downstream Berry/holonomy/theta construction under Aut_Z12_v1.",
+    "Does not claim QW-2191 discharge nor ToE closure."
+  ]
+}
+
