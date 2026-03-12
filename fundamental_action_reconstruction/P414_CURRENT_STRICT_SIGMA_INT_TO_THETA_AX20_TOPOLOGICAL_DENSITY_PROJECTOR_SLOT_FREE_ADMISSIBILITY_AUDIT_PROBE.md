@@ -96,4 +96,4 @@ boundary results:
    (`N458`),
 
 the common “global holonomy on the 6 quotient orbits” salvage attempt is also audited explicitly as
-**not** strict-core theta supply in `P420`.
+**not** strict-core theta supply in `P420` and packaged theorem-level as `N459`.

@@ -76,4 +76,5 @@ After the repo exported the typed `Phase_12_v1/Aut(Z_12_v1)` quotient carrier (`
    (`N458`),
 
 the refined AI “global holonomy on quotient orbits” salvage attempt is audited explicitly in `P420` and remains
-**not** strict-core admissible as a theta-source / `QW-2191` selector ingredient.
+**not** strict-core admissible as a theta-source / `QW-2191` selector ingredient (the theorem-level packaging
+is `N459`).
