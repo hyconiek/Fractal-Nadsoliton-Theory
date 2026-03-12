@@ -1,0 +1,35 @@
+{
+  "object": "chi_parity_Z12_v1",
+  "status": "actual_exported_strict_order_2_character",
+  "as_of": "2026-03-12",
+  "intent": "Export the unique nontrivial order-2 character of Z_12_v1 (parity character) as a typed strict object, and record that it is invariant under Aut(Z_12_v1). This is a gauge-robust ingredient for the typed AX20/T162 lane; it does not imply theta export nor QW-2191 discharge.",
+  "domain": "Z_12_v1",
+  "codomain": [
+    "+1",
+    "-1"
+  ],
+  "definition": {
+    "name": "parity_character",
+    "formula": "chi(k) = (-1)^(k mod 2)",
+    "values": {
+      "even_k": "+1",
+      "odd_k": "-1"
+    }
+  },
+  "properties": {
+    "group_homomorphism": true,
+    "order": 2,
+    "nontrivial": true,
+    "factors_through": "Z_12_v1 -> Z_2 -> {±1}",
+    "aut_z12_invariant": true,
+    "aut_z12_invariance_reason": "All units u in (Z/12Z)^× are odd, so (u*k mod 2) = (k mod 2)."
+  },
+  "hard_limits": [
+    "Does not provide a canonical embedding Z_12_v1 -> Phase_12_v1 or Z_12_v1 -> U(1).",
+    "Does not define any density-operator rigidity forcing 1/2.",
+    "Does not define Berry/holonomy.",
+    "Does not export theta_1/theta_2 and does not claim O(2)-cut closure nor QW-2191 discharge.",
+    "Does not claim ToE closure."
+  ]
+}
+

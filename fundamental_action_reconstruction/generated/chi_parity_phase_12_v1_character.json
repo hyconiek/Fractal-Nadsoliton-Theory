@@ -1,0 +1,29 @@
+{
+  "object": "chi_parity_Phase_12_v1",
+  "status": "actual_exported_strict_order_2_character",
+  "as_of": "2026-03-12",
+  "intent": "Export the parity character on Phase_12_v1 induced by the exponent k in the ζ^k presentation, compatible with the Z_12 parity character and invariant under the exported Aut(Z_12) gauge action.",
+  "domain": "Phase_12_v1",
+  "codomain": [
+    "+1",
+    "-1"
+  ],
+  "definition": {
+    "name": "parity_character",
+    "formula": "chi(ζ^k) = (-1)^(k mod 2)",
+    "values": {
+      "even_k": "+1",
+      "odd_k": "-1"
+    }
+  },
+  "compatibility": {
+    "with_Z12_character": "For any embedding emb_u: Z_12_v1 -> Phase_12_v1, the composition chi_parity_Phase_12_v1 ∘ emb_u equals chi_parity_Z12_v1.",
+    "aut_z12_invariant": true
+  },
+  "hard_limits": [
+    "Does not select a canonical generator/orientation for Phase_12_v1.",
+    "Does not define any Berry/holonomy or theta export.",
+    "Does not claim QW-2191 discharge nor ToE closure."
+  ]
+}
+
