@@ -85,6 +85,10 @@ An **actual discharge** of this target must at minimum provide:
      that uniquely derive the needed `delta_d` and `eps` values on a declared strict domain,
      and prove that no additional free selector slot remains.
      The strict-derived slot-selection targets are named as `T160` (eps) and `T161` (delta_d).
+   - **(C) construction-class change:** export a genuinely new strict sigma-int → theta construction
+     class in which the `eps` / `delta_d` slot families do not exist at all, and prove that no
+     replacement hidden selector slot has been introduced.
+     The slot-free construction-class target is named as `T162`.
 3. **Noncyclic contract:** no `theta` inputs and no populated basis-pair instance as input
    (respects sandbox `N18`).
 4. **Observer-free contract:** no `K_obs`-indexed selection as a primary source.
