@@ -54,10 +54,10 @@ Na obecnym etapie wolno to utrzymac tylko jako:
 W praktyce `A8` musi jawnie sledzic przynajmniej jeden historycznie istotny
 dimensionless hierarchy datum:
 
-\[
+$$
 \Xi_{\mathrm{grav}}^{\mathrm{canon}} :=
 \frac{\alpha_{\mathrm{geo}}}{2\,\beta_{\mathrm{tors}}}.
-\]
+$$
 
 Ten obiekt wolno interpretowac tylko jako canonical hierarchy bridge ratio,
 czyli provenance-level support dla gravity bridge, a nie theorem-level proof.

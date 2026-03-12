@@ -97,7 +97,7 @@ To jest najmniejsza klasa kandydatow, od ktorej sensownie zaczac dalsza rekonstr
 
 Najpierw zapisujemy strukture warstwowa:
 
-\[
+$$
 \mathcal{L}_{A1} =
 \mathcal{L}^{\mathrm{base}}_{\Psi}
 + \mathcal{L}^{\mathrm{eff}}_{\Phi}[\Psi]
@@ -106,11 +106,11 @@ Najpierw zapisujemy strukture warstwowa:
 + \Delta \mathcal{L}_{\mathrm{EFT}}
 \quad;\quad
 (D_f,\alpha_{\mathrm{geo}},\beta_{\mathrm{tors}}).
-\]
+$$
 
 Minimalna realizacja tej klasy moze byc zapisana jako:
 
-\[
+$$
 \mathcal{L}_{A1} =
 \frac12 G_{AB}(\Psi,\Phi) D_\mu \Psi^A D^\mu \Psi^B
 + \frac12 \partial_\mu \Phi\, \partial^\mu \Phi
@@ -121,7 +121,7 @@ Minimalna realizacja tej klasy moze byc zapisana jako:
 + \Delta \mathcal{L}_{\mathrm{EFT}}
 \quad;\quad
 (D_f,\alpha_{\mathrm{geo}},\beta_{\mathrm{tors}}).
-\]
+$$
 
 Gdzie:
 - `Psi^A` pozostaje jedynym ontologicznie fundamentalnym polem,
@@ -133,12 +133,12 @@ Gdzie:
 
 Na canonical-ontology-supported lane wolno dodatkowo zapisac tylko tyle:
 
-\[
+$$
 \mathcal{C}^{A1}_{\mathrm{fractal}}:
 \{G_{AB},V_{\mathrm{eff}},Z_{IJ},M^2_{\mathrm{eff}},\Lambda_{\mathrm{eff}}\}
 \ \text{moga zalezec od}\ 
 (D_f,\alpha_{\mathrm{geo}},\beta_{\mathrm{tors}}),
-\]
+$$
 
 czyli `A1` musi przynajmniej dopuszczac, ze lokalny kinetic term, effective
 potential i bridge sectors niosa constraint substratowego skalowania

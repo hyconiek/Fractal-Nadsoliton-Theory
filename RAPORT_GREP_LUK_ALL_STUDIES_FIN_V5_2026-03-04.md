@@ -188,7 +188,7 @@ Interpretacja:
    - Wynik:
      - wyprowadzone numerycznie strict: `e`, `g`, `g'`, `g3`,
      - zrekonstruowane `mW`, `mZ` zgodne z pakietem na poziomie ~`2.08%`,
-     - wyprowadzone Yukawy \(\sqrt{2}m_i/v\) dla fermionow strict.
+     - wyprowadzone Yukawy $\sqrt{2}m_i/v$ dla fermionow strict.
    - Jedyna flaga `False`:
      - `full_nonabelian_spinor_action_strict_derived`.
    - Znaczenie: `L18/L19` przechodza z "spec only" do "partial numeric bridge"; pelna derivacja nieabelowego spinor+gauge action pozostaje otwarta.
@@ -198,7 +198,7 @@ Interpretacja:
 1. `QW-2127` (`report_qw2127_nonabelian_spinor_gauge_action_bridge_gate.json`)
    - Verdict: `NONABELIAN_SPINOR_GAUGE_ACTION_BRIDGE_GATE_PASS_PARTIAL` (`14/16`)
    - Domkniete:
-     - action-level nieabelowy bridge (spinor kinetyka + nieabelowe \(F_{\mu\nu}\) + kowariantne \(D_\mu\) + Yukawa bridge),
+     - action-level nieabelowy bridge (spinor kinetyka + nieabelowe $F_{\mu\nu}$ + kowariantne $D_\mu$ + Yukawa bridge),
      - audyt algebraiczny `SU(2)`/`SU(3)` (residua numeryczne ~`0` i `1.24e-16`),
      - wymiarowy audit blokow (dim-4) i spojnosc z couplings z QW-2126.
    - Otwarte:

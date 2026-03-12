@@ -23,31 +23,31 @@ Wniosek: FIN pozostaje teorią ambitną, ale z kontrolą metodologiczną klasy p
 
 ## 3. Naprawione równania rdzeniowe
 ### 3.1 Kernel (bez zmian ontologicznych)
-\[
+$$
 K(d)=\frac{\alpha_{geo}\cos(\omega d+\phi)}{1+\beta_{tors}d}
-\]
+$$
 
 ### 3.2 Kąt Weinberga (wersja naprawiona)
 Zamiast twardego `EXACT`:
-\[
+$$
 \sin^2\theta_W = \frac{\alpha_{geo}}{12}\,(1+\delta_W)
-\]
+$$
 gdzie `δ_W` jest małą poprawką efektywną raportowaną jawnie.
 
 ### 3.3 Stała subtelnej struktury (wersja naprawiona)
-\[
+$$
 \alpha_{EM}^{-1}=\frac{\alpha_{geo}}{2\beta_{tors}}\,(1-\beta_{tors})\,(1+\delta_{vac})
-\]
+$$
 Bez `\delta_{vac}` to jest baseline geometryczny, z `\delta_{vac}` – wartość fizyczna.
 
 ### 3.4 Masy (rdzeń + poprawki sektorowe)
-\[
+$$
 M_a = M_{top}\,4^{-\gamma Q_a/4}\,e^{\Delta_a}
-\]
+$$
 gdzie:
-\[
+$$
 \Delta_a = \lambda_1 I_a + \lambda_2 S_a + \lambda_3 T_a
-\]
+$$
 `I_a,S_a,T_a` to jawne niezmienniki topologiczne stanu (do raportowania per cząstka).
 
 To eliminuje konflikt „jeden wzór wszystko tłumaczy idealnie” vs realne odchylenia sektora flavor.

@@ -338,35 +338,35 @@ Primary state report:
 ## Canonical Core (Textbook-level)
 
 ### Kernel
-\[
+$$
 K(d)=\frac{\cos(\omega d+\phi)}{1+\beta d^{\eta}}
-\]
+$$
 
 Strict frozen vector used in the audited chain:
-- \(\omega = 0.18575\)
-- \(\phi = 0.16250\)
-- \(\beta = 1.00000\)
-- \(\eta = 1.80000\)
+- $\omega = 0.18575$
+- $\phi = 0.16250$
+- $\beta = 1.00000$
+- $\eta = 1.80000$
 
 ### Canonical effective FIN action (strict internal layer)
-\[
+$$
 S = \int d^4x\, \mathcal{L}_{\mathrm{FIN}}
-\]
-\[
+$$
+$$
 \mathcal{L}_{\mathrm{FIN}}=
 \sum_{o=0}^{11}\left(\frac12\partial_\mu\Psi_o^\dagger\partial^\mu\Psi_o - V_\Psi(\Psi_o)\right)
 +\frac12\partial_\mu\Phi\,\partial^\mu\Phi - V_\Phi(\Phi)-\mathcal{L}_{\mathrm{int}}
-\]
-\[
+$$
+$$
 \mathcal{L}_{\mathrm{int}}=
 \sum_{o=0}^{11} g_Y(\mathrm{gen}(o))\,|\Phi|^2|\Psi_o|^2
 +\frac12\sum_{o\neq o'}K_{\mathrm{total}}(o,o')\,\Psi_o^\dagger\Psi_{o'}
-\]
+$$
 
 Interpretation:
-- \(\Psi_o\): octave-indexed matter modes,
-- \(\Phi\): scalar vacuum/order-parameter mode,
-- \(K_{\mathrm{total}}\): structured mixing operator in the strict chain.
+- $\Psi_o$: octave-indexed matter modes,
+- $\Phi$: scalar vacuum/order-parameter mode,
+- $K_{\mathrm{total}}$: structured mixing operator in the strict chain.
 
 ---
 

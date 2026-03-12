@@ -99,10 +99,10 @@ Interpretacja:
 
 Na tym etapie wolno jeszcze tylko symbolicznie wskazac wage shellu:
 
-\[
+$$
 d\mu_{\mathrm{shell}}^{(f)} \sim p^{D_f-1} \, dp \, d\Omega_f
 \cdot w_{\mathrm{tors}}(\beta_{\mathrm{tors}}),
-\]
+$$
 
 bez claimu, ze repo policzylo juz unikalna mikro-derewacje tej miary albo
 globalny wieloskalowy przeplyw.

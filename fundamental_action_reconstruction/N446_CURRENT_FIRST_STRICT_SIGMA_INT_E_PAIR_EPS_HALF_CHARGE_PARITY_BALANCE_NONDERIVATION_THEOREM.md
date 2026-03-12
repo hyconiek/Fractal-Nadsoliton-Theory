@@ -26,11 +26,11 @@ and the natural Z2 “balance” constraints do not uniquely select eps=1/2
 
 1. `T117`
    - weight law
-     \[
+     $$
        w_{i,k} := \frac{1 + \sigma_{int}^{in}\,\varepsilon\, b_{i,k}}{12},
        \qquad \varepsilon = eps \in [0,1],
-     \]
-     with one admissible `Z2` mask choice \(b_{1,k}=(-1)^k,\ b_{2,k}=(-1)^{k+1}\).
+     $$
+     with one admissible `Z2` mask choice $b_{1,k}=(-1)^k,\ b_{2,k}=(-1)^{k+1}$.
 2. `F317/N428`
    - exported eps value object
      `eps_sigma_int_E_pair_amplitude_strict_provenance_v1 := 1/2`,
@@ -46,28 +46,28 @@ and the natural Z2 “balance” constraints do not uniquely select eps=1/2
 
 ### Claim 1. Normalization does not select eps.
 
-For each fixed pair slot \(i\) and sigma-int input \(\sigma_{int}^{in}\),
+For each fixed pair slot $i$ and sigma-int input $\sigma_{int}^{in}$,
 
-\[
+$$
 \sum_{k=0}^{11} w_{i,k}
   = \sum_{k=0}^{11}\frac{1 + \sigma_{int}^{in}\,eps\, b_{i,k}}{12}
   = 1 + \frac{\sigma_{int}^{in}\,eps}{12}\sum_{k=0}^{11} b_{i,k}.
-\]
+$$
 
-For the admissible strict mask \(b_{1,k}=(-1)^k\) (and hence also \(b_{2,k}=(-1)^{k+1}\)),
-there are exactly six \(+1\) and six \(-1\) values over \(k\in\{0,\dots,11\}\), hence:
+For the admissible strict mask $b_{1,k}=(-1)^k$ (and hence also $b_{2,k}=(-1)^{k+1}$),
+there are exactly six $+1$ and six $-1$ values over $k\in\{0,\dots,11\}$, hence:
 
-\[
+$$
 \sum_{k=0}^{11} b_{i,k}=0.
-\]
+$$
 
 Therefore:
 
-\[
+$$
 \sum_{k=0}^{11} w_{i,k} = 1
-\]
+$$
 
-for **all** admissible \(eps \in [0,1]\).
+for **all** admissible $eps \in [0,1]$.
 
 So any “charge balance” phrased only as “weights sum to 1” cannot uniquely select eps.
 
@@ -76,47 +76,47 @@ So any “charge balance” phrased only as “weights sum to 1” cannot unique
 If one formalizes “charge parity balance / zero-charge point” as either:
 
 1. equal total weight on the two Z2 parity classes:
-   \[
+   $$
    \sum_{k:\,b_{i,k}=+1} w_{i,k} \;=\; \sum_{k:\,b_{i,k}=-1} w_{i,k},
-   \]
+   $$
    or equivalently (since both sides sum to 1) as:
-   \[
+   $$
    \sum_{k:\,b_{i,k}=+1} w_{i,k} \;=\; \frac12,
-   \]
+   $$
 2. vanishing signed first moment (a literal “zero-charge point” condition):
-   \[
+   $$
    \sum_{k=0}^{11} b_{i,k}\, w_{i,k} \;=\; 0,
-   \]
+   $$
 
 then under the `T117` weight law and the strict admissible mask one computes:
 
-\[
+$$
 \sum_{k=0}^{11} b_{i,k}\, w_{i,k}
   = \sum_{k=0}^{11}\frac{b_{i,k} + \sigma_{int}^{in}\,eps\, b_{i,k}^2}{12}
   = \frac{1}{12}\sum_{k=0}^{11}b_{i,k}
     + \frac{\sigma_{int}^{in}\,eps}{12}\sum_{k=0}^{11}1
   = \sigma_{int}^{in}\,eps.
-\]
+$$
 
 Therefore:
 
-\[
+$$
 \sum_{k=0}^{11} b_{i,k}\, w_{i,k} = 0
 \quad\Longleftrightarrow\quad
 eps = 0
-\]
+$$
 
-(since \(\sigma_{int}^{in}\in\{+1,-1\}\)).
+(since $\sigma_{int}^{in}\in\{+1,-1\}$).
 
 Equivalently, the even/odd weight sums are:
 
-\[
+$$
 \sum_{k:\,b_{i,k}=+1} w_{i,k}=\frac{1+\sigma_{int}^{in}\,eps}{2},
 \qquad
 \sum_{k:\,b_{i,k}=-1} w_{i,k}=\frac{1-\sigma_{int}^{in}\,eps}{2},
-\]
+$$
 
-and equality again forces \(eps=0\).
+and equality again forces $eps=0$.
 
 So the most literal Z2 parity-balance/zero-charge constraints do **not** derive eps=1/2.
 They either:
@@ -136,7 +136,7 @@ classification = strict_source_upgraded (premise-based)
 and from `P407/N441` the strict sigma-int → theta candidate pipeline is eps-sensitive.
 
 The repo exports **no** typed strict “charge parity balance” objective/law whose theorem-level unique
-consequence is \(eps=1/2\). (`P408`).
+consequence is $eps=1/2$. (`P408`).
 
 Hence, on the current repo state:
 
