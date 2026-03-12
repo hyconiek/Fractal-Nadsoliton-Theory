@@ -16,13 +16,21 @@ From `T163`, the repo names the future-only target object:
 Phi_Z12_phase_embedding_canonical_or_quotient_safe_slotless_target_v1.
 ```
 
-From `P417`, the current repo state does **not** export a typed 12-phase carrier nor a canonical/quotient-safe
-embedding of `Z_12_v1` into such a phase carrier.
+On the current repo state (after the typed phase exports `F330/N452` and the explicit symmetry exports
+`F331/N453`, and as audited by `P418/P419`):
+
+1. the repo **does** export a typed 12-phase carrier `Phase_12_v1`,
+2. the repo **does** export a 4-element isomorphism family `emb_u : Z_12_v1 -> Phase_12_v1` (non-unique),
+3. the repo **does** export the typed gauge group `Aut_Z12_v1` acting on `Phase_12_v1` and on that family,
+4. the repo does **not** export any canonical-fixing datum selecting one `emb_u`,
+5. and the repo does **not** export any theorem that a downstream numeric object (e.g. theta/holonomy) is
+   invariant under the full `Aut_Z12_v1` gauge (quotient-safe).
 
 Therefore, on the current repo state:
 
 1. the `Z_12` carrier/action prerequisite is now present (`F329/N450`),
-2. but the canonical/quotient-safe phase-embedding ingredient remains **not discharged**,
+2. the typed phase carrier and the full embedding-family + symmetry are now present (`F330..F333`),
+3. but the canonical/quotient-safe phase-embedding ingredient demanded by `T163` remains **not discharged**,
 3. and no strict-core theta export, no `O(2)` cut, no `QW-2191` discharge, and no ToE closure is implied.
 
 ## What N451 does not prove
@@ -35,4 +43,3 @@ Therefore, on the current repo state:
 4. any strict theta export or selector closure,
 5. `QW-2191` discharge,
 6. ToE closure.
-
