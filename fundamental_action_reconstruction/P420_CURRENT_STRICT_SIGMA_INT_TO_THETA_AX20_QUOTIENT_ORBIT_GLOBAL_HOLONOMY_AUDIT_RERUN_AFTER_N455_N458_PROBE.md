@@ -49,6 +49,8 @@ This probe closes only the following strict point:
 does NOT, by itself, yield a strict theta-source nor a strict-core QW-2191 O(2)-cut ingredient.
 ```
 
+The theorem-level packaging of this closure is exported as `N459`.
+
 So the AI proposal cannot be used to “clear” the strict non-claims in:
 
 - `P414/P415` (Berry/holonomy introduces hidden choices),
@@ -75,4 +77,3 @@ After `N456/N457/N458`, the repo must either:
 3. any strict Berry/holonomy ingredient,
 4. any strict `O(2)` cut source or `QW-2191` discharge,
 5. ToE closure.
-
