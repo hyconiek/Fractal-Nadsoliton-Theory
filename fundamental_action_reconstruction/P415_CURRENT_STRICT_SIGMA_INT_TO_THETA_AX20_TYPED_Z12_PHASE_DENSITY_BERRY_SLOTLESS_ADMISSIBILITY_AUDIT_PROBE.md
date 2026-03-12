@@ -58,6 +58,9 @@ It is admissible only as a **future target blueprint**, provided it is rewritten
 2. explicit gauge/quotient discipline (to avoid hidden offsets and connection choices),
 3. an explicit strict internal selector source that actually performs an `O(2)` cut (or else an explicit premise lane, marked non-strict).
 
+The theorem-level closure of the recurring strict “density operator (1/2) + Berry/holonomy → theta” claim family
+is packaged as `N460` (complementing the quotient-orbit “global holonomy” closure `N459`).
+
 ## Next honest move (strict)
 
 Either:

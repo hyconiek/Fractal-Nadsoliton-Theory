@@ -59,6 +59,9 @@ AX20: at most a non-strict extension concept unless and until
 T162: remains NOT discharged (P413/N449).
 ```
 
+The theorem-level closure of the recurring strict “density operator (1/2) + Berry/holonomy → theta” claim family
+is packaged as `N460`.
+
 ## What would be required to make an “AX20-like” route strict (minimum checklist)
 
 To even *attempt* a strict-core `T162` discharge via AX20-like ideas, one would have to export:
