@@ -161,7 +161,7 @@ Equivalently, the `pair1` anisotropy signature is:
 
 $$
 \Delta_1(D) = (a_1-d_1,\ b_1) =
-\left(\frac{2}{n}\,\mathrm{Re}\,F_2(d),\ \frac{1}{n}\,\mathrm{Im}\,F_2(d)\right).
+\left(\frac{2}{n}\,\operatorname{Re}\,F_2(d),\ \frac{1}{n}\,\operatorname{Im}\,F_2(d)\right).
 $$
 
 So a diagonal/local sector breaks `O(2)` on `pair1` **iff** $F_2(d)\neq 0$.
@@ -212,13 +212,13 @@ $$
 Writing the six phase factors out yields the explicit reduction:
 
 $$
-\mathrm{Re}\,F_2
+\operatorname{Re}\,F_2
 =
 (S_0 - S_3) + \frac{1}{2}(S_1 - S_2 - S_4 + S_5),
 $$
 
 $$
-\mathrm{Im}\,F_2
+\operatorname{Im}\,F_2
 =
 \frac{\sqrt{3}}{2}(S_1 + S_2 - S_4 - S_5).
 $$
@@ -228,7 +228,7 @@ So the strict `pair1` diagonal `O(2)`-cut question for the canonical local diago
 $$
 F_2(d)\neq 0
 \quad\Longleftrightarrow\quad
-(\mathrm{Re}\,F_2,\ \mathrm{Im}\,F_2)\neq (0,0),
+(\operatorname{Re}\,F_2,\ \operatorname{Im}\,F_2)\neq (0,0),
 $$
 
 and it depends only on the **six** opposite-pair sums $S_k$.
@@ -253,7 +253,7 @@ $$
 
 with the certified floor $m_0^2 = 1.013551972358388$ (`R15`).
 
-`P426` persists the exact reduced expressions for $\mathrm{Re}\,F_2$ and $\mathrm{Im}\,F_2$ in terms of these six
+`P426` persists the exact reduced expressions for $\operatorname{Re}\,F_2$ and $\operatorname{Im}\,F_2$ in terms of these six
 exported classes.
 
 Concretely, identifying:
@@ -265,7 +265,7 @@ $$
 the reduction becomes a direct 6-class linear combination:
 
 $$
-\mathrm{Re}\,F_2
+\operatorname{Re}\,F_2
 =
 \Sigma_{0,6}
 \;+\;\frac{1}{2}\Sigma_{1,7}
@@ -276,7 +276,7 @@ $$
 $$
 
 $$
-\mathrm{Im}\,F_2
+\operatorname{Im}\,F_2
 =
 \frac{\sqrt{3}}{2}\left(\Sigma_{1,7}+\Sigma_{2,8}-\Sigma_{4,10}-\Sigma_{5,11}\right).
 $$
@@ -284,9 +284,9 @@ $$
 And the induced `pair1` diagonal `O(2)`-cut signature is:
 
 $$
-a_1-d_1=\frac{1}{6}\mathrm{Re}\,F_2,
+a_1-d_1=\frac{1}{6}\operatorname{Re}\,F_2,
 \qquad
-b_1=\frac{1}{12}\mathrm{Im}\,F_2.
+b_1=\frac{1}{12}\operatorname{Im}\,F_2.
 $$
 
 ## 7) The “most honest next move” after Release 6.4 (strict)
@@ -418,13 +418,13 @@ $$
 W szczególności:
 
 $$
-\mathrm{Re}\,F_2
+\operatorname{Re}\,F_2
 =
 (S_0 - S_3) + \frac{1}{2}(S_1 - S_2 - S_4 + S_5),
 $$
 
 $$
-\mathrm{Im}\,F_2
+\operatorname{Im}\,F_2
 =
 \frac{\sqrt{3}}{2}(S_1 + S_2 - S_4 - S_5).
 $$
@@ -435,7 +435,7 @@ $$
 Konkretnie (dla identyfikacji `S_0=\Sigma_{0,6}`, ..., `S_5=\Sigma_{5,11}`):
 
 $$
-\mathrm{Re}\,F_2
+\operatorname{Re}\,F_2
 =
 \Sigma_{0,6}
 \;+\;\frac{1}{2}\Sigma_{1,7}
@@ -446,7 +446,7 @@ $$
 $$
 
 $$
-\mathrm{Im}\,F_2
+\operatorname{Im}\,F_2
 =
 \frac{\sqrt{3}}{2}\left(\Sigma_{1,7}+\Sigma_{2,8}-\Sigma_{4,10}-\Sigma_{5,11}\right).
 $$
@@ -454,9 +454,9 @@ $$
 Oraz:
 
 $$
-a_1-d_1=\frac{1}{6}\mathrm{Re}\,F_2,
+a_1-d_1=\frac{1}{6}\operatorname{Re}\,F_2,
 \qquad
-b_1=\frac{1}{12}\mathrm{Im}\,F_2.
+b_1=\frac{1}{12}\operatorname{Im}\,F_2.
 $$
 
 ## 6) Najuczciwszy następny ruch (strict)

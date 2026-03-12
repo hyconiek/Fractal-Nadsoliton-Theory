@@ -101,7 +101,7 @@ No intermediate “verbal promotion” is admissible.
 
 ## Note (diagonal/local sector is the only strict candidate accelerator against `QW-2191` on `pair1`)
 
-Independently of the sigma-int corridor class, the repo now exports two strict structural facts about any attempted
+Independently of the sigma-int corridor class, the repo now exports three strict structural facts about any attempted
 `pair1` `O(2)`-cut:
 
 1. the certified host operator `A = K_total + m0^2 I` is **isotropic** on `pair1` and cannot cut `O(2)` (`N465`,
@@ -109,6 +109,9 @@ Independently of the sigma-int corridor class, the repo now exports two strict s
 2. a diagonal/local sector breaks `O(2)` on `pair1` **iff** its diagonal profile has a nonzero mode‑2 Fourier defect
    `F2(d)` (`N466`), and for `n=12` this defect reduces to an explicit six-class linear combination of the exported
    opposite-pair sums from `R18` (`N467`, persisted as `P426`).
+3. if a diagonal/local profile has `F2(d) ≠ 0`, the induced `pair1` axis/eigenbasis is explicit and canonical:
+   the diagonalization angle is `theta_* = (1/2) atan2(Im F2, Re F2)` and the eigenvalues are
+   `lambda_± = (1/n) Σ d_k ± (1/n)|F2|` (`N468`, audited on toy profiles in `P427`).
 
 So any strict “physical accelerator of choice” story on `pair1` must eventually export a **strict-derived**
 non-translation-invariant diagonal/local profile (or equivalent) deciding this `F2(d) ≠ 0` condition, rather than
