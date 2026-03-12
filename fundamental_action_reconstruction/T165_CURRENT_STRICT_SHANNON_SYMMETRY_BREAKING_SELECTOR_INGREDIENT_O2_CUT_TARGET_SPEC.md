@@ -117,5 +117,9 @@ such objectives are periodic under ring translations and therefore cannot have a
 `P423` additionally audits several naive objective shapes numerically (including simple KL-based divergences): they do
 vary with `theta`, but they do **not** yield a unique global minimizer; multiple near-minimum clusters remain.
 
+`N464` generalizes the periodicity obstruction: any objective that depends only on the squared site-amplitude
+probability distributions up to site permutation (in particular, any translation-invariant “site-distribution” functional)
+inherits a nontrivial theta periodicity and therefore cannot supply a unique strict-core `O(2)` cut.
+
 So discharging `T165` will require a more specific typed `J_shannon_v1` (with explicit domain and uniqueness theorem),
 not just “entropy/KL” slogans.

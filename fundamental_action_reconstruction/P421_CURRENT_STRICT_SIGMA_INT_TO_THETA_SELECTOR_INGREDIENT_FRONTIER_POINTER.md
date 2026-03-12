@@ -110,3 +110,8 @@ current-state audit are recorded as:
 - `T165` (target spec),
 - `P422` (audit probe).
 
+Also, several recurring “entropy/KL picks a unique theta” slogans are now closed as strict-core uniqueness sources:
+
+- probe-level non-uniqueness audit for several naive objective shapes: `P423`,
+- Shannon site-amplitude entropy periodicity ⇒ non-unique `O(2)` cut: `N463`,
+- general permutation-invariant site-distribution objectives ⇒ non-unique `O(2)` cut: `N464`.
