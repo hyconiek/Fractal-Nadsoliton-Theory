@@ -61,7 +61,7 @@ question.
 The current strict working kernel is:
 
 $$
-K_{\text{strict\_gate}}(d)
+K_{\mathrm{sg}}(d)
 =
 \frac{\cos(\omega d+\phi)}{1+\beta d^{\eta}},
 \qquad
@@ -79,7 +79,7 @@ $$
 so:
 
 $$
-K_{\text{strict\_gate}}(d)=\frac{\cos(\Theta(d))}{D(d)}.
+K_{\mathrm{sg}}(d)=\frac{\cos(\Theta(d))}{D(d)}.
 $$
 
 ## 3) `QW-2191` and the `pair1` `O(2)` family (context)
@@ -182,7 +182,7 @@ Now specialize to the FIN canonical 12-slot carrier (indices `k=0..11`).
 Let the diagonal profile of the **canonical local diagonal residual sector** be:
 
 $$
-d_k := (D_{\text{local\_residual}})_{kk},
+d_k := (D_{\mathrm{loc}})_{kk},
 \qquad k=0,\ldots,11.
 $$
 
@@ -373,7 +373,7 @@ Release 6.4 jest więc krokiem redukcyjnym: zastępuje retorykę selektora jedny
 Aktualny ścisły kernel roboczy:
 
 $$
-K_{\text{strict\_gate}}(d)
+K_{\mathrm{sg}}(d)
 =
 \frac{\cos(\omega d+\phi)}{1+\beta d^{\eta}},
 \qquad
