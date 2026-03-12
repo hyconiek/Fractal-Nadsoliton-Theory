@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+  <defs>
+    <style>
+      .box { fill: #0b1020; stroke: #3b82f6; stroke-width: 2; rx: 14; }
+      .box2 { fill: #0b1020; stroke: #22c55e; stroke-width: 2; rx: 14; }
+      .muted { fill: #0b1020; stroke: #64748b; stroke-width: 2; rx: 14; }
+      .t { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; fill: #e5e7eb; font-size: 20px; }
+      .s { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; fill: #cbd5e1; font-size: 16px; }
+      .tiny { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; fill: #94a3b8; font-size: 14px; }
+      .arrow { stroke: #e5e7eb; stroke-width: 2.5; fill: none; marker-end: url(#m); }
+      .arrow2 { stroke: #94a3b8; stroke-width: 2.5; fill: none; marker-end: url(#m2); }
+    </style>
+    <marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#e5e7eb"/>
+    </marker>
+    <marker id="m2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="30" y="40" class="t">Nadsoliton → światło → materia → obserwator (mapa opowieści)</text>
+  <text x="30" y="68" class="tiny">Dyscyplina: diagram narracyjny; strict-core frontier (QW-2191) pozostaje otwarty.</text>
+
+  <!-- Main chain boxes -->
+  <rect x="60" y="120" width="260" height="110" class="box"/>
+  <text x="90" y="160" class="t">Nadsoliton</text>
+  <text x="90" y="190" class="s">pierwotna informacja</text>
+  <text x="90" y="214" class="s">w stanie solitonicznym</text>
+
+  <rect x="360" y="120" width="260" height="110" class="box"/>
+  <text x="390" y="160" class="t">Światło</text>
+  <text x="390" y="190" class="s">kanały propagacji</text>
+  <text x="390" y="214" class="s">/ nośnik sygnału</text>
+
+  <rect x="660" y="120" width="260" height="110" class="box"/>
+  <text x="690" y="160" class="t">Materia</text>
+  <text x="690" y="190" class="s">wzorce stabilne</text>
+  <text x="690" y="214" class="s">(tryby Ψ)</text>
+
+  <rect x="960" y="120" width="200" height="110" class="box2"/>
+  <text x="985" y="160" class="t">Obserwator</text>
+  <text x="985" y="190" class="s">emergentny</text>
+  <text x="985" y="214" class="s">nie-fundamentalny</text>
+
+  <!-- Arrows main chain -->
+  <path d="M320,175 L360,175" class="arrow"/>
+  <path d="M620,175 L660,175" class="arrow"/>
+  <path d="M920,175 L960,175" class="arrow"/>
+
+  <!-- Kernel / coupling box -->
+  <rect x="120" y="280" width="420" height="150" class="muted"/>
+  <text x="150" y="320" class="t">Sprzężenia / kernel (operacyjny)</text>
+  <text x="150" y="350" class="s">np. K(d)=cos(ωd+φ)/(1+β d^η) (strict-gate)</text>
+  <text x="150" y="380" class="s">alpha_geo=4 ln 2 (strict-derived, Shannon)</text>
+  <text x="150" y="410" class="tiny">Uwaga: nie przenoś legacy-ról bez mostu; QW-2191 nadal otwarte.</text>
+
+  <!-- Macro effects box -->
+  <rect x="600" y="280" width="560" height="150" class="muted"/>
+  <text x="630" y="320" class="t">Efekty makro (interpretacja + agenda)</text>
+  <text x="630" y="350" class="s">Grawitacja: emergentny opis sprzężeń</text>
+  <text x="630" y="380" class="s">Ciemna energia: presja/asymetria informacyjna</text>
+  <text x="630" y="410" class="s">Pomiar: interakcja, dekoherencja (obserwator późny)</text>
+
+  <!-- Arrows from chain to kernel/effects -->
+  <path d="M190,230 L190,280" class="arrow2"/>
+  <path d="M450,230 L450,280" class="arrow2"/>
+  <path d="M760,230 L760,280" class="arrow2"/>
+
+  <path d="M540,355 L600,355" class="arrow2"/>
+
+  <!-- Footer frontier -->
+  <text x="60" y="490" class="tiny">Strict frontier: diagonal/local tnie O(2) na pair1 ⇔ F2(d)≠0; jeśli F2(d)≠0, oś jest kanoniczna (theta* = ½ atan2(ImF2,ReF2)).</text>
+</svg>
+
