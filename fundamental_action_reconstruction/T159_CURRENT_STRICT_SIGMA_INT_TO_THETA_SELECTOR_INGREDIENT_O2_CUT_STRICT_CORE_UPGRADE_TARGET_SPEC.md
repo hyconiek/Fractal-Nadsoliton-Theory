@@ -42,6 +42,22 @@ On the current repo state, the slot-elimination route (acceptance test 2A) is al
 So the only honest strict-core upgrade route left is to export a genuinely new strict derivation/selection
 source eliminating the slots (acceptance test 2B), or to change the construction class itself.
 
+## Extension-lane continuation note (explicitly non-strict)
+
+Because the strict-core upgrade is blocked on the current repo state (`N442/N443`), the only way to proceed
+with a *single reproducible* sigma-int → theta representative **today** without false pass is to work in an
+explicit separated scope and declare the selector choices as premises.
+
+The repo now records exactly that continuation:
+
+1. `AX21` freezes both exposed selector slots in `strict_extension_only` scope:
+   - `eps := 1/2`,
+   - `delta_d := delta_max := d_local/11`.
+2. `AX22` packages a publication-ready strict-extension summary of this lane.
+
+This does **not** discharge `T159`. It only makes the extension-lane representative explicit and reproducible
+while keeping strict-core claims unchanged.
+
 On the current repo state, the strict-derived slot-selection ingredients required by (2B) are
 not exported yet and are now named explicitly as future-only targets:
 
