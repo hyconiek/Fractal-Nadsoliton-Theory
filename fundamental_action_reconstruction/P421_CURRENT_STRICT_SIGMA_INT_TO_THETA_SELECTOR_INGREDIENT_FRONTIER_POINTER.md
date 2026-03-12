@@ -99,3 +99,14 @@ Only three honest continuations exist (must be explicit which):
 
 No intermediate “verbal promotion” is admissible.
 
+## Note (Shannon symmetry-breaking is still a target, not an ingredient)
+
+`S2` records “selector‑axiom discharge via Shannon symmetry‑breaking premise” as a strategic intent, and the repo
+does export strict Shannon and sigma‑int source objects (`N420`, `N418`).
+
+But no strict-core Shannon symmetry‑breaking *selector ingredient* is exported yet. A sharp strict target spec and
+current-state audit are recorded as:
+
+- `T165` (target spec),
+- `P422` (audit probe).
+
