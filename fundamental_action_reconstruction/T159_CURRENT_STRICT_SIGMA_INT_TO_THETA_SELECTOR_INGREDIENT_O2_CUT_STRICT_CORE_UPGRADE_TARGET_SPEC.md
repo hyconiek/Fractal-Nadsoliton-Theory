@@ -14,7 +14,10 @@ On the current repo state:
 2. the strict lane also exports explicit strict-provenance value objects for:
    - eps amplitude (`F317/N428`: `eps := 1/2`, premise-based),
    - delta_d step (`F328/N440`: `delta_d := delta_max`, premise-based),
-3. but `QW-2191` strict-core uniqueness remains open and strict-core theta export remains absent.
+3. `N437` and `N441` prove the computed theta-pair depends on admissible
+   corridor-step and amplitude choices (`delta_d` and `eps`), i.e. both remain
+   real selector slots on the current strict sigma-int → theta lane,
+4. but `QW-2191` strict-core uniqueness remains open and strict-core theta export remains absent.
 
 `T159` names the next missing object sharply:
 
@@ -83,4 +86,3 @@ An **actual discharge** of this target must at minimum provide:
 2. that premise-based eps/delta_d value objects (`F317/F328`) constitute strict derivation,
 3. global selector closure,
 4. ToE closure.
-

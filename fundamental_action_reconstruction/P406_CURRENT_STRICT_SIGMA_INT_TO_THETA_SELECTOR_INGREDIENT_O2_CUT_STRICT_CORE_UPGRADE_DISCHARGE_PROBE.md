@@ -18,7 +18,7 @@ cuts the `QW-2191` `O(2)` family without leaving hidden selector slots (`delta_d
 |---|---|---|
 | strict-core (non-candidate) theta output `(theta_1,theta_2)` exported | NO | strict lane exports only theta **candidate** records (`F312/N423`, `F314/N425`) and one **candidate** selector ingredient (`F325/N436/P400`); `N1/C50` remain: no strict-core theta source |
 | hidden selector slot `delta_d` eliminated or strict-derived | NO | `P403/N437` record theta dependence on admissible `delta_d`; `F328/N440` exports `delta_d := delta_max` only as `strict_source_upgraded` (premise), not strict-derived |
-| hidden selector slot `eps` eliminated or strict-derived | NO | `F317/N428` exports `eps := 1/2` only as `strict_source_upgraded` (premise), not strict-derived; `T117` still treats eps as a free generator parameter |
+| hidden selector slot `eps` eliminated or strict-derived | NO | `P407/N441` record theta dependence on admissible `eps ∈ [0,1]`; `F317/N428` exports `eps := 1/2` only as `strict_source_upgraded` (premise), not strict-derived |
 | `O(2)` family canonically cut in strict core (no “chosen representative” caveat) | NO | `F325/N436` cut the `O(2)` family only after the explicit corridor-step choice; `QW-2191` still blocks kernel-alone uniqueness and no strict-core internal selector source has been exported beyond candidate-ingredient level |
 | noncyclic and observer-free contracts satisfied | YES (for the candidate layer only) | `F325/N436` are noncyclic and observer-free, but they remain candidate-ingredient level and do not satisfy the strict-core upgrade requirements of `T159` |
 
@@ -44,4 +44,3 @@ It must be one genuinely new strict-core ingredient that satisfies `T159`:
 
 or proceed explicitly on a separated non-strict scope (axiom-augmented / strict-extension) without
 claiming strict-core internalization.
-
