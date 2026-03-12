@@ -30,5 +30,10 @@ slot-free strict sigma-int → theta construction class (T162): NOT EXPORTED.
 Therefore `T159` strict-core upgrade remains blocked on the current repo state, and the only honest
 routes remain those listed in `N443` and `N448`.
 
-No strict-core theta export, strict-core selector closure, `QW-2191` discharge, or ToE closure is implied.
+Additionally, two recurring “AX20 slot-free salvage” claim families are now closed as strict-core theta supply
+on the current exported objects:
 
+1. quotient-orbit “global holonomy → theta” (`N459`),
+2. “density operator forces 1/2 + Berry/holonomy → theta” (`N460`).
+
+No strict-core theta export, strict-core selector closure, `QW-2191` discharge, or ToE closure is implied.
