@@ -18,7 +18,7 @@ scaffold.
 | Refined step (typed requirement) | Strict-admissible now? | Evidence / note |
 |---|---|---|
 | **(A)** Typed `Z_12` carrier provenance | **YES (exported typed object + action)** | `F329/N450` export `I_12_v1`, `Z_12_v1`, and `tau_Z12_v1(a,k)=(k+a) mod 12` |
-| **(B)** Canonical phase embedding (no offset/scale slot) | **NO** | Aut(`Z_12`) generator/orientation freedom still means a “canonical” embedding needs an explicit invariance/quotient discipline or an additional strict selector source. |
+| **(B)** Canonical phase embedding (no offset/scale slot) | **NO** | Aut(`Z_12`) generator/orientation freedom still means a “canonical” embedding needs an explicit invariance/quotient discipline or an additional strict selector source; there is no Aut(`Z_12`)-invariant way to canonically pick a generator/orientation from the typed structure alone (`N462`). |
 | **(C)** Typed density operator forcing eigenvalues `1/2` “from sigma_int” | **NO** | No strict law/object currently forces `p=1/2` from a `Z_2` input without adding a new principle (see `N446`). |
 | **(D)** “`1/2` split breaks `O(2)` (QW-2191 cut)” | **NO** | A symmetric `1/2–1/2` split does not canonically select an `O(2)` representative; `QW-2191` remains. |
 | **(E)** Typed Berry/holonomy construction with gauge discipline | **NO** | No exported strict connection/transport + gauge-invariance theorem exists on this lane (`P414/P415`). |

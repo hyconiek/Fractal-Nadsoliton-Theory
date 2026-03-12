@@ -34,3 +34,6 @@ Phase_12_v1 now exists, but embedding canonicity/quotient-safety remains open.
 
 The theorem-level boundary “Aut(Z_12)-invariance alone cannot pick a canonical embedding; invariant phase values
 collapse to ±1” is packaged as `N461`.
+
+Related strict canonicity closure: there is no Aut(`Z_12`)-invariant way to canonically pick a generator/orientation
+from the typed `Z_12` + `Aut(Z_12)` structure alone (`N462`).

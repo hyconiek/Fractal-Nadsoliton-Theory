@@ -47,4 +47,5 @@ while T163 remains not discharged.
 
 Boundary note: even at the level of “phase values”, pure `Aut_Z12_v1`-invariance collapses to the `±1` sector;
 so any nontrivial theta/holonomy route must introduce additional typed structure and/or symmetry breaking
-(`N461`).
+(`N461`). Additionally, there is no Aut(`Z_12`)-invariant canonical generator/orientation fixing datum available
+from the typed structure alone (`N462`).
