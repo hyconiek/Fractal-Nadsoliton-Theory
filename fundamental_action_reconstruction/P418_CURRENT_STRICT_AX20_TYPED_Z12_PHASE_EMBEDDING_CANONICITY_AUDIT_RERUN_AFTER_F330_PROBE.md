@@ -32,3 +32,5 @@ T163 is NOT discharged.
 Phase_12_v1 now exists, but embedding canonicity/quotient-safety remains open.
 ```
 
+The theorem-level boundary “Aut(Z_12)-invariance alone cannot pick a canonical embedding; invariant phase values
+collapse to ±1” is packaged as `N461`.
