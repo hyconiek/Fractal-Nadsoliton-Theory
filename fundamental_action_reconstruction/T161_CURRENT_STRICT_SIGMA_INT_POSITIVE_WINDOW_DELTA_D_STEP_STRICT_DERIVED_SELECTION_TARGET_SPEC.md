@@ -108,8 +108,10 @@ On the current repo state:
 1. delta_d is exported only as strict provenance (premise-based):
    `delta_d_sigma_int_positive_window_step_strict_provenance_v1 := delta_max` (`F328/N440`),
    which does **not** discharge `T161`,
-2. no strict exported theorem currently derives the corridor-saturation choice from
-   an “information saturation” or uniqueness objective (`P408` audit).
+2. `delta_max` is currently only a corridor bound (`T119`), and no strict “maximum information packing”
+   objective exists on this lane selecting `delta_d = delta_max`, packaged as `N447`,
+3. no strict exported theorem currently derives the corridor-saturation choice from
+   any typed strict “information saturation” or uniqueness objective (`P408` audit).
 
 ## Hard limits
 
@@ -119,4 +121,3 @@ On the current repo state:
 2. that premise-based delta_d provenance (`F328/N440`) constitutes strict derivation,
 3. strict-core theta export or strict-core selector closure,
 4. ToE closure.
-

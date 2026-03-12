@@ -108,8 +108,10 @@ On the current repo state:
 1. eps is exported only as strict provenance (premise-based):
    `eps_sigma_int_E_pair_amplitude_strict_provenance_v1 := 1/2` (`F317/N428`),
    which does **not** discharge `T160`,
-2. no strict exported theorem currently derives `eps = 1/2` from “charge parity split”
-   or any other strict-derived internal selector law (`P408` audit).
+2. the most literal `Z2` parity-balance / “zero-charge point” constraints on the `T117` weight law do not
+   derive `eps = 1/2` (they either do not constrain eps or they force `eps = 0`), packaged as `N446`,
+3. no strict exported theorem currently derives `eps = 1/2` from any typed strict “charge parity balance”
+   law/objective (`P408` audit).
 
 ## Hard limits
 
@@ -119,4 +121,3 @@ On the current repo state:
 2. that premise-based eps provenance (`F317/N428`) constitutes strict derivation,
 3. strict-core theta export or strict-core selector closure,
 4. ToE closure.
-

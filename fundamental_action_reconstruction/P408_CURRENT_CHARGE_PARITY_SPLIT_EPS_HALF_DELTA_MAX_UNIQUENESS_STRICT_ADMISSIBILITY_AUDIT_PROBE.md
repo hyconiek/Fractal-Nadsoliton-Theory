@@ -68,6 +68,10 @@ eps = 1/2 is derived (or forced) by strict charge-parity conservation
 
 is **not** currently supported as a strict claim.
 
+Moreover, even the most literal attempt to encode “charge parity balance / zero-charge point”
+as a `Z2` parity-balance constraint on the `T117` weight law does **not** derive `eps = 1/2`
+(it either does not constrain eps, or it forces `eps = 0`), packaged as `N446`.
+
 At most, it may be recorded as a *separated premise/axiom* in a non-strict scope, or as a strict-side
 source-upgrade premise (already done), but it cannot be promoted to strict-derived without a new strict
 derivation chain that closes the slot.
@@ -97,6 +101,10 @@ delta_max is the unique pointwise O(2)-cut solution
 ```
 
 is **not** admissible as a strict-core theorem on the current repo state.
+
+Moreover, `delta_max` is currently only the corridor bound ensuring the positive-window contract (`T119`);
+no strict “maximum information packing / void saturation” objective exists on this lane that uniquely
+selects `delta_d = delta_max`, packaged as `N447`.
 
 ### 3) “Void information saturation” is not a defined strict objective today
 
@@ -136,4 +144,3 @@ If one wants these moves, the next honest step must be explicitly one of:
    strict core and without claiming `QW-2191` discharge.
 
 No intermediate “verbal promotion” is admissible.
-
