@@ -1,0 +1,28 @@
+{
+  "object": "I_12_v1",
+  "status": "actual_exported_strict_finite_index_set_object",
+  "as_of": "2026-03-12",
+  "intent": "Provide an explicit strict 12-slot index-set object {0..11} to serve as the typed carrier for the nad12 scaffold and for any later Z_12 action/export steps, without implying any phase embedding, theta export, or QW-2191 discharge.",
+  "model": {
+    "set": "{0,1,...,11}",
+    "cardinality": 12
+  },
+  "occurs_as": {
+    "sigma_int_nad12_scaffold": "T117 uses k=0..11",
+    "kernel_mode_ring_index": "QW-2190 uses a 12-octave ring index x=0..11",
+    "canonical_field_slot_index": "QW-2164/QW-2165 use psi0..psi11"
+  },
+  "contracts": {
+    "observer_free": true,
+    "noncyclic_inputs": true,
+    "no_theta_inputs": true,
+    "no_qw2191_discharge_implied": true
+  },
+  "hard_limits": [
+    "Does not define a canonical phase embedding into U(1).",
+    "Does not derive eps or delta_d and does not eliminate selector slots.",
+    "Does not export theta_1/theta_2 and does not claim O(2)-cut closure.",
+    "Does not claim QW-2191 discharge or ToE closure."
+  ]
+}
+

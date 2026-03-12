@@ -1,0 +1,30 @@
+{
+  "object": "tau_Z12_v1_regular_action_on_I_12_v1",
+  "status": "actual_exported_strict_group_action_object",
+  "as_of": "2026-03-12",
+  "intent": "Export the regular action of Z_12_v1 on the 12-slot index set I_12_v1, providing a typed group-action primitive for later strict constructions that want to talk about a 12-cycle without hidden conventions.",
+  "group": "Z_12_v1",
+  "set": "I_12_v1",
+  "definition": {
+    "action_name": "tau_Z12_v1",
+    "formula": "tau_Z12_v1(a,k) := (k + a) mod 12"
+  },
+  "properties": {
+    "transitive": true,
+    "free": true,
+    "regular": true
+  },
+  "contracts": {
+    "observer_free": true,
+    "noncyclic_inputs": true,
+    "no_theta_inputs": true,
+    "no_qw2191_discharge_implied": true
+  },
+  "hard_limits": [
+    "Does not define a canonical embedding of Z_12 into U(1).",
+    "Does not provide a strict O(2)-cut selector ingredient (QW-2191 remains open).",
+    "Does not derive eps/delta_d and does not eliminate selector slots.",
+    "Does not export theta_1/theta_2 and does not claim ToE closure."
+  ]
+}
+

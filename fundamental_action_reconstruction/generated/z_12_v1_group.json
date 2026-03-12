@@ -1,0 +1,35 @@
+{
+  "object": "Z_12_v1",
+  "status": "actual_exported_strict_finite_group_object",
+  "as_of": "2026-03-12",
+  "intent": "Export a typed cyclic group object of order 12 identified with the already used 12-slot scaffold, so later constructions may reference an explicit Z_12 action instead of an untyped integer range.",
+  "carrier": {
+    "index_set_object": "I_12_v1",
+    "set": "{0,1,...,11}",
+    "cardinality": 12
+  },
+  "group_law": {
+    "name": "addition_mod_12",
+    "formula": "(a + b) mod 12",
+    "identity": 0,
+    "inverse": "(-a) mod 12",
+    "commutative": true
+  },
+  "notes": {
+    "cyclic": true,
+    "order": 12,
+    "generator_nonuniqueness": "A choice of generator is not canonical: Aut(Z_12) ≅ (Z/12Z)^× has 4 units {1,5,7,11}. This object does not fix an embedding Z_12 -> U(1) as canonical."
+  },
+  "contracts": {
+    "observer_free": true,
+    "noncyclic_inputs": true,
+    "no_selector_closure_implied": true
+  },
+  "hard_limits": [
+    "Does not export any canonical phase embedding nor any Berry/holonomy primitive.",
+    "Does not force a 1/2 density split from sigma_int.",
+    "Does not cut the QW-2191 O(2) family and does not export theta_1/theta_2.",
+    "Does not claim ToE closure."
+  ]
+}
+
