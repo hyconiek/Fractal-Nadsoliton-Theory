@@ -43,6 +43,23 @@ or change the construction class so the slot does not exist.
 `T161` names the missing **strict-derived delta_d selection** ingredient sharply,
 as a future-only target with explicit acceptance tests.
 
+## Extension-lane continuation note (explicitly non-strict)
+
+On the current repo state, the strict-core delta_d selection target remains open:
+no strict-derived delta_d law/value object is exported (`N447`, `P408`).
+
+If one insists on proceeding *today* with a single reproducible sigma-int → theta
+representative without false pass, the repo explicitly separates that move into
+`strict_extension_only` scope:
+
+1. `AX21` freezes `delta_d := delta_max` as a declared corridor-saturation premise
+   (premise-based; not strict-derived).
+2. `AX22` packages a publication-ready strict-extension summary of that lane.
+
+This does **not** discharge `T161`. It only records the explicit extension-scope
+premise needed for a reproducible representative while keeping strict-core delta_d
+selection open.
+
 ## Scope
 
 `T161` is scoped only to the **delta_d step selection** used by the strict
