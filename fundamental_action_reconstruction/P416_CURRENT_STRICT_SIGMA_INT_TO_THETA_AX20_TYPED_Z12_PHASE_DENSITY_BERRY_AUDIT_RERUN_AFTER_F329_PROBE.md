@@ -30,3 +30,9 @@ The refined “typed AX20” proposal remains **not** a strict-core discharge of
 The first typed primitive (carrier/action `Z_12`) is now present, but the remaining steps still require new
 strict exports and an explicit `O(2)`-cut ingredient.
 
+Related theorem-level closures / boundaries:
+
+1. no canonical/quotient-safe `Z_12 -> Phase_12` embedding is exported (`T163/N451`), and `Aut(Z_12)`-invariance
+   alone cannot pick one nor supply nontrivial phase values beyond `±1` (`N461`);
+2. the quotient-orbit “global holonomy → theta” slogan is closed as strict theta supply (`N459`);
+3. the “density operator forces 1/2 + Berry/holonomy → theta” slogan is closed as strict theta supply (`N460`).
