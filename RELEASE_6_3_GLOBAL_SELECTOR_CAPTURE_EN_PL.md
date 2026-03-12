@@ -27,29 +27,53 @@ Release 6.3 is the ultimate boundary between **Operational Physics** (which is n
 ### 2.1 Shannon Entropic derivation of $\alpha_{geo}$ (Theorem N420)
 
 The ontological space is recognized as a 4-bit informational microstate system $\Omega_{16}$.
-$$ |\Omega_{16}| = 16 $$
+
+$$
+|\Omega_{16}| = 16
+$$
 
 The equipartition measure $\mu_{eq}$ naturally yields the universal background asymmetry through its Shannon entropy:
-$$ H(\mu_{eq}) = -\sum_{x \in \Omega_{16}} \mu_{eq}(x) \ln \mu_{eq}(x) = 16 \left( - \frac{1}{16} \ln \frac{1}{16} \right) = \ln 16 = 4 \ln 2 $$
+
+$$
+H(\mu_{eq}) = -\sum_{x \in \Omega_{16}} \mu_{eq}(x) \ln \mu_{eq}(x) = 16 \left( - \frac{1}{16} \ln \frac{1}{16} \right) = \ln 16 = 4 \ln 2
+$$
 
 Thus:
-$$ \alpha_{geo}^{strict} = 4 \ln 2 \approx 2.772588722 $$
+
+$$
+\alpha_{geo}^{strict} = 4 \ln 2 \approx 2.772588722
+$$
 
 ### 2.2 Topological Parity $\sigma_{int}$ (Theorem N418, N419)
 
 The integer signature of the fundamental void action is extracted from the fundamental group map $\pi_1(C_{v1})$:
-$$ \sigma_{int}^{strict} = \chi_{FR}(\gamma_{\pi}) = -1 $$
+
+$$
+\sigma_{int}^{strict} = \chi_{FR}(\gamma_{\pi}) = -1
+$$
+
 This negative signature is the ultimate topological fuel that breaks the isotropy of the generation matrix.
 
 ### 2.3 The Generator Weights and $\theta$ candidates (AX19 Lane)
 
 Using the derived inputs, the continuous parameter space dictates the weights of the generating pairs across 12 sectors ($\mathbb{Z}_{12}$):
-$$ w_{i,k} = \frac{1 + \sigma_{int}^{in} \, \varepsilon \, b_{i,k}}{12} $$
+
+$$
+w_{i,k} = \frac{1 + \sigma_{int}^{in} \, \varepsilon \, b_{i,k}}{12}
+$$
+
 Where $b_{i,k}$ is the topological sign mask (e.g., $b_{1,k} = (-1)^k$).
 
 With the premise-based choices $\varepsilon = 1/2$ and $\delta_d = \delta_{max}$, the generated vectors $(u_1, u_2)$ yield:
-$$ \theta_1 = \arctan(u_1) \approx 0.3627 $$
-$$ \theta_2 = \arctan(u_2) \approx 0.3328 $$
+
+$$
+\theta_1 = \arctan(u_1) \approx 0.3627
+$$
+
+$$
+\theta_2 = \arctan(u_2) \approx 0.3328
+$$
+
 These are the physical values required to match the known spectrum.
 
 ## 3) The Strict-Core Incompatibility (The Barrier)
@@ -58,14 +82,26 @@ Despite the numerical success, **Theorems N446 and N447** erected an absolute ba
 
 ### 3.1 The Parity Balance Rejection (N446)
 Any attempt to claim that $\varepsilon = 1/2$ strictly follows from "charge balance" is mathematically false. The sum of signed weights dictates:
-$$ \sum_{k=0}^{11} b_{i,k} w_{i,k} = \sigma_{int}^{in} \varepsilon $$
+
+$$
+\sum_{k=0}^{11} b_{i,k} w_{i,k} = \sigma_{int}^{in} \varepsilon
+$$
+
 For a pure "zero-charge" balance:
-$$ \sigma_{int}^{in} \varepsilon = 0 \implies \varepsilon = 0 $$
+
+$$
+\sigma_{int}^{in} \varepsilon = 0 \implies \varepsilon = 0
+$$
+
 Thus, $\varepsilon=1/2$ is an *axiom* (a slot choice), not a strict necessity of balancing equations.
 
 ### 3.2 The Packing Rejection (N447)
 Similarly, $\delta_d = \delta_{max}$ was proven to merely be a corridor bound to maintain positivity (avoiding the $X,Y=0$ degeneracy).
-$$ \delta_d \in (0, \delta_{max}] $$
+
+$$
+\delta_d \in (0, \delta_{max}]
+$$
+
 Entropy $4 \ln 2$ does not select the step size. It just characterizes the underlying state space.
 
 ## 4) The Route Forward: Topological Density Projector (T162)
@@ -99,28 +135,51 @@ Release 6.3 to bezwzględna granica między **Fizyką Operacyjną** (która jest
 ### 2.1 Wyprowadzenie Shannona dla $\alpha_{geo}$ (Twierdzenie N420)
 
 Przestrzeń ontologiczna zostaje zdefiniowana jako 4-bitowy informacyjny system mikrostanów $\Omega_{16}$.
-$$ |\Omega_{16}| = 16 $$
+
+$$
+|\Omega_{16}| = 16
+$$
 
 Miara ekwipartycji $\mu_{eq}$ generuje asymetrię tła poprzez bezpośrednią definicję entropii Shannona:
-$$ H(\mu_{eq}) = -\sum_{x \in \Omega_{16}} \mu_{eq}(x) \ln \mu_{eq}(x) = 16 \left( - \frac{1}{16} \ln \frac{1}{16} \right) = \ln 16 = 4 \ln 2 $$
+
+$$
+H(\mu_{eq}) = -\sum_{x \in \Omega_{16}} \mu_{eq}(x) \ln \mu_{eq}(x) = 16 \left( - \frac{1}{16} \ln \frac{1}{16} \right) = \ln 16 = 4 \ln 2
+$$
 
 Zatem:
-$$ \alpha_{geo}^{strict} = 4 \ln 2 \approx 2.772588722 $$
+
+$$
+\alpha_{geo}^{strict} = 4 \ln 2 \approx 2.772588722
+$$
 
 ### 2.2 Topologiczna Parzystość $\sigma_{int}$ (Twierdzenie N418, N419)
 
 Skok sygnatury fundamentalnej akcji z pustki generowany jest bezpośrednio w przestrzeni topologicznej $C_{v1}$:
-$$ \sigma_{int}^{strict} = \chi_{FR}(\gamma_{\pi}) = -1 $$
+
+$$
+\sigma_{int}^{strict} = \chi_{FR}(\gamma_{\pi}) = -1
+$$
 
 ### 2.3 Wagi Generatora i kandydaty $\theta$ (Ścieżka AX19)
 
 Wykorzystując asymetrię tła oraz fundamentalną sygnaturę ujemną, przeliczamy wagi dla 12 wektorów oscylacyjnych:
-$$ w_{i,k} = \frac{1 + \sigma_{int}^{in} \, \varepsilon \, b_{i,k}}{12} $$
+
+$$
+w_{i,k} = \frac{1 + \sigma_{int}^{in} \, \varepsilon \, b_{i,k}}{12}
+$$
+
 Gdzie $b_{i,k}$ jest unikalną maską topologicznego znaku ($(-1)^k$).
 
 Podstawienie wartości $\varepsilon = 1/2$ oraz kroku $\delta_{max}$, wyrzuca ostateczne kąty fazowe zredukowanego pustki:
-$$ \theta_1 = \arctan(u_1) \approx 0.3627 $$
-$$ \theta_2 = \arctan(u_2) \approx 0.3328 $$
+
+$$
+\theta_1 = \arctan(u_1) \approx 0.3627
+$$
+
+$$
+\theta_2 = \arctan(u_2) \approx 0.3328
+$$
+
 Są to precyzyjne kąty uderzające we właściwą fizykę hierarchii cząstek.
 
 ## 3) Niezgodność z Rdzeniem Ścisłym (Bariera FAR)
@@ -129,14 +188,25 @@ Mimo wielkiego sukcesu liczbowego, system walidacji FAR odciął tym wartościom
 
 ### 3.1 Upadek argumentu Równowagi (N446)
 Matematyka udowodniła, że narzucenie symetrii ładunku ("charge balance") nie wymusza wartości $1/2$. Suma ze znakiem wykazuje:
-$$ \sum_{k=0}^{11} b_{i,k} w_{i,k} = \sigma_{int}^{in} \varepsilon $$
+
+$$
+\sum_{k=0}^{11} b_{i,k} w_{i,k} = \sigma_{int}^{in} \varepsilon
+$$
+
 Idealny balans to zero:
-$$ \sigma_{int}^{in} \varepsilon = 0 \implies \varepsilon = 0 $$
+
+$$
+\sigma_{int}^{in} \varepsilon = 0 \implies \varepsilon = 0
+$$
+
 Czyli $\varepsilon=1/2$ to wygoda i wybór (axiom), a nie matematyczna prawda udowodniona przez sumowanie.
 
 ### 3.2 Upadek Pędu Informacyjnego (N447)
 Użycie faktu $4 \ln 2$ nie determinuje skoku korytarza. Maksymalny krok $\delta_d = \delta_{max}$ jest po prostu technologicznym wymogiem na bezpieczeństwo przed wyzerowaniem licznika.
-$$ \delta_d \in (0, \delta_{max}] $$
+
+$$
+\delta_d \in (0, \delta_{max}]
+$$
 
 ## 4) Droga do Zamknięcia Teorii: Topological Density Projector (Target T162)
 
