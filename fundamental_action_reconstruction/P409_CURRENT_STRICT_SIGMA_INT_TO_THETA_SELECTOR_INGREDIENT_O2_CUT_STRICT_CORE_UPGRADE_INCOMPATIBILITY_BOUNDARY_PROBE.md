@@ -23,8 +23,8 @@ without introducing any hidden selector slot (`eps`, `delta_d`, …) and without
 | strict-core (non-candidate) theta output exists | NO | `N1/C50` remain: no strict-core internal theta source; `F312/F314` are candidate-only records |
 | `delta_d` slot eliminated or strict-derived | NO | corridor admits `delta_d ∈ (0,delta_max]` (`T119`); dependence is proved (`P403/N437`); `delta_d := delta_max` is premise-based (`F328/N440`) |
 | `eps` slot eliminated or strict-derived | NO | generator admits `eps ∈ [0,1]` (`T117`); dependence is proved (`P407/N441`); `eps := 1/2` is premise-based (`F317/N428`) |
-| “charge parity split ⇒ eps=1/2” exported as strict theorem | NO | `P408` audit: no strict exported law derives eps=1/2; current status is premise-based value object only |
-| “information saturation ⇒ delta_max unique” exported as strict theorem | NO | `P408` audit: no strict exported objective/uniqueness theorem selects `delta_d = delta_max`; `delta_d` remains a selector slot (`N437`) |
+| “charge parity split ⇒ eps=1/2” exported as strict theorem | NO | `P408` audit: no strict exported law derives eps=1/2; the “charge parity balance” derivation attempt is closed negatively (`N446`); current status is premise-based value object only |
+| “information saturation ⇒ delta_max unique” exported as strict theorem | NO | `P408` audit: no strict exported objective/uniqueness theorem selects `delta_d = delta_max`; the “maximum information packing” derivation attempt is closed negatively (`N447`); `delta_d` remains a selector slot (`N437`) |
 | strict-core canonical O(2)-cut upgrade discharged (T159) | NO | `P406` discharge probe: fails due to exposed selector slots and lack of strict-core theta output |
 
 ## Probe result
@@ -38,4 +38,3 @@ T159: not discharged; strict-core upgrade is blocked by exposed selector slots e
 
 So the strict sigma-int lane may be used only in candidate / premise-scoped form unless a genuinely new
 strict-core selector source eliminating those slots is exported.
-

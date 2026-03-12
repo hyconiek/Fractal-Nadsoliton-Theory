@@ -27,7 +27,10 @@ also proves:
    - `delta_d := delta_max` (`F328/N440`),
    - `eps := 1/2` (`F317/N428`),
 4. no strict theorem currently exported derives those values uniquely from a strict “charge parity split”
-   conservation law, nor from a strict “information saturation” objective (`P408`),
+   conservation law, nor from a strict “information saturation” objective (`P408`);
+   the two common proposed derivation routes are closed negatively as:
+   - eps=1/2 “charge parity balance” nonderivation (`N446`),
+   - delta_d=delta_max “maximum information packing” nonderivation (`N447`),
 5. therefore the current strict sigma-int selector ingredient cannot be promoted to a strict-core canonical
    `O(2)`-cut without introducing hidden premise-based selector choices,
 6. hence the strict-core upgrade target `T159` is not discharged on the current repo state, and `QW-2191`
@@ -91,4 +94,3 @@ It must be one genuinely new ingredient:
    and discharges `T159`, or
 2. an explicitly separated premise/axiom in a non-strict scope (axiom-augmented / strict-extension),
    while keeping strict-core claims unchanged and keeping `QW-2191` discipline explicit.
-
