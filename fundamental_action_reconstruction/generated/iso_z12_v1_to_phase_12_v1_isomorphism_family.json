@@ -1,0 +1,51 @@
+{
+  "object": "Iso_Z12_v1_to_Phase_12_v1_isomorphism_family",
+  "status": "actual_exported_strict_finite_isomorphism_family_object",
+  "as_of": "2026-03-12",
+  "intent": "Make explicit the full finite family of group isomorphisms Z_12_v1 -> Phase_12_v1, to prevent silent promotion of one generator choice as canonical on the typed AX20/T162 lane.",
+  "domain": "Z_12_v1",
+  "codomain": "Phase_12_v1",
+  "units_mod_12": {
+    "group": "(Z/12Z)^×",
+    "elements": [
+      1,
+      5,
+      7,
+      11
+    ],
+    "cardinality": 4
+  },
+  "family": [
+    {
+      "name": "emb_1",
+      "u": 1,
+      "formula": "emb_1(k) := zeta^((1*k) mod 12)"
+    },
+    {
+      "name": "emb_5",
+      "u": 5,
+      "formula": "emb_5(k) := zeta^((5*k) mod 12)"
+    },
+    {
+      "name": "emb_7",
+      "u": 7,
+      "formula": "emb_7(k) := zeta^((7*k) mod 12)"
+    },
+    {
+      "name": "emb_11",
+      "u": 11,
+      "formula": "emb_11(k) := zeta^((11*k) mod 12)"
+    }
+  ],
+  "meaning": {
+    "statement": "Each emb_u is a group isomorphism Z_12_v1 -> Phase_12_v1; there is no canonical choice of u exported on this lane.",
+    "aut_z12_identification": "Aut(Z_12_v1) ≅ (Z/12Z)^× and acts by k ↦ u*k (mod 12)."
+  },
+  "hard_limits": [
+    "Does not choose one embedding as canonical.",
+    "Does not claim quotient invariance of downstream constructions under Aut(Z_12_v1).",
+    "Does not export Berry/holonomy or density-operator ingredients.",
+    "Does not export theta_1/theta_2 and does not claim QW-2191 discharge nor ToE closure."
+  ]
+}
+

@@ -1,0 +1,52 @@
+{
+  "object": "Phase_12_v1",
+  "status": "actual_exported_strict_finite_phase_group_object",
+  "as_of": "2026-03-12",
+  "intent": "Provide a typed 12-phase carrier group (12th-root-like finite phase object) for the typed AX20/T162 direction, without asserting any canonical embedding choice, and without implying theta export or QW-2191 discharge.",
+  "carrier": {
+    "generator_symbol": "zeta",
+    "relation": "zeta^12 = 1",
+    "elements": [
+      "zeta^0",
+      "zeta^1",
+      "zeta^2",
+      "zeta^3",
+      "zeta^4",
+      "zeta^5",
+      "zeta^6",
+      "zeta^7",
+      "zeta^8",
+      "zeta^9",
+      "zeta^10",
+      "zeta^11"
+    ],
+    "cardinality": 12
+  },
+  "group_law": {
+    "name": "multiplication_of_powers_mod_12",
+    "formula": "(zeta^a) * (zeta^b) = zeta^((a+b) mod 12)",
+    "identity": "zeta^0",
+    "inverse": "(zeta^a)^(-1) = zeta^((-a) mod 12)",
+    "commutative": true
+  },
+  "notes": {
+    "cyclic": true,
+    "order": 12,
+    "isomorphic_to": "Z_12_v1",
+    "noncanonicity_warning": "Any group isomorphism Z_12_v1 -> Phase_12_v1 depends on a choice of generator/orientation; the isomorphism family has 4 elements corresponding to units u in (Z/12Z)^× = {1,5,7,11}."
+  },
+  "contracts": {
+    "observer_free": true,
+    "noncyclic_inputs": true,
+    "no_theta_inputs": true,
+    "no_qw2191_discharge_implied": true
+  },
+  "hard_limits": [
+    "Does not select a canonical embedding of Z_12_v1 into Phase_12_v1.",
+    "Does not define a connection/holonomy (Berry phase) construction.",
+    "Does not force a 1/2 density split from sigma_int.",
+    "Does not export theta_1/theta_2 and does not claim O(2)-cut closure nor QW-2191 discharge.",
+    "Does not claim ToE closure."
+  ]
+}
+
