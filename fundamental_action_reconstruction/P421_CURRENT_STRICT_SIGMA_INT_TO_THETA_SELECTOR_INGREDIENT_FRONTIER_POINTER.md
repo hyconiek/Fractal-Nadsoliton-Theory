@@ -99,6 +99,21 @@ Only three honest continuations exist (must be explicit which):
 
 No intermediate “verbal promotion” is admissible.
 
+## Note (diagonal/local sector is the only strict candidate accelerator against `QW-2191` on `pair1`)
+
+Independently of the sigma-int corridor class, the repo now exports two strict structural facts about any attempted
+`pair1` `O(2)`-cut:
+
+1. the certified host operator `A = K_total + m0^2 I` is **isotropic** on `pair1` and cannot cut `O(2)` (`N465`,
+   audited numerically in `P424`),
+2. a diagonal/local sector breaks `O(2)` on `pair1` **iff** its diagonal profile has a nonzero mode‑2 Fourier defect
+   `F2(d)` (`N466`), and for `n=12` this defect reduces to an explicit six-class linear combination of the exported
+   opposite-pair sums from `R18` (`N467`, persisted as `P426`).
+
+So any strict “physical accelerator of choice” story on `pair1` must eventually export a **strict-derived**
+non-translation-invariant diagonal/local profile (or equivalent) deciding this `F2(d) ≠ 0` condition, rather than
+relying on host-kernel isotropy or rhetoric.
+
 ## Note (Shannon symmetry-breaking is still a target, not an ingredient)
 
 `S2` records “selector‑axiom discharge via Shannon symmetry‑breaking premise” as a strategic intent, and the repo

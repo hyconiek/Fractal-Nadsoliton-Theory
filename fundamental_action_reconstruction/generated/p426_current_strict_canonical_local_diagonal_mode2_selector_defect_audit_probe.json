@@ -1,0 +1,108 @@
+{
+  "stage": "P426",
+  "goal": "materialize_the_exact_mode2_F2_defect_of_the_exported_canonical_local_diagonal_residual_sector_on_n12_as_a_checkable_linear_combination_of_the_six_R18_opposite_pair_sums",
+  "inputs": {
+    "r18_pair1_residual_declared_pullback_coefficient_class_reduction": "fundamental_action_reconstruction/generated/r18_pair1_residual_declared_pullback_coefficient_class_reduction_packet_for_host_matching_route.json"
+  },
+  "mode2_defect": {
+    "n": 12,
+    "pair_sums_Sk": [
+      {
+        "class_symbol": "Sigma_psi0_psi6",
+        "carrier_slots": [
+          "psi0",
+          "psi6"
+        ],
+        "residual_sum_expression": "((3*g4_psi0*vpsi0**2 + 5*g6_psi0*vpsi0**4 + 2*gY0*vphi**2 + m2_psi0) - (1.013551972358388)) + ((3*g4_psi6*vpsi6**2 + 5*g6_psi6*vpsi6**4 + 2*gY6*vphi**2 + m2_psi6) - (1.013551972358388))"
+      },
+      {
+        "class_symbol": "Sigma_psi1_psi7",
+        "carrier_slots": [
+          "psi1",
+          "psi7"
+        ],
+        "residual_sum_expression": "((3*g4_psi1*vpsi1**2 + 5*g6_psi1*vpsi1**4 + 2*gY1*vphi**2 + m2_psi1) - (1.013551972358388)) + ((3*g4_psi7*vpsi7**2 + 5*g6_psi7*vpsi7**4 + 2*gY7*vphi**2 + m2_psi7) - (1.013551972358388))"
+      },
+      {
+        "class_symbol": "Sigma_psi2_psi8",
+        "carrier_slots": [
+          "psi2",
+          "psi8"
+        ],
+        "residual_sum_expression": "((3*g4_psi2*vpsi2**2 + 5*g6_psi2*vpsi2**4 + 2*gY2*vphi**2 + m2_psi2) - (1.013551972358388)) + ((3*g4_psi8*vpsi8**2 + 5*g6_psi8*vpsi8**4 + 2*gY8*vphi**2 + m2_psi8) - (1.013551972358388))"
+      },
+      {
+        "class_symbol": "Sigma_psi3_psi9",
+        "carrier_slots": [
+          "psi3",
+          "psi9"
+        ],
+        "residual_sum_expression": "((3*g4_psi3*vpsi3**2 + 5*g6_psi3*vpsi3**4 + 2*gY3*vphi**2 + m2_psi3) - (1.013551972358388)) + ((3*g4_psi9*vpsi9**2 + 5*g6_psi9*vpsi9**4 + 2*gY9*vphi**2 + m2_psi9) - (1.013551972358388))"
+      },
+      {
+        "class_symbol": "Sigma_psi4_psi10",
+        "carrier_slots": [
+          "psi4",
+          "psi10"
+        ],
+        "residual_sum_expression": "((3*g4_psi4*vpsi4**2 + 5*g6_psi4*vpsi4**4 + 2*gY4*vphi**2 + m2_psi4) - (1.013551972358388)) + ((3*g4_psi10*vpsi10**2 + 5*g6_psi10*vpsi10**4 + 2*gY10*vphi**2 + m2_psi10) - (1.013551972358388))"
+      },
+      {
+        "class_symbol": "Sigma_psi5_psi11",
+        "carrier_slots": [
+          "psi5",
+          "psi11"
+        ],
+        "residual_sum_expression": "((3*g4_psi5*vpsi5**2 + 5*g6_psi5*vpsi5**4 + 2*gY5*vphi**2 + m2_psi5) - (1.013551972358388)) + ((3*g4_psi11*vpsi11**2 + 5*g6_psi11*vpsi11**4 + 2*gY11*vphi**2 + m2_psi11) - (1.013551972358388))"
+      }
+    ],
+    "F2_definitions": {
+      "F2": "F2(d) := sum_{i=0..11} d_i * exp(i*4*pi*i/12)",
+      "reduction": "F2(d) = sum_{k=0..5} S_k * exp(i*pi*k/3) where S_k := d_k + d_{k+6}",
+      "Re(F2)_coeffs_on_Sk": [
+        "1",
+        "1/2",
+        "-1/2",
+        "-1",
+        "-1/2",
+        "1/2"
+      ],
+      "Im(F2)_coeffs_on_Sk": [
+        "0",
+        "sqrt(3)/2",
+        "sqrt(3)/2",
+        "0",
+        "-sqrt(3)/2",
+        "-sqrt(3)/2"
+      ]
+    },
+    "F2_in_terms_of_R18_pair_sums": {
+      "Re_F2_expression": "(((3*g4_psi0*vpsi0**2 + 5*g6_psi0*vpsi0**4 + 2*gY0*vphi**2 + m2_psi0) - (1.013551972358388)) + ((3*g4_psi6*vpsi6**2 + 5*g6_psi6*vpsi6**4 + 2*gY6*vphi**2 + m2_psi6) - (1.013551972358388))) + (1/2)*(((3*g4_psi1*vpsi1**2 + 5*g6_psi1*vpsi1**4 + 2*gY1*vphi**2 + m2_psi1) - (1.013551972358388)) + ((3*g4_psi7*vpsi7**2 + 5*g6_psi7*vpsi7**4 + 2*gY7*vphi**2 + m2_psi7) - (1.013551972358388))) - (1/2)*(((3*g4_psi2*vpsi2**2 + 5*g6_psi2*vpsi2**4 + 2*gY2*vphi**2 + m2_psi2) - (1.013551972358388)) + ((3*g4_psi8*vpsi8**2 + 5*g6_psi8*vpsi8**4 + 2*gY8*vphi**2 + m2_psi8) - (1.013551972358388))) - (((3*g4_psi3*vpsi3**2 + 5*g6_psi3*vpsi3**4 + 2*gY3*vphi**2 + m2_psi3) - (1.013551972358388)) + ((3*g4_psi9*vpsi9**2 + 5*g6_psi9*vpsi9**4 + 2*gY9*vphi**2 + m2_psi9) - (1.013551972358388))) - (1/2)*(((3*g4_psi4*vpsi4**2 + 5*g6_psi4*vpsi4**4 + 2*gY4*vphi**2 + m2_psi4) - (1.013551972358388)) + ((3*g4_psi10*vpsi10**2 + 5*g6_psi10*vpsi10**4 + 2*gY10*vphi**2 + m2_psi10) - (1.013551972358388))) + (1/2)*(((3*g4_psi5*vpsi5**2 + 5*g6_psi5*vpsi5**4 + 2*gY5*vphi**2 + m2_psi5) - (1.013551972358388)) + ((3*g4_psi11*vpsi11**2 + 5*g6_psi11*vpsi11**4 + 2*gY11*vphi**2 + m2_psi11) - (1.013551972358388)))",
+      "Im_F2_expression": "(sqrt(3)/2)*(((3*g4_psi1*vpsi1**2 + 5*g6_psi1*vpsi1**4 + 2*gY1*vphi**2 + m2_psi1) - (1.013551972358388)) + ((3*g4_psi7*vpsi7**2 + 5*g6_psi7*vpsi7**4 + 2*gY7*vphi**2 + m2_psi7) - (1.013551972358388))) + (sqrt(3)/2)*(((3*g4_psi2*vpsi2**2 + 5*g6_psi2*vpsi2**4 + 2*gY2*vphi**2 + m2_psi2) - (1.013551972358388)) + ((3*g4_psi8*vpsi8**2 + 5*g6_psi8*vpsi8**4 + 2*gY8*vphi**2 + m2_psi8) - (1.013551972358388))) - (sqrt(3)/2)*(((3*g4_psi4*vpsi4**2 + 5*g6_psi4*vpsi4**4 + 2*gY4*vphi**2 + m2_psi4) - (1.013551972358388)) + ((3*g4_psi10*vpsi10**2 + 5*g6_psi10*vpsi10**4 + 2*gY10*vphi**2 + m2_psi10) - (1.013551972358388))) - (sqrt(3)/2)*(((3*g4_psi5*vpsi5**2 + 5*g6_psi5*vpsi5**4 + 2*gY5*vphi**2 + m2_psi5) - (1.013551972358388)) + ((3*g4_psi11*vpsi11**2 + 5*g6_psi11*vpsi11**4 + 2*gY11*vphi**2 + m2_psi11) - (1.013551972358388)))"
+    },
+    "pair1_o2_cut_signature_via_N466": {
+      "Delta1_components": [
+        "a1_minus_d1",
+        "b1"
+      ],
+      "a1_minus_d1_expression": "(1/6)*((((3*g4_psi0*vpsi0**2 + 5*g6_psi0*vpsi0**4 + 2*gY0*vphi**2 + m2_psi0) - (1.013551972358388)) + ((3*g4_psi6*vpsi6**2 + 5*g6_psi6*vpsi6**4 + 2*gY6*vphi**2 + m2_psi6) - (1.013551972358388))) + (1/2)*(((3*g4_psi1*vpsi1**2 + 5*g6_psi1*vpsi1**4 + 2*gY1*vphi**2 + m2_psi1) - (1.013551972358388)) + ((3*g4_psi7*vpsi7**2 + 5*g6_psi7*vpsi7**4 + 2*gY7*vphi**2 + m2_psi7) - (1.013551972358388))) - (1/2)*(((3*g4_psi2*vpsi2**2 + 5*g6_psi2*vpsi2**4 + 2*gY2*vphi**2 + m2_psi2) - (1.013551972358388)) + ((3*g4_psi8*vpsi8**2 + 5*g6_psi8*vpsi8**4 + 2*gY8*vphi**2 + m2_psi8) - (1.013551972358388))) - (((3*g4_psi3*vpsi3**2 + 5*g6_psi3*vpsi3**4 + 2*gY3*vphi**2 + m2_psi3) - (1.013551972358388)) + ((3*g4_psi9*vpsi9**2 + 5*g6_psi9*vpsi9**4 + 2*gY9*vphi**2 + m2_psi9) - (1.013551972358388))) - (1/2)*(((3*g4_psi4*vpsi4**2 + 5*g6_psi4*vpsi4**4 + 2*gY4*vphi**2 + m2_psi4) - (1.013551972358388)) + ((3*g4_psi10*vpsi10**2 + 5*g6_psi10*vpsi10**4 + 2*gY10*vphi**2 + m2_psi10) - (1.013551972358388))) + (1/2)*(((3*g4_psi5*vpsi5**2 + 5*g6_psi5*vpsi5**4 + 2*gY5*vphi**2 + m2_psi5) - (1.013551972358388)) + ((3*g4_psi11*vpsi11**2 + 5*g6_psi11*vpsi11**4 + 2*gY11*vphi**2 + m2_psi11) - (1.013551972358388))))",
+      "b1_expression": "(1/12)*((sqrt(3)/2)*(((3*g4_psi1*vpsi1**2 + 5*g6_psi1*vpsi1**4 + 2*gY1*vphi**2 + m2_psi1) - (1.013551972358388)) + ((3*g4_psi7*vpsi7**2 + 5*g6_psi7*vpsi7**4 + 2*gY7*vphi**2 + m2_psi7) - (1.013551972358388))) + (sqrt(3)/2)*(((3*g4_psi2*vpsi2**2 + 5*g6_psi2*vpsi2**4 + 2*gY2*vphi**2 + m2_psi2) - (1.013551972358388)) + ((3*g4_psi8*vpsi8**2 + 5*g6_psi8*vpsi8**4 + 2*gY8*vphi**2 + m2_psi8) - (1.013551972358388))) - (sqrt(3)/2)*(((3*g4_psi4*vpsi4**2 + 5*g6_psi4*vpsi4**4 + 2*gY4*vphi**2 + m2_psi4) - (1.013551972358388)) + ((3*g4_psi10*vpsi10**2 + 5*g6_psi10*vpsi10**4 + 2*gY10*vphi**2 + m2_psi10) - (1.013551972358388))) - (sqrt(3)/2)*(((3*g4_psi5*vpsi5**2 + 5*g6_psi5*vpsi5**4 + 2*gY5*vphi**2 + m2_psi5) - (1.013551972358388)) + ((3*g4_psi11*vpsi11**2 + 5*g6_psi11*vpsi11**4 + 2*gY11*vphi**2 + m2_psi11) - (1.013551972358388))))",
+      "note": "Diagonal sector breaks O(2) on pair1 iff (a1_minus_d1, b1) != (0,0), equivalently iff F2(d) != 0."
+    }
+  },
+  "result": {
+    "explicit_mode2_defect_expression_present": true,
+    "evaluated_numeric_mode2_defect_present": false,
+    "strict_core_pair1_o2_cut_witness_present": false
+  },
+  "frontier": "P426_B1",
+  "frontier_text": "explicit mode-2 defect expression is now exported as a six-class linear combination, but no strict-derived coefficient values exist to decide nonzero; therefore no strict-core O(2)-cut witness is obtained",
+  "hard_limits": [
+    "no_claim_that_F2_is_nonzero",
+    "no_claim_that_the_canonical_local_diagonal_sector_breaks_O2_on_pair1",
+    "no_claim_that_QW2191_is_discharged",
+    "no_claim_of_strict_core_theta_export",
+    "no_claim_of_ToE_closure"
+  ],
+  "no_false_pass": true
+}
