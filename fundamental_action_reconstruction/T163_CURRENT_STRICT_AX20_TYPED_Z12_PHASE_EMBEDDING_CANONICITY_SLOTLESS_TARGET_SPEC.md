@@ -31,7 +31,8 @@ cannot be treated as canonical:
 2. purely Aut(`Z_12`)-invariant phase-embedding/holonomy claims collapse to the parity-only sector `{±1}` and
    therefore yield only trivial angles `{0, π}` (`N461`).
 
-So an actual discharge of `T163` must explicitly add a new canonical-fixing datum (acceptance route 4a) or
+So an actual discharge of `T163` must explicitly add a new canonical-fixing datum (acceptance route 4a; named
+as `T164`) or
 prove a quotient-safe embedding whose *downstream* use is invariant under the full `Aut(Z_12)` ambiguity
 (acceptance route 4b), without smuggling in an untracked generator/orientation choice.
 
@@ -85,7 +86,7 @@ An **actual discharge** must at minimum provide:
    - choosing an arbitrary phase offset.
 
    This must be resolved in one of two acceptable strict ways:
-   - **(4a) Canonical-fixing datum:** export a strict internal datum that canonically fixes the generator/orientation
+   - **(4a) Canonical-fixing datum:** export a strict internal datum (see `T164`) that canonically fixes the generator/orientation
      (and prove the fixing is invariant under the admissible symmetries), **or**
    - **(4b) Quotient-safe embedding:** export the embedding only up to the relevant automorphism/gauge group and
      prove that the downstream quantities used in later steps (Berry/holonomy/theta) are invariant under that
