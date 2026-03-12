@@ -42,6 +42,12 @@ On the current repo state, the slot-elimination route (acceptance test 2A) is al
 So the only honest strict-core upgrade route left is to export a genuinely new strict derivation/selection
 source eliminating the slots (acceptance test 2B), or to change the construction class itself.
 
+On the current repo state, the strict-derived slot-selection ingredients required by (2B) are
+not exported yet and are now named explicitly as future-only targets:
+
+1. eps strict-derived selection target: `T160` (status packaged by `P410/N444`),
+2. delta_d strict-derived selection target: `T161` (status packaged by `P411/N445`).
+
 ## Target object
 
 If achieved, export one strict-core upgraded selector ingredient object:
@@ -78,6 +84,7 @@ An **actual discharge** of this target must at minimum provide:
    - **(B) strict derivation:** export strict-derived (not premise-only) provenance chains
      that uniquely derive the needed `delta_d` and `eps` values on a declared strict domain,
      and prove that no additional free selector slot remains.
+     The strict-derived slot-selection targets are named as `T160` (eps) and `T161` (delta_d).
 3. **Noncyclic contract:** no `theta` inputs and no populated basis-pair instance as input
    (respects sandbox `N18`).
 4. **Observer-free contract:** no `K_obs`-indexed selection as a primary source.
