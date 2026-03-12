@@ -113,6 +113,9 @@ Independently of the sigma-int corridor class, the repo now exports three strict
    the diagonalization angle is `theta_* = (1/2) atan2(Im F2, Re F2)` and the eigenvalues are
    `lambda_± = (1/n) Σ d_k ± (1/n)|F2|` (`N468`, audited on toy profiles in `P427`).
 
+4. the strict sigma‑int FR‑derived `Z2` parity sign mask $b_{1,k}=(-1)^k$ has **zero** mode‑2 defect $F_2(b)=0$ and
+   therefore cannot act as a diagonal/local `pair1` `O(2)`‑cut ingredient by itself (`N469`, audited in `P428`).
+
 So any strict “physical accelerator of choice” story on `pair1` must eventually export a **strict-derived**
 non-translation-invariant diagonal/local profile (or equivalent) deciding this `F2(d) ≠ 0` condition, rather than
 relying on host-kernel isotropy or rhetoric.

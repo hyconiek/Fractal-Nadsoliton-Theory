@@ -1,0 +1,82 @@
+{
+  "probe_id": "P428_CURRENT_STRICT_SIGMA_INT_Z2_SIGN_MASK_MODE2_DEFECT_AUDIT_PROBE",
+  "as_of": "2026-03-12",
+  "no_false_pass": true,
+  "input": "fundamental_action_reconstruction/generated/b_sigma_int_E_pair_sign_mask_strict_provenance_v1.json",
+  "tolerance": 1e-12,
+  "results": [
+    {
+      "pair": "pair1",
+      "n": 12,
+      "diag_profile": [
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "mean": 0.0,
+      "F2": {
+        "Re": 7.216449660063518e-16,
+        "Im": 8.881784197001252e-16,
+        "abs": 1.1443916996305594e-15
+      },
+      "F6": {
+        "Re": 12.0,
+        "Im": -9.859025713772781e-15,
+        "abs": 12.0
+      },
+      "pair1_anisotropy_signature_from_N466": {
+        "a1_minus_d1": 1.2027416100105862e-16,
+        "b1": 7.401486830834377e-17
+      },
+      "cuts_O2_on_pair1_by_N466": false
+    },
+    {
+      "pair": "pair2",
+      "n": 12,
+      "diag_profile": [
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1
+      ],
+      "mean": 0.0,
+      "F2": {
+        "Re": -7.216449660063518e-16,
+        "Im": -8.881784197001252e-16,
+        "abs": 1.1443916996305594e-15
+      },
+      "F6": {
+        "Re": -12.0,
+        "Im": 9.859025713772781e-15,
+        "abs": 12.0
+      },
+      "pair1_anisotropy_signature_from_N466": {
+        "a1_minus_d1": -1.2027416100105862e-16,
+        "b1": -7.401486830834377e-17
+      },
+      "cuts_O2_on_pair1_by_N466": false
+    }
+  ],
+  "theorem_pointer": "N469",
+  "notes": [
+    "This probe only audits the strict-exported FR-derived Z2 parity sign mask b_{i,k}=(-1)^k / (-1)^{k+1}.",
+    "It does not assert that diag(weights) is a physically exported selector operator; it only audits the mode-2 defect condition relevant for any diagonal pair1 O(2)-cut attempt (N466)."
+  ]
+}
