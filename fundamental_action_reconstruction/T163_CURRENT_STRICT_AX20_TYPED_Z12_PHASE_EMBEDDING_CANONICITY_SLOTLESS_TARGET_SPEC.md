@@ -29,7 +29,9 @@ cannot be treated as canonical:
 
 1. a canonical oriented 12-cycle successor map is not exported for the abstract phase carrier (`N456`), and
 2. purely Aut(`Z_12`)-invariant phase-embedding/holonomy claims collapse to the parity-only sector `{±1}` and
-   therefore yield only trivial angles `{0, π}` (`N461`).
+   therefore yield only trivial angles `{0, π}` (`N461`),
+3. there is no Aut(`Z_12`)-invariant way to canonically pick a generator/orientation from the typed
+   `Z_12` + `Aut(Z_12)` structure alone (`N462`).
 
 So an actual discharge of `T163` must explicitly add a new canonical-fixing datum (acceptance route 4a; named
 as `T164`) or

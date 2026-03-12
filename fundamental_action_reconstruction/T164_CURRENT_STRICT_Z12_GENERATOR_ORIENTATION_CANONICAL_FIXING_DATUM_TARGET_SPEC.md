@@ -19,6 +19,10 @@ Therefore any future attempt to obtain a **nontrivial** canonical phase embeddin
 lane must (at minimum) introduce an additional strict-core datum that breaks the `Aut(Z_12)` ambiguity in a
 tracked way.
 
+Additionally, `N462` makes explicit that there is no `Aut(Z_12)`-invariant way to select a generator/orientation
+from the typed `Z_12` + `Aut(Z_12)` structure alone, so any nontrivial fixing datum must genuinely add (and
+track) symmetry breaking rather than pretending the choice is “from air”.
+
 `T164` names that missing datum sharply as a future-only strict-core target object with explicit acceptance
 tests, so later work cannot silently treat “choose generator 1” or “choose an orientation” as already
 canonical.
@@ -92,4 +96,3 @@ provide:
    tests,
 3. that `Aut(Z_12)` ambiguity is already eliminated in strict core,
 4. strict theta export or ToE closure.
-
