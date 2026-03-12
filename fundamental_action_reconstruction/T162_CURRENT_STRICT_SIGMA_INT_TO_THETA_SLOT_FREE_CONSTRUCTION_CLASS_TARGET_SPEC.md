@@ -31,6 +31,22 @@ change the construction class so the eps / delta_d slots do not exist.
 
 `T162` names that missing ingredient class sharply, as a future-only target with explicit acceptance tests.
 
+## Current state note (AX20 slogan closures)
+
+The repo now also exports strict boundary/closure theorems closing two recurring “slotless projector” (`AX20`)
+theta-supply slogans as strict-core ingredients:
+
+1. “global holonomy / quotient-orbit twist directly yields theta” is closed as a strict theta supply
+   (`N459`, complementing the base-space triviality boundary `N457`),
+2. “typed density operator forces `1/2` + Berry/holonomy yields theta” is closed as a strict theta supply
+   (`N460`, complementing the missing strict `1/2` law boundary `N446`),
+3. “Aut(`Z_12`)-invariance yields canonical phase embedding / holonomy” collapses to the parity-only sector
+   `{±1}` and thus cannot supply nontrivial theta (`N461`).
+
+These closures do **not** discharge `T162` (since `T162` allows *any* future slot-free construction class),
+but they do eliminate the common idea that the current `Z_12`/`Z_2`/Aut(`Z_12`) typed scaffold is already
+enough to export strict thetas “by topology alone”.
+
 ## Scope
 
 `T162` is scoped only to the strict sigma-int → theta selector-ingredient frontier on `QW-2191`.
@@ -94,4 +110,3 @@ An **actual discharge** of this target must at minimum provide:
 2. that premise-based slot point choices (`F317/F328`) constitute slot elimination,
 3. strict-core theta export on the current repo state,
 4. ToE closure.
-

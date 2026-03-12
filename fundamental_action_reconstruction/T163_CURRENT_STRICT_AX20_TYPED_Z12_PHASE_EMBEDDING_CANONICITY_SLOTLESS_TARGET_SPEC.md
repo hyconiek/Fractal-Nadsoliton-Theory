@@ -22,6 +22,19 @@ acceptance tests, so later work cannot silently treat “pick 2π/12 phases” a
 This target is **below** `T162` (it is a prerequisite sub-ingredient for any `Z_12`-phase-based slot-free
 construction class).
 
+## Current state note (canonicity is still blocked)
+
+On the current repo state, the repo exports strict boundary theorems clarifying why “just use `2π/12` phases”
+cannot be treated as canonical:
+
+1. a canonical oriented 12-cycle successor map is not exported for the abstract phase carrier (`N456`), and
+2. purely Aut(`Z_12`)-invariant phase-embedding/holonomy claims collapse to the parity-only sector `{±1}` and
+   therefore yield only trivial angles `{0, π}` (`N461`).
+
+So an actual discharge of `T163` must explicitly add a new canonical-fixing datum (acceptance route 4a) or
+prove a quotient-safe embedding whose *downstream* use is invariant under the full `Aut(Z_12)` ambiguity
+(acceptance route 4b), without smuggling in an untracked generator/orientation choice.
+
 ## Scope
 
 `T163` is scoped only to phase-embedding canonicity for the typed `Z_12` carrier.
@@ -90,4 +103,3 @@ An **actual discharge** must at minimum provide:
 3. strict theta export or strict-core selector closure,
 4. `QW-2191` discharge,
 5. ToE closure.
-
