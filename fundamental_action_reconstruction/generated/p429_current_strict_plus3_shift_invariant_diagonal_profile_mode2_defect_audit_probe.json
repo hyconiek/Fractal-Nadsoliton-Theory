@@ -1,0 +1,125 @@
+{
+  "probe_id": "P429_CURRENT_STRICT_PLUS3_SHIFT_INVARIANT_DIAGONAL_PROFILE_MODE2_DEFECT_AUDIT_PROBE",
+  "as_of": "2026-03-12",
+  "no_false_pass": true,
+  "n_octaves": 12,
+  "tolerance": 1e-12,
+  "profiles": [
+    {
+      "name": "example_1",
+      "diag_profile": [
+        1.0,
+        2.3,
+        -0.7,
+        1.0,
+        2.3,
+        -0.7,
+        1.0,
+        2.3,
+        -0.7,
+        1.0,
+        2.3,
+        -0.7
+      ],
+      "F2": {
+        "Re": 1.1657341758564144e-15,
+        "Im": -1.1102230246251565e-16,
+        "abs": 1.1710090180710446e-15
+      },
+      "cuts_O2_on_pair1_by_N466": false,
+      "pair1_block_c1s1": [
+        [
+          0.8666666666666667,
+          -4.897815905328306e-17
+        ],
+        [
+          -4.897815905328306e-17,
+          0.8666666666666665
+        ]
+      ],
+      "pair1_anisotropy_signature": {
+        "a1_minus_d1": 2.220446049250313e-16,
+        "b1": -4.897815905328306e-17
+      }
+    },
+    {
+      "name": "example_2",
+      "diag_profile": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "F2": {
+        "Re": 3.885780586188048e-16,
+        "Im": -1.1102230246251565e-16,
+        "abs": 4.041272810440265e-16
+      },
+      "cuts_O2_on_pair1_by_N466": false,
+      "pair1_block_c1s1": [
+        [
+          0.3333333333333334,
+          -1.3877787807814457e-17
+        ],
+        [
+          -1.3877787807814457e-17,
+          0.33333333333333326
+        ]
+      ],
+      "pair1_anisotropy_signature": {
+        "a1_minus_d1": 1.6653345369377348e-16,
+        "b1": -1.3877787807814457e-17
+      }
+    },
+    {
+      "name": "example_3",
+      "diag_profile": [
+        -3.0,
+        0.5,
+        4.25,
+        -3.0,
+        0.5,
+        4.25,
+        -3.0,
+        0.5,
+        4.25,
+        -3.0,
+        0.5,
+        4.25
+      ],
+      "F2": {
+        "Re": 1.7763568394002505e-15,
+        "Im": 4.440892098500626e-16,
+        "abs": 1.831026719408895e-15
+      },
+      "cuts_O2_on_pair1_by_N466": false,
+      "pair1_block_c1s1": [
+        [
+          0.5833333333333338,
+          -1.2660082630017037e-17
+        ],
+        [
+          -1.2660082630017037e-17,
+          0.5833333333333334
+        ]
+      ],
+      "pair1_anisotropy_signature": {
+        "a1_minus_d1": 4.440892098500626e-16,
+        "b1": -1.2660082630017037e-17
+      }
+    }
+  ],
+  "theorem_pointer": "N470",
+  "notes": [
+    "This probe audits the pure-math fact that +3-shift invariance on n=12 forces the mode-2 defect F2(d) to vanish.",
+    "It does not claim that any physically exported diagonal/local sector is +3-shift invariant."
+  ]
+}

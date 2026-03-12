@@ -116,6 +116,9 @@ Independently of the sigma-int corridor class, the repo now exports three strict
 4. the strict sigma‑int FR‑derived `Z2` parity sign mask $b_{1,k}=(-1)^k$ has **zero** mode‑2 defect $F_2(b)=0$ and
    therefore cannot act as a diagonal/local `pair1` `O(2)`‑cut ingredient by itself (`N469`, audited in `P428`).
 
+5. if a diagonal/local profile on `n=12` remains invariant under the declared +3 carrier shift (i.e. $d_{k+3}=d_k$),
+   then its mode‑2 defect vanishes ($F_2(d)=0$) and it cannot cut `O(2)` on `pair1` (`N470`, audited in `P429`).
+
 So any strict “physical accelerator of choice” story on `pair1` must eventually export a **strict-derived**
 non-translation-invariant diagonal/local profile (or equivalent) deciding this `F2(d) ≠ 0` condition, rather than
 relying on host-kernel isotropy or rhetoric.
