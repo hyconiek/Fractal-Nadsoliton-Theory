@@ -109,3 +109,11 @@ An **actual discharge** of `S_shannon_symmetry_breaking_selector_ingredient_o2_c
    (`P399`),
 4. strict-core selector closure, global `QW-2191` discharge, or ToE closure.
 
+## Current-state note (objective-shape slogans are not enough)
+
+`P423` audits several naive “Shannon objective” shapes on the `QW-2191` `O(2)` family (site-amplitude entropies and
+simple KL-divergence objectives on the 12-octave scaffold). Those objectives do vary with `theta`, but they do **not**
+yield a unique global minimizer; multiple near-minimum clusters remain.
+
+So discharging `T165` will require a more specific typed `J_shannon_v1` (with explicit domain and uniqueness theorem),
+not just “entropy/KL” slogans.

@@ -1,0 +1,160 @@
+{
+  "generated_utc": "2026-03-12T15:51:06.690671+00:00",
+  "stage": "P423",
+  "goal": "audit_naive_shannon_objective_candidates_on_qw2191_o2_family_for_unique_o2_cut",
+  "inputs": {
+    "qw2190_kernel_mode_report": "report_qw2190_kernel_mode_representation_emergence_gate.json"
+  },
+  "grid": {
+    "theta_domain": "[0,2pi]",
+    "grid_n": 7201
+  },
+  "objectives": {
+    "H_avg_u1_v1_u2_v2": "Average Shannon entropy of squared site-amplitudes for (u1,v1,u2,v2) on the 12-octave ring site basis",
+    "symKL_u1_u2": "Symmetric KL divergence between squared site-amplitude distributions of u1 and u2",
+    "symKL_u1_v2": "Symmetric KL divergence between squared site-amplitude distributions of u1 and v2",
+    "H_mix_u1_u2": "Shannon entropy of the equal-weight mixture (u1^2 + u2^2)/2 over ring sites"
+  },
+  "objective_minima_summary": {
+    "H_avg_u1_v1_u2_v2": {
+      "description": "Average Shannon entropy of squared site-amplitudes for (u1,v1,u2,v2) on the 12-octave ring site basis",
+      "summary": {
+        "min_value": 2.1666495656405935,
+        "max_value": 2.1866587738603513,
+        "range": 0.020009208219757824,
+        "near_min_tol": 1e-06,
+        "near_min_index_count": 13,
+        "cluster_count": 13,
+        "cluster_centers_theta": [
+          0.5235987755982989,
+          1.0471975511965979,
+          1.5707963267948966,
+          2.0943951023931957,
+          2.6179938779914944,
+          3.141592653589793,
+          3.6651914291880923,
+          4.188790204786391,
+          4.71238898038469,
+          5.235987755982989,
+          5.759586531581288,
+          6.283185307179586,
+          0.0
+        ]
+      }
+    },
+    "symKL_u1_u2": {
+      "description": "Symmetric KL divergence between squared site-amplitude distributions of u1 and u2",
+      "summary": {
+        "min_value": 1.196382599945187,
+        "max_value": 23.079660440550903,
+        "range": 21.883277840605714,
+        "near_min_tol": 2.1883277840605714e-05,
+        "near_min_index_count": 12,
+        "cluster_count": 4,
+        "cluster_centers_theta": [
+          0.9416051314509408,
+          2.1999875221388523,
+          4.083197785040734,
+          5.341580175728645
+        ]
+      }
+    },
+    "symKL_u1_v2": {
+      "description": "Symmetric KL divergence between squared site-amplitude distributions of u1 and v2",
+      "summary": {
+        "min_value": 1.1963825999451871,
+        "max_value": 23.07966044055091,
+        "range": 21.88327784060572,
+        "near_min_tol": 2.188327784060572e-05,
+        "near_min_index_count": 12,
+        "cluster_count": 4,
+        "cluster_centers_theta": [
+          0.6291911953439558,
+          2.5124014582458374,
+          3.7707838489337493,
+          5.6539941118356305
+        ]
+      }
+    },
+    "H_mix_u1_u2": {
+      "description": "Shannon entropy of the equal-weight mixture (u1^2 + u2^2)/2 over ring sites",
+      "summary": {
+        "min_value": 2.282174095733918,
+        "max_value": 2.3693821196946763,
+        "range": 0.08720802396075822,
+        "near_min_tol": 1e-06,
+        "near_min_index_count": 2,
+        "cluster_count": 2,
+        "cluster_centers_theta": [
+          1.5707963267948966,
+          4.71238898038469
+        ]
+      }
+    }
+  },
+  "objective_rows_compact": [
+    {
+      "objective_id": "H_avg_u1_v1_u2_v2",
+      "min_value": 2.1666495656405935,
+      "cluster_count": 13,
+      "cluster_centers_theta": [
+        0.5235987755982989,
+        1.0471975511965979,
+        1.5707963267948966,
+        2.0943951023931957,
+        2.6179938779914944,
+        3.141592653589793,
+        3.6651914291880923,
+        4.188790204786391,
+        4.71238898038469,
+        5.235987755982989,
+        5.759586531581288,
+        6.283185307179586,
+        0.0
+      ]
+    },
+    {
+      "objective_id": "symKL_u1_u2",
+      "min_value": 1.196382599945187,
+      "cluster_count": 4,
+      "cluster_centers_theta": [
+        0.9416051314509408,
+        2.1999875221388523,
+        4.083197785040734,
+        5.341580175728645
+      ]
+    },
+    {
+      "objective_id": "symKL_u1_v2",
+      "min_value": 1.1963825999451871,
+      "cluster_count": 4,
+      "cluster_centers_theta": [
+        0.6291911953439558,
+        2.5124014582458374,
+        3.7707838489337493,
+        5.6539941118356305
+      ]
+    },
+    {
+      "objective_id": "H_mix_u1_u2",
+      "min_value": 2.282174095733918,
+      "cluster_count": 2,
+      "cluster_centers_theta": [
+        1.5707963267948966,
+        4.71238898038469
+      ]
+    }
+  ],
+  "verdict": {
+    "any_objective_unique_on_grid": false,
+    "statement": "On the audited dense theta grid, the tested naive Shannon-type objective candidates (site-amplitude entropies and simple KL-based divergences) do not yield a unique global minimizer on the QW-2191 O(2) family. Therefore these naive Shannon objective forms do not, by themselves, supply a strict-core canonical O(2)-cut ingredient."
+  },
+  "hard_limits": [
+    "Audit only: does not export a strict-core selector ingredient.",
+    "Does not discharge QW-2191.",
+    "Does not claim a strict Shannon symmetry-breaking law exists.",
+    "Does not discharge T165 (Shannon symmetry-breaking selector ingredient target).",
+    "Does not claim strict-core theta export or ToE closure."
+  ],
+  "no_false_pass": true
+}

@@ -38,6 +38,10 @@ This probe answers only:
 7. `P399`
    - “time-arrow selector / ontological symmetry breaking” is not exported as strict core and cannot clear `QW-2191`
      non-claims by rhetoric.
+8. `P423`
+   - naive Shannon-type objective candidates on the `QW-2191` `O(2)` family do not yield a unique minimizer on a dense
+     audit grid; therefore the missing `J_shannon_v1` (if it exists) must be richer than simple site-amplitude entropy/KL
+     slogans.
 
 ## Audit findings
 
@@ -74,6 +78,10 @@ In particular, nothing presently exported:
 Therefore the “Shannon symmetry-breaking selector discharges QW‑2191” move is not admissible as a strict-core claim
 on the current repo state.
 
+`P423` additionally shows that several *naive* Shannon objective shapes (built from squared site-amplitudes on the
+12-octave scaffold) do vary with `theta` but still do **not** produce a unique minimizer; multiple near-minimum
+clusters remain. So even at the “objective shape” level, the slogan needs a more specific typed construction.
+
 ### 3) Exact missing object (next strict move)
 
 The strict missing object can be named precisely as `T165`:
@@ -97,4 +105,3 @@ Shannon symmetry-breaking is NOT exported as a strict-core QW-2191 selector ingr
 
 Strict next step (if pursued) is to discharge T165 by exporting a typed strict Shannon objective + uniqueness theorem.
 ```
-
