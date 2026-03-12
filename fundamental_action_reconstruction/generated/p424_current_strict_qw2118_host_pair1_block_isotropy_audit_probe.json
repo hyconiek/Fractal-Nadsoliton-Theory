@@ -1,0 +1,57 @@
+{
+  "probe_id": "P424_CURRENT_STRICT_QW2118_HOST_PAIR1_BLOCK_ISOTROPY_AUDIT_PROBE",
+  "as_of": "2026-03-12",
+  "no_false_pass": true,
+  "sources": {
+    "q2118": "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2118_ktotal_spectral_tripartition_gate.json",
+    "q2124": "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2124_scalar_vacuum_closure_branch_resolved_gate.json",
+    "p10": "fundamental_action_reconstruction/generated/p10_existing_kernel_feedback_to_kobs_rerun_after_explicit_current_pair_chain.json"
+  },
+  "host_operator": {
+    "symbol": "A_host = K_total + m0^2 I",
+    "n_octaves": 12,
+    "broken_floor_m0_sq": 1.013551972358388,
+    "pair1_basis_order": [
+      "c1",
+      "s1"
+    ],
+    "pair1_block": [
+      [
+        1.9197380969174072,
+        5.144911710811878e-17
+      ],
+      [
+        5.144911710811878e-17,
+        1.9197380969174067
+      ]
+    ],
+    "Delta_1": [
+      4.440892098500626e-16,
+      5.144911710811878e-17
+    ],
+    "tolerance": 1e-12,
+    "is_isotropic_within_tolerance": true
+  },
+  "comparison": {
+    "p10_loaded": true,
+    "p10_current_pair_h3_block": {
+      "matrix": [
+        [
+          0.0010451746216248107,
+          -0.00038749969372490665
+        ],
+        [
+          -0.00038749969372490665,
+          0.0001485568080561309
+        ]
+      ],
+      "Delta_1": [
+        0.0008966178135686798,
+        -0.00038749969372490665
+      ]
+    },
+    "host_pair1_can_equal_p10_block": false,
+    "reason_if_not_equal": "host_pair1_is_isotropic_but_p10_block_is_anisotropic"
+  },
+  "theorem_pointer": "N465"
+}
