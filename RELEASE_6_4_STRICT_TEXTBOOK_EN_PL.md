@@ -18,7 +18,7 @@
 
 ## 0) Delta Since Release 6.3
 
-Release 6.4 adds one **new strict structural closure** around the `QW-2191` uniqueness obstruction:
+Release 6.4 adds **new strict structural closures** around the `QW-2191` uniqueness obstruction:
 
 1. the certified translation-invariant host operator is **provably isotropic** on `pair1 = span{c1,s1}` and cannot
    cut the `O(2)` family (`N465`, audited by `P424`),
@@ -27,6 +27,12 @@ Release 6.4 adds one **new strict structural closure** around the `QW-2191` uniq
 3. for `n=12`, the relevant diagonal mode‑2 defect reduces to **six opposite-pair sums**
    `S_k := d_k + d_{k+6}` (exactly the six classes already exported by `R18`), hence the strict `pair1` diagonal
    `O(2)`-cut question reduces to one explicit checkable complex linear combination (`N467`, persisted as `P426`).
+4. if `F2(d)≠0`, the induced `pair1` diagonal axis/eigenbasis is explicit and canonical:
+   $\theta_*=\frac12\,\mathrm{atan2}(\mathrm{Im}\,F_2,\ \mathrm{Re}\,F_2)$ (`N468`, audited by `P427`),
+5. the strict sigma-int FR-derived $\mathbb{Z}_2$ parity sign mask $b_k:=(-1)^k$ has **zero** mode‑2 defect
+   $F_2(b)=0$, hence cannot cut `O(2)` on `pair1` by itself (`N469`, audited by `P428`),
+6. any +3-shift-invariant diagonal profile ($d_{k+3}=d_k$ on `n=12`) has **zero** mode‑2 defect $F_2(d)=0$, hence
+   cannot cut `O(2)` on `pair1` (`N470`, audited by `P429`).
 
 This is a *reduction*, not a discharge: it makes the “physical accelerator of choice” claim checkable without
 introducing new hidden slots, but it does not yet provide strict-derived diagonal coefficient values.
@@ -43,6 +49,11 @@ introducing new hidden slots, but it does not yet provide strict-derived diagona
    sector with `F2(d) ≠ 0` (`N466`).
 4. For the canonical FIN local diagonal residual sector on the 12-slot carrier, the full `pair1` diagonal `O(2)`-cut
    condition reduces to a 6-class mode‑2 defect expression (no hidden “choose a site” slot): `N467/P426`.
+5. If such a diagonal cut exists (`F2(d)≠0`), the diagonalization axis on `pair1` is canonical and computed directly
+   from `F2(d)` (`N468/P427`).
+6. Two common “symmetry breaking” slogans are now closed as diagonal `pair1` `O(2)`-cut sources:
+   - the FR parity sign mask $(-1)^k$ has `F2=0` (`N469/P428`),
+   - +3 shift invariance ($d_{k+3}=d_k$) forces `F2=0` (`N470/P429`).
 
 ### 1.2 What is still missing (the real frontier)
 
@@ -161,7 +172,7 @@ Equivalently, the `pair1` anisotropy signature is:
 
 $$
 \Delta_1(D) = (a_1-d_1,\ b_1) =
-\left(\frac{2}{n}\,\operatorname{Re}\,F_2(d),\ \frac{1}{n}\,\operatorname{Im}\,F_2(d)\right).
+\left(\frac{2}{n}\,\mathrm{Re}\,F_2(d),\ \frac{1}{n}\,\mathrm{Im}\,F_2(d)\right).
 $$
 
 So a diagonal/local sector breaks `O(2)` on `pair1` **iff** $F_2(d)\neq 0$.
@@ -212,13 +223,13 @@ $$
 Writing the six phase factors out yields the explicit reduction:
 
 $$
-\operatorname{Re}\,F_2
+\mathrm{Re}\,F_2
 =
 (S_0 - S_3) + \frac{1}{2}(S_1 - S_2 - S_4 + S_5),
 $$
 
 $$
-\operatorname{Im}\,F_2
+\mathrm{Im}\,F_2
 =
 \frac{\sqrt{3}}{2}(S_1 + S_2 - S_4 - S_5).
 $$
@@ -228,7 +239,7 @@ So the strict `pair1` diagonal `O(2)`-cut question for the canonical local diago
 $$
 F_2(d)\neq 0
 \quad\Longleftrightarrow\quad
-(\operatorname{Re}\,F_2,\ \operatorname{Im}\,F_2)\neq (0,0),
+(\mathrm{Re}\,F_2,\ \mathrm{Im}\,F_2)\neq (0,0),
 $$
 
 and it depends only on the **six** opposite-pair sums $S_k$.
@@ -253,7 +264,7 @@ $$
 
 with the certified floor $m_0^2 = 1.013551972358388$ (`R15`).
 
-`P426` persists the exact reduced expressions for $\operatorname{Re}\,F_2$ and $\operatorname{Im}\,F_2$ in terms of these six
+`P426` persists the exact reduced expressions for $\mathrm{Re}\,F_2$ and $\mathrm{Im}\,F_2$ in terms of these six
 exported classes.
 
 Concretely, identifying:
@@ -265,7 +276,7 @@ $$
 the reduction becomes a direct 6-class linear combination:
 
 $$
-\operatorname{Re}\,F_2
+\mathrm{Re}\,F_2
 =
 \Sigma_{0,6}
 \;+\;\frac{1}{2}\Sigma_{1,7}
@@ -276,7 +287,7 @@ $$
 $$
 
 $$
-\operatorname{Im}\,F_2
+\mathrm{Im}\,F_2
 =
 \frac{\sqrt{3}}{2}\left(\Sigma_{1,7}+\Sigma_{2,8}-\Sigma_{4,10}-\Sigma_{5,11}\right).
 $$
@@ -284,10 +295,20 @@ $$
 And the induced `pair1` diagonal `O(2)`-cut signature is:
 
 $$
-a_1-d_1=\frac{1}{6}\operatorname{Re}\,F_2,
+a_1-d_1=\frac{1}{6}\mathrm{Re}\,F_2,
 \qquad
-b_1=\frac{1}{12}\operatorname{Im}\,F_2.
+b_1=\frac{1}{12}\mathrm{Im}\,F_2.
 $$
+
+### 6.3 Two strict negative closures (what does *not* cut `O(2)` on `pair1`)
+
+Two strict structural closures now eliminate common candidate stories for a diagonal/local `pair1` `O(2)` cut:
+
+1. **FR parity sign mask cannot cut `O(2)` diagonally on `pair1`:** for the $n=12$ parity mask
+   $b_k:=(-1)^k$, one has $F_2(b)=0$ (`N469`, audited in `P428`), hence no diagonal `pair1` `O(2)` cut can be supplied
+   by a profile of the form $a+c\,(-1)^k$.
+2. **+3 shift invariance kills the mode‑2 defect:** if a diagonal profile satisfies $d_{k+3}=d_k$ (indices mod $12$),
+   then $F_2(d)=0$ (`N470`, audited in `P429`), hence it cannot cut `O(2)` on `pair1`.
 
 ## 7) The “most honest next move” after Release 6.4 (strict)
 
@@ -331,7 +352,7 @@ The values (in `psi0..psi11` order) are:
 
 ## 0) Zmiana względem Release 6.3
 
-Release 6.4 dodaje jedno **nowe ścisłe domknięcie strukturalne** wokół przeszkody unikatowości `QW-2191`:
+Release 6.4 dodaje **nowe ścisłe domknięcia strukturalne** wokół przeszkody unikatowości `QW-2191`:
 
 1. certyfikowany, translacyjnie niezmienniczy operator hosta jest **ściśle izotropowy** na
    `pair1 = span{c1,s1}` i nie może ciąć rodziny `O(2)` (`N465`, audit `P424`),
@@ -340,6 +361,12 @@ Release 6.4 dodaje jedno **nowe ścisłe domknięcie strukturalne** wokół prze
 3. dla `n=12` defekt trybu 2 redukuje się do **6 sum par przeciwległych**
    `S_k := d_k + d_{k+6}` (dokładnie te 6 klas, które już eksportuje `R18`), więc ścisłe pytanie o cięcie `O(2)` na
    `pair1` redukuje się do jednego jawnego wyrażenia zespolonego (`N467`, artefakt `P426`).
+4. jeśli `F2(d)≠0`, to oś/diagionalizacja na `pair1` jest kanoniczna i wyliczalna bez dodatkowych slotów:
+   $\theta_*=\frac12\,\operatorname{atan2}(\mathrm{Im}\,F_2,\ \mathrm{Re}\,F_2)$ (`N468`, audit `P427`),
+5. ścisła, FR‑pochodna maska parzystości $\mathbb{Z}_2$ $b_k:=(-1)^k$ ma **zerowy** defekt trybu 2:
+   $F_2(b)=0$, więc sama nie może ciąć `O(2)` na `pair1` (`N469`, audit `P428`),
+6. każdy profil diagonalny niezmienniczy względem przesunięcia o +3 ($d_{k+3}=d_k$ dla `n=12`) ma **zerowy** defekt
+   trybu 2 $F_2(d)=0$, więc nie może ciąć `O(2)` na `pair1` (`N470`, audit `P429`).
 
 To jest *redukcja*, nie rozładowanie: sprawia, że hasło “fizyczny akcelerator wyboru” staje się sprawdzalnym defektem,
 ale nie dostarcza jeszcze strict-derived wartości współczynników diagonalnych.
@@ -356,6 +383,11 @@ ale nie dostarcza jeszcze strict-derived wartości współczynników diagonalnyc
    z sektora diagonalnego/lokalnego z `F2(d) ≠ 0` (`N466`).
 4. Dla kanonicznego sektora diagonalnego FIN na nośniku 12-slotowym, warunek `F2(d) ≠ 0` redukuje się do 6 klas z `R18`
    (`N467/P426`) – bez wprowadzania ukrytego “wyboru punktu” na pierścieniu.
+5. Jeżeli takie cięcie diagonalne istnieje (`F2(d)≠0`), to oś/diagionalizacja na `pair1` jest kanoniczna i wylicza się
+   wprost z `F2(d)` (`N468/P427`).
+6. Dwa częste slogany o „łamaniu symetrii” są teraz zamknięte jako źródła diagonalnego cięcia `O(2)` na `pair1`:
+   - maska parzystości FR $(-1)^k$ ma `F2=0` (`N469/P428`),
+   - niezmienniczość względem przesunięcia o +3 ($d_{k+3}=d_k$) wymusza `F2=0` (`N470/P429`).
 
 ### 1.2 Co pozostaje brakujące (prawdziwy frontier)
 
@@ -418,13 +450,13 @@ $$
 W szczególności:
 
 $$
-\operatorname{Re}\,F_2
+\mathrm{Re}\,F_2
 =
 (S_0 - S_3) + \frac{1}{2}(S_1 - S_2 - S_4 + S_5),
 $$
 
 $$
-\operatorname{Im}\,F_2
+\mathrm{Im}\,F_2
 =
 \frac{\sqrt{3}}{2}(S_1 + S_2 - S_4 - S_5).
 $$
@@ -435,7 +467,7 @@ $$
 Konkretnie (dla identyfikacji `S_0=\Sigma_{0,6}`, ..., `S_5=\Sigma_{5,11}`):
 
 $$
-\operatorname{Re}\,F_2
+\mathrm{Re}\,F_2
 =
 \Sigma_{0,6}
 \;+\;\frac{1}{2}\Sigma_{1,7}
@@ -446,7 +478,7 @@ $$
 $$
 
 $$
-\operatorname{Im}\,F_2
+\mathrm{Im}\,F_2
 =
 \frac{\sqrt{3}}{2}\left(\Sigma_{1,7}+\Sigma_{2,8}-\Sigma_{4,10}-\Sigma_{5,11}\right).
 $$
@@ -454,10 +486,20 @@ $$
 Oraz:
 
 $$
-a_1-d_1=\frac{1}{6}\operatorname{Re}\,F_2,
+a_1-d_1=\frac{1}{6}\mathrm{Re}\,F_2,
 \qquad
-b_1=\frac{1}{12}\operatorname{Im}\,F_2.
+b_1=\frac{1}{12}\mathrm{Im}\,F_2.
 $$
+
+### 5.1 Dwa ścisłe domknięcia negatywne (co *nie* tnie `O(2)` na `pair1`)
+
+Dwa ścisłe fakty strukturalne eliminują częste kandydackie historie o diagonalnym/lokalnym cięciu `O(2)` na `pair1`:
+
+1. **Maska parzystości FR nie tnie `O(2)` diagonalnie na `pair1`:** dla maski $n=12$
+   $b_k:=(-1)^k$ zachodzi $F_2(b)=0$ (`N469`, audit `P428`), więc profil postaci $a+c\,(-1)^k$ nie może sam dostarczyć
+   diagonalnego cięcia `O(2)` na `pair1`.
+2. **Niezmienniczość względem przesunięcia o +3 zabija defekt trybu 2:** jeżeli profil diagonalny spełnia
+   $d_{k+3}=d_k$ (indeksy mod $12$), to $F_2(d)=0$ (`N470`, audit `P429`), więc nie może ciąć `O(2)` na `pair1`.
 
 ## 6) Najuczciwszy następny ruch (strict)
 
