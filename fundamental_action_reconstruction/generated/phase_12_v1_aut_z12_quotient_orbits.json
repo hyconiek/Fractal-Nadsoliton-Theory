@@ -1,0 +1,86 @@
+{
+  "object": "Phase_12_v1_aut_z12_quotient_v1",
+  "status": "actual_exported_strict_quotient_orbit_decomposition_object",
+  "as_of": "2026-03-12",
+  "intent": "Export the explicit orbit decomposition of Phase_12_v1 under the Aut(Z_12_v1) gauge action, and export the quotient carrier Phase_12_v1/Aut_Z12_v1 as a typed strict object for quotient-safe canonicity discipline in the typed AX20/T162 lane.",
+  "inputs": {
+    "phase_group": "Phase_12_v1",
+    "aut_group": "Aut_Z12_v1",
+    "aut_action_on_phase": "alpha_u(ζ^k) = ζ^(u*k mod 12)"
+  },
+  "orbits": [
+    {
+      "id": "O_0",
+      "representative": "zeta^0",
+      "members": ["zeta^0"],
+      "size": 1
+    },
+    {
+      "id": "O_6",
+      "representative": "zeta^6",
+      "members": ["zeta^6"],
+      "size": 1
+    },
+    {
+      "id": "O_1",
+      "representative": "zeta^1",
+      "members": ["zeta^1", "zeta^5", "zeta^7", "zeta^11"],
+      "size": 4
+    },
+    {
+      "id": "O_2",
+      "representative": "zeta^2",
+      "members": ["zeta^2", "zeta^10"],
+      "size": 2
+    },
+    {
+      "id": "O_3",
+      "representative": "zeta^3",
+      "members": ["zeta^3", "zeta^9"],
+      "size": 2
+    },
+    {
+      "id": "O_4",
+      "representative": "zeta^4",
+      "members": ["zeta^4", "zeta^8"],
+      "size": 2
+    }
+  ],
+  "quotient_carrier": {
+    "orbit_ids": ["O_0", "O_6", "O_1", "O_2", "O_3", "O_4"],
+    "cardinality": 6
+  },
+  "quotient_map_q": {
+    "zeta^0": "O_0",
+    "zeta^1": "O_1",
+    "zeta^2": "O_2",
+    "zeta^3": "O_3",
+    "zeta^4": "O_4",
+    "zeta^5": "O_1",
+    "zeta^6": "O_6",
+    "zeta^7": "O_1",
+    "zeta^8": "O_4",
+    "zeta^9": "O_3",
+    "zeta^10": "O_2",
+    "zeta^11": "O_1"
+  },
+  "invariants": {
+    "parity_character_descends": true,
+    "chi_parity_on_orbits": {
+      "O_0": "+1",
+      "O_6": "+1",
+      "O_1": "-1",
+      "O_2": "+1",
+      "O_3": "-1",
+      "O_4": "+1"
+    },
+    "notes": "chi_parity_Phase_12_v1(ζ^k)=(-1)^(k mod 2) is Aut-invariant, hence constant on orbits and factors through q."
+  },
+  "hard_limits": [
+    "Does not provide any canonical embedding Z_12_v1 -> Phase_12_v1 beyond quotient-safe invariance language.",
+    "Does not define any density operator, Berry/holonomy, or theta export.",
+    "Does not claim O(2)-cut closure nor QW-2191 discharge.",
+    "Does not claim ToE closure."
+  ]
+}
+
