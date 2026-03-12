@@ -256,6 +256,39 @@ with the certified floor $m_0^2 = 1.013551972358388$ (`R15`).
 `P426` persists the exact reduced expressions for $\mathrm{Re}\,F_2$ and $\mathrm{Im}\,F_2$ in terms of these six
 exported classes.
 
+Concretely, identifying:
+
+$$
+S_0=\Sigma_{0,6},\ S_1=\Sigma_{1,7},\ S_2=\Sigma_{2,8},\ S_3=\Sigma_{3,9},\ S_4=\Sigma_{4,10},\ S_5=\Sigma_{5,11},
+$$
+
+the reduction becomes a direct 6-class linear combination:
+
+$$
+\mathrm{Re}\,F_2
+=
+\Sigma_{0,6}
+\;+\;\frac{1}{2}\Sigma_{1,7}
+\;-\;\frac{1}{2}\Sigma_{2,8}
+\;-\;\Sigma_{3,9}
+\;-\;\frac{1}{2}\Sigma_{4,10}
+\;+\;\frac{1}{2}\Sigma_{5,11},
+$$
+
+$$
+\mathrm{Im}\,F_2
+=
+\frac{\sqrt{3}}{2}\left(\Sigma_{1,7}+\Sigma_{2,8}-\Sigma_{4,10}-\Sigma_{5,11}\right).
+$$
+
+And the induced `pair1` diagonal `O(2)`-cut signature is:
+
+$$
+a_1-d_1=\frac{1}{6}\mathrm{Re}\,F_2,
+\qquad
+b_1=\frac{1}{12}\mathrm{Im}\,F_2.
+$$
+
 ## 7) The “most honest next move” after Release 6.4 (strict)
 
 Release 6.4 turns a vague selector slogan into a single strict checkable question:
@@ -273,6 +306,24 @@ To proceed in strict core (without false pass), the repo must export at least on
 
 Until such an ingredient is exported, no strict-core `pair1` `O(2)` cut, no strict-core theta export, and no
 `QW-2191` discharge can be claimed.
+
+## 8) Appendix: exported `pair1/pair2` mode-basis vectors on the 12-slot carrier (data)
+
+For completeness, the repo exports explicit numeric vectors for the canonical 12-slot real Fourier mode scaffold
+`(c1,s1,c2,s2)` as columns of the certified transport packet:
+
+- `fundamental_action_reconstruction/generated/r11_symmetry_certified_declared_control_transport_packet_for_psi_block_route.json`
+
+The values (in `psi0..psi11` order) are:
+
+```json
+{
+  "c1": [0.408248290463863, 0.353553390593274, 0.204124145231932, 0.0, -0.204124145231931, -0.353553390593274, -0.408248290463863, -0.353553390593274, -0.204124145231932, 0.0, 0.204124145231932, 0.353553390593274],
+  "s1": [0.0, 0.204124145231931, 0.353553390593274, 0.408248290463863, 0.353553390593274, 0.204124145231931, 0.0, -0.204124145231931, -0.353553390593274, -0.408248290463863, -0.353553390593274, -0.204124145231932],
+  "c2": [0.408248290463863, 0.204124145231932, -0.204124145231931, -0.408248290463863, -0.204124145231932, 0.204124145231932, 0.408248290463863, 0.204124145231932, -0.204124145231931, -0.408248290463863, -0.204124145231931, 0.204124145231931],
+  "s2": [0.0, 0.353553390593274, 0.353553390593274, 0.0, -0.353553390593274, -0.353553390593274, 0.0, 0.353553390593274, 0.353553390593274, 0.0, -0.353553390593274, -0.353553390593274]
+}
+```
 
 ---
 
@@ -381,6 +432,33 @@ $$
 `R18` eksportuje dokładnie te 6 sum jako klasy `\Sigma_{k,k+6}`, a `P426` zapisuje jawne wyrażenia dla
 `Re(F2)` i `Im(F2)` wprost w tym języku.
 
+Konkretnie (dla identyfikacji `S_0=\Sigma_{0,6}`, ..., `S_5=\Sigma_{5,11}`):
+
+$$
+\mathrm{Re}\,F_2
+=
+\Sigma_{0,6}
+\;+\;\frac{1}{2}\Sigma_{1,7}
+\;-\;\frac{1}{2}\Sigma_{2,8}
+\;-\;\Sigma_{3,9}
+\;-\;\frac{1}{2}\Sigma_{4,10}
+\;+\;\frac{1}{2}\Sigma_{5,11},
+$$
+
+$$
+\mathrm{Im}\,F_2
+=
+\frac{\sqrt{3}}{2}\left(\Sigma_{1,7}+\Sigma_{2,8}-\Sigma_{4,10}-\Sigma_{5,11}\right).
+$$
+
+Oraz:
+
+$$
+a_1-d_1=\frac{1}{6}\mathrm{Re}\,F_2,
+\qquad
+b_1=\frac{1}{12}\mathrm{Im}\,F_2.
+$$
+
 ## 6) Najuczciwszy następny ruch (strict)
 
 Release 6.4 sprowadza pytanie o “akcelerator wyboru” do jednego ścisłego testu:
@@ -392,3 +470,17 @@ czy kanoniczny sektor diagonalny FIN ma niezerowy defekt trybu 2: F2(d) ≠ 0 ?
 Żeby iść dalej w ścisłym rdzeniu (bez fałszywego PASS), repo musi wyeksportować strict-derived wartości/relacje
 wystarczające do rozstrzygnięcia tego testu (albo dowód `F2(d)=0`).
 
+## 7) Aneks: wyeksportowane wektory bazy trybów na nośniku 12-slotowym (dane)
+
+Repo eksportuje jawne wartości wektorów `(c1,s1,c2,s2)` (kolejność `psi0..psi11`) w:
+
+- `fundamental_action_reconstruction/generated/r11_symmetry_certified_declared_control_transport_packet_for_psi_block_route.json`
+
+```json
+{
+  "c1": [0.408248290463863, 0.353553390593274, 0.204124145231932, 0.0, -0.204124145231931, -0.353553390593274, -0.408248290463863, -0.353553390593274, -0.204124145231932, 0.0, 0.204124145231932, 0.353553390593274],
+  "s1": [0.0, 0.204124145231931, 0.353553390593274, 0.408248290463863, 0.353553390593274, 0.204124145231931, 0.0, -0.204124145231931, -0.353553390593274, -0.408248290463863, -0.353553390593274, -0.204124145231932],
+  "c2": [0.408248290463863, 0.204124145231932, -0.204124145231931, -0.408248290463863, -0.204124145231932, 0.204124145231932, 0.408248290463863, 0.204124145231932, -0.204124145231931, -0.408248290463863, -0.204124145231931, 0.204124145231931],
+  "s2": [0.0, 0.353553390593274, 0.353553390593274, 0.0, -0.353553390593274, -0.353553390593274, 0.0, 0.353553390593274, 0.353553390593274, 0.0, -0.353553390593274, -0.353553390593274]
+}
+```
