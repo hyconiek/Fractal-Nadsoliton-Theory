@@ -113,3 +113,8 @@ class, $F_2(d)$ is **underdetermined**: both $F_2(d)=0$ and $F_2(d)\neq 0$ remai
 Therefore `T166` is not discharged today and must be attacked by exporting additional strict-derived structure that
 decides the canonical diagonal residual profile.
 
+Additionally, `P432` audits that no already-exported **numeric value instantiation** exists in the repo that would
+decide the `P426` expression anyway. So `T166` remains open both:
+
+1. at the coefficient-class level (`N472/P431` underdetermination), and
+2. at the repo-state “value instantiation present?” level (`P432` scan).
