@@ -1,0 +1,124 @@
+{
+  "probe_id": "P431_CURRENT_STRICT_CANONICAL_LOCAL_DIAGONAL_MODE2_DEFECT_UNDERDETERMINATION_AUDIT_PROBE",
+  "as_of": "2026-03-12",
+  "no_false_pass": true,
+  "n_octaves": 12,
+  "tolerance": 1e-12,
+  "exported_host_floor_m0_sq": 1.013551972358388,
+  "witness_profiles": [
+    {
+      "name": "witness_F2_zero_constant_profile",
+      "diag_profile_d": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "F2": {
+        "Re": 0.0,
+        "Im": 0.0,
+        "abs": 0.0
+      },
+      "cuts_O2_on_pair1_by_N466": false,
+      "pair1_anisotropy_signature_from_N466": {
+        "a1_minus_d1": 0.0,
+        "b1": 0.0
+      },
+      "r15_realization_witness": {
+        "specialization": {
+          "g4_psi_k": 0.0,
+          "g6_psi_k": 0.0,
+          "gY_k": 0.0,
+          "vpsi_k": 0.0,
+          "vphi": 0.0
+        },
+        "implied_assignment": {
+          "m2_psi_k": [
+            1.013551972358388,
+            1.013551972358388,
+            1.013551972358388,
+            1.013551972358388,
+            1.013551972358388,
+            1.013551972358388,
+            1.013551972358388,
+            1.013551972358388,
+            1.013551972358388,
+            1.013551972358388,
+            1.013551972358388,
+            1.013551972358388
+          ]
+        },
+        "checks": {
+          "d_k_equals_m2_minus_m0_sq": true
+        }
+      }
+    },
+    {
+      "name": "witness_F2_nonzero_mode2_cos_profile",
+      "diag_profile_d": [
+        1.0,
+        0.5000000000000001,
+        -0.4999999999999998,
+        -1.0,
+        -0.5000000000000004,
+        0.5000000000000001,
+        1.0,
+        0.5000000000000006,
+        -0.4999999999999992,
+        -1.0,
+        -0.49999999999999983,
+        0.4999999999999991
+      ],
+      "F2": {
+        "Re": 5.999999999999999,
+        "Im": 8.326672684688674e-16,
+        "abs": 5.999999999999999
+      },
+      "cuts_O2_on_pair1_by_N466": true,
+      "pair1_anisotropy_signature_from_N466": {
+        "a1_minus_d1": 0.9999999999999998,
+        "b1": 6.938893903907228e-17
+      },
+      "r15_realization_witness": {
+        "specialization": {
+          "g4_psi_k": 0.0,
+          "g6_psi_k": 0.0,
+          "gY_k": 0.0,
+          "vpsi_k": 0.0,
+          "vphi": 0.0
+        },
+        "implied_assignment": {
+          "m2_psi_k": [
+            2.013551972358388,
+            1.5135519723583881,
+            0.5135519723583881,
+            0.013551972358387898,
+            0.5135519723583875,
+            1.5135519723583881,
+            2.013551972358388,
+            1.5135519723583886,
+            0.5135519723583887,
+            0.013551972358387898,
+            0.5135519723583881,
+            1.513551972358387
+          ]
+        },
+        "checks": {
+          "d_k_equals_m2_minus_m0_sq": true
+        }
+      }
+    }
+  ],
+  "notes": [
+    "This probe demonstrates underdetermination of F2(d) at the level of the exported R15 coefficient class.",
+    "It does not claim any physical admissibility of the witness assignments (no vacuum/EOM solving)."
+  ]
+}

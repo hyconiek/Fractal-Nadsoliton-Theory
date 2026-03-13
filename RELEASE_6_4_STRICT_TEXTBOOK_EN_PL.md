@@ -33,6 +33,9 @@ Release 6.4 adds **new strict structural closures** around the `QW-2191` uniquen
    $F_2(b)=0$, hence cannot cut `O(2)` on `pair1` by itself (`N469`, audited by `P428`),
 6. any +3-shift-invariant diagonal profile ($d_{k+3}=d_k$ on `n=12`) has **zero** mode‑2 defect $F_2(d)=0$, hence
    cannot cut `O(2)` on `pair1` (`N470`, audited by `P429`).
+7. for `n=12`, if a diagonal profile is `Aut(Z_12)`-invariant (constant on the 6 quotient orbits from `N455`), then
+   its mode‑2 defect is forced **real** and reduces to one explicit orbit-linear combination; hence the diagonal `pair1`
+   `O(2)`-cut question collapses to one real scalar check on six orbit values (`N471`, audited by `P430`).
 
 This is a *reduction*, not a discharge: it makes the “physical accelerator of choice” claim checkable without
 introducing new hidden slots, but it does not yet provide strict-derived diagonal coefficient values.
@@ -54,6 +57,9 @@ introducing new hidden slots, but it does not yet provide strict-derived diagona
 6. Two common “symmetry breaking” slogans are now closed as diagonal `pair1` `O(2)`-cut sources:
    - the FR parity sign mask $(-1)^k$ has `F2=0` (`N469/P428`),
    - +3 shift invariance ($d_{k+3}=d_k$) forces `F2=0` (`N470/P429`).
+7. If the diagonal/local profile is additionally `Aut(Z_12)`-invariant (a quotient-safe, no-hidden-slot condition),
+   then `Im(F2)=0` and the `pair1` diagonal `O(2)`-cut criterion reduces to one real scalar check on six orbit values
+   (`N471/P430`).
 
 ### 1.2 What is still missing (the real frontier)
 

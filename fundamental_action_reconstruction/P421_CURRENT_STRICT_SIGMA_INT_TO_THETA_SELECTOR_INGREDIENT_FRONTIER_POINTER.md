@@ -118,6 +118,9 @@ Independently of the sigma-int corridor class, the repo now exports three strict
 
 5. if a diagonal/local profile on `n=12` remains invariant under the declared +3 carrier shift (i.e. $d_{k+3}=d_k$),
    then its mode‑2 defect vanishes ($F_2(d)=0$) and it cannot cut `O(2)` on `pair1` (`N470`, audited in `P429`).
+6. if a diagonal/local profile on `n=12` is `Aut(Z_12)`-invariant (constant on the 6 quotient orbits from `N455`),
+   then its mode‑2 defect is forced real and reduces to one explicit orbit-linear combination; hence the `pair1`
+   diagonal `O(2)`-cut criterion becomes one real scalar check (`N471`, audited in `P430`).
 
 So any strict “physical accelerator of choice” story on `pair1` must eventually export a **strict-derived**
 non-translation-invariant diagonal/local profile (or equivalent) deciding this `F2(d) ≠ 0` condition, rather than
