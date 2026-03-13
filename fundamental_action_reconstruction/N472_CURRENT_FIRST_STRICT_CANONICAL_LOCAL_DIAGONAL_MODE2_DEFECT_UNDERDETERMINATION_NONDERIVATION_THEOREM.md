@@ -102,6 +102,10 @@ So, at the level of the currently exported coefficient class, $d$ (and hence $F_
 
 So both outcomes occur under admissible assignments inside the exported coefficient class.
 
+Moreover, both witness profiles are also `Aut(Z_12)`-invariant (constant on the 6 quotient orbits from `N455`), so the
+underdetermination persists even under quotient-safe Aut-invariance assumptions (cf. `N471`): the orbit-reduced scalar
+test does not become decided without additional strict-derived structure.
+
 ### Claim 3. Therefore `F2(d)≠0` for the canonical diagonal/local residual sector is not strict-derived on the current repo state.
 
 Because both $F_2(d)=0$ and $F_2(d)\neq 0$ remain compatible with the current exported coefficient class,
@@ -123,4 +127,3 @@ exporting additional strict-derived structure that decides $F_2(d)$ for the actu
 If one wants a strict-core diagonal/local `pair1` accelerator against `QW-2191`, the next honest move is to export
 strict-derived diagonal coefficient/value instantiation (or strict invariance constraints) sufficient to decide
 $F_2(d)$ for the canonical diagonal residual sector, rather than promoting an undetermined defect into strict core.
-

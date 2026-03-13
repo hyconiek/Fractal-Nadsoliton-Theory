@@ -41,6 +41,9 @@ It only audits *underdetermination* at the level of the currently exported coeff
 
 each realized by an explicit assignment inside the exported `R15` coefficient class (using only free local parameters).
 
+Both witness profiles are also `Aut(Z_12)`-invariant (constant on the 6 quotient orbits from `N455`), so the
+underdetermination persists even under quotient-safe Aut-invariance assumptions (`N471`).
+
 Persisted artifacts:
 
 - `fundamental_action_reconstruction/generated/p431_current_strict_canonical_local_diagonal_mode2_defect_underdetermination_audit_probe.json`
@@ -59,4 +62,3 @@ Therefore, without additional strict-derived coefficient instantiation or constr
 To turn the diagonal accelerator route into a strict-core ingredient, the repo must export *additional strict-derived*
 structure that decides `F2(d)` for the canonical diagonal/local sector (e.g. coefficient/value instantiation, or a
 theorem-level invariance forcing `F2(d)=0`).
-

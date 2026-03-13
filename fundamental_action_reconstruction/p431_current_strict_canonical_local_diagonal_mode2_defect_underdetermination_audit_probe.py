@@ -33,6 +33,20 @@ def mode2_cos_profile(n: int) -> list[float]:
     return [float(math.cos(4.0 * math.pi * k / n)) for k in range(n)]
 
 
+def is_aut_z12_invariant_profile(d: list[float], *, tol: float) -> bool:
+    # N455 orbit decomposition of indices k mod 12 under Aut(Z_12) = {1,5,7,11}:
+    # {0}, {6}, {1,5,7,11}, {2,10}, {3,9}, {4,8}.
+    if len(d) != 12:
+        return False
+    orbits = ((0,), (6,), (1, 5, 7, 11), (2, 10), (3, 9), (4, 8))
+    for orbit in orbits:
+        ref = float(d[orbit[0]])
+        for k in orbit[1:]:
+            if abs(float(d[k]) - ref) > tol:
+                return False
+    return True
+
+
 def realize_via_r15_free_m2_only(d: list[float], *, m0_sq: float) -> dict[str, Any]:
     # R15 class: d_k = (3*g4_k*vpsi_k^2 + 5*g6_k*vpsi_k^4 + 2*gY_k*vphi^2 + m2_k) - m0^2.
     # Witness specialization: set g4=g6=gY=0 and vpsi=vphi=0, so d_k = m2_k - m0^2.
@@ -80,6 +94,7 @@ def main() -> None:
                 "diag_profile_d": d,
                 "F2": {"Re": float(f2_val.real), "Im": float(f2_val.imag), "abs": float(abs(f2_val))},
                 "cuts_O2_on_pair1_by_N466": bool(abs(f2_val) > tol),
+                "aut_z12_invariant_profile_by_N455": is_aut_z12_invariant_profile(d, tol=tol),
                 "pair1_anisotropy_signature_from_N466": pair1_anisotropy_from_f2(f2_val, n),
                 "r15_realization_witness": realize_via_r15_free_m2_only(d, m0_sq=m0_sq),
             }
@@ -95,6 +110,7 @@ def main() -> None:
         "witness_profiles": rows,
         "notes": [
             "This probe demonstrates underdetermination of F2(d) at the level of the exported R15 coefficient class.",
+            "Both witness profiles are Aut(Z_12)-invariant (constant on the 6 quotient orbits from N455).",
             "It does not claim any physical admissibility of the witness assignments (no vacuum/EOM solving).",
         ],
     }
@@ -112,6 +128,7 @@ def main() -> None:
                 "F2_Re": row["F2"]["Re"],
                 "F2_Im": row["F2"]["Im"],
                 "cuts_O2_on_pair1_by_N466": row["cuts_O2_on_pair1_by_N466"],
+                "aut_z12_invariant_profile_by_N455": row["aut_z12_invariant_profile_by_N455"],
             }
             for row in rows
         ],
@@ -124,4 +141,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
