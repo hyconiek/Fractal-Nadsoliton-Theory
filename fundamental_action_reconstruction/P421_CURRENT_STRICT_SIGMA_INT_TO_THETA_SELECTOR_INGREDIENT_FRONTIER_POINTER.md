@@ -140,6 +140,9 @@ Additional current-state support artifacts (still no decision):
    the persisted `R18` packet).
 4. `P434` provides an explicit evaluation harness that computes `F2(d)`, its induced `pair1` anisotropy signature, and
    the canonical diagonalization angle `theta_*` once strict-derived values for the six opposite‑pair sums are exported.
+5. `N474` shows a strict conditional reduction: under constant-vacuum stationarity (exported canonical EoM) and
+   `vpsi_k ≠ 0`, the Yukawa combination cancels out of the canonical diagonal entry defining `d_k`, yielding a
+   Yukawa-free diagonal expression; `P435` audits this algebra numerically on a toy instantiation.
 
 So any strict “physical accelerator of choice” story on `pair1` must eventually export a **strict-derived**
 non-translation-invariant diagonal/local profile (or equivalent) deciding this `F2(d) ≠ 0` condition, rather than

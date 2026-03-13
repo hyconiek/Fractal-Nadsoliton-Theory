@@ -1,6 +1,6 @@
 # RELEASE 6.4 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.4.1  
+**Version:** 6.4.2  
 **Date:** 2026-03-13  
 **Branch:** `main`  
 **Predecessor:** Release 6.3 — Global Selector Capture Edition
@@ -44,6 +44,9 @@ Release 6.4 adds **new strict structural closures** around the `QW-2191` uniquen
 10. the mode‑2 defect can be recovered equivalently from the `R18` declared `pair1` entry system
    (`N473`, audited by `P433`), and an explicit evaluation harness is exported for when strict-derived opposite‑pair
    sums become available (`P434`).
+11. under constant-vacuum stationarity (exported canonical EoM) and `vpsi_k ≠ 0`, the Yukawa combination cancels out of
+   the canonical diagonal entry defining `d_k`, yielding a Yukawa-free diagonal expression (`N474`, toy-audited by
+   `P435`).
 
 This is a *reduction*, not a discharge: it makes the “physical accelerator of choice” claim checkable without
 introducing new hidden slots, but it does not yet provide strict-derived diagonal coefficient values. In particular,
@@ -402,6 +405,9 @@ Release 6.4 dodaje **nowe ścisłe domknięcia strukturalne** wokół przeszkody
 10. defekt trybu 2 można odzyskać równoważnie z układu wpisów `R18` dla zadeklarowanego bloku `pair1`
    (`N473`, audit `P433`), a jawny harness ewaluacyjny jest przygotowany na moment, gdy pojawią się strict-derived
    wartości 6 sum par przeciwległych (`P434`).
+11. przy stacjonarności stałej próżni (wyeksportowane kanoniczne EoM) i `vpsi_k ≠ 0`, kombinacja Yukawa znika z
+    kanonicznego wpisu diagonalnego definiującego `d_k`, dając Yukawa‑wolną postać wyrażenia diagonalnego (`N474`,
+    toy-audit `P435`).
 
 To jest *redukcja*, nie rozładowanie: sprawia, że hasło “fizyczny akcelerator wyboru” staje się sprawdzalnym defektem,
 ale nie dostarcza jeszcze strict-derived wartości współczynników diagonalnych. W szczególności `N472/P431` pokazują, że

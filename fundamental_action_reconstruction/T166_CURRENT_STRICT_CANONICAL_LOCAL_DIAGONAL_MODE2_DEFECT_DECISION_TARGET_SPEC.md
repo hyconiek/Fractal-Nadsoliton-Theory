@@ -118,3 +118,8 @@ decide the `P426` expression anyway. So `T166` remains open both:
 
 1. at the coefficient-class level (`N472/P431` underdetermination), and
 2. at the repo-state “value instantiation present?” level (`P432` scan).
+
+Finally, `N474/P435` add one strict conditional reduction (still not a decision): under constant-vacuum stationarity
+(exported canonical EoM) and `vpsi_k ≠ 0`, the Yukawa combination cancels out of the canonical diagonal entry defining
+`d_k`, yielding a Yukawa-free diagonal expression. This reduces the dependency set *once* a strict-derived vacuum/value
+object is exported, but it does not decide `F2(d)` today.
