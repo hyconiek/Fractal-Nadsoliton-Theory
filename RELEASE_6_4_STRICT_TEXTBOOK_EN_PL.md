@@ -36,9 +36,13 @@ Release 6.4 adds **new strict structural closures** around the `QW-2191` uniquen
 7. for `n=12`, if a diagonal profile is `Aut(Z_12)`-invariant (constant on the 6 quotient orbits from `N455`), then
    its mode‑2 defect is forced **real** and reduces to one explicit orbit-linear combination; hence the diagonal `pair1`
    `O(2)`-cut question collapses to one real scalar check on six orbit values (`N471`, audited by `P430`).
+8. on the current exported canonical FIN diagonal coefficient class (`R15`), `F2(d)` for the canonical local diagonal
+   residual sector is **underdetermined**: both `F2(d)=0` and `F2(d)≠0` remain compatible with current exports (`N472`,
+   audited by `P431`).
 
 This is a *reduction*, not a discharge: it makes the “physical accelerator of choice” claim checkable without
-introducing new hidden slots, but it does not yet provide strict-derived diagonal coefficient values.
+introducing new hidden slots, but it does not yet provide strict-derived diagonal coefficient values. In particular,
+`N472/P431` show the canonical coefficient class does not decide `F2(d)` on current exports.
 
 ## 1) One-Page Strict Status (6.4)
 
@@ -60,13 +64,16 @@ introducing new hidden slots, but it does not yet provide strict-derived diagona
 7. If the diagonal/local profile is additionally `Aut(Z_12)`-invariant (a quotient-safe, no-hidden-slot condition),
    then `Im(F2)=0` and the `pair1` diagonal `O(2)`-cut criterion reduces to one real scalar check on six orbit values
    (`N471/P430`).
+8. On the current canonical FIN diagonal coefficient class (`R15`), `F2(d)` for the canonical local diagonal residual
+   sector is **underdetermined** at the level of exports, hence no strict-core diagonal `pair1` `O(2)`-cut witness can
+   be promoted yet (`N472/P431`).
 
 ### 1.2 What is still missing (the real frontier)
 
 The repo still does **not** export:
 
 1. any strict-derived diagonal/local coefficient/value instantiation deciding whether the canonical local diagonal
-   sector has `F2(d) ≠ 0`,
+   sector has `F2(d) ≠ 0` (currently underdetermined on exports: `N472/P431`),
 2. any strict-core canonical theta-supply ingredient upgrading candidate representatives into strict core (`T159`),
 3. any global `QW-2191` discharge or ToE closure.
 
@@ -324,6 +331,9 @@ Release 6.4 turns a vague selector slogan into a single strict checkable questio
 Does the canonical FIN local diagonal residual sector have a nonzero mode-2 defect F2(d)?
 ```
 
+On the current repo state this question is **not** strictly decidable from the exported canonical coefficient class
+alone: `N472/P431` exhibit underdetermination (both outcomes remain compatible with current exports).
+
 To proceed in strict core (without false pass), the repo must export at least one of:
 
 1. **Strict-derived diagonal coefficient/value instantiation** sufficient to decide $F_2(d)\neq 0$, or
@@ -373,9 +383,16 @@ Release 6.4 dodaje **nowe ścisłe domknięcia strukturalne** wokół przeszkody
    $F_2(b)=0$, więc sama nie może ciąć `O(2)` na `pair1` (`N469`, audit `P428`),
 6. każdy profil diagonalny niezmienniczy względem przesunięcia o +3 ($d_{k+3}=d_k$ dla `n=12`) ma **zerowy** defekt
    trybu 2 $F_2(d)=0$, więc nie może ciąć `O(2)` na `pair1` (`N470`, audit `P429`).
+7. dla `n=12`, jeżeli profil diagonalny jest niezmienniczy względem `Aut(Z_12)` (stały na 6 orbitach ilorazowych z
+   `N455`), to defekt trybu 2 jest wymuszony jako **rzeczywisty** i redukuje się do jednego jawnego połączenia liniowego
+   6 wartości orbit; więc pytanie o cięcie `O(2)` redukuje się do jednego rzeczywistego testu (`N471`, audit `P430`).
+8. na obecnie wyeksportowanej kanonicznej klasie współczynników diagonalnych FIN (`R15`), `F2(d)` dla kanonicznego
+   sektora `D_local_residual` jest **niedookreślone**: zarówno `F2(d)=0` jak i `F2(d)≠0` pozostają zgodne z eksportami
+   (`N472`, audit `P431`).
 
 To jest *redukcja*, nie rozładowanie: sprawia, że hasło “fizyczny akcelerator wyboru” staje się sprawdzalnym defektem,
-ale nie dostarcza jeszcze strict-derived wartości współczynników diagonalnych.
+ale nie dostarcza jeszcze strict-derived wartości współczynników diagonalnych. W szczególności `N472/P431` pokazują, że
+kanoniczna klasa współczynników nie rozstrzyga `F2(d)` na obecnych eksportach.
 
 ## 1) Jednostronicowy stan ścisły (6.4)
 
@@ -394,13 +411,19 @@ ale nie dostarcza jeszcze strict-derived wartości współczynników diagonalnyc
 6. Dwa częste slogany o „łamaniu symetrii” są teraz zamknięte jako źródła diagonalnego cięcia `O(2)` na `pair1`:
    - maska parzystości FR $(-1)^k$ ma `F2=0` (`N469/P428`),
    - niezmienniczość względem przesunięcia o +3 ($d_{k+3}=d_k$) wymusza `F2=0` (`N470/P429`).
+7. Jeżeli profil diagonalny jest dodatkowo niezmienniczy względem `Aut(Z_12)` (warunek ilorazowo-bezpieczny, bez ukrytych
+   slotów), to `Im(F2)=0`, a kryterium diagonalnego cięcia `O(2)` na `pair1` redukuje się do jednego rzeczywistego testu
+   na 6 wartościach orbit (`N471/P430`).
+8. Na obecnie wyeksportowanej kanonicznej klasie współczynników diagonalnych FIN (`R15`), `F2(d)` dla kanonicznego
+   sektora `D_local_residual` jest **niedookreślone** na poziomie eksportów, więc nie można jeszcze promować ścisłego
+   diagonalnego świadka cięcia `O(2)` na `pair1` (`N472/P431`).
 
 ### 1.2 Co pozostaje brakujące (prawdziwy frontier)
 
 Repo nadal **nie** eksportuje:
 
 1. strict-derived instancji wartości/współczynników sektora diagonalnego wystarczającej do rozstrzygnięcia
-   `F2(d) ≠ 0`,
+   `F2(d) ≠ 0` (obecnie niedookreślone na eksportach: `N472/P431`),
 2. ścisłego składnika theta/selektora kanonicznie tnącego `O(2)` (`T159`),
 3. globalnego rozładowania `QW-2191` ani domknięcia ToE.
 
@@ -515,7 +538,10 @@ Release 6.4 sprowadza pytanie o “akcelerator wyboru” do jednego ścisłego t
 czy kanoniczny sektor diagonalny FIN ma niezerowy defekt trybu 2: F2(d) ≠ 0 ?
 ```
 
-Żeby iść dalej w ścisłym rdzeniu (bez fałszywego PASS), repo musi wyeksportować strict-derived wartości/relacje
+Na obecnym stanie repo test ten nie jest rozstrzygalny w ścisłym rdzeniu z samej wyeksportowanej kanonicznej klasy
+współczynników: `N472/P431` pokazują niedookreślenie (oba wyniki są kompatybilne z eksportami).
+
+Żeby iść dalej w ścisłym rdzeniu (bez fałszywego PASS), repo musi więc wyeksportować strict-derived wartości/relacje
 wystarczające do rozstrzygnięcia tego testu (albo dowód `F2(d)=0`).
 
 ## 7) Aneks: wyeksportowane wektory bazy trybów na nośniku 12-slotowym (dane)
