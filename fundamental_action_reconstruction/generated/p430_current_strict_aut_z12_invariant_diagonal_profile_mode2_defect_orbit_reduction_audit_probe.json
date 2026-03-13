@@ -1,0 +1,194 @@
+{
+  "probe_id": "P430_CURRENT_STRICT_AUT_Z12_INVARIANT_DIAGONAL_PROFILE_MODE2_DEFECT_ORBIT_REDUCTION_AUDIT_PROBE",
+  "as_of": "2026-03-12",
+  "no_false_pass": true,
+  "n_octaves": 12,
+  "tolerance": 1e-12,
+  "profiles": [
+    {
+      "name": "example_nonzero_real_defect",
+      "orbit_values": {
+        "t0": 1.0,
+        "t6": 2.0,
+        "t1": 0.5,
+        "t2": -0.7,
+        "t3": 0.25,
+        "t4": 3.0
+      },
+      "diag_profile": [
+        1.0,
+        0.5,
+        -0.7,
+        0.25,
+        3.0,
+        0.5,
+        2.0,
+        0.5,
+        3.0,
+        0.25,
+        -0.7,
+        0.5
+      ],
+      "F2_computed": {
+        "Re": 1.2000000000000008,
+        "Im": 1.7208456881689926e-15,
+        "abs": 1.2000000000000008
+      },
+      "F2_predicted_by_N471": {
+        "Re": 1.2000000000000002,
+        "Im": 0.0,
+        "abs": 1.2000000000000002
+      },
+      "errors": {
+        "abs_Re_error": 6.661338147750939e-16,
+        "abs_Im_error": 1.7208456881689926e-15,
+        "abs_abs_error": 6.661338147750939e-16
+      },
+      "passes_tolerance": {
+        "Im_below_tol": true,
+        "Re_matches_formula": true,
+        "abs_matches_formula": true
+      },
+      "cuts_O2_on_pair1_by_N466": true,
+      "pair1_block_c1s1": [
+        [
+          0.9416666666666668,
+          1.5673396542681133e-16
+        ],
+        [
+          1.5673396542681133e-16,
+          0.7416666666666666
+        ]
+      ],
+      "pair1_anisotropy_signature": {
+        "a1_minus_d1": 0.20000000000000018,
+        "b1": 1.5673396542681133e-16
+      }
+    },
+    {
+      "name": "example_parity_only_profile",
+      "orbit_values": {
+        "t0": 1.2,
+        "t6": 1.2,
+        "t1": -0.3,
+        "t2": 1.2,
+        "t3": -0.3,
+        "t4": 1.2
+      },
+      "diag_profile": [
+        1.2,
+        -0.3,
+        1.2,
+        -0.3,
+        1.2,
+        -0.3,
+        1.2,
+        -0.3,
+        1.2,
+        -0.3,
+        1.2,
+        -0.3
+      ],
+      "F2_computed": {
+        "Re": 5.273559366969494e-16,
+        "Im": 7.771561172376096e-16,
+        "abs": 9.39188966358397e-16
+      },
+      "F2_predicted_by_N471": {
+        "Re": -2.220446049250313e-16,
+        "Im": 0.0,
+        "abs": 2.220446049250313e-16
+      },
+      "errors": {
+        "abs_Re_error": 7.494005416219807e-16,
+        "abs_Im_error": 7.771561172376096e-16,
+        "abs_abs_error": 7.171443614333656e-16
+      },
+      "passes_tolerance": {
+        "Im_below_tol": true,
+        "Re_matches_formula": true,
+        "abs_matches_formula": true
+      },
+      "cuts_O2_on_pair1_by_N466": false,
+      "pair1_block_c1s1": [
+        [
+          0.45000000000000007,
+          8.122179239200229e-17
+        ],
+        [
+          8.122179239200229e-17,
+          0.4499999999999999
+        ]
+      ],
+      "pair1_anisotropy_signature": {
+        "a1_minus_d1": 1.6653345369377348e-16,
+        "b1": 8.122179239200229e-17
+      }
+    },
+    {
+      "name": "example_balanced_orbit_profile",
+      "orbit_values": {
+        "t0": 0.0,
+        "t6": 0.0,
+        "t1": 1.0,
+        "t2": 2.0,
+        "t3": 0.0,
+        "t4": 0.0
+      },
+      "diag_profile": [
+        0.0,
+        1.0,
+        2.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        2.0,
+        1.0
+      ],
+      "F2_computed": {
+        "Re": 6.661338147750939e-16,
+        "Im": -5.551115123125783e-16,
+        "abs": 8.671119018262734e-16
+      },
+      "F2_predicted_by_N471": {
+        "Re": 0.0,
+        "Im": 0.0,
+        "abs": 0.0
+      },
+      "errors": {
+        "abs_Re_error": 6.661338147750939e-16,
+        "abs_Im_error": 5.551115123125783e-16,
+        "abs_abs_error": 8.671119018262734e-16
+      },
+      "passes_tolerance": {
+        "Im_below_tol": true,
+        "Re_matches_formula": true,
+        "abs_matches_formula": true
+      },
+      "cuts_O2_on_pair1_by_N466": false,
+      "pair1_block_c1s1": [
+        [
+          0.6666666666666669,
+          -6.938893903907228e-17
+        ],
+        [
+          -6.938893903907228e-17,
+          0.6666666666666665
+        ]
+      ],
+      "pair1_anisotropy_signature": {
+        "a1_minus_d1": 3.3306690738754696e-16,
+        "b1": -6.938893903907228e-17
+      }
+    }
+  ],
+  "theorem_pointer": "N471",
+  "notes": [
+    "This probe audits the pure-math orbit-reduction identity for F2(d) under Aut(Z_12)-invariance on n=12.",
+    "It does not claim that any physically exported diagonal/local sector is Aut-invariant."
+  ]
+}
