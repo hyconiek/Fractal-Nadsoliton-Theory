@@ -89,6 +89,10 @@ W możliwie prostych słowach, **na obecnym stanie repo**:
    - w konserwatywnym Lagrangianie nie ma wprost tłumienia,
    - `t_{1/2}` wymagałby obiektu typu szerokość/niestabilność w opisie efektywnym (otwarty układ),
    - więc na obecnym strict scope to może być tylko *interpretacja downstream*, nie termin w `L_core`.
+   - uwaga czysto matematyczna: jeśli downstream przyjmuje się wykładniczy zanik
+     $X(t)=X_0 e^{-\lambda t}$, to z definicji $X(t_{1/2})=X_0/2$ daje
+     $t_{1/2}=\frac{\ln 2}{\lambda}$; to nie jest nowa stała ToE, tylko przeliczenie
+     z warunku „połowy”.
 
 ## 1) Typed internal carrier and distance (Z\_12)
 
