@@ -1,7 +1,7 @@
 # P421 Current Strict Sigma-Int → Theta Selector Ingredient Frontier Pointer
 
 Status: `P421_EXECUTED_CURRENT_STRICT_SIGMA_INT_TO_THETA_SELECTOR_INGREDIENT_FRONTIER_POINTER_NO_FALSE_PASS`  
-As of: `2026-03-12`
+As of: `2026-03-13`
 
 ## Goal
 
@@ -129,6 +129,17 @@ The strict next-step decision target for this diagonal/local accelerator lane is
 
 - `T166` — decide `F2(d)` for the canonical FIN `D_local_residual` (strict-derived), either proving `F2(d)=0` or
   `F2(d)≠0`, without hidden slots.
+
+Additional current-state support artifacts (still no decision):
+
+1. `P432` scans the repo state and confirms that no exported **numeric value instantiation** of the canonical diagonal
+   residual profile (or the six opposite-pair sums from `R18`) exists that would allow direct evaluation of `F2(d)`.
+2. `N473` shows that the mode‑2 defect can also be recovered *equivalently* from the `R18` declared `pair1` entry system:
+   `Re(F2)=6*(c1c1−s1s1)` and `Im(F2)=12*(c1s1)` (with substitution reproducing the `N467/P426` six‑class formula).
+3. `P433` audits the `N473` equivalence numerically (tolerance‑level consistency accounting for coefficient rounding in
+   the persisted `R18` packet).
+4. `P434` provides an explicit evaluation harness that computes `F2(d)`, its induced `pair1` anisotropy signature, and
+   the canonical diagonalization angle `theta_*` once strict-derived values for the six opposite‑pair sums are exported.
 
 So any strict “physical accelerator of choice” story on `pair1` must eventually export a **strict-derived**
 non-translation-invariant diagonal/local profile (or equivalent) deciding this `F2(d) ≠ 0` condition, rather than

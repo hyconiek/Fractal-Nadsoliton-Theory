@@ -1,7 +1,7 @@
 # RELEASE 6.4 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.4.0  
-**Date:** 2026-03-12  
+**Version:** 6.4.1  
+**Date:** 2026-03-13  
 **Branch:** `main`  
 **Predecessor:** Release 6.3 — Global Selector Capture Edition
 
@@ -39,10 +39,16 @@ Release 6.4 adds **new strict structural closures** around the `QW-2191` uniquen
 8. on the current exported canonical FIN diagonal coefficient class (`R15`), `F2(d)` for the canonical local diagonal
    residual sector is **underdetermined**: both `F2(d)=0` and `F2(d)≠0` remain compatible with current exports (`N472`,
    audited by `P431`).
+9. the repo currently exports **no numeric instantiation** of the six opposite‑pair sums (or equivalent diagonal values)
+   sufficient to evaluate `F2(d)` directly (`P432`).
+10. the mode‑2 defect can be recovered equivalently from the `R18` declared `pair1` entry system
+   (`N473`, audited by `P433`), and an explicit evaluation harness is exported for when strict-derived opposite‑pair
+   sums become available (`P434`).
 
 This is a *reduction*, not a discharge: it makes the “physical accelerator of choice” claim checkable without
 introducing new hidden slots, but it does not yet provide strict-derived diagonal coefficient values. In particular,
-`N472/P431` show the canonical coefficient class does not decide `F2(d)` on current exports.
+`N472/P431` show the canonical coefficient class does not decide `F2(d)` on current exports, and `P432` confirms no
+value instantiation is currently exported to decide it by direct evaluation.
 
 ## 1) One-Page Strict Status (6.4)
 
@@ -333,6 +339,8 @@ Does the canonical FIN local diagonal residual sector have a nonzero mode-2 defe
 
 On the current repo state this question is **not** strictly decidable from the exported canonical coefficient class
 alone: `N472/P431` exhibit underdetermination (both outcomes remain compatible with current exports).
+Additionally, `P432` confirms that no exported numeric instantiation of the opposite‑pair sums is currently present,
+so even the reduced `P426` expression cannot yet be evaluated as a strict decision.
 
 To proceed in strict core (without false pass), the repo must export at least one of:
 
@@ -389,10 +397,16 @@ Release 6.4 dodaje **nowe ścisłe domknięcia strukturalne** wokół przeszkody
 8. na obecnie wyeksportowanej kanonicznej klasie współczynników diagonalnych FIN (`R15`), `F2(d)` dla kanonicznego
    sektora `D_local_residual` jest **niedookreślone**: zarówno `F2(d)=0` jak i `F2(d)≠0` pozostają zgodne z eksportami
    (`N472`, audit `P431`).
+9. repo nie eksportuje obecnie żadnej **instancji wartości liczbowych** 6 sum par przeciwległych (ani równoważnych
+   wartości diagonalnych) wystarczającej do bezpośredniej ewaluacji `F2(d)` (`P432`).
+10. defekt trybu 2 można odzyskać równoważnie z układu wpisów `R18` dla zadeklarowanego bloku `pair1`
+   (`N473`, audit `P433`), a jawny harness ewaluacyjny jest przygotowany na moment, gdy pojawią się strict-derived
+   wartości 6 sum par przeciwległych (`P434`).
 
 To jest *redukcja*, nie rozładowanie: sprawia, że hasło “fizyczny akcelerator wyboru” staje się sprawdzalnym defektem,
 ale nie dostarcza jeszcze strict-derived wartości współczynników diagonalnych. W szczególności `N472/P431` pokazują, że
-kanoniczna klasa współczynników nie rozstrzyga `F2(d)` na obecnych eksportach.
+kanoniczna klasa współczynników nie rozstrzyga `F2(d)` na obecnych eksportach, a `P432` potwierdza brak instancji
+wartości liczbowych pozwalających rozstrzygnąć to przez bezpośrednią ewaluację.
 
 ## 1) Jednostronicowy stan ścisły (6.4)
 
@@ -540,6 +554,8 @@ czy kanoniczny sektor diagonalny FIN ma niezerowy defekt trybu 2: F2(d) ≠ 0 ?
 
 Na obecnym stanie repo test ten nie jest rozstrzygalny w ścisłym rdzeniu z samej wyeksportowanej kanonicznej klasy
 współczynników: `N472/P431` pokazują niedookreślenie (oba wyniki są kompatybilne z eksportami).
+Dodatkowo `P432` potwierdza brak jakiejkolwiek wyeksportowanej instancji wartości liczbowych 6 sum par przeciwległych,
+więc nawet zredukowane wyrażenie `P426` nie może zostać dziś policzone jako ścisła decyzja.
 
 Żeby iść dalej w ścisłym rdzeniu (bez fałszywego PASS), repo musi więc wyeksportować strict-derived wartości/relacje
 wystarczające do rozstrzygnięcia tego testu (albo dowód `F2(d)=0`).
