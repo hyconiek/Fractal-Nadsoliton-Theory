@@ -125,6 +125,11 @@ Independently of the sigma-int corridor class, the repo now exports three strict
    `F2(d)` is **underdetermined**: both `F2(d)=0` and `F2(d)≠0` are compatible with the current exports, so no strict
    diagonal `pair1` `O(2)`-cut witness exists yet (`N472`, audited in `P431`).
 
+The strict next-step decision target for this diagonal/local accelerator lane is now named explicitly as:
+
+- `T166` — decide `F2(d)` for the canonical FIN `D_local_residual` (strict-derived), either proving `F2(d)=0` or
+  `F2(d)≠0`, without hidden slots.
+
 So any strict “physical accelerator of choice” story on `pair1` must eventually export a **strict-derived**
 non-translation-invariant diagonal/local profile (or equivalent) deciding this `F2(d) ≠ 0` condition, rather than
 relying on host-kernel isotropy or rhetoric.
