@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.18  
+**Version:** 6.5.19  
 **Date:** 2026-03-15  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -68,6 +68,8 @@
 - Update (`2026-03-15`): a projection audit exports how the `H_psi` eigenmodes from `F459` decompose in the two exported
   mode-index assignment bases (`F453` diagonal/local and `F454` Shannon) (`P463`). This is a lane-scoped linear-algebra audit and does **not**
   claim that either basis diagonalizes the full `H_psi` operator.
+- Update (`2026-03-15`): to avoid any false dependence on residual eigenvector sign conventions in `F459`, the repo exports
+  sign‑gauge‑invariant rank‑one spectral projectors `P_j := |v_j><v_j|` for `H_psi` (`F460`) and packages the sign gauge‑irrelevance statement as a strict theorem (`N504`).
 - The sigma-int corridor theta-supply and sigma-int → residual bridge theorems introduced in Release 6.4 remain in force
   (e.g. `F451/N489`, `P451`, `F452/N490`, `N491`) and are not re-derived here.
 
@@ -296,6 +298,8 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
 25. dodatkowo, wyeksportowano audyt projekcyjny pokazujący jak eigenmody `H_psi` z `F459` rozkładają się w dwóch wyeksportowanych bazach
     mode-index assignment (`F453` diagonal/local oraz `F454` Shannon) (`P463`). To jest lane-scoped audyt algebry liniowej i **nie**
     twierdzi, że którakolwiek z tych baz diagonalizuje pełny operator `H_psi`.
+26. aby uniknąć fałszywej zależności od residualnych konwencji znaku wektorów własnych w `F459`, repo eksportuje
+    sign‑gauge‑invariant rank‑one projektory spektralne `P_j := |v_j><v_j|` dla `H_psi` (`F460`) oraz pakuje twierdzenie o gauge‑irrelewantności znaku jako strict theorem (`N504`).
 
 ## 1) Jednostronicowy status strict (6.5)
 
