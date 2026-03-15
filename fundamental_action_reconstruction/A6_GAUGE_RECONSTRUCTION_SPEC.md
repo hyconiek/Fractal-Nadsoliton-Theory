@@ -1,6 +1,6 @@
 # A6 Gauge Reconstruction
 
-Status: `A6_UPDATED_DIAGONAL_LOCAL_MODE_INDEX_CANONICALIZATION_UP_TO_CONJUGATION_EXPORTED_GLOBAL_UNIQUENESS_STILL_OPEN_NO_FALSE_PASS`
+Status: `A6_UPDATED_DIAGONAL_AND_SHANNON_MODE_INDEX_CANONICALIZATION_UP_TO_CONJUGATION_EXPORTED_GLOBAL_UNIQUENESS_STILL_OPEN_NO_FALSE_PASS`
 As of: `2026-03-15`
 
 ## Cel
@@ -104,6 +104,9 @@ To jest blocker podstawowy dla pelnego claimu:
 Aktualizacja po `N487/F453/N492/N493/N494/N495`:
 - w strict core istnieje teraz **lane-scoped** canonicalizacja mode-index assignment na canonical local‑diagonal lane,
   ktora redukuje continuous `O(2)` do residual `Z2` i eksportuje jawna baze,
+- niezaleznie, w strict core istnieje rowniez **Shannon element‑order reference** canonicalizacja mode-index assignment
+  (bez per-site diagonal/local providerow), ktora tnie `O(2)->Z2` na wszystkich `pair_m (m=1..5)` na `n=12` i eksportuje jawna baze (`F454/N496`),
+- oba wybory osi sa zgodne (audit `P455`, z dokladnoscia numeryczna; residual `Z2` sign pozostaje),
 - a nie tylko residualny znak: pelna swoboda `O(2)` rotacji bazy w parach jest “gauge” dla auditow embeddingu `QW-2190`
   (czysta koniugacja; `N495`, audyt `P454`), wiec audyty invariance/Lie-closure nie zaleza od wyboru reprezentanta bazy,
 - ale `QW-2191` pozostaje prawdziwe jako obstruction **kanonicznego reprezentanta** (axis choice) w scope kernel‑alone,
@@ -127,7 +130,7 @@ Aktualizacja po `N487/F453/N492/N493/N494/N495`:
 | anomaly/charge closure | `partially derived in strict core` | `QW-2189` |
 | gauge couplings `g,g',g3` | `partially derived in strict core` | `QW-2126` |
 | nonabelian action-level bridge | `partially derived in strict core` | `QW-2127` |
-| pelna fizyczna unikalnosc representation map | `lane_scoped_canonicalized_up_to_conjugation_global_blocked` | `N487/F453/N494` vs `QW-2191` |
+| pelna fizyczna unikalnosc representation map | `lane_scoped_canonicalized_on_two_lanes_up_to_conjugation_global_blocked` | `N487/F453/N494` + `F454/N496` + `P455` vs `QW-2191` |
 | axiom-augmented uniqueness via selection axiom | `available but excluded from strict core` | `QW-2192/2193` |
 | direct gauge derivation from `A1-A4` alone | `unresolved` | jeszcze nie ma jawnego pakietu |
 
