@@ -1,0 +1,34 @@
+{
+  "generated_utc": "2026-03-15T21:18:47.837049+00:00",
+  "stage": "P466",
+  "goal": "audit_consistency_of_pair12_chart_glued_projector_operator_section_A2_equals_O12_A1_O12T",
+  "inputs": {
+    "a1_pair1": "fundamental_action_reconstruction/generated/a_1_pair1_orientation_projector_operator_strict_core_v1.json",
+    "o12": "fundamental_action_reconstruction/generated/o12_pair1_pair2_selector_chart_transport_operator_strict_derived_from_sigma_int_alpha12_v1.json",
+    "a2_pair2": "fundamental_action_reconstruction/generated/a_2_pair2_orientation_projector_operator_strict_core_v1.json"
+  },
+  "audits": {
+    "o12": {
+      "alpha12_mod_2pi": 1.5707963267948966,
+      "orthogonality_max_abs_residual": 4.60113898903259e-16,
+      "involution_max_abs_residual": 4.60113898903259e-16,
+      "g12_max_abs_diff_vs_rotation(alpha12)": 0.0
+    },
+    "gluing": {
+      "full_carrier_max_abs_residual_A2_minus_O12_A1_O12T": 3.0531133177191805e-16,
+      "pair_plane_2x2_max_abs_residual_A2_minus_G12_A1_G12T": 4.440892098500626e-16
+    },
+    "sign_gauge": {
+      "A1_projector_sign_invariance_max_abs": 0.0,
+      "A2_projector_sign_invariance_max_abs": 0.0
+    }
+  },
+  "hard_limits": [
+    "Lane-scoped audit only; does not export a global selector atlas nor global cocycle data.",
+    "Does not discharge QW-2191.",
+    "Projector-level only: does not derive a sign-sensitive physical orientation datum.",
+    "Does not claim strict-core selector closure / admissible S_sel_int.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}
