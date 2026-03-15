@@ -1,7 +1,7 @@
 {
   "stage": "P442",
   "goal": "audit_frontier_for_T168_vacuum_and_self_coupling_value_provider_needed_by_P437_on_the_T166_diagonal_lane",
-  "generated_utc": "2026-03-14T14:47:59.341762+00:00",
+  "generated_utc": "2026-03-15T14:34:05.954158+00:00",
   "strict_scalar_sources": {
     "QW-2122": "report_qw2122_psi_potential_diagonal_floor_gate.json",
     "QW-2123": "report_qw2123_vacuum_branch_selection_strict_gate.json",
@@ -25,21 +25,22 @@
       "qw2124_scalar_vacuum_closure_branch_resolved_strict_pass": true
     },
     "p437_input_has_numeric_arrays": {
-      "vpsi": false,
-      "g4": false,
-      "g6": false
+      "vpsi": true,
+      "g4": true,
+      "g6": true
     },
-    "mapping_gap_remains": true,
-    "missing": [
-      "strict-derived numeric vpsi[0..11] provider (length-12, nonzero)",
-      "strict-derived numeric g4[0..11] provider (length-12)",
-      "strict-derived numeric g6[0..11] provider (length-12)"
-    ]
+    "p437_input_marked_strict_derived": true,
+    "source_provider_marked_strict_derived": true,
+    "source_provider_theorem_refs_present": true,
+    "n483_theorem_present": true,
+    "t168_provider_present_for_p437": true,
+    "mapping_gap_remains": false,
+    "missing": []
   },
   "result": {
-    "t168_discharged": false,
-    "recommended_next_strict_target": "T168",
-    "recommendation_reason": "P437 requires strict-derived (vpsi,g4,g6) arrays; repo currently exports only strict scalar-side psi potential values (QW-2122/2123/2124) and no strict lift/mapping to the canonical per-site families."
+    "t168_provider_present_for_p437": true,
+    "recommended_next_strict_target": "T166",
+    "recommendation_reason": "A strict-derived T168-consumable per-site value instantiation feeding P437 is exported (via T169: F447, theorem-anchored by N483). Therefore T168 is not the active bottleneck under the diagonal/local accelerator lane; proceed to the diagonal/local defect/canonicalization lane (T166)."
   },
   "no_false_pass": true
 }
