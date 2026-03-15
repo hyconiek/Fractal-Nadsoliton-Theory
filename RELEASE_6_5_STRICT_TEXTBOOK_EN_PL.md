@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.6  
+**Version:** 6.5.7  
 **Date:** 2026-03-15  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -36,6 +36,9 @@
 - Update (`2026-03-15`): moreover, the repo exports a **conditional** value instantiation of the full declared 4×4 residual local‑diagonal
   control pullback on the control basis `(c1,s1,c2,s2)` using the same `N477` rewrite and strict‑derived provider (`P459`); this exposes
   the `pair1`/`pair2` blocks and cross‑block couplings, without any promotion to host matching.
+- Update (`2026-03-15`): the strict sigma‑int → residual target‑slot bridge/export‑map object is explicitly upgraded to
+  `Upsilon_residual_datum_sigma_int_bridge_export_map_object_v2`, attaching the slot‑free theta‑pair outputs and the corresponding strict‑core
+  `R1` inhabitant instance as map outputs (`F455`); this is an explicit upgrade (v1 remains sign‑only) and does not imply selector closure.
 - The sigma-int corridor theta-supply and sigma-int → residual bridge theorems introduced in Release 6.4 remain in force
   (e.g. `F451/N489`, `P451`, `F452/N490`, `N491`) and are not re-derived here.
 
@@ -78,6 +81,9 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
 14. the full 4×4 declared residual local‑diagonal control pullback on the control basis `(c1,s1,c2,s2)` is also value‑instantiated under
     the same conditional `N477` rewrite and strict‑derived provider (`P459`), exposing `pair1`/`pair2` blocks and cross‑block couplings
     without any host‑matching claim.
+15. the strict sigma‑int → residual target‑slot bridge/export‑map object is explicitly upgraded to carry the slot‑free theta‑pair outputs and
+    the corresponding strict‑core `R1` inhabitant instance as map outputs (`F455`), without theta inputs and without implied selector closure
+    (the `v1` export-map object remains sign-only).
 
 ## 1) One-Page Strict Status (6.5)
 
@@ -210,6 +216,9 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
 14. ponadto, pełna macierz 4×4 zadeklarowanego pullbacku residualnego sektora diagonal/local na bazie kontrolnej `(c1,s1,c2,s2)` została
     **warunkowo** zainstancjonowana liczbowo przez to samo przepisanie `N477` i ten sam strict‑derived provider (`P459`), ujawniając bloki
     `pair1`/`pair2` oraz sprzężenia cross‑block bez roszczeń o host‑matching.
+15. ponadto, ścisły obiekt bridge/export‑map na korytarzu sigma‑int → residual target‑slot został jawnie ulepszony do
+    `Upsilon_residual_datum_sigma_int_bridge_export_map_object_v2`, dołączając wyjścia slot‑free theta‑pair oraz odpowiadającego inhabitanta
+    `R1` jako outputy mapy (`F455`), bez wejściowych theta i bez implikacji domknięcia selektora (`v1` pozostaje sign‑only).
 
 ## 1) Jednostronicowy status strict (6.5)
 
