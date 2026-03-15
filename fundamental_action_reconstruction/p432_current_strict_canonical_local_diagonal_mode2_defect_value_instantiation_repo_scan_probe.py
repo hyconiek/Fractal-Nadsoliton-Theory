@@ -27,6 +27,8 @@ def run_rg(pattern: str, max_count: int = 50) -> dict[str, Any]:
         "-n",
         "--max-count",
         str(max_count),
+        "--glob",
+        "!fundamental_action_reconstruction/generated/p432_current_strict_canonical_local_diagonal_mode2_defect_value_instantiation_repo_scan_probe*.json",
         pattern,
         str(REPO),
     ]

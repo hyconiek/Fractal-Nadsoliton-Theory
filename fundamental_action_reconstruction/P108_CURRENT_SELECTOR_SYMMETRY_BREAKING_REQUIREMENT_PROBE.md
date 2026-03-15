@@ -1,7 +1,7 @@
 # P108 Current Selector / Symmetry-Breaking Requirement Probe
 
 Status: `P108_EXECUTED_CURRENT_SELECTOR_SYMMETRY_BREAKING_REQUIREMENT_PROBE_NO_FALSE_PASS`
-As of: `2026-03-07`
+As of: `2026-03-15`
 
 ## Goal
 
@@ -16,10 +16,12 @@ for the QW-2191 uniqueness frontier?
 
 ## Result
 
-The answer is yes on the current repo state:
+On the updated current repo state (2026-03-15), the honest answer is **scoped**:
 
 ```text
-CURRENT_REPO_SUPPORTS_THE_SELECTOR_OR_SYMMETRY_BREAKING_REQUIREMENT_CONCLUSION_FOR_THE_QW2191_UNIQUENESS_FRONTIER_AFTER_P108
+KERNEL_ALONE_SCOPE: yes (QW-2191).
+CANONICAL_LOCAL_DIAGONAL_LANE_SCOPE: continuous O(2) is already internally cut to residual Z2 without an external selector (N484/N485/N487 + F453/N492).
+FULL_SIGN_SENSITIVE_PHYSICAL_ORIENTATION: still open (residual Z2 remains).
 ```
 
 ## What was checked
@@ -33,23 +35,26 @@ following:
    explicit selector closes uniqueness only after adding symmetry breaking,
 3. the `QW-2193` robustness result:
    the selector family is stable once such an extra postulate is added,
-4. the `B2` audit result:
-   no strict-core internal orientation datum has yet been derived.
+4. the updated internal datum export on the strict diagonal/local lane:
+   `N484/N485/N487` + `F453/N492` export a lane-scoped internal `O(2)->Z2` cut and an actual basis object,
+5. the (still valid) kernel-alone boundary:
+   `QW-2191` remains true in kernel-only scope.
 
 ## Why this is enough
 
-Taken together, those four facts imply the strongest honest current conclusion:
+Taken together, these facts imply the strongest honest *scoped* conclusion:
 
-1. kernel alone is not sufficient,
-2. explicit selector/symmetry breaking is sufficient in axiom-augmented scope,
-3. that axiom-augmented route is robust and not a one-off numerical artifact,
-4. no axiom-free internal selector source is currently exported.
+1. kernel alone is not sufficient (`QW-2191`),
+2. explicit selector/symmetry breaking is sufficient in axiom-augmented scope (`QW-2192/2193`),
+3. the repo now exports a strict **internal** symmetry-breaking mechanism on one strict lane (canonical local-diagonal) which cuts `O(2)` down to residual `Z2` and exports an actual basis object (`N484/N485/N487` + `F453/N492`),
+4. the remaining strict gap is narrower: sign-sensitive physical orientation (lifting residual `Z2`) and/or extension beyond the diagonal/local lane without importing an external selector premise.
 
 Therefore the current repo does support the following boundary claim:
 
 ```text
-unless a new internal selector source is derived, the QW-2191 frontier
-requires an explicit selector/symmetry-breaking premise
+kernel-alone physical uniqueness still requires an explicit symmetry-breaking/selection premise,
+but the diagonal/local lane no longer requires an external selector to break the continuous O(2) family;
+it only leaves a residual Z2 sign.
 ```
 
 ## What P108 does not claim
@@ -66,8 +71,6 @@ requires an explicit selector/symmetry-breaking premise
 
 The correct next move is now:
 
-1. either derive one explicit internal selector source from strict core,
-2. or formalize the selector/symmetry-breaking requirement theorem-level as
-   the active design conclusion,
-3. while keeping the `legacy -> strict kernel bridge/non-bridge` question
-   separate.
+1. either derive one strict-admissible **sign** source (lift residual `Z2` to a sign-sensitive physical orientation datum),
+2. or formalize that axis-only lane-scoped canonicalization is sufficient for the declared targets, while keeping full sign-sensitive physical uniqueness open,
+3. and keep `QW-2191` kernel-alone scope explicit (no implied global selector closure).

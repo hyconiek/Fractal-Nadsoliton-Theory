@@ -1,7 +1,7 @@
 # B2 Internal Orientation Datum Source Audit
 
-Status: `B2_EXECUTED_NO_STRICT_INTERNAL_ORIENTATION_DATUM_FOUND_AXIOM_FREE_UNIQUENESS_REMAINS_OPEN`
-As of: `2026-03-06`
+Status: `B2_UPDATED_STRICT_INTERNAL_ORIENTATION_DATUM_FOUND_ON_CANONICAL_LOCAL_DIAGONAL_LANE_AXIS_ONLY_RESIDUAL_Z2_REMAINS_NO_FALSE_PASS`
+As of: `2026-03-15`
 
 ## Cel
 
@@ -28,13 +28,17 @@ tylko:
    - explicit selector as control route.
 4. `QW-2193`
    - robustness of selector family.
-5. `A1`
+5. `N484/N485/N487`
+   - strict diagonal/local `O(2) -> Z2` cut mechanism and scoped discharge on `pair_m (m=1..5)` for `n=12`.
+6. `F453/N492`
+   - exported strict-derived mode-index assignment basis object and its theorem-level packaging as an internal orientation datum (lane-scoped).
+7. `A1`
    - single-nadsoliton ontological guidance.
-6. `A5`
+8. `A5`
    - topological spinor route split boundary.
-7. `A6`
+9. `A6`
    - gauge reconstruction boundary.
-8. `A10`
+10. `A10`
    - anti-overclaim and calibration boundary.
 
 ### Ontology-context only
@@ -69,17 +73,20 @@ Wolno traktowac tylko jako wskazowke lub negative control:
 
 To nie jest jeszcze theorem-level zrodlo selectora.
 
-### 2. W strict core nie ma gotowego internal orientation datum
+### 2. W strict core istnieje lane-scoped internal orientation datum (canonical local-diagonal)
 
-Po skanie strict-admissible warstwy:
-- brak theorem-level twierdzenia,
-- brak action-level derivation,
-- brak jawnego kernel invariant,
+Po aktualizacji strict warstwy diagonal/local:
+- istnieje theorem-level mechanizm `O(2) -> Z2` na kazdym `pair_m` (`N484/N485/N487`),
+- istnieje actual exported obiekt strict-derived, ktory materializuje to jako jawna baza modow na `n=12` (`F453`),
+- istnieje theorem-level opakowanie tej obserwacji jako "internal orientation datum" w sensie lane-scoped (`N492`).
 
-ktory moglby zastapic selector z `QW-2192`.
+Wynik jest jednak tylko **axis-only**:
+- continuous `O(2)` degeneracy jest rozladowana na canonical local-diagonal lane,
+- pozostaje residual `Z2` (wspolny flip znaku wektorow na kazdym `pair_m`).
 
-Najmocniejszy strict wynik pozostaje negatywny:
-- `QW-2191` pokazuje, ze kernel alone zostawia ciagla rodzine `O(2)`.
+Najmocniejszy strict wynik negatywny pozostaje prawdziwy w swoim scope:
+- `QW-2191` nadal pokazuje, ze **kernel alone** nie wybiera unikalnego mode assignment (ciagla rodzina `O(2)`).
+Nowy wynik dotyczy wyłącznie lane-scoped canonical local-diagonal mechanizmu, ktory dodaje dodatkowa strukture (residual profile/defects).
 
 ### 3. Selector istnieje tylko jako control route
 
@@ -89,6 +96,10 @@ Najmocniejszy strict wynik pozostaje negatywny:
 
 Nie daja:
 - wewnetrznego pochodzenia selectora z ontologii jednego nadsolitonu.
+
+Nowa obserwacja po `N492/F453` jest węższa:
+- dla canonical local-diagonal lane continuous `O(2)` jest juz rozladowane bez zewnetrznego selectora,
+- ale sign-sensitive physical orientation (lifting residual `Z2`) nie jest jeszcze strict-derived.
 
 ### 4. FR/topological route jest fizycznie ciekawa, ale nie strict-ready
 
@@ -111,20 +122,20 @@ To nie jest derivation `orientation datum`.
 
 ## Zredukowany blocker po B2
 
-Po `B2` blocker brzmi juz jeszcze precyzyjniej:
-- "w obecnym strict core nie istnieje wyprowadzony internal orientation datum, ktory rozladowuje `QW-2191`."
+Po aktualizacji `B2` blocker brzmi jeszcze precyzyjniej:
+- "w strict core istnieje lane-scoped internal orientation datum (canonical local-diagonal), ale pozostaje residual `Z2` sign; brak jeszcze sign-sensitive physical orientation datum i brak rozszerzenia poza lane."
 
-To jest mocniejsze niz stan po `B1`, bo usuwa niepewnosc:
-- problem nie polega juz na tym, ze selector "moze jest ukryty w repo",
-- tylko na tym, ze w strict core go obecnie nie ma.
+To jest mocniejsze niz stan po `B1`, bo usuwa glowna niepewnosc:
+- continuous `O(2)` degeneracy ma juz strict wewnetrzny mechanizm rozladowania na jednej z aktualnych strict lanes,
+- problem zostal zredukowany do residual sign i do scope extension.
 
 ## Macierz wynikow
 
 | Kandydat zrodla | Status po B2 | Uwagi |
 |---|---|---|
 | ontology of single nadsoliton | `constructive_guidance_only` | nie discharge |
-| strict internal orientation datum | `not_found_in_strict_core` | brak theorem-level source |
-| kernel invariant selecting one O(2) point | `not_found_in_strict_core` | `QW-2191` utrzymane |
+| strict internal orientation datum (canonical local-diagonal lane) | `found_axis_only_residual_z2` | `N484/N485/N487` + `F453/N492` |
+| kernel invariant selecting one O(2) point (kernel-alone scope) | `not_found_in_strict_core` | `QW-2191` utrzymane |
 | explicit selector axiom | `control_route_only` | `QW-2192` |
 | robust selector family | `control_family_only` | `QW-2193` |
 | FR/topological phase route | `heuristically_plausible_unresolved` | `QW-1622`, `QW-1210` |
@@ -133,11 +144,9 @@ To jest mocniejsze niz stan po `B1`, bo usuwa niepewnosc:
 ## Co `B2` rzeczywiscie ustala
 
 `B2` ustala:
-- nie ma podstaw, by twierdzic, ze repo juz zawiera strict source selectora,
-- nie ma podstaw, by promowac ontologie jednego nadsolitonu do uniqueness discharge,
-- jedyna uczciwa strict pozycja to:
-  - uniqueness pozostaje open axiom-free,
-  - selector jest obecnie albo axiom-augmented, albo unresolved.
+- istnieje teraz jawny, strict-derived, lane-scoped internal orientation datum (canonical local-diagonal) rozladowujacy continuous `O(2)` do residual `Z2`,
+- nie ma jeszcze podstaw, by twierdzic, ze repo ma **sign-sensitive** strict source selectora/orientacji,
+- nie ma podstaw, by promowac tego wyniku do global selector closure lub ToE closure.
 
 ## Anti-overclaim
 
@@ -148,19 +157,23 @@ To jest mocniejsze niz stan po `B1`, bo usuwa niepewnosc:
 - uniqueness nie da sie rozladowac.
 
 `B2` twierdzi tylko:
-- takiego zrodla nie ma jeszcze w obecnym strict core.
+- takiego zrodla nie ma jeszcze w obecnym strict core w sensie:
+  - kernel-alone invariantu wybierajacego jeden punkt z rodziny `O(2)`,
+  - sign-sensitive physical orientation datum (lifting residual `Z2`).
 
 ## Produkt etapu
 
 - drugi krok drugiego cyklu,
-- jawna eliminacja hipotezy:
-  - "internal selector source jest juz ukryty w obecnym corpus strict."
+- jawne zredukowanie blockera:
+  - canonical local-diagonal lane rozladowuje continuous `O(2)` do residual `Z2`,
+  - pozostaje pytanie o sign-sensitive physical orientation i/lub scope extension poza lane.
 
 ## Nastepny krok
 
 Naturalnym kolejnym ruchem jest `B3`:
 - sprobowac zbudowac waski pakiet derivation:
-  - `topological / FR sign -> orientation datum -> mode selector`,
+  - `residual Z2 sign -> sign-sensitive physical orientation datum`,
+  - np. przez topologiczny/FR znak (jesli da sie zintegrowac strict-admissibly),
 - albo jawnie zamrozic:
-  - `gauge uniqueness closed only in axiom-augmented scope`,
-  - `axiom-free uniqueness still open`.
+  - `axis-only canonicalization is sufficient for the declared lane`,
+  - `sign-sensitive physical orientation remains open`.
