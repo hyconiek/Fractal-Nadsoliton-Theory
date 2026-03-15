@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.21  
+**Version:** 6.5.22  
 **Date:** 2026-03-15  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -54,6 +54,9 @@
 - Update (`2026-03-15`): the repo exports an explicit **lane-scoped pair1/pair2 chart-transport operator** `O_12` on the `n=12` carrier,
   derived only from the strict sigma-int `alpha_12` transition angle (`F461`), with projector-level sign-gauge-irrelevance packaged as a strict theorem (`N506`)
   and audited by a dedicated probe (`P465`). This is still below any global selector atlas/gluing structure and does not discharge global `QW-2191`.
+- Update (`2026-03-15`): building on `O_12`, the repo exports a concrete **two-chart projector operator section** on `{pair1,pair2}`:
+  `A_2(pair2) = O_12 A_1(pair1) O_12^T` (`F462`), packaged as a strict theorem (`N507`) and audited by `P466`. This remains lane-scoped and does not upgrade
+  to a global selector atlas or global `QW-2191` discharge.
 - Update (`2026-03-15`): probe-level control-lane transition data is also exported from the **declared residual local-diagonal control pullback**
   value instantiation: the `pair1 -> pair2` cross-block polar orthogonal factor `Q ∈ O(2)` and its induced rotation angle `alpha_cross` (`P460`).
   On the current instantiated matrix, `alpha_cross ≈ 0` while `alpha_12 = π/2`; these are distinct lane-scoped quantities and must not be conflated into a global gluing claim.
@@ -135,6 +138,9 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
 21. an explicit **lane-scoped** `pair1↔pair2` chart-transport operator `O_12` on the declared `n=12` Fourier carrier is exported, derived only from the strict sigma-int
     transition angle `alpha_12` (`F461`), with projector-level sign-gauge-irrelevance packaged as a strict theorem (`N506`) and audited by a dedicated probe (`P465`).
     This does not export a global selector atlas/gluing object and does not discharge global `QW-2191`.
+22. building on `O_12`, the repo exports a concrete **two-chart projector operator section** on `{pair1,pair2}`:
+    `A_2(pair2) = O_12 A_1(pair1) O_12^T` (`F462`), packaged as a strict theorem (`N507`) and audited by `P466`. This remains lane-scoped and does not upgrade
+    to a global selector atlas / gluing structure and does not discharge global `QW-2191`.
 
 ## 1) One-Page Strict Status (6.5)
 
@@ -234,6 +240,9 @@ Update: as the next narrow `B3` continuation step, the repo now exports an expli
 on `n=12`, derived only from the strict sigma-int `alpha_12` transition (`F461`). This is a sign-free projector-level gluing ingredient
 (packaged as a strict theorem `N506` and audited by `P465`); global selector atlas / transition-object obligations (`H41/H40`) remain open.
 
+Update: the lane-scoped `O_12` transport is now used to export an explicit **two-chart glued projector operator section**
+`A_2(pair2) = O_12 A_1(pair1) O_12^T` (`F462`), packaged as a strict theorem (`N507`) and audited by `P466`. This is still below any global atlas/closure.
+
 Update: the strict Shannon element‑order reference lane now provides one explicit internal symmetry-breaking ingredient
 on the full `n=12` Fourier scaffold (via `F454`), but this is still below strict-core selector closure and does not
 constitute a global `QW-2191` discharge.
@@ -321,6 +330,9 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
     że transport na poziomie projektorów `P(u) = |u><u|` jest gauge‑irrelewant względem residualnego flipa znaku (`N506`), a sonda `P465`
     audytuje ortogonalność, transport płaszczyzn oraz próbkowany transport `u_{m,θ}`/projektorów. Nie jest to globalny selector atlas ani globalny gluing object
     i nie rozładowuje globalnie `QW-2191`.
+29. ponadto, na bazie `O_12` repo eksportuje konkretną **dwu‑chartową sekcję operatorową** na `{pair1,pair2}` na poziomie projektorowym (sign‑free):
+    `A_2(pair2) = O_12 A_1(pair1) O_12^T` (`F462`), opakowane jako twierdzenie strict (`N507`) i audytowane sondą (`P466`). Jest to nadal lane‑scoped i nie
+    awansuje do globalnego selector atlas/gluing object ani do globalnego rozładowania `QW-2191`.
 
 ## 1) Jednostronicowy status strict (6.5)
 
@@ -361,6 +373,9 @@ Dashboards teraz rekomendują `B3` (kontynuacja topological selector bridge) jak
 Update: jako kolejny, najwęższy krok `B3` repo eksportuje teraz jawny lane‑scoped **operator transportu chartów** `O_12` pomiędzy `pair1↔pair2`
 na `n=12`, wyprowadzony wyłącznie z `alpha_12` (`F461`). To jest “gluing ingredient” tylko na poziomie osi/projektorów (sign‑free),
 opakowany twierdzeniem strict (`N506`) i audytowany sondą (`P465`); globalny atlas/transition object (`H41/H40`) pozostaje otwarty.
+
+Update: na bazie `O_12` repo eksportuje teraz jawnie dwu‑chartową **sekcję operatorową** na `{pair1,pair2}` na poziomie projektorowym:
+`A_2(pair2) = O_12 A_1(pair1) O_12^T` (`F462`), opakowane (`N507`) i audytowane (`P466`). Globalny atlas/closure pozostaje otwarty.
 
 Update: pas strict Shannon “element‑order reference” dostarcza teraz jawny wewnętrzny składnik symetrii‑łamacza na pełnym
 scaffoldu Fouriera `n=12` (przez `F454`), ale nadal jest to poniżej strict-core selector closure i nie stanowi globalnego
