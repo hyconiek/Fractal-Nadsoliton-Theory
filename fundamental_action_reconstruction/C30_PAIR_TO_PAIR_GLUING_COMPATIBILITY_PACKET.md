@@ -16,6 +16,19 @@ Po `C29` najwezszy aktywny blocker brzmi:
   da sie zapisac packet-ready **pair-to-pair compatibility law** na overlapie dwoch lokalnych par,
 - bez twierdzenia, ze istnieje juz jawnie wyeksportowany transition matrix lub transition angle.
 
+## Update (2026-03-15): transition angle w deklarowanym scope sigma-int jest juz wyeksportowany (bez globalnego gluing)
+
+Na aktualnym repo state strict core eksportuje:
+- actual `theta_1, theta_2` dla `pair1/pair2` na korytarzu sigma-int (slot-free `F451`, packaged `N489`),
+- oraz jawny derived transition angle `alpha_12 := (theta_2 - theta_1) mod 2π` jako osobny artefakt (`F457`).
+
+To **supersedes** historyczne “not_shown” dla *transition angle* w **tym zadeklarowanym scope**.
+
+Nie zmienia to faktu, ze:
+- nie ma globalnego selector transition/gluing object lifting local compatibility law do globalnej struktury (por. `H40_B1`),
+- nie powstaje w ten sposob jawny “transition matrix” jako transport miedzy rozlacznymi parami modow w sensie globalnym,
+- surowa sciezka `atan2(cross overlaps)` pozostaje formalnie zdegenerowana pod ortonormalnym disjoint scaffolddem (`C32`).
+
 ## Polityka zrodel
 
 ### Strict-admissible support

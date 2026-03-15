@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.10  
+**Version:** 6.5.11  
 **Date:** 2026-03-15  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -25,6 +25,9 @@
   (`N480`, `N488`, `N496`, executed by `F454`, packaged by `N500`).
 - Update (`2026-03-15`): in the declared `R1` target-slot semantics (`span{u_1,u_2}`), residual `Z2` sign flips of the
   representative vectors are gauge-irrelevant for the target slot as a span object (`N501`).
+- Update (`2026-03-15`): residual `Z2` sign can be **frozen as a tracked gauge/convention layer** for the currently exported
+  downstream objects where the sign is provably gauge-irrelevant (packaged by `N502`), without implying any global
+  sign-sensitive physical orientation datum.
 - Update (`2026-03-15`): the two independently exported mode-index assignment bases (diagonal/local vs Shannon ord-reference)
   are aligned on all `pair_m (m=1..5)` up to residual `Z2` sign (audit `P455`); this is a hygiene consistency check and
   does not promote any global discharge.
@@ -46,6 +49,8 @@
   `A_1(pair1) := |u_1><u_1|` (projector; residual `Z2` sign gauge invariant). This discharges the operator-stage bridge target of `P2`
   in declared scope (`F456`) but does **not** identify the operator with the extension-only `A_1_ext` of the `H/O` lane, does not imply
   selector closure, and does not discharge global `QW-2191`.
+- Update (`2026-03-15`): derived transition data `alpha_12 := (theta_2 - theta_1) mod 2π` for `pair1/pair2` is explicitly exported
+  from the strict sigma-int slot-free theta-pair supply (`F457`); this is lane-scoped and does not constitute a global selector transition/gluing object.
 - The sigma-int corridor theta-supply and sigma-int → residual bridge theorems introduced in Release 6.4 remain in force
   (e.g. `F451/N489`, `P451`, `F452/N490`, `N491`) and are not re-derived here.
 
@@ -96,6 +101,10 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
 17. the repo exports a minimal strict-core downstream operator on `V_1=span{c1,s1}` derived only from the materialized sigma‑int `u_1` direction:
     `A_1(pair1) := |u_1><u_1|` (projector; residual `Z2` sign gauge invariant). This closes the `P2` operator-stage target in declared scope (`F456`),
     but does **not** identify the operator with the extension-only `A_1_ext` of the `H/O` lane, does not imply selector closure, and does not discharge global `QW-2191`.
+18. residual `Z2` sign can be frozen as a tracked gauge/convention layer for the currently exported downstream objects where sign is
+    provably gauge-irrelevant (packaged by `N502`), without promoting any sign-sensitive physical orientation datum or any global discharge.
+19. derived transition data `alpha_12 := (theta_2 - theta_1) mod 2π` for `pair1/pair2` is exported from the strict sigma-int slot-free theta-pair
+    supply (`F457`), without implying a global selector transition/gluing object.
 
 ## 1) One-Page Strict Status (6.5)
 
@@ -186,9 +195,10 @@ so the diagonal/local lane canonicalizes the `QW-2190` embedding uniquely up to 
 
 Dashboards now recommend `B3` (topological selector bridge continuation) as the next strict move under `QW-2191` discipline (`P438`, `P441`):
 
-1. explicitly **freeze residual `Z2` sign** as a tracked gauge/convention layer *for the exported downstream objects where it is gauge‑irrelevant*
-   (e.g. `QW-2190` embedding audits, the `R1` span target slot, and strict projector operators such as `A_1(pair1)`), and
-2. continue strict-only closure without implying strict-core selector closure or any global discharge of `QW-2191`.
+1. the residual `Z2` sign freeze (as a tracked gauge/convention layer for exported downstream objects where sign is gauge‑irrelevant) is now
+   packaged as a strict theorem (`N502`), and
+2. continue strict-only closure under explicit `QW-2191` discipline: export only lane‑scoped transition data when needed
+   (e.g. `alpha_12 := (theta_2-\u03b8_1) mod 2\u03c0` for `pair1/pair2` from strict sigma‑int theta supply, `F457`) without implying any global selector transition/gluing object.
 
 Update: the strict Shannon element‑order reference lane now provides one explicit internal symmetry-breaking ingredient
 on the full `n=12` Fourier scaffold (via `F454`), but this is still below strict-core selector closure and does not
@@ -237,6 +247,10 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
 17. dodatkowo, repo eksportuje minimalny ścisły operator downstream na `V_1=span{c1,s1}` z już zmaterializowanego kierunku sigma‑int `u_1`:
     `A_1(pair1) := |u_1><u_1|` (projector; invariantny na residualny flip znaku `Z2`). To domyka etap operatorowy `P2` w zadeklarowanym scope (`F456`),
     ale **nie** identyfikuje tego operatora z extension-only `A_1_ext` z pasa `H/O`, **nie** implikuje selector closure i **nie** rozładowuje globalnie `QW-2191`.
+18. residualny znak `Z2` może zostać jawnie **zamrożony jako warstwa gauge/konwencji** dla aktualnie wyeksportowanych obiektów downstream,
+    dla których wykazano gauge‑irrelewantność znaku (opakowane przez `N502`), bez promocji do sign-sensitive “fizycznej orientacji”.
+19. pochodna dana przejścia `alpha_12 := (theta_2 - theta_1) mod 2π` dla `pair1/pair2` jest wyeksportowana z strict slot‑free theta‑pair na korytarzu sigma‑int (`F457`),
+    bez implikowania globalnego selector transition/gluing object.
 
 ## 1) Jednostronicowy status strict (6.5)
 
@@ -269,9 +283,10 @@ Repo nadal **nie** eksportuje:
 
 Dashboards teraz rekomendują `B3` (kontynuacja topological selector bridge) jako następny ruch w dyscyplinie `QW-2191` (`P438`, `P441`):
 
-1. jawnie **zamrozić residualny znak `Z2`** jako śledzoną warstwę gauge/konwencji *dla tych wyeksportowanych obiektów downstream, gdzie znak jest gauge‑irrelewant*
-   (np. audyty embeddingu `QW-2190`, semantyka target‑slot `R1` jako `span`, oraz strict projektory typu `A_1(pair1)`), oraz
-2. kontynuować strict-only closure bez implikowania strict-core selector closure ani jakiegokolwiek globalnego rozładowania `QW-2191`.
+1. zamrożenie residualnego znaku `Z2` (jako śledzona warstwa gauge/konwencji dla obiektów downstream, gdzie znak jest gauge‑irrelewant)
+   jest już opakowane jako twierdzenie strict (`N502`), oraz
+2. kontynuować strict-only closure w jawnej dyscyplinie `QW-2191`: eksportować tylko lane‑scoped dane przejścia wtedy, gdy są potrzebne
+   (np. `alpha_12 := (theta_2-\u03b8_1) mod 2\u03c0` dla `pair1/pair2` z strict theta supply na korytarzu sigma‑int, `F457`) bez implikowania globalnego selector transition/gluing object.
 
 Update: pas strict Shannon “element‑order reference” dostarcza teraz jawny wewnętrzny składnik symetrii‑łamacza na pełnym
 scaffoldu Fouriera `n=12` (przez `F454`), ale nadal jest to poniżej strict-core selector closure i nie stanowi globalnego

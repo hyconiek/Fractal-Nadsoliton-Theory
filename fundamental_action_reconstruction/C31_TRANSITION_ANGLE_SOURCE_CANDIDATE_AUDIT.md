@@ -16,6 +16,15 @@ transition angle dla aktualnych dwoch lokalnych par.
 - sprawdza, czy strict core ma juz packet-ready **klase zrodla** dla takiego kata,
 - nawet jesli nie ma jeszcze jawnego eksportu jego wartosci.
 
+## Update (2026-03-15): actual `theta_1,theta_2` i `alpha_12` sa obecne w strict core (lane-scoped)
+
+Na aktualnym repo state strict core eksportuje:
+- actual `theta_1,theta_2` (pair1/pair2) na korytarzu sigma-int bez slotow (`F451`, packaged `N489`),
+- oraz derived transition angle `alpha_12 := (theta_2 - theta_1) mod 2π` jako jawny artefakt (`F457`).
+
+W konsekwencji historyczny zapis “brak jawnego eksportu `theta_1,theta_2` / `alpha_12`” jest **superseded** w zadeklarowanym
+scope sigma-int, bez promocji do globalnego gluing ani do globalnego selector transition object.
+
 ## Polityka zrodel
 
 ### Strict-admissible support
