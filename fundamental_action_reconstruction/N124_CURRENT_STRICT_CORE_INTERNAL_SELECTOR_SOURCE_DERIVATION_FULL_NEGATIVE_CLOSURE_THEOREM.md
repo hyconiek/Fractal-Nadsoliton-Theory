@@ -1,7 +1,13 @@
 # N124 Current Strict-Core Internal Selector Source Derivation Full Negative Closure Theorem
 
-Status: `N124_DISCHARGED_CURRENT_STRICT_CORE_INTERNAL_SELECTOR_SOURCE_DERIVATION_FULL_NEGATIVE_CLOSURE_THEOREM_NO_FALSE_PASS`
-As of: `2026-03-11`
+Status: `N124_REQUIRES_REVIEW_CHANGED_OR_INSUFFICIENT_STRICT_CORE_INTERNAL_SELECTOR_SOURCE_STATE`
+As of: `2026-03-15`
+
+Update (`2026-03-15`):
+- The historical negative-closure packaging of `N124` relied on `P113` package-level non-discharge support and on the absence of downstream
+  operator-stage reachability to `A_1(pair1)`.
+- On current repo state, `P2` reaches an operator stage in declared scope via `F456`, and `P113` is correspondingly marked `REQUIRES_REVIEW`.
+- Therefore `N124` is no longer discharged as a current-repo-state theorem and must be re-derived before any negative-closure claim is reused.
 
 ## Goal
 

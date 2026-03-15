@@ -32,16 +32,13 @@ def main() -> None:
         "fundamental_action_reconstruction/generated/p2_strict_core_sigma_int_to_a1_pair1_probe_summary.json"
     )
 
+    downstream_reachability_present = str(p2.get("status") or "").startswith("PASS_")
     no_discharge_supported = (
-        f28["branch_state"][
-            "generic_hidden_source_branch_closed_negatively_on_current_repo_state"
-        ]
-        and f28["branch_state"]["psi0_branch_closed_negatively_on_current_repo_state"]
-        and f28["branch_state"]["fr_branch_closed_negatively_on_current_repo_state"]
-        and f28["branch_state"][
-            "sigma_int_bridge_branch_closed_negatively_on_current_repo_state"
-        ]
-        and p2["status"] == "NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_ROUTE"
+        bool(f28["branch_state"]["generic_hidden_source_branch_closed_negatively_on_current_repo_state"])
+        and bool(f28["branch_state"]["psi0_branch_closed_negatively_on_current_repo_state"])
+        and bool(f28["branch_state"]["fr_branch_closed_negatively_on_current_repo_state"])
+        and bool(f28["branch_state"]["sigma_int_bridge_branch_closed_negatively_on_current_repo_state"])
+        and not downstream_reachability_present
     )
 
     checks_spec = [
@@ -80,8 +77,8 @@ def main() -> None:
         {
             "id": "p2_no_downstream_a1_pair1_reachability",
             "actual": p2["status"],
-            "expected": "NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_ROUTE",
-            "meaning": "there is still no strict-core downstream reachability to A1(pair1)",
+            "expected": "NOT_PASS (downstream operator reachability absent)",
+            "meaning": "P113's package-level non-discharge conclusion requires that no strict-core downstream reachability to A1(pair1) is present",
         },
         {
             "id": "package_level_non_discharge_supported",
@@ -92,39 +89,53 @@ def main() -> None:
     ]
 
     checks: list[dict[str, Any]] = []
+    mismatches: list[str] = []
     for item in checks_spec:
+        ok = item["actual"] == item["expected"]
+        if item["id"] == "p2_no_downstream_a1_pair1_reachability":
+            ok = not downstream_reachability_present
         checks.append(
             {
                 "id": item["id"],
                 "actual": item["actual"],
                 "expected": item["expected"],
-                "pass": item["actual"] == item["expected"],
+                "pass": ok,
                 "meaning": item["meaning"],
             }
+        )
+        if not ok:
+            mismatches.append(item["id"])
+
+    status = "CURRENT_REPO_DOES_NOT_EXPORT_AN_EXPLICIT_STRICT_CORE_INTERNAL_SELECTOR_SOURCE_DERIVATION_DISCHARGE_AFTER_P113"
+    reason = (
+        "F28 plus P2 still support a package-level non-discharge conclusion for strict-core internal selector source derivation on the current repo state."
+    )
+    if mismatches:
+        status = "P113_REQUIRES_REVIEW_CHANGED_OR_INSUFFICIENT_STRICT_CORE_INTERNAL_SELECTOR_SOURCE_STATE"
+        reason = (
+            "At least one prerequisite used by the historical package-level non-discharge packaging no longer holds on the current repo state (see blocking_mismatches). "
+            "In particular, the downstream A1(pair1) operator-stage reachability status has changed; therefore P113 must be re-evaluated before claiming package-level negative closure."
         )
 
     artifact = {
         "stage": "P113",
         "lane": "current_strict_core_internal_selector_source_package_level_probe_only",
         "goal": "test_whether_the_current_repo_now_supports_an_explicit_package_level_non_discharge_conclusion_for_strict_core_internal_selector_source_derivation",
-        "status": "CURRENT_REPO_DOES_NOT_EXPORT_AN_EXPLICIT_STRICT_CORE_INTERNAL_SELECTOR_SOURCE_DERIVATION_DISCHARGE_AFTER_P113",
-        "reason": "B2, N4, N5, N6, N7, N8, and P2 together already close the generic hidden-source branch, the psi0 branch, the FR branch, the sigma-int bridge branch, and the downstream A1(pair1) reachability route negatively on the current repo state; therefore the current repo still exports no strict-core internal selector source derivation discharge",
+        "status": status,
+        "reason": reason,
         "support_state": {
-            "generic_hidden_source_branch_closed_negatively": f28["branch_state"][
-                "generic_hidden_source_branch_closed_negatively_on_current_repo_state"
-            ],
-            "psi0_branch_closed_negatively": f28["branch_state"][
-                "psi0_branch_closed_negatively_on_current_repo_state"
-            ],
-            "fr_branch_closed_negatively": f28["branch_state"][
-                "fr_branch_closed_negatively_on_current_repo_state"
-            ],
-            "sigma_int_bridge_branch_closed_negatively": f28["branch_state"][
-                "sigma_int_bridge_branch_closed_negatively_on_current_repo_state"
-            ],
-            "strict_core_downstream_A1_pair1_reachability_present": False,
-            "package_level_non_discharge_supported": no_discharge_supported,
+            "generic_hidden_source_branch_closed_negatively": bool(
+                f28["branch_state"]["generic_hidden_source_branch_closed_negatively_on_current_repo_state"]
+            ),
+            "psi0_branch_closed_negatively": bool(f28["branch_state"]["psi0_branch_closed_negatively_on_current_repo_state"]),
+            "fr_branch_closed_negatively": bool(f28["branch_state"]["fr_branch_closed_negatively_on_current_repo_state"]),
+            "sigma_int_bridge_branch_closed_negatively": bool(
+                f28["branch_state"]["sigma_int_bridge_branch_closed_negatively_on_current_repo_state"]
+            ),
+            "strict_core_downstream_A1_pair1_reachability_present": bool(downstream_reachability_present),
+            "package_level_non_discharge_supported": bool(no_discharge_supported),
         },
+        "blocking_mismatches": mismatches,
         "remaining_missing_objects": [
             "explicit_strict_core_internal_selector_source_derivation_discharge",
         ],

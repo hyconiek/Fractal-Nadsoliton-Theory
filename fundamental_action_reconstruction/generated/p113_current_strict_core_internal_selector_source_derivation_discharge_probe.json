@@ -2,16 +2,20 @@
   "stage": "P113",
   "lane": "current_strict_core_internal_selector_source_package_level_probe_only",
   "goal": "test_whether_the_current_repo_now_supports_an_explicit_package_level_non_discharge_conclusion_for_strict_core_internal_selector_source_derivation",
-  "status": "CURRENT_REPO_DOES_NOT_EXPORT_AN_EXPLICIT_STRICT_CORE_INTERNAL_SELECTOR_SOURCE_DERIVATION_DISCHARGE_AFTER_P113",
-  "reason": "B2, N4, N5, N6, N7, N8, and P2 together already close the generic hidden-source branch, the psi0 branch, the FR branch, the sigma-int bridge branch, and the downstream A1(pair1) reachability route negatively on the current repo state; therefore the current repo still exports no strict-core internal selector source derivation discharge",
+  "status": "P113_REQUIRES_REVIEW_CHANGED_OR_INSUFFICIENT_STRICT_CORE_INTERNAL_SELECTOR_SOURCE_STATE",
+  "reason": "At least one prerequisite used by the historical package-level non-discharge packaging no longer holds on the current repo state (see blocking_mismatches). In particular, the downstream A1(pair1) operator-stage reachability status has changed; therefore P113 must be re-evaluated before claiming package-level negative closure.",
   "support_state": {
     "generic_hidden_source_branch_closed_negatively": true,
     "psi0_branch_closed_negatively": true,
     "fr_branch_closed_negatively": true,
     "sigma_int_bridge_branch_closed_negatively": true,
-    "strict_core_downstream_A1_pair1_reachability_present": false,
-    "package_level_non_discharge_supported": true
+    "strict_core_downstream_A1_pair1_reachability_present": true,
+    "package_level_non_discharge_supported": false
   },
+  "blocking_mismatches": [
+    "p2_no_downstream_a1_pair1_reachability",
+    "package_level_non_discharge_supported"
+  ],
   "remaining_missing_objects": [
     "explicit_strict_core_internal_selector_source_derivation_discharge"
   ],
@@ -46,16 +50,16 @@
     },
     {
       "id": "p2_no_downstream_a1_pair1_reachability",
-      "actual": "NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_ROUTE",
-      "expected": "NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_ROUTE",
-      "pass": true,
-      "meaning": "there is still no strict-core downstream reachability to A1(pair1)"
+      "actual": "PASS_COMPUTABLE_STRICT_CORE_SIGMA_INT_TO_A1_PAIR1_OPERATOR_STAGE_DECLARED_SCOPE",
+      "expected": "NOT_PASS (downstream operator reachability absent)",
+      "pass": false,
+      "meaning": "P113's package-level non-discharge conclusion requires that no strict-core downstream reachability to A1(pair1) is present"
     },
     {
       "id": "package_level_non_discharge_supported",
-      "actual": true,
+      "actual": false,
       "expected": true,
-      "pass": true,
+      "pass": false,
       "meaning": "taken together, the current repo supports a package-level non-discharge conclusion for strict-core internal selector source derivation"
     }
   ],

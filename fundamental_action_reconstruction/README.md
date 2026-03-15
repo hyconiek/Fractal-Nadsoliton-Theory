@@ -137,11 +137,12 @@ Aktualizacja `N5`:
 Aktualizacja `P2`:
 - uruchomiono executable strict-core bridge probe dla trasy
   `sigma_int_candidate -> residual datum -> theta_1,theta_2 -> u_1,u_2 -> A_1(pair1)`,
-- wynik jest jednoznaczny:
-  `NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_ROUTE`,
-- route w zadeklarowanym scope ma juz strict-core theta supply oraz populated `u_1,u_2` (orientation slice),
-  ale nadal nie eksportuje strict-core operator-level map/bridge do `A_1(pair1)`,
-- probe zwraca skonczony missing-object list zawężony do downstream operator exportu.
+- update (`2026-03-15`): route jest teraz obliczalna do etapu operatorowego:
+  `PASS_COMPUTABLE_STRICT_CORE_SIGMA_INT_TO_A1_PAIR1_OPERATOR_STAGE_DECLARED_SCOPE`,
+- strict sigma-int lane eksportuje minimalny downstream operator na `V_1=span{c1,s1}` z juz zmaterializowanego `u_1`:
+  `A_1(pair1) := |u_1><u_1|` (projector; invariantny na residualny flip znaku `Z2`) (`F456`),
+- to nie jest identyfikacja z extension-only `A_1_ext` z pasa `H/O` i nie jest host-matching claimem; jest to tylko minimalny operator-level bridge
+  ponizej globalnego discharge `QW-2191` i ponizej selector closure.
 
 Aktualizacja `P3`:
 - uruchomiono waski executable probe dla samego FR/topological bridge:

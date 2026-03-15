@@ -41,6 +41,11 @@
 - Update (`2026-03-15`): the strict sigma‑int → residual target‑slot bridge/export‑map object is explicitly upgraded to
   `Upsilon_residual_datum_sigma_int_bridge_export_map_object_v2`, attaching the slot‑free theta‑pair outputs and the corresponding strict‑core
   `R1` inhabitant instance as map outputs (`F455`, packaged by `N499`); this is an explicit upgrade (v1 remains sign‑only) and does not imply selector closure.
+- Update (`2026-03-15`): the repo exports a minimal strict-core downstream operator on `V_1=span{c1,s1}` derived only from the
+  materialized sigma-int orientation direction `u_1`:
+  `A_1(pair1) := |u_1><u_1|` (projector; residual `Z2` sign gauge invariant). This discharges the operator-stage bridge target of `P2`
+  in declared scope (`F456`) but does **not** identify the operator with the extension-only `A_1_ext` of the `H/O` lane, does not imply
+  selector closure, and does not discharge global `QW-2191`.
 - The sigma-int corridor theta-supply and sigma-int → residual bridge theorems introduced in Release 6.4 remain in force
   (e.g. `F451/N489`, `P451`, `F452/N490`, `N491`) and are not re-derived here.
 
@@ -88,6 +93,9 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
 16. the strict sigma‑int → residual target‑slot bridge/export‑map object is explicitly upgraded to carry the slot‑free theta‑pair outputs and
     the corresponding strict‑core `R1` inhabitant instance as map outputs (`F455`, packaged by `N499`), without theta inputs and without implied selector closure
     (the `v1` export-map object remains sign-only).
+17. the repo exports a minimal strict-core downstream operator on `V_1=span{c1,s1}` derived only from the materialized sigma‑int `u_1` direction:
+    `A_1(pair1) := |u_1><u_1|` (projector; residual `Z2` sign gauge invariant). This closes the `P2` operator-stage target in declared scope (`F456`),
+    but does **not** identify the operator with the extension-only `A_1_ext` of the `H/O` lane, does not imply selector closure, and does not discharge global `QW-2191`.
 
 ## 1) One-Page Strict Status (6.5)
 
@@ -225,6 +233,9 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
 16. ponadto, ścisły obiekt bridge/export‑map na korytarzu sigma‑int → residual target‑slot został jawnie ulepszony do
     `Upsilon_residual_datum_sigma_int_bridge_export_map_object_v2`, dołączając wyjścia slot‑free theta‑pair oraz odpowiadającego inhabitanta
     `R1` jako outputy mapy (`F455`, opakowane przez `N499`), bez wejściowych theta i bez implikacji domknięcia selektora (`v1` pozostaje sign‑only).
+17. dodatkowo, repo eksportuje minimalny ścisły operator downstream na `V_1=span{c1,s1}` z już zmaterializowanego kierunku sigma‑int `u_1`:
+    `A_1(pair1) := |u_1><u_1|` (projector; invariantny na residualny flip znaku `Z2`). To domyka etap operatorowy `P2` w zadeklarowanym scope (`F456`),
+    ale **nie** identyfikuje tego operatora z extension-only `A_1_ext` z pasa `H/O`, **nie** implikuje selector closure i **nie** rozładowuje globalnie `QW-2191`.
 
 ## 1) Jednostronicowy status strict (6.5)
 

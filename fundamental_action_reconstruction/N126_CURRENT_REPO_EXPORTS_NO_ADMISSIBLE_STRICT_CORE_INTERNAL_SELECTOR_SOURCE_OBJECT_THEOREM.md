@@ -1,7 +1,12 @@
 # N126 Current Repo Exports No Admissible Strict-Core Internal Selector Source Object Theorem
 
-Status: `N126_DISCHARGED_CURRENT_REPO_EXPORTS_NO_ADMISSIBLE_STRICT_CORE_INTERNAL_SELECTOR_SOURCE_OBJECT_THEOREM_NO_FALSE_PASS`
-As of: `2026-03-07`
+Status: `N126_REQUIRES_REVIEW_CHANGED_OR_INSUFFICIENT_ADMISSIBLE_SOURCE_OBJECT_STATE`
+As of: `2026-03-15`
+
+Update (`2026-03-15`):
+- The historical discharge of `N126` relied on `P115` and on the absence of downstream operator-stage reachability to `A_1(pair1)`.
+- On current repo state, `P2` reaches an operator stage in declared scope via `F456`, and `P115` is correspondingly marked `REQUIRES_REVIEW`.
+- Therefore `N126` is no longer discharged as a current-repo-state theorem without a re-derivation on the updated frontier.
 
 ## Goal
 

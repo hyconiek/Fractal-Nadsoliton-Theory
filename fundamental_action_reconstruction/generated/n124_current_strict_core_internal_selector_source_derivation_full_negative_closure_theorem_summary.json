@@ -1,13 +1,13 @@
 {
   "step": "N124",
-  "status": "N124_DISCHARGED_CURRENT_STRICT_CORE_INTERNAL_SELECTOR_SOURCE_DERIVATION_FULL_NEGATIVE_CLOSURE_THEOREM_NO_FALSE_PASS",
+  "status": "N124_REQUIRES_REVIEW_CHANGED_OR_INSUFFICIENT_STRICT_CORE_INTERNAL_SELECTOR_SOURCE_STATE",
   "scope": "current_strict_core_internal_selector_source_frontier_only",
   "checks": [
     {
       "id": "p113_package_non_discharge_supported",
-      "actual": true,
+      "actual": false,
       "expected": true,
-      "pass": true,
+      "pass": false,
       "meaning": "P113 already supports package-level non-discharge for the strict-core internal selector source frontier"
     },
     {
@@ -40,24 +40,17 @@
     },
     {
       "id": "no_downstream_a1_pair1_reachability",
-      "actual": false,
+      "actual": true,
       "expected": false,
-      "pass": true,
+      "pass": false,
       "meaning": "no strict-core downstream A1(pair1) reachability is present"
     }
   ],
+  "blocking_mismatches": [
+    "p113_package_non_discharge_supported",
+    "no_downstream_a1_pair1_reachability"
+  ],
   "theorem_result": {
-    "discharged": true,
-    "strict_core_internal_selector_source_derivation_discharge_present": false,
-    "strict_core_internal_selector_source_frontier_closed_negatively_on_current_repo_state": true,
-    "full_closure_pass": false
-  },
-  "remaining_open_branches": [],
-  "hard_limits": [
-    "no_proof_that_no_future_strict_core_selector_source_can_exist",
-    "no_strict_core_selector_closure",
-    "no_QW2191_discharge",
-    "no_theory_level_acceptance_of_selector_requirement",
-    "no_ToE_closure"
-  ]
+    "discharged": false
+  }
 }

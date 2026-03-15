@@ -1,7 +1,7 @@
 # P113 Current Strict-Core Internal Selector Source Derivation Discharge Probe
 
-Status: `P113_EXECUTED_CURRENT_STRICT_CORE_INTERNAL_SELECTOR_SOURCE_DERIVATION_DISCHARGE_PROBE_NO_FALSE_PASS`
-As of: `2026-03-11`
+Status: `P113_REQUIRES_REVIEW_CHANGED_OR_INSUFFICIENT_STRICT_CORE_INTERNAL_SELECTOR_SOURCE_STATE`
+As of: `2026-03-15`
 
 ## Goal
 
@@ -14,10 +14,13 @@ source derivation discharge?
 
 ## Result
 
-The answer is now no on the current repo state:
+Update (`2026-03-15`): the historical package-level non-discharge packaging is no longer supported as-is on the current repo state,
+because downstream operator-stage reachability has changed (`P2` now reaches an `A_1(pair1)` operator stage via `F456`).
+
+Therefore `P113` must be re-evaluated before making any package-level negative closure claim about strict-core internal selector source derivation.
 
 ```text
-CURRENT_REPO_DOES_NOT_EXPORT_AN_EXPLICIT_STRICT_CORE_INTERNAL_SELECTOR_SOURCE_DERIVATION_DISCHARGE_AFTER_P113
+P113_REQUIRES_REVIEW_CHANGED_OR_INSUFFICIENT_STRICT_CORE_INTERNAL_SELECTOR_SOURCE_STATE
 ```
 
 ## What was checked
@@ -35,40 +38,24 @@ whether the current repo simultaneously exports:
 
 ## Why it fails
 
-On the current repo state:
+On the current repo state, at least one prerequisite used by the old packaging is now false:
 
-1. `B2` already reports zero strict internal selector derivations,
-2. `N4/N5` already close the current strict-core `psi0` branch negatively,
-3. the strict-core FR/topology lane still exports no strict-core
-   `sigma_int -> theta` selector-source derivation and no strict-core
-   theta-source supply (keeps `QW-2191` open),
-4. the strict-core sigma-int lane now exports:
-   - strict sigma-int source upgrade (`F307/N418`),
-   - theorem-level gauge-quotient safety (`F308/N419`),
-   - an actual residual export-map object (`F311/N422`, residual `Z2`
-     population only),
-   but it still exports no strict-core `theta_1/theta_2` source and no actual
-   target-slot population,
-5. therefore no strict-core downstream route presently reaches a strict-core
-   selector operator on `pair1` (the `P2` route still stops before theta/basis
-   population and operator export).
+- `P2` no longer blocks on downstream operator export; it reaches an operator stage in declared scope (`F456`).
 
-Therefore the current repo still exports no package-level discharge of an
-internal strict-core selector source.
+Therefore the probe cannot be used to justify a package-level negative closure conclusion without re-deriving the package-level frontier.
 
 ## Real reduction after P113
 
-The higher-order frontier is no longer:
+The higher-order frontier is no longer safely describable as:
 
 ```text
-maybe one hidden strict-core source discharge is still implicitly present
+the current repo already supports a package-level non-discharge conclusion
 ```
 
 It is now:
 
 ```text
-the current repo already supports a scoped package-level non-discharge
-conclusion for strict-core internal selector source derivation
+the package-level strict-core internal selector source frontier must be re-evaluated after the sigma-int operator-stage export
 ```
 
 ## What P113 does not claim
@@ -85,8 +72,7 @@ conclusion for strict-core internal selector source derivation
 
 The correct next move is now:
 
-1. keep the strict theta-source absence explicit (no silent axiom-lane
-   promotion),
-2. add one genuinely new strict-core selector/symmetry-breaking ingredient or
-   a new strict internal theta-source provider class, and only then rerun this
-   probe.
+1. keep `QW-2191` explicit (no implied global discharge),
+2. decide (and document) whether the newly exported sigma-int operator-stage object is being treated only as a minimal downstream witness
+   or as part of an admissible strict-core internal selector source package in a declared scope,
+3. rerun/re-derive the package-level frontier (and only then attempt any theorem-level packaging such as `N124`/`N126`).

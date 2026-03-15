@@ -41,7 +41,20 @@ def main() -> None:
         "fundamental_action_reconstruction/generated/n125_current_selector_requirement_theory_level_acceptance_theorem_summary.json"
     )
 
+    downstream_operator_reachability_present = str(p2.get("status") or "").startswith("PASS_")
+
+    # Conservative probe: do not upgrade to a positive admission claim unless the
+    # historical negative packaging remains applicable.
+    negative_packaging_supported = bool((n124.get("theorem_result") or {}).get("discharged")) and (
+        not downstream_operator_reachability_present
+    )
+
     admissible_object_present = False
+    future_move_must_add_new_source_object = True
+    status = "CURRENT_REPO_EXPORTS_NO_ADMISSIBLE_STRICT_CORE_INTERNAL_SELECTOR_SOURCE_OBJECT_AFTER_P115"
+    if not negative_packaging_supported:
+        status = "P115_REQUIRES_REVIEW_CHANGED_OR_INSUFFICIENT_ADMISSION_FRONTIER_STATE"
+        future_move_must_add_new_source_object = False
 
     checks_spec = [
         {
@@ -54,17 +67,17 @@ def main() -> None:
         },
         {
             "id": "n124_no_current_source_discharge",
-            "actual": n124["theorem_result"][
+            "actual": (n124.get("theorem_result") or {}).get(
                 "strict_core_internal_selector_source_derivation_discharge_present"
-            ],
+            ),
             "expected": False,
-            "meaning": "N124 already keeps current source discharge absent",
+            "meaning": "the historical negative packaging required that current strict-core source discharge remain absent",
         },
         {
             "id": "p2_no_downstream_operator_reachability",
-            "actual": p2["status"],
-            "expected": "NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_ROUTE",
-            "meaning": "P2 still keeps downstream strict-core operator reachability absent",
+            "actual": p2.get("status"),
+            "expected": "NOT_PASS",
+            "meaning": "the historical negative packaging required that downstream strict-core operator reachability to A_1(pair1) be absent",
         },
         {
             "id": "n123_nonbridge_forbids_hidden_substitution",
@@ -84,18 +97,21 @@ def main() -> None:
             "id": "admissible_object_present",
             "actual": admissible_object_present,
             "expected": False,
-            "meaning": "no current object satisfies the full admission contract",
+            "meaning": "probe conclusion (conservative): no admissible strict-core internal selector source object is claimed present unless negative packaging is supported",
         },
     ]
 
     checks: list[dict[str, Any]] = []
     for item in checks_spec:
+        ok = item["actual"] == item["expected"]
+        if item["id"] == "p2_no_downstream_operator_reachability":
+            ok = not downstream_operator_reachability_present
         checks.append(
             {
                 "id": item["id"],
                 "actual": item["actual"],
                 "expected": item["expected"],
-                "pass": item["actual"] == item["expected"],
+                "pass": ok,
                 "meaning": item["meaning"],
             }
         )
@@ -104,10 +120,12 @@ def main() -> None:
         "stage": "P115",
         "lane": "current_admissible_strict_core_internal_selector_source_object_only",
         "goal": "test_whether_the_current_repo_already_exports_any_object_satisfying_the_full_admission_contract_for_a_genuine_strict_core_internal_selector_source",
-        "status": "CURRENT_REPO_EXPORTS_NO_ADMISSIBLE_STRICT_CORE_INTERNAL_SELECTOR_SOURCE_OBJECT_AFTER_P115",
+        "status": status,
         "admission_state": {
             "admissible_strict_core_internal_selector_source_object_present": admissible_object_present,
-            "future_positive_move_must_add_new_source_object": True,
+            "future_positive_move_must_add_new_source_object": future_move_must_add_new_source_object,
+            "negative_packaging_supported": negative_packaging_supported,
+            "downstream_operator_reachability_present": downstream_operator_reachability_present,
         },
         "checks": checks,
         "strict_core_promotion": False,

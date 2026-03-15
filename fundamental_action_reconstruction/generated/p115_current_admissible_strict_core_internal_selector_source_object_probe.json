@@ -2,10 +2,12 @@
   "stage": "P115",
   "lane": "current_admissible_strict_core_internal_selector_source_object_only",
   "goal": "test_whether_the_current_repo_already_exports_any_object_satisfying_the_full_admission_contract_for_a_genuine_strict_core_internal_selector_source",
-  "status": "CURRENT_REPO_EXPORTS_NO_ADMISSIBLE_STRICT_CORE_INTERNAL_SELECTOR_SOURCE_OBJECT_AFTER_P115",
+  "status": "P115_REQUIRES_REVIEW_CHANGED_OR_INSUFFICIENT_ADMISSION_FRONTIER_STATE",
   "admission_state": {
     "admissible_strict_core_internal_selector_source_object_present": false,
-    "future_positive_move_must_add_new_source_object": true
+    "future_positive_move_must_add_new_source_object": false,
+    "negative_packaging_supported": false,
+    "downstream_operator_reachability_present": true
   },
   "checks": [
     {
@@ -17,17 +19,17 @@
     },
     {
       "id": "n124_no_current_source_discharge",
-      "actual": false,
+      "actual": null,
       "expected": false,
-      "pass": true,
-      "meaning": "N124 already keeps current source discharge absent"
+      "pass": false,
+      "meaning": "the historical negative packaging required that current strict-core source discharge remain absent"
     },
     {
       "id": "p2_no_downstream_operator_reachability",
-      "actual": "NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_ROUTE",
-      "expected": "NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_ROUTE",
-      "pass": true,
-      "meaning": "P2 still keeps downstream strict-core operator reachability absent"
+      "actual": "PASS_COMPUTABLE_STRICT_CORE_SIGMA_INT_TO_A1_PAIR1_OPERATOR_STAGE_DECLARED_SCOPE",
+      "expected": "NOT_PASS",
+      "pass": false,
+      "meaning": "the historical negative packaging required that downstream strict-core operator reachability to A_1(pair1) be absent"
     },
     {
       "id": "n123_nonbridge_forbids_hidden_substitution",
@@ -48,7 +50,7 @@
       "actual": false,
       "expected": false,
       "pass": true,
-      "meaning": "no current object satisfies the full admission contract"
+      "meaning": "probe conclusion (conservative): no admissible strict-core internal selector source object is claimed present unless negative packaging is supported"
     }
   ],
   "strict_core_promotion": false,

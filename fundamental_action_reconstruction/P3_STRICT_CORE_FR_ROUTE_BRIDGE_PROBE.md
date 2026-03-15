@@ -60,4 +60,5 @@ declared `R1` bridge).
 ## Recommended next move
 
 Continue strict-only closure under explicit `QW-2191` discipline (no implied selector closure) and advance the next downstream missing
-operator/export target (e.g. rerun `P2` and address the missing operator-level map to `A_1(pair1)`).
+operator/export targets. Update (`2026-03-15`): `P2` now reaches a minimal operator-stage `A_1(pair1)` object in declared scope via `F456`;
+do not identify that minimal projector operator with the extension-only `A_1_ext` without an explicit bridge theorem.

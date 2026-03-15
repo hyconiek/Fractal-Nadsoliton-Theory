@@ -1,6 +1,6 @@
 {
   "step": "N126",
-  "status": "N126_DISCHARGED_CURRENT_REPO_EXPORTS_NO_ADMISSIBLE_STRICT_CORE_INTERNAL_SELECTOR_SOURCE_OBJECT_THEOREM_NO_FALSE_PASS",
+  "status": "N126_REQUIRES_REVIEW_CHANGED_OR_INSUFFICIENT_ADMISSIBLE_SOURCE_OBJECT_STATE",
   "scope": "current_repo_admissible_strict_core_internal_selector_source_object_question_only",
   "checks": [
     {
@@ -12,25 +12,16 @@
     },
     {
       "id": "future_move_must_add_new_source_object",
-      "actual": true,
+      "actual": false,
       "expected": true,
-      "pass": true,
+      "pass": false,
       "meaning": "the next positive move must add a genuinely new source object"
     }
   ],
-  "theorem_result": {
-    "discharged": true,
-    "admissible_strict_core_internal_selector_source_object_present": false,
-    "future_positive_move_must_add_new_source_object": true,
-    "full_closure_pass": false
-  },
-  "remaining_open_branches": [
-    "future_new_strict_core_internal_selector_source_object"
+  "blocking_mismatches": [
+    "future_move_must_add_new_source_object"
   ],
-  "hard_limits": [
-    "no_proof_that_no_future_admissible_source_object_can_exist",
-    "no_strict_core_selector_closure",
-    "no_QW2191_discharge",
-    "no_ToE_closure"
-  ]
+  "theorem_result": {
+    "discharged": false
+  }
 }

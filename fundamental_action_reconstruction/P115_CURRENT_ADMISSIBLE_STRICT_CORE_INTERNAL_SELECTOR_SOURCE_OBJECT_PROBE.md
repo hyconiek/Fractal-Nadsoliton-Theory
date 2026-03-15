@@ -1,7 +1,7 @@
 # P115 Current Admissible Strict-Core Internal Selector Source Object Probe
 
-Status: `P115_EXECUTED_CURRENT_ADMISSIBLE_STRICT_CORE_INTERNAL_SELECTOR_SOURCE_OBJECT_PROBE_NO_FALSE_PASS`
-As of: `2026-03-07`
+Status: `P115_REQUIRES_REVIEW_CHANGED_OR_INSUFFICIENT_ADMISSION_FRONTIER_STATE`
+As of: `2026-03-15`
 
 ## Goal
 
@@ -14,10 +14,14 @@ contract for a genuine strict-core internal selector source?
 
 ## Result
 
-The answer remains no on the current repo state:
+Update (`2026-03-15`): the historical negative packaging used by `P115` is no longer directly applicable without review,
+because downstream operator-stage reachability has changed (`P2` now reaches an `A_1(pair1)` operator stage via `F456`), and the
+package-level negative closure theorem `N124` is marked `REQUIRES_REVIEW` on current repo state.
+
+Therefore the current `P115` conclusion is:
 
 ```text
-CURRENT_REPO_EXPORTS_NO_ADMISSIBLE_STRICT_CORE_INTERNAL_SELECTOR_SOURCE_OBJECT_AFTER_P115
+P115_REQUIRES_REVIEW_CHANGED_OR_INSUFFICIENT_ADMISSION_FRONTIER_STATE
 ```
 
 ## What was checked
@@ -35,14 +39,8 @@ satisfies all of the following:
 
 ## Why it fails
 
-On the current repo state:
-
-1. `N124` already shows no strict-core internal selector source derivation
-   discharge,
-2. `P2` still shows no downstream strict-core reachability to `A_1(pair1)`,
-3. `N123` forbids treating package-level nonbridge as hidden bridge,
-4. `N125` keeps selector acceptance outside strict core,
-5. therefore no current object satisfies the full admission contract.
+On the current repo state, at least one prerequisite used by the historical negative packaging is now false (`P2` operator-stage reachability),
+so the previous “no admissible object” conclusion must be re-evaluated under explicit scope and `QW-2191` discipline.
 
 ## Real reduction after P115
 
