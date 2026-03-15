@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.19  
+**Version:** 6.5.20  
 **Date:** 2026-03-15  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -70,6 +70,9 @@
   claim that either basis diagonalizes the full `H_psi` operator.
 - Update (`2026-03-15`): to avoid any false dependence on residual eigenvector sign conventions in `F459`, the repo exports
   sign‑gauge‑invariant rank‑one spectral projectors `P_j := |v_j><v_j|` for `H_psi` (`F460`) and packages the sign gauge‑irrelevance statement as a strict theorem (`N504`).
+- Update (`2026-03-15`): a probe exports a **pair‑plane weight profile** for the `H_psi` eigenprojectors,
+  `w_{j,label} := tr(Π_label P_j)` across labels `{e0,pair1..pair5,e6}` (`P464`), and a value‑instantiation theorem packages the conclusion
+  that the current `H_psi` eigenmodes are strongly mixed across pair planes (so no implied diagonalization) (`N505`).
 - The sigma-int corridor theta-supply and sigma-int → residual bridge theorems introduced in Release 6.4 remain in force
   (e.g. `F451/N489`, `P451`, `F452/N490`, `N491`) and are not re-derived here.
 
@@ -300,6 +303,9 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
     twierdzi, że którakolwiek z tych baz diagonalizuje pełny operator `H_psi`.
 26. aby uniknąć fałszywej zależności od residualnych konwencji znaku wektorów własnych w `F459`, repo eksportuje
     sign‑gauge‑invariant rank‑one projektory spektralne `P_j := |v_j><v_j|` dla `H_psi` (`F460`) oraz pakuje twierdzenie o gauge‑irrelewantności znaku jako strict theorem (`N504`).
+27. dodatkowo, sonda eksportuje **profil wag pair‑plane** dla eigenprojektorów `H_psi`:
+    `w_{j,label} := tr(Π_label P_j)` po labelach `{e0,pair1..pair5,e6}` (`P464`), a value‑instantiation theorem pakuje wniosek,
+    że na aktualnej instancji `H_psi` eigenmody są silnie zmieszane pomiędzy pair planes (więc nie ma prawa sugerować diagonalizacji) (`N505`).
 
 ## 1) Jednostronicowy status strict (6.5)
 
