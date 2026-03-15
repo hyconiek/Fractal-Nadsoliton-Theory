@@ -1,20 +1,27 @@
 # B3 Topological Selector Bridge Packet
 
-Status: `B3_PACKET_READY_TOPOLOGICAL_SELECTOR_BRIDGE_DERIVATION_PENDING`
-As of: `2026-03-06`
+Status: `B3_UPDATED_TOPOLOGICAL_SELECTOR_BRIDGE_PARTIALLY_DISCHARGED_AXIS_DATUM_PRESENT_RESIDUAL_SIGN_AND_GLOBAL_SCOPE_OPEN_NO_FALSE_PASS`
+As of: `2026-03-15`
 
 ## Cel
 
-Po `B2` wiadomo juz, ze:
-- w strict core nie ma gotowego `internal orientation datum`,
-- ale istnieje lokalna warstwa topologiczna i FR-like trop, ktory moze byc nośnikiem takiego datum.
+Po aktualizacji `B2`, `A6`, oraz eksporcie Shannon lane (`F454`) wiadomo juz, ze:
+- w strict core istnieje juz **axis-only internal orientation datum** na dwoch niezaleznych lanes:
+  - canonical local-diagonal (`N487` + `F453/N492`),
+  - Shannon element‑order reference (`N480/N488/N496` + `F454`),
+  i te osie sa zgodne na `n=12` (audit `P455`, packaged as `N497`).
+
+Pozostaje jednak otwarty, scisle nazwany problem:
+- **residual `Z2` sign** (sign-sensitive physical orientation datum) oraz
+- **global scope** (kernel-alone) unikalnosci pod `QW-2191` dyscyplina.
 
 `B3` nie wyprowadza jeszcze selectora.
 `B3` buduje minimalny packet derivation, ktory trzeba rozladowac, zeby przejsc od:
-- `local topological / FR sign data`
+- strict topological `sigma_int` (FR-sign map on `pi_1(C_v1)≅Z2`, exported with explicit provenance),
 
 do:
-- `mode-selector for the O(2) family from QW-2191`.
+- **sign-sensitive** orientation-selection ingredient (lifting residual `Z2` where downstream truly requires it),
+  oraz/lub rozszerzenia scope poza lane‑scoped canonicalizacje, bez false‑PASS.
 
 ## Polityka zrodel
 
@@ -22,18 +29,28 @@ do:
 
 1. `QW-2191`
    - obstruction theorem.
-2. `QW-2206`
-   - local topological protection layer integrated (`B~1`, local FR spin/g evidence).
-3. `A5`
+2. `F306/N417` + `F307/N418`
+   - declared strict domain `C_v1` with `pi_1(C_v1)≅Z2` + exported strict FR-sign map `chi_FR_strict_v1` and strict sigma-int source upgrade `sigma_int_strict_derived_v1`.
+3. `F308/N419`
+   - sigma-int gauge-quotient safety witness on the declared strict domain.
+4. `F451/N489` + `P451` + `P5`
+   - slot-free strict sigma-int → theta-pair supply and an audited `R1` target-slot inhabitant instance (declared scope).
+5. `F453/N492` + `N487`
+   - diagonal/local axis datum (lane-scoped `O(2)->Z2`) + exported mode-index assignment.
+6. `F454/N496` + `N480/N488`
+   - Shannon element‑order reference axis datum (lane-scoped `O(2)->Z2`) + exported mode-index assignment.
+7. `P455` + `N497`
+   - cross-lane axis alignment up to residual `Z2` sign (value-instantiation packaging).
+8. `A5`
    - topological spinor route retained as primary hypothesis branch.
-4. `A6`
+9. `A6`
    - gauge reconstruction boundary requiring uniqueness.
-5. `A10`
+10. `A10`
    - anti-overclaim discipline.
-6. `B1`
+11. `B1`
    - blocker reduced to internal selector question.
-7. `B2`
-   - no strict internal selector source currently present.
+12. `B2`
+   - axis-only internal orientation datum exists on two lanes; residual sign + global scope remain open.
 
 ### Heuristic support only
 
@@ -50,53 +67,65 @@ do:
 - ciagla rodzine `O(2)` dla assignmentu modow,
 - brak unikalnosci z kernel alone.
 
-### 2. Lokalna topologia jest jawnie obecna
+### 2. Axis-only canonicalizacja istnieje juz na dwoch niezaleznych lanes
 
-`QW-2206` daje:
-- lokalny ladunek topologiczny `B~1`,
-- lokalne wsparcie skyrmionowe,
-- lokalnie zintegrowana warstwe FR spin/g.
+Repo eksportuje dwie niezalezne, strict-admissible canonicalizacje osi (axis-only; residual sign pozostaje):
+- diagonal/local: `N487` + `F453/N492`,
+- Shannon ord reference: `N480/N488/N496` + `F454`,
+oraz ich zgodnosc osiowa na `n=12` (audit `P455`, packaged as `N497`).
 
-### 3. Brakuje tylko mostu
+### 3. Sigma_int jako strict datum i jego gauge-quotient safety istnieja
 
-Brakujacy obiekt nie jest juz ogolna "topologia".
-Brakuje konkretnego mostu:
-- `topological sign / orientation data -> selector distinguishing one point in O(2)`.
+Repo eksportuje strict sigma-int jako datum z topologii konfiguracji (`F306/N417` + `F307/N418`) oraz jego gauge-quotient safety (`F308/N419`).
+
+W deklarowanym zakresie `R1` istnieje tez slot-free theta supply (`F451/N489`) i inhabitant (`P451`).
+
+### 4. Brakuje konkretnego sign-sensitive domkniecia i/lub scope extension
+
+Po powyzszych postepach brakujacy obiekt nie jest juz:
+- "dowolna canonicalizacja osi",
+
+tylko:
+- jawny **sign-sensitive** physical orientation datum (lifting residual `Z2`) tam, gdzie downstream tego wymaga,
+- oraz/lub jawne rozszerzenie poza lane-scoped canonicalizacje bez sugerowania globalnego discharge `QW-2191`.
 
 ## Packet `B3_O1..B3_O5`
 
 ### `B3_O1` - internal datum definition
 
-Zdefiniowac wewnetrzna zmienna:
-- `sigma_int in {+1, -1}`
+Status na `2026-03-15`: **zrealizowane w strict**.
 
-albo rownowazny obiekt orientacyjny, zbudowany z topologii / kolektywnych wspolrzednych jednego nadsolitonu.
-
-Wymaganie:
-- nie moze byc recznie wprowadzonym convention token.
+Repo eksportuje:
+- `sigma_int_strict_derived_v1 ∈ {+1,-1}` jako strict source-upgrade datum (`F307/N418`),
+z jawna provenance:
+`explicit_strict_side_premise_nontrivial_character` (bez hybrid FR reuse).
 
 ### `B3_O2` - deformation and gauge stability
 
-Pokazac, ze `sigma_int`:
-- jest stabilne na dopuszczalnej rodzinie deformacji,
-- nie jest artefaktem gauge-choice,
-- nie zalezy od dowolnej parametryzacji degeneracji.
+Status na `2026-03-15`: **gauge-quotient safety rozladowane na zadeklarowanym domain**, reszta pozostaje zakresowa.
+
+Repo eksportuje theorem-level gauge-quotient safety dla `sigma_int` na zadeklarowanym strict domain `C_v1` (`F308/N419`),
+bez gauge fixing.
+
+Nie jest to jeszcze theorem-level fizyczna derivation FR sign ani globalna stabilnosc poza zadeklarowanym scope.
 
 ### `B3_O3` - selector map
 
-Pokazac, jak z `sigma_int` przejsc do:
-- wyroznionego wyboru kata `theta`,
+Status na `2026-03-15`: **zrealizowane w zadeklarowanym scope theta/R1**.
 
-albo do rownowaznego funkcjonalnego kryterium, ktore wybiera jedna klase assignmentu.
+Repo eksportuje slot-free sigma-int → theta-pair supply (`F451/N489`) oparte o strict Shannon ord-reference objective
+(`F446/N480`, `N488`) oraz inhabitant `R1` (`P451`).
 
-To musi zastapic zewnetrzny selector z `QW-2192`, a nie tylko go przepisywac.
+Residual `Z2` sign na `pair1` jest jawnie sledzony przez sigma-int sign convention layer (`F311`), bez twierdzenia o globalnej kanonizacji.
 
 ### `B3_O4` - compatibility with mode scaffold
 
-Udowodnic zgodnosc z:
-- mode scaffold `QW-2190`,
-- gauge reconstruction boundary z `A6`,
-- brakiem naruszenia lokalnych auditow Lie-closure.
+Status na `2026-03-15`: **wsparta w aktualnie zadeklarowanych auditach**, globalny scope nadal otwarty.
+
+W szczegolnosci:
+- `A6` jest jawnie lane-scoped i utrzymuje `QW-2191` jako globalny obstruction,
+- embedding audyty `QW-2190` sa conjugation-gauge dla residual sign i O(2) rotacji (np. `N493`, `N495`, audyty `P452`, `P454`),
+- osie z diagonal/local i Shannon lane sa zgodne na `n=12` (audit `P455`, packaged as `N497`).
 
 ### `B3_O5` - anti-overclaim closure test
 
@@ -114,20 +143,22 @@ Pokazac, ze nawet po zbudowaniu `B3_O1..B3_O4` wolno claimowac tylko to, co rzec
 ## Czego `B3` nie ustala
 
 `B3` nie ustala:
-- ze `sigma_int` istnieje,
-- ze FR route na pewno rozladuje problem,
-- ze uniqueness jest juz zamknieta,
-- ze gauge reconstruction staje sie theorem-level.
+- theorem-level fizycznej derivation FR sign (poza jawnie zadeklarowanym strict-side premise w `F307/N418`),
+- ze residual `Z2` sign zostal podniesiony do sign-sensitive physical orientation datum,
+- ze globalny scope `QW-2191` jest rozladowany,
+- ze gauge reconstruction staje sie theorem-level/full-uniqueness.
 
 ## Macierz statusu po B3
 
 | Obiekt | Status po B3 | Uwagi |
 |---|---|---|
-| local topological evidence | `available_in_strict_core` | `QW-2206` |
-| FR/topological bridge intuition | `heuristically_supported` | `QW-1622`, `QW-1210` |
-| internal orientation datum | `not_derived` | nadal open |
-| topological-selector bridge | `packet_ready` | `B3_O1..B3_O5` |
-| axiom-free uniqueness | `open` | nadal brak discharge |
+| sigma_int strict datum | `exported_premise_based` | `F307/N418` |
+| sigma_int gauge-quotient safety | `discharged_on_declared_domain` | `F308/N419` |
+| axis-only internal orientation datum (diagonal/local) | `exported` | `N487` + `F453/N492` |
+| axis-only internal orientation datum (Shannon ord reference) | `exported` | `N480/N488/N496` + `F454` |
+| diagonal vs Shannon axis alignment | `value_instantiated` | `P455` / `N497` |
+| sign-sensitive physical orientation datum | `not_derived` | nadal open |
+| global axiom-free uniqueness | `open` | `QW-2191` pozostaje |
 
 ## Anti-overclaim
 
@@ -143,9 +174,10 @@ Pokazac, ze nawet po zbudowaniu `B3_O1..B3_O4` wolno claimowac tylko to, co rzec
 
 ## Nastepny krok
 
-Naturalnym kolejnym ruchem jest `B4`:
-- podjac probe `B3_O1`,
-- czyli zbudowac minimalny kandydat `sigma_int`
-  z lokalnej topologii / kolektywnych wspolrzednych / FR-sign branch,
-- a jesli to sie nie uda, jawnie utrzymac:
-  - `gauge uniqueness closed only in axiom-augmented scope`.
+Naturalnym kolejnym ruchem jest **B3‑continuation**:
+
+1. jesli downstream wymaga sign-sensitive physical orientation:
+   - albo dowiesc gauge‑irrelevance znaku dla danego downstream observable,
+   - albo wyeksportowac strict sign-sensitive datum (lifting residual `Z2`) bez wprowadzania marked-direction slot,
+2. jesli downstream nie wymaga znaku:
+   - jawnie zamrozic residual sign jako gauge/convention layer i kontynuowac strict-only ToE closure pod `QW-2191` dyscyplina.
