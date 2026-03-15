@@ -56,8 +56,9 @@ This packet:
 1. exports the **nadsoliton core** only (no external-theory interpretation),
 2. does **not** assert that all local coefficient families (`m2_psi*`, `g4_psi*`, `g6_psi*`, `gY*`) are already
    strict-derived from the kernel alone,
-3. does **not** claim a strict-core `O(2)` cut on `pair1` or a discharge of `QW-2191` (see `T166` and the diagonal
-   frontier),
+3. does **not** claim any **global** discharge of `QW-2191` from kernel-alone data; however, the current repo does export
+   lane-scoped `O(2) -> Z2` axis cuts (diagonal/local and Shannon element-order reference lanes) which canonicalize all
+   degenerate Fourier pairs on `n=12` **up to residual sign** (no selector closure implied),
 4. does **not** add “half-life / decay-time” terms into the Lagrangian (open-system decay is not a conservative
    Lagrangian ingredient on the current strict scope).
 
@@ -77,15 +78,22 @@ W możliwie prostych słowach, **na obecnym stanie repo**:
 4. W tej samej lane istnieje twarda przeszkoda unikatowości:
    - zdegenerowane pary 2D generują ciągłą rodzinę wyboru bazy `O(2)` i sam kernel nie wybiera osi kanonicznie
      (`QW-2191`).
-5. Jeśli ktoś chce ścisłego “akceleratora wyboru” (przecięcia `O(2)` na `pair1`), to matematycznie:
-   - host translacyjnie niezmienniczy jest izotropowy na `pair1` i nie tnie `O(2)` (`N465`),
-   - diagonalny/lokalny sektor tnie `O(2)` wtedy i tylko wtedy, gdy ma niezerowy defekt trybu 2 `F2(d)` (`N466`),
-   - ale **na obecnych eksportach** `F2(d)` dla kanonicznego `D_local_residual` pozostaje niedookreślone (`N472/P431`),
-     więc nie wolno ogłaszać strict-core cięcia `O(2)`.
-6. Nowy, twardy reduktor (`N474`) mówi dodatkowo:
-   - przy stacjonarności próżni i `vpsi_k≠0` wkład Yukawa znika z diagonalnego wpisu Hessianu,
-     więc Yukawa nie może “w pojedynkę” dostarczyć brakującego `F2(d)` w rdzeniu strict.
-7. „Czas połowicznego rozpadu” nie jest jeszcze obiektem strict-core Lagrangianu:
+5. Jednak strict core ma już dwa jawne, niezależne **wewnętrzne** mechanizmy osiowej kanonizacji (axis-only) na `n=12`,
+   które tną `O(2)` do residual `Z2` na wszystkich parach `pair_m (m=1..5)` (bez globalnego discharge i bez selector closure):
+   - diagonal/local: strict-derived value instantiation profilu `D_local_residual` przez `F447 → P437` rozstrzyga niezerowość
+     defektów `F_{2m}(d)` na wszystkich parach (`N485`) i pakuje scoped `O(2)->Z2` discharge (`N487`) oraz obiekt bazy
+     `ModeIndexAssignment_canonical_local_diagonal_strict_derived_v1` (`F453/N492`),
+   - Shannon element-order reference: defekt `F_{2m}(ord_{Z_12})` oraz obiektyw cross-entropy tną `O(2)` do residual `Z2`
+     na wszystkich parach (`N480`, `N488`, `N496`, wykonane przez `F454` i opakowane przez `N500`).
+6. Reduktor `N474` pozostaje spójny z powyższym: diagonalny wpis Hessianu ma formę Yukawa-free pod stacjonarnością,
+   więc Yukawa nie jest “źródłem osi” w tym strict mechanizmie; w szczególności diagonal/local `O(2)`‑cut nie wymaga
+   osobnej “Yukawa‑orientacji”.
+7. (Update, `2026-03-15`) Repo eksportuje też pełny, liczbowy eigensystem *pełnej* macierzy Hessianu sektora `Psi`
+   na diagonal/local lane:
+   `H_psi := K_total + (m0^2 I + D_local_residual)` wraz z ortonormalną bazą własną i wartościami własnymi (`F459`).
+   To jest strict-derived value instantiation (lane-scoped) i wspiera interpretację “light = linearized eigenmodes”
+   bez promocji do host matching / ToE closure.
+8. „Czas połowicznego rozpadu” nie jest jeszcze obiektem strict-core Lagrangianu:
    - w konserwatywnym Lagrangianie nie ma wprost tłumienia,
    - `t_{1/2}` wymagałby obiektu typu szerokość/niestabilność w opisie efektywnym (otwarty układ),
    - więc na obecnym strict scope to może być tylko *interpretacja downstream*, nie termin w `L_core`.
@@ -291,6 +299,10 @@ the propagating linearized eigenmodes of this operator around the nadsoliton vac
 On the `Z_12` ring scaffold (`QW-2190`), some eigenmodes come in degenerate 2D pairs, producing the strict `O(2)`
 basis-choice family obstruction (`QW-2191`).
 
+Update (`2026-03-15`): na obecnym repo state kernel-alone `QW-2191` pozostaje prawdziwe jako obstruction, ale w strict core
+istnieją lane-scoped wewnętrzne składniki, które kanonizują osie w parach (do residual `Z2`) i umożliwiają jawne,
+liczbowe pakiety eigensystemów (np. diagonal/local `F459`).
+
 ### 5.3 Matter (second emergence) = stable nonlinear excitations of the same fields
 
 “Matter” is intended to arise as **nonlinear**, spatially localized and/or topologically stabilized excitations of the
@@ -314,10 +326,10 @@ This is a program-level ontology statement; it is not promoted here into a theor
 
 ## 6) Current strict frontier reminders (what is still open)
 
-1. `QW-2191` remains a real strict-core uniqueness obstruction on degenerate mode pairs.
-2. The diagonal/local accelerator lane reduces strict `pair1` `O(2)` cutting to one mode‑2 defect decision target
-   (`T166`).
-3. Do not claim strict-core selector closure unless a genuinely strict internal selector source is exported.
+1. `QW-2191` remains a real strict-core uniqueness obstruction on kernel-alone translation-invariant data.
+2. The diagonal/local `T166` decision target is now discharged on a strict-derived value instantiation (`N482`), and the
+   same lane exports an all-pairs `O(2)->Z2` cut on `n=12` (`N487`) plus explicit mode-index assignment basis (`F453`).
+3. Do not claim strict-core selector closure / admissible `S_sel_int` unless a genuinely strict closure object is exported.
 
 ## 7) What A11 does not prove
 
