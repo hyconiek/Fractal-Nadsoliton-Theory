@@ -1,7 +1,7 @@
 # N6 Current Strict-Core FR-Route Nonderivation Theorem
 
-Status: `N6_DISCHARGED_CURRENT_STRICT_CORE_FR_ROUTE_NONDERIVATION_NO_FALSE_PASS`
-As of: `2026-03-07`
+Status: `N6_REQUIRES_REVIEW_CHANGED_OR_INSUFFICIENT_FR_ROUTE_FRONTIER`
+As of: `2026-03-15`
 
 ## Goal
 
@@ -9,6 +9,23 @@ After `P3`, the FR/topological route is no longer an open intuitive option.
 
 `N6` states the strongest honest theorem that follows for the current
 strict-core FR route itself.
+
+## Update (2026-03-15): this nonderivation theorem is superseded on current repo state
+
+The historical `2026-03-07` proof relied on (among other premises):
+
+1. `T2` export-map/equivalence being absent on the strict sigma-int lane, and
+2. strict-core actual theta-source being absent (`C35`).
+
+On the current repo state (`2026-03-15`) both of these premises fail:
+
+1. the strict sigma-int → residual bridge theorem is discharged (`N491`) and `T2` reports a strict-core export-map object present,
+2. strict-core theta supply is exported in declared scope (`F451/N489`) and audited inhabitant instances exist.
+
+Therefore the conclusion “the current strict-core FR route does not derive a residual orientation datum or theta-source” is **no longer
+the current strict status**. A revised negative theorem (if desired) must be re-derived against the updated frontier.
+
+The remainder of this document is preserved as the historical `2026-03-07` statement.
 
 ## Theorem
 

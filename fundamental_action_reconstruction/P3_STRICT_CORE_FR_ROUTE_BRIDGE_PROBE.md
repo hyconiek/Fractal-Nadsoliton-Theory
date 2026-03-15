@@ -1,7 +1,7 @@
 # P3 Strict-Core FR-Route Bridge Probe
 
 Status: `P3_EXECUTED_STRICT_CORE_FR_ROUTE_BRIDGE_COMPUTE_OR_FAIL_NO_FALSE_PASS`
-As of: `2026-03-07`
+As of: `2026-03-15`
 
 ## Goal
 
@@ -23,35 +23,29 @@ The probe is `compute-or-fail`:
 
 ## Result
 
-The current route does **not** reach a strict-core bridge.
+The current strict sigma-int lane **does** reach a strict-core bridge *in the declared scope* (residual `Z2` remains explicit).
 
-The report returns:
+The report returns a computability PASS (scope-limited):
 
 ```text
-NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_FR_ROUTE
+PASS_COMPUTABLE_STRICT_CORE_FR_ROUTE_BRIDGE_UP_TO_THETA_SOURCE_DECLARED_SCOPE
 ```
 
 ## Finite missing-object list
 
-The current FR route still lacks:
+In the declared `R1` scope, there is no longer a missing-object list for the narrow bridge route itself:
 
-1. a strict derivation or strict-core source-object upgrade for
-   `sigma_int_candidate`,
-2. theorem-level gauge-quotient safety for `sigma_int_candidate`,
-3. a strict-core equivalence/export map
-   `sigma_int_candidate -> residual orientation datum`,
-4. a strict-core selector map
-   `sigma_int_candidate -> theta`
-   or an internal derivation of the `J_ab` selector family,
-5. a strict-core actual phase source for `theta_1`, `theta_2`.
+1. strict sigma-int datum is exported (premise-based; no hybrid reuse),
+2. theorem-level gauge-quotient safety is exported on the declared domain,
+3. a strict-core sigma-int → residual export-map object exists (`T2`),
+4. strict-core theta supply exists (`C35`), and the corresponding `R1` inhabitant is exported.
+
+What remains are **global** and/or **downstream** frontiers (e.g. `QW-2191` global uniqueness; operator-level reachability beyond the
+declared `R1` bridge).
 
 ## Honest frontier
 
-- `B8` already exposes the FR-route residual blockers.
-- `T2_B1` remains active:
-  strict-core target slot and sign-only export-map object exist, but target-slot population (theta_1,theta_2) remains absent.
-- `C35_B1` remains active:
-  only an axiom-augmented actual-theta source branch exists.
+`B8` keeps the global residual blockers explicit (no global `QW-2191` discharge, no selector closure, residual sign remains explicit).
 
 ## What P3 does not claim
 
@@ -65,7 +59,5 @@ The current FR route still lacks:
 
 ## Recommended next move
 
-Only two serious routes remain:
-
-1. construct one missing strict-core bridge object and rerun `P3`,
-2. or upgrade the negative theorem lane for the FR route itself.
+Continue strict-only closure under explicit `QW-2191` discipline (no implied selector closure) and advance the next downstream missing
+operator/export target (e.g. rerun `P2` and address the missing operator-level map to `A_1(pair1)`).

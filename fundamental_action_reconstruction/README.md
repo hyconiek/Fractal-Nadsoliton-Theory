@@ -139,38 +139,28 @@ Aktualizacja `P2`:
   `sigma_int_candidate -> residual datum -> theta_1,theta_2 -> u_1,u_2 -> A_1(pair1)`,
 - wynik jest jednoznaczny:
   `NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_ROUTE`,
-- route zatrzymuje sie przed strict-core theta supply, basis-pair materialization i operator-level export na `pair1`,
-- probe zwraca skonczony blocker-set zamiast kolejnej ogolnej diagnozy.
+- route w zadeklarowanym scope ma juz strict-core theta supply oraz populated `u_1,u_2` (orientation slice),
+  ale nadal nie eksportuje strict-core operator-level map/bridge do `A_1(pair1)`,
+- probe zwraca skonczony missing-object list zawężony do downstream operator exportu.
 
 Aktualizacja `P3`:
 - uruchomiono waski executable probe dla samego FR/topological bridge:
   `sigma_int_candidate -> residual orientation datum -> theta-source`,
 - wynik:
-  `NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_FR_ROUTE`,
-- probe zwraca skonczony missing-object list dla samej trasy FR, bez mieszania
-  tego z dalszym downstream operator route.
+  `PASS_COMPUTABLE_STRICT_CORE_FR_ROUTE_BRIDGE_UP_TO_THETA_SOURCE_DECLARED_SCOPE`,
+- PASS jest scope-limited (zadeklarowane lane i target-slot semantics); nie promuje do globalnego discharge `QW-2191` ani do selector closure.
 
 Aktualizacja `N6`:
-- wykonano route-specific theorem dla aktualnego strict-core FR/topological route,
-- `B4/B5/B6/B7/B8/T2/C35/C37/C38` razem wymuszaja wniosek:
-  obecna FR route nie wyprowadza strict-core residual orientation datum ani
-  actual theta-source,
-- to nie jest global impossibility theorem, ale jest theorem-level nonderivation
-  dla jedynego sensownego internal-source candidate.
+- historyczny theorem-level nonderivation (`2026-03-07`) jest superseded na aktualnym repo state
+  (premisy “`T2` map absent” i “`C35` theta-source absent” juz nie zachodza),
+- aktualny status to `N6_REQUIRES_REVIEW_CHANGED_OR_INSUFFICIENT_FR_ROUTE_FRONTIER` (wymaga re-derivation jesli ma powstac nowy negatywny theorem).
 
 Aktualizacja `P4`:
 - uruchomiono najwezszy executable probe dla aktualnego choke point:
   `sigma_int_candidate -> residual orientation datum`,
 - wynik:
-  `NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_RESIDUAL_DATUM_ROUTE`,
-- probe rozdziela jawnie:
-  `candidate-fit + acceptance carrier + axiom-lane bridge witness`
-  od
-  `strict-core residual-datum bridge`,
-- skonczony blocker-set redukuje sie do:
-  strict sigma source upgrade, theorem-level gauge quotient safety,
-  strict-core target-slot export, strict-core equivalence/export map
-  i selector-track identification beyond overlay only.
+  `PASS_COMPUTABLE_FROM_CURRENT_STRICT_CORE_RESIDUAL_DATUM_ROUTE`,
+- strict sigma-int lane jest obliczalny do target-slot population w zadeklarowanym scope (bez implied selector closure; `QW-2191` pozostaje otwarty).
 
 Aktualizacja `N7`:
 - wykonano route-specific theorem dla aktualnej trasy

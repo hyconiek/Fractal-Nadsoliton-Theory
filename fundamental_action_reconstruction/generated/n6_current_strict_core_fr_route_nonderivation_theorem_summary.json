@@ -1,7 +1,7 @@
 {
   "step": "N6",
-  "status": "N6_DISCHARGED_CURRENT_STRICT_CORE_FR_ROUTE_NONDERIVATION_NO_FALSE_PASS",
-  "goal": "Discharge a route-specific theorem: the current strict-core FR/topological route does not yet derive an internal selector source.",
+  "status": "N6_REQUIRES_REVIEW_CHANGED_OR_INSUFFICIENT_FR_ROUTE_FRONTIER",
+  "goal": "Check whether the current strict-core FR/topological route derives an internal selector source.",
   "scope": "current_strict_core_fr_route_only",
   "checks": [
     {
@@ -13,16 +13,16 @@
     },
     {
       "id": "b8_no_strict_derivation_of_sigma",
-      "actual": true,
+      "actual": false,
       "expected": true,
-      "pass": true,
+      "pass": false,
       "meaning": "sigma_int_candidate is not strict-derived"
     },
     {
       "id": "b5_gauge_quotient_safety_open",
-      "actual": "open",
+      "actual": "discharged_on_declared_domain",
       "expected": "open",
-      "pass": true,
+      "pass": false,
       "meaning": "full gauge-quotient safety remains open"
     },
     {
@@ -41,9 +41,9 @@
     },
     {
       "id": "t2_map_absent",
-      "actual": false,
+      "actual": true,
       "expected": false,
-      "pass": true,
+      "pass": false,
       "meaning": "strict-core bridge map is absent"
     },
     {
@@ -62,31 +62,21 @@
     },
     {
       "id": "c35_actual_theta_source_absent",
-      "actual": "not_shown",
+      "actual": "present_strict_core_theta_pair_source",
       "expected": "not_shown",
-      "pass": true,
+      "pass": false,
       "meaning": "the route does not supply actual theta-source in strict core"
     }
   ],
+  "blocking_mismatches": [
+    "b8_no_strict_derivation_of_sigma",
+    "b5_gauge_quotient_safety_open",
+    "t2_map_absent",
+    "c35_actual_theta_source_absent"
+  ],
   "theorem_result": {
-    "discharged": true,
-    "strict_core_fr_route_derives_residual_orientation_datum": false,
-    "strict_core_fr_route_derives_actual_theta_source": false,
-    "strict_core_fr_route_serves_as_internal_selector_source": false,
-    "extra_strict_core_bridge_objects_required": true
+    "discharged": false,
+    "reason": "the expected FR-route frontier has changed or required evidence objects are missing"
   },
-  "missing_structure_classes": [
-    "strict_derivation_of_sigma_int_candidate",
-    "theorem_level_gauge_quotient_safety",
-    "strict_core_equivalence_or_export_map_to_residual_orientation_datum",
-    "strict_core_sigma_to_theta_map_or_internal_selector_family_derivation",
-    "strict_core_actual_theta_source"
-  ],
-  "hard_limits": [
-    "no global impossibility theorem",
-    "no claim that future FR-based strict-core routes are impossible",
-    "no claim that QW-2191 is discharged",
-    "no claim that ToE is closed"
-  ],
-  "required_next_step": "ADD_ONE_MISSING_STRICT_CORE_FR_BRIDGE_OBJECT_AND_RERUN_P3_OR_FORMALIZE_A_STRONGER_NEGATIVE_THEOREM_IF_A_NEW_ARGUMENT_APPEARS"
+  "required_next_step": "REVIEW_CHANGED_FR_ROUTE_FRONTIER_BEFORE_CLAIMING_FR_ROUTE_NONDERIVATION"
 }

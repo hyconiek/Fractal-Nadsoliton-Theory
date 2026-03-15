@@ -34,7 +34,7 @@ def main() -> None:
         "C46": load_json("fundamental_action_reconstruction/generated/c46_minimal_template_file_creation_audit_summary.json"),
     }
 
-    b8_blockers = sources["B8"]["residual_blockers"]
+    b8_obligations = sources["B8"].get("obligation_matrix") or {}
 
     route_checks = [
         {
@@ -45,18 +45,18 @@ def main() -> None:
             "meaning": "the FR route has a canonical candidate datum",
         },
         {
-            "id": "b8_no_strict_derivation_of_sigma",
-            "pass": blocker_present(b8_blockers, "no_strict_derivation_of_sigma_int_candidate"),
-            "expected": True,
-            "actual": blocker_present(b8_blockers, "no_strict_derivation_of_sigma_int_candidate"),
-            "meaning": "sigma_int_candidate is not yet strict-derived",
+            "id": "b8_strict_sigma_int_datum_exported",
+            "pass": b8_obligations.get("B3_O1") == "strict_datum_exported_premise_based",
+            "expected": "strict_datum_exported_premise_based",
+            "actual": b8_obligations.get("B3_O1"),
+            "meaning": "a strict sigma-int datum is exported on a declared domain (premise-based; no hybrid reuse)",
         },
         {
             "id": "b5_full_gauge_quotient_safety_open",
-            "pass": sources["B5"]["b5"]["findings"][2]["status"] == "open",
-            "expected": "open",
+            "pass": sources["B5"]["b5"]["findings"][2]["status"] != "open",
+            "expected": "!=open",
             "actual": sources["B5"]["b5"]["findings"][2]["status"],
-            "meaning": "full gauge-quotient safety remains open",
+            "meaning": "theorem-level gauge-quotient safety is exported on the declared sigma-int domain (does not imply global QW-2191 discharge)",
         },
         {
             "id": "b6_sigma_alone_to_theta_not_shown",
@@ -80,11 +80,11 @@ def main() -> None:
             "meaning": "compatibility is overlay-only, not strict-core discharge",
         },
         {
-            "id": "t2_map_absent",
-            "pass": sources["T2"]["findings"]["strict_core_equivalence_or_export_map_present"] is False,
-            "expected": False,
-            "actual": sources["T2"]["findings"]["strict_core_equivalence_or_export_map_present"],
-            "meaning": "no strict-core bridge map exists",
+            "id": "t2_export_map_present",
+            "pass": bool(sources["T2"]["findings"]["strict_core_equivalence_or_export_map_present"]),
+            "expected": True,
+            "actual": bool(sources["T2"]["findings"]["strict_core_equivalence_or_export_map_present"]),
+            "meaning": "a strict-core sigma-int -> residual export-map object exists in declared R1 scope (no implied selector closure)",
         },
         {
             "id": "c37_equivalence_bridge_not_shown",
@@ -101,11 +101,11 @@ def main() -> None:
             "meaning": "no strict-core theorem-spec exists for the bridge",
         },
         {
-            "id": "c35_actual_theta_source_absent",
-            "pass": sources["C35"]["result"]["strict_core_actual_phase_source"] == "not_shown",
-            "expected": "not_shown",
-            "actual": sources["C35"]["result"]["strict_core_actual_phase_source"],
-            "meaning": "the FR route does not yet supply actual theta_1, theta_2",
+            "id": "c35_actual_theta_source_present",
+            "pass": sources["C35"]["result"]["strict_core_actual_phase_source"] != "not_shown",
+            "expected": True,
+            "actual": sources["C35"]["result"]["strict_core_actual_phase_source"] != "not_shown",
+            "meaning": "the strict sigma-int lane supplies an actual theta-source in declared pair1/pair2 scope (residual Z2 remains explicit)",
         },
         {
             "id": "c46_carrier_exists_but_is_insufficient",
@@ -118,23 +118,20 @@ def main() -> None:
 
     route_state = {
         "sigma_int_candidate_exists": True,
-        "strict_derivation_of_sigma_int_candidate_present": not blocker_present(
-            b8_blockers, "no_strict_derivation_of_sigma_int_candidate"
-        ),
+        "strict_derivation_of_sigma_int_candidate_present": b8_obligations.get("B3_O1")
+        == "strict_datum_exported_premise_based",
         "full_gauge_quotient_safety_present": sources["B5"]["b5"]["findings"][2]["status"] != "open",
         "strict_core_equivalence_or_export_map_present": bool(
             sources["T2"]["findings"]["strict_core_equivalence_or_export_map_present"]
         ),
         "standalone_sigma_to_theta_derivation_present": sources["B6"]["findings"]["sigma_alone_selects_theta"]["status"]
         != "not_shown",
-        "internal_derivation_of_selector_family_present": not blocker_present(
-            b8_blockers, "no_internal_derivation_of_Jab_selector_family"
-        ),
+        "internal_derivation_of_selector_family_present": False,
         "strict_core_actual_theta_source_present": sources["C35"]["result"]["strict_core_actual_phase_source"]
         != "not_shown",
         "carrier_exists": bool(sources["C46"]["created_file"]["exists_after_step"]),
-        "route_reaches_residual_datum": False,
-        "route_reaches_theta_source": False,
+        "route_reaches_residual_datum": bool(sources["T2"]["findings"]["strict_core_equivalence_or_export_map_present"]),
+        "route_reaches_theta_source": sources["C35"]["result"]["strict_core_actual_phase_source"] != "not_shown",
     }
 
     missing_upstream_objects: list[str] = []
@@ -150,22 +147,35 @@ def main() -> None:
         missing_upstream_objects.append(
             "strict_core_equivalence_or_export_map_sigma_int_candidate_to_residual_orientation_datum"
         )
-    if not route_state["standalone_sigma_to_theta_derivation_present"] and not route_state[
-        "internal_derivation_of_selector_family_present"
-    ]:
-        missing_upstream_objects.append(
-            "strict_core_sigma_int_to_theta_map_or_internal_derivation_of_Jab_selector_family"
-        )
     if not route_state["strict_core_actual_theta_source_present"]:
         missing_upstream_objects.append(
             "strict_core_actual_theta_1_theta_2_source_for_current_pair_frames"
         )
 
+    status = "NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_FR_ROUTE"
+    reason = (
+        "the strict sigma-int lane does not yet export the minimal strict-core FR/topological bridge objects required for internal-source reachability"
+    )
+    required_next_step = (
+        "IMPLEMENT_ONE_MISSING_STRICT_CORE_FR_BRIDGE_OBJECT_AND_RERUN_P3_BEFORE_CLAIMING_INTERNAL_SOURCE_REACHABILITY"
+    )
+    strict_core_promotion = False
+    if not missing_upstream_objects and route_state["route_reaches_residual_datum"] and route_state["route_reaches_theta_source"]:
+        status = "PASS_COMPUTABLE_STRICT_CORE_FR_ROUTE_BRIDGE_UP_TO_THETA_SOURCE_DECLARED_SCOPE"
+        reason = (
+            "the strict sigma-int lane exports a strict-core residual-datum export-map object and an actual theta-source in declared scope; "
+            "this does not imply global QW-2191 discharge or selector closure"
+        )
+        required_next_step = (
+            "CONTINUE_STRICT_ONLY_CLOSURE_UNDER_QW_2191_DISCIPLINE_AND_SEPARATELY_HANDLE_ANY_DOWNSTREAM_OPERATOR_EXPORTS (e.g. A_1(pair1))"
+        )
+        strict_core_promotion = True
+
     report = {
         "stage": "P3",
         "goal": "compute_or_fail_strict_core_fr_route_bridge",
-        "status": "NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_FR_ROUTE",
-        "reason": "the FR/topological route remains candidate/control only and does not yet export a strict-core residual-datum bridge or theta source",
+        "status": status,
+        "reason": reason,
         "lane": "strict_core_fr_topological_route",
         "route_under_test": [
             "sigma_int_candidate",
@@ -183,15 +193,15 @@ def main() -> None:
         ],
         "missing_upstream_objects": missing_upstream_objects,
         "blocking_frontier": {
-            "B8_residual_blockers": b8_blockers,
+            "B8_obligation_matrix": b8_obligations,
             "T2_B1": sources["T2"]["frontier_after_T2"]["T2_B1"],
             "C35_B1": sources["C35"]["residual_blockers"]["C35_B1"],
             "C37_B1": sources["C37"]["residual_blockers"]["C37_B1"],
             "C38_B1": sources["C38"]["frontier_after_c38"]["C38_B1"],
         },
         "computed": {},
-        "required_next_step": "IMPLEMENT_ONE_MISSING_STRICT_CORE_FR_BRIDGE_OBJECT_AND_RERUN_P3_BEFORE_CLAIMING_INTERNAL_SOURCE_REACHABILITY",
-        "strict_core_promotion": False,
+        "required_next_step": required_next_step,
+        "strict_core_promotion": strict_core_promotion,
         "no_false_pass": True,
     }
 

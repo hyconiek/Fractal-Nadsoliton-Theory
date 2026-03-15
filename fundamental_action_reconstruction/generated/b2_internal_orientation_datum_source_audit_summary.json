@@ -1,7 +1,7 @@
 {
   "program_id": "fundamental_action_reconstruction",
-  "as_of": "2026-03-06",
-  "status": "B2_EXECUTED_NO_STRICT_INTERNAL_ORIENTATION_DATUM_FOUND_AXIOM_FREE_UNIQUENESS_REMAINS_OPEN_NO_FALSE_PASS",
+  "as_of": "2026-03-15",
+  "status": "B2_UPDATED_STRICT_INTERNAL_ORIENTATION_DATUM_FOUND_ON_DIAGONAL_AND_SHANNON_LANES_AXIS_ONLY_RESIDUAL_Z2_REMAINS_NO_FALSE_PASS",
   "source_policy": {
     "strict_admissible": [
       "QW-2190",
@@ -24,7 +24,7 @@
     ]
   },
   "anti_overclaim": {
-    "internal_orientation_datum_derived_claim": false,
+    "internal_orientation_datum_derived_claim": true,
     "axiom_free_uniqueness_closed_claim": false,
     "single_nadsoliton_ontology_discharge_claim": false,
     "fr_route_promoted_to_strict_core_claim": false
@@ -39,7 +39,15 @@
       },
       {
         "object": "strict internal orientation datum",
-        "status": "not_found_in_strict_core"
+        "status": "found_axis_only_residual_z2",
+        "sources": [
+          "N487/F453/N492 (canonical local-diagonal lane)",
+          "N480/N488/N496/F454 (Shannon ord-reference lane)"
+        ],
+        "artifacts_present": {
+          "ModeIndexAssignment_canonical_local_diagonal_strict_derived_v1": true,
+          "ModeIndexAssignment_shannon_element_order_reference_strict_core_v1": true
+        }
       },
       {
         "object": "kernel invariant selecting one O(2) point",
@@ -70,10 +78,10 @@
         "source": "QW-1891"
       }
     ],
-    "strict_internal_selector_derivations_found": 0,
+    "strict_internal_selector_derivations_found": 2,
     "heuristic_candidate_routes_found": 2,
-    "reduced_blocker": "no derived internal orientation datum exists in the current strict core to discharge QW-2191",
-    "verdict": "blocker tightened further by eliminating hidden-source ambiguity, not discharged",
+    "reduced_blocker": "axis-only internal orientation datum exists on diagonal/local and/or Shannon ord-reference lanes (O(2)->Z2 cut), but residual Z2 sign remains and kernel-alone/global QW-2191 discharge remains open",
+    "verdict": "axis-only internal orientation datum found (lane-scoped); global kernel-alone uniqueness and residual Z2 sign remain open",
     "next_step": "B3"
   }
 }

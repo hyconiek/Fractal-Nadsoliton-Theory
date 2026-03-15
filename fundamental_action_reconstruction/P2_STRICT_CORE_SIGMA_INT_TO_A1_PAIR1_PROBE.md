@@ -1,7 +1,7 @@
 # P2 Strict-Core Sigma-Int To A1(pair1) Probe
 
 Status: `P2_EXECUTED_STRICT_CORE_SIGMA_INT_TO_A1_PAIR1_COMPUTE_OR_FAIL_NO_FALSE_PASS`
-As of: `2026-03-07`
+As of: `2026-03-15`
 
 ## Goal
 
@@ -50,10 +50,10 @@ The report shows:
 
 - `sigma_int_candidate` exists as a candidate object,
 - residual `Z2` fit exists only on overlay/control lane,
-- strict-core equivalence/export map remains absent,
-- strict-core actual `theta_1`, `theta_2` supply remains absent,
-- basis-pair export remains only skeleton/conditional-schema level,
-- so the route stops before any strict-core operator-level export on `pair1`.
+- a strict-core sigma-int → residual export-map object exists in the declared `R1` scope (`T2`),
+- strict-core `theta_1,theta_2` supply exists in the declared `pair1/pair2` scope (`C35`, `C49`),
+- an actual populated basis-pair / `R1` inhabitant instance exists in the declared scope (`C48`, `C49`),
+- but no strict-core operator-level export/bridge from the materialized orientation slice to `A_1(pair1)` is exported yet.
 
 ## Current compute-or-fail status
 
@@ -65,26 +65,14 @@ NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_ROUTE
 
 The probe reduces the blocker to the following current missing objects:
 
-1. a strict-core source object upgrading `sigma_int_candidate` beyond
-   candidate-only status,
-2. a strict-core equivalence/export map
-   `sigma_int_candidate -> residual orientation datum`,
-3. a strict-core actual phase source for `theta_1`, `theta_2` on the current
-   pair frames,
-4. a populated actual basis-pair export `u_1`, `u_2`,
-5. a strict-core operator-level bridge from the materialized orientation slice
-   to `A_1(pair1)`.
+1. a strict-core operator-level bridge/export mapping from the materialized
+   orientation slice (populated `u_1,u_2`) to `A_1(pair1)`.
 
 ## Honest frontier
 
-- `T2_B1` remains active:
-  strict-core target slot and sign-only export-map object exist, but target-slot population (theta_1,theta_2) remains absent.
-- `C35_B1` remains active:
-  strict core does not export actual `theta_1`, `theta_2`; only an
-  axiom-augmented source branch exists.
-- `C49_B1` remains active:
-  the conditional populated-instance schema cannot be instantiated because
-  strict core still does not supply actual `theta_1`, `theta_2`.
+- `T2` remains below any global selector closure and keeps `QW-2191` explicit.
+- The remaining downstream strict frontier for `P2` is the missing operator-level
+  map/bridge to `A_1(pair1)` from the already materialized orientation slice.
 - `C32_B2` remains active:
   the raw overlap route remains degenerate.
 

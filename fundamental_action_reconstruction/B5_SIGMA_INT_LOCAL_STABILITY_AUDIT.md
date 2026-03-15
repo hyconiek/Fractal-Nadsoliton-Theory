@@ -1,13 +1,25 @@
 # B5 Sigma_int Local Stability Audit
 
-Status: `B5_EXECUTED_LOCAL_DEFORMATION_STABILITY_SUPPORTED_GAUGE_QUOTIENT_DISCHARGE_PENDING`
-As of: `2026-03-06`
+Status: `B5_UPDATED_LOCAL_DEFORMATION_STABILITY_SUPPORTED_GAUGE_QUOTIENT_SAFETY_WITNESS_EXPORTED_NO_FALSE_PASS`
+As of: `2026-03-15`
 
 ## Cel
 
 `B5` podejmuje `B3_O2` tylko do poziomu, ktory da sie uczciwie uzasadnic:
 - czy `sigma_int_candidate` jest stabilny na lokalnych deformacjach topologicznie dopuszczalnych,
 - i czy juz teraz wiadomo, ze nie jest artefaktem gauge-choice.
+
+## Update (2026-03-15): gauge-quotient safety witness jest wyeksportowany na zadeklarowanym strict domain
+
+Na aktualnym repo state istnieje jawny theorem-level witness bezpieczenstwa po quotient przez gauge dla strict sigma-int na zadeklarowanym
+domain:
+
+- `sigma_int_gauge_quotient_safety_witness_v1` (`F308`, packaged `N419`).
+
+To rozladowuje “full gauge quotient safety: open” w zakresie zadeklarowanego strict sigma-int lane, ale nie promuje do globalnej unikalnosci
+(`QW-2191` pozostaje) ani do selector closure.
+
+Ponizej zachowano tresc `2026-03-06` jako archiwum historyczne (dotyczyla stanu sprzed exportu `F308/N419`).
 
 ## Polityka zrodel
 
