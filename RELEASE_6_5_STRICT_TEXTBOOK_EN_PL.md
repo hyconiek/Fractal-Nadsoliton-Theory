@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.16  
+**Version:** 6.5.17  
 **Date:** 2026-03-15  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -62,6 +62,9 @@
   This remains outside theorem-level scope extension and does not promote `n=24` into the `QW-2190` physical scaffold.
 - Update (`2026-03-15`): a minimal typed `Z_24` carrier + regular action primitive is exported as strict infrastructure for cautious scope-extension work
   (`F458`: `I_24_v1`, `Z_24_v1`, `tau_Z24_v1`), without any physical identification with the strict `n=12` scaffolds.
+- Update (`2026-03-15`): the diagonal/local lane exports a strict-derived **full Psi-sector Hessian eigensystem value instantiation**
+  `H_psi := K_total + (m0^2 I + D_local_residual)` (numeric 12×12 matrix + eigenvalues/eigenvectors) (`F459`).
+  This supports the “light = linearized eigenmodes” reading in declared scope, but remains lane-scoped and does not imply host matching, selector closure, or ToE closure.
 - The sigma-int corridor theta-supply and sigma-int → residual bridge theorems introduced in Release 6.4 remain in force
   (e.g. `F451/N489`, `P451`, `F452/N490`, `N491`) and are not re-derived here.
 
@@ -284,6 +287,9 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
     To nadal nie jest theorem-level scope extension i nie promuje `n=24` do fizycznego scaffoldu `QW-2190`.
 23. ponadto, wyeksportowano minimalną typed infrastrukturę `Z_24` (nośnik + działanie regularne) jako podparcie dla ostrożnych prac scope-extension
     (`F458`: `I_24_v1`, `Z_24_v1`, `tau_Z24_v1`), bez jakiejkolwiek identyfikacji fizycznej z nośnikiem strict `n=12`.
+24. dodatkowo, pas diagonal/local eksportuje strict-derived **pełny eigensystem** liczbowej instancji Hessianu sektora `Psi`:
+    `H_psi := K_total + (m0^2 I + D_local_residual)` (macierz 12×12 + wartości własne + wektory własne) (`F459`).
+    To wspiera interpretację “światło = eigenmody liniaryzacji” w zadeklarowanym zakresie, ale pozostaje lane-scoped i nie implikuje host matching, selector closure ani ToE closure.
 
 ## 1) Jednostronicowy status strict (6.5)
 
