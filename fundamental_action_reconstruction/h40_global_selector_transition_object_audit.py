@@ -25,6 +25,9 @@ payload = {
         "F462": "lane_scoped_two_chart_projector_operator_section_exported_glued_by_O12",
         "N507": "two_chart_glued_projector_operator_section_packaged_as_well_defined_and_sign_gauge_invariant",
         "P466": "audit_of_A2_equals_O12_A1_O12T_present",
+        "F464": "lane_scoped_pair13_pair23_chart_transport_operators_and_three_chart_projector_level_atlas_ingredient_with_cocycle_data_exported",
+        "P467": "audit_of_three_chart_gluing_laws_and_cocycle_path_independence_on_projector_section_present",
+        "N508": "three_chart_projector_section_cocycle_packaged_as_strict_theorem (projector_level_sign_free)",
         "P460": "lane_scoped_cross_block_polar_orthogonal_factor_transition_matrix_candidate_present",
     },
     "supports": [
@@ -35,6 +38,7 @@ payload = {
         "lane_scoped_pair_chart_transport_operator_export",
         "projector_level_sign_gauge_transport",
         "lane_scoped_chart_glued_projector_operator_section",
+        "lane_scoped_three_chart_projector_section_with_cocycle_data",
         "lane_scoped_cross_block_polar_factor_transition_matrix_candidate",
     ],
     "missing": [

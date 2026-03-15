@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.23  
+**Version:** 6.5.24  
 **Date:** 2026-03-15  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -59,6 +59,9 @@
   to a global selector atlas or global `QW-2191` discharge.
 - Update (`2026-03-15`): the repo exports an explicit lane-scoped **two-chart selector atlas stub** on `{pair1,pair2}` with an overlap-domain declaration,
   transition data (`O_12`), and gluing data (`A_2 = O_12 A_1 O_12^T`) (`F463`). This is not a global selector atlas and does not discharge global `QW-2191`.
+- Update (`2026-03-15`): the repo exports an explicit lane-scoped **three-chart** selector-atlas ingredient on `{pair1,pair2,pair3}` at projector level,
+  including explicit cocycle/path-independence data on the glued projector section (`F464`), audited by `P467` and packaged as a strict theorem (`N508`).
+  This remains lane-scoped, does not lift residual sign to a physical convention, does not export a global selector atlas, and does not discharge global `QW-2191`.
 - Update (`2026-03-15`): probe-level control-lane transition data is also exported from the **declared residual local-diagonal control pullback**
   value instantiation: the `pair1 -> pair2` cross-block polar orthogonal factor `Q ∈ O(2)` and its induced rotation angle `alpha_cross` (`P460`).
   On the current instantiated matrix, `alpha_cross ≈ 0` while `alpha_12 = π/2`; these are distinct lane-scoped quantities and must not be conflated into a global gluing claim.
@@ -145,6 +148,9 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
     to a global selector atlas / gluing structure and does not discharge global `QW-2191`.
 23. the repo exports an explicit lane-scoped **two-chart selector atlas stub** on `{pair1,pair2}` with an overlap-domain declaration, transition data (`O_12`),
     and projector-level gluing data (`A_2 = O_12 A_1 O_12^T`) (`F463`). This is not a global selector atlas and does not discharge global `QW-2191`.
+24. the repo exports an explicit lane-scoped **three-chart** selector-atlas ingredient on `{pair1,pair2,pair3}` at projector level, including explicit
+    cocycle/path-independence data on the glued projector section (`F464`), audited by `P467` and packaged as a strict theorem (`N508`). This remains lane-scoped
+    and does not export a global selector atlas nor discharge global `QW-2191`.
 
 ## 1) One-Page Strict Status (6.5)
 
@@ -342,6 +348,9 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
     awansuje do globalnego selector atlas/gluing object ani do globalnego rozładowania `QW-2191`.
 30. ponadto, repo eksportuje jawny lane-scoped **dwu‑chartowy atlas selektora** na `{pair1,pair2}` z deklaracją overlap-domain, danymi przejścia (`O_12`)
     oraz danymi klejenia sekcji operatorowej (`A_2 = O_12 A_1 O_12^T`) (`F463`). To nie jest globalny atlas selektora i nie rozładowuje globalnie `QW-2191`.
+31. ponadto, repo eksportuje jawny lane-scoped **trzy‑chartowy** składnik atlasu selektora na `{pair1,pair2,pair3}` na poziomie projektorowym (sign‑free),
+    wraz z jawnymi danymi cocycle/path‑independence na poziomie sklejonej sekcji operatorowej (`F464`), audytowane sondą (`P467`) i opakowane jako twierdzenie strict (`N508`).
+    Jest to nadal lane‑scoped (overlap rozumiany jako overlap artefaktów), nie jest globalnym atlasem selektora i nie rozładowuje globalnie `QW-2191`.
 
 ## 1) Jednostronicowy status strict (6.5)
 
@@ -388,6 +397,10 @@ Update: na bazie `O_12` repo eksportuje teraz jawnie dwu‑chartową **sekcję o
 
 Update: repo eksportuje teraz jawny lane-scoped **atlas selektora** na `{pair1,pair2}` z deklaracją overlap-domain, danymi przejścia (`O_12`) oraz danymi klejenia
 (`F463`). Jest to tylko atlas-stub w zadeklarowanym scope; globalny atlas/cocycle pozostaje otwarty.
+
+Update: jako kolejny, najwęższy krok `B3` repo eksportuje teraz jawny lane-scoped **trzy‑chartowy** składnik atlasu selektora na `{pair1,pair2,pair3}` na poziomie projektorowym,
+wraz z jawnym audytem cocycle/path‑independence na poziomie sklejonej sekcji operatorowej (`F464`), audytowane sondą (`P467`) i opakowane jako twierdzenie strict (`N508`).
+To nadal nie jest globalny atlas selektora i nie rozładowuje globalnie `QW-2191`.
 
 Update: pas strict Shannon “element‑order reference” dostarcza teraz jawny wewnętrzny składnik symetrii‑łamacza na pełnym
 scaffoldu Fouriera `n=12` (przez `F454`), ale nadal jest to poniżej strict-core selector closure i nie stanowi globalnego

@@ -93,6 +93,18 @@ Ponadto, na bazie tego transportu repo eksportuje lane-scoped **dwu‑chartową 
 
 To jest **ingredient** dla `H40` tylko w sensie lane-scoped transportu/klejenia między dwoma chartami; nie jest to globalny atlas ani globalne cocycle data.
 
+### 3c. Istnieje lane-scoped trzy‑chartowa struktura z jawnie wyeksportowanymi danymi cocycle na poziomie sekcji operatorowej (projector-level, sign‑free)
+
+Repo eksportuje teraz jawne, lane-scoped rozszerzenie atlas‑stub do trzech chartów `{pair1,pair2,pair3}` na poziomie projektorowym:
+
+- `A_3(pair3) := |u_3><u_3|` jako strict operator na `pair3`, wyprowadzony z osi minimizera Shannon mode‑index assignment (`F454`) (`F464`),
+- jawne operatory transportu chartów `O_23` oraz `O_13` w wariancie **axis-only** (`alpha mod π`) dla gluing projektorów (`F464`),
+- jawna trzy‑chartowa sekcja operatorowa z prawami klejenia oraz audytem cocycle/path‑independence na poziomie sekcji projektorowej (`F464`),
+  audytowane sondą (`P467`) i opakowane jako twierdzenie strict (`N508`),
+- oraz jawny trzy‑chartowy obiekt atlasu selektora (lane‑scoped; overlap deklarowany jako overlap artefaktów, nie globalny open cover) (`F464`).
+
+To nadal **nie** jest globalny atlas selektora ani globalne rozładowanie `QW-2191`; jest to jedynie kolejny ingredient gluing/cocycle na poziomie projectors (sign‑free).
+
 ### 4. Brakuje konkretnego sign-sensitive domkniecia i/lub scope extension
 
 Po powyzszych postepach brakujacy obiekt nie jest juz:
@@ -139,6 +151,7 @@ W szczegolnosci:
 - `A6` jest jawnie lane-scoped i utrzymuje `QW-2191` jako globalny obstruction,
 - embedding audyty `QW-2190` sa conjugation-gauge dla residual sign i O(2) rotacji (np. `N493`, `N495`, audyty `P452`, `P454`),
 - na korytarzu sigma-int istnieje juz jawny lane-scoped chart-transport operator `O_12` pomiedzy `pair1↔pair2` (`F461`), sign-free na poziomie projektorowym (`N506`, audyt `P465`),
+- ponadto istnieje jawny lane-scoped trzy‑chartowy atlas/sekcja operatorowa `{pair1,pair2,pair3}` z danymi cocycle na poziomie sekcji projektorowej (`F464`, `P467`, `N508`),
 - osie z diagonal/local i Shannon lane sa zgodne na `n=12` (audit `P455`, packaged as `N497`).
 
 ### `B3_O5` - anti-overclaim closure test

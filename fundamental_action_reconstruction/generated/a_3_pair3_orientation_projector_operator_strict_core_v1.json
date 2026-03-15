@@ -1,0 +1,60 @@
+{
+  "object": "A_3_pair3_orientation_projector_operator_strict_core_v1",
+  "status": "actual_exported_operator__derived_from_shannon_mode_index_assignment_pair3_axis__residual_z2_sign_gauge_invariant",
+  "as_of": "2026-03-15",
+  "intent": "Export one strict-core projector operator on V_3 = span{c3,s3} constructed from the exported Shannon element-order reference mode-index assignment minimizer axis on pair3 (F454). The operator is A_3(pair3) := |u_3><u_3|. This is projector-level (residual-sign-gauge-invariant) and does not imply any sign-sensitive physical orientation convention.",
+  "inputs": {
+    "mode_index_assignment_ref": "fundamental_action_reconstruction/generated/mode_index_assignment_shannon_element_order_reference_strict_core_v1.json"
+  },
+  "domain_notes": {
+    "basis_plane": "V_3 = span{c3,s3} inside the n=12 real Fourier scaffold",
+    "lane": "shannon_element_order_reference (axis-only; residual sign remains gauge)"
+  },
+  "data": {
+    "theta_3_minimizer_mod_pi": 0.0,
+    "u_3": [
+      0.408248290463863,
+      0.0,
+      -0.408248290463863,
+      0.0,
+      0.408248290463863,
+      0.0,
+      -0.408248290463863,
+      0.0,
+      0.408248290463863,
+      0.0,
+      -0.408248290463863,
+      0.0
+    ],
+    "u_3_coords_in_c3_s3": [
+      1.0,
+      0.0
+    ],
+    "A_3_pair3_matrix_in_c3_s3": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  "audits": {
+    "u3_outside_span_c3_s3_l2": 4.062859956854893e-16,
+    "coords_norm": 0.9999999999999999,
+    "projector_symmetry_inf_norm": 0.0,
+    "projector_idempotence_inf_norm": 2.7755575615628914e-17,
+    "projector_trace": 0.9999999999999999,
+    "residual_z2_sign_invariance_max_abs_diff": 0.0,
+    "tolerance": 1e-12
+  },
+  "hard_limits": [
+    "Projector-level only; does not derive a sign-sensitive physical orientation datum.",
+    "Does not claim strict-core selector closure / admissible S_sel_int.",
+    "Does not claim a global selector atlas nor global discharge of QW-2191.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}

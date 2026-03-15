@@ -1,0 +1,44 @@
+{
+  "object": "A_123_pair123_chart_glued_orientation_projector_operator_section_strict_core_v1",
+  "stage": "F464",
+  "status": "actual_exported_three_chart_projector_operator_section__pair1_pair2_pair3__with_cocycle_audit__no_false_pass",
+  "as_of": "2026-03-15",
+  "generated_utc": "2026-03-15T21:46:09.162403+00:00",
+  "intent": "Export one explicit three-chart projector operator section on {pair1,pair2,pair3} with explicit transition operators and projector-level gluing laws, including an explicit cocycle/path-independence audit at the level of the exported projector section. This is lane-scoped and does not imply a global selector atlas nor any global discharge.",
+  "inputs": {
+    "a1_pair1_operator_ref": "fundamental_action_reconstruction/generated/a_1_pair1_orientation_projector_operator_strict_core_v1.json",
+    "a2_pair2_operator_ref": "fundamental_action_reconstruction/generated/a_2_pair2_orientation_projector_operator_strict_core_v1.json",
+    "a3_pair3_operator_ref": "fundamental_action_reconstruction/generated/a_3_pair3_orientation_projector_operator_strict_core_v1.json",
+    "o12_ref": "fundamental_action_reconstruction/generated/o12_pair1_pair2_selector_chart_transport_operator_strict_derived_from_sigma_int_alpha12_v1.json",
+    "o23_ref": "fundamental_action_reconstruction/generated/o23_pair2_pair3_selector_chart_transport_operator_axis_only_alpha23_mod_pi_strict_core_v1.json",
+    "o13_ref": "fundamental_action_reconstruction/generated/o13_pair1_pair3_selector_chart_transport_operator_axis_only_alpha13_mod_pi_strict_core_v1.json",
+    "mode_index_assignment_ref": "fundamental_action_reconstruction/generated/mode_index_assignment_shannon_element_order_reference_strict_core_v1.json"
+  },
+  "gluing_laws": [
+    "A_2(pair2) = O_12 A_1(pair1) O_12^T  (projector-level)",
+    "A_3(pair3) = O_23 A_2(pair2) O_23^T  (projector-level, axis-only transport)",
+    "A_3(pair3) = O_13 A_1(pair1) O_13^T  (projector-level, axis-only transport)"
+  ],
+  "cocycle_audit": {
+    "statement": "Transporting the pair1 projector to pair3 via pair2 agrees with the direct pair1->pair3 transport, at the level of the glued projector operator section (sign-free).",
+    "path_1_to_3_via_2": "O_23 O_12",
+    "direct_1_to_3": "O_13",
+    "max_abs_residual": 5.551115123125783e-16
+  },
+  "audits": {
+    "o12_orthogonality_max_abs_residual": 4.60113898903259e-16,
+    "o23_orthogonality_max_abs_residual": 3.047149495338891e-16,
+    "o13_orthogonality_max_abs_residual": 5.203562406364861e-16,
+    "gluing12_max_abs_residual": 3.0531133177191805e-16,
+    "gluing23_max_abs_residual": 2.0709923489192077e-16,
+    "gluing13_max_abs_residual": 2.7755575615628914e-16,
+    "alpha12_mod_pi_consistency_distance": 0.0
+  },
+  "hard_limits": [
+    "Projector-level only: section gluing is sign-gauge-safe but does not lift residual sign to a physical convention.",
+    "Lane-scoped three-chart section only; does not export a global selector atlas nor global cocycle data on the full strict domain.",
+    "Does not discharge QW-2191 nor export strict-core selector closure / admissible S_sel_int.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}

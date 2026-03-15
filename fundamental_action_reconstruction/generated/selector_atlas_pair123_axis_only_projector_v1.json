@@ -1,0 +1,87 @@
+{
+  "object": "SelectorAtlas_pair123_axis_only_projector_v1",
+  "stage": "F464",
+  "status": "actual_exported_lane_scoped_three_chart_selector_atlas_with_projector_level_gluing_and_cocycle_audit__no_false_pass",
+  "as_of": "2026-03-15",
+  "generated_utc": "2026-03-15T21:46:09.162403+00:00",
+  "intent": "Export one explicit lane-scoped three-chart selector atlas object on {pair1,pair2,pair3} at projector level (sign-gauge-safe), including explicit chart transport operators (O12, O23, O13), projector-level gluing laws, and an explicit cocycle/path-independence audit for the glued projector operator section. This is not a global selector atlas and does not imply any global discharge.",
+  "charts": {
+    "pair1": {
+      "chart_id": "pair1",
+      "carrier_plane": "V1 = span{c1,s1} inside the n=12 real Fourier scaffold",
+      "local_operator": {
+        "ref": "fundamental_action_reconstruction/generated/a_1_pair1_orientation_projector_operator_strict_core_v1.json",
+        "object": "A_1_pair1_orientation_projector_operator_strict_core_v1"
+      }
+    },
+    "pair2": {
+      "chart_id": "pair2",
+      "carrier_plane": "V2 = span{c2,s2} inside the n=12 real Fourier scaffold",
+      "local_operator": {
+        "ref": "fundamental_action_reconstruction/generated/a_2_pair2_orientation_projector_operator_strict_core_v1.json",
+        "object": "A_2_pair2_orientation_projector_operator_strict_core_v1"
+      }
+    },
+    "pair3": {
+      "chart_id": "pair3",
+      "carrier_plane": "V3 = span{c3,s3} inside the n=12 real Fourier scaffold",
+      "local_operator": {
+        "ref": "fundamental_action_reconstruction/generated/a_3_pair3_orientation_projector_operator_strict_core_v1.json",
+        "object": "A_3_pair3_orientation_projector_operator_strict_core_v1"
+      }
+    }
+  },
+  "overlap_domain_declaration": {
+    "scope": "exported_artifact_overlap_on_n12_fourier_carrier",
+    "meaning": "This is an exported-artifact overlap declaration: all three chart operators A_1/A_2/A_3 and the transport operators O_12/O_23/O_13 are simultaneously defined as strict-core exported artifacts on the declared n=12 Fourier carrier. This is not a global open-cover atlas on the full strict domain C_v1."
+  },
+  "transitions": {
+    "pair1_to_pair2": {
+      "operator_ref": "fundamental_action_reconstruction/generated/o12_pair1_pair2_selector_chart_transport_operator_strict_derived_from_sigma_int_alpha12_v1.json",
+      "operator": "O12_pair1_pair2_selector_chart_transport_operator_strict_derived_from_sigma_int_alpha12_v1",
+      "alpha12_mod_2pi": 1.570796326794897
+    },
+    "pair2_to_pair3": {
+      "operator_ref": "fundamental_action_reconstruction/generated/o23_pair2_pair3_selector_chart_transport_operator_axis_only_alpha23_mod_pi_strict_core_v1.json",
+      "operator": "O23_pair2_pair3_selector_chart_transport_operator_axis_only_alpha23_mod_pi_strict_core_v1",
+      "alpha23_mod_pi": 0.0
+    },
+    "pair1_to_pair3": {
+      "operator_ref": "fundamental_action_reconstruction/generated/o13_pair1_pair3_selector_chart_transport_operator_axis_only_alpha13_mod_pi_strict_core_v1.json",
+      "operator": "O13_pair1_pair3_selector_chart_transport_operator_axis_only_alpha13_mod_pi_strict_core_v1",
+      "alpha13_mod_pi": 1.570796326794897
+    }
+  },
+  "gluing_data": {
+    "operator_section_ref": "fundamental_action_reconstruction/generated/a_123_pair123_chart_glued_orientation_projector_operator_section_strict_core_v1.json",
+    "laws": [
+      "A_2(pair2) = O_12 A_1(pair1) O_12^T  (projector-level)",
+      "A_3(pair3) = O_23 A_2(pair2) O_23^T  (projector-level, axis-only transport)",
+      "A_3(pair3) = O_13 A_1(pair1) O_13^T  (projector-level, axis-only transport)"
+    ],
+    "cocycle_audit": {
+      "statement": "Transporting the pair1 projector to pair3 via pair2 agrees with the direct pair1->pair3 transport, at the level of the glued projector operator section (sign-free).",
+      "path_1_to_3_via_2": "O_23 O_12",
+      "direct_1_to_3": "O_13",
+      "max_abs_residual": 5.551115123125783e-16
+    }
+  },
+  "audits": {
+    "o12_orthogonality_max_abs_residual": 4.60113898903259e-16,
+    "o23_orthogonality_max_abs_residual": 3.047149495338891e-16,
+    "o13_orthogonality_max_abs_residual": 5.203562406364861e-16,
+    "gluing12_max_abs_residual": 3.0531133177191805e-16,
+    "gluing23_max_abs_residual": 2.0709923489192077e-16,
+    "gluing13_max_abs_residual": 2.7755575615628914e-16,
+    "alpha12_mod_pi_consistency_distance": 0.0
+  },
+  "hard_limits": [
+    "Lane-scoped: exports only a three-chart atlas object on {pair1,pair2,pair3} at projector level.",
+    "Does not export a global selector atlas, global overlap-domain declaration, nor global cocycle data (H41 remains open globally).",
+    "Does not discharge QW-2191 nor export a global selector transition/gluing object (H40 remains open globally).",
+    "Projector-level only: does not derive a sign-sensitive physical orientation datum.",
+    "Does not claim strict-core selector closure / admissible S_sel_int.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}

@@ -1,0 +1,47 @@
+{
+  "generated_utc": "2026-03-15T21:47:47.192216+00:00",
+  "stage": "P467",
+  "goal": "audit_pair123_projector_section_gluing_and_cocycle_path_independence",
+  "inputs": {
+    "a1_pair1": "fundamental_action_reconstruction/generated/a_1_pair1_orientation_projector_operator_strict_core_v1.json",
+    "o12": "fundamental_action_reconstruction/generated/o12_pair1_pair2_selector_chart_transport_operator_strict_derived_from_sigma_int_alpha12_v1.json",
+    "a2_pair2": "fundamental_action_reconstruction/generated/a_2_pair2_orientation_projector_operator_strict_core_v1.json",
+    "o23": "fundamental_action_reconstruction/generated/o23_pair2_pair3_selector_chart_transport_operator_axis_only_alpha23_mod_pi_strict_core_v1.json",
+    "o13": "fundamental_action_reconstruction/generated/o13_pair1_pair3_selector_chart_transport_operator_axis_only_alpha13_mod_pi_strict_core_v1.json",
+    "a3_pair3": "fundamental_action_reconstruction/generated/a_3_pair3_orientation_projector_operator_strict_core_v1.json"
+  },
+  "audits": {
+    "orthogonality": {
+      "o12_max_abs_residual": 4.60113898903259e-16,
+      "o23_max_abs_residual": 1.1102230246251565e-15,
+      "o13_max_abs_residual": 1.4491064959522818e-15
+    },
+    "involution": {
+      "o12_max_abs_residual": 4.60113898903259e-16,
+      "o23_max_abs_residual": 1.1102230246251565e-15,
+      "o13_max_abs_residual": 1.4491064959522818e-15
+    },
+    "gluing": {
+      "gluing12_max_abs_residual_A2_minus_O12_A1_O12T": 3.0531133177191805e-16,
+      "gluing23_max_abs_residual_A3_minus_O23_A2_O23T": 4.61464121841373e-16,
+      "gluing13_max_abs_residual_A3_minus_O13_A1_O13T": 6.339075153674057e-16
+    },
+    "cocycle": {
+      "max_abs_residual_A3_via_O23O12_minus_A3_via_O13": 6.017562991110659e-16,
+      "meaning": "path-independence on the exported projector section (sign-free)"
+    },
+    "sign_gauge": {
+      "A1_projector_sign_invariance_max_abs": 0.0,
+      "A2_projector_sign_invariance_max_abs": 0.0,
+      "A3_projector_sign_invariance_max_abs": 0.0
+    }
+  },
+  "hard_limits": [
+    "Probe-level numeric audit only; does not export a global selector atlas nor global cocycle data on the full strict domain.",
+    "Does not discharge QW-2191.",
+    "Projector-level only: does not derive a sign-sensitive physical orientation datum.",
+    "Does not claim strict-core selector closure / admissible S_sel_int.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}
