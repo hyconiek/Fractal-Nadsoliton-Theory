@@ -102,6 +102,10 @@ def main() -> None:
             "id": "text_numeric_sigma_opposite_pair_sums",
             "pattern": rf"\bSigma_psi\d+_psi\d+\b\s*[:=]\s*{number}",
         },
+        {
+            "id": "json_numeric_sigma_opposite_pair_sums",
+            "pattern": rf"\"Sigma_psi\d+_psi\d+\"\s*:\s*{number}",
+        },
     ]
 
     results: list[dict[str, Any]] = []
@@ -115,8 +119,10 @@ def main() -> None:
 
     # A strict decision of F2(d) from exported values is realistically possible only if the repo already exports
     # numeric instantiations of the six opposite-pair sums (or an equivalent direct diagonal profile). This scan
-    # only checks for those opposite-pair sums explicitly.
-    sigma_sums_numeric_hits = hits_by_id["text_numeric_sigma_opposite_pair_sums"]
+    # checks for those opposite-pair sums explicitly in both text and JSON forms.
+    sigma_sums_numeric_hits = bool(
+        hits_by_id["text_numeric_sigma_opposite_pair_sums"] or hits_by_id["json_numeric_sigma_opposite_pair_sums"]
+    )
     decision_ready_from_repo_values = sigma_sums_numeric_hits
 
     artifact = {
