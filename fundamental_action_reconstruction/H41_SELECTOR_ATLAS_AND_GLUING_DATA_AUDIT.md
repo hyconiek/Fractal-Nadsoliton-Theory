@@ -1,7 +1,7 @@
 # H41 Selector Atlas And Gluing Data Audit
 
 Status: `PASS_PARTIAL_LANE_SCOPED_ATLAS_WITH_FULL_COCYCLE_PRESENT_GLOBAL_ATLAS_STILL_MISSING`
-Date: `2026-03-15`
+Date: `2026-03-16`
 
 ## Purpose
 
@@ -32,6 +32,8 @@ Test whether the current strict core exports any explicit selector atlas or sele
 - `F467`: exports an explicit lane-scoped **oriented transport (α mod 2π) lift** of the `{pair1..pair5}` atlas at vector level as a tracked gauge/convention layer (sign-tracked), induced by the exported representative vectors `u_1..u_5`.
 - `P470`: audits the `F467` oriented transport lift (orthogonality/involution, vector transport, and full triple cocycle/path-independence at vector level).
 - `N511`: packages the oriented transport lift as a convention-layer theorem (no physical sign claim; no global atlas).
+- `P471`: audits that the cocycle holds only on the exported vector section (and transported rays/projectors), not as an operator-level matrix identity on the full carrier.
+- `N512`: packages the operator-level cocycle failure boundary as a strict no-false-pass theorem.
 - `C29/C30`: only local projector formulas and local overlap compatibility laws are explicit.
 
 ## Audit target
@@ -59,6 +61,7 @@ The repository contains:
 - and now an explicit lane-scoped **five-chart** selector-atlas ingredient on `{pair1..pair5}` with projector-level gluing laws **and explicit local cocycle data on the exported projector section** (`F465`, audited by `P468`, packaged by `N509`),
 - and now an upgraded explicit lane-scoped **five-chart** selector-atlas ingredient on `{pair1..pair5}` with projector-level gluing laws **and explicit full triple cocycle data on the exported projector section** (`F466`, audited by `P469`, packaged by `N510`),
 - and now an explicit lane-scoped **oriented transport (α mod 2π) lift** at vector level on `{pair1..pair5}` as a tracked gauge/convention layer (`F467`, audited by `P470`, packaged by `N511`),
+- with an explicit boundary that the oriented transport does **not** define an operator-level transition cocycle on the full carrier (`P471`, packaged by `N512`),
 
 but none of these is elevated to a **global** selector atlas, global overlap-domain declaration, or global cocycle-level gluing data supporting a global assembly structure.
 

@@ -1,7 +1,7 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.27  
-**Date:** 2026-03-15  
+**Version:** 6.5.28  
+**Date:** 2026-03-16  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
 
@@ -71,6 +71,9 @@
 - Update (`2026-03-15`): the repo exports a lane-scoped **oriented transport (α mod 2π) lift** on `{pair1..pair5}` induced by the exported representative vectors
   `u_1..u_5` as a **tracked gauge/convention layer** (sign-tracked), with full triple cocycle/path-independence audited at vector level (`F467`, audited by `P470`,
   packaged by `N511`). This does not lift residual sign to a physical datum, does not export a global selector atlas, and does not discharge global `QW-2191`.
+- Update (`2026-03-16`): a follow-up audit confirms the oriented transport cocycle holds only on the exported vector section (and hence on transported rays/projectors),
+  and does **not** hold as an operator-level matrix identity `O_jk O_ij = O_ik` on the full carrier (`P471`, packaged by `N512`). This blocks any false-pass upgrade
+  of the oriented lift into a full operator-level transition groupoid.
 - Update (`2026-03-15`): probe-level control-lane transition data is also exported from the **declared residual local-diagonal control pullback**
   value instantiation: the `pair1 -> pair2` cross-block polar orthogonal factor `Q ∈ O(2)` and its induced rotation angle `alpha_cross` (`P460`).
   On the current instantiated matrix, `alpha_cross ≈ 0` while `alpha_12 = π/2`; these are distinct lane-scoped quantities and must not be conflated into a global gluing claim.
@@ -170,6 +173,9 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
     vectors `u_1..u_5`, explicitly tracked as a gauge/convention layer (sign-tracked) (`F467`). A dedicated probe audits vector transport and full triple
     cocycle/path-independence on the exported instance (`P470`), and a theorem packages the statement as a convention-layer result (`N511`). This remains lane-scoped
     and does not export a global selector atlas nor discharge global `QW-2191`.
+28. a strict hygiene follow-up audits that the oriented transport cocycle holds only on the exported glued vector section (and hence on transported rays/projectors),
+    and does **not** hold as an operator-level matrix identity `O_jk O_ij = O_ik` on the full carrier (`P471`, packaged by `N512`). Therefore the oriented lift must not be
+    treated as an operator-level transition groupoid transporting arbitrary vectors.
 
 ## 1) One-Page Strict Status (6.5)
 
@@ -256,7 +262,7 @@ For the `QW-2190` SU(3)/SU(2) embedding audits, flipping any subset of the resid
 
 so the diagonal/local lane canonicalizes the `QW-2190` embedding uniquely up to conjugation in the declared scope (`N494`).
 
-## 5) Next honest strict moves (as of 2026-03-15)
+## 5) Next honest strict moves (as of 2026-03-16)
 
 Dashboards now recommend `B3` (topological selector bridge continuation) as the next strict move under `QW-2191` discipline (`P438`, `P441`):
 
@@ -291,6 +297,10 @@ Update: continuing the same minimal `B3` strategy, the repo exports a lane-scope
 currently exported representative vectors `u_1..u_5`, explicitly tracked as a gauge/convention layer (sign-tracked) (`F467`). A dedicated probe audits vector transport and full
 triple cocycle/path-independence on the exported instance (`P470`), and a theorem packages the statement as a convention-layer result (`N511`). This does not lift residual sign to a
 physical datum, does not export a global selector atlas, and does not discharge global `QW-2191`.
+
+Update: a strict hygiene follow-up audits that the oriented transport cocycle holds only on the exported glued vector section (and hence on transported rays/projectors),
+and does **not** hold as an operator-level matrix identity `O_jk O_ij = O_ik` on the full carrier (`P471`, packaged by `N512`). Therefore the oriented lift must not be treated as
+an operator-level transition groupoid transporting arbitrary vectors.
 
 Update: the strict Shannon element‑order reference lane now provides one explicit internal symmetry-breaking ingredient
 on the full `n=12` Fourier scaffold (via `F454`), but this is still below strict-core selector closure and does not
@@ -397,6 +407,9 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
     indukowany przez aktualnie wyeksportowane `u_1..u_5` i jawnie śledzony jako warstwa gauge/konwencji (sign‑tracked) (`F467`). Sonda `P470` audytuje transport
     wektorów i pełne relacje trójkowe cocycle/path‑independence na wyeksportowanej instancji, a `N511` pakuje to jako twierdzenie strict w dyscyplinie “convention layer”.
     Nie jest to promocja do fizycznego datumu znaku, nie jest to globalny atlas selektora i nie rozładowuje globalnie `QW-2191`.
+35. dodatkowo, jako ścisła higiena, sonda pokazuje, że relacje cocycle/path‑independence dla transportu “oriented” zachodzą tylko na wyeksportowanej sekcji
+    wektorowej (a więc na transportowanych rayach/projektorach), natomiast **nie** zachodzą jako operatorowa równość macierzowa `O_jk O_ij = O_ik` na pełnym nośniku
+    (`P471`, opakowane przez `N512`). W szczególności nie wolno traktować tego liftu jako operatorowego transition groupoid transportującego dowolne wektory.
 
 ## 1) Jednostronicowy status strict (6.5)
 

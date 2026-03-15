@@ -10,7 +10,7 @@ GENERATED.mkdir(exist_ok=True)
 payload = {
     'step': 'H41',
     'title': 'Selector Atlas And Gluing Data Audit',
-    'date': '2026-03-15',
+    'date': '2026-03-16',
     'status': 'PASS_PARTIAL_LANE_SCOPED_ATLAS_WITH_FULL_COCYCLE_PRESENT_GLOBAL_ATLAS_STILL_MISSING',
     'inputs': {
         'H31': 'psi0_admits_only_a_local_chart_embedding_into_pair1',
@@ -36,6 +36,8 @@ payload = {
         'F467': 'lane_scoped_pair12345_oriented_transport_lift_alpha_mod_2pi_exported_as_tracked_convention_layer (vector_level; sign_tracked; not physical sign datum)',
         'P470': 'audit_of_pair12345_oriented_transport_vector_transport_and_full_triple_cocycle_present (probe_level)',
         'N511': 'oriented_transport_full_triple_cocycle_convention_layer_packaged_as_strict_theorem (no physical sign claim)',
+        'P471': 'audit_of_operator_level_vs_vector_section_level_cocycle_for_oriented_transport (operator_level_matrix_equality_fails_expected)',
+        'N512': 'operator_level_cocycle_failure_boundary_packaged_as_strict_no_false_pass_theorem (section_level_gluing_only)',
         'C29_C30': 'only_local_projector_formulas_and_local_overlap_compatibility_laws_are_explicit',
     },
     'supports': [
