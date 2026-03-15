@@ -68,10 +68,11 @@ map object is now exported (`F452/N490`), but it still does not imply selector c
 
 ## Finite missing-object list
 
+Update (`2026-03-15`): the theorem-level discharge of the conditional bridge theorem `T2` is now exported (`N491`).
+
 The current strict-core route still lacks:
 
-1. theorem-level discharge of the conditional bridge theorem `T2` (beyond probe-level computability), and
-2. any strict-core selector closure / internal selector source discharging `QW-2191`.
+1. any strict-core selector closure / internal selector source discharging `QW-2191`.
 
 ## Honest frontier
 
@@ -89,8 +90,7 @@ target-slot population + post-map object-support (strict lane) + axiom-lane witn
 but it does not yet export:
 
 ```text
-theorem-level discharge of the conditional bridge theorem T2
-nor any strict-core selector closure (QW-2191 remains open)
+any strict-core selector closure (QW-2191 remains open)
 ```
 
 ## What P4 does not claim

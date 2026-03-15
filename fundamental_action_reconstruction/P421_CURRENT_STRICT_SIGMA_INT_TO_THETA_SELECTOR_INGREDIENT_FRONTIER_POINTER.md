@@ -96,7 +96,8 @@ Only three honest continuations exist (must be explicit which):
 
 1. **Integrate downstream:** rerun the sigma-int → residual-datum lane (`P5/T2`) using the exported slot-free theta-pair
    supply; update (`2026-03-15`): the post‑`T148` object‑support target (`T130/N395`) is now discharged (`F452/N490`), so
-   the downstream next move is theorem-level discharge of `T2` and continuation under explicit `QW-2191` discipline,
+   update (`2026-03-15`): `T2` is now discharged at theorem level (`N491`), so the downstream next move is continuation
+   under explicit `QW-2191` discipline (no implied selector closure),
    **or**
 2. **Optional slot-selection:** still discharge `T160/T161` if you want strict-derived eps/delta selection for the
    *old* corridor class (not required for strict theta supply anymore), **or**

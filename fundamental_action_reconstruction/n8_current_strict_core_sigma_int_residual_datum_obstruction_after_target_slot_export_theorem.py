@@ -8,6 +8,10 @@ from typing import Any
 ROOT = Path(__file__).resolve().parent
 REPO = ROOT.parent
 
+N491_THEOREM = (
+    ROOT / "N491_CURRENT_FIRST_ACTUAL_STRICT_T2_SIGMA_INT_TO_RESIDUAL_DATUM_BRIDGE_DISCHARGE_THEOREM.md"
+)
+
 
 def load_json(repo_relative_path: str) -> dict[str, Any]:
     return json.loads((REPO / repo_relative_path).read_text(encoding="utf-8"))
@@ -49,6 +53,10 @@ def main() -> None:
             "fundamental_action_reconstruction/generated/iota_residual_datum_sigma_int_bridge_export_map_object_support_v1.json"
         ),
     }
+
+    t2_theorem_discharge_present = bool(N491_THEOREM.exists()) or bool(
+        (sources["t2"].get("findings") or {}).get("theorem_discharge_present")
+    )
 
     checks = [
         {
@@ -120,6 +128,7 @@ def main() -> None:
                 "strict_core_theta_supply_present": (sources["t2"].get("findings") or {}).get("strict_core_theta_supply_present"),
                 "strict_core_target_slot_population_present": (sources["t2"].get("findings") or {}).get("strict_core_target_slot_population_present"),
                 "post_T148_object_support_present": (sources["t2"].get("findings") or {}).get("post_T148_object_support_present"),
+                "theorem_discharge_present": (sources["t2"].get("findings") or {}).get("theorem_discharge_present"),
             },
             "expected": True,
             "pass": bool(
@@ -129,6 +138,13 @@ def main() -> None:
             ),
             "meaning": "the T2 bridge theorem spec summary is consistent with the current strict theta-supply + R1 population exports",
         },
+        {
+            "id": "t2_theorem_discharge_present",
+            "actual": t2_theorem_discharge_present,
+            "expected": True,
+            "pass": t2_theorem_discharge_present,
+            "meaning": "the theorem-level discharge of T2 is exported (N491)",
+        },
     ]
 
     mismatches = [c["id"] for c in checks if not c["pass"]]
@@ -137,12 +153,11 @@ def main() -> None:
     if discharged:
         summary = {
             "step": "N8",
-            "status": "N8_DISCHARGED_CURRENT_STRICT_CORE_SIGMA_INT_RESIDUAL_DATUM_STATUS_UPDATE_AFTER_T130_NO_FALSE_PASS",
+            "status": "N8_DISCHARGED_CURRENT_STRICT_CORE_SIGMA_INT_RESIDUAL_DATUM_STATUS_UPDATE_AFTER_T2_NO_FALSE_PASS",
             "goal": (
                 "Discharge an updated route-specific theorem: after slot-free theta supply (T159 via F451/N489), an audited R1 inhabitant instance (P451), "
-                "and a post-witness object-support layer above the exported map object (F452/N490) are exported, the strict-core sigma-int route reaches "
-                "target-slot population and discharges the post-`T148` object-support frontier (T130/N395), while remaining below theorem-level T2 discharge "
-                "and below selector closure."
+                "a post-witness object-support layer above the exported map object (F452/N490), and a theorem-level discharge of the conditional bridge theorem "
+                "T2 (N491) are exported, the strict-core sigma-int route reaches theorem-level bridge discharge while remaining below selector closure."
             ),
             "scope": "current_strict_core_sigma_int_to_residual_datum_route_after_R1_only",
             "checks": checks,
@@ -154,9 +169,9 @@ def main() -> None:
                 "strict_core_sigma_int_route_derives_actual_object_support_above_export_map_object": True,
                 "target_slot_export_is_not_population": False,
                 "export_map_object_is_not_theta_supply": True,
+                "t2_theorem_level_bridge_discharge_present": True,
             },
             "missing_structure_classes": [
-                "theorem_level_bridge_discharge_T2 (no theorem-level PASS yet)",
                 "strict_core_selector_closure_or_symmetry_breaking_ingredient (QW-2191 discipline)",
             ],
             "hard_limits": [
@@ -164,7 +179,7 @@ def main() -> None:
                 "no claim that QW-2191 is discharged",
                 "no claim that ToE is closed",
             ],
-            "required_next_step": "DISCHARGE_T2_THEOREM_LEVEL_BRIDGE_WITHOUT_FALSE_PASS_AND_CONTINUE_UNDER_QW_2191_DISCIPLINE",
+            "required_next_step": "PROCEED_UNDER_QW_2191_DISCIPLINE_NO_IMPLIED_SELECTOR_CLOSURE_AND_STRICT_ONLY_ToE_CLOSURE_PRIORITY_PER_S2",
         }
     else:
         summary = {

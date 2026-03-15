@@ -13,6 +13,8 @@
 - Update (`2026-03-15`): it also exports a post-witness object-support layer above the exported strict-core sigma-int →
   residual export-map object, discharging the post-`T148` object-support target (`T130/N395`) via `F452` + `N490` (no
   implied selector closure).
+- Update (`2026-03-15`): it also exports a theorem-level discharge of the conditional strict sigma-int → residual-datum
+  bridge theorem `T2` via `N491` (the export-map object remains sign-only; no implied selector closure).
 - Any use of extension-lane representatives (e.g. fixing selector slots) remains explicitly labeled
   `strict_extension_only` and must not be promoted into strict core.
 
@@ -56,6 +58,8 @@ Release 6.4 adds **new strict structural closures** around the `QW-2191` uniquen
 13. update (`2026-03-15`): the strict sigma-int residual bridge lane now exports a post-witness object-support layer
     above the exported sign-only map object, discharging the post-`T148` object-support target (`T130/N395`) via
     `F452/N490` (the export-map object itself remains sign-only; no implied selector closure).
+14. update (`2026-03-15`): the conditional strict sigma-int → residual-datum bridge theorem `T2` is now discharged at
+    theorem level via `N491` (no implied selector closure; `QW-2191` remains open).
 
 This is a *reduction*, not a discharge: it makes the “physical accelerator of choice” claim checkable without
 introducing new hidden slots, but it does not yet provide strict-derived diagonal coefficient values. In particular,

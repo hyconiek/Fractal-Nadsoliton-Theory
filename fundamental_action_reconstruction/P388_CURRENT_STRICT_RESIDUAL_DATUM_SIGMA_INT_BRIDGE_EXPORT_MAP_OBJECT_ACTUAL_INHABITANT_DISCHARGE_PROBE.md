@@ -72,10 +72,12 @@ now discharged by `F452/N490`; the export-map object itself remains sign-only an
 
 ## Consequence (next honest step)
 
-The next honest move is not to relabel the entire residual-datum lane as
-closed.
+Update (`2026-03-15`): the conditional bridge theorem `T2` is now discharged at theorem level (`N491`).
 
-It is to keep the post-`T148` missing layer explicit:
+The next honest move is not to relabel the entire residual-datum lane as closed nor to imply selector closure.
 
-1. theorem-level discharge of the conditional bridge theorem `T2` (beyond probe-level computability), and
-2. continued `QW-2191` nonclosure discipline unless a new strict internal selector source is separately exported.
+It is to continue under explicit `QW-2191` discipline:
+
+1. no implied admissible `S_sel_int` nor strict-core selector closure,
+2. no implied global `QW-2191` discharge,
+3. no implied ToE closure.

@@ -1,7 +1,7 @@
 {
   "step": "N8",
-  "status": "N8_DISCHARGED_CURRENT_STRICT_CORE_SIGMA_INT_RESIDUAL_DATUM_STATUS_UPDATE_AFTER_T130_NO_FALSE_PASS",
-  "goal": "Discharge an updated route-specific theorem: after slot-free theta supply (T159 via F451/N489), an audited R1 inhabitant instance (P451), and a post-witness object-support layer above the exported map object (F452/N490) are exported, the strict-core sigma-int route reaches target-slot population and discharges the post-`T148` object-support frontier (T130/N395), while remaining below theorem-level T2 discharge and below selector closure.",
+  "status": "N8_DISCHARGED_CURRENT_STRICT_CORE_SIGMA_INT_RESIDUAL_DATUM_STATUS_UPDATE_AFTER_T2_NO_FALSE_PASS",
+  "goal": "Discharge an updated route-specific theorem: after slot-free theta supply (T159 via F451/N489), an audited R1 inhabitant instance (P451), a post-witness object-support layer above the exported map object (F452/N490), and a theorem-level discharge of the conditional bridge theorem T2 (N491) are exported, the strict-core sigma-int route reaches theorem-level bridge discharge while remaining below selector closure.",
   "scope": "current_strict_core_sigma_int_to_residual_datum_route_after_R1_only",
   "checks": [
     {
@@ -58,11 +58,19 @@
       "actual": {
         "strict_core_theta_supply_present": true,
         "strict_core_target_slot_population_present": true,
-        "post_T148_object_support_present": true
+        "post_T148_object_support_present": true,
+        "theorem_discharge_present": true
       },
       "expected": true,
       "pass": true,
       "meaning": "the T2 bridge theorem spec summary is consistent with the current strict theta-supply + R1 population exports"
+    },
+    {
+      "id": "t2_theorem_discharge_present",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "the theorem-level discharge of T2 is exported (N491)"
     }
   ],
   "theorem_result": {
@@ -72,10 +80,10 @@
     "strict_core_sigma_int_route_derives_target_slot_population": true,
     "strict_core_sigma_int_route_derives_actual_object_support_above_export_map_object": true,
     "target_slot_export_is_not_population": false,
-    "export_map_object_is_not_theta_supply": true
+    "export_map_object_is_not_theta_supply": true,
+    "t2_theorem_level_bridge_discharge_present": true
   },
   "missing_structure_classes": [
-    "theorem_level_bridge_discharge_T2 (no theorem-level PASS yet)",
     "strict_core_selector_closure_or_symmetry_breaking_ingredient (QW-2191 discipline)"
   ],
   "hard_limits": [
@@ -83,5 +91,5 @@
     "no claim that QW-2191 is discharged",
     "no claim that ToE is closed"
   ],
-  "required_next_step": "DISCHARGE_T2_THEOREM_LEVEL_BRIDGE_WITHOUT_FALSE_PASS_AND_CONTINUE_UNDER_QW_2191_DISCIPLINE"
+  "required_next_step": "PROCEED_UNDER_QW_2191_DISCIPLINE_NO_IMPLIED_SELECTOR_CLOSURE_AND_STRICT_ONLY_ToE_CLOSURE_PRIORITY_PER_S2"
 }

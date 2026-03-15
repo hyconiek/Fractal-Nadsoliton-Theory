@@ -3,6 +3,11 @@
 Status: `T2_PACKET_READY_SIGMA_INT_TO_RESIDUAL_DATUM_BRIDGE_THEOREM_SPEC_NO_FALSE_PASS`
 As of: `2026-03-11`
 
+Update (`2026-03-15`): the conditional bridge theorem `T2` is now discharged on the strict sigma-int lane (in `R1`
+scope) via `N491`, using the exported sign-only map object (`F311/N422`), the slot-free sigma-int theta supply and
+audited `R1` inhabitant (`F451/N489/P451`), and the post-map object-support layer (`F452/N490`). This file remains the
+packet-ready theorem spec and assumption map; it is not itself the discharge artifact.
+
 ## Goal
 
 After `B4`, `B6`, `C37`, and `C38`, the bridge lane is sharply localized:

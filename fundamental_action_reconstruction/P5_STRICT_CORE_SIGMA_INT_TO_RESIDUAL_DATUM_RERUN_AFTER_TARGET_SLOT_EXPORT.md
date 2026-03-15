@@ -47,10 +47,11 @@ So the route no longer fails at:
 
 ## Finite missing-object list after `R1`
 
+Update (`2026-03-15`): the theorem-level discharge of the conditional bridge theorem `T2` is now exported (`N491`).
+
 The current route still lacks:
 
-1. theorem-level discharge of the conditional bridge theorem `T2` (beyond probe-level computability), and
-2. any strict-core selector closure / internal selector source discharging `QW-2191`.
+1. any strict-core selector closure / internal selector source discharging `QW-2191`.
 
 ## Honest frontier
 

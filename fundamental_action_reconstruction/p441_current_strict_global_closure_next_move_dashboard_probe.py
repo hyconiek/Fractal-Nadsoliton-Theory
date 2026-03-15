@@ -35,6 +35,10 @@ N490_THEOREM = (
 
 IOTA_SUPPORT = GENERATED / "iota_residual_datum_sigma_int_bridge_export_map_object_support_v1.json"
 
+N491_THEOREM = (
+    ROOT / "N491_CURRENT_FIRST_ACTUAL_STRICT_T2_SIGMA_INT_TO_RESIDUAL_DATUM_BRIDGE_DISCHARGE_THEOREM.md"
+)
+
 P438_SCRIPT = ROOT / "p438_current_strict_t166_diagonal_accelerator_lane_status_dashboard_probe.py"
 P439_SCRIPT = ROOT / "p439_current_strict_qw2191_weighted_kl_reference_objective_o2_cut_audit_probe.py"
 
@@ -154,6 +158,14 @@ def main() -> None:
             "continuation under explicit QW-2191 discipline (no implied selector closure)."
         )
         diagonal_note += " Sigma-int post-map object support is now exported (F452/N490); next frontier shifts to T2."
+
+    if recommended_next == "T2" and N491_THEOREM.exists():
+        recommended_next = "QW-2191"
+        recommendation_reason = (
+            "T2 theorem-level bridge discharge is now exported (N491). The remaining strict frontier is explicit continuation "
+            "under QW-2191 discipline (no implied selector closure) and strict-only ToE-closure continuation per S2."
+        )
+        diagonal_note += " T2 theorem-level bridge discharge is now exported (N491); next frontier shifts to QW-2191 continuation."
 
     shannon_note = "P439 is probe-level only; T165 status is determined by strict theorem/packet exports."
     if T165_THETA_FIX.exists():

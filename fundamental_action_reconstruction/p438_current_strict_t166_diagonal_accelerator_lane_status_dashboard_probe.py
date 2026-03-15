@@ -61,6 +61,10 @@ N490_THEOREM = (
 
 IOTA_SUPPORT = GENERATED / "iota_residual_datum_sigma_int_bridge_export_map_object_support_v1.json"
 
+N491_THEOREM = (
+    ROOT / "N491_CURRENT_FIRST_ACTUAL_STRICT_T2_SIGMA_INT_TO_RESIDUAL_DATUM_BRIDGE_DISCHARGE_THEOREM.md"
+)
+
 OUT_JSON = (
     GENERATED / "p438_current_strict_t166_diagonal_accelerator_lane_status_dashboard_probe.json"
 )
@@ -222,6 +226,13 @@ def main() -> None:
             "Post-T148 object-support above the exported sigma-int -> residual export-map object is now exported (F452/N490). "
             "The next honest strict frontier is theorem-level discharge of the conditional bridge theorem (T2) and/or "
             "continuation under explicit QW-2191 discipline (no implied selector closure)."
+        )
+
+    if recommended_next_target == "T2" and N491_THEOREM.exists():
+        recommended_next_target = "QW-2191"
+        recommendation_reason = (
+            "T2 theorem-level bridge discharge is now exported (N491). The remaining strict frontier is explicit continuation "
+            "under QW-2191 discipline (no implied selector closure) and strict-only ToE-closure continuation per S2."
         )
 
     artifact = {

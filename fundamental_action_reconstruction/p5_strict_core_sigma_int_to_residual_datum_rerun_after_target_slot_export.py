@@ -11,6 +11,10 @@ GENERATED = ROOT / "generated"
 OUT_JSON = GENERATED / "p5_strict_core_sigma_int_to_residual_datum_rerun_after_target_slot_export.json"
 OUT_SUMMARY = GENERATED / "p5_strict_core_sigma_int_to_residual_datum_rerun_after_target_slot_export_summary.json"
 
+N491_THEOREM = (
+    ROOT / "N491_CURRENT_FIRST_ACTUAL_STRICT_T2_SIGMA_INT_TO_RESIDUAL_DATUM_BRIDGE_DISCHARGE_THEOREM.md"
+)
+
 
 def load_json(repo_relative_path: str) -> dict[str, Any]:
     return json.loads((REPO / repo_relative_path).read_text(encoding="utf-8"))
@@ -58,6 +62,10 @@ def main() -> None:
             "fundamental_action_reconstruction/generated/iota_residual_datum_sigma_int_bridge_export_map_object_support_v1.json"
         ),
     }
+
+    t2_theorem_discharge_present = bool(N491_THEOREM.exists()) or bool(
+        sources["t2"].get("findings", {}).get("theorem_discharge_present")
+    )
 
     route_checks = [
         {
@@ -214,7 +222,17 @@ def main() -> None:
                 "and a post-witness object-support layer above the exported map object is exported; the sigma-int residual-datum route is therefore "
                 "computable up to post-map object-support discharge (the export-map object itself remains sign-only)"
             )
-            required_next_step = "CONSIDER_THEOREM_LEVEL_DISCHARGE_OF_T2_AND_PROCEED_UNDER_QW_2191_DISCIPLINE"
+            required_next_step = "DISCHARGE_T2_THEOREM_LEVEL_BRIDGE_WITHOUT_FALSE_PASS_AND_PROCEED_UNDER_QW_2191_DISCIPLINE"
+            if t2_theorem_discharge_present:
+                required_next_step = "PROCEED_UNDER_QW_2191_DISCIPLINE_NO_IMPLIED_SELECTOR_CLOSURE"
+
+    r1_b1 = "target slot export present but population absent (historical R1 packet state)"
+    if route_state["strict_core_target_slot_population_present"]:
+        r1_b1 = "target slot export present and population present (P451) on current sigma-int lane"
+
+    c50_b1 = "no_packet_ready_strict_core_minimal_source_skeleton_for_actual_theta_1_theta_2"
+    if route_state["strict_core_theta_supply_present"]:
+        c50_b1 = "superseded_on_current_repo_state_theta_supply_present_via_F451_N489"
 
     report = {
         "stage": "P5",
@@ -252,8 +270,8 @@ def main() -> None:
             "note": diagonal_local_theta_note,
         },
         "blocking_frontier": {
-            "R1_B1": "target slot export present but population absent",
-            "C50_B1": "no_packet_ready_strict_core_minimal_source_skeleton_for_actual_theta_1_theta_2",
+            "R1_B1": r1_b1,
+            "C50_B1": c50_b1,
             "T2_B1": sources["t2"]["frontier_after_T2"]["T2_B1"],
             "QW_2191": "open (no implied selector closure)",
         },

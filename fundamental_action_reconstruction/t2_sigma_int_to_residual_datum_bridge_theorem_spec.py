@@ -9,6 +9,9 @@ ROOT = Path(__file__).resolve().parent
 REPO = ROOT.parent
 GENERATED = ROOT / "generated"
 
+N491_THEOREM = (
+    ROOT / "N491_CURRENT_FIRST_ACTUAL_STRICT_T2_SIGMA_INT_TO_RESIDUAL_DATUM_BRIDGE_DISCHARGE_THEOREM.md"
+)
 
 def load_json(repo_relative_path: str) -> dict[str, Any]:
     return json.loads((REPO / repo_relative_path).read_text(encoding="utf-8"))
@@ -50,6 +53,8 @@ def main() -> None:
         == "Iota_residual_datum_sigma_int_bridge_export_map_object_support_v1"
     )
 
+    theorem_discharge_present = bool(N491_THEOREM.exists())
+
     t2_b1 = (
         "the_bridge_theorem_is_specified_but_not_discharged_target_slot_and_sign_only_export_map_object_exist_but_target_slot_population_remains_absent"
     )
@@ -64,6 +69,19 @@ def main() -> None:
                 "the_bridge_theorem_is_specified_but_not_discharged_target_slot_population_and_post_T148_object_support_are_present_but_theorem_level_bridge_discharge_is_not_exported"
             )
             next_step = "discharge_T2_theorem_level_bridge_without_false_pass_and_continue_under_QW_2191_discipline"
+
+    if theorem_discharge_present:
+        t2_b1 = "the_bridge_theorem_is_discharged_on_current_strict_sigma_int_lane_in_R1_scope_no_false_pass_QW_2191_remains_open"
+        next_step = "continue_under_explicit_QW_2191_discipline_no_implied_selector_closure_and_strict_only_ToE_closure_priority_per_S2"
+
+    hard_limits = [
+        "no full-closure PASS",
+        "no claim that candidate-fit equals strict-core equivalence",
+        "no claim that overlay compatibility equals internal derivation",
+        "no claim that QW-2191 is discharged",
+    ]
+    if not theorem_discharge_present:
+        hard_limits.insert(0, "no theorem-level PASS")
 
     summary = {
         "step": "T2",
@@ -93,20 +111,14 @@ def main() -> None:
             "strict_core_theta_supply_present": strict_core_theta_supply_present,
             "strict_core_target_slot_population_present": strict_core_target_slot_population_present,
             "post_T148_object_support_present": post_T148_object_support_present,
-            "strict_core_equivalence_or_full_bridge_present": False,
-            "theorem_discharge_present": False
+            "strict_core_equivalence_or_full_bridge_present": theorem_discharge_present,
+            "theorem_discharge_present": theorem_discharge_present
         },
         "frontier_after_T2": {
             "T2_B1": t2_b1,
             "C32_B2": "raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12"
         },
-        "hard_limits": [
-            "no theorem-level PASS",
-            "no full-closure PASS",
-            "no claim that candidate-fit equals strict-core equivalence",
-            "no claim that overlay compatibility equals internal derivation",
-            "no claim that QW-2191 is discharged"
-        ],
+        "hard_limits": hard_limits,
         "next_step": next_step
     }
 
