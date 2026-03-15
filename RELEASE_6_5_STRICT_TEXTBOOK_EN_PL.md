@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.14  
+**Version:** 6.5.15  
 **Date:** 2026-03-15  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -26,7 +26,7 @@
 - Update (`2026-03-15`): in the declared `R1` target-slot semantics (`span{u_1,u_2}`), residual `Z2` sign flips of the
   representative vectors are gauge-irrelevant for the target slot as a span object (`N501`).
 - Update (`2026-03-15`): residual `Z2` sign can be **frozen as a tracked gauge/convention layer** for the currently exported
-  downstream objects where the sign is provably gauge-irrelevant (packaged by `N502`), without implying any global
+  downstream objects where the sign is provably gauge-irrelevant (packaged by `N502`, including `alpha_12 mod π`), without implying any global
   sign-sensitive physical orientation datum.
 - Update (`2026-03-15`): the two independently exported mode-index assignment bases (diagonal/local vs Shannon ord-reference)
   are aligned on all `pair_m (m=1..5)` up to residual `Z2` sign (audit `P455`); this is a hygiene consistency check and
@@ -268,7 +268,7 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
     `A_1(pair1) := |u_1><u_1|` (projector; invariantny na residualny flip znaku `Z2`). To domyka etap operatorowy `P2` w zadeklarowanym scope (`F456`),
     ale **nie** identyfikuje tego operatora z extension-only `A_1_ext` z pasa `H/O`, **nie** implikuje selector closure i **nie** rozładowuje globalnie `QW-2191`.
 18. residualny znak `Z2` może zostać jawnie **zamrożony jako warstwa gauge/konwencji** dla aktualnie wyeksportowanych obiektów downstream,
-    dla których wykazano gauge‑irrelewantność znaku (opakowane przez `N502`), bez promocji do sign-sensitive “fizycznej orientacji”.
+    dla których wykazano gauge‑irrelewantność znaku (opakowane przez `N502`, w tym `alpha_12 mod π`), bez promocji do sign-sensitive “fizycznej orientacji”.
 19. pochodna dana przejścia `alpha_12 := (theta_2 - theta_1) mod 2π` dla `pair1/pair2` jest wyeksportowana z strict slot‑free theta‑pair na korytarzu sigma‑int (`F457`),
     bez implikowania globalnego selector transition/gluing object.
 20. dodatkowo, na poziomie sondy/control‑lane wyeksportowano dane przejścia z warunkowo zainstancjonowanego zadeklarowanego pullbacku residualnego (`P459`): czynnik ortogonalny `Q ∈ O(2)`
