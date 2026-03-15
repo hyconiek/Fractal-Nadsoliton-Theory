@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.0  
+**Version:** 6.5.1  
 **Date:** 2026-03-15  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -17,6 +17,8 @@
 - Update (`2026-03-15`): residual `Z2` sign flips are **gauge-equivalent via conjugation** for the `QW-2190` SU(3)/SU(2)
   embedding audits (`P452`, `N493`), so the diagonal/local lane canonicalizes the `QW-2190` embedding **uniquely up to
   conjugation** in its declared scope (`N494`).
+- Update (`2026-03-15`): moreover, for the same `QW-2190` embedding audits, the full continuous `O(2)` basis-rotation
+  freedom is likewise **gauge-equivalent** (conjugation-only) (`N495`, audited by `P454`).
 - The sigma-int corridor theta-supply and sigma-int → residual bridge theorems introduced in Release 6.4 remain in force
   (e.g. `F451/N489`, `P451`, `F452/N490`, `N491`) and are not re-derived here.
 
@@ -43,7 +45,9 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
    axis-only sense (residual sign remains) (`N492`),
 7. residual sign flips are gauge-equivalent (pure conjugations) for the `QW-2190` embedding audits (`P452/N493`), hence
    the diagonal/local `QW-2190` embedding is unique **up to conjugation** in that scope (`N494`),
-8. repo hygiene probes/dashboards were updated accordingly (`P432`, `P441`, `P442`), without any promotion to global
+8. full continuous `O(2)` rotations inside the embedded pair planes are gauge-equivalent (conjugation-only) for the
+   same `QW-2190` embedding audits (`N495`, audited by `P454`),
+9. repo hygiene probes/dashboards were updated accordingly (`P432`, `P441`, `P442`), without any promotion to global
    closure.
 
 ## 1) One-Page Strict Status (6.5)
@@ -59,9 +63,9 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
 3. On that lane, the continuous `O(2)` family is cut down to residual `Z2` on every degenerate pair plane (`N487`).
 4. The repo exports an explicit strict-derived mode-index assignment basis object realizing that axis selection
    (up to sign) (`F453`), and packages it as a lane-scoped internal orientation datum (`N492`).
-5. For the `QW-2190` SU(3)/SU(2) embedding audits, residual sign flips are gauge: invariance/closure audits are unchanged
-   (conjugation equivalence) (`P452/N493`), so the diagonal/local embedding is canonicalized uniquely up to conjugation
-   (`N494`).
+5. For the `QW-2190` SU(3)/SU(2) embedding audits, both residual sign flips and the full continuous `O(2)` basis-rotation
+   freedom are gauge: invariance/closure audits are unchanged (conjugation equivalence) (`N493`, `N495`, audited by
+   `P452`, `P454`), so the embedding audits are well-defined up to conjugation in the declared scope (`N494`).
 
 ### 1.2 What is still missing (no false pass)
 
@@ -152,7 +156,9 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
 6. pas diagonal/local eksportuje twierdzenie “istnieje wewnętrzny datum orientacji” w sensie osiowym (axis-only; residual znak pozostaje) (`N492`),
 7. residualne flippy znaku `Z2` są “gauge” dla audytów embeddingu `QW-2190` (czysta koniugacja) (`P452/N493`), więc embedding jest
    kanoniczny **z dokładnością do koniugacji** w zadeklarowanym zakresie (`N494`),
-8. sondy/dashboards higieniczne zostały zaktualizowane (`P432`, `P441`, `P442`) bez promocji do globalnego domknięcia.
+8. ponadto pełna ciągła swoboda rotacji `O(2)` w parach jest “gauge” dla tych samych audytów embeddingu `QW-2190`
+   (`N495`, audyt `P454`),
+9. sondy/dashboards higieniczne zostały zaktualizowane (`P432`, `P441`, `P442`) bez promocji do globalnego domknięcia.
 
 ## 1) Jednostronicowy status strict (6.5)
 
@@ -164,8 +170,8 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
    `pair1` (`N482`) oraz wszystkie `pair_m (m=1..5)` (`N485`).
 3. Na tym pasie ciągła rodzina `O(2)` jest zredukowana do residual `Z2` na każdej parze (`N487`).
 4. Repo eksportuje jawny obiekt bazy przypisania modów realizujący ten wybór osi (z dokładnością do znaku) (`F453`) i pakuje to jako datum orientacji (`N492`).
-5. Dla audytów embeddingu `QW-2190` residualny znak jest “gauge” (inwariantność i domknięcie Lie nie zmieniają się) (`P452/N493`),
-   więc embedding jest kanoniczny do koniugacji (`N494`).
+5. Dla audytów embeddingu `QW-2190` nie tylko residualny znak, ale też pełna swoboda rotacji `O(2)` jest “gauge”
+   (koniugacja; `N493`, `N495`, audyty `P452`, `P454`), więc embedding jest kanoniczny do koniugacji (`N494`).
 
 ### 1.2 Czego nadal brakuje (bez false pass)
 
@@ -182,4 +188,3 @@ Dashboards nadal wskazują frontier globalny `QW-2191` (`P438`, `P441`):
 
 1. rozszerzenie poza pas diagonal/local bez importu zewnętrznej przesłanki selektora, i/lub
 2. eksport wewnętrznego źródła selektora wystarczającego do globalnej kanonizacji strict-core (nadal nie rości się tutaj).
-

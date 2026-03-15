@@ -45,6 +45,12 @@ N494_THEOREM = (
     / "N494_CURRENT_FIRST_STRICT_QW2190_DIAGONAL_LOCAL_MODE_INDEX_CANONICALIZATION_UNIQUENESS_UP_TO_CONJUGATION_THEOREM.md"
 )
 
+P454_SUMMARY = GENERATED / "p454_current_strict_qw2191_o2_rotation_gauge_equivalence_audit_probe_summary.json"
+N495_THEOREM = (
+    ROOT
+    / "N495_CURRENT_FIRST_STRICT_QW2191_O2_ROTATION_GAUGE_EQUIVALENCE_FOR_QW2190_EMBEDDING_AUDITS_THEOREM.md"
+)
+
 N490_THEOREM = (
     ROOT
     / "N490_CURRENT_FIRST_ACTUAL_STRICT_SIGMA_INT_RESIDUAL_BRIDGE_EXPORT_MAP_OBJECT_SUPPORT_DISCHARGE_THEOREM.md"
@@ -166,6 +172,12 @@ def main() -> None:
         diagonal_note += (
             " Residual Z2 sign flips are audited to be conjugation-only for the QW-2190 SU(3)/SU(2) embedding audits (P452/N493); "
             "therefore the diagonal/local lane canonicalizes the embedding uniquely up to conjugation in its declared scope (N494)."
+        )
+
+    if P454_SUMMARY.exists() or N495_THEOREM.exists():
+        diagonal_note += (
+            " Moreover, full O(2) basis rotations are gauge-equivalent (conjugation-only) for the same QW-2190 embedding audits "
+            "(N495; audited by P454), so the continuous O(2) family is not a changing observable at the embedding-audit level."
         )
 
     # If the sigma-int corridor strict-core theta supply is exported (T159 satisfied via T162),

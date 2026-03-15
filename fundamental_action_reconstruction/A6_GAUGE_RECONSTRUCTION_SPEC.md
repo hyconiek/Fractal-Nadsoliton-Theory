@@ -101,13 +101,13 @@ To daje:
 To jest blocker podstawowy dla pelnego claimu:
 - "gauge structure zostala unikalnie i axiom-free wyprowadzona z jednego nadsolitonu".
 
-Aktualizacja po `N487/F453/N492/N493/N494`:
+Aktualizacja po `N487/F453/N492/N493/N494/N495`:
 - w strict core istnieje teraz **lane-scoped** canonicalizacja mode-index assignment na canonical local‑diagonal lane,
   ktora redukuje continuous `O(2)` do residual `Z2` i eksportuje jawna baze,
-- a residual `Z2` sign flip nie zmienia auditow `QW-2190` (jest tylko konjugacja / konwencja bazy),
-  wiec w sensie auditow `QW-2190` embedding jest na tej lane unikalny **up to conjugation**,
-- ale `QW-2191` pozostaje prawdziwe w scope kernel‑alone i globalna fizyczna unikalnosc poza ta lane nadal nie jest
-  domknieta.
+- a nie tylko residualny znak: pelna swoboda `O(2)` rotacji bazy w parach jest “gauge” dla auditow embeddingu `QW-2190`
+  (czysta koniugacja; `N495`, audyt `P454`), wiec audyty invariance/Lie-closure nie zaleza od wyboru reprezentanta bazy,
+- ale `QW-2191` pozostaje prawdziwe jako obstruction **kanonicznego reprezentanta** (axis choice) w scope kernel‑alone,
+  a globalna fizyczna unikalnosc representation map (poza samymi auditami embeddingu) nadal nie jest domknieta.
 
 ### Dodatkowe granice
 
