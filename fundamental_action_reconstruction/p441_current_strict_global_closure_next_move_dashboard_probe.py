@@ -18,6 +18,16 @@ N489_THEOREM = (
 )
 
 T165_THETA_FIX = GENERATED / "theta_fix_pair1_o2_cut_ord_reference_v1.json"
+F454_SHANNON_ASSIGNMENT = (
+    GENERATED / "mode_index_assignment_shannon_element_order_reference_strict_core_v1.json"
+)
+F454_SHANNON_ASSIGNMENT_SUMMARY = (
+    GENERATED / "mode_index_assignment_shannon_element_order_reference_strict_core_v1_summary.json"
+)
+N496_THEOREM = (
+    ROOT
+    / "N496_CURRENT_FIRST_STRICT_SHANNON_ELEMENT_ORDER_REFERENCE_CROSS_ENTROPY_CUTS_PAIR3_TO_PAIR5_O2_TO_Z2_UNIQUENESS_THEOREM.md"
+)
 F450_THETA_PAIR = GENERATED / "theta_pair_canonical_local_diagonal_strict_derived_v1.json"
 P450_R1_POPULATION = (
     GENERATED
@@ -143,7 +153,7 @@ def main() -> None:
     # Conservative global recommendation:
     # - the diagonal/local lane (T166) is the only currently exported strict candidate accelerator against QW-2191 on pair1;
     # - P438 already computes which strict target blocks it (T167 vs T168/T169);
-    # - the Shannon lane now has one actual strict selector ingredient (T165 discharged by F446/N480),
+    # - the Shannon lane exports strict selector ingredients (T165, and a full n=12 all-pairs mode-index assignment via F454),
     #   but it still does not decide the diagonal/local defect (T166) nor does it globally discharge QW-2191.
     recommended_next = str(p438.get("recommended_next_strict_target") or "T168")
     recommendation_reason = "P438 diagonal accelerator lane determines the next strict missing target beneath T166."
@@ -209,7 +219,13 @@ def main() -> None:
         diagonal_note += " T2 theorem-level bridge discharge is now exported (N491); next frontier shifts to QW-2191 continuation."
 
     shannon_note = "P439 is probe-level only; T165 status is determined by strict theorem/packet exports."
-    if T165_THETA_FIX.exists():
+    if F454_SHANNON_ASSIGNMENT.exists() or F454_SHANNON_ASSIGNMENT_SUMMARY.exists() or N496_THEOREM.exists():
+        shannon_note = (
+            "Strict Shannon element-order reference lane exports a full strict-core mode-index assignment basis object on n=12 (F454), "
+            "cutting O(2) down to residual Z2 on all pair_m (m=1..5) via the cross-entropy objective "
+            "(N480, N488, N496). This remains below T166, does not imply strict-core selector closure, and does not constitute a global QW-2191 discharge."
+        )
+    elif T165_THETA_FIX.exists():
         shannon_note = (
             "T165 strict selector ingredient is exported (F446/N480): pair1 O(2)->Z2 cut with θ*=π/2 (mod π). "
             "This does not by itself discharge T166 or globally discharge QW-2191."
