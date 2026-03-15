@@ -29,7 +29,9 @@ This does **not** derive a sign‑sensitive physical orientation datum, does **n
    - residual sign flips are irrelevant for the `R1` target slot because the slot semantics is span/projector‑based.
 3. `F456`
    - strict downstream operator object `A_1(pair1) := |u_1><u_1|` constructed from the exported `u_1`, explicitly sign‑gauge invariant.
-4. `A10`
+4. `F457`
+   - strict lane-scoped transition angle export `alpha_12 := (theta_2-theta_1) mod 2π` and its axis-only reduction `alpha_12 mod π`.
+5. `A10`
    - anti-overclaim boundary.
 
 ## Theorem (residual sign is frozen as gauge for the exported downstream objects)
@@ -75,12 +77,30 @@ By `N495`, the same holds for the full continuous `O(2)` basis freedom: it is li
 
 Therefore, within the `QW-2190` audit scope, residual sign does not change the audit results. ∎
 
+### Claim 4. Residual sign does not change the exported axis-only transition angle `alpha_12 mod π`.
+
+By `F457`, the exported transition data includes:
+
+```text
+alpha_12_mod_pi := (theta_2 - theta_1) mod π.
+```
+
+Under residual sign flips `u_i -> -u_i`, the local phase representatives may shift by `theta_i -> theta_i + π` (mod `2π`),
+but the axis-only difference is invariant:
+
+```text
+( (theta_2 + k2·π) - (theta_1 + k1·π) ) mod π  =  (theta_2 - theta_1) mod π
+```
+
+for any `k1,k2 ∈ {0,1}`. Therefore residual sign does not change the exported `alpha_12 mod π`. ∎
+
 ### Conclusion (B3 continuation, option A)
 
 In the strict scope of the currently exported downstream objects actually used by the strict closure stack:
 
 - `R1` target-slot inhabitant is a span/projector object,
 - `A_1(pair1)` is a projector,
+- `alpha_12 mod π` is an axis-only transition angle,
 - `QW-2190` embedding audits are conjugation‑invariant,
 
 so residual `Z2` sign can be **frozen** as a tracked gauge/convention layer without affecting these downstream objects/audits.
@@ -101,4 +121,3 @@ before promotion. ∎
 2. strict-core selector closure / admissible `S_sel_int`,
 3. global discharge of `QW-2191`,
 4. ToE closure.
-
