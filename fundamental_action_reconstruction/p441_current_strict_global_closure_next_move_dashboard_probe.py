@@ -28,6 +28,23 @@ N487_THEOREM = (
     / "N487_CURRENT_FIRST_STRICT_QW2191_CONTINUOUS_O2_FAMILY_DISCHARGE_ON_ALL_FOURIER_DEGENERATE_PAIRS_VIA_CANONICAL_DIAGONAL_LOCAL_SECTOR_THEOREM.md"
 )
 
+F453_ASSIGNMENT = GENERATED / "mode_index_assignment_canonical_local_diagonal_strict_derived_v1.json"
+F453_ASSIGNMENT_SUMMARY = GENERATED / "mode_index_assignment_canonical_local_diagonal_strict_derived_v1_summary.json"
+N492_THEOREM = (
+    ROOT
+    / "N492_CURRENT_FIRST_ACTUAL_STRICT_CANONICAL_LOCAL_DIAGONAL_INTERNAL_ORIENTATION_DATUM_EXPORT_THEOREM.md"
+)
+P452_SUMMARY = (
+    GENERATED / "p452_current_strict_qw2191_residual_z2_sign_flip_gauge_equivalence_audit_probe_summary.json"
+)
+N493_THEOREM = (
+    ROOT / "N493_CURRENT_FIRST_STRICT_QW2191_RESIDUAL_Z2_SIGN_FLIP_GAUGE_EQUIVALENCE_THEOREM.md"
+)
+N494_THEOREM = (
+    ROOT
+    / "N494_CURRENT_FIRST_STRICT_QW2190_DIAGONAL_LOCAL_MODE_INDEX_CANONICALIZATION_UNIQUENESS_UP_TO_CONJUGATION_THEOREM.md"
+)
+
 N490_THEOREM = (
     ROOT
     / "N490_CURRENT_FIRST_ACTUAL_STRICT_SIGMA_INT_RESIDUAL_BRIDGE_EXPORT_MAP_OBJECT_SUPPORT_DISCHARGE_THEOREM.md"
@@ -137,6 +154,18 @@ def main() -> None:
             "R1 target-slot inhabitant instance constructed from it (P450), without promoting sigma-int corridor upgrade (T159)."
             if P450_R1_POPULATION.exists()
             else " The same lane also exports a strict-derived diagonal/local theta-pair source (F450)."
+        )
+
+    if F453_ASSIGNMENT.exists() or F453_ASSIGNMENT_SUMMARY.exists() or N492_THEOREM.exists():
+        diagonal_note += (
+            " Additionally, the lane exports an explicit strict-derived mode-index assignment basis object for all Fourier-degenerate "
+            "pair planes (F453) and packages it as an internal orientation datum in the lane-scoped sense (N492), without implying global selector closure."
+        )
+
+    if P452_SUMMARY.exists() or N493_THEOREM.exists() or N494_THEOREM.exists():
+        diagonal_note += (
+            " Residual Z2 sign flips are audited to be conjugation-only for the QW-2190 SU(3)/SU(2) embedding audits (P452/N493); "
+            "therefore the diagonal/local lane canonicalizes the embedding uniquely up to conjugation in its declared scope (N494)."
         )
 
     # If the sigma-int corridor strict-core theta supply is exported (T159 satisfied via T162),
