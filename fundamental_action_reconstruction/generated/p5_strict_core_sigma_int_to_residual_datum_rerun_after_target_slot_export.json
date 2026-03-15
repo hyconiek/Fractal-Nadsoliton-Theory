@@ -2,7 +2,7 @@
   "stage": "P5",
   "goal": "rerun_strict_core_sigma_int_to_residual_orientation_datum_after_target_slot_export",
   "status": "PASS_COMPUTABLE_FROM_CURRENT_STRICT_CORE_RESIDUAL_DATUM_ROUTE_AFTER_TARGET_SLOT_EXPORT",
-  "reason": "a slot-free strict-core sigma-int -> theta-pair source is exported, an audited R1 target-slot inhabitant instance exists, and a post-witness object-support layer above the exported map object is exported; the sigma-int residual-datum route is therefore computable up to post-map object-support discharge (the export-map object itself remains sign-only)",
+  "reason": "a slot-free strict-core sigma-int -> theta-pair source is exported, an audited R1 target-slot inhabitant instance exists, a post-witness object-support layer above the exported v1 map object is exported, and an upgraded export-map object v2 attaches the theta-pair outputs and the corresponding R1 inhabitant; the sigma-int residual-datum route is therefore computable up to post-map object-support discharge (QW-2191 remains open)",
   "lane": "strict_core_sigma_int_residual_datum_route_after_R1_post_T148",
   "route_under_test": [
     "sigma_int_strict_derived_v1",
@@ -52,6 +52,17 @@
       "meaning": "a strict-core export-map object into the residual target slot exists, but it is sign-only (no theta supply; no target-slot population)"
     },
     {
+      "id": "export_map_object_v2_exported_theta_pair_and_r1_population",
+      "pass": true,
+      "expected": true,
+      "actual": {
+        "object": "Upsilon_residual_datum_sigma_int_bridge_export_map_object_v2",
+        "status": "actual_exported_strict_core_bridge_export_map_object__theta_pair_and_r1_population",
+        "typed_map_shape": "E_sigma_int_to_residual_datum_bridge_export_map_object_v2 : sigma_int_strict_derived_v1 -> residual_orientation_datum_target_slot_inhabitant"
+      },
+      "meaning": "an upgraded strict-core sigma-int -> residual target-slot export-map object v2 is exported, explicitly attaching the slot-free theta-pair outputs and a corresponding R1 target-slot inhabitant (F455); QW-2191 remains open"
+    },
+    {
       "id": "theta_pair_sigma_int_slot_free_exported",
       "pass": true,
       "expected": true,
@@ -87,6 +98,7 @@
     "strict_sigma_int_present": true,
     "theorem_level_gauge_quotient_safety_present": true,
     "strict_core_export_map_object_present_sign_only": true,
+    "strict_core_export_map_object_v2_present": true,
     "strict_core_theta_supply_present": true,
     "strict_core_target_slot_population_present": true,
     "post_T148_object_support_present": true
@@ -95,7 +107,8 @@
     "R1 target-slot export packet",
     "sigma_int_strict_derived_v1",
     "sigma_int_gauge_quotient_safety_witness_v1",
-    "Upsilon_residual_datum_sigma_int_bridge_export_map_object_v1 (sign-only)"
+    "Upsilon_residual_datum_sigma_int_bridge_export_map_object_v1 (sign-only)",
+    "Upsilon_residual_datum_sigma_int_bridge_export_map_object_v2 (theta-pair + R1 inhabitant)"
   ],
   "missing_upstream_objects": [],
   "sigma_int_slot_free_theta_lane": {

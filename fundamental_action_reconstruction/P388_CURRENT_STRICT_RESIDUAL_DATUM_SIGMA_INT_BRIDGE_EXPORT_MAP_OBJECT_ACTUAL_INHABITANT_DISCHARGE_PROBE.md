@@ -56,7 +56,7 @@ N300 map-layer nonexport boundary: superseded as a current-state description (hi
 Hard limits remain in force (explicit in `F311/N422`):
 
 1. the exported **map object** remains sign-only: it exports no strict-core theta-source and does not populate the
-   residual target slot **by itself**,
+   residual target slot **by itself** (this is the v1 object),
 2. no implied selector closure; `QW-2191` remains open.
 
 Update (`2026-03-15`, strict-core hygiene; no false pass):
@@ -65,10 +65,15 @@ Update (`2026-03-15`, strict-core hygiene; no false pass):
    satisfying `T159` (`F451/N489`).
 2. An audited inhabitant instance populating the `R1` residual orientation datum target slot constructed from that
    slot-free theta-pair source is exported (`P451`).
+3. An explicit upgraded strict-core export-map object now exists:
+   `Upsilon_residual_datum_sigma_int_bridge_export_map_object_v2` (`F455`), which attaches the slot-free theta-pair
+   outputs and the corresponding `R1` inhabitant instance as map outputs (no theta inputs; no implied selector closure).
 
-This does **not** upgrade the strict-core export-map object (`F311/N422`), and it does **not** discharge the missing
-post-`T148` actual object-support layer above the exported map object (update: the object-support target `T130/N395` is
-now discharged by `F452/N490`; the export-map object itself remains sign-only and is not silently upgraded).
+This does **not** imply strict-core selector closure and does **not** discharge `QW-2191`.
+
+The `F311/N422` export-map object (`v1`) remains sign-only (residual `Z2` convention only). The post-`T148` object-support
+target `T130/N395` remains discharged by `F452/N490` on the declared v1 support lane. The v2 upgrade (`F455`) is an
+explicit additional export-map object, not a silent relabeling of v1.
 
 ## Consequence (next honest step)
 

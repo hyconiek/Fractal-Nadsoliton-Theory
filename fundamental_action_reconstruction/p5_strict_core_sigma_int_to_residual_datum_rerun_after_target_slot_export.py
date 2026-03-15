@@ -58,6 +58,9 @@ def main() -> None:
         "r1_population_sigma_int_slot_free": load_json_if_exists(
             "fundamental_action_reconstruction/generated/r1_residual_orientation_datum_target_slot_population_strict_derived_from_sigma_int_slot_free_theta_pair_v1.json"
         ),
+        "export_map_object_v2": load_json_if_exists(
+            "fundamental_action_reconstruction/generated/upsilon_residual_datum_sigma_int_bridge_export_map_object_v2.json"
+        ),
         "object_support_sigma_int": load_json_if_exists(
             "fundamental_action_reconstruction/generated/iota_residual_datum_sigma_int_bridge_export_map_object_support_v1.json"
         ),
@@ -116,6 +119,33 @@ def main() -> None:
                 "typed_map_shape": sources["export_map_object"].get("typed_map_shape"),
             },
             "meaning": "a strict-core export-map object into the residual target slot exists, but it is sign-only (no theta supply; no target-slot population)",
+        },
+        {
+            "id": "export_map_object_v2_exported_theta_pair_and_r1_population",
+            "pass": bool(
+                optional["export_map_object_v2"] is not None
+                and optional["export_map_object_v2"].get("object")
+                == "Upsilon_residual_datum_sigma_int_bridge_export_map_object_v2"
+                and optional["export_map_object_v2"].get("no_false_pass") is True
+                and (optional["export_map_object_v2"].get("selector_track_identification") or {}).get(
+                    "QW_2191_status"
+                )
+                == "open"
+            ),
+            "expected": True,
+            "actual": (
+                None
+                if optional["export_map_object_v2"] is None
+                else {
+                    "object": optional["export_map_object_v2"].get("object"),
+                    "status": optional["export_map_object_v2"].get("status"),
+                    "typed_map_shape": optional["export_map_object_v2"].get("typed_map_shape"),
+                }
+            ),
+            "meaning": (
+                "an upgraded strict-core sigma-int -> residual target-slot export-map object v2 is exported, explicitly attaching the slot-free "
+                "theta-pair outputs and a corresponding R1 target-slot inhabitant (F455); QW-2191 remains open"
+            ),
         },
         {
             "id": "theta_pair_sigma_int_slot_free_exported",
@@ -178,9 +208,10 @@ def main() -> None:
         "strict_sigma_int_present": bool(route_checks[1]["pass"]),
         "theorem_level_gauge_quotient_safety_present": bool(route_checks[2]["pass"]),
         "strict_core_export_map_object_present_sign_only": bool(route_checks[3]["pass"]),
-        "strict_core_theta_supply_present": bool(route_checks[4]["pass"]),
-        "strict_core_target_slot_population_present": bool(route_checks[5]["pass"]),
-        "post_T148_object_support_present": bool(route_checks[6]["pass"]),
+        "strict_core_export_map_object_v2_present": bool(route_checks[4]["pass"]),
+        "strict_core_theta_supply_present": bool(route_checks[5]["pass"]),
+        "strict_core_target_slot_population_present": bool(route_checks[6]["pass"]),
+        "post_T148_object_support_present": bool(route_checks[7]["pass"]),
     }
 
     missing_upstream_objects: list[str] = []
@@ -217,11 +248,19 @@ def main() -> None:
         required_next_step = "DISCHARGE_POST_T148_OBJECT_SUPPORT_TARGETS_T130_N395_WITHOUT_FALSE_PASS"
         strict_core_promotion = True
         if route_state["post_T148_object_support_present"]:
-            reason = (
-                "a slot-free strict-core sigma-int -> theta-pair source is exported, an audited R1 target-slot inhabitant instance exists, "
-                "and a post-witness object-support layer above the exported map object is exported; the sigma-int residual-datum route is therefore "
-                "computable up to post-map object-support discharge (the export-map object itself remains sign-only)"
-            )
+            if route_state["strict_core_export_map_object_v2_present"]:
+                reason = (
+                    "a slot-free strict-core sigma-int -> theta-pair source is exported, an audited R1 target-slot inhabitant instance exists, "
+                    "a post-witness object-support layer above the exported v1 map object is exported, and an upgraded export-map object v2 attaches "
+                    "the theta-pair outputs and the corresponding R1 inhabitant; the sigma-int residual-datum route is therefore computable up to "
+                    "post-map object-support discharge (QW-2191 remains open)"
+                )
+            else:
+                reason = (
+                    "a slot-free strict-core sigma-int -> theta-pair source is exported, an audited R1 target-slot inhabitant instance exists, "
+                    "and a post-witness object-support layer above the exported map object is exported; the sigma-int residual-datum route is therefore "
+                    "computable up to post-map object-support discharge (the export-map object v1 remains sign-only; QW-2191 remains open)"
+                )
             required_next_step = "DISCHARGE_T2_THEOREM_LEVEL_BRIDGE_WITHOUT_FALSE_PASS_AND_PROCEED_UNDER_QW_2191_DISCIPLINE"
             if t2_theorem_discharge_present:
                 required_next_step = "PROCEED_UNDER_QW_2191_DISCIPLINE_NO_IMPLIED_SELECTOR_CLOSURE"
@@ -233,6 +272,17 @@ def main() -> None:
     c50_b1 = "no_packet_ready_strict_core_minimal_source_skeleton_for_actual_theta_1_theta_2"
     if route_state["strict_core_theta_supply_present"]:
         c50_b1 = "superseded_on_current_repo_state_theta_supply_present_via_F451_N489"
+
+    supporting_present_but_insufficient_objects = [
+        "R1 target-slot export packet",
+        "sigma_int_strict_derived_v1",
+        "sigma_int_gauge_quotient_safety_witness_v1",
+        "Upsilon_residual_datum_sigma_int_bridge_export_map_object_v1 (sign-only)",
+    ]
+    if optional["export_map_object_v2"] is not None:
+        supporting_present_but_insufficient_objects.append(
+            "Upsilon_residual_datum_sigma_int_bridge_export_map_object_v2 (theta-pair + R1 inhabitant)"
+        )
 
     report = {
         "stage": "P5",
@@ -247,12 +297,7 @@ def main() -> None:
         ],
         "route_checks": route_checks,
         "route_state": route_state,
-        "supporting_present_but_insufficient_objects": [
-            "R1 target-slot export packet",
-            "sigma_int_strict_derived_v1",
-            "sigma_int_gauge_quotient_safety_witness_v1",
-            "Upsilon_residual_datum_sigma_int_bridge_export_map_object_v1 (sign-only)",
-        ],
+        "supporting_present_but_insufficient_objects": supporting_present_but_insufficient_objects,
         "missing_upstream_objects": missing_upstream_objects,
         "sigma_int_slot_free_theta_lane": {
             "theta_pair_present": optional["theta_pair_sigma_int_slot_free"] is not None,
