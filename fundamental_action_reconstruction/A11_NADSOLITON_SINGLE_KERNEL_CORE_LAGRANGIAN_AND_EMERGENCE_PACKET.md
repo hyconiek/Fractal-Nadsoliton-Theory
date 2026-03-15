@@ -1,7 +1,7 @@
 # A11 Nadsoliton Single‑Kernel Core Lagrangian + Emergence Map (Strict Candidate Packet)
 
 Status: `A11_EXECUTED_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET_NO_FALSE_PASS`  
-As of: `2026-03-13`
+As of: `2026-03-15`
 
 ## Goal
 
@@ -93,7 +93,13 @@ W możliwie prostych słowach, **na obecnym stanie repo**:
    `H_psi := K_total + (m0^2 I + D_local_residual)` wraz z ortonormalną bazą własną i wartościami własnymi (`F459`).
    To jest strict-derived value instantiation (lane-scoped) i wspiera interpretację “light = linearized eigenmodes”
    bez promocji do host matching / ToE closure.
-8. „Czas połowicznego rozpadu” nie jest jeszcze obiektem strict-core Lagrangianu:
+8. (Update, `2026-03-15`) Aby nie przemycać “fizycznej orientacji” przez arbitralny znak wektorów własnych,
+   repo eksportuje sign‑gauge‑invariant rank‑one projektory spektralne `P_j := |v_j><v_j|` dla `H_psi` (`F460`) i pakuje
+   gauge‑irrelewantność znaku jako theorem (`N504`).
+9. (Update, `2026-03-15`) Na aktualnej instancji `H_psi` eigenmody są silnie zmieszane pomiędzy Fourier pair planes:
+   sonda eksportuje profil wag `w_{j,label} := tr(Π_label P_j)` po labelach `{e0,pair1..pair5,e6}` (`P464`), a wniosek jest
+   opakowany jako value‑instantiation theorem (`N505`). To blokuje jakikolwiek “cichy” skrót typu “pair-plane modes diagonalize H_psi”.
+10. „Czas połowicznego rozpadu” nie jest jeszcze obiektem strict-core Lagrangianu:
    - w konserwatywnym Lagrangianie nie ma wprost tłumienia,
    - `t_{1/2}` wymagałby obiektu typu szerokość/niestabilność w opisie efektywnym (otwarty układ),
    - więc na obecnym strict scope to może być tylko *interpretacja downstream*, nie termin w `L_core`.
