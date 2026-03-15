@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.9  
+**Version:** 6.5.10  
 **Date:** 2026-03-15  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -23,6 +23,8 @@
   strict-core **mode-index assignment basis object** covering all Fourier-degenerate pairs `pair_m (m=1..5)` on `n=12`,
   cutting each `pair_m` `O(2)` family down to residual `Z2` using only the internal reference datum `r_ord`
   (`N480`, `N488`, `N496`, executed by `F454`, packaged by `N500`).
+- Update (`2026-03-15`): in the declared `R1` target-slot semantics (`span{u_1,u_2}`), residual `Z2` sign flips of the
+  representative vectors are gauge-irrelevant for the target slot as a span object (`N501`).
 - Update (`2026-03-15`): the two independently exported mode-index assignment bases (diagonal/local vs Shannon ord-reference)
   are aligned on all `pair_m (m=1..5)` up to residual `Z2` sign (audit `P455`); this is a hygiene consistency check and
   does not promote any global discharge.
@@ -70,6 +72,8 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
 9. independently, the strict Shannon element‑order reference lane cuts `O(2)` down to residual `Z2` on **all**
    Fourier-degenerate pairs `pair_m (m=1..5)` on `n=12` and exports a strict-core mode-index assignment basis object
    `ModeIndexAssignment_shannon_element_order_reference_strict_core_v1` (`N496`, executed by `F454`, packaged by `N500`),
+10. in the declared `R1` target-slot semantics (`span{u_1,u_2}`), residual `Z2` sign flips of the representative vectors are gauge-irrelevant
+    for the target slot as a span object (`N501`).
 10. the diagonal/local and Shannon mode-index assignments are aligned on all pairs up to residual `Z2` sign (audit `P455`),
 11. repo hygiene probes/dashboards were updated accordingly (`P432`, `P441`, `P442`), without any promotion to global
     closure.
@@ -205,6 +209,8 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
 9. niezależnie, pas strict Shannon “element‑order reference” tnie `O(2)` do residual `Z2` na **wszystkich** parach
    `pair_m (m=1..5)` na `n=12` i eksportuje strict-core obiekt przypisania osi
    `ModeIndexAssignment_shannon_element_order_reference_strict_core_v1` (`N496`, wykonane przez `F454`, opakowane przez `N500`),
+10. w zadeklarowanej semantyce target‑slot `R1` (`span{u_1,u_2}`) residualne flippy znaku `Z2` wektorów reprezentantów są
+    gauge‑irrelewant dla target‑slot jako obiektu typu “span” (`N501`).
 10. diagonal/local i Shannon mode-index assignment są zgodne na wszystkich parach co do wyboru osi (z dokładnością do residualnego znaku) (audyt `P455`),
 11. sondy/dashboards higieniczne zostały zaktualizowane (`P432`, `P441`, `P442`) bez promocji do globalnego domknięcia.
 12. osie theta‑pair na korytarzu sigma‑int (pair1/pair2) są zgodne z oboma wyeksportowanymi mode-index assignment (diagonal/local `F453` i Shannon `F454`)
