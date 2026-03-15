@@ -41,6 +41,10 @@ sprawdzic:
    - gauge reconstruction boundary with `QW-2191` kept explicit.
 11. `A10`
    - program-level anti-overclaim rules.
+12. `P461` + `P462`
+    - probe-only scope-extension support for the Shannon element‑order reference defect beyond `n=12`:
+      a scan of `F_{2m}(ord_{Z_n})` on selected `n` (`P461`) and one explicit `Z_24` mode-index assignment candidate export (`P462`),
+      without theorem-level promotion and without promoting `n≠12` into the physical `QW-2190` scaffold.
 
 ## Wynik syntetyczny
 
@@ -79,6 +83,8 @@ Na aktualnym repo state (`2026-03-15`) wolno twierdzic tylko tyle:
    Update: dla obecnie wyeksportowanych downstream obiektow w strict stack, gauge‑irrelevance znaku jest juz spakowane (`N502`).
 4. Brak theorem-level fizycznej derivation FR sign map (poza jawnie zadeklarowanym strict-side premise w `F307/N418`), jesli taki standard ma byc wymagany w finalnym “ToE closure” opisie.
 5. Brak scope extension poza zadeklarowane lane i poza `n=12` bez nowych strict obiektow.
+   Update: istnieje juz probe-level wsparcie dla takiej sciezki (scan `Z_n` w `P461` oraz jawny kandydat `Z_24` w `P462`),
+   ale nadal brak theorem-level scope-extension oraz brak typed infrastruktury `Z_n/Aut(Z_n)` w strict core.
 
 ## Forbidden claims
 
@@ -111,3 +117,6 @@ Naturalnym kolejnym ruchem jest:
 1. kontynuowac strict-only ToE closure **pod `QW-2191` dyscyplina** (bez implied selector closure),
 2. jesli downstream wymaga absolutnego znaku: najpierw rozstrzygnac residual `Z2` sign (albo dowod gauge‑irrelevance, albo strict sign‑datum),
 3. utrzymac explicite scope: lane‑scoped i `n=12`, dopoki nie ma nowego strict scope-extension ingredient.
+   Update: jesli scope extension ma byc realnym ruchem (a nie tylko probe), naturalnym krokiem jest najpierw dowiesic strict typed
+   infrastrukture `Z_n` (lub jawnie ograniczony jej odpowiednik) oraz theorem-level invariance/uniqueness package dla wybranego `n≠12`,
+   zamiast promowac wyniki `P461/P462` do strict bez mostu.

@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.13  
+**Version:** 6.5.14  
 **Date:** 2026-03-15  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -57,6 +57,9 @@
 - Update (`2026-03-15`): a **probe-only** `Z_n` scope-extension scan of the Shannon element‑order reference defect
   `F_{2m}(ord_{Z_n})` indicates nonzero defects (hence `O(2) -> Z2` axis cuts) for all Fourier-degenerate pairs on each scanned `n ∈ {6,8,10,12,14,16,18,20,24}` (`P461`).
   This does **not** promote any `n≠12` result to theorem level and does **not** export any strict mode-index assignment object beyond the declared `n=12` scope.
+- Update (`2026-03-15`): moreover, one cautious follow-up probe exports an explicit **probe-level** mode-index assignment *candidate*
+  on `Z_24` induced by the same defect-angle rule (including numeric basis vectors `u_{m,±}` on each `pair_m`) (`P462`).
+  This remains outside theorem-level scope extension and does not promote `n=24` into the `QW-2190` physical scaffold.
 - The sigma-int corridor theta-supply and sigma-int → residual bridge theorems introduced in Release 6.4 remain in force
   (e.g. `F451/N489`, `P451`, `F452/N490`, `N491`) and are not re-derived here.
 
@@ -217,6 +220,10 @@ Update: a probe-only `Z_n` scope-extension scan (`P461`) indicates that the same
 This is a computational scope check only; it does not export any strict `n≠12` mode-index assignment object and does not
 upgrade any global discharge claim.
 
+Update: one cautious follow-up exports a probe-level `Z_24` mode-index assignment *candidate* (numeric basis vectors)
+induced by the same defect-angle rule (`P462`). This is still not a theorem-level scope extension and does not promote `Z_24`
+into the strict physical mode scaffold.
+
 ---
 
 ## WERSJA POLSKA
@@ -270,6 +277,9 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
 21. dodatkowo, sonda **probe-only** sprawdzająca rozszerzenie scope dla Shannon “element‑order reference” pokazuje, że dla zeskanowanych nośników
     `n ∈ {6,8,10,12,14,16,18,20,24}` defekty `F_{2m}(ord_{Z_n})` są niezerowe na wszystkich parach Fouriera (czyli kryterium `O(2) -> Z2` “axis cut” działa na każdym z tych `n`) (`P461`).
     Nie jest to promocja do theorem-level dla `n≠12` i nie jest to eksport strict mode-index assignment poza zadeklarowanym zakresem `n=12`.
+22. ponadto, jako ostrożny follow-up, wyeksportowano jawny **probe-level** kandydat mode-index assignment na `Z_24`
+    (numeryczne wektory bazowe `u_{m,±}` na każdej parze Fouriera) indukowany przez tę samą regułę kąta defektu (`P462`).
+    To nadal nie jest theorem-level scope extension i nie promuje `n=24` do fizycznego scaffoldu `QW-2190`.
 
 ## 1) Jednostronicowy status strict (6.5)
 
@@ -314,3 +324,6 @@ rozładowania `QW-2191`.
 Update: sonda scope-extension `Z_n` (`P461`) wskazuje, że proste kryterium defektu `F_{2m}(ord_{Z_n}) ≠ 0` zachodzi na wszystkich parach
 Fouriera dla każdego z zeskanowanych `n ∈ {6,8,10,12,14,16,18,20,24}`. Jest to jednak wyłącznie probe-level check bez promocji do theorem-level
 poza `n=12` i bez eksportu strict mode-index assignment dla `n≠12`.
+
+Update: dodatkowo, jako ostrożny follow-up, repo eksportuje probe-level kandydat mode-index assignment na `Z_24` (wektory bazowe liczbowe)
+indukowany przez tę samą regułę kąta defektu (`P462`). To nadal nie jest scope-extension theorem-level ani promocja `n=24` do `QW-2190`.
