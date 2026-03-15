@@ -1,7 +1,7 @@
 # C47 Basis-Level Orientation Slice Candidate Audit
 
 Status: `C47_EXECUTED_BASIS_LEVEL_ORIENTATION_SLICE_CANDIDATE_AUDIT_NO_FALSE_PASS`
-As of: `2026-03-06`
+As of: `2026-03-15`
 
 ## Cel
 
@@ -18,6 +18,17 @@ finalnej dwuwymiarowej orientation slice.
   na taka slice,
 - nawet jesli brak jeszcze jawnych aktualnych faz `theta_1`, `theta_2`,
   a przez to brak jeszcze zmaterializowanego basis pair `u_1`, `u_2`.
+
+## Update (2026-03-15): eksport theta-pair i populated basis-pair istnieje (C47_B1 superseded)
+
+Na aktualnym repo state strict core eksportuje:
+
+1. theta-pair source (diagonal/local: `F450`; sigma-int slot-free: `F451`),
+2. oraz inhabited populated basis-pair `u_1,u_2` jako `R1` target-slot population (diagonal/local i sigma-int; np. `P450`, `P451`).
+
+W konsekwencji frontier `C47_B1` (“no explicit export of actual basis pair; blocked by C35_B1”) jest **superseded** na aktualnym stanie repo.
+
+Ponizej zachowano tresc `2026-03-06` jako archiwum historyczne, bez promocji do aktualnego statusu.
 
 ## Polityka zrodel
 

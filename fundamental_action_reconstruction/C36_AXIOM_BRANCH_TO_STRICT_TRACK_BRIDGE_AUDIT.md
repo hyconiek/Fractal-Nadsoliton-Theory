@@ -1,7 +1,7 @@
 # C36 Axiom Branch To Strict Track Bridge Audit
 
 Status: `C36_EXECUTED_AXIOM_BRANCH_TO_STRICT_TRACK_BRIDGE_AUDIT_NO_FALSE_PASS`
-As of: `2026-03-06`
+As of: `2026-03-15`
 
 ## Cel
 
@@ -18,6 +18,17 @@ zinternalizowany do strict core.
 - i czy ten most jest:
   - strict-core bridge,
   - czy tylko control-route overlay.
+
+## Update (2026-03-15): C36 jest teraz audytem higienicznym (nie theta-blockerem)
+
+Na aktualnym repo state strict core eksportuje juz slot-free theta supply na korytarzu sigma-int (`F451/N489`) oraz odpowiadajacy
+inhabitant `R1` (`P451`), wiec `C35_B1` nie jest juz aktywnym theta-supply blockerem.
+
+W tym sensie `C36` pozostaje uzyteczny tylko jako klasyfikacja:
+- czy axiom-augmented branch `QW-2192/2193` ma strict-track bridge,
+- i czy jest to strict-core internalization czy jedynie overlay.
+
+Ponizej zachowano tresc `2026-03-06` jako archiwum; nie jest to roszczenie, ze strict core nadal nie eksportuje `theta_1,theta_2`.
 
 ## Polityka zrodel
 

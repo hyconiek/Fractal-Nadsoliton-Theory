@@ -15,6 +15,42 @@ def main() -> None:
     c35 = load(ROOT / "generated" / "c35_actual_phase_source_branch_audit_summary.json")
     c36 = load(ROOT / "generated" / "c36_axiom_branch_to_strict_track_bridge_audit_summary.json")
     c50 = load(ROOT / "generated" / "c50_actual_phase_source_skeleton_audit_summary.json")
+    c50_b1 = c50["frontier_after_C50"]["C50_B1"]
+
+    if c50_b1 is None:
+        summary = {
+            "step": "C51",
+            "status": "C51_EXECUTED_STRICT_TO_AXIOM_SOURCE_BRIDGE_SPEC_AUDIT_NO_FALSE_PASS",
+            "goal": "Hygiene audit: if C50_B1 were active, check for a strict-to-axiom source bridge spec. On current repo state C50_B1 is discharged by exported strict-core theta supply, so this step is superseded.",
+            "sources": {
+                "C35": "strict-core theta supply is exported; axiom-augmented fallback lane remains non-strict",
+                "C36": "overlay bridge classification remains available (if needed)",
+                "C50": c50_b1,
+                "QW_2192_QW_2193": "axiom-augmented fallback lane for theta_i*=0 mod 2pi",
+                "A10": "anti-overclaim boundary",
+            },
+            "findings": {
+                "strict_core_actual_phase_source_skeleton": c50["findings"]["strict_core_minimal_source_skeleton"],
+                "axiom_augmented_fallback_lane": c50["findings"]["axiom_augmented_source_branch"],
+                "strict_to_axiom_source_bridge_spec": "not_needed_on_current_repo_state",
+                "selector_track_overlay_bridge": c36["result"]["bridge_from_axiom_branch_to_selector_track"],
+            },
+            "frontier_after_C51": {
+                "C51_B1": "SUPERSEDED_ON_CURRENT_REPO_STATE: C50_B1 is discharged (strict-core theta supply present); no strict-to-axiom source bridge spec is required for theta supply.",
+                "C32_B2": "raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12",
+            },
+            "hard_limits": [
+                "no_theorem_level_pass",
+                "no_full_closure_pass",
+                "no_claim_that_qw_2192_qw_2193_become_strict_core_source",
+                "no_claim_that_qw_2191_is_discharged",
+            ],
+            "next_step": "C53",
+        }
+
+        OUT.write_text(json.dumps(summary, indent=2, ensure_ascii=True) + "\n", encoding="ascii")
+        print(OUT)
+        return
 
     summary = {
         "step": "C51",
@@ -23,7 +59,7 @@ def main() -> None:
         "sources": {
             "C35": "actual phase source branch exists only on axiom-augmented lane",
             "C36": "bridge to selector track exists only as control-route overlay",
-            "C50": c50["frontier_after_C50"]["C50_B1"],
+            "C50": c50_b1,
             "QW_2192_QW_2193": "axiom-augmented fallback lane for theta_i*=0 mod 2pi",
             "A10": "anti-overclaim boundary"
         },

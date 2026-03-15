@@ -1,7 +1,7 @@
 # C51 Strict To Axiom Source Bridge Spec Audit
 
 Status: `C51_EXECUTED_STRICT_TO_AXIOM_SOURCE_BRIDGE_SPEC_AUDIT_NO_FALSE_PASS`
-As of: `2026-03-06`
+As of: `2026-03-15`
 
 ## Cel
 
@@ -17,6 +17,13 @@ Po `C50` najwezszy aktywny frontier brzmi:
 - sprawdza, czy repo ma juz packet-ready **bridge specification** od residualnego
   strict-core source blockera `C50_B1` do lane axiom-augmented,
 - albo czy pozostaje tylko cytowalny fallback branch bez jawnego bridge-spec.
+
+## Update (2026-03-15): C51 jest superseded (C50_B1 nie jest juz aktywny)
+
+Na aktualnym repo state `C50_B1` nie jest juz aktywny, bo strict core eksportuje minimalny theta-source skeleton (sigma-int slot-free
+`F451/N489` oraz diagonal/local `F450`). W tym sensie “strict-to-axiom bridge spec” nie jest juz potrzebny do theta supply.
+
+`C51` pozostaje tylko archiwalnym audytem dla stanu `2026-03-06`, kiedy strict-core theta supply nie byl jeszcze wyeksportowany.
 
 ## Polityka zrodel
 

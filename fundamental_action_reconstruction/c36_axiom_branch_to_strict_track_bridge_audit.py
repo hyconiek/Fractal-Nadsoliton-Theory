@@ -18,28 +18,34 @@ def load(path: Path) -> dict:
 def main() -> None:
     b8 = load(ROOT / "generated" / "b8_selector_track_anti_overclaim_audit_summary.json")
     c35 = load(ROOT / "generated" / "c35_actual_phase_source_branch_audit_summary.json")
+    strict_core_theta_export_present = c35["strict_core_state"]["actual_theta_1_theta_2_export_for_current_pair_frames"] != "not_shown"
 
     summary = {
         "stage": "C36",
         "status": "C36_EXECUTED_AXIOM_BRANCH_TO_STRICT_TRACK_BRIDGE_AUDIT_NO_FALSE_PASS",
-        "as_of": "2026-03-06",
-        "goal": "Reduce C35_B1 by checking whether the repo already contains a packet-ready bridge from the axiom-augmented actual-phase source branch into the current strict selector track, and whether that bridge is strict-core or only a control-route overlay.",
+        "as_of": "2026-03-15",
+        "goal": "Hygiene audit: if an axiom-augmented fallback theta-source branch exists, check whether the repo already contains a packet-ready bridge from that branch into the current selector track, and whether that bridge is strict-core or only a control-route overlay (without implying that the fallback branch is required on current strict-core theta supply state).",
         "inputs": {
             "strict_admissible": ["C35", "B6", "B7", "B8", "A10"]
         },
         "observations": {
             "actual_phase_source_branch_exists": c35["result"]["axiom_augmented_actual_phase_source_branch"],
             "selector_track_overlay_route": "present_via_B6_B7",
-            "b8_no_false_pass_active": b8["status"]
+            "b8_no_false_pass_active": b8["status"],
+            "strict_core_theta_export_present": strict_core_theta_export_present,
         },
         "result": {
             "bridge_from_axiom_branch_to_selector_track": "present_as_control_route_overlay",
             "strict_core_bridge_internalization": "not_shown",
-            "strict_core_actual_theta_export": "not_shown",
+            "strict_core_actual_theta_export": "present_strict_core" if strict_core_theta_export_present else "not_shown",
             "final_basis_level_slice_extraction_present": "not_shown"
         },
         "residual_blockers": {
-            "C36_B1": "no_packet_ready_strict_core_bridge_internalizing_the_axiom_augmented_theta_star_source_branch_into_the_current_selector_track; only_control_route_overlay_compatibility_is_available",
+            "C36_B1": (
+                "no_packet_ready_strict_core_bridge_internalizing_the_axiom_augmented_theta_star_source_branch_into_the_current_selector_track; "
+                "only_control_route_overlay_compatibility_is_available. Note: on current repo state strict-core theta supply is exported, so this "
+                "is a hygiene/non-strict-bridge classification result, not a theta-supply blocker."
+            ),
             "C32_B2": "raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12",
             "C26_B2": "no_explicit_basis_level_embedding_or_extraction_of_the_candidate_two_dimensional_orientation_slice_inside_that_reduced_plane"
         },

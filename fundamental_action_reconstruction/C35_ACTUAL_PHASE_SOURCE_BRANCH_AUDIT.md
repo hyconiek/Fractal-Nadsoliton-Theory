@@ -1,7 +1,7 @@
 # C35 Actual Phase Source Branch Audit
 
 Status: `C35_EXECUTED_ACTUAL_PHASE_SOURCE_BRANCH_AUDIT_NO_FALSE_PASS`
-As of: `2026-03-06`
+As of: `2026-03-15`
 
 ## Cel
 
@@ -18,6 +18,21 @@ aktualne fazy `theta_1`, `theta_2`.
 - i rozdziela ostro:
   - co jest strict core,
   - a co pojawia sie dopiero na branchu axiom-augmented.
+
+## Update (2026-03-15): C35 jest superseded na aktualnym repo state
+
+Na aktualnym repo state strict core **eksportuje** juz actual theta-source dla `pair1/pair2` (bez axiom-branch):
+
+1. slot-free sigma-int theta-pair supply:
+   `ThetaPair_sigma_int_strict_selector_ingredient_o2_cut_slot_free_v1` (`F451`, packaged `N489`),
+2. strict-core inhabitant populujacy `R1` z tego theta-pair:
+   `R1_residual_orientation_datum_target_slot_population_strict_derived_from_sigma_int_slot_free_theta_pair_v1` (`P451`),
+3. a takze upgrade export-map object do `..._v2` z dopietym theta-pair i `R1` inhabitant jako outputy (`F455`, packaged `N499`).
+
+W konsekwencji wniosek “strict core nie eksportuje `theta_1,theta_2`; istnieje tylko axiom-augmented branch `theta_i^*=0`” jest
+**historyczny** (byl poprawny dla `2026-03-06`), ale nie jest juz biezacym statusem strict.
+
+Ponizej zachowano tresc `2026-03-06` jako archiwum (bez promocji do aktualnego frontu).
 
 ## Polityka zrodel
 

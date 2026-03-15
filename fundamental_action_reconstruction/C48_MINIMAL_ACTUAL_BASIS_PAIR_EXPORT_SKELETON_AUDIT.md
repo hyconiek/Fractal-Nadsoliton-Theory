@@ -1,7 +1,7 @@
 # C48 Minimal Actual Basis Pair Export Skeleton Audit
 
 Status: `C48_EXECUTED_MINIMAL_ACTUAL_BASIS_PAIR_EXPORT_SKELETON_AUDIT_NO_FALSE_PASS`
-As of: `2026-03-06`
+As of: `2026-03-15`
 
 ## Cel
 
@@ -17,6 +17,19 @@ Po `C47` najwezszy aktywny frontier brzmi:
   dla actual basis pair `u_1`, `u_2`,
 - nawet jesli sam skeleton nie jest jeszcze wypelniony aktualnymi wartosciami,
   bo strict core nadal nie eksportuje `theta_1`, `theta_2`.
+
+## Update (2026-03-15): actual theta supply + populated u_1,u_2 export istnieje (C48_B1 superseded)
+
+Na aktualnym repo state strict core eksportuje juz:
+
+1. theta-pair supply na sigma-int corridor bez slotow (T159 via T162): `F451` / `N489`,
+2. populated `R1` target-slot inhabitant (a wiec konkretny `u_1,u_2`) z tego theta-pair: `P451`,
+3. diagonal/local theta-pair i analogiczna populacja `R1` (`F450`, `P450`).
+
+W konsekwencji `C48_B1` (“no explicit populated actual basis pair export instance; blocked by C35_B1”) jest **superseded**
+na aktualnym stanie repo.
+
+Ponizej zachowano tresc `2026-03-06` jako archiwum historyczne.
 
 ## Polityka zrodel
 

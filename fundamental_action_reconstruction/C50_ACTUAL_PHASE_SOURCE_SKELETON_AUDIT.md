@@ -1,7 +1,7 @@
 # C50 Actual Phase Source Skeleton Audit
 
 Status: `C50_EXECUTED_ACTUAL_PHASE_SOURCE_SKELETON_AUDIT_NO_FALSE_PASS`
-As of: `2026-03-06`
+As of: `2026-03-15`
 
 ## Cel
 
@@ -17,6 +17,16 @@ Po `C49` najwezszy aktywny frontier brzmi:
   dla actual `theta_1`, `theta_2`,
 - albo czy nadal jedyna packet-ready source branch pozostaje po stronie
   axiom-augmented lane.
+
+## Update (2026-03-15): strict-core minimal source skeleton dla theta jest obecny (C50_B1 discharged)
+
+Na aktualnym repo state strict core eksportuje juz slot-free theta-pair supply na korytarzu sigma-int (`F451/N489`) oraz theta-pair
+na pasie diagonal/local (`F450`). W tym sensie minimalny strict-core source skeleton dla actual `theta_1,theta_2` jest
+**obecny**, a blocker `C50_B1` (brak strict-core skeletonu) jest rozladowany na aktualnym stanie repo.
+
+Branch axiom-augmented (`QW-2192/2193`) pozostaje jako kontrast metodologiczny, ale nie jest juz jedynym zrodlem faz.
+
+Ponizej zachowano tresc `2026-03-06` jako archiwum historyczne.
 
 ## Polityka zrodel
 

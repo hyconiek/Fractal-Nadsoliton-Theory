@@ -14,9 +14,46 @@ def main() -> None:
     c36 = load("generated/c36_axiom_branch_to_strict_track_bridge_audit_summary.json")
     c50 = load("generated/c50_actual_phase_source_skeleton_audit_summary.json")
     c51 = load("generated/c51_strict_to_axiom_source_bridge_spec_audit_summary.json")
+    c50_b1 = c50["frontier_after_C50"]["C50_B1"]
+
+    if c50_b1 is None:
+        summary = {
+            "step": "C52",
+            "status": "C52_EXECUTED_STRICT_TO_AXIOM_BRIDGE_FIELD_LIST_AUDIT_NO_FALSE_PASS",
+            "goal": "Hygiene audit: field-list for a strict-to-axiom bridge would matter only if C50_B1 were active. On current repo state C50_B1 is discharged by exported strict-core theta supply, so this step is superseded.",
+            "inputs": {
+                "C36": "overlay bridge classification remains available (if needed)",
+                "C50": c50_b1,
+                "C51": c51["frontier_after_C51"]["C51_B1"],
+                "A10": "anti-overclaim boundary",
+            },
+            "field_list": {
+                "source_blocker": False,
+                "fallback_lane": c51["findings"]["axiom_augmented_fallback_lane"] == "present_non_strict_branch",
+                "current_bridge_class": c36["result"]["bridge_from_axiom_branch_to_selector_track"]
+                == "present_as_control_route_overlay",
+                "strict_absence_claim": False,
+                "forbidden_overclaim_set": True,
+            },
+            "frontier_after_C52": {
+                "C52_B1": "SUPERSEDED_ON_CURRENT_REPO_STATE: C50_B1 is discharged (strict-core theta supply present); no strict-to-axiom bridge artifact is required for theta supply.",
+                "C32_B2": "raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12",
+            },
+            "hard_limits": [
+                "no_theorem_level_pass",
+                "no_full_closure_pass",
+                "no_claim_that_qw_2191_is_discharged",
+            ],
+            "next_step": "C53",
+        }
+
+        out = ROOT / "generated" / "c52_strict_to_axiom_bridge_field_list_audit_summary.json"
+        out.write_text(json.dumps(summary, indent=2, ensure_ascii=True) + "\n", encoding="ascii")
+        print(out)
+        return
 
     field_list = {
-        "source_blocker": c50["frontier_after_C50"]["C50_B1"] is not None,
+        "source_blocker": c50_b1 is not None,
         "fallback_lane": c51["findings"]["axiom_augmented_fallback_lane"] == "present_non_strict_branch",
         "current_bridge_class": c36["result"]["bridge_from_axiom_branch_to_selector_track"] == "present_as_control_route_overlay",
         "strict_absence_claim": c50["findings"]["strict_core_minimal_source_skeleton"] == "not_shown" and c51["findings"]["strict_to_axiom_source_bridge_spec"] == "not_shown",
@@ -30,7 +67,7 @@ def main() -> None:
         "inputs": {
             "C35": "axiom-augmented fallback lane exists",
             "C36": "current bridge class is control-route overlay only",
-            "C50": c50["frontier_after_C50"]["C50_B1"],
+            "C50": c50_b1,
             "C51": c51["frontier_after_C51"]["C51_B1"],
             "A10": "anti-overclaim boundary"
         },

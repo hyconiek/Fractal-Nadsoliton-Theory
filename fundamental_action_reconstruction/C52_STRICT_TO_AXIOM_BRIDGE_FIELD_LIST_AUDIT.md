@@ -1,7 +1,7 @@
 # C52 Strict To Axiom Bridge Field List Audit
 
 Status: `C52_EXECUTED_STRICT_TO_AXIOM_BRIDGE_FIELD_LIST_AUDIT_NO_FALSE_PASS`
-As of: `2026-03-06`
+As of: `2026-03-15`
 
 ## Cel
 
@@ -16,6 +16,12 @@ Po `C51` najwezszy aktywny frontier brzmi:
 - sprawdza, czy strict core ma juz chociaz packet-ready **minimal field list**,
   z ktorej taki bridge-spec packet moglby byc zlozony bez zgadywania pol,
 - nawet jesli sam packet nadal nie zostal jeszcze jawnie zapisany.
+
+## Update (2026-03-15): C52 jest superseded (theta supply nie wymaga strict-to-axiom bridge)
+
+Poniewaz na aktualnym repo state strict core eksportuje minimalny theta-source skeleton (patrz update w `C50`), krok `C52` nie jest juz
+aktywnym frontierem dla theta supply. Pozostaje jedynie historycznym zapisem pola semantycznego potrzebnego do hipotetycznego
+strict-to-axiom bridge, gdyby theta supply istniala tylko na lane axiom-augmented.
 
 ## Polityka zrodel
 

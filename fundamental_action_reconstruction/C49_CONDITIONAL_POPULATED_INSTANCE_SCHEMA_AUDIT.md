@@ -1,7 +1,7 @@
 # C49 Conditional Populated-Instance Schema Audit
 
 Status: `C49_EXECUTED_CONDITIONAL_POPULATED_INSTANCE_SCHEMA_AUDIT_NO_FALSE_PASS`
-As of: `2026-03-06`
+As of: `2026-03-15`
 
 ## Cel
 
@@ -17,6 +17,15 @@ Po `C48` najwezszy aktywny frontier brzmi:
   dla actual basis pair `u_1`, `u_2`,
 - to znaczy: czy po podstawieniu zewnetrznie dostarczonych / przyszle-wyeksportowanych
   `theta_1`, `theta_2` cala populated instance jest juz jednoznacznie wyznaczona.
+
+## Update (2026-03-15): strict-core theta supply i populated instance sa obecne (C49_B1 superseded)
+
+Na aktualnym repo state strict core eksportuje actual theta supply (sigma-int slot-free: `F451/N489`; diagonal/local: `F450`)
+oraz audited populated instance `u_1,u_2` jako inhabitant `R1` (`P451`, `P450`).
+
+W konsekwencji blocker `C49_B1` (“no strict-core supplied theta values to instantiate the schema”) jest **superseded** na aktualnym stanie repo.
+
+Ponizej zachowano tresc `2026-03-06` jako archiwum historyczne.
 
 ## Polityka zrodel
 
