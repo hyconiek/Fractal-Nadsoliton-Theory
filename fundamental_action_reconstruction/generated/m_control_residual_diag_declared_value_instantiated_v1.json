@@ -1,0 +1,119 @@
+{
+  "object": "M_control_residual_diag_declared_value_instantiated_v1",
+  "status": "PASS_COMPUTED_FROM_STRICT_DERIVED_INPUTS",
+  "as_of": "2026-03-15",
+  "intent": "Value-instantiate the full declared residual local-diagonal control pullback (R16: M_control_residual_diag_declared = T_control^T D_local_residual T_control) by computing a numeric diagonal residual profile d_k via the conditional N477 Yukawa-free rewrite using (R14 K_total, R15 m0^2, and a per-site (vpsi,g4,g6) provider), then contracting the R16 coefficient tensor with that profile. No stationarity witness or host cancellation is claimed.",
+  "inputs": {
+    "r14_k_total": "fundamental_action_reconstruction/generated/r14_explicit_frozen_kernel_specialization_packet_for_host_matching_route.json",
+    "r15_m0_squared": "fundamental_action_reconstruction/generated/r15_explicit_host_scalar_floor_embedding_packet_for_host_matching_route.json",
+    "vpsi_g4_g6_candidate": "fundamental_action_reconstruction/generated/p437_input_vpsi_g4_g6_candidate.json",
+    "r16_declared_control_pullback": "fundamental_action_reconstruction/generated/r16_explicit_residual_local_diagonal_declared_control_pullback_packet_for_host_matching_route.json"
+  },
+  "control_basis_order": [
+    "c1",
+    "s1",
+    "c2",
+    "s2"
+  ],
+  "computed": {
+    "d_local_residual_profile_n477": [
+      0.34269049977246646,
+      11.518361441687219,
+      0.5284499241054783,
+      -0.1567291917971062,
+      -0.5341686256176337,
+      1.2939217196807558,
+      -0.5936675263840503,
+      1.2939217196807553,
+      -0.5341686256176337,
+      -0.1567291917971062,
+      0.5284499241054781,
+      11.518361441687219
+    ],
+    "m_control_residual_diag_declared": [
+      [
+        3.1607647274473836,
+        1.596868058671729e-17,
+        1.5432788816692053,
+        1.1886644981369479e-17
+      ],
+      [
+        1.596868058671729e-17,
+        1.014017524136918,
+        9.913565748114618e-17,
+        1.7414253938841568
+      ],
+      [
+        1.5432788816692053,
+        9.913565748114618e-17,
+        0.9731411366203485,
+        -1.596868058671729e-17
+      ],
+      [
+        1.1886644981369479e-17,
+        1.7414253938841568,
+        -1.596868058671729e-17,
+        3.2016411149639548
+      ]
+    ],
+    "symmetric_part_max_abs_diff": 0.0,
+    "pair1_block": [
+      [
+        3.1607647274473836,
+        1.596868058671729e-17
+      ],
+      [
+        1.596868058671729e-17,
+        1.014017524136918
+      ]
+    ],
+    "pair2_block": [
+      [
+        0.9731411366203485,
+        -1.596868058671729e-17
+      ],
+      [
+        -1.596868058671729e-17,
+        3.2016411149639548
+      ]
+    ],
+    "cross_pair1_to_pair2_block": [
+      [
+        1.5432788816692053,
+        1.1886644981369479e-17
+      ],
+      [
+        9.913565748114618e-17,
+        1.7414253938841568
+      ]
+    ],
+    "cross_pair2_to_pair1_block": [
+      [
+        1.5432788816692053,
+        9.913565748114618e-17
+      ],
+      [
+        1.1886644981369479e-17,
+        1.7414253938841568
+      ]
+    ],
+    "pair1_eigvals": [
+      1.014017524136918,
+      3.1607647274473836
+    ],
+    "pair2_eigvals": [
+      0.9731411366203485,
+      3.2016411149639548
+    ],
+    "frobenius_norm": 5.748453611231822
+  },
+  "hard_limits": [
+    "Uses the conditional N477 Yukawa-free diagonal residual rewrite; does not export a vacuum stationarity witness.",
+    "Instantiates only the declared residual local diagonal sector (D_local_residual), not the full Psi-sector Hessian block.",
+    "Does not claim the instantiated matrix vanishes or matches the host.",
+    "Does not claim strict-core selector closure / admissible S_sel_int.",
+    "Does not claim global discharge of QW-2191.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}
