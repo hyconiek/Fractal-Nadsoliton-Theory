@@ -1,0 +1,70 @@
+{
+  "generated_utc": "2026-03-15T21:01:52.939398+00:00",
+  "stage": "P465",
+  "goal": "audit_lane_scoped_pair1_pair2_selector_chart_transport_operator_properties_for_f461_on_n12_fourier_scaffold",
+  "inputs": {
+    "f461_object": "fundamental_action_reconstruction/generated/o12_pair1_pair2_selector_chart_transport_operator_strict_derived_from_sigma_int_alpha12_v1.json"
+  },
+  "construction": {
+    "pair_plane_bases": "canonical real Fourier (c1,s1) and (c2,s2) on Z12",
+    "theta_grid": [
+      0.0,
+      0.5235987755982988,
+      0.7853981633974483,
+      1.0471975511965976,
+      1.5707963267948966,
+      -1.0471975511965976
+    ]
+  },
+  "audits": {
+    "orthogonality_max_abs_residual": 4.60113898903259e-16,
+    "involution_max_abs_residual": 4.60113898903259e-16,
+    "plane_transport": {
+      "O12_pi1_O12T_minus_pi2_max_abs": 1.942890293094024e-16,
+      "O12_pi2_O12T_minus_pi1_max_abs": 3.0531133177191805e-16,
+      "O12_pi_rest_O12T_minus_pi_rest_max_abs": 2.7755575615628914e-16
+    },
+    "basis_mapping_max_abs_residuals": {
+      "c1_map_res": 2.7755575615628914e-16,
+      "s1_map_res": 2.7755575615628914e-16
+    },
+    "sampled_direction_transport_max_abs_residuals": {
+      "u_theta_transport_max_abs": 3.3306690738754696e-16,
+      "tau_theta_transport_max_abs": 2.7755575615628914e-16,
+      "projector_transport_max_abs": 1.942890293094024e-16
+    },
+    "g12_consistency": {
+      "alpha12_mod_2pi": 1.5707963267948966,
+      "g12_from_alpha12": [
+        [
+          6.123233995736766e-17,
+          -1.0
+        ],
+        [
+          1.0,
+          6.123233995736766e-17
+        ]
+      ],
+      "g12_exported_by_f461": [
+        [
+          6.123233995736766e-17,
+          -1.0
+        ],
+        [
+          1.0,
+          6.123233995736766e-17
+        ]
+      ],
+      "g12_max_abs_diff": 0.0
+    }
+  },
+  "hard_limits": [
+    "Lane-scoped audit only: samples a finite theta grid and checks structural properties on n=12.",
+    "Does not export a global selector atlas nor global gluing cocycle data.",
+    "Does not discharge QW-2191.",
+    "Does not derive a sign-sensitive physical orientation datum.",
+    "Does not claim strict-core selector closure / admissible S_sel_int.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}
