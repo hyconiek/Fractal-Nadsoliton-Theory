@@ -1,0 +1,1642 @@
+{
+  "generated_utc": "2026-03-15T14:54:57.558609+00:00",
+  "stage": "P454",
+  "goal": "audit_that_continuous_O2_basis_rotations_inside_pair1_pair2_planes_act_only_as_conjugations_for_QW2190_SU3_SU2_embeddings and_do_not_change_invariance_or_lie_closure_audits",
+  "inputs": {
+    "mode_index_assignment_object": "fundamental_action_reconstruction/generated/mode_index_assignment_canonical_local_diagonal_strict_derived_v1.json",
+    "qw2190_mode_scaffold": "report_qw2190_kernel_mode_representation_emergence_gate.json",
+    "angles_tested": [
+      0.0,
+      0.2617993877991494,
+      0.39269908169872414,
+      0.4487989505128276,
+      0.5235987755982988,
+      0.6283185307179586,
+      0.7853981633974483,
+      1.0471975511965976,
+      1.5707963267948966
+    ]
+  },
+  "baseline": {
+    "b3_orthonormal_residual": 2.709517654683241e-16,
+    "b2_orthonormal_residual": 3.6042185851109777e-16,
+    "inv_res_su3": 6.003302281971643e-16,
+    "inv_res_su2": 3.831284866810958e-16,
+    "su3_closure_res": 3.17861883979291e-16,
+    "su2_closure_res": 1.7375088326559935e-16
+  },
+  "family_max_deviations": {
+    "max_inv_res_su3_dev": 5.072203255839355e-17,
+    "max_inv_res_su2_dev": 4.8036085130725496e-17,
+    "max_su3_closure_res_dev": 1.7443699384849385e-16,
+    "max_su2_closure_res_dev": 3.558103716802348e-17,
+    "max_su3_conjugation_residual": 2.4104236294666067e-16,
+    "max_su2_conjugation_residual": 4.817411735555328e-16,
+    "max_u3_orthonormal_residual": 8.121534089851097e-16,
+    "max_u2_orthonormal_residual": 9.183620383645235e-16,
+    "tolerance": 1e-12
+  },
+  "cases": [
+    {
+      "case_id": "pair1_theta=0__pair2_theta=0",
+      "angles": {
+        "theta_pair1": 0.0,
+        "theta_pair2": 0.0
+      },
+      "audits": {
+        "b3_orthonormal_residual": 2.709517654683241e-16,
+        "b2_orthonormal_residual": 3.6042185851109777e-16,
+        "inv_res_su3": 6.003302281971643e-16,
+        "inv_res_su2": 3.831284866810958e-16,
+        "su3_closure_res": 3.17861883979291e-16,
+        "su2_closure_res": 1.7375088326559935e-16,
+        "u3_orthonormal_residual": 0.0,
+        "u2_orthonormal_residual": 0.0,
+        "su3_conjugation_residual": 0.0,
+        "su2_conjugation_residual": 0.0
+      }
+    },
+    {
+      "case_id": "pair1_theta=0__pair2_theta=0.261799387799",
+      "angles": {
+        "theta_pair1": 0.0,
+        "theta_pair2": 0.2617993877991494
+      },
+      "audits": {
+        "b3_orthonormal_residual": 2.709517654683241e-16,
+        "b2_orthonormal_residual": 4.973567819777197e-16,
+        "inv_res_su3": 6.003302281971643e-16,
+        "inv_res_su2": 3.3509240155037033e-16,
+        "su3_closure_res": 3.17861883979291e-16,
+        "su2_closure_res": 1.8279738656534055e-16,
+        "u3_orthonormal_residual": 0.0,
+        "u2_orthonormal_residual": 4.210701751640855e-16,
+        "su3_conjugation_residual": 0.0,
+        "su2_conjugation_residual": 2.126292676102948e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0__pair2_theta=0.392699081699",
+      "angles": {
+        "theta_pair1": 0.0,
+        "theta_pair2": 0.3926990816987242
+      },
+      "audits": {
+        "b3_orthonormal_residual": 2.709517654683241e-16,
+        "b2_orthonormal_residual": 3.549214596818914e-16,
+        "inv_res_su3": 6.003302281971643e-16,
+        "inv_res_su2": 3.871984294666089e-16,
+        "su3_closure_res": 3.17861883979291e-16,
+        "su2_closure_res": 1.7095609642851672e-16,
+        "u3_orthonormal_residual": 0.0,
+        "u2_orthonormal_residual": 9.183620383645235e-16,
+        "su3_conjugation_residual": 0.0,
+        "su2_conjugation_residual": 1.819724099453212e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0__pair2_theta=0.448798950513",
+      "angles": {
+        "theta_pair1": 0.0,
+        "theta_pair2": 0.4487989505128276
+      },
+      "audits": {
+        "b3_orthonormal_residual": 2.709517654683241e-16,
+        "b2_orthonormal_residual": 4.429900847553178e-16,
+        "inv_res_su3": 6.003302281971643e-16,
+        "inv_res_su2": 3.62014937441111e-16,
+        "su3_closure_res": 3.17861883979291e-16,
+        "su2_closure_res": 1.8945054782971467e-16,
+        "u3_orthonormal_residual": 0.0,
+        "u2_orthonormal_residual": 7.74100312496335e-16,
+        "su3_conjugation_residual": 0.0,
+        "su2_conjugation_residual": 2.618915427128002e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0__pair2_theta=0.523598775598",
+      "angles": {
+        "theta_pair1": 0.0,
+        "theta_pair2": 0.5235987755982988
+      },
+      "audits": {
+        "b3_orthonormal_residual": 2.709517654683241e-16,
+        "b2_orthonormal_residual": 3.986225153530665e-16,
+        "inv_res_su3": 6.003302281971643e-16,
+        "inv_res_su2": 3.6342132247622625e-16,
+        "su3_closure_res": 3.17861883979291e-16,
+        "su2_closure_res": 1.4460202920855395e-16,
+        "u3_orthonormal_residual": 0.0,
+        "u2_orthonormal_residual": 4.1434014115114184e-16,
+        "su3_conjugation_residual": 0.0,
+        "su2_conjugation_residual": 2.1711088270484645e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0__pair2_theta=0.628318530718",
+      "angles": {
+        "theta_pair1": 0.0,
+        "theta_pair2": 0.6283185307179586
+      },
+      "audits": {
+        "b3_orthonormal_residual": 2.709517654683241e-16,
+        "b2_orthonormal_residual": 3.5072048661126996e-16,
+        "inv_res_su3": 6.003302281971643e-16,
+        "inv_res_su2": 3.494627750350196e-16,
+        "su3_closure_res": 3.17861883979291e-16,
+        "su2_closure_res": 1.6128264417283127e-16,
+        "u3_orthonormal_residual": 0.0,
+        "u2_orthonormal_residual": 7.199447209009573e-16,
+        "su3_conjugation_residual": 0.0,
+        "su2_conjugation_residual": 2.449341090327405e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0__pair2_theta=0.785398163397",
+      "angles": {
+        "theta_pair1": 0.0,
+        "theta_pair2": 0.7853981633974483
+      },
+      "audits": {
+        "b3_orthonormal_residual": 2.709517654683241e-16,
+        "b2_orthonormal_residual": 4.607191806966861e-16,
+        "inv_res_su3": 6.003302281971643e-16,
+        "inv_res_su2": 3.656042182167027e-16,
+        "su3_closure_res": 3.17861883979291e-16,
+        "su2_closure_res": 2.0933192043362283e-16,
+        "u3_orthonormal_residual": 0.0,
+        "u2_orthonormal_residual": 5.5205051851521495e-16,
+        "su3_conjugation_residual": 0.0,
+        "su2_conjugation_residual": 2.88989832710919e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0__pair2_theta=1.0471975512",
+      "angles": {
+        "theta_pair1": 0.0,
+        "theta_pair2": 1.0471975511965976
+      },
+      "audits": {
+        "b3_orthonormal_residual": 2.709517654683241e-16,
+        "b2_orthonormal_residual": 4.0248735950886165e-16,
+        "inv_res_su3": 6.003302281971643e-16,
+        "inv_res_su2": 3.6529719787229857e-16,
+        "su3_closure_res": 3.17861883979291e-16,
+        "su2_closure_res": 1.966292034098032e-16,
+        "u3_orthonormal_residual": 0.0,
+        "u2_orthonormal_residual": 6.793308286595483e-16,
+        "su3_conjugation_residual": 0.0,
+        "su2_conjugation_residual": 3.987298796292627e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0__pair2_theta=1.57079632679",
+      "angles": {
+        "theta_pair1": 0.0,
+        "theta_pair2": 1.5707963267948966
+      },
+      "audits": {
+        "b3_orthonormal_residual": 2.709517654683241e-16,
+        "b2_orthonormal_residual": 4.0162991871181425e-16,
+        "inv_res_su3": 6.003302281971643e-16,
+        "inv_res_su2": 3.764378102149911e-16,
+        "su3_closure_res": 3.17861883979291e-16,
+        "su2_closure_res": 1.445805180183046e-16,
+        "u3_orthonormal_residual": 0.0,
+        "u2_orthonormal_residual": 8.031003061224394e-16,
+        "su3_conjugation_residual": 0.0,
+        "su2_conjugation_residual": 4.817411735555328e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.261799387799__pair2_theta=0",
+      "angles": {
+        "theta_pair1": 0.2617993877991494,
+        "theta_pair2": 0.0
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.353622551822607e-16,
+        "b2_orthonormal_residual": 3.6042185851109777e-16,
+        "inv_res_su3": 6.134888709242006e-16,
+        "inv_res_su2": 3.831284866810958e-16,
+        "su3_closure_res": 4.626840734977338e-16,
+        "su2_closure_res": 1.7375088326559935e-16,
+        "u3_orthonormal_residual": 4.379854360356802e-16,
+        "u2_orthonormal_residual": 0.0,
+        "su3_conjugation_residual": 2.230196575227104e-16,
+        "su2_conjugation_residual": 0.0
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.261799387799__pair2_theta=0.261799387799",
+      "angles": {
+        "theta_pair1": 0.2617993877991494,
+        "theta_pair2": 0.2617993877991494
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.353622551822607e-16,
+        "b2_orthonormal_residual": 4.973567819777197e-16,
+        "inv_res_su3": 6.134888709242006e-16,
+        "inv_res_su2": 3.3509240155037033e-16,
+        "su3_closure_res": 4.626840734977338e-16,
+        "su2_closure_res": 1.8279738656534055e-16,
+        "u3_orthonormal_residual": 4.379854360356802e-16,
+        "u2_orthonormal_residual": 4.210701751640855e-16,
+        "su3_conjugation_residual": 2.230196575227104e-16,
+        "su2_conjugation_residual": 2.126292676102948e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.261799387799__pair2_theta=0.392699081699",
+      "angles": {
+        "theta_pair1": 0.2617993877991494,
+        "theta_pair2": 0.3926990816987242
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.353622551822607e-16,
+        "b2_orthonormal_residual": 3.549214596818914e-16,
+        "inv_res_su3": 6.134888709242006e-16,
+        "inv_res_su2": 3.871984294666089e-16,
+        "su3_closure_res": 4.626840734977338e-16,
+        "su2_closure_res": 1.7095609642851672e-16,
+        "u3_orthonormal_residual": 4.379854360356802e-16,
+        "u2_orthonormal_residual": 9.183620383645235e-16,
+        "su3_conjugation_residual": 2.230196575227104e-16,
+        "su2_conjugation_residual": 1.819724099453212e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.261799387799__pair2_theta=0.448798950513",
+      "angles": {
+        "theta_pair1": 0.2617993877991494,
+        "theta_pair2": 0.4487989505128276
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.353622551822607e-16,
+        "b2_orthonormal_residual": 4.429900847553178e-16,
+        "inv_res_su3": 6.134888709242006e-16,
+        "inv_res_su2": 3.62014937441111e-16,
+        "su3_closure_res": 4.626840734977338e-16,
+        "su2_closure_res": 1.8945054782971467e-16,
+        "u3_orthonormal_residual": 4.379854360356802e-16,
+        "u2_orthonormal_residual": 7.74100312496335e-16,
+        "su3_conjugation_residual": 2.230196575227104e-16,
+        "su2_conjugation_residual": 2.618915427128002e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.261799387799__pair2_theta=0.523598775598",
+      "angles": {
+        "theta_pair1": 0.2617993877991494,
+        "theta_pair2": 0.5235987755982988
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.353622551822607e-16,
+        "b2_orthonormal_residual": 3.986225153530665e-16,
+        "inv_res_su3": 6.134888709242006e-16,
+        "inv_res_su2": 3.6342132247622625e-16,
+        "su3_closure_res": 4.626840734977338e-16,
+        "su2_closure_res": 1.4460202920855395e-16,
+        "u3_orthonormal_residual": 4.379854360356802e-16,
+        "u2_orthonormal_residual": 4.1434014115114184e-16,
+        "su3_conjugation_residual": 2.230196575227104e-16,
+        "su2_conjugation_residual": 2.1711088270484645e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.261799387799__pair2_theta=0.628318530718",
+      "angles": {
+        "theta_pair1": 0.2617993877991494,
+        "theta_pair2": 0.6283185307179586
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.353622551822607e-16,
+        "b2_orthonormal_residual": 3.5072048661126996e-16,
+        "inv_res_su3": 6.134888709242006e-16,
+        "inv_res_su2": 3.494627750350196e-16,
+        "su3_closure_res": 4.626840734977338e-16,
+        "su2_closure_res": 1.6128264417283127e-16,
+        "u3_orthonormal_residual": 4.379854360356802e-16,
+        "u2_orthonormal_residual": 7.199447209009573e-16,
+        "su3_conjugation_residual": 2.230196575227104e-16,
+        "su2_conjugation_residual": 2.449341090327405e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.261799387799__pair2_theta=0.785398163397",
+      "angles": {
+        "theta_pair1": 0.2617993877991494,
+        "theta_pair2": 0.7853981633974483
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.353622551822607e-16,
+        "b2_orthonormal_residual": 4.607191806966861e-16,
+        "inv_res_su3": 6.134888709242006e-16,
+        "inv_res_su2": 3.656042182167027e-16,
+        "su3_closure_res": 4.626840734977338e-16,
+        "su2_closure_res": 2.0933192043362283e-16,
+        "u3_orthonormal_residual": 4.379854360356802e-16,
+        "u2_orthonormal_residual": 5.5205051851521495e-16,
+        "su3_conjugation_residual": 2.230196575227104e-16,
+        "su2_conjugation_residual": 2.88989832710919e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.261799387799__pair2_theta=1.0471975512",
+      "angles": {
+        "theta_pair1": 0.2617993877991494,
+        "theta_pair2": 1.0471975511965976
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.353622551822607e-16,
+        "b2_orthonormal_residual": 4.0248735950886165e-16,
+        "inv_res_su3": 6.134888709242006e-16,
+        "inv_res_su2": 3.6529719787229857e-16,
+        "su3_closure_res": 4.626840734977338e-16,
+        "su2_closure_res": 1.966292034098032e-16,
+        "u3_orthonormal_residual": 4.379854360356802e-16,
+        "u2_orthonormal_residual": 6.793308286595483e-16,
+        "su3_conjugation_residual": 2.230196575227104e-16,
+        "su2_conjugation_residual": 3.987298796292627e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.261799387799__pair2_theta=1.57079632679",
+      "angles": {
+        "theta_pair1": 0.2617993877991494,
+        "theta_pair2": 1.5707963267948966
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.353622551822607e-16,
+        "b2_orthonormal_residual": 4.0162991871181425e-16,
+        "inv_res_su3": 6.134888709242006e-16,
+        "inv_res_su2": 3.764378102149911e-16,
+        "su3_closure_res": 4.626840734977338e-16,
+        "su2_closure_res": 1.445805180183046e-16,
+        "u3_orthonormal_residual": 4.379854360356802e-16,
+        "u2_orthonormal_residual": 8.031003061224394e-16,
+        "su3_conjugation_residual": 2.230196575227104e-16,
+        "su2_conjugation_residual": 4.817411735555328e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.392699081699__pair2_theta=0",
+      "angles": {
+        "theta_pair1": 0.3926990816987242,
+        "theta_pair2": 0.0
+      },
+      "audits": {
+        "b3_orthonormal_residual": 2.2845579727225195e-16,
+        "b2_orthonormal_residual": 3.6042185851109777e-16,
+        "inv_res_su3": 6.073308148166342e-16,
+        "inv_res_su2": 3.831284866810958e-16,
+        "su3_closure_res": 3.1572801253433874e-16,
+        "su2_closure_res": 1.7375088326559935e-16,
+        "u3_orthonormal_residual": 6.04453264439061e-16,
+        "u2_orthonormal_residual": 0.0,
+        "su3_conjugation_residual": 1.632471513610332e-16,
+        "su2_conjugation_residual": 0.0
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.392699081699__pair2_theta=0.261799387799",
+      "angles": {
+        "theta_pair1": 0.3926990816987242,
+        "theta_pair2": 0.2617993877991494
+      },
+      "audits": {
+        "b3_orthonormal_residual": 2.2845579727225195e-16,
+        "b2_orthonormal_residual": 4.973567819777197e-16,
+        "inv_res_su3": 6.073308148166342e-16,
+        "inv_res_su2": 3.3509240155037033e-16,
+        "su3_closure_res": 3.1572801253433874e-16,
+        "su2_closure_res": 1.8279738656534055e-16,
+        "u3_orthonormal_residual": 6.04453264439061e-16,
+        "u2_orthonormal_residual": 4.210701751640855e-16,
+        "su3_conjugation_residual": 1.632471513610332e-16,
+        "su2_conjugation_residual": 2.126292676102948e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.392699081699__pair2_theta=0.392699081699",
+      "angles": {
+        "theta_pair1": 0.3926990816987242,
+        "theta_pair2": 0.3926990816987242
+      },
+      "audits": {
+        "b3_orthonormal_residual": 2.2845579727225195e-16,
+        "b2_orthonormal_residual": 3.549214596818914e-16,
+        "inv_res_su3": 6.073308148166342e-16,
+        "inv_res_su2": 3.871984294666089e-16,
+        "su3_closure_res": 3.1572801253433874e-16,
+        "su2_closure_res": 1.7095609642851672e-16,
+        "u3_orthonormal_residual": 6.04453264439061e-16,
+        "u2_orthonormal_residual": 9.183620383645235e-16,
+        "su3_conjugation_residual": 1.632471513610332e-16,
+        "su2_conjugation_residual": 1.819724099453212e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.392699081699__pair2_theta=0.448798950513",
+      "angles": {
+        "theta_pair1": 0.3926990816987242,
+        "theta_pair2": 0.4487989505128276
+      },
+      "audits": {
+        "b3_orthonormal_residual": 2.2845579727225195e-16,
+        "b2_orthonormal_residual": 4.429900847553178e-16,
+        "inv_res_su3": 6.073308148166342e-16,
+        "inv_res_su2": 3.62014937441111e-16,
+        "su3_closure_res": 3.1572801253433874e-16,
+        "su2_closure_res": 1.8945054782971467e-16,
+        "u3_orthonormal_residual": 6.04453264439061e-16,
+        "u2_orthonormal_residual": 7.74100312496335e-16,
+        "su3_conjugation_residual": 1.632471513610332e-16,
+        "su2_conjugation_residual": 2.618915427128002e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.392699081699__pair2_theta=0.523598775598",
+      "angles": {
+        "theta_pair1": 0.3926990816987242,
+        "theta_pair2": 0.5235987755982988
+      },
+      "audits": {
+        "b3_orthonormal_residual": 2.2845579727225195e-16,
+        "b2_orthonormal_residual": 3.986225153530665e-16,
+        "inv_res_su3": 6.073308148166342e-16,
+        "inv_res_su2": 3.6342132247622625e-16,
+        "su3_closure_res": 3.1572801253433874e-16,
+        "su2_closure_res": 1.4460202920855395e-16,
+        "u3_orthonormal_residual": 6.04453264439061e-16,
+        "u2_orthonormal_residual": 4.1434014115114184e-16,
+        "su3_conjugation_residual": 1.632471513610332e-16,
+        "su2_conjugation_residual": 2.1711088270484645e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.392699081699__pair2_theta=0.628318530718",
+      "angles": {
+        "theta_pair1": 0.3926990816987242,
+        "theta_pair2": 0.6283185307179586
+      },
+      "audits": {
+        "b3_orthonormal_residual": 2.2845579727225195e-16,
+        "b2_orthonormal_residual": 3.5072048661126996e-16,
+        "inv_res_su3": 6.073308148166342e-16,
+        "inv_res_su2": 3.494627750350196e-16,
+        "su3_closure_res": 3.1572801253433874e-16,
+        "su2_closure_res": 1.6128264417283127e-16,
+        "u3_orthonormal_residual": 6.04453264439061e-16,
+        "u2_orthonormal_residual": 7.199447209009573e-16,
+        "su3_conjugation_residual": 1.632471513610332e-16,
+        "su2_conjugation_residual": 2.449341090327405e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.392699081699__pair2_theta=0.785398163397",
+      "angles": {
+        "theta_pair1": 0.3926990816987242,
+        "theta_pair2": 0.7853981633974483
+      },
+      "audits": {
+        "b3_orthonormal_residual": 2.2845579727225195e-16,
+        "b2_orthonormal_residual": 4.607191806966861e-16,
+        "inv_res_su3": 6.073308148166342e-16,
+        "inv_res_su2": 3.656042182167027e-16,
+        "su3_closure_res": 3.1572801253433874e-16,
+        "su2_closure_res": 2.0933192043362283e-16,
+        "u3_orthonormal_residual": 6.04453264439061e-16,
+        "u2_orthonormal_residual": 5.5205051851521495e-16,
+        "su3_conjugation_residual": 1.632471513610332e-16,
+        "su2_conjugation_residual": 2.88989832710919e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.392699081699__pair2_theta=1.0471975512",
+      "angles": {
+        "theta_pair1": 0.3926990816987242,
+        "theta_pair2": 1.0471975511965976
+      },
+      "audits": {
+        "b3_orthonormal_residual": 2.2845579727225195e-16,
+        "b2_orthonormal_residual": 4.0248735950886165e-16,
+        "inv_res_su3": 6.073308148166342e-16,
+        "inv_res_su2": 3.6529719787229857e-16,
+        "su3_closure_res": 3.1572801253433874e-16,
+        "su2_closure_res": 1.966292034098032e-16,
+        "u3_orthonormal_residual": 6.04453264439061e-16,
+        "u2_orthonormal_residual": 6.793308286595483e-16,
+        "su3_conjugation_residual": 1.632471513610332e-16,
+        "su2_conjugation_residual": 3.987298796292627e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.392699081699__pair2_theta=1.57079632679",
+      "angles": {
+        "theta_pair1": 0.3926990816987242,
+        "theta_pair2": 1.5707963267948966
+      },
+      "audits": {
+        "b3_orthonormal_residual": 2.2845579727225195e-16,
+        "b2_orthonormal_residual": 4.0162991871181425e-16,
+        "inv_res_su3": 6.073308148166342e-16,
+        "inv_res_su2": 3.764378102149911e-16,
+        "su3_closure_res": 3.1572801253433874e-16,
+        "su2_closure_res": 1.445805180183046e-16,
+        "u3_orthonormal_residual": 6.04453264439061e-16,
+        "u2_orthonormal_residual": 8.031003061224394e-16,
+        "su3_conjugation_residual": 1.632471513610332e-16,
+        "su2_conjugation_residual": 4.817411735555328e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.448798950513__pair2_theta=0",
+      "angles": {
+        "theta_pair1": 0.4487989505128276,
+        "theta_pair2": 0.0
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.694369009117184e-16,
+        "b2_orthonormal_residual": 3.6042185851109777e-16,
+        "inv_res_su3": 6.048616783072743e-16,
+        "inv_res_su2": 3.831284866810958e-16,
+        "su3_closure_res": 4.922988778277849e-16,
+        "su2_closure_res": 1.7375088326559935e-16,
+        "u3_orthonormal_residual": 2.5979243885280404e-16,
+        "u2_orthonormal_residual": 0.0,
+        "su3_conjugation_residual": 2.0062135123698855e-16,
+        "su2_conjugation_residual": 0.0
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.448798950513__pair2_theta=0.261799387799",
+      "angles": {
+        "theta_pair1": 0.4487989505128276,
+        "theta_pair2": 0.2617993877991494
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.694369009117184e-16,
+        "b2_orthonormal_residual": 4.973567819777197e-16,
+        "inv_res_su3": 6.048616783072743e-16,
+        "inv_res_su2": 3.3509240155037033e-16,
+        "su3_closure_res": 4.922988778277849e-16,
+        "su2_closure_res": 1.8279738656534055e-16,
+        "u3_orthonormal_residual": 2.5979243885280404e-16,
+        "u2_orthonormal_residual": 4.210701751640855e-16,
+        "su3_conjugation_residual": 2.0062135123698855e-16,
+        "su2_conjugation_residual": 2.126292676102948e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.448798950513__pair2_theta=0.392699081699",
+      "angles": {
+        "theta_pair1": 0.4487989505128276,
+        "theta_pair2": 0.3926990816987242
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.694369009117184e-16,
+        "b2_orthonormal_residual": 3.549214596818914e-16,
+        "inv_res_su3": 6.048616783072743e-16,
+        "inv_res_su2": 3.871984294666089e-16,
+        "su3_closure_res": 4.922988778277849e-16,
+        "su2_closure_res": 1.7095609642851672e-16,
+        "u3_orthonormal_residual": 2.5979243885280404e-16,
+        "u2_orthonormal_residual": 9.183620383645235e-16,
+        "su3_conjugation_residual": 2.0062135123698855e-16,
+        "su2_conjugation_residual": 1.819724099453212e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.448798950513__pair2_theta=0.448798950513",
+      "angles": {
+        "theta_pair1": 0.4487989505128276,
+        "theta_pair2": 0.4487989505128276
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.694369009117184e-16,
+        "b2_orthonormal_residual": 4.429900847553178e-16,
+        "inv_res_su3": 6.048616783072743e-16,
+        "inv_res_su2": 3.62014937441111e-16,
+        "su3_closure_res": 4.922988778277849e-16,
+        "su2_closure_res": 1.8945054782971467e-16,
+        "u3_orthonormal_residual": 2.5979243885280404e-16,
+        "u2_orthonormal_residual": 7.74100312496335e-16,
+        "su3_conjugation_residual": 2.0062135123698855e-16,
+        "su2_conjugation_residual": 2.618915427128002e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.448798950513__pair2_theta=0.523598775598",
+      "angles": {
+        "theta_pair1": 0.4487989505128276,
+        "theta_pair2": 0.5235987755982988
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.694369009117184e-16,
+        "b2_orthonormal_residual": 3.986225153530665e-16,
+        "inv_res_su3": 6.048616783072743e-16,
+        "inv_res_su2": 3.6342132247622625e-16,
+        "su3_closure_res": 4.922988778277849e-16,
+        "su2_closure_res": 1.4460202920855395e-16,
+        "u3_orthonormal_residual": 2.5979243885280404e-16,
+        "u2_orthonormal_residual": 4.1434014115114184e-16,
+        "su3_conjugation_residual": 2.0062135123698855e-16,
+        "su2_conjugation_residual": 2.1711088270484645e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.448798950513__pair2_theta=0.628318530718",
+      "angles": {
+        "theta_pair1": 0.4487989505128276,
+        "theta_pair2": 0.6283185307179586
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.694369009117184e-16,
+        "b2_orthonormal_residual": 3.5072048661126996e-16,
+        "inv_res_su3": 6.048616783072743e-16,
+        "inv_res_su2": 3.494627750350196e-16,
+        "su3_closure_res": 4.922988778277849e-16,
+        "su2_closure_res": 1.6128264417283127e-16,
+        "u3_orthonormal_residual": 2.5979243885280404e-16,
+        "u2_orthonormal_residual": 7.199447209009573e-16,
+        "su3_conjugation_residual": 2.0062135123698855e-16,
+        "su2_conjugation_residual": 2.449341090327405e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.448798950513__pair2_theta=0.785398163397",
+      "angles": {
+        "theta_pair1": 0.4487989505128276,
+        "theta_pair2": 0.7853981633974483
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.694369009117184e-16,
+        "b2_orthonormal_residual": 4.607191806966861e-16,
+        "inv_res_su3": 6.048616783072743e-16,
+        "inv_res_su2": 3.656042182167027e-16,
+        "su3_closure_res": 4.922988778277849e-16,
+        "su2_closure_res": 2.0933192043362283e-16,
+        "u3_orthonormal_residual": 2.5979243885280404e-16,
+        "u2_orthonormal_residual": 5.5205051851521495e-16,
+        "su3_conjugation_residual": 2.0062135123698855e-16,
+        "su2_conjugation_residual": 2.88989832710919e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.448798950513__pair2_theta=1.0471975512",
+      "angles": {
+        "theta_pair1": 0.4487989505128276,
+        "theta_pair2": 1.0471975511965976
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.694369009117184e-16,
+        "b2_orthonormal_residual": 4.0248735950886165e-16,
+        "inv_res_su3": 6.048616783072743e-16,
+        "inv_res_su2": 3.6529719787229857e-16,
+        "su3_closure_res": 4.922988778277849e-16,
+        "su2_closure_res": 1.966292034098032e-16,
+        "u3_orthonormal_residual": 2.5979243885280404e-16,
+        "u2_orthonormal_residual": 6.793308286595483e-16,
+        "su3_conjugation_residual": 2.0062135123698855e-16,
+        "su2_conjugation_residual": 3.987298796292627e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.448798950513__pair2_theta=1.57079632679",
+      "angles": {
+        "theta_pair1": 0.4487989505128276,
+        "theta_pair2": 1.5707963267948966
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.694369009117184e-16,
+        "b2_orthonormal_residual": 4.0162991871181425e-16,
+        "inv_res_su3": 6.048616783072743e-16,
+        "inv_res_su2": 3.764378102149911e-16,
+        "su3_closure_res": 4.922988778277849e-16,
+        "su2_closure_res": 1.445805180183046e-16,
+        "u3_orthonormal_residual": 2.5979243885280404e-16,
+        "u2_orthonormal_residual": 8.031003061224394e-16,
+        "su3_conjugation_residual": 2.0062135123698855e-16,
+        "su2_conjugation_residual": 4.817411735555328e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.523598775598__pair2_theta=0",
+      "angles": {
+        "theta_pair1": 0.5235987755982988,
+        "theta_pair2": 0.0
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.4102555260182247e-16,
+        "b2_orthonormal_residual": 3.6042185851109777e-16,
+        "inv_res_su3": 5.904047239893459e-16,
+        "inv_res_su2": 3.831284866810958e-16,
+        "su3_closure_res": 3.710329304256066e-16,
+        "su2_closure_res": 1.7375088326559935e-16,
+        "u3_orthonormal_residual": 2.3939034738644226e-16,
+        "u2_orthonormal_residual": 0.0,
+        "su3_conjugation_residual": 1.4890179070024472e-16,
+        "su2_conjugation_residual": 0.0
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.523598775598__pair2_theta=0.261799387799",
+      "angles": {
+        "theta_pair1": 0.5235987755982988,
+        "theta_pair2": 0.2617993877991494
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.4102555260182247e-16,
+        "b2_orthonormal_residual": 4.973567819777197e-16,
+        "inv_res_su3": 5.904047239893459e-16,
+        "inv_res_su2": 3.3509240155037033e-16,
+        "su3_closure_res": 3.710329304256066e-16,
+        "su2_closure_res": 1.8279738656534055e-16,
+        "u3_orthonormal_residual": 2.3939034738644226e-16,
+        "u2_orthonormal_residual": 4.210701751640855e-16,
+        "su3_conjugation_residual": 1.4890179070024472e-16,
+        "su2_conjugation_residual": 2.126292676102948e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.523598775598__pair2_theta=0.392699081699",
+      "angles": {
+        "theta_pair1": 0.5235987755982988,
+        "theta_pair2": 0.3926990816987242
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.4102555260182247e-16,
+        "b2_orthonormal_residual": 3.549214596818914e-16,
+        "inv_res_su3": 5.904047239893459e-16,
+        "inv_res_su2": 3.871984294666089e-16,
+        "su3_closure_res": 3.710329304256066e-16,
+        "su2_closure_res": 1.7095609642851672e-16,
+        "u3_orthonormal_residual": 2.3939034738644226e-16,
+        "u2_orthonormal_residual": 9.183620383645235e-16,
+        "su3_conjugation_residual": 1.4890179070024472e-16,
+        "su2_conjugation_residual": 1.819724099453212e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.523598775598__pair2_theta=0.448798950513",
+      "angles": {
+        "theta_pair1": 0.5235987755982988,
+        "theta_pair2": 0.4487989505128276
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.4102555260182247e-16,
+        "b2_orthonormal_residual": 4.429900847553178e-16,
+        "inv_res_su3": 5.904047239893459e-16,
+        "inv_res_su2": 3.62014937441111e-16,
+        "su3_closure_res": 3.710329304256066e-16,
+        "su2_closure_res": 1.8945054782971467e-16,
+        "u3_orthonormal_residual": 2.3939034738644226e-16,
+        "u2_orthonormal_residual": 7.74100312496335e-16,
+        "su3_conjugation_residual": 1.4890179070024472e-16,
+        "su2_conjugation_residual": 2.618915427128002e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.523598775598__pair2_theta=0.523598775598",
+      "angles": {
+        "theta_pair1": 0.5235987755982988,
+        "theta_pair2": 0.5235987755982988
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.4102555260182247e-16,
+        "b2_orthonormal_residual": 3.986225153530665e-16,
+        "inv_res_su3": 5.904047239893459e-16,
+        "inv_res_su2": 3.6342132247622625e-16,
+        "su3_closure_res": 3.710329304256066e-16,
+        "su2_closure_res": 1.4460202920855395e-16,
+        "u3_orthonormal_residual": 2.3939034738644226e-16,
+        "u2_orthonormal_residual": 4.1434014115114184e-16,
+        "su3_conjugation_residual": 1.4890179070024472e-16,
+        "su2_conjugation_residual": 2.1711088270484645e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.523598775598__pair2_theta=0.628318530718",
+      "angles": {
+        "theta_pair1": 0.5235987755982988,
+        "theta_pair2": 0.6283185307179586
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.4102555260182247e-16,
+        "b2_orthonormal_residual": 3.5072048661126996e-16,
+        "inv_res_su3": 5.904047239893459e-16,
+        "inv_res_su2": 3.494627750350196e-16,
+        "su3_closure_res": 3.710329304256066e-16,
+        "su2_closure_res": 1.6128264417283127e-16,
+        "u3_orthonormal_residual": 2.3939034738644226e-16,
+        "u2_orthonormal_residual": 7.199447209009573e-16,
+        "su3_conjugation_residual": 1.4890179070024472e-16,
+        "su2_conjugation_residual": 2.449341090327405e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.523598775598__pair2_theta=0.785398163397",
+      "angles": {
+        "theta_pair1": 0.5235987755982988,
+        "theta_pair2": 0.7853981633974483
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.4102555260182247e-16,
+        "b2_orthonormal_residual": 4.607191806966861e-16,
+        "inv_res_su3": 5.904047239893459e-16,
+        "inv_res_su2": 3.656042182167027e-16,
+        "su3_closure_res": 3.710329304256066e-16,
+        "su2_closure_res": 2.0933192043362283e-16,
+        "u3_orthonormal_residual": 2.3939034738644226e-16,
+        "u2_orthonormal_residual": 5.5205051851521495e-16,
+        "su3_conjugation_residual": 1.4890179070024472e-16,
+        "su2_conjugation_residual": 2.88989832710919e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.523598775598__pair2_theta=1.0471975512",
+      "angles": {
+        "theta_pair1": 0.5235987755982988,
+        "theta_pair2": 1.0471975511965976
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.4102555260182247e-16,
+        "b2_orthonormal_residual": 4.0248735950886165e-16,
+        "inv_res_su3": 5.904047239893459e-16,
+        "inv_res_su2": 3.6529719787229857e-16,
+        "su3_closure_res": 3.710329304256066e-16,
+        "su2_closure_res": 1.966292034098032e-16,
+        "u3_orthonormal_residual": 2.3939034738644226e-16,
+        "u2_orthonormal_residual": 6.793308286595483e-16,
+        "su3_conjugation_residual": 1.4890179070024472e-16,
+        "su2_conjugation_residual": 3.987298796292627e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.523598775598__pair2_theta=1.57079632679",
+      "angles": {
+        "theta_pair1": 0.5235987755982988,
+        "theta_pair2": 1.5707963267948966
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.4102555260182247e-16,
+        "b2_orthonormal_residual": 4.0162991871181425e-16,
+        "inv_res_su3": 5.904047239893459e-16,
+        "inv_res_su2": 3.764378102149911e-16,
+        "su3_closure_res": 3.710329304256066e-16,
+        "su2_closure_res": 1.445805180183046e-16,
+        "u3_orthonormal_residual": 2.3939034738644226e-16,
+        "u2_orthonormal_residual": 8.031003061224394e-16,
+        "su3_conjugation_residual": 1.4890179070024472e-16,
+        "su2_conjugation_residual": 4.817411735555328e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.628318530718__pair2_theta=0",
+      "angles": {
+        "theta_pair1": 0.6283185307179586,
+        "theta_pair2": 0.0
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.699344682586169e-16,
+        "b2_orthonormal_residual": 3.6042185851109777e-16,
+        "inv_res_su3": 6.033377926245091e-16,
+        "inv_res_su2": 3.831284866810958e-16,
+        "su3_closure_res": 3.715921331961145e-16,
+        "su2_closure_res": 1.7375088326559935e-16,
+        "u3_orthonormal_residual": 4.628035786589814e-16,
+        "u2_orthonormal_residual": 0.0,
+        "su3_conjugation_residual": 2.0528456979428144e-16,
+        "su2_conjugation_residual": 0.0
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.628318530718__pair2_theta=0.261799387799",
+      "angles": {
+        "theta_pair1": 0.6283185307179586,
+        "theta_pair2": 0.2617993877991494
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.699344682586169e-16,
+        "b2_orthonormal_residual": 4.973567819777197e-16,
+        "inv_res_su3": 6.033377926245091e-16,
+        "inv_res_su2": 3.3509240155037033e-16,
+        "su3_closure_res": 3.715921331961145e-16,
+        "su2_closure_res": 1.8279738656534055e-16,
+        "u3_orthonormal_residual": 4.628035786589814e-16,
+        "u2_orthonormal_residual": 4.210701751640855e-16,
+        "su3_conjugation_residual": 2.0528456979428144e-16,
+        "su2_conjugation_residual": 2.126292676102948e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.628318530718__pair2_theta=0.392699081699",
+      "angles": {
+        "theta_pair1": 0.6283185307179586,
+        "theta_pair2": 0.3926990816987242
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.699344682586169e-16,
+        "b2_orthonormal_residual": 3.549214596818914e-16,
+        "inv_res_su3": 6.033377926245091e-16,
+        "inv_res_su2": 3.871984294666089e-16,
+        "su3_closure_res": 3.715921331961145e-16,
+        "su2_closure_res": 1.7095609642851672e-16,
+        "u3_orthonormal_residual": 4.628035786589814e-16,
+        "u2_orthonormal_residual": 9.183620383645235e-16,
+        "su3_conjugation_residual": 2.0528456979428144e-16,
+        "su2_conjugation_residual": 1.819724099453212e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.628318530718__pair2_theta=0.448798950513",
+      "angles": {
+        "theta_pair1": 0.6283185307179586,
+        "theta_pair2": 0.4487989505128276
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.699344682586169e-16,
+        "b2_orthonormal_residual": 4.429900847553178e-16,
+        "inv_res_su3": 6.033377926245091e-16,
+        "inv_res_su2": 3.62014937441111e-16,
+        "su3_closure_res": 3.715921331961145e-16,
+        "su2_closure_res": 1.8945054782971467e-16,
+        "u3_orthonormal_residual": 4.628035786589814e-16,
+        "u2_orthonormal_residual": 7.74100312496335e-16,
+        "su3_conjugation_residual": 2.0528456979428144e-16,
+        "su2_conjugation_residual": 2.618915427128002e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.628318530718__pair2_theta=0.523598775598",
+      "angles": {
+        "theta_pair1": 0.6283185307179586,
+        "theta_pair2": 0.5235987755982988
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.699344682586169e-16,
+        "b2_orthonormal_residual": 3.986225153530665e-16,
+        "inv_res_su3": 6.033377926245091e-16,
+        "inv_res_su2": 3.6342132247622625e-16,
+        "su3_closure_res": 3.715921331961145e-16,
+        "su2_closure_res": 1.4460202920855395e-16,
+        "u3_orthonormal_residual": 4.628035786589814e-16,
+        "u2_orthonormal_residual": 4.1434014115114184e-16,
+        "su3_conjugation_residual": 2.0528456979428144e-16,
+        "su2_conjugation_residual": 2.1711088270484645e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.628318530718__pair2_theta=0.628318530718",
+      "angles": {
+        "theta_pair1": 0.6283185307179586,
+        "theta_pair2": 0.6283185307179586
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.699344682586169e-16,
+        "b2_orthonormal_residual": 3.5072048661126996e-16,
+        "inv_res_su3": 6.033377926245091e-16,
+        "inv_res_su2": 3.494627750350196e-16,
+        "su3_closure_res": 3.715921331961145e-16,
+        "su2_closure_res": 1.6128264417283127e-16,
+        "u3_orthonormal_residual": 4.628035786589814e-16,
+        "u2_orthonormal_residual": 7.199447209009573e-16,
+        "su3_conjugation_residual": 2.0528456979428144e-16,
+        "su2_conjugation_residual": 2.449341090327405e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.628318530718__pair2_theta=0.785398163397",
+      "angles": {
+        "theta_pair1": 0.6283185307179586,
+        "theta_pair2": 0.7853981633974483
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.699344682586169e-16,
+        "b2_orthonormal_residual": 4.607191806966861e-16,
+        "inv_res_su3": 6.033377926245091e-16,
+        "inv_res_su2": 3.656042182167027e-16,
+        "su3_closure_res": 3.715921331961145e-16,
+        "su2_closure_res": 2.0933192043362283e-16,
+        "u3_orthonormal_residual": 4.628035786589814e-16,
+        "u2_orthonormal_residual": 5.5205051851521495e-16,
+        "su3_conjugation_residual": 2.0528456979428144e-16,
+        "su2_conjugation_residual": 2.88989832710919e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.628318530718__pair2_theta=1.0471975512",
+      "angles": {
+        "theta_pair1": 0.6283185307179586,
+        "theta_pair2": 1.0471975511965976
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.699344682586169e-16,
+        "b2_orthonormal_residual": 4.0248735950886165e-16,
+        "inv_res_su3": 6.033377926245091e-16,
+        "inv_res_su2": 3.6529719787229857e-16,
+        "su3_closure_res": 3.715921331961145e-16,
+        "su2_closure_res": 1.966292034098032e-16,
+        "u3_orthonormal_residual": 4.628035786589814e-16,
+        "u2_orthonormal_residual": 6.793308286595483e-16,
+        "su3_conjugation_residual": 2.0528456979428144e-16,
+        "su2_conjugation_residual": 3.987298796292627e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.628318530718__pair2_theta=1.57079632679",
+      "angles": {
+        "theta_pair1": 0.6283185307179586,
+        "theta_pair2": 1.5707963267948966
+      },
+      "audits": {
+        "b3_orthonormal_residual": 3.699344682586169e-16,
+        "b2_orthonormal_residual": 4.0162991871181425e-16,
+        "inv_res_su3": 6.033377926245091e-16,
+        "inv_res_su2": 3.764378102149911e-16,
+        "su3_closure_res": 3.715921331961145e-16,
+        "su2_closure_res": 1.445805180183046e-16,
+        "u3_orthonormal_residual": 4.628035786589814e-16,
+        "u2_orthonormal_residual": 8.031003061224394e-16,
+        "su3_conjugation_residual": 2.0528456979428144e-16,
+        "su2_conjugation_residual": 4.817411735555328e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.785398163397__pair2_theta=0",
+      "angles": {
+        "theta_pair1": 0.7853981633974483,
+        "theta_pair2": 0.0
+      },
+      "audits": {
+        "b3_orthonormal_residual": 5.445930511730223e-16,
+        "b2_orthonormal_residual": 3.6042185851109777e-16,
+        "inv_res_su3": 5.70092576182702e-16,
+        "inv_res_su2": 3.831284866810958e-16,
+        "su3_closure_res": 4.063352877388755e-16,
+        "su2_closure_res": 1.7375088326559935e-16,
+        "u3_orthonormal_residual": 4.600614099056604e-16,
+        "u2_orthonormal_residual": 0.0,
+        "su3_conjugation_residual": 2.1684846099258862e-16,
+        "su2_conjugation_residual": 0.0
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.785398163397__pair2_theta=0.261799387799",
+      "angles": {
+        "theta_pair1": 0.7853981633974483,
+        "theta_pair2": 0.2617993877991494
+      },
+      "audits": {
+        "b3_orthonormal_residual": 5.445930511730223e-16,
+        "b2_orthonormal_residual": 4.973567819777197e-16,
+        "inv_res_su3": 5.70092576182702e-16,
+        "inv_res_su2": 3.3509240155037033e-16,
+        "su3_closure_res": 4.063352877388755e-16,
+        "su2_closure_res": 1.8279738656534055e-16,
+        "u3_orthonormal_residual": 4.600614099056604e-16,
+        "u2_orthonormal_residual": 4.210701751640855e-16,
+        "su3_conjugation_residual": 2.1684846099258862e-16,
+        "su2_conjugation_residual": 2.126292676102948e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.785398163397__pair2_theta=0.392699081699",
+      "angles": {
+        "theta_pair1": 0.7853981633974483,
+        "theta_pair2": 0.3926990816987242
+      },
+      "audits": {
+        "b3_orthonormal_residual": 5.445930511730223e-16,
+        "b2_orthonormal_residual": 3.549214596818914e-16,
+        "inv_res_su3": 5.70092576182702e-16,
+        "inv_res_su2": 3.871984294666089e-16,
+        "su3_closure_res": 4.063352877388755e-16,
+        "su2_closure_res": 1.7095609642851672e-16,
+        "u3_orthonormal_residual": 4.600614099056604e-16,
+        "u2_orthonormal_residual": 9.183620383645235e-16,
+        "su3_conjugation_residual": 2.1684846099258862e-16,
+        "su2_conjugation_residual": 1.819724099453212e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.785398163397__pair2_theta=0.448798950513",
+      "angles": {
+        "theta_pair1": 0.7853981633974483,
+        "theta_pair2": 0.4487989505128276
+      },
+      "audits": {
+        "b3_orthonormal_residual": 5.445930511730223e-16,
+        "b2_orthonormal_residual": 4.429900847553178e-16,
+        "inv_res_su3": 5.70092576182702e-16,
+        "inv_res_su2": 3.62014937441111e-16,
+        "su3_closure_res": 4.063352877388755e-16,
+        "su2_closure_res": 1.8945054782971467e-16,
+        "u3_orthonormal_residual": 4.600614099056604e-16,
+        "u2_orthonormal_residual": 7.74100312496335e-16,
+        "su3_conjugation_residual": 2.1684846099258862e-16,
+        "su2_conjugation_residual": 2.618915427128002e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.785398163397__pair2_theta=0.523598775598",
+      "angles": {
+        "theta_pair1": 0.7853981633974483,
+        "theta_pair2": 0.5235987755982988
+      },
+      "audits": {
+        "b3_orthonormal_residual": 5.445930511730223e-16,
+        "b2_orthonormal_residual": 3.986225153530665e-16,
+        "inv_res_su3": 5.70092576182702e-16,
+        "inv_res_su2": 3.6342132247622625e-16,
+        "su3_closure_res": 4.063352877388755e-16,
+        "su2_closure_res": 1.4460202920855395e-16,
+        "u3_orthonormal_residual": 4.600614099056604e-16,
+        "u2_orthonormal_residual": 4.1434014115114184e-16,
+        "su3_conjugation_residual": 2.1684846099258862e-16,
+        "su2_conjugation_residual": 2.1711088270484645e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.785398163397__pair2_theta=0.628318530718",
+      "angles": {
+        "theta_pair1": 0.7853981633974483,
+        "theta_pair2": 0.6283185307179586
+      },
+      "audits": {
+        "b3_orthonormal_residual": 5.445930511730223e-16,
+        "b2_orthonormal_residual": 3.5072048661126996e-16,
+        "inv_res_su3": 5.70092576182702e-16,
+        "inv_res_su2": 3.494627750350196e-16,
+        "su3_closure_res": 4.063352877388755e-16,
+        "su2_closure_res": 1.6128264417283127e-16,
+        "u3_orthonormal_residual": 4.600614099056604e-16,
+        "u2_orthonormal_residual": 7.199447209009573e-16,
+        "su3_conjugation_residual": 2.1684846099258862e-16,
+        "su2_conjugation_residual": 2.449341090327405e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.785398163397__pair2_theta=0.785398163397",
+      "angles": {
+        "theta_pair1": 0.7853981633974483,
+        "theta_pair2": 0.7853981633974483
+      },
+      "audits": {
+        "b3_orthonormal_residual": 5.445930511730223e-16,
+        "b2_orthonormal_residual": 4.607191806966861e-16,
+        "inv_res_su3": 5.70092576182702e-16,
+        "inv_res_su2": 3.656042182167027e-16,
+        "su3_closure_res": 4.063352877388755e-16,
+        "su2_closure_res": 2.0933192043362283e-16,
+        "u3_orthonormal_residual": 4.600614099056604e-16,
+        "u2_orthonormal_residual": 5.5205051851521495e-16,
+        "su3_conjugation_residual": 2.1684846099258862e-16,
+        "su2_conjugation_residual": 2.88989832710919e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.785398163397__pair2_theta=1.0471975512",
+      "angles": {
+        "theta_pair1": 0.7853981633974483,
+        "theta_pair2": 1.0471975511965976
+      },
+      "audits": {
+        "b3_orthonormal_residual": 5.445930511730223e-16,
+        "b2_orthonormal_residual": 4.0248735950886165e-16,
+        "inv_res_su3": 5.70092576182702e-16,
+        "inv_res_su2": 3.6529719787229857e-16,
+        "su3_closure_res": 4.063352877388755e-16,
+        "su2_closure_res": 1.966292034098032e-16,
+        "u3_orthonormal_residual": 4.600614099056604e-16,
+        "u2_orthonormal_residual": 6.793308286595483e-16,
+        "su3_conjugation_residual": 2.1684846099258862e-16,
+        "su2_conjugation_residual": 3.987298796292627e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=0.785398163397__pair2_theta=1.57079632679",
+      "angles": {
+        "theta_pair1": 0.7853981633974483,
+        "theta_pair2": 1.5707963267948966
+      },
+      "audits": {
+        "b3_orthonormal_residual": 5.445930511730223e-16,
+        "b2_orthonormal_residual": 4.0162991871181425e-16,
+        "inv_res_su3": 5.70092576182702e-16,
+        "inv_res_su2": 3.764378102149911e-16,
+        "su3_closure_res": 4.063352877388755e-16,
+        "su2_closure_res": 1.445805180183046e-16,
+        "u3_orthonormal_residual": 4.600614099056604e-16,
+        "u2_orthonormal_residual": 8.031003061224394e-16,
+        "su3_conjugation_residual": 2.1684846099258862e-16,
+        "su2_conjugation_residual": 4.817411735555328e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=1.0471975512__pair2_theta=0",
+      "angles": {
+        "theta_pair1": 1.0471975511965976,
+        "theta_pair2": 0.0
+      },
+      "audits": {
+        "b3_orthonormal_residual": 4.467311799251759e-16,
+        "b2_orthonormal_residual": 3.6042185851109777e-16,
+        "inv_res_su3": 5.771403306727643e-16,
+        "inv_res_su2": 3.831284866810958e-16,
+        "su3_closure_res": 4.817832694986104e-16,
+        "su2_closure_res": 1.7375088326559935e-16,
+        "u3_orthonormal_residual": 8.121534089851097e-16,
+        "u2_orthonormal_residual": 0.0,
+        "su3_conjugation_residual": 2.260599638946484e-16,
+        "su2_conjugation_residual": 0.0
+      }
+    },
+    {
+      "case_id": "pair1_theta=1.0471975512__pair2_theta=0.261799387799",
+      "angles": {
+        "theta_pair1": 1.0471975511965976,
+        "theta_pair2": 0.2617993877991494
+      },
+      "audits": {
+        "b3_orthonormal_residual": 4.467311799251759e-16,
+        "b2_orthonormal_residual": 4.973567819777197e-16,
+        "inv_res_su3": 5.771403306727643e-16,
+        "inv_res_su2": 3.3509240155037033e-16,
+        "su3_closure_res": 4.817832694986104e-16,
+        "su2_closure_res": 1.8279738656534055e-16,
+        "u3_orthonormal_residual": 8.121534089851097e-16,
+        "u2_orthonormal_residual": 4.210701751640855e-16,
+        "su3_conjugation_residual": 2.260599638946484e-16,
+        "su2_conjugation_residual": 2.126292676102948e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=1.0471975512__pair2_theta=0.392699081699",
+      "angles": {
+        "theta_pair1": 1.0471975511965976,
+        "theta_pair2": 0.3926990816987242
+      },
+      "audits": {
+        "b3_orthonormal_residual": 4.467311799251759e-16,
+        "b2_orthonormal_residual": 3.549214596818914e-16,
+        "inv_res_su3": 5.771403306727643e-16,
+        "inv_res_su2": 3.871984294666089e-16,
+        "su3_closure_res": 4.817832694986104e-16,
+        "su2_closure_res": 1.7095609642851672e-16,
+        "u3_orthonormal_residual": 8.121534089851097e-16,
+        "u2_orthonormal_residual": 9.183620383645235e-16,
+        "su3_conjugation_residual": 2.260599638946484e-16,
+        "su2_conjugation_residual": 1.819724099453212e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=1.0471975512__pair2_theta=0.448798950513",
+      "angles": {
+        "theta_pair1": 1.0471975511965976,
+        "theta_pair2": 0.4487989505128276
+      },
+      "audits": {
+        "b3_orthonormal_residual": 4.467311799251759e-16,
+        "b2_orthonormal_residual": 4.429900847553178e-16,
+        "inv_res_su3": 5.771403306727643e-16,
+        "inv_res_su2": 3.62014937441111e-16,
+        "su3_closure_res": 4.817832694986104e-16,
+        "su2_closure_res": 1.8945054782971467e-16,
+        "u3_orthonormal_residual": 8.121534089851097e-16,
+        "u2_orthonormal_residual": 7.74100312496335e-16,
+        "su3_conjugation_residual": 2.260599638946484e-16,
+        "su2_conjugation_residual": 2.618915427128002e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=1.0471975512__pair2_theta=0.523598775598",
+      "angles": {
+        "theta_pair1": 1.0471975511965976,
+        "theta_pair2": 0.5235987755982988
+      },
+      "audits": {
+        "b3_orthonormal_residual": 4.467311799251759e-16,
+        "b2_orthonormal_residual": 3.986225153530665e-16,
+        "inv_res_su3": 5.771403306727643e-16,
+        "inv_res_su2": 3.6342132247622625e-16,
+        "su3_closure_res": 4.817832694986104e-16,
+        "su2_closure_res": 1.4460202920855395e-16,
+        "u3_orthonormal_residual": 8.121534089851097e-16,
+        "u2_orthonormal_residual": 4.1434014115114184e-16,
+        "su3_conjugation_residual": 2.260599638946484e-16,
+        "su2_conjugation_residual": 2.1711088270484645e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=1.0471975512__pair2_theta=0.628318530718",
+      "angles": {
+        "theta_pair1": 1.0471975511965976,
+        "theta_pair2": 0.6283185307179586
+      },
+      "audits": {
+        "b3_orthonormal_residual": 4.467311799251759e-16,
+        "b2_orthonormal_residual": 3.5072048661126996e-16,
+        "inv_res_su3": 5.771403306727643e-16,
+        "inv_res_su2": 3.494627750350196e-16,
+        "su3_closure_res": 4.817832694986104e-16,
+        "su2_closure_res": 1.6128264417283127e-16,
+        "u3_orthonormal_residual": 8.121534089851097e-16,
+        "u2_orthonormal_residual": 7.199447209009573e-16,
+        "su3_conjugation_residual": 2.260599638946484e-16,
+        "su2_conjugation_residual": 2.449341090327405e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=1.0471975512__pair2_theta=0.785398163397",
+      "angles": {
+        "theta_pair1": 1.0471975511965976,
+        "theta_pair2": 0.7853981633974483
+      },
+      "audits": {
+        "b3_orthonormal_residual": 4.467311799251759e-16,
+        "b2_orthonormal_residual": 4.607191806966861e-16,
+        "inv_res_su3": 5.771403306727643e-16,
+        "inv_res_su2": 3.656042182167027e-16,
+        "su3_closure_res": 4.817832694986104e-16,
+        "su2_closure_res": 2.0933192043362283e-16,
+        "u3_orthonormal_residual": 8.121534089851097e-16,
+        "u2_orthonormal_residual": 5.5205051851521495e-16,
+        "su3_conjugation_residual": 2.260599638946484e-16,
+        "su2_conjugation_residual": 2.88989832710919e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=1.0471975512__pair2_theta=1.0471975512",
+      "angles": {
+        "theta_pair1": 1.0471975511965976,
+        "theta_pair2": 1.0471975511965976
+      },
+      "audits": {
+        "b3_orthonormal_residual": 4.467311799251759e-16,
+        "b2_orthonormal_residual": 4.0248735950886165e-16,
+        "inv_res_su3": 5.771403306727643e-16,
+        "inv_res_su2": 3.6529719787229857e-16,
+        "su3_closure_res": 4.817832694986104e-16,
+        "su2_closure_res": 1.966292034098032e-16,
+        "u3_orthonormal_residual": 8.121534089851097e-16,
+        "u2_orthonormal_residual": 6.793308286595483e-16,
+        "su3_conjugation_residual": 2.260599638946484e-16,
+        "su2_conjugation_residual": 3.987298796292627e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=1.0471975512__pair2_theta=1.57079632679",
+      "angles": {
+        "theta_pair1": 1.0471975511965976,
+        "theta_pair2": 1.5707963267948966
+      },
+      "audits": {
+        "b3_orthonormal_residual": 4.467311799251759e-16,
+        "b2_orthonormal_residual": 4.0162991871181425e-16,
+        "inv_res_su3": 5.771403306727643e-16,
+        "inv_res_su2": 3.764378102149911e-16,
+        "su3_closure_res": 4.817832694986104e-16,
+        "su2_closure_res": 1.445805180183046e-16,
+        "u3_orthonormal_residual": 8.121534089851097e-16,
+        "u2_orthonormal_residual": 8.031003061224394e-16,
+        "su3_conjugation_residual": 2.260599638946484e-16,
+        "su2_conjugation_residual": 4.817411735555328e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=1.57079632679__pair2_theta=0",
+      "angles": {
+        "theta_pair1": 1.5707963267948966,
+        "theta_pair2": 0.0
+      },
+      "audits": {
+        "b3_orthonormal_residual": 2.6937715042153495e-16,
+        "b2_orthonormal_residual": 3.6042185851109777e-16,
+        "inv_res_su3": 5.496081956387708e-16,
+        "inv_res_su2": 3.831284866810958e-16,
+        "su3_closure_res": 4.0624359167667994e-16,
+        "su2_closure_res": 1.7375088326559935e-16,
+        "u3_orthonormal_residual": 6.305881162733554e-16,
+        "u2_orthonormal_residual": 0.0,
+        "su3_conjugation_residual": 2.4104236294666067e-16,
+        "su2_conjugation_residual": 0.0
+      }
+    },
+    {
+      "case_id": "pair1_theta=1.57079632679__pair2_theta=0.261799387799",
+      "angles": {
+        "theta_pair1": 1.5707963267948966,
+        "theta_pair2": 0.2617993877991494
+      },
+      "audits": {
+        "b3_orthonormal_residual": 2.6937715042153495e-16,
+        "b2_orthonormal_residual": 4.973567819777197e-16,
+        "inv_res_su3": 5.496081956387708e-16,
+        "inv_res_su2": 3.3509240155037033e-16,
+        "su3_closure_res": 4.0624359167667994e-16,
+        "su2_closure_res": 1.8279738656534055e-16,
+        "u3_orthonormal_residual": 6.305881162733554e-16,
+        "u2_orthonormal_residual": 4.210701751640855e-16,
+        "su3_conjugation_residual": 2.4104236294666067e-16,
+        "su2_conjugation_residual": 2.126292676102948e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=1.57079632679__pair2_theta=0.392699081699",
+      "angles": {
+        "theta_pair1": 1.5707963267948966,
+        "theta_pair2": 0.3926990816987242
+      },
+      "audits": {
+        "b3_orthonormal_residual": 2.6937715042153495e-16,
+        "b2_orthonormal_residual": 3.549214596818914e-16,
+        "inv_res_su3": 5.496081956387708e-16,
+        "inv_res_su2": 3.871984294666089e-16,
+        "su3_closure_res": 4.0624359167667994e-16,
+        "su2_closure_res": 1.7095609642851672e-16,
+        "u3_orthonormal_residual": 6.305881162733554e-16,
+        "u2_orthonormal_residual": 9.183620383645235e-16,
+        "su3_conjugation_residual": 2.4104236294666067e-16,
+        "su2_conjugation_residual": 1.819724099453212e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=1.57079632679__pair2_theta=0.448798950513",
+      "angles": {
+        "theta_pair1": 1.5707963267948966,
+        "theta_pair2": 0.4487989505128276
+      },
+      "audits": {
+        "b3_orthonormal_residual": 2.6937715042153495e-16,
+        "b2_orthonormal_residual": 4.429900847553178e-16,
+        "inv_res_su3": 5.496081956387708e-16,
+        "inv_res_su2": 3.62014937441111e-16,
+        "su3_closure_res": 4.0624359167667994e-16,
+        "su2_closure_res": 1.8945054782971467e-16,
+        "u3_orthonormal_residual": 6.305881162733554e-16,
+        "u2_orthonormal_residual": 7.74100312496335e-16,
+        "su3_conjugation_residual": 2.4104236294666067e-16,
+        "su2_conjugation_residual": 2.618915427128002e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=1.57079632679__pair2_theta=0.523598775598",
+      "angles": {
+        "theta_pair1": 1.5707963267948966,
+        "theta_pair2": 0.5235987755982988
+      },
+      "audits": {
+        "b3_orthonormal_residual": 2.6937715042153495e-16,
+        "b2_orthonormal_residual": 3.986225153530665e-16,
+        "inv_res_su3": 5.496081956387708e-16,
+        "inv_res_su2": 3.6342132247622625e-16,
+        "su3_closure_res": 4.0624359167667994e-16,
+        "su2_closure_res": 1.4460202920855395e-16,
+        "u3_orthonormal_residual": 6.305881162733554e-16,
+        "u2_orthonormal_residual": 4.1434014115114184e-16,
+        "su3_conjugation_residual": 2.4104236294666067e-16,
+        "su2_conjugation_residual": 2.1711088270484645e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=1.57079632679__pair2_theta=0.628318530718",
+      "angles": {
+        "theta_pair1": 1.5707963267948966,
+        "theta_pair2": 0.6283185307179586
+      },
+      "audits": {
+        "b3_orthonormal_residual": 2.6937715042153495e-16,
+        "b2_orthonormal_residual": 3.5072048661126996e-16,
+        "inv_res_su3": 5.496081956387708e-16,
+        "inv_res_su2": 3.494627750350196e-16,
+        "su3_closure_res": 4.0624359167667994e-16,
+        "su2_closure_res": 1.6128264417283127e-16,
+        "u3_orthonormal_residual": 6.305881162733554e-16,
+        "u2_orthonormal_residual": 7.199447209009573e-16,
+        "su3_conjugation_residual": 2.4104236294666067e-16,
+        "su2_conjugation_residual": 2.449341090327405e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=1.57079632679__pair2_theta=0.785398163397",
+      "angles": {
+        "theta_pair1": 1.5707963267948966,
+        "theta_pair2": 0.7853981633974483
+      },
+      "audits": {
+        "b3_orthonormal_residual": 2.6937715042153495e-16,
+        "b2_orthonormal_residual": 4.607191806966861e-16,
+        "inv_res_su3": 5.496081956387708e-16,
+        "inv_res_su2": 3.656042182167027e-16,
+        "su3_closure_res": 4.0624359167667994e-16,
+        "su2_closure_res": 2.0933192043362283e-16,
+        "u3_orthonormal_residual": 6.305881162733554e-16,
+        "u2_orthonormal_residual": 5.5205051851521495e-16,
+        "su3_conjugation_residual": 2.4104236294666067e-16,
+        "su2_conjugation_residual": 2.88989832710919e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=1.57079632679__pair2_theta=1.0471975512",
+      "angles": {
+        "theta_pair1": 1.5707963267948966,
+        "theta_pair2": 1.0471975511965976
+      },
+      "audits": {
+        "b3_orthonormal_residual": 2.6937715042153495e-16,
+        "b2_orthonormal_residual": 4.0248735950886165e-16,
+        "inv_res_su3": 5.496081956387708e-16,
+        "inv_res_su2": 3.6529719787229857e-16,
+        "su3_closure_res": 4.0624359167667994e-16,
+        "su2_closure_res": 1.966292034098032e-16,
+        "u3_orthonormal_residual": 6.305881162733554e-16,
+        "u2_orthonormal_residual": 6.793308286595483e-16,
+        "su3_conjugation_residual": 2.4104236294666067e-16,
+        "su2_conjugation_residual": 3.987298796292627e-16
+      }
+    },
+    {
+      "case_id": "pair1_theta=1.57079632679__pair2_theta=1.57079632679",
+      "angles": {
+        "theta_pair1": 1.5707963267948966,
+        "theta_pair2": 1.5707963267948966
+      },
+      "audits": {
+        "b3_orthonormal_residual": 2.6937715042153495e-16,
+        "b2_orthonormal_residual": 4.0162991871181425e-16,
+        "inv_res_su3": 5.496081956387708e-16,
+        "inv_res_su2": 3.764378102149911e-16,
+        "su3_closure_res": 4.0624359167667994e-16,
+        "su2_closure_res": 1.445805180183046e-16,
+        "u3_orthonormal_residual": 6.305881162733554e-16,
+        "u2_orthonormal_residual": 8.031003061224394e-16,
+        "su3_conjugation_residual": 2.4104236294666067e-16,
+        "su2_conjugation_residual": 4.817411735555328e-16
+      }
+    }
+  ],
+  "checks": [
+    {
+      "id": "baseline_bases_orthonormal",
+      "pass": true,
+      "expected": "<= 1e-12",
+      "actual": {
+        "b3_orthonormal_residual": 2.709517654683241e-16,
+        "b2_orthonormal_residual": 3.6042185851109777e-16
+      },
+      "meaning": "baseline embedded bases are numerically orthonormal (precondition for clean projector/lift arguments)"
+    },
+    {
+      "id": "o2_rotation_family_conjugation_equivalence",
+      "pass": true,
+      "expected": "<= 1e-12",
+      "actual": {
+        "max_su3_conjugation_residual": 2.4104236294666067e-16,
+        "max_su2_conjugation_residual": 4.817411735555328e-16
+      },
+      "meaning": "every tested O(2) rotation embedding is conjugate to the baseline embedding by a lifted subspace conjugator"
+    },
+    {
+      "id": "o2_rotation_family_invariance_residual_unchanged",
+      "pass": true,
+      "expected": "<= 1e-12",
+      "actual": {
+        "max_inv_res_su3_dev": 5.072203255839355e-17,
+        "max_inv_res_su2_dev": 4.8036085130725496e-17
+      },
+      "meaning": "kernel-subspace invariance residual is unchanged across tested O(2) rotations (as expected from projector invariance)"
+    },
+    {
+      "id": "o2_rotation_family_lie_closure_residual_unchanged",
+      "pass": true,
+      "expected": "<= 1e-12",
+      "actual": {
+        "max_su3_closure_res_dev": 1.7443699384849385e-16,
+        "max_su2_closure_res_dev": 3.558103716802348e-17
+      },
+      "meaning": "Lie-closure residual is unchanged across tested O(2) rotations (as expected from conjugation equivalence)"
+    },
+    {
+      "id": "lifted_conjugators_orthonormal",
+      "pass": true,
+      "expected": "<= 1e-12",
+      "actual": {
+        "max_u3_orthonormal_residual": 8.121534089851097e-16,
+        "max_u2_orthonormal_residual": 9.183620383645235e-16
+      },
+      "meaning": "lifted conjugators are numerically orthonormal across tested O(2) rotations"
+    }
+  ],
+  "verdict": {
+    "audits_pass": true,
+    "statement": "Across a grid of continuous O(2) rotations applied to the pair1/pair2 eigenbasis vectors exported by F453, the induced SU(3)/SU(2) embedded generators are conjugate to the baseline embedding by lifted subspace conjugators, and invariance/Lie-closure residuals remain unchanged at numerical tolerance. This supports treating the full O(2) basis-rotation freedom as a gauge/basis convention for the QW-2190 embedding audits (no strict promotion to global physical uniqueness)."
+  },
+  "hard_limits": [
+    "Does not claim axiom-free global physical uniqueness beyond the declared QW-2190 embedding audits and the tested pair1/pair2 scope.",
+    "Does not claim global discharge of QW-2191 (kernel-alone obstruction remains true as a canonical-representative obstruction).",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}
