@@ -78,6 +78,8 @@ P439_SCRIPT = ROOT / "p439_current_strict_qw2191_weighted_kl_reference_objective
 P438_SUMMARY = GENERATED / "p438_current_strict_t166_diagonal_accelerator_lane_status_dashboard_probe_summary.json"
 P439_SUMMARY = GENERATED / "p439_current_strict_qw2191_weighted_kl_reference_objective_o2_cut_audit_probe_summary.json"
 
+P455_SUMMARY = GENERATED / "p455_current_strict_mode_index_assignment_shannon_vs_diagonal_alignment_audit_probe_summary.json"
+
 OUT_JSON = GENERATED / "p441_current_strict_global_closure_next_move_dashboard_probe.json"
 OUT_SUMMARY = GENERATED / "p441_current_strict_global_closure_next_move_dashboard_probe_summary.json"
 
@@ -218,13 +220,16 @@ def main() -> None:
         )
         diagonal_note += " T2 theorem-level bridge discharge is now exported (N491); next frontier shifts to QW-2191 continuation."
 
-    shannon_note = "P439 is probe-level only; T165 status is determined by strict theorem/packet exports."
+    shannon_note = "P439 is probe-level only; Shannon-lane status is determined by strict theorem/packet exports."
     if F454_SHANNON_ASSIGNMENT.exists() or F454_SHANNON_ASSIGNMENT_SUMMARY.exists() or N496_THEOREM.exists():
         shannon_note = (
             "Strict Shannon element-order reference lane exports a full strict-core mode-index assignment basis object on n=12 (F454), "
             "cutting O(2) down to residual Z2 on all pair_m (m=1..5) via the cross-entropy objective "
-            "(N480, N488, N496). This remains below T166, does not imply strict-core selector closure, and does not constitute a global QW-2191 discharge."
+            "(N480, N488, N496)."
         )
+        if P455_SUMMARY.exists():
+            shannon_note += " A cross-lane hygiene audit reports this axis choice aligns with the diagonal/local assignment up to residual sign (P455)."
+        shannon_note += " This remains below T166, does not imply strict-core selector closure, and does not constitute a global QW-2191 discharge."
     elif T165_THETA_FIX.exists():
         shannon_note = (
             "T165 strict selector ingredient is exported (F446/N480): pair1 O(2)->Z2 cut with θ*=π/2 (mod π). "
@@ -249,6 +254,7 @@ def main() -> None:
         "dependency_summaries": {
             "P438": str(P438_SUMMARY.relative_to(REPO)),
             "P439": str(P439_SUMMARY.relative_to(REPO)),
+            "P455": (str(P455_SUMMARY.relative_to(REPO)) if P455_SUMMARY.exists() else None),
         },
         "status_snapshot": {"P438": p438, "P439": p439},
         "result": {
