@@ -1,0 +1,75 @@
+{
+  "object": "SelectorAtlas_pair12_sigma_int_corridor_projector_v1",
+  "stage": "F463",
+  "status": "actual_exported_lane_scoped_two_chart_selector_atlas_stub_with_overlap_and_gluing_data__projector_level__no_false_pass",
+  "as_of": "2026-03-15",
+  "generated_utc": "2026-03-15T21:27:46.610140+00:00",
+  "intent": "Export one explicit lane-scoped two-chart selector atlas stub on {pair1,pair2} in the strict sigma-int corridor, including an explicit overlap-domain declaration, the chart transition operator O12, and projector-level operator gluing data A2 = O12 A1 O12^T. This is projector-level (sign-gauge-safe) and does not claim a global selector atlas nor any global discharge.",
+  "charts": {
+    "pair1": {
+      "chart_id": "pair1",
+      "carrier_plane": "V1 = span{c1,s1} inside the n=12 real Fourier scaffold",
+      "local_operator": {
+        "ref": "fundamental_action_reconstruction/generated/a_1_pair1_orientation_projector_operator_strict_core_v1.json",
+        "object": "A_1_pair1_orientation_projector_operator_strict_core_v1"
+      }
+    },
+    "pair2": {
+      "chart_id": "pair2",
+      "carrier_plane": "V2 = span{c2,s2} inside the n=12 real Fourier scaffold",
+      "local_operator": {
+        "ref": "fundamental_action_reconstruction/generated/a_2_pair2_orientation_projector_operator_strict_core_v1.json",
+        "object": "A_2_pair2_orientation_projector_operator_strict_core_v1"
+      }
+    }
+  },
+  "overlap_domain_declaration": {
+    "scope": "sigma_int_corridor_declared_scope",
+    "meaning": "Both charts (pair1 and pair2) are simultaneously defined by the exported slot-free sigma-int theta-pair supply; therefore the pair1/pair2 atlas overlap is declared on that same corridor scope.",
+    "note": "This is a lane-scoped overlap declaration, not a global overlap-domain structure on the full strict domain."
+  },
+  "transitions": {
+    "pair1_to_pair2": {
+      "operator_ref": "fundamental_action_reconstruction/generated/o12_pair1_pair2_selector_chart_transport_operator_strict_derived_from_sigma_int_alpha12_v1.json",
+      "operator": "O12_pair1_pair2_selector_chart_transport_operator_strict_derived_from_sigma_int_alpha12_v1",
+      "alpha12_mod_2pi": 1.5707963267948966
+    },
+    "pair2_to_pair1": {
+      "inverse": "O12^T (equals O12 on the exported instantiation up to numerical tolerance)"
+    }
+  },
+  "gluing_data": {
+    "operator_section_ref": "fundamental_action_reconstruction/generated/a_12_pair12_chart_glued_orientation_projector_operator_section_strict_core_v1.json",
+    "law": "A_2(pair2) = O_12 A_1(pair1) O_12^T  (projector-level, sign-gauge-safe)",
+    "audit_ref": "fundamental_action_reconstruction/generated/p466_current_strict_pair12_chart_glued_projector_operator_section_audit_probe_summary.json"
+  },
+  "audits": {
+    "o12_orthogonality_max_abs_residual": 4.60113898903259e-16,
+    "o12_involution_max_abs_residual": 4.60113898903259e-16,
+    "projector_gluing_max_abs_residual": 3.0531133177191805e-16,
+    "a1_sign_gauge_invariance_max_abs": 0.0,
+    "a2_sign_gauge_invariance_max_abs": 0.0,
+    "p466_summary_snapshot": {
+      "stage": "P466",
+      "status": "PASS_PROBE_READY",
+      "generated_utc": "2026-03-15T21:18:47.837049+00:00",
+      "audits": {
+        "orthogonality_max_abs_residual": 4.60113898903259e-16,
+        "gluing_full_max_abs_residual": 3.0531133177191805e-16,
+        "gluing_pair_plane_2x2_max_abs_residual": 4.440892098500626e-16,
+        "a1_sign_invariance_max_abs": 0.0,
+        "a2_sign_invariance_max_abs": 0.0
+      },
+      "no_false_pass": true
+    }
+  },
+  "hard_limits": [
+    "Lane-scoped: exports only a two-chart atlas stub on {pair1,pair2} for the sigma-int corridor.",
+    "Does not export a global selector atlas, global overlap-domain declaration, nor global cocycle data (H41 remains open globally).",
+    "Does not discharge QW-2191 nor export a global selector transition/gluing object (H40 remains open globally).",
+    "Projector-level only: does not derive a sign-sensitive physical orientation datum.",
+    "Does not claim strict-core selector closure / admissible S_sel_int.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}
