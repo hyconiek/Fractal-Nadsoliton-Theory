@@ -1,0 +1,104 @@
+{
+  "object": "A_1_pair1_orientation_projector_operator_strict_core_v1",
+  "status": "actual_exported_operator__derived_only_from_sigma_int_u1__residual_z2_sign_gauge_invariant",
+  "as_of": "2026-03-15",
+  "intent": "Export one strict-core, slot-free operator-level bridge target on V_1 = span{c1,s1} constructed only from the already exported sigma-int orientation direction u_1. The operator is the rank-one projector A_1(pair1) := |u_1><u_1| in the (c1,s1) basis. This is a minimal downstream operator reachability witness and does not identify with any extension-only H/O-lane A_1_ext nor with any host matching claim.",
+  "inputs": {
+    "theta_pair": "fundamental_action_reconstruction/generated/theta_pair_sigma_int_strict_selector_ingredient_o2_cut_slot_free_v1.json",
+    "qw2190_scaffold": "report_qw2190_kernel_mode_representation_emergence_gate.json"
+  },
+  "domain_notes": {
+    "basis_plane": "V_1 = span{c1,s1} inside the n=12 real Fourier scaffold",
+    "sigma_int_lane": "slot_free_theta_pair_supply (F451/N489)"
+  },
+  "data": {
+    "theta_1_exported": 4.71238898038469,
+    "u_1": [
+      0.0,
+      -0.204124145231932,
+      -0.353553390593274,
+      -0.408248290463863,
+      -0.353553390593274,
+      -0.204124145231931,
+      0.0,
+      0.204124145231931,
+      0.353553390593274,
+      0.408248290463863,
+      0.353553390593274,
+      0.204124145231932
+    ],
+    "u_1_coords_in_c1_s1": [
+      0.0,
+      -1.0
+    ],
+    "A_1_pair1_matrix_in_c1_s1": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "audits": {
+    "u1_outside_span_c1_s1": 1.4795811545693623e-16,
+    "coords_norm": 0.9999999999999999,
+    "projector_symmetry_inf_norm": 0.0,
+    "projector_idempotence_inf_norm": 0.0,
+    "projector_trace": 1.0,
+    "projector_det": 0.0,
+    "projector_eigenvalues": [
+      0.0,
+      1.0
+    ],
+    "residual_z2_sign_invariance_max_abs_diff": 0.0,
+    "tolerance": 1e-12
+  },
+  "checks": [
+    {
+      "id": "u1_in_span_c1_s1",
+      "pass": true,
+      "expected": "<= 1e-12",
+      "actual": 1.4795811545693623e-16,
+      "meaning": "exported u_1 lies in span{c1,s1} (numerical tolerance)"
+    },
+    {
+      "id": "coords_unit_norm_1",
+      "pass": true,
+      "expected": "~1",
+      "actual": 0.9999999999999999,
+      "meaning": "u_1 coordinates in (c1,s1) have unit norm (numerical tolerance)"
+    },
+    {
+      "id": "projector_symmetric",
+      "pass": true,
+      "expected": "<= 1e-12",
+      "actual": 0.0,
+      "meaning": "A_1(pair1) is symmetric in the (c1,s1) basis"
+    },
+    {
+      "id": "projector_idempotent",
+      "pass": true,
+      "expected": "<= 1e-12",
+      "actual": 0.0,
+      "meaning": "A_1(pair1)^2 = A_1(pair1) (projector)"
+    },
+    {
+      "id": "residual_z2_sign_invariant",
+      "pass": true,
+      "expected": "<= 1e-12",
+      "actual": 0.0,
+      "meaning": "u_1 -> -u_1 leaves the operator unchanged (residual Z2 sign gauge)"
+    }
+  ],
+  "hard_limits": [
+    "Does not claim identification with the extension-only H/O-lane A_1_ext operator.",
+    "Does not claim any host matching/cancellation, coefficient extraction, or K_obs factorization.",
+    "Does not claim strict-core selector closure / admissible S_sel_int.",
+    "Does not claim global discharge of QW-2191.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}

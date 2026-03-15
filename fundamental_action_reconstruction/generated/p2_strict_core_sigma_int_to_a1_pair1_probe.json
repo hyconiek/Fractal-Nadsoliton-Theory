@@ -1,8 +1,8 @@
 {
   "stage": "P2",
   "goal": "compute_or_fail_strict_core_sigma_int_to_A1_pair1",
-  "status": "NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_ROUTE",
-  "reason": "the route reaches strict-core theta supply and basis-pair materialization in declared scope, but no strict-core operator-level export to A_1(pair1) is yet exported",
+  "status": "PASS_COMPUTABLE_STRICT_CORE_SIGMA_INT_TO_A1_PAIR1_OPERATOR_STAGE_DECLARED_SCOPE",
+  "reason": "the route reaches strict-core theta supply, basis-pair materialization, and exports a strict-core operator object on V_1 derived from the materialized orientation slice (minimal A_1(pair1) operator stage in declared scope)",
   "lane": "strict_core_candidate_route",
   "route_under_test": [
     "sigma_int_candidate",
@@ -95,6 +95,13 @@
       "expected": true,
       "actual": true,
       "meaning": "the basis-pair conditional schema has strict-core theta supply in declared scope"
+    },
+    {
+      "id": "operator_bridge_to_A1_pair1_present",
+      "pass": true,
+      "expected": true,
+      "actual": true,
+      "meaning": "a strict-core operator object on V_1 derived from the materialized orientation slice is exported (declared A_1(pair1) target in P2 scope)"
     }
   ],
   "route_state": {
@@ -108,7 +115,7 @@
     "basis_pair_export_skeleton_present": true,
     "actual_basis_pair_export_present": true,
     "conditional_basis_pair_population_schema_present": true,
-    "strict_core_route_reaches_operator_stage": false
+    "strict_core_route_reaches_operator_stage": true
   },
   "supporting_present_but_insufficient_objects": [
     "sigma_int_candidate",
@@ -120,9 +127,7 @@
     "strict_core_theta_supply_in_declared_scope",
     "strict_core_target_slot_population_in_declared_scope"
   ],
-  "missing_upstream_objects": [
-    "strict_core_operator_level_bridge_from_materialized_orientation_slice_to_A_1_pair1"
-  ],
+  "missing_upstream_objects": [],
   "blocking_frontier": {
     "B2_reduced_blocker": "axis-only internal orientation datum exists on diagonal/local and/or Shannon ord-reference lanes (O(2)->Z2 cut), but residual Z2 sign remains and kernel-alone/global QW-2191 discharge remains open",
     "T2_B1": "the_bridge_theorem_is_discharged_on_current_strict_sigma_int_lane_in_R1_scope_no_false_pass_QW_2191_remains_open",
@@ -130,8 +135,15 @@
     "C49_B1": "DISCHARGED_ON_CURRENT_REPO_STATE: strict-core theta supply is exported and the conditional schema is instantiable in declared pair1/pair2 scopes (residual Z2 sign remains explicit).",
     "C32_B2": "raw_cross_pair_overlap_scalar_route_is_formally_degenerate_under_the_strict_orthonormal_disjoint_mode_scaffold_and_thus_does_not_export_alpha_12"
   },
-  "computed": {},
-  "required_next_step": "IMPLEMENT_ONE_OF_THE_MISSING_STRICT_CORE_OBJECTS_AND_RERUN_P2_BEFORE_CLAIMING_A1_PAIR1_STRICT_CORE_REACHABILITY",
+  "computed": {
+    "a1_pair1_operator_object": "fundamental_action_reconstruction/generated/a_1_pair1_orientation_projector_operator_strict_core_v1.json",
+    "a1_pair1_operator": {
+      "object": "A_1_pair1_orientation_projector_operator_strict_core_v1",
+      "status": "actual_exported_operator__derived_only_from_sigma_int_u1__residual_z2_sign_gauge_invariant",
+      "as_of": "2026-03-15"
+    }
+  },
+  "required_next_step": "CONTINUE_UNDER_EXPLICIT_QW_2191_DISCIPLINE_AND_DO_NOT_IDENTIFY_THE_MINIMAL_OPERATOR_WITH_ANY_EXTENSION_ONLY_H_O_LANE_A1_EXT_WITHOUT_A_BRIDGE_THEOREM",
   "strict_core_promotion": false,
   "no_false_pass": true
 }

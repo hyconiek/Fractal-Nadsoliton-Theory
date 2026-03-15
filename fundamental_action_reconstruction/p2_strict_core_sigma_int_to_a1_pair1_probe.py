@@ -10,13 +10,21 @@ REPO = ROOT.parent
 GENERATED = ROOT / "generated"
 OUT_JSON = GENERATED / "p2_strict_core_sigma_int_to_a1_pair1_probe.json"
 OUT_SUMMARY = GENERATED / "p2_strict_core_sigma_int_to_a1_pair1_probe_summary.json"
+IN_A1_PAIR1_OPERATOR = GENERATED / "a_1_pair1_orientation_projector_operator_strict_core_v1.json"
 
 
 def load_json(repo_relative_path: str) -> dict[str, Any]:
     return json.loads((REPO / repo_relative_path).read_text(encoding="utf-8"))
 
+def load_json_path_if_exists(path: Path) -> dict[str, Any] | None:
+    if not path.exists():
+        return None
+    return json.loads(path.read_text(encoding="utf-8"))
+
 
 def main() -> None:
+    GENERATED.mkdir(exist_ok=True)
+
     sources = {
         "QW2191": load_json(
             "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2191_mode_index_uniqueness_obstruction_theorem_gate.json"
@@ -33,6 +41,13 @@ def main() -> None:
         "C48": load_json("fundamental_action_reconstruction/generated/c48_minimal_actual_basis_pair_export_skeleton_audit_summary.json"),
         "C49": load_json("fundamental_action_reconstruction/generated/c49_conditional_populated_instance_schema_audit_summary.json"),
     }
+
+    a1_pair1_operator = load_json_path_if_exists(IN_A1_PAIR1_OPERATOR)
+    a1_pair1_operator_present = bool(
+        a1_pair1_operator is not None
+        and a1_pair1_operator.get("object") == "A_1_pair1_orientation_projector_operator_strict_core_v1"
+        and bool(a1_pair1_operator.get("no_false_pass", False)) is True
+    )
 
     route_checks = [
         {
@@ -119,6 +134,13 @@ def main() -> None:
             "actual": sources["C49"]["findings"]["actual_theta_supply"] != "not_shown",
             "meaning": "the basis-pair conditional schema has strict-core theta supply in declared scope",
         },
+        {
+            "id": "operator_bridge_to_A1_pair1_present",
+            "pass": a1_pair1_operator_present,
+            "expected": True,
+            "actual": a1_pair1_operator_present,
+            "meaning": "a strict-core operator object on V_1 derived from the materialized orientation slice is exported (declared A_1(pair1) target in P2 scope)",
+        },
     ]
 
     route_state = {
@@ -132,7 +154,7 @@ def main() -> None:
         "basis_pair_export_skeleton_present": sources["C48"]["findings"]["minimal_export_skeleton"] == "present_partial",
         "actual_basis_pair_export_present": sources["C48"]["findings"]["actual_basis_pair_export"] != "not_shown",
         "conditional_basis_pair_population_schema_present": sources["C49"]["findings"]["conditional_populated_instance_schema"] == "present_partial",
-        "strict_core_route_reaches_operator_stage": False,
+        "strict_core_route_reaches_operator_stage": bool(a1_pair1_operator_present),
     }
 
     missing_upstream_objects: list[str] = []
@@ -152,15 +174,25 @@ def main() -> None:
         missing_upstream_objects.append(
             "populated_actual_basis_pair_export_u_1_u_2_for_current_pair_frames"
         )
-    missing_upstream_objects.append(
-        "strict_core_operator_level_bridge_from_materialized_orientation_slice_to_A_1_pair1"
-    )
+
+    if not a1_pair1_operator_present:
+        missing_upstream_objects.append(
+            "strict_core_operator_level_bridge_from_materialized_orientation_slice_to_A_1_pair1"
+        )
+
+    status = "NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_ROUTE"
+    reason = "the route reaches strict-core theta supply and basis-pair materialization in declared scope, but no strict-core operator-level export to A_1(pair1) is yet exported"
+    required_next_step = "IMPLEMENT_ONE_OF_THE_MISSING_STRICT_CORE_OBJECTS_AND_RERUN_P2_BEFORE_CLAIMING_A1_PAIR1_STRICT_CORE_REACHABILITY"
+    if not missing_upstream_objects:
+        status = "PASS_COMPUTABLE_STRICT_CORE_SIGMA_INT_TO_A1_PAIR1_OPERATOR_STAGE_DECLARED_SCOPE"
+        reason = "the route reaches strict-core theta supply, basis-pair materialization, and exports a strict-core operator object on V_1 derived from the materialized orientation slice (minimal A_1(pair1) operator stage in declared scope)"
+        required_next_step = "CONTINUE_UNDER_EXPLICIT_QW_2191_DISCIPLINE_AND_DO_NOT_IDENTIFY_THE_MINIMAL_OPERATOR_WITH_ANY_EXTENSION_ONLY_H_O_LANE_A1_EXT_WITHOUT_A_BRIDGE_THEOREM"
 
     report = {
         "stage": "P2",
         "goal": "compute_or_fail_strict_core_sigma_int_to_A1_pair1",
-        "status": "NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_ROUTE",
-        "reason": "the route reaches strict-core theta supply and basis-pair materialization in declared scope, but no strict-core operator-level export to A_1(pair1) is yet exported",
+        "status": status,
+        "reason": reason,
         "lane": "strict_core_candidate_route",
         "route_under_test": [
             "sigma_int_candidate",
@@ -189,8 +221,21 @@ def main() -> None:
             "C49_B1": sources["C49"]["frontier_after_C49"]["C49_B1"],
             "C32_B2": sources["C49"]["frontier_after_C49"]["C32_B2"],
         },
-        "computed": {},
-        "required_next_step": "IMPLEMENT_ONE_OF_THE_MISSING_STRICT_CORE_OBJECTS_AND_RERUN_P2_BEFORE_CLAIMING_A1_PAIR1_STRICT_CORE_REACHABILITY",
+        "computed": {
+            "a1_pair1_operator_object": (
+                str(IN_A1_PAIR1_OPERATOR.relative_to(REPO)) if a1_pair1_operator_present else None
+            ),
+            "a1_pair1_operator": (
+                {
+                    "object": (a1_pair1_operator or {}).get("object"),
+                    "status": (a1_pair1_operator or {}).get("status"),
+                    "as_of": (a1_pair1_operator or {}).get("as_of"),
+                }
+                if a1_pair1_operator_present
+                else None
+            ),
+        },
+        "required_next_step": required_next_step,
         "strict_core_promotion": False,
         "no_false_pass": True,
     }
