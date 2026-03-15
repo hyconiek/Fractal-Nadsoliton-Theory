@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.4  
+**Version:** 6.5.5  
 **Date:** 2026-03-15  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -29,6 +29,10 @@
 - Update (`2026-03-15`): the exported slot‑free sigma‑int theta‑pair supply (`F451/N489`) is axis‑aligned with both exported
   mode‑index assignment bases (diagonal/local `F453` and Shannon `F454`) on `pair1/pair2` up to residual `Z2` sign (audit `P456`,
   packaged by `N498`); this is an internal consistency check and does not lift residual sign to a physical convention.
+- Update (`2026-03-15`): the repo exports a sigma‑int orientation‑slice restriction artifact for the declared residual local‑diagonal
+  control pullback `M_control_residual_diag_declared = T_control^T D_local_residual T_control` (`P457`) and a **conditional**
+  value instantiation of that 2×2 restriction using the `N477` rewrite and the current strict‑derived `(vpsi,g4,g6)` provider (`P458`);
+  this remains below any host‑matching cancellation witness.
 - The sigma-int corridor theta-supply and sigma-int → residual bridge theorems introduced in Release 6.4 remain in force
   (e.g. `F451/N489`, `P451`, `F452/N490`, `N491`) and are not re-derived here.
 
@@ -65,6 +69,9 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
     closure.
 12. sigma‑int slot‑free theta‑pair axes (pair1/pair2) align with both exported mode‑index assignment bases up to residual `Z2`
     sign (audit `P456`, packaged `N498`).
+13. the declared residual local‑diagonal control pullback `M_control_residual_diag_declared` is explicitly restricted to the
+    sigma‑int orientation slice basis `(u_1,u_2)` (`P457`) and value‑instantiated under the current strict‑derived provider via the
+    conditional `N477` rewrite (`P458`), exporting a concrete 2×2 matrix while keeping host cancellation unclaimed.
 
 ## 1) One-Page Strict Status (6.5)
 
@@ -190,6 +197,10 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
 11. sondy/dashboards higieniczne zostały zaktualizowane (`P432`, `P441`, `P442`) bez promocji do globalnego domknięcia.
 12. osie theta‑pair na korytarzu sigma‑int (pair1/pair2) są zgodne z oboma wyeksportowanymi mode-index assignment (diagonal/local `F453` i Shannon `F454`)
     z dokładnością do residualnego znaku `Z2` (audyt `P456`, opakowane przez `N498`).
+13. zadeklarowany pullback kontrolny residualnego sektora diagonal/local
+    `M_control_residual_diag_declared = T_control^T D_local_residual T_control` został jawnie ograniczony do “sigma‑int orientation slice”
+    w bazie `(u_1,u_2)` (`P457`) i **warunkowo** zainstancjonowany liczbowo na aktualnym strict‑derived providerze przez przepisanie `N477` (`P458`),
+    eksportując konkretną macierz 2×2 bez roszczeń o anulację host‑matching.
 
 ## 1) Jednostronicowy status strict (6.5)
 
