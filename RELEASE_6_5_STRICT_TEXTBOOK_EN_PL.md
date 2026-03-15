@@ -74,18 +74,18 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
    `ModeIndexAssignment_shannon_element_order_reference_strict_core_v1` (`N496`, executed by `F454`, packaged by `N500`),
 10. in the declared `R1` target-slot semantics (`span{u_1,u_2}`), residual `Z2` sign flips of the representative vectors are gauge-irrelevant
     for the target slot as a span object (`N501`).
-10. the diagonal/local and Shannon mode-index assignments are aligned on all pairs up to residual `Z2` sign (audit `P455`),
-11. repo hygiene probes/dashboards were updated accordingly (`P432`, `P441`, `P442`), without any promotion to global
+11. the diagonal/local and Shannon mode-index assignments are aligned on all pairs up to residual `Z2` sign (audit `P455`),
+12. repo hygiene probes/dashboards were updated accordingly (`P432`, `P441`, `P442`), without any promotion to global
     closure.
-12. sigma‑int slot‑free theta‑pair axes (pair1/pair2) align with both exported mode‑index assignment bases up to residual `Z2`
+13. sigma‑int slot‑free theta‑pair axes (pair1/pair2) align with both exported mode‑index assignment bases up to residual `Z2`
     sign (audit `P456`, packaged `N498`).
-13. the declared residual local‑diagonal control pullback `M_control_residual_diag_declared` is explicitly restricted to the
+14. the declared residual local‑diagonal control pullback `M_control_residual_diag_declared` is explicitly restricted to the
     sigma‑int orientation slice basis `(u_1,u_2)` (`P457`) and value‑instantiated under the current strict‑derived provider via the
     conditional `N477` rewrite (`P458`), exporting a concrete 2×2 matrix while keeping host cancellation unclaimed.
-14. the full 4×4 declared residual local‑diagonal control pullback on the control basis `(c1,s1,c2,s2)` is also value‑instantiated under
+15. the full 4×4 declared residual local‑diagonal control pullback on the control basis `(c1,s1,c2,s2)` is also value‑instantiated under
     the same conditional `N477` rewrite and strict‑derived provider (`P459`), exposing `pair1`/`pair2` blocks and cross‑block couplings
     without any host‑matching claim.
-15. the strict sigma‑int → residual target‑slot bridge/export‑map object is explicitly upgraded to carry the slot‑free theta‑pair outputs and
+16. the strict sigma‑int → residual target‑slot bridge/export‑map object is explicitly upgraded to carry the slot‑free theta‑pair outputs and
     the corresponding strict‑core `R1` inhabitant instance as map outputs (`F455`, packaged by `N499`), without theta inputs and without implied selector closure
     (the `v1` export-map object remains sign-only).
 
@@ -211,18 +211,18 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
    `ModeIndexAssignment_shannon_element_order_reference_strict_core_v1` (`N496`, wykonane przez `F454`, opakowane przez `N500`),
 10. w zadeklarowanej semantyce target‑slot `R1` (`span{u_1,u_2}`) residualne flippy znaku `Z2` wektorów reprezentantów są
     gauge‑irrelewant dla target‑slot jako obiektu typu “span” (`N501`).
-10. diagonal/local i Shannon mode-index assignment są zgodne na wszystkich parach co do wyboru osi (z dokładnością do residualnego znaku) (audyt `P455`),
-11. sondy/dashboards higieniczne zostały zaktualizowane (`P432`, `P441`, `P442`) bez promocji do globalnego domknięcia.
-12. osie theta‑pair na korytarzu sigma‑int (pair1/pair2) są zgodne z oboma wyeksportowanymi mode-index assignment (diagonal/local `F453` i Shannon `F454`)
+11. diagonal/local i Shannon mode-index assignment są zgodne na wszystkich parach co do wyboru osi (z dokładnością do residualnego znaku) (audyt `P455`),
+12. sondy/dashboards higieniczne zostały zaktualizowane (`P432`, `P441`, `P442`) bez promocji do globalnego domknięcia.
+13. osie theta‑pair na korytarzu sigma‑int (pair1/pair2) są zgodne z oboma wyeksportowanymi mode-index assignment (diagonal/local `F453` i Shannon `F454`)
     z dokładnością do residualnego znaku `Z2` (audyt `P456`, opakowane przez `N498`).
-13. zadeklarowany pullback kontrolny residualnego sektora diagonal/local
+14. zadeklarowany pullback kontrolny residualnego sektora diagonal/local
     `M_control_residual_diag_declared = T_control^T D_local_residual T_control` został jawnie ograniczony do “sigma‑int orientation slice”
     w bazie `(u_1,u_2)` (`P457`) i **warunkowo** zainstancjonowany liczbowo na aktualnym strict‑derived providerze przez przepisanie `N477` (`P458`),
     eksportując konkretną macierz 2×2 bez roszczeń o anulację host‑matching.
-14. ponadto, pełna macierz 4×4 zadeklarowanego pullbacku residualnego sektora diagonal/local na bazie kontrolnej `(c1,s1,c2,s2)` została
+15. ponadto, pełna macierz 4×4 zadeklarowanego pullbacku residualnego sektora diagonal/local na bazie kontrolnej `(c1,s1,c2,s2)` została
     **warunkowo** zainstancjonowana liczbowo przez to samo przepisanie `N477` i ten sam strict‑derived provider (`P459`), ujawniając bloki
     `pair1`/`pair2` oraz sprzężenia cross‑block bez roszczeń o host‑matching.
-15. ponadto, ścisły obiekt bridge/export‑map na korytarzu sigma‑int → residual target‑slot został jawnie ulepszony do
+16. ponadto, ścisły obiekt bridge/export‑map na korytarzu sigma‑int → residual target‑slot został jawnie ulepszony do
     `Upsilon_residual_datum_sigma_int_bridge_export_map_object_v2`, dołączając wyjścia slot‑free theta‑pair oraz odpowiadającego inhabitanta
     `R1` jako outputy mapy (`F455`, opakowane przez `N499`), bez wejściowych theta i bez implikacji domknięcia selektora (`v1` pozostaje sign‑only).
 
