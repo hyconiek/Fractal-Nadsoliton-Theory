@@ -1,7 +1,7 @@
 # A6 Gauge Reconstruction
 
-Status: `A6_EXECUTED_STRICT_CORE_PARTIAL_UNIQUENESS_BLOCKER_EXPLICIT`
-As of: `2026-03-06`
+Status: `A6_UPDATED_DIAGONAL_LOCAL_MODE_INDEX_CANONICALIZATION_UP_TO_CONJUGATION_EXPORTED_GLOBAL_UNIQUENESS_STILL_OPEN_NO_FALSE_PASS`
+As of: `2026-03-15`
 
 ## Cel
 
@@ -101,6 +101,14 @@ To daje:
 To jest blocker podstawowy dla pelnego claimu:
 - "gauge structure zostala unikalnie i axiom-free wyprowadzona z jednego nadsolitonu".
 
+Aktualizacja po `N487/F453/N492/N493/N494`:
+- w strict core istnieje teraz **lane-scoped** canonicalizacja mode-index assignment na canonical local‑diagonal lane,
+  ktora redukuje continuous `O(2)` do residual `Z2` i eksportuje jawna baze,
+- a residual `Z2` sign flip nie zmienia auditow `QW-2190` (jest tylko konjugacja / konwencja bazy),
+  wiec w sensie auditow `QW-2190` embedding jest na tej lane unikalny **up to conjugation**,
+- ale `QW-2191` pozostaje prawdziwe w scope kernel‑alone i globalna fizyczna unikalnosc poza ta lane nadal nie jest
+  domknieta.
+
 ### Dodatkowe granice
 
 `A6` nie ma jeszcze:
@@ -119,7 +127,7 @@ To jest blocker podstawowy dla pelnego claimu:
 | anomaly/charge closure | `partially derived in strict core` | `QW-2189` |
 | gauge couplings `g,g',g3` | `partially derived in strict core` | `QW-2126` |
 | nonabelian action-level bridge | `partially derived in strict core` | `QW-2127` |
-| pelna fizyczna unikalnosc representation map | `blocked` | `QW-2191` |
+| pelna fizyczna unikalnosc representation map | `lane_scoped_canonicalized_up_to_conjugation_global_blocked` | `N487/F453/N494` vs `QW-2191` |
 | axiom-augmented uniqueness via selection axiom | `available but excluded from strict core` | `QW-2192/2193` |
 | direct gauge derivation from `A1-A4` alone | `unresolved` | jeszcze nie ma jawnego pakietu |
 
