@@ -27,6 +27,9 @@ payload = {
         'F464': 'lane_scoped_three_chart_selector_atlas_ingredient_with_projector_level_gluing_and_explicit_cocycle_data_exported',
         'P467': 'audit_of_three_chart_gluing_laws_and_cocycle_path_independence_on_projector_section_present',
         'N508': 'three_chart_projector_section_cocycle_packaged_as_strict_theorem (projector_level_sign_free)',
+        'F465': 'lane_scoped_five_chart_selector_atlas_ingredient_with_projector_level_gluing_and_explicit_local_cocycle_data_exported',
+        'P468': 'audit_of_five_chart_gluing_laws_and_local_cocycle_path_independence_on_projector_section_present',
+        'N509': 'five_chart_projector_section_local_cocycle_packaged_as_strict_theorem (projector_level_sign_free)',
         'C29_C30': 'only_local_projector_formulas_and_local_overlap_compatibility_laws_are_explicit',
     },
     'supports': [
@@ -38,6 +41,7 @@ payload = {
         'lane_scoped_two_chart_projector_operator_section',
         'lane_scoped_two_chart_selector_atlas_stub_with_overlap_declaration',
         'lane_scoped_three_chart_projector_section_with_cocycle_data',
+        'lane_scoped_five_chart_projector_section_with_local_cocycle_data',
     ],
     'missing': [
         'global_selector_atlas',

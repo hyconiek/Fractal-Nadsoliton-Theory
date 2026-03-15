@@ -28,6 +28,9 @@ payload = {
         "F464": "lane_scoped_pair13_pair23_chart_transport_operators_and_three_chart_projector_level_atlas_ingredient_with_cocycle_data_exported",
         "P467": "audit_of_three_chart_gluing_laws_and_cocycle_path_independence_on_projector_section_present",
         "N508": "three_chart_projector_section_cocycle_packaged_as_strict_theorem (projector_level_sign_free)",
+        "F465": "lane_scoped_additional_pair_chart_transport_operators_and_five_chart_projector_level_atlas_ingredient_with_local_cocycle_data_exported",
+        "P468": "audit_of_five_chart_gluing_laws_and_local_cocycle_path_independence_on_projector_section_present",
+        "N509": "five_chart_projector_section_local_cocycle_packaged_as_strict_theorem (projector_level_sign_free)",
         "P460": "lane_scoped_cross_block_polar_orthogonal_factor_transition_matrix_candidate_present",
     },
     "supports": [
@@ -39,6 +42,7 @@ payload = {
         "projector_level_sign_gauge_transport",
         "lane_scoped_chart_glued_projector_operator_section",
         "lane_scoped_three_chart_projector_section_with_cocycle_data",
+        "lane_scoped_five_chart_projector_section_with_local_cocycle_data",
         "lane_scoped_cross_block_polar_factor_transition_matrix_candidate",
     ],
     "missing": [

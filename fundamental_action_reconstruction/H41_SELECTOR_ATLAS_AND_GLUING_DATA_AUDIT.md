@@ -23,6 +23,9 @@ Test whether the current strict core exports any explicit selector atlas or sele
 - `F464`: exports an explicit lane-scoped **three-chart selector atlas** ingredient on `{pair1,pair2,pair3}` at projector level, including an explicit cocycle/path-independence audit for the glued projector section.
 - `P467`: audits the three-chart gluing laws and cocycle/path-independence on exported artifacts.
 - `N508`: packages the three-chart cocycle statement (projector-level, sign-free) without implying any global atlas.
+- `F465`: exports an explicit lane-scoped **five-chart selector atlas** ingredient on `{pair1..pair5}` at projector level, including explicit *local* cocycle/path-independence audits for adjacent triple overlaps on the glued projector section.
+- `P468`: audits the five-chart gluing laws and local cocycle/path-independence on exported artifacts.
+- `N509`: packages the five-chart local cocycle statements (projector-level, sign-free) without implying any global atlas.
 - `C29/C30`: only local projector formulas and local overlap compatibility laws are explicit.
 
 ## Audit target
@@ -47,6 +50,7 @@ The repository contains:
 - plus a concrete lane-scoped **two-chart glued projector operator section** on `{pair1,pair2}` (`F462`, packaged by `N507`, audited by `P466`),
 - and an explicit lane-scoped **two-chart selector atlas stub** with an overlap-domain declaration and gluing data (`F463`),
 - and now an explicit lane-scoped **three-chart** selector-atlas ingredient on `{pair1,pair2,pair3}` with projector-level gluing laws **and explicit cocycle data on the exported projector section** (`F464`, audited by `P467`, packaged by `N508`),
+- and now an explicit lane-scoped **five-chart** selector-atlas ingredient on `{pair1..pair5}` with projector-level gluing laws **and explicit local cocycle data on the exported projector section** (`F465`, audited by `P468`, packaged by `N509`),
 
 but none of these is elevated to a **global** selector atlas, global overlap-domain declaration, or global cocycle-level gluing data supporting a global assembly structure.
 

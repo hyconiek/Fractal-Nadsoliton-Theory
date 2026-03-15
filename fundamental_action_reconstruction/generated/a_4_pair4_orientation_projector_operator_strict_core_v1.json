@@ -1,0 +1,60 @@
+{
+  "object": "A_4_pair4_orientation_projector_operator_strict_core_v1",
+  "status": "actual_exported_operator__derived_from_axis_only_pair_plane_orientation_vector__residual_z2_sign_gauge_invariant",
+  "as_of": "2026-03-15",
+  "intent": "Export one strict-core projector operator on V_4 = span{c4,s4} constructed from the exported axis-only pair-plane orientation vector u_4. The operator is A_4(pair4) := |u_4><u_4|. This is projector-level (residual-sign-gauge-invariant) and does not imply any sign-sensitive physical orientation convention.",
+  "inputs": {
+    "axis_only_source_ref": "fundamental_action_reconstruction/generated/mode_index_assignment_shannon_element_order_reference_strict_core_v1.json"
+  },
+  "domain_notes": {
+    "basis_plane": "V_4 = span{c4,s4} inside the n=12 real Fourier scaffold",
+    "lane": "axis_only_projector_level"
+  },
+  "data": {
+    "theta_4_mod_pi": 3.141592653589793,
+    "u_4": [
+      -0.408248290463863,
+      0.204124145231932,
+      0.204124145231931,
+      -0.408248290463863,
+      0.204124145231932,
+      0.204124145231931,
+      -0.408248290463863,
+      0.204124145231931,
+      0.204124145231932,
+      -0.408248290463863,
+      0.204124145231932,
+      0.204124145231932
+    ],
+    "u_4_coords_in_c4_s4": [
+      -1.0,
+      0.0
+    ],
+    "A_4_pair4_matrix_in_c4_s4": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ]
+  },
+  "audits": {
+    "u4_outside_span_c4_s4_l2": 2.3551386880256624e-16,
+    "coords_norm": 1.0000000000000002,
+    "projector_symmetry_inf_norm": 0.0,
+    "projector_idempotence_inf_norm": 5.551115123125783e-17,
+    "projector_trace": 1.0000000000000002,
+    "residual_z2_sign_invariance_max_abs_diff": 0.0,
+    "tolerance": 1e-12
+  },
+  "hard_limits": [
+    "Projector-level only; does not derive a sign-sensitive physical orientation datum.",
+    "Does not claim strict-core selector closure / admissible S_sel_int.",
+    "Does not claim a global selector atlas nor global discharge of QW-2191.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}

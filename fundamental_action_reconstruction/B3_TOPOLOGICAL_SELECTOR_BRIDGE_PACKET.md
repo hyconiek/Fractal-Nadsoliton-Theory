@@ -105,6 +105,17 @@ Repo eksportuje teraz jawne, lane-scoped rozszerzenie atlas‑stub do trzech cha
 
 To nadal **nie** jest globalny atlas selektora ani globalne rozładowanie `QW-2191`; jest to jedynie kolejny ingredient gluing/cocycle na poziomie projectors (sign‑free).
 
+### 3d. Istnieje lane-scoped pięcio‑chartowa struktura `{pair1..pair5}` z jawnymi lokalnymi danymi cocycle na poziomie sekcji operatorowej (projector-level, sign‑free)
+
+Repo eksportuje teraz jawny lane-scoped atlas‑ingredient na pełnej rodzinie par Fouriera `pair_m (m=1..5)` na nośniku `n=12`:
+
+- projektory `A_m(pair_m) := |u_m><u_m|` dla `m=1..5`, gdzie `pair4/pair5` są wyprowadzone z Shannon mode‑index assignment (`F454`) (`F465`),
+- dodatkowe operatory transportu chartów w wariancie **axis-only** (`alpha mod π`) dla gluing projektorów na krawędziach i “długich” połączeniach (`F465`),
+- oraz jawne **lokalne** audyty cocycle/path‑independence dla sąsiednich trójek (1‑2‑3, 2‑3‑4, 3‑4‑5) na poziomie sklejonej sekcji projektorowej (`F465`),
+  audytowane sondą (`P468`) i opakowane jako twierdzenie strict (`N509`).
+
+To nadal pozostaje poniżej globalnego atlasu selektora na pełnym strict domain `C_v1` oraz poniżej globalnego rozładowania `QW-2191`.
+
 ### 4. Brakuje konkretnego sign-sensitive domkniecia i/lub scope extension
 
 Po powyzszych postepach brakujacy obiekt nie jest juz:
@@ -152,6 +163,7 @@ W szczegolnosci:
 - embedding audyty `QW-2190` sa conjugation-gauge dla residual sign i O(2) rotacji (np. `N493`, `N495`, audyty `P452`, `P454`),
 - na korytarzu sigma-int istnieje juz jawny lane-scoped chart-transport operator `O_12` pomiedzy `pair1↔pair2` (`F461`), sign-free na poziomie projektorowym (`N506`, audyt `P465`),
 - ponadto istnieje jawny lane-scoped trzy‑chartowy atlas/sekcja operatorowa `{pair1,pair2,pair3}` z danymi cocycle na poziomie sekcji projektorowej (`F464`, `P467`, `N508`),
+- ponadto istnieje jawny lane-scoped pięcio‑chartowy atlas/sekcja operatorowa `{pair1..pair5}` z lokalnymi danymi cocycle na poziomie sekcji projektorowej (`F465`, `P468`, `N509`),
 - osie z diagonal/local i Shannon lane sa zgodne na `n=12` (audit `P455`, packaged as `N497`).
 
 ### `B3_O5` - anti-overclaim closure test

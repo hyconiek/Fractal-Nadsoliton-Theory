@@ -24,6 +24,9 @@ Test whether the current strict core contains any global transition or gluing ob
 - `F464`: exports additional lane-scoped chart-transport operators `O_23`, `O_13` and a three-chart projector-level selector-atlas ingredient on `{pair1,pair2,pair3}` with explicit cocycle data (still lane-scoped).
 - `P467`: audits the three-chart projector-section gluing laws and cocycle/path-independence on exported artifacts.
 - `N508`: packages the three-chart projector-section cocycle statement (projector-level, sign-free) without implying any global atlas.
+- `F465`: exports additional lane-scoped chart-transport operators on `{pair3,pair4,pair5}` and a five-chart projector-level selector-atlas ingredient on `{pair1..pair5}` with explicit *local* cocycle data (still lane-scoped).
+- `P468`: audits the five-chart projector-section gluing laws and local cocycle/path-independence on exported artifacts.
+- `N509`: packages the five-chart local cocycle statements (projector-level, sign-free) without implying any global atlas.
 - `P460`: lane-scoped cross-block polar-factor transition candidate exists (from the declared control-pullback value instantiation).
 
 ## Audit target
@@ -47,6 +50,7 @@ The repository contains:
 - and now explicit **lane-scoped** chart-transport operators on the `n=12` Fourier carrier:
   - `O_12` on `{pair1,pair2}` (`F461`) with sign-gauge-safe projector transport (`N506`, audited by `P465`),
   - `O_23` and `O_13` (axis-only, projector-level) and an explicit three-chart ingredient with cocycle-level section data on `{pair1,pair2,pair3}` (`F464`, audited by `P467`, packaged by `N508`),
+  - additional axis-only transport operators and a five-chart projector-level ingredient with explicit *local* cocycle data on `{pair1..pair5}` (`F465`, audited by `P468`, packaged by `N509`),
 
 but none of these is exported as a strict-core **global** selector transition object supporting a full selector atlas / global gluing structure.
 
