@@ -1,0 +1,82 @@
+{
+  "object": "Upsilon_residual_datum_sigma_int_bridge_export_map_object_v2",
+  "status": "actual_exported_strict_core_bridge_export_map_object__theta_pair_and_r1_population",
+  "as_of": "2026-03-15",
+  "intent": "Export one upgraded strict-core sigma-int -> residual orientation datum bridge/export-map object which, on the current strict sigma-int source value, carries an explicit slot-free theta-pair construction and a corresponding strict-core R1 target-slot inhabitant instance. This does not imply strict-core selector closure or global QW-2191 discharge; it only upgrades the previously sign-only map object (F311/N422) by attaching the already exported slot-free theta supply (F451/N489) and its audited R1 target-slot population (P451) as explicit map outputs.",
+  "typed_map_shape": "E_sigma_int_to_residual_datum_bridge_export_map_object_v2 : sigma_int_strict_derived_v1 -> residual_orientation_datum_target_slot_inhabitant",
+  "domain": {
+    "sigma_int_object": "sigma_int_strict_derived_v1",
+    "value": -1,
+    "provenance": "premise_based_strict_source_upgrade (F307/N418)",
+    "gauge_quotient_safety": "discharged (F308/N419)"
+  },
+  "codomain": {
+    "target_slot": "residual_orientation_datum_target_slot (R1)",
+    "target_slot_export_packet": "fundamental_action_reconstruction/generated/r1_strict_core_residual_datum_target_slot_export_packet.json",
+    "target_slot_population_object": "R1_residual_orientation_datum_target_slot_population_strict_derived_from_sigma_int_slot_free_theta_pair_v1"
+  },
+  "selector_track_identification": {
+    "witness_object": "Chi_sigma_int_residual_datum_selector_track_identification_witness_v1",
+    "witness_status": "actual_exported_strict_core_selector_track_identification_witness__no_false_pass",
+    "QW_2191_status": "open",
+    "no_selector_closure_implied": true
+  },
+  "map_rule": {
+    "theta_pair_source_object": "ThetaPair_sigma_int_strict_selector_ingredient_o2_cut_slot_free_v1",
+    "theta_pair_source_ref": "fundamental_action_reconstruction/generated/theta_pair_sigma_int_strict_selector_ingredient_o2_cut_slot_free_v1.json",
+    "r1_population_ref": "fundamental_action_reconstruction/generated/r1_residual_orientation_datum_target_slot_population_strict_derived_from_sigma_int_slot_free_theta_pair_v1.json",
+    "construction_class_id": "T162_slot_free_sigma_int_to_theta_v1",
+    "outputs": {
+      "theta_1": 4.71238898038469,
+      "theta_2": 0.0,
+      "u_1": [
+        -7.499399432609231e-17,
+        -0.20412414523193154,
+        -0.3535533905932738,
+        -0.408248290463863,
+        -0.35355339059327373,
+        -0.20412414523193143,
+        2.4997998108697434e-17,
+        0.20412414523193145,
+        0.35355339059327373,
+        0.408248290463863,
+        0.3535533905932737,
+        0.20412414523193165
+      ],
+      "u_2": [
+        0.408248290463863,
+        0.20412414523193156,
+        -0.20412414523193143,
+        -0.408248290463863,
+        -0.2041241452319317,
+        0.20412414523193156,
+        0.408248290463863,
+        0.20412414523193173,
+        -0.2041241452319312,
+        -0.408248290463863,
+        -0.20412414523193145,
+        0.20412414523193115
+      ],
+      "span_note": "codomain is the residual orientation datum target slot span; residual Z2 sign remains a separate convention"
+    }
+  },
+  "contracts": {
+    "noncyclic_inputs": true,
+    "observer_free": true
+  },
+  "compatibility_audits": {
+    "theta_pair_inputs_sigma_int_matches_strict_sigma_int": true,
+    "theta_pair_and_r1_population_theta_match_mod_2pi": true,
+    "theta_pair_and_r1_population_u_vectors_match_max_abs_diff": {
+      "u_1": 0.0,
+      "u_2": 0.0
+    },
+    "theta_pair_and_r1_population_u_vectors_match": true
+  },
+  "hard_limits": [
+    "Does not claim admissible S_sel_int nor strict-core selector closure.",
+    "Does not claim global QW-2191 discharge beyond the declared sigma-int -> (pair1,pair2) scope.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}
