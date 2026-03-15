@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.5  
+**Version:** 6.5.6  
 **Date:** 2026-03-15  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -33,6 +33,9 @@
   control pullback `M_control_residual_diag_declared = T_control^T D_local_residual T_control` (`P457`) and a **conditional**
   value instantiation of that 2×2 restriction using the `N477` rewrite and the current strict‑derived `(vpsi,g4,g6)` provider (`P458`);
   this remains below any host‑matching cancellation witness.
+- Update (`2026-03-15`): moreover, the repo exports a **conditional** value instantiation of the full declared 4×4 residual local‑diagonal
+  control pullback on the control basis `(c1,s1,c2,s2)` using the same `N477` rewrite and strict‑derived provider (`P459`); this exposes
+  the `pair1`/`pair2` blocks and cross‑block couplings, without any promotion to host matching.
 - The sigma-int corridor theta-supply and sigma-int → residual bridge theorems introduced in Release 6.4 remain in force
   (e.g. `F451/N489`, `P451`, `F452/N490`, `N491`) and are not re-derived here.
 
@@ -72,6 +75,9 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
 13. the declared residual local‑diagonal control pullback `M_control_residual_diag_declared` is explicitly restricted to the
     sigma‑int orientation slice basis `(u_1,u_2)` (`P457`) and value‑instantiated under the current strict‑derived provider via the
     conditional `N477` rewrite (`P458`), exporting a concrete 2×2 matrix while keeping host cancellation unclaimed.
+14. the full 4×4 declared residual local‑diagonal control pullback on the control basis `(c1,s1,c2,s2)` is also value‑instantiated under
+    the same conditional `N477` rewrite and strict‑derived provider (`P459`), exposing `pair1`/`pair2` blocks and cross‑block couplings
+    without any host‑matching claim.
 
 ## 1) One-Page Strict Status (6.5)
 
@@ -201,6 +207,9 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
     `M_control_residual_diag_declared = T_control^T D_local_residual T_control` został jawnie ograniczony do “sigma‑int orientation slice”
     w bazie `(u_1,u_2)` (`P457`) i **warunkowo** zainstancjonowany liczbowo na aktualnym strict‑derived providerze przez przepisanie `N477` (`P458`),
     eksportując konkretną macierz 2×2 bez roszczeń o anulację host‑matching.
+14. ponadto, pełna macierz 4×4 zadeklarowanego pullbacku residualnego sektora diagonal/local na bazie kontrolnej `(c1,s1,c2,s2)` została
+    **warunkowo** zainstancjonowana liczbowo przez to samo przepisanie `N477` i ten sam strict‑derived provider (`P459`), ujawniając bloki
+    `pair1`/`pair2` oraz sprzężenia cross‑block bez roszczeń o host‑matching.
 
 ## 1) Jednostronicowy status strict (6.5)
 
