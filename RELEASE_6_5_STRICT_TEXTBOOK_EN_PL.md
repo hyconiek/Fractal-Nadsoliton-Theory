@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.11  
+**Version:** 6.5.12  
 **Date:** 2026-03-15  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -51,6 +51,9 @@
   selector closure, and does not discharge global `QW-2191`.
 - Update (`2026-03-15`): derived transition data `alpha_12 := (theta_2 - theta_1) mod 2π` for `pair1/pair2` is explicitly exported
   from the strict sigma-int slot-free theta-pair supply (`F457`); this is lane-scoped and does not constitute a global selector transition/gluing object.
+- Update (`2026-03-15`): probe-level control-lane transition data is also exported from the **declared residual local-diagonal control pullback**
+  value instantiation: the `pair1 -> pair2` cross-block polar orthogonal factor `Q ∈ O(2)` and its induced rotation angle `alpha_cross` (`P460`).
+  On the current instantiated matrix, `alpha_cross ≈ 0` while `alpha_12 = π/2`; these are distinct lane-scoped quantities and must not be conflated into a global gluing claim.
 - The sigma-int corridor theta-supply and sigma-int → residual bridge theorems introduced in Release 6.4 remain in force
   (e.g. `F451/N489`, `P451`, `F452/N490`, `N491`) and are not re-derived here.
 
@@ -105,6 +108,8 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
     provably gauge-irrelevant (packaged by `N502`), without promoting any sign-sensitive physical orientation datum or any global discharge.
 19. derived transition data `alpha_12 := (theta_2 - theta_1) mod 2π` for `pair1/pair2` is exported from the strict sigma-int slot-free theta-pair
     supply (`F457`), without implying a global selector transition/gluing object.
+20. probe-level control-lane transition data is also exported from the declared residual control pullback value instantiation (`P459`): the cross-block polar orthogonal factor
+    `Q ∈ O(2)` and its induced rotation angle `alpha_cross` (`P460`). On the current instantiated matrix, `alpha_cross ≈ 0` while `alpha_12 = π/2`; they are distinct lane-scoped quantities.
 
 ## 1) One-Page Strict Status (6.5)
 
@@ -251,6 +256,9 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
     dla których wykazano gauge‑irrelewantność znaku (opakowane przez `N502`), bez promocji do sign-sensitive “fizycznej orientacji”.
 19. pochodna dana przejścia `alpha_12 := (theta_2 - theta_1) mod 2π` dla `pair1/pair2` jest wyeksportowana z strict slot‑free theta‑pair na korytarzu sigma‑int (`F457`),
     bez implikowania globalnego selector transition/gluing object.
+20. dodatkowo, na poziomie sondy/control‑lane wyeksportowano dane przejścia z warunkowo zainstancjonowanego zadeklarowanego pullbacku residualnego (`P459`): czynnik ortogonalny `Q ∈ O(2)`
+    z dekompozycji polarnej cross‑blocku `pair1 -> pair2` oraz odpowiadający mu kąt rotacji `alpha_cross` (`P460`). Na aktualnej instancji liczbowej `alpha_cross ≈ 0`, podczas gdy `alpha_12 = π/2`;
+    są to różne wielkości lane‑scoped i nie wolno ich mieszać w claim o globalnym gluing.
 
 ## 1) Jednostronicowy status strict (6.5)
 

@@ -19,12 +19,14 @@ payload = {
         "C30": "local_overlap_compatibility_law_present",
         "C31": "transition_angle_source_class_present_and_lane_scoped_alpha12_exported_from_strict_theta_supply (F451/F457)",
         "F457": "lane_scoped_alpha12_transition_angle_export_present",
+        "P460": "lane_scoped_cross_block_polar_orthogonal_factor_transition_matrix_candidate_present",
     },
     "supports": [
         "local_projector_formula",
         "local_overlap_compatibility_law",
         "control_lane_transition_structure",
         "lane_scoped_transition_angle_export",
+        "lane_scoped_cross_block_polar_factor_transition_matrix_candidate",
     ],
     "missing": [
         "global_selector_transition_object_export",

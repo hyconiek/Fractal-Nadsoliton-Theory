@@ -1,7 +1,7 @@
 # H40 Global Selector Transition Object Audit
 
 Status: `PASS_PARTIAL_BLOCKED_BY_NO_GLOBAL_SELECTOR_TRANSITION_OBJECT`
-Date: `2026-03-07`
+Date: `2026-03-15`
 
 ## Purpose
 
@@ -13,7 +13,9 @@ Test whether the current strict core contains any global transition or gluing ob
 - `H39`: no global physical selector object lifting local projective pair1 representatives beyond chart locality.
 - `C29`: local projector formulas are explicit.
 - `C30`: local overlap compatibility law under orthogonal transition is explicit.
-- `C31`: a transition-angle source class exists only as a local class, not as an exported selector transition object.
+- `C31`: a transition-angle source class exists.
+- `F457`: lane-scoped `alpha_12` transition angle export exists (from strict sigma-int theta supply).
+- `P460`: lane-scoped cross-block polar-factor transition candidate exists (from the declared control-pullback value instantiation).
 
 ## Audit target
 
@@ -32,6 +34,7 @@ The repository contains:
 - local compatibility laws,
 - local projector formulas,
 - control-lane transition structures,
+- lane-scoped transition data on the sigma-int corridor (e.g. `alpha_12` and a cross-block polar-factor candidate),
 
 but none of these is exported as a strict-core global selector transition object.
 
