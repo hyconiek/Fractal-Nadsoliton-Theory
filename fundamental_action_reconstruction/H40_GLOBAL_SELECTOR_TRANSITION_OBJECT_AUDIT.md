@@ -30,6 +30,9 @@ Test whether the current strict core contains any global transition or gluing ob
 - `F466`: exports additional lane-scoped axis-only long-edge chart-transport operators (`O_14`, `O_15`, `O_25`) and upgrades the five-chart ingredient on `{pair1..pair5}` to explicit **full triple** cocycle/path-independence audit data (still lane-scoped).
 - `P469`: audits the five-chart projector-section gluing laws and full triple cocycle/path-independence on exported artifacts.
 - `N510`: packages the five-chart full triple cocycle statements (projector-level, sign-free) without implying any global atlas.
+- `F467`: exports a lane-scoped lift of the `{pair1..pair5}` atlas transport to **oriented** `α mod 2π` at vector level as a tracked gauge/convention layer (sign-tracked), induced by the exported representative vectors `u_1..u_5` (still lane-scoped; not a physical sign datum).
+- `P470`: audits orthogonality/involution, vector transport `O_ij u_i = u_j`, and full triple cocycle/path-independence at vector level for the `F467` oriented transport lift.
+- `N511`: packages the `F467` oriented transport lift as a convention-layer theorem (no physical sign claim; no global atlas).
 - `P460`: lane-scoped cross-block polar-factor transition candidate exists (from the declared control-pullback value instantiation).
 
 ## Audit target
@@ -55,6 +58,7 @@ The repository contains:
   - `O_23` and `O_13` (axis-only, projector-level) and an explicit three-chart ingredient with cocycle-level section data on `{pair1,pair2,pair3}` (`F464`, audited by `P467`, packaged by `N508`),
   - additional axis-only transport operators and a five-chart projector-level ingredient with explicit *local* cocycle data on `{pair1..pair5}` (`F465`, audited by `P468`, packaged by `N509`),
   - additional axis-only long-edge transport operators (`O_14`, `O_15`, `O_25`) and an upgraded five-chart ingredient with explicit **full triple** cocycle data on `{pair1..pair5}` (`F466`, audited by `P469`, packaged by `N510`),
+  - and now a lane-scoped **oriented** transport (`α mod 2π`) lift at vector level as a tracked gauge/convention layer on `{pair1..pair5}` (`F467`, audited by `P470`, packaged by `N511`),
 
 but none of these is exported as a strict-core **global** selector transition object supporting a full selector atlas / global gluing structure.
 

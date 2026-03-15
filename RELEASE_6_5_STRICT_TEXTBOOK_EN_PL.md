@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.26  
+**Version:** 6.5.27  
 **Date:** 2026-03-15  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -68,6 +68,9 @@
 - Update (`2026-03-15`): the repo exports additional lane-scoped axis-only long-edge chart-transport operators (`O_14`, `O_15`, `O_25`) and an upgraded
   five-chart `{pair1..pair5}` projector-level selector-atlas ingredient with explicit cocycle/path-independence audit data for **all** triple overlaps (`F466`),
   audited by `P469` and packaged as a strict theorem (`N510`). This remains lane-scoped, does not export a global selector atlas, and does not discharge global `QW-2191`.
+- Update (`2026-03-15`): the repo exports a lane-scoped **oriented transport (α mod 2π) lift** on `{pair1..pair5}` induced by the exported representative vectors
+  `u_1..u_5` as a **tracked gauge/convention layer** (sign-tracked), with full triple cocycle/path-independence audited at vector level (`F467`, audited by `P470`,
+  packaged by `N511`). This does not lift residual sign to a physical datum, does not export a global selector atlas, and does not discharge global `QW-2191`.
 - Update (`2026-03-15`): probe-level control-lane transition data is also exported from the **declared residual local-diagonal control pullback**
   value instantiation: the `pair1 -> pair2` cross-block polar orthogonal factor `Q ∈ O(2)` and its induced rotation angle `alpha_cross` (`P460`).
   On the current instantiated matrix, `alpha_cross ≈ 0` while `alpha_12 = π/2`; these are distinct lane-scoped quantities and must not be conflated into a global gluing claim.
@@ -163,6 +166,10 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
 26. the repo exports additional lane-scoped axis-only long-edge chart-transport operators (`O_14`, `O_15`, `O_25`) and upgrades the five-chart `{pair1..pair5}`
     projector-level selector-atlas ingredient to explicit cocycle/path-independence audit data for **all** triple overlaps (`F466`), audited by `P469` and packaged
     as a strict theorem (`N510`). This remains lane-scoped and does not export a global selector atlas nor discharge global `QW-2191`.
+27. the repo exports a lane-scoped **oriented transport (α mod 2π) lift** at vector level on `{pair1..pair5}`, induced by the currently exported representative
+    vectors `u_1..u_5`, explicitly tracked as a gauge/convention layer (sign-tracked) (`F467`). A dedicated probe audits vector transport and full triple
+    cocycle/path-independence on the exported instance (`P470`), and a theorem packages the statement as a convention-layer result (`N511`). This remains lane-scoped
+    and does not export a global selector atlas nor discharge global `QW-2191`.
 
 ## 1) One-Page Strict Status (6.5)
 
@@ -280,6 +287,11 @@ Update: continuing the same minimal `B3` strategy, the repo exports additional l
 the five-chart `{pair1..pair5}` projector-level atlas ingredient to explicit cocycle/path-independence audit data for **all** triple overlaps (`F466`), audited by `P469` and packaged
 as a strict theorem (`N510`). This remains lane-scoped and does not export a global selector atlas nor discharge global `QW-2191`.
 
+Update: continuing the same minimal `B3` strategy, the repo exports a lane-scoped **oriented transport (α mod 2π) lift** at vector level on `{pair1..pair5}`, induced by the
+currently exported representative vectors `u_1..u_5`, explicitly tracked as a gauge/convention layer (sign-tracked) (`F467`). A dedicated probe audits vector transport and full
+triple cocycle/path-independence on the exported instance (`P470`), and a theorem packages the statement as a convention-layer result (`N511`). This does not lift residual sign to a
+physical datum, does not export a global selector atlas, and does not discharge global `QW-2191`.
+
 Update: the strict Shannon element‑order reference lane now provides one explicit internal symmetry-breaking ingredient
 on the full `n=12` Fourier scaffold (via `F454`), but this is still below strict-core selector closure and does not
 constitute a global `QW-2191` discharge.
@@ -381,6 +393,10 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
 33. ponadto, repo eksportuje dodatkowe operatory transportu chartów w wariancie **axis-only** na brakujących “długich” krawędziach (`O_14`, `O_15`, `O_25`)
     oraz upgrade’uje pięcio‑chartowy składnik `{pair1..pair5}` do jawnych danych cocycle/path‑independence dla **wszystkich** trójek na poziomie sklejonej sekcji projektorowej (`F466`),
     audytowane sondą (`P469`) i opakowane jako twierdzenie strict (`N510`). Jest to nadal lane‑scoped, nie jest globalnym atlasem selektora i nie rozładowuje globalnie `QW-2191`.
+34. ponadto, repo eksportuje jawny lane-scoped lift transportu chartów do **oriented** `α mod 2π` na poziomie wektorów reprezentantów na `{pair1..pair5}`,
+    indukowany przez aktualnie wyeksportowane `u_1..u_5` i jawnie śledzony jako warstwa gauge/konwencji (sign‑tracked) (`F467`). Sonda `P470` audytuje transport
+    wektorów i pełne relacje trójkowe cocycle/path‑independence na wyeksportowanej instancji, a `N511` pakuje to jako twierdzenie strict w dyscyplinie “convention layer”.
+    Nie jest to promocja do fizycznego datumu znaku, nie jest to globalny atlas selektora i nie rozładowuje globalnie `QW-2191`.
 
 ## 1) Jednostronicowy status strict (6.5)
 
@@ -439,6 +455,11 @@ audytowane sondą (`P468`) i opakowane jako twierdzenie strict (`N509`). To nada
 Update: jako kolejny, najwęższy krok `B3` repo eksportuje teraz dodatkowe operatory transportu **axis-only** na brakujących “długich” krawędziach (`O_14`, `O_15`, `O_25`)
 oraz upgrade’uje pięcio‑chartowy składnik `{pair1..pair5}` do jawnych danych cocycle/path‑independence dla **wszystkich** trójek na poziomie sklejonej sekcji projektorowej (`F466`),
 audytowane sondą (`P469`) i opakowane jako twierdzenie strict (`N510`). To nadal nie jest globalny atlas selektora i nie rozładowuje globalnie `QW-2191`.
+
+Update: jako kolejny, najwęższy krok `B3` repo eksportuje teraz jawny lane-scoped lift transportu chartów do **oriented** `α mod 2π` na poziomie wektorów reprezentantów
+na `{pair1..pair5}`, indukowany przez aktualnie wyeksportowane `u_1..u_5` i jawnie śledzony jako warstwa gauge/konwencji (sign‑tracked) (`F467`).
+Sonda `P470` audytuje transport wektorów i pełne relacje trójkowe cocycle/path‑independence na wyeksportowanej instancji, a `N511` pakuje to jako twierdzenie strict
+w dyscyplinie “convention layer”. Nie jest to promocja do fizycznej orientacji znaku, nie jest to globalny atlas selektora i nie rozładowuje globalnie `QW-2191`.
 
 Update: pas strict Shannon “element‑order reference” dostarcza teraz jawny wewnętrzny składnik symetrii‑łamacza na pełnym
 scaffoldu Fouriera `n=12` (przez `F454`), ale nadal jest to poniżej strict-core selector closure i nie stanowi globalnego

@@ -1,6 +1,6 @@
 # H41 Selector Atlas And Gluing Data Audit
 
-Status: `PASS_PARTIAL_LANE_SCOPED_ATLAS_WITH_LOCAL_COCYCLE_PRESENT_GLOBAL_ATLAS_STILL_MISSING`
+Status: `PASS_PARTIAL_LANE_SCOPED_ATLAS_WITH_FULL_COCYCLE_PRESENT_GLOBAL_ATLAS_STILL_MISSING`
 Date: `2026-03-15`
 
 ## Purpose
@@ -29,6 +29,9 @@ Test whether the current strict core exports any explicit selector atlas or sele
 - `F466`: exports additional lane-scoped axis-only long-edge chart-transport operators (`O_14`, `O_15`, `O_25`) and upgrades the five-chart selector-atlas ingredient on `{pair1..pair5}` to explicit **full triple** cocycle/path-independence audit data on the glued projector section.
 - `P469`: audits the five-chart gluing laws and full triple cocycle/path-independence on exported artifacts.
 - `N510`: packages the five-chart full triple cocycle statements (projector-level, sign-free) without implying any global atlas.
+- `F467`: exports an explicit lane-scoped **oriented transport (α mod 2π) lift** of the `{pair1..pair5}` atlas at vector level as a tracked gauge/convention layer (sign-tracked), induced by the exported representative vectors `u_1..u_5`.
+- `P470`: audits the `F467` oriented transport lift (orthogonality/involution, vector transport, and full triple cocycle/path-independence at vector level).
+- `N511`: packages the oriented transport lift as a convention-layer theorem (no physical sign claim; no global atlas).
 - `C29/C30`: only local projector formulas and local overlap compatibility laws are explicit.
 
 ## Audit target
@@ -55,6 +58,7 @@ The repository contains:
 - and now an explicit lane-scoped **three-chart** selector-atlas ingredient on `{pair1,pair2,pair3}` with projector-level gluing laws **and explicit cocycle data on the exported projector section** (`F464`, audited by `P467`, packaged by `N508`),
 - and now an explicit lane-scoped **five-chart** selector-atlas ingredient on `{pair1..pair5}` with projector-level gluing laws **and explicit local cocycle data on the exported projector section** (`F465`, audited by `P468`, packaged by `N509`),
 - and now an upgraded explicit lane-scoped **five-chart** selector-atlas ingredient on `{pair1..pair5}` with projector-level gluing laws **and explicit full triple cocycle data on the exported projector section** (`F466`, audited by `P469`, packaged by `N510`),
+- and now an explicit lane-scoped **oriented transport (α mod 2π) lift** at vector level on `{pair1..pair5}` as a tracked gauge/convention layer (`F467`, audited by `P470`, packaged by `N511`),
 
 but none of these is elevated to a **global** selector atlas, global overlap-domain declaration, or global cocycle-level gluing data supporting a global assembly structure.
 

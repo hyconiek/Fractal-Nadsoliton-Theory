@@ -51,6 +51,10 @@ do:
    - blocker reduced to internal selector question.
 12. `B2`
    - axis-only internal orientation datum exists on two lanes; residual sign + global scope remain open.
+13. `F467` + `P470` + `N511`
+   - jawny, lane-scoped lift transportu chartów do **oriented** `α mod 2π` na `{pair1..pair5}` jako śledzona warstwa gauge/konwencji (sign‑tracked),
+     indukowana przez wyeksportowane reprezentanty `u_1..u_5`, z pełnymi danymi cocycle na poziomie wektorów (bez promocji do fizycznego datumu znaku,
+     bez globalnego atlasu i bez rozładowania `QW-2191`).
 
 ### Heuristic support only
 
@@ -127,6 +131,22 @@ Repo kontynuuje ten sam, najwęższy ruch w dyscyplinie `QW-2191`, ale bez podno
 Sonda `P469` audytuje pełny zestaw relacji trójkowych na wyeksportowanych artefaktach, a `N510` pakuje to jako twierdzenie strict
 (wciąż lane‑scoped, wciąż poniżej globalnego atlasu selektora i poniżej globalnego rozładowania `QW-2191`).
 
+### 3f. Upgrade: pięcio‑chartowa struktura `{pair1..pair5}` ma teraz jawny lift transportu do oriented `α mod 2π` na poziomie wektorów (tracked convention layer)
+
+Repo wykonuje kolejny, najwęższy i uczciwy ruch: **nie** podnosi residualnego znaku do fizycznej orientacji, ale eksportuje jawnie
+śledzoną warstwę konwencji umożliwiającą pracę na wektorach reprezentantów (a nie tylko na projektorach) w spójnej konwencji `α mod 2π`:
+
+- `F467` eksportuje jawny lift transportu chartów z poziomu projektorów (axis-only, `α mod π`) do oriented `α mod 2π`,
+  indukowany przez aktualnie wyeksportowane wektory reprezentantów `u_1..u_5` na `{pair1..pair5}` (sign‑tracked convention),
+- wraz z jawną rodziną kątów `θ_m mod 2π` oraz rodziną operatorów transportu `O_ij` (dla wszystkich krawędzi na `{pair1..pair5}`),
+- wraz z jawną wektorową sekcją “chart‑glued” i pełnymi danymi cocycle/path‑independence na poziomie wektorów,
+- `P470` audytuje ortogonalność/inwolucję, transport wektorów `O_ij u_i = u_j`, oraz pełny zestaw relacji trójkowych cocycle/path‑independence
+  na wyeksportowanej sekcji wektorowej,
+- `N511` pakuje to jako twierdzenie strict w dyscyplinie “tracked convention layer”: oriented lift jest warstwą gauge/konwencji i **nie** stanowi
+  fizycznego, sign-sensitive datumu orientacji.
+
+To nadal pozostaje poniżej globalnego atlasu selektora na pełnym strict domain `C_v1` oraz poniżej globalnego rozładowania `QW-2191`.
+
 ### 4. Brakuje konkretnego sign-sensitive domkniecia i/lub scope extension
 
 Po powyzszych postepach brakujacy obiekt nie jest juz:
@@ -176,6 +196,7 @@ W szczegolnosci:
 - ponadto istnieje jawny lane-scoped trzy‑chartowy atlas/sekcja operatorowa `{pair1,pair2,pair3}` z danymi cocycle na poziomie sekcji projektorowej (`F464`, `P467`, `N508`),
 - ponadto istnieje jawny lane-scoped pięcio‑chartowy atlas/sekcja operatorowa `{pair1..pair5}` z lokalnymi danymi cocycle na poziomie sekcji projektorowej (`F465`, `P468`, `N509`),
 - ponadto istnieje jawny lane-scoped pięcio‑chartowy atlas/sekcja operatorowa `{pair1..pair5}` z pełnymi danymi cocycle dla wszystkich trójek na poziomie sekcji projektorowej (`F466`, `P469`, `N510`),
+- ponadto istnieje jawny lane-scoped lift do oriented `α mod 2π` na poziomie wektorów reprezentantów (tracked convention layer; full triple cocycle na wektorach) (`F467`, `P470`, `N511`),
 - osie z diagonal/local i Shannon lane sa zgodne na `n=12` (audit `P455`, packaged as `N497`).
 
 ### `B3_O5` - anti-overclaim closure test
@@ -208,6 +229,7 @@ Pokazac, ze nawet po zbudowaniu `B3_O1..B3_O4` wolno claimowac tylko to, co rzec
 | axis-only internal orientation datum (diagonal/local) | `exported` | `N487` + `F453/N492` |
 | axis-only internal orientation datum (Shannon ord reference) | `exported` | `N480/N488/N496` + `F454` |
 | diagonal vs Shannon axis alignment | `value_instantiated` | `P455` / `N497` |
+| oriented transport `α mod 2π` (tracked convention layer) | `exported_lane_scoped_convention_layer` | `F467` / `P470` / `N511` |
 | sign-sensitive physical orientation datum | `not_derived` | nadal open |
 | global axiom-free uniqueness | `open` | `QW-2191` pozostaje |
 
@@ -232,3 +254,5 @@ Naturalnym kolejnym ruchem jest **B3‑continuation**:
    - albo wyeksportowac strict sign-sensitive datum (lifting residual `Z2`) bez wprowadzania marked-direction slot,
 2. jesli downstream nie wymaga znaku:
    - jawnie zamrozic residual sign jako gauge/convention layer i kontynuowac strict-only ToE closure pod `QW-2191` dyscyplina.
+   - `F467/P470/N511` dostarcza juz jawny lift transportu do oriented `α mod 2π` jako **warstwę konwencji** (sign‑tracked) na poziomie wektorów
+     w zadeklarowanym lane-scoped zakresie `{pair1..pair5}`; nie wolno jednak promować tego do fizycznego datumu znaku ani do globalnego atlasu.
