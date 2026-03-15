@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.12  
+**Version:** 6.5.13  
 **Date:** 2026-03-15  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -54,6 +54,9 @@
 - Update (`2026-03-15`): probe-level control-lane transition data is also exported from the **declared residual local-diagonal control pullback**
   value instantiation: the `pair1 -> pair2` cross-block polar orthogonal factor `Q ∈ O(2)` and its induced rotation angle `alpha_cross` (`P460`).
   On the current instantiated matrix, `alpha_cross ≈ 0` while `alpha_12 = π/2`; these are distinct lane-scoped quantities and must not be conflated into a global gluing claim.
+- Update (`2026-03-15`): a **probe-only** `Z_n` scope-extension scan of the Shannon element‑order reference defect
+  `F_{2m}(ord_{Z_n})` indicates nonzero defects (hence `O(2) -> Z2` axis cuts) for all Fourier-degenerate pairs on each scanned `n ∈ {6,8,10,12,14,16,18,20,24}` (`P461`).
+  This does **not** promote any `n≠12` result to theorem level and does **not** export any strict mode-index assignment object beyond the declared `n=12` scope.
 - The sigma-int corridor theta-supply and sigma-int → residual bridge theorems introduced in Release 6.4 remain in force
   (e.g. `F451/N489`, `P451`, `F452/N490`, `N491`) and are not re-derived here.
 
@@ -209,6 +212,11 @@ Update: the strict Shannon element‑order reference lane now provides one expli
 on the full `n=12` Fourier scaffold (via `F454`), but this is still below strict-core selector closure and does not
 constitute a global `QW-2191` discharge.
 
+Update: a probe-only `Z_n` scope-extension scan (`P461`) indicates that the same simple defect criterion
+`F_{2m}(ord_{Z_n}) ≠ 0` holds on each scanned `n ∈ {6,8,10,12,14,16,18,20,24}` for all Fourier-degenerate pairs.
+This is a computational scope check only; it does not export any strict `n≠12` mode-index assignment object and does not
+upgrade any global discharge claim.
+
 ---
 
 ## WERSJA POLSKA
@@ -259,6 +267,9 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
 20. dodatkowo, na poziomie sondy/control‑lane wyeksportowano dane przejścia z warunkowo zainstancjonowanego zadeklarowanego pullbacku residualnego (`P459`): czynnik ortogonalny `Q ∈ O(2)`
     z dekompozycji polarnej cross‑blocku `pair1 -> pair2` oraz odpowiadający mu kąt rotacji `alpha_cross` (`P460`). Na aktualnej instancji liczbowej `alpha_cross ≈ 0`, podczas gdy `alpha_12 = π/2`;
     są to różne wielkości lane‑scoped i nie wolno ich mieszać w claim o globalnym gluing.
+21. dodatkowo, sonda **probe-only** sprawdzająca rozszerzenie scope dla Shannon “element‑order reference” pokazuje, że dla zeskanowanych nośników
+    `n ∈ {6,8,10,12,14,16,18,20,24}` defekty `F_{2m}(ord_{Z_n})` są niezerowe na wszystkich parach Fouriera (czyli kryterium `O(2) -> Z2` “axis cut” działa na każdym z tych `n`) (`P461`).
+    Nie jest to promocja do theorem-level dla `n≠12` i nie jest to eksport strict mode-index assignment poza zadeklarowanym zakresem `n=12`.
 
 ## 1) Jednostronicowy status strict (6.5)
 
@@ -299,3 +310,7 @@ Dashboards teraz rekomendują `B3` (kontynuacja topological selector bridge) jak
 Update: pas strict Shannon “element‑order reference” dostarcza teraz jawny wewnętrzny składnik symetrii‑łamacza na pełnym
 scaffoldu Fouriera `n=12` (przez `F454`), ale nadal jest to poniżej strict-core selector closure i nie stanowi globalnego
 rozładowania `QW-2191`.
+
+Update: sonda scope-extension `Z_n` (`P461`) wskazuje, że proste kryterium defektu `F_{2m}(ord_{Z_n}) ≠ 0` zachodzi na wszystkich parach
+Fouriera dla każdego z zeskanowanych `n ∈ {6,8,10,12,14,16,18,20,24}`. Jest to jednak wyłącznie probe-level check bez promocji do theorem-level
+poza `n=12` i bez eksportu strict mode-index assignment dla `n≠12`.
