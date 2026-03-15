@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.3  
+**Version:** 6.5.4  
 **Date:** 2026-03-15  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -26,6 +26,9 @@
 - Update (`2026-03-15`): the two independently exported mode-index assignment bases (diagonal/local vs Shannon ord-reference)
   are aligned on all `pair_m (m=1..5)` up to residual `Z2` sign (audit `P455`); this is a hygiene consistency check and
   does not promote any global discharge.
+- Update (`2026-03-15`): the exported slot‑free sigma‑int theta‑pair supply (`F451/N489`) is axis‑aligned with both exported
+  mode‑index assignment bases (diagonal/local `F453` and Shannon `F454`) on `pair1/pair2` up to residual `Z2` sign (audit `P456`,
+  packaged by `N498`); this is an internal consistency check and does not lift residual sign to a physical convention.
 - The sigma-int corridor theta-supply and sigma-int → residual bridge theorems introduced in Release 6.4 remain in force
   (e.g. `F451/N489`, `P451`, `F452/N490`, `N491`) and are not re-derived here.
 
@@ -60,6 +63,8 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
 10. the diagonal/local and Shannon mode-index assignments are aligned on all pairs up to residual `Z2` sign (audit `P455`),
 11. repo hygiene probes/dashboards were updated accordingly (`P432`, `P441`, `P442`), without any promotion to global
     closure.
+12. sigma‑int slot‑free theta‑pair axes (pair1/pair2) align with both exported mode‑index assignment bases up to residual `Z2`
+    sign (audit `P456`, packaged `N498`).
 
 ## 1) One-Page Strict Status (6.5)
 

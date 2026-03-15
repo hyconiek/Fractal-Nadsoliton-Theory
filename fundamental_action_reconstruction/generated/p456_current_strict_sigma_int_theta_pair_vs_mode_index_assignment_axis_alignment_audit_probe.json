@@ -1,0 +1,156 @@
+{
+  "generated_utc": "2026-03-15T15:59:53.931775+00:00",
+  "stage": "P456",
+  "goal": "audit_axis_alignment_between_the_exported_slot_free_sigma_int_theta_pair_source_(pair1/pair2) and_the_exported_mode_index_assignment_basis_objects_(diagonal_local_and_shannon_ord_reference), and_confirm_span_semantics_sign_invariance_for_R1",
+  "inputs": {
+    "theta_pair_sigma_int": "fundamental_action_reconstruction/generated/theta_pair_sigma_int_strict_selector_ingredient_o2_cut_slot_free_v1.json",
+    "mode_index_assignment_diagonal_local": "fundamental_action_reconstruction/generated/mode_index_assignment_canonical_local_diagonal_strict_derived_v1.json",
+    "mode_index_assignment_shannon_ord_reference": "fundamental_action_reconstruction/generated/mode_index_assignment_shannon_element_order_reference_strict_core_v1.json"
+  },
+  "records": {
+    "diagonal_local": {
+      "pair1": {
+        "abs_dot_u_plus": 0.0,
+        "abs_dot_u_minus": 1.0,
+        "best_match": "u_minus",
+        "best_abs_dot": 1.0,
+        "cross_abs_dot": 0.0
+      },
+      "pair2": {
+        "abs_dot_u_plus": 6.800116025829084e-16,
+        "abs_dot_u_minus": 0.9999999999999998,
+        "best_match": "u_minus",
+        "best_abs_dot": 0.9999999999999998,
+        "cross_abs_dot": 6.800116025829084e-16
+      }
+    },
+    "shannon_ord_reference": {
+      "pair1": {
+        "abs_dot_u_plus": 8.326672684688674e-17,
+        "abs_dot_u_minus": 1.0,
+        "best_match": "u_minus",
+        "best_abs_dot": 1.0,
+        "cross_abs_dot": 8.326672684688674e-17
+      },
+      "pair2": {
+        "abs_dot_u_plus": 6.800116025829084e-16,
+        "abs_dot_u_minus": 0.9999999999999998,
+        "best_match": "u_minus",
+        "best_abs_dot": 0.9999999999999998,
+        "cross_abs_dot": 6.800116025829084e-16
+      }
+    }
+  },
+  "audits": {
+    "u1_norm_residual": 0.0,
+    "u2_norm_residual": 1.1102230246251565e-16,
+    "u1_dot_u2": 1.5959455978986625e-16,
+    "max_projector_sign_dev": 0.0,
+    "tolerance": 1e-12
+  },
+  "checks": [
+    {
+      "id": "sigma_int_theta_pair_vectors_unit_norm",
+      "pass": true,
+      "expected": "norm residual <= 1e-12",
+      "actual": {
+        "u1_norm_residual": 0.0,
+        "u2_norm_residual": 1.1102230246251565e-16
+      },
+      "meaning": "u_1, u_2 exported by the sigma-int theta-pair artifact are unit vectors (numerical tolerance)"
+    },
+    {
+      "id": "sigma_int_theta_pair_vectors_orthogonal",
+      "pass": true,
+      "expected": "|dot| <= 1e-12",
+      "actual": {
+        "u1_dot_u2": 1.5959455978986625e-16
+      },
+      "meaning": "u_1 \u27c2 u_2 as required by the R1 target-slot span semantics (numerical tolerance)"
+    },
+    {
+      "id": "r1_span_projector_invariant_under_sign_flips",
+      "pass": true,
+      "expected": "<= 1e-12",
+      "actual": {
+        "max_projector_sign_dev": 0.0
+      },
+      "meaning": "the R1 target-slot object class depends only on span{u_1,u_2}, hence its projector is invariant under residual Z2 sign flips"
+    },
+    {
+      "id": "axis_alignment_diagonal_local_pair1",
+      "pass": true,
+      "expected": {
+        "best_abs_dot": ">= 1",
+        "cross_abs_dot": "<= 1e-12"
+      },
+      "actual": {
+        "abs_dot_u_plus": 0.0,
+        "abs_dot_u_minus": 1.0,
+        "best_match": "u_minus",
+        "best_abs_dot": 1.0,
+        "cross_abs_dot": 0.0
+      },
+      "meaning": "sigma-int theta-pair axis aligns with one of the two exported lane basis axes up to residual Z2 sign"
+    },
+    {
+      "id": "axis_alignment_diagonal_local_pair2",
+      "pass": true,
+      "expected": {
+        "best_abs_dot": ">= 1",
+        "cross_abs_dot": "<= 1e-12"
+      },
+      "actual": {
+        "abs_dot_u_plus": 6.800116025829084e-16,
+        "abs_dot_u_minus": 0.9999999999999998,
+        "best_match": "u_minus",
+        "best_abs_dot": 0.9999999999999998,
+        "cross_abs_dot": 6.800116025829084e-16
+      },
+      "meaning": "sigma-int theta-pair axis aligns with one of the two exported lane basis axes up to residual Z2 sign"
+    },
+    {
+      "id": "axis_alignment_shannon_ord_reference_pair1",
+      "pass": true,
+      "expected": {
+        "best_abs_dot": ">= 1",
+        "cross_abs_dot": "<= 1e-12"
+      },
+      "actual": {
+        "abs_dot_u_plus": 8.326672684688674e-17,
+        "abs_dot_u_minus": 1.0,
+        "best_match": "u_minus",
+        "best_abs_dot": 1.0,
+        "cross_abs_dot": 8.326672684688674e-17
+      },
+      "meaning": "sigma-int theta-pair axis aligns with one of the two exported lane basis axes up to residual Z2 sign"
+    },
+    {
+      "id": "axis_alignment_shannon_ord_reference_pair2",
+      "pass": true,
+      "expected": {
+        "best_abs_dot": ">= 1",
+        "cross_abs_dot": "<= 1e-12"
+      },
+      "actual": {
+        "abs_dot_u_plus": 6.800116025829084e-16,
+        "abs_dot_u_minus": 0.9999999999999998,
+        "best_match": "u_minus",
+        "best_abs_dot": 0.9999999999999998,
+        "cross_abs_dot": 6.800116025829084e-16
+      },
+      "meaning": "sigma-int theta-pair axis aligns with one of the two exported lane basis axes up to residual Z2 sign"
+    }
+  ],
+  "verdict": {
+    "audits_pass": true,
+    "statement": "On the current exported strict objects, the sigma-int slot-free theta-pair axes (pair1/pair2) align with the exported mode-index assignment axes on both the diagonal/local lane and the Shannon ord-reference lane up to residual Z2 sign. In addition, the R1 target-slot span projector is invariant under sign flips. This is an internal consistency audit and does not promote any global closure claim."
+  },
+  "hard_limits": [
+    "Does not claim strict-core selector closure / admissible S_sel_int.",
+    "Does not claim global discharge of QW-2191 (kernel-alone obstruction remains true).",
+    "Does not claim sign-sensitive physical orientation datum (only span semantics and axis alignment up to sign).",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}
