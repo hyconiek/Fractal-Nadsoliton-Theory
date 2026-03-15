@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.15  
+**Version:** 6.5.16  
 **Date:** 2026-03-15  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -60,6 +60,8 @@
 - Update (`2026-03-15`): moreover, one cautious follow-up probe exports an explicit **probe-level** mode-index assignment *candidate*
   on `Z_24` induced by the same defect-angle rule (including numeric basis vectors `u_{m,±}` on each `pair_m`) (`P462`).
   This remains outside theorem-level scope extension and does not promote `n=24` into the `QW-2190` physical scaffold.
+- Update (`2026-03-15`): a minimal typed `Z_24` carrier + regular action primitive is exported as strict infrastructure for cautious scope-extension work
+  (`F458`: `I_24_v1`, `Z_24_v1`, `tau_Z24_v1`), without any physical identification with the strict `n=12` scaffolds.
 - The sigma-int corridor theta-supply and sigma-int → residual bridge theorems introduced in Release 6.4 remain in force
   (e.g. `F451/N489`, `P451`, `F452/N490`, `N491`) and are not re-derived here.
 
@@ -280,6 +282,8 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
 22. ponadto, jako ostrożny follow-up, wyeksportowano jawny **probe-level** kandydat mode-index assignment na `Z_24`
     (numeryczne wektory bazowe `u_{m,±}` na każdej parze Fouriera) indukowany przez tę samą regułę kąta defektu (`P462`).
     To nadal nie jest theorem-level scope extension i nie promuje `n=24` do fizycznego scaffoldu `QW-2190`.
+23. ponadto, wyeksportowano minimalną typed infrastrukturę `Z_24` (nośnik + działanie regularne) jako podparcie dla ostrożnych prac scope-extension
+    (`F458`: `I_24_v1`, `Z_24_v1`, `tau_Z24_v1`), bez jakiejkolwiek identyfikacji fizycznej z nośnikiem strict `n=12`.
 
 ## 1) Jednostronicowy status strict (6.5)
 
