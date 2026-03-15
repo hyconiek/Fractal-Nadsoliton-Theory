@@ -1,0 +1,236 @@
+{
+  "object": "O12_pair1_pair2_selector_chart_transport_operator_strict_derived_from_sigma_int_alpha12_v1",
+  "stage": "F461",
+  "status": "actual_exported_lane_scoped_pair_chart_transport_operator__sigma_int_corridor_pair1_pair2__no_false_pass",
+  "as_of": "2026-03-15",
+  "generated_utc": "2026-03-15T20:59:24.351766+00:00",
+  "goal": "export_an_explicit_lane_scoped_pair1_pair2_selector_chart_transport_operator_on_n12_fourier_carrier_derived_only_from_sigma_int_theta_pair_transition_angle_alpha12",
+  "scope": {
+    "n": 12,
+    "charts": [
+      "pair1",
+      "pair2"
+    ],
+    "lane": "sigma_int_corridor",
+    "global_selector_atlas": false
+  },
+  "inputs": {
+    "alpha12_object_ref": "fundamental_action_reconstruction/generated/alpha12_pair1_pair2_transition_angle_strict_derived_from_sigma_int_slot_free_theta_pair_v1.json",
+    "theta_pair_object_ref": "fundamental_action_reconstruction/generated/theta_pair_sigma_int_strict_selector_ingredient_o2_cut_slot_free_v1.json",
+    "sigma_int": -1,
+    "theta_1": 4.71238898038469,
+    "theta_2": 0.0,
+    "note": "Uses the declared real Fourier scaffold for n=12 and the exported alpha12 from the strict sigma-int theta supply; does not introduce any new selector slots."
+  },
+  "construction": {
+    "fourier_pair_planes": {
+      "pair1": "V1 := span{c1,s1} (m=1) with canonical real Fourier basis on Z12",
+      "pair2": "V2 := span{c2,s2} (m=2) with canonical real Fourier basis on Z12"
+    },
+    "pair_plane_projectors": "\u03a01 := C1 C1^T, \u03a02 := C2 C2^T, \u03a0_rest := I - \u03a01 - \u03a02",
+    "so2_rotation": "G(\u03b1) := [[cos \u03b1, -sin \u03b1],[sin \u03b1, cos \u03b1]] with \u03b1 := alpha12_mod_2pi",
+    "transport_operator": "O12 := C2 G(\u03b1) C1^T + C1 G(-\u03b1) C2^T + \u03a0_rest",
+    "projector_transport": "P(u2) \u2248 O12 P(u1) O12^T with P(u):=u u^T (sign-gauge-invariant)"
+  },
+  "outputs": {
+    "n": 12,
+    "alpha12_mod_2pi": 1.5707963267948966,
+    "G12_so2": [
+      [
+        6.123233995736766e-17,
+        -1.0
+      ],
+      [
+        1.0,
+        6.123233995736766e-17
+      ]
+    ],
+    "O12": [
+      [
+        0.6666666666666667,
+        -0.16666666666666669,
+        -5.551115123125783e-17,
+        0.0,
+        -0.12200846792814615,
+        -0.16666666666666663,
+        -6.123233995736766e-17,
+        0.28867513459481275,
+        0.45534180126147955,
+        0.33333333333333337,
+        -6.938893903907228e-17,
+        -0.28867513459481264
+      ],
+      [
+        -0.16666666666666669,
+        0.8333333333333333,
+        -0.061004233964073146,
+        0.0,
+        -0.061004233964073035,
+        -0.16666666666666666,
+        -0.16666666666666666,
+        -1.3877787807814457e-16,
+        0.22767090063073964,
+        0.3333333333333333,
+        0.22767090063073972,
+        1.8041124150158794e-16
+      ],
+      [
+        -2.7755575615628914e-17,
+        -0.06100423396407312,
+        0.9553418012614796,
+        0.0,
+        1.5230306681417377e-17,
+        -0.06100423396407317,
+        -0.12200846792814624,
+        -0.10566243270259357,
+        -5.551115123125783e-17,
+        0.1220084679281462,
+        0.16666666666666666,
+        0.10566243270259361
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        -0.12200846792814615,
+        -0.06100423396407301,
+        3.128846114055713e-17,
+        2.7755575615628914e-17,
+        0.9553418012614796,
+        -0.061004233964073035,
+        2.7755575615628914e-17,
+        0.10566243270259353,
+        0.1666666666666666,
+        0.12200846792814614,
+        -1.1102230246251565e-16,
+        -0.1056624327025935
+      ],
+      [
+        -0.16666666666666663,
+        -0.1666666666666667,
+        -0.061004233964073146,
+        0.0,
+        -0.06100423396407301,
+        0.8333333333333333,
+        -0.1666666666666667,
+        -1.5265566588595902e-16,
+        0.22767090063073964,
+        0.33333333333333337,
+        0.2276709006307398,
+        2.7755575615628914e-16
+      ],
+      [
+        -6.123233995736766e-17,
+        -0.16666666666666663,
+        -0.12200846792814618,
+        0.0,
+        5.551115123125783e-17,
+        -0.16666666666666674,
+        0.6666666666666667,
+        -0.288675134594813,
+        -2.3592239273284576e-16,
+        0.33333333333333326,
+        0.4553418012614795,
+        0.2886751345948131
+      ],
+      [
+        0.28867513459481275,
+        -1.249000902703301e-16,
+        -0.10566243270259357,
+        2.7755575615628914e-17,
+        0.10566243270259351,
+        -1.8041124150158794e-16,
+        -0.288675134594813,
+        0.4999999999999999,
+        -0.39433756729740654,
+        1.1102230246251565e-16,
+        0.39433756729740665,
+        0.5000000000000001
+      ],
+      [
+        0.45534180126147955,
+        0.22767090063073964,
+        -5.551115123125783e-17,
+        1.3877787807814457e-17,
+        0.1666666666666666,
+        0.2276709006307396,
+        -2.3592239273284576e-16,
+        -0.39433756729740654,
+        0.37799153207185365,
+        -0.4553418012614794,
+        5.3491126309320705e-16,
+        0.39433756729740643
+      ],
+      [
+        0.33333333333333337,
+        0.3333333333333333,
+        0.1220084679281462,
+        0.0,
+        0.12200846792814614,
+        0.33333333333333337,
+        0.33333333333333326,
+        1.1102230246251565e-16,
+        -0.4553418012614794,
+        0.3333333333333334,
+        -0.4553418012614794,
+        -2.7755575615628914e-16
+      ],
+      [
+        -6.938893903907228e-17,
+        0.2276709006307397,
+        0.16666666666666669,
+        -1.3877787807814457e-17,
+        -8.326672684688674e-17,
+        0.2276709006307398,
+        0.4553418012614795,
+        0.39433756729740665,
+        5.39997352796762e-16,
+        -0.4553418012614794,
+        0.3779915320718539,
+        -0.39433756729740677
+      ],
+      [
+        -0.28867513459481264,
+        1.8041124150158794e-16,
+        0.10566243270259362,
+        -2.7755575615628914e-17,
+        -0.10566243270259353,
+        2.914335439641036e-16,
+        0.2886751345948131,
+        0.5000000000000001,
+        0.39433756729740643,
+        -2.914335439641036e-16,
+        -0.3943375672974069,
+        0.49999999999999983
+      ]
+    ],
+    "checks": {
+      "orthogonality_max_abs_residual": 4.60113898903259e-16,
+      "involution_O12_squared_equals_I_max_abs_residual": 4.60113898903259e-16,
+      "u1_to_u2_max_abs_residual": 2.7755575615628914e-16,
+      "u2_to_u1_max_abs_residual": 4.440892098500626e-16,
+      "projector_transport_max_abs_residual": 1.3877787807814457e-16
+    }
+  },
+  "hard_limits": [
+    "Lane-scoped: exports only a pair1<->pair2 chart-transport operator on the declared n=12 Fourier carrier.",
+    "Does not export a global selector atlas, overlap-domain declaration, nor cocycle/gluing data (H41 remains open).",
+    "Does not discharge QW-2191 nor export a global selector transition/gluing object (H40 remains globally open).",
+    "Does not derive a sign-sensitive physical orientation datum; only projector-level transport is sign-gauge-invariant.",
+    "Does not assign a theorem-level physical interpretation to alpha12.",
+    "Does not claim strict-core selector closure / admissible S_sel_int.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}
