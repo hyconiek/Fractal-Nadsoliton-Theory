@@ -36,9 +36,9 @@ This probe takes one cautious next step:
 
 This probe does **not** claim:
 
-1. any theorem-level generalization of `Aut(Z_n)` invariance beyond what is explicitly proven in the repo (current theorem packages are `n=12`‑scoped),
+1. any theorem-level scope-extension of the `n=12` uniqueness/assignment packages to `n=24` (note: the general direction-freeness lemma
+   `ord_{Z_n}` is `Aut(Z_n)`‑invariant is recorded as `N503`, but this does not by itself promote `n=24` into strict-core closure),
 2. any strict-core promotion of `n=24` into the `QW-2190` physical mode scaffold,
 3. any discharge of `QW-2191` beyond the declared `n=12` lanes,
 4. any strict-core selector closure / admissible `S_sel_int`,
 5. any ToE closure.
-

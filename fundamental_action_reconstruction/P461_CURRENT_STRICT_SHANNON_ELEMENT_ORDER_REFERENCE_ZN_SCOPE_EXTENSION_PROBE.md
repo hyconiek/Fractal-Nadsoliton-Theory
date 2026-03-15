@@ -35,8 +35,9 @@ without promoting any generalization to theorem level.
 
 This probe does **not** claim:
 
-1. any theorem-level `Aut(Z_n)` invariance generalization beyond what is explicitly proven in the repo (e.g. `N479` is for `Z_12`),
+1. any theorem-level uniqueness / `O(2)->Z2` cut generalization beyond what is explicitly proven in the repo for the physical `n=12` lanes
+   (note: the direction-freeness lemma `ord_{Z_n}` is `Aut(Z_n)`‑invariant is now recorded generally as `N503`, but this does not by itself
+   promote any `n≠12` minimizer/assignment into theorem level),
 2. any strict export of a mode-index assignment for `n ≠ 12`,
 3. any discharge of `QW-2191` beyond the declared `n=12` lanes,
 4. any ToE closure.
-
