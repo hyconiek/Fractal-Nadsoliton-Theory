@@ -1,39 +1,41 @@
 # D1 Selector Axiom Necessity Current Best-Supported Conclusion
 
-Status: `D1_CURRENT_BEST_SUPPORTED_PROJECT_CONCLUSION_SELECTOR_AXIOM_NECESSITY_NO_FALSE_PASS`
-As of: `2026-03-11`
+Status: `D1_UPDATED_CURRENT_BEST_SUPPORTED_PROJECT_CONCLUSION_SELECTOR_AXIOM_NECESSITY_SCOPE_NARROWED_NO_FALSE_PASS`
+As of: `2026-03-15`
 
 ## Goal
 
-After `N3`, the negative theorem lane has reached a stable diagnostic point:
+After `N3`, the negative theorem lane reached a stable diagnostic point on the then-current repo state.
 
-- `N1` is genuinely discharged in the audited six-route family,
-- `N2` is specified globally,
-- `N3` shows that the global discharge attempt fails exactly at globalization
-  through `T12_B1`.
+Update (`2026-03-15`): the strict positive lane has since advanced materially:
 
-`D1` does not try to create another theorem-spec.
-It records the strongest project-level conclusion currently supported by the
-strict evidence without introducing a false theorem-level claim.
+- a slot-free strict-core sigma-int → theta-pair source exists (`F451`),
+  packaged as a theorem-level `T162` discharge and `T159` satisfaction (`N489`),
+- an audited inhabitant instance populating the `R1` target slot constructed from that theta-pair is exported (`P451`),
+- the strict sigma-int → residual bridge theorem `T2` is now discharged (`N491`), explicitly keeping the export-map object sign-only.
+
+`D1` records the strongest project-level conclusion currently supported by the strict evidence (not a theorem-level claim).
 
 ## Current best-supported conclusion
 
 ```text
-Within the current declared strict core, no global theorem-level internal source
-of actual theta_1, theta_2 has been obtained.
+The earlier project conclusion “a selector axiom is necessary to obtain any actual strict-core theta supply”
+is no longer supported on the current repo state.
 
-The strongest currently supported design conclusion is therefore:
+On the current repo state, the strict core exports a slot-free sigma-int -> (theta_1,theta_2) source
+and an audited R1 target-slot inhabitant constructed from it (F451/N489/P451), and the strict bridge theorem T2 is discharged (N491).
 
-either
-  (i) the current strict core is incomplete with respect to selector generation,
-or
-  (ii) an additional selector / admissibility axiom is necessary for closing
-       the orientation-selection problem.
+Therefore, a selector axiom is not currently necessary for deriving theta_1, theta_2 in the declared sigma-int/R1 scope.
+
+The remaining open question is narrower:
+
+whether an additional selector / admissibility axiom is necessary for global physical uniqueness / selector closure
+beyond the declared lane and beyond residual Z2 sign, under explicit QW-2191 discipline.
 ```
 
 ## Why this is the best-supported conclusion
 
-### 1. Scoped negative theorem is real
+### 1. The old scoped negative theorem remains real (but is not global)
 
 From `N1`:
 
@@ -42,7 +44,8 @@ Within the audited six-route family F_audited,
 there is no internal strict-core theta-source.
 ```
 
-This is not heuristic. It is an actual scoped negative theorem.
+This remains a valid **scoped** negative theorem, but it does not cover the later strict slot-free construction-class route `T162`
+discharged by `N489`.
 
 ### 2. Global negative theorem is not discharged
 
@@ -59,36 +62,34 @@ but not discharged for the current selector track.
 
 So no honest global no-internal-theta theorem is currently available.
 
-### 3. Positive strict-core bridge is also not discharged
+### 3. Positive strict-core theta supply and bridge discharge now exist (in declared scope)
 
-From `T2`:
-- the bridge theorem from `sigma_int_candidate` to the residual orientation
-  datum is specified,
-- and the strict core now exports a sign-only export-map object into the
-  residual target slot (`F311/N422`),
-- but strict-core target-slot population (theta supply) remains absent
-  (`N1/C50`), hence the current strict sigma-int lane still does not derive an
-  actual strict-core residual orientation datum (`N7`).
+On the current repo state:
 
-Therefore no honest positive strict-core closure is currently available either.
+- strict-core slot-free sigma-int theta supply is exported (`F451`) and packaged as `T159` satisfaction (`N489`),
+- an audited `R1` inhabitant instance exists (`P451`),
+- the strict sigma-int → residual bridge theorem `T2` is discharged (`N491`),
+while the export-map object itself remains explicitly sign-only (no silent upgrade).
+
+Therefore it is no longer honest to treat strict-core theta supply as absent in the sigma-int/R1 scope.
 
 ### 4. Axiom-augmented source lane remains the only packet-ready fallback
 
-From `C35` and `C51..C55`:
-- the only packet-ready actual-theta source lane remains axiom-augmented,
-- no strict-core internalization has been discharged.
+An axiom-augmented selector-closure lane remains available as a control route (`QW-2192/QW-2193` and related axiom-lane packets),
+but it remains explicitly outside strict core.
+
+Update (`2026-03-15`): it is no longer honest to describe this as “the only theta-supplying lane”, because strict-core internal theta supply is now discharged in the sigma-int/R1 scope (F451/N489/P451).
 
 ## Practical interpretation
 
 `D1` means:
 
-1. continuing theorem-lane growth of the same meta kind is not currently the
-   highest-value move,
-2. the project should either:
-   - attack `T12_B1` directly,
-   - or explicitly accept a selector axiom as a design choice,
-3. until one of those happens, the honest project-level conclusion is:
-   selector closure is not achieved in strict core.
+1. the strict core now demonstrates one genuine internal selector ingredient route (Shannon element-order reference) sufficient for slot-free theta supply in declared scope,
+2. strict-core **selector closure / admissible `S_sel_int`** and global physical uniqueness remain open,
+3. the honest next moves are therefore:
+   - proceed under explicit `QW-2191` discipline (no implied selector closure),
+   - attack the remaining residual sign / scope-extension questions (e.g. `B3`), or
+   - if one chooses an axiom-augmented closure lane, keep it explicitly marked as non-strict.
 
 ## What D1 is not
 
@@ -102,11 +103,10 @@ From `C35` and `C51..C55`:
 
 ## Recommended next move
 
-Only two serious routes remain:
+Two serious routes remain:
 
-1. direct attack on `T12_B1`,
-2. export one genuinely new strict-side theta/selector ingredient, or proceed on
-   an explicit axiom-augmented selector closure lane with fully separated claims.
+1. continue strict internal selector-source exports and their scope extension under `QW-2191` discipline (no implied selector closure),
+2. if a downstream claim requires sign-sensitive physical orientation, either prove gauge-irrelevance or derive a strict sign-sensitive datum (e.g. `B3`) before promotion; otherwise keep residual `Z2` explicit.
 
 Any further meta-ladder expansion beyond `N3` without attacking `T12_B1`
 should be treated as low-yield documentation rather than mathematical progress.

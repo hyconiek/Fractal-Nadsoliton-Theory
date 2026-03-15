@@ -8,34 +8,40 @@ out.parent.mkdir(parents=True, exist_ok=True)
 
 payload = {
     "step": "D1",
-    "status": "D1_CURRENT_BEST_SUPPORTED_PROJECT_CONCLUSION_SELECTOR_AXIOM_NECESSITY_NO_FALSE_PASS",
-    "date": "2026-03-11",
+    "status": "D1_UPDATED_CURRENT_BEST_SUPPORTED_PROJECT_CONCLUSION_SELECTOR_AXIOM_NECESSITY_SCOPE_NARROWED_NO_FALSE_PASS",
+    "date": "2026-03-15",
     "result_kind": "best_supported_project_conclusion_not_theorem",
     "supports": [
         "N1",
         "N2",
         "N3",
         "T12",
-        "T2",
-        "F311",
-        "N7",
-        "C35",
-        "C51",
-        "C52",
-        "C53",
-        "C54",
-        "C55",
+        "QW-2191",
+        "F451",
+        "N489",
+        "P451",
+        "P5",
+        "N491",
+        "F454",
+        "N496",
+        "P455",
+        "B2",
+        "A6",
         "A10"
     ],
-    "project_conclusion": "strict_core_selector_closure_not_achieved_current_best_supported_design_conclusion_is_selector_axiom_necessity_or_strict_core_incompleteness",
+    "project_conclusion": (
+        "selector_axiom_not_currently_required_for_sigma_int_theta_supply_in_declared_scope_"
+        "but_global_physical_uniqueness_and_strict_core_selector_closure_remain_open_under_QW2191_discipline"
+    ),
     "frontier": [
-        "T12_B1 := the typing judgment with totality and uniqueness is specified but not discharged for the current selector track",
-        "T2_B1 := the bridge theorem is specified but not discharged; strict-core target slot and sign-only export-map object exist (F311/N422), but target-slot population (theta_1,theta_2) remains absent (N1/C50)",
-        "C32_B2 := raw overlap route remains degenerate"
+        "QW-2191 := kernel-alone continuous O(2) mode-index nonuniqueness (global physical uniqueness still blocked without extra symmetry breaking)",
+        "residual_Z2_sign := sign-sensitive physical orientation datum not exported (B2/B3 frontier)",
+        "no_admissible_S_sel_int := strict-core selector closure remains unachieved (keep explicit)"
     ],
     "recommended_next_moves": [
-        "attack_T12_B1_directly",
-        "switch_to_explicit_axiom_augmented_selector_closure_lane"
+        "proceed_under_QW_2191_discipline_no_implied_selector_closure",
+        "attack_residual_sign_or_prove_sign_gauge_irrelevance_before_promotion",
+        "extend_internal_selector_ingredients_scope_without_external_selector_axiom"
     ],
     "theorem_level_pass": False,
     "full_closure_pass": False,
@@ -43,6 +49,7 @@ payload = {
         "no claim that D1 is a theorem",
         "no claim that selector axiom is uniquely identified",
         "no claim that QW-2191 is discharged",
+        "no claim that selector axiom is unnecessary in full global scope",
         "no claim of full TOE closure"
     ]
 }
