@@ -1,6 +1,6 @@
 # H41 Selector Atlas And Gluing Data Audit
 
-Status: `PASS_PARTIAL_LANE_SCOPED_GLUING_INGREDIENT_PRESENT_NO_SELECTOR_ATLAS_OR_OVERLAP_DECLARATION`
+Status: `PASS_PARTIAL_LANE_SCOPED_ATLAS_STUB_PRESENT_GLOBAL_ATLAS_STILL_MISSING`
 Date: `2026-03-15`
 
 ## Purpose
@@ -19,6 +19,7 @@ Test whether the current strict core exports any explicit selector atlas or sele
 - `F462`: lane-scoped two-chart projector operator section exists, glued by `O_12`.
 - `N507`: packages the two-chart glued projector operator section as well-defined and sign-gauge-invariant.
 - `P466`: audits the glued law from exported artifacts.
+- `F463`: exports an explicit lane-scoped **two-chart selector atlas stub** with an overlap-domain declaration and gluing data.
 - `C29/C30`: only local projector formulas and local overlap compatibility laws are explicit.
 
 ## Audit target
@@ -32,7 +33,7 @@ Search for any strict-core exported data of the following selector-atlas kind:
 
 ## Result
 
-No strict-core **selector atlas** / overlap-domain declaration / global cocycle data is currently exported.
+No strict-core **global** selector atlas / global overlap-domain declaration / global cocycle data is currently exported.
 
 The repository contains:
 - local selector-like chart embeddings,
@@ -41,12 +42,13 @@ The repository contains:
 - control-lane transition structures,
 - and a lane-scoped `pair1↔pair2` chart-transport operator `O_12` (`F461`) which can serve as a **projector-level gluing ingredient** (sign-gauge-safe; `N506`, audited by `P465`),
 - plus a concrete lane-scoped **two-chart glued projector operator section** on `{pair1,pair2}` (`F462`, packaged by `N507`, audited by `P466`),
+- and now an explicit lane-scoped **two-chart selector atlas stub** with an overlap-domain declaration and gluing data (`F463`),
 
-but none of these is elevated to an explicit selector atlas, overlap-domain declaration, or cocycle-level gluing data supporting a global assembly structure.
+but none of these is elevated to a **global** selector atlas, global overlap-domain declaration, or global cocycle-level gluing data supporting a global assembly structure.
 
 ## Frontier
 
-`H41_B1 := strict core has no explicit selector atlas, overlap-domain declaration, or global cocycle-level gluing data from which a global selector transition structure could be assembled`
+`H41_B1 := strict core has no explicit global selector atlas, global overlap-domain declaration, or global cocycle-level gluing data from which a global selector transition structure could be assembled`
 
 ## Hard limits
 
