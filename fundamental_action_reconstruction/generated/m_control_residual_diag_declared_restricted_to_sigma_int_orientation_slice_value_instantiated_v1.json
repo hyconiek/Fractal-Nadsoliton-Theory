@@ -1,0 +1,55 @@
+{
+  "object": "M_control_residual_diag_declared_restricted_to_sigma_int_orientation_slice_value_instantiated_v1",
+  "status": "PASS_COMPUTED_FROM_STRICT_DERIVED_INPUTS",
+  "as_of": "2026-03-15",
+  "intent": "Value-instantiate the P457 restriction artifact (declared residual local diagonal control pullback restricted to the sigma-int orientation slice) by (i) computing a numeric diagonal residual profile d_k via the conditional N477 Yukawa-free rewrite, using the strict-frozen kernel K_total (R14), the host scalar floor m0^2 (R15), and a per-site value-provider candidate (vpsi,g4,g6), then (ii) contracting the P457 coefficient vectors with that profile. No stationarity witness is exported; the N477 rewrite remains a conditional tool.",
+  "inputs": {
+    "r14_k_total": "fundamental_action_reconstruction/generated/r14_explicit_frozen_kernel_specialization_packet_for_host_matching_route.json",
+    "r15_m0_squared": "fundamental_action_reconstruction/generated/r15_explicit_host_scalar_floor_embedding_packet_for_host_matching_route.json",
+    "vpsi_g4_g6_candidate": "fundamental_action_reconstruction/generated/p437_input_vpsi_g4_g6_candidate.json",
+    "p457_restriction_artifact": "fundamental_action_reconstruction/generated/m_control_residual_diag_declared_restricted_to_sigma_int_orientation_slice_v1.json"
+  },
+  "computed": {
+    "d_local_residual_profile_n477": [
+      0.34269049977246646,
+      11.518361441687219,
+      0.5284499241054783,
+      -0.1567291917971062,
+      -0.5341686256176337,
+      1.2939217196807558,
+      -0.5936675263840503,
+      1.2939217196807553,
+      -0.5341686256176337,
+      -0.1567291917971062,
+      0.5284499241054781,
+      11.518361441687219
+    ],
+    "restricted_matrix": [
+      [
+        1.0140175241369178,
+        0.0
+      ],
+      [
+        0.0,
+        0.9731411366203485
+      ]
+    ],
+    "symmetric_part_max_abs_diff": 0.0,
+    "trace": 1.9871586607572662,
+    "det": 0.9867821659915519,
+    "frobenius_norm": 1.4054306140964443,
+    "eigvals": [
+      0.9731411366203485,
+      1.0140175241369178
+    ]
+  },
+  "hard_limits": [
+    "Uses the conditional N477 Yukawa-free diagonal residual rewrite; does not export a vacuum stationarity witness.",
+    "Instantiates only the P457 restriction of the declared residual local diagonal sector (D_local_residual), not the full Psi-sector Hessian block.",
+    "Does not claim the instantiated restricted matrix vanishes or matches the host.",
+    "Does not claim strict-core selector closure / admissible S_sel_int.",
+    "Does not claim global discharge of QW-2191.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}
