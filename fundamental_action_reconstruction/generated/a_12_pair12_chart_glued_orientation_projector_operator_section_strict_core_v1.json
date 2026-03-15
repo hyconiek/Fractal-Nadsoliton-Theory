@@ -1,0 +1,104 @@
+{
+  "object": "A_12_pair12_chart_glued_orientation_projector_operator_section_strict_core_v1",
+  "status": "actual_exported_two_chart_projector_operator_section__pair1_pair2_glued_by_O12__no_false_pass",
+  "as_of": "2026-03-15",
+  "generated_utc": "2026-03-15T21:17:03.246046+00:00",
+  "intent": "Export one explicit two-chart operator section on {pair1,pair2} in the strict sigma-int corridor scope, gluing the projector operators A_1(pair1) and A_2(pair2) by the exported chart-transport operator O_12: A_2 = O_12 A_1 O_12^T. This is projector-level and therefore residual-sign-gauge-safe, but remains lane-scoped and does not imply any global selector atlas or QW-2191 discharge.",
+  "inputs": {
+    "a1_pair1_operator_ref": "fundamental_action_reconstruction/generated/a_1_pair1_orientation_projector_operator_strict_core_v1.json",
+    "a2_pair2_operator_ref": "fundamental_action_reconstruction/generated/a_2_pair2_orientation_projector_operator_strict_core_v1.json",
+    "o12_chart_transport_ref": "fundamental_action_reconstruction/generated/o12_pair1_pair2_selector_chart_transport_operator_strict_derived_from_sigma_int_alpha12_v1.json",
+    "theta_pair_ref": "fundamental_action_reconstruction/generated/theta_pair_sigma_int_strict_selector_ingredient_o2_cut_slot_free_v1.json"
+  },
+  "construction": {
+    "A1_full": "A_1 := |u_1><u_1| on the n=12 carrier (pair1 representative)",
+    "A2_full": "A_2 := |u_2><u_2| on the n=12 carrier (pair2 representative)",
+    "gluing_law_full": "A_2 = O_12 A_1 O_12^T",
+    "pair12_restricted_matrix": "O_12 restricted to V1\u2295V2 in basis (c1,s1,c2,s2) is [[0,G(-alpha12)],[G(alpha12),0]]"
+  },
+  "outputs": {
+    "n": 12,
+    "alpha12_mod_2pi": 1.5707963267948966,
+    "G12_so2": [
+      [
+        6.123233995736766e-17,
+        -1.0
+      ],
+      [
+        1.0,
+        6.123233995736766e-17
+      ]
+    ],
+    "A1_pair1_matrix_in_c1_s1": [
+      [
+        2.3303752327085554e-32,
+        1.52655665885959e-16
+      ],
+      [
+        1.52655665885959e-16,
+        0.9999999999999998
+      ]
+    ],
+    "A2_pair2_matrix_in_c2_s2": [
+      [
+        0.9999999999999996,
+        1.6653345369377343e-16
+      ],
+      [
+        1.6653345369377343e-16,
+        2.7733391199176196e-32
+      ]
+    ],
+    "O12_pair12_restricted_matrix_in_c1_s1_c2_s2": [
+      [
+        -3.674015328088999e-16,
+        2.8727035170676863e-16,
+        4.779805057490961e-16,
+        1.0000000000000004
+      ],
+      [
+        2.381095502408104e-16,
+        3.640127459153042e-16,
+        -0.9999999999999997,
+        -1.120647797221333e-16
+      ],
+      [
+        4.726164199968311e-16,
+        -0.9999999999999997,
+        4.3454636520272344e-16,
+        -4.737611002451783e-16
+      ],
+      [
+        1.0000000000000004,
+        -1.006211869330466e-16,
+        -5.119740046368591e-16,
+        -4.344094198916233e-16
+      ]
+    ]
+  },
+  "audits": {
+    "O12_orthogonality_max_abs_residual": 4.60113898903259e-16,
+    "O12_involution_max_abs_residual": 4.60113898903259e-16,
+    "u1_outside_span_c1_s1_l2": 1.4795811545693623e-16,
+    "u2_outside_span_c2_s2_l2": 3.1401849173675503e-16,
+    "A1_symmetry_inf_norm": 0.0,
+    "A2_symmetry_inf_norm": 0.0,
+    "A1_idempotence_inf_norm": 2.7755575615628914e-17,
+    "A2_idempotence_inf_norm": 2.7755575615628914e-17,
+    "A1_sign_gauge_invariance_max_abs": 0.0,
+    "A2_sign_gauge_invariance_max_abs": 0.0,
+    "A1_2x2_residual_vs_F456_export": 2.220446049250313e-16,
+    "gluing_full_matrix_max_abs_residual": 1.3877787807814457e-16,
+    "gluing_pair_plane_2x2_max_abs_residual": 3.804214595371001e-16,
+    "O12_pair12_restriction_max_abs_residual_vs_expected_block_form": 5.119740046368591e-16
+  },
+  "hard_limits": [
+    "Lane-scoped: only a two-chart {pair1,pair2} projector-operator section is exported.",
+    "Does not export a global selector atlas, overlap-domain declaration, nor cocycle-level gluing data (H41 remains open globally).",
+    "Does not discharge QW-2191 nor export a global selector transition/gluing object (H40 remains open globally).",
+    "Projector-level only: does not derive a sign-sensitive physical orientation datum.",
+    "Does not claim strict-core selector closure / admissible S_sel_int.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}
