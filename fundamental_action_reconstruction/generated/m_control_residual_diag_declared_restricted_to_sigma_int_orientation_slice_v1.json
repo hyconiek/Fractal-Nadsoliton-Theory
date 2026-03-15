@@ -1,0 +1,110 @@
+{
+  "object": "M_control_residual_diag_declared_restricted_to_sigma_int_orientation_slice_v1",
+  "status": "actual_exported_restriction_artifact__declared_residual_diagonal_sector_only__no_false_pass",
+  "as_of": "2026-03-15",
+  "intent": "Restrict the declared residual local diagonal control pullback (R16: M_control_residual_diag_declared = T_control^T D_local_residual T_control) to the sigma-int orientation slice basis (u_1,u_2) exported by the slot-free sigma-int theta-pair source (F451/N489). This yields an explicit 2x2 linear coefficient decomposition over the residual local diagonal entries from R15. No vanishing/cancellation witness is claimed.",
+  "inputs": {
+    "r15_residual_local_diagonal_entries": "fundamental_action_reconstruction/generated/r15_explicit_host_scalar_floor_embedding_packet_for_host_matching_route.json",
+    "r16_declared_control_pullback": "fundamental_action_reconstruction/generated/r16_explicit_residual_local_diagonal_declared_control_pullback_packet_for_host_matching_route.json",
+    "sigma_int_theta_pair": "fundamental_action_reconstruction/generated/theta_pair_sigma_int_strict_selector_ingredient_o2_cut_slot_free_v1.json"
+  },
+  "control_basis_order": [
+    "c1",
+    "s1",
+    "c2",
+    "s2"
+  ],
+  "slice_basis": {
+    "theta_1": 4.71238898038469,
+    "theta_2": 0.0,
+    "u1_ctrl": [
+      -1.5265566588595902e-16,
+      -0.9999999999999999,
+      0.0,
+      0.0
+    ],
+    "u2_ctrl": [
+      0.0,
+      0.0,
+      0.9999999999999998,
+      1.6653345369377348e-16
+    ]
+  },
+  "restricted_coefficients_by_carrier_slot": {
+    "entry_00": [
+      0.0,
+      0.041666666666666,
+      0.125,
+      0.166666666666667,
+      0.125,
+      0.041666666666666,
+      0.0,
+      0.041666666666666,
+      0.125,
+      0.166666666666667,
+      0.125,
+      0.041666666666667
+    ],
+    "entry_01": [
+      0.0,
+      -0.041666666666667,
+      0.072168783648703,
+      0.166666666666667,
+      0.072168783648703,
+      -0.041666666666667,
+      0.0,
+      0.041666666666667,
+      -0.072168783648703,
+      -0.166666666666667,
+      -0.072168783648703,
+      0.041666666666667
+    ],
+    "entry_10": [
+      0.0,
+      -0.041666666666667,
+      0.072168783648703,
+      0.166666666666667,
+      0.072168783648703,
+      -0.041666666666667,
+      0.0,
+      0.041666666666667,
+      -0.072168783648703,
+      -0.166666666666667,
+      -0.072168783648703,
+      0.041666666666667
+    ],
+    "entry_11": [
+      0.166666666666667,
+      0.041666666666667,
+      0.041666666666666,
+      0.166666666666667,
+      0.041666666666667,
+      0.041666666666667,
+      0.166666666666667,
+      0.041666666666667,
+      0.041666666666666,
+      0.166666666666667,
+      0.041666666666666,
+      0.041666666666666
+    ]
+  },
+  "restricted_matrix_rows": [
+    [
+      "(0.041666666666666)*((3*g4_psi1*vpsi1**2 + 5*g6_psi1*vpsi1**4 + 2*gY1*vphi**2 + m2_psi1) - (1.013551972358388)) + (0.125)*((3*g4_psi2*vpsi2**2 + 5*g6_psi2*vpsi2**4 + 2*gY2*vphi**2 + m2_psi2) - (1.013551972358388)) + (0.166666666666667)*((3*g4_psi3*vpsi3**2 + 5*g6_psi3*vpsi3**4 + 2*gY3*vphi**2 + m2_psi3) - (1.013551972358388)) + (0.125)*((3*g4_psi4*vpsi4**2 + 5*g6_psi4*vpsi4**4 + 2*gY4*vphi**2 + m2_psi4) - (1.013551972358388)) + (0.041666666666666)*((3*g4_psi5*vpsi5**2 + 5*g6_psi5*vpsi5**4 + 2*gY5*vphi**2 + m2_psi5) - (1.013551972358388)) + (0.041666666666666)*((3*g4_psi7*vpsi7**2 + 5*g6_psi7*vpsi7**4 + 2*gY7*vphi**2 + m2_psi7) - (1.013551972358388)) + (0.125)*((3*g4_psi8*vpsi8**2 + 5*g6_psi8*vpsi8**4 + 2*gY8*vphi**2 + m2_psi8) - (1.013551972358388)) + (0.166666666666667)*((3*g4_psi9*vpsi9**2 + 5*g6_psi9*vpsi9**4 + 2*gY9*vphi**2 + m2_psi9) - (1.013551972358388)) + (0.125)*((3*g4_psi10*vpsi10**2 + 5*g6_psi10*vpsi10**4 + 2*gY10*vphi**2 + m2_psi10) - (1.013551972358388)) + (0.041666666666667)*((3*g4_psi11*vpsi11**2 + 5*g6_psi11*vpsi11**4 + 2*gY11*vphi**2 + m2_psi11) - (1.013551972358388))",
+      "(-0.041666666666667)*((3*g4_psi1*vpsi1**2 + 5*g6_psi1*vpsi1**4 + 2*gY1*vphi**2 + m2_psi1) - (1.013551972358388)) + (0.072168783648703)*((3*g4_psi2*vpsi2**2 + 5*g6_psi2*vpsi2**4 + 2*gY2*vphi**2 + m2_psi2) - (1.013551972358388)) + (0.166666666666667)*((3*g4_psi3*vpsi3**2 + 5*g6_psi3*vpsi3**4 + 2*gY3*vphi**2 + m2_psi3) - (1.013551972358388)) + (0.072168783648703)*((3*g4_psi4*vpsi4**2 + 5*g6_psi4*vpsi4**4 + 2*gY4*vphi**2 + m2_psi4) - (1.013551972358388)) + (-0.041666666666667)*((3*g4_psi5*vpsi5**2 + 5*g6_psi5*vpsi5**4 + 2*gY5*vphi**2 + m2_psi5) - (1.013551972358388)) + (0.041666666666667)*((3*g4_psi7*vpsi7**2 + 5*g6_psi7*vpsi7**4 + 2*gY7*vphi**2 + m2_psi7) - (1.013551972358388)) + (-0.072168783648703)*((3*g4_psi8*vpsi8**2 + 5*g6_psi8*vpsi8**4 + 2*gY8*vphi**2 + m2_psi8) - (1.013551972358388)) + (-0.166666666666667)*((3*g4_psi9*vpsi9**2 + 5*g6_psi9*vpsi9**4 + 2*gY9*vphi**2 + m2_psi9) - (1.013551972358388)) + (-0.072168783648703)*((3*g4_psi10*vpsi10**2 + 5*g6_psi10*vpsi10**4 + 2*gY10*vphi**2 + m2_psi10) - (1.013551972358388)) + (0.041666666666667)*((3*g4_psi11*vpsi11**2 + 5*g6_psi11*vpsi11**4 + 2*gY11*vphi**2 + m2_psi11) - (1.013551972358388))"
+    ],
+    [
+      "(-0.041666666666667)*((3*g4_psi1*vpsi1**2 + 5*g6_psi1*vpsi1**4 + 2*gY1*vphi**2 + m2_psi1) - (1.013551972358388)) + (0.072168783648703)*((3*g4_psi2*vpsi2**2 + 5*g6_psi2*vpsi2**4 + 2*gY2*vphi**2 + m2_psi2) - (1.013551972358388)) + (0.166666666666667)*((3*g4_psi3*vpsi3**2 + 5*g6_psi3*vpsi3**4 + 2*gY3*vphi**2 + m2_psi3) - (1.013551972358388)) + (0.072168783648703)*((3*g4_psi4*vpsi4**2 + 5*g6_psi4*vpsi4**4 + 2*gY4*vphi**2 + m2_psi4) - (1.013551972358388)) + (-0.041666666666667)*((3*g4_psi5*vpsi5**2 + 5*g6_psi5*vpsi5**4 + 2*gY5*vphi**2 + m2_psi5) - (1.013551972358388)) + (0.041666666666667)*((3*g4_psi7*vpsi7**2 + 5*g6_psi7*vpsi7**4 + 2*gY7*vphi**2 + m2_psi7) - (1.013551972358388)) + (-0.072168783648703)*((3*g4_psi8*vpsi8**2 + 5*g6_psi8*vpsi8**4 + 2*gY8*vphi**2 + m2_psi8) - (1.013551972358388)) + (-0.166666666666667)*((3*g4_psi9*vpsi9**2 + 5*g6_psi9*vpsi9**4 + 2*gY9*vphi**2 + m2_psi9) - (1.013551972358388)) + (-0.072168783648703)*((3*g4_psi10*vpsi10**2 + 5*g6_psi10*vpsi10**4 + 2*gY10*vphi**2 + m2_psi10) - (1.013551972358388)) + (0.041666666666667)*((3*g4_psi11*vpsi11**2 + 5*g6_psi11*vpsi11**4 + 2*gY11*vphi**2 + m2_psi11) - (1.013551972358388))",
+      "(0.166666666666667)*((3*g4_psi0*vpsi0**2 + 5*g6_psi0*vpsi0**4 + 2*gY0*vphi**2 + m2_psi0) - (1.013551972358388)) + (0.041666666666667)*((3*g4_psi1*vpsi1**2 + 5*g6_psi1*vpsi1**4 + 2*gY1*vphi**2 + m2_psi1) - (1.013551972358388)) + (0.041666666666666)*((3*g4_psi2*vpsi2**2 + 5*g6_psi2*vpsi2**4 + 2*gY2*vphi**2 + m2_psi2) - (1.013551972358388)) + (0.166666666666667)*((3*g4_psi3*vpsi3**2 + 5*g6_psi3*vpsi3**4 + 2*gY3*vphi**2 + m2_psi3) - (1.013551972358388)) + (0.041666666666667)*((3*g4_psi4*vpsi4**2 + 5*g6_psi4*vpsi4**4 + 2*gY4*vphi**2 + m2_psi4) - (1.013551972358388)) + (0.041666666666667)*((3*g4_psi5*vpsi5**2 + 5*g6_psi5*vpsi5**4 + 2*gY5*vphi**2 + m2_psi5) - (1.013551972358388)) + (0.166666666666667)*((3*g4_psi6*vpsi6**2 + 5*g6_psi6*vpsi6**4 + 2*gY6*vphi**2 + m2_psi6) - (1.013551972358388)) + (0.041666666666667)*((3*g4_psi7*vpsi7**2 + 5*g6_psi7*vpsi7**4 + 2*gY7*vphi**2 + m2_psi7) - (1.013551972358388)) + (0.041666666666666)*((3*g4_psi8*vpsi8**2 + 5*g6_psi8*vpsi8**4 + 2*gY8*vphi**2 + m2_psi8) - (1.013551972358388)) + (0.166666666666667)*((3*g4_psi9*vpsi9**2 + 5*g6_psi9*vpsi9**4 + 2*gY9*vphi**2 + m2_psi9) - (1.013551972358388)) + (0.041666666666666)*((3*g4_psi10*vpsi10**2 + 5*g6_psi10*vpsi10**4 + 2*gY10*vphi**2 + m2_psi10) - (1.013551972358388)) + (0.041666666666666)*((3*g4_psi11*vpsi11**2 + 5*g6_psi11*vpsi11**4 + 2*gY11*vphi**2 + m2_psi11) - (1.013551972358388))"
+    ]
+  ],
+  "hard_limits": [
+    "Restriction is only for the declared residual local diagonal sector (D_local_residual), not for the full Psi-sector Hessian block.",
+    "Does not claim the restricted matrix vanishes.",
+    "Does not claim host-side cancellation or matching.",
+    "Does not claim strict-core selector closure / admissible S_sel_int.",
+    "Does not claim global discharge of QW-2191.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}

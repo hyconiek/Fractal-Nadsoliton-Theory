@@ -1,0 +1,82 @@
+{
+  "generated_utc": "2026-03-15T16:20:35.778604+00:00",
+  "stage": "P457",
+  "goal": "restrict_R16_declared_residual_diagonal_control_pullback_to_sigma_int_orientation_slice_basis",
+  "inputs": {
+    "r15": "fundamental_action_reconstruction/generated/r15_explicit_host_scalar_floor_embedding_packet_for_host_matching_route.json",
+    "r16": "fundamental_action_reconstruction/generated/r16_explicit_residual_local_diagonal_declared_control_pullback_packet_for_host_matching_route.json",
+    "theta_pair": "fundamental_action_reconstruction/generated/theta_pair_sigma_int_strict_selector_ingredient_o2_cut_slot_free_v1.json",
+    "qw2190_scaffold": "report_qw2190_kernel_mode_representation_emergence_gate.json"
+  },
+  "constructed_artifact": "fundamental_action_reconstruction/generated/m_control_residual_diag_declared_restricted_to_sigma_int_orientation_slice_v1.json",
+  "audits": {
+    "u1_outside_span_c1_s1": 1.4795811545693623e-16,
+    "u2_outside_span_c2_s2": 3.1401849173675503e-16,
+    "theta_1_recovered": -1.5707963267948968,
+    "theta_2_recovered": 1.6653345369377353e-16,
+    "theta_1_exported": 4.71238898038469,
+    "theta_2_exported": 0.0,
+    "theta_1_mod_2pi_abs_diff": 0.0,
+    "theta_2_mod_2pi_abs_diff": 0.0,
+    "slice_gram_residual": 4.965068306494546e-16,
+    "restricted_symmetry_coeff_max_abs_diff": 0.0,
+    "tolerance": 1e-12
+  },
+  "checks": [
+    {
+      "id": "u1_in_span_c1_s1",
+      "pass": true,
+      "expected": "<= 1e-12",
+      "actual": 1.4795811545693623e-16,
+      "meaning": "sigma-int u_1 lies in span{c1,s1} (numerical tolerance)"
+    },
+    {
+      "id": "u2_in_span_c2_s2",
+      "pass": true,
+      "expected": "<= 1e-12",
+      "actual": 3.1401849173675503e-16,
+      "meaning": "sigma-int u_2 lies in span{c2,s2} (numerical tolerance)"
+    },
+    {
+      "id": "recovered_theta_1_matches_exported_mod_2pi",
+      "pass": true,
+      "expected": "<= 1e-12",
+      "actual": 0.0,
+      "meaning": "atan2(<s1,u1>,<c1,u1>) matches exported theta_1 modulo 2\u03c0"
+    },
+    {
+      "id": "recovered_theta_2_matches_exported_mod_2pi",
+      "pass": true,
+      "expected": "<= 1e-12",
+      "actual": 0.0,
+      "meaning": "atan2(<s2,u2>,<c2,u2>) matches exported theta_2 modulo 2\u03c0"
+    },
+    {
+      "id": "slice_basis_is_orthonormal_in_control_coords",
+      "pass": true,
+      "expected": "<= 1e-12",
+      "actual": 4.965068306494546e-16,
+      "meaning": "u1_ctrl,u2_ctrl are orthonormal in the control coordinate basis"
+    },
+    {
+      "id": "restricted_coefficients_symmetric",
+      "pass": true,
+      "expected": "<= 1e-12",
+      "actual": 0.0,
+      "meaning": "restricted coefficient decomposition is symmetric: coeff_01 == coeff_10"
+    }
+  ],
+  "verdict": {
+    "audits_pass": true,
+    "statement": "Restriction artifact is constructible: R16 declared residual-diagonal control pullback can be restricted to the sigma-int orientation slice basis (u_1,u_2) exported by the slot-free sigma-int theta-pair supply. This does not claim any cancellation, host matching, or global closure."
+  },
+  "hard_limits": [
+    "Restriction is only for the declared residual local diagonal sector (D_local_residual), not for the full Psi-sector Hessian block.",
+    "Does not claim the restricted matrix vanishes.",
+    "Does not claim host-side cancellation or matching.",
+    "Does not claim strict-core selector closure / admissible S_sel_int.",
+    "Does not claim global discharge of QW-2191.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}
