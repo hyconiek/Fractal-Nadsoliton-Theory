@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.2  
+**Version:** 6.5.3  
 **Date:** 2026-03-15  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -23,6 +23,9 @@
   strict-core **mode-index assignment basis object** covering all Fourier-degenerate pairs `pair_m (m=1..5)` on `n=12`,
   cutting each `pair_m` `O(2)` family down to residual `Z2` using only the internal reference datum `r_ord`
   (`N480`, `N488`, `N496`, executed by `F454`).
+- Update (`2026-03-15`): the two independently exported mode-index assignment bases (diagonal/local vs Shannon ord-reference)
+  are aligned on all `pair_m (m=1..5)` up to residual `Z2` sign (audit `P455`); this is a hygiene consistency check and
+  does not promote any global discharge.
 - The sigma-int corridor theta-supply and sigma-int → residual bridge theorems introduced in Release 6.4 remain in force
   (e.g. `F451/N489`, `P451`, `F452/N490`, `N491`) and are not re-derived here.
 
@@ -54,8 +57,9 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
 9. independently, the strict Shannon element‑order reference lane cuts `O(2)` down to residual `Z2` on **all**
    Fourier-degenerate pairs `pair_m (m=1..5)` on `n=12` and exports a strict-core mode-index assignment basis object
    `ModeIndexAssignment_shannon_element_order_reference_strict_core_v1` (`N496`, executed by `F454`),
-10. repo hygiene probes/dashboards were updated accordingly (`P432`, `P441`, `P442`), without any promotion to global
-   closure.
+10. the diagonal/local and Shannon mode-index assignments are aligned on all pairs up to residual `Z2` sign (audit `P455`),
+11. repo hygiene probes/dashboards were updated accordingly (`P432`, `P441`, `P442`), without any promotion to global
+    closure.
 
 ## 1) One-Page Strict Status (6.5)
 
@@ -76,6 +80,8 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
 6. Independently, on the strict Shannon element‑order reference lane, the cross‑entropy objective cuts `O(2)` down to
    residual `Z2` on all `pair_m (m=1..5)` on `n=12` (`N480`, `N488`, `N496`), enabling export of a full strict-core
    mode-index assignment basis object without per-site diagonal/local providers (`F454`).
+7. The diagonal/local and Shannon strict mode-index assignments agree on the selected axes (up to residual sign) on all
+   `pair_m (m=1..5)` on `n=12` (audit `P455`), so the axis choice is not an artifact of a single lane.
 
 ### 1.2 What is still missing (no false pass)
 
@@ -175,7 +181,8 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
 9. niezależnie, pas strict Shannon “element‑order reference” tnie `O(2)` do residual `Z2` na **wszystkich** parach
    `pair_m (m=1..5)` na `n=12` i eksportuje strict-core obiekt przypisania osi
    `ModeIndexAssignment_shannon_element_order_reference_strict_core_v1` (`N496`, wykonane przez `F454`),
-10. sondy/dashboards higieniczne zostały zaktualizowane (`P432`, `P441`, `P442`) bez promocji do globalnego domknięcia.
+10. diagonal/local i Shannon mode-index assignment są zgodne na wszystkich parach co do wyboru osi (z dokładnością do residualnego znaku) (audyt `P455`),
+11. sondy/dashboards higieniczne zostały zaktualizowane (`P432`, `P441`, `P442`) bez promocji do globalnego domknięcia.
 
 ## 1) Jednostronicowy status strict (6.5)
 
@@ -192,6 +199,8 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
 6. Niezależnie, na pasie strict Shannon “element‑order reference”, obiektyw cross‑entropy tnie `O(2)` do residual `Z2`
    na wszystkich `pair_m (m=1..5)` na `n=12` (`N480`, `N488`, `N496`), umożliwiając eksport pełnej bazy przypisania osi
    bez per‑site dostawców diagonal/local (`F454`).
+7. Diagonal/local oraz Shannon przypisania osi są zgodne co do wyboru osi na wszystkich `pair_m (m=1..5)` na `n=12`
+   (audyt `P455`), więc wybór osi nie jest artefaktem pojedynczej lane.
 
 ### 1.2 Czego nadal brakuje (bez false pass)
 
