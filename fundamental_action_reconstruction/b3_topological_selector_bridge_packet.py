@@ -4,21 +4,31 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-AS_OF = "2026-03-06"
+AS_OF = "2026-03-15"
 
 summary = {
     "program_id": "fundamental_action_reconstruction",
     "as_of": AS_OF,
-    "status": "B3_PACKET_READY_TOPOLOGICAL_SELECTOR_BRIDGE_DERIVATION_PENDING_NO_FALSE_PASS",
+    "status": "B3_UPDATED_TOPOLOGICAL_SELECTOR_BRIDGE_PARTIALLY_DISCHARGED_AXIS_DATUM_PRESENT_RESIDUAL_SIGN_AND_GLOBAL_SCOPE_OPEN_NO_FALSE_PASS",
     "source_policy": {
         "strict_admissible_core": [
             "QW-2191",
-            "QW-2206",
-            "A5",
-            "A6",
             "A10",
             "B1",
             "B2",
+            "F306/N417",
+            "F307/N418",
+            "F308/N419",
+            "F451/N489",
+            "P451",
+            "P5",
+            "N487",
+            "F453/N492",
+            "F454/N496",
+            "N480/N488",
+            "P455/N497",
+            "A5",
+            "A6",
         ],
         "heuristic_support_only": [
             "QW-1622",
@@ -26,16 +36,22 @@ summary = {
         ],
     },
     "anti_overclaim": {
-        "internal_orientation_datum_derived_claim": False,
+        "internal_orientation_datum_derived_claim": True,
         "topological_selector_bridge_discharged_claim": False,
         "axiom_free_uniqueness_closed_claim": False,
         "gauge_uniqueness_theorem_level_claim": False,
     },
     "b3": {
-        "goal": "Turn the FR/topological intuition into an explicit derivation packet rather than a loose heuristic.",
+        "goal": (
+            "Turn the topological sigma_int strict datum into an explicit bridge toward sign-sensitive orientation "
+            "selection (lifting residual Z2 where truly required), or explicitly freeze residual sign as a tracked "
+            "gauge/convention layer while continuing strict-only closure under QW-2191 discipline."
+        ),
         "available_inputs": [
             "explicit O(2) obstruction from QW-2191",
-            "local topological protection layer from QW-2206",
+            "strict sigma_int datum exported on a declared domain (F307/N418) with gauge-quotient safety (F308/N419)",
+            "slot-free strict sigma_int -> theta-pair supply in declared scope (F451/N489)",
+            "axis-only internal orientation datum exported on two lanes (F453/N492; F454/N496) aligned up to residual sign (P455/N497)",
             "primary topological spinor branch from A5",
         ],
         "obligations": [
@@ -47,7 +63,7 @@ summary = {
         ],
         "packet_ready": True,
         "derivation_discharged": False,
-        "next_step": "B4",
+        "next_step": "B3_CONTINUATION",
     },
 }
 
