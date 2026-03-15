@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.17  
+**Version:** 6.5.18  
 **Date:** 2026-03-15  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -65,6 +65,9 @@
 - Update (`2026-03-15`): the diagonal/local lane exports a strict-derived **full Psi-sector Hessian eigensystem value instantiation**
   `H_psi := K_total + (m0^2 I + D_local_residual)` (numeric 12×12 matrix + eigenvalues/eigenvectors) (`F459`).
   This supports the “light = linearized eigenmodes” reading in declared scope, but remains lane-scoped and does not imply host matching, selector closure, or ToE closure.
+- Update (`2026-03-15`): a projection audit exports how the `H_psi` eigenmodes from `F459` decompose in the two exported
+  mode-index assignment bases (`F453` diagonal/local and `F454` Shannon) (`P463`). This is a lane-scoped linear-algebra audit and does **not**
+  claim that either basis diagonalizes the full `H_psi` operator.
 - The sigma-int corridor theta-supply and sigma-int → residual bridge theorems introduced in Release 6.4 remain in force
   (e.g. `F451/N489`, `P451`, `F452/N490`, `N491`) and are not re-derived here.
 
@@ -290,6 +293,9 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
 24. dodatkowo, pas diagonal/local eksportuje strict-derived **pełny eigensystem** liczbowej instancji Hessianu sektora `Psi`:
     `H_psi := K_total + (m0^2 I + D_local_residual)` (macierz 12×12 + wartości własne + wektory własne) (`F459`).
     To wspiera interpretację “światło = eigenmody liniaryzacji” w zadeklarowanym zakresie, ale pozostaje lane-scoped i nie implikuje host matching, selector closure ani ToE closure.
+25. dodatkowo, wyeksportowano audyt projekcyjny pokazujący jak eigenmody `H_psi` z `F459` rozkładają się w dwóch wyeksportowanych bazach
+    mode-index assignment (`F453` diagonal/local oraz `F454` Shannon) (`P463`). To jest lane-scoped audyt algebry liniowej i **nie**
+    twierdzi, że którakolwiek z tych baz diagonalizuje pełny operator `H_psi`.
 
 ## 1) Jednostronicowy status strict (6.5)
 
