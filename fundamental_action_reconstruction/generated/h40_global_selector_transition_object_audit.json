@@ -1,19 +1,21 @@
 {
   "step": "H40",
   "title": "Global Selector Transition Object Audit",
-  "date": "2026-03-07",
-  "status": "PASS_PARTIAL_BLOCKED_BY_NO_GLOBAL_SELECTOR_TRANSITION_OBJECT",
+  "date": "2026-03-15",
+  "status": "PASS_PARTIAL_LANE_SCOPED_TRANSITION_DATA_PRESENT_GLOBAL_SELECTOR_TRANSITION_OBJECT_STILL_MISSING",
   "inputs": {
     "H34": "no_strict_basis_covariance_or_target_independence_argument",
     "H39": "no_global_physical_selector_object_beyond_chart_locality",
     "C29": "local_projector_formulas_present",
     "C30": "local_overlap_compatibility_law_present",
-    "C31": "transition_angle_source_class_present_only_as_local_class"
+    "C31": "transition_angle_source_class_present_and_lane_scoped_alpha12_exported_from_strict_theta_supply (F451/F457)",
+    "F457": "lane_scoped_alpha12_transition_angle_export_present"
   },
   "supports": [
     "local_projector_formula",
     "local_overlap_compatibility_law",
-    "control_lane_transition_structure"
+    "control_lane_transition_structure",
+    "lane_scoped_transition_angle_export"
   ],
   "missing": [
     "global_selector_transition_object_export",
