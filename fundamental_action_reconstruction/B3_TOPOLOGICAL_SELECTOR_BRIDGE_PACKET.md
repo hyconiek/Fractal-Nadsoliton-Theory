@@ -80,6 +80,15 @@ Repo eksportuje strict sigma-int jako datum z topologii konfiguracji (`F306/N417
 
 W deklarowanym zakresie `R1` istnieje tez slot-free theta supply (`F451/N489`) i inhabitant (`P451`).
 
+### 3b. Istnieje lane-scoped ingredient gluing: jawny transport chartow `pair1↔pair2` na poziomie projektorowym (sign-free)
+
+Repo eksportuje teraz jawny, lane-scoped operator transportu chartow pomiedzy `pair1` i `pair2` na nośniku `n=12`:
+- `O_12` wyprowadzony wyłącznie z `alpha_12` na korytarzu sigma-int (`F461`),
+- z opakowaniem, że transport na poziomie projektorów `P(u)=|u><u|` jest gauge‑irrelewant dla residualnego flipa znaku `u -> -u` (`N506`),
+- oraz audytem ortogonalności i próbkowanego transportu `u_{m,θ}`/projektorów (`P465`).
+
+To jest **ingredient** dla `H40` tylko w sensie lane-scoped transportu/klejenia między dwoma chartami; nie jest to globalny atlas ani globalne cocycle data.
+
 ### 4. Brakuje konkretnego sign-sensitive domkniecia i/lub scope extension
 
 Po powyzszych postepach brakujacy obiekt nie jest juz:
@@ -125,6 +134,7 @@ Status na `2026-03-15`: **wsparta w aktualnie zadeklarowanych auditach**, global
 W szczegolnosci:
 - `A6` jest jawnie lane-scoped i utrzymuje `QW-2191` jako globalny obstruction,
 - embedding audyty `QW-2190` sa conjugation-gauge dla residual sign i O(2) rotacji (np. `N493`, `N495`, audyty `P452`, `P454`),
+- na korytarzu sigma-int istnieje juz jawny lane-scoped chart-transport operator `O_12` pomiedzy `pair1↔pair2` (`F461`), sign-free na poziomie projektorowym (`N506`, audyt `P465`),
 - osie z diagonal/local i Shannon lane sa zgodne na `n=12` (audit `P455`, packaged as `N497`).
 
 ### `B3_O5` - anti-overclaim closure test
