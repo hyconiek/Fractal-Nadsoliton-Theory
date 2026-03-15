@@ -1,0 +1,29 @@
+{
+  "object_id": "r_ord_z12_v1_reference_distribution",
+  "type": "z12_reference_distribution_v1",
+  "definition": "r_ord(x) ∝ exp(-alpha_geo * ord_Z12(x))",
+  "alpha_geo": {
+    "source_object_id": "alpha_geo_strict_derived_v1",
+    "value_symbolic": "4 ln 2"
+  },
+  "carrier": {
+    "group_object_id": "z_12_v1_group",
+    "index_set_object_id": "i_12_v1_index_set"
+  },
+  "ord_z12_by_x": [1, 12, 6, 4, 3, 12, 2, 12, 3, 4, 6, 12],
+  "normalization": {
+    "symbolic": "Z = Σ_{x∈Z_12} exp(-alpha_geo*ord_z12[x])",
+    "notes": [
+      "This artifact intentionally stores ord_z12 values; numeric normalization can be computed downstream."
+    ]
+  },
+  "invariance_notes": [
+    "Aut(Z_12)-invariant reference shape (N479): no marked generator/direction.",
+    "Not translation-invariant on the regular action: it distinguishes the identity orbit {0}."
+  ],
+  "provenance": {
+    "packet": "F446",
+    "theorems": ["N479", "N480"]
+  }
+}
+

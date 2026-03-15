@@ -1,7 +1,7 @@
 # P4 Strict-Core Sigma-Int To Residual Datum Bridge Probe
 
 Status: `P4_EXECUTED_STRICT_CORE_SIGMA_INT_TO_RESIDUAL_DATUM_BRIDGE_PROBE_COMPUTE_OR_FAIL_NO_FALSE_PASS`
-As of: `2026-03-11`
+As of: `2026-03-15`
 
 ## Goal
 
@@ -37,12 +37,18 @@ That is the first common upstream blocker for both:
 
 ## Result
 
-The current route does **not** reach a strict-core residual-datum bridge.
+Update (`2026-03-15`): after exporting a slot-free strict-core sigma-int → theta-pair source (`F451/N489`) and an
+audited `R1` target-slot inhabitant instance constructed from it (`P451`), the strict sigma-int lane is now computable
+up to **target-slot population**.
+
+Update (`2026-03-15`): after exporting an explicit post-witness object-support layer above the exported sign-only
+export-map object (`F452/N490`), the strict sigma-int lane also discharges the post-`T148` object-support target
+(`T130/N395`).
 
 The report returns:
 
 ```text
-NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_RESIDUAL_DATUM_ROUTE
+PASS_COMPUTABLE_FROM_CURRENT_STRICT_CORE_RESIDUAL_DATUM_ROUTE
 ```
 
 ## What is present but still insufficient
@@ -53,17 +59,19 @@ The current repo does contain all of the following:
 2. theorem-level gauge-quotient safety for that datum (`F308/N419`),
 3. a strict-core target-slot export packet (`R1`),
 4. an actual strict-core sign-only export-map object into that slot (`F311/N422`),
-5. an explicit axiom-lane bridge instance (outside strict core).
+5. a slot-free strict-core sigma-int → theta-pair supply (`F451/N489`),
+6. an audited inhabitant instance populating the `R1` target slot constructed from that theta-pair (`P451`),
+7. an explicit axiom-lane bridge instance (outside strict core).
 
-But these still do **not** amount to a strict-core bridge.
+This is sufficient for strict-core **target-slot population**, and the post-`T148` object-support layer above the exported
+map object is now exported (`F452/N490`), but it still does not imply selector closure (`QW-2191` remains open).
 
 ## Finite missing-object list
 
 The current strict-core route still lacks:
 
-1. strict-core theta supply (`theta_1`, `theta_2`) for populating the target slot (`N1/C50`),
-2. an actual strict-core population of the target slot as a residual orientation datum (not just the residual `Z2` sign convention),
-3. any strict-core selector closure / symmetry-breaking ingredient discharging `QW-2191`.
+1. theorem-level discharge of the conditional bridge theorem `T2` (beyond probe-level computability), and
+2. any strict-core selector closure / internal selector source discharging `QW-2191`.
 
 ## Honest frontier
 
@@ -72,16 +80,17 @@ The current strict-core route still lacks:
 - `C46` already gave a carrier file only.
 - `AX3` already gave a positive bridge instance only on the axiom lane.
 
-So the present route stops at:
+So the present route reaches:
 
 ```text
-candidate-fit + carrier + axiom-lane witness
+target-slot population + post-map object-support (strict lane) + axiom-lane witness
 ```
 
-and does not cross into:
+but it does not yet export:
 
 ```text
-strict-core residual datum bridge
+theorem-level discharge of the conditional bridge theorem T2
+nor any strict-core selector closure (QW-2191 remains open)
 ```
 
 ## What P4 does not claim
@@ -99,5 +108,5 @@ strict-core residual datum bridge
 
 Only two serious routes remain:
 
-1. export one genuinely new strict-side theta-supply / selector ingredient and then attack actual target-slot population, or
-2. proceed explicitly on an axiom-augmented closure track without claiming strict-core internalization.
+1. proceed to theorem-level discharge of `T2` without false pass, and/or
+2. proceed explicitly on strict-core selector closure work under `QW-2191` discipline (no implied selector closure).

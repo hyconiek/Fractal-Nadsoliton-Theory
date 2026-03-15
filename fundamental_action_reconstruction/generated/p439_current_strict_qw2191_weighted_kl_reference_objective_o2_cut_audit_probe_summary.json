@@ -1,0 +1,20 @@
+{
+  "stage": "P439",
+  "any_objective_unique_cluster_on_grid": false,
+  "any_objective_z2_unique_on_grid": true,
+  "t165_selector_ingredient_exported": true,
+  "references_tested": {
+    "r_uniform": "Uniform reference distribution on ring sites (control; expected to inherit N463/N464 periodicity)",
+    "r_1_plus_abs_Ktotal_row0": "Reference weights w_x := 1 + |K_total[0,x]| from R14 (marked-site non-uniform datum; normalized to prob)",
+    "r_exp_minus_alpha_geo_dcyc": "Reference weights w_x := exp(-alpha_geo * d_cyc(0,x)) with alpha_geo=4 ln 2 (marked-site distance decay; normalized)",
+    "r_exp_minus_alpha_geo_directed_d": "Reference weights w_x := exp(-alpha_geo * d_dir(0,x)) where d_dir(0,x)=x on Z_12 (marked-site + marked-direction; normalized)",
+    "r_exp_sigma_int_alpha_geo_Ktotal_row0": "Reference weights w_x := exp(sigma_int * alpha_geo * K_total[0,x]) with sigma_int=-1, alpha_geo=4 ln 2 (kernel-shaped; normalized)",
+    "r_exp_minus_alpha_geo_element_order": "Reference weights w_x := exp(-alpha_geo * ord_Z12(x)) where ord_Z12(x)=order of element x in Z_12 (group-structure-derived non-uniform datum; no marked direction; normalized)",
+    "r_element_order_power_minus_alpha_geo": "Reference weights w_x := ord_Z12(x)^(-alpha_geo) with alpha_geo=4 ln 2 (group-structure-derived power-law; no marked direction; normalized)"
+  },
+  "objectives_tested": {
+    "KL_u1_to_r": "J(theta)=KL(p_theta || r) where p_theta=u1(theta)^2 is the squared site-amplitude distribution",
+    "KL_avg_u1_v1_to_r": "J(theta)=0.5*( KL(p_theta||r) + KL(q_theta||r) ) where q_theta=v1(theta)^2 (orthogonal partner)"
+  },
+  "no_false_pass": true
+}

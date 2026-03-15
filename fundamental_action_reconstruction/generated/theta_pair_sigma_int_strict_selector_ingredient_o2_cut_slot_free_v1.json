@@ -1,0 +1,116 @@
+{
+  "object": "ThetaPair_sigma_int_strict_selector_ingredient_o2_cut_slot_free_v1",
+  "status": "actual_exported_strict_core_theta_pair_source__slot_free_construction_class__no_false_pass",
+  "as_of": "2026-03-15",
+  "intent": "Export one slot-free strict-core theta-pair source for the sigma-int corridor: sigma_int_strict_derived_v1 -> (theta_1, theta_2), derived from the strict Shannon element-order reference cross-entropy objective class (F446/N480) extended to pair2 (N488), with no eps/delta_d selector slots and no theta inputs.",
+  "typed_map_shape": "ThetaPair_sigma_int_strict_selector_ingredient_o2_cut_slot_free_v1 : sigma_int_strict_derived_v1 -> (theta_1, theta_2)",
+  "construction_class": {
+    "id": "T162_slot_free_sigma_int_to_theta_v1",
+    "reference_distribution": "fundamental_action_reconstruction/generated/r_ord_z12_v1_reference_distribution.json",
+    "objective_family": "J_{m}(\u03b8) = -\u03a3_x p_{m,\u03b8}(x) log r_ord(x)  (pair_m squared-amplitude distribution)",
+    "theorem_refs": [
+      "N479",
+      "N480",
+      "N488"
+    ],
+    "slot_free": true,
+    "no_theta_inputs": true,
+    "no_eps_delta_d": true
+  },
+  "inputs": {
+    "sigma_int": {
+      "object": "sigma_int_strict_derived_v1",
+      "value": -1
+    },
+    "alpha_geo": {
+      "object": "alpha_geo_strict_derived_v1",
+      "value_symbolic": "4 ln(2)"
+    }
+  },
+  "derived_fourier_defects_on_ord": {
+    "ord_z12_by_x": [
+      1,
+      12,
+      6,
+      4,
+      3,
+      12,
+      2,
+      12,
+      3,
+      4,
+      6,
+      12
+    ],
+    "opposite_pair_sums_Sk": [
+      3,
+      24,
+      9,
+      8,
+      9,
+      24
+    ],
+    "F2_ord_pair1": {
+      "re": 10.000000000000005,
+      "im": 3.552713678800501e-15
+    },
+    "F4_ord_pair2": {
+      "re": -21.999999999999986,
+      "im": 7.105427357601002e-15
+    }
+  },
+  "outputs": {
+    "pair1": {
+      "m": 1,
+      "theta_1_base_mod_pi": 1.5707963267948966,
+      "theta_1": 4.71238898038469,
+      "sigma_int_sign_convention": "theta_1 := theta_1_base + \u03c0 if sigma_int=-1 (matches F311)",
+      "u_1": [
+        -7.499399432609231e-17,
+        -0.20412414523193154,
+        -0.3535533905932738,
+        -0.408248290463863,
+        -0.35355339059327373,
+        -0.20412414523193143,
+        2.4997998108697434e-17,
+        0.20412414523193145,
+        0.35355339059327373,
+        0.408248290463863,
+        0.3535533905932737,
+        0.20412414523193165
+      ]
+    },
+    "pair2": {
+      "m": 2,
+      "theta_2_base_mod_pi": 0.0,
+      "theta_2": 0.0,
+      "u_2": [
+        0.408248290463863,
+        0.20412414523193156,
+        -0.20412414523193143,
+        -0.408248290463863,
+        -0.2041241452319317,
+        0.20412414523193156,
+        0.408248290463863,
+        0.20412414523193173,
+        -0.2041241452319312,
+        -0.408248290463863,
+        -0.20412414523193145,
+        0.20412414523193115
+      ]
+    }
+  },
+  "audits": {
+    "u1_u2_orthonormal_residual_vs_I2": 3.2788134789574343e-16,
+    "u1_norm": 1.0,
+    "u2_norm": 0.9999999999999999,
+    "u1_dot_u2": 1.5959455978986625e-16
+  },
+  "hard_limits": [
+    "Does not discharge strict-derived eps selection (T160) nor strict-derived delta_d selection (T161).",
+    "Does not claim admissible S_sel_int nor strict-core selector closure.",
+    "Does not claim global QW-2191 discharge beyond the declared pair1/pair2 scope.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}

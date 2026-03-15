@@ -1,0 +1,103 @@
+{
+  "object": "ThetaPair_canonical_local_diagonal_strict_derived_v1",
+  "status": "actual_exported_strict_core_theta_pair_source__strict_derived_value_instantiation__no_false_pass",
+  "as_of": "2026-03-15",
+  "intent": "Export one strict-derived actual theta-pair (theta_1,theta_2) and induced u_1,u_2 vectors on the QW-2190 real Fourier scaffold, derived from the canonical diagonal/local residual profile computed by P437 and the pair-wise diagonal-sector defect reconstruction of N484 (evaluated by P449).",
+  "scope": "strict_core_strict_derived_value_instantiation_only",
+  "derived_from": {
+    "p437_profile_artifact": "fundamental_action_reconstruction/generated/p437_current_strict_r14_r15_n477_canonical_local_diagonal_sigma_opposite_pair_sums_value_evaluation_harness_probe.json",
+    "p437_summary": "fundamental_action_reconstruction/generated/p437_current_strict_r14_r15_n477_canonical_local_diagonal_sigma_opposite_pair_sums_value_evaluation_harness_probe_summary.json",
+    "p449_defect_artifact": "fundamental_action_reconstruction/generated/p449_current_strict_canonical_local_diagonal_multi_pair_o2_cut_defect_evaluation_probe.json",
+    "p449_summary": "fundamental_action_reconstruction/generated/p449_current_strict_canonical_local_diagonal_multi_pair_o2_cut_defect_evaluation_probe_summary.json",
+    "qw2190_mode_scaffold": "report_qw2190_kernel_mode_representation_emergence_gate.json"
+  },
+  "provenance_checks": {
+    "strict_derived_inputs_marked": true,
+    "strict_derived_provenance_chain_present": true,
+    "note": "This packet trusts only strict-derived lane artifacts (P437/P449) and does not import any sigma-int premises (eps/delta_d)."
+  },
+  "construction": {
+    "diagonal_sector_pair_m_reconstruction": {
+      "theta_star_rule": "theta_* = (1/2) atan2(Im(F_2m), Re(F_2m))",
+      "u_plus_rule": "u_+ := cos(theta_*) c_m + sin(theta_*) s_m  (QW-2190 real Fourier scaffold)",
+      "references": [
+        "N484",
+        "N485",
+        "N487"
+      ]
+    }
+  },
+  "outputs": {
+    "pair1": {
+      "m": 1,
+      "l": 2,
+      "F_2m": {
+        "Re": 12.88048321986275,
+        "Im": -5.329070518200751e-15,
+        "abs": 12.88048321986275
+      },
+      "theta_1_star": -2.0686609451044866e-16,
+      "u_1_star": [
+        0.408248290463863,
+        0.35355339059327373,
+        0.20412414523193148,
+        -5.945473133012915e-17,
+        -0.2041241452319315,
+        -0.35355339059327384,
+        -0.408248290463863,
+        -0.3535533905932738,
+        -0.20412414523193162,
+        9.458735112734279e-18,
+        0.20412414523193165,
+        0.35355339059327373
+      ],
+      "eigenvalues": {
+        "lambda_plus": 3.1607647274473827,
+        "lambda_minus": 1.0140175241369243
+      }
+    },
+    "pair2": {
+      "m": 2,
+      "l": 4,
+      "F_2m": {
+        "Re": -13.370999870061631,
+        "Im": 1.2434497875801753e-14,
+        "abs": 13.370999870061631
+      },
+      "theta_2_star": 1.5707963267948961,
+      "u_2_star": [
+        2.0629665884343323e-16,
+        0.35355339059327384,
+        0.3535533905932737,
+        -1.5630066262603835e-16,
+        -0.3535533905932738,
+        -0.3535533905932736,
+        1.0630466640864349e-16,
+        0.3535533905932738,
+        0.35355339059327384,
+        -5.630867019124862e-17,
+        -0.3535533905932739,
+        -0.35355339059327384
+      ],
+      "eigenvalues": {
+        "lambda_plus": 3.201641114963956,
+        "lambda_minus": 0.9731411366203508
+      }
+    }
+  },
+  "audits": {
+    "u1_u2_orthonormal_residual": 2.635271519193128e-16,
+    "u1_u2_det_gram": 1.0000000000000002,
+    "u1_u2_rank": 2,
+    "u1_u2_orthonormal_residual_vs_identity": 2.635271519193128e-16,
+    "p437_status": null,
+    "p449_status": null
+  },
+  "hard_limits": [
+    "Does not claim sigma-int -> theta strict-core upgrade (T159 remains a separate lane with selector slots).",
+    "Does not claim coefficient-class discharge of F_2m(d); this is one strict-derived value instantiation lane.",
+    "Does not claim global strict-core selector closure nor admissible S_sel_int.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}

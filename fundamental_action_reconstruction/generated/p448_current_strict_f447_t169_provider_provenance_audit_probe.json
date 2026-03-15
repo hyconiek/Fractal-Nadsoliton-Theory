@@ -1,0 +1,76 @@
+{
+  "stage": "P448",
+  "goal": "audit_F447_T169_provider_provenance_and_strict_derived_readiness_without_false_promotion",
+  "provider": "fundamental_action_reconstruction/generated/f447_current_strict_t169_qw2122_scalar_to_t168_per_site_value_provider_strict_derived_v1.json",
+  "audit": {
+    "schema_ok": true,
+    "schema_errors": [],
+    "provider_status": "STRICT_DERIVED_T169_CONSTRAINED_LIFT_VALUE_PROVIDER_PACKET",
+    "provider_classification": "strict_derived",
+    "strict_input_checks": {
+      "QW-2122": {
+        "declared_path": "report_qw2122_psi_potential_diagonal_floor_gate.json",
+        "resolved_exists": true,
+        "resolved": "report_qw2122_psi_potential_diagonal_floor_gate.json"
+      },
+      "alpha_geo_strict_derived_v1": {
+        "declared_path": "fundamental_action_reconstruction/generated/alpha_geo_strict_derived_v1.json",
+        "resolved_exists": true,
+        "resolved": "fundamental_action_reconstruction/generated/alpha_geo_strict_derived_v1.json"
+      },
+      "R14": {
+        "declared_path": "fundamental_action_reconstruction/generated/r14_explicit_frozen_kernel_specialization_packet_for_host_matching_route.json",
+        "resolved_exists": true,
+        "resolved": "fundamental_action_reconstruction/generated/r14_explicit_frozen_kernel_specialization_packet_for_host_matching_route.json"
+      },
+      "R15": {
+        "declared_path": "fundamental_action_reconstruction/generated/r15_explicit_host_scalar_floor_embedding_packet_for_host_matching_route.json",
+        "resolved_exists": true,
+        "resolved": "fundamental_action_reconstruction/generated/r15_explicit_host_scalar_floor_embedding_packet_for_host_matching_route.json"
+      }
+    },
+    "reference": {
+      "declared_r_ordpow": "fundamental_action_reconstruction/generated/r_ordpow_z12_v1_reference_distribution.json",
+      "resolved_exists": true,
+      "resolved": "fundamental_action_reconstruction/generated/r_ordpow_z12_v1_reference_distribution.json"
+    },
+    "t168_arrays_present": {
+      "vpsi": true,
+      "g4": true,
+      "g6": true
+    },
+    "t167_sigma_present": {
+      "Sigma_psi0_psi6": true,
+      "Sigma_psi1_psi7": true,
+      "Sigma_psi2_psi8": true,
+      "Sigma_psi3_psi9": true,
+      "Sigma_psi4_psi10": true,
+      "Sigma_psi5_psi11": true
+    },
+    "declared_lift_definition_keys": [
+      "g4_uniform_minimal_matching",
+      "g6",
+      "vpsi_magnitudes",
+      "vpsi_signs"
+    ],
+    "nontrivial_selection_premises": [
+      "choice_of_reference_distribution_shape: r_ordpow(x) \u221d ord_Z12(x)^(-alpha_geo)",
+      "sign_selection: minimize mixing energy over {\u00b11}^12 and fix global Z2 by s0=+1",
+      "sextic_mapping: g6_i := 0",
+      "quartic_mapping: uniform g4_i matched to scalar lambda_psi along lifted vacuum ray"
+    ],
+    "theorem_references_present": true,
+    "theorem_references": [
+      "N479_CURRENT_FIRST_STRICT_Z12_ELEMENT_ORDER_REFERENCE_AUT_Z12_INVARIANCE_NO_MARKED_DIRECTION_THEOREM",
+      "N483_CURRENT_FIRST_STRICT_T169_POWERLAW_ELEMENT_ORDER_CONSTRAINED_LIFT_EXISTENCE_UNIQUENESS_THEOREM"
+    ],
+    "required_theorems_present": {
+      "N479_CURRENT_FIRST_STRICT_Z12_ELEMENT_ORDER_REFERENCE_AUT_Z12_INVARIANCE_NO_MARKED_DIRECTION_THEOREM": true,
+      "N483_CURRENT_FIRST_STRICT_T169_POWERLAW_ELEMENT_ORDER_CONSTRAINED_LIFT_EXISTENCE_UNIQUENESS_THEOREM": true
+    },
+    "theorem_level_pass": true,
+    "recommendation": "keep_strict_derived",
+    "recommendation_reason": "Provider declares strict_derived and references the required theorem-level existence/uniqueness + no-direction-slot anchors (N483/N479)."
+  },
+  "no_false_pass": true
+}

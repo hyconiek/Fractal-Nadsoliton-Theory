@@ -1,0 +1,62 @@
+{
+  "lane": "strict_extension_only",
+  "step": "AX23",
+  "status": "strict_extension_lane_z12_generator_fix_and_shannon_kl_pair1_o2_cut_premise_packet_constructed__no_false_pass",
+  "as_of": "2026-03-14",
+  "assembled_from": {
+    "extension_scope_acceptance": "AX16 (strict_extension_only)",
+    "premise_packet": "AX23_STRICT_EXTENSION_LANE_Z12_GENERATOR_FIX_AND_SHANNON_KL_O2_CUT_PREMISE_PACKET.md",
+    "alpha_geo_source_upgrade": "generated/alpha_geo_strict_derived_v1.json (F309/N420)",
+    "p439_objective_audit": "generated/p439_current_strict_qw2191_weighted_kl_reference_objective_o2_cut_audit_probe.json",
+    "strict_core_noncanonicity_boundary": "N462 (no Aut(Z12)-invariant canonical generator choice); T164 remains open",
+    "strict_core_selector_target": "T165 remains open"
+  },
+  "inputs": {
+    "alpha_geo_strict_derived_v1": "4 ln(2)",
+    "alpha_geo_numeric_used": 2.772588722239781,
+    "p439_reference_id": "r_exp_minus_alpha_geo_directed_d",
+    "p439_objective_id": "KL_u1_to_r"
+  },
+  "extension_scope_premises": {
+    "lane": "strict_extension_only",
+    "z12_generator_orientation_fix": {
+      "generator_fixed": 1,
+      "successor_map": "suc_fix(k) := (k+1) mod 12",
+      "note": "This fixes a marked direction on Z_12 and is not strict-core canonical under N462; it is accepted only in extension scope."
+    },
+    "reference_distribution": {
+      "r_dir(x)": "exp(-alpha_geo * x) / \u03a3_{t=0..11} exp(-alpha_geo * t)",
+      "x_domain": "I_12_v1 = {0,1,...,11}",
+      "note": "Marked-site + marked-direction reference distribution (non-translation-invariant)."
+    }
+  },
+  "pair1_o2_cut_extension_lane_representative": {
+    "objective": "J_dir(theta) := KL( u1(theta)^2 || r_dir )",
+    "theta_pair1_fix": 0.5235987755982989,
+    "residual_symmetry": "Z2 (theta -> theta + \u03c0) unavoidable for squared-amplitude objectives",
+    "p439_grid_audit": {
+      "cluster_count": 2,
+      "cluster_centers_theta": [
+        0.5235987755982989,
+        3.6651914291880923
+      ],
+      "z2_unique_on_grid": true
+    },
+    "scope_note": "This is an extension-lane representative point on the QW-2191 O(2) family on pair1; strict-core upgrade requires T164+T165 discharge."
+  },
+  "strict_core_status": {
+    "T164_discharged": false,
+    "T165_discharged": false,
+    "QW_2191_discharged": false,
+    "strict_core_theta_export_present": false
+  },
+  "forbidden_overclaim_set": [
+    "strict-core canonical generator/orientation fixing datum",
+    "strict-core Shannon symmetry-breaking selector ingredient",
+    "strict-core theta export",
+    "strict-core selector closure",
+    "strict-core QW-2191 discharge",
+    "ToE closure"
+  ],
+  "no_false_pass": true
+}

@@ -1,0 +1,45 @@
+{
+  "stage": "P442",
+  "goal": "audit_frontier_for_T168_vacuum_and_self_coupling_value_provider_needed_by_P437_on_the_T166_diagonal_lane",
+  "generated_utc": "2026-03-14T14:47:59.341762+00:00",
+  "strict_scalar_sources": {
+    "QW-2122": "report_qw2122_psi_potential_diagonal_floor_gate.json",
+    "QW-2123": "report_qw2123_vacuum_branch_selection_strict_gate.json",
+    "QW-2124": "report_qw2124_scalar_vacuum_closure_branch_resolved_gate.json"
+  },
+  "designated_harness_input": "fundamental_action_reconstruction/generated/p437_input_vpsi_g4_g6_candidate.json",
+  "scalar_values": {
+    "lambda_psi_strict": 0.13407749626776447,
+    "broken_branch_rho_star_sq": 3.77972441525249,
+    "broken_branch_diag_floor": 1.013551972358388,
+    "qw2123_verdict": "VACUUM_BRANCH_SELECTION_STRICT_GATE_PASS_BROKEN_BRANCH_REQUIRED",
+    "qw2123_selection_rule_result": "broken_branch_required",
+    "qw2124_verdict": "SCALAR_VACUUM_CLOSURE_BRANCH_RESOLVED_STRICT_PASS"
+  },
+  "audit": {
+    "scalar_sources_ok": {
+      "qw2122_lambda_psi_strict_present": true,
+      "qw2122_broken_branch_rho_star_sq_present": true,
+      "qw2122_broken_branch_diag_floor_present": true,
+      "qw2123_branch_selection_pass_broken_branch_required": true,
+      "qw2124_scalar_vacuum_closure_branch_resolved_strict_pass": true
+    },
+    "p437_input_has_numeric_arrays": {
+      "vpsi": false,
+      "g4": false,
+      "g6": false
+    },
+    "mapping_gap_remains": true,
+    "missing": [
+      "strict-derived numeric vpsi[0..11] provider (length-12, nonzero)",
+      "strict-derived numeric g4[0..11] provider (length-12)",
+      "strict-derived numeric g6[0..11] provider (length-12)"
+    ]
+  },
+  "result": {
+    "t168_discharged": false,
+    "recommended_next_strict_target": "T168",
+    "recommendation_reason": "P437 requires strict-derived (vpsi,g4,g6) arrays; repo currently exports only strict scalar-side psi potential values (QW-2122/2123/2124) and no strict lift/mapping to the canonical per-site families."
+  },
+  "no_false_pass": true
+}

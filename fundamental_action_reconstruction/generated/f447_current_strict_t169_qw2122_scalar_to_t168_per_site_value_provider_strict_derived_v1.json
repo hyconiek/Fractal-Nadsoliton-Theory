@@ -1,0 +1,136 @@
+{
+  "stage": "F447",
+  "generated_utc": "2026-03-15T11:15:38.654321+00:00",
+  "status": "STRICT_DERIVED_T169_CONSTRAINED_LIFT_VALUE_PROVIDER_PACKET",
+  "classification": "strict_derived",
+  "theorems": [
+    "N479_CURRENT_FIRST_STRICT_Z12_ELEMENT_ORDER_REFERENCE_AUT_Z12_INVARIANCE_NO_MARKED_DIRECTION_THEOREM",
+    "N483_CURRENT_FIRST_STRICT_T169_POWERLAW_ELEMENT_ORDER_CONSTRAINED_LIFT_EXISTENCE_UNIQUENESS_THEOREM"
+  ],
+  "object_id": "Delta_qw2122_scalar_to_t168_per_site_value_provider_strict_derived_v1",
+  "goal": "export_one_strict_derived_T169_constrained_lift_value_provider_for_(vpsi,g4,g6)_and_populate_designated_harness_inputs_without_hidden_direction_slots",
+  "strict_inputs": {
+    "QW-2122": "report_qw2122_psi_potential_diagonal_floor_gate.json",
+    "alpha_geo_strict_derived_v1": "fundamental_action_reconstruction/generated/alpha_geo_strict_derived_v1.json",
+    "R14": "fundamental_action_reconstruction/generated/r14_explicit_frozen_kernel_specialization_packet_for_host_matching_route.json",
+    "R15": "fundamental_action_reconstruction/generated/r15_explicit_host_scalar_floor_embedding_packet_for_host_matching_route.json"
+  },
+  "reference": {
+    "r_ordpow": "fundamental_action_reconstruction/generated/r_ordpow_z12_v1_reference_distribution.json"
+  },
+  "lift_definition": {
+    "vpsi_magnitudes": "vpsi_i := sqrt(rho_star_sq * r_ordpow(i))",
+    "vpsi_signs": "choose s \u2208 {\u00b11}^12 minimizing E_mix(s)=\u03a3_{i<j} K_total[i,j] (s_i|v_i|)(s_j|v_j|); fix global Z2 by s0=+1; set vpsi_i := s_i * vpsi_i",
+    "g6": "g6_i := 0 (scalar QW-2122 model has no sextic term)",
+    "g4_uniform_minimal_matching": "g4_i := lambda_psi_strict / sum_i r_ordpow(i)^2 (uniform g4 matching scalar quartic along the lifted vacuum direction)"
+  },
+  "values": {
+    "rho_star_sq": 3.77972441525249,
+    "lambda_psi_strict": 0.13407749626776447,
+    "alpha_geo_numeric": 2.772588722239781,
+    "sum_q2": 0.6055583194555814,
+    "g4_uniform_value": 0.2214113685834668,
+    "m0_sq": 1.013551972358388
+  },
+  "vpsi": [
+    1.7036528963091704,
+    -0.054364855733449916,
+    -0.1421132022025353,
+    -0.2493151930762584,
+    0.3714929795690097,
+    0.054364855733449916,
+    -0.6517258248514076,
+    0.054364855733449916,
+    0.3714929795690097,
+    -0.2493151930762584,
+    -0.1421132022025353,
+    -0.054364855733449916
+  ],
+  "g4": [
+    0.2214113685834668,
+    0.2214113685834668,
+    0.2214113685834668,
+    0.2214113685834668,
+    0.2214113685834668,
+    0.2214113685834668,
+    0.2214113685834668,
+    0.2214113685834668,
+    0.2214113685834668,
+    0.2214113685834668,
+    0.2214113685834668,
+    0.2214113685834668
+  ],
+  "g6": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "Sigma_psi0_psi6": -0.25097702661158383,
+  "Sigma_psi1_psi7": 12.812283161367974,
+  "Sigma_psi2_psi8": -0.005718701512155366,
+  "Sigma_psi3_psi9": -0.3134583835942124,
+  "Sigma_psi4_psi10": -0.005718701512155588,
+  "Sigma_psi5_psi11": 12.812283161367974,
+  "computed": {
+    "d_local_residual_profile": [
+      0.34269049977246646,
+      11.518361441687219,
+      0.5284499241054783,
+      -0.1567291917971062,
+      -0.5341686256176337,
+      1.2939217196807558,
+      -0.5936675263840503,
+      1.2939217196807553,
+      -0.5341686256176337,
+      -0.1567291917971062,
+      0.5284499241054781,
+      11.518361441687219
+    ],
+    "sigma_opposite_pair_sums": {
+      "Sigma_psi0_psi6": -0.25097702661158383,
+      "Sigma_psi1_psi7": 12.812283161367974,
+      "Sigma_psi2_psi8": -0.005718701512155366,
+      "Sigma_psi3_psi9": -0.3134583835942124,
+      "Sigma_psi4_psi10": -0.005718701512155588,
+      "Sigma_psi5_psi11": 12.812283161367974
+    },
+    "diagnostics": {
+      "vpsi_abs_min": 0.054364855733449916,
+      "vpsi_abs_ratio_max_over_min": 31.337393860882393,
+      "mixing_energy_sign_selection": {
+        "rule": "choose s \u2208 {\u00b11}^12 minimizing E_mix(s)=\u03a3_{i<j} K_total[i,j] (s_i|v_i|)(s_j|v_j|); fix global Z2 by s0=+1",
+        "min_energy": -0.33631785660632646,
+        "minimizer_count": 2,
+        "chosen_sign_vector": [
+          1,
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          -1
+        ]
+      }
+    }
+  },
+  "hard_limits": [
+    "This packet exports a strict lift/value-provider for the diagonal-lane harness; it does not claim ToE closure.",
+    "Does not claim global QW-2191 discharge.",
+    "Does not claim strict theta export beyond the pair1 diagonal/local axis computed from the resulting F2(d)."
+  ],
+  "no_false_pass": true
+}

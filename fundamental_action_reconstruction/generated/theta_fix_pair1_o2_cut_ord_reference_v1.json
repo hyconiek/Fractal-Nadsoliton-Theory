@@ -1,0 +1,19 @@
+{
+  "object_id": "theta_fix_pair1_o2_cut_ord_reference_v1",
+  "type": "pair1_o2_cut_theta_fix_v1",
+  "objective": {
+    "name": "J_ord",
+    "definition": "cross_entropy(p_theta || r_ord) = -Σ_x p_theta(x) log r_ord(x)",
+    "reference_distribution_object_id": "r_ord_z12_v1_reference_distribution"
+  },
+  "result": {
+    "minimizer_set_symbolic": "theta = pi/2 (mod pi)",
+    "minimizer_set_on_0_2pi": ["pi/2", "3pi/2"],
+    "residual_symmetry": "Z2 (sign flip u_{theta+pi} = -u_theta)"
+  },
+  "theorem": "N480",
+  "provenance": {
+    "packet": "F446"
+  }
+}
+

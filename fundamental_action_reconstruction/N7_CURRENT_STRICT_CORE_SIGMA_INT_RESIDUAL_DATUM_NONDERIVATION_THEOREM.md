@@ -1,7 +1,7 @@
 # N7 Current Strict-Core Sigma-Int Residual Datum Nonderivation Theorem
 
 Status: `N7_DISCHARGED_CURRENT_STRICT_CORE_SIGMA_INT_RESIDUAL_DATUM_NONDERIVATION_NO_FALSE_PASS`
-As of: `2026-03-11`
+As of: `2026-03-15`
 
 ## Goal
 
@@ -12,6 +12,24 @@ does the strict sigma-int lane already derive an actual strict-core population
 of the residual orientation datum target slot R1 (i.e. supply theta_1, theta_2),
 or does it still export only the residual Z2 sign convention layer?
 ```
+
+## Update (2026-03-15): this nonderivation theorem is superseded on current repo state
+
+On the current repo state:
+
+1. strict-core theta supply on the sigma-int corridor lane is now exported in a slot-free construction class:
+   `ThetaPair_sigma_int_strict_selector_ingredient_o2_cut_slot_free_v1` (`F451`),
+   packaged as a theorem-level discharge and `T159` satisfaction (`N489`),
+2. an audited inhabitant instance populating the `R1` residual orientation datum target slot constructed from that
+   slot-free theta-pair source is exported (`P451`),
+3. the mechanical rerun probe reports the strict sigma-int residual-datum route **computable up to target-slot
+   population** (`P5` status `PASS_COMPUTABLE...`).
+
+Therefore the conclusion “strict sigma-int exports only residual `Z2` sign and cannot populate `R1`” is **no longer the
+current strict status**.
+
+The remainder of this document is preserved as the historical `2026-03-11` nonderivation statement (it was correct on
+that earlier repo state).
 
 ## Theorem
 

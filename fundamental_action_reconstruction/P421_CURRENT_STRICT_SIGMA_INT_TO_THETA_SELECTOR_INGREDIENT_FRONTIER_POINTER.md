@@ -1,7 +1,7 @@
 # P421 Current Strict Sigma-Int → Theta Selector Ingredient Frontier Pointer
 
 Status: `P421_EXECUTED_CURRENT_STRICT_SIGMA_INT_TO_THETA_SELECTOR_INGREDIENT_FRONTIER_POINTER_NO_FALSE_PASS`  
-As of: `2026-03-13`
+As of: `2026-03-15`
 
 ## Goal
 
@@ -19,9 +19,11 @@ The strict-core upgrade target (canonical `O(2)`-cut theta-supply ingredient) is
 
 On the current repo state:
 
-- strict-core theta export remains absent,
-- `QW-2191` remains open (no implied selector closure),
-- only extension-lane “one representative” continuations exist (`AX21/AX22`).
+- update (`2026-03-15`): strict-core theta supply on the sigma-int corridor lane is now exported in a slot-free
+  construction class (`T162`) satisfying `T159` in the `R1` scope via `F451` + `N489`,
+- residual ambiguity is only `Z2` sign (no selector closure implied; `QW-2191` remains open globally),
+- strict-derived slot-selection targets `T160/T161` remain open for the *old* parameterized corridor class,
+- extension-lane “one representative” continuations remain available as explicitly non-strict (`AX21/AX22`).
 
 ## Exposed selector slots (current strict sigma-int → theta class)
 
@@ -51,7 +53,8 @@ keeps that move explicitly outside strict core:
   - `delta_d := delta_max := d_local/11`.
 - `AX22` packages a publication-ready strict-extension summary of that lane.
 
-This does **not** discharge `T159/T160/T161`. It only records the explicit premise-based continuation.
+This does **not** discharge `T160/T161`. It only records the explicit premise-based continuation of the old
+parameterized corridor class; `T159` is satisfied separately via the slot-free `T162` route.
 
 ## Slot-free construction-class route (AX20 / typed lane) — current status
 
@@ -83,19 +86,22 @@ strict boundary/closure theorems showing why “topology alone” does not yet y
 - pure `Aut(Z_12)`-invariance collapses phase information to `{±1}` (trivial angles): `N461`,
 - no `Aut(Z_12)`-invariant canonical generator/orientation fixing datum exists from typed structure alone: `N462`.
 
-So `T162` remains **not discharged** on the current repo state.
+Update (`2026-03-15`): `T162` is now discharged via the slot-free sigma-int → theta-pair construction exported in
+`F451` and packaged as theorem `N489`, thereby satisfying `T159` in the `R1` scope (residual `Z2` sign only; no selector
+closure claim). The underlying `O(2)→Z2` uniqueness inputs are `N480` (`pair1`) and `N488` (`pair2`).
 
 ## Next honest move (frontier)
 
 Only three honest continuations exist (must be explicit which):
 
-1. **Strict-derived slot selection:** discharge `T160/T161` by exporting genuinely strict-derived (not premise-only)
-   eps/delta_d selection laws/value objects, **or**
-2. **New slot-free construction class:** discharge `T162` by exporting a genuinely new sigma-int → theta class
-   in which `eps`/`delta_d` slot families do not exist, and prove it contains an actual strict `O(2)`-cut ingredient
-   (`T159`), **or**
+1. **Integrate downstream:** rerun the sigma-int → residual-datum lane (`P5/T2`) using the exported slot-free theta-pair
+   supply; update (`2026-03-15`): the post‑`T148` object‑support target (`T130/N395`) is now discharged (`F452/N490`), so
+   the downstream next move is theorem-level discharge of `T2` and continuation under explicit `QW-2191` discipline,
+   **or**
+2. **Optional slot-selection:** still discharge `T160/T161` if you want strict-derived eps/delta selection for the
+   *old* corridor class (not required for strict theta supply anymore), **or**
 3. **Explicit non-strict continuation:** proceed in `strict_extension_only` with declared premises (`AX21/AX22`)
-   without promoting the result into strict core and without claiming `QW-2191` discharge.
+   without promoting the result into strict core and without claiming selector closure.
 
 No intermediate “verbal promotion” is admissible.
 
@@ -153,8 +159,11 @@ relying on host-kernel isotropy or rhetoric.
 `S2` records “selector‑axiom discharge via Shannon symmetry‑breaking premise” as a strategic intent, and the repo
 does export strict Shannon and sigma‑int source objects (`N420`, `N418`).
 
-But no strict-core Shannon symmetry‑breaking *selector ingredient* is exported yet. A sharp strict target spec and
-current-state audit are recorded as:
+Update (`2026-03-15`): the repo now exports one strict Shannon element‑order reference cross‑entropy ingredient cutting
+`pair1` and `pair2` down to residual `Z2` (used by the slot‑free sigma‑int theta‑pair supply `F451/N489`; uniqueness
+theorems `N480/N488`). This still does **not** imply strict-core selector closure.
+
+A sharp strict target spec and current-state audit for the broader selector‑axiom route remain recorded as:
 
 - `T165` (target spec),
 - `P422` (audit probe).

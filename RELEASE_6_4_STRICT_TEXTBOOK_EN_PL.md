@@ -1,14 +1,18 @@
 # RELEASE 6.4 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.4.2  
-**Date:** 2026-03-13  
+**Version:** 6.4.3  
+**Date:** 2026-03-15  
 **Branch:** `main`  
 **Predecessor:** Release 6.3 — Global Selector Capture Edition
 
 **Status discipline (no false pass):**
 - This document is a **strict-only textbook projection** of the current repo state.
-- It does **not** claim strict-core theta export, strict-core selector closure, global selector closure,
-  `QW-2191` discharge, or ToE closure.
+- It does **not** claim strict-core selector closure, global selector closure, `QW-2191` discharge, or ToE closure.
+- Update (`2026-03-15`): it does export strict-core theta supply on the sigma-int corridor lane (`T159`) via a slot-free
+  construction class (`T162`) discharged by `F451` + `N489` (residual `Z2` sign only; no selector closure claim).
+- Update (`2026-03-15`): it also exports a post-witness object-support layer above the exported strict-core sigma-int →
+  residual export-map object, discharging the post-`T148` object-support target (`T130/N395`) via `F452` + `N490` (no
+  implied selector closure).
 - Any use of extension-lane representatives (e.g. fixing selector slots) remains explicitly labeled
   `strict_extension_only` and must not be promoted into strict core.
 
@@ -47,6 +51,11 @@ Release 6.4 adds **new strict structural closures** around the `QW-2191` uniquen
 11. under constant-vacuum stationarity (exported canonical EoM) and `vpsi_k ≠ 0`, the Yukawa combination cancels out of
    the canonical diagonal entry defining `d_k`, yielding a Yukawa-free diagonal expression (`N474`, toy-audited by
    `P435`).
+12. update (`2026-03-15`): the sigma-int corridor lane now exports a slot-free strict-core theta-pair supply satisfying
+    `T159` (`F451/N489`) and an audited `R1` target-slot inhabitant instance constructed from it (`P451`).
+13. update (`2026-03-15`): the strict sigma-int residual bridge lane now exports a post-witness object-support layer
+    above the exported sign-only map object, discharging the post-`T148` object-support target (`T130/N395`) via
+    `F452/N490` (the export-map object itself remains sign-only; no implied selector closure).
 
 This is a *reduction*, not a discharge: it makes the “physical accelerator of choice” claim checkable without
 introducing new hidden slots, but it does not yet provide strict-derived diagonal coefficient values. In particular,
@@ -79,11 +88,14 @@ value instantiation is currently exported to decide it by direct evaluation.
 
 ### 1.2 What is still missing (the real frontier)
 
+Update (`2026-03-15`): the repo now exports a strict-core sigma-int corridor theta-pair supply satisfying `T159` via the
+slot-free `T162` route (`F451/N489`), but this is not selector closure.
+
 The repo still does **not** export:
 
 1. any strict-derived diagonal/local coefficient/value instantiation deciding whether the canonical local diagonal
    sector has `F2(d) ≠ 0` (currently underdetermined on exports: `N472/P431`),
-2. any strict-core canonical theta-supply ingredient upgrading candidate representatives into strict core (`T159`),
+2. any strict-core selector closure / global closure (a strict internal selector source),
 3. any global `QW-2191` discharge or ToE closure.
 
 So Release 6.4 is a strict reduction step: it replaces vague “selector” rhetoric with an explicit `F2(d)` defect
@@ -408,6 +420,11 @@ Release 6.4 dodaje **nowe ścisłe domknięcia strukturalne** wokół przeszkody
 11. przy stacjonarności stałej próżni (wyeksportowane kanoniczne EoM) i `vpsi_k ≠ 0`, kombinacja Yukawa znika z
     kanonicznego wpisu diagonalnego definiującego `d_k`, dając Yukawa‑wolną postać wyrażenia diagonalnego (`N474`,
     toy-audit `P435`).
+12. update (`2026-03-15`): korytarz sigma-int eksportuje teraz slot-free strict-core theta-pair supply spełniający
+    `T159` (`F451/N489`) oraz audytowaną instancję-inhabitanta target-slotu `R1` skonstruowaną z tej pary (`P451`).
+13. update (`2026-03-15`): strict sigma-int residual bridge eksportuje teraz post-witness warstwę object-support ponad
+    wyeksportowaną sign-only mapą, dischargując target post-`T148` (`T130/N395`) przez `F452/N490` (sama mapa pozostaje
+    sign-only; bez implied selector closure).
 
 To jest *redukcja*, nie rozładowanie: sprawia, że hasło “fizyczny akcelerator wyboru” staje się sprawdzalnym defektem,
 ale nie dostarcza jeszcze strict-derived wartości współczynników diagonalnych. W szczególności `N472/P431` pokazują, że
@@ -440,11 +457,16 @@ wartości liczbowych pozwalających rozstrzygnąć to przez bezpośrednią ewalu
 
 ### 1.2 Co pozostaje brakujące (prawdziwy frontier)
 
+Update (`2026-03-15`): repo eksportuje teraz strict-core theta supply na korytarzu sigma-int (`T159`) przez slot-free
+klasę (`T162`) rozładowaną przez `F451/N489` (pozostaje `Z2`; bez claimu domknięcia selektora).
+Update (`2026-03-15`): repo eksportuje też post-witness object-support layer ponad wyeksportowaną mapą sigma-int →
+residual, dischargując target `T130/N395` przez `F452/N490` (bez implied selector closure; `QW-2191` pozostaje otwarty).
+
 Repo nadal **nie** eksportuje:
 
 1. strict-derived instancji wartości/współczynników sektora diagonalnego wystarczającej do rozstrzygnięcia
    `F2(d) ≠ 0` (obecnie niedookreślone na eksportach: `N472/P431`),
-2. ścisłego składnika theta/selektora kanonicznie tnącego `O(2)` (`T159`),
+2. ścisłego domknięcia selektora / globalnego domknięcia (wewnętrznego źródła selektora strict-core),
 3. globalnego rozładowania `QW-2191` ani domknięcia ToE.
 
 Release 6.4 jest więc krokiem redukcyjnym: zastępuje retorykę selektora jednym ścisłym defektem `F2(d)`.

@@ -1,0 +1,762 @@
+{
+  "generated_utc": "2026-03-15T12:01:03.391310+00:00",
+  "stage": "P439",
+  "goal": "audit_weighted_KL_to_nonuniform_reference_objectives_on_qw2191_o2_family_for_potential_unique_o2_cut",
+  "inputs": {
+    "qw2190_kernel_mode_report": "report_qw2190_kernel_mode_representation_emergence_gate.json",
+    "r14_ktotal_specialization_packet": "fundamental_action_reconstruction/generated/r14_explicit_frozen_kernel_specialization_packet_for_host_matching_route.json",
+    "alpha_geo_used": 2.772588722239781,
+    "sigma_int_used": -1.0
+  },
+  "grid": {
+    "theta_domain": "[0,2pi]",
+    "grid_n": 7201
+  },
+  "references_tested": {
+    "r_uniform": "Uniform reference distribution on ring sites (control; expected to inherit N463/N464 periodicity)",
+    "r_1_plus_abs_Ktotal_row0": "Reference weights w_x := 1 + |K_total[0,x]| from R14 (marked-site non-uniform datum; normalized to prob)",
+    "r_exp_minus_alpha_geo_dcyc": "Reference weights w_x := exp(-alpha_geo * d_cyc(0,x)) with alpha_geo=4 ln 2 (marked-site distance decay; normalized)",
+    "r_exp_minus_alpha_geo_directed_d": "Reference weights w_x := exp(-alpha_geo * d_dir(0,x)) where d_dir(0,x)=x on Z_12 (marked-site + marked-direction; normalized)",
+    "r_exp_sigma_int_alpha_geo_Ktotal_row0": "Reference weights w_x := exp(sigma_int * alpha_geo * K_total[0,x]) with sigma_int=-1, alpha_geo=4 ln 2 (kernel-shaped; normalized)",
+    "r_exp_minus_alpha_geo_element_order": "Reference weights w_x := exp(-alpha_geo * ord_Z12(x)) where ord_Z12(x)=order of element x in Z_12 (group-structure-derived non-uniform datum; no marked direction; normalized)",
+    "r_element_order_power_minus_alpha_geo": "Reference weights w_x := ord_Z12(x)^(-alpha_geo) with alpha_geo=4 ln 2 (group-structure-derived power-law; no marked direction; normalized)"
+  },
+  "objectives_tested": {
+    "KL_u1_to_r": "J(theta)=KL(p_theta || r) where p_theta=u1(theta)^2 is the squared site-amplitude distribution",
+    "KL_avg_u1_v1_to_r": "J(theta)=0.5*( KL(p_theta||r) + KL(q_theta||r) ) where q_theta=v1(theta)^2 (orthogonal partner)"
+  },
+  "results_by_reference": {
+    "r_uniform": {
+      "reference_description": "Uniform reference distribution on ring sites (control; expected to inherit N463/N464 periodicity)",
+      "reference_prob": [
+        0.08333333333333333,
+        0.08333333333333333,
+        0.08333333333333333,
+        0.08333333333333333,
+        0.08333333333333333,
+        0.08333333333333333,
+        0.08333333333333333,
+        0.08333333333333333,
+        0.08333333333333333,
+        0.08333333333333333,
+        0.08333333333333333,
+        0.08333333333333333
+      ],
+      "objective_minima_summary": {
+        "KL_u1_to_r": {
+          "description": "J(theta)=KL(p_theta || r) where p_theta=u1(theta)^2 is the squared site-amplitude distribution",
+          "summary": {
+            "min_value": 0.2982478759276493,
+            "max_value": 0.3182570841474066,
+            "range": 0.020009208219757324,
+            "near_min_tol": 1e-06,
+            "near_min_index_count": 36,
+            "cluster_count": 12,
+            "cluster_centers_theta": [
+              0.26179938779914946,
+              0.7853981633974483,
+              1.3089969389957472,
+              1.8325957145940461,
+              2.356194490192345,
+              2.879793265790644,
+              3.4033920413889427,
+              3.9269908169872414,
+              4.4505895925855405,
+              4.97418836818384,
+              5.497787143782138,
+              6.021385919380437
+            ]
+          },
+          "z2_unique_on_grid": false
+        },
+        "KL_avg_u1_v1_to_r": {
+          "description": "J(theta)=0.5*( KL(p_theta||r) + KL(q_theta||r) ) where q_theta=v1(theta)^2 (orthogonal partner)",
+          "summary": {
+            "min_value": 0.29824787592764934,
+            "max_value": 0.3182570841474065,
+            "range": 0.020009208219757157,
+            "near_min_tol": 1e-06,
+            "near_min_index_count": 36,
+            "cluster_count": 12,
+            "cluster_centers_theta": [
+              0.26179938779914946,
+              0.7853981633974483,
+              1.3089969389957472,
+              1.8325957145940461,
+              2.356194490192345,
+              2.879793265790644,
+              3.4033920413889427,
+              3.9269908169872414,
+              4.4505895925855405,
+              4.97418836818384,
+              5.497787143782138,
+              6.021385919380437
+            ]
+          },
+          "z2_unique_on_grid": false
+        }
+      },
+      "objective_rows_compact": [
+        {
+          "objective_id": "KL_u1_to_r",
+          "min_value": 0.2982478759276493,
+          "cluster_count": 12,
+          "cluster_centers_theta": [
+            0.26179938779914946,
+            0.7853981633974483,
+            1.3089969389957472,
+            1.8325957145940461,
+            2.356194490192345,
+            2.879793265790644,
+            3.4033920413889427,
+            3.9269908169872414,
+            4.4505895925855405,
+            4.97418836818384,
+            5.497787143782138,
+            6.021385919380437
+          ],
+          "z2_unique_on_grid": false
+        },
+        {
+          "objective_id": "KL_avg_u1_v1_to_r",
+          "min_value": 0.29824787592764934,
+          "cluster_count": 12,
+          "cluster_centers_theta": [
+            0.26179938779914946,
+            0.7853981633974483,
+            1.3089969389957472,
+            1.8325957145940461,
+            2.356194490192345,
+            2.879793265790644,
+            3.4033920413889427,
+            3.9269908169872414,
+            4.4505895925855405,
+            4.97418836818384,
+            5.497787143782138,
+            6.021385919380437
+          ],
+          "z2_unique_on_grid": false
+        }
+      ]
+    },
+    "r_1_plus_abs_Ktotal_row0": {
+      "reference_description": "Reference weights w_x := 1 + |K_total[0,x]| from R14 (marked-site non-uniform datum; normalized to prob)",
+      "reference_prob": [
+        0.07320479544076021,
+        0.107610000466827,
+        0.08726330435795125,
+        0.07989780844640787,
+        0.07664755611853453,
+        0.07497131671083004,
+        0.07401523235813841,
+        0.07497131671083004,
+        0.07664755611853453,
+        0.07989780844640787,
+        0.08726330435795125,
+        0.107610000466827
+      ],
+      "objective_minima_summary": {
+        "KL_u1_to_r": {
+          "description": "J(theta)=KL(p_theta || r) where p_theta=u1(theta)^2 is the squared site-amplitude distribution",
+          "summary": {
+            "min_value": 0.30551791280592727,
+            "max_value": 0.32918436799655854,
+            "range": 0.023666455190631264,
+            "near_min_tol": 1e-06,
+            "near_min_index_count": 16,
+            "cluster_count": 4,
+            "cluster_centers_theta": [
+              0.26005405854715513,
+              2.881538595042638,
+              3.4016467121369485,
+              6.023131248632431
+            ]
+          },
+          "z2_unique_on_grid": false
+        },
+        "KL_avg_u1_v1_to_r": {
+          "description": "J(theta)=0.5*( KL(p_theta||r) + KL(q_theta||r) ) where q_theta=v1(theta)^2 (orthogonal partner)",
+          "summary": {
+            "min_value": 0.3072162912261927,
+            "max_value": 0.3272254994459498,
+            "range": 0.020009208219757102,
+            "near_min_tol": 1e-06,
+            "near_min_index_count": 36,
+            "cluster_count": 12,
+            "cluster_centers_theta": [
+              0.26179938779914946,
+              0.7853981633974483,
+              1.3089969389957472,
+              1.8325957145940461,
+              2.356194490192345,
+              2.879793265790644,
+              3.4033920413889427,
+              3.9269908169872414,
+              4.4505895925855405,
+              4.97418836818384,
+              5.497787143782138,
+              6.021385919380437
+            ]
+          },
+          "z2_unique_on_grid": false
+        }
+      },
+      "objective_rows_compact": [
+        {
+          "objective_id": "KL_u1_to_r",
+          "min_value": 0.30551791280592727,
+          "cluster_count": 4,
+          "cluster_centers_theta": [
+            0.26005405854715513,
+            2.881538595042638,
+            3.4016467121369485,
+            6.023131248632431
+          ],
+          "z2_unique_on_grid": false
+        },
+        {
+          "objective_id": "KL_avg_u1_v1_to_r",
+          "min_value": 0.3072162912261927,
+          "cluster_count": 12,
+          "cluster_centers_theta": [
+            0.26179938779914946,
+            0.7853981633974483,
+            1.3089969389957472,
+            1.8325957145940461,
+            2.356194490192345,
+            2.879793265790644,
+            3.4033920413889427,
+            3.9269908169872414,
+            4.4505895925855405,
+            4.97418836818384,
+            5.497787143782138,
+            6.021385919380437
+          ],
+          "z2_unique_on_grid": false
+        }
+      ]
+    },
+    "r_exp_minus_alpha_geo_dcyc": {
+      "reference_description": "Reference weights w_x := exp(-alpha_geo * d_cyc(0,x)) with alpha_geo=4 ln 2 (marked-site distance decay; normalized)",
+      "reference_prob": [
+        0.8823529937688074,
+        0.05514706211055046,
+        0.0034466913819094043,
+        0.00021541821136933788,
+        1.3463638210583614e-05,
+        8.414773881614755e-07,
+        5.25923367600923e-08,
+        8.414773881614755e-07,
+        1.3463638210583614e-05,
+        0.00021541821136933788,
+        0.0034466913819094043,
+        0.05514706211055046
+      ],
+      "objective_minima_summary": {
+        "KL_u1_to_r": {
+          "description": "J(theta)=KL(p_theta || r) where p_theta=u1(theta)^2 is the squared site-amplitude distribution",
+          "summary": {
+            "min_value": 6.256270476208352,
+            "max_value": 6.27627968442811,
+            "range": 0.020009208219758712,
+            "near_min_tol": 1e-06,
+            "near_min_index_count": 36,
+            "cluster_count": 12,
+            "cluster_centers_theta": [
+              0.26179938779914946,
+              0.7853981633974483,
+              1.3089969389957472,
+              1.8325957145940461,
+              2.356194490192345,
+              2.879793265790644,
+              3.4033920413889427,
+              3.9269908169872414,
+              4.4505895925855405,
+              4.97418836818384,
+              5.497787143782138,
+              6.021385919380437
+            ]
+          },
+          "z2_unique_on_grid": false
+        },
+        "KL_avg_u1_v1_to_r": {
+          "description": "J(theta)=0.5*( KL(p_theta||r) + KL(q_theta||r) ) where q_theta=v1(theta)^2 (orthogonal partner)",
+          "summary": {
+            "min_value": 6.256270476208351,
+            "max_value": 6.2762796844281095,
+            "range": 0.020009208219758712,
+            "near_min_tol": 1e-06,
+            "near_min_index_count": 36,
+            "cluster_count": 12,
+            "cluster_centers_theta": [
+              0.26179938779914946,
+              0.7853981633974483,
+              1.3089969389957472,
+              1.8325957145940461,
+              2.356194490192345,
+              2.879793265790644,
+              3.4033920413889427,
+              3.9269908169872414,
+              4.4505895925855405,
+              4.97418836818384,
+              5.497787143782138,
+              6.021385919380437
+            ]
+          },
+          "z2_unique_on_grid": false
+        }
+      },
+      "objective_rows_compact": [
+        {
+          "objective_id": "KL_u1_to_r",
+          "min_value": 6.256270476208352,
+          "cluster_count": 12,
+          "cluster_centers_theta": [
+            0.26179938779914946,
+            0.7853981633974483,
+            1.3089969389957472,
+            1.8325957145940461,
+            2.356194490192345,
+            2.879793265790644,
+            3.4033920413889427,
+            3.9269908169872414,
+            4.4505895925855405,
+            4.97418836818384,
+            5.497787143782138,
+            6.021385919380437
+          ],
+          "z2_unique_on_grid": false
+        },
+        {
+          "objective_id": "KL_avg_u1_v1_to_r",
+          "min_value": 6.256270476208351,
+          "cluster_count": 12,
+          "cluster_centers_theta": [
+            0.26179938779914946,
+            0.7853981633974483,
+            1.3089969389957472,
+            1.8325957145940461,
+            2.356194490192345,
+            2.879793265790644,
+            3.4033920413889427,
+            3.9269908169872414,
+            4.4505895925855405,
+            4.97418836818384,
+            5.497787143782138,
+            6.021385919380437
+          ],
+          "z2_unique_on_grid": false
+        }
+      ]
+    },
+    "r_exp_minus_alpha_geo_directed_d": {
+      "reference_description": "Reference weights w_x := exp(-alpha_geo * d_dir(0,x)) where d_dir(0,x)=x on Z_12 (marked-site + marked-direction; normalized)",
+      "reference_prob": [
+        0.9375000000000033,
+        0.05859375000000021,
+        0.003662109375000014,
+        0.00022888183593750098,
+        1.4305114746093808e-05,
+        8.940696716308626e-07,
+        5.5879354476928995e-08,
+        3.4924596548080606e-09,
+        2.182787284255037e-10,
+        1.3642420526593978e-11,
+        8.526512829121233e-13,
+        5.3290705182007684e-14
+      ],
+      "objective_minima_summary": {
+        "KL_u1_to_r": {
+          "description": "J(theta)=KL(p_theta || r) where p_theta=u1(theta)^2 is the squared site-amplitude distribution",
+          "summary": {
+            "min_value": 10.374538205575988,
+            "max_value": 15.919715650055554,
+            "range": 5.545177444479567,
+            "near_min_tol": 5.545177444479566e-06,
+            "near_min_index_count": 6,
+            "cluster_count": 2,
+            "cluster_centers_theta": [
+              0.5235987755982989,
+              3.6651914291880923
+            ]
+          },
+          "z2_unique_on_grid": true
+        },
+        "KL_avg_u1_v1_to_r": {
+          "description": "J(theta)=0.5*( KL(p_theta||r) + KL(q_theta||r) ) where q_theta=v1(theta)^2 (orthogonal partner)",
+          "summary": {
+            "min_value": 13.127117719596011,
+            "max_value": 13.147126927815773,
+            "range": 0.020009208219761376,
+            "near_min_tol": 1e-06,
+            "near_min_index_count": 36,
+            "cluster_count": 12,
+            "cluster_centers_theta": [
+              0.26179938779914946,
+              0.7853981633974483,
+              1.3089969389957472,
+              1.8325957145940461,
+              2.356194490192345,
+              2.879793265790644,
+              3.4033920413889427,
+              3.9269908169872414,
+              4.4505895925855405,
+              4.97418836818384,
+              5.497787143782138,
+              6.021385919380437
+            ]
+          },
+          "z2_unique_on_grid": false
+        }
+      },
+      "objective_rows_compact": [
+        {
+          "objective_id": "KL_u1_to_r",
+          "min_value": 10.374538205575988,
+          "cluster_count": 2,
+          "cluster_centers_theta": [
+            0.5235987755982989,
+            3.6651914291880923
+          ],
+          "z2_unique_on_grid": true
+        },
+        {
+          "objective_id": "KL_avg_u1_v1_to_r",
+          "min_value": 13.127117719596011,
+          "cluster_count": 12,
+          "cluster_centers_theta": [
+            0.26179938779914946,
+            0.7853981633974483,
+            1.3089969389957472,
+            1.8325957145940461,
+            2.356194490192345,
+            2.879793265790644,
+            3.4033920413889427,
+            3.9269908169872414,
+            4.4505895925855405,
+            4.97418836818384,
+            5.497787143782138,
+            6.021385919380437
+          ],
+          "z2_unique_on_grid": false
+        }
+      ]
+    },
+    "r_exp_sigma_int_alpha_geo_Ktotal_row0": {
+      "reference_description": "Reference weights w_x := exp(sigma_int * alpha_geo * K_total[0,x]) with sigma_int=-1, alpha_geo=4 ln 2 (kernel-shaped; normalized)",
+      "reference_prob": [
+        0.11279402973730507,
+        0.030645518434274654,
+        0.06622815165979308,
+        0.08753769188099547,
+        0.09900505079078584,
+        0.1054943558096744,
+        0.10938443311164806,
+        0.1054943558096744,
+        0.09900505079078584,
+        0.08753769188099547,
+        0.06622815165979308,
+        0.030645518434274654
+      ],
+      "objective_minima_summary": {
+        "KL_u1_to_r": {
+          "description": "J(theta)=KL(p_theta || r) where p_theta=u1(theta)^2 is the squared site-amplitude distribution",
+          "summary": {
+            "min_value": 0.3623055494559819,
+            "max_value": 0.4183913681226921,
+            "range": 0.0560858186667102,
+            "near_min_tol": 1e-06,
+            "near_min_index_count": 16,
+            "cluster_count": 4,
+            "cluster_centers_theta": [
+              1.3281955607676847,
+              1.8133970928221084,
+              4.469788214357478,
+              4.9549897464119015
+            ]
+          },
+          "z2_unique_on_grid": false
+        },
+        "KL_avg_u1_v1_to_r": {
+          "description": "J(theta)=0.5*( KL(p_theta||r) + KL(q_theta||r) ) where q_theta=v1(theta)^2 (orthogonal partner)",
+          "summary": {
+            "min_value": 0.37914553169928567,
+            "max_value": 0.3991547399190428,
+            "range": 0.020009208219757157,
+            "near_min_tol": 1e-06,
+            "near_min_index_count": 36,
+            "cluster_count": 12,
+            "cluster_centers_theta": [
+              0.26179938779914946,
+              0.7853981633974483,
+              1.3089969389957472,
+              1.8325957145940461,
+              2.356194490192345,
+              2.879793265790644,
+              3.4033920413889427,
+              3.9269908169872414,
+              4.4505895925855405,
+              4.97418836818384,
+              5.497787143782138,
+              6.021385919380437
+            ]
+          },
+          "z2_unique_on_grid": false
+        }
+      },
+      "objective_rows_compact": [
+        {
+          "objective_id": "KL_u1_to_r",
+          "min_value": 0.3623055494559819,
+          "cluster_count": 4,
+          "cluster_centers_theta": [
+            1.3281955607676847,
+            1.8133970928221084,
+            4.469788214357478,
+            4.9549897464119015
+          ],
+          "z2_unique_on_grid": false
+        },
+        {
+          "objective_id": "KL_avg_u1_v1_to_r",
+          "min_value": 0.37914553169928567,
+          "cluster_count": 12,
+          "cluster_centers_theta": [
+            0.26179938779914946,
+            0.7853981633974483,
+            1.3089969389957472,
+            1.8325957145940461,
+            2.356194490192345,
+            2.879793265790644,
+            3.4033920413889427,
+            3.9269908169872414,
+            4.4505895925855405,
+            4.97418836818384,
+            5.497787143782138,
+            6.021385919380437
+          ],
+          "z2_unique_on_grid": false
+        }
+      ]
+    },
+    "r_exp_minus_alpha_geo_element_order": {
+      "reference_description": "Reference weights w_x := exp(-alpha_geo * ord_Z12(x)) where ord_Z12(x)=order of element x in Z_12 (group-structure-derived non-uniform datum; no marked direction; normalized)",
+      "reference_prob": [
+        0.9338788654971486,
+        5.308486751671076e-14,
+        8.906162886592389e-07,
+        0.00022799776989676488,
+        0.003647964318348239,
+        5.308486751671076e-14,
+        0.058367429093571795,
+        5.308486751671076e-14,
+        0.003647964318348239,
+        0.00022799776989676488,
+        8.906162886592389e-07,
+        5.308486751671076e-14
+      ],
+      "objective_minima_summary": {
+        "KL_u1_to_r": {
+          "description": "J(theta)=KL(p_theta || r) where p_theta=u1(theta)^2 is the squared site-amplitude distribution",
+          "summary": {
+            "min_value": 10.609457288117934,
+            "max_value": 15.230438491850908,
+            "range": 4.620981203732974,
+            "near_min_tol": 4.620981203732974e-06,
+            "near_min_index_count": 10,
+            "cluster_count": 2,
+            "cluster_centers_theta": [
+              1.5707963267948966,
+              4.71238898038469
+            ]
+          },
+          "z2_unique_on_grid": true
+        },
+        "KL_avg_u1_v1_to_r": {
+          "description": "J(theta)=0.5*( KL(p_theta||r) + KL(q_theta||r) ) where q_theta=v1(theta)^2 (orthogonal partner)",
+          "summary": {
+            "min_value": 12.89993868176466,
+            "max_value": 12.919947889984421,
+            "range": 0.020009208219761376,
+            "near_min_tol": 1e-06,
+            "near_min_index_count": 36,
+            "cluster_count": 12,
+            "cluster_centers_theta": [
+              0.26179938779914946,
+              0.7853981633974483,
+              1.3089969389957472,
+              1.8325957145940461,
+              2.356194490192345,
+              2.879793265790644,
+              3.4033920413889427,
+              3.9269908169872414,
+              4.4505895925855405,
+              4.97418836818384,
+              5.497787143782138,
+              6.021385919380437
+            ]
+          },
+          "z2_unique_on_grid": false
+        }
+      },
+      "objective_rows_compact": [
+        {
+          "objective_id": "KL_u1_to_r",
+          "min_value": 10.609457288117934,
+          "cluster_count": 2,
+          "cluster_centers_theta": [
+            1.5707963267948966,
+            4.71238898038469
+          ],
+          "z2_unique_on_grid": true
+        },
+        {
+          "objective_id": "KL_avg_u1_v1_to_r",
+          "min_value": 12.89993868176466,
+          "cluster_count": 12,
+          "cluster_centers_theta": [
+            0.26179938779914946,
+            0.7853981633974483,
+            1.3089969389957472,
+            1.8325957145940461,
+            2.356194490192345,
+            2.879793265790644,
+            3.4033920413889427,
+            3.9269908169872414,
+            4.4505895925855405,
+            4.97418836818384,
+            5.497787143782138,
+            6.021385919380437
+          ],
+          "z2_unique_on_grid": false
+        }
+      ]
+    },
+    "r_element_order_power_minus_alpha_geo": {
+      "reference_description": "Reference weights w_x := ord_Z12(x)^(-alpha_geo) with alpha_geo=4 ln 2 (group-structure-derived power-law; no marked direction; normalized)",
+      "reference_prob": [
+        0.76789545274526,
+        0.000781945246323306,
+        0.005343289621529072,
+        0.016445131620660698,
+        0.03651245929786698,
+        0.000781945246323306,
+        0.1123750051893331,
+        0.000781945246323306,
+        0.03651245929786698,
+        0.016445131620660698,
+        0.005343289621529072,
+        0.000781945246323306
+      ],
+      "objective_minima_summary": {
+        "KL_u1_to_r": {
+          "description": "J(theta)=KL(p_theta || r) where p_theta=u1(theta)^2 is the squared site-amplitude distribution",
+          "summary": {
+            "min_value": 2.5103746745196456,
+            "max_value": 2.5303838827394047,
+            "range": 0.020009208219759156,
+            "near_min_tol": 1e-06,
+            "near_min_index_count": 36,
+            "cluster_count": 12,
+            "cluster_centers_theta": [
+              0.26179938779914946,
+              0.7853981633974483,
+              1.3089969389957472,
+              1.8325957145940461,
+              2.356194490192345,
+              2.879793265790644,
+              3.4033920413889427,
+              3.9269908169872414,
+              4.4505895925855405,
+              4.97418836818384,
+              5.497787143782138,
+              6.021385919380437
+            ]
+          },
+          "z2_unique_on_grid": false
+        },
+        "KL_avg_u1_v1_to_r": {
+          "description": "J(theta)=0.5*( KL(p_theta||r) + KL(q_theta||r) ) where q_theta=v1(theta)^2 (orthogonal partner)",
+          "summary": {
+            "min_value": 2.510374674519646,
+            "max_value": 2.530383882739404,
+            "range": 0.020009208219757824,
+            "near_min_tol": 1e-06,
+            "near_min_index_count": 36,
+            "cluster_count": 12,
+            "cluster_centers_theta": [
+              0.26179938779914946,
+              0.7853981633974483,
+              1.3089969389957472,
+              1.8325957145940461,
+              2.356194490192345,
+              2.879793265790644,
+              3.4033920413889427,
+              3.9269908169872414,
+              4.4505895925855405,
+              4.97418836818384,
+              5.497787143782138,
+              6.021385919380437
+            ]
+          },
+          "z2_unique_on_grid": false
+        }
+      },
+      "objective_rows_compact": [
+        {
+          "objective_id": "KL_u1_to_r",
+          "min_value": 2.5103746745196456,
+          "cluster_count": 12,
+          "cluster_centers_theta": [
+            0.26179938779914946,
+            0.7853981633974483,
+            1.3089969389957472,
+            1.8325957145940461,
+            2.356194490192345,
+            2.879793265790644,
+            3.4033920413889427,
+            3.9269908169872414,
+            4.4505895925855405,
+            4.97418836818384,
+            5.497787143782138,
+            6.021385919380437
+          ],
+          "z2_unique_on_grid": false
+        },
+        {
+          "objective_id": "KL_avg_u1_v1_to_r",
+          "min_value": 2.510374674519646,
+          "cluster_count": 12,
+          "cluster_centers_theta": [
+            0.26179938779914946,
+            0.7853981633974483,
+            1.3089969389957472,
+            1.8325957145940461,
+            2.356194490192345,
+            2.879793265790644,
+            3.4033920413889427,
+            3.9269908169872414,
+            4.4505895925855405,
+            4.97418836818384,
+            5.497787143782138,
+            6.021385919380437
+          ],
+          "z2_unique_on_grid": false
+        }
+      ]
+    }
+  },
+  "verdict": {
+    "any_objective_unique_cluster_on_grid": false,
+    "any_objective_z2_unique_on_grid": true,
+    "statement": "At least one weighted KL-to-reference objective yields exactly two near-minimum clusters separated by π on the audited grid (i.e. Z2-unique up to the unavoidable sign flip). This remains a probe-level observation only; it is not promoted into a strict-core O(2)-cut ingredient without (1) an explicit admissibility story for the non-translation-invariant reference datum and (2) a theorem-level uniqueness proof for the exact objective/reference pair under discussion. Note: T165 is discharged by a separate strict theorem/packet (F446/N480) for the element-order reference cross-entropy objective; this probe continues to audit alternative KL-shaped objectives/references without promotion."
+  },
+  "hard_limits": [
+    "Audit only: does not export a strict-core selector ingredient.",
+    "Does not discharge QW-2191.",
+    "Does not decide T166/T168/T169.",
+    "Does not claim any marked-site / reference datum is already strict-admissible as physics.",
+    "Does not claim strict-core theta export or ToE closure."
+  ],
+  "no_false_pass": true
+}

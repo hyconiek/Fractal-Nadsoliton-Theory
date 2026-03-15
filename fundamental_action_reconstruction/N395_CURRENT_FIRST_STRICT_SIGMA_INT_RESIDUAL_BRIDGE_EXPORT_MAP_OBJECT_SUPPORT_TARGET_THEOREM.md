@@ -12,40 +12,40 @@ missing post-witness layer on the sigma-int residual third-provider route:
 actual bridge/export-map object support
 ```
 
-without pretending that the layer is already discharged.
+without pretending that target naming alone constitutes discharge.
 
 ## Theorem-level conclusion
 
-From `T130/P369/F283`, the current repo exports one future-only target object:
+From `T130/P369/F283`, the current repo exports one explicit target object record:
 
 ```text
 Lambda_residual_datum_sigma_int_bridge_export_map_object_support_target_v1
 ```
 
-with the following exact meaning:
+with the following exact current-state meaning:
 
 1. `P388/P391` remain correct:
    - the strict sigma-int lane now exports an **actual** strict-core
      bridge/export-map object satisfying `T148` (`F311/N422`),
-   - strict-core theta export and strict-core object support above that map
-     object remain absent,
-2. `N385` remains correct:
+   - update (`2026-03-15`): strict-core theta supply and `R1` target-slot population are exported (`F451/N489/P451`),
+2. update (`2026-03-15`): the post-witness object-support target is discharged on the strict sigma-int lane
+   (`F452/N490`), so the “future-only missing object-support” reading is superseded as a current-state description,
+3. `N385` remains correct:
    - one object-support projection layer exists,
-3. `N387` remains correct:
+4. `N387` remains correct:
    - one object-support witness layer exists,
-4. `N302` remains correct in its updated post-`T148` reading:
-   - actual bridge/export-map object support is still not exported above the
-     exported map object,
-5. therefore the missing post-witness layer may now be sharply named as one
-   explicit future-only target object with explicit acceptance tests (`T130`),
-6. no theta export, selector closure, or ToE closure claim is implied.
+5. `N302` remains exported only as the historical record of the pre-`F452` boundary and is superseded as a current-state
+   description on this lane,
+6. the target naming (`T130/F283`) remains admissible as a typed reference object name and historical acceptance-test
+   record,
+7. no selector closure or ToE closure claim is implied.
 
 ## What N395 proves
 
 `N395` proves only this narrower statement:
 
-1. the repo now names one exact future-only target object for the missing
-   post-witness actual object-support layer on the sigma-int residual route.
+1. the repo names the post-witness object-support target object with explicit acceptance tests (`T130/F283`),
+2. the discharge status of that target is scoped and recorded separately (`F452/N490`), without implying selector closure.
 
 ## What N395 does not prove
 
@@ -60,11 +60,8 @@ with the following exact meaning:
 
 ## Consequence (next honest step)
 
-After `N395`, the next honest move is no longer “add more witness layers”.
-It must be one genuinely new ingredient:
+Update (`2026-03-15`): after `F452/N490`, the next honest move is no longer “discharge `T130`”.
+It is to proceed beyond this layer without false pass, e.g.:
 
-1. discharge of the object-support target on a declared strict domain, and/or
-2. one strict-side theta-supply / selector ingredient addressing the
-   post-`T148` bottleneck,
-
-both noncyclically and observer-free.
+1. theorem-level discharge of `T2`, and/or
+2. strict-core selector closure work under `QW-2191` discipline.

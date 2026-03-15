@@ -1,0 +1,62 @@
+{
+  "object": "R1_residual_orientation_datum_target_slot_population_strict_derived_from_canonical_local_diagonal_theta_pair_v1",
+  "status": "strict_derived_inhabitant_instance_constructed_and_audited__no_false_pass",
+  "as_of": "2026-03-15",
+  "intent": "Construct one strict-derived inhabitant instance of the residual_orientation_datum_target_slot (R1) from the canonical diagonal/local strict-derived theta-pair source (F450), without claiming that the sigma-int export-map object (F311) is upgraded to a populated bridge and without claiming sigma-int corridor strict-core upgrade (T159).",
+  "derived_from": {
+    "r1_target_slot_export_packet": "fundamental_action_reconstruction/generated/r1_strict_core_residual_datum_target_slot_export_packet.json",
+    "theta_pair_source_artifact": "fundamental_action_reconstruction/generated/theta_pair_canonical_local_diagonal_strict_derived_v1.json",
+    "qw2190_mode_scaffold": "report_qw2190_kernel_mode_representation_emergence_gate.json"
+  },
+  "inputs": {
+    "theta_1_star": -2.0686609451044866e-16,
+    "theta_2_star": 1.5707963267948961,
+    "basis_formula": "S_orient_cand(theta_1,theta_2)=span{u_1(theta_1),u_2(theta_2)}"
+  },
+  "outputs": {
+    "u_1_star": [
+      0.408248290463863,
+      0.35355339059327373,
+      0.20412414523193148,
+      -5.945473133012915e-17,
+      -0.2041241452319315,
+      -0.35355339059327384,
+      -0.408248290463863,
+      -0.3535533905932738,
+      -0.20412414523193162,
+      9.458735112734279e-18,
+      0.20412414523193165,
+      0.35355339059327373
+    ],
+    "u_2_star": [
+      2.0629665884343323e-16,
+      0.35355339059327384,
+      0.3535533905932737,
+      -1.5630066262603835e-16,
+      -0.3535533905932738,
+      -0.3535533905932736,
+      1.0630466640864349e-16,
+      0.3535533905932738,
+      0.35355339059327384,
+      -5.630867019124862e-17,
+      -0.3535533905932739,
+      -0.35355339059327384
+    ],
+    "orientation_slice_star": "span{u_1_star,u_2_star}"
+  },
+  "audits": {
+    "u1_matches_r1_formula_residual": 0.0,
+    "u2_matches_r1_formula_residual": 0.0,
+    "slice_basis_orthonormal_residual": 2.635271519193128e-16,
+    "slice_basis_rank": 2,
+    "slice_basis_det_gram": 1.0000000000000002,
+    "pair_basis_orthonormal_residual_vs_identity": 2.635271519193128e-16
+  },
+  "hard_limits": [
+    "Does not claim sigma-int -> residual-datum populated bridge (F311 remains sign-only).",
+    "Does not claim sigma-int corridor strict-core theta upgrade (T159 remains open).",
+    "Does not claim admissible S_sel_int nor strict-core selector closure.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}

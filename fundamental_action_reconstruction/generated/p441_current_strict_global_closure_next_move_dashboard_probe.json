@@ -1,0 +1,66 @@
+{
+  "stage": "P441",
+  "goal": "global_dashboard_for_next_strict_move_on_QW2191_closure_attempts_across_diagonal_and_shannon_lanes",
+  "inputs": {
+    "p438_full_scan": false
+  },
+  "dependency_runs": [
+    {
+      "script": "fundamental_action_reconstruction/p438_current_strict_t166_diagonal_accelerator_lane_status_dashboard_probe.py",
+      "args": [],
+      "returncode": 0,
+      "stdout_tail": "/home/krzysiek/Pobrane/TOE/edison/fundamental_action_reconstruction/generated/p438_current_strict_t166_diagonal_accelerator_lane_status_dashboard_probe.json",
+      "stderr_tail": ""
+    },
+    {
+      "script": "fundamental_action_reconstruction/p439_current_strict_qw2191_weighted_kl_reference_objective_o2_cut_audit_probe.py",
+      "args": [],
+      "returncode": 0,
+      "stdout_tail": "{\"stage\": \"P439\", \"any_unique_cluster\": false, \"any_z2_unique\": true}",
+      "stderr_tail": ""
+    }
+  ],
+  "dependency_summaries": {
+    "P438": "fundamental_action_reconstruction/generated/p438_current_strict_t166_diagonal_accelerator_lane_status_dashboard_probe_summary.json",
+    "P439": "fundamental_action_reconstruction/generated/p439_current_strict_qw2191_weighted_kl_reference_objective_o2_cut_audit_probe_summary.json"
+  },
+  "status_snapshot": {
+    "P438": {
+      "stage": "P438",
+      "status": "PASS_DASHBOARD_READY",
+      "decision_ready_from_repo_values": false,
+      "recommended_next_strict_target": "T2",
+      "t166_decision_theorem_exported": true,
+      "theorem_level_pass": false,
+      "full_closure_pass": false,
+      "no_false_pass": true
+    },
+    "P439": {
+      "stage": "P439",
+      "any_objective_unique_cluster_on_grid": false,
+      "any_objective_z2_unique_on_grid": true,
+      "t165_selector_ingredient_exported": true,
+      "references_tested": {
+        "r_uniform": "Uniform reference distribution on ring sites (control; expected to inherit N463/N464 periodicity)",
+        "r_1_plus_abs_Ktotal_row0": "Reference weights w_x := 1 + |K_total[0,x]| from R14 (marked-site non-uniform datum; normalized to prob)",
+        "r_exp_minus_alpha_geo_dcyc": "Reference weights w_x := exp(-alpha_geo * d_cyc(0,x)) with alpha_geo=4 ln 2 (marked-site distance decay; normalized)",
+        "r_exp_minus_alpha_geo_directed_d": "Reference weights w_x := exp(-alpha_geo * d_dir(0,x)) where d_dir(0,x)=x on Z_12 (marked-site + marked-direction; normalized)",
+        "r_exp_sigma_int_alpha_geo_Ktotal_row0": "Reference weights w_x := exp(sigma_int * alpha_geo * K_total[0,x]) with sigma_int=-1, alpha_geo=4 ln 2 (kernel-shaped; normalized)",
+        "r_exp_minus_alpha_geo_element_order": "Reference weights w_x := exp(-alpha_geo * ord_Z12(x)) where ord_Z12(x)=order of element x in Z_12 (group-structure-derived non-uniform datum; no marked direction; normalized)",
+        "r_element_order_power_minus_alpha_geo": "Reference weights w_x := ord_Z12(x)^(-alpha_geo) with alpha_geo=4 ln 2 (group-structure-derived power-law; no marked direction; normalized)"
+      },
+      "objectives_tested": {
+        "KL_u1_to_r": "J(theta)=KL(p_theta || r) where p_theta=u1(theta)^2 is the squared site-amplitude distribution",
+        "KL_avg_u1_v1_to_r": "J(theta)=0.5*( KL(p_theta||r) + KL(q_theta||r) ) where q_theta=v1(theta)^2 (orthogonal partner)"
+      },
+      "no_false_pass": true
+    }
+  },
+  "result": {
+    "recommended_next_strict_target": "T2",
+    "recommendation_reason": "P438 diagonal accelerator lane determines the next strict missing target beneath T166.",
+    "diagonal_lane_note": "Diagonal/local lane packages a scoped discharge of the continuous QW-2191 O(2) family on all Fourier-degenerate pairs on n=12 via the canonical diagonal/local sector (N487). This is not ToE closure. The same lane also exports a strict-derived diagonal/local theta-pair source (F450) and a strict-derived R1 target-slot inhabitant instance constructed from it (P450), without promoting sigma-int corridor upgrade (T159).",
+    "shannon_lane_note": "T165 strict selector ingredient is exported (F446/N480): pair1 O(2)->Z2 cut with \u03b8*=\u03c0/2 (mod \u03c0). This does not by itself discharge T166 or globally discharge QW-2191."
+  },
+  "no_false_pass": true
+}

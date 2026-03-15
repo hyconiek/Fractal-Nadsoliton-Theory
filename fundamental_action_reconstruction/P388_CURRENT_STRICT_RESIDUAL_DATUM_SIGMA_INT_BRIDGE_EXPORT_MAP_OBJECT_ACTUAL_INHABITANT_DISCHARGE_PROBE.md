@@ -1,7 +1,7 @@
 # P388 Current Strict Residual Datum Sigma-Int Bridge/Export-Map Object Actual-Inhabitant Discharge Probe
 
 Status: `P388_EXECUTED_CURRENT_STRICT_RESIDUAL_DATUM_SIGMA_INT_BRIDGE_EXPORT_MAP_OBJECT_ACTUAL_INHABITANT_DISCHARGE_PROBE_NO_FALSE_PASS`  
-As of: `2026-03-11`
+As of: `2026-03-15`
 
 ## Goal
 
@@ -55,17 +55,27 @@ N300 map-layer nonexport boundary: superseded as a current-state description (hi
 
 Hard limits remain in force (explicit in `F311/N422`):
 
-1. no strict-core theta-source export and no residual target-slot population,
+1. the exported **map object** remains sign-only: it exports no strict-core theta-source and does not populate the
+   residual target slot **by itself**,
 2. no implied selector closure; `QW-2191` remains open.
+
+Update (`2026-03-15`, strict-core hygiene; no false pass):
+
+1. Strict-core theta supply on the sigma-int corridor lane is now exported in a slot-free construction class (`T162`)
+   satisfying `T159` (`F451/N489`).
+2. An audited inhabitant instance populating the `R1` residual orientation datum target slot constructed from that
+   slot-free theta-pair source is exported (`P451`).
+
+This does **not** upgrade the strict-core export-map object (`F311/N422`), and it does **not** discharge the missing
+post-`T148` actual object-support layer above the exported map object (update: the object-support target `T130/N395` is
+now discharged by `F452/N490`; the export-map object itself remains sign-only and is not silently upgraded).
 
 ## Consequence (next honest step)
 
 The next honest move is not to relabel the entire residual-datum lane as
 closed.
 
-It is to keep the post-`T148` missing layers explicit, e.g.:
+It is to keep the post-`T148` missing layer explicit:
 
-1. strict theta-source export and/or residual target-slot population (still
-   absent),
-2. continued `QW-2191` nonclosure discipline unless a new strict
-   selector/symmetry-breaking ingredient is separately exported.
+1. theorem-level discharge of the conditional bridge theorem `T2` (beyond probe-level computability), and
+2. continued `QW-2191` nonclosure discipline unless a new strict internal selector source is separately exported.

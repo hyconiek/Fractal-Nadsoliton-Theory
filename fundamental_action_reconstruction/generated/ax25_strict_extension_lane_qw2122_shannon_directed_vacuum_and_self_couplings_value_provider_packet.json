@@ -1,0 +1,110 @@
+{
+  "stage": "AX25",
+  "generated_utc": "2026-03-14T18:28:02.561245+00:00",
+  "status": "STRICT_EXTENSION_ONLY_VALUE_PROVIDER_PACKET",
+  "scope": "strict_extension_only",
+  "goal": "provide_one_explicit_reproducible_candidate_value_provider_for_(vpsi,g4,g6)_using_strict_alpha_geo_directed_shannon_weights_to_enable_exploratory_P437/P434_execution_without_promoting_it_to_strict_core",
+  "provenance": {
+    "qw2122_source": "report_qw2122_psi_potential_diagonal_floor_gate.json",
+    "qw2122_fields_used": {
+      "lambda_psi_strict": "inputs.lambda_psi_strict",
+      "rho_star_sq": "branch_results.broken_branch_strict.rho_star_sq"
+    },
+    "alpha_geo_source_upgrade": "fundamental_action_reconstruction/generated/alpha_geo_strict_derived_v1.json",
+    "alpha_geo_value_numeric": 2.772588722239781
+  },
+  "explicit_mapping_premises": {
+    "marked_site_and_direction": "use the directed coordinate i := d_dir(0,i)=i on Z_12 (marked site 0 + marked direction)",
+    "directed_shannon_weights": "w_i := exp(-alpha_geo_strict_derived_v1 * i) with alpha_geo_strict_derived_v1 = 4 ln 2",
+    "vacuum_from_weights": "vpsi_i^2 := rho_star_sq * w_i / sum_j w_j (so \u03a3_i vpsi_i^2 = rho_star_sq)",
+    "uniform_self_couplings": "g4_i := 12*lambda_psi_strict, g6_i := 0 for i=0..11 (premise; not strict-derived)",
+    "warning": "This packet is NOT a strict-derived discharge of T168; it adds explicit mapping premises to run evaluation harnesses."
+  },
+  "vpsi": [
+    1.8824164362061924,
+    0.4706041090515481,
+    0.11765102726288704,
+    0.029412756815721766,
+    0.007353189203930441,
+    0.0018382973009826097,
+    0.00045957432524565276,
+    0.00011489358131141318,
+    2.8723395327853287e-05,
+    7.180848831963321e-06,
+    1.7952122079908298e-06,
+    4.4880305199770735e-07
+  ],
+  "g4": [
+    1.6089299552131737,
+    1.6089299552131737,
+    1.6089299552131737,
+    1.6089299552131737,
+    1.6089299552131737,
+    1.6089299552131737,
+    1.6089299552131737,
+    1.6089299552131737,
+    1.6089299552131737,
+    1.6089299552131737,
+    1.6089299552131737,
+    1.6089299552131737
+  ],
+  "g6": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "values": {
+    "vpsi": [
+      1.8824164362061924,
+      0.4706041090515481,
+      0.11765102726288704,
+      0.029412756815721766,
+      0.007353189203930441,
+      0.0018382973009826097,
+      0.00045957432524565276,
+      0.00011489358131141318,
+      2.8723395327853287e-05,
+      7.180848831963321e-06,
+      1.7952122079908298e-06,
+      4.4880305199770735e-07
+    ],
+    "g4": [
+      1.6089299552131737,
+      1.6089299552131737,
+      1.6089299552131737,
+      1.6089299552131737,
+      1.6089299552131737,
+      1.6089299552131737,
+      1.6089299552131737,
+      1.6089299552131737,
+      1.6089299552131737,
+      1.6089299552131737,
+      1.6089299552131737,
+      1.6089299552131737
+    ],
+    "g6": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "no_false_pass": true
+}
