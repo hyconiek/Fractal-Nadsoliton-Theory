@@ -6,6 +6,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 GENERATED = ROOT / "generated"
 
+N502_SIGN_FREEZE_THEOREM = (
+    ROOT
+    / "N502_CURRENT_FIRST_STRICT_RESIDUAL_Z2_SIGN_FREEZE_FOR_EXPORTED_DOWNSTREAM_OBJECTS_GAUGE_IRRELEVANCE_PACKAGE_THEOREM.md"
+)
+
 SIGMA_INT_STRICT_DERIVED = GENERATED / "sigma_int_strict_derived_v1.json"
 GAUGE_QUOTIENT_WITNESS = GENERATED / "sigma_int_gauge_quotient_safety_witness_v1.json"
 THETA_PAIR_SIGMA_INT_SLOT_FREE = GENERATED / "theta_pair_sigma_int_strict_selector_ingredient_o2_cut_slot_free_v1.json"
@@ -49,12 +54,25 @@ payload = {
     "status": "B8_UPDATED_NO_FALSE_PASS_SELECTOR_TRACK_RESIDUAL_BLOCKERS_SCOPE_NARROWED_AFTER_STRICT_INTERNAL_SHANNON_THETA_SUPPLY_NO_FALSE_PASS",
     "as_of": "2026-03-15",
     "goal": "Run the anti-overclaim audit for the selector track on current repo state (post strict sigma-int export, gauge-quotient safety, theta supply, and axis-only mode-index assignment exports).",
-    "inputs": ["F307/N418", "F308/N419", "F451/N489", "F453/N492", "F454/N496", "A6", "A10"],
+    "inputs": [
+        "F307/N418",
+        "F308/N419",
+        "F451/N489",
+        "F453/N492",
+        "F454/N496",
+        "N493/N495",
+        "N501",
+        "F456",
+        "N502",
+        "A6",
+        "A10",
+    ],
     "obligation_matrix": obligation_matrix,
+    "residual_sign_freeze_package_exported": bool(N502_SIGN_FREEZE_THEOREM.exists()),
     "residual_blockers": [
         "no_global_discharge_of_QW_2191_kernel_alone_uniqueness",
         "no_strict_core_selector_closure_admissible_S_sel_int",
-        "residual_Z2_sign_not_lifted_to_sign_sensitive_physical_orientation_datum_or_no_gauge_irrelevance_proof_for_target_observables",
+        "residual_Z2_sign_sensitive_physical_orientation_datum_not_exported_for_sign_dependent_observables_only",
         "no_theorem_level_derivation_of_FR_sign_map_beyond_declared_strict_side_premise",
         "no_scope_extension_beyond_declared_lanes_and_n12_without_new_strict_objects",
     ],
@@ -67,7 +85,7 @@ payload = {
         "theorem_level_selector_derivation",
         "full_ToE_closure"
     ],
-    "next_step": "C1"
+    "next_step": "PROCEED_UNDER_QW_2191_DISCIPLINE_NO_IMPLIED_SELECTOR_CLOSURE"
 }
 
 out = ROOT / "generated" / "b8_selector_track_anti_overclaim_audit_summary.json"

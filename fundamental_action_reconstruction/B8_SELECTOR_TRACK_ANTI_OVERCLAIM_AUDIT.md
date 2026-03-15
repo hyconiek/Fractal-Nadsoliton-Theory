@@ -31,9 +31,15 @@ sprawdzic:
    - Shannon ord-reference axis datum and exported mode-index assignment on all `pair_m (m=1..5)` for `n=12`.
 6. `P455` + `N497`
    - cross-lane axis alignment up to residual `Z2` sign (value-instantiated).
-7. `A6`
+7. `N493` / `N495`
+   - residual `Z2` sign flips (and full `O(2)` rotations) are conjugation-only gauge for `QW-2190` embedding audits.
+8. `N501` + `F456`
+   - residual sign is gauge-irrelevant for the `R1` span target slot (`N501`) and for strict projector operators such as `A_1(pair1)` (`F456`).
+9. `N502`
+   - gauge-irrelevance package: residual sign is frozen as a tracked convention layer for the currently exported downstream objects.
+10. `A6`
    - gauge reconstruction boundary with `QW-2191` kept explicit.
-8. `A10`
+11. `A10`
    - program-level anti-overclaim rules.
 
 ## Wynik syntetyczny
@@ -50,7 +56,10 @@ Na aktualnym repo state (`2026-03-15`) wolno twierdzic tylko tyle:
 5. globalne claims pozostaja jawnie ograniczone:
    - brak globalnego discharge `QW-2191`,
    - brak strict-core selector closure / admissible `S_sel_int`,
-   - residual `Z2` sign nie jest podniesiony do sign-sensitive physical orientation datum bez osobnego mostu albo dowodu gauge-irrelevance.
+   - residual `Z2` sign nie jest podniesiony do sign-sensitive physical orientation datum bez osobnego mostu,
+     ale dla obecnie wyeksportowanych downstream obiektow/audytow, gdzie znak jest gauge‑irrelewant
+     (np. `QW-2190` embedding audyty, `R1` jako span, projektory typu `A_1(pair1)`), wolno go jawnie **zamrozic**
+     jako warstwe konwencji (pakiet `N502`).
 
 ## Macierz rygoru
 
@@ -66,7 +75,8 @@ Na aktualnym repo state (`2026-03-15`) wolno twierdzic tylko tyle:
 
 1. Brak globalnego discharge `QW-2191` (kernel-alone physical uniqueness nadal zablokowana bez dodatkowego symmetry breaking / selector source).
 2. Brak strict-core selector closure / admissible `S_sel_int` (pozostaje jawnie poza zasiegiem).
-3. Brak sign-sensitive physical orientation datum (lifting residual `Z2`) tam, gdzie downstream wymaga absolutnego znaku; albo brak dowodu gauge‑irrelevance znaku dla danego observable.
+3. Brak sign-sensitive physical orientation datum (lifting residual `Z2`) tam, gdzie downstream wymaga absolutnego znaku **i** nie ma osobnego dowodu gauge‑irrelevance dla danego observable.
+   Update: dla obecnie wyeksportowanych downstream obiektow w strict stack, gauge‑irrelevance znaku jest juz spakowane (`N502`).
 4. Brak theorem-level fizycznej derivation FR sign map (poza jawnie zadeklarowanym strict-side premise w `F307/N418`), jesli taki standard ma byc wymagany w finalnym “ToE closure” opisie.
 5. Brak scope extension poza zadeklarowane lane i poza `n=12` bez nowych strict obiektow.
 

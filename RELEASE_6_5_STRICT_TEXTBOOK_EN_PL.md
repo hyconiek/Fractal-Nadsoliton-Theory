@@ -184,10 +184,11 @@ so the diagonal/local lane canonicalizes the `QW-2190` embedding uniquely up to 
 
 ## 5) Next honest strict moves (as of 2026-03-15)
 
-Dashboards still recommend the global uniqueness frontier `QW-2191` (`P438`, `P441`):
+Dashboards now recommend `B3` (topological selector bridge continuation) as the next strict move under `QW-2191` discipline (`P438`, `P441`):
 
-1. extend beyond the diagonal/local lane without importing an external selector premise, and/or
-2. export an internal selector source adequate for strict-core global canonicalization (still not claimed here).
+1. explicitly **freeze residual `Z2` sign** as a tracked gauge/convention layer *for the exported downstream objects where it is gauge‑irrelevant*
+   (e.g. `QW-2190` embedding audits, the `R1` span target slot, and strict projector operators such as `A_1(pair1)`), and
+2. continue strict-only closure without implying strict-core selector closure or any global discharge of `QW-2191`.
 
 Update: the strict Shannon element‑order reference lane now provides one explicit internal symmetry-breaking ingredient
 on the full `n=12` Fourier scaffold (via `F454`), but this is still below strict-core selector closure and does not
@@ -266,10 +267,11 @@ Repo nadal **nie** eksportuje:
 
 ## 2) Następny uczciwy ruch (stan: 2026-03-15)
 
-Dashboards nadal wskazują frontier globalny `QW-2191` (`P438`, `P441`):
+Dashboards teraz rekomendują `B3` (kontynuacja topological selector bridge) jako następny ruch w dyscyplinie `QW-2191` (`P438`, `P441`):
 
-1. rozszerzenie poza pas diagonal/local bez importu zewnętrznej przesłanki selektora, i/lub
-2. eksport wewnętrznego źródła selektora wystarczającego do globalnej kanonizacji strict-core (nadal nie rości się tutaj).
+1. jawnie **zamrozić residualny znak `Z2`** jako śledzoną warstwę gauge/konwencji *dla tych wyeksportowanych obiektów downstream, gdzie znak jest gauge‑irrelewant*
+   (np. audyty embeddingu `QW-2190`, semantyka target‑slot `R1` jako `span`, oraz strict projektory typu `A_1(pair1)`), oraz
+2. kontynuować strict-only closure bez implikowania strict-core selector closure ani jakiegokolwiek globalnego rozładowania `QW-2191`.
 
 Update: pas strict Shannon “element‑order reference” dostarcza teraz jawny wewnętrzny składnik symetrii‑łamacza na pełnym
 scaffoldu Fouriera `n=12` (przez `F454`), ale nadal jest to poniżej strict-core selector closure i nie stanowi globalnego
