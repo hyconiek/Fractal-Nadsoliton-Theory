@@ -16,6 +16,9 @@ Test whether the current strict core exports any explicit selector atlas or sele
 - `F461`: lane-scoped `pair1↔pair2` chart-transport operator `O_12` exists (projector-safe).
 - `N506`: projector-level transport under `O_12` is sign-gauge-invariant.
 - `P465`: audits `O_12` as a lane-scoped chart-transport/gluing ingredient.
+- `F462`: lane-scoped two-chart projector operator section exists, glued by `O_12`.
+- `N507`: packages the two-chart glued projector operator section as well-defined and sign-gauge-invariant.
+- `P466`: audits the glued law from exported artifacts.
 - `C29/C30`: only local projector formulas and local overlap compatibility laws are explicit.
 
 ## Audit target
@@ -37,6 +40,7 @@ The repository contains:
 - local compatibility relations,
 - control-lane transition structures,
 - and a lane-scoped `pair1↔pair2` chart-transport operator `O_12` (`F461`) which can serve as a **projector-level gluing ingredient** (sign-gauge-safe; `N506`, audited by `P465`),
+- plus a concrete lane-scoped **two-chart glued projector operator section** on `{pair1,pair2}` (`F462`, packaged by `N507`, audited by `P466`),
 
 but none of these is elevated to an explicit selector atlas, overlap-domain declaration, or cocycle-level gluing data supporting a global assembly structure.
 

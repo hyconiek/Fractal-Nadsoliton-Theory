@@ -20,6 +20,9 @@ payload = {
         'F461': 'lane_scoped_pair1_pair2_chart_transport_operator_O12_exported_projector_safe',
         'N506': 'projector_level_transport_under_O12_is_sign_gauge_invariant',
         'P465': 'lane_scoped_O12_gluing_ingredient_audit_present',
+        'F462': 'lane_scoped_two_chart_projector_operator_section_exported_glued_by_O12',
+        'N507': 'two_chart_glued_projector_operator_section_packaged_as_well_defined_and_sign_gauge_invariant',
+        'P466': 'audit_of_A2_equals_O12_A1_O12T_present',
         'C29_C30': 'only_local_projector_formulas_and_local_overlap_compatibility_laws_are_explicit',
     },
     'supports': [
@@ -28,6 +31,7 @@ payload = {
         'local_compatibility_relations',
         'control_lane_transition_structures',
         'lane_scoped_chart_transport_operator_as_projector_level_gluing_ingredient',
+        'lane_scoped_two_chart_projector_operator_section',
     ],
     'missing': [
         'selector_atlas',

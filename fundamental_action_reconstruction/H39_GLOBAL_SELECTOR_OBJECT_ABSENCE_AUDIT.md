@@ -1,7 +1,7 @@
 # H39 Global Selector Object Absence Audit
 
-Status: `PASS_PARTIAL_BLOCKED_BY_NO_GLOBAL_SELECTOR_OBJECT_EXPORT`
-Date: `2026-03-07`
+Status: `PASS_PARTIAL_LANE_SCOPED_CHART_GLUED_PROJECTOR_SECTION_PRESENT_GLOBAL_PHYSICAL_SELECTOR_OBJECT_STILL_MISSING`
+Date: `2026-03-15`
 
 ## Purpose
 
@@ -14,6 +14,10 @@ Test whether current strict core contains any object that lifts the local projec
 - `H35`: no strict physical axis selection on `pair1`.
 - `H36`: no strict directed orientation selection.
 - `H37`: no sign-sensitive state object or observable.
+- `F461`: lane-scoped `pair1↔pair2` chart-transport operator `O_12` exists (projector-safe).
+- `F462`: lane-scoped two-chart projector operator section exists: `A_2 = O_12 A_1 O_12^T`.
+- `N507`: packages the two-chart glued projector operator section as well-defined and sign-gauge-invariant.
+- `P466`: audits the glued law from exported artifacts.
 
 ## Audit target
 
@@ -26,12 +30,13 @@ Search for any strict-core exported object with all of the following properties:
 
 ## Result
 
-No such object is currently exported in the repository.
+No strict-core **global physical selector object** is currently exported in the repository.
 
 Current strict core supports only:
 - local deterministic charts,
 - local coordinate embeddings,
 - local projective/ray-level representatives,
+- and now a lane-scoped two-chart **projector-level** glued operator section on `{pair1,pair2}` (sigma-int corridor),
 - but not a global physical selector object.
 
 ## Frontier

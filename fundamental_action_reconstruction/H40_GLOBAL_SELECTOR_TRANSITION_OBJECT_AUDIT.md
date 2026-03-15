@@ -18,6 +18,9 @@ Test whether the current strict core contains any global transition or gluing ob
 - `F461`: lane-scoped `pair1↔pair2` chart-transport operator `O_12` is exported (derived only from `alpha_12`).
 - `N506`: projector-level transport under `O_12` is sign-gauge-invariant.
 - `P465`: explicit audit of `O_12` orthogonality and sampled projector transport.
+- `F462`: lane-scoped two-chart projector operator section exists, glued by `O_12`.
+- `N507`: packages the two-chart glued projector operator section as well-defined and sign-gauge-invariant.
+- `P466`: audits the glued law `A_2 = O_12 A_1 O_12^T` from exported artifacts.
 - `P460`: lane-scoped cross-block polar-factor transition candidate exists (from the declared control-pullback value instantiation).
 
 ## Audit target

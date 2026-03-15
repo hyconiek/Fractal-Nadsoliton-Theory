@@ -87,6 +87,10 @@ Repo eksportuje teraz jawny, lane-scoped operator transportu chartow pomiedzy `p
 - z opakowaniem, że transport na poziomie projektorów `P(u)=|u><u|` jest gauge‑irrelewant dla residualnego flipa znaku `u -> -u` (`N506`),
 - oraz audytem ortogonalności i próbkowanego transportu `u_{m,θ}`/projektorów (`P465`).
 
+Ponadto, na bazie tego transportu repo eksportuje lane-scoped **dwu‑chartową sekcję operatorową** na `{pair1,pair2}`:
+- `A_2(pair2) = O_12 A_1(pair1) O_12^T` w wersji projektorowej (sign-free) (`F462`),
+- opakowane jako twierdzenie strict (`N507`) i audytowane przez sondę (`P466`).
+
 To jest **ingredient** dla `H40` tylko w sensie lane-scoped transportu/klejenia między dwoma chartami; nie jest to globalny atlas ani globalne cocycle data.
 
 ### 4. Brakuje konkretnego sign-sensitive domkniecia i/lub scope extension

@@ -22,6 +22,9 @@ payload = {
         "F461": "lane_scoped_pair1_pair2_chart_transport_operator_O12_export_present (derived from alpha12 only)",
         "N506": "projector_level_transport_under_O12_is_sign_gauge_invariant",
         "P465": "lane_scoped_O12_orthogonality_and_sampled_projector_transport_audit_present",
+        "F462": "lane_scoped_two_chart_projector_operator_section_exported_glued_by_O12",
+        "N507": "two_chart_glued_projector_operator_section_packaged_as_well_defined_and_sign_gauge_invariant",
+        "P466": "audit_of_A2_equals_O12_A1_O12T_present",
         "P460": "lane_scoped_cross_block_polar_orthogonal_factor_transition_matrix_candidate_present",
     },
     "supports": [
@@ -31,6 +34,7 @@ payload = {
         "lane_scoped_transition_angle_export",
         "lane_scoped_pair_chart_transport_operator_export",
         "projector_level_sign_gauge_transport",
+        "lane_scoped_chart_glued_projector_operator_section",
         "lane_scoped_cross_block_polar_factor_transition_matrix_candidate",
     ],
     "missing": [
