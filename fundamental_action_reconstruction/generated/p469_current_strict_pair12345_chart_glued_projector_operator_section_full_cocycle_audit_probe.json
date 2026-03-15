@@ -1,0 +1,88 @@
+{
+  "generated_utc": "2026-03-15T22:36:06.815665+00:00",
+  "stage": "P469",
+  "goal": "audit_pair12345_projector_section_gluing_and_full_triple_cocycle_path_independence",
+  "inputs": {
+    "a1_pair1": "fundamental_action_reconstruction/generated/a_1_pair1_orientation_projector_operator_strict_core_v1.json",
+    "a2_pair2": "fundamental_action_reconstruction/generated/a_2_pair2_orientation_projector_operator_strict_core_v1.json",
+    "a3_pair3": "fundamental_action_reconstruction/generated/a_3_pair3_orientation_projector_operator_strict_core_v1.json",
+    "a4_pair4": "fundamental_action_reconstruction/generated/a_4_pair4_orientation_projector_operator_strict_core_v1.json",
+    "a5_pair5": "fundamental_action_reconstruction/generated/a_5_pair5_orientation_projector_operator_strict_core_v1.json",
+    "o12": "fundamental_action_reconstruction/generated/o12_pair1_pair2_selector_chart_transport_operator_strict_derived_from_sigma_int_alpha12_v1.json",
+    "o23": "fundamental_action_reconstruction/generated/o23_pair2_pair3_selector_chart_transport_operator_axis_only_alpha23_mod_pi_strict_core_v1.json",
+    "o13": "fundamental_action_reconstruction/generated/o13_pair1_pair3_selector_chart_transport_operator_axis_only_alpha13_mod_pi_strict_core_v1.json",
+    "o34": "fundamental_action_reconstruction/generated/o34_pair3_pair4_selector_chart_transport_operator_axis_only_alpha34_mod_pi_strict_core_v1.json",
+    "o45": "fundamental_action_reconstruction/generated/o45_pair4_pair5_selector_chart_transport_operator_axis_only_alpha45_mod_pi_strict_core_v1.json",
+    "o24": "fundamental_action_reconstruction/generated/o24_pair2_pair4_selector_chart_transport_operator_axis_only_alpha24_mod_pi_strict_core_v1.json",
+    "o35": "fundamental_action_reconstruction/generated/o35_pair3_pair5_selector_chart_transport_operator_axis_only_alpha35_mod_pi_strict_core_v1.json",
+    "o14": "fundamental_action_reconstruction/generated/o14_pair1_pair4_selector_chart_transport_operator_axis_only_alpha14_mod_pi_strict_core_v1.json",
+    "o15": "fundamental_action_reconstruction/generated/o15_pair1_pair5_selector_chart_transport_operator_axis_only_alpha15_mod_pi_strict_core_v1.json",
+    "o25": "fundamental_action_reconstruction/generated/o25_pair2_pair5_selector_chart_transport_operator_axis_only_alpha25_mod_pi_strict_core_v1.json"
+  },
+  "audits": {
+    "orthogonality": {
+      "o12": 4.60113898903259e-16,
+      "o23": 1.1102230246251565e-15,
+      "o13": 1.4491064959522818e-15,
+      "o34": 1.365630868108957e-15,
+      "o45": 1.3333531885098239e-15,
+      "o24": 8.157055278148722e-16,
+      "o35": 1.9647484457332956e-15,
+      "o14": 1.7408913816691689e-15,
+      "o15": 0.0,
+      "o25": 1.7763568394002505e-15
+    },
+    "involution": {
+      "o12": 4.60113898903259e-16,
+      "o23": 1.1102230246251565e-15,
+      "o13": 1.4491064959522818e-15,
+      "o34": 1.365630868108957e-15,
+      "o45": 1.3333531885098239e-15,
+      "o24": 8.157055278148722e-16,
+      "o35": 1.9647484457332956e-15,
+      "o14": 1.7408913816691689e-15,
+      "o15": 0.0,
+      "o25": 1.7763568394002505e-15
+    },
+    "gluing": {
+      "gluing12_A2_minus_O12_A1_O12T": 3.0531133177191805e-16,
+      "gluing23_A3_minus_O23_A2_O23T": 4.61464121841373e-16,
+      "gluing13_A3_minus_O13_A1_O13T": 6.339075153674057e-16,
+      "gluing34_A4_minus_O34_A3_O34T": 6.661338147750939e-16,
+      "gluing24_A4_minus_O24_A2_O24T": 3.7470027081099033e-16,
+      "gluing14_A4_minus_O14_A1_O14T": 5.273559366969494e-16,
+      "gluing45_A5_minus_O45_A4_O45T": 7.077671781985373e-16,
+      "gluing35_A5_minus_O35_A3_O35T": 6.38378239159465e-16,
+      "gluing25_A5_minus_O25_A2_O25T": 5.967448757360216e-16,
+      "gluing15_A5_minus_O15_A1_O15T": 4.0939474033052647e-16
+    },
+    "cocycle": {
+      "pair1_pair2_pair3": 6.017562991110659e-16,
+      "pair1_pair2_pair4": 6.661338147750939e-16,
+      "pair1_pair2_pair5": 7.178157150443483e-16,
+      "pair1_pair3_pair4": 8.881784197001252e-16,
+      "pair1_pair3_pair5": 7.077671781985373e-16,
+      "pair1_pair4_pair5": 6.936659854025661e-16,
+      "pair2_pair3_pair4": 7.216449660063518e-16,
+      "pair2_pair3_pair5": 6.661338147750939e-16,
+      "pair2_pair4_pair5": 6.800116025829084e-16,
+      "pair3_pair4_pair5": 9.853229343548264e-16,
+      "meaning": "full triple-overlap path-independence on the exported projector section (sign-free)"
+    },
+    "sign_gauge": {
+      "a1": 0.0,
+      "a2": 0.0,
+      "a3": 0.0,
+      "a4": 0.0,
+      "a5": 0.0
+    }
+  },
+  "hard_limits": [
+    "Probe-level numeric audit only; does not export a global selector atlas nor global cocycle data on the full strict domain.",
+    "Does not discharge QW-2191.",
+    "Projector-level only: does not derive a sign-sensitive physical orientation datum.",
+    "Does not claim strict-core selector closure / admissible S_sel_int.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}

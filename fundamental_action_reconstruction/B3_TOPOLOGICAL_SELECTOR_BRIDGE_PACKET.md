@@ -116,6 +116,17 @@ Repo eksportuje teraz jawny lane-scoped atlas‑ingredient na pełnej rodzinie p
 
 To nadal pozostaje poniżej globalnego atlasu selektora na pełnym strict domain `C_v1` oraz poniżej globalnego rozładowania `QW-2191`.
 
+### 3e. Upgrade: pięcio‑chartowa struktura `{pair1..pair5}` ma teraz jawne dane cocycle dla **wszystkich** trójek (projector-level, sign‑free)
+
+Repo kontynuuje ten sam, najwęższy ruch w dyscyplinie `QW-2191`, ale bez podnoszenia residualnego znaku do fizycznej orientacji:
+
+- `F466` eksportuje dodatkowe operatory transportu **axis-only** na brakujących “długich” krawędziach: `O_14`, `O_15`, `O_25`,
+- oraz upgrade’uje pięcio‑chartową sekcję/atlas do jawnych audytów cocycle/path‑independence dla **wszystkich** trójek na `{pair1..pair5}`
+  na poziomie sklejonej sekcji projektorowej (bez claimu o globalnym open cover na `C_v1`).
+
+Sonda `P469` audytuje pełny zestaw relacji trójkowych na wyeksportowanych artefaktach, a `N510` pakuje to jako twierdzenie strict
+(wciąż lane‑scoped, wciąż poniżej globalnego atlasu selektora i poniżej globalnego rozładowania `QW-2191`).
+
 ### 4. Brakuje konkretnego sign-sensitive domkniecia i/lub scope extension
 
 Po powyzszych postepach brakujacy obiekt nie jest juz:
@@ -164,6 +175,7 @@ W szczegolnosci:
 - na korytarzu sigma-int istnieje juz jawny lane-scoped chart-transport operator `O_12` pomiedzy `pair1↔pair2` (`F461`), sign-free na poziomie projektorowym (`N506`, audyt `P465`),
 - ponadto istnieje jawny lane-scoped trzy‑chartowy atlas/sekcja operatorowa `{pair1,pair2,pair3}` z danymi cocycle na poziomie sekcji projektorowej (`F464`, `P467`, `N508`),
 - ponadto istnieje jawny lane-scoped pięcio‑chartowy atlas/sekcja operatorowa `{pair1..pair5}` z lokalnymi danymi cocycle na poziomie sekcji projektorowej (`F465`, `P468`, `N509`),
+- ponadto istnieje jawny lane-scoped pięcio‑chartowy atlas/sekcja operatorowa `{pair1..pair5}` z pełnymi danymi cocycle dla wszystkich trójek na poziomie sekcji projektorowej (`F466`, `P469`, `N510`),
 - osie z diagonal/local i Shannon lane sa zgodne na `n=12` (audit `P455`, packaged as `N497`).
 
 ### `B3_O5` - anti-overclaim closure test

@@ -26,6 +26,9 @@ Test whether the current strict core exports any explicit selector atlas or sele
 - `F465`: exports an explicit lane-scoped **five-chart selector atlas** ingredient on `{pair1..pair5}` at projector level, including explicit *local* cocycle/path-independence audits for adjacent triple overlaps on the glued projector section.
 - `P468`: audits the five-chart gluing laws and local cocycle/path-independence on exported artifacts.
 - `N509`: packages the five-chart local cocycle statements (projector-level, sign-free) without implying any global atlas.
+- `F466`: exports additional lane-scoped axis-only long-edge chart-transport operators (`O_14`, `O_15`, `O_25`) and upgrades the five-chart selector-atlas ingredient on `{pair1..pair5}` to explicit **full triple** cocycle/path-independence audit data on the glued projector section.
+- `P469`: audits the five-chart gluing laws and full triple cocycle/path-independence on exported artifacts.
+- `N510`: packages the five-chart full triple cocycle statements (projector-level, sign-free) without implying any global atlas.
 - `C29/C30`: only local projector formulas and local overlap compatibility laws are explicit.
 
 ## Audit target
@@ -51,6 +54,7 @@ The repository contains:
 - and an explicit lane-scoped **two-chart selector atlas stub** with an overlap-domain declaration and gluing data (`F463`),
 - and now an explicit lane-scoped **three-chart** selector-atlas ingredient on `{pair1,pair2,pair3}` with projector-level gluing laws **and explicit cocycle data on the exported projector section** (`F464`, audited by `P467`, packaged by `N508`),
 - and now an explicit lane-scoped **five-chart** selector-atlas ingredient on `{pair1..pair5}` with projector-level gluing laws **and explicit local cocycle data on the exported projector section** (`F465`, audited by `P468`, packaged by `N509`),
+- and now an upgraded explicit lane-scoped **five-chart** selector-atlas ingredient on `{pair1..pair5}` with projector-level gluing laws **and explicit full triple cocycle data on the exported projector section** (`F466`, audited by `P469`, packaged by `N510`),
 
 but none of these is elevated to a **global** selector atlas, global overlap-domain declaration, or global cocycle-level gluing data supporting a global assembly structure.
 

@@ -1,0 +1,203 @@
+{
+  "object": "O15_pair1_pair5_selector_chart_transport_operator_axis_only_alpha15_mod_pi_strict_core_v1",
+  "stage": "F466",
+  "status": "actual_exported_lane_scoped_pair_chart_transport_operator__axis_only__projector_level__no_false_pass",
+  "as_of": "2026-03-15",
+  "generated_utc": "2026-03-15T22:35:59.662911+00:00",
+  "inputs": {
+    "alpha_mod_pi_source_ref": "fundamental_action_reconstruction/generated/a_1_pair1_orientation_projector_operator_strict_core_v1.json + fundamental_action_reconstruction/generated/a_5_pair5_orientation_projector_operator_strict_core_v1.json",
+    "alpha_mod_pi": 0.0
+  },
+  "construction": {
+    "fourier_pair_planes": {
+      "pair1": "V1 := span{c1,s1} (m=1) with canonical real Fourier basis on Z12",
+      "pair5": "V5 := span{c5,s5} (m=5) with canonical real Fourier basis on Z12"
+    },
+    "transport_operator": "O := C_to G(\u03b1) C_from^T + C_from G(-\u03b1) C_to^T + \u03a0_rest with \u03b1 := alpha_mod_pi (axis-only representative); this transports projectors/spans and is invariant under \u03b1 -> \u03b1+\u03c0 at projector level."
+  },
+  "outputs": {
+    "n": 12,
+    "alpha_mod_pi": 0.0,
+    "O": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.5,
+        0.0,
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        -0.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        0.0,
+        -0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.5,
+        0.0,
+        0.5,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -0.5,
+        0.0,
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.5,
+        0.0,
+        0.5,
+        0.0
+      ],
+      [
+        0.0,
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.5,
+        0.0,
+        -0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        -0.5,
+        0.0,
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        0.0,
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.5,
+        0.0,
+        -0.5,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.5,
+        0.0,
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        -0.5,
+        0.0,
+        0.5,
+        0.0
+      ],
+      [
+        0.0,
+        -0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.5,
+        0.0,
+        0.5,
+        0.0,
+        0.0,
+        0.0,
+        0.5
+      ]
+    ],
+    "checks": {
+      "orthogonality_max_abs_residual": 3.3306690738754696e-16,
+      "involution_O_squared_equals_I_max_abs_residual": 3.3306690738754696e-16
+    }
+  },
+  "hard_limits": [
+    "Axis-only: uses alpha mod \u03c0; transport is intended for projector/axis gluing, not sign-sensitive orientation.",
+    "Lane-scoped: does not export a global selector atlas nor global cocycle data on the full strict domain.",
+    "Does not discharge QW-2191 nor imply strict-core selector closure.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}

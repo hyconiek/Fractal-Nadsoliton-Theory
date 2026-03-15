@@ -27,6 +27,9 @@ Test whether the current strict core contains any global transition or gluing ob
 - `F465`: exports additional lane-scoped chart-transport operators on `{pair3,pair4,pair5}` and a five-chart projector-level selector-atlas ingredient on `{pair1..pair5}` with explicit *local* cocycle data (still lane-scoped).
 - `P468`: audits the five-chart projector-section gluing laws and local cocycle/path-independence on exported artifacts.
 - `N509`: packages the five-chart local cocycle statements (projector-level, sign-free) without implying any global atlas.
+- `F466`: exports additional lane-scoped axis-only long-edge chart-transport operators (`O_14`, `O_15`, `O_25`) and upgrades the five-chart ingredient on `{pair1..pair5}` to explicit **full triple** cocycle/path-independence audit data (still lane-scoped).
+- `P469`: audits the five-chart projector-section gluing laws and full triple cocycle/path-independence on exported artifacts.
+- `N510`: packages the five-chart full triple cocycle statements (projector-level, sign-free) without implying any global atlas.
 - `P460`: lane-scoped cross-block polar-factor transition candidate exists (from the declared control-pullback value instantiation).
 
 ## Audit target
@@ -51,6 +54,7 @@ The repository contains:
   - `O_12` on `{pair1,pair2}` (`F461`) with sign-gauge-safe projector transport (`N506`, audited by `P465`),
   - `O_23` and `O_13` (axis-only, projector-level) and an explicit three-chart ingredient with cocycle-level section data on `{pair1,pair2,pair3}` (`F464`, audited by `P467`, packaged by `N508`),
   - additional axis-only transport operators and a five-chart projector-level ingredient with explicit *local* cocycle data on `{pair1..pair5}` (`F465`, audited by `P468`, packaged by `N509`),
+  - additional axis-only long-edge transport operators (`O_14`, `O_15`, `O_25`) and an upgraded five-chart ingredient with explicit **full triple** cocycle data on `{pair1..pair5}` (`F466`, audited by `P469`, packaged by `N510`),
 
 but none of these is exported as a strict-core **global** selector transition object supporting a full selector atlas / global gluing structure.
 
