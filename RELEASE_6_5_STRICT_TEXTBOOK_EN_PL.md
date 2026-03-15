@@ -188,6 +188,8 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
    `ModeIndexAssignment_shannon_element_order_reference_strict_core_v1` (`N496`, wykonane przez `F454`),
 10. diagonal/local i Shannon mode-index assignment są zgodne na wszystkich parach co do wyboru osi (z dokładnością do residualnego znaku) (audyt `P455`),
 11. sondy/dashboards higieniczne zostały zaktualizowane (`P432`, `P441`, `P442`) bez promocji do globalnego domknięcia.
+12. osie theta‑pair na korytarzu sigma‑int (pair1/pair2) są zgodne z oboma wyeksportowanymi mode-index assignment (diagonal/local `F453` i Shannon `F454`)
+    z dokładnością do residualnego znaku `Z2` (audyt `P456`, opakowane przez `N498`).
 
 ## 1) Jednostronicowy status strict (6.5)
 
