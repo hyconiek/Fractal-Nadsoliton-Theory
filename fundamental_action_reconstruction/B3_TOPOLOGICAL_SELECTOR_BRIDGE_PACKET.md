@@ -1,7 +1,7 @@
 # B3 Topological Selector Bridge Packet
 
 Status: `B3_UPDATED_TOPOLOGICAL_SELECTOR_BRIDGE_PARTIALLY_DISCHARGED_AXIS_DATUM_PRESENT_RESIDUAL_SIGN_AND_GLOBAL_SCOPE_OPEN_NO_FALSE_PASS`
-As of: `2026-03-15`
+As of: `2026-03-16`
 
 ## Cel
 
@@ -55,6 +55,9 @@ do:
    - jawny, lane-scoped lift transportu chartów do **oriented** `α mod 2π` na `{pair1..pair5}` jako śledzona warstwa gauge/konwencji (sign‑tracked),
      indukowana przez wyeksportowane reprezentanty `u_1..u_5`, z pełnymi danymi cocycle na poziomie wektorów (bez promocji do fizycznego datumu znaku,
      bez globalnego atlasu i bez rozładowania `QW-2191`).
+14. `P471` + `N512`
+    - ścisła higiena: cocycle/path-independence dla oriented transportu jest dostępne tylko na wyeksportowanej sekcji wektorowej (i transportowanych rayach/projektorach),
+      natomiast nie zachodzi jako operatorowa równość macierzowa `O_jk O_ij = O_ik` na pełnym nośniku. Nie wolno więc promować oriented liftu do operatorowego transition groupoid.
 
 ### Heuristic support only
 

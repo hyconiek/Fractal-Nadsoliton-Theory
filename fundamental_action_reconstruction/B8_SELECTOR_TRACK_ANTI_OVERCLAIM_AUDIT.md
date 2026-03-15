@@ -1,7 +1,7 @@
 # B8 Selector Track Anti-Overclaim Audit
 
-Status: `B8_UPDATED_NO_FALSE_PASS_SELECTOR_TRACK_RESIDUAL_BLOCKERS_SCOPE_NARROWED_AFTER_STRICT_INTERNAL_SHANNON_THETA_SUPPLY_NO_FALSE_PASS`
-As of: `2026-03-15`
+Status: `B8_UPDATED_NO_FALSE_PASS_SELECTOR_TRACK_RESIDUAL_BLOCKERS_SCOPE_NARROWED_AFTER_Z24_SCOPE_EXTENSION_AND_ORIENTED_TRANSPORT_BOUNDARY_NO_FALSE_PASS`
+As of: `2026-03-16`
 
 ## Cel
 
@@ -48,6 +48,12 @@ sprawdzic:
 13. `F458`
     - minimal typed `Z_24` carrier + regular action export (`I_24_v1`, `Z_24_v1`, `tau_Z24_v1`) supporting cautious scope-extension work,
       without any physical identification with the strict `n=12` scaffolds.
+14. `F467` + `P470` + `N511`
+    - lane-scoped oriented transport lift (`α mod 2π`) on `{pair1..pair5}` as a tracked gauge/convention layer on the exported `n=12` instance (no physical sign claim; no global atlas).
+15. `P471` + `N512`
+    - strict hygiene boundary: the oriented transport cocycle holds only on the exported vector section (and transported rays/projectors) and does **not** hold as an operator-level matrix identity on the full carrier.
+16. `F468` + `N513`
+    - strict scope-extension infrastructure on typed `Z_24`: export of `r_ord_z24` and a strict `Z_24` mode-index assignment object on the Shannon element-order reference lane (`F468`), packaged as a theorem-level `O(2)->Z2` cut on all `pair_m (m=1..11)` on `Z_24` (`N513`), without any physical promotion of `n=24`.
 
 ## Wynik syntetyczny
 
@@ -67,6 +73,7 @@ Na aktualnym repo state (`2026-03-15`) wolno twierdzic tylko tyle:
      ale dla obecnie wyeksportowanych downstream obiektow/audytow, gdzie znak jest gauge‑irrelewant
      (np. `QW-2190` embedding audyty, `R1` jako span, projektory typu `A_1(pair1)`), wolno go jawnie **zamrozic**
      jako warstwe konwencji (pakiet `N502`).
+   - dodatkowo: oriented transport na `{pair1..pair5}` pozostaje jawnie warstwą konwencji (sign‑tracked) i nie wolno go promować do operatorowego transition groupoid (`P471`, `N512`).
 
 ## Macierz rygoru
 
@@ -86,9 +93,11 @@ Na aktualnym repo state (`2026-03-15`) wolno twierdzic tylko tyle:
    Update: dla obecnie wyeksportowanych downstream obiektow w strict stack, gauge‑irrelevance znaku jest juz spakowane (`N502`).
 4. Brak theorem-level fizycznej derivation FR sign map (poza jawnie zadeklarowanym strict-side premise w `F307/N418`), jesli taki standard ma byc wymagany w finalnym “ToE closure” opisie.
 5. Brak scope extension poza zadeklarowane lane i poza `n=12` bez nowych strict obiektow.
-   Update: istnieje juz probe-level wsparcie dla takiej sciezki (scan `Z_n` w `P461` oraz jawny kandydat `Z_24` w `P462`),
-   oraz minimalna typed infrastruktura dla `Z_24` (`F458`), ale nadal brak theorem-level scope-extension (w sensie strict-closure)
-   oraz brak promocji `n≠12` do fizycznego scaffoldu `QW-2190`.
+   Update: istnieje już jawny strict scope-extension ingredient na typed `Z_24` dla Shannon element‑order reference:
+   - `F458` daje typed `Z_24` carrier + regular action,
+   - `F468` eksportuje `r_ord_z24` oraz strict obiekt mode-index assignment na `Z_24`,
+   - `N513` pakuje theorem-level `O(2)->Z2` cut na wszystkich parach `pair_m (m=1..11)` na `Z_24`,
+   ale nadal brak promocji `n≠12` do **fizycznego** scaffoldu `QW-2190` (scope extension pozostaje infrastrukturalne, nie fizyczne).
 
 ## Forbidden claims
 

@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.28  
+**Version:** 6.5.29  
 **Date:** 2026-03-16  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -79,12 +79,15 @@
   On the current instantiated matrix, `alpha_cross ≈ 0` while `alpha_12 = π/2`; these are distinct lane-scoped quantities and must not be conflated into a global gluing claim.
 - Update (`2026-03-15`): a **probe-only** `Z_n` scope-extension scan of the Shannon element‑order reference defect
   `F_{2m}(ord_{Z_n})` indicates nonzero defects (hence `O(2) -> Z2` axis cuts) for all Fourier-degenerate pairs on each scanned `n ∈ {6,8,10,12,14,16,18,20,24}` (`P461`).
-  This does **not** promote any `n≠12` result to theorem level and does **not** export any strict mode-index assignment object beyond the declared `n=12` scope.
+  This is a computational scope check only; `P461` itself does **not** promote any `n≠12` result to theorem level and does **not** promote any `n≠12` carrier into the physical `QW-2190` scaffold.
 - Update (`2026-03-15`): moreover, one cautious follow-up probe exports an explicit **probe-level** mode-index assignment *candidate*
   on `Z_24` induced by the same defect-angle rule (including numeric basis vectors `u_{m,±}` on each `pair_m`) (`P462`).
-  This remains outside theorem-level scope extension and does not promote `n=24` into the `QW-2190` physical scaffold.
+  This probe-level candidate does not promote `n=24` into the `QW-2190` physical scaffold.
 - Update (`2026-03-15`): a minimal typed `Z_24` carrier + regular action primitive is exported as strict infrastructure for cautious scope-extension work
   (`F458`: `I_24_v1`, `Z_24_v1`, `tau_Z24_v1`), without any physical identification with the strict `n=12` scaffolds.
+- Update (`2026-03-16`): the repo now exports a strict scope-extension infrastructure upgrade on typed `Z_24`: the Shannon element‑order reference datum `r_ord_z24`
+  and a strict `Z_24` mode-index assignment object (`F468`), packaged by a theorem-level `O(2)->Z2` cut on all `pair_m (m=1..11)` on `Z_24` (`N513`).
+  This remains non-physical and does not promote `n=24` into the `QW-2190` scaffold.
 - Update (`2026-03-15`): the diagonal/local lane exports a strict-derived **full Psi-sector Hessian eigensystem value instantiation**
   `H_psi := K_total + (m0^2 I + D_local_residual)` (numeric 12×12 matrix + eigenvalues/eigenvectors) (`F459`).
   This supports the “light = linearized eigenmodes” reading in declared scope, but remains lane-scoped and does not imply host matching, selector closure, or ToE closure.
@@ -176,6 +179,9 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
 28. a strict hygiene follow-up audits that the oriented transport cocycle holds only on the exported glued vector section (and hence on transported rays/projectors),
     and does **not** hold as an operator-level matrix identity `O_jk O_ij = O_ik` on the full carrier (`P471`, packaged by `N512`). Therefore the oriented lift must not be
     treated as an operator-level transition groupoid transporting arbitrary vectors.
+29. the repo exports a strict scope-extension infrastructure upgrade on typed `Z_24`: a Shannon element‑order reference datum `r_ord_z24` and a strict `Z_24`
+    mode-index assignment basis object (`F468`), packaged by a theorem-level `O(2)->Z2` cut on all `pair_m (m=1..11)` on `Z_24` (`N513`), without any physical promotion
+    of `n=24` into the `QW-2190` scaffold.
 
 ## 1) One-Page Strict Status (6.5)
 
@@ -308,12 +314,15 @@ constitute a global `QW-2191` discharge.
 
 Update: a probe-only `Z_n` scope-extension scan (`P461`) indicates that the same simple defect criterion
 `F_{2m}(ord_{Z_n}) ≠ 0` holds on each scanned `n ∈ {6,8,10,12,14,16,18,20,24}` for all Fourier-degenerate pairs.
-This is a computational scope check only; it does not export any strict `n≠12` mode-index assignment object and does not
+This is a computational scope check only; `P461` itself does not promote any `n≠12` result to theorem level and does not
 upgrade any global discharge claim.
 
 Update: one cautious follow-up exports a probe-level `Z_24` mode-index assignment *candidate* (numeric basis vectors)
-induced by the same defect-angle rule (`P462`). This is still not a theorem-level scope extension and does not promote `Z_24`
-into the strict physical mode scaffold.
+induced by the same defect-angle rule (`P462`). This does not promote `Z_24` into the strict physical mode scaffold.
+
+Update: the repo now exports a strict scope-extension infrastructure upgrade on typed `Z_24`: the Shannon element‑order reference datum `r_ord_z24`
+and a strict `Z_24` mode-index assignment object (`F468`), packaged by a theorem-level `O(2)->Z2` cut on all `pair_m (m=1..11)` on `Z_24` (`N513`).
+This remains non-physical and does not promote `n=24` into the `QW-2190` scaffold.
 
 ---
 
@@ -410,6 +419,9 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
 35. dodatkowo, jako ścisła higiena, sonda pokazuje, że relacje cocycle/path‑independence dla transportu “oriented” zachodzą tylko na wyeksportowanej sekcji
     wektorowej (a więc na transportowanych rayach/projektorach), natomiast **nie** zachodzą jako operatorowa równość macierzowa `O_jk O_ij = O_ik` na pełnym nośniku
     (`P471`, opakowane przez `N512`). W szczególności nie wolno traktować tego liftu jako operatorowego transition groupoid transportującego dowolne wektory.
+36. ponadto, repo eksportuje już ścisły upgrade infrastrukturalny scope-extension na typed `Z_24` dla pasa Shannon element‑order reference:
+    datum `r_ord_z24` oraz jawny obiekt mode-index assignment na `Z_24` (`F468`), opakowane twierdzeniem theorem-level o cięciu `O(2)->Z2` na wszystkich parach
+    `pair_m (m=1..11)` na `Z_24` (`N513`). To nadal jest **nie‑fizyczne** i nie promuje `n=24` do scaffoldu `QW-2190`.
 
 ## 1) Jednostronicowy status strict (6.5)
 
@@ -480,7 +492,11 @@ rozładowania `QW-2191`.
 
 Update: sonda scope-extension `Z_n` (`P461`) wskazuje, że proste kryterium defektu `F_{2m}(ord_{Z_n}) ≠ 0` zachodzi na wszystkich parach
 Fouriera dla każdego z zeskanowanych `n ∈ {6,8,10,12,14,16,18,20,24}`. Jest to jednak wyłącznie probe-level check bez promocji do theorem-level
-poza `n=12` i bez eksportu strict mode-index assignment dla `n≠12`.
+poza `n=12` i bez promocji `n≠12` do fizycznego scaffoldu `QW-2190` (sonda sama nie wykonuje theorem-level scope-extension).
 
 Update: dodatkowo, jako ostrożny follow-up, repo eksportuje probe-level kandydat mode-index assignment na `Z_24` (wektory bazowe liczbowe)
-indukowany przez tę samą regułę kąta defektu (`P462`). To nadal nie jest scope-extension theorem-level ani promocja `n=24` do `QW-2190`.
+indukowany przez tę samą regułę kąta defektu (`P462`). To nie jest promocja `n=24` do `QW-2190`.
+
+Update: repo eksportuje już ścisły upgrade infrastrukturalny scope-extension na typed `Z_24`: datum `r_ord_z24` oraz jawny obiekt mode-index assignment na `Z_24`
+(`F468`), opakowane twierdzeniem theorem-level o cięciu `O(2)->Z2` na wszystkich parach `pair_m (m=1..11)` na `Z_24` (`N513`). To nadal jest **nie‑fizyczne**
+i nie promuje `n=24` do scaffoldu `QW-2190`.
