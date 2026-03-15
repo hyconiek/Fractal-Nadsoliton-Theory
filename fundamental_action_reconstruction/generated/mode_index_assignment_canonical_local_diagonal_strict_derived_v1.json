@@ -1,0 +1,349 @@
+{
+  "object": "ModeIndexAssignment_canonical_local_diagonal_strict_derived_v1",
+  "status": "actual_exported_strict_core_mode_index_assignment__strict_derived_value_instantiation__no_false_pass",
+  "as_of": "2026-03-15",
+  "intent": "Export one strict-derived canonical mode-index assignment basis on the QW-2190 real Fourier scaffold for n=12, constructed by diagonal/local defect reconstruction on each Fourier-degenerate pair plane pair_m (m=1..5) from the canonical diagonal/local residual profile computed by P437 and the multi-pair Fourier defect evaluation of P449. This provides a canonical eigenbasis representative (up to residual Z2 sign) on each degenerate pair plane in the declared diagonal/local lane (N484/N485/N487), without implying global selector closure or ToE closure.",
+  "scope": "strict_core_strict_derived_value_instantiation_only",
+  "derived_from": {
+    "p437_profile_artifact": "fundamental_action_reconstruction/generated/p437_current_strict_r14_r15_n477_canonical_local_diagonal_sigma_opposite_pair_sums_value_evaluation_harness_probe.json",
+    "p437_summary": "fundamental_action_reconstruction/generated/p437_current_strict_r14_r15_n477_canonical_local_diagonal_sigma_opposite_pair_sums_value_evaluation_harness_probe_summary.json",
+    "p449_defect_artifact": "fundamental_action_reconstruction/generated/p449_current_strict_canonical_local_diagonal_multi_pair_o2_cut_defect_evaluation_probe.json",
+    "p449_summary": "fundamental_action_reconstruction/generated/p449_current_strict_canonical_local_diagonal_multi_pair_o2_cut_defect_evaluation_probe_summary.json",
+    "qw2190_mode_scaffold": "report_qw2190_kernel_mode_representation_emergence_gate.json"
+  },
+  "provenance_checks": {
+    "strict_derived_inputs_marked": true,
+    "strict_derived_provenance_chain_present": true,
+    "input_theorem_level_pass": true,
+    "note": "This packet trusts only the strict-derived diagonal/local lane artifacts (P437/P449)."
+  },
+  "construction": {
+    "diagonal_sector_pair_m_reconstruction": {
+      "theta_star_rule": "theta_* = (1/2) atan2(Im(F_2m), Re(F_2m))",
+      "u_plus_rule": "u_+ := cos(theta_*) c_m + sin(theta_*) s_m",
+      "u_minus_rule": "u_- := -sin(theta_*) c_m + cos(theta_*) s_m",
+      "references": [
+        "N484",
+        "N485",
+        "N487"
+      ]
+    }
+  },
+  "outputs": {
+    "n": 12,
+    "basis_vectors_order": [
+      "e0",
+      "pair1:u_plus,u_minus",
+      "pair2:u_plus,u_minus",
+      "pair3:u_plus,u_minus",
+      "pair4:u_plus,u_minus",
+      "pair5:u_plus,u_minus",
+      "e6"
+    ],
+    "e0": [
+      0.2886751345948129,
+      0.2886751345948129,
+      0.2886751345948129,
+      0.2886751345948129,
+      0.2886751345948129,
+      0.2886751345948129,
+      0.2886751345948129,
+      0.2886751345948129,
+      0.2886751345948129,
+      0.2886751345948129,
+      0.2886751345948129,
+      0.2886751345948129
+    ],
+    "e6": [
+      0.2886751345948129,
+      -0.2886751345948129,
+      0.2886751345948129,
+      -0.2886751345948129,
+      0.2886751345948129,
+      -0.2886751345948129,
+      0.2886751345948129,
+      -0.2886751345948129,
+      0.2886751345948129,
+      -0.2886751345948129,
+      0.2886751345948129,
+      -0.2886751345948129
+    ],
+    "pairs": {
+      "pair1": {
+        "m": 1,
+        "l": 2,
+        "F_2m": {
+          "Re": 12.88048321986275,
+          "Im": -5.329070518200751e-15,
+          "abs": 12.88048321986275
+        },
+        "theta_star": -2.0686609451044866e-16,
+        "cuts_O2_to_Z2_by_absF_nonzero": true,
+        "eigenvalues": {
+          "lambda_plus": 3.1607647274473827,
+          "lambda_minus": 1.0140175241369243
+        },
+        "u_plus": [
+          0.408248290463863,
+          0.35355339059327373,
+          0.20412414523193148,
+          -5.945473133012915e-17,
+          -0.2041241452319315,
+          -0.35355339059327384,
+          -0.408248290463863,
+          -0.3535533905932738,
+          -0.20412414523193162,
+          9.458735112734279e-18,
+          0.20412414523193165,
+          0.35355339059327373
+        ],
+        "u_minus": [
+          8.445272943882659e-17,
+          0.20412414523193156,
+          0.3535533905932738,
+          0.408248290463863,
+          0.35355339059327373,
+          0.2041241452319314,
+          -3.445673322143171e-17,
+          -0.20412414523193148,
+          -0.35355339059327373,
+          -0.408248290463863,
+          -0.3535533905932737,
+          -0.20412414523193162
+        ],
+        "audits": {
+          "pair_basis_orthonormal_residual": 1.1120011724693578e-16,
+          "pair_basis_det_gram": 0.9999999999999999,
+          "pair_basis_rank": 2,
+          "pair_basis_orthonormal_residual_vs_identity": 1.1120011724693578e-16
+        }
+      },
+      "pair2": {
+        "m": 2,
+        "l": 4,
+        "F_2m": {
+          "Re": -13.370999870061631,
+          "Im": 1.2434497875801753e-14,
+          "abs": 13.370999870061631
+        },
+        "theta_star": 1.5707963267948961,
+        "cuts_O2_to_Z2_by_absF_nonzero": true,
+        "eigenvalues": {
+          "lambda_plus": 3.201641114963956,
+          "lambda_minus": 0.9731411366203508
+        },
+        "u_plus": [
+          2.0629665884343323e-16,
+          0.35355339059327384,
+          0.3535533905932737,
+          -1.5630066262603835e-16,
+          -0.3535533905932738,
+          -0.3535533905932736,
+          1.0630466640864349e-16,
+          0.3535533905932738,
+          0.35355339059327384,
+          -5.630867019124862e-17,
+          -0.3535533905932739,
+          -0.35355339059327384
+        ],
+        "u_minus": [
+          -0.408248290463863,
+          -0.2041241452319314,
+          0.2041241452319316,
+          0.408248290463863,
+          0.20412414523193154,
+          -0.20412414523193173,
+          -0.408248290463863,
+          -0.20412414523193156,
+          0.20412414523193137,
+          0.408248290463863,
+          0.2041241452319313,
+          -0.20412414523193131
+        ],
+        "audits": {
+          "pair_basis_orthonormal_residual": 3.6042185851109777e-16,
+          "pair_basis_det_gram": 1.0000000000000002,
+          "pair_basis_rank": 2,
+          "pair_basis_orthonormal_residual_vs_identity": 3.6042185851109777e-16
+        }
+      },
+      "pair3": {
+        "m": 3,
+        "l": 6,
+        "F_2m": {
+          "Re": -25.57352236877763,
+          "Im": -2.1457480547482822e-14,
+          "abs": 25.57352236877763
+        },
+        "theta_star": -1.5707963267948961,
+        "cuts_O2_to_Z2_by_absF_nonzero": true,
+        "eigenvalues": {
+          "lambda_plus": 4.218517989856956,
+          "lambda_minus": -0.043735738272649094
+        },
+        "u_plus": [
+          2.0629665884343323e-16,
+          -0.408248290463863,
+          -2.562926550608281e-16,
+          0.408248290463863,
+          3.0628865127822297e-16,
+          -0.408248290463863,
+          -3.5628464749561787e-16,
+          0.408248290463863,
+          4.0628064371301273e-16,
+          -0.408248290463863,
+          -1.1814712828693508e-15,
+          0.408248290463863
+        ],
+        "u_minus": [
+          0.408248290463863,
+          2.312946569521307e-16,
+          -0.408248290463863,
+          -2.8129065316952554e-16,
+          0.408248290463863,
+          6.93883970856392e-16,
+          -0.408248290463863,
+          -3.812826456043153e-16,
+          0.408248290463863,
+          4.312786418217102e-16,
+          -0.408248290463863,
+          2.4392000489983806e-16
+        ],
+        "audits": {
+          "pair_basis_orthonormal_residual": 5.637469901793007e-16,
+          "pair_basis_det_gram": 0.9999999999999998,
+          "pair_basis_rank": 2,
+          "pair_basis_orthonormal_residual_vs_identity": 5.637469901793007e-16
+        }
+      },
+      "pair4": {
+        "m": 4,
+        "l": 8,
+        "F_2m": {
+          "Re": -13.370999870061581,
+          "Im": 3.197442310920451e-14,
+          "abs": 13.370999870061581
+        },
+        "theta_star": 1.5707963267948954,
+        "cuts_O2_to_Z2_by_absF_nonzero": true,
+        "eigenvalues": {
+          "lambda_plus": 3.2016411149639517,
+          "lambda_minus": 0.9731411366203548
+        },
+        "u_plus": [
+          4.782446499455369e-16,
+          0.35355339059327356,
+          -0.3535533905932739,
+          3.782526575107471e-16,
+          0.35355339059327373,
+          -0.353553390593274,
+          2.7826066507595733e-16,
+          0.3535533905932738,
+          -0.3535533905932736,
+          1.7826867264116762e-16,
+          0.35355339059327345,
+          -0.35355339059327356
+        ],
+        "u_minus": [
+          -0.408248290463863,
+          0.20412414523193184,
+          0.2041241452319313,
+          -0.408248290463863,
+          0.20412414523193162,
+          0.20412414523193104,
+          -0.408248290463863,
+          0.2041241452319315,
+          0.20412414523193173,
+          -0.408248290463863,
+          0.20412414523193206,
+          0.20412414523193181
+        ],
+        "audits": {
+          "pair_basis_orthonormal_residual": 5.109557128123167e-16,
+          "pair_basis_det_gram": 0.9999999999999999,
+          "pair_basis_rank": 2,
+          "pair_basis_orthonormal_residual_vs_identity": 5.109557128123167e-16
+        }
+      },
+      "pair5": {
+        "m": 5,
+        "l": 10,
+        "F_2m": {
+          "Re": 12.880483219862722,
+          "Im": 2.4868995751603507e-14,
+          "abs": 12.880483219862722
+        },
+        "theta_star": 9.653751077154292e-16,
+        "cuts_O2_to_Z2_by_absF_nonzero": true,
+        "eigenvalues": {
+          "lambda_plus": 3.16076472744738,
+          "lambda_minus": 1.0140175241369265
+        },
+        "u_plus": [
+          0.408248290463863,
+          -0.35355339059327356,
+          0.20412414523193123,
+          8.817000493941504e-16,
+          -0.2041241452319318,
+          0.35355339059327384,
+          -0.408248290463863,
+          0.3535533905932735,
+          -0.20412414523193131,
+          -4.388806607271003e-17,
+          0.20412414523193137,
+          -0.3535533905932736
+        ],
+        "u_minus": [
+          -3.941127373811916e-16,
+          0.20412414523193181,
+          -0.35355339059327395,
+          0.408248290463863,
+          -0.35355339059327356,
+          0.2041241452319314,
+          1.369287361407109e-15,
+          -0.2041241452319319,
+          0.3535533905932739,
+          -0.408248290463863,
+          0.35355339059327384,
+          -0.20412414523193181
+        ],
+        "audits": {
+          "pair_basis_orthonormal_residual": 7.850878600318906e-16,
+          "pair_basis_det_gram": 1.0,
+          "pair_basis_rank": 2,
+          "pair_basis_orthonormal_residual_vs_identity": 7.850878600318906e-16
+        }
+      }
+    },
+    "all_pairs_cut": true
+  },
+  "audits": {
+    "full_basis_shape": [
+      12,
+      12
+    ],
+    "full_basis_orthonormal_residual_vs_identity": 3.0805947409203855e-15,
+    "full_basis_det_gram": 1.0000000000000002,
+    "dependency_runs": [
+      {
+        "script": "fundamental_action_reconstruction/p437_current_strict_r14_r15_n477_canonical_local_diagonal_sigma_opposite_pair_sums_value_evaluation_harness_probe.py",
+        "returncode": 0,
+        "stdout_tail": "/home/krzysiek/Pobrane/TOE/edison/fundamental_action_reconstruction/generated/p437_current_strict_r14_r15_n477_canonical_local_diagonal_sigma_opposite_pair_sums_value_evaluation_harness_probe.json",
+        "stderr_tail": ""
+      },
+      {
+        "script": "fundamental_action_reconstruction/p449_current_strict_canonical_local_diagonal_multi_pair_o2_cut_defect_evaluation_probe.py",
+        "returncode": 0,
+        "stdout_tail": "/home/krzysiek/Pobrane/TOE/edison/fundamental_action_reconstruction/generated/p449_current_strict_canonical_local_diagonal_multi_pair_o2_cut_defect_evaluation_probe.json",
+        "stderr_tail": ""
+      }
+    ]
+  },
+  "hard_limits": [
+    "Does not claim axiom-free global physical uniqueness beyond the declared diagonal/local lane and n=12 scope.",
+    "Does not claim strict-core selector closure nor admissible S_sel_int.",
+    "Does not claim global QW-2191 discharge (kernel-alone obstruction remains true).",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}
