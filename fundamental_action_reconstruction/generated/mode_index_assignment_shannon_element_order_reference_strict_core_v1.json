@@ -1,0 +1,299 @@
+{
+  "object": "ModeIndexAssignment_shannon_element_order_reference_strict_core_v1",
+  "status": "actual_exported_strict_core_mode_index_assignment__shannon_element_order_reference_lane__no_false_pass",
+  "as_of": "2026-03-15",
+  "intent": "Export one strict-core mode-index assignment basis object on the n=12 QW-2190 Fourier scaffold by using the strict Shannon element-order reference datum (r_ord) as an internal symmetry-breaking selector ingredient. This cuts each pair_m O(2) family down to residual Z2 (sign) and exports an explicit orthonormal basis (u_plus,u_minus) on every degenerate pair plane.",
+  "scope": "strict_core_shannon_element_order_reference_lane_only",
+  "derived_from": {
+    "r_ord_reference": "fundamental_action_reconstruction/generated/r_ord_z12_v1_reference_distribution.json",
+    "alpha_geo_strict_derived_v1": "fundamental_action_reconstruction/generated/alpha_geo_strict_derived_v1.json",
+    "qw2190_mode_scaffold": "report_qw2190_kernel_mode_representation_emergence_gate.json"
+  },
+  "construction": {
+    "diagonal_reference_profile": "ord_Z12(x) (stored in r_ord reference packet; direction-free under Aut(Z_12))",
+    "pair_m_defect": "F_{2m}(ord) := sum_x ord(x) * exp(i * 4\u03c0 m x / n)",
+    "theta_star_rule": "theta_* = (1/2) atan2(Im(F_{2m}), Re(F_{2m}))",
+    "u_plus_rule": "u_+ := cos(theta_*) c_m + sin(theta_*) s_m",
+    "u_minus_rule": "u_- := -sin(theta_*) c_m + cos(theta_*) s_m",
+    "objective_note": "For cross-entropy J(theta)=E_p[alpha_geo*ord(x)]+const, the minimizer is u_- (smaller eigenvalue).",
+    "references": [
+      "F446",
+      "N479",
+      "N480",
+      "N488",
+      "N496"
+    ]
+  },
+  "outputs": {
+    "n": 12,
+    "basis_vectors_order": [
+      "e0",
+      "pair1:u_plus,u_minus",
+      "pair2:u_plus,u_minus",
+      "pair3:u_plus,u_minus",
+      "pair4:u_plus,u_minus",
+      "pair5:u_plus,u_minus",
+      "e6"
+    ],
+    "e0": [
+      0.2886751345948129,
+      0.2886751345948129,
+      0.2886751345948129,
+      0.2886751345948129,
+      0.2886751345948129,
+      0.2886751345948129,
+      0.2886751345948129,
+      0.2886751345948129,
+      0.2886751345948129,
+      0.2886751345948129,
+      0.2886751345948129,
+      0.2886751345948129
+    ],
+    "e6": [
+      0.2886751345948129,
+      -0.2886751345948129,
+      0.2886751345948129,
+      -0.2886751345948129,
+      0.2886751345948129,
+      -0.2886751345948129,
+      0.2886751345948129,
+      -0.2886751345948129,
+      0.2886751345948129,
+      -0.2886751345948129,
+      0.2886751345948129,
+      -0.2886751345948129
+    ],
+    "pairs": {
+      "pair1": {
+        "m": 1,
+        "F_2m_ord": {
+          "Re": 10.000000000000004,
+          "Im": -6.079940408474241e-15,
+          "abs": 10.000000000000004
+        },
+        "theta_star": -3.0399702042371194e-16,
+        "theta_minimizer_mod_pi": 1.5707963267948963,
+        "u_plus": [
+          0.408248290463863,
+          0.35355339059327373,
+          0.20412414523193145,
+          -9.9108265785391e-17,
+          -0.20412414523193154,
+          -0.35355339059327384,
+          -0.408248290463863,
+          -0.3535533905932738,
+          -0.2041241452319316,
+          4.9112269567996136e-17,
+          0.20412414523193168,
+          0.35355339059327373
+        ],
+        "u_minus": [
+          1.2410626389408844e-16,
+          0.2041241452319316,
+          0.3535533905932738,
+          0.408248290463863,
+          0.35355339059327373,
+          0.20412414523193137,
+          -7.411026767669356e-17,
+          -0.2041241452319315,
+          -0.35355339059327373,
+          -0.408248290463863,
+          -0.3535533905932737,
+          -0.2041241452319316
+        ],
+        "eigenvalues_on_diag_ord_restriction": {
+          "lambda_plus": 7.250000000000001,
+          "lambda_minus": 5.583333333333332
+        },
+        "objective_minimizer_vector": "u_minus"
+      },
+      "pair2": {
+        "m": 2,
+        "F_2m_ord": {
+          "Re": -22.000000000000014,
+          "Im": 1.882121896469942e-14,
+          "abs": 22.000000000000014
+        },
+        "theta_star": 1.5707963267948961,
+        "theta_minimizer_mod_pi": 3.1415926535897927,
+        "u_plus": [
+          2.0629665884343323e-16,
+          0.35355339059327384,
+          0.3535533905932737,
+          -1.5630066262603835e-16,
+          -0.3535533905932738,
+          -0.3535533905932736,
+          1.0630466640864349e-16,
+          0.3535533905932738,
+          0.35355339059327384,
+          -5.630867019124862e-17,
+          -0.3535533905932739,
+          -0.35355339059327384
+        ],
+        "u_minus": [
+          -0.408248290463863,
+          -0.2041241452319314,
+          0.2041241452319316,
+          0.408248290463863,
+          0.20412414523193154,
+          -0.20412414523193173,
+          -0.408248290463863,
+          -0.20412414523193156,
+          0.20412414523193137,
+          0.408248290463863,
+          0.2041241452319313,
+          -0.20412414523193131
+        ],
+        "eigenvalues_on_diag_ord_restriction": {
+          "lambda_plus": 8.25,
+          "lambda_minus": 4.583333333333333
+        },
+        "objective_minimizer_vector": "u_minus"
+      },
+      "pair3": {
+        "m": 3,
+        "F_2m_ord": {
+          "Re": -35.0,
+          "Im": -1.618019328402318e-14,
+          "abs": 35.0
+        },
+        "theta_star": -1.5707963267948963,
+        "theta_minimizer_mod_pi": 2.220446049250313e-16,
+        "u_plus": [
+          1.1564732847606534e-16,
+          -0.408248290463863,
+          -1.6564332469346022e-16,
+          0.408248290463863,
+          2.156393209108551e-16,
+          -0.408248290463863,
+          -2.6563531712824996e-16,
+          0.408248290463863,
+          3.156313133456448e-16,
+          -0.408248290463863,
+          -1.0908219525019829e-15,
+          0.408248290463863
+        ],
+        "u_minus": [
+          0.408248290463863,
+          1.4064532658476277e-16,
+          -0.408248290463863,
+          -1.9064132280215765e-16,
+          0.408248290463863,
+          6.03234640489024e-16,
+          -0.408248290463863,
+          -2.9063331523694743e-16,
+          0.408248290463863,
+          3.406293114543423e-16,
+          -0.408248290463863,
+          3.3456933526720593e-16
+        ],
+        "eigenvalues_on_diag_ord_restriction": {
+          "lambda_plus": 9.333333333333332,
+          "lambda_minus": 3.4999999999999996
+        },
+        "objective_minimizer_vector": "u_minus"
+      },
+      "pair4": {
+        "m": 4,
+        "F_2m_ord": {
+          "Re": -21.999999999999975,
+          "Im": 4.030697318849922e-14,
+          "abs": 21.999999999999975
+        },
+        "theta_star": 1.5707963267948957,
+        "theta_minimizer_mod_pi": 3.1415926535897922,
+        "u_plus": [
+          3.87595319578169e-16,
+          0.3535533905932736,
+          -0.35355339059327384,
+          2.8760332714337923e-16,
+          0.3535533905932738,
+          -0.35355339059327395,
+          1.876113347085895e-16,
+          0.35355339059327384,
+          -0.35355339059327356,
+          8.761934227379976e-17,
+          0.3535533905932735,
+          -0.3535533905932735
+        ],
+        "u_minus": [
+          -0.408248290463863,
+          0.20412414523193176,
+          0.20412414523193137,
+          -0.408248290463863,
+          0.20412414523193154,
+          0.20412414523193112,
+          -0.408248290463863,
+          0.20412414523193143,
+          0.20412414523193181,
+          -0.408248290463863,
+          0.20412414523193198,
+          0.2041241452319319
+        ],
+        "eigenvalues_on_diag_ord_restriction": {
+          "lambda_plus": 8.249999999999998,
+          "lambda_minus": 4.583333333333335
+        },
+        "objective_minimizer_vector": "u_minus"
+      },
+      "pair5": {
+        "m": 5,
+        "F_2m_ord": {
+          "Re": 9.999999999999934,
+          "Im": 1.0456505263834557e-14,
+          "abs": 9.999999999999934
+        },
+        "theta_star": 5.228252631917312e-16,
+        "theta_minimizer_mod_pi": 1.570796326794897,
+        "u_plus": [
+          0.408248290463863,
+          -0.3535533905932737,
+          0.20412414523193137,
+          7.010298319223023e-16,
+          -0.20412414523193165,
+          0.35355339059327373,
+          -0.408248290463863,
+          0.3535533905932736,
+          -0.20412414523193145,
+          1.3678215139913803e-16,
+          0.20412414523193123,
+          -0.3535533905932735
+        ],
+        "u_minus": [
+          -2.1344251990934353e-16,
+          0.20412414523193168,
+          -0.35355339059327384,
+          0.408248290463863,
+          -0.3535533905932737,
+          0.20412414523193154,
+          1.1886171439352611e-15,
+          -0.20412414523193176,
+          0.3535533905932738,
+          -0.408248290463863,
+          0.35355339059327395,
+          -0.20412414523193195
+        ],
+        "eigenvalues_on_diag_ord_restriction": {
+          "lambda_plus": 7.249999999999995,
+          "lambda_minus": 5.5833333333333375
+        },
+        "objective_minimizer_vector": "u_minus"
+      }
+    },
+    "all_pairs_cut": true
+  },
+  "audits": {
+    "full_basis_shape": [
+      12,
+      12
+    ],
+    "full_basis_orthonormal_residual_vs_identity": 3.118661706533402e-15,
+    "full_basis_det_gram": 1.0
+  },
+  "hard_limits": [
+    "Does not claim strict-core selector closure nor admissible S_sel_int.",
+    "Does not claim global discharge of QW-2191 (kernel-alone obstruction remains true as a canonical-representative obstruction).",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}

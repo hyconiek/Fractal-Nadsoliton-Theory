@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.1  
+**Version:** 6.5.2  
 **Date:** 2026-03-15  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -19,6 +19,10 @@
   conjugation** in its declared scope (`N494`).
 - Update (`2026-03-15`): moreover, for the same `QW-2190` embedding audits, the full continuous `O(2)` basis-rotation
   freedom is likewise **gauge-equivalent** (conjugation-only) (`N495`, audited by `P454`).
+- Update (`2026-03-15`): independently, on the strict **Shannon element‑order reference** lane, the repo exports a full
+  strict-core **mode-index assignment basis object** covering all Fourier-degenerate pairs `pair_m (m=1..5)` on `n=12`,
+  cutting each `pair_m` `O(2)` family down to residual `Z2` using only the internal reference datum `r_ord`
+  (`N480`, `N488`, `N496`, executed by `F454`).
 - The sigma-int corridor theta-supply and sigma-int → residual bridge theorems introduced in Release 6.4 remain in force
   (e.g. `F451/N489`, `P451`, `F452/N490`, `N491`) and are not re-derived here.
 
@@ -47,7 +51,10 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
    the diagonal/local `QW-2190` embedding is unique **up to conjugation** in that scope (`N494`),
 8. full continuous `O(2)` rotations inside the embedded pair planes are gauge-equivalent (conjugation-only) for the
    same `QW-2190` embedding audits (`N495`, audited by `P454`),
-9. repo hygiene probes/dashboards were updated accordingly (`P432`, `P441`, `P442`), without any promotion to global
+9. independently, the strict Shannon element‑order reference lane cuts `O(2)` down to residual `Z2` on **all**
+   Fourier-degenerate pairs `pair_m (m=1..5)` on `n=12` and exports a strict-core mode-index assignment basis object
+   `ModeIndexAssignment_shannon_element_order_reference_strict_core_v1` (`N496`, executed by `F454`),
+10. repo hygiene probes/dashboards were updated accordingly (`P432`, `P441`, `P442`), without any promotion to global
    closure.
 
 ## 1) One-Page Strict Status (6.5)
@@ -66,6 +73,9 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
 5. For the `QW-2190` SU(3)/SU(2) embedding audits, both residual sign flips and the full continuous `O(2)` basis-rotation
    freedom are gauge: invariance/closure audits are unchanged (conjugation equivalence) (`N493`, `N495`, audited by
    `P452`, `P454`), so the embedding audits are well-defined up to conjugation in the declared scope (`N494`).
+6. Independently, on the strict Shannon element‑order reference lane, the cross‑entropy objective cuts `O(2)` down to
+   residual `Z2` on all `pair_m (m=1..5)` on `n=12` (`N480`, `N488`, `N496`), enabling export of a full strict-core
+   mode-index assignment basis object without per-site diagonal/local providers (`F454`).
 
 ### 1.2 What is still missing (no false pass)
 
@@ -137,6 +147,10 @@ Dashboards still recommend the global uniqueness frontier `QW-2191` (`P438`, `P4
 1. extend beyond the diagonal/local lane without importing an external selector premise, and/or
 2. export an internal selector source adequate for strict-core global canonicalization (still not claimed here).
 
+Update: the strict Shannon element‑order reference lane now provides one explicit internal symmetry-breaking ingredient
+on the full `n=12` Fourier scaffold (via `F454`), but this is still below strict-core selector closure and does not
+constitute a global `QW-2191` discharge.
+
 ---
 
 ## WERSJA POLSKA
@@ -158,7 +172,10 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
    kanoniczny **z dokładnością do koniugacji** w zadeklarowanym zakresie (`N494`),
 8. ponadto pełna ciągła swoboda rotacji `O(2)` w parach jest “gauge” dla tych samych audytów embeddingu `QW-2190`
    (`N495`, audyt `P454`),
-9. sondy/dashboards higieniczne zostały zaktualizowane (`P432`, `P441`, `P442`) bez promocji do globalnego domknięcia.
+9. niezależnie, pas strict Shannon “element‑order reference” tnie `O(2)` do residual `Z2` na **wszystkich** parach
+   `pair_m (m=1..5)` na `n=12` i eksportuje strict-core obiekt przypisania osi
+   `ModeIndexAssignment_shannon_element_order_reference_strict_core_v1` (`N496`, wykonane przez `F454`),
+10. sondy/dashboards higieniczne zostały zaktualizowane (`P432`, `P441`, `P442`) bez promocji do globalnego domknięcia.
 
 ## 1) Jednostronicowy status strict (6.5)
 
@@ -172,6 +189,9 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
 4. Repo eksportuje jawny obiekt bazy przypisania modów realizujący ten wybór osi (z dokładnością do znaku) (`F453`) i pakuje to jako datum orientacji (`N492`).
 5. Dla audytów embeddingu `QW-2190` nie tylko residualny znak, ale też pełna swoboda rotacji `O(2)` jest “gauge”
    (koniugacja; `N493`, `N495`, audyty `P452`, `P454`), więc embedding jest kanoniczny do koniugacji (`N494`).
+6. Niezależnie, na pasie strict Shannon “element‑order reference”, obiektyw cross‑entropy tnie `O(2)` do residual `Z2`
+   na wszystkich `pair_m (m=1..5)` na `n=12` (`N480`, `N488`, `N496`), umożliwiając eksport pełnej bazy przypisania osi
+   bez per‑site dostawców diagonal/local (`F454`).
 
 ### 1.2 Czego nadal brakuje (bez false pass)
 
@@ -188,3 +208,7 @@ Dashboards nadal wskazują frontier globalny `QW-2191` (`P438`, `P441`):
 
 1. rozszerzenie poza pas diagonal/local bez importu zewnętrznej przesłanki selektora, i/lub
 2. eksport wewnętrznego źródła selektora wystarczającego do globalnej kanonizacji strict-core (nadal nie rości się tutaj).
+
+Update: pas strict Shannon “element‑order reference” dostarcza teraz jawny wewnętrzny składnik symetrii‑łamacza na pełnym
+scaffoldu Fouriera `n=12` (przez `F454`), ale nadal jest to poniżej strict-core selector closure i nie stanowi globalnego
+rozładowania `QW-2191`.
