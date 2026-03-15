@@ -229,10 +229,12 @@ def main() -> None:
         )
 
     if recommended_next_target == "T2" and N491_THEOREM.exists():
-        recommended_next_target = "QW-2191"
+        recommended_next_target = "B3"
         recommendation_reason = (
             "T2 theorem-level bridge discharge is now exported (N491). The remaining strict frontier is explicit continuation "
-            "under QW-2191 discipline (no implied selector closure) and strict-only ToE-closure continuation per S2."
+            "under QW-2191 discipline (no implied selector closure): proceed via the B3 topological selector bridge packet "
+            "continuation (residual sign lift or explicit sign gauge-irrelevance where required), or explicitly freeze residual "
+            "sign as a tracked convention layer while continuing strict-only closure per S2."
         )
 
     artifact = {
