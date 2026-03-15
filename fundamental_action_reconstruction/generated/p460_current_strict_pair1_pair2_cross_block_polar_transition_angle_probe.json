@@ -1,0 +1,66 @@
+{
+  "generated_utc": "2026-03-15T19:25:58.176515+00:00",
+  "stage": "P460",
+  "goal": "extract_pair1_pair2_cross_block_from_declared_control_pullback_and_compute_polar_orthogonal_factor_transition_angle",
+  "inputs": {
+    "m_control_value_instantiated": "fundamental_action_reconstruction/generated/m_control_residual_diag_declared_value_instantiated_v1.json",
+    "alpha12_from_theta_supply": "fundamental_action_reconstruction/generated/alpha12_pair1_pair2_transition_angle_strict_derived_from_sigma_int_slot_free_theta_pair_v1.json"
+  },
+  "extracted": {
+    "cross_pair1_to_pair2_block": [
+      [
+        1.5432788816692053,
+        1.1886644981369479e-17
+      ],
+      [
+        9.913565748114618e-17,
+        1.7414253938841568
+      ]
+    ],
+    "svd": {
+      "singular_values": [
+        1.7414253938841568,
+        1.5432788816692053
+      ],
+      "anisotropy_ratio": 1.1283931987721085
+    }
+  },
+  "polar": {
+    "Q": [
+      [
+        1.0,
+        6.825813510653448e-18
+      ],
+      [
+        6.423703366816072e-17,
+        1.0
+      ]
+    ],
+    "btb_eigvals": [
+      2.381709706606153,
+      3.032562402464591
+    ],
+    "q_orthonormal_residual": 1.0049804226112563e-16,
+    "det_q": 1.0,
+    "alpha_cross_mod_2pi_if_det_positive": 6.423703366816072e-17,
+    "alpha_cross_mod_pi_axis_only_if_det_positive": 6.423703366816072e-17,
+    "tolerance": 1e-12
+  },
+  "comparison_to_theta_supply": {
+    "alpha12_mod_2pi_from_theta_supply": 1.5707963267948966,
+    "alpha12_mod_pi_axis_only": 1.5707963267948966,
+    "alpha_cross_mod_2pi_from_polar_factor": 6.423703366816072e-17,
+    "alpha_cross_mod_pi_axis_only": 6.423703366816072e-17,
+    "delta_mod_2pi_if_both": 1.5707963267948966,
+    "delta_mod_pi_if_both": 1.5707963267948966
+  },
+  "hard_limits": [
+    "Consumes P459 which uses the conditional N477 Yukawa-free diagonal residual rewrite; no stationarity witness is exported.",
+    "Does not claim host matching/cancellation.",
+    "Does not claim the extracted polar factor defines a global selector transition/gluing object.",
+    "Does not claim strict-core selector closure / admissible S_sel_int.",
+    "Does not claim global discharge of QW-2191.",
+    "Does not assign a theorem-level physical interpretation to alpha_cross."
+  ],
+  "no_false_pass": true
+}
