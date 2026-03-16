@@ -1,6 +1,6 @@
 # H41 Selector Atlas And Gluing Data Audit
 
-Status: `PASS_GLOBAL_SELECTOR_ATLAS_AND_GLUING_DATA_EXPORTED_ON_C_V1_GLOBAL_PHYSICAL_SELECTOR_OBJECT_STILL_MISSING`
+Status: `PASS_GLOBAL_SELECTOR_ATLAS_AND_GLUING_DATA_EXPORTED_ON_C_V1_AND_GLOBAL_PROJECTIVE_SELECTOR_STATE_OBJECT_EXPORTED_QW2191_STILL_OPEN`
 Date: `2026-03-16`
 
 ## Purpose
@@ -11,7 +11,7 @@ Test whether the current strict core exports any explicit selector atlas or sele
 
 - `H31`: `psi0` admits only a local chart embedding into `pair1=(c_1,s_1)`.
 - `H33`: `pair1` is only a deterministic local chart, not a physically privileged selector target.
-- `H39`: no global physical selector object is exported.
+- `H39/F470/N516`: global projective selector state object exported on `C_v1` (projector/span semantics), but no sign-sensitive directed orientation datum and no global `QW-2191` discharge.
 - `F469/N515`: global selector atlas + global selector transition/gluing object exported on `C_v1` (discharge of `T170`).
 - `H40`: global selector transition/gluing object is now exported on `C_v1` (but no implied selector closure or `QW-2191` discharge).
 - `F461`: lane-scoped `pair1↔pair2` chart-transport operator `O_12` exists (projector-safe).
@@ -66,12 +66,13 @@ The repository contains:
 - and now an explicit lane-scoped **oriented transport (α mod 2π) lift** at vector level on `{pair1..pair5}` as a tracked gauge/convention layer (`F467`, audited by `P470`, packaged by `N511`),
 - with an explicit boundary that the oriented transport does **not** define an operator-level transition cocycle on the full carrier (`P471`, packaged by `N512`),
 - and now an explicit **global** selector atlas and **global** transition/gluing object export on `C_v1` (`F469/N515`),
+- and now an explicit **global projective selector state object** export on `C_v1` (`F470/N516`),
 
-while still not exporting any **global physical selector object** (state) and not discharging global `QW-2191`.
+while still not exporting any **sign-sensitive directed selector state object** (lifting residual `Z2`) and not discharging global `QW-2191`.
 
 ## Frontier
 
-`H41_B1 := strict core now exports a global selector atlas/transition object on C_v1 (F469/N515), but still exports no global physical selector object and does not discharge global QW-2191`
+`H41_B1 := strict core now exports a global selector atlas/transition object on C_v1 (F469/N515) and a global projective selector state object (F470/N516), but still does not discharge global QW-2191 and does not export any sign-sensitive directed selector state datum`
 
 ## Hard limits
 

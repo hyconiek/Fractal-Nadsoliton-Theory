@@ -1,6 +1,6 @@
 # H40 Global Selector Transition Object Audit
 
-Status: `PASS_GLOBAL_SELECTOR_TRANSITION_OBJECT_EXPORTED_ON_C_V1_GLOBAL_PHYSICAL_SELECTOR_OBJECT_STILL_MISSING`
+Status: `PASS_GLOBAL_SELECTOR_TRANSITION_OBJECT_EXPORTED_ON_C_V1_AND_GLOBAL_PROJECTIVE_SELECTOR_STATE_OBJECT_EXPORTED_QW2191_STILL_OPEN`
 Date: `2026-03-16`
 
 ## Purpose
@@ -10,7 +10,7 @@ Test whether the current strict core contains any global transition or gluing ob
 ## Inputs
 
 - `H34`: no strict basis-covariance / target-independence argument.
-- `H39`: no global physical selector object lifting local projective pair1 representatives beyond chart locality.
+- `H39/F470/N516`: global projective selector state object exported on `C_v1` (projector/span semantics), but no sign-sensitive directed orientation datum and no global `QW-2191` discharge.
 - `C29`: local projector formulas are explicit.
 - `C30`: local overlap compatibility law under orthogonal transition is explicit.
 - `C31`: a transition-angle source class exists.
@@ -64,12 +64,13 @@ The repository contains:
   - additional axis-only long-edge transport operators (`O_14`, `O_15`, `O_25`) and an upgraded five-chart ingredient with explicit **full triple** cocycle data on `{pair1..pair5}` (`F466`, audited by `P469`, packaged by `N510`),
 - and now a lane-scoped **oriented** transport (`α mod 2π`) lift at vector level as a tracked gauge/convention layer on `{pair1..pair5}` (`F467`, audited by `P470`, packaged by `N511`), with an explicit boundary that operator-level cocycle identities are not available (`P471`, `N512`),
 - and now an explicit **global** selector transition/gluing object export on `C_v1` (`F469/N515`),
+- and now an explicit **global projective selector state object** export on `C_v1` (`F470/N516`),
 
-while still not exporting any **global physical selector object** and not discharging global `QW-2191`.
+while still not exporting any **sign-sensitive directed selector state object** (lifting residual `Z2`) and not discharging global `QW-2191`.
 
 ## Frontier
 
-`H40_B1 := strict core now exports a global selector transition/gluing object on C_v1 (F469/N515), but still exports no global physical selector object and does not discharge global QW-2191`
+`H40_B1 := strict core now exports a global selector transition/gluing object on C_v1 (F469/N515) and a global projective selector state object (F470/N516), but still does not discharge global QW-2191 and does not export any sign-sensitive directed selector state datum`
 
 ## Hard limits
 
