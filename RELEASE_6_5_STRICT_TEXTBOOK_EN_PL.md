@@ -294,6 +294,8 @@ Update: a coefficient-filled **declared** control pullback `M_control = T_contro
 
 Update: the `R18` declared `pair1` residual zero system is now explicitly evaluated on the currently exported strict-derived value-instantiated declared residual pullback used by `P459` (conditional `N477`) and fails: `c1c1` and `s1s1` are nonzero (`P477`), packaged as a value-instance-only obstruction theorem (`N520`). Therefore the missing zero/cancellation witness in the `P16` lane cannot be obtained by simply promoting the currently exported strict-derived value instance.
 
+Update: strengthening the above, an exhaustive finite scan over the full sign space under the **fixed** strict `T169` `r_ordpow` magnitude lift (fixed magnitudes and uniform `g4` as in `F447`, still under conditional `N477`) reports that **no** sign vector satisfies all three `R18` declared `pair1` residual zero equations within tolerance (`P478`, packaged by `N521`). Therefore the missing `P16` zero witness cannot be obtained by changing only the sign selection inside that fixed magnitude class.
+
 Update: a strict obstruction is now explicit: any direction-free `Aut(Z_12)`-invariant reference weight family (including the ord-reference weights `ord_Z12`, `r_ord`) cannot distinguish sign on the current exported `pair1` sine axis via a scalar of the form `Σ_x w(x) u_1(x)` (`F472`, packaged by `N518`; strengthening the ord-specific obstruction `F471/N517`). Therefore `H37` requires an explicit reflection-breaking/orientation source or a different observable class.
 
 Probe hygiene: `P472` scans exported `generated/*.json` artifacts and finds no strict(-derived) **weight-like** reflection-breaking per-site array outside non-canonical marked-site `K_total` row vectors; therefore no strict sign-sensitive physical orientation datum is presently exported by repackaging existing direction-free references.
@@ -482,6 +484,11 @@ Jednak kontynuacja jest teraz jawnie rozdzielona (`T171`), a `P475` wybiera gał
 Update: repo eksportuje teraz coefficient-filled **declared** control pullback `M_control = T_control^T H_PsiPsi T_control` z coefficient-filled canonical `H_PsiPsi` na zadeklarowanym transporcie (`P476`, oparte o `R11/R12`), ale bez witnessu dopasowania hosta do nośnika kanonicznego (`C10_B1`), więc bez promocji do strict existing-feedback.
 
 Update: zadeklarowany układ równań residual “zero” dla `pair1` z `R18` jest teraz jawnie oceniony na aktualnie wyeksportowanej instancji strict-derived użytej w `P459` (warunkowa ścieżka `N477`) i nie jest spełniony: `c1c1` oraz `s1s1` są niezerowe (`P477`), opakowane jako value-instance-only obstruction theorem (`N520`). W konsekwencji brakujący witness zero/cancellation na trasie `P16` nie może zostać uzyskany przez prostą promocję aktualnie wyeksportowanej instancji strict-derived.
+
+Update: wzmacniając powyższe, wyczerpujący skończony skan pełnej przestrzeni znaków dla **ustalonej** ścisłej klasy podniesienia `T169` opartej o `r_ordpow`
+(ustalone magnitudy i uniform `g4` jak w `F447`, nadal pod warunkowym `N477`) raportuje, że **żaden** wektor znaków nie spełnia jednocześnie wszystkich trzech
+zadeklarowanych równań residual “zero” dla `pair1` z `R18` w zadanej tolerancji (`P478`, opakowane przez `N521`). W konsekwencji brakujący witness “zero” na `P16`
+nie może zostać uzyskany przez zmianę jedynie wyboru znaków wewnątrz tej ustalonej klasy magnitud.
 
 Update: jawne jest teraz jedno ścisłe ograniczenie: żadna direction-free (tj. `Aut(Z_12)`-invariant) rodzina wag referencyjnych (w tym wagi ord-reference `ord_Z12`, `r_ord`) nie potrafi rozróżnić znaku na aktualnie wyeksportowanej osi `pair1` typu sine poprzez skalar postaci `Σ_x w(x) u_1(x)` (`F472`, opakowane przez `N518`; wzmacniając ord-specyficzną przeszkodę `F471/N517`). W konsekwencji `H37` wymaga jawnego źródła łamiącego symetrię odbicia/orientacji albo innej klasy obserwabli.
 

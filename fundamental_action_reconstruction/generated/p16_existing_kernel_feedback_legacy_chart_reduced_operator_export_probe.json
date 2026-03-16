@@ -2,7 +2,7 @@
   "stage": "P16",
   "goal": "compute_or_fail_existing_kernel_feedback_legacy_chart_reduced_operator_export_on_pair1_after_P15",
   "status": "NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_LEGACY_CHART_REDUCED_OPERATOR_EXPORT_ROUTE",
-  "reason": "the repo now contains the host carrier, the typed host-to-control pushforward, the formal control pullback formula, the chosen current-pair chart reduction, and (in declared scope) both a coefficient-filled canonical Psi x Psi block H_PsiPsi (R12) and a coefficient-filled declared control pullback M_control (P476). The host-to-canonical matching gap (C10_B1) is now partially reduced: the shared kernel/light-facing channel specialization witness is exported (R14), the host scalar-floor embedding into the canonical diagonal sector is exported (R15), and the declared control pullback of the residual local diagonal sector is exported and reduced to a finite pair1 zero system (R16/R18), with the host-side residual correction branch explicitly absent (R17). However, the repo still exports no (i) zero-or-cancellation witness for the declared control pullback of that residual diagonal sector, and no (ii) selector-relevant physical canonicalization of the declared control transport within the QW-2191 O(2) family; therefore no strict existing-feedback legacy chart-reduced operator object on pair1 can be promoted from the current declared artifacts Additionally, the currently exported strict-derived value-instantiated declared residual pullback object (P459) does not satisfy the R18 declared pair1 residual zero equations under the current value instance (P477; packaged as a value-instance-only obstruction theorem by N520), so the missing zero/cancellation witness cannot be obtained by simply promoting the currently exported strict-derived value instance.",
+  "reason": "the repo now contains the host carrier, the typed host-to-control pushforward, the formal control pullback formula, the chosen current-pair chart reduction, and (in declared scope) both a coefficient-filled canonical Psi x Psi block H_PsiPsi (R12) and a coefficient-filled declared control pullback M_control (P476). The host-to-canonical matching gap (C10_B1) is now partially reduced: the shared kernel/light-facing channel specialization witness is exported (R14), the host scalar-floor embedding into the canonical diagonal sector is exported (R15), and the declared control pullback of the residual local diagonal sector is exported and reduced to a finite pair1 zero system (R16/R18), with the host-side residual correction branch explicitly absent (R17). However, the repo still exports no (i) zero-or-cancellation witness for the declared control pullback of that residual diagonal sector, and no (ii) selector-relevant physical canonicalization of the declared control transport within the QW-2191 O(2) family; therefore no strict existing-feedback legacy chart-reduced operator object on pair1 can be promoted from the current declared artifacts Additionally, the currently exported strict-derived value-instantiated declared residual pullback object (P459) does not satisfy the R18 declared pair1 residual zero equations under the current value instance (P477; packaged as a value-instance-only obstruction theorem by N520), so the missing zero/cancellation witness cannot be obtained by simply promoting the currently exported strict-derived value instance. Moreover, an exhaustive sign scan over the full finite T169 r_ordpow sign space (fixing magnitudes and g4 as in F447, and evaluating the same conditional N477 rewrite) reports that no sign vector satisfies all three R18 declared pair1 zero equations within tolerance (P478). Therefore the missing zero witness cannot be obtained by altering the sign selection within the fixed r_ordpow magnitude lift class alone.",
   "lane": "existing_kernel_feedback_legacy_chart_reduced_operator_export_route_after_P15",
   "route_under_test": [
     "existing_kernel_feedback_host_operator",
@@ -176,6 +176,17 @@
           "c1c1",
           "s1s1"
         ]
+      },
+      "no_false_pass": true
+    },
+    "P478": {
+      "status": "PASS_SCAN_COMPLETE_NO_SIGN_VECTOR_SATISFIES_R18_PAIR1_ZERO_EQUATIONS_UNDER_N477_ON_RORDPOW_MAGNITUDES",
+      "any_solution_within_tolerance": false,
+      "best_candidate_objective_value": 0.3882221308086681,
+      "min_abs_by_entry_over_scan": {
+        "c1c1": 0.002016728872993756,
+        "c1s1": 0.0,
+        "s1s1": 0.0007686789367742364
       },
       "no_false_pass": true
     }

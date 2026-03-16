@@ -121,6 +121,10 @@ P477_SUMMARY = (
     GENERATED
     / "p477_current_strict_r18_pair1_residual_zero_equations_value_instantiation_probe_summary.json"
 )
+P478_SUMMARY = (
+    GENERATED
+    / "p478_current_strict_t169_rordpow_sign_scan_for_r18_pair1_zero_equations_probe_summary.json"
+)
 N520_SUMMARY = (
     GENERATED
     / "n520_current_first_strict_r18_declared_pair1_residual_zero_equations_value_instance_obstruction_theorem_summary.json"
@@ -205,30 +209,46 @@ def load_json(path: Path) -> dict[str, Any]:
 
 
 def _p16_value_instance_obstruction_note() -> str:
+    notes: list[str] = []
     if N520_SUMMARY.exists():
         try:
             n520 = load_json(N520_SUMMARY)
             tr = n520.get("theorem_result")
             if isinstance(tr, dict) and bool(tr.get("discharged")):
                 violated = tr.get("violated_equations")
-                return (
+                notes.append(
                     " Evidence: N520 packages a value-instance-only obstruction (from P477): under the current exported strict-derived "
                     f"value instance the R18 declared pair1 residual zero equations are violated (violated_equations={violated})."
                 )
         except Exception:
-            return ""
+            pass
     if P477_SUMMARY.exists():
         try:
             p477 = load_json(P477_SUMMARY)
             if p477.get("status") == "PASS_EVALUATION_ZERO_EQUATIONS_VIOLATED_UNDER_CURRENT_VALUE_INSTANCE":
                 violated = p477.get("violated_equations")
-                return (
+                notes.append(
                     " Evidence: P477 evaluates the R18 declared pair1 residual zero equations on the current exported strict-derived "
                     f"value instance and reports violations (violated_equations={violated})."
                 )
         except Exception:
-            return ""
-    return ""
+            pass
+    if P478_SUMMARY.exists():
+        try:
+            p478 = load_json(P478_SUMMARY)
+            if (
+                p478.get("status")
+                == "PASS_SCAN_COMPLETE_NO_SIGN_VECTOR_SATISFIES_R18_PAIR1_ZERO_EQUATIONS_UNDER_N477_ON_RORDPOW_MAGNITUDES"
+            ):
+                min_abs = p478.get("min_abs_by_entry_over_scan")
+                notes.append(
+                    " Evidence: P478 exhaustively scans the full finite T169 r_ordpow sign space (fixing magnitudes and g4 as in F447) "
+                    "under conditional N477 and reports no sign vector satisfies all three R18 declared pair1 zero equations; "
+                    f"min_abs_by_entry_over_scan={min_abs}."
+                )
+        except Exception:
+            pass
+    return "".join(notes)
 
 
 def _projective_only_continuation_selected() -> tuple[bool, dict[str, Any] | None]:

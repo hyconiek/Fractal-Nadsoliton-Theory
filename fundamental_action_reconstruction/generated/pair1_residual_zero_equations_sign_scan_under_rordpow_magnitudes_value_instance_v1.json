@@ -1,0 +1,91 @@
+{
+  "object": "Pair1ResidualZeroEquationsSignScan_under_r_ordpow_magnitudes_value_instance_v1",
+  "status": "PASS_SCAN_COMPLETE_NO_SIGN_VECTOR_SATISFIES_R18_PAIR1_ZERO_EQUATIONS_UNDER_N477_ON_RORDPOW_MAGNITUDES",
+  "generated_utc": "2026-03-16T11:47:15.186867+00:00",
+  "intent": "Brute-force scan all 2^11 sign vectors (fixing s0=+1) under the fixed T169 r_ordpow magnitude lift |vpsi_i|=sqrt(rho_*^2*q_i) and the uniform g4 lift, compute the conditional N477 Yukawa-free residual profile d_k, and evaluate the R18 declared pair1 residual zero equations (c1c1,c1s1,s1s1). This is probe-only evidence: it does not export any strict stationarity witness and does not claim host matching or QW-2191 discharge.",
+  "inputs": {
+    "r14_k_total": "fundamental_action_reconstruction/generated/r14_explicit_frozen_kernel_specialization_packet_for_host_matching_route.json",
+    "r15_m0_squared": "fundamental_action_reconstruction/generated/r15_explicit_host_scalar_floor_embedding_packet_for_host_matching_route.json",
+    "r18_reduction_packet": "fundamental_action_reconstruction/generated/r18_pair1_residual_declared_pullback_coefficient_class_reduction_packet_for_host_matching_route.json",
+    "t169_magnitudes_source_provider": "fundamental_action_reconstruction/generated/f447_current_strict_t169_qw2122_scalar_to_t168_per_site_value_provider_strict_derived_v1.json"
+  },
+  "fixed_lift_parameters": {
+    "rho_star_sq": 3.77972441525249,
+    "lambda_psi_strict": 0.13407749626776447,
+    "r_ordpow_reference_prob": [
+      0.7678954527452602,
+      0.0007819452463233061,
+      0.005343289621529074,
+      0.0164451316206607,
+      0.036512459297866985,
+      0.0007819452463233061,
+      0.11237500518933312,
+      0.0007819452463233061,
+      0.036512459297866985,
+      0.0164451316206607,
+      0.005343289621529074,
+      0.0007819452463233061
+    ],
+    "g4_uniform_value": 0.2214113685834668,
+    "g6_assumed_zero": true,
+    "global_sign_fixed": "s0=+1 (global Z2 is ratio-invariant for N477 anyway)"
+  },
+  "scan": {
+    "scan_space_size": 2048,
+    "sign_vector_masked_indices": "i=1..11",
+    "zero_tolerance": 1e-12,
+    "objective": "max_abs_entry",
+    "any_solution_within_tolerance": false,
+    "solutions_within_tolerance_capped": [],
+    "best_candidate": {
+      "objective": "max_abs_entry",
+      "objective_value": 0.3882221308086681,
+      "sign_vector": [
+        1,
+        -1,
+        -1,
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "equations": {
+        "c1c1": {
+          "value": 0.35794400315969666,
+          "abs": 0.35794400315969666,
+          "zero_tol": 1e-12,
+          "is_zero": false
+        },
+        "c1s1": {
+          "value": 0.03651357406327729,
+          "abs": 0.03651357406327729,
+          "zero_tol": 1e-12,
+          "is_zero": false
+        },
+        "s1s1": {
+          "value": -0.3882221308086681,
+          "abs": 0.3882221308086681,
+          "zero_tol": 1e-12,
+          "is_zero": false
+        }
+      }
+    },
+    "min_abs_by_entry_over_scan": {
+      "c1c1": 0.002016728872993756,
+      "c1s1": 0.0,
+      "s1s1": 0.0007686789367742364
+    }
+  },
+  "hard_limits": [
+    "Consumes the conditional N477 Yukawa-free diagonal residual rewrite; no vacuum stationarity witness is exported.",
+    "Scans only sign vectors under the fixed r_ordpow magnitude lift (T169 power-law element-order constrained magnitudes) and the fixed uniform g4 lift.",
+    "Does not export a strict zero witness unless a theorem-level witness is separately constructed from the scan result.",
+    "Does not claim host matching, strict-core selector closure, QW-2191 discharge, or ToE closure."
+  ],
+  "no_false_pass": true
+}

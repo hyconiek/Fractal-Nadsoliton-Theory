@@ -67,6 +67,9 @@ def main() -> None:
     n520 = load_json_if_exists(
         "fundamental_action_reconstruction/generated/n520_current_first_strict_r18_declared_pair1_residual_zero_equations_value_instance_obstruction_theorem_summary.json"
     )
+    p478 = load_json_if_exists(
+        "fundamental_action_reconstruction/generated/p478_current_strict_t169_rordpow_sign_scan_for_r18_pair1_zero_equations_probe_summary.json"
+    )
 
     p15_missing = p15["remaining_missing_upstream_objects"]
     remaining_missing = [
@@ -216,6 +219,14 @@ def main() -> None:
             "theorem_result": (n520.get("theorem_result") if isinstance(n520.get("theorem_result"), dict) else None),
             "no_false_pass": n520.get("no_false_pass"),
         }
+    if isinstance(p478, dict):
+        value_instance_evidence["P478"] = {
+            "status": p478.get("status"),
+            "any_solution_within_tolerance": p478.get("any_solution_within_tolerance"),
+            "best_candidate_objective_value": p478.get("best_candidate_objective_value"),
+            "min_abs_by_entry_over_scan": p478.get("min_abs_by_entry_over_scan"),
+            "no_false_pass": p478.get("no_false_pass"),
+        }
 
     extra_reason = ""
     if (
@@ -227,6 +238,17 @@ def main() -> None:
             "does not satisfy the R18 declared pair1 residual zero equations under the current value instance (P477; packaged as "
             "a value-instance-only obstruction theorem by N520), so the missing zero/cancellation witness cannot be obtained by "
             "simply promoting the currently exported strict-derived value instance."
+        )
+    if (
+        isinstance(p478, dict)
+        and p478.get("status")
+        == "PASS_SCAN_COMPLETE_NO_SIGN_VECTOR_SATISFIES_R18_PAIR1_ZERO_EQUATIONS_UNDER_N477_ON_RORDPOW_MAGNITUDES"
+    ):
+        extra_reason += (
+            " Moreover, an exhaustive sign scan over the full finite T169 r_ordpow sign space (fixing magnitudes and g4 as in F447, "
+            "and evaluating the same conditional N477 rewrite) reports that no sign vector satisfies all three R18 declared pair1 zero "
+            "equations within tolerance (P478). Therefore the missing zero witness cannot be obtained by altering the sign selection "
+            "within the fixed r_ordpow magnitude lift class alone."
         )
 
     report = {
