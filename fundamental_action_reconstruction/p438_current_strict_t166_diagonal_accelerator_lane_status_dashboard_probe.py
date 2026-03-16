@@ -110,6 +110,28 @@ P633_SCRIPT = ROOT / "p633_current_strict_source_seed_route_selection_decision_p
 P633_SUMMARY = (
     GENERATED / "p633_current_strict_source_seed_route_selection_decision_packet_summary.json"
 )
+P119_SUMMARY = (
+    GENERATED / "p119_first_source_seed_construction_target_probe_summary.json"
+)
+P392_SUMMARY = (
+    GENERATED
+    / "p392_current_strict_side_source_seed_strict_sigma_int_upgrade_candidate_instance_probe_summary.json"
+)
+P634_SUMMARY = (
+    GENERATED
+    / "p634_genuinely_new_strict_core_source_object_clause_probe_for_s_sel_int_candidate_seed_v1_summary.json"
+)
+N525_SUMMARY = (
+    GENERATED / "n525_current_first_clause_obstruction_theorem_for_s_sel_int_candidate_seed_v1_summary.json"
+)
+F635_SUMMARY = (
+    GENERATED
+    / "f635_future_genuinely_new_source_object_lift_bind_target_packet_for_s_sel_int_candidate_seed_v1_summary.json"
+)
+P635_SUMMARY = (
+    GENERATED
+    / "p635_future_genuinely_new_source_object_lift_bind_target_probe_for_s_sel_int_candidate_seed_v1_summary.json"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -331,6 +353,57 @@ def main() -> None:
                 " Next strict bottleneck shifts back to strict-only ToE closure tasks that can now treat the selector state as directed where needed (P11)."
                 + p_note
             )
+
+    # Source-seed route continuation: advance beyond the initial target probe (P119) when downstream strict artifacts exist.
+    if recommended_next_target == "P119" and P119_SUMMARY.exists():
+        try:
+            p119 = load_json(P119_SUMMARY)
+            reduced = bool(
+                p119.get("target_state", {}).get(
+                    "last_positive_branch_reduced_to_one_first_source_seed_target"
+                )
+            )
+            if reduced:
+                if not P392_SUMMARY.exists():
+                    recommended_next_target = "P392"
+                    recommendation_reason = (
+                        "P119 fixes S_sel_int as the next strict-core source-seed construction target. "
+                        "The next required strict artifact is the strict sigma-int upgraded seed candidate instance S_sel_int_candidate_seed_v1 (F318), "
+                        "probed by P392."
+                    )
+                elif not P634_SUMMARY.exists():
+                    recommended_next_target = "P634"
+                    recommendation_reason = (
+                        "P392 confirms the strict sigma-int upgraded seed candidate instance S_sel_int_candidate_seed_v1 is exported. "
+                        "The next honest move is to rerun the first admissibility clause "
+                        "(genuinely_new_strict_core_source_object_required) on seed v1 (P634), "
+                        "without implying admissible S_sel_int nor strict-core selector closure."
+                    )
+                else:
+                    p634 = load_json(P634_SUMMARY)
+                    first_ok = bool(p634.get("clause_test_result", {}).get("currently_satisfied"))
+                    if not first_ok:
+                        if not F635_SUMMARY.exists():
+                            recommended_next_target = "F635"
+                            recommendation_reason = (
+                                "P634 keeps the first clause blocked for the seed-v1 attempt. "
+                                "The next honest constructive move is to freeze one explicit future genuinely-new source-object lift/bind target "
+                                "using only the seed-v1 materials (F635), without implying admissibility."
+                            )
+                        elif not P635_SUMMARY.exists():
+                            recommended_next_target = "P635"
+                            recommendation_reason = (
+                                "F635 exports an explicit future lift/bind construction target for a genuinely-new strict-core source object "
+                                "above the seed-v1 materials. Next move: run P635 to confirm the constructive move is reduced to that one target."
+                            )
+                        else:
+                            recommended_next_target = "S_SEL_INT_NEW_OBJECT_TARGET_V1"
+                            recommendation_reason = (
+                                "P635 reduces the next constructive move to one explicit future target S_sel_int_new_object_target_v1. "
+                                "Next move: attempt construction of that target under strict-core and QW-2191 discipline (no implied selector closure)."
+                            )
+        except Exception:
+            pass
 
     if recommended_next_target == "H37":
         if N518_THEOREM.exists():

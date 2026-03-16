@@ -1,0 +1,61 @@
+{
+  "stage": "P634",
+  "lane": "first_source_seed_first_clause_test_only",
+  "goal": "test_whether_S_sel_int_candidate_seed_v1_already_satisfies_the_genuinely_new_strict_core_source_object_clause",
+  "status": "CURRENT_REPO_DOES_NOT_YET_SHOW_THAT_S_SEL_INT_CANDIDATE_SEED_V1_SATISFIES_THE_GENUINELY_NEW_STRICT_CORE_SOURCE_OBJECT_CLAUSE_AFTER_P634",
+  "clause_test_result": {
+    "candidate_seed_name": "S_sel_int_candidate_seed_v1",
+    "target_admissible_source_name": "S_sel_int",
+    "first_clause_name": "genuinely_new_strict_core_source_object_required",
+    "currently_satisfied": false,
+    "strict_sigma_int_slot_upgraded": true,
+    "current_reason": "seed_v1_upgrades_only_the_sigma_int_provenance_slot_(sigma_int_candidate -> sigma_int_strict_derived_v1)_but_does_not_export_a_genuinely_new_strict_core_internal_selector_source_object_identity_admissible_as_S_sel_int"
+  },
+  "checks": [
+    {
+      "id": "p392_seed_v1_exported",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "P392 confirms the strict sigma-int upgraded seed candidate instance exists"
+    },
+    {
+      "id": "f34_first_clause_required",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "F34 keeps the genuinely-new strict-core source-object clause active"
+    },
+    {
+      "id": "f318_candidate_seed_name",
+      "actual": "S_sel_int_candidate_seed_v1",
+      "expected": "S_sel_int_candidate_seed_v1",
+      "pass": true,
+      "meaning": "F318 exports the strict sigma-int upgraded seed candidate instance name"
+    },
+    {
+      "id": "f318_candidate_built_from_strict_sigma_int",
+      "actual": "sigma_int_strict_derived_v1",
+      "expected": "sigma_int_strict_derived_v1",
+      "pass": true,
+      "meaning": "F318 candidate seed uses the strict sigma-int source-upgrade datum (no hybrid FR reuse)"
+    },
+    {
+      "id": "sigma_int_is_actual_strict_source_upgrade_value",
+      "actual": "actual_exported_strict_source_upgrade_value__premise_based",
+      "expected": "actual_exported_strict_source_upgrade_value__premise_based",
+      "pass": true,
+      "meaning": "sigma_int_strict_derived_v1 is exported as an actual strict-side source-upgrade value object (premise provenance kept explicit)"
+    },
+    {
+      "id": "first_clause_currently_satisfied",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "the seed-v1 packet remains below an exported admissible strict-core internal selector source object (no false pass)"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}
