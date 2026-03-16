@@ -33,6 +33,27 @@ def main() -> None:
     )
 
     explicit_downstream_completion_branch_discharge_exported = False
+    try:
+        n546 = load_json(
+            "fundamental_action_reconstruction/generated/n546_current_exported_s_sel_int_strict_core_source_object_admissible_orientation_export_theorem_summary.json"
+        )
+        n547 = load_json(
+            "fundamental_action_reconstruction/generated/n547_current_exported_s_sel_int_strict_core_source_object_selector_bridge_operator_theorem_summary.json"
+        )
+        n548 = load_json(
+            "fundamental_action_reconstruction/generated/n548_current_exported_s_sel_int_strict_core_source_object_selector_reduction_operator_theorem_summary.json"
+        )
+        n549 = load_json(
+            "fundamental_action_reconstruction/generated/n549_current_exported_s_sel_int_strict_core_source_object_selector_output_operator_theorem_summary.json"
+        )
+        explicit_downstream_completion_branch_discharge_exported = bool(
+            n546["theorem_result"]["admissible_E_orient"]
+            and n547["theorem_result"]["admissible_B_sel"]
+            and n548["theorem_result"]["admissible_R_sel"]
+            and n549["theorem_result"]["admissible_O_sel"]
+        )
+    except Exception:
+        explicit_downstream_completion_branch_discharge_exported = False
 
     checks_spec = [
         {
@@ -50,8 +71,8 @@ def main() -> None:
         {
             "id": "explicit_downstream_completion_branch_discharge_exported",
             "actual": explicit_downstream_completion_branch_discharge_exported,
-            "expected": False,
-            "meaning": "the current repo does not export an explicit downstream-completion branch discharge (seed v1)",
+            "expected": True,
+            "meaning": "the current repo exports an explicit downstream-completion discharge in the seed-v1 lane (B_sel/R_sel/O_sel chain)",
         },
     ]
 
@@ -67,11 +88,18 @@ def main() -> None:
             }
         )
 
+    any_fail = any(not c["pass"] for c in checks)
+    status = (
+        "P645_REQUIRES_REVIEW_CHANGED_OR_INSUFFICIENT_DOWNSTREAM_COMPLETION_BRANCH_STATE_FOR_SEED_V1"
+        if any_fail
+        else "CURRENT_REPO_EXPORTS_AN_EXPLICIT_DOWNSTREAM_COMPLETION_BRANCH_DISCHARGE_FOR_SEED_V1_AFTER_P645"
+    )
+
     artifact = {
         "stage": "P645",
         "lane": "current_downstream_completion_branch_discharge_only",
         "goal": "test_whether_the_current_repo_already_exports_an_explicit_downstream_completion_branch_discharge_for_seed_v1_last_remaining_lower_branch",
-        "status": "CURRENT_REPO_DOES_NOT_EXPORT_AN_EXPLICIT_DOWNSTREAM_COMPLETION_BRANCH_DISCHARGE_FOR_SEED_V1_AFTER_P645",
+        "status": status,
         "target_state": {
             "downstream_completion_branch_selected_as_next_attack": True,
             "explicit_downstream_completion_branch_discharge_exported": explicit_downstream_completion_branch_discharge_exported,
@@ -104,4 +132,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

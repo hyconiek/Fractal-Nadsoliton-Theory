@@ -2,10 +2,10 @@
   "stage": "P645",
   "lane": "current_downstream_completion_branch_discharge_only",
   "goal": "test_whether_the_current_repo_already_exports_an_explicit_downstream_completion_branch_discharge_for_seed_v1_last_remaining_lower_branch",
-  "status": "CURRENT_REPO_DOES_NOT_EXPORT_AN_EXPLICIT_DOWNSTREAM_COMPLETION_BRANCH_DISCHARGE_FOR_SEED_V1_AFTER_P645",
+  "status": "CURRENT_REPO_EXPORTS_AN_EXPLICIT_DOWNSTREAM_COMPLETION_BRANCH_DISCHARGE_FOR_SEED_V1_AFTER_P645",
   "target_state": {
     "downstream_completion_branch_selected_as_next_attack": true,
-    "explicit_downstream_completion_branch_discharge_exported": false,
+    "explicit_downstream_completion_branch_discharge_exported": true,
     "remaining_open_branches": []
   },
   "checks": [
@@ -25,10 +25,10 @@
     },
     {
       "id": "explicit_downstream_completion_branch_discharge_exported",
-      "actual": false,
-      "expected": false,
+      "actual": true,
+      "expected": true,
       "pass": true,
-      "meaning": "the current repo does not export an explicit downstream-completion branch discharge (seed v1)"
+      "meaning": "the current repo exports an explicit downstream-completion discharge in the seed-v1 lane (B_sel/R_sel/O_sel chain)"
     }
   ],
   "strict_core_promotion": false,

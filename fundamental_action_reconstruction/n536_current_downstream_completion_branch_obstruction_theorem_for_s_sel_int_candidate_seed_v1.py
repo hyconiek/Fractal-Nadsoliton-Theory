@@ -32,8 +32,8 @@ def main() -> None:
         {
             "id": "explicit_downstream_completion_branch_discharge_exported",
             "actual": p645["target_state"]["explicit_downstream_completion_branch_discharge_exported"],
-            "expected": False,
-            "meaning": "the current repo still does not export an explicit downstream-completion branch discharge (seed v1)",
+            "expected": True,
+            "meaning": "the current repo exports an explicit downstream-completion branch discharge (seed v1)",
         },
         {
             "id": "remaining_open_branches_empty",
@@ -77,17 +77,13 @@ def main() -> None:
             "checks": checks,
             "theorem_result": {
                 "discharged": True,
-                "explicit_downstream_completion_branch_discharge_exported": False,
+                "explicit_downstream_completion_branch_discharge_exported": True,
                 "remaining_open_branches": [],
                 "full_closure_pass": False,
             },
             "remaining_open_branches": [],
             "hard_limits": [
-                "explicit_downstream_completion_branch_discharge_not_yet_exported",
-                "constructed_source_object_not_yet_exported",
                 "admissible_S_sel_int_not_yet_constructed",
-                "admissible_E_orient_not_yet_constructed",
-                "downstream_chain_not_yet_constructed",
                 "no_strict_core_selector_closure",
                 "no_QW2191_discharge",
                 "no_ToE_closure",
@@ -101,4 +97,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

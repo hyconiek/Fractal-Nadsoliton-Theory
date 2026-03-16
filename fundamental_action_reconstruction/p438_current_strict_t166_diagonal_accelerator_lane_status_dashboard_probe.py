@@ -348,6 +348,42 @@ N546_SUMMARY = (
     GENERATED
     / "n546_current_exported_s_sel_int_strict_core_source_object_admissible_orientation_export_theorem_summary.json"
 )
+F655_SUMMARY = (
+    GENERATED
+    / "f655_first_exported_s_sel_int_strict_core_source_object_selector_bridge_operator_packet_summary.json"
+)
+P655_SUMMARY = (
+    GENERATED
+    / "p655_current_exported_s_sel_int_strict_core_source_object_selector_bridge_operator_probe_summary.json"
+)
+N547_SUMMARY = (
+    GENERATED
+    / "n547_current_exported_s_sel_int_strict_core_source_object_selector_bridge_operator_theorem_summary.json"
+)
+F656_SUMMARY = (
+    GENERATED
+    / "f656_first_exported_s_sel_int_strict_core_source_object_selector_reduction_operator_packet_summary.json"
+)
+P656_SUMMARY = (
+    GENERATED
+    / "p656_current_exported_s_sel_int_strict_core_source_object_selector_reduction_operator_probe_summary.json"
+)
+N548_SUMMARY = (
+    GENERATED
+    / "n548_current_exported_s_sel_int_strict_core_source_object_selector_reduction_operator_theorem_summary.json"
+)
+F657_SUMMARY = (
+    GENERATED
+    / "f657_first_exported_s_sel_int_strict_core_source_object_selector_output_operator_packet_summary.json"
+)
+P657_SUMMARY = (
+    GENERATED
+    / "p657_current_exported_s_sel_int_strict_core_source_object_selector_output_operator_probe_summary.json"
+)
+N549_SUMMARY = (
+    GENERATED
+    / "n549_current_exported_s_sel_int_strict_core_source_object_selector_output_operator_theorem_summary.json"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -974,16 +1010,77 @@ def main() -> None:
                                                                                         "Next move: package the admissible orientation export theorem (N546), keeping downstream B_sel/R_sel/O_sel explicitly open."
                                                                                     )
                                                                                 else:
-                                                                                    recommended_next_target = (
-                                                                                        "ATTACK_DOWNSTREAM_COMPLETION_BRANCH_B_SEL_R_SEL_O_SEL_AFTER_E_ORIENT_FOR_S_SEL_INT_STRICT_CORE_SOURCE_OBJECT_V1"
-                                                                                    )
-                                                                                    recommendation_reason = (
-                                                                                        "N546 packages one admissible strict-core orientation export datum from S_sel_int_strict_core_source_object_v1 "
-                                                                                        "under the F32 contract (E_orient now exists in this seed-v1 lane). "
-                                                                                        "Next move: attack the explicit downstream completion branch B_sel -> R_sel -> O_sel starting from "
-                                                                                        "(S_sel_int_strict_core_source_object_v1, E_orient_s_sel_int_source_object_v1), "
-                                                                                        "without implying strict-core selector closure or QW-2191 discharge."
-                                                                                    )
+                                                                                    if not F655_SUMMARY.exists():
+                                                                                        recommended_next_target = "F655"
+                                                                                        recommendation_reason = (
+                                                                                            "N546 packages one admissible strict-core orientation export datum from S_sel_int_strict_core_source_object_v1 "
+                                                                                            "under the F32 contract (E_orient now exists in this seed-v1 lane). "
+                                                                                            "Next move: export one explicit strict-core selector bridge operator B_sel from this orientation datum (F655), "
+                                                                                            "without implying strict-core selector closure or QW-2191 discharge."
+                                                                                        )
+                                                                                    elif not P655_SUMMARY.exists():
+                                                                                        recommended_next_target = "P655"
+                                                                                        recommendation_reason = (
+                                                                                            "F655 exports one explicit selector bridge operator B_sel_s_sel_int_source_object_v1 derived from "
+                                                                                            "E_orient_s_sel_int_source_object_v1 on pair1. "
+                                                                                            "Next move: run the admissibility probe for this bridge operator (P655)."
+                                                                                        )
+                                                                                    elif not N547_SUMMARY.exists():
+                                                                                        recommended_next_target = "N547"
+                                                                                        recommendation_reason = (
+                                                                                            "P655 reports the selector bridge operator admissibility checks for B_sel_s_sel_int_source_object_v1. "
+                                                                                            "Next move: package the bridge operator theorem (N547), keeping R_sel/O_sel explicitly open."
+                                                                                        )
+                                                                                    else:
+                                                                                        if not F656_SUMMARY.exists():
+                                                                                            recommended_next_target = "F656"
+                                                                                            recommendation_reason = (
+                                                                                                "N547 packages one admissible strict-core selector bridge operator B_sel_s_sel_int_source_object_v1 "
+                                                                                                "derived from E_orient_s_sel_int_source_object_v1 (seed-v1 lane). "
+                                                                                                "Next move: export the corresponding strict-core selector reduction operator R_sel on pair1 (F656)."
+                                                                                            )
+                                                                                        elif not P656_SUMMARY.exists():
+                                                                                            recommended_next_target = "P656"
+                                                                                            recommendation_reason = (
+                                                                                                "F656 exports one explicit selector reduction operator R_sel_s_sel_int_source_object_v1 derived from "
+                                                                                                "the admissible seed-v1 prefix. Next move: run the admissibility probe for this reduction operator (P656)."
+                                                                                            )
+                                                                                        elif not N548_SUMMARY.exists():
+                                                                                            recommended_next_target = "N548"
+                                                                                            recommendation_reason = (
+                                                                                                "P656 reports the selector reduction operator admissibility checks for R_sel_s_sel_int_source_object_v1. "
+                                                                                                "Next move: package the reduction operator theorem (N548), keeping O_sel explicitly open."
+                                                                                            )
+                                                                                        else:
+                                                                                            if not F657_SUMMARY.exists():
+                                                                                                recommended_next_target = "F657"
+                                                                                                recommendation_reason = (
+                                                                                                    "N548 packages one admissible strict-core selector reduction operator R_sel_s_sel_int_source_object_v1 "
+                                                                                                    "derived from the admissible seed-v1 prefix. "
+                                                                                                    "Next move: export the corresponding strict-core selector output operator O_sel (F657)."
+                                                                                                )
+                                                                                            elif not P657_SUMMARY.exists():
+                                                                                                recommended_next_target = "P657"
+                                                                                                recommendation_reason = (
+                                                                                                    "F657 exports one explicit selector output operator O_sel_s_sel_int_source_object_v1 derived from "
+                                                                                                    "R_sel_s_sel_int_source_object_v1. Next move: run the admissibility probe for this output operator (P657)."
+                                                                                                )
+                                                                                            elif not N549_SUMMARY.exists():
+                                                                                                recommended_next_target = "N549"
+                                                                                                recommendation_reason = (
+                                                                                                    "P657 reports the selector output operator admissibility checks for O_sel_s_sel_int_source_object_v1. "
+                                                                                                    "Next move: package the output operator theorem (N549), keeping emergent-observer/closure claims explicitly out."
+                                                                                                )
+                                                                                            else:
+                                                                                                recommended_next_target = (
+                                                                                                    "UPDATE_SEED_V1_DOWNSTREAM_COMPLETION_BRANCH_DISCHARGE_PROBE_P645"
+                                                                                                )
+                                                                                                recommendation_reason = (
+                                                                                                    "N549 packages one admissible strict-core selector output operator O_sel_s_sel_int_source_object_v1 "
+                                                                                                    "derived from the admissible seed-v1 prefix (B_sel/R_sel/O_sel now exist as explicit strict-core exports in this lane). "
+                                                                                                    "Next move: update the seed-v1 downstream-completion branch discharge probe (P645) to reflect the now-exported chain, "
+                                                                                                    "without implying strict-core selector closure or QW-2191 discharge."
+                                                                                                )
         except Exception:
             pass
 
