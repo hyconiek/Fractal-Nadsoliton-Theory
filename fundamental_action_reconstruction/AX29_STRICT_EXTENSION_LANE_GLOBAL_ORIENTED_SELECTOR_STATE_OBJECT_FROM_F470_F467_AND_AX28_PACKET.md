@@ -31,6 +31,10 @@ Exports:
 - `fundamental_action_reconstruction/generated/strict_extension_lane_selector_state_global_c_v1_oriented_vector_v1.json`
 - `fundamental_action_reconstruction/generated/ax29_strict_extension_lane_global_oriented_selector_state_object_from_f470_f467_and_ax28_packet_summary.json`
 
+Probe-level hygiene:
+
+- `P473` audits that the exported extension-lane oriented vectors reproduce (up to numeric tolerance) the same strict-core projector operators in each chart `(c_m,s_m)` as the strict global projective selector state (`F470`), so the extension-lane step fixes only a sign-gauge representative and does not change the underlying strict ray/projector state.
+
 ## Hard limits (no false pass)
 
 `AX29` does **not** claim:
@@ -40,4 +44,3 @@ Exports:
 3. strict-core selector closure / admissible `S_sel_int`,
 4. global discharge of `QW-2191`,
 5. ToE closure.
-

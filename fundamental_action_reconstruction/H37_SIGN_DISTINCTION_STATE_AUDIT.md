@@ -19,6 +19,7 @@ Check whether the current strict core contains any object that identifies `u` an
 - `N517` (+ `F471`): even ord-reference weights (`ord_Z12`, `r_ord`) cannot supply a sign-distinction scalar of the form `Σ_x w(x) u_1(x)` on the current exported `pair1` sine axis.
 - `N518` (+ `F472`): more generally, any direction-free (`Aut(Z_12)`-invariant) reference weight family `w` cannot supply such a sign-distinction scalar on the current exported `pair1` sine axis (since `-1∈Aut(Z_12)` ⇒ Aut-invariant weights are even under reflection).
 - `P472`: a mechanical scan of exported `generated/*.json` artifacts for **weight-like** per-site arrays that break reflection and yield a nonzero scalar `Σ_x w(x)u_1(x)` reports none in strict(-derived) scope **outside** non-canonical marked-site `K_total` row vectors (probe-level hygiene; no promotion).
+- Extension lane note: `AX28/AX29` export an explicit sign-fixing observable on `pair1` and an explicit global oriented vector selector state object on `C_v1` in `strict_extension_only` scope; `P473` audits that this extension-lane oriented vector state is projector-consistent with the strict global projective selector state (`F470`), so it fixes only a sign-gauge representative and does not change strict core.
 
 ## Audit
 
