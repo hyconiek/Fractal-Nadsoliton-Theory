@@ -44,7 +44,7 @@ sprawdzic:
 12. `P461` + `P462`
     - probe-only scope-extension support for the Shannon element‑order reference defect beyond `n=12`:
       a scan of `F_{2m}(ord_{Z_n})` on selected `n` (`P461`) and one explicit `Z_24` mode-index assignment candidate export (`P462`),
-      without theorem-level promotion and without promoting `n≠12` into the physical `QW-2190` scaffold.
+      without promoting `n≠12` into the physical `QW-2190` scaffold.
 13. `F458`
     - minimal typed `Z_24` carrier + regular action export (`I_24_v1`, `Z_24_v1`, `tau_Z24_v1`) supporting cautious scope-extension work,
       without any physical identification with the strict `n=12` scaffolds.
@@ -54,6 +54,8 @@ sprawdzic:
     - strict hygiene boundary: the oriented transport cocycle holds only on the exported vector section (and transported rays/projectors) and does **not** hold as an operator-level matrix identity on the full carrier.
 16. `F468` + `N513`
     - strict scope-extension infrastructure on typed `Z_24`: export of `r_ord_z24` and a strict `Z_24` mode-index assignment object on the Shannon element-order reference lane (`F468`), packaged as a theorem-level `O(2)->Z2` cut on all `pair_m (m=1..11)` on `Z_24` (`N513`), without any physical promotion of `n=24`.
+17. `N514`
+    - theorem-level arithmetic closure: for any `n≥2` and any `k∈{1,…,n-1}`, `F_k(ord_{Z_n})≠0`, hence the element‑order reference defect criterion never vanishes on any `Z_n` (lane-scoped; no physical promotion).
 
 ## Wynik syntetyczny
 
@@ -97,6 +99,7 @@ Na aktualnym repo state (`2026-03-15`) wolno twierdzic tylko tyle:
    - `F458` daje typed `Z_24` carrier + regular action,
    - `F468` eksportuje `r_ord_z24` oraz strict obiekt mode-index assignment na `Z_24`,
    - `N513` pakuje theorem-level `O(2)->Z2` cut na wszystkich parach `pair_m (m=1..11)` na `Z_24`,
+   oraz dodatkowo: theorem-level arytmetyka usuwa ryzyko “zero defektu” dla element‑order reference na dowolnym `Z_n` (`N514`),
    ale nadal brak promocji `n≠12` do **fizycznego** scaffoldu `QW-2190` (scope extension pozostaje infrastrukturalne, nie fizyczne).
 
 ## Forbidden claims
@@ -131,5 +134,5 @@ Naturalnym kolejnym ruchem jest:
 2. jesli downstream wymaga absolutnego znaku: najpierw rozstrzygnac residual `Z2` sign (albo dowod gauge‑irrelevance, albo strict sign‑datum),
 3. utrzymac explicite scope: lane‑scoped i `n=12`, dopoki nie ma nowego strict scope-extension ingredient.
    Update: jesli scope extension ma byc realnym ruchem (a nie tylko probe), naturalnym krokiem jest najpierw dowiesic strict typed
-   infrastrukture `Z_n` (lub jawnie ograniczony jej odpowiednik) oraz theorem-level invariance/uniqueness package dla wybranego `n≠12`,
-   zamiast promowac wyniki `P461/P462` do strict bez mostu.
+   infrastrukture `Z_n` (lub jawnie ograniczony jej odpowiednik) oraz jawny strict export obiektu mode-index assignment dla wybranego `n≠12`
+   (theorem-level “defekt ≠ 0” jest już zamknięty dla wszystkich `n` w `N514`), zamiast promowac wyniki `P461/P462` do strict bez mostu.

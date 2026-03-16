@@ -20,7 +20,7 @@ This probe performs a **computational scope-extension check**:
 - compute `ord_{Z_n}(x)` and the corresponding `F_{2m}(ord)` defects,
 - report which pairs would be cut (`F_{2m} ≠ 0`) and which would remain degenerate (`F_{2m}=0`),
 
-without promoting any generalization to theorem level.
+without promoting any new generalization to theorem level (the theorem-level nonvanishing of `F_k(ord_{Z_n})` is now recorded separately as `N514`).
 
 ## Inputs
 
@@ -35,9 +35,9 @@ without promoting any generalization to theorem level.
 
 This probe does **not** claim:
 
-1. any theorem-level uniqueness / `O(2)->Z2` cut generalization beyond what is explicitly proven in the repo for the physical `n=12` lanes
-   (note: the direction-freeness lemma `ord_{Z_n}` is `Aut(Z_n)`‑invariant is now recorded generally as `N503`, but this does not by itself
-   promote any `n≠12` minimizer/assignment into theorem level),
-2. any strict export of a mode-index assignment for `n ≠ 12`,
-3. any discharge of `QW-2191` beyond the declared `n=12` lanes,
+1. any strict physical promotion of `n≠12` into the strict physical `QW-2190` scaffold,
+2. any strict export of a typed mode-index assignment object for `n≠12` (except where separately exported, e.g. typed `Z_24` via `F468/N513`),
+3. any global discharge of `QW-2191`,
 4. any ToE closure.
+
+Note: `N514` now proves the arithmetic nonvanishing condition `F_k(ord_{Z_n})≠0` for all `n,k`; this probe remains only a computational scope/regression check.

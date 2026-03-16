@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.29  
+**Version:** 6.5.30  
 **Date:** 2026-03-16  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -28,6 +28,9 @@
 - Update (`2026-03-15`): residual `Z2` sign can be **frozen as a tracked gauge/convention layer** for the currently exported
   downstream objects where the sign is provably gauge-irrelevant (packaged by `N502`, including `alpha_12 mod π`), without implying any global
   sign-sensitive physical orientation datum.
+- Update (`2026-03-16`): a theorem-level arithmetic closure shows the Shannon element‑order reference defect never vanishes:
+  for every `n≥2` and every `k∈{1,…,n-1}`, `F_k(ord_{Z_n})≠0` (`N514`). Therefore the element‑order reference cross‑entropy objective cuts each
+  Fourier‑degenerate `pair_m` `O(2)` family down to residual `Z2` on any `Z_n` (lane-scoped; **no** physical promotion of `n≠12`).
 - Update (`2026-03-15`): the two independently exported mode-index assignment bases (diagonal/local vs Shannon ord-reference)
   are aligned on all `pair_m (m=1..5)` up to residual `Z2` sign (audit `P455`); this is a hygiene consistency check and
   does not promote any global discharge.
@@ -77,9 +80,8 @@
 - Update (`2026-03-15`): probe-level control-lane transition data is also exported from the **declared residual local-diagonal control pullback**
   value instantiation: the `pair1 -> pair2` cross-block polar orthogonal factor `Q ∈ O(2)` and its induced rotation angle `alpha_cross` (`P460`).
   On the current instantiated matrix, `alpha_cross ≈ 0` while `alpha_12 = π/2`; these are distinct lane-scoped quantities and must not be conflated into a global gluing claim.
-- Update (`2026-03-15`): a **probe-only** `Z_n` scope-extension scan of the Shannon element‑order reference defect
-  `F_{2m}(ord_{Z_n})` indicates nonzero defects (hence `O(2) -> Z2` axis cuts) for all Fourier-degenerate pairs on each scanned `n ∈ {6,8,10,12,14,16,18,20,24}` (`P461`).
-  This is a computational scope check only; `P461` itself does **not** promote any `n≠12` result to theorem level and does **not** promote any `n≠12` carrier into the physical `QW-2190` scaffold.
+- Update (`2026-03-16`): the arithmetic nonvanishing condition behind the `P461` scan is now theorem-level: `N514` proves `F_k(ord_{Z_n})≠0` for all `n≥2` and all `k∈{1,…,n-1}`.
+  `P461` remains a computational scope/regression scan only and does not promote any `n≠12` carrier into the physical `QW-2190` scaffold.
 - Update (`2026-03-15`): moreover, one cautious follow-up probe exports an explicit **probe-level** mode-index assignment *candidate*
   on `Z_24` induced by the same defect-angle rule (including numeric basis vectors `u_{m,±}` on each `pair_m`) (`P462`).
   This probe-level candidate does not promote `n=24` into the `QW-2190` physical scaffold.
@@ -312,10 +314,8 @@ Update: the strict Shannon element‑order reference lane now provides one expli
 on the full `n=12` Fourier scaffold (via `F454`), but this is still below strict-core selector closure and does not
 constitute a global `QW-2191` discharge.
 
-Update: a probe-only `Z_n` scope-extension scan (`P461`) indicates that the same simple defect criterion
-`F_{2m}(ord_{Z_n}) ≠ 0` holds on each scanned `n ∈ {6,8,10,12,14,16,18,20,24}` for all Fourier-degenerate pairs.
-This is a computational scope check only; `P461` itself does not promote any `n≠12` result to theorem level and does not
-upgrade any global discharge claim.
+Update: the arithmetic nonvanishing condition behind the `P461` scan is now theorem-level: `N514` proves `F_k(ord_{Z_n})≠0` for all `n≥2` and all `k∈{1,…,n-1}`.
+`P461` remains a computational scope/regression check only and does not promote any `n≠12` carrier into the physical `QW-2190` scaffold.
 
 Update: one cautious follow-up exports a probe-level `Z_24` mode-index assignment *candidate* (numeric basis vectors)
 induced by the same defect-angle rule (`P462`). This does not promote `Z_24` into the strict physical mode scaffold.
@@ -374,9 +374,9 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
 20. dodatkowo, na poziomie sondy/control‑lane wyeksportowano dane przejścia z warunkowo zainstancjonowanego zadeklarowanego pullbacku residualnego (`P459`): czynnik ortogonalny `Q ∈ O(2)`
     z dekompozycji polarnej cross‑blocku `pair1 -> pair2` oraz odpowiadający mu kąt rotacji `alpha_cross` (`P460`). Na aktualnej instancji liczbowej `alpha_cross ≈ 0`, podczas gdy `alpha_12 = π/2`;
     są to różne wielkości lane‑scoped i nie wolno ich mieszać w claim o globalnym gluing.
-21. dodatkowo, sonda **probe-only** sprawdzająca rozszerzenie scope dla Shannon “element‑order reference” pokazuje, że dla zeskanowanych nośników
-    `n ∈ {6,8,10,12,14,16,18,20,24}` defekty `F_{2m}(ord_{Z_n})` są niezerowe na wszystkich parach Fouriera (czyli kryterium `O(2) -> Z2` “axis cut” działa na każdym z tych `n`) (`P461`).
-    Nie jest to promocja do theorem-level dla `n≠12` i nie jest to eksport strict mode-index assignment poza zadeklarowanym zakresem `n=12`.
+21. theorem-level arytmetyka domyka kryterium defektu element‑order reference: `N514` dowodzi, że dla każdego `n≥2` i każdego `k∈{1,…,n-1}` zachodzi `F_k(ord_{Z_n})≠0`,
+    więc defekty `F_{2m}(ord_{Z_n})` są niezerowe na wszystkich parach Fouriera na dowolnym `Z_n` (lane-scoped; bez promocji fizycznej).
+    Sonda `P461` pozostaje tylko sprawdzeniem obliczeniowym/regresyjnym (zgodność na `n ∈ {6,8,10,12,14,16,18,20,24}`) i nie promuje żadnego `n≠12` do fizycznego scaffoldu `QW-2190`.
 22. ponadto, jako ostrożny follow-up, wyeksportowano jawny **probe-level** kandydat mode-index assignment na `Z_24`
     (numeryczne wektory bazowe `u_{m,±}` na każdej parze Fouriera) indukowany przez tę samą regułę kąta defektu (`P462`).
     To nadal nie jest theorem-level scope extension i nie promuje `n=24` do fizycznego scaffoldu `QW-2190`.
@@ -490,9 +490,8 @@ Update: pas strict Shannon “element‑order reference” dostarcza teraz jawny
 scaffoldu Fouriera `n=12` (przez `F454`), ale nadal jest to poniżej strict-core selector closure i nie stanowi globalnego
 rozładowania `QW-2191`.
 
-Update: sonda scope-extension `Z_n` (`P461`) wskazuje, że proste kryterium defektu `F_{2m}(ord_{Z_n}) ≠ 0` zachodzi na wszystkich parach
-Fouriera dla każdego z zeskanowanych `n ∈ {6,8,10,12,14,16,18,20,24}`. Jest to jednak wyłącznie probe-level check bez promocji do theorem-level
-poza `n=12` i bez promocji `n≠12` do fizycznego scaffoldu `QW-2190` (sonda sama nie wykonuje theorem-level scope-extension).
+Update: theorem-level arytmetyka domyka kryterium defektu element‑order reference: `N514` dowodzi, że `F_k(ord_{Z_n})≠0` dla wszystkich `n≥2` i `k∈{1,…,n-1}`.
+Sonda `P461` pozostaje tylko probe-level/regresyjnym checkiem (na `n ∈ {6,8,10,12,14,16,18,20,24}`) i nie promuje `n≠12` do fizycznego scaffoldu `QW-2190`.
 
 Update: dodatkowo, jako ostrożny follow-up, repo eksportuje probe-level kandydat mode-index assignment na `Z_24` (wektory bazowe liczbowe)
 indukowany przez tę samą regułę kąta defektu (`P462`). To nie jest promocja `n=24` do `QW-2190`.
