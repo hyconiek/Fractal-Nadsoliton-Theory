@@ -91,6 +91,9 @@ H39_GLOBAL_SELECTOR_STATE = GENERATED / "selector_state_global_c_v1_projective_s
 N516_THEOREM = (
     ROOT / "N516_CURRENT_FIRST_STRICT_H39_GLOBAL_PROJECTIVE_SELECTOR_STATE_OBJECT_EXPORT_THEOREM.md"
 )
+N517_THEOREM = (
+    ROOT / "N517_CURRENT_FIRST_STRICT_H37_EVEN_REFERENCE_WEIGHTS_SIGN_DISTINCTION_OBSTRUCTION_THEOREM.md"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -250,6 +253,12 @@ def main() -> None:
             "and continue under explicit QW-2191 discipline (no implied selector closure)."
         )
         diagonal_note += " H39 object-existence layer is now resolved by F470/N516; next frontier shifts to H37."
+
+    if recommended_next == "H37" and N517_THEOREM.exists():
+        recommendation_reason += (
+            " Note: N517 shows even ord-reference weights (ord_Z12 / r_ord) cannot distinguish sign on the current exported pair1 sine axis "
+            "via a scalar of the form Σ_x w(x) u_1(x); therefore H37 requires an explicit reflection-breaking/orientation source or a different observable class."
+        )
 
     # Backward-compatible mapping: older P438 versions returned a packet label ("B3") here.
     if recommended_next == "B3" and N491_THEOREM.exists():

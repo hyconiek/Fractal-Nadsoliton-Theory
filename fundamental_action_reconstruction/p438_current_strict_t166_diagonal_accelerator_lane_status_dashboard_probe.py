@@ -80,6 +80,9 @@ H39_GLOBAL_SELECTOR_STATE = GENERATED / "selector_state_global_c_v1_projective_s
 N516_THEOREM = (
     ROOT / "N516_CURRENT_FIRST_STRICT_H39_GLOBAL_PROJECTIVE_SELECTOR_STATE_OBJECT_EXPORT_THEOREM.md"
 )
+N517_THEOREM = (
+    ROOT / "N517_CURRENT_FIRST_STRICT_H37_EVEN_REFERENCE_WEIGHTS_SIGN_DISTINCTION_OBSTRUCTION_THEOREM.md"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -260,6 +263,12 @@ def main() -> None:
             "H39 object-existence layer is now resolved: a global projective selector state object is exported on C_v1 (F470/N516). "
             "The next honest strict frontier is to export a sign-sensitive/directed selector state datum or observable (H37/H36) "
             "and continue under explicit QW-2191 discipline (no implied selector closure)."
+        )
+
+    if recommended_next_target == "H37" and N517_THEOREM.exists():
+        recommendation_reason += (
+            " Note: N517 shows even ord-reference weights (ord_Z12 / r_ord) cannot distinguish sign on the current exported pair1 sine axis "
+            "via a scalar of the form Σ_x w(x) u_1(x); therefore H37 requires an explicit reflection-breaking/orientation source or a different observable class."
         )
 
     artifact = {

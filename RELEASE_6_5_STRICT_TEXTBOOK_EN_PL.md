@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.31  
+**Version:** 6.5.32  
 **Date:** 2026-03-16  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -285,6 +285,8 @@ Dashboards now recommend `H37` (sign-distinction state: a sign-sensitive / direc
 2. continue strict-only closure toward a sign-sensitive/directed selector state datum or observable (H37/H36) under explicit `QW-2191` discipline:
    use the exported global atlas/transition objects on `C_v1` (`F469/N515`) and the global projective selector state object (`F470/N516`), without promoting any implied strict-core selector closure or global `QW-2191` discharge.
 
+Update: one strict obstruction is now explicit: even ord-reference weights (`ord_Z12`, `r_ord`) cannot distinguish sign on the current exported `pair1` sine axis via a scalar of the form `Σ_x w(x) u_1(x)` (`F471`, packaged by `N517`). Therefore `H37` requires an explicit reflection-breaking/orientation source or a different observable class.
+
 Update: as the next narrow `B3` continuation step, the repo now exports an explicit lane-scoped **chart-transport operator** `O_12` between `pair1↔pair2`
 on `n=12`, derived only from the strict sigma-int `alpha_12` transition (`F461`). This is a sign-free projector-level gluing ingredient
 (packaged as a strict theorem `N506` and audited by `P465`); global selector atlas/transition obligations are now discharged at object level (`F469/N515`), and a global projective selector state object is exported (`F470/N516`).
@@ -465,6 +467,8 @@ Dashboards teraz rekomendują `H37` (rozróżnienie znaku: znako‑czuły / kier
    jest już opakowane jako twierdzenie strict (`N502`), oraz
 2. kontynuować strict-only closure w kierunku znako‑czułego / kierunkowego datumu stanu selektora lub obserwabli (H37/H36) w jawnej dyscyplinie `QW-2191`:
    używać już wyeksportowanych globalnych obiektów atlasu i przejść na `C_v1` (`F469/N515`) oraz globalnego projektowego obiektu stanu selektora (`F470/N516`), bez promocji do implied strict-core selector closure ani globalnego rozładowania `QW-2191`.
+
+Update: jawne jest teraz jedno ścisłe ograniczenie: even ord-reference wagi (`ord_Z12`, `r_ord`) nie potrafią rozróżnić znaku na aktualnie wyeksportowanej osi `pair1` typu sine poprzez skalar postaci `Σ_x w(x) u_1(x)` (`F471`, opakowane przez `N517`). W konsekwencji `H37` wymaga jawnego źródła łamiącego symetrię odbicia/orientacji albo innej klasy obserwabli.
 
 Update: jako kolejny, najwęższy krok `B3` repo eksportuje teraz jawny lane‑scoped **operator transportu chartów** `O_12` pomiędzy `pair1↔pair2`
 na `n=12`, wyprowadzony wyłącznie z `alpha_12` (`F461`). To jest “gluing ingredient” tylko na poziomie osi/projektorów (sign‑free),
