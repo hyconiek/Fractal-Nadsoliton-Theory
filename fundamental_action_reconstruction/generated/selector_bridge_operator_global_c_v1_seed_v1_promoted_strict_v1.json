@@ -1,0 +1,241 @@
+{
+  "object": "SelectorBridgeOperator_global_C_v1_seed_v1_promoted_strict_v1",
+  "stage": "F658",
+  "status": "actual_exported_global_selector_bridge_operator_object__projector_level__no_false_pass",
+  "as_of": "2026-03-16",
+  "generated_utc": "2026-03-16T20:56:27.661707+00:00",
+  "intent": "Promote the seed-v1 local selector bridge operator B_sel on pair1 to a global C_v1-typed chartwise selector bridge operator family on {pair1..pair5}, glued via the exported global selector transition data, and aligned (at +projector level) with the already exported global projective selector state operators.",
+  "domain": {
+    "configuration_space_object_ref": "fundamental_action_reconstruction/generated/c_v1_void_configuration_space_in_local_b_tilde_1_sector_v1.json",
+    "configuration_space_object": "C_v1_void_configuration_space_in_local_B_tilde_1_sector_v1",
+    "charts_cover": "U_pair1 = ... = U_pair5 = C_v1 (declared global cover)"
+  },
+  "inputs": {
+    "seed_v1_local_B_sel_summary": "fundamental_action_reconstruction/generated/f655_first_exported_s_sel_int_strict_core_source_object_selector_bridge_operator_packet_summary.json",
+    "global_selector_atlas": "fundamental_action_reconstruction/generated/selector_atlas_global_c_v1_strict_v1.json",
+    "global_selector_transition": "fundamental_action_reconstruction/generated/selector_transition_global_c_v1_strict_v1.json",
+    "global_projective_selector_state": "fundamental_action_reconstruction/generated/selector_state_global_c_v1_projective_strict_v1.json",
+    "boundary": "N512 (no operator-level groupoid promotion; projector/section-level gluing only)"
+  },
+  "construction": {
+    "seed_pair1_operator": "B_sel_s_sel_int_source_object_v1 (pair1 chart; from F655)",
+    "promotion_rule": "B_dst := G_{src->dst} B_src G_{src->dst}^T on pair planes (SO(2) transport from the exported transition object)",
+    "note": "This promotion uses only the 2x2 SO(2) plane-transport matrices (G_ij); it does not claim any operator-level cocycle on the full carrier."
+  },
+  "charts": {
+    "pair1": {
+      "chart_id": "pair1",
+      "basis": [
+        "c1",
+        "s1"
+      ],
+      "B_sel_matrix_in_c_s": [
+        [
+          -1.0000000000000009,
+          -1.781685372088613e-15
+        ],
+        [
+          -1.781685372088613e-15,
+          1.0
+        ]
+      ],
+      "P_sel_plus_matrix_in_c_s": [
+        [
+          -4.440892098500626e-16,
+          -8.908426860443065e-16
+        ],
+        [
+          -8.908426860443065e-16,
+          1.0
+        ]
+      ],
+      "P_sel_minus_matrix_in_c_s": [
+        [
+          1.0000000000000004,
+          8.908426860443065e-16
+        ],
+        [
+          8.908426860443065e-16,
+          0.0
+        ]
+      ],
+      "aligned_projective_state_local_operator_ref": "fundamental_action_reconstruction/generated/a_1_pair1_orientation_projector_operator_strict_core_v1.json",
+      "aligned_projective_state_local_operator_matrix_key": "A_1_pair1_matrix_in_c1_s1",
+      "alignment_max_abs_diff_P_plus_vs_A": 8.908426860443065e-16,
+      "alignment_max_abs_diff_B_vs_(2A-I)": 1.781685372088613e-15
+    },
+    "pair2": {
+      "chart_id": "pair2",
+      "basis": [
+        "c2",
+        "s2"
+      ],
+      "B_sel_matrix_in_c_s": [
+        [
+          1.0,
+          1.6592206921738776e-15
+        ],
+        [
+          1.6592206921738776e-15,
+          -1.0000000000000009
+        ]
+      ],
+      "P_sel_plus_matrix_in_c_s": [
+        [
+          1.0,
+          8.296103460869388e-16
+        ],
+        [
+          8.296103460869388e-16,
+          -4.440892098500626e-16
+        ]
+      ],
+      "P_sel_minus_matrix_in_c_s": [
+        [
+          0.0,
+          -8.296103460869388e-16
+        ],
+        [
+          -8.296103460869388e-16,
+          1.0000000000000004
+        ]
+      ],
+      "aligned_projective_state_local_operator_ref": "fundamental_action_reconstruction/generated/a_2_pair2_orientation_projector_operator_strict_core_v1.json",
+      "aligned_projective_state_local_operator_matrix_key": "A_2_pair2_matrix_in_c2_s2",
+      "alignment_max_abs_diff_P_plus_vs_A": 6.630768923931654e-16,
+      "alignment_max_abs_diff_B_vs_(2A-I)": 1.3261537847863309e-15
+    },
+    "pair3": {
+      "chart_id": "pair3",
+      "basis": [
+        "c3",
+        "s3"
+      ],
+      "B_sel_matrix_in_c_s": [
+        [
+          1.0,
+          2.5473991118740035e-15
+        ],
+        [
+          2.5473991118740035e-15,
+          -1.0000000000000009
+        ]
+      ],
+      "P_sel_plus_matrix_in_c_s": [
+        [
+          1.0,
+          1.2736995559370017e-15
+        ],
+        [
+          1.2736995559370017e-15,
+          -4.440892098500626e-16
+        ]
+      ],
+      "P_sel_minus_matrix_in_c_s": [
+        [
+          0.0,
+          -1.2736995559370017e-15
+        ],
+        [
+          -1.2736995559370017e-15,
+          1.0000000000000004
+        ]
+      ],
+      "aligned_projective_state_local_operator_ref": "fundamental_action_reconstruction/generated/a_3_pair3_orientation_projector_operator_strict_core_v1.json",
+      "aligned_projective_state_local_operator_matrix_key": "A_3_pair3_matrix_in_c3_s3",
+      "alignment_max_abs_diff_P_plus_vs_A": 1.2736995559370017e-15,
+      "alignment_max_abs_diff_B_vs_(2A-I)": 2.5473991118740035e-15
+    },
+    "pair4": {
+      "chart_id": "pair4",
+      "basis": [
+        "c4",
+        "s4"
+      ],
+      "B_sel_matrix_in_c_s": [
+        [
+          1.0,
+          3.269530626236891e-16
+        ],
+        [
+          3.269530626236892e-16,
+          -1.0000000000000009
+        ]
+      ],
+      "P_sel_plus_matrix_in_c_s": [
+        [
+          1.0,
+          1.6347653131184455e-16
+        ],
+        [
+          1.634765313118446e-16,
+          -4.440892098500626e-16
+        ]
+      ],
+      "P_sel_minus_matrix_in_c_s": [
+        [
+          0.0,
+          -1.6347653131184455e-16
+        ],
+        [
+          -1.634765313118446e-16,
+          1.0000000000000004
+        ]
+      ],
+      "aligned_projective_state_local_operator_ref": "fundamental_action_reconstruction/generated/a_4_pair4_orientation_projector_operator_strict_core_v1.json",
+      "aligned_projective_state_local_operator_matrix_key": "A_4_pair4_matrix_in_c4_s4",
+      "alignment_max_abs_diff_P_plus_vs_A": 4.440892098500626e-16,
+      "alignment_max_abs_diff_B_vs_(2A-I)": 8.881784197001252e-16
+    },
+    "pair5": {
+      "chart_id": "pair5",
+      "basis": [
+        "c5",
+        "s5"
+      ],
+      "B_sel_matrix_in_c_s": [
+        [
+          -1.0000000000000009,
+          -1.781685372088613e-15
+        ],
+        [
+          -1.781685372088613e-15,
+          1.0
+        ]
+      ],
+      "P_sel_plus_matrix_in_c_s": [
+        [
+          -4.440892098500626e-16,
+          -8.908426860443065e-16
+        ],
+        [
+          -8.908426860443065e-16,
+          1.0
+        ]
+      ],
+      "P_sel_minus_matrix_in_c_s": [
+        [
+          1.0000000000000004,
+          8.908426860443065e-16
+        ],
+        [
+          8.908426860443065e-16,
+          0.0
+        ]
+      ],
+      "aligned_projective_state_local_operator_ref": "fundamental_action_reconstruction/generated/a_5_pair5_orientation_projector_operator_strict_core_v1.json",
+      "aligned_projective_state_local_operator_matrix_key": "A_5_pair5_matrix_in_c5_s5",
+      "alignment_max_abs_diff_P_plus_vs_A": 8.908426860443065e-16,
+      "alignment_max_abs_diff_B_vs_(2A-I)": 1.781685372088613e-15
+    }
+  },
+  "hard_limits": [
+    "no_admissible_S_sel_int",
+    "no_strict_core_selector_closure",
+    "no_global_QW2191_discharge",
+    "no_operator_level_transition_groupoid_promotion (N512 boundary)",
+    "no_physical_sign_orientation_claim",
+    "no_ToE_closure"
+  ],
+  "no_false_pass": true
+}

@@ -384,6 +384,18 @@ N549_SUMMARY = (
     GENERATED
     / "n549_current_exported_s_sel_int_strict_core_source_object_selector_output_operator_theorem_summary.json"
 )
+F658_SUMMARY = (
+    GENERATED
+    / "f658_current_strict_global_selector_bridge_operator_promotion_from_seed_v1_chain_on_c_v1_packet_summary.json"
+)
+P658_SUMMARY = (
+    GENERATED
+    / "p658_current_strict_global_selector_bridge_operator_promotion_from_seed_v1_chain_on_c_v1_probe_summary.json"
+)
+N550_SUMMARY = (
+    GENERATED
+    / "n550_current_strict_global_selector_bridge_operator_promotion_from_seed_v1_chain_on_c_v1_discharge_theorem_summary.json"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -1101,16 +1113,38 @@ def main() -> None:
                                                                                                             "without implying strict-core selector closure or QW-2191 discharge."
                                                                                                         )
                                                                                                     else:
-                                                                                                        recommended_next_target = (
-                                                                                                            "ATTACK_GLOBAL_SELECTOR_OBJECT_PROMOTION_FROM_SEED_V1_CHAIN_ON_C_V1"
-                                                                                                        )
-                                                                                                        recommendation_reason = (
-                                                                                                            "P645 records an explicit downstream-completion branch discharge for seed v1 "
-                                                                                                            "(the strict-core seed chain S_sel_int_source_object -> E_orient -> B_sel -> R_sel -> O_sel is now fully exported in declared scope). "
-                                                                                                            "Next move: attempt a global promotion step on C_v1 using the already exported global selector atlas/transition objects "
-                                                                                                            "(T170) and the current global projective/directed selector state infrastructure, "
-                                                                                                            "while keeping strict-core selector closure and global QW-2191 discharge explicitly unclaimed."
-                                                                                                        )
+                                                                                                        if not F658_SUMMARY.exists():
+                                                                                                            recommended_next_target = "F658"
+                                                                                                            recommendation_reason = (
+                                                                                                                "P645 records an explicit downstream-completion branch discharge for seed v1 "
+                                                                                                                "(the strict-core seed chain S_sel_int_source_object -> E_orient -> B_sel -> R_sel -> O_sel is now fully exported in declared scope). "
+                                                                                                                "Next move: perform the global promotion step on C_v1 by exporting a global selector bridge operator family "
+                                                                                                                "promoted from the seed-v1 local B_sel using the exported global selector atlas/transition/state infrastructure (F658), "
+                                                                                                                "while keeping strict-core selector closure and global QW-2191 discharge explicitly unclaimed."
+                                                                                                            )
+                                                                                                        elif not P658_SUMMARY.exists():
+                                                                                                            recommended_next_target = "P658"
+                                                                                                            recommendation_reason = (
+                                                                                                                "F658 exports one global selector bridge operator family on C_v1 promoted from the seed-v1 local B_sel. "
+                                                                                                                "Next move: run the promotion audit probe (P658) to check chartwise involution/symmetry and overlap transport consistency "
+                                                                                                                "against the exported global transition/state infrastructure."
+                                                                                                            )
+                                                                                                        elif not N550_SUMMARY.exists():
+                                                                                                            recommended_next_target = "N550"
+                                                                                                            recommendation_reason = (
+                                                                                                                "P658 audits the global promotion export and reports whether the exported global selector bridge operator family "
+                                                                                                                "is consistent on overlaps (projector/section level only; N512 boundary). "
+                                                                                                                "Next move: package the theorem-level discharge of this promotion step (N550), keeping selector closure and QW-2191 discharge explicitly out."
+                                                                                                            )
+                                                                                                        else:
+                                                                                                            recommended_next_target = (
+                                                                                                                "UPDATE_RELEASE_6_5_STRICT_TEXTBOOK_EN_PL"
+                                                                                                            )
+                                                                                                            recommendation_reason = (
+                                                                                                                "N550 packages the discharge of the global selector bridge operator promotion step from the seed-v1 chain on C_v1. "
+                                                                                                                "Next move: update the strict textbook release notes (Release 6.5, EN+PL) to reflect the newly exported promotion object "
+                                                                                                                "and the updated dashboard target, without implying strict-core selector closure, global QW-2191 discharge, or ToE closure."
+                                                                                                            )
         except Exception:
             pass
 
