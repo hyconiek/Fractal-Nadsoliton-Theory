@@ -45,7 +45,7 @@ nadsoliton → light → matter → emergent observer.
 4. `QW-2190/QW-2191`
    - the strict `n=12` ring scaffold and the strict-core uniqueness obstruction from degenerate 2D modes (`O(2)` family).
 5. `QW-2118/QW-2049`
-   - the strict working kernel tuple and the `n=12` distance-profile evaluation used in the kernel-mode lane.
+   - the strict working kernel tuple and the `n=12` cyclic-distance profile evaluation used in the kernel-mode lane.
 6. `F329`
    - typed `Z_12` carrier + regular action on the 12-slot scaffold (to name the internal “ring” indices).
 
@@ -70,7 +70,7 @@ W możliwie prostych słowach, **na obecnym stanie repo**:
    - `12×Psi + Phi` z kinetyką, lokalnym potencjałem wielomianowym i sprzężeniem `Phi^2 Psi_i^2`,
    - oraz z **mieszaniem indeksowym** `K_{i,j} Psi_i Psi_j` w tej samej gęstości Lagrangianu (`QW-2163`),
    - a jego EoM i Hessian/linearizacja są wyeksportowane jako obiekty strict (`QW-2165`, `QW-2166`).
-2. W lane kernel-mode repo posiada jeden wybrany strict kernel roboczy `K_sg(d)` wraz z jego profilem na pierścieniu
+2. W lane kernel-mode repo posiada jeden wybrany strict kernel roboczy `K_sg(d_cyc)` wraz z jego profilem na pierścieniu
    `n=12` (`QW-2049`, `QW-2118`). To jest aktualny, najtwardszy **kandydat** na “jedno prawo sprzężeń wewnętrznych”.
 3. „Światło” (pierwsze wyłonienie) w sensie wewnętrznym teorii to:
    - **mody liniaryzacji** (eigenmody operatora/Hessianu) wokół próżni nadsolitonu,
@@ -118,14 +118,17 @@ I_{12}:=\{0,1,\ldots,11\},
 \mathbb{Z}_{12}:=(I_{12},+ \bmod 12).
 $$
 
-Define the **directed** `Z_12` distance/step:
+Define the strict kernel‑mode lane **cyclic octave distance** (undirected, ring metric):
 
 $$
-d(i,j):=(j-i)\bmod 12 \in \{0,1,\ldots,11\}.
+d_{\mathrm{cyc}}(i,j)
+:=
+\min\bigl( (j-i)\bmod 12,\ (i-j)\bmod 12 \bigr)
+\in \{0,1,\ldots,6\}.
 $$
 
-This matches the strict kernel-mode lane convention where distance classes `1..11` are evaluated as a profile
-(`QW-2118`).
+This matches the strict kernel‑mode lane convention where the frozen host kernel `K_total` is constructed as a symmetric
+cyclic‑distance matrix (`QW-2118`; cf. `N465`).
 
 ## 2) One strict working kernel (internal coupling law)
 
@@ -172,7 +175,7 @@ $$
 K_{ij}:=
 \begin{cases}
 0, & i=j,\\[2mm]
-K_{\mathrm{sg}}(d(i,j)), & i\neq j.
+K_{\mathrm{sg}}(d_{\mathrm{cyc}}(i,j)), & i\neq j.
 \end{cases}
 $$
 
@@ -184,12 +187,12 @@ V_{\mathrm{mix}}(\Psi)
 \frac12 \sum_{i\neq j} K_{ij}\,\psi_i\,\psi_j.
 $$
 
-Equivalently (grouping symmetric pairs):
+Equivalently (grouping symmetric pairs; here `K_{ij}=K_{ji}`):
 
 $$
 V_{\mathrm{mix}}(\Psi)
 =
-\frac12 \sum_{i<j} (K_{ij}+K_{ji})\,\psi_i\,\psi_j.
+\sum_{i<j} K_{ij}\,\psi_i\,\psi_j.
 $$
 
 This form is chosen so that the Euler–Lagrange equation for $\psi_k$ contains the symmetrized coefficient
