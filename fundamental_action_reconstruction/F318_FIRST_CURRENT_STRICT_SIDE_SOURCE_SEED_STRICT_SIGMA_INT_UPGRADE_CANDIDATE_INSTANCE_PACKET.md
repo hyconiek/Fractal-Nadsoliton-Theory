@@ -57,6 +57,11 @@ S_sel_int_candidate_seed_v1 :=
 ).
 ```
 
+## Exported artifacts
+
+- `generated/f318_first_current_strict_side_source_seed_strict_sigma_int_upgrade_candidate_instance_packet.json`
+- `generated/f318_first_current_strict_side_source_seed_strict_sigma_int_upgrade_candidate_instance_packet_summary.json`
+
 ## Exact meaning
 
 This packet means only:
@@ -77,4 +82,3 @@ This packet means only:
 3. strict-core selector closure or `QW-2191` discharge,
 4. strict-core theta export / target-slot population,
 5. ToE closure.
-

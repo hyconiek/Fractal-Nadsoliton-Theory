@@ -22,7 +22,7 @@ selector closure, and `QW-2191` discharge.
 | Check | Verdict | Evidence |
 |---|---|---|
 | strict sigma-int source-upgrade datum exported | YES | `F307/N418` export `sigma_int_strict_derived_v1` (explicit premise; no hybrid reuse) |
-| strict-side seed candidate instance `S_sel_int_candidate_seed_v1` exported | YES | `F318` |
+| strict-side seed candidate instance `S_sel_int_candidate_seed_v1` exported | YES | `F318` exports a persisted packet artifact in `generated/` |
 | no implied admissible `S_sel_int` / selector closure | YES | `F318` hard limits keep `S_sel_int` and `QW-2191` explicitly open |
 
 ## Result
@@ -33,6 +33,11 @@ selector closure, and `QW-2191` discharge.
 CURRENT_REPO_EXPORTS_ONE_STRICT_SIGMA_INT_UPGRADED_STRICT_SIDE_SOURCE_SEED_CANDIDATE_INSTANCE_AFTER_P392
 ```
 
+## Exported artifacts
+
+- `generated/p392_current_strict_side_source_seed_strict_sigma_int_upgrade_candidate_instance_probe.json`
+- `generated/p392_current_strict_side_source_seed_strict_sigma_int_upgrade_candidate_instance_probe_summary.json`
+
 ## Hard limits
 
 `P392` does not establish:
@@ -42,4 +47,3 @@ CURRENT_REPO_EXPORTS_ONE_STRICT_SIGMA_INT_UPGRADED_STRICT_SIDE_SOURCE_SEED_CANDI
 3. `QW-2191` discharge,
 4. strict-core theta export,
 5. ToE closure.
-
