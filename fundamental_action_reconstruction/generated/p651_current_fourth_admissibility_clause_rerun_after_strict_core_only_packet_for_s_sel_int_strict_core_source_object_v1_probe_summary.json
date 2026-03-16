@@ -1,0 +1,63 @@
+{
+  "stage": "P651",
+  "lane": "fourth_admissibility_clause_rerun_after_strict_core_only_only",
+  "status": "CURRENT_REPO_EXPORTS_ONE_STRICT_CORE_SOURCE_OBJECT_SATISFYING_THE_FOURTH_ADMISSIBILITY_CLAUSE_FOR_S_SEL_INT_AFTER_P651",
+  "exported_object": "S_sel_int_strict_core_source_object_v1",
+  "fourth_clause": "strict_core_only_required",
+  "checks": [
+    {
+      "id": "f34_fourth_clause_required",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "F34 keeps the strict-core-only clause active for admissible S_sel_int"
+    },
+    {
+      "id": "first_clause_discharged",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "N540 discharges the first admissibility clause for S_sel_int on current repo state"
+    },
+    {
+      "id": "second_clause_discharged",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "N541 discharges the second admissibility clause for S_sel_int on current repo state"
+    },
+    {
+      "id": "third_clause_discharged",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "N542 discharges the third admissibility clause for S_sel_int on current repo state"
+    },
+    {
+      "id": "strict_core_only",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "F651 explicitly freezes strict_core_only = true for the exported source object"
+    },
+    {
+      "id": "uses_axiom_lane_artifact",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "F651 explicitly freezes uses_axiom_lane_artifact = false"
+    },
+    {
+      "id": "upstream_of_observer",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "F651 explicitly freezes upstream_of_observer = true"
+    }
+  ],
+  "remaining_admissibility_clauses_unresolved": [
+    "selector_acceptance_outside_strict_core_may_not_count_as_source_construction",
+    "future_bridge_compatible_required"
+  ],
+  "no_false_pass": true
+}
