@@ -36,6 +36,7 @@ Test whether the current strict core exports any explicit selector atlas or sele
 - `P471`: audits that the cocycle holds only on the exported vector section (and transported rays/projectors), not as an operator-level matrix identity on the full carrier.
 - `N512`: packages the operator-level cocycle failure boundary as a strict no-false-pass theorem.
 - `C29/C30`: only local projector formulas and local overlap compatibility laws are explicit.
+- `P474`: audits that the exported global projective selector state object is projector-level glued/transported consistently by the exported global selector transition operators on `{pair1..pair5}` (ray/projector-level only; no sign-sensitive claim).
 - `generated/selector_atlas_global_c_v1_strict_v1.json`: exported global selector atlas object.
 - `generated/selector_transition_global_c_v1_strict_v1.json`: exported global selector transition/gluing object.
 

@@ -64,10 +64,12 @@ Aktualizacja `H39`:
 Aktualizacja `H40`:
 - update (`2026-03-16`): strict core eksportuje globalny selector transition/gluing object na `C_v1` (`F469/N515`) oraz globalny projective selector state (`F470/N516`),
 - nadal brak operator-level transition groupoid identity (cocycle jest section-level) i brak sign-sensitive orientacji fizycznej.
+- update (`2026-03-16`): `P474` audytuje, ze globalny projective selector state jest rzeczywiscie spójnie sklejony/transportowany przez globalne operatory przejscia na poziomie projektorów (ray-level); to nie podnosi residualnego znaku do fizycznego datumu.
 
 Aktualizacja `H41`:
 - update (`2026-03-16`): strict core eksportuje globalny selector atlas na `C_v1` oraz globalne gluing/transition data (`F469/N515`),
 - nadal brak implied selector closure i brak globalnego discharge `QW-2191`.
+- update (`2026-03-16`): `P474` audytuje zgodnosc sklejenia/transportu obiektu globalnego na poziomie projektorowym; nadal brak sign-sensitive domkniecia.
 
 Aktualizacja `H42`:
 - minimalny `c`-based retardation operator na `pair1 = (c_1,s_1)` jest selector-trivial bez importowanego anchoru,

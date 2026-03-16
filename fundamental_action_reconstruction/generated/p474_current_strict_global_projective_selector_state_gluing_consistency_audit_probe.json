@@ -1,0 +1,141 @@
+{
+  "stage": "P474",
+  "date": "2026-03-16",
+  "status": "PASS_GLUING_CONSISTENT",
+  "goal": "audit_that_exported_global_projective_selector_state_object_is_projector_level_glued_consistently_by_exported_global_selector_transition_operators",
+  "inputs": {
+    "state": "fundamental_action_reconstruction/generated/selector_state_global_c_v1_projective_strict_v1.json",
+    "atlas": "fundamental_action_reconstruction/generated/selector_atlas_global_c_v1_strict_v1.json",
+    "transition": "fundamental_action_reconstruction/generated/selector_transition_global_c_v1_strict_v1.json"
+  },
+  "checked": {
+    "charts": [
+      "pair1",
+      "pair2",
+      "pair3",
+      "pair4",
+      "pair5"
+    ],
+    "local_operator_refs": {
+      "pair1": "fundamental_action_reconstruction/generated/a_1_pair1_orientation_projector_operator_strict_core_v1.json",
+      "pair2": "fundamental_action_reconstruction/generated/a_2_pair2_orientation_projector_operator_strict_core_v1.json",
+      "pair3": "fundamental_action_reconstruction/generated/a_3_pair3_orientation_projector_operator_strict_core_v1.json",
+      "pair4": "fundamental_action_reconstruction/generated/a_4_pair4_orientation_projector_operator_strict_core_v1.json",
+      "pair5": "fundamental_action_reconstruction/generated/a_5_pair5_orientation_projector_operator_strict_core_v1.json"
+    },
+    "missing_local_operator_packets": [],
+    "missing_operator_packets": [],
+    "u_norm2_by_chart": {
+      "pair1": 1.0000000000000007,
+      "pair2": 0.9999999999999999,
+      "pair3": 1.0,
+      "pair4": 1.0000000000000004,
+      "pair5": 1.0000000000000016
+    },
+    "tolerance": 1e-12
+  },
+  "results": {
+    "max_orthogonality_max_abs_residual": 1.9984014443252818e-15,
+    "max_projector_transport_max_abs_residual": 9.43689570931383e-16,
+    "max_projector_cocycle_max_abs_residual": 9.992007221626409e-16,
+    "per_edge": {
+      "pair1_to_pair2": {
+        "src": "pair1",
+        "dst": "pair2",
+        "operator_ref": "fundamental_action_reconstruction/generated/o12_pair1_pair2_selector_chart_transport_operator_strict_derived_from_sigma_int_alpha12_v1.json",
+        "orthogonality_max_abs_residual": 4.718447854656915e-16,
+        "projector_transport_max_abs_residual": 2.914335439641036e-16,
+        "atlas_overlap_domain_declared": true,
+        "atlas_transition_declared": true
+      },
+      "pair2_to_pair3": {
+        "src": "pair2",
+        "dst": "pair3",
+        "operator_ref": "fundamental_action_reconstruction/generated/o23_pair2_pair3_selector_chart_transport_operator_axis_only_alpha23_mod_pi_strict_core_v1.json",
+        "orthogonality_max_abs_residual": 1.1102230246251565e-15,
+        "projector_transport_max_abs_residual": 4.753142324176451e-16,
+        "atlas_overlap_domain_declared": true,
+        "atlas_transition_declared": true
+      },
+      "pair1_to_pair3": {
+        "src": "pair1",
+        "dst": "pair3",
+        "operator_ref": "fundamental_action_reconstruction/generated/o13_pair1_pair3_selector_chart_transport_operator_axis_only_alpha13_mod_pi_strict_core_v1.json",
+        "orthogonality_max_abs_residual": 1.457167719820518e-15,
+        "projector_transport_max_abs_residual": 6.314393452555578e-16,
+        "atlas_overlap_domain_declared": true,
+        "atlas_transition_declared": true
+      },
+      "pair3_to_pair4": {
+        "src": "pair3",
+        "dst": "pair4",
+        "operator_ref": "fundamental_action_reconstruction/generated/o34_pair3_pair4_selector_chart_transport_operator_axis_only_alpha34_mod_pi_strict_core_v1.json",
+        "orthogonality_max_abs_residual": 1.3600232051658168e-15,
+        "projector_transport_max_abs_residual": 5.828670879282072e-16,
+        "atlas_overlap_domain_declared": true,
+        "atlas_transition_declared": true
+      },
+      "pair4_to_pair5": {
+        "src": "pair4",
+        "dst": "pair5",
+        "operator_ref": "fundamental_action_reconstruction/generated/o45_pair4_pair5_selector_chart_transport_operator_axis_only_alpha45_mod_pi_strict_core_v1.json",
+        "orthogonality_max_abs_residual": 1.3322676295501878e-15,
+        "projector_transport_max_abs_residual": 6.938893903907228e-16,
+        "atlas_overlap_domain_declared": true,
+        "atlas_transition_declared": true
+      },
+      "pair2_to_pair4": {
+        "src": "pair2",
+        "dst": "pair4",
+        "operator_ref": "fundamental_action_reconstruction/generated/o24_pair2_pair4_selector_chart_transport_operator_axis_only_alpha24_mod_pi_strict_core_v1.json",
+        "orthogonality_max_abs_residual": 8.881784197001252e-16,
+        "projector_transport_max_abs_residual": 4.3021142204224816e-16,
+        "atlas_overlap_domain_declared": true,
+        "atlas_transition_declared": true
+      },
+      "pair3_to_pair5": {
+        "src": "pair3",
+        "dst": "pair5",
+        "operator_ref": "fundamental_action_reconstruction/generated/o35_pair3_pair5_selector_chart_transport_operator_axis_only_alpha35_mod_pi_strict_core_v1.json",
+        "orthogonality_max_abs_residual": 1.9984014443252818e-15,
+        "projector_transport_max_abs_residual": 9.43689570931383e-16,
+        "atlas_overlap_domain_declared": true,
+        "atlas_transition_declared": true
+      },
+      "pair1_to_pair4": {
+        "src": "pair1",
+        "dst": "pair4",
+        "operator_ref": "fundamental_action_reconstruction/generated/o14_pair1_pair4_selector_chart_transport_operator_axis_only_alpha14_mod_pi_strict_core_v1.json",
+        "orthogonality_max_abs_residual": 1.6653345369377348e-15,
+        "projector_transport_max_abs_residual": 5.273559366969494e-16,
+        "atlas_overlap_domain_declared": true,
+        "atlas_transition_declared": true
+      },
+      "pair1_to_pair5": {
+        "src": "pair1",
+        "dst": "pair5",
+        "operator_ref": "fundamental_action_reconstruction/generated/o15_pair1_pair5_selector_chart_transport_operator_axis_only_alpha15_mod_pi_strict_core_v1.json",
+        "orthogonality_max_abs_residual": 0.0,
+        "projector_transport_max_abs_residual": 4.0824829046386243e-16,
+        "atlas_overlap_domain_declared": true,
+        "atlas_transition_declared": true
+      },
+      "pair2_to_pair5": {
+        "src": "pair2",
+        "dst": "pair5",
+        "operator_ref": "fundamental_action_reconstruction/generated/o25_pair2_pair5_selector_chart_transport_operator_axis_only_alpha25_mod_pi_strict_core_v1.json",
+        "orthogonality_max_abs_residual": 1.5543122344752192e-15,
+        "projector_transport_max_abs_residual": 3.7470027081099033e-16,
+        "atlas_overlap_domain_declared": true,
+        "atlas_transition_declared": true
+      }
+    }
+  },
+  "no_false_pass": true,
+  "hard_limits": [
+    "no theorem-level pass",
+    "no full-closure pass",
+    "no sign-sensitive/directed selector state claim (projective/ray-level only)",
+    "no claim of global QW-2191 discharge"
+  ]
+}
