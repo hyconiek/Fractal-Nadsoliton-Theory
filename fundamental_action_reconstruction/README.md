@@ -53,20 +53,21 @@ Aktualizacja `H37`:
 - wiec nadal nie odroznia `u` od `-u` jako fizycznie roznych stanow selektora.
 
 Aktualizacja `H38`:
-- strict core wspiera teraz co najwyzej lokalny projektowy/ray-level reprezentant selektora na `pair1`,
-- ale nadal nie daje fizycznie zindywidualizowanego skierowanego stanu selektora.
+- strict core wspiera stan selektora co najwyzej na poziomie projektowym/ray-level (semantyka projector/span),
+- update (`2026-03-16`): jest teraz jawnie wyeksportowany globalny **projective selector state object** na `C_v1` (`F470/N516`),
+- ale nadal nie ma strict sign-sensitive / directed orientacji fizycznej (brak rozroznienia `u` vs `-u` jako fizycznie roznych stanow).
 
 Aktualizacja `H39`:
-- strict core nie ma jeszcze zadnego globalnego obiektu fizycznego, ktory wynosilby lokalny ray/projektowy reprezentant selektora ponad chart lokalny,
-- lokalny projective/ray support nie daje jeszcze globalnego selector state.
+- update (`2026-03-16`): strict core eksportuje globalny projective selector state object na `C_v1` (`F470/N516`),
+- obiekt jest ray/projector-level (residualny znak to gauge), bez implied selector closure i bez globalnego discharge `QW-2191`.
 
 Aktualizacja `H40`:
-- strict core nie ma jeszcze zadnego globalnego transition/gluing object dla lokalnych chartow selektora,
-- lokalne compatibility laws i control-lane transition structures nie zostaly jeszcze podniesione do strict-core global selector transition object.
+- update (`2026-03-16`): strict core eksportuje globalny selector transition/gluing object na `C_v1` (`F469/N515`) oraz globalny projective selector state (`F470/N516`),
+- nadal brak operator-level transition groupoid identity (cocycle jest section-level) i brak sign-sensitive orientacji fizycznej.
 
 Aktualizacja `H41`:
-- strict core nie ma jeszcze jawnego selector atlas, overlap-domain declaration ani selector-gluing data,
-- lokalne embeddingi chartowe i lokalne compatibility laws nie zostaly jeszcze podniesione do globalnej struktury atlasu lub cocycle danych selektora.
+- update (`2026-03-16`): strict core eksportuje globalny selector atlas na `C_v1` oraz globalne gluing/transition data (`F469/N515`),
+- nadal brak implied selector closure i brak globalnego discharge `QW-2191`.
 
 Aktualizacja `H42`:
 - minimalny `c`-based retardation operator na `pair1 = (c_1,s_1)` jest selector-trivial bez importowanego anchoru,
