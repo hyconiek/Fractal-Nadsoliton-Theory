@@ -113,6 +113,10 @@ P475_SUMMARY = (
     GENERATED
     / "p475_current_strict_projective_only_continuation_decision_packet_summary.json"
 )
+P632_SUMMARY = (
+    GENERATED
+    / "p632_current_strict_directed_continuation_decision_packet_summary.json"
+)
 P480_SUMMARY = (
     GENERATED
     / "p480_current_strict_p16_route_negative_freeze_decision_packet_summary.json"
@@ -314,6 +318,19 @@ def _projective_only_continuation_selected() -> tuple[bool, dict[str, Any] | Non
     return bool(selected), p475
 
 
+def _directed_continuation_selected() -> tuple[bool, dict[str, Any] | None]:
+    if not P632_SUMMARY.exists():
+        return False, None
+    try:
+        p632 = load_json(P632_SUMMARY)
+    except Exception:
+        return False, None
+    selected = (p632.get("decision") == "DIRECTED_CONTINUATION_SELECTED") or (
+        p632.get("selected_continuation") == "directed"
+    )
+    return bool(selected), p632
+
+
 def _p16_route_negative_freeze_selected() -> tuple[bool, dict[str, Any] | None]:
     if not P480_SUMMARY.exists():
         return False, None
@@ -458,8 +475,13 @@ def main() -> None:
         diagonal_note += " H39 object-existence layer is now resolved by F470/N516; next frontier shifts to H37."
 
     projective_selected, p475 = _projective_only_continuation_selected()
+    directed_selected, p632 = _directed_continuation_selected()
     p16_freeze_selected, p480 = _p16_route_negative_freeze_selected()
     direct_formal_freeze_selected, p631 = _direct_formal_route_negative_freeze_selected()
+
+    # Professorial precedence: directed continuation (P632) supersedes the earlier projective-only decision packet (P475).
+    if directed_selected:
+        projective_selected = False
 
     if recommended_next == "H37":
         if N518_THEOREM.exists():
@@ -826,6 +848,7 @@ def main() -> None:
             "P455": (str(P455_SUMMARY.relative_to(REPO)) if P455_SUMMARY.exists() else None),
             "P480": (str(P480_SUMMARY.relative_to(REPO)) if P480_SUMMARY.exists() else None),
             "P631": (str(P631_SUMMARY.relative_to(REPO)) if P631_SUMMARY.exists() else None),
+            "P632": (str(P632_SUMMARY.relative_to(REPO)) if P632_SUMMARY.exists() else None),
         },
         "status_snapshot": {"P438": p438, "P439": p439},
         "result": {
@@ -833,6 +856,14 @@ def main() -> None:
             "recommendation_reason": recommendation_reason,
             "diagonal_lane_note": diagonal_note,
             "shannon_lane_note": shannon_note,
+            "directed_continuation": {
+                "selected": bool(directed_selected),
+                "p632_summary": (str(P632_SUMMARY.relative_to(REPO)) if p632 is not None else None),
+                "note": (
+                    "If selected, the strict continuation treats the selector state as directed/vector-level in the declared scope (post-T171), "
+                    "with all generator/sign dependence tracked via an explicit fixing datum (T164)."
+                ),
+            },
             "projective_only_continuation": {
                 "selected": bool(projective_selected),
                 "p475_summary": (str(P475_SUMMARY.relative_to(REPO)) if p475 is not None else None),

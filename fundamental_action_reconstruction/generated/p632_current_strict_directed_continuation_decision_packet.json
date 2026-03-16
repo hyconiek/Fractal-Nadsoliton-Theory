@@ -1,0 +1,33 @@
+{
+  "stage": "P632",
+  "date": "2026-03-16",
+  "generated_utc": "2026-03-16T14:36:20.895607+00:00",
+  "goal": "declare_professorial_directed_continuation_after_T171_discharge__treat_directed_selector_state_as_physical_in_declared_scope",
+  "status": "PASS_DECISION_DECLARED_DIRECTED_CONTINUATION_SELECTED",
+  "decision": "DIRECTED_CONTINUATION_SELECTED",
+  "decision_basis": {
+    "t164_fixing_datum_present": true,
+    "t164_fixing_datum_object": "Kappa_Z12_generator_orientation_canonical_fixing_datum_strict_provenance_v1",
+    "t171_directed_state_present": true,
+    "t171_directed_state_object": "SelectorState_global_C_v1_directed_strict_v1",
+    "projective_state_object": "SelectorState_global_C_v1_projective_strict_v1",
+    "sign_sensitive_observable_present": true,
+    "sign_sensitive_observable_object": "S_dir_pair1_strict_v1",
+    "strict_boundary_note": "N462 forbids Aut(Z12)-invariant generator fixing; directed continuation is premise-based via the exported fixing datum (F473/N523)."
+  },
+  "continuation": {
+    "selected": "directed",
+    "meaning": "Treat the selector state on C_v1 as a directed/vector-level physical state object in the declared scope, using the exported T164 fixing datum + exported sign-sensitive observable to fix residual sign. The projective state remains the quotient/ray-level shadow."
+  },
+  "recommended_next_strict_target": {
+    "target": "P11",
+    "note": "After the post-projective directed frontier is resolved (T171 discharged), continue strict-only ToE closure work that depends only on the exported selector state objects; the next bottleneck remains the existing-kernel-feedback \u2192 explicit-chain factorization route (P11)."
+  },
+  "hard_limits": [
+    "No Aut(Z_12)-invariant canonicity claim (premise-based fixing datum; N462).",
+    "No strict-core selector closure / admissible S_sel_int claim.",
+    "No global discharge of QW-2191 claim.",
+    "No ToE closure claim."
+  ],
+  "no_false_pass": true
+}

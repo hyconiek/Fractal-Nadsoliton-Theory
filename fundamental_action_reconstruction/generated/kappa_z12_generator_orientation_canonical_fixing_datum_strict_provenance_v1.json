@@ -1,0 +1,70 @@
+{
+  "object": "Kappa_Z12_generator_orientation_canonical_fixing_datum_strict_provenance_v1",
+  "status": "actual_exported_strict_provenance_datum_object__premise_based",
+  "as_of": "2026-03-16",
+  "generated_utc": "2026-03-16T14:31:33.680943+00:00",
+  "intent": "Export one explicit fixing datum that canonically fixes (in a declared scope) a generator/orientation of the typed strict group object Z_12_v1, so future directed/sign-sensitive constructions can be made slotless without smuggling an untracked generator choice. By N462, no Aut(Z_12)-invariant fixing exists; therefore this fixing datum is exported as an explicit premise-based strict provenance object (no false pass).",
+  "typed_prerequisites": {
+    "Z_12_v1": "fundamental_action_reconstruction/generated/z_12_v1_group.json",
+    "Aut_Z12_v1": "fundamental_action_reconstruction/generated/aut_z12_v1_units_group.json"
+  },
+  "declared_domain": {
+    "group_object": "Z_12_v1",
+    "aut_group_object": "Aut_Z12_v1",
+    "index_set": "I_12_v1 = {0,1,...,11}",
+    "scope_note": "This fixing datum is intended only for declared directed continuations (e.g. T171). It is not an Aut(Z_12)-invariant construction; it explicitly restricts the admissible symmetry to the subgroup preserving the fix."
+  },
+  "definition": {
+    "D_fix_v1": {
+      "generator_fixed": 1,
+      "successor_map": "suc_fix(k) := (k+1) mod 12",
+      "successor_table": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0
+      ],
+      "meaning": "Fix an oriented 12-cycle structure induced by generator 1."
+    }
+  },
+  "reduced_symmetry": {
+    "Aut_Z12_v1_full": [
+      1,
+      5,
+      7,
+      11
+    ],
+    "Aut_Z12_v1_preserving_D_fix_v1": [
+      1
+    ],
+    "note": "The datum reduces the admissible Aut(Z_12) ambiguity to the subgroup preserving the fixed generator/orientation. Here the stabilizer of generator 1 inside Aut(Z_12) is the identity only."
+  },
+  "compatibility_with_T163_T164": {
+    "T164_target": "Kappa_Z12_generator_orientation_canonical_fixing_datum_target_v1",
+    "T163_branch": "T163(4a) canonical-fixing-datum route (nontrivial phase embeddings require tracked symmetry breaking).",
+    "note": "This object is a premise-based strict provenance fixing datum intended to satisfy the T164 acceptance pattern: it exports an explicit D_fix_v1 and makes the reduced admissible symmetry explicit. It does not claim Aut-invariant canonicity."
+  },
+  "provenance": {
+    "classification": "strict_source_upgraded",
+    "method": "explicit_strict_side_premise_generator_orientation_fix",
+    "premise_id": "P_z12_generator_orientation_fix_v1",
+    "boundary_reference": "N462 (no Aut(Z12)-invariant canonical generator choice from typed structure alone)",
+    "note": "Premise-based strict provenance fixing datum: it explicitly breaks/restricts Aut(Z_12) and therefore must be cited by any directed/sign-sensitive downstream object. This does not derive any theta angles and does not claim selector closure."
+  },
+  "hard_limits": [
+    "Does not claim Aut(Z_12)-invariant canonicity (ruled out by N462).",
+    "Does not discharge T163 nor export any canonical phase embedding.",
+    "Does not export theta_1/theta_2 and does not imply any sigma-int -> theta upgrade.",
+    "Does not claim strict-core selector closure nor global discharge of QW-2191.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}

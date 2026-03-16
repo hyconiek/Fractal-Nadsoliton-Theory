@@ -10,7 +10,7 @@ Test whether the current strict core contains any global transition or gluing ob
 ## Inputs
 
 - `H34`: no strict basis-covariance / target-independence argument.
-- `H39/F470/N516`: global projective selector state object exported on `C_v1` (projector/span semantics), but no sign-sensitive directed orientation datum and no global `QW-2191` discharge.
+- `H39/F470/N516`: global projective selector state object exported on `C_v1` (projector/span semantics). A directed/sign-sensitive lift is exported separately as premise-based strict continuation (`F474/N524`), without implying any global `QW-2191` discharge.
 - `C29`: local projector formulas are explicit.
 - `C30`: local overlap compatibility law under orthogonal transition is explicit.
 - `C31`: a transition-angle source class exists.
@@ -67,11 +67,11 @@ The repository contains:
 - and now an explicit **global** selector transition/gluing object export on `C_v1` (`F469/N515`),
 - and now an explicit **global projective selector state object** export on `C_v1` (`F470/N516`),
 
-while still not exporting any **sign-sensitive directed selector state object** (lifting residual `Z2`) and not discharging global `QW-2191`.
+while still not discharging global `QW-2191`. (A directed/sign-sensitive selector state lift is now exported separately as premise-based strict continuation; this does not imply selector closure nor any global discharge.)
 
 ## Frontier
 
-`H40_B1 := strict core now exports a global selector transition/gluing object on C_v1 (F469/N515) and a global projective selector state object (F470/N516), but still does not discharge global QW-2191 and does not export any sign-sensitive directed selector state datum`
+`H40_B2 := strict core exports a global selector transition/gluing object on C_v1 (F469/N515) and global selector state objects on C_v1 at least at the projective level (F470/N516); a directed lift exists premise-based (F474/N524), but global QW-2191 remains undischarged and no selector-closure claim is implied`
 
 ## Hard limits
 

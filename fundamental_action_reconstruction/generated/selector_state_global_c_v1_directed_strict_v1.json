@@ -1,0 +1,127 @@
+{
+  "object": "SelectorState_global_C_v1_directed_strict_v1",
+  "stage": "F474",
+  "status": "actual_exported_global_directed_selector_state_object_on_C_v1__vector_level_lift__premise_based__no_false_pass",
+  "as_of": "2026-03-16",
+  "generated_utc": "2026-03-16T14:34:17.983716+00:00",
+  "intent": "Export one explicit global directed (sign-sensitive) selector state object on C_v1 by lifting the already exported projective/ray-level selector state (F470/N516) to an oriented vector representative using the exported T164 fixing datum and the exported sign-distinction observable S_dir (this packet). The directed state descends to the strict projective state at projector/span level.",
+  "domain": {
+    "configuration_space_object_ref": "fundamental_action_reconstruction/generated/c_v1_void_configuration_space_in_local_b_tilde_1_sector_v1.json",
+    "configuration_space_object": "C_v1_void_configuration_space_in_local_B_tilde_1_sector_v1",
+    "charts_cover": "U_pair1 = ... = U_pair5 = C_v1 (declared global cover)"
+  },
+  "state_type": {
+    "level": "directed_vector_state",
+    "encoding": "vector_representative_section_on_pair_charts",
+    "sign_gauge": "fixed_by_T164_fixing_datum_and_S_dir_pair1_strict_v1"
+  },
+  "depends_on": {
+    "projective_state_ref": "fundamental_action_reconstruction/generated/selector_state_global_c_v1_projective_strict_v1.json",
+    "t164_fixing_datum_ref": "fundamental_action_reconstruction/generated/kappa_z12_generator_orientation_canonical_fixing_datum_strict_provenance_v1.json",
+    "vector_section_ref": "fundamental_action_reconstruction/generated/u_12345_pair12345_chart_glued_orientation_vector_section_oriented_mod_2pi_strict_convention_v1.json",
+    "sign_observable_ref": "fundamental_action_reconstruction/generated/s_dir_pair1_strict_v1.json"
+  },
+  "construction": {
+    "rule": "apply global sign_fix from S_dir(u1) to the existing oriented vector section u_1..u_5",
+    "sign_fix": -1.0,
+    "S_dir_u1": -0.014244085617340103,
+    "S_dir_u1_oriented": 0.014244085617340103
+  },
+  "outputs": {
+    "u_vectors_directed": {
+      "u_1": [
+        -0.0,
+        0.204124145231932,
+        0.353553390593274,
+        0.408248290463863,
+        0.353553390593274,
+        0.204124145231931,
+        -0.0,
+        -0.204124145231931,
+        -0.353553390593274,
+        -0.408248290463863,
+        -0.353553390593274,
+        -0.204124145231932
+      ],
+      "u_2": [
+        -0.408248290463863,
+        -0.204124145231932,
+        0.204124145231931,
+        0.408248290463863,
+        0.204124145231932,
+        -0.204124145231932,
+        -0.408248290463863,
+        -0.204124145231932,
+        0.204124145231931,
+        0.408248290463863,
+        0.204124145231931,
+        -0.204124145231931
+      ],
+      "u_3": [
+        -0.408248290463863,
+        -0.0,
+        0.408248290463863,
+        -0.0,
+        -0.408248290463863,
+        -0.0,
+        0.408248290463863,
+        -0.0,
+        -0.408248290463863,
+        -0.0,
+        0.408248290463863,
+        -0.0
+      ],
+      "u_4": [
+        0.408248290463863,
+        -0.204124145231932,
+        -0.204124145231931,
+        0.408248290463863,
+        -0.204124145231932,
+        -0.204124145231931,
+        0.408248290463863,
+        -0.204124145231931,
+        -0.204124145231932,
+        0.408248290463863,
+        -0.204124145231932,
+        -0.204124145231932
+      ],
+      "u_5": [
+        -0.0,
+        -0.204124145231932,
+        0.353553390593274,
+        -0.408248290463863,
+        0.353553390593274,
+        -0.204124145231932,
+        -1e-15,
+        0.204124145231932,
+        -0.353553390593274,
+        0.408248290463863,
+        -0.353553390593274,
+        0.204124145231932
+      ]
+    }
+  },
+  "compatibility": {
+    "descends_to_projective": true,
+    "projective_state_object": "SelectorState_global_C_v1_projective_strict_v1",
+    "vector_section_matches_projector_section": {
+      "max_abs_diff_by_pair": {
+        "pair1": 0.0,
+        "pair2": 4.440892098500626e-16,
+        "pair3": 0.0,
+        "pair4": 0.0,
+        "pair5": 0.0
+      },
+      "all_pairs_match": true
+    },
+    "note": "Projectors/spans are unchanged under global sign flip; this object adds a directed representative only."
+  },
+  "hard_limits": [
+    "Premise-based: depends on explicit T164 fixing datum; does not claim Aut(Z_12)-invariant canonicity (N462).",
+    "Does not promote section-level cocycle data to operator-level identities (see N512).",
+    "Does not claim strict-core selector closure / admissible S_sel_int.",
+    "Does not claim global discharge of QW-2191.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}

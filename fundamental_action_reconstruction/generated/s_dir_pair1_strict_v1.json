@@ -1,0 +1,69 @@
+{
+  "object": "S_dir_pair1_strict_v1",
+  "status": "actual_exported_strict_directed_sign_distinction_observable__premise_based_on_T164_fixing_datum",
+  "as_of": "2026-03-16",
+  "generated_utc": "2026-03-16T14:34:17.983040+00:00",
+  "intent": "Export one explicit sign-sensitive scalar observable on pair1 whose value flips under u -> -u, using a directed coordinate induced by the exported T164 fixing datum and a deterministic Shannon-typed weight w_dir(x)=exp(-alpha_geo*x). This supplies a directed orientation convention/observable in the declared strict scope without smuggling hidden generator choices.",
+  "inputs": {
+    "alpha_geo_strict_derived_v1": "4 ln(2)",
+    "alpha_geo_numeric_used": 2.772588722239781,
+    "t164_fixing_datum_ref": "fundamental_action_reconstruction/generated/kappa_z12_generator_orientation_canonical_fixing_datum_strict_provenance_v1.json",
+    "pair1_vector_section_ref": "fundamental_action_reconstruction/generated/u_12345_pair12345_chart_glued_orientation_vector_section_oriented_mod_2pi_strict_convention_v1.json"
+  },
+  "directed_coordinate": {
+    "x_domain": "I_12_v1 = {0,1,...,11}",
+    "induced_by": "D_fix_v1.successor_map",
+    "successor_table": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      0
+    ]
+  },
+  "directed_weight": {
+    "w_dir(x)": "exp(-alpha_geo * x)",
+    "weights": [
+      1.0,
+      0.0625,
+      0.003906250000000001,
+      0.00024414062500000016,
+      1.5258789062500007e-05,
+      9.5367431640625e-07,
+      5.960464477539072e-08,
+      3.725290298461918e-09,
+      2.328306436538698e-10,
+      1.4551915228366858e-11,
+      9.094947017729282e-13,
+      5.6843418860807996e-14
+    ],
+    "normalization_note": "Unnormalized weights (normalization irrelevant for sign)."
+  },
+  "definition": {
+    "S_dir(u)": "\u03a3_x w_dir(x) * u(x)",
+    "odd_under_sign": true
+  },
+  "value_on_exported_pair1_representative": {
+    "u1_source": "U_12345_pair12345_chart_glued_orientation_vector_section_oriented_mod_2pi_strict_convention_v1",
+    "S_dir_u1": -0.014244085617340103,
+    "sign_fix": -1.0,
+    "S_dir_u1_oriented": 0.014244085617340103
+  },
+  "meaning": [
+    "S_dir(u) changes sign under u -> -u and therefore distinguishes u from -u in the declared directed scope.",
+    "The induced sign-fix chooses the oriented representative by requiring S_dir(u) > 0."
+  ],
+  "hard_limits": [
+    "Premise-based: depends on an explicit T164 fixing datum; does not claim Aut(Z_12)-invariant canonicity (N462).",
+    "Does not claim strict-core selector closure nor global discharge of QW-2191.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}

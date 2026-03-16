@@ -1,7 +1,7 @@
 # H36: Directed Axis Orientation Audit
 
-**Date:** 2026-03-06  
-**Status:** `PASS_PARTIAL_NO_STRICT_DIRECTED_AXIS_SELECTION`
+**Date:** 2026-03-16  
+**Status:** `PASS_DIRECTED_AXIS_ORIENTATION_PRESENT__PREMISE_BASED_T164`
 
 ## Goal
 
@@ -23,16 +23,22 @@ The strict core currently supports:
 - a coordinate-level embedding `u_psi0_pair1 = cos(psi0)c_1 + sin(psi0)s_1`,
 - a local mode chart `pair1 = (c_1,s_1)`.
 
+The strict core **now also supports** (premise-based via `T164` + `T171` discharge):
+
+- an explicit sign-sensitive directed observable on `pair1` (`S_dir_pair1_strict_v1`, `F474`),
+- an explicit global directed selector state object on `C_v1` descending to the projective state (`SelectorState_global_C_v1_directed_strict_v1`, `F474/N524`),
+
+therefore the strict core does contain a directed orientation selection mechanism in the declared scope.
+
 The strict core still does **not** support:
 
 - a theorem that `u_psi0_pair1` is a physically selected directed axis rather than a chart-dependent representative,
-- a rule identifying `u_psi0_pair1` and `-u_psi0_pair1` as physically inequivalent,
-- any strict-core sign-selection or directed-orientation object attached to `pair1`,
-- any exported selector datum that chooses one orientation of the same axis over its opposite.
+- any `Aut(Z_12)`-invariant way to obtain the directed lift “for free” (ruled out by `N462`; the fixing datum is premise-based),
+- strict-core selector closure (`S_sel_int`) or global discharge of `QW-2191`.
 
 ## Result
 
-`H36_B1 := strict core supports only a coordinate-level undirected axis representative u_psi0_pair1 inside pair1 and contains no strict argument selecting a directed orientation on that axis`
+`H36_B2 := strict core exports a directed/sign-sensitive orientation selection mechanism on pair1 in the declared premise-based scope (T164+T171), while psi0 alone still supplies only an undirected axis representative`
 
 ## Hard limits
 

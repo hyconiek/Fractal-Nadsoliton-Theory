@@ -80,6 +80,14 @@ H39_GLOBAL_SELECTOR_STATE = GENERATED / "selector_state_global_c_v1_projective_s
 N516_THEOREM = (
     ROOT / "N516_CURRENT_FIRST_STRICT_H39_GLOBAL_PROJECTIVE_SELECTOR_STATE_OBJECT_EXPORT_THEOREM.md"
 )
+H37_DIRECTED_STATE = GENERATED / "selector_state_global_c_v1_directed_strict_v1.json"
+N524_THEOREM = (
+    ROOT
+    / "N524_CURRENT_FIRST_STRICT_T171_GLOBAL_DIRECTED_SELECTOR_STATE_DATUM_DISCHARGE_THEOREM.md"
+)
+P632_SUMMARY = (
+    GENERATED / "p632_current_strict_directed_continuation_decision_packet_summary.json"
+)
 N517_THEOREM = (
     ROOT / "N517_CURRENT_FIRST_STRICT_H37_EVEN_REFERENCE_WEIGHTS_SIGN_DISTINCTION_OBSTRUCTION_THEOREM.md"
 )
@@ -278,6 +286,25 @@ def main() -> None:
             "H39 object-existence layer is now resolved: a global projective selector state object is exported on C_v1 (F470/N516). "
             "The next honest strict frontier is to export a sign-sensitive/directed selector state datum or observable (H37/H36) "
             "and continue under explicit QW-2191 discipline (no implied selector closure)."
+        )
+
+    # Post-projective directed frontier resolved: if the directed selector state datum is now exported (T171 discharged),
+    # do not keep recommending H37.
+    if recommended_next_target == "H37" and (H37_DIRECTED_STATE.exists() or N524_THEOREM.exists()):
+        recommended_next_target = "P11"
+        p_note = ""
+        if P632_SUMMARY.exists():
+            try:
+                p632 = load_json(P632_SUMMARY)
+                if str(p632.get("decision") or "") == "DIRECTED_CONTINUATION_SELECTED":
+                    p_note = " Professorial note: directed continuation is explicitly selected (P632)."
+            except Exception:
+                p_note = " Professorial note: P632 summary exists but could not be parsed."
+        recommendation_reason = (
+            "Post-projective directed frontier is now resolved: a premise-based strict fixing datum (T164) and a strict global directed selector state datum (T171) are exported "
+            "(F473/N523 and F474/N524). Therefore H37 is discharged in the declared directed scope and is no longer the next strict blocker."
+            " Next strict bottleneck shifts back to strict-only ToE closure tasks that can now treat the selector state as directed where needed (P11)."
+            + p_note
         )
 
     if recommended_next_target == "H37":

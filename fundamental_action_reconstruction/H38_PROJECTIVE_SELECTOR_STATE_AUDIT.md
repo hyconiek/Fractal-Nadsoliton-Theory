@@ -1,7 +1,7 @@
 # H38: Projective Selector State Audit
 
 **Date:** 2026-03-16  
-**Status:** `PASS_PROJECTIVE_CONTINUATION_SELECTED__GLOBAL_PROJECTIVE_STATE_OBJECT_EXPORTED__DIRECTED_SIGN_LIFT_DEFERRED`
+**Status:** `PASS_DIRECTED_CONTINUATION_SELECTED__GLOBAL_DIRECTED_STATE_OBJECT_EXPORTED__PROJECTIVE_STATE_RETAINED_AS_QUOTIENT`
 
 ## Goal
 
@@ -17,7 +17,9 @@ Check whether the current strict core supports the selector state on `pair1 = (c
 - `H37_SIGN_DISTINCTION_STATE_AUDIT`
 - `F470/N516`: global projective selector state object exported on `C_v1` (projector/span semantics; residual sign is gauge at state level).
 - `N501` / `N502`: residual `Z2` sign flips are gauge-irrelevant for the currently exported downstream span/projector objects (declared scope).
-- `P475`: professorial decision packet selecting **projective-only continuation** (directed sign lift deferred).
+- `F474/N524`: exports a sign-sensitive directed observable on `pair1` and a global directed selector state object on `C_v1` (vector-level lift; `T171` discharged, premise-based via `T164`).
+- `P475`: earlier decision packet selecting **projective-only continuation** (historical branch; superseded if directed continuation is selected).
+- `P632`: professorial decision packet selecting **directed continuation** (treat the directed/vector-level state as physical in the declared scope).
 
 ## Audit
 
@@ -27,29 +29,27 @@ The strict core currently supports:
 - a local chart `pair1 = (c_1,s_1)`,
 - a deterministic angle candidate `psi0`,
 - a strict global **projective/ray-level** selector state object on `C_v1` (`F470/N516`),
-- and still no strict sign-sensitive object distinguishing `u` from `-u`.
+- and (premise-based via `T164`) a strict global **directed/vector-level** selector state object on `C_v1` (`F474/N524`).
 
-Taken together, these facts support only a projective/ray-level reading of the local selector representative:
+Taken together, these facts now support two explicit layers (no false pass):
 
-- `u_psi0_pair1` and `-u_psi0_pair1` remain physically indistinguishable,
-- the selector state is not individuated as a directed vector,
-- the current lane supports at most an undirected one-dimensional subspace inside `pair1`.
+1. **Projective layer (quotient):** the ray/projector state where `u` and `-u` are identified (still exported and still useful for sign-gauge-safe downstream objects).
+2. **Directed layer (premise-based):** a vector-level state where `u` and `-u` are distinguished in the declared scope by an explicit sign-sensitive observable and an explicit fixing datum (`T164`).
 
 The strict core still does **not** support:
 
-- a strict sign-sensitive directed selector state object or observable (lifting residual `Z2`),
 - a strict-core selector closure claim (`S_sel_int`),
 - a global discharge of `QW-2191`.
 
-However, by `P475` the strict continuation now proceeds under an explicit **projective-only** interpretation for the declared closure stack:
+By `P632`, the current strict continuation proceeds under an explicit **directed** interpretation in the declared scope:
 
-- treat the strict selector state as a ray/projector object,
-- keep residual sign as gauge/convention where proven irrelevant (`N502`, `N519`),
-- leave a directed/sign-sensitive lift as a separate future branch (`T171`).
+- treat the selector state as a directed/vector-level object (`F474/N524`),
+- keep the projective state as the quotient shadow where appropriate,
+- keep all generator/sign dependence explicit (premise-based via `T164`; no Aut-invariant canonicity claim by `N462`).
 
 ## Result
 
-`H38_B1 := strict core supports the selector state at most at the projective/ray level (projector/span semantics) and does not furnish a physically individuated directed selector state`
+`H38_B2 := strict core exports both a global projective selector state object (quotient/ray layer) and a global directed selector state object (vector layer, premise-based via T164), with the directed layer descending to the projective one`
 
 ## Hard limits
 

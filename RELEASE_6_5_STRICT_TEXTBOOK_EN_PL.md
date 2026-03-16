@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.42  
+**Version:** 6.5.43  
 **Date:** 2026-03-16  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -85,13 +85,15 @@
 - Update (`2026-03-16`): the repo now exports a strict **global selector atlas** and a strict **global selector transition/gluing object** on the declared strict domain `C_v1`,
   discharging the global-scope atlas/transition target `T170` (`F469`, packaged by `N515`). This does **not** imply strict-core selector closure, global `QW-2191` discharge, or ToE closure.
 - Update (`2026-03-16`): the repo now exports an explicit strict **global projective selector state object** on the declared strict domain `C_v1`
-  (`F470`, packaged by `N516`). This remains projective/span (residual sign is gauge at state level), does **not** export a sign-sensitive directed orientation datum,
-  does **not** discharge global `QW-2191`, and does **not** imply strict-core selector closure or ToE closure.
+  (`F470`, packaged by `N516`). This object remains projective/span (residual sign is gauge at state level); a directed/sign-sensitive lift is exported separately (`F474/N524`).
+  `F470` itself does **not** discharge global `QW-2191`, and does **not** imply strict-core selector closure or ToE closure.
 - Update (`2026-03-16`): `P474` audits that the exported global projective selector state is projector-level glued/transported consistently by the exported global
   selector transition operators on `{pair1..pair5}` (ray/projector level only; no sign lift). `N519` packages that residual `Z2` sign can be frozen as gauge for the
   exported global projective selector atlas/transition/state objects, without changing those objects.
-- Update (`2026-03-16`): `P475` records the professorial **projective-only continuation** decision: proceed with strict closure tasks using projector/span semantics;
-  defer the directed/sign-sensitive selector-state lift (`H37`/`T171`) to an explicit future branch.
+- Update (`2026-03-16`): post-projective directed continuation is now explicit and premise-tracked:
+  `T164` is discharged as premise-based strict provenance (`F473/N523`), `T171` is discharged (`F474/N524`) by exporting a sign-sensitive observable `S_dir_pair1_strict_v1`
+  and a global directed selector state object `SelectorState_global_C_v1_directed_strict_v1` descending to the projective state, and `P632` selects directed continuation.
+  The earlier projective-only decision packet `P475` remains as the historical projective branch record (quotient semantics).
 - Update (`2026-03-15`): moreover, one cautious follow-up probe exports an explicit **probe-level** mode-index assignment *candidate*
   on `Z_24` induced by the same defect-angle rule (including numeric basis vectors `u_{m,±}` on each `pair_m`) (`P462`).
   This probe-level candidate does not promote `n=24` into the `QW-2190` physical scaffold.
@@ -283,12 +285,13 @@ so the diagonal/local lane canonicalizes the `QW-2190` embedding uniquely up to 
 
 ## 5) Next honest strict moves (as of 2026-03-16)
 
-Dashboards continue to mark `H37` (sign-distinction state: a sign-sensitive / directed selector state datum or observable distinguishing `u` from `-u`) as the next strict frontier for a **directed** continuation under `QW-2191` discipline (`P438`, `P441`), after the export of the global projective selector state object on `C_v1` (`F470/N516`) and the discharge of `T170` (`F469/N515`).
+Dashboards now recommend `P11` as the next strict target (`P438`, `P441`) because the post‑projective directed frontier is now explicitly resolved (no false pass):
 
-However, the continuation is now explicitly bifurcated (`T171`), and `P475` selects the **projective-only** continuation:
+1. `T164` is discharged as premise‑based strict provenance (`F473/N523`): an explicit `Z_12` generator/orientation fixing datum is exported (tracked; not `Aut(Z_12)`‑invariant by `N462`).
+2. `T171` is discharged (`F474/N524`): the repo exports a sign‑sensitive directed observable `S_dir_pair1_strict_v1` and a global directed selector state object `SelectorState_global_C_v1_directed_strict_v1` descending to the already exported projective state (`F470/N516`).
+3. `P632` records the professorial decision to proceed under **directed** continuation in the declared scope (projective state retained as quotient shadow where appropriate).
 
-1. treat the exported global selector state as the strict physical state object at the ray/projector level for the declared closure stack, keeping residual sign as a gauge/convention layer where proven irrelevant (`N502`, `N519`),
-2. proceed with strict-only ToE closure tasks that do not require a sign-sensitive orientation datum (projective-only compatible); the kernel-split-robust canonical-ontology-supported direct formal `c1s1` family route reached `P630` (after `R82` closes the direct `g4` and `g6` family shift-defect zero-witness frontiers under strict `T169` via `N483/F447`, and `R83` closes the remaining direct `gY` family `pair1 c1s1` shift-defect frontier under the explicit vacuum-EoM Yukawa elimination tool `N474`). However, on the current strict branch that keeps the strict diagonal/local `T166` nonzero decision `F2(d)≠0` active (`N482`), the remaining direct-formal residual-cancellation continuation is now explicitly frozen negative by professorial decision (`P631`): by `N473`, forcing the declared `pair1` residual block to vanish would imply `F2(d)=0` and undo the diagonal/local `O(2)` cut. Therefore the projective-only next honest move returns to the post-projective frontier decision (`H37/T171`): either attempt a directed/sign-sensitive selector datum (explicit new structure required), or explicitly remain projective-only without a sign-sensitive claim. Separately, the existing-kernel-feedback → explicit `H3` factorization lane (`P16`) remains explicitly frozen negative on current strict core by professorial decision (`P480`), pending a genuinely new strict zero/cancellation witness class for `R16–R18` and a selector-relevant physical canonicalization ingredient (no smuggled per-site slots).
+Therefore `H37` is no longer the next blocker (it is discharged in the declared premise‑based scope). The next strict ToE‑closure bottleneck returns to the existing‑kernel‑feedback → explicit `H3` factorization route (`P11`), with `P16` remaining frozen negative on current strict core (`P480`) and the direct‑formal residual‑cancellation continuation remaining frozen negative on the `T166 (F2≠0)` branch (`P631`).
 
 Update: a coefficient-filled **declared** control pullback `M_control = T_control^T H_PsiPsi T_control` is now exported from the coefficient-filled canonical Psi block on the declared transport support (`P476`, relying on `R11/R12`), but no host-to-canonical Psi-block matching witness is exported, so no strict existing-feedback promotion is claimed.
 
@@ -298,7 +301,7 @@ Update: strengthening the above, an exhaustive finite scan over the full sign sp
 
 Update: extending beyond the fixed `r_ordpow` magnitude class, a scan over a fixed small family of strictly-defined reference magnitude lifts (each with `|vpsi|=sqrt(rho_*^2*q)` and a uniform `g4` lift per reference, still under conditional `N477`) again reports that **no** reference in that family admits any sign vector satisfying all three `R18` declared `pair1` residual zero equations within tolerance (`P479`, packaged by `N522`). Therefore the missing `P16` zero witness cannot be obtained by switching only to that scanned reference-magnitude family either.
 
-Update (professorial): `P480` records the strict decision to freeze the `P16` lane as explicitly negative on current strict core; the direct-formal `c1s1` family route was advanced to `P630` and is now explicitly frozen negative on the `T166 (F2≠0)` branch by `P631` (recommended next: `H37` / `T171` decision point).
+Update (professorial): `P480` records the strict decision to freeze the `P16` lane as explicitly negative on current strict core; the direct-formal `c1s1` family route was advanced to `P630` and is explicitly frozen negative on the `T166 (F2≠0)` branch by `P631`. After the premise-based `T164` fixing datum export (`F473/N523`) and the `T171` directed datum export (`F474/N524`), `P632` selects directed continuation (recommended next: `P11`).
 
 Update: a strict obstruction is now explicit: any direction-free `Aut(Z_12)`-invariant reference weight family (including the ord-reference weights `ord_Z12`, `r_ord`) cannot distinguish sign on the current exported `pair1` sine axis via a scalar of the form `Σ_x w(x) u_1(x)` (`F472`, packaged by `N518`; strengthening the ord-specific obstruction `F471/N517`). Therefore `H37` requires an explicit reflection-breaking/orientation source or a different observable class.
 
@@ -471,19 +474,20 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
 Repo nadal **nie** eksportuje:
 
 1. strict-core selector closure / dopuszczalnego `S_sel_int`,
-2. ścisłego znako‑czułego / kierunkowego datumu stanu selektora lub obserwabli rozróżniającej `u` od `-u` (audyty `H36`/`H37`), ponad poziom projektowy/span,
+2. ścisłego **Aut(Z_12)-invariant** znako‑czułego / kierunkowego datumu stanu selektora “za darmo” z samej struktury typed `Z_12/Aut(Z_12)` (granica `N462`); w zadeklarowanym scope premise-based (`T164`) taki datum jest już wyeksportowany jako directed lift (`F474/N524`, decyzja `P632`),
 3. aksjomatycznie wolnego **globalnego** rozładowania `QW-2191` poza pasem diagonal/local i zakresem `n=12`,
 4. ścisłej konwencji znaku/orientacji tam, gdzie downstream wymaga absolutnego znaku (o ile nie jest osobno pokazane, że znak jest gauge),
 5. domknięcia ToE.
 
 ## 2) Następny uczciwy ruch (stan: 2026-03-16)
 
-Dashboards nadal wskazują `H37` (rozróżnienie znaku: znako‑czuły / kierunkowy datum stanu selektora lub obserwabla rozróżniająca `u` od `-u`) jako następny strict frontier **dla gałęzi kierunkowej** w dyscyplinie `QW-2191` (`P438`, `P441`), po eksporcie globalnego projektowego stanu selektora na `C_v1` (`F470/N516`) i po rozładowaniu `T170` (`F469/N515`).
+Dashboards teraz wskazują `P11` jako następny strict target (`P438`, `P441`), ponieważ post‑projective frontier kierunkowy jest jawnie domknięty (no false pass):
 
-Jednak kontynuacja jest teraz jawnie rozdzielona (`T171`), a `P475` wybiera gałąź **projekcyjną**:
+1. `T164` jest rozładowane jako premise‑based strict provenance (`F473/N523`): wyeksportowano jawny fixing datumu generatora/orientacji `Z_12` (śledzony; nie `Aut(Z_12)`‑invariant przez `N462`).
+2. `T171` jest rozładowane (`F474/N524`): repo eksportuje znako‑czułą obserwablę kierunkową `S_dir_pair1_strict_v1` oraz globalny directed state `SelectorState_global_C_v1_directed_strict_v1` schodzący do już wyeksportowanego projektowego stanu (`F470/N516`).
+3. `P632` utrwala decyzję profesorską: kontynuujemy gałąź **kierunkową** w zadeklarowanym scope (projektowy stan pozostaje jako quotient shadow tam, gdzie potrzeba).
 
-1. traktować globalny stan selektora jako obiekt promienia/projektora w zadeklarowanym stacku domknięcia, zamrażając residualny znak jako gauge/konwencję tam, gdzie pokazano gauge‑irrelewantność (`N502`, `N519`),
-2. przejść do strict-only zadań domknięcia ToE, które nie wymagają znako‑czułego datumu orientacji (kompatybilne z gałęzią projekcyjną); kernel-split-robust canonical-ontology-supported direct formal trasa rodziny `c1s1` doszła do `P630` (po `R82`, które domyka frontiery zero-witness dla rodzin `g4` i `g6` pod jawną regułą strict `T169` z `N483/F447`, oraz po `R83`, które domyka pozostały frontier `gY` dla defektu `pair1 c1s1` w jawnej dyscyplinie eliminacji Yukawy z diagonal residual przez vacuum‑EoM (`N474`). Jednak na aktualnej gałęzi strict utrzymującej rozstrzygnięcie diagonal/local `T166` typu `F2(d)≠0` (`N482`) pozostała kontynuacja “residual‑cancellation” jest teraz jawnie zamrożona jako negatywna decyzją profesorską (`P631`): z `N473` wynika, że wymuszenie zaniku zadeklarowanego bloku residual `pair1` implikuje `F2(d)=0` i cofa cięcie `O(2)` na pasie diagonal/local. W konsekwencji następny uczciwy ruch na semantyce projekcyjnej wraca do decyzji post‑projective (`H37/T171`): albo próbujemy gałęzi kierunkowej/znakoczułej (wymaga jawnej nowej struktury), albo jawnie pozostajemy projekcyjni bez claimu znako‑czułego. Niezależnie, trasa existing-kernel-feedback → factorization `H3` (`P16`) pozostaje jawnie zamrożona jako negatywna w aktualnym strict core decyzją profesorską (`P480`), do czasu wyeksportowania nowej, rzeczywiście ścisłej klasy witnessów zero/cancellation dla `R16–R18` oraz składnika kanonizacji selector‑relevant (bez przemycanych per-site slotów).
+W konsekwencji `H37` nie jest już blockerem; następny bottleneck wraca do trasy existing-kernel-feedback → factorization `H3` (`P11`), przy zachowaniu jawnych zamrożeń: `P16` jest negatywne (`P480`), a direct-formal residual-cancellation pozostaje negatywne na gałęzi `T166 (F2≠0)` (`P631`).
 
 Update: repo eksportuje teraz coefficient-filled **declared** control pullback `M_control = T_control^T H_PsiPsi T_control` z coefficient-filled canonical `H_PsiPsi` na zadeklarowanym transporcie (`P476`, oparte o `R11/R12`), ale bez witnessu dopasowania hosta do nośnika kanonicznego (`C10_B1`), więc bez promocji do strict existing-feedback.
 
@@ -496,7 +500,7 @@ nie może zostać uzyskany przez zmianę jedynie wyboru znaków wewnątrz tej us
 
 Update: rozszerzając poza ustaloną klasę magnitud `r_ordpow`, skan stałej małej rodziny ściśle zdefiniowanych referencyjnych podniesień magnitud (każde z `|vpsi|=sqrt(rho_*^2*q)` i uniform `g4` per referencja, nadal pod warunkowym `N477`) raportuje ponownie, że **żadna** referencja w tej rodzinie nie dopuszcza wektora znaków spełniającego wszystkie trzy zadeklarowane równania residual “zero” dla `pair1` z `R18` w tolerancji (`P479`, opakowane przez `N522`). W konsekwencji brakujący witness “zero” na `P16` nie może zostać uzyskany przez przejście jedynie na tę skanowaną rodzinę referencyjnych magnitud.
 
-Update (decyzja profesorska): `P480` utrwala ścisłą decyzję: zamrażamy trasę `P16` jako jawnie negatywną w aktualnym strict core; direct formal trasa `c1s1` została doprowadzona do `P630` i jest teraz jawnie zamrożona jako negatywna na gałęzi `T166 (F2≠0)` decyzją `P631` (rekomendowany next: `H37` / punkt decyzyjny `T171`).
+Update (decyzja profesorska): `P480` utrwala ścisłą decyzję: zamrażamy trasę `P16` jako jawnie negatywną w aktualnym strict core; direct formal trasa `c1s1` została doprowadzona do `P630` i jest jawnie zamrożona jako negatywna na gałęzi `T166 (F2≠0)` decyzją `P631`. Po eksporcie premise-based fixu `T164` (`F473/N523`) i eksporcie directed datumu `T171` (`F474/N524`), `P632` wybiera kontynuację kierunkową (rekomendowany next: `P11`).
 
 Update: jawne jest teraz jedno ścisłe ograniczenie: żadna direction-free (tj. `Aut(Z_12)`-invariant) rodzina wag referencyjnych (w tym wagi ord-reference `ord_Z12`, `r_ord`) nie potrafi rozróżnić znaku na aktualnie wyeksportowanej osi `pair1` typu sine poprzez skalar postaci `Σ_x w(x) u_1(x)` (`F472`, opakowane przez `N518`; wzmacniając ord-specyficzną przeszkodę `F471/N517`). W konsekwencji `H37` wymaga jawnego źródła łamiącego symetrię odbicia/orientacji albo innej klasy obserwabli.
 
@@ -510,8 +514,8 @@ Update: `P474` audytuje, że wyeksportowany globalny projektowy obiekt stanu sel
 poziomie projektorów (ray/projector-level; bez podnoszenia znaku do fizycznego datumu). `N519` pakuje, że residualny znak `Z2` można zamrozić jako gauge dla
 wyeksportowanych globalnych obiektów atlasu/przejść/stanu (projective), bez zmiany tych obiektów.
 
-Update: `P475` utrwala decyzję “projekcyjną”: kontynuujemy strict-only domknięcie na semantyce projektorów/span (tam gdzie znak jest gauge‑irrelewant), a gałąź
-kierunkowa/znakoczuła (`H37`/`T171`) pozostaje jawnie otwarta jako osobny, przyszły krok.
+Update: `P475` utrwala decyzję “projekcyjną” jako historyczną gałąź quotient (semantyka projektorów/span tam gdzie znak jest gauge‑irrelewant). Po eksporcie premise-based fixu `T164`
+(`F473/N523`) oraz eksporcie directed datumu `T171` (`F474/N524`), `P632` wybiera kontynuację kierunkową; gałąź projekcyjna pozostaje jako quotient shadow, a `H37/T171` nie jest już frontierem na aktualnej gałęzi.
 
 Update: na bazie `O_12` repo eksportuje teraz jawnie dwu‑chartową **sekcję operatorową** na `{pair1,pair2}` na poziomie projektorowym:
 `A_2(pair2) = O_12 A_1(pair1) O_12^T` (`F462`), opakowane (`N507`) i audytowane (`P466`). To nadal nie jest strict-core selector closure i nie rozładowuje globalnie `QW-2191`.
