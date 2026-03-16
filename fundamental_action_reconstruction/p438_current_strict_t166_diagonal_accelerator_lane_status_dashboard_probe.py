@@ -268,6 +268,14 @@ N539_SUMMARY = (
     GENERATED
     / "n539_current_strict_witness_provider_presence_theorem_for_seed_v1_realization_attempt_summary.json"
 )
+P648_SUMMARY = (
+    GENERATED
+    / "p648_current_first_admissibility_clause_rerun_after_seed_v1_witness_provider_export_probe_summary.json"
+)
+N540_SUMMARY = (
+    GENERATED
+    / "n540_current_first_admissibility_clause_discharge_theorem_for_s_sel_int_strict_core_source_object_v1_summary.json"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -753,12 +761,25 @@ def main() -> None:
                                                             "Next move: package the witness-provider presence theorem (N539) without implying admissible S_sel_int."
                                                         )
                                                     else:
-                                                        recommended_next_target = "ATTACK_ADMISSIBILITY_BRANCH_ON_EXPORTED_CONSTRUCTED_SOURCE_OBJECT_FOR_SEED_V1"
-                                                        recommendation_reason = (
-                                                            "N539 packages witness-provider presence (constructed source object export exists for seed v1). "
-                                                            "Next move: attack admissibility + E_orient export on the exported constructed source object, "
-                                                            "without implying strict-core selector closure / QW-2191 discharge."
-                                                        )
+                                                        if not P648_SUMMARY.exists():
+                                                            recommended_next_target = "P648"
+                                                            recommendation_reason = (
+                                                                "N539 packages witness-provider presence (constructed source object export exists for seed v1). "
+                                                                "Next move: rerun the first admissibility clause for S_sel_int on the exported strict-core source object (P648)."
+                                                            )
+                                                        elif not N540_SUMMARY.exists():
+                                                            recommended_next_target = "N540"
+                                                            recommendation_reason = (
+                                                                "P648 reports the first admissibility clause rerun result for S_sel_int after the seed-v1 witness provider export. "
+                                                                "Next move: package the first-clause discharge theorem (N540), keeping later clauses explicitly open."
+                                                            )
+                                                        else:
+                                                            recommended_next_target = "DEFINE_TYPED_CARRIER_AND_E_ORIENT_EXPORT_INTERFACE_FOR_S_SEL_INT_STRICT_CORE_SOURCE_OBJECT_V1"
+                                                            recommendation_reason = (
+                                                                "N540 discharges only the first admissibility clause for S_sel_int (genuinely new strict-core source object). "
+                                                                "Next move: attack the second clause (typed carrier enough for later E_orient export) by defining an explicit typed carrier "
+                                                                "decomposition + future E_orient target frame for S_sel_int_strict_core_source_object_v1, without implying admissible E_orient."
+                                                            )
         except Exception:
             pass
 

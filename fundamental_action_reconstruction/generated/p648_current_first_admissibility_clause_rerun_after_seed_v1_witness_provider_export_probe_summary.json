@@ -1,0 +1,101 @@
+{
+  "stage": "P648",
+  "status": "CURRENT_REPO_EXPORTS_ONE_GENUINELY_NEW_STRICT_CORE_SOURCE_OBJECT_SATISFYING_THE_FIRST_ADMISSIBILITY_CLAUSE_FOR_S_SEL_INT_AFTER_P648",
+  "lane": "current_first_admissibility_clause_rerun_after_seed_v1_witness_provider_export_only",
+  "exported_object": "S_sel_int_strict_core_source_object_v1",
+  "first_clause": "genuinely_new_strict_core_source_object_required",
+  "checks": [
+    {
+      "id": "f34_first_clause_required",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "F34 keeps the genuinely-new strict-core source-object clause active for S_sel_int"
+    },
+    {
+      "id": "new_exported_identity",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "a new strict-core exported source-object identity exists"
+    },
+    {
+      "id": "constructed_source_object_exported",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "the constructed source object is exported (seed-v1 witness provider)"
+    },
+    {
+      "id": "strict_core_only",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "the object is exported on strict core only"
+    },
+    {
+      "id": "no_external_selector_import",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "no external selector import is used as the source object"
+    },
+    {
+      "id": "kernel_split_safe",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "no silent legacy->strict kernel substitution is used"
+    },
+    {
+      "id": "reuses_psi0_artifact",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "does not reuse psi0 artifacts as the source object"
+    },
+    {
+      "id": "reuses_fr_route_artifact",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "does not reuse hybrid/legacy FR route artifacts as the source object"
+    },
+    {
+      "id": "reuses_sigma_int_candidate_as_source_object",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "does not identify the source object with sigma_int itself"
+    },
+    {
+      "id": "reuses_overlay_fit_artifact",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "does not reuse overlay-fit artifacts as the source object"
+    },
+    {
+      "id": "uses_axiom_lane_artifact",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "does not rely on axiom-lane artifacts as the source object"
+    },
+    {
+      "id": "nonreduction_witness_present",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "a simple nonreduction witness is present (not pure packaging of sigma_int)"
+    }
+  ],
+  "no_false_pass": true,
+  "remaining_admissibility_clauses_unresolved": [
+    "carrier_typed_enough_for_later_E_orient_export_required",
+    "source_seed_only_not_counted_as_E_orient_or_bridge",
+    "strict_core_only_required (still not full admissibility)",
+    "selector_acceptance_outside_strict_core_may_not_count_as_source_construction",
+    "future_bridge_compatible_required"
+  ]
+}
