@@ -117,9 +117,17 @@ P16_FACTORIZATION_SUMMARY = (
     GENERATED
     / "p16_existing_kernel_feedback_legacy_chart_reduced_operator_export_probe_summary.json"
 )
+P61_DIRECT_FORMAL_SUMMARY = (
+    GENERATED
+    / "p61_canonical_ontology_supported_direct_formal_c1s1_family_route_probe_after_direct_m2_psi7_source_eom_coefficient_defect_polynomial_packet_summary.json"
+)
 P46_DIRECT_FORMAL_SUMMARY = (
     GENERATED
     / "p46_canonical_ontology_supported_direct_formal_c1s1_family_route_probe_after_direct_m2_psi4_target_action_coefficient_defect_polynomial_packet_summary.json"
+)
+P622_DIRECT_FORMAL_SUMMARY = (
+    GENERATED
+    / "p622_canonical_ontology_supported_direct_formal_c1s1_family_route_probe_after_direct_m2_psi2_psi5_and_psi8_psi11_role_matching_packets_summary.json"
 )
 
 
@@ -355,15 +363,50 @@ def main() -> None:
         # - We keep H37 as an open frontier for the directed branch, but the recommended next move shifts to strict-only ToE closure tasks
         #   that do not require a sign-sensitive orientation datum (projective-only compatible).
         if projective_selected:
-            if P46_DIRECT_FORMAL_SUMMARY.exists():
+            if P622_DIRECT_FORMAL_SUMMARY.exists():
+                recommended_next = "P622"
+                p_note = ""
+                try:
+                    p622 = load_json(P622_DIRECT_FORMAL_SUMMARY)
+                    missing = p622.get("remaining_missing_upstream_objects")
+                    p_note = f" Current direct-formal frontier: P622. remaining_missing_upstream_objects={missing}."
+                except Exception:
+                    p_note = " P622 summary exists but could not be parsed."
+                recommendation_reason = (
+                    "Projective-only continuation is explicitly selected (P475): treat the exported global projective selector state as the strict physical state object "
+                    "for the declared closure stack, keeping residual sign as a gauge/convention layer where proven irrelevant (N502, N519). "
+                    "H37/T171 remain open for a future directed branch only. "
+                    "Next strict-only ToE-closure bottleneck: continue on the kernel-split-robust canonical-ontology-supported direct formal c1s1 family route "
+                    "(F3 priority), currently tracked at P622."
+                    + p_note
+                )
+            elif P61_DIRECT_FORMAL_SUMMARY.exists():
+                recommended_next = "P61"
+                p_note = ""
+                try:
+                    p61 = load_json(P61_DIRECT_FORMAL_SUMMARY)
+                    missing = p61.get("remaining_missing_upstream_objects")
+                    p_note = f" Current direct-formal frontier: P61. remaining_missing_upstream_objects={missing}."
+                except Exception:
+                    p_note = " P61 summary exists but could not be parsed."
+
+                recommendation_reason = (
+                    "Projective-only continuation is explicitly selected (P475): treat the exported global projective selector state as the strict physical state object "
+                    "for the declared closure stack, keeping residual sign as a gauge/convention layer where proven irrelevant (N502, N519). "
+                    "H37/T171 remain open for a future directed branch only. "
+                    "Next strict-only ToE-closure bottleneck: continue on the kernel-split-robust canonical-ontology-supported direct formal c1s1 family route "
+                    "(F3 priority), currently tracked at P61."
+                    + p_note
+                )
+            elif P46_DIRECT_FORMAL_SUMMARY.exists():
                 recommended_next = "P46"
-                p46_note = ""
+                p_note = ""
                 try:
                     p46 = load_json(P46_DIRECT_FORMAL_SUMMARY)
                     missing = p46.get("remaining_missing_objects")
-                    p46_note = f" Current direct-formal frontier: P46. remaining_missing_objects={missing}."
+                    p_note = f" Current direct-formal frontier: P46. remaining_missing_objects={missing}."
                 except Exception:
-                    p46_note = " P46 summary exists but could not be parsed."
+                    p_note = " P46 summary exists but could not be parsed."
 
                 recommendation_reason = (
                     "Projective-only continuation is explicitly selected (P475): treat the exported global projective selector state as the strict physical state object "
@@ -371,7 +414,7 @@ def main() -> None:
                     "H37/T171 remain open for a future directed branch only. "
                     "Next strict-only ToE-closure bottleneck: continue on the kernel-split-robust canonical-ontology-supported direct formal c1s1 family route "
                     "(F3 priority), currently tracked at P46."
-                    + p46_note
+                    + p_note
                 )
             else:
                 recommended_next = "P16" if P16_FACTORIZATION_SUMMARY.exists() else "P11"
