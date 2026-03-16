@@ -1,0 +1,119 @@
+{
+  "object": "SignDistinctionObstruction_pair1_aut_invariant_reference_weights_strict_v1",
+  "stage": "F472",
+  "status": "actual_exported_pair1_sign_distinction_obstruction_for_aut_invariant_reference_weights_on_current_exported_instance__no_false_pass",
+  "as_of": "2026-03-16",
+  "generated_utc": "2026-03-16T02:25:02.624512+00:00",
+  "intent": "Record a strict obstruction that any Aut(Z_12)-invariant (direction-free) reference weight family w(x) cannot distinguish u_1 from -u_1 on the current exported pair1 sine axis via a sign-sensitive scalar of the form \u03a3_x w(x) u_1(x). Reason: Aut(Z_12) contains inversion x\u21a6-x, so Aut-invariant weights are even; while the current exported u_1 is odd under reflection, so the weighted sum cancels.",
+  "inputs": {
+    "A1_pair1_ref": "fundamental_action_reconstruction/generated/a_1_pair1_orientation_projector_operator_strict_core_v1.json",
+    "r_ord_z12_ref_if_present": "fundamental_action_reconstruction/generated/r_ord_z12_v1_reference_distribution.json"
+  },
+  "data": {
+    "n": 12,
+    "aut_units_mod_n": [
+      1,
+      5,
+      7,
+      11
+    ],
+    "aut_orbits_under_units_multiplication": [
+      [
+        0
+      ],
+      [
+        1,
+        5,
+        7,
+        11
+      ],
+      [
+        2,
+        10
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        6
+      ]
+    ]
+  },
+  "checks": {
+    "u1_odd_under_reflection_max_abs": 0.0,
+    "u1_odd_under_reflection": true,
+    "u1_coords_in_c1_s1": [
+      0.0,
+      -1.0
+    ],
+    "aut_orbits_partition_Zn": true,
+    "sum_u1_over_each_aut_orbit": [
+      {
+        "orbit": [
+          0
+        ],
+        "sum_u1_over_orbit": 0.0
+      },
+      {
+        "orbit": [
+          1,
+          5,
+          7,
+          11
+        ],
+        "sum_u1_over_orbit": 0.0
+      },
+      {
+        "orbit": [
+          2,
+          10
+        ],
+        "sum_u1_over_orbit": 0.0
+      },
+      {
+        "orbit": [
+          3,
+          9
+        ],
+        "sum_u1_over_orbit": 0.0
+      },
+      {
+        "orbit": [
+          4,
+          8
+        ],
+        "sum_u1_over_orbit": 0.0
+      },
+      {
+        "orbit": [
+          6
+        ],
+        "sum_u1_over_orbit": 0.0
+      }
+    ],
+    "all_aut_orbit_sums_zero": true,
+    "ord_z12_by_x_aut_invariant_if_present": true,
+    "r_ord_weights_aut_invariant_if_present": true
+  },
+  "computed_if_present": {
+    "dot_u1_with_ord_z12_by_x": 0.0,
+    "dot_u1_with_r_ord_weights": 0.0
+  },
+  "meaning": [
+    "Any Aut(Z_12)-invariant weight w(x) is even under reflection x\u21a6-x (because -1\u2208Aut(Z_12)).",
+    "For any odd u(x) (u(-x)=-u(x)), the scalar \u03a3_x w(x)u(x) cancels, so it cannot distinguish u from -u.",
+    "Therefore direction-free (Aut-invariant) reference weights cannot supply a strict sign-distinction observable on pair1 of the form \u03a3_x w(x)u_1(x) on this exported instance."
+  ],
+  "hard_limits": [
+    "Obstruction record only; does not discharge H37 and does not export a sign-sensitive physical orientation datum.",
+    "Does not claim strict-core selector closure / admissible S_sel_int.",
+    "Does not claim global discharge of QW-2191.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}

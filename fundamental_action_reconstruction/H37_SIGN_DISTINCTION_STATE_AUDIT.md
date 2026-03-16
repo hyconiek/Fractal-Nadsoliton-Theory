@@ -17,6 +17,7 @@ Check whether the current strict core contains any object that identifies `u` an
 - `F467/N511`: lane-scoped oriented transport (α mod 2π) exists as a **tracked convention layer** (sign-tracked vector section), not a physical sign datum.
 - `F470/N516`: global projective selector state object exported on `C_v1` (projector/span; residual sign is gauge at state level).
 - `N517` (+ `F471`): even ord-reference weights (`ord_Z12`, `r_ord`) cannot supply a sign-distinction scalar of the form `Σ_x w(x) u_1(x)` on the current exported `pair1` sine axis.
+- `N518` (+ `F472`): more generally, any direction-free (`Aut(Z_12)`-invariant) reference weight family `w` cannot supply such a sign-distinction scalar on the current exported `pair1` sine axis (since `-1∈Aut(Z_12)` ⇒ Aut-invariant weights are even under reflection).
 
 ## Audit
 
@@ -42,6 +43,8 @@ but both remain compatible with residual sign as gauge unless an explicit sign-s
 
 Moreover, `N517` records a strict obstruction for one tempting route: the current strict `ord`-reference family (`ord_Z12`, `r_ord`)
 is even under reflection and therefore cannot distinguish `u_1` from `-u_1` on the current exported `pair1` sine axis via an observable of the form `Σ_x w(x)u_1(x)`.
+
+`N518` strengthens this to an entire **direction-free** class: any `Aut(Z_12)`-invariant reference weight family (and hence any reference weight not introducing a marked direction/generator) is even under reflection and therefore cannot distinguish sign via such a linear scalar on the current exported sine axis.
 
 ## Result
 

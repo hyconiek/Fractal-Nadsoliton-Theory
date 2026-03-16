@@ -94,6 +94,10 @@ N516_THEOREM = (
 N517_THEOREM = (
     ROOT / "N517_CURRENT_FIRST_STRICT_H37_EVEN_REFERENCE_WEIGHTS_SIGN_DISTINCTION_OBSTRUCTION_THEOREM.md"
 )
+N518_THEOREM = (
+    ROOT
+    / "N518_CURRENT_FIRST_STRICT_H37_AUT_INVARIANT_REFERENCE_WEIGHTS_SIGN_DISTINCTION_OBSTRUCTION_THEOREM.md"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -254,11 +258,21 @@ def main() -> None:
         )
         diagonal_note += " H39 object-existence layer is now resolved by F470/N516; next frontier shifts to H37."
 
-    if recommended_next == "H37" and N517_THEOREM.exists():
-        recommendation_reason += (
-            " Note: N517 shows even ord-reference weights (ord_Z12 / r_ord) cannot distinguish sign on the current exported pair1 sine axis "
-            "via a scalar of the form Σ_x w(x) u_1(x); therefore H37 requires an explicit reflection-breaking/orientation source or a different observable class."
-        )
+    if recommended_next == "H37":
+        if N518_THEOREM.exists():
+            note = (
+                " Note: N518 strengthens N517: any direction-free Aut(Z_12)-invariant reference weight family cannot distinguish sign on the current exported pair1 sine axis "
+                "via a scalar of the form Σ_x w(x) u_1(x); therefore H37 requires an explicit reflection-breaking/orientation source or a different observable class."
+            )
+            if "N518 strengthens N517" not in recommendation_reason:
+                recommendation_reason += note
+        elif N517_THEOREM.exists():
+            note = (
+                " Note: N517 shows even ord-reference weights (ord_Z12 / r_ord) cannot distinguish sign on the current exported pair1 sine axis "
+                "via a scalar of the form Σ_x w(x) u_1(x); therefore H37 requires an explicit reflection-breaking/orientation source or a different observable class."
+            )
+            if "N517 shows even ord-reference weights" not in recommendation_reason:
+                recommendation_reason += note
 
     # Backward-compatible mapping: older P438 versions returned a packet label ("B3") here.
     if recommended_next == "B3" and N491_THEOREM.exists():
