@@ -132,6 +132,14 @@ P635_SUMMARY = (
     GENERATED
     / "p635_future_genuinely_new_source_object_lift_bind_target_probe_for_s_sel_int_candidate_seed_v1_summary.json"
 )
+F636_SUMMARY = (
+    GENERATED
+    / "f636_first_future_genuinely_new_source_object_lift_bind_attempt_packet_for_s_sel_int_candidate_seed_v1_summary.json"
+)
+P636_SUMMARY = (
+    GENERATED
+    / "p636_first_future_genuinely_new_source_object_lift_bind_attempt_probe_for_s_sel_int_candidate_seed_v1_summary.json"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -397,11 +405,24 @@ def main() -> None:
                                 "above the seed-v1 materials. Next move: run P635 to confirm the constructive move is reduced to that one target."
                             )
                         else:
-                            recommended_next_target = "S_SEL_INT_NEW_OBJECT_TARGET_V1"
-                            recommendation_reason = (
-                                "P635 reduces the next constructive move to one explicit future target S_sel_int_new_object_target_v1. "
-                                "Next move: attempt construction of that target under strict-core and QW-2191 discipline (no implied selector closure)."
-                            )
+                            if not F636_SUMMARY.exists():
+                                recommended_next_target = "F636"
+                                recommendation_reason = (
+                                    "P635 reduces the next constructive move to one explicit future target S_sel_int_new_object_target_v1. "
+                                    "Next move: export the first strict-core lift/bind attempt instance on that target (F636)."
+                                )
+                            elif not P636_SUMMARY.exists():
+                                recommended_next_target = "P636"
+                                recommendation_reason = (
+                                    "F636 exports the first lift/bind attempt instance S_sel_int_new_object_lift_bind_attempt_v1. "
+                                    "Next move: run P636 to confirm the constructive move is reduced to that one attempt instance."
+                                )
+                            else:
+                                recommended_next_target = "S_SEL_INT_NEW_OBJECT_LIFT_BIND_ATTEMPT_V1_REALIZATION"
+                                recommendation_reason = (
+                                    "P636 reduces the next constructive move to the first lift/bind attempt instance S_sel_int_new_object_lift_bind_attempt_v1. "
+                                    "Next move: define and probe a realization target/attempt/verdict above that attempt (no implied admissibility)."
+                                )
         except Exception:
             pass
 
