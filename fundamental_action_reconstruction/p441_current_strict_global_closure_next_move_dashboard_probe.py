@@ -105,6 +105,10 @@ P473_SUMMARY = (
     GENERATED
     / "p473_current_strict_extension_lane_global_oriented_selector_state_projector_consistency_audit_probe_summary.json"
 )
+P474_SUMMARY = (
+    GENERATED
+    / "p474_current_strict_global_projective_selector_state_gluing_consistency_audit_probe_summary.json"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -304,6 +308,17 @@ def main() -> None:
                         " Extension-lane note: P473 audits that the non-strict AX29 global oriented vector representative "
                         "is projector-consistent with the strict global projective selector state (F470), so the extension-lane sign-fix "
                         "changes only a sign-gauge representative and does not change strict core."
+                    )
+            except Exception:
+                pass
+        if P474_SUMMARY.exists() and "Strict note: P474" not in recommendation_reason:
+            try:
+                p474 = load_json(P474_SUMMARY)
+                if bool(p474.get("overall_pass")):
+                    recommendation_reason += (
+                        " Strict note: P474 audits that the exported global projective selector state object is projector-level "
+                        "glued/transported consistently by the exported global selector transition operators on {pair1..pair5}; "
+                        "this is ray/projector-level only and does not lift residual sign."
                     )
             except Exception:
                 pass
