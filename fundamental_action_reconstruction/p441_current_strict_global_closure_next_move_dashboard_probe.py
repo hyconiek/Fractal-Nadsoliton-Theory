@@ -129,6 +129,10 @@ P622_DIRECT_FORMAL_SUMMARY = (
     GENERATED
     / "p622_canonical_ontology_supported_direct_formal_c1s1_family_route_probe_after_direct_m2_psi2_psi5_and_psi8_psi11_role_matching_packets_summary.json"
 )
+P623_DIRECT_FORMAL_SUMMARY = (
+    GENERATED
+    / "p623_canonical_ontology_supported_direct_formal_c1s1_family_route_probe_after_direct_m2_psi2_psi5_and_psi8_psi11_common_plus3_assignment_slot_split_packets_summary.json"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -363,7 +367,24 @@ def main() -> None:
         # - We keep H37 as an open frontier for the directed branch, but the recommended next move shifts to strict-only ToE closure tasks
         #   that do not require a sign-sensitive orientation datum (projective-only compatible).
         if projective_selected:
-            if P622_DIRECT_FORMAL_SUMMARY.exists():
+            if P623_DIRECT_FORMAL_SUMMARY.exists():
+                recommended_next = "P623"
+                p_note = ""
+                try:
+                    p623 = load_json(P623_DIRECT_FORMAL_SUMMARY)
+                    missing = p623.get("remaining_missing_upstream_objects")
+                    p_note = f" Current direct-formal frontier: P623. remaining_missing_upstream_objects={missing}."
+                except Exception:
+                    p_note = " P623 summary exists but could not be parsed."
+                recommendation_reason = (
+                    "Projective-only continuation is explicitly selected (P475): treat the exported global projective selector state as the strict physical state object "
+                    "for the declared closure stack, keeping residual sign as a gauge/convention layer where proven irrelevant (N502, N519). "
+                    "H37/T171 remain open for a future directed branch only. "
+                    "Next strict-only ToE-closure bottleneck: continue on the kernel-split-robust canonical-ontology-supported direct formal c1s1 family route "
+                    "(F3 priority), currently tracked at P623."
+                    + p_note
+                )
+            elif P622_DIRECT_FORMAL_SUMMARY.exists():
                 recommended_next = "P622"
                 p_note = ""
                 try:
