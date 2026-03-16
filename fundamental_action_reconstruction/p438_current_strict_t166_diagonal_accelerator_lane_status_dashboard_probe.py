@@ -288,6 +288,18 @@ N541_SUMMARY = (
     GENERATED
     / "n541_current_second_admissibility_clause_discharge_theorem_for_s_sel_int_strict_core_source_object_v1_summary.json"
 )
+F650_SUMMARY = (
+    GENERATED
+    / "f650_first_exported_s_sel_int_strict_core_source_object_source_seed_only_packet_summary.json"
+)
+P650_SUMMARY = (
+    GENERATED
+    / "p650_current_third_admissibility_clause_rerun_after_source_seed_only_packet_for_s_sel_int_strict_core_source_object_v1_probe_summary.json"
+)
+N542_SUMMARY = (
+    GENERATED
+    / "n542_current_third_admissibility_clause_discharge_theorem_for_s_sel_int_strict_core_source_object_v1_summary.json"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -808,15 +820,37 @@ def main() -> None:
                                                                     "Next move: package the second-clause discharge theorem (N541), keeping later clauses explicitly open."
                                                                 )
                                                             else:
-                                                                recommended_next_target = (
-                                                                    "ATTACK_THIRD_ADMISSIBILITY_CLAUSE_SOURCE_SEED_ONLY_NOT_COUNTED_AS_E_ORIENT_OR_BRIDGE_FOR_S_SEL_INT_STRICT_CORE_SOURCE_OBJECT_V1"
-                                                                )
-                                                                recommendation_reason = (
-                                                                    "N541 discharges the second admissibility clause (typed carrier enough for a later E_orient export) "
-                                                                    "for S_sel_int_strict_core_source_object_v1 on current repo state. "
-                                                                    "Next move: attack the third clause (source seed only not counted as E_orient or bridge), "
-                                                                    "keeping strict-core-only and selector-closure limits explicit."
-                                                                )
+                                                                if not F650_SUMMARY.exists():
+                                                                    recommended_next_target = "F650"
+                                                                    recommendation_reason = (
+                                                                        "N541 discharges the second admissibility clause (typed carrier enough for a later E_orient export) "
+                                                                        "for S_sel_int_strict_core_source_object_v1 on current repo state. "
+                                                                        "Next move: freeze explicit source-seed-only data (F650): "
+                                                                        "source_seed_only=true, and no exported E_orient/B_sel/R_sel/O_sel."
+                                                                    )
+                                                                elif not P650_SUMMARY.exists():
+                                                                    recommended_next_target = "P650"
+                                                                    recommendation_reason = (
+                                                                        "F650 freezes the explicit source-seed-only status for S_sel_int_strict_core_source_object_v1. "
+                                                                        "Next move: rerun the third admissibility clause "
+                                                                        "(source seed only not counted as E_orient or bridge) on current repo state (P650)."
+                                                                    )
+                                                                elif not N542_SUMMARY.exists():
+                                                                    recommended_next_target = "N542"
+                                                                    recommendation_reason = (
+                                                                        "P650 reports the third admissibility clause rerun result for S_sel_int after the source-seed-only packet. "
+                                                                        "Next move: package the third-clause discharge theorem (N542), keeping later clauses explicitly open."
+                                                                    )
+                                                                else:
+                                                                    recommended_next_target = (
+                                                                        "ATTACK_FOURTH_ADMISSIBILITY_CLAUSE_STRICT_CORE_ONLY_REQUIRED_FOR_S_SEL_INT_STRICT_CORE_SOURCE_OBJECT_V1"
+                                                                    )
+                                                                    recommendation_reason = (
+                                                                        "N542 discharges the third admissibility clause (source seed only; not counted as E_orient or bridge) "
+                                                                        "for S_sel_int_strict_core_source_object_v1 on current repo state. "
+                                                                        "Next move: attack the fourth clause (strict-core-only required), "
+                                                                        "keeping selector-closure limits explicit."
+                                                                    )
         except Exception:
             pass
 
