@@ -1,0 +1,38 @@
+{
+  "stage": "F644",
+  "lane": "post_admissibility_orientation_export_branch_first_only",
+  "goal": "freeze_the_orientation_export_branch_as_the_first_remaining_lower_branch_after_the_seed_v1_admissibility_branch_obstruction",
+  "status": "F644_EXECUTED_FIRST_POST_ADMISSIBILITY_ORIENTATION_EXPORT_BRANCH_PACKET_FOR_SEED_V1_NO_FALSE_PASS",
+  "first_lower_branch_to_attack": "future_derivation_of_admissible_E_orient_from_a_future_new_source_object",
+  "branch_ordering_basis": [
+    "current_admissibility_branch_obstruction_already_packaged_by_N534",
+    "E_orient_contract_already_frozen_by_F32",
+    "downstream_B_sel_R_sel_O_sel_requires_source_object_and_admissible_orientation_export"
+  ],
+  "checks": [
+    {
+      "id": "n534_admissibility_obstruction_discharged",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "N534 packages the current seed-v1 admissibility-branch obstruction"
+    },
+    {
+      "id": "n534_first_remaining_open_branch",
+      "actual": "future_derivation_of_admissible_E_orient_from_a_future_new_source_object",
+      "expected": "future_derivation_of_admissible_E_orient_from_a_future_new_source_object",
+      "pass": true,
+      "meaning": "after admissibility, the first remaining lower branch is the orientation-export branch (seed v1)"
+    },
+    {
+      "id": "f32_no_silent_kernel_substitution_clause_present",
+      "actual": false,
+      "expected": true,
+      "pass": false,
+      "meaning": "F32 freezes the admissible E_orient contract (kernel split discipline present)"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

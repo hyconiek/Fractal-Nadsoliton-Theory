@@ -212,6 +212,46 @@ N533_SUMMARY = (
     GENERATED
     / "n533_current_success_branch_obstruction_theorem_for_s_sel_int_candidate_seed_v1_realization_attempt_summary.json"
 )
+F643_SUMMARY = (
+    GENERATED
+    / "f643_first_post_verdict_admissibility_branch_packet_for_s_sel_int_candidate_seed_v1_summary.json"
+)
+P643_SUMMARY = (
+    GENERATED
+    / "p643_current_admissibility_branch_discharge_probe_for_future_constructed_source_object_for_s_sel_int_candidate_seed_v1_summary.json"
+)
+N534_SUMMARY = (
+    GENERATED
+    / "n534_current_admissibility_branch_obstruction_theorem_for_future_constructed_source_object_for_s_sel_int_candidate_seed_v1_summary.json"
+)
+F644_SUMMARY = (
+    GENERATED
+    / "f644_first_post_admissibility_orientation_export_branch_packet_for_s_sel_int_candidate_seed_v1_summary.json"
+)
+P644_SUMMARY = (
+    GENERATED
+    / "p644_current_orientation_export_branch_discharge_probe_for_s_sel_int_candidate_seed_v1_summary.json"
+)
+N535_SUMMARY = (
+    GENERATED
+    / "n535_current_orientation_export_branch_obstruction_theorem_for_s_sel_int_candidate_seed_v1_summary.json"
+)
+F645_SUMMARY = (
+    GENERATED
+    / "f645_last_downstream_completion_branch_packet_for_s_sel_int_candidate_seed_v1_summary.json"
+)
+P645_SUMMARY = (
+    GENERATED
+    / "p645_current_downstream_completion_branch_discharge_probe_for_s_sel_int_candidate_seed_v1_summary.json"
+)
+N536_SUMMARY = (
+    GENERATED
+    / "n536_current_downstream_completion_branch_obstruction_theorem_for_s_sel_int_candidate_seed_v1_summary.json"
+)
+N537_SUMMARY = (
+    GENERATED
+    / "n537_current_post_verdict_lower_branch_full_negative_closure_theorem_for_s_sel_int_candidate_seed_v1_summary.json"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -592,9 +632,75 @@ def main() -> None:
                                         recommended_next_target = "EXPORT_EXPLICIT_SUCCESS_OR_FAILURE_VERDICT_FOR_S_SEL_INT_NEW_OBJECT_CONSTRUCTED_REALIZATION_ATTEMPT_V1"
                                         recommendation_reason = (
                                             "N533 packages the current success-branch obstruction (v1) after the failure-side obstruction (N532). "
-                                            "Next move: export an explicit success/failure verdict discharge for the fixed realization attempt via a strict witness source "
-                                            "(constructed source object export + admissibility interface), or prove a non-bridge impossibility at this scope."
+                                            "Next move: proceed to the post-verdict lower branches (admissibility -> E_orient -> downstream) under no-false-pass ordering for seed v1."
                                         )
+                                        if not F643_SUMMARY.exists():
+                                            recommended_next_target = "F643"
+                                            recommendation_reason = (
+                                                "N533 packages the current success-branch obstruction (v1) after the failure-side obstruction (N532). "
+                                                "Next move: freeze the admissibility branch as the first lower branch below the exhausted verdict layer (F643)."
+                                            )
+                                        elif not P643_SUMMARY.exists():
+                                            recommended_next_target = "P643"
+                                            recommendation_reason = (
+                                                "F643 freezes admissibility as the first post-verdict lower branch (seed v1). "
+                                                "Next move: run P643 to test whether an explicit admissibility-branch discharge is already exported."
+                                            )
+                                        elif not N534_SUMMARY.exists():
+                                            recommended_next_target = "N534"
+                                            recommendation_reason = (
+                                                "P643 shows no explicit admissibility-branch discharge export on current repo state (seed v1). "
+                                                "Next move: package the admissibility-branch obstruction theorem (N534)."
+                                            )
+                                        elif not F644_SUMMARY.exists():
+                                            recommended_next_target = "F644"
+                                            recommendation_reason = (
+                                                "N534 packages the current admissibility-branch obstruction (seed v1). "
+                                                "Next move: freeze the orientation-export branch as the next lower branch (F644)."
+                                            )
+                                        elif not P644_SUMMARY.exists():
+                                            recommended_next_target = "P644"
+                                            recommendation_reason = (
+                                                "F644 freezes the orientation-export branch ordering (seed v1). "
+                                                "Next move: run P644 to test whether an explicit orientation-export discharge is already exported."
+                                            )
+                                        elif not N535_SUMMARY.exists():
+                                            recommended_next_target = "N535"
+                                            recommendation_reason = (
+                                                "P644 shows no explicit orientation-export discharge export on current repo state (seed v1). "
+                                                "Next move: package the orientation-export obstruction theorem (N535)."
+                                            )
+                                        elif not F645_SUMMARY.exists():
+                                            recommended_next_target = "F645"
+                                            recommendation_reason = (
+                                                "N535 packages the current orientation-export obstruction (seed v1). "
+                                                "Next move: freeze the downstream-completion branch as the last lower branch (F645)."
+                                            )
+                                        elif not P645_SUMMARY.exists():
+                                            recommended_next_target = "P645"
+                                            recommendation_reason = (
+                                                "F645 freezes the downstream-completion branch ordering (seed v1). "
+                                                "Next move: run P645 to test whether an explicit downstream-completion discharge is already exported."
+                                            )
+                                        elif not N536_SUMMARY.exists():
+                                            recommended_next_target = "N536"
+                                            recommendation_reason = (
+                                                "P645 shows no explicit downstream-completion discharge export on current repo state (seed v1). "
+                                                "Next move: package the downstream-completion obstruction theorem (N536)."
+                                            )
+                                        elif not N537_SUMMARY.exists():
+                                            recommended_next_target = "N537"
+                                            recommendation_reason = (
+                                                "N536 packages the downstream-completion obstruction (seed v1). "
+                                                "Next move: package the full post-verdict lower-branch negative closure theorem (N537)."
+                                            )
+                                        else:
+                                            recommended_next_target = "DESIGN_NEW_STRICT_WITNESS_PROVIDER_FOR_SEED_V1_REALIZATION_ATTEMPT"
+                                            recommendation_reason = (
+                                                "N537 closes the post-verdict lower-branch frontier negatively on current repo state (seed v1). "
+                                                "Next move: design and export a genuinely constructive strict witness provider (constructed source object export attempt + admissibility interface), "
+                                                "or prove a scope-level non-bridge impossibility, without implying selector closure / QW-2191 discharge."
+                                            )
         except Exception:
             pass
 

@@ -1,0 +1,38 @@
+{
+  "stage": "F645",
+  "lane": "last_downstream_completion_branch_only",
+  "goal": "freeze_the_downstream_completion_branch_as_the_only_remaining_lower_branch_after_seed_v1_orientation_export_obstruction",
+  "status": "F645_EXECUTED_LAST_DOWNSTREAM_COMPLETION_BRANCH_PACKET_FOR_SEED_V1_NO_FALSE_PASS",
+  "last_lower_branch_to_attack": "future_completion_of_B_sel_R_sel_O_sel_after_new_source_object_construction",
+  "branch_ordering_basis": [
+    "current_admissibility_branch_obstruction_already_packaged_by_N534",
+    "current_orientation_export_branch_obstruction_already_packaged_by_N535",
+    "downstream_requires_source_object_and_orientation_export_stages"
+  ],
+  "checks": [
+    {
+      "id": "n534_admissibility_obstruction_discharged",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "N534 packages the seed-v1 admissibility obstruction"
+    },
+    {
+      "id": "n535_orientation_export_obstruction_discharged",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "N535 packages the seed-v1 orientation-export obstruction"
+    },
+    {
+      "id": "n535_last_remaining_open_branch",
+      "actual": "future_completion_of_B_sel_R_sel_O_sel_after_new_source_object_construction",
+      "expected": "future_completion_of_B_sel_R_sel_O_sel_after_new_source_object_construction",
+      "pass": true,
+      "meaning": "after orientation-export, the only remaining lower branch is downstream completion (seed v1)"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

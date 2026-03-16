@@ -1,0 +1,37 @@
+{
+  "stage": "P645",
+  "lane": "current_downstream_completion_branch_discharge_only",
+  "goal": "test_whether_the_current_repo_already_exports_an_explicit_downstream_completion_branch_discharge_for_seed_v1_last_remaining_lower_branch",
+  "status": "CURRENT_REPO_DOES_NOT_EXPORT_AN_EXPLICIT_DOWNSTREAM_COMPLETION_BRANCH_DISCHARGE_FOR_SEED_V1_AFTER_P645",
+  "target_state": {
+    "downstream_completion_branch_selected_as_next_attack": true,
+    "explicit_downstream_completion_branch_discharge_exported": false,
+    "remaining_open_branches": []
+  },
+  "checks": [
+    {
+      "id": "f645_downstream_branch_last",
+      "actual": "future_completion_of_B_sel_R_sel_O_sel_after_new_source_object_construction",
+      "expected": "future_completion_of_B_sel_R_sel_O_sel_after_new_source_object_construction",
+      "pass": true,
+      "meaning": "F645 freezes downstream completion as the last remaining lower branch (seed v1)"
+    },
+    {
+      "id": "n535_orientation_export_obstruction_discharged",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "N535 packages the seed-v1 orientation-export obstruction"
+    },
+    {
+      "id": "explicit_downstream_completion_branch_discharge_exported",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "the current repo does not export an explicit downstream-completion branch discharge (seed v1)"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

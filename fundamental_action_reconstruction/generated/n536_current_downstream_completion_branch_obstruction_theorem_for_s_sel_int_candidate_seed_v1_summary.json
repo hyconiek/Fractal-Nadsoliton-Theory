@@ -1,0 +1,46 @@
+{
+  "step": "N536",
+  "status": "N536_DISCHARGED_CURRENT_DOWNSTREAM_COMPLETION_BRANCH_OBSTRUCTION_THEOREM_FOR_SEED_V1_NO_FALSE_PASS",
+  "scope": "current_downstream_completion_branch_discharge_only",
+  "checks": [
+    {
+      "id": "downstream_completion_branch_selected_as_next_attack",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "P645 stays on the seed-v1 downstream-completion ordering"
+    },
+    {
+      "id": "explicit_downstream_completion_branch_discharge_exported",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "the current repo still does not export an explicit downstream-completion branch discharge (seed v1)"
+    },
+    {
+      "id": "remaining_open_branches_empty",
+      "actual": [],
+      "expected": [],
+      "pass": true,
+      "meaning": "after P645 the lower-branch list is exhausted on the current repo state (seed v1)"
+    }
+  ],
+  "theorem_result": {
+    "discharged": true,
+    "explicit_downstream_completion_branch_discharge_exported": false,
+    "remaining_open_branches": [],
+    "full_closure_pass": false
+  },
+  "remaining_open_branches": [],
+  "hard_limits": [
+    "explicit_downstream_completion_branch_discharge_not_yet_exported",
+    "constructed_source_object_not_yet_exported",
+    "admissible_S_sel_int_not_yet_constructed",
+    "admissible_E_orient_not_yet_constructed",
+    "downstream_chain_not_yet_constructed",
+    "no_strict_core_selector_closure",
+    "no_QW2191_discharge",
+    "no_ToE_closure"
+  ],
+  "no_false_pass": true
+}
