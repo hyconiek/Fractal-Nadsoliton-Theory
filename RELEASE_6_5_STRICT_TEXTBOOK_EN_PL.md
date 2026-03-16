@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.35  
+**Version:** 6.5.36  
 **Date:** 2026-03-16  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -90,6 +90,8 @@
 - Update (`2026-03-16`): `P474` audits that the exported global projective selector state is projector-level glued/transported consistently by the exported global
   selector transition operators on `{pair1..pair5}` (ray/projector level only; no sign lift). `N519` packages that residual `Z2` sign can be frozen as gauge for the
   exported global projective selector atlas/transition/state objects, without changing those objects.
+- Update (`2026-03-16`): `P475` records the professorial **projective-only continuation** decision: proceed with strict closure tasks using projector/span semantics;
+  defer the directed/sign-sensitive selector-state lift (`H37`/`T171`) to an explicit future branch.
 - Update (`2026-03-15`): moreover, one cautious follow-up probe exports an explicit **probe-level** mode-index assignment *candidate*
   on `Z_24` induced by the same defect-angle rule (including numeric basis vectors `u_{m,±}` on each `pair_m`) (`P462`).
   This probe-level candidate does not promote `n=24` into the `QW-2190` physical scaffold.
@@ -281,12 +283,12 @@ so the diagonal/local lane canonicalizes the `QW-2190` embedding uniquely up to 
 
 ## 5) Next honest strict moves (as of 2026-03-16)
 
-Dashboards now recommend `H37` (sign-distinction state: a sign-sensitive / directed selector state datum or observable distinguishing `u` from `-u`) as the next strict frontier under `QW-2191` discipline (`P438`, `P441`), after the export of the global projective selector state object on `C_v1` (`F470/N516`) and the discharge of `T170` (`F469/N515`):
+Dashboards continue to mark `H37` (sign-distinction state: a sign-sensitive / directed selector state datum or observable distinguishing `u` from `-u`) as the next strict frontier for a **directed** continuation under `QW-2191` discipline (`P438`, `P441`), after the export of the global projective selector state object on `C_v1` (`F470/N516`) and the discharge of `T170` (`F469/N515`).
 
-1. the residual `Z2` sign freeze (as a tracked gauge/convention layer for exported downstream objects where sign is gauge‑irrelevant) is now
-   packaged as a strict theorem (`N502`), and
-2. continue strict-only closure toward a sign-sensitive/directed selector state datum or observable (H37/H36) under explicit `QW-2191` discipline:
-   use the exported global atlas/transition objects on `C_v1` (`F469/N515`) and the global projective selector state object (`F470/N516`), without promoting any implied strict-core selector closure or global `QW-2191` discharge.
+However, the continuation is now explicitly bifurcated (`T171`), and `P475` selects the **projective-only** continuation:
+
+1. treat the exported global selector state as the strict physical state object at the ray/projector level for the declared closure stack, keeping residual sign as a gauge/convention layer where proven irrelevant (`N502`, `N519`),
+2. proceed with strict-only ToE closure tasks that depend only on projectors/spans; the next concrete bottleneck is the existing-kernel-feedback → explicit H3-chain factorization map route (`P10/P11`).
 
 Update: a strict obstruction is now explicit: any direction-free `Aut(Z_12)`-invariant reference weight family (including the ord-reference weights `ord_Z12`, `r_ord`) cannot distinguish sign on the current exported `pair1` sine axis via a scalar of the form `Σ_x w(x) u_1(x)` (`F472`, packaged by `N518`; strengthening the ord-specific obstruction `F471/N517`). Therefore `H37` requires an explicit reflection-breaking/orientation source or a different observable class.
 
@@ -466,12 +468,12 @@ Repo nadal **nie** eksportuje:
 
 ## 2) Następny uczciwy ruch (stan: 2026-03-16)
 
-Dashboards teraz rekomendują `H37` (rozróżnienie znaku: znako‑czuły / kierunkowy datum stanu selektora lub obserwabla rozróżniająca `u` od `-u`) jako następny strict frontier w dyscyplinie `QW-2191` (`P438`, `P441`), po eksporcie globalnego projektowego stanu selektora na `C_v1` (`F470/N516`) i po rozładowaniu `T170` (`F469/N515`):
+Dashboards nadal wskazują `H37` (rozróżnienie znaku: znako‑czuły / kierunkowy datum stanu selektora lub obserwabla rozróżniająca `u` od `-u`) jako następny strict frontier **dla gałęzi kierunkowej** w dyscyplinie `QW-2191` (`P438`, `P441`), po eksporcie globalnego projektowego stanu selektora na `C_v1` (`F470/N516`) i po rozładowaniu `T170` (`F469/N515`).
 
-1. zamrożenie residualnego znaku `Z2` (jako śledzona warstwa gauge/konwencji dla obiektów downstream, gdzie znak jest gauge‑irrelewant)
-   jest już opakowane jako twierdzenie strict (`N502`), oraz
-2. kontynuować strict-only closure w kierunku znako‑czułego / kierunkowego datumu stanu selektora lub obserwabli (H37/H36) w jawnej dyscyplinie `QW-2191`:
-   używać już wyeksportowanych globalnych obiektów atlasu i przejść na `C_v1` (`F469/N515`) oraz globalnego projektowego obiektu stanu selektora (`F470/N516`), bez promocji do implied strict-core selector closure ani globalnego rozładowania `QW-2191`.
+Jednak kontynuacja jest teraz jawnie rozdzielona (`T171`), a `P475` wybiera gałąź **projekcyjną**:
+
+1. traktować globalny stan selektora jako obiekt promienia/projektora w zadeklarowanym stacku domknięcia, zamrażając residualny znak jako gauge/konwencję tam, gdzie pokazano gauge‑irrelewantność (`N502`, `N519`),
+2. przejść do strict-only zadań domknięcia ToE zależnych tylko od projektorów/span; najbliższy konkretny bottleneck to route factorization existing-kernel-feedback → jawny łańcuch `H3` (`P10/P11`).
 
 Update: jawne jest teraz jedno ścisłe ograniczenie: żadna direction-free (tj. `Aut(Z_12)`-invariant) rodzina wag referencyjnych (w tym wagi ord-reference `ord_Z12`, `r_ord`) nie potrafi rozróżnić znaku na aktualnie wyeksportowanej osi `pair1` typu sine poprzez skalar postaci `Σ_x w(x) u_1(x)` (`F472`, opakowane przez `N518`; wzmacniając ord-specyficzną przeszkodę `F471/N517`). W konsekwencji `H37` wymaga jawnego źródła łamiącego symetrię odbicia/orientacji albo innej klasy obserwabli.
 
@@ -484,6 +486,9 @@ opakowany twierdzeniem strict (`N506`) i audytowany sondą (`P465`); globalny at
 Update: `P474` audytuje, że wyeksportowany globalny projektowy obiekt stanu selektora jest spójnie sklejony/transportowany przez globalne operatory przejścia na
 poziomie projektorów (ray/projector-level; bez podnoszenia znaku do fizycznego datumu). `N519` pakuje, że residualny znak `Z2` można zamrozić jako gauge dla
 wyeksportowanych globalnych obiektów atlasu/przejść/stanu (projective), bez zmiany tych obiektów.
+
+Update: `P475` utrwala decyzję “projekcyjną”: kontynuujemy strict-only domknięcie na semantyce projektorów/span (tam gdzie znak jest gauge‑irrelewant), a gałąź
+kierunkowa/znakoczuła (`H37`/`T171`) pozostaje jawnie otwarta jako osobny, przyszły krok.
 
 Update: na bazie `O_12` repo eksportuje teraz jawnie dwu‑chartową **sekcję operatorową** na `{pair1,pair2}` na poziomie projektorowym:
 `A_2(pair2) = O_12 A_1(pair1) O_12^T` (`F462`), opakowane (`N507`) i audytowane (`P466`). To nadal nie jest strict-core selector closure i nie rozładowuje globalnie `QW-2191`.

@@ -1,7 +1,7 @@
 # H38: Projective Selector State Audit
 
 **Date:** 2026-03-16  
-**Status:** `PASS_PARTIAL_PROJECTIVE_STATE_ONLY__GLOBAL_PROJECTIVE_STATE_OBJECT_EXPORTED_BUT_NO_SIGN_SENSITIVE_ORIENTATION_DATUM`
+**Status:** `PASS_PROJECTIVE_CONTINUATION_SELECTED__GLOBAL_PROJECTIVE_STATE_OBJECT_EXPORTED__DIRECTED_SIGN_LIFT_DEFERRED`
 
 ## Goal
 
@@ -17,6 +17,7 @@ Check whether the current strict core supports the selector state on `pair1 = (c
 - `H37_SIGN_DISTINCTION_STATE_AUDIT`
 - `F470/N516`: global projective selector state object exported on `C_v1` (projector/span semantics; residual sign is gauge at state level).
 - `N501` / `N502`: residual `Z2` sign flips are gauge-irrelevant for the currently exported downstream span/projector objects (declared scope).
+- `P475`: professorial decision packet selecting **projective-only continuation** (directed sign lift deferred).
 
 ## Audit
 
@@ -36,10 +37,15 @@ Taken together, these facts support only a projective/ray-level reading of the l
 
 The strict core still does **not** support:
 
-- a theorem that this projective/ray state is the physically correct selector state,
 - a strict sign-sensitive directed selector state object or observable (lifting residual `Z2`),
 - a strict-core selector closure claim (`S_sel_int`),
 - a global discharge of `QW-2191`.
+
+However, by `P475` the strict continuation now proceeds under an explicit **projective-only** interpretation for the declared closure stack:
+
+- treat the strict selector state as a ray/projector object,
+- keep residual sign as gauge/convention where proven irrelevant (`N502`, `N519`),
+- leave a directed/sign-sensitive lift as a separate future branch (`T171`).
 
 ## Result
 

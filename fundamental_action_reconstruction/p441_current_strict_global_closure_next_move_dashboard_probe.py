@@ -109,6 +109,10 @@ P474_SUMMARY = (
     GENERATED
     / "p474_current_strict_global_projective_selector_state_gluing_consistency_audit_probe_summary.json"
 )
+P475_SUMMARY = (
+    GENERATED
+    / "p475_current_strict_projective_only_continuation_decision_packet_summary.json"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -146,6 +150,19 @@ def run_script(path: Path, extra_args: list[str] | None = None) -> dict[str, Any
 
 def load_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def _projective_only_continuation_selected() -> tuple[bool, dict[str, Any] | None]:
+    if not P475_SUMMARY.exists():
+        return False, None
+    try:
+        p475 = load_json(P475_SUMMARY)
+    except Exception:
+        return False, None
+    selected = (p475.get("decision") == "PROJECTIVE_ONLY_CONTINUATION_SELECTED") or (
+        p475.get("selected_continuation") == "projective_only"
+    )
+    return bool(selected), p475
 
 
 def main() -> None:
@@ -269,6 +286,8 @@ def main() -> None:
         )
         diagonal_note += " H39 object-existence layer is now resolved by F470/N516; next frontier shifts to H37."
 
+    projective_selected, p475 = _projective_only_continuation_selected()
+
     if recommended_next == "H37":
         if N518_THEOREM.exists():
             note = (
@@ -323,6 +342,19 @@ def main() -> None:
             except Exception:
                 pass
 
+        # Professorial continuation decision:
+        # - If projective-only continuation is explicitly selected (P475), we do not pursue a directed sign-lift in strict core (H37/T171).
+        # - We keep H37 as an open frontier for the directed branch, but the recommended next move shifts to strict-only ToE closure tasks
+        #   that depend only on projectors/spans (e.g. the existing-kernel-feedback factorization route P10/P11).
+        if projective_selected:
+            recommended_next = "P11"
+            recommendation_reason = (
+                "Projective-only continuation is explicitly selected (P475): treat the exported global projective selector state as the strict physical state object "
+                "for the declared closure stack, keeping residual sign as a gauge/convention layer where proven irrelevant (N502, N519). "
+                "H37/T171 remain open for a future directed branch only. "
+                "Next strict ToE-closure bottleneck: materialize the factorization/equivalence map from existing kernel feedback into the explicit H3 chain (P10/P11)."
+            )
+
     # Backward-compatible mapping: older P438 versions returned a packet label ("B3") here.
     if recommended_next == "B3" and N491_THEOREM.exists():
         recommended_next = "T170"
@@ -374,6 +406,14 @@ def main() -> None:
             "recommendation_reason": recommendation_reason,
             "diagonal_lane_note": diagonal_note,
             "shannon_lane_note": shannon_note,
+            "projective_only_continuation": {
+                "selected": bool(projective_selected),
+                "p475_summary": (str(P475_SUMMARY.relative_to(REPO)) if p475 is not None else None),
+                "note": (
+                    "If selected, H37/T171 remain open for directed continuation only; the recommended next move shifts to ToE closure tasks "
+                    "that depend only on projectors/spans."
+                ),
+            },
         },
         "no_false_pass": True,
     }
