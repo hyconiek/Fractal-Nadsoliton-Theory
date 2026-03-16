@@ -158,7 +158,10 @@ def main() -> None:
     # - the Shannon lane exports strict selector ingredients (T165, and a full n=12 all-pairs mode-index assignment via F454),
     #   but it still does not decide the diagonal/local defect (T166) nor does it globally discharge QW-2191.
     recommended_next = str(p438.get("recommended_next_strict_target") or "T168")
-    recommendation_reason = "P438 diagonal accelerator lane determines the next strict missing target beneath T166."
+    recommendation_reason = str(
+        p438.get("recommendation_reason")
+        or "P438 diagonal accelerator lane determines the next strict missing target beneath T166."
+    )
 
     diagonal_note = "P438 summarizes the diagonal/local lane computability and next strict target."
     if N487_THEOREM.exists():
@@ -213,12 +216,22 @@ def main() -> None:
         diagonal_note += " Sigma-int post-map object support is now exported (F452/N490); next frontier shifts to T2."
 
     if recommended_next == "T2" and N491_THEOREM.exists():
-        recommended_next = "QW-2191"
+        recommended_next = "T170"
         recommendation_reason = (
             "T2 theorem-level bridge discharge is now exported (N491). The remaining strict frontier is explicit continuation "
-            "under QW-2191 discipline (no implied selector closure) and strict-only ToE-closure continuation per S2."
+            "under QW-2191 discipline (no implied selector closure): discharge the strict global selector atlas + transition/gluing "
+            "object target (T170), keeping all residual sign handling explicit."
         )
-        diagonal_note += " T2 theorem-level bridge discharge is now exported (N491); next frontier shifts to QW-2191 continuation."
+        diagonal_note += " T2 theorem-level bridge discharge is now exported (N491); next frontier shifts to T170."
+
+    # Backward-compatible mapping: older P438 versions returned a packet label ("B3") here.
+    if recommended_next == "B3" and N491_THEOREM.exists():
+        recommended_next = "T170"
+        recommendation_reason = (
+            "T2 theorem-level bridge discharge is now exported (N491). The remaining strict frontier is explicit continuation "
+            "under QW-2191 discipline (no implied selector closure): discharge the strict global selector atlas + transition/gluing "
+            "object target (T170), proceeding via the B3 continuation while keeping residual sign handling explicit."
+        )
 
     shannon_note = "P439 is probe-level only; Shannon-lane status is determined by strict theorem/packet exports."
     if F454_SHANNON_ASSIGNMENT.exists() or F454_SHANNON_ASSIGNMENT_SUMMARY.exists() or N496_THEOREM.exists():

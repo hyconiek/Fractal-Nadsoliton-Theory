@@ -229,12 +229,12 @@ def main() -> None:
         )
 
     if recommended_next_target == "T2" and N491_THEOREM.exists():
-        recommended_next_target = "B3"
+        recommended_next_target = "T170"
         recommendation_reason = (
             "T2 theorem-level bridge discharge is now exported (N491). The remaining strict frontier is explicit continuation "
-            "under QW-2191 discipline (no implied selector closure): proceed via the B3 topological selector bridge packet "
-            "continuation (residual sign lift or explicit sign gauge-irrelevance where required), or explicitly freeze residual "
-            "sign as a tracked convention layer while continuing strict-only closure per S2."
+            "under QW-2191 discipline (no implied selector closure): discharge the strict global selector atlas + transition/gluing "
+            "object target (T170), proceeding via the B3 topological selector bridge continuation while keeping the residual "
+            "Z2 sign handling explicit (e.g. sign gauge-irrelevance where proven, or sign frozen as a tracked convention layer)."
         )
 
     artifact = {
@@ -277,6 +277,7 @@ def main() -> None:
         "status": "PASS_DASHBOARD_READY",
         "decision_ready_from_repo_values": decision_ready,
         "recommended_next_strict_target": recommended_next_target,
+        "recommendation_reason": recommendation_reason,
         "t166_decision_theorem_exported": t166_decision_theorem_exported,
         "theorem_level_pass": False,
         "full_closure_pass": False,
