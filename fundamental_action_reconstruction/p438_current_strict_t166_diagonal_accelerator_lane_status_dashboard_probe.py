@@ -312,6 +312,18 @@ N543_SUMMARY = (
     GENERATED
     / "n543_current_fourth_admissibility_clause_discharge_theorem_for_s_sel_int_strict_core_source_object_v1_summary.json"
 )
+F652_SUMMARY = (
+    GENERATED
+    / "f652_first_exported_s_sel_int_strict_core_source_object_selector_acceptance_independence_packet_summary.json"
+)
+P652_SUMMARY = (
+    GENERATED
+    / "p652_current_fifth_admissibility_clause_rerun_after_selector_acceptance_independence_packet_for_s_sel_int_strict_core_source_object_v1_probe_summary.json"
+)
+N544_SUMMARY = (
+    GENERATED
+    / "n544_current_fifth_admissibility_clause_discharge_theorem_for_s_sel_int_strict_core_source_object_v1_summary.json"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -876,15 +888,36 @@ def main() -> None:
                                                                             "Next move: package the fourth-clause discharge theorem (N543), keeping later clauses explicitly open."
                                                                         )
                                                                     else:
-                                                                        recommended_next_target = (
-                                                                            "ATTACK_FIFTH_ADMISSIBILITY_CLAUSE_SELECTOR_ACCEPTANCE_OUTSIDE_STRICT_CORE_MAY_NOT_COUNT_AS_SOURCE_CONSTRUCTION_FOR_S_SEL_INT_STRICT_CORE_SOURCE_OBJECT_V1"
-                                                                        )
-                                                                        recommendation_reason = (
-                                                                            "N543 discharges the fourth admissibility clause (strict-core-only required) "
-                                                                            "for S_sel_int_strict_core_source_object_v1 on current repo state. "
-                                                                            "Next move: attack the fifth clause (selector acceptance outside strict core may not count as source construction), "
-                                                                            "keeping QW-2191 and non-strict acceptance lanes explicit."
-                                                                        )
+                                                                        if not F652_SUMMARY.exists():
+                                                                            recommended_next_target = "F652"
+                                                                            recommendation_reason = (
+                                                                                "N543 discharges the fourth admissibility clause (strict-core-only required) "
+                                                                                "for S_sel_int_strict_core_source_object_v1 on current repo state. "
+                                                                                "Next move: freeze explicit selector-acceptance-independence data (F652), "
+                                                                                "without claiming strict-core selector closure."
+                                                                            )
+                                                                        elif not P652_SUMMARY.exists():
+                                                                            recommended_next_target = "P652"
+                                                                            recommendation_reason = (
+                                                                                "F652 freezes selector-acceptance-independence data for S_sel_int_strict_core_source_object_v1. "
+                                                                                "Next move: rerun the fifth admissibility clause "
+                                                                                "(selector acceptance outside strict core may not count as source construction) on current repo state (P652)."
+                                                                            )
+                                                                        elif not N544_SUMMARY.exists():
+                                                                            recommended_next_target = "N544"
+                                                                            recommendation_reason = (
+                                                                                "P652 reports the fifth admissibility clause rerun result for S_sel_int after the selector-acceptance-independence packet. "
+                                                                                "Next move: package the clause discharge theorem (N544), keeping later clauses explicitly open."
+                                                                            )
+                                                                        else:
+                                                                            recommended_next_target = (
+                                                                                "ATTACK_SIXTH_ADMISSIBILITY_CLAUSE_FUTURE_BRIDGE_COMPATIBLE_REQUIRED_FOR_S_SEL_INT_STRICT_CORE_SOURCE_OBJECT_V1"
+                                                                            )
+                                                                            recommendation_reason = (
+                                                                                "N544 discharges the selector-acceptance-independence clause for S_sel_int_strict_core_source_object_v1 on current repo state. "
+                                                                                "Next move: attack the final clause (future bridge compatible required), "
+                                                                                "noting existing incompatibility-boundary results if the clause cannot be certified from the current seed state."
+                                                                            )
         except Exception:
             pass
 
