@@ -1,0 +1,55 @@
+{
+  "stage": "N520",
+  "status": "N520_DISCHARGED_CURRENT_FIRST_STRICT_R18_DECLARED_PAIR1_RESIDUAL_ZERO_EQUATIONS_VALUE_INSTANCE_OBSTRUCTION_THEOREM_NO_FALSE_PASS",
+  "goal": "Package a value-instance-only obstruction: the current P459 strict-derived declared residual pullback violates the R18 declared pair1 residual zero equations (as evaluated by P477).",
+  "scope": "current_strict_derived_value_instance_only",
+  "checks": [
+    {
+      "id": "r18_pair1_reduction_packet_present",
+      "actual": "PASS_PARTIAL_PAIR1_RESIDUAL_DECLARED_PULLBACK_COEFFICIENT_CLASS_REDUCTION_PACKET_READY",
+      "expected": "PASS_PARTIAL_PAIR1_RESIDUAL_DECLARED_PULLBACK_COEFFICIENT_CLASS_REDUCTION_PACKET_READY",
+      "meaning": "R18 summary indicates the declared pair1 coefficient-class reduction packet is ready",
+      "pass": true
+    },
+    {
+      "id": "p459_value_instance_present",
+      "actual": "PASS_COMPUTED_FROM_STRICT_DERIVED_INPUTS",
+      "expected": "PASS_COMPUTED_FROM_STRICT_DERIVED_INPUTS",
+      "meaning": "P459 exports a strict-derived value-instantiated declared control pullback object",
+      "pass": true
+    },
+    {
+      "id": "p477_value_instance_evaluation_present",
+      "actual": "PASS_EVALUATION_ZERO_EQUATIONS_VIOLATED_UNDER_CURRENT_VALUE_INSTANCE",
+      "expected": "one_of:PASS_EVALUATION_ZERO_EQUATIONS_SATISFIED_UNDER_CURRENT_VALUE_INSTANCE,PASS_EVALUATION_ZERO_EQUATIONS_VIOLATED_UNDER_CURRENT_VALUE_INSTANCE",
+      "meaning": "P477 evaluates the R18 declared pair1 residual zero equations on the P459 value instance",
+      "pass": true
+    },
+    {
+      "id": "p477_no_false_pass_flag_present",
+      "actual": true,
+      "expected": true,
+      "meaning": "P477 summary explicitly asserts no_false_pass",
+      "pass": true
+    }
+  ],
+  "blocking_mismatches": [],
+  "theorem_result": {
+    "discharged": true,
+    "obstruction_scope": "value_instance_only",
+    "p459_value_instance_object": "fundamental_action_reconstruction/generated/m_control_residual_diag_declared_value_instantiated_v1.json",
+    "r18_declared_pair1_zero_equations_satisfied": false,
+    "violated_equations": [
+      "c1c1",
+      "s1s1"
+    ]
+  },
+  "depends_on": [
+    "R18_PAIR1_RESIDUAL_DECLARED_PULLBACK_COEFFICIENT_CLASS_REDUCTION_PACKET",
+    "P459_CURRENT_STRICT_R16_DECLARED_CONTROL_PULLBACK_VALUE_INSTANTIATION_PROBE",
+    "P477_CURRENT_STRICT_R18_PAIR1_RESIDUAL_ZERO_EQUATIONS_VALUE_INSTANTIATION_PROBE"
+  ],
+  "required_next_step": "EXPORT_A_STRICT_DERIVED_PROVIDER_CLASS_OR_STATIONARITY_WITNESS_THAT_MAKES_THE_R18_DECLARED_PAIR1_ZERO_EQUATIONS_HOLD_OR_KEEP_THE_HOST_MATCHING_ROUTE_NEGATIVE",
+  "generated_utc": "2026-03-16T11:29:54.891614+00:00",
+  "no_false_pass": true
+}

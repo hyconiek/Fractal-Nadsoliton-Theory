@@ -1,0 +1,148 @@
+{
+  "object": "Pair1ResidualZeroEquationsEvaluation_under_N477_value_instance_v1",
+  "status": "PASS_EVALUATION_ZERO_EQUATIONS_VIOLATED_UNDER_CURRENT_VALUE_INSTANCE",
+  "generated_utc": "2026-03-16T11:25:01.638861+00:00",
+  "intent": "Evaluate the three independent declared pair1 residual zero equations exported by R18 on a concrete value-instantiated declared residual local-diagonal control pullback. This is an evaluation/obstruction artifact only: it does not export a strict zero witness, does not export a stationarity witness, and does not claim host matching or QW-2191 discharge.",
+  "inputs": {
+    "r18_reduction_packet": "fundamental_action_reconstruction/generated/r18_pair1_residual_declared_pullback_coefficient_class_reduction_packet_for_host_matching_route.json",
+    "p459_value_instance_object": "fundamental_action_reconstruction/generated/m_control_residual_diag_declared_value_instantiated_v1.json"
+  },
+  "value_instance_scope": {
+    "note": "P459 instantiates the residual diagonal profile using the conditional N477 Yukawa-free rewrite and a strict-derived (vpsi,g4,g6) provider; no stationarity witness is exported."
+  },
+  "computed": {
+    "sigma_by_class": {
+      "Sigma_psi0_psi6": -0.25097702661158383,
+      "Sigma_psi1_psi7": 12.812283161367974,
+      "Sigma_psi2_psi8": -0.005718701512155366,
+      "Sigma_psi3_psi9": -0.3134583835942124,
+      "Sigma_psi4_psi10": -0.005718701512155588,
+      "Sigma_psi5_psi11": 12.812283161367974
+    },
+    "coefficient_classes": [
+      {
+        "class_symbol": "Sigma_psi0_psi6",
+        "carrier_slots": [
+          "psi0",
+          "psi6"
+        ],
+        "sigma_sum_value": -0.25097702661158383,
+        "coeffs": {
+          "c1c1": 0.166666666667,
+          "c1s1": 0.0,
+          "s1s1": 0.0
+        }
+      },
+      {
+        "class_symbol": "Sigma_psi1_psi7",
+        "carrier_slots": [
+          "psi1",
+          "psi7"
+        ],
+        "sigma_sum_value": 12.812283161367974,
+        "coeffs": {
+          "c1c1": 0.125,
+          "c1s1": 0.072168783649,
+          "s1s1": 0.041666666667
+        }
+      },
+      {
+        "class_symbol": "Sigma_psi2_psi8",
+        "carrier_slots": [
+          "psi2",
+          "psi8"
+        ],
+        "sigma_sum_value": -0.005718701512155366,
+        "coeffs": {
+          "c1c1": 0.041666666667,
+          "c1s1": 0.072168783649,
+          "s1s1": 0.125
+        }
+      },
+      {
+        "class_symbol": "Sigma_psi3_psi9",
+        "carrier_slots": [
+          "psi3",
+          "psi9"
+        ],
+        "sigma_sum_value": -0.3134583835942124,
+        "coeffs": {
+          "c1c1": 0.0,
+          "c1s1": 0.0,
+          "s1s1": 0.166666666667
+        }
+      },
+      {
+        "class_symbol": "Sigma_psi4_psi10",
+        "carrier_slots": [
+          "psi4",
+          "psi10"
+        ],
+        "sigma_sum_value": -0.005718701512155588,
+        "coeffs": {
+          "c1c1": 0.041666666667,
+          "c1s1": -0.072168783649,
+          "s1s1": 0.125
+        }
+      },
+      {
+        "class_symbol": "Sigma_psi5_psi11",
+        "carrier_slots": [
+          "psi5",
+          "psi11"
+        ],
+        "sigma_sum_value": 12.812283161367974,
+        "coeffs": {
+          "c1c1": 0.125,
+          "c1s1": -0.072168783649,
+          "s1s1": 0.041666666667
+        }
+      }
+    ],
+    "equations": [
+      {
+        "entry": "c1c1",
+        "value": 3.1607647274472956,
+        "abs": 3.1607647274472956,
+        "zero_tol": 1e-12,
+        "is_zero": false
+      },
+      {
+        "entry": "c1s1",
+        "value": 0.0,
+        "abs": 0.0,
+        "zero_tol": 1e-12,
+        "is_zero": true
+      },
+      {
+        "entry": "s1s1",
+        "value": 1.0140175241453604,
+        "abs": 1.0140175241453604,
+        "zero_tol": 1e-12,
+        "is_zero": false
+      }
+    ],
+    "all_zero_equations_satisfied": false,
+    "violated_equations": [
+      "c1c1",
+      "s1s1"
+    ],
+    "cross_check_against_p459_pair1_block": {
+      "tolerance": 1e-09,
+      "c1c1_abs_diff": 8.79296635503124e-14,
+      "c1s1_abs_diff": 1.596868058671729e-17,
+      "s1s1_abs_diff": 8.442357923854615e-12,
+      "pass": true
+    }
+  },
+  "hard_limits": [
+    "Consumes P459 which uses the conditional N477 Yukawa-free diagonal residual rewrite; no stationarity witness is exported.",
+    "Does not claim the declared pair1 residual equations hold in strict core or for the canonical vacuum.",
+    "Does not claim any strict cancellation/host matching witness is obtained.",
+    "Does not claim selector-relevant physical canonicalization within the QW-2191 O(2) family.",
+    "Does not claim strict-core selector closure / admissible S_sel_int.",
+    "Does not claim global discharge of QW-2191.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}

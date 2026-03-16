@@ -16,6 +16,13 @@ def load_json(repo_relative_path: str) -> dict[str, Any]:
     return json.loads((REPO / repo_relative_path).read_text(encoding="utf-8"))
 
 
+def load_json_if_exists(repo_relative_path: str) -> dict[str, Any] | None:
+    path = REPO / repo_relative_path
+    if not path.is_file():
+        return None
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
 def main() -> None:
     GENERATED.mkdir(exist_ok=True)
 
@@ -53,6 +60,12 @@ def main() -> None:
     )
     n25 = load_json(
         "fundamental_action_reconstruction/generated/n25_current_existing_kernel_feedback_host_matching_obstruction_after_diagonal_floor_embedding_packet_theorem_summary.json"
+    )
+    p477 = load_json_if_exists(
+        "fundamental_action_reconstruction/generated/p477_current_strict_r18_pair1_residual_zero_equations_value_instantiation_probe_summary.json"
+    )
+    n520 = load_json_if_exists(
+        "fundamental_action_reconstruction/generated/n520_current_first_strict_r18_declared_pair1_residual_zero_equations_value_instance_obstruction_theorem_summary.json"
     )
 
     p15_missing = p15["remaining_missing_upstream_objects"]
@@ -188,11 +201,40 @@ def main() -> None:
         "coefficient_filled_legacy_chart_reduced_operator_present": False,
     }
 
+    value_instance_evidence: dict[str, Any] = {}
+    if isinstance(p477, dict):
+        value_instance_evidence["P477"] = {
+            "status": p477.get("status"),
+            "exported_object": p477.get("exported_object"),
+            "all_zero_equations_satisfied": p477.get("all_zero_equations_satisfied"),
+            "violated_equations": p477.get("violated_equations"),
+            "no_false_pass": p477.get("no_false_pass"),
+        }
+    if isinstance(n520, dict):
+        value_instance_evidence["N520"] = {
+            "status": n520.get("status"),
+            "theorem_result": (n520.get("theorem_result") if isinstance(n520.get("theorem_result"), dict) else None),
+            "no_false_pass": n520.get("no_false_pass"),
+        }
+
+    extra_reason = ""
+    if (
+        isinstance(p477, dict)
+        and p477.get("status") == "PASS_EVALUATION_ZERO_EQUATIONS_VIOLATED_UNDER_CURRENT_VALUE_INSTANCE"
+    ):
+        extra_reason = (
+            " Additionally, the currently exported strict-derived value-instantiated declared residual pullback object (P459) "
+            "does not satisfy the R18 declared pair1 residual zero equations under the current value instance (P477; packaged as "
+            "a value-instance-only obstruction theorem by N520), so the missing zero/cancellation witness cannot be obtained by "
+            "simply promoting the currently exported strict-derived value instance."
+        )
+
     report = {
         "stage": "P16",
         "goal": "compute_or_fail_existing_kernel_feedback_legacy_chart_reduced_operator_export_on_pair1_after_P15",
         "status": "NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_LEGACY_CHART_REDUCED_OPERATOR_EXPORT_ROUTE",
-        "reason": "the repo now contains the host carrier, the typed host-to-control pushforward, the formal control pullback formula, the chosen current-pair chart reduction, and (in declared scope) both a coefficient-filled canonical Psi x Psi block H_PsiPsi (R12) and a coefficient-filled declared control pullback M_control (P476). The host-to-canonical matching gap (C10_B1) is now partially reduced: the shared kernel/light-facing channel specialization witness is exported (R14), the host scalar-floor embedding into the canonical diagonal sector is exported (R15), and the declared control pullback of the residual local diagonal sector is exported and reduced to a finite pair1 zero system (R16/R18), with the host-side residual correction branch explicitly absent (R17). However, the repo still exports no (i) zero-or-cancellation witness for the declared control pullback of that residual diagonal sector, and no (ii) selector-relevant physical canonicalization of the declared control transport within the QW-2191 O(2) family; therefore no strict existing-feedback legacy chart-reduced operator object on pair1 can be promoted from the current declared artifacts",
+        "reason": "the repo now contains the host carrier, the typed host-to-control pushforward, the formal control pullback formula, the chosen current-pair chart reduction, and (in declared scope) both a coefficient-filled canonical Psi x Psi block H_PsiPsi (R12) and a coefficient-filled declared control pullback M_control (P476). The host-to-canonical matching gap (C10_B1) is now partially reduced: the shared kernel/light-facing channel specialization witness is exported (R14), the host scalar-floor embedding into the canonical diagonal sector is exported (R15), and the declared control pullback of the residual local diagonal sector is exported and reduced to a finite pair1 zero system (R16/R18), with the host-side residual correction branch explicitly absent (R17). However, the repo still exports no (i) zero-or-cancellation witness for the declared control pullback of that residual diagonal sector, and no (ii) selector-relevant physical canonicalization of the declared control transport within the QW-2191 O(2) family; therefore no strict existing-feedback legacy chart-reduced operator object on pair1 can be promoted from the current declared artifacts"
+        + extra_reason,
         "lane": "existing_kernel_feedback_legacy_chart_reduced_operator_export_route_after_P15",
         "route_under_test": [
             "existing_kernel_feedback_host_operator",
@@ -223,6 +265,7 @@ def main() -> None:
             "into_current_blockers": remaining_missing,
         },
         "remaining_missing_upstream_objects": remaining_missing,
+        "value_instance_evidence": value_instance_evidence,
         "blocking_frontier": {
             "C10_B1": c10["residual_blockers"]["C10_B1"],
             "C15_B2": c15["residual_blockers"]["C15_B2"],

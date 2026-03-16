@@ -2,7 +2,7 @@
   "stage": "P16",
   "goal": "compute_or_fail_existing_kernel_feedback_legacy_chart_reduced_operator_export_on_pair1_after_P15",
   "status": "NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_LEGACY_CHART_REDUCED_OPERATOR_EXPORT_ROUTE",
-  "reason": "the repo now contains the host carrier, the typed host-to-control pushforward, the formal control pullback formula, the chosen current-pair chart reduction, and (in declared scope) both a coefficient-filled canonical Psi x Psi block H_PsiPsi (R12) and a coefficient-filled declared control pullback M_control (P476). The host-to-canonical matching gap (C10_B1) is now partially reduced: the shared kernel/light-facing channel specialization witness is exported (R14), the host scalar-floor embedding into the canonical diagonal sector is exported (R15), and the declared control pullback of the residual local diagonal sector is exported and reduced to a finite pair1 zero system (R16/R18), with the host-side residual correction branch explicitly absent (R17). However, the repo still exports no (i) zero-or-cancellation witness for the declared control pullback of that residual diagonal sector, and no (ii) selector-relevant physical canonicalization of the declared control transport within the QW-2191 O(2) family; therefore no strict existing-feedback legacy chart-reduced operator object on pair1 can be promoted from the current declared artifacts",
+  "reason": "the repo now contains the host carrier, the typed host-to-control pushforward, the formal control pullback formula, the chosen current-pair chart reduction, and (in declared scope) both a coefficient-filled canonical Psi x Psi block H_PsiPsi (R12) and a coefficient-filled declared control pullback M_control (P476). The host-to-canonical matching gap (C10_B1) is now partially reduced: the shared kernel/light-facing channel specialization witness is exported (R14), the host scalar-floor embedding into the canonical diagonal sector is exported (R15), and the declared control pullback of the residual local diagonal sector is exported and reduced to a finite pair1 zero system (R16/R18), with the host-side residual correction branch explicitly absent (R17). However, the repo still exports no (i) zero-or-cancellation witness for the declared control pullback of that residual diagonal sector, and no (ii) selector-relevant physical canonicalization of the declared control transport within the QW-2191 O(2) family; therefore no strict existing-feedback legacy chart-reduced operator object on pair1 can be promoted from the current declared artifacts Additionally, the currently exported strict-derived value-instantiated declared residual pullback object (P459) does not satisfy the R18 declared pair1 residual zero equations under the current value instance (P477; packaged as a value-instance-only obstruction theorem by N520), so the missing zero/cancellation witness cannot be obtained by simply promoting the currently exported strict-derived value instance.",
   "lane": "existing_kernel_feedback_legacy_chart_reduced_operator_export_route_after_P15",
   "route_under_test": [
     "existing_kernel_feedback_host_operator",
@@ -154,6 +154,32 @@
     "explicit_zero_or_host_side_cancellation_witness_for_the_declared_control_pullback_of_the_residual_local_diagonal_sector",
     "full_physical_uniqueness_or_selector_relevant_canonicalization_of_the_explicit_declared_control_transport_within_the_QW2191_O2_family"
   ],
+  "value_instance_evidence": {
+    "P477": {
+      "status": "PASS_EVALUATION_ZERO_EQUATIONS_VIOLATED_UNDER_CURRENT_VALUE_INSTANCE",
+      "exported_object": "fundamental_action_reconstruction/generated/pair1_residual_zero_equations_evaluation_under_n477_value_instance_v1.json",
+      "all_zero_equations_satisfied": false,
+      "violated_equations": [
+        "c1c1",
+        "s1s1"
+      ],
+      "no_false_pass": true
+    },
+    "N520": {
+      "status": "N520_DISCHARGED_CURRENT_FIRST_STRICT_R18_DECLARED_PAIR1_RESIDUAL_ZERO_EQUATIONS_VALUE_INSTANCE_OBSTRUCTION_THEOREM_NO_FALSE_PASS",
+      "theorem_result": {
+        "discharged": true,
+        "obstruction_scope": "value_instance_only",
+        "p459_value_instance_object": "fundamental_action_reconstruction/generated/m_control_residual_diag_declared_value_instantiated_v1.json",
+        "r18_declared_pair1_zero_equations_satisfied": false,
+        "violated_equations": [
+          "c1c1",
+          "s1s1"
+        ]
+      },
+      "no_false_pass": true
+    }
+  },
   "blocking_frontier": {
     "C10_B1": "no_explicit_coefficient_level_or_block_level_identification_between_the_qw2186_certified_host_operator_and_a_concrete_Psi_sector_quadratic_Hessian_block_inside_the_canonical_13_field_carrier",
     "C15_B2": "no_explicit_restriction_from_M_control_to_the_candidate_orientation_slice",
