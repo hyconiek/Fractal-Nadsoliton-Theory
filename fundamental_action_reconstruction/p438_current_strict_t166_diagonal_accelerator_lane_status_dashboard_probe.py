@@ -421,6 +421,18 @@ N552_SUMMARY = (
     GENERATED
     / "n552_current_strict_global_selector_output_operator_promotion_from_seed_v1_chain_on_c_v1_discharge_theorem_summary.json"
 )
+F661_SUMMARY = (
+    GENERATED
+    / "f661_current_strict_global_downstream_completion_branch_discharge_for_promoted_seed_v1_chain_on_c_v1_packet_summary.json"
+)
+P661_SUMMARY = (
+    GENERATED
+    / "p661_current_strict_global_downstream_completion_branch_discharge_for_promoted_seed_v1_chain_on_c_v1_probe_summary.json"
+)
+N553_SUMMARY = (
+    GENERATED
+    / "n553_current_strict_global_downstream_completion_branch_discharge_for_promoted_seed_v1_chain_on_c_v1_discharge_theorem_summary.json"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -1252,13 +1264,58 @@ def main() -> None:
                                                                                                                                 "without implying strict-core selector closure, global QW-2191 discharge, or ToE closure."
                                                                                                                             )
                                                                                                                         else:
-                                                                                                                            recommended_next_target = "F661"
-                                                                                                                            recommendation_reason = (
-                                                                                                                                "Release 6.5 already records the full seed-v1 global operator chain promotions on C_v1: "
-                                                                                                                                "B_sel (F658/P658/N550), R_sel (F659/P659/N551), and O_sel (F660/P660/N552). "
-                                                                                                                                "Next honest move: package the first explicit global downstream-completion branch discharge for the promoted chain "
-                                                                                                                                "(global seed-v1 selector operator chain exists as exported objects, still explicitly below selector closure and QW-2191 discharge) (F661)."
-                                                                                                                            )
+                                                                                                                            if not F661_SUMMARY.exists():
+                                                                                                                                recommended_next_target = (
+                                                                                                                                    "F661"
+                                                                                                                                )
+                                                                                                                                recommendation_reason = (
+                                                                                                                                    "Release 6.5 already records the full seed-v1 global operator chain promotions on C_v1: "
+                                                                                                                                    "B_sel (F658/P658/N550), R_sel (F659/P659/N551), and O_sel (F660/P660/N552). "
+                                                                                                                                    "Next honest move: export one explicit global downstream-completion branch discharge bundle object for the promoted chain "
+                                                                                                                                    "(still explicitly below selector closure and QW-2191 discharge) (F661)."
+                                                                                                                                )
+                                                                                                                            elif not P661_SUMMARY.exists():
+                                                                                                                                recommended_next_target = (
+                                                                                                                                    "P661"
+                                                                                                                                )
+                                                                                                                                recommendation_reason = (
+                                                                                                                                    "F661 exports one explicit global downstream-completion branch discharge bundle object for the promoted seed-v1 chain on C_v1. "
+                                                                                                                                    "Next move: run the bundle audit probe (P661) to check end-to-end chain consistency and overlap transport discipline, "
+                                                                                                                                    "keeping residual sign gauge explicit and staying below selector closure / QW-2191 discharge."
+                                                                                                                                )
+                                                                                                                            elif not N553_SUMMARY.exists():
+                                                                                                                                recommended_next_target = (
+                                                                                                                                    "N553"
+                                                                                                                                )
+                                                                                                                                recommendation_reason = (
+                                                                                                                                    "P661 audits the global downstream-completion bundle export and reports whether the promoted chain is consistent per chart "
+                                                                                                                                    "and on overlaps (projector/section-level; residual sign gauge explicit). "
+                                                                                                                                    "Next move: package the theorem-level discharge of this bundle export (N553), "
+                                                                                                                                    "keeping selector closure and QW-2191 discharge explicitly out."
+                                                                                                                                )
+                                                                                                                            else:
+                                                                                                                                if not file_contains(
+                                                                                                                                    RELEASE_6_5,
+                                                                                                                                    "N553",
+                                                                                                                                ):
+                                                                                                                                    recommended_next_target = (
+                                                                                                                                        "UPDATE_RELEASE_6_5_STRICT_TEXTBOOK_EN_PL"
+                                                                                                                                    )
+                                                                                                                                    recommendation_reason = (
+                                                                                                                                        "N553 packages the discharge of the first explicit global downstream-completion branch discharge bundle for the promoted seed-v1 chain on C_v1. "
+                                                                                                                                        "Next move: update the strict textbook release notes (Release 6.5, EN+PL) to reflect the newly exported bundle object, "
+                                                                                                                                        "without implying strict-core selector closure, global QW-2191 discharge, or ToE closure."
+                                                                                                                                    )
+                                                                                                                                else:
+                                                                                                                                    recommended_next_target = (
+                                                                                                                                        "P243"
+                                                                                                                                    )
+                                                                                                                                    recommendation_reason = (
+                                                                                                                                        "Global packaging of the promoted seed-v1 downstream selector operator chain on C_v1 is now explicit (F658/F659/F660) "
+                                                                                                                                        "and bundled/discharged as a global downstream-completion branch object (F661/P661/N553), still below selector closure and QW-2191 discharge. "
+                                                                                                                                        "Next honest priority frontier remains the legacy -> strict kernel bridge/non-bridge status; "
+                                                                                                                                        "rerun the bifurcated frontier probe (P243) to keep bridge/non-bridge obligations explicit and avoid silent role transfer."
+                                                                                                                                    )
         except Exception:
             pass
 
