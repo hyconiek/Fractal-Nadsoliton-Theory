@@ -1072,15 +1072,45 @@ def main() -> None:
                                                                                                     "Next move: package the output operator theorem (N549), keeping emergent-observer/closure claims explicitly out."
                                                                                                 )
                                                                                             else:
-                                                                                                recommended_next_target = (
-                                                                                                    "UPDATE_SEED_V1_DOWNSTREAM_COMPLETION_BRANCH_DISCHARGE_PROBE_P645"
-                                                                                                )
-                                                                                                recommendation_reason = (
-                                                                                                    "N549 packages one admissible strict-core selector output operator O_sel_s_sel_int_source_object_v1 "
-                                                                                                    "derived from the admissible seed-v1 prefix (B_sel/R_sel/O_sel now exist as explicit strict-core exports in this lane). "
-                                                                                                    "Next move: update the seed-v1 downstream-completion branch discharge probe (P645) to reflect the now-exported chain, "
-                                                                                                    "without implying strict-core selector closure or QW-2191 discharge."
-                                                                                                )
+                                                                                                if not P645_SUMMARY.exists():
+                                                                                                    recommended_next_target = "P645"
+                                                                                                    recommendation_reason = (
+                                                                                                        "N549 packages one admissible strict-core selector output operator O_sel_s_sel_int_source_object_v1 "
+                                                                                                        "derived from the admissible seed-v1 prefix (B_sel/R_sel/O_sel now exist as explicit strict-core exports in this lane). "
+                                                                                                        "Next move: rerun the seed-v1 downstream-completion branch discharge probe (P645) to record that discharge explicitly."
+                                                                                                    )
+                                                                                                else:
+                                                                                                    try:
+                                                                                                        p645 = load_json(P645_SUMMARY)
+                                                                                                        discharged = bool(
+                                                                                                            p645.get("target_state", {}).get(
+                                                                                                                "explicit_downstream_completion_branch_discharge_exported"
+                                                                                                            )
+                                                                                                        )
+                                                                                                    except Exception:
+                                                                                                        discharged = False
+
+                                                                                                    if not discharged:
+                                                                                                        recommended_next_target = (
+                                                                                                            "UPDATE_SEED_V1_DOWNSTREAM_COMPLETION_BRANCH_DISCHARGE_PROBE_P645"
+                                                                                                        )
+                                                                                                        recommendation_reason = (
+                                                                                                            "N549 packages one admissible strict-core selector output operator O_sel_s_sel_int_source_object_v1 "
+                                                                                                            "derived from the admissible seed-v1 prefix (B_sel/R_sel/O_sel now exist as explicit strict-core exports in this lane). "
+                                                                                                            "Next move: update the seed-v1 downstream-completion branch discharge probe (P645) to reflect the now-exported chain, "
+                                                                                                            "without implying strict-core selector closure or QW-2191 discharge."
+                                                                                                        )
+                                                                                                    else:
+                                                                                                        recommended_next_target = (
+                                                                                                            "ATTACK_GLOBAL_SELECTOR_OBJECT_PROMOTION_FROM_SEED_V1_CHAIN_ON_C_V1"
+                                                                                                        )
+                                                                                                        recommendation_reason = (
+                                                                                                            "P645 records an explicit downstream-completion branch discharge for seed v1 "
+                                                                                                            "(the strict-core seed chain S_sel_int_source_object -> E_orient -> B_sel -> R_sel -> O_sel is now fully exported in declared scope). "
+                                                                                                            "Next move: attempt a global promotion step on C_v1 using the already exported global selector atlas/transition objects "
+                                                                                                            "(T170) and the current global projective/directed selector state infrastructure, "
+                                                                                                            "while keeping strict-core selector closure and global QW-2191 discharge explicitly unclaimed."
+                                                                                                        )
         except Exception:
             pass
 
