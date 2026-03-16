@@ -212,10 +212,11 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
 The repo still does **not** export:
 
 1. strict-core selector closure / admissible `S_sel_int`,
-2. an axiom-free **global** discharge of `QW-2191` beyond the declared diagonal/local lane and `n=12` scope,
-3. a strict physical sign/orientation convention if any downstream claim depends on absolute sign (unless separately
+2. a strict **global selector atlas + transition/gluing object** on `C_v1` (target `T170`; global scope `H41/H40`),
+3. an axiom-free **global** discharge of `QW-2191` beyond the declared diagonal/local lane and `n=12` scope,
+4. a strict physical sign/orientation convention if any downstream claim depends on absolute sign (unless separately
    proven gauge-irrelevant on that lane),
-4. ToE closure.
+5. ToE closure.
 
 ## 2) The diagonal/local `O(2) -> Z2` cut mechanism (n=12)
 
@@ -272,12 +273,12 @@ so the diagonal/local lane canonicalizes the `QW-2190` embedding uniquely up to 
 
 ## 5) Next honest strict moves (as of 2026-03-16)
 
-Dashboards now recommend `B3` (topological selector bridge continuation) as the next strict move under `QW-2191` discipline (`P438`, `P441`):
+Dashboards now recommend `T170` (strict global selector atlas + transition/gluing object) as the next strict target under `QW-2191` discipline (`P438`, `P441`), to be pursued via the `B3` topological selector bridge continuation:
 
 1. the residual `Z2` sign freeze (as a tracked gauge/convention layer for exported downstream objects where sign is gauge‑irrelevant) is now
    packaged as a strict theorem (`N502`), and
-2. continue strict-only closure under explicit `QW-2191` discipline: export only lane‑scoped transition data when needed
-   (e.g. `alpha_12 := (theta_2-\u03b8_1) mod 2\u03c0` for `pair1/pair2` from strict sigma‑int theta supply, `F457`) without implying any global selector transition/gluing object.
+2. continue strict-only closure toward `T170` under explicit `QW-2191` discipline: export only lane‑scoped transition data when needed
+   (e.g. `alpha_12 := (theta_2-\u03b8_1) mod 2\u03c0` for `pair1/pair2` from strict sigma‑int theta supply, `F457`) while keeping global atlas/transition-object obligations explicit (no implied global selector closure).
 
 Update: as the next narrow `B3` continuation step, the repo now exports an explicit lane-scoped **chart-transport operator** `O_12` between `pair1↔pair2`
 on `n=12`, derived only from the strict sigma-int `alpha_12` transition (`F461`). This is a sign-free projector-level gluing ingredient
@@ -446,18 +447,19 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
 Repo nadal **nie** eksportuje:
 
 1. strict-core selector closure / dopuszczalnego `S_sel_int`,
-2. aksjomatycznie wolnego **globalnego** rozładowania `QW-2191` poza pasem diagonal/local i zakresem `n=12`,
-3. ścisłej konwencji znaku/orientacji tam, gdzie downstream wymaga absolutnego znaku (o ile nie jest osobno pokazane, że znak jest gauge),
-4. domknięcia ToE.
+2. ścisłego **globalnego atlasu selektora + obiektu przejścia/klejenia** na `C_v1` (target `T170`; globalny zakres `H41/H40`),
+3. aksjomatycznie wolnego **globalnego** rozładowania `QW-2191` poza pasem diagonal/local i zakresem `n=12`,
+4. ścisłej konwencji znaku/orientacji tam, gdzie downstream wymaga absolutnego znaku (o ile nie jest osobno pokazane, że znak jest gauge),
+5. domknięcia ToE.
 
-## 2) Następny uczciwy ruch (stan: 2026-03-15)
+## 2) Następny uczciwy ruch (stan: 2026-03-16)
 
-Dashboards teraz rekomendują `B3` (kontynuacja topological selector bridge) jako następny ruch w dyscyplinie `QW-2191` (`P438`, `P441`):
+Dashboards teraz rekomendują `T170` (globalny atlas selektora + obiekt przejścia/klejenia) jako następny strict target w dyscyplinie `QW-2191` (`P438`, `P441`), realizowany przez kontynuację `B3`:
 
 1. zamrożenie residualnego znaku `Z2` (jako śledzona warstwa gauge/konwencji dla obiektów downstream, gdzie znak jest gauge‑irrelewant)
    jest już opakowane jako twierdzenie strict (`N502`), oraz
-2. kontynuować strict-only closure w jawnej dyscyplinie `QW-2191`: eksportować tylko lane‑scoped dane przejścia wtedy, gdy są potrzebne
-   (np. `alpha_12 := (theta_2-\u03b8_1) mod 2\u03c0` dla `pair1/pair2` z strict theta supply na korytarzu sigma‑int, `F457`) bez implikowania globalnego selector transition/gluing object.
+2. kontynuować strict-only closure w kierunku `T170` w jawnej dyscyplinie `QW-2191`: eksportować tylko lane‑scoped dane przejścia wtedy, gdy są potrzebne
+   (np. `alpha_12 := (theta_2-\u03b8_1) mod 2\u03c0` dla `pair1/pair2` z strict theta supply na korytarzu sigma‑int, `F457`) przy zachowaniu jawnych obowiązków globalnego atlasu/transition object (bez implied global selector closure).
 
 Update: jako kolejny, najwęższy krok `B3` repo eksportuje teraz jawny lane‑scoped **operator transportu chartów** `O_12` pomiędzy `pair1↔pair2`
 na `n=12`, wyprowadzony wyłącznie z `alpha_12` (`F461`). To jest “gluing ingredient” tylko na poziomie osi/projektorów (sign‑free),
