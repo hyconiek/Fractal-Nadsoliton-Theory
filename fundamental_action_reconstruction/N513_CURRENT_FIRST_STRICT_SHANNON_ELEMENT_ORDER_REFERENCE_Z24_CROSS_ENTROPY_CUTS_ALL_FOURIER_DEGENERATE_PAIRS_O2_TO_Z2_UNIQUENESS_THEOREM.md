@@ -22,7 +22,9 @@ This is a scope-extension statement only. It does **not** promote `n=24` into th
    - strict-derived Shannon amplitude `alpha_geo_strict_derived_v1 := 4 ln 2`,
 3. `N503`
    - `ord_{Z_n}` is `Aut(Z_n)`‑invariant for any `n` ⇒ no marked-direction slot for references of the form `f(ord_{Z_n}(x))`,
-4. `F468`
+4. `N514`
+   - arithmetic theorem: for any `n≥2` and any `k∈{1,…,n-1}`, `F_k(ord_{Z_n})≠0`, hence in particular `F_{2m}(ord_{Z_24})≠0` for all `m=1..11`,
+5. `F468`
    - exports `ord_{Z_24}(x)` as the diagonal reference profile and exports an explicit `Z_24` mode-index assignment basis object with recorded defects `F_{2m}(ord)`.
 
 ## Setup (typed `Z_24` Fourier pair planes)
@@ -66,20 +68,22 @@ F_{2m}(\operatorname{ord})
 \sum_{x=0}^{23}\operatorname{ord}_{Z_{24}}(x)\,e^{i\frac{4\pi m}{24}x}.
 $$
 
-`F468` records the evaluated defects on the exported strict `Z_24` element-order profile as (within numerical tolerance; imaginary parts are near zero on the exported instance):
+By `N514`, for `n=24` each defect `F_{2m}(ord_{Z_24})` is **nonzero**.
+
+Moreover, the export `F468` records the defects as exact integers:
 
 ```text
-F2  ≈  10
-F4  ≈  42
-F6  ≈ -35
-F8  ≈ -86
-F10 ≈  10
-F12 ≈ -147
-F14 ≈  10
-F16 ≈ -86
-F18 ≈ -35
-F20 ≈  42
-F22 ≈  10
+F2  =  10
+F4  =  42
+F6  = -35
+F8  = -86
+F10 =  10
+F12 = -147
+F14 =  10
+F16 = -86
+F18 = -35
+F20 =  42
+F22 =  10
 ```
 
 In particular, `F_{2m}(\operatorname{ord}) ≠ 0` for every `m=1..11`. Therefore, for each pair plane `pair_m`, the objective `J_ord,m(θ)` is not constant and its minimizer set

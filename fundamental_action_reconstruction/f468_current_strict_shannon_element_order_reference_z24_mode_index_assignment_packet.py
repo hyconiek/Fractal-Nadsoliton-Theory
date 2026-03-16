@@ -24,6 +24,10 @@ OUT_R_ORD = GENERATED / "r_ord_z24_v1_reference_distribution.json"
 OUT_ASSIGNMENT = GENERATED / "mode_index_assignment_shannon_element_order_reference_z24_strict_core_v1.json"
 OUT_SUMMARY = GENERATED / "mode_index_assignment_shannon_element_order_reference_z24_strict_core_v1_summary.json"
 
+N514_THEOREM = (
+    ROOT / "N514_CURRENT_FIRST_STRICT_ZN_ELEMENT_ORDER_REFERENCE_FOURIER_DEFECT_NONVANISHING_THEOREM.md"
+)
+
 
 def load_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
@@ -52,9 +56,67 @@ def orthonormal_residual(b: np.ndarray) -> float:
     return float(np.linalg.norm(gram - np.eye(gram.shape[0])))
 
 
-def defect_F_2m(values: np.ndarray, m: int, n: int) -> complex:
+def defect_F_2m_float(values: np.ndarray, m: int, n: int) -> complex:
     k = np.arange(n, dtype=float)
     return complex(np.sum(values * np.exp(1j * (4.0 * math.pi * m * k / n))))
+
+
+def factorize(n: int) -> dict[int, int]:
+    nn = int(n)
+    if nn < 2:
+        return {}
+    out: dict[int, int] = {}
+    d = 2
+    while d * d <= nn:
+        while nn % d == 0:
+            out[d] = out.get(d, 0) + 1
+            nn //= d
+        d = 3 if d == 2 else d + 2
+    if nn > 1:
+        out[nn] = out.get(nn, 0) + 1
+    return out
+
+
+def v_p(k: int, p: int) -> int:
+    kk = int(k)
+    pp = int(p)
+    v = 0
+    while kk % pp == 0:
+        kk //= pp
+        v += 1
+    return v
+
+
+def prime_power_defect_F_k_ord(p: int, a: int, k: int) -> int:
+    # N514 Lemma 3
+    pp = int(p)
+    aa = int(a)
+    v = v_p(k, pp)
+    if v < aa:
+        num = pp ** (2 * v + 2) - 1
+        den = pp + 1
+        if num % den != 0:
+            raise ValueError("non-integer prime-power defect formula (unexpected)")
+        return -(num // den)
+    num = pp ** (2 * aa) - 1
+    den = pp * pp - 1
+    if den == 0 or num % den != 0:
+        raise ValueError("non-integer geometric sum (unexpected)")
+    s = num // den
+    return 1 + (pp - 1) * pp * s
+
+
+def defect_F_k_ord_exact(n: int, k: int) -> int:
+    # N514 Theorem + Lemma 4
+    if n < 2:
+        raise ValueError("n must be >=2")
+    if k == 0:
+        raise ValueError("k must be nonzero for the Fourier-degenerate pair defects")
+    fac = factorize(n)
+    out = 1
+    for p, a in fac.items():
+        out *= prime_power_defect_F_k_ord(p, a, k)
+    return int(out)
 
 
 def main() -> None:
@@ -79,7 +141,7 @@ def main() -> None:
     _tau = load_json(IN_TAU_Z24)
 
     n = 24
-    tol = 1e-12
+    tol = 1e-12  # retained for float cross-check only
 
     ord_by_x = [int(zn_element_order(n, x)) for x in range(n)]
     ord_vec = np.array([float(v) for v in ord_by_x], dtype=float)
@@ -122,22 +184,59 @@ def main() -> None:
         c = basis[f"c{m}"]
         s = basis[f"s{m}"]
 
-        F = defect_F_2m(ord_vec, m=m, n=n)
-        absF = float(abs(F))
-        if absF <= tol:
+        k = 2 * int(m)
+        re_int = defect_F_k_ord_exact(n, k=k)
+        if re_int == 0:
             all_pairs_cut = False
 
-        theta_star = 0.5 * math.atan2(float(np.imag(F)), float(np.real(F)))
+        # float cross-check for hygiene
+        F_float = defect_F_2m_float(ord_vec, m=m, n=n)
+        if abs(float(np.imag(F_float))) > tol:
+            summary = {
+                "stage": "F468",
+                "status": "FAIL_UNEXPECTED_NONREAL_DEFECT",
+                "n": n,
+                "m": m,
+                "F_2m_float": {"Re": float(np.real(F_float)), "Im": float(np.imag(F_float)), "abs": float(abs(F_float))},
+                "tolerance": tol,
+                "no_false_pass": True,
+            }
+            OUT_SUMMARY.write_text(json.dumps(summary, indent=2, ensure_ascii=True) + "\n", encoding="ascii")
+            print(OUT_SUMMARY)
+            return
+        if abs(float(np.real(F_float)) - float(re_int)) > 1e-6:
+            summary = {
+                "stage": "F468",
+                "status": "FAIL_DEFECT_MISMATCH_EXACT_VS_FLOAT",
+                "n": n,
+                "m": m,
+                "k": k,
+                "F_2m_exact_re": int(re_int),
+                "F_2m_float_re": float(np.real(F_float)),
+                "tolerance": 1e-6,
+                "no_false_pass": True,
+            }
+            OUT_SUMMARY.write_text(json.dumps(summary, indent=2, ensure_ascii=True) + "\n", encoding="ascii")
+            print(OUT_SUMMARY)
+            return
 
-        u_plus = math.cos(theta_star) * c + math.sin(theta_star) * s
-        u_minus = -math.sin(theta_star) * c + math.cos(theta_star) * s
+        absF = float(abs(re_int))
+
+        if re_int > 0:
+            theta_star = 0.0
+            u_plus = c
+            u_minus = -s
+        else:
+            theta_star = math.pi / 2.0
+            u_plus = s
+            u_minus = -c
 
         lam_plus = float(np.dot(u_plus, ord_vec * u_plus))
         lam_minus = float(np.dot(u_minus, ord_vec * u_minus))
 
         pairs[f"pair{m}"] = {
             "m": m,
-            "F_2m_ord": {"Re": float(np.real(F)), "Im": float(np.imag(F)), "abs": absF},
+            "F_2m_ord": {"Re": float(re_int), "Im": 0.0, "abs": absF},
             "theta_star": float(theta_star),
             "theta_minimizer_mod_pi": float((theta_star + math.pi / 2.0) % math.pi),
             "u_plus": [float(x) for x in u_plus.tolist()],
@@ -179,7 +278,12 @@ def main() -> None:
             "u_plus_rule": "u_+ := cos(theta_*) c_m + sin(theta_*) s_m",
             "u_minus_rule": "u_- := -sin(theta_*) c_m + cos(theta_*) s_m",
             "objective_note": "For cross-entropy J(theta)=E_p[alpha_geo*ord(x)]+const, the minimizer is u_- (smaller eigenvalue).",
-            "references": ["F458", "N503", "P462"],
+            "references": ["F458", "N503", "N514", "P462"],
+            "hygiene": {
+                "defect_computation": "exact_integer_formula_from_N514 (prime-power formula + multiplicativity)",
+                "float_cross_check": "direct_sum_float_exp (must match exact within 1e-6; imag must be <=1e-12)",
+                "theorem_ref": (str(N514_THEOREM.relative_to(REPO)) if N514_THEOREM.exists() else "N514"),
+            },
         },
         "outputs": {
             "n": n,
@@ -232,4 +336,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
