@@ -76,6 +76,10 @@ T170_GLOBAL_ATLAS = GENERATED / "selector_atlas_global_c_v1_strict_v1.json"
 N515_THEOREM = (
     ROOT / "N515_CURRENT_FIRST_STRICT_T170_GLOBAL_SELECTOR_ATLAS_AND_TRANSITION_OBJECT_DISCHARGE_THEOREM.md"
 )
+H39_GLOBAL_SELECTOR_STATE = GENERATED / "selector_state_global_c_v1_projective_strict_v1.json"
+N516_THEOREM = (
+    ROOT / "N516_CURRENT_FIRST_STRICT_H39_GLOBAL_PROJECTIVE_SELECTOR_STATE_OBJECT_EXPORT_THEOREM.md"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -248,6 +252,14 @@ def main() -> None:
             "T170 is now discharged at object level (F469/N515 export a global selector atlas + transition object on C_v1). "
             "The next honest strict frontier is the absence of a global physical selector object beyond chart locality (H39), "
             "and continuation under explicit QW-2191 discipline (no implied selector closure)."
+        )
+
+    if recommended_next_target == "H39" and (H39_GLOBAL_SELECTOR_STATE.exists() or N516_THEOREM.exists()):
+        recommended_next_target = "H37"
+        recommendation_reason = (
+            "H39 object-existence layer is now resolved: a global projective selector state object is exported on C_v1 (F470/N516). "
+            "The next honest strict frontier is to export a sign-sensitive/directed selector state datum or observable (H37/H36) "
+            "and continue under explicit QW-2191 discipline (no implied selector closure)."
         )
 
     artifact = {

@@ -87,6 +87,10 @@ T170_GLOBAL_ATLAS = GENERATED / "selector_atlas_global_c_v1_strict_v1.json"
 N515_THEOREM = (
     ROOT / "N515_CURRENT_FIRST_STRICT_T170_GLOBAL_SELECTOR_ATLAS_AND_TRANSITION_OBJECT_DISCHARGE_THEOREM.md"
 )
+H39_GLOBAL_SELECTOR_STATE = GENERATED / "selector_state_global_c_v1_projective_strict_v1.json"
+N516_THEOREM = (
+    ROOT / "N516_CURRENT_FIRST_STRICT_H39_GLOBAL_PROJECTIVE_SELECTOR_STATE_OBJECT_EXPORT_THEOREM.md"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -237,6 +241,15 @@ def main() -> None:
             "and continuation under explicit QW-2191 discipline (no implied selector closure)."
         )
         diagonal_note += " T170 is now discharged by F469/N515; next frontier shifts to H39."
+
+    if recommended_next == "H39" and (H39_GLOBAL_SELECTOR_STATE.exists() or N516_THEOREM.exists()):
+        recommended_next = "H37"
+        recommendation_reason = (
+            "H39 object-existence layer is now resolved: a global projective selector state object is exported on C_v1 (F470/N516). "
+            "The next honest strict frontier is to export a sign-sensitive/directed selector state datum or observable (H37/H36) "
+            "and continue under explicit QW-2191 discipline (no implied selector closure)."
+        )
+        diagonal_note += " H39 object-existence layer is now resolved by F470/N516; next frontier shifts to H37."
 
     # Backward-compatible mapping: older P438 versions returned a packet label ("B3") here.
     if recommended_next == "B3" and N491_THEOREM.exists():

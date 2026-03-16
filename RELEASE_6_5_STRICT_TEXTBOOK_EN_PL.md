@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.30  
+**Version:** 6.5.31  
 **Date:** 2026-03-16  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -84,6 +84,9 @@
   `P461` remains a computational scope/regression scan only and does not promote any `n≠12` carrier into the physical `QW-2190` scaffold.
 - Update (`2026-03-16`): the repo now exports a strict **global selector atlas** and a strict **global selector transition/gluing object** on the declared strict domain `C_v1`,
   discharging the global-scope atlas/transition target `T170` (`F469`, packaged by `N515`). This does **not** imply strict-core selector closure, global `QW-2191` discharge, or ToE closure.
+- Update (`2026-03-16`): the repo now exports an explicit strict **global projective selector state object** on the declared strict domain `C_v1`
+  (`F470`, packaged by `N516`). This remains projective/span (residual sign is gauge at state level), does **not** export a sign-sensitive directed orientation datum,
+  does **not** discharge global `QW-2191`, and does **not** imply strict-core selector closure or ToE closure.
 - Update (`2026-03-15`): moreover, one cautious follow-up probe exports an explicit **probe-level** mode-index assignment *candidate*
   on `Z_24` induced by the same defect-angle rule (including numeric basis vectors `u_{m,±}` on each `pair_m`) (`P462`).
   This probe-level candidate does not promote `n=24` into the `QW-2190` physical scaffold.
@@ -214,7 +217,7 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
 The repo still does **not** export:
 
 1. strict-core selector closure / admissible `S_sel_int`,
-2. a strict **global physical selector object** beyond chart locality (audit `H39`),
+2. a strict sign-sensitive / directed selector state datum or observable distinguishing `u` from `-u` (audits `H36`/`H37`), beyond the projective/span level,
 3. an axiom-free **global** discharge of `QW-2191` beyond the declared diagonal/local lane and `n=12` scope,
 4. a strict physical sign/orientation convention if any downstream claim depends on absolute sign (unless separately
    proven gauge-irrelevant on that lane),
@@ -275,22 +278,22 @@ so the diagonal/local lane canonicalizes the `QW-2190` embedding uniquely up to 
 
 ## 5) Next honest strict moves (as of 2026-03-16)
 
-Dashboards now recommend `H39` (global physical selector object beyond chart locality) as the next strict frontier under `QW-2191` discipline (`P438`, `P441`), after the discharge of `T170` (`F469/N515`):
+Dashboards now recommend `H37` (sign-distinction state: a sign-sensitive / directed selector state datum or observable distinguishing `u` from `-u`) as the next strict frontier under `QW-2191` discipline (`P438`, `P441`), after the export of the global projective selector state object on `C_v1` (`F470/N516`) and the discharge of `T170` (`F469/N515`):
 
 1. the residual `Z2` sign freeze (as a tracked gauge/convention layer for exported downstream objects where sign is gauge‑irrelevant) is now
    packaged as a strict theorem (`N502`), and
-2. continue strict-only closure toward a global physical selector object (beyond chart locality) under explicit `QW-2191` discipline:
-   use the now-exported global atlas/transition objects on `C_v1` (`F469/N515`) without promoting any implied strict-core selector closure or global `QW-2191` discharge.
+2. continue strict-only closure toward a sign-sensitive/directed selector state datum or observable (H37/H36) under explicit `QW-2191` discipline:
+   use the exported global atlas/transition objects on `C_v1` (`F469/N515`) and the global projective selector state object (`F470/N516`), without promoting any implied strict-core selector closure or global `QW-2191` discharge.
 
 Update: as the next narrow `B3` continuation step, the repo now exports an explicit lane-scoped **chart-transport operator** `O_12` between `pair1↔pair2`
 on `n=12`, derived only from the strict sigma-int `alpha_12` transition (`F461`). This is a sign-free projector-level gluing ingredient
-(packaged as a strict theorem `N506` and audited by `P465`); global selector atlas / transition-object obligations (`H41/H40`) remain open.
+(packaged as a strict theorem `N506` and audited by `P465`); global selector atlas/transition obligations are now discharged at object level (`F469/N515`), and a global projective selector state object is exported (`F470/N516`).
 
 Update: the lane-scoped `O_12` transport is now used to export an explicit **two-chart glued projector operator section**
-`A_2(pair2) = O_12 A_1(pair1) O_12^T` (`F462`), packaged as a strict theorem (`N507`) and audited by `P466`. This is still below any global atlas/closure.
+`A_2(pair2) = O_12 A_1(pair1) O_12^T` (`F462`), packaged as a strict theorem (`N507`) and audited by `P466`. This remains lane-scoped and does not imply strict-core selector closure nor global `QW-2191` discharge.
 
 Update: the repo exports an explicit lane-scoped **two-chart selector atlas stub** on `{pair1,pair2}` with an overlap-domain declaration, transition data (`O_12`),
-and gluing data (`A_2 = O_12 A_1 O_12^T`) (`F463`). This reduces the “no overlap-domain declaration” gap only in that declared scope; global atlas/cocycle data remains open.
+and gluing data (`A_2 = O_12 A_1 O_12^T`) (`F463`). This reduces the “no overlap-domain declaration” gap only in that declared scope; global atlas/transition objects on `C_v1` are exported separately (`F469/N515`) at projector-section level (no operator-level groupoid promotion).
 
 Update: the repo exports an explicit lane-scoped **three-chart** selector-atlas ingredient on `{pair1,pair2,pair3}` at projector level, including explicit
 cocycle/path-independence data on the glued projector section (`F464`), audited by `P467` and packaged as a strict theorem (`N508`). This remains lane-scoped
@@ -449,29 +452,29 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
 Repo nadal **nie** eksportuje:
 
 1. strict-core selector closure / dopuszczalnego `S_sel_int`,
-2. ścisłego **globalnego fizycznego obiektu selektora** poza lokalnością chartów (audyt `H39`),
+2. ścisłego znako‑czułego / kierunkowego datumu stanu selektora lub obserwabli rozróżniającej `u` od `-u` (audyty `H36`/`H37`), ponad poziom projektowy/span,
 3. aksjomatycznie wolnego **globalnego** rozładowania `QW-2191` poza pasem diagonal/local i zakresem `n=12`,
 4. ścisłej konwencji znaku/orientacji tam, gdzie downstream wymaga absolutnego znaku (o ile nie jest osobno pokazane, że znak jest gauge),
 5. domknięcia ToE.
 
 ## 2) Następny uczciwy ruch (stan: 2026-03-16)
 
-Dashboards teraz rekomendują `H39` (globalny fizyczny obiekt selektora poza lokalnością chartów) jako następny strict frontier w dyscyplinie `QW-2191` (`P438`, `P441`), po rozładowaniu `T170` (`F469/N515`):
+Dashboards teraz rekomendują `H37` (rozróżnienie znaku: znako‑czuły / kierunkowy datum stanu selektora lub obserwabla rozróżniająca `u` od `-u`) jako następny strict frontier w dyscyplinie `QW-2191` (`P438`, `P441`), po eksporcie globalnego projektowego stanu selektora na `C_v1` (`F470/N516`) i po rozładowaniu `T170` (`F469/N515`):
 
 1. zamrożenie residualnego znaku `Z2` (jako śledzona warstwa gauge/konwencji dla obiektów downstream, gdzie znak jest gauge‑irrelewant)
    jest już opakowane jako twierdzenie strict (`N502`), oraz
-2. kontynuować strict-only closure w kierunku globalnego fizycznego obiektu selektora (poza lokalnością chartów) w jawnej dyscyplinie `QW-2191`:
-   używać już wyeksportowanych globalnych obiektów atlasu i przejść na `C_v1` (`F469/N515`) bez promocji do implied strict-core selector closure ani globalnego rozładowania `QW-2191`.
+2. kontynuować strict-only closure w kierunku znako‑czułego / kierunkowego datumu stanu selektora lub obserwabli (H37/H36) w jawnej dyscyplinie `QW-2191`:
+   używać już wyeksportowanych globalnych obiektów atlasu i przejść na `C_v1` (`F469/N515`) oraz globalnego projektowego obiektu stanu selektora (`F470/N516`), bez promocji do implied strict-core selector closure ani globalnego rozładowania `QW-2191`.
 
 Update: jako kolejny, najwęższy krok `B3` repo eksportuje teraz jawny lane‑scoped **operator transportu chartów** `O_12` pomiędzy `pair1↔pair2`
 na `n=12`, wyprowadzony wyłącznie z `alpha_12` (`F461`). To jest “gluing ingredient” tylko na poziomie osi/projektorów (sign‑free),
-opakowany twierdzeniem strict (`N506`) i audytowany sondą (`P465`); globalny atlas/transition object (`H41/H40`) pozostaje otwarty.
+opakowany twierdzeniem strict (`N506`) i audytowany sondą (`P465`); globalny atlas i globalny transition/gluing object na `C_v1` są już wyeksportowane (`F469/N515`), a globalny projektowy obiekt stanu selektora jest wyeksportowany (`F470/N516`).
 
 Update: na bazie `O_12` repo eksportuje teraz jawnie dwu‑chartową **sekcję operatorową** na `{pair1,pair2}` na poziomie projektorowym:
-`A_2(pair2) = O_12 A_1(pair1) O_12^T` (`F462`), opakowane (`N507`) i audytowane (`P466`). Globalny atlas/closure pozostaje otwarty.
+`A_2(pair2) = O_12 A_1(pair1) O_12^T` (`F462`), opakowane (`N507`) i audytowane (`P466`). To nadal nie jest strict-core selector closure i nie rozładowuje globalnie `QW-2191`.
 
 Update: repo eksportuje teraz jawny lane-scoped **atlas selektora** na `{pair1,pair2}` z deklaracją overlap-domain, danymi przejścia (`O_12`) oraz danymi klejenia
-(`F463`). Jest to tylko atlas-stub w zadeklarowanym scope; globalny atlas/cocycle pozostaje otwarty.
+(`F463`). Jest to tylko atlas-stub w zadeklarowanym scope; globalny atlas/transition object na `C_v1` jest wyeksportowany osobno (`F469/N515`) na poziomie sekcji projektorowej (bez promocji do operator-level groupoid).
 
 Update: jako kolejny, najwęższy krok `B3` repo eksportuje teraz jawny lane-scoped **trzy‑chartowy** składnik atlasu selektora na `{pair1,pair2,pair3}` na poziomie projektorowym,
 wraz z jawnym audytem cocycle/path‑independence na poziomie sklejonej sekcji operatorowej (`F464`), audytowane sondą (`P467`) i opakowane jako twierdzenie strict (`N508`).
