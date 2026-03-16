@@ -117,6 +117,10 @@ P480_SUMMARY = (
     GENERATED
     / "p480_current_strict_p16_route_negative_freeze_decision_packet_summary.json"
 )
+P631_SUMMARY = (
+    GENERATED
+    / "p631_current_strict_direct_formal_c1s1_route_negative_freeze_decision_packet_summary.json"
+)
 P16_FACTORIZATION_SUMMARY = (
     GENERATED
     / "p16_existing_kernel_feedback_legacy_chart_reduced_operator_export_probe_summary.json"
@@ -321,6 +325,17 @@ def _p16_route_negative_freeze_selected() -> tuple[bool, dict[str, Any] | None]:
     return bool(selected), p480
 
 
+def _direct_formal_route_negative_freeze_selected() -> tuple[bool, dict[str, Any] | None]:
+    if not P631_SUMMARY.exists():
+        return False, None
+    try:
+        p631 = load_json(P631_SUMMARY)
+    except Exception:
+        return False, None
+    selected = str(p631.get("decision") or "") == "DIRECT_FORMAL_C1S1_ROUTE_NEGATIVE_FREEZE_SELECTED"
+    return bool(selected), p631
+
+
 def main() -> None:
     GENERATED.mkdir(exist_ok=True)
     args = parse_args()
@@ -444,6 +459,7 @@ def main() -> None:
 
     projective_selected, p475 = _projective_only_continuation_selected()
     p16_freeze_selected, p480 = _p16_route_negative_freeze_selected()
+    direct_formal_freeze_selected, p631 = _direct_formal_route_negative_freeze_selected()
 
     if recommended_next == "H37":
         if N518_THEOREM.exists():
@@ -504,7 +520,25 @@ def main() -> None:
         # - We keep H37 as an open frontier for the directed branch, but the recommended next move shifts to strict-only ToE closure tasks
         #   that do not require a sign-sensitive orientation datum (projective-only compatible).
         if projective_selected:
-            if P16_FACTORIZATION_SUMMARY.exists() and not p16_freeze_selected:
+            if direct_formal_freeze_selected:
+                p_note = ""
+                if p631 is not None:
+                    try:
+                        decision = p631.get("decision")
+                        p_note = f" Professorial note: P631 is selected (decision={decision}); the direct-formal residual-cancellation lane is explicitly frozen negative under the T166 nonzero decision."
+                    except Exception:
+                        p_note = " Professorial note: P631 is selected but could not be summarized."
+                recommendation_reason = (
+                    "Projective-only continuation is explicitly selected (P475): treat the exported global projective selector state as the strict physical state object "
+                    "for the declared closure stack, keeping residual sign as a gauge/convention layer where proven irrelevant (N502, N519). "
+                    "On this branch, the remaining direct-formal residual-cancellation continuation is explicitly frozen negative (P631): "
+                    "its remaining pair1 c1c1/s1s1 zero-equation targets are structurally incompatible with keeping the strict diagonal/local T166 nonzero decision active (N473 + N482). "
+                    "Therefore projective-only ToE-closure tasks on that lane are saturated. "
+                    "Next honest frontier is the post-projective directed selector state question (H37/T171): export a sign-sensitive/directed selector datum or observable, "
+                    "or explicitly remain projective-only (no sign-sensitive claim)."
+                    + p_note
+                )
+            elif P16_FACTORIZATION_SUMMARY.exists() and not p16_freeze_selected:
                 recommended_next = "P16"
                 p16_note = ""
                 try:
@@ -791,6 +825,7 @@ def main() -> None:
             "P439": str(P439_SUMMARY.relative_to(REPO)),
             "P455": (str(P455_SUMMARY.relative_to(REPO)) if P455_SUMMARY.exists() else None),
             "P480": (str(P480_SUMMARY.relative_to(REPO)) if P480_SUMMARY.exists() else None),
+            "P631": (str(P631_SUMMARY.relative_to(REPO)) if P631_SUMMARY.exists() else None),
         },
         "status_snapshot": {"P438": p438, "P439": p439},
         "result": {
@@ -812,6 +847,15 @@ def main() -> None:
                 "note": (
                     "If selected, P16 is treated as an explicitly negative/frozen lane; the recommended next move shifts to "
                     "kernel-split-robust strict-only closure lanes (direct-formal c1s1 family route)."
+                ),
+            },
+            "direct_formal_route_negative_freeze": {
+                "selected": bool(direct_formal_freeze_selected),
+                "p631_summary": (str(P631_SUMMARY.relative_to(REPO)) if p631 is not None else None),
+                "note": (
+                    "If selected, the direct-formal residual-cancellation lane is treated as explicitly negative/frozen under the "
+                    "T166 nonzero decision branch; the recommended next move shifts to the post-projective directed frontier (H37/T171) "
+                    "or an explicit reaffirmation of projective-only semantics."
                 ),
             },
         },
