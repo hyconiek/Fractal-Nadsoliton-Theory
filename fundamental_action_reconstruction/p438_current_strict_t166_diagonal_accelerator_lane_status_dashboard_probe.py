@@ -409,6 +409,18 @@ N551_SUMMARY = (
     GENERATED
     / "n551_current_strict_global_selector_reduction_operator_promotion_from_seed_v1_chain_on_c_v1_discharge_theorem_summary.json"
 )
+F660_SUMMARY = (
+    GENERATED
+    / "f660_current_strict_global_selector_output_operator_promotion_from_seed_v1_chain_on_c_v1_packet_summary.json"
+)
+P660_SUMMARY = (
+    GENERATED
+    / "p660_current_strict_global_selector_output_operator_promotion_from_seed_v1_chain_on_c_v1_probe_summary.json"
+)
+N552_SUMMARY = (
+    GENERATED
+    / "n552_current_strict_global_selector_output_operator_promotion_from_seed_v1_chain_on_c_v1_discharge_theorem_summary.json"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -1203,13 +1215,50 @@ def main() -> None:
                                                                                                                         "without implying strict-core selector closure, global QW-2191 discharge, or ToE closure."
                                                                                                                     )
                                                                                                                 else:
-                                                                                                                    recommended_next_target = "F660"
-                                                                                                                    recommendation_reason = (
-                                                                                                                        "Release 6.5 already records both global promotion steps: B_sel (F658/P658/N550) and R_sel (F659/P659/N551). "
-                                                                                                                        "Next honest downstream move: promote the seed-v1 selector output operator O_sel to a global typed object "
-                                                                                                                        "(mapping Q_sel_v1 -> Q_out_v1) and package the resulting C_v1-typed selector output channel, "
-                                                                                                                        "without implying emergent observer construction, strict-core selector closure, or global QW-2191 discharge (F660)."
-                                                                                                                    )
+                                                                                                                    if not F660_SUMMARY.exists():
+                                                                                                                        recommended_next_target = "F660"
+                                                                                                                        recommendation_reason = (
+                                                                                                                            "Release 6.5 already records both global promotion steps: B_sel (F658/P658/N550) and R_sel (F659/P659/N551). "
+                                                                                                                            "Next honest downstream move: promote the seed-v1 selector output operator O_sel to a global typed object "
+                                                                                                                            "(mapping Q_sel_v1 -> Q_out_v1) and package the resulting C_v1-typed selector output channel, "
+                                                                                                                            "without implying emergent observer construction, strict-core selector closure, or global QW-2191 discharge (F660)."
+                                                                                                                        )
+                                                                                                                    elif not P660_SUMMARY.exists():
+                                                                                                                        recommended_next_target = "P660"
+                                                                                                                        recommendation_reason = (
+                                                                                                                            "F660 exports one global selector output operator object O_sel : Q_sel_v1 -> Q_out_v1 "
+                                                                                                                            "and packages induced chartwise output channels on C_v1. "
+                                                                                                                            "Next move: run the promotion audit probe (P660) to check seed alignment and overlap consistency "
+                                                                                                                            "up to residual sign gauge."
+                                                                                                                        )
+                                                                                                                    elif not N552_SUMMARY.exists():
+                                                                                                                        recommended_next_target = "N552"
+                                                                                                                        recommendation_reason = (
+                                                                                                                            "P660 audits the global promotion export for O_sel and reports whether the induced chartwise output channels "
+                                                                                                                            "are consistent on overlaps (with residual sign gauge kept explicit). "
+                                                                                                                            "Next move: package the theorem-level discharge of this promotion step (N552), "
+                                                                                                                            "keeping selector closure and QW-2191 discharge explicitly out."
+                                                                                                                        )
+                                                                                                                    else:
+                                                                                                                        if not file_contains(
+                                                                                                                            RELEASE_6_5, "N552"
+                                                                                                                        ):
+                                                                                                                            recommended_next_target = (
+                                                                                                                                "UPDATE_RELEASE_6_5_STRICT_TEXTBOOK_EN_PL"
+                                                                                                                            )
+                                                                                                                            recommendation_reason = (
+                                                                                                                                "N552 packages the discharge of the global selector output operator promotion step from the seed-v1 chain on C_v1. "
+                                                                                                                                "Next move: update the strict textbook release notes (Release 6.5, EN+PL) to reflect the newly exported promotion object, "
+                                                                                                                                "without implying strict-core selector closure, global QW-2191 discharge, or ToE closure."
+                                                                                                                            )
+                                                                                                                        else:
+                                                                                                                            recommended_next_target = "F661"
+                                                                                                                            recommendation_reason = (
+                                                                                                                                "Release 6.5 already records the full seed-v1 global operator chain promotions on C_v1: "
+                                                                                                                                "B_sel (F658/P658/N550), R_sel (F659/P659/N551), and O_sel (F660/P660/N552). "
+                                                                                                                                "Next honest move: package the first explicit global downstream-completion branch discharge for the promoted chain "
+                                                                                                                                "(global seed-v1 selector operator chain exists as exported objects, still explicitly below selector closure and QW-2191 discharge) (F661)."
+                                                                                                                            )
         except Exception:
             pass
 
