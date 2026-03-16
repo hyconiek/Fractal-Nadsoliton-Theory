@@ -1,15 +1,48 @@
 {
   "id": "H36",
-  "date": "2026-03-06",
-  "status": "PASS_PARTIAL_NO_STRICT_DIRECTED_AXIS_SELECTION",
-  "result": "strict_core_supports_only_a_coordinate_level_undirected_axis_representative_u_psi0_pair1_inside_pair1_and_not_a_strict_directed_orientation_selection",
-  "frontier": "H36_B1",
-  "frontier_text": "strict core supports only a coordinate-level undirected axis representative u_psi0_pair1 inside pair1 and contains no strict argument selecting a directed orientation on that axis",
+  "date": "2026-03-16",
+  "status": "PASS_DIRECTED_AXIS_ORIENTATION_PRESENT__PREMISE_BASED_T164",
+  "checked_inputs": {
+    "t164_fixing_datum": {
+      "path": "fundamental_action_reconstruction/generated/kappa_z12_generator_orientation_canonical_fixing_datum_strict_provenance_v1.json",
+      "object": "Kappa_Z12_generator_orientation_canonical_fixing_datum_strict_provenance_v1",
+      "no_false_pass": true
+    },
+    "s_dir_pair1": {
+      "path": "fundamental_action_reconstruction/generated/s_dir_pair1_strict_v1.json",
+      "object": "S_dir_pair1_strict_v1",
+      "no_false_pass": true,
+      "odd_under_sign": true
+    },
+    "global_directed_state": {
+      "path": "fundamental_action_reconstruction/generated/selector_state_global_c_v1_directed_strict_v1.json",
+      "object": "SelectorState_global_C_v1_directed_strict_v1",
+      "no_false_pass": true,
+      "state_level": "directed_vector_state"
+    },
+    "f474_summary": {
+      "path": "fundamental_action_reconstruction/generated/f474_current_strict_t171_global_directed_selector_state_datum_export_packet_summary.json",
+      "no_false_pass": true,
+      "t171_discharged": true,
+      "h37_discharged": true
+    }
+  },
+  "evidence": {
+    "t164_object": "Kappa_Z12_generator_orientation_canonical_fixing_datum_strict_provenance_v1",
+    "s_dir_object": "S_dir_pair1_strict_v1",
+    "directed_state_object": "SelectorState_global_C_v1_directed_strict_v1",
+    "t171_discharged": true
+  },
+  "missing_required_inputs": [],
+  "result": "strict_core_exports_a_directed_sign_sensitive_orientation_selection_mechanism_on_pair1_in_the_declared_premise_based_scope_T164_T171__psi0_lane_remains_axis_only",
+  "frontier": "H36_B2",
+  "frontier_text": "strict core exports a directed/sign-sensitive orientation selection mechanism on pair1 in the declared premise-based scope (T164+T171), while psi0 alone still supplies only an undirected axis representative",
   "hard_limits": [
     "no theorem-level pass",
     "no full-closure pass",
     "no claim that psi0 selects a physically directed axis",
-    "no claim that u_psi0_pair1 and -u_psi0_pair1 are physically distinguished by strict core",
+    "no claim of Aut(Z_12)-invariant canonicity (premise-based via T164)",
     "no claim that QW-2191 is discharged"
-  ]
+  ],
+  "no_false_pass": true
 }

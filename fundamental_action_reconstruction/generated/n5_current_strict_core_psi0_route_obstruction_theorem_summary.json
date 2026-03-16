@@ -23,13 +23,13 @@
       "meaning": "the obstruction requires extra symmetry breaking"
     },
     {
-      "id": "b2_no_internal_selector_derivation",
+      "id": "b2_axis_only_internal_orientation_datum_found_residual_sign_remains",
       "source": "B2",
       "path": "b2.strict_internal_selector_derivations_found",
-      "actual": 0,
-      "expected": 0,
+      "actual": 2,
+      "expected": 2,
       "pass": true,
-      "meaning": "no internal orientation datum is derived in strict core"
+      "meaning": "axis-only internal orientation datum is now exported (lane-scoped), but this does not close selector uniqueness nor discharge QW-2191"
     },
     {
       "id": "h30_psi0_not_selector_datum",
@@ -77,31 +77,31 @@
       "meaning": "no strict physical axis is selected"
     },
     {
-      "id": "h36_no_directed_orientation",
+      "id": "h36_directed_orientation_mechanism_exported_premise_based",
       "source": "H36",
       "path": "result",
-      "actual": "strict_core_supports_only_a_coordinate_level_undirected_axis_representative_u_psi0_pair1_inside_pair1_and_not_a_strict_directed_orientation_selection",
-      "expected": "strict_core_supports_only_a_coordinate_level_undirected_axis_representative_u_psi0_pair1_inside_pair1_and_not_a_strict_directed_orientation_selection",
+      "actual": "strict_core_exports_a_directed_sign_sensitive_orientation_selection_mechanism_on_pair1_in_the_declared_premise_based_scope_T164_T171__psi0_lane_remains_axis_only",
+      "expected": "strict_core_exports_a_directed_sign_sensitive_orientation_selection_mechanism_on_pair1_in_the_declared_premise_based_scope_T164_T171__psi0_lane_remains_axis_only",
       "pass": true,
-      "meaning": "no strict directed orientation is selected"
+      "meaning": "a directed/sign-sensitive orientation mechanism is exported (premise-based via T164+T171), but psi0 is still not exported as strict-core selector source"
     },
     {
-      "id": "h37_no_sign_sensitive_state",
+      "id": "h37_sign_sensitive_state_exported_premise_based",
       "source": "H37",
       "path": "result",
-      "actual": "strict_core_contains_no_sign_sensitive_state_object_or_observable_on_pair1_and_therefore_does_not_distinguish_u_from_minus_u_as_physically_different_selector_states",
-      "expected": "strict_core_contains_no_sign_sensitive_state_object_or_observable_on_pair1_and_therefore_does_not_distinguish_u_from_minus_u_as_physically_different_selector_states",
+      "actual": "strict_core_exports_an_explicit_sign_sensitive_directed_observable_on_pair1_and_a_global_directed_selector_state_object_on_C_v1__premise_based_via_T164__u_and_minus_u_are_distinguishable_in_declared_scope",
+      "expected": "strict_core_exports_an_explicit_sign_sensitive_directed_observable_on_pair1_and_a_global_directed_selector_state_object_on_C_v1__premise_based_via_T164__u_and_minus_u_are_distinguishable_in_declared_scope",
       "pass": true,
-      "meaning": "no sign-sensitive selector state exists"
+      "meaning": "a sign-sensitive directed selector-state layer is exported (premise-based via T164), but QW-2191 remains open and no selector closure is implied"
     },
     {
-      "id": "h38_only_projective_state",
+      "id": "h38_projective_and_directed_state_layers_exported",
       "source": "H38",
       "path": "result",
-      "actual": "strict_core_supports_at_most_a_local_projective_or_ray_level_selector_representative_on_pair1_and_does_not_furnish_a_physically_individuated_directed_selector_state",
-      "expected": "strict_core_supports_at_most_a_local_projective_or_ray_level_selector_representative_on_pair1_and_does_not_furnish_a_physically_individuated_directed_selector_state",
+      "actual": "strict_core_exports_both_a_global_projective_selector_state_object_and_a_global_directed_selector_state_object__directed_state_descends_to_projective_state__premise_based_via_T164",
+      "expected": "strict_core_exports_both_a_global_projective_selector_state_object_and_a_global_directed_selector_state_object__directed_state_descends_to_projective_state__premise_based_via_T164",
       "pass": true,
-      "meaning": "only a projective/ray-level representative exists"
+      "meaning": "both projective and directed layers are now exported; projective remains the quotient shadow and directed is premise-based"
     },
     {
       "id": "h42_psi0_plus_c_not_strict_core",

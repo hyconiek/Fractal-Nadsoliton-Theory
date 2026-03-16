@@ -84,20 +84,6 @@ def main() -> None:
             "meaning": "no strict physical axis selection is exported on pair1",
         },
         {
-            "id": "h36_no_directed_orientation_selection",
-            "source": "H36",
-            "path": ("result",),
-            "expected": "strict_core_supports_only_a_coordinate_level_undirected_axis_representative_u_psi0_pair1_inside_pair1_and_not_a_strict_directed_orientation_selection",
-            "meaning": "no strict directed orientation is exported on pair1",
-        },
-        {
-            "id": "h37_no_sign_sensitive_selector_state",
-            "source": "H37",
-            "path": ("result",),
-            "expected": "strict_core_contains_no_sign_sensitive_state_object_or_observable_on_pair1_and_therefore_does_not_distinguish_u_from_minus_u_as_physically_different_selector_states",
-            "meaning": "no sign-sensitive selector state or observable is exported on pair1",
-        },
-        {
             "id": "h42_bare_c_operator_is_trivial",
             "source": "H42",
             "path": ("case_without_psi0", "breaks_O2"),
@@ -200,7 +186,6 @@ def main() -> None:
                 "strict_core_selector_reduction_from_psi0_to_pair1_or_equivalent_target",
                 "basis_covariance_or_target_independence_for_selector_reduction",
                 "strict_physical_axis_selection_or_equivalent_orientation_object",
-                "directed_or_sign_sensitive_selector_state_or_observable",
                 "strict_core_operator_map_producing_nontrivial_A1_pair1_without_imported_anchor",
             ],
             "hard_limits": [

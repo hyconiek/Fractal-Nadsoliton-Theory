@@ -1,7 +1,7 @@
 # N4 Current-Repo psi0 Strict-Core Nonderivation Theorem
 
 Status: `N4_DISCHARGED_CURRENT_REPO_PSI0_STRICT_CORE_NONDERIVATION_NO_FALSE_PASS`
-As of: `2026-03-07`
+As of: `2026-03-16`
 
 ## Goal
 
@@ -40,8 +40,9 @@ If in R_current:
   (i) psi0 is only certified as a deterministic kernel-invariant candidate,
   (ii) psi0 -> pair1 is only certified as a coordinate embedding,
   (iii) no basis-covariant / target-independent selector reduction is exported,
-  (iv) no strict physical axis, directed orientation, or sign-sensitive
-       selector state is exported on pair1,
+  (iv) H35 still exports no strict physical axis selection argument on pair1,
+       and no exported strict-core packet upgrades psi0 into a selector source
+       even after the premise-based directed sign-lift exports (T164/T171),
   (v) every computed nontrivial pair1 selector split is classified as
       extension-only and anchor-imported,
 
@@ -93,16 +94,27 @@ From `H34`:
 So the repo still lacks a strict-core argument that the `pair1` reduction is a
 physical selector reduction rather than a chart choice.
 
-### Step 4. No strict orientation object is exported on `pair1`
+### Step 4. `psi0` is still not upgraded into a strict-core selector source
 
-From `H35`, `H36`, and `H37`:
+From `H35`:
 
 - no strict physical axis selection is exported on `pair1`,
-- no strict directed orientation is exported on that axis,
-- no sign-sensitive selector state or observable distinguishes `u` from `-u`.
 
-So even after embedding `psi0` into `pair1`, the repo still lacks the strict
-orientation object needed for a selector source.
+And on the updated strict branch:
+
+- `H36/H37/H38` record that a **premise-based** directed sign lift is now exported
+  (via `T164` + `T171` discharge: `F473/F474`), i.e. a sign-sensitive observable
+  and a global directed selector state object exist in the declared directed scope.
+
+However, this does **not** convert `psi0` into a strict-core selector source:
+
+- it is not a derivation of `psi0 = theta_1`,
+- it does not prove that `u_psi0_pair1` is a physically privileged axis,
+- it does not provide the missing strict-core operator map producing the already-computed nontrivial split without extension import.
+
+Therefore, even after embedding `psi0` into `pair1` and even after exporting a
+premise-based directed sign-lift layer, the repo still does not export a
+strict-core derivation upgrading `psi0` into a selector source on `pair1`.
 
 ### Step 5. The only computed nontrivial split is imported and extension-only
 

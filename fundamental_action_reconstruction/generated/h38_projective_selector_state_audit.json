@@ -1,15 +1,40 @@
 {
   "id": "H38",
   "date": "2026-03-16",
-  "status": "PASS_PARTIAL_PROJECTIVE_STATE_ONLY__GLOBAL_PROJECTIVE_STATE_OBJECT_EXPORTED_BUT_NO_SIGN_SENSITIVE_ORIENTATION_DATUM",
-  "result": "strict_core_supports_at_most_a_local_projective_or_ray_level_selector_representative_on_pair1_and_does_not_furnish_a_physically_individuated_directed_selector_state",
-  "frontier": "H38_B1",
-  "frontier_text": "strict core supports at most a local projective or ray-level selector representative on pair1 and does not furnish a physically individuated directed selector state",
+  "status": "PASS_DIRECTED_CONTINUATION_SELECTED__GLOBAL_DIRECTED_STATE_OBJECT_EXPORTED__PROJECTIVE_STATE_RETAINED_AS_QUOTIENT",
+  "checked_inputs": {
+    "projective_state": {
+      "path": "fundamental_action_reconstruction/generated/selector_state_global_c_v1_projective_strict_v1.json",
+      "object": "SelectorState_global_C_v1_projective_strict_v1",
+      "no_false_pass": true,
+      "sign_gauge": "projector/span semantics (u and -u identified at state level)"
+    },
+    "directed_state": {
+      "path": "fundamental_action_reconstruction/generated/selector_state_global_c_v1_directed_strict_v1.json",
+      "object": "SelectorState_global_C_v1_directed_strict_v1",
+      "no_false_pass": true,
+      "sign_gauge": "fixed_by_T164_fixing_datum_and_S_dir_pair1_strict_v1"
+    },
+    "p632_directed_decision_summary": {
+      "path": "fundamental_action_reconstruction/generated/p632_current_strict_directed_continuation_decision_packet_summary.json",
+      "no_false_pass": true,
+      "selected_continuation": "directed",
+      "decision": "DIRECTED_CONTINUATION_SELECTED"
+    }
+  },
+  "evidence": {
+    "projective_sign_gauge": "projector/span semantics (u and -u identified at state level)",
+    "directed_sign_gauge": "fixed_by_T164_fixing_datum_and_S_dir_pair1_strict_v1",
+    "directed_continuation_selected": true
+  },
+  "missing_required_inputs": [],
+  "result": "strict_core_exports_both_a_global_projective_selector_state_object_and_a_global_directed_selector_state_object__directed_state_descends_to_projective_state__premise_based_via_T164",
+  "frontier": "H38_B2",
+  "frontier_text": "strict core exports both a global projective selector state object (quotient/ray layer) and a global directed selector state object (vector layer, premise-based via T164), with the directed layer descending to the projective one",
   "hard_limits": [
     "no theorem-level pass",
     "no full-closure pass",
-    "no claim that the projective/ray-level state is already the physically correct selector state",
-    "no claim that a sign-sensitive directed selector state or observable is exported",
     "no claim that QW-2191 is discharged"
-  ]
+  ],
+  "no_false_pass": true
 }

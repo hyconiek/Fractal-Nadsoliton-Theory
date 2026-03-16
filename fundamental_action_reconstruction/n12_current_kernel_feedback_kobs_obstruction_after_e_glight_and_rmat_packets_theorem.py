@@ -85,16 +85,16 @@ def main() -> None:
             "meaning": "strict axis selection remains absent",
         },
         {
-            "id": "h36_no_directed_axis_selection",
+            "id": "h36_directed_axis_orientation_present_premise_based",
             "actual": sources["H36"]["status"],
-            "expected": "PASS_PARTIAL_NO_STRICT_DIRECTED_AXIS_SELECTION",
-            "meaning": "directed-axis discharge remains absent",
+            "expected": "PASS_DIRECTED_AXIS_ORIENTATION_PRESENT__PREMISE_BASED_T164",
+            "meaning": "directed-axis orientation mechanism is now exported (premise-based), but this does not instantiate selector-facing K_obs from existing kernel feedback",
         },
         {
-            "id": "h37_no_sign_distinction",
+            "id": "h37_sign_distinction_state_exported_premise_based",
             "actual": sources["H37"]["status"],
-            "expected": "PASS_PARTIAL_NO_STRICT_SIGN_DISTINCTION_STATE_OBJECT",
-            "meaning": "sign-distinction discharge remains absent",
+            "expected": "PASS_STRICT_DIRECTED_SIGN_SENSITIVE_DISTINCTION_OBSERVABLE_EXPORTED_AND_GLOBAL_DIRECTED_SELECTOR_STATE_OBJECT_EXPORTED__PREMISE_BASED_T164",
+            "meaning": "a sign-sensitive directed selector-state layer is now exported (premise-based), but this does not instantiate selector-facing K_obs from existing kernel feedback",
         },
         {
             "id": "h15_selector_sector_export_absent",

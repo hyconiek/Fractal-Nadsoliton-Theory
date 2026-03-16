@@ -1,7 +1,7 @@
 # N5 Current Strict-Core psi0-Route Obstruction Theorem
 
 Status: `N5_DISCHARGED_CURRENT_STRICT_CORE_PSI0_ROUTE_OBSTRUCTION_NO_FALSE_PASS`
-As of: `2026-03-07`
+As of: `2026-03-16`
 
 ## Goal
 
@@ -23,11 +23,15 @@ Within the current strict core:
 
 1. kernel alone is already theorem-level obstructed from giving full physical
    uniqueness because of continuous residual `O(2)` freedom (`QW-2191`),
-2. no internal orientation datum exists in strict core to replace the missing
-   symmetry-breaking input (`B2`),
+2. an internal orientation datum exists only at **axis level** (cuts `O(2) -> Z2`)
+   on the diagonal/local and Shannon lanes (`B2`), but residual `Z2` sign and
+   global `QW-2191` discharge remain open,
 3. the current `psi0` lane exports at most a deterministic angle candidate plus
    local coordinate embedding, but no chart-independent selector object,
-4. the only currently computed nontrivial split remains extension-only and
+4. a premise-based directed sign lift is now exported (via `T164` + `T171`:
+   `F473/F474`) but does not imply `Aut(Z_12)`-invariant canonicity nor any
+   global selector closure,
+5. the only currently computed nontrivial split remains extension-only and
    anchor-imported.
 
 Therefore the current strict-core `psi0` route is obstructed: it cannot close
@@ -48,14 +52,16 @@ Let S_psi0_current denote the current strict-core psi0 route consisting of:
 If:
   (i) QW-2191 proves that kernel alone leaves a continuous O(2) family and
       therefore requires extra symmetry breaking for full physical uniqueness,
-  (ii) B2 proves that no internal orientation datum is currently derived in the
-       strict core to discharge that obstruction,
-  (iii) H30/H31/H33/H34/H35/H36/H37/H38 show that psi0 supplies at most a
-        candidate angle and local projective embedding structure, but no strict
-        selector target, no chart-independent reduction, no physical axis,
-        no directed orientation, and no sign-sensitive selector state,
-  (iv) H42 and P1 show that the first nontrivial pair1 split appears only as an
-       anchor-imported extension-lane effect,
+  (ii) B2 shows that strict core exports at most an axis-level internal
+       orientation datum (O(2)->Z2 cut), with residual sign still open,
+  (iii) H30/H31/H33/H34/H35 show that psi0 supplies at most a candidate angle
+        and local chart embedding structure, but no strict selector target, no
+        chart-independent reduction, and no strict physical axis selection,
+  (iv) H36/H37/H38 show that a premise-based directed sign-lift layer exists
+       (T164+T171), but this does not upgrade psi0 into a selector source nor
+       discharge global QW-2191,
+  (v) H42 and P1 show that the first nontrivial pair1 split appears only as an
+        anchor-imported extension-lane effect,
 
 then S_psi0_current cannot discharge selector closure in strict core.
 
@@ -78,16 +84,17 @@ From `QW-2191`:
 So the strict-core `psi0` lane cannot rely on kernel structure alone to choose a
 unique physical selector.
 
-### Step 2. No internal strict-core orientation datum is available
+### Step 2. Only axis-level internal strict-core orientation data are available
 
-From `B2`:
+From `B2` (updated repo state):
 
-- `strict_internal_selector_derivations_found = 0`,
-- `strict internal orientation datum = not_found_in_strict_core`,
-- `kernel invariant selecting one O(2) point = not_found_in_strict_core`.
+- `strict_internal_selector_derivations_found > 0` but only at **axis level**,
+  i.e. `O(2)->Z2` cut on the diagonal/local and/or Shannon lanes,
+- `kernel invariant selecting one O(2) point = not_found_in_strict_core`,
+- residual `Z2` sign remains and global `QW-2191` discharge remains open.
 
-So the strict core does not currently contain the missing datum that could
-replace the external selector.
+So the strict core does not currently contain a kernel-invariant selecting one
+`O(2)` point, nor an admissible strict selector object closing `QW-2191`.
 
 ### Step 3. The current `psi0` lane does not elevate beyond local chart structure
 
@@ -110,15 +117,24 @@ chart-independent strict-core selector reduction.
 
 ### Step 4. No strict orientation object exists on `pair1`
 
-From `H35`, `H36`, `H37`, and `H38`:
+From `H35`:
 
 - no strict physical axis is selected on `pair1`,
-- no directed orientation is selected on that axis,
-- no sign-sensitive state distinguishes `u` from `-u`,
-- at most a local projective/ray-level representative exists.
 
-So even the local `pair1` chart does not carry the strict orientation object
-needed for selector closure.
+And on the directed branch:
+
+- `H36/H37/H38` record a premise-based directed sign-lift layer
+  (`T164` + `T171`: `F473/F474`) which distinguishes `u` from `-u` in the
+  declared scope, while keeping `Aut(Z_12)`-invariant canonicity explicitly
+  undischarged (`N462`).
+
+So the remaining strict-core obstruction is no longer “no sign-lift exists at
+all”, but rather:
+
+- no strict physical axis selection is derived from `psi0`,
+- no chart-independent selector reduction is exported,
+- no admissible `S_sel_int` / selector closure is exported,
+- and global `QW-2191` remains undischarged.
 
 ### Step 5. Nontrivial splitting appears only outside strict core
 
