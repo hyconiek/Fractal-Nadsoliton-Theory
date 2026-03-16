@@ -1,0 +1,50 @@
+{
+  "stage": "F646",
+  "lane": "strict_witness_provider_contract_only",
+  "goal": "freeze_the_minimal_contract_for_a_strict_constructed_source_object_export_witness_provider_for_seed_v1_realization_attempt",
+  "status": "F646_EXECUTED_STRICT_WITNESS_PROVIDER_CONTRACT_PACKET_FOR_SEED_V1_REALIZATION_ATTEMPT_NO_FALSE_PASS",
+  "contract": {
+    "id": "strict_witness_provider_contract_for_seed_v1_realization_attempt_v1",
+    "base_realization_attempt": "S_sel_int_new_object_constructed_realization_attempt_v1",
+    "minimal_required_outputs": [
+      "constructed_source_object_exported = true",
+      "exported_constructed_source_object_identity (new object name)",
+      "explicit provenance linking the export to the base realization attempt",
+      "typed enough to support later admissibility / E_orient / downstream probes without smuggled slots"
+    ],
+    "hard_forbidden": [
+      "silent_legacy_to_strict_kernel_substitution",
+      "external_selector_import_as_if_it_were_the_source_object",
+      "strict_core_selector_closure_claim",
+      "QW-2191_discharge_claim",
+      "ToE_closure_claim"
+    ],
+    "counts_only_as": [
+      "constructed_source_object_export_witness_provider_only",
+      "future_provider_class_target_for_seed_v1_realization"
+    ],
+    "does_not_count_as": [
+      "admissible_S_sel_int",
+      "admissible_E_orient",
+      "downstream_completion",
+      "strict_core_selector_closure"
+    ],
+    "canonical_probe_signature": {
+      "required_top_level_keys": [
+        "base_realization_attempt",
+        "exported_constructed_source_object",
+        "constructed_source_object_exported",
+        "no_false_pass"
+      ],
+      "required_values": {
+        "base_realization_attempt": "S_sel_int_new_object_constructed_realization_attempt_v1",
+        "constructed_source_object_exported": true,
+        "no_false_pass": true
+      },
+      "note": "P646 scans generated/*.json for objects matching this signature."
+    }
+  },
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

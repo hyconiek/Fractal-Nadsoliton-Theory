@@ -252,6 +252,18 @@ N537_SUMMARY = (
     GENERATED
     / "n537_current_post_verdict_lower_branch_full_negative_closure_theorem_for_s_sel_int_candidate_seed_v1_summary.json"
 )
+F646_SUMMARY = (
+    GENERATED
+    / "f646_strict_witness_provider_contract_packet_for_seed_v1_realization_attempt_summary.json"
+)
+P646_SUMMARY = (
+    GENERATED
+    / "p646_current_strict_witness_provider_scan_probe_for_seed_v1_realization_attempt_summary.json"
+)
+N538_SUMMARY = (
+    GENERATED
+    / "n538_current_strict_witness_provider_absence_theorem_for_seed_v1_realization_attempt_summary.json"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -695,12 +707,31 @@ def main() -> None:
                                                 "Next move: package the full post-verdict lower-branch negative closure theorem (N537)."
                                             )
                                         else:
-                                            recommended_next_target = "DESIGN_NEW_STRICT_WITNESS_PROVIDER_FOR_SEED_V1_REALIZATION_ATTEMPT"
-                                            recommendation_reason = (
-                                                "N537 closes the post-verdict lower-branch frontier negatively on current repo state (seed v1). "
-                                                "Next move: design and export a genuinely constructive strict witness provider (constructed source object export attempt + admissibility interface), "
-                                                "or prove a scope-level non-bridge impossibility, without implying selector closure / QW-2191 discharge."
-                                            )
+                                            if not F646_SUMMARY.exists():
+                                                recommended_next_target = "F646"
+                                                recommendation_reason = (
+                                                    "N537 closes the post-verdict lower-branch frontier negatively on current repo state (seed v1). "
+                                                    "Next move: freeze the minimal strict witness-provider contract + scan signature (F646)."
+                                                )
+                                            elif not P646_SUMMARY.exists():
+                                                recommended_next_target = "P646"
+                                                recommendation_reason = (
+                                                    "F646 freezes the strict witness-provider contract + scan signature. "
+                                                    "Next move: run P646 to mechanically scan whether any exported artifact already matches it."
+                                                )
+                                            elif not N538_SUMMARY.exists():
+                                                recommended_next_target = "N538"
+                                                recommendation_reason = (
+                                                    "P646 finds no strict witness provider on current repo state. "
+                                                    "Next move: package the absence theorem (N538)."
+                                                )
+                                            else:
+                                                recommended_next_target = "IMPLEMENT_STRICT_WITNESS_PROVIDER_EXPORT_PACKET_FOR_SEED_V1_REALIZATION_ATTEMPT"
+                                                recommendation_reason = (
+                                                    "N538 confirms absence of any strict witness provider matching the F646 signature on current repo state. "
+                                                    "Next move: implement one strict witness provider export packet meeting F646 (constructed source object export + admissibility interface), "
+                                                    "or prove a scope-level non-bridge impossibility, without implying selector closure / QW-2191 discharge."
+                                                )
         except Exception:
             pass
 
