@@ -324,6 +324,18 @@ N544_SUMMARY = (
     GENERATED
     / "n544_current_fifth_admissibility_clause_discharge_theorem_for_s_sel_int_strict_core_source_object_v1_summary.json"
 )
+F653_SUMMARY = (
+    GENERATED
+    / "f653_first_exported_s_sel_int_strict_core_source_object_future_bridge_compatibility_packet_summary.json"
+)
+P653_SUMMARY = (
+    GENERATED
+    / "p653_current_sixth_admissibility_clause_rerun_after_future_bridge_compatibility_packet_for_s_sel_int_strict_core_source_object_v1_probe_summary.json"
+)
+N545_SUMMARY = (
+    GENERATED
+    / "n545_current_sixth_admissibility_clause_discharge_theorem_for_s_sel_int_strict_core_source_object_v1_summary.json"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -910,14 +922,34 @@ def main() -> None:
                                                                                 "Next move: package the clause discharge theorem (N544), keeping later clauses explicitly open."
                                                                             )
                                                                         else:
-                                                                            recommended_next_target = (
-                                                                                "ATTACK_SIXTH_ADMISSIBILITY_CLAUSE_FUTURE_BRIDGE_COMPATIBLE_REQUIRED_FOR_S_SEL_INT_STRICT_CORE_SOURCE_OBJECT_V1"
-                                                                            )
-                                                                            recommendation_reason = (
-                                                                                "N544 discharges the selector-acceptance-independence clause for S_sel_int_strict_core_source_object_v1 on current repo state. "
-                                                                                "Next move: attack the final clause (future bridge compatible required), "
-                                                                                "noting existing incompatibility-boundary results if the clause cannot be certified from the current seed state."
-                                                                            )
+                                                                            if not F653_SUMMARY.exists():
+                                                                                recommended_next_target = "F653"
+                                                                                recommendation_reason = (
+                                                                                    "N544 discharges the selector-acceptance-independence clause for S_sel_int_strict_core_source_object_v1 on current repo state. "
+                                                                                    "Next move: freeze explicit future-bridge-compatibility data (F653), without claiming E_orient/B_sel or downstream completion."
+                                                                                )
+                                                                            elif not P653_SUMMARY.exists():
+                                                                                recommended_next_target = "P653"
+                                                                                recommendation_reason = (
+                                                                                    "F653 freezes future-bridge-compatibility data for S_sel_int_strict_core_source_object_v1. "
+                                                                                    "Next move: rerun the final admissibility clause (future bridge compatible required) on current repo state (P653)."
+                                                                                )
+                                                                            elif not N545_SUMMARY.exists():
+                                                                                recommended_next_target = "N545"
+                                                                                recommendation_reason = (
+                                                                                    "P653 reports the final admissibility clause rerun result for S_sel_int. "
+                                                                                    "Next move: package the final-clause discharge theorem (N545), keeping E_orient/downstream explicitly unexported."
+                                                                                )
+                                                                            else:
+                                                                                recommended_next_target = (
+                                                                                    "ATTACK_ORIENTATION_EXPORT_BRANCH_E_ORIENT_FOR_S_SEL_INT_STRICT_CORE_SOURCE_OBJECT_V1"
+                                                                                )
+                                                                                recommendation_reason = (
+                                                                                    "N545 discharges the final admissibility clause for S_sel_int_strict_core_source_object_v1 on current repo state "
+                                                                                    "(the minimal strict-core source-object admissibility contract is now fully discharged for this object). "
+                                                                                    "Next move: attack the explicit E_orient export branch from this admissible strict-core source object, "
+                                                                                    "without implying strict-core selector closure or QW-2191 discharge."
+                                                                                )
         except Exception:
             pass
 
