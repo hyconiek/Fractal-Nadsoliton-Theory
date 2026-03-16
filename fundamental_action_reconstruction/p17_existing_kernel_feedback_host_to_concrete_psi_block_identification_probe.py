@@ -23,70 +23,83 @@ def main() -> None:
         "fundamental_action_reconstruction/generated/p16_existing_kernel_feedback_legacy_chart_reduced_operator_export_probe.json"
     )
     c10 = load_json("fundamental_action_reconstruction/generated/c10_psi_sector_host_identification_audit_summary.json")
-    c11 = load_json("fundamental_action_reconstruction/generated/c11_psi_sector_block_extraction_audit_summary.json")
-    c12 = load_json("fundamental_action_reconstruction/generated/c12_minimal_psi_block_extraction_packet_summary.json")
-    c13 = load_json("fundamental_action_reconstruction/generated/c13_mode_basis_control_index_set_audit_summary.json")
-    c14 = load_json("fundamental_action_reconstruction/generated/c14_control_mode_to_psi_transport_schema_summary.json")
-    c20 = load_json("fundamental_action_reconstruction/generated/c20_finite_materialization_recipe_audit_summary.json")
+    r14 = load_json(
+        "fundamental_action_reconstruction/generated/r14_explicit_frozen_kernel_specialization_packet_for_host_matching_route_summary.json"
+    )
+    r15 = load_json(
+        "fundamental_action_reconstruction/generated/r15_explicit_host_scalar_floor_embedding_packet_for_host_matching_route_summary.json"
+    )
+    r16 = load_json(
+        "fundamental_action_reconstruction/generated/r16_explicit_residual_local_diagonal_declared_control_pullback_packet_for_host_matching_route_summary.json"
+    )
+    r17 = load_json(
+        "fundamental_action_reconstruction/generated/r17_explicit_host_side_residual_diagonal_correction_absence_packet_for_host_matching_route_summary.json"
+    )
+    r18 = load_json(
+        "fundamental_action_reconstruction/generated/r18_pair1_residual_declared_pullback_coefficient_class_reduction_packet_for_host_matching_route_summary.json"
+    )
+    q2191 = load_json(
+        "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2191_mode_index_uniqueness_obstruction_theorem_gate.json"
+    )
 
     p16_missing = p16["remaining_missing_upstream_objects"]
     remaining_missing = [
-        "strict_physical_canonicalization_of_the_control_transport_from_mode_basis_to_canonical_Psi_basis_for_selector_relevant_block_extraction",
-        "explicit_assembled_and_coefficient_filled_concrete_Psi_sector_quadratic_submatrix_on_a_chosen_transported_index_set",
-        "explicit_host_to_submatrix_matching_witness_identifying_the_QW2186_certified_host_operator_with_that_concrete_Psi_sector_block",
+        "explicit_zero_or_host_side_cancellation_witness_for_the_declared_control_pullback_of_the_residual_local_diagonal_sector",
+        "full_physical_uniqueness_or_selector_relevant_canonicalization_of_the_explicit_declared_control_transport_within_the_QW2191_O2_family",
     ]
 
     route_checks = [
         {
-            "id": "p16_originally_missing_host_to_concrete_psi_block_identification",
-            "pass": "host_to_concrete_Psi_sector_quadratic_block_identification_for_the_existing_kernel_feedback_host_operator"
-            in p16_missing,
+            "id": "p16_missing_is_now_the_residual_diagonal_cancellation_and_qw2191_canonicalization_pair",
+            "pass": all(obj in p16_missing for obj in remaining_missing),
             "expected": True,
-            "actual": "host_to_concrete_Psi_sector_quadratic_block_identification_for_the_existing_kernel_feedback_host_operator"
-            in p16_missing,
-            "meaning": "P16 indeed localized the first upstream blocker as host-to-concrete Psi-block identification",
+            "actual": all(obj in p16_missing for obj in remaining_missing),
+            "meaning": "P16 now reduces the host-to-canonical matching gap to the residual diagonal cancellation witness plus the QW-2191 canonicalization boundary",
         },
         {
-            "id": "c13_mode_basis_control_index_set_present",
-            "pass": c13["result"]["mode_basis_control_index_set_present"] == "yes",
-            "expected": "yes",
-            "actual": c13["result"]["mode_basis_control_index_set_present"],
-            "meaning": "the deterministic control index-set exists in mode basis",
+            "id": "r14_kernel_channel_specialization_packet_present",
+            "pass": r14["status"] == "PASS_PARTIAL_EXPLICIT_FROZEN_KERNEL_SPECIALIZATION_PACKET_READY",
+            "expected": "PASS_PARTIAL_EXPLICIT_FROZEN_KERNEL_SPECIALIZATION_PACKET_READY",
+            "actual": r14["status"],
+            "meaning": "the shared kernel/light-facing channel specialization witness is exported (R14)",
         },
         {
-            "id": "c14_control_transport_schema_present",
-            "pass": c14["result"]["control_transport_schema_present"] == "yes",
-            "expected": "yes",
-            "actual": c14["result"]["control_transport_schema_present"],
-            "meaning": "a control transport schema from mode basis to canonical Psi carrier is present",
+            "id": "r15_scalar_floor_embedding_packet_present",
+            "pass": r15["status"] == "PASS_PARTIAL_EXPLICIT_HOST_SCALAR_FLOOR_EMBEDDING_PACKET_READY",
+            "expected": "PASS_PARTIAL_EXPLICIT_HOST_SCALAR_FLOOR_EMBEDDING_PACKET_READY",
+            "actual": r15["status"],
+            "meaning": "the host scalar-floor embedding into the canonical diagonal sector is exported (R15)",
         },
         {
-            "id": "c14_strict_physical_justification_not_shown",
-            "pass": c14["result"]["strict_physical_justification_present"] == "not_shown",
-            "expected": "not_shown",
-            "actual": c14["result"]["strict_physical_justification_present"],
-            "meaning": "the transport has not been physically canonicalized for selector-relevant extraction",
+            "id": "r16_residual_diagonal_declared_pullback_packet_present",
+            "pass": r16["status"]
+            == "PASS_PARTIAL_EXPLICIT_RESIDUAL_DIAGONAL_DECLARED_CONTROL_PULLBACK_PACKET_READY",
+            "expected": "PASS_PARTIAL_EXPLICIT_RESIDUAL_DIAGONAL_DECLARED_CONTROL_PULLBACK_PACKET_READY",
+            "actual": r16["status"],
+            "meaning": "the declared control pullback of the residual local diagonal sector is exported (R16)",
         },
         {
-            "id": "c11_concrete_psi_block_not_extracted",
-            "pass": c11["result"]["concrete_block_extracted"] == "not_shown",
-            "expected": "not_shown",
-            "actual": c11["result"]["concrete_block_extracted"],
-            "meaning": "no concrete Psi-sector block has been explicitly extracted",
+            "id": "r17_host_side_residual_diagonal_correction_absence_packet_present",
+            "pass": r17["status"]
+            == "PASS_PARTIAL_EXPLICIT_HOST_SIDE_RESIDUAL_DIAGONAL_CORRECTION_ABSENCE_PACKET_READY",
+            "expected": "PASS_PARTIAL_EXPLICIT_HOST_SIDE_RESIDUAL_DIAGONAL_CORRECTION_ABSENCE_PACKET_READY",
+            "actual": r17["status"],
+            "meaning": "the host-side residual diagonal correction branch is closed as absent (R17)",
         },
         {
-            "id": "c12_assembled_submatrix_not_exported",
-            "pass": c12["result"]["assembled_submatrix_exported"] == "not_shown",
-            "expected": "not_shown",
-            "actual": c12["result"]["assembled_submatrix_exported"],
-            "meaning": "no assembled Psi-sector submatrix export is present",
+            "id": "r18_pair1_residual_zero_system_present",
+            "pass": r18["status"]
+            == "PASS_PARTIAL_PAIR1_RESIDUAL_DECLARED_PULLBACK_COEFFICIENT_CLASS_REDUCTION_PACKET_READY",
+            "expected": "PASS_PARTIAL_PAIR1_RESIDUAL_DECLARED_PULLBACK_COEFFICIENT_CLASS_REDUCTION_PACKET_READY",
+            "actual": r18["status"],
+            "meaning": "the declared pair1 residual block is reduced to an explicit finite zero system (R18), but no zero witness is exported",
         },
         {
-            "id": "c20_executed_serialization_run_not_shown",
-            "pass": c20["persisted_outputs"]["persisted_12_row_serialization_run_present"] is False,
+            "id": "qw2191_full_physical_uniqueness_still_open",
+            "pass": q2191["flags"]["full_physical_uniqueness_closed"] is False,
             "expected": False,
-            "actual": c20["persisted_outputs"]["persisted_12_row_serialization_run_present"],
-            "meaning": "the finite materialization recipe still has no executed persisted serialization run",
+            "actual": q2191["flags"]["full_physical_uniqueness_closed"],
+            "meaning": "QW-2191 still blocks full physical uniqueness / selector-relevant canonicalization",
         },
         {
             "id": "c10_host_to_concrete_psi_block_identification_not_shown",
@@ -98,48 +111,49 @@ def main() -> None:
     ]
 
     route_state = {
-        "deterministic_mode_basis_control_index_set_present": True,
-        "control_transport_schema_present": True,
-        "strict_physical_transport_canonicalization_present": False,
-        "concrete_psi_sector_block_extracted": False,
-        "coefficient_filled_concrete_psi_sector_submatrix_present": False,
-        "host_to_submatrix_matching_witness_present": False,
+        "partial_host_to_canonical_block_overlap_present": True,
+        "kernel_channel_specialization_witness_present": True,
+        "host_scalar_floor_embedding_present": True,
+        "declared_control_pullback_of_residual_local_diagonal_sector_present": True,
+        "explicit_pair1_residual_zero_system_present": True,
+        "zero_or_host_side_cancellation_witness_present": False,
+        "full_physical_uniqueness_or_selector_relevant_canonicalization_present": False,
     }
 
     report = {
         "stage": "P17",
         "goal": "compute_or_fail_existing_kernel_feedback_host_to_concrete_Psi_sector_block_identification",
         "status": "NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_HOST_TO_CONCRETE_PSI_BLOCK_IDENTIFICATION_ROUTE",
-        "reason": "the repo now contains a deterministic control index-set in mode basis and a control-transport schema into the canonical Psi carrier, but it still exports neither a physically canonicalized transport for selector-relevant block extraction, nor an assembled coefficient-filled concrete Psi-sector submatrix on a chosen transported index-set, nor a host-to-submatrix matching witness identifying the QW-2186 host operator with that concrete block",
+        "reason": "the repo now exports a partial host-to-canonical overlap packet (kernel specialization + scalar floor embedding) and the declared control pullback of the residual local diagonal sector reduced to an explicit finite pair1 zero system (R14–R18), but it still exports neither a zero/cancellation witness for that declared residual pullback nor selector-relevant physical canonicalization within the QW-2191 O(2) family; therefore host-to-concrete Psi-block identification remains noncomputable in strict scope",
         "lane": "existing_kernel_feedback_host_to_concrete_Psi_block_identification_route_after_P16",
         "route_under_test": [
-            "deterministic_mode_basis_control_index_set",
-            "control_transport_schema_to_canonical_Psi_basis",
-            "strict_physical_transport_canonicalization",
-            "concrete_Psi_sector_block_extraction",
-            "coefficient_filled_concrete_Psi_sector_submatrix_export",
-            "host_to_submatrix_matching_witness",
+            "kernel_channel_specialization_witness",
+            "host_scalar_floor_embedding_packet",
+            "declared_control_pullback_of_residual_local_diagonal_sector",
+            "zero_or_host_side_cancellation_witness_for_that_pullback",
+            "full_physical_uniqueness_or_selector_relevant_canonicalization",
+            "host_to_concrete_Psi_block_identification",
         ],
         "route_checks": route_checks,
         "route_state": route_state,
         "supporting_present_but_insufficient_objects": [
-            "C13_mode_basis_control_index_sets",
-            "C14_control_transport_schema",
-            "C12_minimal_Psi_block_extraction_packet",
-            "C20_finite_materialization_recipe",
+            "R18_pair1_residual_declared_pullback_coefficient_class_reduction_packet",
+            "R17_host_side_residual_diagonal_correction_absence_packet",
+            "R16_explicit_residual_local_diagonal_declared_control_pullback_packet",
+            "R15_explicit_host_scalar_floor_embedding_packet",
+            "R14_explicit_frozen_kernel_specialization_packet",
         ],
         "decomposition_of_P16_missing_object": {
-            "from_P16": "host_to_concrete_Psi_sector_quadratic_block_identification_for_the_existing_kernel_feedback_host_operator",
+            "from_P16": "host_to_canonical_matching_gap_reduced_to_residual_diagonal_cancellation_and_qw2191_canonicalization",
             "into_current_blockers": remaining_missing,
         },
         "remaining_missing_upstream_objects": remaining_missing,
         "blocking_frontier": {
-            "C14_B1": c14["residual_blockers"]["C14_B1"],
-            "C14_B2": c14["residual_blockers"]["C14_B2"],
-            "C20_B1": c20["residual_blockers"]["C20_B1"],
             "C10_B1": c10["residual_blockers"]["C10_B1"],
+            "R18_B1": r18["result"],
+            "QW2191_required_next_step": q2191["required_next_step"],
         },
-        "required_next_step": "EITHER_EXPORT_A_PHYSICALLY_CANONICALIZED_CONCRETE_PSI_SECTOR_BLOCK_AND_MATCH_IT_TO_THE_QW2186_HOST_OR_KEEP_THE_HOST_IDENTIFICATION_ROUTE_NEGATIVE",
+        "required_next_step": "EITHER_PROVE_SELECTOR_RELEVANT_CANONICALIZATION_AND_ADD_A_ZERO_OR_HOST_SIDE_CANCELLATION_WITNESS_FOR_THE_RESIDUAL_DECLARED_PULLBACK_OR_KEEP_THE_HOST_IDENTIFICATION_ROUTE_NEGATIVE",
         "strict_core_promotion": False,
         "no_false_pass": True,
     }

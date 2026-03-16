@@ -2,7 +2,7 @@
   "stage": "P16",
   "goal": "compute_or_fail_existing_kernel_feedback_legacy_chart_reduced_operator_export_on_pair1_after_P15",
   "status": "NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_LEGACY_CHART_REDUCED_OPERATOR_EXPORT_ROUTE",
-  "reason": "the repo now contains the host carrier, the typed host-to-control pushforward, the formal control pullback formula, the chosen current-pair chart reduction, and (in declared scope) both a coefficient-filled canonical Psi x Psi block H_PsiPsi (R12) and a coefficient-filled declared control pullback M_control (P476), but it still exports no host-to-concrete Psi-block identification matching the existing-feedback host operator to that canonical carrier (C10_B1), so no strict existing-feedback legacy chart-reduced operator object on pair1 can be promoted from these declared artifacts",
+  "reason": "the repo now contains the host carrier, the typed host-to-control pushforward, the formal control pullback formula, the chosen current-pair chart reduction, and (in declared scope) both a coefficient-filled canonical Psi x Psi block H_PsiPsi (R12) and a coefficient-filled declared control pullback M_control (P476). The host-to-canonical matching gap (C10_B1) is now partially reduced: the shared kernel/light-facing channel specialization witness is exported (R14), the host scalar-floor embedding into the canonical diagonal sector is exported (R15), and the declared control pullback of the residual local diagonal sector is exported and reduced to a finite pair1 zero system (R16/R18), with the host-side residual correction branch explicitly absent (R17). However, the repo still exports no (i) zero-or-cancellation witness for the declared control pullback of that residual diagonal sector, and no (ii) selector-relevant physical canonicalization of the declared control transport within the QW-2191 O(2) family; therefore no strict existing-feedback legacy chart-reduced operator object on pair1 can be promoted from the current declared artifacts",
   "lane": "existing_kernel_feedback_legacy_chart_reduced_operator_export_route_after_P15",
   "route_under_test": [
     "existing_kernel_feedback_host_operator",
@@ -50,6 +50,48 @@
       "meaning": "the legacy host is still not identified with a concrete Psi-sector block"
     },
     {
+      "id": "r14_kernel_channel_specialization_packet_present",
+      "pass": true,
+      "expected": "PASS_PARTIAL_EXPLICIT_FROZEN_KERNEL_SPECIALIZATION_PACKET_READY",
+      "actual": "PASS_PARTIAL_EXPLICIT_FROZEN_KERNEL_SPECIALIZATION_PACKET_READY",
+      "meaning": "the shared kernel/light-facing channel specialization witness is exported (R14)"
+    },
+    {
+      "id": "r15_scalar_floor_embedding_packet_present",
+      "pass": true,
+      "expected": "PASS_PARTIAL_EXPLICIT_HOST_SCALAR_FLOOR_EMBEDDING_PACKET_READY",
+      "actual": "PASS_PARTIAL_EXPLICIT_HOST_SCALAR_FLOOR_EMBEDDING_PACKET_READY",
+      "meaning": "the host scalar-floor embedding into the canonical diagonal sector is exported (R15)"
+    },
+    {
+      "id": "r16_residual_diagonal_declared_pullback_packet_present",
+      "pass": true,
+      "expected": "PASS_PARTIAL_EXPLICIT_RESIDUAL_DIAGONAL_DECLARED_CONTROL_PULLBACK_PACKET_READY",
+      "actual": "PASS_PARTIAL_EXPLICIT_RESIDUAL_DIAGONAL_DECLARED_CONTROL_PULLBACK_PACKET_READY",
+      "meaning": "the declared control pullback of the residual local diagonal sector is exported (R16)"
+    },
+    {
+      "id": "r17_host_side_residual_diagonal_correction_absence_packet_present",
+      "pass": true,
+      "expected": "PASS_PARTIAL_EXPLICIT_HOST_SIDE_RESIDUAL_DIAGONAL_CORRECTION_ABSENCE_PACKET_READY",
+      "actual": "PASS_PARTIAL_EXPLICIT_HOST_SIDE_RESIDUAL_DIAGONAL_CORRECTION_ABSENCE_PACKET_READY",
+      "meaning": "the host-side residual diagonal correction branch is closed as absent (R17)"
+    },
+    {
+      "id": "r18_pair1_residual_zero_system_present",
+      "pass": true,
+      "expected": "PASS_PARTIAL_PAIR1_RESIDUAL_DECLARED_PULLBACK_COEFFICIENT_CLASS_REDUCTION_PACKET_READY",
+      "actual": "PASS_PARTIAL_PAIR1_RESIDUAL_DECLARED_PULLBACK_COEFFICIENT_CLASS_REDUCTION_PACKET_READY",
+      "meaning": "the declared pair1 residual block is reduced to an explicit finite zero system (R18), but no zero witness is exported"
+    },
+    {
+      "id": "n25_obstruction_theorem_packaged",
+      "pass": true,
+      "expected": true,
+      "actual": true,
+      "meaning": "the post-R15 host-matching obstruction theorem is packaged (N25)"
+    },
+    {
       "id": "c15_coefficient_filled_h_psi_psi_present_via_r12",
       "pass": true,
       "expected": "yes",
@@ -79,6 +121,13 @@
     "host_to_concrete_psi_block_identification_present": false,
     "coefficient_filled_psi_sector_block_export_present": true,
     "coefficient_filled_control_pullback_present": true,
+    "kernel_channel_specialization_witness_present": true,
+    "host_scalar_floor_embedding_present": true,
+    "declared_control_pullback_of_residual_local_diagonal_present": true,
+    "host_side_residual_diagonal_correction_present": false,
+    "explicit_pair1_residual_zero_system_present": true,
+    "zero_or_host_side_cancellation_witness_present": false,
+    "full_physical_uniqueness_or_selector_relevant_canonicalization_present": false,
     "coefficient_filled_legacy_chart_reduced_operator_present": false
   },
   "supporting_present_but_insufficient_objects": [
@@ -87,22 +136,30 @@
     "C15_formal_control_pullback_formula",
     "R10_current_pair_chart_reduction_map",
     "R12_coefficient_filled_canonical_H_PsiPsi (declared support)",
-    "P476_coefficient_filled_M_control (declared control pullback)"
+    "P476_coefficient_filled_M_control (declared control pullback)",
+    "R14_kernel_channel_specialization_witness",
+    "R15_host_scalar_floor_embedding",
+    "R16_declared_control_pullback_of_residual_local_diagonal_sector",
+    "R17_host_side_residual_diagonal_correction_absence",
+    "R18_pair1_residual_zero_system"
   ],
   "decomposition_of_P15_missing_object": {
     "from_P15": "explicit_coefficient_filled_legacy_chart_reduced_operator_object_on_the_chosen_current_pair_chart_pair1_or_equivalent_actual_target",
     "into_current_blockers": [
-      "host_to_concrete_Psi_sector_quadratic_block_identification_for_the_existing_kernel_feedback_host_operator"
+      "explicit_zero_or_host_side_cancellation_witness_for_the_declared_control_pullback_of_the_residual_local_diagonal_sector",
+      "full_physical_uniqueness_or_selector_relevant_canonicalization_of_the_explicit_declared_control_transport_within_the_QW2191_O2_family"
     ]
   },
   "remaining_missing_upstream_objects": [
-    "host_to_concrete_Psi_sector_quadratic_block_identification_for_the_existing_kernel_feedback_host_operator"
+    "explicit_zero_or_host_side_cancellation_witness_for_the_declared_control_pullback_of_the_residual_local_diagonal_sector",
+    "full_physical_uniqueness_or_selector_relevant_canonicalization_of_the_explicit_declared_control_transport_within_the_QW2191_O2_family"
   ],
   "blocking_frontier": {
     "C10_B1": "no_explicit_coefficient_level_or_block_level_identification_between_the_qw2186_certified_host_operator_and_a_concrete_Psi_sector_quadratic_Hessian_block_inside_the_canonical_13_field_carrier",
-    "C15_B2": "no_explicit_restriction_from_M_control_to_the_candidate_orientation_slice"
+    "C15_B2": "no_explicit_restriction_from_M_control_to_the_candidate_orientation_slice",
+    "R18_B1": "explicit_declared_pair1_residual_zero_system_present_but_no_zero_witness"
   },
-  "required_next_step": "EITHER_EXPORT_A_HOST_TO_CANONICAL_PSI_BLOCK_MATCHING_WITNESS_IDENTIFYING_QW2186_WITH_THE_CANONICAL_CARRIER_OR_KEEP_THE_LEGACY_OPERATOR_EXPORT_ROUTE_NEGATIVE",
+  "required_next_step": "EITHER_PROVE_SELECTOR_RELEVANT_CANONICALIZATION_AND_ADD_A_ZERO_OR_HOST_SIDE_CANCELLATION_WITNESS_FOR_THE_RESIDUAL_DECLARED_PULLBACK_OR_KEEP_THE_LEGACY_OPERATOR_EXPORT_ROUTE_NEGATIVE",
   "strict_core_promotion": false,
   "no_false_pass": true
 }
