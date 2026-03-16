@@ -15,6 +15,11 @@ Pozostaje jednak otwarty, scisle nazwany problem:
 - **residual `Z2` sign** (sign-sensitive physical orientation datum) oraz
 - **global scope** (kernel-alone) unikalnosci pod `QW-2191` dyscyplina.
 
+Update (`2026-03-15`): dla obecnie wyeksportowanych downstream obiektów, dla których wykazano gauge‑irrelewantność
+residualnego znaku (np. `R1` jako span, projektory, `alpha_12 mod π`, audyty embeddingu `QW-2190`), znak jest jawnie
+zamrożony jako śledzona warstwa gauge/konwencji (`N501`, pakiet `N502`). To **nie** wyprowadza sign-sensitive physical
+orientation datum i nie domyka globalnego scope.
+
 `B3` nie wyprowadza jeszcze selectora.
 `B3` buduje minimalny packet derivation, ktory trzeba rozladowac, zeby przejsc od:
 - strict topological `sigma_int` (FR-sign map on `pi_1(C_v1)≅Z2`, exported with explicit provenance),
@@ -41,21 +46,25 @@ do:
    - Shannon element‑order reference axis datum (lane-scoped `O(2)->Z2`) + exported mode-index assignment.
 7. `P455` + `N497`
    - cross-lane axis alignment up to residual `Z2` sign (value-instantiation packaging).
-8. `A5`
+8. `N501` + `N502`
+   - residual `Z2` sign gauge‑irrelevance for the declared `R1` span target-slot semantics (`N501`) and a strict
+     package freezing residual sign as a tracked convention layer for currently exported downstream objects where
+     sign is provably gauge‑irrelevant (`N502`).
+9. `A5`
    - topological spinor route retained as primary hypothesis branch.
-9. `A6`
+10. `A6`
    - gauge reconstruction boundary requiring uniqueness.
-10. `A10`
+11. `A10`
    - anti-overclaim discipline.
-11. `B1`
+12. `B1`
    - blocker reduced to internal selector question.
-12. `B2`
+13. `B2`
    - axis-only internal orientation datum exists on two lanes; residual sign + global scope remain open.
-13. `F467` + `P470` + `N511`
+14. `F467` + `P470` + `N511`
    - jawny, lane-scoped lift transportu chartów do **oriented** `α mod 2π` na `{pair1..pair5}` jako śledzona warstwa gauge/konwencji (sign‑tracked),
      indukowana przez wyeksportowane reprezentanty `u_1..u_5`, z pełnymi danymi cocycle na poziomie wektorów (bez promocji do fizycznego datumu znaku,
      bez globalnego atlasu i bez rozładowania `QW-2191`).
-14. `P471` + `N512`
+15. `P471` + `N512`
     - ścisła higiena: cocycle/path-independence dla oriented transportu jest dostępne tylko na wyeksportowanej sekcji wektorowej (i transportowanych rayach/projektorach),
       natomiast nie zachodzi jako operatorowa równość macierzowa `O_jk O_ij = O_ik` na pełnym nośniku. Nie wolno więc promować oriented liftu do operatorowego transition groupoid.
 
@@ -156,7 +165,7 @@ Po powyzszych postepach brakujacy obiekt nie jest juz:
 - "dowolna canonicalizacja osi",
 
 tylko:
-- jawny **sign-sensitive** physical orientation datum (lifting residual `Z2`) tam, gdzie downstream tego wymaga,
+- jawny **sign-sensitive** physical orientation datum (lifting residual `Z2`) tam, gdzie downstream tego wymaga i nie ma osobnego dowodu gauge‑irrelevance,
 - oraz/lub jawne rozszerzenie poza lane-scoped canonicalizacje bez sugerowania globalnego discharge `QW-2191`.
 
 ## Packet `B3_O1..B3_O5`
@@ -187,6 +196,10 @@ Repo eksportuje slot-free sigma-int → theta-pair supply (`F451/N489`) oparte o
 (`F446/N480`, `N488`) oraz inhabitant `R1` (`P451`).
 
 Residual `Z2` sign na `pair1` jest jawnie sledzony przez sigma-int sign convention layer (`F311`), bez twierdzenia o globalnej kanonizacji.
+
+Update (`2026-03-15`): w zadeklarowanym scope `R1` residualny znak jest gauge‑irrelewant dla obiektu target-slot (span)
+(`N501`) i moze byc zamrożony jako warstwa konwencji dla obecnie wyeksportowanych downstream obiektów, gdzie wykazano
+gauge‑irrelewantność (`N502`), bez promocji do sign-sensitive physical orientation datum.
 
 ### `B3_O4` - compatibility with mode scaffold
 

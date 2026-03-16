@@ -1,7 +1,7 @@
 # Fundamental Action Reconstruction
 
 Status: `PROGRAM_PHASE1_COMPLETE_C55_T1_T12_PLUS_N1_N2_N3_N4_N5_N6_N7_N8_N9_N10_N11_N12_N13_N14_D1_AX1_AX2_AX3_AX4_AX5_AX6_AX7_AX8_AND_H1_H2_H3_H4_H5_H6_H7_H8_H9_H10_H11_H12_H13_H14_H15_H16_H17_H18_H19_H20_H21_H22_H23_H24_H25_H26_H27_H28_H29_H30_H31_H32_H33_H34_H35_H36_H37_H38_H39_H40_H41_H42_V1_V2_V3_V4_V5_V6_V7_O1_O2_O3_O4_NO_FALSE_PASS`
-As of: `2026-03-07`
+As of: `2026-03-16`
 
 Ten katalog otwiera rownolegly tor konstrukcyjny poza drabinka `L5/L12`.
 
@@ -164,12 +164,10 @@ Aktualizacja `P4`:
 - strict sigma-int lane jest obliczalny do target-slot population w zadeklarowanym scope (bez implied selector closure; `QW-2191` pozostaje otwarty).
 
 Aktualizacja `N7`:
-- wykonano route-specific theorem dla aktualnej trasy
-  `sigma_int_candidate -> residual orientation datum`,
-- `B5/B7/B8/C37/C46/T2/AX3/P4` razem wymuszaja wniosek:
-  obecna strict-core trasa nie wyprowadza strict-core residual orientation datum,
-- carrier infrastructure i axiom-lane bridge instance pozostaja obecne,
-  ale nie moga byc promowane do strict-core bridge discharge.
+- `N7` jest zachowane jako historyczny route-specific nonderivation theorem dla stanu sprzed eksportu slot-free theta supply.
+- update (`2026-03-15`): na obecnym repo state wniosek “sigma-int lane nie populowuje `R1`” jest **superseded**
+  (slot-free sigma-int → theta-pair supply `F451/N489`, audited `R1` inhabitant `P451`, rerun `P5` ma status `PASS_COMPUTABLE...`).
+- biezacy route status po theorem-level discharge `T2` jest opakowany jako aktualizacja w `N8` (zachowuje `QW-2191` jawnie; bez implied selector closure).
 
 Aktualizacja `R1`:
 - wykonano pierwszy realny object-addition na residual-datum bridge lane:
@@ -183,18 +181,21 @@ Aktualizacja `R1`:
 Aktualizacja `P5`:
 - wykonano rerun waskiego probe po `R1`,
 - wynik:
-  `NOT_COMPUTABLE_FROM_CURRENT_STRICT_CORE_RESIDUAL_DATUM_ROUTE_AFTER_TARGET_SLOT_EXPORT`,
-- missing-object list zmniejsza sie o jeden element:
-  target-slot export jest juz obecny,
-  pozostaja: strict sigma source upgrade, theorem-level gauge quotient safety,
-  strict-core bridge map i selector-track identification beyond overlay only.
+  `PASS_COMPUTABLE_FROM_CURRENT_STRICT_CORE_RESIDUAL_DATUM_ROUTE_AFTER_TARGET_SLOT_EXPORT`,
+- update (`2026-03-15`): strict sigma-int lane eksportuje slot-free theta-pair supply (`F451/N489`), audited `R1` inhabitant instance (`P451`),
+  post-map object-support layer (`F452/N490`) oraz theorem-level discharge `T2` (`N491`); pozostaje jawna dyscyplina `QW-2191`
+  (brak implied selector closure).
+- wymagany nastepny krok: `PROCEED_UNDER_QW_2191_DISCIPLINE_NO_IMPLIED_SELECTOR_CLOSURE`.
 
 Aktualizacja `N8`:
-- wykonano theorem-level wynik dla zaktualizowanej trasy po `R1`,
-- `R1/P5/B5/B7/B8/T2/AX3` razem wymuszaja wniosek:
-  nawet po dodaniu target-slot export packet obecna strict-core trasa nadal nie
-  wyprowadza strict-core `sigma_int -> residual datum` bridge,
-- to jest realny postep konstrukcyjny, ale nie bridge discharge.
+- update (`2026-03-16`): `N8` jest zaktualizowany do stanu po:
+  - slot-free theta supply (`F451/N489`),
+  - audited `R1` inhabitant instance (`P451`),
+  - post-map object-support layer (`F452/N490`),
+  - theorem-level discharge `T2` (`N491`),
+  i pakuje wniosek: strict sigma-int route dochodzi do theorem-level bridge discharge w zadeklarowanym scope,
+  pozostajac **ponizej** strict-core selector closure / admissible `S_sel_int` i ponizej globalnego discharge `QW-2191`.
+- wymagany nastepny krok: kontynuowac strict-only ToE closure pod jawna dyscyplina `QW-2191` (bez implied selector closure).
 
 Aktualizacja `R2`:
 - wykonano pierwszy realny packet dla hipotezy `K_obs` jako juz istniejacego
