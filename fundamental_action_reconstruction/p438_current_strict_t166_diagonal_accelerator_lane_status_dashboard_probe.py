@@ -188,6 +188,30 @@ N531_SUMMARY = (
     GENERATED
     / "n531_next_constructive_move_reduced_to_one_explicit_success_failure_branch_split_theorem_for_s_sel_int_candidate_seed_v1_summary.json"
 )
+F641_SUMMARY = (
+    GENERATED
+    / "f641_first_conservative_realization_failure_branch_packet_for_s_sel_int_candidate_seed_v1_summary.json"
+)
+P641_SUMMARY = (
+    GENERATED
+    / "p641_current_failure_verdict_discharge_probe_for_s_sel_int_candidate_seed_v1_realization_attempt_summary.json"
+)
+N532_SUMMARY = (
+    GENERATED
+    / "n532_current_failure_branch_obstruction_theorem_for_s_sel_int_candidate_seed_v1_realization_attempt_summary.json"
+)
+F642_SUMMARY = (
+    GENERATED
+    / "f642_remaining_realization_success_branch_packet_for_s_sel_int_candidate_seed_v1_summary.json"
+)
+P642_SUMMARY = (
+    GENERATED
+    / "p642_current_success_verdict_discharge_probe_for_s_sel_int_candidate_seed_v1_realization_attempt_summary.json"
+)
+N533_SUMMARY = (
+    GENERATED
+    / "n533_current_success_branch_obstruction_theorem_for_s_sel_int_candidate_seed_v1_realization_attempt_summary.json"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -528,12 +552,49 @@ def main() -> None:
                                         "P640 confirms the explicit success/failure branch split (v1). Next move: package the split theorem (N531)."
                                     )
                                 else:
-                                    recommended_next_target = "EXPLICIT_SUCCESS_VERDICT_FOR_S_SEL_INT_NEW_OBJECT_CONSTRUCTED_REALIZATION_ATTEMPT_V1"
-                                    recommendation_reason = (
-                                        "N531 packages the explicit success/failure branch split for the seed-v1 realization. "
-                                        "Next move: attempt a strict, explicit success verdict discharge for the fixed realization attempt, "
-                                        "or package an explicit failure-side obstruction, without implying admissible S_sel_int."
-                                    )
+                                    if not F641_SUMMARY.exists():
+                                        recommended_next_target = "F641"
+                                        recommendation_reason = (
+                                            "N531 packages the explicit success/failure branch split for the seed-v1 realization. "
+                                            "Next move (conservative): freeze the failure-first branch ordering (F641)."
+                                        )
+                                    elif not P641_SUMMARY.exists():
+                                        recommended_next_target = "P641"
+                                        recommendation_reason = (
+                                            "F641 freezes the failure-first branch ordering (v1). "
+                                            "Next move: run P641 to test whether an explicit failure verdict is already exported for the fixed realization attempt."
+                                        )
+                                    elif not N532_SUMMARY.exists():
+                                        recommended_next_target = "N532"
+                                        recommendation_reason = (
+                                            "P641 shows no explicit failure verdict export on current repo state (v1). "
+                                            "Next move: package the failure-branch obstruction theorem (N532)."
+                                        )
+                                    elif not F642_SUMMARY.exists():
+                                        recommended_next_target = "F642"
+                                        recommendation_reason = (
+                                            "N532 packages the current failure-side obstruction (v1). "
+                                            "Next move: freeze the remaining success branch as the only remaining branch to attack (F642)."
+                                        )
+                                    elif not P642_SUMMARY.exists():
+                                        recommended_next_target = "P642"
+                                        recommendation_reason = (
+                                            "F642 freezes the remaining success branch ordering (v1). "
+                                            "Next move: run P642 to test whether an explicit success verdict is already exported for the fixed realization attempt."
+                                        )
+                                    elif not N533_SUMMARY.exists():
+                                        recommended_next_target = "N533"
+                                        recommendation_reason = (
+                                            "P642 shows no explicit success verdict export on current repo state (v1). "
+                                            "Next move: package the success-branch obstruction theorem (N533)."
+                                        )
+                                    else:
+                                        recommended_next_target = "EXPORT_EXPLICIT_SUCCESS_OR_FAILURE_VERDICT_FOR_S_SEL_INT_NEW_OBJECT_CONSTRUCTED_REALIZATION_ATTEMPT_V1"
+                                        recommendation_reason = (
+                                            "N533 packages the current success-branch obstruction (v1) after the failure-side obstruction (N532). "
+                                            "Next move: export an explicit success/failure verdict discharge for the fixed realization attempt via a strict witness source "
+                                            "(constructed source object export + admissibility interface), or prove a non-bridge impossibility at this scope."
+                                        )
         except Exception:
             pass
 

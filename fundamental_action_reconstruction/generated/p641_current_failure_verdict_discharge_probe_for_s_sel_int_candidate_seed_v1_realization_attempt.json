@@ -1,0 +1,42 @@
+{
+  "stage": "P641",
+  "lane": "current_failure_verdict_discharge_only",
+  "goal": "test_whether_the_current_repo_already_exports_an_explicit_failure_verdict_for_the_fixed_seed_v1_realization_attempt",
+  "status": "CURRENT_REPO_DOES_NOT_EXPORT_AN_EXPLICIT_FAILURE_VERDICT_DISCHARGE_FOR_S_SEL_INT_NEW_OBJECT_CONSTRUCTED_REALIZATION_ATTEMPT_V1_AFTER_P641",
+  "target_state": {
+    "failure_branch_selected_as_first_attack": true,
+    "explicit_failure_verdict_exported": false,
+    "remaining_open_branches": [
+      "future_success_verdict_discharge_for_S_sel_int_new_object_constructed_realization_attempt_v1",
+      "future_admissibility_test_of_a_future_constructed_source_object",
+      "future_derivation_of_admissible_E_orient_from_a_future_new_source_object",
+      "future_completion_of_B_sel_R_sel_O_sel_after_new_source_object_construction"
+    ]
+  },
+  "checks": [
+    {
+      "id": "f641_failure_branch_first",
+      "actual": "explicit_failure_verdict_for_S_sel_int_new_object_constructed_realization_attempt_v1",
+      "expected": "explicit_failure_verdict_for_S_sel_int_new_object_constructed_realization_attempt_v1",
+      "pass": true,
+      "meaning": "F641 freezes the failure branch as the first branch to attack (v1)"
+    },
+    {
+      "id": "n531_failure_branch_name",
+      "actual": "explicit_failure_verdict_for_S_sel_int_new_object_constructed_realization_attempt_v1",
+      "expected": "explicit_failure_verdict_for_S_sel_int_new_object_constructed_realization_attempt_v1",
+      "pass": true,
+      "meaning": "N531 fixes the failure branch name on the binary split (v1)"
+    },
+    {
+      "id": "explicit_failure_verdict_exported",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "the current repo does not yet export an explicit failure verdict discharge for the fixed realization attempt (v1)"
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}
