@@ -113,6 +113,10 @@ P475_SUMMARY = (
     GENERATED
     / "p475_current_strict_projective_only_continuation_decision_packet_summary.json"
 )
+P480_SUMMARY = (
+    GENERATED
+    / "p480_current_strict_p16_route_negative_freeze_decision_packet_summary.json"
+)
 P16_FACTORIZATION_SUMMARY = (
     GENERATED
     / "p16_existing_kernel_feedback_legacy_chart_reduced_operator_export_probe_summary.json"
@@ -302,6 +306,17 @@ def _projective_only_continuation_selected() -> tuple[bool, dict[str, Any] | Non
     return bool(selected), p475
 
 
+def _p16_route_negative_freeze_selected() -> tuple[bool, dict[str, Any] | None]:
+    if not P480_SUMMARY.exists():
+        return False, None
+    try:
+        p480 = load_json(P480_SUMMARY)
+    except Exception:
+        return False, None
+    selected = str(p480.get("decision") or "") == "P16_ROUTE_NEGATIVE_FREEZE_SELECTED"
+    return bool(selected), p480
+
+
 def main() -> None:
     GENERATED.mkdir(exist_ok=True)
     args = parse_args()
@@ -424,6 +439,7 @@ def main() -> None:
         diagonal_note += " H39 object-existence layer is now resolved by F470/N516; next frontier shifts to H37."
 
     projective_selected, p475 = _projective_only_continuation_selected()
+    p16_freeze_selected, p480 = _p16_route_negative_freeze_selected()
 
     if recommended_next == "H37":
         if N518_THEOREM.exists():
@@ -484,7 +500,7 @@ def main() -> None:
         # - We keep H37 as an open frontier for the directed branch, but the recommended next move shifts to strict-only ToE closure tasks
         #   that do not require a sign-sensitive orientation datum (projective-only compatible).
         if projective_selected:
-            if P16_FACTORIZATION_SUMMARY.exists():
+            if P16_FACTORIZATION_SUMMARY.exists() and not p16_freeze_selected:
                 recommended_next = "P16"
                 p16_note = ""
                 try:
@@ -676,9 +692,13 @@ def main() -> None:
                     + p_note
                 )
             else:
-                recommended_next = "P16" if P16_FACTORIZATION_SUMMARY.exists() else "P11"
+                recommended_next = (
+                    "P16"
+                    if (P16_FACTORIZATION_SUMMARY.exists() and not p16_freeze_selected)
+                    else "P11"
+                )
                 p16_note = ""
-                if P16_FACTORIZATION_SUMMARY.exists():
+                if P16_FACTORIZATION_SUMMARY.exists() and not p16_freeze_selected:
                     try:
                         p16 = load_json(P16_FACTORIZATION_SUMMARY)
                         missing = p16.get("remaining_missing_upstream_objects")
@@ -697,6 +717,13 @@ def main() -> None:
                     "the current frontier is beyond P11 and is tracked by P16 (legacy chart-reduced operator export route)."
                     + p16_note
                 )
+            if p16_freeze_selected and recommended_next != "P16":
+                note = (
+                    " Professorial note: P480 freezes the P16 lane as explicitly negative on current strict core; "
+                    "dashboard therefore does not recommend P16 as the next strict move under projective-only continuation."
+                )
+                if "Professorial note: P480 freezes the P16 lane" not in recommendation_reason:
+                    recommendation_reason += note
 
     # Backward-compatible mapping: older P438 versions returned a packet label ("B3") here.
     if recommended_next == "B3" and N491_THEOREM.exists():
@@ -742,6 +769,7 @@ def main() -> None:
             "P438": str(P438_SUMMARY.relative_to(REPO)),
             "P439": str(P439_SUMMARY.relative_to(REPO)),
             "P455": (str(P455_SUMMARY.relative_to(REPO)) if P455_SUMMARY.exists() else None),
+            "P480": (str(P480_SUMMARY.relative_to(REPO)) if P480_SUMMARY.exists() else None),
         },
         "status_snapshot": {"P438": p438, "P439": p439},
         "result": {
@@ -755,6 +783,14 @@ def main() -> None:
                 "note": (
                     "If selected, H37/T171 remain open for directed continuation only; the recommended next move shifts to ToE closure tasks "
                     "that depend only on projectors/spans."
+                ),
+            },
+            "p16_route_negative_freeze": {
+                "selected": bool(p16_freeze_selected),
+                "p480_summary": (str(P480_SUMMARY.relative_to(REPO)) if p480 is not None else None),
+                "note": (
+                    "If selected, P16 is treated as an explicitly negative/frozen lane; the recommended next move shifts to "
+                    "kernel-split-robust strict-only closure lanes (direct-formal c1s1 family route)."
                 ),
             },
         },

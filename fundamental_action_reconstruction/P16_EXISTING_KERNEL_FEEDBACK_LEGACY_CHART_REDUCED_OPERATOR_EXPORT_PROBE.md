@@ -114,3 +114,5 @@ Only two honest routes remain:
    for the declared residual diagonal pullback, or
 2. keep the legacy operator export route negative and do not claim any
    coefficient-filled legacy-side operator on `pair1`.
+
+Update (2026-03-16): `P480` records the professorial choice: (2) is selected (freeze the `P16` lane as explicitly negative on current strict core), and the recommended next strict target under projective-only continuation is the kernel-split-robust direct-formal `c1s1` family route (`P629`).
