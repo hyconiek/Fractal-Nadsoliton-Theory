@@ -101,6 +101,10 @@ N518_THEOREM = (
 P472_SUMMARY = (
     GENERATED / "p472_current_strict_pair1_reflection_breaking_weight_repo_scan_probe_summary.json"
 )
+P473_SUMMARY = (
+    GENERATED
+    / "p473_current_strict_extension_lane_global_oriented_selector_state_projector_consistency_audit_probe_summary.json"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -289,6 +293,17 @@ def main() -> None:
                     recommendation_reason += (
                         " Probe note: P472 scans exported generated artifacts and finds no strict(-derived) weight-like reflection-breaking per-site arrays "
                         "outside non-canonical marked-site K_total row vectors; therefore H37 still requires an explicit reflection-breaking/orientation source."
+                    )
+            except Exception:
+                pass
+        if P473_SUMMARY.exists() and "Extension-lane note: P473" not in recommendation_reason:
+            try:
+                p473 = load_json(P473_SUMMARY)
+                if bool(p473.get("overall_pass")):
+                    recommendation_reason += (
+                        " Extension-lane note: P473 audits that the non-strict AX29 global oriented vector representative "
+                        "is projector-consistent with the strict global projective selector state (F470), so the extension-lane sign-fix "
+                        "changes only a sign-gauge representative and does not change strict core."
                     )
             except Exception:
                 pass
