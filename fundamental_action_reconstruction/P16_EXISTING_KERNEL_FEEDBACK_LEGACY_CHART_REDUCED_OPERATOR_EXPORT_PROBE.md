@@ -60,18 +60,37 @@ canonical carrier (`C10_B1`).
 
 ## Sharpened decomposition of the first `P15` blocker
 
-`P16` now reduces the first `P15` blocker to one remaining missing object:
+`P16` now reduces the first `P15` blocker to the following concrete strict missing
+objects:
 
-1. host-to-concrete Psi-sector quadratic block identification for the
-   existing-kernel-feedback host operator (matching `QW-2186` to the canonical
-   carrier).
+1. an explicit zero (or host-side cancellation) witness for the **declared**
+   control pullback of the residual local diagonal sector (`R16–R18`), and
+2. a full physical uniqueness / selector-relevant canonicalization of the explicit
+   declared control transport within the `QW-2191` `O(2)` family.
+
+Update (2026-03-16): evaluation evidence is now explicit and prevents false PASS
+promotion of the currently exported strict-derived value instance (`P459`):
+
+1. `P477` evaluates the `R18` declared `pair1` residual zero equations on the
+   `P459` value instance (conditional `N477`) and reports violations (`c1c1`,
+   `s1s1` nonzero), packaged by `N520`.
+2. `P478` exhaustively scans the full `2^11=2048` sign space under the fixed
+   strict `T169` `r_ordpow` magnitude lift (and uniform `g4` lift) and reports no
+   sign vector satisfies all three declared equations within tolerance (still
+   under conditional `N477`), packaged by `N521`.
+3. `P479` extends the above from the fixed `r_ordpow` magnitudes to a fixed small
+   family of strictly-defined reference magnitude lifts (still using a fixed
+   magnitude lift and a uniform `g4` lift per reference) and again reports no sign
+   solution within tolerance under conditional `N477`, packaged by `N522`.
 
 ## Honest frontier
 
 `P16` shows that the route fails before any legacy-side matrix on `pair1`
 exists. The obstruction is now localized upstream of `pair1` to:
 
-1. host-to-Psi block identification.
+1. a missing strict zero/cancellation witness for the declared residual diagonal
+   pullback (`R16–R18`), and
+2. the separate `QW-2191` selector-relevant physical canonicalization boundary.
 
 ## What `P16` does not claim
 
@@ -90,8 +109,8 @@ exists. The obstruction is now localized upstream of `pair1` to:
 
 Only two honest routes remain:
 
-1. export a host-to-canonical Psi-block matching witness identifying `QW-2186`
-   with the canonical carrier (or equivalently with its declared control
-   pullback),
-2. or keep the legacy operator export route negative and do not claim any
-   coefficient-filled legacy-side matrix on `pair1`.
+1. export a selector-relevant physical canonicalization ingredient within the
+   `QW-2191` `O(2)` family **and** add a genuine strict zero/cancellation witness
+   for the declared residual diagonal pullback, or
+2. keep the legacy operator export route negative and do not claim any
+   coefficient-filled legacy-side operator on `pair1`.

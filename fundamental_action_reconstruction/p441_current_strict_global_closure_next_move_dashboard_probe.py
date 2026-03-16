@@ -125,9 +125,17 @@ P478_SUMMARY = (
     GENERATED
     / "p478_current_strict_t169_rordpow_sign_scan_for_r18_pair1_zero_equations_probe_summary.json"
 )
+P479_SUMMARY = (
+    GENERATED
+    / "p479_current_strict_reference_magnitude_family_sign_scan_for_r18_pair1_zero_equations_probe_summary.json"
+)
 N520_SUMMARY = (
     GENERATED
     / "n520_current_first_strict_r18_declared_pair1_residual_zero_equations_value_instance_obstruction_theorem_summary.json"
+)
+N522_SUMMARY = (
+    GENERATED
+    / "n522_current_first_strict_reference_magnitude_family_sign_scan_r18_pair1_zero_equations_obstruction_theorem_summary.json"
 )
 P61_DIRECT_FORMAL_SUMMARY = (
     GENERATED
@@ -245,6 +253,36 @@ def _p16_value_instance_obstruction_note() -> str:
                     " Evidence: P478 exhaustively scans the full finite T169 r_ordpow sign space (fixing magnitudes and g4 as in F447) "
                     "under conditional N477 and reports no sign vector satisfies all three R18 declared pair1 zero equations; "
                     f"min_abs_by_entry_over_scan={min_abs}."
+                )
+        except Exception:
+            pass
+    if N522_SUMMARY.exists():
+        try:
+            n522 = load_json(N522_SUMMARY)
+            tr = n522.get("theorem_result")
+            if isinstance(tr, dict) and bool(tr.get("discharged")):
+                ev = n522.get("evidence") if isinstance(n522.get("evidence"), dict) else {}
+                notes.append(
+                    " Evidence: N522 packages a finite-family obstruction (from P479): under conditional N477 and a scanned family of "
+                    "fixed-magnitude reference lifts (with uniform g4 per reference), no sign vector satisfies all three R18 declared "
+                    f"pair1 zero equations; best_overall=(reference_id={ev.get('best_overall_reference_id')}, "
+                    f"objective_value={ev.get('best_overall_objective_value')})."
+                )
+        except Exception:
+            pass
+    elif P479_SUMMARY.exists():
+        try:
+            p479 = load_json(P479_SUMMARY)
+            if (
+                p479.get("status")
+                == "PASS_SCAN_COMPLETE_NO_REFERENCE_HAS_SIGN_SOLUTION_FOR_R18_PAIR1_ZERO_EQUATIONS_UNDER_N477"
+            ):
+                notes.append(
+                    " Evidence: P479 scans a fixed family of strictly-defined reference magnitude lifts (each with a fixed-magnitude "
+                    "lift |vpsi|=sqrt(rho_*^2*q) and a uniform g4 lift) under conditional N477 and reports no reference has any sign "
+                    "solution to all three R18 declared pair1 zero equations; "
+                    f"best_overall=(reference_id={p479.get('best_overall_reference_id')}, "
+                    f"objective_value={p479.get('best_overall_objective_value')})."
                 )
         except Exception:
             pass

@@ -70,6 +70,12 @@ def main() -> None:
     p478 = load_json_if_exists(
         "fundamental_action_reconstruction/generated/p478_current_strict_t169_rordpow_sign_scan_for_r18_pair1_zero_equations_probe_summary.json"
     )
+    p479 = load_json_if_exists(
+        "fundamental_action_reconstruction/generated/p479_current_strict_reference_magnitude_family_sign_scan_for_r18_pair1_zero_equations_probe_summary.json"
+    )
+    n522 = load_json_if_exists(
+        "fundamental_action_reconstruction/generated/n522_current_first_strict_reference_magnitude_family_sign_scan_r18_pair1_zero_equations_obstruction_theorem_summary.json"
+    )
 
     p15_missing = p15["remaining_missing_upstream_objects"]
     remaining_missing = [
@@ -227,6 +233,20 @@ def main() -> None:
             "min_abs_by_entry_over_scan": p478.get("min_abs_by_entry_over_scan"),
             "no_false_pass": p478.get("no_false_pass"),
         }
+    if isinstance(p479, dict):
+        value_instance_evidence["P479"] = {
+            "status": p479.get("status"),
+            "any_reference_has_solution": p479.get("any_reference_has_solution"),
+            "best_overall_objective_value": p479.get("best_overall_objective_value"),
+            "best_overall_reference_id": p479.get("best_overall_reference_id"),
+            "no_false_pass": p479.get("no_false_pass"),
+        }
+    if isinstance(n522, dict):
+        value_instance_evidence["N522"] = {
+            "status": n522.get("status"),
+            "theorem_result": (n522.get("theorem_result") if isinstance(n522.get("theorem_result"), dict) else None),
+            "no_false_pass": n522.get("no_false_pass"),
+        }
 
     extra_reason = ""
     if (
@@ -249,6 +269,17 @@ def main() -> None:
             "and evaluating the same conditional N477 rewrite) reports that no sign vector satisfies all three R18 declared pair1 zero "
             "equations within tolerance (P478). Therefore the missing zero witness cannot be obtained by altering the sign selection "
             "within the fixed r_ordpow magnitude lift class alone."
+        )
+    if (
+        isinstance(p479, dict)
+        and p479.get("status")
+        == "PASS_SCAN_COMPLETE_NO_REFERENCE_HAS_SIGN_SOLUTION_FOR_R18_PAIR1_ZERO_EQUATIONS_UNDER_N477"
+    ):
+        extra_reason += (
+            " Additionally, a scan over a fixed small family of strictly-defined reference magnitude lifts (each with a fixed-magnitude "
+            "lift |vpsi|=sqrt(rho_*^2*q) and a uniform g4 lift), again under conditional N477, reports that no reference in that family "
+            "admits any sign vector satisfying all three R18 declared pair1 zero equations within tolerance (P479; packaged by N522). "
+            "So the missing zero witness cannot be obtained by switching only to that scanned reference-magnitude family either."
         )
 
     report = {

@@ -1,0 +1,469 @@
+{
+  "object": "Pair1ResidualZeroEquationsReferenceMagnitudeFamilyScan_under_N477_v1",
+  "status": "PASS_SCAN_COMPLETE_NO_REFERENCE_HAS_SIGN_SOLUTION_FOR_R18_PAIR1_ZERO_EQUATIONS_UNDER_N477",
+  "generated_utc": "2026-03-16T12:08:41.173527+00:00",
+  "intent": "Scan a fixed family of strictly-defined reference distributions to define a T169-like magnitude lift |vpsi_i|=sqrt(rho_*^2*q_i) and a uniform g4 lift g4=lambda_psi/sum q^2, then exhaustively scan all 2^11 sign vectors (fixing s0=+1) and evaluate the R18 declared pair1 residual zero equations under the conditional N477 Yukawa-free diagonal residual rewrite. This is probe-level evidence only: it does not export any vacuum stationarity witness and does not claim host matching or QW-2191 discharge.",
+  "inputs": {
+    "qw2122_scalar_vacuum": "report_qw2122_psi_potential_diagonal_floor_gate.json",
+    "alpha_geo_strict_derived": "fundamental_action_reconstruction/generated/alpha_geo_strict_derived_v1.json",
+    "r14_k_total": "fundamental_action_reconstruction/generated/r14_explicit_frozen_kernel_specialization_packet_for_host_matching_route.json",
+    "r15_m0_squared": "fundamental_action_reconstruction/generated/r15_explicit_host_scalar_floor_embedding_packet_for_host_matching_route.json",
+    "r18_reduction_packet": "fundamental_action_reconstruction/generated/r18_pair1_residual_declared_pullback_coefficient_class_reduction_packet_for_host_matching_route.json"
+  },
+  "fixed_scalars": {
+    "rho_star_sq": 3.77972441525249,
+    "lambda_psi_strict": 0.13407749626776447,
+    "alpha_geo": 2.772588722239781
+  },
+  "scan": {
+    "zero_tolerance": 1e-12,
+    "sign_scan_space_size": 2048,
+    "global_sign_fixed": "s0=+1 (global Z2 is ratio-invariant for N477 anyway)",
+    "references_scanned": [
+      {
+        "reference_id": "r_uniform",
+        "q": [
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333,
+          0.08333333333333333
+        ],
+        "sum_q2": 0.08333333333333333,
+        "g4_uniform_value": 1.6089299552131737,
+        "scan_space_size": 2048,
+        "any_solution_within_tolerance": false,
+        "solutions_within_tolerance_capped": [],
+        "best_candidate": {
+          "objective": "max_abs_entry",
+          "objective_value": 0.0017569608524800051,
+          "sign_vector": [
+            1,
+            -1,
+            -1,
+            -1,
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            1,
+            1
+          ],
+          "equations": {
+            "c1c1": {
+              "value": 0.0017569608524800051,
+              "abs": 0.0017569608524800051,
+              "zero_tol": 1e-12,
+              "is_zero": false
+            },
+            "c1s1": {
+              "value": 0.0,
+              "abs": 0.0,
+              "zero_tol": 1e-12,
+              "is_zero": true
+            },
+            "s1s1": {
+              "value": 0.0017569608524800051,
+              "abs": 0.0017569608524800051,
+              "zero_tol": 1e-12,
+              "is_zero": false
+            }
+          }
+        },
+        "min_abs_by_entry_over_scan": {
+          "c1c1": 0.0017569608524800051,
+          "c1s1": 0.0,
+          "s1s1": 0.0017569608524800016
+        },
+        "reference_description": "Uniform reference distribution on Z_12 (translation-invariant control)"
+      },
+      {
+        "reference_id": "r_ordpow",
+        "q": [
+          0.7678954527452602,
+          0.0007819452463233061,
+          0.005343289621529074,
+          0.0164451316206607,
+          0.036512459297866985,
+          0.0007819452463233061,
+          0.11237500518933312,
+          0.0007819452463233061,
+          0.036512459297866985,
+          0.0164451316206607,
+          0.005343289621529074,
+          0.0007819452463233061
+        ],
+        "sum_q2": 0.6055583194555814,
+        "g4_uniform_value": 0.2214113685834668,
+        "scan_space_size": 2048,
+        "any_solution_within_tolerance": false,
+        "solutions_within_tolerance_capped": [],
+        "best_candidate": {
+          "objective": "max_abs_entry",
+          "objective_value": 0.3882221308086681,
+          "sign_vector": [
+            1,
+            -1,
+            -1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            1,
+            -1
+          ],
+          "equations": {
+            "c1c1": {
+              "value": 0.35794400315969666,
+              "abs": 0.35794400315969666,
+              "zero_tol": 1e-12,
+              "is_zero": false
+            },
+            "c1s1": {
+              "value": 0.03651357406327729,
+              "abs": 0.03651357406327729,
+              "zero_tol": 1e-12,
+              "is_zero": false
+            },
+            "s1s1": {
+              "value": -0.3882221308086681,
+              "abs": 0.3882221308086681,
+              "zero_tol": 1e-12,
+              "is_zero": false
+            }
+          }
+        },
+        "min_abs_by_entry_over_scan": {
+          "c1c1": 0.002016728872993756,
+          "c1s1": 0.0,
+          "s1s1": 0.0007686789367742364
+        },
+        "reference_description": "r(x) \u221d ord_Z12(x)^(-alpha_geo) with alpha_geo=4 ln 2 (Aut(Z_12)-invariant; no marked direction)"
+      },
+      {
+        "reference_id": "r_ord_exp",
+        "q": [
+          0.9338788654971486,
+          5.308486751671076e-14,
+          8.906162886592389e-07,
+          0.00022799776989676488,
+          0.003647964318348239,
+          5.308486751671076e-14,
+          0.058367429093571795,
+          5.308486751671076e-14,
+          0.003647964318348239,
+          0.00022799776989676488,
+          8.906162886592389e-07,
+          5.308486751671076e-14
+        ],
+        "sum_q2": 0.8755632114561229,
+        "g4_uniform_value": 0.1531328572437211,
+        "scan_space_size": 2048,
+        "any_solution_within_tolerance": false,
+        "solutions_within_tolerance_capped": [],
+        "best_candidate": {
+          "objective": "max_abs_entry",
+          "objective_value": 185304.21936846725,
+          "sign_vector": [
+            1,
+            -1,
+            -1,
+            -1,
+            1,
+            -1,
+            1,
+            1,
+            1,
+            1,
+            -1,
+            1
+          ],
+          "equations": {
+            "c1c1": {
+              "value": -4734.259733620333,
+              "abs": 4734.259733620333,
+              "zero_tol": 1e-12,
+              "is_zero": false
+            },
+            "c1s1": {
+              "value": 185304.21936846725,
+              "abs": 185304.21936846725,
+              "zero_tol": 1e-12,
+              "is_zero": false
+            },
+            "s1s1": {
+              "value": -1529.9065072659287,
+              "abs": 1529.9065072659287,
+              "zero_tol": 1e-12,
+              "is_zero": false
+            }
+          }
+        },
+        "min_abs_by_entry_over_scan": {
+          "c1c1": 12.870293273124844,
+          "c1s1": 0.0,
+          "s1s1": 40.67152487116982
+        },
+        "reference_description": "r(x) \u221d exp(-alpha_geo * ord_Z12(x)) with alpha_geo=4 ln 2 (Aut(Z_12)-invariant; no marked direction)"
+      },
+      {
+        "reference_id": "r_dcyc_exp",
+        "q": [
+          0.8823529937688074,
+          0.05514706211055046,
+          0.0034466913819094043,
+          0.00021541821136933788,
+          1.3463638210583614e-05,
+          8.414773881614755e-07,
+          5.25923367600923e-08,
+          8.414773881614755e-07,
+          1.3463638210583614e-05,
+          0.00021541821136933788,
+          0.0034466913819094043,
+          0.05514706211055046
+        ],
+        "sum_q2": 0.7846530550685608,
+        "g4_uniform_value": 0.1708748795428435,
+        "scan_space_size": 2048,
+        "any_solution_within_tolerance": false,
+        "solutions_within_tolerance_capped": [],
+        "best_candidate": {
+          "objective": "max_abs_entry",
+          "objective_value": 0.3252555428926933,
+          "sign_vector": [
+            1,
+            -1,
+            1,
+            -1,
+            -1,
+            1,
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            -1
+          ],
+          "equations": {
+            "c1c1": {
+              "value": 0.3252555428926933,
+              "abs": 0.3252555428926933,
+              "zero_tol": 1e-12,
+              "is_zero": false
+            },
+            "c1s1": {
+              "value": -0.09217881402665018,
+              "abs": 0.09217881402665018,
+              "zero_tol": 1e-12,
+              "is_zero": false
+            },
+            "s1s1": {
+              "value": 0.03368812873556215,
+              "abs": 0.03368812873556215,
+              "zero_tol": 1e-12,
+              "is_zero": false
+            }
+          }
+        },
+        "min_abs_by_entry_over_scan": {
+          "c1c1": 0.00030029210972637443,
+          "c1s1": 0.0,
+          "s1s1": 0.006635678196122319
+        },
+        "reference_description": "r(x) \u221d exp(-alpha_geo * d_cyc(0,x)) with alpha_geo=4 ln 2 (marked-site distance decay; direction-free)"
+      },
+      {
+        "reference_id": "r_1_plus_abs_ktotal_row0",
+        "q": [
+          0.07320479544076021,
+          0.107610000466827,
+          0.08726330435795125,
+          0.07989780844640787,
+          0.07664755611853453,
+          0.07497131671083004,
+          0.07401523235813841,
+          0.07497131671083004,
+          0.07664755611853453,
+          0.07989780844640787,
+          0.08726330435795125,
+          0.107610000466827
+        ],
+        "sum_q2": 0.08498520163810738,
+        "g4_uniform_value": 1.5776569765487747,
+        "scan_space_size": 2048,
+        "any_solution_within_tolerance": false,
+        "solutions_within_tolerance_capped": [],
+        "best_candidate": {
+          "objective": "max_abs_entry",
+          "objective_value": 0.031114647129032433,
+          "sign_vector": [
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          "equations": {
+            "c1c1": {
+              "value": -0.031114647129032433,
+              "abs": 0.031114647129032433,
+              "zero_tol": 1e-12,
+              "is_zero": false
+            },
+            "c1s1": {
+              "value": -1.3877787807814457e-17,
+              "abs": 1.3877787807814457e-17,
+              "zero_tol": 1e-12,
+              "is_zero": true
+            },
+            "s1s1": {
+              "value": -0.006209063355573356,
+              "abs": 0.006209063355573356,
+              "zero_tol": 1e-12,
+              "is_zero": false
+            }
+          }
+        },
+        "min_abs_by_entry_over_scan": {
+          "c1c1": 6.596389484715692e-05,
+          "c1s1": 0.0,
+          "s1s1": 0.0001797501544286706
+        },
+        "reference_description": "r(x) \u221d 1 + |K_total[0,x]| (marked-site kernel row; direction-free)"
+      },
+      {
+        "reference_id": "r_exp_sigma_int_alpha_geo_ktotal_row0",
+        "q": [
+          0.11279402973730507,
+          0.030645518434274654,
+          0.06622815165979308,
+          0.08753769188099547,
+          0.09900505079078584,
+          0.1054943558096744,
+          0.10938443311164806,
+          0.1054943558096744,
+          0.09900505079078584,
+          0.08753769188099547,
+          0.06622815165979308,
+          0.030645518434274654
+        ],
+        "sum_q2": 0.09252589247556543,
+        "g4_uniform_value": 1.449080821383832,
+        "scan_space_size": 2048,
+        "any_solution_within_tolerance": false,
+        "solutions_within_tolerance_capped": [],
+        "best_candidate": {
+          "objective": "max_abs_entry",
+          "objective_value": 0.03162929639054051,
+          "sign_vector": [
+            1,
+            -1,
+            -1,
+            -1,
+            1,
+            -1,
+            -1,
+            1,
+            -1,
+            -1,
+            1,
+            1
+          ],
+          "equations": {
+            "c1c1": {
+              "value": 0.008740102065609073,
+              "abs": 0.008740102065609073,
+              "zero_tol": 1e-12,
+              "is_zero": false
+            },
+            "c1s1": {
+              "value": 0.018653820366626037,
+              "abs": 0.018653820366626037,
+              "zero_tol": 1e-12,
+              "is_zero": false
+            },
+            "s1s1": {
+              "value": 0.03162929639054051,
+              "abs": 0.03162929639054051,
+              "zero_tol": 1e-12,
+              "is_zero": false
+            }
+          }
+        },
+        "min_abs_by_entry_over_scan": {
+          "c1c1": 0.0008779766212117512,
+          "c1s1": 0.0,
+          "s1s1": 0.0001702575597602382
+        },
+        "reference_description": "r(x) \u221d exp(sigma_int * alpha_geo * K_total[0,x]) with sigma_int=-1, alpha_geo=4 ln 2 (marked-site kernel-shaped; direction-free)"
+      }
+    ],
+    "any_reference_has_solution": false,
+    "best_overall_candidate": {
+      "reference_id": "r_uniform",
+      "reference_description": "Uniform reference distribution on Z_12 (translation-invariant control)",
+      "objective": "max_abs_entry",
+      "objective_value": 0.0017569608524800051,
+      "sign_vector": [
+        1,
+        -1,
+        -1,
+        -1,
+        1,
+        1,
+        1,
+        -1,
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "equations": {
+        "c1c1": {
+          "value": 0.0017569608524800051,
+          "abs": 0.0017569608524800051,
+          "zero_tol": 1e-12,
+          "is_zero": false
+        },
+        "c1s1": {
+          "value": 0.0,
+          "abs": 0.0,
+          "zero_tol": 1e-12,
+          "is_zero": true
+        },
+        "s1s1": {
+          "value": 0.0017569608524800051,
+          "abs": 0.0017569608524800051,
+          "zero_tol": 1e-12,
+          "is_zero": false
+        }
+      }
+    }
+  },
+  "hard_limits": [
+    "Conditional on the N477 Yukawa-free diagonal residual rewrite; no vacuum stationarity witness is exported.",
+    "Scans only a fixed family of reference distributions with fixed magnitudes and a fixed uniform g4 lift per reference.",
+    "Does not export a strict zero witness unless a theorem-level witness is separately constructed from the scan result.",
+    "Does not claim host matching, strict-core selector closure, QW-2191 discharge, or ToE closure."
+  ],
+  "no_false_pass": true
+}
