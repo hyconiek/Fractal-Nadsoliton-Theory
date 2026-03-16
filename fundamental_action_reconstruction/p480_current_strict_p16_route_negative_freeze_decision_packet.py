@@ -34,6 +34,11 @@ N522_SUMMARY = (
 
 DIRECT_FORMAL_FRONTIER_CANDIDATES: list[tuple[str, Path]] = [
     (
+        "P630",
+        GENERATED
+        / "p630_canonical_ontology_supported_direct_formal_c1s1_family_route_probe_after_r83_vacuum_eom_yukawa_elimination_packet_summary.json",
+    ),
+    (
         "P629",
         GENERATED
         / "p629_canonical_ontology_supported_direct_formal_c1s1_family_route_probe_after_t169_constrained_lift_g4_g6_family_shift_defect_zero_witness_packet_summary.json",
@@ -263,4 +268,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

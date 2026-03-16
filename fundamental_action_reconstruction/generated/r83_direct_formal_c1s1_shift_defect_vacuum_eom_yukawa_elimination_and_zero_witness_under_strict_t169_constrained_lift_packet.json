@@ -1,0 +1,140 @@
+{
+  "stage": "R83",
+  "goal": "close_pair1_c1s1_shift_defect_under_vacuum_eom_yukawa_elimination_by_evaluating_the_yukawa_free_diagonal_residual_form on_the_exported_strict_T169_constrained_lift_instance_and_frozen_K_total_specialization",
+  "dependencies": {
+    "R14": "fundamental_action_reconstruction/generated/r14_explicit_frozen_kernel_specialization_packet_for_host_matching_route.json",
+    "R21": "fundamental_action_reconstruction/generated/r21_explicit_pair1_c1s1_shift_defect_polynomial_packet_for_host_route.json",
+    "F447": "fundamental_action_reconstruction/generated/f447_current_strict_t169_qw2122_scalar_to_t168_per_site_value_provider_strict_derived_v1.json",
+    "N474": "fundamental_action_reconstruction/N474_CURRENT_FIRST_STRICT_VACUUM_EOM_ELIMINATES_YUKAWA_FROM_CANONICAL_LOCAL_DIAGONAL_RESIDUAL_THEOREM.md",
+    "N483": "fundamental_action_reconstruction/N483_CURRENT_FIRST_STRICT_T169_POWERLAW_ELEMENT_ORDER_CONSTRAINED_LIFT_EXISTENCE_UNIQUENESS_THEOREM.md"
+  },
+  "premise_scope_note": "R83 uses N474, which is conditional on constant-vacuum stationarity and requires vpsi_k \u2260 0. This packet is an exported-instance witness only and does not claim a global theorem.",
+  "c1s1_support": {
+    "positive_support_slots": [
+      "psi1",
+      "psi7",
+      "psi2",
+      "psi8"
+    ],
+    "negative_support_slots": [
+      "psi4",
+      "psi10",
+      "psi5",
+      "psi11"
+    ],
+    "positive_indices": [
+      1,
+      7,
+      2,
+      8
+    ],
+    "negative_indices": [
+      4,
+      10,
+      5,
+      11
+    ],
+    "positive_indices_inverted": [
+      11,
+      5,
+      10,
+      4
+    ],
+    "support_inversion_matches": true
+  },
+  "instance_invariance_audits": {
+    "min_abs_vpsi": "0.054364855733449916",
+    "max_abs_vpsi_inversion_diff": "0E-16",
+    "max_abs_ktotal_inversion_diff": "0.0",
+    "max_abs_d_local_residual_inversion_diff_under_elimination_form": "1E-79"
+  },
+  "yukawa_eliminated_form_used": {
+    "d_k_definition": "d_k := -\u03a3_{j\u2260k} K_total[k,j] * (vpsi_j/vpsi_k) + 2*g4_k*vpsi_k^2 + 4*g6_k*vpsi_k^4 - m0^2  (from N474 + R15)",
+    "note": "This form is Yukawa-free: gY_k and vphi do not appear."
+  },
+  "result": {
+    "status": "PASS_R83_SHIFT_DEFECT_ZERO_WITNESS_UNDER_N474_YUKAWA_ELIMINATION_AND_T169_CONSTRAINED_LIFT",
+    "shift_defect_value": "0E-78",
+    "shift_defect_zero": true,
+    "pair1_c1s1_shift_defect_zero_witness_present_under_elimination_form": true,
+    "strict_core_promotion": false
+  },
+  "consistency_checks": [
+    {
+      "id": "n474_theorem_exists",
+      "actual": true,
+      "expected": true,
+      "meaning": "N474 exports the conditional vacuum-EoM Yukawa elimination tool for the diagonal residual entry d_k",
+      "pass": true
+    },
+    {
+      "id": "n483_theorem_exists",
+      "actual": true,
+      "expected": true,
+      "meaning": "N483 exports the strict T169 constrained lift rule used by F447",
+      "pass": true
+    },
+    {
+      "id": "support_sets_match_under_inversion_i_to_minus_i_mod_12",
+      "actual": true,
+      "expected": true,
+      "meaning": "the c1s1 support positive and negative index-sets are related by inversion i \u21a6 -i (mod 12)",
+      "pass": true
+    },
+    {
+      "id": "f447_vpsi_nonzero_all_sites",
+      "actual": true,
+      "expected": true,
+      "meaning": "N474 applies sitewise only when vpsi_k \u2260 0; the exported T169 instance should satisfy this on all sites used here",
+      "pass": true
+    },
+    {
+      "id": "f447_vpsi_inversion_invariant_exported_instance",
+      "actual": true,
+      "expected": true,
+      "actual_value": "0E-16",
+      "meaning": "the exported T169 constrained-lift vacuum vector vpsi is inversion-invariant: vpsi[i] = vpsi[-i mod 12]",
+      "pass": true
+    },
+    {
+      "id": "r14_ktotal_inversion_invariant",
+      "actual": true,
+      "expected": true,
+      "actual_value": "0.0",
+      "meaning": "the frozen K_total carrier is inversion-invariant: K_total[i,j] = K_total[-i mod 12, -j mod 12]",
+      "pass": true
+    },
+    {
+      "id": "f447_g4_uniform",
+      "actual": true,
+      "expected": true,
+      "meaning": "under T169 the quartic family g4_psi_i is exported as uniform (F447)",
+      "pass": true
+    },
+    {
+      "id": "f447_g6_uniform_zero",
+      "actual": true,
+      "expected": true,
+      "meaning": "under T169 the sextic family g6_psi_i is exported as identically zero (F447)",
+      "pass": true
+    },
+    {
+      "id": "yukawa_eliminated_shift_defect_zero_on_exported_instance",
+      "actual": true,
+      "expected": true,
+      "actual_value": "0E-78",
+      "meaning": "under the N474 elimination form, the evaluated c1s1 shift defect \u03a3_pos d_k - \u03a3_neg d_k is zero on the exported instance (R14 + F447), hence the c1s1 defect is closed on this declared instance under the explicit vacuum-EoM premise scope",
+      "pass": true
+    }
+  ],
+  "hard_limits": [
+    "no_theorem_level_pass",
+    "no_full_closure_pass",
+    "no_strict_core_promotion",
+    "does_not_claim_pair1_c1c1_or_s1s1_equations",
+    "does_not_claim_QW2191_discharge",
+    "does_not_claim_selector_closure",
+    "does_not_claim_ToE_closure"
+  ],
+  "no_false_pass": true
+}
