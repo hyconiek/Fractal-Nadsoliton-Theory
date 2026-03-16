@@ -336,6 +336,18 @@ N545_SUMMARY = (
     GENERATED
     / "n545_current_sixth_admissibility_clause_discharge_theorem_for_s_sel_int_strict_core_source_object_v1_summary.json"
 )
+F654_SUMMARY = (
+    GENERATED
+    / "f654_first_exported_s_sel_int_strict_core_source_object_orientation_export_packet_summary.json"
+)
+P654_SUMMARY = (
+    GENERATED
+    / "p654_current_exported_s_sel_int_strict_core_source_object_orientation_export_probe_summary.json"
+)
+N546_SUMMARY = (
+    GENERATED
+    / "n546_current_exported_s_sel_int_strict_core_source_object_admissible_orientation_export_theorem_summary.json"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -941,15 +953,37 @@ def main() -> None:
                                                                                     "Next move: package the final-clause discharge theorem (N545), keeping E_orient/downstream explicitly unexported."
                                                                                 )
                                                                             else:
-                                                                                recommended_next_target = (
-                                                                                    "ATTACK_ORIENTATION_EXPORT_BRANCH_E_ORIENT_FOR_S_SEL_INT_STRICT_CORE_SOURCE_OBJECT_V1"
-                                                                                )
-                                                                                recommendation_reason = (
-                                                                                    "N545 discharges the final admissibility clause for S_sel_int_strict_core_source_object_v1 on current repo state "
-                                                                                    "(the minimal strict-core source-object admissibility contract is now fully discharged for this object). "
-                                                                                    "Next move: attack the explicit E_orient export branch from this admissible strict-core source object, "
-                                                                                    "without implying strict-core selector closure or QW-2191 discharge."
-                                                                                )
+                                                                                if not F654_SUMMARY.exists():
+                                                                                    recommended_next_target = "F654"
+                                                                                    recommendation_reason = (
+                                                                                        "N545 discharges the final admissibility clause for S_sel_int_strict_core_source_object_v1 on current repo state "
+                                                                                        "(the minimal strict-core source-object admissibility contract is now fully discharged for this object). "
+                                                                                        "Next move: export one explicit strict-core orientation datum E_orient from this admissible source object (F654), "
+                                                                                        "without implying strict-core selector closure or QW-2191 discharge."
+                                                                                    )
+                                                                                elif not P654_SUMMARY.exists():
+                                                                                    recommended_next_target = "P654"
+                                                                                    recommendation_reason = (
+                                                                                        "F654 exports one explicit strict-core orientation datum from S_sel_int_strict_core_source_object_v1. "
+                                                                                        "Next move: run the F32 seven-clause orientation export contract probe on this export (P654)."
+                                                                                    )
+                                                                                elif not N546_SUMMARY.exists():
+                                                                                    recommended_next_target = "N546"
+                                                                                    recommendation_reason = (
+                                                                                        "P654 reports the F32 orientation export contract checks for the S_sel_int source object orientation export. "
+                                                                                        "Next move: package the admissible orientation export theorem (N546), keeping downstream B_sel/R_sel/O_sel explicitly open."
+                                                                                    )
+                                                                                else:
+                                                                                    recommended_next_target = (
+                                                                                        "ATTACK_DOWNSTREAM_COMPLETION_BRANCH_B_SEL_R_SEL_O_SEL_AFTER_E_ORIENT_FOR_S_SEL_INT_STRICT_CORE_SOURCE_OBJECT_V1"
+                                                                                    )
+                                                                                    recommendation_reason = (
+                                                                                        "N546 packages one admissible strict-core orientation export datum from S_sel_int_strict_core_source_object_v1 "
+                                                                                        "under the F32 contract (E_orient now exists in this seed-v1 lane). "
+                                                                                        "Next move: attack the explicit downstream completion branch B_sel -> R_sel -> O_sel starting from "
+                                                                                        "(S_sel_int_strict_core_source_object_v1, E_orient_s_sel_int_source_object_v1), "
+                                                                                        "without implying strict-core selector closure or QW-2191 discharge."
+                                                                                    )
         except Exception:
             pass
 
