@@ -276,6 +276,18 @@ N540_SUMMARY = (
     GENERATED
     / "n540_current_first_admissibility_clause_discharge_theorem_for_s_sel_int_strict_core_source_object_v1_summary.json"
 )
+F649_SUMMARY = (
+    GENERATED
+    / "f649_first_exported_s_sel_int_strict_core_source_object_second_clause_typing_packet_summary.json"
+)
+P649_SUMMARY = (
+    GENERATED
+    / "p649_current_second_admissibility_clause_rerun_after_carrier_typing_for_s_sel_int_strict_core_source_object_v1_probe_summary.json"
+)
+N541_SUMMARY = (
+    GENERATED
+    / "n541_current_second_admissibility_clause_discharge_theorem_for_s_sel_int_strict_core_source_object_v1_summary.json"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -774,12 +786,37 @@ def main() -> None:
                                                                 "Next move: package the first-clause discharge theorem (N540), keeping later clauses explicitly open."
                                                             )
                                                         else:
-                                                            recommended_next_target = "DEFINE_TYPED_CARRIER_AND_E_ORIENT_EXPORT_INTERFACE_FOR_S_SEL_INT_STRICT_CORE_SOURCE_OBJECT_V1"
-                                                            recommendation_reason = (
-                                                                "N540 discharges only the first admissibility clause for S_sel_int (genuinely new strict-core source object). "
-                                                                "Next move: attack the second clause (typed carrier enough for later E_orient export) by defining an explicit typed carrier "
-                                                                "decomposition + future E_orient target frame for S_sel_int_strict_core_source_object_v1, without implying admissible E_orient."
-                                                            )
+                                                            if not F649_SUMMARY.exists():
+                                                                recommended_next_target = "F649"
+                                                                recommendation_reason = (
+                                                                    "N540 discharges only the first admissibility clause for S_sel_int (genuinely new strict-core source object). "
+                                                                    "Next move: freeze a minimal explicit typed carrier + a future E_orient target frame for "
+                                                                    "S_sel_int_strict_core_source_object_v1 (F649), without exporting E_orient."
+                                                                )
+                                                            elif not P649_SUMMARY.exists():
+                                                                recommended_next_target = "P649"
+                                                                recommendation_reason = (
+                                                                    "F649 freezes a minimal typed carrier interface and a future E_orient target frame for "
+                                                                    "S_sel_int_strict_core_source_object_v1. "
+                                                                    "Next move: rerun the second admissibility clause (carrier typed enough for later E_orient export) "
+                                                                    "on current repo state (P649), without claiming E_orient."
+                                                                )
+                                                            elif not N541_SUMMARY.exists():
+                                                                recommended_next_target = "N541"
+                                                                recommendation_reason = (
+                                                                    "P649 reports the second admissibility clause rerun result for S_sel_int after carrier typing. "
+                                                                    "Next move: package the second-clause discharge theorem (N541), keeping later clauses explicitly open."
+                                                                )
+                                                            else:
+                                                                recommended_next_target = (
+                                                                    "ATTACK_THIRD_ADMISSIBILITY_CLAUSE_SOURCE_SEED_ONLY_NOT_COUNTED_AS_E_ORIENT_OR_BRIDGE_FOR_S_SEL_INT_STRICT_CORE_SOURCE_OBJECT_V1"
+                                                                )
+                                                                recommendation_reason = (
+                                                                    "N541 discharges the second admissibility clause (typed carrier enough for a later E_orient export) "
+                                                                    "for S_sel_int_strict_core_source_object_v1 on current repo state. "
+                                                                    "Next move: attack the third clause (source seed only not counted as E_orient or bridge), "
+                                                                    "keeping strict-core-only and selector-closure limits explicit."
+                                                                )
         except Exception:
             pass
 

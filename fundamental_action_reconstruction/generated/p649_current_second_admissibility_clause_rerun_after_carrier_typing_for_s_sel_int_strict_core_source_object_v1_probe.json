@@ -1,0 +1,123 @@
+{
+  "stage": "P649",
+  "lane": "current_second_admissibility_clause_rerun_after_carrier_typing_only",
+  "status": "CURRENT_REPO_EXPORTS_ONE_STRICT_CORE_SOURCE_OBJECT_SATISFYING_THE_SECOND_ADMISSIBILITY_CLAUSE_FOR_S_SEL_INT_AFTER_P649",
+  "exported_object": "S_sel_int_strict_core_source_object_v1",
+  "second_clause": "carrier_typed_enough_for_later_E_orient_export_required",
+  "checks": [
+    {
+      "id": "f34_second_clause_required",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "F34 keeps the carrier-typing clause active for admissible S_sel_int"
+    },
+    {
+      "id": "first_clause_already_discharged",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "N540 discharges the first admissibility clause for S_sel_int on current repo state"
+    },
+    {
+      "id": "f649_typing_packet_status",
+      "actual": "F649_EXECUTED_FIRST_EXPORTED_S_SEL_INT_STRICT_CORE_SOURCE_OBJECT_SECOND_CLAUSE_TYPING_PACKET_NO_FALSE_PASS",
+      "expected": "F649_EXECUTED_FIRST_EXPORTED_S_SEL_INT_STRICT_CORE_SOURCE_OBJECT_SECOND_CLAUSE_TYPING_PACKET_NO_FALSE_PASS",
+      "pass": true,
+      "meaning": "F649 typing packet summary status matches the executed no-false-pass marker"
+    },
+    {
+      "id": "exported_object_identity",
+      "actual": "S_sel_int_strict_core_source_object_v1",
+      "expected": "S_sel_int_strict_core_source_object_v1",
+      "pass": true,
+      "meaning": "the typing packet targets the strict-core exported S_sel_int source object v1 identity"
+    },
+    {
+      "id": "typed_carrier_decomposition_present",
+      "actual": [
+        "L2_Z12_real_v1"
+      ],
+      "expected": [
+        "L2_Z12_real_v1"
+      ],
+      "pass": true,
+      "meaning": "a minimal explicit typed carrier is frozen (L2(Z_12) as a real carrier)"
+    },
+    {
+      "id": "index_set_present",
+      "actual": "Z_12",
+      "expected": "Z_12",
+      "pass": true,
+      "meaning": "the typed carrier index set is explicit"
+    },
+    {
+      "id": "basis_frame_present",
+      "actual": [
+        "c1",
+        "s1"
+      ],
+      "expected": [
+        "c1",
+        "s1"
+      ],
+      "pass": true,
+      "meaning": "the future orientation-export target frame is expressed in an explicit basis frame"
+    },
+    {
+      "id": "nonzero_s1_support",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "the designated sine axis has nonzero support in the exported state support marker"
+    },
+    {
+      "id": "basis_function_c1_length_12",
+      "actual": 12,
+      "expected": 12,
+      "pass": true,
+      "meaning": "the carrier exports an explicit c1(x) array on Z_12"
+    },
+    {
+      "id": "basis_function_s1_length_12",
+      "actual": 12,
+      "expected": 12,
+      "pass": true,
+      "meaning": "the carrier exports an explicit s1(x) array on Z_12"
+    },
+    {
+      "id": "future_orientation_export_target_frame",
+      "actual": [
+        "c1",
+        "s1"
+      ],
+      "expected": [
+        "c1",
+        "s1"
+      ],
+      "pass": true,
+      "meaning": "a future E_orient target frame is explicit (only as a target frame)"
+    },
+    {
+      "id": "E_orient_not_yet_exported",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "E_orient is not falsely claimed as already exported"
+    },
+    {
+      "id": "f649_no_false_pass",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "F649 summary self-reports no-false-pass discipline"
+    }
+  ],
+  "remaining_admissibility_clauses_unresolved": [
+    "source_seed_only_not_counted_as_E_orient_or_bridge",
+    "strict_core_only_required (still not full admissibility)",
+    "selector_acceptance_outside_strict_core_may_not_count_as_source_construction",
+    "future_bridge_compatible_required"
+  ],
+  "no_false_pass": true
+}
