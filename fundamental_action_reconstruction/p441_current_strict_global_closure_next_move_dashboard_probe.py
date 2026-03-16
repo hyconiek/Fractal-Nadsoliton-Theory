@@ -117,6 +117,10 @@ P16_FACTORIZATION_SUMMARY = (
     GENERATED
     / "p16_existing_kernel_feedback_legacy_chart_reduced_operator_export_probe_summary.json"
 )
+P46_DIRECT_FORMAL_SUMMARY = (
+    GENERATED
+    / "p46_canonical_ontology_supported_direct_formal_c1s1_family_route_probe_after_direct_m2_psi4_target_action_coefficient_defect_polynomial_packet_summary.json"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -349,28 +353,47 @@ def main() -> None:
         # Professorial continuation decision:
         # - If projective-only continuation is explicitly selected (P475), we do not pursue a directed sign-lift in strict core (H37/T171).
         # - We keep H37 as an open frontier for the directed branch, but the recommended next move shifts to strict-only ToE closure tasks
-        #   that depend only on projectors/spans (e.g. the existing-kernel-feedback factorization route P10/P11).
+        #   that do not require a sign-sensitive orientation datum (projective-only compatible).
         if projective_selected:
-            recommended_next = "P16" if P16_FACTORIZATION_SUMMARY.exists() else "P11"
-            p16_note = ""
-            if P16_FACTORIZATION_SUMMARY.exists():
+            if P46_DIRECT_FORMAL_SUMMARY.exists():
+                recommended_next = "P46"
+                p46_note = ""
                 try:
-                    p16 = load_json(P16_FACTORIZATION_SUMMARY)
-                    missing = p16.get("remaining_missing_upstream_objects")
-                    req = p16.get("required_next_step")
-                    p16_note = (
-                        f" Current factorization frontier: P16. remaining_missing={missing}; required_next_step={req}."
-                    )
+                    p46 = load_json(P46_DIRECT_FORMAL_SUMMARY)
+                    missing = p46.get("remaining_missing_objects")
+                    p46_note = f" Current direct-formal frontier: P46. remaining_missing_objects={missing}."
                 except Exception:
-                    p16_note = " P16 summary exists but could not be parsed."
-            recommendation_reason = (
-                "Projective-only continuation is explicitly selected (P475): treat the exported global projective selector state as the strict physical state object "
-                "for the declared closure stack, keeping residual sign as a gauge/convention layer where proven irrelevant (N502, N519). "
-                "H37/T171 remain open for a future directed branch only. "
-                "Next strict ToE-closure bottleneck: continue the existing-kernel-feedback -> explicit H3 factorization route; "
-                "the current frontier is beyond P11 and is tracked by P16 (legacy chart-reduced operator export route)."
-                + p16_note
-            )
+                    p46_note = " P46 summary exists but could not be parsed."
+
+                recommendation_reason = (
+                    "Projective-only continuation is explicitly selected (P475): treat the exported global projective selector state as the strict physical state object "
+                    "for the declared closure stack, keeping residual sign as a gauge/convention layer where proven irrelevant (N502, N519). "
+                    "H37/T171 remain open for a future directed branch only. "
+                    "Next strict-only ToE-closure bottleneck: continue on the kernel-split-robust canonical-ontology-supported direct formal c1s1 family route "
+                    "(F3 priority), currently tracked at P46."
+                    + p46_note
+                )
+            else:
+                recommended_next = "P16" if P16_FACTORIZATION_SUMMARY.exists() else "P11"
+                p16_note = ""
+                if P16_FACTORIZATION_SUMMARY.exists():
+                    try:
+                        p16 = load_json(P16_FACTORIZATION_SUMMARY)
+                        missing = p16.get("remaining_missing_upstream_objects")
+                        req = p16.get("required_next_step")
+                        p16_note = (
+                            f" Current factorization frontier: P16. remaining_missing={missing}; required_next_step={req}."
+                        )
+                    except Exception:
+                        p16_note = " P16 summary exists but could not be parsed."
+                recommendation_reason = (
+                    "Projective-only continuation is explicitly selected (P475): treat the exported global projective selector state as the strict physical state object "
+                    "for the declared closure stack, keeping residual sign as a gauge/convention layer where proven irrelevant (N502, N519). "
+                    "H37/T171 remain open for a future directed branch only. "
+                    "Next strict ToE-closure bottleneck: continue the existing-kernel-feedback -> explicit H3 factorization route; "
+                    "the current frontier is beyond P11 and is tracked by P16 (legacy chart-reduced operator export route)."
+                    + p16_note
+                )
 
     # Backward-compatible mapping: older P438 versions returned a packet label ("B3") here.
     if recommended_next == "B3" and N491_THEOREM.exists():
