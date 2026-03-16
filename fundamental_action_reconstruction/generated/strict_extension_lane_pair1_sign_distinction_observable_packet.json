@@ -1,0 +1,89 @@
+{
+  "lane": "strict_extension_only",
+  "step": "AX28",
+  "status": "strict_extension_lane_pair1_sign_distinction_observable_premise_packet_constructed__no_false_pass",
+  "as_of": "2026-03-16",
+  "assembled_from": {
+    "extension_scope_acceptance": "AX16 (strict_extension_only)",
+    "premise_packet": "AX28_STRICT_EXTENSION_LANE_PAIR1_SIGN_DISTINCTION_OBSERVABLE_PREMISE_PACKET.md",
+    "alpha_geo_source_upgrade": "generated/alpha_geo_strict_derived_v1.json (F309/N420)",
+    "strict_pair1_axis_representative": "generated/a_1_pair1_orientation_projector_operator_strict_core_v1.json (F456; axis is projector-level; residual sign is gauge in strict core)",
+    "generator_fix_premise_reference": "generated/strict_extension_lane_z12_generator_fix_and_shannon_kl_o2_cut_closure_packet.json (AX23)",
+    "strict_core_obstruction_boundary": "H37 + N518 + P472 (strict core still has no sign-sensitive physical orientation datum)"
+  },
+  "inputs": {
+    "alpha_geo_strict_derived_v1": "4 ln(2)",
+    "alpha_geo_numeric_used": 2.772588722239781,
+    "u1_source_object": "A_1_pair1_orientation_projector_operator_strict_core_v1"
+  },
+  "extension_scope_premises": {
+    "lane": "strict_extension_only",
+    "z12_generator_orientation_fix": {
+      "generator_fixed": 1,
+      "successor_map": "suc_fix(k) := (k+1) mod 12",
+      "note": "This fixes a marked direction on Z_12 and is not strict-core canonical under N462/T164; it is accepted only in extension scope.",
+      "ax23_reference": {
+        "generator_fixed": 1,
+        "successor_map": "suc_fix(k) := (k+1) mod 12",
+        "note": "This fixes a marked direction on Z_12 and is not strict-core canonical under N462; it is accepted only in extension scope."
+      }
+    },
+    "directed_coordinate": {
+      "x_domain": "I_12_v1 = {0,1,...,11}",
+      "meaning": "directed label relative to fixed successor map"
+    }
+  },
+  "directed_weight": {
+    "w_dir(x)": "exp(-alpha_geo * x)",
+    "x_domain": "I_12_v1",
+    "weights": [
+      1.0,
+      0.0625,
+      0.003906250000000001,
+      0.00024414062500000016,
+      1.5258789062500007e-05,
+      9.5367431640625e-07,
+      5.960464477539072e-08,
+      3.725290298461918e-09,
+      2.328306436538698e-10,
+      1.4551915228366858e-11,
+      9.094947017729282e-13,
+      5.6843418860807996e-14
+    ],
+    "normalization_note": "Normalization is irrelevant for sign-distinction; the exported list is unnormalized."
+  },
+  "sign_distinction_observable": {
+    "S_dir(u)": "\u03a3_x w_dir(x) u(x)",
+    "S_dir(u1_strict_representative)": -0.014244085617340103,
+    "sign_fix_applied_to_u1": -1.0,
+    "u1_oriented_extension_lane": [
+      -0.0,
+      0.204124145231932,
+      0.353553390593274,
+      0.408248290463863,
+      0.353553390593274,
+      0.204124145231931,
+      -0.0,
+      -0.204124145231931,
+      -0.353553390593274,
+      -0.408248290463863,
+      -0.353553390593274,
+      -0.204124145231932
+    ],
+    "S_dir(u1_oriented_extension_lane)": 0.014244085617340103,
+    "meaning": "This scalar flips sign under u->-u and fixes a preferred orientation representative by requiring S_dir(u)>0."
+  },
+  "strict_core_status": {
+    "H37_discharged": false,
+    "T164_discharged": false,
+    "strict_core_changed": false
+  },
+  "forbidden_overclaim_set": [
+    "strict-core sign-sensitive physical orientation datum",
+    "strict-core canonical generator/orientation fixing datum",
+    "strict-core selector closure",
+    "strict-core QW-2191 discharge",
+    "ToE closure"
+  ],
+  "no_false_pass": true
+}
