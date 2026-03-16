@@ -1,0 +1,70 @@
+# R75 Direct M2 Psi8 Source Action Coefficient Defect Polynomial Packet
+
+Status: `R75_EXECUTED_DIRECT_M2_PSI8_SOURCE_ACTION_COEFFICIENT_DEFECT_POLYNOMIAL_PACKET_NO_FALSE_PASS`  
+As of: `2026-03-16`
+
+## Goal
+
+After `R74`, the narrowest route-scoped blocker on the attacked source action
+side is:
+
+```text
+explicit source action monomial coefficient-identification witness for
+m2_psi8 and mu_m2_plus3_segment_psi8_psi11 on common psi8**2/2 support
+```
+
+`R75` does not pretend to prove that coefficient-identification witness.
+
+It attacks only the next honest subobject:
+
+```text
+materialize the exact coefficient defect polynomial whose vanishing would
+imply that missing witness, without dividing by psi8**2/2 and without any
+nonzero-factor claim
+```
+
+## Inputs reused
+
+1. `R74`
+   - exact source action term on `psi8**2/2`,
+   - declared lifted source action term on the same support.
+
+## Result of `R75`
+
+`R75` exports the exact source-action coefficient defect polynomial:
+
+```text
+(m2_psi8) - (mu_m2_plus3_segment_psi8_psi11)
+```
+
+and records the exact source-action defect expression on common support:
+
+```text
+((m2_psi8) - (mu_m2_plus3_segment_psi8_psi11))*(psi8**2/2)
+```
+
+The remaining missing object is the corresponding explicit zero witness.
+
+## What `R75` does not claim
+
+`R75` does not claim:
+
+- theorem-level PASS,
+- full-closure PASS,
+- that the coefficient defect polynomial vanishes,
+- that `m2_psi8 = mu_m2_plus3_segment_psi8_psi11`,
+- that `m2_psi8 = m2_psi11`,
+- that `psi8**2/2` may be divided out or treated as a nonzero factor,
+- that any direct `g4/g6/gY` family defect vanishes,
+- that any `pair1` residual zero equation holds,
+- that `QW-2191` is discharged,
+- that selector closure is obtained,
+- that ToE is closed.
+
+## Recommended next move
+
+The correct next move is now:
+
+1. integrate this packet into the tracked direct-formal route probe,
+2. keep the missing object explicitly as a zero witness (no false PASS).
+

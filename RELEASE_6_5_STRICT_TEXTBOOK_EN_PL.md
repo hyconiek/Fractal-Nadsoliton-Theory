@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.37  
+**Version:** 6.5.38  
 **Date:** 2026-03-16  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -288,7 +288,7 @@ Dashboards continue to mark `H37` (sign-distinction state: a sign-sensitive / di
 However, the continuation is now explicitly bifurcated (`T171`), and `P475` selects the **projective-only** continuation:
 
 1. treat the exported global selector state as the strict physical state object at the ray/projector level for the declared closure stack, keeping residual sign as a gauge/convention layer where proven irrelevant (`N502`, `N519`),
-2. proceed with strict-only ToE closure tasks that do not require a sign-sensitive orientation datum (projective-only compatible); the next concrete bottleneck is the kernel-split-robust canonical-ontology-supported direct formal `c1s1` family route, currently tracked at `P626`.
+2. proceed with strict-only ToE closure tasks that do not require a sign-sensitive orientation datum (projective-only compatible); the next concrete bottleneck is the kernel-split-robust canonical-ontology-supported direct formal `c1s1` family route, currently tracked at `P627`.
 
 Update: a coefficient-filled **declared** control pullback `M_control = T_control^T H_PsiPsi T_control` is now exported from the coefficient-filled canonical Psi block on the declared transport support (`P476`, relying on `R11/R12`), but no host-to-canonical Psi-block matching witness is exported, so no strict existing-feedback promotion is claimed.
 
@@ -475,7 +475,7 @@ Dashboards nadal wskazują `H37` (rozróżnienie znaku: znako‑czuły / kierunk
 Jednak kontynuacja jest teraz jawnie rozdzielona (`T171`), a `P475` wybiera gałąź **projekcyjną**:
 
 1. traktować globalny stan selektora jako obiekt promienia/projektora w zadeklarowanym stacku domknięcia, zamrażając residualny znak jako gauge/konwencję tam, gdzie pokazano gauge‑irrelewantność (`N502`, `N519`),
-2. przejść do strict-only zadań domknięcia ToE, które nie wymagają znako‑czułego datumu orientacji (kompatybilne z gałęzią projekcyjną); najbliższy konkretny bottleneck to kernel-split-robust canonical-ontology-supported direct formal route rodziny `c1s1`, aktualnie śledzony na froncie `P626`.
+2. przejść do strict-only zadań domknięcia ToE, które nie wymagają znako‑czułego datumu orientacji (kompatybilne z gałęzią projekcyjną); najbliższy konkretny bottleneck to kernel-split-robust canonical-ontology-supported direct formal route rodziny `c1s1`, aktualnie śledzony na froncie `P627`.
 
 Update: repo eksportuje teraz coefficient-filled **declared** control pullback `M_control = T_control^T H_PsiPsi T_control` z coefficient-filled canonical `H_PsiPsi` na zadeklarowanym transporcie (`P476`, oparte o `R11/R12`), ale bez witnessu dopasowania hosta do nośnika kanonicznego (`C10_B1`), więc bez promocji do strict existing-feedback.
 
