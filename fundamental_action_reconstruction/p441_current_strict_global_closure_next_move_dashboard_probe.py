@@ -98,6 +98,9 @@ N518_THEOREM = (
     ROOT
     / "N518_CURRENT_FIRST_STRICT_H37_AUT_INVARIANT_REFERENCE_WEIGHTS_SIGN_DISTINCTION_OBSTRUCTION_THEOREM.md"
 )
+P472_SUMMARY = (
+    GENERATED / "p472_current_strict_pair1_reflection_breaking_weight_repo_scan_probe_summary.json"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -273,6 +276,22 @@ def main() -> None:
             )
             if "N517 shows even ord-reference weights" not in recommendation_reason:
                 recommendation_reason += note
+        if P472_SUMMARY.exists() and "Probe note: P472" not in recommendation_reason:
+            try:
+                p472 = load_json(P472_SUMMARY)
+                outside = int(
+                    p472.get(
+                        "candidates_weight_like_strictish_reflection_breaking_and_dot_nonzero_outside_k_total_rows"
+                    )
+                    or 0
+                )
+                if outside == 0:
+                    recommendation_reason += (
+                        " Probe note: P472 scans exported generated artifacts and finds no strict(-derived) weight-like reflection-breaking per-site arrays "
+                        "outside non-canonical marked-site K_total row vectors; therefore H37 still requires an explicit reflection-breaking/orientation source."
+                    )
+            except Exception:
+                pass
 
     # Backward-compatible mapping: older P438 versions returned a packet label ("B3") here.
     if recommended_next == "B3" and N491_THEOREM.exists():

@@ -18,6 +18,7 @@ Check whether the current strict core contains any object that identifies `u` an
 - `F470/N516`: global projective selector state object exported on `C_v1` (projector/span; residual sign is gauge at state level).
 - `N517` (+ `F471`): even ord-reference weights (`ord_Z12`, `r_ord`) cannot supply a sign-distinction scalar of the form `Σ_x w(x) u_1(x)` on the current exported `pair1` sine axis.
 - `N518` (+ `F472`): more generally, any direction-free (`Aut(Z_12)`-invariant) reference weight family `w` cannot supply such a sign-distinction scalar on the current exported `pair1` sine axis (since `-1∈Aut(Z_12)` ⇒ Aut-invariant weights are even under reflection).
+- `P472`: a mechanical scan of exported `generated/*.json` artifacts for **weight-like** per-site arrays that break reflection and yield a nonzero scalar `Σ_x w(x)u_1(x)` reports none in strict(-derived) scope **outside** non-canonical marked-site `K_total` row vectors (probe-level hygiene; no promotion).
 
 ## Audit
 
@@ -45,6 +46,8 @@ Moreover, `N517` records a strict obstruction for one tempting route: the curren
 is even under reflection and therefore cannot distinguish `u_1` from `-u_1` on the current exported `pair1` sine axis via an observable of the form `Σ_x w(x)u_1(x)`.
 
 `N518` strengthens this to an entire **direction-free** class: any `Aut(Z_12)`-invariant reference weight family (and hence any reference weight not introducing a marked direction/generator) is even under reflection and therefore cannot distinguish sign via such a linear scalar on the current exported sine axis.
+
+Probe-level hygiene: `P472` additionally reports that among exported strict(-derived) artifacts, the only **weight-like** reflection-breaking per-site arrays producing a nonzero `Σ_x w(x)u_1(x)` are non-canonical marked-site rows of an exported `K_total` matrix. In particular, it reports **zero** strict(-derived) weight-like candidates outside those `K_total` rows. This does not prove impossibility, but it supports the audit conclusion that discharging `H37` requires an explicit reflection-breaking/orientation source (e.g. a generator/orientation fixing datum) rather than a repackaging of currently exported direction-free references.
 
 ## Result
 

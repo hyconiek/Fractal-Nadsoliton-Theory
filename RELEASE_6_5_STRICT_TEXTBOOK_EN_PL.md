@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.33  
+**Version:** 6.5.34  
 **Date:** 2026-03-16  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -287,6 +287,8 @@ Dashboards now recommend `H37` (sign-distinction state: a sign-sensitive / direc
 
 Update: a strict obstruction is now explicit: any direction-free `Aut(Z_12)`-invariant reference weight family (including the ord-reference weights `ord_Z12`, `r_ord`) cannot distinguish sign on the current exported `pair1` sine axis via a scalar of the form `Σ_x w(x) u_1(x)` (`F472`, packaged by `N518`; strengthening the ord-specific obstruction `F471/N517`). Therefore `H37` requires an explicit reflection-breaking/orientation source or a different observable class.
 
+Probe hygiene: `P472` scans exported `generated/*.json` artifacts and finds no strict(-derived) **weight-like** reflection-breaking per-site array outside non-canonical marked-site `K_total` row vectors; therefore no strict sign-sensitive physical orientation datum is presently exported by repackaging existing direction-free references.
+
 Update: as the next narrow `B3` continuation step, the repo now exports an explicit lane-scoped **chart-transport operator** `O_12` between `pair1↔pair2`
 on `n=12`, derived only from the strict sigma-int `alpha_12` transition (`F461`). This is a sign-free projector-level gluing ingredient
 (packaged as a strict theorem `N506` and audited by `P465`); global selector atlas/transition obligations are now discharged at object level (`F469/N515`), and a global projective selector state object is exported (`F470/N516`).
@@ -469,6 +471,8 @@ Dashboards teraz rekomendują `H37` (rozróżnienie znaku: znako‑czuły / kier
    używać już wyeksportowanych globalnych obiektów atlasu i przejść na `C_v1` (`F469/N515`) oraz globalnego projektowego obiektu stanu selektora (`F470/N516`), bez promocji do implied strict-core selector closure ani globalnego rozładowania `QW-2191`.
 
 Update: jawne jest teraz jedno ścisłe ograniczenie: żadna direction-free (tj. `Aut(Z_12)`-invariant) rodzina wag referencyjnych (w tym wagi ord-reference `ord_Z12`, `r_ord`) nie potrafi rozróżnić znaku na aktualnie wyeksportowanej osi `pair1` typu sine poprzez skalar postaci `Σ_x w(x) u_1(x)` (`F472`, opakowane przez `N518`; wzmacniając ord-specyficzną przeszkodę `F471/N517`). W konsekwencji `H37` wymaga jawnego źródła łamiącego symetrię odbicia/orientacji albo innej klasy obserwabli.
+
+Higiena sondy: `P472` skanuje wyeksportowane artefakty `generated/*.json` i nie znajduje żadnej ścisłej (strict lub strict-derived) **weight-like** per-site tablicy łamiącej odbicie poza niekanonicznymi (marked-site) wektorami wierszy `K_total`; więc nie ma obecnie wyeksportowanego ścisłego znako‑czułego fizycznego datumu orientacji uzyskanego przez “repackaging” istniejących direction-free referencji.
 
 Update: jako kolejny, najwęższy krok `B3` repo eksportuje teraz jawny lane‑scoped **operator transportu chartów** `O_12` pomiędzy `pair1↔pair2`
 na `n=12`, wyprowadzony wyłącznie z `alpha_12` (`F461`). To jest “gluing ingredient” tylko na poziomie osi/projektorów (sign‑free),

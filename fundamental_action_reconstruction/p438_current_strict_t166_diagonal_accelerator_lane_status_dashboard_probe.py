@@ -87,6 +87,9 @@ N518_THEOREM = (
     ROOT
     / "N518_CURRENT_FIRST_STRICT_H37_AUT_INVARIANT_REFERENCE_WEIGHTS_SIGN_DISTINCTION_OBSTRUCTION_THEOREM.md"
 )
+P472_SUMMARY = (
+    GENERATED / "p472_current_strict_pair1_reflection_breaking_weight_repo_scan_probe_summary.json"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -280,6 +283,23 @@ def main() -> None:
                 " Note: N517 shows even ord-reference weights (ord_Z12 / r_ord) cannot distinguish sign on the current exported pair1 sine axis "
                 "via a scalar of the form Σ_x w(x) u_1(x); therefore H37 requires an explicit reflection-breaking/orientation source or a different observable class."
             )
+        if P472_SUMMARY.exists() and "Probe note: P472" not in recommendation_reason:
+            try:
+                p472 = load_json(P472_SUMMARY)
+                outside = int(
+                    p472.get(
+                        "candidates_weight_like_strictish_reflection_breaking_and_dot_nonzero_outside_k_total_rows"
+                    )
+                    or 0
+                )
+                if outside == 0:
+                    recommendation_reason += (
+                        " Probe note: P472 scans exported generated artifacts and finds no strict(-derived) weight-like reflection-breaking per-site arrays "
+                        "outside non-canonical marked-site K_total row vectors; therefore H37 still requires an explicit reflection-breaking/orientation source."
+                    )
+            except Exception:
+                # Probe note is optional hygiene only; do not fail the dashboard if it cannot be parsed.
+                pass
 
     artifact = {
         "stage": "P438",
