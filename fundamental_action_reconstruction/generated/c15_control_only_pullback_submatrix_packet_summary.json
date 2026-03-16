@@ -1,8 +1,8 @@
 {
   "stage": "C15",
   "status": "C15_EXECUTED_CONTROL_ONLY_PULLBACK_PACKET_NO_FALSE_PASS",
-  "as_of": "2026-03-06",
-  "goal": "Reduce the missing assembled submatrix blocker by showing that the strict core already admits a formal control-only pullback packet M_control = T_control^T H_PsiPsi T_control, even if no coefficient-filled canonical Psi-Psi block is exported yet.",
+  "as_of": "2026-03-16",
+  "goal": "Track the strict control-only pullback assembly target M_control = T_control^T H_PsiPsi T_control and whether coefficient-filled artifacts exist for H_PsiPsi and M_control in declared scope.",
   "inputs": {
     "strict_admissible": [
       "QW-2190",
@@ -11,7 +11,9 @@
       "QW-2180",
       "C12",
       "C14",
-      "A10"
+      "A10",
+      "R11",
+      "R12"
     ]
   },
   "formal_objects": {
@@ -37,22 +39,24 @@
   },
   "result": {
     "control_only_pullback_formula_present": "yes",
-    "coefficient_filled_H_PsiPsi_present": "not_shown",
-    "coefficient_filled_M_control_present": "not_shown",
+    "coefficient_filled_H_PsiPsi_present": "yes",
+    "coefficient_filled_H_PsiPsi_source": "fundamental_action_reconstruction/generated/r12_explicit_canonical_psi_block_export_packet_with_kernel_mixing_for_host_route_summary.json",
+    "coefficient_filled_M_control_present": "yes",
+    "coefficient_filled_M_control_source": "fundamental_action_reconstruction/generated/p476_current_strict_r11_r12_declared_control_pullback_m_control_coefficient_filled_export_probe_summary.json",
     "orientation_slice_restriction_present": "not_shown"
   },
   "residual_blockers": {
-    "C15_B1": "no_explicit_coefficient_filled_canonical_Psi_x_Psi_block_H_PsiPsi_for_evaluating_the_control_pullback",
     "C15_B2": "no_explicit_restriction_from_M_control_to_the_candidate_orientation_slice",
     "C9_B2": "no_explicit_restriction_from_that_Psi_sector_quadratic_carrier_to_the_candidate_orientation_slice"
   },
   "hard_limits": [
     "no_theorem_level_pass",
     "no_full_closure_pass",
-    "no_coefficient_filled_h_psi_psi_claim",
-    "no_coefficient_filled_m_control_claim",
+    "no_physical_canonicalization_claim",
+    "no_host_matching_claim",
     "no_orientation_slice_restriction_claim",
     "no_qw2191_discharge_claim"
   ],
-  "next_step": "C16"
+  "next_step": "C26",
+  "no_false_pass": true
 }

@@ -1,7 +1,7 @@
 # P16 Existing Kernel Feedback Legacy Chart-Reduced Operator Export Probe
 
 Status: `P16_EXECUTED_EXISTING_KERNEL_FEEDBACK_LEGACY_CHART_REDUCED_OPERATOR_EXPORT_PROBE_NO_FALSE_PASS`
-As of: `2026-03-07`
+As of: `2026-03-16`
 
 ## Goal
 
@@ -44,29 +44,34 @@ But this still does **not** amount to a coefficient-filled legacy operator on
 `pair1`, because:
 
 1. the legacy host is still not identified with a concrete Psi-sector block,
-2. no executed coefficient-filled Psi-sector block export is present,
-3. no coefficient-filled control pullback `M_control` and therefore no
-   coefficient-filled chart-reduced `pair1` block is exported.
+2. therefore the declared-control artifacts (canonical `H_PsiPsi` and declared
+   `M_control`) remain below a strict existing-feedback promotion.
+
+Update (2026-03-16): in declared scope the repo now **does** export:
+
+- an explicit coefficient-filled canonical Psi x Psi block `H_PsiPsi` on full
+  declared transport support (`R12`),
+- an explicit coefficient-filled declared control pullback
+  `M_control = T_control^T H_PsiPsi T_control` (`P476`).
+
+This removes two of the three original `P16` sub-blockers, but it still does
+not supply a host-to-canonical matching witness identifying `QW-2186` with the
+canonical carrier (`C10_B1`).
 
 ## Sharpened decomposition of the first `P15` blocker
 
-`P16` reduces the first `P15` blocker to three current missing objects:
+`P16` now reduces the first `P15` blocker to one remaining missing object:
 
 1. host-to-concrete Psi-sector quadratic block identification for the
-   existing-kernel-feedback host operator,
-2. an executed and persisted coefficient-filled Psi-sector block export
-   supporting `H_PsiPsi` evaluation,
-3. a coefficient-filled control pullback `M_control` and its chart-reduced
-   `pair1` block export.
+   existing-kernel-feedback host operator (matching `QW-2186` to the canonical
+   carrier).
 
 ## Honest frontier
 
 `P16` shows that the route fails before any legacy-side matrix on `pair1`
 exists. The obstruction is now localized upstream of `pair1` to:
 
-1. host-to-Psi block identification,
-2. coefficient-filled Psi-block export,
-3. coefficient-filled control pullback and chart-reduced export.
+1. host-to-Psi block identification.
 
 ## What `P16` does not claim
 
@@ -85,7 +90,8 @@ exists. The obstruction is now localized upstream of `pair1` to:
 
 Only two honest routes remain:
 
-1. export a concrete existing-feedback Psi-sector block and evaluate the
-   control pullback to `pair1`,
+1. export a host-to-canonical Psi-block matching witness identifying `QW-2186`
+   with the canonical carrier (or equivalently with its declared control
+   pullback),
 2. or keep the legacy operator export route negative and do not claim any
    coefficient-filled legacy-side matrix on `pair1`.

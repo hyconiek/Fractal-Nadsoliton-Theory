@@ -58,10 +58,10 @@ def main() -> None:
             "meaning": "the legacy host operator is still not identified with a concrete Psi-sector block",
         },
         {
-            "id": "c15_coefficient_filled_control_pullback_not_shown",
+            "id": "c15_coefficient_filled_control_pullback_present",
             "actual": sources["C15"]["result"]["coefficient_filled_M_control_present"],
-            "expected": "not_shown",
-            "meaning": "the legacy control pullback still lacks a coefficient-filled matrix export",
+            "expected": "yes",
+            "meaning": "a coefficient-filled declared control pullback M_control is exported (declared scope; see P476 pointer in C15)",
         },
         {
             "id": "h15_existing_feedback_not_identified_with_kobs",

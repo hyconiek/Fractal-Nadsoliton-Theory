@@ -75,11 +75,11 @@ def main() -> None:
             "meaning": "the legacy host operator is still not identified with a concrete Psi-sector block",
         },
         {
-            "id": "c15_coefficient_filled_control_pullback_not_shown",
-            "pass": c15["result"]["coefficient_filled_M_control_present"] == "not_shown",
-            "expected": "not_shown",
+            "id": "c15_coefficient_filled_control_pullback_present",
+            "pass": c15["result"]["coefficient_filled_M_control_present"] == "yes",
+            "expected": "yes",
             "actual": c15["result"]["coefficient_filled_M_control_present"],
-            "meaning": "the legacy control-side pullback still lacks coefficient-filled matrix export",
+            "meaning": "a coefficient-filled declared control pullback M_control is exported (declared scope; see P476 pointer in C15)",
         },
         {
             "id": "h15_existing_feedback_not_identified_with_kobs",
@@ -137,7 +137,7 @@ def main() -> None:
         "stage": "P15",
         "goal": "compute_or_fail_existing_kernel_feedback_intertwiner_or_equality_witness_after_current_pair_chart_reduction",
         "status": "NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_INTERTWINER_EQUALITY_WITNESS_ROUTE",
-        "reason": "the repo now reaches the chosen current-pair chart and contains a computed current-pair H3 block, but it still exports neither a coefficient-filled legacy-side chart-reduced operator object on that chart nor an intertwiner/equality witness identifying such a legacy object with the computed block; the strongest extension-lane composite witness also remains unevaluated",
+        "reason": "the repo now reaches the chosen current-pair chart and contains a computed current-pair H3 block; it also exports a coefficient-filled declared control pullback M_control (C15 via P476), but it still exports neither a coefficient-filled legacy-side chart-reduced operator object identified as existing kernel feedback on that chart nor an intertwiner/equality witness identifying such a legacy object with the computed block; the strongest extension-lane composite witness also remains unevaluated",
         "lane": "existing_kernel_feedback_intertwiner_equality_witness_route_after_R10",
         "route_under_test": [
             "existing_kernel_feedback_inside_K_total",
@@ -153,6 +153,7 @@ def main() -> None:
         "supporting_present_but_insufficient_objects": [
             "R10_current_pair_chart_reduction_packet",
             "P10_computed_current_pair_H3_block",
+            "C15_coefficient_filled_declared_control_pullback_M_control (declared; not host-matched)",
             "H18_provenance_valid_extension_lane_route_A_witness",
             "O2_exported_composite_A_1_instance",
         ],
@@ -168,7 +169,6 @@ def main() -> None:
         },
         "blocking_frontier": {
             "C10_B1": c10["residual_blockers"]["C10_B1"],
-            "C15_B1": c15["residual_blockers"]["C15_B1"],
             "H15_B1": "existing kernel feedback has no explicit residual-selector-sector reduction or projected selector-block export in the current repository, so K_obs remains a distinct extension hypothesis rather than an identified reformulation of existing kernel feedback",
             "H16_B1": "both admissible operator-origin values still have only asymmetric partial witnesses and no provenance-valid equality witness to the computed current-pair block",
             "H18_B1": "a provenance-valid Route A witness exists on the hypothesis-extension lane for pair1, but no evaluated coefficient triple is exported from it",

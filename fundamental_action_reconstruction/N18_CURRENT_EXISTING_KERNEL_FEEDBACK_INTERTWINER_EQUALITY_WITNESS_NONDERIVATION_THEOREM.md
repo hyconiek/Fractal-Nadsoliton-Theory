@@ -1,7 +1,7 @@
 # N18 Current Existing Kernel Feedback Intertwiner Equality Witness Nonderivation Theorem
 
 Status: `N18_DISCHARGED_CURRENT_EXISTING_KERNEL_FEEDBACK_INTERTWINER_EQUALITY_WITNESS_NONDERIVATION_NO_FALSE_PASS`
-As of: `2026-03-07`
+As of: `2026-03-16`
 
 ## Goal
 
@@ -13,6 +13,11 @@ sharper:
 - the strongest extension-lane composite witness is present,
 - but the route still does not export the operator-identification witness
   needed to identify existing kernel feedback with that block.
+
+Update (2026-03-16): a coefficient-filled **declared** control pullback
+`M_control` is now exported, but it remains below strict existing-feedback
+promotion without a host-to-canonical matching witness, so it does not by
+itself supply the missing legacy-side chart-reduced operator object.
 
 `N18` states the strongest honest theorem for this updated route.
 

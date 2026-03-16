@@ -70,10 +70,10 @@ def main() -> None:
             "meaning": "no concrete Psi-sector block has been extracted",
         },
         {
-            "id": "c15_coefficient_filled_control_pullback_not_shown",
+            "id": "c15_coefficient_filled_control_pullback_present",
             "actual": sources["C15"]["result"]["coefficient_filled_M_control_present"],
-            "expected": "not_shown",
-            "meaning": "the coefficient-filled control pullback is still absent",
+            "expected": "yes",
+            "meaning": "a coefficient-filled declared control pullback M_control is exported (declared scope; see P476 pointer in C15)",
         },
         {
             "id": "c20_executed_serialization_run_not_shown",
@@ -134,9 +134,7 @@ def main() -> None:
                 "coefficient_filled_legacy_chart_reduced_operator_present": False,
             },
             "missing_structure_classes": [
-                "host_to_concrete_Psi_sector_quadratic_block_identification_for_the_existing_kernel_feedback_host_operator",
-                "explicit_executed_and_persisted_coefficient_filled_Psi_sector_block_export_supporting_H_PsiPsi_evaluation",
-                "explicit_coefficient_filled_control_pullback_M_control_and_its_pair1_chart_reduced_2x2_block_export",
+                "host_to_concrete_Psi_sector_quadratic_block_identification_for_the_existing_kernel_feedback_host_operator"
             ],
             "hard_limits": [
                 "no global impossibility theorem",
@@ -144,7 +142,7 @@ def main() -> None:
                 "no claim that QW-2191 is discharged",
                 "no claim that ToE is closed",
             ],
-            "required_next_step": "EITHER_EXPORT_A_CONCRETE_EXISTING_FEEDBACK_PSI_SECTOR_BLOCK_AND_EVALUATE_THE_CONTROL_PULLBACK_TO_PAIR1_OR_KEEP_THE_FACTORING_ROUTE_NEGATIVE",
+            "required_next_step": "EITHER_EXPORT_A_HOST_TO_CANONICAL_PSI_BLOCK_MATCHING_WITNESS_IDENTIFYING_QW2186_WITH_THE_CANONICAL_CARRIER_OR_KEEP_THE_FACTORING_ROUTE_NEGATIVE",
         }
 
     out.write_text(json.dumps(summary, indent=2, ensure_ascii=True) + "\n", encoding="ascii")

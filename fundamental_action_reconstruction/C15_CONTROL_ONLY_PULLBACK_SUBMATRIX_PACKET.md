@@ -1,7 +1,7 @@
 # C15 Control-Only Pullback Submatrix Packet
 
 Status: `C15_EXECUTED_CONTROL_ONLY_PULLBACK_PACKET_NO_FALSE_PASS`
-As of: `2026-03-06`
+As of: `2026-03-16`
 
 ## Cel
 
@@ -9,15 +9,15 @@ Po `C14` najwezszy aktywny blocker brzmial:
 
 - `C14_B2 := no_assembled_Psi_x_Psi_submatrix_after_adopting_the_control_transport_schema`
 
-`C15` nie probuje udawac, ze strict core ma juz coefficient-filled,
-fizycznie kanoniczna macierz `Psi x Psi`.
+`C15` nie probuje udawac, ze strict core ma juz **fizycznie kanoniczna**
+macierz `Psi x Psi` albo ze zamknelo `QW-2191`.
 
 `C15` robi cos wezszejszego:
 - sprawdza, czy po przyjeciu control transport schema z `C14`
   da sie juz zapisac jawny formalny pullback packet
   `M_control = T_control^T H_PsiPsi T_control`,
-- i czy blocker da sie zawezic do braku coefficient-filled canonical
-  `H_PsiPsi` oraz braku restriction do candidate orientation slice.
+- i czy repo ma juz coefficient-filled artefakty dla `H_PsiPsi` i `M_control`
+  w zadeklarowanym (declared) scope, bez claimu physical canonicalization.
 
 ## Polityka zrodel
 
@@ -83,7 +83,10 @@ Najslabszy uczciwy obiekt kanoniczny brzmi:
 jako formalny canonical `12 x 12` `Psi x Psi` block
 wewnatrz exhaustive Hessian carrier.
 
-`C15` nie twierdzi, ze `H_PsiPsi` jest juz coefficient-filled.
+Update (2026-03-16): repo eksportuje teraz jawny coefficient-filled canonical
+blok `H_PsiPsi` na pelnym zadeklarowanym support-cie transportu (`R12`) oraz
+wynikowy coefficient-filled declared control pullback `M_control` (`P476`).
+To nadal jest ponizej physical canonicalization i ponizej host matching.
 
 ## Formalny packet po `C15`
 
@@ -113,15 +116,14 @@ gdzie:
   - control transport `T_control`,
   - assembled control-only target `M_control = T_control^T H_PsiPsi T_control`.
 
-## Redukcja frontu po `C15`
+## Redukcja frontu po `C15` (stan: 2026-03-16)
 
 Po `C14` mielismy:
 
 - `C14_B2 := no_assembled_Psi_x_Psi_submatrix_after_adopting_the_control_transport_schema`
 
-Po `C15` najuczciwiej zapisac to weziej jako:
+Po `C15` (po update) najuczciwiej zapisac brak weziej jako:
 
-- `C15_B1 := no_explicit_coefficient_filled_canonical_Psi_x_Psi_block_H_PsiPsi_for_evaluating_the_control_pullback`
 - `C15_B2 := no_explicit_restriction_from_M_control_to_the_candidate_orientation_slice`
 
 To jest realny postep redukcyjny:
@@ -133,16 +135,15 @@ To jest realny postep redukcyjny:
 | Pytanie | Status po C15 | Uwagi |
 |---|---|---|
 | control-only assembly formula exists | `present_partial` | `M_control = T_control^T H_PsiPsi T_control` |
-| coefficient-filled canonical `H_PsiPsi` exists | `not_shown` | nadal brak |
-| coefficient-filled `M_control` exists | `not_shown` | nadal brak |
+| coefficient-filled canonical `H_PsiPsi` exists | `yes` | `R12` (full declared support) |
+| coefficient-filled `M_control` exists | `yes` | `P476` (declared control pullback) |
 | restriction `M_control -> orientation slice` exists | `not_shown` | nadal brak |
 | discharge of `C14_B2` | `reduced_not_closed` | blocker tylko zawężony |
 
 ## Czego `C15` nie ustala
 
 `C15` nie ustala:
-- ze `H_PsiPsi` zostal juz wyeksportowany wspolczynnik po wspolczynniku,
-- ze `M_control` zostal juz jawnie policzony,
+- ze export `M_control` jest juz selector-relevant (physical canonicalization transportu nadal otwarta),
 - ze istnieje juz orientation-slice restriction,
 - ze `C14_B2` ma PASS,
 - ze `C9_B2` ma PASS.
@@ -165,8 +166,6 @@ To jest realny postep redukcyjny:
 
 ## Nastepny krok
 
-Naturalnym kolejnym ruchem jest `C16`:
-- sprawdzic, czy strict core pozwala juz na minimalny coefficient-class table
-  dla canonical `H_PsiPsi`,
-- albo jawnie potwierdzic, ze nawet control-only pullback pozostaje
-  bez coefficient filling.
+Naturalnym kolejnym ruchem jest `C26`:
+- zrobic pierwsze uczciwe zawężenie `M_control -> orientation slice`,
+  bez claimu vanishing/cancellation i bez claimu host matching.

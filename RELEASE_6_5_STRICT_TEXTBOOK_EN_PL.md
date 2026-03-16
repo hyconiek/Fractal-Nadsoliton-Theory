@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.36  
+**Version:** 6.5.37  
 **Date:** 2026-03-16  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -288,7 +288,9 @@ Dashboards continue to mark `H37` (sign-distinction state: a sign-sensitive / di
 However, the continuation is now explicitly bifurcated (`T171`), and `P475` selects the **projective-only** continuation:
 
 1. treat the exported global selector state as the strict physical state object at the ray/projector level for the declared closure stack, keeping residual sign as a gauge/convention layer where proven irrelevant (`N502`, `N519`),
-2. proceed with strict-only ToE closure tasks that depend only on projectors/spans; the next concrete bottleneck is the existing-kernel-feedback → explicit H3-chain factorization map route (`P10/P11`).
+2. proceed with strict-only ToE closure tasks that depend only on projectors/spans; the next concrete bottleneck is the existing-kernel-feedback → explicit H3-chain factorization route, currently tracked at `P16` (legacy chart-reduced operator export frontier).
+
+Update: a coefficient-filled **declared** control pullback `M_control = T_control^T H_PsiPsi T_control` is now exported from the coefficient-filled canonical Psi block on the declared transport support (`P476`, relying on `R11/R12`), but no host-to-canonical Psi-block matching witness is exported, so no strict existing-feedback promotion is claimed.
 
 Update: a strict obstruction is now explicit: any direction-free `Aut(Z_12)`-invariant reference weight family (including the ord-reference weights `ord_Z12`, `r_ord`) cannot distinguish sign on the current exported `pair1` sine axis via a scalar of the form `Σ_x w(x) u_1(x)` (`F472`, packaged by `N518`; strengthening the ord-specific obstruction `F471/N517`). Therefore `H37` requires an explicit reflection-breaking/orientation source or a different observable class.
 
@@ -473,7 +475,9 @@ Dashboards nadal wskazują `H37` (rozróżnienie znaku: znako‑czuły / kierunk
 Jednak kontynuacja jest teraz jawnie rozdzielona (`T171`), a `P475` wybiera gałąź **projekcyjną**:
 
 1. traktować globalny stan selektora jako obiekt promienia/projektora w zadeklarowanym stacku domknięcia, zamrażając residualny znak jako gauge/konwencję tam, gdzie pokazano gauge‑irrelewantność (`N502`, `N519`),
-2. przejść do strict-only zadań domknięcia ToE zależnych tylko od projektorów/span; najbliższy konkretny bottleneck to route factorization existing-kernel-feedback → jawny łańcuch `H3` (`P10/P11`).
+2. przejść do strict-only zadań domknięcia ToE zależnych tylko od projektorów/span; najbliższy konkretny bottleneck to route factorization existing-kernel-feedback → jawny łańcuch `H3`, aktualnie śledzony na froncie `P16` (legacy chart-reduced operator export).
+
+Update: repo eksportuje teraz coefficient-filled **declared** control pullback `M_control = T_control^T H_PsiPsi T_control` z coefficient-filled canonical `H_PsiPsi` na zadeklarowanym transporcie (`P476`, oparte o `R11/R12`), ale bez witnessu dopasowania hosta do nośnika kanonicznego (`C10_B1`), więc bez promocji do strict existing-feedback.
 
 Update: jawne jest teraz jedno ścisłe ograniczenie: żadna direction-free (tj. `Aut(Z_12)`-invariant) rodzina wag referencyjnych (w tym wagi ord-reference `ord_Z12`, `r_ord`) nie potrafi rozróżnić znaku na aktualnie wyeksportowanej osi `pair1` typu sine poprzez skalar postaci `Σ_x w(x) u_1(x)` (`F472`, opakowane przez `N518`; wzmacniając ord-specyficzną przeszkodę `F471/N517`). W konsekwencji `H37` wymaga jawnego źródła łamiącego symetrię odbicia/orientacji albo innej klasy obserwabli.
 

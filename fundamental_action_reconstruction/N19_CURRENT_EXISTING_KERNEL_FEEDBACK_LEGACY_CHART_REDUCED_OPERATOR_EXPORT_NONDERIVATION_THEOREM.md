@@ -1,7 +1,7 @@
 # N19 Current Existing Kernel Feedback Legacy Chart-Reduced Operator Export Nonderivation Theorem
 
 Status: `N19_DISCHARGED_CURRENT_EXISTING_KERNEL_FEEDBACK_LEGACY_CHART_REDUCED_OPERATOR_EXPORT_NONDERIVATION_NO_FALSE_PASS`
-As of: `2026-03-07`
+As of: `2026-03-16`
 
 ## Goal
 
@@ -35,10 +35,13 @@ The theorem is:
 > and chosen current-pair chart reduction, the current repo still does not
 > export a coefficient-filled legacy chart-reduced operator object on `pair1`,
 > because the repo still lacks:
-> 1. host-to-concrete Psi-sector block identification,
-> 2. an executed coefficient-filled Psi-sector block export,
-> 3. a coefficient-filled control pullback `M_control` and its chart-reduced
->    `pair1` block export.
+> 1. host-to-concrete Psi-sector block identification (matching the
+>    existing-feedback host to the canonical carrier).
+
+Update (2026-03-16): the canonical Psi block (`R12`) and a coefficient-filled
+declared control pullback `M_control` (`P476`) are now exported in declared
+scope, but they remain below strict existing-feedback promotion without the
+host-matching identification witness.
 
 ## Result
 
@@ -64,8 +67,9 @@ The theorem is:
 
 The correct next move is now:
 
-1. export a concrete existing-feedback Psi-sector block and evaluate the
-   control pullback to `pair1`,
+1. export a host-to-canonical Psi-block matching witness identifying `QW-2186`
+   with the canonical carrier (or equivalently with its declared control
+   pullback),
 2. rerun the same route after that addition,
 3. keep the theorem negative until a genuine coefficient-filled legacy-side
    matrix on `pair1` is exported.

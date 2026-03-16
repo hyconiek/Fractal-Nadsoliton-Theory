@@ -39,9 +39,7 @@ def main() -> None:
 
     p15_missing = p15["remaining_missing_upstream_objects"]
     remaining_missing = [
-        "host_to_concrete_Psi_sector_quadratic_block_identification_for_the_existing_kernel_feedback_host_operator",
-        "explicit_executed_and_persisted_coefficient_filled_Psi_sector_block_export_supporting_H_PsiPsi_evaluation",
-        "explicit_coefficient_filled_control_pullback_M_control_and_its_pair1_chart_reduced_2x2_block_export",
+        "host_to_concrete_Psi_sector_quadratic_block_identification_for_the_existing_kernel_feedback_host_operator"
     ]
 
     route_checks = [
@@ -86,32 +84,25 @@ def main() -> None:
             "meaning": "the legacy host is still not identified with a concrete Psi-sector block",
         },
         {
-            "id": "c11_concrete_psi_block_not_extracted",
-            "pass": c11["result"]["concrete_block_extracted"] == "not_shown",
-            "expected": "not_shown",
-            "actual": c11["result"]["concrete_block_extracted"],
-            "meaning": "no concrete Psi-sector block has been explicitly extracted",
+            "id": "c15_coefficient_filled_h_psi_psi_present_via_r12",
+            "pass": c15["result"]["coefficient_filled_H_PsiPsi_present"] == "yes",
+            "expected": "yes",
+            "actual": c15["result"]["coefficient_filled_H_PsiPsi_present"],
+            "meaning": "a coefficient-filled canonical Psi x Psi block H_PsiPsi is exported (declared scope; see R12 pointer in C15)",
         },
         {
-            "id": "c12_assembled_submatrix_not_exported",
-            "pass": c12["result"]["assembled_submatrix_exported"] == "not_shown",
-            "expected": "not_shown",
-            "actual": c12["result"]["assembled_submatrix_exported"],
-            "meaning": "no assembled Psi-sector submatrix export is present",
-        },
-        {
-            "id": "c20_executed_12_row_serialization_run_not_shown",
-            "pass": c20["persisted_outputs"]["persisted_12_row_serialization_run_present"] is False,
-            "expected": False,
-            "actual": c20["persisted_outputs"]["persisted_12_row_serialization_run_present"],
-            "meaning": "the finite materialization recipe has not been executed into a persisted 12-row serialization run",
-        },
-        {
-            "id": "c15_coefficient_filled_control_pullback_not_shown",
-            "pass": c15["result"]["coefficient_filled_M_control_present"] == "not_shown",
-            "expected": "not_shown",
+            "id": "c15_coefficient_filled_m_control_present_via_p476",
+            "pass": c15["result"]["coefficient_filled_M_control_present"] == "yes",
+            "expected": "yes",
             "actual": c15["result"]["coefficient_filled_M_control_present"],
-            "meaning": "the control pullback M_control is still not exported in coefficient-filled form",
+            "meaning": "a coefficient-filled declared control pullback M_control is exported (declared scope; see P476 pointer in C15)",
+        },
+        {
+            "id": "c15_orientation_slice_restriction_still_absent",
+            "pass": c15["result"]["orientation_slice_restriction_present"] == "not_shown",
+            "expected": "not_shown",
+            "actual": c15["result"]["orientation_slice_restriction_present"],
+            "meaning": "no declared restriction M_control -> orientation slice is exported at C15 level",
         },
     ]
 
@@ -121,8 +112,8 @@ def main() -> None:
         "chosen_current_pair_chart_reduction_present": True,
         "formal_control_pullback_formula_present": True,
         "host_to_concrete_psi_block_identification_present": False,
-        "coefficient_filled_psi_sector_block_export_present": False,
-        "coefficient_filled_control_pullback_present": False,
+        "coefficient_filled_psi_sector_block_export_present": True,
+        "coefficient_filled_control_pullback_present": True,
         "coefficient_filled_legacy_chart_reduced_operator_present": False,
     }
 
@@ -130,7 +121,7 @@ def main() -> None:
         "stage": "P16",
         "goal": "compute_or_fail_existing_kernel_feedback_legacy_chart_reduced_operator_export_on_pair1_after_P15",
         "status": "NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_LEGACY_CHART_REDUCED_OPERATOR_EXPORT_ROUTE",
-        "reason": "the repo now contains the host carrier, the typed host-to-control pushforward, the formal control pullback formula, and the chosen current-pair chart reduction, but it still exports no concrete Psi-sector block identified with the existing-feedback host, no executed coefficient-filled Psi-sector block export, and no coefficient-filled control pullback M_control from which a legacy chart-reduced operator on pair1 could be exported",
+        "reason": "the repo now contains the host carrier, the typed host-to-control pushforward, the formal control pullback formula, the chosen current-pair chart reduction, and (in declared scope) both a coefficient-filled canonical Psi x Psi block H_PsiPsi (R12) and a coefficient-filled declared control pullback M_control (P476), but it still exports no host-to-concrete Psi-block identification matching the existing-feedback host operator to that canonical carrier (C10_B1), so no strict existing-feedback legacy chart-reduced operator object on pair1 can be promoted from these declared artifacts",
         "lane": "existing_kernel_feedback_legacy_chart_reduced_operator_export_route_after_P15",
         "route_under_test": [
             "existing_kernel_feedback_host_operator",
@@ -148,6 +139,8 @@ def main() -> None:
             "R9_typed_host_to_control_pushforward",
             "C15_formal_control_pullback_formula",
             "R10_current_pair_chart_reduction_map",
+            "R12_coefficient_filled_canonical_H_PsiPsi (declared support)",
+            "P476_coefficient_filled_M_control (declared control pullback)",
         ],
         "decomposition_of_P15_missing_object": {
             "from_P15": "explicit_coefficient_filled_legacy_chart_reduced_operator_object_on_the_chosen_current_pair_chart_pair1_or_equivalent_actual_target",
@@ -156,11 +149,9 @@ def main() -> None:
         "remaining_missing_upstream_objects": remaining_missing,
         "blocking_frontier": {
             "C10_B1": c10["residual_blockers"]["C10_B1"],
-            "C11_B1": c11["residual_blockers"]["C11_B1"],
-            "C15_B1": c15["residual_blockers"]["C15_B1"],
-            "C20_B1": c20["residual_blockers"]["C20_B1"],
+            "C15_B2": c15["residual_blockers"]["C15_B2"],
         },
-        "required_next_step": "EITHER_EXPORT_A_CONCRETE_EXISTING_FEEDBACK_PSI_SECTOR_BLOCK_AND_EVALUATE_THE_CONTROL_PULLBACK_TO_PAIR1_OR_KEEP_THE_LEGACY_OPERATOR_EXPORT_ROUTE_NEGATIVE",
+        "required_next_step": "EITHER_EXPORT_A_HOST_TO_CANONICAL_PSI_BLOCK_MATCHING_WITNESS_IDENTIFYING_QW2186_WITH_THE_CANONICAL_CARRIER_OR_KEEP_THE_LEGACY_OPERATOR_EXPORT_ROUTE_NEGATIVE",
         "strict_core_promotion": False,
         "no_false_pass": True,
     }
