@@ -272,3 +272,7 @@ Naturalnym kolejnym ruchem jest **B3‑continuation**:
    - jawnie zamrozic residual sign jako gauge/convention layer i kontynuowac strict-only ToE closure pod `QW-2191` dyscyplina.
    - `F467/P470/N511` dostarcza juz jawny lift transportu do oriented `α mod 2π` jako **warstwę konwencji** (sign‑tracked) na poziomie wektorów
      w zadeklarowanym lane-scoped zakresie `{pair1..pair5}`; nie wolno jednak promować tego do fizycznego datumu znaku ani do globalnego atlasu.
+
+Update (`2026-03-16`): zamrożenie residualnego znaku dla obecnie wyeksportowanych downstream obiektów, dla których znak jest gauge‑irrelewant,
+jest już opakowane jako twierdzenie (`N502`). W tej gałęzi naturalnym kolejnym celem strict jest globalny scope pod `QW-2191`:
+`H41/H40` (globalny selector atlas + globalny selector transition/gluing object na `C_v1`), uściślone jako target spec `T170`.
