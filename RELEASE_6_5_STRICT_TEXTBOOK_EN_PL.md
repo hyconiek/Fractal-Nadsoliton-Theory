@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.34  
+**Version:** 6.5.35  
 **Date:** 2026-03-16  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -87,6 +87,9 @@
 - Update (`2026-03-16`): the repo now exports an explicit strict **global projective selector state object** on the declared strict domain `C_v1`
   (`F470`, packaged by `N516`). This remains projective/span (residual sign is gauge at state level), does **not** export a sign-sensitive directed orientation datum,
   does **not** discharge global `QW-2191`, and does **not** imply strict-core selector closure or ToE closure.
+- Update (`2026-03-16`): `P474` audits that the exported global projective selector state is projector-level glued/transported consistently by the exported global
+  selector transition operators on `{pair1..pair5}` (ray/projector level only; no sign lift). `N519` packages that residual `Z2` sign can be frozen as gauge for the
+  exported global projective selector atlas/transition/state objects, without changing those objects.
 - Update (`2026-03-15`): moreover, one cautious follow-up probe exports an explicit **probe-level** mode-index assignment *candidate*
   on `Z_24` induced by the same defect-angle rule (including numeric basis vectors `u_{m,±}` on each `pair_m`) (`P462`).
   This probe-level candidate does not promote `n=24` into the `QW-2190` physical scaffold.
@@ -477,6 +480,10 @@ Higiena sondy: `P472` skanuje wyeksportowane artefakty `generated/*.json` i nie 
 Update: jako kolejny, najwęższy krok `B3` repo eksportuje teraz jawny lane‑scoped **operator transportu chartów** `O_12` pomiędzy `pair1↔pair2`
 na `n=12`, wyprowadzony wyłącznie z `alpha_12` (`F461`). To jest “gluing ingredient” tylko na poziomie osi/projektorów (sign‑free),
 opakowany twierdzeniem strict (`N506`) i audytowany sondą (`P465`); globalny atlas i globalny transition/gluing object na `C_v1` są już wyeksportowane (`F469/N515`), a globalny projektowy obiekt stanu selektora jest wyeksportowany (`F470/N516`).
+
+Update: `P474` audytuje, że wyeksportowany globalny projektowy obiekt stanu selektora jest spójnie sklejony/transportowany przez globalne operatory przejścia na
+poziomie projektorów (ray/projector-level; bez podnoszenia znaku do fizycznego datumu). `N519` pakuje, że residualny znak `Z2` można zamrozić jako gauge dla
+wyeksportowanych globalnych obiektów atlasu/przejść/stanu (projective), bez zmiany tych obiektów.
 
 Update: na bazie `O_12` repo eksportuje teraz jawnie dwu‑chartową **sekcję operatorową** na `{pair1,pair2}` na poziomie projektorowym:
 `A_2(pair2) = O_12 A_1(pair1) O_12^T` (`F462`), opakowane (`N507`) i audytowane (`P466`). To nadal nie jest strict-core selector closure i nie rozładowuje globalnie `QW-2191`.
