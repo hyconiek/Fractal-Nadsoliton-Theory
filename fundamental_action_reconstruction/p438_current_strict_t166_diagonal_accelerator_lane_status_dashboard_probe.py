@@ -10,6 +10,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parent
 REPO = ROOT.parent
 GENERATED = ROOT / "generated"
+RELEASE_6_5 = REPO / "RELEASE_6_5_STRICT_TEXTBOOK_EN_PL.md"
 
 F446_REF = GENERATED / "r_ord_z12_v1_reference_distribution.json"
 T165_THETA_FIX = GENERATED / "theta_fix_pair1_o2_cut_ord_reference_v1.json"
@@ -396,6 +397,18 @@ N550_SUMMARY = (
     GENERATED
     / "n550_current_strict_global_selector_bridge_operator_promotion_from_seed_v1_chain_on_c_v1_discharge_theorem_summary.json"
 )
+F659_SUMMARY = (
+    GENERATED
+    / "f659_current_strict_global_selector_reduction_operator_promotion_from_seed_v1_chain_on_c_v1_packet_summary.json"
+)
+P659_SUMMARY = (
+    GENERATED
+    / "p659_current_strict_global_selector_reduction_operator_promotion_from_seed_v1_chain_on_c_v1_probe_summary.json"
+)
+N551_SUMMARY = (
+    GENERATED
+    / "n551_current_strict_global_selector_reduction_operator_promotion_from_seed_v1_chain_on_c_v1_discharge_theorem_summary.json"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -414,6 +427,12 @@ def parse_args() -> argparse.Namespace:
 
 def load_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
+
+def file_contains(path: Path, token: str) -> bool:
+    try:
+        return token in path.read_text(encoding="utf-8")
+    except Exception:
+        return False
 
 
 def has_explicit_strict_derived_marker(obj: dict[str, Any]) -> bool:
@@ -1137,14 +1156,60 @@ def main() -> None:
                                                                                                                 "Next move: package the theorem-level discharge of this promotion step (N550), keeping selector closure and QW-2191 discharge explicitly out."
                                                                                                             )
                                                                                                         else:
-                                                                                                            recommended_next_target = (
-                                                                                                                "UPDATE_RELEASE_6_5_STRICT_TEXTBOOK_EN_PL"
-                                                                                                            )
-                                                                                                            recommendation_reason = (
-                                                                                                                "N550 packages the discharge of the global selector bridge operator promotion step from the seed-v1 chain on C_v1. "
-                                                                                                                "Next move: update the strict textbook release notes (Release 6.5, EN+PL) to reflect the newly exported promotion object "
-                                                                                                                "and the updated dashboard target, without implying strict-core selector closure, global QW-2191 discharge, or ToE closure."
-                                                                                                            )
+                                                                                                            if not file_contains(
+                                                                                                                RELEASE_6_5, "N550"
+                                                                                                            ):
+                                                                                                                recommended_next_target = (
+                                                                                                                    "UPDATE_RELEASE_6_5_STRICT_TEXTBOOK_EN_PL"
+                                                                                                                )
+                                                                                                                recommendation_reason = (
+                                                                                                                    "N550 packages the discharge of the global selector bridge operator promotion step from the seed-v1 chain on C_v1. "
+                                                                                                                    "Next move: update the strict textbook release notes (Release 6.5, EN+PL) to reflect the newly exported promotion object "
+                                                                                                                    "and the updated dashboard target, without implying strict-core selector closure, global QW-2191 discharge, or ToE closure."
+                                                                                                                )
+                                                                                                            elif not F659_SUMMARY.exists():
+                                                                                                                recommended_next_target = "F659"
+                                                                                                                recommendation_reason = (
+                                                                                                                    "Release 6.5 already records the global B_sel promotion step (F658/P658/N550). "
+                                                                                                                    "The next honest downstream move is to promote the seed-v1 selector reduction operator R_sel (pair1) "
+                                                                                                                    "to a global C_v1-typed chartwise reduction operator family on {pair1..pair5}, "
+                                                                                                                    "keeping residual Z2 sign as gauge/convention and not implying strict-core selector closure nor global QW-2191 discharge (F659)."
+                                                                                                                )
+                                                                                                            elif not P659_SUMMARY.exists():
+                                                                                                                recommended_next_target = "P659"
+                                                                                                                recommendation_reason = (
+                                                                                                                    "F659 exports one global selector reduction operator family on C_v1 promoted from the seed-v1 local R_sel. "
+                                                                                                                    "Next move: run the promotion audit probe (P659) to check overlap consistency up to residual sign gauge "
+                                                                                                                    "and alignment with the already exported global B_sel and projective selector state."
+                                                                                                                )
+                                                                                                            elif not N551_SUMMARY.exists():
+                                                                                                                recommended_next_target = "N551"
+                                                                                                                recommendation_reason = (
+                                                                                                                    "P659 audits the global promotion export for R_sel and reports whether the chartwise reduction operators "
+                                                                                                                    "are consistent on overlaps in the declared projector/section sense (with residual sign gauge kept explicit). "
+                                                                                                                    "Next move: package the theorem-level discharge of this promotion step (N551), "
+                                                                                                                    "keeping selector closure and QW-2191 discharge explicitly out."
+                                                                                                                )
+                                                                                                            else:
+                                                                                                                if not file_contains(
+                                                                                                                    RELEASE_6_5, "N551"
+                                                                                                                ):
+                                                                                                                    recommended_next_target = (
+                                                                                                                        "UPDATE_RELEASE_6_5_STRICT_TEXTBOOK_EN_PL"
+                                                                                                                    )
+                                                                                                                    recommendation_reason = (
+                                                                                                                        "N551 packages the discharge of the global selector reduction operator promotion step from the seed-v1 chain on C_v1. "
+                                                                                                                        "Next move: update the strict textbook release notes (Release 6.5, EN+PL) to reflect the newly exported promotion object, "
+                                                                                                                        "without implying strict-core selector closure, global QW-2191 discharge, or ToE closure."
+                                                                                                                    )
+                                                                                                                else:
+                                                                                                                    recommended_next_target = "F660"
+                                                                                                                    recommendation_reason = (
+                                                                                                                        "Release 6.5 already records both global promotion steps: B_sel (F658/P658/N550) and R_sel (F659/P659/N551). "
+                                                                                                                        "Next honest downstream move: promote the seed-v1 selector output operator O_sel to a global typed object "
+                                                                                                                        "(mapping Q_sel_v1 -> Q_out_v1) and package the resulting C_v1-typed selector output channel, "
+                                                                                                                        "without implying emergent observer construction, strict-core selector closure, or global QW-2191 discharge (F660)."
+                                                                                                                    )
         except Exception:
             pass
 
