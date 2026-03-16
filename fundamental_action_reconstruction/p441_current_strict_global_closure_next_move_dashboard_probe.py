@@ -125,6 +125,10 @@ P631_SUMMARY = (
     GENERATED
     / "p631_current_strict_direct_formal_c1s1_route_negative_freeze_decision_packet_summary.json"
 )
+P633_SUMMARY = (
+    GENERATED
+    / "p633_current_strict_source_seed_route_selection_decision_packet_summary.json"
+)
 P16_FACTORIZATION_SUMMARY = (
     GENERATED
     / "p16_existing_kernel_feedback_legacy_chart_reduced_operator_export_probe_summary.json"
@@ -353,6 +357,17 @@ def _direct_formal_route_negative_freeze_selected() -> tuple[bool, dict[str, Any
     return bool(selected), p631
 
 
+def _source_seed_route_selected() -> tuple[bool, dict[str, Any] | None]:
+    if not P633_SUMMARY.exists():
+        return False, None
+    try:
+        p633 = load_json(P633_SUMMARY)
+    except Exception:
+        return False, None
+    selected = str(p633.get("decision") or "") == "STRICT_CORE_SOURCE_SEED_ROUTE_SELECTED"
+    return bool(selected), p633
+
+
 def main() -> None:
     GENERATED.mkdir(exist_ok=True)
     args = parse_args()
@@ -478,10 +493,21 @@ def main() -> None:
     directed_selected, p632 = _directed_continuation_selected()
     p16_freeze_selected, p480 = _p16_route_negative_freeze_selected()
     direct_formal_freeze_selected, p631 = _direct_formal_route_negative_freeze_selected()
+    source_seed_selected, p633 = _source_seed_route_selected()
 
     # Professorial precedence: directed continuation (P632) supersedes the earlier projective-only decision packet (P475).
     if directed_selected:
         projective_selected = False
+
+    # If a later professorial decision shifts the next move to the strict-core source-seed frontier, honor it.
+    if source_seed_selected and recommended_next == "P11":
+        recommended_next = "P119"
+        recommendation_reason = (
+            "Post-projective directed frontier is resolved (T171 discharged), and the previously pursued strict-only ToE-closure continuations are explicitly frozen negative "
+            "on the current strict branch (P480: freeze P16; P631: freeze direct-formal residual-cancellation on T166 nonzero). "
+            "Therefore the next honest strict bottleneck shifts to the genuinely-new strict-core internal selector source seed construction frontier for S_sel_int, "
+            "tracked by the first source-seed construction target probe (P119). Professorial routing decision: P633."
+        )
 
     if recommended_next == "H37":
         if N518_THEOREM.exists():
@@ -849,6 +875,7 @@ def main() -> None:
             "P480": (str(P480_SUMMARY.relative_to(REPO)) if P480_SUMMARY.exists() else None),
             "P631": (str(P631_SUMMARY.relative_to(REPO)) if P631_SUMMARY.exists() else None),
             "P632": (str(P632_SUMMARY.relative_to(REPO)) if P632_SUMMARY.exists() else None),
+            "P633": (str(P633_SUMMARY.relative_to(REPO)) if P633_SUMMARY.exists() else None),
         },
         "status_snapshot": {"P438": p438, "P439": p439},
         "result": {
@@ -887,6 +914,14 @@ def main() -> None:
                     "If selected, the direct-formal residual-cancellation lane is treated as explicitly negative/frozen under the "
                     "T166 nonzero decision branch; the recommended next move shifts to the post-projective directed frontier (H37/T171) "
                     "or an explicit reaffirmation of projective-only semantics."
+                ),
+            },
+            "source_seed_route_selection": {
+                "selected": bool(source_seed_selected),
+                "p633_summary": (str(P633_SUMMARY.relative_to(REPO)) if p633 is not None else None),
+                "note": (
+                    "If selected, the next strict move shifts to the genuinely-new strict-core internal selector source seed construction frontier "
+                    "for S_sel_int, tracked by P119."
                 ),
             },
         },

@@ -106,6 +106,10 @@ P474_SUMMARY = (
     GENERATED
     / "p474_current_strict_global_projective_selector_state_gluing_consistency_audit_probe_summary.json"
 )
+P633_SCRIPT = ROOT / "p633_current_strict_source_seed_route_selection_decision_packet.py"
+P633_SUMMARY = (
+    GENERATED / "p633_current_strict_source_seed_route_selection_decision_packet_summary.json"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -164,10 +168,11 @@ def main() -> None:
         run_script(P437_SCRIPT),
         run_script(P449_SCRIPT),
         run_script(P434_SCRIPT),
+        run_script(P633_SCRIPT),
     ]
 
     missing_files: list[str] = []
-    for p in (P432_SUMMARY, P444_SUMMARY, P437_SUMMARY, P449_SUMMARY, P434_SUMMARY):
+    for p in (P432_SUMMARY, P444_SUMMARY, P437_SUMMARY, P449_SUMMARY, P434_SUMMARY, P633_SUMMARY):
         if not p.exists():
             missing_files.append(str(p.relative_to(REPO)))
 
@@ -291,7 +296,26 @@ def main() -> None:
     # Post-projective directed frontier resolved: if the directed selector state datum is now exported (T171 discharged),
     # do not keep recommending H37.
     if recommended_next_target == "H37" and (H37_DIRECTED_STATE.exists() or N524_THEOREM.exists()):
-        recommended_next_target = "P11"
+        # If both main strict-only ToE closure continuations are already frozen negative (P480 + P631),
+        # shift the next move to the strict-core source-seed construction frontier (P119), but only if
+        # the explicit professorial decision packet is present and selected (P633).
+        if P633_SUMMARY.exists():
+            try:
+                p633 = load_json(P633_SUMMARY)
+                if str(p633.get("decision") or "") == "STRICT_CORE_SOURCE_SEED_ROUTE_SELECTED":
+                    recommended_next_target = "P119"
+                    recommendation_reason = (
+                        "Post-projective directed frontier is now resolved (T171 discharged), and both previously pursued strict-only ToE closure continuations "
+                        "are explicitly frozen negative on the current strict branch (P480: freeze P16; P631: freeze direct-formal residual-cancellation on T166 nonzero). "
+                        "Therefore the next honest strict bottleneck shifts to the genuinely-new strict-core internal selector source seed construction frontier "
+                        "for S_sel_int, tracked by the first source-seed construction target probe (P119). Professorial routing decision: P633."
+                    )
+                else:
+                    recommended_next_target = "P11"
+            except Exception:
+                recommended_next_target = "P11"
+        else:
+            recommended_next_target = "P11"
         p_note = ""
         if P632_SUMMARY.exists():
             try:
@@ -300,12 +324,13 @@ def main() -> None:
                     p_note = " Professorial note: directed continuation is explicitly selected (P632)."
             except Exception:
                 p_note = " Professorial note: P632 summary exists but could not be parsed."
-        recommendation_reason = (
-            "Post-projective directed frontier is now resolved: a premise-based strict fixing datum (T164) and a strict global directed selector state datum (T171) are exported "
-            "(F473/N523 and F474/N524). Therefore H37 is discharged in the declared directed scope and is no longer the next strict blocker."
-            " Next strict bottleneck shifts back to strict-only ToE closure tasks that can now treat the selector state as directed where needed (P11)."
-            + p_note
-        )
+        if recommended_next_target == "P11":
+            recommendation_reason = (
+                "Post-projective directed frontier is now resolved: a premise-based strict fixing datum (T164) and a strict global directed selector state datum (T171) are exported "
+                "(F473/N523 and F474/N524). Therefore H37 is discharged in the declared directed scope and is no longer the next strict blocker."
+                " Next strict bottleneck shifts back to strict-only ToE closure tasks that can now treat the selector state as directed where needed (P11)."
+                + p_note
+            )
 
     if recommended_next_target == "H37":
         if N518_THEOREM.exists():
@@ -371,6 +396,7 @@ def main() -> None:
             "P437": str(P437_SUMMARY.relative_to(REPO)),
             "P449": str(P449_SUMMARY.relative_to(REPO)),
             "P434": str(P434_SUMMARY.relative_to(REPO)),
+            "P633": (str(P633_SUMMARY.relative_to(REPO)) if P633_SUMMARY.exists() else None),
         },
         "status_snapshot": {
             "P432": p432,
@@ -378,6 +404,7 @@ def main() -> None:
             "P437": p437,
             "P449": p449,
             "P434": p434,
+            "P633": (load_json(P633_SUMMARY) if P633_SUMMARY.exists() else None),
         },
         "result": {
             "decision_ready_from_repo_values": decision_ready,
