@@ -140,6 +140,54 @@ P636_SUMMARY = (
     GENERATED
     / "p636_first_future_genuinely_new_source_object_lift_bind_attempt_probe_for_s_sel_int_candidate_seed_v1_summary.json"
 )
+F637_SUMMARY = (
+    GENERATED
+    / "f637_first_future_constructed_source_object_realization_target_packet_for_s_sel_int_candidate_seed_v1_summary.json"
+)
+P637_SUMMARY = (
+    GENERATED
+    / "p637_first_future_constructed_source_object_realization_target_probe_for_s_sel_int_candidate_seed_v1_summary.json"
+)
+N528_SUMMARY = (
+    GENERATED
+    / "n528_next_constructive_move_reduced_to_one_first_future_constructed_source_object_realization_target_theorem_for_s_sel_int_candidate_seed_v1_summary.json"
+)
+F638_SUMMARY = (
+    GENERATED
+    / "f638_first_future_constructed_source_object_realization_attempt_packet_for_s_sel_int_candidate_seed_v1_summary.json"
+)
+P638_SUMMARY = (
+    GENERATED
+    / "p638_first_future_constructed_source_object_realization_attempt_probe_for_s_sel_int_candidate_seed_v1_summary.json"
+)
+N529_SUMMARY = (
+    GENERATED
+    / "n529_next_constructive_move_reduced_to_one_first_future_constructed_source_object_realization_attempt_theorem_for_s_sel_int_candidate_seed_v1_summary.json"
+)
+F639_SUMMARY = (
+    GENERATED
+    / "f639_first_future_constructed_source_object_realization_verdict_target_packet_for_s_sel_int_candidate_seed_v1_summary.json"
+)
+P639_SUMMARY = (
+    GENERATED
+    / "p639_first_future_constructed_source_object_realization_verdict_target_probe_for_s_sel_int_candidate_seed_v1_summary.json"
+)
+N530_SUMMARY = (
+    GENERATED
+    / "n530_next_constructive_move_reduced_to_one_first_future_constructed_source_object_realization_verdict_target_theorem_for_s_sel_int_candidate_seed_v1_summary.json"
+)
+F640_SUMMARY = (
+    GENERATED
+    / "f640_first_future_constructed_source_object_realization_verdict_branch_refinement_packet_for_s_sel_int_candidate_seed_v1_summary.json"
+)
+P640_SUMMARY = (
+    GENERATED
+    / "p640_first_future_constructed_source_object_realization_verdict_branch_probe_for_s_sel_int_candidate_seed_v1_summary.json"
+)
+N531_SUMMARY = (
+    GENERATED
+    / "n531_next_constructive_move_reduced_to_one_explicit_success_failure_branch_split_theorem_for_s_sel_int_candidate_seed_v1_summary.json"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -418,11 +466,74 @@ def main() -> None:
                                     "Next move: run P636 to confirm the constructive move is reduced to that one attempt instance."
                                 )
                             else:
-                                recommended_next_target = "S_SEL_INT_NEW_OBJECT_LIFT_BIND_ATTEMPT_V1_REALIZATION"
-                                recommendation_reason = (
-                                    "P636 reduces the next constructive move to the first lift/bind attempt instance S_sel_int_new_object_lift_bind_attempt_v1. "
-                                    "Next move: define and probe a realization target/attempt/verdict above that attempt (no implied admissibility)."
-                                )
+                                if not F637_SUMMARY.exists():
+                                    recommended_next_target = "F637"
+                                    recommendation_reason = (
+                                        "P636 reduces the next constructive move to the first lift/bind attempt instance S_sel_int_new_object_lift_bind_attempt_v1. "
+                                        "Next move: freeze the first realization target above that attempt (F637)."
+                                    )
+                                elif not P637_SUMMARY.exists():
+                                    recommended_next_target = "P637"
+                                    recommendation_reason = (
+                                        "F637 exports the seed-v1 constructed-source-object realization target. Next move: run P637 to confirm reduction to that target."
+                                    )
+                                elif not N528_SUMMARY.exists():
+                                    recommended_next_target = "N528"
+                                    recommendation_reason = (
+                                        "P637 confirms the next move is reduced to the seed-v1 realization target; next move: package the reduction theorem (N528)."
+                                    )
+                                elif not F638_SUMMARY.exists():
+                                    recommended_next_target = "F638"
+                                    recommendation_reason = (
+                                        "N528 fixes the seed-v1 realization target. Next move: export the first realization attempt instance (F638)."
+                                    )
+                                elif not P638_SUMMARY.exists():
+                                    recommended_next_target = "P638"
+                                    recommendation_reason = (
+                                        "F638 exports the seed-v1 realization attempt instance. Next move: run P638 to confirm reduction to that attempt."
+                                    )
+                                elif not N529_SUMMARY.exists():
+                                    recommended_next_target = "N529"
+                                    recommendation_reason = (
+                                        "P638 confirms the seed-v1 realization attempt reduction; next move: package the reduction theorem (N529)."
+                                    )
+                                elif not F639_SUMMARY.exists():
+                                    recommended_next_target = "F639"
+                                    recommendation_reason = (
+                                        "N529 fixes the seed-v1 realization attempt instance. Next move: export the first verdict target (F639)."
+                                    )
+                                elif not P639_SUMMARY.exists():
+                                    recommended_next_target = "P639"
+                                    recommendation_reason = (
+                                        "F639 exports the seed-v1 realization verdict target. Next move: run P639 to confirm reduction to that verdict target."
+                                    )
+                                elif not N530_SUMMARY.exists():
+                                    recommended_next_target = "N530"
+                                    recommendation_reason = (
+                                        "P639 confirms the seed-v1 verdict target reduction; next move: package the reduction theorem (N530)."
+                                    )
+                                elif not F640_SUMMARY.exists():
+                                    recommended_next_target = "F640"
+                                    recommendation_reason = (
+                                        "N530 fixes the seed-v1 verdict target. Next move: refine the two explicit success/failure branches (F640)."
+                                    )
+                                elif not P640_SUMMARY.exists():
+                                    recommended_next_target = "P640"
+                                    recommendation_reason = (
+                                        "F640 exports explicit success/failure branch names (v1). Next move: run P640 to confirm reduction to the binary split."
+                                    )
+                                elif not N531_SUMMARY.exists():
+                                    recommended_next_target = "N531"
+                                    recommendation_reason = (
+                                        "P640 confirms the explicit success/failure branch split (v1). Next move: package the split theorem (N531)."
+                                    )
+                                else:
+                                    recommended_next_target = "EXPLICIT_SUCCESS_VERDICT_FOR_S_SEL_INT_NEW_OBJECT_CONSTRUCTED_REALIZATION_ATTEMPT_V1"
+                                    recommendation_reason = (
+                                        "N531 packages the explicit success/failure branch split for the seed-v1 realization. "
+                                        "Next move: attempt a strict, explicit success verdict discharge for the fixed realization attempt, "
+                                        "or package an explicit failure-side obstruction, without implying admissible S_sel_int."
+                                    )
         except Exception:
             pass
 
