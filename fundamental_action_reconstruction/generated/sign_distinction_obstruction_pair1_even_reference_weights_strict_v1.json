@@ -1,0 +1,36 @@
+{
+  "object": "SignDistinctionObstruction_pair1_even_reference_weights_strict_v1",
+  "stage": "F471",
+  "status": "actual_exported_pair1_sign_distinction_obstruction_for_even_reference_weights_on_current_exported_instance__no_false_pass",
+  "as_of": "2026-03-16",
+  "generated_utc": "2026-03-16T02:08:26.177369+00:00",
+  "intent": "Record the narrow obstruction that even reference weights (ord_Z12 and r_ord derived from it) cannot distinguish u_1 from -u_1 on the current exported pair1 axis because u_1 is odd under reflection while the weights are even; therefore the weighted sum \u03a3_x w(x) u_1(x) cancels exactly on this instance.",
+  "inputs": {
+    "A1_pair1_ref": "fundamental_action_reconstruction/generated/a_1_pair1_orientation_projector_operator_strict_core_v1.json",
+    "r_ord_z12_ref": "fundamental_action_reconstruction/generated/r_ord_z12_v1_reference_distribution.json"
+  },
+  "checks": {
+    "ord_even_under_reflection": true,
+    "r_ord_weights_even_under_reflection": true,
+    "u1_odd_under_reflection": true,
+    "u1_coords_in_c1_s1": [
+      0.0,
+      -1.0
+    ]
+  },
+  "computed": {
+    "dot_u1_with_ord_z12_by_x": 0.0,
+    "dot_u1_with_r_ord_weights": 0.0
+  },
+  "meaning": [
+    "On this exported instance, any sign-sensitive scalar of the form \u03a3_x w(x) u_1(x) vanishes for the even weights w=ord_Z12 and w=r_ord.",
+    "Therefore the ord-reference infrastructure (F446/N479/N480) does not by itself supply a sign-distinction observable on pair1 for this instance."
+  ],
+  "hard_limits": [
+    "Obstruction record only; does not discharge H37 and does not export a sign-sensitive physical orientation datum.",
+    "Does not claim strict-core selector closure / admissible S_sel_int.",
+    "Does not claim global discharge of QW-2191.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}
