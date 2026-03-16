@@ -8,11 +8,11 @@ As of: `2026-03-16`
 Mechanically scan `generated/*.json` for any export matching the `F646`
 witness‑provider signature (seed‑v1).
 
-## Allowed conclusion
+## Allowed conclusions (no false pass)
 
-This probe supports exactly one current‑repo‑state conclusion:
+This probe supports exactly the following current‑repo‑state conclusions:
 
 ```text
-no strict witness provider matching the F646 signature is exported (seed v1)
+either:  no strict witness provider matching the F646 signature is exported (seed v1)
+or:      one-or-more strict witness providers matching the F646 signature are exported (seed v1)
 ```
-

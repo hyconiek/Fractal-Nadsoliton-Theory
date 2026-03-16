@@ -1,28 +1,21 @@
 {
   "step": "N538",
-  "status": "N538_DISCHARGED_CURRENT_STRICT_WITNESS_PROVIDER_ABSENCE_THEOREM_FOR_SEED_V1_REALIZATION_ATTEMPT_NO_FALSE_PASS",
+  "status": "N538_REQUIRES_REVIEW_CHANGED_OR_INSUFFICIENT_WITNESS_PROVIDER_SCAN_STATE_FOR_SEED_V1",
   "scope": "current_strict_witness_provider_scan_only",
   "checks": [
     {
       "id": "p646_candidate_count_zero",
-      "actual": 0,
+      "actual": 1,
       "expected": 0,
-      "pass": true,
+      "pass": false,
       "meaning": "P646 finds no strict witness provider matching the F646 signature on current repo state"
     }
   ],
-  "theorem_result": {
-    "discharged": true,
-    "strict_witness_provider_present": false,
-    "full_closure_pass": false
-  },
-  "recommended_next_move": "implement_one_strict_witness_provider_export_packet_meeting_F646_contract",
-  "hard_limits": [
-    "no_constructed_source_object_exported_for_seed_v1_attempt",
-    "no_admissible_S_sel_int",
-    "no_strict_core_selector_closure",
-    "no_QW2191_discharge",
-    "no_ToE_closure"
+  "blocking_mismatches": [
+    "p646_candidate_count_zero"
   ],
+  "theorem_result": {
+    "discharged": false
+  },
   "no_false_pass": true
 }

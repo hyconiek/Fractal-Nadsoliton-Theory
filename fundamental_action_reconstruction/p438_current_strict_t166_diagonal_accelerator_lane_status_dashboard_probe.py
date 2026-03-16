@@ -264,6 +264,10 @@ N538_SUMMARY = (
     GENERATED
     / "n538_current_strict_witness_provider_absence_theorem_for_seed_v1_realization_attempt_summary.json"
 )
+N539_SUMMARY = (
+    GENERATED
+    / "n539_current_strict_witness_provider_presence_theorem_for_seed_v1_realization_attempt_summary.json"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -719,19 +723,42 @@ def main() -> None:
                                                     "F646 freezes the strict witness-provider contract + scan signature. "
                                                     "Next move: run P646 to mechanically scan whether any exported artifact already matches it."
                                                 )
-                                            elif not N538_SUMMARY.exists():
-                                                recommended_next_target = "N538"
-                                                recommendation_reason = (
-                                                    "P646 finds no strict witness provider on current repo state. "
-                                                    "Next move: package the absence theorem (N538)."
-                                                )
                                             else:
-                                                recommended_next_target = "IMPLEMENT_STRICT_WITNESS_PROVIDER_EXPORT_PACKET_FOR_SEED_V1_REALIZATION_ATTEMPT"
-                                                recommendation_reason = (
-                                                    "N538 confirms absence of any strict witness provider matching the F646 signature on current repo state. "
-                                                    "Next move: implement one strict witness provider export packet meeting F646 (constructed source object export + admissibility interface), "
-                                                    "or prove a scope-level non-bridge impossibility, without implying selector closure / QW-2191 discharge."
-                                                )
+                                                # Once the F646 scan probe exists, branch on the actual scan result.
+                                                try:
+                                                    p646 = load_json(P646_SUMMARY)
+                                                    candidates_count = int(p646["scan_result"]["candidates_count"])
+                                                except Exception:
+                                                    candidates_count = 0
+
+                                                if candidates_count == 0:
+                                                    if not N538_SUMMARY.exists():
+                                                        recommended_next_target = "N538"
+                                                        recommendation_reason = (
+                                                            "P646 finds no strict witness provider on current repo state. "
+                                                            "Next move: package the absence theorem (N538)."
+                                                        )
+                                                    else:
+                                                        recommended_next_target = "IMPLEMENT_STRICT_WITNESS_PROVIDER_EXPORT_PACKET_FOR_SEED_V1_REALIZATION_ATTEMPT"
+                                                        recommendation_reason = (
+                                                            "N538 confirms absence of any strict witness provider matching the F646 signature on current repo state. "
+                                                            "Next move: implement one strict witness provider export packet meeting F646 (constructed source object export + admissibility interface), "
+                                                            "or prove a scope-level non-bridge impossibility, without implying selector closure / QW-2191 discharge."
+                                                        )
+                                                else:
+                                                    if not N539_SUMMARY.exists():
+                                                        recommended_next_target = "N539"
+                                                        recommendation_reason = (
+                                                            "P646 reports at least one strict witness provider matching the F646 signature on current repo state. "
+                                                            "Next move: package the witness-provider presence theorem (N539) without implying admissible S_sel_int."
+                                                        )
+                                                    else:
+                                                        recommended_next_target = "ATTACK_ADMISSIBILITY_BRANCH_ON_EXPORTED_CONSTRUCTED_SOURCE_OBJECT_FOR_SEED_V1"
+                                                        recommendation_reason = (
+                                                            "N539 packages witness-provider presence (constructed source object export exists for seed v1). "
+                                                            "Next move: attack admissibility + E_orient export on the exported constructed source object, "
+                                                            "without implying strict-core selector closure / QW-2191 discharge."
+                                                        )
         except Exception:
             pass
 

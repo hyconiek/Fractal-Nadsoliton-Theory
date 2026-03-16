@@ -1,0 +1,117 @@
+{
+  "stage": "F647",
+  "lane": "strict_witness_provider_export_only",
+  "goal": "export_one_strict_constructed_source_object_witness_provider_for_seed_v1_realization_attempt_matching_the_F646_signature",
+  "status": "F647_EXECUTED_STRICT_WITNESS_PROVIDER_EXPORT_PACKET_FOR_SEED_V1_REALIZATION_ATTEMPT_NO_FALSE_PASS",
+  "base_realization_attempt": "S_sel_int_new_object_constructed_realization_attempt_v1",
+  "constructed_source_object_exported": true,
+  "exported_constructed_source_object": "S_sel_int_strict_core_source_object_v1",
+  "provenance": {
+    "base_realization_attempt_packet": "F638",
+    "seed_candidate_instance_packet": "F318",
+    "seed_sigma_int_source_upgrade": "sigma_int_strict_derived_v1",
+    "reference_distribution_packet": "F446",
+    "alpha_geo_source_upgrade": "alpha_geo_strict_derived_v1",
+    "note": "This is an explicit constructed-source object export witness provider only; it does not claim admissibility nor selector closure."
+  },
+  "constructed_source_object": {
+    "object_name": "S_sel_int_strict_core_source_object_v1",
+    "type": "strict_core_constructed_source_object_candidate",
+    "declared_domain": {
+      "configuration_space_object": "C_v1_void_configuration_space_in_local_B_tilde_1_sector_v1",
+      "protected_local_sector": "local_B_tilde_1_topological_sector",
+      "carrier_group_object_id": "z_12_v1_group"
+    },
+    "construction_inputs": [
+      "sigma_int_strict_derived_v1",
+      "r_ord_z12_v1_reference_distribution",
+      "alpha_geo_strict_derived_v1",
+      "pair1_sine_axis_basis_function_s1_on_Z12"
+    ],
+    "definition": {
+      "reference_weights": "w_ref(x) := exp(-alpha_geo_strict_derived_v1 * ord_Z12(x))",
+      "reflection_breaking_weights": "w_break(x) := sigma_int_strict_derived_v1 * w_ref(x) * s1(x)",
+      "s1": "s1(x) := sin(2\u03c0 x / 12) (pair1 sine axis convention on Z_12)"
+    },
+    "exported_payload": {
+      "ord_z12_by_x": [
+        1,
+        12,
+        6,
+        4,
+        3,
+        12,
+        2,
+        12,
+        3,
+        4,
+        6,
+        12
+      ],
+      "w_ref_unnormalized_by_x": [
+        0.0625,
+        3.552713678800511e-15,
+        5.960464477539072e-08,
+        1.5258789062500007e-05,
+        0.00024414062500000016,
+        3.552713678800511e-15,
+        0.003906250000000001,
+        3.552713678800511e-15,
+        0.00024414062500000016,
+        1.5258789062500007e-05,
+        5.960464477539072e-08,
+        3.552713678800511e-15
+      ],
+      "w_break_by_x": [
+        -0.0,
+        -1.7763568394002552e-15,
+        -5.1619136559035774e-08,
+        -1.5258789062500007e-05,
+        -0.00021143198334581037,
+        -1.7763568394002568e-15,
+        -4.783776559169349e-19,
+        1.7763568394002544e-15,
+        0.00021143198334581029,
+        1.5258789062500007e-05,
+        5.16191365590358e-08,
+        1.776356839400257e-15
+      ],
+      "dot_w_break_with_s1": -0.00039681792259571596
+    },
+    "counts_only_as": [
+      "constructed_source_object_export_witness_provider_only",
+      "seed_v1_realization_attempt_witness_provider_only"
+    ],
+    "does_not_count_as": [
+      "admissible_S_sel_int",
+      "admissible_E_orient",
+      "strict_core_selector_closure",
+      "QW-2191_discharge",
+      "ToE_closure"
+    ]
+  },
+  "strict_core_export_properties": {
+    "constructed_source_object_exported": true,
+    "genuinely_new_exported_identity": true,
+    "strict_core_only": true,
+    "upstream_of_observer": true,
+    "source_seed_only": true,
+    "no_external_selector_import": true,
+    "kernel_split_safe": true,
+    "reuses_psi0_artifact": false,
+    "reuses_fr_route_artifact": false,
+    "reuses_sigma_int_candidate_as_source_object": false,
+    "reuses_overlay_fit_artifact": false,
+    "uses_axiom_lane_artifact": false
+  },
+  "supporting_nonreduction_witness": {
+    "present": true,
+    "baseline": "sigma_int_broadcast_to_Z12_scaled_by_mean_abs_w_break",
+    "delta_norm_l2": 0.0003271238366243436
+  },
+  "admissible_S_sel_int": false,
+  "admissible_E_orient": false,
+  "strict_core_selector_closure": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}

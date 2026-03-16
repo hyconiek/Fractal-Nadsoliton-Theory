@@ -1,9 +1,15 @@
 # N538 Current Strict Witness‑Provider Absence Theorem (Seed‑v1)
 
-Status: `N538_DISCHARGED_CURRENT_STRICT_WITNESS_PROVIDER_ABSENCE_THEOREM_FOR_SEED_V1_REALIZATION_ATTEMPT_NO_FALSE_PASS`  
+Status: `N538_REQUIRES_REVIEW_CHANGED_OR_INSUFFICIENT_WITNESS_PROVIDER_SCAN_STATE_FOR_SEED_V1`  
 As of: `2026-03-16`
 
-## Theorem-level result
+Update (`2026-03-16`):
+- After the `F647` witness‑provider export, `P646` reports at least one
+  candidate matching the `F646` signature.
+- Therefore `N538` is no longer discharged as a *current-repo-state* absence
+  theorem without re-derivation on the updated frontier.
+
+## Historical theorem-level result (pre‑`F647`)
 
 On current repo state, no strict witness‑provider export matching the `F646`
 signature exists for:
@@ -16,4 +22,3 @@ S_sel_int_new_object_constructed_realization_attempt_v1
 
 `N538` does not claim impossibility forever, constructed source object export,
 admissible `S_sel_int`, selector closure, `QW‑2191` discharge, or ToE closure.
-

@@ -59,18 +59,14 @@ def main() -> None:
                 }
             )
 
+    witness_provider_present = len(candidates) > 0
+
     checks_spec = [
         {
             "id": "f646_contract_present",
             "actual": f646["contract"]["id"],
             "expected": "strict_witness_provider_contract_for_seed_v1_realization_attempt_v1",
             "meaning": "F646 freezes the minimal witness-provider contract and scan signature",
-        },
-        {
-            "id": "candidate_count",
-            "actual": len(candidates),
-            "expected": 0,
-            "meaning": "conservative: no strict witness provider is exported yet on current repo state",
         },
     ]
 
@@ -86,17 +82,23 @@ def main() -> None:
             }
         )
 
+    if witness_provider_present:
+        status = "CURRENT_REPO_EXPORTS_ONE_OR_MORE_STRICT_WITNESS_PROVIDERS_MATCHING_F646_SIGNATURE_FOR_SEED_V1_AFTER_P646"
+    else:
+        status = "CURRENT_REPO_EXPORTS_NO_STRICT_WITNESS_PROVIDER_MATCHING_F646_SIGNATURE_FOR_SEED_V1_AFTER_P646"
+
     artifact = {
         "stage": "P646",
         "lane": "current_strict_witness_provider_scan_only",
         "goal": "scan_generated_exports_for_a_strict_constructed_source_object_export_witness_provider_matching_F646_signature",
-        "status": "CURRENT_REPO_EXPORTS_NO_STRICT_WITNESS_PROVIDER_MATCHING_F646_SIGNATURE_FOR_SEED_V1_AFTER_P646",
+        "status": status,
         "scan_result": {
             "candidates_count": len(candidates),
             "candidates": candidates,
             "parse_errors_count": len(parse_errors),
         },
         "checks": checks,
+        "witness_provider_present": witness_provider_present,
         "strict_core_promotion": False,
         "full_closure_pass": False,
         "no_false_pass": True,
@@ -107,6 +109,7 @@ def main() -> None:
         "status": artifact["status"],
         "lane": artifact["lane"],
         "scan_result": artifact["scan_result"],
+        "witness_provider_present": witness_provider_present,
         "strict_core_promotion": False,
         "full_closure_pass": False,
         "no_false_pass": True,
@@ -119,4 +122,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
