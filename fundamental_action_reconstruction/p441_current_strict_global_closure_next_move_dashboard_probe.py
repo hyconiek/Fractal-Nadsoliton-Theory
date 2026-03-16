@@ -117,6 +117,14 @@ P16_FACTORIZATION_SUMMARY = (
     GENERATED
     / "p16_existing_kernel_feedback_legacy_chart_reduced_operator_export_probe_summary.json"
 )
+P477_SUMMARY = (
+    GENERATED
+    / "p477_current_strict_r18_pair1_residual_zero_equations_value_instantiation_probe_summary.json"
+)
+N520_SUMMARY = (
+    GENERATED
+    / "n520_current_first_strict_r18_declared_pair1_residual_zero_equations_value_instance_obstruction_theorem_summary.json"
+)
 P61_DIRECT_FORMAL_SUMMARY = (
     GENERATED
     / "p61_canonical_ontology_supported_direct_formal_c1s1_family_route_probe_after_direct_m2_psi7_source_eom_coefficient_defect_polynomial_packet_summary.json"
@@ -194,6 +202,33 @@ def run_script(path: Path, extra_args: list[str] | None = None) -> dict[str, Any
 
 def load_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def _p16_value_instance_obstruction_note() -> str:
+    if N520_SUMMARY.exists():
+        try:
+            n520 = load_json(N520_SUMMARY)
+            tr = n520.get("theorem_result")
+            if isinstance(tr, dict) and bool(tr.get("discharged")):
+                violated = tr.get("violated_equations")
+                return (
+                    " Evidence: N520 packages a value-instance-only obstruction (from P477): under the current exported strict-derived "
+                    f"value instance the R18 declared pair1 residual zero equations are violated (violated_equations={violated})."
+                )
+        except Exception:
+            return ""
+    if P477_SUMMARY.exists():
+        try:
+            p477 = load_json(P477_SUMMARY)
+            if p477.get("status") == "PASS_EVALUATION_ZERO_EQUATIONS_VIOLATED_UNDER_CURRENT_VALUE_INSTANCE":
+                violated = p477.get("violated_equations")
+                return (
+                    " Evidence: P477 evaluates the R18 declared pair1 residual zero equations on the current exported strict-derived "
+                    f"value instance and reports violations (violated_equations={violated})."
+                )
+        except Exception:
+            return ""
+    return ""
 
 
 def _projective_only_continuation_selected() -> tuple[bool, dict[str, Any] | None]:
@@ -399,6 +434,7 @@ def main() -> None:
                     missing = p16.get("remaining_missing_upstream_objects")
                     req = p16.get("required_next_step")
                     p16_note = f" Current factorization frontier: P16. remaining_missing={missing}; required_next_step={req}."
+                    p16_note += _p16_value_instance_obstruction_note()
                 except Exception:
                     p16_note = " P16 summary exists but could not be parsed."
                 recommendation_reason = (
@@ -592,6 +628,7 @@ def main() -> None:
                         p16_note = (
                             f" Current factorization frontier: P16. remaining_missing={missing}; required_next_step={req}."
                         )
+                        p16_note += _p16_value_instance_obstruction_note()
                     except Exception:
                         p16_note = " P16 summary exists but could not be parsed."
                 recommendation_reason = (
