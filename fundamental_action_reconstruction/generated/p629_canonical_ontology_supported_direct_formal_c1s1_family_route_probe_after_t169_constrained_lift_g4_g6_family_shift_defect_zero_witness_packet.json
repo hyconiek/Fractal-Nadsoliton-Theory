@@ -1,0 +1,92 @@
+{
+  "stage": "P629",
+  "lane": "canonical-ontology-supported-direct-formal-c1s1-family-route-after-P628-and-R82",
+  "goal": "rerun_the_canonical_ontology_supported_direct_formal_pair1_c1s1_family_route_after_R82_closes_the_direct_g4_and_g6_family_shift_defect_zero_witnesses_under_the_explicit_strict_T169_constrained_lift_rule",
+  "status": "CANONICAL_ONTOLOGY_SUPPORTED_DIRECT_FORMAL_G4_G6_FAMILY_SHIFT_DEFECT_ZERO_WITNESSES_CLOSED_UNDER_T169_ROUTE_STILL_NOT_CLOSED_AFTER_R82",
+  "reason": "P628 reduces the direct m2 slotwise assignment frontiers for psi2/psi5/psi8/psi11 and closes them on the explicitly marked external lane, leaving the three direct coefficient-family shift-defect zero witnesses (g4/g6/gY), the two declared pair1 residual equations (c1c1, s1s1), and the QW-2191 canonicalization boundary as remaining blockers. R82 closes exactly the g4 and g6 family shift-defect zero witnesses under the exported strict T169 constrained lift rule (N483/F447), without strict-core promotion, while the gY family defect remains absent, the declared pair1 c1c1 and s1s1 zero equations remain unproved, and QW-2191 remains open.",
+  "closed_under_t169_constrained_lift": {
+    "packet": "fundamental_action_reconstruction/generated/r82_direct_formal_c1s1_g4_g6_family_shift_defect_zero_witness_under_strict_t169_constrained_lift_packet.json",
+    "closed_missing_objects": [
+      "explicit_zero_witness_for_direct_quartic_like_g4_family_c1s1_shift_defect",
+      "explicit_zero_witness_for_direct_quintic_like_g6_family_c1s1_shift_defect"
+    ]
+  },
+  "route_state": {
+    "shared_light_facing_kernel_channel_present": true,
+    "direct_m2_psi7_source_eom_coefficient_defect_zero_witness_present": true,
+    "direct_m2_psi10_target_action_coefficient_defect_polynomial_present": true,
+    "direct_m2_psi10_target_action_defect_zero_witness_present": true,
+    "direct_m2_psi10_target_eom_coefficient_defect_polynomial_present": true,
+    "direct_m2_psi10_target_eom_defect_zero_witness_present": true,
+    "direct_m2_psi2_psi5_common_plus3_assignment_slot_split_packet_present": true,
+    "direct_m2_psi8_psi11_common_plus3_assignment_slot_split_packet_present": true,
+    "direct_g4_family_zero_witness_present": true,
+    "direct_g6_family_zero_witness_present": true,
+    "direct_gY_family_zero_witness_present": false,
+    "pair1_c1c1_zero_witness_present": false,
+    "pair1_s1s1_zero_witness_present": false,
+    "full_physical_uniqueness_or_selector_relevant_canonicalization_present": false,
+    "direct_m2_psi2_source_action_coefficient_defect_polynomial_present": true,
+    "direct_m2_psi2_source_action_defect_zero_witness_present": true,
+    "direct_m2_psi2_source_eom_coefficient_defect_polynomial_present": true,
+    "direct_m2_psi2_source_eom_defect_zero_witness_present": true,
+    "direct_m2_psi5_target_action_coefficient_defect_polynomial_present": true,
+    "direct_m2_psi5_target_action_defect_zero_witness_present": true,
+    "direct_m2_psi5_target_eom_coefficient_defect_polynomial_present": true,
+    "direct_m2_psi5_target_eom_defect_zero_witness_present": true,
+    "direct_m2_psi8_source_action_coefficient_defect_polynomial_present": true,
+    "direct_m2_psi8_source_action_defect_zero_witness_present": true,
+    "direct_m2_psi8_source_eom_coefficient_defect_polynomial_present": true,
+    "direct_m2_psi8_source_eom_defect_zero_witness_present": true,
+    "direct_m2_psi11_target_action_coefficient_defect_polynomial_present": true,
+    "direct_m2_psi11_target_action_defect_zero_witness_present": true,
+    "direct_m2_psi11_target_eom_coefficient_defect_polynomial_present": true,
+    "direct_m2_psi11_target_eom_defect_zero_witness_present": true
+  },
+  "remaining_missing_upstream_objects": [
+    "explicit_zero_witness_for_direct_yukawa_like_gY_family_c1s1_shift_defect",
+    "explicit_zero_witness_for_the_declared_pair1_residual_c1c1_equation",
+    "explicit_zero_witness_for_the_declared_pair1_residual_s1s1_equation",
+    "full_physical_uniqueness_or_selector_relevant_canonicalization_of_the_explicit_declared_control_transport_within_the_QW2191_O2_family"
+  ],
+  "checks": [
+    {
+      "id": "p628_g4_family_zero_witness_was_missing_before_r82",
+      "actual": false,
+      "expected": false,
+      "meaning": "before R82, P628 still recorded the direct g4-family c1s1 shift-defect zero witness as missing",
+      "pass": true
+    },
+    {
+      "id": "p628_g6_family_zero_witness_was_missing_before_r82",
+      "actual": false,
+      "expected": false,
+      "meaning": "before R82, P628 still recorded the direct g6-family c1s1 shift-defect zero witness as missing",
+      "pass": true
+    },
+    {
+      "id": "r82_g4_family_zero_witness_present",
+      "actual": true,
+      "expected": true,
+      "meaning": "R82 closes the direct g4-family shift-defect zero witness under the explicit strict T169 constrained lift rule (N483/F447)",
+      "pass": true
+    },
+    {
+      "id": "r82_g6_family_zero_witness_present",
+      "actual": true,
+      "expected": true,
+      "meaning": "R82 closes the direct g6-family shift-defect zero witness under the explicit strict T169 constrained lift rule (N483/F447)",
+      "pass": true
+    },
+    {
+      "id": "r82_strict_core_promotion_absent",
+      "actual": false,
+      "expected": false,
+      "meaning": "R82 is a direct-formal closure packet only and does not promote anything into strict core",
+      "pass": true
+    }
+  ],
+  "strict_core_promotion": false,
+  "full_closure_pass": false,
+  "no_false_pass": true
+}
