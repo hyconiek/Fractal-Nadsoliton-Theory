@@ -72,6 +72,11 @@ OUT_SUMMARY = (
     GENERATED / "p438_current_strict_t166_diagonal_accelerator_lane_status_dashboard_probe_summary.json"
 )
 
+T170_GLOBAL_ATLAS = GENERATED / "selector_atlas_global_c_v1_strict_v1.json"
+N515_THEOREM = (
+    ROOT / "N515_CURRENT_FIRST_STRICT_T170_GLOBAL_SELECTOR_ATLAS_AND_TRANSITION_OBJECT_DISCHARGE_THEOREM.md"
+)
+
 
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(
@@ -235,6 +240,14 @@ def main() -> None:
             "under QW-2191 discipline (no implied selector closure): discharge the strict global selector atlas + transition/gluing "
             "object target (T170), proceeding via the B3 topological selector bridge continuation while keeping the residual "
             "Z2 sign handling explicit (e.g. sign gauge-irrelevance where proven, or sign frozen as a tracked convention layer)."
+        )
+
+    if recommended_next_target == "T170" and (T170_GLOBAL_ATLAS.exists() or N515_THEOREM.exists()):
+        recommended_next_target = "H39"
+        recommendation_reason = (
+            "T170 is now discharged at object level (F469/N515 export a global selector atlas + transition object on C_v1). "
+            "The next honest strict frontier is the absence of a global physical selector object beyond chart locality (H39), "
+            "and continuation under explicit QW-2191 discipline (no implied selector closure)."
         )
 
     artifact = {

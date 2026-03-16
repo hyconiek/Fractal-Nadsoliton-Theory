@@ -83,6 +83,11 @@ P455_SUMMARY = GENERATED / "p455_current_strict_mode_index_assignment_shannon_vs
 OUT_JSON = GENERATED / "p441_current_strict_global_closure_next_move_dashboard_probe.json"
 OUT_SUMMARY = GENERATED / "p441_current_strict_global_closure_next_move_dashboard_probe_summary.json"
 
+T170_GLOBAL_ATLAS = GENERATED / "selector_atlas_global_c_v1_strict_v1.json"
+N515_THEOREM = (
+    ROOT / "N515_CURRENT_FIRST_STRICT_T170_GLOBAL_SELECTOR_ATLAS_AND_TRANSITION_OBJECT_DISCHARGE_THEOREM.md"
+)
+
 
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(
@@ -223,6 +228,15 @@ def main() -> None:
             "object target (T170), keeping all residual sign handling explicit."
         )
         diagonal_note += " T2 theorem-level bridge discharge is now exported (N491); next frontier shifts to T170."
+
+    if recommended_next == "T170" and (T170_GLOBAL_ATLAS.exists() or N515_THEOREM.exists()):
+        recommended_next = "H39"
+        recommendation_reason = (
+            "T170 is now discharged at object level (F469/N515 export a global selector atlas + transition object on C_v1). "
+            "The next honest strict frontier is the absence of a global physical selector object beyond chart locality (H39), "
+            "and continuation under explicit QW-2191 discipline (no implied selector closure)."
+        )
+        diagonal_note += " T170 is now discharged by F469/N515; next frontier shifts to H39."
 
     # Backward-compatible mapping: older P438 versions returned a packet label ("B3") here.
     if recommended_next == "B3" and N491_THEOREM.exists():
