@@ -10,11 +10,11 @@ def main() -> None:
 
     data = {
         "id": "H37",
-        "date": "2026-03-06",
-        "status": "PASS_PARTIAL_NO_STRICT_SIGN_DISTINCTION_STATE_OBJECT",
-        "result": "strict_core_contains_no_sign_sensitive_state_object_or_observable_on_pair1_and_therefore_does_not_distinguish_u_from_minus_u_as_physically_different_selector_states",
-        "frontier": "H37_B1",
-        "frontier_text": "strict core contains no sign-sensitive state object or observable on pair1 and therefore does not distinguish u from -u as physically different selector states",
+        "date": "2026-03-16",
+        "status": "PASS_PARTIAL_SIGN_TRACKED_CONVENTION_LAYER_PRESENT_BUT_NO_STRICT_PHYSICAL_SIGN_DISTINCTION_OBSERVABLE",
+        "result": "strict_core_exports_sign_tracked_convention_layer_and_global_projective_selector_state_object_but_contains_no_strict_sign_sensitive_physical_observable_distinguishing_u_from_minus_u_on_pair1",
+        "frontier": "H37_B2",
+        "frontier_text": "strict core exports sign-tracked convention-layer oriented vectors and a global projective selector state object, but still contains no strict sign-sensitive physical state object or observable distinguishing u from -u on pair1",
         "hard_limits": [
             "no theorem-level pass",
             "no full-closure pass",
