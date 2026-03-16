@@ -391,7 +391,25 @@ def main() -> None:
         # - We keep H37 as an open frontier for the directed branch, but the recommended next move shifts to strict-only ToE closure tasks
         #   that do not require a sign-sensitive orientation datum (projective-only compatible).
         if projective_selected:
-            if P629_DIRECT_FORMAL_SUMMARY.exists():
+            if P16_FACTORIZATION_SUMMARY.exists():
+                recommended_next = "P16"
+                p16_note = ""
+                try:
+                    p16 = load_json(P16_FACTORIZATION_SUMMARY)
+                    missing = p16.get("remaining_missing_upstream_objects")
+                    req = p16.get("required_next_step")
+                    p16_note = f" Current factorization frontier: P16. remaining_missing={missing}; required_next_step={req}."
+                except Exception:
+                    p16_note = " P16 summary exists but could not be parsed."
+                recommendation_reason = (
+                    "Projective-only continuation is explicitly selected (P475): treat the exported global projective selector state as the strict physical state object "
+                    "for the declared closure stack, keeping residual sign as a gauge/convention layer where proven irrelevant (N502, N519). "
+                    "H37/T171 remain open for a future directed branch only. "
+                    "Next strict ToE-closure bottleneck: continue the existing-kernel-feedback -> explicit H3 factorization route; "
+                    "the current frontier is P16 (legacy chart-reduced operator export route)."
+                    + p16_note
+                )
+            elif P629_DIRECT_FORMAL_SUMMARY.exists():
                 recommended_next = "P629"
                 p_note = ""
                 try:
