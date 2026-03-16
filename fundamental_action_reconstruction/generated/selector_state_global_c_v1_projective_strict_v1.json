@@ -1,0 +1,89 @@
+{
+  "object": "SelectorState_global_C_v1_projective_strict_v1",
+  "stage": "F470",
+  "status": "actual_exported_global_projective_selector_state_object_on_C_v1_packaging_projector_section_and_global_atlas_transition__no_false_pass",
+  "as_of": "2026-03-16",
+  "generated_utc": "2026-03-16T01:43:51.975602+00:00",
+  "intent": "Export one explicit global projective/ray-level selector state object on the declared strict configuration space C_v1 by packaging the exported global selector atlas/transition objects (F469/N515) with the exported five-chart glued projector operator section on {pair1..pair5} (F466/N510). This is a projector/span (sign-gauge-safe) state object and does not claim sign-sensitive physical orientation, strict-core selector closure, or global QW-2191 discharge.",
+  "domain": {
+    "configuration_space_object_ref": "fundamental_action_reconstruction/generated/c_v1_void_configuration_space_in_local_b_tilde_1_sector_v1.json",
+    "configuration_space_object": "C_v1_void_configuration_space_in_local_B_tilde_1_sector_v1",
+    "charts_cover": "U_pair1 = ... = U_pair5 = C_v1 (declared global cover)"
+  },
+  "state_type": {
+    "level": "projective_ray_state",
+    "encoding": "rank_one_projector_section_on_pair_charts",
+    "sign_gauge": "projector/span semantics (u and -u identified at state level)"
+  },
+  "global_atlas_ref": "fundamental_action_reconstruction/generated/selector_atlas_global_c_v1_strict_v1.json",
+  "global_atlas_object": "SelectorAtlas_global_C_v1_strict_v1",
+  "global_transition_ref": "fundamental_action_reconstruction/generated/selector_transition_global_c_v1_strict_v1.json",
+  "global_transition_object": "SelectorTransition_global_C_v1_strict_v1",
+  "projector_section_ref": "fundamental_action_reconstruction/generated/a_12345_pair12345_chart_glued_orientation_projector_operator_section_strict_core_v2.json",
+  "projector_section_object": "A_12345_pair12345_chart_glued_orientation_projector_operator_section_strict_core_v2",
+  "charts": {
+    "pair1": {
+      "chart_id": "pair1",
+      "carrier_plane": "V1 = span{c1,s1} inside the n=12 real Fourier scaffold",
+      "local_operator": {
+        "ref": "fundamental_action_reconstruction/generated/a_1_pair1_orientation_projector_operator_strict_core_v1.json",
+        "object": "A_1_pair1_orientation_projector_operator_strict_core_v1"
+      }
+    },
+    "pair2": {
+      "chart_id": "pair2",
+      "carrier_plane": "V2 = span{c2,s2} inside the n=12 real Fourier scaffold",
+      "local_operator": {
+        "ref": "fundamental_action_reconstruction/generated/a_2_pair2_orientation_projector_operator_strict_core_v1.json",
+        "object": "A_2_pair2_orientation_projector_operator_strict_core_v1"
+      }
+    },
+    "pair3": {
+      "chart_id": "pair3",
+      "carrier_plane": "V3 = span{c3,s3} inside the n=12 real Fourier scaffold",
+      "local_operator": {
+        "ref": "fundamental_action_reconstruction/generated/a_3_pair3_orientation_projector_operator_strict_core_v1.json",
+        "object": "A_3_pair3_orientation_projector_operator_strict_core_v1"
+      }
+    },
+    "pair4": {
+      "chart_id": "pair4",
+      "carrier_plane": "V4 = span{c4,s4} inside the n=12 real Fourier scaffold",
+      "local_operator": {
+        "ref": "fundamental_action_reconstruction/generated/a_4_pair4_orientation_projector_operator_strict_core_v1.json",
+        "object": "A_4_pair4_orientation_projector_operator_strict_core_v1"
+      }
+    },
+    "pair5": {
+      "chart_id": "pair5",
+      "carrier_plane": "V5 = span{c5,s5} inside the n=12 real Fourier scaffold",
+      "local_operator": {
+        "ref": "fundamental_action_reconstruction/generated/a_5_pair5_orientation_projector_operator_strict_core_v1.json",
+        "object": "A_5_pair5_orientation_projector_operator_strict_core_v1"
+      }
+    }
+  },
+  "gluing": {
+    "projector_section_level": true,
+    "gluing_laws_ref": "fundamental_action_reconstruction/generated/a_12345_pair12345_chart_glued_orientation_projector_operator_section_strict_core_v2.json",
+    "cocycle_discipline": {
+      "level": "projector_section_level",
+      "supports": [
+        "N510: projector-section full triple cocycle data (lane origin)",
+        "N512: operator-level cocycle failure boundary (no false pass)"
+      ],
+      "explicit_non_promotion": [
+        "Do not infer operator-level identities O_jk O_ij = O_ik on the full carrier from section-level cocycle data.",
+        "Do not infer a sign-sensitive physical orientation datum from projector-level transport."
+      ]
+    }
+  },
+  "hard_limits": [
+    "Projective/ray-level object only; no sign-sensitive directed orientation datum is derived.",
+    "Does not promote section-level cocycle data to operator-level groupoid identities (see N512).",
+    "Does not claim strict-core selector closure / admissible S_sel_int.",
+    "Does not claim global discharge of QW-2191.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}
