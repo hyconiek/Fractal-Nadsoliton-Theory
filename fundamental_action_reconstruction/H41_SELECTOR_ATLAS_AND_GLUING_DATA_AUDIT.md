@@ -1,6 +1,6 @@
 # H41 Selector Atlas And Gluing Data Audit
 
-Status: `PASS_PARTIAL_LANE_SCOPED_ATLAS_WITH_FULL_COCYCLE_PRESENT_GLOBAL_ATLAS_STILL_MISSING`
+Status: `PASS_GLOBAL_SELECTOR_ATLAS_AND_GLUING_DATA_EXPORTED_ON_C_V1_GLOBAL_PHYSICAL_SELECTOR_OBJECT_STILL_MISSING`
 Date: `2026-03-16`
 
 ## Purpose
@@ -12,7 +12,8 @@ Test whether the current strict core exports any explicit selector atlas or sele
 - `H31`: `psi0` admits only a local chart embedding into `pair1=(c_1,s_1)`.
 - `H33`: `pair1` is only a deterministic local chart, not a physically privileged selector target.
 - `H39`: no global physical selector object is exported.
-- `H40`: no global selector transition or gluing object is exported.
+- `F469/N515`: global selector atlas + global selector transition/gluing object exported on `C_v1` (discharge of `T170`).
+- `H40`: global selector transition/gluing object is now exported on `C_v1` (but no implied selector closure or `QW-2191` discharge).
 - `F461`: lane-scoped `pair1↔pair2` chart-transport operator `O_12` exists (projector-safe).
 - `N506`: projector-level transport under `O_12` is sign-gauge-invariant.
 - `P465`: audits `O_12` as a lane-scoped chart-transport/gluing ingredient.
@@ -35,6 +36,8 @@ Test whether the current strict core exports any explicit selector atlas or sele
 - `P471`: audits that the cocycle holds only on the exported vector section (and transported rays/projectors), not as an operator-level matrix identity on the full carrier.
 - `N512`: packages the operator-level cocycle failure boundary as a strict no-false-pass theorem.
 - `C29/C30`: only local projector formulas and local overlap compatibility laws are explicit.
+- `generated/selector_atlas_global_c_v1_strict_v1.json`: exported global selector atlas object.
+- `generated/selector_transition_global_c_v1_strict_v1.json`: exported global selector transition/gluing object.
 
 ## Audit target
 
@@ -47,7 +50,7 @@ Search for any strict-core exported data of the following selector-atlas kind:
 
 ## Result
 
-No strict-core **global** selector atlas / global overlap-domain declaration / global cocycle data is currently exported.
+The repo now exports a strict-core **global selector atlas object** and a strict-core **global selector transition/gluing object** on the declared strict domain `C_v1` (`F469`, packaged by `N515`).
 
 The repository contains:
 - local selector-like chart embeddings,
@@ -62,12 +65,13 @@ The repository contains:
 - and now an upgraded explicit lane-scoped **five-chart** selector-atlas ingredient on `{pair1..pair5}` with projector-level gluing laws **and explicit full triple cocycle data on the exported projector section** (`F466`, audited by `P469`, packaged by `N510`),
 - and now an explicit lane-scoped **oriented transport (α mod 2π) lift** at vector level on `{pair1..pair5}` as a tracked gauge/convention layer (`F467`, audited by `P470`, packaged by `N511`),
 - with an explicit boundary that the oriented transport does **not** define an operator-level transition cocycle on the full carrier (`P471`, packaged by `N512`),
+- and now an explicit **global** selector atlas and **global** transition/gluing object export on `C_v1` (`F469/N515`),
 
-but none of these is elevated to a **global** selector atlas, global overlap-domain declaration, or global cocycle-level gluing data supporting a global assembly structure.
+while still not exporting any **global physical selector object** (state) and not discharging global `QW-2191`.
 
 ## Frontier
 
-`H41_B1 := strict core has no explicit global selector atlas, global overlap-domain declaration, or global cocycle-level gluing data from which a global selector transition structure could be assembled`
+`H41_B1 := strict core now exports a global selector atlas/transition object on C_v1 (F469/N515), but still exports no global physical selector object and does not discharge global QW-2191`
 
 ## Hard limits
 

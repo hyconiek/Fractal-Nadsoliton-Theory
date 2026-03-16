@@ -1,6 +1,6 @@
 # H40 Global Selector Transition Object Audit
 
-Status: `PASS_PARTIAL_LANE_SCOPED_TRANSITION_OBJECT_PRESENT_GLOBAL_SELECTOR_TRANSITION_OBJECT_STILL_MISSING`
+Status: `PASS_GLOBAL_SELECTOR_TRANSITION_OBJECT_EXPORTED_ON_C_V1_GLOBAL_PHYSICAL_SELECTOR_OBJECT_STILL_MISSING`
 Date: `2026-03-16`
 
 ## Purpose
@@ -14,6 +14,7 @@ Test whether the current strict core contains any global transition or gluing ob
 - `C29`: local projector formulas are explicit.
 - `C30`: local overlap compatibility law under orthogonal transition is explicit.
 - `C31`: a transition-angle source class exists.
+- `F469/N515`: global selector transition/gluing object exported on `C_v1` (discharge of `T170`).
 - `F457`: lane-scoped `alpha_12` transition angle export exists (from strict sigma-int theta supply).
 - `F461`: lane-scoped `pair1↔pair2` chart-transport operator `O_12` is exported (derived only from `alpha_12`).
 - `N506`: projector-level transport under `O_12` is sign-gauge-invariant.
@@ -36,6 +37,7 @@ Test whether the current strict core contains any global transition or gluing ob
 - `P471`: audits that the same cocycle/path-independence holds on the exported vector section but **does not** hold as an operator-level matrix identity `O_jk O_ij = O_ik` on the full carrier.
 - `N512`: packages the operator-level cocycle failure boundary as a strict no-false-pass theorem (section-level gluing ingredient only).
 - `P460`: lane-scoped cross-block polar-factor transition candidate exists (from the declared control-pullback value instantiation).
+- `generated/selector_transition_global_c_v1_strict_v1.json`: exported global selector transition/gluing object.
 
 ## Audit target
 
@@ -48,7 +50,7 @@ Search for any strict-core exported object with all of the following properties:
 
 ## Result
 
-No strict-core **global** selector transition/gluing object is currently exported.
+The repo now exports a strict-core **global selector transition/gluing object** on the declared strict domain `C_v1` (`F469`, packaged by `N515`).
 
 The repository contains:
 - local compatibility laws,
@@ -60,13 +62,14 @@ The repository contains:
   - `O_23` and `O_13` (axis-only, projector-level) and an explicit three-chart ingredient with cocycle-level section data on `{pair1,pair2,pair3}` (`F464`, audited by `P467`, packaged by `N508`),
   - additional axis-only transport operators and a five-chart projector-level ingredient with explicit *local* cocycle data on `{pair1..pair5}` (`F465`, audited by `P468`, packaged by `N509`),
   - additional axis-only long-edge transport operators (`O_14`, `O_15`, `O_25`) and an upgraded five-chart ingredient with explicit **full triple** cocycle data on `{pair1..pair5}` (`F466`, audited by `P469`, packaged by `N510`),
-  - and now a lane-scoped **oriented** transport (`α mod 2π`) lift at vector level as a tracked gauge/convention layer on `{pair1..pair5}` (`F467`, audited by `P470`, packaged by `N511`), with an explicit boundary that operator-level cocycle identities are not available (`P471`, `N512`),
+- and now a lane-scoped **oriented** transport (`α mod 2π`) lift at vector level as a tracked gauge/convention layer on `{pair1..pair5}` (`F467`, audited by `P470`, packaged by `N511`), with an explicit boundary that operator-level cocycle identities are not available (`P471`, `N512`),
+- and now an explicit **global** selector transition/gluing object export on `C_v1` (`F469/N515`),
 
-but none of these is exported as a strict-core **global** selector transition object supporting a full selector atlas / global gluing structure.
+while still not exporting any **global physical selector object** and not discharging global `QW-2191`.
 
 ## Frontier
 
-`H40_B1 := strict core has no global selector transition or gluing object lifting local chart compatibility to a global selector transition structure`
+`H40_B1 := strict core now exports a global selector transition/gluing object on C_v1 (F469/N515), but still exports no global physical selector object and does not discharge global QW-2191`
 
 ## Hard limits
 

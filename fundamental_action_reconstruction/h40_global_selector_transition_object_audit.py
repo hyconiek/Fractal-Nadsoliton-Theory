@@ -11,7 +11,7 @@ payload = {
     "step": "H40",
     "title": "Global Selector Transition Object Audit",
     "date": "2026-03-16",
-    "status": "PASS_PARTIAL_LANE_SCOPED_TRANSITION_OBJECT_PRESENT_GLOBAL_SELECTOR_TRANSITION_OBJECT_STILL_MISSING",
+    "status": "PASS_GLOBAL_SELECTOR_TRANSITION_OBJECT_EXPORTED_ON_C_V1_GLOBAL_PHYSICAL_SELECTOR_OBJECT_STILL_MISSING",
     "inputs": {
         "H34": "no_strict_basis_covariance_or_target_independence_argument",
         "H39": "no_global_physical_selector_object_beyond_chart_locality",
@@ -40,6 +40,8 @@ payload = {
         "P471": "audit_of_operator_level_vs_vector_section_level_cocycle_for_oriented_transport (operator_level_matrix_equality_fails_expected)",
         "N512": "operator_level_cocycle_failure_boundary_packaged_as_strict_no_false_pass_theorem (section_level_gluing_only)",
         "P460": "lane_scoped_cross_block_polar_orthogonal_factor_transition_matrix_candidate_present",
+        "F469/N515": "global_selector_transition_or_gluing_object_exported_on_C_v1 (T170 discharged)",
+        "selector_transition_global": "SelectorTransition_global_C_v1_strict_v1 exported (F469)",
     },
     "supports": [
         "local_projector_formula",
@@ -53,14 +55,13 @@ payload = {
         "lane_scoped_five_chart_projector_section_with_full_triple_cocycle_data",
         "lane_scoped_pair12345_oriented_transport_lift_as_tracked_convention_layer",
         "lane_scoped_cross_block_polar_factor_transition_matrix_candidate",
+        "global_selector_transition_object_export_on_C_v1",
     ],
     "missing": [
-        "global_selector_transition_object_export",
-        "global_selector_gluing_object",
-        "global_chart_overlap_and_cocycle_data",
+        "global_physical_selector_object",
     ],
     "frontier": "H40_B1",
-    "frontier_text": "strict core has no global selector transition or gluing object lifting local chart compatibility to a global selector transition structure",
+    "frontier_text": "strict core now exports a global selector transition/gluing object on C_v1 (F469/N515), but still exports no global physical selector object and does not discharge global QW-2191",
     "hard_limits": {
         "theorem_level_pass": False,
         "full_closure_pass": False,
