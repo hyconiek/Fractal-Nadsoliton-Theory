@@ -1,0 +1,143 @@
+{
+  "stage": "P680",
+  "lane": "current_strict_t173_projective_strict_core_selector_closure_candidate_audit_probe_only",
+  "goal": "audit_whether_current_exports_support_a_projective_strict_core_selector_closure_discharge_attempt_under_T173__probe_only",
+  "dependencies": {
+    "N676": "fundamental_action_reconstruction/generated/n676_current_first_admissible_s_sel_int_source_object_discharge_theorem_summary.json",
+    "N546": "fundamental_action_reconstruction/generated/n546_current_exported_s_sel_int_strict_core_source_object_admissible_orientation_export_theorem_summary.json",
+    "F649": "fundamental_action_reconstruction/generated/f649_first_exported_s_sel_int_strict_core_source_object_second_clause_typing_packet_summary.json",
+    "F672": "fundamental_action_reconstruction/generated/selector_closure_global_c_v1_projective_strict_v1.json"
+  },
+  "status": "PASS_CLOSURE_CANDIDATE_SUPPORTED_PROJECTIVE_STRICT_CORE_ONLY",
+  "closure_candidate_supported": true,
+  "checks": [
+    {
+      "id": "s_sel_int_admissible_in_f34_sense",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "An admissible strict-core S_sel_int source object exists in the narrow F34 sense (N676)."
+    },
+    {
+      "id": "e_orient_admissible",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "An admissible strict-core orientation export exists from the S_sel_int source object (N546)."
+    },
+    {
+      "id": "source_object_nonzero_s1_support",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Reflection-breaking witness is non-degenerate on the declared pair1 sine axis (F649)."
+    },
+    {
+      "id": "dot_w_break_with_s1_nonzero",
+      "actual": -0.00039681792259571596,
+      "expected": "nonzero scalar",
+      "pass": true,
+      "meaning": "The exported strict-core reflection-breaking weight has nonzero dot with s1 (prevents degenerate orientation)."
+    },
+    {
+      "id": "projective_closure_object_name",
+      "actual": "SelectorClosure_global_C_v1_projective_strict_v1",
+      "expected": "SelectorClosure_global_C_v1_projective_strict_v1",
+      "pass": true,
+      "meaning": "Global projective selector closure object has the expected typed name (F672)."
+    },
+    {
+      "id": "projective_closure_no_false_pass_marked",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Global projective selector closure object is explicitly marked no_false_pass."
+    },
+    {
+      "id": "projective_closure_scope",
+      "actual": "projective_ray_state",
+      "expected": "projective_ray_state",
+      "pass": true,
+      "meaning": "Closure object is declared in projective/ray-level scope (sign gauge treated as projector-level)."
+    },
+    {
+      "id": "closure_well_definedness_certificate_pass",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Closure object reports passing chartwise well-definedness certificate on exported data."
+    },
+    {
+      "id": "closure_certificate_tolerance_positive",
+      "actual": 1e-12,
+      "expected": "> 0 scalar",
+      "pass": true,
+      "meaning": "Certificate tolerance is a positive scalar."
+    },
+    {
+      "id": "closure_certificate_maxdiff_nonnegative",
+      "actual": 7.273661547324619e-16,
+      "expected": ">= 0 scalar",
+      "pass": true,
+      "meaning": "Certificate max-diff is a nonnegative scalar."
+    },
+    {
+      "id": "closure_certificate_maxdiff_within_tolerance",
+      "actual": {
+        "maxdiff": 7.273661547324619e-16,
+        "tolerance": 1e-12
+      },
+      "expected": "maxdiff <= tolerance",
+      "pass": true,
+      "meaning": "Chartwise output projectors agree within the declared certificate tolerance."
+    },
+    {
+      "id": "output_projector_symmetric",
+      "actual": 0.0,
+      "expected": "<= 1e-10",
+      "pass": true,
+      "meaning": "Output observable matrix is symmetric (projector sanity)."
+    },
+    {
+      "id": "output_projector_idempotent",
+      "actual": 0.0,
+      "expected": "<= 1e-10",
+      "pass": true,
+      "meaning": "Output observable matrix satisfies P^2\u2248P (projector sanity)."
+    },
+    {
+      "id": "output_projector_trace_one",
+      "actual": 1.0,
+      "expected": "1\u00b11e-10",
+      "pass": true,
+      "meaning": "Output observable has trace\u22481 (rank\u20111 projector sanity)."
+    },
+    {
+      "id": "output_projector_det_zero",
+      "actual": 0.0,
+      "expected": "0\u00b11e-10",
+      "pass": true,
+      "meaning": "Output observable has det\u22480 (rank\u20111 projector sanity)."
+    },
+    {
+      "id": "output_projector_eigenvalues_near_1_and_0",
+      "actual": {
+        "lambda_1": 1.0,
+        "lambda_2": 0.0
+      },
+      "expected": "{1,0} within 1e-10",
+      "pass": true,
+      "meaning": "Output observable eigenvalues are consistent with a rank\u20111 projector (unique output ray in projective scope)."
+    }
+  ],
+  "blocking_mismatches": [],
+  "hard_limits": [
+    "probe_only_no_promotion_to_theorem",
+    "strict_core_selector_closure_remains_false_until_theorem_exported",
+    "no_directed_sign_sensitive_orientation_claim",
+    "no_kernel_alone_global_QW2191_discharge",
+    "no_ToE_closure"
+  ],
+  "strict_core_selector_closure": false,
+  "no_false_pass": true
+}
