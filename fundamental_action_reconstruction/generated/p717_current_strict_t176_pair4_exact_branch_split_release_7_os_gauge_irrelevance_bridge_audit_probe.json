@@ -1,0 +1,73 @@
+{
+  "stage": "P717",
+  "status": "PASS_PAIR4_EXACT_BRANCH_SPLIT_RELEASE_7_OS_GAUGE_IRRELEVANCE_BRIDGED",
+  "as_of": "2026-03-18",
+  "generated_utc": "2026-03-17T23:15:21.734845+00:00",
+  "goal": "audit whether the exact pair4-induced branch split isolated by P715/P716 is already gauge-irrelevant for the concrete Release-7 OS observables covered by P709",
+  "inputs": {
+    "P709_summary": "fundamental_action_reconstruction/generated/p709_current_strict_release_7_os_residual_sign_gauge_irrelevance_audit_probe_summary.json",
+    "P715": "fundamental_action_reconstruction/generated/p715_current_strict_t176_parity_completed_dual_anchor_multiroot_audit_probe.json",
+    "P716_summary": "fundamental_action_reconstruction/generated/p716_current_strict_t176_pair4_negative_cosine_polarity_global_z2_orbit_split_audit_probe_summary.json"
+  },
+  "checks": [
+    {
+      "id": "p715_exact_branch_split_still_present",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "P715 still exhibits the all-root projective orbit together with failure of one exact directed branch."
+    },
+    {
+      "id": "p715_pair4_branch_is_global_negation_of_reference",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "The exact pair4 branch is still the global negation of the reference branch on current exports."
+    },
+    {
+      "id": "p716_localizes_split_to_pair4_negative_cosine_polarity",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "P716 still localizes the exact split to the pair4 negative cosine-axis role."
+    },
+    {
+      "id": "p709_release_7_os_sign_gauge_irrelevance_still_passes",
+      "actual": "PASS_RELEASE_7_OS_RESIDUAL_SIGN_GAUGE_IRRELEVANCE_AUDITED",
+      "expected": "PASS_RELEASE_7_OS_RESIDUAL_SIGN_GAUGE_IRRELEVANCE_AUDITED",
+      "pass": true,
+      "meaning": "P709 still proves sign-gauge irrelevance for the concrete Release-7 OS observables."
+    },
+    {
+      "id": "p709_full_sign_family_audit_still_ok",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "P709 still passes over the full residual sign-pattern family, so in particular it covers the present exact two-branch split."
+    }
+  ],
+  "blocking_mismatches": [],
+  "result": {
+    "pair4_exact_branch_split_present": true,
+    "pair4_exact_branch_is_global_negation_of_reference": true,
+    "pair4_split_localized_to_negative_cosine_polarity": true,
+    "release_7_os_sign_gauge_irrelevance_available": true,
+    "pair4_exact_branch_split_gauge_irrelevant_for_release_7_os_observables": true,
+    "covered_release_7_observables": [
+      "P694_mass_proxy",
+      "P696_selector_aligned_channel_spectrum_proxy_invariants",
+      "F704_basis_invariant_mass_observable"
+    ],
+    "counts_as_strict_physical_orientation_datum": false,
+    "implies_t176_discharge": false,
+    "remaining_gap_after_positive_result": "exact branch-fixing in strict core remains open if one wants more than projective/gauge-safe Release-7 OS scope"
+  },
+  "hard_limits": [
+    "No strict-core directed/sign-sensitive physical orientation datum claim.",
+    "No T176 discharge claim.",
+    "No kernel-alone/global QW-2191 discharge.",
+    "No gauge-irrelevance claim for arbitrary future observables.",
+    "No ToE closure claim."
+  ],
+  "no_false_pass": true
+}

@@ -25,6 +25,7 @@ IN_P713 = GENERATED / "p713_current_strict_t176_multiroot_rooted_sign_lift_root_
 IN_P714 = GENERATED / "p714_current_strict_t176_w_break_parity_root_support_profile_audit_probe_summary.json"
 IN_P715 = GENERATED / "p715_current_strict_t176_parity_completed_dual_anchor_multiroot_audit_probe_summary.json"
 IN_P716 = GENERATED / "p716_current_strict_t176_pair4_negative_cosine_polarity_global_z2_orbit_split_audit_probe_summary.json"
+IN_P717 = GENERATED / "p717_current_strict_t176_pair4_exact_branch_split_release_7_os_gauge_irrelevance_bridge_audit_probe_summary.json"
 
 # Convention-layer continuations (still below physical sign datum).
 IN_N688 = GENERATED / "n688_current_strict_t174_global_oriented_transition_edge_sign_lift_discharge_theorem_summary.json"
@@ -65,6 +66,7 @@ def main() -> None:
         "P712": IN_P712,
         "P715": IN_P715,
         "P716": IN_P716,
+        "P717": IN_P717,
     }
     missing_core = [str(p.relative_to(REPO)) for p in core.values() if not p.exists()]
     if missing_core:
@@ -91,6 +93,7 @@ def main() -> None:
     p714 = load_json(IN_P714) if IN_P714.exists() else None
     p715 = load_json(IN_P715)
     p716 = load_json(IN_P716)
+    p717 = load_json(IN_P717)
 
     n688 = load_json(IN_N688) if IN_N688.exists() else None
     n690 = load_json(IN_N690) if IN_N690.exists() else None
@@ -202,6 +205,12 @@ def main() -> None:
         True,
         "The remaining exact dual-anchor orbit split is localized to the unique negative cosine-axis role of pair4 on current exports (P716).",
     )
+    add_check(
+        "pair4_exact_branch_split_is_release7_os_gauge_irrelevant",
+        bool(p717.get("pair4_exact_branch_split_gauge_irrelevant_for_release_7_os_observables")),
+        True,
+        "That localized pair4 exact branch split is already gauge-irrelevant for the concrete Release-7 OS observables downstream (P717).",
+    )
     # Convention-layer continuations (optional but expected on Release 7 state).
     if IN_N688.exists():
         add_check(
@@ -263,6 +272,7 @@ def main() -> None:
             "P714": str(IN_P714.relative_to(REPO)) if IN_P714.exists() else None,
             "P715": str(IN_P715.relative_to(REPO)),
             "P716": str(IN_P716.relative_to(REPO)),
+            "P717": str(IN_P717.relative_to(REPO)),
             "N688": str(IN_N688.relative_to(REPO)) if IN_N688.exists() else None,
             "N690": str(IN_N690.relative_to(REPO)) if IN_N690.exists() else None,
             "N691": str(IN_N691.relative_to(REPO)) if IN_N691.exists() else None,
@@ -318,6 +328,9 @@ def main() -> None:
             "dual_anchor_candidate_negated_orbit_roots_relative_to_reference": p715.get("negated_orbit_roots_relative_to_reference"),
             "dual_anchor_orbit_split_explained_by_pair4_negative_cosine_polarity": bool(
                 p716.get("current_dual_anchor_orbit_split_explained_by_pair4_negative_cosine_polarity")
+            ),
+            "pair4_exact_branch_split_is_release7_os_gauge_irrelevant": bool(
+                p717.get("pair4_exact_branch_split_gauge_irrelevant_for_release_7_os_observables")
             ),
             "convention_layer_oriented_edge_sign_lift_exported": bool(n688_tr.get("oriented_edge_sign_lift_exported") or n691_tr.get("oriented_edge_sign_lift_exported")),
             "convention_layer_sign_fixed_directed_representative_exported": bool(n690_tr.get("sign_fixed_directed_representative_exported")),
@@ -375,6 +388,9 @@ def main() -> None:
         "dual_anchor_candidate_negated_orbit_roots_relative_to_reference": p715.get("negated_orbit_roots_relative_to_reference"),
         "dual_anchor_orbit_split_explained_by_pair4_negative_cosine_polarity": bool(
             p716.get("current_dual_anchor_orbit_split_explained_by_pair4_negative_cosine_polarity")
+        ),
+        "pair4_exact_branch_split_is_release7_os_gauge_irrelevant": bool(
+            p717.get("pair4_exact_branch_split_gauge_irrelevant_for_release_7_os_observables")
         ),
         "convention_layer_sign_tools_exported": {
             "T174_oriented_edge_sign_lift": bool(n688_tr.get("oriented_edge_sign_lift_exported") or n691_tr.get("oriented_edge_sign_lift_exported")),
