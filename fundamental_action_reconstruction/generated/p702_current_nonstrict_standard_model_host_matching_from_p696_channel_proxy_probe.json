@@ -2,18 +2,20 @@
   "stage": "P702",
   "status": "COMPUTED_NONSTRICT_SM_HOST_MATCHING_METRICS_NO_PASS_CLAIM",
   "as_of": "2026-03-17",
-  "generated_utc": "2026-03-17T15:46:47.481617+00:00",
+  "generated_utc": "2026-03-17T17:50:02.058574+00:00",
   "scope": "nonstrict_external_host_matching_only",
   "goal": "compute_non_strict_host_matching_metrics_between_P696_channel_m2_proxies_and_an_explicit_external_standard_model_mass_target_dataset__no_false_pass",
   "inputs": {
     "P696_summary": "fundamental_action_reconstruction/generated/p696_current_strict_physical_computability_selector_aligned_channel_spectrum_proxy_from_projective_selector_closure_probe_summary.json",
-    "sm_mass_targets": "fundamental_action_reconstruction/external_data/sm_mass_targets_v1.json"
+    "sm_mass_targets_dataset": "fundamental_action_reconstruction/external_data/sm_mass_targets_v1.json",
+    "sm_host_matching_policy": "fundamental_action_reconstruction/external_data/sm_host_matching_policy_v1.json"
   },
   "p696_mixing_audit": {
     "H_in_selector_aligned_basis_offdiag_to_diag_ratio": 1.191284779529568,
     "offblock_max_fro": 3.4009571444250914
   },
   "method": {
+    "policy_id": "SM_host_matching_policy_v1_centered_log_assignment_with_global_scale",
     "assignment": "linear_sum_assignment on squared differences of centered log(mass^2)",
     "scale": "global scale set by mean log(mass^2/ proxy_m2) after assignment"
   },

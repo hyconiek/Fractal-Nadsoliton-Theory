@@ -18,6 +18,9 @@ GENERATED = ROOT / "generated"
 
 IN_F704_OBJECT = GENERATED / "mass_observable_diagonal_local_strict_derived_v1.json"
 IN_SM_TARGETS = ROOT / "external_data" / "sm_mass_targets_v1.json"
+IN_SM_POLICY = ROOT / "external_data" / "sm_host_matching_policy_v1.json"
+TEMPLATE_SM_TARGETS = ROOT / "external_data" / "SM_MASS_TARGETS_TEMPLATE.json"
+TEMPLATE_SM_POLICY = ROOT / "external_data" / "SM_HOST_MATCHING_POLICY_TEMPLATE.json"
 
 OUT_JSON = GENERATED / "p704_current_nonstrict_standard_model_host_matching_from_f704_h_psi_eigenvalue_proxy_probe.json"
 OUT_SUMMARY = (
@@ -37,7 +40,7 @@ def is_finite_number(x: Any) -> bool:
 def main() -> None:
     GENERATED.mkdir(exist_ok=True)
 
-    prereq = [IN_F704_OBJECT, IN_SM_TARGETS]
+    prereq = [IN_F704_OBJECT, IN_SM_TARGETS, IN_SM_POLICY]
     missing = [str(p.relative_to(REPO)) for p in prereq if not p.exists()]
     if missing:
         artifact = {
@@ -45,6 +48,12 @@ def main() -> None:
             "status": "NOT_COMPUTABLE_MISSING_PREREQUISITES",
             "as_of": AS_OF,
             "missing": missing,
+            "hints": {
+                "sm_targets_template": str(TEMPLATE_SM_TARGETS.relative_to(REPO)),
+                "sm_targets_required_path": str(IN_SM_TARGETS.relative_to(REPO)),
+                "sm_policy_template": str(TEMPLATE_SM_POLICY.relative_to(REPO)),
+                "sm_policy_required_path": str(IN_SM_POLICY.relative_to(REPO)),
+            },
             "no_false_pass": True,
         }
         OUT_JSON.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="ascii")
@@ -80,7 +89,70 @@ def main() -> None:
     sm = load_json(IN_SM_TARGETS)
     units = sm.get("units")
     targets = sm.get("targets")
-    policy = sm.get("matching_policy") or {}
+
+    policy = load_json(IN_SM_POLICY)
+    if not isinstance(policy, dict):
+        artifact = {
+            "stage": "P704",
+            "status": "INVALID_SM_POLICY_SHAPE",
+            "as_of": AS_OF,
+            "error": "SM host-matching policy file must be a JSON object",
+            "no_false_pass": True,
+        }
+        OUT_JSON.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="ascii")
+        OUT_SUMMARY.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="ascii")
+        print(OUT_SUMMARY)
+        return
+
+    if policy.get("method") != "centered_log_assignment_with_global_scale":
+        artifact = {
+            "stage": "P704",
+            "status": "NOT_COMPUTABLE_UNSUPPORTED_POLICY_METHOD",
+            "as_of": AS_OF,
+            "policy_method": policy.get("method"),
+            "expected_method": "centered_log_assignment_with_global_scale",
+            "no_false_pass": True,
+        }
+        OUT_JSON.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="ascii")
+        OUT_SUMMARY.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="ascii")
+        print(OUT_SUMMARY)
+        return
+
+    dof = policy.get("degrees_of_freedom") or {}
+    if not (
+        isinstance(dof, dict)
+        and dof.get("global_scale_only") is True
+        and dof.get("sector_scales_allowed") is False
+        and dof.get("kinetic_metric_refit_allowed") is False
+        and dof.get("nonlinear_mass_map_allowed") is False
+    ):
+        artifact = {
+            "stage": "P704",
+            "status": "NOT_COMPUTABLE_UNSUPPORTED_POLICY_DEGREES_OF_FREEDOM",
+            "as_of": AS_OF,
+            "degrees_of_freedom": dof,
+            "no_false_pass": True,
+        }
+        OUT_JSON.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="ascii")
+        OUT_SUMMARY.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="ascii")
+        print(OUT_SUMMARY)
+        return
+
+    expected_dataset_id = policy.get("expected_dataset_id")
+    if isinstance(expected_dataset_id, str) and expected_dataset_id:
+        if sm.get("dataset_id") != expected_dataset_id:
+            artifact = {
+                "stage": "P704",
+                "status": "NOT_COMPUTABLE_POLICY_DATASET_ID_MISMATCH",
+                "as_of": AS_OF,
+                "dataset_id": sm.get("dataset_id"),
+                "expected_dataset_id": expected_dataset_id,
+                "no_false_pass": True,
+            }
+            OUT_JSON.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="ascii")
+            OUT_SUMMARY.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="ascii")
+            print(OUT_SUMMARY)
+            return
 
     if not isinstance(units, str) or not units:
         artifact = {
@@ -232,9 +304,11 @@ def main() -> None:
         "goal": "compute_non_strict_host_matching_metrics_between_F704_H_psi_eigenvalue_m2_proxies_and_an_explicit_external_standard_model_mass_target_dataset__no_false_pass",
         "inputs": {
             "F704_object": str(IN_F704_OBJECT.relative_to(REPO)),
-            "sm_mass_targets": str(IN_SM_TARGETS.relative_to(REPO)),
+            "sm_mass_targets_dataset": str(IN_SM_TARGETS.relative_to(REPO)),
+            "sm_host_matching_policy": str(IN_SM_POLICY.relative_to(REPO)),
         },
         "method": {
+            "policy_id": policy.get("policy_id"),
             "assignment": "linear_sum_assignment on squared differences of centered log(mass^2)",
             "scale": "global scale set by mean log(mass^2/ proxy_m2) after assignment",
         },
@@ -269,6 +343,8 @@ def main() -> None:
     summary = {
         "stage": "P704",
         "status": status,
+        "dataset_id": sm.get("dataset_id"),
+        "policy_id": policy.get("policy_id"),
         "units": units,
         "scale_mass2_per_proxy_unit": scale_m2,
         "rmse_log_m2": rmse_log_m2,
@@ -284,4 +360,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

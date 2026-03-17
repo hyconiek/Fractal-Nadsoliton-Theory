@@ -2,14 +2,16 @@
   "stage": "P704",
   "status": "COMPUTED_NONSTRICT_SM_HOST_MATCHING_METRICS_NO_PASS_CLAIM",
   "as_of": "2026-03-17",
-  "generated_utc": "2026-03-17T16:40:23.489866+00:00",
+  "generated_utc": "2026-03-17T17:50:07.290758+00:00",
   "scope": "nonstrict_external_host_matching_only",
   "goal": "compute_non_strict_host_matching_metrics_between_F704_H_psi_eigenvalue_m2_proxies_and_an_explicit_external_standard_model_mass_target_dataset__no_false_pass",
   "inputs": {
     "F704_object": "fundamental_action_reconstruction/generated/mass_observable_diagonal_local_strict_derived_v1.json",
-    "sm_mass_targets": "fundamental_action_reconstruction/external_data/sm_mass_targets_v1.json"
+    "sm_mass_targets_dataset": "fundamental_action_reconstruction/external_data/sm_mass_targets_v1.json",
+    "sm_host_matching_policy": "fundamental_action_reconstruction/external_data/sm_host_matching_policy_v1.json"
   },
   "method": {
+    "policy_id": "SM_host_matching_policy_v1_centered_log_assignment_with_global_scale",
     "assignment": "linear_sum_assignment on squared differences of centered log(mass^2)",
     "scale": "global scale set by mean log(mass^2/ proxy_m2) after assignment"
   },

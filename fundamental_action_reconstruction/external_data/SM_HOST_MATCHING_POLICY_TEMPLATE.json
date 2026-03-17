@@ -1,0 +1,35 @@
+{
+  "policy_id": "SM_host_matching_policy_v1_centered_log_assignment_with_global_scale",
+  "as_of": "FILL_ME_DATE",
+  "scope": "nonstrict_external_host_matching_only",
+  "expected_dataset_id": "SM_mass_targets_v1",
+  "method": "centered_log_assignment_with_global_scale",
+  "degrees_of_freedom": {
+    "global_scale_only": true,
+    "sector_scales_allowed": false,
+    "kinetic_metric_refit_allowed": false,
+    "nonlinear_mass_map_allowed": false
+  },
+  "assignment": {
+    "algorithm": "linear_sum_assignment",
+    "cost": "squared_difference_of_centered_log_m2"
+  },
+  "scale_definition": {
+    "symbol": "scale_m2_per_proxy_unit",
+    "formula": "log(scale) := mean_i ( log(tgt_m2[i]) - log(proxy_m2[i]) ) after the assignment; scale := exp(log(scale))"
+  },
+  "predicted_channels": [
+    "FILL_ME_WITH_CHANNEL_LABELS_OR_OMIT_TO_USE_DEFAULT_SORTED_CHANNELS"
+  ],
+  "pass_criteria": null,
+  "pass_criteria_semantics": "null => no pass/FAIL claim is permitted under this policy version (diagnostic metrics only).",
+  "hard_limits": [
+    "external_dataset_dependent",
+    "nonstrict_policy_layer_only",
+    "no_physical_unit_calibration_claim_in_strict_scope",
+    "no_standard_model_identification_claim"
+  ],
+  "note": "Template only. Probes use external_data/sm_host_matching_policy_v1.json. Copy this file and fill it if you want to create a new policy version (DO NOT silently edit an existing policy without version bump).",
+  "no_false_pass": true
+}
+

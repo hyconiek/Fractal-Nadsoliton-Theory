@@ -23,7 +23,9 @@ IN_P696_SUMMARY = (
 )
 
 IN_SM_TARGETS = ROOT / "external_data" / "sm_mass_targets_v1.json"
+IN_SM_POLICY = ROOT / "external_data" / "sm_host_matching_policy_v1.json"
 TEMPLATE_SM_TARGETS = ROOT / "external_data" / "SM_MASS_TARGETS_TEMPLATE.json"
+TEMPLATE_SM_POLICY = ROOT / "external_data" / "SM_HOST_MATCHING_POLICY_TEMPLATE.json"
 
 OUT_JSON = (
     GENERATED
@@ -46,7 +48,7 @@ def is_finite_number(x: Any) -> bool:
 def main() -> None:
     GENERATED.mkdir(exist_ok=True)
 
-    prereq = [IN_P696_SUMMARY, IN_SM_TARGETS]
+    prereq = [IN_P696_SUMMARY, IN_SM_TARGETS, IN_SM_POLICY]
     missing = [str(p.relative_to(REPO)) for p in prereq if not p.exists()]
     if missing:
         artifact = {
@@ -57,6 +59,8 @@ def main() -> None:
             "hints": {
                 "sm_targets_template": str(TEMPLATE_SM_TARGETS.relative_to(REPO)),
                 "sm_targets_required_path": str(IN_SM_TARGETS.relative_to(REPO)),
+                "sm_policy_template": str(TEMPLATE_SM_POLICY.relative_to(REPO)),
+                "sm_policy_required_path": str(IN_SM_POLICY.relative_to(REPO)),
             },
             "no_false_pass": True,
         }
@@ -102,8 +106,72 @@ def main() -> None:
 
     units = sm.get("units")
     targets = sm.get("targets")
-    predicted_channels = sm.get("predicted_channels")
-    policy = sm.get("matching_policy") or {}
+
+    policy = load_json(IN_SM_POLICY)
+    if not isinstance(policy, dict):
+        artifact = {
+            "stage": "P702",
+            "status": "INVALID_SM_POLICY_SHAPE",
+            "as_of": AS_OF,
+            "error": "SM host-matching policy file must be a JSON object",
+            "no_false_pass": True,
+        }
+        OUT_JSON.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="ascii")
+        OUT_SUMMARY.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="ascii")
+        print(OUT_SUMMARY)
+        return
+
+    if policy.get("method") != "centered_log_assignment_with_global_scale":
+        artifact = {
+            "stage": "P702",
+            "status": "NOT_COMPUTABLE_UNSUPPORTED_POLICY_METHOD",
+            "as_of": AS_OF,
+            "policy_method": policy.get("method"),
+            "expected_method": "centered_log_assignment_with_global_scale",
+            "no_false_pass": True,
+        }
+        OUT_JSON.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="ascii")
+        OUT_SUMMARY.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="ascii")
+        print(OUT_SUMMARY)
+        return
+
+    dof = policy.get("degrees_of_freedom") or {}
+    if not (
+        isinstance(dof, dict)
+        and dof.get("global_scale_only") is True
+        and dof.get("sector_scales_allowed") is False
+        and dof.get("kinetic_metric_refit_allowed") is False
+        and dof.get("nonlinear_mass_map_allowed") is False
+    ):
+        artifact = {
+            "stage": "P702",
+            "status": "NOT_COMPUTABLE_UNSUPPORTED_POLICY_DEGREES_OF_FREEDOM",
+            "as_of": AS_OF,
+            "degrees_of_freedom": dof,
+            "no_false_pass": True,
+        }
+        OUT_JSON.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="ascii")
+        OUT_SUMMARY.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="ascii")
+        print(OUT_SUMMARY)
+        return
+
+    expected_dataset_id = policy.get("expected_dataset_id")
+    if isinstance(expected_dataset_id, str) and expected_dataset_id:
+        if sm.get("dataset_id") != expected_dataset_id:
+            artifact = {
+                "stage": "P702",
+                "status": "NOT_COMPUTABLE_POLICY_DATASET_ID_MISMATCH",
+                "as_of": AS_OF,
+                "dataset_id": sm.get("dataset_id"),
+                "expected_dataset_id": expected_dataset_id,
+                "no_false_pass": True,
+            }
+            OUT_JSON.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="ascii")
+            OUT_SUMMARY.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="ascii")
+            print(OUT_SUMMARY)
+            return
+
+    predicted_channels = policy.get("predicted_channels")
 
     if not isinstance(units, str) or not units:
         artifact = {
@@ -125,7 +193,7 @@ def main() -> None:
             "stage": "P702",
             "status": "INVALID_SM_TARGETS_PREDICTED_CHANNELS",
             "as_of": AS_OF,
-            "error": "sm_mass_targets_v1.json predicted_channels must be a list[str] (or omit it to use P696 sorted channels)",
+            "error": "sm_host_matching_policy_v1.json predicted_channels must be a list[str] (or omit it to use P696 sorted channels)",
             "no_false_pass": True,
         }
         OUT_JSON.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="ascii")
@@ -302,13 +370,15 @@ def main() -> None:
         "goal": "compute_non_strict_host_matching_metrics_between_P696_channel_m2_proxies_and_an_explicit_external_standard_model_mass_target_dataset__no_false_pass",
         "inputs": {
             "P696_summary": str(IN_P696_SUMMARY.relative_to(REPO)),
-            "sm_mass_targets": str(IN_SM_TARGETS.relative_to(REPO)),
+            "sm_mass_targets_dataset": str(IN_SM_TARGETS.relative_to(REPO)),
+            "sm_host_matching_policy": str(IN_SM_POLICY.relative_to(REPO)),
         },
         "p696_mixing_audit": {
             "H_in_selector_aligned_basis_offdiag_to_diag_ratio": p696.get("H_in_selector_aligned_basis_offdiag_to_diag_ratio"),
             "offblock_max_fro": p696.get("offblock_max_fro"),
         },
         "method": {
+            "policy_id": policy.get("policy_id"),
             "assignment": "linear_sum_assignment on squared differences of centered log(mass^2)",
             "scale": "global scale set by mean log(mass^2/ proxy_m2) after assignment",
         },
@@ -343,6 +413,8 @@ def main() -> None:
     summary = {
         "stage": "P702",
         "status": status,
+        "dataset_id": sm.get("dataset_id"),
+        "policy_id": policy.get("policy_id"),
         "units": units,
         "scale_mass2_per_proxy_unit": scale_m2,
         "rmse_log_m2": rmse_log_m2,
@@ -358,4 +430,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

@@ -8,7 +8,8 @@ As of: `2026-03-17`
 Compute **non-strict** host-matching metrics between:
 
 1. the strict **basis-invariant** mass proxy spectrum exported by `F704` (eigenvalues of `H_psi`), and
-2. an explicit external Standard Model mass target dataset (`external_data/sm_mass_targets_v1.json`).
+2. an explicit external Standard Model mass target dataset (`external_data/sm_mass_targets_v1.json`),
+   under an explicit **versioned** non-strict host-matching policy (`external_data/sm_host_matching_policy_v1.json`).
 
 This probe is **outside strict scope** by construction: it depends on an external dataset and an identification/matching policy.  
 It does not claim any Standard Model match or ToE closure.
@@ -17,8 +18,10 @@ It does not claim any Standard Model match or ToE closure.
 
 - `F704` strict mass observable:
   - `fundamental_action_reconstruction/generated/mass_observable_diagonal_local_strict_derived_v1.json`
-- External dataset:
+- External dataset (targets only):
   - `fundamental_action_reconstruction/external_data/sm_mass_targets_v1.json`
+- External policy (identification / assignment / scale DOF):
+  - `fundamental_action_reconstruction/external_data/sm_host_matching_policy_v1.json`
 
 ## Output
 
@@ -40,4 +43,3 @@ Exports:
 - No Standard Model identification claim.
 - No `QW-2191` discharge.
 - No ToE closure.
-

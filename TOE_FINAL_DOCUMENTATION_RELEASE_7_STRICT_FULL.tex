@@ -849,7 +849,13 @@ mode index & $\lambda_i(H_{\psi}^{(s)})$ (proxy $m^2$)\\
   \item \textbf{Not claimed:} that any proxy number is already identified with a Standard Model mass or coupling.
   \item \textbf{Not claimed:} that the selector-aligned channel basis diagonalizes $H_{\psi}$; mixing is audited and explicitly non-negligible (\texttt{P696}).
   \item \textbf{Not claimed:} kernel-alone/global \texttt{QW-2191} discharge, directed sign-sensitive physical orientation in strict core, or ToE closure.
-  \item \textbf{Host matching discipline:} any attempted identification of proxy values with external physics data is necessarily non-strict and must carry an explicit external dataset + mapping policy; see the non-strict host-matching harnesses \texttt{P702} (channel proxy) and \texttt{P704} (eigen-spectrum proxy).
+  \item \textbf{Host matching discipline:} any attempted identification of proxy values with external physics data is necessarily non-strict and must carry an explicit external dataset + mapping policy; see \texttt{P702} (channel proxy) and \texttt{P704} (eigen-spectrum proxy).
+  The current repo freezes this non-strict layer by separating:
+  \begin{itemize}
+    \item the external dataset (targets only): \verb|external_data/sm_mass_targets_v1.json|,
+    \item the external versioned policy (assignment + allowed DOF + optional thresholds): \verb|external_data/sm_host_matching_policy_v1.json|,
+  \end{itemize}
+  where the current policy explicitly allows \emph{only} a single global scale and sets \texttt{pass\_criteria=null} (diagnostic metrics only; no pass/FAIL claim).
   \item \textbf{Non-strict diagnostic (current):} under the simplest one-scale centered-log assignment policy against an explicit PDG2024 mass target dataset, \texttt{P702} computes $\mathrm{RMSE}(\log m^2)\approx 8.10$ and $\max|\Delta m/m|\approx 7.90\times 10^{2}$, while \texttt{P704} computes $\mathrm{RMSE}(\log m^2)\approx 7.23$ and $\max|\Delta m/m|\approx 4.35\times 10^{2}$, so \emph{no} “Standard Model match” claim is made at this stage.
 \end{itemize}
 

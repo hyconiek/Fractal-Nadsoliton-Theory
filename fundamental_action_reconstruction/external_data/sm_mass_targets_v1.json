@@ -3,25 +3,12 @@
   "as_of": "2024-05-31",
   "source": "Particle Data Group (S. Navas et al.), Phys. Rev. D 110, 030001 (2024). Summary Tables PDFs: rpp2024-sum-leptons.pdf, rpp2024-sum-quarks.pdf, rpp2024-sum-gauge-higgs-bosons.pdf. Retrieved 2026-03-17.",
   "units": "GeV",
+  "note": "Dataset-only object (external). Identification/matching policy is separated into external_data/sm_host_matching_policy_v1.json to prevent silent degree-of-freedom smuggling (no false pass).",
   "target_definition": {
     "leptons": "m_e, m_mu, m_tau from PDG 2024 leptons summary table.",
     "quarks": "m_u, m_d, m_s are MSbar masses at mu=2 GeV; m_c and m_b are MSbar masses renormalized at mu=m; m_t is direct measurement (event kinematics), per PDG 2024 quarks summary table.",
     "gauge_higgs": "m_W world average and m_Z Breit-Wigner parameter from PDG 2024 gauge & Higgs summary table; m_H from the same table."
   },
-  "predicted_channels": [
-    "pair3:u",
-    "pair5:u",
-    "pair4:u",
-    "pair2:u",
-    "e6",
-    "pair1:u",
-    "pair5:u_perp",
-    "pair4:u_perp",
-    "pair2:u_perp",
-    "e0",
-    "pair3:u_perp",
-    "pair1:u_perp"
-  ],
   "targets": [
     {
       "id": "e",
@@ -83,10 +70,5 @@
       "mass": 172.57,
       "sigma_mass": 0.29
     }
-  ],
-  "matching_policy": {
-    "method": "centered_log_assignment_with_global_scale",
-    "pass_criteria": null
-  }
+  ]
 }
-
