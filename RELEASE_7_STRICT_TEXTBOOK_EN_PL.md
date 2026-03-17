@@ -39,6 +39,7 @@ The intended endpoint of Release 7 is a **theorem‑level packaging** that the O
 Already exported on the current repo state (Release 6.5.x):
 
 - Projective strict-core selector closure is discharged at theorem level (`N680`), with `QW-2191` kernel‑alone discharge still open.
+- The post-closure strict frontier is packaged as a theorem-level boundary (`N679`): no kernel-alone/global `QW-2191` discharge and no directed/sign-sensitive physical orientation datum promoted into strict core beyond premise-tracked conventions.
 - A strict projective operational ToE OS support packet is exported and packaged (`F698`, audited by `P698`, packaged by `N698`):
   it bundles projective closure (`N680`), directed→projective output‑ray invariance (`N692`), output sign‑lift gauge covariance (`N693`),
   first physics proxies (`P694`, `P696`), and an observer‑limit readout bridge (`P697`).
@@ -91,6 +92,7 @@ Docelowym punktem końcowym Release 7 jest **theorem‑level** opakowanie, że p
 Już na obecnym stanie repo (Release 6.5.x):
 
 - Projective strict-core selector closure jest rozładowane theorem-level (`N680`), przy otwartym kernel‑alone discharge `QW-2191`.
+- Repo pakuje post-closure strict frontier jako theorem-level boundary (`N679`): brak kernel-alone/global discharge `QW-2191` oraz brak promocji directed/sign‑sensitive fizycznego datumu orientacji do strict core poza premise‑tracked konwencjami.
 - Repo eksportuje i pakuje strict projective operational ToE OS support packet (`F698`, audyt `P698`, opakowanie `N698`):
   wiąże projective closure (`N680`), directed→projective output‑ray invariance (`N692`), gauge‑kowariancję output sign‑lift (`N693`),
   pierwsze proxy fizyki (`P694`, `P696`) i mostek odczytu observer‑limit (`P697`).
