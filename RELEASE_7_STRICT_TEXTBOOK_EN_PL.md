@@ -1,15 +1,16 @@
 # RELEASE 7 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 7.0.4 (Preparation Draft)  
+**Version:** 7.0.5 (Final — strict projective OS closure)  
 **Date:** 2026-03-17  
 **Branch:** `main`  
 **Predecessor:** Release 6.5 — Strict Textbook Edition
 
 **Status discipline (no false pass):**
-- This document is a **preparation draft** for Release 7 (“full closure” target). It is **not** yet a claim that the theory is fully closed.
+- This document is the **final Release 7** strict-textbook projection of the current repo state, scoped to **Operational ToE closure** (a computable ToE “OS”) in **strict projective** scope.
 - It does **not** claim strict-core ToE closure, global ToE closure, or kernel-alone/global `QW-2191` discharge unless such a discharge is explicitly exported at theorem level.
 - Directed/sign-sensitive physical orientation remains a **tracked gauge/convention layer** unless explicitly promoted in a premise-tracked strict scope.
 - Any proxy→GeV or Standard Model identification attempt is **non-strict** and must be frozen as: (i) an explicit external dataset object, and (ii) an explicit versioned non-strict matching policy object (to prevent silent DOF smuggling).
+- Primary artifacts (repo root): `TOE_FINAL_DOCUMENTATION_RELEASE_7_STRICT_FULL.tex` and `TOE_FINAL_DOCUMENTATION_RELEASE_7_STRICT_FULL.pdf`.
 
 The theory originates from a deep intuition that **Information is the fundamental substance of reality**, consistent with the metaphysical insight that *"In the beginning was the Word"* (Logos/Information). This intuition evolved through key realizations:
 
@@ -70,8 +71,9 @@ Release 7 must not silently upgrade any of the following without explicit theore
 ## 4 Release‑7 deliverables (EN)
 
 1. `TOE_FINAL_DOCUMENTATION_RELEASE_7_STRICT_FULL.tex` (final TeX) — complete definitions + derivations + discharge map; hard limits explicit.
-2. Release‑7 strict textbook file (this document) updated from “preparation draft” to “final”.
-3. A minimal closure dashboard/probe set proving OS‑computability end‑to‑end, without false pass (`P706`).
+2. `TOE_FINAL_DOCUMENTATION_RELEASE_7_STRICT_FULL.pdf` (built PDF, repo root) — compiled from the above TeX.
+3. Release‑7 strict textbook file (this document) updated from “preparation draft” to “final”.
+4. A minimal closure dashboard/probe set proving OS‑computability end‑to‑end, without false pass (`P706`).
 
 ---
 
@@ -123,5 +125,6 @@ Release 7 nie może po cichu promować bez jawnego theorem‑level eksportu:
 ## 4 Deliverables Release‑7 (PL)
 
 1. `TOE_FINAL_DOCUMENTATION_RELEASE_7_STRICT_FULL.tex` (final TeX) — komplet definicji + wyprowadzeń + mapa discharge; hard‑limity jawne.
-2. Plik Release‑7 strict textbook (ten dokument) doprowadzony z “preparation draft” do “final”.
-3. Minimalny zestaw dashboardów/sond pokazujący OS‑obliczalność end‑to‑end bez false pass (`P706`).
+2. `TOE_FINAL_DOCUMENTATION_RELEASE_7_STRICT_FULL.pdf` (PDF w katalogu głównym repo) — skompilowany z powyższego TeX.
+3. Plik Release‑7 strict textbook (ten dokument) doprowadzony z “preparation draft” do “final”.
+4. Minimalny zestaw dashboardów/sond pokazujący OS‑obliczalność end‑to‑end bez false pass (`P706`).

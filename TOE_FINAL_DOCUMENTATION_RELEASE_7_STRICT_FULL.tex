@@ -80,6 +80,20 @@
 
 \maketitle
 
+\begin{abstract}
+This article is the self-contained \emph{Release 7 (Strict)} documentation target of the ToE program in this repository.
+It records (i) the strict core candidate Lagrangian template (one-kernel nadsoliton core), (ii) the strict global selector
+closure achieved in \emph{projective (ray-level)} scope on the declared configuration space $C_{v1}$, and (iii) the resulting
+operational computability pipeline (“ToE OS”) producing first strict quadratic physics proxies and observer-limit downstream artifacts.
+All stronger claims (kernel-alone/global discharge of the strict uniqueness obstruction \texttt{QW-2191}, any directed/sign-sensitive
+physical orientation datum in strict core, Standard Model identification/host matching in strict scope, and strong ToE closure)
+remain explicitly separated and are \textbf{not} silently promoted.
+
+Reproducibility is provided by the repository’s exported JSON artifacts and smoke probes; see the \emph{Reproducibility stamp}
+below.
+\end{abstract}
+
+\section*{Origin and philosophy (required fragment)}
 \begin{quote}
 The theory originates from a deep intuition that \textbf{Information is the fundamental substance of reality}, consistent with the metaphysical insight that \emph{"In the beginning was the Word"} (Logos/Information). This intuition evolved through key realizations:
 \begin{enumerate}[label=\arabic*.]
@@ -93,7 +107,7 @@ The theory originates from a deep intuition that \textbf{Information is the fund
 \end{quote}
 
 \chapter*{Status discipline (no false pass)}
-This TeX document is the intended **Release-7 strict final documentation** target.
+This TeX document is the intended \textbf{Release-7 strict final documentation} target.
 It must not silently claim:
 \begin{enumerate}[label=\arabic*.]
   \item strict-core ToE closure,
@@ -104,6 +118,24 @@ It must not silently claim:
   \item actual emergent observer closure,
 \end{enumerate}
 unless such claims are explicitly exported at theorem level in the repo and are referenced here with their hard limits.
+
+\chapter*{Reproducibility stamp (Release 7)}
+\begin{itemize}
+  \item \textbf{Repo root:} \verb|/home/krzysiek/Pobrane/TOE/edison|
+  \item \textbf{As-of date:} \texttt{2026-03-17}
+  \item \textbf{Build smoke probe (PDF + strict dashboards):} \texttt{P707} (\verb|fundamental_action_reconstruction/p707_current_release_7_build_and_closure_smoke_probe.py|)
+  \item \textbf{Strict OS closure dashboard:} \texttt{P706} (\verb|fundamental_action_reconstruction/p706_current_release_7_strict_projective_operational_toe_os_closure_dashboard_probe.py|)
+  \item \textbf{Strict \texttt{T173} frontier dashboard:} \texttt{P708} (\verb|fundamental_action_reconstruction/p708_current_strict_t173_frontier_dashboard_probe.py|)
+\end{itemize}
+
+To reproduce the PDF and verify the current Release-7 strict dashboard statuses:
+\begin{lstlisting}
+git rev-parse HEAD
+python3 fundamental_action_reconstruction/p707_current_release_7_build_and_closure_smoke_probe.py
+cat fundamental_action_reconstruction/generated/p707_current_release_7_build_and_closure_smoke_probe_summary.json
+cat fundamental_action_reconstruction/generated/p706_current_release_7_strict_projective_operational_toe_os_closure_dashboard_probe_summary.json
+cat fundamental_action_reconstruction/generated/p708_current_strict_t173_frontier_dashboard_probe_summary.json
+\end{lstlisting}
 
 \tableofcontents
 
@@ -803,11 +835,16 @@ Residual $\mathbb{Z}_2$ sign handling is tracked at the convention layer and is 
 B_{\mathrm{out}}
 =
 \begin{pmatrix}
+1 & -9.149258638450154\times 10^{-16}\\
+-9.149258638450154\times 10^{-16} & 8.370893363325476\times 10^{-31}
+\end{pmatrix}
+\approx
+\begin{pmatrix}
 1 & 0\\
 0 & 0
-\end{pmatrix}
-\quad\text{(numerically, up to machine-level residuals).}
+\end{pmatrix},
 \]
+so numerically the global output projector is the pure $o_+$ ray (machine-level residuals only).
 
 \begin{remark}[Explicit well-definedness certificate (F672)]
 The strict projective closure export \texttt{F672} includes an explicit \emph{well-definedness certificate} of chart-independence at projector level.
@@ -1278,5 +1315,116 @@ Open (explicit hard limits):
   \item Observer-limit readout invariants from the projective closure output projector: \texttt{P697}.
   \item Full induced operator chain computability under $P\mapsto MPM^{\mathsf T}$: \texttt{P699}/\texttt{N699}.
 \end{itemize}
+
+\chapter{Explicit numeric artifacts (Release 7)}
+\section{Frozen kernel distance profile on \texorpdfstring{$\mathbb{Z}_{12}$}{Z\_12}}
+
+The strict kernel-mode lane uses the frozen symmetric mixing matrix $K_{\mathrm{total}}$ on $\mathbb{Z}_{12}$ (specialization route \texttt{R14}, instantiated in \texttt{F459}).
+On the current repo state, its cyclic-distance profile (for $d=1,\dots,6$) is:
+
+\begin{center}
+\begin{tabular}{rr}
+\toprule
+$d$ & $k(d)$\\
+\midrule
+1 & $0.46998567264502017$\\
+2 & $0.19204355169010282$\\
+3 & $0.09142861427792497$\\
+4 & $0.04702916874565040$\\
+5 & $0.02413122336363006$\\
+6 & $0.011070817321442113$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The full $12\times 12$ matrix is circulant/symmetric under cyclic distance:
+\[
+(K_{\mathrm{total}})_{ij}=k\bigl(d_{\mathrm{cyc}}(i,j)\bigr),\qquad k(0)=0,\qquad k(d)=k(12-d)\ \ (d=1,\dots,6).
+\]
+
+\section{Explicit diagonal/local Psi-sector Hessian instantiation (F459)}
+
+The diagonal/local Psi-sector Hessian instantiation \texttt{F459} exports a symmetric matrix $H_{\psi}\in\mathbb{R}^{12\times 12}$.
+On the current repo state it decomposes \emph{exactly} as:
+\[
+(H_{\psi})_{ij}=
+\begin{cases}
+m_0^2+d_{\mathrm{local}}(i), & i=j,\\[2pt]
+k\bigl(d_{\mathrm{cyc}}(i,j)\bigr), & i\neq j,
+\end{cases}
+\]
+with
+\[
+m_0^2 = 1.013551972358388.
+\]
+The exported diagonal residual profile $d_{\mathrm{local}}(i)$ and the resulting diagonal are:
+
+\begin{center}
+\begin{tabular}{r rr}
+\toprule
+$i$ & $d_{\mathrm{local}}(i)$ & $(H_{\psi})_{ii}=m_0^2+d_{\mathrm{local}}(i)$\\
+\midrule
+0 & $0.34269049977246646$ & $1.3562424721308544$\\
+1 & $11.518361441687219$ & $12.531913414045606$\\
+2 & $0.5284499241054783$ & $1.5420018964638662$\\
+3 & $-0.1567291917971062$ & $0.8568227805612817$\\
+4 & $-0.5341686256176337$ & $0.4793833467407542$\\
+5 & $1.2939217196807558$ & $2.3074736920391437$\\
+6 & $-0.5936675263840503$ & $0.4198844459743376$\\
+7 & $1.2939217196807553$ & $2.3074736920391430$\\
+8 & $-0.5341686256176337$ & $0.4793833467407542$\\
+9 & $-0.1567291917971062$ & $0.8568227805612817$\\
+10 & $0.5284499241054781$ & $1.5420018964638660$\\
+11 & $11.518361441687219$ & $12.531913414045606$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+All full numeric matrices ($K_{\mathrm{total}}$, $H_{\psi}$) and the invariant eigen-spectrum are exported in
+\verb|fundamental_action_reconstruction/generated/psi_hessian_diagonal_local_strict_derived_value_instantiated_v1.json|.
+
+\chapter{Frozen non-strict host matching layer (dataset vs policy)}
+\section{External Standard-Model mass dataset (v1)}
+
+The repo freezes the external dataset (targets-only) as:
+\verb|fundamental_action_reconstruction/external_data/sm_mass_targets_v1.json|,
+with dataset id \texttt{SM\_mass\_targets\_v1\_pdg2024\_summary\_tables}.
+For reader convenience, the current target list (units: GeV) is:
+
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+id & $m$ (GeV) & $\sigma_m$ (GeV)\\
+\midrule
+$e$ & $0.00051099895$ & $1.5\times 10^{-13}$\\
+$u$ & $0.00216$ & $7.0\times 10^{-5}$\\
+$d$ & $0.0047$ & $7.0\times 10^{-5}$\\
+$\mu$ & $0.1056583755$ & $2.3\times 10^{-9}$\\
+$s$ & $0.0935$ & $8.0\times 10^{-4}$\\
+$\tau$ & $1.77693$ & $9.0\times 10^{-5}$\\
+$c$ & $1.273$ & $4.6\times 10^{-3}$\\
+$b$ & $4.183$ & $7.0\times 10^{-3}$\\
+$W$ & $80.3692$ & $1.33\times 10^{-2}$\\
+$Z$ & $91.188$ & $2.0\times 10^{-3}$\\
+$H$ & $125.2$ & $1.1\times 10^{-1}$\\
+$t$ & $172.57$ & $2.9\times 10^{-1}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{External host matching policy (v1, frozen no-pass)}
+
+The repo freezes the external matching policy as:
+\verb|fundamental_action_reconstruction/external_data/sm_host_matching_policy_v1.json|,
+with policy id \texttt{SM\_host\_matching\_policy\_v1\_centered\_log\_assignment\_with\_global\_scale}.
+The policy declares:
+\begin{itemize}
+  \item an assignment algorithm: linear sum assignment on squared centered $\log m^2$ differences,
+  \item \textbf{allowed DOF:} only a single global scale factor (defined by centered $\log m^2$ matching after the assignment),
+  \item \textbf{disallowed DOF:} sector scales, kinetic-metric refits, nonlinear mass maps,
+  \item \textbf{pass criteria:} \texttt{pass\_criteria=null}, with semantics: \emph{no pass/FAIL claim is permitted} under this policy version (diagnostic metrics only).
+\end{itemize}
+
+\emph{Hard limits:} this entire layer remains non-strict and external-data dependent. It is not part of the strict OS closure bundle.
 
 \end{document}
