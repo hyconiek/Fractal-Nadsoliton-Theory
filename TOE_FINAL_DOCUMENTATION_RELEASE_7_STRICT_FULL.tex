@@ -380,6 +380,15 @@ On the current repo state, the global chart/transition infrastructure required f
   \item a global selector transition (gluing) object on $C_{v1}$ (\texttt{F469}, packaged by \texttt{N515}).
 \end{itemize}
 
+In the current strict global-typing export (\texttt{F469}), the chart domains are declared as a global cover:
+\[
+U_{\mathrm{pair}_1}=\cdots=U_{\mathrm{pair}_5}=C_{v1},
+\qquad
+U_i\cap U_j=C_{v1}.
+\]
+This declaration upgrades the earlier lane-scoped “exported-artifact overlap” wording into an explicit $C_{v1}$-typed atlas/transition object class discharge (T170),
+but it does \emph{not} add any physical claim and does \emph{not} promote operator-level cocycle/groupoid identities (\texttt{N512} boundary).
+
 The atlas uses five chart labels $\mathrm{pair}_m$ ($m=1,\dots,5$), corresponding to the five real Fourier pair planes
 $V_m=\mathrm{span}\{c_m,s_m\}\subset \mathbb{R}^{12}$.
 Each chart exports a local rank‑1 projector operator $A_m$ (a ray/state projector) on that plane.
@@ -515,6 +524,24 @@ B_{\mathrm{out}}
 \end{pmatrix}
 \quad\text{(numerically, up to machine-level residuals).}
 \]
+
+\begin{remark}[Explicit well-definedness certificate (F672)]
+The strict projective closure export \texttt{F672} includes an explicit \emph{well-definedness certificate} of chart-independence at projector level.
+Concretely, for a fixed reference chart (taken as \texttt{pair1} in the export), define the max-entry difference
+\[
+\Delta_m
+\;:=\;
+\max_{a,b\in\{+,-\}}
+\left|\bigl(B_{\mathrm{out}}(\mathrm{pair}_m)-B_{\mathrm{out}}(\mathrm{pair}_1)\bigr)_{ab}\right|.
+\]
+\texttt{F672} certifies:
+\[
+\max_{m=1,\dots,5}\Delta_m \le 10^{-12},
+\qquad
+\max_{m}\Delta_m \approx 7.27\times 10^{-16},
+\]
+and marks the certificate as passed. This is sufficient for \emph{projective/ray-level} closure scope and does not upgrade to any operator-level groupoid identity (\texttt{N512} boundary).
+\end{remark}
 
 This is a \emph{projective} closure statement only: it is insensitive to sign lifts $u_m\mapsto -u_m$ and does not claim any directed/sign-sensitive physical orientation datum.
 
