@@ -10,7 +10,8 @@
 - It does **not** claim strict-core selector closure, kernel-alone/global `QW-2191` discharge, or ToE closure.
 - Update (`2026-03-17`): the repo exports a global **projective** selector closure object on `C_v1`,
   `SelectorClosure_global_C_v1_projective_strict_v1` (`F672`, audited by `P673`, packaged by `N672`), and exports a theorem-level
-  `QW-2191` projective-closure resolution statement clarifying “bypass vs kernel-alone discharge” (`N673`). These exports do **not**
+  `QW-2191` projective-closure resolution statement clarifying “bypass vs kernel-alone discharge” (`N673`), and packages the corresponding
+  `T172` projective discharge (`N674`). These exports do **not**
   upgrade to strict-core selector closure or ToE closure.
 - Update (`2026-03-15`): the canonical **diagonal/local lane** on the strict `n=12` carrier now exports a strict-derived
   **numeric value-instantiation** deciding the diagonal mode‑2 defect nonzero condition (`T166`) on `pair1`, and in fact
@@ -226,7 +227,8 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
     `SelectorOutputOperator_global_C_v1_seed_v1_promoted_strict_v1` (`F660`, audited by `P660`, packaged by `N552`).
 34. update (`2026-03-17`): the repo exports an explicit global **projective selector closure object** on `C_v1`,
     `SelectorClosure_global_C_v1_projective_strict_v1` (`F672`), audited by `P673` and packaged by `N672`, and exports a theorem-level
-    `QW-2191` projective-closure resolution statement clarifying “bypass for the closure observable vs kernel-alone discharge” (`N673`).
+    `QW-2191` projective-closure resolution statement clarifying “bypass for the closure observable vs kernel-alone discharge” (`N673`), and packages
+    the corresponding `T172` projective discharge (`N674`).
     This remains below strict-core selector closure and keeps kernel-alone/global `QW-2191` discharge unclaimed.
 
 ## 1) One-Page Strict Status (6.5)
@@ -540,7 +542,8 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
     `SelectorDownstreamCompletionBranch_global_C_v1_seed_v1_promoted_strict_v1` (`F661`, audyt `P661`, opakowane przez `N553`).
 42. update (`2026-03-17`): repo eksportuje jawny **globalny projektowy** obiekt domknięcia selektora na `C_v1`,
     `SelectorClosure_global_C_v1_projective_strict_v1` (`F672`), audytowany przez `P673` i opakowany przez `N672`, oraz eksportuje theorem-level
-    statement rozstrzygający sens “`QW-2191` resolution” w tym scope (bypass dla obserwabli domknięcia vs brak kernel-alone discharge) (`N673`).
+    statement rozstrzygający sens “`QW-2191` resolution” w tym scope (bypass dla obserwabli domknięcia vs brak kernel-alone discharge) (`N673`) oraz pakuje
+    odpowiadające projective discharge `T172` (`N674`).
     To nadal jest poniżej strict-core selector closure i nie promuje się do globalnego kernel-alone rozładowania `QW-2191`.
 
 ## 1) Jednostronicowy status strict (6.5)
@@ -567,7 +570,7 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
    (`F658/P658/N550`, `F659/P659/N551`, `F660/P660/N552`, `F661/P661/N553`), jawnie poniżej strict-core selector closure.
 10. Update (`2026-03-17`): repo eksportuje teraz jawny **globalny projektowy** obiekt domknięcia selektora na `C_v1`,
     `SelectorClosure_global_C_v1_projective_strict_v1` (`F672`), z well-definedness na poziomie projektor/sekcja opakowanym przez `N672` oraz
-    scope-explicit statement o sensie “`QW-2191` resolution” dla obserwabli domknięcia (`N673`). To nie implikuje strict-core selector closure,
+    scope-explicit statement o sensie “`QW-2191` resolution” dla obserwabli domknięcia (`N673`) oraz odpowiadające discharge `T172` (`N674`). To nie implikuje strict-core selector closure,
     globalnego kernel-alone discharge `QW-2191` ani domknięcia ToE.
 
 ### 1.2 Czego nadal brakuje (bez false pass)

@@ -206,6 +206,9 @@ N553_SEED_GLOBAL_DOWNSTREAM_COMPLETION_SUMMARY = (
     GENERATED
     / "n553_current_strict_global_downstream_completion_branch_discharge_for_promoted_seed_v1_chain_on_c_v1_discharge_theorem_summary.json"
 )
+N674_T172_PROJECTIVE_DISCHARGE_SUMMARY = (
+    GENERATED / "n674_current_strict_t172_projective_closure_discharge_theorem_summary.json"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -377,6 +380,18 @@ def _source_seed_route_selected() -> tuple[bool, dict[str, Any] | None]:
     return bool(selected), p633
 
 
+def _t172_projective_closure_discharged() -> tuple[bool, dict[str, Any] | None]:
+    if not N674_T172_PROJECTIVE_DISCHARGE_SUMMARY.exists():
+        return False, None
+    try:
+        n674 = load_json(N674_T172_PROJECTIVE_DISCHARGE_SUMMARY)
+    except Exception:
+        return False, None
+    tr = n674.get("theorem_result")
+    discharged = bool(isinstance(tr, dict) and tr.get("discharged") is True)
+    return discharged, n674
+
+
 def main() -> None:
     GENERATED.mkdir(exist_ok=True)
     args = parse_args()
@@ -503,6 +518,7 @@ def main() -> None:
     p16_freeze_selected, p480 = _p16_route_negative_freeze_selected()
     direct_formal_freeze_selected, p631 = _direct_formal_route_negative_freeze_selected()
     source_seed_selected, p633 = _source_seed_route_selected()
+    t172_projective_discharged, n674 = _t172_projective_closure_discharged()
 
     # Professorial precedence: directed continuation (P632) supersedes the earlier projective-only decision packet (P475).
     if directed_selected:
@@ -515,12 +531,36 @@ def main() -> None:
         and T172_TARGET_SPEC.exists()
         and N553_SEED_GLOBAL_DOWNSTREAM_COMPLETION_SUMMARY.exists()
     ):
-        recommended_next = "T172"
-        recommendation_reason = (
-            "Repo is past the infrastructure-export phase for strict continuation on C_v1: global atlas/transition/state objects are exported (T170/T171), "
-            "and seed‑v1 global promotions are exported (N550–N553), but strict-core selector closure and global QW‑2191 discharge remain explicitly open. "
-            "Next honest strict target is the explicit global closure/discharge target spec (T172), keeping level/sign discipline explicit."
-        )
+        if t172_projective_discharged:
+            if source_seed_selected:
+                recommended_next = "P119"
+                recommendation_reason = (
+                    "T172 is now discharged in the projective (ray) closure scope (N674 packages F672/N672/N673): "
+                    "a global projective selector closure observable is exported on C_v1, while kernel-alone QW-2191 discharge and strict-core selector closure remain unclaimed. "
+                    "Professorial routing decision P633 remains selected; next honest strict bottleneck is the strict-core source-seed continuation frontier for S_sel_int (P119)."
+                )
+            elif directed_selected:
+                recommended_next = "P11"
+                recommendation_reason = (
+                    "T172 is now discharged in the projective (ray) closure scope (N674 packages F672/N672/N673). "
+                    "Next strict bottleneck shifts back to strict-only ToE-closure continuation tasks tracked by the existing-kernel-feedback -> explicit-chain factorization route (P11), "
+                    "with directed continuation kept explicit (P632) and without implying any strict-core selector closure."
+                )
+            else:
+                recommended_next = "P11"
+                recommendation_reason = (
+                    "T172 is now discharged in the projective (ray) closure scope (N674 packages F672/N672/N673). "
+                    "Next strict bottleneck shifts back to strict-only ToE-closure continuation tasks tracked by P11, without implying any strict-core selector closure."
+                )
+            if n674 is not None:
+                recommendation_reason += f" Evidence: {N674_T172_PROJECTIVE_DISCHARGE_SUMMARY.relative_to(REPO)}."
+        else:
+            recommended_next = "T172"
+            recommendation_reason = (
+                "Repo is past the infrastructure-export phase for strict continuation on C_v1: global atlas/transition/state objects are exported (T170/T171), "
+                "and seed‑v1 global promotions are exported (N550–N553), but strict-core selector closure and global QW‑2191 discharge remain explicitly open. "
+                "Next honest strict target is the explicit global closure/discharge target spec (T172), keeping level/sign discipline explicit."
+            )
 
     # If a later professorial decision shifts the next move to the strict-core source-seed frontier, honor it.
     if source_seed_selected and recommended_next == "P11":
