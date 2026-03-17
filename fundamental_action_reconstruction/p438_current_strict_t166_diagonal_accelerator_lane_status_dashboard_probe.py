@@ -457,6 +457,18 @@ N554_SUMMARY = (
     GENERATED
     / "n554_current_first_actual_legacy_to_strict_kernel_nonbridge_strengthening_discharge_witness_theorem_summary.json"
 )
+F663_SUMMARY = (
+    GENERATED
+    / "f663_current_actual_legacy_to_strict_kernel_bifurcated_frontier_packet_v2_summary.json"
+)
+P663_SUMMARY = (
+    GENERATED
+    / "p663_current_actual_legacy_to_strict_kernel_bifurcated_frontier_probe_v2_summary.json"
+)
+N663_SUMMARY = (
+    GENERATED
+    / "n663_current_first_actual_legacy_to_strict_kernel_bifurcated_frontier_theorem_v2_summary.json"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -1401,15 +1413,56 @@ def main() -> None:
                                                                                                                                                 "Next move: update Release 6.5 (EN+PL) to record this comparison-frontier discharge without implying any further closure."
                                                                                                                                             )
                                                                                                                                         else:
-                                                                                                                                            recommended_next_target = (
-                                                                                                                                                "EXPORT_CURRENT_KERNEL_FRONTIER_PACKET_V2"
-                                                                                                                                            )
-                                                                                                                                            recommendation_reason = (
-                                                                                                                                                "Kernel-split frontier is now strengthened on the negative branch on the current export set (F662/P662/N554), "
-                                                                                                                                                "while the positive bridge branch remains future-only. "
-                                                                                                                                                "Next honest move: export a current frontier packet/probe capturing this post-N554 state (a v2 beyond the frozen F153/P243 snapshot), "
-                                                                                                                                                "keeping branch selection and any permanent no-bridge claim explicit and separate."
-                                                                                                                                            )
+                                                                                                                                            if not N663_SUMMARY.exists():
+                                                                                                                                                if not F663_SUMMARY.exists():
+                                                                                                                                                    recommended_next_target = (
+                                                                                                                                                        "F663"
+                                                                                                                                                    )
+                                                                                                                                                    recommendation_reason = (
+                                                                                                                                                        "Kernel-split frontier is now strengthened on the negative branch on the current export set (F662/P662/N554), "
+                                                                                                                                                        "while the positive bridge branch remains future-only. "
+                                                                                                                                                        "Next honest move: export a current post-N554 frontier status packet v2 (F663) beyond the frozen F153/P243 snapshot, "
+                                                                                                                                                        "keeping branch selection and any permanent no-bridge claim explicit and separate."
+                                                                                                                                                    )
+                                                                                                                                                elif not P663_SUMMARY.exists():
+                                                                                                                                                    recommended_next_target = (
+                                                                                                                                                        "P663"
+                                                                                                                                                    )
+                                                                                                                                                    recommendation_reason = (
+                                                                                                                                                        "F663 exports the post-N554 kernel frontier status packet v2. "
+                                                                                                                                                        "Next move: run the audit probe (P663) to confirm the packet reflects the current state "
+                                                                                                                                                        "(bridge future-only; nonbridge not future-only; no branch-selection claim)."
+                                                                                                                                                    )
+                                                                                                                                                else:
+                                                                                                                                                    recommended_next_target = (
+                                                                                                                                                        "N663"
+                                                                                                                                                    )
+                                                                                                                                                    recommendation_reason = (
+                                                                                                                                                        "P663 audits the post-N554 kernel frontier status packet v2. "
+                                                                                                                                                        "Next move: package the theorem-level discharge (N663) for that frontier status packet."
+                                                                                                                                                    )
+                                                                                                                                            else:
+                                                                                                                                                if not file_contains(
+                                                                                                                                                    RELEASE_6_5,
+                                                                                                                                                    "N663",
+                                                                                                                                                ):
+                                                                                                                                                    recommended_next_target = (
+                                                                                                                                                        "UPDATE_RELEASE_6_5_STRICT_TEXTBOOK_EN_PL"
+                                                                                                                                                    )
+                                                                                                                                                    recommendation_reason = (
+                                                                                                                                                        "The post-N554 kernel frontier status packet v2 is now exported and packaged (F663/P663/N663). "
+                                                                                                                                                        "Next move: update Release 6.5 (EN+PL) to record this frontier-status hygiene step without implying branch selection "
+                                                                                                                                                        "or any permanent no-bridge claim."
+                                                                                                                                                    )
+                                                                                                                                                else:
+                                                                                                                                                    recommended_next_target = (
+                                                                                                                                                        "RETURN_TO_STRICT_SELECTOR_CLOSURE_FRONTIER"
+                                                                                                                                                    )
+                                                                                                                                                    recommendation_reason = (
+                                                                                                                                                        "Kernel-split comparison frontier is now explicit post-N554 with a current v2 status packet (F663/P663/N663). "
+                                                                                                                                                        "Next honest bottleneck shifts back to strict-only closure: admissible S_sel_int / strict-core selector closure and "
+                                                                                                                                                        "global QW-2191 discipline, without any implied role transfer from the legacy kernel."
+                                                                                                                                                    )
         except Exception:
             pass
 
