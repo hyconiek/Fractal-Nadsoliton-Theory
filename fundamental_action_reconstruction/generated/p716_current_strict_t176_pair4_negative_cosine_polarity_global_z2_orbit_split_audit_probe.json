@@ -1,0 +1,210 @@
+{
+  "stage": "P716",
+  "status": "PASS_PAIR4_NEGATIVE_COSINE_POLARITY_EXPLAINS_CURRENT_GLOBAL_Z2_ORBIT_SPLIT",
+  "as_of": "2026-03-18",
+  "generated_utc": "2026-03-17T23:10:14.517604+00:00",
+  "goal": "audit whether the residual exact global Z2 split left by the dual-anchor route is already fully explained by the unique negative cosine-axis role of pair4 under the current even-anchor fallback",
+  "inputs": {
+    "P715": "fundamental_action_reconstruction/generated/p715_current_strict_t176_parity_completed_dual_anchor_multiroot_audit_probe.json",
+    "F647": "fundamental_action_reconstruction/generated/f647_strict_witness_provider_export_packet_for_seed_v1_realization_attempt.json",
+    "A_m_refs": {
+      "1": "fundamental_action_reconstruction/generated/a_1_pair1_orientation_projector_operator_strict_core_v1.json",
+      "2": "fundamental_action_reconstruction/generated/a_2_pair2_orientation_projector_operator_strict_core_v1.json",
+      "3": "fundamental_action_reconstruction/generated/a_3_pair3_orientation_projector_operator_strict_core_v1.json",
+      "4": "fundamental_action_reconstruction/generated/a_4_pair4_orientation_projector_operator_strict_core_v1.json",
+      "5": "fundamental_action_reconstruction/generated/a_5_pair5_orientation_projector_operator_strict_core_v1.json"
+    }
+  },
+  "per_pair_profile": {
+    "pair1": {
+      "pair": "pair1",
+      "coords": [
+        0.0,
+        -1.0
+      ],
+      "axis_type": "sine_axis",
+      "polarity_type": "negative_sine",
+      "dot_w_ref_u_m": 0.0,
+      "dot_w_break_u_m": 0.00016200023852512268
+    },
+    "pair2": {
+      "pair": "pair2",
+      "coords": [
+        0.9999999999999998,
+        1.6653345369377348e-16
+      ],
+      "axis_type": "cosine_axis",
+      "polarity_type": "positive_cosine",
+      "dot_w_ref_u_m": 0.026998084963236815,
+      "dot_w_break_u_m": -7.33323876262474e-20
+    },
+    "pair3": {
+      "pair": "pair3",
+      "coords": [
+        1.0,
+        0.0
+      ],
+      "axis_type": "cosine_axis",
+      "polarity_type": "positive_cosine",
+      "dot_w_ref_u_m": 0.024120089587956365,
+      "dot_w_break_u_m": 1.6818187974471053e-19
+    },
+    "pair4": {
+      "pair": "pair4",
+      "coords": [
+        -1.0,
+        0.0
+      ],
+      "axis_type": "cosine_axis",
+      "polarity_type": "negative_cosine",
+      "dot_w_ref_u_m": -0.027023002461428268,
+      "dot_w_break_u_m": 1.7502597213287567e-19
+    },
+    "pair5": {
+      "pair": "pair5",
+      "coords": [
+        0.0,
+        1.0
+      ],
+      "axis_type": "sine_axis",
+      "polarity_type": "positive_sine",
+      "dot_w_ref_u_m": 3.906250000000001e-18,
+      "dot_w_break_u_m": 0.00013708274032496462
+    }
+  },
+  "checks": [
+    {
+      "id": "p715_all_roots_supported",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "P715 already supports all roots under the dual-anchor rule."
+    },
+    {
+      "id": "p715_projective_orbit_survives",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "P715 already recovers one common projective rooted section orbit."
+    },
+    {
+      "id": "p715_exact_section_still_absent",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "P715 still does not recover one exact directed section across all roots."
+    },
+    {
+      "id": "pair4_is_unique_negated_orbit_root",
+      "actual": [
+        "pair4"
+      ],
+      "expected": [
+        "pair4"
+      ],
+      "pass": true,
+      "meaning": "The residual exact split is localized to one negated-orbit root: pair4."
+    },
+    {
+      "id": "pair4_is_unique_negative_cosine_axis_chart",
+      "actual": [
+        "pair4"
+      ],
+      "expected": [
+        "pair4"
+      ],
+      "pass": true,
+      "meaning": "Among current cosine-axis charts, pair4 is the unique negative-polarity representative."
+    },
+    {
+      "id": "positive_cosine_axis_charts_are_pair2_pair3",
+      "actual": [
+        "pair2",
+        "pair3"
+      ],
+      "expected": [
+        "pair2",
+        "pair3"
+      ],
+      "pass": true,
+      "meaning": "The remaining cosine-axis charts pair2 and pair3 are the positive-polarity representatives."
+    },
+    {
+      "id": "pair4_uses_even_anchor_fallback",
+      "actual": "w_ref_unnormalized",
+      "expected": "w_ref_unnormalized",
+      "pass": true,
+      "meaning": "The pair4 root is anchored by the even fallback weight."
+    },
+    {
+      "id": "pair2_pair3_use_even_anchor_fallback",
+      "actual": [
+        "w_ref_unnormalized",
+        "w_ref_unnormalized"
+      ],
+      "expected": [
+        "w_ref_unnormalized",
+        "w_ref_unnormalized"
+      ],
+      "pass": true,
+      "meaning": "The other cosine-axis roots pair2/pair3 also use the same even fallback weight."
+    },
+    {
+      "id": "pair4_even_anchor_scalar_is_negative",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "The even-anchor scalar on pair4 is negative."
+    },
+    {
+      "id": "pair2_pair3_even_anchor_scalars_are_positive",
+      "actual": [
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ],
+      "pass": true,
+      "meaning": "The even-anchor scalars on pair2/pair3 are positive."
+    },
+    {
+      "id": "pair4_sign_vector_is_global_negation_of_reference",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "The pair4 rooted sign vector is exactly the global negation of the reference sign vector."
+    }
+  ],
+  "blocking_mismatches": [],
+  "result": {
+    "pair4_is_unique_negative_cosine_axis_chart": true,
+    "positive_cosine_axis_charts": [
+      "pair2",
+      "pair3"
+    ],
+    "negative_cosine_axis_charts": [
+      "pair4"
+    ],
+    "pair4_negated_orbit_relative_to_reference": true,
+    "pair4_even_anchor_scalar_negative": true,
+    "pair2_pair3_even_anchor_scalars_positive": [
+      true,
+      true
+    ],
+    "pair4_sign_vector_is_global_negation_of_reference": true,
+    "current_dual_anchor_orbit_split_explained_by_pair4_negative_cosine_polarity": true,
+    "counts_as_strict_physical_orientation_datum": false,
+    "implies_t176_discharge": false,
+    "remaining_gap_after_positive_result": "an exact global branch-fixing rule beyond the current pair4 negative-cosine polarity split, with no hidden selector slots"
+  },
+  "hard_limits": [
+    "No strict-core directed/sign-sensitive physical orientation datum claim.",
+    "No kernel-alone/global QW-2191 discharge.",
+    "No T176 discharge claim.",
+    "No claim that the residual split is already gauge-irrelevant in strict core.",
+    "No ToE closure claim."
+  ],
+  "no_false_pass": true
+}

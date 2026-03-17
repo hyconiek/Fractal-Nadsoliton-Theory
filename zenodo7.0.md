@@ -29,6 +29,7 @@ What is strictly discharged / exported (scope-limited, no false pass):
 - **Supported-root corridor audit for the strongest current candidate class:** `P713`, packaged as `N709`, shows the surviving `w_break` + oriented-transport route does **not** globalize across all roots: only `pair1` and `pair5` provide nonzero root anchors, and those supported roots recover the same convention-layer section. This still does **not** discharge `T176`.
 - **Parity diagnosis of the current `w_break` corridor:** `P714`, packaged as `N710`, shows that the present `w_break` payload is an odd weight and therefore anchors only the odd-axis charts (`pair1`, `pair5`), while the current cosine-axis charts (`pair2`, `pair3`, `pair4`) remain unanchored by this single linear weight.
 - **Parity-completed dual-anchor all-root audit:** `P715`, packaged as `N711`, shows that the minimal strict-core dual-anchor `w_break \oplus w_ref_unnormalized` does support **all** roots and recovers one common section **up to global sign**, but the exact directed section still splits into two global `Z2` orbits (`pair4` yields the globally negated branch). So `T176` remains open.
+- **Localized source audit for the remaining exact split:** `P716`, packaged as `N712`, shows that the residual exact `Z2` orbit split left by `P715` is fully localized on current exports to the unique **negative cosine-axis** role of `pair4` under the even-anchor fallback.
 - **Strict dashboards:** `P706` and `P707` report readiness (`PASS_*_READY`), and the strict frontier dashboard `P708` indicates the next strict target remains `T173`.
 
 What is explicitly *not* claimed (hard limits):
@@ -145,6 +146,7 @@ python3 fundamental_action_reconstruction/p712_current_strict_t176_existing_glob
 python3 fundamental_action_reconstruction/p713_current_strict_t176_multiroot_rooted_sign_lift_root_independence_audit_probe.py
 python3 fundamental_action_reconstruction/p714_current_strict_t176_w_break_parity_root_support_profile_audit_probe.py
 python3 fundamental_action_reconstruction/p715_current_strict_t176_parity_completed_dual_anchor_multiroot_audit_probe.py
+python3 fundamental_action_reconstruction/p716_current_strict_t176_pair4_negative_cosine_polarity_global_z2_orbit_split_audit_probe.py
 cat fundamental_action_reconstruction/generated/p707_current_release_7_build_and_closure_smoke_probe_summary.json
 cat fundamental_action_reconstruction/generated/p709_current_strict_release_7_os_residual_sign_gauge_irrelevance_audit_probe_summary.json
 cat fundamental_action_reconstruction/generated/p710_current_nonstrict_proxy_to_gev_calibration_map_from_f704_eigenspectrum_probe_summary.json
@@ -153,6 +155,7 @@ cat fundamental_action_reconstruction/generated/p712_current_strict_t176_existin
 cat fundamental_action_reconstruction/generated/p713_current_strict_t176_multiroot_rooted_sign_lift_root_independence_audit_probe_summary.json
 cat fundamental_action_reconstruction/generated/p714_current_strict_t176_w_break_parity_root_support_profile_audit_probe_summary.json
 cat fundamental_action_reconstruction/generated/p715_current_strict_t176_parity_completed_dual_anchor_multiroot_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p716_current_strict_t176_pair4_negative_cosine_polarity_global_z2_orbit_split_audit_probe_summary.json
 cat fundamental_action_reconstruction/generated/p706_current_release_7_strict_projective_operational_toe_os_closure_dashboard_probe_summary.json
 cat fundamental_action_reconstruction/generated/p708_current_strict_t173_frontier_dashboard_probe_summary.json
 ```
@@ -175,6 +178,7 @@ cat fundamental_action_reconstruction/generated/p708_current_strict_t173_frontie
 - `fundamental_action_reconstruction/p713_current_strict_t176_multiroot_rooted_sign_lift_root_independence_audit_probe.py`
 - `fundamental_action_reconstruction/p714_current_strict_t176_w_break_parity_root_support_profile_audit_probe.py`
 - `fundamental_action_reconstruction/p715_current_strict_t176_parity_completed_dual_anchor_multiroot_audit_probe.py`
+- `fundamental_action_reconstruction/p716_current_strict_t176_pair4_negative_cosine_polarity_global_z2_orbit_split_audit_probe.py`
 
 **Frozen non-strict host matching layer (explicit dataset vs policy, no pass claim):**
 - dataset: `fundamental_action_reconstruction/external_data/sm_mass_targets_v1.json`
@@ -219,7 +223,8 @@ Concrete next move under `T173`:
 - The strongest surviving candidate class is now narrower and more explicit: `P713/N709` shows that the `w_break` + oriented-transport route does **not** provide all-root anchoring. Only the endpoint roots `pair1` and `pair5` survive, and on that supported-root corridor they recover the same convention-layer section. So the remaining gap is sharper: current `w_break` does not furnish a full global anchor, and there is still no **strict-core/global upgrade** of the surviving corridor-level structure.
 - `P714/N710` now explains *why* this happens on current exports: the present `w_break` is an **odd** linear weight, so it can anchor the current odd-axis representatives (`pair1`, `pair5`) but not the current even/cosine-axis representatives (`pair2`, `pair3`, `pair4`). Therefore the next honest provider attack is narrower still: either add an **even-or-mixed parity anchor component**, or leave the single-linear-weight class entirely and move to a genuinely different observable/provider class.
 - `P715/N711` now tests exactly that minimal parity completion using only already-exported strict-core payloads: `w_break` plus the exported even weight `w_ref_unnormalized`. The result is stronger but still scope-limited: **all roots become anchorable**, and the recovered rooted sections agree **projectively** across all roots, yet the exact directed branch still splits into two global sign orbits, with `pair4` yielding the globally negated section relative to the reference orbit.
-- Therefore the provider gap is now narrower again: adding an even component is **not** sufficient by itself. The remaining strict-core requirement is to fix the final **global `Z2` orbit split** without hidden selector slots or marked-orientation premises.
+- `P716/N712` localizes that remaining exact split one step further: on current exports, the residual orbit split is fully explained by the fact that `pair4` is the unique **negative cosine-axis** chart, while the even-anchor fallback `w_ref_unnormalized` is positive on `pair2/pair3` but negative on `pair4`. So no additional transport mismatch is needed to explain the present failure.
+- Therefore the provider gap is now narrower again: adding an even component is **not** sufficient by itself. The remaining strict-core requirement is to fix the final **global `Z2` branch split tied to exact chart polarity**, without hidden selector slots or marked-orientation premises.
 - Therefore, the next honest strict move under `T173` is to either:
   1) export a **genuinely new** strict-core sign-sensitive provider (must bypass `N518`-class obstructions and must not smuggle `T164`), *or*
   2) explicitly **freeze residual sign as gauge** and package/prove sign-gauge-irrelevance for the concrete Release‑7 OS observables actually used downstream (recommended; operational closure already exists in projective/basis-invariant scope).
