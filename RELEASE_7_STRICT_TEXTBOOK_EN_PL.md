@@ -66,7 +66,7 @@ Release 7 must not silently upgrade any of the following without explicit theore
 
 1. `TOE_FINAL_DOCUMENTATION_RELEASE_7_STRICT_FULL.tex` (final TeX) — complete definitions + derivations + discharge map; hard limits explicit.
 2. Release‑7 strict textbook file (this document) updated from “preparation draft” to “final”.
-3. A minimal closure dashboard/probe set proving OS‑computability end‑to‑end, without false pass.
+3. A minimal closure dashboard/probe set proving OS‑computability end‑to‑end, without false pass (`P706`).
 
 ---
 
@@ -115,4 +115,4 @@ Release 7 nie może po cichu promować bez jawnego theorem‑level eksportu:
 
 1. `TOE_FINAL_DOCUMENTATION_RELEASE_7_STRICT_FULL.tex` (final TeX) — komplet definicji + wyprowadzeń + mapa discharge; hard‑limity jawne.
 2. Plik Release‑7 strict textbook (ten dokument) doprowadzony z “preparation draft” do “final”.
-3. Minimalny zestaw dashboardów/sond pokazujący OS‑obliczalność end‑to‑end bez false pass.
+3. Minimalny zestaw dashboardów/sond pokazujący OS‑obliczalność end‑to‑end bez false pass (`P706`).
