@@ -109,6 +109,7 @@ A chart-sine-aligned sign-lift **convention** can be made output-sign-consistent
 and therefore does **not** upgrade any directed/sign-sensitive physical orientation datum into strict core.
 Moreover, a rooted transport-based sign lift can be made output-sign-consistent by fixing sign on `pair1` from the exported reflection-breaking weight `w_break`
 and propagating to other charts via the exported `O_1m` transports (`P683`), but this still depends on axis-only transport representatives and remains a section/convention choice.
+This rooted sign-lift is also exported as an explicit global sign-lift/section-choice object on `C_v1` (`F683`), without any physical orientation claim.
 
 Therefore, `T173` is the next honest strict label for continued closure attempts beyond `T172`.
 

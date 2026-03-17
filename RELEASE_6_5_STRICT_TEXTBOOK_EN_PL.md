@@ -280,6 +280,8 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
 14. Update (`2026-03-17`): a rooted transport-based sign lift can be made output-sign-consistent by fixing sign on `pair1` from the exported reflection-breaking seed weight
     `w_break` and propagating to `{pair2..pair5}` via the exported rooted transports `O_1m` (`P683`), but this still depends on axis-only transport representatives and counts only
     as a section/convention choice (no directed physical orientation datum claim).
+15. Update (`2026-03-17`): the rooted transport sign-lift is now exported as an explicit global sign-lift/section-choice object on `C_v1`,
+    `SelectorOutputSignLift_global_C_v1_rooted_transport_from_S_sel_int_w_break_strict_convention_v1` (`F683`), with a glued output vector certificate in the fixed `(o_+,o_-)` basis.
 
 ### 1.2 What is still missing (no false pass)
 
@@ -655,6 +657,8 @@ wynik kierunkowy nie jest globalnie chart-independent (`P681`), opakowane jako g
 daje spójny znak wyjścia na `{pair1..pair5}` (`P682`), ale zależy od nie-`Aut(Z_12)`-invariant embeddingu i liczy się wyłącznie jako warstwa konwencji (nie fizyczny datum orientacji).
 Update (`2026-03-17`): rooted sign-lift przez transport: zamrozić znak na `pair1` z `w_break` i propagować do `{pair2..pair5}` przez wyeksportowane rooted transporty `O_1m`
 (`P683`) daje spójny znak wyjścia, ale nadal zależy od reprezentantów transportu na krawędziach axis-only (projektor-level), więc pozostaje wyborem sekcji/konwencji.
+Update (`2026-03-17`): rooted sign-lift jest teraz wyeksportowany jako jawny globalny obiekt sign-lift/wyboru sekcji na `C_v1`:
+`SelectorOutputSignLift_global_C_v1_rooted_transport_from_S_sel_int_w_break_strict_convention_v1` (`F683`), z certyfikatem sklejenia wektora wyjścia w bazie `(o_+,o_-)`.
 Następny bottleneck jest teraz jawnie **post‑promotion**:
 
 1. projective strict-core selector closure jest rozładowany (`N680`), ale nie implikuje kernel-alone/global rozładowania `QW-2191`,
