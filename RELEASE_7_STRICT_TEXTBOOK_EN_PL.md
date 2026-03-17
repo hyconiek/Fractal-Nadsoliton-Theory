@@ -1,6 +1,6 @@
 # RELEASE 7 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 7.0.2 (Preparation Draft)  
+**Version:** 7.0.3 (Preparation Draft)  
 **Date:** 2026-03-17  
 **Branch:** `main`  
 **Predecessor:** Release 6.5 — Strict Textbook Edition
@@ -46,6 +46,7 @@ Already exported on the current repo state (Release 6.5.x):
   and does not claim actual emergent observer closure; it is packaged as a scope-limited theorem (`N699`).
 - A strict projective operational ToE OS support packet v2 is exported and packaged (`F700`, audited by `P700`, packaged by `N700`),
   extending the v1 OS bundle by including the projective emergent‑observer chain computability theorem (`N699`).
+- A scope-disciplined “Operational ToE closure” statement is frozen in strict projective OS scope (`N701`), derived only from `N700` and keeping all hard limits explicit.
 
 ## 3 What Release 7 must still not “false‑PASS” (EN)
 
@@ -89,6 +90,7 @@ Już na obecnym stanie repo (Release 6.5.x):
   i nie rości actual emergent observer closure; jest to opakowane jako scope-limited twierdzenie (`N699`).
 - Repo eksportuje i pakuje strict projective operational ToE OS support packet v2 (`F700`, audyt `P700`, opakowanie `N700`),
   rozszerzając pakiet v1 o theorem-level świadek obliczalności łańcucha emergent‑observer (`N699`).
+- Repo zamraża scope‑disciplinowane stwierdzenie “Operational ToE closure” w zakresie strict projective OS (`N701`), wyprowadzone wyłącznie z `N700` i z jawnymi hard‑limitami.
 
 ## 3 Czego Release 7 nie może “false‑PASS” (PL)
 

@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.62  
+**Version:** 6.5.63  
 **Date:** 2026-03-17  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -346,6 +346,8 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
 32. Update (`2026-03-17`): the strict projective operational ToE “OS” support packet is upgraded to a v2 bundle including the full projective emergent-observer chain computability
     theorem (`N699`): `Lambda_strict_projective_operational_toe_os_support_v2` (`F700`), audited by `P700` and packaged by `N700`. This is still an operational computability
     bundle only and does **not** claim kernel-alone/global `QW-2191` discharge or ToE closure.
+33. Update (`2026-03-17`): the repo freezes a scope-disciplined “Operational ToE closure” statement in strict projective OS scope (`N701`), derived only from the exported v2 OS
+    support theorem (`N700`) and keeping all hard limits explicit (no kernel-alone/global `QW-2191` discharge; no Standard Model host matching; no ToE closure).
 
 ### 1.2 What is still missing (no false pass)
 
@@ -731,6 +733,8 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
 32. Update (`2026-03-17`): strict projective operational ToE “OS” support packet jest podniesiony do wersji v2 zawierającej pełny theorem-level świadek obliczalności łańcucha emergent‑observer (`N699`):
     `Lambda_strict_projective_operational_toe_os_support_v2` (`F700`), audyt `P700`, opakowanie `N700`. To nadal jest wyłącznie pakiet obliczalności operacyjnej
     i **nie** rości kernel-alone/global rozładowania `QW-2191` ani domknięcia ToE.
+33. Update (`2026-03-17`): repo zamraża scope‑disciplinowane stwierdzenie “Operational ToE closure” w zakresie strict projective OS (`N701`), wyprowadzone wyłącznie z theorem-level
+    opakowania pakietu OS v2 (`N700`) i przy zachowaniu jawnych hard‑limitów (brak kernel-alone/global `QW-2191`, brak host matchingu Modelu Standardowego, brak ToE closure).
 
 ### 1.2 Czego nadal brakuje (bez false pass)
 
