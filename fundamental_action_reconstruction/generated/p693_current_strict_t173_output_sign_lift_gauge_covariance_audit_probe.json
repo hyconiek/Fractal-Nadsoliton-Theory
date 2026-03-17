@@ -1,0 +1,95 @@
+{
+  "stage": "P693",
+  "as_of": "2026-03-17",
+  "generated_utc": "2026-03-17T13:58:16.278532+00:00",
+  "goal": "audit_output_sign_lift_gauge_covariance_between_premise_based_and_sign_fixed_directed_closure_exports__no_false_pass",
+  "inputs": {
+    "premise_based_directed_closure_ref": "fundamental_action_reconstruction/generated/selector_closure_global_c_v1_directed_strict_v1.json",
+    "sign_fixed_directed_closure_ref": "fundamental_action_reconstruction/generated/selector_closure_global_c_v1_directed_sign_fixed_from_strict_core_payload_weights_strict_convention_v1.json",
+    "sign_fixed_state_ref": "fundamental_action_reconstruction/generated/selector_state_global_c_v1_directed_sign_fixed_from_strict_core_payload_weights_strict_convention_v1.json"
+  },
+  "identity_tested": "s_out_sign_fixed(pair) == t_by_pair(pair) * s_out_premise(pair)",
+  "signs": {
+    "s_out_premise_by_pair": {
+      "pair1": -1,
+      "pair2": -1,
+      "pair3": -1,
+      "pair4": 1,
+      "pair5": 1
+    },
+    "t_by_pair": {
+      "pair1": -1,
+      "pair2": -1,
+      "pair3": -1,
+      "pair4": 1,
+      "pair5": -1
+    },
+    "s_out_sign_fixed_by_pair": {
+      "pair1": 1,
+      "pair2": 1,
+      "pair3": 1,
+      "pair4": 1,
+      "pair5": -1
+    },
+    "implied_s_out_sign_fixed_by_pair": {
+      "pair1": 1,
+      "pair2": 1,
+      "pair3": 1,
+      "pair4": 1,
+      "pair5": -1
+    }
+  },
+  "checks_by_pair": [
+    {
+      "pair": "pair1",
+      "t_by_pair": -1,
+      "s_out_premise": -1,
+      "implied_s_out_sign_fixed": 1,
+      "s_out_sign_fixed": 1,
+      "pass": true
+    },
+    {
+      "pair": "pair2",
+      "t_by_pair": -1,
+      "s_out_premise": -1,
+      "implied_s_out_sign_fixed": 1,
+      "s_out_sign_fixed": 1,
+      "pass": true
+    },
+    {
+      "pair": "pair3",
+      "t_by_pair": -1,
+      "s_out_premise": -1,
+      "implied_s_out_sign_fixed": 1,
+      "s_out_sign_fixed": 1,
+      "pass": true
+    },
+    {
+      "pair": "pair4",
+      "t_by_pair": 1,
+      "s_out_premise": 1,
+      "implied_s_out_sign_fixed": 1,
+      "s_out_sign_fixed": 1,
+      "pass": true
+    },
+    {
+      "pair": "pair5",
+      "t_by_pair": -1,
+      "s_out_premise": 1,
+      "implied_s_out_sign_fixed": -1,
+      "s_out_sign_fixed": -1,
+      "pass": true
+    }
+  ],
+  "result": {
+    "gauge_covariant": true,
+    "mismatched_pairs": []
+  },
+  "hard_limits": [
+    "Does not claim a directed/sign-sensitive physical orientation datum in strict core.",
+    "Does not claim kernel-alone/global QW-2191 discharge.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true,
+  "status": "PASS_OUTPUT_SIGN_LIFT_GAUGE_COVARIANT_UNDER_CHART_SIGN_RELIFT"
+}

@@ -1,0 +1,38 @@
+{
+  "step": "N693",
+  "status": "N693_DERIVABLE_CURRENT_STRICT_T173_OUTPUT_SIGN_LIFT_GAUGE_COVARIANCE_THEOREM_NO_FALSE_PASS",
+  "scope": "current_strict_t173_directed_closure_output_sign_lift_gauge_datum_only",
+  "checks": [
+    {
+      "id": "p693_audit_passed",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Gauge-covariance audit ran and passed (P693)."
+    },
+    {
+      "id": "output_sign_lift_gauge_covariant",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Output sign-lift satisfies s_out^fix = t \u00b7 s_out^prem on {pair1..pair5} (P693)."
+    }
+  ],
+  "blocking_mismatches": [],
+  "theorem_result": {
+    "discharged": true,
+    "output_sign_lift_is_gauge_covariant_under_chart_sign_relift": true,
+    "directed_sign_sensitive_physical_orientation_in_strict_core": false,
+    "QW2191_kernel_alone_discharge": false,
+    "ToE_closure": false,
+    "evidence": {
+      "P693": "fundamental_action_reconstruction/generated/p693_current_strict_t173_output_sign_lift_gauge_covariance_audit_probe_summary.json"
+    }
+  },
+  "hard_limits": [
+    "no_kernel_alone_global_QW2191_discharge",
+    "no_directed_sign_sensitive_physical_orientation_claim",
+    "no_ToE_closure"
+  ],
+  "no_false_pass": true
+}

@@ -1,7 +1,7 @@
 # H37: Sign-Distinction State Audit
 
 **Date:** 2026-03-17  
-**Status:** `PASS_PREMISE_BASED_DIRECTED_SIGN_DISTINCTION_EXPORTED__PLUS_W_BREAK_ROOTED_DIRECTED_CONVENTION_LIFT_EXPORTED__PLUS_GLOBAL_ORIENTED_EDGE_SIGN_LIFT_EXPORTED__PLUS_GAUGE_EQUIVALENCE_AUDITED__PLUS_GLOBAL_CHART_SIGN_FIXING_EXPORTED__PLUS_PROJECTIVE_VS_DIRECTED_CLOSURE_OUTPUT_RAY_INVARIANCE_PACKAGED__NO_PHYSICAL_SIGN_DATUM`
+**Status:** `PASS_PREMISE_BASED_DIRECTED_SIGN_DISTINCTION_EXPORTED__PLUS_W_BREAK_ROOTED_DIRECTED_CONVENTION_LIFT_EXPORTED__PLUS_GLOBAL_ORIENTED_EDGE_SIGN_LIFT_EXPORTED__PLUS_GAUGE_EQUIVALENCE_AUDITED__PLUS_GLOBAL_CHART_SIGN_FIXING_EXPORTED__PLUS_PROJECTIVE_VS_DIRECTED_CLOSURE_OUTPUT_RAY_INVARIANCE_PACKAGED__PLUS_OUTPUT_SIGN_LIFT_GAUGE_COVARIANCE_PACKAGED__NO_PHYSICAL_SIGN_DATUM`
 
 ## Goal
 
@@ -42,6 +42,7 @@ Check whether the current strict core contains any object that identifies `u` an
 - `F692`: exports a sign-fixed directed closure object on `C_v1` in `strict_convention` scope (built from `F690` + `F660`) with an explicit output sign-lift, yielding a glued directed output vector in the fixed `(o_+,o_-)` basis (no physical sign claim; no `QW-2191` discharge).
 - `P692`: audits that the exported directed closure outputs (premise-based + convention-scoped) induce the same rank‑1 output projector as the exported projective closure output projector (`F672`), i.e. they define the same output ray within tolerance.
 - `N692`: packages `P692` as a theorem-level output-ray invariance statement (projective downstream; directed lifts are convention/gauge).
+- `P693/N693`: audits and packages that the directed closure output sign-lift transforms covariantly under the chartwise sign relift `t_by_pair` from the premise-based directed representative to the sign-fixed representative (`s_out^fix = t · s_out^prem`), confirming output sign-lift is gauge.
 - `F684`: exports `SelectorState_global_C_v1_directed_rooted_transport_from_S_sel_int_w_break_strict_convention_v1` (directed vector representative section on `{pair1..pair5}` in an explicit convention scope; not a physical datum).
 - Extension lane note: `AX28/AX29` export an explicit sign-fixing observable on `pair1` and an explicit global oriented vector selector state object on `C_v1` in `strict_extension_only` scope; `P473` audits that this extension-lane oriented vector state is projector-consistent with the strict global projective selector state (`F470`), so it fixes only a sign-gauge representative and does not change strict core.
 
