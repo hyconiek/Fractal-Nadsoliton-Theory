@@ -433,6 +433,30 @@ N553_SUMMARY = (
     GENERATED
     / "n553_current_strict_global_downstream_completion_branch_discharge_for_promoted_seed_v1_chain_on_c_v1_discharge_theorem_summary.json"
 )
+F326_SUMMARY = (
+    GENERATED
+    / "f326_first_actual_legacy_to_strict_kernel_phase_frequency_nonconformal_obstruction_witness_packet_summary.json"
+)
+P404_SUMMARY = (
+    GENERATED
+    / "p404_current_actual_legacy_to_strict_kernel_phase_frequency_nonconformal_obstruction_witness_probe_summary.json"
+)
+N438_SUMMARY = (
+    GENERATED
+    / "n438_current_first_actual_legacy_to_strict_kernel_phase_frequency_nonconformal_obstruction_witness_theorem_summary.json"
+)
+F662_SUMMARY = (
+    GENERATED
+    / "f662_current_actual_legacy_to_strict_kernel_nonbridge_strengthening_discharge_witness_packet_summary.json"
+)
+P662_SUMMARY = (
+    GENERATED
+    / "p662_current_actual_legacy_to_strict_kernel_nonbridge_strengthening_discharge_witness_probe_summary.json"
+)
+N554_SUMMARY = (
+    GENERATED
+    / "n554_current_first_actual_legacy_to_strict_kernel_nonbridge_strengthening_discharge_witness_theorem_summary.json"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -1307,15 +1331,85 @@ def main() -> None:
                                                                                                                                         "without implying strict-core selector closure, global QW-2191 discharge, or ToE closure."
                                                                                                                                     )
                                                                                                                                 else:
-                                                                                                                                    recommended_next_target = (
-                                                                                                                                        "P243"
-                                                                                                                                    )
-                                                                                                                                    recommendation_reason = (
-                                                                                                                                        "Global packaging of the promoted seed-v1 downstream selector operator chain on C_v1 is now explicit (F658/F659/F660) "
-                                                                                                                                        "and bundled/discharged as a global downstream-completion branch object (F661/P661/N553), still below selector closure and QW-2191 discharge. "
-                                                                                                                                        "Next honest priority frontier remains the legacy -> strict kernel bridge/non-bridge status; "
-                                                                                                                                        "rerun the bifurcated frontier probe (P243) to keep bridge/non-bridge obligations explicit and avoid silent role transfer."
-                                                                                                                                    )
+                                                                                                                                    # Kernel-split frontier follow-up: complete T16 component obstructions (incl. phase/frequency),
+                                                                                                                                    # then discharge the actual nonbridge-strengthening witness on the current export set.
+                                                                                                                                    if not N438_SUMMARY.exists():
+                                                                                                                                        if not F326_SUMMARY.exists():
+                                                                                                                                            recommended_next_target = (
+                                                                                                                                                "F326"
+                                                                                                                                            )
+                                                                                                                                            recommendation_reason = (
+                                                                                                                                                "Kernel-split frontier is explicit but still below any bridge/nonbridge branch selection. "
+                                                                                                                                                "To avoid silent role transfer, the next honest comparison move is to materialize the missing T16 component obstruction: "
+                                                                                                                                                "export the phase/frequency nonconformal obstruction witness packet (F326), keeping the claim strictly current-export-set only "
+                                                                                                                                                "(no permanent no-bridge claim)."
+                                                                                                                                            )
+                                                                                                                                        elif not P404_SUMMARY.exists():
+                                                                                                                                            recommended_next_target = (
+                                                                                                                                                "P404"
+                                                                                                                                            )
+                                                                                                                                            recommendation_reason = (
+                                                                                                                                                "F326 exports the phase/frequency nonconformal obstruction witness packet summary (P_shift) for the legacy->strict kernel comparison. "
+                                                                                                                                                "Next move: run the audit probe (P404) to confirm the obstruction statement matches the declared no-false-pass contract."
+                                                                                                                                            )
+                                                                                                                                        else:
+                                                                                                                                            recommended_next_target = (
+                                                                                                                                                "N438"
+                                                                                                                                            )
+                                                                                                                                            recommendation_reason = (
+                                                                                                                                                "P404 audits the phase/frequency nonconformal obstruction witness export. "
+                                                                                                                                                "Next move: package the theorem-level discharge of that obstruction component (N438), explicitly below "
+                                                                                                                                                "full T16 strengthening, branch selection, selector closure, and QW-2191 discharge."
+                                                                                                                                            )
+                                                                                                                                    elif not N554_SUMMARY.exists():
+                                                                                                                                        if not F662_SUMMARY.exists():
+                                                                                                                                            recommended_next_target = (
+                                                                                                                                                "F662"
+                                                                                                                                            )
+                                                                                                                                            recommendation_reason = (
+                                                                                                                                                "All three T16 component-level obstructions are now available (amplitude: N267, damping: N268, phase/frequency: N438), "
+                                                                                                                                                "so the next honest move is to export one explicit actual nonbridge-strengthening discharge witness on the current export set (F662), "
+                                                                                                                                                "while keeping the positive bridge branch explicitly open and making no permanent no-bridge claim."
+                                                                                                                                            )
+                                                                                                                                        elif not P662_SUMMARY.exists():
+                                                                                                                                            recommended_next_target = (
+                                                                                                                                                "P662"
+                                                                                                                                            )
+                                                                                                                                            recommendation_reason = (
+                                                                                                                                                "F662 exports one explicit actual legacy->strict kernel nonbridge-strengthening discharge witness on the current export set. "
+                                                                                                                                                "Next move: run the audit probe (P662) to confirm all component witnesses are present and hard limits remain explicit."
+                                                                                                                                            )
+                                                                                                                                        else:
+                                                                                                                                            recommended_next_target = (
+                                                                                                                                                "N554"
+                                                                                                                                            )
+                                                                                                                                            recommendation_reason = (
+                                                                                                                                                "P662 audits the current actual nonbridge-strengthening discharge witness export. "
+                                                                                                                                                "Next move: package the theorem-level discharge (N554) in strict no-false-pass discipline."
+                                                                                                                                            )
+                                                                                                                                    else:
+                                                                                                                                        if not file_contains(
+                                                                                                                                            RELEASE_6_5,
+                                                                                                                                            "N554",
+                                                                                                                                        ):
+                                                                                                                                            recommended_next_target = (
+                                                                                                                                                "UPDATE_RELEASE_6_5_STRICT_TEXTBOOK_EN_PL"
+                                                                                                                                            )
+                                                                                                                                            recommendation_reason = (
+                                                                                                                                                "The legacy->strict kernel nonbridge-strengthening discharge witness is now exported and packaged (F662/P662/N554), "
+                                                                                                                                                "strictly below selector closure, global QW-2191 discharge, and ToE closure. "
+                                                                                                                                                "Next move: update Release 6.5 (EN+PL) to record this comparison-frontier discharge without implying any further closure."
+                                                                                                                                            )
+                                                                                                                                        else:
+                                                                                                                                            recommended_next_target = (
+                                                                                                                                                "EXPORT_CURRENT_KERNEL_FRONTIER_PACKET_V2"
+                                                                                                                                            )
+                                                                                                                                            recommendation_reason = (
+                                                                                                                                                "Kernel-split frontier is now strengthened on the negative branch on the current export set (F662/P662/N554), "
+                                                                                                                                                "while the positive bridge branch remains future-only. "
+                                                                                                                                                "Next honest move: export a current frontier packet/probe capturing this post-N554 state (a v2 beyond the frozen F153/P243 snapshot), "
+                                                                                                                                                "keeping branch selection and any permanent no-bridge claim explicit and separate."
+                                                                                                                                            )
         except Exception:
             pass
 

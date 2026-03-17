@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.48  
+**Version:** 6.5.49  
 **Date:** 2026-03-17  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -97,6 +97,12 @@
   genuinely-new strict-core source-seed continuation (initial entry target: `P119`). As of `2026-03-17`, that seed‑v1 lane is now exported through global promotions on `C_v1`
   (`F658/P658/N550`, `F659/P659/N551`, `F660/P660/N552`, `F661/P661/N553`). This bundles the promoted chain as one explicit global downstream-completion branch discharge object.
   The earlier projective-only decision packet `P475` remains as the historical projective branch record (quotient semantics).
+- Update (`2026-03-17`): the legacy→strict kernel comparison frontier now exports the missing phase/frequency component obstruction witness:
+  `F326/P404/N438` discharge the **phase/frequency nonconformal obstruction** (`P_shift`) on the **current export set**, i.e. `explicit_phase_frequency_bridge_present=false`,
+  without any permanent “no bridge can ever exist” claim.
+- Update (`2026-03-17`): moreover, the repo now exports an actual `T16` nonbridge-strengthening discharge witness on the current export set:
+  `F662/P662/N554` package `NB_legacy_strict_strengthening_actual_witness_v1` (amplitude + damping + phase/frequency obstructions discharged), still explicitly below
+  branch selection, strict-core selector closure, global `QW-2191` discharge, and ToE closure.
 - Update (`2026-03-15`): moreover, one cautious follow-up probe exports an explicit **probe-level** mode-index assignment *candidate*
   on `Z_24` induced by the same defect-angle rule (including numeric basis vectors `u_{m,±}` on each `pair_m`) (`P462`).
   This probe-level candidate does not promote `n=24` into the `QW-2190` physical scaffold.
@@ -307,13 +313,15 @@ so the diagonal/local lane canonicalizes the `QW-2190` embedding uniquely up to 
 
 ## 5) Next honest strict moves (as of 2026-03-17)
 
-Dashboards (`P438`, `P441`) now track the strict-core source‑seed lane **beyond** the original `P119` target: the seed‑v1 chain is exported through a **global**
+Dashboards (`P438`, `P441`) now track the strict-core source‑seed lane **beyond** the original `P119` target: the seed‑v1 chain is exported through **global**
 promotion steps on `C_v1` (`F658/P658/N550`, `F659/P659/N551`, `F660/P660/N552`) and bundled as one explicit global downstream-completion branch discharge object
-(`F661`, audited by `P661`, packaged by `N553`). Therefore the “next honest move” is no longer “export a first seed target” nor “bundle the promoted chain”, but to keep the
-highest-priority `legacy -> strict` kernel bridge/non-bridge frontier explicit (probe `P243`; no silent role transfer).
+(`F661`, audited by `P661`, packaged by `N553`), still below selector closure and `QW-2191` discharge. In addition, the legacy→strict kernel comparison frontier now
+exports the missing phase/frequency obstruction component (`F326/P404/N438`) and packages an actual `T16` nonbridge-strengthening discharge witness on the current export set
+(`F662/P662/N554`). Therefore the “next honest move” is now to avoid relying on the frozen `F153/P243` snapshot and to export a **current** frontier packet/probe capturing
+the post-`N554` kernel-split status (with branch selection kept explicit and separate).
 
 ```text
-rerun P243 (legacy -> strict kernel bridge/non-bridge frontier probe)
+export current kernel frontier packet v2 (post-N554)
 ```
 
 1. `T164` is discharged as premise‑based strict provenance (`F473/N523`): an explicit `Z_12` generator/orientation fixing datum is exported (tracked; not `Aut(Z_12)`‑invariant by `N462`).
@@ -330,6 +338,9 @@ rerun P243 (legacy -> strict kernel bridge/non-bridge frontier probe)
    packaging the induced chartwise output channels on `{pair1..pair5}` (`F660`, audited by `P660`, packaged by `N552`).
 8. The promoted seed‑v1 chain is now bundled/discharged as one explicit global downstream-completion branch object on `C_v1`:
    `SelectorDownstreamCompletionBranch_global_C_v1_seed_v1_promoted_strict_v1` (`F661`, audited by `P661`, packaged by `N553`).
+9. The legacy→strict kernel phase/frequency nonconformal obstruction component is now discharged on the current export set (`F326`, audited by `P404`, packaged by `N438`).
+10. The legacy→strict kernel `T16` nonbridge-strengthening discharge witness is now exported on the current export set (`F662`, audited by `P662`, packaged by `N554`),
+    still below any permanent no-bridge claim and below branch selection.
 
 Therefore `H37` is no longer the next blocker (it is discharged in the declared premise‑based scope), and the seed‑v1 source‑seed frontier is no longer “pre‑export”.
 The next strict bottleneck is now explicitly **post‑promotion**:
@@ -545,11 +556,13 @@ Repo nadal **nie** eksportuje:
 ## 2) Następny uczciwy ruch (stan: 2026-03-17)
 
 Dashboards (`P438`, `P441`) śledzą już pas seed‑v1 **dalej** niż historyczny cel `P119`: gałąź source‑seed została wyeksportowana downstream
-aż do jawnych promocji globalnych na `C_v1` (`F658/P658/N550`, `F659/P659/N551`, `F660/P660/N552`) oraz jawnego globalnego bundle rozładowania gałęzi downstream-completion dla promowanego łańcucha (`F661/P661/N553`). W konsekwencji “następny uczciwy ruch” nie jest już “wybierz pierwszy target seed‑v1” ani “zrób pierwszy krok post‑promotion”,
-tylko powrót do najwyższego priorytetu `legacy -> strict` kernel bridge/non-bridge w jawnej dyscyplinie (sonda `P243`; bez silent role transfer).
+aż do jawnych promocji globalnych na `C_v1` (`F658/P658/N550`, `F659/P659/N551`, `F660/P660/N552`) oraz jawnego globalnego bundle rozładowania gałęzi downstream-completion dla promowanego łańcucha (`F661/P661/N553`), jawnie poniżej selector closure i rozładowania `QW-2191`. Ponadto, frontier porównania legacy→strict
+ma już wyeksportowany brakujący komponent przeszkody faza/częstotliwość (`F326/P404/N438`) oraz opakowany actual discharge witness `T16` nonbridge-strengthening na aktualnym export set
+(`F662/P662/N554`). W konsekwencji “następny uczciwy ruch” to już nie samo “uruchom P243”, tylko uniknięcie oparcia się o zamrożony snapshot `F153/P243`
+i wyeksportowanie **aktualnego** pakietu/sondy frontiera w wersji v2 po `N554` (z osobnym, jawnie śledzonym statusem branch selection).
 
 ```text
-uruchomić P243 (frontier: legacy -> strict kernel bridge/non-bridge)
+wyeksportować aktualny packet/probe frontiera v2 (po N554)
 ```
 
 1. `T164` jest rozładowane jako premise‑based strict provenance (`F473/N523`): wyeksportowano jawny fixing datumu generatora/orientacji `Z_12` (śledzony; nie `Aut(Z_12)`‑invariant przez `N462`).
@@ -566,6 +579,9 @@ uruchomić P243 (frontier: legacy -> strict kernel bridge/non-bridge)
    indukowanych kanałów wyjściowych na `{pair1..pair5}`, audytowane przez `P660` i opakowane przez `N552`.
 9. Post‑promotion bundle: `F661` eksportuje jawny globalny bundle rozładowania gałęzi downstream‑completion dla promowanego łańcucha seed‑v1 na `C_v1`,
    audytowane przez `P661` i opakowane przez `N553` (bez claimów o selector closure lub rozładowanie `QW-2191`).
+10. Komponent przeszkody faza/częstotliwość dla frontiera legacy→strict jest teraz rozładowany na aktualnym export set (`F326`, audyt `P404`, opakowane przez `N438`).
+11. Actual discharge witness `T16` nonbridge-strengthening jest teraz wyeksportowany na aktualnym export set (`F662`, audyt `P662`, opakowane przez `N554`),
+    jawnie poniżej permanentnego “no bridge” oraz poniżej branch selection.
 
 W konsekwencji `H37` nie jest już blockerem (w zadeklarowanym scope premise-based), a frontier seed‑v1 nie jest już “przed eksportem”.
 Następny bottleneck jest teraz jawnie **post‑promotion**:
