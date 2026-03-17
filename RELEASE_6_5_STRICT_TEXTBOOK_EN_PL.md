@@ -277,6 +277,9 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
 13. Update (`2026-03-17`): even when attempting to construct a **deterministic** sign-lift candidate from the exported strict-core seed payload weights (`F647`),
     the directed output sign is not globally chart-independent (`P681`), packaged as a strict boundary by `N681`. A chart-sine-aligned sign-lift **convention**
     can be made output-sign-consistent (`P682`), but it depends on a non-`Aut(Z_12)`-invariant chart embedding and therefore does not upgrade directed physical orientation into strict core.
+14. Update (`2026-03-17`): a rooted transport-based sign lift can be made output-sign-consistent by fixing sign on `pair1` from the exported reflection-breaking seed weight
+    `w_break` and propagating to `{pair2..pair5}` via the exported rooted transports `O_1m` (`P683`), but this still depends on axis-only transport representatives and counts only
+    as a section/convention choice (no directed physical orientation datum claim).
 
 ### 1.2 What is still missing (no false pass)
 
@@ -650,6 +653,8 @@ z jawną granicą surowych wyjść bez sign-liftu (`N675`), twierdzeniem rozład
 Update (`2026-03-17`): nawet przy próbie skonstruowania **deterministycznego** sign-liftu z wyeksportowanych wag payloadu seed strict-core (`F647`),
 wynik kierunkowy nie jest globalnie chart-independent (`P681`), opakowane jako granica strict przez `N681`. Konwencyjny sign-lift typu chart-sine-aligned
 daje spójny znak wyjścia na `{pair1..pair5}` (`P682`), ale zależy od nie-`Aut(Z_12)`-invariant embeddingu i liczy się wyłącznie jako warstwa konwencji (nie fizyczny datum orientacji).
+Update (`2026-03-17`): rooted sign-lift przez transport: zamrozić znak na `pair1` z `w_break` i propagować do `{pair2..pair5}` przez wyeksportowane rooted transporty `O_1m`
+(`P683`) daje spójny znak wyjścia, ale nadal zależy od reprezentantów transportu na krawędziach axis-only (projektor-level), więc pozostaje wyborem sekcji/konwencji.
 Następny bottleneck jest teraz jawnie **post‑promotion**:
 
 1. projective strict-core selector closure jest rozładowany (`N680`), ale nie implikuje kernel-alone/global rozładowania `QW-2191`,

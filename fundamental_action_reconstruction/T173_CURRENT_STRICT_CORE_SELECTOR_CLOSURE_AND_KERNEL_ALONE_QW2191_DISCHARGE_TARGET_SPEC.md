@@ -107,6 +107,8 @@ Update (`2026-03-17`): even when attempting to construct a **deterministic** per
 seed payload weights (`F647`), the directed output sign is not globally chart-independent (`P681`), packaged as a strict boundary by `N681`.
 A chart-sine-aligned sign-lift **convention** can be made output-sign-consistent (`P682`), but this depends on a non-`Aut(Z_12)`-invariant chart embedding
 and therefore does **not** upgrade any directed/sign-sensitive physical orientation datum into strict core.
+Moreover, a rooted transport-based sign lift can be made output-sign-consistent by fixing sign on `pair1` from the exported reflection-breaking weight `w_break`
+and propagating to other charts via the exported `O_1m` transports (`P683`), but this still depends on axis-only transport representatives and remains a section/convention choice.
 
 Therefore, `T173` is the next honest strict label for continued closure attempts beyond `T172`.
 
