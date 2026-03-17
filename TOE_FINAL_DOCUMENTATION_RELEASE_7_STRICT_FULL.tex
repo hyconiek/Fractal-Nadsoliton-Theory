@@ -298,9 +298,83 @@ it is an operational computability meaning only (packaged as a scope-limited mea
 
 \chapter{Selector closure on \texorpdfstring{$C_{v1}$}{C\_v1}}
 \section{Global atlas and transition objects (T170)}
+
+In the strict selector program, the configuration space domain is the declared strict object $C_{v1}$.
+On the current repo state, the global chart/transition infrastructure required for a global selector discussion is exported as objects:
+
+\begin{itemize}
+  \item a global selector atlas object on $C_{v1}$ (\texttt{F469}, packaged by \texttt{N515}),
+  \item a global selector transition (gluing) object on $C_{v1}$ (\texttt{F469}, packaged by \texttt{N515}).
+\end{itemize}
+
+The atlas uses five chart labels $\mathrm{pair}_m$ ($m=1,\dots,5$), corresponding to the five real Fourier pair planes
+$V_m=\mathrm{span}\{c_m,s_m\}\subset \mathbb{R}^{12}$.
+Each chart exports a local rank‑1 projector operator $A_m$ (a ray/state projector) on that plane.
+At projector level, if $u_m$ is a representative vector in the plane, then
+\[
+A_m=\frac{u_m u_m^{\mathsf T}}{u_m^{\mathsf T}u_m},
+\qquad
+u_m\sim -u_m\quad\Rightarrow\quad A_m\ \text{is sign-gauge-invariant.}
+\]
+
+The transition object exports explicit orthogonal chart-transport operators $O_{ij}$ between the chart planes (axis-only/projector-level transport).
+Projector transport is by conjugation:
+\[
+A_j \;=\; O_{ij}\,A_i\,O_{ij}^{\mathsf T}.
+\]
+\textbf{Cocycle discipline:} the repo keeps a strict boundary that cocycle/path-independence is a \emph{projector-section-level} statement only;
+operator-level identities $O_{jk}O_{ij}=O_{ik}$ are explicitly \emph{not} promoted in strict core (\texttt{N512}).
 \section{Projective closure (T172/T173 projective)}
+
+The global projective selector closure is exported as the object
+\[
+\texttt{SelectorClosure\_global\_C\_v1\_projective\_strict\_v1}\quad(\texttt{F672}),
+\]
+with theorem-level discharge \texttt{N680}.
+
+In projective scope, the selector state is a ray (projector/span semantics), and the closure observable is an output-space rank‑1 projector
+computed chartwise and then certified as chart-independent:
+\[
+B_{\mathrm{out}}(\mathrm{pair}_m)
+\;:=\;
+Y_{\mathrm{sel}}(\mathrm{pair}_m)\,A_m\,Y_{\mathrm{sel}}(\mathrm{pair}_m)^{\mathsf T}
+\in\mathbb{R}^{2\times 2},
+\]
+in the fixed output basis $(o_+,o_-)$, where $Y_{\mathrm{sel}}$ is the exported global selector output operator (promoted seed-v1 output channels).
+
+\texttt{F672} exports that all chartwise $B_{\mathrm{out}}(\mathrm{pair}_m)$ agree (within tolerance) and records the resulting global output projector:
+\[
+B_{\mathrm{out}}
+=
+\begin{pmatrix}
+1 & 0\\
+0 & 0
+\end{pmatrix}
+\quad\text{(numerically, up to machine-level residuals).}
+\]
+
+This is a \emph{projective} closure statement only: it is insensitive to sign lifts $u_m\mapsto -u_m$ and does not claim any directed/sign-sensitive physical orientation datum.
 \section{Directed lifts as gauge/convention layer}
+
+Beyond the projective closure object, the repo also exports directed/vector-level representatives and oriented sign-lift data as an explicit
+\emph{convention layer} (gauge) on top of the projective/ray-level closure.
+The strict no-false-pass boundary is:
+
+\begin{itemize}
+  \item directed lifts are tracked as gauge/convention data and are not a free strict-core physical sign datum;
+  \item the projective output ray is the invariant content.
+\end{itemize}
+
+Concretely, \texttt{N692} packages that the directed closure output (with its tracked output sign-lift) induces the same rank‑1 output projector
+as the projective closure output projector of \texttt{F672}.
+\texttt{N693} packages the gauge covariance of the directed output sign-lift under chartwise sign relifts.
 \section{Open boundary: kernel-alone/global QW-2191 discharge}
+
+\texttt{QW-2191} remains a real strict-core uniqueness obstruction: kernel-alone translation-invariant data leaves an $O(2)$ basis freedom inside each degenerate Fourier pair plane.
+
+The exported global closure in this document is therefore deliberately in \emph{projective} scope (ray/projector semantics), and the repo keeps
+kernel-alone/global \texttt{QW-2191} discharge explicitly open.
+Any future upgrade to strict-core selector closure or a directed physical sign datum must be exported and proven as a separate theorem-level object.
 
 \chapter{Operational physics proxies from projective closure}
 \section{Mass-spectrum proxy (P694)}
@@ -404,6 +478,27 @@ so \emph{no diagonalization claim} is made.
 
 \chapter{Emergent observer pipeline (projective scope)}
 \section{Observer-limit readout from projective closure output (P697)}
+
+From the exported global projective closure output projector $B_{\mathrm{out}}$ in the $(o_+,o_-)$ basis (\texttt{F672}), \texttt{P697} exports a minimal
+observer-limit readout consisting of gauge-safe invariants of the $2\times 2$ projector.
+Write
+\[
+B_{\mathrm{out}}=
+\begin{pmatrix}
+p_+ & c\\
+c & p_-
+\end{pmatrix}.
+\]
+Define:
+\[
+y_{\mathrm{bias}}:=\tfrac12(p_+-p_-),\qquad
+y_{\mathrm{total}}:=\tfrac12(p_++p_-),\qquad
+z_{\mathrm{commit}}:=p_+,\qquad
+z_{\mathrm{residual}}:=p_-.
+\]
+
+On the current repo state, \texttt{P697} reports $p_+=1$ and $p_-\approx 8.37\times 10^{-31}$, so the output projector is numerically the pure $o_+$ ray,
+and the readout invariants are $(y_{\mathrm{bias}},y_{\mathrm{total}},z_{\mathrm{commit}},z_{\mathrm{residual}})\approx (1/2,1/2,1,0)$.
 \section{Projective emergent-observer chain computability from closure output (P699/N699)}
 
 In the declared projective/gauge-safe downstream scope, we represent a ray by a rank‑1 (possibly unnormalized) symmetric positive semidefinite matrix $P$
@@ -441,6 +536,15 @@ C_{\mathrm{cl}}=N P N^{\mathsf T}.
 `P699` computes this chain on the current repo state and audits that the declared residual components vanish (within tolerance) while commitment remains positive.
 `N699` packages the computability statement with explicit hard limits (no kernel-alone/global `QW-2191` discharge; no ToE closure; no actual emergent observer closure).
 \section{Operational OS support packet (v1) (F698/P698/N698)}
+
+The v1 OS support packet (\texttt{F698}, audited by \texttt{P698}, packaged by \texttt{N698}) collects the minimum strict projective bundle sufficient to compute:
+\begin{itemize}
+  \item global projective selector closure on $C_{v1}$ (\texttt{N680}/\texttt{F672}),
+  \item directed-vs-projective output-ray invariance and sign-lift gauge covariance (\texttt{N692}, \texttt{N693}),
+  \item first quadratic proxy spectra (\texttt{P694}, \texttt{P696}),
+  \item observer-limit readout (\texttt{P697}).
+\end{itemize}
+The mass-proxy meaning is frozen separately as a scope-limited theorem (\texttt{N703}).
 \section{Operational OS support packet (v2) (F700/P700/N700)}
 
 The strict projective operational ToE “OS” support packet is exported in v2 form:
@@ -454,16 +558,68 @@ as the object \texttt{Lambda\_strict\_projective\_operational\_toe\_os\_support\
 All hard limits remain explicit: no kernel-alone/global \texttt{QW-2191} discharge, no directed sign-sensitive physical orientation claim in strict core, and no ToE closure.
 \section{Open target: actual emergent observer closure (future)}
 
+The current strict projective pipeline proves \emph{computability} of a downstream observer-facing chain, not the existence/uniqueness of an actual emergent observer.
+Any future “actual observer closure” claim must be exported as a separate theorem-level artifact with explicit premises and hard limits.
+
 \chapter{Hard limits and open problems}
 \section{Kernel-alone/global QW-2191 discharge}
+
+\texttt{QW-2191} remains open at kernel-alone/global strict-core level.
+All global closure statements used in the OS bundle are in \emph{projective} scope (rays/projectors) and do not assert strict-core uniqueness of directed selector representatives.
 \section{Directed physical sign datum}
+
+Directed/vector-level sign and orientation data are tracked as a gauge/convention layer.
+No strict-core theorem in Release 7 upgrades directed sign into a physical datum “for free”.
 \section{Host matching and Standard Model identification}
+
+Any comparison of proxy spectra against external experimental data is non-strict and must carry:
+\begin{itemize}
+  \item an explicit external dataset, and
+  \item an explicit identification/mapping policy.
+\end{itemize}
+The repo exports such a harness (\texttt{P702}) and keeps it outside strict scope; current one-scale metrics do not support any “Standard Model match” claim.
 \section{What Release 7 declares as closed vs open}
+
+Closed (scope-limited, strict projective OS):
+\begin{itemize}
+  \item projective global selector closure on $C_{v1}$ with chart-independent output projector (\texttt{N680}/\texttt{F672}),
+  \item operational OS computability pipeline from closure output through observer-limit readout and downstream chain (\texttt{N700}/\texttt{N701}),
+  \item a disciplined internal meaning of the quadratic “mass proxy” layer (\texttt{N703}).
+\end{itemize}
+
+Open (explicit hard limits):
+\begin{itemize}
+  \item kernel-alone/global \texttt{QW-2191} discharge,
+  \item directed sign-sensitive physical orientation datum,
+  \item Standard Model host matching as a strict claim,
+  \item actual emergent observer closure.
+\end{itemize}
 
 \appendix
 \chapter{Export map: key artifacts}
 \section{Strict-core selector closure}
+
+\begin{itemize}
+  \item Global atlas + transition objects on $C_{v1}$: \texttt{F469} (\texttt{N515}); exports \texttt{SelectorAtlas\_global\_C\_v1\_strict\_v1} and \texttt{SelectorTransition\_global\_C\_v1\_strict\_v1}.
+  \item Global projective selector state on $C_{v1}$: \texttt{F470} (\texttt{N516}).
+  \item Global projective selector closure output on $C_{v1}$: \texttt{F672} (\texttt{N680}).
+  \item Directed/convention-layer lifts and sign-fixing: \texttt{F690..F693} (\texttt{N692}, \texttt{N693}), with explicit boundaries (no \texttt{QW-2191} discharge).
+\end{itemize}
 \section{Operational OS support}
+
+\begin{itemize}
+  \item Proxy spectra: \texttt{P694}, \texttt{P696}; observer-limit readout: \texttt{P697}.
+  \item Downstream computability chain: \texttt{P699} packaged by \texttt{N699}.
+  \item OS support packets: \texttt{F698/P698/N698} (v1), \texttt{F700/P700/N700} (v2).
+  \item Operational ToE closure statement: \texttt{N701}.
+  \item Quadratic mass-proxy meaning definition: \texttt{N703}.
+  \item Non-strict host matching harness (external-data dependent): \texttt{P702}.
+\end{itemize}
 \section{Emergent observer artifacts}
+
+\begin{itemize}
+  \item Observer-limit readout invariants from the projective closure output projector: \texttt{P697}.
+  \item Full induced operator chain computability under $P\mapsto MPM^{\mathsf T}$: \texttt{P699}/\texttt{N699}.
+\end{itemize}
 
 \end{document}
