@@ -84,10 +84,16 @@ def main() -> None:
             "meaning": "B1 already narrows the blocker to the need for one internal symmetry-breaking selector",
         },
         {
-            "id": "b2_internal_orientation_datum_missing",
+            "id": "b2_internal_orientation_datum_axis_only_found",
             "actual": b2_map.get("strict internal orientation datum"),
+            "expected": "found_axis_only_residual_z2",
+            "meaning": "B2 confirms an axis-only strict-core internal orientation datum exists (O(2)->Z2 cut); residual Z2 sign remains",
+        },
+        {
+            "id": "b2_kernel_invariant_selecting_one_o2_point_missing",
+            "actual": b2_map.get("kernel invariant selecting one O(2) point"),
             "expected": "not_found_in_strict_core",
-            "meaning": "B2 confirms that no strict-core internal orientation datum is currently derived",
+            "meaning": "B2 confirms no strict-core kernel-invariant selects one unique O(2) point (full uniqueness remains obstructed)",
         },
         {
             "id": "b2_selector_axiom_control_route_only",
@@ -114,7 +120,7 @@ def main() -> None:
         "lane": "current_selector_symmetry_breaking_requirement_probe_qw2191_frontier_only",
         "goal": "test_whether_the_current_repo_supports_the_conclusion_that_the_qw2191_uniqueness_frontier_now_requires_an_explicit_selector_or_symmetry_breaking_premise_unless_a_new_internal_source_is_derived",
         "status": "CURRENT_REPO_SUPPORTS_THE_SELECTOR_OR_SYMMETRY_BREAKING_REQUIREMENT_CONCLUSION_FOR_THE_QW2191_UNIQUENESS_FRONTIER_AFTER_P108",
-        "reason": "QW-2191 proves kernel-alone obstruction, QW-2192 closes uniqueness only after adding an explicit selector axiom, QW-2193 proves robustness of that axiom-augmented family, and B2 confirms that no strict-core internal orientation datum has yet been derived; therefore the current repo supports the selector/symmetry-breaking requirement conclusion for the QW-2191 frontier",
+        "reason": "QW-2191 proves kernel-alone obstruction, QW-2192 closes uniqueness only after adding an explicit selector axiom, QW-2193 proves robustness of that axiom-augmented family, and B2 confirms an axis-only strict-core internal orientation datum exists (O(2)->Z2 cut) while full kernel-invariant uniqueness (and residual sign lift) remain open; therefore the current repo supports the scoped selector/symmetry-breaking requirement conclusion for the QW-2191 frontier",
         "q2191_state": {
             "kernel_alone_obstructed": q2191["flags"]["full_uniqueness_from_kernel_alone_obstructed"],
             "explicit_symmetry_breaking_required": q2191["flags"]["obstruction_requires_explicit_symmetry_breaking_postulate"],
@@ -131,8 +137,8 @@ def main() -> None:
             "strict_internal_selector_derivations_found": b2["b2"]["strict_internal_selector_derivations_found"],
         },
         "remaining_missing_objects": [
-            "explicit_strict_core_internal_selector_source_derivation_discharge",
-            "explicit_theory_level_acceptance_of_selector_or_symmetry_breaking_requirement_if_no_internal_source_is_derived"
+            "explicit_strict_core_internal_sign_sensitive_orientation_datum_or_sign_lift_discharge",
+            "explicit_theory_level_acceptance_of_selector_or_symmetry_breaking_requirement_if_no_sign_lift_is_derived"
         ],
         "checks": checks,
         "strict_core_promotion": False,
