@@ -50,10 +50,8 @@ def main() -> None:
         "hard_limits": [
             "declared_scope_theorem_is_real_but_not_yet_closure_level",
             "no_future_stronger_source_topology_result_is_ruled_out_forever",
-            "no_admissible_strict_core_internal_selector_source_object_is_currently_exported",
-            "no_strict_core_selector_closure",
-            "no_global_selector_closure",
-            "no_global_QW2191_discharge",
+            "no_promotion_from_declared_scope_to_strict_core_selector_closure",
+            "no_promotion_from_declared_scope_to_global_kernel_alone_QW2191_discharge",
             "no_ToE_closure",
         ],
     }

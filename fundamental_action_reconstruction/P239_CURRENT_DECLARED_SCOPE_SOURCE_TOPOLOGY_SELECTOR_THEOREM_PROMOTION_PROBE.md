@@ -1,7 +1,7 @@
 # P239 Current Declared-Scope Source Topology Selector Theorem Promotion Probe
 
 Status: `P239_EXECUTED_CURRENT_DECLARED_SCOPE_SOURCE_TOPOLOGY_SELECTOR_THEOREM_PROMOTION_PROBE_NO_FALSE_PASS`
-As of: `2026-03-08`
+As of: `2026-03-17`
 
 ## Goal
 
@@ -59,13 +59,18 @@ This means:
    Topology Selector theorem,
 2. but that theorem remains scope-limited,
 3. and the current repo still does not justify promotion to strict-core
-   selector closure, global selector closure, or global `QW-2191` discharge.
+   selector closure or kernel-alone/global `QW-2191` discharge.
+
+Update note (2026-03-17): the repo now exports an admissible strict-core source
+object for the `S_sel_int` step (`N676`) and exports global selector closure
+observables on `C_v1` in projective and directed scopes (`N674`, `N678`), but
+those exports do not automatically promote the declared-scope Source Topology
+Selector theorem itself to a strict-core closure-level theorem.
 
 ## Hard limits
 
 `P239` does not establish:
 
 1. current strict-core selector closure,
-2. current global selector closure,
-3. current global `QW-2191` discharge,
-4. ToE closure.
+2. current global kernel-alone `QW-2191` discharge,
+3. ToE closure.

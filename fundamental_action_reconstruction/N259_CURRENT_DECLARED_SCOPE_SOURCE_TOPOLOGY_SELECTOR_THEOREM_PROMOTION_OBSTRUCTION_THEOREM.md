@@ -1,7 +1,7 @@
 # N259 Current Declared-Scope Source Topology Selector Theorem Promotion Obstruction Theorem
 
 Status: `N259_DISCHARGED_CURRENT_DECLARED_SCOPE_SOURCE_TOPOLOGY_SELECTOR_THEOREM_PROMOTION_OBSTRUCTION_THEOREM_NO_FALSE_PASS`
-As of: `2026-03-08`
+As of: `2026-03-17`
 
 ## Goal
 
@@ -20,16 +20,16 @@ Consider the current repo state containing all of the following:
 1. `N258`
    - one actual declared-scope Source Topology Selector theorem witness is
      exported,
-2. `N126`
-   - no admissible strict-core internal selector source object is currently
-     exported,
-3. `N118`
-   - selector/symmetry-breaking requirement remains active at the current
-     closure frontier unless a stronger internal source is separately derived,
-4. `N234`
-   - no current global promotion from downstream-only observer evidence is
-     justified,
-5. `P239`
+2. `N676`
+   - an admissible strict-core source object for the `S_sel_int` step is now
+     exported (in the narrow `F34` sense), but this does not automatically
+     promote a declared-scope theorem to strict-core closure,
+3. `N674` / `N678`
+   - global selector closure observables on `C_v1` are now exported in
+     projective and directed scopes, but they do not re-label the
+     declared-scope Source Topology Selector theorem as a closure-level
+     strict-core theorem,
+4. `P239`
    - the current repo does not justify promoting the declared-scope theorem to
      strict-core selector closure or current global `QW-2191` discharge.
 
@@ -60,10 +60,8 @@ The theorem is:
 `N259` does not discharge:
 
 - permanent impossibility of any future stronger source-topology result,
-- a future admissible strict-core internal selector source object,
-- current strict-core selector closure,
-- current global selector closure,
-- current global `QW-2191` discharge,
+- promotion of the declared-scope theorem to strict-core selector closure,
+- promotion of the declared-scope theorem to kernel-alone/global `QW-2191` discharge,
 - ToE closure.
 
 ## Recommended next move

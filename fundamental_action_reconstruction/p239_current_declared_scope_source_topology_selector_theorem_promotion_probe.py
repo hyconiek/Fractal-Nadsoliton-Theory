@@ -14,17 +14,34 @@ def load_json(path: Path) -> dict:
 
 
 def main() -> None:
-    n118 = load_json(
-        GENERATED / "n118_current_selector_or_symmetry_breaking_requirement_theorem_for_qw2191_summary.json"
-    )
-    n126 = load_json(
-        GENERATED / "n126_current_repo_exports_no_admissible_strict_core_internal_selector_source_object_theorem_summary.json"
-    )
-    n234 = load_json(
-        GENERATED / "n234_current_global_selector_closure_and_qw2191_discharge_promotion_obstruction_theorem_summary.json"
-    )
     n258 = load_json(
         GENERATED / "n258_current_first_declared_scope_source_topology_selector_theorem_summary.json"
+    )
+    n674 = load_json(
+        GENERATED / "n674_current_strict_t172_projective_closure_discharge_theorem_summary.json"
+    )
+    n676 = load_json(
+        GENERATED / "n676_current_first_admissible_s_sel_int_source_object_discharge_theorem_summary.json"
+    )
+    n678 = load_json(
+        GENERATED / "n678_current_strict_t172_directed_closure_discharge_theorem_summary.json"
+    )
+
+    admissible_strict_core_internal_selector_source_object_present = bool(
+        n676["theorem_result"]["admissible_S_sel_int_source_object_in_F34_sense"]
+    )
+    current_global_selector_closure_exported = bool(
+        n674["theorem_result"]["t172_discharged_in_scope"]
+        or n678["theorem_result"]["t172_discharged_in_scope"]
+    )
+    current_global_kernel_alone_qw2191_discharge = bool(
+        n676["theorem_result"]["QW2191_kernel_alone_discharge"]
+        or n674["theorem_result"]["QW2191_kernel_alone_discharge"]
+        or n678["theorem_result"]["QW2191_kernel_alone_discharge"]
+    )
+    selector_requirement_still_active_at_closure_frontier = bool(
+        n674["theorem_result"]["QW2191_kernel_alone_obstruction_remains"]
+        or n678["theorem_result"]["QW2191_kernel_alone_obstruction_remains"]
     )
 
     checks_spec = [
@@ -35,33 +52,33 @@ def main() -> None:
         },
         {
             "id": "admissible_strict_core_internal_selector_source_object_present",
-            "actual": n126["theorem_result"]["admissible_strict_core_internal_selector_source_object_present"],
+            "actual": admissible_strict_core_internal_selector_source_object_present,
             "expected": True,
         },
         {
             "id": "selector_requirement_removed_at_closure_frontier",
-            "actual": not n118["theorem_result"]["selector_or_symmetry_breaking_requirement_supported_on_current_repo_state"],
+            "actual": not selector_requirement_still_active_at_closure_frontier,
             "expected": True,
         },
         {
             "id": "current_strict_core_selector_closure_exported",
-            "actual": n258["current_selector_closure"],
+            "actual": n676["theorem_result"]["strict_core_selector_closure"],
             "expected": True,
         },
         {
             "id": "current_global_selector_closure_justified",
-            "actual": n234["theorem_result"]["global_selector_closure_justified_on_current_repo_state"],
+            "actual": current_global_selector_closure_exported,
             "expected": True,
         },
         {
             "id": "current_global_qw2191_discharge_justified",
             "actual": n258["current_global_qw2191_discharge"]
-            and n234["theorem_result"]["global_qw2191_discharge_justified_on_current_repo_state"],
+            and current_global_kernel_alone_qw2191_discharge,
             "expected": True,
         },
         {
             "id": "downstream_only_observer_boundary_removed",
-            "actual": not n234["theorem_result"]["observer_downstream_only"],
+            "actual": n258["observer_role"] != "downstream_only",
             "expected": True,
         },
     ]
@@ -94,9 +111,9 @@ def main() -> None:
         "failed_promotion_requirements": failed,
         "declared_scope_theorem_exported": n258["declared_scope_source_topology_selector_theorem_exported"],
         "declared_scope_only": n258["declared_scope_only"],
-        "admissible_strict_core_internal_selector_source_object_present": n126["theorem_result"]["admissible_strict_core_internal_selector_source_object_present"],
-        "selector_requirement_still_active_at_closure_frontier": n118["theorem_result"]["selector_or_symmetry_breaking_requirement_supported_on_current_repo_state"],
-        "observer_downstream_only": n234["theorem_result"]["observer_downstream_only"],
+        "admissible_strict_core_internal_selector_source_object_present": admissible_strict_core_internal_selector_source_object_present,
+        "selector_requirement_still_active_at_closure_frontier": selector_requirement_still_active_at_closure_frontier,
+        "observer_downstream_only": n258["observer_role"] == "downstream_only",
         "strict_core_selector_closure_promotable_on_current_repo_state": not failed,
         "global_selector_closure_promotable_on_current_repo_state": not failed,
         "global_qw2191_discharge_promotable_on_current_repo_state": not failed,
