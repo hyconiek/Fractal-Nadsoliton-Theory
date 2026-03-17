@@ -9,6 +9,7 @@
 - This document is a **preparation draft** for Release 7 (“full closure” target). It is **not** yet a claim that the theory is fully closed.
 - It does **not** claim strict-core ToE closure, global ToE closure, or kernel-alone/global `QW-2191` discharge unless such a discharge is explicitly exported at theorem level.
 - Directed/sign-sensitive physical orientation remains a **tracked gauge/convention layer** unless explicitly promoted in a premise-tracked strict scope.
+- Any proxy→GeV or Standard Model identification attempt is **non-strict** and must be frozen as: (i) an explicit external dataset object, and (ii) an explicit versioned non-strict matching policy object (to prevent silent DOF smuggling).
 
 The theory originates from a deep intuition that **Information is the fundamental substance of reality**, consistent with the metaphysical insight that *"In the beginning was the Word"* (Logos/Information). This intuition evolved through key realizations:
 
@@ -51,7 +52,10 @@ Already exported on the current repo state (Release 6.5.x):
 - A scope-disciplined “Operational ToE closure” statement is frozen in strict projective OS scope (`N701`), derived only from `N700` and keeping all hard limits explicit.
 - A scope-limited “mass proxy meaning” definition theorem is frozen (`N703`): `P694/P696` numbers are treated as quadratic coefficients of the exported `H_psi` instantiation, without any physical-unit or SM identification claim.
 - A strict basis-invariant “mass observable” object is exported (`F704`): the eigenvalue spectrum of the diagonal/local `H_psi` (dimensionless proxy only; no physical-unit claim).
-- Non-strict: Standard Model host-matching harnesses exist (`P702` for the selector-aligned channel proxy; `P704` for the basis-invariant eigen-spectrum). With an explicit PDG2024 target dataset (`fundamental_action_reconstruction/external_data/sm_mass_targets_v1.json`) both are computable, but current one-scale matching metrics are poor (`P702`: `rmse_log_m2≈8.10`, `max_abs_rel_mass≈7.90e2`; `P704`: `rmse_log_m2≈7.23`, `max_abs_rel_mass≈4.35e2`); **no** “Standard Model match” claim is made.
+- Non-strict: Standard Model host-matching harnesses exist (`P702` for the selector-aligned channel proxy; `P704` for the basis-invariant eigen-spectrum). They are frozen as a two-part non-strict layer:
+  - dataset (targets only): `fundamental_action_reconstruction/external_data/sm_mass_targets_v1.json`,
+  - policy (assignment + allowed DOF + optional thresholds): `fundamental_action_reconstruction/external_data/sm_host_matching_policy_v1.json`.
+  Under the current v1 policy (global scale only, `pass_criteria=null`), both probes are computable, but the metrics are poor (`P702`: `rmse_log_m2≈8.10`, `max_abs_rel_mass≈7.90e2`; `P704`: `rmse_log_m2≈7.23`, `max_abs_rel_mass≈4.35e2`); **no** “Standard Model match” claim is made.
 
 ## 3 What Release 7 must still not “false‑PASS” (EN)
 
@@ -100,7 +104,10 @@ Już na obecnym stanie repo (Release 6.5.x):
 - Repo zamraża scope‑disciplinowane stwierdzenie “Operational ToE closure” w zakresie strict projective OS (`N701`), wyprowadzone wyłącznie z `N700` i z jawnymi hard‑limitami.
 - Repo zamraża scope‑limited twierdzenie o “znaczeniu mass proxy” (`N703`): liczby z `P694/P696` są traktowane jako współczynniki kwadratowe wyeksportowanej instancji `H_psi`, bez claimu o jednostkach fizycznych ani o identyfikacji SM.
 - Repo eksportuje strict bazowo-niezmienniczy obiekt “mass observable” (`F704`): spektrum wartości własnych diagonal/local `H_psi` (proxy bez jednostek; bez claimu o kalibracji fizycznej).
-- Non-strict: istnieją harnessy host-matchingu Standard Model (`P702` dla selector-aligned channel proxy; `P704` dla bazowo-niezmienniczego eigen-spectrum). Z jawnym datasetem docelowym PDG2024 (`fundamental_action_reconstruction/external_data/sm_mass_targets_v1.json`) oba są policzalne, ale obecne metryki dopasowania one-scale są słabe (`P702`: `rmse_log_m2≈8.10`, `max_abs_rel_mass≈7.90e2`; `P704`: `rmse_log_m2≈7.23`, `max_abs_rel_mass≈4.35e2`); **nie** jest zgłaszany żaden “Standard Model match”.
+- Non-strict: istnieją harnessy host-matchingu Standard Model (`P702` dla selector-aligned channel proxy; `P704` dla bazowo-niezmienniczego eigen-spectrum). Warstwa non-strict jest teraz jawnie zamrożona jako dwa osobne obiekty:
+  - dataset (same targety): `fundamental_action_reconstruction/external_data/sm_mass_targets_v1.json`,
+  - policy (przypisanie + dozwolone DOF + opcjonalne progi): `fundamental_action_reconstruction/external_data/sm_host_matching_policy_v1.json`.
+  W bieżącej polityce v1 (tylko globalna skala, `pass_criteria=null`) oba są policzalne, ale metryki dopasowania są słabe (`P702`: `rmse_log_m2≈8.10`, `max_abs_rel_mass≈7.90e2`; `P704`: `rmse_log_m2≈7.23`, `max_abs_rel_mass≈4.35e2`); **nie** jest zgłaszany żaden “Standard Model match”.
 
 ## 3 Czego Release 7 nie może “false‑PASS” (PL)
 
