@@ -58,19 +58,19 @@ The theory originates from a deep intuition that **Information is the fundamenta
 
 The strict kernel-mode lane uses the later operational strict gate kernel (frozen working kernel):
 
-\[
+$$
 K(d)=\frac{\cos(\omega d+\phi)}{1+\beta d^{\eta}}
-\]
+$$
 
 **Working frozen parameter set (strict gate kernel):**
-- \(\omega = 0.18575\)
-- \(\phi = 0.16250\)
-- \(\beta = 1.00000\)
-- \(\eta = 1.80000\)
+- $\omega = 0.18575$
+- $\phi = 0.16250$
+- $\beta = 1.00000$
+- $\eta = 1.80000$
 
-On the strict `n=12` carrier, the selector program is represented in a real Fourier basis on \(\mathbb{Z}_{12}\) with five degenerate pair planes (`pair1..pair5`), and the strict obstruction `QW-2191` applies:
+On the strict `n=12` carrier, the selector program is represented in a real Fourier basis on $\mathbb{Z}_{12}$ with five degenerate pair planes (`pair1..pair5`), and the strict obstruction `QW-2191` applies:
 
-- kernel-alone translation-invariant data leaves an \(O(2)\) basis freedom inside each Fourier pair plane,
+- kernel-alone translation-invariant data leaves an $O(2)$ basis freedom inside each Fourier pair plane,
 - therefore strict closure is stated in **projective (ray-level)** scope unless an explicit symmetry-breaking / selector source is tracked.
 
 Release 7 does **not** claim kernel-alone/global `QW-2191` discharge; it exports a strict **projective** closure object plus an explicit convention layer for directed sign lifts.
@@ -83,7 +83,7 @@ Release 7 does **not** claim kernel-alone/global `QW-2191` discharge; it exports
 
 - Exported projective closure object: `SelectorClosure_global_C_v1_projective_strict_v1` (`F672`).
 - Theorem-level discharge: `N680`.
-- The closure observable is a chart-independent output-space rank‑1 projector \(B_{\mathrm{out}}\) on \(Q_{\mathrm{out}}=\mathrm{span}\{o_+,o_-\}\),
+- The closure observable is a chart-independent output-space rank‑1 projector $B_{\mathrm{out}}$ on $Q_{\mathrm{out}}=\mathrm{span}\{o_+,o_-\}$,
   with an explicit certificate of chartwise agreement within tolerance (`F672`).
 
 ### 4.2 Operational ToE “OS” closure (computability, strict projective scope)
