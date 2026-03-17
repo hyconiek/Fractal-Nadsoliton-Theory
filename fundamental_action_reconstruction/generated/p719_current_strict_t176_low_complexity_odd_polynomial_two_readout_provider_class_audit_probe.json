@@ -1,0 +1,251 @@
+{
+  "stage": "P719",
+  "status": "PASS_LOW_COMPLEXITY_ODD_POLYNOMIAL_TWO_READOUT_PROVIDER_CLASS_AUDITED",
+  "as_of": "2026-03-18",
+  "generated_utc": "2026-03-17T23:41:53.760654+00:00",
+  "goal": "attack the next honest nonlinear provider class after P718: untuned odd polynomials on the current two-readout carrier (<w_break,u>, <w_ref,u>) with total degree <= 3 and coefficient alphabet {-1,0,1}",
+  "inputs": {
+    "F647": "fundamental_action_reconstruction/generated/f647_strict_witness_provider_export_packet_for_seed_v1_realization_attempt.json",
+    "atlas": "fundamental_action_reconstruction/generated/selector_atlas_pair12345_oriented_transport_mod_2pi_strict_convention_v1.json",
+    "Y_sel": "fundamental_action_reconstruction/generated/selector_output_operator_global_c_v1_seed_v1_promoted_strict_v1.json",
+    "P715": "fundamental_action_reconstruction/generated/p715_current_strict_t176_parity_completed_dual_anchor_multiroot_audit_probe_summary.json",
+    "P716": "fundamental_action_reconstruction/generated/p716_current_strict_t176_pair4_negative_cosine_polarity_global_z2_orbit_split_audit_probe_summary.json",
+    "P718": "fundamental_action_reconstruction/generated/p718_current_strict_t176_single_mixed_linear_weight_span_provider_insufficiency_audit_probe_summary.json",
+    "A_packets": [
+      "fundamental_action_reconstruction/generated/a_1_pair1_orientation_projector_operator_strict_core_v1.json",
+      "fundamental_action_reconstruction/generated/a_2_pair2_orientation_projector_operator_strict_core_v1.json",
+      "fundamental_action_reconstruction/generated/a_3_pair3_orientation_projector_operator_strict_core_v1.json",
+      "fundamental_action_reconstruction/generated/a_4_pair4_orientation_projector_operator_strict_core_v1.json",
+      "fundamental_action_reconstruction/generated/a_5_pair5_orientation_projector_operator_strict_core_v1.json"
+    ]
+  },
+  "scan_class": {
+    "carrier": "two_readout_root_local_scalars_(dot_w_break_u_root,dot_w_ref_u_root)",
+    "odd_monomial_basis_total_degree_le_3": [
+      "b",
+      "r",
+      "b3",
+      "b2r",
+      "br2",
+      "r3"
+    ],
+    "coefficient_alphabet": [
+      -1,
+      0,
+      1
+    ],
+    "total_candidates_scanned": 728
+  },
+  "root_readout_profiles": {
+    "pair1": {
+      "dot_w_break_u_root": 0.00016200023852512268,
+      "dot_w_ref_u_root": 0.0
+    },
+    "pair2": {
+      "dot_w_break_u_root": -7.33323876262474e-20,
+      "dot_w_ref_u_root": 0.026998084963236815
+    },
+    "pair3": {
+      "dot_w_break_u_root": 1.6818187974471053e-19,
+      "dot_w_ref_u_root": 0.024120089587956365
+    },
+    "pair4": {
+      "dot_w_break_u_root": 1.7502597213287567e-19,
+      "dot_w_ref_u_root": -0.027023002461428268
+    },
+    "pair5": {
+      "dot_w_break_u_root": 0.00013708274032496462,
+      "dot_w_ref_u_root": 3.906250000000001e-18
+    }
+  },
+  "counts": {
+    "total_candidates_scanned": 728,
+    "exact_candidates_found": 0,
+    "projective_only_candidates_found": 576,
+    "not_all_roots_supported_candidates": 152
+  },
+  "projective_only_negated_root_sets_seen": [
+    [
+      "pair2",
+      "pair3"
+    ],
+    [
+      "pair4"
+    ]
+  ],
+  "projective_only_examples_by_negated_root_set": {
+    "pair2,pair3": [
+      {
+        "formula": "-1*b -1*b3 -1*b2r -1*br2 +1*r3",
+        "reference_root": "pair1"
+      },
+      {
+        "formula": "-1*b -1*b3 -1*b2r +1*r3",
+        "reference_root": "pair1"
+      },
+      {
+        "formula": "-1*b -1*b3 -1*b2r +1*br2 +1*r3",
+        "reference_root": "pair1"
+      },
+      {
+        "formula": "-1*b -1*b3 -1*br2 +1*r3",
+        "reference_root": "pair1"
+      },
+      {
+        "formula": "-1*b -1*b3 +1*r3",
+        "reference_root": "pair1"
+      }
+    ],
+    "pair4": [
+      {
+        "formula": "-1*b -1*r -1*b3 -1*b2r -1*br2 -1*r3",
+        "reference_root": "pair1"
+      },
+      {
+        "formula": "-1*b -1*r -1*b3 -1*b2r -1*br2",
+        "reference_root": "pair1"
+      },
+      {
+        "formula": "-1*b -1*r -1*b3 -1*b2r -1*br2 +1*r3",
+        "reference_root": "pair1"
+      },
+      {
+        "formula": "-1*b -1*r -1*b3 -1*b2r -1*r3",
+        "reference_root": "pair1"
+      },
+      {
+        "formula": "-1*b -1*r -1*b3 -1*b2r",
+        "reference_root": "pair1"
+      }
+    ]
+  },
+  "unsupported_examples": [
+    {
+      "formula": "-1*b -1*b3 -1*b2r -1*br2",
+      "unsupported_roots": [
+        "pair2",
+        "pair3",
+        "pair4"
+      ]
+    },
+    {
+      "formula": "-1*b -1*b3 -1*b2r",
+      "unsupported_roots": [
+        "pair2",
+        "pair3",
+        "pair4"
+      ]
+    },
+    {
+      "formula": "-1*b -1*b3 -1*b2r +1*br2",
+      "unsupported_roots": [
+        "pair2",
+        "pair3",
+        "pair4"
+      ]
+    },
+    {
+      "formula": "-1*b -1*b3 -1*br2",
+      "unsupported_roots": [
+        "pair2",
+        "pair3",
+        "pair4"
+      ]
+    },
+    {
+      "formula": "-1*b -1*b3",
+      "unsupported_roots": [
+        "pair2",
+        "pair3",
+        "pair4"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": "p715_current_best_route_still_projective_only",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "P715 still marks the current best all-root route as projective-only, not exact."
+    },
+    {
+      "id": "p716_pair4_localization_still_true",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "P716 still localizes the current best exact split to pair4 negative cosine polarity."
+    },
+    {
+      "id": "p718_single_linear_span_still_insufficient",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "P718 still rules out the full single linear span of current exported weights."
+    },
+    {
+      "id": "low_complexity_odd_polynomial_two_readout_exact_candidates_absent",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "No low-complexity untuned odd polynomial candidate on the current two-readout carrier yields one exact all-root directed section."
+    },
+    {
+      "id": "low_complexity_odd_polynomial_two_readout_projective_only_candidates_present",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "The same nonlinear class still contains many projective-only candidates, so the failure remains exact-provider level rather than total support failure."
+    },
+    {
+      "id": "low_complexity_odd_polynomial_negated_root_sets_match_current_frontier_patterns",
+      "actual": [
+        [
+          "pair2",
+          "pair3"
+        ],
+        [
+          "pair4"
+        ]
+      ],
+      "expected": [
+        [
+          "pair2",
+          "pair3"
+        ],
+        [
+          "pair4"
+        ]
+      ],
+      "pass": true,
+      "meaning": "This minimal nonlinear class reproduces only the already-known exact split patterns: pair4-only or pair2/pair3-only negated branches."
+    }
+  ],
+  "blocking_mismatches": [],
+  "result": {
+    "low_complexity_odd_polynomial_two_readout_exact_root_independent_section_exists": false,
+    "low_complexity_odd_polynomial_two_readout_projective_only_candidates_exist": true,
+    "known_negated_root_sets_exhaust_current_scan": [
+      [
+        "pair2",
+        "pair3"
+      ],
+      [
+        "pair4"
+      ]
+    ],
+    "next_provider_must_either_raise_complexity_or_leave_current_two_readout_carrier": true,
+    "preferred_next_direction": "new_physically_interpretable_observable_provider_class_over_further_coefficient_tuning",
+    "counts_as_strict_physical_orientation_datum": false,
+    "implies_t176_discharge": false
+  },
+  "hard_limits": [
+    "No T176 discharge claim.",
+    "No strict-core directed/sign-sensitive physical orientation datum claim.",
+    "No statement about tuned higher-degree coefficients outside the scanned class.",
+    "No statement about provider classes using new observables beyond the current two-readout carrier.",
+    "No kernel-alone/global QW-2191 discharge.",
+    "No ToE closure claim."
+  ],
+  "no_false_pass": true
+}

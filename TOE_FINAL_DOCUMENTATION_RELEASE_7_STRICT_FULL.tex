@@ -134,6 +134,7 @@ unless such claims are explicitly exported at theorem level in the repo and are 
   \item \textbf{Localized source audit for the remaining exact split:} \texttt{P716} (\verb|fundamental_action_reconstruction/p716_current_strict_t176_pair4_negative_cosine_polarity_global_z2_orbit_split_audit_probe.py|)
   \item \textbf{Release-7 OS bridge audit for the localized exact split:} \texttt{P717} (\verb|fundamental_action_reconstruction/p717_current_strict_t176_pair4_exact_branch_split_release_7_os_gauge_irrelevance_bridge_audit_probe.py|)
   \item \textbf{Single mixed linear-weight span insufficiency audit:} \texttt{P718} (\verb|fundamental_action_reconstruction/p718_current_strict_t176_single_mixed_linear_weight_span_provider_insufficiency_audit_probe.py|)
+  \item \textbf{Low-complexity nonlinear two-readout provider-class audit:} \texttt{P719} (\verb|fundamental_action_reconstruction/p719_current_strict_t176_low_complexity_odd_polynomial_two_readout_provider_class_audit_probe.py|)
 \end{itemize}
 
 To reproduce the PDF and verify the current Release-7 strict dashboard statuses:
@@ -148,6 +149,7 @@ python3 fundamental_action_reconstruction/p715_current_strict_t176_parity_comple
 python3 fundamental_action_reconstruction/p716_current_strict_t176_pair4_negative_cosine_polarity_global_z2_orbit_split_audit_probe.py
 python3 fundamental_action_reconstruction/p717_current_strict_t176_pair4_exact_branch_split_release_7_os_gauge_irrelevance_bridge_audit_probe.py
 python3 fundamental_action_reconstruction/p718_current_strict_t176_single_mixed_linear_weight_span_provider_insufficiency_audit_probe.py
+python3 fundamental_action_reconstruction/p719_current_strict_t176_low_complexity_odd_polynomial_two_readout_provider_class_audit_probe.py
 cat fundamental_action_reconstruction/generated/p707_current_release_7_build_and_closure_smoke_probe_summary.json
 cat fundamental_action_reconstruction/generated/p711_current_strict_t173_previous_methodology_survival_and_global_gap_audit_probe_summary.json
 cat fundamental_action_reconstruction/generated/p712_current_strict_t176_existing_global_directed_sign_coherence_provider_nonexport_audit_probe_summary.json
@@ -157,6 +159,7 @@ cat fundamental_action_reconstruction/generated/p715_current_strict_t176_parity_
 cat fundamental_action_reconstruction/generated/p716_current_strict_t176_pair4_negative_cosine_polarity_global_z2_orbit_split_audit_probe_summary.json
 cat fundamental_action_reconstruction/generated/p717_current_strict_t176_pair4_exact_branch_split_release_7_os_gauge_irrelevance_bridge_audit_probe_summary.json
 cat fundamental_action_reconstruction/generated/p718_current_strict_t176_single_mixed_linear_weight_span_provider_insufficiency_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p719_current_strict_t176_low_complexity_odd_polynomial_two_readout_provider_class_audit_probe_summary.json
 cat fundamental_action_reconstruction/generated/p706_current_release_7_strict_projective_operational_toe_os_closure_dashboard_probe_summary.json
 cat fundamental_action_reconstruction/generated/p708_current_strict_t173_frontier_dashboard_probe_summary.json
 \end{lstlisting}
@@ -1409,6 +1412,14 @@ sector of that span still supports all roots and recovers at most a projective o
 global directed section. Some sectors reproduce the current \texttt{pair4}-only negated branch; other sectors worsen the split to
 \texttt{pair2/pair3}. So the next strict provider attack must leave the present single-linear span class.
 
+The next nonlinear audit \texttt{P719} (packaged by \texttt{N715}) then tests the nearest untuned extension of that same current carrier:
+odd polynomials in the two exported readouts \((\langle w_{\mathrm{break}},u\rangle,\langle w_{\mathrm{ref}},u\rangle)\) of total
+degree \(\le 3\), with coefficient alphabet \(\{-1,0,1\}\). This too is negative, but more informative. Across all \(728\) nonzero
+candidates in that scanned class there are \(0\) exact all-root directed sections, \(576\) projective-only candidates, and no new
+negated-root pattern beyond \texttt{pair4} or \texttt{pair2/pair3}. So the next strict provider attack must either raise complexity in
+an explicit non-hidden way or leave the current two-readout carrier altogether. From the current Release-7 physics perspective, the
+preferred continuation is the latter: a new \emph{physically interpretable} observable/provider class rather than further coefficient tuning.
+
 \subsection*{Priority 2 (explicitly non-strict policy): physical units (proxy $\to$ GeV)}
 
 Any unit assignment and any comparison to external experimental data must remain non-strict unless a strict unit map is derived.
@@ -1460,6 +1471,7 @@ The nearest falsifiable layer consistent with current strict scope is the basis-
   \item Localized source audit for the remaining exact split below \texttt{T176}: \texttt{P716}, packaged by \texttt{N712}.
   \item Release-7 OS gauge-irrelevance bridge for the localized exact split below \texttt{T176}: \texttt{P717}, packaged by \texttt{N713}.
   \item Single mixed linear-weight span insufficiency audit below \texttt{T176}: \texttt{P718}, packaged by \texttt{N714}.
+  \item Low-complexity nonlinear two-readout provider-class audit below \texttt{T176}: \texttt{P719}, packaged by \texttt{N715}.
   \item Non-strict host matching harnesses (external-data dependent): \texttt{P702}, \texttt{P704}.
   \item Release-7 strict projective OS closure dashboard: \texttt{P706}.
 \end{itemize}

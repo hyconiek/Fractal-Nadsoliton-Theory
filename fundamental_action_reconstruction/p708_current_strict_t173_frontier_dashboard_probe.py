@@ -27,6 +27,7 @@ IN_P715 = GENERATED / "p715_current_strict_t176_parity_completed_dual_anchor_mul
 IN_P716 = GENERATED / "p716_current_strict_t176_pair4_negative_cosine_polarity_global_z2_orbit_split_audit_probe_summary.json"
 IN_P717 = GENERATED / "p717_current_strict_t176_pair4_exact_branch_split_release_7_os_gauge_irrelevance_bridge_audit_probe_summary.json"
 IN_P718 = GENERATED / "p718_current_strict_t176_single_mixed_linear_weight_span_provider_insufficiency_audit_probe_summary.json"
+IN_P719 = GENERATED / "p719_current_strict_t176_low_complexity_odd_polynomial_two_readout_provider_class_audit_probe_summary.json"
 
 # Convention-layer continuations (still below physical sign datum).
 IN_N688 = GENERATED / "n688_current_strict_t174_global_oriented_transition_edge_sign_lift_discharge_theorem_summary.json"
@@ -69,6 +70,7 @@ def main() -> None:
         "P716": IN_P716,
         "P717": IN_P717,
         "P718": IN_P718,
+        "P719": IN_P719,
     }
     missing_core = [str(p.relative_to(REPO)) for p in core.values() if not p.exists()]
     if missing_core:
@@ -97,6 +99,7 @@ def main() -> None:
     p716 = load_json(IN_P716)
     p717 = load_json(IN_P717)
     p718 = load_json(IN_P718)
+    p719 = load_json(IN_P719)
 
     n688 = load_json(IN_N688) if IN_N688.exists() else None
     n690 = load_json(IN_N690) if IN_N690.exists() else None
@@ -226,6 +229,18 @@ def main() -> None:
         True,
         "That same single mixed linear span still reaches all-root projective-orbit sectors, so the failure is exact-provider level rather than support level (P718).",
     )
+    add_check(
+        "low_complexity_odd_polynomial_two_readout_exact_candidates_absent",
+        bool(p719.get("exact_candidates_found")),
+        False,
+        "The nearest untuned nonlinear extension on the current two-readout carrier still exports no exact all-root directed-section candidate (P719).",
+    )
+    add_check(
+        "low_complexity_odd_polynomial_two_readout_projective_only_candidates_present",
+        int(p719.get("projective_only_candidates_found") or 0) > 0,
+        True,
+        "That same low-complexity nonlinear class still contains many projective-only candidates, so the frontier remains exact-provider level rather than total collapse (P719).",
+    )
     # Convention-layer continuations (optional but expected on Release 7 state).
     if IN_N688.exists():
         add_check(
@@ -289,6 +304,7 @@ def main() -> None:
             "P716": str(IN_P716.relative_to(REPO)),
             "P717": str(IN_P717.relative_to(REPO)),
             "P718": str(IN_P718.relative_to(REPO)),
+            "P719": str(IN_P719.relative_to(REPO)),
             "N688": str(IN_N688.relative_to(REPO)) if IN_N688.exists() else None,
             "N690": str(IN_N690.relative_to(REPO)) if IN_N690.exists() else None,
             "N691": str(IN_N691.relative_to(REPO)) if IN_N691.exists() else None,
@@ -355,6 +371,15 @@ def main() -> None:
                 p718.get("single_mixed_linear_weight_span_projective_orbit_only_sector_exists")
             ),
             "single_mixed_linear_weight_span_projective_only_negated_root_sets_seen": p718.get(
+                "projective_only_negated_root_sets_seen"
+            ),
+            "low_complexity_odd_polynomial_two_readout_exact_candidates_found": int(
+                p719.get("exact_candidates_found") or 0
+            ),
+            "low_complexity_odd_polynomial_two_readout_projective_only_candidates_found": int(
+                p719.get("projective_only_candidates_found") or 0
+            ),
+            "low_complexity_odd_polynomial_two_readout_negated_root_sets_seen": p719.get(
                 "projective_only_negated_root_sets_seen"
             ),
             "convention_layer_oriented_edge_sign_lift_exported": bool(n688_tr.get("oriented_edge_sign_lift_exported") or n691_tr.get("oriented_edge_sign_lift_exported")),
@@ -424,6 +449,15 @@ def main() -> None:
             p718.get("single_mixed_linear_weight_span_projective_orbit_only_sector_exists")
         ),
         "single_mixed_linear_weight_span_projective_only_negated_root_sets_seen": p718.get(
+            "projective_only_negated_root_sets_seen"
+        ),
+        "low_complexity_odd_polynomial_two_readout_exact_candidates_found": int(
+            p719.get("exact_candidates_found") or 0
+        ),
+        "low_complexity_odd_polynomial_two_readout_projective_only_candidates_found": int(
+            p719.get("projective_only_candidates_found") or 0
+        ),
+        "low_complexity_odd_polynomial_two_readout_negated_root_sets_seen": p719.get(
             "projective_only_negated_root_sets_seen"
         ),
         "convention_layer_sign_tools_exported": {
