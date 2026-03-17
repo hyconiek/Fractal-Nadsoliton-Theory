@@ -1,7 +1,7 @@
 # T170 Current Strict Global Selector Atlas + Transition Object Target Spec
 
 Status: `T170_CURRENT_STRICT_GLOBAL_SELECTOR_ATLAS_AND_TRANSITION_OBJECT_TARGET_SPEC_NO_FALSE_PASS`  
-As of: `2026-03-16`
+As of: `2026-03-17`
 
 ## Goal
 
@@ -11,8 +11,8 @@ After `B3/B8` and the sigma-int residual-datum bridge discharge (`N491`), the st
    (diagonal/local lane: `N487` + `F453/N492`; Shannon element‑order reference lane: `N480/N488/N496` + `F454`),
 2. residual sign can be frozen as a tracked gauge/convention layer for the **currently exported downstream objects** where sign is provably gauge‑irrelevant
    (`N501`, packaged by `N502`),
-3. nevertheless, strict core still exports **no global selector atlas** and **no global selector transition/gluing object** on the full strict domain `C_v1`
-   (audits `H41` and `H40`).
+3. update (`2026-03-16`): strict core now exports an explicit **global selector atlas** and an explicit **global selector transition/gluing object**
+   on the strict domain `C_v1` (`F469`, packaged by `N515`; audited by `H41` and `H40`).
 
 `T170` names the next strict missing object class precisely, so we do not confuse:
 
@@ -92,18 +92,18 @@ The repo already exports lane-scoped ingredients on the `n=12` Fourier carrier:
 
 But `H40/H41` remain globally open because those exports are lane-scoped and do not provide a global cover/overlap declaration on `C_v1`.
 
-So the next honest strict move is not to repeat more lane-scoped atlas enlargement under the same blocker-cut, but to either:
+Update (`2026-03-16`): `H40/H41` are no longer open. The repo exports an explicit global atlas and transition/gluing object on `C_v1`
+via `F469`, packaged by `N515` (audited by `H40` and `H41`).
 
-1. export an explicit global atlas/transition structure on `C_v1` meeting the above acceptance tests, **or**
-2. export a strict non-bridge/boundary theorem showing why such global objects cannot be obtained from the currently exported strict inputs without new structure.
+Therefore the honest next strict target shifts to:
+
+- `T172` — global strict selector closure + `QW-2191` uniqueness discipline (projective vs directed), keeping residual sign
+  and any fixing datum explicit.
 
 ## Hard limits
 
 `T170` must not claim:
 
-1. a global selector atlas is already exported,
-2. a global selector transition/gluing object is already exported,
-3. strict-core selector closure / admissible `S_sel_int`,
-4. global discharge of `QW-2191`,
-5. ToE closure.
-
+1. strict-core selector closure / admissible `S_sel_int`,
+2. global discharge of `QW-2191`,
+3. ToE closure.
