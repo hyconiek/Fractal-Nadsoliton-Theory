@@ -66,6 +66,7 @@
 \rhead{ToE Strict Final Documentation (Release 7)}
 \lhead{Krzysztof Żuchowski}
 \cfoot{\thepage}
+\setlength{\headheight}{14pt}
 
 % ============================================================================
 % TITLE
@@ -288,6 +289,37 @@ V(\phi_\ast,\Psi_\ast)
 \]
 where $H_{\psi}\in\mathbb{R}^{12\times 12}$ is the $\Psi$-sector Hessian block (second derivatives) at the background point.
 
+\paragraph{Hessian stencil from $\mathcal{L}_{\mathrm{core}}$ (canonical template \texttt{QW-2166}).}
+Let $(v_{\phi},v_{\psi 0},\dots,v_{\psi 11})$ denote a constant background vacuum.
+In the strict canonical action/Hessian export (\texttt{QW-2166}), the quadratic $\Psi$-sector Hessian block has the following stencil structure:
+\begin{enumerate}[label=\arabic*.]
+  \item diagonal entries:
+  \[
+  (H_{\psi})_{ii}
+  =
+  m_{\psi i}^2
+  +3\,g4_{\psi i}\,v_{\psi i}^2
+  +5\,g6_{\psi i}\,v_{\psi i}^4
+  +2\,gY_i\,v_{\phi}^2,
+  \]
+  \item off-diagonal mixing entries ($i\neq j$):
+  \[
+  (H_{\psi})_{ij}
+  =
+  \frac{K_{ij}+K_{ji}}{2},
+  \]
+  \item $\Psi$--$\Phi$ cross-block entries:
+  \[
+  (H_{\psi\phi})_{i}
+  =
+  \frac{\partial^2 V}{\partial \psi_i\,\partial \phi}(v_{\phi},v_{\psi})
+  =
+  4\,gY_i\,v_{\phi}\,v_{\psi i}.
+  \]
+\end{enumerate}
+This pins down what “light = linearized modes” means inside the program (eigenmodes of the Hessian around a vacuum),
+without asserting that the vacuum values or all coefficient families are already strict-derived from the kernel alone.
+
 On the current diagonal/local strict-derived lane, the repo exports one explicit numeric value instantiation (\texttt{F459}) of the form:
 \[
 H_{\psi}
@@ -370,6 +402,74 @@ hence
 where the final identification $\pi_4(S^3)\cong \mathbb{Z}_2$ is a classical homotopy-group fact.
 This witness is strictly below any physical FR-sign quantization claims and is used only as a typed topology availability result.
 \end{proof}
+
+\section{Real Fourier carrier on \texorpdfstring{$\mathbb{Z}_{12}$}{Z\_12} and the \texorpdfstring{$O(2)$}{O(2)} obstruction (QW-2191/N465)}
+\label{sec:fourier_z12_obstruction}
+
+The strict selector program is built on a typed 12-slot carrier (\texttt{F329}), and its canonical degeneracy/uniqueness obstruction \texttt{QW-2191}
+is most transparently expressed in the real Fourier basis on $\mathbb{Z}_{12}$.
+
+\subsection{Explicit orthonormal real Fourier basis}
+Index the carrier by $x\in I_{12}=\{0,\dots,11\}$ and identify $\mathbb{R}^{12}$ with real-valued functions on $\mathbb{Z}_{12}$.
+Define:
+\[
+e_0(x):=\frac{1}{\sqrt{12}},
+\qquad
+e_6(x):=\frac{(-1)^x}{\sqrt{12}}.
+\]
+For each $m=1,\dots,5$, define the real Fourier pair-plane vectors:
+\[
+c_m(x):=\sqrt{\frac{2}{12}}\cos\!\left(\frac{2\pi m x}{12}\right),
+\qquad
+s_m(x):=\sqrt{\frac{2}{12}}\sin\!\left(\frac{2\pi m x}{12}\right).
+\]
+Then $\{e_0,e_6,c_1,s_1,\dots,c_5,s_5\}$ is an orthonormal basis of $\mathbb{R}^{12}$ and induces the canonical orthogonal decomposition:
+\[
+\mathbb{R}^{12}
+\;=\;
+\mathrm{span}\{e_0\}
+\;\oplus\;
+\mathrm{span}\{e_6\}
+\;\oplus\;
+\bigoplus_{m=1}^{5}\mathrm{span}\{c_m,s_m\}.
+\]
+We denote the $m$-th pair plane by:
+\[
+V_m:=\mathrm{span}\{c_m,s_m\}.
+\]
+
+\subsection{Why cyclic-distance kernels cannot select a unique axis inside \texorpdfstring{$V_1$}{V1}}
+Let $T:\mathbb{R}^{12}\to\mathbb{R}^{12}$ be the cyclic shift operator:
+\[
+(Tf)(x):=f(x-1\bmod 12).
+\]
+If the host kernel $K_{\mathrm{total}}$ is constructed as a cyclic-distance profile (\texttt{QW-2118}),
+then $K_{\mathrm{total}}$ commutes with $T$.
+On each pair plane $V_m$, the restriction $T|_{V_m}$ is a genuine planar rotation by angle $2\pi m/12$ on the basis $(c_m,s_m)$.
+Therefore, any real symmetric operator commuting with $T$ restricts to a scalar multiple of the identity on $V_m$.
+
+\begin{theorem}[Host isotropy on \texorpdfstring{$\mathrm{pair1}$}{pair1} (N465)]
+For the strict cyclic-distance host operator $A:=K_{\mathrm{total}}+m_0^2 I$ (\texttt{QW-2118}+\texttt{QW-2124}), the restriction to the pair1 plane
+$V_1=\mathrm{span}\{c_1,s_1\}$ is isotropic:
+\[
+A|_{V_1}=\lambda_1 I_2.
+\]
+Therefore, the host operator cannot supply an $O(2)$-cut inside pair1 and cannot canonically distinguish $c_1$ from $s_1$ (nor any rotated basis).
+\end{theorem}
+
+\begin{proof}[Proof sketch (from cyclic equivariance)]
+Because $K_{\mathrm{total}}$ depends only on cyclic distance, it commutes with the cyclic shift $T$.
+The scalar floor $m_0^2 I$ also commutes with $T$, hence $A$ commutes with $T$.
+On $V_1=\mathrm{span}\{c_1,s_1\}$, the action of $T$ is a planar rotation by angle $2\pi/12=\pi/6$ in the basis $(c_1,s_1)$.
+Any linear map commuting with a nontrivial planar rotation has the form $a I_2 + b J$ with $J=\begin{pmatrix}0&-1\\1&0\end{pmatrix}$.
+Since $A$ is symmetric, its restriction $A|_{V_1}$ is symmetric, forcing $b=0$, hence $A|_{V_1}=a I_2$ for some scalar $a=\lambda_1$.
+\end{proof}
+
+\begin{remark}[Meaning: the \texttt{QW-2191} uniqueness obstruction is structural]
+The above isotropy is a concrete instance of the general strict obstruction \texttt{QW-2191}:
+kernel-alone translation-invariant data leave an $O(2)$ family of basis choices inside each degenerate pair plane $V_m$.
+This is why Release~7 closure statements are deliberately phrased in \emph{projective (ray-level)} scope unless an explicit symmetry-breaking/selector source is tracked.
+\end{remark}
 \section{Global atlas and transition objects (T170)}
 
 In the strict selector program, the configuration space domain is the declared strict object $C_{v1}$.
@@ -553,6 +653,79 @@ On the current repo state, the strict core exports one admissible source object 
 \emph{Hard limits:} this is not yet a strict-core selector closure claim and does not discharge kernel-alone/global \texttt{QW-2191} or ToE closure.
 \end{theorem}
 
+\subsection{Explicit strict-core payload weights exported by the source object (F647)}
+\label{sec:f647_payload}
+
+The constructed strict-core source object exported by the seed-v1 realization attempt (\texttt{F647}) includes a minimal, explicitly enumerated
+carrier-level payload on $\mathbb{Z}_{12}$:
+\begin{itemize}
+  \item \texttt{ord\_z12\_by\_x}: the group element order $\mathrm{ord}_{\mathbb{Z}_{12}}(x)$,
+  \item \texttt{w\_ref\_unnormalized\_by\_x}: a strict-derived element-order reference weight profile,
+  \item \texttt{w\_break\_by\_x}: a reflection-breaking weight profile (used only as a convention-layer sign anchor; no physical sign datum).
+\end{itemize}
+
+\paragraph{Element order on $\mathbb{Z}_{12}$.}
+For $x\in\mathbb{Z}_{12}$ (additive notation), define:
+\[
+\mathrm{ord}_{\mathbb{Z}_{12}}(x)
+:=
+\min\{n\ge 1:\ n x \equiv 0\ (\mathrm{mod}\ 12)\}
+\;=\;
+\frac{12}{\gcd(12,x)}.
+\]
+This is $\mathrm{Aut}(\mathbb{Z}_{12})$-invariant.
+
+\paragraph{Strict-derived reference weight.}
+Using the strict-derived Shannon asymmetry constant $\alpha_{\mathrm{geo}}:=4\ln 2$ (\texttt{F309}/\texttt{N420}),
+define the unnormalized order-reference weight:
+\[
+w_{\mathrm{ref}}^{\mathrm{unnorm}}(x)
+:=
+\exp\!\bigl(-\alpha_{\mathrm{geo}}\ \mathrm{ord}_{\mathbb{Z}_{12}}(x)\bigr)
+=
+2^{-4\,\mathrm{ord}_{\mathbb{Z}_{12}}(x)}.
+\]
+
+\paragraph{Reflection-breaking weight (strict convention scope).}
+Define:
+\[
+w_{\mathrm{break}}(x)
+:=
+-\,w_{\mathrm{ref}}^{\mathrm{unnorm}}(x)\,\sin\!\left(\frac{2\pi x}{12}\right).
+\]
+This weight is \emph{odd} under reflection $x\mapsto -x$ and therefore breaks the reflection symmetry on the carrier.
+It is not $\mathrm{Aut}(\mathbb{Z}_{12})$-invariant and is treated as a convention-layer sign anchor only.
+
+\paragraph{Exported numeric instance (F647 payload).}
+The exported payload values on the current repo state are:
+\begin{center}
+\begin{tabular}{rrrr}
+\toprule
+$x$ & $\mathrm{ord}_{\mathbb{Z}_{12}}(x)$ & $w_{\mathrm{ref}}^{\mathrm{unnorm}}(x)$ & $w_{\mathrm{break}}(x)$\\
+\midrule
+0 & 1  & $6.2500000000000000{\times}10^{-2}$ & $0$\\
+1 & 12 & $3.5527136788005110{\times}10^{-15}$ & $-1.7763568394002552{\times}10^{-15}$\\
+2 & 6  & $5.9604644775390720{\times}10^{-8}$ & $-5.1619136559035774{\times}10^{-8}$\\
+3 & 4  & $1.5258789062500007{\times}10^{-5}$ & $-1.5258789062500007{\times}10^{-5}$\\
+4 & 3  & $2.4414062500000016{\times}10^{-4}$ & $-2.1143198334581037{\times}10^{-4}$\\
+5 & 12 & $3.5527136788005110{\times}10^{-15}$ & $-1.7763568394002568{\times}10^{-15}$\\
+6 & 2  & $3.9062500000000010{\times}10^{-3}$ & $-4.7837765591693490{\times}10^{-19}$\\
+7 & 12 & $3.5527136788005110{\times}10^{-15}$ & $1.7763568394002544{\times}10^{-15}$\\
+8 & 3  & $2.4414062500000016{\times}10^{-4}$ & $2.1143198334581029{\times}10^{-4}$\\
+9 & 4  & $1.5258789062500007{\times}10^{-5}$ & $1.5258789062500007{\times}10^{-5}$\\
+10 & 6 & $5.9604644775390720{\times}10^{-8}$ & $5.1619136559035800{\times}10^{-8}$\\
+11 & 12 & $3.5527136788005110{\times}10^{-15}$ & $1.7763568394002570{\times}10^{-15}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The same payload export records the strict scalar sign-anchor witness:
+\[
+\langle w_{\mathrm{break}}, s_1\rangle \approx -3.9681792259571596\times 10^{-4},
+\]
+where $s_1$ is the real Fourier sine basis vector of the pair1 plane (Section~\ref{sec:fourier_z12_obstruction}).
+This is used downstream only to define deterministic convention-layer sign fixing rules (e.g.\ \texttt{T175}/\texttt{F690}) and is not promoted into strict-core physics.
+
 \subsection{Orientation datum on \texorpdfstring{$\mathrm{pair}_1$}{pair1} (N546)}
 
 \begin{theorem}[Admissible orientation export (N546)]
@@ -712,6 +885,45 @@ On the current repo state, the directed layer is further stabilized by explicit 
   \item a corresponding sign-fixed directed closure export (\texttt{F692}) that still induces the same projective output ray (by \texttt{N692}).
 \end{itemize}
 All of these remain \emph{convention-layer} artifacts and do not upgrade any directed sign into strict-core physics.
+
+\subsection*{Explicit \texorpdfstring{$\mathbb{Z}_2$}{Z2} cochain language for sign lifts (T174/T175)}
+Let the chart set be $\mathcal{C}=\{\mathrm{pair}_1,\dots,\mathrm{pair}_5\}$ and let $\mathcal{E}$ be the set of 10 overlap edges (the complete graph on $\mathcal{C}$).
+For each edge $(i,j)\in\mathcal{E}$, the axis-only transition representative exports an operator $O_{ij}^{(\mathrm{axis})}$ (rotation $\alpha_{ij}\bmod \pi$).
+
+\begin{definition}[Edge sign lift (convention layer)]
+An oriented edge sign lift is a $\mathbb{Z}_2$-valued $1$-cochain $s:\mathcal{E}\to\{\pm 1\}$ defining oriented transitions:
+\[
+O_{ij}^{(\mathrm{oriented})}:=s_{ij}\,O_{ij}^{(\mathrm{axis})}.
+\]
+\end{definition}
+
+\begin{definition}[Chart sign relift (gauge)]
+A chartwise sign relift is a $\mathbb{Z}_2$-valued $0$-cochain $t:\mathcal{C}\to\{\pm 1\}$ acting on directed representatives by:
+\[
+u_i \mapsto t_i u_i.
+\]
+It induces the gauge action on edge signs:
+\[
+s_{ij}\mapsto s'_{ij}:=t_j\,s_{ij}\,t_i.
+\]
+\end{definition}
+
+In this language, \texttt{T174} exports explicit oriented edge sign-lifts $s_{ij}$ that remove sign flips for declared directed representatives (full-edge coherence),
+and \texttt{T175} exports one explicit deterministic chart sign-fix $t_i$ derived from strict-core payload weights (Section~\ref{sec:f647_payload}).
+Both remain below any physical sign datum claim.
+
+\paragraph{Exported instance (Release 7).}
+On the current repo state, the deterministic chart sign-fixing $0$-cochain exported by \texttt{F690} is:
+\[
+(t_{\mathrm{pair1}},t_{\mathrm{pair2}},t_{\mathrm{pair3}},t_{\mathrm{pair4}},t_{\mathrm{pair5}})
+=
+(-1,-1,-1,+1,-1).
+\]
+Anchored to that sign-fixed directed representative, the oriented edge sign-lift exported by \texttt{F691} flips exactly two overlap edges:
+\[
+s_{\mathrm{pair2\to pair4}}=-1,\qquad s_{\mathrm{pair1\to pair5}}=-1,
+\]
+with all remaining overlap edges having $s_{ij}=+1$ (convention scope; no physical sign claim).
 \section{Open boundary: kernel-alone/global QW-2191 discharge}
 
 \begin{theorem}[Post-\texttt{T172} strict frontier boundary (N679)]
