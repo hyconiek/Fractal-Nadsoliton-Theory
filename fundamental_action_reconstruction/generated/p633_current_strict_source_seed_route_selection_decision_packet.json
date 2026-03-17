@@ -1,7 +1,7 @@
 {
   "stage": "P633",
-  "date": "2026-03-16",
-  "generated_utc": "2026-03-17T08:15:33.743305+00:00",
+  "date": "2026-03-17",
+  "generated_utc": "2026-03-17T08:34:39.161589+00:00",
   "goal": "declare_professorial_next_move_after_freezing_P16_and_direct_formal_lanes__shift_to_source_seed_frontier__no_false_pass",
   "status": "PASS_DECISION_DECLARED_STRICT_CORE_SOURCE_SEED_ROUTE_SELECTED",
   "decision": "STRICT_CORE_SOURCE_SEED_ROUTE_SELECTED",
@@ -17,28 +17,29 @@
     "strict_boundary_note": "This is a professorial routing decision only. It does not assert existence of S_sel_int nor any strict-core selector closure."
   },
   "next_move": {
-    "recommended_next_strict_target": "P119",
-    "meaning": "Shift the next strict move to the genuinely-new strict-core source-seed construction frontier for S_sel_int. P119 packages the first explicit construction target; later branches (E_orient / B_sel->R_sel->O_sel) remain open.",
+    "recommended_next_strict_target": "T172",
+    "meaning": "Source-seed lane is now materially exported: an admissible strict-core source object for S_sel_int exists (F34 sense) and downstream operators are available in the declared scope. Next strict bottleneck shifts to global strict selector closure and QW-2191 discipline (T172), without implying any kernel-alone discharge.",
     "target_state_excerpt": {
       "last_positive_branch_reduced_to_one_first_source_seed_target": true,
       "first_source_seed_construction_target": {
         "strict_core_source_object": "S_sel_int",
+        "exported_object": "S_sel_int_strict_core_source_object_v1",
+        "admissible_source_object_exported": true,
+        "admissible_orientation_exported": true,
+        "downstream_operator_chain_exported": true,
         "genuinely_new_strict_core_object_required": true,
         "source_carrying_enough_for_later_E_orient_export_required": true,
-        "orientation_not_yet_counted_as_exported": true,
+        "orientation_not_yet_counted_as_exported": false,
         "strict_core_only_required": true,
         "silent_legacy_to_strict_substitution_forbidden": true,
         "selector_acceptance_outside_strict_core_may_not_count_as_source_seed": true
       },
       "later_open_branches": [
-        "future_derivation_of_admissible_E_orient_from_S_sel_int",
-        "future_completion_of_B_sel_R_sel_O_sel_after_seed_package"
+        "future_strict_core_selector_closure_and_global_QW2191_discipline_target_T172"
       ]
     }
   },
   "hard_limits": [
-    "No claim that an admissible strict-core internal selector source S_sel_int already exists.",
-    "No export of E_orient, B_sel, R_sel, or O_sel is implied by this decision.",
     "No strict-core selector closure / admissible S_sel_int claim.",
     "No global discharge of QW-2191 claim.",
     "No ToE closure claim."

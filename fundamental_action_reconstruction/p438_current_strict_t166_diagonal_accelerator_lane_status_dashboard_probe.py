@@ -668,13 +668,22 @@ def main() -> None:
             try:
                 p633 = load_json(P633_SUMMARY)
                 if str(p633.get("decision") or "") == "STRICT_CORE_SOURCE_SEED_ROUTE_SELECTED":
-                    recommended_next_target = "P119"
-                    recommendation_reason = (
-                        "Post-projective directed frontier is now resolved (T171 discharged), and both previously pursued strict-only ToE closure continuations "
-                        "are explicitly frozen negative on the current strict branch (P480: freeze P16; P631: freeze direct-formal residual-cancellation on T166 nonzero). "
-                        "Therefore the next honest strict bottleneck shifts to the genuinely-new strict-core internal selector source seed construction frontier "
-                        "for S_sel_int, tracked by the first source-seed construction target probe (P119). Professorial routing decision: P633."
+                    recommended_next_target = str(
+                        p633.get("recommended_next_strict_target") or "P119"
                     )
+                    if recommended_next_target == "T172":
+                        recommendation_reason = (
+                            "Post-projective directed frontier is now resolved (T171 discharged), and the strict-core source-seed lane has progressed to an admissible "
+                            "exported S_sel_int source object and downstream operators. Therefore the next honest strict bottleneck shifts back to global strict selector closure "
+                            "+ QW-2191 discipline (T172), without implying any kernel-alone discharge. Professorial routing decision: P633."
+                        )
+                    else:
+                        recommendation_reason = (
+                            "Post-projective directed frontier is now resolved (T171 discharged), and both previously pursued strict-only ToE closure continuations "
+                            "are explicitly frozen negative on the current strict branch (P480: freeze P16; P631: freeze direct-formal residual-cancellation on T166 nonzero). "
+                            "Therefore the next honest strict bottleneck shifts to the genuinely-new strict-core internal selector source seed construction frontier "
+                            "for S_sel_int, tracked by the first source-seed construction target probe (P119). Professorial routing decision: P633."
+                        )
                 else:
                     recommended_next_target = "P11"
             except Exception:

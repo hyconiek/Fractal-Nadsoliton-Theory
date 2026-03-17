@@ -6,7 +6,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-AS_OF = "2026-03-16"
+AS_OF = "2026-03-17"
 
 ROOT = Path(__file__).resolve().parent
 REPO = ROOT.parent
@@ -17,6 +17,7 @@ IN_P631 = GENERATED / "p631_current_strict_direct_formal_c1s1_route_negative_fre
 IN_P632 = GENERATED / "p632_current_strict_directed_continuation_decision_packet_summary.json"
 
 IN_P119 = GENERATED / "p119_first_source_seed_construction_target_probe_summary.json"
+IN_N676 = GENERATED / "n676_current_first_admissible_s_sel_int_source_object_discharge_theorem_summary.json"
 
 OUT_JSON = GENERATED / "p633_current_strict_source_seed_route_selection_decision_packet.json"
 OUT_SUMMARY = GENERATED / "p633_current_strict_source_seed_route_selection_decision_packet_summary.json"
@@ -66,6 +67,7 @@ def main() -> None:
     p631 = load_json(IN_P631)
     p632 = load_json(IN_P632)
     p119 = load_json(IN_P119)
+    n676 = load_json(IN_N676) if IN_N676.exists() else {}
 
     p480_selected = str(p480.get("decision") or "") == "P16_ROUTE_NEGATIVE_FREEZE_SELECTED"
     p631_selected = str(p631.get("decision") or "") == "DIRECT_FORMAL_C1S1_ROUTE_NEGATIVE_FREEZE_SELECTED"
@@ -111,6 +113,20 @@ def main() -> None:
         return
 
     decision = "STRICT_CORE_SOURCE_SEED_ROUTE_SELECTED"
+    seed_exported = bool(
+        n676.get("theorem_result", {}).get("admissible_S_sel_int_source_object_in_F34_sense")
+    )
+    recommended_next = "T172" if seed_exported else "P119"
+    meaning = (
+        "Source-seed lane is now materially exported: an admissible strict-core source object for S_sel_int exists (F34 sense) and downstream "
+        "operators are available in the declared scope. Next strict bottleneck shifts to global strict selector closure and QW-2191 discipline (T172), "
+        "without implying any kernel-alone discharge."
+        if seed_exported
+        else (
+            "Shift the next strict move to the genuinely-new strict-core source-seed construction frontier for S_sel_int. "
+            "P119 packages the first explicit construction target; later branches (E_orient / B_sel->R_sel->O_sel) remain open."
+        )
+    )
     artifact = {
         "stage": "P633",
         "date": AS_OF,
@@ -130,16 +146,11 @@ def main() -> None:
             "strict_boundary_note": "This is a professorial routing decision only. It does not assert existence of S_sel_int nor any strict-core selector closure.",
         },
         "next_move": {
-            "recommended_next_strict_target": "P119",
-            "meaning": (
-                "Shift the next strict move to the genuinely-new strict-core source-seed construction frontier for S_sel_int. "
-                "P119 packages the first explicit construction target; later branches (E_orient / B_sel->R_sel->O_sel) remain open."
-            ),
+            "recommended_next_strict_target": recommended_next,
+            "meaning": meaning,
             "target_state_excerpt": p119.get("target_state"),
         },
         "hard_limits": [
-            "No claim that an admissible strict-core internal selector source S_sel_int already exists.",
-            "No export of E_orient, B_sel, R_sel, or O_sel is implied by this decision.",
             "No strict-core selector closure / admissible S_sel_int claim.",
             "No global discharge of QW-2191 claim.",
             "No ToE closure claim.",
@@ -154,7 +165,7 @@ def main() -> None:
                 "stage": "P633",
                 "status": artifact["status"],
                 "decision": decision,
-                "recommended_next_strict_target": "P119",
+                "recommended_next_strict_target": recommended_next,
                 "no_false_pass": True,
             },
             indent=2,
@@ -169,4 +180,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
