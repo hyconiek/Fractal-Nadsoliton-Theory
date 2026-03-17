@@ -1,6 +1,6 @@
 # RELEASE 7 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 7.0.1 (Preparation Draft)  
+**Version:** 7.0.2 (Preparation Draft)  
 **Date:** 2026-03-17  
 **Branch:** `main`  
 **Predecessor:** Release 6.5 — Strict Textbook Edition
@@ -43,7 +43,9 @@ Already exported on the current repo state (Release 6.5.x):
   first physics proxies (`P694`, `P696`), and an observer‑limit readout bridge (`P697`).
 - A full downstream projective emergent‑observer chain computability witness is exported from the global projective closure output projector (`F672`)
   under induced projector semantics `P ↦ M P M^T`, using the already exported operator chain (`F92..F99`) (`P699`); this remains projective/gauge‑safe
-  and does not claim actual emergent observer closure.
+  and does not claim actual emergent observer closure; it is packaged as a scope-limited theorem (`N699`).
+- A strict projective operational ToE OS support packet v2 is exported and packaged (`F700`, audited by `P700`, packaged by `N700`),
+  extending the v1 OS bundle by including the projective emergent‑observer chain computability theorem (`N699`).
 
 ## 3 What Release 7 must still not “false‑PASS” (EN)
 
@@ -84,7 +86,9 @@ Już na obecnym stanie repo (Release 6.5.x):
   pierwsze proxy fizyki (`P694`, `P696`) i mostek odczytu observer‑limit (`P697`).
 - Pełny downstream świadek obliczalności łańcucha emergent‑observer w zakresie projective jest wyeksportowany z projektora wyjścia globalnego domknięcia projektowego (`F672`)
   w semantyce projektorowej `P ↦ M P M^T`, używając już wyeksportowanego łańcucha operatorów (`F92..F99`) (`P699`); pozostaje to projective/gauge‑safe
-  i nie rości actual emergent observer closure.
+  i nie rości actual emergent observer closure; jest to opakowane jako scope-limited twierdzenie (`N699`).
+- Repo eksportuje i pakuje strict projective operational ToE OS support packet v2 (`F700`, audyt `P700`, opakowanie `N700`),
+  rozszerzając pakiet v1 o theorem-level świadek obliczalności łańcucha emergent‑observer (`N699`).
 
 ## 3 Czego Release 7 nie może “false‑PASS” (PL)
 

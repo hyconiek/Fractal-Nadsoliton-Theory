@@ -117,8 +117,44 @@ unless such claims are explicitly exported at theorem level in the repo and are 
 
 \chapter{Emergent observer pipeline (projective scope)}
 \section{Observer-limit readout from projective closure output (P697)}
-\section{Projective emergent-observer chain computability from closure output (P699)}
-\section{Operational OS support packet (F698/P698/N698)}
+\section{Projective emergent-observer chain computability from closure output (P699/N699)}
+
+In the declared projective/gauge-safe downstream scope, we represent a ray by a rank‑1 (possibly unnormalized) symmetric positive semidefinite matrix $P$
+(a projector candidate). For a linear map $M$, the induced pushforward is:
+\[
+P \;\mapsto\; M\,P\,M^{\mathsf T}.
+\]
+
+Let $Q_{\mathrm{out}}$ be the exported global projective selector-closure output projector in the $(o_+,o_-)$ basis (`F672`).
+
+Define the downstream operator chain by the already exported matrices (`F92..F99`):
+\[
+C=\begin{pmatrix} \tfrac12 & -\tfrac12\\ \tfrac12 & \tfrac12 \end{pmatrix},\quad
+L=\begin{pmatrix} 1&1\\ -1&1 \end{pmatrix},\quad
+G=I_2,\quad H=I_2,\quad
+J=\begin{pmatrix}1&0\\0&0\end{pmatrix},
+\]
+\[
+K=\begin{pmatrix}1&0\end{pmatrix},\quad
+M=(1),\quad N=(1).
+\]
+
+Starting from $Q_{\mathrm{out}}$, define the induced chain:
+\[
+Y=C Q_{\mathrm{out}} C^{\mathsf T},\;
+Z=L Y L^{\mathsf T},\;
+W=G Z G^{\mathsf T},\;
+X=H W H^{\mathsf T},\;
+U=J X J^{\mathsf T},\;
+F=K U K^{\mathsf T},\;
+P=M F M^{\mathsf T},\;
+C_{\mathrm{cl}}=N P N^{\mathsf T}.
+\]
+
+`P699` computes this chain on the current repo state and audits that the declared residual components vanish (within tolerance) while commitment remains positive.
+`N699` packages the computability statement with explicit hard limits (no kernel-alone/global `QW-2191` discharge; no ToE closure; no actual emergent observer closure).
+\section{Operational OS support packet (v1) (F698/P698/N698)}
+\section{Operational OS support packet (v2) (F700/P700/N700)}
 \section{Open target: actual emergent observer closure (future)}
 
 \chapter{Hard limits and open problems}

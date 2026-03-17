@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.61  
+**Version:** 6.5.62  
 **Date:** 2026-03-17  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -341,8 +341,11 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
     together with a first physics proxy bundle (`P694`, `P696`) and the observer-limit readout bridge (`P697`), while keeping all hard limits explicit (`F698`, audited by `P698`, packaged by `N698`).
 31. Update (`2026-03-17`): continuing the Emergent Observer route while treating directed sign as **gauge**, a full downstream **projective emergent-observer chain computability**
     witness is exported from the global projective selector closure output projector (`F672`) under induced projector semantics `P ↦ M P M^T`, using the already exported
-    operator chain (`F92..F99`) (`P699`). This remains projective/gauge-safe and does **not** claim actual emergent observer closure, kernel-alone/global `QW-2191` discharge,
-    or ToE closure.
+    operator chain (`F92..F99`) (`P699`), and packaged as a scope-limited theorem (`N699`). This remains projective/gauge-safe and does **not** claim actual emergent observer closure,
+    kernel-alone/global `QW-2191` discharge, or ToE closure.
+32. Update (`2026-03-17`): the strict projective operational ToE “OS” support packet is upgraded to a v2 bundle including the full projective emergent-observer chain computability
+    theorem (`N699`): `Lambda_strict_projective_operational_toe_os_support_v2` (`F700`), audited by `P700` and packaged by `N700`. This is still an operational computability
+    bundle only and does **not** claim kernel-alone/global `QW-2191` discharge or ToE closure.
 
 ### 1.2 What is still missing (no false pass)
 
@@ -723,8 +726,11 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
     wraz z pierwszym pakietem proxy fizyki (`P694`, `P696`) i mostkiem odczytu observer‑limit (`P697`), przy zachowaniu jawnych hard‑limitów (`F698`, audyt `P698`, opakowanie `N698`).
 31. Update (`2026-03-17`): kontynuując trasę Emergent Observer przy traktowaniu znaku directed jako **gauge**, repo eksportuje pełny downstream
     świadek obliczalności łańcucha emergent‑observer w zakresie projective z projektora wyjścia globalnego domknięcia projektowego (`F672`)
-    w semantyce projektorowej `P ↦ M P M^T`, używając już wyeksportowanego łańcucha operatorów (`F92..F99`) (`P699`). Pozostaje to projective/gauge‑safe
-    i **nie** rości actual emergent observer closure, kernel-alone/global rozładowania `QW-2191` ani domknięcia ToE.
+    w semantyce projektorowej `P ↦ M P M^T`, używając już wyeksportowanego łańcucha operatorów (`F92..F99`) (`P699`), oraz pakuje to jako scope-limited twierdzenie (`N699`).
+    Pozostaje to projective/gauge‑safe i **nie** rości actual emergent observer closure, kernel-alone/global rozładowania `QW-2191` ani domknięcia ToE.
+32. Update (`2026-03-17`): strict projective operational ToE “OS” support packet jest podniesiony do wersji v2 zawierającej pełny theorem-level świadek obliczalności łańcucha emergent‑observer (`N699`):
+    `Lambda_strict_projective_operational_toe_os_support_v2` (`F700`), audyt `P700`, opakowanie `N700`. To nadal jest wyłącznie pakiet obliczalności operacyjnej
+    i **nie** rości kernel-alone/global rozładowania `QW-2191` ani domknięcia ToE.
 
 ### 1.2 Czego nadal brakuje (bez false pass)
 
