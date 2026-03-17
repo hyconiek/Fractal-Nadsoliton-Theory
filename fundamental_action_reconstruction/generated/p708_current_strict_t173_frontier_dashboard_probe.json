@@ -1,0 +1,102 @@
+{
+  "stage": "P708",
+  "status": "PASS_T173_FRONTIER_DASHBOARD_READY",
+  "as_of": "2026-03-17",
+  "generated_utc": "2026-03-17T18:31:04.028018+00:00",
+  "scope": "current_strict_t173_frontier_dashboard_only",
+  "inputs": {
+    "N679": "fundamental_action_reconstruction/generated/n679_current_strict_t172_strict_core_selector_closure_frontier_boundary_theorem_summary.json",
+    "N680": "fundamental_action_reconstruction/generated/n680_current_strict_t173_projective_strict_core_selector_closure_discharge_theorem_summary.json",
+    "N681": "fundamental_action_reconstruction/generated/n681_current_strict_t173_directed_output_sign_lift_obstruction_boundary_theorem_summary.json",
+    "N686": "fundamental_action_reconstruction/generated/n686_current_strict_t173_global_axis_only_transition_edge_sign_flip_boundary_theorem_summary.json",
+    "N687": "fundamental_action_reconstruction/generated/n687_current_strict_t173_global_edge_sign_coherence_obstruction_boundary_theorem_summary.json",
+    "N688": "fundamental_action_reconstruction/generated/n688_current_strict_t174_global_oriented_transition_edge_sign_lift_discharge_theorem_summary.json",
+    "N690": "fundamental_action_reconstruction/generated/n690_current_strict_t175_global_chart_sign_fixing_discharge_theorem_summary.json",
+    "N691": "fundamental_action_reconstruction/generated/n691_current_strict_t174_global_oriented_transition_edge_sign_lift_from_sign_fixed_directed_state_discharge_theorem_summary.json",
+    "P441": "fundamental_action_reconstruction/generated/p441_current_strict_global_closure_next_move_dashboard_probe_summary.json",
+    "P706": "fundamental_action_reconstruction/generated/p706_current_release_7_strict_projective_operational_toe_os_closure_dashboard_probe_summary.json"
+  },
+  "checks": [
+    {
+      "id": "projective_strict_core_selector_closure_discharged",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Projective strict-core selector closure is discharged (N680)."
+    },
+    {
+      "id": "kernel_alone_global_qw2191_discharge_false",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "Kernel-alone/global QW-2191 discharge remains false/unclaimed (N679/N680 hard limits)."
+    },
+    {
+      "id": "directed_output_sign_lift_determined_in_strict_core_false",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "Directed output sign-lift is not determined in strict core (N681)."
+    },
+    {
+      "id": "axis_only_transition_edge_sign_flips_present_true",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Under fixed axis-only (\u03b1 mod \u03c0) transitions, some overlap edges force a sign flip (N686)."
+    },
+    {
+      "id": "global_edge_sign_coherence_solvable_by_chart_sign_relift_false",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "No per-chart Z2 relift solves full-edge sign coherence under fixed axis-only transitions (N687)."
+    },
+    {
+      "id": "t174_oriented_edge_sign_lift_exported",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "A convention-layer oriented edge sign-lift is exported (T174 via N688)."
+    },
+    {
+      "id": "t175_chart_sign_fix_exported",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "A convention-layer chart sign-fix (0-cochain) and sign-fixed directed representative are exported (T175 via N690)."
+    },
+    {
+      "id": "t174_oriented_edge_sign_lift_from_sign_fixed_state_exported",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "A convention-layer oriented edge sign-lift anchored to the sign-fixed state is exported (T174 via N691)."
+    },
+    {
+      "id": "no_ToE_closure_claim",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "All referenced theorem summaries keep ToE closure false (hard limits)."
+    }
+  ],
+  "blocking_mismatches": [],
+  "recommended_next_strict_target": "T173",
+  "t173_frontier_state": {
+    "strict_core_selector_closure_projective": true,
+    "QW2191_kernel_alone_discharge": false,
+    "directed_output_sign_lift_determined_in_strict_core": false,
+    "global_edge_sign_coherence_solvable_by_chart_sign_relift_under_axis_only_transitions": false,
+    "convention_layer_oriented_edge_sign_lift_exported": true,
+    "convention_layer_sign_fixed_directed_representative_exported": true,
+    "operational_release_7_projective_os_closure_dashboard_status": "PASS_RELEASE_7_STRICT_PROJECTIVE_OPERATIONAL_OS_CLOSURE_DASHBOARD_READY"
+  },
+  "hard_limits": [
+    "No kernel-alone/global QW-2191 discharge.",
+    "No directed/sign-sensitive physical orientation datum promotion into strict core.",
+    "No Standard Model host-matching claim in strict scope.",
+    "No ToE closure claim."
+  ],
+  "no_false_pass": true
+}
