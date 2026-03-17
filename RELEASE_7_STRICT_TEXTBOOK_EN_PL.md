@@ -1,6 +1,6 @@
 # RELEASE 7 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 7.0.0 (Preparation Draft)  
+**Version:** 7.0.1 (Preparation Draft)  
 **Date:** 2026-03-17  
 **Branch:** `main`  
 **Predecessor:** Release 6.5 — Strict Textbook Edition
@@ -41,6 +41,9 @@ Already exported on the current repo state (Release 6.5.x):
 - A strict projective operational ToE OS support packet is exported and packaged (`F698`, audited by `P698`, packaged by `N698`):
   it bundles projective closure (`N680`), directed→projective output‑ray invariance (`N692`), output sign‑lift gauge covariance (`N693`),
   first physics proxies (`P694`, `P696`), and an observer‑limit readout bridge (`P697`).
+- A full downstream projective emergent‑observer chain computability witness is exported from the global projective closure output projector (`F672`)
+  under induced projector semantics `P ↦ M P M^T`, using the already exported operator chain (`F92..F99`) (`P699`); this remains projective/gauge‑safe
+  and does not claim actual emergent observer closure.
 
 ## 3 What Release 7 must still not “false‑PASS” (EN)
 
@@ -79,6 +82,9 @@ Już na obecnym stanie repo (Release 6.5.x):
 - Repo eksportuje i pakuje strict projective operational ToE OS support packet (`F698`, audyt `P698`, opakowanie `N698`):
   wiąże projective closure (`N680`), directed→projective output‑ray invariance (`N692`), gauge‑kowariancję output sign‑lift (`N693`),
   pierwsze proxy fizyki (`P694`, `P696`) i mostek odczytu observer‑limit (`P697`).
+- Pełny downstream świadek obliczalności łańcucha emergent‑observer w zakresie projective jest wyeksportowany z projektora wyjścia globalnego domknięcia projektowego (`F672`)
+  w semantyce projektorowej `P ↦ M P M^T`, używając już wyeksportowanego łańcucha operatorów (`F92..F99`) (`P699`); pozostaje to projective/gauge‑safe
+  i nie rości actual emergent observer closure.
 
 ## 3 Czego Release 7 nie może “false‑PASS” (PL)
 
@@ -94,4 +100,3 @@ Release 7 nie może po cichu promować bez jawnego theorem‑level eksportu:
 1. `TOE_FINAL_DOCUMENTATION_RELEASE_7_STRICT_FULL.tex` (final TeX) — komplet definicji + wyprowadzeń + mapa discharge; hard‑limity jawne.
 2. Plik Release‑7 strict textbook (ten dokument) doprowadzony z “preparation draft” do “final”.
 3. Minimalny zestaw dashboardów/sond pokazujący OS‑obliczalność end‑to‑end bez false pass.
-

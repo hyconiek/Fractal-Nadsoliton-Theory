@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.60  
+**Version:** 6.5.61  
 **Date:** 2026-03-17  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -339,6 +339,10 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
 30. Update (`2026-03-17`): the repo freezes a strict projective **operational ToE “OS” support packet** bundling:
     theorem-level projective strict-core selector closure (`N680`), output-ray invariance (`N692`) and output sign-lift gauge covariance (`N693`),
     together with a first physics proxy bundle (`P694`, `P696`) and the observer-limit readout bridge (`P697`), while keeping all hard limits explicit (`F698`, audited by `P698`, packaged by `N698`).
+31. Update (`2026-03-17`): continuing the Emergent Observer route while treating directed sign as **gauge**, a full downstream **projective emergent-observer chain computability**
+    witness is exported from the global projective selector closure output projector (`F672`) under induced projector semantics `P ↦ M P M^T`, using the already exported
+    operator chain (`F92..F99`) (`P699`). This remains projective/gauge-safe and does **not** claim actual emergent observer closure, kernel-alone/global `QW-2191` discharge,
+    or ToE closure.
 
 ### 1.2 What is still missing (no false pass)
 
@@ -717,6 +721,10 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
 30. Update (`2026-03-17`): repo zamraża strict projective **operational ToE “OS” support packet** wiążący:
     theorem-level projective strict-core selector closure (`N680`), niezmienniczość output‑ray (`N692`) oraz gauge‑kowariancję output sign‑liftu (`N693`),
     wraz z pierwszym pakietem proxy fizyki (`P694`, `P696`) i mostkiem odczytu observer‑limit (`P697`), przy zachowaniu jawnych hard‑limitów (`F698`, audyt `P698`, opakowanie `N698`).
+31. Update (`2026-03-17`): kontynuując trasę Emergent Observer przy traktowaniu znaku directed jako **gauge**, repo eksportuje pełny downstream
+    świadek obliczalności łańcucha emergent‑observer w zakresie projective z projektora wyjścia globalnego domknięcia projektowego (`F672`)
+    w semantyce projektorowej `P ↦ M P M^T`, używając już wyeksportowanego łańcucha operatorów (`F92..F99`) (`P699`). Pozostaje to projective/gauge‑safe
+    i **nie** rości actual emergent observer closure, kernel-alone/global rozładowania `QW-2191` ani domknięcia ToE.
 
 ### 1.2 Czego nadal brakuje (bez false pass)
 
