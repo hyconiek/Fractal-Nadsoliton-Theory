@@ -1,0 +1,197 @@
+{
+  "object": "SelectorState_global_C_v1_directed_rooted_transport_from_S_sel_int_w_break_strict_convention_v1",
+  "stage": "F684",
+  "status": "PASS_EXPORTED",
+  "as_of": "2026-03-17",
+  "generated_utc": "2026-03-17T11:09:09.130718+00:00",
+  "intent": "Export one explicit global directed (sign-sensitive) selector state object on C_v1 by lifting the exported projective selector state to a vector representative section using the strict-core reflection-breaking seed weight w_break on pair1 and propagating the sign via rooted chart-transport operators O_1m. This is a tracked convention/section choice and does not claim a physical orientation datum.",
+  "domain": {
+    "configuration_space_object_ref": "fundamental_action_reconstruction/generated/c_v1_void_configuration_space_in_local_b_tilde_1_sector_v1.json",
+    "configuration_space_object": "C_v1_void_configuration_space_in_local_B_tilde_1_sector_v1",
+    "charts_cover": "U_pair1 = ... = U_pair5 = C_v1 (declared global cover)"
+  },
+  "state_type": {
+    "level": "directed_vector_state",
+    "encoding": "vector_representative_section_on_pair_charts",
+    "sign_gauge": "fixed_by_w_break_on_pair1_plus_rooted_transport_O_1m (strict_convention scope)",
+    "counts_as_strict_physical_orientation_datum": false
+  },
+  "depends_on": {
+    "projective_state_ref": "fundamental_action_reconstruction/generated/selector_state_global_c_v1_projective_strict_v1.json",
+    "seed_w_break_ref": "fundamental_action_reconstruction/generated/f647_strict_witness_provider_export_packet_for_seed_v1_realization_attempt.json",
+    "a_m_refs": {
+      "1": "fundamental_action_reconstruction/generated/a_1_pair1_orientation_projector_operator_strict_core_v1.json",
+      "2": "fundamental_action_reconstruction/generated/a_2_pair2_orientation_projector_operator_strict_core_v1.json",
+      "3": "fundamental_action_reconstruction/generated/a_3_pair3_orientation_projector_operator_strict_core_v1.json",
+      "4": "fundamental_action_reconstruction/generated/a_4_pair4_orientation_projector_operator_strict_core_v1.json",
+      "5": "fundamental_action_reconstruction/generated/a_5_pair5_orientation_projector_operator_strict_core_v1.json"
+    },
+    "rooted_transport_refs": {
+      "2": "fundamental_action_reconstruction/generated/o12_pair1_pair2_selector_chart_transport_operator_strict_derived_from_sigma_int_alpha12_v1.json",
+      "3": "fundamental_action_reconstruction/generated/o13_pair1_pair3_selector_chart_transport_operator_axis_only_alpha13_mod_pi_strict_core_v1.json",
+      "4": "fundamental_action_reconstruction/generated/o14_pair1_pair4_selector_chart_transport_operator_axis_only_alpha14_mod_pi_strict_core_v1.json",
+      "5": "fundamental_action_reconstruction/generated/o15_pair1_pair5_selector_chart_transport_operator_axis_only_alpha15_mod_pi_strict_core_v1.json"
+    },
+    "boundary": "N512 (no operator-level groupoid promotion; axis-only edges remain section-level)"
+  },
+  "construction": {
+    "rule": "fix sign on pair1 via sign(dot(w_break,u_1)) and propagate via O_1m alignment",
+    "root": {
+      "pair": "pair1",
+      "dot_w_break_u_1": 0.00016200023852512268,
+      "root_sign_s_1": 1
+    },
+    "signs_by_pair": {
+      "pair1": 1,
+      "pair2": 1,
+      "pair3": 1,
+      "pair4": -1,
+      "pair5": -1
+    }
+  },
+  "outputs": {
+    "u_vectors_directed": {
+      "u_1": [
+        0.0,
+        -0.204124145231932,
+        -0.353553390593274,
+        -0.408248290463863,
+        -0.353553390593274,
+        -0.204124145231931,
+        0.0,
+        0.204124145231931,
+        0.353553390593274,
+        0.408248290463863,
+        0.353553390593274,
+        0.204124145231932
+      ],
+      "u_2": [
+        0.408248290463863,
+        0.20412414523193156,
+        -0.20412414523193143,
+        -0.408248290463863,
+        -0.2041241452319317,
+        0.20412414523193156,
+        0.408248290463863,
+        0.20412414523193173,
+        -0.2041241452319312,
+        -0.408248290463863,
+        -0.20412414523193145,
+        0.20412414523193115
+      ],
+      "u_3": [
+        0.408248290463863,
+        0.0,
+        -0.408248290463863,
+        0.0,
+        0.408248290463863,
+        0.0,
+        -0.408248290463863,
+        0.0,
+        0.408248290463863,
+        0.0,
+        -0.408248290463863,
+        0.0
+      ],
+      "u_4": [
+        0.408248290463863,
+        -0.204124145231932,
+        -0.204124145231931,
+        0.408248290463863,
+        -0.204124145231932,
+        -0.204124145231931,
+        0.408248290463863,
+        -0.204124145231931,
+        -0.204124145231932,
+        0.408248290463863,
+        -0.204124145231932,
+        -0.204124145231932
+      ],
+      "u_5": [
+        -0.0,
+        -0.204124145231932,
+        0.353553390593274,
+        -0.408248290463863,
+        0.353553390593274,
+        -0.204124145231932,
+        -1e-15,
+        0.204124145231932,
+        -0.353553390593274,
+        0.408248290463863,
+        -0.353553390593274,
+        0.204124145231932
+      ]
+    },
+    "coords_in_c_s_after_sign_lift": {
+      "pair1": [
+        0.0,
+        -1.0
+      ],
+      "pair2": [
+        0.9999999999999998,
+        1.6653345369377348e-16
+      ],
+      "pair3": [
+        1.0,
+        0.0
+      ],
+      "pair4": [
+        1.0,
+        -0.0
+      ],
+      "pair5": [
+        -0.0,
+        -1.0
+      ]
+    }
+  },
+  "compatibility": {
+    "descends_to_projective": true,
+    "vector_section_matches_projector_section": {
+      "max_abs_diff_by_pair": {
+        "pair1": 0.0,
+        "pair2": 0.0,
+        "pair3": 0.0,
+        "pair4": 0.0,
+        "pair5": 0.0
+      },
+      "tol": 1e-12,
+      "all_pairs_match": true
+    },
+    "rooted_transport_alignment": {
+      "by_pair": {
+        "pair2": {
+          "dot": 1.0,
+          "sign_s_m": 1,
+          "max_abs_diff": 6.106226635438361e-16
+        },
+        "pair3": {
+          "dot": 1.0000000000000004,
+          "sign_s_m": 1,
+          "max_abs_diff": 1.4849232954361469e-15
+        },
+        "pair4": {
+          "dot": -1.000000000000001,
+          "sign_s_m": -1,
+          "max_abs_diff": 1.0547118733938987e-15
+        },
+        "pair5": {
+          "dot": -1.000000000000001,
+          "sign_s_m": -1,
+          "max_abs_diff": 1e-15
+        }
+      },
+      "tol": 1e-09,
+      "all_pairs_align": true
+    },
+    "note": "Projectors/spans are unchanged under sign flip; this object exports one directed representative section in a convention scope only."
+  },
+  "hard_limits": [
+    "Convention/section choice only; does not claim a directed/sign-sensitive physical orientation datum in strict core.",
+    "Does not claim Aut(Z_12)-invariant sign canonicity (rooted sign uses w_break and a chosen chart embedding).",
+    "Does not claim strict-core selector closure / admissible S_sel_int.",
+    "Does not claim kernel-alone/global QW-2191 discharge.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}

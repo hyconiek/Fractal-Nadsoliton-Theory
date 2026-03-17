@@ -1,0 +1,87 @@
+{
+  "stage": "P684",
+  "status": "PASS_W_BREAK_ROOTED_DIRECTED_STATE_LIFT_DESCENDS_TO_PROJECTIVE_AND_TRANSPORT_ALIGNS",
+  "as_of": "2026-03-17",
+  "generated_utc": "2026-03-17T11:09:01.112805+00:00",
+  "goal": "audit_w_break_rooted_residual_sign_fix_on_pair1_and_rooted_transport_directed_vector_section_on_C_v1",
+  "inputs": {
+    "seed_w_break_ref": "fundamental_action_reconstruction/generated/f647_strict_witness_provider_export_packet_for_seed_v1_realization_attempt.json",
+    "a_m_refs": {
+      "1": "fundamental_action_reconstruction/generated/a_1_pair1_orientation_projector_operator_strict_core_v1.json",
+      "2": "fundamental_action_reconstruction/generated/a_2_pair2_orientation_projector_operator_strict_core_v1.json",
+      "3": "fundamental_action_reconstruction/generated/a_3_pair3_orientation_projector_operator_strict_core_v1.json",
+      "4": "fundamental_action_reconstruction/generated/a_4_pair4_orientation_projector_operator_strict_core_v1.json",
+      "5": "fundamental_action_reconstruction/generated/a_5_pair5_orientation_projector_operator_strict_core_v1.json"
+    },
+    "rooted_transport_refs": {
+      "2": "fundamental_action_reconstruction/generated/o12_pair1_pair2_selector_chart_transport_operator_strict_derived_from_sigma_int_alpha12_v1.json",
+      "3": "fundamental_action_reconstruction/generated/o13_pair1_pair3_selector_chart_transport_operator_axis_only_alpha13_mod_pi_strict_core_v1.json",
+      "4": "fundamental_action_reconstruction/generated/o14_pair1_pair4_selector_chart_transport_operator_axis_only_alpha14_mod_pi_strict_core_v1.json",
+      "5": "fundamental_action_reconstruction/generated/o15_pair1_pair5_selector_chart_transport_operator_axis_only_alpha15_mod_pi_strict_core_v1.json"
+    }
+  },
+  "root": {
+    "pair": "pair1",
+    "dot_w_break_u_1": 0.00016200023852512268,
+    "root_sign_s_1": 1
+  },
+  "sign_lift": {
+    "rule": "rooted_transport_from_w_break_on_pair1",
+    "signs_by_pair": {
+      "pair1": 1,
+      "pair2": 1,
+      "pair3": 1,
+      "pair4": -1,
+      "pair5": -1
+    },
+    "counts_as_strict_physical_orientation_datum": false
+  },
+  "compatibility": {
+    "descends_to_projective_projectors": {
+      "max_abs_diff_by_pair": {
+        "pair1": 0.0,
+        "pair2": 0.0,
+        "pair3": 0.0,
+        "pair4": 0.0,
+        "pair5": 0.0
+      },
+      "tol": 1e-12,
+      "all_pairs_match": true
+    },
+    "rooted_transport_alignment": {
+      "by_pair": {
+        "pair2": {
+          "dot": 1.0,
+          "sign_s_m": 1,
+          "max_abs_diff": 6.106226635438361e-16
+        },
+        "pair3": {
+          "dot": 1.0000000000000004,
+          "sign_s_m": 1,
+          "max_abs_diff": 1.4849232954361469e-15
+        },
+        "pair4": {
+          "dot": -1.000000000000001,
+          "sign_s_m": -1,
+          "max_abs_diff": 1.0547118733938987e-15
+        },
+        "pair5": {
+          "dot": -1.000000000000001,
+          "sign_s_m": -1,
+          "max_abs_diff": 1e-15
+        }
+      },
+      "tol": 1e-09,
+      "all_pairs_align": true,
+      "note": "Alignment is checked only along rooted edges O_1m; some edges are axis-only representatives (see N512 boundary)."
+    }
+  },
+  "hard_limits": [
+    "Convention/section choice only; does not claim a directed/sign-sensitive physical orientation datum in strict core.",
+    "Does not claim Aut(Z_12)-invariant sign canonicity (rooted sign uses w_break and a chosen chart embedding).",
+    "Does not claim strict-core selector closure / admissible S_sel_int.",
+    "Does not claim kernel-alone/global QW-2191 discharge.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}
