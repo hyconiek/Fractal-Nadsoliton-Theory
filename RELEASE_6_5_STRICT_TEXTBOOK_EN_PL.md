@@ -7,7 +7,11 @@
 
 **Status discipline (no false pass):**
 - This document is a **strict-only textbook projection** of the current repo state.
-- It does **not** claim strict-core selector closure, global selector closure, global `QW-2191` discharge, or ToE closure.
+- It does **not** claim strict-core selector closure, kernel-alone/global `QW-2191` discharge, or ToE closure.
+- Update (`2026-03-17`): the repo exports a global **projective** selector closure object on `C_v1`,
+  `SelectorClosure_global_C_v1_projective_strict_v1` (`F672`, audited by `P673`, packaged by `N672`), and exports a theorem-level
+  `QW-2191` projective-closure resolution statement clarifying “bypass vs kernel-alone discharge” (`N673`). These exports do **not**
+  upgrade to strict-core selector closure or ToE closure.
 - Update (`2026-03-15`): the canonical **diagonal/local lane** on the strict `n=12` carrier now exports a strict-derived
   **numeric value-instantiation** deciding the diagonal mode‑2 defect nonzero condition (`T166`) on `pair1`, and in fact
   decides nonzero defects on **all** Fourier-degenerate pairs `pair_m (m=1..5)` (`N482`, `N485`, `N487`).
@@ -220,6 +224,10 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
 33. the repo exports a **global** selector output operator object promoted from the seed‑v1 local `O_sel : Q_sel_v1 -> Q_out_v1`, and packages the induced chartwise
     output channels `Y_sel(pair_m) := O_sel ∘ R_sel(pair_m)` on `{pair1..pair5}`:
     `SelectorOutputOperator_global_C_v1_seed_v1_promoted_strict_v1` (`F660`, audited by `P660`, packaged by `N552`).
+34. update (`2026-03-17`): the repo exports an explicit global **projective selector closure object** on `C_v1`,
+    `SelectorClosure_global_C_v1_projective_strict_v1` (`F672`), audited by `P673` and packaged by `N672`, and exports a theorem-level
+    `QW-2191` projective-closure resolution statement clarifying “bypass for the closure observable vs kernel-alone discharge” (`N673`).
+    This remains below strict-core selector closure and keeps kernel-alone/global `QW-2191` discharge unclaimed.
 
 ## 1) One-Page Strict Status (6.5)
 
@@ -248,6 +256,11 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
 9. The seed‑v1 strict-core internal selector-source lane now exports an actual local orientation datum and selector operators on `pair1`
    (`F654–F657`, packaged by `N546–N549`) and global promotions of the seed-v1 selector bridge/reduction/output operators to `C_v1`
    (`F658/P658/N550`, `F659/P659/N551`, `F660/P660/N552`), explicitly below strict-core selector closure.
+10. Update (`2026-03-17`): building on the exported global projective state and promoted global output channels, the repo now exports one explicit
+    global **projective selector closure object** on `C_v1`,
+    `SelectorClosure_global_C_v1_projective_strict_v1` (`F672`), with projector/section-level well-definedness packaged by `N672` and a
+    scope-explicit `QW-2191` resolution statement for the closure observable (`N673`). This does **not** imply strict-core selector closure,
+    kernel-alone/global `QW-2191` discharge, or ToE closure.
 
 ### 1.2 What is still missing (no false pass)
 
@@ -256,7 +269,8 @@ The repo still does **not** export:
 1. strict-core selector closure / admissible `S_sel_int`,
 2. any **Aut(Z_12)-invariant** sign-sensitive / directed selector state datum “for free” from typed `Z_12/Aut(Z_12)` structure alone (`N462` boundary);
    in the declared premise-based scope (`T164`) such a directed lift *is* exported (`F474/N524`), but no Aut-invariant canonicity is claimed,
-3. an axiom-free **global** discharge of `QW-2191` beyond the declared diagonal/local lane and `n=12` scope,
+3. an axiom-free **kernel-alone/global** discharge of `QW-2191` beyond the declared diagonal/local lane and `n=12` scope; the current repo
+   exports only a scope-limited projective closure-observable bypass statement (`F672/N673`) while keeping kernel-alone discharge unclaimed,
 4. a strict physical sign/orientation convention if any downstream claim depends on absolute sign (unless separately
    proven gauge-irrelevant on that lane),
 5. ToE closure.
@@ -524,6 +538,10 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
     `SelectorOutputOperator_global_C_v1_seed_v1_promoted_strict_v1` (`F660`, audyt `P660`, opakowane przez `N552`).
 41. ponadto, repo eksportuje jawny **globalny** bundle rozładowania gałęzi downstream‑completion dla promowanego łańcucha seed‑v1 na `C_v1`:
     `SelectorDownstreamCompletionBranch_global_C_v1_seed_v1_promoted_strict_v1` (`F661`, audyt `P661`, opakowane przez `N553`).
+42. update (`2026-03-17`): repo eksportuje jawny **globalny projektowy** obiekt domknięcia selektora na `C_v1`,
+    `SelectorClosure_global_C_v1_projective_strict_v1` (`F672`), audytowany przez `P673` i opakowany przez `N672`, oraz eksportuje theorem-level
+    statement rozstrzygający sens “`QW-2191` resolution” w tym scope (bypass dla obserwabli domknięcia vs brak kernel-alone discharge) (`N673`).
+    To nadal jest poniżej strict-core selector closure i nie promuje się do globalnego kernel-alone rozładowania `QW-2191`.
 
 ## 1) Jednostronicowy status strict (6.5)
 
@@ -547,6 +565,10 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
    globalny datum/obserwablę kierunkową w jawnie zadeklarowanym scope premise-based (`F474/N524`, decyzja `P632`), bez roszczeń o globalne rozładowanie `QW-2191`.
 9. Pas seed‑v1 eksportuje już jawny datum orientacji i operatory selektora na `pair1` (`F654–F657`, `N546–N549`) oraz promocje globalne operatorów mostu/redukcji/wyjścia selektora na `C_v1`
    (`F658/P658/N550`, `F659/P659/N551`, `F660/P660/N552`, `F661/P661/N553`), jawnie poniżej strict-core selector closure.
+10. Update (`2026-03-17`): repo eksportuje teraz jawny **globalny projektowy** obiekt domknięcia selektora na `C_v1`,
+    `SelectorClosure_global_C_v1_projective_strict_v1` (`F672`), z well-definedness na poziomie projektor/sekcja opakowanym przez `N672` oraz
+    scope-explicit statement o sensie “`QW-2191` resolution” dla obserwabli domknięcia (`N673`). To nie implikuje strict-core selector closure,
+    globalnego kernel-alone discharge `QW-2191` ani domknięcia ToE.
 
 ### 1.2 Czego nadal brakuje (bez false pass)
 
@@ -554,7 +576,8 @@ Repo nadal **nie** eksportuje:
 
 1. strict-core selector closure / dopuszczalnego `S_sel_int`,
 2. ścisłego **Aut(Z_12)-invariant** znako‑czułego / kierunkowego datumu stanu selektora “za darmo” z samej struktury typed `Z_12/Aut(Z_12)` (granica `N462`); w zadeklarowanym scope premise-based (`T164`) taki datum jest już wyeksportowany jako directed lift (`F474/N524`, decyzja `P632`),
-3. aksjomatycznie wolnego **globalnego** rozładowania `QW-2191` poza pasem diagonal/local i zakresem `n=12`,
+3. aksjomatycznie wolnego **kernel-alone/global** rozładowania `QW-2191` poza pasem diagonal/local i zakresem `n=12`; aktualnie wyeksportowano
+   jedynie scope-limited bypass dla obserwabli domknięcia w wariancie projektowym (`F672/N673`) przy zachowaniu braku kernel-alone discharge,
 4. ścisłej konwencji znaku/orientacji tam, gdzie downstream wymaga absolutnego znaku (o ile nie jest osobno pokazane, że znak jest gauge),
 5. domknięcia ToE.
 
