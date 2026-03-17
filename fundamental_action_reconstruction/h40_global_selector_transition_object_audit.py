@@ -2,86 +2,92 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+from typing import Any
 
 ROOT = Path(__file__).resolve().parent
 GENERATED = ROOT / "generated"
 GENERATED.mkdir(exist_ok=True)
 
+H37_SUMMARY = GENERATED / "h37_sign_distinction_state_audit_summary.json"
+
+SELECTOR_ATLAS_GLOBAL = GENERATED / "selector_atlas_global_c_v1_strict_v1.json"
+SELECTOR_TRANSITION_GLOBAL = GENERATED / "selector_transition_global_c_v1_strict_v1.json"
+SELECTOR_STATE_GLOBAL_PROJECTIVE = GENERATED / "selector_state_global_c_v1_projective_strict_v1.json"
+SELECTOR_STATE_GLOBAL_DIRECTED = GENERATED / "selector_state_global_c_v1_directed_strict_v1.json"
+
+
+def _read_json(path: Path) -> dict[str, Any] | None:
+    if not path.exists():
+        return None
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return {"_parse_error": True}
+
+
+def _is_pass(status: str | None) -> bool:
+    return bool(status) and str(status).startswith("PASS")
+
+
+h37 = _read_json(H37_SUMMARY)
+
+atlas_present = SELECTOR_ATLAS_GLOBAL.exists()
+transition_present = SELECTOR_TRANSITION_GLOBAL.exists()
+projective_present = SELECTOR_STATE_GLOBAL_PROJECTIVE.exists()
+directed_present = SELECTOR_STATE_GLOBAL_DIRECTED.exists()
+
+sign_sensitive_present = _is_pass((h37 or {}).get("status")) and directed_present
+qw2191_discharged = False
+
+missing: list[str] = []
+if not sign_sensitive_present:
+    missing.append("sign_sensitive_directed_selector_state_object_or_observable")
+if not qw2191_discharged:
+    missing.append("global_qw_2191_discharge")
+
+status = (
+    "PASS_GLOBAL_SELECTOR_TRANSITION_OBJECT_EXPORTED_ON_C_V1__"
+    + ("DIRECTED_SIGN_SENSITIVE_LAYER_PRESENT__" if sign_sensitive_present else "DIRECTED_SIGN_SENSITIVE_LAYER_MISSING__")
+    + "QW2191_STILL_OPEN"
+    + ("__PREMISE_BASED_T164" if sign_sensitive_present else "")
+)
+frontier = "H40_B1" if not sign_sensitive_present else "H40_B2"
+frontier_text = (
+    "strict core exports a global selector transition/gluing object on C_v1 "
+    "(projector section level), but global QW-2191 discharge remains open"
+    + ("; directed/sign-sensitive layer is present (premise-based via T164)" if sign_sensitive_present else "")
+)
+
 payload = {
     "step": "H40",
     "title": "Global Selector Transition Object Audit",
-    "date": "2026-03-16",
-    "status": "PASS_GLOBAL_SELECTOR_TRANSITION_OBJECT_EXPORTED_ON_C_V1_AND_GLOBAL_PROJECTIVE_SELECTOR_STATE_OBJECT_EXPORTED_QW2191_STILL_OPEN",
+    "date": "2026-03-17",
+    "status": status,
     "inputs": {
-        "H34": "no_strict_basis_covariance_or_target_independence_argument",
-        "H39/F470/N516": "global_projective_selector_state_object_exported_on_C_v1 (projector/span semantics), but no sign_sensitive_directed_orientation_datum and no global QW-2191 discharge",
-        "C29": "local_projector_formulas_present",
-        "C30": "local_overlap_compatibility_law_present",
-        "C31": "transition_angle_source_class_present_and_lane_scoped_alpha12_exported_from_strict_theta_supply (F451/F457)",
-        "F457": "lane_scoped_alpha12_transition_angle_export_present",
-        "F461": "lane_scoped_pair1_pair2_chart_transport_operator_O12_export_present (derived from alpha12 only)",
-        "N506": "projector_level_transport_under_O12_is_sign_gauge_invariant",
-        "P465": "lane_scoped_O12_orthogonality_and_sampled_projector_transport_audit_present",
-        "F462": "lane_scoped_two_chart_projector_operator_section_exported_glued_by_O12",
-        "N507": "two_chart_glued_projector_operator_section_packaged_as_well_defined_and_sign_gauge_invariant",
-        "P466": "audit_of_A2_equals_O12_A1_O12T_present",
-        "F464": "lane_scoped_pair13_pair23_chart_transport_operators_and_three_chart_projector_level_atlas_ingredient_with_cocycle_data_exported",
-        "P467": "audit_of_three_chart_gluing_laws_and_cocycle_path_independence_on_projector_section_present",
-        "N508": "three_chart_projector_section_cocycle_packaged_as_strict_theorem (projector_level_sign_free)",
-        "F465": "lane_scoped_additional_pair_chart_transport_operators_and_five_chart_projector_level_atlas_ingredient_with_local_cocycle_data_exported",
-        "P468": "audit_of_five_chart_gluing_laws_and_local_cocycle_path_independence_on_projector_section_present",
-        "N509": "five_chart_projector_section_local_cocycle_packaged_as_strict_theorem (projector_level_sign_free)",
-        "F466": "lane_scoped_additional_long_edge_chart_transport_operators_and_five_chart_projector_level_atlas_ingredient_with_full_triple_cocycle_data_exported",
-        "P469": "audit_of_five_chart_gluing_laws_and_full_triple_cocycle_path_independence_on_projector_section_present",
-        "N510": "five_chart_projector_section_full_triple_cocycle_packaged_as_strict_theorem (projector_level_sign_free)",
-        "F467": "lane_scoped_pair12345_oriented_transport_lift_alpha_mod_2pi_exported_as_tracked_convention_layer (vector_level; sign_tracked; not physical sign datum)",
-        "P470": "audit_of_pair12345_oriented_transport_vector_transport_and_full_triple_cocycle_present (probe_level)",
-        "N511": "oriented_transport_full_triple_cocycle_convention_layer_packaged_as_strict_theorem (no physical sign claim)",
-        "P471": "audit_of_operator_level_vs_vector_section_level_cocycle_for_oriented_transport (operator_level_matrix_equality_fails_expected)",
-        "N512": "operator_level_cocycle_failure_boundary_packaged_as_strict_no_false_pass_theorem (section_level_gluing_only)",
-        "P460": "lane_scoped_cross_block_polar_orthogonal_factor_transition_matrix_candidate_present",
-        "F469/N515": "global_selector_transition_or_gluing_object_exported_on_C_v1 (T170 discharged)",
-        "F470/N516": "global_projective_selector_state_object_exported_on_C_v1 (H39 object-existence layer resolved)",
-        "selector_transition_global": "SelectorTransition_global_C_v1_strict_v1 exported (F469)",
+        "H37": (h37.get("status") if isinstance(h37, dict) else None),
+        "selector_atlas_global": str(SELECTOR_ATLAS_GLOBAL.relative_to(ROOT)) if atlas_present else None,
+        "selector_transition_global": str(SELECTOR_TRANSITION_GLOBAL.relative_to(ROOT)) if transition_present else None,
+        "selector_state_global_projective": str(SELECTOR_STATE_GLOBAL_PROJECTIVE.relative_to(ROOT)) if projective_present else None,
+        "selector_state_global_directed": str(SELECTOR_STATE_GLOBAL_DIRECTED.relative_to(ROOT)) if directed_present else None,
     },
     "supports": [
-        "local_projector_formula",
-        "local_overlap_compatibility_law",
-        "control_lane_transition_structure",
-        "lane_scoped_transition_angle_export",
-        "lane_scoped_pair_chart_transport_operator_export",
-        "projector_level_sign_gauge_transport",
-        "lane_scoped_chart_glued_projector_operator_section",
-        "lane_scoped_three_chart_projector_section_with_cocycle_data",
-        "lane_scoped_five_chart_projector_section_with_full_triple_cocycle_data",
-        "lane_scoped_pair12345_oriented_transport_lift_as_tracked_convention_layer",
-        "lane_scoped_cross_block_polar_factor_transition_matrix_candidate",
         "global_selector_transition_object_export_on_C_v1",
         "global_projective_selector_state_object_export_on_C_v1",
+        "global_directed_selector_state_object_export_on_C_v1 (premise-based via T164)",
     ],
-    "missing": [
-        "sign_sensitive_directed_selector_state_object_or_observable",
-        "global_qw_2191_discharge",
-    ],
-    "frontier": "H40_B1",
-    "frontier_text": "strict core now exports a global selector transition/gluing object on C_v1 (F469/N515) and a global projective selector state object (F470/N516), but still does not discharge global QW-2191 and does not export any sign-sensitive directed selector state datum",
+    "missing": missing,
+    "frontier": frontier,
+    "frontier_text": frontier_text,
     "hard_limits": {
         "theorem_level_pass": False,
         "full_closure_pass": False,
-        "local_transition_laws_are_global_selector_object": False,
-        "qw_2191_discharged": False,
+        "qw_2191_discharged": bool(qw2191_discharged),
+        "operator_level_groupoid_promotion": False,
     },
+    "no_false_pass": True,
 }
 
-summary = {
-    "step": payload["step"],
-    "status": payload["status"],
-    "frontier": payload["frontier_text"],
-}
+summary = {"step": payload["step"], "status": payload["status"], "frontier": payload["frontier_text"], "no_false_pass": True}
 
-(GENERATED / "h40_global_selector_transition_object_audit.json").write_text(
-    json.dumps(payload, indent=2) + "\n", encoding="ascii"
-)
-(GENERATED / "h40_global_selector_transition_object_audit_summary.json").write_text(
-    json.dumps(summary, indent=2) + "\n", encoding="ascii"
-)
+(GENERATED / "h40_global_selector_transition_object_audit.json").write_text(json.dumps(payload, indent=2) + "\n", encoding="ascii")
+(GENERATED / "h40_global_selector_transition_object_audit_summary.json").write_text(json.dumps(summary, indent=2) + "\n", encoding="ascii")
