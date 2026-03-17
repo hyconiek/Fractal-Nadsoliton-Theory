@@ -97,7 +97,40 @@ unless such claims are explicitly exported at theorem level in the repo and are 
 
 \chapter{Ontology and scope}
 \section{AX9 ontology discipline}
+
+The strict program is built under the ontology correction \texttt{AX9}:
+
+\begin{itemize}
+  \item the nadsoliton itself is the primordial information of the universe in a solitonic state;
+  \item there is no separate informational layer underneath the nadsoliton;
+  \item the preferred internal order is:
+  \[
+    \text{nadsoliton}\ \to\ \text{light}\ \to\ \text{matter}\ \to\ \text{emergent observer}.
+  \]
+\end{itemize}
+
+In particular, we do not allow observer-facing quantities to silently back-propagate into the upstream definition of the nadsoliton core.
+Operationally, throughout this document, “light” is treated as the linearized eigenmode layer exported from the $\Psi$-sector Hessian instantiation (\texttt{F459}),
+and observer-facing readouts remain downstream (\texttt{P697}, \texttt{P699}).
 \section{Strict vs legacy kernel split discipline}
+
+The repo contains two historically distinct kernel objects (see \texttt{K1/K2/F2}):
+\[
+K_{\mathrm{legacy\_ont}}(d)
+:=
+\alpha_{\mathrm{geo}}\frac{\cos(\omega d+\phi)}{1+\beta_{\mathrm{tors}}d},
+\qquad
+K_{\mathrm{strict\_gate}}(d)
+:=
+\frac{\cos(\omega d+\phi)}{1+\beta d^{\eta}}.
+\]
+
+By author decree (\texttt{S2}, 2026-03-09), the legacy kernel is retired to archival status; this document is strict-only.
+However, \textbf{no false pass} discipline remains:
+we do \emph{not} silently transfer legacy physical-role identities (e.g.\ electroweak-angle or EM coupling slogans) onto the strict working kernel without an explicit bridge/role-transfer theorem.
+
+On the current strict kernel-mode lane, the working strict tuple is the \texttt{QW-2049} gate-selected kernel with
+$(\omega,\phi,\beta,\eta)=(0.18575,\ 0.16250,\ 1.0,\ 1.8)$, used operationally to generate a frozen numeric carrier mixing matrix $K_{\mathrm{total}}$ on $\mathbb{Z}_{12}$ (\texttt{R14}).
 \section{What “closure” means in this document}
 
 We use the word “closure” in a deliberately scope-disciplined way.
@@ -125,7 +158,143 @@ On the current repo state, the repo discharges Operational ToE closure in the st
 
 \chapter{Strict core Lagrangian and emergence map}
 \section{Single-kernel strict candidate (A11)}
+
+This chapter records the strict candidate “one-kernel” nadsoliton core Lagrangian as exported/packaged by \texttt{A11}.
+It is a definition/packaging object, not a claim that every coefficient family has already been strict-derived from the kernel alone.
+
+\subsection{Typed carrier and cyclic distance ($\mathbb{Z}_{12}$)}
+
+Let
+\[
+I_{12}:=\{0,1,\dots,11\},
+\qquad
+\mathbb{Z}_{12}:=(I_{12}, + \bmod 12).
+\]
+
+Define the cyclic octave distance on the ring:
+\[
+d_{\mathrm{cyc}}(i,j)
+:=
+\min\Bigl( (j-i)\bmod 12,\ (i-j)\bmod 12 \Bigr)
+\in\{0,1,\dots,6\}.
+\]
+
+\subsection{Strict working kernel and frozen mixing matrix}
+
+The strict working kernel is the later-pipeline gate-selected kernel (\texttt{QW-2049}):
+\[
+K_{\mathrm{strict\_gate}}(d)
+:=
+\frac{\cos(\omega d+\phi)}{1+\beta d^{\eta}},
+\qquad
+(\omega,\phi,\beta,\eta)=(0.18575,\ 0.16250,\ 1.0,\ 1.8).
+\]
+
+On the kernel-mode lane, the repo exports a frozen numeric symmetric mixing matrix $K_{\mathrm{total}}\in\mathbb{R}^{12\times 12}$
+on the same carrier (\texttt{QW-2118}), specialized into the canonical kernel channel by \texttt{R14}.
+In this document we only require the exported matrix entries (no additional kernel-to-matrix derivation is assumed here).
+
+\subsection{Fields and core Lagrangian density}
+
+Introduce a 12-component real field on spacetime:
+\[
+\Psi(x)=(\psi_0(x),\dots,\psi_{11}(x))\in\mathbb{R}^{12},
+\]
+and a real scalar order/coherence field:
+\[
+\Phi(x)=\phi(x)\in\mathbb{R}.
+\]
+
+Write the mixing potential using the exported $K_{\mathrm{total}}$:
+\[
+V_{\mathrm{mix}}(\Psi)
+:=
+\frac12 \sum_{\substack{i,j\in I_{12}\\ i\neq j}} (K_{\mathrm{total}})_{ij}\,\psi_i\,\psi_j.
+\]
+
+Write the local self-interaction potentials in the canonical template form (\texttt{QW-2163/2165/2166}):
+\[
+V_{\Phi}(\phi)
+:=
+\frac12 m_{\phi}^2\,\phi^2 + \frac14 \lambda_{\phi}\,\phi^4,
+\]
+\[
+V_{\Psi}(\Psi)
+:=
+\sum_{i=0}^{11}\left(
+\frac12 m_{\psi i}^2\,\psi_i^2
+\;+\;\frac14 g4_{\psi i}\,\psi_i^4
+\;+\;\frac16 g6_{\psi i}\,\psi_i^6
+\right),
+\]
+\[
+V_{\mathrm{Y}}(\Psi,\phi)
+:=
+\sum_{i=0}^{11} gY_i\,\phi^2\,\psi_i^2.
+\]
+
+Then the nadsoliton core Lagrangian density is:
+\[
+\mathcal{L}_{\mathrm{core}}
+=
+\frac12\,\partial_\mu \phi\,\partial^\mu \phi
+\;+\;\frac12\sum_{i=0}^{11}\partial_\mu \psi_i\,\partial^\mu \psi_i
+\;-\;V_{\Phi}(\phi)
+\;-\;V_{\Psi}(\Psi)
+\;-\;V_{\mathrm{Y}}(\Psi,\phi)
+\;-\;V_{\mathrm{mix}}(\Psi).
+\]
+
+\subsection{Quadratic expansion, $\Psi$ Hessian, and “mass” proxy meaning (strict, scope-limited)}
+
+Let $(\phi_\ast,\Psi_\ast)$ be a background configuration satisfying the stationarity condition for the potential part
+$V:=V_{\Phi}+V_{\Psi}+V_{\mathrm{Y}}+V_{\mathrm{mix}}$:
+\[
+\nabla_{\phi,\Psi} V(\phi_\ast,\Psi_\ast)=0.
+\]
+
+Write $(\phi,\Psi)=(\phi_\ast,\Psi_\ast)+(\delta\phi,\delta\Psi)$ and expand the potential to second order in $\delta\Psi$:
+\[
+V(\phi_\ast,\Psi_\ast+\delta\Psi)
+=
+V(\phi_\ast,\Psi_\ast)
+\;+\;\frac12\,\delta\Psi^{\mathsf T} H_{\psi}\,\delta\Psi
+\;+\;\cdots,
+\]
+where $H_{\psi}\in\mathbb{R}^{12\times 12}$ is the $\Psi$-sector Hessian block (second derivatives) at the background point.
+
+On the current diagonal/local strict-derived lane, the repo exports one explicit numeric value instantiation (\texttt{F459}) of the form:
+\[
+H_{\psi}
+:=
+K_{\mathrm{total}} + \bigl(m_0^2 I + D_{\mathrm{local\_residual}}\bigr),
+\]
+with $m_0^2 I$ the exported host scalar floor embedding and $D_{\mathrm{local\_residual}}$ an exported diagonal/local strict-derived residual profile.
+
+In strict scope we treat the quadratic coefficient $\delta\Psi^{\mathsf T}H_{\psi}\delta\Psi$ as defining a \emph{dimensionless} “$m^2$ proxy” layer:
+for any nonzero vector $u$, the Rayleigh quotient
+$u^{\mathsf T}H_{\psi}^{(s)}u/(u^{\mathsf T}u)$ is a well-defined quadratic proxy, where $H_{\psi}^{(s)}=\tfrac12(H_{\psi}+H_{\psi}^{\mathsf T})$.
+This does \emph{not} yet constitute a physical unit identification, and it does not bypass the strict-core selector obstruction \texttt{QW-2191};
+it is an operational computability meaning only (packaged as a scope-limited meaning theorem \texttt{N703}).
 \section{Light $\to$ matter $\to$ observer ladder}
+
+\texttt{A11} fixes a disciplined emergence ladder. On the current repo state, the strongest honest statements along that ladder are:
+
+\begin{enumerate}[label=\arabic*.]
+  \item \textbf{Light (discharged as computable instantiation):}
+  the repo exports a strict-derived diagonal/local value instantiation of the $\Psi$-sector Hessian $H_{\psi}$ and its full real eigensystem (\texttt{F459}),
+  plus sign-gauge-invariant eigenprojectors (\texttt{F460}).
+  Mixing across Fourier pair planes is explicitly audited and packaged as a value-instantiation boundary (\texttt{N505}); therefore no “pair-plane diagonalization” shortcut is allowed.
+
+  \item \textbf{Matter (programmatic, not closed):}
+  matter is intended to arise from nonlinear structure in the same core Lagrangian (local quartic/sextic families and Yukawa-type couplings),
+  but the repo does not yet export a strict derivation that these families are kernel-alone consequences or a closed host identification map.
+
+  \item \textbf{Emergent observer (operational OS closure, not actual observer closure):}
+  from the strict projective selector closure output on $C_{v1}$ (\texttt{N680}, exported as \texttt{F672}), the repo exports a projective observer-limit readout (\texttt{P697})
+  and a fully computable downstream projective chain under projector pushforward semantics $P\mapsto MPM^{\mathsf T}$ (\texttt{P699}/\texttt{N699}).
+  This suffices for \emph{Operational ToE closure} in strict projective OS scope (\texttt{N701}), while \emph{actual emergent observer closure} remains explicitly open.
+\end{enumerate}
 
 \chapter{Selector closure on \texorpdfstring{$C_{v1}$}{C\_v1}}
 \section{Global atlas and transition objects (T170)}

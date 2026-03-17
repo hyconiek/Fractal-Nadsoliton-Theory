@@ -47,6 +47,7 @@ Already exported on the current repo state (Release 6.5.x):
 - A strict projective operational ToE OS support packet v2 is exported and packaged (`F700`, audited by `P700`, packaged by `N700`),
   extending the v1 OS bundle by including the projective emergent‑observer chain computability theorem (`N699`).
 - A scope-disciplined “Operational ToE closure” statement is frozen in strict projective OS scope (`N701`), derived only from `N700` and keeping all hard limits explicit.
+- A scope-limited “mass proxy meaning” definition theorem is frozen (`N703`): `P694/P696` numbers are treated as quadratic coefficients of the exported `H_psi` instantiation, without any physical-unit or SM identification claim.
 - Non-strict: a Standard Model host-matching harness exists (`P702`). With an explicit PDG2024 target dataset (`fundamental_action_reconstruction/external_data/sm_mass_targets_v1.json`) it is computable, but current one-scale matching metrics are poor; **no** “Standard Model match” claim is made.
 
 ## 3 What Release 7 must still not “false‑PASS” (EN)
@@ -92,6 +93,7 @@ Już na obecnym stanie repo (Release 6.5.x):
 - Repo eksportuje i pakuje strict projective operational ToE OS support packet v2 (`F700`, audyt `P700`, opakowanie `N700`),
   rozszerzając pakiet v1 o theorem-level świadek obliczalności łańcucha emergent‑observer (`N699`).
 - Repo zamraża scope‑disciplinowane stwierdzenie “Operational ToE closure” w zakresie strict projective OS (`N701`), wyprowadzone wyłącznie z `N700` i z jawnymi hard‑limitami.
+- Repo zamraża scope‑limited twierdzenie o “znaczeniu mass proxy” (`N703`): liczby z `P694/P696` są traktowane jako współczynniki kwadratowe wyeksportowanej instancji `H_psi`, bez claimu o jednostkach fizycznych ani o identyfikacji SM.
 - Non-strict: istnieje harness host-matchingu Standard Model (`P702`). Z jawnym datasetem docelowym PDG2024 (`fundamental_action_reconstruction/external_data/sm_mass_targets_v1.json`) jest on policzalny, ale obecne metryki dopasowania one-scale są słabe; **nie** jest zgłaszany żaden “Standard Model match”.
 
 ## 3 Czego Release 7 nie może “false‑PASS” (PL)
