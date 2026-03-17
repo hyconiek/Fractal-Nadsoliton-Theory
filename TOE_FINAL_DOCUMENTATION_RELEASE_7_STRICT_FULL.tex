@@ -100,6 +100,25 @@ unless such claims are explicitly exported at theorem level in the repo and are 
 \section{Strict vs legacy kernel split discipline}
 \section{What “closure” means in this document}
 
+We use the word “closure” in a deliberately scope-disciplined way.
+
+\begin{definition}[Operational ToE closure (strict projective OS)]
+We say that the current repo state achieves \emph{Operational ToE closure} in the strict \emph{projective} scope if it exports a theorem-level
+operational support bundle sufficient to compute (from strict projective selector closure output data) the downstream artifacts recorded by the OS packet:
+\[
+\Lambda_{\mathrm{OS}}^{(\mathrm{proj})} :=
+\bigl(
+\texttt{N680},\ \texttt{N692},\ \texttt{N693},\ \texttt{P694},\ \texttt{P696},\ \texttt{P697},\ \texttt{N699}
+\bigr),
+\]
+with hard limits explicitly keeping \emph{kernel-alone/global} \texttt{QW-2191} discharge, directed sign-sensitive physical orientation, and ToE closure unclaimed.
+\end{definition}
+
+\begin{remark}[Boundary discipline]
+Operational ToE closure in the above sense is a closure of an \emph{operational computability pipeline} (a ToE “OS”), not a claim of global physical identification
+(host matching) and not a claim of kernel-alone/global \texttt{QW-2191} discharge. It is compatible with leaving those stronger claims explicitly open.
+\end{remark}
+
 \chapter{Strict core Lagrangian and emergence map}
 \section{Single-kernel strict candidate (A11)}
 \section{Light $\to$ matter $\to$ observer ladder}
@@ -112,7 +131,93 @@ unless such claims are explicitly exported at theorem level in the repo and are 
 
 \chapter{Operational physics proxies from projective closure}
 \section{Mass-spectrum proxy (P694)}
+
+Let $H_{\psi}\in\mathbb{R}^{12\times 12}$ be the exported diagonal/local Psi-sector Hessian value instantiation (\texttt{F459}).
+We use its symmetrization:
+\[
+H_{\psi}^{(s)} := \tfrac12\bigl(H_{\psi}+H_{\psi}^{\mathsf T}\bigr).
+\]
+
+For each Fourier pair plane $\mathrm{pair}_m$ ($m=1,\dots,5$), the exported global projective selector closure (\texttt{F672}) provides a ray
+$u_m\in\mathbb{R}^{12}$ (defined only up to sign). Define the quadratic proxy:
+\[
+m^2_m := \frac{u_m^{\mathsf T}\,H_{\psi}^{(s)}\,u_m}{u_m^{\mathsf T}u_m}.
+\]
+This is invariant under the sign gauge $u_m\mapsto -u_m$.
+
+Probe \texttt{P694} computes these “mass-spectrum proxy” values on the current repo state (no Standard Model identification claimed):
+
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+pair & $m^2$ proxy (Rayleigh on $H_{\psi}^{(s)}$)\\
+\midrule
+pair3 & $0.6687166508753918$\\
+pair5 & $1.3892705031823167$\\
+pair4 & $1.4474315384116325$\\
+pair2 & $2.0699508733172283$\\
+pair1 & $2.9337556210543343$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
 \section{Selector-aligned channel spectrum proxy (P696)}
+
+Probe \texttt{P696} refines \texttt{P694} into a 12-channel spectrum proxy by constructing a deterministic selector-aligned basis and inspecting
+$H_{\psi}^{(s)}$ in that basis.
+
+On $\mathbb{Z}_{12}$, define the standard real orthonormal Fourier vectors:
+\[
+e_0 := \frac{1}{\sqrt{12}}(1,\dots,1),\qquad
+e_6 := \frac{1}{\sqrt{12}}(1,-1,1,-1,\dots),
+\]
+and for each $m=1,\dots,5$ the real pair-plane basis $(c_m,s_m)$ with scale $\sqrt{2/12}$.
+
+For each $\mathrm{pair}_m$, \texttt{F672} exports coordinates $(u_c,u_s)$ such that (in the declared Fourier convention)
+\[
+u_m = u_c\,c_m + u_s\,s_m,
+\qquad
+u_m^{\perp} = (-u_s)\,c_m + (u_c)\,s_m,
+\]
+so that $u_m^{\perp}$ is a deterministic orthogonal complement ray in the same plane (used only at ray/projector level).
+
+Define the selector-aligned 12-channel basis:
+\[
+B := \bigl(e_0,\ u_1,\ u_1^{\perp},\ u_2,\ u_2^{\perp},\ \dots,\ u_5,\ u_5^{\perp},\ e_6\bigr),
+\]
+and the induced matrix:
+\[
+M := B^{\mathsf T}\,H_{\psi}^{(s)}\,B.
+\]
+The diagonal entries of $M$ are recorded as a simple operational “channel proxy spectrum”. Mixing is audited explicitly by inspecting the off-diagonal norm.
+
+On the current repo state, \texttt{P696} exports the sorted diagonal channel proxies (no Standard Model identification claimed):
+
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+channel & $m^2$ proxy\\
+\midrule
+pair3:u & $0.6687166508753918$\\
+pair5:u & $1.3892705031823165$\\
+pair4:u & $1.4474315384116314$\\
+pair2:u & $2.069950873317227$\\
+e6 & $2.41906833577034$\\
+pair1:u & $2.9337556210543316$\\
+pair5:u\_perp & $3.5360177064927694$\\
+pair4:u\_perp & $3.675931516755229$\\
+pair2:u\_perp & $4.2984508516608315$\\
+e0 & $4.761250376916641$\\
+pair3:u\_perp & $4.930970379004997$\\
+pair1:u\_perp & $5.08050282436479$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The mixing audit is part of the exported result: on the current repo state, \texttt{P696} reports
+an off-diagonal-to-diagonal Frobenius ratio of $1.191284779529568$ and a maximum off-block coupling Frobenius norm of $3.4009571444250914$,
+so \emph{no diagonalization claim} is made.
+
 \section{What is and is not claimed physically}
 
 \chapter{Emergent observer pipeline (projective scope)}
@@ -155,6 +260,16 @@ C_{\mathrm{cl}}=N P N^{\mathsf T}.
 `N699` packages the computability statement with explicit hard limits (no kernel-alone/global `QW-2191` discharge; no ToE closure; no actual emergent observer closure).
 \section{Operational OS support packet (v1) (F698/P698/N698)}
 \section{Operational OS support packet (v2) (F700/P700/N700)}
+
+The strict projective operational ToE “OS” support packet is exported in v2 form:
+\[
+\Lambda_{\mathrm{OS}}^{(\mathrm{proj})} =
+\bigl(
+\texttt{N680},\ \texttt{N692},\ \texttt{N693},\ \texttt{P694},\ \texttt{P696},\ \texttt{P697},\ \texttt{N699}
+\bigr),
+\]
+as the object \texttt{Lambda\_strict\_projective\_operational\_toe\_os\_support\_v2} (\texttt{F700}), audited by \texttt{P700} and packaged as a theorem by \texttt{N700}.
+All hard limits remain explicit: no kernel-alone/global \texttt{QW-2191} discharge, no directed sign-sensitive physical orientation claim in strict core, and no ToE closure.
 \section{Open target: actual emergent observer closure (future)}
 
 \chapter{Hard limits and open problems}
