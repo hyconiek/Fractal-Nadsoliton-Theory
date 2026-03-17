@@ -671,7 +671,14 @@ def main() -> None:
                     recommended_next_target = str(
                         p633.get("recommended_next_strict_target") or "P119"
                     )
-                    if recommended_next_target == "T172":
+                    if recommended_next_target == "T173":
+                        recommendation_reason = (
+                            "Projective strict-core selector closure is now discharged and the remaining frontier is packaged at theorem level "
+                            "without false pass (N679): kernel-alone/global QW-2191 discharge remains explicitly open, and any directed/sign-sensitive "
+                            "physical orientation datum remains out of strict core unless lifted by an explicit premise. Therefore the next honest strict "
+                            "target label is the explicit post-T172 frontier spec T173. Professorial routing decision: P633."
+                        )
+                    elif recommended_next_target == "T172":
                         recommendation_reason = (
                             "Post-projective directed frontier is now resolved (T171 discharged), and the strict-core source-seed lane has progressed to an admissible "
                             "exported S_sel_int source object and downstream operators. Therefore the next honest strict bottleneck shifts back to global strict selector closure "

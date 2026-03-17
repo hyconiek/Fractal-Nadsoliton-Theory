@@ -18,6 +18,7 @@ IN_P632 = GENERATED / "p632_current_strict_directed_continuation_decision_packet
 
 IN_P119 = GENERATED / "p119_first_source_seed_construction_target_probe_summary.json"
 IN_N676 = GENERATED / "n676_current_first_admissible_s_sel_int_source_object_discharge_theorem_summary.json"
+IN_N679 = GENERATED / "n679_current_strict_t172_strict_core_selector_closure_frontier_boundary_theorem_summary.json"
 
 OUT_JSON = GENERATED / "p633_current_strict_source_seed_route_selection_decision_packet.json"
 OUT_SUMMARY = GENERATED / "p633_current_strict_source_seed_route_selection_decision_packet_summary.json"
@@ -116,17 +117,31 @@ def main() -> None:
     seed_exported = bool(
         n676.get("theorem_result", {}).get("admissible_S_sel_int_source_object_in_F34_sense")
     )
-    recommended_next = "T172" if seed_exported else "P119"
-    meaning = (
-        "Source-seed lane is now materially exported: an admissible strict-core source object for S_sel_int exists (F34 sense) and downstream "
-        "operators are available in the declared scope. Next strict bottleneck shifts to global strict selector closure and QW-2191 discipline (T172), "
-        "without implying any kernel-alone discharge."
-        if seed_exported
-        else (
-            "Shift the next strict move to the genuinely-new strict-core source-seed construction frontier for S_sel_int. "
-            "P119 packages the first explicit construction target; later branches (E_orient / B_sel->R_sel->O_sel) remain open."
-        )
+    n679 = load_json(IN_N679) if IN_N679.exists() else {}
+    post_t172_frontier_packaged = bool(n679.get("theorem_result", {}).get("discharged")) and bool(
+        n679.get("theorem_result", {}).get("strict_core_selector_closure")
     )
+
+    recommended_next = "P119"
+    meaning = (
+        "Shift the next strict move to the genuinely-new strict-core source-seed construction frontier for S_sel_int. "
+        "P119 packages the first explicit construction target; later branches (E_orient / B_sel->R_sel->O_sel) remain open."
+    )
+    if seed_exported and post_t172_frontier_packaged:
+        recommended_next = "T173"
+        meaning = (
+            "Source-seed lane is now materially exported: an admissible strict-core source object for S_sel_int exists (F34 sense) and downstream "
+            "operators are available in the declared scope, while the post-T172 closure frontier is already packaged at theorem level (N679). "
+            "Therefore the next honest strict target label is the explicit post-T172 frontier spec T173: kernel-alone/global QW-2191 discharge remains explicitly open, "
+            "and any directed/sign-sensitive physical orientation datum remains out of strict core unless lifted by an explicit premise (no false pass)."
+        )
+    elif seed_exported:
+        recommended_next = "T172"
+        meaning = (
+            "Source-seed lane is now materially exported: an admissible strict-core source object for S_sel_int exists (F34 sense) and downstream "
+            "operators are available in the declared scope. Next strict bottleneck shifts to global strict selector closure and QW-2191 discipline (T172), "
+            "without implying any kernel-alone discharge."
+        )
     artifact = {
         "stage": "P633",
         "date": AS_OF,
