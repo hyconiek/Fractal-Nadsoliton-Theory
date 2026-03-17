@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.55  
+**Version:** 6.5.56  
 **Date:** 2026-03-17  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -311,6 +311,10 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
 25. Update (`2026-03-17`): output sign-lift data is now audited to be **gauge-covariant** under chartwise sign relifts: between the premise-based directed closure (`F677`) and the sign-fixed directed closure (`F692`),
     the per-chart output sign-lift satisfies `s_out^fix = t · s_out^prem` where `t` is the exported chartwise sign relift from the premise-based directed representative to the sign-fixed representative (`F690`);
     audited by `P693` and packaged by `N693`. This reinforces that directed output sign is tracked convention/gauge, while the physical downstream content remains projective (ray-level).
+26. Update (`2026-03-17`): a first “physical computability” witness is now exported from the **projectively closed** selector: a probe computes a quadratic
+    **mass-spectrum proxy** from the exported projective selector closure rays (`F672`) and the exported diagonal/local Psi-sector Hessian value instantiation `H_psi` (`F459`)
+    in a sign-gauge-invariant way (`P694`). This is an operational computability check only; it does **not** claim any Standard Model identification, any strict physical sign datum,
+    any kernel-alone/global `QW-2191` discharge, or ToE closure.
 
 ### 1.2 What is still missing (no false pass)
 
@@ -671,6 +675,10 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
 25. Update (`2026-03-17`): dane output sign-liftu są teraz jawnie audytowane jako **gauge‑kowariantne** względem per-chart sign‑reliftów: pomiędzy premise-based kierunkowym domknięciem (`F677`) oraz sign-fixed domknięciem (`F692`)
     per-chart output sign-lift spełnia `s_out^fix = t · s_out^prem`, gdzie `t` jest wyeksportowanym per-chart sign reliftem mapującym premise-based reprezentanta do sign-fixed reprezentanta (`F690`);
     audyt `P693`, opakowanie `N693`. To wzmacnia, że kierunkowy znak wyjścia jest śledzoną konwencją/gauge, a fizyczna treść downstream pozostaje projektowa (ray-level).
+26. Update (`2026-03-17`): wyeksportowano pierwszego świadka “obliczalności fizycznej” z **projektowo domkniętego** selektora: sonda liczy kwadratowy
+    **proxy spektrum masy** z wyeksportowanych promieni domknięcia projektowego (`F672`) oraz wyeksportowanej diagonal/local instancji hessianu sektora Psi `H_psi` (`F459`)
+    w sposób znakowo-gauge-niezmienniczy (`P694`). To jest wyłącznie test obliczalności operacyjnej; nie promuje żadnej identyfikacji Standard Model, żadnego fizycznego datumu znaku,
+    żadnego kernel-alone/global rozładowania `QW-2191` ani domknięcia ToE.
 
 ### 1.2 Czego nadal brakuje (bez false pass)
 
