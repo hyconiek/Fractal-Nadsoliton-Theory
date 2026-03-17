@@ -656,6 +656,35 @@ def main() -> None:
                 "tracked by the first source-seed construction target probe (P119). Professorial routing decision: P633."
             )
 
+    # Post-T172 frontier override:
+    # P438 can still recommend "T172" as a conservative label even after the repo already exported the T172 closure objects
+    # and packages the remaining strict-core boundary at theorem level (N679). In that case, the next honest target spec
+    # is explicitly post-T172 (T173), keeping the no-false-pass distinction between exported closure observables and true
+    # strict-core selector closure / kernel-alone global QW-2191 discharge.
+    if (
+        recommended_next == "T172"
+        and T173_TARGET_SPEC.exists()
+        and N679_T172_FRONTIER_BOUNDARY_SUMMARY.exists()
+    ):
+        try:
+            n679 = load_json(N679_T172_FRONTIER_BOUNDARY_SUMMARY)
+            theorem_result = n679.get("theorem_result") or {}
+            if (
+                bool(theorem_result.get("discharged"))
+                and bool(theorem_result.get("t172_projective_closure_discharged"))
+                and theorem_result.get("strict_core_selector_closure") is False
+                and theorem_result.get("QW2191_kernel_alone_discharge") is False
+            ):
+                recommended_next = "T173"
+                recommendation_reason = (
+                    "T172 closure objects are exported and the remaining strict-core frontier is now packaged at theorem level "
+                    f"without false pass (N679: {N679_T172_FRONTIER_BOUNDARY_SUMMARY.relative_to(REPO)}): strict-core selector closure "
+                    "and kernel-alone global QW-2191 discharge remain explicitly open. "
+                    f"Next honest strict target is the explicit post-T172 target spec T173 ({T173_TARGET_SPEC.relative_to(REPO)})."
+                )
+        except Exception:
+            pass
+
     if recommended_next == "H37":
         if N518_THEOREM.exists():
             note = (
