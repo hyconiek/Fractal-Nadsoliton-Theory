@@ -19,6 +19,7 @@ IN_N680 = GENERATED / "n680_current_strict_t173_projective_strict_core_selector_
 IN_N681 = GENERATED / "n681_current_strict_t173_directed_output_sign_lift_obstruction_boundary_theorem_summary.json"
 IN_N686 = GENERATED / "n686_current_strict_t173_global_axis_only_transition_edge_sign_flip_boundary_theorem_summary.json"
 IN_N687 = GENERATED / "n687_current_strict_t173_global_edge_sign_coherence_obstruction_boundary_theorem_summary.json"
+IN_P711 = GENERATED / "p711_current_strict_t173_previous_methodology_survival_and_global_gap_audit_probe_summary.json"
 
 # Convention-layer continuations (still below physical sign datum).
 IN_N688 = GENERATED / "n688_current_strict_t174_global_oriented_transition_edge_sign_lift_discharge_theorem_summary.json"
@@ -55,6 +56,7 @@ def main() -> None:
         "N681": IN_N681,
         "N686": IN_N686,
         "N687": IN_N687,
+        "P711": IN_P711,
     }
     missing_core = [str(p.relative_to(REPO)) for p in core.values() if not p.exists()]
     if missing_core:
@@ -75,6 +77,7 @@ def main() -> None:
     n681 = load_json(IN_N681)
     n686 = load_json(IN_N686)
     n687 = load_json(IN_N687)
+    p711 = load_json(IN_P711)
 
     n688 = load_json(IN_N688) if IN_N688.exists() else None
     n690 = load_json(IN_N690) if IN_N690.exists() else None
@@ -144,6 +147,18 @@ def main() -> None:
         False,
         "No per-chart Z2 relift solves full-edge sign coherence under fixed axis-only transitions (N687).",
     )
+    add_check(
+        "previous_methodology_local_survival_audited",
+        bool(p711.get("previous_methodology_contains_reusable_strict_ingredients")),
+        True,
+        "The previous sigma_int/topological methodology still contributes reusable strict ingredients (P711).",
+    )
+    add_check(
+        "previous_methodology_not_global_t173_discharge",
+        bool(p711.get("previous_methodology_suffices_for_global_t173_discharge")),
+        False,
+        "That surviving previous methodology is still insufficient for a full global T173 discharge (P711).",
+    )
 
     # Convention-layer continuations (optional but expected on Release 7 state).
     if IN_N688.exists():
@@ -200,6 +215,7 @@ def main() -> None:
             "N681": str(IN_N681.relative_to(REPO)),
             "N686": str(IN_N686.relative_to(REPO)),
             "N687": str(IN_N687.relative_to(REPO)),
+            "P711": str(IN_P711.relative_to(REPO)),
             "N688": str(IN_N688.relative_to(REPO)) if IN_N688.exists() else None,
             "N690": str(IN_N690.relative_to(REPO)) if IN_N690.exists() else None,
             "N691": str(IN_N691.relative_to(REPO)) if IN_N691.exists() else None,
@@ -217,6 +233,12 @@ def main() -> None:
             "directed_output_sign_lift_determined_in_strict_core": bool(n681_tr.get("directed_output_sign_lift_determined_in_strict_core")),
             "global_edge_sign_coherence_solvable_by_chart_sign_relift_under_axis_only_transitions": bool(
                 n687_tr.get("global_edge_sign_coherence_solvable_by_chart_sign_relift")
+            ),
+            "previous_methodology_contains_reusable_strict_ingredients": bool(
+                p711.get("previous_methodology_contains_reusable_strict_ingredients")
+            ),
+            "previous_methodology_suffices_for_global_t173_discharge": bool(
+                p711.get("previous_methodology_suffices_for_global_t173_discharge")
             ),
             "convention_layer_oriented_edge_sign_lift_exported": bool(n688_tr.get("oriented_edge_sign_lift_exported") or n691_tr.get("oriented_edge_sign_lift_exported")),
             "convention_layer_sign_fixed_directed_representative_exported": bool(n690_tr.get("sign_fixed_directed_representative_exported")),
@@ -239,6 +261,12 @@ def main() -> None:
         "strict_core_selector_closure_projective": bool(n680_tr.get("strict_core_selector_closure")),
         "QW2191_kernel_alone_discharge": False,
         "directed_sign_sensitive_physical_orientation_in_strict_core": False,
+        "previous_methodology_contains_reusable_strict_ingredients": bool(
+            p711.get("previous_methodology_contains_reusable_strict_ingredients")
+        ),
+        "previous_methodology_suffices_for_global_t173_discharge": bool(
+            p711.get("previous_methodology_suffices_for_global_t173_discharge")
+        ),
         "convention_layer_sign_tools_exported": {
             "T174_oriented_edge_sign_lift": bool(n688_tr.get("oriented_edge_sign_lift_exported") or n691_tr.get("oriented_edge_sign_lift_exported")),
             "T175_chart_sign_fix": bool(n690_tr.get("sign_fixed_directed_representative_exported")),
@@ -253,4 +281,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

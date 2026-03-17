@@ -55,6 +55,7 @@ Already exported on the current repo state (Release 6.5.x):
 - A scope-limited “mass proxy meaning” definition theorem is frozen (`N703`): `P694/P696` numbers are treated as quadratic coefficients of the exported `H_psi` instantiation, without any physical-unit or SM identification claim.
 - A strict basis-invariant “mass observable” object is exported (`F704`): the eigenvalue spectrum of the diagonal/local `H_psi` (dimensionless proxy only; no physical-unit claim).
 - Residual sign `u_m→-u_m` is audited as gauge-irrelevant for the Release‑7 OS observables actually used downstream (quadratic proxy layer `P694/P696` and basis-invariant `F704`): `P709`, packaged as `N706` (no directed physical sign datum claim).
+- The previous `sigma_int`/topological methodology is now audited explicitly for `T173`: `P711`, packaged as `N707`, confirms that it survives as a strict **local** ingredient class (strict bridge discharge in declared `R1` scope), but does **not** suffice for a global directed-sign / kernel-alone `QW-2191` discharge on the full `C_v1` atlas.
 - Non-strict: Standard Model host-matching harnesses exist (`P702` for the selector-aligned channel proxy; `P704` for the basis-invariant eigen-spectrum). They are frozen as a two-part non-strict layer:
   - dataset (targets only): `fundamental_action_reconstruction/external_data/sm_mass_targets_v1.json`,
   - policy (assignment + allowed DOF + optional thresholds): `fundamental_action_reconstruction/external_data/sm_host_matching_policy_v1.json`.
@@ -111,6 +112,7 @@ Już na obecnym stanie repo (Release 6.5.x):
 - Repo zamraża scope‑limited twierdzenie o “znaczeniu mass proxy” (`N703`): liczby z `P694/P696` są traktowane jako współczynniki kwadratowe wyeksportowanej instancji `H_psi`, bez claimu o jednostkach fizycznych ani o identyfikacji SM.
 - Repo eksportuje strict bazowo-niezmienniczy obiekt “mass observable” (`F704`): spektrum wartości własnych diagonal/local `H_psi` (proxy bez jednostek; bez claimu o kalibracji fizycznej).
 - Residual sign `u_m→-u_m` jest zbadany jako gauge‑irrelewantny dla OS‑owych obserwabli używanych downstream (warstwa proxy `P694/P696` i bazowo‑niezmiennicze `F704`): `P709`, opakowane jako `N706` (bez claimu directed fizycznego znaku).
+- Poprzednia metodologia `sigma_int` / topologiczna jest teraz jawnie przeaudytowana pod `T173`: `P711`, opakowane jako `N707`, potwierdza, ze przezywa jako **lokalna** klasa strict-ingredientow (strict bridge discharge w deklarowanym zakresie `R1`), ale nadal **nie** wystarcza do globalnego directed-sign / kernel-alone discharge `QW-2191` na pelnym atlasie `C_v1`.
 - Non-strict: istnieją harnessy host-matchingu Standard Model (`P702` dla selector-aligned channel proxy; `P704` dla bazowo-niezmienniczego eigen-spectrum). Warstwa non-strict jest teraz jawnie zamrożona jako dwa osobne obiekty:
   - dataset (same targety): `fundamental_action_reconstruction/external_data/sm_mass_targets_v1.json`,
   - policy (przypisanie + dozwolone DOF + opcjonalne progi): `fundamental_action_reconstruction/external_data/sm_host_matching_policy_v1.json`.

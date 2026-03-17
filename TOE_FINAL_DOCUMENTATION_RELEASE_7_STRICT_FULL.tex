@@ -126,13 +126,16 @@ unless such claims are explicitly exported at theorem level in the repo and are 
   \item \textbf{Build smoke probe (PDF + strict dashboards):} \texttt{P707} (\verb|fundamental_action_reconstruction/p707_current_release_7_build_and_closure_smoke_probe.py|)
   \item \textbf{Strict OS closure dashboard:} \texttt{P706} (\verb|fundamental_action_reconstruction/p706_current_release_7_strict_projective_operational_toe_os_closure_dashboard_probe.py|)
   \item \textbf{Strict \texttt{T173} frontier dashboard:} \texttt{P708} (\verb|fundamental_action_reconstruction/p708_current_strict_t173_frontier_dashboard_probe.py|)
+  \item \textbf{Previous-methodology survival audit:} \texttt{P711} (\verb|fundamental_action_reconstruction/p711_current_strict_t173_previous_methodology_survival_and_global_gap_audit_probe.py|)
 \end{itemize}
 
 To reproduce the PDF and verify the current Release-7 strict dashboard statuses:
 \begin{lstlisting}
 git rev-parse HEAD
 python3 fundamental_action_reconstruction/p707_current_release_7_build_and_closure_smoke_probe.py
+python3 fundamental_action_reconstruction/p711_current_strict_t173_previous_methodology_survival_and_global_gap_audit_probe.py
 cat fundamental_action_reconstruction/generated/p707_current_release_7_build_and_closure_smoke_probe_summary.json
+cat fundamental_action_reconstruction/generated/p711_current_strict_t173_previous_methodology_survival_and_global_gap_audit_probe_summary.json
 cat fundamental_action_reconstruction/generated/p706_current_release_7_strict_projective_operational_toe_os_closure_dashboard_probe_summary.json
 cat fundamental_action_reconstruction/generated/p708_current_strict_t173_frontier_dashboard_probe_summary.json
 \end{lstlisting}
@@ -1335,6 +1338,12 @@ The next honest strict move under \texttt{T173} is therefore one of:
 
 For option (b), Release 7 now exports an explicit machine audit: \texttt{P709} enumerates all $2^5$ residual sign patterns on $\{\mathrm{pair1},\dots,\mathrm{pair5}\}$ and verifies that the concrete OS numeric outputs used downstream (quadratic proxy layer \texttt{P694}/\texttt{P696} and the basis-invariant mass observable \texttt{F704}) are unchanged (within tolerance). The corresponding theorem-level package is \texttt{N706}.
 
+The older methodology is also now audited directly rather than guessed at. The new audit \texttt{P711} (packaged by
+\texttt{N707}) shows the strongest honest reading: the \texttt{sigma\_int}/topological lane survives as a genuine strict local
+ingredient class, reaching bridge discharge in declared \texttt{R1} scope, but it still does not provide the missing
+\emph{global} chartwise sign-coherence provider on the full \texttt{C\_v1} atlas. So it is a clue and a reusable ingredient,
+not yet a full \texttt{T173} discharge.
+
 \subsection*{Priority 2 (explicitly non-strict policy): physical units (proxy $\to$ GeV)}
 
 Any unit assignment and any comparison to external experimental data must remain non-strict unless a strict unit map is derived.
@@ -1378,6 +1387,7 @@ The nearest falsifiable layer consistent with current strict scope is the basis-
   \item Operational ToE closure statement: \texttt{N701}.
   \item Quadratic mass-proxy meaning definition: \texttt{N703}.
   \item Residual-sign gauge irrelevance audit (Release-7 OS scope): \texttt{P709}, packaged by \texttt{N706}.
+  \item Previous-methodology survival/global-gap audit for \texttt{T173}: \texttt{P711}, packaged by \texttt{N707}.
   \item Non-strict host matching harnesses (external-data dependent): \texttt{P702}, \texttt{P704}.
   \item Release-7 strict projective OS closure dashboard: \texttt{P706}.
 \end{itemize}
