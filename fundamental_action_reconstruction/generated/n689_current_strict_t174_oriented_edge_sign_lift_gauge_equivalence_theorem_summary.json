@@ -1,0 +1,49 @@
+{
+  "step": "N689",
+  "status": "N689_DERIVABLE_CURRENT_STRICT_T174_ORIENTED_EDGE_SIGN_LIFT_GAUGE_EQUIVALENCE_THEOREM_NO_FALSE_PASS",
+  "scope": "current_strict_t174_convention_layer_only",
+  "checks": [
+    {
+      "id": "f688_export_passed",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "The oriented edge sign-lift export packet ran and exported a convention-layer sign-lift object (F688)."
+    },
+    {
+      "id": "p689_audit_passed",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "The gauge-equivalence audit probe ran and passed (P689)."
+    },
+    {
+      "id": "patterns_gauge_equivalent",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "There exists a chart-level Z2 0-cochain t such that s^(B) = t*s^(A)*t on every overlap edge (P689)."
+    }
+  ],
+  "blocking_mismatches": [],
+  "theorem_result": {
+    "discharged": true,
+    "oriented_edge_sign_lift_gauge_equivalence_across_directed_representatives": true,
+    "directed_sign_sensitive_physical_orientation_in_strict_core": false,
+    "AutZ12_invariant_sign_canonicity": false,
+    "QW2191_kernel_alone_discharge": false,
+    "ToE_closure": false,
+    "evidence": {
+      "F688": "fundamental_action_reconstruction/generated/f688_current_strict_t174_global_oriented_transition_edge_sign_lift_export_packet_summary.json",
+      "P689": "fundamental_action_reconstruction/generated/p689_current_strict_t174_oriented_edge_sign_lift_gauge_equivalence_across_directed_representatives_audit_probe_summary.json"
+    },
+    "note": "Gauge-equivalence confirms the oriented edge sign-lift is a convention-layer datum, not a strict physical sign/orientation datum."
+  },
+  "hard_limits": [
+    "no_kernel_alone_global_QW2191_discharge",
+    "no_AutZ12_invariant_sign_canonicity",
+    "no_directed_sign_sensitive_physical_orientation_claim",
+    "no_ToE_closure"
+  ],
+  "no_false_pass": true
+}

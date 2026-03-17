@@ -1,0 +1,201 @@
+{
+  "stage": "P689",
+  "as_of": "2026-03-17",
+  "generated_utc": "2026-03-17T12:49:45.851327+00:00",
+  "goal": "audit_that_the_T174_oriented_edge_sign_lift_pattern_depends_on_directed_representative_only_by_chart_level_Z2_gauge__no_false_pass",
+  "inputs": {
+    "f688_oriented_edge_sign_lift_ref": "fundamental_action_reconstruction/generated/selector_transition_global_c_v1_oriented_mod_2pi_edge_sign_lift_from_w_break_rooted_directed_state_strict_convention_v1.json",
+    "base_transition_object_ref": "fundamental_action_reconstruction/generated/selector_transition_global_c_v1_strict_v1.json",
+    "premise_based_directed_state_ref": "fundamental_action_reconstruction/generated/selector_state_global_c_v1_directed_strict_v1.json"
+  },
+  "status": "PASS_ORIENTED_EDGE_SIGN_LIFT_PATTERNS_GAUGE_EQUIVALENT_ACROSS_DIRECTED_REPRESENTATIVES",
+  "tolerances": {
+    "tol_match_max_abs_diff": 1e-09
+  },
+  "pattern_A_from_F688": {
+    "edge_count": 10,
+    "s_a_by_edge": {
+      "pair1_to_pair2": 1,
+      "pair2_to_pair3": 1,
+      "pair1_to_pair3": 1,
+      "pair3_to_pair4": 1,
+      "pair4_to_pair5": -1,
+      "pair2_to_pair4": -1,
+      "pair3_to_pair5": -1,
+      "pair1_to_pair4": 1,
+      "pair1_to_pair5": 1,
+      "pair2_to_pair5": -1
+    },
+    "errors": []
+  },
+  "pattern_B_induced_by_premise_based_directed_state": {
+    "edge_count": 10,
+    "s_b_by_edge": {
+      "pair1_to_pair2": 1,
+      "pair1_to_pair3": 1,
+      "pair1_to_pair4": -1,
+      "pair1_to_pair5": -1,
+      "pair2_to_pair3": 1,
+      "pair2_to_pair4": 1,
+      "pair2_to_pair5": 1,
+      "pair3_to_pair4": -1,
+      "pair3_to_pair5": 1,
+      "pair4_to_pair5": -1
+    },
+    "edge_errors": [],
+    "bad_edges": [],
+    "edges": {
+      "pair1_to_pair2": {
+        "edge_id": "pair1_to_pair2",
+        "src": "pair1",
+        "dst": "pair2",
+        "base_operator_ref": "fundamental_action_reconstruction/generated/o12_pair1_pair2_selector_chart_transport_operator_strict_derived_from_sigma_int_alpha12_v1.json",
+        "base_operator_matrix_key": "O12",
+        "s_b_oriented_sign_on_operator": 1,
+        "max_abs_diff_to_uj": 9.159339953157541e-16,
+        "max_abs_diff_to_uj_without_sign": 9.159339953157541e-16,
+        "max_abs_diff_to_minus_uj_without_sign": 0.8164965809277263,
+        "edge_ok": true
+      },
+      "pair1_to_pair3": {
+        "edge_id": "pair1_to_pair3",
+        "src": "pair1",
+        "dst": "pair3",
+        "base_operator_ref": "fundamental_action_reconstruction/generated/o13_pair1_pair3_selector_chart_transport_operator_axis_only_alpha13_mod_pi_strict_core_v1.json",
+        "base_operator_matrix_key": "O13",
+        "s_b_oriented_sign_on_operator": 1,
+        "max_abs_diff_to_uj": 1.4849232954361469e-15,
+        "max_abs_diff_to_uj_without_sign": 1.4849232954361469e-15,
+        "max_abs_diff_to_minus_uj_without_sign": 0.8164965809277265,
+        "edge_ok": true
+      },
+      "pair1_to_pair4": {
+        "edge_id": "pair1_to_pair4",
+        "src": "pair1",
+        "dst": "pair4",
+        "base_operator_ref": "fundamental_action_reconstruction/generated/o14_pair1_pair4_selector_chart_transport_operator_axis_only_alpha14_mod_pi_strict_core_v1.json",
+        "base_operator_matrix_key": "O",
+        "s_b_oriented_sign_on_operator": -1,
+        "max_abs_diff_to_uj": 1.0547118733938987e-15,
+        "max_abs_diff_to_uj_without_sign": 0.8164965809277267,
+        "max_abs_diff_to_minus_uj_without_sign": 1.0547118733938987e-15,
+        "edge_ok": true
+      },
+      "pair1_to_pair5": {
+        "edge_id": "pair1_to_pair5",
+        "src": "pair1",
+        "dst": "pair5",
+        "base_operator_ref": "fundamental_action_reconstruction/generated/o15_pair1_pair5_selector_chart_transport_operator_axis_only_alpha15_mod_pi_strict_core_v1.json",
+        "base_operator_matrix_key": "O",
+        "s_b_oriented_sign_on_operator": -1,
+        "max_abs_diff_to_uj": 1e-15,
+        "max_abs_diff_to_uj_without_sign": 0.816496580927726,
+        "max_abs_diff_to_minus_uj_without_sign": 1e-15,
+        "edge_ok": true
+      },
+      "pair2_to_pair3": {
+        "edge_id": "pair2_to_pair3",
+        "src": "pair2",
+        "dst": "pair3",
+        "base_operator_ref": "fundamental_action_reconstruction/generated/o23_pair2_pair3_selector_chart_transport_operator_axis_only_alpha23_mod_pi_strict_core_v1.json",
+        "base_operator_matrix_key": "O23",
+        "s_b_oriented_sign_on_operator": 1,
+        "max_abs_diff_to_uj": 1.4779844015322396e-15,
+        "max_abs_diff_to_uj_without_sign": 1.4779844015322396e-15,
+        "max_abs_diff_to_minus_uj_without_sign": 0.8164965809277264,
+        "edge_ok": true
+      },
+      "pair2_to_pair4": {
+        "edge_id": "pair2_to_pair4",
+        "src": "pair2",
+        "dst": "pair4",
+        "base_operator_ref": "fundamental_action_reconstruction/generated/o24_pair2_pair4_selector_chart_transport_operator_axis_only_alpha24_mod_pi_strict_core_v1.json",
+        "base_operator_matrix_key": "O",
+        "s_b_oriented_sign_on_operator": 1,
+        "max_abs_diff_to_uj": 1.4988010832439613e-15,
+        "max_abs_diff_to_uj_without_sign": 1.4988010832439613e-15,
+        "max_abs_diff_to_minus_uj_without_sign": 0.816496580927726,
+        "edge_ok": true
+      },
+      "pair2_to_pair5": {
+        "edge_id": "pair2_to_pair5",
+        "src": "pair2",
+        "dst": "pair5",
+        "base_operator_ref": "fundamental_action_reconstruction/generated/o25_pair2_pair5_selector_chart_transport_operator_axis_only_alpha25_mod_pi_strict_core_v1.json",
+        "base_operator_matrix_key": "O",
+        "s_b_oriented_sign_on_operator": 1,
+        "max_abs_diff_to_uj": 9.43689570931383e-16,
+        "max_abs_diff_to_uj_without_sign": 9.43689570931383e-16,
+        "max_abs_diff_to_minus_uj_without_sign": 0.816496580927726,
+        "edge_ok": true
+      },
+      "pair3_to_pair4": {
+        "edge_id": "pair3_to_pair4",
+        "src": "pair3",
+        "dst": "pair4",
+        "base_operator_ref": "fundamental_action_reconstruction/generated/o34_pair3_pair4_selector_chart_transport_operator_axis_only_alpha34_mod_pi_strict_core_v1.json",
+        "base_operator_matrix_key": "O",
+        "s_b_oriented_sign_on_operator": -1,
+        "max_abs_diff_to_uj": 9.159339953157541e-16,
+        "max_abs_diff_to_uj_without_sign": 0.816496580927726,
+        "max_abs_diff_to_minus_uj_without_sign": 9.159339953157541e-16,
+        "edge_ok": true
+      },
+      "pair3_to_pair5": {
+        "edge_id": "pair3_to_pair5",
+        "src": "pair3",
+        "dst": "pair5",
+        "base_operator_ref": "fundamental_action_reconstruction/generated/o35_pair3_pair5_selector_chart_transport_operator_axis_only_alpha35_mod_pi_strict_core_v1.json",
+        "base_operator_matrix_key": "O",
+        "s_b_oriented_sign_on_operator": 1,
+        "max_abs_diff_to_uj": 9.159339953157541e-16,
+        "max_abs_diff_to_uj_without_sign": 9.159339953157541e-16,
+        "max_abs_diff_to_minus_uj_without_sign": 0.8164965809277269,
+        "edge_ok": true
+      },
+      "pair4_to_pair5": {
+        "edge_id": "pair4_to_pair5",
+        "src": "pair4",
+        "dst": "pair5",
+        "base_operator_ref": "fundamental_action_reconstruction/generated/o45_pair4_pair5_selector_chart_transport_operator_axis_only_alpha45_mod_pi_strict_core_v1.json",
+        "base_operator_matrix_key": "O",
+        "s_b_oriented_sign_on_operator": -1,
+        "max_abs_diff_to_uj": 1.2871648191747909e-15,
+        "max_abs_diff_to_uj_without_sign": 0.8164965809277267,
+        "max_abs_diff_to_minus_uj_without_sign": 1.2871648191747909e-15,
+        "edge_ok": true
+      }
+    },
+    "all_edges_ok": true
+  },
+  "gauge_equivalence_check": {
+    "meaning": "Check if s_b(e) = t(src)*s_a(e)*t(dst) for some chart-level t \u2208 {\u00b11}^charts.",
+    "gauge_equivalent": true,
+    "t_by_pair": {
+      "pair1": 1,
+      "pair2": 1,
+      "pair3": 1,
+      "pair4": -1,
+      "pair5": -1
+    },
+    "disconnected_nodes": [],
+    "mismatches": [],
+    "edges_where_patterns_differ": [
+      "pair1_to_pair4",
+      "pair1_to_pair5",
+      "pair2_to_pair4",
+      "pair2_to_pair5",
+      "pair3_to_pair4",
+      "pair3_to_pair5"
+    ]
+  },
+  "counts_as_strict_physical_orientation_datum": false,
+  "hard_limits": [
+    "Gauge/convention audit only; does not claim a strict-core physical sign datum.",
+    "Does not claim kernel-alone/global QW-2191 discharge.",
+    "Does not claim Aut(Z_12)-invariant sign canonicity (N462).",
+    "Does not promote section-level/vector-level coherence into operator-level groupoid identities (N512 boundary).",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}

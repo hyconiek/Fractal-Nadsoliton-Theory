@@ -295,6 +295,9 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
 20. Update (`2026-03-17`): the repo now exports an explicit convention-layer **global oriented transition edge sign-lift** object on `C_v1` (`F688`): per-edge signs `s_ij∈{±1}` defining
     `O_ij^(oriented) := s_ij * O_ij^(axis-only)` so that the exported `w_break`-rooted directed representative transports without sign flips on all 10 overlap edges; audited by `P688` and packaged by `N688`.
     This resolves the `P687/N687` obstruction only by introducing explicit oriented edge-lift data; it does **not** claim a strict-core physical sign datum and does **not** imply kernel-alone/global `QW-2191` discharge.
+21. Update (`2026-03-17`): the oriented edge sign-lift pattern is not canonical. `P689` audits that the `F688` sign-lift pattern and the sign-lift pattern induced by the exported premise-based directed representative
+    `SelectorState_global_C_v1_directed_strict_v1` are gauge-equivalent by a chart-level `Z2` 0‑cochain (`u_i -> t_i u_i`), and `N689` packages this as a boundary-safe theorem. This further reinforces that `T174`
+    lives in a tracked convention layer and does **not** upgrade any directed sign into strict-core physics.
 
 ### 1.2 What is still missing (no false pass)
 
@@ -639,6 +642,9 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
 20. Update (`2026-03-17`): repo eksportuje teraz jawną konwencyjną warstwę **globalnego oriented edge sign‑liftu** przejść na `C_v1` (`F688`): per‑edge znaki `s_ij∈{±1}` definiujące
     `O_ij^(oriented) := s_ij * O_ij^(axis-only)` tak, aby wyeksportowany kierunkowy reprezentant zakotwiczony w `w_break` transportował się bez flipów znaku na wszystkich 10 krawędziach overlapu; audyt `P688`, opakowane przez `N688`.
     To rozwiązuje obstrukcję `P687/N687` tylko przez jawne dodanie danych oriented edge‑lift; nie promuje żadnego fizycznego datumu znaku do strict core i nie implikuje kernel-alone/global rozładowania `QW-2191`.
+21. Update (`2026-03-17`): wzorzec oriented edge sign‑liftu nie jest kanoniczny. `P689` audytuje, że wzorzec sign‑liftu z `F688` oraz wzorzec sign‑liftu indukowany przez wyeksportowany premise-based
+    kierunkowy reprezentant `SelectorState_global_C_v1_directed_strict_v1` są gauge-equivalent przez chart-level `Z2` 0‑cochain (`u_i -> t_i u_i`), a `N689` pakuje to jako twierdzenie boundary-safe. To dodatkowo
+    wzmacnia, że `T174` żyje w śledzonej warstwie konwencji i **nie** promuje żadnego kierunkowego znaku do fizyki strict core.
 
 ### 1.2 Czego nadal brakuje (bez false pass)
 

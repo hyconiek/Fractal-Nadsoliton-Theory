@@ -1,7 +1,7 @@
 # H37: Sign-Distinction State Audit
 
 **Date:** 2026-03-17  
-**Status:** `PASS_PREMISE_BASED_DIRECTED_SIGN_DISTINCTION_EXPORTED__PLUS_W_BREAK_ROOTED_DIRECTED_CONVENTION_LIFT_EXPORTED__PLUS_GLOBAL_ORIENTED_EDGE_SIGN_LIFT_EXPORTED__NO_PHYSICAL_SIGN_DATUM`
+**Status:** `PASS_PREMISE_BASED_DIRECTED_SIGN_DISTINCTION_EXPORTED__PLUS_W_BREAK_ROOTED_DIRECTED_CONVENTION_LIFT_EXPORTED__PLUS_GLOBAL_ORIENTED_EDGE_SIGN_LIFT_EXPORTED__PLUS_GAUGE_EQUIVALENCE_AUDITED__NO_PHYSICAL_SIGN_DATUM`
 
 ## Goal
 
@@ -30,6 +30,8 @@ Check whether the current strict core contains any object that identifies `u` an
 - `F688`: exports an explicit **global oriented edge sign‑lift** object on `C_v1` in `strict_convention` scope: per-edge signs `s_ij∈{±1}` defining an oriented lift `O_ij^(oriented) := s_ij * O_ij^(axis-only)` such that the exported `w_break`‑rooted directed representative transports without sign flips on every edge.
 - `P688`: audits that under the `F688` oriented sign‑lift, the exported `w_break`‑rooted directed representative is full‑edge coherent: `(s_ij * O_ij) u_i ≈ u_j` for all 10 edges (no sign flips).
 - `N688`: packages `F688/P688` as a theorem-level discharge in the declared convention scope (no physical sign claim).
+- `P689`: audits that the `F688` oriented edge sign‑lift pattern is gauge-equivalent (chart-level `Z2` 0‑cochain) to the oriented edge sign‑lift pattern induced by the exported premise-based directed representative `SelectorState_global_C_v1_directed_strict_v1` (no physical sign claim).
+- `N689`: packages the `P689` gauge-equivalence result as a boundary-safe theorem: the oriented edge sign‑lift is a convention-layer datum and is not canonical “for free”.
 - `F684`: exports `SelectorState_global_C_v1_directed_rooted_transport_from_S_sel_int_w_break_strict_convention_v1` (directed vector representative section on `{pair1..pair5}` in an explicit convention scope; not a physical datum).
 - Extension lane note: `AX28/AX29` export an explicit sign-fixing observable on `pair1` and an explicit global oriented vector selector state object on `C_v1` in `strict_extension_only` scope; `P473` audits that this extension-lane oriented vector state is projector-consistent with the strict global projective selector state (`F470`), so it fixes only a sign-gauge representative and does not change strict core.
 
@@ -81,6 +83,10 @@ selecting per-edge signs `s_ij∈{±1}` so that the lifted oriented transport `(
 on every overlap edge. `P688` audits full-edge coherence (all 10 edges) and `N688` packages this as a theorem-level discharge in the declared `strict_convention` scope. This does
 **not** upgrade any sign choice into strict-core physics, does **not** claim `Aut(Z_12)`-invariant canonicity, does **not** promote to operator-level groupoid identities (`N512`),
 and does **not** imply any kernel-alone/global `QW-2191` discharge.
+
+Update (`2026-03-17`): the oriented edge sign‑lift pattern itself is not canonical. `P689` audits that changing the exported directed representative (from the `w_break`‑rooted
+convention representative to the premise-based directed representative) changes the induced edge sign‑lift pattern only by a chart-level `Z2` gauge relift `u_i -> t_i u_i`,
+and `N689` packages this as a boundary-safe theorem. This further reinforces that `T174` lives in a tracked convention layer and does not constitute a strict physical sign datum.
 
 Update (2026-03-16): after exporting an explicit premise-based fixing datum (`F473/N523`) and an explicit sign-sensitive observable + directed state (`F474/N524`),
 the strict core contains a directed sign lift *in the declared premise-based scope*.
