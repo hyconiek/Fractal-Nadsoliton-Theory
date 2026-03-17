@@ -12,6 +12,9 @@ P674_SUMMARY = (
     GENERATED
     / "p674_current_strict_global_directed_selector_closure_output_sign_mismatch_audit_probe_summary.json"
 )
+DIRECTED_CLOSURE_OBJECT = (
+    GENERATED / "selector_closure_global_c_v1_directed_strict_v1.json"
+)
 OUT = (
     GENERATED
     / "n675_current_strict_global_directed_selector_closure_obstruction_boundary_theorem_summary.json"
@@ -25,6 +28,7 @@ def load_json(path: Path) -> dict:
 def main() -> None:
     ok = False
     actual_status = None
+    directed_exported = bool(DIRECTED_CLOSURE_OBJECT.exists())
     if P674_SUMMARY.exists():
         try:
             p674 = load_json(P674_SUMMARY)
@@ -49,9 +53,9 @@ def main() -> None:
         "checks": checks,
         "theorem_result": {
             "discharged": ok,
-            "directed_global_closure_exported": False,
-            "directed_global_closure_obstructed_on_current_exports": ok,
-            "obstruction_type": "output_o_plus_sign_mismatch_across_charts_under_fixed_output_bases",
+            "directed_global_closure_exported": directed_exported,
+            "directed_global_closure_obstructed_without_explicit_sign_lift": ok,
+            "obstruction_type": "raw_output_o_plus_sign_mismatch_across_charts_under_fixed_output_bases (no explicit sign-lift)",
             "projective_closure_remains_available": True,
             "strict_core_selector_closure": False,
             "QW2191_kernel_alone_discharge": False,
@@ -59,7 +63,7 @@ def main() -> None:
         },
         "hard_limits": [
             "no_strict_core_selector_closure",
-            "no_directed_global_closure_object_export",
+            "directed_global_closure_requires_explicit_sign_lift_on_raw_outputs (P674 boundary)",
             "no_global_kernel_alone_QW2191_discharge",
             "no_operator_level_transition_groupoid_promotion (N512 boundary)",
             "no_ToE_closure",
@@ -73,4 +77,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

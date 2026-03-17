@@ -32,5 +32,4 @@ This theorem does **not** claim:
 - global kernel-alone `QW-2191` discharge,
 - ToE closure,
 - operator-level transition groupoid promotion beyond projector/section level (`N512` boundary),
-- any directed/sign-sensitive global closure object (`SelectorClosure_global_C_v1_directed_strict_v1`) unless exported separately.
-
+- any directed/vector-level global closure outcome in this theorem (directed closure is handled separately under an explicit sign-lift premise; see `F677/N677/N678`).
