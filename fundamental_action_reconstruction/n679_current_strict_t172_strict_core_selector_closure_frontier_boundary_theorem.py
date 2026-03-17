@@ -13,6 +13,7 @@ IN_N674 = GENERATED / "n674_current_strict_t172_projective_closure_discharge_the
 IN_N675 = GENERATED / "n675_current_strict_global_directed_selector_closure_obstruction_boundary_theorem_summary.json"
 IN_N678 = GENERATED / "n678_current_strict_t172_directed_closure_discharge_theorem_summary.json"
 IN_N676 = GENERATED / "n676_current_first_admissible_s_sel_int_source_object_discharge_theorem_summary.json"
+IN_N680 = GENERATED / "n680_current_strict_t173_projective_strict_core_selector_closure_discharge_theorem_summary.json"
 
 OUT = (
     GENERATED
@@ -25,7 +26,7 @@ def load_json(path: Path) -> dict[str, Any]:
 
 
 def main() -> None:
-    prereq = (IN_N674, IN_N675, IN_N678, IN_N676)
+    prereq = (IN_N674, IN_N675, IN_N678, IN_N676, IN_N680)
     missing = [str(p.relative_to(REPO)) for p in prereq if not p.exists()]
     if missing:
         summary = {
@@ -44,6 +45,7 @@ def main() -> None:
     n675 = load_json(IN_N675)
     n678 = load_json(IN_N678)
     n676 = load_json(IN_N676)
+    n680 = load_json(IN_N680)
 
     t172_projective_discharged = bool(
         n674.get("theorem_result", {}).get("discharged") is True
@@ -64,11 +66,11 @@ def main() -> None:
         is True
     )
 
-    strict_core_selector_closure_still_false = (
-        bool(n675.get("theorem_result", {}).get("strict_core_selector_closure"))
-        is False
-        and bool(n676.get("theorem_result", {}).get("strict_core_selector_closure"))
-        is False
+    strict_core_selector_closure_projective_discharged = bool(
+        n680.get("theorem_result", {}).get("discharged") is True
+        and bool(n680.get("theorem_result", {}).get("strict_core_selector_closure")) is True
+        and str(n680.get("theorem_result", {}).get("strict_core_selector_closure_scope") or "")
+        == "projective_ray_state"
     )
     kernel_alone_qw2191_discharge_still_false = (
         bool(n675.get("theorem_result", {}).get("QW2191_kernel_alone_discharge"))
@@ -103,10 +105,10 @@ def main() -> None:
             "meaning": "An admissible strict-core source object for S_sel_int is exported in the sense of the F34 source-object contract (N676).",
         },
         {
-            "id": "strict_core_selector_closure_still_unclaimed",
-            "actual": strict_core_selector_closure_still_false,
+            "id": "strict_core_selector_closure_projective_discharged",
+            "actual": strict_core_selector_closure_projective_discharged,
             "expected": True,
-            "meaning": "None of the above exports is promoted into a strict-core selector-closure PASS on the current repo state.",
+            "meaning": "Projective strict-core selector closure is now discharged post-T172 (N680).",
         },
         {
             "id": "kernel_alone_global_qw2191_discharge_still_unclaimed",
@@ -151,13 +153,16 @@ def main() -> None:
             "t172_directed_closure_discharged_premise_based": t172_directed_discharged,
             "directed_raw_outputs_obstructed_without_explicit_sign_lift": directed_raw_obstructed_without_sign_lift,
             "admissible_s_sel_int_source_object_exported_in_f34_sense": admissible_source_object_exported,
-            "strict_core_selector_closure": False,
+            "strict_core_selector_closure": bool(strict_core_selector_closure_projective_discharged),
+            "strict_core_selector_closure_scope": "projective_ray_state"
+            if strict_core_selector_closure_projective_discharged
+            else None,
             "QW2191_kernel_alone_discharge": False,
             "ToE_closure": False,
-            "remaining_open_branch": "strict_core_selector_closure_and_kernel_alone_global_QW2191_discharge_under_explicit_scope_discipline",
+            "remaining_open_branch": "kernel_alone_global_QW2191_discharge_and_any_directed_physical_orientation_datum",
         },
         "hard_limits": [
-            "no_strict_core_selector_closure",
+            "no_directed_sign_sensitive_physical_orientation_claim",
             "no_global_kernel_alone_QW2191_discharge",
             "no_ToE_closure",
         ],
@@ -170,4 +175,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

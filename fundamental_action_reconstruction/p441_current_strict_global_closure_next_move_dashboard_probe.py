@@ -577,17 +577,17 @@ def main() -> None:
                     recommended_next = "T173" if T173_TARGET_SPEC.exists() else "T172"
                     recommendation_reason = (
                         "T172 is now discharged in the projective (ray) closure scope (N674 packages F672/N672/N673): "
-                        "a global projective selector closure observable is exported on C_v1, while kernel-alone QW-2191 discharge and strict-core selector closure remain unclaimed. "
+                        "a global projective selector closure observable is exported on C_v1; projective strict-core selector closure is discharged (N680), while kernel-alone QW-2191 discharge remains unclaimed. "
                         "The strict-core internal selector-source lane has now advanced to an admissible strict-core source object for S_sel_int in the sense of the F34 source-object contract "
                         f"(N676: {N676_ADMISSIBLE_S_SEL_INT_SOURCE_OBJECT_SUMMARY.relative_to(REPO)}). "
-                        "Therefore the next honest strict bottleneck is now post-T172: strict-core selector closure / kernel-alone global QW-2191 discharge, "
-                        "with any directed/sign-sensitive promotion kept explicit and any cross-chart sign obstructions kept explicit (N675), "
+                        "Therefore the next honest strict bottleneck is now post-T172: kernel-alone/global QW-2191 discharge and any directed/sign-sensitive physical orientation datum in strict core, "
+                        "with any directed/sign-sensitive promotion kept explicit and any cross-chart sign obstructions kept explicit (N675 boundary discipline), "
                         f"packaged at theorem level by N679 ({N679_T172_FRONTIER_BOUNDARY_SUMMARY.relative_to(REPO) if N679_T172_FRONTIER_BOUNDARY_SUMMARY.exists() else 'missing N679 summary'})."
                     )
                     if t172_directed_discharged:
                         recommendation_reason += (
                             " Note: a directed closure object is now also exported in the declared premise-based scope "
-                            "(N678 packages F677/N677), but this remains below strict-core selector closure and does not imply any kernel-alone/global discharge."
+                            "(N678 packages F677/N677), but this remains below any directed/sign-sensitive physical orientation datum in strict core and does not imply any kernel-alone/global discharge."
                         )
                     if recommended_next == "T173":
                         recommendation_reason += (
@@ -605,13 +605,13 @@ def main() -> None:
                 recommendation_reason = (
                     "T172 is now discharged in the projective (ray) closure scope (N674 packages F672/N672/N673). "
                     "Next strict bottleneck shifts back to strict-only ToE-closure continuation tasks tracked by the existing-kernel-feedback -> explicit-chain factorization route (P11), "
-                    "with directed continuation kept explicit (P632) and without implying any strict-core selector closure."
+                    "with directed continuation kept explicit (P632) and without implying any kernel-alone/global QW-2191 discharge or ToE closure."
                 )
             else:
                 recommended_next = "P11"
                 recommendation_reason = (
                     "T172 is now discharged in the projective (ray) closure scope (N674 packages F672/N672/N673). "
-                    "Next strict bottleneck shifts back to strict-only ToE-closure continuation tasks tracked by P11, without implying any strict-core selector closure."
+                    "Next strict bottleneck shifts back to strict-only ToE-closure continuation tasks tracked by P11, without implying any kernel-alone/global QW-2191 discharge or ToE closure."
                 )
             if n674 is not None:
                 recommendation_reason += f" Evidence: {N674_T172_PROJECTIVE_DISCHARGE_SUMMARY.relative_to(REPO)}."
@@ -634,14 +634,15 @@ def main() -> None:
                 "on the current strict branch (P480: freeze P16; P631: freeze direct-formal residual-cancellation on T166 nonzero). "
                 "The genuinely-new strict-core internal selector source seed construction frontier has now advanced to an admissible strict-core source object for S_sel_int "
                 f"in the sense of the F34 source-object contract (N676: {N676_ADMISSIBLE_S_SEL_INT_SOURCE_OBJECT_SUMMARY.relative_to(REPO)}). "
-                "Therefore the next honest strict bottleneck is now post-T172: strict-core selector closure / kernel-alone global QW-2191 discharge, "
-                "with any directed/sign-sensitive promotion kept explicit and any cross-chart sign obstructions kept explicit (N675), "
+                "Therefore the next honest strict bottleneck is now post-T172: projective strict-core selector closure is discharged (N680), while "
+                "kernel-alone/global QW-2191 discharge remains explicitly unclaimed and any directed/sign-sensitive physical orientation datum remains out of strict core "
+                "unless lifted by an explicit premise (N675 boundary discipline), "
                 f"packaged at theorem level by N679 ({N679_T172_FRONTIER_BOUNDARY_SUMMARY.relative_to(REPO) if N679_T172_FRONTIER_BOUNDARY_SUMMARY.exists() else 'missing N679 summary'})."
             )
             if t172_directed_discharged:
                 recommendation_reason += (
                     " Note: a directed closure object is now also exported in the declared premise-based scope "
-                    "(N678 packages F677/N677), but this remains below strict-core selector closure and does not imply any kernel-alone/global discharge."
+                    "(N678 packages F677/N677), but this remains below any directed/sign-sensitive physical orientation datum in strict core and does not imply any kernel-alone/global discharge."
                 )
             if recommended_next == "T173":
                 recommendation_reason += (
@@ -657,10 +658,9 @@ def main() -> None:
             )
 
     # Post-T172 frontier override:
-    # P438 can still recommend "T172" as a conservative label even after the repo already exported the T172 closure objects
-    # and packages the remaining strict-core boundary at theorem level (N679). In that case, the next honest target spec
-    # is explicitly post-T172 (T173), keeping the no-false-pass distinction between exported closure observables and true
-    # strict-core selector closure / kernel-alone global QW-2191 discharge.
+    # P438 can still recommend "T172" as a conservative label even after the repo is already post-T172 at theorem level (N679),
+    # i.e. the global closure objects exist and the strict-core continuation has advanced. In that case, the next honest label
+    # is explicitly post-T172 (T173), keeping all scope/sign discipline explicit and keeping kernel-alone/global QW-2191 discharge unclaimed.
     if (
         recommended_next == "T172"
         and T173_TARGET_SPEC.exists()
@@ -672,16 +672,23 @@ def main() -> None:
             if (
                 bool(theorem_result.get("discharged"))
                 and bool(theorem_result.get("t172_projective_closure_discharged"))
-                and theorem_result.get("strict_core_selector_closure") is False
                 and theorem_result.get("QW2191_kernel_alone_discharge") is False
             ):
                 recommended_next = "T173"
-                recommendation_reason = (
-                    "T172 closure objects are exported and the remaining strict-core frontier is now packaged at theorem level "
-                    f"without false pass (N679: {N679_T172_FRONTIER_BOUNDARY_SUMMARY.relative_to(REPO)}): strict-core selector closure "
-                    "and kernel-alone global QW-2191 discharge remain explicitly open. "
-                    f"Next honest strict target is the explicit post-T172 target spec T173 ({T173_TARGET_SPEC.relative_to(REPO)})."
-                )
+                if theorem_result.get("strict_core_selector_closure") is True:
+                    recommendation_reason = (
+                        "Projective strict-core selector closure is now discharged and the remaining frontier is packaged at theorem level "
+                        f"without false pass (N679: {N679_T172_FRONTIER_BOUNDARY_SUMMARY.relative_to(REPO)}): kernel-alone/global QW-2191 discharge remains explicitly open, "
+                        "and any directed/sign-sensitive physical orientation datum remains out of strict core unless lifted by an explicit premise. "
+                        f"Next honest strict target label is the explicit post-T172 target spec T173 ({T173_TARGET_SPEC.relative_to(REPO)})."
+                    )
+                else:
+                    recommendation_reason = (
+                        "T172 closure objects are exported and the remaining strict-core frontier is packaged at theorem level "
+                        f"without false pass (N679: {N679_T172_FRONTIER_BOUNDARY_SUMMARY.relative_to(REPO)}): strict-core selector closure "
+                        "and kernel-alone/global QW-2191 discharge remain explicitly open. "
+                        f"Next honest strict target label is the explicit post-T172 target spec T173 ({T173_TARGET_SPEC.relative_to(REPO)})."
+                    )
         except Exception:
             pass
 

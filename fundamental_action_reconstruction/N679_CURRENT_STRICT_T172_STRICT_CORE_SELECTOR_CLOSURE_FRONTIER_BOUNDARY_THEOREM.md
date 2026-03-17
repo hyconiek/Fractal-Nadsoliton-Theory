@@ -1,6 +1,6 @@
 # N679 Current Strict `T172` Strict-Core Selector Closure Frontier Boundary Theorem
 
-Status: `N679_DERIVABLE_CURRENT_STRICT_T172_STRICT_CORE_SELECTOR_CLOSURE_FRONTIER_BOUNDARY_THEOREM_NO_FALSE_PASS`  
+Status: `N679_DISCHARGED_CURRENT_STRICT_T172_STRICT_CORE_SELECTOR_CLOSURE_FRONTIER_BOUNDARY_THEOREM_NO_FALSE_PASS`  
 As of: `2026-03-17`
 
 ## Goal
@@ -26,14 +26,17 @@ On the current repo state:
    - the **directed** premise-based scope (`N678`),
 2. the strict-core internal selector-source lane has progressed to an admissible exported strict-core source object
    for the `S_sel_int` step in the sense of the minimal `F34` source-object contract (`N676`),
-3. nevertheless, the repo still does **not** promote these exports into:
-   - **strict-core selector closure**, nor
-   - **kernel-alone/global `QW-2191` discharge**.
+3. the repo now discharges **projective** strict-core selector closure as a theorem-level statement (`N680`),
+   without any directed/sign-sensitive physical-orientation datum claim and without any kernel-alone/global `QW-2191` discharge claim,
+4. nevertheless, the repo still does **not** discharge:
+   - **kernel-alone/global `QW-2191` discharge**, and
+   - any directed/sign-sensitive physical orientation datum in strict core beyond premise-tracked sign lift.
 
-Therefore the remaining honest `T172` frontier is precisely:
+Therefore the remaining honest post-`T172` frontier is precisely:
 
 ```text
-strict-core selector closure / kernel-alone global QW-2191 discharge,
+kernel-alone/global QW-2191 discharge
+and any directed/sign-sensitive physical orientation datum in strict core,
 with residual sign and any fixing-datum dependence kept explicit (no false pass).
 ```
 
@@ -41,7 +44,6 @@ with residual sign and any fixing-datum dependence kept explicit (no false pass)
 
 This theorem does **not** claim:
 
-- strict-core selector closure,
+- any directed/sign-sensitive physical orientation datum in strict core,
 - kernel-alone/global `QW-2191` discharge,
 - ToE closure.
-
