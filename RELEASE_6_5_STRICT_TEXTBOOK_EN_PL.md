@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.50  
+**Version:** 6.5.51  
 **Date:** 2026-03-17  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -11,8 +11,11 @@
 - Update (`2026-03-17`): the repo exports a global **projective** selector closure object on `C_v1`,
   `SelectorClosure_global_C_v1_projective_strict_v1` (`F672`, audited by `P673`, packaged by `N672`), and exports a theorem-level
   `QW-2191` projective-closure resolution statement clarifying “bypass vs kernel-alone discharge” (`N673`), and packages the corresponding
-  `T172` projective discharge (`N674`). These exports do **not**
-  upgrade to strict-core selector closure or ToE closure.
+  `T172` projective discharge (`N674`). In addition, the repo exports a global **directed** selector closure object on `C_v1`,
+  `SelectorClosure_global_C_v1_directed_strict_v1` (`F677`, audited by `P677`, packaged by `N677`) and packages the corresponding
+  `T172` directed-scope discharge (`N678`), with the sign-lift / section choice kept explicit. Raw directed outputs remain obstructed
+  without an explicit sign lift (boundary `N675`). The remaining strict frontier beyond these closure objects (strict-core selector closure
+  and kernel-alone/global `QW-2191` discharge) is packaged as a boundary (`N679`). None of these exports upgrade to strict-core selector closure or ToE closure.
 - Update (`2026-03-15`): the canonical **diagonal/local lane** on the strict `n=12` carrier now exports a strict-derived
   **numeric value-instantiation** deciding the diagonal mode‑2 defect nonzero condition (`T166`) on `pair1`, and in fact
   decides nonzero defects on **all** Fourier-degenerate pairs `pair_m (m=1..5)` (`N482`, `N485`, `N487`).
@@ -266,6 +269,8 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
 11. Update (`2026-03-17`): in the declared premise-based directed scope, the repo exports one explicit global **directed selector closure object** on `C_v1`,
     `SelectorClosure_global_C_v1_directed_strict_v1` (`F677`), with the required per-chart sign-lift made explicit and audited (`P677`) and its well-definedness packaged
     by `N677` (and the corresponding `T172` directed-scope discharge packaged by `N678`). This remains below strict-core selector closure and does **not** imply kernel-alone/global `QW-2191` discharge or ToE closure.
+12. Update (`2026-03-17`): a strict boundary records that the raw directed closure output channel is obstructed without an explicit sign-lift / section choice (`N675`),
+    and packages the remaining strict frontier beyond the exported closure objects as: strict-core selector closure + kernel-alone/global `QW-2191` discharge (`N679`).
 
 ### 1.2 What is still missing (no false pass)
 
@@ -275,8 +280,8 @@ The repo still does **not** export:
 2. any **Aut(Z_12)-invariant** sign-sensitive / directed selector state datum “for free” from typed `Z_12/Aut(Z_12)` structure alone (`N462` boundary);
    in the declared premise-based scope (`T164`) such a directed lift *is* exported (`F474/N524`), but no Aut-invariant canonicity is claimed,
 3. an axiom-free **kernel-alone/global** discharge of `QW-2191` beyond the declared diagonal/local lane and `n=12` scope; the current repo
-   exports a scope-limited projective closure-observable bypass statement (`F672/N673`) and a premise-based directed closure object with explicit sign-lift (`F677/N677`),
-   while keeping kernel-alone discharge unclaimed,
+   exports a scope-limited projective closure-observable bypass statement (`F672/N673`) and a premise-based directed closure object with explicit sign-lift (`F677/N677`, with the raw-output obstruction boundary `N675`),
+   while keeping kernel-alone discharge unclaimed (remaining frontier packaged by `N679`),
 4. a strict physical sign/orientation convention if any downstream claim depends on absolute sign (unless separately
    proven gauge-irrelevant on that lane),
 5. ToE closure.
@@ -368,10 +373,13 @@ RETURN_TO_STRICT_SELECTOR_CLOSURE_FRONTIER
 11. A current post-`N554` kernel frontier status packet v2 is now exported (`F663`, audited by `P663`, packaged by `N663`), keeping branch selection explicit and separate.
 
 Therefore `H37` is no longer the next blocker (it is discharged in the declared premise‑based scope), and the seed‑v1 source‑seed frontier is no longer “pre‑export”.
+Update (`2026-03-17`): the global `T172` closure objects are now discharged in both scopes (projective: `N674`; directed premise-based: `N678`),
+with an explicit raw-output obstruction boundary (`N675`) and a theorem-level frontier boundary packaging what remains (`N679`).
+
 The next strict bottleneck is now explicitly **post‑promotion**:
 
-1. strict-core selector closure remains unexported (even though an admissible strict-core source object for `S_sel_int` is now exported in the sense of the `F34` source-object contract; `N676`),
-2. global `QW-2191` discharge remains unclaimed,
+1. strict-core selector closure remains unexported (even though an admissible strict-core source object for `S_sel_int` is now exported in the sense of the `F34` source-object contract; `N676`; remaining frontier packaged by `N679`),
+2. kernel-alone/global `QW-2191` discharge remains unclaimed (remaining frontier packaged by `N679`),
 3. any further closure attempt must keep the projector/section-level boundaries (`N512`) and the tracked generator/orientation dependence (`N462/T164`) explicit.
 
 Update: a coefficient-filled **declared** control pullback `M_control = T_control^T H_PsiPsi T_control` is now exported from the coefficient-filled canonical Psi block on the declared transport support (`P476`, relying on `R11/R12`), but no host-to-canonical Psi-block matching witness is exported, so no strict existing-feedback promotion is claimed.
@@ -579,6 +587,8 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
 11. Update (`2026-03-17`): w zadeklarowanym premise-based scope kierunkowym repo eksportuje jawny globalny **kierunkowy** obiekt domknięcia selektora na `C_v1`,
     `SelectorClosure_global_C_v1_directed_strict_v1` (`F677`), z jawnym wymaganym per-chart sign-liftem (bez ukrytego fixowania znaku), audytowanym przez `P677`
     i opakowanym jako well-definedness przez `N677` (oraz odpowiadające rozładowanie `T172` w zakresie kierunkowym opakowane przez `N678`). To nadal jest poniżej strict-core selector closure i nie implikuje kernel-alone/global rozładowania `QW-2191` ani ToE closure.
+12. Update (`2026-03-17`): ścisła granica mówi, że surowy kanał wyjściowy domknięcia kierunkowego jest zablokowany bez jawnego sign-liftu / wyboru sekcji (`N675`),
+    oraz pakuje pozostały strict frontier “ponad” wyeksportowanymi obiektami domknięcia jako: strict-core selector closure + kernel-alone/global rozładowanie `QW-2191` (`N679`).
 
 ### 1.2 Czego nadal brakuje (bez false pass)
 
@@ -588,7 +598,7 @@ Repo nadal **nie** eksportuje:
 2. ścisłego **Aut(Z_12)-invariant** znako‑czułego / kierunkowego datumu stanu selektora “za darmo” z samej struktury typed `Z_12/Aut(Z_12)` (granica `N462`); w zadeklarowanym scope premise-based (`T164`) taki datum jest już wyeksportowany jako directed lift (`F474/N524`, decyzja `P632`),
 3. aksjomatycznie wolnego **kernel-alone/global** rozładowania `QW-2191` poza pasem diagonal/local i zakresem `n=12`; aktualnie wyeksportowano
    scope-limited bypass dla obserwabli domknięcia w wariancie projektowym (`F672/N673`) oraz premise-based obiekt domknięcia kierunkowego z jawnym sign-liftem (`F677/N677`),
-   przy zachowaniu braku kernel-alone discharge,
+   z granicą surowych wyjść bez sign-liftu (`N675`) i przy zachowaniu braku kernel-alone discharge (frontier opakowany przez `N679`),
 4. ścisłej konwencji znaku/orientacji tam, gdzie downstream wymaga absolutnego znaku (o ile nie jest osobno pokazane, że znak jest gauge),
 5. domknięcia ToE.
 
@@ -625,10 +635,12 @@ RETURN_TO_STRICT_SELECTOR_CLOSURE_FRONTIER
 12. Aktualny post-`N554` packet/probe frontiera v2 jest wyeksportowany (`F663`, audyt `P663`, opakowane przez `N663`), bez twierdzenia branch selection.
 
 W konsekwencji `H37` nie jest już blockerem (w zadeklarowanym scope premise-based), a frontier seed‑v1 nie jest już “przed eksportem”.
+Update (`2026-03-17`): globalne obiekty domknięcia `T172` są rozładowane w obu zakresach (projektowy: `N674`; kierunkowy premise-based: `N678`),
+z jawną granicą surowych wyjść bez sign-liftu (`N675`) i twierdzeniem opakowującym pozostały frontier (`N679`).
 Następny bottleneck jest teraz jawnie **post‑promotion**:
 
-1. strict-core selector closure nadal nie jest wyeksportowany (mimo że dopuszczalny strict-core obiekt źródłowy dla `S_sel_int` jest już wyeksportowany w sensie kontraktu obiektu źródłowego `F34`; `N676`),
-2. globalne rozładowanie `QW-2191` nadal nie jest roszczone,
+1. strict-core selector closure nadal nie jest wyeksportowany (mimo że dopuszczalny strict-core obiekt źródłowy dla `S_sel_int` jest już wyeksportowany w sensie kontraktu obiektu źródłowego `F34`; `N676`; pozostały frontier opakowany przez `N679`),
+2. kernel-alone/global rozładowanie `QW-2191` nadal nie jest roszczone (pozostały frontier opakowany przez `N679`),
 3. każda kolejna próba domykania musi zachować granicę projector/section‑level (`N512`) oraz jawnie śledzić zależność generator/orientacja (`N462/T164`).
 
 Update: repo eksportuje teraz coefficient-filled **declared** control pullback `M_control = T_control^T H_PsiPsi T_control` z coefficient-filled canonical `H_PsiPsi` na zadeklarowanym transporcie (`P476`, oparte o `R11/R12`), ale bez witnessu dopasowania hosta do nośnika kanonicznego (`C10_B1`), więc bez promocji do strict existing-feedback.

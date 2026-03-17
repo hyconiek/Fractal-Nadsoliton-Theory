@@ -15,13 +15,18 @@ After the following strict exports now present in the repo:
    - admissibility clauses for the exported strict-core source object packetized (`N540–N545`),
    - admissible orientation export and local `B_sel/R_sel/O_sel` operators exported (`N546–N549`),
    - global promotions on `C_v1` exported (`N550–N553`) **at projector/section level with residual sign gauge tracked**,
+4. **Global selector closure objects on `C_v1`**
+   - projective/ray-level closure observable (`F672`, discharged/packaged by `N674`),
+   - directed/vector-level closure object in an explicit sign-lift / section-choice scope (`F677`, discharged/packaged by `N678`),
+   - with an explicit raw-output obstruction boundary preventing “directed-for-free” promotion without sign lift (`N675`),
 
 the repo is now past the “infrastructure export” phase for strict selector continuation on `C_v1`.
 
-The remaining honest strict frontier is:
+The remaining honest strict frontier beyond the now-exported closure objects is:
 
 ```text
-global strict selector closure + the corresponding QW-2191 uniqueness discipline
+strict-core selector closure / kernel-alone global QW-2191 discharge,
+with residual sign and fixing-datum dependence kept explicit (no false pass)
 ```
 
 meaning:
@@ -108,7 +113,12 @@ The repo already exports:
 
 - `T170` infrastructure: global atlas + transition/gluing objects on `C_v1`,
 - `T171` post-projective infrastructure: a directed/sign-sensitive state layer in an explicit premise-tracked scope,
-- seed‑v1 promotions on `C_v1` (`N550–N553`) but explicitly still marked:
+- `T172` closure objects:
+  - projective closure observable on `C_v1` (`F672/N672/N673/N674`),
+  - directed closure object on `C_v1` in an explicit sign-lift premise (`F677/N677/N678`),
+  - and an explicit boundary showing the raw directed output channel is obstructed without sign lift (`N675`),
+- a theorem-level boundary packaging the remaining frontier beyond closure objects (`N679`),
+- seed‑v1 promotions on `C_v1` (`N550–N553`), and an admissible strict-core source object for `S_sel_int` (`N676`), but explicitly still marked:
   - `strict_core_selector_closure = false`,
   - `QW2191_discharge = false`.
 
@@ -124,4 +134,3 @@ So the honest next strict move is to either:
 1. strict-core selector closure is already achieved,
 2. global `QW-2191` discharge is already achieved,
 3. ToE closure.
-
