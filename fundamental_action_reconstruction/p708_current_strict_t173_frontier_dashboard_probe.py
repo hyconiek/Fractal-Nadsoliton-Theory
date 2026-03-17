@@ -20,6 +20,8 @@ IN_N681 = GENERATED / "n681_current_strict_t173_directed_output_sign_lift_obstru
 IN_N686 = GENERATED / "n686_current_strict_t173_global_axis_only_transition_edge_sign_flip_boundary_theorem_summary.json"
 IN_N687 = GENERATED / "n687_current_strict_t173_global_edge_sign_coherence_obstruction_boundary_theorem_summary.json"
 IN_P711 = GENERATED / "p711_current_strict_t173_previous_methodology_survival_and_global_gap_audit_probe_summary.json"
+IN_P712 = GENERATED / "p712_current_strict_t176_existing_global_directed_sign_coherence_provider_nonexport_audit_probe_summary.json"
+IN_P713 = GENERATED / "p713_current_strict_t176_multiroot_rooted_sign_lift_root_independence_audit_probe_summary.json"
 
 # Convention-layer continuations (still below physical sign datum).
 IN_N688 = GENERATED / "n688_current_strict_t174_global_oriented_transition_edge_sign_lift_discharge_theorem_summary.json"
@@ -57,6 +59,7 @@ def main() -> None:
         "N686": IN_N686,
         "N687": IN_N687,
         "P711": IN_P711,
+        "P712": IN_P712,
     }
     missing_core = [str(p.relative_to(REPO)) for p in core.values() if not p.exists()]
     if missing_core:
@@ -78,6 +81,8 @@ def main() -> None:
     n686 = load_json(IN_N686)
     n687 = load_json(IN_N687)
     p711 = load_json(IN_P711)
+    p712 = load_json(IN_P712)
+    p713 = load_json(IN_P713) if IN_P713.exists() else None
 
     n688 = load_json(IN_N688) if IN_N688.exists() else None
     n690 = load_json(IN_N690) if IN_N690.exists() else None
@@ -159,7 +164,12 @@ def main() -> None:
         False,
         "That surviving previous methodology is still insufficient for a full global T173 discharge (P711).",
     )
-
+    add_check(
+        "t176_global_provider_not_yet_exported",
+        bool(p712.get("t176_target_exported_on_current_repo_state")),
+        False,
+        "The exact next global provider target (T176-class) is not yet exported on current repo state (P712).",
+    )
     # Convention-layer continuations (optional but expected on Release 7 state).
     if IN_N688.exists():
         add_check(
@@ -216,6 +226,8 @@ def main() -> None:
             "N686": str(IN_N686.relative_to(REPO)),
             "N687": str(IN_N687.relative_to(REPO)),
             "P711": str(IN_P711.relative_to(REPO)),
+            "P712": str(IN_P712.relative_to(REPO)),
+            "P713": str(IN_P713.relative_to(REPO)) if IN_P713.exists() else None,
             "N688": str(IN_N688.relative_to(REPO)) if IN_N688.exists() else None,
             "N690": str(IN_N690.relative_to(REPO)) if IN_N690.exists() else None,
             "N691": str(IN_N691.relative_to(REPO)) if IN_N691.exists() else None,
@@ -240,6 +252,18 @@ def main() -> None:
             "previous_methodology_suffices_for_global_t173_discharge": bool(
                 p711.get("previous_methodology_suffices_for_global_t173_discharge")
             ),
+            "t176_global_provider_exported": bool(p712.get("t176_target_exported_on_current_repo_state")),
+            "all_root_independent_convention_section_exists": (
+                bool(p713.get("root_independent_sign_vector")) and bool(p713.get("root_independent_output_vectors"))
+                if isinstance(p713, dict)
+                else None
+            ),
+            "supported_root_corridor_with_matching_convention_section": (
+                bool(p713.get("supported_roots_sign_vector_agree")) and bool(p713.get("supported_roots_output_vectors_agree"))
+                if isinstance(p713, dict)
+                else None
+            ),
+            "supported_roots_for_current_w_break_candidate": p713.get("supported_roots") if isinstance(p713, dict) else None,
             "convention_layer_oriented_edge_sign_lift_exported": bool(n688_tr.get("oriented_edge_sign_lift_exported") or n691_tr.get("oriented_edge_sign_lift_exported")),
             "convention_layer_sign_fixed_directed_representative_exported": bool(n690_tr.get("sign_fixed_directed_representative_exported")),
             "operational_release_7_projective_os_closure_dashboard_status": (p706 or {}).get("status") if isinstance(p706, dict) else None,
@@ -267,6 +291,18 @@ def main() -> None:
         "previous_methodology_suffices_for_global_t173_discharge": bool(
             p711.get("previous_methodology_suffices_for_global_t173_discharge")
         ),
+        "t176_global_provider_exported": bool(p712.get("t176_target_exported_on_current_repo_state")),
+        "all_root_independent_convention_section_exists": (
+            bool(p713.get("root_independent_sign_vector")) and bool(p713.get("root_independent_output_vectors"))
+            if isinstance(p713, dict)
+            else None
+        ),
+        "supported_root_corridor_with_matching_convention_section": (
+            bool(p713.get("supported_roots_sign_vector_agree")) and bool(p713.get("supported_roots_output_vectors_agree"))
+            if isinstance(p713, dict)
+            else None
+        ),
+        "supported_roots_for_current_w_break_candidate": p713.get("supported_roots") if isinstance(p713, dict) else None,
         "convention_layer_sign_tools_exported": {
             "T174_oriented_edge_sign_lift": bool(n688_tr.get("oriented_edge_sign_lift_exported") or n691_tr.get("oriented_edge_sign_lift_exported")),
             "T175_chart_sign_fix": bool(n690_tr.get("sign_fixed_directed_representative_exported")),
