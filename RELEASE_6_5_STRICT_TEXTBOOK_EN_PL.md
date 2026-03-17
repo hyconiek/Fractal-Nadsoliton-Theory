@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.59  
+**Version:** 6.5.60  
 **Date:** 2026-03-17  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -336,6 +336,9 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
 29. Update (`2026-03-17`): treating the directed sign as **gauge** (projective scope), a minimal downstream **observer‑limit readout** is computed directly from the
     exported global projective selector closure output projector in the `(o_+,o_-)` basis (`F672`), yielding positive commitment and vanishing residual at readout level (`P697`).
     This is a downstream readout bridge only and does **not** claim actual emergent observer closure, kernel-alone/global `QW-2191` discharge, or ToE closure.
+30. Update (`2026-03-17`): the repo freezes a strict projective **operational ToE “OS” support packet** bundling:
+    theorem-level projective strict-core selector closure (`N680`), output-ray invariance (`N692`) and output sign-lift gauge covariance (`N693`),
+    together with a first physics proxy bundle (`P694`, `P696`) and the observer-limit readout bridge (`P697`), while keeping all hard limits explicit (`F698`, audited by `P698`, packaged by `N698`).
 
 ### 1.2 What is still missing (no false pass)
 
@@ -711,6 +714,9 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
 29. Update (`2026-03-17`): traktując znak directed jako **gauge** (zakres projective), minimalny downstream **odczyt observer‑limit** jest policzalny bezpośrednio z
     wyeksportowanego globalnego projektowego projektora wyjścia domknięcia selektora w bazie `(o_+,o_-)` (`F672`), dając dodatni commitment i znikomy residual na poziomie odczytu (`P697`).
     To jest wyłącznie mostek odczytu downstream i **nie** rości actual emergent observer closure, kernel-alone/global rozładowania `QW-2191` ani domknięcia ToE.
+30. Update (`2026-03-17`): repo zamraża strict projective **operational ToE “OS” support packet** wiążący:
+    theorem-level projective strict-core selector closure (`N680`), niezmienniczość output‑ray (`N692`) oraz gauge‑kowariancję output sign‑liftu (`N693`),
+    wraz z pierwszym pakietem proxy fizyki (`P694`, `P696`) i mostkiem odczytu observer‑limit (`P697`), przy zachowaniu jawnych hard‑limitów (`F698`, audyt `P698`, opakowanie `N698`).
 
 ### 1.2 Czego nadal brakuje (bez false pass)
 
