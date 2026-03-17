@@ -114,6 +114,10 @@ Finally, the same `w_break`-rooted rule is now also exported as a global **direc
 (`F684`, audited by `P684`), descending to the strict projective state but still below any physical sign datum claim.
 Building on that directed representative, the repo also exports a corresponding global **directed closure object** in the same explicit convention scope
 (`F685`, audited by `P685`), still below any strict physical sign datum claim and still not implying kernel-alone/global `QW-2191` discharge.
+Moreover, a full edgewise audit against the exported **global** transition/gluing object on `C_v1` (`F469`) confirms that the `F684` directed representative
+is compatible with every exported overlap edge only **up to sign** (`O_ij u_i ≈ ± u_j`), and that several edges force a sign flip under axis-only
+(`α mod π`) transport representatives (`P686`), packaged as a strict boundary by `N686`. This reinforces that any directed/vector-level global sign coherence remains a convention layer unless upgraded
+by an explicit oriented transport lift, and it remains below any strict physical orientation datum claim.
 
 Therefore, `T173` is the next honest strict label for continued closure attempts beyond `T172`.
 

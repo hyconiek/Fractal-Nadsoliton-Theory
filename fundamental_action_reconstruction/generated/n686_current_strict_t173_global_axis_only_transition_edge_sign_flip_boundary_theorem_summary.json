@@ -1,0 +1,47 @@
+{
+  "step": "N686",
+  "status": "N686_DERIVABLE_CURRENT_STRICT_T173_GLOBAL_AXIS_ONLY_TRANSITION_EDGE_SIGN_FLIP_BOUNDARY_THEOREM_NO_FALSE_PASS",
+  "scope": "current_strict_t173_global_axis_only_transition_edge_sign_boundary_only",
+  "checks": [
+    {
+      "id": "p686_probe_passed",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "The full-edge compatibility probe ran and passed at least up to sign (P686)."
+    },
+    {
+      "id": "all_edges_compatible_up_to_sign",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Every exported overlap edge transports the directed state line correctly: O_ij u_i \u2248 \u00b1 u_j (P686)."
+    },
+    {
+      "id": "sign_flips_present_on_some_edges",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Some overlap edges force a sign flip under axis-only (\u03b1 mod \u03c0) transport representatives (P686)."
+    }
+  ],
+  "blocking_mismatches": [],
+  "theorem_result": {
+    "discharged": true,
+    "global_axis_only_transition_edge_sign_flips_present": true,
+    "sign_flip_count": 4,
+    "directed_sign_sensitive_physical_orientation_in_strict_core": false,
+    "QW2191_kernel_alone_discharge": false,
+    "ToE_closure": false,
+    "evidence": {
+      "P686": "fundamental_action_reconstruction/generated/p686_current_strict_t173_w_break_rooted_directed_state_full_transition_edge_compatibility_audit_probe_summary.json"
+    },
+    "note": "This boundary is about edgewise sign coherence under axis-only (\u03b1 mod \u03c0) global transition representatives; it does not forbid convention-scoped oriented lifts."
+  },
+  "hard_limits": [
+    "no_kernel_alone_global_QW2191_discharge",
+    "no_directed_sign_sensitive_physical_orientation_claim",
+    "no_ToE_closure"
+  ],
+  "no_false_pass": true
+}

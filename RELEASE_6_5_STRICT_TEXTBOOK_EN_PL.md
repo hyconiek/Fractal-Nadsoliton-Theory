@@ -287,6 +287,9 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
 17. Update (`2026-03-17`): composing that convention-scoped directed representative (`F684`) with the promoted global output channels `Y_sel(pair_m)` (`F660`),
     the repo exports an explicit convention-scoped global **directed selector closure object** on `C_v1`,
     `SelectorClosure_global_C_v1_directed_rooted_transport_from_S_sel_int_w_break_strict_convention_v1` (`P685`, `F685`).
+18. Update (`2026-03-17`): an edgewise audit against the **full** exported global transition/gluing object on `C_v1` (`F469`) confirms the `w_break`-rooted directed
+    selector state representative (`F684`) is compatible on every exported overlap edge only **up to sign** (`O_ij u_i ≈ ± u_j`), and that several edges force a sign flip
+    under axis-only (`α mod π`) transport representatives (`P686`), packaged as a strict boundary by `N686`. Therefore this remains a convention/section layer and does not upgrade any directed physical sign datum into strict core.
 
 ### 1.2 What is still missing (no false pass)
 
@@ -622,6 +625,9 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
 17. Update (`2026-03-17`): składając ten konwencyjny directed stan (`F684`) z promowanymi globalnymi kanałami wyjściowymi `Y_sel(pair_m)` (`F660`),
     repo eksportuje jawny konwencyjny globalny **kierunkowy obiekt domknięcia selektora** na `C_v1`,
     `SelectorClosure_global_C_v1_directed_rooted_transport_from_S_sel_int_w_break_strict_convention_v1` (`P685`, `F685`).
+18. Update (`2026-03-17`): audyt krawędziowy względem **pełnego** wyeksportowanego globalnego obiektu przejść/klejenia na `C_v1` (`F469`) potwierdza, że konwencyjny
+    kierunkowy stan selektora zakotwiczony w `w_break` (`F684`) jest zgodny na każdej krawędzi overlapu tylko **do znaku** (`O_ij u_i ≈ ± u_j`), i że część krawędzi wymusza
+    flip znaku przy reprezentantach transportu axis-only (`α mod π`) (`P686`), opakowane jako granica strict przez `N686`. W konsekwencji to nadal jest warstwa konwencji/sekcji i nie promuje żadnego fizycznego datumu znaku do strict core.
 
 ### 1.2 Czego nadal brakuje (bez false pass)
 
