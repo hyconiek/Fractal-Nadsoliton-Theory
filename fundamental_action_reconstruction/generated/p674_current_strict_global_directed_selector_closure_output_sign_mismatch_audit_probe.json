@@ -1,0 +1,157 @@
+{
+  "stage": "P674",
+  "lane": "current_strict_global_directed_selector_closure_output_sign_mismatch_audit_probe_only",
+  "status": "PASS_AUDIT_DIRECTED_CLOSURE_OUTPUT_SIGN_MISMATCH_ACROSS_CHARTS",
+  "inputs": {
+    "directed_state": "fundamental_action_reconstruction/generated/selector_state_global_c_v1_directed_strict_v1.json",
+    "global_output_operator": "fundamental_action_reconstruction/generated/selector_output_operator_global_c_v1_seed_v1_promoted_strict_v1.json"
+  },
+  "tolerance": 1e-12,
+  "per_pair": {
+    "pair1": {
+      "pair": "pair1",
+      "k": 1,
+      "u_key": "u_1",
+      "coords_in_c_s": [
+        1.6572165024190854e-16,
+        1.0000000000000002
+      ],
+      "Y_sel_matrix_in_c_s_to_o": [
+        [
+          8.667595082435971e-16,
+          -1.0
+        ],
+        [
+          1.0000000000000004,
+          9.149258638450154e-16
+        ]
+      ],
+      "output_coords_in_o_plus_o_minus": [
+        -1.0000000000000002,
+        1.0806475140869242e-15
+      ],
+      "o_plus_sign": -1
+    },
+    "pair2": {
+      "pair": "pair2",
+      "k": 2,
+      "u_key": "u_2",
+      "coords_in_c_s": [
+        -0.9999999999999999,
+        -4.881579836291008e-16
+      ],
+      "Y_sel_matrix_in_c_s_to_o": [
+        [
+          1.0,
+          8.055271682862295e-16
+        ],
+        [
+          -8.536935238876477e-16,
+          1.0000000000000004
+        ]
+      ],
+      "output_coords_in_o_plus_o_minus": [
+        -0.9999999999999999,
+        3.6553554025854663e-16
+      ],
+      "o_plus_sign": -1
+    },
+    "pair3": {
+      "pair": "pair3",
+      "k": 3,
+      "u_key": "u_3",
+      "coords_in_c_s": [
+        -1.0,
+        6.022211730202134e-16
+      ],
+      "Y_sel_matrix_in_c_s_to_o": [
+        [
+          1.0,
+          1.249616378136292e-15
+        ],
+        [
+          -1.2977827337377104e-15,
+          1.0000000000000004
+        ]
+      ],
+      "output_coords_in_o_plus_o_minus": [
+        -1.0,
+        1.900003906757924e-15
+      ],
+      "o_plus_sign": -1
+    },
+    "pair4": {
+      "pair": "pair4",
+      "k": 4,
+      "u_key": "u_4",
+      "coords_in_c_s": [
+        1.0000000000000004,
+        -8.416742355654922e-16
+      ],
+      "Y_sel_matrix_in_c_s_to_o": [
+        [
+          1.0,
+          1.3939335351113555e-16
+        ],
+        [
+          -1.8755970911255346e-16,
+          1.0000000000000004
+        ]
+      ],
+      "output_coords_in_o_plus_o_minus": [
+        1.0000000000000004,
+        -1.0292339446780462e-15
+      ],
+      "o_plus_sign": 1
+    },
+    "pair5": {
+      "pair": "pair5",
+      "k": 5,
+      "u_key": "u_5",
+      "coords_in_c_s": [
+        6.852371346102054e-16,
+        -1.0000000000000009
+      ],
+      "Y_sel_matrix_in_c_s_to_o": [
+        [
+          8.667595082435971e-16,
+          -1.0
+        ],
+        [
+          1.0000000000000004,
+          9.149258638450154e-16
+        ]
+      ],
+      "output_coords_in_o_plus_o_minus": [
+        1.0000000000000009,
+        -2.2968872923481047e-16
+      ],
+      "o_plus_sign": 1
+    }
+  },
+  "o_plus_signs_by_pair": {
+    "pair1": -1,
+    "pair2": -1,
+    "pair3": -1,
+    "pair4": 1,
+    "pair5": 1
+  },
+  "sign_consistency": {
+    "nonzero_signs": [
+      -1,
+      -1,
+      -1,
+      1,
+      1
+    ],
+    "unique_nonzero_signs": [
+      -1,
+      1
+    ],
+    "all_same_sign": false,
+    "global_sign_fix_possible": false
+  },
+  "meaning": "Under the current exported directed selector state (premise-based) and the exported fixed global output-channel bases, the induced directed output vector is not chart-independent (o_+ sign differs across charts). Therefore no global directed closure outcome can be promoted from these exports without adding an explicit sign-lift/section choice; projective (ray) closure remains well-defined.",
+  "blocking_mismatches": [],
+  "no_false_pass": true
+}
