@@ -1,6 +1,6 @@
 # H40 Global Selector Transition Object Audit
 
-Status: `PASS_GLOBAL_SELECTOR_TRANSITION_OBJECT_EXPORTED_ON_C_V1_AND_GLOBAL_PROJECTIVE_SELECTOR_STATE_OBJECT_EXPORTED__PLUS_CONVENTION_LAYER_ORIENTED_EDGE_SIGN_LIFT_EXPORTED_AND_GAUGE_EQUIVALENCE_AUDITED__PLUS_CHART_SIGN_FIXING_EXPORTED__QW2191_STILL_OPEN`
+Status: `PASS_GLOBAL_SELECTOR_TRANSITION_OBJECT_EXPORTED_ON_C_V1_AND_GLOBAL_PROJECTIVE_SELECTOR_STATE_OBJECT_EXPORTED__PLUS_CONVENTION_LAYER_ORIENTED_EDGE_SIGN_LIFT_EXPORTED_AND_GAUGE_EQUIVALENCE_AUDITED__PLUS_CHART_SIGN_FIXING_EXPORTED__PLUS_PROJECTIVE_VS_DIRECTED_CLOSURE_OUTPUT_RAY_INVARIANCE_PACKAGED__QW2191_STILL_OPEN`
 Date: `2026-03-17`
 
 ## Purpose
@@ -43,6 +43,8 @@ Test whether the current strict core contains any global transition or gluing ob
 - `N689`: packages the `P689` gauge-equivalence result as a boundary-safe theorem: oriented edge sign‑lifts are convention-layer data and are not canonical “for free”.
 - `T175/F690/P690/N690`: exports an explicit chart-level sign fixing (0‑cochain) from strict-core payload weights and a sign-fixed directed representative on `C_v1` as a tracked convention layer, audited to be independent of the starting exported directed representative (no physical sign claim; no `QW-2191` discharge).
 - `F691/P691/N691`: exports and audits a `T174` oriented edge sign-lift anchored to the exported sign-fixed directed representative (`F690`), so the oriented lift no longer depends on the arbitrary starting directed representative (still convention layer; no physical sign claim; no `QW-2191` discharge).
+- `F692`: exports a sign-fixed directed closure object on `C_v1` (built from `F690` + promoted output channels `F660`) with an explicit output sign-lift, yielding a glued directed output vector in the fixed `(o_+,o_-)` basis (convention layer only; no `QW-2191` discharge).
+- `P692/N692`: audits and packages that the exported directed closure outputs induce the same rank‑1 output projector as the exported projective closure output projector (`F672`), i.e. they define the same output ray (projective downstream invariance; directed lifts are convention/gauge).
 - `P460`: lane-scoped cross-block polar-factor transition candidate exists (from the declared control-pullback value instantiation).
 - `P474`: audits that the exported global projective selector state object is projector-level glued/transported consistently by the exported global selector transition operators on `{pair1..pair5}` (ray/projector-level only; no sign-sensitive claim).
 - `generated/selector_transition_global_c_v1_strict_v1.json`: exported global selector transition/gluing object.

@@ -1,0 +1,266 @@
+{
+  "object": "SelectorClosure_global_C_v1_directed_sign_fixed_from_strict_core_payload_weights_strict_convention_v1",
+  "stage": "F692",
+  "status": "PASS_EXPORTED",
+  "as_of": "2026-03-17",
+  "generated_utc": "2026-03-17T13:40:54.957072+00:00",
+  "intent": "Export one explicit global directed closure object on C_v1 in the declared strict_convention scope by composing the exported sign-fixed directed representative (F690) with the promoted global output channels Y_sel(pair_m) (F660), yielding chartwise output vectors that glue in the fixed (o_+,o_-) basis. This is a convention-layer construction only and does not claim any strict physical sign/orientation datum.",
+  "domain": {
+    "configuration_space_object_ref": "fundamental_action_reconstruction/generated/c_v1_void_configuration_space_in_local_b_tilde_1_sector_v1.json",
+    "configuration_space_object": "C_v1_void_configuration_space_in_local_B_tilde_1_sector_v1",
+    "charts_cover": "U_pair1 = ... = U_pair5 = C_v1 (declared global cover)"
+  },
+  "depends_on": {
+    "sign_fixed_directed_state_ref": "fundamental_action_reconstruction/generated/selector_state_global_c_v1_directed_sign_fixed_from_strict_core_payload_weights_strict_convention_v1.json",
+    "output_operator_ref": "fundamental_action_reconstruction/generated/selector_output_operator_global_c_v1_seed_v1_promoted_strict_v1.json",
+    "note": "Sign fixing depends on exported strict-core payload weights (F647) via F690; no Aut(Z_12)-invariant sign claim."
+  },
+  "output_sign_lift": {
+    "meaning": "Explicit per-chart sign-lift required to define a directed global closure outcome under fixed output bases.",
+    "rule": "s_out(pair_m) := sign(o_+(pair_m)) with tolerance tol_sign; v_out := s_out \u00b7 v_out_raw makes o_+ > 0 by construction.",
+    "tolerance": 1e-12,
+    "signs_by_pair": {
+      "pair1": 1,
+      "pair2": 1,
+      "pair3": 1,
+      "pair4": 1,
+      "pair5": -1
+    },
+    "note": "This is an explicit section choice; it is not claimed to be Aut(Z_12)-invariant and does not imply any kernel-alone/global QW-2191 discharge."
+  },
+  "output_observable": {
+    "basis": [
+      "o_+",
+      "o_-"
+    ],
+    "reference_chart": "pair1",
+    "output_vector_in_o_plus_o_minus": [
+      1.0000000000000002,
+      -1.0806475140869242e-15
+    ],
+    "gluing": {
+      "max_abs_diff_to_pair1": 8.509587848521138e-16,
+      "tol": 1e-09,
+      "glued": true
+    }
+  },
+  "raw_output_observable": {
+    "basis": [
+      "o_+",
+      "o_-"
+    ],
+    "reference_chart": "pair1",
+    "output_vector_raw_in_o_plus_o_minus": [
+      1.0000000000000002,
+      -1.0806475140869242e-15
+    ],
+    "gluing": {
+      "max_abs_diff_to_pair1": 2.000000000000001,
+      "tol": 1e-09,
+      "glued": false
+    }
+  },
+  "charts": {
+    "pair1": {
+      "chart_id": "pair1",
+      "k": 1,
+      "u_key": "u_1",
+      "coords_in_c_s": [
+        -1.6572165024190854e-16,
+        -1.0000000000000002
+      ],
+      "coords_norm": 1.0000000000000002,
+      "span_residual_inf_norm": 4.996003610813204e-16,
+      "Y_sel_matrix_in_c_s_to_o": [
+        [
+          8.667595082435971e-16,
+          -1.0
+        ],
+        [
+          1.0000000000000004,
+          9.149258638450154e-16
+        ]
+      ],
+      "v_out_raw_in_o_plus_o_minus": [
+        1.0000000000000002,
+        -1.0806475140869242e-15
+      ],
+      "raw_o_plus_sign": 1,
+      "output_sign_lift_applied": 1,
+      "v_out_in_o_plus_o_minus": [
+        1.0000000000000002,
+        -1.0806475140869242e-15
+      ]
+    },
+    "pair2": {
+      "chart_id": "pair2",
+      "k": 2,
+      "u_key": "u_2",
+      "coords_in_c_s": [
+        0.9999999999999999,
+        4.881579836291008e-16
+      ],
+      "coords_norm": 0.9999999999999999,
+      "span_residual_inf_norm": 6.38378239159465e-16,
+      "Y_sel_matrix_in_c_s_to_o": [
+        [
+          1.0,
+          8.055271682862295e-16
+        ],
+        [
+          -8.536935238876477e-16,
+          1.0000000000000004
+        ]
+      ],
+      "v_out_raw_in_o_plus_o_minus": [
+        0.9999999999999999,
+        -3.6553554025854663e-16
+      ],
+      "raw_o_plus_sign": 1,
+      "output_sign_lift_applied": 1,
+      "v_out_in_o_plus_o_minus": [
+        0.9999999999999999,
+        -3.6553554025854663e-16
+      ]
+    },
+    "pair3": {
+      "chart_id": "pair3",
+      "k": 3,
+      "u_key": "u_3",
+      "coords_in_c_s": [
+        1.0,
+        -6.022211730202134e-16
+      ],
+      "coords_norm": 1.0,
+      "span_residual_inf_norm": 6.960724281099156e-16,
+      "Y_sel_matrix_in_c_s_to_o": [
+        [
+          1.0,
+          1.249616378136292e-15
+        ],
+        [
+          -1.2977827337377104e-15,
+          1.0000000000000004
+        ]
+      ],
+      "v_out_raw_in_o_plus_o_minus": [
+        1.0,
+        -1.900003906757924e-15
+      ],
+      "raw_o_plus_sign": 1,
+      "output_sign_lift_applied": 1,
+      "v_out_in_o_plus_o_minus": [
+        1.0,
+        -1.900003906757924e-15
+      ]
+    },
+    "pair4": {
+      "chart_id": "pair4",
+      "k": 4,
+      "u_key": "u_4",
+      "coords_in_c_s": [
+        1.0000000000000004,
+        -8.416742355654922e-16
+      ],
+      "coords_norm": 1.0000000000000004,
+      "span_residual_inf_norm": 4.718447854656915e-16,
+      "Y_sel_matrix_in_c_s_to_o": [
+        [
+          1.0,
+          1.3939335351113555e-16
+        ],
+        [
+          -1.8755970911255346e-16,
+          1.0000000000000004
+        ]
+      ],
+      "v_out_raw_in_o_plus_o_minus": [
+        1.0000000000000004,
+        -1.0292339446780462e-15
+      ],
+      "raw_o_plus_sign": 1,
+      "output_sign_lift_applied": 1,
+      "v_out_in_o_plus_o_minus": [
+        1.0000000000000004,
+        -1.0292339446780462e-15
+      ]
+    },
+    "pair5": {
+      "chart_id": "pair5",
+      "k": 5,
+      "u_key": "u_5",
+      "coords_in_c_s": [
+        -6.852371346102054e-16,
+        1.0000000000000009
+      ],
+      "coords_norm": 1.0000000000000009,
+      "span_residual_inf_norm": 3.885780586188048e-16,
+      "Y_sel_matrix_in_c_s_to_o": [
+        [
+          8.667595082435971e-16,
+          -1.0
+        ],
+        [
+          1.0000000000000004,
+          9.149258638450154e-16
+        ]
+      ],
+      "v_out_raw_in_o_plus_o_minus": [
+        -1.0000000000000009,
+        2.2968872923481047e-16
+      ],
+      "raw_o_plus_sign": -1,
+      "output_sign_lift_applied": -1,
+      "v_out_in_o_plus_o_minus": [
+        1.0000000000000009,
+        -2.2968872923481047e-16
+      ]
+    }
+  },
+  "sanity": {
+    "coords_by_pair": {
+      "pair1": [
+        -1.6572165024190854e-16,
+        -1.0000000000000002
+      ],
+      "pair2": [
+        0.9999999999999999,
+        4.881579836291008e-16
+      ],
+      "pair3": [
+        1.0,
+        -6.022211730202134e-16
+      ],
+      "pair4": [
+        1.0000000000000004,
+        -8.416742355654922e-16
+      ],
+      "pair5": [
+        -6.852371346102054e-16,
+        1.0000000000000009
+      ]
+    },
+    "coords_norm_by_pair": {
+      "pair1": 1.0000000000000002,
+      "pair2": 0.9999999999999999,
+      "pair3": 1.0,
+      "pair4": 1.0000000000000004,
+      "pair5": 1.0000000000000009
+    },
+    "span_residual_inf_norm_by_pair": {
+      "pair1": 4.996003610813204e-16,
+      "pair2": 6.38378239159465e-16,
+      "pair3": 6.960724281099156e-16,
+      "pair4": 4.718447854656915e-16,
+      "pair5": 3.885780586188048e-16
+    }
+  },
+  "hard_limits": [
+    "Convention layer only; does not claim a directed/sign-sensitive physical orientation datum in strict core.",
+    "Does not claim Aut(Z_12)-invariant sign canonicity (N462 discipline).",
+    "Does not claim strict-core selector closure / admissible S_sel_int.",
+    "Does not claim kernel-alone/global QW-2191 discharge.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}

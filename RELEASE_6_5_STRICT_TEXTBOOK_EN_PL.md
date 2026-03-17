@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.53  
+**Version:** 6.5.54  
 **Date:** 2026-03-17  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -304,6 +304,10 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
 23. Update (`2026-03-17`): building on that sign-fixed directed representative, the repo now also exports a corresponding `T174` oriented transition edge sign-lift anchored to the sign-fixed state (`F691`),
     audits full-edge coherence under the lifted oriented transitions (`P691`), and packages the result as a convention-layer theorem (`N691`). This makes the oriented edge lift independent of the arbitrary starting directed
     representative, while preserving all hard limits (no strict physical sign datum; no kernel-alone/global `QW-2191` discharge).
+24. Update (`2026-03-17`): building on the sign-fixed directed representative (`F690`) and the promoted global output channels (`F660`), the repo exports an explicit sign-fixed directed closure object on `C_v1`
+    in `strict_convention` scope with an explicit output sign-lift (`F692`). A dedicated probe audits that the exported directed closure outputs (premise-based + convention-scoped) induce the same rank‑1 output projector
+    as the exported projective closure output projector (`F672`), i.e. they define the same output ray (`P692`), packaged as a theorem-level invariance statement (`N692`). This supports proceeding projectively downstream
+    under `QW-2191` discipline, without any physical sign claim and without kernel-alone/global `QW-2191` discharge.
 
 ### 1.2 What is still missing (no false pass)
 
@@ -657,6 +661,10 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
 23. Update (`2026-03-17`): budujac na tym sign-fixed kierunkowym reprezentancie, repo eksportuje teraz odpowiadajacy mu `T174` oriented edge sign‑lift zakotwiczony w sign-fixed stanie (`F691`),
     audytuje full-edge koherencje pod lifted oriented przejsciami (`P691`) i pakuje wynik jako twierdzenie konwencyjne (`N691`). To uniezaleznia oriented edge lift od arbitralnego startowego reprezentanta,
     przy zachowaniu hard limits (bez fizycznego datumu znaku; bez kernel-alone/global rozladowania `QW-2191`).
+24. Update (`2026-03-17`): budujac na sign-fixed kierunkowym reprezentancie (`F690`) oraz promowanych globalnych kanałach wyjściowych (`F660`), repo eksportuje jawny sign-fixed kierunkowy obiekt domknięcia na `C_v1`
+    w zakresie `strict_convention` z jawnym output sign-liftem (`F692`). Dedykowana sonda audytuje, że wyeksportowane kierunkowe domknięcia (premise-based + konwencyjne) indukują ten sam rank‑1 projektor wyjścia
+    co projektowy projektor domknięcia (`F672`), tzn. definiują tę samą output‑ray (`P692`), opakowane jako twierdzenie o niezmienniczości (`N692`). To wspiera dalsze prowadzenie downstream w wariancie projektowym
+    w dyscyplinie `QW-2191`, bez claimu o fizyczny znak i bez kernel-alone/global rozładowania `QW-2191`.
 
 ### 1.2 Czego nadal brakuje (bez false pass)
 

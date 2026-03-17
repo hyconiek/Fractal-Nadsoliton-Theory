@@ -1,0 +1,131 @@
+{
+  "stage": "P692",
+  "as_of": "2026-03-17",
+  "generated_utc": "2026-03-17T13:42:36.986892+00:00",
+  "goal": "audit_that_exported_directed_closure_output_vectors_induce_the_same_rank_one_output_projector_as_the_exported_projective_closure_output_projector__no_false_pass",
+  "inputs": {
+    "projective_closure_ref": "fundamental_action_reconstruction/generated/selector_closure_global_c_v1_projective_strict_v1.json",
+    "directed_closures": {
+      "F677_premise_based_directed_closure": "fundamental_action_reconstruction/generated/selector_closure_global_c_v1_directed_strict_v1.json",
+      "F685_w_break_rooted_directed_closure": "fundamental_action_reconstruction/generated/selector_closure_global_c_v1_directed_rooted_transport_from_s_sel_int_w_break_strict_convention_v1.json",
+      "F692_sign_fixed_directed_closure": "fundamental_action_reconstruction/generated/selector_closure_global_c_v1_directed_sign_fixed_from_strict_core_payload_weights_strict_convention_v1.json"
+    }
+  },
+  "tolerances": {
+    "tol_projector_match_max_abs": 1e-10,
+    "tol_invariance_max_abs": 1e-10
+  },
+  "projective_output_projector_in_o_plus_o_minus": [
+    [
+      1.0,
+      -9.149258638450154e-16
+    ],
+    [
+      -9.149258638450154e-16,
+      8.370893363325476e-31
+    ]
+  ],
+  "directed_outputs": {
+    "F677_premise_based_directed_closure": {
+      "directed_closure_ref": "fundamental_action_reconstruction/generated/selector_closure_global_c_v1_directed_strict_v1.json",
+      "directed_closure_object": "SelectorClosure_global_C_v1_directed_strict_v1",
+      "output_vector_in_o_plus_o_minus": [
+        1.0000000000000002,
+        -1.0806475140869242e-15
+      ],
+      "output_vector_norm": 1.0000000000000002,
+      "derived_output_projector_from_vector": [
+        [
+          1.0,
+          -1.080647514086924e-15
+        ],
+        [
+          -1.080647514086924e-15,
+          1.1677990497022487e-30
+        ]
+      ],
+      "max_abs_diff_to_projective_output_projector": 1.657216502419087e-16,
+      "max_abs_diff_of_Bv_minus_v": 1.657216502419087e-16,
+      "checks": {
+        "tol_projector_match": 1e-10,
+        "tol_invariance": 1e-10,
+        "projector_matches_projective": true,
+        "vector_is_in_projective_ray": true
+      }
+    },
+    "F685_w_break_rooted_directed_closure": {
+      "directed_closure_ref": "fundamental_action_reconstruction/generated/selector_closure_global_c_v1_directed_rooted_transport_from_s_sel_int_w_break_strict_convention_v1.json",
+      "directed_closure_object": "SelectorClosure_global_C_v1_directed_rooted_transport_from_S_sel_int_w_break_strict_convention_v1",
+      "output_vector_in_o_plus_o_minus": [
+        1.0,
+        -9.149258638450154e-16
+      ],
+      "output_vector_norm": 1.0,
+      "derived_output_projector_from_vector": [
+        [
+          1.0,
+          -9.149258638450154e-16
+        ],
+        [
+          -9.149258638450154e-16,
+          8.370893363325476e-31
+        ]
+      ],
+      "max_abs_diff_to_projective_output_projector": 0.0,
+      "max_abs_diff_of_Bv_minus_v": 0.0,
+      "checks": {
+        "tol_projector_match": 1e-10,
+        "tol_invariance": 1e-10,
+        "projector_matches_projective": true,
+        "vector_is_in_projective_ray": true
+      }
+    },
+    "F692_sign_fixed_directed_closure": {
+      "directed_closure_ref": "fundamental_action_reconstruction/generated/selector_closure_global_c_v1_directed_sign_fixed_from_strict_core_payload_weights_strict_convention_v1.json",
+      "directed_closure_object": "SelectorClosure_global_C_v1_directed_sign_fixed_from_strict_core_payload_weights_strict_convention_v1",
+      "output_vector_in_o_plus_o_minus": [
+        1.0000000000000002,
+        -1.0806475140869242e-15
+      ],
+      "output_vector_norm": 1.0000000000000002,
+      "derived_output_projector_from_vector": [
+        [
+          1.0,
+          -1.080647514086924e-15
+        ],
+        [
+          -1.080647514086924e-15,
+          1.1677990497022487e-30
+        ]
+      ],
+      "max_abs_diff_to_projective_output_projector": 1.657216502419087e-16,
+      "max_abs_diff_of_Bv_minus_v": 1.657216502419087e-16,
+      "checks": {
+        "tol_projector_match": 1e-10,
+        "tol_invariance": 1e-10,
+        "projector_matches_projective": true,
+        "vector_is_in_projective_ray": true
+      }
+    }
+  },
+  "pairwise_directed_projector_max_abs_diffs": {
+    "F677_premise_based_directed_closure__vs__F685_w_break_rooted_directed_closure": 1.657216502419087e-16,
+    "F677_premise_based_directed_closure__vs__F692_sign_fixed_directed_closure": 0.0,
+    "F685_w_break_rooted_directed_closure__vs__F692_sign_fixed_directed_closure": 1.657216502419087e-16
+  },
+  "result": {
+    "all_projectors_match_projective": true,
+    "all_vectors_in_projective_ray": true,
+    "pairwise_projector_consistent_across_directed_closures": true,
+    "error_count": 0,
+    "errors": []
+  },
+  "hard_limits": [
+    "Does not claim any directed/sign-sensitive physical orientation datum in strict core.",
+    "Does not claim kernel-alone/global QW-2191 discharge.",
+    "Does not claim ToE closure.",
+    "Projector/ray-level compatibility audit only (no operator-level groupoid promotion)."
+  ],
+  "no_false_pass": true,
+  "status": "PASS_PROJECTIVE_AND_DIRECTED_CLOSURE_OUTPUTS_DEFINE_THE_SAME_OUTPUT_RAY"
+}
