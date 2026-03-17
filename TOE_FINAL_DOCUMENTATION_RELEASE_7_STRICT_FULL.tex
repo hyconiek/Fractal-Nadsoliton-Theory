@@ -158,13 +158,27 @@ operational support bundle sufficient to compute (from strict projective selecto
 with hard limits explicitly keeping \emph{kernel-alone/global} \texttt{QW-2191} discharge, directed sign-sensitive physical orientation, and ToE closure unclaimed.
 \end{definition}
 
+\begin{remark}[OS v2 vs OS v3]
+The minimal theorem-level OS support bundle used to discharge \emph{Operational ToE closure} is the v2 packet (\texttt{N700}/\texttt{N701}).
+The v3 packet (\texttt{F705}/\texttt{P705}/\texttt{N705}) is a strict extension that additionally tracks the basis-invariant Hessian eigen-spectrum mass observable (\texttt{F704}).
+It does not strengthen any hard-limit claims.
+\end{remark}
+
 \begin{remark}[Boundary discipline]
 Operational ToE closure in the above sense is a closure of an \emph{operational computability pipeline} (a ToE “OS”), not a claim of global physical identification
 (host matching) and not a claim of kernel-alone/global \texttt{QW-2191} discharge. It is compatible with leaving those stronger claims explicitly open.
 \end{remark}
 
-\begin{theorem}[Operational ToE closure in strict projective OS scope]
-On the current repo state, the repo discharges Operational ToE closure in the strict projective OS sense of the above definition (\texttt{N701}).
+\begin{theorem}[Operational ToE closure in strict projective OS scope (N701)]
+On the current repo state, the repo exports a theorem-level strict projective operational OS support packet v2 (\texttt{N700}), hence discharges
+Operational ToE closure in strict projective OS scope (\texttt{N701}):
+\[
+\Lambda_{\mathrm{OS}}^{(\mathrm{proj})} =
+\bigl(
+\texttt{N680},\ \texttt{N692},\ \texttt{N693},\ \texttt{P694},\ \texttt{P696},\ \texttt{P697},\ \texttt{N699}
+\bigr),
+\]
+with all hard limits explicit (no kernel-alone/global \texttt{QW-2191} discharge, no directed physical sign datum in strict core, no ToE closure, no actual emergent observer closure).
 \end{theorem}
 
 \chapter{Strict core Lagrangian and emergence map}
@@ -287,6 +301,15 @@ for any nonzero vector $u$, the Rayleigh quotient
 $u^{\mathsf T}H_{\psi}^{(s)}u/(u^{\mathsf T}u)$ is a well-defined quadratic proxy, where $H_{\psi}^{(s)}=\tfrac12(H_{\psi}+H_{\psi}^{\mathsf T})$.
 This does \emph{not} yet constitute a physical unit identification, and it does not bypass the strict-core selector obstruction \texttt{QW-2191};
 it is an operational computability meaning only (packaged as a scope-limited meaning theorem \texttt{N703}).
+
+\begin{theorem}[Quadratic mass-proxy meaning definition (N703)]
+On the current repo state, the proxy quantities exported by \texttt{P694} and \texttt{P696} are interpreted strictly as \emph{dimensionless quadratic coefficients}
+of the exported diagonal/local $\Psi$-sector operator instantiation (\texttt{F459}):
+they are Rayleigh/Ritz-type quadratic forms of $H_{\psi}^{(s)}$ evaluated on exported projective selector rays (from \texttt{F672}) and deterministic in-plane complements.
+No physical-unit map, no Standard Model host identification, and no diagonalization claim is discharged.
+
+\emph{Hard limits:} no directed physical sign datum, no kernel-alone/global \texttt{QW-2191} discharge, and no ToE closure are claimed.
+\end{theorem}
 \section{Light $\to$ matter $\to$ observer ladder}
 
 \texttt{A11} fixes a disciplined emergence ladder. On the current repo state, the strongest honest statements along that ladder are:
@@ -365,6 +388,14 @@ B_{\mathrm{out}}
 \]
 
 This is a \emph{projective} closure statement only: it is insensitive to sign lifts $u_m\mapsto -u_m$ and does not claim any directed/sign-sensitive physical orientation datum.
+
+\begin{theorem}[Projective strict-core selector closure (N680)]
+On the current repo state, there exists one explicit global projective selector closure outcome on $C_{v1}$ (\texttt{F672}) derived from exported strict-core objects,
+whose closure observable on $Q_{\mathrm{out}}=\mathrm{span}\{o_+,o_-\}$ is a well-defined chartwise-glued rank-1 output projector.
+Therefore, strict-core selector closure is discharged in \emph{projective (ray-level) scope} on $C_{v1}$.
+
+\emph{Hard limits:} this does not discharge kernel-alone/global \texttt{QW-2191}, does not promote a directed/sign-sensitive physical orientation datum, and does not claim ToE closure.
+\end{theorem}
 \section{Directed lifts as gauge/convention layer}
 
 Beyond the projective closure object, the repo also exports directed/vector-level representatives and oriented sign-lift data as an explicit
@@ -379,6 +410,33 @@ The strict no-false-pass boundary is:
 Concretely, \texttt{N692} packages that the directed closure output (with its tracked output sign-lift) induces the same rank‑1 output projector
 as the projective closure output projector of \texttt{F672}.
 \texttt{N693} packages the gauge covariance of the directed output sign-lift under chartwise sign relifts.
+
+\begin{theorem}[Projective/directed closure output-ray invariance (N692)]
+Let $B_{\mathrm{out}}$ denote the exported projective closure output projector on $Q_{\mathrm{out}}=\mathrm{span}\{o_+,o_-\}$ (\texttt{F672}).
+For each exported directed closure representative (in its declared scope), let $q_{\mathrm{out}}^{(\mathrm{dir})}\in\mathbb{R}^2$ be the directed output vector (with explicit sign-lift convention).
+Then the induced rank-1 projector
+\[
+\Pi\!\left(q_{\mathrm{out}}^{(\mathrm{dir})}\right)
+:=
+\frac{q_{\mathrm{out}}^{(\mathrm{dir})}\,q_{\mathrm{out}}^{(\mathrm{dir})\mathsf T}}{q_{\mathrm{out}}^{(\mathrm{dir})\mathsf T}q_{\mathrm{out}}^{(\mathrm{dir})}}
+\]
+agrees with $B_{\mathrm{out}}$ (within the exported numeric tolerance audits).
+Therefore, the strict global closure outcome on $Q_{\mathrm{out}}$ is projectively invariant across the exported directed lifts.
+
+\emph{Hard limits:} this does not promote a directed/sign-sensitive physical orientation datum in strict core and does not discharge kernel-alone/global \texttt{QW-2191}.
+\end{theorem}
+
+\begin{theorem}[Chartwise \texorpdfstring{$\mathbb{Z}_2$}{Z2} gauge covariance of output sign-lift (N693)]
+Let $s_{\mathrm{out}}^{\mathrm{prem}}(\mathrm{pair}_m)\in\{\pm1\}$ denote the exported output sign-lift for the premise-based directed closure on chart $\mathrm{pair}_m$,
+and let $t(\mathrm{pair}_m)\in\{\pm1\}$ be the exported chartwise sign relift mapping the premise-based directed representative to the exported sign-fixed directed representative.
+Then the sign-fixed directed closure output sign-lift satisfies, for $m=1,\dots,5$,
+\[
+s_{\mathrm{out}}^{\mathrm{fix}}(\mathrm{pair}_m) = t(\mathrm{pair}_m)\,s_{\mathrm{out}}^{\mathrm{prem}}(\mathrm{pair}_m).
+\]
+Therefore, the directed closure output sign-lift is a tracked $\mathbb{Z}_2$ gauge datum and does not upgrade to a strict physical sign.
+
+\emph{Hard limits:} no directed physical orientation datum is claimed; no kernel-alone/global \texttt{QW-2191} discharge is claimed.
+\end{theorem}
 
 On the current repo state, the directed layer is further stabilized by explicit convention-scoped sign data:
 \begin{itemize}
@@ -587,6 +645,18 @@ C_{\mathrm{cl}}=N P N^{\mathsf T}.
 
 `P699` computes this chain on the current repo state and audits that the declared residual components vanish (within tolerance) while commitment remains positive.
 `N699` packages the computability statement with explicit hard limits (no kernel-alone/global `QW-2191` discharge; no ToE closure; no actual emergent observer closure).
+
+\begin{theorem}[Projective emergent-observer chain computability (N699)]
+On the current repo state, the repo exports a strict projective downstream chain computability witness:
+starting from the global projective selector closure output projector (\texttt{F672}), the induced projector pushforward semantics
+\[
+P \mapsto MPM^{\mathsf T}
+\]
+along the exported operator chain (\texttt{F92..F99}) produces a fully computable chain of projectors up to the declared closure-candidate level (\texttt{P699}).
+This is a projective/ray-level (gauge-safe) computability result only.
+
+\emph{Hard limits:} no kernel-alone/global \texttt{QW-2191} discharge, no ToE closure, and no actual emergent observer closure are claimed.
+\end{theorem}
 \section{Operational OS support packet (v1) (F698/P698/N698)}
 
 The v1 OS support packet (\texttt{F698}, audited by \texttt{P698}, packaged by \texttt{N698}) collects the minimum strict projective bundle sufficient to compute:
@@ -620,6 +690,26 @@ The strict projective operational ToE “OS” support packet is exported in v3 
 \]
 as the object \texttt{Lambda\_strict\_projective\_operational\_toe\_os\_support\_v3} (\texttt{F705}), audited by \texttt{P705} and packaged as a theorem by \texttt{N705}.
 All hard limits remain unchanged.
+
+\begin{theorem}[Strict projective operational OS support v3 (N705)]
+On the current repo state, the repo exports one strict projective operational OS support packet v3:
+\[
+\Lambda_{\mathrm{OS}}^{(\mathrm{proj})}(v3) =
+\bigl(
+\texttt{N680},\ \texttt{N692},\ \texttt{N693},\ \texttt{P694},\ \texttt{P696},\ \texttt{F704},\ \texttt{P697},\ \texttt{N699}
+\bigr),
+\]
+exported as \texttt{F705}, audited by \texttt{P705}, and packaged at theorem level by \texttt{N705}.
+This is an operational packaging result only: it adds an explicit tracked basis-invariant mass observable (\texttt{F704}) without strengthening any hard-limit claims.
+
+\emph{Hard limits:} no kernel-alone/global \texttt{QW-2191} discharge, no directed physical sign datum, no Standard Model host matching, no ToE closure, and no actual emergent observer closure are claimed.
+\end{theorem}
+
+\begin{proposition}[Release-7 strict projective OS closure dashboard (P706)]
+On the current repo state, the repo exports a single consolidated dashboard probe (\texttt{P706}) that checks the strict release-7 operational closure bundle by verifying:
+\texttt{N705} (OS support v3), \texttt{N701} (Operational ToE closure in strict projective OS scope), \texttt{N703} (mass-proxy meaning discipline), and \texttt{F704} (basis-invariant mass observable export).
+The current \texttt{P706} summary status is \texttt{PASS\_RELEASE\_7\_STRICT\_PROJECTIVE\_OPERATIONAL\_OS\_CLOSURE\_DASHBOARD\_READY}.
+\end{proposition}
 \section{Open target: actual emergent observer closure (future)}
 
 The current strict projective pipeline proves \emph{computability} of a downstream observer-facing chain, not the existence/uniqueness of an actual emergent observer.
@@ -650,6 +740,7 @@ Closed (scope-limited, strict projective OS):
   \item operational OS support packets (v1--v3) and OS computability pipeline from closure output through observer-limit readout and downstream chain (\texttt{N698}, \texttt{N700}, \texttt{N705}, \texttt{N701}),
   \item strict basis-invariant Hessian eigen-spectrum mass observable (\texttt{F704}),
   \item a disciplined internal meaning of the quadratic “mass proxy” layer (\texttt{N703}).
+  \item release-7 OS closure dashboard readiness (\texttt{P706}) (probe-level).
 \end{itemize}
 
 Open (explicit hard limits):
