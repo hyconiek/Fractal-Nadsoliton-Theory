@@ -198,6 +198,15 @@ P630_DIRECT_FORMAL_SUMMARY = (
     / "p630_canonical_ontology_supported_direct_formal_c1s1_family_route_probe_after_r83_vacuum_eom_yukawa_elimination_packet_summary.json"
 )
 
+T172_TARGET_SPEC = (
+    ROOT
+    / "T172_CURRENT_STRICT_GLOBAL_QW2191_DISCHARGE_AND_SELECTOR_CLOSURE_TARGET_SPEC.md"
+)
+N553_SEED_GLOBAL_DOWNSTREAM_COMPLETION_SUMMARY = (
+    GENERATED
+    / "n553_current_strict_global_downstream_completion_branch_discharge_for_promoted_seed_v1_chain_on_c_v1_discharge_theorem_summary.json"
+)
+
 
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(
@@ -498,6 +507,20 @@ def main() -> None:
     # Professorial precedence: directed continuation (P632) supersedes the earlier projective-only decision packet (P475).
     if directed_selected:
         projective_selected = False
+
+    # If P438 returns the generic “return to strict selector closure frontier” label, and the repo already advanced the
+    # genuinely-new seed-v1 global promotion lane, map that meta-label to the next concrete strict target spec.
+    if (
+        recommended_next == "RETURN_TO_STRICT_SELECTOR_CLOSURE_FRONTIER"
+        and T172_TARGET_SPEC.exists()
+        and N553_SEED_GLOBAL_DOWNSTREAM_COMPLETION_SUMMARY.exists()
+    ):
+        recommended_next = "T172"
+        recommendation_reason = (
+            "Repo is past the infrastructure-export phase for strict continuation on C_v1: global atlas/transition/state objects are exported (T170/T171), "
+            "and seed‑v1 global promotions are exported (N550–N553), but strict-core selector closure and global QW‑2191 discharge remain explicitly open. "
+            "Next honest strict target is the explicit global closure/discharge target spec (T172), keeping level/sign discipline explicit."
+        )
 
     # If a later professorial decision shifts the next move to the strict-core source-seed frontier, honor it.
     if source_seed_selected and recommended_next == "P11":
