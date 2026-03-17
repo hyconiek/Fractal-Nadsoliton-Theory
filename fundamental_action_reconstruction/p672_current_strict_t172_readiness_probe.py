@@ -168,6 +168,12 @@ def main() -> None:
     ]
     closure_objects_found = [p for p in closure_candidate_paths if exists(p)]
 
+    qw2191_resolution_summary_path = (
+        "fundamental_action_reconstruction/generated/n673_current_strict_global_qw2191_projective_closure_resolution_statement_theorem_summary.json"
+    )
+    n673 = load_json(qw2191_resolution_summary_path) if exists(qw2191_resolution_summary_path) else None
+    qw2191_resolution_statement_present = get_bool(n673, "theorem_result.discharged") is True
+
     # Current exported theorem summaries explicitly keep closure/QW2191 open (info-only).
     closure_claims_info = {
         "strict_core_selector_closure_claimed": bool(get_bool(n553, "theorem_result.strict_core_selector_closure")),
@@ -184,6 +190,8 @@ def main() -> None:
             "blocking_mismatches": blocking_mismatches,
             "load_errors": load_errors,
             "closure_objects_found": closure_objects_found,
+            "qw2191_resolution_statement_present": qw2191_resolution_statement_present,
+            "qw2191_resolution_summary_ref": qw2191_resolution_summary_path if n673 is not None else None,
             "closure_claims_info": closure_claims_info,
             "no_false_pass": True,
         }
@@ -195,15 +203,34 @@ def main() -> None:
             "no_false_pass": True,
         }
     else:
-        if closure_objects_found:
-            status = "P672_REVIEW_REQUIRED_CLOSURE_OBJECT_PRESENT_T172_PARTIALLY_STARTED"
-        else:
-            status = "P672_PREREQS_PRESENT_T172_OPEN_NO_GLOBAL_SELECTOR_CLOSURE_OBJECT_EXPORTED_YET"
-
         missing_target_objects = []
         if not closure_objects_found:
             missing_target_objects.append("SelectorClosure_global_C_v1_(projective|directed)_strict_v1 (choose one declared scope)")
-        missing_target_objects.append("Theorem-level uniqueness/boundary statement resolving the strict meaning of global QW-2191 discharge in the chosen closure scope")
+        if not qw2191_resolution_statement_present:
+            missing_target_objects.append(
+                "Theorem-level uniqueness/boundary statement resolving the strict meaning of global QW-2191 discharge in the chosen closure scope"
+            )
+
+        if not closure_objects_found:
+            status = "P672_PREREQS_PRESENT_T172_OPEN_NO_GLOBAL_SELECTOR_CLOSURE_OBJECT_EXPORTED_YET"
+        elif not qw2191_resolution_statement_present:
+            status = "P672_REVIEW_REQUIRED_CLOSURE_OBJECT_PRESENT_BUT_QW2191_RESOLUTION_STATEMENT_MISSING"
+        else:
+            status = "P672_T172_CORE_TARGET_OBJECTS_PRESENT_T172_READY_TO_ADVANCE_FRONTIER"
+
+        next_actions = []
+        if not closure_objects_found:
+            next_actions.append(
+                "Export one explicit global closure object on C_v1 (projective OR directed; keep sign discipline explicit)."
+            )
+        if not qw2191_resolution_statement_present:
+            next_actions.append(
+                "Export one theorem-level uniqueness/boundary statement for global QW-2191 in the chosen closure scope."
+            )
+        if not next_actions:
+            next_actions = [
+                "T172 core objects are present (closure object + QW-2191 resolution statement). Move to the next strict frontier without implying ToE closure."
+            ]
 
         artifact = {
             "stage": "P672",
@@ -212,12 +239,11 @@ def main() -> None:
             "checks": checks,
             "blocking_mismatches": [],
             "closure_objects_found": closure_objects_found,
+            "qw2191_resolution_statement_present": qw2191_resolution_statement_present,
+            "qw2191_resolution_summary_ref": qw2191_resolution_summary_path if n673 is not None else None,
             "closure_claims_info": closure_claims_info,
             "t172_missing_target_objects": missing_target_objects,
-            "recommended_next_actions": [
-                "Export one explicit global closure object on C_v1 (projective OR directed; keep sign discipline explicit).",
-                "Export one theorem-level uniqueness/boundary statement for global QW-2191 in the chosen closure scope.",
-            ],
+            "recommended_next_actions": next_actions,
             "hard_limits": [
                 "this_is_a_readiness_probe_only",
                 "no_strict_core_selector_closure_claim",
@@ -232,6 +258,7 @@ def main() -> None:
             "status": status,
             "t172_missing_target_objects": missing_target_objects,
             "closure_objects_found": closure_objects_found,
+            "qw2191_resolution_statement_present": qw2191_resolution_statement_present,
             "closure_claims_info": closure_claims_info,
             "no_false_pass": True,
         }
@@ -243,4 +270,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

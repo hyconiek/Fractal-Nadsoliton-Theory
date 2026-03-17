@@ -1,0 +1,46 @@
+{
+  "step": "N673",
+  "status": "N673_DISCHARGED_CURRENT_STRICT_GLOBAL_QW2191_PROJECTIVE_CLOSURE_RESOLUTION_STATEMENT_THEOREM_NO_FALSE_PASS",
+  "scope": "current_strict_global_qw2191_projective_closure_resolution_statement_only",
+  "checks": [
+    {
+      "id": "closure_object_present",
+      "actual": "SelectorClosure_global_C_v1_projective_strict_v1",
+      "expected": "SelectorClosure_global_C_v1_projective_strict_v1",
+      "pass": true
+    },
+    {
+      "id": "certificate_pass",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "id": "output_projector_equals_o_plus_projector_within_tolerance",
+      "actual": {
+        "max_abs_diff_to_diag(1,0)": 9.149258638450154e-16,
+        "tolerance": 1e-12
+      },
+      "expected": "<= tolerance",
+      "pass": true
+    }
+  ],
+  "theorem_result": {
+    "discharged": true,
+    "closure_scope": "projective_ray_state_only",
+    "closure_observable_unique_in_exported_scope": true,
+    "closure_observable": "output_projector_on_o_plus (projective; sign-gauge-safe)",
+    "QW2191_kernel_alone_obstruction_remains": true,
+    "QW2191_kernel_alone_discharge": false,
+    "QW2191_bypassed_for_projective_closure_observable": true,
+    "strict_core_selector_closure": false,
+    "ToE_closure": false
+  },
+  "hard_limits": [
+    "no_strict_core_selector_closure",
+    "no_global_kernel_alone_QW2191_discharge",
+    "no_operator_level_transition_groupoid_promotion (N512 boundary)",
+    "no_ToE_closure"
+  ],
+  "no_false_pass": true
+}
