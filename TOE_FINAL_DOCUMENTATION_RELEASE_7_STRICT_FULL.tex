@@ -331,6 +331,45 @@ No physical-unit map, no Standard Model host identification, and no diagonalizat
 \end{enumerate}
 
 \chapter{Selector closure on \texorpdfstring{$C_{v1}$}{C\_v1}}
+\section{Strict configuration space \texorpdfstring{$C_{v1}$}{C\_v1} and the \texorpdfstring{$\pi_1(C_{v1})\cong\mathbb{Z}_2$}{pi1(C\_v1)=Z2} witness (F306)}
+
+The strict selector program is typed over an explicit strict configuration-space object \texttt{C\_v1\_void\_configuration\_space\_in\_local\_B\_tilde\_1\_sector\_v1} (exported by \texttt{F306}).
+In strict scope, we only use the following minimal mathematical content of that export:
+
+\begin{definition}[Model declaration for $C_{v1}$ (no physics claims)]
+On the declared local protected sector, interpret the configuration space as the based mapping space model:
+\[
+C_{v1} := \mathrm{Map}_*^{\deg=1}\!\left(S^3,\mathrm{SU}(2)\right).
+\]
+This is the standard finite-energy compactification discipline:
+$\mathbb{R}^3\cup\{\infty\}\cong S^3$ with boundary condition $U(\infty)=1\in \mathrm{SU}(2)$, so a configuration is a based map $S^3\to \mathrm{SU}(2)$.
+\end{definition}
+
+\begin{proposition}[Topological witness $\pi_1(C_{v1})\cong\mathbb{Z}_2$ (F306)]
+On the above model, the fundamental group satisfies:
+\[
+\pi_1(C_{v1})\ \cong\ \mathbb{Z}_2,
+\]
+and \texttt{F306} exports an explicit generator label $\gamma_{\pi_1}^{(v1)}$ for the nontrivial loop class.
+\end{proposition}
+
+\begin{proof}[Proof sketch (classical algebraic topology)]
+Using the loop--suspension adjunction,
+\[
+\Omega\,\mathrm{Map}_*(S^3,S^3)\ \simeq\ \mathrm{Map}_*(\Sigma S^3,S^3)\ =\ \mathrm{Map}_*(S^4,S^3),
+\]
+hence
+\[
+\pi_1\!\left(\mathrm{Map}_*(S^3,S^3)\right)
+=\pi_0\!\left(\Omega\,\mathrm{Map}_*(S^3,S^3)\right)
+\cong \pi_0\!\left(\mathrm{Map}_*(S^4,S^3)\right)
+=[S^4,S^3]
+=\pi_4(S^3)
+\cong \mathbb{Z}_2,
+\]
+where the final identification $\pi_4(S^3)\cong \mathbb{Z}_2$ is a classical homotopy-group fact.
+This witness is strictly below any physical FR-sign quantization claims and is used only as a typed topology availability result.
+\end{proof}
 \section{Global atlas and transition objects (T170)}
 
 In the strict selector program, the configuration space domain is the declared strict object $C_{v1}$.
@@ -374,7 +413,13 @@ B_{\mathrm{out}}(\mathrm{pair}_m)
 Y_{\mathrm{sel}}(\mathrm{pair}_m)\,A_m\,Y_{\mathrm{sel}}(\mathrm{pair}_m)^{\mathsf T}
 \in\mathbb{R}^{2\times 2},
 \]
-in the fixed output basis $(o_+,o_-)$, where $Y_{\mathrm{sel}}$ is the exported global selector output operator (promoted seed-v1 output channels).
+in the fixed output basis $(o_+,o_-)$.
+The chartwise output channel $Y_{\mathrm{sel}}(\mathrm{pair}_m):\mathrm{pair}_m\to Q_{\mathrm{out}}$ is exported as a promoted seed-v1 chain object (\texttt{F660}) by:
+\[
+Y_{\mathrm{sel}}(\mathrm{pair}_m)\ :=\ O_{\mathrm{sel}}\circ R_{\mathrm{sel}}(\mathrm{pair}_m),
+\]
+where $R_{\mathrm{sel}}(\mathrm{pair}_m)$ is the exported chartwise selector reduction operator family and $O_{\mathrm{sel}}:Q_{\mathrm{sel}}\to Q_{\mathrm{out}}$ is the exported seed-v1 selector output operator (both promoted to global $C_{v1}$-typed objects in the strict program).
+Residual $\mathbb{Z}_2$ sign handling is tracked at the convention layer and is not promoted to a physical sign datum.
 
 \texttt{F672} exports that all chartwise $B_{\mathrm{out}}(\mathrm{pair}_m)$ agree (within tolerance) and records the resulting global output projector:
 \[
