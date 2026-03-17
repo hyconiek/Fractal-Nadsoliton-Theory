@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.58  
+**Version:** 6.5.59  
 **Date:** 2026-03-17  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -333,6 +333,9 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
     using the exported projective selector rays `u_m` (from `F672`) and their deterministic orthogonal complements inside each Fourier pair plane, a probe computes the
     diagonal channel proxies (and audits mixing) in a sign-gauge-invariant way (`P696`). This remains an operational proxy only and does **not** claim diagonalization,
     Standard Model identification, kernel-alone/global `QW-2191` discharge, or ToE closure.
+29. Update (`2026-03-17`): treating the directed sign as **gauge** (projective scope), a minimal downstream **observer‑limit readout** is computed directly from the
+    exported global projective selector closure output projector in the `(o_+,o_-)` basis (`F672`), yielding positive commitment and vanishing residual at readout level (`P697`).
+    This is a downstream readout bridge only and does **not** claim actual emergent observer closure, kernel-alone/global `QW-2191` discharge, or ToE closure.
 
 ### 1.2 What is still missing (no false pass)
 
@@ -705,6 +708,9 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
     używając wyeksportowanych projektowych promieni selektora `u_m` (z `F672`) oraz ich deterministycznych dopełnień ortogonalnych w każdej parze Fouriera, sonda liczy
     kanałowe proxy diagonalne (i audytuje mieszanie) w sposób znakowo-gauge-niezmienniczy (`P696`). To nadal jest wyłącznie proxy operacyjne i **nie** rości diagonalizacji,
     identyfikacji Standard Model, kernel-alone/global rozładowania `QW-2191` ani domknięcia ToE.
+29. Update (`2026-03-17`): traktując znak directed jako **gauge** (zakres projective), minimalny downstream **odczyt observer‑limit** jest policzalny bezpośrednio z
+    wyeksportowanego globalnego projektowego projektora wyjścia domknięcia selektora w bazie `(o_+,o_-)` (`F672`), dając dodatni commitment i znikomy residual na poziomie odczytu (`P697`).
+    To jest wyłącznie mostek odczytu downstream i **nie** rości actual emergent observer closure, kernel-alone/global rozładowania `QW-2191` ani domknięcia ToE.
 
 ### 1.2 Czego nadal brakuje (bez false pass)
 
