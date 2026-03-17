@@ -23,6 +23,7 @@ IN_P711 = GENERATED / "p711_current_strict_t173_previous_methodology_survival_an
 IN_P712 = GENERATED / "p712_current_strict_t176_existing_global_directed_sign_coherence_provider_nonexport_audit_probe_summary.json"
 IN_P713 = GENERATED / "p713_current_strict_t176_multiroot_rooted_sign_lift_root_independence_audit_probe_summary.json"
 IN_P714 = GENERATED / "p714_current_strict_t176_w_break_parity_root_support_profile_audit_probe_summary.json"
+IN_P715 = GENERATED / "p715_current_strict_t176_parity_completed_dual_anchor_multiroot_audit_probe_summary.json"
 
 # Convention-layer continuations (still below physical sign datum).
 IN_N688 = GENERATED / "n688_current_strict_t174_global_oriented_transition_edge_sign_lift_discharge_theorem_summary.json"
@@ -61,6 +62,7 @@ def main() -> None:
         "N687": IN_N687,
         "P711": IN_P711,
         "P712": IN_P712,
+        "P715": IN_P715,
     }
     missing_core = [str(p.relative_to(REPO)) for p in core.values() if not p.exists()]
     if missing_core:
@@ -85,6 +87,7 @@ def main() -> None:
     p712 = load_json(IN_P712)
     p713 = load_json(IN_P713) if IN_P713.exists() else None
     p714 = load_json(IN_P714) if IN_P714.exists() else None
+    p715 = load_json(IN_P715)
 
     n688 = load_json(IN_N688) if IN_N688.exists() else None
     n690 = load_json(IN_N690) if IN_N690.exists() else None
@@ -172,6 +175,24 @@ def main() -> None:
         False,
         "The exact next global provider target (T176-class) is not yet exported on current repo state (P712).",
     )
+    add_check(
+        "dual_anchor_candidate_supports_all_roots",
+        bool(p715.get("all_roots_supported")),
+        True,
+        "The parity-completed dual-anchor rule extends root support to all five roots on the current exported lane (P715).",
+    )
+    add_check(
+        "dual_anchor_candidate_projective_orbit_recovers_all_roots",
+        bool(p715.get("projective_root_independent_sign_orbit")) and bool(p715.get("projective_root_independent_output_orbit")),
+        True,
+        "That dual-anchor rule recovers one common rooted section orbit up to global sign across all roots (P715).",
+    )
+    add_check(
+        "dual_anchor_candidate_exact_directed_section_still_absent",
+        bool(p715.get("exact_root_independent_sign_vector")) or bool(p715.get("exact_root_independent_output_vectors")),
+        False,
+        "The same dual-anchor rule still does not recover one exact directed section across all roots (P715).",
+    )
     # Convention-layer continuations (optional but expected on Release 7 state).
     if IN_N688.exists():
         add_check(
@@ -231,6 +252,7 @@ def main() -> None:
             "P712": str(IN_P712.relative_to(REPO)),
             "P713": str(IN_P713.relative_to(REPO)) if IN_P713.exists() else None,
             "P714": str(IN_P714.relative_to(REPO)) if IN_P714.exists() else None,
+            "P715": str(IN_P715.relative_to(REPO)),
             "N688": str(IN_N688.relative_to(REPO)) if IN_N688.exists() else None,
             "N690": str(IN_N690.relative_to(REPO)) if IN_N690.exists() else None,
             "N691": str(IN_N691.relative_to(REPO)) if IN_N691.exists() else None,
@@ -273,6 +295,17 @@ def main() -> None:
                 else None
             ),
             "current_w_break_nonzero_anchor_pairs": p714.get("nonzero_anchor_pairs") if isinstance(p714, dict) else None,
+            "dual_anchor_candidate_all_roots_supported": bool(p715.get("all_roots_supported")),
+            "dual_anchor_candidate_exact_root_independent_section_exists": bool(
+                p715.get("exact_root_independent_sign_vector")
+            )
+            and bool(p715.get("exact_root_independent_output_vectors")),
+            "dual_anchor_candidate_projective_root_orbit_exists": bool(
+                p715.get("projective_root_independent_sign_orbit")
+            )
+            and bool(p715.get("projective_root_independent_output_orbit")),
+            "dual_anchor_candidate_same_orbit_roots_relative_to_reference": p715.get("same_orbit_roots_relative_to_reference"),
+            "dual_anchor_candidate_negated_orbit_roots_relative_to_reference": p715.get("negated_orbit_roots_relative_to_reference"),
             "convention_layer_oriented_edge_sign_lift_exported": bool(n688_tr.get("oriented_edge_sign_lift_exported") or n691_tr.get("oriented_edge_sign_lift_exported")),
             "convention_layer_sign_fixed_directed_representative_exported": bool(n690_tr.get("sign_fixed_directed_representative_exported")),
             "operational_release_7_projective_os_closure_dashboard_status": (p706 or {}).get("status") if isinstance(p706, dict) else None,
@@ -318,6 +351,15 @@ def main() -> None:
             else None
         ),
         "current_w_break_nonzero_anchor_pairs": p714.get("nonzero_anchor_pairs") if isinstance(p714, dict) else None,
+        "dual_anchor_candidate_all_roots_supported": bool(p715.get("all_roots_supported")),
+        "dual_anchor_candidate_exact_root_independent_section_exists": bool(
+            p715.get("exact_root_independent_sign_vector")
+        )
+        and bool(p715.get("exact_root_independent_output_vectors")),
+        "dual_anchor_candidate_projective_root_orbit_exists": bool(p715.get("projective_root_independent_sign_orbit"))
+        and bool(p715.get("projective_root_independent_output_orbit")),
+        "dual_anchor_candidate_same_orbit_roots_relative_to_reference": p715.get("same_orbit_roots_relative_to_reference"),
+        "dual_anchor_candidate_negated_orbit_roots_relative_to_reference": p715.get("negated_orbit_roots_relative_to_reference"),
         "convention_layer_sign_tools_exported": {
             "T174_oriented_edge_sign_lift": bool(n688_tr.get("oriented_edge_sign_lift_exported") or n691_tr.get("oriented_edge_sign_lift_exported")),
             "T175_chart_sign_fix": bool(n690_tr.get("sign_fixed_directed_representative_exported")),

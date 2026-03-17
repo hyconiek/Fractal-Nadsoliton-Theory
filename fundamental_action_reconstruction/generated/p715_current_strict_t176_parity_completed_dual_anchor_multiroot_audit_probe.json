@@ -1,0 +1,540 @@
+{
+  "stage": "P715",
+  "status": "PARTIAL_DUAL_ANCHOR_ALL_ROOT_SUPPORT_PROJECTIVE_ORBIT_ONLY",
+  "as_of": "2026-03-17",
+  "generated_utc": "2026-03-17T23:05:05.370658+00:00",
+  "goal": "audit whether the minimal parity-completed strict-core dual-anchor rule (w_break first, w_ref_unnormalized fallback) removes the root-support gap and, if so, whether the recovered rooted section is exact or only projective up to one global Z2 sign",
+  "inputs": {
+    "F647": "fundamental_action_reconstruction/generated/f647_strict_witness_provider_export_packet_for_seed_v1_realization_attempt.json",
+    "F467_atlas": "fundamental_action_reconstruction/generated/selector_atlas_pair12345_oriented_transport_mod_2pi_strict_convention_v1.json",
+    "Y_sel": "fundamental_action_reconstruction/generated/selector_output_operator_global_c_v1_seed_v1_promoted_strict_v1.json",
+    "P714_summary": "fundamental_action_reconstruction/generated/p714_current_strict_t176_w_break_parity_root_support_profile_audit_probe_summary.json",
+    "A_m_refs": {
+      "1": "fundamental_action_reconstruction/generated/a_1_pair1_orientation_projector_operator_strict_core_v1.json",
+      "2": "fundamental_action_reconstruction/generated/a_2_pair2_orientation_projector_operator_strict_core_v1.json",
+      "3": "fundamental_action_reconstruction/generated/a_3_pair3_orientation_projector_operator_strict_core_v1.json",
+      "4": "fundamental_action_reconstruction/generated/a_4_pair4_orientation_projector_operator_strict_core_v1.json",
+      "5": "fundamental_action_reconstruction/generated/a_5_pair5_orientation_projector_operator_strict_core_v1.json"
+    }
+  },
+  "root_anchor_rule": {
+    "rule_name": "w_break_first_then_w_ref_unnormalized_fallback",
+    "definition": "sign(dot(w_break,u_r)) if nonzero; else sign(dot(w_ref_unnormalized,u_r)) if nonzero; else undefined",
+    "uses_only_exported_strict_core_payloads": true,
+    "introduces_hidden_chart_slot": false
+  },
+  "tolerances": {
+    "dot_nonzero_abs_tol": 1e-12,
+    "alignment_l2_tol": 1e-09,
+    "output_max_abs_diff_tol": 1e-09
+  },
+  "rooted_results": {
+    "pair1": {
+      "root_pair": "pair1",
+      "dot_w_break_u_root": 0.00016200023852512268,
+      "dot_w_ref_u_root": 0.0,
+      "root_anchor_source": "w_break",
+      "root_anchor_scalar": 0.00016200023852512268,
+      "root_sign": 1,
+      "root_supported": true,
+      "transport_alignment_ok": true,
+      "sign_vector_by_pair": {
+        "pair1": 1,
+        "pair2": 1,
+        "pair3": 1,
+        "pair4": 1,
+        "pair5": 1
+      },
+      "output_vectors_by_pair": {
+        "pair1": [
+          1.0,
+          -9.149258638450154e-16
+        ],
+        "pair2": [
+          0.9999999999999998,
+          -6.871600701938739e-16
+        ],
+        "pair3": [
+          1.0,
+          -1.2977827337377104e-15
+        ],
+        "pair4": [
+          -1.0,
+          1.8755970911255346e-16
+        ],
+        "pair5": [
+          -1.0,
+          9.149258638450154e-16
+        ]
+      },
+      "output_o_plus_sign_by_pair": {
+        "pair1": "+",
+        "pair2": "+",
+        "pair3": "+",
+        "pair4": "-",
+        "pair5": "-"
+      },
+      "pair_audits": {
+        "pair1": {
+          "pair": "pair1",
+          "root_chart": true,
+          "dot_w_break_u_root": 0.00016200023852512268,
+          "dot_w_ref_u_root": 0.0,
+          "root_anchor_source": "w_break",
+          "root_sign": 1
+        },
+        "pair2": {
+          "pair": "pair2",
+          "transport_ref": "fundamental_action_reconstruction/generated/o12_pair1_pair2_selector_chart_transport_operator_strict_derived_from_sigma_int_alpha12_v1.json",
+          "dot_transport_root_with_u_target": 1.0,
+          "propagated_sign": 1,
+          "alignment_l2_residual": 9.937891504146011e-16,
+          "supported": true
+        },
+        "pair3": {
+          "pair": "pair3",
+          "transport_ref": "fundamental_action_reconstruction/generated/o13_pair1_pair3_selector_chart_transport_operator_oriented_alpha13_mod_2pi_strict_convention_v1.json",
+          "dot_transport_root_with_u_target": 0.9999999999999996,
+          "propagated_sign": 1,
+          "alignment_l2_residual": 1.9980309742435487e-15,
+          "supported": true
+        },
+        "pair4": {
+          "pair": "pair4",
+          "transport_ref": "fundamental_action_reconstruction/generated/o14_pair1_pair4_selector_chart_transport_operator_oriented_alpha14_mod_2pi_strict_convention_v1.json",
+          "dot_transport_root_with_u_target": 1.0000000000000004,
+          "propagated_sign": 1,
+          "alignment_l2_residual": 8.715427528620302e-16,
+          "supported": true
+        },
+        "pair5": {
+          "pair": "pair5",
+          "transport_ref": "fundamental_action_reconstruction/generated/o15_pair1_pair5_selector_chart_transport_operator_oriented_alpha15_mod_2pi_strict_convention_v1.json",
+          "dot_transport_root_with_u_target": 1.0000000000000018,
+          "propagated_sign": 1,
+          "alignment_l2_residual": 1.1138761565019688e-15,
+          "supported": true
+        }
+      }
+    },
+    "pair2": {
+      "root_pair": "pair2",
+      "dot_w_break_u_root": -7.33323876262474e-20,
+      "dot_w_ref_u_root": 0.026998084963236815,
+      "root_anchor_source": "w_ref_unnormalized",
+      "root_anchor_scalar": 0.026998084963236815,
+      "root_sign": 1,
+      "root_supported": true,
+      "transport_alignment_ok": true,
+      "sign_vector_by_pair": {
+        "pair2": 1,
+        "pair1": 1,
+        "pair3": 1,
+        "pair4": 1,
+        "pair5": 1
+      },
+      "output_vectors_by_pair": {
+        "pair1": [
+          1.0,
+          -9.149258638450154e-16
+        ],
+        "pair2": [
+          0.9999999999999998,
+          -6.871600701938739e-16
+        ],
+        "pair3": [
+          1.0,
+          -1.2977827337377104e-15
+        ],
+        "pair4": [
+          -1.0,
+          1.8755970911255346e-16
+        ],
+        "pair5": [
+          -1.0,
+          9.149258638450154e-16
+        ]
+      },
+      "output_o_plus_sign_by_pair": {
+        "pair1": "+",
+        "pair2": "+",
+        "pair3": "+",
+        "pair4": "-",
+        "pair5": "-"
+      },
+      "pair_audits": {
+        "pair1": {
+          "pair": "pair1",
+          "transport_ref": "fundamental_action_reconstruction/generated/o12_pair1_pair2_selector_chart_transport_operator_strict_derived_from_sigma_int_alpha12_v1.json",
+          "dot_transport_root_with_u_target": 1.0,
+          "propagated_sign": 1,
+          "alignment_l2_residual": 1.1805177965409559e-15,
+          "supported": true
+        },
+        "pair2": {
+          "pair": "pair2",
+          "root_chart": true,
+          "dot_w_break_u_root": -7.33323876262474e-20,
+          "dot_w_ref_u_root": 0.026998084963236815,
+          "root_anchor_source": "w_ref_unnormalized",
+          "root_sign": 1
+        },
+        "pair3": {
+          "pair": "pair3",
+          "transport_ref": "fundamental_action_reconstruction/generated/o23_pair2_pair3_selector_chart_transport_operator_oriented_alpha23_mod_2pi_strict_convention_v1.json",
+          "dot_transport_root_with_u_target": 1.0000000000000002,
+          "propagated_sign": 1,
+          "alignment_l2_residual": 1.3555076959715528e-15,
+          "supported": true
+        },
+        "pair4": {
+          "pair": "pair4",
+          "transport_ref": "fundamental_action_reconstruction/generated/o24_pair2_pair4_selector_chart_transport_operator_oriented_alpha24_mod_2pi_strict_convention_v1.json",
+          "dot_transport_root_with_u_target": 1.0000000000000007,
+          "propagated_sign": 1,
+          "alignment_l2_residual": 1.443556787877425e-15,
+          "supported": true
+        },
+        "pair5": {
+          "pair": "pair5",
+          "transport_ref": "fundamental_action_reconstruction/generated/o25_pair2_pair5_selector_chart_transport_operator_oriented_alpha25_mod_2pi_strict_convention_v1.json",
+          "dot_transport_root_with_u_target": 1.0000000000000007,
+          "propagated_sign": 1,
+          "alignment_l2_residual": 1.3809182874532855e-15,
+          "supported": true
+        }
+      }
+    },
+    "pair3": {
+      "root_pair": "pair3",
+      "dot_w_break_u_root": 1.6818187974471053e-19,
+      "dot_w_ref_u_root": 0.024120089587956365,
+      "root_anchor_source": "w_ref_unnormalized",
+      "root_anchor_scalar": 0.024120089587956365,
+      "root_sign": 1,
+      "root_supported": true,
+      "transport_alignment_ok": true,
+      "sign_vector_by_pair": {
+        "pair3": 1,
+        "pair1": 1,
+        "pair2": 1,
+        "pair4": 1,
+        "pair5": 1
+      },
+      "output_vectors_by_pair": {
+        "pair1": [
+          1.0,
+          -9.149258638450154e-16
+        ],
+        "pair2": [
+          0.9999999999999998,
+          -6.871600701938739e-16
+        ],
+        "pair3": [
+          1.0,
+          -1.2977827337377104e-15
+        ],
+        "pair4": [
+          -1.0,
+          1.8755970911255346e-16
+        ],
+        "pair5": [
+          -1.0,
+          9.149258638450154e-16
+        ]
+      },
+      "output_o_plus_sign_by_pair": {
+        "pair1": "+",
+        "pair2": "+",
+        "pair3": "+",
+        "pair4": "-",
+        "pair5": "-"
+      },
+      "pair_audits": {
+        "pair1": {
+          "pair": "pair1",
+          "transport_ref": "fundamental_action_reconstruction/generated/o13_pair1_pair3_selector_chart_transport_operator_oriented_alpha13_mod_2pi_strict_convention_v1.json",
+          "dot_transport_root_with_u_target": 0.9999999999999998,
+          "propagated_sign": 1,
+          "alignment_l2_residual": 2.0800021699679753e-15,
+          "supported": true
+        },
+        "pair2": {
+          "pair": "pair2",
+          "transport_ref": "fundamental_action_reconstruction/generated/o23_pair2_pair3_selector_chart_transport_operator_oriented_alpha23_mod_2pi_strict_convention_v1.json",
+          "dot_transport_root_with_u_target": 1.0000000000000004,
+          "propagated_sign": 1,
+          "alignment_l2_residual": 1.2591368194996016e-15,
+          "supported": true
+        },
+        "pair3": {
+          "pair": "pair3",
+          "root_chart": true,
+          "dot_w_break_u_root": 1.6818187974471053e-19,
+          "dot_w_ref_u_root": 0.024120089587956365,
+          "root_anchor_source": "w_ref_unnormalized",
+          "root_sign": 1
+        },
+        "pair4": {
+          "pair": "pair4",
+          "transport_ref": "fundamental_action_reconstruction/generated/o34_pair3_pair4_selector_chart_transport_operator_oriented_alpha34_mod_2pi_strict_convention_v1.json",
+          "dot_transport_root_with_u_target": 1.0,
+          "propagated_sign": 1,
+          "alignment_l2_residual": 1.5361150242944833e-15,
+          "supported": true
+        },
+        "pair5": {
+          "pair": "pair5",
+          "transport_ref": "fundamental_action_reconstruction/generated/o35_pair3_pair5_selector_chart_transport_operator_oriented_alpha35_mod_2pi_strict_convention_v1.json",
+          "dot_transport_root_with_u_target": 1.000000000000002,
+          "propagated_sign": 1,
+          "alignment_l2_residual": 2.0094876051016458e-15,
+          "supported": true
+        }
+      }
+    },
+    "pair4": {
+      "root_pair": "pair4",
+      "dot_w_break_u_root": 1.7502597213287567e-19,
+      "dot_w_ref_u_root": -0.027023002461428268,
+      "root_anchor_source": "w_ref_unnormalized",
+      "root_anchor_scalar": -0.027023002461428268,
+      "root_sign": -1,
+      "root_supported": true,
+      "transport_alignment_ok": true,
+      "sign_vector_by_pair": {
+        "pair4": -1,
+        "pair1": -1,
+        "pair2": -1,
+        "pair3": -1,
+        "pair5": -1
+      },
+      "output_vectors_by_pair": {
+        "pair1": [
+          -1.0,
+          9.149258638450154e-16
+        ],
+        "pair2": [
+          -0.9999999999999998,
+          6.871600701938739e-16
+        ],
+        "pair3": [
+          -1.0,
+          1.2977827337377104e-15
+        ],
+        "pair4": [
+          1.0,
+          -1.8755970911255346e-16
+        ],
+        "pair5": [
+          1.0,
+          -9.149258638450154e-16
+        ]
+      },
+      "output_o_plus_sign_by_pair": {
+        "pair1": "-",
+        "pair2": "-",
+        "pair3": "-",
+        "pair4": "+",
+        "pair5": "+"
+      },
+      "pair_audits": {
+        "pair1": {
+          "pair": "pair1",
+          "transport_ref": "fundamental_action_reconstruction/generated/o14_pair1_pair4_selector_chart_transport_operator_oriented_alpha14_mod_2pi_strict_convention_v1.json",
+          "dot_transport_root_with_u_target": -1.0000000000000004,
+          "propagated_sign": -1,
+          "alignment_l2_residual": 1.1798823454539255e-15,
+          "supported": true
+        },
+        "pair2": {
+          "pair": "pair2",
+          "transport_ref": "fundamental_action_reconstruction/generated/o24_pair2_pair4_selector_chart_transport_operator_oriented_alpha24_mod_2pi_strict_convention_v1.json",
+          "dot_transport_root_with_u_target": -1.0000000000000007,
+          "propagated_sign": -1,
+          "alignment_l2_residual": 1.793620188084545e-15,
+          "supported": true
+        },
+        "pair3": {
+          "pair": "pair3",
+          "transport_ref": "fundamental_action_reconstruction/generated/o34_pair3_pair4_selector_chart_transport_operator_oriented_alpha34_mod_2pi_strict_convention_v1.json",
+          "dot_transport_root_with_u_target": -0.9999999999999999,
+          "propagated_sign": -1,
+          "alignment_l2_residual": 1.7863023870449442e-15,
+          "supported": true
+        },
+        "pair4": {
+          "pair": "pair4",
+          "root_chart": true,
+          "dot_w_break_u_root": 1.7502597213287567e-19,
+          "dot_w_ref_u_root": -0.027023002461428268,
+          "root_anchor_source": "w_ref_unnormalized",
+          "root_sign": -1
+        },
+        "pair5": {
+          "pair": "pair5",
+          "transport_ref": "fundamental_action_reconstruction/generated/o45_pair4_pair5_selector_chart_transport_operator_oriented_alpha45_mod_2pi_strict_convention_v1.json",
+          "dot_transport_root_with_u_target": -1.0000000000000013,
+          "propagated_sign": -1,
+          "alignment_l2_residual": 1.4485763127999806e-15,
+          "supported": true
+        }
+      }
+    },
+    "pair5": {
+      "root_pair": "pair5",
+      "dot_w_break_u_root": 0.00013708274032496462,
+      "dot_w_ref_u_root": 3.906250000000001e-18,
+      "root_anchor_source": "w_break",
+      "root_anchor_scalar": 0.00013708274032496462,
+      "root_sign": 1,
+      "root_supported": true,
+      "transport_alignment_ok": true,
+      "sign_vector_by_pair": {
+        "pair5": 1,
+        "pair1": 1,
+        "pair2": 1,
+        "pair3": 1,
+        "pair4": 1
+      },
+      "output_vectors_by_pair": {
+        "pair1": [
+          1.0,
+          -9.149258638450154e-16
+        ],
+        "pair2": [
+          0.9999999999999998,
+          -6.871600701938739e-16
+        ],
+        "pair3": [
+          1.0,
+          -1.2977827337377104e-15
+        ],
+        "pair4": [
+          -1.0,
+          1.8755970911255346e-16
+        ],
+        "pair5": [
+          -1.0,
+          9.149258638450154e-16
+        ]
+      },
+      "output_o_plus_sign_by_pair": {
+        "pair1": "+",
+        "pair2": "+",
+        "pair3": "+",
+        "pair4": "-",
+        "pair5": "-"
+      },
+      "pair_audits": {
+        "pair1": {
+          "pair": "pair1",
+          "transport_ref": "fundamental_action_reconstruction/generated/o15_pair1_pair5_selector_chart_transport_operator_oriented_alpha15_mod_2pi_strict_convention_v1.json",
+          "dot_transport_root_with_u_target": 1.0000000000000018,
+          "propagated_sign": 1,
+          "alignment_l2_residual": 1.84531937667009e-15,
+          "supported": true
+        },
+        "pair2": {
+          "pair": "pair2",
+          "transport_ref": "fundamental_action_reconstruction/generated/o25_pair2_pair5_selector_chart_transport_operator_oriented_alpha25_mod_2pi_strict_convention_v1.json",
+          "dot_transport_root_with_u_target": 1.0000000000000004,
+          "propagated_sign": 1,
+          "alignment_l2_residual": 1.2107922504160505e-15,
+          "supported": true
+        },
+        "pair3": {
+          "pair": "pair3",
+          "transport_ref": "fundamental_action_reconstruction/generated/o35_pair3_pair5_selector_chart_transport_operator_oriented_alpha35_mod_2pi_strict_convention_v1.json",
+          "dot_transport_root_with_u_target": 1.000000000000002,
+          "propagated_sign": 1,
+          "alignment_l2_residual": 3.2754716787232657e-15,
+          "supported": true
+        },
+        "pair4": {
+          "pair": "pair4",
+          "transport_ref": "fundamental_action_reconstruction/generated/o45_pair4_pair5_selector_chart_transport_operator_oriented_alpha45_mod_2pi_strict_convention_v1.json",
+          "dot_transport_root_with_u_target": 1.0000000000000013,
+          "propagated_sign": 1,
+          "alignment_l2_residual": 1.768533355547718e-15,
+          "supported": true
+        },
+        "pair5": {
+          "pair": "pair5",
+          "root_chart": true,
+          "dot_w_break_u_root": 0.00013708274032496462,
+          "dot_w_ref_u_root": 3.906250000000001e-18,
+          "root_anchor_source": "w_break",
+          "root_sign": 1
+        }
+      }
+    }
+  },
+  "result": {
+    "all_roots_supported": true,
+    "supported_roots": [
+      "pair1",
+      "pair2",
+      "pair3",
+      "pair4",
+      "pair5"
+    ],
+    "unsupported_roots": [],
+    "reference_root": "pair1",
+    "anchor_source_by_root": {
+      "pair1": "w_break",
+      "pair2": "w_ref_unnormalized",
+      "pair3": "w_ref_unnormalized",
+      "pair4": "w_ref_unnormalized",
+      "pair5": "w_break"
+    },
+    "dual_anchor_adds_even_component_beyond_P714_odd_corridor": true,
+    "exact_sign_vector_agree_across_roots": false,
+    "exact_output_vectors_agree_across_roots": false,
+    "exact_root_independent_sign_vector": false,
+    "exact_root_independent_output_vectors": false,
+    "projective_sign_orbit_agree_across_roots": true,
+    "projective_output_orbit_agree_across_roots": true,
+    "projective_root_independent_sign_orbit": true,
+    "projective_root_independent_output_orbit": true,
+    "sign_vector_orbit_relation_by_root": {
+      "pair1": "same",
+      "pair2": "same",
+      "pair3": "same",
+      "pair4": "global_negation",
+      "pair5": "same"
+    },
+    "output_vector_orbit_relation_by_root": {
+      "pair1": "same",
+      "pair2": "same",
+      "pair3": "same",
+      "pair4": "global_negation",
+      "pair5": "same"
+    },
+    "same_orbit_roots_relative_to_reference": [
+      "pair1",
+      "pair2",
+      "pair3",
+      "pair5"
+    ],
+    "negated_orbit_roots_relative_to_reference": [
+      "pair4"
+    ],
+    "other_orbit_roots_relative_to_reference": [],
+    "max_output_difference_same_orbit": 2.0,
+    "max_output_difference_negated_orbit": 2.0,
+    "all_roots_supported_but_exact_section_split_by_global_z2": true,
+    "counts_as_strict_physical_orientation_datum": false,
+    "implies_t176_discharge": false,
+    "surviving_candidate_class": "all-root supported convention-layer section class defined only up to one global sign orbit",
+    "remaining_gap_after_positive_result": "residual global Z2 orbit split remains: the exact directed section is not root-independent even though the projective orbit is"
+  },
+  "hard_limits": [
+    "No strict-core directed/sign-sensitive physical orientation datum claim.",
+    "No kernel-alone/global QW-2191 discharge.",
+    "No T176 discharge claim.",
+    "No promotion of convention-layer oriented transport into strict-core/global provider.",
+    "No ToE closure claim."
+  ],
+  "no_false_pass": true
+}
