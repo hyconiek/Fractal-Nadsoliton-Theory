@@ -397,6 +397,90 @@ A_j \;=\; O_{ij}\,A_i\,O_{ij}^{\mathsf T}.
 \]
 \textbf{Cocycle discipline:} the repo keeps a strict boundary that cocycle/path-independence is a \emph{projector-section-level} statement only;
 operator-level identities $O_{jk}O_{ij}=O_{ik}$ are explicitly \emph{not} promoted in strict core (\texttt{N512}).
+
+\section{Seed-v1 strict-core internal selector-source chain (S\_sel\_int $\to$ E\_orient $\to$ R\_sel $\to$ O\_sel)}
+
+The projective closure object \texttt{F672} is constructed using a strict-core internal selector-source seed chain (seed-v1) that provides, in strict scope:
+
+\begin{itemize}
+  \item a strict-core source object for the \texttt{S\_sel\_int} step,
+  \item an admissible orientation datum on \texttt{pair1} (\texttt{E\_orient}),
+  \item a strict reduction operator into the selector-sector basis \texttt{Q\_sel\_v1} (\texttt{R\_sel}),
+  \item a strict output operator into the output-sector basis \texttt{Q\_out\_v1} (\texttt{O\_sel}).
+\end{itemize}
+
+All these objects are strictly below any kernel-alone/global \texttt{QW-2191} discharge and below any directed/sign-sensitive physical orientation datum.
+
+\subsection{Minimal admissibility contract for the source step (F34)}
+
+The strict program treats \texttt{S\_sel\_int} as an internal \emph{source} step.
+The minimal admissibility contract for a strict-core source object to count as \texttt{S\_sel\_int} (in the sense of \texttt{F34}) is:
+\begin{enumerate}[label=\arabic*.]
+  \item genuinely new strict-core source object (not a reuse of control/axiom artifacts),
+  \item carrier-typed enough for later export (so that \texttt{E\_orient} can be defined from it),
+  \item source-seed only (not a hidden discharge of downstream steps),
+  \item strict-core only,
+  \item non-substitutive (no silent legacy-to-strict kernel identification),
+  \item selector-acceptance independent (non-strict acceptance does not count as source construction),
+  \item future-bridge compatible (stable enough for later strict continuation).
+\end{enumerate}
+
+\begin{theorem}[Admissible strict-core source object for \texttt{S\_sel\_int} exists (N676)]
+On the current repo state, the strict core exports one admissible source object satisfying the above \texttt{F34} contract for the \texttt{S\_sel\_int} source step:
+\[
+\texttt{S\_sel\_int\_strict\_core\_source\_object\_v1}.
+\]
+\emph{Hard limits:} this is not yet a strict-core selector closure claim and does not discharge kernel-alone/global \texttt{QW-2191} or ToE closure.
+\end{theorem}
+
+\subsection{Orientation datum on \texorpdfstring{$\mathrm{pair}_1$}{pair1} (N546)}
+
+\begin{theorem}[Admissible orientation export (N546)]
+Within the current repo state, the exported strict-core source object
+\[
+\texttt{S\_sel\_int\_strict\_core\_source\_object\_v1}
+\]
+exports one admissible orientation datum on the \texttt{pair1} frame $\mathrm{span}\{c_1,s_1\}$:
+\[
+\texttt{E\_orient\_s\_sel\_int\_source\_object\_v1}.
+\]
+\emph{Hard limits:} this does not promote a directed physical sign datum and does not by itself discharge strict-core selector closure.
+\end{theorem}
+
+\subsection{Selector-sector and output-sector operators (N549)}
+
+Let the selector-sector and output-sector carrier spaces be fixed as two-dimensional real spaces with declared bases:
+\[
+Q_{\mathrm{sel}}:=\mathrm{span}\{q_+,q_-\},\qquad
+Q_{\mathrm{out}}:=\mathrm{span}\{o_+,o_-\}.
+\]
+
+\begin{theorem}[Seed-v1 selector output operator exists (N549)]
+Within the current repo state, the seed-v1 lane exports an admissible strict-core selector output operator
+\[
+O_{\mathrm{sel}}:\ Q_{\mathrm{sel}}\to Q_{\mathrm{out}},
+\]
+packaged as the exported object \texttt{O\_sel\_s\_sel\_int\_source\_object\_v1}, derived from an admissible reduction operator \texttt{R\_sel\_s\_sel\_int\_source\_object\_v1}.
+\emph{Hard limits:} no strict-core selector closure, no kernel-alone/global \texttt{QW-2191} discharge, and no ToE closure are claimed.
+\end{theorem}
+
+\subsection{Global promotion to \texorpdfstring{$C_{v1}$}{C\_v1}-typed operator families (N551/N552)}
+
+\begin{theorem}[Global reduction operator family promotion (N551)]
+On the current repo state, the repo exports a global ($C_{v1}$-typed) selector reduction operator family
+$R_{\mathrm{sel}}(\mathrm{pair}_m):\mathrm{pair}_m\to Q_{\mathrm{sel}}$
+promoted from the seed-v1 chain on \texttt{pair1} to all charts $\{\mathrm{pair}_1,\dots,\mathrm{pair}_5\}$, with overlap transport consistency kept at projector/section level (up to residual sign gauge).
+\emph{Hard limits:} no strict-core selector closure and no global \texttt{QW-2191} discharge are claimed.
+\end{theorem}
+
+\begin{theorem}[Global output operator and chartwise channels (N552)]
+On the current repo state, the repo exports a global ($C_{v1}$-typed) selector output operator $O_{\mathrm{sel}}:Q_{\mathrm{sel}}\to Q_{\mathrm{out}}$ and the induced chartwise output channels
+\[
+Y_{\mathrm{sel}}(\mathrm{pair}_m) := O_{\mathrm{sel}}\circ R_{\mathrm{sel}}(\mathrm{pair}_m)\qquad (m=1,\dots,5),
+\]
+with overlap transport consistency kept explicit up to residual sign gauge.
+\emph{Hard limits:} no strict-core selector closure, no kernel-alone/global \texttt{QW-2191} discharge, and no ToE closure are claimed.
+\end{theorem}
 \section{Projective closure (T172/T173 projective)}
 
 The global projective selector closure is exported as the object
