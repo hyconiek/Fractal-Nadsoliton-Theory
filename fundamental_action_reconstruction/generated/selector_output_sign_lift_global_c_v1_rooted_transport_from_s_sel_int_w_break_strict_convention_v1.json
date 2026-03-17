@@ -1,0 +1,217 @@
+{
+  "object": "SelectorOutputSignLift_global_C_v1_rooted_transport_from_S_sel_int_w_break_strict_convention_v1",
+  "stage": "F683",
+  "status": "PASS_EXPORTED",
+  "as_of": "2026-03-17",
+  "generated_utc": "2026-03-17T10:55:23.253498+00:00",
+  "intent": "Export an explicit global sign-lift/section choice object rooted at pair1: fix sign on pair1 from the exported reflection-breaking seed weight w_break and propagate to other charts via rooted transports O_1m, to obtain chartwise output vectors that glue in the fixed output basis (o_+,o_-). This is a tracked convention/section choice; it does not claim a physical sign-sensitive orientation datum.",
+  "domain": {
+    "configuration_space_object_ref": "fundamental_action_reconstruction/generated/c_v1_void_configuration_space_in_local_b_tilde_1_sector_v1.json",
+    "configuration_space_object": "C_v1_void_configuration_space_in_local_B_tilde_1_sector_v1",
+    "charts_cover": "U_pair1 = ... = U_pair5 = C_v1 (declared global cover)"
+  },
+  "inputs": {
+    "seed_w_break_ref": "fundamental_action_reconstruction/generated/f647_strict_witness_provider_export_packet_for_seed_v1_realization_attempt.json",
+    "output_channels_ref": "fundamental_action_reconstruction/generated/selector_output_operator_global_c_v1_seed_v1_promoted_strict_v1.json",
+    "a_m_refs": {
+      "1": "fundamental_action_reconstruction/generated/a_1_pair1_orientation_projector_operator_strict_core_v1.json",
+      "2": "fundamental_action_reconstruction/generated/a_2_pair2_orientation_projector_operator_strict_core_v1.json",
+      "3": "fundamental_action_reconstruction/generated/a_3_pair3_orientation_projector_operator_strict_core_v1.json",
+      "4": "fundamental_action_reconstruction/generated/a_4_pair4_orientation_projector_operator_strict_core_v1.json",
+      "5": "fundamental_action_reconstruction/generated/a_5_pair5_orientation_projector_operator_strict_core_v1.json"
+    },
+    "rooted_transport_refs": {
+      "2": "fundamental_action_reconstruction/generated/o12_pair1_pair2_selector_chart_transport_operator_strict_derived_from_sigma_int_alpha12_v1.json",
+      "3": "fundamental_action_reconstruction/generated/o13_pair1_pair3_selector_chart_transport_operator_axis_only_alpha13_mod_pi_strict_core_v1.json",
+      "4": "fundamental_action_reconstruction/generated/o14_pair1_pair4_selector_chart_transport_operator_axis_only_alpha14_mod_pi_strict_core_v1.json",
+      "5": "fundamental_action_reconstruction/generated/o15_pair1_pair5_selector_chart_transport_operator_axis_only_alpha15_mod_pi_strict_core_v1.json"
+    },
+    "boundary": "N512 (no operator-level groupoid promotion; axis-only edges remain projective)"
+  },
+  "root": {
+    "pair": "pair1",
+    "dot_w_break_u_1": 0.00016200023852512268,
+    "root_sign_s_1": 1,
+    "root_sign_source": "w_break"
+  },
+  "sign_lift": {
+    "rule": "rooted_transport_from_w_break_on_pair1",
+    "signs_by_pair": {
+      "pair1": 1,
+      "pair2": 1,
+      "pair3": 1,
+      "pair4": -1,
+      "pair5": -1
+    },
+    "tolerances": {
+      "dot_nonzero_abs_tol": 1e-12
+    },
+    "counts_as_strict_physical_orientation_datum": false
+  },
+  "output_observable": {
+    "basis": [
+      "o_+",
+      "o_-"
+    ],
+    "reference_chart": "pair1",
+    "output_vector_in_o_plus_o_minus": [
+      1.0,
+      -9.149258638450154e-16
+    ],
+    "gluing": {
+      "max_abs_diff_to_pair1": 7.273661547324619e-16,
+      "tol": 1e-09,
+      "glued": true
+    }
+  },
+  "charts": {
+    "pair1": {
+      "chart_id": "pair1",
+      "k": 1,
+      "coords_in_c_s_original": [
+        0.0,
+        -1.0
+      ],
+      "sign_lift_s_m": 1,
+      "coords_in_c_s_after_sign_lift": [
+        0.0,
+        -1.0
+      ],
+      "Y_sel_matrix_in_c_s_to_o": [
+        [
+          8.667595082435971e-16,
+          -1.0
+        ],
+        [
+          1.0000000000000004,
+          9.149258638450154e-16
+        ]
+      ],
+      "v_out_in_o_plus_o_minus": [
+        1.0,
+        -9.149258638450154e-16
+      ],
+      "o_plus_component_sign": "+"
+    },
+    "pair2": {
+      "chart_id": "pair2",
+      "k": 2,
+      "coords_in_c_s_original": [
+        0.9999999999999998,
+        1.6653345369377348e-16
+      ],
+      "sign_lift_s_m": 1,
+      "coords_in_c_s_after_sign_lift": [
+        0.9999999999999998,
+        1.6653345369377348e-16
+      ],
+      "Y_sel_matrix_in_c_s_to_o": [
+        [
+          1.0,
+          8.055271682862295e-16
+        ],
+        [
+          -8.536935238876477e-16,
+          1.0000000000000004
+        ]
+      ],
+      "v_out_in_o_plus_o_minus": [
+        0.9999999999999998,
+        -6.871600701938739e-16
+      ],
+      "o_plus_component_sign": "+"
+    },
+    "pair3": {
+      "chart_id": "pair3",
+      "k": 3,
+      "coords_in_c_s_original": [
+        1.0,
+        0.0
+      ],
+      "sign_lift_s_m": 1,
+      "coords_in_c_s_after_sign_lift": [
+        1.0,
+        0.0
+      ],
+      "Y_sel_matrix_in_c_s_to_o": [
+        [
+          1.0,
+          1.249616378136292e-15
+        ],
+        [
+          -1.2977827337377104e-15,
+          1.0000000000000004
+        ]
+      ],
+      "v_out_in_o_plus_o_minus": [
+        1.0,
+        -1.2977827337377104e-15
+      ],
+      "o_plus_component_sign": "+"
+    },
+    "pair4": {
+      "chart_id": "pair4",
+      "k": 4,
+      "coords_in_c_s_original": [
+        -1.0,
+        0.0
+      ],
+      "sign_lift_s_m": -1,
+      "coords_in_c_s_after_sign_lift": [
+        1.0,
+        -0.0
+      ],
+      "Y_sel_matrix_in_c_s_to_o": [
+        [
+          1.0,
+          1.3939335351113555e-16
+        ],
+        [
+          -1.8755970911255346e-16,
+          1.0000000000000004
+        ]
+      ],
+      "v_out_in_o_plus_o_minus": [
+        1.0,
+        -1.8755970911255346e-16
+      ],
+      "o_plus_component_sign": "+"
+    },
+    "pair5": {
+      "chart_id": "pair5",
+      "k": 5,
+      "coords_in_c_s_original": [
+        0.0,
+        1.0
+      ],
+      "sign_lift_s_m": -1,
+      "coords_in_c_s_after_sign_lift": [
+        -0.0,
+        -1.0
+      ],
+      "Y_sel_matrix_in_c_s_to_o": [
+        [
+          8.667595082435971e-16,
+          -1.0
+        ],
+        [
+          1.0000000000000004,
+          9.149258638450154e-16
+        ]
+      ],
+      "v_out_in_o_plus_o_minus": [
+        1.0,
+        -9.149258638450154e-16
+      ],
+      "o_plus_component_sign": "+"
+    }
+  },
+  "hard_limits": [
+    "Convention/section choice only; does not claim a directed/sign-sensitive physical orientation datum in strict core.",
+    "Depends on rooted axis-only transport representatives on some edges; no Aut(Z_12)-invariant canonicity claim.",
+    "Does not claim strict-core selector closure / admissible S_sel_int.",
+    "Does not claim kernel-alone/global QW-2191 discharge.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}
