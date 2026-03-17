@@ -1,0 +1,56 @@
+{
+  "step": "N681",
+  "status": "N681_DISCHARGED_CURRENT_STRICT_T173_DIRECTED_OUTPUT_SIGN_LIFT_OBSTRUCTION_BOUNDARY_THEOREM_NO_FALSE_PASS",
+  "scope": "current_strict_t173_directed_output_sign_lift_boundary_only",
+  "checks": [
+    {
+      "id": "projective_strict_core_selector_closure_discharged",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Projective strict-core selector closure is discharged (N680)."
+    },
+    {
+      "id": "raw_directed_output_obstruction_boundary_positive",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Raw directed closure outputs remain obstructed without explicit sign lift (N675 boundary)."
+    },
+    {
+      "id": "deterministic_sign_lift_candidate_exists_from_exported_weights",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "A deterministic per-chart sign-lift candidate can be defined from exported S_sel_int seed payload weights (P681)."
+    },
+    {
+      "id": "deterministic_sign_lift_candidate_fails_to_make_directed_output_chart_independent",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "Even under that deterministic sign-lift candidate, the directed output sign is not globally chart-independent (P681)."
+    }
+  ],
+  "blocking_mismatches": [],
+  "theorem_result": {
+    "discharged": true,
+    "projective_strict_core_selector_closure": true,
+    "directed_output_sign_lift_determined_in_strict_core": false,
+    "directed_sign_sensitive_physical_orientation_in_strict_core": false,
+    "QW2191_kernel_alone_discharge": false,
+    "ToE_closure": false,
+    "evidence": {
+      "N680": "fundamental_action_reconstruction/generated/n680_current_strict_t173_projective_strict_core_selector_closure_discharge_theorem_summary.json",
+      "N675": "fundamental_action_reconstruction/generated/n675_current_strict_global_directed_selector_closure_obstruction_boundary_theorem_summary.json",
+      "P681": "fundamental_action_reconstruction/generated/p681_current_strict_t173_reflection_breaking_sign_lift_from_s_sel_int_audit_probe_summary.json"
+    },
+    "remaining_open_branch": "kernel_alone_global_QW2191_discharge_and_any_directed_physical_orientation_datum"
+  },
+  "hard_limits": [
+    "no_kernel_alone_global_QW2191_discharge",
+    "no_directed_sign_sensitive_physical_orientation_claim",
+    "no_ToE_closure"
+  ],
+  "no_false_pass": true
+}
