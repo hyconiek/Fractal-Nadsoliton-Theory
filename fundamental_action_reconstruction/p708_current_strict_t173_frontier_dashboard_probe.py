@@ -26,6 +26,7 @@ IN_P714 = GENERATED / "p714_current_strict_t176_w_break_parity_root_support_prof
 IN_P715 = GENERATED / "p715_current_strict_t176_parity_completed_dual_anchor_multiroot_audit_probe_summary.json"
 IN_P716 = GENERATED / "p716_current_strict_t176_pair4_negative_cosine_polarity_global_z2_orbit_split_audit_probe_summary.json"
 IN_P717 = GENERATED / "p717_current_strict_t176_pair4_exact_branch_split_release_7_os_gauge_irrelevance_bridge_audit_probe_summary.json"
+IN_P718 = GENERATED / "p718_current_strict_t176_single_mixed_linear_weight_span_provider_insufficiency_audit_probe_summary.json"
 
 # Convention-layer continuations (still below physical sign datum).
 IN_N688 = GENERATED / "n688_current_strict_t174_global_oriented_transition_edge_sign_lift_discharge_theorem_summary.json"
@@ -67,6 +68,7 @@ def main() -> None:
         "P715": IN_P715,
         "P716": IN_P716,
         "P717": IN_P717,
+        "P718": IN_P718,
     }
     missing_core = [str(p.relative_to(REPO)) for p in core.values() if not p.exists()]
     if missing_core:
@@ -94,6 +96,7 @@ def main() -> None:
     p715 = load_json(IN_P715)
     p716 = load_json(IN_P716)
     p717 = load_json(IN_P717)
+    p718 = load_json(IN_P718)
 
     n688 = load_json(IN_N688) if IN_N688.exists() else None
     n690 = load_json(IN_N690) if IN_N690.exists() else None
@@ -211,6 +214,18 @@ def main() -> None:
         True,
         "That localized pair4 exact branch split is already gauge-irrelevant for the concrete Release-7 OS observables downstream (P717).",
     )
+    add_check(
+        "single_mixed_linear_weight_span_still_has_no_exact_provider",
+        bool(p718.get("single_mixed_linear_weight_span_exact_root_independent_section_exists")),
+        False,
+        "Even the full single mixed linear span of the current exported odd/even weights still does not discharge one exact root-independent provider (P718).",
+    )
+    add_check(
+        "single_mixed_linear_weight_span_has_projective_only_sector",
+        bool(p718.get("single_mixed_linear_weight_span_projective_orbit_only_sector_exists")),
+        True,
+        "That same single mixed linear span still reaches all-root projective-orbit sectors, so the failure is exact-provider level rather than support level (P718).",
+    )
     # Convention-layer continuations (optional but expected on Release 7 state).
     if IN_N688.exists():
         add_check(
@@ -273,6 +288,7 @@ def main() -> None:
             "P715": str(IN_P715.relative_to(REPO)),
             "P716": str(IN_P716.relative_to(REPO)),
             "P717": str(IN_P717.relative_to(REPO)),
+            "P718": str(IN_P718.relative_to(REPO)),
             "N688": str(IN_N688.relative_to(REPO)) if IN_N688.exists() else None,
             "N690": str(IN_N690.relative_to(REPO)) if IN_N690.exists() else None,
             "N691": str(IN_N691.relative_to(REPO)) if IN_N691.exists() else None,
@@ -331,6 +347,15 @@ def main() -> None:
             ),
             "pair4_exact_branch_split_is_release7_os_gauge_irrelevant": bool(
                 p717.get("pair4_exact_branch_split_gauge_irrelevant_for_release_7_os_observables")
+            ),
+            "single_mixed_linear_weight_span_exact_root_independent_section_exists": bool(
+                p718.get("single_mixed_linear_weight_span_exact_root_independent_section_exists")
+            ),
+            "single_mixed_linear_weight_span_projective_orbit_only_sector_exists": bool(
+                p718.get("single_mixed_linear_weight_span_projective_orbit_only_sector_exists")
+            ),
+            "single_mixed_linear_weight_span_projective_only_negated_root_sets_seen": p718.get(
+                "projective_only_negated_root_sets_seen"
             ),
             "convention_layer_oriented_edge_sign_lift_exported": bool(n688_tr.get("oriented_edge_sign_lift_exported") or n691_tr.get("oriented_edge_sign_lift_exported")),
             "convention_layer_sign_fixed_directed_representative_exported": bool(n690_tr.get("sign_fixed_directed_representative_exported")),
@@ -391,6 +416,15 @@ def main() -> None:
         ),
         "pair4_exact_branch_split_is_release7_os_gauge_irrelevant": bool(
             p717.get("pair4_exact_branch_split_gauge_irrelevant_for_release_7_os_observables")
+        ),
+        "single_mixed_linear_weight_span_exact_root_independent_section_exists": bool(
+            p718.get("single_mixed_linear_weight_span_exact_root_independent_section_exists")
+        ),
+        "single_mixed_linear_weight_span_projective_orbit_only_sector_exists": bool(
+            p718.get("single_mixed_linear_weight_span_projective_orbit_only_sector_exists")
+        ),
+        "single_mixed_linear_weight_span_projective_only_negated_root_sets_seen": p718.get(
+            "projective_only_negated_root_sets_seen"
         ),
         "convention_layer_sign_tools_exported": {
             "T174_oriented_edge_sign_lift": bool(n688_tr.get("oriented_edge_sign_lift_exported") or n691_tr.get("oriented_edge_sign_lift_exported")),

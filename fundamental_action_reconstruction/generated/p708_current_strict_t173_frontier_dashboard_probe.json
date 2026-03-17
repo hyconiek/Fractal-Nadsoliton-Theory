@@ -2,7 +2,7 @@
   "stage": "P708",
   "status": "PASS_T173_FRONTIER_DASHBOARD_READY",
   "as_of": "2026-03-18",
-  "generated_utc": "2026-03-17T23:16:39.416044+00:00",
+  "generated_utc": "2026-03-17T23:29:48.309876+00:00",
   "scope": "current_strict_t173_frontier_dashboard_only",
   "inputs": {
     "N679": "fundamental_action_reconstruction/generated/n679_current_strict_t172_strict_core_selector_closure_frontier_boundary_theorem_summary.json",
@@ -17,6 +17,7 @@
     "P715": "fundamental_action_reconstruction/generated/p715_current_strict_t176_parity_completed_dual_anchor_multiroot_audit_probe_summary.json",
     "P716": "fundamental_action_reconstruction/generated/p716_current_strict_t176_pair4_negative_cosine_polarity_global_z2_orbit_split_audit_probe_summary.json",
     "P717": "fundamental_action_reconstruction/generated/p717_current_strict_t176_pair4_exact_branch_split_release_7_os_gauge_irrelevance_bridge_audit_probe_summary.json",
+    "P718": "fundamental_action_reconstruction/generated/p718_current_strict_t176_single_mixed_linear_weight_span_provider_insufficiency_audit_probe_summary.json",
     "N688": "fundamental_action_reconstruction/generated/n688_current_strict_t174_global_oriented_transition_edge_sign_lift_discharge_theorem_summary.json",
     "N690": "fundamental_action_reconstruction/generated/n690_current_strict_t175_global_chart_sign_fixing_discharge_theorem_summary.json",
     "N691": "fundamental_action_reconstruction/generated/n691_current_strict_t174_global_oriented_transition_edge_sign_lift_from_sign_fixed_directed_state_discharge_theorem_summary.json",
@@ -116,6 +117,20 @@
       "meaning": "That localized pair4 exact branch split is already gauge-irrelevant for the concrete Release-7 OS observables downstream (P717)."
     },
     {
+      "id": "single_mixed_linear_weight_span_still_has_no_exact_provider",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "Even the full single mixed linear span of the current exported odd/even weights still does not discharge one exact root-independent provider (P718)."
+    },
+    {
+      "id": "single_mixed_linear_weight_span_has_projective_only_sector",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "That same single mixed linear span still reaches all-root projective-orbit sectors, so the failure is exact-provider level rather than support level (P718)."
+    },
+    {
       "id": "t174_oriented_edge_sign_lift_exported",
       "actual": true,
       "expected": true,
@@ -179,6 +194,17 @@
     ],
     "dual_anchor_orbit_split_explained_by_pair4_negative_cosine_polarity": true,
     "pair4_exact_branch_split_is_release7_os_gauge_irrelevant": true,
+    "single_mixed_linear_weight_span_exact_root_independent_section_exists": false,
+    "single_mixed_linear_weight_span_projective_orbit_only_sector_exists": true,
+    "single_mixed_linear_weight_span_projective_only_negated_root_sets_seen": [
+      [
+        "pair2",
+        "pair3"
+      ],
+      [
+        "pair4"
+      ]
+    ],
     "convention_layer_oriented_edge_sign_lift_exported": true,
     "convention_layer_sign_fixed_directed_representative_exported": true,
     "operational_release_7_projective_os_closure_dashboard_status": "PASS_RELEASE_7_STRICT_PROJECTIVE_OPERATIONAL_OS_CLOSURE_DASHBOARD_READY"
