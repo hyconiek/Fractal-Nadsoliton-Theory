@@ -1,0 +1,41 @@
+{
+  "stage": "P685",
+  "status": "PASS_W_BREAK_ROOTED_DIRECTED_CLOSURE_OUTPUT_GLUED",
+  "as_of": "2026-03-17",
+  "generated_utc": "2026-03-17T11:23:49.296242+00:00",
+  "goal": "audit_directed_closure_output_from_F684_directed_state_and_F660_output_channels_on_C_v1",
+  "inputs": {
+    "directed_state_ref": "fundamental_action_reconstruction/generated/selector_state_global_c_v1_directed_rooted_transport_from_s_sel_int_w_break_strict_convention_v1.json",
+    "output_operator_ref": "fundamental_action_reconstruction/generated/selector_output_operator_global_c_v1_seed_v1_promoted_strict_v1.json",
+    "reference_output_sign_lift_ref": "fundamental_action_reconstruction/generated/selector_output_sign_lift_global_c_v1_rooted_transport_from_s_sel_int_w_break_strict_convention_v1.json"
+  },
+  "output_observable": {
+    "basis": [
+      "o_+",
+      "o_-"
+    ],
+    "reference_chart": "pair1",
+    "output_vector_in_o_plus_o_minus": [
+      1.0,
+      -9.149258638450154e-16
+    ],
+    "gluing": {
+      "max_abs_diff_to_pair1": 7.273661547324619e-16,
+      "tol": 1e-09,
+      "glued": true
+    }
+  },
+  "cross_checks": {
+    "matches_F683_chartwise_outputs_if_present": true,
+    "max_abs_diff_to_F683": 0.0,
+    "tol": 1e-09
+  },
+  "hard_limits": [
+    "Convention/section choice only; does not claim a directed/sign-sensitive physical orientation datum in strict core.",
+    "Does not claim Aut(Z_12)-invariant sign canonicity.",
+    "Does not claim strict-core selector closure / admissible S_sel_int.",
+    "Does not claim kernel-alone/global QW-2191 discharge.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}
