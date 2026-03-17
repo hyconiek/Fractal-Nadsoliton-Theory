@@ -1,7 +1,7 @@
 # N130 Last Positive Branch Reduced To One First Source Seed Construction Target Theorem
 
 Status: `N130_DISCHARGED_LAST_POSITIVE_BRANCH_REDUCED_TO_ONE_FIRST_SOURCE_SEED_CONSTRUCTION_TARGET_THEOREM_NO_FALSE_PASS`
-As of: `2026-03-07`
+As of: `2026-03-17`
 
 ## Goal
 
@@ -16,27 +16,19 @@ first remaining open branch itself?
 
 Consider the current repo state containing all of the following:
 
-1. `N129`
-   - the last positive branch is reduced to one initial package,
-2. `F33`
-   - the first construction target inside that package is frozen as a source-
-     seed target for `S_sel_int`,
-3. `P119`
-   - these now reduce the last positive branch to one explicit first
-     construction target.
+1. `P119` (updated)
+   - the last positive branch is reduced to one first strict-core source-seed anchor `S_sel_int`,
+   - and the repo now exports an admissible strict-core `S_sel_int` source object together with its downstream
+     orientation/operator exports (as reported by `P119` via `N676/N546/N549`),
+2. `N676`
+   - an admissible strict-core source object is exported:
+     `S_sel_int_strict_core_source_object_v1`.
 
 The theorem is:
 
-> On the current repo state, the first remaining open branch is already reduced
-> to one explicit future source-seed construction target:
->
-> `construct admissible S_sel_int`
->
-> while the later branches
-> `derive admissible E_orient from S_sel_int`
-> and
-> `complete B_sel -> R_sel -> O_sel`
-> remain openly future.
+> On the current repo state, the strict-core source-seed continuation is anchored on one explicit strict-core source
+> object name (`S_sel_int`), and the remaining open branch is no longer “seed construction”, but the strict selector
+> closure / `QW-2191` discipline frontier (packaged under `T172`).
 
 ## Result
 
@@ -53,9 +45,6 @@ The theorem is:
 
 `N130` does not discharge:
 
-- construction of `S_sel_int`,
-- export of `E_orient`,
-- downstream bridge/reduction/operator reachability,
 - strict-core selector closure,
 - `QW-2191` discharge,
 - ToE closure.

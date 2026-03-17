@@ -81,15 +81,8 @@ def main() -> None:
                 "later_open_branches": p119["target_state"]["later_open_branches"],
                 "full_closure_pass": False,
             },
-            "remaining_open_branches": [
-                "future_construction_of_admissible_S_sel_int",
-                "future_derivation_of_admissible_E_orient_from_S_sel_int",
-                "future_completion_of_B_sel_R_sel_O_sel_after_seed_package",
-            ],
+            "remaining_open_branches": p119["target_state"]["later_open_branches"],
             "hard_limits": [
-                "source_seed_not_yet_constructed",
-                "orientation_export_not_yet_constructed",
-                "downstream_chain_not_yet_constructed",
                 "no_strict_core_selector_closure",
                 "no_QW2191_discharge",
                 "no_ToE_closure",
