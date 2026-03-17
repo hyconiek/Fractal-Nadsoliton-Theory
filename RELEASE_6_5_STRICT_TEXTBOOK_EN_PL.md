@@ -274,6 +274,9 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
     and does **not** imply kernel-alone/global `QW-2191` discharge or ToE closure.
 12. Update (`2026-03-17`): a strict boundary records that the raw directed closure output channel is obstructed without an explicit sign-lift / section choice (`N675`),
     and packages the remaining strict frontier beyond the projective strict-core closure discharge as: kernel-alone/global `QW-2191` discharge + any directed/sign-sensitive physical orientation datum (`N679`).
+13. Update (`2026-03-17`): even when attempting to construct a **deterministic** sign-lift candidate from the exported strict-core seed payload weights (`F647`),
+    the directed output sign is not globally chart-independent (`P681`), packaged as a strict boundary by `N681`. A chart-sine-aligned sign-lift **convention**
+    can be made output-sign-consistent (`P682`), but it depends on a non-`Aut(Z_12)`-invariant chart embedding and therefore does not upgrade directed physical orientation into strict core.
 
 ### 1.2 What is still missing (no false pass)
 
@@ -644,6 +647,9 @@ RETURN_TO_STRICT_SELECTOR_CLOSURE_FRONTIER
 W konsekwencji `H37` nie jest już blockerem (w zadeklarowanym scope premise-based), a frontier seed‑v1 nie jest już “przed eksportem”.
 Update (`2026-03-17`): globalne obiekty domknięcia `T172` są rozładowane w obu zakresach (projektowy: `N674`; kierunkowy premise-based: `N678`),
 z jawną granicą surowych wyjść bez sign-liftu (`N675`), twierdzeniem rozładowującym projective strict-core selector closure (`N680`), twierdzeniem opakowującym pozostały frontier (`N679`) oraz jawną specyfikacją celu post-`T172` (`T173`).
+Update (`2026-03-17`): nawet przy próbie skonstruowania **deterministycznego** sign-liftu z wyeksportowanych wag payloadu seed strict-core (`F647`),
+wynik kierunkowy nie jest globalnie chart-independent (`P681`), opakowane jako granica strict przez `N681`. Konwencyjny sign-lift typu chart-sine-aligned
+daje spójny znak wyjścia na `{pair1..pair5}` (`P682`), ale zależy od nie-`Aut(Z_12)`-invariant embeddingu i liczy się wyłącznie jako warstwa konwencji (nie fizyczny datum orientacji).
 Następny bottleneck jest teraz jawnie **post‑promotion**:
 
 1. projective strict-core selector closure jest rozładowany (`N680`), ale nie implikuje kernel-alone/global rozładowania `QW-2191`,

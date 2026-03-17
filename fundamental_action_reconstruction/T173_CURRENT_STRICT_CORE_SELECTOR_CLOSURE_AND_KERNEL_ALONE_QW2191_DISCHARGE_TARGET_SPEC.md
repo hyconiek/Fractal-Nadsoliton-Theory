@@ -103,6 +103,11 @@ On the current repo state:
 - while `QW2191_kernel_alone_discharge = false` and any directed/sign-sensitive physical orientation datum in strict core remain explicitly unclaimed,
   packaged by the frontier boundary theorem `N679`.
 
+Update (`2026-03-17`): even when attempting to construct a **deterministic** per-chart sign-lift rule from the exported strict-core
+seed payload weights (`F647`), the directed output sign is not globally chart-independent (`P681`), packaged as a strict boundary by `N681`.
+A chart-sine-aligned sign-lift **convention** can be made output-sign-consistent (`P682`), but this depends on a non-`Aut(Z_12)`-invariant chart embedding
+and therefore does **not** upgrade any directed/sign-sensitive physical orientation datum into strict core.
+
 Therefore, `T173` is the next honest strict label for continued closure attempts beyond `T172`.
 
 ## Hard limits
