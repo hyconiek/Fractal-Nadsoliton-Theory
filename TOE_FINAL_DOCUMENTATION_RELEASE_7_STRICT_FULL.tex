@@ -407,6 +407,117 @@ A_j \;=\; O_{ij}\,A_i\,O_{ij}^{\mathsf T}.
 \textbf{Cocycle discipline:} the repo keeps a strict boundary that cocycle/path-independence is a \emph{projector-section-level} statement only;
 operator-level identities $O_{jk}O_{ij}=O_{ik}$ are explicitly \emph{not} promoted in strict core (\texttt{N512}).
 
+\subsection{Exported JSON-level interfaces (F469)}
+\label{sec:f469_interfaces}
+
+This section makes the \textbf{exact exported object interfaces} explicit, so that the strict global selector infrastructure can be audited without opening the repo.
+
+\begin{definition}[Exported atlas interface: \texttt{SelectorAtlas\_global\_C\_v1\_strict\_v1} (F469)]
+The atlas object is exported as the JSON artifact
+\verb|fundamental_action_reconstruction/generated/selector_atlas_global_c_v1_strict_v1.json|.
+Its minimal strict interface consists of:
+\begin{enumerate}[label=\arabic*.]
+  \item \texttt{domain}: a reference to the declared strict configuration space object
+  (\verb|.../c_v1_void_configuration_space_in_local_b_tilde_1_sector_v1.json|),
+  and the explicit global-cover declaration $U_{\mathrm{pair}_1}=\cdots=U_{\mathrm{pair}_5}=C_{v1}$;
+  \item \texttt{charts}: a map over chart labels $\mathrm{pair}_m$ containing:
+  \begin{itemize}
+    \item \texttt{carrier\_plane} (the Fourier pair plane $V_m=\mathrm{span}\{c_m,s_m\}$),
+    \item \texttt{local\_operator.ref} (a JSON ref for the local rank-1 projector operator $A_m$);
+  \end{itemize}
+  \item \texttt{chart\_domains}: a typed chart-domain declaration on $C_{v1}$ for each chart label;
+  \item \texttt{overlap\_domains}: an explicit overlap-domain declaration for each unordered pair
+  $\mathrm{pair}_i\cap \mathrm{pair}_j$ (in this export: $C_{v1}$ by global-domain choice);
+  \item \texttt{transitions}: a complete-graph edge map $\mathrm{pair}_i\to \mathrm{pair}_j$ containing:
+  \begin{itemize}
+    \item \texttt{operator\_ref}: a JSON ref for the orthogonal transport operator $O_{ij}$,
+    \item one parameter field \texttt{alpha..} recording the exported angle value (mod $\pi$ or $2\pi$).
+  \end{itemize}
+\end{enumerate}
+\emph{Hard limits:} these are declared-typing atlas objects; they do not promote an operator-level groupoid or strict-core physical sign convention.
+\end{definition}
+
+\begin{definition}[Exported transition interface: \texttt{SelectorTransition\_global\_C\_v1\_strict\_v1} (F469)]
+The transition object is exported as
+\verb|fundamental_action_reconstruction/generated/selector_transition_global_c_v1_strict_v1.json|.
+Its minimal strict interface consists of:
+\begin{enumerate}[label=\arabic*.]
+  \item \texttt{transition\_operators}: the same complete-graph edge map of operator refs $O_{ij}$ and angle fields;
+  \item \texttt{gluing\_laws\_ref}: a reference to the exported five-chart projector-section cocycle audit object
+  \verb|.../a_12345_pair12345_chart_glued_orientation_projector_operator_section_strict_core_v2.json|.
+\end{enumerate}
+The \texttt{gluing\_laws\_ref} object records explicit \emph{projector-section-level} transport laws of the form
+$A_j = O_{ij}A_iO_{ij}^{\mathsf T}$ and triple-overlap cocycle/path-independence audits (max-entry residuals).
+\emph{Hard limits:} this remains \emph{projector-section-level} only and does not promote to operator-level identities (\texttt{N512}).
+\end{definition}
+
+\subsection{Exported transition angles (F469)}
+\label{sec:f469_alphas}
+
+For convenience, Table~\ref{tab:f469_alphas} records the exported transition angles (in radians) from
+\verb|selector_transition_global_c_v1_strict_v1.json|.
+Numerically, all exported values are consistent (within floating-point tolerance) with multiples of $\pi/2$.
+
+\begin{table}[h]
+  \centering
+  \caption{Exported transition angles on the five-chart selector atlas/transition (F469).}
+  \label{tab:f469_alphas}
+  \begin{tabular}{lll}
+    \toprule
+    Edge & Exported field & Value (rad) \\
+    \midrule
+    $\mathrm{pair}_1\to \mathrm{pair}_2$ & \texttt{alpha12\_mod\_2pi} & $1.570796326794897$ \\
+    $\mathrm{pair}_1\to \mathrm{pair}_3$ & \texttt{alpha13\_mod\_pi}  & $1.570796326794897$ \\
+    $\mathrm{pair}_1\to \mathrm{pair}_4$ & \texttt{alpha14\_mod\_pi}  & $1.570796326794896$ \\
+    $\mathrm{pair}_1\to \mathrm{pair}_5$ & \texttt{alpha15\_mod\_pi}  & $0.0$ \\
+    $\mathrm{pair}_2\to \mathrm{pair}_3$ & \texttt{alpha23\_mod\_pi}  & $0.0$ \\
+    $\mathrm{pair}_2\to \mathrm{pair}_4$ & \texttt{alpha24\_mod\_pi}  & $3.141592653589793$ \\
+    $\mathrm{pair}_2\to \mathrm{pair}_5$ & \texttt{alpha25\_mod\_pi}  & $1.570796326794897$ \\
+    $\mathrm{pair}_3\to \mathrm{pair}_4$ & \texttt{alpha34\_mod\_pi}  & $0.0$ \\
+    $\mathrm{pair}_3\to \mathrm{pair}_5$ & \texttt{alpha35\_mod\_pi}  & $1.570796326794898$ \\
+    $\mathrm{pair}_4\to \mathrm{pair}_5$ & \texttt{alpha45\_mod\_pi}  & $1.570796326794898$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Projective state, output operator, and closure interfaces (F470/F660/F672)}
+\label{sec:f672_interfaces}
+
+The strict projective closure relies on three exported global objects whose interfaces are intentionally simple.
+
+\begin{definition}[Projective state interface: \texttt{SelectorState\_global\_C\_v1\_projective\_strict\_v1} (F470)]
+The projective selector state is exported as
+\verb|fundamental_action_reconstruction/generated/selector_state_global_c_v1_projective_strict_v1.json|.
+Its strict interface consists of:
+\begin{enumerate}[label=\arabic*.]
+  \item \texttt{global\_atlas\_ref} and \texttt{global\_transition\_ref} pointing to the \texttt{F469} objects;
+  \item \texttt{charts}: the per-chart local projector-operator refs $A_m$;
+  \item \texttt{projector\_section\_ref}: a reference to the five-chart glued projector-section cocycle audit object
+  \verb|.../a_12345_pair12345_chart_glued_orientation_projector_operator_section_strict_core_v2.json|;
+  \item \texttt{state\_type}: a declaration that the state is a \emph{projective ray state}
+  (sign gauge $u\sim -u$ at state level).
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Output operator interface: \texttt{SelectorOutputOperator\_global\_C\_v1\_seed\_v1\_promoted\_strict\_v1} (F660)]
+The global output operator is exported as
+\verb|fundamental_action_reconstruction/generated/selector_output_operator_global_c_v1_seed_v1_promoted_strict_v1.json|.
+It contains the promoted seed-v1 output map $O_{\mathrm{sel}}:Q_{\mathrm{sel}}\to Q_{\mathrm{out}}$ in a fixed declared basis.
+\end{definition}
+
+\begin{definition}[Projective closure interface: \texttt{SelectorClosure\_global\_C\_v1\_projective\_strict\_v1} (F672)]
+The projective closure object is exported as
+\verb|fundamental_action_reconstruction/generated/selector_closure_global_c_v1_projective_strict_v1.json|.
+Its strict interface consists of:
+\begin{enumerate}[label=\arabic*.]
+  \item references to the atlas, transition, projective state, and output operator objects;
+  \item \texttt{output\_observable}: the resulting global chart-independent rank-1 output projector matrix $B_{\mathrm{out}}$ on $Q_{\mathrm{out}}=\mathrm{span}\{o_+,o_-\}$;
+  \item \texttt{well\_definedness\_certificate}: a numeric chart-independence certificate with fields:
+  \texttt{criterion}, \texttt{tolerance}, \texttt{max\_abs\_diff\_to\_reference\_chart\_output\_projector}, \texttt{certificate\_pass}.
+\end{enumerate}
+\emph{Hard limits:} projective closure is the invariant content; no directed physical sign convention is promoted.
+\end{definition}
+
 \section{Seed-v1 strict-core internal selector-source chain (S\_sel\_int $\to$ E\_orient $\to$ R\_sel $\to$ O\_sel)}
 
 The projective closure object \texttt{F672} is constructed using a strict-core internal selector-source seed chain (seed-v1) that provides, in strict scope:
