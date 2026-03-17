@@ -1,0 +1,210 @@
+{
+  "stage": "P714",
+  "status": "PASS_W_BREAK_PARITY_ROOT_SUPPORT_PROFILE_AUDITED",
+  "as_of": "2026-03-17",
+  "generated_utc": "2026-03-17T22:52:36.107869+00:00",
+  "goal": "audit whether the current supported-root corridor of the exported w_break payload is explained exactly by a parity profile on Z_12: odd w_break, odd-axis anchor support on pair1/pair5, and forced vanishing on even-axis charts pair2/pair3/pair4",
+  "inputs": {
+    "F647": "fundamental_action_reconstruction/generated/f647_strict_witness_provider_export_packet_for_seed_v1_realization_attempt.json",
+    "P713": "fundamental_action_reconstruction/generated/p713_current_strict_t176_multiroot_rooted_sign_lift_root_independence_audit_probe_summary.json",
+    "A_m_refs": {
+      "1": "fundamental_action_reconstruction/generated/a_1_pair1_orientation_projector_operator_strict_core_v1.json",
+      "2": "fundamental_action_reconstruction/generated/a_2_pair2_orientation_projector_operator_strict_core_v1.json",
+      "3": "fundamental_action_reconstruction/generated/a_3_pair3_orientation_projector_operator_strict_core_v1.json",
+      "4": "fundamental_action_reconstruction/generated/a_4_pair4_orientation_projector_operator_strict_core_v1.json",
+      "5": "fundamental_action_reconstruction/generated/a_5_pair5_orientation_projector_operator_strict_core_v1.json"
+    }
+  },
+  "tolerances": {
+    "parity_residual_tol": 1e-12,
+    "axis_coord_tol": 1e-09,
+    "anchor_nonzero_abs_tol": 1e-12
+  },
+  "w_break_profile": {
+    "parity_type": "odd",
+    "even_reflection_residual": 0.0004228639666916206,
+    "odd_reflection_residual": 9.567553118338699e-19
+  },
+  "per_pair": {
+    "pair1": {
+      "pair": "pair1",
+      "coords": [
+        0.0,
+        -1.0
+      ],
+      "axis_type": "sine_axis",
+      "parity_type": "odd",
+      "even_reflection_residual": 0.816496580927726,
+      "odd_reflection_residual": 0.0,
+      "dot_w_break_with_u_m": 0.00016200023852512268,
+      "anchor_nonzero": true
+    },
+    "pair2": {
+      "pair": "pair2",
+      "coords": [
+        0.9999999999999998,
+        1.6653345369377348e-16
+      ],
+      "axis_type": "cosine_axis",
+      "parity_type": "even",
+      "even_reflection_residual": 4.996003610813204e-16,
+      "odd_reflection_residual": 0.816496580927726,
+      "dot_w_break_with_u_m": -7.33323876262474e-20,
+      "anchor_nonzero": false
+    },
+    "pair3": {
+      "pair": "pair3",
+      "coords": [
+        1.0,
+        0.0
+      ],
+      "axis_type": "cosine_axis",
+      "parity_type": "even",
+      "even_reflection_residual": 0.0,
+      "odd_reflection_residual": 0.816496580927726,
+      "dot_w_break_with_u_m": 1.6818187974471053e-19,
+      "anchor_nonzero": false
+    },
+    "pair4": {
+      "pair": "pair4",
+      "coords": [
+        -1.0,
+        0.0
+      ],
+      "axis_type": "cosine_axis",
+      "parity_type": "even",
+      "even_reflection_residual": 9.992007221626409e-16,
+      "odd_reflection_residual": 0.816496580927726,
+      "dot_w_break_with_u_m": 1.7502597213287567e-19,
+      "anchor_nonzero": false
+    },
+    "pair5": {
+      "pair": "pair5",
+      "coords": [
+        0.0,
+        1.0
+      ],
+      "axis_type": "sine_axis",
+      "parity_type": "odd",
+      "even_reflection_residual": 0.816496580927726,
+      "odd_reflection_residual": 2e-15,
+      "dot_w_break_with_u_m": 0.00013708274032496462,
+      "anchor_nonzero": true
+    }
+  },
+  "checks": [
+    {
+      "id": "w_break_is_odd_under_reflection",
+      "actual": "odd",
+      "expected": "odd",
+      "pass": true,
+      "meaning": "The exported strict-core payload w_break is odd under reflection on Z_12."
+    },
+    {
+      "id": "odd_pairs_match_endpoint_sine_axis_corridor",
+      "actual": [
+        "pair1",
+        "pair5"
+      ],
+      "expected": [
+        "pair1",
+        "pair5"
+      ],
+      "pass": true,
+      "meaning": "The current exported odd-axis representatives are exactly pair1 and pair5."
+    },
+    {
+      "id": "even_pairs_match_interior_cosine_axis_corridor",
+      "actual": [
+        "pair2",
+        "pair3",
+        "pair4"
+      ],
+      "expected": [
+        "pair2",
+        "pair3",
+        "pair4"
+      ],
+      "pass": true,
+      "meaning": "The current exported even-axis representatives are exactly pair2, pair3, pair4."
+    },
+    {
+      "id": "nonzero_w_break_anchors_match_odd_pairs",
+      "actual": [
+        "pair1",
+        "pair5"
+      ],
+      "expected": [
+        "pair1",
+        "pair5"
+      ],
+      "pass": true,
+      "meaning": "Nonzero linear anchors from w_break occur only on the odd-axis pair corridor."
+    },
+    {
+      "id": "zero_w_break_anchors_match_even_pairs",
+      "actual": [
+        "pair2",
+        "pair3",
+        "pair4"
+      ],
+      "expected": [
+        "pair2",
+        "pair3",
+        "pair4"
+      ],
+      "pass": true,
+      "meaning": "Linear anchors from w_break vanish on the even-axis interior corridor."
+    },
+    {
+      "id": "p713_supported_roots_match_parity_profile",
+      "actual": [
+        "pair1",
+        "pair5"
+      ],
+      "expected": [
+        "pair1",
+        "pair5"
+      ],
+      "pass": true,
+      "meaning": "The supported roots reported by P713 match the parity-typed root-support profile."
+    }
+  ],
+  "blocking_mismatches": [],
+  "result": {
+    "odd_pairs": [
+      "pair1",
+      "pair5"
+    ],
+    "even_pairs": [
+      "pair2",
+      "pair3",
+      "pair4"
+    ],
+    "nonzero_anchor_pairs": [
+      "pair1",
+      "pair5"
+    ],
+    "zero_anchor_pairs": [
+      "pair2",
+      "pair3",
+      "pair4"
+    ],
+    "p713_supported_roots": [
+      "pair1",
+      "pair5"
+    ],
+    "current_w_break_anchor_profile": "odd_weight_supports_odd_axis_pairs_only",
+    "current_w_break_explains_supported_root_corridor": true,
+    "current_single_w_break_all_chart_anchor_exists": false,
+    "next_honest_requirement": "future strict-core provider must add an even-or-mixed parity anchor component, or use a genuinely different non-linear/non-scalar observable class"
+  },
+  "hard_limits": [
+    "No impossibility-in-principle claim about future all-chart strict-core anchors.",
+    "No T176 discharge claim.",
+    "No kernel-alone/global QW-2191 discharge.",
+    "No directed/sign-sensitive physical orientation datum claim in strict core.",
+    "No ToE closure claim."
+  ],
+  "no_false_pass": true
+}

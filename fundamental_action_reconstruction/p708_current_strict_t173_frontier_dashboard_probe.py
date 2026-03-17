@@ -22,6 +22,7 @@ IN_N687 = GENERATED / "n687_current_strict_t173_global_edge_sign_coherence_obstr
 IN_P711 = GENERATED / "p711_current_strict_t173_previous_methodology_survival_and_global_gap_audit_probe_summary.json"
 IN_P712 = GENERATED / "p712_current_strict_t176_existing_global_directed_sign_coherence_provider_nonexport_audit_probe_summary.json"
 IN_P713 = GENERATED / "p713_current_strict_t176_multiroot_rooted_sign_lift_root_independence_audit_probe_summary.json"
+IN_P714 = GENERATED / "p714_current_strict_t176_w_break_parity_root_support_profile_audit_probe_summary.json"
 
 # Convention-layer continuations (still below physical sign datum).
 IN_N688 = GENERATED / "n688_current_strict_t174_global_oriented_transition_edge_sign_lift_discharge_theorem_summary.json"
@@ -83,6 +84,7 @@ def main() -> None:
     p711 = load_json(IN_P711)
     p712 = load_json(IN_P712)
     p713 = load_json(IN_P713) if IN_P713.exists() else None
+    p714 = load_json(IN_P714) if IN_P714.exists() else None
 
     n688 = load_json(IN_N688) if IN_N688.exists() else None
     n690 = load_json(IN_N690) if IN_N690.exists() else None
@@ -228,6 +230,7 @@ def main() -> None:
             "P711": str(IN_P711.relative_to(REPO)),
             "P712": str(IN_P712.relative_to(REPO)),
             "P713": str(IN_P713.relative_to(REPO)) if IN_P713.exists() else None,
+            "P714": str(IN_P714.relative_to(REPO)) if IN_P714.exists() else None,
             "N688": str(IN_N688.relative_to(REPO)) if IN_N688.exists() else None,
             "N690": str(IN_N690.relative_to(REPO)) if IN_N690.exists() else None,
             "N691": str(IN_N691.relative_to(REPO)) if IN_N691.exists() else None,
@@ -264,6 +267,12 @@ def main() -> None:
                 else None
             ),
             "supported_roots_for_current_w_break_candidate": p713.get("supported_roots") if isinstance(p713, dict) else None,
+            "current_w_break_explains_supported_root_corridor_by_parity": (
+                bool(p714.get("current_w_break_explains_supported_root_corridor"))
+                if isinstance(p714, dict)
+                else None
+            ),
+            "current_w_break_nonzero_anchor_pairs": p714.get("nonzero_anchor_pairs") if isinstance(p714, dict) else None,
             "convention_layer_oriented_edge_sign_lift_exported": bool(n688_tr.get("oriented_edge_sign_lift_exported") or n691_tr.get("oriented_edge_sign_lift_exported")),
             "convention_layer_sign_fixed_directed_representative_exported": bool(n690_tr.get("sign_fixed_directed_representative_exported")),
             "operational_release_7_projective_os_closure_dashboard_status": (p706 or {}).get("status") if isinstance(p706, dict) else None,
@@ -303,6 +312,12 @@ def main() -> None:
             else None
         ),
         "supported_roots_for_current_w_break_candidate": p713.get("supported_roots") if isinstance(p713, dict) else None,
+        "current_w_break_explains_supported_root_corridor_by_parity": (
+            bool(p714.get("current_w_break_explains_supported_root_corridor"))
+            if isinstance(p714, dict)
+            else None
+        ),
+        "current_w_break_nonzero_anchor_pairs": p714.get("nonzero_anchor_pairs") if isinstance(p714, dict) else None,
         "convention_layer_sign_tools_exported": {
             "T174_oriented_edge_sign_lift": bool(n688_tr.get("oriented_edge_sign_lift_exported") or n691_tr.get("oriented_edge_sign_lift_exported")),
             "T175_chart_sign_fix": bool(n690_tr.get("sign_fixed_directed_representative_exported")),

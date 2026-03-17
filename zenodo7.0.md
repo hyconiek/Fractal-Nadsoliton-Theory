@@ -27,6 +27,7 @@ What is strictly discharged / exported (scope-limited, no false pass):
 - **Previous-methodology survival audit for `T173`:** `P711`, packaged as `N707`, shows the older `sigma_int`/topological route still contributes strict local ingredients but does **not** suffice for global `T173` discharge.
 - **Exact nonexport boundary for the next global provider target:** `P712`, packaged as `N708`, confirms that the repo still does **not** export a strict-core `T176`-class global directed-sign coherence provider on `C_v1`.
 - **Supported-root corridor audit for the strongest current candidate class:** `P713`, packaged as `N709`, shows the surviving `w_break` + oriented-transport route does **not** globalize across all roots: only `pair1` and `pair5` provide nonzero root anchors, and those supported roots recover the same convention-layer section. This still does **not** discharge `T176`.
+- **Parity diagnosis of the current `w_break` corridor:** `P714`, packaged as `N710`, shows that the present `w_break` payload is an odd weight and therefore anchors only the odd-axis charts (`pair1`, `pair5`), while the current cosine-axis charts (`pair2`, `pair3`, `pair4`) remain unanchored by this single linear weight.
 - **Strict dashboards:** `P706` and `P707` report readiness (`PASS_*_READY`), and the strict frontier dashboard `P708` indicates the next strict target remains `T173`.
 
 What is explicitly *not* claimed (hard limits):
@@ -141,12 +142,14 @@ python3 fundamental_action_reconstruction/p710_current_nonstrict_proxy_to_gev_ca
 python3 fundamental_action_reconstruction/p711_current_strict_t173_previous_methodology_survival_and_global_gap_audit_probe.py
 python3 fundamental_action_reconstruction/p712_current_strict_t176_existing_global_directed_sign_coherence_provider_nonexport_audit_probe.py
 python3 fundamental_action_reconstruction/p713_current_strict_t176_multiroot_rooted_sign_lift_root_independence_audit_probe.py
+python3 fundamental_action_reconstruction/p714_current_strict_t176_w_break_parity_root_support_profile_audit_probe.py
 cat fundamental_action_reconstruction/generated/p707_current_release_7_build_and_closure_smoke_probe_summary.json
 cat fundamental_action_reconstruction/generated/p709_current_strict_release_7_os_residual_sign_gauge_irrelevance_audit_probe_summary.json
 cat fundamental_action_reconstruction/generated/p710_current_nonstrict_proxy_to_gev_calibration_map_from_f704_eigenspectrum_probe_summary.json
 cat fundamental_action_reconstruction/generated/p711_current_strict_t173_previous_methodology_survival_and_global_gap_audit_probe_summary.json
 cat fundamental_action_reconstruction/generated/p712_current_strict_t176_existing_global_directed_sign_coherence_provider_nonexport_audit_probe_summary.json
 cat fundamental_action_reconstruction/generated/p713_current_strict_t176_multiroot_rooted_sign_lift_root_independence_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p714_current_strict_t176_w_break_parity_root_support_profile_audit_probe_summary.json
 cat fundamental_action_reconstruction/generated/p706_current_release_7_strict_projective_operational_toe_os_closure_dashboard_probe_summary.json
 cat fundamental_action_reconstruction/generated/p708_current_strict_t173_frontier_dashboard_probe_summary.json
 ```
@@ -167,6 +170,7 @@ cat fundamental_action_reconstruction/generated/p708_current_strict_t173_frontie
 - `fundamental_action_reconstruction/p711_current_strict_t173_previous_methodology_survival_and_global_gap_audit_probe.py`
 - `fundamental_action_reconstruction/p712_current_strict_t176_existing_global_directed_sign_coherence_provider_nonexport_audit_probe.py`
 - `fundamental_action_reconstruction/p713_current_strict_t176_multiroot_rooted_sign_lift_root_independence_audit_probe.py`
+- `fundamental_action_reconstruction/p714_current_strict_t176_w_break_parity_root_support_profile_audit_probe.py`
 
 **Frozen non-strict host matching layer (explicit dataset vs policy, no pass claim):**
 - dataset: `fundamental_action_reconstruction/external_data/sm_mass_targets_v1.json`
@@ -209,6 +213,7 @@ Concrete next move under `T173`:
 - The previous methodology is worth reusing, but only in the precise sense now audited by `P711/N707`: the older `sigma_int`/topological lane survives as a **local strict ingredient class** (it reaches strict bridge discharge in declared `R1` scope), yet it still does **not** supply the missing **global** provider needed for chartwise directed-sign coherence on the full `C_v1` atlas.
 - That missing object is now frozen as an exact target class `T176`: a strict-core `GlobalDirectedSignCoherenceProvider_global_C_v1_strict_core_v1`. The current repo still does **not** export such an object (`P712/N708`), so the next strict attack can be focused on one explicit nonexport boundary rather than a vague frontier.
 - The strongest surviving candidate class is now narrower and more explicit: `P713/N709` shows that the `w_break` + oriented-transport route does **not** provide all-root anchoring. Only the endpoint roots `pair1` and `pair5` survive, and on that supported-root corridor they recover the same convention-layer section. So the remaining gap is sharper: current `w_break` does not furnish a full global anchor, and there is still no **strict-core/global upgrade** of the surviving corridor-level structure.
+- `P714/N710` now explains *why* this happens on current exports: the present `w_break` is an **odd** linear weight, so it can anchor the current odd-axis representatives (`pair1`, `pair5`) but not the current even/cosine-axis representatives (`pair2`, `pair3`, `pair4`). Therefore the next honest provider attack is narrower still: either add an **even-or-mixed parity anchor component**, or leave the single-linear-weight class entirely and move to a genuinely different observable/provider class.
 - Therefore, the next honest strict move under `T173` is to either:
   1) export a **genuinely new** strict-core sign-sensitive provider (must bypass `N518`-class obstructions and must not smuggle `T164`), *or*
   2) explicitly **freeze residual sign as gauge** and package/prove sign-gauge-irrelevance for the concrete Release‑7 OS observables actually used downstream (recommended; operational closure already exists in projective/basis-invariant scope).
