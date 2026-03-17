@@ -1,0 +1,48 @@
+{
+  "step": "N691",
+  "status": "N691_DERIVABLE_CURRENT_STRICT_T174_SIGN_FIXED_ORIENTED_EDGE_SIGN_LIFT_DISCHARGE_THEOREM_NO_FALSE_PASS",
+  "scope": "current_strict_t174_oriented_edge_sign_lift_convention_layer_only",
+  "checks": [
+    {
+      "id": "f691_export_passed",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "The oriented edge sign-lift export packet ran and exported the lift object anchored to the sign-fixed state (F691)."
+    },
+    {
+      "id": "p691_audit_passed",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "The full-edge coherence audit under the oriented sign-lift ran and passed (P691)."
+    },
+    {
+      "id": "all_edges_coherent_without_sign_flips",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Every overlap edge transports the sign-fixed directed representative without sign flips under the lifted oriented transitions (P691)."
+    }
+  ],
+  "blocking_mismatches": [],
+  "theorem_result": {
+    "discharged": true,
+    "oriented_edge_sign_lift_exported": true,
+    "sign_fixed_directed_state_edge_coherent_under_oriented_lift": true,
+    "directed_sign_sensitive_physical_orientation_in_strict_core": false,
+    "QW2191_kernel_alone_discharge": false,
+    "ToE_closure": false,
+    "evidence": {
+      "F691": "fundamental_action_reconstruction/generated/f691_current_strict_t174_global_oriented_transition_edge_sign_lift_from_sign_fixed_directed_state_export_packet_summary.json",
+      "P691": "fundamental_action_reconstruction/generated/p691_current_strict_t174_sign_fixed_directed_state_edge_coherence_under_oriented_transition_sign_lift_audit_probe_summary.json"
+    },
+    "note": "This is a convention-layer oriented lift (edgewise sign data) anchored to the sign-fixed directed representative; it does not imply a strict physical sign datum nor any kernel-alone QW-2191 discharge."
+  },
+  "hard_limits": [
+    "no_kernel_alone_global_QW2191_discharge",
+    "no_directed_sign_sensitive_physical_orientation_claim",
+    "no_ToE_closure"
+  ],
+  "no_false_pass": true
+}

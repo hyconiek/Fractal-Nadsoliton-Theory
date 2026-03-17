@@ -36,6 +36,9 @@ Check whether the current strict core contains any object that identifies `u` an
 - `F690`: exports `SelectorState_global_C_v1_directed_sign_fixed_from_strict_core_payload_weights_strict_convention_v1` (sign-fixed directed representative on `{pair1..pair5}`) and the explicit per-chart sign-fixing data derived from exported strict-core payload weights (`F647`).
 - `P690`: audits independence: applying the same chart sign-fix rule to the exported `w_break`-rooted directed representative yields the same sign-fixed directed representative.
 - `N690`: packages `F690/P690` as a boundary-safe theorem-level discharge in the declared convention scope (no physical sign claim).
+- `F691`: exports a `T174` oriented transition edge sign-lift anchored to the exported sign-fixed directed representative (`F690`) rather than to a particular starting directed representative.
+- `P691`: audits full-edge coherence of the sign-fixed directed representative under the `F691` oriented edge sign-lift (no sign flips on all 10 edges).
+- `N691`: packages `F691/P691` as a theorem-level discharge in the declared convention scope (no physical sign claim).
 - `F684`: exports `SelectorState_global_C_v1_directed_rooted_transport_from_S_sel_int_w_break_strict_convention_v1` (directed vector representative section on `{pair1..pair5}` in an explicit convention scope; not a physical datum).
 - Extension lane note: `AX28/AX29` export an explicit sign-fixing observable on `pair1` and an explicit global oriented vector selector state object on `C_v1` in `strict_extension_only` scope; `P473` audits that this extension-lane oriented vector state is projector-consistent with the strict global projective selector state (`F470`), so it fixes only a sign-gauge representative and does not change strict core.
 
@@ -95,6 +98,9 @@ and `N689` packages this as a boundary-safe theorem. This further reinforces tha
 Update (`2026-03-17`): the repo now exports an explicit chart-level sign fixing (0‑cochain) as a tracked convention layer (`T175`). `F690` exports a sign-fixed directed representative on
 `C_v1` constructed deterministically from already exported strict-core payload weights (including `w_break_by_x` and `w_ref_unnormalized_by_x`), and `P690` audits that the same rule collapses
 two exported directed representatives to the same sign-fixed representative (independence), packaged by `N690`. This does **not** promote any strict physical sign datum and does **not** imply kernel-alone/global `QW-2191` discharge.
+
+Update (`2026-03-17`): building on the sign-fixed representative, the repo now exports a corresponding `T174` oriented edge sign-lift anchored to that sign-fixed state (`F691`), audits full-edge coherence (`P691`),
+and packages the result as a convention-layer theorem (`N691`). This makes the oriented edge lift independent of the arbitrary starting directed representative, while preserving all hard limits (no physical sign datum; no `QW-2191` discharge).
 
 Update (2026-03-16): after exporting an explicit premise-based fixing datum (`F473/N523`) and an explicit sign-sensitive observable + directed state (`F474/N524`),
 the strict core contains a directed sign lift *in the declared premise-based scope*.

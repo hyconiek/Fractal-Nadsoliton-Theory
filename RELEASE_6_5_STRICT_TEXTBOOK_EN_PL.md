@@ -301,6 +301,9 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
 22. Update (`2026-03-17`): the repo now also exports an explicit convention-layer **chart sign fixing** (a `Z2` 0‑cochain) from strict-core payload weights (`T175`): a sign-fixed directed representative on `C_v1`
     `SelectorState_global_C_v1_directed_sign_fixed_from_strict_core_payload_weights_strict_convention_v1` (`F690`), audited to be independent of the starting exported directed representative (`P690`) and packaged by `N690`.
     This collapses the premise-based and `w_break`-rooted directed representatives to the same sign-fixed representative, without any physical sign claim and without kernel-alone/global `QW-2191` discharge.
+23. Update (`2026-03-17`): building on that sign-fixed directed representative, the repo now also exports a corresponding `T174` oriented transition edge sign-lift anchored to the sign-fixed state (`F691`),
+    audits full-edge coherence under the lifted oriented transitions (`P691`), and packages the result as a convention-layer theorem (`N691`). This makes the oriented edge lift independent of the arbitrary starting directed
+    representative, while preserving all hard limits (no strict physical sign datum; no kernel-alone/global `QW-2191` discharge).
 
 ### 1.2 What is still missing (no false pass)
 
@@ -651,6 +654,9 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
 22. Update (`2026-03-17`): repo eksportuje teraz również jawną konwencyjną warstwę **chart sign fixing** (0‑cochain `Z2`) z wag payloadu strict-core (`T175`): sign-fixed kierunkowy reprezentant na `C_v1`
     `SelectorState_global_C_v1_directed_sign_fixed_from_strict_core_payload_weights_strict_convention_v1` (`F690`), z audytem niezaleznosci od startowego reprezentanta (`P690`) i opakowaniem `N690`.
     To sprowadza premise-based i `w_break`-rooted directed reprezentanty do tego samego sign-fixed reprezentanta, bez claimu o fizyczny znak i bez kernel-alone/global rozladowania `QW-2191`.
+23. Update (`2026-03-17`): budujac na tym sign-fixed kierunkowym reprezentancie, repo eksportuje teraz odpowiadajacy mu `T174` oriented edge sign‑lift zakotwiczony w sign-fixed stanie (`F691`),
+    audytuje full-edge koherencje pod lifted oriented przejsciami (`P691`) i pakuje wynik jako twierdzenie konwencyjne (`N691`). To uniezaleznia oriented edge lift od arbitralnego startowego reprezentanta,
+    przy zachowaniu hard limits (bez fizycznego datumu znaku; bez kernel-alone/global rozladowania `QW-2191`).
 
 ### 1.2 Czego nadal brakuje (bez false pass)
 

@@ -1,0 +1,133 @@
+{
+  "stage": "P691",
+  "as_of": "2026-03-17",
+  "generated_utc": "2026-03-17T13:13:03.849504+00:00",
+  "goal": "audit_full_edgewise_coherence_of_the_exported_sign_fixed_directed_state_under_the_exported_oriented_transition_edge_sign_lift__no_false_pass",
+  "inputs": {
+    "sign_fixed_directed_state_ref": "fundamental_action_reconstruction/generated/selector_state_global_c_v1_directed_sign_fixed_from_strict_core_payload_weights_strict_convention_v1.json",
+    "oriented_transition_edge_sign_lift_ref": "fundamental_action_reconstruction/generated/selector_transition_global_c_v1_oriented_mod_2pi_edge_sign_lift_from_sign_fixed_directed_state_strict_convention_v1.json"
+  },
+  "status": "PASS_DIRECTED_STATE_EDGE_COHERENT_UNDER_ORIENTED_TRANSITION_SIGN_LIFT_WITHOUT_SIGN_FLIPS",
+  "tolerances": {
+    "tol_match_max_abs_diff": 1e-09
+  },
+  "edge_audit": {
+    "edge_count": 10,
+    "edge_errors": [],
+    "edges": {
+      "pair1_to_pair2": {
+        "edge_id": "pair1_to_pair2",
+        "src": "pair1",
+        "dst": "pair2",
+        "base_operator_ref": "fundamental_action_reconstruction/generated/o12_pair1_pair2_selector_chart_transport_operator_strict_derived_from_sigma_int_alpha12_v1.json",
+        "base_operator_matrix_key": "O12",
+        "oriented_sign_on_operator": 1,
+        "max_abs_diff_to_uj": 9.159339953157541e-16,
+        "edge_ok_no_sign_flip": true
+      },
+      "pair2_to_pair3": {
+        "edge_id": "pair2_to_pair3",
+        "src": "pair2",
+        "dst": "pair3",
+        "base_operator_ref": "fundamental_action_reconstruction/generated/o23_pair2_pair3_selector_chart_transport_operator_axis_only_alpha23_mod_pi_strict_core_v1.json",
+        "base_operator_matrix_key": "O23",
+        "oriented_sign_on_operator": 1,
+        "max_abs_diff_to_uj": 1.4779844015322396e-15,
+        "edge_ok_no_sign_flip": true
+      },
+      "pair1_to_pair3": {
+        "edge_id": "pair1_to_pair3",
+        "src": "pair1",
+        "dst": "pair3",
+        "base_operator_ref": "fundamental_action_reconstruction/generated/o13_pair1_pair3_selector_chart_transport_operator_axis_only_alpha13_mod_pi_strict_core_v1.json",
+        "base_operator_matrix_key": "O13",
+        "oriented_sign_on_operator": 1,
+        "max_abs_diff_to_uj": 1.4849232954361469e-15,
+        "edge_ok_no_sign_flip": true
+      },
+      "pair3_to_pair4": {
+        "edge_id": "pair3_to_pair4",
+        "src": "pair3",
+        "dst": "pair4",
+        "base_operator_ref": "fundamental_action_reconstruction/generated/o34_pair3_pair4_selector_chart_transport_operator_axis_only_alpha34_mod_pi_strict_core_v1.json",
+        "base_operator_matrix_key": "O",
+        "oriented_sign_on_operator": 1,
+        "max_abs_diff_to_uj": 9.159339953157541e-16,
+        "edge_ok_no_sign_flip": true
+      },
+      "pair4_to_pair5": {
+        "edge_id": "pair4_to_pair5",
+        "src": "pair4",
+        "dst": "pair5",
+        "base_operator_ref": "fundamental_action_reconstruction/generated/o45_pair4_pair5_selector_chart_transport_operator_axis_only_alpha45_mod_pi_strict_core_v1.json",
+        "base_operator_matrix_key": "O",
+        "oriented_sign_on_operator": 1,
+        "max_abs_diff_to_uj": 1.2871648191747909e-15,
+        "edge_ok_no_sign_flip": true
+      },
+      "pair2_to_pair4": {
+        "edge_id": "pair2_to_pair4",
+        "src": "pair2",
+        "dst": "pair4",
+        "base_operator_ref": "fundamental_action_reconstruction/generated/o24_pair2_pair4_selector_chart_transport_operator_axis_only_alpha24_mod_pi_strict_core_v1.json",
+        "base_operator_matrix_key": "O",
+        "oriented_sign_on_operator": -1,
+        "max_abs_diff_to_uj": 1.4988010832439613e-15,
+        "edge_ok_no_sign_flip": true
+      },
+      "pair3_to_pair5": {
+        "edge_id": "pair3_to_pair5",
+        "src": "pair3",
+        "dst": "pair5",
+        "base_operator_ref": "fundamental_action_reconstruction/generated/o35_pair3_pair5_selector_chart_transport_operator_axis_only_alpha35_mod_pi_strict_core_v1.json",
+        "base_operator_matrix_key": "O",
+        "oriented_sign_on_operator": 1,
+        "max_abs_diff_to_uj": 9.159339953157541e-16,
+        "edge_ok_no_sign_flip": true
+      },
+      "pair1_to_pair4": {
+        "edge_id": "pair1_to_pair4",
+        "src": "pair1",
+        "dst": "pair4",
+        "base_operator_ref": "fundamental_action_reconstruction/generated/o14_pair1_pair4_selector_chart_transport_operator_axis_only_alpha14_mod_pi_strict_core_v1.json",
+        "base_operator_matrix_key": "O",
+        "oriented_sign_on_operator": 1,
+        "max_abs_diff_to_uj": 1.0547118733938987e-15,
+        "edge_ok_no_sign_flip": true
+      },
+      "pair1_to_pair5": {
+        "edge_id": "pair1_to_pair5",
+        "src": "pair1",
+        "dst": "pair5",
+        "base_operator_ref": "fundamental_action_reconstruction/generated/o15_pair1_pair5_selector_chart_transport_operator_axis_only_alpha15_mod_pi_strict_core_v1.json",
+        "base_operator_matrix_key": "O",
+        "oriented_sign_on_operator": -1,
+        "max_abs_diff_to_uj": 1e-15,
+        "edge_ok_no_sign_flip": true
+      },
+      "pair2_to_pair5": {
+        "edge_id": "pair2_to_pair5",
+        "src": "pair2",
+        "dst": "pair5",
+        "base_operator_ref": "fundamental_action_reconstruction/generated/o25_pair2_pair5_selector_chart_transport_operator_axis_only_alpha25_mod_pi_strict_core_v1.json",
+        "base_operator_matrix_key": "O",
+        "oriented_sign_on_operator": 1,
+        "max_abs_diff_to_uj": 9.43689570931383e-16,
+        "edge_ok_no_sign_flip": true
+      }
+    }
+  },
+  "result": {
+    "all_edges_ok_without_sign_flips": true,
+    "bad_edges": [],
+    "bad_edge_count": 0
+  },
+  "counts_as_strict_physical_orientation_datum": false,
+  "hard_limits": [
+    "Convention/section audit only; does not claim a directed/sign-sensitive physical orientation datum in strict core.",
+    "Does not claim kernel-alone/global QW-2191 discharge.",
+    "Does not claim ToE closure.",
+    "Does not promote section-level/vector-level coherence into operator-level groupoid identities (N512 boundary)."
+  ],
+  "no_false_pass": true
+}
