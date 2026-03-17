@@ -1,0 +1,128 @@
+{
+  "stage": "P683",
+  "as_of": "2026-03-17",
+  "generated_utc": "2026-03-17T10:50:45.626771+00:00",
+  "goal": "audit a rooted sign-lift: fix sign on pair1 using exported S_sel_int seed w_break, then propagate sign to pair2..pair5 by aligning exported transports O_1m u1* with exported representatives u_m, and check chartwise output-sign consistency for the exported global output channels",
+  "inputs": {
+    "f647_ref": "fundamental_action_reconstruction/generated/f647_strict_witness_provider_export_packet_for_seed_v1_realization_attempt.json",
+    "y_sel_ref": "fundamental_action_reconstruction/generated/selector_output_operator_global_c_v1_seed_v1_promoted_strict_v1.json",
+    "a_m_refs": {
+      "1": "fundamental_action_reconstruction/generated/a_1_pair1_orientation_projector_operator_strict_core_v1.json",
+      "2": "fundamental_action_reconstruction/generated/a_2_pair2_orientation_projector_operator_strict_core_v1.json",
+      "3": "fundamental_action_reconstruction/generated/a_3_pair3_orientation_projector_operator_strict_core_v1.json",
+      "4": "fundamental_action_reconstruction/generated/a_4_pair4_orientation_projector_operator_strict_core_v1.json",
+      "5": "fundamental_action_reconstruction/generated/a_5_pair5_orientation_projector_operator_strict_core_v1.json"
+    },
+    "rooted_transport_refs": {
+      "2": "fundamental_action_reconstruction/generated/o12_pair1_pair2_selector_chart_transport_operator_strict_derived_from_sigma_int_alpha12_v1.json",
+      "3": "fundamental_action_reconstruction/generated/o13_pair1_pair3_selector_chart_transport_operator_axis_only_alpha13_mod_pi_strict_core_v1.json",
+      "4": "fundamental_action_reconstruction/generated/o14_pair1_pair4_selector_chart_transport_operator_axis_only_alpha14_mod_pi_strict_core_v1.json",
+      "5": "fundamental_action_reconstruction/generated/o15_pair1_pair5_selector_chart_transport_operator_axis_only_alpha15_mod_pi_strict_core_v1.json"
+    },
+    "tolerances": {
+      "dot_nonzero_abs_tol": 1e-12,
+      "output_component_zero_tol": 1e-09,
+      "alignment_l2_tol": 1e-09
+    }
+  },
+  "root": {
+    "pair": "pair1",
+    "dot_w_break_u_1": 0.00016200023852512268,
+    "root_sign_s_1": 1,
+    "root_sign_source": "w_break"
+  },
+  "per_pair": {
+    "pair1": {
+      "pair": "pair1",
+      "u_ref": "fundamental_action_reconstruction/generated/a_1_pair1_orientation_projector_operator_strict_core_v1.json",
+      "dot_w_break_u_1": 0.00016200023852512268,
+      "root_sign_s_1": 1,
+      "root_sign_source": "w_break",
+      "output_vector_o_plus_o_minus_after_rooted_sign_lift": [
+        1.0,
+        -9.149258638450154e-16
+      ],
+      "output_o_plus_component_sign_after_rooted_sign_lift": "+"
+    },
+    "pair2": {
+      "pair": "pair2",
+      "u_ref": "fundamental_action_reconstruction/generated/a_2_pair2_orientation_projector_operator_strict_core_v1.json",
+      "transport_ref": "fundamental_action_reconstruction/generated/o12_pair1_pair2_selector_chart_transport_operator_strict_derived_from_sigma_int_alpha12_v1.json",
+      "dot_transport_u1_star_with_u_m": 1.0,
+      "dot_nonzero": true,
+      "propagated_sign_s_m": 1,
+      "alignment_l2_norm_O1m_u1_star_minus_s_m_u_m": 9.937891504146011e-16,
+      "output_vector_o_plus_o_minus_after_rooted_sign_lift": [
+        0.9999999999999998,
+        -6.871600701938739e-16
+      ],
+      "output_o_plus_component_sign_after_rooted_sign_lift": "+"
+    },
+    "pair3": {
+      "pair": "pair3",
+      "u_ref": "fundamental_action_reconstruction/generated/a_3_pair3_orientation_projector_operator_strict_core_v1.json",
+      "transport_ref": "fundamental_action_reconstruction/generated/o13_pair1_pair3_selector_chart_transport_operator_axis_only_alpha13_mod_pi_strict_core_v1.json",
+      "dot_transport_u1_star_with_u_m": 1.0000000000000004,
+      "dot_nonzero": true,
+      "propagated_sign_s_m": 1,
+      "alignment_l2_norm_O1m_u1_star_minus_s_m_u_m": 1.9138929819979085e-15,
+      "output_vector_o_plus_o_minus_after_rooted_sign_lift": [
+        1.0,
+        -1.2977827337377104e-15
+      ],
+      "output_o_plus_component_sign_after_rooted_sign_lift": "+"
+    },
+    "pair4": {
+      "pair": "pair4",
+      "u_ref": "fundamental_action_reconstruction/generated/a_4_pair4_orientation_projector_operator_strict_core_v1.json",
+      "transport_ref": "fundamental_action_reconstruction/generated/o14_pair1_pair4_selector_chart_transport_operator_axis_only_alpha14_mod_pi_strict_core_v1.json",
+      "dot_transport_u1_star_with_u_m": -1.000000000000001,
+      "dot_nonzero": true,
+      "propagated_sign_s_m": -1,
+      "alignment_l2_norm_O1m_u1_star_minus_s_m_u_m": 1.6238790841238775e-15,
+      "output_vector_o_plus_o_minus_after_rooted_sign_lift": [
+        1.0,
+        -1.8755970911255346e-16
+      ],
+      "output_o_plus_component_sign_after_rooted_sign_lift": "+"
+    },
+    "pair5": {
+      "pair": "pair5",
+      "u_ref": "fundamental_action_reconstruction/generated/a_5_pair5_orientation_projector_operator_strict_core_v1.json",
+      "transport_ref": "fundamental_action_reconstruction/generated/o15_pair1_pair5_selector_chart_transport_operator_axis_only_alpha15_mod_pi_strict_core_v1.json",
+      "dot_transport_u1_star_with_u_m": -1.000000000000001,
+      "dot_nonzero": true,
+      "propagated_sign_s_m": -1,
+      "alignment_l2_norm_O1m_u1_star_minus_s_m_u_m": 1.731128004031096e-15,
+      "output_vector_o_plus_o_minus_after_rooted_sign_lift": [
+        1.0,
+        -9.149258638450154e-16
+      ],
+      "output_o_plus_component_sign_after_rooted_sign_lift": "+"
+    }
+  },
+  "result": {
+    "status": "PASS_ROOTED_TRANSPORT_SIGN_LIFT_SUPPORTED_ON_ALL_CHARTS_AND_OUTPUT_SIGN_CONSISTENT",
+    "supported_pairs": [
+      "pair1",
+      "pair2",
+      "pair3",
+      "pair4",
+      "pair5"
+    ],
+    "missing_pairs": [],
+    "all_pairs_supported": true,
+    "transport_alignment_ok": true,
+    "directed_output_sign_consistent_if_all_pairs_supported": true,
+    "counts_as_strict_physical_orientation_datum": false,
+    "note": "PASS here means only: given the exported axis-only transport representatives, one can choose a consistent vector-section sign once the root sign is fixed. Axis-only edges remain projective by construction; no physical sign/orientation claim is made."
+  },
+  "hard_limits": [
+    "Probe-only: does not claim a directed/sign-sensitive physical orientation datum in strict core.",
+    "Axis-only transport edges are only projector-level by design; using them for oriented vector transport is a section/convention choice.",
+    "Does not claim kernel-alone/global QW-2191 discharge.",
+    "Does not claim ToE closure.",
+    "Does not promote projector-level cocycle into an operator-level groupoid (N512 boundary)."
+  ],
+  "no_false_pass": true
+}
