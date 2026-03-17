@@ -48,7 +48,8 @@ Already exported on the current repo state (Release 6.5.x):
   extending the v1 OS bundle by including the projective emergent‑observer chain computability theorem (`N699`).
 - A scope-disciplined “Operational ToE closure” statement is frozen in strict projective OS scope (`N701`), derived only from `N700` and keeping all hard limits explicit.
 - A scope-limited “mass proxy meaning” definition theorem is frozen (`N703`): `P694/P696` numbers are treated as quadratic coefficients of the exported `H_psi` instantiation, without any physical-unit or SM identification claim.
-- Non-strict: a Standard Model host-matching harness exists (`P702`). With an explicit PDG2024 target dataset (`fundamental_action_reconstruction/external_data/sm_mass_targets_v1.json`) it is computable, but current one-scale matching metrics are poor; **no** “Standard Model match” claim is made.
+- A strict basis-invariant “mass observable” object is exported (`F704`): the eigenvalue spectrum of the diagonal/local `H_psi` (dimensionless proxy only; no physical-unit claim).
+- Non-strict: Standard Model host-matching harnesses exist (`P702` for the selector-aligned channel proxy; `P704` for the basis-invariant eigen-spectrum). With an explicit PDG2024 target dataset (`fundamental_action_reconstruction/external_data/sm_mass_targets_v1.json`) both are computable, but current one-scale matching metrics are poor (`P702`: `rmse_log_m2≈8.10`, `max_abs_rel_mass≈7.90e2`; `P704`: `rmse_log_m2≈7.23`, `max_abs_rel_mass≈4.35e2`); **no** “Standard Model match” claim is made.
 
 ## 3 What Release 7 must still not “false‑PASS” (EN)
 
@@ -94,7 +95,8 @@ Już na obecnym stanie repo (Release 6.5.x):
   rozszerzając pakiet v1 o theorem-level świadek obliczalności łańcucha emergent‑observer (`N699`).
 - Repo zamraża scope‑disciplinowane stwierdzenie “Operational ToE closure” w zakresie strict projective OS (`N701`), wyprowadzone wyłącznie z `N700` i z jawnymi hard‑limitami.
 - Repo zamraża scope‑limited twierdzenie o “znaczeniu mass proxy” (`N703`): liczby z `P694/P696` są traktowane jako współczynniki kwadratowe wyeksportowanej instancji `H_psi`, bez claimu o jednostkach fizycznych ani o identyfikacji SM.
-- Non-strict: istnieje harness host-matchingu Standard Model (`P702`). Z jawnym datasetem docelowym PDG2024 (`fundamental_action_reconstruction/external_data/sm_mass_targets_v1.json`) jest on policzalny, ale obecne metryki dopasowania one-scale są słabe; **nie** jest zgłaszany żaden “Standard Model match”.
+- Repo eksportuje strict bazowo-niezmienniczy obiekt “mass observable” (`F704`): spektrum wartości własnych diagonal/local `H_psi` (proxy bez jednostek; bez claimu o kalibracji fizycznej).
+- Non-strict: istnieją harnessy host-matchingu Standard Model (`P702` dla selector-aligned channel proxy; `P704` dla bazowo-niezmienniczego eigen-spectrum). Z jawnym datasetem docelowym PDG2024 (`fundamental_action_reconstruction/external_data/sm_mass_targets_v1.json`) oba są policzalne, ale obecne metryki dopasowania one-scale są słabe (`P702`: `rmse_log_m2≈8.10`, `max_abs_rel_mass≈7.90e2`; `P704`: `rmse_log_m2≈7.23`, `max_abs_rel_mass≈4.35e2`); **nie** jest zgłaszany żaden “Standard Model match”.
 
 ## 3 Czego Release 7 nie może “false‑PASS” (PL)
 

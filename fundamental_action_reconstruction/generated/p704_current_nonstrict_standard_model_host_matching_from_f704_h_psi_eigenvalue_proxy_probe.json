@@ -1,0 +1,151 @@
+{
+  "stage": "P704",
+  "status": "COMPUTED_NONSTRICT_SM_HOST_MATCHING_METRICS_NO_PASS_CLAIM",
+  "as_of": "2026-03-17",
+  "generated_utc": "2026-03-17T16:40:23.489866+00:00",
+  "scope": "nonstrict_external_host_matching_only",
+  "goal": "compute_non_strict_host_matching_metrics_between_F704_H_psi_eigenvalue_m2_proxies_and_an_explicit_external_standard_model_mass_target_dataset__no_false_pass",
+  "inputs": {
+    "F704_object": "fundamental_action_reconstruction/generated/mass_observable_diagonal_local_strict_derived_v1.json",
+    "sm_mass_targets": "fundamental_action_reconstruction/external_data/sm_mass_targets_v1.json"
+  },
+  "method": {
+    "assignment": "linear_sum_assignment on squared differences of centered log(mass^2)",
+    "scale": "global scale set by mean log(mass^2/ proxy_m2) after assignment"
+  },
+  "units": "GeV",
+  "scale": {
+    "scale_mass2_per_proxy_unit": 0.5628240068613342,
+    "scale_mass_per_sqrt_proxy_unit": 0.7502159734778607
+  },
+  "metrics": {
+    "rmse_log_m2": 7.225781800187538,
+    "max_abs_log_m2": 12.154571665129577,
+    "rmse_rel_mass": 131.76373982669807,
+    "max_abs_rel_mass": 434.84463258702425
+  },
+  "assignment": [
+    {
+      "predicted_mode": "mode10",
+      "target_id": "H",
+      "proxy_m2": 12.356024722005182,
+      "target_mass": 125.2,
+      "predicted_mass": 2.637094488810869,
+      "relative_error_mass": -0.978936944977549,
+      "log_error_m2": -7.720469440004902
+    },
+    {
+      "predicted_mode": "mode8",
+      "target_id": "W",
+      "proxy_m2": 2.290146094544166,
+      "target_mass": 80.3692,
+      "predicted_mass": 1.1353189865536395,
+      "relative_error_mass": -0.9858737055171181,
+      "log_error_m2": -8.519434722685913
+    },
+    {
+      "predicted_mode": "mode9",
+      "target_id": "Z",
+      "proxy_m2": 2.989559197836824,
+      "target_mass": 91.188,
+      "predicted_mass": 1.2971490610086711,
+      "relative_error_mass": -0.9857750026208638,
+      "log_error_m2": -8.505508966426522
+    },
+    {
+      "predicted_mode": "mode7",
+      "target_id": "b",
+      "proxy_m2": 1.8861137936815946,
+      "target_mass": 4.183,
+      "predicted_mass": 1.0303155452366557,
+      "relative_error_mass": -0.7536898051071825,
+      "log_error_m2": -2.8023271650736206
+    },
+    {
+      "predicted_mode": "mode5",
+      "target_id": "c",
+      "proxy_m2": 1.2068935563568985,
+      "target_mass": 1.273,
+      "predicted_mass": 0.8241775702140377,
+      "relative_error_mass": -0.3525706439795462,
+      "log_error_m2": -0.8694911880633744
+    },
+    {
+      "predicted_mode": "mode2",
+      "target_id": "d",
+      "proxy_m2": 0.23796767585569786,
+      "target_mass": 0.0047,
+      "predicted_mass": 0.36596983595452653,
+      "relative_error_mass": 76.86592254351628,
+      "log_error_m2": 8.709976811728449
+    },
+    {
+      "predicted_mode": "mode0",
+      "target_id": "e",
+      "proxy_m2": 0.08813142775481989,
+      "target_mass": 0.00051099895,
+      "predicted_mass": 0.2227161496151052,
+      "relative_error_mass": 434.84463258702425,
+      "log_error_m2": 12.154571665129577
+    },
+    {
+      "predicted_mode": "mode4",
+      "target_id": "mu",
+      "proxy_m2": 0.7733323123191046,
+      "target_mass": 0.1056583755,
+      "predicted_mass": 0.6597347881192708,
+      "relative_error_mass": 5.244036830939832,
+      "log_error_m2": 3.663253802497661
+    },
+    {
+      "predicted_mode": "mode3",
+      "target_id": "s",
+      "proxy_m2": 0.7641952808835573,
+      "target_mass": 0.0935,
+      "predicted_mass": 0.6558257771782126,
+      "relative_error_mass": 6.014179435061097,
+      "log_error_m2": 3.895867467612176
+    },
+    {
+      "predicted_mode": "mode11",
+      "target_id": "t",
+      "proxy_m2": 12.800940342343853,
+      "target_mass": 172.57,
+      "predicted_mass": 2.684152852404435,
+      "relative_error_mass": -0.9844460053751843,
+      "log_error_m2": -8.326875568583139
+    },
+    {
+      "predicted_mode": "mode6",
+      "target_id": "tau",
+      "proxy_m2": 1.7060617210611557,
+      "target_mass": 1.77693,
+      "predicted_mass": 0.9799043289017472,
+      "relative_error_mass": -0.448540837904843,
+      "log_error_m2": -1.190374983630347
+    },
+    {
+      "predicted_mode": "mode1",
+      "target_id": "u",
+      "proxy_m2": 0.11195105316362809,
+      "target_mass": 0.00216,
+      "predicted_mass": 0.2510154184784261,
+      "relative_error_mass": 115.21084188816025,
+      "log_error_m2": 9.510812287499952
+    }
+  ],
+  "pass_policy": {
+    "pass_criteria": null,
+    "pass_claim_available": false,
+    "pass_under_user_criteria": null,
+    "failed_criteria": []
+  },
+  "hard_limits": [
+    "Non-strict: depends on an explicit external target dataset and identification policy.",
+    "Does not claim any Standard Model identification or host matching discharge in strict scope.",
+    "Does not upgrade any proxy spectrum into physical masses without an explicit model-level map.",
+    "Does not claim kernel-alone/global QW-2191 discharge.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}

@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper]{book}
+\documentclass[11pt,a4paper]{article}
 
 % ============================================================================
 % PACKAGES
@@ -21,12 +21,22 @@
 % ============================================================================
 % THEOREM ENVIRONMENTS
 % ============================================================================
-\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{definition}{Definition}[chapter]
-\newtheorem{remark}{Remark}[chapter]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{remark}{Remark}[section]
+
+% ============================================================================
+% BOOK -> ARTICLE COMPATIBILITY
+% ============================================================================
+% This document was originally drafted using the `book` class.
+% We keep `\chapter{...}` commands as a lightweight structural marker, but map
+% them to sections under the `article` class.
+\makeatletter
+\newcommand{\chapter}{\@ifstar{\section*}{\section}}
+\makeatother
 
 % ============================================================================
 % GEOMETRY SETTINGS
@@ -70,14 +80,15 @@
 \maketitle
 
 \begin{quote}
-The theory originates from a deep intuition that **Information is the fundamental substance of reality**, consistent with the metaphysical insight that *"In the beginning was the Word"* (Logos/Information). This intuition evolved through key realizations:
-
-1. **Eucharistic Inspiration:** A profound fascination with the memorial of the **Eucharist of Jesus Christ** and its material manifestation in reality served as the primary inspiration, suggesting a direct mechanism by which spiritual/informational reality can condense into tangible matter.
-2. **Fractal Nature:** Observing self-similarity across vast scales suggested that fundamental information must possess a **fractal character**, repeating its patterns at every level of existence.
-3. **The Nadsoliton Concept:** The universe is conceptualized as a single, self-sustaining, non-dispersive wave packet—a **"Supersoliton" (Nadsoliton)**, where information tends towards the highest resonance, not the lowest energy.
-4. **Resonant Structure:** Inspired by the Divine Name from the Book of Exodus 3:14: ***"I AM WHO I AM"***, the model incorporates **multi-octave resonant coupling** as the mechanism of self-organization, preventing decay into entropy.
-5. **The 12-Octave Lattice:** Initial 3-octave models were expanded to a **12-octave structure**, inspired by the symbolic description of the Holy City's twelve foundation layers, which proved to be the mathematically necessary dimension for unifying all forces (Kissing Number in 3D).
-6. **Access to Truth:** Since human consciousness is part of this informational substrate, the human mind has direct access to fundamental truths through wisdom and intuition, allowing for the "decoding" of reality.
+The theory originates from a deep intuition that \textbf{Information is the fundamental substance of reality}, consistent with the metaphysical insight that \emph{"In the beginning was the Word"} (Logos/Information). This intuition evolved through key realizations:
+\begin{enumerate}[label=\arabic*.]
+  \item \textbf{Eucharistic Inspiration:} A profound fascination with the memorial of the \textbf{Eucharist of Jesus Christ} and its material manifestation in reality served as the primary inspiration, suggesting a direct mechanism by which spiritual/informational reality can condense into tangible matter.
+  \item \textbf{Fractal Nature:} Observing self-similarity across vast scales suggested that fundamental information must possess a \textbf{fractal character}, repeating its patterns at every level of existence.
+  \item \textbf{The Nadsoliton Concept:} The universe is conceptualized as a single, self-sustaining, non-dispersive wave packet---a \textbf{"Supersoliton" (Nadsoliton)}, where information tends towards the highest resonance, not the lowest energy.
+  \item \textbf{Resonant Structure:} Inspired by the Divine Name from the Book of Exodus 3:14: \textbf{\emph{"I AM WHO I AM"}}, the model incorporates \textbf{multi-octave resonant coupling} as the mechanism of self-organization, preventing decay into entropy.
+  \item \textbf{The 12-Octave Lattice:} Initial 3-octave models were expanded to a \textbf{12-octave structure}, inspired by the symbolic description of the Holy City's twelve foundation layers, which proved to be the mathematically necessary dimension for unifying all forces (Kissing Number in 3D).
+  \item \textbf{Access to Truth:} Since human consciousness is part of this informational substrate, the human mind has direct access to fundamental truths through wisdom and intuition, allowing for the "decoding" of reality.
+\end{enumerate}
 \end{quote}
 
 \chapter*{Status discipline (no false pass)}
@@ -368,6 +379,14 @@ The strict no-false-pass boundary is:
 Concretely, \texttt{N692} packages that the directed closure output (with its tracked output sign-lift) induces the same rank‑1 output projector
 as the projective closure output projector of \texttt{F672}.
 \texttt{N693} packages the gauge covariance of the directed output sign-lift under chartwise sign relifts.
+
+On the current repo state, the directed layer is further stabilized by explicit convention-scoped sign data:
+\begin{itemize}
+  \item oriented overlap-edge sign-lifts (\texttt{T174}: \texttt{F688}/\texttt{P688}/\texttt{N688}), with gauge-equivalence packaged (\texttt{N689}),
+  \item deterministic chart sign fixing (0‑cochain) from strict-core payload weights (\texttt{T175}: \texttt{F690}/\texttt{P690}/\texttt{N690}),
+  \item a corresponding sign-fixed directed closure export (\texttt{F692}) that still induces the same projective output ray (by \texttt{N692}).
+\end{itemize}
+All of these remain \emph{convention-layer} artifacts and do not upgrade any directed sign into strict-core physics.
 \section{Open boundary: kernel-alone/global QW-2191 discharge}
 
 \texttt{QW-2191} remains a real strict-core uniqueness obstruction: kernel-alone translation-invariant data leaves an $O(2)$ basis freedom inside each degenerate Fourier pair plane.
@@ -465,6 +484,39 @@ The mixing audit is part of the exported result: on the current repo state, \tex
 an off-diagonal-to-diagonal Frobenius ratio of $1.191284779529568$ and a maximum off-block coupling Frobenius norm of $3.4009571444250914$,
 so \emph{no diagonalization claim} is made.
 
+\section{Basis-invariant Hessian eigen-spectrum proxy (F704)}
+
+The most basis-stable quadratic proxy spectrum is the invariant eigenvalue set of the symmetric Hessian $H_{\psi}^{(s)}$ itself.
+If we change coordinates by an orthogonal basis transformation $R\in O(12)$, then
+\[
+H_{\psi}^{(s)} \mapsto R\,H_{\psi}^{(s)}\,R^{\mathsf T},
+\]
+so the eigenvalues $\lambda_i\bigl(H_{\psi}^{(s)}\bigr)$ are unchanged. This avoids any basis-dependent “channel” choices and cleanly separates
+the invariant spectrum from mixing/assignment questions (which remain open at the physics-interpretation layer).
+
+\texttt{F704} exports the invariant eigenvalue spectrum on the current repo state (dimensionless $m^2$ proxies in strict normalization; no physical unit claim):
+
+\begin{center}
+\begin{tabular}{rr}
+\toprule
+mode index & $\lambda_i(H_{\psi}^{(s)})$ (proxy $m^2$)\\
+\midrule
+0 & $0.08813142775481989$\\
+1 & $0.11195105316362809$\\
+2 & $0.23796767585569786$\\
+3 & $0.7641952808835573$\\
+4 & $0.7733323123191046$\\
+5 & $1.2068935563568985$\\
+6 & $1.7060617210611557$\\
+7 & $1.8861137936815946$\\
+8 & $2.290146094544166$\\
+9 & $2.989559197836824$\\
+10 & $12.356024722005182$\\
+11 & $12.800940342343853$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
 \section{What is and is not claimed physically}
 
 \begin{itemize}
@@ -472,8 +524,8 @@ so \emph{no diagonalization claim} is made.
   \item \textbf{Not claimed:} that any proxy number is already identified with a Standard Model mass or coupling.
   \item \textbf{Not claimed:} that the selector-aligned channel basis diagonalizes $H_{\psi}$; mixing is audited and explicitly non-negligible (\texttt{P696}).
   \item \textbf{Not claimed:} kernel-alone/global \texttt{QW-2191} discharge, directed sign-sensitive physical orientation in strict core, or ToE closure.
-  \item \textbf{Host matching discipline:} any attempted identification of proxy values with external physics data is necessarily non-strict and must carry an explicit external dataset + mapping policy; see the non-strict host-matching harness \texttt{P702}.
-  \item \textbf{Non-strict diagnostic (current):} under the simplest one-scale centered-log assignment policy, \texttt{P702} computes \texttt{rmse\_log\_m2}\,$\approx 8.10$ and \texttt{max\_abs\_rel\_mass}\,$\approx 7.90\times 10^{2}$ against an explicit PDG2024 mass target dataset, so \emph{no} “Standard Model match” claim is made at this stage.
+  \item \textbf{Host matching discipline:} any attempted identification of proxy values with external physics data is necessarily non-strict and must carry an explicit external dataset + mapping policy; see the non-strict host-matching harnesses \texttt{P702} (channel proxy) and \texttt{P704} (eigen-spectrum proxy).
+  \item \textbf{Non-strict diagnostic (current):} under the simplest one-scale centered-log assignment policy against an explicit PDG2024 mass target dataset, \texttt{P702} computes $\mathrm{RMSE}(\log m^2)\approx 8.10$ and $\max|\Delta m/m|\approx 7.90\times 10^{2}$, while \texttt{P704} computes $\mathrm{RMSE}(\log m^2)\approx 7.23$ and $\max|\Delta m/m|\approx 4.35\times 10^{2}$, so \emph{no} “Standard Model match” claim is made at this stage.
 \end{itemize}
 
 \chapter{Emergent observer pipeline (projective scope)}
@@ -541,7 +593,7 @@ The v1 OS support packet (\texttt{F698}, audited by \texttt{P698}, packaged by \
 \begin{itemize}
   \item global projective selector closure on $C_{v1}$ (\texttt{N680}/\texttt{F672}),
   \item directed-vs-projective output-ray invariance and sign-lift gauge covariance (\texttt{N692}, \texttt{N693}),
-  \item first quadratic proxy spectra (\texttt{P694}, \texttt{P696}),
+  \item first quadratic proxy spectra (\texttt{P694}, \texttt{P696}) and the basis-invariant Hessian eigen-spectrum mass observable (\texttt{F704}),
   \item observer-limit readout (\texttt{P697}).
 \end{itemize}
 The mass-proxy meaning is frozen separately as a scope-limited theorem (\texttt{N703}).
@@ -608,12 +660,12 @@ Open (explicit hard limits):
 \section{Operational OS support}
 
 \begin{itemize}
-  \item Proxy spectra: \texttt{P694}, \texttt{P696}; observer-limit readout: \texttt{P697}.
+  \item Proxy spectra: \texttt{P694}, \texttt{P696}; basis-invariant eigen-spectrum mass observable: \texttt{F704}; observer-limit readout: \texttt{P697}.
   \item Downstream computability chain: \texttt{P699} packaged by \texttt{N699}.
   \item OS support packets: \texttt{F698/P698/N698} (v1), \texttt{F700/P700/N700} (v2).
   \item Operational ToE closure statement: \texttt{N701}.
   \item Quadratic mass-proxy meaning definition: \texttt{N703}.
-  \item Non-strict host matching harness (external-data dependent): \texttt{P702}.
+  \item Non-strict host matching harnesses (external-data dependent): \texttt{P702}, \texttt{P704}.
 \end{itemize}
 \section{Emergent observer artifacts}
 

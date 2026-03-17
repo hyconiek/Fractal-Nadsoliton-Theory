@@ -1,0 +1,122 @@
+{
+  "object": "MassObservable_diagonal_local_strict_derived_v1",
+  "stage": "F704",
+  "status": "PASS_EXPORTED_STRICT_INVARIANT_MASS_OBSERVABLE_OBJECT",
+  "as_of": "2026-03-17",
+  "generated_utc": "2026-03-17T16:38:11.350684+00:00",
+  "goal": "Export a named strict object defining the observer-limit mass-like readout as the basis-invariant eigenvalue spectrum of the diagonal/local Psi-sector Hessian H_psi at the exported value instantiation (dimensionless proxy only).",
+  "inputs": {
+    "f459_h_psi_eigensystem_object": "fundamental_action_reconstruction/generated/psi_hessian_diagonal_local_strict_derived_value_instantiated_v1.json"
+  },
+  "definition": {
+    "observable": "eigenvalues of H_psi (m^2 proxy), and their square roots (m proxy)",
+    "basis_invariant": true,
+    "normalization": "strict_repo_internal_dimensionless",
+    "notes": [
+      "This object is a proxy readout only; it does not assign physical units.",
+      "See N703 for strict scope/meaning discipline: these are quadratic coefficients in the strict normalization."
+    ]
+  },
+  "outputs": {
+    "n": 12,
+    "eigenvalues_m2_proxy_ascending": [
+      0.08813142775481989,
+      0.11195105316362809,
+      0.23796767585569786,
+      0.7641952808835573,
+      0.7733323123191046,
+      1.2068935563568985,
+      1.7060617210611557,
+      1.8861137936815946,
+      2.290146094544166,
+      2.989559197836824,
+      12.356024722005182,
+      12.800940342343853
+    ],
+    "m_proxy_ascending": [
+      0.29686937827067966,
+      0.33459087429819134,
+      0.48781930656309397,
+      0.8741826358854066,
+      0.8793931500296693,
+      1.0985870727242781,
+      1.306162976454759,
+      1.3733585816099139,
+      1.5133228652684019,
+      1.7290341806444498,
+      3.5151137566237,
+      3.5778401784238287
+    ],
+    "spectrum": [
+      {
+        "mode_index": 0,
+        "m2_proxy": 0.08813142775481989,
+        "m_proxy": 0.29686937827067966
+      },
+      {
+        "mode_index": 1,
+        "m2_proxy": 0.11195105316362809,
+        "m_proxy": 0.33459087429819134
+      },
+      {
+        "mode_index": 2,
+        "m2_proxy": 0.23796767585569786,
+        "m_proxy": 0.48781930656309397
+      },
+      {
+        "mode_index": 3,
+        "m2_proxy": 0.7641952808835573,
+        "m_proxy": 0.8741826358854066
+      },
+      {
+        "mode_index": 4,
+        "m2_proxy": 0.7733323123191046,
+        "m_proxy": 0.8793931500296693
+      },
+      {
+        "mode_index": 5,
+        "m2_proxy": 1.2068935563568985,
+        "m_proxy": 1.0985870727242781
+      },
+      {
+        "mode_index": 6,
+        "m2_proxy": 1.7060617210611557,
+        "m_proxy": 1.306162976454759
+      },
+      {
+        "mode_index": 7,
+        "m2_proxy": 1.8861137936815946,
+        "m_proxy": 1.3733585816099139
+      },
+      {
+        "mode_index": 8,
+        "m2_proxy": 2.290146094544166,
+        "m_proxy": 1.5133228652684019
+      },
+      {
+        "mode_index": 9,
+        "m2_proxy": 2.989559197836824,
+        "m_proxy": 1.7290341806444498
+      },
+      {
+        "mode_index": 10,
+        "m2_proxy": 12.356024722005182,
+        "m_proxy": 3.5151137566237
+      },
+      {
+        "mode_index": 11,
+        "m2_proxy": 12.800940342343853,
+        "m_proxy": 3.5778401784238287
+      }
+    ],
+    "min_m2_proxy": 0.08813142775481989,
+    "max_m2_proxy": 12.800940342343853
+  },
+  "hard_limits": [
+    "Does not assign any physical mass units or calibration (no GeV/SI claim).",
+    "Does not identify Standard Model particles or claim host matching.",
+    "Does not imply kernel-alone/global QW-2191 discharge.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}
