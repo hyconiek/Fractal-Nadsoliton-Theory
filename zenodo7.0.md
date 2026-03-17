@@ -33,6 +33,7 @@ What is strictly discharged / exported (scope-limited, no false pass):
 - **Release‑7 OS bridge audit for the localized exact split:** `P717`, packaged as `N713`, shows that this current `pair4` exact branch split is already **gauge‑irrelevant for the concrete Release‑7 OS observables** (`P694`, `P696`, `F704`), even though it remains open as a strict-core provider problem.
 - **Single mixed linear-weight span insufficiency audit:** `P718`, packaged as `N714`, shows that even the full single-linear span `span{w_break, w_ref_unnormalized}` still does **not** discharge the missing exact provider: every noncritical sector reaches at most all-root **projective** orbit recovery, never one exact global directed section. So the next provider attempt must leave the present single-linear span class.
 - **Low-complexity nonlinear two-readout provider-class audit:** `P719`, packaged as `N715`, shows that the nearest untuned nonlinear extension also fails: scanning all odd polynomials in `(<w_break,u>, <w_ref,u>)` of total degree `<=3` with coefficient alphabet `{-1,0,1}` yields `0` exact candidates, `576` projective-only candidates, and only the already-known split patterns `["pair4"]` or `["pair2","pair3"]`.
+- **Observer-facing signed output-channel projection audit:** `P720`, packaged as `N716`, attacks the nearest physics-facing static readout class on `Q_out=span{o_+,o_-}` and still finds `0` exact candidates: all supported directions are only projective and reproduce the coarser split `["pair4","pair5"]`, while pure `o_-` projections are unsupported on current exports.
 - **Strict dashboards:** `P706` and `P707` report readiness (`PASS_*_READY`), and the strict frontier dashboard `P708` indicates the next strict target remains `T173`.
 
 What is explicitly *not* claimed (hard limits):
@@ -153,6 +154,7 @@ python3 fundamental_action_reconstruction/p716_current_strict_t176_pair4_negativ
 python3 fundamental_action_reconstruction/p717_current_strict_t176_pair4_exact_branch_split_release_7_os_gauge_irrelevance_bridge_audit_probe.py
 python3 fundamental_action_reconstruction/p718_current_strict_t176_single_mixed_linear_weight_span_provider_insufficiency_audit_probe.py
 python3 fundamental_action_reconstruction/p719_current_strict_t176_low_complexity_odd_polynomial_two_readout_provider_class_audit_probe.py
+python3 fundamental_action_reconstruction/p720_current_strict_t176_observer_facing_signed_output_channel_projection_provider_class_audit_probe.py
 cat fundamental_action_reconstruction/generated/p707_current_release_7_build_and_closure_smoke_probe_summary.json
 cat fundamental_action_reconstruction/generated/p709_current_strict_release_7_os_residual_sign_gauge_irrelevance_audit_probe_summary.json
 cat fundamental_action_reconstruction/generated/p710_current_nonstrict_proxy_to_gev_calibration_map_from_f704_eigenspectrum_probe_summary.json
@@ -165,6 +167,7 @@ cat fundamental_action_reconstruction/generated/p716_current_strict_t176_pair4_n
 cat fundamental_action_reconstruction/generated/p717_current_strict_t176_pair4_exact_branch_split_release_7_os_gauge_irrelevance_bridge_audit_probe_summary.json
 cat fundamental_action_reconstruction/generated/p718_current_strict_t176_single_mixed_linear_weight_span_provider_insufficiency_audit_probe_summary.json
 cat fundamental_action_reconstruction/generated/p719_current_strict_t176_low_complexity_odd_polynomial_two_readout_provider_class_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p720_current_strict_t176_observer_facing_signed_output_channel_projection_provider_class_audit_probe_summary.json
 cat fundamental_action_reconstruction/generated/p706_current_release_7_strict_projective_operational_toe_os_closure_dashboard_probe_summary.json
 cat fundamental_action_reconstruction/generated/p708_current_strict_t173_frontier_dashboard_probe_summary.json
 ```
@@ -191,6 +194,7 @@ cat fundamental_action_reconstruction/generated/p708_current_strict_t173_frontie
 - `fundamental_action_reconstruction/p717_current_strict_t176_pair4_exact_branch_split_release_7_os_gauge_irrelevance_bridge_audit_probe.py`
 - `fundamental_action_reconstruction/p718_current_strict_t176_single_mixed_linear_weight_span_provider_insufficiency_audit_probe.py`
 - `fundamental_action_reconstruction/p719_current_strict_t176_low_complexity_odd_polynomial_two_readout_provider_class_audit_probe.py`
+- `fundamental_action_reconstruction/p720_current_strict_t176_observer_facing_signed_output_channel_projection_provider_class_audit_probe.py`
 
 **Frozen non-strict host matching layer (explicit dataset vs policy, no pass claim):**
 - dataset: `fundamental_action_reconstruction/external_data/sm_mass_targets_v1.json`
@@ -239,9 +243,10 @@ Concrete next move under `T173`:
 - `P717/N713` then bridges this localized split to the already-exported Release‑7 OS gauge audit: because `P709/N706` proves sign-gauge-irrelevance for the full residual sign family on the concrete downstream observables, the current `pair4` exact split is already **operationally inert** for `P694`, `P696`, and `F704`.
 - `P718/N714` then attacks the narrowest honest next provider class instead of freezing the frontier: any **single** mixed linear weight in `span{w_break, w_ref_unnormalized}`. The result is negative but informative: this whole current single-linear span reaches at most all-root **projective** orbit recovery, never one exact global directed section. Some sectors reproduce the current `pair4` split, while others worsen the split to `pair2/pair3`. So the next provider attack must leave the present single-linear span class.
 - `P719/N715` then attacks the nearest untuned nonlinear extension of the same current carrier: odd polynomials in the two exported readouts `(<w_break,u>, <w_ref,u>)` of total degree `<=3`, with coefficient alphabet `{-1,0,1}` and no new fitted parameters. This result is again negative but sharper: across all `728` nonzero candidates there are `0` exact all-root directed sections, `576` projective-only candidates, and no new split pattern beyond `["pair4"]` or `["pair2","pair3"]`. So the next provider attack must either raise complexity in an explicit non-hidden way or leave the current two-readout carrier entirely — and the preferred direction is now the latter, i.e. a new **physically interpretable** observable/provider class rather than further coefficient tuning.
+- `P720/N716` then attacks the nearest static observer-facing class on the actually exported output carrier `Q_out=span{o_+,o_-}`: signed projections of the rooted unsigned output vectors onto all nonzero directions with coefficients in `{-1,0,1}`. This is again negative, but more physically informative: there are `0` exact candidates, `6` projective-only candidates, and every supported direction reproduces only the coarser split `["pair4","pair5"]`, while the pure `o_-` channel is unsupported because the current unsigned rooted outputs already lie almost entirely on `o_+`. So even the nearest physics-facing **static** readout class is too coarse to fix `T176`.
 - Therefore the provider gap is now narrower again: adding an even component is **not** sufficient by itself. The remaining strict-core requirement is to fix the final **global `Z2` branch split tied to exact chart polarity**, without hidden selector slots or marked-orientation premises — but this is no longer a blocker for the concrete Release‑7 OS observables already exported.
 - Therefore, the next honest strict move under `T173` is now ordered as:
-  1) first, export a **genuinely new** strict-core sign-sensitive provider class beyond both the present single-linear span and the current low-complexity untuned two-readout nonlinear class (must bypass `N518`-class obstructions and must not smuggle `T164`);
+  1) first, export a **genuinely new** strict-core sign-sensitive provider class beyond the present single-linear span, the current low-complexity untuned two-readout nonlinear class, and the current static observer-facing output-axis projection class (must bypass `N518`-class obstructions and must not smuggle `T164`);
   2) only if that provider attack stalls, fall back to explicitly freezing residual sign as gauge for the already-audited Release‑7 OS observables.
 - If a strict sign-sensitive datum is still demanded, it must come with an explicit symmetry-breaking premise/fixing datum (`T164`, non-`Aut(Z_12)`-invariant by `N462`) and must remain labeled as premise-based / convention-layer unless a strict-core upgrade theorem is exported.
 

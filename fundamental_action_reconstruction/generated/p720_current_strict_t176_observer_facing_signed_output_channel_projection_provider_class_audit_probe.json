@@ -1,0 +1,253 @@
+{
+  "stage": "P720",
+  "status": "PASS_OBSERVER_FACING_OUTPUT_CHANNEL_PROJECTION_PROVIDER_CLASS_AUDITED",
+  "as_of": "2026-03-18",
+  "generated_utc": "2026-03-17T23:51:59.706856+00:00",
+  "goal": "attack the nearest physics-facing provider class after P719: static signed output-channel projections on the observer-facing output carrier Q_out = span{o_plus,o_minus}",
+  "inputs": {
+    "atlas": "fundamental_action_reconstruction/generated/selector_atlas_pair12345_oriented_transport_mod_2pi_strict_convention_v1.json",
+    "Y_sel": "fundamental_action_reconstruction/generated/selector_output_operator_global_c_v1_seed_v1_promoted_strict_v1.json",
+    "P697": "fundamental_action_reconstruction/generated/p697_current_strict_projective_observer_limit_readout_from_global_projective_selector_closure_output_probe_summary.json",
+    "P719": "fundamental_action_reconstruction/generated/p719_current_strict_t176_low_complexity_odd_polynomial_two_readout_provider_class_audit_probe_summary.json",
+    "A_packets": [
+      "fundamental_action_reconstruction/generated/a_1_pair1_orientation_projector_operator_strict_core_v1.json",
+      "fundamental_action_reconstruction/generated/a_2_pair2_orientation_projector_operator_strict_core_v1.json",
+      "fundamental_action_reconstruction/generated/a_3_pair3_orientation_projector_operator_strict_core_v1.json",
+      "fundamental_action_reconstruction/generated/a_4_pair4_orientation_projector_operator_strict_core_v1.json",
+      "fundamental_action_reconstruction/generated/a_5_pair5_orientation_projector_operator_strict_core_v1.json"
+    ]
+  },
+  "scan_class": {
+    "carrier": "observer_facing_unsigned_root_output_vectors_in_Q_out",
+    "carrier_basis": [
+      "o_plus",
+      "o_minus"
+    ],
+    "direction_coefficient_alphabet": [
+      -1,
+      0,
+      1
+    ],
+    "directions_scanned": [
+      [
+        -1,
+        -1
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "total_candidates_scanned": 8
+  },
+  "unsigned_root_output_vectors_by_root": {
+    "pair1": [
+      1.0,
+      -9.149258638450154e-16
+    ],
+    "pair2": [
+      0.9999999999999998,
+      -6.871600701938739e-16
+    ],
+    "pair3": [
+      1.0,
+      -1.2977827337377104e-15
+    ],
+    "pair4": [
+      -1.0,
+      1.8755970911255346e-16
+    ],
+    "pair5": [
+      -1.0,
+      9.149258638450154e-16
+    ]
+  },
+  "counts": {
+    "total_candidates_scanned": 8,
+    "exact_candidates_found": 0,
+    "projective_only_candidates_found": 6,
+    "unsupported_candidates_found": 2
+  },
+  "projective_only_negated_root_sets_seen": [
+    [
+      "pair4",
+      "pair5"
+    ]
+  ],
+  "projective_only_examples_by_negated_root_set": {
+    "pair4,pair5": [
+      {
+        "direction": [
+          -1,
+          -1
+        ],
+        "formula": "-1*o_plus -1*o_minus",
+        "reference_root": "pair1"
+      },
+      {
+        "direction": [
+          -1,
+          0
+        ],
+        "formula": "-1*o_plus",
+        "reference_root": "pair1"
+      },
+      {
+        "direction": [
+          -1,
+          1
+        ],
+        "formula": "-1*o_plus +1*o_minus",
+        "reference_root": "pair1"
+      },
+      {
+        "direction": [
+          1,
+          -1
+        ],
+        "formula": "+1*o_plus -1*o_minus",
+        "reference_root": "pair1"
+      },
+      {
+        "direction": [
+          1,
+          0
+        ],
+        "formula": "+1*o_plus",
+        "reference_root": "pair1"
+      }
+    ]
+  },
+  "unsupported_examples": [
+    {
+      "direction": [
+        0,
+        -1
+      ],
+      "formula": "-1*o_minus",
+      "unsupported_roots": [
+        "pair1",
+        "pair2",
+        "pair3",
+        "pair4",
+        "pair5"
+      ]
+    },
+    {
+      "direction": [
+        0,
+        1
+      ],
+      "formula": "+1*o_minus",
+      "unsupported_roots": [
+        "pair1",
+        "pair2",
+        "pair3",
+        "pair4",
+        "pair5"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": "p697_observer_limit_readout_still_computable",
+      "actual": "PASS_PROJECTIVE_OBSERVER_LIMIT_READOUT_COMPUTABLE_FROM_GLOBAL_PROJECTIVE_SELECTOR_CLOSURE_OUTPUT_PROJECTOR",
+      "expected": "PASS_PROJECTIVE_OBSERVER_LIMIT_READOUT_COMPUTABLE_FROM_GLOBAL_PROJECTIVE_SELECTOR_CLOSURE_OUTPUT_PROJECTOR",
+      "pass": true,
+      "meaning": "P697 still exposes the operational observer-limit output carrier below the global projective selector closure."
+    },
+    {
+      "id": "p719_previous_physically_interpretable_shift_was_requested",
+      "actual": "new_physically_interpretable_observable_provider_class_over_further_coefficient_tuning",
+      "expected": "new_physically_interpretable_observable_provider_class_over_further_coefficient_tuning",
+      "pass": true,
+      "meaning": "P719 already identified a new physically interpretable provider class as the preferred next continuation."
+    },
+    {
+      "id": "observer_facing_unsigned_root_outputs_are_currently_almost_pure_o_plus",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "On current exports, the unsigned rooted output vectors already lie almost entirely on the o_plus channel, so pure o_minus projections are operationally silent on this carrier."
+    },
+    {
+      "id": "observer_facing_output_axis_projection_exact_candidates_absent",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "No static observer-facing signed output-axis projection on the current Q_out carrier yields one exact all-root directed section."
+    },
+    {
+      "id": "observer_facing_output_axis_projection_projective_only_candidates_present",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "The same output-channel projection class still contains projective-only sectors, so the failure remains exact-provider level rather than total support failure."
+    },
+    {
+      "id": "observer_facing_output_axis_projection_negated_root_sets_match_pair4_pair5_split",
+      "actual": [
+        [
+          "pair4",
+          "pair5"
+        ]
+      ],
+      "expected": [
+        [
+          "pair4",
+          "pair5"
+        ]
+      ],
+      "pass": true,
+      "meaning": "Every supported static observer-facing output-axis projection reproduces only the pair4/pair5 negated branch split on current exports."
+    }
+  ],
+  "blocking_mismatches": [],
+  "result": {
+    "observer_facing_output_axis_projection_exact_root_independent_section_exists": false,
+    "observer_facing_output_axis_projection_projective_only_candidates_exist": true,
+    "observer_facing_output_axis_projection_known_negated_root_sets": [
+      [
+        "pair4",
+        "pair5"
+      ]
+    ],
+    "observer_facing_output_axis_projection_class_too_coarse_for_exact_t176": true,
+    "preferred_next_direction": "dynamical_or_flux_like_physically_interpretable_provider_class_over_further_static_output_axis_projections",
+    "counts_as_strict_physical_orientation_datum": false,
+    "implies_t176_discharge": false
+  },
+  "hard_limits": [
+    "No T176 discharge claim.",
+    "No strict-core directed/sign-sensitive physical orientation datum claim.",
+    "No statement about nonlinear functions on Q_out beyond the scanned static linear projection class.",
+    "No statement about source-topology flow/barrier observables already bridging into exact chartwise directed-sign coherence.",
+    "No kernel-alone/global QW-2191 discharge.",
+    "No ToE closure claim."
+  ],
+  "no_false_pass": true
+}
