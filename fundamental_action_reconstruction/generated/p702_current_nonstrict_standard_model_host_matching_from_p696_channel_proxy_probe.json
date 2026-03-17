@@ -1,13 +1,155 @@
 {
   "stage": "P702",
-  "status": "NOT_COMPUTABLE_MISSING_PREREQUISITES",
+  "status": "COMPUTED_NONSTRICT_SM_HOST_MATCHING_METRICS_NO_PASS_CLAIM",
   "as_of": "2026-03-17",
-  "missing": [
-    "fundamental_action_reconstruction/external_data/sm_mass_targets_v1.json"
-  ],
-  "hints": {
-    "sm_targets_template": "fundamental_action_reconstruction/external_data/SM_MASS_TARGETS_TEMPLATE.json",
-    "sm_targets_required_path": "fundamental_action_reconstruction/external_data/sm_mass_targets_v1.json"
+  "generated_utc": "2026-03-17T15:46:47.481617+00:00",
+  "scope": "nonstrict_external_host_matching_only",
+  "goal": "compute_non_strict_host_matching_metrics_between_P696_channel_m2_proxies_and_an_explicit_external_standard_model_mass_target_dataset__no_false_pass",
+  "inputs": {
+    "P696_summary": "fundamental_action_reconstruction/generated/p696_current_strict_physical_computability_selector_aligned_channel_spectrum_proxy_from_projective_selector_closure_probe_summary.json",
+    "sm_mass_targets": "fundamental_action_reconstruction/external_data/sm_mass_targets_v1.json"
   },
+  "p696_mixing_audit": {
+    "H_in_selector_aligned_basis_offdiag_to_diag_ratio": 1.191284779529568,
+    "offblock_max_fro": 3.4009571444250914
+  },
+  "method": {
+    "assignment": "linear_sum_assignment on squared differences of centered log(mass^2)",
+    "scale": "global scale set by mean log(mass^2/ proxy_m2) after assignment"
+  },
+  "units": "GeV",
+  "scale": {
+    "scale_mass2_per_proxy_unit": 0.24411475697060103,
+    "scale_mass_per_sqrt_proxy_unit": 0.4940797071026101
+  },
+  "metrics": {
+    "rmse_log_m2": 8.097820141338394,
+    "max_abs_log_m2": 13.345774346449858,
+    "rmse_rel_mass": 243.510723790234,
+    "max_abs_rel_mass": 789.6751282490443
+  },
+  "assignment": [
+    {
+      "predicted_channel": "pair3:u_perp",
+      "target_id": "H",
+      "proxy_m2": 4.930970379004997,
+      "target_mass": 125.2,
+      "predicted_mass": 1.0971429422368069,
+      "relative_error_mass": -0.9912368774581725,
+      "log_error_m2": -9.474405966004287
+    },
+    {
+      "predicted_channel": "pair2:u_perp",
+      "target_id": "W",
+      "proxy_m2": 4.2984508516608315,
+      "target_mass": 80.3692,
+      "predicted_mass": 1.0243609154020163,
+      "relative_error_mass": -0.9872543099172069,
+      "log_error_m2": -8.7251241944915
+    },
+    {
+      "predicted_channel": "e0",
+      "target_id": "Z",
+      "proxy_m2": 4.761250376916641,
+      "target_mass": 91.188,
+      "predicted_mass": 1.078096228839146,
+      "relative_error_mass": -0.988177213790859,
+      "log_error_m2": -8.875453149776543
+    },
+    {
+      "predicted_channel": "pair4:u_perp",
+      "target_id": "b",
+      "proxy_m2": 3.675931516755229,
+      "target_mass": 4.183,
+      "predicted_mass": 0.947285135982443,
+      "relative_error_mass": -0.773539293334343,
+      "log_error_m2": -2.970367659226715
+    },
+    {
+      "predicted_channel": "pair1:u",
+      "target_id": "c",
+      "proxy_m2": 2.9337556210543316,
+      "target_mass": 1.273,
+      "predicted_mass": 0.8462700753570416,
+      "relative_error_mass": -0.3352159659410513,
+      "log_error_m2": -0.8165861037722143
+    },
+    {
+      "predicted_channel": "pair4:u",
+      "target_id": "d",
+      "proxy_m2": 1.4474315384116314,
+      "target_mass": 0.0047,
+      "predicted_mass": 0.5944235848542171,
+      "relative_error_mass": 125.47310316047172,
+      "log_error_m2": 9.680059324645343
+    },
+    {
+      "predicted_channel": "pair3:u",
+      "target_id": "e",
+      "proxy_m2": 0.6687166508753918,
+      "target_mass": 0.00051099895,
+      "predicted_mass": 0.404034160326377,
+      "relative_error_mass": 789.6751282490443,
+      "log_error_m2": 13.345774346449858
+    },
+    {
+      "predicted_channel": "e6",
+      "target_id": "mu",
+      "proxy_m2": 2.41906833577034,
+      "target_mass": 0.1056583755,
+      "predicted_mass": 0.7684596794119083,
+      "relative_error_mass": 6.273059762421847,
+      "log_error_m2": 3.968354156327019
+    },
+    {
+      "predicted_channel": "pair2:u",
+      "target_id": "s",
+      "proxy_m2": 2.069950873317227,
+      "target_mass": 0.0935,
+      "predicted_mass": 0.710848474979667,
+      "relative_error_mass": 6.60265748641355,
+      "log_error_m2": 4.056995710874353
+    },
+    {
+      "predicted_channel": "pair1:u_perp",
+      "target_id": "t",
+      "proxy_m2": 5.08050282436479,
+      "target_mass": 172.57,
+      "predicted_mass": 1.1136542157502314,
+      "relative_error_mass": -0.9935466522816815,
+      "log_error_m2": -10.086312513452027
+    },
+    {
+      "predicted_channel": "pair5:u_perp",
+      "target_id": "tau",
+      "proxy_m2": 3.5360177064927694,
+      "target_mass": 1.77693,
+      "predicted_mass": 0.9290823984255779,
+      "relative_error_mass": -0.47714181288763313,
+      "log_error_m2": -1.2968900088691762
+    },
+    {
+      "predicted_channel": "pair5:u",
+      "target_id": "u",
+      "proxy_m2": 1.3892705031823165,
+      "target_mass": 0.00216,
+      "predicted_mass": 0.5823585074941172,
+      "relative_error_mass": 268.6104201361654,
+      "log_error_m2": 11.193956057295885
+    }
+  ],
+  "pass_policy": {
+    "pass_criteria": null,
+    "pass_claim_available": false,
+    "pass_under_user_criteria": null,
+    "failed_criteria": []
+  },
+  "hard_limits": [
+    "Non-strict: depends on an explicit external target dataset and identification policy.",
+    "Does not claim any Standard Model identification or host matching discharge in strict scope.",
+    "Does not upgrade any proxy spectrum into physical masses without an explicit model-level map.",
+    "Does not claim kernel-alone/global QW-2191 discharge.",
+    "Does not claim ToE closure."
+  ],
   "no_false_pass": true
 }

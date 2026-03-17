@@ -1,0 +1,92 @@
+{
+  "dataset_id": "SM_mass_targets_v1_pdg2024_summary_tables",
+  "as_of": "2024-05-31",
+  "source": "Particle Data Group (S. Navas et al.), Phys. Rev. D 110, 030001 (2024). Summary Tables PDFs: rpp2024-sum-leptons.pdf, rpp2024-sum-quarks.pdf, rpp2024-sum-gauge-higgs-bosons.pdf. Retrieved 2026-03-17.",
+  "units": "GeV",
+  "target_definition": {
+    "leptons": "m_e, m_mu, m_tau from PDG 2024 leptons summary table.",
+    "quarks": "m_u, m_d, m_s are MSbar masses at mu=2 GeV; m_c and m_b are MSbar masses renormalized at mu=m; m_t is direct measurement (event kinematics), per PDG 2024 quarks summary table.",
+    "gauge_higgs": "m_W world average and m_Z Breit-Wigner parameter from PDG 2024 gauge & Higgs summary table; m_H from the same table."
+  },
+  "predicted_channels": [
+    "pair3:u",
+    "pair5:u",
+    "pair4:u",
+    "pair2:u",
+    "e6",
+    "pair1:u",
+    "pair5:u_perp",
+    "pair4:u_perp",
+    "pair2:u_perp",
+    "e0",
+    "pair3:u_perp",
+    "pair1:u_perp"
+  ],
+  "targets": [
+    {
+      "id": "e",
+      "mass": 0.00051099895,
+      "sigma_mass": 1.5e-13
+    },
+    {
+      "id": "u",
+      "mass": 0.00216,
+      "sigma_mass": 7.0e-05
+    },
+    {
+      "id": "d",
+      "mass": 0.0047,
+      "sigma_mass": 7.0e-05
+    },
+    {
+      "id": "mu",
+      "mass": 0.1056583755,
+      "sigma_mass": 2.3e-09
+    },
+    {
+      "id": "s",
+      "mass": 0.0935,
+      "sigma_mass": 0.0008
+    },
+    {
+      "id": "tau",
+      "mass": 1.77693,
+      "sigma_mass": 9.0e-05
+    },
+    {
+      "id": "c",
+      "mass": 1.273,
+      "sigma_mass": 0.0046
+    },
+    {
+      "id": "b",
+      "mass": 4.183,
+      "sigma_mass": 0.007
+    },
+    {
+      "id": "W",
+      "mass": 80.3692,
+      "sigma_mass": 0.0133
+    },
+    {
+      "id": "Z",
+      "mass": 91.188,
+      "sigma_mass": 0.002
+    },
+    {
+      "id": "H",
+      "mass": 125.2,
+      "sigma_mass": 0.11
+    },
+    {
+      "id": "t",
+      "mass": 172.57,
+      "sigma_mass": 0.29
+    }
+  ],
+  "matching_policy": {
+    "method": "centered_log_assignment_with_global_scale",
+    "pass_criteria": null
+  }
+}
+
