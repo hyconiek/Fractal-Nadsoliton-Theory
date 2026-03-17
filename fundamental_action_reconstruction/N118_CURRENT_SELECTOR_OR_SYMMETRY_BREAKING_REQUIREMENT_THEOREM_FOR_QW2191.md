@@ -1,7 +1,7 @@
 # N118 Current Selector Or Symmetry-Breaking Requirement Theorem For QW-2191
 
 Status: `N118_DISCHARGED_CURRENT_SELECTOR_OR_SYMMETRY_BREAKING_REQUIREMENT_THEOREM_FOR_QW2191_NO_FALSE_PASS`
-As of: `2026-03-07`
+As of: `2026-03-17`
 
 ## Goal
 
@@ -23,7 +23,9 @@ Consider the current repo state containing all of the following:
 3. `QW-2193`:
    the axiom-augmented selector family is robust,
 4. `B2`:
-   no strict-core internal orientation datum is currently derived.
+   an axis-only strict-core internal orientation datum is derived
+   (local `O(2) -> Z2` cut), but residual `Z2` sign remains and no strict-core
+   kernel-invariant selects one unique `O(2)` point.
 
 The theorem is:
 
@@ -33,7 +35,9 @@ The theorem is:
 >
 > Equivalently: the current repo does support the conclusion that kernel alone
 > is insufficient, axiom-augmented selector closure is robust, and no
-> axiom-free internal selector source is yet exported.
+> axiom-free strict-core internal selector source selecting one unique `O(2)`
+> point is yet exported (only an axis-only `O(2)->Z2` cut is currently
+> derived).
 
 ## Result
 
@@ -61,8 +65,8 @@ The theorem is:
 
 The correct next move is now:
 
-1. either derive one explicit internal selector source from strict core,
+1. either discharge a strict-core sign-lift / sign-sensitive internal
+   orientation datum (or an equivalent internal selector source selecting one
+   unique `O(2)` point),
 2. or formalize theory-level acceptance of the selector/symmetry-breaking
-   requirement,
-3. while keeping the separate `legacy -> strict kernel bridge/non-bridge`
-   question explicit.
+   requirement if no such strict-core sign-lift is derived.

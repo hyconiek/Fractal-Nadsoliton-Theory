@@ -18,11 +18,18 @@
       "meaning": "QW-2191 keeps kernel-alone uniqueness obstructed"
     },
     {
-      "id": "b2_internal_source_missing",
+      "id": "b2_internal_orientation_datum_axis_only_found",
+      "actual": "found_axis_only_residual_z2",
+      "expected": "found_axis_only_residual_z2",
+      "pass": true,
+      "meaning": "B2 confirms an axis-only strict-core internal orientation datum exists (O(2)->Z2 cut); residual Z2 sign remains"
+    },
+    {
+      "id": "b2_kernel_invariant_selecting_one_o2_point_missing",
       "actual": "not_found_in_strict_core",
       "expected": "not_found_in_strict_core",
       "pass": true,
-      "meaning": "B2 keeps the strict-core internal selector source absent"
+      "meaning": "B2 confirms no strict-core kernel-invariant selects one unique O(2) point (full uniqueness remains obstructed)"
     }
   ],
   "theorem_result": {
@@ -31,13 +38,16 @@
     "axiom_augmented_selector_route_available": true,
     "robust_selector_family_available": true,
     "strict_core_internal_selector_source_present": false,
+    "strict_core_internal_orientation_datum_axis_only_present": true,
+    "residual_z2_sign_remaining": true,
+    "kernel_invariant_unique_o2_point_present": false,
     "selector_or_symmetry_breaking_requirement_supported_on_current_repo_state": true,
     "full_closure_pass": false
   },
   "remaining_open_branches": [
-    "explicit_strict_core_internal_selector_source_derivation_discharge",
-    "explicit_theory_level_acceptance_of_selector_or_symmetry_breaking_requirement_if_no_internal_source_is_derived",
-    "explicit_legacy_to_strict_kernel_bridge_or_nonbridge_theorem_with_package_level_scope"
+    "explicit_strict_core_internal_sign_sensitive_orientation_datum_or_sign_lift_discharge",
+    "explicit_strict_core_kernel_invariant_selecting_one_o2_point_or_equivalent_internal_selector_source",
+    "explicit_theory_level_acceptance_of_selector_or_symmetry_breaking_requirement_if_no_sign_lift_is_derived"
   ],
   "hard_limits": [
     "no_strict_core_selector_closure",

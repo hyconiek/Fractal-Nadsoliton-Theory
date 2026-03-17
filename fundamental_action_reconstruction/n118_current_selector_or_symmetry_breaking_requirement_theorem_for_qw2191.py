@@ -17,10 +17,18 @@ def load_json(repo_relative_path: str) -> dict:
     return json.loads((REPO / repo_relative_path).read_text(encoding="utf-8"))
 
 
+def b2_findings_map(b2: dict) -> dict[str, str]:
+    return {entry["object"]: entry["status"] for entry in b2["b2"]["findings"]}
+
+
 def main() -> None:
     p108 = load_json(
         "fundamental_action_reconstruction/generated/p108_current_selector_symmetry_breaking_requirement_probe_summary.json"
     )
+    b2 = load_json(
+        "fundamental_action_reconstruction/generated/b2_internal_orientation_datum_source_audit_summary.json"
+    )
+    b2_map = b2_findings_map(b2)
 
     checks_spec = [
         {
@@ -36,10 +44,16 @@ def main() -> None:
             "meaning": "QW-2191 keeps kernel-alone uniqueness obstructed",
         },
         {
-            "id": "b2_internal_source_missing",
-            "actual": p108["strict_core_source_state"]["internal_orientation_datum_status"],
+            "id": "b2_internal_orientation_datum_axis_only_found",
+            "actual": b2_map.get("strict internal orientation datum"),
+            "expected": "found_axis_only_residual_z2",
+            "meaning": "B2 confirms an axis-only strict-core internal orientation datum exists (O(2)->Z2 cut); residual Z2 sign remains",
+        },
+        {
+            "id": "b2_kernel_invariant_selecting_one_o2_point_missing",
+            "actual": b2_map.get("kernel invariant selecting one O(2) point"),
             "expected": "not_found_in_strict_core",
-            "meaning": "B2 keeps the strict-core internal selector source absent",
+            "meaning": "B2 confirms no strict-core kernel-invariant selects one unique O(2) point (full uniqueness remains obstructed)",
         },
     ]
 
@@ -80,13 +94,16 @@ def main() -> None:
                 "axiom_augmented_selector_route_available": True,
                 "robust_selector_family_available": True,
                 "strict_core_internal_selector_source_present": False,
+                "strict_core_internal_orientation_datum_axis_only_present": True,
+                "residual_z2_sign_remaining": True,
+                "kernel_invariant_unique_o2_point_present": False,
                 "selector_or_symmetry_breaking_requirement_supported_on_current_repo_state": True,
                 "full_closure_pass": False,
             },
             "remaining_open_branches": [
-                "explicit_strict_core_internal_selector_source_derivation_discharge",
-                "explicit_theory_level_acceptance_of_selector_or_symmetry_breaking_requirement_if_no_internal_source_is_derived",
-                "explicit_legacy_to_strict_kernel_bridge_or_nonbridge_theorem_with_package_level_scope"
+                "explicit_strict_core_internal_sign_sensitive_orientation_datum_or_sign_lift_discharge",
+                "explicit_strict_core_kernel_invariant_selecting_one_o2_point_or_equivalent_internal_selector_source",
+                "explicit_theory_level_acceptance_of_selector_or_symmetry_breaking_requirement_if_no_sign_lift_is_derived"
             ],
             "hard_limits": [
                 "no_strict_core_selector_closure",
