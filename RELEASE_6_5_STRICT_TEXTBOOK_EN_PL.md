@@ -298,6 +298,9 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
 21. Update (`2026-03-17`): the oriented edge sign-lift pattern is not canonical. `P689` audits that the `F688` sign-lift pattern and the sign-lift pattern induced by the exported premise-based directed representative
     `SelectorState_global_C_v1_directed_strict_v1` are gauge-equivalent by a chart-level `Z2` 0‑cochain (`u_i -> t_i u_i`), and `N689` packages this as a boundary-safe theorem. This further reinforces that `T174`
     lives in a tracked convention layer and does **not** upgrade any directed sign into strict-core physics.
+22. Update (`2026-03-17`): the repo now also exports an explicit convention-layer **chart sign fixing** (a `Z2` 0‑cochain) from strict-core payload weights (`T175`): a sign-fixed directed representative on `C_v1`
+    `SelectorState_global_C_v1_directed_sign_fixed_from_strict_core_payload_weights_strict_convention_v1` (`F690`), audited to be independent of the starting exported directed representative (`P690`) and packaged by `N690`.
+    This collapses the premise-based and `w_break`-rooted directed representatives to the same sign-fixed representative, without any physical sign claim and without kernel-alone/global `QW-2191` discharge.
 
 ### 1.2 What is still missing (no false pass)
 
@@ -645,6 +648,9 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
 21. Update (`2026-03-17`): wzorzec oriented edge sign‑liftu nie jest kanoniczny. `P689` audytuje, że wzorzec sign‑liftu z `F688` oraz wzorzec sign‑liftu indukowany przez wyeksportowany premise-based
     kierunkowy reprezentant `SelectorState_global_C_v1_directed_strict_v1` są gauge-equivalent przez chart-level `Z2` 0‑cochain (`u_i -> t_i u_i`), a `N689` pakuje to jako twierdzenie boundary-safe. To dodatkowo
     wzmacnia, że `T174` żyje w śledzonej warstwie konwencji i **nie** promuje żadnego kierunkowego znaku do fizyki strict core.
+22. Update (`2026-03-17`): repo eksportuje teraz również jawną konwencyjną warstwę **chart sign fixing** (0‑cochain `Z2`) z wag payloadu strict-core (`T175`): sign-fixed kierunkowy reprezentant na `C_v1`
+    `SelectorState_global_C_v1_directed_sign_fixed_from_strict_core_payload_weights_strict_convention_v1` (`F690`), z audytem niezaleznosci od startowego reprezentanta (`P690`) i opakowaniem `N690`.
+    To sprowadza premise-based i `w_break`-rooted directed reprezentanty do tego samego sign-fixed reprezentanta, bez claimu o fizyczny znak i bez kernel-alone/global rozladowania `QW-2191`.
 
 ### 1.2 Czego nadal brakuje (bez false pass)
 

@@ -1,6 +1,6 @@
 # H40 Global Selector Transition Object Audit
 
-Status: `PASS_GLOBAL_SELECTOR_TRANSITION_OBJECT_EXPORTED_ON_C_V1_AND_GLOBAL_PROJECTIVE_SELECTOR_STATE_OBJECT_EXPORTED__PLUS_CONVENTION_LAYER_ORIENTED_EDGE_SIGN_LIFT_EXPORTED_AND_GAUGE_EQUIVALENCE_AUDITED__QW2191_STILL_OPEN`
+Status: `PASS_GLOBAL_SELECTOR_TRANSITION_OBJECT_EXPORTED_ON_C_V1_AND_GLOBAL_PROJECTIVE_SELECTOR_STATE_OBJECT_EXPORTED__PLUS_CONVENTION_LAYER_ORIENTED_EDGE_SIGN_LIFT_EXPORTED_AND_GAUGE_EQUIVALENCE_AUDITED__PLUS_CHART_SIGN_FIXING_EXPORTED__QW2191_STILL_OPEN`
 Date: `2026-03-17`
 
 ## Purpose
@@ -41,6 +41,7 @@ Test whether the current strict core contains any global transition or gluing ob
 - `N688`: packages `F688/P688` as a theorem-level discharge in the declared convention scope (no physical sign claim).
 - `P689`: audits that the `F688` oriented edge sign‑lift pattern is gauge-equivalent (chart-level `Z2` 0‑cochain) to the oriented edge sign‑lift pattern induced by the exported premise-based directed representative `SelectorState_global_C_v1_directed_strict_v1` (no physical sign claim).
 - `N689`: packages the `P689` gauge-equivalence result as a boundary-safe theorem: oriented edge sign‑lifts are convention-layer data and are not canonical “for free”.
+- `T175/F690/P690/N690`: exports an explicit chart-level sign fixing (0‑cochain) from strict-core payload weights and a sign-fixed directed representative on `C_v1` as a tracked convention layer, audited to be independent of the starting exported directed representative (no physical sign claim; no `QW-2191` discharge).
 - `P460`: lane-scoped cross-block polar-factor transition candidate exists (from the declared control-pullback value instantiation).
 - `P474`: audits that the exported global projective selector state object is projector-level glued/transported consistently by the exported global selector transition operators on `{pair1..pair5}` (ray/projector-level only; no sign-sensitive claim).
 - `generated/selector_transition_global_c_v1_strict_v1.json`: exported global selector transition/gluing object.

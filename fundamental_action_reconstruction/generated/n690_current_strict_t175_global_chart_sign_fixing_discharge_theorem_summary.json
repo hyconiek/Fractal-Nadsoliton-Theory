@@ -1,0 +1,50 @@
+{
+  "step": "N690",
+  "status": "N690_DERIVABLE_CURRENT_STRICT_T175_GLOBAL_CHART_SIGN_FIXING_DISCHARGE_THEOREM_NO_FALSE_PASS",
+  "scope": "current_strict_t175_convention_layer_only",
+  "checks": [
+    {
+      "id": "f690_export_passed",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "The sign-fixed directed representative export packet ran and exported the convention-layer state object (F690)."
+    },
+    {
+      "id": "p690_audit_passed",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "The independence audit across directed representatives ran and passed (P690)."
+    },
+    {
+      "id": "sign_fixed_state_independent_of_starting_rep",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Applying the same chart sign-fix rule to another exported directed representative yields the same sign-fixed state (P690)."
+    }
+  ],
+  "blocking_mismatches": [],
+  "theorem_result": {
+    "discharged": true,
+    "sign_fixed_directed_representative_exported": true,
+    "independent_of_starting_directed_representative": true,
+    "directed_sign_sensitive_physical_orientation_in_strict_core": false,
+    "AutZ12_invariant_sign_canonicity": false,
+    "QW2191_kernel_alone_discharge": false,
+    "ToE_closure": false,
+    "evidence": {
+      "F690": "fundamental_action_reconstruction/generated/f690_current_strict_t175_global_chart_sign_fixing_from_strict_core_payload_weights_export_packet_summary.json",
+      "P690": "fundamental_action_reconstruction/generated/p690_current_strict_t175_global_chart_sign_fixing_independence_across_directed_representatives_audit_probe_summary.json"
+    },
+    "note": "This is a convention-layer chart sign-fix (0-cochain) derived from exported strict-core payload weights; it does not upgrade directed sign into strict-core physics."
+  },
+  "hard_limits": [
+    "no_kernel_alone_global_QW2191_discharge",
+    "no_AutZ12_invariant_sign_canonicity",
+    "no_directed_sign_sensitive_physical_orientation_claim",
+    "no_ToE_closure"
+  ],
+  "no_false_pass": true
+}

@@ -1,0 +1,88 @@
+{
+  "stage": "P690",
+  "as_of": "2026-03-17",
+  "generated_utc": "2026-03-17T13:07:26.138043+00:00",
+  "goal": "audit_that_F690_chart_sign_fixing_yields_the_same_sign_fixed_directed_representative_when_applied_to_multiple_exported_directed_states__no_false_pass",
+  "inputs": {
+    "f690_sign_fixed_state_ref": "fundamental_action_reconstruction/generated/selector_state_global_c_v1_directed_sign_fixed_from_strict_core_payload_weights_strict_convention_v1.json",
+    "f684_directed_state_ref": "fundamental_action_reconstruction/generated/selector_state_global_c_v1_directed_rooted_transport_from_s_sel_int_w_break_strict_convention_v1.json",
+    "f647_weights_payload_ref": "fundamental_action_reconstruction/generated/f647_strict_witness_provider_export_packet_for_seed_v1_realization_attempt.json"
+  },
+  "status": "PASS_SIGN_FIXED_DIRECTED_REPRESENTATIVE_INDEPENDENT_OF_STARTING_DIRECTED_STATE",
+  "tolerances": {
+    "tol_match_max_abs_diff": 1e-09,
+    "dot_after_fix_must_be_gt": 0.0
+  },
+  "pair_audit": {
+    "per_pair": {
+      "pair1": {
+        "pair": "pair1",
+        "weight_key": "w_break_by_x",
+        "t_on_input_state": 1,
+        "dot_raw": 0.00016200023852512268,
+        "dot_after_fix": 0.00016200023852512268,
+        "max_abs_diff_vs_F690": 0.0,
+        "ok_match": true,
+        "ok_dot_positive": true,
+        "ok": true
+      },
+      "pair2": {
+        "pair": "pair2",
+        "weight_key": "w_ref_unnormalized_by_x",
+        "t_on_input_state": 1,
+        "dot_raw": 0.026998084963236815,
+        "dot_after_fix": 0.026998084963236815,
+        "max_abs_diff_vs_F690": 4.440892098500626e-16,
+        "ok_match": true,
+        "ok_dot_positive": true,
+        "ok": true
+      },
+      "pair3": {
+        "pair": "pair3",
+        "weight_key": "w_ref_unnormalized_by_x",
+        "t_on_input_state": 1,
+        "dot_raw": 0.024120089587956365,
+        "dot_after_fix": 0.024120089587956365,
+        "max_abs_diff_vs_F690": 0.0,
+        "ok_match": true,
+        "ok_dot_positive": true,
+        "ok": true
+      },
+      "pair4": {
+        "pair": "pair4",
+        "weight_key": "w_ref_unnormalized_by_x",
+        "t_on_input_state": 1,
+        "dot_raw": 0.027023002461428268,
+        "dot_after_fix": 0.027023002461428268,
+        "max_abs_diff_vs_F690": 0.0,
+        "ok_match": true,
+        "ok_dot_positive": true,
+        "ok": true
+      },
+      "pair5": {
+        "pair": "pair5",
+        "weight_key": "w_break_by_x",
+        "t_on_input_state": -1,
+        "dot_raw": -0.00013708274032496462,
+        "dot_after_fix": 0.00013708274032496462,
+        "max_abs_diff_vs_F690": 0.0,
+        "ok_match": true,
+        "ok_dot_positive": true,
+        "ok": true
+      }
+    },
+    "errors": [],
+    "max_abs_diff_overall": 4.440892098500626e-16
+  },
+  "result": {
+    "independence_ok": true
+  },
+  "counts_as_strict_physical_orientation_datum": false,
+  "hard_limits": [
+    "Convention-layer gauge fixing only; does not claim a strict physical sign/orientation datum.",
+    "Does not claim Aut(Z_12)-invariant sign canonicity (N462 discipline).",
+    "Does not claim kernel-alone/global QW-2191 discharge.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}

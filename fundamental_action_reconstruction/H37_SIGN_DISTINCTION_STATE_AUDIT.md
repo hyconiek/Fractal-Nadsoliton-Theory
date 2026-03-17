@@ -1,7 +1,7 @@
 # H37: Sign-Distinction State Audit
 
 **Date:** 2026-03-17  
-**Status:** `PASS_PREMISE_BASED_DIRECTED_SIGN_DISTINCTION_EXPORTED__PLUS_W_BREAK_ROOTED_DIRECTED_CONVENTION_LIFT_EXPORTED__PLUS_GLOBAL_ORIENTED_EDGE_SIGN_LIFT_EXPORTED__PLUS_GAUGE_EQUIVALENCE_AUDITED__NO_PHYSICAL_SIGN_DATUM`
+**Status:** `PASS_PREMISE_BASED_DIRECTED_SIGN_DISTINCTION_EXPORTED__PLUS_W_BREAK_ROOTED_DIRECTED_CONVENTION_LIFT_EXPORTED__PLUS_GLOBAL_ORIENTED_EDGE_SIGN_LIFT_EXPORTED__PLUS_GAUGE_EQUIVALENCE_AUDITED__PLUS_GLOBAL_CHART_SIGN_FIXING_EXPORTED__NO_PHYSICAL_SIGN_DATUM`
 
 ## Goal
 
@@ -32,6 +32,10 @@ Check whether the current strict core contains any object that identifies `u` an
 - `N688`: packages `F688/P688` as a theorem-level discharge in the declared convention scope (no physical sign claim).
 - `P689`: audits that the `F688` oriented edge sign‑lift pattern is gauge-equivalent (chart-level `Z2` 0‑cochain) to the oriented edge sign‑lift pattern induced by the exported premise-based directed representative `SelectorState_global_C_v1_directed_strict_v1` (no physical sign claim).
 - `N689`: packages the `P689` gauge-equivalence result as a boundary-safe theorem: the oriented edge sign‑lift is a convention-layer datum and is not canonical “for free”.
+- `T175`: targets an explicit chart-level sign fixing (a `Z2` 0‑cochain) from strict-core payload weights, yielding a sign-fixed directed representative as a tracked convention layer (no physical sign claim).
+- `F690`: exports `SelectorState_global_C_v1_directed_sign_fixed_from_strict_core_payload_weights_strict_convention_v1` (sign-fixed directed representative on `{pair1..pair5}`) and the explicit per-chart sign-fixing data derived from exported strict-core payload weights (`F647`).
+- `P690`: audits independence: applying the same chart sign-fix rule to the exported `w_break`-rooted directed representative yields the same sign-fixed directed representative.
+- `N690`: packages `F690/P690` as a boundary-safe theorem-level discharge in the declared convention scope (no physical sign claim).
 - `F684`: exports `SelectorState_global_C_v1_directed_rooted_transport_from_S_sel_int_w_break_strict_convention_v1` (directed vector representative section on `{pair1..pair5}` in an explicit convention scope; not a physical datum).
 - Extension lane note: `AX28/AX29` export an explicit sign-fixing observable on `pair1` and an explicit global oriented vector selector state object on `C_v1` in `strict_extension_only` scope; `P473` audits that this extension-lane oriented vector state is projector-consistent with the strict global projective selector state (`F470`), so it fixes only a sign-gauge representative and does not change strict core.
 
@@ -87,6 +91,10 @@ and does **not** imply any kernel-alone/global `QW-2191` discharge.
 Update (`2026-03-17`): the oriented edge sign‑lift pattern itself is not canonical. `P689` audits that changing the exported directed representative (from the `w_break`‑rooted
 convention representative to the premise-based directed representative) changes the induced edge sign‑lift pattern only by a chart-level `Z2` gauge relift `u_i -> t_i u_i`,
 and `N689` packages this as a boundary-safe theorem. This further reinforces that `T174` lives in a tracked convention layer and does not constitute a strict physical sign datum.
+
+Update (`2026-03-17`): the repo now exports an explicit chart-level sign fixing (0‑cochain) as a tracked convention layer (`T175`). `F690` exports a sign-fixed directed representative on
+`C_v1` constructed deterministically from already exported strict-core payload weights (including `w_break_by_x` and `w_ref_unnormalized_by_x`), and `P690` audits that the same rule collapses
+two exported directed representatives to the same sign-fixed representative (independence), packaged by `N690`. This does **not** promote any strict physical sign datum and does **not** imply kernel-alone/global `QW-2191` discharge.
 
 Update (2026-03-16): after exporting an explicit premise-based fixing datum (`F473/N523`) and an explicit sign-sensitive observable + directed state (`F474/N524`),
 the strict core contains a directed sign lift *in the declared premise-based scope*.

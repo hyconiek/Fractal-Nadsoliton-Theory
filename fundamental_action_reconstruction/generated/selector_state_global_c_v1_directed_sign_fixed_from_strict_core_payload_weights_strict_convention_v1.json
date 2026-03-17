@@ -1,0 +1,144 @@
+{
+  "object": "SelectorState_global_C_v1_directed_sign_fixed_from_strict_core_payload_weights_strict_convention_v1",
+  "stage": "F690",
+  "status": "PASS_EXPORTED_GLOBAL_SIGN_FIXED_DIRECTED_STATE_OBJECT",
+  "as_of": "2026-03-17",
+  "generated_utc": "2026-03-17T13:06:04.842088+00:00",
+  "intent": "Export an explicit chart-level sign-fixing (Z2 0-cochain) datum and the resulting sign-fixed directed representative on C_v1, constructed deterministically from already exported strict-core payload weights. This is a strict_convention gauge-fixing layer: it does not claim a strict physical sign/orientation datum, does not claim Aut(Z_12)-invariant sign canonicity, and does not imply kernel-alone/global QW-2191 discharge.",
+  "domain": {
+    "configuration_space": "C_v1",
+    "charts": [
+      "pair1",
+      "pair2",
+      "pair3",
+      "pair4",
+      "pair5"
+    ]
+  },
+  "depends_on": {
+    "weights_payload_ref": "fundamental_action_reconstruction/generated/f647_strict_witness_provider_export_packet_for_seed_v1_realization_attempt.json",
+    "premise_based_directed_state_ref": "fundamental_action_reconstruction/generated/selector_state_global_c_v1_directed_strict_v1.json"
+  },
+  "construction": {
+    "rule": "u_i_fixed := sign(<w_i,u_i>)*u_i with <w_i,u_i_fixed> > 0",
+    "weight_choice_by_pair": {
+      "pair1": "w_break_by_x",
+      "pair2": "w_ref_unnormalized_by_x",
+      "pair3": "w_ref_unnormalized_by_x",
+      "pair4": "w_ref_unnormalized_by_x",
+      "pair5": "w_break_by_x"
+    },
+    "weight_keys_available": [
+      "w_break_by_x",
+      "w_ref_unnormalized_by_x"
+    ],
+    "notes": [
+      "This is an explicit convention-layer gauge fixing; it is not claimed as a strict physical sign datum.",
+      "Different exported directed representatives may differ by chart sign gauge; this rule aims to pick one canonical representative."
+    ]
+  },
+  "outputs": {
+    "t_by_pair": {
+      "pair1": -1,
+      "pair2": -1,
+      "pair3": -1,
+      "pair4": 1,
+      "pair5": -1
+    },
+    "dot_raw_by_pair": {
+      "pair1": -0.00016200023852512268,
+      "pair2": -0.026998084963236815,
+      "pair3": -0.024120089587956365,
+      "pair4": 0.027023002461428268,
+      "pair5": -0.00013708274032496462
+    },
+    "dot_by_pair": {
+      "pair1": 0.00016200023852512268,
+      "pair2": 0.026998084963236815,
+      "pair3": 0.024120089587956365,
+      "pair4": 0.027023002461428268,
+      "pair5": 0.00013708274032496462
+    },
+    "u_vectors_directed_sign_fixed": {
+      "u_1": [
+        0.0,
+        -0.204124145231932,
+        -0.353553390593274,
+        -0.408248290463863,
+        -0.353553390593274,
+        -0.204124145231931,
+        0.0,
+        0.204124145231931,
+        0.353553390593274,
+        0.408248290463863,
+        0.353553390593274,
+        0.204124145231932
+      ],
+      "u_2": [
+        0.408248290463863,
+        0.204124145231932,
+        -0.204124145231931,
+        -0.408248290463863,
+        -0.204124145231932,
+        0.204124145231932,
+        0.408248290463863,
+        0.204124145231932,
+        -0.204124145231931,
+        -0.408248290463863,
+        -0.204124145231931,
+        0.204124145231931
+      ],
+      "u_3": [
+        0.408248290463863,
+        0.0,
+        -0.408248290463863,
+        0.0,
+        0.408248290463863,
+        0.0,
+        -0.408248290463863,
+        0.0,
+        0.408248290463863,
+        0.0,
+        -0.408248290463863,
+        0.0
+      ],
+      "u_4": [
+        0.408248290463863,
+        -0.204124145231932,
+        -0.204124145231931,
+        0.408248290463863,
+        -0.204124145231932,
+        -0.204124145231931,
+        0.408248290463863,
+        -0.204124145231931,
+        -0.204124145231932,
+        0.408248290463863,
+        -0.204124145231932,
+        -0.204124145231932
+      ],
+      "u_5": [
+        0.0,
+        0.204124145231932,
+        -0.353553390593274,
+        0.408248290463863,
+        -0.353553390593274,
+        0.204124145231932,
+        1e-15,
+        -0.204124145231932,
+        0.353553390593274,
+        -0.408248290463863,
+        0.353553390593274,
+        -0.204124145231932
+      ]
+    },
+    "errors": []
+  },
+  "counts_as_strict_physical_orientation_datum": false,
+  "hard_limits": [
+    "Convention layer only; does not claim a strict-core physical sign/orientation datum.",
+    "Does not claim Aut(Z_12)-invariant sign canonicity (N462 discipline).",
+    "Does not claim kernel-alone/global QW-2191 discharge.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}
