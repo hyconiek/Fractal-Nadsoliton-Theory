@@ -16,21 +16,23 @@ After the repo now exports:
 5. global selector closure objects on `C_v1` in both scopes (`T172` discharged in:
    - projective scope: `N674` (via `F672/N672/N673`),
    - directed scope: `N678` (via `F677/N677`), with the raw-output obstruction boundary recorded by `N675`),
-6. and a theorem-level boundary that packages what remains beyond the closure objects (`N679`),
+6. a theorem-level **projective strict-core selector closure** discharge (`N680`),
+7. and a theorem-level boundary that packages what remains beyond the closure objects (`N679`),
 
 the remaining honest strict frontier is now **post‑`T172`**:
 
 ```text
-strict-core selector closure
-and (separately) any kernel-alone/global QW-2191 discharge claim discipline
+kernel-alone/global QW-2191 discharge claim discipline
+and any directed/sign-sensitive physical orientation datum in strict core beyond projective/ray semantics
 ```
 
 `T173` exists to prevent a false conflation:
 
 - `T172` discharges **closure objects** (projective/directed) and their well-definedness in declared scopes,
-- but `T173` is the first target label under which one may even *attempt* to claim:
-  - `strict_core_selector_closure = true`, and/or
-  - `QW2191_kernel_alone_discharge = true`.
+- `N680` discharges **projective strict-core selector closure** (ray-level) post-`T172`,
+- but `T173` remains the target label under which one may even *attempt* to claim:
+  - `QW2191_kernel_alone_discharge = true`, and/or
+  - any directed/sign-sensitive physical orientation datum in strict core without smuggled premises.
 
 This is a **target spec only**. It exports no new object.
 
@@ -64,6 +66,9 @@ StrictCoreSelectorClosure_global_C_v1_strict_v1 (theorem-level package):
   - ToE_closure = false
 ```
 
+Current-state note: projective strict-core selector closure is now discharged by `N680` with scope label
+`projective_ray_state` (see `fundamental_action_reconstruction/generated/n680_current_strict_t173_projective_strict_core_selector_closure_discharge_theorem_summary.json`).
+
 ### B) Kernel-alone/global `QW-2191` discharge or boundary (theorem-level)
 
 Export one explicit theorem-level statement that makes precise what is meant by:
@@ -94,7 +99,8 @@ Any honest `T173`-class discharge must satisfy all of:
 On the current repo state:
 
 - `T172` is discharged at the closure-object level (`N674`, `N678`),
-- but `strict_core_selector_closure = false` and `QW2191_kernel_alone_discharge = false` remain the honest tracked values,
+- projective strict-core selector closure is discharged at theorem level (`N680`),
+- while `QW2191_kernel_alone_discharge = false` and any directed/sign-sensitive physical orientation datum in strict core remain explicitly unclaimed,
   packaged by the frontier boundary theorem `N679`.
 
 Therefore, `T173` is the next honest strict label for continued closure attempts beyond `T172`.
