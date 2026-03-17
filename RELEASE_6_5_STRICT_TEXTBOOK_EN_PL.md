@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.47  
+**Version:** 6.5.48  
 **Date:** 2026-03-17  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -95,8 +95,8 @@
   and a global directed selector state object `SelectorState_global_C_v1_directed_strict_v1` descending to the projective state, and `P632` selects directed continuation.
   With `P16` frozen negative (`P480`) and the direct-formal residual-cancellation continuation frozen negative on the `T166 (F2≠0)` branch (`P631`), `P633` selects the
   genuinely-new strict-core source-seed continuation (initial entry target: `P119`). As of `2026-03-17`, that seed‑v1 lane is now exported through global promotions on `C_v1`
-  (`F658/P658/N550`, `F659/P659/N551`, `F660/P660/N552`). The earlier projective-only decision packet `P475` remains as the historical projective branch
-  record (quotient semantics).
+  (`F658/P658/N550`, `F659/P659/N551`, `F660/P660/N552`, `F661/P661/N553`). This bundles the promoted chain as one explicit global downstream-completion branch discharge object.
+  The earlier projective-only decision packet `P475` remains as the historical projective branch record (quotient semantics).
 - Update (`2026-03-15`): moreover, one cautious follow-up probe exports an explicit **probe-level** mode-index assignment *candidate*
   on `Z_24` induced by the same defect-angle rule (including numeric basis vectors `u_{m,±}` on each `pair_m`) (`P462`).
   This probe-level candidate does not promote `n=24` into the `QW-2190` physical scaffold.
@@ -308,12 +308,12 @@ so the diagonal/local lane canonicalizes the `QW-2190` embedding uniquely up to 
 ## 5) Next honest strict moves (as of 2026-03-17)
 
 Dashboards (`P438`, `P441`) now track the strict-core source‑seed lane **beyond** the original `P119` target: the seed‑v1 chain is exported through a **global**
-promotion steps on `C_v1` (`F658/P658/N550`, `F659/P659/N551`, `F660/P660/N552`). Therefore the “next honest move” is no longer “export a first seed target”,
-but rather the first post‑promotion strict frontier:
+promotion steps on `C_v1` (`F658/P658/N550`, `F659/P659/N551`, `F660/P660/N552`) and bundled as one explicit global downstream-completion branch discharge object
+(`F661`, audited by `P661`, packaged by `N553`). Therefore the “next honest move” is no longer “export a first seed target” nor “bundle the promoted chain”, but to keep the
+highest-priority `legacy -> strict` kernel bridge/non-bridge frontier explicit (probe `P243`; no silent role transfer).
 
 ```text
-attempt a strict, no-false-pass closure-facing step using the exported global selector atlas/transition/state objects
-and the promoted global selector bridge/reduction/output operators (still explicitly below selector closure and QW-2191 discharge).
+rerun P243 (legacy -> strict kernel bridge/non-bridge frontier probe)
 ```
 
 1. `T164` is discharged as premise‑based strict provenance (`F473/N523`): an explicit `Z_12` generator/orientation fixing datum is exported (tracked; not `Aut(Z_12)`‑invariant by `N462`).
@@ -328,6 +328,8 @@ and the promoted global selector bridge/reduction/output operators (still explic
    (`F659`, audited by `P659`, packaged by `N551`).
 7. The seed‑v1 local selector output operator is now promoted to a global `C_v1`‑typed selector output operator object `O_sel : Q_sel_v1 -> Q_out_v1`,
    packaging the induced chartwise output channels on `{pair1..pair5}` (`F660`, audited by `P660`, packaged by `N552`).
+8. The promoted seed‑v1 chain is now bundled/discharged as one explicit global downstream-completion branch object on `C_v1`:
+   `SelectorDownstreamCompletionBranch_global_C_v1_seed_v1_promoted_strict_v1` (`F661`, audited by `P661`, packaged by `N553`).
 
 Therefore `H37` is no longer the next blocker (it is discharged in the declared premise‑based scope), and the seed‑v1 source‑seed frontier is no longer “pre‑export”.
 The next strict bottleneck is now explicitly **post‑promotion**:
@@ -344,7 +346,7 @@ Update: strengthening the above, an exhaustive finite scan over the full sign sp
 
 Update: extending beyond the fixed `r_ordpow` magnitude class, a scan over a fixed small family of strictly-defined reference magnitude lifts (each with `|vpsi|=sqrt(rho_*^2*q)` and a uniform `g4` lift per reference, still under conditional `N477`) again reports that **no** reference in that family admits any sign vector satisfying all three `R18` declared `pair1` residual zero equations within tolerance (`P479`, packaged by `N522`). Therefore the missing `P16` zero witness cannot be obtained by switching only to that scanned reference-magnitude family either.
 
-Update (professorial): `P480` records the strict decision to freeze the `P16` lane as explicitly negative on current strict core; the direct-formal `c1s1` family route was advanced to `P630` and is explicitly frozen negative on the `T166 (F2≠0)` branch by `P631`. After the premise-based `T164` fixing datum export (`F473/N523`) and the `T171` directed datum export (`F474/N524`), `P632` selects directed continuation, and `P633` selects the genuinely-new strict-core source-seed continuation (initial entry target: `P119`; current lane advanced through `F658/P658/N550`, `F659/P659/N551`, and `F660/P660/N552`).
+Update (professorial): `P480` records the strict decision to freeze the `P16` lane as explicitly negative on current strict core; the direct-formal `c1s1` family route was advanced to `P630` and is explicitly frozen negative on the `T166 (F2≠0)` branch by `P631`. After the premise-based `T164` fixing datum export (`F473/N523`) and the `T171` directed datum export (`F474/N524`), `P632` selects directed continuation, and `P633` selects the genuinely-new strict-core source-seed continuation (initial entry target: `P119`; current lane advanced through `F658/P658/N550`, `F659/P659/N551`, `F660/P660/N552`, and `F661/P661/N553`).
 
 Update: a strict obstruction is now explicit: any direction-free `Aut(Z_12)`-invariant reference weight family (including the ord-reference weights `ord_Z12`, `r_ord`) cannot distinguish sign on the current exported `pair1` sine axis via a scalar of the form `Σ_x w(x) u_1(x)` (`F472`, packaged by `N518`; strengthening the ord-specific obstruction `F471/N517`). Therefore `H37` requires an explicit reflection-breaking/orientation source or a different observable class.
 
@@ -504,6 +506,8 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
 40. ponadto, repo eksportuje jawny **globalny** obiekt operatora wyjścia selektora `O_sel : Q_sel_v1 -> Q_out_v1` (promocja z seed‑v1) wraz z opakowaniem
     indukowanych kanałów wyjściowych `Y_sel(pair_m) := O_sel ∘ R_sel(pair_m)` na `{pair1..pair5}`:
     `SelectorOutputOperator_global_C_v1_seed_v1_promoted_strict_v1` (`F660`, audyt `P660`, opakowane przez `N552`).
+41. ponadto, repo eksportuje jawny **globalny** bundle rozładowania gałęzi downstream‑completion dla promowanego łańcucha seed‑v1 na `C_v1`:
+    `SelectorDownstreamCompletionBranch_global_C_v1_seed_v1_promoted_strict_v1` (`F661`, audyt `P661`, opakowane przez `N553`).
 
 ## 1) Jednostronicowy status strict (6.5)
 
@@ -526,7 +530,7 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
    globalny atlas + obiekt przejść/klejenia (`F469/N515`), globalny projektowy obiekt stanu selektora (`F470/N516`) oraz
    globalny datum/obserwablę kierunkową w jawnie zadeklarowanym scope premise-based (`F474/N524`, decyzja `P632`), bez roszczeń o globalne rozładowanie `QW-2191`.
 9. Pas seed‑v1 eksportuje już jawny datum orientacji i operatory selektora na `pair1` (`F654–F657`, `N546–N549`) oraz promocje globalne operatorów mostu/redukcji/wyjścia selektora na `C_v1`
-   (`F658/P658/N550`, `F659/P659/N551`, `F660/P660/N552`), jawnie poniżej strict-core selector closure.
+   (`F658/P658/N550`, `F659/P659/N551`, `F660/P660/N552`, `F661/P661/N553`), jawnie poniżej strict-core selector closure.
 
 ### 1.2 Czego nadal brakuje (bez false pass)
 
@@ -541,12 +545,11 @@ Repo nadal **nie** eksportuje:
 ## 2) Następny uczciwy ruch (stan: 2026-03-17)
 
 Dashboards (`P438`, `P441`) śledzą już pas seed‑v1 **dalej** niż historyczny cel `P119`: gałąź source‑seed została wyeksportowana downstream
-aż do jawnych promocji globalnych na `C_v1` (`F658/P658/N550`, `F659/P659/N551`, `F660/P660/N552`). W konsekwencji “następny uczciwy ruch” nie jest już “wybierz pierwszy target seed‑v1”,
-tylko pierwszy krok **post‑promotion**:
+aż do jawnych promocji globalnych na `C_v1` (`F658/P658/N550`, `F659/P659/N551`, `F660/P660/N552`) oraz jawnego globalnego bundle rozładowania gałęzi downstream-completion dla promowanego łańcucha (`F661/P661/N553`). W konsekwencji “następny uczciwy ruch” nie jest już “wybierz pierwszy target seed‑v1” ani “zrób pierwszy krok post‑promotion”,
+tylko powrót do najwyższego priorytetu `legacy -> strict` kernel bridge/non-bridge w jawnej dyscyplinie (sonda `P243`; bez silent role transfer).
 
 ```text
-spróbować wykonać kolejny closure-facing krok na bazie wyeksportowanych globalnych obiektów atlasu/przejść/stanu selektora
-oraz wyeksportowanych globalnych operatorów mostu/redukcji/wyjścia selektora, jawnie poniżej selector closure i QW-2191 discharge.
+uruchomić P243 (frontier: legacy -> strict kernel bridge/non-bridge)
 ```
 
 1. `T164` jest rozładowane jako premise‑based strict provenance (`F473/N523`): wyeksportowano jawny fixing datumu generatora/orientacji `Z_12` (śledzony; nie `Aut(Z_12)`‑invariant przez `N462`).
@@ -561,6 +564,8 @@ oraz wyeksportowanych globalnych operatorów mostu/redukcji/wyjścia selektora, 
    audytowane przez `P659` i opakowane przez `N551`.
 8. Globalna promocja: `F660` eksportuje globalny (C_v1‑typed) operator wyjścia selektora `O_sel : Q_sel_v1 -> Q_out_v1` (promocja z seed‑v1) wraz z opakowaniem
    indukowanych kanałów wyjściowych na `{pair1..pair5}`, audytowane przez `P660` i opakowane przez `N552`.
+9. Post‑promotion bundle: `F661` eksportuje jawny globalny bundle rozładowania gałęzi downstream‑completion dla promowanego łańcucha seed‑v1 na `C_v1`,
+   audytowane przez `P661` i opakowane przez `N553` (bez claimów o selector closure lub rozładowanie `QW-2191`).
 
 W konsekwencji `H37` nie jest już blockerem (w zadeklarowanym scope premise-based), a frontier seed‑v1 nie jest już “przed eksportem”.
 Następny bottleneck jest teraz jawnie **post‑promotion**:
@@ -580,7 +585,7 @@ nie może zostać uzyskany przez zmianę jedynie wyboru znaków wewnątrz tej us
 
 Update: rozszerzając poza ustaloną klasę magnitud `r_ordpow`, skan stałej małej rodziny ściśle zdefiniowanych referencyjnych podniesień magnitud (każde z `|vpsi|=sqrt(rho_*^2*q)` i uniform `g4` per referencja, nadal pod warunkowym `N477`) raportuje ponownie, że **żadna** referencja w tej rodzinie nie dopuszcza wektora znaków spełniającego wszystkie trzy zadeklarowane równania residual “zero” dla `pair1` z `R18` w tolerancji (`P479`, opakowane przez `N522`). W konsekwencji brakujący witness “zero” na `P16` nie może zostać uzyskany przez przejście jedynie na tę skanowaną rodzinę referencyjnych magnitud.
 
-Update (decyzja profesorska): `P480` utrwala ścisłą decyzję: zamrażamy trasę `P16` jako jawnie negatywną w aktualnym strict core; direct formal trasa `c1s1` została doprowadzona do `P630` i jest jawnie zamrożona jako negatywna na gałęzi `T166 (F2≠0)` decyzją `P631`. Po eksporcie premise-based fixu `T164` (`F473/N523`) i eksporcie directed datumu `T171` (`F474/N524`), `P632` wybiera kontynuację kierunkową, a `P633` wybiera kontynuację genuinely-new strict-core source-seed (początkowy entry target: `P119`; aktualny stan pasa: `F658/P658/N550`, `F659/P659/N551` i `F660/P660/N552`).
+Update (decyzja profesorska): `P480` utrwala ścisłą decyzję: zamrażamy trasę `P16` jako jawnie negatywną w aktualnym strict core; direct formal trasa `c1s1` została doprowadzona do `P630` i jest jawnie zamrożona jako negatywna na gałęzi `T166 (F2≠0)` decyzją `P631`. Po eksporcie premise-based fixu `T164` (`F473/N523`) i eksporcie directed datumu `T171` (`F474/N524`), `P632` wybiera kontynuację kierunkową, a `P633` wybiera kontynuację genuinely-new strict-core source-seed (początkowy entry target: `P119`; aktualny stan pasa: `F658/P658/N550`, `F659/P659/N551`, `F660/P660/N552` oraz `F661/P661/N553`).
 
 Update: jawne jest teraz jedno ścisłe ograniczenie: żadna direction-free (tj. `Aut(Z_12)`-invariant) rodzina wag referencyjnych (w tym wagi ord-reference `ord_Z12`, `r_ord`) nie potrafi rozróżnić znaku na aktualnie wyeksportowanej osi `pair1` typu sine poprzez skalar postaci `Σ_x w(x) u_1(x)` (`F472`, opakowane przez `N518`; wzmacniając ord-specyficzną przeszkodę `F471/N517`). W konsekwencji `H37` wymaga jawnego źródła łamiącego symetrię odbicia/orientacji albo innej klasy obserwabli.
 
