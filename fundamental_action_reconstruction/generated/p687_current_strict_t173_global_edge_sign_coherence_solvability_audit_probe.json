@@ -1,0 +1,131 @@
+{
+  "stage": "P687",
+  "as_of": "2026-03-17",
+  "generated_utc": "2026-03-17T12:02:55.922822+00:00",
+  "goal": "decide_whether_edgewise_sign_flips_from_P686_can_be_removed_by_a_per_chart_Z2_sign_relift_keeping_exported_transition_operators_fixed__no_false_pass",
+  "inputs": {
+    "p686_full_edge_audit_ref": "fundamental_action_reconstruction/generated/p686_current_strict_t173_w_break_rooted_directed_state_full_transition_edge_compatibility_audit_probe.json"
+  },
+  "status": "PASS_SIGN_COHERENCE_OBSTRUCTED",
+  "sign_graph": {
+    "nodes": [
+      "pair1",
+      "pair2",
+      "pair3",
+      "pair4",
+      "pair5"
+    ],
+    "edge_count": 10,
+    "edge_signs_undirected": {
+      "pair1-pair2": 1,
+      "pair1-pair3": 1,
+      "pair1-pair4": 1,
+      "pair1-pair5": 1,
+      "pair2-pair3": 1,
+      "pair2-pair4": -1,
+      "pair2-pair5": -1,
+      "pair3-pair4": 1,
+      "pair3-pair5": -1,
+      "pair4-pair5": -1
+    }
+  },
+  "result": {
+    "sign_system_solvable": false,
+    "chart_sign_solution_if_solvable": null,
+    "conflicts": [
+      {
+        "u": "pair2",
+        "v": "pair4",
+        "s_uv": -1,
+        "t_u": 1,
+        "t_v": 1,
+        "expected_t_v": -1,
+        "witness_equation": "s_uv != t_u * t_v"
+      },
+      {
+        "u": "pair2",
+        "v": "pair5",
+        "s_uv": -1,
+        "t_u": 1,
+        "t_v": 1,
+        "expected_t_v": -1,
+        "witness_equation": "s_uv != t_u * t_v"
+      },
+      {
+        "u": "pair3",
+        "v": "pair5",
+        "s_uv": -1,
+        "t_u": 1,
+        "t_v": 1,
+        "expected_t_v": -1,
+        "witness_equation": "s_uv != t_u * t_v"
+      },
+      {
+        "u": "pair4",
+        "v": "pair5",
+        "s_uv": -1,
+        "t_u": 1,
+        "t_v": 1,
+        "expected_t_v": -1,
+        "witness_equation": "s_uv != t_u * t_v"
+      },
+      {
+        "u": "pair4",
+        "v": "pair2",
+        "s_uv": -1,
+        "t_u": 1,
+        "t_v": 1,
+        "expected_t_v": -1,
+        "witness_equation": "s_uv != t_u * t_v"
+      },
+      {
+        "u": "pair5",
+        "v": "pair4",
+        "s_uv": -1,
+        "t_u": 1,
+        "t_v": 1,
+        "expected_t_v": -1,
+        "witness_equation": "s_uv != t_u * t_v"
+      },
+      {
+        "u": "pair5",
+        "v": "pair3",
+        "s_uv": -1,
+        "t_u": 1,
+        "t_v": 1,
+        "expected_t_v": -1,
+        "witness_equation": "s_uv != t_u * t_v"
+      },
+      {
+        "u": "pair5",
+        "v": "pair2",
+        "s_uv": -1,
+        "t_u": 1,
+        "t_v": 1,
+        "expected_t_v": -1,
+        "witness_equation": "s_uv != t_u * t_v"
+      }
+    ],
+    "triangle_witness_if_obstructed": {
+      "nodes": [
+        "pair1",
+        "pair2",
+        "pair4"
+      ],
+      "edge_signs": {
+        "pair1-pair2": 1,
+        "pair2-pair4": -1,
+        "pair1-pair4": 1
+      },
+      "product": -1,
+      "meaning": "Negative Z2 holonomy witness on a 3-cycle: no global per-chart sign relift can make all overlap edges sign-consistent under fixed axis-only transition representatives."
+    }
+  },
+  "counts_as_strict_physical_orientation_datum": false,
+  "hard_limits": [
+    "Does not claim a directed/sign-sensitive physical orientation datum in strict core.",
+    "Does not claim kernel-alone/global QW-2191 discharge.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}

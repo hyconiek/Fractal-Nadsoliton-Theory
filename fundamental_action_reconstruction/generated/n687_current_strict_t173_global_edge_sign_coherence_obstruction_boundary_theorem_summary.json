@@ -1,0 +1,46 @@
+{
+  "step": "N687",
+  "status": "N687_DERIVABLE_CURRENT_STRICT_T173_GLOBAL_EDGE_SIGN_COHERENCE_OBSTRUCTION_BOUNDARY_THEOREM_NO_FALSE_PASS",
+  "scope": "current_strict_t173_global_edge_sign_coherence_boundary_only",
+  "checks": [
+    {
+      "id": "p687_probe_passed",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "P687 computed a global edge sign-coherence solvability verdict."
+    },
+    {
+      "id": "sign_system_not_solvable",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "No per-chart Z2 sign relift solves the full-edge sign coherence system under fixed exported axis-only transition representatives (P687)."
+    },
+    {
+      "id": "triangle_witness_present",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "P687 provides an explicit negative 3-cycle witness (triangle product = -1)."
+    }
+  ],
+  "blocking_mismatches": [],
+  "theorem_result": {
+    "discharged": true,
+    "global_edge_sign_coherence_solvable_by_chart_sign_relift": false,
+    "directed_sign_sensitive_physical_orientation_in_strict_core": false,
+    "QW2191_kernel_alone_discharge": false,
+    "ToE_closure": false,
+    "evidence": {
+      "P687": "fundamental_action_reconstruction/generated/p687_current_strict_t173_global_edge_sign_coherence_solvability_audit_probe_summary.json"
+    },
+    "note": "This boundary is about the nonexistence of a global per-chart sign relift solving the full-edge sign coherence constraints under fixed axis-only (\u03b1 mod \u03c0) transition representatives."
+  },
+  "hard_limits": [
+    "no_kernel_alone_global_QW2191_discharge",
+    "no_directed_sign_sensitive_physical_orientation_claim",
+    "no_ToE_closure"
+  ],
+  "no_false_pass": true
+}

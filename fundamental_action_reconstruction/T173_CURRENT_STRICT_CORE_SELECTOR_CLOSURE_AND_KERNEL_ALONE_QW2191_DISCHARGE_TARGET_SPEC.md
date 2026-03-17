@@ -118,6 +118,9 @@ Moreover, a full edgewise audit against the exported **global** transition/gluin
 is compatible with every exported overlap edge only **up to sign** (`O_ij u_i ≈ ± u_j`), and that several edges force a sign flip under axis-only
 (`α mod π`) transport representatives (`P686`), packaged as a strict boundary by `N686`. This reinforces that any directed/vector-level global sign coherence remains a convention layer unless upgraded
 by an explicit oriented transport lift, and it remains below any strict physical orientation datum claim.
+Finally, even allowing an arbitrary **per-chart** sign relift (`u_i -> t_i u_i` with `t_i∈{±1}`), the full-edge sign-flip pattern under the fixed exported axis-only
+transition representatives is **not** eliminable (`P687`), packaged as a strict boundary by `N687`. Therefore no globally edge-sign-consistent directed section exists under the fixed
+`α mod π` transition representatives without introducing an additional oriented edge-lift / convention layer.
 
 Therefore, `T173` is the next honest strict label for continued closure attempts beyond `T172`.
 

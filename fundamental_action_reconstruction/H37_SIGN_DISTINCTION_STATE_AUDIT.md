@@ -25,6 +25,8 @@ Check whether the current strict core contains any object that identifies `u` an
 - `P684`: audits a rooted sign lift on `C_v1` from `w_break` on `pair1` propagated via rooted transports `O_1m`, showing a global directed representative section exists in a tracked convention scope and descends to the strict projective state.
 - `P686`: audits the same `w_break`-rooted directed representative against the **full** exported global transition object on `C_v1` (`F469`), confirming edgewise compatibility only **up to sign** and recording which global overlap edges force a sign flip under axis-only (`α mod π`) transport representatives.
 - `N686`: packages the `P686` edgewise sign-flip finding as a strict boundary theorem (no physical sign datum promotion).
+- `P687`: audits whether the `P686` edgewise sign flips can be eliminated by any per-chart sign relift (`u_i -> t_i u_i`, `t_i∈{±1}`) while keeping the exported transition operators fixed; reports an obstruction.
+- `N687`: packages the `P687` non-solvability as a strict boundary theorem (no physical sign datum promotion).
 - `F684`: exports `SelectorState_global_C_v1_directed_rooted_transport_from_S_sel_int_w_break_strict_convention_v1` (directed vector representative section on `{pair1..pair5}` in an explicit convention scope; not a physical datum).
 - Extension lane note: `AX28/AX29` export an explicit sign-fixing observable on `pair1` and an explicit global oriented vector selector state object on `C_v1` in `strict_extension_only` scope; `P473` audits that this extension-lane oriented vector state is projector-consistent with the strict global projective selector state (`F470`), so it fixes only a sign-gauge representative and does not change strict core.
 
@@ -66,6 +68,10 @@ the axis-only transition operator `O_ij` transports the directed state line corr
 (`O_ij u_i ≈ -u_j`) relative to the rooted sign convention. Therefore the exported `w_break`-rooted directed representative remains a section/convention choice
 below any strict physical sign datum, and it highlights that axis-only global transport representatives (`α mod π`) cannot canonically support a globally
 sign-consistent directed state without an additional oriented lift/convention layer.
+
+`P687` strengthens this further: even allowing an arbitrary per-chart sign relift (`u_i -> t_i u_i`), the full-edge sign-flip pattern under the fixed exported axis-only
+transition representatives is **not** eliminable. Therefore, under the fixed `α mod π` transition representatives, no globally edge-sign-consistent directed section exists at all:
+achieving directed edgewise sign coherence requires an additional oriented edge-lift / convention layer.
 
 Update (2026-03-16): after exporting an explicit premise-based fixing datum (`F473/N523`) and an explicit sign-sensitive observable + directed state (`F474/N524`),
 the strict core contains a directed sign lift *in the declared premise-based scope*.

@@ -290,6 +290,8 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
 18. Update (`2026-03-17`): an edgewise audit against the **full** exported global transition/gluing object on `C_v1` (`F469`) confirms the `w_break`-rooted directed
     selector state representative (`F684`) is compatible on every exported overlap edge only **up to sign** (`O_ij u_i ≈ ± u_j`), and that several edges force a sign flip
     under axis-only (`α mod π`) transport representatives (`P686`), packaged as a strict boundary by `N686`. Therefore this remains a convention/section layer and does not upgrade any directed physical sign datum into strict core.
+19. Update (`2026-03-17`): even allowing an arbitrary **per-chart** sign relift (`u_i -> t_i u_i`, `t_i∈{±1}`), the full-edge sign-flip pattern under the fixed exported axis-only
+    transition representatives is **not** eliminable (`P687`), packaged as a strict boundary by `N687`. Therefore, under the fixed `α mod π` transition representatives, no globally edge-sign-consistent directed section exists without introducing an additional oriented edge-lift / convention layer.
 
 ### 1.2 What is still missing (no false pass)
 
@@ -628,6 +630,9 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
 18. Update (`2026-03-17`): audyt krawędziowy względem **pełnego** wyeksportowanego globalnego obiektu przejść/klejenia na `C_v1` (`F469`) potwierdza, że konwencyjny
     kierunkowy stan selektora zakotwiczony w `w_break` (`F684`) jest zgodny na każdej krawędzi overlapu tylko **do znaku** (`O_ij u_i ≈ ± u_j`), i że część krawędzi wymusza
     flip znaku przy reprezentantach transportu axis-only (`α mod π`) (`P686`), opakowane jako granica strict przez `N686`. W konsekwencji to nadal jest warstwa konwencji/sekcji i nie promuje żadnego fizycznego datumu znaku do strict core.
+19. Update (`2026-03-17`): nawet dopuszczając dowolny **per-chart** sign-relift (`u_i -> t_i u_i`, `t_i∈{±1}`), pełny wzorzec flipów znaku na krawędziach overlapu przy stałych
+    wyeksportowanych reprezentantach przejść axis-only nie daje się usunąć (`P687`), opakowane jako granica strict przez `N687`. Zatem przy ustalonych reprezentantach `α mod π`
+    nie istnieje żaden globalnie edge‑sign‑spójny directed section bez wprowadzenia dodatkowej warstwy oriented edge‑lift / konwencji.
 
 ### 1.2 Czego nadal brakuje (bez false pass)
 
