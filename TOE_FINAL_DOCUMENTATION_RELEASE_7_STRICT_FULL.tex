@@ -593,10 +593,11 @@ The v1 OS support packet (\texttt{F698}, audited by \texttt{P698}, packaged by \
 \begin{itemize}
   \item global projective selector closure on $C_{v1}$ (\texttt{N680}/\texttt{F672}),
   \item directed-vs-projective output-ray invariance and sign-lift gauge covariance (\texttt{N692}, \texttt{N693}),
-  \item first quadratic proxy spectra (\texttt{P694}, \texttt{P696}) and the basis-invariant Hessian eigen-spectrum mass observable (\texttt{F704}),
+  \item first quadratic proxy spectra (\texttt{P694}, \texttt{P696}),
   \item observer-limit readout (\texttt{P697}).
 \end{itemize}
-The mass-proxy meaning is frozen separately as a scope-limited theorem (\texttt{N703}).
+The mass-proxy meaning is frozen separately as a scope-limited theorem (\texttt{N703}). A basis-invariant Hessian eigen-spectrum mass observable is exported separately
+as \texttt{F704} and included in the v3 OS support packet (\texttt{F705}).
 \section{Operational OS support packet (v2) (F700/P700/N700)}
 
 The strict projective operational ToE “OS” support packet is exported in v2 form:
@@ -608,6 +609,17 @@ The strict projective operational ToE “OS” support packet is exported in v2 
 \]
 as the object \texttt{Lambda\_strict\_projective\_operational\_toe\_os\_support\_v2} (\texttt{F700}), audited by \texttt{P700} and packaged as a theorem by \texttt{N700}.
 All hard limits remain explicit: no kernel-alone/global \texttt{QW-2191} discharge, no directed sign-sensitive physical orientation claim in strict core, and no ToE closure.
+\section{Operational OS support packet (v3) (F705/P705/N705)}
+
+The strict projective operational ToE “OS” support packet is exported in v3 form by explicitly including the basis-invariant Hessian eigen-spectrum mass observable \texttt{F704}:
+\[
+\Lambda_{\mathrm{OS}}^{(\mathrm{proj})}(v3) =
+\bigl(
+\texttt{N680},\ \texttt{N692},\ \texttt{N693},\ \texttt{P694},\ \texttt{P696},\ \texttt{F704},\ \texttt{P697},\ \texttt{N699}
+\bigr),
+\]
+as the object \texttt{Lambda\_strict\_projective\_operational\_toe\_os\_support\_v3} (\texttt{F705}), audited by \texttt{P705} and packaged as a theorem by \texttt{N705}.
+All hard limits remain unchanged.
 \section{Open target: actual emergent observer closure (future)}
 
 The current strict projective pipeline proves \emph{computability} of a downstream observer-facing chain, not the existence/uniqueness of an actual emergent observer.
@@ -635,7 +647,8 @@ The repo exports such a harness (\texttt{P702}) and keeps it outside strict scop
 Closed (scope-limited, strict projective OS):
 \begin{itemize}
   \item projective global selector closure on $C_{v1}$ with chart-independent output projector (\texttt{N680}/\texttt{F672}),
-  \item operational OS computability pipeline from closure output through observer-limit readout and downstream chain (\texttt{N700}/\texttt{N701}),
+  \item operational OS support packets (v1--v3) and OS computability pipeline from closure output through observer-limit readout and downstream chain (\texttt{N698}, \texttt{N700}, \texttt{N705}, \texttt{N701}),
+  \item strict basis-invariant Hessian eigen-spectrum mass observable (\texttt{F704}),
   \item a disciplined internal meaning of the quadratic “mass proxy” layer (\texttt{N703}).
 \end{itemize}
 
@@ -662,7 +675,7 @@ Open (explicit hard limits):
 \begin{itemize}
   \item Proxy spectra: \texttt{P694}, \texttt{P696}; basis-invariant eigen-spectrum mass observable: \texttt{F704}; observer-limit readout: \texttt{P697}.
   \item Downstream computability chain: \texttt{P699} packaged by \texttt{N699}.
-  \item OS support packets: \texttt{F698/P698/N698} (v1), \texttt{F700/P700/N700} (v2).
+  \item OS support packets: \texttt{F698/P698/N698} (v1), \texttt{F700/P700/N700} (v2), \texttt{F705/P705/N705} (v3).
   \item Operational ToE closure statement: \texttt{N701}.
   \item Quadratic mass-proxy meaning definition: \texttt{N703}.
   \item Non-strict host matching harnesses (external-data dependent): \texttt{P702}, \texttt{P704}.

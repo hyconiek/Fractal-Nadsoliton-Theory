@@ -1,6 +1,6 @@
 # RELEASE 7 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 7.0.3 (Preparation Draft)  
+**Version:** 7.0.4 (Preparation Draft)  
 **Date:** 2026-03-17  
 **Branch:** `main`  
 **Predecessor:** Release 6.5 — Strict Textbook Edition
@@ -46,6 +46,8 @@ Already exported on the current repo state (Release 6.5.x):
   and does not claim actual emergent observer closure; it is packaged as a scope-limited theorem (`N699`).
 - A strict projective operational ToE OS support packet v2 is exported and packaged (`F700`, audited by `P700`, packaged by `N700`),
   extending the v1 OS bundle by including the projective emergent‑observer chain computability theorem (`N699`).
+- A strict projective operational ToE OS support packet v3 is exported and packaged (`F705`, audited by `P705`, packaged by `N705`),
+  extending the v2 OS bundle by explicitly including the strict basis-invariant mass observable object (`F704`) as a tracked component; all hard limits remain explicit.
 - A scope-disciplined “Operational ToE closure” statement is frozen in strict projective OS scope (`N701`), derived only from `N700` and keeping all hard limits explicit.
 - A scope-limited “mass proxy meaning” definition theorem is frozen (`N703`): `P694/P696` numbers are treated as quadratic coefficients of the exported `H_psi` instantiation, without any physical-unit or SM identification claim.
 - A strict basis-invariant “mass observable” object is exported (`F704`): the eigenvalue spectrum of the diagonal/local `H_psi` (dimensionless proxy only; no physical-unit claim).
@@ -93,6 +95,8 @@ Już na obecnym stanie repo (Release 6.5.x):
   i nie rości actual emergent observer closure; jest to opakowane jako scope-limited twierdzenie (`N699`).
 - Repo eksportuje i pakuje strict projective operational ToE OS support packet v2 (`F700`, audyt `P700`, opakowanie `N700`),
   rozszerzając pakiet v1 o theorem-level świadek obliczalności łańcucha emergent‑observer (`N699`).
+- Repo eksportuje i pakuje strict projective operational ToE OS support packet v3 (`F705`, audyt `P705`, opakowanie `N705`),
+  rozszerzając pakiet v2 przez jawne dołączenie strict bazowo-niezmienniczego obiektu “mass observable” (`F704`) jako śledzonego komponentu; hard‑limity pozostają jawne.
 - Repo zamraża scope‑disciplinowane stwierdzenie “Operational ToE closure” w zakresie strict projective OS (`N701`), wyprowadzone wyłącznie z `N700` i z jawnymi hard‑limitami.
 - Repo zamraża scope‑limited twierdzenie o “znaczeniu mass proxy” (`N703`): liczby z `P694/P696` są traktowane jako współczynniki kwadratowe wyeksportowanej instancji `H_psi`, bez claimu o jednostkach fizycznych ani o identyfikacji SM.
 - Repo eksportuje strict bazowo-niezmienniczy obiekt “mass observable” (`F704`): spektrum wartości własnych diagonal/local `H_psi` (proxy bez jednostek; bez claimu o kalibracji fizycznej).
