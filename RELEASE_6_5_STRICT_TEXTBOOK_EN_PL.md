@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.57  
+**Version:** 6.5.58  
 **Date:** 2026-03-17  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -319,6 +319,10 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
     `Lambda_strict_projective_operational_toe_preclosure_support_v1` (`F695`), audited by `P695` and packaged as a theorem-level statement (`N695`).
     This records (i) projective strict-core selector closure (`N680`), (ii) directed→projective output-ray invariance (`N692`) and sign-lift gauge covariance (`N693`),
     and (iii) a first physical mass-spectrum proxy computable from the projectively closed selector (`P694`), while keeping ToE closure and kernel-alone/global `QW-2191` discharge explicitly unclaimed.
+28. Update (`2026-03-17`): the operational “physical computability” witness is strengthened to a **selector-aligned 12‑channel spectrum proxy** for `H_psi` (`F459`):
+    using the exported projective selector rays `u_m` (from `F672`) and their deterministic orthogonal complements inside each Fourier pair plane, a probe computes the
+    diagonal channel proxies (and audits mixing) in a sign-gauge-invariant way (`P696`). This remains an operational proxy only and does **not** claim diagonalization,
+    Standard Model identification, kernel-alone/global `QW-2191` discharge, or ToE closure.
 
 ### 1.2 What is still missing (no false pass)
 
@@ -687,6 +691,10 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
     `Lambda_strict_projective_operational_toe_preclosure_support_v1` (`F695`), audyt `P695`, opakowanie theorem-level `N695`.
     To utrwala (i) projective strict-core selector closure (`N680`), (ii) niezmienniczość output-ray directed→projective (`N692`) i gauge‑kowariancję sign-liftu (`N693`),
     oraz (iii) pierwszy fizyczny proxy spektrum masy policzalny z projektowo domkniętego selektora (`P694`), przy zachowaniu jawnego braku ToE closure oraz braku kernel-alone/global rozładowania `QW-2191`.
+28. Update (`2026-03-17`): świadectwo operacyjnej “obliczalności fizycznej” jest wzmocnione do **selector‑aligned 12‑kanałowego proxy spektrum** dla `H_psi` (`F459`):
+    używając wyeksportowanych projektowych promieni selektora `u_m` (z `F672`) oraz ich deterministycznych dopełnień ortogonalnych w każdej parze Fouriera, sonda liczy
+    kanałowe proxy diagonalne (i audytuje mieszanie) w sposób znakowo-gauge-niezmienniczy (`P696`). To nadal jest wyłącznie proxy operacyjne i **nie** rości diagonalizacji,
+    identyfikacji Standard Model, kernel-alone/global rozładowania `QW-2191` ani domknięcia ToE.
 
 ### 1.2 Czego nadal brakuje (bez false pass)
 

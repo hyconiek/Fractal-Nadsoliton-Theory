@@ -1,0 +1,311 @@
+{
+  "stage": "P696",
+  "status": "PASS_SELECTOR_ALIGNED_CHANNEL_SPECTRUM_PROXY_COMPUTABLE_FROM_PROJECTIVE_SELECTOR_CLOSURE",
+  "as_of": "2026-03-17",
+  "generated_utc": "2026-03-17T14:31:45.311957+00:00",
+  "goal": "compute_a_selector_aligned_12_channel_spectrum_proxy_for_H_psi_using_only_projective_selector_closure_rays_and_pair_plane_orthogonal_complements__no_false_pass",
+  "inputs": {
+    "projective_selector_closure_ref": "fundamental_action_reconstruction/generated/selector_closure_global_c_v1_projective_strict_v1.json",
+    "psi_hessian_ref": "fundamental_action_reconstruction/generated/psi_hessian_diagonal_local_strict_derived_value_instantiated_v1.json",
+    "orientation_projector_operators_by_pair": {
+      "pair1": "fundamental_action_reconstruction/generated/a_1_pair1_orientation_projector_operator_strict_core_v1.json",
+      "pair2": "fundamental_action_reconstruction/generated/a_2_pair2_orientation_projector_operator_strict_core_v1.json",
+      "pair3": "fundamental_action_reconstruction/generated/a_3_pair3_orientation_projector_operator_strict_core_v1.json",
+      "pair4": "fundamental_action_reconstruction/generated/a_4_pair4_orientation_projector_operator_strict_core_v1.json",
+      "pair5": "fundamental_action_reconstruction/generated/a_5_pair5_orientation_projector_operator_strict_core_v1.json"
+    }
+  },
+  "audits": {
+    "h_psi_symmetry_residual_inf_norm": 0.0,
+    "u_reconstruction_tolerance_max_abs": 1e-10,
+    "selector_aligned_basis_order": [
+      "e0",
+      "pair1:u",
+      "pair1:u_perp",
+      "pair2:u",
+      "pair2:u_perp",
+      "pair3:u",
+      "pair3:u_perp",
+      "pair4:u",
+      "pair4:u_perp",
+      "pair5:u",
+      "pair5:u_perp",
+      "e6"
+    ],
+    "selector_aligned_basis_orthonormal_residual_fro": 3.1826788830962843e-15,
+    "selector_aligned_basis_orthonormal_residual_max_abs": 7.957118332822918e-16,
+    "H_in_selector_aligned_basis_offdiag_fro": 14.120814588298845,
+    "H_in_selector_aligned_basis_diag_fro": 11.853433226835214,
+    "H_in_selector_aligned_basis_offdiag_to_diag_ratio": 1.191284779529568,
+    "offblock_max_fro": 3.4009571444250914
+  },
+  "results": {
+    "pair_plane_restriction_results": {
+      "pair1": {
+        "A_m_ref": "fundamental_action_reconstruction/generated/a_1_pair1_orientation_projector_operator_strict_core_v1.json",
+        "u_coords_in_c_s": [
+          0.0,
+          -1.0
+        ],
+        "u_reconstruction_max_abs_diff": 5.273559366969494e-16,
+        "u_norm": 0.9999999999999999,
+        "v_norm": 1.0,
+        "u_dot_v": -1.3877787807814457e-17,
+        "block_matrix_in_(u,v)": [
+          [
+            2.933755621054331,
+            6.661338147750939e-16
+          ],
+          [
+            6.661338147750939e-16,
+            5.080502824364791
+          ]
+        ],
+        "m2_proxy_u_rayleigh": 2.933755621054331,
+        "m2_proxy_v_perp_rayleigh": 5.080502824364791,
+        "ritz_eigenvalues_restriction_to_pair_plane": [
+          2.933755621054331,
+          5.080502824364791
+        ],
+        "diagonalizing_angle_phi": 3.102991417656728e-16
+      },
+      "pair2": {
+        "A_m_ref": "fundamental_action_reconstruction/generated/a_2_pair2_orientation_projector_operator_strict_core_v1.json",
+        "u_coords_in_c_s": [
+          0.9999999999999998,
+          1.6653345369377348e-16
+        ],
+        "u_reconstruction_max_abs_diff": 1.1102230246251565e-16,
+        "u_norm": 0.9999999999999996,
+        "v_norm": 0.9999999999999999,
+        "u_dot_v": 1.249000902703301e-16,
+        "block_matrix_in_(u,v)": [
+          [
+            2.069950873317227,
+            1.3322676295501878e-15
+          ],
+          [
+            1.3322676295501878e-15,
+            4.2984508516608315
+          ]
+        ],
+        "m2_proxy_u_rayleigh": 2.069950873317227,
+        "m2_proxy_v_perp_rayleigh": 4.2984508516608315,
+        "ritz_eigenvalues_restriction_to_pair_plane": [
+          2.069950873317227,
+          4.2984508516608315
+        ],
+        "diagonalizing_angle_phi": 5.978315649526878e-16
+      },
+      "pair3": {
+        "A_m_ref": "fundamental_action_reconstruction/generated/a_3_pair3_orientation_projector_operator_strict_core_v1.json",
+        "u_coords_in_c_s": [
+          1.0,
+          0.0
+        ],
+        "u_reconstruction_max_abs_diff": 4.875873120129587e-16,
+        "u_norm": 0.9999999999999999,
+        "v_norm": 0.9999999999999999,
+        "u_dot_v": -3.8285686989269494e-16,
+        "block_matrix_in_(u,v)": [
+          [
+            0.6687166508753917,
+            -2.0608906706136925e-15
+          ],
+          [
+            -2.0608906706136925e-15,
+            4.930970379004997
+          ]
+        ],
+        "m2_proxy_u_rayleigh": 0.6687166508753917,
+        "m2_proxy_v_perp_rayleigh": 4.930970379004997,
+        "ritz_eigenvalues_restriction_to_pair_plane": [
+          0.6687166508753917,
+          4.930970379004997
+        ],
+        "diagonalizing_angle_phi": -4.83521348579609e-16
+      },
+      "pair4": {
+        "A_m_ref": "fundamental_action_reconstruction/generated/a_4_pair4_orientation_projector_operator_strict_core_v1.json",
+        "u_coords_in_c_s": [
+          -1.0,
+          0.0
+        ],
+        "u_reconstruction_max_abs_diff": 8.049116928532385e-16,
+        "u_norm": 1.0000000000000002,
+        "v_norm": 0.9999999999999998,
+        "u_dot_v": 2.636779683484747e-16,
+        "block_matrix_in_(u,v)": [
+          [
+            1.4474315384116316,
+            2.3314683517128287e-15
+          ],
+          [
+            2.3314683517128287e-15,
+            3.6759315167552287
+          ]
+        ],
+        "m2_proxy_u_rayleigh": 1.4474315384116316,
+        "m2_proxy_v_perp_rayleigh": 3.6759315167552287,
+        "ritz_eigenvalues_restriction_to_pair_plane": [
+          1.4474315384116314,
+          3.675931516755229
+        ],
+        "diagonalizing_angle_phi": 1.046205238667207e-15
+      },
+      "pair5": {
+        "A_m_ref": "fundamental_action_reconstruction/generated/a_5_pair5_orientation_projector_operator_strict_core_v1.json",
+        "u_coords_in_c_s": [
+          0.0,
+          1.0
+        ],
+        "u_reconstruction_max_abs_diff": 5.273559366969494e-16,
+        "u_norm": 1.0000000000000002,
+        "v_norm": 0.9999999999999998,
+        "u_dot_v": 3.0531133177191805e-16,
+        "block_matrix_in_(u,v)": [
+          [
+            1.3892705031823165,
+            -2.1094237467877974e-15
+          ],
+          [
+            -2.1094237467877974e-15,
+            3.5360177064927694
+          ]
+        ],
+        "m2_proxy_u_rayleigh": 1.3892705031823165,
+        "m2_proxy_v_perp_rayleigh": 3.5360177064927694,
+        "ritz_eigenvalues_restriction_to_pair_plane": [
+          1.3892705031823165,
+          3.5360177064927694
+        ],
+        "diagonalizing_angle_phi": -9.826139489246336e-16
+      }
+    },
+    "channel_m2_proxy_diagonal_of_H_in_selector_aligned_basis": {
+      "e0": 4.761250376916641,
+      "pair1:u": 2.9337556210543316,
+      "pair1:u_perp": 5.08050282436479,
+      "pair2:u": 2.069950873317227,
+      "pair2:u_perp": 4.2984508516608315,
+      "pair3:u": 0.6687166508753918,
+      "pair3:u_perp": 4.930970379004997,
+      "pair4:u": 1.4474315384116314,
+      "pair4:u_perp": 3.675931516755229,
+      "pair5:u": 1.3892705031823165,
+      "pair5:u_perp": 3.5360177064927694,
+      "e6": 2.41906833577034
+    },
+    "channel_m2_proxy_sorted_ascending": [
+      {
+        "channel": "pair3:u",
+        "m2": 0.6687166508753918
+      },
+      {
+        "channel": "pair5:u",
+        "m2": 1.3892705031823165
+      },
+      {
+        "channel": "pair4:u",
+        "m2": 1.4474315384116314
+      },
+      {
+        "channel": "pair2:u",
+        "m2": 2.069950873317227
+      },
+      {
+        "channel": "e6",
+        "m2": 2.41906833577034
+      },
+      {
+        "channel": "pair1:u",
+        "m2": 2.9337556210543316
+      },
+      {
+        "channel": "pair5:u_perp",
+        "m2": 3.5360177064927694
+      },
+      {
+        "channel": "pair4:u_perp",
+        "m2": 3.675931516755229
+      },
+      {
+        "channel": "pair2:u_perp",
+        "m2": 4.2984508516608315
+      },
+      {
+        "channel": "e0",
+        "m2": 4.761250376916641
+      },
+      {
+        "channel": "pair3:u_perp",
+        "m2": 4.930970379004997
+      },
+      {
+        "channel": "pair1:u_perp",
+        "m2": 5.08050282436479
+      }
+    ],
+    "offblock_coupling_top10_by_fro_norm": [
+      {
+        "block_i": "pair1",
+        "block_j": "pair5",
+        "fro_norm": 3.4009571444250914
+      },
+      {
+        "block_i": "pair2",
+        "block_j": "pair4",
+        "fro_norm": 3.3745614824652392
+      },
+      {
+        "block_i": "pair2",
+        "block_j": "pair3",
+        "fro_norm": 2.9702852941807265
+      },
+      {
+        "block_i": "pair3",
+        "block_j": "pair4",
+        "fro_norm": 2.9702852941807243
+      },
+      {
+        "block_i": "pair4",
+        "block_j": "pair5",
+        "fro_norm": 2.326858850268058
+      },
+      {
+        "block_i": "pair1",
+        "block_j": "pair2",
+        "fro_norm": 2.3268588502680543
+      },
+      {
+        "block_i": "e0",
+        "block_j": "pair1",
+        "fro_norm": 2.322636667436235
+      },
+      {
+        "block_i": "pair5",
+        "block_j": "e6",
+        "fro_norm": 2.322636667436234
+      },
+      {
+        "block_i": "pair3",
+        "block_j": "pair5",
+        "fro_norm": 2.1880054511356626
+      },
+      {
+        "block_i": "pair1",
+        "block_j": "pair3",
+        "fro_norm": 2.1880054511356586
+      }
+    ]
+  },
+  "hard_limits": [
+    "Probe-only operational spectrum proxy; does not claim Standard Model identification of any computed numbers.",
+    "Uses a specific diagonal/local strict-derived H_psi value instantiation (F459); does not promote it to host matching or global physics.",
+    "Uses projective/ray selector data only (u and -u identified); does not claim any directed/sign-sensitive physical orientation datum in strict core.",
+    "Does not claim that H_psi diagonalizes in the selector-aligned basis (mixing is audited explicitly).",
+    "Does not claim kernel-alone/global QW-2191 discharge.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}
