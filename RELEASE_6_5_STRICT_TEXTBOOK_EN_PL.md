@@ -263,6 +263,9 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
     `SelectorClosure_global_C_v1_projective_strict_v1` (`F672`), with projector/section-level well-definedness packaged by `N672` and a
     scope-explicit `QW-2191` resolution statement for the closure observable (`N673`). This does **not** imply strict-core selector closure,
     kernel-alone/global `QW-2191` discharge, or ToE closure.
+11. Update (`2026-03-17`): in the declared premise-based directed scope, the repo exports one explicit global **directed selector closure object** on `C_v1`,
+    `SelectorClosure_global_C_v1_directed_strict_v1` (`F677`), with the required per-chart sign-lift made explicit and audited (`P677`) and its well-definedness packaged
+    by `N677` (and the corresponding `T172` directed-scope discharge packaged by `N678`). This remains below strict-core selector closure and does **not** imply kernel-alone/global `QW-2191` discharge or ToE closure.
 
 ### 1.2 What is still missing (no false pass)
 
@@ -272,7 +275,8 @@ The repo still does **not** export:
 2. any **Aut(Z_12)-invariant** sign-sensitive / directed selector state datum “for free” from typed `Z_12/Aut(Z_12)` structure alone (`N462` boundary);
    in the declared premise-based scope (`T164`) such a directed lift *is* exported (`F474/N524`), but no Aut-invariant canonicity is claimed,
 3. an axiom-free **kernel-alone/global** discharge of `QW-2191` beyond the declared diagonal/local lane and `n=12` scope; the current repo
-   exports only a scope-limited projective closure-observable bypass statement (`F672/N673`) while keeping kernel-alone discharge unclaimed,
+   exports a scope-limited projective closure-observable bypass statement (`F672/N673`) and a premise-based directed closure object with explicit sign-lift (`F677/N677`),
+   while keeping kernel-alone discharge unclaimed,
 4. a strict physical sign/orientation convention if any downstream claim depends on absolute sign (unless separately
    proven gauge-irrelevant on that lane),
 5. ToE closure.
@@ -572,6 +576,9 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
     `SelectorClosure_global_C_v1_projective_strict_v1` (`F672`), z well-definedness na poziomie projektor/sekcja opakowanym przez `N672` oraz
     scope-explicit statement o sensie “`QW-2191` resolution” dla obserwabli domknięcia (`N673`) oraz odpowiadające discharge `T172` (`N674`). To nie implikuje strict-core selector closure,
     globalnego kernel-alone discharge `QW-2191` ani domknięcia ToE.
+11. Update (`2026-03-17`): w zadeklarowanym premise-based scope kierunkowym repo eksportuje jawny globalny **kierunkowy** obiekt domknięcia selektora na `C_v1`,
+    `SelectorClosure_global_C_v1_directed_strict_v1` (`F677`), z jawnym wymaganym per-chart sign-liftem (bez ukrytego fixowania znaku), audytowanym przez `P677`
+    i opakowanym jako well-definedness przez `N677` (oraz odpowiadające rozładowanie `T172` w zakresie kierunkowym opakowane przez `N678`). To nadal jest poniżej strict-core selector closure i nie implikuje kernel-alone/global rozładowania `QW-2191` ani ToE closure.
 
 ### 1.2 Czego nadal brakuje (bez false pass)
 
@@ -580,7 +587,8 @@ Repo nadal **nie** eksportuje:
 1. strict-core selector closure (dopuszczalny strict-core obiekt źródłowy dla `S_sel_int` jest już wyeksportowany w sensie kontraktu obiektu źródłowego `F34`, opakowane przez `N676`, ale to nie implikuje closure),
 2. ścisłego **Aut(Z_12)-invariant** znako‑czułego / kierunkowego datumu stanu selektora “za darmo” z samej struktury typed `Z_12/Aut(Z_12)` (granica `N462`); w zadeklarowanym scope premise-based (`T164`) taki datum jest już wyeksportowany jako directed lift (`F474/N524`, decyzja `P632`),
 3. aksjomatycznie wolnego **kernel-alone/global** rozładowania `QW-2191` poza pasem diagonal/local i zakresem `n=12`; aktualnie wyeksportowano
-   jedynie scope-limited bypass dla obserwabli domknięcia w wariancie projektowym (`F672/N673`) przy zachowaniu braku kernel-alone discharge,
+   scope-limited bypass dla obserwabli domknięcia w wariancie projektowym (`F672/N673`) oraz premise-based obiekt domknięcia kierunkowego z jawnym sign-liftem (`F677/N677`),
+   przy zachowaniu braku kernel-alone discharge,
 4. ścisłej konwencji znaku/orientacji tam, gdzie downstream wymaga absolutnego znaku (o ile nie jest osobno pokazane, że znak jest gauge),
 5. domknięcia ToE.
 

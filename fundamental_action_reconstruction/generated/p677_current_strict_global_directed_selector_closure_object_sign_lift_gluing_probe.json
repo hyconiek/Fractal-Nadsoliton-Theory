@@ -1,0 +1,110 @@
+{
+  "stage": "P677",
+  "lane": "current_strict_global_directed_selector_closure_object_sign_lift_gluing_probe_only",
+  "status": "CURRENT_REPO_EXPORTS_ONE_GLOBAL_DIRECTED_SELECTOR_CLOSURE_OBJECT_ON_C_V1_WITH_EXPLICIT_SIGN_LIFT_AFTER_F677",
+  "closure_object_file": "fundamental_action_reconstruction/generated/selector_closure_global_c_v1_directed_strict_v1.json",
+  "certificate": {
+    "tolerance": 1e-12,
+    "max_abs_diff_to_reference_chart_v_out": 8.509587848521138e-16,
+    "certificate_pass": true
+  },
+  "checks": [
+    {
+      "id": "object_name",
+      "actual": "SelectorClosure_global_C_v1_directed_strict_v1",
+      "expected": "SelectorClosure_global_C_v1_directed_strict_v1",
+      "pass": true,
+      "meaning": "Closure object has the expected typed name."
+    },
+    {
+      "id": "no_false_pass_marked",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Closure object is explicitly marked no_false_pass."
+    },
+    {
+      "id": "closure_scope_directed",
+      "actual": "directed_vector_state",
+      "expected": "directed_vector_state",
+      "pass": true,
+      "meaning": "Closure object is declared in directed/vector-level scope."
+    },
+    {
+      "id": "certificate_present",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Closure object contains an explicit well-definedness certificate payload."
+    },
+    {
+      "id": "certificate_pass",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Directed closure well-definedness certificate passes on exported data (after explicit sign-lift)."
+    },
+    {
+      "id": "certificate_tolerance_scalar_positive",
+      "actual": 1e-12,
+      "expected": "> 0 scalar",
+      "pass": true,
+      "meaning": "Certificate tolerance is a positive scalar."
+    },
+    {
+      "id": "certificate_maxdiff_scalar_nonnegative",
+      "actual": 8.509587848521138e-16,
+      "expected": ">= 0 scalar",
+      "pass": true,
+      "meaning": "Certificate max-diff is a nonnegative scalar."
+    },
+    {
+      "id": "explicit_sign_lift_present_and_total",
+      "actual": {
+        "pair1": -1,
+        "pair2": -1,
+        "pair3": -1,
+        "pair4": 1,
+        "pair5": 1
+      },
+      "expected": "{pair1..pair5} -> {\u00b11}",
+      "pass": true,
+      "meaning": "Closure object exports an explicit per-chart sign-lift covering {pair1..pair5}."
+    },
+    {
+      "id": "referenced_inputs_exist",
+      "actual": [],
+      "expected": [],
+      "pass": true,
+      "meaning": "All referenced global inputs exist on disk (atlas/transition/directed state/output operator)."
+    },
+    {
+      "id": "charts_cover_pair1_to_pair5",
+      "actual": [
+        "pair1",
+        "pair2",
+        "pair3",
+        "pair4",
+        "pair5"
+      ],
+      "expected": [
+        "pair1",
+        "pair2",
+        "pair3",
+        "pair4",
+        "pair5"
+      ],
+      "pass": true,
+      "meaning": "Closure object carries chart payload for the declared global cover {pair1..pair5}."
+    },
+    {
+      "id": "chartwise_raw_and_corrected_vectors_present",
+      "actual": [],
+      "expected": [],
+      "pass": true,
+      "meaning": "Each chart carries raw and sign-lifted directed output vectors plus the applied sign."
+    }
+  ],
+  "blocking_mismatches": [],
+  "no_false_pass": true
+}

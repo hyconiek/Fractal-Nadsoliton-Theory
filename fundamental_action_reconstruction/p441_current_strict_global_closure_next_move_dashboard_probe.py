@@ -209,6 +209,9 @@ N553_SEED_GLOBAL_DOWNSTREAM_COMPLETION_SUMMARY = (
 N674_T172_PROJECTIVE_DISCHARGE_SUMMARY = (
     GENERATED / "n674_current_strict_t172_projective_closure_discharge_theorem_summary.json"
 )
+N678_T172_DIRECTED_DISCHARGE_SUMMARY = (
+    GENERATED / "n678_current_strict_t172_directed_closure_discharge_theorem_summary.json"
+)
 N676_ADMISSIBLE_S_SEL_INT_SOURCE_OBJECT_SUMMARY = (
     GENERATED / "n676_current_first_admissible_s_sel_int_source_object_discharge_theorem_summary.json"
 )
@@ -395,6 +398,18 @@ def _t172_projective_closure_discharged() -> tuple[bool, dict[str, Any] | None]:
     return discharged, n674
 
 
+def _t172_directed_closure_discharged() -> tuple[bool, dict[str, Any] | None]:
+    if not N678_T172_DIRECTED_DISCHARGE_SUMMARY.exists():
+        return False, None
+    try:
+        n678 = load_json(N678_T172_DIRECTED_DISCHARGE_SUMMARY)
+    except Exception:
+        return False, None
+    tr = n678.get("theorem_result")
+    discharged = bool(isinstance(tr, dict) and tr.get("discharged") is True)
+    return discharged, n678
+
+
 def _s_sel_int_source_object_admissible_in_f34_sense() -> tuple[bool, dict[str, Any] | None]:
     if not N676_ADMISSIBLE_S_SEL_INT_SOURCE_OBJECT_SUMMARY.exists():
         return False, None
@@ -534,6 +549,7 @@ def main() -> None:
     direct_formal_freeze_selected, p631 = _direct_formal_route_negative_freeze_selected()
     source_seed_selected, p633 = _source_seed_route_selected()
     t172_projective_discharged, n674 = _t172_projective_closure_discharged()
+    t172_directed_discharged, n678 = _t172_directed_closure_discharged()
     s_sel_int_admissible, n676 = _s_sel_int_source_object_admissible_in_f34_sense()
 
     # Professorial precedence: directed continuation (P632) supersedes the earlier projective-only decision packet (P475).
@@ -559,6 +575,11 @@ def main() -> None:
                         "Therefore the next honest strict bottleneck returns to the remaining T172 target itself: strict-core selector closure / kernel-alone global QW-2191 discharge, "
                         "with any directed/sign-sensitive promotion kept explicit and any cross-chart sign obstructions kept explicit (N675)."
                     )
+                    if t172_directed_discharged:
+                        recommendation_reason += (
+                            " Note: a directed closure object is now also exported in the declared premise-based scope "
+                            "(N678 packages F677/N677), but this remains below strict-core selector closure and does not imply any kernel-alone/global discharge."
+                        )
                 else:
                     recommended_next = "P119"
                     recommendation_reason = (
@@ -581,6 +602,8 @@ def main() -> None:
                 )
             if n674 is not None:
                 recommendation_reason += f" Evidence: {N674_T172_PROJECTIVE_DISCHARGE_SUMMARY.relative_to(REPO)}."
+            if t172_directed_discharged and n678 is not None:
+                recommendation_reason += f" Evidence: {N678_T172_DIRECTED_DISCHARGE_SUMMARY.relative_to(REPO)}."
         else:
             recommended_next = "T172"
             recommendation_reason = (
@@ -601,6 +624,11 @@ def main() -> None:
                 "Therefore the next honest strict bottleneck returns to the remaining global closure target (T172): strict-core selector closure / kernel-alone global QW-2191 discharge, "
                 "with any directed/sign-sensitive promotion kept explicit and any cross-chart sign obstructions kept explicit (N675)."
             )
+            if t172_directed_discharged:
+                recommendation_reason += (
+                    " Note: a directed closure object is now also exported in the declared premise-based scope "
+                    "(N678 packages F677/N677), but this remains below strict-core selector closure and does not imply any kernel-alone/global discharge."
+                )
         else:
             recommended_next = "P119"
             recommendation_reason = (
