@@ -1,0 +1,230 @@
+{
+  "object": "SelectorTransition_global_C_v1_oriented_mod_2pi_edge_sign_lift_from_w_break_rooted_directed_state_strict_convention_v1",
+  "stage": "F688",
+  "status": "PASS_EXPORTED_GLOBAL_ORIENTED_TRANSITION_EDGE_SIGN_LIFT_OBJECT",
+  "as_of": "2026-03-17",
+  "generated_utc": "2026-03-17T12:24:12.275417+00:00",
+  "intent": "Export an explicit edgewise oriented (\u03b1 mod 2\u03c0) sign-lift of the exported global strict transition object on C_v1 by choosing per-edge signs s_ij \u2208 {\u00b11} such that (s_ij * O_ij) transports the already exported w_break-rooted directed state representative u_i to u_j without sign flips on every edge. This is a strict_convention layer: it does not claim any strict-core physical sign datum, does not claim Aut(Z_12)-invariant canonicity, does not promote to operator-level groupoid identities (N512), and does not imply kernel-alone/global QW-2191 discharge.",
+  "domain": {
+    "configuration_space_object_ref": "fundamental_action_reconstruction/generated/c_v1_void_configuration_space_in_local_b_tilde_1_sector_v1.json",
+    "configuration_space_object": "C_v1_void_configuration_space_in_local_B_tilde_1_sector_v1",
+    "charts_cover": "U_pair1 = ... = U_pair5 = C_v1 (declared global cover; convention layer)"
+  },
+  "depends_on": {
+    "base_axis_only_transition_object_ref": "fundamental_action_reconstruction/generated/selector_transition_global_c_v1_strict_v1.json",
+    "base_axis_only_transition_object": "SelectorTransition_global_C_v1_strict_v1",
+    "directed_state_ref": "fundamental_action_reconstruction/generated/selector_state_global_c_v1_directed_rooted_transport_from_s_sel_int_w_break_strict_convention_v1.json",
+    "directed_state_object": "SelectorState_global_C_v1_directed_rooted_transport_from_S_sel_int_w_break_strict_convention_v1"
+  },
+  "charts": [
+    "pair1",
+    "pair2",
+    "pair3",
+    "pair4",
+    "pair5"
+  ],
+  "edge_sign_lift": {
+    "meaning": "For each overlap edge, export s_ij \u2208 {\u00b11} defining an oriented lift O_ij^(oriented) := s_ij * O_ij^(axis-only).",
+    "transition_edges": {
+      "pair1_to_pair2": {
+        "edge_id": "pair1_to_pair2",
+        "src": "pair1",
+        "dst": "pair2",
+        "base_operator_ref": "fundamental_action_reconstruction/generated/o12_pair1_pair2_selector_chart_transport_operator_strict_derived_from_sigma_int_alpha12_v1.json",
+        "base_operator": "O12_pair1_pair2_selector_chart_transport_operator_strict_derived_from_sigma_int_alpha12_v1",
+        "base_operator_matrix_key": "O12",
+        "base_alpha_source_key": "alpha12_mod_2pi",
+        "base_alpha_value": 1.570796326794897,
+        "oriented_sign_on_operator": 1,
+        "oriented_alpha_mod_2pi": 1.570796326794897,
+        "checks": {
+          "tol_match_max_abs_diff": 1e-09,
+          "max_abs_diff_to_uj": 6.106226635438361e-16,
+          "max_abs_diff_to_minus_uj": 0.8164965809277263
+        }
+      },
+      "pair2_to_pair3": {
+        "edge_id": "pair2_to_pair3",
+        "src": "pair2",
+        "dst": "pair3",
+        "base_operator_ref": "fundamental_action_reconstruction/generated/o23_pair2_pair3_selector_chart_transport_operator_axis_only_alpha23_mod_pi_strict_core_v1.json",
+        "base_operator": "O23_pair2_pair3_selector_chart_transport_operator_axis_only_alpha23_mod_pi_strict_core_v1",
+        "base_operator_matrix_key": "O23",
+        "base_alpha_source_key": "alpha23_mod_pi",
+        "base_alpha_value": 0.0,
+        "oriented_sign_on_operator": 1,
+        "oriented_alpha_mod_2pi": 0.0,
+        "checks": {
+          "tol_match_max_abs_diff": 1e-09,
+          "max_abs_diff_to_uj": 1.0998146837692957e-15,
+          "max_abs_diff_to_minus_uj": 0.8164965809277261
+        }
+      },
+      "pair1_to_pair3": {
+        "edge_id": "pair1_to_pair3",
+        "src": "pair1",
+        "dst": "pair3",
+        "base_operator_ref": "fundamental_action_reconstruction/generated/o13_pair1_pair3_selector_chart_transport_operator_axis_only_alpha13_mod_pi_strict_core_v1.json",
+        "base_operator": "O13_pair1_pair3_selector_chart_transport_operator_axis_only_alpha13_mod_pi_strict_core_v1",
+        "base_operator_matrix_key": "O13",
+        "base_alpha_source_key": "alpha13_mod_pi",
+        "base_alpha_value": 1.570796326794897,
+        "oriented_sign_on_operator": 1,
+        "oriented_alpha_mod_2pi": 1.570796326794897,
+        "checks": {
+          "tol_match_max_abs_diff": 1e-09,
+          "max_abs_diff_to_uj": 1.4849232954361469e-15,
+          "max_abs_diff_to_minus_uj": 0.8164965809277265
+        }
+      },
+      "pair3_to_pair4": {
+        "edge_id": "pair3_to_pair4",
+        "src": "pair3",
+        "dst": "pair4",
+        "base_operator_ref": "fundamental_action_reconstruction/generated/o34_pair3_pair4_selector_chart_transport_operator_axis_only_alpha34_mod_pi_strict_core_v1.json",
+        "base_operator": "O34_pair3_pair4_selector_chart_transport_operator_axis_only_alpha34_mod_pi_strict_core_v1",
+        "base_operator_matrix_key": "O",
+        "base_alpha_source_key": "alpha34_mod_pi",
+        "base_alpha_value": 0.0,
+        "oriented_sign_on_operator": 1,
+        "oriented_alpha_mod_2pi": 0.0,
+        "checks": {
+          "tol_match_max_abs_diff": 1e-09,
+          "max_abs_diff_to_uj": 9.159339953157541e-16,
+          "max_abs_diff_to_minus_uj": 0.816496580927726
+        }
+      },
+      "pair4_to_pair5": {
+        "edge_id": "pair4_to_pair5",
+        "src": "pair4",
+        "dst": "pair5",
+        "base_operator_ref": "fundamental_action_reconstruction/generated/o45_pair4_pair5_selector_chart_transport_operator_axis_only_alpha45_mod_pi_strict_core_v1.json",
+        "base_operator": "O45_pair4_pair5_selector_chart_transport_operator_axis_only_alpha45_mod_pi_strict_core_v1",
+        "base_operator_matrix_key": "O",
+        "base_alpha_source_key": "alpha45_mod_pi",
+        "base_alpha_value": 1.570796326794898,
+        "oriented_sign_on_operator": -1,
+        "oriented_alpha_mod_2pi": 4.7123889803846915,
+        "checks": {
+          "tol_match_max_abs_diff": 1e-09,
+          "max_abs_diff_to_uj": 0.8164965809277267,
+          "max_abs_diff_to_minus_uj": 1.2871648191747909e-15
+        }
+      },
+      "pair2_to_pair4": {
+        "edge_id": "pair2_to_pair4",
+        "src": "pair2",
+        "dst": "pair4",
+        "base_operator_ref": "fundamental_action_reconstruction/generated/o24_pair2_pair4_selector_chart_transport_operator_axis_only_alpha24_mod_pi_strict_core_v1.json",
+        "base_operator": "O24_pair2_pair4_selector_chart_transport_operator_axis_only_alpha24_mod_pi_strict_core_v1",
+        "base_operator_matrix_key": "O",
+        "base_alpha_source_key": "alpha24_mod_pi",
+        "base_alpha_value": 3.141592653589793,
+        "oriented_sign_on_operator": -1,
+        "oriented_alpha_mod_2pi": 0.0,
+        "checks": {
+          "tol_match_max_abs_diff": 1e-09,
+          "max_abs_diff_to_uj": 0.816496580927726,
+          "max_abs_diff_to_minus_uj": 8.326672684688674e-16
+        }
+      },
+      "pair3_to_pair5": {
+        "edge_id": "pair3_to_pair5",
+        "src": "pair3",
+        "dst": "pair5",
+        "base_operator_ref": "fundamental_action_reconstruction/generated/o35_pair3_pair5_selector_chart_transport_operator_axis_only_alpha35_mod_pi_strict_core_v1.json",
+        "base_operator": "O35_pair3_pair5_selector_chart_transport_operator_axis_only_alpha35_mod_pi_strict_core_v1",
+        "base_operator_matrix_key": "O",
+        "base_alpha_source_key": "alpha35_mod_pi",
+        "base_alpha_value": 1.570796326794898,
+        "oriented_sign_on_operator": -1,
+        "oriented_alpha_mod_2pi": 4.7123889803846915,
+        "checks": {
+          "tol_match_max_abs_diff": 1e-09,
+          "max_abs_diff_to_uj": 0.8164965809277269,
+          "max_abs_diff_to_minus_uj": 9.159339953157541e-16
+        }
+      },
+      "pair1_to_pair4": {
+        "edge_id": "pair1_to_pair4",
+        "src": "pair1",
+        "dst": "pair4",
+        "base_operator_ref": "fundamental_action_reconstruction/generated/o14_pair1_pair4_selector_chart_transport_operator_axis_only_alpha14_mod_pi_strict_core_v1.json",
+        "base_operator": "O14_pair1_pair4_selector_chart_transport_operator_axis_only_alpha14_mod_pi_strict_core_v1",
+        "base_operator_matrix_key": "O",
+        "base_alpha_source_key": "alpha14_mod_pi",
+        "base_alpha_value": 1.570796326794896,
+        "oriented_sign_on_operator": 1,
+        "oriented_alpha_mod_2pi": 1.570796326794896,
+        "checks": {
+          "tol_match_max_abs_diff": 1e-09,
+          "max_abs_diff_to_uj": 1.0547118733938987e-15,
+          "max_abs_diff_to_minus_uj": 0.8164965809277267
+        }
+      },
+      "pair1_to_pair5": {
+        "edge_id": "pair1_to_pair5",
+        "src": "pair1",
+        "dst": "pair5",
+        "base_operator_ref": "fundamental_action_reconstruction/generated/o15_pair1_pair5_selector_chart_transport_operator_axis_only_alpha15_mod_pi_strict_core_v1.json",
+        "base_operator": "O15_pair1_pair5_selector_chart_transport_operator_axis_only_alpha15_mod_pi_strict_core_v1",
+        "base_operator_matrix_key": "O",
+        "base_alpha_source_key": "alpha15_mod_pi",
+        "base_alpha_value": 0.0,
+        "oriented_sign_on_operator": 1,
+        "oriented_alpha_mod_2pi": 0.0,
+        "checks": {
+          "tol_match_max_abs_diff": 1e-09,
+          "max_abs_diff_to_uj": 1e-15,
+          "max_abs_diff_to_minus_uj": 0.816496580927726
+        }
+      },
+      "pair2_to_pair5": {
+        "edge_id": "pair2_to_pair5",
+        "src": "pair2",
+        "dst": "pair5",
+        "base_operator_ref": "fundamental_action_reconstruction/generated/o25_pair2_pair5_selector_chart_transport_operator_axis_only_alpha25_mod_pi_strict_core_v1.json",
+        "base_operator": "O25_pair2_pair5_selector_chart_transport_operator_axis_only_alpha25_mod_pi_strict_core_v1",
+        "base_operator_matrix_key": "O",
+        "base_alpha_source_key": "alpha25_mod_pi",
+        "base_alpha_value": 1.570796326794897,
+        "oriented_sign_on_operator": -1,
+        "oriented_alpha_mod_2pi": 4.71238898038469,
+        "checks": {
+          "tol_match_max_abs_diff": 1e-09,
+          "max_abs_diff_to_uj": 0.816496580927726,
+          "max_abs_diff_to_minus_uj": 8.881784197001252e-16
+        }
+      }
+    },
+    "edge_count": 10,
+    "edge_errors": [],
+    "sign_lift_edges": [
+      "pair4_to_pair5",
+      "pair2_to_pair4",
+      "pair3_to_pair5",
+      "pair2_to_pair5"
+    ],
+    "sign_lift_count": 4
+  },
+  "cocycle_discipline": {
+    "level": "vector_section_level_only",
+    "supports": [
+      "P686/N686: base global transport is compatible only up to sign on directed representatives",
+      "P687/N687: no per-chart sign relift eliminates edge sign flips under fixed axis-only reps",
+      "N512: no operator-level groupoid promotion"
+    ],
+    "explicit_non_promotion": [
+      "Do not infer operator-level identities O_jk O_ij = O_ik on the full carrier from edgewise sign-lift data.",
+      "Do not infer a strict-core physical sign datum from this convention-layer oriented lift."
+    ]
+  },
+  "hard_limits": [
+    "Convention layer only; does not claim a directed/sign-sensitive physical orientation datum in strict core.",
+    "Does not claim Aut(Z_12)-invariant sign canonicity (N462 discipline).",
+    "Does not promote section-level/vector-level consistency into operator-level groupoid identities (N512 boundary).",
+    "Does not claim kernel-alone/global QW-2191 discharge.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}

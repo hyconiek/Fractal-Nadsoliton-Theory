@@ -122,6 +122,12 @@ Finally, even allowing an arbitrary **per-chart** sign relift (`u_i -> t_i u_i` 
 transition representatives is **not** eliminable (`P687`), packaged as a strict boundary by `N687`. Therefore no globally edge-sign-consistent directed section exists under the fixed
 `α mod π` transition representatives without introducing an additional oriented edge-lift / convention layer.
 
+Update (`2026-03-17`): the repo now exports exactly such an explicit convention-layer oriented edge-lift as the next honest continuation target `T174`.
+`F688` exports a global oriented transition edge sign‑lift object on `C_v1` (per-edge signs `s_ij∈{±1}` defining `O_ij^(oriented) := s_ij * O_ij^(axis-only)`), chosen so that
+the exported `w_break`‑rooted directed representative transports without sign flips on every overlap edge. `P688` audits full-edge coherence (all 10 edges) under the lifted transitions
+and `N688` packages the result as a theorem-level discharge in the declared `strict_convention` scope. This resolves the `P687/N687` obstruction only by adding explicit oriented edge
+data; it does **not** upgrade any directed sign into strict-core physics and it does **not** imply kernel-alone/global `QW-2191` discharge.
+
 Therefore, `T173` is the next honest strict label for continued closure attempts beyond `T172`.
 
 ## Hard limits

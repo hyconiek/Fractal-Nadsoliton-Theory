@@ -292,6 +292,9 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
     under axis-only (`α mod π`) transport representatives (`P686`), packaged as a strict boundary by `N686`. Therefore this remains a convention/section layer and does not upgrade any directed physical sign datum into strict core.
 19. Update (`2026-03-17`): even allowing an arbitrary **per-chart** sign relift (`u_i -> t_i u_i`, `t_i∈{±1}`), the full-edge sign-flip pattern under the fixed exported axis-only
     transition representatives is **not** eliminable (`P687`), packaged as a strict boundary by `N687`. Therefore, under the fixed `α mod π` transition representatives, no globally edge-sign-consistent directed section exists without introducing an additional oriented edge-lift / convention layer.
+20. Update (`2026-03-17`): the repo now exports an explicit convention-layer **global oriented transition edge sign-lift** object on `C_v1` (`F688`): per-edge signs `s_ij∈{±1}` defining
+    `O_ij^(oriented) := s_ij * O_ij^(axis-only)` so that the exported `w_break`-rooted directed representative transports without sign flips on all 10 overlap edges; audited by `P688` and packaged by `N688`.
+    This resolves the `P687/N687` obstruction only by introducing explicit oriented edge-lift data; it does **not** claim a strict-core physical sign datum and does **not** imply kernel-alone/global `QW-2191` discharge.
 
 ### 1.2 What is still missing (no false pass)
 
@@ -633,6 +636,9 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
 19. Update (`2026-03-17`): nawet dopuszczając dowolny **per-chart** sign-relift (`u_i -> t_i u_i`, `t_i∈{±1}`), pełny wzorzec flipów znaku na krawędziach overlapu przy stałych
     wyeksportowanych reprezentantach przejść axis-only nie daje się usunąć (`P687`), opakowane jako granica strict przez `N687`. Zatem przy ustalonych reprezentantach `α mod π`
     nie istnieje żaden globalnie edge‑sign‑spójny directed section bez wprowadzenia dodatkowej warstwy oriented edge‑lift / konwencji.
+20. Update (`2026-03-17`): repo eksportuje teraz jawną konwencyjną warstwę **globalnego oriented edge sign‑liftu** przejść na `C_v1` (`F688`): per‑edge znaki `s_ij∈{±1}` definiujące
+    `O_ij^(oriented) := s_ij * O_ij^(axis-only)` tak, aby wyeksportowany kierunkowy reprezentant zakotwiczony w `w_break` transportował się bez flipów znaku na wszystkich 10 krawędziach overlapu; audyt `P688`, opakowane przez `N688`.
+    To rozwiązuje obstrukcję `P687/N687` tylko przez jawne dodanie danych oriented edge‑lift; nie promuje żadnego fizycznego datumu znaku do strict core i nie implikuje kernel-alone/global rozładowania `QW-2191`.
 
 ### 1.2 Czego nadal brakuje (bez false pass)
 
@@ -655,6 +661,10 @@ ma już wyeksportowany brakujący komponent przeszkody faza/częstotliwość (`F
 a gałąź nonbridge-strengthening jest już actual na aktualnym export set (bez twierdzenia branch selection i bez permanentnego “no bridge”). W konsekwencji “następny uczciwy ruch”
 przesuwa się na post-`T172` frontier domknięcia: kernel-alone/global rozładowanie `QW-2191` oraz ewentualny kierunkowy/znako‑czuły datum fizycznej orientacji w strict core (target spec `T173`),
 z jawnymi przesłankami sign-lift (`N675` / `T164`) i bez mieszania z ToE closure.
+
+Update (`2026-03-17`): w ramach tej samej ścisłej dyscypliny repo wyeksportowało już konwencyjną warstwę oriented edge‑lift dla globalnych przejść na `C_v1`
+(`T174`: `F688/P688/N688`), usuwając flipy znaku na krawędziach overlapu **na poziomie konwencji**. Nadal nie ma jednak żadnego kierunkowego/znako‑czułego **fizycznego**
+datumu orientacji w strict core oraz brak kernel-alone/global rozładowania `QW-2191`; dlatego strict frontier pozostaje oznaczony przez `T173`.
 
 ```text
 RETURN_TO_STRICT_SELECTOR_CLOSURE_FRONTIER

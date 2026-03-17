@@ -1,7 +1,7 @@
 # H37: Sign-Distinction State Audit
 
 **Date:** 2026-03-17  
-**Status:** `PASS_PREMISE_BASED_DIRECTED_SIGN_DISTINCTION_EXPORTED__PLUS_W_BREAK_ROOTED_DIRECTED_CONVENTION_LIFT_EXPORTED__NO_PHYSICAL_SIGN_DATUM`
+**Status:** `PASS_PREMISE_BASED_DIRECTED_SIGN_DISTINCTION_EXPORTED__PLUS_W_BREAK_ROOTED_DIRECTED_CONVENTION_LIFT_EXPORTED__PLUS_GLOBAL_ORIENTED_EDGE_SIGN_LIFT_EXPORTED__NO_PHYSICAL_SIGN_DATUM`
 
 ## Goal
 
@@ -27,6 +27,9 @@ Check whether the current strict core contains any object that identifies `u` an
 - `N686`: packages the `P686` edgewise sign-flip finding as a strict boundary theorem (no physical sign datum promotion).
 - `P687`: audits whether the `P686` edgewise sign flips can be eliminated by any per-chart sign relift (`u_i -> t_i u_i`, `t_i∈{±1}`) while keeping the exported transition operators fixed; reports an obstruction.
 - `N687`: packages the `P687` non-solvability as a strict boundary theorem (no physical sign datum promotion).
+- `F688`: exports an explicit **global oriented edge sign‑lift** object on `C_v1` in `strict_convention` scope: per-edge signs `s_ij∈{±1}` defining an oriented lift `O_ij^(oriented) := s_ij * O_ij^(axis-only)` such that the exported `w_break`‑rooted directed representative transports without sign flips on every edge.
+- `P688`: audits that under the `F688` oriented sign‑lift, the exported `w_break`‑rooted directed representative is full‑edge coherent: `(s_ij * O_ij) u_i ≈ u_j` for all 10 edges (no sign flips).
+- `N688`: packages `F688/P688` as a theorem-level discharge in the declared convention scope (no physical sign claim).
 - `F684`: exports `SelectorState_global_C_v1_directed_rooted_transport_from_S_sel_int_w_break_strict_convention_v1` (directed vector representative section on `{pair1..pair5}` in an explicit convention scope; not a physical datum).
 - Extension lane note: `AX28/AX29` export an explicit sign-fixing observable on `pair1` and an explicit global oriented vector selector state object on `C_v1` in `strict_extension_only` scope; `P473` audits that this extension-lane oriented vector state is projector-consistent with the strict global projective selector state (`F470`), so it fixes only a sign-gauge representative and does not change strict core.
 
@@ -72,6 +75,12 @@ sign-consistent directed state without an additional oriented lift/convention la
 `P687` strengthens this further: even allowing an arbitrary per-chart sign relift (`u_i -> t_i u_i`), the full-edge sign-flip pattern under the fixed exported axis-only
 transition representatives is **not** eliminable. Therefore, under the fixed `α mod π` transition representatives, no globally edge-sign-consistent directed section exists at all:
 achieving directed edgewise sign coherence requires an additional oriented edge-lift / convention layer.
+
+Update (`2026-03-17`): the repo now exports exactly such an explicit oriented edge-lift as a convention layer. `F688` exports a global edge sign‑lift object on `C_v1`
+selecting per-edge signs `s_ij∈{±1}` so that the lifted oriented transport `(s_ij * O_ij)` transports the exported `w_break`‑rooted directed representative without sign flips
+on every overlap edge. `P688` audits full-edge coherence (all 10 edges) and `N688` packages this as a theorem-level discharge in the declared `strict_convention` scope. This does
+**not** upgrade any sign choice into strict-core physics, does **not** claim `Aut(Z_12)`-invariant canonicity, does **not** promote to operator-level groupoid identities (`N512`),
+and does **not** imply any kernel-alone/global `QW-2191` discharge.
 
 Update (2026-03-16): after exporting an explicit premise-based fixing datum (`F473/N523`) and an explicit sign-sensitive observable + directed state (`F474/N524`),
 the strict core contains a directed sign lift *in the declared premise-based scope*.

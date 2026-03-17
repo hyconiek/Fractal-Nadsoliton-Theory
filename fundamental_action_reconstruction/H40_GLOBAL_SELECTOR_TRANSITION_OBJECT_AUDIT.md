@@ -1,7 +1,7 @@
 # H40 Global Selector Transition Object Audit
 
-Status: `PASS_GLOBAL_SELECTOR_TRANSITION_OBJECT_EXPORTED_ON_C_V1_AND_GLOBAL_PROJECTIVE_SELECTOR_STATE_OBJECT_EXPORTED_QW2191_STILL_OPEN`
-Date: `2026-03-16`
+Status: `PASS_GLOBAL_SELECTOR_TRANSITION_OBJECT_EXPORTED_ON_C_V1_AND_GLOBAL_PROJECTIVE_SELECTOR_STATE_OBJECT_EXPORTED__PLUS_CONVENTION_LAYER_ORIENTED_EDGE_SIGN_LIFT_EXPORTED__QW2191_STILL_OPEN`
+Date: `2026-03-17`
 
 ## Purpose
 
@@ -36,6 +36,9 @@ Test whether the current strict core contains any global transition or gluing ob
 - `N511`: packages the `F467` oriented transport lift as a convention-layer theorem (no physical sign claim; no global atlas).
 - `P471`: audits that the same cocycle/path-independence holds on the exported vector section but **does not** hold as an operator-level matrix identity `O_jk O_ij = O_ik` on the full carrier.
 - `N512`: packages the operator-level cocycle failure boundary as a strict no-false-pass theorem (section-level gluing ingredient only).
+- `F688`: exports an explicit **global oriented transition edge sign‑lift** object on `C_v1` in `strict_convention` scope: per-edge signs `s_ij∈{±1}` defining an oriented lift `O_ij^(oriented) := s_ij * O_ij^(axis-only)` so that the exported `w_break`‑rooted directed representative transports without sign flips on every edge.
+- `P688`: audits full-edge coherence of the exported `w_break`‑rooted directed representative under the `F688` oriented sign‑lift (no sign flips on all 10 edges).
+- `N688`: packages `F688/P688` as a theorem-level discharge in the declared convention scope (no physical sign claim).
 - `P460`: lane-scoped cross-block polar-factor transition candidate exists (from the declared control-pullback value instantiation).
 - `P474`: audits that the exported global projective selector state object is projector-level glued/transported consistently by the exported global selector transition operators on `{pair1..pair5}` (ray/projector-level only; no sign-sensitive claim).
 - `generated/selector_transition_global_c_v1_strict_v1.json`: exported global selector transition/gluing object.
@@ -66,6 +69,7 @@ The repository contains:
 - and now a lane-scoped **oriented** transport (`α mod 2π`) lift at vector level as a tracked gauge/convention layer on `{pair1..pair5}` (`F467`, audited by `P470`, packaged by `N511`), with an explicit boundary that operator-level cocycle identities are not available (`P471`, `N512`),
 - and now an explicit **global** selector transition/gluing object export on `C_v1` (`F469/N515`),
 - and now an explicit **global projective selector state object** export on `C_v1` (`F470/N516`),
+- and now an explicit **global oriented transition edge sign‑lift** object on `C_v1` in `strict_convention` scope (`F688`, audited by `P688`, packaged by `N688`),
 
 while still not discharging global `QW-2191`. (A directed/sign-sensitive selector state lift is now exported separately as premise-based strict continuation; this does not imply selector closure nor any global discharge.)
 
