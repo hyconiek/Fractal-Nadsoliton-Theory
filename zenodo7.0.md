@@ -153,3 +153,56 @@ cat fundamental_action_reconstruction/generated/p708_current_strict_t173_frontie
 **Frozen non-strict host matching layer (explicit dataset vs policy, no pass claim):**
 - dataset: `fundamental_action_reconstruction/external_data/sm_mass_targets_v1.json`
 - policy: `fundamental_action_reconstruction/external_data/sm_host_matching_policy_v1.json` (`pass_criteria=null`)
+
+---
+
+## 8. 🧭 Next steps (professorial roadmap, no false‑PASS)
+
+This section names the **next concrete moves** under strict scientific discipline, separating **strict** targets from **explicitly non‑strict policy** work.
+
+### 🔴 Priority 1 (strict): `T173` — residual sign / kernel‑alone `QW-2191` frontier
+
+What is already strictly established:
+
+- The kernel‑alone lane exhibits degenerate Fourier pair planes and a continuous internal `O(2)` freedom (`QW-2191` obstruction; see repo-level `report_qw2191_mode_index_uniqueness_obstruction_theorem_gate.json`).
+- In strict program scope, the continuous family is cut to a **residual** $\\mathbb{Z}_2$ ambiguity on the degenerate pairs (axis-only canonicalization); **directed/sign‑sensitive** physical orientation is still not determined in strict core.
+- Release 7 exports convention-layer tools (`T174`, `T175`) to work with directed representatives, but these are **not** promoted into strict physics.
+
+What remains open (the actual strict frontier):
+
+- A kernel‑alone/global discharge of `QW-2191` (strict uniqueness without extra selector premise).
+- A strict-core, directed/sign‑sensitive physical orientation datum (beyond projective/ray semantics).
+
+Concrete next move under `T173`:
+
+- Either (A) export a genuinely strict internal selector source/ingredient that determines the residual sign in a chart-independent way (no hidden convention slots), or (B) explicitly freeze the directed sign as **gauge/convention** and restrict physics claims to projective/basis-invariant observables (operational closure already exists in that scope).
+
+Candidate routes (must remain explicit about strict vs non‑strict):
+
+- **Explicit breaking (non‑strict):** introduce a small, frozen perturbation in the kernel/host and audit sensitivity; never label as strict closure.
+- **Emergent (strict attempt):** derive and export a typed strict internal selector ingredient (e.g. an objective/variational rule) that fixes the residual sign without smuggling external axioms.
+- **Topological (strict attempt):** use the exported $\\pi_1(C_{v1})\\cong\\mathbb{Z}_2$ / `sigma_int` lane to supply a sign-sensitive datum; this requires an explicit theorem-level bridge to the global directed sign coherence frontier.
+
+### 🟠 Priority 2 (explicitly non‑strict policy): physical units (proxy → GeV)
+
+The repo already separates **dataset** from **policy** to prevent silent degree-of-freedom smuggling:
+
+- dataset: `fundamental_action_reconstruction/external_data/sm_mass_targets_v1.json` (external, units = GeV),
+- policy: `fundamental_action_reconstruction/external_data/sm_host_matching_policy_v1.json` (one global scale; `pass_criteria=null`).
+
+This is the correct methodological place to host any “one fitting parameter” scale assignment; it must stay non‑strict unless a strict unit map is derived.
+
+### 🟡 Priority 3 (theory extension): “solitons = particles”
+
+To make this scientific (not rhetorical), the program must export:
+
+- an explicit nonlinear EOM/Lagrangian in which soliton solutions are defined,
+- a stability criterion (energy/topological charge + linearized spectrum),
+- and a mapping from soliton moduli to the observer-limit proxy layer.
+
+### 🟢 Priority 4 (falsifiable outputs): operational tests under frozen artifacts
+
+The nearest falsifiable layer, consistent with current strict scope, is:
+
+- basis-invariant proxy spectra (`P694`, `P696`, `F704`),
+- non‑strict external host-matching harnesses (`P702`, `P704`) producing diagnostics only (no pass claim).

@@ -6,6 +6,7 @@ import subprocess
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
+from shutil import copyfile
 from shutil import which
 from typing import Any
 
@@ -18,6 +19,7 @@ GENERATED = ROOT / "generated"
 
 IN_TEX = REPO / "TOE_FINAL_DOCUMENTATION_RELEASE_7_STRICT_FULL.tex"
 OUT_PDF = Path("/tmp/TOE_FINAL_DOCUMENTATION_RELEASE_7_STRICT_FULL.pdf")
+OUT_PDF_REPO_ROOT = REPO / "TOE_FINAL_DOCUMENTATION_RELEASE_7_STRICT_FULL.pdf"
 
 P706 = ROOT / "p706_current_release_7_strict_projective_operational_toe_os_closure_dashboard_probe.py"
 P706_SUMMARY = GENERATED / "p706_current_release_7_strict_projective_operational_toe_os_closure_dashboard_probe_summary.json"
@@ -108,6 +110,14 @@ def main() -> None:
     )
 
     pdf_ok = (tex_build_1["returncode"] == 0) and (tex_build_2["returncode"] == 0) and OUT_PDF.exists()
+    repo_pdf_ok = False
+    repo_pdf_error = None
+    if pdf_ok:
+        try:
+            copyfile(OUT_PDF, OUT_PDF_REPO_ROOT)
+            repo_pdf_ok = OUT_PDF_REPO_ROOT.exists()
+        except Exception as exc:  # pragma: no cover
+            repo_pdf_error = str(exc)
 
     p706_run = run_cmd([sys.executable, str(P706)], cwd=REPO)
     p706_ok = p706_run["returncode"] == 0 and P706_SUMMARY.exists()
@@ -123,6 +133,12 @@ def main() -> None:
 
     checks = [
         {"id": "pdf_build", "pass": bool(pdf_ok), "pdf_path": str(OUT_PDF)},
+        {
+            "id": "pdf_copied_to_repo_root",
+            "pass": bool(repo_pdf_ok) if pdf_ok else True,
+            "pdf_path": str(OUT_PDF_REPO_ROOT),
+            "error": repo_pdf_error,
+        },
         {"id": "p706_dashboard", "pass": bool(p706_ok), "status": p706_status},
         {"id": "p441_dashboard", "pass": bool(p441_ok), "recommended_next_strict_target": p441_recommended},
     ]
@@ -181,4 +197,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
