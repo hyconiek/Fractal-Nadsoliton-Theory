@@ -1,6 +1,6 @@
 # RELEASE 6.5 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 6.5.56  
+**Version:** 6.5.57  
 **Date:** 2026-03-17  
 **Branch:** `main`  
 **Predecessor:** Release 6.4 — Strict Textbook Edition
@@ -315,6 +315,10 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
     **mass-spectrum proxy** from the exported projective selector closure rays (`F672`) and the exported diagonal/local Psi-sector Hessian value instantiation `H_psi` (`F459`)
     in a sign-gauge-invariant way (`P694`). This is an operational computability check only; it does **not** claim any Standard Model identification, any strict physical sign datum,
     any kernel-alone/global `QW-2191` discharge, or ToE closure.
+27. Update (`2026-03-17`): the strict projective closure stack is now packaged into one explicit **operational ToE preclosure support** packet:
+    `Lambda_strict_projective_operational_toe_preclosure_support_v1` (`F695`), audited by `P695` and packaged as a theorem-level statement (`N695`).
+    This records (i) projective strict-core selector closure (`N680`), (ii) directed→projective output-ray invariance (`N692`) and sign-lift gauge covariance (`N693`),
+    and (iii) a first physical mass-spectrum proxy computable from the projectively closed selector (`P694`), while keeping ToE closure and kernel-alone/global `QW-2191` discharge explicitly unclaimed.
 
 ### 1.2 What is still missing (no false pass)
 
@@ -679,6 +683,10 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
     **proxy spektrum masy** z wyeksportowanych promieni domknięcia projektowego (`F672`) oraz wyeksportowanej diagonal/local instancji hessianu sektora Psi `H_psi` (`F459`)
     w sposób znakowo-gauge-niezmienniczy (`P694`). To jest wyłącznie test obliczalności operacyjnej; nie promuje żadnej identyfikacji Standard Model, żadnego fizycznego datumu znaku,
     żadnego kernel-alone/global rozładowania `QW-2191` ani domknięcia ToE.
+27. Update (`2026-03-17`): stos projektowego domknięcia strict jest teraz opakowany w jeden jawny pakiet **operacyjnego preclosure ToE**:
+    `Lambda_strict_projective_operational_toe_preclosure_support_v1` (`F695`), audyt `P695`, opakowanie theorem-level `N695`.
+    To utrwala (i) projective strict-core selector closure (`N680`), (ii) niezmienniczość output-ray directed→projective (`N692`) i gauge‑kowariancję sign-liftu (`N693`),
+    oraz (iii) pierwszy fizyczny proxy spektrum masy policzalny z projektowo domkniętego selektora (`P694`), przy zachowaniu jawnego braku ToE closure oraz braku kernel-alone/global rozładowania `QW-2191`.
 
 ### 1.2 Czego nadal brakuje (bez false pass)
 
