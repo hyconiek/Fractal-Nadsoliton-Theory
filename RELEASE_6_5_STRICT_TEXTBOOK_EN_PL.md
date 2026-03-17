@@ -282,6 +282,8 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
     as a section/convention choice (no directed physical orientation datum claim).
 15. Update (`2026-03-17`): the rooted transport sign-lift is now exported as an explicit global sign-lift/section-choice object on `C_v1`,
     `SelectorOutputSignLift_global_C_v1_rooted_transport_from_S_sel_int_w_break_strict_convention_v1` (`F683`), with a glued output vector certificate in the fixed `(o_+,o_-)` basis.
+16. Update (`2026-03-17`): the same `w_break`-rooted rule is now also exported as a convention-scoped global **directed selector state** representative on `C_v1`,
+    descending to the strict projective state (`P684`, `F684`), still below any strict physical orientation datum claim.
 
 ### 1.2 What is still missing (no false pass)
 
@@ -405,9 +407,11 @@ Update: extending beyond the fixed `r_ordpow` magnitude class, a scan over a fix
 
 Update (professorial): `P480` records the strict decision to freeze the `P16` lane as explicitly negative on current strict core; the direct-formal `c1s1` family route was advanced to `P630` and is explicitly frozen negative on the `T166 (F2≠0)` branch by `P631`. After the premise-based `T164` fixing datum export (`F473/N523`) and the `T171` directed datum export (`F474/N524`), `P632` selects directed continuation, and `P633` selects the genuinely-new strict-core source-seed continuation (initial entry target: `P119`; current lane advanced through `F658/P658/N550`, `F659/P659/N551`, `F660/P660/N552`, and `F661/P661/N553`).
 
-Update: a strict obstruction is now explicit: any direction-free `Aut(Z_12)`-invariant reference weight family (including the ord-reference weights `ord_Z12`, `r_ord`) cannot distinguish sign on the current exported `pair1` sine axis via a scalar of the form `Σ_x w(x) u_1(x)` (`F472`, packaged by `N518`; strengthening the ord-specific obstruction `F471/N517`). Therefore `H37` requires an explicit reflection-breaking/orientation source or a different observable class.
+Update: a strict obstruction is now explicit: any direction-free `Aut(Z_12)`-invariant reference weight family (including the ord-reference weights `ord_Z12`, `r_ord`) cannot distinguish sign on the current exported `pair1` sine axis via a scalar of the form `Σ_x w(x) u_1(x)` (`F472`, packaged by `N518`; strengthening the ord-specific obstruction `F471/N517`). Therefore `H37` cannot be discharged by direction-free references alone; it requires an explicit reflection-breaking/orientation source or a different observable class. On the current export set, an internal reflection-breaking payload `w_break_by_x` is exported via `F647`, supporting a rooted convention sign lift (`F683`) and a convention-scoped global directed representative export (`F684`), still below any strict physical sign datum claim.
 
-Probe hygiene: `P472` scans exported `generated/*.json` artifacts and finds no strict(-derived) **weight-like** reflection-breaking per-site array outside non-canonical marked-site `K_total` row vectors; therefore no strict sign-sensitive physical orientation datum is presently exported by repackaging existing direction-free references.
+Probe hygiene: `P472` scans exported `generated/*.json` artifacts and reports strictish reflection-breaking length‑12 arrays with nonzero dot `Σ_x w(x)u_1(x)`,
+including at least one strictish **weight-like** candidate outside non-canonical marked-site `K_total` row vectors on the current export set. This remains a necessary-indicator scan only:
+it does not by itself upgrade any strict physical sign-sensitive orientation datum, does not imply `Aut(Z_12)`-invariant sign canonicity, and does not imply any `QW-2191` discharge.
 
 Update: as the next narrow `B3` continuation step, the repo now exports an explicit lane-scoped **chart-transport operator** `O_12` between `pair1↔pair2`
 on `n=12`, derived only from the strict sigma-int `alpha_12` transition (`F461`). This is a sign-free projector-level gluing ingredient
@@ -603,6 +607,15 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
     i nie implikuje kernel-alone/global rozładowania `QW-2191` ani ToE closure.
 12. Update (`2026-03-17`): ścisła granica mówi, że surowy kanał wyjściowy domknięcia kierunkowego jest zablokowany bez jawnego sign-liftu / wyboru sekcji (`N675`),
     oraz pakuje pozostały strict frontier “ponad” projective strict-core selector closure jako: kernel-alone/global rozładowanie `QW-2191` + ewentualny kierunkowy/znako‑czuły datum fizycznej orientacji w strict core (`N679`).
+13. Update (`2026-03-17`): nawet przy próbie skonstruowania **deterministycznego** sign-liftu z wyeksportowanych wag payloadu seed strict-core (`F647`),
+    znak wyjścia kierunkowego nie jest globalnie chart-independent (`P681`), opakowane jako granica strict przez `N681`. Konwencja sign-lift typu chart-sine-aligned
+    daje spójny znak wyjścia (`P682`), ale zależy od nie-`Aut(Z_12)`-invariant embeddingu i nie promuje żadnego fizycznego datumu orientacji do strict core.
+14. Update (`2026-03-17`): rooted sign-lift przez transport, zakotwiczony w `w_break` na `pair1`, daje spójny znak wyjścia na `{pair1..pair5}` (`P683`),
+    ale nadal zależy od reprezentantów transportu na krawędziach axis-only (projektor-level), więc liczy się jako konwencja/wybór sekcji.
+15. Update (`2026-03-17`): rooted sign-lift jest wyeksportowany jako jawny globalny obiekt sign-lift/wyboru sekcji na `C_v1`,
+    `SelectorOutputSignLift_global_C_v1_rooted_transport_from_S_sel_int_w_break_strict_convention_v1` (`F683`), z certyfikatem sklejenia wektora wyjścia w bazie `(o_+,o_-)`.
+16. Update (`2026-03-17`): ta sama reguła zakotwiczona w `w_break` jest teraz także wyeksportowana jako konwencyjny globalny **kierunkowy stan selektora** na `C_v1`,
+    schodzący do projektowego stanu (`P684`, `F684`), nadal poniżej claimu o fizyczny datum orientacji.
 
 ### 1.2 Czego nadal brakuje (bez false pass)
 
@@ -679,9 +692,11 @@ Update: rozszerzając poza ustaloną klasę magnitud `r_ordpow`, skan stałej ma
 
 Update (decyzja profesorska): `P480` utrwala ścisłą decyzję: zamrażamy trasę `P16` jako jawnie negatywną w aktualnym strict core; direct formal trasa `c1s1` została doprowadzona do `P630` i jest jawnie zamrożona jako negatywna na gałęzi `T166 (F2≠0)` decyzją `P631`. Po eksporcie premise-based fixu `T164` (`F473/N523`) i eksporcie directed datumu `T171` (`F474/N524`), `P632` wybiera kontynuację kierunkową, a `P633` wybiera kontynuację genuinely-new strict-core source-seed (początkowy entry target: `P119`; aktualny stan pasa: `F658/P658/N550`, `F659/P659/N551`, `F660/P660/N552` oraz `F661/P661/N553`).
 
-Update: jawne jest teraz jedno ścisłe ograniczenie: żadna direction-free (tj. `Aut(Z_12)`-invariant) rodzina wag referencyjnych (w tym wagi ord-reference `ord_Z12`, `r_ord`) nie potrafi rozróżnić znaku na aktualnie wyeksportowanej osi `pair1` typu sine poprzez skalar postaci `Σ_x w(x) u_1(x)` (`F472`, opakowane przez `N518`; wzmacniając ord-specyficzną przeszkodę `F471/N517`). W konsekwencji `H37` wymaga jawnego źródła łamiącego symetrię odbicia/orientacji albo innej klasy obserwabli.
+Update: jawne jest teraz jedno ścisłe ograniczenie: żadna direction-free (tj. `Aut(Z_12)`-invariant) rodzina wag referencyjnych (w tym wagi ord-reference `ord_Z12`, `r_ord`) nie potrafi rozróżnić znaku na aktualnie wyeksportowanej osi `pair1` typu sine poprzez skalar postaci `Σ_x w(x) u_1(x)` (`F472`, opakowane przez `N518`; wzmacniając ord-specyficzną przeszkodę `F471/N517`). W konsekwencji `H37` nie może być rozładowane przez same direction-free referencje; wymaga jawnego źródła łamiącego symetrię odbicia/orientacji albo innej klasy obserwabli. Na aktualnym export set istnieje już wewnętrzny payload łamiący odbicie `w_break_by_x` wyeksportowany przez `F647`, co wspiera rooted konwencję sign-lift (`F683`) oraz konwencyjny globalny kierunkowy reprezentant (`F684`), nadal poniżej claimu o ścisły fizyczny datum znaku.
 
-Higiena sondy: `P472` skanuje wyeksportowane artefakty `generated/*.json` i nie znajduje żadnej ścisłej (strict lub strict-derived) **weight-like** per-site tablicy łamiącej odbicie poza niekanonicznymi (marked-site) wektorami wierszy `K_total`; więc nie ma obecnie wyeksportowanego ścisłego znako‑czułego fizycznego datumu orientacji uzyskanego przez “repackaging” istniejących direction-free referencji.
+Higiena sondy: `P472` skanuje wyeksportowane artefakty `generated/*.json` i raportuje strictish tablice długości‑12 łamiące odbicie z niezerowym skalarem `Σ_x w(x)u_1(x)`,
+w tym co najmniej jednego strictish **weight-like** kandydata poza niekanonicznymi (marked-site) wierszami `K_total` na aktualnym export set. To pozostaje tylko sondą necessary‑indicator:
+nie promuje to żadnego ścisłego znako‑czułego fizycznego datumu orientacji, nie implikuje `Aut(Z_12)`‑invariant canonicity i nie implikuje rozładowania `QW-2191`.
 
 Update: jako kolejny, najwęższy krok `B3` repo eksportuje teraz jawny lane‑scoped **operator transportu chartów** `O_12` pomiędzy `pair1↔pair2`
 na `n=12`, wyprowadzony wyłącznie z `alpha_12` (`F461`). To jest “gluing ingredient” tylko na poziomie osi/projektorów (sign‑free),

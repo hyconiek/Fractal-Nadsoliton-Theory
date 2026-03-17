@@ -1,7 +1,7 @@
 # H37: Sign-Distinction State Audit
 
-**Date:** 2026-03-16  
-**Status:** `PASS_STRICT_DIRECTED_SIGN_SENSITIVE_DISTINCTION_OBSERVABLE_EXPORTED_AND_GLOBAL_DIRECTED_SELECTOR_STATE_OBJECT_EXPORTED__PREMISE_BASED_T164`
+**Date:** 2026-03-17  
+**Status:** `PASS_PREMISE_BASED_DIRECTED_SIGN_DISTINCTION_EXPORTED__PLUS_W_BREAK_ROOTED_DIRECTED_CONVENTION_LIFT_EXPORTED__NO_PHYSICAL_SIGN_DATUM`
 
 ## Goal
 
@@ -18,9 +18,12 @@ Check whether the current strict core contains any object that identifies `u` an
 - `F470/N516`: global projective selector state object exported on `C_v1` (projector/span; residual sign is gauge at state level).
 - `F473/N523`: explicit `Z_12` generator/orientation fixing datum exported as premise-based strict provenance (`T164` discharge; not Aut-invariant by `N462`).
 - `F474/N524`: exports a sign-sensitive directed observable `S_dir_pair1_strict_v1` and a global directed selector state object `SelectorState_global_C_v1_directed_strict_v1` (`T171` discharge).
+- `F647`: exports a strict-core constructed-source-object witness provider payload including a reflection-breaking per-site weight `w_break_by_x` (nonzero dot against the exported `u_1`), still below admissibility/closure claims.
 - `N517` (+ `F471`): even ord-reference weights (`ord_Z12`, `r_ord`) cannot supply a sign-distinction scalar of the form `Σ_x w(x) u_1(x)` on the current exported `pair1` sine axis.
 - `N518` (+ `F472`): more generally, any direction-free (`Aut(Z_12)`-invariant) reference weight family `w` cannot supply such a sign-distinction scalar on the current exported `pair1` sine axis (since `-1∈Aut(Z_12)` ⇒ Aut-invariant weights are even under reflection).
-- `P472`: a mechanical scan of exported `generated/*.json` artifacts for **weight-like** per-site arrays that break reflection and yield a nonzero scalar `Σ_x w(x)u_1(x)` reports none in strict(-derived) scope **outside** non-canonical marked-site `K_total` row vectors (probe-level hygiene; no promotion).
+- `P472`: a mechanical scan of exported `generated/*.json` artifacts for **weight-like** per-site arrays that break reflection and yield a nonzero scalar `Σ_x w(x)u_1(x)` now reports at least one strictish candidate outside non-canonical marked-site `K_total` rows (probe-level hygiene; heuristic; no promotion).
+- `P684`: audits a rooted sign lift on `C_v1` from `w_break` on `pair1` propagated via rooted transports `O_1m`, showing a global directed representative section exists in a tracked convention scope and descends to the strict projective state.
+- `F684`: exports `SelectorState_global_C_v1_directed_rooted_transport_from_S_sel_int_w_break_strict_convention_v1` (directed vector representative section on `{pair1..pair5}` in an explicit convention scope; not a physical datum).
 - Extension lane note: `AX28/AX29` export an explicit sign-fixing observable on `pair1` and an explicit global oriented vector selector state object on `C_v1` in `strict_extension_only` scope; `P473` audits that this extension-lane oriented vector state is projector-consistent with the strict global projective selector state (`F470`), so it fixes only a sign-gauge representative and does not change strict core.
 
 ## Audit
@@ -46,6 +49,16 @@ The strict core still does **not** support:
 - any *Aut(Z_12)-invariant* way to obtain such a sign distinction (ruled out as a “for-free” canonicity by `N462`),
 - strict-core selector closure (`S_sel_int`) or global discharge of `QW-2191`.
 
+Update (`2026-03-17`): the strict core now also exports an explicit **internal** reflection-breaking per-site weight payload
+`w_break_by_x` (via the constructed-source-object witness provider export `F647`). Since `Σ_x w_break(x)u_1(x) ≠ 0` on the exported
+`pair1` `u_1`, this supports a rooted sign choice on `pair1` without invoking the premise-based `T164` fixing datum.
+
+`P684` audits that the rooted sign choice can be propagated to `{pair2..pair5}` via the exported rooted transports `O_1m`, producing a
+global directed vector representative section that descends to the already exported strict projective state (projector/spans are unchanged under sign).
+
+`F684` exports this directed representative as a global object on `C_v1` in an explicit **strict_convention** scope. This does **not** count
+as a strict physical orientation datum and does **not** claim any `Aut(Z_12)`-invariant sign canonicity.
+
 Update (2026-03-16): after exporting an explicit premise-based fixing datum (`F473/N523`) and an explicit sign-sensitive observable + directed state (`F474/N524`),
 the strict core contains a directed sign lift *in the declared premise-based scope*.
 
@@ -54,15 +67,17 @@ is even under reflection and therefore cannot distinguish `u_1` from `-u_1` on t
 
 `N518` strengthens this to an entire **direction-free** class: any `Aut(Z_12)`-invariant reference weight family (and hence any reference weight not introducing a marked direction/generator) is even under reflection and therefore cannot distinguish sign via such a linear scalar on the current exported sine axis.
 
-Probe-level hygiene: `P472` additionally reports that among exported strict(-derived) artifacts, the only **weight-like** reflection-breaking per-site arrays producing a nonzero `Σ_x w(x)u_1(x)` are non-canonical marked-site rows of an exported `K_total` matrix. In particular, it reports **zero** strict(-derived) weight-like candidates outside those `K_total` rows. This does not prove impossibility, but it supports the audit conclusion that discharging `H37` requires an explicit reflection-breaking/orientation source (e.g. a generator/orientation fixing datum) rather than a repackaging of currently exported direction-free references.
+Probe-level hygiene: `P472` scans exported `generated/*.json` artifacts and reports strictish reflection-breaking length‑12 arrays with nonzero dot `Σ_x w(x)u_1(x)`,
+including at least one strictish **weight-like** candidate outside non-canonical marked-site `K_total` rows on the current export set. This remains a necessary-indicator scan only:
+it does not by itself supply a strict physical interpretation, does not imply `Aut(Z_12)`-invariant sign canonicity, and does not imply any `QW-2191` discharge.
 
 ## Result
 
-`H37_B3 := strict core exports an explicit sign-sensitive directed observable on pair1 and an explicit global directed selector state object on C_v1 (premise-based via T164), descending to the already exported projective state`
+`H37_B4 := strict core exports (i) an explicit sign-sensitive directed observable on pair1 and a global directed selector state object on C_v1 (premise-based via T164), and (ii) an internal w_break-rooted global directed representative section object on C_v1 in an explicit convention scope (F684), both descending to the already exported projective state`
 
 ## Hard limits
 
 - No theorem-level PASS.
 - No full-closure PASS.
-- No claim of `Aut(Z_12)`-invariant canonicity (the fixing datum is premise-based; `N462`).
+- No claim of `Aut(Z_12)`-invariant canonicity (premise-based `T164` is not Aut-invariant; `w_break`-rooted lift is convention-scoped).
 - No claim that `QW-2191` is discharged.
