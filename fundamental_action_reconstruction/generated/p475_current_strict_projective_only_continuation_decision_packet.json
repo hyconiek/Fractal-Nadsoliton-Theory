@@ -2,29 +2,32 @@
   "stage": "P475",
   "date": "2026-03-16",
   "goal": "declare_professorial_projective_only_continuation_for_strict_global_selector_state__defer_directed_sign_lift",
-  "status": "PASS_DECISION_DECLARED_PROJECTIVE_ONLY_CONTINUATION_SELECTED",
-  "decision": "PROJECTIVE_ONLY_CONTINUATION_SELECTED",
+  "status": "PASS_DECISION_PROJECTIVE_ONLY_CONTINUATION_SUPERSEDED_BY_P632_DIRECTED_CONTINUATION",
+  "decision": "PROJECTIVE_ONLY_CONTINUATION_SUPERSEDED_BY_P632",
   "decision_basis": {
     "projective_state_object_present": "fundamental_action_reconstruction/generated/selector_state_global_c_v1_projective_strict_v1.json",
     "projective_state_sign_gauge": true,
     "p474_gluing_audit_pass": true,
     "p474_summary": "fundamental_action_reconstruction/generated/p474_current_strict_global_projective_selector_state_gluing_consistency_audit_probe_summary.json",
+    "p632_directed_continuation_summary": "fundamental_action_reconstruction/generated/p632_current_strict_directed_continuation_decision_packet_summary.json",
+    "directed_continuation_selected": true,
     "gauge_irrelevance_packages": {
       "N502": "fundamental_action_reconstruction/N502_CURRENT_FIRST_STRICT_RESIDUAL_Z2_SIGN_FREEZE_FOR_EXPORTED_DOWNSTREAM_OBJECTS_GAUGE_IRRELEVANCE_PACKAGE_THEOREM.md",
       "N519": "fundamental_action_reconstruction/N519_CURRENT_FIRST_STRICT_RESIDUAL_Z2_SIGN_FREEZE_EXTENDED_TO_GLOBAL_PROJECTIVE_SELECTOR_OBJECTS_GAUGE_IRRELEVANCE_THEOREM.md"
     },
     "directed_frontier_target_spec": "fundamental_action_reconstruction/T171_CURRENT_STRICT_GLOBAL_DIRECTED_SELECTOR_STATE_DATUM_TARGET_SPEC.md",
-    "strict_sign_sensitive_datum_present": false,
-    "strict_boundary_note": "H37/T171 remain open for directed continuation; no strict sign-sensitive observable is promoted by this decision."
+    "strict_sign_sensitive_datum_present": true,
+    "strict_boundary_note": "Directed continuation is selected by P632; this packet is therefore treated as a historical projective-only branch record only."
   },
   "continuation": {
-    "selected": "projective_only",
-    "meaning": "treat exported global selector state as a projective/ray-level physical state object for the declared strict closure stack; keep residual sign as gauge/convention where proven irrelevant; defer directed/sign-sensitive lift attempts to an explicit future branch.",
-    "directed_branch_status": "OPEN"
+    "selected": "SUPERSEDED",
+    "meaning": "Projective-only continuation remains a valid historical branch record (quotient/ray semantics), but it is superseded on current repo state by the later professorial directed-continuation decision (P632).",
+    "superseded_by": "fundamental_action_reconstruction/generated/p632_current_strict_directed_continuation_decision_packet_summary.json",
+    "directed_branch_status": "SELECTED"
   },
   "recommended_next_strict_target": {
     "target": "P11",
-    "note": "After accepting projective-only continuation, proceed with strict-only ToE closure tasks that depend only on projectors/spans. The current missing object on the existing-kernel-feedback \u2192 K_obs route remains the explicit factorization/equivalence map into the explicit H3 chain (P10/P11).",
+    "note": "Even though projective-only continuation is superseded by the directed decision (P632), the next strict bottleneck still remains the existing-kernel-feedback \u2192 explicit-chain factorization route (P10/P11).",
     "p11_next": {
       "stage": "P11",
       "status": "NOT_COMPUTABLE_FROM_CURRENT_EXISTING_KERNEL_FEEDBACK_TO_EXPLICIT_CHAIN_FACTORIZATION_ROUTE",

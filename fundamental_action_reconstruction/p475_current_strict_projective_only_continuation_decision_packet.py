@@ -16,6 +16,9 @@ P474_GLUING_SUMMARY = (
     / "p474_current_strict_global_projective_selector_state_gluing_consistency_audit_probe_summary.json"
 )
 H37_SIGN_AUDIT_SUMMARY = GENERATED / "h37_sign_distinction_state_audit_summary.json"
+P632_DIRECTED_SUMMARY = (
+    GENERATED / "p632_current_strict_directed_continuation_decision_packet_summary.json"
+)
 
 N502_THEOREM = (
     ROOT
@@ -106,6 +109,21 @@ def main() -> None:
     projective = _read_json(PROJECTIVE_STATE)
     p474 = _read_json(P474_GLUING_SUMMARY)
     h37 = _read_json(H37_SIGN_AUDIT_SUMMARY)
+    p632_summary: dict[str, Any] | None = None
+    directed_selected = False
+    if P632_DIRECTED_SUMMARY.exists():
+        try:
+            p632_summary = _read_json(P632_DIRECTED_SUMMARY)
+            directed_selected = (
+                (p632_summary.get("decision") == "DIRECTED_CONTINUATION_SELECTED")
+                or (p632_summary.get("selected_continuation") == "directed")
+                or (
+                    "DIRECTED_CONTINUATION_SELECTED"
+                    in str(p632_summary.get("status") or "")
+                )
+            )
+        except Exception:
+            p632_summary = {"summary_path": _p(P632_DIRECTED_SUMMARY), "parse_error": True}
 
     sign_gauge = (
         (projective.get("state_type") or {}).get("sign_gauge")
@@ -152,8 +170,23 @@ def main() -> None:
                 "parse_error": True,
             }
 
-    status = "PASS_DECISION_DECLARED_PROJECTIVE_ONLY_CONTINUATION_SELECTED"
-    decision = "PROJECTIVE_ONLY_CONTINUATION_SELECTED"
+    if directed_selected:
+        status = "PASS_DECISION_PROJECTIVE_ONLY_CONTINUATION_SUPERSEDED_BY_P632_DIRECTED_CONTINUATION"
+        decision = "PROJECTIVE_ONLY_CONTINUATION_SUPERSEDED_BY_P632"
+        continuation = {
+            "selected": "SUPERSEDED",
+            "meaning": "Projective-only continuation remains a valid historical branch record (quotient/ray semantics), but it is superseded on current repo state by the later professorial directed-continuation decision (P632).",
+            "superseded_by": _p(P632_DIRECTED_SUMMARY),
+            "directed_branch_status": "SELECTED",
+        }
+    else:
+        status = "PASS_DECISION_DECLARED_PROJECTIVE_ONLY_CONTINUATION_SELECTED"
+        decision = "PROJECTIVE_ONLY_CONTINUATION_SELECTED"
+        continuation = {
+            "selected": "projective_only",
+            "meaning": "treat exported global selector state as a projective/ray-level physical state object for the declared strict closure stack; keep residual sign as gauge/convention where proven irrelevant; defer directed/sign-sensitive lift attempts to an explicit future branch.",
+            "directed_branch_status": "OPEN",
+        }
 
     payload = {
         "stage": "P475",
@@ -166,22 +199,32 @@ def main() -> None:
             "projective_state_sign_gauge": bool(sign_gauge),
             "p474_gluing_audit_pass": bool(p474_pass),
             "p474_summary": _p(P474_GLUING_SUMMARY),
+            "p632_directed_continuation_summary": (
+                (_p(P632_DIRECTED_SUMMARY) if P632_DIRECTED_SUMMARY.exists() else None)
+            ),
+            "directed_continuation_selected": bool(directed_selected),
             "gauge_irrelevance_packages": {
                 "N502": _p(N502_THEOREM),
                 "N519": _p(N519_THEOREM),
             },
             "directed_frontier_target_spec": _p(T171_TARGET),
             "strict_sign_sensitive_datum_present": bool(strict_sign_sensitive_present),
-            "strict_boundary_note": "H37/T171 remain open for directed continuation; no strict sign-sensitive observable is promoted by this decision.",
+            "strict_boundary_note": (
+                "Directed continuation is selected by P632; this packet is therefore treated as a historical projective-only branch record only."
+                if directed_selected
+                else "H37/T171 remain open for directed continuation; no strict sign-sensitive observable is promoted by this decision."
+            ),
         },
-        "continuation": {
-            "selected": "projective_only",
-            "meaning": "treat exported global selector state as a projective/ray-level physical state object for the declared strict closure stack; keep residual sign as gauge/convention where proven irrelevant; defer directed/sign-sensitive lift attempts to an explicit future branch.",
-            "directed_branch_status": "OPEN",
-        },
+        "continuation": continuation,
         "recommended_next_strict_target": {
             "target": "P11",
-            "note": "After accepting projective-only continuation, proceed with strict-only ToE closure tasks that depend only on projectors/spans. The current missing object on the existing-kernel-feedback → K_obs route remains the explicit factorization/equivalence map into the explicit H3 chain (P10/P11).",
+            "note": (
+                "Even though projective-only continuation is superseded by the directed decision (P632), the next strict bottleneck "
+                "still remains the existing-kernel-feedback → explicit-chain factorization route (P10/P11)."
+                if directed_selected
+                else "After accepting projective-only continuation, proceed with strict-only ToE closure tasks that depend only on projectors/spans. "
+                "The current missing object on the existing-kernel-feedback → K_obs route remains the explicit factorization/equivalence map into the explicit H3 chain (P10/P11)."
+            ),
             "p11_next": p11_next,
         },
         "hard_limits": [
@@ -215,4 +258,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
