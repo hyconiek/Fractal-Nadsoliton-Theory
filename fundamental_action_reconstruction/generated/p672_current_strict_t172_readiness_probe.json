@@ -1,0 +1,91 @@
+{
+  "stage": "P672",
+  "lane": "t172_readiness_probe_only",
+  "status": "P672_PREREQS_PRESENT_T172_OPEN_NO_GLOBAL_SELECTOR_CLOSURE_OBJECT_EXPORTED_YET",
+  "checks": [
+    {
+      "id": "t172_target_spec_present",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "T172 target spec exists (this probe audits readiness; it does not discharge T172)."
+    },
+    {
+      "id": "t172_target_spec_no_false_pass_marked",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "T172 spec explicitly carries the no-false-pass discipline tag."
+    },
+    {
+      "id": "t170_discharged",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Global atlas + transition objects on C_v1 are exported (T170 discharged via F469/N515)."
+    },
+    {
+      "id": "global_projective_state_exported",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Global projective selector state object on C_v1 is exported (F470/N516)."
+    },
+    {
+      "id": "t164_fixing_datum_exported_premise_based",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "T164 fixing datum is exported and premise-based (explicit sign/orientation convention; no Aut(Z_12)-invariant overclaim)."
+    },
+    {
+      "id": "t171_discharged_directed_state_exported",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Global directed/sign-sensitive selector state object is exported in the declared premise-tracked scope (T171 via F474/N524)."
+    },
+    {
+      "id": "seed_v1_global_promotions_present",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Seed-v1 strict-core internal selector-source lane is promoted to global objects (N550\u2013N553)."
+    },
+    {
+      "id": "seed_v1_global_promotions_projector_section_level_only",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Global promotions are explicitly projector/section-level only (respect N512 boundary; no operator-level groupoid promotion)."
+    },
+    {
+      "id": "n553_residual_sign_gauge_explicit",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Residual Z2 sign gauge is explicitly tracked at global level for promoted seed-v1 chain (N553)."
+    }
+  ],
+  "blocking_mismatches": [],
+  "closure_objects_found": [],
+  "closure_claims_info": {
+    "strict_core_selector_closure_claimed": false,
+    "QW2191_discharge_claimed": false
+  },
+  "t172_missing_target_objects": [
+    "SelectorClosure_global_C_v1_(projective|directed)_strict_v1 (choose one declared scope)",
+    "Theorem-level uniqueness/boundary statement resolving the strict meaning of global QW-2191 discharge in the chosen closure scope"
+  ],
+  "recommended_next_actions": [
+    "Export one explicit global closure object on C_v1 (projective OR directed; keep sign discipline explicit).",
+    "Export one theorem-level uniqueness/boundary statement for global QW-2191 in the chosen closure scope."
+  ],
+  "hard_limits": [
+    "this_is_a_readiness_probe_only",
+    "no_strict_core_selector_closure_claim",
+    "no_global_QW2191_discharge_claim",
+    "no_ToE_closure_claim"
+  ],
+  "no_false_pass": true
+}
