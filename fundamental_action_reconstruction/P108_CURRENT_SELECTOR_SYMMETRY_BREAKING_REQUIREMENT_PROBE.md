@@ -1,7 +1,7 @@
 # P108 Current Selector / Symmetry-Breaking Requirement Probe
 
 Status: `P108_EXECUTED_CURRENT_SELECTOR_SYMMETRY_BREAKING_REQUIREMENT_PROBE_NO_FALSE_PASS`
-As of: `2026-03-15`
+As of: `2026-03-17`
 
 ## Goal
 
@@ -16,11 +16,12 @@ for the QW-2191 uniqueness frontier?
 
 ## Result
 
-On the updated current repo state (2026-03-15), the honest answer is **scoped**:
+On the updated current repo state (2026-03-17), the honest answer is **scoped**:
 
 ```text
 KERNEL_ALONE_SCOPE: yes (QW-2191).
 CANONICAL_LOCAL_DIAGONAL_LANE_SCOPE: continuous O(2) is already internally cut to residual Z2 without an external selector (N484/N485/N487 + F453/N492).
+SHANNON_ELEMENT_ORDER_REFERENCE_LANE_SCOPE: continuous O(2) is internally cut to residual Z2 using only r_ord (N480/N488/N496 + F454/N500).
 FULL_SIGN_SENSITIVE_PHYSICAL_ORIENTATION: still open (residual Z2 remains).
 ```
 
@@ -35,10 +36,12 @@ following:
    explicit selector closes uniqueness only after adding symmetry breaking,
 3. the `QW-2193` robustness result:
    the selector family is stable once such an extra postulate is added,
-4. the updated internal datum export on the strict diagonal/local lane:
-   `N484/N485/N487` + `F453/N492` export a lane-scoped internal `O(2)->Z2` cut and an actual basis object,
+4. updated strict internal orientation-datum exports cutting `O(2)->Z2` (axis-only):
+   - diagonal/local lane: `N484/N485/N487` + `F453/N492`,
+   - Shannon element-order reference lane: `N480/N488/N496` + `F454/N500`,
 5. the (still valid) kernel-alone boundary:
-   `QW-2191` remains true in kernel-only scope.
+   `QW-2191` remains true in kernel-only scope,
+6. the strict-core audit framing that packages these as “axis-only” and keeps the residual `Z2` sign explicit (`B2`).
 
 ## Why this is enough
 
@@ -46,8 +49,8 @@ Taken together, these facts imply the strongest honest *scoped* conclusion:
 
 1. kernel alone is not sufficient (`QW-2191`),
 2. explicit selector/symmetry breaking is sufficient in axiom-augmented scope (`QW-2192/2193`),
-3. the repo now exports a strict **internal** symmetry-breaking mechanism on one strict lane (canonical local-diagonal) which cuts `O(2)` down to residual `Z2` and exports an actual basis object (`N484/N485/N487` + `F453/N492`),
-4. the remaining strict gap is narrower: sign-sensitive physical orientation (lifting residual `Z2`) and/or extension beyond the diagonal/local lane without importing an external selector premise.
+3. the repo now exports strict **internal** axis-only symmetry-breaking mechanisms on strict lanes (diagonal/local and Shannon element-order reference) which cut `O(2)` down to residual `Z2` and export actual basis objects (`F453/F454` packaged by `N492/N500`),
+4. the remaining strict gap is narrower: a sign-sensitive physical orientation (lifting residual `Z2`) and/or an equivalent strict-core observable selecting one unique `O(2)` point.
 
 Therefore the current repo does support the following boundary claim:
 
