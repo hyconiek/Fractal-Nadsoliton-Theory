@@ -728,6 +728,35 @@ w_{\mathrm{break}}(x)
 This weight is \emph{odd} under reflection $x\mapsto -x$ and therefore breaks the reflection symmetry on the carrier.
 It is not $\mathrm{Aut}(\mathbb{Z}_{12})$-invariant and is treated as a convention-layer sign anchor only.
 
+\begin{lemma}[Direction-free weights cannot distinguish a sine-axis sign (N517/N518)]
+\label{lem:even_weights_cannot_fix_sine_sign}
+Let $w:\mathbb{Z}_{12}\to\mathbb{R}$ be \emph{reflection-even}:
+\[
+w(x)=w(-x)\quad\text{for all }x\in\mathbb{Z}_{12}.
+\]
+Then for every Fourier sine basis vector $s_m$ ($m=1,\dots,5$) one has
+\[
+\langle w, s_m\rangle := \sum_{x\in\mathbb{Z}_{12}} w(x)\,s_m(x) = 0.
+\]
+In particular, a deterministic sign rule of the form
+\[
+u\ \mapsto\ \operatorname{sign}\!\bigl(\langle w,u\rangle\bigr)\,u
+\]
+cannot distinguish $u$ from $-u$ when the exported axis representative lies exactly on a sine axis (e.g.\ $u=\pm s_1$ on $\mathrm{pair1}$).
+
+Moreover, since $-1\in \mathrm{Aut}(\mathbb{Z}_{12})$, any $\mathrm{Aut}(\mathbb{Z}_{12})$-invariant weight profile is necessarily reflection-even.
+Therefore no direction-free (Aut-invariant) reference-weight family can supply a strict-core sign-distinction scalar on a pure sine axis.
+\end{lemma}
+
+\begin{proof}
+Because $s_m(-x)=-s_m(x)$, we may pair terms $x$ and $-x$:
+\[
+w(x)s_m(x)+w(-x)s_m(-x)=w(x)s_m(x)-w(-x)s_m(x)=(w(x)-w(-x))s_m(x)=0.
+\]
+The fixed points $x=0$ and $x=6$ satisfy $s_m(0)=s_m(6)=0$, so they contribute nothing. Hence the total sum vanishes.
+For the Aut-invariance statement, apply the automorphism $x\mapsto -x$ and invariance of $w$ under $\mathrm{Aut}(\mathbb{Z}_{12})$.
+\end{proof}
+
 \paragraph{Exported numeric instance (F647 payload).}
 The exported payload values on the current repo state are:
 \begin{center}
@@ -1276,6 +1305,7 @@ Closed (scope-limited, strict projective OS):
   \item projective global selector closure on $C_{v1}$ with chart-independent output projector (\texttt{N680}/\texttt{F672}),
   \item operational OS support packets (v1--v3) and OS computability pipeline from closure output through observer-limit readout and downstream chain (\texttt{N698}, \texttt{N700}, \texttt{N705}, \texttt{N701}),
   \item strict basis-invariant Hessian eigen-spectrum mass observable (\texttt{F704}),
+  \item residual sign $u_m\mapsto -u_m$ is gauge-irrelevant for the Release-7 OS observables actually used downstream (audited by \texttt{P709}, packaged by \texttt{N706}),
   \item a disciplined internal meaning of the quadratic “mass proxy” layer (\texttt{N703}).
   \item release-7 OS closure dashboard readiness (\texttt{P706}) (probe-level).
 \end{itemize}
@@ -1303,6 +1333,8 @@ The next honest strict move under \texttt{T173} is therefore one of:
   \item explicitly freeze the directed sign as a gauge/convention layer and keep physics claims restricted to projective/basis-invariant observables (operational closure already exists in that scope via \texttt{N701}).
 \end{enumerate}
 
+For option (b), Release 7 now exports an explicit machine audit: \texttt{P709} enumerates all $2^5$ residual sign patterns on $\{\mathrm{pair1},\dots,\mathrm{pair5}\}$ and verifies that the concrete OS numeric outputs used downstream (quadratic proxy layer \texttt{P694}/\texttt{P696} and the basis-invariant mass observable \texttt{F704}) are unchanged (within tolerance). The corresponding theorem-level package is \texttt{N706}.
+
 \subsection*{Priority 2 (explicitly non-strict policy): physical units (proxy $\to$ GeV)}
 
 Any unit assignment and any comparison to external experimental data must remain non-strict unless a strict unit map is derived.
@@ -1311,6 +1343,13 @@ The repo already exports the required dataset-vs-policy separation:
   \item dataset: \texttt{external\_data/sm\_mass\_targets\_v1.json} (units = GeV),
   \item policy: \texttt{external\_data/sm\_host\_matching\_policy\_v1.json} (one global scale; \texttt{pass\_criteria=null}).
 \end{itemize}
+
+Additionally, Release 7 exports a dedicated non-strict \emph{unit calibration} policy and a corresponding calibration-map probe for the basis-invariant proxy spectrum \texttt{F704}:
+\begin{itemize}
+  \item policy: \texttt{external\_data/proxy\_to\_gev\_calibration\_policy\_v1.json} (\texttt{pass\_criteria=null}),
+  \item calibration map probe: \texttt{P710} (\verb|fundamental_action_reconstruction/p710_current_nonstrict_proxy_to_gev_calibration_map_from_f704_eigenspectrum_probe.py|).
+\end{itemize}
+The v1 calibration uses a single global scale parameter defined by matching geometric means of $m^2$ (assignment-free), and exports only a proxy$\to$GeV interface (no identification/match claim).
 
 \subsection*{Priority 3 (theory extension): “solitons = particles”}
 
@@ -1338,6 +1377,7 @@ The nearest falsifiable layer consistent with current strict scope is the basis-
   \item OS support packets: \texttt{F698/P698/N698} (v1), \texttt{F700/P700/N700} (v2), \texttt{F705/P705/N705} (v3).
   \item Operational ToE closure statement: \texttt{N701}.
   \item Quadratic mass-proxy meaning definition: \texttt{N703}.
+  \item Residual-sign gauge irrelevance audit (Release-7 OS scope): \texttt{P709}, packaged by \texttt{N706}.
   \item Non-strict host matching harnesses (external-data dependent): \texttt{P702}, \texttt{P704}.
   \item Release-7 strict projective OS closure dashboard: \texttt{P706}.
 \end{itemize}

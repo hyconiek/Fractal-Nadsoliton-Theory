@@ -1,0 +1,40 @@
+{
+  "policy_id": "proxy_to_gev_calibration_policy_v1_global_scale_only_geometric_mean_m2_match",
+  "as_of": "2026-03-17",
+  "scope": "nonstrict_physical_units_calibration_only",
+  "expected_dataset_id": "SM_mass_targets_v1_pdg2024_summary_tables",
+  "proxy_observable": {
+    "object": "MassObservable_diagonal_local_strict_derived_v1",
+    "stage": "F704",
+    "field": "outputs.eigenvalues_m2_proxy_ascending",
+    "notes": [
+      "This policy calibrates only the basis-invariant proxy spectrum exported by F704.",
+      "No channel/particle assignment is defined by this policy."
+    ]
+  },
+  "degrees_of_freedom": {
+    "global_scale_only": true,
+    "sector_scales_allowed": false,
+    "kinetic_metric_refit_allowed": false,
+    "nonlinear_mass_map_allowed": false
+  },
+  "scale_definition": {
+    "symbol": "scale_m2_per_proxy_unit",
+    "formula": "log(scale) := mean_i log(tgt_m2[i]) - mean_j log(proxy_m2[j]); scale := exp(log(scale))",
+    "notes": [
+      "Uses only the geometric mean of m^2 values; independent of any permutation/assignment between proxies and targets.",
+      "Defines a non-strict physical-unit interface only (proxy -> GeV)."
+    ]
+  },
+  "pass_criteria": null,
+  "pass_criteria_semantics": "null => no pass/FAIL claim is permitted under this policy version (calibration map only).",
+  "hard_limits": [
+    "external_dataset_dependent",
+    "nonstrict_policy_layer_only",
+    "no_physical_unit_calibration_claim_in_strict_scope",
+    "no_standard_model_identification_claim",
+    "does_not_define_particle_channel_assignment"
+  ],
+  "no_false_pass": true
+}
+

@@ -1,0 +1,110 @@
+{
+  "stage": "P710",
+  "status": "PASS_EXPORTED_NONSTRICT_PROXY_TO_GEV_CALIBRATION_MAP_FROM_F704_EIGENSPECTRUM",
+  "as_of": "2026-03-17",
+  "generated_utc": "2026-03-17T21:38:50.347262+00:00",
+  "scope": "nonstrict_units_calibration_map_only",
+  "inputs": {
+    "proxy_object": "fundamental_action_reconstruction/generated/mass_observable_diagonal_local_strict_derived_v1.json",
+    "proxy_field": "outputs.eigenvalues_m2_proxy_ascending",
+    "targets_dataset": "fundamental_action_reconstruction/external_data/sm_mass_targets_v1.json",
+    "policy": "fundamental_action_reconstruction/external_data/proxy_to_gev_calibration_policy_v1.json"
+  },
+  "dataset": {
+    "dataset_id": "SM_mass_targets_v1_pdg2024_summary_tables",
+    "units": "GeV",
+    "target_ids": [
+      "e",
+      "u",
+      "d",
+      "mu",
+      "s",
+      "tau",
+      "c",
+      "b",
+      "W",
+      "Z",
+      "H",
+      "t"
+    ]
+  },
+  "policy": {
+    "policy_id": "proxy_to_gev_calibration_policy_v1_global_scale_only_geometric_mean_m2_match",
+    "degrees_of_freedom": {
+      "global_scale_only": true,
+      "sector_scales_allowed": false,
+      "kinetic_metric_refit_allowed": false,
+      "nonlinear_mass_map_allowed": false
+    },
+    "pass_criteria": null
+  },
+  "calibration_map": {
+    "units": "GeV",
+    "scale_m2_per_proxy_unit": 0.5628240068613344,
+    "scale_m_per_sqrt_proxy_unit": 0.7502159734778608,
+    "formula": "m2_physical := scale_m2_per_proxy_unit * m2_proxy; m_physical := sqrt(m2_physical)",
+    "scale_construction": "geometric_mean_match_on_m2 (assignment-free)",
+    "notes": [
+      "This is a non-strict calibration interface only.",
+      "This map does not identify which proxy modes correspond to which particles.",
+      "Use P704/P702 for diagnostic-only matching metrics under a separate non-strict host-matching policy."
+    ]
+  },
+  "sanity": {
+    "geometric_mean_target_m2": 0.6519462397304677,
+    "geometric_mean_proxy_m2": 1.158348314539985,
+    "geometric_mean_calibrated_proxy_m2": 0.6519462397304677,
+    "abs_diff_geometric_mean_m2": 0.0
+  },
+  "results": {
+    "proxy_m2_proxy_ascending": [
+      0.08813142775481989,
+      0.11195105316362809,
+      0.23796767585569786,
+      0.7641952808835573,
+      0.7733323123191046,
+      1.2068935563568985,
+      1.7060617210611557,
+      1.8861137936815946,
+      2.290146094544166,
+      2.989559197836824,
+      12.356024722005182,
+      12.800940342343853
+    ],
+    "calibrated_m2_physical_ascending": [
+      0.04960248329937794,
+      0.06300874031389943,
+      0.1339339208285831,
+      0.4301074500114066,
+      0.4352499906547793,
+      0.6792686672439153,
+      0.9602124938003839,
+      1.0615501227563071,
+      1.2889492012291837,
+      1.682595686475678,
+      6.954267342916662,
+      7.2046765350708695
+    ],
+    "calibrated_m_physical_ascending": [
+      0.22271614961510525,
+      0.2510154184784262,
+      0.3659698359545266,
+      0.6558257771782127,
+      0.6597347881192709,
+      0.8241775702140379,
+      0.9799043289017474,
+      1.0303155452366557,
+      1.1353189865536397,
+      1.2971490610086713,
+      2.63709448881087,
+      2.684152852404436
+    ]
+  },
+  "hard_limits": [
+    "Non-strict policy layer only; does not claim a strict physical-unit map.",
+    "Does not claim Standard Model identification or 'match'.",
+    "Does not claim kernel-alone/global QW-2191 discharge.",
+    "Does not claim a directed/sign-sensitive physical orientation datum in strict core."
+  ],
+  "no_false_pass": true
+}

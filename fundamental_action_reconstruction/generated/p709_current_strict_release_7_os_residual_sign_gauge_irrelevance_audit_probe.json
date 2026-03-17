@@ -1,0 +1,45 @@
+{
+  "stage": "P709",
+  "status": "PASS_RELEASE_7_OS_RESIDUAL_SIGN_GAUGE_IRRELEVANCE_AUDITED",
+  "as_of": "2026-03-17",
+  "generated_utc": "2026-03-17T21:28:50.081546+00:00",
+  "goal": "audit that residual per-pair sign u_m->-u_m is gauge-irrelevant for Release-7 OS observables (P694 mass proxy, P696 channel spectrum proxy invariants, F704 invariant mass observable), without claiming kernel-alone/global QW-2191 discharge",
+  "inputs": {
+    "F672_projective_closure_ref": "fundamental_action_reconstruction/generated/selector_closure_global_c_v1_projective_strict_v1.json",
+    "F459_h_psi_ref": "fundamental_action_reconstruction/generated/psi_hessian_diagonal_local_strict_derived_value_instantiated_v1.json",
+    "P694_summary_ref": "fundamental_action_reconstruction/generated/p694_current_strict_physical_computability_mass_spectrum_proxy_from_projective_selector_closure_probe_summary.json",
+    "P696_summary_ref": "fundamental_action_reconstruction/generated/p696_current_strict_physical_computability_selector_aligned_channel_spectrum_proxy_from_projective_selector_closure_probe_summary.json",
+    "F704_summary_ref": "fundamental_action_reconstruction/generated/f704_current_strict_invariant_mass_observable_from_diagonal_local_psi_hessian_eigensystem_export_packet_summary.json"
+  },
+  "tolerances": {
+    "tol_m2_abs": 1e-10,
+    "tol_ratio_abs": 1e-12
+  },
+  "baseline_sanity": {
+    "max_abs_diff_p694_m2_against_summary": 0.0,
+    "max_abs_diff_p696_channel_m2_against_summary": 0.0,
+    "abs_diff_p696_offdiag_to_diag_ratio_against_summary": 0.0,
+    "abs_diff_p696_offblock_max_fro_against_summary": 0.0,
+    "abs_diff_f704_min_against_summary": 5.329070518200751e-15,
+    "abs_diff_f704_max_against_summary": 5.329070518200751e-15,
+    "baseline_ok": true
+  },
+  "sign_pattern_audit": {
+    "n_patterns_tested": 32,
+    "max_abs_diff_p694_m2_under_sign_patterns": 0.0,
+    "max_abs_diff_p696_channel_m2_under_sign_patterns": 0.0,
+    "max_abs_diff_p696_offdiag_to_diag_ratio_under_sign_patterns": 0.0,
+    "max_abs_diff_p696_offblock_max_fro_under_sign_patterns": 0.0,
+    "max_abs_diff_f704_min_under_sign_patterns": 0.0,
+    "max_abs_diff_f704_max_under_sign_patterns": 0.0,
+    "sign_ok": true,
+    "first_failing_patterns_if_any": []
+  },
+  "hard_limits": [
+    "Does not claim kernel-alone/global QW-2191 discharge.",
+    "Does not claim any directed/sign-sensitive physical orientation datum in strict core.",
+    "Does not claim Standard Model identification or proxy\u2192GeV calibration.",
+    "Does not claim 'actual emergent observer closure'."
+  ],
+  "no_false_pass": true
+}

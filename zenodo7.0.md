@@ -23,6 +23,7 @@ What is strictly discharged / exported (scope-limited, no false pass):
 - **First strict quadratic physics proxies:** `P694` / `P696` (dimensionless proxy layer; meaning disciplined by `N703`).
 - **Observer-limit readout + downstream chain computability (projective/gauge-safe):** `P697`, `P699` packaged by `N699`.
 - **Basis-invariant mass observable (Hessian eigen-spectrum proxy):** exported as `F704` (included in OS support v3 `N705`).
+- **Residual-sign gauge irrelevance for OS outputs:** audited by `P709` and packaged as `N706` (operational closure does not depend on a directed physical sign datum).
 - **Strict dashboards:** `P706` and `P707` report readiness (`PASS_*_READY`), and the strict frontier dashboard `P708` indicates the next strict target remains `T173`.
 
 What is explicitly *not* claimed (hard limits):
@@ -30,6 +31,7 @@ What is explicitly *not* claimed (hard limits):
 - **No kernel-alone/global discharge of `QW-2191`.**
 - **No directed/sign-sensitive physical orientation datum in strict core** (directed lifts remain a tracked gauge/convention layer).
 - **No Standard Model identification / “match” claim** in strict scope.
+- **No positive SM-diagnostic result under the frozen one-scale non-strict policy:** the exported harness is diagnostic-only (`pass_criteria=null`), and current one-scale metrics (e.g. `P702`) do *not* support any “SM match” statement.
 - **No physical-unit proxy→GeV calibration map** in strict scope.
 - **No “actual emergent observer closure”** (only projective downstream computability is packaged).
 
@@ -131,7 +133,11 @@ Run from repository root:
 
 ```bash
 python3 fundamental_action_reconstruction/p707_current_release_7_build_and_closure_smoke_probe.py
+python3 fundamental_action_reconstruction/p709_current_strict_release_7_os_residual_sign_gauge_irrelevance_audit_probe.py
+python3 fundamental_action_reconstruction/p710_current_nonstrict_proxy_to_gev_calibration_map_from_f704_eigenspectrum_probe.py
 cat fundamental_action_reconstruction/generated/p707_current_release_7_build_and_closure_smoke_probe_summary.json
+cat fundamental_action_reconstruction/generated/p709_current_strict_release_7_os_residual_sign_gauge_irrelevance_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p710_current_nonstrict_proxy_to_gev_calibration_map_from_f704_eigenspectrum_probe_summary.json
 cat fundamental_action_reconstruction/generated/p706_current_release_7_strict_projective_operational_toe_os_closure_dashboard_probe_summary.json
 cat fundamental_action_reconstruction/generated/p708_current_strict_t173_frontier_dashboard_probe_summary.json
 ```
@@ -154,6 +160,10 @@ cat fundamental_action_reconstruction/generated/p708_current_strict_t173_frontie
 - dataset: `fundamental_action_reconstruction/external_data/sm_mass_targets_v1.json`
 - policy: `fundamental_action_reconstruction/external_data/sm_host_matching_policy_v1.json` (`pass_criteria=null`)
 
+**Frozen non-strict unit calibration map (proxy→GeV, global scale only, no pass claim):**
+- policy: `fundamental_action_reconstruction/external_data/proxy_to_gev_calibration_policy_v1.json` (`pass_criteria=null`)
+- exported calibration map: `fundamental_action_reconstruction/generated/p710_current_nonstrict_proxy_to_gev_calibration_map_from_f704_eigenspectrum_probe_summary.json`
+
 ---
 
 ## 8. 🧭 Next steps (professorial roadmap, no false‑PASS)
@@ -165,8 +175,10 @@ This section names the **next concrete moves** under strict scientific disciplin
 What is already strictly established:
 
 - The kernel‑alone lane exhibits degenerate Fourier pair planes and a continuous internal `O(2)` freedom (`QW-2191` obstruction; see repo-level `report_qw2191_mode_index_uniqueness_obstruction_theorem_gate.json`).
-- In strict program scope, the continuous family is cut to a **residual** $\\mathbb{Z}_2$ ambiguity on the degenerate pairs (axis-only canonicalization); **directed/sign‑sensitive** physical orientation is still not determined in strict core.
+- In strict program scope, the continuous family is cut to a **residual** $\mathbb{Z}_2$ ambiguity on the degenerate pairs (axis-only canonicalization); **directed/sign‑sensitive** physical orientation is still not determined in strict core.
 - Release 7 exports convention-layer tools (`T174`, `T175`) to work with directed representatives, but these are **not** promoted into strict physics.
+- Sign-distinction audit `H37` explicitly records the current end-state: premise-based directed sign distinction exists (`T164`+`T171`), and multiple deterministic convention lifts exist (`T174`/`T175`), yet **no strict physical sign datum** is exported.
+- Obstruction theorems `N517`/`N518` formalize why: any **direction-free** (in particular `Aut(Z_12)`-invariant) reference-weight family is reflection-even and therefore cannot distinguish a sine-axis state `u` from `-u` by linear scalar readout $\sum_x w(x)u(x)$.
 
 What remains open (the actual strict frontier):
 
@@ -177,11 +189,21 @@ Concrete next move under `T173`:
 
 - Either (A) export a genuinely strict internal selector source/ingredient that determines the residual sign in a chart-independent way (no hidden convention slots), or (B) explicitly freeze the directed sign as **gauge/convention** and restrict physics claims to projective/basis-invariant observables (operational closure already exists in that scope).
 
+**Strict attempt (recommended framing):** treat `T173` as a *provider-class* problem, not as a retuning problem:
+
+- A positive `T173` would require a **new strict-core provider** that breaks the residual sign without importing a marked generator/orientation or hidden selector knobs.
+- `T165` is **already discharged** (e.g. `N480`, `2026-03-14`): Shannon/element-order structure supplies a strict **`O(2)→Z2` cut** on `pair1` without introducing a marked generator (`N479`), but this still leaves the **residual sign** `u→-u` and the post-`T172` global directed-coherence frontier intact (`T173`).
+- The currently most honest strict-state audit result is negative: even with the exported reflection-breaking weight payload sourced from the admissible `S_sel_int` source-object witness (`F647`), a deterministic per-chart sign lift still yields **non‑constant directed output signs across charts** (`P681`, packaged as boundary `N681`).
+- Therefore, the next honest strict move under `T173` is to either:
+  1) export a **genuinely new** strict-core sign-sensitive provider (must bypass `N518`-class obstructions and must not smuggle `T164`), *or*
+  2) explicitly **freeze residual sign as gauge** and package/prove sign-gauge-irrelevance for the concrete Release‑7 OS observables actually used downstream (recommended; operational closure already exists in projective/basis-invariant scope).
+- If a strict sign-sensitive datum is still demanded, it must come with an explicit symmetry-breaking premise/fixing datum (`T164`, non-`Aut(Z_12)`-invariant by `N462`) and must remain labeled as premise-based / convention-layer unless a strict-core upgrade theorem is exported.
+
 Candidate routes (must remain explicit about strict vs non‑strict):
 
 - **Explicit breaking (non‑strict):** introduce a small, frozen perturbation in the kernel/host and audit sensitivity; never label as strict closure.
 - **Emergent (strict attempt):** derive and export a typed strict internal selector ingredient (e.g. an objective/variational rule) that fixes the residual sign without smuggling external axioms.
-- **Topological (strict attempt):** use the exported $\\pi_1(C_{v1})\\cong\\mathbb{Z}_2$ / `sigma_int` lane to supply a sign-sensitive datum; this requires an explicit theorem-level bridge to the global directed sign coherence frontier.
+- **Topological (strict attempt):** use the exported $\pi_1(C_{v1})\cong\mathbb{Z}_2$ / `sigma_int` lane to supply a sign-sensitive datum; this requires an explicit theorem-level bridge to the global directed sign coherence frontier.
 
 ### 🟠 Priority 2 (explicitly non‑strict policy): physical units (proxy → GeV)
 

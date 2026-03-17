@@ -24,6 +24,7 @@ IN_F704 = (
     GENERATED
     / "f704_current_strict_invariant_mass_observable_from_diagonal_local_psi_hessian_eigensystem_export_packet_summary.json"
 )
+IN_P709 = GENERATED / "p709_current_strict_release_7_os_residual_sign_gauge_irrelevance_audit_probe_summary.json"
 
 # Optional, explicitly non-strict external host-matching probes.
 IN_P702 = GENERATED / "p702_current_nonstrict_standard_model_host_matching_from_p696_channel_proxy_probe_summary.json"
@@ -42,7 +43,7 @@ def load_json(path: Path) -> dict[str, Any]:
 def main() -> None:
     GENERATED.mkdir(exist_ok=True)
 
-    strict_prereq = [IN_N705, IN_N701, IN_N703, IN_F704]
+    strict_prereq = [IN_N705, IN_N701, IN_N703, IN_F704, IN_P709]
     missing = [str(p.relative_to(REPO)) for p in strict_prereq if not p.exists()]
     if missing:
         artifact: dict[str, Any] = {
@@ -61,6 +62,7 @@ def main() -> None:
     n701 = load_json(IN_N701)
     n703 = load_json(IN_N703)
     f704 = load_json(IN_F704)
+    p709 = load_json(IN_P709)
 
     n705_tr = (n705.get("theorem_result") or {}) if isinstance(n705, dict) else {}
     n701_tr = (n701.get("theorem_result") or {}) if isinstance(n701, dict) else {}
@@ -116,6 +118,13 @@ def main() -> None:
     # Basis-invariant mass observable export (F704 packet summary).
     add_check("F704_mass_observable_exported", f704.get("status"), "PASS_EXPORTED_STRICT_INVARIANT_MASS_OBSERVABLE_OBJECT")
 
+    # Residual-sign gauge-irrelevance audit (P709).
+    add_check(
+        "P709_residual_sign_gauge_irrelevance_audited",
+        p709.get("status"),
+        "PASS_RELEASE_7_OS_RESIDUAL_SIGN_GAUGE_IRRELEVANCE_AUDITED",
+    )
+
     strict_ok = len(blocking) == 0
     if strict_ok:
         status = "PASS_RELEASE_7_STRICT_PROJECTIVE_OPERATIONAL_OS_CLOSURE_DASHBOARD_READY"
@@ -139,6 +148,7 @@ def main() -> None:
             "N701": str(IN_N701.relative_to(REPO)),
             "N703": str(IN_N703.relative_to(REPO)),
             "F704": str(IN_F704.relative_to(REPO)),
+            "P709": str(IN_P709.relative_to(REPO)),
         },
         "checks": checks,
         "blocking_mismatches": blocking,
@@ -161,4 +171,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
