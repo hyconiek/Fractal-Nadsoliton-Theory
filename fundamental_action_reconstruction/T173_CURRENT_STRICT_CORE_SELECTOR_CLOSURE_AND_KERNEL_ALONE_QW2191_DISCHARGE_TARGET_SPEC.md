@@ -112,6 +112,8 @@ and propagating to other charts via the exported `O_1m` transports (`P683`), but
 This rooted sign-lift is also exported as an explicit global sign-lift/section-choice object on `C_v1` (`F683`), without any physical orientation claim.
 Finally, the same `w_break`-rooted rule is now also exported as a global **directed state representative** in an explicit convention scope on `C_v1`
 (`F684`, audited by `P684`), descending to the strict projective state but still below any physical sign datum claim.
+Building on that directed representative, the repo also exports a corresponding global **directed closure object** in the same explicit convention scope
+(`F685`, audited by `P685`), still below any strict physical sign datum claim and still not implying kernel-alone/global `QW-2191` discharge.
 
 Therefore, `T173` is the next honest strict label for continued closure attempts beyond `T172`.
 

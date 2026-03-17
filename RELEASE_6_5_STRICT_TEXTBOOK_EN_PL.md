@@ -284,6 +284,9 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
     `SelectorOutputSignLift_global_C_v1_rooted_transport_from_S_sel_int_w_break_strict_convention_v1` (`F683`), with a glued output vector certificate in the fixed `(o_+,o_-)` basis.
 16. Update (`2026-03-17`): the same `w_break`-rooted rule is now also exported as a convention-scoped global **directed selector state** representative on `C_v1`,
     descending to the strict projective state (`P684`, `F684`), still below any strict physical orientation datum claim.
+17. Update (`2026-03-17`): composing that convention-scoped directed representative (`F684`) with the promoted global output channels `Y_sel(pair_m)` (`F660`),
+    the repo exports an explicit convention-scoped global **directed selector closure object** on `C_v1`,
+    `SelectorClosure_global_C_v1_directed_rooted_transport_from_S_sel_int_w_break_strict_convention_v1` (`P685`, `F685`).
 
 ### 1.2 What is still missing (no false pass)
 
@@ -616,6 +619,9 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
     `SelectorOutputSignLift_global_C_v1_rooted_transport_from_S_sel_int_w_break_strict_convention_v1` (`F683`), z certyfikatem sklejenia wektora wyjścia w bazie `(o_+,o_-)`.
 16. Update (`2026-03-17`): ta sama reguła zakotwiczona w `w_break` jest teraz także wyeksportowana jako konwencyjny globalny **kierunkowy stan selektora** na `C_v1`,
     schodzący do projektowego stanu (`P684`, `F684`), nadal poniżej claimu o fizyczny datum orientacji.
+17. Update (`2026-03-17`): składając ten konwencyjny directed stan (`F684`) z promowanymi globalnymi kanałami wyjściowymi `Y_sel(pair_m)` (`F660`),
+    repo eksportuje jawny konwencyjny globalny **kierunkowy obiekt domknięcia selektora** na `C_v1`,
+    `SelectorClosure_global_C_v1_directed_rooted_transport_from_S_sel_int_w_break_strict_convention_v1` (`P685`, `F685`).
 
 ### 1.2 Czego nadal brakuje (bez false pass)
 
