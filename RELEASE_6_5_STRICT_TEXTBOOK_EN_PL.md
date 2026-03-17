@@ -214,7 +214,7 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
     mode-index assignment basis object (`F468`), packaged by a theorem-level `O(2)->Z2` cut on all `pair_m (m=1..11)` on `Z_24` (`N513`), without any physical promotion
     of `n=24` into the `QW-2190` scaffold.
 30. the seed‑v1 strict-core internal selector-source lane is now advanced beyond “target only”: the repo exports a strict-core constructed source object
-    `S_sel_int_strict_core_source_object_v1` (with admissibility clauses packaged by `N540–N545`), an admissible strict-core orientation export
+    `S_sel_int_strict_core_source_object_v1` (admissible in the sense of the full `F34` source-object contract; clause chain packaged by `N540–N545`, and the current full-contract discharge packaged by `N676`), an admissible strict-core orientation export
     `E_orient_s_sel_int_source_object_v1` (`F654/P654/N546`), and explicit local strict-core seed operators on `pair1`
     `B_sel` / `R_sel` / `O_sel` (`F655–F657`, packaged by `N547–N549`); the downstream completion branch discharge is recorded by `P645`.
 31. using the exported global selector atlas/transition/state infrastructure on `C_v1` (`F469/N515`, `F470/N516`), the repo exports a **global** chartwise selector
@@ -268,7 +268,7 @@ Release 6.5 adds the first strict **value-instantiated diagonal/local uniqueness
 
 The repo still does **not** export:
 
-1. strict-core selector closure / admissible `S_sel_int`,
+1. strict-core selector closure (an admissible strict-core source object for `S_sel_int` is now exported in the sense of the `F34` source-object contract, packaged by `N676`, but this does not imply closure),
 2. any **Aut(Z_12)-invariant** sign-sensitive / directed selector state datum “for free” from typed `Z_12/Aut(Z_12)` structure alone (`N462` boundary);
    in the declared premise-based scope (`T164`) such a directed lift *is* exported (`F474/N524`), but no Aut-invariant canonicity is claimed,
 3. an axiom-free **kernel-alone/global** discharge of `QW-2191` beyond the declared diagonal/local lane and `n=12` scope; the current repo
@@ -338,7 +338,7 @@ promotion steps on `C_v1` (`F658/P658/N550`, `F659/P659/N551`, `F660/P660/N552`)
 exports the missing phase/frequency obstruction component (`F326/P404/N438`) and packages an actual `T16` nonbridge-strengthening discharge witness on the current export set
 (`F662/P662/N554`). A current post-`N554` frontier status packet v2 is now exported (`F663/P663/N663`), capturing that the bridge branch remains future-only while the
 nonbridge-strengthening branch is now actual on the current export set (still below any branch-selection theorem and any permanent no-bridge claim). Therefore the “next honest move”
-shifts back to strict-only closure: admissible `S_sel_int` / strict-core selector closure under explicit `QW-2191` discipline, with no silent legacy role transfer.
+shifts back to strict-only closure: strict-core selector closure under explicit `QW-2191` discipline, now with an admissible strict-core source object for `S_sel_int` (in the sense of the `F34` source-object contract; `N676`) but without implying any closure.
 
 ```text
 RETURN_TO_STRICT_SELECTOR_CLOSURE_FRONTIER
@@ -366,7 +366,7 @@ RETURN_TO_STRICT_SELECTOR_CLOSURE_FRONTIER
 Therefore `H37` is no longer the next blocker (it is discharged in the declared premise‑based scope), and the seed‑v1 source‑seed frontier is no longer “pre‑export”.
 The next strict bottleneck is now explicitly **post‑promotion**:
 
-1. strict-core selector closure / admissible `S_sel_int` remains unexported,
+1. strict-core selector closure remains unexported (even though an admissible strict-core source object for `S_sel_int` is now exported in the sense of the `F34` source-object contract; `N676`),
 2. global `QW-2191` discharge remains unclaimed,
 3. any further closure attempt must keep the projector/section-level boundaries (`N512`) and the tracked generator/orientation dependence (`N462/T164`) explicit.
 
@@ -528,7 +528,7 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
     datum `r_ord_z24` oraz jawny obiekt mode-index assignment na `Z_24` (`F468`), opakowane twierdzeniem theorem-level o cięciu `O(2)->Z2` na wszystkich parach
     `pair_m (m=1..11)` na `Z_24` (`N513`). To nadal jest **nie‑fizyczne** i nie promuje `n=24` do scaffoldu `QW-2190`.
 37. dodatkowo, pas strict-core source‑seed (seed‑v1) jest już “realnie” wyeksportowany downstream: repo eksportuje skonstruowany strict-core obiekt źródłowy
-    `S_sel_int_strict_core_source_object_v1` (z klauzulami dopuszczalności opakowanymi przez `N540–N545`), dopuszczalny datum orientacji `E_orient` (`F654/P654/N546`)
+    `S_sel_int_strict_core_source_object_v1` (dopuszczalny w sensie pełnego kontraktu obiektu źródłowego `F34`; łańcuch klauzul opakowany przez `N540–N545`, a aktualne domknięcie kontraktu opakowane przez `N676`), dopuszczalny datum orientacji `E_orient` (`F654/P654/N546`)
     oraz jawne operatory `B_sel/R_sel/O_sel` na `pair1` (`F655–F657`, opakowane przez `N547–N549`); rozładowanie gałęzi downstream‑completion jest zarejestrowane przez `P645`.
 38. ponadto, na bazie już wyeksportowanej globalnej infrastruktury atlasu/przejść/stanu selektora na `C_v1` (`F469/N515`, `F470/N516`) repo eksportuje jawny **globalny**
     obiekt operatora mostu selektora (promocja z seed‑v1 `B_sel` na `pair1` do `{pair1..pair5}`):
@@ -577,7 +577,7 @@ Release 6.5 dodaje pierwsze ścisłe (strict) **zainstancjonowane wartościowo**
 
 Repo nadal **nie** eksportuje:
 
-1. strict-core selector closure / dopuszczalnego `S_sel_int`,
+1. strict-core selector closure (dopuszczalny strict-core obiekt źródłowy dla `S_sel_int` jest już wyeksportowany w sensie kontraktu obiektu źródłowego `F34`, opakowane przez `N676`, ale to nie implikuje closure),
 2. ścisłego **Aut(Z_12)-invariant** znako‑czułego / kierunkowego datumu stanu selektora “za darmo” z samej struktury typed `Z_12/Aut(Z_12)` (granica `N462`); w zadeklarowanym scope premise-based (`T164`) taki datum jest już wyeksportowany jako directed lift (`F474/N524`, decyzja `P632`),
 3. aksjomatycznie wolnego **kernel-alone/global** rozładowania `QW-2191` poza pasem diagonal/local i zakresem `n=12`; aktualnie wyeksportowano
    jedynie scope-limited bypass dla obserwabli domknięcia w wariancie projektowym (`F672/N673`) przy zachowaniu braku kernel-alone discharge,
@@ -591,7 +591,7 @@ aż do jawnych promocji globalnych na `C_v1` (`F658/P658/N550`, `F659/P659/N551`
 ma już wyeksportowany brakujący komponent przeszkody faza/częstotliwość (`F326/P404/N438`) oraz opakowany actual discharge witness `T16` nonbridge-strengthening na aktualnym export set
 (`F662/P662/N554`). Wyeksportowano również **aktualny** post-`N554` packet/probe frontiera w wersji v2 (`F663/P663/N663`), który łapie stan: gałąź bridge jest nadal future-only,
 a gałąź nonbridge-strengthening jest już actual na aktualnym export set (bez twierdzenia branch selection i bez permanentnego “no bridge”). W konsekwencji “następny uczciwy ruch”
-przesuwa się z powrotem na strict-only closure: dopuszczalny `S_sel_int` / strict-core selector closure pod jawną dyscypliną `QW-2191`, bez silent role transfer z legacy kernela.
+przesuwa się z powrotem na strict-only closure: strict-core selector closure pod jawną dyscypliną `QW-2191`, teraz z dopuszczalnym strict-core obiektem źródłowym dla `S_sel_int` (w sensie kontraktu obiektu źródłowego `F34`; `N676`), ale bez implikowania closure.
 
 ```text
 RETURN_TO_STRICT_SELECTOR_CLOSURE_FRONTIER
@@ -619,7 +619,7 @@ RETURN_TO_STRICT_SELECTOR_CLOSURE_FRONTIER
 W konsekwencji `H37` nie jest już blockerem (w zadeklarowanym scope premise-based), a frontier seed‑v1 nie jest już “przed eksportem”.
 Następny bottleneck jest teraz jawnie **post‑promotion**:
 
-1. strict-core selector closure / dopuszczalny `S_sel_int` nadal nie jest wyeksportowany,
+1. strict-core selector closure nadal nie jest wyeksportowany (mimo że dopuszczalny strict-core obiekt źródłowy dla `S_sel_int` jest już wyeksportowany w sensie kontraktu obiektu źródłowego `F34`; `N676`),
 2. globalne rozładowanie `QW-2191` nadal nie jest roszczone,
 3. każda kolejna próba domykania musi zachować granicę projector/section‑level (`N512`) oraz jawnie śledzić zależność generator/orientacja (`N462/T164`).
 

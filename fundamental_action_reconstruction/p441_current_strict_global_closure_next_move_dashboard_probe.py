@@ -209,6 +209,9 @@ N553_SEED_GLOBAL_DOWNSTREAM_COMPLETION_SUMMARY = (
 N674_T172_PROJECTIVE_DISCHARGE_SUMMARY = (
     GENERATED / "n674_current_strict_t172_projective_closure_discharge_theorem_summary.json"
 )
+N676_ADMISSIBLE_S_SEL_INT_SOURCE_OBJECT_SUMMARY = (
+    GENERATED / "n676_current_first_admissible_s_sel_int_source_object_discharge_theorem_summary.json"
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -392,6 +395,18 @@ def _t172_projective_closure_discharged() -> tuple[bool, dict[str, Any] | None]:
     return discharged, n674
 
 
+def _s_sel_int_source_object_admissible_in_f34_sense() -> tuple[bool, dict[str, Any] | None]:
+    if not N676_ADMISSIBLE_S_SEL_INT_SOURCE_OBJECT_SUMMARY.exists():
+        return False, None
+    try:
+        n676 = load_json(N676_ADMISSIBLE_S_SEL_INT_SOURCE_OBJECT_SUMMARY)
+    except Exception:
+        return False, None
+    tr = n676.get("theorem_result")
+    discharged = bool(isinstance(tr, dict) and tr.get("discharged") is True)
+    return discharged, n676
+
+
 def main() -> None:
     GENERATED.mkdir(exist_ok=True)
     args = parse_args()
@@ -519,6 +534,7 @@ def main() -> None:
     direct_formal_freeze_selected, p631 = _direct_formal_route_negative_freeze_selected()
     source_seed_selected, p633 = _source_seed_route_selected()
     t172_projective_discharged, n674 = _t172_projective_closure_discharged()
+    s_sel_int_admissible, n676 = _s_sel_int_source_object_admissible_in_f34_sense()
 
     # Professorial precedence: directed continuation (P632) supersedes the earlier projective-only decision packet (P475).
     if directed_selected:
@@ -533,12 +549,23 @@ def main() -> None:
     ):
         if t172_projective_discharged:
             if source_seed_selected:
-                recommended_next = "P119"
-                recommendation_reason = (
-                    "T172 is now discharged in the projective (ray) closure scope (N674 packages F672/N672/N673): "
-                    "a global projective selector closure observable is exported on C_v1, while kernel-alone QW-2191 discharge and strict-core selector closure remain unclaimed. "
-                    "Professorial routing decision P633 remains selected; next honest strict bottleneck is the strict-core source-seed continuation frontier for S_sel_int (P119)."
-                )
+                if s_sel_int_admissible:
+                    recommended_next = "T172"
+                    recommendation_reason = (
+                        "T172 is now discharged in the projective (ray) closure scope (N674 packages F672/N672/N673): "
+                        "a global projective selector closure observable is exported on C_v1, while kernel-alone QW-2191 discharge and strict-core selector closure remain unclaimed. "
+                        "The strict-core internal selector-source lane has now advanced to an admissible strict-core source object for S_sel_int in the sense of the F34 source-object contract "
+                        f"(N676: {N676_ADMISSIBLE_S_SEL_INT_SOURCE_OBJECT_SUMMARY.relative_to(REPO)}). "
+                        "Therefore the next honest strict bottleneck returns to the remaining T172 target itself: strict-core selector closure / kernel-alone global QW-2191 discharge, "
+                        "with any directed/sign-sensitive promotion kept explicit and any cross-chart sign obstructions kept explicit (N675)."
+                    )
+                else:
+                    recommended_next = "P119"
+                    recommendation_reason = (
+                        "T172 is now discharged in the projective (ray) closure scope (N674 packages F672/N672/N673): "
+                        "a global projective selector closure observable is exported on C_v1, while kernel-alone QW-2191 discharge and strict-core selector closure remain unclaimed. "
+                        "Professorial routing decision P633 remains selected; next honest strict bottleneck is the strict-core source-seed continuation frontier for S_sel_int (P119)."
+                    )
             elif directed_selected:
                 recommended_next = "P11"
                 recommendation_reason = (
@@ -564,13 +591,24 @@ def main() -> None:
 
     # If a later professorial decision shifts the next move to the strict-core source-seed frontier, honor it.
     if source_seed_selected and recommended_next == "P11":
-        recommended_next = "P119"
-        recommendation_reason = (
-            "Post-projective directed frontier is resolved (T171 discharged), and the previously pursued strict-only ToE-closure continuations are explicitly frozen negative "
-            "on the current strict branch (P480: freeze P16; P631: freeze direct-formal residual-cancellation on T166 nonzero). "
-            "Therefore the next honest strict bottleneck shifts to the genuinely-new strict-core internal selector source seed construction frontier for S_sel_int, "
-            "tracked by the first source-seed construction target probe (P119). Professorial routing decision: P633."
-        )
+        if s_sel_int_admissible:
+            recommended_next = "T172"
+            recommendation_reason = (
+                "Post-projective directed frontier is resolved (T171 discharged), and the previously pursued strict-only ToE-closure continuations are explicitly frozen negative "
+                "on the current strict branch (P480: freeze P16; P631: freeze direct-formal residual-cancellation on T166 nonzero). "
+                "The genuinely-new strict-core internal selector source seed construction frontier has now advanced to an admissible strict-core source object for S_sel_int "
+                f"in the sense of the F34 source-object contract (N676: {N676_ADMISSIBLE_S_SEL_INT_SOURCE_OBJECT_SUMMARY.relative_to(REPO)}). "
+                "Therefore the next honest strict bottleneck returns to the remaining global closure target (T172): strict-core selector closure / kernel-alone global QW-2191 discharge, "
+                "with any directed/sign-sensitive promotion kept explicit and any cross-chart sign obstructions kept explicit (N675)."
+            )
+        else:
+            recommended_next = "P119"
+            recommendation_reason = (
+                "Post-projective directed frontier is resolved (T171 discharged), and the previously pursued strict-only ToE-closure continuations are explicitly frozen negative "
+                "on the current strict branch (P480: freeze P16; P631: freeze direct-formal residual-cancellation on T166 nonzero). "
+                "Therefore the next honest strict bottleneck shifts to the genuinely-new strict-core internal selector source seed construction frontier for S_sel_int, "
+                "tracked by the first source-seed construction target probe (P119). Professorial routing decision: P633."
+            )
 
     if recommended_next == "H37":
         if N518_THEOREM.exists():
