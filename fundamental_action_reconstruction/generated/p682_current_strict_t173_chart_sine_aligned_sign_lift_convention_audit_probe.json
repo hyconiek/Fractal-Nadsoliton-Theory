@@ -1,0 +1,123 @@
+{
+  "stage": "P682",
+  "as_of": "2026-03-17",
+  "generated_utc": "2026-03-17T10:37:10.033120+00:00",
+  "goal": "audit a chart-sine-aligned (non-Aut(Z12)-invariant) sign-lift convention w_break_m(x)=sigma_int*w_ref(x)*s_m(x) and check whether it yields chartwise output-sign consistency for the exported global selector output channels",
+  "inputs": {
+    "f647_ref": "fundamental_action_reconstruction/generated/f647_strict_witness_provider_export_packet_for_seed_v1_realization_attempt.json",
+    "theta_pair_ref": "fundamental_action_reconstruction/generated/theta_pair_sigma_int_strict_selector_ingredient_o2_cut_slot_free_v1.json",
+    "sigma_int_value": -1,
+    "y_sel_ref": "fundamental_action_reconstruction/generated/selector_output_operator_global_c_v1_seed_v1_promoted_strict_v1.json",
+    "a_m_refs": {
+      "1": "fundamental_action_reconstruction/generated/a_1_pair1_orientation_projector_operator_strict_core_v1.json",
+      "2": "fundamental_action_reconstruction/generated/a_2_pair2_orientation_projector_operator_strict_core_v1.json",
+      "3": "fundamental_action_reconstruction/generated/a_3_pair3_orientation_projector_operator_strict_core_v1.json",
+      "4": "fundamental_action_reconstruction/generated/a_4_pair4_orientation_projector_operator_strict_core_v1.json",
+      "5": "fundamental_action_reconstruction/generated/a_5_pair5_orientation_projector_operator_strict_core_v1.json"
+    },
+    "tolerances": {
+      "dot_nonzero_abs_tol": 1e-12,
+      "output_component_zero_tol": 1e-09
+    }
+  },
+  "per_pair": {
+    "pair1": {
+      "pair": "pair1",
+      "u_ref": "fundamental_action_reconstruction/generated/a_1_pair1_orientation_projector_operator_strict_core_v1.json",
+      "dot_w_ref_u_m": 0.0,
+      "dot_w_break_m_u_m": 0.00016200023852512268,
+      "dot_w_ref_nonzero": false,
+      "dot_w_break_m_nonzero": true,
+      "proposed_sign_lift_s_m": 1,
+      "proposed_sign_lift_source": "w_break_m(chart_sine_aligned)",
+      "output_vector_o_plus_o_minus_after_sign_lift": [
+        1.0,
+        -9.149258638450154e-16
+      ],
+      "output_o_plus_component_sign_after_sign_lift": "+"
+    },
+    "pair2": {
+      "pair": "pair2",
+      "u_ref": "fundamental_action_reconstruction/generated/a_2_pair2_orientation_projector_operator_strict_core_v1.json",
+      "dot_w_ref_u_m": 0.026998084963236815,
+      "dot_w_break_m_u_m": 3.2588094374664823e-19,
+      "dot_w_ref_nonzero": true,
+      "dot_w_break_m_nonzero": false,
+      "proposed_sign_lift_s_m": 1,
+      "proposed_sign_lift_source": "w_ref",
+      "output_vector_o_plus_o_minus_after_sign_lift": [
+        0.9999999999999998,
+        -6.871600701938739e-16
+      ],
+      "output_o_plus_component_sign_after_sign_lift": "+"
+    },
+    "pair3": {
+      "pair": "pair3",
+      "u_ref": "fundamental_action_reconstruction/generated/a_3_pair3_orientation_projector_operator_strict_core_v1.json",
+      "dot_w_ref_u_m": 0.024120089587956365,
+      "dot_w_break_m_u_m": 6.591880081873246e-19,
+      "dot_w_ref_nonzero": true,
+      "dot_w_break_m_nonzero": false,
+      "proposed_sign_lift_s_m": 1,
+      "proposed_sign_lift_source": "w_ref",
+      "output_vector_o_plus_o_minus_after_sign_lift": [
+        1.0,
+        -1.2977827337377104e-15
+      ],
+      "output_o_plus_component_sign_after_sign_lift": "+"
+    },
+    "pair4": {
+      "pair": "pair4",
+      "u_ref": "fundamental_action_reconstruction/generated/a_4_pair4_orientation_projector_operator_strict_core_v1.json",
+      "dot_w_ref_u_m": -0.027023002461428268,
+      "dot_w_break_m_u_m": -8.618823066975664e-19,
+      "dot_w_ref_nonzero": true,
+      "dot_w_break_m_nonzero": false,
+      "proposed_sign_lift_s_m": -1,
+      "proposed_sign_lift_source": "w_ref",
+      "output_vector_o_plus_o_minus_after_sign_lift": [
+        1.0,
+        -1.8755970911255346e-16
+      ],
+      "output_o_plus_component_sign_after_sign_lift": "+"
+    },
+    "pair5": {
+      "pair": "pair5",
+      "u_ref": "fundamental_action_reconstruction/generated/a_5_pair5_orientation_projector_operator_strict_core_v1.json",
+      "dot_w_ref_u_m": 3.906250000000001e-18,
+      "dot_w_break_m_u_m": -0.0001620002385251227,
+      "dot_w_ref_nonzero": false,
+      "dot_w_break_m_nonzero": true,
+      "proposed_sign_lift_s_m": -1,
+      "proposed_sign_lift_source": "w_break_m(chart_sine_aligned)",
+      "output_vector_o_plus_o_minus_after_sign_lift": [
+        1.0,
+        -9.149258638450154e-16
+      ],
+      "output_o_plus_component_sign_after_sign_lift": "+"
+    }
+  },
+  "result": {
+    "status": "PASS_CONVENTION_LEVEL_SIGN_LIFT_SUPPORTED_ON_ALL_CHARTS_AND_OUTPUT_SIGN_CONSISTENT",
+    "sign_lift_supported_pairs": [
+      "pair1",
+      "pair2",
+      "pair3",
+      "pair4",
+      "pair5"
+    ],
+    "sign_lift_missing_pairs": [],
+    "all_pairs_supported": true,
+    "directed_output_sign_consistent_if_all_pairs_supported": true,
+    "counts_as_strict_physical_orientation_datum": false,
+    "note": "PASS here means only: a deterministic chart-convention sign-lift exists under the declared s_m embedding. It does not upgrade directed physical orientation into strict core."
+  },
+  "hard_limits": [
+    "Convention-level only: depends on chart sine embedding s_m(x)=sin(2\u03c0 m x/12), not Aut(Z_12)-invariant.",
+    "Does not claim any directed/sign-sensitive physical orientation datum in strict core.",
+    "Does not claim kernel-alone/global QW-2191 discharge.",
+    "Does not claim ToE closure.",
+    "Does not upgrade premise-based directed objects (T164/T171) into strict core."
+  ],
+  "no_false_pass": true
+}
