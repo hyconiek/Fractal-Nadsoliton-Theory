@@ -1,0 +1,262 @@
+{
+  "stage": "P726",
+  "status": "PASS_POSITIVE_CORRIDOR_OUTER_INTERIOR_CHART_SELECTION_BRIDGE_NONEXPORT_AUDITED",
+  "as_of": "2026-03-18",
+  "generated_utc": "2026-03-18T00:43:53.220025+00:00",
+  "scope": "current_strict_t180_positive_corridor_outer_interior_chart_selection_bridge_nonexport_boundary_only",
+  "inputs": {
+    "P724": "fundamental_action_reconstruction/generated/p724_current_strict_t178_positive_source_polarity_atlas_entry_corridor_reduction_audit_probe.json",
+    "P725": "fundamental_action_reconstruction/generated/p725_current_strict_t179_positive_corridor_odd_even_lane_selection_bridge_nonexport_audit_probe_summary.json",
+    "F141": "fundamental_action_reconstruction/generated/f141_first_actual_source_topology_barrier_protected_sign_witness_packet_summary.json",
+    "F143": "fundamental_action_reconstruction/generated/f143_first_actual_source_topology_nonzero_flow_witness_packet_summary.json",
+    "F147": "fundamental_action_reconstruction/generated/f147_first_actual_source_topology_selector_witness_packet_summary.json",
+    "F148": "fundamental_action_reconstruction/generated/f148_first_actual_source_topology_basis_independent_promotion_witness_packet_summary.json",
+    "F150": "fundamental_action_reconstruction/generated/f150_first_actual_declared_scope_source_topology_selector_theorem_packet_summary.json",
+    "F465": "fundamental_action_reconstruction/generated/f465_current_strict_pair12345_selector_atlas_cocycle_data_export_packet_summary.json",
+    "F466": "fundamental_action_reconstruction/generated/f466_current_strict_pair12345_selector_atlas_full_cocycle_data_export_packet_summary.json",
+    "A12345_section_v2": "fundamental_action_reconstruction/generated/a_12345_pair12345_chart_glued_orientation_projector_operator_section_strict_core_v2.json"
+  },
+  "checks": [
+    {
+      "id": "source_physical_primitives_still_exported",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "The current source-topology lane still exports real physical primitives: sign witness, nonzero flow, selector witness, basis-independent promotion, and declared-scope theorem packet."
+    },
+    {
+      "id": "five_chart_atlas_backbone_still_present",
+      "actual": [
+        [
+          "pair1",
+          "pair2"
+        ],
+        [
+          "pair2",
+          "pair3"
+        ],
+        [
+          "pair3",
+          "pair4"
+        ],
+        [
+          "pair4",
+          "pair5"
+        ]
+      ],
+      "expected": [
+        [
+          "pair1",
+          "pair2"
+        ],
+        [
+          "pair2",
+          "pair3"
+        ],
+        [
+          "pair3",
+          "pair4"
+        ],
+        [
+          "pair4",
+          "pair5"
+        ]
+      ],
+      "pass": true,
+      "meaning": "The exported five-chart atlas still carries the canonical adjacent backbone pair1-pair2-pair3-pair4-pair5."
+    },
+    {
+      "id": "five_chart_atlas_outer_and_interior_chart_profile",
+      "actual": {
+        "outer_edge_charts": [
+          "pair1",
+          "pair5"
+        ],
+        "interior_charts": [
+          "pair2",
+          "pair3",
+          "pair4"
+        ]
+      },
+      "expected": {
+        "outer_edge_charts": [
+          "pair1",
+          "pair5"
+        ],
+        "interior_charts": [
+          "pair2",
+          "pair3",
+          "pair4"
+        ]
+      },
+      "pass": true,
+      "meaning": "On the current exported five-chart atlas, pair1/pair5 are the outer-edge charts and pair2/pair3/pair4 are the interior charts."
+    },
+    {
+      "id": "positive_corridor_outer_interior_split",
+      "actual": {
+        "positive_outer_edge_charts": [
+          "pair1",
+          "pair5"
+        ],
+        "positive_interior_charts": [
+          "pair2",
+          "pair3"
+        ]
+      },
+      "expected": {
+        "positive_outer_edge_charts": [
+          "pair1",
+          "pair5"
+        ],
+        "positive_interior_charts": [
+          "pair2",
+          "pair3"
+        ]
+      },
+      "pass": true,
+      "meaning": "After excluding pair4, the surviving positive corridor splits geometrically into outer-edge positive charts and positive interior charts."
+    },
+    {
+      "id": "outer_interior_split_matches_p725_lane_split",
+      "actual": {
+        "outer_edge_positive_charts": [
+          "pair1",
+          "pair5"
+        ],
+        "positive_interior_charts": [
+          "pair2",
+          "pair3"
+        ]
+      },
+      "expected": {
+        "outer_edge_positive_charts": [
+          "pair1",
+          "pair5"
+        ],
+        "positive_interior_charts": [
+          "pair2",
+          "pair3"
+        ]
+      },
+      "pass": true,
+      "meaning": "The current odd/even lane split from P725 is exactly the same split re-read geometrically as outer-edge versus positive interior charts on the full atlas."
+    },
+    {
+      "id": "source_packets_remain_outer_interior_blind",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "The current source-side packets still export no outer-edge/interior chart tag or source-to-atlas-position rule."
+    },
+    {
+      "id": "source_selector_axis_remains_prelm_basis_only",
+      "actual": [
+        "u_T",
+        "u_L"
+      ],
+      "expected": [
+        "u_T",
+        "u_L"
+      ],
+      "pass": true,
+      "meaning": "The current source-side selector axis still lives only in the preLM basis u_T,u_L, not in an atlas-position basis."
+    },
+    {
+      "id": "tau_src_still_not_identified_with_selector_carrier",
+      "actual": {
+        "F147": false,
+        "F148": false,
+        "F150": false
+      },
+      "expected": {
+        "F147": false,
+        "F148": false,
+        "F150": false
+      },
+      "pass": true,
+      "meaning": "tau_src is still not identified with the current selector carrier, so no source-side outer/interior chart choice can yet be read off internally."
+    },
+    {
+      "id": "outer_interior_bridge_exported",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "No current export provides the missing bridge rule distinguishing positive outer-edge charts from positive interior charts."
+    }
+  ],
+  "blocking_mismatches": [],
+  "t180_target_name": "PositiveCorridorOuterInteriorChartSelectionBridge_global_C_v1_strict_v1",
+  "t180_target_exported_on_current_repo_state": false,
+  "current_positive_corridor_geometry_profile": {
+    "five_chart_atlas_backbone": [
+      [
+        "pair1",
+        "pair2"
+      ],
+      [
+        "pair2",
+        "pair3"
+      ],
+      [
+        "pair3",
+        "pair4"
+      ],
+      [
+        "pair4",
+        "pair5"
+      ]
+    ],
+    "outer_edge_charts": [
+      "pair1",
+      "pair5"
+    ],
+    "interior_charts": [
+      "pair2",
+      "pair3",
+      "pair4"
+    ],
+    "positive_corridor_roots": [
+      "pair1",
+      "pair2",
+      "pair3",
+      "pair5"
+    ],
+    "positive_outer_edge_charts": [
+      "pair1",
+      "pair5"
+    ],
+    "positive_interior_charts": [
+      "pair2",
+      "pair3"
+    ],
+    "source_packets_remain_outer_interior_blind": true,
+    "source_selector_axis_frame_basis": [
+      "u_T",
+      "u_L"
+    ],
+    "tau_src_identified_with_s_prelm": {
+      "F147": false,
+      "F148": false,
+      "F150": false
+    },
+    "f465_status": "F465_EXECUTED_CURRENT_STRICT_PAIR12345_SELECTOR_ATLAS_COCYCLE_DATA_EXPORT_PACKET_NO_FALSE_PASS",
+    "f466_status": "F466_EXECUTED_CURRENT_STRICT_PAIR12345_SELECTOR_ATLAS_FULL_COCYCLE_DATA_EXPORT_PACKET_NO_FALSE_PASS"
+  },
+  "audit_conclusion": {
+    "current_positive_corridor_is_now_geometrically_localized": true,
+    "current_repo_already_exports_t180_target": false,
+    "next_honest_move": "export_or_attack_a_finer_source_side_rule_that_selects_between_positive_outer_edge_and_positive_interior_charts"
+  },
+  "hard_limits": [
+    "No T180 discharge claim.",
+    "No T179 discharge claim.",
+    "No T178 discharge claim.",
+    "No T177 discharge claim.",
+    "No unique chart-seed selection claim.",
+    "No strict physical orientation datum claim.",
+    "No kernel-alone/global QW-2191 discharge.",
+    "No ToE closure claim."
+  ],
+  "no_false_pass": true
+}
