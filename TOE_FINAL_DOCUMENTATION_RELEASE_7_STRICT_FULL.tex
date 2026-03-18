@@ -144,6 +144,7 @@ unless such claims are explicitly exported at theorem level in the repo and are 
   \item \textbf{Positive-corridor outer/interior chart-selection bridge nonexport audit:} \texttt{P726} (\verb|fundamental_action_reconstruction/p726_current_strict_t180_positive_corridor_outer_interior_chart_selection_bridge_nonexport_audit_probe.py|)
   \item \textbf{Positive-corridor excluded-negative-boundary adjacency chart-selection bridge nonexport audit:} \texttt{P727} (\verb|fundamental_action_reconstruction/p727_current_strict_t181_positive_corridor_excluded_negative_boundary_adjacency_chart_selection_bridge_nonexport_audit_probe.py|)
   \item \textbf{Residual-datum source-side boundary-shielded sublane reduction audit:} \texttt{P728} (\verb|fundamental_action_reconstruction/p728_current_strict_t182_residual_datum_source_side_boundary_shielded_sublane_reduction_audit_probe.py|)
+  \item \textbf{Residual-datum pair1/pair2 orbit-direction selection bridge nonexport audit:} \texttt{P729} (\verb|fundamental_action_reconstruction/p729_current_strict_t183_residual_datum_pair12_orbit_direction_selection_bridge_nonexport_audit_probe.py|)
 \end{itemize}
 
 To reproduce the PDF and verify the current Release-7 strict dashboard statuses:
@@ -168,6 +169,7 @@ python3 fundamental_action_reconstruction/p725_current_strict_t179_positive_corr
 python3 fundamental_action_reconstruction/p726_current_strict_t180_positive_corridor_outer_interior_chart_selection_bridge_nonexport_audit_probe.py
 python3 fundamental_action_reconstruction/p727_current_strict_t181_positive_corridor_excluded_negative_boundary_adjacency_chart_selection_bridge_nonexport_audit_probe.py
 python3 fundamental_action_reconstruction/p728_current_strict_t182_residual_datum_source_side_boundary_shielded_sublane_reduction_audit_probe.py
+python3 fundamental_action_reconstruction/p729_current_strict_t183_residual_datum_pair12_orbit_direction_selection_bridge_nonexport_audit_probe.py
 cat fundamental_action_reconstruction/generated/p707_current_release_7_build_and_closure_smoke_probe_summary.json
 cat fundamental_action_reconstruction/generated/p711_current_strict_t173_previous_methodology_survival_and_global_gap_audit_probe_summary.json
 cat fundamental_action_reconstruction/generated/p712_current_strict_t176_existing_global_directed_sign_coherence_provider_nonexport_audit_probe_summary.json
@@ -187,6 +189,7 @@ cat fundamental_action_reconstruction/generated/p725_current_strict_t179_positiv
 cat fundamental_action_reconstruction/generated/p726_current_strict_t180_positive_corridor_outer_interior_chart_selection_bridge_nonexport_audit_probe_summary.json
 cat fundamental_action_reconstruction/generated/p727_current_strict_t181_positive_corridor_excluded_negative_boundary_adjacency_chart_selection_bridge_nonexport_audit_probe_summary.json
 cat fundamental_action_reconstruction/generated/p728_current_strict_t182_residual_datum_source_side_boundary_shielded_sublane_reduction_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p729_current_strict_t183_residual_datum_pair12_orbit_direction_selection_bridge_nonexport_audit_probe_summary.json
 cat fundamental_action_reconstruction/generated/p706_current_release_7_strict_projective_operational_toe_os_closure_dashboard_probe_summary.json
 cat fundamental_action_reconstruction/generated/p708_current_strict_t173_frontier_dashboard_probe_summary.json
 \end{lstlisting}
@@ -1508,6 +1511,14 @@ But \texttt{F301} remains selector-neutral, \texttt{tau\_src} is still not ident
 and the carrier remains exactly symmetric between \texttt{pair1} and \texttt{pair2}. So the next missing bridge target is
 narrower again: a residual-datum source-side \texttt{pair1/pair2} chart-selection bridge.
 
+The next audit \texttt{P729} (packaged by \texttt{N725}) then localizes that remaining \texttt{pair1/pair2} ambiguity one level further,
+without inventing any new source object. On current exports, \texttt{F301} already identifies the two surviving branches as opposite
+orbit-index realizations on the same residual-datum carrier:
+\texttt{pair1} carries the branch $\delta_k$, while \texttt{pair2} carries the branch $\delta_{-k}$.
+The exported pair1$\leftrightarrow$pair2 lane transport and projector glue still only relate those two branches faithfully;
+they do not select one of them. So the next missing bridge target is narrower again:
+a residual-datum \texttt{pair1/pair2} orbit-direction selection bridge.
+
 \subsection*{Priority 2 (explicitly non-strict policy): physical units (proxy $\to$ GeV)}
 
 Any unit assignment and any comparison to external experimental data must remain non-strict unless a strict unit map is derived.
@@ -1569,6 +1580,7 @@ The nearest falsifiable layer consistent with current strict scope is the basis-
   \item Positive-corridor outer/interior chart-selection bridge nonexport audit below \texttt{T180}: \texttt{P726}, packaged by \texttt{N722}.
   \item Positive-corridor excluded-negative-boundary adjacency chart-selection bridge nonexport audit below \texttt{T181}: \texttt{P727}, packaged by \texttt{N723}.
   \item Residual-datum source-side boundary-shielded sublane reduction audit below \texttt{T182}: \texttt{P728}, packaged by \texttt{N724}.
+  \item Residual-datum pair1/pair2 orbit-direction selection bridge nonexport audit below \texttt{T183}: \texttt{P729}, packaged by \texttt{N725}.
   \item Non-strict host matching harnesses (external-data dependent): \texttt{P702}, \texttt{P704}.
   \item Release-7 strict projective OS closure dashboard: \texttt{P706}.
 \end{itemize}
