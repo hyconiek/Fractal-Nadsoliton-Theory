@@ -41,6 +41,16 @@ IN_P729 = GENERATED / "p729_current_strict_t183_residual_datum_pair12_orbit_dire
 IN_P730 = GENERATED / "p730_current_strict_t184_direction_free_shannon_residual_datum_pair12_orbit_direction_selection_bridge_nonexport_audit_probe_summary.json"
 IN_P731 = GENERATED / "p731_current_strict_t185_w_break_witness_payload_residual_datum_pair12_orbit_direction_promotion_bridge_nonexport_audit_probe_summary.json"
 IN_P732 = GENERATED / "p732_current_strict_t186_pair1_rooted_convention_state_pair12_witness_split_descent_bridge_nonexport_audit_probe_summary.json"
+IN_P733 = GENERATED / "p733_current_strict_t187_convention_layer_pair12_witness_split_transport_descent_bridge_nonexport_audit_probe_summary.json"
+IN_P734 = GENERATED / "p734_current_strict_t188_declared_scope_source_topology_selector_theorem_pair12_orbit_direction_descent_bridge_nonexport_audit_probe_summary.json"
+IN_P735 = GENERATED / "p735_current_strict_t189_local_source_side_scalar_bind_pair12_orbit_direction_descent_bridge_nonexport_audit_probe_summary.json"
+IN_P736 = GENERATED / "p736_current_strict_t190_local_provider_operator_shift_direction_pair12_orbit_direction_descent_bridge_nonexport_audit_probe_summary.json"
+IN_P737 = GENERATED / "p737_current_strict_t191_local_pair12_projector_atlas_glue_orbit_direction_descent_bridge_nonexport_audit_probe_summary.json"
+IN_P738 = GENERATED / "p738_current_strict_t192_global_projective_selector_state_pair12_orbit_direction_descent_bridge_nonexport_audit_probe_summary.json"
+IN_P739 = GENERATED / "p739_current_strict_t193_global_premise_based_directed_selector_state_pair12_witness_split_strict_core_upgrade_bridge_nonexport_audit_probe_summary.json"
+IN_P740 = GENERATED / "p740_current_strict_t194_global_sign_fixed_directed_closure_pair12_witness_split_strict_core_upgrade_bridge_nonexport_audit_probe_summary.json"
+IN_P741 = GENERATED / "p741_current_strict_t195_actual_source_topology_selector_witness_pair12_witness_split_promotion_bridge_nonexport_audit_probe_summary.json"
+IN_P742 = GENERATED / "p742_current_strict_t196_actual_source_topology_selector_witness_to_residual_datum_pair12_typed_carrier_bridge_nonexport_audit_probe_summary.json"
 
 # Convention-layer continuations (still below physical sign datum).
 IN_N688 = GENERATED / "n688_current_strict_t174_global_oriented_transition_edge_sign_lift_discharge_theorem_summary.json"
@@ -97,6 +107,16 @@ def main() -> None:
         "P730": IN_P730,
         "P731": IN_P731,
         "P732": IN_P732,
+        "P733": IN_P733,
+        "P734": IN_P734,
+        "P735": IN_P735,
+        "P736": IN_P736,
+        "P737": IN_P737,
+        "P738": IN_P738,
+        "P739": IN_P739,
+        "P740": IN_P740,
+        "P741": IN_P741,
+        "P742": IN_P742,
     }
     missing_core = [str(p.relative_to(REPO)) for p in core.values() if not p.exists()]
     if missing_core:
@@ -139,6 +159,16 @@ def main() -> None:
     p730 = load_json(IN_P730)
     p731 = load_json(IN_P731)
     p732 = load_json(IN_P732)
+    p733 = load_json(IN_P733)
+    p734 = load_json(IN_P734)
+    p735 = load_json(IN_P735)
+    p736 = load_json(IN_P736)
+    p737 = load_json(IN_P737)
+    p738 = load_json(IN_P738)
+    p739 = load_json(IN_P739)
+    p740 = load_json(IN_P740)
+    p741 = load_json(IN_P741)
+    p742 = load_json(IN_P742)
 
     n688 = load_json(IN_N688) if IN_N688.exists() else None
     n690 = load_json(IN_N690) if IN_N690.exists() else None
@@ -467,6 +497,276 @@ def main() -> None:
         False,
         "Therefore the pair1-rooted convention-state witness-split descent bridge also remains unexported on current repo state (P732).",
     )
+    add_check(
+        "current_convention_layer_pair12_transport_is_positive_under_all_exported_lifts",
+        bool(p733.get("current_convention_layer_pair12_transport_is_positive_under_all_exported_lifts")),
+        True,
+        "The current convention layer keeps a positive pair1/pair2 transport sign under all exported lifts (P733).",
+    )
+    add_check(
+        "p731_pair12_witness_split_does_not_descend_to_current_convention_layer_transport",
+        bool(p733.get("p731_pair12_witness_split_descends_to_current_convention_layer_transport")),
+        False,
+        "That current convention-layer transport still does not descend the opposite P731 pair1/pair2 witness split (P733).",
+    )
+    add_check(
+        "convention_layer_pair12_witness_split_transport_descent_bridge_not_yet_exported",
+        bool(p733.get("t187_target_exported_on_current_repo_state")),
+        False,
+        "Therefore the convention-layer pair1/pair2 witness-split transport descent bridge also remains unexported on current repo state (P733).",
+    )
+    add_check(
+        "current_declared_scope_source_topology_selector_theorem_exported",
+        bool(p734.get("current_declared_scope_source_topology_selector_theorem_exported")),
+        True,
+        "The current repo already exports the declared-scope source-topology selector theorem lane (P734).",
+    )
+    add_check(
+        "current_declared_scope_source_topology_selector_theorem_remains_quotient_class_only",
+        bool(p734.get("current_declared_scope_source_topology_selector_theorem_remains_quotient_class_only")),
+        True,
+        "That current strongest source-side theorem lane still remains basis-free / quotient-class only on current exports (P734).",
+    )
+    add_check(
+        "p731_pair12_witness_split_does_not_descend_to_current_declared_scope_source_topology_selector_theorem",
+        bool(p734.get("p731_pair12_witness_split_descends_to_current_declared_scope_source_topology_selector_theorem")),
+        False,
+        "That current declared-scope source-topology theorem still does not descend the opposite P731 pair1/pair2 witness split as a typed branch distinction (P734).",
+    )
+    add_check(
+        "declared_scope_source_topology_selector_theorem_pair12_orbit_direction_descent_bridge_not_yet_exported",
+        bool(p734.get("t188_target_exported_on_current_repo_state")),
+        False,
+        "Therefore the declared-scope source-topology selector theorem pair1/pair2 orbit-direction descent bridge also remains unexported on current repo state (P734).",
+    )
+    add_check(
+        "current_local_source_side_scalar_witness_family_factors_through_shared_cos_phi_data",
+        bool(p735.get("current_local_source_side_scalar_witness_family_factors_through_shared_cos_phi_data")),
+        True,
+        "The current local source-side scalar witness family still factors only through one shared positive cos(phi) datum rather than one pair1/pair2 branch-sensitive scalar distinction (P735).",
+    )
+    add_check(
+        "current_local_source_side_scalar_bind_is_pair12_branch_blind",
+        bool(p735.get("current_local_source_side_scalar_bind_is_pair12_branch_blind")),
+        True,
+        "That current local source-side scalar bind data remain branch-blind on the surviving pair1/pair2 orbit-direction split (P735).",
+    )
+    add_check(
+        "p731_pair12_witness_split_does_not_descend_to_current_local_source_side_scalar_bind",
+        bool(p735.get("p731_pair12_witness_split_descends_to_current_local_source_side_scalar_bind")),
+        False,
+        "Therefore the opposite P731 pair1/pair2 witness split still does not descend through the current local source-side scalar bind data (P735).",
+    )
+    add_check(
+        "local_source_side_scalar_bind_pair12_orbit_direction_descent_bridge_not_yet_exported",
+        bool(p735.get("t189_target_exported_on_current_repo_state")),
+        False,
+        "Therefore the local source-side scalar bind pair1/pair2 orbit-direction descent bridge also remains unexported on current repo state (P735).",
+    )
+    add_check(
+        "current_local_provider_operator_shift_direction_lane_realizes_both_pair12_branches_symmetrically",
+        bool(p736.get("current_local_provider_operator_shift_direction_lane_realizes_both_pair12_branches_symmetrically")),
+        True,
+        "The current local non-scalar provider-operator lane already realizes both surviving pair1/pair2 branches symmetrically as opposite shift directions from the same seed (P736).",
+    )
+    add_check(
+        "current_local_provider_operator_shift_direction_lane_is_selector_neutral",
+        bool(p736.get("current_local_provider_operator_shift_direction_lane_is_selector_neutral")),
+        True,
+        "That current local provider-operator shift-direction lane still remains selector-neutral on current exports (P736).",
+    )
+    add_check(
+        "p731_pair12_witness_split_does_not_descend_to_current_local_provider_operator_shift_direction_lane",
+        bool(p736.get("p731_pair12_witness_split_descends_to_current_local_provider_operator_shift_direction_lane")),
+        False,
+        "Therefore the opposite P731 pair1/pair2 witness split still does not descend through the current local provider-operator shift-direction lane (P736).",
+    )
+    add_check(
+        "local_provider_operator_shift_direction_pair12_orbit_direction_descent_bridge_not_yet_exported",
+        bool(p736.get("t190_target_exported_on_current_repo_state")),
+        False,
+        "Therefore the local provider-operator shift-direction pair1/pair2 orbit-direction descent bridge also remains unexported on current repo state (P736).",
+    )
+    add_check(
+        "current_local_pair12_projector_atlas_glue_lane_exported",
+        bool(p737.get("current_local_pair12_projector_atlas_glue_lane_exported")),
+        True,
+        "The current repo already exports one explicit local pair1/pair2 atlas/glue lane with overlap declaration and projector gluing data (P737).",
+    )
+    add_check(
+        "current_local_pair12_projector_atlas_glue_lane_is_projector_level_sign_gauge_safe",
+        bool(p737.get("current_local_pair12_projector_atlas_glue_lane_is_projector_level_sign_gauge_safe")),
+        True,
+        "That current local pair1/pair2 atlas/glue lane still remains projector-level and sign-gauge-safe on current exports (P737).",
+    )
+    add_check(
+        "p731_pair12_witness_split_does_not_descend_to_current_local_pair12_projector_atlas_glue_lane",
+        bool(p737.get("p731_pair12_witness_split_descends_to_current_local_pair12_projector_atlas_glue_lane")),
+        False,
+        "Therefore the opposite P731 pair1/pair2 witness split still does not descend through the current local pair1/pair2 projector-atlas glue lane (P737).",
+    )
+    add_check(
+        "local_pair12_projector_atlas_glue_orbit_direction_descent_bridge_not_yet_exported",
+        bool(p737.get("t191_target_exported_on_current_repo_state")),
+        False,
+        "Therefore the local pair1/pair2 projector-atlas glue orbit-direction descent bridge also remains unexported on current repo state (P737).",
+    )
+    add_check(
+        "current_global_projective_selector_state_lane_exported",
+        bool(p738.get("current_global_projective_selector_state_lane_exported")),
+        True,
+        "The current repo already exports one explicit global projective selector transition/state lane on C_v1 (P738).",
+    )
+    add_check(
+        "current_global_projective_selector_state_lane_is_projective_ray_level_sign_gauge_safe",
+        bool(p738.get("current_global_projective_selector_state_lane_is_projective_ray_level_sign_gauge_safe")),
+        True,
+        "That current global projective selector transition/state lane still remains projective/ray-level and sign-gauge-safe on current exports (P738).",
+    )
+    add_check(
+        "p731_pair12_witness_split_does_not_descend_to_current_global_projective_selector_state_lane",
+        bool(p738.get("p731_pair12_witness_split_descends_to_current_global_projective_selector_state_lane")),
+        False,
+        "Therefore the opposite P731 pair1/pair2 witness split still does not descend through the current global projective selector transition/state lane (P738).",
+    )
+    add_check(
+        "global_projective_selector_state_pair12_orbit_direction_descent_bridge_not_yet_exported",
+        bool(p738.get("t192_target_exported_on_current_repo_state")),
+        False,
+        "Therefore the global projective selector state pair1/pair2 orbit-direction descent bridge also remains unexported on current repo state (P738).",
+    )
+    add_check(
+        "current_global_premise_based_directed_selector_state_lane_exported",
+        bool(p739.get("current_global_premise_based_directed_selector_state_lane_exported")),
+        True,
+        "The current repo already exports one explicit global directed selector state lane above the projective layer (P739).",
+    )
+    add_check(
+        "current_global_premise_based_directed_selector_state_lane_is_premise_based_via_t164",
+        bool(p739.get("current_global_premise_based_directed_selector_state_lane_is_premise_based_via_t164")),
+        True,
+        "That current global directed selector state lane remains premise-based via the exported T164 fixing datum (P739).",
+    )
+    add_check(
+        "current_global_premise_based_directed_selector_state_lane_descends_to_projective_state",
+        bool(p739.get("current_global_premise_based_directed_selector_state_lane_descends_to_projective_state")),
+        True,
+        "The current global directed selector state still descends back to the projective state rather than upgrading it into strict-core uniqueness (P739).",
+    )
+    add_check(
+        "p731_pair12_witness_split_does_not_upgrade_to_strict_core_via_current_global_premise_based_directed_selector_state_lane",
+        bool(p739.get("p731_pair12_witness_split_upgrades_to_strict_core_via_current_global_premise_based_directed_selector_state_lane")),
+        False,
+        "Therefore the opposite P731 pair1/pair2 witness split still does not upgrade into one strict-core branch distinction through the current global premise-based directed selector state lane (P739).",
+    )
+    add_check(
+        "global_premise_based_directed_selector_state_pair12_witness_split_strict_core_upgrade_bridge_not_yet_exported",
+        bool(p739.get("t193_target_exported_on_current_repo_state")),
+        False,
+        "Therefore the strict-core upgrade bridge from the current global premise-based directed selector state lane also remains unexported on current repo state (P739).",
+    )
+    add_check(
+        "current_global_sign_fixed_directed_closure_lane_exported",
+        bool(p740.get("current_global_sign_fixed_directed_closure_lane_exported")),
+        True,
+        "The current repo already exports one explicit global sign-fixed directed closure lane above the current premise-based directed state lane (P740).",
+    )
+    add_check(
+        "current_global_sign_fixed_directed_closure_lane_requires_explicit_output_sign_lift_for_gluing",
+        bool(p740.get("current_global_sign_fixed_directed_closure_lane_requires_explicit_output_sign_lift_for_gluing")),
+        True,
+        "That current sign-fixed directed closure lane glues only after one explicit output sign-lift is applied (P740).",
+    )
+    add_check(
+        "current_global_sign_fixed_directed_closure_lane_is_strict_convention_gauge_only",
+        bool(p740.get("current_global_sign_fixed_directed_closure_lane_is_strict_convention_gauge_only")),
+        True,
+        "That current sign-fixed directed closure lane remains strict_convention/gauge only on current exports (P740).",
+    )
+    add_check(
+        "current_global_sign_fixed_directed_closure_lane_descends_to_same_projective_output_ray",
+        bool(p740.get("current_global_sign_fixed_directed_closure_lane_descends_to_same_projective_output_ray")),
+        True,
+        "The current sign-fixed directed closure lane still descends to the same projective output ray rather than upgrading it into strict-core uniqueness (P740).",
+    )
+    add_check(
+        "current_global_sign_fixed_directed_closure_output_sign_lift_is_gauge_covariant",
+        bool(p740.get("current_global_sign_fixed_directed_closure_output_sign_lift_is_gauge_covariant")),
+        True,
+        "The current sign-fixed directed closure output sign-lift remains gauge-covariant under chart relift (P740).",
+    )
+    add_check(
+        "p731_pair12_witness_split_does_not_upgrade_to_strict_core_via_current_global_sign_fixed_directed_closure_lane",
+        bool(p740.get("p731_pair12_witness_split_upgrades_to_strict_core_via_current_global_sign_fixed_directed_closure_lane")),
+        False,
+        "Therefore the opposite P731 pair1/pair2 witness split still does not upgrade into one strict-core branch distinction through the current global sign-fixed directed closure lane (P740).",
+    )
+    add_check(
+        "global_sign_fixed_directed_closure_pair12_witness_split_strict_core_upgrade_bridge_not_yet_exported",
+        bool(p740.get("t194_target_exported_on_current_repo_state")),
+        False,
+        "Therefore the strict-core upgrade bridge from the current global sign-fixed directed closure lane also remains unexported on current repo state (P740).",
+    )
+    add_check(
+        "current_actual_source_topology_selector_witness_binds_same_tau_src_packet_as_pair12_carrier",
+        bool(p741.get("current_actual_source_topology_selector_witness_binds_same_tau_src_packet_as_pair12_carrier")),
+        True,
+        "The current repo already exports one actual source-topology selector witness on the same tau_src_candidate_v1 packet as the surviving pair1/pair2 carrier (P741).",
+    )
+    add_check(
+        "current_actual_source_topology_selector_witness_is_chart_bound_preobserver_only",
+        bool(p741.get("current_actual_source_topology_selector_witness_is_chart_bound_preobserver_only")),
+        True,
+        "That current actual source-topology selector witness still remains chart-bound and preobserver/downstream only on current exports (P741).",
+    )
+    add_check(
+        "current_actual_source_topology_selector_witness_remains_prelm_not_pair12_typed",
+        bool(p741.get("current_actual_source_topology_selector_witness_remains_prelm_not_pair12_typed")),
+        True,
+        "That current actual source-topology selector witness still lives only in the preLM basis and does not yet type the surviving F301 pair1/pair2 carrier (P741).",
+    )
+    add_check(
+        "p731_pair12_witness_split_does_not_descend_to_current_actual_source_topology_selector_witness",
+        bool(p741.get("p731_pair12_witness_split_descends_to_current_actual_source_topology_selector_witness")),
+        False,
+        "Therefore the opposite P731 pair1/pair2 witness split still does not descend through the current actual source-topology selector witness (P741).",
+    )
+    add_check(
+        "actual_source_topology_selector_witness_pair12_witness_split_promotion_bridge_not_yet_exported",
+        bool(p741.get("t195_target_exported_on_current_repo_state")),
+        False,
+        "Therefore the actual source-topology selector witness pair1/pair2 witness-split promotion bridge also remains unexported on current repo state (P741).",
+    )
+    add_check(
+        "current_actual_selector_witness_codomain_has_basis_free_chart_label_forgetting_continuation",
+        bool(p742.get("current_actual_selector_witness_codomain_has_exported_basis_free_chart_label_forgetting_continuation")),
+        True,
+        "The strongest current exported continuation out of the actual selector-witness codomain is the basis-free chart-label-forgetting class reduction Q_basis_sel_v1 (P742).",
+    )
+    add_check(
+        "surviving_pair12_residual_datum_carrier_remains_selector_neutral",
+        bool(p742.get("surviving_pair12_residual_datum_carrier_remains_selector_neutral")),
+        True,
+        "The surviving F301 pair1/pair2 residual-datum carrier remains selector-neutral on current exports (P742).",
+    )
+    add_check(
+        "current_actual_selector_witness_codomain_continuation_remains_basis_free_not_pair12_typed",
+        bool(p742.get("current_actual_selector_witness_codomain_continuation_remains_basis_free_not_pair12_typed")),
+        True,
+        "That current continuation still remains basis-free rather than typed on the surviving pair1/pair2 residual-datum carrier (P742).",
+    )
+    add_check(
+        "current_actual_selector_witness_codomain_has_exported_pair12_typed_residual_datum_continuation",
+        bool(p742.get("current_actual_selector_witness_codomain_has_exported_pair12_typed_residual_datum_continuation")),
+        False,
+        "No current export continues Sigma_sel_src_target_v1 into one typed pair1/pair2 residual-datum carrier lane (P742).",
+    )
+    add_check(
+        "actual_selector_witness_to_residual_datum_pair12_typed_carrier_bridge_not_yet_exported",
+        bool(p742.get("t196_target_exported_on_current_repo_state")),
+        False,
+        "Therefore the actual selector-witness to residual-datum pair1/pair2 typed-carrier bridge also remains unexported on current repo state (P742).",
+    )
     # Convention-layer continuations (optional but expected on Release 7 state).
     if IN_N688.exists():
         add_check(
@@ -544,6 +844,16 @@ def main() -> None:
             "P730": str(IN_P730.relative_to(REPO)),
             "P731": str(IN_P731.relative_to(REPO)),
             "P732": str(IN_P732.relative_to(REPO)),
+            "P733": str(IN_P733.relative_to(REPO)),
+            "P734": str(IN_P734.relative_to(REPO)),
+            "P735": str(IN_P735.relative_to(REPO)),
+            "P736": str(IN_P736.relative_to(REPO)),
+            "P737": str(IN_P737.relative_to(REPO)),
+            "P738": str(IN_P738.relative_to(REPO)),
+            "P739": str(IN_P739.relative_to(REPO)),
+            "P740": str(IN_P740.relative_to(REPO)),
+            "P741": str(IN_P741.relative_to(REPO)),
+            "P742": str(IN_P742.relative_to(REPO)),
             "N688": str(IN_N688.relative_to(REPO)) if IN_N688.exists() else None,
             "N690": str(IN_N690.relative_to(REPO)) if IN_N690.exists() else None,
             "N691": str(IN_N691.relative_to(REPO)) if IN_N691.exists() else None,
@@ -715,6 +1025,141 @@ def main() -> None:
             ),
             "t186_pair1_rooted_convention_state_pair12_witness_split_descent_bridge_exported": bool(
                 p732.get("t186_target_exported_on_current_repo_state")
+            ),
+            "current_convention_layer_pair12_transport_is_positive_under_all_exported_lifts": bool(
+                p733.get("current_convention_layer_pair12_transport_is_positive_under_all_exported_lifts")
+            ),
+            "p731_pair12_witness_split_descends_to_current_convention_layer_transport": bool(
+                p733.get("p731_pair12_witness_split_descends_to_current_convention_layer_transport")
+            ),
+            "t187_convention_layer_pair12_witness_split_transport_descent_bridge_exported": bool(
+                p733.get("t187_target_exported_on_current_repo_state")
+            ),
+            "current_declared_scope_source_topology_selector_theorem_exported": bool(
+                p734.get("current_declared_scope_source_topology_selector_theorem_exported")
+            ),
+            "current_declared_scope_source_topology_selector_theorem_remains_quotient_class_only": bool(
+                p734.get("current_declared_scope_source_topology_selector_theorem_remains_quotient_class_only")
+            ),
+            "p731_pair12_witness_split_descends_to_current_declared_scope_source_topology_selector_theorem": bool(
+                p734.get("p731_pair12_witness_split_descends_to_current_declared_scope_source_topology_selector_theorem")
+            ),
+            "t188_declared_scope_source_topology_selector_theorem_pair12_orbit_direction_descent_bridge_exported": bool(
+                p734.get("t188_target_exported_on_current_repo_state")
+            ),
+            "current_local_source_side_scalar_witness_family_factors_through_shared_cos_phi_data": bool(
+                p735.get("current_local_source_side_scalar_witness_family_factors_through_shared_cos_phi_data")
+            ),
+            "current_local_source_side_scalar_bind_is_pair12_branch_blind": bool(
+                p735.get("current_local_source_side_scalar_bind_is_pair12_branch_blind")
+            ),
+            "p731_pair12_witness_split_descends_to_current_local_source_side_scalar_bind": bool(
+                p735.get("p731_pair12_witness_split_descends_to_current_local_source_side_scalar_bind")
+            ),
+            "t189_local_source_side_scalar_bind_pair12_orbit_direction_descent_bridge_exported": bool(
+                p735.get("t189_target_exported_on_current_repo_state")
+            ),
+            "current_local_provider_operator_shift_direction_lane_realizes_both_pair12_branches_symmetrically": bool(
+                p736.get("current_local_provider_operator_shift_direction_lane_realizes_both_pair12_branches_symmetrically")
+            ),
+            "current_local_provider_operator_shift_direction_lane_is_selector_neutral": bool(
+                p736.get("current_local_provider_operator_shift_direction_lane_is_selector_neutral")
+            ),
+            "p731_pair12_witness_split_descends_to_current_local_provider_operator_shift_direction_lane": bool(
+                p736.get("p731_pair12_witness_split_descends_to_current_local_provider_operator_shift_direction_lane")
+            ),
+            "t190_local_provider_operator_shift_direction_pair12_orbit_direction_descent_bridge_exported": bool(
+                p736.get("t190_target_exported_on_current_repo_state")
+            ),
+            "current_local_pair12_projector_atlas_glue_lane_exported": bool(
+                p737.get("current_local_pair12_projector_atlas_glue_lane_exported")
+            ),
+            "current_local_pair12_projector_atlas_glue_lane_is_projector_level_sign_gauge_safe": bool(
+                p737.get("current_local_pair12_projector_atlas_glue_lane_is_projector_level_sign_gauge_safe")
+            ),
+            "p731_pair12_witness_split_descends_to_current_local_pair12_projector_atlas_glue_lane": bool(
+                p737.get("p731_pair12_witness_split_descends_to_current_local_pair12_projector_atlas_glue_lane")
+            ),
+            "t191_local_pair12_projector_atlas_glue_orbit_direction_descent_bridge_exported": bool(
+                p737.get("t191_target_exported_on_current_repo_state")
+            ),
+            "current_global_projective_selector_state_lane_exported": bool(
+                p738.get("current_global_projective_selector_state_lane_exported")
+            ),
+            "current_global_projective_selector_state_lane_is_projective_ray_level_sign_gauge_safe": bool(
+                p738.get("current_global_projective_selector_state_lane_is_projective_ray_level_sign_gauge_safe")
+            ),
+            "p731_pair12_witness_split_descends_to_current_global_projective_selector_state_lane": bool(
+                p738.get("p731_pair12_witness_split_descends_to_current_global_projective_selector_state_lane")
+            ),
+            "t192_global_projective_selector_state_pair12_orbit_direction_descent_bridge_exported": bool(
+                p738.get("t192_target_exported_on_current_repo_state")
+            ),
+            "current_global_premise_based_directed_selector_state_lane_exported": bool(
+                p739.get("current_global_premise_based_directed_selector_state_lane_exported")
+            ),
+            "current_global_premise_based_directed_selector_state_lane_is_premise_based_via_t164": bool(
+                p739.get("current_global_premise_based_directed_selector_state_lane_is_premise_based_via_t164")
+            ),
+            "current_global_premise_based_directed_selector_state_lane_descends_to_projective_state": bool(
+                p739.get("current_global_premise_based_directed_selector_state_lane_descends_to_projective_state")
+            ),
+            "p731_pair12_witness_split_upgrades_to_strict_core_via_current_global_premise_based_directed_selector_state_lane": bool(
+                p739.get("p731_pair12_witness_split_upgrades_to_strict_core_via_current_global_premise_based_directed_selector_state_lane")
+            ),
+            "t193_global_premise_based_directed_selector_state_pair12_witness_split_strict_core_upgrade_bridge_exported": bool(
+                p739.get("t193_target_exported_on_current_repo_state")
+            ),
+            "current_global_sign_fixed_directed_closure_lane_exported": bool(
+                p740.get("current_global_sign_fixed_directed_closure_lane_exported")
+            ),
+            "current_global_sign_fixed_directed_closure_lane_requires_explicit_output_sign_lift_for_gluing": bool(
+                p740.get("current_global_sign_fixed_directed_closure_lane_requires_explicit_output_sign_lift_for_gluing")
+            ),
+            "current_global_sign_fixed_directed_closure_lane_is_strict_convention_gauge_only": bool(
+                p740.get("current_global_sign_fixed_directed_closure_lane_is_strict_convention_gauge_only")
+            ),
+            "current_global_sign_fixed_directed_closure_lane_descends_to_same_projective_output_ray": bool(
+                p740.get("current_global_sign_fixed_directed_closure_lane_descends_to_same_projective_output_ray")
+            ),
+            "current_global_sign_fixed_directed_closure_output_sign_lift_is_gauge_covariant": bool(
+                p740.get("current_global_sign_fixed_directed_closure_output_sign_lift_is_gauge_covariant")
+            ),
+            "p731_pair12_witness_split_upgrades_to_strict_core_via_current_global_sign_fixed_directed_closure_lane": bool(
+                p740.get("p731_pair12_witness_split_upgrades_to_strict_core_via_current_global_sign_fixed_directed_closure_lane")
+            ),
+            "t194_global_sign_fixed_directed_closure_pair12_witness_split_strict_core_upgrade_bridge_exported": bool(
+                p740.get("t194_target_exported_on_current_repo_state")
+            ),
+            "current_actual_source_topology_selector_witness_binds_same_tau_src_packet_as_pair12_carrier": bool(
+                p741.get("current_actual_source_topology_selector_witness_binds_same_tau_src_packet_as_pair12_carrier")
+            ),
+            "current_actual_source_topology_selector_witness_is_chart_bound_preobserver_only": bool(
+                p741.get("current_actual_source_topology_selector_witness_is_chart_bound_preobserver_only")
+            ),
+            "current_actual_source_topology_selector_witness_remains_prelm_not_pair12_typed": bool(
+                p741.get("current_actual_source_topology_selector_witness_remains_prelm_not_pair12_typed")
+            ),
+            "p731_pair12_witness_split_descends_to_current_actual_source_topology_selector_witness": bool(
+                p741.get("p731_pair12_witness_split_descends_to_current_actual_source_topology_selector_witness")
+            ),
+            "t195_actual_source_topology_selector_witness_pair12_witness_split_promotion_bridge_exported": bool(
+                p741.get("t195_target_exported_on_current_repo_state")
+            ),
+            "current_actual_selector_witness_codomain_has_exported_basis_free_chart_label_forgetting_continuation": bool(
+                p742.get("current_actual_selector_witness_codomain_has_exported_basis_free_chart_label_forgetting_continuation")
+            ),
+            "surviving_pair12_residual_datum_carrier_remains_selector_neutral": bool(
+                p742.get("surviving_pair12_residual_datum_carrier_remains_selector_neutral")
+            ),
+            "current_actual_selector_witness_codomain_continuation_remains_basis_free_not_pair12_typed": bool(
+                p742.get("current_actual_selector_witness_codomain_continuation_remains_basis_free_not_pair12_typed")
+            ),
+            "current_actual_selector_witness_codomain_has_exported_pair12_typed_residual_datum_continuation": bool(
+                p742.get("current_actual_selector_witness_codomain_has_exported_pair12_typed_residual_datum_continuation")
+            ),
+            "t196_actual_source_topology_selector_witness_to_residual_datum_pair12_typed_carrier_bridge_exported": bool(
+                p742.get("t196_target_exported_on_current_repo_state")
             ),
             "convention_layer_oriented_edge_sign_lift_exported": bool(n688_tr.get("oriented_edge_sign_lift_exported") or n691_tr.get("oriented_edge_sign_lift_exported")),
             "convention_layer_sign_fixed_directed_representative_exported": bool(n690_tr.get("sign_fixed_directed_representative_exported")),
@@ -888,6 +1333,141 @@ def main() -> None:
         ),
         "t186_pair1_rooted_convention_state_pair12_witness_split_descent_bridge_exported": bool(
             p732.get("t186_target_exported_on_current_repo_state")
+        ),
+        "current_convention_layer_pair12_transport_is_positive_under_all_exported_lifts": bool(
+            p733.get("current_convention_layer_pair12_transport_is_positive_under_all_exported_lifts")
+        ),
+        "p731_pair12_witness_split_descends_to_current_convention_layer_transport": bool(
+            p733.get("p731_pair12_witness_split_descends_to_current_convention_layer_transport")
+        ),
+        "t187_convention_layer_pair12_witness_split_transport_descent_bridge_exported": bool(
+            p733.get("t187_target_exported_on_current_repo_state")
+        ),
+        "current_declared_scope_source_topology_selector_theorem_exported": bool(
+            p734.get("current_declared_scope_source_topology_selector_theorem_exported")
+        ),
+        "current_declared_scope_source_topology_selector_theorem_remains_quotient_class_only": bool(
+            p734.get("current_declared_scope_source_topology_selector_theorem_remains_quotient_class_only")
+        ),
+        "p731_pair12_witness_split_descends_to_current_declared_scope_source_topology_selector_theorem": bool(
+            p734.get("p731_pair12_witness_split_descends_to_current_declared_scope_source_topology_selector_theorem")
+        ),
+        "t188_declared_scope_source_topology_selector_theorem_pair12_orbit_direction_descent_bridge_exported": bool(
+            p734.get("t188_target_exported_on_current_repo_state")
+        ),
+        "current_local_source_side_scalar_witness_family_factors_through_shared_cos_phi_data": bool(
+            p735.get("current_local_source_side_scalar_witness_family_factors_through_shared_cos_phi_data")
+        ),
+        "current_local_source_side_scalar_bind_is_pair12_branch_blind": bool(
+            p735.get("current_local_source_side_scalar_bind_is_pair12_branch_blind")
+        ),
+        "p731_pair12_witness_split_descends_to_current_local_source_side_scalar_bind": bool(
+            p735.get("p731_pair12_witness_split_descends_to_current_local_source_side_scalar_bind")
+        ),
+        "t189_local_source_side_scalar_bind_pair12_orbit_direction_descent_bridge_exported": bool(
+            p735.get("t189_target_exported_on_current_repo_state")
+        ),
+        "current_local_provider_operator_shift_direction_lane_realizes_both_pair12_branches_symmetrically": bool(
+            p736.get("current_local_provider_operator_shift_direction_lane_realizes_both_pair12_branches_symmetrically")
+        ),
+        "current_local_provider_operator_shift_direction_lane_is_selector_neutral": bool(
+            p736.get("current_local_provider_operator_shift_direction_lane_is_selector_neutral")
+        ),
+        "p731_pair12_witness_split_descends_to_current_local_provider_operator_shift_direction_lane": bool(
+            p736.get("p731_pair12_witness_split_descends_to_current_local_provider_operator_shift_direction_lane")
+        ),
+        "t190_local_provider_operator_shift_direction_pair12_orbit_direction_descent_bridge_exported": bool(
+            p736.get("t190_target_exported_on_current_repo_state")
+        ),
+        "current_local_pair12_projector_atlas_glue_lane_exported": bool(
+            p737.get("current_local_pair12_projector_atlas_glue_lane_exported")
+        ),
+        "current_local_pair12_projector_atlas_glue_lane_is_projector_level_sign_gauge_safe": bool(
+            p737.get("current_local_pair12_projector_atlas_glue_lane_is_projector_level_sign_gauge_safe")
+        ),
+        "p731_pair12_witness_split_descends_to_current_local_pair12_projector_atlas_glue_lane": bool(
+            p737.get("p731_pair12_witness_split_descends_to_current_local_pair12_projector_atlas_glue_lane")
+        ),
+        "t191_local_pair12_projector_atlas_glue_orbit_direction_descent_bridge_exported": bool(
+            p737.get("t191_target_exported_on_current_repo_state")
+        ),
+        "current_global_projective_selector_state_lane_exported": bool(
+            p738.get("current_global_projective_selector_state_lane_exported")
+        ),
+        "current_global_projective_selector_state_lane_is_projective_ray_level_sign_gauge_safe": bool(
+            p738.get("current_global_projective_selector_state_lane_is_projective_ray_level_sign_gauge_safe")
+        ),
+        "p731_pair12_witness_split_descends_to_current_global_projective_selector_state_lane": bool(
+            p738.get("p731_pair12_witness_split_descends_to_current_global_projective_selector_state_lane")
+        ),
+        "t192_global_projective_selector_state_pair12_orbit_direction_descent_bridge_exported": bool(
+            p738.get("t192_target_exported_on_current_repo_state")
+        ),
+        "current_global_premise_based_directed_selector_state_lane_exported": bool(
+            p739.get("current_global_premise_based_directed_selector_state_lane_exported")
+        ),
+        "current_global_premise_based_directed_selector_state_lane_is_premise_based_via_t164": bool(
+            p739.get("current_global_premise_based_directed_selector_state_lane_is_premise_based_via_t164")
+        ),
+        "current_global_premise_based_directed_selector_state_lane_descends_to_projective_state": bool(
+            p739.get("current_global_premise_based_directed_selector_state_lane_descends_to_projective_state")
+        ),
+        "p731_pair12_witness_split_upgrades_to_strict_core_via_current_global_premise_based_directed_selector_state_lane": bool(
+            p739.get("p731_pair12_witness_split_upgrades_to_strict_core_via_current_global_premise_based_directed_selector_state_lane")
+        ),
+        "t193_global_premise_based_directed_selector_state_pair12_witness_split_strict_core_upgrade_bridge_exported": bool(
+            p739.get("t193_target_exported_on_current_repo_state")
+        ),
+        "current_global_sign_fixed_directed_closure_lane_exported": bool(
+            p740.get("current_global_sign_fixed_directed_closure_lane_exported")
+        ),
+        "current_global_sign_fixed_directed_closure_lane_requires_explicit_output_sign_lift_for_gluing": bool(
+            p740.get("current_global_sign_fixed_directed_closure_lane_requires_explicit_output_sign_lift_for_gluing")
+        ),
+        "current_global_sign_fixed_directed_closure_lane_is_strict_convention_gauge_only": bool(
+            p740.get("current_global_sign_fixed_directed_closure_lane_is_strict_convention_gauge_only")
+        ),
+        "current_global_sign_fixed_directed_closure_lane_descends_to_same_projective_output_ray": bool(
+            p740.get("current_global_sign_fixed_directed_closure_lane_descends_to_same_projective_output_ray")
+        ),
+        "current_global_sign_fixed_directed_closure_output_sign_lift_is_gauge_covariant": bool(
+            p740.get("current_global_sign_fixed_directed_closure_output_sign_lift_is_gauge_covariant")
+        ),
+        "p731_pair12_witness_split_upgrades_to_strict_core_via_current_global_sign_fixed_directed_closure_lane": bool(
+            p740.get("p731_pair12_witness_split_upgrades_to_strict_core_via_current_global_sign_fixed_directed_closure_lane")
+        ),
+        "t194_global_sign_fixed_directed_closure_pair12_witness_split_strict_core_upgrade_bridge_exported": bool(
+            p740.get("t194_target_exported_on_current_repo_state")
+        ),
+        "current_actual_source_topology_selector_witness_binds_same_tau_src_packet_as_pair12_carrier": bool(
+            p741.get("current_actual_source_topology_selector_witness_binds_same_tau_src_packet_as_pair12_carrier")
+        ),
+        "current_actual_source_topology_selector_witness_is_chart_bound_preobserver_only": bool(
+            p741.get("current_actual_source_topology_selector_witness_is_chart_bound_preobserver_only")
+        ),
+        "current_actual_source_topology_selector_witness_remains_prelm_not_pair12_typed": bool(
+            p741.get("current_actual_source_topology_selector_witness_remains_prelm_not_pair12_typed")
+        ),
+        "p731_pair12_witness_split_descends_to_current_actual_source_topology_selector_witness": bool(
+            p741.get("p731_pair12_witness_split_descends_to_current_actual_source_topology_selector_witness")
+        ),
+        "t195_actual_source_topology_selector_witness_pair12_witness_split_promotion_bridge_exported": bool(
+            p741.get("t195_target_exported_on_current_repo_state")
+        ),
+        "current_actual_selector_witness_codomain_has_exported_basis_free_chart_label_forgetting_continuation": bool(
+            p742.get("current_actual_selector_witness_codomain_has_exported_basis_free_chart_label_forgetting_continuation")
+        ),
+        "surviving_pair12_residual_datum_carrier_remains_selector_neutral": bool(
+            p742.get("surviving_pair12_residual_datum_carrier_remains_selector_neutral")
+        ),
+        "current_actual_selector_witness_codomain_continuation_remains_basis_free_not_pair12_typed": bool(
+            p742.get("current_actual_selector_witness_codomain_continuation_remains_basis_free_not_pair12_typed")
+        ),
+        "current_actual_selector_witness_codomain_has_exported_pair12_typed_residual_datum_continuation": bool(
+            p742.get("current_actual_selector_witness_codomain_has_exported_pair12_typed_residual_datum_continuation")
+        ),
+        "t196_actual_source_topology_selector_witness_to_residual_datum_pair12_typed_carrier_bridge_exported": bool(
+            p742.get("t196_target_exported_on_current_repo_state")
         ),
         "convention_layer_sign_tools_exported": {
             "T174_oriented_edge_sign_lift": bool(n688_tr.get("oriented_edge_sign_lift_exported") or n691_tr.get("oriented_edge_sign_lift_exported")),

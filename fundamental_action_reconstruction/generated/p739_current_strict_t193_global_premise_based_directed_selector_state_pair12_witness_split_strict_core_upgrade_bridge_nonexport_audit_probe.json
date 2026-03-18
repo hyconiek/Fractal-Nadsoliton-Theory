@@ -1,0 +1,115 @@
+{
+  "stage": "P739",
+  "status": "PASS_GLOBAL_PREMISE_BASED_DIRECTED_SELECTOR_STATE_STRICT_CORE_UPGRADE_NONEXPORT_AUDITED",
+  "as_of": "2026-03-18",
+  "generated_utc": "2026-03-18T03:44:33.227276+00:00",
+  "scope": "current_strict_t193_global_premise_based_directed_selector_state_pair12_witness_split_strict_core_upgrade_bridge_nonexport_boundary_only",
+  "inputs": {
+    "p731_summary_ref": "fundamental_action_reconstruction/generated/p731_current_strict_t185_w_break_witness_payload_residual_datum_pair12_orbit_direction_promotion_bridge_nonexport_audit_probe_summary.json",
+    "p738_summary_ref": "fundamental_action_reconstruction/generated/p738_current_strict_t192_global_projective_selector_state_pair12_orbit_direction_descent_bridge_nonexport_audit_probe_summary.json",
+    "f474_summary_ref": "fundamental_action_reconstruction/generated/f474_current_strict_t171_global_directed_selector_state_datum_export_packet_summary.json",
+    "directed_state_ref": "fundamental_action_reconstruction/generated/selector_state_global_c_v1_directed_strict_v1.json",
+    "h37_summary_ref": "fundamental_action_reconstruction/generated/h37_sign_distinction_state_audit_summary.json",
+    "h38_summary_ref": "fundamental_action_reconstruction/generated/h38_projective_selector_state_audit_summary.json",
+    "p632_summary_ref": "fundamental_action_reconstruction/generated/p632_current_strict_directed_continuation_decision_packet_summary.json"
+  },
+  "checks": [
+    {
+      "id": "p731_pair12_witness_split_already_opposite_and_unpromoted",
+      "actual": {
+        "split_separated": true,
+        "pair1_sign": "negative",
+        "pair2_sign": "positive",
+        "t185_exported": false
+      },
+      "expected": {
+        "split_separated": true,
+        "pair1_sign": "negative",
+        "pair2_sign": "positive",
+        "t185_exported": false
+      },
+      "pass": true,
+      "meaning": "P731 already separates the surviving pair1/pair2 branches by opposite witness-score signs, while the strict-core promotion bridge remains unexported."
+    },
+    {
+      "id": "p738_global_projective_lane_already_exported_but_sign_gauge_safe",
+      "actual": {
+        "lane_exported": true,
+        "lane_sign_gauge_safe": true,
+        "split_descends": false,
+        "t192_exported": false
+      },
+      "expected": {
+        "lane_exported": true,
+        "lane_sign_gauge_safe": true,
+        "split_descends": false,
+        "t192_exported": false
+      },
+      "pass": true,
+      "meaning": "P738 already proves that the strongest current global projective selector lane exists, but remains projective/ray-level and sign-gauge-safe."
+    },
+    {
+      "id": "current_global_premise_based_directed_selector_state_lane_exported",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "The current repo already exports one explicit global directed selector state lane above the projective state."
+    },
+    {
+      "id": "current_global_premise_based_directed_selector_state_lane_is_premise_based_via_t164",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "That current global directed selector state lane remains explicitly premise-based via the exported T164 fixing datum."
+    },
+    {
+      "id": "current_global_premise_based_directed_selector_state_lane_descends_to_projective_state",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "The exported global directed selector state descends back to the already-exported projective state rather than upgrading it into strict-core uniqueness."
+    },
+    {
+      "id": "current_global_premise_based_directed_selector_state_lane_is_pair1_fixing_anchored_not_internal_pair12_provider",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "The current global directed lane is anchored by the pair1 sign observable plus one explicit fixing datum, not by a newly exported internal pair1/pair2 strict-core provider."
+    },
+    {
+      "id": "directed_continuation_selected_only_in_declared_scope",
+      "actual": {
+        "selected_continuation": "directed",
+        "decision": "DIRECTED_CONTINUATION_SELECTED"
+      },
+      "expected": {
+        "selected_continuation": "directed",
+        "decision": "DIRECTED_CONTINUATION_SELECTED"
+      },
+      "pass": true,
+      "meaning": "The current directed continuation is selected explicitly as a declared-scope continuation decision, not as a strict-core upgrade theorem."
+    },
+    {
+      "id": "p731_pair12_witness_split_does_not_upgrade_to_strict_core_via_current_global_premise_based_directed_selector_state_lane",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "Therefore the opposite P731 pair1/pair2 witness split still does not upgrade into one strict-core branch distinction through the current global premise-based directed selector state lane."
+    },
+    {
+      "id": "t193_global_premise_based_directed_selector_state_pair12_witness_split_strict_core_upgrade_bridge_exported",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "The repo still does not export the strict-core upgrade bridge from the current global premise-based directed selector state lane to one selected pair1/pair2 branch on current repo state."
+    }
+  ],
+  "current_global_premise_based_directed_selector_state_lane_exported": true,
+  "current_global_premise_based_directed_selector_state_lane_is_premise_based_via_t164": true,
+  "current_global_premise_based_directed_selector_state_lane_descends_to_projective_state": true,
+  "current_global_premise_based_directed_selector_state_lane_is_pair1_fixing_anchored_not_internal_pair12_provider": true,
+  "p731_pair12_witness_split_upgrades_to_strict_core_via_current_global_premise_based_directed_selector_state_lane": false,
+  "t193_target_exported_on_current_repo_state": false,
+  "blocking_mismatches": [],
+  "no_false_pass": true
+}

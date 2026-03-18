@@ -1,0 +1,154 @@
+{
+  "stage": "P740",
+  "status": "PASS_GLOBAL_SIGN_FIXED_DIRECTED_CLOSURE_STRICT_CORE_UPGRADE_NONEXPORT_AUDITED",
+  "as_of": "2026-03-18",
+  "generated_utc": "2026-03-18T03:57:54.621559+00:00",
+  "scope": "current_strict_t194_global_sign_fixed_directed_closure_pair12_witness_split_strict_core_upgrade_bridge_nonexport_boundary_only",
+  "inputs": {
+    "p731_summary_ref": "fundamental_action_reconstruction/generated/p731_current_strict_t185_w_break_witness_payload_residual_datum_pair12_orbit_direction_promotion_bridge_nonexport_audit_probe_summary.json",
+    "p739_summary_ref": "fundamental_action_reconstruction/generated/p739_current_strict_t193_global_premise_based_directed_selector_state_pair12_witness_split_strict_core_upgrade_bridge_nonexport_audit_probe_summary.json",
+    "f690_summary_ref": "fundamental_action_reconstruction/generated/f690_current_strict_t175_global_chart_sign_fixing_from_strict_core_payload_weights_export_packet_summary.json",
+    "f691_summary_ref": "fundamental_action_reconstruction/generated/f691_current_strict_t174_global_oriented_transition_edge_sign_lift_from_sign_fixed_directed_state_export_packet_summary.json",
+    "f692_summary_ref": "fundamental_action_reconstruction/generated/f692_current_strict_t175_sign_fixed_directed_closure_export_packet_summary.json",
+    "n690_summary_ref": "fundamental_action_reconstruction/generated/n690_current_strict_t175_global_chart_sign_fixing_discharge_theorem_summary.json",
+    "n691_summary_ref": "fundamental_action_reconstruction/generated/n691_current_strict_t174_global_oriented_transition_edge_sign_lift_from_sign_fixed_directed_state_discharge_theorem_summary.json",
+    "n692_summary_ref": "fundamental_action_reconstruction/generated/n692_current_strict_t173_projective_directed_closure_output_ray_invariance_theorem_summary.json",
+    "n693_summary_ref": "fundamental_action_reconstruction/generated/n693_current_strict_t173_output_sign_lift_gauge_covariance_theorem_summary.json",
+    "sign_fixed_state_ref": "fundamental_action_reconstruction/generated/selector_state_global_c_v1_directed_sign_fixed_from_strict_core_payload_weights_strict_convention_v1.json",
+    "sign_fixed_transition_ref": "fundamental_action_reconstruction/generated/selector_transition_global_c_v1_oriented_mod_2pi_edge_sign_lift_from_sign_fixed_directed_state_strict_convention_v1.json",
+    "sign_fixed_closure_ref": "fundamental_action_reconstruction/generated/selector_closure_global_c_v1_directed_sign_fixed_from_strict_core_payload_weights_strict_convention_v1.json"
+  },
+  "checks": [
+    {
+      "id": "p731_pair12_witness_split_already_opposite_and_unpromoted",
+      "actual": {
+        "split_separated": true,
+        "pair1_sign": "negative",
+        "pair2_sign": "positive",
+        "t185_exported": false
+      },
+      "expected": {
+        "split_separated": true,
+        "pair1_sign": "negative",
+        "pair2_sign": "positive",
+        "t185_exported": false
+      },
+      "pass": true,
+      "meaning": "P731 already separates the surviving pair1/pair2 branches by opposite witness-score signs, while the typed promotion bridge remains unexported."
+    },
+    {
+      "id": "p739_current_global_premise_based_directed_lane_still_does_not_upgrade_split",
+      "actual": {
+        "lane_exported": true,
+        "lane_premise_based": true,
+        "split_upgrades": false,
+        "t193_exported": false
+      },
+      "expected": {
+        "lane_exported": true,
+        "lane_premise_based": true,
+        "split_upgrades": false,
+        "t193_exported": false
+      },
+      "pass": true,
+      "meaning": "P739 already proves that the strongest current global premise-based directed selector-state lane exists, but still does not upgrade the P731 split into strict core."
+    },
+    {
+      "id": "current_global_sign_fixed_directed_state_lane_exported_and_convention_only",
+      "actual": {
+        "exported": true,
+        "counts_as_strict_physical_orientation_datum": false
+      },
+      "expected": {
+        "exported": true,
+        "counts_as_strict_physical_orientation_datum": false
+      },
+      "pass": true,
+      "meaning": "The current repo already exports one explicit sign-fixed directed state lane on C_v1, but only as a strict_convention gauge-fixing layer (F690/N690)."
+    },
+    {
+      "id": "current_global_sign_fixed_directed_transition_lift_exported_and_convention_only",
+      "actual": {
+        "exported": true,
+        "convention_only": true
+      },
+      "expected": {
+        "exported": true,
+        "convention_only": true
+      },
+      "pass": true,
+      "meaning": "The current repo already exports one explicit oriented transition edge sign-lift anchored to that sign-fixed state, but still only in strict_convention scope (F691/N691)."
+    },
+    {
+      "id": "current_global_sign_fixed_directed_closure_lane_exported_requires_output_sign_lift_and_is_not_physical",
+      "actual": {
+        "exported": true,
+        "glued": true,
+        "raw_glued": false,
+        "convention_only": true
+      },
+      "expected": {
+        "exported": true,
+        "glued": true,
+        "raw_glued": false,
+        "convention_only": true
+      },
+      "pass": true,
+      "meaning": "The current repo already exports one sign-fixed directed closure lane on C_v1, but it glues only after an explicit output sign-lift and is not promoted to any strict physical orientation datum (F692)."
+    },
+    {
+      "id": "current_global_sign_fixed_directed_closure_lane_is_strict_convention_gauge_only",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Taken together, the current sign-fixed directed state/transition/closure lane remains strict_convention/gauge only rather than a strict-core branch-typing lane."
+    },
+    {
+      "id": "current_global_sign_fixed_directed_closure_lane_descends_to_same_projective_output_ray",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "N692 already proves that the current sign-fixed directed closure outputs collapse to the same projective output ray as the projective closure output."
+    },
+    {
+      "id": "current_global_sign_fixed_directed_closure_output_sign_lift_is_gauge_covariant",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "N693 already proves that the current sign-fixed directed closure output sign-lift is chartwise Z2 gauge-covariant under relift from the premise-based lane."
+    },
+    {
+      "id": "current_global_sign_fixed_directed_closure_lane_is_downstream_gauge_relift_of_current_nonupgrading_premise_based_lane",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Therefore the current sign-fixed directed closure lane is already identified as a downstream gauge-relift of the current non-upgrading premise-based directed lane, not as a new strict-core provider."
+    },
+    {
+      "id": "p731_pair12_witness_split_does_not_upgrade_to_strict_core_via_current_global_sign_fixed_directed_closure_lane",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "So the opposite P731 pair1/pair2 witness split still does not upgrade into one strict-core branch distinction through the current global sign-fixed directed closure lane."
+    },
+    {
+      "id": "t194_global_sign_fixed_directed_closure_pair12_witness_split_strict_core_upgrade_bridge_exported",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "The repo still does not export the strict-core upgrade bridge from the current global sign-fixed directed closure lane to one selected pair1/pair2 branch on current repo state."
+    }
+  ],
+  "current_global_sign_fixed_directed_state_lane_exported": true,
+  "current_global_sign_fixed_directed_transition_lift_exported": true,
+  "current_global_sign_fixed_directed_closure_lane_exported": true,
+  "current_global_sign_fixed_directed_closure_lane_requires_explicit_output_sign_lift_for_gluing": true,
+  "current_global_sign_fixed_directed_closure_lane_is_strict_convention_gauge_only": true,
+  "current_global_sign_fixed_directed_closure_lane_descends_to_same_projective_output_ray": true,
+  "current_global_sign_fixed_directed_closure_output_sign_lift_is_gauge_covariant": true,
+  "current_global_sign_fixed_directed_closure_lane_is_downstream_gauge_relift_of_current_nonupgrading_premise_based_lane": true,
+  "p731_pair12_witness_split_upgrades_to_strict_core_via_current_global_sign_fixed_directed_closure_lane": false,
+  "t194_target_exported_on_current_repo_state": false,
+  "blocking_mismatches": [],
+  "no_false_pass": true
+}
