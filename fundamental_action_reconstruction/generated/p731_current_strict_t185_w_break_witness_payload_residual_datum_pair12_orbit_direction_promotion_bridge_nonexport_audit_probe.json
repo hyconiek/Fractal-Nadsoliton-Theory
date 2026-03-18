@@ -1,0 +1,105 @@
+{
+  "stage": "P731",
+  "status": "PASS_W_BREAK_WITNESS_PAYLOAD_PAIR12_ORBIT_DIRECTION_PROMOTION_BRIDGE_NONEXPORT_AUDITED",
+  "as_of": "2026-03-18",
+  "generated_utc": "2026-03-18T02:08:04.070549+00:00",
+  "scope": "current_strict_t185_w_break_witness_payload_residual_datum_pair12_orbit_direction_promotion_bridge_nonexport_boundary_only",
+  "inputs": {
+    "P729": "fundamental_action_reconstruction/generated/p729_current_strict_t183_residual_datum_pair12_orbit_direction_selection_bridge_nonexport_audit_probe_summary.json",
+    "P730": "fundamental_action_reconstruction/generated/p730_current_strict_t184_direction_free_shannon_residual_datum_pair12_orbit_direction_selection_bridge_nonexport_audit_probe_summary.json",
+    "F301_artifact": "fundamental_action_reconstruction/generated/residual_datum_bridge_export_map_object_support_carrier_actual_inhabitant_instance.json",
+    "F647_artifact": "fundamental_action_reconstruction/generated/f647_strict_witness_provider_export_packet_for_seed_v1_realization_attempt.json",
+    "P684_artifact": "fundamental_action_reconstruction/generated/p684_current_strict_t173_w_break_rooted_directed_state_lift_audit_probe.json"
+  },
+  "checks": [
+    {
+      "id": "p729_pair12_orbit_direction_split_already_localized",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "P729 already localizes the surviving pair1/pair2 ambiguity as opposite orbit-direction branches on the same residual-datum carrier."
+    },
+    {
+      "id": "p730_direction_free_shannon_lane_still_does_not_select_branch",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "P730 already proves the current direction-free Shannon lane does not pick one of the surviving pair1/pair2 branches."
+    },
+    {
+      "id": "f647_w_break_payload_exported_and_fixed",
+      "actual": {
+        "constructed_source_object_exported": true,
+        "admissible_S_sel_int": false,
+        "kernel_split_safe": true
+      },
+      "expected": {
+        "constructed_source_object_exported": true,
+        "admissible_S_sel_int": false,
+        "kernel_split_safe": true
+      },
+      "pass": true,
+      "meaning": "The current inversion-sensitive witness payload w_break is already exported on a kernel-split-safe strict-core witness lane, but remains below admissible S_sel_int."
+    },
+    {
+      "id": "p684_w_break_already_used_as_rooted_sign_source_only",
+      "actual": {
+        "root_sign_source": true,
+        "counts_as_strict_physical_orientation_datum": false
+      },
+      "expected": {
+        "root_sign_source": true,
+        "counts_as_strict_physical_orientation_datum": false
+      },
+      "pass": true,
+      "meaning": "P684 already uses w_break as a rooted sign source on the atlas lane, but explicitly not as a strict physical orientation datum."
+    },
+    {
+      "id": "w_break_witness_payload_pair12_branch_scores_nonzero_and_opposite",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "On the surviving F301 residual-datum carrier, the exported inversion-sensitive witness payload w_break gives opposite nonzero scores to the two remaining pair1/pair2 branches."
+    },
+    {
+      "id": "w_break_pair12_branch_scores_are_antisymmetric_under_inversion",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Those two witness scores are antisymmetric under the current pair1/pair2 inversion pairing: score(pair1)+score(pair2)=0 within tolerance."
+    },
+    {
+      "id": "t185_w_break_witness_payload_pair12_orbit_direction_promotion_bridge_exported",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "The repo still does not export the typed promotion bridge turning this witness-side branch separation into a selected strict source-side branch on full C_v1."
+    }
+  ],
+  "blocking_mismatches": [],
+  "t185_target_name": "WBreakWitnessPayloadResidualDatumPair12OrbitDirectionPromotionBridge_global_C_v1_strict_v1",
+  "t185_target_exported_on_current_repo_state": false,
+  "current_w_break_witness_payload_separates_pair12_orbit_direction_branches": true,
+  "pair12_w_break_branch_scores": {
+    "pair1_delta_k_branch_score": -1.028490398487662e-06,
+    "pair2_delta_minus_k_branch_score": 1.028490398487567e-06,
+    "pair1_score_sign": "negative",
+    "pair2_score_sign": "positive",
+    "score_gap_abs": 2.056980796975229e-06,
+    "score_sum_abs": 9.486769009248164e-20
+  },
+  "audit_conclusion": {
+    "current_repo_already_exports_inversion_sensitive_witness_side_pair12_branch_separation": true,
+    "current_repo_already_exports_typed_pair12_branch_promotion_bridge": false,
+    "next_honest_move": "attempt_a_typed_promotion_bridge_from_the_current_w_break_witness_payload_branch_separation_to_a_selected_source_side_pair12_branch_without_promoting_F647_to_admissible_S_sel_int_by_fiat"
+  },
+  "hard_limits": [
+    "No T185 discharge claim.",
+    "No claim that F647 is admissible S_sel_int.",
+    "No identification of tau_src_candidate_v1 with the current constructed selector carrier by fiat.",
+    "No promotion of the current witness-side score sign into a strict physical orientation datum.",
+    "No kernel-alone/global QW-2191 discharge.",
+    "No ToE closure claim."
+  ],
+  "no_false_pass": true
+}
