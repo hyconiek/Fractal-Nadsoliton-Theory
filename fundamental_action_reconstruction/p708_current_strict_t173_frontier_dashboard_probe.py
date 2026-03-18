@@ -36,6 +36,7 @@ IN_P724 = GENERATED / "p724_current_strict_t178_positive_source_polarity_atlas_e
 IN_P725 = GENERATED / "p725_current_strict_t179_positive_corridor_odd_even_lane_selection_bridge_nonexport_audit_probe_summary.json"
 IN_P726 = GENERATED / "p726_current_strict_t180_positive_corridor_outer_interior_chart_selection_bridge_nonexport_audit_probe_summary.json"
 IN_P727 = GENERATED / "p727_current_strict_t181_positive_corridor_excluded_negative_boundary_adjacency_chart_selection_bridge_nonexport_audit_probe_summary.json"
+IN_P728 = GENERATED / "p728_current_strict_t182_residual_datum_source_side_boundary_shielded_sublane_reduction_audit_probe_summary.json"
 
 # Convention-layer continuations (still below physical sign datum).
 IN_N688 = GENERATED / "n688_current_strict_t174_global_oriented_transition_edge_sign_lift_discharge_theorem_summary.json"
@@ -87,6 +88,7 @@ def main() -> None:
         "P725": IN_P725,
         "P726": IN_P726,
         "P727": IN_P727,
+        "P728": IN_P728,
     }
     missing_core = [str(p.relative_to(REPO)) for p in core.values() if not p.exists()]
     if missing_core:
@@ -124,6 +126,7 @@ def main() -> None:
     p725 = load_json(IN_P725)
     p726 = load_json(IN_P726)
     p727 = load_json(IN_P727)
+    p728 = load_json(IN_P728)
 
     n688 = load_json(IN_N688) if IN_N688.exists() else None
     n690 = load_json(IN_N690) if IN_N690.exists() else None
@@ -379,6 +382,18 @@ def main() -> None:
         },
         "The surviving positive corridor is now also localized relative to the excluded negative branch itself: boundary-adjacent versus boundary-shielded charts (P727).",
     )
+    add_check(
+        "residual_datum_source_side_boundary_shielded_sublane_reduction_exists",
+        bool(p728.get("current_residual_datum_source_side_support_reduces_positive_corridor_to_boundary_shielded_sublane")),
+        True,
+        "The already-exported residual-datum source-side carrier now gives the first non-geometric positive-corridor reduction, collapsing it to the boundary-shielded sublane pair1,pair2 (P728).",
+    )
+    add_check(
+        "residual_datum_source_side_pair12_chart_selection_bridge_not_yet_exported",
+        bool(p728.get("t182_target_exported_on_current_repo_state")),
+        False,
+        "That residual-datum source-side reduction still does not select between pair1 and pair2, so the next pair12 chart-selection bridge remains unexported (P728).",
+    )
     # Convention-layer continuations (optional but expected on Release 7 state).
     if IN_N688.exists():
         add_check(
@@ -451,6 +466,7 @@ def main() -> None:
             "P725": str(IN_P725.relative_to(REPO)),
             "P726": str(IN_P726.relative_to(REPO)),
             "P727": str(IN_P727.relative_to(REPO)),
+            "P728": str(IN_P728.relative_to(REPO)),
             "N688": str(IN_N688.relative_to(REPO)) if IN_N688.exists() else None,
             "N690": str(IN_N690.relative_to(REPO)) if IN_N690.exists() else None,
             "N691": str(IN_N691.relative_to(REPO)) if IN_N691.exists() else None,
@@ -570,6 +586,16 @@ def main() -> None:
             "positive_corridor_positive_interior_charts": p726.get("positive_interior_charts"),
             "positive_corridor_boundary_adjacent_charts": p727.get("positive_boundary_adjacent_charts"),
             "positive_corridor_boundary_shielded_charts": p727.get("positive_boundary_shielded_charts"),
+            "current_residual_datum_source_side_support_reduces_positive_corridor_to_boundary_shielded_sublane": bool(
+                p728.get("current_residual_datum_source_side_support_reduces_positive_corridor_to_boundary_shielded_sublane")
+            ),
+            "residual_datum_source_side_supported_positive_charts": p728.get("residual_datum_source_side_supported_positive_charts"),
+            "t182_residual_datum_source_side_pair12_chart_selection_bridge_exported": bool(
+                p728.get("t182_target_exported_on_current_repo_state")
+            ),
+            "residual_datum_source_side_unique_chart_selected_within_boundary_shielded_sublane": bool(
+                p728.get("unique_chart_selected_within_boundary_shielded_sublane")
+            ),
             "convention_layer_oriented_edge_sign_lift_exported": bool(n688_tr.get("oriented_edge_sign_lift_exported") or n691_tr.get("oriented_edge_sign_lift_exported")),
             "convention_layer_sign_fixed_directed_representative_exported": bool(n690_tr.get("sign_fixed_directed_representative_exported")),
             "operational_release_7_projective_os_closure_dashboard_status": (p706 or {}).get("status") if isinstance(p706, dict) else None,
@@ -690,6 +716,16 @@ def main() -> None:
         "positive_corridor_positive_interior_charts": p726.get("positive_interior_charts"),
         "positive_corridor_boundary_adjacent_charts": p727.get("positive_boundary_adjacent_charts"),
         "positive_corridor_boundary_shielded_charts": p727.get("positive_boundary_shielded_charts"),
+        "current_residual_datum_source_side_support_reduces_positive_corridor_to_boundary_shielded_sublane": bool(
+            p728.get("current_residual_datum_source_side_support_reduces_positive_corridor_to_boundary_shielded_sublane")
+        ),
+        "residual_datum_source_side_supported_positive_charts": p728.get("residual_datum_source_side_supported_positive_charts"),
+        "t182_residual_datum_source_side_pair12_chart_selection_bridge_exported": bool(
+            p728.get("t182_target_exported_on_current_repo_state")
+        ),
+        "residual_datum_source_side_unique_chart_selected_within_boundary_shielded_sublane": bool(
+            p728.get("unique_chart_selected_within_boundary_shielded_sublane")
+        ),
         "convention_layer_sign_tools_exported": {
             "T174_oriented_edge_sign_lift": bool(n688_tr.get("oriented_edge_sign_lift_exported") or n691_tr.get("oriented_edge_sign_lift_exported")),
             "T175_chart_sign_fix": bool(n690_tr.get("sign_fixed_directed_representative_exported")),
