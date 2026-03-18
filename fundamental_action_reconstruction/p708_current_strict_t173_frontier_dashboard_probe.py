@@ -29,6 +29,7 @@ IN_P717 = GENERATED / "p717_current_strict_t176_pair4_exact_branch_split_release
 IN_P718 = GENERATED / "p718_current_strict_t176_single_mixed_linear_weight_span_provider_insufficiency_audit_probe_summary.json"
 IN_P719 = GENERATED / "p719_current_strict_t176_low_complexity_odd_polynomial_two_readout_provider_class_audit_probe_summary.json"
 IN_P720 = GENERATED / "p720_current_strict_t176_observer_facing_signed_output_channel_projection_provider_class_audit_probe_summary.json"
+IN_P721 = GENERATED / "p721_current_strict_t176_source_topology_basis_free_qw2191_safe_provider_nonupgrade_audit_probe_summary.json"
 
 # Convention-layer continuations (still below physical sign datum).
 IN_N688 = GENERATED / "n688_current_strict_t174_global_oriented_transition_edge_sign_lift_discharge_theorem_summary.json"
@@ -73,6 +74,7 @@ def main() -> None:
         "P718": IN_P718,
         "P719": IN_P719,
         "P720": IN_P720,
+        "P721": IN_P721,
     }
     missing_core = [str(p.relative_to(REPO)) for p in core.values() if not p.exists()]
     if missing_core:
@@ -103,6 +105,7 @@ def main() -> None:
     p718 = load_json(IN_P718)
     p719 = load_json(IN_P719)
     p720 = load_json(IN_P720)
+    p721 = load_json(IN_P721)
 
     n688 = load_json(IN_N688) if IN_N688.exists() else None
     n690 = load_json(IN_N690) if IN_N690.exists() else None
@@ -256,6 +259,18 @@ def main() -> None:
         True,
         "That same observer-facing static output-channel class still contains projective-only sectors, so the physics-facing failure remains exact-provider level rather than total support loss (P720).",
     )
+    add_check(
+        "source_topology_basis_free_qw2191_safe_lane_not_yet_exact_t176_provider",
+        bool(p721.get("source_topology_lane_upgrades_to_exact_t176_provider")),
+        False,
+        "The current source-topology basis-free QW-2191-safe lane still does not upgrade to an exact T176 provider (P721).",
+    )
+    add_check(
+        "source_topology_basis_free_qw2191_safe_lane_contains_physics_facing_ingredients",
+        bool(p721.get("source_topology_physically_interpretable_strict_ingredients_present")),
+        True,
+        "That same source-topology lane does contain genuinely physics-facing strict ingredients, so the remaining gap is an upgrade bridge rather than total absence (P721).",
+    )
     # Convention-layer continuations (optional but expected on Release 7 state).
     if IN_N688.exists():
         add_check(
@@ -321,6 +336,7 @@ def main() -> None:
             "P718": str(IN_P718.relative_to(REPO)),
             "P719": str(IN_P719.relative_to(REPO)),
             "P720": str(IN_P720.relative_to(REPO)),
+            "P721": str(IN_P721.relative_to(REPO)),
             "N688": str(IN_N688.relative_to(REPO)) if IN_N688.exists() else None,
             "N690": str(IN_N690.relative_to(REPO)) if IN_N690.exists() else None,
             "N691": str(IN_N691.relative_to(REPO)) if IN_N691.exists() else None,
@@ -406,6 +422,15 @@ def main() -> None:
             ),
             "observer_facing_output_axis_projection_negated_root_sets_seen": p720.get(
                 "projective_only_negated_root_sets_seen"
+            ),
+            "source_topology_basis_free_qw2191_safe_lane_contains_physically_interpretable_strict_ingredients": bool(
+                p721.get("source_topology_physically_interpretable_strict_ingredients_present")
+            ),
+            "source_topology_basis_free_qw2191_safe_lane_upgrades_to_exact_t176_provider": bool(
+                p721.get("source_topology_lane_upgrades_to_exact_t176_provider")
+            ),
+            "source_topology_basis_free_qw2191_safe_lane_current_best_output_is_quotient_class_only": bool(
+                p721.get("current_best_source_topology_output_is_basis_free_quotient_class_only")
             ),
             "convention_layer_oriented_edge_sign_lift_exported": bool(n688_tr.get("oriented_edge_sign_lift_exported") or n691_tr.get("oriented_edge_sign_lift_exported")),
             "convention_layer_sign_fixed_directed_representative_exported": bool(n690_tr.get("sign_fixed_directed_representative_exported")),
@@ -493,6 +518,15 @@ def main() -> None:
         ),
         "observer_facing_output_axis_projection_negated_root_sets_seen": p720.get(
             "projective_only_negated_root_sets_seen"
+        ),
+        "source_topology_basis_free_qw2191_safe_lane_contains_physically_interpretable_strict_ingredients": bool(
+            p721.get("source_topology_physically_interpretable_strict_ingredients_present")
+        ),
+        "source_topology_basis_free_qw2191_safe_lane_upgrades_to_exact_t176_provider": bool(
+            p721.get("source_topology_lane_upgrades_to_exact_t176_provider")
+        ),
+        "source_topology_basis_free_qw2191_safe_lane_current_best_output_is_quotient_class_only": bool(
+            p721.get("current_best_source_topology_output_is_basis_free_quotient_class_only")
         ),
         "convention_layer_sign_tools_exported": {
             "T174_oriented_edge_sign_lift": bool(n688_tr.get("oriented_edge_sign_lift_exported") or n691_tr.get("oriented_edge_sign_lift_exported")),
