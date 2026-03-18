@@ -38,6 +38,7 @@ IN_P726 = GENERATED / "p726_current_strict_t180_positive_corridor_outer_interior
 IN_P727 = GENERATED / "p727_current_strict_t181_positive_corridor_excluded_negative_boundary_adjacency_chart_selection_bridge_nonexport_audit_probe_summary.json"
 IN_P728 = GENERATED / "p728_current_strict_t182_residual_datum_source_side_boundary_shielded_sublane_reduction_audit_probe_summary.json"
 IN_P729 = GENERATED / "p729_current_strict_t183_residual_datum_pair12_orbit_direction_selection_bridge_nonexport_audit_probe_summary.json"
+IN_P730 = GENERATED / "p730_current_strict_t184_direction_free_shannon_residual_datum_pair12_orbit_direction_selection_bridge_nonexport_audit_probe_summary.json"
 
 # Convention-layer continuations (still below physical sign datum).
 IN_N688 = GENERATED / "n688_current_strict_t174_global_oriented_transition_edge_sign_lift_discharge_theorem_summary.json"
@@ -91,6 +92,7 @@ def main() -> None:
         "P727": IN_P727,
         "P728": IN_P728,
         "P729": IN_P729,
+        "P730": IN_P730,
     }
     missing_core = [str(p.relative_to(REPO)) for p in core.values() if not p.exists()]
     if missing_core:
@@ -130,6 +132,7 @@ def main() -> None:
     p727 = load_json(IN_P727)
     p728 = load_json(IN_P728)
     p729 = load_json(IN_P729)
+    p730 = load_json(IN_P730)
 
     n688 = load_json(IN_N688) if IN_N688.exists() else None
     n690 = load_json(IN_N690) if IN_N690.exists() else None
@@ -409,6 +412,25 @@ def main() -> None:
         False,
         "That orbit-direction localization still does not select one branch, so the next pair12 orbit-direction bridge remains unexported (P729).",
     )
+    add_check(
+        "current_direction_free_shannon_lane_already_exports_pair12_o2_to_z2_cut",
+        bool(p730.get("current_direction_free_shannon_lane_already_exports_pair1_pair2_o2_to_z2_cuts")),
+        True,
+        "The current strict Shannon ord-reference lane already exports a genuine pair1/pair2 O(2)->Z2 cut, so the remaining failure is no longer absence of a strict-side pair-plane selector ingredient (P730).",
+    )
+    add_check(
+        "direction_free_shannon_lane_pair12_orbit_direction_scores_equal",
+        bool(p730.get("direction_free_shannon_pair12_cross_entropy_scores_equal"))
+        and bool(p730.get("direction_free_shannon_pair12_expectation_ord_scores_equal")),
+        True,
+        "That same direction-free Shannon lane assigns equal source-side ord/cross-entropy scores to the surviving δ_k and δ_{-k} branches, so it still does not pick one orbit direction (P730).",
+    )
+    add_check(
+        "direction_free_shannon_pair12_orbit_direction_selection_bridge_not_yet_exported",
+        bool(p730.get("t184_target_exported_on_current_repo_state")),
+        False,
+        "Therefore the next direction-free Shannon pair12 orbit-direction bridge also remains unexported on current repo state (P730).",
+    )
     # Convention-layer continuations (optional but expected on Release 7 state).
     if IN_N688.exists():
         add_check(
@@ -483,6 +505,7 @@ def main() -> None:
             "P727": str(IN_P727.relative_to(REPO)),
             "P728": str(IN_P728.relative_to(REPO)),
             "P729": str(IN_P729.relative_to(REPO)),
+            "P730": str(IN_P730.relative_to(REPO)),
             "N688": str(IN_N688.relative_to(REPO)) if IN_N688.exists() else None,
             "N690": str(IN_N690.relative_to(REPO)) if IN_N690.exists() else None,
             "N691": str(IN_N691.relative_to(REPO)) if IN_N691.exists() else None,
@@ -619,6 +642,18 @@ def main() -> None:
             "residual_datum_pair12_pair2_orbit_branch_kind": p729.get("pair2_orbit_branch_kind"),
             "t183_residual_datum_pair12_orbit_direction_selection_bridge_exported": bool(
                 p729.get("t183_target_exported_on_current_repo_state")
+            ),
+            "current_direction_free_shannon_lane_already_exports_pair1_pair2_o2_to_z2_cuts": bool(
+                p730.get("current_direction_free_shannon_lane_already_exports_pair1_pair2_o2_to_z2_cuts")
+            ),
+            "direction_free_shannon_pair12_expectation_ord_scores_equal": bool(
+                p730.get("direction_free_shannon_pair12_expectation_ord_scores_equal")
+            ),
+            "direction_free_shannon_pair12_cross_entropy_scores_equal": bool(
+                p730.get("direction_free_shannon_pair12_cross_entropy_scores_equal")
+            ),
+            "t184_direction_free_shannon_pair12_orbit_direction_selection_bridge_exported": bool(
+                p730.get("t184_target_exported_on_current_repo_state")
             ),
             "convention_layer_oriented_edge_sign_lift_exported": bool(n688_tr.get("oriented_edge_sign_lift_exported") or n691_tr.get("oriented_edge_sign_lift_exported")),
             "convention_layer_sign_fixed_directed_representative_exported": bool(n690_tr.get("sign_fixed_directed_representative_exported")),
@@ -757,6 +792,18 @@ def main() -> None:
         "residual_datum_pair12_pair2_orbit_branch_kind": p729.get("pair2_orbit_branch_kind"),
         "t183_residual_datum_pair12_orbit_direction_selection_bridge_exported": bool(
             p729.get("t183_target_exported_on_current_repo_state")
+        ),
+        "current_direction_free_shannon_lane_already_exports_pair1_pair2_o2_to_z2_cuts": bool(
+            p730.get("current_direction_free_shannon_lane_already_exports_pair1_pair2_o2_to_z2_cuts")
+        ),
+        "direction_free_shannon_pair12_expectation_ord_scores_equal": bool(
+            p730.get("direction_free_shannon_pair12_expectation_ord_scores_equal")
+        ),
+        "direction_free_shannon_pair12_cross_entropy_scores_equal": bool(
+            p730.get("direction_free_shannon_pair12_cross_entropy_scores_equal")
+        ),
+        "t184_direction_free_shannon_pair12_orbit_direction_selection_bridge_exported": bool(
+            p730.get("t184_target_exported_on_current_repo_state")
         ),
         "convention_layer_sign_tools_exported": {
             "T174_oriented_edge_sign_lift": bool(n688_tr.get("oriented_edge_sign_lift_exported") or n691_tr.get("oriented_edge_sign_lift_exported")),
