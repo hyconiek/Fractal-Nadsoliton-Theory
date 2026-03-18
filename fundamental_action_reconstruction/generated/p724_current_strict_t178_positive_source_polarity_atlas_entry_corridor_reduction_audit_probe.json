@@ -1,0 +1,150 @@
+{
+  "stage": "P724",
+  "status": "PARTIAL_POSITIVE_SOURCE_POLARITY_REDUCES_ATLAS_ENTRY_CORRIDOR_ONLY",
+  "as_of": "2026-03-18",
+  "generated_utc": "2026-03-18T00:29:26.331175+00:00",
+  "scope": "current_strict_t178_positive_source_polarity_atlas_entry_corridor_reduction_only",
+  "inputs": {
+    "P723": "fundamental_action_reconstruction/generated/p723_current_strict_t178_source_topology_to_atlas_chart_seed_selection_bridge_nonexport_audit_probe_summary.json",
+    "P715": "fundamental_action_reconstruction/generated/p715_current_strict_t176_parity_completed_dual_anchor_multiroot_audit_probe.json",
+    "F141": "fundamental_action_reconstruction/generated/f141_first_actual_source_topology_barrier_protected_sign_witness_packet_summary.json",
+    "F143": "fundamental_action_reconstruction/generated/f143_first_actual_source_topology_nonzero_flow_witness_packet_summary.json",
+    "F147": "fundamental_action_reconstruction/generated/f147_first_actual_source_topology_selector_witness_packet_summary.json"
+  },
+  "checks": [
+    {
+      "id": "p723_chart_seed_bridge_still_not_exported",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "P723 already confirms that the source-topology-to-atlas chart-seed bridge is not yet exported."
+    },
+    {
+      "id": "source_positive_polarity_available",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "The current source-topology lane exports a positive barrier sign, positive flow, and positive selector plus-channel polarity."
+    },
+    {
+      "id": "p715_all_roots_supported",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "The currently strongest atlas-entry candidate family does support all five roots."
+    },
+    {
+      "id": "positive_source_polarity_compatible_roots",
+      "actual": [
+        "pair1",
+        "pair2",
+        "pair3",
+        "pair5"
+      ],
+      "expected": [
+        "pair1",
+        "pair2",
+        "pair3",
+        "pair5"
+      ],
+      "pass": true,
+      "meaning": "Within the current all-root transported-family candidate, positive source polarity is compatible exactly with the four positive-root entries."
+    },
+    {
+      "id": "positive_source_polarity_incompatible_roots",
+      "actual": [
+        "pair4"
+      ],
+      "expected": [
+        "pair4"
+      ],
+      "pass": true,
+      "meaning": "The same positive source polarity excludes the unique negative atlas-entry branch pair4 on current exports."
+    },
+    {
+      "id": "positive_polarity_compatible_roots_match_same_projective_orbit_roots",
+      "actual": [
+        "pair1",
+        "pair2",
+        "pair3",
+        "pair5"
+      ],
+      "expected": [
+        "pair1",
+        "pair2",
+        "pair3",
+        "pair5"
+      ],
+      "pass": true,
+      "meaning": "The positive-polarity-compatible roots are exactly the same-orbit roots in the current projective atlas family."
+    },
+    {
+      "id": "unique_chart_seed_selected",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "Positive source polarity alone still does not select one unique chart seed."
+    },
+    {
+      "id": "residual_positive_corridor_splits_into_odd_and_even_fallback_lanes",
+      "actual": {
+        "odd_lane": [
+          "pair1",
+          "pair5"
+        ],
+        "even_fallback_lane": [
+          "pair2",
+          "pair3"
+        ]
+      },
+      "expected": {
+        "odd_lane": [
+          "pair1",
+          "pair5"
+        ],
+        "even_fallback_lane": [
+          "pair2",
+          "pair3"
+        ]
+      },
+      "pass": true,
+      "meaning": "The surviving positive corridor still splits into an odd-anchor lane and an even-fallback lane on current exports."
+    }
+  ],
+  "blocking_mismatches": [],
+  "source_positive_polarity_available": true,
+  "atlas_entry_roots_compatible_with_current_positive_source_polarity": [
+    "pair1",
+    "pair2",
+    "pair3",
+    "pair5"
+  ],
+  "atlas_entry_roots_incompatible_with_current_positive_source_polarity": [
+    "pair4"
+  ],
+  "unique_chart_seed_selected": false,
+  "residual_positive_corridor_split": {
+    "odd_anchor_lane": [
+      "pair1",
+      "pair5"
+    ],
+    "even_fallback_lane": [
+      "pair2",
+      "pair3"
+    ]
+  },
+  "audit_conclusion": {
+    "current_positive_source_polarity_rules_out_pair4": true,
+    "current_positive_source_polarity_reduces_but_does_not_close_t178_gap": true,
+    "next_honest_move": "export_or_attack_a_finer_source_to_atlas_seed_rule_distinguishing_within_the_positive_entry_corridor"
+  },
+  "hard_limits": [
+    "No T178 discharge claim.",
+    "No T177 discharge claim.",
+    "No unique atlas chart-seed selection claim.",
+    "No strict physical orientation datum claim.",
+    "No kernel-alone/global QW-2191 discharge.",
+    "No ToE closure claim."
+  ],
+  "no_false_pass": true
+}

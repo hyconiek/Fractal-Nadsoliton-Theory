@@ -32,6 +32,7 @@ IN_P720 = GENERATED / "p720_current_strict_t176_observer_facing_signed_output_ch
 IN_P721 = GENERATED / "p721_current_strict_t176_source_topology_basis_free_qw2191_safe_provider_nonupgrade_audit_probe_summary.json"
 IN_P722 = GENERATED / "p722_current_strict_t177_chart_sensitive_transported_flux_current_like_section_nonexport_audit_probe_summary.json"
 IN_P723 = GENERATED / "p723_current_strict_t178_source_topology_to_atlas_chart_seed_selection_bridge_nonexport_audit_probe_summary.json"
+IN_P724 = GENERATED / "p724_current_strict_t178_positive_source_polarity_atlas_entry_corridor_reduction_audit_probe_summary.json"
 
 # Convention-layer continuations (still below physical sign datum).
 IN_N688 = GENERATED / "n688_current_strict_t174_global_oriented_transition_edge_sign_lift_discharge_theorem_summary.json"
@@ -79,6 +80,7 @@ def main() -> None:
         "P721": IN_P721,
         "P722": IN_P722,
         "P723": IN_P723,
+        "P724": IN_P724,
     }
     missing_core = [str(p.relative_to(REPO)) for p in core.values() if not p.exists()]
     if missing_core:
@@ -112,6 +114,7 @@ def main() -> None:
     p721 = load_json(IN_P721)
     p722 = load_json(IN_P722)
     p723 = load_json(IN_P723)
+    p724 = load_json(IN_P724)
 
     n688 = load_json(IN_N688) if IN_N688.exists() else None
     n690 = load_json(IN_N690) if IN_N690.exists() else None
@@ -301,6 +304,18 @@ def main() -> None:
         True,
         "The current source-topology lane already supplies physical sign/flow/polarity data, but still not the chart-seed selection step needed before a transported atlas section can be claimed (P723).",
     )
+    add_check(
+        "positive_source_polarity_corridor_reduction_exists",
+        bool((p724.get("atlas_entry_roots_incompatible_with_current_positive_source_polarity") or []) == ["pair4"]),
+        True,
+        "Current positive source polarity already excludes the unique negative atlas-entry branch pair4 in the strongest current all-root candidate family (P724).",
+    )
+    add_check(
+        "positive_source_polarity_still_not_select_unique_chart_seed",
+        bool(p724.get("unique_chart_seed_selected")),
+        False,
+        "That positive-polarity reduction still does not determine one unique chart seed (P724).",
+    )
     # Convention-layer continuations (optional but expected on Release 7 state).
     if IN_N688.exists():
         add_check(
@@ -369,6 +384,7 @@ def main() -> None:
             "P721": str(IN_P721.relative_to(REPO)),
             "P722": str(IN_P722.relative_to(REPO)),
             "P723": str(IN_P723.relative_to(REPO)),
+            "P724": str(IN_P724.relative_to(REPO)),
             "N688": str(IN_N688.relative_to(REPO)) if IN_N688.exists() else None,
             "N690": str(IN_N690.relative_to(REPO)) if IN_N690.exists() else None,
             "N691": str(IN_N691.relative_to(REPO)) if IN_N691.exists() else None,
@@ -475,6 +491,12 @@ def main() -> None:
             ),
             "current_source_topology_lane_supplies_sign_flow_and_selector_polarity_but_not_chart_seed_selection": bool(
                 p723.get("current_source_topology_lane_supplies_sign_flow_and_selector_polarity_but_not_chart_seed_selection")
+            ),
+            "positive_source_polarity_atlas_entry_corridor_compatible_roots": p724.get(
+                "atlas_entry_roots_compatible_with_current_positive_source_polarity"
+            ),
+            "positive_source_polarity_unique_chart_seed_selected": bool(
+                p724.get("unique_chart_seed_selected")
             ),
             "convention_layer_oriented_edge_sign_lift_exported": bool(n688_tr.get("oriented_edge_sign_lift_exported") or n691_tr.get("oriented_edge_sign_lift_exported")),
             "convention_layer_sign_fixed_directed_representative_exported": bool(n690_tr.get("sign_fixed_directed_representative_exported")),
@@ -583,6 +605,12 @@ def main() -> None:
         ),
         "current_source_topology_lane_supplies_sign_flow_and_selector_polarity_but_not_chart_seed_selection": bool(
             p723.get("current_source_topology_lane_supplies_sign_flow_and_selector_polarity_but_not_chart_seed_selection")
+        ),
+        "positive_source_polarity_atlas_entry_corridor_compatible_roots": p724.get(
+            "atlas_entry_roots_compatible_with_current_positive_source_polarity"
+        ),
+        "positive_source_polarity_unique_chart_seed_selected": bool(
+            p724.get("unique_chart_seed_selected")
         ),
         "convention_layer_sign_tools_exported": {
             "T174_oriented_edge_sign_lift": bool(n688_tr.get("oriented_edge_sign_lift_exported") or n691_tr.get("oriented_edge_sign_lift_exported")),
