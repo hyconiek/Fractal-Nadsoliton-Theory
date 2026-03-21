@@ -1,0 +1,307 @@
+\chapter{Release 7.1 Observable Registry Layer}
+
+\makeatletter
+\renewcommand{\theHsubsection}{r71obs.\thesection.\arabic{subsection}}
+\makeatother
+
+This Release 7.1 extension adds the observable-facing derivation map that in
+Release 7 was only scattered across QW reports and bridge packets. Its role is
+documentary rather than promotional: freeze the observable outputs, the primary
+study number, the methodology family, and the current 7.1 interpretation under
+the repo's no-false-pass discipline.
+
+\section{Reading Rule}
+
+Release 7.1 separates three layers:
+\begin{enumerate}[label=\arabic*.]
+  \item the current minimal strict bridge admitted by \texttt{F784/F801},
+  \item the broader frozen observable package from \texttt{QW-2069} and its source gates,
+  \item explicitly excluded non-strict interfaces such as \texttt{P704} host matching and \texttt{P710} proxy-to-GeV calibration.
+\end{enumerate}
+
+A broad historical strict package entry is therefore not automatically an
+admitted FAR bridge entry. Dimensionful host-side observables, shared-basis
+flavor objects, SI-definition constants, and external-input cosmology channels
+are documented here, but they are not silently promoted into the minimal strict
+bridge.
+
+The current 7.1 reading also keeps the \texttt{P786} warning explicit: the
+present \texttt{QW-2093} formula layer for \texttt{sin2\_theta\_w\_eff} and
+\texttt{alpha\_s\_boundary\_mu0\_alpha0} is not yet upgraded to a
+kernel-invariants-only layer. Release 7.1 therefore documents these objects
+with their actual blockers rather than overstating them.
+
+\section{Primary Study-Family Map}
+
+\newcommand{\dimlessunit}{\shortstack[l]{\texttt{dimension-}\\\texttt{less}}}
+\small
+\begin{longtable}{@{}p{1.9cm}p{4.0cm}p{5.0cm}p{4.1cm}@{}}
+\toprule
+Study family & Report title(s) & Methodology family & Main outputs \\
+\midrule
+\endfirsthead
+\toprule
+Study family & Report title(s) & Methodology family & Main outputs \\
+\midrule
+\endhead
+\texttt{F704/P694} &
+Invariant mass observable export / mass spectrum proxy &
+Strict projective Hessian-eigenspectrum mass proxy ordering &
+\texttt{mass\_ratio\_ordering\_layer} \\
+
+\texttt{QW-2063} &
+Derivational Reconstruction Shared Flavor Basis &
+Deterministic shared flavor-basis reconstruction and GeV mass chain &
+\texttt{m\_top}, \texttt{m\_bottom}, \texttt{m\_charm}, \texttt{m\_tau}, \texttt{m\_muon}, \texttt{m\_electron}, \texttt{ckm\_matrix\_abs}, \texttt{pmns\_matrix\_abs} \\
+
+\texttt{QW-2064/2066} &
+Micro Derived Renormalization Constants Gate / Compatibility-Filtered Micro Constants Tightening &
+Micro-derived renormalization constants plus compatibility-filtered tightening &
+\texttt{z\_beta}, \texttt{delta\_eta} \\
+
+\texttt{QW-2075} &
+Strict CP Phase Derivation Gate &
+Deterministic complex PMNS/Jarlskog phase reconstruction &
+\texttt{delta\_cp\_pmns} \\
+
+\texttt{QW-2085} &
+GF Nonanchor Lifetime Gate &
+Kernel-derived muon-lifetime chain &
+\texttt{g\_f} \\
+
+\texttt{QW-2086} &
+MZ Nonanchor EW Pole Gate &
+Independent EW-pole reconstruction from \texttt{m\_W} and \texttt{sin2} &
+\texttt{m\_z}; upstream support for the bridge EW candidate \\
+
+\texttt{QW-2087/2093} &
+Alpha\_s Nonanchor Boundary Gate / Kernel-Derived Nonanchor Inputs Plan Executor &
+Kernel-derived QCD boundary plus frozen no-retune input plan &
+\texttt{alpha\_s\_boundary\_mu0\_alpha0}, \texttt{alpha\_s\_mz} \\
+
+\texttt{QW-2088} &
+Light Quark Mass Nonanchor Gate &
+Kernel-derived light-quark chain with independent hadronic checks &
+\texttt{m\_up}, \texttt{m\_down}, \texttt{m\_strange} \\
+
+\texttt{QW-2089} &
+Higgs Selfcoupling Strict Gate &
+Kernel-derived Higgs self-coupling chain with independent lambda validation &
+\texttt{m\_h} \\
+
+\texttt{QW-2090} &
+H0 Lambda Decoupling Gate &
+Weighted two-parameter non-anchor decoupling on external \texttt{H(z)} nodes &
+\texttt{h0}, \texttt{lambda\_cosmological} \\
+
+\texttt{QW-2091} &
+Neutrino Absolute Scale Gate &
+Deterministic absolute neutrino-scale solution from an absolute observable &
+\texttt{m\_nu1}, \texttt{m\_nu2}, \texttt{m\_nu3} \\
+
+\shortstack[l]{\texttt{QW-2092/2101/}\\\texttt{2103/2113/2207}} &
+GNewton SI Bridge Gate / external dimensionless provenance chain &
+Dimensionless-to-SI gravity bridge plus explicit external-origin and obstruction auditing &
+\texttt{g\_dimensionless\_mu\_ref}, \texttt{G\_newton} \\
+
+\texttt{QW-2097} &
+CKM CP Target Refinement Gate &
+Deterministic CKM CP refinement with permutation audit &
+\texttt{delta\_cp\_ckm} \\
+
+\texttt{QW-2098} &
+EW Secondary Nonanchor Closure Gate &
+Secondary EW propagation from the strict non-anchor chain &
+\texttt{sin2\_theta\_w\_mz}, \texttt{m\_w}, \texttt{alpha\_em\_inv\_mz}, \texttt{v\_higgs} \\
+
+\texttt{QW-2115} &
+Gravity Hierarchy Strict Bridge Gate &
+Micro-supported beta hierarchy bridge &
+\texttt{gravity\_hierarchy\_beta20} \\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\section{Minimal Strict Bridge Frozen in F784/F801}
+
+The current admitted bridge layer remains the narrow four-entry packet frozen by
+\texttt{F784/F801}. On the current repo state, the frozen values are:
+\[
+\texttt{pair3} < \texttt{pair5} < \texttt{pair4} < \texttt{pair2} < \texttt{pair1},
+\]
+\[
+\texttt{sin2\_theta\_w\_eff} = 0.228998499777,
+\qquad
+(\mu_0,\alpha_0) = (4.07820540272\ \mathrm{GeV},\, 0.205227785644),
+\]
+\[
+\texttt{g\_dimensionless\_mu\_ref}(1\ \mathrm{GeV}) = 6.70883\times 10^{-39}.
+\]
+
+\small
+\begin{longtable}{@{}p{2.8cm}p{3.2cm}p{4.2cm}p{2.0cm}p{3.7cm}@{}}
+\toprule
+Entry & Primary sources & Methodology & Status & Current blockers \\
+\midrule
+\endfirsthead
+\toprule
+Entry & Primary sources & Methodology & Status & Current blockers \\
+\midrule
+\endhead
+\texttt{mass\_ratio\_ordering\_layer} &
+\texttt{F704}, \texttt{P694}, \texttt{F801} &
+Strict projective mass-proxy ordering from the invariant Hessian eigen-spectrum &
+\texttt{strict-derived} &
+No proxy-to-GeV calibration in strict scope; no Standard Model identification inside the bridge. \\
+
+\texttt{sin2\_theta\_w\_eff} &
+\texttt{QW-2086}, \texttt{QW-2093}, \texttt{F784}, \texttt{F801} &
+Kernel-derived EW-pole candidate built from the frozen non-anchor input plan &
+\texttt{strict-derived} &
+No explicit retained/replaced semantic-transfer verdict for the legacy Weinberg role; \texttt{P786} blocks kernel-invariants-only promotion. \\
+
+\texttt{alpha\_s\_boundary\_mu0\_alpha0} &
+\texttt{QW-2087}, \texttt{QW-2093}, \texttt{F784}, \texttt{F801} &
+Kernel-derived non-anchor QCD boundary pair from the frozen hierarchy-log ansatz &
+\texttt{strict-derived} &
+Frozen ansatz origin remains explicit; not a full QCD closure theorem; \texttt{P786} keeps the kernel-invariants-only upgrade blocked. \\
+
+\texttt{g\_dimensionless\_mu\_ref} &
+\texttt{QW-2101}, \texttt{QW-2103}, \texttt{QW-2113}, \texttt{QW-2207}, \texttt{A8}, \texttt{F784}, \texttt{F801} &
+Dimensionless gravity bridge with explicit external-observable origin and later provenance cleanup &
+\texttt{strict-derived-with-external-observable-origin} &
+Internal origin of the dimensionless \texttt{G} bridge remains open; full Einstein-Hilbert / GR closure remains open. \\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\section{Broad Frozen Observable Package from QW-2069}
+
+\texttt{QW-2069} freezes 32 registry entries: 30 marked
+\texttt{strict\_internal\_gate} and 2 marked \texttt{si\_definition}. The
+repo contains many more auxiliary observable-support audits than these 32 final
+rows; Release 7.1 freezes the final package entries together with their primary
+methodology families instead of duplicating every support audit as a separate
+observable row.
+
+\subsection{Gauge and Electroweak}
+
+\small
+\begin{longtable}{@{}p{2.6cm}p{1.4cm}p{4.8cm}p{1.7cm}p{4.5cm}@{}}
+\toprule
+Observable & Study & Methodology & Unit & Release 7.1 note \\
+\midrule
+\endfirsthead
+\toprule
+Observable & Study & Methodology & Unit & Release 7.1 note \\
+\midrule
+\endhead
+\texttt{alpha\_em\_inv\_mz} & \texttt{QW-2098} & On-shell EW relation from \texttt{G\_F}, \texttt{m\_W}, \texttt{sin2}, and \texttt{Delta-r}. & \dimlessunit & Broad strict package; secondary EW output, outside the minimal bridge. \\
+\texttt{sin2\_theta\_w\_mz} & \texttt{QW-2098} & Strict non-anchor EW-pole chain for \texttt{sin2}. & \dimlessunit & Closest broad-package descendant of the minimal-bridge EW candidate; legacy semantic-transfer remains blocked. \\
+\texttt{alpha\_s\_mz} & \texttt{QW-2087} & Non-anchor \texttt{alpha\_s} boundary plus validation running. & \dimlessunit & Broad strict package; downstream running value, while the minimal bridge freezes the boundary pair $(\mu_0,\alpha_0)$. \\
+\texttt{g\_f} & \texttt{QW-2085} & Kernel-derived muon-lifetime chain. & \texttt{GeV\textasciicircum{}-2} & Broad strict package; dimensionful EW observable, outside the minimal bridge. \\
+\texttt{m\_w} & \texttt{QW-2098} & Strict non-anchor EW-pole chain for \texttt{m\_W}. & \texttt{GeV} & Broad strict package; secondary EW output, outside the minimal bridge. \\
+\texttt{m\_z} & \texttt{QW-2086} & Independent EW-pole reconstruction from \texttt{m\_W} and \texttt{sin2}. & \texttt{GeV} & Broad strict package; dimensionful EW-pole output, outside the minimal bridge. \\
+\texttt{m\_h} & \texttt{QW-2089} & Higgs self-coupling chain with independent lambda validation. & \texttt{GeV} & Broad strict package; dimensionful Higgs-chain output, outside the minimal bridge. \\
+\texttt{v\_higgs} & \texttt{QW-2098} & Higgs-vev propagation from the strict \texttt{G\_F} chain. & \texttt{GeV} & Broad strict package; derived EW scale, outside the minimal bridge. \\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\subsection{Fermion Masses}
+
+\small
+\begin{longtable}{@{}p{2.6cm}p{1.4cm}p{4.8cm}p{1.7cm}p{4.5cm}@{}}
+\toprule
+Observable & Study & Methodology & Unit & Release 7.1 note \\
+\midrule
+\endfirsthead
+\toprule
+Observable & Study & Methodology & Unit & Release 7.1 note \\
+\midrule
+\endhead
+\texttt{m\_top} & \texttt{QW-2063} & Shared flavor-basis mass chain rooted in \texttt{QW-2063/QW-1961}. & \texttt{GeV} & Broad strict package; shared-basis/GeV mass-chain entry, outside the minimal bridge. \\
+\texttt{m\_bottom} & \texttt{QW-2063} & Shared flavor-basis mass chain rooted in \texttt{QW-2063/QW-1961}. & \texttt{GeV} & Broad strict package; shared-basis/GeV mass-chain entry, outside the minimal bridge. \\
+\texttt{m\_charm} & \texttt{QW-2063} & Shared flavor-basis mass chain rooted in \texttt{QW-2063/QW-1961}. & \texttt{GeV} & Broad strict package; shared-basis/GeV mass-chain entry, outside the minimal bridge. \\
+\texttt{m\_tau} & \texttt{QW-2063} & Shared flavor-basis mass chain rooted in \texttt{QW-2063/QW-1961}. & \texttt{GeV} & Broad strict package; shared-basis/GeV mass-chain entry, outside the minimal bridge. \\
+\texttt{m\_muon} & \texttt{QW-2063} & Shared flavor-basis mass chain rooted in \texttt{QW-2063/QW-1961}. & \texttt{GeV} & Broad strict package; shared-basis/GeV mass-chain entry, outside the minimal bridge. \\
+\texttt{m\_electron} & \texttt{QW-2063} & Shared flavor-basis mass chain rooted in \texttt{QW-2063/QW-1961}. & \texttt{GeV} & Broad strict package; shared-basis/GeV mass-chain entry, outside the minimal bridge. \\
+\texttt{m\_up} & \texttt{QW-2088} & Kernel-derived light-quark chain with independent hadronic checks. & \texttt{GeV} & Broad strict package; light-quark chain entry with hadronic checks, outside the minimal bridge. \\
+\texttt{m\_down} & \texttt{QW-2088} & Kernel-derived light-quark chain with independent hadronic checks. & \texttt{GeV} & Broad strict package; light-quark chain entry with hadronic checks, outside the minimal bridge. \\
+\texttt{m\_strange} & \texttt{QW-2088} & Kernel-derived light-quark chain with independent hadronic checks. & \texttt{GeV} & Broad strict package; light-quark chain entry with hadronic checks, outside the minimal bridge. \\
+\texttt{m\_nu1} & \texttt{QW-2091} & Deterministic absolute neutrino-scale solution from an absolute observable. & \texttt{eV} & Broad strict package; absolute-scale neutrino entry with external absolute observable, outside the minimal bridge. \\
+\texttt{m\_nu2} & \texttt{QW-2091} & Deterministic absolute neutrino-scale solution from an absolute observable. & \texttt{eV} & Broad strict package; absolute-scale neutrino entry with external absolute observable, outside the minimal bridge. \\
+\texttt{m\_nu3} & \texttt{QW-2091} & Deterministic absolute neutrino-scale solution from an absolute observable. & \texttt{eV} & Broad strict package; absolute-scale neutrino entry with external absolute observable, outside the minimal bridge. \\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\subsection{Flavor}
+
+\small
+\begin{longtable}{@{}p{2.6cm}p{1.4cm}p{4.8cm}p{1.7cm}p{4.5cm}@{}}
+\toprule
+Observable & Study & Methodology & Unit & Release 7.1 note \\
+\midrule
+\endfirsthead
+\toprule
+Observable & Study & Methodology & Unit & Release 7.1 note \\
+\midrule
+\endhead
+\texttt{ckm\_matrix\_abs} & \texttt{QW-2063} & Deterministic shared flavor-basis reconstruction. & \dimlessunit & Broad strict package; flavor-basis object kept as extension layer, not part of the minimal bridge. \\
+\texttt{pmns\_matrix\_abs} & \texttt{QW-2063} & Deterministic shared flavor-basis reconstruction. & \dimlessunit & Broad strict package; flavor-basis object kept as extension layer, not part of the minimal bridge. \\
+\texttt{delta\_cp\_ckm} & \texttt{QW-2097} & Deterministic CKM CP refinement with permutation audit. & \texttt{rad} & Broad strict package; flavor CP extension lane, not part of the minimal bridge. \\
+\texttt{delta\_cp\_pmns} & \texttt{QW-2075} & Deterministic complex PMNS/Jarlskog phase reconstruction. & \texttt{rad} & Broad strict package; PMNS CP extension lane, not part of the minimal bridge. \\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\subsection{Project-Specific Bridge Quantities}
+
+\small
+\begin{longtable}{@{}p{2.6cm}p{1.4cm}p{4.8cm}p{1.7cm}p{4.5cm}@{}}
+\toprule
+Observable & Study & Methodology & Unit & Release 7.1 note \\
+\midrule
+\endfirsthead
+\toprule
+Observable & Study & Methodology & Unit & Release 7.1 note \\
+\midrule
+\endhead
+\texttt{z\_beta} & \texttt{QW-2064} & Micro-derived renormalization constants gate. & \dimlessunit & Project-specific strict bridge quantity; keep distinct from any legacy role transfer. \\
+\texttt{delta\_eta} & \texttt{QW-2064} & Micro-derived renormalization constants gate. & \dimlessunit & Project-specific strict bridge quantity; keep distinct from any legacy role transfer. \\
+\shortstack[l]{\texttt{gravity\_hierarchy\_}\\\texttt{beta20}} & \texttt{QW-2115} & Micro-supported beta hierarchy bridge. & \dimlessunit & Project-specific strict bridge quantity; do not read as automatic inheritance of the legacy $\beta^N$ gravity-hierarchy claim. \\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\subsection{GR and Cosmology}
+
+\small
+\begin{longtable}{@{}p{2.6cm}p{1.4cm}p{4.8cm}p{1.7cm}p{4.5cm}@{}}
+\toprule
+Observable & Study & Methodology & Unit & Release 7.1 note \\
+\midrule
+\endfirsthead
+\toprule
+Observable & Study & Methodology & Unit & Release 7.1 note \\
+\midrule
+\endhead
+\texttt{G\_newton} & \texttt{QW-2092} & Dimensionless-to-SI gravity bridge from an independent observable. & \texttt{m\textasciicircum{}3 kg\textasciicircum{}-1 s\textasciicircum{}-2} & Broad strict package; SI-level bridge output. The minimal bridge keeps only the dimensionless \texttt{g} observable with explicit external origin. \\
+\texttt{c\_light} & \texttt{SI} & Exact SI metrological definition. & \texttt{m s\textasciicircum{}-1} & SI definition only; metrological constant, not a dynamic strict derivation. \\
+\texttt{hbar} & \texttt{SI} & Derived from the exact SI definition of \texttt{h}. & \texttt{J s} & SI definition only; metrological definition chain, not a dynamic strict derivation. \\
+\shortstack[l]{\texttt{lambda\_}\\\texttt{cosmological}} & \texttt{QW-2090} & Weighted two-parameter non-anchor decoupling on external \texttt{H(z)} nodes. & \texttt{m\textasciicircum{}-2} & Broad strict package; external \texttt{H(z)} dependent cosmology channel, outside the minimal bridge. \\
+\texttt{h0} & \texttt{QW-2090} & Weighted two-parameter non-anchor decoupling on external \texttt{H(z)} nodes. & \texttt{km s\textasciicircum{}-1 Mpc\textasciicircum{}-1} & Broad strict package; external \texttt{H(z)} dependent cosmology channel, outside the minimal bridge. \\
+\bottomrule
+\end{longtable}
+\normalsize
+\let\dimlessunit\undefined
+
+\section{Interpretive Hard Limits for the Broad Package}
+
+\begin{itemize}
+  \item Do not read \texttt{sin2\_theta\_w\_mz} as an automatic transfer of the legacy $\sin^2(\theta_W)=\alpha_{\mathrm{geo}}/12$ role. The current retained/replaced semantic blocker remains explicit in \texttt{F9}, and the kernel-invariants-only upgrade remains blocked by \texttt{P786}.
+  \item Do not read \texttt{gravity\_hierarchy\_beta20} or the SI-level \texttt{G\_newton} bridge as a silent inheritance of legacy gravity-role claims onto \texttt{K\_strict\_gate}.
+  \item Do not read the mass-chain, flavor-basis, or GeV-level EW/Higgs outputs as strict proxy-to-GeV calibration or Standard Model identification. Those layers remain separated from the minimal bridge.
+  \item The explicitly excluded non-strict interfaces remain \texttt{P704} host matching and \texttt{P710} proxy-to-GeV calibration. They are documented in this TeX, but they are not part of the strict bridge claim.
+\end{itemize}
