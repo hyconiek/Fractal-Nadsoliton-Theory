@@ -1,0 +1,145 @@
+{
+  "branch": "experimental/unfreeze-omega-phi-beta-eta",
+  "distances": {
+    "q2039_to_canonical": 1.399311,
+    "q2049_to_canonical": 1.452608,
+    "q2049_to_q2039": 0.08,
+    "q2049_to_q2041_refrozen": 0.08
+  },
+  "interpretation": {
+    "admitted": "Experimental unfreeze is allowed only because the tuple has scan/gate provenance and this lane stays explicitly non-strict.",
+    "forbidden": [
+      "strict discharge",
+      "T176 export",
+      "QW-2191 solved",
+      "legacy/strict bridge theorem"
+    ]
+  },
+  "lane_status": "NONSTRICT_FIT_DERIVED_PARAMETER_UNFREEZE_SANDBOX",
+  "provenance": {
+    "fitting_note_present": true,
+    "qw2038_best_row": {
+      "beta": 1.0,
+      "eta": 1.8,
+      "omega": 0.18575,
+      "phi": 0.1625
+    },
+    "qw2039_refrozen": {
+      "beta": 0.92,
+      "eta": 1.8,
+      "omega": 0.18575,
+      "phi": 0.1625
+    },
+    "qw2041_canonical": {
+      "beta": 0.01,
+      "eta": 1.0,
+      "omega": 0.785398,
+      "phi": 0.523599
+    },
+    "qw2041_refrozen_side": {
+      "beta": 0.92,
+      "eta": 1.8,
+      "omega": 0.18575,
+      "phi": 0.1625
+    },
+    "qw2049_micro_ci95": {
+      "beta": [
+        5.4e-05,
+        106.682605
+      ],
+      "eta": [
+        1.0,
+        3.0
+      ]
+    },
+    "qw2049_working_tuple": {
+      "beta": 1.0,
+      "eta": 1.8,
+      "omega": 0.18575,
+      "phi": 0.1625
+    }
+  },
+  "root": "/media/magazyn/home/teresa/Dokumenty/HYC/TOE/edison",
+  "score_axes": [
+    "operational_continuity",
+    "canonical_tension",
+    "selector_relevance",
+    "anti_fitting_discipline"
+  ],
+  "search_windows": {
+    "canonical_tension": {
+      "beta": [
+        0.01,
+        1.0
+      ],
+      "eta": [
+        1.0,
+        1.8
+      ],
+      "omega": [
+        0.18575,
+        0.785398
+      ],
+      "phi": [
+        0.1625,
+        0.523599
+      ]
+    },
+    "local_continuity": {
+      "beta": [
+        0.85,
+        1.15
+      ],
+      "eta": [
+        1.6,
+        2.0
+      ],
+      "omega": [
+        0.14575,
+        0.22575
+      ],
+      "phi": [
+        0.1225,
+        0.2025
+      ]
+    }
+  },
+  "seed_candidates": {
+    "canonical_bridge_midpoint": {
+      "beta": 0.505,
+      "eta": 1.4,
+      "omega": 0.485574,
+      "phi": 0.34305
+    },
+    "canonical_refrozen_midpoint": {
+      "beta": 0.96,
+      "eta": 1.8,
+      "omega": 0.18575,
+      "phi": 0.1625
+    },
+    "local_beta_midpoint": {
+      "beta": 0.96,
+      "eta": 1.8,
+      "omega": 0.18575,
+      "phi": 0.1625
+    },
+    "q2039_refrozen": {
+      "beta": 0.92,
+      "eta": 1.8,
+      "omega": 0.18575,
+      "phi": 0.1625
+    },
+    "q2049_hold": {
+      "beta": 1.0,
+      "eta": 1.8,
+      "omega": 0.18575,
+      "phi": 0.1625
+    }
+  },
+  "stop_rules": [
+    "better fit without selector signal",
+    "compensatory freedom explosion",
+    "strict-language drift",
+    "silent legacy-role transfer"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "stage": "F952",
+  "status": "PASS_CURRENT_STRICT_QW2191_LAMBDA_BRANCH_INFO_PRIMARY_SCPC_LIKE_SAME_LANE_STAGNATION_STOP_PACKET_EXPORTED",
+  "as_of": "2026-03-23",
+  "packet_exported_on_current_repo_state": true,
+  "same_lane_stagnation_boundary_reached": true,
+  "same_lane_stop_threshold_attempt_count": 5,
+  "same_lane_exact_attempt_count": 5,
+  "restart_requires_new_provider_class_or_new_blocker_cut_or_kernel_bridge_route": true,
+  "checks": [
+    {
+      "id": "p1033_same_lane_stagnation_boundary_already_reached",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "P1033 already freezes the same-lane stagnation boundary and stop condition."
+    },
+    {
+      "id": "f952_packet_shape_frozen",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "F952 freezes the same-lane stop packet shape explicitly."
+    },
+    {
+      "id": "packet_exported_on_current_repo_state",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Therefore the current repo exports one honest stop packet for the stagnating info-primary SCPC-like same-lane descent."
+    }
+  ],
+  "blocking_checks": [],
+  "no_false_pass": true
+}

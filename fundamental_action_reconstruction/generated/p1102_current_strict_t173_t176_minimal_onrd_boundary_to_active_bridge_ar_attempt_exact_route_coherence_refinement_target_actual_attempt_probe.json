@@ -1,0 +1,40 @@
+{
+  "stage": "P1102",
+  "status": "PASS_CURRENT_STRICT_T173_T176_MINIMAL_ONRD_BOUNDARY_TO_ACTIVE_BRIDGE_AR_ATTEMPT_EXACT_ROUTE_COHERENCE_REFINEMENT_TARGET_ACTUAL_REALIZATION_ATTEMPT_EXPORTED",
+  "as_of": "2026-04-01",
+  "attempt_name": "MinimalONRDBoundaryToActiveBridgeExactReductionTargetActualRealizationAttemptExactRouteCoherenceRefinementTargetActualRealizationAttempt_v1",
+  "t321_attempt_exported_on_current_repo_state": true,
+  "t321_attempt_keeps_reduction_supplier_solution_orientation_and_closure_open": true,
+  "checks": [
+    {
+      "id": "p1101_already_freezes_target_as_future_only_not_actual",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "P1101 already freezes that the exact T320 target still remains future-only and not actually realized."
+    },
+    {
+      "id": "t321_exact_actual_realization_attempt_frozen",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "T321 freezes one exact first actual-realization attempt on the same T320 target."
+    },
+    {
+      "id": "t321_attempt_exported_on_current_repo_state",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Therefore the current repo exports one exact first actual-realization attempt on the same T320 branch."
+    },
+    {
+      "id": "t321_attempt_keeps_reduction_supplier_solution_orientation_and_closure_open",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "That attempt still keeps reduction, supplier, solution, orientation, and closure questions open."
+    }
+  ],
+  "blocking_checks": [],
+  "no_false_pass": true
+}

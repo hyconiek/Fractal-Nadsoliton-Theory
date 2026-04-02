@@ -1,0 +1,139 @@
+{
+  "stage": "P792",
+  "status": "P792_CURRENT_STRICT_ALPHA_S_PROBE_LOCAL_ORDER_RULE_UNIQUE_WINNER_NONEXPORT",
+  "as_of": "2026-03-19",
+  "inputs": {
+    "p789_candidate_family_probe": "fundamental_action_reconstruction/generated/p789_current_strict_alpha_s_normalized_boundary_interface_candidate_probe.json",
+    "p791_selection_reuse_audit": "fundamental_action_reconstruction/generated/p791_current_strict_alpha_s_selection_principle_reuse_audit_probe.json",
+    "f704_invariant_mass_observable_packet": "fundamental_action_reconstruction/F704_CURRENT_STRICT_INVARIANT_MASS_OBSERVABLE_FROM_DIAGONAL_LOCAL_PSI_HESSIAN_EIGENSYSTEM_EXPORT_PACKET.md",
+    "p694_projective_pair_proxy_probe": "fundamental_action_reconstruction/P694_CURRENT_STRICT_PHYSICAL_COMPUTABILITY_MASS_SPECTRUM_PROXY_FROM_PROJECTIVE_SELECTOR_CLOSURE_PROBE.md",
+    "proxy_to_gev_policy": "fundamental_action_reconstruction/external_data/proxy_to_gev_calibration_policy_v1.json"
+  },
+  "candidate_family_domain_ids": [
+    "f704_max_mode_anchor_family",
+    "f704_geometric_mean_anchor_family",
+    "p694_pairmax_anchor_family"
+  ],
+  "probe_local_order_rule_tuple": {
+    "rule_id": "probe_local_alpha_s_family_order_rule_v1",
+    "clauses_in_priority_order": [
+      {
+        "id": "source_authority_preference",
+        "meaning": "Prefer strict basis-invariant full-spectrum source objects over weaker projective pair-summary proxies."
+      },
+      {
+        "id": "unit_bounded_boundary_preference",
+        "meaning": "Among surviving families, prefer normalized validation grids confined to (0,1] with explicit top boundary point 1."
+      },
+      {
+        "id": "coverage_count_tie_break",
+        "meaning": "Use validation-point coverage count only as a residual tie-break on the current finite domain."
+      }
+    ],
+    "export_status": "probe_local_only"
+  },
+  "family_evaluation": [
+    {
+      "family_id": "f704_max_mode_anchor_family",
+      "source_object": "MassObservable_diagonal_local_strict_derived_v1",
+      "source_tier": 2,
+      "basis_invariant_full_spectrum": true,
+      "unit_bounded_grid": true,
+      "validation_point_count": 12,
+      "max_validation_point": 1.0,
+      "min_validation_point": 0.082974466009,
+      "normalization_rule": "mu_tilde_i := m_proxy_i / max_j(m_proxy_j)",
+      "score_tuple_lexicographic": [
+        2,
+        1,
+        12
+      ]
+    },
+    {
+      "family_id": "f704_geometric_mean_anchor_family",
+      "source_object": "MassObservable_diagonal_local_strict_derived_v1",
+      "source_tier": 2,
+      "basis_invariant_full_spectrum": true,
+      "unit_bounded_grid": false,
+      "validation_point_count": 12,
+      "max_validation_point": 3.324308738824,
+      "min_validation_point": 0.275832742453,
+      "normalization_rule": "mu_tilde_i := m_proxy_i / geometric_mean(m_proxy)",
+      "score_tuple_lexicographic": [
+        2,
+        0,
+        12
+      ]
+    },
+    {
+      "family_id": "p694_pairmax_anchor_family",
+      "source_object": "P694 pair-rayleigh mass proxy summary",
+      "source_tier": 1,
+      "basis_invariant_full_spectrum": false,
+      "unit_bounded_grid": true,
+      "validation_point_count": 5,
+      "max_validation_point": 1.0,
+      "min_validation_point": 0.477429336203,
+      "normalization_rule": "mu_tilde_pair := m_pair_proxy / max_pair_proxy",
+      "score_tuple_lexicographic": [
+        1,
+        1,
+        5
+      ]
+    }
+  ],
+  "unique_winner_exists": true,
+  "unique_winner_family_id": "f704_max_mode_anchor_family",
+  "supporting_boundary_notes": [
+    "F704 is explicitly exported as the basis-invariant full-spectrum mass observable object.",
+    "P694 remains a projective pair-summary probe-level proxy object.",
+    "The exported geometric-mean calibration policy is explicitly nonstrict and physical-units-facing; this blocks silent reuse of geometric-mean language as a strict selection authority."
+  ],
+  "checks": [
+    {
+      "id": "candidate_family_domain_present",
+      "pass": true,
+      "details": "The current alpha_s family domain is the finite three-family domain exported by P789."
+    },
+    {
+      "id": "source_authority_rule_prefers_f704_over_p694",
+      "pass": true,
+      "details": "F704 exports a basis-invariant full-spectrum strict object, while P694 is a projective pair-summary probe; this supports a probe-local source-authority preference."
+    },
+    {
+      "id": "normalization_boundary_rule_prefers_unit_bounded_grid",
+      "pass": true,
+      "details": "On the current family domain, the max-mode family stays inside (0,1] with explicit top boundary 1, while the geometric-mean family exceeds 1."
+    },
+    {
+      "id": "geometric_mean_already_has_explicit_nonstrict_role_only",
+      "pass": true,
+      "details": "The only explicit exported geometric-mean calibration role currently present in the repo is the nonstrict proxy-to-GeV policy layer."
+    },
+    {
+      "id": "unique_winner_exists_but_selection_export_remains_missing",
+      "pass": true,
+      "details": "A unique winner exists under the explicit probe-local order tuple, but P791 still blocks any silent upgrade into an exported strict selection principle."
+    }
+  ],
+  "failed_checks": [],
+  "current_honest_reading": [
+    "The current alpha_s family-space is no longer selection-chaotic: one explicit probe-local order tuple already isolates a unique winner.",
+    "That winner is f704_max_mode_anchor_family, not because the repo already exported a strict selection principle, but because the current finite family domain plus explicit ranking clauses leave no tie.",
+    "The blocker is now narrower still: what remains missing is not a winner on the current domain, but export-grade authority for the order rule itself."
+  ],
+  "recommended_next_packet": {
+    "id": "F792_CURRENT_STRICT_ALPHA_S_FAMILY_SELECTION_ORDER_RULE_TARGET_PACKET",
+    "goal": "Freeze the exact export-grade order-rule object still missing before the probe-local winner can count as a real alpha_s family selection result.",
+    "minimum_fields": [
+      "candidate_family_domain_ref",
+      "source_authority_rule_ref",
+      "normalization_boundary_rule_ref",
+      "residual_tie_break_rule_ref",
+      "nonstrict_calibration_separation_ref",
+      "selected_family_output_schema",
+      "hard_limits"
+    ]
+  },
+  "no_false_pass": true
+}

@@ -1,0 +1,116 @@
+{
+  "stage": "P752",
+  "status": "PASS_STRICT_SOURCE_SHANNON_PAIR_POPULATION_SUPPORT_REFINEMENT_TO_MINIMAL_DESIGNATED_PAIR12_POPULATED_INSTANCE_ENTRY_NONEXPORT_AUDITED",
+  "as_of": "2026-03-18",
+  "generated_at_utc": "2026-03-18T07:13:13.083194+00:00",
+  "theorem_result": {
+    "t206_target_name": "StrictSourceShannonPairPopulationSupportRefinementToMinimalDesignatedPair12PopulatedInstanceEntry_strict_v1",
+    "t206_target_exported_on_current_repo_state": false,
+    "p751_split_theta_entry_bridge_already_nonexported": true,
+    "current_minimal_designated_pair12_component2_family_frozen": true,
+    "current_strict_source_shannon_pair_population_support_refinement_candidate_exported": true,
+    "current_strict_source_shannon_pair_population_support_refinement_remains_generic_pair_indexed_population_syntax_only": true,
+    "current_strict_source_shannon_pair_population_support_refinement_remains_below_actual_pair_population": true,
+    "current_strict_source_shannon_pair_population_support_refinement_route_remains_nonentering_for_minimal_designated_pair12_populated_instance_entry": true,
+    "current_strict_source_shannon_pair_population_support_refinement_route_has_exported_minimal_designated_pair12_populated_instance_entry": false,
+    "positive_populated_instance_entry_candidates": [],
+    "no_false_pass": true
+  },
+  "checks": [
+    {
+      "id": "p751_split_theta_entry_bridge_already_nonexported",
+      "actual": {
+        "theta_support_refinement_exported": true,
+        "split_theta_entry_nonentering": true,
+        "split_theta_entry_exported": false,
+        "t205_exported": false
+      },
+      "expected": {
+        "theta_support_refinement_exported": true,
+        "split_theta_entry_nonentering": true,
+        "split_theta_entry_exported": false,
+        "t205_exported": false
+      },
+      "pass": true,
+      "meaning": "P751 already freezes that the logically earlier minimal designated [pair1,pair2] theta-entry bridge is still absent on current exports."
+    },
+    {
+      "id": "current_minimal_designated_pair12_component2_family_frozen",
+      "actual": {
+        "pair_indexed_population_anchor_target_present": true,
+        "strict_internal_orientation_provider_target_present": true,
+        "minimal_designated_pair_family_pair12_present": true
+      },
+      "expected": {
+        "pair_indexed_population_anchor_target_present": true,
+        "strict_internal_orientation_provider_target_present": true,
+        "minimal_designated_pair_family_pair12_present": true
+      },
+      "pass": true,
+      "meaning": "T26 already freezes component 2 on at least the minimal designated pair family [pair1, pair2]."
+    },
+    {
+      "id": "current_strict_source_shannon_pair_population_support_refinement_candidate_exported",
+      "actual": {
+        "pair_population_support_object_present_in_f323": true,
+        "pair_population_support_phrase_present": true,
+        "pair_population_support_object_present_in_n434": true
+      },
+      "expected": {
+        "pair_population_support_object_present_in_f323": true,
+        "pair_population_support_phrase_present": true,
+        "pair_population_support_object_present_in_n434": true
+      },
+      "pass": true,
+      "meaning": "F323/N434 already export one real strict-source Shannon pair-population support-refinement candidate."
+    },
+    {
+      "id": "current_strict_source_shannon_pair_population_support_refinement_remains_generic_pair_indexed_population_syntax_only",
+      "actual": {
+        "pair_indexed_slot_status_present": true,
+        "conditional_population_status_present": true,
+        "u1_u2_population_syntax_mentioned": true,
+        "actual_populated_basis_pair_instance_exported": false,
+        "minimal_designated_pair_family_pair12_mentioned": false,
+        "pair1_or_pair2_mentioned": false,
+        "pair_indexed_population_anchor_target_mentioned": false,
+        "tau_src_candidate_v1_mentioned": false
+      },
+      "expected": {
+        "pair_indexed_slot_status_present": true,
+        "conditional_population_status_present": true,
+        "u1_u2_population_syntax_mentioned": true,
+        "actual_populated_basis_pair_instance_exported": false,
+        "minimal_designated_pair_family_pair12_mentioned": false,
+        "pair1_or_pair2_mentioned": false,
+        "pair_indexed_population_anchor_target_mentioned": false,
+        "tau_src_candidate_v1_mentioned": false
+      },
+      "pass": true,
+      "meaning": "The strongest strict-source Shannon pair-population support-refinement lane still carries only generic pair-indexed populated-instance syntax, not one actual minimal designated [pair1,pair2] populated-instance entry packet."
+    },
+    {
+      "id": "current_strict_source_shannon_pair_population_support_refinement_remains_below_actual_pair_population",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "That strongest strict-source Shannon pair-population support-refinement lane still remains explicitly below actual pair population on current exports."
+    },
+    {
+      "id": "current_strict_source_shannon_pair_population_support_refinement_route_remains_nonentering_for_minimal_designated_pair12_populated_instance_entry",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "So the strongest strict-source Shannon pair-population support-refinement route still remains nonentering for one actual minimal designated [pair1,pair2] populated-instance entry packet on current exports."
+    },
+    {
+      "id": "current_strict_source_shannon_pair_population_support_refinement_route_has_exported_minimal_designated_pair12_populated_instance_entry",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "No current export turns the strongest strict-source Shannon pair-population support-refinement route into one actual minimal designated [pair1,pair2] populated-instance entry packet."
+    }
+  ],
+  "blocking_checks": [],
+  "no_false_pass": true
+}

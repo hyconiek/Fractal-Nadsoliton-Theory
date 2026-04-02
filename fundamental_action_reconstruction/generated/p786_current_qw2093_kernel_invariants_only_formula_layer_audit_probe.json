@@ -1,0 +1,60 @@
+{
+  "stage": "P786",
+  "status": "P786_CURRENT_QW2093_KERNEL_INVARIANTS_ONLY_FORMULA_LAYER_BLOCKED_NONEXPORT",
+  "as_of": "2026-03-19",
+  "inputs": {
+    "qw2093": "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2093_kernel_derived_nonanchor_inputs_plan_executor.json",
+    "qw2086": "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2086_mz_nonanchor_ew_pole_gate.json",
+    "qw2087": "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2087_alpha_s_nonanchor_boundary_gate.json",
+    "qw2063": "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2063_derivational_reconstruction_shared_flavor_basis.json",
+    "qw2064": "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2064_micro_derived_renormalization_constants_gate.json",
+    "alpha_geo_strict_source": "fundamental_action_reconstruction/generated/alpha_geo_strict_derived_v1.json",
+    "f784": "fundamental_action_reconstruction/generated/f784_current_minimal_strict_sm_gr_bridge_registry_packet.json",
+    "p785": "fundamental_action_reconstruction/generated/p785_current_minimal_strict_sm_gr_bridge_registry_boundary_audit_probe.json"
+  },
+  "targets": {
+    "sin2_theta_w_eff": {
+      "kernel_invariants_only_ready": false,
+      "frozen_formula": "(alpha_geo/12)*(1-beta_uv*(1-delta_eta/10))",
+      "upstream_source_label": "QW-2093 v2 frozen alpha_geo + micro-radiative shift relation",
+      "blockers": [
+        "alpha_geo_touchpoint_not_yet_reexpressed_as_explicit_strict_invariant_map",
+        "micro_radiative_regime_constants_present",
+        "upstream_source_explicitly_labels_frozen_alpha_geo_relation"
+      ],
+      "current_honest_status": "strict bridge object retained with semantic-transfer blocker"
+    },
+    "alpha_s_boundary_mu0_alpha0": {
+      "kernel_invariants_only_ready": false,
+      "frozen_formula": {
+        "mu0": "m_bottom",
+        "alpha0": "1/(ln(m_top/m_bottom)+delta_eta)"
+      },
+      "upstream_source_label": "QW-2093 frozen hierarchy-log boundary ansatz",
+      "blockers": [
+        "boundary_scale_uses_mass_chain_object_not_kernel_invariant",
+        "boundary_coupling_uses_mass_ratio_plus_micro_constant_ansatz",
+        "upstream_source_explicitly_labels_hierarchy_log_boundary_ansatz",
+        "mass_chain_still_not_promoted_to_strict_first_principles"
+      ],
+      "current_honest_status": "strict boundary object retained with frozen-ansatz blocker"
+    }
+  },
+  "shared_findings": {
+    "alpha_geo_strict_source_present": true,
+    "q2064_ci_warning": true,
+    "q2064_verdict": "MICRO_DERIVED_RENORMALIZATION_CONSTANTS_GATE_PASS_WITH_WIDE_CI_WARNING",
+    "p785_boundary_audit_pass": true
+  },
+  "current_honest_reading": [
+    "The current QW-2093 sin2 formula is still not kernel-invariants-only: alpha_geo does exist as a strict-side source object, but the current QW-2093 relation still leaves it inside a frozen formula lineage rather than an explicit strict invariant map, and the upstream source explicitly labels a frozen alpha_geo relation.",
+    "The current QW-2093 alpha_s boundary is still not kernel-invariants-only because it depends on m_top/m_bottom and is explicitly labeled a frozen hierarchy-log boundary ansatz.",
+    "QW-2063 still reports strict_first_principles_foundational_constants_derived=false, so the mass-chain layer cannot yet be silently promoted into a first-principles bridge input.",
+    "QW-2064 remains useful but still carries a wide-CI warning, so micro constants should not be oversold as a fully stabilized invariants-only closure layer."
+  ],
+  "recommended_next_move": [
+    "For sin2: either replace alpha_geo with a strict-side invariant observable map, or export a non-transfer theorem stating that the legacy Weinberg-role touchpoint is not part of the strict bridge.",
+    "For alpha_s: attempt a dimensionless strict mass-observable ratio boundary in place of the current m_top/m_bottom GeV-level boundary, or demote the hierarchy-log boundary ansatz to non-export support only."
+  ],
+  "no_false_pass": true
+}

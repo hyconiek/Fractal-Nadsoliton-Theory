@@ -1,0 +1,52 @@
+{
+  "stage": "P1058",
+  "status": "PASS_CURRENT_STRICT_T173_T176_SOURCE_SIDE_INPUT_LEG_ATTEMPT_EXACT_LOWER_SUPPLIER_BOUNDARY_TARGET_AR_ATTEMPT_EXACT_FURTHER_LOWER_BOUNDARY_TARGET_AR_ATTEMPT_EXPORTED",
+  "as_of": "2026-03-23",
+  "attempt_name": "W_strict_t173_t176_source_side_input_leg_attempt_exact_lower_supplier_boundary_target_ar_attempt_exact_further_lower_boundary_target_ar_attempt_v1",
+  "target_name": "source_side_input_leg_attempt_exact_lower_supplier_boundary_target_actual_realization_attempt_exact_further_lower_boundary_target_v1",
+  "attempt_exported_on_current_repo_state": true,
+  "keeps_success_failure_open": true,
+  "keeps_source_side_input_leg_actual_export_open": true,
+  "keeps_full_c_v1_transported_section_lift_open": true,
+  "keeps_t176_open": true,
+  "uses_noncyclic_guardrail": true,
+  "no_false_pass": true,
+  "checks": [
+    {
+      "id": "target_is_exported",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "P1056 already exports the exact T305 target."
+    },
+    {
+      "id": "nonexport_audit_passed",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "P1057 already freezes that the exact T305 target still lacks actual realization on the current repo state."
+    },
+    {
+      "id": "t224_support_attempt_still_explicit",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "P770 still provides the exact older lower support attempt for the new T306 attempt."
+    },
+    {
+      "id": "t306_attempt_shape_is_frozen",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "T306 freezes one exact first actual-realization attempt instance over the exact T305 target while keeping the noncyclic guardrail explicit."
+    },
+    {
+      "id": "attempt_exported_on_current_repo_state",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Therefore the current repo exports one exact first actual-realization attempt over the exact T305 target."
+    }
+  ],
+  "blocking_checks": []
+}

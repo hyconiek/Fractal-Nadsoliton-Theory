@@ -1,0 +1,69 @@
+{
+  "stage": "F791",
+  "packet_name": "CurrentStrictAlphaSSelectionPrincipleTarget_v1",
+  "status": "F791_EXECUTED_CURRENT_STRICT_ALPHA_S_SELECTION_PRINCIPLE_TARGET_PACKET_NO_FALSE_PASS",
+  "as_of": "2026-03-19",
+  "inputs": {
+    "p791_selection_principle_reuse_probe": "fundamental_action_reconstruction/generated/p791_current_strict_alpha_s_selection_principle_reuse_audit_probe.json",
+    "f790_canonical_anchor_selection_target": "fundamental_action_reconstruction/generated/f790_current_strict_alpha_s_canonical_anchor_selection_target_packet.json"
+  },
+  "why_this_packet_exists": [
+    "F790 freezes the larger canonical-anchor selection target and names selection_principle_ref as a required field.",
+    "P791 shows that no currently exported strict selection theorem can be lawfully reused to fill that field on the alpha_s lane."
+  ],
+  "target_object": {
+    "object_id": "alpha_s_selection_principle_target_v1",
+    "goal": "Freeze the exact alpha_s-specific strict selection-principle object required before selection_principle_ref can be filled on the canonical anchor lane.",
+    "required_fields": [
+      {
+        "name": "candidate_family_domain_ref",
+        "required": true,
+        "hard_limit": "Must point to one explicit admissible alpha_s normalized candidate-family domain; probe-local family lists are not enough."
+      },
+      {
+        "name": "selection_objective_or_order_rule_ref",
+        "required": true,
+        "hard_limit": "Must export one strict-side objective or order rule selecting among the admissible alpha_s candidate families; verbal plausibility is forbidden."
+      },
+      {
+        "name": "strict_input_chain_ref",
+        "required": true,
+        "hard_limit": "Must reference only strict-side exported inputs and must not reintroduce GeV fields or host matching."
+      },
+      {
+        "name": "uniqueness_or_finite_residual_rule_ref",
+        "required": true,
+        "hard_limit": "Must prove unique family selection or else name one explicit finite residual ambiguity and its deterministic fixing rule."
+      },
+      {
+        "name": "selected_family_output_schema",
+        "required": true,
+        "hard_limit": "Must output the selected family identifier and the selected normalization rule explicitly."
+      },
+      {
+        "name": "nontransfer_boundary_ref",
+        "required": true,
+        "hard_limit": "Must keep family selection separate from the later anchor-to-boundary semantic upgrade and from n_f attachment."
+      },
+      {
+        "name": "hard_limits",
+        "required": true,
+        "hard_limit": "Must explicitly deny Standard Model identification, QCD closure, and ToE closure."
+      }
+    ]
+  },
+  "current_honest_reading": [
+    "The repo has a formal strict-selection template elsewhere, but alpha_s still lacks its own admissible domain, selection rule, and uniqueness support.",
+    "F791 therefore narrows the blocker from generic selection language to one exact missing alpha_s-side object.",
+    "This prevents false reuse: analogy to F447/N483 is allowed as a template, not as a semantic transfer."
+  ],
+  "recommended_next_move": "Build one narrow probe testing whether the current P789 family space admits a nonarbitrary strict objective or order rule that selects one family without host matching or GeV reintroduction.",
+  "hard_limits": [
+    "Does not claim that the alpha_s selection principle already exists.",
+    "Does not claim that selection_principle_ref is discharged.",
+    "Does not claim alpha_s boundary export readiness.",
+    "Does not claim QCD closure.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}

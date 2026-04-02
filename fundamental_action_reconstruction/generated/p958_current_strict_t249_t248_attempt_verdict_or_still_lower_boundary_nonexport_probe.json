@@ -1,0 +1,59 @@
+{
+  "stage": "P958",
+  "status": "PASS_STRICT_T249_PAIR12_ENTRY_POINT_EXACT_LOWER_ATTEMPT_LEVEL_FAILURE_BOUNDARY_ACTUAL_REALIZATION_ATTEMPT_VERDICT_OR_EXACT_STILL_LOWER_BOUNDARY_REFINEMENT_NONEXPORT_AUDITED",
+  "as_of": "2026-03-22",
+  "lane": "t248_attempt_verdict_or_still_lower_refinement_nonexport_only",
+  "t249_target_name": "StrictT248ExactLowerAttemptLevelFailureBoundaryActualRealizationAttemptVerdictOrExactStillLowerBoundaryRefinementNonexportBoundary_strict_v1",
+  "t249_target_exported_on_current_repo_state": false,
+  "current_repo_still_lacks_exact_lower_attempt_level_failure_boundary_realization_verdict_for_t248_exact_attempt": true,
+  "current_repo_still_lacks_exact_still_lower_boundary_refinement_below_t248_exact_attempt": true,
+  "next_honest_move_is_freeze_exact_still_lower_boundary_refinement_below_t248_exact_attempt": true,
+  "positive_exact_lower_attempt_level_failure_boundary_realization_verdict_candidates": [],
+  "positive_exact_still_lower_boundary_refinement_candidates": [],
+  "checks": [
+    {
+      "id": "p956_already_ordered_branch_to_one_actual_attempt_then_still_lower_refinement",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "P956 already reduced the branch ordering to one actual attempt first and only then one still-lower refinement if needed."
+    },
+    {
+      "id": "t248_attempt_already_exported_and_still_open",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "T248/P957 already export one exact first actual-realization attempt that still keeps verdict and still-lower refinement open."
+    },
+    {
+      "id": "t246_t248_same_exact_route_and_same_open_boundary_still_frozen",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "T246 and T248 still freeze the same exact lower attempt-level failure-boundary lane on the same exact T238 route."
+    },
+    {
+      "id": "current_repo_has_exact_lower_attempt_level_failure_boundary_realization_verdict_for_t248_attempt",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "No current repo artifact exports one exact lower attempt-level failure-boundary realization verdict for the exact T248 attempt."
+    },
+    {
+      "id": "current_repo_has_exact_still_lower_boundary_refinement_below_t248_attempt",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "No current repo artifact exports one exact still-lower boundary refinement below the exact T248 attempt."
+    },
+    {
+      "id": "next_honest_move_is_freeze_exact_still_lower_boundary_refinement_below_t248_exact_attempt",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Therefore the next honest move is now to freeze one exact still-lower boundary refinement target below the same exact T248 attempt."
+    }
+  ],
+  "blocking_checks": [],
+  "no_false_pass": true
+}

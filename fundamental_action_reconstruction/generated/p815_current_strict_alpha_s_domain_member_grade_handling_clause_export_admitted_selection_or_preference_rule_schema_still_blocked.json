@@ -1,0 +1,78 @@
+{
+  "stage": "P815",
+  "status": "P815_CURRENT_STRICT_ALPHA_S_DOMAIN_MEMBER_GRADE_HANDLING_CLAUSE_EXPORT_ADMITTED_SELECTION_OR_PREFERENCE_RULE_SCHEMA_STILL_BLOCKED",
+  "as_of": "2026-03-19",
+  "inputs": {
+    "f814_schema_only_target_packet": "fundamental_action_reconstruction/generated/f814_current_strict_alpha_s_strict_source_shannon_source_binding_selection_or_preference_rule_schema_target_packet.json",
+    "f813_candidate_support_domain_packet": "fundamental_action_reconstruction/generated/f813_current_strict_alpha_s_strict_source_shannon_source_binding_candidate_support_domain_packet.json",
+    "f811_source_binding_target_packet": "fundamental_action_reconstruction/generated/f811_current_strict_alpha_s_strict_source_shannon_shift_to_domain_source_binding_target_packet.json",
+    "p811_source_support_probe": "fundamental_action_reconstruction/generated/p811_current_strict_alpha_s_source_support_present_exact_source_binding_unexported_adapter_action_schema_blocked_source_binding_target_freeze_required.json",
+    "p755_future_entry_target_probe": "fundamental_action_reconstruction/generated/p755_current_strict_t209_t26_component2_minimal_designated_pair12_noncyclic_entry_object_target_probe.json",
+    "p756_future_entry_actual_realization_nonexport_audit": "fundamental_action_reconstruction/generated/p756_current_strict_t210_t26_component2_minimal_designated_pair12_noncyclic_entry_object_actual_realization_nonexport_audit_probe.json"
+  },
+  "grade_clause_candidate": {
+    "clause_id": "alpha_s_strict_source_shannon_source_binding_domain_member_grade_handling_clause_v1",
+    "candidate_source_support_domain_ref": "alpha_s_strict_source_shannon_source_binding_candidate_support_domain_v1",
+    "fields": {
+      "candidate_support_member_id": "current_source_candidate_support",
+      "candidate_support_ref": "BasisPair_strict_nad12_sigma_residual_nonequality_shannon_weighted_population_refinement_candidate_v1",
+      "candidate_support_grade": "current_candidate_only",
+      "future_entry_support_member_id": "lawful_future_entry_object_support",
+      "future_entry_support_ref": "StrictT26Component2MinimalDesignatedPair12NoncyclicEntryObjectTarget_strict_v1",
+      "future_entry_support_grade": "future_only_entry_target",
+      "no_silent_grade_promotion": true,
+      "candidate_support_stays_below_actual_source_binding": true,
+      "future_entry_support_stays_below_actual_entry_and_actual_source_binding": true
+    }
+  },
+  "theorem_result": {
+    "domain_member_grade_handling_clause_exportable_now": true,
+    "selection_or_preference_rule_schema_exported_now": false,
+    "next_honest_move_is_export_grade_clause_leave_selection_schema_blocked": true,
+    "no_false_pass": true
+  },
+  "checks": [
+    {
+      "id": "f814_requires_grade_clause_and_selection_schema",
+      "pass": true,
+      "details": "F814 already freezes the exact schema-only target and requires both domain_member_grade_handling_clause and selection_or_preference_rule_schema."
+    },
+    {
+      "id": "f813_exports_exact_domain_with_explicit_member_grades",
+      "pass": true,
+      "details": "F813 already exports the exact finite support domain and keeps both member grades explicit."
+    },
+    {
+      "id": "f321_side_support_still_candidate_only",
+      "pass": true,
+      "details": "The current strict-source Shannon support remains the F321 candidate-only object and is not promoted into actual source binding."
+    },
+    {
+      "id": "future_entry_support_still_future_only_and_below_actual_realization",
+      "pass": true,
+      "details": "The lawful future entry support remains future-only and below actual realization on current repo state."
+    },
+    {
+      "id": "grade_handling_clause_can_be_exported_without_selecting_one_source",
+      "pass": true,
+      "details": "The current exports are explicit enough to support one exact grade-handling clause without thereby selecting one source or exporting a source-binding relation."
+    },
+    {
+      "id": "selection_or_preference_rule_schema_remains_blocked",
+      "pass": true,
+      "details": "The selection/preference rule schema itself remains blocked and unexported on current repo state."
+    }
+  ],
+  "failed_checks": [],
+  "current_honest_reading": [
+    "The exact support domain already keeps both member grades explicit.",
+    "Those grade facts are now strong enough to export one exact no-grade-promotion clause on the F813 domain.",
+    "What remains missing is still only the selection/preference rule schema acting on that already grade-disciplined domain."
+  ],
+  "recommended_next_packet": {
+    "id": "F815_CURRENT_STRICT_ALPHA_S_STRICT_SOURCE_SHANNON_SOURCE_BINDING_DOMAIN_MEMBER_GRADE_HANDLING_CLAUSE_PACKET",
+    "goal": "Export the exact grade-handling clause while leaving the source-binding selection/preference schema unresolved.",
+    "export_object_id": "alpha_s_strict_source_shannon_source_binding_domain_member_grade_handling_clause_v1"
+  },
+  "no_false_pass": true
+}

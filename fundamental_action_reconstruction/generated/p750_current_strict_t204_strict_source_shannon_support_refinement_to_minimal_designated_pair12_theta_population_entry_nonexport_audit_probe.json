@@ -1,0 +1,152 @@
+{
+  "stage": "P750",
+  "status": "PASS_STRICT_SOURCE_SHANNON_SUPPORT_REFINEMENT_TO_MINIMAL_DESIGNATED_PAIR12_THETA_POPULATION_ENTRY_NONEXPORT_AUDITED",
+  "as_of": "2026-03-18",
+  "generated_at_utc": "2026-03-18T05:57:36.538762+00:00",
+  "theorem_result": {
+    "t204_target_name": "StrictSourceShannonSupportRefinementToMinimalDesignatedPair12ThetaPopulationEntry_strict_v1",
+    "t204_target_exported_on_current_repo_state": false,
+    "p749_pair_indexed_population_anchor_entry_bridge_already_nonexported": true,
+    "current_minimal_designated_pair12_component2_family_frozen": true,
+    "current_strict_source_shannon_theta_support_refinement_candidate_exported": true,
+    "current_strict_source_shannon_pair_population_support_refinement_candidate_exported": true,
+    "current_strict_source_shannon_theta_support_refinement_remains_generic_pair_indexed_theta_slot_values_only": true,
+    "current_strict_source_shannon_pair_population_support_refinement_remains_generic_pair_indexed_population_syntax_only": true,
+    "current_strict_source_shannon_route_remains_nonentering_for_minimal_designated_pair12_theta_population_entry": true,
+    "current_strict_source_shannon_route_has_exported_minimal_designated_pair12_theta_population_entry": false,
+    "positive_entry_candidates": [],
+    "no_false_pass": true
+  },
+  "checks": [
+    {
+      "id": "p749_pair_indexed_population_anchor_entry_bridge_already_nonexported",
+      "actual": {
+        "strongest_support_refinement_exported": true,
+        "anchor_entry_nonentering": true,
+        "anchor_entry_exported": false,
+        "t203_exported": false
+      },
+      "expected": {
+        "strongest_support_refinement_exported": true,
+        "anchor_entry_nonentering": true,
+        "anchor_entry_exported": false,
+        "t203_exported": false
+      },
+      "pass": true,
+      "meaning": "P749 already freezes that even the strongest current strict-source Shannon support-refinement route still does not enter T26 component 2."
+    },
+    {
+      "id": "current_minimal_designated_pair12_component2_family_frozen",
+      "actual": {
+        "pair_indexed_population_anchor_target_present": true,
+        "strict_internal_orientation_provider_target_present": true,
+        "minimal_designated_pair_family_pair12_present": true
+      },
+      "expected": {
+        "pair_indexed_population_anchor_target_present": true,
+        "strict_internal_orientation_provider_target_present": true,
+        "minimal_designated_pair_family_pair12_present": true
+      },
+      "pass": true,
+      "meaning": "T26 already freezes component 2 on at least the minimal designated pair family [pair1, pair2]."
+    },
+    {
+      "id": "current_strict_source_shannon_theta_support_refinement_candidate_exported",
+      "actual": {
+        "theta_support_object_present_in_f322": true,
+        "theta_support_phrase_present": true,
+        "theta_support_object_present_in_n433": true
+      },
+      "expected": {
+        "theta_support_object_present_in_f322": true,
+        "theta_support_phrase_present": true,
+        "theta_support_object_present_in_n433": true
+      },
+      "pass": true,
+      "meaning": "F322/N433 already export one real strict-source Shannon theta-support refinement candidate on this route."
+    },
+    {
+      "id": "current_strict_source_shannon_pair_population_support_refinement_candidate_exported",
+      "actual": {
+        "pair_population_support_object_present_in_f323": true,
+        "pair_population_support_phrase_present": true,
+        "pair_population_support_object_present_in_n434": true
+      },
+      "expected": {
+        "pair_population_support_object_present_in_f323": true,
+        "pair_population_support_phrase_present": true,
+        "pair_population_support_object_present_in_n434": true
+      },
+      "pass": true,
+      "meaning": "F323/N434 already export one real strict-source Shannon pair-population support-refinement candidate on this route."
+    },
+    {
+      "id": "current_strict_source_shannon_theta_support_refinement_remains_generic_pair_indexed_theta_slot_values_only",
+      "actual": {
+        "pair_indexed_slot_status_present": true,
+        "conditional_population_status_present": true,
+        "theta_slot_values_mentioned": true,
+        "actual_theta_values_exported": false,
+        "actual_u1_u2_population_exported": false,
+        "pair12_designated_family_mentioned": false,
+        "pair1_or_pair2_mentioned": false,
+        "anchor_target_mentioned": false,
+        "tau_src_candidate_v1_mentioned": false
+      },
+      "expected": {
+        "pair_indexed_slot_status_present": true,
+        "conditional_population_status_present": true,
+        "theta_slot_values_mentioned": true,
+        "actual_theta_values_exported": false,
+        "actual_u1_u2_population_exported": false,
+        "pair12_designated_family_mentioned": false,
+        "pair1_or_pair2_mentioned": false,
+        "anchor_target_mentioned": false,
+        "tau_src_candidate_v1_mentioned": false
+      },
+      "pass": true,
+      "meaning": "The strongest strict-source Shannon theta-support refinement lane still carries only generic pair-indexed candidate theta-slot values, not one actual [pair1,pair2] entry packet."
+    },
+    {
+      "id": "current_strict_source_shannon_pair_population_support_refinement_remains_generic_pair_indexed_population_syntax_only",
+      "actual": {
+        "pair_indexed_slot_status_present": true,
+        "conditional_population_status_present": true,
+        "u1_u2_population_syntax_present": true,
+        "actual_populated_basis_pair_exported": false,
+        "pair12_designated_family_mentioned": false,
+        "pair1_or_pair2_mentioned": false,
+        "anchor_target_mentioned": false,
+        "tau_src_candidate_v1_mentioned": false
+      },
+      "expected": {
+        "pair_indexed_slot_status_present": true,
+        "conditional_population_status_present": true,
+        "u1_u2_population_syntax_present": true,
+        "actual_populated_basis_pair_exported": false,
+        "pair12_designated_family_mentioned": false,
+        "pair1_or_pair2_mentioned": false,
+        "anchor_target_mentioned": false,
+        "tau_src_candidate_v1_mentioned": false
+      },
+      "pass": true,
+      "meaning": "The strongest strict-source Shannon pair-population support-refinement lane still carries only generic pair-indexed populated-instance syntax, not one actual [pair1,pair2] entry packet."
+    },
+    {
+      "id": "current_strict_source_shannon_route_remains_nonentering_for_minimal_designated_pair12_theta_population_entry",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "So the strongest current strict-source Shannon support-refinement route still remains nonentering for one minimal designated [pair1,pair2] theta/population entry packet on current exports."
+    },
+    {
+      "id": "current_strict_source_shannon_route_has_exported_minimal_designated_pair12_theta_population_entry",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "No current export turns the strongest strict-source Shannon support-refinement route into one actual minimal designated [pair1,pair2] theta/population entry packet."
+    }
+  ],
+  "blocking_checks": [],
+  "no_false_pass": true
+}

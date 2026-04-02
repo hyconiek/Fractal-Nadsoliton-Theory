@@ -1,0 +1,38 @@
+{
+  "stage": "P1120",
+  "status": "PASS_CURRENT_STRICT_T173_T176_EXISTING_F975_F960_T178_CURRENT_BEST_ACTUAL_REALIZATION_ATTEMPT_EXPORTED",
+  "as_of": "2026-04-02",
+  "attempt_object_id": "SourceTopologyToAtlasChartSeedSelectionBridge_current_best_actual_realization_attempt_v1",
+  "active_missing_bridge": "ResidualDatumPair12OrbitDirectionSelectionBridge_global_C_v1_strict_v1",
+  "target_candidate": "SourceTopologyToAtlasChartSeedSelectionBridge_global_C_v1_strict_v1",
+  "current_best_lower_refinement_target": "PositiveCorridorOuterInteriorChartSelectionBridge_global_C_v1_strict_v1",
+  "attempt_exported_on_current_repo_state": true,
+  "counts_as_lawful_supplier": false,
+  "counts_as_solution": false,
+  "counts_as_strict_physical_orientation_datum": false,
+  "checks": [
+    {
+      "id": "p1119_nonexport_audit_passed",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "P1119 already freezes that the admitted T178 candidate is still not actually realized and points to T180 as the sharpest lower refinement target."
+    },
+    {
+      "id": "t327_attempt_shape_frozen",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "T327 freezes one first actual-realization attempt object beneath the admitted T178 candidate."
+    },
+    {
+      "id": "attempt_exported_on_current_repo_state",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Therefore the repo now exports one first actual-realization attempt beneath the admitted T178 seed candidate, while keeping all discharge claims open."
+    }
+  ],
+  "blocking_checks": [],
+  "no_false_pass": true
+}

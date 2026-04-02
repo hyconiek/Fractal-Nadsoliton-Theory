@@ -1,0 +1,57 @@
+{
+  "stage": "P960",
+  "status": "PASS_STRICT_T251_PAIR12_ENTRY_POINT_EXACT_STILL_LOWER_BOUNDARY_REFINEMENT_ACTUAL_REALIZATION_NONEXPORT_AUDITED",
+  "as_of": "2026-03-22",
+  "lane": "t250_exact_still_lower_boundary_refinement_actual_realization_nonexport_only",
+  "t251_target_name": "Pair12EntryPointExactStillLowerBoundaryRefinement_strict_v1",
+  "t251_target_exported_on_current_repo_state": false,
+  "current_repo_still_does_not_export_actual_realization_of_t250_target": true,
+  "current_t250_exact_still_lower_boundary_refinement_target_remains_future_only_not_actual_export": true,
+  "next_honest_move_is_actual_t250_exact_still_lower_boundary_refinement_realization_attempt_or_later_further_lower_boundary_refinement": true,
+  "checks": [
+    {
+      "id": "p959_t250_target_already_exported_only_at_future_only_strength",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "P959 already freezes one exact future-only still-lower boundary-refinement target below the fixed T248 attempt on the same exact T238 route."
+    },
+    {
+      "id": "p958_branch_ordering_already_prefers_exact_still_lower_boundary_refinement_first",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "P958 already orders conservative continuation toward the exact still-lower boundary-refinement branch first."
+    },
+    {
+      "id": "t248_t250_same_exact_still_lower_boundary_refinement_route_still_frozen",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "T248 and T250 still freeze the same exact still-lower boundary-refinement route below the fixed T248 attempt on the same exact T238 lane."
+    },
+    {
+      "id": "current_repo_has_exported_actual_exact_still_lower_boundary_refinement_target_below_t248_attempt",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "No current repo artifact exports one actual realization of the exact T250 still-lower boundary-refinement target."
+    },
+    {
+      "id": "current_repo_still_does_not_export_actual_realization_of_t250_target",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Therefore the exact T250 still-lower boundary-refinement target still remains unexported on the current repo state."
+    },
+    {
+      "id": "next_honest_move_is_actual_t250_exact_still_lower_boundary_refinement_realization_attempt_or_later_further_lower_boundary_refinement",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Hence the next honest move is now one actual-realization attempt of the exact T250 target or, only if the same route later sharpens lawfully, one further-lower boundary refinement."
+    }
+  ],
+  "blocking_checks": [],
+  "no_false_pass": true
+}

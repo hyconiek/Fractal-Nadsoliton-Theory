@@ -1,0 +1,74 @@
+{
+  "stage": "P805",
+  "status": "P805_CURRENT_STRICT_ALPHA_S_ACTING_INPUT_BUNDLE_EXPORT_ADMITTED_PROVIDER_ACTION_RULE_STILL_BLOCKED",
+  "as_of": "2026-03-19",
+  "inputs": {
+    "p804_alignment_probe": "fundamental_action_reconstruction/generated/p804_current_strict_alpha_s_same_domain_compositional_alignment_bundle_admission_probe.json",
+    "f804_alignment_packet": "fundamental_action_reconstruction/generated/f804_current_strict_alpha_s_same_domain_compositional_alignment_bundle_packet.json",
+    "f802_provider_action_target": "fundamental_action_reconstruction/generated/f802_current_strict_alpha_s_provider_action_rule_target_packet.json",
+    "p789_candidate_family_probe": "fundamental_action_reconstruction/generated/p789_current_strict_alpha_s_normalized_boundary_interface_candidate_probe.json",
+    "p792_family_winner_relation": "fundamental_action_reconstruction/generated/p792_current_strict_alpha_s_family_selection_order_rule_probe.json",
+    "p797_extremum_relation": "fundamental_action_reconstruction/generated/p797_current_strict_alpha_s_invariant_extremum_vs_reference_scale_audit_probe.json",
+    "p794_bounded_boundary_relation": "fundamental_action_reconstruction/generated/p794_current_strict_alpha_s_normalization_boundary_subclause_audit_probe.json",
+    "p710_nonstrict_proxy_to_gev_probe": "fundamental_action_reconstruction/P710_CURRENT_NONSTRICT_PROXY_TO_GEV_CALIBRATION_MAP_FROM_F704_EIGENSPECTRUM_PROBE.md",
+    "proxy_to_gev_policy": "fundamental_action_reconstruction/external_data/proxy_to_gev_calibration_policy_v1.json"
+  },
+  "same_domain_acting_input_bundle_candidate": {
+    "alignment_bundle_ref": "alpha_s_reference_scale_same_domain_compositional_alignment_bundle_v1",
+    "provider_action_target_ref": "alpha_s_reference_scale_provider_action_rule_target_v1",
+    "acting_family_id": "f704_max_mode_anchor_family",
+    "acting_normalization_rule": "mu_tilde_i := m_proxy_i / max_j(m_proxy_j)",
+    "acting_mu0_tilde": 1.0,
+    "acting_top_boundary_point": 1.0,
+    "acting_support_refs": [
+      "fundamental_action_reconstruction/generated/p789_current_strict_alpha_s_normalized_boundary_interface_candidate_probe.json",
+      "fundamental_action_reconstruction/generated/p792_current_strict_alpha_s_family_selection_order_rule_probe.json",
+      "fundamental_action_reconstruction/generated/p797_current_strict_alpha_s_invariant_extremum_vs_reference_scale_audit_probe.json",
+      "fundamental_action_reconstruction/generated/p794_current_strict_alpha_s_normalization_boundary_subclause_audit_probe.json"
+    ]
+  },
+  "clause_split": {
+    "acting_input_bundle_clause_status": "export_admitted",
+    "provider_action_rule_clause_status": "blocked_nonexport",
+    "sharp_blocker_clause": "provider_action_rule_ref"
+  },
+  "checks": [
+    {
+      "id": "f804_already_exports_same_domain_alignment_below_missing_action_rule",
+      "pass": true,
+      "details": "F804 already exports the aligned same-domain chain beneath the missing provider action rule."
+    },
+    {
+      "id": "winner_normalization_and_boundary_determine_one_acting_input_tuple",
+      "pass": true,
+      "details": "The current same-domain chain determines one explicit acting tuple: winning family, max-normalization rule, and mu0_tilde/top-boundary point 1."
+    },
+    {
+      "id": "acting_input_tuple_stays_fully_dimensionless_and_same_domain",
+      "pass": true,
+      "details": "The acting input tuple remains fully dimensionless, uses only exported strict objects, and stays on the same F704-based domain."
+    },
+    {
+      "id": "acting_input_bundle_still_stops_before_active_provider_action_rule",
+      "pass": true,
+      "details": "F802 still records both the acting input ref and the active provider action rule as distinct missing layers."
+    },
+    {
+      "id": "nonstrict_calibration_lane_explicitly_excluded",
+      "pass": true,
+      "details": "The proxy-to-GeV calibration lane remains explicitly excluded from the acting-input question."
+    }
+  ],
+  "failed_checks": [],
+  "current_honest_reading": [
+    "The current same-domain alpha_s lane already determines one explicit acting input bundle beneath the missing provider action rule.",
+    "That bundle selects the winning family, the winning max-normalization rule, and the acting point mu0_tilde = 1 on the same lane.",
+    "What remains missing is the active rule that would act on this already-determined input bundle."
+  ],
+  "recommended_next_packet": {
+    "id": "F805_CURRENT_STRICT_ALPHA_S_ACTING_INPUT_BUNDLE_PACKET",
+    "goal": "Export the admitted same-domain acting input bundle explicitly while keeping the provider action rule unresolved.",
+    "export_object_id": "alpha_s_reference_scale_acting_input_bundle_v1"
+  },
+  "no_false_pass": true
+}
