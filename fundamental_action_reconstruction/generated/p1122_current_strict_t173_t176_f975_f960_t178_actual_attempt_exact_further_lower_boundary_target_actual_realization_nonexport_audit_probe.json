@@ -1,0 +1,53 @@
+{
+  "stage": "P1122",
+  "status": "PASS_CURRENT_STRICT_T173_T176_EXISTING_F975_F960_T178_CURRENT_BEST_ACTUAL_REALIZATION_ATTEMPT_EXACT_FURTHER_LOWER_BOUNDARY_TARGET_ACTUAL_REALIZATION_NONEXPORT_AUDITED",
+  "as_of": "2026-04-25",
+  "target_name": "SourceTopologyToAtlasChartSeedSelectionBridge_current_best_actual_realization_attempt_exact_further_lower_boundary_target_v1",
+  "attempt_object_id": "SourceTopologyToAtlasChartSeedSelectionBridge_current_best_actual_realization_attempt_v1",
+  "active_missing_bridge": "ResidualDatumPair12OrbitDirectionSelectionBridge_global_C_v1_strict_v1",
+  "target_candidate": "SourceTopologyToAtlasChartSeedSelectionBridge_global_C_v1_strict_v1",
+  "current_best_lower_support_family_target": "PositiveCorridorOuterInteriorChartSelectionBridge_global_C_v1_strict_v1",
+  "current_repo_has_exported_actual_realization_of_t328_target": false,
+  "t328_target_still_remains_future_only_not_actual_export": true,
+  "known_positive_actual_realization_candidates": [],
+  "next_honest_move_is_exact_actual_realization_attempt_of_same_t328_target": true,
+  "checks": [
+    {
+      "id": "p1121_pre_target_boundary_proved",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "P1121 already froze that the exact lower boundary under the T327 attempt was still missing before T328 was introduced."
+    },
+    {
+      "id": "t328_exact_target_frozen",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "T328 now freezes one exact further lower-boundary target beneath the same T327 attempt without promotion by fiat."
+    },
+    {
+      "id": "current_repo_has_exported_actual_realization_of_t328_target",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "No stronger actual-realization artifact for this exact T328 target is exported on the current repo state."
+    },
+    {
+      "id": "t328_target_still_remains_future_only_not_actual_export",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Therefore the exact T328 target still remains future-only and not actually realized."
+    },
+    {
+      "id": "next_honest_move_is_exact_actual_realization_attempt_of_same_t328_target",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "The next honest move is now one exact actual-realization attempt on the same T328 target."
+    }
+  ],
+  "blocking_checks": [],
+  "no_false_pass": true
+}
