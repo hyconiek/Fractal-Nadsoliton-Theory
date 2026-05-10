@@ -1,0 +1,46 @@
+{
+  "as_of": "2026-05-10",
+  "checks": {
+    "p1152_failed": 0,
+    "p1177_overall_pass": true,
+    "p1182_band_lock_pass": true
+  },
+  "note": "Drift check only; no strict-core closure or QW-2191 discharge claim.",
+  "packet": "P1185",
+  "post_certification_stable": true,
+  "registry": "/workspace/Fractal-Nadsoliton-Theory/fundamental_action_reconstruction/generated/p1184_promoted_candidate_registry.json",
+  "runs": {
+    "p1152": {
+      "cmd": [
+        "/root/.pyenv/versions/3.14.4/bin/python",
+        "/workspace/Fractal-Nadsoliton-Theory/fundamental_action_reconstruction/p1152_strict_candidate_registry_runner.py",
+        "--require-safe-region",
+        "--rank-by-safe-margin",
+        "--enforce-shortlist-consistency",
+        "/workspace/Fractal-Nadsoliton-Theory/fundamental_action_reconstruction/generated/p1184_promoted_candidate_registry.json"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "[P1152] total=1 passed=1 failed=0 wrote /workspace/Fractal-Nadsoliton-Theory/fundamental_action_reconstruction/generated/p1152_strict_candidate_registry_runner_summary.json\n[P1152] Safe-margin shortlist for next physical tests:\n  1. /workspace/Fractal-Nadsoliton-Theory/fundamental_action_reconstruction/generated/p1170_neighbor_3.json margin=0.0"
+    },
+    "p1177": {
+      "cmd": [
+        "/root/.pyenv/versions/3.14.4/bin/python",
+        "/workspace/Fractal-Nadsoliton-Theory/fundamental_action_reconstruction/p1177_shortlist_consistency_check.py",
+        "/workspace/Fractal-Nadsoliton-Theory/fundamental_action_reconstruction/generated/p1152_strict_candidate_registry_runner_summary.json"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "[P1177] overall_pass=True checked=1 wrote /workspace/Fractal-Nadsoliton-Theory/fundamental_action_reconstruction/generated/p1177_shortlist_consistency_check_summary.json"
+    },
+    "p1182": {
+      "cmd": [
+        "/root/.pyenv/versions/3.14.4/bin/python",
+        "/workspace/Fractal-Nadsoliton-Theory/fundamental_action_reconstruction/p1182_robustness_band_lock_check.py"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "[P1182] band_lock_pass=True wrote /workspace/Fractal-Nadsoliton-Theory/fundamental_action_reconstruction/generated/p1182_robustness_band_lock_check_summary.json"
+    }
+  }
+}
