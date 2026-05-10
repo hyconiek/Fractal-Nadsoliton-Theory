@@ -1,0 +1,55 @@
+{
+  "stage": "P1105",
+  "status": "PASS_CURRENT_STRICT_T173_T176_MINIMAL_ONRD_BOUNDARY_TO_ACTIVE_BRIDGE_AR_ATTEMPT_EXACT_ROUTE_COHERENCE_WITNESS_REFINEMENT_TARGET_ACTUAL_REALIZATION_NONEXPORT_AUDITED",
+  "as_of": "2026-04-01",
+  "target_name": "MinimalONRDBoundaryToActiveBridgeExactReductionTargetActualRealizationAttemptExactRouteCoherenceWitnessRefinementTarget_v1",
+  "current_repo_has_exported_actual_realization_of_t322_target": false,
+  "t322_target_still_remains_future_only_not_actual_export": true,
+  "next_honest_move_is_exact_actual_realization_attempt_of_same_t322_target": true,
+  "checks": [
+    {
+      "id": "t322_target_already_exported_only_at_future_only_strength",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "P1104 already exports the exact T322 route-coherence-witness target only at future-only strength."
+    },
+    {
+      "id": "p1103_branch_ordering_already_prefers_exact_route_coherence_witness_first",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "P1103 already orders continuation toward the exact route-coherence-witness branch first."
+    },
+    {
+      "id": "t322_same_exact_route_coherence_witness_route_still_frozen",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "T322 still freezes the same exact route-coherence-witness refinement route below the fixed T321 attempt."
+    },
+    {
+      "id": "current_repo_has_exported_actual_realization_of_t322_target",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "No stronger actual-realization artifact for this exact T322 target is exported on the current repo state."
+    },
+    {
+      "id": "t322_target_still_remains_future_only_not_actual_export",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Therefore the exact T322 target still remains future-only and not actually realized."
+    },
+    {
+      "id": "next_honest_move_is_exact_actual_realization_attempt_of_same_t322_target",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "The next honest move is now one exact actual-realization attempt on the same T322 target."
+    }
+  ],
+  "blocking_checks": [],
+  "no_false_pass": true
+}

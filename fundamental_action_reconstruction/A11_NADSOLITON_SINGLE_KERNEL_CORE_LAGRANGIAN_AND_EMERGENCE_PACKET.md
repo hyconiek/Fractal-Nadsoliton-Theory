@@ -1,7 +1,22 @@
+
+
+
+To wina dwóch bardzo specyficznych błędów w parserze Markdown na GitHubie (MathJax):
+
+1. Błąd **"Extra open brace..."** przy `\sum_{i<j}` wynika z tego, że znak `<` jest interpretowany przez Markdown jako... początek znacznika HTML (np. `<div`). To "psuje" klamry LaTeXa. Rozwiązaniem jest użycie komendy `\lt` (less than) zamiast znaku `<`.
+2. Zepsute **3 punkty z listą** wynikają z tego, że GitHub bardzo źle radzi sobie z blokami wielolinijkowych równań umieszczonymi wewnątrz punktowanych list (gubi wcięcia). Rozwiązaniem jest zapisanie ich jako tzw. *inline math* (w jednej linii, otoczone pojedynczym znakiem `$`).
+
+Wróciłem do standardowych bloków `$$`, naprawiłem usterkę z `<` oraz zamieniłem problematyczną listę na w pełni bezpieczny zapis w jednej linii. Teraz wyrenderuje się bezbłędnie.
+
+Oto ostateczny kod:
+
+***
+
+```markdown
 # A11 Nadsoliton Single‑Kernel Core Lagrangian + Emergence Map (Strict Candidate Packet)
 
 Status: `A11_EXECUTED_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET_NO_FALSE_PASS`  
-As of: `2026-03-15`
+As of: `2026-03-13`
 
 ## Goal
 
@@ -15,8 +30,8 @@ without explaining the nadsoliton in terms of external theories.
 
 This packet is a **definition/packaging** object:
 
-1. it rewrites the already exported canonical `12×Psi + Phi` action template (`QW-2163/2165/2166`) into a compact
-   “one kernel” form on a typed `Z_12` carrier, and
+1. it rewrites the already exported canonical $12\times\Psi + \Phi$ action template (`QW-2163/2165/2166`) into a compact
+   “one kernel” form on a typed $\mathbb{Z}_{12}$ carrier, and
 2. it states (as a program-level emergence map) which operations on this Lagrangian correspond to the repo’s
    intended emergence ladder.
 
@@ -36,18 +51,18 @@ nadsoliton → light → matter → emergent observer.
 ## Strict-admissible sources reused
 
 1. `QW-2163`
-   - full canonical `12×Psi + Phi` Lagrangian density template with explicit kernel-index mixing symbols `K_{i,j}`.
+   - full canonical $12\times\Psi + \Phi$ Lagrangian density template with explicit kernel-index mixing symbols $K_{i,j}$.
 2. `QW-2165`
-   - exhaustive canonical EoM confirming the structural content (locality in `x`, self-polynomials, Yukawa cross terms,
+   - exhaustive canonical EoM confirming the structural content (locality in $x$, self-polynomials, Yukawa cross terms,
      bidirectional kernel mixing).
 3. `QW-2166`
-   - exhaustive canonical Hessian / linearized EoM (diagonal stencil and `Psi–Phi` cross-couplings).
+   - exhaustive canonical Hessian / linearized EoM (diagonal stencil and $\Psi$--$\Phi$ cross-couplings).
 4. `QW-2190/QW-2191`
-   - the strict `n=12` ring scaffold and the strict-core uniqueness obstruction from degenerate 2D modes (`O(2)` family).
+   - the strict $n=12$ ring scaffold and the strict-core uniqueness obstruction from degenerate 2D modes ($O(2)$ family).
 5. `QW-2118/QW-2049`
-   - the strict working kernel tuple and the `n=12` cyclic-distance profile evaluation used in the kernel-mode lane.
+   - the strict working kernel tuple and the $n=12$ distance-profile evaluation used in the kernel-mode lane.
 6. `F329`
-   - typed `Z_12` carrier + regular action on the 12-slot scaffold (to name the internal “ring” indices).
+   - typed $\mathbb{Z}_{12}$ carrier + regular action on the 12-slot scaffold (to name the internal “ring” indices).
 
 ## Scope & hard limits (no false pass)
 
@@ -56,113 +71,93 @@ This packet:
 1. exports the **nadsoliton core** only (no external-theory interpretation),
 2. does **not** assert that all local coefficient families (`m2_psi*`, `g4_psi*`, `g6_psi*`, `gY*`) are already
    strict-derived from the kernel alone,
-3. does **not** claim any **global** discharge of `QW-2191` from kernel-alone data; however, the current repo does export
-   lane-scoped `O(2) -> Z2` axis cuts (diagonal/local and Shannon element-order reference lanes) which canonicalize all
-   degenerate Fourier pairs on `n=12` **up to residual sign** (no selector closure implied),
+3. does **not** claim a strict-core $O(2)$ cut on `pair1` or a discharge of `QW-2191` (see `T166` and the diagonal
+   frontier),
 4. does **not** add “half-life / decay-time” terms into the Lagrangian (open-system decay is not a conservative
    Lagrangian ingredient on the current strict scope).
 
-## Co wynika z badań (repo-state, bez fałszywego PASS)
+## What follows from research (repo-state, no false PASS)
 
-W możliwie prostych słowach, **na obecnym stanie repo**:
+In the simplest possible terms, **at the current repo state**:
 
-1. Rdzeń nadsolitonu jest już *formalnie* zapisany jako lokalny układ pól:
-   - `12×Psi + Phi` z kinetyką, lokalnym potencjałem wielomianowym i sprzężeniem `Phi^2 Psi_i^2`,
-   - oraz z **mieszaniem indeksowym** `K_{i,j} Psi_i Psi_j` w tej samej gęstości Lagrangianu (`QW-2163`),
-   - a jego EoM i Hessian/linearizacja są wyeksportowane jako obiekty strict (`QW-2165`, `QW-2166`).
-2. W lane kernel-mode repo posiada jeden wybrany strict kernel roboczy `K_sg(d_cyc)` wraz z jego profilem na pierścieniu
-   `n=12` (`QW-2049`, `QW-2118`). To jest aktualny, najtwardszy **kandydat** na “jedno prawo sprzężeń wewnętrznych”.
-3. „Światło” (pierwsze wyłonienie) w sensie wewnętrznym teorii to:
-   - **mody liniaryzacji** (eigenmody operatora/Hessianu) wokół próżni nadsolitonu,
-   - co jest obiektem ściśle zdefiniowanym przez `QW-2166` (struktura stencila + mieszania + przekroje).
-4. W tej samej lane istnieje twarda przeszkoda unikatowości:
-   - zdegenerowane pary 2D generują ciągłą rodzinę wyboru bazy `O(2)` i sam kernel nie wybiera osi kanonicznie
+1. The nadsoliton core is already *formally* written as a local field system:
+   - $12\times\Psi + \Phi$ with kinetics, local polynomial potential, and $\Phi^2 \Psi_i^2$ coupling,
+   - and with **index mixing** $K_{i,j} \Psi_i \Psi_j$ in the same Lagrangian density (`QW-2163`),
+   - and its EoM and Hessian/linearization are exported as strict objects (`QW-2165`, `QW-2166`).
+2. In the kernel-mode lane, the repo possesses one selected strict working kernel $K_{\mathrm{sg}}(d)$ along with its profile on the
+   $n=12$ ring (`QW-2049`, `QW-2118`). This is the current, hardest **candidate** for "one internal coupling law".
+3. "Light" (first emergence) in the internal sense of the theory is:
+   - **linearization modes** (eigenmodes of the operator/Hessian) around the nadsoliton vacuum,
+   - which is an object strictly defined by `QW-2166` (stencil structure + mixing + cross-sections).
+4. In the same lane, there is a hard uniqueness obstruction:
+   - degenerate 2D pairs generate a continuous family of $O(2)$ basis choices, and the kernel itself does not pick an axis canonically
      (`QW-2191`).
-5. Jednak strict core ma już dwa jawne, niezależne **wewnętrzne** mechanizmy osiowej kanonizacji (axis-only) na `n=12`,
-   które tną `O(2)` do residual `Z2` na wszystkich parach `pair_m (m=1..5)` (bez globalnego discharge i bez selector closure):
-   - diagonal/local: strict-derived value instantiation profilu `D_local_residual` przez `F447 → P437` rozstrzyga niezerowość
-     defektów `F_{2m}(d)` na wszystkich parach (`N485`) i pakuje scoped `O(2)->Z2` discharge (`N487`) oraz obiekt bazy
-     `ModeIndexAssignment_canonical_local_diagonal_strict_derived_v1` (`F453/N492`),
-   - Shannon element-order reference: defekt `F_{2m}(ord_{Z_12})` oraz obiektyw cross-entropy tną `O(2)` do residual `Z2`
-     na wszystkich parach (`N480`, `N488`, `N496`, wykonane przez `F454` i opakowane przez `N500`).
-6. Reduktor `N474` pozostaje spójny z powyższym: diagonalny wpis Hessianu ma formę Yukawa-free pod stacjonarnością,
-   więc Yukawa nie jest “źródłem osi” w tym strict mechanizmie; w szczególności diagonal/local `O(2)`‑cut nie wymaga
-   osobnej “Yukawa‑orientacji”.
-7. (Update, `2026-03-15`) Repo eksportuje też pełny, liczbowy eigensystem *pełnej* macierzy Hessianu sektora `Psi`
-   na diagonal/local lane:
-   `H_psi := K_total + (m0^2 I + D_local_residual)` wraz z ortonormalną bazą własną i wartościami własnymi (`F459`).
-   To jest strict-derived value instantiation (lane-scoped) i wspiera interpretację “light = linearized eigenmodes”
-   bez promocji do host matching / ToE closure.
-8. (Update, `2026-03-15`) Aby nie przemycać “fizycznej orientacji” przez arbitralny znak wektorów własnych,
-   repo eksportuje sign‑gauge‑invariant rank‑one projektory spektralne `P_j := |v_j><v_j|` dla `H_psi` (`F460`) i pakuje
-   gauge‑irrelewantność znaku jako theorem (`N504`).
-9. (Update, `2026-03-15`) Na aktualnej instancji `H_psi` eigenmody są silnie zmieszane pomiędzy Fourier pair planes:
-   sonda eksportuje profil wag `w_{j,label} := tr(Π_label P_j)` po labelach `{e0,pair1..pair5,e6}` (`P464`), a wniosek jest
-   opakowany jako value‑instantiation theorem (`N505`). To blokuje jakikolwiek “cichy” skrót typu “pair-plane modes diagonalize H_psi”.
-10. „Czas połowicznego rozpadu” nie jest jeszcze obiektem strict-core Lagrangianu:
-   - w konserwatywnym Lagrangianie nie ma wprost tłumienia,
-   - `t_{1/2}` wymagałby obiektu typu szerokość/niestabilność w opisie efektywnym (otwarty układ),
-   - więc na obecnym strict scope to może być tylko *interpretacja downstream*, nie termin w `L_core`.
-   - uwaga czysto matematyczna: jeśli downstream przyjmuje się wykładniczy zanik
-     $X(t)=X_0 e^{-\lambda t}$, to z definicji $X(t_{1/2})=X_0/2$ daje
-     $t_{1/2}=\frac{\ln 2}{\lambda}$; to nie jest nowa stała ToE, tylko przeliczenie
-     z warunku „połowy”.
+5. If one wants a strict "choice accelerator" (cutting $O(2)$ on `pair1`), then mathematically:
+   - a translationally invariant host is isotropic on `pair1` and does not cut $O(2)$ (`N465`),
+   - the diagonal/local sector cuts $O(2)$ if and only if it has a non-zero mode-2 defect $F_2(d)$ (`N466`),
+   - but **on current exports** $F_2(d)$ for the canonical `D_local_residual` remains undefined (`N472/P431`),
+     so one must not declare a strict-core $O(2)$ cut.
+6. A new, hard reducer (`N474`) states additionally:
+   - under vacuum stationarity and $v_{\psi k} \neq 0$, the Yukawa contribution vanishes from the diagonal Hessian entry,
+     so Yukawa cannot "single-handedly" provide the missing $F_2(d)$ in the strict core.
+7. "Half-life / decay-time" is not yet a strict-core Lagrangian object:
+   - there is no explicit damping in a conservative Lagrangian,
+   - $t_{1/2}$ would require an object like width/instability in an effective description (open system),
+   - so on the current strict scope, this can only be a *downstream interpretation*, not a term in $\mathcal{L}_{\mathrm{core}}$.
+   - pure mathematical note: if an exponential decay
+     $X(t)=X_0 e^{-\lambda t}$ is assumed downstream, then by definition $X(t_{1/2})=X_0/2$ yields
+     $t_{1/2}=\frac{\ln 2}{\lambda}$; this is not a new ToE constant, but just a recalculation
+     from the "half" condition.
 
-## 1) Typed internal carrier and distance (Z\_12)
+## 1) Typed internal carrier and distance ($\mathbb{Z}_{12}$)
 
 Let:
 
 $$
-I_{12}:=\{0,1,\ldots,11\},
-\qquad
-\mathbb{Z}_{12}:=(I_{12},+ \bmod 12).
+I_{12}:=\{0,1,\ldots,11\}, \qquad \mathbb{Z}_{12}:=(I_{12},+ \bmod 12).
 $$
 
-Define the strict kernel‑mode lane **cyclic octave distance** (undirected, ring metric):
+Define the **directed** $\mathbb{Z}_{12}$ distance/step:
 
 $$
-d_{\mathrm{cyc}}(i,j)
-:=
-\min\bigl( (j-i)\bmod 12,\ (i-j)\bmod 12 \bigr)
-\in \{0,1,\ldots,6\}.
+d(i,j):=(j-i)\bmod 12 \in \{0,1,\ldots,11\}.
 $$
 
-This matches the strict kernel‑mode lane convention where the frozen host kernel `K_total` is constructed as a symmetric
-cyclic‑distance matrix (`QW-2118`; cf. `N465`).
+This matches the strict kernel-mode lane convention where distance classes $1 \dots 11$ are evaluated as a profile
+(`QW-2118`).
 
 ## 2) One strict working kernel (internal coupling law)
 
 Define the strict working kernel:
 
 $$
-K_{\mathrm{sg}}(d)
-=
-\frac{\cos(\omega d+\phi)}{1+\beta d^{\eta}},
-\qquad
-(\omega,\phi,\beta,\eta)=(0.18575,\ 0.16250,\ 1.0,\ 1.8).
+K_{\mathrm{sg}}(d) = \frac{\cos(\omega d+\phi)}{1+\beta d^{\eta}}, \qquad (\omega,\phi,\beta,\eta)=(0.18575, 0.16250, 1.0, 1.8).
 $$
 
 This is the later-pipeline strict working kernel selected by the strict gate chain (`QW-2049`) and used in the
 kernel-mode ring lane (`QW-2118`).
 
 Kernel-split discipline reminder:
-this packet does **not** claim that `K_sg` has already inherited every historical role of any retired legacy kernel;
-it only uses `K_sg` as the **single internal coupling law** of the present strict nadsoliton core candidate.
+this packet does **not** claim that $K_{\mathrm{sg}}$ has already inherited every historical role of any retired legacy kernel;
+it only uses $K_{\mathrm{sg}}$ as the **single internal coupling law** of the present strict nadsoliton core candidate.
 
 ## 3) Nadsoliton core fields
 
 Introduce:
 
 1. a 12-component real field on spacetime (the nadsoliton carrier degrees of freedom):
-   $$
-   \Psi(x) = (\psi_0(x),\ldots,\psi_{11}(x))\in\mathbb{R}^{12},
-   $$
-2. one real scalar order / coherence field:
-   $$
-   \Phi(x)=\phi(x)\in\mathbb{R}.
-   $$
 
-`Phi` is not treated as an independent ontological substrate; it is an internal order/coherence projection used in the
+$$
+\Psi(x) = (\psi_0(x),\ldots,\psi_{11}(x))\in\mathbb{R}^{12},
+$$
+
+2. one real scalar order / coherence field:
+
+$$
+\Phi(x)=\phi(x)\in\mathbb{R}.
+$$
+
+$\Phi$ is not treated as an independent ontological substrate; it is an internal order/coherence projection used in the
 canonical action template.
 
 ## 4) The ToE core Lagrangian (one-kernel form)
@@ -172,27 +167,19 @@ canonical action template.
 Define the kernel-index mixing coefficients:
 
 $$
-K_{ij}:=
-\begin{cases}
-0, & i=j,\\[2mm]
-K_{\mathrm{sg}}(d_{\mathrm{cyc}}(i,j)), & i\neq j.
-\end{cases}
+K_{ij}:= \begin{cases} 0, & i=j \\ K_{\mathrm{sg}}(d(i,j)), & i\neq j \end{cases}
 $$
 
 Then the **kernel mixing potential** is:
 
 $$
-V_{\mathrm{mix}}(\Psi)
-:=
-\frac12 \sum_{i\neq j} K_{ij}\,\psi_i\,\psi_j.
+V_{\mathrm{mix}}(\Psi) := \frac{1}{2} \sum_{i\neq j} K_{ij}\,\psi_i\,\psi_j.
 $$
 
-Equivalently (grouping symmetric pairs; here `K_{ij}=K_{ji}`):
+Equivalently (grouping symmetric pairs). Note the use of `\lt` to fix GitHub parsing:
 
 $$
-V_{\mathrm{mix}}(\Psi)
-=
-\sum_{i<j} K_{ij}\,\psi_i\,\psi_j.
+V_{\mathrm{mix}}(\Psi) = \frac{1}{2} \sum_{i \lt j} (K_{ij}+K_{ji})\,\psi_i\,\psi_j.
 $$
 
 This form is chosen so that the Euler–Lagrange equation for $\psi_k$ contains the symmetrized coefficient
@@ -203,25 +190,15 @@ $(K_{k,j}+K_{j,k})/2$ exactly as exported in `QW-2165`.
 Define:
 
 $$
-V_{\Phi}(\phi)
-  :=
-  \frac12 m_{\phi}^2\,\phi^2 + \frac14 \lambda_{\phi}\,\phi^4,
+V_{\Phi}(\phi) := \frac{1}{2} m_{\phi}^2\,\phi^2 + \frac{1}{4} \lambda_{\phi}\,\phi^4,
 $$
 
 $$
-V_{\Psi}(\Psi)
-  :=
-  \sum_{i=0}^{11}\left(
-    \frac12 m_{\psi i}^2\,\psi_i^2
-    +\frac14 g4_{\psi i}\,\psi_i^4
-    +\frac16 g6_{\psi i}\,\psi_i^6
-  \right),
+V_{\Psi}(\Psi) := \sum_{i=0}^{11}\left( \frac{1}{2} m_{\psi i}^2\,\psi_i^2 + \frac{1}{4} g4_{\psi i}\,\psi_i^4 + \frac{1}{6} g6_{\psi i}\,\psi_i^6 \right),
 $$
 
 $$
-V_{\mathrm{Y}}(\Psi,\phi)
-  :=
-  \sum_{i=0}^{11} gY_i\,\phi^2\,\psi_i^2.
+V_{\mathrm{Y}}(\Psi,\phi) := \sum_{i=0}^{11} gY_i\,\phi^2\,\psi_i^2.
 $$
 
 These coefficient families appear in the strict canonical action/EoM/Hessian exports (`QW-2163/2165/2166`).
@@ -232,19 +209,7 @@ This packet does **not** claim they are already strict-derived from the kernel a
 Write the nadsoliton core Lagrangian density as:
 
 $$
-\mathcal{L}_{\mathrm{core}}
-=
-\frac12\,\partial_\mu \phi\,\partial^\mu \phi
-+
-\frac12\sum_{i=0}^{11}\partial_\mu \psi_i\,\partial^\mu \psi_i
--
-V_{\Phi}(\phi)
--
-V_{\Psi}(\Psi)
--
-V_{\mathrm{Y}}(\Psi,\phi)
--
-V_{\mathrm{mix}}(\Psi).
+\mathcal{L}_{\mathrm{core}} = \frac{1}{2}\,\partial_\mu \phi\,\partial^\mu \phi + \frac{1}{2}\sum_{i=0}^{11}\partial_\mu \psi_i\,\partial^\mu \psi_i - V_{\Phi}(\phi) - V_{\Psi}(\Psi) - V_{\mathrm{Y}}(\Psi,\phi) - V_{\mathrm{mix}}(\Psi).
 $$
 
 On the strict L13 variational gate exports (`QW-2163/2165/2166`), one may read the same density on the 1D slice
@@ -261,9 +226,7 @@ It is not a claim that every arrow is already theorem-level discharged.
 Choose a constant vacuum:
 
 $$
-\psi_i(x)\equiv v_{\psi i},
-\qquad
-\phi(x)\equiv v_{\phi}.
+\psi_i(x)\equiv v_{\psi i}, \qquad \phi(x)\equiv v_{\phi}.
 $$
 
 The stationarity conditions are the constant-vacuum specializations of the exported EoM (`QW-2165`).
@@ -273,9 +236,7 @@ The stationarity conditions are the constant-vacuum specializations of the expor
 Linearize:
 
 $$
-\psi_i = v_{\psi i}+\eta_i,
-\qquad
-\phi = v_\phi+\eta_\phi.
+\psi_i = v_{\psi i}+\eta_i, \qquad \phi = v_\phi+\eta_\phi.
 $$
 
 The quadratic action defines a linear operator (Hessian) on the fluctuation vector
@@ -286,18 +247,9 @@ $$
 
 with the **strictly exported** stencil structure (`QW-2166`):
 
-1. diagonal `Psi` entries carry:
-   $$
-   3g4_{\psi i}v_{\psi i}^2 + 5g6_{\psi i}v_{\psi i}^4 + 2gY_i v_\phi^2 + m_{\psi i}^2,
-   $$
-2. off-diagonal `Psi–Psi` entries carry the symmetrized kernel mixing coefficients:
-   $$
-   \frac{K_{ij}+K_{ji}}{2},
-   $$
-3. `Psi–Phi` cross terms carry:
-   $$
-   4gY_i\,v_\phi\,v_{\psi i}.
-   $$
+1. diagonal $\Psi$ entries carry: $3g4_{\psi i}v_{\psi i}^2 + 5g6_{\psi i}v_{\psi i}^4 + 2gY_i v_\phi^2 + m_{\psi i}^2$
+2. off-diagonal $\Psi$--$\Psi$ entries carry the symmetrized kernel mixing coefficients: $\frac{K_{ij}+K_{ji}}{2}$
+3. $\Psi$--$\Phi$ cross terms carry: $4gY_i \, v_\phi \, v_{\psi i}$
 
 “Light” in the internal ToE sense is:
 
@@ -305,12 +257,8 @@ with the **strictly exported** stencil structure (`QW-2166`):
 the propagating linearized eigenmodes of this operator around the nadsoliton vacuum.
 ```
 
-On the `Z_12` ring scaffold (`QW-2190`), some eigenmodes come in degenerate 2D pairs, producing the strict `O(2)`
+On the $\mathbb{Z}_{12}$ ring scaffold (`QW-2190`), some eigenmodes come in degenerate 2D pairs, producing the strict $O(2)$
 basis-choice family obstruction (`QW-2191`).
-
-Update (`2026-03-15`): na obecnym repo state kernel-alone `QW-2191` pozostaje prawdziwe jako obstruction, ale w strict core
-istnieją lane-scoped wewnętrzne składniki, które kanonizują osie w parach (do residual `Z2`) i umożliwiają jawne,
-liczbowe pakiety eigensystemów (np. diagonal/local `F459`).
 
 ### 5.3 Matter (second emergence) = stable nonlinear excitations of the same fields
 
@@ -335,10 +283,10 @@ This is a program-level ontology statement; it is not promoted here into a theor
 
 ## 6) Current strict frontier reminders (what is still open)
 
-1. `QW-2191` remains a real strict-core uniqueness obstruction on kernel-alone translation-invariant data.
-2. The diagonal/local `T166` decision target is now discharged on a strict-derived value instantiation (`N482`), and the
-   same lane exports an all-pairs `O(2)->Z2` cut on `n=12` (`N487`) plus explicit mode-index assignment basis (`F453`).
-3. Do not claim strict-core selector closure / admissible `S_sel_int` unless a genuinely strict closure object is exported.
+1. `QW-2191` remains a real strict-core uniqueness obstruction on degenerate mode pairs.
+2. The diagonal/local accelerator lane reduces strict `pair1` $O(2)$ cutting to one mode‑2 defect decision target
+   (`T166`).
+3. Do not claim strict-core selector closure unless a genuinely strict internal selector source is exported.
 
 ## 7) What A11 does not prove
 
@@ -346,9 +294,10 @@ This is a program-level ontology statement; it is not promoted here into a theor
 
 1. ToE closure,
 2. strict-derived fixing of all local coefficient families from the kernel,
-3. strict-derived vacuum values $(v_{\psi i},v_\phi)$,
+3. strict-derived vacuum values $(v_{\psi i}, v_\phi)$,
 4. strict-core discharge of `QW-2191`,
 5. any “half-life” law as a conservative-Lagrangian ingredient.
 
 It only exports the cleanest honest core: **one nadsoliton**, **one kernel**, one explicit Lagrangian, and a disciplined
 emergence map.
+```

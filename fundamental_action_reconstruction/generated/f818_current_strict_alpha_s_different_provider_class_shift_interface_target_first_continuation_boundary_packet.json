@@ -1,0 +1,45 @@
+{
+  "stage": "F818",
+  "packet_name": "CurrentStrictAlphaSDifferentProviderClassShiftInterfaceTargetFirstContinuationBoundary_v1",
+  "status": "F818_EXECUTED_CURRENT_STRICT_ALPHA_S_DIFFERENT_PROVIDER_CLASS_SHIFT_INTERFACE_TARGET_FIRST_CONTINUATION_BOUNDARY_PACKET_NO_FALSE_PASS",
+  "as_of": "2026-03-19",
+  "inputs": {
+    "p818_continuation_class_audit_probe": "fundamental_action_reconstruction/generated/p818_current_strict_alpha_s_different_provider_class_shift_interface_target_first_continuation_class_audit_probe.json",
+    "f817_different_provider_class_candidate_reference_packet": "fundamental_action_reconstruction/generated/f817_current_strict_alpha_s_different_selection_provider_class_shift_candidate_reference_packet.json",
+    "f816_schema_lane_continuation_boundary_packet": "fundamental_action_reconstruction/generated/f816_current_strict_alpha_s_selection_or_preference_rule_schema_continuation_boundary_packet.json",
+    "f807_provider_class_shift_requirement_packet": "fundamental_action_reconstruction/generated/f807_current_strict_alpha_s_provider_class_shift_requirement_packet.json"
+  },
+  "exported_object": {
+    "object_id": "alpha_s_different_provider_class_shift_interface_target_first_continuation_boundary_v1",
+    "goal": "Export the continuation boundary that fixes interface-target-first ordering after F817 for the different provider-class alpha_s shift route.",
+    "shift_candidate_reference_lane_ref": "alpha_s_pair12_source_side_branch_selection_provider_shift_candidate_reference_lane_v1",
+    "upstream_continuation_boundary_ref": "alpha_s_selection_or_preference_rule_schema_continuation_boundary_v1",
+    "provider_class_shift_requirement_ref": "alpha_s_provider_class_shift_requirement_v1",
+    "immediate_admitted_next_move_class": "freeze_exact_alpha_s_side_shift_interface_target",
+    "deferred_move_classes": [
+      "freeze_carrier_identification_or_adapter_rule_target_after_interface_target",
+      "freeze_adapter_action_schema_after_interface_target_if_still_missing"
+    ],
+    "forbidden_immediate_move_classes": [
+      "freeze_carrier_identification_target_first",
+      "freeze_adapter_rule_target_first",
+      "verbal_promotion_of_t213_t216_candidate_lane_into_alpha_s_interface"
+    ]
+  },
+  "current_honest_reading": [
+    "The repo now exports the continuation boundary that fixes interface-target-first ordering for the different provider-class alpha_s shift route.",
+    "This does not claim that the exact alpha_s-side shift interface already exists.",
+    "It only says that interface-target work comes before adapter-rule or carrier-identification targeting on this route."
+  ],
+  "recommended_next_move": "Run one narrow interface-target-oriented probe for the T213/T216 lane into alpha_s; do not jump directly to adapter-rule or carrier-identification targeting.",
+  "hard_limits": [
+    "Does not claim that the exact alpha_s-side shift interface already exists.",
+    "Does not claim that any adapter rule already exists.",
+    "Does not claim that carrier identification is already solved.",
+    "Does not claim that the T213/T216 lane already enters the alpha_s domain.",
+    "Does not claim alpha_s boundary export readiness.",
+    "Does not claim QCD closure.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}

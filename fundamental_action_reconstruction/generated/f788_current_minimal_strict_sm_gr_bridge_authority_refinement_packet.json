@@ -1,0 +1,39 @@
+{
+  "stage": "F788",
+  "packet_name": "CurrentMinimalStrictSMGRBridgeAuthorityRefinement_v1",
+  "status": "F788_EXECUTED_CURRENT_MINIMAL_STRICT_SM_GR_BRIDGE_AUTHORITY_REFINEMENT_PACKET_NO_FALSE_PASS",
+  "as_of": "2026-03-19",
+  "inputs": {
+    "f787_refined_registry": "fundamental_action_reconstruction/generated/f787_current_minimal_strict_sm_gr_bridge_export_refinement_packet.json",
+    "f801_overlapping_registry": "fundamental_action_reconstruction/generated/f801_current_strict_sm_gr_minimal_bridge_registry_packet.json",
+    "working_note": "WORKING_NOTE_LEGACY_KEEP_CUT_AND_MINIMAL_STRICT_SM_GR_BRIDGE.md"
+  },
+  "overlap_audit": {
+    "overlap_ids": [
+      "alpha_s_boundary_mu0_alpha0",
+      "g_dimensionless_mu_ref",
+      "mass_ratio_ordering_layer",
+      "sin2_theta_w_eff"
+    ],
+    "same_four_target_registry_overlap": true,
+    "alpha_s_export_conflict": true,
+    "minimal_bridge_unit_rule_present": true
+  },
+  "authority_decision": {
+    "authoritative_current_minimal_bridge_packet": "F787",
+    "overlapping_nonauthoritative_packet": "F801",
+    "reason": "F787 is stricter on the current repo state because it demotes the alpha_s boundary out of the minimal bridge export set, in line with the working-note unit discipline and the current formula-layer blocker set."
+  },
+  "current_honest_reading": [
+    "F801 is a real overlapping registry packet, but it keeps alpha_s_boundary_mu0_alpha0 exported in a way that is wider than the current no-false-pass refinement lane.",
+    "F787 is the tighter current packet because it preserves the same bridge lane while demoting the alpha_s boundary to support-only/nonexport.",
+    "This authority refinement does not delete F801; it only prevents the repo from treating two inconsistent export sets as equally current in the minimal bridge lane."
+  ],
+  "recommended_next_move": "Build or prove absent one replacement alpha_s boundary object that is dimensionless or explicitly normalized, then rerun both the export-refinement and authority-refinement packets.",
+  "suggested_next_artifact_slots_after_f788": [
+    "P788",
+    "N788",
+    "F789"
+  ],
+  "no_false_pass": true
+}

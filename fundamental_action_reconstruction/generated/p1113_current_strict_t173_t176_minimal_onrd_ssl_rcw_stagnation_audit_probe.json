@@ -1,0 +1,108 @@
+{
+  "stage": "P1113",
+  "status": "PASS_CURRENT_STRICT_T173_T176_MINIMAL_ONRD_SHARPER_SAME_LANE_ROUTE_COHERENCE_WITNESS_REFINEMENT_STAGNATION_AND_STOP_AUDITED",
+  "as_of": "2026-04-01",
+  "lane": "strict_t173_t176_minimal_onrd_sharper_same_lane_route_coherence_witness_refinement_only",
+  "same_lane_stop_threshold_attempt_count": 3,
+  "same_lane_stop_threshold_target_count": 3,
+  "same_lane_exact_attempt_count": 3,
+  "same_lane_sharper_target_count": 3,
+  "same_lane_attempt_export_chain": [
+    [
+      "p1102",
+      "PASS_CURRENT_STRICT_T173_T176_MINIMAL_ONRD_BOUNDARY_TO_ACTIVE_BRIDGE_AR_ATTEMPT_EXACT_ROUTE_COHERENCE_REFINEMENT_TARGET_ACTUAL_REALIZATION_ATTEMPT_EXPORTED",
+      true
+    ],
+    [
+      "p1106",
+      "PASS_CURRENT_STRICT_T173_T176_MINIMAL_ONRD_BOUNDARY_TO_ACTIVE_BRIDGE_AR_ATTEMPT_EXACT_ROUTE_COHERENCE_WITNESS_REFINEMENT_TARGET_ACTUAL_REALIZATION_ATTEMPT_EXPORTED",
+      true
+    ],
+    [
+      "p1110",
+      "PASS_CURRENT_STRICT_T173_T176_MINIMAL_ONRD_BOUNDARY_TO_ACTIVE_BRIDGE_AR_ATTEMPT_EXACT_SHARPER_SAME_LANE_ROUTE_COHERENCE_WITNESS_REFINEMENT_TARGET_ACTUAL_REALIZATION_ATTEMPT_EXPORTED",
+      true
+    ]
+  ],
+  "same_lane_target_export_chain": [
+    [
+      "p1104",
+      "PASS_CURRENT_STRICT_T173_T176_MINIMAL_ONRD_BOUNDARY_TO_ACTIVE_BRIDGE_AR_ATTEMPT_EXACT_ROUTE_COHERENCE_WITNESS_REFINEMENT_TARGET_EXPORTED",
+      true
+    ],
+    [
+      "p1108",
+      "PASS_CURRENT_STRICT_T173_T176_MINIMAL_ONRD_BOUNDARY_TO_ACTIVE_BRIDGE_AR_ATTEMPT_EXACT_SHARPER_SAME_LANE_ROUTE_COHERENCE_WITNESS_REFINEMENT_TARGET_EXPORTED",
+      true
+    ],
+    [
+      "p1112",
+      "PASS_CURRENT_STRICT_T173_T176_MINIMAL_ONRD_BOUNDARY_TO_ACTIVE_BRIDGE_AR_ATTEMPT_EXACT_SHARPER_SAME_LANE_ROUTE_COHERENCE_WITNESS_REFINEMENT_TARGET_ACTUAL_REALIZATION_ATTEMPT_EXACT_SHARPER_SAME_LANE_ROUTE_COHERENCE_WITNESS_REFINEMENT_TARGET_EXPORTED",
+      true
+    ]
+  ],
+  "same_lane_stagnation_boundary_reached": true,
+  "further_same_lane_sharper_route_coherence_witness_descent_is_not_honest_primary_move": true,
+  "stop_condition_triggered": true,
+  "restart_requires_new_blocker_cut_or_non_same_lane_upgrade_route": true,
+  "checks": [
+    {
+      "id": "same_lane_exact_attempt_threshold_reached",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "The ONRD same lane already exports at least the honest stop-threshold number of exact attempts."
+    },
+    {
+      "id": "same_lane_sharper_target_threshold_reached",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "The ONRD same lane already exports at least the honest stop-threshold number of sharper same-lane targets."
+    },
+    {
+      "id": "initial_recursive_cycle_still_same_lane_only",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "The first recursive cycle still yielded only same-lane target/nonexport/attempt grammar."
+    },
+    {
+      "id": "middle_recursive_cycle_still_same_lane_only",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "The middle recursive cycle still yielded only same-lane target/nonexport/attempt grammar."
+    },
+    {
+      "id": "latest_recursive_cycle_still_same_lane_only",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "The latest recursive cycle still yields only one more same-lane sharper target below the same ONRD branch."
+    },
+    {
+      "id": "lane_still_keeps_open_bundle_below_actual_support",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "All exported attempts and targets still explicitly remain below reduction, supplier, solution, orientation, and closure."
+    },
+    {
+      "id": "repo_already_admits_same_lane_exhaustion_boundary_auditing",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Repo already admits same-lane exhaustion auditing as an honest boundary idiom."
+    },
+    {
+      "id": "same_lane_stagnation_boundary_reached",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Therefore the current ONRD sharper same-lane route-coherence-witness descent has crossed its honest stagnation boundary."
+    }
+  ],
+  "blocking_checks": [],
+  "no_false_pass": true
+}

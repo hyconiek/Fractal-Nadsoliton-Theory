@@ -1,0 +1,43 @@
+{
+  "stage": "F805",
+  "packet_name": "CurrentStrictAlphaSActingInputBundle_v1",
+  "status": "F805_EXECUTED_CURRENT_STRICT_ALPHA_S_ACTING_INPUT_BUNDLE_PACKET_NO_FALSE_PASS",
+  "as_of": "2026-03-19",
+  "inputs": {
+    "p805_acting_input_probe": "fundamental_action_reconstruction/generated/p805_current_strict_alpha_s_acting_input_bundle_admission_probe.json",
+    "f802_provider_action_target": "fundamental_action_reconstruction/generated/f802_current_strict_alpha_s_provider_action_rule_target_packet.json"
+  },
+  "exported_object": {
+    "object_id": "alpha_s_reference_scale_acting_input_bundle_v1",
+    "goal": "Export the strongest current same-domain acting input bundle beneath the missing provider action rule.",
+    "alignment_bundle_ref": "alpha_s_reference_scale_same_domain_compositional_alignment_bundle_v1",
+    "provider_action_target_ref": "alpha_s_reference_scale_provider_action_rule_target_v1",
+    "acting_family_id": "f704_max_mode_anchor_family",
+    "acting_normalization_rule": "mu_tilde_i := m_proxy_i / max_j(m_proxy_j)",
+    "acting_mu0_tilde": 1.0,
+    "acting_top_boundary_point": 1.0,
+    "acting_support_refs": [
+      "fundamental_action_reconstruction/generated/p789_current_strict_alpha_s_normalized_boundary_interface_candidate_probe.json",
+      "fundamental_action_reconstruction/generated/p792_current_strict_alpha_s_family_selection_order_rule_probe.json",
+      "fundamental_action_reconstruction/generated/p797_current_strict_alpha_s_invariant_extremum_vs_reference_scale_audit_probe.json",
+      "fundamental_action_reconstruction/generated/p794_current_strict_alpha_s_normalization_boundary_subclause_audit_probe.json"
+    ],
+    "scope": "strict_same_domain_acting_input_only"
+  },
+  "current_honest_reading": [
+    "The repo now exports one explicit same-domain acting input bundle for the alpha_s reference-scale lane.",
+    "That bundle packages the winning family, the winning normalization rule, and the acting point mu0_tilde = 1 on the same lane.",
+    "It still does not export the provider action rule itself and therefore does not act as a provider."
+  ],
+  "recommended_next_move": "Build one narrow probe testing whether the current same-domain acting input bundle can be strengthened into an actual provider action rule without importing foreign-domain reference structures or new host semantics.",
+  "hard_limits": [
+    "Does not claim that the provider action rule already exists.",
+    "Does not claim that the provider class already exists.",
+    "Does not claim that the semantic principle already exists.",
+    "Does not claim that the F704 maximum is already a lawful reference-scale point.",
+    "Does not claim alpha_s boundary export readiness.",
+    "Does not claim QCD closure.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}

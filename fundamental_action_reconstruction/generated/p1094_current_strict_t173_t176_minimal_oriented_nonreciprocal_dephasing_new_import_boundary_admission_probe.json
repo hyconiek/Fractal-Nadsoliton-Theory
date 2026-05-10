@@ -1,0 +1,99 @@
+{
+  "stage": "P1094",
+  "status": "PASS_CURRENT_STRICT_T173_T176_MINIMAL_ORIENTED_NONRECIPROCAL_DEPHASING_NEW_IMPORT_BOUNDARY_ADMITTED",
+  "as_of": "2026-03-29",
+  "generated_utc": "2026-03-29T13:06:00.477049+00:00",
+  "inputs": {
+    "p1093_provenance_audit_summary": "fundamental_action_reconstruction/generated/p1093_current_strict_t173_t176_candidate_oriented_nonreciprocal_dephasing_operator_provenance_audit_probe_summary.json",
+    "f968_provenance_packet_summary": "fundamental_action_reconstruction/generated/f968_current_strict_t173_t176_candidate_oriented_nonreciprocal_dephasing_operator_provenance_packet_summary.json"
+  },
+  "checks": [
+    {
+      "id": "p1093_passed_as_provenance_audit",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "P1093 must pass before the minimal boundary can be frozen honestly."
+    },
+    {
+      "id": "f968_passed_as_provenance_packet",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "F968 must pass before the minimal boundary can be admitted as a separate object."
+    },
+    {
+      "id": "minimal_boundary_string_is_stable",
+      "actual": "provenance_safe_orientation_anchor_plus_nonreciprocal_rate_asymmetry_plus_oriented_memory_rule",
+      "expected": "provenance_safe_orientation_anchor_plus_nonreciprocal_rate_asymmetry_plus_oriented_memory_rule",
+      "pass": true,
+      "meaning": "The irreducible new-import boundary must remain stable and explicit."
+    },
+    {
+      "id": "full_operator_is_still_not_exported",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "The full operator must remain unexported here."
+    },
+    {
+      "id": "boundary_is_below_lawful_supplier_export",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "The boundary must remain below lawful supplier export."
+    },
+    {
+      "id": "boundary_is_below_solution_export",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "The boundary must remain below solution export."
+    },
+    {
+      "id": "boundary_is_below_strict_physical_orientation_datum_export",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "The boundary must remain below strict physical orientation datum export."
+    },
+    {
+      "id": "frontier_context_bridge_is_stable",
+      "actual": "ResidualDatumPair12OrbitDirectionSelectionBridge_global_C_v1_strict_v1",
+      "expected": "ResidualDatumPair12OrbitDirectionSelectionBridge_global_C_v1_strict_v1",
+      "pass": true,
+      "meaning": "The boundary remains framed against the same active missing bridge."
+    }
+  ],
+  "blocking_mismatches": [],
+  "exportable_boundary": {
+    "object_id": "MinimalOrientedNonreciprocalDephasingNewImportBoundary_v1",
+    "grade": "candidate_provider_class_seed_only",
+    "orientation_anchor_component": "provenance_safe_orientation_anchor",
+    "nonreciprocal_rate_asymmetry_component": "nonreciprocal_rate_asymmetry_rule",
+    "oriented_memory_rule_component": "oriented_memory_rule",
+    "frontier_context_bridge": "ResidualDatumPair12OrbitDirectionSelectionBridge_global_C_v1_strict_v1",
+    "exact_reduction_to_frontier_context_bridge_exported": false,
+    "admissible_as_candidate_provider_class_seed_only": true,
+    "counts_as_lawful_supplier": false,
+    "counts_as_solution": false,
+    "counts_as_strict_physical_orientation_datum": false
+  },
+  "classification": {
+    "full_operator_exported": false,
+    "minimal_new_import_boundary": "provenance_safe_orientation_anchor_plus_nonreciprocal_rate_asymmetry_plus_oriented_memory_rule",
+    "next_honest_move": "search_one_genuinely_new_provider_class_route_from_this_boundary_without_promoting_it_to_supplier"
+  },
+  "hard_limits": [
+    "No full operator export.",
+    "No lawful supplier export.",
+    "No solution export.",
+    "No strict physical orientation datum export.",
+    "No exact reduction to the frontier context bridge.",
+    "No T183 discharge.",
+    "No T176 discharge.",
+    "No QW-2191 discharge.",
+    "No ToE closure."
+  ],
+  "no_false_pass": true
+}

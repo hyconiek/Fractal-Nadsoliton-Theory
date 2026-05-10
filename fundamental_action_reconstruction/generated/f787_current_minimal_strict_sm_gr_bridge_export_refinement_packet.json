@@ -1,0 +1,134 @@
+{
+  "stage": "F787",
+  "packet_name": "CurrentMinimalStrictSMGRBridgeExportRefinement_v1",
+  "status": "F787_EXECUTED_CURRENT_MINIMAL_STRICT_SM_GR_BRIDGE_EXPORT_REFINEMENT_PACKET_NO_FALSE_PASS",
+  "as_of": "2026-03-19",
+  "inputs": {
+    "f784_registry": "fundamental_action_reconstruction/generated/f784_current_minimal_strict_sm_gr_bridge_registry_packet.json",
+    "p785_boundary_audit": "fundamental_action_reconstruction/generated/p785_current_minimal_strict_sm_gr_bridge_registry_boundary_audit_probe.json",
+    "p786_formula_layer_audit": "fundamental_action_reconstruction/generated/p786_current_qw2093_kernel_invariants_only_formula_layer_audit_probe.json",
+    "working_note": "WORKING_NOTE_LEGACY_KEEP_CUT_AND_MINIMAL_STRICT_SM_GR_BRIDGE.md"
+  },
+  "decision_rules": [
+    "Retain only objects that still fit the minimal strict bridge boundary after P785/P786.",
+    "Keep sin2 as a strict candidate observable only with explicit non-transfer boundary to the legacy Weinberg role.",
+    "Demote alpha_s boundary objects when the current route still depends on frozen hierarchy-log ansatz and GeV-level mass-chain boundary scale.",
+    "Do not weaken the gravity external-origin boundary."
+  ],
+  "refined_targets": {
+    "mass_ratio_ordering_layer": {
+      "status_label": "strict-derived",
+      "bridge_ready": true,
+      "export_decision": "retained_export_minimal_bridge_internal_proxy_only",
+      "reason": "The mass layer remains dimensionless/internal and passes the F784/P785 no-false-pass boundary.",
+      "source_artifacts": [
+        "fundamental_action_reconstruction/generated/mass_observable_diagonal_local_strict_derived_v1.json",
+        "fundamental_action_reconstruction/generated/p705_current_actual_strict_projective_operational_toe_os_support_with_invariant_mass_observable_probe_summary.json",
+        "fundamental_action_reconstruction/N703_CURRENT_STRICT_QUADRATIC_MASS_PROXY_MEANING_DEFINITION_THEOREM.md",
+        "fundamental_action_reconstruction/generated/p694_current_strict_physical_computability_mass_spectrum_proxy_from_projective_selector_closure_probe_summary.json"
+      ],
+      "hard_limits": [
+        "Does not assign any physical mass units or calibration (no GeV/SI claim).",
+        "Does not identify Standard Model particles or claim host matching.",
+        "Does not imply kernel-alone/global QW-2191 discharge.",
+        "Does not claim ToE closure."
+      ]
+    },
+    "sin2_theta_w_eff": {
+      "status_label": "strict-derived",
+      "bridge_ready": true,
+      "export_decision": "retained_export_candidate_observable_with_explicit_legacy_nontransfer_boundary",
+      "reason": "The strict-side observable may remain exported as a candidate bridge object, but legacy Weinberg-role transfer stays explicitly blocked.",
+      "source_artifacts": [
+        "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2068_sm_gr_parameter_registry.json",
+        "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2069_full_sm_gr_derivation_package.json",
+        "report_qw2093_kernel_derived_nonanchor_inputs_plan_executor.json",
+        "fundamental_action_reconstruction/F9_LEGACY_WEINBERG_SEMANTIC_TRANSFER_REFINEMENT_PACKET.md"
+      ],
+      "promotion_blockers": [
+        "The strict-side observable is promoted in the registry/package lane, but the legacy Weinberg semantic-transfer verdict remains unresolved on current repo state.",
+        "The upstream QW-2093 lineage still contains an explicit alpha_geo/12 touchpoint and therefore cannot be silently treated as a strict replacement of the legacy Weinberg-role semantics.",
+        "No retained/replaced verdict for the legacy Weinberg role follows from this bridge entry alone."
+      ],
+      "formula_layer_blockers": [
+        "alpha_geo_touchpoint_not_yet_reexpressed_as_explicit_strict_invariant_map",
+        "micro_radiative_regime_constants_present",
+        "upstream_source_explicitly_labels_frozen_alpha_geo_relation"
+      ],
+      "hard_limits": [
+        "Do not treat this observable as discharge of the legacy Weinberg role.",
+        "Do not promote the QW-2093 lineage touchpoint into retained semantics without an explicit verdict.",
+        "Do not infer complete electroweak closure from this single promoted observable."
+      ]
+    },
+    "alpha_s_boundary_mu0_alpha0": {
+      "status_label": "open",
+      "bridge_ready": false,
+      "export_decision": "demoted_to_support_only_nonexport_pending_dimensionless_replacement",
+      "reason": "The current alpha_s boundary object violates the minimal bridge discipline: it still runs through a frozen hierarchy-log ansatz and GeV-level mass-chain boundary scale rather than a kernel-invariants-only or explicitly normalized bridge object.",
+      "source_artifacts": [
+        "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2068_sm_gr_parameter_registry.json",
+        "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2069_full_sm_gr_derivation_package.json",
+        "report_qw2093_kernel_derived_nonanchor_inputs_plan_executor.json",
+        "report_qw2087_alpha_s_nonanchor_boundary_gate.json",
+        "report_qw2084_t1_nonanchor_strict_gate.json"
+      ],
+      "promotion_blockers": [
+        "The boundary source remains a frozen ansatz inside the strict pipeline, not a kernel-invariants-only bridge law.",
+        "The route still depends on QW-2063 regime data that are not yet reduced to a kernel-invariants-only bridge registry layer.",
+        "The strict promotion currently lives through downstream nonanchor gate support rather than through one standalone alpha_s boundary theorem."
+      ],
+      "formula_layer_blockers": [
+        "boundary_scale_uses_mass_chain_object_not_kernel_invariant",
+        "boundary_coupling_uses_mass_ratio_plus_micro_constant_ansatz",
+        "upstream_source_explicitly_labels_hierarchy_log_boundary_ansatz",
+        "mass_chain_still_not_promoted_to_strict_first_principles"
+      ],
+      "hard_limits": [
+        "Do not export mu0(alpha_s) from the current GeV-level mass-chain boundary as part of the minimal strict bridge.",
+        "Do not reinterpret downstream QW-2087 success as proof that the current alpha_s boundary law is kernel-invariants-only.",
+        "Do not upgrade this entry again without a dimensionless or explicitly normalized replacement boundary."
+      ]
+    },
+    "g_dimensionless_mu_ref": {
+      "status_label": "strict-derived-with-external-observable-origin",
+      "bridge_ready": true,
+      "export_decision": "retained_export_with_external_origin_boundary",
+      "reason": "The current gravity bridge object remains admissible only with explicit external observable origin and open internal-origin blocker.",
+      "source_artifacts": [
+        "external_gnewton_bridge_qw2101.direct_dimensionless_ready.json",
+        "report_qw2103_gnewton_dimensionless_provenance_gate.json",
+        "report_qw2113_gnewton_direct_dimensionless_pack_gate.json",
+        "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2069_full_sm_gr_derivation_package.json",
+        "fundamental_action_reconstruction/generated/a8_gravity_bridge_summary.json"
+      ],
+      "promotion_blockers": [
+        "The bridge observable origin is explicitly external_dimensionless_observable, so this is not an internal strict derivation of G.",
+        "A8 keeps the internal origin of the dimensionless G bridge observable explicitly open.",
+        "No Einstein-Hilbert derivation, equivalence-principle derivation, or full GR closure follows from this endpoint alone."
+      ],
+      "hard_limits": [
+        "Do not relabel this external-origin endpoint as internally derived gravity closure.",
+        "Do not infer full SM+GR reduction from this object."
+      ]
+    }
+  },
+  "export_sets": {
+    "minimal_bridge_export_ids": [
+      "mass_ratio_ordering_layer",
+      "sin2_theta_w_eff",
+      "g_dimensionless_mu_ref"
+    ],
+    "support_only_nonexport_ids": [
+      "alpha_s_boundary_mu0_alpha0"
+    ]
+  },
+  "current_honest_reading": [
+    "F784 remains boundary-clean after P785, so the refinement question is not leakage but admissible export scope.",
+    "sin2_theta_w_eff can stay in the minimal strict bridge only as a candidate observable with an explicit legacy non-transfer boundary.",
+    "alpha_s_boundary_mu0_alpha0 should not currently remain in the minimal strict export set because the present boundary is not yet dimensionless/normalized and not kernel-invariants-only.",
+    "This refinement narrows the bridge rather than broadening it; that is the correct no-false-pass move on the current repo state."
+  ],
+  "recommended_next_move": "Build a replacement alpha_s boundary object from dimensionless strict mass-observable ratios or explicitly normalized strict observables, then rerun the minimal bridge export decision.",
+  "no_false_pass": true
+}

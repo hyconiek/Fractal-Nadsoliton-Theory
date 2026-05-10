@@ -1,0 +1,79 @@
+{
+  "stage": "P962",
+  "status": "FAIL_STRICT_T253_PAIR12_ENTRY_POINT_EXACT_STILL_LOWER_BOUNDARY_REFINEMENT_ACTUAL_REALIZATION_ATTEMPT_VERDICT_OR_EXACT_FURTHER_LOWER_BOUNDARY_REFINEMENT_NONEXPORT_AUDIT",
+  "as_of": "2026-03-22",
+  "lane": "t252_attempt_verdict_or_further_lower_refinement_nonexport_only",
+  "t253_target_name": "StrictT252ExactStillLowerBoundaryRefinementActualRealizationAttemptVerdictOrExactFurtherLowerBoundaryRefinementNonexportBoundary_strict_v1",
+  "t253_target_exported_on_current_repo_state": false,
+  "current_repo_still_lacks_exact_still_lower_boundary_refinement_realization_verdict_for_t252_exact_attempt": false,
+  "current_repo_still_lacks_exact_further_lower_boundary_refinement_below_t252_exact_attempt": false,
+  "next_honest_move_is_freeze_exact_further_lower_boundary_refinement_below_t252_exact_attempt": false,
+  "positive_exact_still_lower_boundary_refinement_realization_verdict_candidates": [
+    "fundamental_action_reconstruction/T254_CURRENT_STRICT_PAIR12_ENTRY_POINT_EXACT_STILL_LOWER_BOUNDARY_REFINEMENT_ACTUAL_REALIZATION_ATTEMPT_EXACT_FURTHER_LOWER_BOUNDARY_REFINEMENT_TARGET_SPEC.md",
+    "fundamental_action_reconstruction/p963_current_strict_t254_pair12_entry_point_exact_still_lower_boundary_refinement_actual_realization_attempt_exact_further_lower_boundary_refinement_target_probe.py",
+    "fundamental_action_reconstruction/p964_current_strict_t255_pair12_entry_point_exact_further_lower_boundary_refinement_actual_realization_nonexport_audit_probe.py"
+  ],
+  "positive_exact_further_lower_boundary_refinement_candidates": [
+    "fundamental_action_reconstruction/N796_CURRENT_STRICT_T254_PAIR12_ENTRY_POINT_EXACT_STILL_LOWER_BOUNDARY_REFINEMENT_ACTUAL_REALIZATION_ATTEMPT_EXACT_FURTHER_LOWER_BOUNDARY_REFINEMENT_TARGET_THEOREM.md",
+    "fundamental_action_reconstruction/N798_CURRENT_STRICT_T256_PAIR12_ENTRY_POINT_EXACT_FURTHER_LOWER_BOUNDARY_REFINEMENT_ACTUAL_REALIZATION_ATTEMPT_THEOREM.md",
+    "fundamental_action_reconstruction/T254_CURRENT_STRICT_PAIR12_ENTRY_POINT_EXACT_STILL_LOWER_BOUNDARY_REFINEMENT_ACTUAL_REALIZATION_ATTEMPT_EXACT_FURTHER_LOWER_BOUNDARY_REFINEMENT_TARGET_SPEC.md",
+    "fundamental_action_reconstruction/T256_CURRENT_STRICT_PAIR12_ENTRY_POINT_EXACT_FURTHER_LOWER_BOUNDARY_REFINEMENT_ACTUAL_REALIZATION_ATTEMPT_SPEC.md",
+    "fundamental_action_reconstruction/P964_CURRENT_STRICT_T255_PAIR12_ENTRY_POINT_EXACT_FURTHER_LOWER_BOUNDARY_REFINEMENT_ACTUAL_REALIZATION_NONEXPORT_AUDIT_PROBE.md",
+    "fundamental_action_reconstruction/P966_CURRENT_STRICT_T257_PAIR12_ENTRY_POINT_EXACT_FURTHER_LOWER_BOUNDARY_REFINEMENT_ACTUAL_REALIZATION_ATTEMPT_VERDICT_OR_EXACT_YET_FURTHER_LOWER_BOUNDARY_REFINEMENT_NONEXPORT_AUDIT_PROBE.md",
+    "fundamental_action_reconstruction/p963_current_strict_t254_pair12_entry_point_exact_still_lower_boundary_refinement_actual_realization_attempt_exact_further_lower_boundary_refinement_target_probe.py",
+    "fundamental_action_reconstruction/p964_current_strict_t255_pair12_entry_point_exact_further_lower_boundary_refinement_actual_realization_nonexport_audit_probe.py",
+    "fundamental_action_reconstruction/p965_current_strict_t256_pair12_entry_point_exact_further_lower_boundary_refinement_actual_realization_attempt_probe.py",
+    "fundamental_action_reconstruction/generated/p963_current_strict_t254_t252_attempt_further_lower_boundary_target_probe.json",
+    "fundamental_action_reconstruction/generated/p965_current_strict_t256_t254_further_lower_boundary_actual_attempt_probe.json"
+  ],
+  "checks": [
+    {
+      "id": "p960_already_ordered_branch_to_one_actual_attempt_then_further_lower_refinement",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "P960 already reduced the branch ordering to one actual attempt first and only then one further-lower refinement if needed."
+    },
+    {
+      "id": "t252_attempt_already_exported_and_still_open",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "T252/P961 already export one exact first actual-realization attempt that still keeps verdict and further-lower refinement open."
+    },
+    {
+      "id": "t250_t252_same_exact_route_and_same_open_boundary_still_frozen",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "T250 and T252 still freeze the same exact still-lower boundary-refinement lane on the same exact T238 route."
+    },
+    {
+      "id": "current_repo_has_exact_still_lower_boundary_refinement_realization_verdict_for_t252_attempt",
+      "actual": true,
+      "expected": false,
+      "pass": false,
+      "meaning": "No current repo artifact exports one exact still-lower boundary-refinement realization verdict for the exact T252 attempt."
+    },
+    {
+      "id": "current_repo_has_exact_further_lower_boundary_refinement_below_t252_attempt",
+      "actual": true,
+      "expected": false,
+      "pass": false,
+      "meaning": "No current repo artifact exports one exact further-lower boundary refinement below the exact T252 attempt."
+    },
+    {
+      "id": "next_honest_move_is_freeze_exact_further_lower_boundary_refinement_below_t252_exact_attempt",
+      "actual": false,
+      "expected": true,
+      "pass": false,
+      "meaning": "Therefore the next honest move is now to freeze one exact further-lower boundary refinement target below the same exact T252 attempt."
+    }
+  ],
+  "blocking_checks": [
+    "current_repo_has_exact_still_lower_boundary_refinement_realization_verdict_for_t252_attempt",
+    "current_repo_has_exact_further_lower_boundary_refinement_below_t252_attempt",
+    "next_honest_move_is_freeze_exact_further_lower_boundary_refinement_below_t252_exact_attempt"
+  ],
+  "no_false_pass": true
+}

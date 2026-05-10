@@ -1,0 +1,59 @@
+{
+  "stage": "P966",
+  "status": "PASS_STRICT_T257_PAIR12_ENTRY_POINT_EXACT_FURTHER_LOWER_BOUNDARY_REFINEMENT_ACTUAL_REALIZATION_ATTEMPT_VERDICT_OR_EXACT_YET_FURTHER_LOWER_BOUNDARY_REFINEMENT_NONEXPORT_AUDITED",
+  "as_of": "2026-03-22",
+  "lane": "t256_attempt_verdict_or_yet_further_lower_refinement_nonexport_only",
+  "t257_target_name": "StrictT256ExactFurtherLowerBoundaryRefinementActualRealizationAttemptVerdictOrExactYetFurtherLowerBoundaryRefinementNonexportBoundary_strict_v1",
+  "t257_target_exported_on_current_repo_state": false,
+  "current_repo_still_lacks_exact_further_lower_boundary_refinement_realization_verdict_for_t256_exact_attempt": true,
+  "current_repo_still_lacks_exact_yet_further_lower_boundary_refinement_below_t256_exact_attempt": true,
+  "next_honest_move_is_freeze_exact_yet_further_lower_boundary_refinement_below_t256_exact_attempt": true,
+  "positive_exact_further_lower_boundary_refinement_realization_verdict_candidates": [],
+  "positive_exact_yet_further_lower_boundary_refinement_candidates": [],
+  "checks": [
+    {
+      "id": "p964_already_ordered_branch_to_one_actual_attempt_then_yet_further_lower_refinement",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "P964 already reduced the branch ordering to one actual attempt first and only then one yet-further-lower refinement if needed."
+    },
+    {
+      "id": "t256_attempt_already_exported_and_still_open",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "T256/P965 already export one exact first actual-realization attempt that still keeps verdict and yet-further-lower refinement open."
+    },
+    {
+      "id": "t254_t256_same_exact_route_and_same_open_boundary_still_frozen",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "T254 and T256 still freeze the same exact further-lower boundary-refinement lane on the same exact T238 route."
+    },
+    {
+      "id": "current_repo_has_exact_further_lower_boundary_refinement_realization_verdict_for_t256_attempt",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "No current repo artifact exports one exact further-lower boundary-refinement realization verdict for the exact T256 attempt."
+    },
+    {
+      "id": "current_repo_has_exact_yet_further_lower_boundary_refinement_below_t256_attempt",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "No current repo artifact exports one exact yet-further-lower boundary refinement below the exact T256 attempt."
+    },
+    {
+      "id": "next_honest_move_is_freeze_exact_yet_further_lower_boundary_refinement_below_t256_exact_attempt",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Therefore the next honest move is now to freeze one exact yet-further-lower boundary refinement target below the same exact T256 attempt."
+    }
+  ],
+  "blocking_checks": [],
+  "no_false_pass": true
+}

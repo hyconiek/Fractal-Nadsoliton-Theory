@@ -1,0 +1,48 @@
+{
+  "stage": "F817",
+  "packet_name": "CurrentStrictAlphaSDifferentSelectionProviderClassShiftCandidateReference_v1",
+  "status": "F817_EXECUTED_CURRENT_STRICT_ALPHA_S_DIFFERENT_SELECTION_PROVIDER_CLASS_SHIFT_CANDIDATE_REFERENCE_PACKET_NO_FALSE_PASS",
+  "as_of": "2026-03-19",
+  "inputs": {
+    "p817_shift_candidate_reference_lane_probe": "fundamental_action_reconstruction/generated/p817_current_strict_alpha_s_different_selection_provider_class_shift_candidate_reference_lane_admission_probe.json",
+    "f816_continuation_boundary_packet": "fundamental_action_reconstruction/generated/f816_current_strict_alpha_s_selection_or_preference_rule_schema_continuation_boundary_packet.json",
+    "f807_provider_class_shift_requirement_packet": "fundamental_action_reconstruction/generated/f807_current_strict_alpha_s_provider_class_shift_requirement_packet.json",
+    "p759_t213_target_probe_summary": "fundamental_action_reconstruction/generated/p759_current_strict_t213_pair12_source_side_branch_selection_provider_target_probe_summary.json",
+    "p761_t215_activation_boundary_summary": "fundamental_action_reconstruction/generated/p761_current_strict_t215_pair12_source_side_branch_selection_provider_actual_realization_direction_activation_boundary_audit_probe_summary.json",
+    "p762_t216_actual_attempt_summary": "fundamental_action_reconstruction/generated/p762_current_strict_t216_pair12_source_side_branch_selection_provider_actual_realization_attempt_probe_summary.json",
+    "p763_t217_missing_interface_boundary_summary": "fundamental_action_reconstruction/generated/p763_current_strict_t217_pair12_source_side_branch_selection_provider_actual_realization_attempt_immediate_missing_interface_nonexport_audit_probe_summary.json",
+    "p764_t218_missing_interface_target_summary": "fundamental_action_reconstruction/generated/p764_current_strict_t218_pair12_source_side_branch_selection_provider_actual_realization_attempt_chart_sensitive_pair12_typed_descent_interface_target_probe_summary.json"
+  },
+  "exported_object": {
+    "object_id": "alpha_s_pair12_source_side_branch_selection_provider_shift_candidate_reference_lane_v1",
+    "goal": "Export the T213/T216 lane only as a different selection-provider-class shift candidate reference lane for the alpha_s schema problem.",
+    "continuation_boundary_ref": "alpha_s_selection_or_preference_rule_schema_continuation_boundary_v1",
+    "provider_class_shift_requirement_ref": "alpha_s_provider_class_shift_requirement_v1",
+    "candidate_reference_lane_ref": "pair12_source_side_branch_selection_provider_shift_candidate_reference_lane_v1",
+    "candidate_reference_lane_grade": "reference_context_candidate_only",
+    "provider_target_name": "W_strict_t173_pair12_source_side_branch_selection_provider_target_v1",
+    "own_lane_activation_boundary_ref": "StrictT173Pair12SourceSideBranchSelectionProviderActualRealizationDirectionActivationBoundary_strict_v1",
+    "own_lane_actual_attempt_ref": "W_strict_t173_pair12_source_side_branch_selection_provider_actual_realization_attempt_v1",
+    "own_lane_missing_interface_boundary_ref": "StrictT216ActualRealizationAttemptImmediateMissingInterfaceNonexportBoundary_strict_v1",
+    "own_lane_missing_interface_target_ref": "W_strict_t173_pair12_source_side_branch_selection_provider_actual_realization_attempt_chart_sensitive_pair12_typed_descent_interface_target_v1",
+    "alpha_s_shift_interface_status": "blocked_nonexport",
+    "selection_or_preference_rule_schema_status": "blocked_nonexport",
+    "provider_class_shift_realization_status": "not_realized"
+  },
+  "current_honest_reading": [
+    "The repo now exports a second, different provider-class shift candidate reference lane for the alpha_s schema problem.",
+    "This lane is more than a generic hint: it already has its own future-only target, active own-lane attempt, and exact missing interface target.",
+    "But it still does not export the exact alpha_s-side shift interface, so the correct reading remains candidate-reference only."
+  ],
+  "recommended_next_move": "Audit whether the T213/T216 lane exports any exact alpha_s-side shift interface or adapter target without silent domain identification.",
+  "hard_limits": [
+    "Does not claim that the alpha_s selection/preference schema already exists.",
+    "Does not claim that the T213/T216 lane already enters the alpha_s domain.",
+    "Does not claim that provider-class shift has already succeeded.",
+    "Does not claim that the F811 source binding already exists.",
+    "Does not claim alpha_s boundary export readiness.",
+    "Does not claim QCD closure.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}

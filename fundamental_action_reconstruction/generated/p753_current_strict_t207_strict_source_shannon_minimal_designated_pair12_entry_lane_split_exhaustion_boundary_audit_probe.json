@@ -1,0 +1,95 @@
+{
+  "stage": "P753",
+  "status": "PASS_STRICT_SOURCE_SHANNON_MINIMAL_DESIGNATED_PAIR12_ENTRY_LANE_SPLIT_EXHAUSTION_BOUNDARY_AUDITED",
+  "as_of": "2026-03-18",
+  "generated_at_utc": "2026-03-18T07:19:27.381109+00:00",
+  "theorem_result": {
+    "t207_boundary_name": "StrictSourceShannonMinimalDesignatedPair12EntryLaneSplitExhaustionBoundary_strict_v1",
+    "t207_boundary_exported_on_current_repo_state": true,
+    "p750_combined_minimal_designated_pair12_entry_nonexport_already_frozen": true,
+    "p751_theta_entry_half_nonexport_already_frozen": true,
+    "p752_populated_instance_entry_half_nonexport_already_frozen": true,
+    "current_strict_source_shannon_minimal_designated_pair12_entry_lane_split_is_exhaustive": true,
+    "current_strict_source_shannon_minimal_designated_pair12_entry_lane_remains_candidate_only": true,
+    "current_strict_source_shannon_minimal_designated_pair12_entry_lane_has_residual_unsplit_loophole": false,
+    "next_honest_move_requires_new_entry_object_or_provider_shift": true,
+    "no_false_pass": true
+  },
+  "checks": [
+    {
+      "id": "p750_combined_minimal_designated_pair12_entry_nonexport_already_frozen",
+      "actual": {
+        "combined_entry_nonentering": true,
+        "combined_entry_exported": false,
+        "t204_exported": false
+      },
+      "expected": {
+        "combined_entry_nonentering": true,
+        "combined_entry_exported": false,
+        "t204_exported": false
+      },
+      "pass": true,
+      "meaning": "P750 already freezes that the combined minimal designated [pair1,pair2] theta/population entry bridge remains absent."
+    },
+    {
+      "id": "p751_theta_entry_half_nonexport_already_frozen",
+      "actual": {
+        "theta_entry_nonentering": true,
+        "theta_entry_exported": false,
+        "t205_exported": false
+      },
+      "expected": {
+        "theta_entry_nonentering": true,
+        "theta_entry_exported": false,
+        "t205_exported": false
+      },
+      "pass": true,
+      "meaning": "P751 already freezes the logically earlier theta-entry half as still absent."
+    },
+    {
+      "id": "p752_populated_instance_entry_half_nonexport_already_frozen",
+      "actual": {
+        "populated_instance_entry_nonentering": true,
+        "populated_instance_entry_exported": false,
+        "t206_exported": false
+      },
+      "expected": {
+        "populated_instance_entry_nonentering": true,
+        "populated_instance_entry_exported": false,
+        "t206_exported": false
+      },
+      "pass": true,
+      "meaning": "P752 already freezes the later populated-instance-entry half as still absent."
+    },
+    {
+      "id": "current_strict_source_shannon_minimal_designated_pair12_entry_lane_split_is_exhaustive",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Taken together, P750/P751/P752 fully split the current Shannon designated-family entry gap with no remaining unsplit half at this refinement level."
+    },
+    {
+      "id": "current_strict_source_shannon_minimal_designated_pair12_entry_lane_remains_candidate_only",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "Even after that full split, the current Shannon designated-family entry lane remains candidate-only, still below actual theta export and actual pair population."
+    },
+    {
+      "id": "current_strict_source_shannon_minimal_designated_pair12_entry_lane_has_residual_unsplit_loophole",
+      "actual": false,
+      "expected": false,
+      "pass": true,
+      "meaning": "No residual unsplit designated-family entry loophole remains inside the current Shannon syntax/refinement lane after the split."
+    },
+    {
+      "id": "next_honest_move_requires_new_entry_object_or_provider_shift",
+      "actual": true,
+      "expected": true,
+      "pass": true,
+      "meaning": "So the next honest move can no longer be another same-level Shannon entry wording tweak; it must export a genuinely new entry object or leave this lane for a different provider shift."
+    }
+  ],
+  "blocking_checks": [],
+  "no_false_pass": true
+}

@@ -1,0 +1,69 @@
+{
+  "stage": "F797",
+  "packet_name": "CurrentStrictAlphaSReferenceScaleRuleTarget_v1",
+  "status": "F797_EXECUTED_CURRENT_STRICT_ALPHA_S_REFERENCE_SCALE_RULE_TARGET_PACKET_NO_FALSE_PASS",
+  "as_of": "2026-03-19",
+  "inputs": {
+    "p797_extremum_vs_reference_scale_audit": "fundamental_action_reconstruction/generated/p797_current_strict_alpha_s_invariant_extremum_vs_reference_scale_audit_probe.json",
+    "f796_reference_scale_point_target": "fundamental_action_reconstruction/generated/f796_current_strict_alpha_s_reference_scale_point_target_packet.json"
+  },
+  "why_this_packet_exists": [
+    "F796 freezes the larger reference-scale-point target but still leaves open whether the invariant F704 maximum can be promoted beyond stable extremum status.",
+    "P797 shows that extremum stability is already candidate-supported, while the actual reference-scale rule remains missing."
+  ],
+  "target_object": {
+    "object_id": "alpha_s_reference_scale_rule_target_v1",
+    "goal": "Freeze the exact rule object still missing before the invariant F704 maximum can count as a reference-scale point.",
+    "required_fields": [
+      {
+        "name": "candidate_family_domain_ref",
+        "required": true,
+        "hard_limit": "Must point to one explicit finite alpha_s family domain; silent domain drift is forbidden."
+      },
+      {
+        "name": "invariant_extremum_support_refs",
+        "required": true,
+        "hard_limit": "Must cite the strict-side artifacts establishing basis-invariant, gauge-stable extremum support without over-claiming semantic promotion."
+      },
+      {
+        "name": "numeric_extremum_ref",
+        "required": true,
+        "hard_limit": "Must identify the concrete exported extremum candidate, including the current F704 maximum, explicitly."
+      },
+      {
+        "name": "reference_scale_rule_ref",
+        "required": true,
+        "hard_limit": "Must export the rule upgrading that stable extremum into a reference-scale point without importing GeV, host identification, or external policy semantics."
+      },
+      {
+        "name": "nonstrict_calibration_exclusion_ref",
+        "required": true,
+        "hard_limit": "Must explicitly fence off the proxy-to-GeV calibration lane from supplying the reference-scale role."
+      },
+      {
+        "name": "selected_reference_scale_output_schema",
+        "required": true,
+        "hard_limit": "Must output the admitted reference-scale point and its role inside the selected normalized family schema."
+      },
+      {
+        "name": "hard_limits",
+        "required": true,
+        "hard_limit": "Must explicitly deny Standard Model identification, QCD closure, and ToE closure."
+      }
+    ]
+  },
+  "current_honest_reading": [
+    "The current sharp blocker is no longer whether the F704 maximum is invariantly stable.",
+    "It is the missing reference-scale rule that would promote that stable extremum into a semantic alpha_s-side point.",
+    "F797 freezes that exact missing object without promoting the current family winner."
+  ],
+  "recommended_next_move": "Build one narrow probe testing whether any current strict-side invariant stack can be strengthened into an actual rule that promotes the invariant F704 maximum from stable extremum to reference-scale point.",
+  "hard_limits": [
+    "Does not claim that the reference-scale rule already exists.",
+    "Does not claim that f704_max_mode_anchor_family is already promoted.",
+    "Does not claim alpha_s boundary export readiness.",
+    "Does not claim QCD closure.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}

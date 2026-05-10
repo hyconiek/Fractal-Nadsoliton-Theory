@@ -1,0 +1,194 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import json
+from pathlib import Path
+from typing import Any
+
+
+AS_OF = "2026-03-20"
+
+ROOT = Path(__file__).resolve().parent
+REPO = ROOT.parent
+GENERATED = ROOT / "generated"
+
+IN_P902 = GENERATED / "p902_current_strict_alpha_s_required_form_statement_class_candidate_supported_lawful_refined_sir_da_erfs_da_erfs_da_exact_required_form_statement_domain_admission_exact_required_form_statement_blocked.json"
+IN_F901 = GENERATED / "f901_current_strict_alpha_s_lawful_refined_sir_da_erfs_da_erfs_da_exact_required_form_statement_domain_admission_exact_statement_required_form_target_packet.json"
+IN_F900 = GENERATED / "f900_current_strict_alpha_s_lawful_refined_sir_da_erfs_da_erfs_da_exact_required_form_statement_domain_admission_exact_output_schema_statement_target_packet.json"
+IN_F899 = GENERATED / "f899_current_strict_alpha_s_lawful_refined_sir_da_erfs_da_erfs_da_exact_required_form_statement_domain_admission_output_schema_target_packet.json"
+IN_F898 = GENERATED / "f898_current_strict_alpha_s_lawful_refined_sir_da_erfs_da_erfs_da_exact_required_form_statement_domain_admission_target_packet.json"
+IN_F897 = GENERATED / "f897_current_strict_alpha_s_lawful_refined_sir_da_erfs_da_erfs_da_exact_required_form_statement_domain_admission_or_nonidentification_boundary_target_packet.json"
+IN_F896 = GENERATED / "f896_current_strict_alpha_s_pair12_provider_shift_to_lawful_refined_sir_da_erfs_da_erfs_da_exact_required_form_statement_adapter_or_carrier_rule_target_packet.json"
+IN_F895 = GENERATED / "f895_current_strict_alpha_s_pair12_provider_shift_to_lawful_refined_sir_da_erfs_da_erfs_da_exact_required_form_statement_interface_target_packet.json"
+IN_F891 = GENERATED / "f891_current_strict_alpha_s_lawful_refined_sir_da_erfs_da_erfs_da_exact_required_form_statement_target_packet.json"
+
+OUT = GENERATED / "f902_current_strict_alpha_s_lawful_refined_sir_da_erfs_da_erfs_da_exact_required_form_statement_domain_admission_exact_required_form_statement_target_packet.json"
+OUT_SUMMARY = GENERATED / "f902_current_strict_alpha_s_lawful_refined_sir_da_erfs_da_erfs_da_exact_required_form_statement_domain_admission_exact_required_form_statement_target_packet_summary.json"
+
+
+def load_json(path: Path) -> dict[str, Any]:
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def rel(path: Path) -> str:
+    return str(path.relative_to(REPO))
+
+
+def main() -> None:
+    GENERATED.mkdir(exist_ok=True)
+
+    prereq = [IN_P902, IN_F901, IN_F900, IN_F899, IN_F898, IN_F897, IN_F896, IN_F895, IN_F891]
+    missing = [rel(path) for path in prereq if not path.exists()]
+    if missing:
+        artifact = {
+            "stage": "F902",
+            "status": "NOT_COMPUTABLE_MISSING_PREREQUISITES",
+            "as_of": AS_OF,
+            "missing": missing,
+            "no_false_pass": True,
+        }
+        OUT.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="ascii")
+        OUT_SUMMARY.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="ascii")
+        print(OUT_SUMMARY)
+        return
+
+    p902 = load_json(IN_P902)
+    f901 = load_json(IN_F901)
+    f900 = load_json(IN_F900)
+    f899 = load_json(IN_F899)
+    f898 = load_json(IN_F898)
+    f897 = load_json(IN_F897)
+    f896 = load_json(IN_F896)
+    f895 = load_json(IN_F895)
+    f891 = load_json(IN_F891)
+
+    p902_theorem = p902.get("theorem_result") or {}
+    f901_target = f901.get("target_object") or {}
+    f900_target = f900.get("target_object") or {}
+    f899_target = f899.get("target_object") or {}
+    f898_target = f898.get("target_object") or {}
+    f897_target = f897.get("target_object") or {}
+    f896_target = f896.get("target_object") or {}
+    f895_target = f895.get("target_object") or {}
+    f891_target = f891.get("target_object") or {}
+
+    if (
+        p902.get("status")
+        == "P902_CURRENT_STRICT_ALPHA_S_REQUIRED_FORM_STATEMENT_CLASS_CANDIDATE_SUPPORTED_LAWFUL_REFINED_SIR_DA_ERFS_DA_ERFS_DA_EXACT_REQUIRED_FORM_STATEMENT_DOMAIN_ADMISSION_EXACT_REQUIRED_FORM_STATEMENT_BLOCKED"
+        and p902_theorem.get("required_form_statement_class_candidate_supported_now") is True
+        and p902_theorem.get("exact_required_form_statement_exported_now") is False
+        and p902_theorem.get("sharp_blocker_field") == "exact_required_form_statement_ref"
+        and p902_theorem.get("next_honest_move_is_freeze_exact_required_form_statement_target") is True
+        and f901.get("status")
+        == "F901_EXECUTED_CURRENT_STRICT_ALPHA_S_LAWFUL_REFINED_SIR_DA_ERFS_DA_ERFS_DA_EXACT_REQUIRED_FORM_STATEMENT_DOMAIN_ADMISSION_EXACT_STATEMENT_REQUIRED_FORM_TARGET_PACKET_NO_FALSE_PASS"
+    ):
+        status = "F902_EXECUTED_CURRENT_STRICT_ALPHA_S_LAWFUL_REFINED_SIR_DA_ERFS_DA_ERFS_DA_EXACT_REQUIRED_FORM_STATEMENT_DOMAIN_ADMISSION_EXACT_REQUIRED_FORM_STATEMENT_TARGET_PACKET_NO_FALSE_PASS"
+    else:
+        status = "F902_REQUIRES_REVIEW"
+
+    artifact = {
+        "stage": "F902",
+        "packet_name": "CurrentStrictAlphaSLawfulRefinedSirDaErfsDaErfsDaExactRequiredFormStatementDomainAdmissionExactRequiredFormStatementTarget_v1",
+        "status": status,
+        "as_of": AS_OF,
+        "inputs": {
+            "p902_required_form_statement_probe": rel(IN_P902),
+            "f901_lawful_refined_deeper_domain_admission_exact_statement_required_form_target_packet": rel(IN_F901),
+            "f900_lawful_refined_deeper_domain_admission_exact_output_schema_statement_target_packet": rel(IN_F900),
+            "f899_lawful_refined_deeper_domain_admission_output_schema_target_packet": rel(IN_F899),
+            "f898_lawful_refined_deeper_domain_admission_target_packet": rel(IN_F898),
+            "f897_boundary_target_packet": rel(IN_F897),
+            "f896_rule_target_packet": rel(IN_F896),
+            "f895_interface_target_packet": rel(IN_F895),
+            "f891_neighboring_exact_required_form_statement_target_packet": rel(IN_F891),
+        },
+        "why_this_packet_exists": [
+            "F901 already freezes the deeper lawful refined domain-admission exact-statement-required-form object and names one exact missing required-form-statement field.",
+            "P902 shows that neighboring statement slots and neighboring required-form supports exist, but the exact required-form statement needed by the new deeper lane is still unexported.",
+        ],
+        "target_object": {
+            "object_id": "alpha_s_pair12_source_side_branch_selection_provider_lawful_refined_shift_interface_rule_domain_admission_exact_required_form_statement_domain_admission_exact_required_form_statement_domain_admission_exact_required_form_statement_domain_admission_exact_required_form_statement_target_v1",
+            "goal": "Freeze the exact deeper lawful refined domain-admission required-form statement object still missing for the lawful refined shift-interface-rule T213/T216 -> alpha_s lane.",
+            "required_fields": [
+                {
+                    "name": "exact_statement_required_form_target_ref",
+                    "required": True,
+                    "hard_limit": "Must point to the exact F901 required-form target and not silently replace the problem.",
+                },
+                {
+                    "name": "required_form_statement_class_candidate_support_refs",
+                    "required": True,
+                    "hard_limit": "Must preserve only candidate-grade neighboring statement/form-class support and must not promote it into exact discharge.",
+                },
+                {
+                    "name": "neighboring_statement_or_form_slot_refs",
+                    "required": True,
+                    "hard_limit": "Must keep explicit which neighboring statement or form slots remain nonidentical to the new-lane statement.",
+                },
+                {
+                    "name": "exact_required_form_statement_ref",
+                    "required": True,
+                    "hard_limit": "Must state what exact required-form statement is needed for the new lane without claiming that the statement already exists.",
+                },
+                {
+                    "name": "hard_limits",
+                    "required": True,
+                    "hard_limit": "Must explicitly deny exact new-lane admission, silent reuse of neighboring statement or form slots, provider-class shift success, QCD closure, and ToE closure.",
+                },
+            ],
+        },
+        "target_refs": {
+            "exact_statement_required_form_target_ref": f901_target.get("object_id"),
+            "required_form_statement_class_candidate_support_refs": [
+                f900_target.get("object_id"),
+                f899_target.get("object_id"),
+                f898_target.get("object_id"),
+                f897_target.get("object_id"),
+                f896_target.get("object_id"),
+                f895_target.get("object_id"),
+                f891_target.get("object_id"),
+            ],
+            "neighboring_statement_or_form_slot_refs": [
+                "exact_statement_required_form_ref",
+                "exact_output_schema_statement",
+                "lawful_refined_deeper_exact_required_form_statement_domain_admission_output_schema",
+                "boundary_output_schema",
+                "selected_interface_output_schema",
+                "exact_interface_output_schema",
+                "exact_required_form_statement",
+            ],
+        },
+        "current_honest_reading": [
+            "The repo preserves statement and form-like structure around the deeper lawful refined domain-admission lane, but only through neighboring target fields and neighboring old-lane targets.",
+            "No current export yet names the exact required-form statement required by F901 for the lawful refined T213/T216 -> alpha_s route.",
+            "F902 freezes that exact missing required-form-statement object without pretending that lawful admission already exists.",
+        ],
+        "recommended_next_move": "Build one narrow same-lane exhaustion-boundary audit testing whether any further passive split remains below alpha_s_pair12_source_side_branch_selection_provider_lawful_refined_shift_interface_rule_domain_admission_exact_required_form_statement_domain_admission_exact_required_form_statement_domain_admission_exact_required_form_statement_domain_admission_exact_required_form_statement_target_v1 without silent domain identification.",
+        "hard_limits": [
+            "Does not claim that exact deeper lawful refined required-form statement already exists.",
+            "Does not claim that any neighboring statement or form slot silently discharges the lawful refined new lane.",
+            "Does not claim that the T213/T216 lane already enters the alpha_s domain.",
+            "Does not claim that provider-class shift has already succeeded.",
+            "Does not claim alpha_s boundary export readiness.",
+            "Does not claim QCD closure.",
+            "Does not claim ToE closure.",
+        ],
+        "no_false_pass": True,
+    }
+
+    summary = {
+        "stage": "F902",
+        "status": status,
+        "as_of": AS_OF,
+        "target_object_id": artifact["target_object"]["object_id"],
+        "recommended_next_move": artifact["recommended_next_move"],
+        "no_false_pass": True,
+    }
+
+    OUT.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="ascii")
+    OUT_SUMMARY.write_text(json.dumps(summary, indent=2, ensure_ascii=True) + "\n", encoding="ascii")
+    print(OUT_SUMMARY)
+
+
+if __name__ == "__main__":
+    main()

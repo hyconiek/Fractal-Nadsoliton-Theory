@@ -1,0 +1,81 @@
+{
+  "stage": "P813",
+  "status": "P813_CURRENT_STRICT_ALPHA_S_SOURCE_BINDING_CANDIDATE_SUPPORT_DOMAIN_EXPORT_ADMITTED_SELECTION_OR_PREFERENCE_RULE_SCHEMA_STILL_BLOCKED",
+  "as_of": "2026-03-19",
+  "inputs": {
+    "f812_selection_or_preference_rule_target_packet": "fundamental_action_reconstruction/generated/f812_current_strict_alpha_s_strict_source_shannon_shift_to_domain_source_binding_selection_or_preference_rule_target_packet.json",
+    "f811_source_binding_target_packet": "fundamental_action_reconstruction/generated/f811_current_strict_alpha_s_strict_source_shannon_shift_to_domain_source_binding_target_packet.json",
+    "p811_source_binding_probe": "fundamental_action_reconstruction/generated/p811_current_strict_alpha_s_source_support_present_exact_source_binding_unexported_adapter_action_schema_blocked_source_binding_target_freeze_required.json",
+    "p812_selection_or_preference_rule_probe": "fundamental_action_reconstruction/generated/p812_current_strict_alpha_s_no_source_binding_selection_or_preference_rule_for_f811_target_exported_target_freeze_required.json",
+    "p755_future_entry_target_probe": "fundamental_action_reconstruction/generated/p755_current_strict_t209_t26_component2_minimal_designated_pair12_noncyclic_entry_object_target_probe.json",
+    "p756_future_entry_actual_realization_nonexport_audit": "fundamental_action_reconstruction/generated/p756_current_strict_t210_t26_component2_minimal_designated_pair12_noncyclic_entry_object_actual_realization_nonexport_audit_probe.json"
+  },
+  "support_domain_candidate": {
+    "domain_id": "alpha_s_strict_source_shannon_source_binding_candidate_support_domain_v1",
+    "member_count": 2,
+    "members": [
+      {
+        "member_id": "current_source_candidate_support",
+        "object_ref": "BasisPair_strict_nad12_sigma_residual_nonequality_shannon_weighted_population_refinement_candidate_v1",
+        "member_grade": "current_candidate_only",
+        "support_status": "exported_current_support"
+      },
+      {
+        "member_id": "lawful_future_entry_object_support",
+        "object_ref": "StrictT26Component2MinimalDesignatedPair12NoncyclicEntryObjectTarget_strict_v1",
+        "member_grade": "future_only_entry_target",
+        "support_status": "exported_future_only_support"
+      }
+    ]
+  },
+  "clause_split": {
+    "candidate_source_support_domain_clause_status": "export_admitted",
+    "selection_or_preference_rule_schema_clause_status": "blocked_nonexport",
+    "sharp_blocker_clause": "selection_or_preference_rule_schema"
+  },
+  "theorem_result": {
+    "candidate_source_support_domain_exportable_now": true,
+    "selection_or_preference_rule_schema_exported_now": false,
+    "next_honest_move_is_export_support_domain_leave_rule_schema_blocked": true,
+    "no_false_pass": true
+  },
+  "checks": [
+    {
+      "id": "f812_requires_candidate_domain_and_rule_schema",
+      "pass": true,
+      "details": "F812 already freezes the exact missing selection/preference-rule target and requires both candidate_source_support_domain_ref and selection_or_preference_rule_schema."
+    },
+    {
+      "id": "f811_and_p811_already_make_the_support_pair_explicit",
+      "pass": true,
+      "details": "F811/P811 already expose the exact two support objects needed for a finite candidate support domain."
+    },
+    {
+      "id": "future_entry_support_remains_future_only_not_actual_entry",
+      "pass": true,
+      "details": "The future entry support remains future-only and explicitly below actual realization."
+    },
+    {
+      "id": "finite_two_support_domain_can_be_exported_without_selecting_one_source",
+      "pass": true,
+      "details": "The current support pair is explicit enough to be exported as one finite support domain without thereby selecting one source."
+    },
+    {
+      "id": "selection_or_preference_rule_schema_remains_blocked",
+      "pass": true,
+      "details": "The selection/preference rule schema itself remains blocked and unexported on current repo state."
+    }
+  ],
+  "failed_checks": [],
+  "current_honest_reading": [
+    "The exact two support objects needed for source binding are already explicit on current repo state.",
+    "That pair can be exported as a finite candidate support domain without yet choosing one source.",
+    "What remains missing is only the selection/preference rule schema that would act on that domain."
+  ],
+  "recommended_next_packet": {
+    "id": "F813_CURRENT_STRICT_ALPHA_S_STRICT_SOURCE_SHANNON_SOURCE_BINDING_CANDIDATE_SUPPORT_DOMAIN_PACKET",
+    "goal": "Export the admitted finite candidate support domain explicitly while leaving the selection/preference rule schema unresolved.",
+    "export_object_id": "alpha_s_strict_source_shannon_source_binding_candidate_support_domain_v1"
+  },
+  "no_false_pass": true
+}

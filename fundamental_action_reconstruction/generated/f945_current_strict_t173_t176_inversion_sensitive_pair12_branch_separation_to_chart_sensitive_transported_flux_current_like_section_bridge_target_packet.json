@@ -1,0 +1,142 @@
+{
+  "stage": "F945",
+  "packet_name": "CurrentStrictT173T176InversionSensitivePair12BranchSeparationToChartSensitiveTransportedFluxCurrentLikeSectionBridgeTarget_v1",
+  "status": "F945_EXECUTED_CURRENT_STRICT_T173_T176_INVERSION_SENSITIVE_PAIR12_BRANCH_SEPARATION_TO_CHART_SENSITIVE_TRANSPORTED_FLUX_CURRENT_LIKE_SECTION_BRIDGE_TARGET_PACKET_NO_FALSE_PASS",
+  "as_of": "2026-03-21",
+  "inputs": {
+    "p945_bridge_nonexport_audit": "fundamental_action_reconstruction/generated/p945_current_strict_t173_t176_inversion_sensitive_pair12_branch_separation_to_chart_sensitive_transported_flux_current_like_section_bridge_nonexport_audit_probe.json",
+    "p708_t173_frontier_dashboard": "fundamental_action_reconstruction/generated/p708_current_strict_t173_frontier_dashboard_probe_summary.json",
+    "p721_t176_source_topology_nonupgrade_audit": "fundamental_action_reconstruction/generated/p721_current_strict_t176_source_topology_basis_free_qw2191_safe_provider_nonupgrade_audit_probe_summary.json",
+    "p722_t177_chart_sensitive_section_nonexport_audit": "fundamental_action_reconstruction/generated/p722_current_strict_t177_chart_sensitive_transported_flux_current_like_section_nonexport_audit_probe_summary.json",
+    "p729_pair12_orbit_direction_localization_audit": "fundamental_action_reconstruction/generated/p729_current_strict_t183_residual_datum_pair12_orbit_direction_selection_bridge_nonexport_audit_probe_summary.json",
+    "p731_w_break_pair12_branch_separation_audit": "fundamental_action_reconstruction/generated/p731_current_strict_t185_w_break_witness_payload_residual_datum_pair12_orbit_direction_promotion_bridge_nonexport_audit_probe_summary.json",
+    "f647_w_break_witness_provider_packet": "fundamental_action_reconstruction/generated/f647_strict_witness_provider_export_packet_for_seed_v1_realization_attempt.json",
+    "p684_rooted_w_break_state_lift_audit": "fundamental_action_reconstruction/generated/p684_current_strict_t173_w_break_rooted_directed_state_lift_audit_probe.json"
+  },
+  "why_this_packet_exists": [
+    "P945 shows that the current repo already exports an inversion-sensitive pair1/pair2 branch separation while the T176/T177 bridge remains unexported.",
+    "P721/P722 keep the source-topology lane physics-facing but chart-blind and keep the chart-sensitive transported flux/current-like section target unexported.",
+    "P731/F647/P684 keep the current w_break lane explicitly below admissible S_sel_int and below any strict physical orientation datum."
+  ],
+  "preconditions": {
+    "p945_status_pass": true,
+    "p945_bridge_target_unexported": true,
+    "p945_pair12_branch_separation_present": true,
+    "p945_pair12_to_t176_bridge_still_unexported": true,
+    "p708_recommended_target_is_t173": true,
+    "p708_t176_provider_unexported": true,
+    "p721_t176_nonupgrade_still_holds": true,
+    "p722_t177_target_unexported": true,
+    "p729_pair12_split_localized": true,
+    "p731_pair12_branch_separation_present": true,
+    "p731_t185_unexported": true,
+    "f647_not_admissible_s_sel_int": true,
+    "p684_rooted_w_break_still_nonphysical": true
+  },
+  "target_object": {
+    "object_id": "inversion_sensitive_pair12_branch_separation_to_chart_sensitive_transported_flux_current_like_section_bridge_global_C_v1_strict_v1",
+    "goal": "Freeze the exact missing bridge object from the current inversion-sensitive pair1/pair2 branch separation to a chart-sensitive transported flux/current-like section on full C_v1 without promoting witness-side data by fiat.",
+    "required_fields": [
+      {
+        "name": "t173_t176_frontier_context_ref",
+        "required": true,
+        "hard_limit": "Must keep explicit that T173 remains live and that no exact T176 provider is currently exported."
+      },
+      {
+        "name": "source_topology_physics_facing_but_chart_blind_ref",
+        "required": true,
+        "hard_limit": "Must keep explicit that the current source-topology lane is real and physics-facing but still chart-blind."
+      },
+      {
+        "name": "localized_pair12_orbit_direction_split_ref",
+        "required": true,
+        "hard_limit": "Must point to the exact surviving pair1/pair2 split delta_k versus delta_-k and not replace it with a weaker chart-label statement."
+      },
+      {
+        "name": "inversion_sensitive_pair12_branch_separation_ref",
+        "required": true,
+        "hard_limit": "Must preserve that the current pair12 branch separation is witness-side only and not silently promote it into a typed source-side selector."
+      },
+      {
+        "name": "chart_sensitive_transported_flux_current_like_section_target_ref",
+        "required": true,
+        "hard_limit": "Must point to the exact T177-class chart-sensitive transported flux/current-like section target and not silently weaken it to projective or convention-layer data."
+      },
+      {
+        "name": "w_break_nonpromotion_ref",
+        "required": true,
+        "hard_limit": "Must explicitly deny promotion of F647 into admissible S_sel_int."
+      },
+      {
+        "name": "rooted_w_break_convention_nonpromotion_ref",
+        "required": true,
+        "hard_limit": "Must explicitly deny promotion of the rooted w_break sign lift into a strict physical orientation datum."
+      },
+      {
+        "name": "bridge_output_schema",
+        "required": true,
+        "hard_limit": "Must state what a successful typed bridge would output on full C_v1 without claiming that such a bridge already exists."
+      },
+      {
+        "name": "hard_limits",
+        "required": true,
+        "hard_limit": "Must explicitly deny T176 discharge, T177 discharge, T185 discharge, kernel-alone/global QW-2191 discharge, and ToE closure."
+      }
+    ]
+  },
+  "target_refs": {
+    "t173_t176_frontier_context_ref": {
+      "recommended_next_strict_target": "T173",
+      "t176_global_provider_exported": false
+    },
+    "source_topology_physics_facing_but_chart_blind_ref": {
+      "p721_summary": "P721_CURRENT_STRICT_T176_SOURCE_TOPOLOGY_BASIS_FREE_QW2191_SAFE_PROVIDER_NONUPGRADE_AUDIT_PROBE",
+      "p722_summary": "P722_CURRENT_STRICT_T177_CHART_SENSITIVE_TRANSPORTED_FLUX_CURRENT_LIKE_SECTION_NONEXPORT_AUDIT_PROBE",
+      "preferred_next_direction": "chart_sensitive_transported_flux_or_current_like_provider_class_over_further_static_basis_free_or_output_axis_classes"
+    },
+    "localized_pair12_orbit_direction_split_ref": {
+      "p729_target_name": "ResidualDatumPair12OrbitDirectionSelectionBridge_global_C_v1_strict_v1",
+      "pair1_orbit_branch_kind": "delta_k_positive_index_branch",
+      "pair2_orbit_branch_kind": "delta_minus_k_negative_index_branch"
+    },
+    "inversion_sensitive_pair12_branch_separation_ref": {
+      "p731_target_name": "WBreakWitnessPayloadResidualDatumPair12OrbitDirectionPromotionBridge_global_C_v1_strict_v1",
+      "pair1_w_break_branch_score_sign": "negative",
+      "pair2_w_break_branch_score_sign": "positive"
+    },
+    "chart_sensitive_transported_flux_current_like_section_target_ref": "ChartSensitiveTransportedFluxCurrentLikeSection_global_C_v1_source_topology_bridge_v1",
+    "w_break_nonpromotion_ref": {
+      "exported_constructed_source_object": "S_sel_int_strict_core_source_object_v1",
+      "admissible_S_sel_int": false
+    },
+    "rooted_w_break_convention_nonpromotion_ref": {
+      "root_pair": "pair1",
+      "counts_as_strict_physical_orientation_datum": false
+    }
+  },
+  "current_honest_reading": [
+    "The current repo already exports inversion-sensitive pair1/pair2 branch separation on the surviving residual-datum carrier.",
+    "The current source-topology lane remains genuinely physics-facing but still chart-blind, and the chart-sensitive transported flux/current-like section target remains unexported.",
+    "So the sharp blocker is now the exact missing bridge from current pair12 branch separation to the T177-class chart-sensitive section target on full C_v1."
+  ],
+  "recommended_next_move": "Build one narrow probe testing whether any current export can lawfully supply bridge_output_schema for inversion_sensitive_pair12_branch_separation_to_chart_sensitive_transported_flux_current_like_section_bridge_global_C_v1_strict_v1 without promoting F647 or P684 by fiat.",
+  "bridge_output_schema": {
+    "successful_bridge_output": "one typed strict source-side or provider bridge object on full C_v1 descending the current inversion-sensitive pair12 branch separation to a chart-sensitive transported flux/current-like section",
+    "minimum_properties": [
+      "full_C_v1_scope",
+      "pair12_branch_sensitive",
+      "chart_sensitive_transported_section_level",
+      "nonconvention_nonprojective_nonpremise_smuggled"
+    ]
+  },
+  "hard_limits": [
+    "Does not claim that T176 is discharged.",
+    "Does not claim that T177 is discharged.",
+    "Does not claim that T185 is discharged.",
+    "Does not claim that F647 is admissible S_sel_int.",
+    "Does not claim that the rooted w_break sign lift is a strict physical orientation datum.",
+    "Does not claim kernel-alone/global QW-2191 discharge.",
+    "Does not claim ToE closure."
+  ],
+  "no_false_pass": true
+}
