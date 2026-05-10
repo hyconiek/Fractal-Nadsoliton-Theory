@@ -1,0 +1,62 @@
+{
+  "as_of": "2026-05-10",
+  "candidate": "/workspace/Fractal-Nadsoliton-Theory/fundamental_action_reconstruction/generated/p1170_neighbor_3.json",
+  "integrated_pass": true,
+  "note": "Integration validation only; no closure/QW-2191 discharge claim.",
+  "out_of_locality_robustness_run": {
+    "cmd": [
+      "/root/.pyenv/versions/3.14.4/bin/python",
+      "/workspace/Fractal-Nadsoliton-Theory/fundamental_action_reconstruction/p1171_out_of_locality_robustness_probe.py",
+      "/workspace/Fractal-Nadsoliton-Theory/fundamental_action_reconstruction/generated/p1170_neighbor_3.json"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "[P1171] robust=54/81 wrote /workspace/Fractal-Nadsoliton-Theory/fundamental_action_reconstruction/generated/p1171_out_of_locality_robustness_probe_summary.json"
+  },
+  "out_of_locality_robustness_summary": {
+    "cases": 81,
+    "robust_cases": 54,
+    "robust_fraction": 0.6666666666666666
+  },
+  "packet": "P1169",
+  "pipeline_run": {
+    "cmd": [
+      "/root/.pyenv/versions/3.14.4/bin/python",
+      "/workspace/Fractal-Nadsoliton-Theory/fundamental_action_reconstruction/p1151_strict_selector_pipeline_runner.py",
+      "/workspace/Fractal-Nadsoliton-Theory/fundamental_action_reconstruction/generated/p1170_neighbor_3.json"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "[P1151] overall_pass=True wrote /workspace/Fractal-Nadsoliton-Theory/fundamental_action_reconstruction/generated/p1151_strict_selector_pipeline_runner_summary.json"
+  },
+  "pipeline_summary": {
+    "failed_step": null,
+    "overall_pass": true
+  },
+  "registry": "/tmp/tmp_mvs_6z8.json",
+  "registry_run": {
+    "cmd": [
+      "/root/.pyenv/versions/3.14.4/bin/python",
+      "/workspace/Fractal-Nadsoliton-Theory/fundamental_action_reconstruction/p1152_strict_candidate_registry_runner.py",
+      "/tmp/tmp_mvs_6z8.json",
+      "--require-safe-region",
+      "--rank-by-safe-margin",
+      "--enforce-shortlist-consistency"
+    ],
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "[P1152] total=1 passed=1 failed=0 wrote /workspace/Fractal-Nadsoliton-Theory/fundamental_action_reconstruction/generated/p1152_strict_candidate_registry_runner_summary.json\n[P1152] Safe-margin shortlist for next physical tests:\n  1. /workspace/Fractal-Nadsoliton-Theory/fundamental_action_reconstruction/generated/p1170_neighbor_3.json margin=0.0"
+  },
+  "registry_summary": {
+    "failed": 0,
+    "passed": 1,
+    "shortlist_consistency_enforced": true,
+    "shortlist_consistency_returncode": 0,
+    "total": 1
+  },
+  "require_out_of_locality_robustness": true,
+  "require_safe_region": true,
+  "require_shortlist_consistency": true,
+  "robustness_threshold": 0.6,
+  "strict_e2e": true
+}
