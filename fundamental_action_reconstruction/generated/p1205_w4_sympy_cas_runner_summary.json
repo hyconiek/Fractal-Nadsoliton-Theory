@@ -1,8 +1,19 @@
 {
   "as_of": "2026-05-10",
-  "error": "No module named 'sympy'",
-  "note": "SymPy missing in runtime environment.",
+  "note": "CAS pre-discharge artifact only; no W4 discharge claim.",
   "packet": "P1205",
+  "partial_symbolic_execution_ready": true,
   "strict_closure_claim_allowed": false,
-  "sympy_available": false
+  "sympy_available": true,
+  "sympy_version": "1.12",
+  "trace_hash_sha256": "c861375b39f254a9f175daf68e3c5ebebf1e4ffd533bd9c711123be1985f856d",
+  "trace_payload": {
+    "cancel_expression": "0",
+    "expand_expression": "(a + b)**2",
+    "expanded_binom": "a**2 + 2*a*b + b**2",
+    "expanded_cancel": "0",
+    "grouped_binom": "a**2 + 2*a*b + b**2",
+    "reduced_zero_ok": true
+  },
+  "w4_discharge_performed": false
 }
