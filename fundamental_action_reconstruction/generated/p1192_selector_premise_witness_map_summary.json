@@ -1,0 +1,39 @@
+{
+  "as_of": "2026-05-10",
+  "candidate_status": "operationally_promoted_not_closed",
+  "entry_condition_from_p1190": true,
+  "note": "Promotion is operational only until all witness obligations are discharged.",
+  "open_count": 4,
+  "packet": "P1192",
+  "strict_closure_claim_allowed": false,
+  "witness_obligations": [
+    {
+      "id": "W1_selector_uniqueness_bridge",
+      "pass_condition": "unique strict branch selected with reproducible witness",
+      "required_artifact": "formal selector source theorem OR explicit symmetry-breaking axiom with scoped non-strict tag",
+      "status": "OPEN",
+      "target": "QW-2191 strict-core uniqueness obstruction"
+    },
+    {
+      "id": "W2_eom_role_assignment",
+      "pass_condition": "all declared role links validated",
+      "required_artifact": "symbolic equality + numeric support across certified region",
+      "status": "OPEN",
+      "target": "explicit target eom-role witness family from P46 frontier"
+    },
+    {
+      "id": "W3_pairwise_mass_matching",
+      "pass_condition": "all pair constraints pass without manual override",
+      "required_artifact": "zero-defect certificates for each pair",
+      "status": "OPEN",
+      "target": "pairwise matching set (e.g. m2_psi7=m2_psi10, m2_psi2=m2_psi5, m2_psi8=m2_psi11)"
+    },
+    {
+      "id": "W4_defect_polynomial_zeroes",
+      "pass_condition": "symbolic/numeric defect zero within tolerance",
+      "required_artifact": "explicit zero witness on common support",
+      "status": "OPEN",
+      "target": "direct m2 psi4 target action coefficient defect polynomial"
+    }
+  ]
+}

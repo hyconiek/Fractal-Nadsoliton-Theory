@@ -1,0 +1,21 @@
+{
+  "as_of": "2026-05-11",
+  "continuation_signal": "ATTACK_NEXT_OPEN_WITNESS_OBLIGATION",
+  "execution_plan": {
+    "expected_output": "witness_check_summary.json",
+    "fail_criterion": "witness_status != DISCHARGED",
+    "input_artifact": "next_open_witness_symbolic_or_numeric_payload.json",
+    "pass_criterion": "witness_status == DISCHARGED and strict_closure_claim_allowed == false"
+  },
+  "note": "Planner checkpoint only; no witness proof generated here.",
+  "packet": "P1222",
+  "selected_open_witness": {
+    "id": "W1_selector_uniqueness_bridge",
+    "pass_condition": "unique strict branch selected with reproducible witness",
+    "required_artifact": "formal selector source theorem OR explicit symmetry-breaking axiom with scoped non-strict tag",
+    "status": "OPEN",
+    "target": "QW-2191 strict-core uniqueness obstruction"
+  },
+  "strict_closure_claim_allowed": false,
+  "theory_closure_status": "OPEN"
+}
