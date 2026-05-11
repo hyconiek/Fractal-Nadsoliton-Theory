@@ -1,0 +1,36 @@
+{
+  "as_of": "2026-05-10",
+  "can_discharge_w4_now": false,
+  "input_p1195_status": "OPEN",
+  "note": "Template exported; actual symbolic execution still required.",
+  "packet": "P1196",
+  "strict_closure_claim_allowed": false,
+  "symbolic_ledger_template": {
+    "common_support": "psi4**2/2",
+    "required_terminal_condition": "reduced_form == 0",
+    "symbolic_steps": [
+      {
+        "operation": "expand",
+        "result_tag": "expanded_polynomial",
+        "step": 1
+      },
+      {
+        "operation": "group_terms",
+        "result_tag": "grouped_terms",
+        "step": 2
+      },
+      {
+        "operation": "cancel_pairs",
+        "result_tag": "cancellation_ledger",
+        "step": 3
+      },
+      {
+        "operation": "reduce_to_zero_check",
+        "result_tag": "reduced_form",
+        "step": 4
+      }
+    ],
+    "target": "W4_defect_polynomial_zeroes"
+  },
+  "template_exported": true
+}
