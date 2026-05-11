@@ -1,0 +1,50 @@
+{
+  "as_of": "2026-05-11",
+  "closure_policy": "STRICT_CLOSURE_FORBIDDEN_UNTIL_B1_OR_NB1_DISCHARGED",
+  "entry_gate": true,
+  "input": {
+    "p1255": "/workspace/Fractal-Nadsoliton-Theory/fundamental_action_reconstruction/generated/p1255_bridge_or_nonbridge_decision_gate_summary.json"
+  },
+  "next_action": "Select B1 (bridge) or NB1 (non-bridge) and instantiate formal assumptions.",
+  "packet": "P1256",
+  "proof_obligations": [
+    {
+      "id": "O1",
+      "lane": "strict",
+      "status": "OPEN",
+      "text": "No strict-core closure claim without resolved B1 or NB1."
+    },
+    {
+      "id": "O2",
+      "lane": "strict",
+      "status": "OPEN",
+      "text": "QW-2191 compatibility must be explicit in selected theorem lane."
+    },
+    {
+      "id": "O3",
+      "lane": "cross-lane",
+      "status": "OPEN",
+      "text": "No implicit legacy physical-role transfer onto strict kernel."
+    }
+  ],
+  "theorem_spec": {
+    "bridge_theorem": {
+      "goal": "Establish explicit map from legacy ontological kernel to strict gate kernel under declared hypotheses.",
+      "required_objects": [
+        "domain-alignment map",
+        "parameter-role transfer map",
+        "error/obstruction bounds"
+      ],
+      "statement_id": "B1"
+    },
+    "nonbridge_theorem": {
+      "goal": "Prove impossibility (or inconsistency) of legacy->strict identification under canonical assumptions.",
+      "required_objects": [
+        "obstruction witness",
+        "invariance violation or no-go lemma",
+        "selector-consistent countermodel class"
+      ],
+      "statement_id": "NB1"
+    }
+  }
+}

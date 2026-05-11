@@ -1,0 +1,50 @@
+{
+  "as_of": "2026-05-11",
+  "assessments": [
+    {
+      "falsification_rule": "FAIL if variance_ratio > 0.15 on frozen benchmark set",
+      "id": "SP1",
+      "metric": "variance_ratio",
+      "observed": 0.11,
+      "predicted_range": [
+        0.0,
+        0.15
+      ],
+      "status": "PASS"
+    },
+    {
+      "falsification_rule": "FAIL if pass rate < 0.97 across declared perturbation family",
+      "id": "SP2",
+      "metric": "consistency_pass_rate",
+      "observed": 0.98,
+      "predicted_range": [
+        0.97,
+        1.0
+      ],
+      "status": "PASS"
+    },
+    {
+      "falsification_rule": "FAIL if residual bound exceeds 0.05 in strict-only lane",
+      "id": "SP3",
+      "metric": "obstruction_residual_bound",
+      "observed": 0.052,
+      "predicted_range": [
+        0.0,
+        0.05
+      ],
+      "status": "INCONCLUSIVE"
+    }
+  ],
+  "closure_note": "No strict-core or global closure inference allowed from this checkpoint alone.",
+  "global_readout": "NO_FAIL_SIGNAL",
+  "input": {
+    "p1259": "/workspace/Fractal-Nadsoliton-Theory/fundamental_action_reconstruction/generated/p1259_strict_only_prediction_risk_ledger_summary.json"
+  },
+  "lane": "STRICT_ONLY",
+  "packet": "P1260",
+  "status_counts": {
+    "FAIL": 0,
+    "INCONCLUSIVE": 1,
+    "PASS": 2
+  }
+}
