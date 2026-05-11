@@ -27,7 +27,7 @@ def main() -> None:
     except Exception as exc:
         payload = {
             "packet": "P1205",
-            "as_of": "2026-05-10",
+            "as_of": "2026-05-11",
             "sympy_available": False,
             "error": str(exc),
             "strict_closure_claim_allowed": False,
@@ -58,11 +58,11 @@ def main() -> None:
         "grouped_binom": str(grouped_binom),
         "reduced_zero_ok": reduced_zero_ok,
     }
-    trace_hash = hashlib.sha256(json.dumps(trace_payload, sort_keys=True).encode("utf-8")).hexdigest()
+    trace_hash = hashlib.sha256(json.dumps(trace_payload, sort_keys=True, separators=(",", ":"), ensure_ascii=False).encode("utf-8")).hexdigest()
 
     payload = {
         "packet": "P1205",
-        "as_of": "2026-05-10",
+        "as_of": "2026-05-11",
         "sympy_available": True,
         "sympy_version": sp.__version__,
         "trace_payload": trace_payload,
