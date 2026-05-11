@@ -1,0 +1,45 @@
+{
+  "as_of": "2026-05-11",
+  "closure_note": "No theory closure claim; B1/NB1 gate remains active.",
+  "input": {
+    "p1258": "/workspace/Fractal-Nadsoliton-Theory/fundamental_action_reconstruction/generated/p1258_strict_only_operational_lane_commitment_summary.json"
+  },
+  "lane": "STRICT_ONLY",
+  "methodological_note": "Predictions are strict-lane operational claims only.",
+  "packet": "P1259",
+  "predictions": [
+    {
+      "falsification_rule": "FAIL if variance_ratio > 0.15 on frozen benchmark set",
+      "id": "SP1",
+      "metric": "variance_ratio",
+      "predicted_range": [
+        0.0,
+        0.15
+      ],
+      "status": "OPEN_TEST",
+      "target": "strict-witness stability window"
+    },
+    {
+      "falsification_rule": "FAIL if pass rate < 0.97 across declared perturbation family",
+      "id": "SP2",
+      "metric": "consistency_pass_rate",
+      "predicted_range": [
+        0.97,
+        1.0
+      ],
+      "status": "OPEN_TEST",
+      "target": "strict-chain consistency under perturbation"
+    },
+    {
+      "falsification_rule": "FAIL if residual bound exceeds 0.05 in strict-only lane",
+      "id": "SP3",
+      "metric": "obstruction_residual_bound",
+      "predicted_range": [
+        0.0,
+        0.05
+      ],
+      "status": "OPEN_TEST",
+      "target": "selector-obstruction resilience proxy"
+    }
+  ]
+}
