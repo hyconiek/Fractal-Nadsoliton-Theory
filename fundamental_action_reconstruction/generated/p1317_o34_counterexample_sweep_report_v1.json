@@ -1,0 +1,114 @@
+{
+  "packet_id": "P1317_O3_4_COUNTEREXAMPLE_SWEEP_REPORT_V1",
+  "date_utc": "2026-05-12",
+  "strict_only": true,
+  "input_candidates": [
+    {
+      "code": "C1",
+      "branch_sign": 1,
+      "phase_class": 0.41,
+      "amplitude_class": 0.62,
+      "residual_slot": "open",
+      "admissible": true
+    },
+    {
+      "code": "C2",
+      "branch_sign": 1,
+      "phase_class": 0.43,
+      "amplitude_class": 0.6,
+      "residual_slot": "open",
+      "admissible": true
+    },
+    {
+      "code": "C3",
+      "branch_sign": 1,
+      "phase_class": 0.4,
+      "amplitude_class": 0.58,
+      "residual_slot": "open(Z2/eps)",
+      "admissible": true
+    },
+    {
+      "code": "C4",
+      "branch_sign": 1,
+      "phase_class": 0.42,
+      "amplitude_class": 0.61,
+      "residual_slot": "open",
+      "admissible": true
+    }
+  ],
+  "tolerances": {
+    "phase_tau": 0.08,
+    "amplitude_tau": 0.08
+  },
+  "pair_results": [
+    {
+      "pair": [
+        "C1",
+        "C2"
+      ],
+      "verdict": "RESIDUAL_AMBIGUITY",
+      "reasons": [
+        "residual selector slot remains open"
+      ]
+    },
+    {
+      "pair": [
+        "C1",
+        "C3"
+      ],
+      "verdict": "RESIDUAL_AMBIGUITY",
+      "reasons": [
+        "residual selector slot remains open"
+      ]
+    },
+    {
+      "pair": [
+        "C1",
+        "C4"
+      ],
+      "verdict": "RESIDUAL_AMBIGUITY",
+      "reasons": [
+        "residual selector slot remains open"
+      ]
+    },
+    {
+      "pair": [
+        "C2",
+        "C3"
+      ],
+      "verdict": "RESIDUAL_AMBIGUITY",
+      "reasons": [
+        "residual selector slot remains open"
+      ]
+    },
+    {
+      "pair": [
+        "C2",
+        "C4"
+      ],
+      "verdict": "RESIDUAL_AMBIGUITY",
+      "reasons": [
+        "residual selector slot remains open"
+      ]
+    },
+    {
+      "pair": [
+        "C3",
+        "C4"
+      ],
+      "verdict": "RESIDUAL_AMBIGUITY",
+      "reasons": [
+        "residual selector slot remains open"
+      ]
+    }
+  ],
+  "verdict_counts": {
+    "EQUIVALENT_DIRECTION": 0,
+    "INADMISSIBLE_BRANCH": 0,
+    "RESIDUAL_AMBIGUITY": 6,
+    "COUNTEREXAMPLE_FOUND": 0
+  },
+  "o3_4_status": "PASS_NO_COUNTEREXAMPLE",
+  "nonuniqueness_residual_status": "OPEN",
+  "qw2191_strict_status": "NOT_CLOSED"
+}
