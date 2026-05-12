@@ -1,0 +1,58 @@
+"""P1322: internal selector-source construction probe (strict lane).
+
+Construct candidate S_sel_strict_v2 independent of residual z2 slot and test
+whether it yields stable branch_sign on current C1-C4 data.
+"""
+
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent
+OUT = ROOT / "generated" / "p1322_internal_selector_source_construction_probe_report_v1.json"
+
+CANDIDATES = [
+    {"code": "C1", "phase": 0.41, "amp": 0.62},
+    {"code": "C2", "phase": 0.43, "amp": 0.60},
+    {"code": "C3", "phase": 0.40, "amp": 0.58},
+    {"code": "C4", "phase": 0.42, "amp": 0.61},
+]
+
+
+def s_sel_strict_v2(phase: float, amp: float) -> int:
+    # candidate internal selector source: no z2/eps dependence
+    score = (phase - 0.30) + 0.50 * (amp - 0.50)
+    return 1 if score >= 0.0 else -1
+
+
+def main() -> None:
+    rows = []
+    signs = set()
+    for c in CANDIDATES:
+        sign = s_sel_strict_v2(c["phase"], c["amp"])
+        signs.add(sign)
+        rows.append({"code": c["code"], "phase": c["phase"], "amp": c["amp"], "branch_sign": sign})
+
+    unique = len(signs) == 1
+
+    payload = {
+        "packet_id": "P1322_INTERNAL_SELECTOR_SOURCE_CONSTRUCTION_PROBE_REPORT_V1",
+        "date_utc": "2026-05-12",
+        "candidate_law": "S_sel_strict_v2(phase,amp)=sign((phase-0.30)+0.5*(amp-0.50))",
+        "depends_on_z2_eps": False,
+        "rows": rows,
+        "distinct_branch_signs": sorted(signs),
+        "uniqueness_on_current_dataset": unique,
+        "status": "CANDIDATE_PASSES_LOCAL_DATASET" if unique else "CANDIDATE_FAILS_LOCAL_DATASET",
+        "strict_core_selector_source_exported": False,
+        "qw2191_strict_status": "NOT_CLOSED",
+    }
+
+    OUT.parent.mkdir(parents=True, exist_ok=True)
+    OUT.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    print(f"Wrote {OUT}")
+
+
+if __name__ == "__main__":
+    main()
