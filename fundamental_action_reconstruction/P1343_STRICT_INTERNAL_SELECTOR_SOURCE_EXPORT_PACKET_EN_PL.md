@@ -41,6 +41,45 @@ S_strict_internal_v1 = sign( S_strict_internal )
 
 ---
 
+## 1A) Explicit operator basis for $\Upsilon_p$
+
+For each admissible pair-plane index $p$, we use the following explicit operator basis:
+
+\[
+\Upsilon_p = a_1\,\mathcal{O}^{(p)}_{0}+a_2\,\mathcal{O}^{(p)}_{1}+a_3\,\mathcal{O}^{(p)}_{2}+a_4\,\mathcal{O}^{(p)}_{3},
+\]
+
+with
+
+- $\mathcal{O}^{(p)}_{0}[K]=K(d_p)$ (point evaluation),
+- $\mathcal{O}^{(p)}_{1}[K]=\partial_d K\vert_{d=d_p}$ (first radial derivative),
+- $\mathcal{O}^{(p)}_{2}[K]=\partial_d^2 K\vert_{d=d_p}$ (second radial derivative),
+- $\mathcal{O}^{(p)}_{3}[K]=\Delta_{\mathrm{pair}}K\vert_{p}$ (pair-plane Laplace component).
+
+Fixed coefficients in `v1` export:
+
+\[
+(a_1,a_2,a_3,a_4)=(1.0,\,0.35,\,0.20,\,0.15).
+\]
+
+Pair weights are normalized positive weights:
+
+\[
+\omega_p>0,\qquad \sum_p \omega_p=1,
+\]
+
+with current release instantiation using uniform weights over admissible pair indices.
+
+## 1B) Numerical tolerance envelope used by the strict lane
+
+The strict internal-source lane uses the following fixed tolerances:
+
+- selector sign-stability tolerance: $\varepsilon_{\mathrm{sign}}=10^{-8}$,
+- transport invariance tolerance: $\varepsilon_{\mathrm{transport}}=10^{-6}$,
+- isotropy perturbation tolerance (normalized score drift): $\varepsilon_{\mathrm{iso}}=5\times 10^{-4}$.
+
+Any violation of these thresholds triggers downgrade in downstream validation packets.
+
 ## 2) Core theorem enabling strict closure
 
 ### Theorem P1343.T1 (Internal-source selector uniqueness)
