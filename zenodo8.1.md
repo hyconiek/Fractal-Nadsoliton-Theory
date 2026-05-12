@@ -30,7 +30,42 @@ Release 8.1 is classified as a **Validated Global Strict-Closure Model**. While 
 
 ---
 
-## 2. 🏛️ Metaphysical & Philosophical Origin
+## 2. 🧠 Mathematical Framework & Core Formulas
+
+The theory is built upon a **Strict Operational Kernel** and a discrete lattice structure ($n=12$). The central object is the non-dispersive informational wave packet (Nadsoliton).
+
+### 2.1 The Strict Gate Kernel
+The operational behavior of the system is governed by the working frozen kernel $K(d)$:
+
+$$
+K(d)=\frac{\cos(\omega d+\phi)}{1+\beta d^{\eta}}
+$$
+
+**Frozen Parameter Set (Release 8.1):**
+- $\omega = 0.18575$ (Fundamental frequency)
+- $\phi = 0.16250$ (Phase offset)
+- $\beta = 1.00000$ (Damping coefficient)
+- $\eta = 1.80000$ (Scaling exponent)
+
+### 2.2 Symmetry Breaking & $\alpha_{\mathrm{geo}}$
+The transition from projective freedom to a unique directed state is triggered by the **Shannon-weighted scaling factor** $\alpha_{\mathrm{geo}}$, which acts as the source of symmetry breaking for the $w_{\text{break}}$ mechanism:
+
+$$
+\alpha_{\mathrm{geo}} = 4 \ln 2 \approx 2.77258
+$$
+
+This constant determines the threshold for the internal selector source (`P1343`) to discharge the `QW-2191` uniqueness obstruction, effectively "freezing" the informational degrees of freedom into a unique physical orientation.
+
+### 2.3 Global Closure Theorem ($P1348$)
+The formal proof of closure is encapsulated in the Global Closure Theorem, which states that for the declared configuration space $C_{v1}$, the internal source $S_{\text{strict}}$ uniquely determines the operational state $\Psi$:
+
+$$
+\text{Closure}(C_{v1}, S_{\text{strict}}) \implies \exists! \text{ Identification}(\text{ToE} \to \text{SM/GR})
+$$
+
+---
+
+## 3. 🏛️ Metaphysical & Philosophical Origin
 
 The theory originates from a deep intuition that **Information is the fundamental substance of reality**, consistent with the metaphysical insight that *"In the beginning was the Word"* (Logos/Information). This intuition evolved through key realizations:
 
@@ -41,7 +76,7 @@ The theory originates from a deep intuition that **Information is the fundamenta
 
 ---
 
-## 3. 🛡️ Status Discipline & Guardrails (No False‑PASS)
+## 4. 🛡️ Status Discipline & Guardrails (No False‑PASS)
 
 To maintain scientific integrity, Release 8.1 adheres to the following strict guardrails:
 
@@ -52,7 +87,7 @@ To maintain scientific integrity, Release 8.1 adheres to the following strict gu
 
 ---
 
-## 4. 🇵🇱 Podsumowanie (Polish Summary)
+## 5. 🇵🇱 Podsumowanie (Polish Summary)
 
 Release 8.1 stanowi dokumentację pełnego, formalnego **domknięcia globalnego** teorii w zadeklarowanym zakresie. Najważniejszym osiągnięciem tej wersji jest rozwiązanie problemu fundamentalnej niejednoznaczności (obstrukcja `QW-2191`) poprzez wprowadzenie wewnętrznego źródła selektora (`P1343`).
 
@@ -63,7 +98,7 @@ Release 8.1 stanowi dokumentację pełnego, formalnego **domknięcia globalnego*
 
 ---
 
-## 5. 📂 Deliverables & Reproducibility
+## 6. 📂 Deliverables & Reproducibility
 
 - **Final Documentation:** `TOE_FINAL_DOCUMENTATION_RELEASE_8_STRICT_FULL.pdf`
 - **Textbook Snapshot:** `RELEASE_8_1_TEXTBOOK_EDITION_EN_PL.md`
