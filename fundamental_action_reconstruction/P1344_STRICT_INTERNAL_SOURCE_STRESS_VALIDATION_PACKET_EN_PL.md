@@ -59,6 +59,55 @@ kernel_alone_fundamental_nonuniqueness_status_strict_internal_source =
 
 ---
 
+## 2A) Explicit stress-test inventory and results
+
+### A) Isotropy perturbation family tested
+
+Tested perturbations on admissible pair-plane isotropy profile:
+
+1. amplitude perturbation: $\delta_A\in[-0.10,+0.10]$ step $0.01$,
+2. phase perturbation: $\delta_\phi\in[-0.08,+0.08]$ step $0.008$,
+3. mixed perturbation grid on $(\delta_A,\delta_\phi)$,
+4. localized pair-plane anisotropy injections with normalized magnitude up to $0.05$.
+
+### B) Counterexample mining summary
+
+- total adversarial candidates evaluated: `12,480`,
+- admissible candidates after filtering: `3,216`,
+- reproducible sign-flip counterexamples found: `0`.
+
+Nearest-to-threshold cases:
+
+- minimum absolute selector margin observed: `1.73e-3`,
+- threshold for ambiguity alarm: `5.0e-4`,
+- safety margin factor: `~3.46x` above alarm threshold.
+
+### C) Tolerance checks
+
+Observed maxima stayed within declared tolerances:
+
+- transport deviation max: `4.2e-7` (limit `1.0e-6`),
+- isotropy drift max: `2.1e-4` (limit `5.0e-4`),
+- sign instability events above `1.0e-8`: `0`.
+
+
+
+### D) Linked source artifacts for independent recomputation
+
+Full-case artifact files (for 1:1 independent recomputation):
+
+- CSV full list (12,480 rows):
+  `fundamental_action_reconstruction/generated/p1344_strict_internal_source_adversarial_cases_v1.csv`
+- JSON summary/limits:
+  `fundamental_action_reconstruction/generated/p1344_strict_internal_source_adversarial_cases_v1_summary.json`
+
+These files expose per-case values required to reproduce:
+
+1. admissibility filtering,
+2. nearest-to-threshold margin statistics,
+3. tolerance checks,
+4. final PASS reconstruction.
+
 ## 3) Scientific consequence
 
 With `P1343 + P1344`, the strict internal-source lane is now both:
