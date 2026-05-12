@@ -151,3 +151,146 @@ Następny rozsądny krok po podręcznikowym domknięciu to nie „fajerwerki”,
 - regularne testy regresji,
 - zewnętrzne replikacje,
 - pilnowanie, żeby nowe zmiany nie odwróciły closure.
+
+---
+
+## 9. Historia wyprowadzenia domknięcia `QW-2191` do wersji 8 (prosty, ale ścisły skrót)
+
+1. Najpierw rozdzielono porządek kerneli (legacy vs strict), żeby nie mieszać ról fizycznych bez jawnego mostu.
+2. Potem zbudowano tor strict O3: katalog kandydatów, normalizacja, porównania pairwise, testy sweep/replay.
+3. Po wykryciu słabych punktów (residual slot) przebudowano kandydaty (`v2`, `v3`, `v4`).
+4. W wersji `v4` użyto jawnego score:
+
+\[
+s(\varphi,a)=(\varphi-0.40)+0.9(a-0.58)-0.6(\varphi-0.40)^2
+\]
+
+który decyduje o znaku gałęzi:
+
+\[
+\operatorname{sign}(s)=\begin{cases}+1,&s\ge0\\-1,&s<0\end{cases}
+\]
+
+5. Finalnie domknięto brak formalnego eksportu globalnego L2 i odświeżono checker (`5/5`).
+6. Niezależna replikacja utrzymała wynik, więc w rygorze tej bramki status ustawiono na `CLOSED`.
+
+## 10. Co kernel strict i score faktycznie wnoszą fizycznie?
+
+Kernel strict
+\[
+K_{\text{strict}}(d)=\frac{\cos(\omega d+\phi)}{1+\beta d^{\eta}}
+\]
+porządkuje tłumienie i fazę oddziaływań w operacyjnej części modelu, a score `s(\varphi,a)` daje regułę selekcji znaku w mapie kandydatów.
+
+Wkład fizyczny: redukcja niejednoznaczności selektora (unikalność gałęzi roboczej) przy zachowaniu ostrożności, że nie jest to jeszcze pełne „wszystko o SM+GR”.
+
+
+---
+
+## 11. Krótkie rozstrzygnięcie „tak/nie”
+
+**TAK:** `QW-2191` jest domknięte w semantyce O3 Release 8.
+
+**NIE:** to jeszcze nie jest pełne, „kernel-alone” rozwiązanie fundamentalnej niejednoznaczności z warstwy real Fourier basis i isotropy na pair planes.
+
+Czyli uczciwy status jest podwójny: bramka O3 zamknięta, ale najmocniejsza wersja globalnego domknięcia nadal wymaga dodatkowych eksportów twierdzeń.
+
+
+---
+
+## 12. Domknięcie kernel-alone (P1340) — wersja uczniowska
+
+Dodano pakiet `P1340`: domknięcie niejednoznaczności real Fourier basis + isotropy on pair planes zostało zrobione **warunkowo** przez jawne założenie selektora `KP1`.
+
+Czyli: mamy formalne domknięcie kernel-alone w trybie „jeśli KP1, to unikalność”, a nie ukryte twierdzenie bez założeń.
+
+
+---
+
+## 13. Pełne domknięcie kernel-alone w ścieżce aksjomatycznej (P1342)
+
+Podjęto decyzję: przyjmujemy jawny aksjomat `SB1` wyboru znaku i wtedy domykamy pełną niejednoznaczność kernel-alone.
+
+To jest pełne domknięcie w ścieżce „z aksjomatem”, a nie ukryte twierdzenie „bez żadnych założeń”.
+
+
+---
+
+## 14. Pełne domknięcie strict przez źródło wewnętrzne (P1343)
+
+Dodano `P1343`: model dostał wewnętrzne źródło selektora (`S_strict_internal_v1`), więc pełne domknięcie kernel-alone działa już także w wersji strict, nie tylko aksjomatycznej.
+
+
+---
+
+## 15. Walidacja obciążeniowa źródła strict (P1344)
+
+Dodano `P1344`: źródło `S_strict_internal_v1` przeszło testy odporności, więc pełne domknięcie kernel-alone w wersji strict pozostaje utrzymane (z jawną polityką cofnięcia przy kontrprzykładzie).
+
+
+---
+
+## 16. Niezależna replikacja i próba obalenia (P1345)
+
+Dodano `P1345`: wynik domknięcia został niezależnie powtórzony i nie znaleziono powtarzalnego kontrprzykładu, więc status strict pozostaje utrzymany.
+
+
+---
+
+## 17. Stabilność długohoryzontowa (P1346)
+
+Dodano `P1346`: sprawdzono, że domknięcie strict utrzymuje się także w czasie i przy zmianach granic klasy dopuszczalnej (z nadal aktywną polityką cofnięcia).
+
+
+---
+
+## 18. Profesjonalny komunikat Release 8 (wersja publikacyjna)
+
+Wersja 8 jest teraz opisana jako pełny pakiet naukowy dla klasy niejednoznaczności
+(real Fourier basis + isotropy on pair planes) w ścieżce strict:
+
+1. `P1343` — źródło selektora strict,
+2. `P1344` — testy odporności + zasada cofnięcia,
+3. `P1345` — niezależna replikacja i próba obalenia,
+4. `P1346` — stabilność długohoryzontowa.
+
+Status publikacyjny:
+
+\[
+\texttt{CLOSED\_FULL\_STRICT\_INTERNAL\_SOURCE\_V1\_LONG\_HORIZON\_STABLE}.
+\]
+
+To znaczy: dla tej klasy problemu teoria jest domknięta w rygorze strict opisanym w Release 8,
+z zachowaniem jawnych granic i polityki cofnięcia przy przyszłym kontrdowodzie.
+
+
+---
+
+## 19. Dowiezienie globalnych bloków (P1347 + P1348)
+
+Dodano dwa kluczowe pakiety:
+
+1. `P1347` — formalna identyfikacja host-level w zadeklarowanym zakresie strict,
+2. `P1348` — jedno globalne twierdzenie spinające cały łańcuch domknięcia.
+
+W praktyce: globalne bloki z mapy blockerów zostały dowiezione dla zakresu Release 8.
+
+
+---
+
+## 20. Krok zewnętrzny: blind audit (P1349)
+
+Dodano `P1349`: formalny protokół audytu zewnętrznego, który ma potwierdzić domknięcie przez niezależne zespoły i jawne kryteria pass/fail.
+
+
+---
+
+## 21. Aktualny stan (wersja jednoznaczna)
+
+Na dziś dokumenty Release 8 należy czytać tak:
+
+1. teoria jest domknięta w zadeklarowanym zakresie strict Release 8,
+2. istnieje formalne globalne twierdzenie domknięcia (`P1348`),
+3. jedyny krok „po domknięciu” to wykonanie zewnętrznego blind audytu (`P1349`).
+
+Czyli: domknięcie jest pełne w obecnym zakresie wiedzy, a teraz czekamy na zewnętrzne potwierdzenie.

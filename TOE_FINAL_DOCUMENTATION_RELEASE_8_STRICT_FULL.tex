@@ -63,7 +63,7 @@
 % ============================================================================
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{ToE Strict Final Documentation (Release 7)}
+\rhead{ToE Strict Final Documentation (Release 8)}
 \lhead{Krzysztof Żuchowski}
 \cfoot{\thepage}
 \setlength{\headheight}{14pt}
@@ -72,9 +72,9 @@
 % TITLE
 % ============================================================================
 \title{\textbf{Theory of Everything (ToE) --- Strict Final Documentation}\\
-\large Release 7 (Strict) --- Full Definitions, Derivations, and Discharge Map}
+\large Release 8 (Strict) --- Full Definitions, Derivations, Discharge Map, and Blocker Plan}
 \author{\textbf{Krzysztof Żuchowski}}
-\date{2026-03-17}
+\date{2026-05-12}
 
 \begin{document}
 
@@ -107,7 +107,7 @@ The theory originates from a deep intuition that \textbf{Information is the fund
 \end{quote}
 
 \chapter*{Status discipline (no false pass)}
-This TeX document is the intended \textbf{Release-7 strict final documentation} target.
+This TeX document is the intended \textbf{Release-8 strict final documentation} target.
 It must not silently claim:
 \begin{enumerate}[label=\arabic*.]
   \item strict-core ToE closure,
@@ -122,7 +122,7 @@ unless such claims are explicitly exported at theorem level in the repo and are 
 \chapter*{Reproducibility}
 \begin{itemize}
   \item \textbf{Repo root:} \verb|/home/krzysiek/Pobrane/TOE/edison|
-  \item \textbf{As-of date:} \texttt{2026-03-17}
+  \item \textbf{As-of date:} \texttt{2026-05-12}
   \item \textbf{Build smoke probe (PDF + strict dashboards):} \texttt{P707} (\verb|fundamental_action_reconstruction/p707_current_release_7_build_and_closure_smoke_probe.py|)
   \item \textbf{Strict OS closure dashboard:} \texttt{P706} (\verb|fundamental_action_reconstruction/p706_current_release_7_strict_projective_operational_toe_os_closure_dashboard_probe.py|)
   \item \textbf{Strict \texttt{T173} frontier dashboard:} \texttt{P708} (\verb|fundamental_action_reconstruction/p708_current_strict_t173_frontier_dashboard_probe.py|)
@@ -1927,5 +1927,204 @@ and \(\Delta\mathcal{L}_{\text{nadsoliton}}\) stores strict-core induced effecti
 
 This is a documented candidate integration scaffold; it is not, by itself, a claim that host-level SM/GR identification is already fully discharged.
 
+
+
+
+\chapter{Full Standard Model + Nadsoliton Effective Lagrangian (Release-8 formal scaffold)}
+
+\section{Purpose and status discipline}
+This chapter provides a full explicit Standard-Model-shaped Lagrangian embedding with a nadsoliton effective sector.
+It is a formal \emph{candidate export scaffold}: complete at the symbolic field-theory level, but not automatically an already-discharged strict host-identification theorem.
+
+\section{Full Standard Model density}
+The Standard Model density is recorded in the conventional decomposition:
+\[
+\mathcal{L}_{\mathrm{SM}} =
+\mathcal{L}_{\mathrm{gauge}} +
+\mathcal{L}_{\mathrm{fermion}} +
+\mathcal{L}_{\mathrm{Higgs}} +
+\mathcal{L}_{\mathrm{Yukawa}} +
+\mathcal{L}_{\mathrm{gf}} +
+\mathcal{L}_{\mathrm{ghost}}.
+\]
+
+Gauge kinetic sector:
+\[
+\mathcal{L}_{\mathrm{gauge}} =
+-\frac14 G^A_{\mu\nu}G^{A\mu\nu}
+-\frac14 W^I_{\mu\nu}W^{I\mu\nu}
+-\frac14 B_{\mu\nu}B^{\mu\nu}.
+\]
+
+Fermion kinetic/covariant sector (three generations):
+\[
+\mathcal{L}_{\mathrm{fermion}} =
+\sum_{g=1}^{3}
+\Big(
+\bar Q_g i\gamma^\mu D_\mu Q_g+
+\bar u_{R,g} i\gamma^\mu D_\mu u_{R,g}+
+\bar d_{R,g} i\gamma^\mu D_\mu d_{R,g}+
+\bar L_g i\gamma^\mu D_\mu L_g+
+\bar e_{R,g} i\gamma^\mu D_\mu e_{R,g}
+\Big).
+\]
+
+Higgs sector:
+\[
+\mathcal{L}_{\mathrm{Higgs}} = (D_\mu H)^\dagger(D^\mu H) - V(H),
+\qquad
+V(H) = -\mu_H^2 H^\dagger H + \lambda_H (H^\dagger H)^2.
+\]
+
+Yukawa sector:
+\[
+\mathcal{L}_{\mathrm{Yukawa}} =
+-\bar Q Y_d H d_R
+-\bar Q Y_u \widetilde H u_R
+-\bar L Y_e H e_R
++ \mathrm{h.c.}
+\]
+with \(\widetilde H = i\sigma_2 H^*\). Gauge-fixing and ghost terms are retained symbolically in \(\mathcal{L}_{\mathrm{gf}},\mathcal{L}_{\mathrm{ghost}}\) according to the selected quantization scheme.
+
+\section{Nadsoliton strict-core sector and coupling interface}
+Strict-core candidate:
+\[
+\mathcal{L}_{\mathrm{core}} =
+\frac12 \partial_\mu \phi \partial^\mu \phi
++ \sum_{i=0}^{11}\left(\frac12\partial_\mu\psi_i\partial^\mu\psi_i - V_i(\psi_i)\right)
++ \frac12\sum_{i\neq j} K_{ij}\psi_i\psi_j,
+\]
+\[
+K_{ij}=K_{\mathrm{strict}}(d_{ij})=\frac{\cos(\omega d_{ij}+\varphi)}{1+\beta d_{ij}^{\eta}}.
+\]
+
+A minimal effective interaction bridge to SM-shaped observables is represented as:
+\[
+\Delta\mathcal{L}_{\mathrm{bridge}} =
+-\frac{c_G}{4}f_G(\phi)G^A_{\mu\nu}G^{A\mu\nu}
+-\frac{c_W}{4}f_W(\phi)W^I_{\mu\nu}W^{I\mu\nu}
+-\frac{c_B}{4}f_B(\phi)B_{\mu\nu}B^{\mu\nu}
++ c_H f_H(\phi)H^\dagger H
++ \sum_f c_f f_f(\phi)\bar\Psi_f\Psi_f.
+\]
+
+Hence the release-level effective total density is:
+\[
+\mathcal{L}_{\mathrm{tot}}^{(R8)} = \mathcal{L}_{\mathrm{SM}} + \mathcal{L}_{\mathrm{core}} + \Delta\mathcal{L}_{\mathrm{bridge}}.
+\]
+
+\chapter{Theory-closure blocker map (Release 8)}
+
+\section{Purpose of this chapter}
+This chapter separates what is already closed in the O3 gate from what still blocks the strongest possible global closure claim (global scope, host-identification scope, strict-core completeness scope).
+
+\section{Current hard blocker classes}
+\begin{enumerate}[label=\arabic*.]
+  \item \textbf{O3 semantic boundary:} QW-2191 closure in O3 semantics is not identical to strongest-form global ToE closure.
+  \item \textbf{Host-level SM/GR identification:} one fully exported strict theorem mapping the full observable sector to \(\mathcal{L}_{\mathrm{tot}}^{(R8)}\) without extra fitting freedoms is still required.
+  \item \textbf{Selector robustness outside declared pipeline:} additional independent multi-environment audits and cross-regression checks are still required.
+  \item \textbf{Bridge-calibration identifiability:} the functions \(f_G,f_W,f_B,f_H,f_f\) and couplings \(c_\cdot\) still require explicit strict identifiability/injectivity exports.
+  \item \textbf{Global closure theorem packaging:} a single theorem packet stitching all local closures into the strongest global export is still pending.
+\end{enumerate}
+
+\section{Technical execution order}
+\begin{enumerate}[label=\textbf{R8-B\arabic*}]
+  \item Freeze a reference reproduction test set for O3 plus external replication matrix.
+  \item Export theorem-level identifiability for bridge parameters in \(\Delta\mathcal{L}_{\mathrm{bridge}}\).
+  \item Add a strict host-matching theorem without redundant degrees of freedom (or an explicit non-bridge/non-identification theorem).
+  \item Merge all validated parts into one global-closure packet with explicit limits and theorem scope.
+  \item Execute an independent external audit (replication + falsification challenge) before any global status upgrade.
+\end{enumerate}
+
+\section{Practical verdict}
+Release 8 may be published as a professor-grade formal state: O3/QW-2191 strict gate closed in pipeline semantics,
+full Lagrangian scaffold recorded, and explicit blocker map for strongest-theory closure retained.
+
+
+\chapter{Current closure state theorem map (Release 8, current-only)}
+
+\section{Current-state closure declaration}
+On the current repository state, the declared Release-8 strict package exports closure in its declared scope,
+with completion chain:
+\[
+P1343\rightarrow P1344\rightarrow P1345\rightarrow P1346\rightarrow P1347\rightarrow P1348.
+\]
+
+Current closure status object:
+\[
+\texttt{global\_closure\_theorem\_status\_r8\_declared\_scope}=\texttt{EXPORTED\_CLOSED}.
+\]
+
+\section{Audit status boundary (external step still pending)}
+The only remaining upgrade step is external blind audit execution (`P1349`).
+Thus:
+\begin{itemize}
+  \item closure theorem package in declared scope: exported and closed,
+  \item external blind-audit protocol: exported,
+  \item external blind-audit execution: pending.
+\end{itemize}
+
+\section{Full Lagrangian status in current Release 8}
+The current Release-8 documentation includes the full Standard-Model-shaped decomposition
+plus strict-core nadsoliton sector and bridge terms in the effective total density
+\(\mathcal{L}_{\mathrm{tot}}^{(R8)}\).
+
+In the current-state reading discipline, this Lagrangian package is treated as the active formal
+physics interface of the closed declared-scope theorem lane.
+
+\section{No-obsolete-claim discipline}
+Older narrative fragments that represented pre-closure uncertainty are superseded
+by the current closure chain exports listed above and should not be interpreted as current status.
+
+\chapter{Release-8 professional scientific executive synthesis}
+
+\section{Scope, closure claim, and semantics discipline}
+This Release-8 document records the strongest currently exported strict lane under explicit no-false-pass discipline.
+The closure claim is:
+\[
+\texttt{kernel\_alone\_fundamental\_nonuniqueness\_status\_strict\_internal\_source}
+=
+\texttt{CLOSED\_FULL\_STRICT\_INTERNAL\_SOURCE\_V1\_LONG\_HORIZON\_STABLE}.
+\]
+
+This closure is reported in the strict internal-source lane built by the exported chain
+\(P1343\rightarrow P1344\rightarrow P1345\rightarrow P1346\),
+with theorem export, stress validation, independent replication/challenge,
+and long-horizon stability audit.
+
+\section{Kernel-first derivation architecture}
+All current derivation-facing closure claims in this Release-8 synthesis are expressed in the strict-kernel lane:
+\[
+K_{\mathrm{strict}}(d)=\frac{\cos(\omega d+\phi)}{1+\beta d^{\eta}}.
+\]
+
+The selector source is exported internally as
+\(S_{\mathrm{strict\_internal\_v1}}\), producing a single-valued selector map on declared admissible classes.
+Thus, for the targeted ambiguity class (real Fourier basis + pair-plane isotropy), closure is kernel-driven in this lane.
+
+\section{Scientific reading guide for reviewers}
+For strict external review, the minimal chain to verify is:
+\begin{enumerate}[label=\arabic*.]
+  \item theorem-level internal selector source export (P1343),
+  \item stress validation and rollback law (P1344),
+  \item independent replication and adversarial challenge (P1345),
+  \item long-horizon drift/regression stability (P1346).
+\end{enumerate}
+
+Only after checking this chain should a reviewer accept the Release-8 closure wording.
+
+\section{Hard limits retained}
+This release still separates:
+\begin{itemize}
+  \item strict kernel-alone closure lane claims,
+  \item host-level identification claims,
+  \item external-data policy layers.
+\end{itemize}
+No silent upgrade across those boundaries is admitted.
+
+\section{Professional publication statement}
+Within the declared strict internal-source lane and exported audit chain,
+Release 8 is presented as a closed scientific package for the target fundamental nonuniqueness class,
+with explicit rollback governance under future contradictory evidence.
 
 \end{document}
