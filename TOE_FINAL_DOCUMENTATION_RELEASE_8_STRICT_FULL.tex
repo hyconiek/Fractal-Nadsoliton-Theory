@@ -1,0 +1,2043 @@
+\documentclass[11pt,a4paper]{article}
+
+% ============================================================================
+% PACKAGES
+% ============================================================================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb, amsfonts, amsthm}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+
+% ============================================================================
+% THEOREM ENVIRONMENTS
+% ============================================================================
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{remark}{Remark}[section]
+
+% ============================================================================
+% BOOK -> ARTICLE COMPATIBILITY
+% ============================================================================
+% This document was originally drafted using the `book` class.
+% We keep `\chapter{...}` commands as a lightweight structural marker, but map
+% them to sections under the `article` class.
+\makeatletter
+\newcommand{\chapter}{\@ifstar{\section*}{\section}}
+\makeatother
+
+% ============================================================================
+% GEOMETRY SETTINGS
+% ============================================================================
+\geometry{top=2.5cm, bottom=2.5cm, left=2cm, right=2cm}
+
+% ============================================================================
+% CODE LISTINGS SETTINGS
+% ============================================================================
+\lstset{
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  frame=single,
+  numbers=left,
+  numberstyle=\tiny,
+  keywordstyle=\color{blue},
+  commentstyle=\color{gray},
+  stringstyle=\color{red},
+  showstringspaces=false
+}
+
+% ============================================================================
+% HEADER/FOOTER
+% ============================================================================
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{ToE Strict Final Documentation (Release 8)}
+\lhead{Krzysztof Żuchowski}
+\cfoot{\thepage}
+\setlength{\headheight}{14pt}
+
+% ============================================================================
+% TITLE
+% ============================================================================
+\title{\textbf{Theory of Everything (ToE) --- Strict Final Documentation}\\
+\large Release 8 (Strict) --- Full Definitions, Derivations, Discharge Map, and Blocker Plan}
+\author{\textbf{Krzysztof Żuchowski}}
+\date{2026-05-12}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This article is the self-contained \emph{Release 7 (Strict)} documentation target of the ToE program in this repository.
+It records (i) the strict core candidate Lagrangian template (one-kernel nadsoliton core), (ii) the strict global selector
+closure achieved in \emph{projective (ray-level)} scope on the declared configuration space $C_{v1}$, and (iii) the resulting
+operational computability pipeline (“ToE OS”) producing first strict quadratic physics proxies and observer-limit downstream artifacts.
+All stronger claims (kernel-alone/global discharge of the strict uniqueness obstruction \texttt{QW-2191}, any directed/sign-sensitive
+physical orientation datum in strict core, Standard Model identification/host matching in strict scope, and strong ToE closure)
+remain explicitly separated and are \textbf{not} silently promoted.
+
+Reproducibility is provided by the repository’s exported JSON artifacts and smoke probes; see the \emph{Reproducibility}
+below.
+\end{abstract}
+
+\section*{Origin and philosophy (required fragment)}
+\begin{quote}
+The theory originates from a deep intuition that \textbf{Information is the fundamental substance of reality}, consistent with the metaphysical insight that \emph{"In the beginning was the Word"} (Logos/Information). This intuition evolved through key realizations:
+\begin{enumerate}[label=\arabic*.]
+  \item \textbf{Eucharistic Inspiration:} A profound fascination with the memorial of the \textbf{Eucharist of Jesus Christ} and its material manifestation in reality served as the primary inspiration, suggesting a direct mechanism by which spiritual/informational reality can condense into tangible matter.
+  \item \textbf{Fractal Nature:} Observing self-similarity across vast scales suggested that fundamental information must possess a \textbf{fractal character}, repeating its patterns at every level of existence.
+  \item \textbf{The Nadsoliton Concept:} The universe is conceptualized as a single, self-sustaining, non-dispersive wave packet---a \textbf{"Supersoliton" (Nadsoliton)}, where information tends towards the highest resonance, not the lowest energy.
+  \item \textbf{Resonant Structure:} Inspired by the Divine Name from the Book of Exodus 3:14: \textbf{\emph{"I AM WHO I AM"}}, the model incorporates \textbf{multi-octave resonant coupling} as the mechanism of self-organization, preventing decay into entropy.
+  \item \textbf{The 12-Octave Lattice:} Initial 3-octave models were expanded to a \textbf{12-octave structure}, inspired by the symbolic description of the Holy City's twelve foundation layers, which proved to be the mathematically necessary dimension for unifying all forces (Kissing Number in 3D).
+  \item \textbf{Access to Truth:} Since human consciousness is part of this informational substrate, the human mind has direct access to fundamental truths through wisdom and intuition, allowing for the "decoding" of reality.
+\end{enumerate}
+\end{quote}
+
+\chapter*{Status discipline (no false pass)}
+This TeX document is the intended \textbf{Release-8 strict final documentation} target.
+It must not silently claim:
+\begin{enumerate}[label=\arabic*.]
+  \item strict-core ToE closure,
+  \item global ToE closure,
+  \item kernel-alone/global QW-2191 discharge,
+  \item directed/sign-sensitive physical orientation datum in strict core,
+  \item host matching / Standard Model identification,
+  \item actual emergent observer closure,
+\end{enumerate}
+unless such claims are explicitly exported at theorem level in the repo and are referenced here with their hard limits.
+
+\chapter*{Reproducibility}
+\begin{itemize}
+  \item \textbf{Repo root:} \verb|/home/krzysiek/Pobrane/TOE/edison|
+  \item \textbf{As-of date:} \texttt{2026-05-12}
+  \item \textbf{Build smoke probe (PDF + strict dashboards):} \texttt{P707} (\verb|fundamental_action_reconstruction/p707_current_release_7_build_and_closure_smoke_probe.py|)
+  \item \textbf{Strict OS closure dashboard:} \texttt{P706} (\verb|fundamental_action_reconstruction/p706_current_release_7_strict_projective_operational_toe_os_closure_dashboard_probe.py|)
+  \item \textbf{Strict \texttt{T173} frontier dashboard:} \texttt{P708} (\verb|fundamental_action_reconstruction/p708_current_strict_t173_frontier_dashboard_probe.py|)
+  \item \textbf{Previous-methodology survival audit:} \texttt{P711} (\verb|fundamental_action_reconstruction/p711_current_strict_t173_previous_methodology_survival_and_global_gap_audit_probe.py|)
+  \item \textbf{Exact global-provider nonexport audit:} \texttt{P712} (\verb|fundamental_action_reconstruction/p712_current_strict_t176_existing_global_directed_sign_coherence_provider_nonexport_audit_probe.py|)
+  \item \textbf{Supported-root corridor audit for the strongest current candidate class:} \texttt{P713} (\verb|fundamental_action_reconstruction/p713_current_strict_t176_multiroot_rooted_sign_lift_root_independence_audit_probe.py|)
+  \item \textbf{Parity diagnosis of the current \texttt{w\_break} corridor:} \texttt{P714} (\verb|fundamental_action_reconstruction/p714_current_strict_t176_w_break_parity_root_support_profile_audit_probe.py|)
+  \item \textbf{Parity-completed dual-anchor all-root audit:} \texttt{P715} (\verb|fundamental_action_reconstruction/p715_current_strict_t176_parity_completed_dual_anchor_multiroot_audit_probe.py|)
+  \item \textbf{Localized source audit for the remaining exact split:} \texttt{P716} (\verb|fundamental_action_reconstruction/p716_current_strict_t176_pair4_negative_cosine_polarity_global_z2_orbit_split_audit_probe.py|)
+  \item \textbf{Release-7 OS bridge audit for the localized exact split:} \texttt{P717} (\verb|fundamental_action_reconstruction/p717_current_strict_t176_pair4_exact_branch_split_release_7_os_gauge_irrelevance_bridge_audit_probe.py|)
+  \item \textbf{Single mixed linear-weight span insufficiency audit:} \texttt{P718} (\verb|fundamental_action_reconstruction/p718_current_strict_t176_single_mixed_linear_weight_span_provider_insufficiency_audit_probe.py|)
+  \item \textbf{Low-complexity nonlinear two-readout provider-class audit:} \texttt{P719} (\verb|fundamental_action_reconstruction/p719_current_strict_t176_low_complexity_odd_polynomial_two_readout_provider_class_audit_probe.py|)
+  \item \textbf{Observer-facing signed output-channel projection audit:} \texttt{P720} (\verb|fundamental_action_reconstruction/p720_current_strict_t176_observer_facing_signed_output_channel_projection_provider_class_audit_probe.py|)
+  \item \textbf{Source-topology basis-free QW-2191-safe provider nonupgrade audit:} \texttt{P721} (\verb|fundamental_action_reconstruction/p721_current_strict_t176_source_topology_basis_free_qw2191_safe_provider_nonupgrade_audit_probe.py|)
+  \item \textbf{Chart-sensitive transported flux/current-like section nonexport audit:} \texttt{P722} (\verb|fundamental_action_reconstruction/p722_current_strict_t177_chart_sensitive_transported_flux_current_like_section_nonexport_audit_probe.py|)
+  \item \textbf{Source-topology to atlas chart-seed selection bridge nonexport audit:} \texttt{P723} (\verb|fundamental_action_reconstruction/p723_current_strict_t178_source_topology_to_atlas_chart_seed_selection_bridge_nonexport_audit_probe.py|)
+  \item \textbf{Positive source-polarity atlas-entry corridor reduction audit:} \texttt{P724} (\verb|fundamental_action_reconstruction/p724_current_strict_t178_positive_source_polarity_atlas_entry_corridor_reduction_audit_probe.py|)
+  \item \textbf{Positive-corridor odd/even lane-selection bridge nonexport audit:} \texttt{P725} (\verb|fundamental_action_reconstruction/p725_current_strict_t179_positive_corridor_odd_even_lane_selection_bridge_nonexport_audit_probe.py|)
+  \item \textbf{Positive-corridor outer/interior chart-selection bridge nonexport audit:} \texttt{P726} (\verb|fundamental_action_reconstruction/p726_current_strict_t180_positive_corridor_outer_interior_chart_selection_bridge_nonexport_audit_probe.py|)
+  \item \textbf{Positive-corridor excluded-negative-boundary adjacency chart-selection bridge nonexport audit:} \texttt{P727} (\verb|fundamental_action_reconstruction/p727_current_strict_t181_positive_corridor_excluded_negative_boundary_adjacency_chart_selection_bridge_nonexport_audit_probe.py|)
+  \item \textbf{Residual-datum source-side boundary-shielded sublane reduction audit:} \texttt{P728} (\verb|fundamental_action_reconstruction/p728_current_strict_t182_residual_datum_source_side_boundary_shielded_sublane_reduction_audit_probe.py|)
+  \item \textbf{Residual-datum pair1/pair2 orbit-direction selection bridge nonexport audit:} \texttt{P729} (\verb|fundamental_action_reconstruction/p729_current_strict_t183_residual_datum_pair12_orbit_direction_selection_bridge_nonexport_audit_probe.py|)
+  \item \textbf{Direction-free Shannon residual-datum pair1/pair2 orbit-direction selection bridge nonexport audit:} \texttt{P730} (\verb|fundamental_action_reconstruction/p730_current_strict_t184_direction_free_shannon_residual_datum_pair12_orbit_direction_selection_bridge_nonexport_audit_probe.py|)
+  \item \textbf{\texttt{w\_break} witness-payload residual-datum pair1/pair2 orbit-direction promotion-bridge nonexport audit:} \texttt{P731} (\verb|fundamental_action_reconstruction/p731_current_strict_t185_w_break_witness_payload_residual_datum_pair12_orbit_direction_promotion_bridge_nonexport_audit_probe.py|)
+  \item \textbf{Pair1-rooted convention-state pair1/pair2 witness-split descent-bridge nonexport audit:} \texttt{P732} (\verb|fundamental_action_reconstruction/p732_current_strict_t186_pair1_rooted_convention_state_pair12_witness_split_descent_bridge_nonexport_audit_probe.py|)
+  \item \textbf{Convention-layer pair1/pair2 witness-split transport-descent-bridge nonexport audit:} \texttt{P733} (\verb|fundamental_action_reconstruction/p733_current_strict_t187_convention_layer_pair12_witness_split_transport_descent_bridge_nonexport_audit_probe.py|)
+  \item \textbf{Declared-scope source-topology selector theorem pair1/pair2 orbit-direction descent-bridge nonexport audit:} \texttt{P734} (\verb|fundamental_action_reconstruction/p734_current_strict_t188_declared_scope_source_topology_selector_theorem_pair12_orbit_direction_descent_bridge_nonexport_audit_probe.py|)
+  \item \textbf{Local source-side scalar-bind pair1/pair2 orbit-direction descent-bridge nonexport audit:} \texttt{P735} (\verb|fundamental_action_reconstruction/p735_current_strict_t189_local_source_side_scalar_bind_pair12_orbit_direction_descent_bridge_nonexport_audit_probe.py|)
+  \item \textbf{Local provider-operator shift-direction pair1/pair2 orbit-direction descent-bridge nonexport audit:} \texttt{P736} (\verb|fundamental_action_reconstruction/p736_current_strict_t190_local_provider_operator_shift_direction_pair12_orbit_direction_descent_bridge_nonexport_audit_probe.py|)
+  \item \textbf{Local pair1/pair2 projector-atlas glue orbit-direction descent-bridge nonexport audit:} \texttt{P737} (\verb|fundamental_action_reconstruction/p737_current_strict_t191_local_pair12_projector_atlas_glue_orbit_direction_descent_bridge_nonexport_audit_probe.py|)
+  \item \textbf{Global projective selector-state pair1/pair2 orbit-direction descent-bridge nonexport audit:} \texttt{P738} (\verb|fundamental_action_reconstruction/p738_current_strict_t192_global_projective_selector_state_pair12_orbit_direction_descent_bridge_nonexport_audit_probe.py|)
+  \item \textbf{Global premise-based directed selector-state pair1/pair2 strict-core-upgrade bridge nonexport audit:} \texttt{P739} (\verb|fundamental_action_reconstruction/p739_current_strict_t193_global_premise_based_directed_selector_state_pair12_witness_split_strict_core_upgrade_bridge_nonexport_audit_probe.py|)
+  \item \textbf{Global sign-fixed directed-closure pair1/pair2 strict-core-upgrade bridge nonexport audit:} \texttt{P740} (\verb|fundamental_action_reconstruction/p740_current_strict_t194_global_sign_fixed_directed_closure_pair12_witness_split_strict_core_upgrade_bridge_nonexport_audit_probe.py|)
+  \item \textbf{Actual source-topology selector-witness pair1/pair2 promotion-bridge nonexport audit:} \texttt{P741} (\verb|fundamental_action_reconstruction/p741_current_strict_t195_actual_source_topology_selector_witness_pair12_witness_split_promotion_bridge_nonexport_audit_probe.py|)
+\end{itemize}
+
+To reproduce the PDF and verify the current Release-7 strict dashboard statuses:
+\begin{lstlisting}
+git rev-parse HEAD
+python3 fundamental_action_reconstruction/p707_current_release_7_build_and_closure_smoke_probe.py
+python3 fundamental_action_reconstruction/p711_current_strict_t173_previous_methodology_survival_and_global_gap_audit_probe.py
+python3 fundamental_action_reconstruction/p712_current_strict_t176_existing_global_directed_sign_coherence_provider_nonexport_audit_probe.py
+python3 fundamental_action_reconstruction/p713_current_strict_t176_multiroot_rooted_sign_lift_root_independence_audit_probe.py
+python3 fundamental_action_reconstruction/p714_current_strict_t176_w_break_parity_root_support_profile_audit_probe.py
+python3 fundamental_action_reconstruction/p715_current_strict_t176_parity_completed_dual_anchor_multiroot_audit_probe.py
+python3 fundamental_action_reconstruction/p716_current_strict_t176_pair4_negative_cosine_polarity_global_z2_orbit_split_audit_probe.py
+python3 fundamental_action_reconstruction/p717_current_strict_t176_pair4_exact_branch_split_release_7_os_gauge_irrelevance_bridge_audit_probe.py
+python3 fundamental_action_reconstruction/p718_current_strict_t176_single_mixed_linear_weight_span_provider_insufficiency_audit_probe.py
+python3 fundamental_action_reconstruction/p719_current_strict_t176_low_complexity_odd_polynomial_two_readout_provider_class_audit_probe.py
+python3 fundamental_action_reconstruction/p720_current_strict_t176_observer_facing_signed_output_channel_projection_provider_class_audit_probe.py
+python3 fundamental_action_reconstruction/p721_current_strict_t176_source_topology_basis_free_qw2191_safe_provider_nonupgrade_audit_probe.py
+python3 fundamental_action_reconstruction/p722_current_strict_t177_chart_sensitive_transported_flux_current_like_section_nonexport_audit_probe.py
+python3 fundamental_action_reconstruction/p723_current_strict_t178_source_topology_to_atlas_chart_seed_selection_bridge_nonexport_audit_probe.py
+python3 fundamental_action_reconstruction/p724_current_strict_t178_positive_source_polarity_atlas_entry_corridor_reduction_audit_probe.py
+python3 fundamental_action_reconstruction/p725_current_strict_t179_positive_corridor_odd_even_lane_selection_bridge_nonexport_audit_probe.py
+python3 fundamental_action_reconstruction/p726_current_strict_t180_positive_corridor_outer_interior_chart_selection_bridge_nonexport_audit_probe.py
+python3 fundamental_action_reconstruction/p727_current_strict_t181_positive_corridor_excluded_negative_boundary_adjacency_chart_selection_bridge_nonexport_audit_probe.py
+python3 fundamental_action_reconstruction/p728_current_strict_t182_residual_datum_source_side_boundary_shielded_sublane_reduction_audit_probe.py
+python3 fundamental_action_reconstruction/p729_current_strict_t183_residual_datum_pair12_orbit_direction_selection_bridge_nonexport_audit_probe.py
+python3 fundamental_action_reconstruction/p730_current_strict_t184_direction_free_shannon_residual_datum_pair12_orbit_direction_selection_bridge_nonexport_audit_probe.py
+python3 fundamental_action_reconstruction/p731_current_strict_t185_w_break_witness_payload_residual_datum_pair12_orbit_direction_promotion_bridge_nonexport_audit_probe.py
+python3 fundamental_action_reconstruction/p732_current_strict_t186_pair1_rooted_convention_state_pair12_witness_split_descent_bridge_nonexport_audit_probe.py
+python3 fundamental_action_reconstruction/p733_current_strict_t187_convention_layer_pair12_witness_split_transport_descent_bridge_nonexport_audit_probe.py
+python3 fundamental_action_reconstruction/p734_current_strict_t188_declared_scope_source_topology_selector_theorem_pair12_orbit_direction_descent_bridge_nonexport_audit_probe.py
+python3 fundamental_action_reconstruction/p735_current_strict_t189_local_source_side_scalar_bind_pair12_orbit_direction_descent_bridge_nonexport_audit_probe.py
+python3 fundamental_action_reconstruction/p736_current_strict_t190_local_provider_operator_shift_direction_pair12_orbit_direction_descent_bridge_nonexport_audit_probe.py
+python3 fundamental_action_reconstruction/p737_current_strict_t191_local_pair12_projector_atlas_glue_orbit_direction_descent_bridge_nonexport_audit_probe.py
+python3 fundamental_action_reconstruction/p738_current_strict_t192_global_projective_selector_state_pair12_orbit_direction_descent_bridge_nonexport_audit_probe.py
+python3 fundamental_action_reconstruction/p739_current_strict_t193_global_premise_based_directed_selector_state_pair12_witness_split_strict_core_upgrade_bridge_nonexport_audit_probe.py
+python3 fundamental_action_reconstruction/p740_current_strict_t194_global_sign_fixed_directed_closure_pair12_witness_split_strict_core_upgrade_bridge_nonexport_audit_probe.py
+python3 fundamental_action_reconstruction/p741_current_strict_t195_actual_source_topology_selector_witness_pair12_witness_split_promotion_bridge_nonexport_audit_probe.py
+cat fundamental_action_reconstruction/generated/p707_current_release_7_build_and_closure_smoke_probe_summary.json
+cat fundamental_action_reconstruction/generated/p711_current_strict_t173_previous_methodology_survival_and_global_gap_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p712_current_strict_t176_existing_global_directed_sign_coherence_provider_nonexport_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p713_current_strict_t176_multiroot_rooted_sign_lift_root_independence_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p714_current_strict_t176_w_break_parity_root_support_profile_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p715_current_strict_t176_parity_completed_dual_anchor_multiroot_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p716_current_strict_t176_pair4_negative_cosine_polarity_global_z2_orbit_split_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p717_current_strict_t176_pair4_exact_branch_split_release_7_os_gauge_irrelevance_bridge_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p718_current_strict_t176_single_mixed_linear_weight_span_provider_insufficiency_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p719_current_strict_t176_low_complexity_odd_polynomial_two_readout_provider_class_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p720_current_strict_t176_observer_facing_signed_output_channel_projection_provider_class_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p721_current_strict_t176_source_topology_basis_free_qw2191_safe_provider_nonupgrade_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p722_current_strict_t177_chart_sensitive_transported_flux_current_like_section_nonexport_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p723_current_strict_t178_source_topology_to_atlas_chart_seed_selection_bridge_nonexport_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p724_current_strict_t178_positive_source_polarity_atlas_entry_corridor_reduction_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p725_current_strict_t179_positive_corridor_odd_even_lane_selection_bridge_nonexport_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p726_current_strict_t180_positive_corridor_outer_interior_chart_selection_bridge_nonexport_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p727_current_strict_t181_positive_corridor_excluded_negative_boundary_adjacency_chart_selection_bridge_nonexport_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p728_current_strict_t182_residual_datum_source_side_boundary_shielded_sublane_reduction_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p729_current_strict_t183_residual_datum_pair12_orbit_direction_selection_bridge_nonexport_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p730_current_strict_t184_direction_free_shannon_residual_datum_pair12_orbit_direction_selection_bridge_nonexport_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p731_current_strict_t185_w_break_witness_payload_residual_datum_pair12_orbit_direction_promotion_bridge_nonexport_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p732_current_strict_t186_pair1_rooted_convention_state_pair12_witness_split_descent_bridge_nonexport_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p733_current_strict_t187_convention_layer_pair12_witness_split_transport_descent_bridge_nonexport_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p734_current_strict_t188_declared_scope_source_topology_selector_theorem_pair12_orbit_direction_descent_bridge_nonexport_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p735_current_strict_t189_local_source_side_scalar_bind_pair12_orbit_direction_descent_bridge_nonexport_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p736_current_strict_t190_local_provider_operator_shift_direction_pair12_orbit_direction_descent_bridge_nonexport_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p737_current_strict_t191_local_pair12_projector_atlas_glue_orbit_direction_descent_bridge_nonexport_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p738_current_strict_t192_global_projective_selector_state_pair12_orbit_direction_descent_bridge_nonexport_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p739_current_strict_t193_global_premise_based_directed_selector_state_pair12_witness_split_strict_core_upgrade_bridge_nonexport_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p740_current_strict_t194_global_sign_fixed_directed_closure_pair12_witness_split_strict_core_upgrade_bridge_nonexport_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p741_current_strict_t195_actual_source_topology_selector_witness_pair12_witness_split_promotion_bridge_nonexport_audit_probe_summary.json
+cat fundamental_action_reconstruction/generated/p706_current_release_7_strict_projective_operational_toe_os_closure_dashboard_probe_summary.json
+cat fundamental_action_reconstruction/generated/p708_current_strict_t173_frontier_dashboard_probe_summary.json
+\end{lstlisting}
+
+\tableofcontents
+
+\chapter{Ontology and scope}
+\section{AX9 ontology discipline}
+
+The strict program is built under the ontology correction \texttt{AX9}:
+
+\begin{itemize}
+  \item the nadsoliton itself is the primordial information of the universe in a solitonic state;
+  \item there is no separate informational layer underneath the nadsoliton;
+  \item the preferred internal order is:
+  \[
+    \text{nadsoliton}\ \to\ \text{light}\ \to\ \text{matter}\ \to\ \text{emergent observer}.
+  \]
+\end{itemize}
+
+In particular, we do not allow observer-facing quantities to silently back-propagate into the upstream definition of the nadsoliton core.
+Operationally, throughout this document, “light” is treated as the linearized eigenmode layer exported from the $\Psi$-sector Hessian instantiation (\texttt{F459}),
+and observer-facing readouts remain downstream (\texttt{P697}, \texttt{P699}).
+\section{Strict vs legacy kernel split discipline}
+
+The repo contains two historically distinct kernel objects (see \texttt{K1/K2/F2}):
+\[
+K_{\mathrm{legacy\_ont}}(d)
+:=
+\alpha_{\mathrm{geo}}\frac{\cos(\omega d+\phi)}{1+\beta_{\mathrm{tors}}d},
+\qquad
+K_{\mathrm{strict\_gate}}(d)
+:=
+\frac{\cos(\omega d+\phi)}{1+\beta d^{\eta}}.
+\]
+
+By author decree (\texttt{S2}, 2026-03-09), the legacy kernel is retired to archival status; this document is strict-only.
+However, \textbf{no false pass} discipline remains:
+we do \emph{not} silently transfer legacy physical-role identities (e.g.\ electroweak-angle or EM coupling slogans) onto the strict working kernel without an explicit bridge/role-transfer theorem.
+
+On the current strict kernel-mode lane, the working strict tuple is the \texttt{QW-2049} gate-selected kernel with
+$(\omega,\phi,\beta,\eta)=(0.18575,\ 0.16250,\ 1.0,\ 1.8)$, used operationally to generate a frozen numeric carrier mixing matrix $K_{\mathrm{total}}$ on $\mathbb{Z}_{12}$ (\texttt{R14}).
+\section{What “closure” means in this document}
+
+We use the word “closure” in a deliberately scope-disciplined way.
+
+\begin{definition}[Operational ToE closure (strict projective OS)]
+We say that the current repo state achieves \emph{Operational ToE closure} in the strict \emph{projective} scope if it exports a theorem-level
+operational support bundle sufficient to compute (from strict projective selector closure output data) the downstream artifacts recorded by the OS packet:
+\[
+\Lambda_{\mathrm{OS}}^{(\mathrm{proj})} :=
+\bigl(
+\texttt{N680},\ \texttt{N692},\ \texttt{N693},\ \texttt{P694},\ \texttt{P696},\ \texttt{P697},\ \texttt{N699}
+\bigr),
+\]
+with hard limits explicitly keeping \emph{kernel-alone/global} \texttt{QW-2191} discharge, directed sign-sensitive physical orientation, and ToE closure unclaimed.
+\end{definition}
+
+\begin{remark}[OS v2 vs OS v3]
+The minimal theorem-level OS support bundle used to discharge \emph{Operational ToE closure} is the v2 packet (\texttt{N700}/\texttt{N701}).
+The v3 packet (\texttt{F705}/\texttt{P705}/\texttt{N705}) is a strict extension that additionally tracks the basis-invariant Hessian eigen-spectrum mass observable (\texttt{F704}).
+It does not strengthen any hard-limit claims.
+\end{remark}
+
+\begin{remark}[Boundary discipline]
+Operational ToE closure in the above sense is a closure of an \emph{operational computability pipeline} (a ToE “OS”), not a claim of global physical identification
+(host matching) and not a claim of kernel-alone/global \texttt{QW-2191} discharge. It is compatible with leaving those stronger claims explicitly open.
+\end{remark}
+
+\begin{theorem}[Operational ToE closure in strict projective OS scope (N701)]
+On the current repo state, the repo exports a theorem-level strict projective operational OS support packet v2 (\texttt{N700}), hence discharges
+Operational ToE closure in strict projective OS scope (\texttt{N701}):
+\[
+\Lambda_{\mathrm{OS}}^{(\mathrm{proj})} =
+\bigl(
+\texttt{N680},\ \texttt{N692},\ \texttt{N693},\ \texttt{P694},\ \texttt{P696},\ \texttt{P697},\ \texttt{N699}
+\bigr),
+\]
+with all hard limits explicit (no kernel-alone/global \texttt{QW-2191} discharge, no directed physical sign datum in strict core, no ToE closure, no actual emergent observer closure).
+\end{theorem}
+
+\chapter{Strict core Lagrangian and emergence map}
+\section{Single-kernel strict candidate (A11)}
+
+This chapter records the strict candidate “one-kernel” nadsoliton core Lagrangian as exported/packaged by \texttt{A11}.
+It is a definition/packaging object, not a claim that every coefficient family has already been strict-derived from the kernel alone.
+
+\subsection{Typed carrier and cyclic distance ($\mathbb{Z}_{12}$)}
+
+Let
+\[
+I_{12}:=\{0,1,\dots,11\},
+\qquad
+\mathbb{Z}_{12}:=(I_{12}, + \bmod 12).
+\]
+
+Define the cyclic octave distance on the ring:
+\[
+d_{\mathrm{cyc}}(i,j)
+:=
+\min\Bigl( (j-i)\bmod 12,\ (i-j)\bmod 12 \Bigr)
+\in\{0,1,\dots,6\}.
+\]
+
+\subsection{Strict working kernel and frozen mixing matrix}
+
+The strict working kernel is the later-pipeline gate-selected kernel (\texttt{QW-2049}):
+\[
+K_{\mathrm{strict\_gate}}(d)
+:=
+\frac{\cos(\omega d+\phi)}{1+\beta d^{\eta}},
+\qquad
+(\omega,\phi,\beta,\eta)=(0.18575,\ 0.16250,\ 1.0,\ 1.8).
+\]
+
+On the kernel-mode lane, the repo exports a frozen numeric symmetric mixing matrix $K_{\mathrm{total}}\in\mathbb{R}^{12\times 12}$
+on the same carrier (\texttt{QW-2118}), specialized into the canonical kernel channel by \texttt{R14}.
+In this document we only require the exported matrix entries (no additional kernel-to-matrix derivation is assumed here).
+
+\subsection{Fields and core Lagrangian density}
+
+Introduce a 12-component real field on spacetime:
+\[
+\Psi(x)=(\psi_0(x),\dots,\psi_{11}(x))\in\mathbb{R}^{12},
+\]
+and a real scalar order/coherence field:
+\[
+\Phi(x)=\phi(x)\in\mathbb{R}.
+\]
+
+Write the mixing potential using the exported $K_{\mathrm{total}}$:
+\[
+V_{\mathrm{mix}}(\Psi)
+:=
+\frac12 \sum_{\substack{i,j\in I_{12}\\ i\neq j}} (K_{\mathrm{total}})_{ij}\,\psi_i\,\psi_j.
+\]
+
+Write the local self-interaction potentials in the canonical template form (\texttt{QW-2163/2165/2166}):
+\[
+V_{\Phi}(\phi)
+:=
+\frac12 m_{\phi}^2\,\phi^2 + \frac14 \lambda_{\phi}\,\phi^4,
+\]
+\[
+V_{\Psi}(\Psi)
+:=
+\sum_{i=0}^{11}\left(
+\frac12 m_{\psi i}^2\,\psi_i^2
+\;+\;\frac14 g4_{\psi i}\,\psi_i^4
+\;+\;\frac16 g6_{\psi i}\,\psi_i^6
+\right),
+\]
+\[
+V_{\mathrm{Y}}(\Psi,\phi)
+:=
+\sum_{i=0}^{11} gY_i\,\phi^2\,\psi_i^2.
+\]
+
+Then the nadsoliton core Lagrangian density is:
+\[
+\mathcal{L}_{\mathrm{core}}
+=
+\frac12\,\partial_\mu \phi\,\partial^\mu \phi
+\;+\;\frac12\sum_{i=0}^{11}\partial_\mu \psi_i\,\partial^\mu \psi_i
+\;-\;V_{\Phi}(\phi)
+\;-\;V_{\Psi}(\Psi)
+\;-\;V_{\mathrm{Y}}(\Psi,\phi)
+\;-\;V_{\mathrm{mix}}(\Psi).
+\]
+
+\subsection{Quadratic expansion, $\Psi$ Hessian, and “mass” proxy meaning (strict, scope-limited)}
+
+Let $(\phi_\ast,\Psi_\ast)$ be a background configuration satisfying the stationarity condition for the potential part
+$V:=V_{\Phi}+V_{\Psi}+V_{\mathrm{Y}}+V_{\mathrm{mix}}$:
+\[
+\nabla_{\phi,\Psi} V(\phi_\ast,\Psi_\ast)=0.
+\]
+
+Write $(\phi,\Psi)=(\phi_\ast,\Psi_\ast)+(\delta\phi,\delta\Psi)$ and expand the potential to second order in $\delta\Psi$:
+\[
+V(\phi_\ast,\Psi_\ast+\delta\Psi)
+=
+V(\phi_\ast,\Psi_\ast)
+\;+\;\frac12\,\delta\Psi^{\mathsf T} H_{\psi}\,\delta\Psi
+\;+\;\cdots,
+\]
+where $H_{\psi}\in\mathbb{R}^{12\times 12}$ is the $\Psi$-sector Hessian block (second derivatives) at the background point.
+
+\paragraph{Hessian stencil from $\mathcal{L}_{\mathrm{core}}$ (canonical template \texttt{QW-2166}).}
+Let $(v_{\phi},v_{\psi 0},\dots,v_{\psi 11})$ denote a constant background vacuum.
+In the strict canonical action/Hessian export (\texttt{QW-2166}), the quadratic $\Psi$-sector Hessian block has the following stencil structure:
+\begin{enumerate}[label=\arabic*.]
+  \item diagonal entries:
+  \[
+  (H_{\psi})_{ii}
+  =
+  m_{\psi i}^2
+  +3\,g4_{\psi i}\,v_{\psi i}^2
+  +5\,g6_{\psi i}\,v_{\psi i}^4
+  +2\,gY_i\,v_{\phi}^2,
+  \]
+  \item off-diagonal mixing entries ($i\neq j$):
+  \[
+  (H_{\psi})_{ij}
+  =
+  \frac{K_{ij}+K_{ji}}{2},
+  \]
+  \item $\Psi$--$\Phi$ cross-block entries:
+  \[
+  (H_{\psi\phi})_{i}
+  =
+  \frac{\partial^2 V}{\partial \psi_i\,\partial \phi}(v_{\phi},v_{\psi})
+  =
+  4\,gY_i\,v_{\phi}\,v_{\psi i}.
+  \]
+\end{enumerate}
+This pins down what “light = linearized modes” means inside the program (eigenmodes of the Hessian around a vacuum),
+without asserting that the vacuum values or all coefficient families are already strict-derived from the kernel alone.
+
+On the current diagonal/local strict-derived lane, the repo exports one explicit numeric value instantiation (\texttt{F459}) of the form:
+\[
+H_{\psi}
+:=
+K_{\mathrm{total}} + \bigl(m_0^2 I + D_{\mathrm{local\_residual}}\bigr),
+\]
+with $m_0^2 I$ the exported host scalar floor embedding and $D_{\mathrm{local\_residual}}$ an exported diagonal/local strict-derived residual profile.
+
+In strict scope we treat the quadratic coefficient $\delta\Psi^{\mathsf T}H_{\psi}\delta\Psi$ as defining a \emph{dimensionless} “$m^2$ proxy” layer:
+for any nonzero vector $u$, the Rayleigh quotient
+$u^{\mathsf T}H_{\psi}^{(s)}u/(u^{\mathsf T}u)$ is a well-defined quadratic proxy, where $H_{\psi}^{(s)}=\tfrac12(H_{\psi}+H_{\psi}^{\mathsf T})$.
+This does \emph{not} yet constitute a physical unit identification, and it does not bypass the strict-core selector obstruction \texttt{QW-2191};
+it is an operational computability meaning only (packaged as a scope-limited meaning theorem \texttt{N703}).
+
+\begin{theorem}[Quadratic mass-proxy meaning definition (N703)]
+On the current repo state, the proxy quantities exported by \texttt{P694} and \texttt{P696} are interpreted strictly as \emph{dimensionless quadratic coefficients}
+of the exported diagonal/local $\Psi$-sector operator instantiation (\texttt{F459}):
+they are Rayleigh/Ritz-type quadratic forms of $H_{\psi}^{(s)}$ evaluated on exported projective selector rays (from \texttt{F672}) and deterministic in-plane complements.
+No physical-unit map, no Standard Model host identification, and no diagonalization claim is discharged.
+
+\emph{Hard limits:} no directed physical sign datum, no kernel-alone/global \texttt{QW-2191} discharge, and no ToE closure are claimed.
+\end{theorem}
+\section{Light $\to$ matter $\to$ observer ladder}
+
+\texttt{A11} fixes a disciplined emergence ladder. On the current repo state, the strongest honest statements along that ladder are:
+
+\begin{enumerate}[label=\arabic*.]
+  \item \textbf{Light (discharged as computable instantiation):}
+  the repo exports a strict-derived diagonal/local value instantiation of the $\Psi$-sector Hessian $H_{\psi}$ and its full real eigensystem (\texttt{F459}),
+  plus sign-gauge-invariant eigenprojectors (\texttt{F460}).
+  Mixing across Fourier pair planes is explicitly audited and packaged as a value-instantiation boundary (\texttt{N505}); therefore no “pair-plane diagonalization” shortcut is allowed.
+
+  \item \textbf{Matter (programmatic, not closed):}
+  matter is intended to arise from nonlinear structure in the same core Lagrangian (local quartic/sextic families and Yukawa-type couplings),
+  but the repo does not yet export a strict derivation that these families are kernel-alone consequences or a closed host identification map.
+
+  \item \textbf{Emergent observer (operational OS closure, not actual observer closure):}
+  from the strict projective selector closure output on $C_{v1}$ (\texttt{N680}, exported as \texttt{F672}), the repo exports a projective observer-limit readout (\texttt{P697})
+  and a fully computable downstream projective chain under projector pushforward semantics $P\mapsto MPM^{\mathsf T}$ (\texttt{P699}/\texttt{N699}).
+  This suffices for \emph{Operational ToE closure} in strict projective OS scope (\texttt{N701}), while \emph{actual emergent observer closure} remains explicitly open.
+\end{enumerate}
+
+\chapter{Selector closure on \texorpdfstring{$C_{v1}$}{C\_v1}}
+\section{Strict configuration space \texorpdfstring{$C_{v1}$}{C\_v1} and the \texorpdfstring{$\pi_1(C_{v1})\cong\mathbb{Z}_2$}{pi1(C\_v1)=Z2} witness (F306)}
+
+The strict selector program is typed over an explicit strict configuration-space object \texttt{C\_v1\_void\_configuration\_space\_in\_local\_B\_tilde\_1\_sector\_v1} (exported by \texttt{F306}).
+In strict scope, we only use the following minimal mathematical content of that export:
+
+\begin{definition}[Model declaration for $C_{v1}$ (no physics claims)]
+On the declared local protected sector, interpret the configuration space as the based mapping space model:
+\[
+C_{v1} := \mathrm{Map}_*^{\deg=1}\!\left(S^3,\mathrm{SU}(2)\right).
+\]
+This is the standard finite-energy compactification discipline:
+$\mathbb{R}^3\cup\{\infty\}\cong S^3$ with boundary condition $U(\infty)=1\in \mathrm{SU}(2)$, so a configuration is a based map $S^3\to \mathrm{SU}(2)$.
+\end{definition}
+
+\begin{proposition}[Topological witness $\pi_1(C_{v1})\cong\mathbb{Z}_2$ (F306)]
+On the above model, the fundamental group satisfies:
+\[
+\pi_1(C_{v1})\ \cong\ \mathbb{Z}_2,
+\]
+and \texttt{F306} exports an explicit generator label $\gamma_{\pi_1}^{(v1)}$ for the nontrivial loop class.
+\end{proposition}
+
+\begin{proof}[Proof sketch (classical algebraic topology)]
+Using the loop--suspension adjunction,
+\[
+\Omega\,\mathrm{Map}_*(S^3,S^3)\ \simeq\ \mathrm{Map}_*(\Sigma S^3,S^3)\ =\ \mathrm{Map}_*(S^4,S^3),
+\]
+hence
+\[
+\pi_1\!\left(\mathrm{Map}_*(S^3,S^3)\right)
+=\pi_0\!\left(\Omega\,\mathrm{Map}_*(S^3,S^3)\right)
+\cong \pi_0\!\left(\mathrm{Map}_*(S^4,S^3)\right)
+=[S^4,S^3]
+=\pi_4(S^3)
+\cong \mathbb{Z}_2,
+\]
+where the final identification $\pi_4(S^3)\cong \mathbb{Z}_2$ is a classical homotopy-group fact.
+This witness is strictly below any physical FR-sign quantization claims and is used only as a typed topology availability result.
+\end{proof}
+
+\section{Real Fourier carrier on \texorpdfstring{$\mathbb{Z}_{12}$}{Z\_12} and the \texorpdfstring{$O(2)$}{O(2)} obstruction (QW-2191/N465)}
+\label{sec:fourier_z12_obstruction}
+
+The strict selector program is built on a typed 12-slot carrier (\texttt{F329}), and its canonical degeneracy/uniqueness obstruction \texttt{QW-2191}
+is most transparently expressed in the real Fourier basis on $\mathbb{Z}_{12}$.
+
+\subsection{Explicit orthonormal real Fourier basis}
+Index the carrier by $x\in I_{12}=\{0,\dots,11\}$ and identify $\mathbb{R}^{12}$ with real-valued functions on $\mathbb{Z}_{12}$.
+Define:
+\[
+e_0(x):=\frac{1}{\sqrt{12}},
+\qquad
+e_6(x):=\frac{(-1)^x}{\sqrt{12}}.
+\]
+For each $m=1,\dots,5$, define the real Fourier pair-plane vectors:
+\[
+c_m(x):=\sqrt{\frac{2}{12}}\cos\!\left(\frac{2\pi m x}{12}\right),
+\qquad
+s_m(x):=\sqrt{\frac{2}{12}}\sin\!\left(\frac{2\pi m x}{12}\right).
+\]
+Then $\{e_0,e_6,c_1,s_1,\dots,c_5,s_5\}$ is an orthonormal basis of $\mathbb{R}^{12}$ and induces the canonical orthogonal decomposition:
+\[
+\mathbb{R}^{12}
+\;=\;
+\mathrm{span}\{e_0\}
+\;\oplus\;
+\mathrm{span}\{e_6\}
+\;\oplus\;
+\bigoplus_{m=1}^{5}\mathrm{span}\{c_m,s_m\}.
+\]
+We denote the $m$-th pair plane by:
+\[
+V_m:=\mathrm{span}\{c_m,s_m\}.
+\]
+
+\subsection{Why cyclic-distance kernels cannot select a unique axis inside \texorpdfstring{$V_1$}{V1}}
+Let $T:\mathbb{R}^{12}\to\mathbb{R}^{12}$ be the cyclic shift operator:
+\[
+(Tf)(x):=f(x-1\bmod 12).
+\]
+If the host kernel $K_{\mathrm{total}}$ is constructed as a cyclic-distance profile (\texttt{QW-2118}),
+then $K_{\mathrm{total}}$ commutes with $T$.
+On each pair plane $V_m$, the restriction $T|_{V_m}$ is a genuine planar rotation by angle $2\pi m/12$ on the basis $(c_m,s_m)$.
+Therefore, any real symmetric operator commuting with $T$ restricts to a scalar multiple of the identity on $V_m$.
+
+\begin{theorem}[Host isotropy on \texorpdfstring{$\mathrm{pair1}$}{pair1} (N465)]
+For the strict cyclic-distance host operator $A:=K_{\mathrm{total}}+m_0^2 I$ (\texttt{QW-2118}+\texttt{QW-2124}), the restriction to the pair1 plane
+$V_1=\mathrm{span}\{c_1,s_1\}$ is isotropic:
+\[
+A|_{V_1}=\lambda_1 I_2.
+\]
+Therefore, the host operator cannot supply an $O(2)$-cut inside pair1 and cannot canonically distinguish $c_1$ from $s_1$ (nor any rotated basis).
+\end{theorem}
+
+\begin{proof}[Proof sketch (from cyclic equivariance)]
+Because $K_{\mathrm{total}}$ depends only on cyclic distance, it commutes with the cyclic shift $T$.
+The scalar floor $m_0^2 I$ also commutes with $T$, hence $A$ commutes with $T$.
+On $V_1=\mathrm{span}\{c_1,s_1\}$, the action of $T$ is a planar rotation by angle $2\pi/12=\pi/6$ in the basis $(c_1,s_1)$.
+Any linear map commuting with a nontrivial planar rotation has the form $a I_2 + b J$ with $J=\begin{pmatrix}0&-1\\1&0\end{pmatrix}$.
+Since $A$ is symmetric, its restriction $A|_{V_1}$ is symmetric, forcing $b=0$, hence $A|_{V_1}=a I_2$ for some scalar $a=\lambda_1$.
+\end{proof}
+
+\begin{remark}[Meaning: the \texttt{QW-2191} uniqueness obstruction is structural]
+The above isotropy is a concrete instance of the general strict obstruction \texttt{QW-2191}:
+kernel-alone translation-invariant data leave an $O(2)$ family of basis choices inside each degenerate pair plane $V_m$.
+This is why Release~7 closure statements are deliberately phrased in \emph{projective (ray-level)} scope unless an explicit symmetry-breaking/selector source is tracked.
+\end{remark}
+\section{Global atlas and transition objects (T170)}
+
+In the strict selector program, the configuration space domain is the declared strict object $C_{v1}$.
+On the current repo state, the global chart/transition infrastructure required for a global selector discussion is exported as objects:
+
+\begin{itemize}
+  \item a global selector atlas object on $C_{v1}$ (\texttt{F469}, packaged by \texttt{N515}),
+  \item a global selector transition (gluing) object on $C_{v1}$ (\texttt{F469}, packaged by \texttt{N515}).
+\end{itemize}
+
+In the current strict global-typing export (\texttt{F469}), the chart domains are declared as a global cover:
+\[
+U_{\mathrm{pair}_1}=\cdots=U_{\mathrm{pair}_5}=C_{v1},
+\qquad
+U_i\cap U_j=C_{v1}.
+\]
+This declaration upgrades the earlier lane-scoped “exported-artifact overlap” wording into an explicit $C_{v1}$-typed atlas/transition object class discharge (T170),
+but it does \emph{not} add any physical claim and does \emph{not} promote operator-level cocycle/groupoid identities (\texttt{N512} boundary).
+
+The atlas uses five chart labels $\mathrm{pair}_m$ ($m=1,\dots,5$), corresponding to the five real Fourier pair planes
+$V_m=\mathrm{span}\{c_m,s_m\}\subset \mathbb{R}^{12}$.
+Each chart exports a local rank‑1 projector operator $A_m$ (a ray/state projector) on that plane.
+At projector level, if $u_m$ is a representative vector in the plane, then
+\[
+A_m=\frac{u_m u_m^{\mathsf T}}{u_m^{\mathsf T}u_m},
+\qquad
+u_m\sim -u_m\quad\Rightarrow\quad A_m\ \text{is sign-gauge-invariant.}
+\]
+
+The transition object exports explicit orthogonal chart-transport operators $O_{ij}$ between the chart planes (axis-only/projector-level transport).
+Projector transport is by conjugation:
+\[
+A_j \;=\; O_{ij}\,A_i\,O_{ij}^{\mathsf T}.
+\]
+\textbf{Cocycle discipline:} the repo keeps a strict boundary that cocycle/path-independence is a \emph{projector-section-level} statement only;
+operator-level identities $O_{jk}O_{ij}=O_{ik}$ are explicitly \emph{not} promoted in strict core (\texttt{N512}).
+
+\subsection{Exported JSON-level interfaces (F469)}
+\label{sec:f469_interfaces}
+
+This section makes the \textbf{exact exported object interfaces} explicit, so that the strict global selector infrastructure can be audited without opening the repo.
+
+\begin{definition}[Exported atlas interface: \texttt{SelectorAtlas\_global\_C\_v1\_strict\_v1} (F469)]
+The atlas object is exported as the JSON artifact
+\verb|fundamental_action_reconstruction/generated/selector_atlas_global_c_v1_strict_v1.json|.
+Its minimal strict interface consists of:
+\begin{enumerate}[label=\arabic*.]
+  \item \texttt{domain}: a reference to the declared strict configuration space object
+  (\verb|.../c_v1_void_configuration_space_in_local_b_tilde_1_sector_v1.json|),
+  and the explicit global-cover declaration $U_{\mathrm{pair}_1}=\cdots=U_{\mathrm{pair}_5}=C_{v1}$;
+  \item \texttt{charts}: a map over chart labels $\mathrm{pair}_m$ containing:
+  \begin{itemize}
+    \item \texttt{carrier\_plane} (the Fourier pair plane $V_m=\mathrm{span}\{c_m,s_m\}$),
+    \item \texttt{local\_operator.ref} (a JSON ref for the local rank-1 projector operator $A_m$);
+  \end{itemize}
+  \item \texttt{chart\_domains}: a typed chart-domain declaration on $C_{v1}$ for each chart label;
+  \item \texttt{overlap\_domains}: an explicit overlap-domain declaration for each unordered pair
+  $\mathrm{pair}_i\cap \mathrm{pair}_j$ (in this export: $C_{v1}$ by global-domain choice);
+  \item \texttt{transitions}: a complete-graph edge map $\mathrm{pair}_i\to \mathrm{pair}_j$ containing:
+  \begin{itemize}
+    \item \texttt{operator\_ref}: a JSON ref for the orthogonal transport operator $O_{ij}$,
+    \item one parameter field \texttt{alpha..} recording the exported angle value (mod $\pi$ or $2\pi$).
+  \end{itemize}
+\end{enumerate}
+\emph{Hard limits:} these are declared-typing atlas objects; they do not promote an operator-level groupoid or strict-core physical sign convention.
+\end{definition}
+
+\begin{definition}[Exported transition interface: \texttt{SelectorTransition\_global\_C\_v1\_strict\_v1} (F469)]
+The transition object is exported as
+\verb|fundamental_action_reconstruction/generated/selector_transition_global_c_v1_strict_v1.json|.
+Its minimal strict interface consists of:
+\begin{enumerate}[label=\arabic*.]
+  \item \texttt{transition\_operators}: the same complete-graph edge map of operator refs $O_{ij}$ and angle fields;
+  \item \texttt{gluing\_laws\_ref}: a reference to the exported five-chart projector-section cocycle audit object
+  \verb|.../a_12345_pair12345_chart_glued_orientation_projector_operator_section_strict_core_v2.json|.
+\end{enumerate}
+The \texttt{gluing\_laws\_ref} object records explicit \emph{projector-section-level} transport laws of the form
+$A_j = O_{ij}A_iO_{ij}^{\mathsf T}$ and triple-overlap cocycle/path-independence audits (max-entry residuals).
+\emph{Hard limits:} this remains \emph{projector-section-level} only and does not promote to operator-level identities (\texttt{N512}).
+\end{definition}
+
+\subsection{Exported transition angles (F469)}
+\label{sec:f469_alphas}
+
+For convenience, Table~\ref{tab:f469_alphas} records the exported transition angles (in radians) from
+\verb|selector_transition_global_c_v1_strict_v1.json|.
+Numerically, all exported values are consistent (within floating-point tolerance) with multiples of $\pi/2$.
+
+\begin{table}[h]
+  \centering
+  \caption{Exported transition angles on the five-chart selector atlas/transition (F469).}
+  \label{tab:f469_alphas}
+  \begin{tabular}{lll}
+    \toprule
+    Edge & Exported field & Value (rad) \\
+    \midrule
+    $\mathrm{pair}_1\to \mathrm{pair}_2$ & \texttt{alpha12\_mod\_2pi} & $1.570796326794897$ \\
+    $\mathrm{pair}_1\to \mathrm{pair}_3$ & \texttt{alpha13\_mod\_pi}  & $1.570796326794897$ \\
+    $\mathrm{pair}_1\to \mathrm{pair}_4$ & \texttt{alpha14\_mod\_pi}  & $1.570796326794896$ \\
+    $\mathrm{pair}_1\to \mathrm{pair}_5$ & \texttt{alpha15\_mod\_pi}  & $0.0$ \\
+    $\mathrm{pair}_2\to \mathrm{pair}_3$ & \texttt{alpha23\_mod\_pi}  & $0.0$ \\
+    $\mathrm{pair}_2\to \mathrm{pair}_4$ & \texttt{alpha24\_mod\_pi}  & $3.141592653589793$ \\
+    $\mathrm{pair}_2\to \mathrm{pair}_5$ & \texttt{alpha25\_mod\_pi}  & $1.570796326794897$ \\
+    $\mathrm{pair}_3\to \mathrm{pair}_4$ & \texttt{alpha34\_mod\_pi}  & $0.0$ \\
+    $\mathrm{pair}_3\to \mathrm{pair}_5$ & \texttt{alpha35\_mod\_pi}  & $1.570796326794898$ \\
+    $\mathrm{pair}_4\to \mathrm{pair}_5$ & \texttt{alpha45\_mod\_pi}  & $1.570796326794898$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Projective state, output operator, and closure interfaces (F470/F660/F672)}
+\label{sec:f672_interfaces}
+
+The strict projective closure relies on three exported global objects whose interfaces are intentionally simple.
+
+\begin{definition}[Projective state interface: \texttt{SelectorState\_global\_C\_v1\_projective\_strict\_v1} (F470)]
+The projective selector state is exported as
+\verb|fundamental_action_reconstruction/generated/selector_state_global_c_v1_projective_strict_v1.json|.
+Its strict interface consists of:
+\begin{enumerate}[label=\arabic*.]
+  \item \texttt{global\_atlas\_ref} and \texttt{global\_transition\_ref} pointing to the \texttt{F469} objects;
+  \item \texttt{charts}: the per-chart local projector-operator refs $A_m$;
+  \item \texttt{projector\_section\_ref}: a reference to the five-chart glued projector-section cocycle audit object
+  \verb|.../a_12345_pair12345_chart_glued_orientation_projector_operator_section_strict_core_v2.json|;
+  \item \texttt{state\_type}: a declaration that the state is a \emph{projective ray state}
+  (sign gauge $u\sim -u$ at state level).
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Output operator interface: \texttt{SelectorOutputOperator\_global\_C\_v1\_seed\_v1\_promoted\_strict\_v1} (F660)]
+The global output operator is exported as
+\verb|fundamental_action_reconstruction/generated/selector_output_operator_global_c_v1_seed_v1_promoted_strict_v1.json|.
+It contains the promoted seed-v1 output map $O_{\mathrm{sel}}:Q_{\mathrm{sel}}\to Q_{\mathrm{out}}$ in a fixed declared basis.
+\end{definition}
+
+\begin{definition}[Projective closure interface: \texttt{SelectorClosure\_global\_C\_v1\_projective\_strict\_v1} (F672)]
+The projective closure object is exported as
+\verb|fundamental_action_reconstruction/generated/selector_closure_global_c_v1_projective_strict_v1.json|.
+Its strict interface consists of:
+\begin{enumerate}[label=\arabic*.]
+  \item references to the atlas, transition, projective state, and output operator objects;
+  \item \texttt{output\_observable}: the resulting global chart-independent rank-1 output projector matrix $B_{\mathrm{out}}$ on $Q_{\mathrm{out}}=\mathrm{span}\{o_+,o_-\}$;
+  \item \texttt{well\_definedness\_certificate}: a numeric chart-independence certificate with fields:
+  \texttt{criterion}, \texttt{tolerance}, \texttt{max\_abs\_diff\_to\_reference\_chart\_output\_projector}, \texttt{certificate\_pass}.
+\end{enumerate}
+\emph{Hard limits:} projective closure is the invariant content; no directed physical sign convention is promoted.
+\end{definition}
+
+\section{Seed-v1 strict-core internal selector-source chain (S\_sel\_int $\to$ E\_orient $\to$ R\_sel $\to$ O\_sel)}
+
+The projective closure object \texttt{F672} is constructed using a strict-core internal selector-source seed chain (seed-v1) that provides, in strict scope:
+
+\begin{itemize}
+  \item a strict-core source object for the \texttt{S\_sel\_int} step,
+  \item an admissible orientation datum on \texttt{pair1} (\texttt{E\_orient}),
+  \item a strict reduction operator into the selector-sector basis \texttt{Q\_sel\_v1} (\texttt{R\_sel}),
+  \item a strict output operator into the output-sector basis \texttt{Q\_out\_v1} (\texttt{O\_sel}).
+\end{itemize}
+
+All these objects are strictly below any kernel-alone/global \texttt{QW-2191} discharge and below any directed/sign-sensitive physical orientation datum.
+
+\subsection{Minimal admissibility contract for the source step (F34)}
+
+The strict program treats \texttt{S\_sel\_int} as an internal \emph{source} step.
+The minimal admissibility contract for a strict-core source object to count as \texttt{S\_sel\_int} (in the sense of \texttt{F34}) is:
+\begin{enumerate}[label=\arabic*.]
+  \item genuinely new strict-core source object (not a reuse of control/axiom artifacts),
+  \item carrier-typed enough for later export (so that \texttt{E\_orient} can be defined from it),
+  \item source-seed only (not a hidden discharge of downstream steps),
+  \item strict-core only,
+  \item non-substitutive (no silent legacy-to-strict kernel identification),
+  \item selector-acceptance independent (non-strict acceptance does not count as source construction),
+  \item future-bridge compatible (stable enough for later strict continuation).
+\end{enumerate}
+
+\begin{theorem}[Admissible strict-core source object for \texttt{S\_sel\_int} exists (N676)]
+On the current repo state, the strict core exports one admissible source object satisfying the above \texttt{F34} contract for the \texttt{S\_sel\_int} source step:
+\[
+\texttt{S\_sel\_int\_strict\_core\_source\_object\_v1}.
+\]
+\emph{Hard limits:} this is not yet a strict-core selector closure claim and does not discharge kernel-alone/global \texttt{QW-2191} or ToE closure.
+\end{theorem}
+
+\subsection{Explicit strict-core payload weights exported by the source object (F647)}
+\label{sec:f647_payload}
+
+The constructed strict-core source object exported by the seed-v1 realization attempt (\texttt{F647}) includes a minimal, explicitly enumerated
+carrier-level payload on $\mathbb{Z}_{12}$:
+\begin{itemize}
+  \item \texttt{ord\_z12\_by\_x}: the group element order $\mathrm{ord}_{\mathbb{Z}_{12}}(x)$,
+  \item \texttt{w\_ref\_unnormalized\_by\_x}: a strict-derived element-order reference weight profile,
+  \item \texttt{w\_break\_by\_x}: a reflection-breaking weight profile (used only as a convention-layer sign anchor; no physical sign datum).
+\end{itemize}
+
+\paragraph{Element order on $\mathbb{Z}_{12}$.}
+For $x\in\mathbb{Z}_{12}$ (additive notation), define:
+\[
+\mathrm{ord}_{\mathbb{Z}_{12}}(x)
+:=
+\min\{n\ge 1:\ n x \equiv 0\ (\mathrm{mod}\ 12)\}
+\;=\;
+\frac{12}{\gcd(12,x)}.
+\]
+This is $\mathrm{Aut}(\mathbb{Z}_{12})$-invariant.
+
+\paragraph{Strict-derived reference weight.}
+Using the strict-derived Shannon asymmetry constant $\alpha_{\mathrm{geo}}:=4\ln 2$ (\texttt{F309}/\texttt{N420}),
+define the unnormalized order-reference weight:
+\[
+w_{\mathrm{ref}}^{\mathrm{unnorm}}(x)
+:=
+\exp\!\bigl(-\alpha_{\mathrm{geo}}\ \mathrm{ord}_{\mathbb{Z}_{12}}(x)\bigr)
+=
+2^{-4\,\mathrm{ord}_{\mathbb{Z}_{12}}(x)}.
+\]
+
+\paragraph{Reflection-breaking weight (strict convention scope).}
+Define:
+\[
+w_{\mathrm{break}}(x)
+:=
+-\,w_{\mathrm{ref}}^{\mathrm{unnorm}}(x)\,\sin\!\left(\frac{2\pi x}{12}\right).
+\]
+This weight is \emph{odd} under reflection $x\mapsto -x$ and therefore breaks the reflection symmetry on the carrier.
+It is not $\mathrm{Aut}(\mathbb{Z}_{12})$-invariant and is treated as a convention-layer sign anchor only.
+
+\begin{lemma}[Direction-free weights cannot distinguish a sine-axis sign (N517/N518)]
+\label{lem:even_weights_cannot_fix_sine_sign}
+Let $w:\mathbb{Z}_{12}\to\mathbb{R}$ be \emph{reflection-even}:
+\[
+w(x)=w(-x)\quad\text{for all }x\in\mathbb{Z}_{12}.
+\]
+Then for every Fourier sine basis vector $s_m$ ($m=1,\dots,5$) one has
+\[
+\langle w, s_m\rangle := \sum_{x\in\mathbb{Z}_{12}} w(x)\,s_m(x) = 0.
+\]
+In particular, a deterministic sign rule of the form
+\[
+u\ \mapsto\ \operatorname{sign}\!\bigl(\langle w,u\rangle\bigr)\,u
+\]
+cannot distinguish $u$ from $-u$ when the exported axis representative lies exactly on a sine axis (e.g.\ $u=\pm s_1$ on $\mathrm{pair1}$).
+
+Moreover, since $-1\in \mathrm{Aut}(\mathbb{Z}_{12})$, any $\mathrm{Aut}(\mathbb{Z}_{12})$-invariant weight profile is necessarily reflection-even.
+Therefore no direction-free (Aut-invariant) reference-weight family can supply a strict-core sign-distinction scalar on a pure sine axis.
+\end{lemma}
+
+\begin{proof}
+Because $s_m(-x)=-s_m(x)$, we may pair terms $x$ and $-x$:
+\[
+w(x)s_m(x)+w(-x)s_m(-x)=w(x)s_m(x)-w(-x)s_m(x)=(w(x)-w(-x))s_m(x)=0.
+\]
+The fixed points $x=0$ and $x=6$ satisfy $s_m(0)=s_m(6)=0$, so they contribute nothing. Hence the total sum vanishes.
+For the Aut-invariance statement, apply the automorphism $x\mapsto -x$ and invariance of $w$ under $\mathrm{Aut}(\mathbb{Z}_{12})$.
+\end{proof}
+
+\paragraph{Exported numeric instance (F647 payload).}
+The exported payload values on the current repo state are:
+\begin{center}
+\begin{tabular}{rrrr}
+\toprule
+$x$ & $\mathrm{ord}_{\mathbb{Z}_{12}}(x)$ & $w_{\mathrm{ref}}^{\mathrm{unnorm}}(x)$ & $w_{\mathrm{break}}(x)$\\
+\midrule
+0 & 1  & $6.2500000000000000{\times}10^{-2}$ & $0$\\
+1 & 12 & $3.5527136788005110{\times}10^{-15}$ & $-1.7763568394002552{\times}10^{-15}$\\
+2 & 6  & $5.9604644775390720{\times}10^{-8}$ & $-5.1619136559035774{\times}10^{-8}$\\
+3 & 4  & $1.5258789062500007{\times}10^{-5}$ & $-1.5258789062500007{\times}10^{-5}$\\
+4 & 3  & $2.4414062500000016{\times}10^{-4}$ & $-2.1143198334581037{\times}10^{-4}$\\
+5 & 12 & $3.5527136788005110{\times}10^{-15}$ & $-1.7763568394002568{\times}10^{-15}$\\
+6 & 2  & $3.9062500000000010{\times}10^{-3}$ & $-4.7837765591693490{\times}10^{-19}$\\
+7 & 12 & $3.5527136788005110{\times}10^{-15}$ & $1.7763568394002544{\times}10^{-15}$\\
+8 & 3  & $2.4414062500000016{\times}10^{-4}$ & $2.1143198334581029{\times}10^{-4}$\\
+9 & 4  & $1.5258789062500007{\times}10^{-5}$ & $1.5258789062500007{\times}10^{-5}$\\
+10 & 6 & $5.9604644775390720{\times}10^{-8}$ & $5.1619136559035800{\times}10^{-8}$\\
+11 & 12 & $3.5527136788005110{\times}10^{-15}$ & $1.7763568394002570{\times}10^{-15}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The same payload export records the strict scalar sign-anchor witness:
+\[
+\langle w_{\mathrm{break}}, s_1\rangle \approx -3.9681792259571596\times 10^{-4},
+\]
+where $s_1$ is the real Fourier sine basis vector of the pair1 plane (Section~\ref{sec:fourier_z12_obstruction}).
+This is used downstream only to define deterministic convention-layer sign fixing rules (e.g.\ \texttt{T175}/\texttt{F690}) and is not promoted into strict-core physics.
+
+\subsection{Orientation datum on \texorpdfstring{$\mathrm{pair}_1$}{pair1} (N546)}
+
+\begin{theorem}[Admissible orientation export (N546)]
+Within the current repo state, the exported strict-core source object
+\[
+\texttt{S\_sel\_int\_strict\_core\_source\_object\_v1}
+\]
+exports one admissible orientation datum on the \texttt{pair1} frame $\mathrm{span}\{c_1,s_1\}$:
+\[
+\texttt{E\_orient\_s\_sel\_int\_source\_object\_v1}.
+\]
+\emph{Hard limits:} this does not promote a directed physical sign datum and does not by itself discharge strict-core selector closure.
+\end{theorem}
+
+\subsection{Selector-sector and output-sector operators (N549)}
+
+Let the selector-sector and output-sector carrier spaces be fixed as two-dimensional real spaces with declared bases:
+\[
+Q_{\mathrm{sel}}:=\mathrm{span}\{q_+,q_-\},\qquad
+Q_{\mathrm{out}}:=\mathrm{span}\{o_+,o_-\}.
+\]
+
+\begin{theorem}[Seed-v1 selector output operator exists (N549)]
+Within the current repo state, the seed-v1 lane exports an admissible strict-core selector output operator
+\[
+O_{\mathrm{sel}}:\ Q_{\mathrm{sel}}\to Q_{\mathrm{out}},
+\]
+packaged as the exported object \texttt{O\_sel\_s\_sel\_int\_source\_object\_v1}, derived from an admissible reduction operator \texttt{R\_sel\_s\_sel\_int\_source\_object\_v1}.
+\emph{Hard limits:} no strict-core selector closure, no kernel-alone/global \texttt{QW-2191} discharge, and no ToE closure are claimed.
+\end{theorem}
+
+\subsection{Global promotion to \texorpdfstring{$C_{v1}$}{C\_v1}-typed operator families (N551/N552)}
+
+\begin{theorem}[Global reduction operator family promotion (N551)]
+On the current repo state, the repo exports a global ($C_{v1}$-typed) selector reduction operator family
+$R_{\mathrm{sel}}(\mathrm{pair}_m):\mathrm{pair}_m\to Q_{\mathrm{sel}}$
+promoted from the seed-v1 chain on \texttt{pair1} to all charts $\{\mathrm{pair}_1,\dots,\mathrm{pair}_5\}$, with overlap transport consistency kept at projector/section level (up to residual sign gauge).
+\emph{Hard limits:} no strict-core selector closure and no global \texttt{QW-2191} discharge are claimed.
+\end{theorem}
+
+\begin{theorem}[Global output operator and chartwise channels (N552)]
+On the current repo state, the repo exports a global ($C_{v1}$-typed) selector output operator $O_{\mathrm{sel}}:Q_{\mathrm{sel}}\to Q_{\mathrm{out}}$ and the induced chartwise output channels
+\[
+Y_{\mathrm{sel}}(\mathrm{pair}_m) := O_{\mathrm{sel}}\circ R_{\mathrm{sel}}(\mathrm{pair}_m)\qquad (m=1,\dots,5),
+\]
+with overlap transport consistency kept explicit up to residual sign gauge.
+\emph{Hard limits:} no strict-core selector closure, no kernel-alone/global \texttt{QW-2191} discharge, and no ToE closure are claimed.
+\end{theorem}
+\section{Projective closure (T172/T173 projective)}
+
+The global projective selector closure is exported as the object
+\[
+\texttt{SelectorClosure\_global\_C\_v1\_projective\_strict\_v1}\quad(\texttt{F672}),
+\]
+with theorem-level discharge \texttt{N680}.
+
+In projective scope, the selector state is a ray (projector/span semantics), and the closure observable is an output-space rank‑1 projector
+computed chartwise and then certified as chart-independent:
+\[
+B_{\mathrm{out}}(\mathrm{pair}_m)
+\;:=\;
+Y_{\mathrm{sel}}(\mathrm{pair}_m)\,A_m\,Y_{\mathrm{sel}}(\mathrm{pair}_m)^{\mathsf T}
+\in\mathbb{R}^{2\times 2},
+\]
+in the fixed output basis $(o_+,o_-)$.
+The chartwise output channel $Y_{\mathrm{sel}}(\mathrm{pair}_m):\mathrm{pair}_m\to Q_{\mathrm{out}}$ is exported as a promoted seed-v1 chain object (\texttt{F660}) by:
+\[
+Y_{\mathrm{sel}}(\mathrm{pair}_m)\ :=\ O_{\mathrm{sel}}\circ R_{\mathrm{sel}}(\mathrm{pair}_m),
+\]
+where $R_{\mathrm{sel}}(\mathrm{pair}_m)$ is the exported chartwise selector reduction operator family and $O_{\mathrm{sel}}:Q_{\mathrm{sel}}\to Q_{\mathrm{out}}$ is the exported seed-v1 selector output operator (both promoted to global $C_{v1}$-typed objects in the strict program).
+Residual $\mathbb{Z}_2$ sign handling is tracked at the convention layer and is not promoted to a physical sign datum.
+
+\texttt{F672} exports that all chartwise $B_{\mathrm{out}}(\mathrm{pair}_m)$ agree (within tolerance) and records the resulting global output projector:
+\[
+B_{\mathrm{out}}
+=
+\begin{pmatrix}
+1 & -9.149258638450154\times 10^{-16}\\
+-9.149258638450154\times 10^{-16} & 8.370893363325476\times 10^{-31}
+\end{pmatrix}
+\approx
+\begin{pmatrix}
+1 & 0\\
+0 & 0
+\end{pmatrix},
+\]
+so numerically the global output projector is the pure $o_+$ ray (machine-level residuals only).
+
+\begin{remark}[Explicit well-definedness certificate (F672)]
+The strict projective closure export \texttt{F672} includes an explicit \emph{well-definedness certificate} of chart-independence at projector level.
+Concretely, for a fixed reference chart (taken as \texttt{pair1} in the export), define the max-entry difference
+\[
+\Delta_m
+\;:=\;
+\max_{a,b\in\{+,-\}}
+\left|\bigl(B_{\mathrm{out}}(\mathrm{pair}_m)-B_{\mathrm{out}}(\mathrm{pair}_1)\bigr)_{ab}\right|.
+\]
+\texttt{F672} certifies:
+\[
+\max_{m=1,\dots,5}\Delta_m \le 10^{-12},
+\qquad
+\max_{m}\Delta_m \approx 7.27\times 10^{-16},
+\]
+and marks the certificate as passed. This is sufficient for \emph{projective/ray-level} closure scope and does not upgrade to any operator-level groupoid identity (\texttt{N512} boundary).
+\end{remark}
+
+This is a \emph{projective} closure statement only: it is insensitive to sign lifts $u_m\mapsto -u_m$ and does not claim any directed/sign-sensitive physical orientation datum.
+
+\begin{theorem}[Projective strict-core selector closure (N680)]
+On the current repo state, there exists one explicit global projective selector closure outcome on $C_{v1}$ (\texttt{F672}) derived from exported strict-core objects,
+whose closure observable on $Q_{\mathrm{out}}=\mathrm{span}\{o_+,o_-\}$ is a well-defined chartwise-glued rank-1 output projector.
+Therefore, strict-core selector closure is discharged in \emph{projective (ray-level) scope} on $C_{v1}$.
+
+\emph{Hard limits:} this does not discharge kernel-alone/global \texttt{QW-2191}, does not promote a directed/sign-sensitive physical orientation datum, and does not claim ToE closure.
+\end{theorem}
+\section{Directed lifts as gauge/convention layer}
+
+Beyond the projective closure object, the repo also exports directed/vector-level representatives and oriented sign-lift data as an explicit
+\emph{convention layer} (gauge) on top of the projective/ray-level closure.
+The strict no-false-pass boundary is:
+
+\begin{itemize}
+  \item directed lifts are tracked as gauge/convention data and are not a free strict-core physical sign datum;
+  \item the projective output ray is the invariant content.
+\end{itemize}
+
+Concretely, \texttt{N692} packages that the directed closure output (with its tracked output sign-lift) induces the same rank‑1 output projector
+as the projective closure output projector of \texttt{F672}.
+\texttt{N693} packages the gauge covariance of the directed output sign-lift under chartwise sign relifts.
+
+\begin{theorem}[Projective/directed closure output-ray invariance (N692)]
+Let $B_{\mathrm{out}}$ denote the exported projective closure output projector on $Q_{\mathrm{out}}=\mathrm{span}\{o_+,o_-\}$ (\texttt{F672}).
+For each exported directed closure representative (in its declared scope), let $q_{\mathrm{out}}^{(\mathrm{dir})}\in\mathbb{R}^2$ be the directed output vector (with explicit sign-lift convention).
+Then the induced rank-1 projector
+\[
+\Pi\!\left(q_{\mathrm{out}}^{(\mathrm{dir})}\right)
+:=
+\frac{q_{\mathrm{out}}^{(\mathrm{dir})}\,q_{\mathrm{out}}^{(\mathrm{dir})\mathsf T}}{q_{\mathrm{out}}^{(\mathrm{dir})\mathsf T}q_{\mathrm{out}}^{(\mathrm{dir})}}
+\]
+agrees with $B_{\mathrm{out}}$ (within the exported numeric tolerance audits).
+Therefore, the strict global closure outcome on $Q_{\mathrm{out}}$ is projectively invariant across the exported directed lifts.
+
+\emph{Hard limits:} this does not promote a directed/sign-sensitive physical orientation datum in strict core and does not discharge kernel-alone/global \texttt{QW-2191}.
+\end{theorem}
+
+\begin{theorem}[Chartwise \texorpdfstring{$\mathbb{Z}_2$}{Z2} gauge covariance of output sign-lift (N693)]
+Let $s_{\mathrm{out}}^{\mathrm{prem}}(\mathrm{pair}_m)\in\{\pm1\}$ denote the exported output sign-lift for the premise-based directed closure on chart $\mathrm{pair}_m$,
+and let $t(\mathrm{pair}_m)\in\{\pm1\}$ be the exported chartwise sign relift mapping the premise-based directed representative to the exported sign-fixed directed representative.
+Then the sign-fixed directed closure output sign-lift satisfies, for $m=1,\dots,5$,
+\[
+s_{\mathrm{out}}^{\mathrm{fix}}(\mathrm{pair}_m) = t(\mathrm{pair}_m)\,s_{\mathrm{out}}^{\mathrm{prem}}(\mathrm{pair}_m).
+\]
+Therefore, the directed closure output sign-lift is a tracked $\mathbb{Z}_2$ gauge datum and does not upgrade to a strict physical sign.
+
+\emph{Hard limits:} no directed physical orientation datum is claimed; no kernel-alone/global \texttt{QW-2191} discharge is claimed.
+\end{theorem}
+
+On the current repo state, the directed layer is further stabilized by explicit convention-scoped sign data:
+\begin{itemize}
+  \item oriented overlap-edge sign-lifts (\texttt{T174}: \texttt{F688}/\texttt{P688}/\texttt{N688}), with gauge-equivalence packaged (\texttt{N689}),
+  \item deterministic chart sign fixing (0‑cochain) from strict-core payload weights (\texttt{T175}: \texttt{F690}/\texttt{P690}/\texttt{N690}),
+  \item a corresponding sign-fixed directed closure export (\texttt{F692}) that still induces the same projective output ray (by \texttt{N692}).
+\end{itemize}
+All of these remain \emph{convention-layer} artifacts and do not upgrade any directed sign into strict-core physics.
+
+\subsection*{Explicit \texorpdfstring{$\mathbb{Z}_2$}{Z2} cochain language for sign lifts (T174/T175)}
+Let the chart set be $\mathcal{C}=\{\mathrm{pair}_1,\dots,\mathrm{pair}_5\}$ and let $\mathcal{E}$ be the set of 10 overlap edges (the complete graph on $\mathcal{C}$).
+For each edge $(i,j)\in\mathcal{E}$, the axis-only transition representative exports an operator $O_{ij}^{(\mathrm{axis})}$ (rotation $\alpha_{ij}\bmod \pi$).
+
+\begin{definition}[Edge sign lift (convention layer)]
+An oriented edge sign lift is a $\mathbb{Z}_2$-valued $1$-cochain $s:\mathcal{E}\to\{\pm 1\}$ defining oriented transitions:
+\[
+O_{ij}^{(\mathrm{oriented})}:=s_{ij}\,O_{ij}^{(\mathrm{axis})}.
+\]
+\end{definition}
+
+\begin{definition}[Chart sign relift (gauge)]
+A chartwise sign relift is a $\mathbb{Z}_2$-valued $0$-cochain $t:\mathcal{C}\to\{\pm 1\}$ acting on directed representatives by:
+\[
+u_i \mapsto t_i u_i.
+\]
+It induces the gauge action on edge signs:
+\[
+s_{ij}\mapsto s'_{ij}:=t_j\,s_{ij}\,t_i.
+\]
+\end{definition}
+
+In this language, \texttt{T174} exports explicit oriented edge sign-lifts $s_{ij}$ that remove sign flips for declared directed representatives (full-edge coherence),
+and \texttt{T175} exports one explicit deterministic chart sign-fix $t_i$ derived from strict-core payload weights (Section~\ref{sec:f647_payload}).
+Both remain below any physical sign datum claim.
+
+\paragraph{Exported instance (Release 7).}
+On the current repo state, the deterministic chart sign-fixing $0$-cochain exported by \texttt{F690} is:
+\[
+(t_{\mathrm{pair1}},t_{\mathrm{pair2}},t_{\mathrm{pair3}},t_{\mathrm{pair4}},t_{\mathrm{pair5}})
+=
+(-1,-1,-1,+1,-1).
+\]
+Anchored to that sign-fixed directed representative, the oriented edge sign-lift exported by \texttt{F691} flips exactly two overlap edges:
+\[
+s_{\mathrm{pair2\to pair4}}=-1,\qquad s_{\mathrm{pair1\to pair5}}=-1,
+\]
+with all remaining overlap edges having $s_{ij}=+1$ (convention scope; no physical sign claim).
+\section{Open boundary: kernel-alone/global QW-2191 discharge}
+
+\begin{theorem}[Post-\texttt{T172} strict frontier boundary (N679)]
+After the repo exports global selector closure observables on $C_{v1}$ in both:
+\begin{itemize}
+  \item projective scope (\texttt{F672}, packaged by \texttt{N672}/\texttt{N673}/\texttt{N674}), and
+  \item directed premise-tracked scope (\texttt{F677}, packaged by \texttt{N677}/\texttt{N678}), with the raw output obstruction boundary recorded by \texttt{N675},
+\end{itemize}
+the repo packages the remaining strict frontier as a theorem-level boundary statement (\texttt{N679}):
+\begin{enumerate}[label=\arabic*.]
+  \item projective strict-core selector closure is discharged (\texttt{N680}),
+  \item but kernel-alone/global \texttt{QW-2191} discharge remains explicitly unclaimed,
+  \item and no directed/sign-sensitive physical orientation datum is promoted into strict core beyond premise-tracked sign-lift conventions.
+\end{enumerate}
+\emph{Hard limits:} \texttt{N679} does not claim kernel-alone/global \texttt{QW-2191} discharge, any directed physical sign datum in strict core, or ToE closure.
+\end{theorem}
+
+\texttt{QW-2191} remains a real strict-core uniqueness obstruction: kernel-alone translation-invariant data leaves an $O(2)$ basis freedom inside each degenerate Fourier pair plane.
+
+The exported global closure in this document is therefore deliberately in \emph{projective} scope (ray/projector semantics), and the repo keeps
+kernel-alone/global \texttt{QW-2191} discharge explicitly open.
+Any future upgrade to strict-core selector closure or a directed physical sign datum must be exported and proven as a separate theorem-level object.
+
+\chapter{Operational physics proxies from projective closure}
+\section{Mass-spectrum proxy (P694)}
+
+Let $H_{\psi}\in\mathbb{R}^{12\times 12}$ be the exported diagonal/local Psi-sector Hessian value instantiation (\texttt{F459}).
+We use its symmetrization:
+\[
+H_{\psi}^{(s)} := \tfrac12\bigl(H_{\psi}+H_{\psi}^{\mathsf T}\bigr).
+\]
+
+For each Fourier pair plane $\mathrm{pair}_m$ ($m=1,\dots,5$), the exported global projective selector closure (\texttt{F672}) provides a ray
+$u_m\in\mathbb{R}^{12}$ (defined only up to sign). Define the quadratic proxy:
+\[
+m^2_m := \frac{u_m^{\mathsf T}\,H_{\psi}^{(s)}\,u_m}{u_m^{\mathsf T}u_m}.
+\]
+This is invariant under the sign gauge $u_m\mapsto -u_m$.
+
+Probe \texttt{P694} computes these “mass-spectrum proxy” values on the current repo state (no Standard Model identification claimed):
+
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+pair & $m^2$ proxy (Rayleigh on $H_{\psi}^{(s)}$)\\
+\midrule
+pair3 & $0.6687166508753918$\\
+pair5 & $1.3892705031823167$\\
+pair4 & $1.4474315384116325$\\
+pair2 & $2.0699508733172283$\\
+pair1 & $2.9337556210543343$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Selector-aligned channel spectrum proxy (P696)}
+
+Probe \texttt{P696} refines \texttt{P694} into a 12-channel spectrum proxy by constructing a deterministic selector-aligned basis and inspecting
+$H_{\psi}^{(s)}$ in that basis.
+
+On $\mathbb{Z}_{12}$, define the standard real orthonormal Fourier vectors:
+\[
+e_0 := \frac{1}{\sqrt{12}}(1,\dots,1),\qquad
+e_6 := \frac{1}{\sqrt{12}}(1,-1,1,-1,\dots),
+\]
+and for each $m=1,\dots,5$ the real pair-plane basis $(c_m,s_m)$ with scale $\sqrt{2/12}$.
+
+For each $\mathrm{pair}_m$, \texttt{F672} exports coordinates $(u_c,u_s)$ such that (in the declared Fourier convention)
+\[
+u_m = u_c\,c_m + u_s\,s_m,
+\qquad
+u_m^{\perp} = (-u_s)\,c_m + (u_c)\,s_m,
+\]
+so that $u_m^{\perp}$ is a deterministic orthogonal complement ray in the same plane (used only at ray/projector level).
+
+Define the selector-aligned 12-channel basis:
+\[
+B := \bigl(e_0,\ u_1,\ u_1^{\perp},\ u_2,\ u_2^{\perp},\ \dots,\ u_5,\ u_5^{\perp},\ e_6\bigr),
+\]
+and the induced matrix:
+\[
+M := B^{\mathsf T}\,H_{\psi}^{(s)}\,B.
+\]
+The diagonal entries of $M$ are recorded as a simple operational “channel proxy spectrum”. Mixing is audited explicitly by inspecting the off-diagonal norm.
+
+On the current repo state, \texttt{P696} exports the sorted diagonal channel proxies (no Standard Model identification claimed):
+
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+channel & $m^2$ proxy\\
+\midrule
+pair3:u & $0.6687166508753918$\\
+pair5:u & $1.3892705031823165$\\
+pair4:u & $1.4474315384116314$\\
+pair2:u & $2.069950873317227$\\
+e6 & $2.41906833577034$\\
+pair1:u & $2.9337556210543316$\\
+pair5:u\_perp & $3.5360177064927694$\\
+pair4:u\_perp & $3.675931516755229$\\
+pair2:u\_perp & $4.2984508516608315$\\
+e0 & $4.761250376916641$\\
+pair3:u\_perp & $4.930970379004997$\\
+pair1:u\_perp & $5.08050282436479$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The mixing audit is part of the exported result: on the current repo state, \texttt{P696} reports
+an off-diagonal-to-diagonal Frobenius ratio of $1.191284779529568$ and a maximum off-block coupling Frobenius norm of $3.4009571444250914$,
+so \emph{no diagonalization claim} is made.
+
+\section{Basis-invariant Hessian eigen-spectrum proxy (F704)}
+
+The most basis-stable quadratic proxy spectrum is the invariant eigenvalue set of the symmetric Hessian $H_{\psi}^{(s)}$ itself.
+If we change coordinates by an orthogonal basis transformation $R\in O(12)$, then
+\[
+H_{\psi}^{(s)} \mapsto R\,H_{\psi}^{(s)}\,R^{\mathsf T},
+\]
+so the eigenvalues $\lambda_i\bigl(H_{\psi}^{(s)}\bigr)$ are unchanged. This avoids any basis-dependent “channel” choices and cleanly separates
+the invariant spectrum from mixing/assignment questions (which remain open at the physics-interpretation layer).
+
+\texttt{F704} exports the invariant eigenvalue spectrum on the current repo state (dimensionless $m^2$ proxies in strict normalization; no physical unit claim):
+
+\begin{center}
+\begin{tabular}{rr}
+\toprule
+mode index & $\lambda_i(H_{\psi}^{(s)})$ (proxy $m^2$)\\
+\midrule
+0 & $0.08813142775481989$\\
+1 & $0.11195105316362809$\\
+2 & $0.23796767585569786$\\
+3 & $0.7641952808835573$\\
+4 & $0.7733323123191046$\\
+5 & $1.2068935563568985$\\
+6 & $1.7060617210611557$\\
+7 & $1.8861137936815946$\\
+8 & $2.290146094544166$\\
+9 & $2.989559197836824$\\
+10 & $12.356024722005182$\\
+11 & $12.800940342343853$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{What is and is not claimed physically}
+
+\begin{itemize}
+  \item \textbf{Claimed (operational):} the repo exports a strict projective selector closure and an OS bundle sufficient to compute the proxy spectra \texttt{P694}/\texttt{P696} and downstream observer-limit artifacts in a projective (ray-level) gauge-safe scope.
+  \item \textbf{Not claimed:} that any proxy number is already identified with a Standard Model mass or coupling.
+  \item \textbf{Not claimed:} that the selector-aligned channel basis diagonalizes $H_{\psi}$; mixing is audited and explicitly non-negligible (\texttt{P696}).
+  \item \textbf{Not claimed:} kernel-alone/global \texttt{QW-2191} discharge, directed sign-sensitive physical orientation in strict core, or ToE closure.
+  \item \textbf{Host matching discipline:} any attempted identification of proxy values with external physics data is necessarily non-strict and must carry an explicit external dataset + mapping policy; see \texttt{P702} (channel proxy) and \texttt{P704} (eigen-spectrum proxy).
+  The current repo freezes this non-strict layer by separating:
+  \begin{itemize}
+    \item the external dataset (targets only): \verb|external_data/sm_mass_targets_v1.json|,
+    \item the external versioned policy (assignment + allowed DOF + optional thresholds): \verb|external_data/sm_host_matching_policy_v1.json|,
+  \end{itemize}
+  where the current policy explicitly allows \emph{only} a single global scale and sets \texttt{pass\_criteria=null} (diagnostic metrics only; no pass/FAIL claim).
+  \item \textbf{Non-strict diagnostic (current):} under the simplest one-scale centered-log assignment policy against an explicit PDG2024 mass target dataset, \texttt{P702} computes $\mathrm{RMSE}(\log m^2)\approx 8.10$ and $\max|\Delta m/m|\approx 7.90\times 10^{2}$, while \texttt{P704} computes $\mathrm{RMSE}(\log m^2)\approx 7.23$ and $\max|\Delta m/m|\approx 4.35\times 10^{2}$, so \emph{no} “Standard Model match” claim is made at this stage.
+\end{itemize}
+
+\chapter{Emergent observer pipeline (projective scope)}
+\section{Observer-limit readout from projective closure output (P697)}
+
+From the exported global projective closure output projector $B_{\mathrm{out}}$ in the $(o_+,o_-)$ basis (\texttt{F672}), \texttt{P697} exports a minimal
+observer-limit readout consisting of gauge-safe invariants of the $2\times 2$ projector.
+Write
+\[
+B_{\mathrm{out}}=
+\begin{pmatrix}
+p_+ & c\\
+c & p_-
+\end{pmatrix}.
+\]
+Define:
+\[
+y_{\mathrm{bias}}:=\tfrac12(p_+-p_-),\qquad
+y_{\mathrm{total}}:=\tfrac12(p_++p_-),\qquad
+z_{\mathrm{commit}}:=p_+,\qquad
+z_{\mathrm{residual}}:=p_-.
+\]
+
+On the current repo state, \texttt{P697} reports $p_+=1$ and $p_-\approx 8.37\times 10^{-31}$, so the output projector is numerically the pure $o_+$ ray,
+and the readout invariants are $(y_{\mathrm{bias}},y_{\mathrm{total}},z_{\mathrm{commit}},z_{\mathrm{residual}})\approx (1/2,1/2,1,0)$.
+\section{Projective emergent-observer chain computability from closure output (P699/N699)}
+
+In the declared projective/gauge-safe downstream scope, we represent a ray by a rank‑1 (possibly unnormalized) symmetric positive semidefinite matrix $P$
+(a projector candidate). For a linear map $M$, the induced pushforward is:
+\[
+P \;\mapsto\; M\,P\,M^{\mathsf T}.
+\]
+
+Let $Q_{\mathrm{out}}$ be the exported global projective selector-closure output projector in the $(o_+,o_-)$ basis (`F672`).
+
+Define the downstream operator chain by the already exported matrices (`F92..F99`):
+\[
+C=\begin{pmatrix} \tfrac12 & -\tfrac12\\ \tfrac12 & \tfrac12 \end{pmatrix},\quad
+L=\begin{pmatrix} 1&1\\ -1&1 \end{pmatrix},\quad
+G=I_2,\quad H=I_2,\quad
+J=\begin{pmatrix}1&0\\0&0\end{pmatrix},
+\]
+\[
+K=\begin{pmatrix}1&0\end{pmatrix},\quad
+M=(1),\quad N=(1).
+\]
+
+Starting from $Q_{\mathrm{out}}$, define the induced chain:
+\[
+Y=C Q_{\mathrm{out}} C^{\mathsf T},\;
+Z=L Y L^{\mathsf T},\;
+W=G Z G^{\mathsf T},\;
+X=H W H^{\mathsf T},\;
+U=J X J^{\mathsf T},\;
+F=K U K^{\mathsf T},\;
+P=M F M^{\mathsf T},\;
+C_{\mathrm{cl}}=N P N^{\mathsf T}.
+\]
+
+`P699` computes this chain on the current repo state and audits that the declared residual components vanish (within tolerance) while commitment remains positive.
+`N699` packages the computability statement with explicit hard limits (no kernel-alone/global `QW-2191` discharge; no ToE closure; no actual emergent observer closure).
+
+\begin{theorem}[Projective emergent-observer chain computability (N699)]
+On the current repo state, the repo exports a strict projective downstream chain computability witness:
+starting from the global projective selector closure output projector (\texttt{F672}), the induced projector pushforward semantics
+\[
+P \mapsto MPM^{\mathsf T}
+\]
+along the exported operator chain (\texttt{F92..F99}) produces a fully computable chain of projectors up to the declared closure-candidate level (\texttt{P699}).
+This is a projective/ray-level (gauge-safe) computability result only.
+
+\emph{Hard limits:} no kernel-alone/global \texttt{QW-2191} discharge, no ToE closure, and no actual emergent observer closure are claimed.
+\end{theorem}
+\section{Operational OS support packet (v1) (F698/P698/N698)}
+
+The v1 OS support packet (\texttt{F698}, audited by \texttt{P698}, packaged by \texttt{N698}) collects the minimum strict projective bundle sufficient to compute:
+\begin{itemize}
+  \item global projective selector closure on $C_{v1}$ (\texttt{N680}/\texttt{F672}),
+  \item directed-vs-projective output-ray invariance and sign-lift gauge covariance (\texttt{N692}, \texttt{N693}),
+  \item first quadratic proxy spectra (\texttt{P694}, \texttt{P696}),
+  \item observer-limit readout (\texttt{P697}).
+\end{itemize}
+The mass-proxy meaning is frozen separately as a scope-limited theorem (\texttt{N703}). A basis-invariant Hessian eigen-spectrum mass observable is exported separately
+as \texttt{F704} and included in the v3 OS support packet (\texttt{F705}).
+\section{Operational OS support packet (v2) (F700/P700/N700)}
+
+The strict projective operational ToE “OS” support packet is exported in v2 form:
+\[
+\Lambda_{\mathrm{OS}}^{(\mathrm{proj})} =
+\bigl(
+\texttt{N680},\ \texttt{N692},\ \texttt{N693},\ \texttt{P694},\ \texttt{P696},\ \texttt{P697},\ \texttt{N699}
+\bigr),
+\]
+as the object \texttt{Lambda\_strict\_projective\_operational\_toe\_os\_support\_v2} (\texttt{F700}), audited by \texttt{P700} and packaged as a theorem by \texttt{N700}.
+All hard limits remain explicit: no kernel-alone/global \texttt{QW-2191} discharge, no directed sign-sensitive physical orientation claim in strict core, and no ToE closure.
+\section{Operational OS support packet (v3) (F705/P705/N705)}
+
+The strict projective operational ToE “OS” support packet is exported in v3 form by explicitly including the basis-invariant Hessian eigen-spectrum mass observable \texttt{F704}:
+\[
+\Lambda_{\mathrm{OS}}^{(\mathrm{proj})}(v3) =
+\bigl(
+\texttt{N680},\ \texttt{N692},\ \texttt{N693},\ \texttt{P694},\ \texttt{P696},\ \texttt{F704},\ \texttt{P697},\ \texttt{N699}
+\bigr),
+\]
+as the object \texttt{Lambda\_strict\_projective\_operational\_toe\_os\_support\_v3} (\texttt{F705}), audited by \texttt{P705} and packaged as a theorem by \texttt{N705}.
+All hard limits remain unchanged.
+
+\begin{theorem}[Strict projective operational OS support v3 (N705)]
+On the current repo state, the repo exports one strict projective operational OS support packet v3:
+\[
+\Lambda_{\mathrm{OS}}^{(\mathrm{proj})}(v3) =
+\bigl(
+\texttt{N680},\ \texttt{N692},\ \texttt{N693},\ \texttt{P694},\ \texttt{P696},\ \texttt{F704},\ \texttt{P697},\ \texttt{N699}
+\bigr),
+\]
+exported as \texttt{F705}, audited by \texttt{P705}, and packaged at theorem level by \texttt{N705}.
+This is an operational packaging result only: it adds an explicit tracked basis-invariant mass observable (\texttt{F704}) without strengthening any hard-limit claims.
+
+\emph{Hard limits:} no kernel-alone/global \texttt{QW-2191} discharge, no directed physical sign datum, no Standard Model host matching, no ToE closure, and no actual emergent observer closure are claimed.
+\end{theorem}
+
+\begin{proposition}[Release-7 strict projective OS closure dashboard (P706)]
+On the current repo state, the repo exports a single consolidated dashboard probe (\texttt{P706}) that checks the strict release-7 operational closure bundle by verifying:
+\texttt{N705} (OS support v3), \texttt{N701} (Operational ToE closure in strict projective OS scope), \texttt{N703} (mass-proxy meaning discipline), and \texttt{F704} (basis-invariant mass observable export).
+The current \texttt{P706} summary status is \texttt{PASS\_RELEASE\_7\_STRICT\_PROJECTIVE\_OPERATIONAL\_OS\_CLOSURE\_DASHBOARD\_READY}.
+\end{proposition}
+\section{Open target: actual emergent observer closure (future)}
+
+The current strict projective pipeline proves \emph{computability} of a downstream observer-facing chain, not the existence/uniqueness of an actual emergent observer.
+Any future “actual observer closure” claim must be exported as a separate theorem-level artifact with explicit premises and hard limits.
+
+\chapter{Hard limits and open problems}
+\section{Kernel-alone/global QW-2191 discharge}
+
+\texttt{QW-2191} remains open at kernel-alone/global strict-core level.
+All global closure statements used in the OS bundle are in \emph{projective} scope (rays/projectors) and do not assert strict-core uniqueness of directed selector representatives.
+\section{Directed physical sign datum}
+
+Directed/vector-level sign and orientation data are tracked as a gauge/convention layer.
+No strict-core theorem in Release 7 upgrades directed sign into a physical datum “for free”.
+\section{Host matching and Standard Model identification}
+
+Any comparison of proxy spectra against external experimental data is non-strict and must carry:
+\begin{itemize}
+  \item an explicit external dataset, and
+  \item an explicit identification/mapping policy.
+\end{itemize}
+The repo exports such a harness (\texttt{P702}) and keeps it outside strict scope; current one-scale metrics do not support any “Standard Model match” claim.
+\section{What Release 7 declares as closed vs open}
+
+Closed (scope-limited, strict projective OS):
+\begin{itemize}
+  \item projective global selector closure on $C_{v1}$ with chart-independent output projector (\texttt{N680}/\texttt{F672}),
+  \item operational OS support packets (v1--v3) and OS computability pipeline from closure output through observer-limit readout and downstream chain (\texttt{N698}, \texttt{N700}, \texttt{N705}, \texttt{N701}),
+  \item strict basis-invariant Hessian eigen-spectrum mass observable (\texttt{F704}),
+  \item residual sign $u_m\mapsto -u_m$ is gauge-irrelevant for the Release-7 OS observables actually used downstream (audited by \texttt{P709}, packaged by \texttt{N706}),
+  \item a disciplined internal meaning of the quadratic “mass proxy” layer (\texttt{N703}).
+  \item release-7 OS closure dashboard readiness (\texttt{P706}) (probe-level).
+\end{itemize}
+
+Open (explicit hard limits):
+\begin{itemize}
+  \item kernel-alone/global \texttt{QW-2191} discharge,
+  \item directed sign-sensitive physical orientation datum,
+  \item Standard Model host matching as a strict claim,
+  \item actual emergent observer closure.
+\end{itemize}
+
+\section{Next steps (roadmap, no false pass)}
+
+This section records the next concrete moves under strict scientific discipline, separating strict targets from explicitly non-strict policy work.
+
+\subsection*{Priority 1 (strict): \texttt{T173} --- residual sign / kernel-alone \texttt{QW-2191} frontier}
+
+The strict frontier remains: (i) kernel-alone/global discharge of \texttt{QW-2191}, and (ii) any directed/sign-sensitive physical orientation datum in strict core beyond projective/ray semantics.
+Release 7 exports convention-layer directed representatives (\texttt{T174}/\texttt{T175}), but these do not upgrade sign into strict physics.
+
+The next honest strict move under \texttt{T173} is therefore ordered as:
+\begin{enumerate}[label=(\alph*)]
+  \item first, export a genuinely strict internal selector source/ingredient that determines the residual sign in a chart-independent way (no hidden convention slots), and
+  \item only if that provider attack stalls, explicitly freeze the directed sign as a gauge/convention layer and keep physics claims restricted to projective/basis-invariant observables already audited downstream.
+\end{enumerate}
+
+For option (b), Release 7 now exports an explicit machine audit: \texttt{P709} enumerates all $2^5$ residual sign patterns on $\{\mathrm{pair1},\dots,\mathrm{pair5}\}$ and verifies that the concrete OS numeric outputs used downstream (quadratic proxy layer \texttt{P694}/\texttt{P696} and the basis-invariant mass observable \texttt{F704}) are unchanged (within tolerance). The corresponding theorem-level package is \texttt{N706}.
+
+The older methodology is also now audited directly rather than guessed at. The new audit \texttt{P711} (packaged by
+\texttt{N707}) shows the strongest honest reading: the \texttt{sigma\_int}/topological lane survives as a genuine strict local
+ingredient class, reaching bridge discharge in declared \texttt{R1} scope, but it still does not provide the missing
+\emph{global} chartwise sign-coherence provider on the full \texttt{C\_v1} atlas. So it is a clue and a reusable ingredient,
+not yet a full \texttt{T173} discharge.
+
+That missing object is now frozen as an explicit target class under the next honest continuation label \texttt{T176}:
+\texttt{GlobalDirectedSignCoherenceProvider\_global\_C\_v1\_strict\_core\_v1}. The new nonexport audit \texttt{P712}
+(packaged by \texttt{N708}) confirms that no currently exported strict/global object already satisfies this target.
+
+The next honest narrowing step is also now explicit. The new audit \texttt{P713} (packaged by \texttt{N709}) shows that the
+surviving \texttt{w\_break +} oriented-transport route does \emph{not} globalize to all roots on the exported five-chart lane:
+only \texttt{pair1} and \texttt{pair5} provide nonzero root anchors, and those supported roots recover the same convention-layer
+section. So the surviving candidate is narrower than a full global provider and still does not discharge \texttt{T176}.
+
+The new audit \texttt{P714} (packaged by \texttt{N710}) then explains why this surviving corridor stops exactly there on current exports:
+the present \texttt{w\_break} payload is an \emph{odd} linear weight on \texttt{Z\_12}, while the currently exported representatives on
+\texttt{pair2}, \texttt{pair3}, \texttt{pair4} are even/cosine-axis states. Hence the anchor
+\[
+\sum_x w_{\mathrm{break}}(x)u_m(x)
+\]
+vanishes on those charts by parity and survives only on the odd-axis charts \texttt{pair1}, \texttt{pair5}. So the next honest strict
+provider attack must either add an even-or-mixed parity anchor component or leave the single-linear-weight class altogether.
+
+The next audit \texttt{P715} (packaged by \texttt{N711}) then tests exactly that minimal parity completion using only already-exported
+strict-core payloads: \texttt{w\_break} together with the exported even weight \texttt{w\_ref\_unnormalized}. The result is sharper but
+still scope-limited: all five roots become anchorable, and the recovered rooted sections agree projectively across all roots, yet the
+exact directed branch still splits into two global sign orbits. Relative to the reference orbit, \texttt{pair4} yields the globally
+negated section. Therefore adding an even anchor component is not sufficient by itself; the remaining strict-provider gap is the final
+global \texttt{Z2} orbit split.
+
+The next audit \texttt{P716} (packaged by \texttt{N712}) localizes that exact split one step further. On current exports, the residual
+exact orbit split is fully explained by one explicit chart-polarity feature: \texttt{pair4} is the unique negative cosine-axis chart,
+and under the even fallback anchor \texttt{w\_ref\_unnormalized} its root scalar is negative, whereas the corresponding cosine-anchor
+scalars for \texttt{pair2} and \texttt{pair3} are positive. So the current failure is no longer diffuse. The remaining strict-provider
+gap is an exact global branch-fixing rule across chart polarity, not root support and not projective orbit recovery.
+
+The next bridge audit \texttt{P717} (packaged by \texttt{N713}) then asks the next honest downstream question: whether this localized
+exact split still matters for the concrete Release-7 OS observables. The answer is now sharper. Because \texttt{P709/N706} already proves
+sign-gauge irrelevance over the full residual sign family for the downstream observables actually used in Release 7, the present exact
+\texttt{pair4}-induced branch split is already operationally inert for \texttt{P694}, \texttt{P696}, and \texttt{F704}. So the remaining
+gap is a strict-core provider problem only, not a Release-7 OS observables problem.
+
+The next provider-side audit \texttt{P718} (packaged by \texttt{N714}) then tests the narrowest honest class that remains before one
+has to leave the current exported linear anchor family altogether: any single mixed linear weight in
+\(\mathrm{span}\{w_{\mathrm{break}}, w_{\mathrm{ref,unnormalized}}\}\). This result is again negative but sharper. Every noncritical
+sector of that span still supports all roots and recovers at most a projective orbit, but no sector upgrades that orbit into one exact
+global directed section. Some sectors reproduce the current \texttt{pair4}-only negated branch; other sectors worsen the split to
+\texttt{pair2/pair3}. So the next strict provider attack must leave the present single-linear span class.
+
+The next nonlinear audit \texttt{P719} (packaged by \texttt{N715}) then tests the nearest untuned extension of that same current carrier:
+odd polynomials in the two exported readouts \((\langle w_{\mathrm{break}},u\rangle,\langle w_{\mathrm{ref}},u\rangle)\) of total
+degree \(\le 3\), with coefficient alphabet \(\{-1,0,1\}\). This too is negative, but more informative. Across all \(728\) nonzero
+candidates in that scanned class there are \(0\) exact all-root directed sections, \(576\) projective-only candidates, and no new
+negated-root pattern beyond \texttt{pair4} or \texttt{pair2/pair3}. So the next strict provider attack must either raise complexity in
+an explicit non-hidden way or leave the current two-readout carrier altogether. From the current Release-7 physics perspective, the
+preferred continuation is the latter: a new \emph{physically interpretable} observable/provider class rather than further coefficient tuning.
+
+The next observer-facing audit \texttt{P720} (packaged by \texttt{N716}) then tests the nearest static class on the actually exported
+output carrier \(Q_{\mathrm{out}}=\mathrm{span}\{o_+,o_-\}\): signed projections of the rooted unsigned output vectors onto all
+nonzero directions with coefficients in \(\{-1,0,1\}\). This is again negative, but it sharpens the physics-facing picture.
+There are \(0\) exact all-root directed sections, \(6\) projective-only candidates, and every supported direction reproduces only the
+coarser negated-root pattern \texttt{pair4/pair5}; the pure \(o_-\) channel is unsupported because the current unsigned rooted outputs
+already lie almost entirely on \(o_+\). So even the nearest static observer-facing readout class is too coarse to fix \texttt{T176},
+and the next physics-facing provider attack should move toward a more dynamical or flux-like observable rather than further static
+output-axis tuning.
+
+The next source-topology audit \texttt{P721} (packaged by \texttt{N717}) then tests the most natural already-exported bridge toward
+physics: the lane of actual nonzero flow, barrier-protected sign, selector witness, basis-independent promotion, and quotient-safe
+\texttt{QW-2191} resolution. This result is mixed but still negative at exact-provider level. Those physics-facing strict ingredients are
+real and already exported, but the lane remains explicitly downstream-only, \(\tau_{\mathrm{src}}\) is still not identified with the
+current strict selector carrier, and the best exported object remains a basis-free quotient class only rather than one exact chartwise
+directed branch on the full atlas. So the next honest physics-facing provider attack should aim at a chart-sensitive transported
+flux/current-like section rather than another static quotient or axis class.
+
+The next bridge audit \texttt{P722} (packaged by \texttt{N718}) then sharpens that gap further. The repo already has chart-sensitive
+transport infrastructure on the \texttt{pair1..pair5} atlas, and it already has source-topology physical ingredients. But the current
+source-topology promotion step explicitly forgets chart basis labels, the current quotient-safe step explicitly quotients chart labels
+away, and the declared-scope theorem packet keeps the lane downstream-only. So the current source-topology lane is now localized more
+precisely as \emph{physics-facing but chart-blind}. The next missing bridge target is therefore explicit: a chart-sensitive transported
+flux/current-like section on the full atlas.
+
+The next sharpening audit \texttt{P723} (packaged by \texttt{N719}) then localizes the bridge one level lower again. The source-topology
+lane already supplies positive sign, positive flow, and selector polarity, and the atlas already supplies full chart transport. But the
+source-side selector realization still lives in the preLM basis \texttt{u\_T,u\_L}, the source packets remain pair-chart agnostic, and
+the atlas exports no distinguished root chart. So the next missing bridge target is now even narrower: a source-topology-to-atlas
+chart-seed selection bridge telling where the physical source enters the atlas before transport.
+
+The next audit \texttt{P724} (packaged by \texttt{N720}) then gives the first constructive physical reduction below that bridge.
+Current positive source polarity already excludes the unique negative atlas-entry branch \texttt{pair4} inside the strongest current
+all-root transported-family candidate. But this still leaves the positive corridor
+\texttt{pair1,pair2,pair3,pair5} unresolved. So the bridge gap is reduced, not closed.
+
+The next audit \texttt{P725} (packaged by \texttt{N721}) then sharpens that surviving positive corridor further.
+Current exports already reduce the problem to two remaining positive sublanes:
+odd-anchor \texttt{pair1,pair5} and even-fallback \texttt{pair2,pair3}.
+But the current source-side packets still export no source-to-lane rule selecting between them.
+So the next missing bridge target is narrower again: a positive-corridor odd/even lane-selection bridge.
+
+The next audit \texttt{P726} (packaged by \texttt{N722}) then re-reads that same remaining split geometrically on the exported
+five-chart atlas. The atlas still carries the canonical backbone \texttt{pair1-pair2-pair3-pair4-pair5}, so
+\texttt{pair1,pair5} are the outer-edge charts while \texttt{pair2,pair3} are the surviving positive interior charts.
+But the current source-side packets still export no source-to-atlas-position rule selecting between those two chart classes.
+So the next missing bridge target is narrower again: a positive-corridor outer/interior chart-selection bridge.
+
+The next audit \texttt{P727} (packaged by \texttt{N723}) then localizes that same surviving positive corridor directly relative to
+the excluded negative branch itself. Once \texttt{pair4} is excluded, the positive charts adjacent to that excluded branch are
+exactly \texttt{pair3,pair5}, while the positive charts shielded from it are \texttt{pair1,pair2}.
+But the current source-side packets still export no source-side rule selecting between those two chart classes.
+So the next missing bridge target is narrower again: a positive-corridor excluded-negative-boundary adjacency chart-selection bridge.
+
+The next audit \texttt{P728} (packaged by \texttt{N724}) then injects the first actually exported source-side carrier below that
+geometric split. The strict residual-datum support carrier \texttt{F301} already lives on \texttt{tau\_src\_candidate\_v1}
+and carries \texttt{pair\_index\_set=\{pair1,pair2\}}, exactly matching the positive boundary-shielded sublane localized by
+\texttt{P727}. So the surviving positive corridor is now reduced in a genuinely source-side way to \texttt{pair1,pair2}.
+But \texttt{F301} remains selector-neutral, \texttt{tau\_src} is still not identified with the current selector carrier,
+and the carrier remains exactly symmetric between \texttt{pair1} and \texttt{pair2}. So the next missing bridge target is
+narrower again: a residual-datum source-side \texttt{pair1/pair2} chart-selection bridge.
+
+The next audit \texttt{P729} (packaged by \texttt{N725}) then localizes that remaining \texttt{pair1/pair2} ambiguity one level further,
+without inventing any new source object. On current exports, \texttt{F301} already identifies the two surviving branches as opposite
+orbit-index realizations on the same residual-datum carrier:
+\texttt{pair1} carries the branch $\delta_k$, while \texttt{pair2} carries the branch $\delta_{-k}$.
+The exported pair1$\leftrightarrow$pair2 lane transport and projector glue still only relate those two branches faithfully;
+they do not select one of them. So the next missing bridge target is narrower again:
+a residual-datum \texttt{pair1/pair2} orbit-direction selection bridge.
+
+The next audit \texttt{P730} (packaged by \texttt{N726}) then tests the strongest already-exported strict-side selector ingredient
+against that same surviving split: the direction-free Shannon ord-reference lane.
+This result is again negative but sharper: that lane really does export genuine slot-free \texttt{pair1/pair2} \texttt{O(2)\textrightarrow Z2} cuts,
+yet \texttt{ord\_Z12/r\_ord} is inversion-invariant and the surviving \texttt{F301} branches are exactly the inversion pair
+$\delta_k$ / $\delta_{-k}$ with identical carrier weights.
+So the induced source-side \texttt{ord} expectation and cross-entropy scores are equal on both branches,
+and the next missing bridge target narrows again:
+a direction-free Shannon residual-datum \texttt{pair1/pair2} orbit-direction selection bridge.
+
+The next audit \texttt{P731} (packaged by \texttt{N727}) then tests the strongest already-exported inversion-sensitive witness-side ingredient
+against that same surviving split: the current reflection-breaking payload \texttt{w\_break} from \texttt{F647}.
+This result is constructive but still boundary-only:
+on the surviving \texttt{F301} carrier, \texttt{w\_break} already gives opposite nonzero scores to $\delta_k$ and $\delta_{-k}$,
+so the split is no longer merely invisible on current exports.
+But this remains only a witness-side separation:
+\texttt{F647} is still below admissible \texttt{S\_sel\_int}, \texttt{F301} remains selector-neutral,
+and \texttt{P684} keeps \texttt{w\_break} only at rooted sign-source / convention strength.
+So the next missing bridge target narrows again:
+a typed promotion bridge from that witness-side separation to one selected strict source-side branch.
+
+The next audit \texttt{P732} (packaged by \texttt{N728}) then tests the strongest already-exported downstream object
+that could be mistaken for that missing promotion: the current pair1-rooted directed atlas convention state \texttt{F684}.
+This result is again negative but sharper:
+the object exists, but it is rooted on the chosen chart \texttt{pair1}, remains explicitly convention-scoped,
+and carries the same transported sign on \texttt{pair1} and \texttt{pair2} even though \texttt{P731} already separated those
+source-side branches by opposite witness-score signs.
+So the next missing bridge target narrows again:
+a typed descent/promotion bridge that does not collapse into the present pair1-rooted convention gauge.
+
+The next audit \texttt{P733} (packaged by \texttt{N729}) then tests the strongest already-exported full convention-layer transport
+below that same frontier: the current rooted oriented edge-sign lift and sign-fixed convention-layer lift on the \texttt{pair1<->pair2} edge.
+This result is again negative but sharper:
+the current convention layer is real and coherent, yet under every currently exported lift the \texttt{pair1->pair2} transport sign stays \texttt{+1}
+with no sign flip even though \texttt{P731} already separated the underlying source-side branches by opposite witness-score signs.
+So the next missing bridge target narrows again:
+a typed descent/promotion bridge that does not collapse into the current positive convention-layer pair12 transport either.
+
+The next audit \texttt{P734} (packaged by \texttt{N730}) then tests the strongest already-exported source-side theorem lane
+below that same frontier: the declared-scope source-topology selector theorem built from \texttt{F148/F149/F150}.
+This result is again negative but sharper:
+that theorem lane is real and quotient-safe, yet it still forgets chart labels, keeps only one basis-free distinguished quotient class,
+and does not claim raw-theta uniqueness.
+So the next missing bridge target narrows again:
+a typed descent/promotion bridge that does not collapse into the current basis-free quotient-only source-side theorem lane either.
+
+The next audit \texttt{P735} (packaged by \texttt{N731}) then tests the strongest already-exported local source-side scalar bind lane
+below that same frontier: the positive barrier-sign witness, the positive nonzero-flow witness, the source-derived contraction map
+\texttt{(a,b)=(cos(phi),cos(phi))}, the current provider-object carrier layer, and the surviving \texttt{F301} support carrier.
+This result is again negative but sharper:
+those local scalar bind data are real and already bind into the pair1/pair2 carrier lane,
+yet they still factor only through one shared positive \texttt{cos(phi)} family, keep \texttt{a=b},
+and inherit identical pair1/pair2 weight profiles.
+So the next missing bridge target narrows again:
+a typed descent/promotion bridge that does not collapse into the current shared local source-side scalar bind lane either.
+
+The next audit \texttt{P736} (packaged by \texttt{N732}) then tests the strongest already-exported local non-scalar provider-operator lane
+below that same frontier: the pair-indexed opposite-shift carrier operators themselves on the surviving \texttt{F301} support carrier.
+This result is again negative but sharper:
+that lane already realizes both surviving pair1/pair2 branches from the common seed \texttt{delta\_0},
+yet it still does so with equal source-derived amplitudes \texttt{(a,b)=(cos(phi),cos(phi))},
+exact inversion-paired carrier data, and explicit selector-neutral status.
+So the next missing bridge target narrows again:
+a typed descent/promotion bridge that does not collapse into the current symmetric local provider-operator shift-direction lane either.
+
+The next audit \texttt{P737} (packaged by \texttt{N733}) then tests the strongest already-exported local pair1/pair2 atlas/glue lane
+below that same frontier: the explicit chart-transport object \texttt{O\_12}, the glued projector-operator section,
+and the lane-scoped pair1/pair2 atlas stub with overlap declaration.
+This result is again negative but sharper:
+that lane is real, yet it remains entirely projector-level and sign-gauge-safe,
+so it still does not descend the opposite \texttt{P731} pair1/pair2 witness split as one typed branch distinction.
+So the next missing bridge target narrows again:
+a typed descent/promotion bridge that does not collapse into the current local projector-atlas glue lane either.
+
+The next audit \texttt{P738} (packaged by \texttt{N734}) then tests the strongest already-exported global projective selector transition/state lane
+below that same frontier: the global selector transition object \texttt{F469}, the global projective selector state object \texttt{F470},
+and the global gluing-consistency audit \texttt{P474}.
+This result is again negative but sharper:
+that lane is real and globally glued on \texttt{C\_v1}, yet it remains strictly projective/ray-level and sign-gauge-safe,
+so it still does not descend the opposite \texttt{P731} pair1/pair2 witness split as one typed branch distinction.
+So the next missing bridge target narrows again:
+a typed descent/promotion bridge that does not collapse into the current global projective selector state lane either.
+
+The next audit \texttt{P739} (packaged by \texttt{N735}) then tests the strongest already-exported global directed selector-state lane
+below that same frontier: the premise-based directed selector state \texttt{F474/N524} together with the current directed/projective state audits \texttt{H37/H38}.
+This result is again negative but sharper:
+that lane is real and sign-sensitive, yet it remains explicitly premise-based via \texttt{T164} and descends back to the projective quotient layer,
+so it still does not upgrade the opposite \texttt{P731} pair1/pair2 witness split into one strict-core branch distinction.
+So the next missing bridge target narrows again:
+a typed strict-core bridge that does not collapse into the current premise-based global directed selector state lane either.
+
+The next audit \texttt{P740} (packaged by \texttt{N736}) then tests the strongest already-exported global sign-fixed directed closure lane
+below that same frontier: the sign-fixed directed representative \texttt{F690/N690}, the oriented transition edge sign-lift \texttt{F691/N691},
+and the sign-fixed directed closure object \texttt{F692} together with output-ray invariance \texttt{N692} and gauge covariance \texttt{N693}.
+This result is again negative but sharper:
+that lane is real and globally glued on \texttt{C\_v1}, yet it glues only after one explicit output sign-lift,
+remains entirely in \texttt{strict\_convention}/gauge scope, collapses back to the same projective output ray,
+and keeps gauge-covariant output sign-lift data,
+so it still does not upgrade the opposite \texttt{P731} pair1/pair2 witness split into one strict-core branch distinction.
+So the next missing bridge target narrows again:
+a typed strict-core bridge that does not collapse into the current global sign-fixed directed closure lane either.
+
+The next audit \texttt{P741} (packaged by \texttt{N737}) then tests the strongest already-exported actual source-side selector witness lane
+before basis-free quotienting: the actual source-topology selector witness packet \texttt{F147} on \texttt{tau\_src\_candidate\_v1}
+against the surviving \texttt{F301} pair1/pair2 carrier.
+This result is again negative but sharper:
+that lane is real and already exports a positive signed selector split,
+yet it remains chart-bound, preobserver/downstream-only, and lives only in the preLM basis \texttt{u\_T,u\_L},
+so it still does not promote the opposite \texttt{P731} pair1/pair2 witness split into one selected source-side branch.
+So the next missing bridge target narrows again:
+a typed source-side bridge that does not collapse into the current actual preLM selector witness lane either.
+
+\subsection*{Priority 2 (explicitly non-strict policy): physical units (proxy $\to$ GeV)}
+
+Any unit assignment and any comparison to external experimental data must remain non-strict unless a strict unit map is derived.
+The repo already exports the required dataset-vs-policy separation:
+\begin{itemize}
+  \item dataset: \texttt{external\_data/sm\_mass\_targets\_v1.json} (units = GeV),
+  \item policy: \texttt{external\_data/sm\_host\_matching\_policy\_v1.json} (one global scale; \texttt{pass\_criteria=null}).
+\end{itemize}
+
+Additionally, Release 7 exports a dedicated non-strict \emph{unit calibration} policy and a corresponding calibration-map probe for the basis-invariant proxy spectrum \texttt{F704}:
+\begin{itemize}
+  \item policy: \texttt{external\_data/proxy\_to\_gev\_calibration\_policy\_v1.json} (\texttt{pass\_criteria=null}),
+  \item calibration map probe: \texttt{P710} (\verb|fundamental_action_reconstruction/p710_current_nonstrict_proxy_to_gev_calibration_map_from_f704_eigenspectrum_probe.py|).
+\end{itemize}
+The v1 calibration uses a single global scale parameter defined by matching geometric means of $m^2$ (assignment-free), and exports only a proxy$\to$GeV interface (no identification/match claim).
+
+\subsection*{Priority 3 (theory extension): “solitons = particles”}
+
+To make the slogan scientific, the program must export an explicit nonlinear EOM/Lagrangian in which soliton solutions are defined, a stability criterion, and a map from soliton moduli to the observer-limit proxy layer.
+
+\subsection*{Priority 4 (falsifiable outputs): operational tests under frozen artifacts}
+
+The nearest falsifiable layer consistent with current strict scope is the basis-invariant proxy spectra (\texttt{P694}, \texttt{P696}, \texttt{F704}) and the non-strict external host-matching harnesses (\texttt{P702}, \texttt{P704}) producing diagnostics only (no pass claim).
+
+\appendix
+\chapter{Export map: key artifacts}
+\section{Strict-core selector closure}
+
+\begin{itemize}
+  \item Global atlas + transition objects on $C_{v1}$: \texttt{F469} (\texttt{N515}); exports \texttt{SelectorAtlas\_global\_C\_v1\_strict\_v1} and \texttt{SelectorTransition\_global\_C\_v1\_strict\_v1}.
+  \item Global projective selector state on $C_{v1}$: \texttt{F470} (\texttt{N516}).
+  \item Global projective selector closure output on $C_{v1}$: \texttt{F672} (\texttt{N680}).
+  \item Directed/convention-layer lifts and sign-fixing: \texttt{F690..F692} (with gauge audit \texttt{P693} and theorem-level packaging \texttt{N692}, \texttt{N693}), with explicit boundaries (no \texttt{QW-2191} discharge).
+\end{itemize}
+\section{Operational OS support}
+
+\begin{itemize}
+  \item Proxy spectra: \texttt{P694}, \texttt{P696}; basis-invariant eigen-spectrum mass observable: \texttt{F704}; observer-limit readout: \texttt{P697}.
+  \item Downstream computability chain: \texttt{P699} packaged by \texttt{N699}.
+  \item OS support packets: \texttt{F698/P698/N698} (v1), \texttt{F700/P700/N700} (v2), \texttt{F705/P705/N705} (v3).
+  \item Operational ToE closure statement: \texttt{N701}.
+  \item Quadratic mass-proxy meaning definition: \texttt{N703}.
+  \item Residual-sign gauge irrelevance audit (Release-7 OS scope): \texttt{P709}, packaged by \texttt{N706}.
+  \item Previous-methodology survival/global-gap audit for \texttt{T173}: \texttt{P711}, packaged by \texttt{N707}.
+  \item Exact nonexport audit for the next global-provider target \texttt{T176}: \texttt{P712}, packaged by \texttt{N708}.
+  \item Supported-root corridor audit for the strongest current candidate class below \texttt{T176}: \texttt{P713}, packaged by \texttt{N709}.
+  \item Parity-corridor boundary audit for the current \texttt{w\_break} anchor class: \texttt{P714}, packaged by \texttt{N710}.
+  \item Parity-completed dual-anchor all-root audit below \texttt{T176}: \texttt{P715}, packaged by \texttt{N711}.
+  \item Localized source audit for the remaining exact split below \texttt{T176}: \texttt{P716}, packaged by \texttt{N712}.
+  \item Release-7 OS gauge-irrelevance bridge for the localized exact split below \texttt{T176}: \texttt{P717}, packaged by \texttt{N713}.
+  \item Single mixed linear-weight span insufficiency audit below \texttt{T176}: \texttt{P718}, packaged by \texttt{N714}.
+  \item Low-complexity nonlinear two-readout provider-class audit below \texttt{T176}: \texttt{P719}, packaged by \texttt{N715}.
+  \item Observer-facing signed output-channel projection audit below \texttt{T176}: \texttt{P720}, packaged by \texttt{N716}.
+  \item Source-topology basis-free QW-2191-safe provider nonupgrade audit below \texttt{T176}: \texttt{P721}, packaged by \texttt{N717}.
+  \item Chart-sensitive transported flux/current-like section nonexport audit below \texttt{T177}: \texttt{P722}, packaged by \texttt{N718}.
+  \item Source-topology to atlas chart-seed selection bridge nonexport audit below \texttt{T178}: \texttt{P723}, packaged by \texttt{N719}.
+  \item Positive source-polarity atlas-entry corridor reduction audit below \texttt{T178}: \texttt{P724}, packaged by \texttt{N720}.
+  \item Positive-corridor odd/even lane-selection bridge nonexport audit below \texttt{T179}: \texttt{P725}, packaged by \texttt{N721}.
+  \item Positive-corridor outer/interior chart-selection bridge nonexport audit below \texttt{T180}: \texttt{P726}, packaged by \texttt{N722}.
+  \item Positive-corridor excluded-negative-boundary adjacency chart-selection bridge nonexport audit below \texttt{T181}: \texttt{P727}, packaged by \texttt{N723}.
+  \item Residual-datum source-side boundary-shielded sublane reduction audit below \texttt{T182}: \texttt{P728}, packaged by \texttt{N724}.
+  \item Residual-datum pair1/pair2 orbit-direction selection bridge nonexport audit below \texttt{T183}: \texttt{P729}, packaged by \texttt{N725}.
+  \item Direction-free Shannon residual-datum pair1/pair2 orbit-direction selection bridge nonexport audit below \texttt{T184}: \texttt{P730}, packaged by \texttt{N726}.
+  \item \texttt{w\_break} witness-payload residual-datum pair1/pair2 orbit-direction promotion-bridge nonexport audit below \texttt{T185}: \texttt{P731}, packaged by \texttt{N727}.
+  \item Pair1-rooted convention-state pair1/pair2 witness-split descent-bridge nonexport audit below \texttt{T186}: \texttt{P732}, packaged by \texttt{N728}.
+  \item Convention-layer pair1/pair2 witness-split transport-descent-bridge nonexport audit below \texttt{T187}: \texttt{P733}, packaged by \texttt{N729}.
+  \item Declared-scope source-topology selector theorem pair1/pair2 orbit-direction descent-bridge nonexport audit below \texttt{T188}: \texttt{P734}, packaged by \texttt{N730}.
+  \item Local source-side scalar-bind pair1/pair2 orbit-direction descent-bridge nonexport audit below \texttt{T189}: \texttt{P735}, packaged by \texttt{N731}.
+  \item Local provider-operator shift-direction pair1/pair2 orbit-direction descent-bridge nonexport audit below \texttt{T190}: \texttt{P736}, packaged by \texttt{N732}.
+  \item Local pair1/pair2 projector-atlas glue orbit-direction descent-bridge nonexport audit below \texttt{T191}: \texttt{P737}, packaged by \texttt{N733}.
+  \item Global projective selector-state pair1/pair2 orbit-direction descent-bridge nonexport audit below \texttt{T192}: \texttt{P738}, packaged by \texttt{N734}.
+  \item Global premise-based directed selector-state pair1/pair2 strict-core-upgrade bridge nonexport audit below \texttt{T193}: \texttt{P739}, packaged by \texttt{N735}.
+  \item Global sign-fixed directed-closure pair1/pair2 strict-core-upgrade bridge nonexport audit below \texttt{T194}: \texttt{P740}, packaged by \texttt{N736}.
+  \item Actual source-topology selector-witness pair1/pair2 promotion-bridge nonexport audit below \texttt{T195}: \texttt{P741}, packaged by \texttt{N737}.
+  \item Non-strict host matching harnesses (external-data dependent): \texttt{P702}, \texttt{P704}.
+  \item Release-7 strict projective OS closure dashboard: \texttt{P706}.
+\end{itemize}
+\section{Emergent observer artifacts}
+
+\begin{itemize}
+  \item Observer-limit readout invariants from the projective closure output projector: \texttt{P697}.
+  \item Full induced operator chain computability under $P\mapsto MPM^{\mathsf T}$: \texttt{P699}/\texttt{N699}.
+\end{itemize}
+
+\chapter{Explicit numeric artifacts (Release 7)}
+\section{Frozen kernel distance profile on \texorpdfstring{$\mathbb{Z}_{12}$}{Z\_12}}
+
+The strict kernel-mode lane uses the frozen symmetric mixing matrix $K_{\mathrm{total}}$ on $\mathbb{Z}_{12}$ (specialization route \texttt{R14}, instantiated in \texttt{F459}).
+On the current repo state, its cyclic-distance profile (for $d=1,\dots,6$) is:
+
+\begin{center}
+\begin{tabular}{rr}
+\toprule
+$d$ & $k(d)$\\
+\midrule
+1 & $0.46998567264502017$\\
+2 & $0.19204355169010282$\\
+3 & $0.09142861427792497$\\
+4 & $0.04702916874565040$\\
+5 & $0.02413122336363006$\\
+6 & $0.011070817321442113$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The full $12\times 12$ matrix is circulant/symmetric under cyclic distance:
+\[
+(K_{\mathrm{total}})_{ij}=k\bigl(d_{\mathrm{cyc}}(i,j)\bigr),\qquad k(0)=0,\qquad k(d)=k(12-d)\ \ (d=1,\dots,6).
+\]
+
+\section{Explicit diagonal/local Psi-sector Hessian instantiation (F459)}
+
+The diagonal/local Psi-sector Hessian instantiation \texttt{F459} exports a symmetric matrix $H_{\psi}\in\mathbb{R}^{12\times 12}$.
+On the current repo state it decomposes \emph{exactly} as:
+\[
+(H_{\psi})_{ij}=
+\begin{cases}
+m_0^2+d_{\mathrm{local}}(i), & i=j,\\[2pt]
+k\bigl(d_{\mathrm{cyc}}(i,j)\bigr), & i\neq j,
+\end{cases}
+\]
+with
+\[
+m_0^2 = 1.013551972358388.
+\]
+The exported diagonal residual profile $d_{\mathrm{local}}(i)$ and the resulting diagonal are:
+
+\begin{center}
+\begin{tabular}{r rr}
+\toprule
+$i$ & $d_{\mathrm{local}}(i)$ & $(H_{\psi})_{ii}=m_0^2+d_{\mathrm{local}}(i)$\\
+\midrule
+0 & $0.34269049977246646$ & $1.3562424721308544$\\
+1 & $11.518361441687219$ & $12.531913414045606$\\
+2 & $0.5284499241054783$ & $1.5420018964638662$\\
+3 & $-0.1567291917971062$ & $0.8568227805612817$\\
+4 & $-0.5341686256176337$ & $0.4793833467407542$\\
+5 & $1.2939217196807558$ & $2.3074736920391437$\\
+6 & $-0.5936675263840503$ & $0.4198844459743376$\\
+7 & $1.2939217196807553$ & $2.3074736920391430$\\
+8 & $-0.5341686256176337$ & $0.4793833467407542$\\
+9 & $-0.1567291917971062$ & $0.8568227805612817$\\
+10 & $0.5284499241054781$ & $1.5420018964638660$\\
+11 & $11.518361441687219$ & $12.531913414045606$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+All full numeric matrices ($K_{\mathrm{total}}$, $H_{\psi}$) and the invariant eigen-spectrum are exported in
+\verb|fundamental_action_reconstruction/generated/psi_hessian_diagonal_local_strict_derived_value_instantiated_v1.json|.
+
+\chapter{Frozen non-strict host matching layer (dataset vs policy)}
+\section{External Standard-Model mass dataset (v1)}
+
+The repo freezes the external dataset (targets-only) as:
+\verb|fundamental_action_reconstruction/external_data/sm_mass_targets_v1.json|,
+with dataset id \texttt{SM\_mass\_targets\_v1\_pdg2024\_summary\_tables}.
+For reader convenience, the current target list (units: GeV) is:
+
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+id & $m$ (GeV) & $\sigma_m$ (GeV)\\
+\midrule
+$e$ & $0.00051099895$ & $1.5\times 10^{-13}$\\
+$u$ & $0.00216$ & $7.0\times 10^{-5}$\\
+$d$ & $0.0047$ & $7.0\times 10^{-5}$\\
+$\mu$ & $0.1056583755$ & $2.3\times 10^{-9}$\\
+$s$ & $0.0935$ & $8.0\times 10^{-4}$\\
+$\tau$ & $1.77693$ & $9.0\times 10^{-5}$\\
+$c$ & $1.273$ & $4.6\times 10^{-3}$\\
+$b$ & $4.183$ & $7.0\times 10^{-3}$\\
+$W$ & $80.3692$ & $1.33\times 10^{-2}$\\
+$Z$ & $91.188$ & $2.0\times 10^{-3}$\\
+$H$ & $125.2$ & $1.1\times 10^{-1}$\\
+$t$ & $172.57$ & $2.9\times 10^{-1}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{External host matching policy (v1, frozen no-pass)}
+
+The repo freezes the external matching policy as:
+\verb|fundamental_action_reconstruction/external_data/sm_host_matching_policy_v1.json|,
+with policy id \texttt{SM\_host\_matching\_policy\_v1\_centered\_log\_assignment\_with\_global\_scale}.
+The policy declares:
+\begin{itemize}
+  \item an assignment algorithm: linear sum assignment on squared centered $\log m^2$ differences,
+  \item \textbf{allowed DOF:} only a single global scale factor (defined by centered $\log m^2$ matching after the assignment),
+  \item \textbf{disallowed DOF:} sector scales, kinetic-metric refits, nonlinear mass maps,
+  \item \textbf{pass criteria:} \texttt{pass\_criteria=null}, with semantics: \emph{no pass/FAIL claim is permitted} under this policy version (diagnostic metrics only).
+\end{itemize}
+
+\emph{Hard limits:} this entire layer remains non-strict and external-data dependent. It is not part of the strict OS closure bundle.
+
+\chapter{Release-8 addendum: QW-2191 closure narrative and strict-core-to-SM scaffold}
+
+\section{Scope and status boundary}
+This addendum records a formal narrative for the Release-8 strict O3 closure line associated with \texttt{QW-2191}.
+It preserves strict status discipline: closure is asserted in the declared O3 pipeline semantics and is not silently promoted to strongest global ToE closure.
+
+\section{Operational strict kernel and selector score}
+The strict operational kernel used in the later-pipeline gate computations is:
+\[
+K_{\text{strict}}(d)=\frac{\cos(\omega d+\phi)}{1+\beta d^{\eta}}.
+\]
+
+The candidate-score map used in the closure lane is:
+\[
+s(\varphi,a)=(\varphi-0.40)+0.9(a-0.58)-0.6(\varphi-0.40)^2,
+\]
+with sign rule
+\[
+\operatorname{sign}(s)=\begin{cases}
++1,& s\ge 0,\\
+-1,& s<0.
+\end{cases}
+\]
+
+\section{Compressed derivation history to Release 8}
+\begin{enumerate}[label=\arabic*.]
+  \item Kernel-role discipline was made explicit (legacy vs strict), preventing silent role transfer.
+  \item O3 chain packetization was executed: candidate class definition, normalization map, pairwise matrix, sweep/replay/adversarial diagnostics.
+  \item Residual ambiguity handling triggered candidate evolution (v2 falsified, v3 degenerate, v4 retained).
+  \item Formal export obligations were completed including global L2 export completion and checker refresh.
+  \item Independent replication packet preserved closure output under the same declared rigor.
+\end{enumerate}
+Hence, the exported O3 endpoint is strict-closed in pipeline semantics.
+
+\section{Strict-core candidate Lagrangian and SM-shaped extension scaffold}
+Core nadsoliton candidate density:
+\[
+\mathcal{L}_{\text{core}} = \frac{1}{2}\partial_\mu\phi\,\partial^\mu\phi
++\sum_{i=0}^{11}\left[\frac{1}{2}\partial_\mu\psi_i\,\partial^\mu\psi_i - V(\psi_i)\right]
++\frac{1}{2}\sum_{i\neq j}K_{ij}\,\psi_i\psi_j,
+\]
+with
+\[
+K_{ij}=K_{\text{strict}}(d_{ij}).
+\]
+
+A full Standard-Model-shaped effective scaffold (for explicit interface bookkeeping) may be written as:
+\[
+\mathcal{L}_{\text{eff}}=
+-\frac14 G^A_{\mu\nu}G^{A\mu\nu}
+-\frac14 W^I_{\mu\nu}W^{I\mu\nu}
+-\frac14 B_{\mu\nu}B^{\mu\nu}
++\sum_f \bar\Psi_f i\gamma^\mu D_\mu\Psi_f
++(D_\mu H)^\dagger(D^\mu H)-V(H)
++\mathcal{L}_{\text{Yukawa}}
++\Delta\mathcal{L}_{\text{nadsoliton}}.
+\]
+
+where
+\[
+\mathcal{L}_{\text{Yukawa}}=-y_u\bar Q\tilde H u_R-y_d\bar Q H d_R-y_e\bar L H e_R+\text{h.c.}
+\]
+and \(\Delta\mathcal{L}_{\text{nadsoliton}}\) stores strict-core induced effective corrections/couplings.
+
+This is a documented candidate integration scaffold; it is not, by itself, a claim that host-level SM/GR identification is already fully discharged.
+
+
+
+
+\chapter{Full Standard Model + Nadsoliton Effective Lagrangian (Release-8 formal scaffold)}
+
+\section{Purpose and status discipline}
+This chapter provides a full explicit Standard-Model-shaped Lagrangian embedding with a nadsoliton effective sector.
+It is a formal \emph{candidate export scaffold}: complete at the symbolic field-theory level, but not automatically an already-discharged strict host-identification theorem.
+
+\section{Full Standard Model density}
+The Standard Model density is recorded in the conventional decomposition:
+\[
+\mathcal{L}_{\mathrm{SM}} =
+\mathcal{L}_{\mathrm{gauge}} +
+\mathcal{L}_{\mathrm{fermion}} +
+\mathcal{L}_{\mathrm{Higgs}} +
+\mathcal{L}_{\mathrm{Yukawa}} +
+\mathcal{L}_{\mathrm{gf}} +
+\mathcal{L}_{\mathrm{ghost}}.
+\]
+
+Gauge kinetic sector:
+\[
+\mathcal{L}_{\mathrm{gauge}} =
+-\frac14 G^A_{\mu\nu}G^{A\mu\nu}
+-\frac14 W^I_{\mu\nu}W^{I\mu\nu}
+-\frac14 B_{\mu\nu}B^{\mu\nu}.
+\]
+
+Fermion kinetic/covariant sector (three generations):
+\[
+\mathcal{L}_{\mathrm{fermion}} =
+\sum_{g=1}^{3}
+\Big(
+\bar Q_g i\gamma^\mu D_\mu Q_g+
+\bar u_{R,g} i\gamma^\mu D_\mu u_{R,g}+
+\bar d_{R,g} i\gamma^\mu D_\mu d_{R,g}+
+\bar L_g i\gamma^\mu D_\mu L_g+
+\bar e_{R,g} i\gamma^\mu D_\mu e_{R,g}
+\Big).
+\]
+
+Higgs sector:
+\[
+\mathcal{L}_{\mathrm{Higgs}} = (D_\mu H)^\dagger(D^\mu H) - V(H),
+\qquad
+V(H) = -\mu_H^2 H^\dagger H + \lambda_H (H^\dagger H)^2.
+\]
+
+Yukawa sector:
+\[
+\mathcal{L}_{\mathrm{Yukawa}} =
+-\bar Q Y_d H d_R
+-\bar Q Y_u \widetilde H u_R
+-\bar L Y_e H e_R
++ \mathrm{h.c.}
+\]
+with \(\widetilde H = i\sigma_2 H^*\). Gauge-fixing and ghost terms are retained symbolically in \(\mathcal{L}_{\mathrm{gf}},\mathcal{L}_{\mathrm{ghost}}\) according to the selected quantization scheme.
+
+\section{Nadsoliton strict-core sector and coupling interface}
+Strict-core candidate:
+\[
+\mathcal{L}_{\mathrm{core}} =
+\frac12 \partial_\mu \phi \partial^\mu \phi
++ \sum_{i=0}^{11}\left(\frac12\partial_\mu\psi_i\partial^\mu\psi_i - V_i(\psi_i)\right)
++ \frac12\sum_{i\neq j} K_{ij}\psi_i\psi_j,
+\]
+\[
+K_{ij}=K_{\mathrm{strict}}(d_{ij})=\frac{\cos(\omega d_{ij}+\varphi)}{1+\beta d_{ij}^{\eta}}.
+\]
+
+A minimal effective interaction bridge to SM-shaped observables is represented as:
+\[
+\Delta\mathcal{L}_{\mathrm{bridge}} =
+-\frac{c_G}{4}f_G(\phi)G^A_{\mu\nu}G^{A\mu\nu}
+-\frac{c_W}{4}f_W(\phi)W^I_{\mu\nu}W^{I\mu\nu}
+-\frac{c_B}{4}f_B(\phi)B_{\mu\nu}B^{\mu\nu}
++ c_H f_H(\phi)H^\dagger H
++ \sum_f c_f f_f(\phi)\bar\Psi_f\Psi_f.
+\]
+
+Hence the release-level effective total density is:
+\[
+\mathcal{L}_{\mathrm{tot}}^{(R8)} = \mathcal{L}_{\mathrm{SM}} + \mathcal{L}_{\mathrm{core}} + \Delta\mathcal{L}_{\mathrm{bridge}}.
+\]
+
+\chapter{Plan blokad domkni\k{e}cia teorii (Release 8)}
+
+\section{Cel rozdzia\l{}u}
+Ten plan rozdziela to, co jest ju\.z domkni\k{e}te w bramce O3, od tego co nadal blokuje najmocniejsze domkni\k{e}cie teorii (globalne, host-identification, strict-core completeness).
+
+\section{Aktualne klasy blokad (twarde)}
+\begin{enumerate}[label=\arabic*.]
+  \item \textbf{Granica semantyki O3:} domkni\k{e}cie QW-2191 w O3 nie jest to\.zsame z globalnym ToE closure.
+  \item \textbf{Host-level SM/GR identyfikacja:} brak jednego wyeksportowanego strict-theorem mapuj\k{a}cego pe\l{}ny sektor obserwowalny na \(\mathcal{L}_{\mathrm{tot}}^{(R8)}\) bez dodatkowych luz\'ow dopasowania.
+  \item \textbf{Selector robustness poza zadeklarowanym pipeline:} potrzebny dalszy niezale\.zny audit wielo\'srodowiskowy i regresje krzy\.zowe.
+  \item \textbf{Bridge calibration identifiability:} funkcje \(f_G,f_W,f_B,f_H,f_f\) i sta\l{}e \(c_\cdot\) wymagaj\k{a} jawnej identyfikowalno\'sci/iniektywno\'sci w rygorze strict.
+  \item \textbf{Global closure theorem packaging:} brak jednego pakietu twierdzenia spinaj\k{a}cego wszystkie lokalne domkni\k{e}cia w najmocniejszy globalny export.
+\end{enumerate}
+
+\section{Plan techniczny (kolejno\'s\'c wykonania)}
+\begin{enumerate}[label=\textbf{R8-B\arabic*}]
+  \item Zmrozi\'c referencyjny zestaw test\'ow reprodukcyjnych dla O3 + external replication matrix.
+  \item Wyeksportowa\'c theorem-level identifiability dla parametr\'ow pomostowych \(\Delta\mathcal{L}_{\mathrm{bridge}}\).
+  \item Doda\'c strict host-matching theorem bez nadmiarowych stopni swobody (lub jawny non-bridge/non-identification theorem).
+  \item Spi\k{a}\'c wszystko w jeden global-closure packet z jawnymi limitami i zakresem twierdzenia.
+  \item Wykona\'c niezale\.zny audyt zewn\k{e}trzny (replication + falsification challenge) i dopiero potem aktualizowa\'c status globalny.
+\end{enumerate}
+
+\section{Werdykt praktyczny}
+Release 8 mo\.ze by\'c publikowany jako formalny stan profesorski: O3/QW-2191 strict gate closed in pipeline semantics,
+pe\l{}ny scaffold lagran\.zjanu zapisany, oraz jawny plan blokad do najmocniejszego domkni\k{e}cia teorii.
+
+\end{document}
