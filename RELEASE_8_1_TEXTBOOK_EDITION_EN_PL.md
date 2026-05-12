@@ -1,13 +1,13 @@
-# RELEASE 8 STRICT TEXTBOOK EDITION (EN + PL)
+# RELEASE 8.1 STRICT TEXTBOOK EDITION (EN + PL)
 
-**Version:** 8.0.0 (Current-state projection — Global Strict Closure Theorem Exported)  
+**Version:** 8.1.0 (Global Strict Closure — Internal Source Validated & Audited)  
 **Date:** 2026-05-12  
 **Branch:** `main`  
-**Predecessor:** Release 7 Strict Textbook Edition
+**Predecessor:** Release 8.0.0 Strict Textbook Edition
 
 ## Status discipline (no false pass)
 
-- This Release 8 document describes the **current repo state only**.
+- This Release 8.1 document describes the **current repo state only**.
 - It records that the O3 pipeline reached strict closure, which was then extended to a **Single Global Closure Theorem** (`P1348`) in the declared Release-8 scope.
 - It does **not** claim global ToE closure beyond the declared scope and the O3/Selector-gate architecture.
 - It does **not** erase the strict/non-strict distinction in historical packets; non-strict packets remain explicitly labeled.
@@ -15,9 +15,9 @@
 
 ---
 
-## 1. Release‑8 target (EN): “Global Strict Closure and Identification snapshot”
+## 1. Release‑8.1 target (EN): “Global Strict Closure and Identification snapshot”
 
-Release 8 is a state report whose target is:
+Release 8.1 is a state report whose target is:
 
 1. freeze the Global Strict Closure Theorem (`P1348`) derived from the internal selector source (`P1343`),
 2. show the resolution of fundamental nonuniqueness (basis ambiguity and isotropy) via `P1340..P1343`,
@@ -28,7 +28,7 @@ This release marks the transition from local pipeline success to a unified, vali
 
 ---
 
-## 2. Current strict state entering Release 8 (EN)
+## 2. Current strict state entering Release 8.1 (EN)
 
 On the current repo state:
 
@@ -46,9 +46,9 @@ Current global status:
 
 ---
 
-## 3. What Release‑8 still does not “false‑PASS” (EN)
+## 3. What Release‑8.1 still does not “false‑PASS” (EN)
 
-Release 8 still does **not** claim, unless separately exported:
+Release 8.1 still does **not** claim, unless separately exported:
 
 1. absolute global ToE closure beyond the current declared-scope theorem,
 2. immunity from failure in the upcoming external blind audit,
@@ -57,22 +57,22 @@ Release 8 still does **not** claim, unless separately exported:
 
 ---
 
-## 4. Release‑8 deliverables (EN)
+## 4. Release‑8.1 deliverables (EN)
 
-1. This Release-8 textbook snapshot (`RELEASE_8_STRICT_TEXTBOOK_EDITION_EN_PL.md`).
+1. This Release-8.1 textbook snapshot (`RELEASE_8_1_TEXTBOOK_EDITION_EN_PL.md`).
 2. Packet chain `P1313..P1339` (O3 Trail) and `P1340..P1348` (Global Closure Trail).
 3. The generated PDF documentation (`TOE_FINAL_DOCUMENTATION_RELEASE_8_STRICT_FULL.pdf`).
 4. External blind audit protocol (`P1349`).
 
 ---
 
-## 1. Cel Release‑8 (PL): „Migawka globalnego domknięcia i identyfikacji”
+## 1. Cel Release‑8.1 (PL): „Migawka globalnego domknięcia i identyfikacji”
 
-Release 8 ma jeden cel: **udokumentować pełne, formalne domknięcie teorii** w zadeklarowanym zakresie, oparte na wewnętrznym źródle selektora i zwieńczone globalnym twierdzeniem o domknięciu (`P1348`).
+Release 8.1 ma jeden cel: **udokumentować pełne, formalne domknięcie teorii** w zadeklarowanym zakresie, oparte na wewnętrznym źródle selektora i zwieńczone globalnym twierdzeniem o domknięciu (`P1348`).
 
 ---
 
-## 2. Aktualny stan strict na wejściu do Release 8 (PL)
+## 2. Aktualny stan strict na wejściu do Release 8.1 (PL)
 
 Na obecnym stanie repo:
 
@@ -89,9 +89,9 @@ Bieżący status globalny:
 
 ---
 
-## 3. Czego Release‑8 nadal nie może „false‑PASS” (PL)
+## 3. Czego Release‑8.1 nadal nie może „false‑PASS” (PL)
 
-Release 8 nadal **nie** rości bez osobnego eksportu:
+Release 8.1 nadal **nie** rości bez osobnego eksportu:
 
 1. absolutnego domknięcia ToE poza zdefiniowanym zakresem twierdzenia R8,
 2. odporności na ewentualną porażkę w nadchodzącym audycie zewnętrznym,
@@ -100,9 +100,9 @@ Release 8 nadal **nie** rości bez osobnego eksportu:
 
 ---
 
-## 4. Deliverables Release‑8 (PL)
+## 4. Deliverables Release‑8.1 (PL)
 
-1. Ten dokument Release 8 (`RELEASE_8_STRICT_TEXTBOOK_EDITION_EN_PL.md`).
+1. Ten dokument Release 8.1 (`RELEASE_8_1_TEXTBOOK_EDITION_EN_PL.md`).
 2. Łańcuchy pakietów O3 (`P1313..P1339`) oraz Global Closure (`P1340..P1348`).
 3. Wygenerowana dokumentacja PDF (`TOE_FINAL_DOCUMENTATION_RELEASE_8_STRICT_FULL.pdf`).
 4. Protokół zewnętrznego audytu (`P1349`).
@@ -120,7 +120,7 @@ Under the current exported chain (`P1340..P1348`) the repository exports a **Glo
 
 This is physically consistent with current guardrails because the closure is explicitly bounded by the declared configuration space and the operational kernel architecture.
 
-### 5.2 Core equations used in Release 8
+### 5.2 Core equations used in Release 8.1
 
 Strict operational kernel:
 
@@ -155,7 +155,7 @@ $$
 
 ### 5.5 PL — krótki werdykt fizyczny
 
-Domknięcie w Release 8 jest **pełne i wewnętrzne**: nie wymaga już zewnętrznych założeń (aksjomatów) do wyboru znaku selektora. Teoria posiada jawną mapę identyfikacji z obserwowalną fizyką (`P1347`) i jest gotowa do niezależnej weryfikacji.
+Domknięcie w Release 8.1 jest **pełne i wewnętrzne**: nie wymaga już zewnętrznych założeń (aksjomatów) do wyboru znaku selektora. Teoria posiada jawną mapę identyfikacji z obserwowalną fizyką (`P1347`) i jest gotowa do niezależnej weryfikacji.
 
 ---
 
@@ -195,7 +195,7 @@ This section is explicitly a **structured candidate scaffold**, not a claim that
 
 ## 7. Authoritative Release Statement
 
-The Theory of Everything (ToE) program in the currently declared Release-8 strict scope is **EXPORTED AS CLOSED**. 
+The Theory of Everything (ToE) program in the currently declared Release-8.1 strict scope is **EXPORTED AS CLOSED**. 
 
 $$
 \texttt{Theory status: CLOSED (R8 Scope)} \; \land \; \texttt{External Audit: PENDING}
