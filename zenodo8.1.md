@@ -1,4 +1,4 @@
-# 🚀 Release 8.1 — Global Strict Closure and Identification of the ToE (Strict Textbook Edition)
+# 🚀 FIN/Nadsoliton Theory v8.1: Global Strict Closure + SM/GR Identification Map (External Blind ToE Audit Readiness)
 
 ### ⚛️ Unified Global Closure Theorem + Internal Selector Source + SM/GR Identification (No False‑PASS)
 **Study Range:** `fundamental_action_reconstruction` strict program — Global Closure Theorem `P1348` on `C_v1` + Release‑8.1 Identification Map
