@@ -63,7 +63,7 @@
 % ============================================================================
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{ToE Strict Final Documentation (Release 7)}
+\rhead{ToE Strict Final Documentation (Release 8)}
 \lhead{Krzysztof Żuchowski}
 \cfoot{\thepage}
 \setlength{\headheight}{14pt}
@@ -72,9 +72,9 @@
 % TITLE
 % ============================================================================
 \title{\textbf{Theory of Everything (ToE) --- Strict Final Documentation}\\
-\large Release 7 (Strict) --- Full Definitions, Derivations, and Discharge Map}
+\large Release 8 (Strict) --- Full Definitions, Derivations, Discharge Map, and Blocker Plan}
 \author{\textbf{Krzysztof Żuchowski}}
-\date{2026-03-17}
+\date{2026-05-12}
 
 \begin{document}
 
@@ -107,7 +107,7 @@ The theory originates from a deep intuition that \textbf{Information is the fund
 \end{quote}
 
 \chapter*{Status discipline (no false pass)}
-This TeX document is the intended \textbf{Release-7 strict final documentation} target.
+This TeX document is the intended \textbf{Release-8 strict final documentation} target.
 It must not silently claim:
 \begin{enumerate}[label=\arabic*.]
   \item strict-core ToE closure,
@@ -122,7 +122,7 @@ unless such claims are explicitly exported at theorem level in the repo and are 
 \chapter*{Reproducibility}
 \begin{itemize}
   \item \textbf{Repo root:} \verb|/home/krzysiek/Pobrane/TOE/edison|
-  \item \textbf{As-of date:} \texttt{2026-03-17}
+  \item \textbf{As-of date:} \texttt{2026-05-12}
   \item \textbf{Build smoke probe (PDF + strict dashboards):} \texttt{P707} (\verb|fundamental_action_reconstruction/p707_current_release_7_build_and_closure_smoke_probe.py|)
   \item \textbf{Strict OS closure dashboard:} \texttt{P706} (\verb|fundamental_action_reconstruction/p706_current_release_7_strict_projective_operational_toe_os_closure_dashboard_probe.py|)
   \item \textbf{Strict \texttt{T173} frontier dashboard:} \texttt{P708} (\verb|fundamental_action_reconstruction/p708_current_strict_t173_frontier_dashboard_probe.py|)
@@ -1927,5 +1927,117 @@ and \(\Delta\mathcal{L}_{\text{nadsoliton}}\) stores strict-core induced effecti
 
 This is a documented candidate integration scaffold; it is not, by itself, a claim that host-level SM/GR identification is already fully discharged.
 
+
+
+
+\chapter{Full Standard Model + Nadsoliton Effective Lagrangian (Release-8 formal scaffold)}
+
+\section{Purpose and status discipline}
+This chapter provides a full explicit Standard-Model-shaped Lagrangian embedding with a nadsoliton effective sector.
+It is a formal \emph{candidate export scaffold}: complete at the symbolic field-theory level, but not automatically an already-discharged strict host-identification theorem.
+
+\section{Full Standard Model density}
+The Standard Model density is recorded in the conventional decomposition:
+\[
+\mathcal{L}_{\mathrm{SM}} =
+\mathcal{L}_{\mathrm{gauge}} +
+\mathcal{L}_{\mathrm{fermion}} +
+\mathcal{L}_{\mathrm{Higgs}} +
+\mathcal{L}_{\mathrm{Yukawa}} +
+\mathcal{L}_{\mathrm{gf}} +
+\mathcal{L}_{\mathrm{ghost}}.
+\]
+
+Gauge kinetic sector:
+\[
+\mathcal{L}_{\mathrm{gauge}} =
+-\frac14 G^A_{\mu\nu}G^{A\mu\nu}
+-\frac14 W^I_{\mu\nu}W^{I\mu\nu}
+-\frac14 B_{\mu\nu}B^{\mu\nu}.
+\]
+
+Fermion kinetic/covariant sector (three generations):
+\[
+\mathcal{L}_{\mathrm{fermion}} =
+\sum_{g=1}^{3}
+\Big(
+\bar Q_g i\gamma^\mu D_\mu Q_g+
+\bar u_{R,g} i\gamma^\mu D_\mu u_{R,g}+
+\bar d_{R,g} i\gamma^\mu D_\mu d_{R,g}+
+\bar L_g i\gamma^\mu D_\mu L_g+
+\bar e_{R,g} i\gamma^\mu D_\mu e_{R,g}
+\Big).
+\]
+
+Higgs sector:
+\[
+\mathcal{L}_{\mathrm{Higgs}} = (D_\mu H)^\dagger(D^\mu H) - V(H),
+\qquad
+V(H) = -\mu_H^2 H^\dagger H + \lambda_H (H^\dagger H)^2.
+\]
+
+Yukawa sector:
+\[
+\mathcal{L}_{\mathrm{Yukawa}} =
+-\bar Q Y_d H d_R
+-\bar Q Y_u \widetilde H u_R
+-\bar L Y_e H e_R
++ \mathrm{h.c.}
+\]
+with \(\widetilde H = i\sigma_2 H^*\). Gauge-fixing and ghost terms are retained symbolically in \(\mathcal{L}_{\mathrm{gf}},\mathcal{L}_{\mathrm{ghost}}\) according to the selected quantization scheme.
+
+\section{Nadsoliton strict-core sector and coupling interface}
+Strict-core candidate:
+\[
+\mathcal{L}_{\mathrm{core}} =
+\frac12 \partial_\mu \phi \partial^\mu \phi
++ \sum_{i=0}^{11}\left(\frac12\partial_\mu\psi_i\partial^\mu\psi_i - V_i(\psi_i)\right)
++ \frac12\sum_{i\neq j} K_{ij}\psi_i\psi_j,
+\]
+\[
+K_{ij}=K_{\mathrm{strict}}(d_{ij})=\frac{\cos(\omega d_{ij}+\varphi)}{1+\beta d_{ij}^{\eta}}.
+\]
+
+A minimal effective interaction bridge to SM-shaped observables is represented as:
+\[
+\Delta\mathcal{L}_{\mathrm{bridge}} =
+-\frac{c_G}{4}f_G(\phi)G^A_{\mu\nu}G^{A\mu\nu}
+-\frac{c_W}{4}f_W(\phi)W^I_{\mu\nu}W^{I\mu\nu}
+-\frac{c_B}{4}f_B(\phi)B_{\mu\nu}B^{\mu\nu}
++ c_H f_H(\phi)H^\dagger H
++ \sum_f c_f f_f(\phi)\bar\Psi_f\Psi_f.
+\]
+
+Hence the release-level effective total density is:
+\[
+\mathcal{L}_{\mathrm{tot}}^{(R8)} = \mathcal{L}_{\mathrm{SM}} + \mathcal{L}_{\mathrm{core}} + \Delta\mathcal{L}_{\mathrm{bridge}}.
+\]
+
+\chapter{Plan blokad domkni\k{e}cia teorii (Release 8)}
+
+\section{Cel rozdzia\l{}u}
+Ten plan rozdziela to, co jest ju\.z domkni\k{e}te w bramce O3, od tego co nadal blokuje najmocniejsze domkni\k{e}cie teorii (globalne, host-identification, strict-core completeness).
+
+\section{Aktualne klasy blokad (twarde)}
+\begin{enumerate}[label=\arabic*.]
+  \item \textbf{Granica semantyki O3:} domkni\k{e}cie QW-2191 w O3 nie jest to\.zsame z globalnym ToE closure.
+  \item \textbf{Host-level SM/GR identyfikacja:} brak jednego wyeksportowanego strict-theorem mapuj\k{a}cego pe\l{}ny sektor obserwowalny na \(\mathcal{L}_{\mathrm{tot}}^{(R8)}\) bez dodatkowych luz\'ow dopasowania.
+  \item \textbf{Selector robustness poza zadeklarowanym pipeline:} potrzebny dalszy niezale\.zny audit wielo\'srodowiskowy i regresje krzy\.zowe.
+  \item \textbf{Bridge calibration identifiability:} funkcje \(f_G,f_W,f_B,f_H,f_f\) i sta\l{}e \(c_\cdot\) wymagaj\k{a} jawnej identyfikowalno\'sci/iniektywno\'sci w rygorze strict.
+  \item \textbf{Global closure theorem packaging:} brak jednego pakietu twierdzenia spinaj\k{a}cego wszystkie lokalne domkni\k{e}cia w najmocniejszy globalny export.
+\end{enumerate}
+
+\section{Plan techniczny (kolejno\'s\'c wykonania)}
+\begin{enumerate}[label=\textbf{R8-B\arabic*}]
+  \item Zmrozi\'c referencyjny zestaw test\'ow reprodukcyjnych dla O3 + external replication matrix.
+  \item Wyeksportowa\'c theorem-level identifiability dla parametr\'ow pomostowych \(\Delta\mathcal{L}_{\mathrm{bridge}}\).
+  \item Doda\'c strict host-matching theorem bez nadmiarowych stopni swobody (lub jawny non-bridge/non-identification theorem).
+  \item Spi\k{a}\'c wszystko w jeden global-closure packet z jawnymi limitami i zakresem twierdzenia.
+  \item Wykona\'c niezale\.zny audyt zewn\k{e}trzny (replication + falsification challenge) i dopiero potem aktualizowa\'c status globalny.
+\end{enumerate}
+
+\section{Werdykt praktyczny}
+Release 8 mo\.ze by\'c publikowany jako formalny stan profesorski: O3/QW-2191 strict gate closed in pipeline semantics,
+pe\l{}ny scaffold lagran\.zjanu zapisany, oraz jawny plan blokad do najmocniejszego domkni\k{e}cia teorii.
 
 \end{document}
