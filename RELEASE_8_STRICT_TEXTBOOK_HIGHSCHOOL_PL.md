@@ -151,3 +151,35 @@ Następny rozsądny krok po podręcznikowym domknięciu to nie „fajerwerki”,
 - regularne testy regresji,
 - zewnętrzne replikacje,
 - pilnowanie, żeby nowe zmiany nie odwróciły closure.
+
+---
+
+## 9. Historia wyprowadzenia domknięcia `QW-2191` do wersji 8 (prosty, ale ścisły skrót)
+
+1. Najpierw rozdzielono porządek kerneli (legacy vs strict), żeby nie mieszać ról fizycznych bez jawnego mostu.
+2. Potem zbudowano tor strict O3: katalog kandydatów, normalizacja, porównania pairwise, testy sweep/replay.
+3. Po wykryciu słabych punktów (residual slot) przebudowano kandydaty (`v2`, `v3`, `v4`).
+4. W wersji `v4` użyto jawnego score:
+
+\[
+s(\varphi,a)=(\varphi-0.40)+0.9(a-0.58)-0.6(\varphi-0.40)^2
+\]
+
+który decyduje o znaku gałęzi:
+
+\[
+\operatorname{sign}(s)=\begin{cases}+1,&s\ge0\\-1,&s<0\end{cases}
+\]
+
+5. Finalnie domknięto brak formalnego eksportu globalnego L2 i odświeżono checker (`5/5`).
+6. Niezależna replikacja utrzymała wynik, więc w rygorze tej bramki status ustawiono na `CLOSED`.
+
+## 10. Co kernel strict i score faktycznie wnoszą fizycznie?
+
+Kernel strict
+\[
+K_{\text{strict}}(d)=\frac{\cos(\omega d+\phi)}{1+\beta d^{\eta}}
+\]
+porządkuje tłumienie i fazę oddziaływań w operacyjnej części modelu, a score `s(\varphi,a)` daje regułę selekcji znaku w mapie kandydatów.
+
+Wkład fizyczny: redukcja niejednoznaczności selektora (unikalność gałęzi roboczej) przy zachowaniu ostrożności, że nie jest to jeszcze pełne „wszystko o SM+GR”.

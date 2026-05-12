@@ -1861,4 +1861,71 @@ The policy declares:
 
 \emph{Hard limits:} this entire layer remains non-strict and external-data dependent. It is not part of the strict OS closure bundle.
 
+\chapter{Release-8 addendum: QW-2191 closure narrative and strict-core-to-SM scaffold}
+
+\section{Scope and status boundary}
+This addendum records a formal narrative for the Release-8 strict O3 closure line associated with \texttt{QW-2191}.
+It preserves strict status discipline: closure is asserted in the declared O3 pipeline semantics and is not silently promoted to strongest global ToE closure.
+
+\section{Operational strict kernel and selector score}
+The strict operational kernel used in the later-pipeline gate computations is:
+\[
+K_{\text{strict}}(d)=\frac{\cos(\omega d+\phi)}{1+\beta d^{\eta}}.
+\]
+
+The candidate-score map used in the closure lane is:
+\[
+s(\varphi,a)=(\varphi-0.40)+0.9(a-0.58)-0.6(\varphi-0.40)^2,
+\]
+with sign rule
+\[
+\operatorname{sign}(s)=\begin{cases}
++1,& s\ge 0,\\
+-1,& s<0.
+\end{cases}
+\]
+
+\section{Compressed derivation history to Release 8}
+\begin{enumerate}[label=\arabic*.]
+  \item Kernel-role discipline was made explicit (legacy vs strict), preventing silent role transfer.
+  \item O3 chain packetization was executed: candidate class definition, normalization map, pairwise matrix, sweep/replay/adversarial diagnostics.
+  \item Residual ambiguity handling triggered candidate evolution (v2 falsified, v3 degenerate, v4 retained).
+  \item Formal export obligations were completed including global L2 export completion and checker refresh.
+  \item Independent replication packet preserved closure output under the same declared rigor.
+\end{enumerate}
+Hence, the exported O3 endpoint is strict-closed in pipeline semantics.
+
+\section{Strict-core candidate Lagrangian and SM-shaped extension scaffold}
+Core nadsoliton candidate density:
+\[
+\mathcal{L}_{\text{core}} = \frac{1}{2}\partial_\mu\phi\,\partial^\mu\phi
++\sum_{i=0}^{11}\left[\frac{1}{2}\partial_\mu\psi_i\,\partial^\mu\psi_i - V(\psi_i)\right]
++\frac{1}{2}\sum_{i\neq j}K_{ij}\,\psi_i\psi_j,
+\]
+with
+\[
+K_{ij}=K_{\text{strict}}(d_{ij}).
+\]
+
+A full Standard-Model-shaped effective scaffold (for explicit interface bookkeeping) may be written as:
+\[
+\mathcal{L}_{\text{eff}}=
+-\frac14 G^A_{\mu\nu}G^{A\mu\nu}
+-\frac14 W^I_{\mu\nu}W^{I\mu\nu}
+-\frac14 B_{\mu\nu}B^{\mu\nu}
++\sum_f \bar\Psi_f i\gamma^\mu D_\mu\Psi_f
++(D_\mu H)^\dagger(D^\mu H)-V(H)
++\mathcal{L}_{\text{Yukawa}}
++\Delta\mathcal{L}_{\text{nadsoliton}}.
+\]
+
+where
+\[
+\mathcal{L}_{\text{Yukawa}}=-y_u\bar Q\tilde H u_R-y_d\bar Q H d_R-y_e\bar L H e_R+\text{h.c.}
+\]
+and \(\Delta\mathcal{L}_{\text{nadsoliton}}\) stores strict-core induced effective corrections/couplings.
+
+This is a documented candidate integration scaffold; it is not, by itself, a claim that host-level SM/GR identification is already fully discharged.
+
+
 \end{document}
