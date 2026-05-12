@@ -143,15 +143,16 @@ and observer-facing readouts remain downstream (\texttt{P697}, \texttt{P699}).
 \section{Strict vs legacy kernel split discipline}
 
 The repo contains two historically distinct kernel objects (see \texttt{K1/K2/F2}):
-\[
+\begin{equation}
 K_{\mathrm{legacy\_ont}}(d)
 :=
-\alpha_{\mathrm{geo}}\frac{\cos(\omega d+\phi)}{1+\beta_{\mathrm{tors}}d},
+(4\ln 2)\frac{\cos(\omega d+\phi)}{1+\beta_{\mathrm{tors}}d},
 \qquad
 K_{\mathrm{strict\_gate}}(d)
 :=
 \frac{\cos(\omega d+\phi)}{1+\beta d^{\eta}}.
-\]
+\end{equation}
+The constant $\alpha_{\mathrm{geo}} = 4\ln 2$ is the fundamental Shannon-weighted scaling factor which serves as the primary source of symmetry breaking in the strict lane (via the \texttt{w\_break} mechanism).
 
 By author decree (\texttt{S2}, 2026-03-09), the legacy kernel is retired to archival status; this document is strict-only.
 However, \textbf{no false pass} discipline remains:
