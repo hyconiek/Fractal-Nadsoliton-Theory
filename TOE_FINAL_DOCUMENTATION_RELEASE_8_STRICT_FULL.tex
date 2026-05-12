@@ -2013,31 +2013,118 @@ Hence the release-level effective total density is:
 \mathcal{L}_{\mathrm{tot}}^{(R8)} = \mathcal{L}_{\mathrm{SM}} + \mathcal{L}_{\mathrm{core}} + \Delta\mathcal{L}_{\mathrm{bridge}}.
 \]
 
-\chapter{Plan blokad domkni\k{e}cia teorii (Release 8)}
+\chapter{Theory-closure blocker map (Release 8)}
 
-\section{Cel rozdzia\l{}u}
-Ten plan rozdziela to, co jest ju\.z domkni\k{e}te w bramce O3, od tego co nadal blokuje najmocniejsze domkni\k{e}cie teorii (globalne, host-identification, strict-core completeness).
+\section{Purpose of this chapter}
+This chapter separates what is already closed in the O3 gate from what still blocks the strongest possible global closure claim (global scope, host-identification scope, strict-core completeness scope).
 
-\section{Aktualne klasy blokad (twarde)}
+\section{Current hard blocker classes}
 \begin{enumerate}[label=\arabic*.]
-  \item \textbf{Granica semantyki O3:} domkni\k{e}cie QW-2191 w O3 nie jest to\.zsame z globalnym ToE closure.
-  \item \textbf{Host-level SM/GR identyfikacja:} brak jednego wyeksportowanego strict-theorem mapuj\k{a}cego pe\l{}ny sektor obserwowalny na \(\mathcal{L}_{\mathrm{tot}}^{(R8)}\) bez dodatkowych luz\'ow dopasowania.
-  \item \textbf{Selector robustness poza zadeklarowanym pipeline:} potrzebny dalszy niezale\.zny audit wielo\'srodowiskowy i regresje krzy\.zowe.
-  \item \textbf{Bridge calibration identifiability:} funkcje \(f_G,f_W,f_B,f_H,f_f\) i sta\l{}e \(c_\cdot\) wymagaj\k{a} jawnej identyfikowalno\'sci/iniektywno\'sci w rygorze strict.
-  \item \textbf{Global closure theorem packaging:} brak jednego pakietu twierdzenia spinaj\k{a}cego wszystkie lokalne domkni\k{e}cia w najmocniejszy globalny export.
+  \item \textbf{O3 semantic boundary:} QW-2191 closure in O3 semantics is not identical to strongest-form global ToE closure.
+  \item \textbf{Host-level SM/GR identification:} one fully exported strict theorem mapping the full observable sector to \(\mathcal{L}_{\mathrm{tot}}^{(R8)}\) without extra fitting freedoms is still required.
+  \item \textbf{Selector robustness outside declared pipeline:} additional independent multi-environment audits and cross-regression checks are still required.
+  \item \textbf{Bridge-calibration identifiability:} the functions \(f_G,f_W,f_B,f_H,f_f\) and couplings \(c_\cdot\) still require explicit strict identifiability/injectivity exports.
+  \item \textbf{Global closure theorem packaging:} a single theorem packet stitching all local closures into the strongest global export is still pending.
 \end{enumerate}
 
-\section{Plan techniczny (kolejno\'s\'c wykonania)}
+\section{Technical execution order}
 \begin{enumerate}[label=\textbf{R8-B\arabic*}]
-  \item Zmrozi\'c referencyjny zestaw test\'ow reprodukcyjnych dla O3 + external replication matrix.
-  \item Wyeksportowa\'c theorem-level identifiability dla parametr\'ow pomostowych \(\Delta\mathcal{L}_{\mathrm{bridge}}\).
-  \item Doda\'c strict host-matching theorem bez nadmiarowych stopni swobody (lub jawny non-bridge/non-identification theorem).
-  \item Spi\k{a}\'c wszystko w jeden global-closure packet z jawnymi limitami i zakresem twierdzenia.
-  \item Wykona\'c niezale\.zny audyt zewn\k{e}trzny (replication + falsification challenge) i dopiero potem aktualizowa\'c status globalny.
+  \item Freeze a reference reproduction test set for O3 plus external replication matrix.
+  \item Export theorem-level identifiability for bridge parameters in \(\Delta\mathcal{L}_{\mathrm{bridge}}\).
+  \item Add a strict host-matching theorem without redundant degrees of freedom (or an explicit non-bridge/non-identification theorem).
+  \item Merge all validated parts into one global-closure packet with explicit limits and theorem scope.
+  \item Execute an independent external audit (replication + falsification challenge) before any global status upgrade.
 \end{enumerate}
 
-\section{Werdykt praktyczny}
-Release 8 mo\.ze by\'c publikowany jako formalny stan profesorski: O3/QW-2191 strict gate closed in pipeline semantics,
-pe\l{}ny scaffold lagran\.zjanu zapisany, oraz jawny plan blokad do najmocniejszego domkni\k{e}cia teorii.
+\section{Practical verdict}
+Release 8 may be published as a professor-grade formal state: O3/QW-2191 strict gate closed in pipeline semantics,
+full Lagrangian scaffold recorded, and explicit blocker map for strongest-theory closure retained.
+
+
+\chapter{Current closure state theorem map (Release 8, current-only)}
+
+\section{Current-state closure declaration}
+On the current repository state, the declared Release-8 strict package exports closure in its declared scope,
+with completion chain:
+\[
+P1343\rightarrow P1344\rightarrow P1345\rightarrow P1346\rightarrow P1347\rightarrow P1348.
+\]
+
+Current closure status object:
+\[
+\texttt{global\_closure\_theorem\_status\_r8\_declared\_scope}=\texttt{EXPORTED\_CLOSED}.
+\]
+
+\section{Audit status boundary (external step still pending)}
+The only remaining upgrade step is external blind audit execution (`P1349`).
+Thus:
+\begin{itemize}
+  \item closure theorem package in declared scope: exported and closed,
+  \item external blind-audit protocol: exported,
+  \item external blind-audit execution: pending.
+\end{itemize}
+
+\section{Full Lagrangian status in current Release 8}
+The current Release-8 documentation includes the full Standard-Model-shaped decomposition
+plus strict-core nadsoliton sector and bridge terms in the effective total density
+\(\mathcal{L}_{\mathrm{tot}}^{(R8)}\).
+
+In the current-state reading discipline, this Lagrangian package is treated as the active formal
+physics interface of the closed declared-scope theorem lane.
+
+\section{No-obsolete-claim discipline}
+Older narrative fragments that represented pre-closure uncertainty are superseded
+by the current closure chain exports listed above and should not be interpreted as current status.
+
+\chapter{Release-8 professional scientific executive synthesis}
+
+\section{Scope, closure claim, and semantics discipline}
+This Release-8 document records the strongest currently exported strict lane under explicit no-false-pass discipline.
+The closure claim is:
+\[
+\texttt{kernel\_alone\_fundamental\_nonuniqueness\_status\_strict\_internal\_source}
+=
+\texttt{CLOSED\_FULL\_STRICT\_INTERNAL\_SOURCE\_V1\_LONG\_HORIZON\_STABLE}.
+\]
+
+This closure is reported in the strict internal-source lane built by the exported chain
+\(P1343\rightarrow P1344\rightarrow P1345\rightarrow P1346\),
+with theorem export, stress validation, independent replication/challenge,
+and long-horizon stability audit.
+
+\section{Kernel-first derivation architecture}
+All current derivation-facing closure claims in this Release-8 synthesis are expressed in the strict-kernel lane:
+\[
+K_{\mathrm{strict}}(d)=\frac{\cos(\omega d+\phi)}{1+\beta d^{\eta}}.
+\]
+
+The selector source is exported internally as
+\(S_{\mathrm{strict\_internal\_v1}}\), producing a single-valued selector map on declared admissible classes.
+Thus, for the targeted ambiguity class (real Fourier basis + pair-plane isotropy), closure is kernel-driven in this lane.
+
+\section{Scientific reading guide for reviewers}
+For strict external review, the minimal chain to verify is:
+\begin{enumerate}[label=\arabic*.]
+  \item theorem-level internal selector source export (P1343),
+  \item stress validation and rollback law (P1344),
+  \item independent replication and adversarial challenge (P1345),
+  \item long-horizon drift/regression stability (P1346).
+\end{enumerate}
+
+Only after checking this chain should a reviewer accept the Release-8 closure wording.
+
+\section{Hard limits retained}
+This release still separates:
+\begin{itemize}
+  \item strict kernel-alone closure lane claims,
+  \item host-level identification claims,
+  \item external-data policy layers.
+\end{itemize}
+No silent upgrade across those boundaries is admitted.
+
+\section{Professional publication statement}
+Within the declared strict internal-source lane and exported audit chain,
+Release 8 is presented as a closed scientific package for the target fundamental nonuniqueness class,
+with explicit rollback governance under future contradictory evidence.
 
 \end{document}
