@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import csv
 import json
 from pathlib import Path
 
@@ -27,7 +28,16 @@ def main() -> None:
 
     out_path = out_dir / "p1520_s470_strict_f_to_lsm_plus_lgr_next_honest_step_summary.json"
     out_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+    csv_path = out_dir / "p1520_s470_strict_f_to_lsm_plus_lgr_next_honest_step_required_objects.csv"
+    with csv_path.open("w", encoding="utf-8", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["order", "required_object"])
+        for i, item in enumerate(summary["next_required_objects"], start=1):
+            writer.writerow([i, item])
+
     print(f"[P1520] wrote {out_path}")
+    print(f"[P1520] wrote {csv_path}")
 
 
 if __name__ == "__main__":
