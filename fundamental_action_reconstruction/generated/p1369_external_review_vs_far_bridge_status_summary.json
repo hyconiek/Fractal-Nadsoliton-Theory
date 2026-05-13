@@ -1,0 +1,46 @@
+{
+  "as_of": "2026-05-12",
+  "bridge_verdict": "FAR_HAS_BRIDGE_ATTEMPTS_AND_TESTS_BUT_NOT_YET_STRICT_VERIFIED_SM_GR_CLOSURE",
+  "matrix": [
+    {
+      "evidence": [
+        "A6_GAUGE_RECONSTRUCTION_SPEC.md",
+        "P1361_FAR_CONSTANT_CLAIMS_SCOREBOARD_PACKET_PL.md"
+      ],
+      "far_status": "consistent_with_repo_state",
+      "note": "FAR has partial strict candidates/scaffold, not full strict-verified closure.",
+      "review_claim": "No full SM derivation yet"
+    },
+    {
+      "evidence": [
+        "P1360_FAR_PHYSICAL_CONSTANT_DERIVATIONS_SENSIBILITY_AND_POST_R81_PRECISION_PACKET_PL.md",
+        "P1368_GAIN_SUPPRESS_SWEEP_AND_HOLDOUT_READINESS_PACKET_PL.md"
+      ],
+      "far_status": "consistent_with_repo_state",
+      "note": "GR lane still open at strict-verified level.",
+      "review_claim": "No full GR derivation yet"
+    },
+    {
+      "evidence": [
+        "P1362_STRICT_CANDIDATE_RESIDUAL_BENCHMARK_AND_UNCERTAINTY_BUDGET_PACKET_PL.md",
+        "P1363_STRICT_UPGRADE_GATE_AND_BLOCKER_REGISTRY_PACKET_PL.md",
+        "P1365_PULLREQUEST_ARTIFACT_COMPLETENESS_PACKET_PL.md"
+      ],
+      "far_status": "confirmed",
+      "note": "No-false-pass, upgrade gate, artifact completeness checks are operationalized.",
+      "review_claim": "Framework has formal discipline"
+    },
+    {
+      "evidence": [
+        "P1358_STRICT_KERNEL_ONLY_CANDIDATE_VALUE_GENERATION_AND_FIRST_RESIDUAL_VERDICT_PL.md",
+        "P1367_HEBBIAN_MODE_GAIN_TEST_AND_GOVERNANCE_LOOP_PACKET_PL.md",
+        "P1368_GAIN_SUPPRESS_SWEEP_AND_HOLDOUT_READINESS_PACKET_PL.md"
+      ],
+      "far_status": "partially_addressed",
+      "note": "FAR now runs falsifiable residual tests, but current class still fails thresholds.",
+      "review_claim": "Need falsifiable predictions"
+    }
+  ],
+  "next_priority": "P1370_BRIDGE_EVIDENCE_COMPILER_WITH_SM_GR_MINIMUM_SUCCESS_CRITERIA",
+  "packet": "P1369"
+}

@@ -1,0 +1,51 @@
+{
+  "checkpoint_id": "P1414-SST1C",
+  "as_of": "2026-05-13",
+  "target": "F_nadsoliton => L_SM + L_GR",
+  "mode": "strict_only_no_legacy_bridge",
+  "source_dependency": "P1413 converged selector candidate",
+  "transport_cases": [
+    {
+      "case": "T0_baseline",
+      "selector_score": 0.4095
+    },
+    {
+      "case": "T1_scale_shift",
+      "selector_score": 0.4048
+    },
+    {
+      "case": "T2_scheme_shift",
+      "selector_score": 0.4011
+    },
+    {
+      "case": "T3_boundary_shift",
+      "selector_score": 0.3979
+    }
+  ],
+  "transport_drift_checks": [
+    {
+      "case": "T1_scale_shift",
+      "abs_drift": 0.0047,
+      "eps_tol": 0.01,
+      "pass": true
+    },
+    {
+      "case": "T2_scheme_shift",
+      "abs_drift": 0.0084,
+      "eps_tol": 0.01,
+      "pass": true
+    },
+    {
+      "case": "T3_boundary_shift",
+      "abs_drift": 0.0116,
+      "eps_tol": 0.01,
+      "pass": false
+    }
+  ],
+  "transport_robustness_pass": false,
+  "verdict": "FAIL_STRICT_TRANSPORT_DRIFT",
+  "status": "NO_FALSE_PASS",
+  "next_action": "export selector_obstruction_v1 and pivot noncyclic provider class",
+  "scope_of_pass": "local_contract",
+  "strict_core_qw2191_closed": false
+}

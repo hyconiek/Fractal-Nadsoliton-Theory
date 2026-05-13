@@ -1,0 +1,19 @@
+{
+  "checkpoint_id": "P1421-UNIQ-PRECHECK",
+  "as_of": "2026-05-13",
+  "target": "F_nadsoliton => L_SM + L_GR",
+  "mode": "strict_only_no_legacy_bridge",
+  "input_dependency": "P1420 PASS_PC8_RS2_RUN1",
+  "precheck": {
+    "strict_internal_selector_map_exported": true,
+    "noncyclic_provider_chain": true,
+    "transport_replay_thresholds_satisfied": true,
+    "uniqueness_certificate_exported": false,
+    "qw2191_discharge_proof_present": false
+  },
+  "verdict": "FAIL_UNIQUENESS_DISCHARGE_MISSING_CERTIFICATE",
+  "status": "NO_FALSE_PASS",
+  "next_action": "export uniqueness obstruction and design certificate-construction checkpoint P1422",
+  "scope_of_pass": "local_contract",
+  "strict_core_qw2191_closed": false
+}

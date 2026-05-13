@@ -1,0 +1,23 @@
+{
+  "packet": "P1441",
+  "status": "BIFURCATION_DECLARED",
+  "route": "F-Nadsoliton=>L_SM+L_GR",
+  "input_state": "P1440_FAIL_V3_ASYMMETRY_OPERATOR_INSUFFICIENT",
+  "branch_A_strict": {
+    "name": "v4_strict_internal_selector_source_attempt",
+    "allowed": true,
+    "requires_new_strict_operator": true,
+    "global_closure_claim_allowed": false
+  },
+  "branch_B_non_strict": {
+    "name": "explicit_non_strict_selector_premise_branch",
+    "allowed": true,
+    "must_be_explicitly_labeled_non_strict": true,
+    "global_closure_claim_allowed": false
+  },
+  "legacy_import_used": false,
+  "qw2191_boundary_state": "OPEN_UNIQUENESS_OBSTRUCTION",
+  "scope_of_pass": "local_contract",
+  "strict_core_qw2191_closed": false,
+  "next_honest_step": "execute branch_A_v4_strict first; keep branch_B as clearly separated fallback"
+}

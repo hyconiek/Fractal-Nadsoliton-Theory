@@ -1,0 +1,38 @@
+{
+  "checkpoint_id": "P1412-SST1",
+  "as_of": "2026-05-13",
+  "target": "F_nadsoliton => L_SM + L_GR",
+  "mode": "strict_only_no_legacy_bridge",
+  "strict_sources": [
+    "K_strict_gate",
+    "nadsoliton_ontology_lane",
+    "alpha_geo_strict_derived_v1=4ln2",
+    "strict_route_constraints_exported"
+  ],
+  "assumption_contract": {
+    "new_axioms_allowed": false,
+    "silent_legacy_role_transfer_allowed": false,
+    "cyclic_l5_l12_regeneration_allowed": false,
+    "requires_selector_source_inside_strict_core": true
+  },
+  "selector_source_test": {
+    "selector_map_v1_exported": false,
+    "uniqueness_discharge": false,
+    "transport_robustness_pass": false,
+    "dual_replay_pass": false
+  },
+  "verdict": "FAIL_STRICT_SELECTOR_SOURCE_MISSING",
+  "fail_reasons": [
+    "QW-2191 uniqueness obstruction still active on current strict-core state",
+    "No exported strict-internal selector map satisfying no-new-axiom rule"
+  ],
+  "next_required_artifacts": [
+    "strict_assumptions_used_v1.json",
+    "selector_map_v1.json",
+    "selector_obstruction_v1.json",
+    "sst1_dual_replay_summary_v1.json"
+  ],
+  "status": "NO_FALSE_PASS",
+  "scope_of_pass": "local_contract",
+  "strict_core_qw2191_closed": false
+}

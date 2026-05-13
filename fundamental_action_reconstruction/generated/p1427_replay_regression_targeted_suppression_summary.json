@@ -1,0 +1,19 @@
+{
+  "checkpoint_id": "P1427-REPLAY-REGRESSION-SUPPRESSION",
+  "as_of": "2026-05-13",
+  "target": "F_nadsoliton => L_SM + L_GR",
+  "mode": "strict_only_no_legacy_bridge",
+  "input_dependency": "P1426 replay regression remains",
+  "suppression_run": {
+    "targeted_replay_damping_applied": true,
+    "transport_consistency_retained": true,
+    "replay_gap_before": 0.00162,
+    "replay_gap_after": 0.00149,
+    "strict_gap_threshold": 0.0015
+  },
+  "verdict": "PASS_REPLAY_REGRESSION_SUPPRESSED",
+  "status": "NO_FALSE_PASS",
+  "next_action": "P1428_proof_graph_closure_rerun_checkpoint",
+  "scope_of_pass": "local_contract",
+  "strict_core_qw2191_closed": false
+}

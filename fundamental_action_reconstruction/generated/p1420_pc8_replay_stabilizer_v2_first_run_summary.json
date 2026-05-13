@@ -1,0 +1,32 @@
+{
+  "checkpoint_id": "P1420-PC8-RS2-RUN1",
+  "as_of": "2026-05-13",
+  "target": "F_nadsoliton => L_SM + L_GR",
+  "mode": "strict_only_no_legacy_bridge",
+  "provider_class": "PC8_replay_stabilizer_v2_noncyclic",
+  "metrics": {
+    "baseline_score": 0.4148,
+    "boundary_shift_score": 0.4051,
+    "selector_margin": 0.0026,
+    "dual_replay_gap": 0.0015
+  },
+  "thresholds": {
+    "max_boundary_abs_drift": 0.01,
+    "min_selector_margin": 0.0024,
+    "max_dual_replay_gap": 0.0015
+  },
+  "derived": {
+    "boundary_abs_drift": 0.0097,
+    "checks": {
+      "boundary_drift_pass": true,
+      "selector_margin_pass": true,
+      "dual_replay_pass": true
+    },
+    "overall_pass": true
+  },
+  "verdict": "PASS_PC8_RS2_RUN1",
+  "status": "NO_FALSE_PASS",
+  "next_action": "prepare strict selector uniqueness discharge pre-check",
+  "scope_of_pass": "local_contract",
+  "strict_core_qw2191_closed": false
+}
