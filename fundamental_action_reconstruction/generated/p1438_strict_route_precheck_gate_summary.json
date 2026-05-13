@@ -1,0 +1,12 @@
+{
+  "packet": "P1438",
+  "status": "PASS_PRECHECK_GATE_OPEN",
+  "route": "F-Nadsoliton=>L_SM+L_GR",
+  "required_precheck": "p1435_pass_scope_enforcement_gate_summary.status == PASS_ENFORCEMENT_GATE",
+  "observed_gate_status": "PASS_ENFORCEMENT_GATE",
+  "legacy_import_used": false,
+  "policy": "block_new_p14xx_checkpoint_publication_when_precheck_fails",
+  "next_honest_step": "if PASS continue strict selector-source work; if FAIL remediate gate first",
+  "scope_of_pass": "local_contract",
+  "strict_core_qw2191_closed": false
+}

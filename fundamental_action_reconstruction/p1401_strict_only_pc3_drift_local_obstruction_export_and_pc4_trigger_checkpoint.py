@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+"""P1401 checkpoint: export PC3 drift obstruction and trigger PC4."""
+
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent
+IN_PATH = ROOT / "generated" / "p1400_strict_only_pc3_edge_robustness_sweep_summary.json"
+OUT_PATH = ROOT / "generated" / "p1401_strict_only_pc3_drift_local_obstruction_export_and_pc4_trigger_summary.json"
+
+
+def main() -> None:
+    p1400 = json.loads(IN_PATH.read_text(encoding="utf-8"))
+    robust_fail = p1400.get("pc3_edge_robustness_verdict") == "ROBUST_FAIL"
+
+    summary = {
+        "packet_id": "P1401",
+        "strict_only": True,
+        "legacy_bridge_used": False,
+        "input_packet": "P1400",
+        "input_verdict": p1400.get("pc3_edge_robustness_verdict", "UNKNOWN"),
+        "pc3_local_obstruction_id": "PC3-DRIFT-v1" if robust_fail else "NOT_APPLICABLE",
+        "pc3_local_obstruction_status": "EXPORTED" if robust_fail else "NOT_EXPORTED",
+        "pc3_loop_status": "CLOSED_NONCYCLIC" if robust_fail else "OPEN",
+        "pc4_trigger": "ACTIVATED" if robust_fail else "NOT_ACTIVATED",
+        "l_b1_03_export_status": "NOT_EXPORTED",
+        "b1_status": "OPEN",
+        "next_packet": "P1402_STRICT_ONLY_PC4_PROVIDER_BASELINE_DESIGN",
+        "no_false_pass": True,
+    }
+
+    OUT_PATH.write_text(json.dumps(summary, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    print(f"[P1401] wrote: {OUT_PATH}")
+
+
+if __name__ == "__main__":
+    main()

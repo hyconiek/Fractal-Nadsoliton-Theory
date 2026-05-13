@@ -1,0 +1,32 @@
+{
+  "checkpoint_id": "P1418-PC8-RUN1",
+  "as_of": "2026-05-13",
+  "target": "F_nadsoliton => L_SM + L_GR",
+  "mode": "strict_only_no_legacy_bridge",
+  "provider_class": "PC8",
+  "metrics": {
+    "baseline_score": 0.4142,
+    "boundary_shift_score": 0.4044,
+    "selector_margin": 0.0025,
+    "dual_replay_gap": 0.0016
+  },
+  "thresholds": {
+    "max_boundary_abs_drift": 0.01,
+    "min_selector_margin": 0.0024,
+    "max_dual_replay_gap": 0.0015
+  },
+  "derived": {
+    "boundary_abs_drift": 0.0098,
+    "checks": {
+      "boundary_drift_pass": true,
+      "selector_margin_pass": true,
+      "dual_replay_pass": false
+    },
+    "overall_pass": false
+  },
+  "verdict": "FAIL_PC8_REPLAY_GAP",
+  "status": "NO_FALSE_PASS",
+  "next_action": "export replay-gap obstruction and calibrate PC8 replay stabilizer without threshold relaxation",
+  "scope_of_pass": "local_contract",
+  "strict_core_qw2191_closed": false
+}

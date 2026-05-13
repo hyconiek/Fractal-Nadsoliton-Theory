@@ -1,0 +1,30 @@
+{
+  "checkpoint_id": "P1413-SST1B",
+  "as_of": "2026-05-13",
+  "target": "F_nadsoliton => L_SM + L_GR",
+  "mode": "strict_only_no_legacy_bridge",
+  "inputs": {
+    "team_a_selector_map": "generated/p1413_sst1b_team_a_selector_map_v1.csv",
+    "team_b_selector_map": "generated/p1413_sst1b_team_b_selector_map_v1.csv"
+  },
+  "comparison": {
+    "team_a_best": {
+      "mode": "strict_core",
+      "selector_label": "candidate_S1",
+      "score": "0.4100"
+    },
+    "team_b_best": {
+      "mode": "strict_core",
+      "selector_label": "candidate_S1",
+      "score": "0.4090"
+    },
+    "same_label": true,
+    "score_gap": 0.001,
+    "gap_tolerance": 0.0015
+  },
+  "dual_replay_pass": true,
+  "verdict": "PASS_STRICT_REPLAY",
+  "status": "NO_FALSE_PASS",
+  "scope_of_pass": "local_contract",
+  "strict_core_qw2191_closed": false
+}

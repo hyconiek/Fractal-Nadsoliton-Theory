@@ -1,0 +1,33 @@
+{
+  "checkpoint_id": "P1415-PC7",
+  "as_of": "2026-05-13",
+  "target": "F_nadsoliton => L_SM + L_GR",
+  "mode": "strict_only_no_legacy_bridge",
+  "trigger_source": "P1414 FAIL_STRICT_TRANSPORT_DRIFT",
+  "design_principles": {
+    "noncyclic_anchor_required": true,
+    "reuse_same_blocker_cut_for_loop_expansion": false,
+    "new_provider_class": "PC7",
+    "legacy_role_transfer_allowed": false,
+    "new_axioms_allowed": false
+  },
+  "pc7_constructor": {
+    "name": "boundary_damped_selector_mixture_v1",
+    "mechanism": "boundary-local damping + selector margin regularization",
+    "strict_inputs": [
+      "K_strict_gate",
+      "nadsoliton_ontology_lane",
+      "alpha_geo_strict_derived_v1",
+      "strict_route_constraints"
+    ]
+  },
+  "pre_registered_targets": {
+    "t3_boundary_shift_abs_drift_max": 0.01,
+    "selector_margin_min": 0.002,
+    "dual_replay_gap_max": 0.0015
+  },
+  "status": "DESIGN_FROZEN_READY_FOR_RUN",
+  "next_checkpoint": "P1416_PC7_first_transport_run",
+  "scope_of_pass": "local_contract",
+  "strict_core_qw2191_closed": false
+}
