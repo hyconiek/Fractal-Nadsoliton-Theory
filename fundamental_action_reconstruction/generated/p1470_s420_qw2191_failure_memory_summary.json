@@ -1,0 +1,82 @@
+{
+  "packet": "P1470",
+  "status": "PASS_QW2191_FAILURE_MEMORY_LOCAL_ONLY",
+  "scope": "LOCAL_ONLY_NON_GLOBAL_CLAIM",
+  "strict_core_qw2191_closed": false,
+  "legacy_bridge_used": false,
+  "anti_patterns": [
+    {
+      "id": "AP1_viscosity_as_primary_selector_source",
+      "why_failed": "Viscosity lanes stayed secondary/anchor-imported and did not generate selector source.",
+      "avoid_repetition_rule": "Do not claim viscosity-only closure for QW-2191."
+    },
+    {
+      "id": "AP2_proxy_without_pair1_selector_block",
+      "why_failed": "Proxy reductions did not export a concrete pair1 selector-sector witness.",
+      "avoid_repetition_rule": "Require explicit pair1 selector block before closure talk."
+    },
+    {
+      "id": "AP3_grammar_or_certificate_without_discharge",
+      "why_failed": "Route grammar/certificate specs existed but discharge was not completed.",
+      "avoid_repetition_rule": "Do not equate theorem spec with executed discharge."
+    },
+    {
+      "id": "AP4_local_pass_overclaim",
+      "why_failed": "Local improvements can fail holdout/edge checks if generalized too early.",
+      "avoid_repetition_rule": "Keep claims local until stress-edge and guardrails remain stable."
+    }
+  ],
+  "source_hits": [
+    {
+      "file": "V1_INFORMATIONAL_VISCOSITY_HYPOTHESIS_AUDIT.md",
+      "mentions_qw2191": true,
+      "mentions_no_claim": true
+    },
+    {
+      "file": "V2_VISCOSITY_PROXY_TO_PAIR1_REDUCTION_AUDIT.md",
+      "mentions_qw2191": true,
+      "mentions_no_claim": true
+    },
+    {
+      "file": "V3_MINIMAL_PAIR_LEVEL_VISCOSITY_OPERATOR_AUDIT.md",
+      "mentions_qw2191": false,
+      "mentions_no_claim": true
+    },
+    {
+      "file": "V4_PSI0_COUPLED_VISCOSITY_EFFECT_AUDIT.md",
+      "mentions_qw2191": true,
+      "mentions_no_claim": true
+    },
+    {
+      "file": "V5_PSI0_VISCOSITY_ANTI_OVERCLAIM_BOUNDARY_AUDIT.md",
+      "mentions_qw2191": false,
+      "mentions_no_claim": false
+    },
+    {
+      "file": "V6_PSI0_VISCOSITY_DISTINCT_EFFECT_AUDIT.md",
+      "mentions_qw2191": true,
+      "mentions_no_claim": true
+    },
+    {
+      "file": "V7_INFORMATIONAL_VISCOSITY_CURRENT_BEST_SUPPORTED_CONCLUSION.md",
+      "mentions_qw2191": true,
+      "mentions_no_claim": true
+    },
+    {
+      "file": "T6_ROUTE_FAMILY_CLOSURE_CERTIFICATE_THEOREM_SPEC.md",
+      "mentions_qw2191": true,
+      "mentions_no_claim": true
+    },
+    {
+      "file": "T7_ROUTE_FAMILY_CLOSURE_CERTIFICATE_DISCHARGE_ATTEMPT.md",
+      "mentions_qw2191": true,
+      "mentions_no_claim": true
+    },
+    {
+      "file": "T9_ROUTE_ADMISSIBILITY_GRAMMAR_DISCHARGE_ATTEMPT.md",
+      "mentions_qw2191": true,
+      "mentions_no_claim": true
+    }
+  ],
+  "next_rule": "Every new QW-2191 proposal must reference P1470 anti-pattern compliance."
+}

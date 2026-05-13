@@ -1,0 +1,23 @@
+{
+  "packet": "P1465",
+  "status": "PASS_POLICY_CORE_REFACTOR_LOCAL_ONLY",
+  "scope": "LOCAL_ONLY_NON_GLOBAL_CLAIM",
+  "strict_core_qw2191_closed": false,
+  "legacy_bridge_used": false,
+  "checks": {
+    "p1463_status": "PASS_POLICY_GATE_ACTIVE",
+    "p1463_blocked_count": 1,
+    "p1464_status": "PASS_GATE_INTEGRATION_DRYRUN",
+    "p1464_blocked_count": 1
+  },
+  "rerun_logs": [
+    {
+      "cmd": "python3 /workspace/Fractal-Nadsoliton-Theory/fundamental_action_reconstruction/p1463_s413_policy_aware_rerun_gate_checkpoint.py",
+      "stdout": "[P1463] status=PASS_POLICY_GATE_ACTIVE blocked=1"
+    },
+    {
+      "cmd": "python3 /workspace/Fractal-Nadsoliton-Theory/fundamental_action_reconstruction/p1464_s414_gate_integration_dryrun_checkpoint.py",
+      "stdout": "[P1464] status=PASS_GATE_INTEGRATION_DRYRUN blocked=1"
+    }
+  ]
+}

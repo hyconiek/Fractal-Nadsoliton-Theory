@@ -1,0 +1,72 @@
+{
+  "packet": "P1514",
+  "status": "PASS_A4_STAR_THEOREM_UPDATE_AND_EXPANDED_RERUN",
+  "scope": "STRICT_ONLY_F_NADSOLITON_TO_LSM_PLUS_LGR",
+  "theorem_update": {
+    "replaced_condition": "A4 -> A4*",
+    "A4_star_definition": "shared_orientation AND orientation_margin >= 0.5"
+  },
+  "expanded_contradiction_rerun": {
+    "trial_count": 7,
+    "pass_count": 3,
+    "fail_count": 4,
+    "fails": [
+      {
+        "orientation_internal": "neutral",
+        "orientation_fmap": "neutral",
+        "margin": 0.25,
+        "assumptions": {
+          "A1_selector_positive": true,
+          "A2_selector_strict_internal": true,
+          "A3_weight_normalization": true,
+          "A4_star": false,
+          "A5_no_legacy_bridge": true
+        },
+        "pass": false
+      },
+      {
+        "orientation_internal": "SM_preferred",
+        "orientation_fmap": "GR_preferred",
+        "margin": 0.0,
+        "assumptions": {
+          "A1_selector_positive": true,
+          "A2_selector_strict_internal": true,
+          "A3_weight_normalization": true,
+          "A4_star": false,
+          "A5_no_legacy_bridge": true
+        },
+        "pass": false
+      },
+      {
+        "orientation_internal": "GR_preferred",
+        "orientation_fmap": "SM_preferred",
+        "margin": 0.0,
+        "assumptions": {
+          "A1_selector_positive": true,
+          "A2_selector_strict_internal": true,
+          "A3_weight_normalization": true,
+          "A4_star": false,
+          "A5_no_legacy_bridge": true
+        },
+        "pass": false
+      },
+      {
+        "orientation_internal": "mixed",
+        "orientation_fmap": "neutral",
+        "margin": 0.0,
+        "assumptions": {
+          "A1_selector_positive": true,
+          "A2_selector_strict_internal": true,
+          "A3_weight_normalization": true,
+          "A4_star": false,
+          "A5_no_legacy_bridge": true
+        },
+        "pass": false
+      }
+    ]
+  },
+  "qw2191_closed": false,
+  "legacy_bridge_used": false,
+  "next_honest_step": "Implement P1515 robust-orientation envelope export and attach it as formal admissibility annex to the strict coupled theorem draft.",
+  "layman_explanation": "Zaostrzyliśmy warunek kierunku i ponownie przepuściliśmy trudniejsze testy. Silne, zgodne ustawienia przechodzą, a słabe lub sprzeczne ustawienia są odrzucane — dokładnie tak powinno działać uczciwe sito naukowe."
+}

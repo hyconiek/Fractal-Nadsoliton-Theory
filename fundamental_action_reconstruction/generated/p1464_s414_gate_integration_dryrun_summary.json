@@ -1,0 +1,34 @@
+{
+  "packet": "P1464",
+  "status": "PASS_GATE_INTEGRATION_DRYRUN",
+  "scope": "LOCAL_ONLY_NON_GLOBAL_CLAIM",
+  "strict_core_qw2191_closed": false,
+  "legacy_bridge_used": false,
+  "policy_band": {
+    "delta_min": 0.001,
+    "delta_max": 0.002
+  },
+  "candidates": [
+    {
+      "label": "in_band_candidate",
+      "delta": 0.0015,
+      "gate_status": "PASS_GATE_IN_BAND",
+      "rerun_executed": true,
+      "rerun_result": {
+        "gain": 0.0025000000000000022,
+        "gain_ok": true,
+        "replay_gap": 0.002,
+        "replay_ok": true,
+        "status": "PASS"
+      }
+    },
+    {
+      "label": "out_of_band_candidate",
+      "delta": 0.0009,
+      "gate_status": "FAIL_POLICY_BAND_VIOLATION",
+      "rerun_executed": false,
+      "rerun_result": null
+    }
+  ],
+  "blocked_count": 1
+}

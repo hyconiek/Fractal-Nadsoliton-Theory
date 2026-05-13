@@ -1,0 +1,31 @@
+{
+  "packet": "P1482",
+  "status": "PASS_STRICT_NEXT_STEP_READY",
+  "scope": "LOCAL_ONLY_NON_GLOBAL_CLAIM",
+  "route": "strict_only_F_to_LSM_plus_LGR",
+  "checks": {
+    "strict_only": true,
+    "no_legacy_bridge": true,
+    "qw2191_closed": false,
+    "sp1_local_delta_positive": true,
+    "sp1_cross_scenario_pass": true,
+    "recommended_shift_in_policy_window": true
+  },
+  "observables": {
+    "delta_local_sp1_minus_baseline": 0.026000000000000023,
+    "probe_shift": -0.024,
+    "safe_shift_min": -0.024,
+    "safe_shift_max": 0.0
+  },
+  "next_honest_step": {
+    "id": "S4.33",
+    "name": "strict_sector_split_probe",
+    "objective": "Construct explicit split candidate F => L_SM + L_GR with bounded mixed term under SP1 policy gate.",
+    "acceptance": [
+      "No legacy-bridge dependency",
+      "No strict-core closure claim",
+      "Explicit sector separation witness for SM-like and GR-like channels",
+      "Selector obstruction QW-2191 stays explicit unless new selector premise is added"
+    ]
+  }
+}

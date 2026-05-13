@@ -1,0 +1,49 @@
+{
+  "packet": "P1515",
+  "status": "PASS_ROBUST_ORIENTATION_ENVELOPE_EXPORTED",
+  "scope": "STRICT_ONLY_F_NADSOLITON_TO_LSM_PLUS_LGR",
+  "orientation_envelope": {
+    "criterion": "A4* = shared_orientation AND orientation_margin >= 0.5",
+    "robust_pairs": [
+      {
+        "internal": "SM_preferred",
+        "fmap": "SM_preferred"
+      },
+      {
+        "internal": "GR_preferred",
+        "fmap": "GR_preferred"
+      },
+      {
+        "internal": "mixed",
+        "fmap": "mixed"
+      }
+    ],
+    "rejected_pairs": [
+      {
+        "internal": "neutral",
+        "fmap": "neutral"
+      },
+      {
+        "internal": "SM_preferred",
+        "fmap": "GR_preferred"
+      },
+      {
+        "internal": "GR_preferred",
+        "fmap": "SM_preferred"
+      },
+      {
+        "internal": "mixed",
+        "fmap": "neutral"
+      }
+    ]
+  },
+  "counts": {
+    "robust_pair_count": 3,
+    "rejected_pair_count": 4
+  },
+  "admissibility_annex_ready": true,
+  "qw2191_closed": false,
+  "legacy_bridge_used": false,
+  "next_honest_step": "Implement P1516 theorem-annex consistency lock: enforce envelope membership in all future strict coupled theorem evaluations.",
+  "layman_explanation": "Stworzyliśmy oficjalną listę ustawień kierunku, które są bezpieczne dla modelu. To jak instrukcja: te konfiguracje wolno używać, a pozostałe trzeba odrzucać."
+}

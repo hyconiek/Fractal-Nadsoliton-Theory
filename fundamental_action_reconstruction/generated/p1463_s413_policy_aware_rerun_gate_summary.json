@@ -1,0 +1,25 @@
+{
+  "packet": "P1463",
+  "status": "PASS_POLICY_GATE_ACTIVE",
+  "scope": "LOCAL_ONLY_NON_GLOBAL_CLAIM",
+  "strict_core_qw2191_closed": false,
+  "legacy_bridge_used": false,
+  "policy_id": "h2_delta_safety_band_v1",
+  "band": {
+    "delta_min": 0.001,
+    "delta_max": 0.002
+  },
+  "decisions": [
+    {
+      "delta": 0.0015,
+      "gate_status": "PASS_GATE_IN_BAND",
+      "allow_rerun": true
+    },
+    {
+      "delta": 0.0009,
+      "gate_status": "FAIL_POLICY_BAND_VIOLATION",
+      "allow_rerun": false
+    }
+  ],
+  "blocked_count": 1
+}

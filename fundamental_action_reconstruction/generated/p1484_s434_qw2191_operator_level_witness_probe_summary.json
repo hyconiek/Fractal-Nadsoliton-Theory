@@ -1,0 +1,23 @@
+{
+  "packet": "P1484",
+  "status": "PASS_OPERATOR_WITNESS_LOCAL_ONLY",
+  "scope": "LOCAL_ONLY_NON_GLOBAL_CLAIM",
+  "route": "strict_only_F_to_LSM_plus_LGR",
+  "witnesses": {
+    "sm_witness": 0.016900000000000016,
+    "gr_witness": 0.009100000000000007,
+    "mix_witness": 3.380000000000006e-05
+  },
+  "checks": {
+    "strict_only": true,
+    "no_legacy_bridge": true,
+    "qw2191_closed": false,
+    "sm_witness_positive": true,
+    "gr_witness_positive": true,
+    "mix_below_sm": true,
+    "mix_below_gr": true,
+    "mix_within_policy_cap": true
+  },
+  "next_step_recommendation": "S4.35: promote witness equations to explicit symbolic operator identities and run selector-sensitivity sweep over admissible SP1 shifts.",
+  "layman_explanation": "Sprawdziliśmy, czy dwa główne składniki (cząstki i grawitacja) dają wyraźny sygnał dodatni, a składnik mieszany pozostaje mały i pod kontrolą. To znaczy: model nie miesza wszystkiego chaotycznie."
+}

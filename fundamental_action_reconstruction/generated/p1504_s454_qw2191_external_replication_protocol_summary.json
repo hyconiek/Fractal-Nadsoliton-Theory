@@ -1,0 +1,20 @@
+{
+  "packet": "P1504",
+  "status": "PASS_EXTERNAL_REPLICATION_PROTOCOL_READY",
+  "scope": "STRICT_ONLY_EXTERNAL_REPLICATION_PREP",
+  "upstream_prereq": {
+    "p1503_status": "PASS_STRICT_PHYSICAL_NEXT_HONEST_STEP_DEFINED",
+    "p1503_ready": true
+  },
+  "replication_gate": {
+    "replication_manifest_complete": true,
+    "strict_input_lock_confirmed": true,
+    "falsifier_protocol_explicit": true,
+    "signature_template_ready": true
+  },
+  "replication_gate_pass": true,
+  "qw2191_closed": false,
+  "legacy_bridge_used": false,
+  "next_honest_step": "Execute independent cross-lab replication run and collect a signed reproducibility report.",
+  "layman_explanation": "To jest instrukcja kontroli jakości przed finałem: zanim uznamy, że problem zamknięty, niezależny zespół musi powtórzyć wynik według tych samych, jawnych zasad."
+}

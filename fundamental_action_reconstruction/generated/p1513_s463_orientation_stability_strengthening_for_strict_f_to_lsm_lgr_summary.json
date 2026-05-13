@@ -1,0 +1,52 @@
+{
+  "packet": "P1513",
+  "status": "PASS_ORIENTATION_STABILITY_STRENGTHENED",
+  "scope": "STRICT_ONLY_F_NADSOLITON_TO_LSM_PLUS_LGR",
+  "A4_star_definition": "shared_orientation AND orientation_margin >= 0.5",
+  "orientation_table": [
+    {
+      "orientation_internal": "SM_preferred",
+      "orientation_fmap": "SM_preferred",
+      "orientation_margin": 1.0,
+      "A4_star": true,
+      "pass": true
+    },
+    {
+      "orientation_internal": "GR_preferred",
+      "orientation_fmap": "GR_preferred",
+      "orientation_margin": 1.0,
+      "A4_star": true,
+      "pass": true
+    },
+    {
+      "orientation_internal": "mixed",
+      "orientation_fmap": "mixed",
+      "orientation_margin": 0.5,
+      "A4_star": true,
+      "pass": true
+    },
+    {
+      "orientation_internal": "neutral",
+      "orientation_fmap": "neutral",
+      "orientation_margin": 0.25,
+      "A4_star": false,
+      "pass": false
+    },
+    {
+      "orientation_internal": "SM_preferred",
+      "orientation_fmap": "GR_preferred",
+      "orientation_margin": 0.0,
+      "A4_star": false,
+      "pass": false
+    }
+  ],
+  "counts": {
+    "robust_rows": 3,
+    "rejected_rows": 2
+  },
+  "main_finding": "A4* retains robust orientation states (SM/GR aligned strong, mixed aligned) and rejects neutral/contradictory orientation states.",
+  "qw2191_closed": false,
+  "legacy_bridge_used": false,
+  "next_honest_step": "Implement P1514 strict coupled theorem update replacing A4 with A4* and rerun contradiction branch with expanded orientation families.",
+  "layman_explanation": "Wzmocniliśmy najważniejszy warunek kierunku: teraz nie wystarczy sama zgodność etykiet, potrzebna jest też minimalna siła zgodności. To lepiej odróżnia przypadki stabilne od słabych."
+}
