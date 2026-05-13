@@ -1,0 +1,56 @@
+{
+  "packet": "P1461",
+  "status": "PASS_EDGE_VERIFICATION_LOCAL_ONLY",
+  "scope": "LOCAL_ONLY_NON_GLOBAL_CLAIM",
+  "strict_core_qw2191_closed": false,
+  "legacy_bridge_used": false,
+  "safety_band": {
+    "delta_min": 0.001,
+    "delta_max": 0.002
+  },
+  "expected_pattern": {
+    "edge_min": "PASS",
+    "edge_max": "PASS",
+    "outside_below": "FAIL",
+    "outside_above": "PASS"
+  },
+  "results": [
+    {
+      "label": "edge_min",
+      "delta": 0.001,
+      "gain": 0.0020000000000000018,
+      "gain_ok": true,
+      "replay_gap": 0.002,
+      "replay_ok": true,
+      "status": "PASS"
+    },
+    {
+      "label": "edge_max",
+      "delta": 0.002,
+      "gain": 0.0030000000000000027,
+      "gain_ok": true,
+      "replay_gap": 0.002,
+      "replay_ok": true,
+      "status": "PASS"
+    },
+    {
+      "label": "outside_below",
+      "delta": 0.0009,
+      "gain": 0.0019000000000000128,
+      "gain_ok": false,
+      "replay_gap": 0.002,
+      "replay_ok": true,
+      "status": "FAIL"
+    },
+    {
+      "label": "outside_above",
+      "delta": 0.0021,
+      "gain": 0.0030999999999999917,
+      "gain_ok": true,
+      "replay_gap": 0.002,
+      "replay_ok": true,
+      "status": "PASS"
+    }
+  ],
+  "expectation_mismatch_count": 0
+}

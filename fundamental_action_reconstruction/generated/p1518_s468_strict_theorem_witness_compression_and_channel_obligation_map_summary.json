@@ -1,0 +1,46 @@
+{
+  "packet": "P1518",
+  "status": "PASS_WITNESS_COMPRESSION_AND_CHANNEL_MAP",
+  "scope": "STRICT_ONLY_F_NADSOLITON_TO_LSM_PLUS_LGR",
+  "locked_witness_count": 2,
+  "minimal_basis_count": 2,
+  "minimal_basis": [
+    {
+      "orientation_pair": {
+        "internal": "SM_preferred",
+        "fmap": "SM_preferred"
+      },
+      "theorem_eval_allowed": true,
+      "lock_reason": "in_robust_envelope"
+    },
+    {
+      "orientation_pair": {
+        "internal": "mixed",
+        "fmap": "mixed"
+      },
+      "theorem_eval_allowed": true,
+      "lock_reason": "in_robust_envelope"
+    }
+  ],
+  "channel_obligation_map": {
+    "LSM_obligation": {
+      "requires_locked_basis_member": true,
+      "reference_orientation": {
+        "internal": "SM_preferred",
+        "fmap": "SM_preferred"
+      }
+    },
+    "LGR_obligation": {
+      "requires_locked_basis_member": true,
+      "reference_orientation": {
+        "internal": "mixed",
+        "fmap": "mixed"
+      }
+    }
+  },
+  "full_channel_coverage": true,
+  "qw2191_closed": false,
+  "legacy_bridge_used": false,
+  "next_honest_step": "Implement P1519 locked-basis stability replay across expanded perturbation grid and verify channel-coverage invariance.",
+  "layman_explanation": "Ścisnęliśmy dowód do najmniejszej sensownej paczki przykładów i sprawdziliśmy, że nadal pokrywa część cząstkową i grawitacyjną. To upraszcza teorię bez utraty kluczowej treści."
+}

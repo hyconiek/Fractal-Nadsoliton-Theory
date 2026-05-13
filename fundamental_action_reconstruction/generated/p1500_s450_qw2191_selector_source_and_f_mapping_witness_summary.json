@@ -1,0 +1,31 @@
+{
+  "packet": "P1500",
+  "status": "PASS_SELECTOR_SOURCE_AND_F_MAPPING_WITNESS_LOCAL_ONLY",
+  "scope": "LOCAL_ONLY_NON_GLOBAL_CLAIM",
+  "objects": {
+    "S_internal_v1": {
+      "id": "S_internal_v1",
+      "value": 0.19999999997435897,
+      "orientation": "SM_preferred",
+      "strict_internal": true
+    },
+    "W_Fmap_v1": {
+      "id": "W_Fmap_v1",
+      "F_to_LSM_weight": 0.65,
+      "F_to_LGR_weight": 0.35,
+      "normalization": 1.0,
+      "selector_orientation": "SM_preferred"
+    }
+  },
+  "requirements_after_export": {
+    "R1_cross_provider_replication": true,
+    "R2_strict_internal_selector_source_exported": true,
+    "R3_quantified_theorem_text_ready": true,
+    "R4_falsifier_set_non_obstructing": true,
+    "R5_F_to_LSM_LGR_mapping_witness_exported": true
+  },
+  "global_closure_candidate": true,
+  "qw2191_closed": false,
+  "next_step_recommendation": "S4.51: run independent adversarial falsifier sweep against S_internal_v1 and W_Fmap_v1; if no contradiction, promote to global-closure theorem candidate release note.",
+  "layman_explanation": "Dobiliśmy dwa brakujące elementy: jawne źródło wyboru kierunku i jawną mapę jak z kernela wychodzą składniki SM/GR. To silny krok do zamknięcia globalnego, ale jeszcze trzeba niezależnego testu odporności."
+}

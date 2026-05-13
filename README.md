@@ -6,6 +6,12 @@
 
 ## Current Scientific Status (2026-03-07)
 
+## Guardrail baseline (2026-05-13 sync)
+
+- The repo-level guardrails in `AGENTS.md` are the active working constraints for kernel split handling, selector claims, and FAR routing.
+- In particular, treat `K_strict_gate` as an operational control kernel unless and until a rigorous `legacy -> strict` bridge (or non-bridge theorem) is explicitly exported.
+- Keep strict-core closure claims conditioned on explicit selector premises while `QW-2191` remains active.
+
 ### Executive verdict
 - **Internal strict closure:** achieved for the audited strict chain.
 - **Full fundamental ToE closure:** not yet.

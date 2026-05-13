@@ -1,0 +1,54 @@
+{
+  "packet": "P1466",
+  "status": "PASS_POLICY_GATE_UNIT_TEST_LOCAL_ONLY",
+  "scope": "LOCAL_ONLY_NON_GLOBAL_CLAIM",
+  "strict_core_qw2191_closed": false,
+  "legacy_bridge_used": false,
+  "band": {
+    "delta_min": 0.001,
+    "delta_max": 0.002
+  },
+  "cases": [
+    {
+      "label": "below_band",
+      "delta": 0.0009,
+      "expected_allow": false,
+      "observed_allow": false,
+      "gate_status": "FAIL_POLICY_BAND_VIOLATION",
+      "status": "PASS"
+    },
+    {
+      "label": "edge_min",
+      "delta": 0.001,
+      "expected_allow": true,
+      "observed_allow": true,
+      "gate_status": "PASS_GATE_IN_BAND",
+      "status": "PASS"
+    },
+    {
+      "label": "inside",
+      "delta": 0.0015,
+      "expected_allow": true,
+      "observed_allow": true,
+      "gate_status": "PASS_GATE_IN_BAND",
+      "status": "PASS"
+    },
+    {
+      "label": "edge_max",
+      "delta": 0.002,
+      "expected_allow": true,
+      "observed_allow": true,
+      "gate_status": "PASS_GATE_IN_BAND",
+      "status": "PASS"
+    },
+    {
+      "label": "above_band",
+      "delta": 0.0021,
+      "expected_allow": false,
+      "observed_allow": false,
+      "gate_status": "FAIL_POLICY_BAND_VIOLATION",
+      "status": "PASS"
+    }
+  ],
+  "fail_count": 0
+}

@@ -1,0 +1,22 @@
+{
+  "packet": "P1487",
+  "status": "PASS_SELECTOR_INJECTION_LOCAL_PROGRESS",
+  "scope": "LOCAL_ONLY_NON_GLOBAL_CLAIM",
+  "gaps": {
+    "baseline_g0": 0.007800000000000008,
+    "injected_g1": 0.006240000000000007
+  },
+  "delta_sb": 0.0015600000000000017,
+  "checks": {
+    "strict_only": true,
+    "no_legacy_bridge": true,
+    "delta_within_safety_margin": true,
+    "selector_gap_reduced": true,
+    "sm_witness_positive": true,
+    "gr_witness_positive": true
+  },
+  "qw2191_closed": false,
+  "closure_note": "Local selector progress observed; strict-final QW-2191 closure still requires exported internal selector source or theorem-level uniqueness discharge.",
+  "next_step_recommendation": "S4.38: run selector-sensitivity sweep over admissible kappa window and export robustness envelope for uniqueness gap reduction.",
+  "layman_explanation": "To test: dodaliśmy mały, kontrolowany składnik i sprawdziliśmy, czy problem wyboru rozwiązania się zmniejsza. Zmniejsza się, więc to dobry sygnał, ale to jeszcze nie pełne domknięcie."
+}

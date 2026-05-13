@@ -1,0 +1,80 @@
+{
+  "packet": "P1509",
+  "status": "PASS_CONTRADICTION_BRANCH_STRESS_REPORTED",
+  "scope": "STRICT_ONLY_F_NADSOLITON_TO_LSM_PLUS_LGR",
+  "base_theorem_status": "PASS_STRICT_QUANTIFIED_COUPLED_THEOREM_DRAFT_EXPORTED",
+  "trials": [
+    {
+      "id": "selector_scale_0p9",
+      "assumptions": {
+        "A1_selector_positive": true,
+        "A2_selector_strict_internal": true,
+        "A3_weight_normalization": true,
+        "A4_shared_orientation": true,
+        "A5_no_legacy_bridge": true
+      },
+      "pass": true
+    },
+    {
+      "id": "selector_scale_1p1",
+      "assumptions": {
+        "A1_selector_positive": true,
+        "A2_selector_strict_internal": true,
+        "A3_weight_normalization": true,
+        "A4_shared_orientation": true,
+        "A5_no_legacy_bridge": true
+      },
+      "pass": true
+    },
+    {
+      "id": "weight_shift_sm_plus_0p02",
+      "assumptions": {
+        "A1_selector_positive": true,
+        "A2_selector_strict_internal": true,
+        "A3_weight_normalization": true,
+        "A4_shared_orientation": true,
+        "A5_no_legacy_bridge": true
+      },
+      "pass": true
+    },
+    {
+      "id": "weight_shift_sm_minus_0p02",
+      "assumptions": {
+        "A1_selector_positive": true,
+        "A2_selector_strict_internal": true,
+        "A3_weight_normalization": true,
+        "A4_shared_orientation": true,
+        "A5_no_legacy_bridge": true
+      },
+      "pass": true
+    },
+    {
+      "id": "orientation_flip_probe",
+      "assumptions": {
+        "A1_selector_positive": true,
+        "A2_selector_strict_internal": true,
+        "A3_weight_normalization": true,
+        "A4_shared_orientation": false,
+        "A5_no_legacy_bridge": true
+      },
+      "pass": false
+    }
+  ],
+  "counterexample_found": true,
+  "first_counterexample": {
+    "id": "orientation_flip_probe",
+    "assumptions": {
+      "A1_selector_positive": true,
+      "A2_selector_strict_internal": true,
+      "A3_weight_normalization": true,
+      "A4_shared_orientation": false,
+      "A5_no_legacy_bridge": true
+    },
+    "pass": false
+  },
+  "interpretation": "Draft theorem remains conditionally admissible on non-violating perturbations; violating perturbations correctly trigger rejection branch.",
+  "qw2191_closed": false,
+  "legacy_bridge_used": false,
+  "next_honest_step": "Implement P1510 admissible-perturbation boundary map separating robust zone from theorem-rejection zone.",
+  "layman_explanation": "Zrobiliśmy test odporności: specjalnie próbowaliśmy zepsuć warunki dowodu. Tam gdzie warunki są łamane, system poprawnie odrzuca twierdzenie; tam gdzie nie są łamane, wynik się trzyma."
+}

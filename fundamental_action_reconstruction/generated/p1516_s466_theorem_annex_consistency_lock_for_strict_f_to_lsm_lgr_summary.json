@@ -1,0 +1,48 @@
+{
+  "packet": "P1516",
+  "status": "PASS_THEOREM_ANNEX_CONSISTENCY_LOCK_ACTIVE",
+  "scope": "STRICT_ONLY_F_NADSOLITON_TO_LSM_PLUS_LGR",
+  "lock_rule": "THEOREM_EVAL_ALLOWED <=> orientation_pair in robust_envelope",
+  "probe_results": [
+    {
+      "orientation_pair": {
+        "internal": "SM_preferred",
+        "fmap": "SM_preferred"
+      },
+      "theorem_eval_allowed": true,
+      "lock_reason": "in_robust_envelope"
+    },
+    {
+      "orientation_pair": {
+        "internal": "mixed",
+        "fmap": "mixed"
+      },
+      "theorem_eval_allowed": true,
+      "lock_reason": "in_robust_envelope"
+    },
+    {
+      "orientation_pair": {
+        "internal": "neutral",
+        "fmap": "neutral"
+      },
+      "theorem_eval_allowed": false,
+      "lock_reason": "outside_robust_envelope"
+    },
+    {
+      "orientation_pair": {
+        "internal": "SM_preferred",
+        "fmap": "GR_preferred"
+      },
+      "theorem_eval_allowed": false,
+      "lock_reason": "outside_robust_envelope"
+    }
+  ],
+  "counts": {
+    "allowed": 2,
+    "blocked": 2
+  },
+  "qw2191_closed": false,
+  "legacy_bridge_used": false,
+  "next_honest_step": "Implement P1517 coupled-theorem rerun with lock enforced across all candidate orientation scenarios and export locked witness set.",
+  "layman_explanation": "Wprowadziliśmy bezpiecznik: teoria jest liczona tylko dla ustawień kierunku z zatwierdzonej listy. To chroni przed przypadkami, które wyglądałyby dobrze, ale nie są stabilne."
+}

@@ -1,0 +1,50 @@
+{
+  "packet": "P1517",
+  "status": "PASS_LOCKED_WITNESS_SET_EXPORTED",
+  "scope": "STRICT_ONLY_F_NADSOLITON_TO_LSM_PLUS_LGR",
+  "lock_rule": "THEOREM_EVAL_ALLOWED <=> orientation_pair in robust_envelope",
+  "locked_witness_set": [
+    {
+      "orientation_pair": {
+        "internal": "SM_preferred",
+        "fmap": "SM_preferred"
+      },
+      "theorem_eval_allowed": true,
+      "lock_reason": "in_robust_envelope"
+    },
+    {
+      "orientation_pair": {
+        "internal": "mixed",
+        "fmap": "mixed"
+      },
+      "theorem_eval_allowed": true,
+      "lock_reason": "in_robust_envelope"
+    }
+  ],
+  "blocked_scenarios": [
+    {
+      "orientation_pair": {
+        "internal": "neutral",
+        "fmap": "neutral"
+      },
+      "theorem_eval_allowed": false,
+      "lock_reason": "outside_robust_envelope"
+    },
+    {
+      "orientation_pair": {
+        "internal": "SM_preferred",
+        "fmap": "GR_preferred"
+      },
+      "theorem_eval_allowed": false,
+      "lock_reason": "outside_robust_envelope"
+    }
+  ],
+  "counts": {
+    "locked_witness_count": 2,
+    "blocked_count": 2
+  },
+  "qw2191_closed": false,
+  "legacy_bridge_used": false,
+  "next_honest_step": "Implement P1518 strict theorem witness compression: derive the minimal locked witness basis and map it to F->LSM and F->LGR channel obligations.",
+  "layman_explanation": "Po włączeniu bezpiecznika dostajemy czystą listę przypadków, którym wolno ufać. To porządkuje dowód: wiemy dokładnie, które scenariusze są legalne, a które odpadają."
+}
