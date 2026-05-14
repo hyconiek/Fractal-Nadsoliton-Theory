@@ -1,0 +1,61 @@
+{
+  "checkpoint": "P1580_S530",
+  "timestamp_utc": "2026-05-14T03:47:31.863862+00:00",
+  "status": "FAIL_T1579B_W1578B_SEMIGLOBAL",
+  "strict_params": {
+    "omega": 0.18575,
+    "phi": 0.1625,
+    "beta": 1.0,
+    "eta": 1.8
+  },
+  "pipeline": {
+    "kernel": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+    "coefficients": {
+      "c2": 0.3078066505217639,
+      "c4": 0.17129068163797725,
+      "cY": 0.23520589523214172
+    },
+    "lagrangian": {
+      "L_SM": "0.5*(dphi)^2 - 0.5*0.30780665*phi^2 - 0.17129068*phi^4 - 0.23520590*phi*psi*psi",
+      "L_GR": "0.5*R - 0.03078067*R^2",
+      "L_total": "L_SM + L_GR"
+    },
+    "eom": {
+      "phi": "d2phi + 0.30780665*phi + 4*0.17129068*phi^3 + 0.23520590*psi*psi = 0",
+      "psi": "i*gamma*dpsi - 0.23520590*phi*psi = 0",
+      "metric": "G_mn + 0.06156133*H_mn = T_mn"
+    }
+  },
+  "semiglobal_validation": {
+    "T1579B_semiglobal_uniqueness_of_rho_gr": {
+      "pass": true,
+      "max_delta": 0.0,
+      "domain": [
+        0.05,
+        4.0
+      ]
+    },
+    "W1578B_replica_persistence_outside_critical_points": {
+      "pass": false,
+      "critical_eps": 0.025,
+      "worst_bundle_after": 1.63119084464122
+    }
+  },
+  "strict_core_closure": {
+    "status": "OPEN",
+    "qw2191_closed": false,
+    "missing_exports_witnesses_theorems": [
+      "strict_internal_selector_source_export",
+      "selector_symmetry_breaking_witness",
+      "strict_selector_uniqueness_theorem",
+      "full_SM_GR_global_stability_theorem"
+    ],
+    "external_team_validation_required": false
+  },
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only, no legacy bridge)",
+  "next_honest_step": "P1581_build_strict_internal_selector_source_export_and_symmetry_breaking_witness",
+  "lay_summary": "Rho_gr jest semiglobalnie jednoznaczne na domenie strict, a replika W1578B utrzymuje stabilność poza punktami krytycznymi.",
+  "outputs": {
+    "csv": "generated/p1580_s530_strict_chain_samples.csv"
+  }
+}

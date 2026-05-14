@@ -1,0 +1,53 @@
+{
+  "checkpoint": "P1532_S482",
+  "status": "PASS_STRICT_CORE_AXIOM_MINIMIZATION_AND_TOE_GAP",
+  "date_utc": "2026-05-14",
+  "route": "F_nadsoliton_to_LSM_plus_LGR",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "axiom_set": [
+    "AX_S1_strict_only_ontology_no_legacy_bridge",
+    "AX_S2_noncyclic_anchor_discipline",
+    "AX_S3_selector_intake_and_provenance_requirements",
+    "AX_S4_uniqueness_requires_theorem_level_witness",
+    "AX_S5_reproduction_coherence_under_fixed_tolerance"
+  ],
+  "axiom_minimization_result": {
+    "necessary_axioms": [
+      "AX_S1_strict_only_ontology_no_legacy_bridge",
+      "AX_S2_noncyclic_anchor_discipline",
+      "AX_S3_selector_intake_and_provenance_requirements",
+      "AX_S4_uniqueness_requires_theorem_level_witness",
+      "AX_S5_reproduction_coherence_under_fixed_tolerance"
+    ],
+    "redundant_axioms": [],
+    "minimization_pass": true
+  },
+  "toe_gap_matrix": [
+    {
+      "gap_id": "GAP_1_SELECTOR_UNIQUENESS_THEOREM",
+      "status": "open",
+      "priority": "critical",
+      "missing_object": "formal_selector_uniqueness_theorem_proof"
+    },
+    {
+      "gap_id": "GAP_2_STRICT_INTERNAL_SELECTOR_SOURCE_UPGRADE",
+      "status": "open",
+      "priority": "high",
+      "missing_object": "strict_internal_selector_source_upgrade"
+    },
+    {
+      "gap_id": "GAP_3_EXTERNAL_MULTI_GROUP_REPRODUCTION",
+      "status": "partial",
+      "priority": "high",
+      "missing_object": "strict_core_multi_group_reproduction_packet"
+    }
+  ],
+  "toe_potential_status": "promising_but_not_closed",
+  "qw2191_closed": false,
+  "next_required_objects": [
+    "formal_selector_uniqueness_theorem_proof",
+    "strict_internal_selector_source_upgrade",
+    "strict_core_multi_group_reproduction_packet"
+  ]
+}

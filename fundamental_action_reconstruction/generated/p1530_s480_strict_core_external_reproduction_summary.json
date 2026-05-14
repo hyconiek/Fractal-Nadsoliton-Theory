@@ -1,0 +1,49 @@
+{
+  "checkpoint": "P1530_S480",
+  "status": "PASS_STRICT_CORE_EXTERNAL_REPRODUCTION_PACKET",
+  "date_utc": "2026-05-13",
+  "route": "F_nadsoliton_to_LSM_plus_LGR",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "tolerance": 0.5,
+  "external_case": {
+    "external_case_id": "EXT_CASE_ALPHA",
+    "external_selected_branch": "strict_anchor_branch_Q_trace",
+    "external_alternatives": [
+      "branch_R_noncyclic",
+      "branch_S"
+    ]
+  },
+  "reference_run": {
+    "selected_branch": "strict_anchor_branch_C_trace",
+    "alternatives": [
+      "branch_B_noncyclic",
+      "branch_A"
+    ],
+    "dominance_margin": 2.0,
+    "existence_pass": true,
+    "dominance_pass": true,
+    "stability_pass": true,
+    "theorem_scaffold_pass": true
+  },
+  "external_run": {
+    "selected_branch": "strict_anchor_branch_Q_trace",
+    "alternatives": [
+      "branch_R_noncyclic",
+      "branch_S"
+    ],
+    "dominance_margin": 2.0,
+    "existence_pass": true,
+    "dominance_pass": true,
+    "stability_pass": true,
+    "theorem_scaffold_pass": true
+  },
+  "cross_run_margin_delta": 0.0,
+  "external_reproduction_pass": true,
+  "qw2191_closed": false,
+  "closure_note": "external_reproduction_pass_is_not_selector_closure",
+  "next_required_objects": [
+    "formal_selector_uniqueness_theorem_proof",
+    "strict_core_peer_review_reproduction_packet"
+  ]
+}

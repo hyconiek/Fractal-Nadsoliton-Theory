@@ -49,4 +49,8 @@ Before continuing work in `fundamental_action_reconstruction`, read:
 - Respect `QW-2381/QW-2382/QW-2383`: repeated cyclic gate generation under the same blocker-cut is not an admitted primary strategy.
 - Do not prescribe more `L5/L12` loop expansion without a noncyclic anchor, a new provider class, or a genuinely new blocker-cut.
 
-_Last updated: 2026-05-13 (guardrail sync)._
+_Last updated: 2026-05-14 (guardrail sync)._
+
+## Agent execution note
+
+- Repository automation must treat these guardrails as binding for all edits under this tree.
