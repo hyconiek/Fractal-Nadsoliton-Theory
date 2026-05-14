@@ -1,0 +1,50 @@
+{
+  "checkpoint": "P1583_S533",
+  "timestamp_utc": "2026-05-14T03:57:14.707740+00:00",
+  "status": "FAIL_T1583_FORMAL_PROOF_OBJECT_CANDIDATE",
+  "strict_chain": {
+    "kernel": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+    "coefficients": {
+      "c2": 0.3078066505217639,
+      "c4": 0.17129068163797725,
+      "cY": 0.23520589523214172
+    },
+    "lagrangian": {
+      "L_SM": "0.5*(dphi)^2 - 0.5*0.30780665*phi^2 - 0.17129068*phi^4 - 0.23520590*phi*psi*psi",
+      "L_GR": "0.5*R - 0.03078067*R^2",
+      "L_total": "L_SM + L_GR"
+    },
+    "eom": {
+      "phi": "d2phi + 0.30780665*phi + 4*0.17129068*phi^3 + 0.23520590*psi*psi = 0",
+      "psi": "i*gamma*dpsi - 0.23520590*phi*psi = 0",
+      "metric": "G_mn + 0.06156133*H_mn = T_mn"
+    }
+  },
+  "proof_object": {
+    "theorem": "T1583_formal_composition_candidate_for_strict_core_progress",
+    "premises": [
+      "L1_selector_branch_gap_bound",
+      "L2_monotonic_selector_energy_segment",
+      "L3_global_stability_link_to_SM_GR_bundle"
+    ],
+    "checks": {
+      "L1_selector_branch_gap_bound": false,
+      "L2_monotonic_selector_energy_segment": true,
+      "L3_global_stability_link_to_SM_GR_bundle": false
+    },
+    "derivation_note": "Strict chain is preserved from K_strict to EOM; closure blocked by unmet L1/L3."
+  },
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "strict_core_closure": {
+    "status": "OPEN",
+    "qw2191_closed": false,
+    "remaining_missing": [
+      "tight_selector_branch_gap_witness (L1)",
+      "global_stability_theorem_object (L3)",
+      "final_ToE_composition_theorem"
+    ]
+  },
+  "external_team_validation_required": false,
+  "next_honest_step": "P1584_construct_L1_witness_refinement_and_L3_global_stability_object",
+  "lay_summary": "Mamy szkic formalnego dowodu, ale dwa warunki krytyczne (L1 i L3) nie są jeszcze spełnione, więc domknięcie strict-core pozostaje otwarte."
+}

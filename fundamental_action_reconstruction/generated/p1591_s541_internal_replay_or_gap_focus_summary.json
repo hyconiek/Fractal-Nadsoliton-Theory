@@ -1,0 +1,46 @@
+{
+  "checkpoint": "P1591_S541",
+  "timestamp_utc": "2026-05-14T08:14:26.985714+00:00",
+  "status": "KEEP_OPEN_P1591_FOCUSED_GAP_WORK_PACKAGE",
+  "strict_chain": {
+    "kernel": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+    "coefficients": {
+      "c2": 0.3078066505217639,
+      "c4": 0.17129068163797725,
+      "cY": 0.23520589523214172
+    },
+    "lagrangian": {
+      "L_SM": "0.5*(dphi)^2 - 0.5*0.30780665*phi^2 - 0.17129068*phi^4 - 0.23520590*phi*psi*psi",
+      "L_GR": "0.5*R - 0.03078067*R^2",
+      "L_total": "L_SM + L_GR"
+    },
+    "eom": {
+      "phi": "d2phi + 0.30780665*phi + 4*0.17129068*phi^3 + 0.23520590*psi*psi = 0",
+      "psi": "i*gamma*dpsi - 0.23520590*phi*psi = 0",
+      "metric": "G_mn + 0.06156133*H_mn = T_mn"
+    }
+  },
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "work_package": {
+    "mode": "gap_focus",
+    "targets": [
+      "G1/G2 full theorem-level strengthening",
+      "G3 final ToE export"
+    ],
+    "priority": [
+      "G1",
+      "G2",
+      "G3"
+    ]
+  },
+  "strict_core_closure": {
+    "status": "OPEN",
+    "remaining_missing": [
+      "G1/G2 full theorem-level strengthening",
+      "G3 final ToE export"
+    ]
+  },
+  "external_team_validation_required": false,
+  "next_honest_step": "If OPEN: execute focused theorem discharge; if CLOSED: run deterministic replay and freeze package.",
+  "lay_summary": "Checkpoint przekłada status ToE na konkretny pakiet pracy: albo domykanie braków, albo replikację gotowego wyniku."
+}

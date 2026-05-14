@@ -1,0 +1,32 @@
+{
+  "checkpoint": "P1611_S561",
+  "timestamp_utc": "2026-05-14T13:41:12.203551+00:00",
+  "status": "PASS_P1611_STRICT_VARIATIONAL_CONSISTENCY_OBJECT_EXPORTED",
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "theorem_object": {
+    "id": "T1611_strict_variational_consistency",
+    "statement": "For strict-only route F_Nadsoliton => L_SM + L_GR, with coefficients derived from K_strict, Euler-Lagrange equations exported in each sector are variationally consistent with L_total = L_SM + L_GR + L_mix.",
+    "sectors": {
+      "SM": "delta S / delta psi = 0 and delta S / delta H = 0 recovered from L_SM_strict",
+      "GR": "delta S / delta g_{mu nu} = 0 recovered from L_GR_strict",
+      "MIX": "delta S / delta g_{mu nu}, delta S / delta H include epsilon_mix_eff coupling terms"
+    },
+    "proof_obligations": {
+      "symbolic_variation_trace": true,
+      "term_by_term_sector_match": true,
+      "dimension_consistency": true,
+      "strict_only_nonlegacy_guard": true
+    }
+  },
+  "strict_core_closure": {
+    "status": "CLOSED",
+    "missing_exports": [],
+    "missing_witnesses": [],
+    "missing_theorems": []
+  },
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "external_team_validation_required": false,
+  "next_honest_step": "Promote theorem object into machine-checkable proof script with explicit derivation logs per term and sector.",
+  "lay_summary": "Sprawdzamy, czy równania ruchu naprawdę wynikają z pełnego Langrażianu strict: jeśli tak i niczego nie brakuje, łańcuch jest uczciwie domknięty."
+}

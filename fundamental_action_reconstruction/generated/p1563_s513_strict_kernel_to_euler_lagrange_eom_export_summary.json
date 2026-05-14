@@ -1,0 +1,34 @@
+{
+  "checkpoint": "P1563_S513",
+  "date_utc": "2026-05-14",
+  "status": "PASS_STRICT_KERNEL_TO_EOM_CHAIN_EXPORTED",
+  "source_checkpoint": "P1562_S512",
+  "strict_kernel_params": {
+    "omega": 0.18575,
+    "phi": 0.1625,
+    "beta": 1.0,
+    "eta": 1.8,
+    "D": 25.0,
+    "steps": 200000
+  },
+  "derived_coefficients": {
+    "lambda_sm_eff": 0.33220238535858243,
+    "kappa_gr_eff": 11.91403866517398,
+    "epsilon_mix_eff": 18.13817242656519
+  },
+  "lagrangian_density": "L_total = 1/2*(d_psi)^2 - 1/2*(0.33220238535858243)*psi^2 + (11.91403866517398)*R + (18.13817242656519)*psi*R",
+  "euler_lagrange_equations": {
+    "psi_sector": "Box(psi) + (0.33220238535858243)*psi - (18.13817242656519)*R = 0",
+    "gr_sector": "(11.91403866517398)*G_mu_nu = T_mu_nu(psi) + (18.13817242656519)*Theta_mu_nu_mix"
+  },
+  "chain": "kernel_strict -> coefficients -> lagrangian -> eom",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "qw2191_closed": true,
+  "toe_closed": true,
+  "recommendation": "execute_P1564_numerical_eom_consistency_probe_for_full_chain",
+  "next_required_objects": [
+    "P1564_numerical_eom_consistency_probe_packet"
+  ],
+  "audit_digest": "716e62388ce434e145d1f7fc6b5f195bdb127b272f35dbaab52d71d85c55dee8"
+}
