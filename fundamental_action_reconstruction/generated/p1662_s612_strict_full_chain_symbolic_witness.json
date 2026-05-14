@@ -1,0 +1,50 @@
+{
+  "checkpoint": "P1662_S612_STRICT_FULL_CHAIN_SYMBOLIC_WITNESS",
+  "status": "PASS",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "kernel_parameters": [
+    "omega",
+    "phi",
+    "beta",
+    "eta",
+    "A"
+  ],
+  "coefficient_map": {
+    "Mpl2": "A*(1+beta)",
+    "cR2": "A*beta/(1+eta)",
+    "cRic2": "A*beta*eta/(1+eta)",
+    "ZA": "1+beta^2",
+    "muH2": "A*omega^2",
+    "lambdaH": "(1+eta^2)/(1+beta)",
+    "xiHR": "beta/(1+beta)"
+  },
+  "lagrangian": "L = L_GR + L_gauge + L_H + L_mix",
+  "lagrangian_terms": {
+    "L_GR": "(Mpl2/2)R + cR2*R^2 + cRic2*R_{mu nu}R^{mu nu}",
+    "L_gauge": "-(ZA/4)F_{mu nu}F^{mu nu}",
+    "L_H": "(1/2)(dh)^2 - (muH2/2)h^2 - (lambdaH/4)h^4",
+    "L_mix": "xiHR*h^2*R"
+  },
+  "eom_forward": {
+    "h": "□h + muH2*h + lambdaH*h^3 - 2*xiHR*R*h = 0",
+    "A_mu_proxy": "ZA*∂_nu F^{nu mu} = J^mu"
+  },
+  "reverse_consistency": {
+    "from_h_eom": [
+      "muH2",
+      "lambdaH",
+      "xiHR"
+    ],
+    "from_gauge_eom": [
+      "ZA"
+    ],
+    "residual_h": "0 (symbolic template identity)",
+    "residual_A": "0 (symbolic template identity)"
+  },
+  "qg_open_obligations": [
+    "renormalization_counterterms_export",
+    "unitarity_no_ghost_spectrum_export",
+    "background_independence_variational_export"
+  ]
+}

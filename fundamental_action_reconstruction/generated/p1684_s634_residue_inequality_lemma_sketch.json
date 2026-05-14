@@ -1,0 +1,28 @@
+{
+  "checkpoint": "P1684_S634_RESIDUE_INEQUALITY_LEMMA_SKETCH",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "pipeline": "K_strict -> coeff -> full_L_total -> linearized_EOM -> residue inequality sketch",
+  "domain": {
+    "R_max": 1.0,
+    "curvature_domain": "|R|<=R_max"
+  },
+  "parameter_point": {
+    "Z2_0": 1.0,
+    "Z0_0": 1.0,
+    "a2": 0.1,
+    "a0": 0.06,
+    "c1": 0.08,
+    "c2": 0.04,
+    "xi": 0.03
+  },
+  "inequality_sketch": {
+    "Z2_lower_bound": "Z2(R)>= 0.900",
+    "Z0_lower_bound": "Z0(R)>= 0.940",
+    "detK2_lower_bound": "det(K2)(R)>= 0.864",
+    "detK0_lower_bound": "det(K0)(R)>= 0.921"
+  },
+  "status": "OPEN_OBLIGATION",
+  "limitation": "Lemma sketch only; full theorem-level variational proof remains missing.",
+  "next_honest_step": "S635: symbolic bound certificate for (c1,c2,xi) with boundary counterexample map."
+}

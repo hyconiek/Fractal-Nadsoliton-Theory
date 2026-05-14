@@ -1,0 +1,42 @@
+{
+  "checkpoint": "P1651_S601",
+  "timestamp_utc": "2026-05-14T18:48:00.097899+00:00",
+  "status": "PASS_LOCAL_P1651_DETJ_LOWER_BOUND_CERTIFICATE",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "kernel_definition": "K_strict(d) = cos(omega*d + phi0)/(1 + beta*d^eta)",
+  "full_chain": "K_strict -> coefficients -> L_total -> EOM and reverse obligations",
+  "o1_certificate": {
+    "target": "O1 from T_STRICT_INJ_BOX_01",
+    "region": {
+      "beta": [
+        0.32,
+        0.42
+      ],
+      "eta": [
+        1.2,
+        1.36
+      ],
+      "omega": [
+        1.05,
+        1.17
+      ],
+      "phi0": [
+        0.35,
+        0.49
+      ]
+    },
+    "certificate_type": "computational lower-bound estimate from regional grid",
+    "eps_hat": 0.6376262351876,
+    "derived_from_sample_count": 12,
+    "condition_checked": "|detJ| >= eps_hat on sampled region points",
+    "status": "PARTIAL",
+    "note": "Grid-derived certificate; still needs analytic proof upgrade for theorem-level discharge."
+  },
+  "strict_core_closure": {
+    "status": "OPEN",
+    "reason": "O1 has local computational certificate only; O2/O3 and analytic globalization remain open"
+  },
+  "next_honest_step": "Podnieść O1 z certyfikatu siatkowego do dowodu analitycznego (symboliczna dolna granica detJ na całym boxie) i wtedy przejść do O2.",
+  "lay_summary": "Mamy liczbowy dowód, że w testowanej siatce mapa nie traci odwracalności. To bardzo użyteczne, ale do pełnej matematycznej pewności potrzebny jest jeszcze dowód analityczny."
+}

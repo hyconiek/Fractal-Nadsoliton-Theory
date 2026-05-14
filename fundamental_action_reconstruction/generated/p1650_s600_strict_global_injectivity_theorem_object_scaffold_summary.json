@@ -1,0 +1,55 @@
+{
+  "checkpoint": "P1650_S600",
+  "timestamp_utc": "2026-05-14T18:44:45.283009+00:00",
+  "status": "KEEP_OPEN_P1650_GLOBAL_INJECTIVITY_THEOREM_OBJECT_SCAFFOLD_EXPORTED",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "kernel_definition": "K_strict(d) = cos(omega*d + phi0)/(1 + beta*d^eta)",
+  "full_chain": "K_strict -> coefficients -> L_total -> EOM and reverse obligations",
+  "regional_evidence_reference": {
+    "status": "PASS_LOCAL_P1649_REGIONAL_INJECTIVITY_WITNESS",
+    "sample_count": 81,
+    "min_abs_detJ": 0.6376262351876
+  },
+  "global_injectivity_theorem_object": {
+    "id": "T_STRICT_INJ_BOX_01",
+    "goal": "Sufficient conditions for injectivity of projector map {I0,I2,I_mix,I_curv} on parameter box B.",
+    "box_B": {
+      "beta": [
+        0.32,
+        0.42
+      ],
+      "eta": [
+        1.2,
+        1.36
+      ],
+      "omega": [
+        1.05,
+        1.17
+      ],
+      "phi0": [
+        0.35,
+        0.49
+      ]
+    },
+    "assumptions": [
+      "A1: projector family is C1 on B and extends continuously to boundary",
+      "A2: det(J(theta)) keeps constant sign on B",
+      "A3: overlap patch maps between local charts are C1 and orientation-preserving",
+      "A4: selector branch fixed by strict internal witness class (no legacy bridge)"
+    ],
+    "obligations": [
+      "O1: export analytic lower bound det(J)>=eps>0 on B",
+      "O2: export overlap cocycle consistency theorem",
+      "O3: export nullspace exclusion witness compatible with QW-2191"
+    ],
+    "conclusion_template": "If A1..A4 and O1..O3 hold, then coefficients->kernel map is injective on B up to admitted gauge-equivalence.",
+    "status": "OPEN"
+  },
+  "strict_core_closure": {
+    "status": "OPEN",
+    "reason": "Theorem object exported but obligations O1..O3 not yet discharged"
+  },
+  "next_honest_step": "Udowodnić O1: jawna dolna granica det(J)>=eps na całym B i dołączyć certyfikat obliczeniowy.",
+  "lay_summary": "Mamy teraz szkic formalnego twierdzenia, które tłumaczy co dokładnie trzeba jeszcze pokazać, by przejść z mocnych testów lokalnych do pełnego dowodu globalnego."
+}
