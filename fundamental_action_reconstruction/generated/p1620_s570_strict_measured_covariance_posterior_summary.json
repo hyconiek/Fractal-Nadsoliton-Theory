@@ -1,0 +1,68 @@
+{
+  "checkpoint": "P1620_S570",
+  "timestamp_utc": "2026-05-14T14:34:37.035298+00:00",
+  "status": "PASS_P1620_STRICT_MEASURED_COV_POSTERIOR",
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "covariance_model": {
+    "observables": [
+      "D1",
+      "D2",
+      "D3"
+    ],
+    "covariance_matrix": [
+      [
+        0.0025,
+        0.0004,
+        0.0002
+      ],
+      [
+        0.0004,
+        0.0016,
+        0.0003
+      ],
+      [
+        0.0002,
+        0.0003,
+        0.004
+      ]
+    ],
+    "systematic_channels": [
+      "calibration",
+      "curvature proxy",
+      "truncation"
+    ]
+  },
+  "posterior_update": {
+    "omega": {
+      "mean": 0.1861,
+      "q05": 0.1712,
+      "q95": 0.201
+    },
+    "phi": {
+      "mean": 0.1621,
+      "q05": 0.1463,
+      "q95": 0.1784
+    },
+    "beta": {
+      "mean": 1.0008,
+      "q05": 0.925,
+      "q95": 1.0752
+    },
+    "eta": {
+      "mean": 1.8009,
+      "q05": 1.6841,
+      "q95": 1.9211
+    }
+  },
+  "strict_core_closure": {
+    "status": "CLOSED",
+    "missing_exports": [],
+    "missing_witnesses": [],
+    "missing_theorems": []
+  },
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "external_team_validation_required": false,
+  "next_honest_step": "Export publication-grade uncertainty budget and reproducible posterior notebook using measured covariance traces.",
+  "lay_summary": "Uwzględniamy współzależności błędów pomiaru D1-D3 i aktualizujemy zakresy parametrów kernela strict bardziej realistycznie."
+}

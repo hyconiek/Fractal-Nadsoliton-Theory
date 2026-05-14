@@ -1,0 +1,37 @@
+{
+  "checkpoint": "P1595_S545",
+  "timestamp_utc": "2026-05-14T08:34:00.973803+00:00",
+  "status": "KEEP_OPEN_P1595_G3_NOT_READY",
+  "strict_chain": {
+    "kernel": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+    "coefficients": {},
+    "lagrangian": {},
+    "eom": {}
+  },
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only, no legacy bridge)",
+  "preconditions": {
+    "G1_ready": false,
+    "G2_ready": true,
+    "coeff_export_ready": true,
+    "eom_export_ready": true,
+    "theorem_bridge_ready": false
+  },
+  "G3": {
+    "candidate_export_ready": false,
+    "object": null
+  },
+  "strict_core_closure": {
+    "status": "OPEN",
+    "missing_exports": [],
+    "missing_witnesses": [
+      "W_G1_full_domain_selector_gap_discharge"
+    ],
+    "missing_theorems": [
+      "T_selector_uniqueness_to_full_lagrangian_bridge",
+      "T_G3_final_strict_ToE_composition"
+    ]
+  },
+  "external_team_validation_required": false,
+  "next_honest_step": "Discharge first missing item from missing_theorems with explicit theorem object and proof trace.",
+  "lay_summary": "To jest końcowa bramka strict: pokazujemy cały tor od kernela do równań ruchu i uczciwie wypisujemy, czego brakuje do pełnego domknięcia ToE."
+}

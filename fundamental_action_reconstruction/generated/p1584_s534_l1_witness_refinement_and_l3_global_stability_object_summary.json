@@ -1,0 +1,49 @@
+{
+  "checkpoint": "P1584_S534",
+  "timestamp_utc": "2026-05-14T03:59:39.937842+00:00",
+  "status": "FAIL_P1584_L1L3_REFINEMENT_CANDIDATE",
+  "strict_chain": {
+    "kernel": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+    "coefficients": {
+      "c2": 0.3078066505217639,
+      "c4": 0.17129068163797725,
+      "cY": 0.23520589523214172
+    },
+    "lagrangian": {
+      "L_SM": "0.5*(dphi)^2 - 0.5*0.30780665*phi^2 - 0.17129068*phi^4 - 0.23520590*phi*psi*psi",
+      "L_GR": "0.5*R - 0.03078067*R^2",
+      "L_total": "L_SM + L_GR"
+    },
+    "eom": {
+      "phi": "d2phi + 0.30780665*phi + 4*0.17129068*phi^3 + 0.23520590*psi*psi = 0",
+      "psi": "i*gamma*dpsi - 0.23520590*phi*psi = 0",
+      "metric": "G_mn + 0.06156133*H_mn = T_mn"
+    }
+  },
+  "l1_refinement": {
+    "trimmed_domain": [
+      0.35,
+      3.65
+    ],
+    "antisymmetry_error_max": 0.6254987135000001,
+    "pass": false
+  },
+  "l3_global_stability_object_candidate": {
+    "coercivity_margin": 0.14306597421012024,
+    "bounded_curvature": true,
+    "pass": true
+  },
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "strict_core_closure": {
+    "status": "OPEN",
+    "qw2191_closed": false,
+    "remaining_missing": [
+      "full_formal_L1_proof_not_only_trimmed_witness",
+      "full_theorem_level_L3_global_stability_proof",
+      "final_ToE_composition_theorem"
+    ]
+  },
+  "external_team_validation_required": false,
+  "next_honest_step": "P1585_promote_L1_and_L3_candidates_to_formal_theorem_objects",
+  "lay_summary": "Dostroiliśmy dwa krytyczne elementy (L1 i L3) na poziomie kandydatów, ale pełny formalny dowód strict-core nadal pozostaje otwarty."
+}

@@ -1,0 +1,30 @@
+{
+  "checkpoint": "P1656_S606",
+  "timestamp_utc": "2026-05-14T19:15:51.092936+00:00",
+  "status": "KEEP_OPEN_P1656_H1_GAUGE_SCALAR_COVARIANT_WITNESS_EXPORTED",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "inherits_from": "P1655_S605",
+  "kernel_definition": "K_strict(d) = cos(omega*d + phi0)/(1 + beta*d^eta)",
+  "forward_chain_context": "K_strict -> coefficients -> full L_total -> EOM",
+  "reverse_gate_target": "EOM -> L_total Helmholtz H1..H4 discharge",
+  "sector": {
+    "lagrangian": "L = -1/4 F_{μν}F^{μν} + (D_μ φ)^*(D^μ φ) - V(φ)",
+    "gauge_eom": "D_μ F^{μν} - J^ν = 0",
+    "scalar_eom": "D_μD^μ φ + ∂V/∂φ^* = 0"
+  },
+  "h1_local_covariant_check": {
+    "cross_variation_object": "δ/δA_ν (D_μD^μ φ) vs δ/δφ (D_μF^{μν} - J^ν)",
+    "minimal_coupling_part": "matched at local operator level (covariant current coupling)",
+    "status": "PARTIAL",
+    "note": "full distributional/gauge-fixing/global-boundary terms not yet discharged"
+  },
+  "qg_gate_impact": {
+    "renormalization": "OPEN",
+    "unitarity": "OPEN",
+    "background_independence": "OPEN"
+  },
+  "global_reverse_chain_status": "OPEN",
+  "next_honest_step": "Dołączyć metrykę dynamiczną i sprawdzić H1 dla kanału gauge-metric (δ/δg_{μν} vs δ/δA_ν) w wariancie z kowariantną dywergencją.",
+  "lay_summary": "Zrobiliśmy krok od prostego modelu skalarnego do bardziej fizycznego układu z polem cechowania. Sprawdziliśmy lokalną zgodność potrzebną do cofania teorii, ale pełne domknięcie nadal wymaga cięższych dowodów globalnych."
+}

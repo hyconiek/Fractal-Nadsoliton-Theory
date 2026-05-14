@@ -1,0 +1,30 @@
+{
+  "checkpoint": "P1657_S607",
+  "timestamp_utc": "2026-05-14T19:21:08.990699+00:00",
+  "status": "KEEP_OPEN_P1657_H1_GAUGE_METRIC_COVARIANT_WITNESS_EXPORTED",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "inherits_from": "P1656_S606",
+  "kernel_definition": "K_strict(d) = cos(omega*d + phi0)/(1 + beta*d^eta)",
+  "forward_chain_context": "K_strict -> coefficients -> full L_total -> EOM",
+  "reverse_gate_target": "EOM -> L_total Helmholtz H1..H4 discharge",
+  "sector": {
+    "lagrangian": "sqrt(-g)*[-1/4 g^{μα}g^{νβ}F_{μν}F_{αβ} + (M_Pl^2/2)R - Λ]",
+    "gauge_eom": "∇_μ F^{μν} - J^ν = 0",
+    "metric_eom": "M_Pl^2 G_{μν} + Λg_{μν} - T_{μν}^{gauge} = 0"
+  },
+  "h1_local_gauge_metric_check": {
+    "cross_variation_object": "δ/δg_{ρσ}(∇_μ F^{μν}) vs δ/δA_ν(M_Pl^2 G_{ρσ}+Λg_{ρσ}-T_{ρσ}^{gauge})",
+    "maxwell_einstein_part": "matched at local operator level for minimal coupling block",
+    "status": "PARTIAL",
+    "note": "global boundary terms, gauge fixing and full matter backreaction not discharged"
+  },
+  "qg_gate_impact": {
+    "renormalization": "OPEN",
+    "unitarity": "OPEN",
+    "background_independence": "OPEN"
+  },
+  "global_reverse_chain_status": "OPEN",
+  "next_honest_step": "Połączyć witnessy H1 (phi-H, gauge-scalar, gauge-metric) w jeden spójny operatorowy pakiet i rozpocząć eksport H2 dla tego samego bloku.",
+  "lay_summary": "Dołożyliśmy grawitację do lokalnego testu cofania teorii. To znaczy, że sprawdzenie nie dotyczy już tylko pól materii, ale też metryki czasoprzestrzeni. Nadal jednak brakuje pełnych dowodów globalnych."
+}

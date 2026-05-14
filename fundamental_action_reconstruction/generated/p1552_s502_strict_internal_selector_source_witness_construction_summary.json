@@ -1,0 +1,53 @@
+{
+  "checkpoint": "P1552_S502",
+  "date_utc": "2026-05-14",
+  "status": "PASS_STRICT_SOURCE_WITNESS_CANDIDATE_EXPORTED_WITH_PHYSICAL_TESTS",
+  "strict_status": {
+    "qw2191_closed": false,
+    "strict_core_status": "OPEN_UNIQUENESS_OBSTRUCTION",
+    "legacy_bridge_used": false
+  },
+  "witness_candidate": {
+    "id": "S_sel_int_strict_source_witness_v1_candidate",
+    "selector_source_component": {
+      "present": true,
+      "construction_mode": "strict_internal",
+      "axiom_only": false
+    },
+    "channel_alignment": {
+      "sm_channel": "aligned_candidate",
+      "gr_channel": "aligned_candidate",
+      "cross_channel_conflict": false
+    },
+    "perturbative_stability_test": {
+      "epsilon_scan": [
+        0.001,
+        0.003,
+        0.01
+      ],
+      "class_flip_detected": false,
+      "result": "stable_candidate"
+    },
+    "uniqueness_resolution_test": {
+      "degeneracy_detected": true,
+      "theorem_level_uniqueness_proved": false,
+      "result": "obstruction_persists_requires_theorem"
+    }
+  },
+  "physical_checks": {
+    "selector_source_present": true,
+    "sm_gr_alignment_present": true,
+    "cross_channel_conflict_absent": true,
+    "perturbative_stability_pass": true,
+    "theorem_level_uniqueness_pass": false
+  },
+  "closure_claim_allowed_now": false,
+  "qw2191_closed": false,
+  "audit_digest": "50407d892db67050fcf3f8c668567470c4ea66b186fcebb451ef92bdebaab68c",
+  "next_required_objects": [
+    "strict_selector_uniqueness_theorem_packet",
+    "independent_dual_replication_of_uniqueness_packet",
+    "qw2191_strict_core_closure_certificate_theorem_level"
+  ],
+  "recommendation": "prove_theorem_level_uniqueness_for_candidate_and_replicate_independently"
+}

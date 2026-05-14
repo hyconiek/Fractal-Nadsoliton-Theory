@@ -1,0 +1,58 @@
+{
+  "checkpoint": "P1664_S614_STRICT_FULL_LAGRANGIAN_MANIFEST_AND_INVERSION",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "kernel_input": {
+    "omega": 0.18575,
+    "phi": 4.5231,
+    "beta": 0.72,
+    "eta": 1.31,
+    "A": 1.0
+  },
+  "coefficient_map": {
+    "Mpl2": 1.72,
+    "cR2": 0.3116883116883117,
+    "cRic2": 0.4083116883116883,
+    "cRiem2": 0.4158,
+    "Z3": 1.41472,
+    "Z2": 1.31104,
+    "Z1": 1.20736,
+    "muH2": 0.0345030625,
+    "lambdaH": 1.579127906976744,
+    "xiHR": 0.41860465116279066,
+    "chiRG": 0.346764705882353,
+    "yu": 0.167175,
+    "yd": 0.092875,
+    "ye": 0.055725
+  },
+  "lagrangian_manifest": {
+    "L_GR": "sqrt(-g)[(Mpl2/2)R + cR2 R^2 + cRic2 Ricci^2 + cRiem2 Riemann^2]",
+    "L_gauge": "-sqrt(-g)/4[Z3 G^2 + Z2 W^2 + Z1 B^2]",
+    "L_H": "sqrt(-g)[(D H)^2 - muH2 H^†H - lambdaH(H^†H)^2]",
+    "L_fermion": "sqrt(-g) sum_f i psibar_f gamma^a e_a^mu D_mu psi_f",
+    "L_Yukawa": "-sqrt(-g)[yu Qbar H~ uR + yd Qbar H dR + ye Lbar H eR + h.c.]",
+    "L_mix": "sqrt(-g)[xiHR(H^†H)R + chiRG R(G^2+W^2+B^2)]",
+    "L_QG_ct": "sqrt(-g)[dcR2 R^2 + dcRic2 Ricci^2 + dcRiem2 Riemann^2]"
+  },
+  "inverse_recovery": {
+    "beta": 0.7199999999999999,
+    "A": 1.0000000000000002,
+    "omega": 0.18574999999999997,
+    "eta": 1.3099999999999998,
+    "abs_errors": {
+      "beta_abs": 1.1102230246251565e-16,
+      "A_abs": 2.220446049250313e-16,
+      "omega_abs": 2.7755575615628914e-17,
+      "eta_abs": 2.220446049250313e-16
+    },
+    "local_pass": true,
+    "tolerance": 1e-12
+  },
+  "status": "OPEN_OBLIGATION",
+  "open_obligations": [
+    "global_invertibility_theorem",
+    "spin2_unitarity_operator_test",
+    "full_1loop_counterterm_derivation",
+    "background_independence_quantum_proof"
+  ]
+}

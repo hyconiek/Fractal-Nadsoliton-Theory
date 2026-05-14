@@ -1,0 +1,28 @@
+{
+  "checkpoint": "P1688_S638",
+  "timestamp_utc": "2026-05-14T22:56:57.527713+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "kernel_context": "K_strict(d) = cos(omega*d + phi0)/(1 + beta*d^eta)",
+  "L_total_context": "L_scalar + L_gauge + L_fermion + L_higgs + L_gravity + L_mix",
+  "sector_eom_export": {
+    "scalar_phi": "□φ + m_φ^2 φ + (λ_3/2)φ^2 + (λ_4/3!)φ^3 + 2λ_{φH}φ(H†H) + 2ξ_{φR}Rφ = 0",
+    "higgs_H": "D_μD^μH + μ_H^2 H + 2λ_H(H†H)H + ξ_HR R H + λ_{φH}φ^2 H + Yukawa_source = 0",
+    "gauge_A": "∇_ν(Z_a F_a^{νμ}) + J_a^μ + χ_RG ∇_ν(R F_a^{νμ}) = 0",
+    "fermion_psi": "iγ^a e_a^{ μ}D_μ ψ_f - y_f H·ψ_f = 0",
+    "metric_g": "(M_Pl^2/2)G_{μν} + Λg_{μν} + H_{μν}^{(R2,Ric2,Riem2)} = T_{μν}^{SM+mix}"
+  },
+  "bidirectional_status": {
+    "forward_kernel_to_eom": "EXPORTED_SECTORWISE_FROM_FULL_L_TOTAL",
+    "reverse_eom_to_lagrangian": "KEEP_OPEN_HELMHOLTZ_PLUS_QG_OBLIGATIONS",
+    "local_inversion_from_p1664": true
+  },
+  "qg_open_obligations": [
+    "full_counterterm_renormalization_export",
+    "spin2_spin0_unitarity_nonproxy_witness",
+    "quantum_background_independence_witness"
+  ],
+  "status": "KEEP_OPEN_STRICT_CORE_CLOSURE_REQUIRES_QG_EXPORTS",
+  "next_honest_step": "Build a strict-core spin-2 curved-background operator witness with explicit spectral-sign test and no proxy shortcuts.",
+  "lay_summary": "Mamy już pełny wzór teorii i pokazaliśmy równania ruchu dla każdego sektora. To nie zamyka jeszcze ToE, bo nadal brakuje twardych dowodów kwantowej grawitacji: renormalizacji, unitarności i niezależności od tła."
+}

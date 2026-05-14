@@ -1,0 +1,27 @@
+{
+  "checkpoint": "P1645_S595",
+  "timestamp_utc": "2026-05-14T18:15:50.957962+00:00",
+  "status": "PASS_LOCAL_P1645_CROSS_VARIATION_SYMMETRY_SCALAR_HIGGS_BLOCK",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "scope": "local scalar-Higgs potential block of full strict Lagrangian",
+  "probe": {
+    "E_phi": "lamphi*phi^3 + lamphiH*phi*H^2 + xiPhiR*phi*R",
+    "E_H": "mu2*H + lamH*H^3 + lamphiH*phi^2*H + xiHR*H*R",
+    "dH_dEphi": "2*lamphiH*phi*H",
+    "dphi_dEH": "2*lamphiH*phi*H",
+    "mismatch": "0",
+    "cross_variation_commutes": true,
+    "method": "analytic closed-form derivative check (dependency-free)"
+  },
+  "impact_on_H2": {
+    "global_status": "PARTIAL",
+    "reason": "One mixed block validated analytically; gauge/fermion/metric blocks and boundary class still open"
+  },
+  "strict_core_closure": {
+    "status": "OPEN",
+    "reason": "B4 theorem-level witness remains incomplete until H1..H4 are fully discharged"
+  },
+  "next_honest_step": "Rozszerzyć test H2 o jawny blok gauge+metric oraz dołączyć eksport założeń brzegowych (H4), żeby zamknąć B4 na pełnej klasie operatorów strict.",
+  "lay_summary": "Sprawdziliśmy poprawność jednego kluczowego fragmentu równań: w tym bloku mieszane pochodne są zgodne. To postęp, ale pełna teoria ma więcej bloków do formalnego domknięcia."
+}

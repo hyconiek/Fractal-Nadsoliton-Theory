@@ -1,0 +1,50 @@
+{
+  "checkpoint": "P1676_S626_RENORMALIZATION_BACKGROUND_INDEPENDENCE_INTEGRATION_MATRIX",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "chain": "K_strict -> coeff -> full L_total -> EOM -> {unitarity, renormalization, background_independence}",
+  "full_lagrangian_reference": "L_scalar + L_gauge + L_fermion + L_higgs + L_gravity + L_mix",
+  "unitarity_input": "P1675_PROXY_SAFE_DOMAIN_IDENTIFIED_BUT_THEOREM_MISSING",
+  "renormalization_gates": [
+    {
+      "gate": "counterterm_basis_closure",
+      "proxy_status": "READY",
+      "theorem_status": "MISSING"
+    },
+    {
+      "gate": "loop_order_stability",
+      "proxy_status": "PARTIAL",
+      "theorem_status": "MISSING"
+    },
+    {
+      "gate": "running_consistency",
+      "proxy_status": "PARTIAL",
+      "theorem_status": "MISSING"
+    }
+  ],
+  "background_independence_gates": [
+    {
+      "gate": "chart_covariance_consistency",
+      "proxy_status": "READY",
+      "theorem_status": "MISSING"
+    },
+    {
+      "gate": "background_shift_invariance",
+      "proxy_status": "PARTIAL",
+      "theorem_status": "MISSING"
+    },
+    {
+      "gate": "global_atlas_cocycle",
+      "proxy_status": "PARTIAL",
+      "theorem_status": "MISSING"
+    }
+  ],
+  "status": "OPEN_OBLIGATION",
+  "critical_path": [
+    "spin2_spin0_unitarity_theorem_level_proof",
+    "counterterm_basis_closure_theorem",
+    "background_shift_invariance_theorem"
+  ],
+  "next_honest_step": "S627: combined theorem object for unitarity+renormalization on restricted curved-background class.",
+  "lay_summary": "Zintegrowaliśmy bramki QG w jedną mapę: część testów proxy jest obiecująca, ale pełne twierdzenia są nadal otwarte."
+}

@@ -1,0 +1,38 @@
+{
+  "checkpoint": "P1605_S555",
+  "timestamp_utc": "2026-05-14T13:14:40.176840+00:00",
+  "status": "KEEP_OPEN_P1605_NP1_REPLAY_NOT_READY",
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "strict_chain": {
+    "kernel": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+    "coefficients": {},
+    "lagrangian": {},
+    "eom": {}
+  },
+  "np1_instantiation": {
+    "provider_class": "NP1_noncyclic_selector_source_provider",
+    "g1_metrics": {
+      "full_domain_error_max": 0.541012094356,
+      "full_domain_error_l2": 0.35732438268197375,
+      "full_domain_error_mean": 0.33985837260395,
+      "g1_ready": false
+    },
+    "bridge_ready": false,
+    "eom_ready": true,
+    "g3_ready": false
+  },
+  "strict_core_closure": {
+    "status": "OPEN",
+    "missing_exports": [],
+    "missing_witnesses": [
+      "W_G1_full_domain_selector_gap_discharge"
+    ],
+    "missing_theorems": [
+      "T_selector_uniqueness_to_full_lagrangian_bridge",
+      "T_G3_final_strict_ToE_composition"
+    ]
+  },
+  "external_team_validation_required": false,
+  "next_honest_step": "If OPEN: export NP1 theorem witness object + bridge upgrade in one artifact (P1606).",
+  "lay_summary": "Wdrożyliśmy nowy niecykliczny provider NP1 i ponownie sprawdziliśmy globalne metryki. To mówi, czy nowy mechanizm realnie przybliża domknięcie ToE."
+}

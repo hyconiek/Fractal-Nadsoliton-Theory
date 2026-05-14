@@ -1,0 +1,43 @@
+{
+  "checkpoint": "P1596_S546",
+  "timestamp_utc": "2026-05-14T08:37:51.896730+00:00",
+  "status": "KEEP_OPEN_P1596_BRIDGE_THEOREM_INCOMPLETE",
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "strict_chain": {
+    "kernel": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+    "coefficients": {},
+    "lagrangian": {},
+    "eom": {}
+  },
+  "bridge_theorem_object": {
+    "id": "T1596_selector_uniqueness_to_full_lagrangian_bridge_object",
+    "hypotheses": [
+      "H1: strict selector source exists internally (no legacy transfer)",
+      "H2: symmetry-breaking witness establishes strict-core branch choice",
+      "H3: strict kernel coefficient map is stable in admitted operating domain"
+    ],
+    "claim": "Selector uniqueness induces a unique strict coefficient bundle and therefore a unique strict L_SM+L_GR candidate class.",
+    "proof_trace_exported": false,
+    "non_legacy_bridge_declared": true
+  },
+  "bridge_gate": {
+    "selector_source_ready": false,
+    "symmetry_breaking_witness_ready": false,
+    "prior_bridge_ready_flag": false,
+    "bridge_ready_now": false
+  },
+  "strict_core_closure": {
+    "status": "OPEN",
+    "missing_exports": [],
+    "missing_witnesses": [
+      "W_G1_full_domain_selector_gap_discharge"
+    ],
+    "missing_theorems": [
+      "T_selector_uniqueness_to_full_lagrangian_bridge",
+      "T_G3_final_strict_ToE_composition"
+    ]
+  },
+  "external_team_validation_required": false,
+  "next_honest_step": "P1597: construct final G3 theorem composition object using T1596 and remaining witness obligations.",
+  "lay_summary": "Ten krok buduje formalny obiekt dowodu łączący unikalność selektora z pełnym lagranżianem strict i pokazuje, czy ten most jest już naprawdę gotowy."
+}

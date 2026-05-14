@@ -1,0 +1,54 @@
+{
+  "checkpoint": "P1538_S488",
+  "status": "PASS_TB_LEM2_DETERMINISM_PROOF_CHECKPOINT",
+  "date_utc": "2026-05-14",
+  "route": "F_nadsoliton_to_LSM_plus_LGR",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "selected_branch": "strict_anchor_branch_C_trace",
+  "raw_alternatives": [
+    {
+      "branch_id": "strict_anchor_branch_candidate_trace_alt",
+      "provenance_depth": 2
+    },
+    {
+      "branch_id": "strict_anchor_branch_candidate_trace",
+      "provenance_depth": 3
+    },
+    {
+      "branch_id": "branch_B_noncyclic",
+      "provenance_depth": 5
+    }
+  ],
+  "canonical_alternatives": [
+    {
+      "branch_id": "branch_B_noncyclic",
+      "provenance_depth": 5
+    },
+    {
+      "branch_id": "strict_anchor_branch_candidate_trace",
+      "provenance_depth": 3
+    },
+    {
+      "branch_id": "strict_anchor_branch_candidate_trace_alt",
+      "provenance_depth": 2
+    }
+  ],
+  "raw_decision": {
+    "tie_detected": true,
+    "tie_break_status": "resolved_by_provenance_depth",
+    "selected_branch_after_tie_break": "strict_anchor_branch_candidate_trace"
+  },
+  "canonical_decision": {
+    "tie_detected": true,
+    "tie_break_status": "resolved_by_provenance_depth",
+    "selected_branch_after_tie_break": "strict_anchor_branch_candidate_trace"
+  },
+  "determinism_pass": true,
+  "tb_lem2_status_update": "theorem_level_candidate",
+  "qw2191_closed": false,
+  "next_required_objects": [
+    "tb_lem2_formal_derivation_text",
+    "tb_thm_main_composition_after_lem2_and_lem4_upgrade"
+  ]
+}

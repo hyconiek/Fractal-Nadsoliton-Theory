@@ -1,0 +1,61 @@
+{
+  "checkpoint": "P1654_S604",
+  "timestamp_utc": "2026-05-14T19:04:40.708033+00:00",
+  "status": "KEEP_OPEN_P1654_BIDIRECTIONAL_AND_QG_THEOREM_MATRIX_EXPORTED",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "kernel_definition": "K_strict(d) = cos(omega*d + phi0)/(1 + beta*d^eta)",
+  "full_chain_forward": "K_strict -> coefficients -> full L_total -> EOM",
+  "full_chain_reverse": "EOM -> full L_total -> coefficients -> K_strict",
+  "theorem_requirement_matrix": {
+    "forward_chain": [
+      {
+        "gate": "K_strict -> coefficients global identifiability theorem",
+        "status": "PARTIAL"
+      },
+      {
+        "gate": "coefficients -> full L_total completeness theorem",
+        "status": "PARTIAL"
+      },
+      {
+        "gate": "full L_total -> full EOM variational theorem",
+        "status": "PARTIAL"
+      }
+    ],
+    "reverse_chain": [
+      {
+        "gate": "EOM -> L_total Helmholtz H1..H4 discharge",
+        "status": "OPEN"
+      },
+      {
+        "gate": "L_total -> coefficients global injective recovery",
+        "status": "OPEN"
+      },
+      {
+        "gate": "coefficients -> K_strict selector-nullspace closure (QW-2191)",
+        "status": "OPEN"
+      }
+    ]
+  },
+  "quantum_gravity_closure_gates": {
+    "renormalization": {
+      "status": "OPEN",
+      "required_export": "strict UV counterterm-closure theorem for gravity-coupled sectors"
+    },
+    "unitarity": {
+      "status": "OPEN",
+      "required_export": "ghost-free + optical-theorem compatible amplitude theorem in strict sector"
+    },
+    "background_independence": {
+      "status": "OPEN",
+      "required_export": "background-independent observable algebra and evolution consistency theorem"
+    }
+  },
+  "final_strict_core_closure": {
+    "status": "OPEN",
+    "reason": "Reverse-chain and QG theorem-level gates remain OPEN"
+  },
+  "next_honest_step": "Zbudować pierwszy formalny witness H1 (lokalna warunkowalność Helmholtza) dla pełnego układu sprzężonego i podpiąć go do macierzy bramek P1654.",
+  "lay_summary": "Mamy już pełną mapę, czego brakuje do domknięcia teorii: nie tylko matematyczne cofanie z równań ruchu, ale też trzy twarde warunki kwantowej grawitacji: renormalizacja, unitarność i niezależność od tła."
+}

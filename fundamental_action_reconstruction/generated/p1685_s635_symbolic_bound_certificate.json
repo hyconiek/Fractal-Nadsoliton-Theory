@@ -1,0 +1,64 @@
+{
+  "checkpoint": "P1685_S635_SYMBOLIC_BOUND_CERTIFICATE",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "pipeline": "K_strict -> coeff -> full_L_total -> linearized_EOM -> symbolic_bound_certificate",
+  "curvature_domain": "|R|<=1.0",
+  "admissible_domain": {
+    "c1": [
+      0.02,
+      0.2
+    ],
+    "c2": [
+      0.01,
+      0.12
+    ],
+    "xi": [
+      0.0,
+      0.1
+    ]
+  },
+  "probe_rows": [
+    {
+      "c1": 0.08,
+      "c2": 0.04,
+      "xi": 0.03,
+      "admissible": true
+    },
+    {
+      "c1": 0.2,
+      "c2": 0.12,
+      "xi": 0.1,
+      "admissible": true
+    },
+    {
+      "c1": 0.01,
+      "c2": 0.04,
+      "xi": 0.03,
+      "admissible": false
+    },
+    {
+      "c1": 0.08,
+      "c2": 0.13,
+      "xi": 0.03,
+      "admissible": false
+    }
+  ],
+  "boundary_counterexamples": [
+    {
+      "c1": 0.01,
+      "c2": 0.04,
+      "xi": 0.03,
+      "admissible": false
+    },
+    {
+      "c1": 0.08,
+      "c2": 0.13,
+      "xi": 0.03,
+      "admissible": false
+    }
+  ],
+  "status": "OPEN_OBLIGATION",
+  "limitation": "Certificate scaffold only; theorem-level global completeness proof is still missing.",
+  "next_honest_step": "S636: bridge certificate to global cocycle background-independence and full unitarity theorem statement."
+}

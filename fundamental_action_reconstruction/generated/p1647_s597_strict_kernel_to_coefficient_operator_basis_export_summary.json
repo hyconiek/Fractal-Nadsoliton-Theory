@@ -1,0 +1,48 @@
+{
+  "checkpoint": "P1647_S597",
+  "timestamp_utc": "2026-05-14T18:26:10.810142+00:00",
+  "status": "KEEP_OPEN_P1647_KERNEL_TO_COEFFICIENT_OPERATOR_BASIS_EXPORTED",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "kernel_definition": "K_strict(d) = cos(omega*d + phi0)/(1 + beta*d^eta)",
+  "coefficient_operator_basis_map": {
+    "c_kin_phi": "I0[K_strict]",
+    "lambda_phi": "I2[K_strict]",
+    "lambda_phiH": "I_mix[K_strict, H]",
+    "xi_phiR": "I_curv[K_strict]",
+    "Mpl2_half": "I_grav0[K_strict]",
+    "c1_R2": "I_grav2a[K_strict]",
+    "c2_Ricci2": "I_grav2b[K_strict]",
+    "c3_Riem2": "I_grav2c[K_strict]"
+  },
+  "projector_semantics": {
+    "I0": "normalized even-moment projection onto scalar kinetic operator",
+    "I2": "quartic scalar self-interaction moment",
+    "I_mix": "mixed projector onto phi^2 H^†H sector",
+    "I_curv": "scalar-curvature coupling projector",
+    "I_grav0": "Einstein-Hilbert-scale projector",
+    "I_grav2a/b/c": "independent quadratic-curvature projectors"
+  },
+  "full_lagrangian_reference": {
+    "L_total": "L_strict_scalar + L_SM_gauge + L_SM_fermions + L_SM_higgs + L_GR + L_mix",
+    "L_SM_gauge": "-1/4 G^A_{μν}G_A^{μν} - 1/4 W^I_{μν}W_I^{μν} - 1/4 B_{μν}B^{μν}",
+    "L_GR": "M_Pl^2/2·R - Λ + c1 R^2 + c2 R_{μν}R^{μν} + c3 R_{μναβ}R^{μναβ}",
+    "L_mix": "ξ_HR H^†H R + ξ_φR φ^2 R + λ_{φH} φ^2 H^†H"
+  },
+  "reverse_obligation_coeff_to_kernel": {
+    "target": "coefficients -> K_strict",
+    "status": "OPEN",
+    "missing": [
+      "injective theorem for projector family {I*}",
+      "nullspace elimination witness compatible with QW-2191",
+      "global overlap consistency of recovered kernel parameters"
+    ]
+  },
+  "strict_core_closure": {
+    "status": "OPEN",
+    "reason": "Coefficient->kernel injectivity and selector uniqueness witnesses still missing"
+  },
+  "next_honest_step": "Wyeksportować lokalny witness iniektywności dla podrodziny {I0, I2, I_mix, I_curv} na ograniczonej klasie parametrów (beta, eta, omega, phi0).",
+  "lay_summary": "Dodaliśmy mapę: jak z kernela strict wyprowadzać współczynniki do pełnego lagranżianu. Nadal brakuje formalnego dowodu, że tę mapę da się odwrócić jednoznacznie w całej teorii."
+}
