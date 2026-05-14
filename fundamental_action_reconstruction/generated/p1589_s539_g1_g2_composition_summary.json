@@ -1,0 +1,40 @@
+{
+  "checkpoint": "P1589_S539",
+  "timestamp_utc": "2026-05-14T08:08:08.379403+00:00",
+  "status": "KEEP_OPEN_P1589_G1_G2_NOT_READY",
+  "strict_chain": {
+    "kernel": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+    "coefficients": {
+      "c2": 0.3078066505217639,
+      "c4": 0.17129068163797725,
+      "cY": 0.23520589523214172
+    },
+    "lagrangian": {
+      "L_SM": "0.5*(dphi)^2 - 0.5*0.30780665*phi^2 - 0.17129068*phi^4 - 0.23520590*phi*psi*psi",
+      "L_GR": "0.5*R - 0.03078067*R^2",
+      "L_total": "L_SM + L_GR"
+    },
+    "eom": {
+      "phi": "d2phi + 0.30780665*phi + 4*0.17129068*phi^3 + 0.23520590*psi*psi = 0",
+      "psi": "i*gamma*dpsi - 0.23520590*phi*psi = 0",
+      "metric": "G_mn + 0.06156133*H_mn = T_mn"
+    }
+  },
+  "composition": {
+    "G1_selector_gap_pass": false,
+    "G2_global_stability_pass": true,
+    "ready_for_final_export": false
+  },
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "strict_core_closure": {
+    "status": "OPEN",
+    "qw2191_closed": false,
+    "remaining_missing": [
+      "G1/G2 full theorem-level strengthening",
+      "G3 final ToE export"
+    ]
+  },
+  "external_team_validation_required": false,
+  "next_honest_step": "P1590_export_G3_final_ToE_object_if_ready_else_issue_refined_nonclosure",
+  "lay_summary": "Połączono dwa kluczowe warunki (G1 i G2), aby ocenić gotowość do finalnego eksportu ToE bez skrótów metodologicznych."
+}

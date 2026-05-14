@@ -1,0 +1,70 @@
+{
+  "checkpoint": "P1533_S483",
+  "status": "PASS_FORMAL_SELECTOR_UNIQUENESS_THEOREM_SKELETON",
+  "date_utc": "2026-05-14",
+  "route": "F_nadsoliton_to_LSM_plus_LGR",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "theorem_skeleton_graph": {
+    "THM_MAIN_STRICT_SELECTOR_UNIQUENESS": {
+      "depends_on": [
+        "LEM_1_INTAKE_PROVENANCE_SOUNDNESS",
+        "LEM_2_REDUCTION_DOMINANCE",
+        "LEM_3_MULTI_CASE_STABILITY",
+        "LEM_4_NO_EQUIVALENT_ALTERNATIVE_BRANCH"
+      ],
+      "status": "open"
+    },
+    "LEM_1_INTAKE_PROVENANCE_SOUNDNESS": {
+      "depends_on": [
+        "AX_S1",
+        "AX_S3"
+      ],
+      "status": "partial"
+    },
+    "LEM_2_REDUCTION_DOMINANCE": {
+      "depends_on": [
+        "AX_S2",
+        "AX_S4"
+      ],
+      "status": "partial"
+    },
+    "LEM_3_MULTI_CASE_STABILITY": {
+      "depends_on": [
+        "AX_S5"
+      ],
+      "status": "partial"
+    },
+    "LEM_4_NO_EQUIVALENT_ALTERNATIVE_BRANCH": {
+      "depends_on": [
+        "AX_S4",
+        "AX_S5"
+      ],
+      "status": "open"
+    }
+  },
+  "assumption_consistency_check": {
+    "axioms_used": [
+      "AX_S1",
+      "AX_S2",
+      "AX_S3",
+      "AX_S4",
+      "AX_S5"
+    ],
+    "consistency_pass": true,
+    "legacy_bridge_used": false
+  },
+  "open_proof_obligations": [
+    "prove_LEM_4_no_equivalent_alternative_branch",
+    "upgrade_LEM_2_from_partial_to_theorem_level",
+    "upgrade_LEM_3_from_partial_to_theorem_level",
+    "compose_all_lemmas_into_THM_MAIN_proof"
+  ],
+  "qw2191_closed": false,
+  "next_required_objects": [
+    "prove_LEM_4_no_equivalent_alternative_branch",
+    "upgrade_LEM_2_from_partial_to_theorem_level",
+    "upgrade_LEM_3_from_partial_to_theorem_level",
+    "compose_all_lemmas_into_THM_MAIN_proof"
+  ]
+}

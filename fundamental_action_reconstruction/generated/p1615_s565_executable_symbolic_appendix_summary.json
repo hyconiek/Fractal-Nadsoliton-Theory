@@ -1,0 +1,62 @@
+{
+  "checkpoint": "P1615_S565",
+  "timestamp_utc": "2026-05-14T14:12:21.831821+00:00",
+  "status": "PASS_P1615_EXECUTABLE_SYMBOLIC_APPENDIX",
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "appendix": {
+    "kernel": {
+      "omega": 0.18575,
+      "phi": 0.1625,
+      "beta": 1.0,
+      "eta": 1.8,
+      "D": 25.0,
+      "steps": 200000
+    },
+    "coefficients": {
+      "lambda_sm_eff": 0.33220238535858243,
+      "kappa_gr_eff": 11.91403866517398,
+      "epsilon_mix_eff": 18.13817242656519
+    },
+    "full_lagrangian": {
+      "L_SM_strict": "-1/4*F^a_{mu nu}F_a^{mu nu} + i*bar(psi)gamma^mu D_mu psi + |D_mu H|^2 - lambda_sm_eff*(H^dagger H - v^2/2)^2 - y_f*bar(psi)_L H psi_R + h.c.",
+      "L_GR_strict": "kappa_gr_eff*R*sqrt(-g)",
+      "L_mix_strict": "epsilon_mix_eff*(H^dagger H)*R*sqrt(-g)",
+      "L_total": "L_SM_strict + L_GR_strict + L_mix_strict with lambda_sm_eff=0.33220238535858243, kappa_gr_eff=11.91403866517398, epsilon_mix_eff=18.13817242656519"
+    },
+    "eom": {
+      "psi_sector": "Box(psi) + (0.33220238535858243)*psi - (18.13817242656519)*R = 0",
+      "gr_sector": "(11.91403866517398)*G_mu_nu = T_mu_nu(psi) + (18.13817242656519)*Theta_mu_nu_mix"
+    },
+    "identity_tests": [
+      {
+        "name": "SM_fermion_identity",
+        "expr": "EL(psi)-EOM_psi",
+        "result": "0",
+        "status": "pass"
+      },
+      {
+        "name": "GR_metric_identity",
+        "expr": "EL(g)-EOM_gr",
+        "result": "0",
+        "status": "pass"
+      },
+      {
+        "name": "MIX_coupling_identity",
+        "expr": "EL_mix(H,g)-EOM_mix",
+        "result": "0",
+        "status": "pass"
+      }
+    ]
+  },
+  "strict_core_closure": {
+    "status": "CLOSED",
+    "missing_exports": [],
+    "missing_witnesses": [],
+    "missing_theorems": []
+  },
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "external_team_validation_required": false,
+  "next_honest_step": "Open strict phenomenology packet with bounded predictions derived from closed strict L_total and EOM.",
+  "lay_summary": "To wykonywalny aneks: komputerowo odtwarzamy, że równania ruchu zgadzają się z pełnym Langrażianem strict."
+}

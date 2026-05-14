@@ -1,0 +1,113 @@
+{
+  "checkpoint": "P1601_S551",
+  "timestamp_utc": "2026-05-14T12:56:06.109030+00:00",
+  "status": "KEEP_OPEN_P1601_TAIL_CORRECTION_INSUFFICIENT",
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "strict_chain": {
+    "kernel": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+    "coefficients": {},
+    "lagrangian": {},
+    "eom": {}
+  },
+  "tail_correction_candidate": {
+    "damping_factor": 0.55,
+    "corrected_worst_10_pairs": [
+      {
+        "i": 0,
+        "j": 79,
+        "gap": 0.7064603036,
+        "abs_gap": 0.7064603036,
+        "corrected_gap": 0.38855316698000003,
+        "corrected_abs_gap": 0.38855316698000003
+      },
+      {
+        "i": 1,
+        "j": 78,
+        "gap": 0.6948432125999999,
+        "abs_gap": 0.6948432125999999,
+        "corrected_gap": 0.38216376693,
+        "corrected_abs_gap": 0.38216376693
+      },
+      {
+        "i": 2,
+        "j": 77,
+        "gap": 0.674625369,
+        "abs_gap": 0.674625369,
+        "corrected_gap": 0.37104395295000003,
+        "corrected_abs_gap": 0.37104395295000003
+      },
+      {
+        "i": 3,
+        "j": 76,
+        "gap": 0.6580883382,
+        "abs_gap": 0.6580883382,
+        "corrected_gap": 0.36194858601,
+        "corrected_abs_gap": 0.36194858601
+      },
+      {
+        "i": 4,
+        "j": 75,
+        "gap": 0.644394787,
+        "abs_gap": 0.644394787,
+        "corrected_gap": 0.35441713285000004,
+        "corrected_abs_gap": 0.35441713285000004
+      },
+      {
+        "i": 5,
+        "j": 74,
+        "gap": 0.6330223449,
+        "abs_gap": 0.6330223449,
+        "corrected_gap": 0.348162289695,
+        "corrected_abs_gap": 0.348162289695
+      },
+      {
+        "i": 6,
+        "j": 73,
+        "gap": 0.6235901848000001,
+        "abs_gap": 0.6235901848000001,
+        "corrected_gap": 0.34297460164000004,
+        "corrected_abs_gap": 0.34297460164000004
+      },
+      {
+        "i": 7,
+        "j": 72,
+        "gap": 0.6157973059,
+        "abs_gap": 0.6157973059,
+        "corrected_gap": 0.33868851824500007,
+        "corrected_abs_gap": 0.33868851824500007
+      },
+      {
+        "i": 8,
+        "j": 71,
+        "gap": 0.6093949306,
+        "abs_gap": 0.6093949306,
+        "corrected_gap": 0.33516721183000003,
+        "corrected_abs_gap": 0.33516721183000003
+      },
+      {
+        "i": 9,
+        "j": 70,
+        "gap": 0.6041721938,
+        "abs_gap": 0.6041721938,
+        "corrected_gap": 0.33229470659,
+        "corrected_abs_gap": 0.33229470659
+      }
+    ],
+    "corrected_worst_abs_gap": 0.38855316698000003,
+    "corrected_avg_abs_gap_top10": 0.355541393372,
+    "candidate_ready": false
+  },
+  "strict_core_closure": {
+    "status": "OPEN",
+    "missing_exports": [],
+    "missing_witnesses": [
+      "W_G1_full_domain_selector_gap_discharge"
+    ],
+    "missing_theorems": [
+      "T_G3_final_strict_ToE_composition"
+    ]
+  },
+  "external_team_validation_required": false,
+  "next_honest_step": "P1602: apply correction candidate into strict selector-source generator and rerun P1598/P1599/P1600 loop.",
+  "lay_summary": "To symulacja korekty najbardziej problematycznych sektorów; pokazuje, czy sama korekta ogona może odblokować świadka G1 bez ruszania legacy bridge."
+}

@@ -1,0 +1,53 @@
+{
+  "checkpoint": "P1528_S478",
+  "status": "PASS_THEOREM_LEVEL_SELECTOR_UNIQUENESS_SCAFFOLD",
+  "date_utc": "2026-05-13",
+  "route": "F_nadsoliton_to_LSM_plus_LGR",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "selected_branch": "strict_anchor_branch_C_trace",
+  "alternatives": [
+    "branch_B_noncyclic",
+    "branch_A"
+  ],
+  "dominance_margin": 2.0,
+  "existence_pass": true,
+  "dominance_pass": true,
+  "stability_checks": [
+    {
+      "branches": [
+        "strict_anchor_branch_C_trace",
+        "branch_alt_1_noncyclic",
+        "branch_alt_2"
+      ],
+      "dominance_margin": 2.0,
+      "dominance_ok": true
+    },
+    {
+      "branches": [
+        "strict_anchor_branch_C_trace",
+        "branch_alt_3_trace",
+        "branch_alt_4"
+      ],
+      "dominance_margin": 3.0,
+      "dominance_ok": true
+    },
+    {
+      "branches": [
+        "strict_anchor_branch_C_trace",
+        "branch_alt_5",
+        "branch_alt_6_noncyclic"
+      ],
+      "dominance_margin": 2.0,
+      "dominance_ok": true
+    }
+  ],
+  "stability_pass": true,
+  "theorem_scaffold_pass": true,
+  "qw2191_closed": false,
+  "closure_note": "scaffold_pass_is_not_full_theorem_level_selector_closure",
+  "next_required_objects": [
+    "formal_selector_uniqueness_theorem_proof",
+    "independent_strict_core_reproduction_packet"
+  ]
+}

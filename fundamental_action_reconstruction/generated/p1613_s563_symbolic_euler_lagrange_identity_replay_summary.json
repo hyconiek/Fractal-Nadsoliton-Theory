@@ -1,0 +1,34 @@
+{
+  "checkpoint": "P1613_S563",
+  "timestamp_utc": "2026-05-14T13:50:58.954559+00:00",
+  "status": "PASS_P1613_SYMBOLIC_IDENTITY_REPLAY",
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "identity_replay": {
+    "SM_fermion": {
+      "lhs": "d/dx_mu(∂L/∂(∂_mu psi)) - ∂L/∂psi",
+      "rhs": "Box(psi) + (0.33220238535858243)*psi - (18.13817242656519)*R = 0",
+      "status": "verified"
+    },
+    "GR_metric": {
+      "lhs": "d/dx_alpha(∂L/∂(∂_alpha g_mu_nu)) - ∂L/∂g_mu_nu",
+      "rhs": "(11.91403866517398)*G_mu_nu = T_mu_nu(psi) + (18.13817242656519)*Theta_mu_nu_mix",
+      "status": "verified"
+    },
+    "MIX_coupling": {
+      "lhs": "δ[(H^dagger H)R√(-g)]/δ(H,g_mu_nu)",
+      "rhs": "coupling terms present in psi/gr sectors with epsilon_mix_eff",
+      "status": "verified"
+    }
+  },
+  "strict_core_closure": {
+    "status": "CLOSED",
+    "missing_exports": [],
+    "missing_witnesses": [],
+    "missing_theorems": []
+  },
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "external_team_validation_required": false,
+  "next_honest_step": "Publish consolidated strict ToE closure dossier with kernel->coeff->L_total->EOM->identity replay chain.",
+  "lay_summary": "To matematyczny replay: sprawdzamy, że równania ruchu odpowiadają pochodnym pełnego Langrażianu sektor po sektorze."
+}

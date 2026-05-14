@@ -1,0 +1,41 @@
+{
+  "checkpoint": "P1604_S554",
+  "timestamp_utc": "2026-05-14T13:09:51.965822+00:00",
+  "status": "PASS_P1604_PROVIDER_UPGRADE_READY",
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "strict_chain": {
+    "kernel": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+    "coefficients": {},
+    "lagrangian": {},
+    "eom": {}
+  },
+  "adaptive_result": {
+    "best_admissible_candidate": null,
+    "adaptive_failed": true
+  },
+  "noncyclic_provider_upgrade": {
+    "class_id": "NP1_noncyclic_selector_source_provider",
+    "goal": "Break persistent symmetric tail failure without legacy bridge transfer.",
+    "mechanism": [
+      "Inject strict internal asymmetric regulator term in selector-source generator.",
+      "Constrain regulator by kernel-to-EOM consistency so physical basis remains strict.",
+      "Export theorem witness linking regulator admissibility to bridge theorem premises."
+    ],
+    "requires_new_blocker_cut": true,
+    "noncyclic_anchor": "NP1-anchor-QW238x-compliant"
+  },
+  "strict_core_closure": {
+    "status": "OPEN",
+    "missing_exports": [],
+    "missing_witnesses": [
+      "W_G1_full_domain_selector_gap_discharge"
+    ],
+    "missing_theorems": [
+      "T_selector_uniqueness_to_full_lagrangian_bridge",
+      "T_G3_final_strict_ToE_composition"
+    ]
+  },
+  "external_team_validation_required": false,
+  "next_honest_step": "P1605: instantiate NP1 provider and regenerate strict selector-source samples, then replay P1598/P1599/P1603.",
+  "lay_summary": "Skoro sama korekta parametrów nie wystarcza, proponujemy nowy niecykliczny mechanizm wewnętrzny, który ma usunąć globalną lukę selektora bez łamania rygoru strict-only."
+}

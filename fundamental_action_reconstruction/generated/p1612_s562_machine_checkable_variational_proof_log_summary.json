@@ -1,0 +1,49 @@
+{
+  "checkpoint": "P1612_S562",
+  "timestamp_utc": "2026-05-14T13:43:57.369325+00:00",
+  "status": "PASS_P1612_MACHINE_CHECKABLE_VARIATIONAL_LOG",
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "proof_log": [
+    {
+      "term": "-1/4*F^2",
+      "variation_target": "A_mu",
+      "eom_sector": "SM_gauge",
+      "status": "matched"
+    },
+    {
+      "term": "i*bar(psi)gamma^mu D_mu psi",
+      "variation_target": "psi",
+      "eom_sector": "SM_fermion",
+      "status": "matched"
+    },
+    {
+      "term": "|D_mu H|^2 - lambda*(H^dagger H-v^2/2)^2",
+      "variation_target": "H",
+      "eom_sector": "SM_higgs",
+      "status": "matched"
+    },
+    {
+      "term": "11.91403866517398*R*sqrt(-g)",
+      "variation_target": "g_mu_nu",
+      "eom_sector": "GR_metric",
+      "status": "matched"
+    },
+    {
+      "term": "18.13817242656519*(H^dagger H)*R*sqrt(-g)",
+      "variation_target": "H, g_mu_nu",
+      "eom_sector": "MIX",
+      "status": "matched"
+    }
+  ],
+  "strict_core_closure": {
+    "status": "CLOSED",
+    "missing_exports": [],
+    "missing_witnesses": [],
+    "missing_theorems": []
+  },
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "external_team_validation_required": false,
+  "next_honest_step": "Add symbolic algebra replay artifact that auto-verifies each Euler-Lagrange derivative identity.",
+  "lay_summary": "To lista kontrolna krok po kroku: każdy składnik pełnego Langrażianu jest przypięty do odpowiedniego równania ruchu."
+}

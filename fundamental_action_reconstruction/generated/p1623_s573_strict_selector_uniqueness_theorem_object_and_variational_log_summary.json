@@ -1,0 +1,70 @@
+{
+  "checkpoint": "P1623_S573",
+  "timestamp_utc": "2026-05-14T15:36:19.151555+00:00",
+  "status": "KEEP_OPEN_P1623_THEOREM_AND_VARIATIONAL_GAP",
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "input_chain": {
+    "L_strict_scalar": "1/2*(∂_μψ)(∂^μψ) - 1/2*0.332202385359*ψ^2",
+    "L_SM": "-1/4*G^A_{μν}G_A^{μν} -1/4*W^I_{μν}W_I^{μν} -1/4*B_{μν}B^{μν} + Σ_f i*ψ̄_f*γ^μ*D_μ*ψ_f + |D_μH|^2 - V(H) - Σ_f y_f(ψ̄_f H ψ_f)",
+    "L_GR": "11.914038665174*R + Λ_eff + c1*R^2 + c2*R_{μν}R^{μν}",
+    "L_mix": "18.138172426565*ψ*R + ξ*|H|^2*R",
+    "L_total": "L_strict_scalar + L_SM + L_GR + L_mix"
+  },
+  "input_eom": {
+    "psi": "□ψ + 0.332202385359*ψ - 18.138172426565*R + δL_SM/δψ = 0",
+    "higgs": "D_μD^μH + ∂V/∂H† + ξ*R*H - Σ_f y_f*ψ̄_fψ_f = 0",
+    "gauge": "D_μF_a^{μν} = J_a^ν (z wkładami fermionów i Higgsa)",
+    "metric": "11.914038665174*G_{μν} + Δ_{μν}[c1,c2,Λ_eff] = T_{μν}^SM + T_{μν}^ψ + T_{μν}^mix"
+  },
+  "theorem_object": {
+    "id": "T_qw2191_selector_uniqueness_strict",
+    "premises": [
+      "strict_only_pipeline",
+      "noncyclic_provider_witness_required",
+      "no_legacy_bridge_transfer"
+    ],
+    "claim": "selector_source is unique over full strict domain and induces deterministic closure branch",
+    "proof_status": "OPEN",
+    "blocking_obligations": [
+      "construct_W_noncyclic_provider_for_selector_uniqueness",
+      "export_E_selector_internal_source_full_domain"
+    ]
+  },
+  "variational_proof_log_scaffold": {
+    "id": "E_full_variational_proof_log_machine_checkable",
+    "action": "S = ∫ d^4x sqrt(-g) L_total",
+    "sectors": [
+      "psi",
+      "higgs",
+      "gauge",
+      "metric"
+    ],
+    "checks": [
+      "EL_psi_exact",
+      "EL_higgs_exact",
+      "EL_gauge_exact",
+      "EL_metric_exact",
+      "boundary_terms_cancellation"
+    ],
+    "proof_status": "OPEN"
+  },
+  "strict_core_closure": {
+    "status": "OPEN",
+    "missing_exports": [
+      "E_selector_internal_source_full_domain",
+      "E_full_variational_proof_log_machine_checkable"
+    ],
+    "missing_witnesses": [
+      "W_noncyclic_provider_for_selector_uniqueness"
+    ],
+    "missing_theorems": [
+      "T_qw2191_selector_uniqueness_strict",
+      "T_global_toe_closure_strict"
+    ]
+  },
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "external_team_validation_required": false,
+  "next_honest_step": "Zacząć konstrukcję W_noncyclic_provider_for_selector_uniqueness i podłączyć do formalnego dowodu T_qw2191.",
+  "lay_summary": "Mamy już równania, ale potrzebujemy jeszcze formalnego dowodu, że teoria wybiera jedno, nieprzypadkowe rozwiązanie — to jest klucz do domknięcia."
+}

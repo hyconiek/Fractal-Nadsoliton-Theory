@@ -1,0 +1,45 @@
+{
+  "checkpoint": "P1554_S504",
+  "date_utc": "2026-05-14",
+  "status": "PASS_THEOREM_CANDIDATE_AND_PROOF_OBLIGATION_MATRIX_EXPORTED",
+  "theorem_candidate": {
+    "id": "THM_UQW2191_strict_noncyclic_uniqueness_candidate_v1",
+    "base_witness": "S_sel_int_strict_source_witness_v1_candidate",
+    "degeneracy_separator_function": "Delta_sel_strict_noncyclic_v1",
+    "scope": "F_nadsoliton_to_LSM_plus_LGR",
+    "legacy_bridge_used": false
+  },
+  "proof_obligation_matrix": {
+    "LEM_A_separator_action_on_strict_domain": {
+      "required": true,
+      "pass": true,
+      "metric": "strict_domain_class_separation_margin_positive"
+    },
+    "LEM_B_perturbative_stability_of_decision": {
+      "required": true,
+      "pass": true,
+      "metric": "epsilon_scan_no_class_flip"
+    },
+    "LEM_C_sm_gr_cross_channel_consistency": {
+      "required": true,
+      "pass": true,
+      "metric": "no_sm_gr_conflict_under_same_selector_decision"
+    },
+    "THM_MAIN_uniqueness_theorem_level": {
+      "required": true,
+      "pass": false,
+      "blocked_by": "independent_dual_replication_pending"
+    }
+  },
+  "strict_status": {
+    "qw2191_closed": false,
+    "toe_closed": false,
+    "closure_claim_allowed_now": false
+  },
+  "audit_digest": "7dd36c20972be4d787b2a2d96bbe090cf252bbd7764fd18fcfa1633593171adb",
+  "next_required_objects": [
+    "P1555_independent_dual_replication_packet",
+    "P1556_qw2191_theorem_level_closure_certificate_packet"
+  ],
+  "recommendation": "execute_independent_dual_replication_before_any_closure_claim"
+}

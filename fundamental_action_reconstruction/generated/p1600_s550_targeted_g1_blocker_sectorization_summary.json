@@ -1,0 +1,92 @@
+{
+  "checkpoint": "P1600_S550",
+  "timestamp_utc": "2026-05-14T12:53:24.214705+00:00",
+  "status": "PASS_P1600_TARGETED_G1_SECTORS_IDENTIFIED",
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "strict_chain": {
+    "kernel": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+    "coefficients": {},
+    "lagrangian": {},
+    "eom": {}
+  },
+  "g1_blocker_sectorization": {
+    "worst_10_pairs": [
+      {
+        "i": 0,
+        "j": 79,
+        "gap": 0.7064603036,
+        "abs_gap": 0.7064603036
+      },
+      {
+        "i": 1,
+        "j": 78,
+        "gap": 0.6948432125999999,
+        "abs_gap": 0.6948432125999999
+      },
+      {
+        "i": 2,
+        "j": 77,
+        "gap": 0.674625369,
+        "abs_gap": 0.674625369
+      },
+      {
+        "i": 3,
+        "j": 76,
+        "gap": 0.6580883382,
+        "abs_gap": 0.6580883382
+      },
+      {
+        "i": 4,
+        "j": 75,
+        "gap": 0.644394787,
+        "abs_gap": 0.644394787
+      },
+      {
+        "i": 5,
+        "j": 74,
+        "gap": 0.6330223449,
+        "abs_gap": 0.6330223449
+      },
+      {
+        "i": 6,
+        "j": 73,
+        "gap": 0.6235901848000001,
+        "abs_gap": 0.6235901848000001
+      },
+      {
+        "i": 7,
+        "j": 72,
+        "gap": 0.6157973059,
+        "abs_gap": 0.6157973059
+      },
+      {
+        "i": 8,
+        "j": 71,
+        "gap": 0.6093949306,
+        "abs_gap": 0.6093949306
+      },
+      {
+        "i": 9,
+        "j": 70,
+        "gap": 0.6041721938,
+        "abs_gap": 0.6041721938
+      }
+    ],
+    "worst_abs_gap": 0.7064603036,
+    "avg_abs_gap_top10": 0.64643889704,
+    "tail_candidate_ready": false
+  },
+  "strict_core_closure": {
+    "status": "OPEN",
+    "missing_exports": [],
+    "missing_witnesses": [
+      "W_G1_full_domain_selector_gap_discharge"
+    ],
+    "missing_theorems": [
+      "T_G3_final_strict_ToE_composition"
+    ]
+  },
+  "external_team_validation_required": false,
+  "next_honest_step": "P1601: apply strict internal selector-source correction on worst sectors and rerun P1598/P1599.",
+  "lay_summary": "Wskazaliśmy dokładnie, które obszary domeny najbardziej psują świadka G1; to pozwala celować poprawki zamiast powtarzać cały cykl w ciemno."
+}
