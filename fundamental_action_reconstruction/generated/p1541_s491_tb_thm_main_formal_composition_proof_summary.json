@@ -1,0 +1,31 @@
+{
+  "checkpoint": "P1541_S491",
+  "status": "PASS_TB_THM_MAIN_FORMAL_COMPOSITION_PROOF_CHECKPOINT",
+  "date_utc": "2026-05-14",
+  "route": "F_nadsoliton_to_LSM_plus_LGR",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "input_lemmas_status": {
+    "TB_LEM_2_DETERMINISM": "theorem_level_candidate",
+    "TB_LEM_4_NOISE_STABILITY": "theorem_level_candidate"
+  },
+  "composition_ledger": {
+    "thm": "TB_THM_MAIN_TIE_BREAK_SOUNDNESS",
+    "inputs": {
+      "TB_LEM_2_DETERMINISM": "theorem_level_candidate",
+      "TB_LEM_4_NOISE_STABILITY": "theorem_level_candidate"
+    },
+    "inference_rule": "candidate_composition_rule_v1",
+    "composition_step_exported": true
+  },
+  "composition_status": "composition_ready",
+  "remaining_obligations": [
+    "prove_inference_rule_soundness_candidate_composition_rule_v1",
+    "formalize_link_TB_THM_MAIN_to_selector_uniqueness_main_theorem"
+  ],
+  "qw2191_closed": false,
+  "next_required_objects": [
+    "prove_inference_rule_soundness_candidate_composition_rule_v1",
+    "formalize_link_TB_THM_MAIN_to_selector_uniqueness_main_theorem"
+  ]
+}
