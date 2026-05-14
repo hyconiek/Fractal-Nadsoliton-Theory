@@ -1,0 +1,27 @@
+{
+  "checkpoint": "P1607_S557",
+  "timestamp_utc": "2026-05-14T13:21:44.023248+00:00",
+  "status": "PASS_P1607_FINAL_STRICT_CLOSURE_READY",
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "strict_chain": {
+    "kernel": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+    "coefficients": {},
+    "lagrangian": {},
+    "eom": {}
+  },
+  "final_replay_gate": {
+    "w1606_import_ready": true,
+    "t1606_import_ready": true,
+    "eom_ready": true,
+    "g3_ready": true
+  },
+  "strict_core_closure": {
+    "status": "CLOSED",
+    "missing_exports": [],
+    "missing_witnesses": [],
+    "missing_theorems": []
+  },
+  "external_team_validation_required": false,
+  "next_honest_step": "If CLOSED: emit frozen strict-core theorem bundle; if OPEN: reopen only failing gate with explicit nonbridge theorem obligations.",
+  "lay_summary": "To finalna replay-bramka: jeśli świadek NP1, upgrade bridge i równania ruchu są gotowe, możemy domknąć strict-core; inaczej zostaje uczciwe nonclosure."
+}

@@ -1,0 +1,46 @@
+{
+  "checkpoint": "P1617_S567",
+  "timestamp_utc": "2026-05-14T14:20:36.469596+00:00",
+  "status": "PASS_P1617_STRICT_EXPERIMENTAL_DISCRIMINANTS",
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "discriminants": {
+    "D1_scalar_response": {
+      "observable": "effective scalar-mode response amplitude",
+      "linked_prediction": "P1_scalar_mass_proxy",
+      "required_relative_precision": 0.05,
+      "systematics": [
+        "background subtraction",
+        "calibration drift"
+      ]
+    },
+    "D2_gr_coupling_shift": {
+      "observable": "effective gravitational coupling shift",
+      "linked_prediction": "P2_gr_coupling_proxy",
+      "required_relative_precision": 0.03,
+      "systematics": [
+        "curvature modeling",
+        "detector transfer function"
+      ]
+    },
+    "D3_curvature_backreaction": {
+      "observable": "curvature-induced scalar backreaction trend",
+      "linked_prediction": "P3_mix_backreaction_proxy",
+      "required_relative_precision": 0.1,
+      "systematics": [
+        "environmental curvature proxy",
+        "model truncation"
+      ]
+    }
+  },
+  "strict_core_closure": {
+    "status": "CLOSED",
+    "missing_exports": [],
+    "missing_witnesses": [],
+    "missing_theorems": []
+  },
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "external_team_validation_required": false,
+  "next_honest_step": "Export strict data-assimilation protocol mapping measured discriminants back to kernel parameter posteriors.",
+  "lay_summary": "To plan testów: mówimy dokładnie co mierzyć i z jaką precyzją, żeby sprawdzić przewidywania strict modelu."
+}

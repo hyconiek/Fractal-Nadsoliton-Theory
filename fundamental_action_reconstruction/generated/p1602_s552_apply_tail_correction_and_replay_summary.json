@@ -1,0 +1,37 @@
+{
+  "checkpoint": "P1602_S552",
+  "timestamp_utc": "2026-05-14T13:03:24.666138+00:00",
+  "status": "KEEP_OPEN_P1602_CORRECTED_REPLAY_NOT_READY",
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "strict_chain": {
+    "kernel": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+    "coefficients": {},
+    "lagrangian": {},
+    "eom": {}
+  },
+  "corrected_replay": {
+    "damping_factor": 0.55,
+    "g1_metrics": {
+      "full_domain_error_max": 0.5999478052,
+      "full_domain_error_l2": 0.4606574132583899,
+      "full_domain_error_mean": 0.45131785879299996,
+      "g1_ready": false
+    },
+    "bridge_ready": false,
+    "eom_ready": true,
+    "g3_ready": false
+  },
+  "strict_core_closure": {
+    "status": "OPEN",
+    "missing_exports": [],
+    "missing_witnesses": [
+      "W_G1_full_domain_selector_gap_discharge"
+    ],
+    "missing_theorems": [
+      "T_G3_final_strict_ToE_composition"
+    ]
+  },
+  "external_team_validation_required": false,
+  "next_honest_step": "If OPEN: increase strict internal tail correction depth and co-tune bridge witness export; if CLOSED: emit final strict closure artifact.",
+  "lay_summary": "Po zastosowaniu korekty ogona ponownie liczymy gotowość G1/G3. Wynik mówi, czy teoria jest już blisko domknięcia, czy nadal blokuje ją globalna luka selektora."
+}

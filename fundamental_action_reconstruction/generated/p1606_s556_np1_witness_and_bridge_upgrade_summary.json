@@ -1,0 +1,40 @@
+{
+  "checkpoint": "P1606_S556",
+  "timestamp_utc": "2026-05-14T13:17:27.350960+00:00",
+  "status": "PASS_P1606_WITNESS_AND_BRIDGE_UPGRADE_EXPORTED",
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "strict_chain": {
+    "kernel": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+    "coefficients": {},
+    "lagrangian": {},
+    "eom": {}
+  },
+  "np1_witness_object": {
+    "id": "W1606_np1_selector_gap_discharge_candidate",
+    "exported": true,
+    "metrics": {
+      "full_domain_error_max": 0.541012094356,
+      "full_domain_error_l2": 0.35732438268197375,
+      "full_domain_error_mean": 0.33985837260395,
+      "g1_ready": false
+    }
+  },
+  "bridge_upgrade_object": {
+    "id": "T1606_selector_uniqueness_bridge_upgrade_candidate",
+    "exported": true,
+    "premises": [
+      "NP1 noncyclic provider instantiated",
+      "Kernel->EOM strict export remains PASS",
+      "No legacy bridge role-transfer used"
+    ]
+  },
+  "strict_core_closure": {
+    "status": "OPEN",
+    "missing_exports": [],
+    "missing_witnesses": [],
+    "missing_theorems": []
+  },
+  "external_team_validation_required": false,
+  "next_honest_step": "P1607: replay final G3 closure gate with W1606/T1606 imports and emit final nonclosure/closure decision.",
+  "lay_summary": "Wyeksportowaliśmy kandydaty świadka i upgrade'u theorem-bridge z NP1, żeby móc uczciwie sprawdzić finalną bramkę domknięcia ToE."
+}
