@@ -1,0 +1,43 @@
+{
+  "checkpoint": "P1597_S547",
+  "timestamp_utc": "2026-05-14T08:46:20.519487+00:00",
+  "status": "KEEP_OPEN_P1597_G3_THEOREM_NOT_READY",
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "strict_chain": {
+    "kernel": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+    "coefficients": {},
+    "lagrangian": {},
+    "eom": {}
+  },
+  "g3_theorem_object": {
+    "id": "T1597_final_strict_G3_composition_object",
+    "domain": "F_Nadsoliton => L_SM + L_GR",
+    "chain": "K_strict -> coefficients -> full Lagrangian -> Euler-Lagrange EOM",
+    "assumptions": [
+      "A1: strict selector uniqueness theorem object available",
+      "A2: full-domain selector gap (G1) discharged",
+      "A3: EOM export consistency already passed"
+    ],
+    "conclusion": "strict-core final composition theorem candidate",
+    "proof_trace_exported": false,
+    "legacy_bridge_used": false
+  },
+  "gate_review": {
+    "bridge_ready": false,
+    "g1_ready": false,
+    "eom_ready": true
+  },
+  "strict_core_closure": {
+    "status": "OPEN",
+    "missing_exports": [],
+    "missing_witnesses": [
+      "W_G1_full_domain_selector_gap_discharge"
+    ],
+    "missing_theorems": [
+      "T_G3_final_strict_ToE_composition"
+    ]
+  },
+  "external_team_validation_required": false,
+  "next_honest_step": "If OPEN: discharge remaining G1/bridge blocker and rerun P1597; if CLOSED: emit final closure declaration packet.",
+  "lay_summary": "To jest finalny szkic twierdzenia G3: łączymy strict kernel i równania ruchu w jeden obiekt, ale domykamy tylko gdy wszystkie bramki są naprawdę spełnione."
+}

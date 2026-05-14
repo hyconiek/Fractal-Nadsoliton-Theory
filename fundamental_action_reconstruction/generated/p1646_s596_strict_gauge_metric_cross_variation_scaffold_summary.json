@@ -1,0 +1,46 @@
+{
+  "checkpoint": "P1646_S596",
+  "timestamp_utc": "2026-05-14T18:20:42.283464+00:00",
+  "status": "KEEP_OPEN_P1646_GAUGE_METRIC_H2_SCAFFOLD_EXPORTED",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "full_lagrangian_density": {
+    "L_total": "L_strict_scalar + L_SM_gauge + L_SM_fermions + L_SM_higgs + L_GR + L_mix",
+    "L_SM_gauge": "-1/4 G^A_{μν}G_A^{μν} - 1/4 W^I_{μν}W_I^{μν} - 1/4 B_{μν}B^{μν}",
+    "L_GR": "M_Pl^2/2·R - Λ + c1 R^2 + c2 R_{μν}R^{μν} + c3 R_{μναβ}R^{μναβ}",
+    "L_mix": "ξ_HR H^†H R + ξ_φR φ^2 R + λ_{φH} φ^2 H^†H"
+  },
+  "h2_cross_variation_block_matrix": [
+    {
+      "id": "H2.B_scalar_higgs",
+      "status": "PASS_LOCAL",
+      "source": "P1645"
+    },
+    {
+      "id": "H2.B_gauge_metric",
+      "status": "OPEN",
+      "missing": "Frechet cross-variation symmetry with curvature couplings"
+    },
+    {
+      "id": "H2.B_fermion_metric",
+      "status": "OPEN",
+      "missing": "spin-connection dependent mixed variation witness"
+    },
+    {
+      "id": "H2.B_boundary_class",
+      "status": "OPEN",
+      "missing": "admissible boundary theorem (H4 link)"
+    }
+  ],
+  "strict_core_closure": {
+    "status": "OPEN",
+    "reason": "Gauge/metric and fermion/metric mixed-variation witnesses still missing"
+  },
+  "next_honest_step": "Wyeksportować machine-checkable lokalny witness dla bloku H2.B_gauge_metric z członami ξ_HR, ξ_φR i kontrolą komutacji pochodnych mieszanych.",
+  "lay_summary": "Potwierdziliśmy jeden fragment (skalar-Higgs), a teraz dokładamy mapę braków dla trudniejszych bloków z grawitacją i polami cechowania. To jest konieczne, by teoria działała w obie strony.",
+  "inherits": {
+    "from_P1645_status": "PASS_LOCAL_P1645_CROSS_VARIATION_SYMMETRY_SCALAR_HIGGS_BLOCK",
+    "from_P1645_probe_scope": "local scalar-Higgs potential block of full strict Lagrangian"
+  }
+}

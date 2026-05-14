@@ -6,7 +6,7 @@
 
 ## Current Scientific Status (2026-03-07)
 
-## Guardrail baseline (2026-05-13 sync)
+## Guardrail baseline (2026-05-14 sync)
 
 - The repo-level guardrails in `AGENTS.md` are the active working constraints for kernel split handling, selector claims, and FAR routing.
 - In particular, treat `K_strict_gate` as an operational control kernel unless and until a rigorous `legacy -> strict` bridge (or non-bridge theorem) is explicitly exported.

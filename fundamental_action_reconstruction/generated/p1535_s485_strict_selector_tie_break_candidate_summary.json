@@ -1,0 +1,34 @@
+{
+  "checkpoint": "P1535_S485",
+  "status": "PASS_STRICT_SELECTOR_TIE_BREAK_CANDIDATE",
+  "date_utc": "2026-05-14",
+  "route": "F_nadsoliton_to_LSM_plus_LGR",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "selected_branch_input": "strict_anchor_branch_C_trace",
+  "alternatives": [
+    {
+      "branch_id": "strict_anchor_branch_candidate_trace",
+      "provenance_depth": 3
+    },
+    {
+      "branch_id": "strict_anchor_branch_candidate_trace_alt",
+      "provenance_depth": 2
+    },
+    {
+      "branch_id": "branch_B_noncyclic",
+      "provenance_depth": 5
+    }
+  ],
+  "tie_break_result": {
+    "tie_detected": true,
+    "tie_break_status": "resolved_by_provenance_depth",
+    "selected_branch_after_tie_break": "strict_anchor_branch_candidate_trace"
+  },
+  "lem4_status_update": "partial",
+  "qw2191_closed": false,
+  "next_required_objects": [
+    "formal_tie_break_theorem_proof",
+    "lem4_upgrade_proof_with_tie_break_soundness"
+  ]
+}

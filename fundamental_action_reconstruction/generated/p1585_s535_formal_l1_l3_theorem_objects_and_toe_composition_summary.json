@@ -1,0 +1,53 @@
+{
+  "checkpoint": "P1585_S535",
+  "timestamp_utc": "2026-05-14T04:02:13.308298+00:00",
+  "status": "FAIL_P1585_FORMAL_OBJECTS_AND_TOE_COMPOSITION_GATE",
+  "strict_chain": {
+    "kernel": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+    "coefficients": {
+      "c2": 0.3078066505217639,
+      "c4": 0.17129068163797725,
+      "cY": 0.23520589523214172
+    },
+    "lagrangian": {
+      "L_SM": "0.5*(dphi)^2 - 0.5*0.30780665*phi^2 - 0.17129068*phi^4 - 0.23520590*phi*psi*psi",
+      "L_GR": "0.5*R - 0.03078067*R^2",
+      "L_total": "L_SM + L_GR"
+    },
+    "eom": {
+      "phi": "d2phi + 0.30780665*phi + 4*0.17129068*phi^3 + 0.23520590*psi*psi = 0",
+      "psi": "i*gamma*dpsi - 0.23520590*phi*psi = 0",
+      "metric": "G_mn + 0.06156133*H_mn = T_mn"
+    }
+  },
+  "theorem_objects": {
+    "T1585_L1_formal_object_candidate": {
+      "premise": "trimmed antisymmetry witness + strict selector source continuity",
+      "validated": false
+    },
+    "T1585_L3_formal_object_candidate": {
+      "premise": "coercivity + bounded curvature imply stability-window object",
+      "validated": true
+    }
+  },
+  "toe_composition_gate": {
+    "ready": false,
+    "required": [
+      "T1585_L1_formal_object_candidate.validated",
+      "T1585_L3_formal_object_candidate.validated"
+    ]
+  },
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "strict_core_closure": {
+    "status": "OPEN",
+    "qw2191_closed": false,
+    "remaining_missing": [
+      "untrimmed_domain_L1_formalization",
+      "full_global_proof_for_L3_beyond_window",
+      "final_ToE_composition_theorem_export"
+    ]
+  },
+  "external_team_validation_required": false,
+  "next_honest_step": "P1586_export_final_ToE_composition_theorem_or_nonclosure_certificate",
+  "lay_summary": "Mamy formalne obiekty-kandydaty L1 i L3, ale brakuje pełnej wersji globalnej, więc strict-core closure nadal pozostaje otwarty."
+}

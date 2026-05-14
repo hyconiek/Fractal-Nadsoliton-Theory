@@ -1,0 +1,41 @@
+{
+  "checkpoint": "P1618_S568",
+  "timestamp_utc": "2026-05-14T14:24:06.355308+00:00",
+  "status": "PASS_P1618_STRICT_DATA_ASSIMILATION_PROTOCOL",
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "protocol": {
+    "measurement_model": {
+      "D1": "D1_obs = f1(omega, phi, beta, eta) + eps1",
+      "D2": "D2_obs = f2(omega, phi, beta, eta) + eps2",
+      "D3": "D3_obs = f3(omega, phi, beta, eta) + eps3"
+    },
+    "error_model": {
+      "eps1": "Gaussian(0, sigma1^2)",
+      "eps2": "Gaussian(0, sigma2^2)",
+      "eps3": "Gaussian(0, sigma3^2)",
+      "systematics_included": [
+        "calibration",
+        "curvature proxy",
+        "model truncation"
+      ]
+    },
+    "identifiability": {
+      "omega": "high from D1+D3",
+      "phi": "medium from D1 phase-sensitive fit",
+      "beta": "high from D2",
+      "eta": "medium from D3 curvature scaling"
+    },
+    "posterior_target": "p(omega,phi,beta,eta | D1,D2,D3, strict-model)"
+  },
+  "strict_core_closure": {
+    "status": "CLOSED",
+    "missing_exports": [],
+    "missing_witnesses": [],
+    "missing_theorems": []
+  },
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "external_team_validation_required": false,
+  "next_honest_step": "Implement Bayesian posterior sampler checkpoint with synthetic strict datasets for D1/D2/D3.",
+  "lay_summary": "To instrukcja od danych do parametrów modelu: jak z pomiarów D1-D3 odtworzyć liczby kernela strict."
+}

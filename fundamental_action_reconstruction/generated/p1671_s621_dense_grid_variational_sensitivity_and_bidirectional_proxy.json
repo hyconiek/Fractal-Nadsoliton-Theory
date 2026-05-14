@@ -1,0 +1,1046 @@
+{
+  "checkpoint": "P1671_S621_DENSE_GRID_VARIATIONAL_SENSITIVITY_AND_BIDIRECTIONAL_PROXY",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "full_lagrangian_density_explicit": {
+    "L_scalar": "sqrt(-g)*[1/2 g^{μν}(∇_μφ)(∇_νφ) - (m_φ^2/2)φ^2 - (λ_3/3!)φ^3 - (λ_4/4!)φ^4]",
+    "L_gauge": "sqrt(-g)*[-1/4 G^A_{μν}G_A^{μν} - 1/4 W^I_{μν}W_I^{μν} - 1/4 B_{μν}B^{μν}]",
+    "L_fermion": "sqrt(-g)*[Σ_f i ψ̄_f γ^a e_a^{ μ}D_μ ψ_f - Σ_f y_f(ψ̄_{fL}Hψ_{fR}+h.c.)]",
+    "L_higgs": "sqrt(-g)*[(D_μH)^†(D^μH) - μ_H^2(H^†H) - λ_H(H^†H)^2]",
+    "L_gravity": "sqrt(-g)*[(M_Pl^2/2)R - Λ + cR2 R^2 + cRic2 R_{μν}R^{μν} + cRiem2 R_{μναβ}R^{μναβ}]",
+    "L_mix": "sqrt(-g)*[ξ_HR(H^†H)R + ξ_φR φ^2R + λ_{φH}φ^2(H^†H)]"
+  },
+  "L_total_explicit": "L_scalar + L_gauge + L_fermion + L_higgs + L_gravity + L_mix",
+  "num_points": 30,
+  "rows": [
+    {
+      "input": {
+        "beta": 0.55,
+        "eta": 1.05,
+        "omega": 0.178,
+        "A": 1.0,
+        "R": 0.0
+      },
+      "coeff": {
+        "Mpl2": 1.55,
+        "cR2": 0.26829268292682934,
+        "cRic2": 0.2817073170731708,
+        "cRiem2": 0.281875,
+        "muH2": 0.031684,
+        "lambdaH": 1.3564516129032258,
+        "xiHR": 0.3548387096774194,
+        "ZA": 1.3025
+      },
+      "eom_residuals": {
+        "metric_proxy": 0.7,
+        "scalar_proxy": 1.8262282270564512,
+        "gauge_proxy": 0.0
+      },
+      "sensitivity": {
+        "d_metric_d_cR2": 0.0,
+        "d_metric_d_cRic2": 0.0,
+        "d_metric_d_cRiem2": 0.0
+      },
+      "reverse_proxy": {
+        "alphaQ_true": 0.8318750000000001,
+        "alphaQ_reconstructed": null,
+        "reconstruction_error": null
+      }
+    },
+    {
+      "input": {
+        "beta": 0.562,
+        "eta": 1.065,
+        "omega": 0.1785,
+        "A": 1.0,
+        "R": 0.005
+      },
+      "coeff": {
+        "Mpl2": 1.562,
+        "cR2": 0.27215496368038744,
+        "cRic2": 0.2898450363196126,
+        "cRiem2": 0.2901325,
+        "muH2": 0.031862249999999995,
+        "lambdaH": 1.3663412291933417,
+        "xiHR": 0.3597951344430218,
+        "ZA": 1.315844
+      },
+      "eom_residuals": {
+        "metric_proxy": 0.7042606624999999,
+        "scalar_proxy": 1.839748164532859,
+        "gauge_proxy": 0.0
+      },
+      "sensitivity": {
+        "d_metric_d_cR2": 0.004999999999588667,
+        "d_metric_d_cRic2": 0.004999999999588667,
+        "d_metric_d_cRiem2": 0.004999999999588667
+      },
+      "reverse_proxy": {
+        "alphaQ_true": 0.8521325000000001,
+        "alphaQ_reconstructed": 0.8521324999999802,
+        "reconstruction_error": -1.9872992140790302e-14
+      }
+    },
+    {
+      "input": {
+        "beta": 0.5740000000000001,
+        "eta": 1.08,
+        "omega": 0.179,
+        "A": 1.0,
+        "R": 0.01
+      },
+      "coeff": {
+        "Mpl2": 1.574,
+        "cR2": 0.2759615384615385,
+        "cRic2": 0.2980384615384616,
+        "cRiem2": 0.29848,
+        "muH2": 0.032041,
+        "lambdaH": 1.3763659466327829,
+        "xiHR": 0.3646759847522237,
+        "ZA": 1.329476
+      },
+      "eom_residuals": {
+        "metric_proxy": 0.7087247999999999,
+        "scalar_proxy": 1.853408831976158,
+        "gauge_proxy": 0.0
+      },
+      "sensitivity": {
+        "d_metric_d_cR2": 0.009999999999177334,
+        "d_metric_d_cRic2": 0.009999999999177334,
+        "d_metric_d_cRiem2": 0.009999999999177334
+      },
+      "reverse_proxy": {
+        "alphaQ_true": 0.8724800000000001,
+        "alphaQ_reconstructed": 0.8724799999999977,
+        "reconstruction_error": -2.4424906541753444e-15
+      }
+    },
+    {
+      "input": {
+        "beta": 0.5860000000000001,
+        "eta": 1.095,
+        "omega": 0.1795,
+        "A": 1.0,
+        "R": 0.015
+      },
+      "coeff": {
+        "Mpl2": 1.586,
+        "cR2": 0.2797136038186158,
+        "cRic2": 0.3062863961813843,
+        "cRiem2": 0.3069175,
+        "muH2": 0.03222025,
+        "lambdaH": 1.3865226986128623,
+        "xiHR": 0.36948297604035313,
+        "ZA": 1.343396
+      },
+      "eom_residuals": {
+        "metric_proxy": 0.7133937625,
+        "scalar_proxy": 1.867210505824587,
+        "gauge_proxy": 0.0
+      },
+      "sensitivity": {
+        "d_metric_d_cR2": 0.014999999999876223,
+        "d_metric_d_cRic2": 0.014999999999876223,
+        "d_metric_d_cRiem2": 0.014999999999876223
+      },
+      "reverse_proxy": {
+        "alphaQ_true": 0.8929175,
+        "alphaQ_reconstructed": 0.8929175000000011,
+        "reconstruction_error": 1.1102230246251565e-15
+      }
+    },
+    {
+      "input": {
+        "beta": 0.5980000000000001,
+        "eta": 1.11,
+        "omega": 0.18,
+        "A": 1.0,
+        "R": 0.02
+      },
+      "coeff": {
+        "Mpl2": 1.598,
+        "cR2": 0.2834123222748815,
+        "cRic2": 0.31458767772511853,
+        "cRiem2": 0.3154450000000001,
+        "muH2": 0.0324,
+        "lambdaH": 1.3968085106382977,
+        "xiHR": 0.37421777221526914,
+        "ZA": 1.357604
+      },
+      "eom_residuals": {
+        "metric_proxy": 0.7182689,
+        "scalar_proxy": 1.8811534705439696,
+        "gauge_proxy": 0.0
+      },
+      "sensitivity": {
+        "d_metric_d_cR2": 0.020000000000575113,
+        "d_metric_d_cRic2": 0.020000000000575113,
+        "d_metric_d_cRiem2": 0.020000000000575113
+      },
+      "reverse_proxy": {
+        "alphaQ_true": 0.9134450000000002,
+        "alphaQ_reconstructed": 0.9134450000000016,
+        "reconstruction_error": 1.4432899320127035e-15
+      }
+    },
+    {
+      "input": {
+        "beta": 0.6100000000000001,
+        "eta": 1.125,
+        "omega": 0.1805,
+        "A": 1.0,
+        "R": 0.025
+      },
+      "coeff": {
+        "Mpl2": 1.61,
+        "cR2": 0.2870588235294118,
+        "cRic2": 0.3229411764705883,
+        "cRiem2": 0.32406250000000003,
+        "muH2": 0.03258025,
+        "lambdaH": 1.4072204968944098,
+        "xiHR": 0.3788819875776398,
+        "ZA": 1.3721
+      },
+      "eom_residuals": {
+        "metric_proxy": 0.7233515625,
+        "scalar_proxy": 1.8952380183575308,
+        "gauge_proxy": 0.0
+      },
+      "sensitivity": {
+        "d_metric_d_cR2": 0.02500000000016378,
+        "d_metric_d_cRic2": 0.02500000000016378,
+        "d_metric_d_cRiem2": 0.02500000000016378
+      },
+      "reverse_proxy": {
+        "alphaQ_true": 0.9340625000000001,
+        "alphaQ_reconstructed": 0.9340625000000014,
+        "reconstruction_error": 1.2212453270876722e-15
+      }
+    },
+    {
+      "input": {
+        "beta": 0.6220000000000001,
+        "eta": 1.1400000000000001,
+        "omega": 0.181,
+        "A": 1.0,
+        "R": 0.03
+      },
+      "coeff": {
+        "Mpl2": 1.622,
+        "cR2": 0.2906542056074767,
+        "cRic2": 0.33134579439252343,
+        "cRiem2": 0.33277000000000007,
+        "muH2": 0.032761,
+        "lambdaH": 1.417755856966708,
+        "xiHR": 0.3834771886559803,
+        "ZA": 1.3868840000000002
+      },
+      "eom_residuals": {
+        "metric_proxy": 0.7286431,
+        "scalar_proxy": 1.9094644489877075,
+        "gauge_proxy": 0.0
+      },
+      "sensitivity": {
+        "d_metric_d_cR2": 0.029999999999752447,
+        "d_metric_d_cRic2": 0.029999999999752447,
+        "d_metric_d_cRiem2": 0.029999999999752447
+      },
+      "reverse_proxy": {
+        "alphaQ_true": 0.9547700000000001,
+        "alphaQ_reconstructed": 0.9547700000000011,
+        "reconstruction_error": 9.992007221626409e-16
+      }
+    },
+    {
+      "input": {
+        "beta": 0.634,
+        "eta": 1.155,
+        "omega": 0.1815,
+        "A": 1.0,
+        "R": 0.035
+      },
+      "coeff": {
+        "Mpl2": 1.634,
+        "cR2": 0.294199535962877,
+        "cRic2": 0.33980046403712294,
+        "cRiem2": 0.3415675,
+        "muH2": 0.03294225,
+        "lambdaH": 1.4284118727050186,
+        "xiHR": 0.3880048959608323,
+        "ZA": 1.401956
+      },
+      "eom_residuals": {
+        "metric_proxy": 0.7341448625,
+        "scalar_proxy": 1.9238330694093255,
+        "gauge_proxy": 0.0
+      },
+      "sensitivity": {
+        "d_metric_d_cR2": 0.03500000000045134,
+        "d_metric_d_cRic2": 0.03500000000045134,
+        "d_metric_d_cRiem2": 0.03500000000045134
+      },
+      "reverse_proxy": {
+        "alphaQ_true": 0.9755674999999999,
+        "alphaQ_reconstructed": 0.975567500000001,
+        "reconstruction_error": 1.1102230246251565e-15
+      }
+    },
+    {
+      "input": {
+        "beta": 0.646,
+        "eta": 1.17,
+        "omega": 0.182,
+        "A": 1.0,
+        "R": 0.04
+      },
+      "coeff": {
+        "Mpl2": 1.646,
+        "cR2": 0.2976958525345622,
+        "cRic2": 0.34830414746543775,
+        "cRiem2": 0.350455,
+        "muH2": 0.033124,
+        "lambdaH": 1.4391859052247875,
+        "xiHR": 0.39246658566221143,
+        "ZA": 1.417316
+      },
+      "eom_residuals": {
+        "metric_proxy": 0.7398582,
+        "scalar_proxy": 1.9383441936135908,
+        "gauge_proxy": 0.0
+      },
+      "sensitivity": {
+        "d_metric_d_cR2": 0.040000000000040004,
+        "d_metric_d_cRic2": 0.040000000000040004,
+        "d_metric_d_cRiem2": 0.040000000000040004
+      },
+      "reverse_proxy": {
+        "alphaQ_true": 0.9964549999999999,
+        "alphaQ_reconstructed": 0.9964550000000016,
+        "reconstruction_error": 1.7763568394002505e-15
+      }
+    },
+    {
+      "input": {
+        "beta": 0.658,
+        "eta": 1.185,
+        "omega": 0.1825,
+        "A": 1.0,
+        "R": 0.045
+      },
+      "coeff": {
+        "Mpl2": 1.658,
+        "cR2": 0.3011441647597254,
+        "cRic2": 0.3568558352402746,
+        "cRiem2": 0.35943250000000004,
+        "muH2": 0.033306249999999996,
+        "lambdaH": 1.450075392038601,
+        "xiHR": 0.39686369119420994,
+        "ZA": 1.4329640000000001
+      },
+      "eom_residuals": {
+        "metric_proxy": 0.7457844624999999,
+        "scalar_proxy": 1.9529981423823095,
+        "gauge_proxy": 0.0
+      },
+      "sensitivity": {
+        "d_metric_d_cR2": 0.04500000000073889,
+        "d_metric_d_cRic2": 0.04500000000073889,
+        "d_metric_d_cRiem2": 0.04500000000073889
+      },
+      "reverse_proxy": {
+        "alphaQ_true": 1.0174325,
+        "alphaQ_reconstructed": 1.0174324999999977,
+        "reconstruction_error": -2.220446049250313e-15
+      }
+    },
+    {
+      "input": {
+        "beta": 0.67,
+        "eta": 1.2,
+        "omega": 0.183,
+        "A": 1.0,
+        "R": 0.05
+      },
+      "coeff": {
+        "Mpl2": 1.67,
+        "cR2": 0.30454545454545456,
+        "cRic2": 0.3654545454545454,
+        "cRiem2": 0.36850000000000005,
+        "muH2": 0.033489,
+        "lambdaH": 1.4610778443113772,
+        "xiHR": 0.4011976047904192,
+        "ZA": 1.4489
+      },
+      "eom_residuals": {
+        "metric_proxy": 0.751925,
+        "scalar_proxy": 1.9677952430718562,
+        "gauge_proxy": 0.0
+      },
+      "sensitivity": {
+        "d_metric_d_cR2": 0.05000000000032756,
+        "d_metric_d_cRic2": 0.05000000000032756,
+        "d_metric_d_cRiem2": 0.05000000000032756
+      },
+      "reverse_proxy": {
+        "alphaQ_true": 1.0385,
+        "alphaQ_reconstructed": 1.0385,
+        "reconstruction_error": 0.0
+      }
+    },
+    {
+      "input": {
+        "beta": 0.682,
+        "eta": 1.215,
+        "omega": 0.1835,
+        "A": 1.0,
+        "R": 0.055
+      },
+      "coeff": {
+        "Mpl2": 1.682,
+        "cR2": 0.307900677200903,
+        "cRic2": 0.37409932279909713,
+        "cRiem2": 0.3776575,
+        "muH2": 0.03367225,
+        "lambdaH": 1.4721908442330562,
+        "xiHR": 0.4054696789536267,
+        "ZA": 1.465124
+      },
+      "eom_residuals": {
+        "metric_proxy": 0.7582811624999999,
+        "scalar_proxy": 1.9827358294063895,
+        "gauge_proxy": 0.0
+      },
+      "sensitivity": {
+        "d_metric_d_cR2": 0.05499999999991623,
+        "d_metric_d_cRic2": 0.05499999999991623,
+        "d_metric_d_cRiem2": 0.05499999999991623
+      },
+      "reverse_proxy": {
+        "alphaQ_true": 1.0596575000000001,
+        "alphaQ_reconstructed": 1.0596574999999986,
+        "reconstruction_error": -1.5543122344752192e-15
+      }
+    },
+    {
+      "input": {
+        "beta": 0.6940000000000001,
+        "eta": 1.23,
+        "omega": 0.184,
+        "A": 1.0,
+        "R": 0.06
+      },
+      "coeff": {
+        "Mpl2": 1.694,
+        "cR2": 0.3112107623318386,
+        "cRic2": 0.3827892376681615,
+        "cRiem2": 0.38690500000000005,
+        "muH2": 0.033856,
+        "lambdaH": 1.4834120425029518,
+        "xiHR": 0.4096812278630461,
+        "ZA": 1.481636
+      },
+      "eom_residuals": {
+        "metric_proxy": 0.7648542999999999,
+        "scalar_proxy": 1.9978202412798425,
+        "gauge_proxy": 0.0
+      },
+      "sensitivity": {
+        "d_metric_d_cR2": 0.06000000000061512,
+        "d_metric_d_cRic2": 0.06000000000061512,
+        "d_metric_d_cRiem2": 0.06000000000061512
+      },
+      "reverse_proxy": {
+        "alphaQ_true": 1.080905,
+        "alphaQ_reconstructed": 1.0809049999999987,
+        "reconstruction_error": -1.3322676295501878e-15
+      }
+    },
+    {
+      "input": {
+        "beta": 0.7060000000000001,
+        "eta": 1.245,
+        "omega": 0.1845,
+        "A": 1.0,
+        "R": 0.065
+      },
+      "coeff": {
+        "Mpl2": 1.706,
+        "cR2": 0.31447661469933186,
+        "cRic2": 0.3915233853006682,
+        "cRiem2": 0.39624250000000005,
+        "muH2": 0.03404025,
+        "lambdaH": 1.4947391559202816,
+        "xiHR": 0.4138335287221571,
+        "ZA": 1.498436
+      },
+      "eom_residuals": {
+        "metric_proxy": 0.7716457625,
+        "scalar_proxy": 2.013048824566293,
+        "gauge_proxy": 0.0
+      },
+      "sensitivity": {
+        "d_metric_d_cR2": 0.06500000000020378,
+        "d_metric_d_cRic2": 0.06500000000020378,
+        "d_metric_d_cRiem2": 0.06500000000020378
+      },
+      "reverse_proxy": {
+        "alphaQ_true": 1.1022425,
+        "alphaQ_reconstructed": 1.1022424999999998,
+        "reconstruction_error": -2.220446049250313e-16
+      }
+    },
+    {
+      "input": {
+        "beta": 0.7180000000000001,
+        "eta": 1.26,
+        "omega": 0.185,
+        "A": 1.0,
+        "R": 0.07
+      },
+      "coeff": {
+        "Mpl2": 1.718,
+        "cR2": 0.31769911504424786,
+        "cRic2": 0.40030088495575233,
+        "cRiem2": 0.40567000000000003,
+        "muH2": 0.034225,
+        "lambdaH": 1.5061699650756695,
+        "xiHR": 0.41792782305005827,
+        "ZA": 1.515524
+      },
+      "eom_residuals": {
+        "metric_proxy": 0.7786568999999999,
+        "scalar_proxy": 2.028421930938256,
+        "gauge_proxy": 0.0
+      },
+      "sensitivity": {
+        "d_metric_d_cR2": 0.06999999999979245,
+        "d_metric_d_cRic2": 0.06999999999979245,
+        "d_metric_d_cRiem2": 0.06999999999979245
+      },
+      "reverse_proxy": {
+        "alphaQ_true": 1.1236700000000002,
+        "alphaQ_reconstructed": 1.1236699999999988,
+        "reconstruction_error": -1.3322676295501878e-15
+      }
+    },
+    {
+      "input": {
+        "beta": 0.73,
+        "eta": 1.275,
+        "omega": 0.1855,
+        "A": 1.0,
+        "R": 0.075
+      },
+      "coeff": {
+        "Mpl2": 1.73,
+        "cR2": 0.3208791208791209,
+        "cRic2": 0.40912087912087913,
+        "cRiem2": 0.4151875,
+        "muH2": 0.034410249999999996,
+        "lambdaH": 1.5177023121387283,
+        "xiHR": 0.42196531791907516,
+        "ZA": 1.5329
+      },
+      "eom_residuals": {
+        "metric_proxy": 0.7858890624999999,
+        "scalar_proxy": 2.0439399176925575,
+        "gauge_proxy": 0.0
+      },
+      "sensitivity": {
+        "d_metric_d_cR2": 0.07499999999938112,
+        "d_metric_d_cRic2": 0.07499999999938112,
+        "d_metric_d_cRiem2": 0.07499999999938112
+      },
+      "reverse_proxy": {
+        "alphaQ_true": 1.1451875,
+        "alphaQ_reconstructed": 1.1451874999999994,
+        "reconstruction_error": -6.661338147750939e-16
+      }
+    },
+    {
+      "input": {
+        "beta": 0.742,
+        "eta": 1.29,
+        "omega": 0.186,
+        "A": 1.0,
+        "R": 0.08
+      },
+      "coeff": {
+        "Mpl2": 1.742,
+        "cR2": 0.3240174672489083,
+        "cRic2": 0.4179825327510917,
+        "cRiem2": 0.424795,
+        "muH2": 0.034596,
+        "lambdaH": 1.529334098737084,
+        "xiHR": 0.425947187141217,
+        "ZA": 1.550564
+      },
+      "eom_residuals": {
+        "metric_proxy": 0.7933436,
+        "scalar_proxy": 2.0596031475833994,
+        "gauge_proxy": 0.0
+      },
+      "sensitivity": {
+        "d_metric_d_cR2": 0.08000000000008001,
+        "d_metric_d_cRic2": 0.08000000000008001,
+        "d_metric_d_cRiem2": 0.08000000000008001
+      },
+      "reverse_proxy": {
+        "alphaQ_true": 1.166795,
+        "alphaQ_reconstructed": 1.166795000000001,
+        "reconstruction_error": 8.881784197001252e-16
+      }
+    },
+    {
+      "input": {
+        "beta": 0.754,
+        "eta": 1.3050000000000002,
+        "omega": 0.1865,
+        "A": 1.0,
+        "R": 0.085
+      },
+      "coeff": {
+        "Mpl2": 1.754,
+        "cR2": 0.327114967462039,
+        "cRic2": 0.42688503253796095,
+        "cRiem2": 0.43449250000000006,
+        "muH2": 0.03478225,
+        "lambdaH": 1.5410632839224632,
+        "xiHR": 0.4298745724059293,
+        "ZA": 1.568516
+      },
+      "eom_residuals": {
+        "metric_proxy": 0.8010218625000001,
+        "scalar_proxy": 2.075411988662268,
+        "gauge_proxy": 0.0
+      },
+      "sensitivity": {
+        "d_metric_d_cR2": 0.08499999999966867,
+        "d_metric_d_cRic2": 0.08499999999966867,
+        "d_metric_d_cRiem2": 0.08499999999966867
+      },
+      "reverse_proxy": {
+        "alphaQ_true": 1.1884925000000002,
+        "alphaQ_reconstructed": 1.1884925000000013,
+        "reconstruction_error": 1.1102230246251565e-15
+      }
+    },
+    {
+      "input": {
+        "beta": 0.766,
+        "eta": 1.32,
+        "omega": 0.187,
+        "A": 1.0,
+        "R": 0.09
+      },
+      "coeff": {
+        "Mpl2": 1.766,
+        "cR2": 0.3301724137931034,
+        "cRic2": 0.4358275862068965,
+        "cRiem2": 0.44428000000000006,
+        "muH2": 0.034969,
+        "lambdaH": 1.5528878822197054,
+        "xiHR": 0.4337485843714609,
+        "ZA": 1.586756
+      },
+      "eom_residuals": {
+        "metric_proxy": 0.8089252,
+        "scalar_proxy": 2.0913668141243886,
+        "gauge_proxy": 0.0
+      },
+      "sensitivity": {
+        "d_metric_d_cR2": 0.09000000000036756,
+        "d_metric_d_cRic2": 0.09000000000036756,
+        "d_metric_d_cRiem2": 0.09000000000036756
+      },
+      "reverse_proxy": {
+        "alphaQ_true": 1.21028,
+        "alphaQ_reconstructed": 1.2102800000000007,
+        "reconstruction_error": 6.661338147750939e-16
+      }
+    },
+    {
+      "input": {
+        "beta": 0.778,
+        "eta": 1.335,
+        "omega": 0.1875,
+        "A": 1.0,
+        "R": 0.095
+      },
+      "coeff": {
+        "Mpl2": 1.778,
+        "cR2": 0.33319057815845826,
+        "cRic2": 0.44480942184154176,
+        "cRiem2": 0.4541575,
+        "muH2": 0.03515625,
+        "lambdaH": 1.5648059617547807,
+        "xiHR": 0.437570303712036,
+        "ZA": 1.6052840000000002
+      },
+      "eom_residuals": {
+        "metric_proxy": 0.8170549624999999,
+        "scalar_proxy": 2.107468002161377,
+        "gauge_proxy": 0.0
+      },
+      "sensitivity": {
+        "d_metric_d_cR2": 0.09499999999995623,
+        "d_metric_d_cRic2": 0.09499999999995623,
+        "d_metric_d_cRiem2": 0.09499999999995623
+      },
+      "reverse_proxy": {
+        "alphaQ_true": 1.2321575,
+        "alphaQ_reconstructed": 1.2321574999999991,
+        "reconstruction_error": -8.881784197001252e-16
+      }
+    },
+    {
+      "input": {
+        "beta": 0.79,
+        "eta": 1.35,
+        "omega": 0.188,
+        "A": 1.0,
+        "R": 0.1
+      },
+      "coeff": {
+        "Mpl2": 1.79,
+        "cR2": 0.33617021276595743,
+        "cRic2": 0.45382978723404266,
+        "cRiem2": 0.46412500000000007,
+        "muH2": 0.035344,
+        "lambdaH": 1.5768156424581006,
+        "xiHR": 0.44134078212290506,
+        "ZA": 1.6241
+      },
+      "eom_residuals": {
+        "metric_proxy": 0.8254124999999999,
+        "scalar_proxy": 2.123715935819832,
+        "gauge_proxy": 0.0
+      },
+      "sensitivity": {
+        "d_metric_d_cR2": 0.0999999999995449,
+        "d_metric_d_cRic2": 0.0999999999995449,
+        "d_metric_d_cRiem2": 0.0999999999995449
+      },
+      "reverse_proxy": {
+        "alphaQ_true": 1.2541250000000002,
+        "alphaQ_reconstructed": 1.2541249999999993,
+        "reconstruction_error": -8.881784197001252e-16
+      }
+    },
+    {
+      "input": {
+        "beta": 0.802,
+        "eta": 1.365,
+        "omega": 0.1885,
+        "A": 1.0,
+        "R": 0.105
+      },
+      "coeff": {
+        "Mpl2": 1.802,
+        "cR2": 0.3391120507399577,
+        "cRic2": 0.46288794926004223,
+        "cRiem2": 0.47418250000000006,
+        "muH2": 0.03553225,
+        "lambdaH": 1.5889150943396226,
+        "xiHR": 0.44506104328523866,
+        "ZA": 1.643204
+      },
+      "eom_residuals": {
+        "metric_proxy": 0.8339991624999998,
+        "scalar_proxy": 2.1401110028655754,
+        "gauge_proxy": 0.0
+      },
+      "sensitivity": {
+        "d_metric_d_cR2": 0.10500000000024379,
+        "d_metric_d_cRic2": 0.10500000000024379,
+        "d_metric_d_cRiem2": 0.10500000000024379
+      },
+      "reverse_proxy": {
+        "alphaQ_true": 1.2761825,
+        "alphaQ_reconstructed": 1.2761824999999989,
+        "reconstruction_error": -1.1102230246251565e-15
+      }
+    },
+    {
+      "input": {
+        "beta": 0.8140000000000001,
+        "eta": 1.38,
+        "omega": 0.189,
+        "A": 1.0,
+        "R": 0.11
+      },
+      "coeff": {
+        "Mpl2": 1.814,
+        "cR2": 0.34201680672268914,
+        "cRic2": 0.471983193277311,
+        "cRiem2": 0.48433000000000004,
+        "muH2": 0.035721,
+        "lambdaH": 1.6011025358324145,
+        "xiHR": 0.4487320837927233,
+        "ZA": 1.6625960000000002
+      },
+      "eom_residuals": {
+        "metric_proxy": 0.8428163,
+        "scalar_proxy": 2.1566535956532706,
+        "gauge_proxy": 0.0
+      },
+      "sensitivity": {
+        "d_metric_d_cR2": 0.10999999999983245,
+        "d_metric_d_cRic2": 0.10999999999983245,
+        "d_metric_d_cRiem2": 0.10999999999983245
+      },
+      "reverse_proxy": {
+        "alphaQ_true": 1.29833,
+        "alphaQ_reconstructed": 1.29833,
+        "reconstruction_error": 0.0
+      }
+    },
+    {
+      "input": {
+        "beta": 0.8260000000000001,
+        "eta": 1.395,
+        "omega": 0.1895,
+        "A": 1.0,
+        "R": 0.115
+      },
+      "coeff": {
+        "Mpl2": 1.826,
+        "cR2": 0.34488517745302716,
+        "cRic2": 0.4811148225469729,
+        "cRiem2": 0.49456750000000005,
+        "muH2": 0.03591025,
+        "lambdaH": 1.6133762322015335,
+        "xiHR": 0.45235487404162106,
+        "ZA": 1.682276
+      },
+      "eom_residuals": {
+        "metric_proxy": 0.8518652625,
+        "scalar_proxy": 2.1733441110012026,
+        "gauge_proxy": 0.0
+      },
+      "sensitivity": {
+        "d_metric_d_cR2": 0.11499999999942112,
+        "d_metric_d_cRic2": 0.11499999999942112,
+        "d_metric_d_cRiem2": 0.11499999999942112
+      },
+      "reverse_proxy": {
+        "alphaQ_true": 1.3205675000000001,
+        "alphaQ_reconstructed": 1.3205675000000008,
+        "reconstruction_error": 6.661338147750939e-16
+      }
+    },
+    {
+      "input": {
+        "beta": 0.8380000000000001,
+        "eta": 1.4100000000000001,
+        "omega": 0.19,
+        "A": 1.0,
+        "R": 0.12
+      },
+      "coeff": {
+        "Mpl2": 1.838,
+        "cR2": 0.34771784232365144,
+        "cRic2": 0.49028215767634864,
+        "cRiem2": 0.5048950000000001,
+        "muH2": 0.0361,
+        "lambdaH": 1.625734494015234,
+        "xiHR": 0.455930359085963,
+        "ZA": 1.702244
+      },
+      "eom_residuals": {
+        "metric_proxy": 0.8611473999999999,
+        "scalar_proxy": 2.190182950070938,
+        "gauge_proxy": 0.0
+      },
+      "sensitivity": {
+        "d_metric_d_cR2": 0.12000000000012001,
+        "d_metric_d_cRic2": 0.12000000000012001,
+        "d_metric_d_cRiem2": 0.12000000000012001
+      },
+      "reverse_proxy": {
+        "alphaQ_true": 1.3428950000000002,
+        "alphaQ_reconstructed": 1.3428949999999995,
+        "reconstruction_error": -6.661338147750939e-16
+      }
+    },
+    {
+      "input": {
+        "beta": 0.8500000000000001,
+        "eta": 1.425,
+        "omega": 0.1905,
+        "A": 1.0,
+        "R": 0.125
+      },
+      "coeff": {
+        "Mpl2": 1.85,
+        "cR2": 0.35051546391752586,
+        "cRic2": 0.49948453608247434,
+        "cRiem2": 0.5153125000000001,
+        "muH2": 0.03629025,
+        "lambdaH": 1.6381756756756756,
+        "xiHR": 0.4594594594594595,
+        "ZA": 1.7225000000000001
+      },
+      "eom_residuals": {
+        "metric_proxy": 0.8706640625,
+        "scalar_proxy": 2.2071705182516888,
+        "gauge_proxy": 0.0
+      },
+      "sensitivity": {
+        "d_metric_d_cR2": 0.12499999999970868,
+        "d_metric_d_cRic2": 0.12499999999970868,
+        "d_metric_d_cRiem2": 0.12499999999970868
+      },
+      "reverse_proxy": {
+        "alphaQ_true": 1.3653125000000004,
+        "alphaQ_reconstructed": 1.3653125,
+        "reconstruction_error": -4.440892098500626e-16
+      }
+    },
+    {
+      "input": {
+        "beta": 0.8620000000000001,
+        "eta": 1.44,
+        "omega": 0.191,
+        "A": 1.0,
+        "R": 0.13
+      },
+      "coeff": {
+        "Mpl2": 1.862,
+        "cR2": 0.3532786885245902,
+        "cRic2": 0.5087213114754099,
+        "cRiem2": 0.5258200000000001,
+        "muH2": 0.036481,
+        "lambdaH": 1.6506981740064446,
+        "xiHR": 0.4629430719656284,
+        "ZA": 1.7430440000000003
+      },
+      "eom_residuals": {
+        "metric_proxy": 0.8804166,
+        "scalar_proxy": 2.2243072250491416,
+        "gauge_proxy": 0.0
+      },
+      "sensitivity": {
+        "d_metric_d_cR2": 0.13000000000040757,
+        "d_metric_d_cRic2": 0.13000000000040757,
+        "d_metric_d_cRiem2": 0.13000000000040757
+      },
+      "reverse_proxy": {
+        "alphaQ_true": 1.38782,
+        "alphaQ_reconstructed": 1.3878200000000003,
+        "reconstruction_error": 2.220446049250313e-16
+      }
+    },
+    {
+      "input": {
+        "beta": 0.8740000000000001,
+        "eta": 1.455,
+        "omega": 0.1915,
+        "A": 1.0,
+        "R": 0.135
+      },
+      "coeff": {
+        "Mpl2": 1.874,
+        "cR2": 0.35600814663951125,
+        "cRic2": 0.5179918533604889,
+        "cRiem2": 0.5364175000000001,
+        "muH2": 0.03667225,
+        "lambdaH": 1.6633004268943437,
+        "xiHR": 0.46638207043756674,
+        "ZA": 1.7638760000000002
+      },
+      "eom_residuals": {
+        "metric_proxy": 0.8904063625,
+        "scalar_proxy": 2.241593483978547,
+        "gauge_proxy": 0.0
+      },
+      "sensitivity": {
+        "d_metric_d_cR2": 0.13499999999999623,
+        "d_metric_d_cRic2": 0.13499999999999623,
+        "d_metric_d_cRiem2": 0.13499999999999623
+      },
+      "reverse_proxy": {
+        "alphaQ_true": 1.4104175000000003,
+        "alphaQ_reconstructed": 1.4104175000000005,
+        "reconstruction_error": 2.220446049250313e-16
+      }
+    },
+    {
+      "input": {
+        "beta": 0.8860000000000001,
+        "eta": 1.47,
+        "omega": 0.192,
+        "A": 1.0,
+        "R": 0.14
+      },
+      "coeff": {
+        "Mpl2": 1.8860000000000001,
+        "cR2": 0.35870445344129565,
+        "cRic2": 0.5272955465587046,
+        "cRiem2": 0.5471050000000001,
+        "muH2": 0.036864,
+        "lambdaH": 1.6759809119830327,
+        "xiHR": 0.4697773064687169,
+        "ZA": 1.7849960000000002
+      },
+      "eom_residuals": {
+        "metric_proxy": 0.9006347000000001,
+        "scalar_proxy": 2.2590297124619143,
+        "gauge_proxy": 0.0
+      },
+      "sensitivity": {
+        "d_metric_d_cR2": 0.14000000000069512,
+        "d_metric_d_cRic2": 0.14000000000069512,
+        "d_metric_d_cRiem2": 0.14000000000069512
+      },
+      "reverse_proxy": {
+        "alphaQ_true": 1.4331050000000003,
+        "alphaQ_reconstructed": 1.433105000000001,
+        "reconstruction_error": 6.661338147750939e-16
+      }
+    },
+    {
+      "input": {
+        "beta": 0.8980000000000001,
+        "eta": 1.485,
+        "omega": 0.1925,
+        "A": 1.0,
+        "R": 0.145
+      },
+      "coeff": {
+        "Mpl2": 1.8980000000000001,
+        "cR2": 0.3613682092555332,
+        "cRic2": 0.5366317907444669,
+        "cRiem2": 0.5578825000000002,
+        "muH2": 0.03705625,
+        "lambdaH": 1.6887381454162278,
+        "xiHR": 0.47312961011591154,
+        "ZA": 1.8064040000000001
+      },
+      "eom_residuals": {
+        "metric_proxy": 0.9111029625,
+        "scalar_proxy": 2.2766163317290777,
+        "gauge_proxy": 0.0
+      },
+      "sensitivity": {
+        "d_metric_d_cR2": 0.1450000000002838,
+        "d_metric_d_cRic2": 0.1450000000002838,
+        "d_metric_d_cRiem2": 0.1450000000002838
+      },
+      "reverse_proxy": {
+        "alphaQ_true": 1.4558825000000004,
+        "alphaQ_reconstructed": 1.4558825000000004,
+        "reconstruction_error": 0.0
+      }
+    }
+  ],
+  "status": "OPEN_OBLIGATION",
+  "open_obligations": [
+    "theorem_level_helmholtz_witness_h2_h3_h4",
+    "spin2_spin0_unitarity_theorem",
+    "qg_renormalization_theorem",
+    "background_independence_theorem"
+  ],
+  "next_honest_step": "S622: theorem-level EOM->L_total witness + QG theorem chain integration.",
+  "lay_summary": "Przeliczyliśmy pełny strictowy tor na gęstej siatce i sprawdziliśmy czułość wyników; pierwszy krok wstecz działa lokalnie, ale pełny dowód nadal jest otwarty."
+}

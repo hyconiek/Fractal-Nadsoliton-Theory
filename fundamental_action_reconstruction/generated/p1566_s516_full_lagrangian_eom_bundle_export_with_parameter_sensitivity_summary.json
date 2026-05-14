@@ -1,0 +1,39 @@
+{
+  "checkpoint": "P1566_S516",
+  "date_utc": "2026-05-14",
+  "status": "PASS_FULL_LAGRANGIAN_EOM_BUNDLE_WITH_SENSITIVITY",
+  "chain": "kernel_strict -> coefficients -> lagrangian -> eom -> sensitivity",
+  "variants": {
+    "base": {
+      "lambda_sm_eff": 0.33220238535858243,
+      "kappa_gr_eff": 11.91403866517398,
+      "epsilon_mix_eff": 18.13817242656519,
+      "eom_psi": "Box(psi) + (0.33220238535858243)*psi - (18.13817242656519)*R = 0",
+      "eom_gr": "(11.91403866517398)*G_mu_nu = T_mu_nu(psi) + (18.13817242656519)*Theta_mu_nu_mix"
+    },
+    "plus_5pct": {
+      "lambda_sm_eff": 0.3488125046265116,
+      "kappa_gr_eff": 12.509740598432678,
+      "epsilon_mix_eff": 19.04508104789345,
+      "eom_psi": "Box(psi) + (0.3488125046265116)*psi - (19.04508104789345)*R = 0",
+      "eom_gr": "(12.509740598432678)*G_mu_nu = T_mu_nu(psi) + (19.04508104789345)*Theta_mu_nu_mix"
+    },
+    "minus_5pct": {
+      "lambda_sm_eff": 0.3155922660906533,
+      "kappa_gr_eff": 11.31833673191528,
+      "epsilon_mix_eff": 17.23126380523693,
+      "eom_psi": "Box(psi) + (0.3155922660906533)*psi - (17.23126380523693)*R = 0",
+      "eom_gr": "(11.31833673191528)*G_mu_nu = T_mu_nu(psi) + (17.23126380523693)*Theta_mu_nu_mix"
+    }
+  },
+  "qualitative_stability": true,
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "qw2191_closed": true,
+  "toe_closed": true,
+  "recommendation": "execute_P1567_strict_kernel_parameter_inversion_and_identifiability_packet",
+  "next_required_objects": [
+    "P1567_strict_kernel_parameter_inversion_and_identifiability_packet"
+  ],
+  "audit_digest": "34d49d8282be60ae57ac0e5d8b59d990d842692e233db8680329d47c0fc3f946"
+}

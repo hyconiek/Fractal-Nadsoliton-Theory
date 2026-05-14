@@ -1,0 +1,38 @@
+{
+  "checkpoint": "P1690_S640",
+  "timestamp_utc": "2026-05-14T23:09:03.563799+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "input_refs": {
+    "p1663": "strict_qg_obligation_witness",
+    "p1689": "strict_spin2_operator_sign_witness"
+  },
+  "joint_chain": "K_strict -> coeff -> full L_total -> EOM -> spin2_op -> (1loop_CT + BRST/Cutkosky)",
+  "gates": {
+    "counterterm_local_basis_present": {
+      "status": "LOCAL_PASS",
+      "detail": [
+        "R^2",
+        "Ricci^2",
+        "Riemann^2"
+      ]
+    },
+    "brst_nilpotency_local_stub": {
+      "status": "LOCAL_PASS",
+      "detail": "Local background sector consistent with positive spin-2 quadratic spectrum."
+    },
+    "cutkosky_positive_residue_local_stub": {
+      "status": "LOCAL_PASS",
+      "detail": "No negative local spectral mode detected on checked grid."
+    }
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "open_obligations": [
+    "theorem_level_counterterm_flow_closure",
+    "theorem_level_brst_quantization_consistency",
+    "theorem_level_cutkosky_unitarity_for_full_sector",
+    "quantum_background_independence_family_witness"
+  ],
+  "next_honest_step": "Export theorem-level (not local) closure linking counterterm flow with BRST/Cutkosky consistency on a background family.",
+  "lay_summary": "To jest wspólny test trzech krytycznych bram kwantowej grawitacji. Lokalne wyniki są dodatnie, ale pełny dowód dla całej teorii nadal pozostaje otwarty."
+}

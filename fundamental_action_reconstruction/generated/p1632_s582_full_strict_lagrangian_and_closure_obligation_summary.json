@@ -1,0 +1,62 @@
+{
+  "checkpoint": "P1632_S582",
+  "timestamp_utc": "2026-05-14T17:04:29.606195+00:00",
+  "status": "PASS_P1632_FULL_STRICT_LAGRANGIAN_EXPORTED",
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "kernel_to_coeff": {
+    "omega": 0.18575,
+    "phi": 0.1625,
+    "beta": 1.0,
+    "eta": 1.8,
+    "D": 25.0,
+    "steps": 200000
+  },
+  "coefficients": {
+    "lambda_sm_eff": 0.33220238535858243,
+    "kappa_gr_eff": 11.91403866517398,
+    "epsilon_mix_eff": 18.13817242656519
+  },
+  "full_lagrangian_density": {
+    "L_strict_scalar": "1/2 g^{μν}(∇_μ ψ)(∇_ν ψ) - 1/2*0.332202385359*ψ^2 - λ4/4*ψ^4",
+    "L_SM_gauge": "-1/4 G^A_{μν}G_A^{μν} -1/4 W^I_{μν}W_I^{μν} -1/4 B_{μν}B^{μν}",
+    "L_SM_fermions": "Σ_f i ψ̄_f γ^μ D_μ ψ_f - Σ_f y_f(ψ̄_{fL} H ψ_{fR} + h.c.)",
+    "L_SM_higgs": "(D_μ H)^†(D^μ H) - μ_H^2 H^†H - λ_H(H^†H)^2",
+    "L_GR": "11.914038665174*R - Λ + c1*R^2 + c2*R_{μν}R^{μν} + c3*R_{μναβ}R^{μναβ}",
+    "L_mix": "18.138172426565*ψ*R + ξ(H^†H)R + χ ψ^2(H^†H)",
+    "L_total": "L_strict_scalar + L_SM_gauge + L_SM_fermions + L_SM_higgs + L_GR + L_mix"
+  },
+  "action": "S = ∫ d^4x sqrt(-g) * L_total",
+  "eom_bundle": {
+    "psi": "□ψ + m_ψ^2 ψ + λ4 ψ^3 - ε_mix R - 2χψ(H†H) = 0",
+    "higgs": "D_μD^μH + μ_H^2H + 2λ_H(H†H)H + ξRH + χψ^2H - Yukawa_sources = 0",
+    "gauge": "D_μG_A^{μν}=J_A^ν, D_μW_I^{μν}=J_I^ν, ∂_μB^{μν}=J_Y^ν",
+    "metric": "κG_{μν}+Λg_{μν}+H_{μν}[c1,c2,c3]=T_{μν}^{SM}+T_{μν}^{ψ}+T_{μν}^{mix}"
+  },
+  "strict_core_closure": {
+    "status": "OPEN",
+    "missing_exports": [
+      "E_selector_internal_source_full_domain",
+      "E_full_variational_proof_log_machine_checkable"
+    ],
+    "missing_witnesses": [
+      "W_noncyclic_provider_for_selector_uniqueness_PROVED_GLOBAL"
+    ],
+    "missing_theorems": [
+      "T_qw2191_selector_uniqueness_strict_GLOBAL",
+      "T_global_toe_closure_strict"
+    ]
+  },
+  "closure_readout": {
+    "state": "OPEN",
+    "requires": [
+      "export E_selector_internal_source_full_domain",
+      "witness W_noncyclic_provider_for_selector_uniqueness_PROVED_GLOBAL",
+      "theorem T_qw2191_selector_uniqueness_strict_GLOBAL",
+      "theorem T_global_toe_closure_strict"
+    ]
+  },
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "next_honest_step": "Dowód theorem-level: overlap-compatibility na C_global_noncyclic_cover => global selector uniqueness => strict-core closure.",
+  "lay_summary": "Mamy pełny wzór lagranżianu i równania ruchu z kernela strict. Nadal brakuje globalnego dowodu, że lokalne kawałki składają się w jedną, unikalną teorię."
+}

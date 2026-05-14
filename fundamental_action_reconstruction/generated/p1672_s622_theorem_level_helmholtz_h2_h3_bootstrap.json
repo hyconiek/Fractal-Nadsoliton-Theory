@@ -1,0 +1,29 @@
+{
+  "checkpoint": "P1672_S622_THEOREM_LEVEL_HELMHOLTZ_H2_H3_BOOTSTRAP",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "chain": "K_strict -> coeff -> full L_total -> EOM; reverse bootstrap: EOM -> L_total",
+  "full_lagrangian_density_proxy": "1/2 h'^2 + 1/2 zeta a'^2 -1/2 omega^2 h^2 -1/2 a^2 -xi h a + lam h^2 a^2",
+  "eom": {
+    "E_h": "h'' + omega^2*h + xi*a - 2*lam*h*a^2",
+    "E_a": "zeta*a'' + a + xi*h - 2*lam*h^2*a"
+  },
+  "helmholtz_h2": {
+    "expression": "(xi - 4*lam*h*a) - (xi - 4*lam*h*a)",
+    "proxy_pass": true
+  },
+  "helmholtz_h3": {
+    "expression": "(xi - 4*lam*h*a) - (xi - 4*lam*h*a)",
+    "proxy_pass": true
+  },
+  "status": "OPEN_OBLIGATION",
+  "open_obligations": [
+    "helmholtz_h4_global_atlas_overlap_consistency",
+    "full_operator_class_extension_beyond_proxy",
+    "spin2_spin0_unitarity_theorem",
+    "qg_renormalization_theorem",
+    "background_independence_theorem"
+  ],
+  "next_honest_step": "S623: H4 global atlas theorem + integration with strict QG theorem package.",
+  "lay_summary": "Lokalny bootstrap Helmholtza H2/H3 jest zgodny dla sprzężonego kanału, ale pełne globalne domknięcie i bramki QG pozostają otwarte."
+}

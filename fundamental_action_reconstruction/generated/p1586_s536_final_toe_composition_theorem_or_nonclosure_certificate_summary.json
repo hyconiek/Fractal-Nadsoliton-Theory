@@ -1,0 +1,40 @@
+{
+  "checkpoint": "P1586_S536",
+  "timestamp_utc": "2026-05-14T07:54:31.409096+00:00",
+  "status": "KEEP_OPEN_P1586_NONCLOSURE_CERTIFICATE",
+  "strict_chain": {
+    "kernel": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+    "coefficients": {
+      "c2": 0.3078066505217639,
+      "c4": 0.17129068163797725,
+      "cY": 0.23520589523214172
+    },
+    "lagrangian": {
+      "L_SM": "0.5*(dphi)^2 - 0.5*0.30780665*phi^2 - 0.17129068*phi^4 - 0.23520590*phi*psi*psi",
+      "L_GR": "0.5*R - 0.03078067*R^2",
+      "L_total": "L_SM + L_GR"
+    },
+    "eom": {
+      "phi": "d2phi + 0.30780665*phi + 4*0.17129068*phi^3 + 0.23520590*psi*psi = 0",
+      "psi": "i*gamma*dpsi - 0.23520590*phi*psi = 0",
+      "metric": "G_mn + 0.06156133*H_mn = T_mn"
+    }
+  },
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "final_object": {
+    "status": "OPEN",
+    "qw2191_closed": false,
+    "toe_closed": false,
+    "nonclosure_certificate": {
+      "reason": "Formal L1/L3 global obligations not fully discharged",
+      "remaining_missing": [
+        "untrimmed_domain_L1_formalization",
+        "full_global_proof_for_L3_beyond_window",
+        "final_ToE_composition_theorem_export"
+      ]
+    }
+  },
+  "external_team_validation_required": false,
+  "next_honest_step": "If OPEN: construct missing global proofs; if CLOSED: independent internal replay.",
+  "lay_summary": "Wydano finalny theorem tylko jeśli bramka formalna była gotowa; w przeciwnym razie wydano certyfikat uczciwego niedomknięcia."
+}

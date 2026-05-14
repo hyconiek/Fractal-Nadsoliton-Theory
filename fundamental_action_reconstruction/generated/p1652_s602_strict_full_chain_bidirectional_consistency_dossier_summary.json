@@ -1,0 +1,94 @@
+{
+  "checkpoint": "P1652_S602",
+  "timestamp_utc": "2026-05-14T18:53:43.508390+00:00",
+  "status": "KEEP_OPEN_P1652_FULL_CHAIN_BIDIRECTIONAL_DOSSIER_EXPORTED",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "kernel_definition": "K_strict(d) = cos(omega*d + phi0)/(1 + beta*d^eta)",
+  "full_lagrangian_density": {
+    "L_strict_scalar": "1/2 (∂_μ φ)(∂^μ φ) - V_strict(φ)",
+    "L_SM_gauge": "-1/4 G^A_{μν}G_A^{μν} - 1/4 W^I_{μν}W_I^{μν} - 1/4 B_{μν}B^{μν}",
+    "L_SM_fermions": "Σ_f i ψ̄_f γ^μ D_μ ψ_f - Σ_f y_f(ψ̄_{fL} H ψ_{fR} + h.c.)",
+    "L_SM_higgs": "(D_μ H)^†(D^μ H) - μ_H^2 H^†H - λ_H(H^†H)^2",
+    "L_GR": "M_Pl^2/2·R - Λ + c1 R^2 + c2 R_{μν}R^{μν} + c3 R_{μναβ}R^{μναβ}",
+    "L_mix": "ξ_HR H^†H R + ξ_φR φ^2 R + λ_{φH} φ^2 H^†H",
+    "L_total": "L_strict_scalar + L_SM_gauge + L_SM_fermions + L_SM_higgs + L_GR + L_mix"
+  },
+  "eom_system": {
+    "E_phi": "δS/δφ = 0",
+    "E_H": "δS/δH† = 0",
+    "E_psi_f": "δS/δψ̄_f = 0",
+    "E_SU3": "D_μ G^{A μν} = J^{A ν}",
+    "E_SU2": "D_μ W^{I μν} = J^{I ν}",
+    "E_U1": "∂_μ B^{μν} = J_Y^ν",
+    "E_metric": "δS/δg^{μν} = 0"
+  },
+  "forward_chain_matrix": [
+    {
+      "step": "K_strict -> coefficients",
+      "status": "PARTIAL",
+      "evidence": "P1647 + P1648 + P1649 + P1651"
+    },
+    {
+      "step": "coefficients -> full L_total",
+      "status": "PARTIAL",
+      "evidence": "operator-basis map + full Lagrangian sectors exported"
+    },
+    {
+      "step": "full L_total -> EOM",
+      "status": "PARTIAL",
+      "evidence": "EOM bundle exported; theorem-level global variational log still open"
+    }
+  ],
+  "reverse_chain_matrix": [
+    {
+      "step": "EOM -> full L_total",
+      "status": "OPEN",
+      "blocker": "Helmholtz H1..H4 global discharge missing"
+    },
+    {
+      "step": "full L_total -> coefficients",
+      "status": "OPEN",
+      "blocker": "global injective recovery theorem missing"
+    },
+    {
+      "step": "coefficients -> K_strict",
+      "status": "OPEN",
+      "blocker": "global injectivity + selector nullspace theorem (QW-2191) missing"
+    }
+  ],
+  "o1_progress": {
+    "target": "O1 from T_STRICT_INJ_BOX_01",
+    "region": {
+      "beta": [
+        0.32,
+        0.42
+      ],
+      "eta": [
+        1.2,
+        1.36
+      ],
+      "omega": [
+        1.05,
+        1.17
+      ],
+      "phi0": [
+        0.35,
+        0.49
+      ]
+    },
+    "certificate_type": "computational lower-bound estimate from regional grid",
+    "eps_hat": 0.6376262351876,
+    "derived_from_sample_count": 12,
+    "condition_checked": "|detJ| >= eps_hat on sampled region points",
+    "status": "PARTIAL",
+    "note": "Grid-derived certificate; still needs analytic proof upgrade for theorem-level discharge."
+  },
+  "strict_core_closure": {
+    "status": "OPEN",
+    "reason": "Reverse chain theorem-level obligations remain unresolved"
+  },
+  "next_honest_step": "Zacząć O2: wyeksportować theorem-level overlap cocycle consistency dla patchy parametrów i połączyć z O1/O3.",
+  "lay_summary": "Mamy już pełny zapis toru do przodu (kernel→współczynniki→lagranżian→równania), a także listę braków dla drogi wstecz. To porządkuje dokładnie, co trzeba jeszcze udowodnić do domknięcia teorii."
+}

@@ -1,0 +1,25 @@
+{
+  "checkpoint": "P1655_S605",
+  "timestamp_utc": "2026-05-14T19:12:06.697353+00:00",
+  "status": "KEEP_OPEN_P1655_LOCAL_H1_WITNESS_EXPORTED",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "inherits_from": "P1654_S604",
+  "kernel_definition": "K_strict(d) = cos(omega*d + phi0)/(1 + beta*d^eta)",
+  "reverse_gate_target": "EOM -> L_total Helmholtz H1..H4 discharge",
+  "local_sector": "scalar phi + Higgs-radial h with lambda_phiH mixing",
+  "helmholtz_h1_local": {
+    "cross_derivative_dphi_dh": "4*lamPH*phi*h",
+    "cross_derivative_dh_dphi": "4*lamPH*phi*h",
+    "residual": "0",
+    "status": "PARTIAL"
+  },
+  "global_reverse_chain_status": "OPEN",
+  "open_items": [
+    "Extend H1 witness to full gauge/fermion/metric coupled system",
+    "Export H2/H3/H4 theorem-level witnesses",
+    "Integrate Helmholtz package into EOM->L_total reconstruction theorem"
+  ],
+  "next_honest_step": "Rozszerzyć H1 z sektora phi-H do sektora gauge+scalar i dodać jawne operatory dywergencji kowariantnej.",
+  "lay_summary": "Pokazaliśmy pierwszy matematyczny test cofania teorii: lokalnie równania zachowują symetrię pochodnych wymaganą do odzyskiwania lagranżianu. To dopiero początek — pełny układ nadal jest otwarty."
+}

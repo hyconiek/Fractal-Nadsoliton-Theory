@@ -1,0 +1,36 @@
+{
+  "checkpoint": "P1660_S610",
+  "timestamp_utc": "2026-05-14T19:32:36.394533+00:00",
+  "status": "KEEP_OPEN_P1660_H2_BOUNDARY_CONDITION_CANDIDATE_EXPORTED",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "kernel_definition": "K_strict(d) = cos(omega*d + phi0)/(1 + beta*d^eta)",
+  "forward_chain_context": "K_strict -> coefficients -> full L_total -> EOM",
+  "reverse_gate_target": "EOM -> L_total Helmholtz H1..H4 discharge",
+  "boundary_condition_candidate": {
+    "asymptotics": {
+      "A_mu": "O(r^{-1-ε})",
+      "D_mu_phi": "O(r^{-2-ε})",
+      "epsilon": ">0"
+    },
+    "finite_energy_requirement": true,
+    "boundary_flux_claim": "∫_{∂Ω} n_μ J^μ -> 0 as r->∞ under candidate class",
+    "status": "PARTIAL"
+  },
+  "proof_obligations": [
+    "rigorous Sobolev/weighted-space embedding for the candidate asymptotics",
+    "gauge-invariant formulation of boundary condition class",
+    "compatibility with coupled metric backreaction"
+  ],
+  "qg_gates": {
+    "renormalization": "OPEN",
+    "unitarity": "OPEN",
+    "background_independence": "OPEN"
+  },
+  "final_strict_core_closure": {
+    "status": "OPEN",
+    "reason": "candidate boundary condition exported but theorem-level proof missing"
+  },
+  "next_honest_step": "Zbudować theorem-level lemma: kandydat klasy pól => zanik strumienia brzegowego dla J^μ w gauge-scalar, a następnie podłączyć do H2 discharge.",
+  "lay_summary": "Mamy teraz konkretny pomysł, jakie zachowanie pól na dużych odległościach wycina wkład z brzegu. To jeszcze nie dowód, ale to precyzyjny krok potrzebny do dalszego domykania teorii."
+}

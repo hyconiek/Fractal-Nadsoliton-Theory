@@ -1,0 +1,26 @@
+{
+  "checkpoint": "P1662_S612",
+  "timestamp_utc": "2026-05-14T19:40:19.461353+00:00",
+  "status": "KEEP_OPEN_P1662_EXPLICIT_FULL_LAGRANGIAN_DENSITY_EXPORTED",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "kernel_definition": "K_strict(d) = cos(omega*d + phi0)/(1 + beta*d^eta)",
+  "forward_chain_context": "K_strict -> coefficients -> full L_total -> EOM",
+  "full_lagrangian_density_explicit": {
+    "L_scalar": "sqrt(-g)*[1/2 g^{μν}(∇_μφ)(∇_νφ) - (m_φ^2/2)φ^2 - (λ_3/3!)φ^3 - (λ_4/4!)φ^4]",
+    "L_gauge": "sqrt(-g)*[-1/4 G^A_{μν}G_A^{μν} - 1/4 W^I_{μν}W_I^{μν} - 1/4 B_{μν}B^{μν}]",
+    "L_fermion": "sqrt(-g)*[Σ_f i ψ̄_f γ^a e_a^{ μ}D_μ ψ_f - Σ_f y_f(ψ̄_{fL}Hψ_{fR}+h.c.)]",
+    "L_higgs": "sqrt(-g)*[(D_μH)^†(D^μH) - μ_H^2(H^†H) - λ_H(H^†H)^2]",
+    "L_gravity": "sqrt(-g)*[(M_Pl^2/2)R - Λ + c1 R^2 + c2 R_{μν}R^{μν} + c3 R_{μναβ}R^{μναβ}]",
+    "L_mix": "sqrt(-g)*[ξ_HR(H^†H)R + ξ_φR φ^2R + λ_{φH}φ^2(H^†H)]"
+  },
+  "L_total_explicit": "L_scalar + L_gauge + L_fermion + L_higgs + L_gravity + L_mix",
+  "reverse_chain_status": "OPEN",
+  "qg_gates": {
+    "renormalization": "OPEN",
+    "unitarity": "OPEN",
+    "background_independence": "OPEN"
+  },
+  "next_honest_step": "Przepiąć P1662 jako referencyjny L_total do eksportu jawnych równań EOM sektor-po-sektor i aktualizacji H2/H3 witnessów.",
+  "lay_summary": "Zapisaliśmy pełny lagranżian w jednej jawnej formule, żeby kolejne kroki nie opierały się na skrótach. Dzięki temu łatwiej sprawdzać, czy równania ruchu naprawdę odpowiadają całej teorii."
+}

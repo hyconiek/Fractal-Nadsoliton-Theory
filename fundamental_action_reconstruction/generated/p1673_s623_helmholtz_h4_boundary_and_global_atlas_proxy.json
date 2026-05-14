@@ -1,0 +1,49 @@
+{
+  "checkpoint": "P1673_S623_HELMHOLTZ_H4_BOUNDARY_AND_GLOBAL_ATLAS_PROXY",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "chain": "K_strict -> coeff -> full L_total -> EOM -> Helmholtz H1..H4 -> reverse reconstruction",
+  "full_lagrangian_reference": "L_total = L_scalar + L_gauge + L_fermion + L_higgs + L_gravity + L_mix",
+  "helmholtz_h4_boundary_proxy": {
+    "classes": [
+      {
+        "name": "Dirichlet-like",
+        "flux_uLv_minus_Luv": 0.0
+      },
+      {
+        "name": "Neumann-like",
+        "flux_uLv_minus_Luv": 0.0
+      },
+      {
+        "name": "Mixed-admissible",
+        "flux_uLv_minus_Luv": 2e-08
+      }
+    ],
+    "tolerance": 1e-06,
+    "proxy_pass": true
+  },
+  "global_atlas_overlap_proxy": {
+    "U0_U1": {
+      "operator_transition_mismatch": 1.5e-08,
+      "pass": true
+    },
+    "U1_U2": {
+      "operator_transition_mismatch": 1.7e-08,
+      "pass": true
+    },
+    "U0_U2": {
+      "operator_transition_mismatch": 2.2e-08,
+      "pass": true
+    }
+  },
+  "status": "OPEN_OBLIGATION",
+  "open_obligations": [
+    "theorem_level_h4_boundary_proof",
+    "operator_level_global_atlas_cocycle_theorem",
+    "spin2_spin0_unitarity_theorem",
+    "qg_renormalization_theorem",
+    "background_independence_theorem"
+  ],
+  "next_honest_step": "S624: theorem-level H4 + global cocycle theorem integrated with QG closure package.",
+  "lay_summary": "Granice i przejścia atlasowe wyglądają dobrze w testach proxy, ale pełna matematyczna pewność wymaga formalnych twierdzeń."
+}

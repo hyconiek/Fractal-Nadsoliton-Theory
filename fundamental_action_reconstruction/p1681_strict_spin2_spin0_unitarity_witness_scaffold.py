@@ -1,0 +1,34 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent
+OUT = ROOT / "generated" / "p1681_s631_strict_spin2_spin0_unitarity_witness_scaffold.json"
+
+payload = {
+    "checkpoint": "P1681_S631_STRICT_SPIN2_SPIN0_UNITARITY_WITNESS_SCAFFOLD",
+    "strict_only": True,
+    "legacy_bridge_used": False,
+    "pipeline": "K_strict -> coefficients -> full_L_total -> EOM -> spin2/spin0 unitarity witness",
+    "full_lagrangian_anchor": {
+        "L_total": "L_gauge + L_fermion + L_higgs + L_yukawa + L_gravity + L_mix",
+        "L_gravity": "(M_Pl^2/2)R + c1 R^2 + c2 R_{μν}R^{μν}",
+        "L_mix": "ξ H†HR + strict counterterm set"
+    },
+    "strict_parameter_map": ["Z2", "Z0", "m2_sq", "m0_sq", "c1", "c2", "xi"],
+    "necessary_conditions": {
+        "ghost_free_kinetic": ["Z2 > 0", "Z0 > 0"],
+        "tachyon_free_masses": ["m2_sq >= 0", "m0_sq >= 0"]
+    },
+    "theorem_status": "OPEN_OBLIGATION",
+    "missing_witnesses": [
+        "global residue positivity over noncyclic background atlas",
+        "optical-theorem compatibility for strict SM+GR mixed amplitudes",
+        "compatibility bridge to renormalization/background-independence theorem chain"
+    ],
+    "next_honest_step": "S632: export curvature-uniform residue bound lemma package on kernel-split-robust atlas."
+}
+
+OUT.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+print(f"Wrote {OUT}")
