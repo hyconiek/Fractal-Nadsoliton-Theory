@@ -16,19 +16,36 @@
     "kappa_gr_eff": 11.91403866517398,
     "epsilon_mix_eff": 18.13817242656519
   },
-  "lagrangian_density": "L_total = 1/2*(d_psi)^2 - 1/2*(0.33220238535858243)*psi^2 + (11.91403866517398)*R + (18.13817242656519)*psi*R",
+  "lagrangian_density": {
+    "L_strict_kernel_sector": "1/2*(partial_mu psi)*(partial^mu psi) - 1/2*(0.33220238535858243)*psi^2",
+    "L_SM_effective": "L_YM[SU(3)xSU(2)xU(1)] + i*psi_bar*gamma^mu*D_mu*psi_f - y_f*H*psi_bar*psi_f + |D_mu H|^2 - V(H)",
+    "L_GR_effective": "(11.91403866517398)*R + Lambda_eff + c1*R^2 + c2*R_mu_nu*R^mu_nu",
+    "L_interaction": "(18.13817242656519)*psi*R + xi*|H|^2*R",
+    "L_total": "L_strict_kernel_sector + L_SM_effective + L_GR_effective + L_interaction"
+  },
   "euler_lagrange_equations": {
-    "psi_sector": "Box(psi) + (0.33220238535858243)*psi - (18.13817242656519)*R = 0",
-    "gr_sector": "(11.91403866517398)*G_mu_nu = T_mu_nu(psi) + (18.13817242656519)*Theta_mu_nu_mix"
+    "psi_sector": "Box(psi) + (0.33220238535858243)*psi - (18.13817242656519)*R + dL_SM_effective/dpsi = 0",
+    "gr_sector": "(11.91403866517398)*G_mu_nu + Delta_mu_nu[c1,c2,Lambda_eff] = T_mu_nu[SM] + T_mu_nu[psi] + T_mu_nu[mix]"
   },
   "chain": "kernel_strict -> coefficients -> lagrangian -> eom",
   "strict_only": true,
   "legacy_bridge_used": false,
-  "qw2191_closed": true,
-  "toe_closed": true,
-  "recommendation": "execute_P1564_numerical_eom_consistency_probe_for_full_chain",
+  "qw2191_closed": false,
+  "toe_closed": false,
+  "missing_exports": [
+    "E_selector_internal_source_full_domain",
+    "E_full_variational_proof_log_machine_checkable"
+  ],
+  "missing_witnesses": [
+    "W_noncyclic_provider_for_selector_uniqueness"
+  ],
+  "missing_theorems": [
+    "T_qw2191_selector_uniqueness_strict",
+    "T_global_toe_closure_strict"
+  ],
+  "recommendation": "execute_P1564_numerical_eom_consistency_probe_for_full_chain_then_discharge_selector_uniqueness_obligation",
   "next_required_objects": [
     "P1564_numerical_eom_consistency_probe_packet"
   ],
-  "audit_digest": "716e62388ce434e145d1f7fc6b5f195bdb127b272f35dbaab52d71d85c55dee8"
+  "audit_digest": "46e4b1f82991b3b3c8930cded9ec226c35579a9f1f40350e9e001eebaef4ab3a"
 }

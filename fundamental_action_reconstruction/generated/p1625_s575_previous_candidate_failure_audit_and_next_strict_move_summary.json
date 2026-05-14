@@ -1,0 +1,50 @@
+{
+  "checkpoint": "P1625_S575",
+  "timestamp_utc": "2026-05-14T16:03:25.698335+00:00",
+  "status": "KEEP_OPEN_P1625_PREVIOUS_CANDIDATES_NOT_CLOSED",
+  "candidate_audit": {
+    "previous_candidates_closed": false,
+    "reason": "previous candidates remain FAIL/KEEP_OPEN/INCOMPLETE in strict selector-uniqueness path",
+    "evidence": {
+      "P1583": "FAIL_T1583_FORMAL_PROOF_OBJECT_CANDIDATE",
+      "P1585": "FAIL_P1585_FORMAL_OBJECTS_AND_TOE_COMPOSITION_GATE",
+      "P1596": "KEEP_OPEN_P1596_BRIDGE_THEOREM_INCOMPLETE",
+      "P1605": "KEEP_OPEN_P1605_NP1_REPLAY_NOT_READY",
+      "P1623": "KEEP_OPEN_P1623_THEOREM_AND_VARIATIONAL_GAP"
+    }
+  },
+  "strict_chain_anchor": {
+    "kernel": "K_strict(omega,phi,beta,eta)",
+    "coefficients": {
+      "lambda_sm_eff": 0.33220238535858243,
+      "kappa_gr_eff": 11.91403866517398,
+      "epsilon_mix_eff": 18.13817242656519
+    },
+    "lagrangian": "L_total = L_strict_scalar + L_SM + L_GR + L_mix",
+    "eom": [
+      "psi",
+      "higgs",
+      "gauge",
+      "metric"
+    ]
+  },
+  "strict_core_closure": {
+    "status": "OPEN",
+    "missing_exports": [
+      "E_selector_internal_source_full_domain",
+      "E_full_variational_proof_log_machine_checkable"
+    ],
+    "missing_witnesses": [
+      "W_noncyclic_provider_for_selector_uniqueness_PROVED"
+    ],
+    "missing_theorems": [
+      "T_qw2191_selector_uniqueness_strict",
+      "T_global_toe_closure_strict"
+    ]
+  },
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "external_team_validation_required": false,
+  "next_honest_step": "Sformalizować dowód, że selection_rule z P1624 daje jednoznaczny selector_source na full-domain i podpiąć do T_qw2191.",
+  "lay_summary": "Sprawdziliśmy stare podejścia: nie domknęły teorii, więc nie powtarzamy ich, tylko budujemy brakujący formalny dowód na bazie obecnego pełnego łańcucha równań."
+}
