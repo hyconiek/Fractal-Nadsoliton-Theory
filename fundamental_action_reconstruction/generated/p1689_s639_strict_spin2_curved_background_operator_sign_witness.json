@@ -1,0 +1,57 @@
+{
+  "checkpoint": "P1689_S639",
+  "timestamp_utc": "2026-05-14T23:04:58.625567+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "input_chain": {
+    "forward_kernel_to_eom": "EXPORTED_SECTORWISE_FROM_FULL_L_TOTAL",
+    "reverse_eom_to_lagrangian": "KEEP_OPEN_HELMHOLTZ_PLUS_QG_OBLIGATIONS",
+    "local_inversion_from_p1664": true
+  },
+  "background": "constant_curvature_sector",
+  "operator_model": "O2 = Mpl2*k2 + c2eff*k2^2 + curvature_shift",
+  "parameters": {
+    "Mpl2": 1.72,
+    "c2eff": 0.11,
+    "curvature_shift": 0.02
+  },
+  "spectrum": [
+    {
+      "k2": 0.0,
+      "lambda_spin2": 0.02
+    },
+    {
+      "k2": 0.25,
+      "lambda_spin2": 0.45687500000000003
+    },
+    {
+      "k2": 0.5,
+      "lambda_spin2": 0.9075
+    },
+    {
+      "k2": 1.0,
+      "lambda_spin2": 1.85
+    },
+    {
+      "k2": 2.0,
+      "lambda_spin2": 3.9
+    },
+    {
+      "k2": 4.0,
+      "lambda_spin2": 8.66
+    }
+  ],
+  "local_sign_test": {
+    "criterion": "min_eigenvalue > 0",
+    "min_eigenvalue": 0.02,
+    "pass": true
+  },
+  "status": "KEEP_OPEN_QG_GLOBAL_OBLIGATIONS",
+  "open_obligations": [
+    "1loop_counterterm_export",
+    "cutkosky_brst_unitarity_witness",
+    "quantum_background_independence_global_witness"
+  ],
+  "next_honest_step": "Unify 1-loop counterterm derivation and BRST/Cutkosky unitarity checks on the same spin-2 background in one strict-core witness.",
+  "lay_summary": "Lokalny test drgań spin-2 wypada dodatnio na tej siatce, ale to tylko warunek konieczny. Do pełnego domknięcia ToE nadal brakuje twardych dowodów kwantowych."
+}
