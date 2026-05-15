@@ -1,0 +1,54 @@
+{
+  "checkpoint": "P1692_S642",
+  "timestamp_utc": "2026-05-14T23:19:03.597653+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "chain": "K_strict -> coefficients -> full L_total (anchor) -> reduced symbolic sector -> Euler-Lagrange witness",
+  "kernel_input": {
+    "omega": 0.18575,
+    "phi": 4.5231,
+    "beta": 0.72,
+    "eta": 1.31,
+    "A": 1.0
+  },
+  "coefficient_anchor": {
+    "Mpl2": 1.72,
+    "cR2": 0.3116883116883117,
+    "cRic2": 0.4083116883116883,
+    "cRiem2": 0.4158,
+    "Z3": 1.41472,
+    "Z2": 1.31104,
+    "Z1": 1.20736,
+    "muH2": 0.0345030625,
+    "lambdaH": 1.579127906976744,
+    "xiHR": 0.41860465116279066,
+    "chiRG": 0.346764705882353,
+    "yu": 0.167175,
+    "yd": 0.092875,
+    "ye": 0.055725
+  },
+  "full_lagrangian_density_anchor": {
+    "L_gravity": "sqrt(-g)*[(M_Pl^2/2)R - Λ + c_R2 R^2 + c_Ric2 R_{μν}R^{μν} + c_Riem2 R_{μνρσ}R^{μνρσ}]",
+    "L_gauge": "sqrt(-g)*[-(1/4) Σ_a Z_a F^a_{μν}F_a^{μν}]",
+    "L_fermion": "sqrt(-g)*[Σ_f i ψ̄_f γ^a e_a^{ μ}D_μ ψ_f]",
+    "L_higgs": "sqrt(-g)*[(D_μH)^†(D^μH) - μ_H^2(H^†H) - λ_H(H^†H)^2 - ξ_HR(H^†H)R]",
+    "L_yukawa": "sqrt(-g)*[-(y_u Q̄H~u + y_d Q̄Hd + y_e L̄He + h.c.)]",
+    "L_scalar_phi": "sqrt(-g)*[(1/2)(∇φ)^2 - (1/2)m_φ^2φ^2 - (λ_3/3!)φ^3 - (λ_4/4!)φ^4 - λ_{φH}φ^2(H^†H) - ξ_{φR}φ^2R]",
+    "L_mix": "sqrt(-g)*[χ_RG Σ_a R F^a_{μν}F_a^{μν} + CT_{1loop}(R^2,Ricci^2,Riemann^2,SM-mix)]"
+  },
+  "reduced_density": "-0.394781976744186*H(x)**4 - 0.330515143320714*H(x)**2*phi(x)**2 - 0.01725153125*H(x)**2 - 0.017012987012987*phi(x)**4 - 0.0519480519480519*phi(x)**3 - 0.02967263375*phi(x)**2 + Derivative(H(x), x)**2/2 + Derivative(phi(x), x)**2/2",
+  "symbolic_eom": {
+    "phi": "0.661030286641428*H(x)**2*phi(x) + 0.068051948051948*phi(x)**3 + 0.155844155844156*phi(x)**2 + 0.0593452675*phi(x) + Derivative(phi(x), (x, 2))",
+    "H": "1.57912790697674*H(x)**3 + 0.661030286641428*H(x)*phi(x)**2 + 0.0345030625*H(x) + Derivative(H(x), (x, 2))"
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "open_obligations": [
+    "full_covariant_EL_export_for_all_SM_GR_sectors",
+    "theorem_level_counterterm_flow_closure",
+    "theorem_level_BRST_cohomology_closure",
+    "theorem_level_Cutkosky_unitarity_full_sector",
+    "background_family_independence_theorem"
+  ],
+  "next_honest_step": "Podnieść replay SymPy z sektora zredukowanego do pełnego kowariantnego eksportu EL dla całego L_total i spiąć z theorem-level QG witnessami.",
+  "lay_summary": "Policzyliśmy symbolicznie równania ruchu z jawnej części lagranżjanu, żeby łańcuch od kernela strict do EOM był mechanicznie sprawdzalny. To nadal nie zamyka problemu kwantowej grawitacji."
+}

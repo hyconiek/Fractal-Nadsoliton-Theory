@@ -1,0 +1,63 @@
+{
+  "checkpoint": "P1694_S644",
+  "timestamp_utc": "2026-05-14T23:38:35.149599+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "full_chain": "K_strict -> coefficients -> full L_total (nonskeleton anchor) -> sector EOM obligations",
+  "kernel": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+  "kernel_input": {
+    "omega": 0.18575,
+    "phi": 4.5231,
+    "beta": 0.72,
+    "eta": 1.31,
+    "A": 1.0
+  },
+  "forward_coefficient_map_symbolic": {
+    "Mpl2": "1.72000000000000",
+    "cR2": "0.311688311688312",
+    "cRic2": "0.408311688311688",
+    "cRiem2": "0.415800000000000",
+    "muH2": "0.0345030625000000",
+    "lambdaH": "1.57912790697674",
+    "xiHR": "0.418604651162791",
+    "Z1": "1.20736000000000"
+  },
+  "full_lagrangian_density_anchor": {
+    "L_gravity": "sqrt(-g)*[(M_Pl^2/2)R - Λ + c_R2 R^2 + c_Ric2 R_{μν}R^{μν} + c_Riem2 R_{μνρσ}R^{μνρσ}]",
+    "L_gauge": "sqrt(-g)*[-(1/4) Σ_a Z_a F^a_{μν}F_a^{μν}]",
+    "L_fermion": "sqrt(-g)*[Σ_f i ψ̄_f γ^a e_a^{ μ}D_μ ψ_f]",
+    "L_higgs": "sqrt(-g)*[(D_μH)^†(D^μH) - μ_H^2(H^†H) - λ_H(H^†H)^2 - ξ_HR(H^†H)R]",
+    "L_yukawa": "sqrt(-g)*[-(y_u Q̄H~u + y_d Q̄Hd + y_e L̄He + h.c.)]",
+    "L_scalar_phi": "sqrt(-g)*[(1/2)(∇φ)^2 - (1/2)m_φ^2φ^2 - (λ_3/3!)φ^3 - (λ_4/4!)φ^4 - λ_{φH}φ^2(H^†H) - ξ_{φR}φ^2R]",
+    "L_mix": "sqrt(-g)*[χ_RG Σ_a R F^a_{μν}F_a^{μν} + CT_{1loop}(R^2,Ricci^2,Riemann^2,SM-mix)]"
+  },
+  "reverse_local_inversion": {
+    "beta_rec": "0.720000000000000",
+    "A_rec": "1.00000000000000",
+    "omega_rec": "0.185750000000000",
+    "eta_rec": "1.31000000000000",
+    "abs_differences": {
+      "beta_abs": 1.1102230246251565e-16,
+      "A_abs": 2.220446049250313e-16,
+      "omega_abs": 2.7755575615628914e-17,
+      "eta_abs": 2.220446049250313e-16
+    },
+    "local_pass": true,
+    "scope": "local_parameter_recovery_only"
+  },
+  "bidirectional_status": {
+    "forward_export": "EXPORTED",
+    "reverse_export": "PARTIAL_LOCAL_ONLY",
+    "global_variational_qg_theorem_closure": "KEEP_OPEN"
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "open_obligations": [
+    "full_covariant_EL_export_all_fields_nonproxy",
+    "counterterm_flow_closure_theorem",
+    "BRST_nilpotency_and_cohomology_theorem",
+    "Cutkosky_full_sector_unitarity_theorem",
+    "background_independence_family_theorem"
+  ],
+  "next_honest_step": "Podnieść reverse z local_parameter_recovery do pełnego odwrócenia: EOM-family -> integrable variational origin dla pełnego L_total + theorem-level QG closures.",
+  "lay_summary": "Pokazaliśmy, że z kernela strict da się dojść do współczynników i pełnego lagranżianu oraz częściowo wrócić z parametrów. Pełny dowód całej kwantowej grawitacji nadal pozostaje otwarty."
+}
