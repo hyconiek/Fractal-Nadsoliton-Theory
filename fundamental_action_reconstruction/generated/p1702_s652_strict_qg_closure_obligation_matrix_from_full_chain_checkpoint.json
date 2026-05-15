@@ -1,0 +1,111 @@
+{
+  "checkpoint": "P1702_S652",
+  "timestamp_utc": "2026-05-15T00:52:11.652265+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "chain_anchor_from_p1701": {
+    "forward": "K_strict -> coefficients -> full explicit L_total -> sector EOM bundle",
+    "reverse": "EOM bundle -> EL residual identity (reduced proxy pass) -> global theorem-level inversion OPEN"
+  },
+  "kernel_anchor": {
+    "kernel": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+    "kernel_input": {
+      "omega": 0.18575,
+      "phi": 4.5231,
+      "beta": 0.72,
+      "eta": 1.31,
+      "A": 1.0
+    }
+  },
+  "coefficient_anchor": {
+    "Mpl2": "1.72000000000000",
+    "cR2": "0.311688311688312",
+    "cRic2": "0.408311688311688",
+    "cRiem2": "0.415800000000000",
+    "muH2": "0.0345030625000000",
+    "lambdaH": "1.57912790697674",
+    "xiHR": "0.418604651162791",
+    "Z1": "1.20736000000000"
+  },
+  "full_lagrangian_explicit_anchor": {
+    "L_scalar": "sqrt(-g)*[1/2 g^{μν}(∇_μφ)(∇_νφ) - (m_φ^2/2)φ^2 - (λ_3/3!)φ^3 - (λ_4/4!)φ^4]",
+    "L_gauge": "sqrt(-g)*[-1/4 G^A_{μν}G_A^{μν} - 1/4 W^I_{μν}W_I^{μν} - 1/4 B_{μν}B^{μν}]",
+    "L_fermion": "sqrt(-g)*[Σ_f i ψ̄_f γ^a e_a^{ μ}D_μ ψ_f - Σ_f y_f(ψ̄_{fL}Hψ_{fR}+h.c.)]",
+    "L_higgs": "sqrt(-g)*[(D_μH)^†(D^μH) - μ_H^2(H^†H) - λ_H(H^†H)^2]",
+    "L_gravity": "sqrt(-g)*[(M_Pl^2/2)R - Λ + c1 R^2 + c2 R_{μν}R^{μν} + c3 R_{μναβ}R^{μναβ}]",
+    "L_mix": "sqrt(-g)*[ξ_HR(H^†H)R + ξ_φR φ^2R + λ_{φH}φ^2(H^†H)]"
+  },
+  "eom_anchor": {
+    "A": "1.20736*Derivative(A(x), (x, 2))",
+    "h": "0.418604651162791*R0*h(x) + 1.57912790697674*h(x)**3 + h(x)*phi(x)**2 + 0.0345030625*h(x) + 1.0*psi(x)*psib(x) + Derivative(h(x), (x, 2))",
+    "phi": "h(x)**2*phi(x) + 0.311688311688312*phi(x)**3 + Derivative(phi(x), (x, 2))",
+    "psi": "1.0*h(x)*psib(x) + 1.0*psib(x) + 1.0*I*Derivative(psib(x), x)",
+    "psib": "1.0*h(x)*psi(x) + 1.0*psi(x) - 1.0*I*Derivative(psi(x), x)"
+  },
+  "reverse_identity_anchor": {
+    "variational_identity_residuals": {
+      "EL_minus_EOM_A": "0",
+      "EL_minus_EOM_h": "0",
+      "EL_minus_EOM_phi": "0",
+      "EL_minus_EOM_psi": "0",
+      "EL_minus_EOM_psib": "0"
+    },
+    "variational_identity_zero_flags": {
+      "EL_minus_EOM_A": true,
+      "EL_minus_EOM_h": true,
+      "EL_minus_EOM_phi": true,
+      "EL_minus_EOM_psi": true,
+      "EL_minus_EOM_psib": true
+    },
+    "identity_status": "PASS_ALL_ZERO"
+  },
+  "qg_closure_obligation_matrix": {
+    "renormalization_counterterm_flow": {
+      "status": "OPEN",
+      "needed_exports": [
+        "nonproxy_multifield_counterterm_basis",
+        "rg_stability_witness_family",
+        "strict_uv_ir_matching_theorem"
+      ]
+    },
+    "unitarity_brst_cutkosky": {
+      "status": "OPEN",
+      "needed_exports": [
+        "brst_nilpotency_nonproxy_proof",
+        "physical_state_cohomology_witness",
+        "cutkosky_discontinuity_full_sector_theorem"
+      ]
+    },
+    "background_independence": {
+      "status": "OPEN",
+      "needed_exports": [
+        "background_family_transport_invariance_witness",
+        "chart_overlap_covariant_consistency_nonproxy",
+        "global_background_independence_theorem"
+      ]
+    },
+    "reverse_nonproxy_inversion": {
+      "status": "OPEN",
+      "needed_exports": [
+        "global_helmholtz_integrability_nonproxy",
+        "eom_to_lagrangian_uniqueness_domain_statement"
+      ]
+    },
+    "strict_selector_qw2191": {
+      "status": "OPEN",
+      "needed_exports": [
+        "strict_internal_selector_source_or_symmetry_breaking_premise",
+        "qw2191_discharge_or_sharp_nonclosure_theorem"
+      ]
+    }
+  },
+  "readiness_summary": {
+    "forward_chain": "EXPORTED_WITH_EXPLICIT_FULL_LAGRANGIAN_ANCHOR",
+    "reverse_local_identity": "PASS_ALL_ZERO",
+    "global_qg_theorem_closure": "OPEN"
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "next_honest_step": "Zacząć od jednego nonproxy filaru o najwyższej dźwigni: global_helmholtz_integrability_nonproxy + brst_nilpotency_nonproxy_proof jako para startowa do domknięcia kierunku wstecz i unitarności.",
+  "lay_summary": "Mamy już pełny łańcuch roboczy i lokalną zgodność równań z lagranżianem. Ten checkpoint precyzuje, jakie dokładnie dowody kwantowej grawitacji i odwracalności jeszcze brakuje do finalnego domknięcia."
+}

@@ -1,0 +1,19 @@
+{
+  "packet_id": "P1817",
+  "stage_id": "S767",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "hardening_applied": "P1793_PASS_ZERO_requires_all_ledgers_PASS_ZERO",
+  "post_fix_validation": {
+    "p1793_verdict": "OPEN_OBSTRUCTION_WITH_TRACE",
+    "p1793_obstruction_tags": [
+      "NON_PASS_LEDGER_PRESENT"
+    ]
+  },
+  "state_vector_policy": {
+    "TG1_BW": "NO_PROMOTION_WITHOUT_GLOBAL_NONPROXY_RESIDUAL_WITNESS",
+    "TG2_BRST": "LOCKED_BY_TG1",
+    "TG3_CUT": "LOCKED_BY_TG2"
+  },
+  "false_pass_guard": "SCHEMA_VALIDATION_CANNOT_PROMOTE_THEOREM_GATES",
+  "next_honest_step": "inject_real_P1806_execution_ledger_and_rerun_validation_chain"
+}

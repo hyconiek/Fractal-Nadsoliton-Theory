@@ -1,0 +1,18 @@
+{
+  "packet_id": "P1799_S749",
+  "as_of": "2026-05-15",
+  "allowed_verdicts": [
+    "AUDIT_PASS_IMMUTABILITY_CONFIRMED",
+    "AUDIT_FAIL_OPEN_OBSTRUCTION_WITH_TRACE"
+  ],
+  "immutability_checks": [
+    "SV6_unchanged",
+    "SV7_unchanged",
+    "SV8_unchanged"
+  ],
+  "gate_lock_checks": [
+    "if_G_BW_not_PASS_ZERO_then_G_BRST_LOCKED",
+    "if_G_BW_not_PASS_ZERO_then_G_CUT_LOCKED"
+  ],
+  "fail_effect": "BLOCK_GATE_PROMOTION_FOR_RUN"
+}

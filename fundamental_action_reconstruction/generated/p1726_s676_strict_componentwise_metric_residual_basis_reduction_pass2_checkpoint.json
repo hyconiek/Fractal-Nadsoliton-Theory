@@ -1,0 +1,70 @@
+{
+  "checkpoint": "P1726_S676",
+  "timestamp_utc": "2026-05-15T02:28:54.966881+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "chain": "K_strict -> coefficients -> full explicit L_total -> obstruction map -> basis reduction pass1+pass2",
+  "pass1_anchor": {
+    "target_group": "second_covariant_derivative_curvature_terms",
+    "rewrite_rules_applied": [
+      "commute_covariant_derivatives_on_scalars: [∇_μ,∇_ν]R = 0",
+      "trace_transport: g_{μν}□R kept as basis atom",
+      "symmetrization_lock: ∇_α∇_{(μ}R_{ν)}^α kept as basis atom"
+    ],
+    "pre_basis": [
+      "∇_μ∇_νR",
+      "g_{μν}□R",
+      "∇_α∇_{(μ}R_{ν)}^α"
+    ],
+    "post_basis": [
+      "B1:=∇_μ∇_νR",
+      "B2:=g_{μν}□R",
+      "B3:=∇_α∇_{(μ}R_{ν)}^α"
+    ],
+    "status": "BASIS_NORMALIZED_PASS1"
+  },
+  "basis_reduction_pass2": {
+    "target_group": "riemann_contraction_transport_terms",
+    "rewrite_rules_applied": [
+      "riemann_pair_symmetry: R_{μaβγ}R_{ν}^{aβγ} canonicalized",
+      "double_divergence_transport: ∇_a∇_b R_{μν}^{  ab} kept as basis atom",
+      "index_rename_canonicalization for contracted dummy indices"
+    ],
+    "pre_basis": [
+      "R_{μαβγ}R_{ν}^{αβγ}",
+      "∇_α∇_βR_{μν}^{  αβ}"
+    ],
+    "post_basis": [
+      "C1:=R_{μαβγ}R_{ν}^{αβγ}",
+      "C2:=∇_α∇_βR_{μν}^{  αβ}"
+    ],
+    "status": "BASIS_NORMALIZED_PASS2"
+  },
+  "common_basis_ready": {
+    "second_derivative_basis": [
+      "B1",
+      "B2",
+      "B3"
+    ],
+    "riemann_transport_basis": [
+      "C1",
+      "C2"
+    ],
+    "ready_for_residual_coefficient_assembly": true
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "open_obligations": [
+    "assemble_componentwise_residual_coefficients_on_BC_basis",
+    "metric_sector_PASS_ZERO_or_OBSTRUCTION_certificate",
+    "bianchi_ward_cross_consistency_certificate",
+    "global_helmholtz_integrability_nonproxy",
+    "brst_nilpotency_and_cohomology_nonproxy",
+    "cutkosky_unitarity_full_sector",
+    "counterterm_flow_renormalization_closure",
+    "background_independence_family_theorem",
+    "qw2191_selector_source_or_nonclosure_theorem"
+  ],
+  "next_honest_step": "Złożyć residual w bazie B1/B2/B3/C1/C2 i opublikować pierwszy jawny wektor współczynników residualu metrycznego.",
+  "lay_summary": "Ujednoliciliśmy drugi krytyczny blok składników grawitacyjnych. To oznacza, że można już składać pełną resztę równania w jednej wspólnej bazie."
+}

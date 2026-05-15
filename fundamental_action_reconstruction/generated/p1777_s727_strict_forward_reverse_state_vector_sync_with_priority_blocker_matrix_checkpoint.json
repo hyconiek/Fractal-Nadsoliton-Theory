@@ -1,0 +1,102 @@
+{
+  "checkpoint": "P1777_S727",
+  "timestamp_utc": "2026-05-15T12:04:14.962064+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "input_anchors": [
+    "p1766_s716",
+    "p1776_s726"
+  ],
+  "previous_state_vector": {
+    "forward_chain": {
+      "K_strict": "LOCKED_INPUT",
+      "coefficient_map": "EXPORTED",
+      "full_nonskeleton_L_total": "EXPORTED",
+      "covariant_E_A_mu_nonproxy": "EXPLICIT_OPERATOR_EXPORTED_P1764",
+      "covariant_E_H_nonproxy": "EXPLICIT_OPERATOR_EXPORTED_P1764",
+      "covariant_EL_g_nonproxy": "EXPLICIT_OPERATOR_EXPORTED_P1765"
+    },
+    "reverse_chain": {
+      "H1_cross_variation": "OPEN_COMPONENTWISE_REQUIRED",
+      "metric_residual_EL_g_minus_E_munu": "OPEN_COMPONENTWISE_REQUIRED",
+      "Bianchi_Ward_divergence_gate": "OPEN_REQUIRES_COMPONENTWISE_DIVERGENCE_TRACE",
+      "global_helmholtz_integrability": "OPEN"
+    },
+    "qg_theorem_gates": {
+      "renormalization_counterterm_closure": "OPEN",
+      "BRST_nilpotency": "OPEN",
+      "Cutkosky_unitarity": "OPEN",
+      "background_independence": "OPEN"
+    }
+  },
+  "priority_blocker_matrix_ref": {
+    "explicit_covariant_nonproxy_E_A_mu": {
+      "status": "EXPORTED_OPERATOR_OPEN_COMPONENTWISE",
+      "evidence": "OPEN_NEEDS_INDEX_LEVEL_EXPANSION"
+    },
+    "explicit_covariant_nonproxy_E_H": {
+      "status": "EXPORTED_OPERATOR_OPEN_COMPONENTWISE",
+      "evidence": "OPEN_NEEDS_INDEX_LEVEL_EXPANSION"
+    },
+    "metric_EL_g_export": {
+      "status": "EXPORTED_OPERATOR_OPEN_COMPONENTWISE",
+      "evidence": "OPEN_COMPONENTWISE_REQUIRED"
+    },
+    "boundary_term_control": {
+      "status": "CONTRACT_FINALIZED_REUSED",
+      "evidence": "REUSED_FROM_P1762_FINALIZED_CONTRACT_TEMPLATE"
+    },
+    "H1_4D_weak_form_readiness": {
+      "status": "OPEN_COMPONENTWISE_EXECUTION_REQUIRED",
+      "evidence": "OPEN_COMPONENTWISE_REQUIRED"
+    },
+    "Bianchi_Ward_consistency": {
+      "status": "BLOCKED_BY_W1_NOT_FULL_EXPORT",
+      "evidence": "OBSTRUCTION_W1_NOT_YET_FULL_EXPORT"
+    },
+    "BRST_Cutkosky_theorem_gates": {
+      "status": "BLOCKED_BY_BW_GATE_AND_MISSING_FULL_EXPORTS",
+      "evidence": {
+        "G_BW_rerun_allowed": false,
+        "reason": "W1 not accepted as FULL_EXPORT under P1774 acceptance contract",
+        "G_BRST": "BLOCKED",
+        "G_CUT": "BLOCKED"
+      }
+    }
+  },
+  "synced_state_vector": {
+    "forward_chain": {
+      "K_strict": "LOCKED_INPUT",
+      "coefficient_map": "EXPORTED",
+      "full_nonskeleton_L_total": "EXPORTED",
+      "covariant_E_A_mu_nonproxy": "EXPORTED_OPERATOR_OPEN_COMPONENTWISE",
+      "covariant_E_H_nonproxy": "EXPORTED_OPERATOR_OPEN_COMPONENTWISE",
+      "covariant_EL_g_nonproxy": "EXPORTED_OPERATOR_OPEN_COMPONENTWISE",
+      "boundary_term_control": "CONTRACT_FINALIZED_REUSED"
+    },
+    "reverse_chain": {
+      "H1_cross_variation": "OPEN_COMPONENTWISE_EXECUTION_REQUIRED",
+      "metric_residual_EL_g_minus_E_munu": "OPEN_COMPONENTWISE_REQUIRED",
+      "Bianchi_Ward_divergence_gate": "BLOCKED_BY_W1_NOT_FULL_EXPORT",
+      "global_helmholtz_integrability": "OPEN"
+    },
+    "qg_theorem_gates": {
+      "renormalization_counterterm_closure": "OPEN",
+      "BRST_nilpotency": "BLOCKED_PENDING_BW_AND_W1",
+      "Cutkosky_unitarity": "BLOCKED_PENDING_BW_AND_W1",
+      "background_independence": "OPEN"
+    }
+  },
+  "proof_update": {
+    "proven": [
+      "State-vector synchronization now reflects blocker-matrix statuses for E_A^mu/E_H/EL_g and BW/BRST/CUT dependencies."
+    ],
+    "open": [
+      "No new residual-zero theorem witness was produced in this synchronization step."
+    ]
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "no_false_pass_claim": true,
+  "next_honest_step": "Zamknąć W1 do FULL_EXPORT i uruchomić komponentowe obliczenia H1 oraz EL_g-E_munu na tej samej rodzinie teł i konwencji indeksowej.",
+  "lay_summary": "Ten krok porządkuje tablicę statusów: pokazuje dokładnie, co jest gotowe, a co nadal blokuje przejście do końcowych testów."
+}

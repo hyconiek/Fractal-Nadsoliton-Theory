@@ -1,0 +1,33 @@
+{
+  "checkpoint": "P1749_S699",
+  "timestamp_utc": "2026-05-15T03:31:08.281761+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "scope": "REDUCED_PROXY_ONLY_NOT_NONPROXY",
+  "chain": "K_strict -> coefficients -> non-skeleton reduced gauge-higgs L -> EOM(A,h) -> H1(A,h) cross-variation",
+  "input_anchor": "p1747_s697",
+  "modeling_note": "Gauge-Higgs reduced proxy uses 1D covariant-like derivative Dh = d_x h - g A h to create explicit A-h cross channel.",
+  "EOM": {
+    "E_A": "-g*(g*A(x)*h(x) - Derivative(h(x), x))*h(x) + 1.20736*Derivative(A(x), (x, 2))",
+    "E_h": "0.418604651162791*R0*h(x) - 1.0*g**2*A(x)**2*h(x) - 1.0*g*h(x)*Derivative(A(x), x) + 1.57912790697674*h(x)**3 + 0.0345030625*h(x) + 1.0*Derivative(h(x), (x, 2))"
+  },
+  "cross_variation": {
+    "delta_E_A_over_delta_h": "g*(-2*g*A(x)*h(x) + Derivative(h(x), x))",
+    "delta_E_h_over_delta_A": "-2.0*g**2*A(x)*h(x)",
+    "difference": "g*Derivative(h(x), x)"
+  },
+  "result": "OBSTRUCTION",
+  "result_policy": "PASS valid only for reduced proxy scope; no automatic upgrade to nonproxy/full covariant theorem",
+  "remaining_open": [
+    "explicit_covariant_E_A_mu_expression_nonproxy",
+    "explicit_covariant_E_H_expression_nonproxy",
+    "shared_background_family_contract",
+    "boundary_term_control_clause",
+    "nonproxy_metric_tensor_variational_export",
+    "renormalization_closure_counterterm_stability",
+    "cutkosky_unitarity_full_sector",
+    "background_family_independence"
+  ],
+  "next_honest_step": "Przenieść ten sam test H1 na jawne nonproxy E_A^μ i E_H (4D, wspólna rodzina teł) oraz dołączyć ślad wyrazów brzegowych.",
+  "lay_summary": "To jest bardziej fizyczny test niż poprzednio, bo łączy pole cechowania z Higgsem. Lokalnie przechodzi warunek zgodności odwrotnej, ale pełna wersja teorii nadal wymaga eksportu nonproxy i twierdzeń QG."
+}

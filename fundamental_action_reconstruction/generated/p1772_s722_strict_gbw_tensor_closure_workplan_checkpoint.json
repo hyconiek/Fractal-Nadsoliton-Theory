@@ -1,0 +1,71 @@
+{
+  "checkpoint": "P1772_S722",
+  "timestamp_utc": "2026-05-15T11:24:37.111906+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "input_anchor": "p1771_s721",
+  "objective": "Close remaining tensor-expansion blockers for G_BW without changing background family or verdict policy.",
+  "tensor_closure_workplan": {
+    "W1_H_R2_componentwise": {
+      "target": "Expand full componentwise form of H_R2 and its divergence contribution.",
+      "deliverable": "explicit_H_R2_component_basis_export",
+      "status": "OPEN"
+    },
+    "W2_H_Ric2_componentwise": {
+      "target": "Resolve mixed-covariant derivative commutator terms for H_Ric2.",
+      "deliverable": "explicit_H_Ric2_component_basis_export",
+      "status": "OPEN"
+    },
+    "W3_H_Riem2_componentwise": {
+      "target": "Resolve double-divergence transport and index contractions in H_Riem2.",
+      "deliverable": "explicit_H_Riem2_component_basis_export",
+      "status": "OPEN"
+    },
+    "W4_CT_tensor_basis": {
+      "target": "Export full componentwise CT tensor basis compatible with B1/B2/B3/C1/C2.",
+      "deliverable": "explicit_T_CT_component_basis_export",
+      "status": "OPEN"
+    }
+  },
+  "gbw_reexecution_contract": {
+    "fixed_background_family": true,
+    "fixed_residual_basis": [
+      "B1",
+      "B2",
+      "B3",
+      "C1",
+      "C2"
+    ],
+    "fixed_verdict_policy": [
+      "PASS_ZERO",
+      "OBSTRUCTION_WITH_DIVERGENCE_TRACE"
+    ],
+    "forbidden_actions": [
+      "No BRST/Cutkosky gate promotion before G_BW verdict.",
+      "No reduced-sector substitution for nonproxy closure."
+    ]
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "no_false_pass_claim": true,
+  "next_honest_step": "Dowieźć W1-W4 i dopiero wtedy uruchomić kolejne wykonanie G_BW z pełnym residual/divergence trace.",
+  "lay_summary": "Mamy już listę dokładnych braków matematycznych. Następny krok to je po kolei uzupełnić i dopiero potem powtórzyć test końcowy.",
+  "previous_retry_context": {
+    "verdict": "OBSTRUCTION_WITH_DIVERGENCE_TRACE",
+    "pass_zero_issued": false,
+    "notation_sanitization_applied": true,
+    "improvement": "REMOVED_PARSER_AMBIGUITY_INDEX_LOCK",
+    "remaining_blockers": [
+      "H_R2 componentwise second-derivative expansion incomplete",
+      "H_Ric2 mixed-covariant derivative commutator terms unresolved",
+      "H_Riem2 double-divergence transport expansion unresolved",
+      "CT tensor basis not yet exported in full componentwise form"
+    ],
+    "residual_vector_status": {
+      "B1": "OPEN",
+      "B2": "OPEN",
+      "B3": "OPEN",
+      "C1": "OPEN",
+      "C2": "OPEN"
+    }
+  }
+}

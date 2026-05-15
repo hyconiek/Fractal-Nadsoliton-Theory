@@ -1,0 +1,76 @@
+{
+  "checkpoint": "P1724_S674",
+  "timestamp_utc": "2026-05-15T02:21:55.934663+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "chain": "K_strict -> coefficients -> full explicit L_total -> residual stub -> obstruction map",
+  "residual_stub_anchor": {
+    "basis": [
+      "g_{μν}",
+      "G_{μν}",
+      "H^(R2)_{μν}",
+      "H^(Ric2)_{μν}",
+      "H^(Riem2)_{μν}",
+      "T^{gauge}_{μν}",
+      "T^{higgs}_{μν}",
+      "T^{fermion}_{μν}",
+      "T^{scalar}_{μν}",
+      "T^{mix}_{μν}"
+    ],
+    "residual_formal": "Residual_{μν} := ELg_{μν}[L_total] - ((M_Pl^2/2)G_{μν}+Λg_{μν}+c1H^(R2)_{μν}+c2H^(Ric2)_{μν}+c3H^(Riem2)_{μν}-T^{gauge}_{μν}-T^{higgs}_{μν}-T^{fermion}_{μν}-T^{scalar}_{μν}-T^{mix}_{μν})",
+    "classification": "NOT_EVALUATED_NUMERICALLY_OR_COMPONENTWISE_YET"
+  },
+  "componentwise_obstruction_map": {
+    "basis_mismatch_groups": [
+      {
+        "group": "second_covariant_derivative_curvature_terms",
+        "representatives": [
+          "∇_μ∇_ν R",
+          "g_{μν}□R",
+          "∇_α∇_{(μ}R_{ν)}^α"
+        ],
+        "status": "UNREDUCED"
+      },
+      {
+        "group": "riemann_contraction_transport_terms",
+        "representatives": [
+          "∇_α∇_β R_{μν}^{\\ \\ αβ}",
+          "R_{μαβγ}R_{ν}^{αβγ}"
+        ],
+        "status": "UNREDUCED"
+      },
+      {
+        "group": "matter_tensor_basis_alignment",
+        "representatives": [
+          "T^gauge_{μν}",
+          "T^higgs_{μν}",
+          "T^fermion_{μν}"
+        ],
+        "status": "PARTIAL"
+      }
+    ],
+    "provenance_links": {
+      "H_R2": "L_gravity:c1*R^2",
+      "H_Ric2": "L_gravity:c2*Ricci^2",
+      "H_Riem2": "L_gravity:c3*Riemann^2",
+      "T_matter": "L_gauge+L_higgs+L_fermion+L_scalar+L_mix"
+    }
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "open_obligations": [
+    "reduce_second_derivative_curvature_basis",
+    "reduce_riemann_contraction_transport_basis",
+    "finalize_matter_tensor_alignment",
+    "metric_sector_PASS_ZERO_or_OBSTRUCTION_certificate",
+    "bianchi_ward_cross_consistency_certificate",
+    "global_helmholtz_integrability_nonproxy",
+    "brst_nilpotency_and_cohomology_nonproxy",
+    "cutkosky_unitarity_full_sector",
+    "counterterm_flow_renormalization_closure",
+    "background_independence_family_theorem",
+    "qw2191_selector_source_or_nonclosure_theorem"
+  ],
+  "next_honest_step": "Zredukować grupę second_covariant_derivative_curvature_terms do wspólnej bazy i ponowić klasyfikację residualu ELg-Emunu.",
+  "lay_summary": "Zamiast ogólnego 'nie działa', mamy teraz mapę dokładnie które typy składników blokują test grawitacyjny i skąd pochodzą w lagranżianie."
+}

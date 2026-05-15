@@ -1,0 +1,74 @@
+{
+  "checkpoint": "P1705_S655",
+  "timestamp_utc": "2026-05-15T01:00:15.782740+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "chain": "K_strict -> coefficients -> full explicit L_total -> variational objects export (metric+spinor) -> EOM readiness",
+  "strict_kernel_symbolic": "cos(d*omega + phi0)/(beta*d**eta + 1)",
+  "source_scaffold": {
+    "metric_sector": {
+      "fields": [
+        "g_{μν}"
+      ],
+      "lagrangian_anchor": [
+        "L_gravity",
+        "L_mix",
+        "L_higgs",
+        "L_scalar"
+      ],
+      "covariant_eom_target": "E_{μν}[g,H,phi,psi,A]=0",
+      "required_variation_objects": [
+        "delta_sqrt_minus_g",
+        "delta_R",
+        "delta_R2_Ricci2_Riemann2",
+        "matter_stress_energy_tensor_full"
+      ]
+    },
+    "spinor_sector": {
+      "fields": [
+        "psi_f",
+        "psibar_f",
+        "e^a_{μ}",
+        "omega_{μab}"
+      ],
+      "lagrangian_anchor": [
+        "L_fermion",
+        "L_yukawa",
+        "L_higgs",
+        "L_mix"
+      ],
+      "covariant_eom_target": "Dirac-Einstein-coupled system with spin connection",
+      "required_variation_objects": [
+        "gamma_curved_construction",
+        "covariant_spinor_derivative",
+        "torsionless_or_torsionful_choice_registry",
+        "yukawa_covariant_variation_terms"
+      ]
+    }
+  },
+  "metric_variational_objects_export": {
+    "dL_dR_contract": "-H2*xiHR + Mpl2/2 + 2*R*c1 - phi2*xiphiR",
+    "dL_dRicci2_contract": "c2",
+    "dL_dRiemann2_contract": "c3",
+    "notes": "Contract-level symbolic objects for nonproxy metric variation assembly."
+  },
+  "spinor_variational_objects_export": {
+    "L_fermion_reduced_contract": "-mpsi*psi(x)*psib(x) - ypsi*h(x)*psi(x)*psib(x) - I*psi(x)*Derivative(psib(x), x)/2 + I*psib(x)*Derivative(psi(x), x)/2",
+    "EOM_psi_contract": "(mpsi + ypsi*h(x))*psib(x) + I*Derivative(psib(x), x)",
+    "EOM_psib_contract": "(mpsi + ypsi*h(x))*psi(x) - I*Derivative(psi(x), x)",
+    "notes": "Computable spinor-side variation templates; full curved gamma/tetrad export remains OPEN."
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "open_obligations": {
+    "full_tensor_metric_variation_nonproxy": "OPEN",
+    "full_curved_gamma_tetrad_spin_connection_export": "OPEN",
+    "global_helmholtz_integrability_nonproxy": "OPEN",
+    "brst_nilpotency_nonproxy_proof": "OPEN",
+    "cutkosky_unitarity_full_sector": "OPEN",
+    "counterterm_flow_renormalization_closure": "OPEN",
+    "background_independence_family_theorem": "OPEN"
+  },
+  "next_honest_step": "Połączyć te obiekty kontraktowe w jeden jawny nonproxy tensor+spinor bundle i wyeksportować pełny covariant EOM set jako wejście do Helmholtz/BRST theorem proofs.",
+  "lay_summary": "Przeszliśmy z samego planu do policzalnych klocków wariacyjnych dla grawitacji i fermionów. To jeszcze nie pełna finalna matematyka, ale ważny krok techniczny potrzebny do dalszych dowodów."
+}

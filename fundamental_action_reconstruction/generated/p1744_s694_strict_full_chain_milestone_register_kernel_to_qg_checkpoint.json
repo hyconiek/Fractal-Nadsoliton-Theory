@@ -1,0 +1,89 @@
+{
+  "checkpoint": "P1744_S694",
+  "timestamp_utc": "2026-05-15T03:18:14.609344+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "chain": "K_strict -> coefficients -> full nonskeleton L_total -> EOM -> reverse tests -> QG milestones",
+  "full_lagrangian_density_nonskeleton_instantiated": {
+    "L_gravity": "sqrt(-g)*[(1.72000000000000/2)R - Λ + 0.311688311688312 R^2 + 0.408311688311688 R_{μν}R^{μν} + 0.415800000000000 R_{μνρσ}R^{μνρσ}]",
+    "L_gauge": "sqrt(-g)*[-(1/4) Σ_a Z_a F^a_{μν}F_a^{μν}]",
+    "L_fermion": "sqrt(-g)*[Σ_f i ψ̄_f γ^a e_a^{ μ}D_μ ψ_f]",
+    "L_higgs": "sqrt(-g)*[(D_μH)^†(D^μH) - 0.0345030625000000(H^†H) - 1.57912790697674(H^†H)^2 - 0.418604651162791(H^†H)R]",
+    "L_yukawa": "sqrt(-g)*[-(y_u Q̄H~u + y_d Q̄Hd + y_e L̄He + h.c.)]",
+    "L_scalar_phi": "sqrt(-g)*[(1/2)(∇φ)^2 - (1/2)m_φ^2φ^2 - (λ_3/3!)φ^3 - (λ_4/4!)φ^4 - λ_{φH}φ^2(H^†H) - ξ_{φR}φ^2R]",
+    "L_mix": "sqrt(-g)*[χ_RG Σ_a R F^a_{μν}F_a^{μν} + CT_{1loop}(R^2,Ricci^2,Riemann^2,SM-mix)]"
+  },
+  "single_lane_execution_order_anchor": [
+    {
+      "step": "E1",
+      "name": "deliver_nonproxy_for_H1",
+      "action": "export_required_nonproxy_fields_for_T1",
+      "status": "OPEN"
+    },
+    {
+      "step": "E2",
+      "name": "run_H1",
+      "action": "compute_deltaE_A_mu_over_deltaH_minus_deltaE_H_over_deltaA_mu",
+      "status": "OPEN",
+      "result_policy": "PASS_ZERO_or_OBSTRUCTION_ONLY"
+    },
+    {
+      "step": "E3",
+      "name": "deliver_nonproxy_for_metric_residual",
+      "action": "export_required_nonproxy_metric_fields_for_T2",
+      "status": "OPEN"
+    },
+    {
+      "step": "E4",
+      "name": "run_metric_residual",
+      "action": "compute_EL_g_minus_E_munu_componentwise_B1_B2_B3_C1_C2",
+      "status": "OPEN",
+      "result_policy": "PASS_ZERO_or_OBSTRUCTION_ONLY"
+    },
+    {
+      "step": "E5",
+      "name": "enter_theorem_gates",
+      "action": "open_QG_renorm_unitarity_background_theorem_witness_lane",
+      "status": "BLOCKED_UNTIL_E2_E4_PUBLISHED"
+    }
+  ],
+  "milestone_register": [
+    {
+      "id": "M1",
+      "name": "Kernel-to-coeff-to-full-L-anchor",
+      "statement": "K_strict -> coefficients -> full nonskeleton L_total anchored",
+      "status": "EXPORTED"
+    },
+    {
+      "id": "M2",
+      "name": "EOM-layer-anchor",
+      "statement": "EOM bundle exported (strict-only scaffold/nonproxy contracts)",
+      "status": "EXPORTED_PARTIAL_NONPROXY_PENDING"
+    },
+    {
+      "id": "M3",
+      "name": "Reverse-test-H1",
+      "statement": "Execute H1 cross-variation with nonproxy exports",
+      "status": "OPEN_EXECUTION_REQUIRED",
+      "decision": "PASS_ZERO_or_OBSTRUCTION_ONLY"
+    },
+    {
+      "id": "M4",
+      "name": "Reverse-test-metric-residual",
+      "statement": "Execute EL_g-E_munu componentwise on B1/B2/B3/C1/C2",
+      "status": "OPEN_EXECUTION_REQUIRED",
+      "decision": "PASS_ZERO_or_OBSTRUCTION_ONLY"
+    },
+    {
+      "id": "M5",
+      "name": "QG-theorem-gates",
+      "statement": "renormalization/unitarity/background-independence theorem witnesses",
+      "status": "BLOCKED_UNTIL_M3_M4_RESULTS"
+    }
+  ],
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "no_false_pass_claim": true,
+  "next_honest_step": "Zrealizować M3 i M4 zgodnie z single-lane order; po publikacji ich klasyfikacji uruchomić pierwszy witness theorem-level dla M5.",
+  "lay_summary": "Rejestr kamieni milowych pokazuje pełną drogę od strict kernela do bramek kwantowej grawitacji. Teraz kluczowe są dwa testy odwrotne, bez których nie da się uczciwie domknąć teorii."
+}

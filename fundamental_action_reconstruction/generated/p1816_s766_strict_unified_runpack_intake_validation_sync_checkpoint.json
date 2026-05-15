@@ -1,0 +1,34 @@
+{
+  "packet_id": "P1816",
+  "stage_id": "S766",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "input_validation": {
+    "validator": "P1793",
+    "validation_verdict": "OPEN_OBSTRUCTION_WITH_TRACE",
+    "obstruction_tags": [
+      "NON_PASS_LEDGER_PRESENT"
+    ],
+    "ledger_count": 1
+  },
+  "state_vector_sync": {
+    "forward_chain": "EXPORTED_NONPROXY_KEEP_OPEN",
+    "reverse_chain": {
+      "H1_4D": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+      "metric_residual": "OPEN_OBSTRUCTION_WITH_TRACE",
+      "bianchi_ward": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED"
+    },
+    "theorem_gates": {
+      "TG1_BW": "OPEN_LOCKED_BY_UNIFIED_NONPROXY_RESIDUAL",
+      "TG2_BRST": "LOCKED_BY_TG1",
+      "TG3_CUT": "LOCKED_BY_TG2"
+    }
+  },
+  "gate_policy": {
+    "TG1_BW": "NO_PROMOTION_WITHOUT_GLOBAL_NONPROXY_RESIDUAL_WITNESS",
+    "TG2_BRST": "LOCKED_BY_TG1",
+    "TG3_CUT": "LOCKED_BY_TG2"
+  },
+  "false_pass_guard": "INPUT_VALIDATION_IS_NOT_PHYSICS_CLOSURE",
+  "next_honest_step": "replace_demo_intake_with_real_P1806_evidence_and_rerun_P1793_then_P1794"
+}

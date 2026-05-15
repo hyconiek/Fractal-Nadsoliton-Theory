@@ -1,0 +1,66 @@
+{
+  "checkpoint": "P1769_S719",
+  "timestamp_utc": "2026-05-15T11:07:45.354475+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "input_anchor": "p1768_s718",
+  "target_gate": "G_BW",
+  "execution_input_pack": {
+    "background_family": "shared_background_family_contract_v1",
+    "index_sign_lock": {
+      "H_R2_munu": "H^(R2)_{μν} = 2 R R_{μν} - (1/2) g_{μν} R^2 + 2(g_{μν}□ - ∇_μ∇_ν)R",
+      "H_Ric2_munu": "H^(Ric2)_{μν} = 2 R_{μα}R_{ν}^α - (1/2)g_{μν}R_{αβ}R^{αβ} + □R_{μν} + g_{μν}∇_α∇_βR^{αβ} - 2∇_α∇_{(μ}R_{ν)}^α",
+      "H_Riem2_munu": "H^(Riem2)_{μν} = 2 R_{μαβγ}R_{ν}^{αβγ} - (1/2)g_{μν}R_{αβγδ}R^{αβγδ} - 4∇_α∇_βR_{μν}^{\\ \u0007lpha\beta}"
+    },
+    "residual_basis": [
+      "B1",
+      "B2",
+      "B3",
+      "C1",
+      "C2"
+    ],
+    "coefficient_vector_slots": {},
+    "required_nonproxy_operators": [
+      "E_A_mu_nonproxy_explicit_v2",
+      "E_H_nonproxy_explicit_v2",
+      "EL_g_nonproxy_explicit_v1"
+    ],
+    "required_outputs": {
+      "metric_residual": "componentwise_EL_g_minus_E_munu_B1_B2_B3_C1_C2",
+      "divergence_trace": "componentwise_nabla_mu_E_total_munu_trace",
+      "verdict": [
+        "PASS_ZERO",
+        "OBSTRUCTION_WITH_DIVERGENCE_TRACE"
+      ]
+    }
+  },
+  "componentwise_execution_result": {
+    "verdict": "OBSTRUCTION_WITH_DIVERGENCE_TRACE",
+    "pass_zero_issued": false,
+    "metric_residual_status": "NOT_CLOSED",
+    "divergence_status": "NOT_CLOSED",
+    "residual_vector_B1_B2_B3_C1_C2": {
+      "B1": "UNRESOLVED_CURVATURE_VARIATION_TERM",
+      "B2": "UNRESOLVED_CURVATURE_VARIATION_TERM",
+      "B3": "UNRESOLVED_DOUBLE_DIVERGENCE_TERM",
+      "C1": "UNRESOLVED_MIX_COUNTERTERM_TERM",
+      "C2": "UNRESOLVED_MIX_COUNTERTERM_TERM"
+    },
+    "divergence_trace": [
+      "nabla_mu(H_R2^{mu nu}) not fully expanded componentwise",
+      "nabla_mu(H_Ricci2^{mu nu}) not fully expanded componentwise",
+      "nabla_mu(H_Riemann2^{mu nu}) not fully expanded componentwise",
+      "nabla_mu(T_CT^{mu nu}) dependency on unresolved CT tensor basis"
+    ],
+    "linked_obstruction_map": {}
+  },
+  "gate_update": {
+    "G_BW": "OBSTRUCTION_WITH_DIVERGENCE_TRACE",
+    "G_BRST": "STILL_BLOCKED_BY_G_BW",
+    "G_CUT": "STILL_BLOCKED_BY_G_BW_AND_G_BRST"
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "no_false_pass_claim": true,
+  "next_honest_step": "Domknąć brakujące rozwinięcia tensorowe H_R2/H_Ricci2/H_Riemann2 oraz jawny CT-basis, następnie ponowić G_BW na tej samej rodzinie teł.",
+  "lay_summary": "Pierwsza pełna próba testu Bianchi/Ward uczciwie wykazała blokadę: równania są przygotowane, ale brakuje części ciężkiej algebry tensorowej potrzebnej do końcowego zera."
+}

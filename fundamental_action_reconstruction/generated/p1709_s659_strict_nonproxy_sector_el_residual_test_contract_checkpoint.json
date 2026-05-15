@@ -1,0 +1,67 @@
+{
+  "checkpoint": "P1709_S659",
+  "timestamp_utc": "2026-05-15T01:15:05.473434+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "chain": "K_strict -> coefficients -> full explicit L_total -> explicit covariant EOM templates -> sector EL residual test contract",
+  "formula_anchor": {
+    "metric_eom_template": "E_{μν} := (M_Pl^2/2)G_{μν} + Λ g_{μν} + H_{μν}[c1 R^2 + c2 R_{αβ}R^{αβ} + c3 R_{αβγδ}R^{αβγδ}] - T^{(gauge+higgs+fermion+scalar+mix)}_{μν} = 0",
+    "gauge_eom_template": "D_μ(Z_a F^{a μν}) + χ_RG ∇_μ(R F^{a μν}) - J^{a ν}_{matter} = 0",
+    "higgs_eom_template": "D_μD^μH + μ_H^2 H + 2 λ_H(H†H)H + ξ_HR R H + δ_Yukawa/δH† + δ_mix/δH† = 0",
+    "fermion_eom_template": "i γ^a e_a^{ μ}D_μ ψ_f - y_f H ψ_{fR/L} - m_f ψ_f = 0, and adjoint equation for ψ̄_f"
+  },
+  "full_lagrangian_anchor": {
+    "L_scalar": "sqrt(-g)*[1/2 g^{μν}(∇_μφ)(∇_νφ) - (m_φ^2/2)φ^2 - (λ_3/3!)φ^3 - (λ_4/4!)φ^4]",
+    "L_gauge": "sqrt(-g)*[-1/4 G^A_{μν}G_A^{μν} - 1/4 W^I_{μν}W_I^{μν} - 1/4 B_{μν}B^{μν}]",
+    "L_fermion": "sqrt(-g)*[Σ_f i ψ̄_f γ^a e_a^{ μ}D_μ ψ_f - Σ_f y_f(ψ̄_{fL}Hψ_{fR}+h.c.)]",
+    "L_higgs": "sqrt(-g)*[(D_μH)^†(D^μH) - μ_H^2(H^†H) - λ_H(H^†H)^2]",
+    "L_gravity": "sqrt(-g)*[(M_Pl^2/2)R - Λ + c1 R^2 + c2 R_{μν}R^{μν} + c3 R_{μναβ}R^{μναβ}]",
+    "L_mix": "sqrt(-g)*[ξ_HR(H^†H)R + ξ_φR φ^2R + λ_{φH}φ^2(H^†H)]"
+  },
+  "el_residual_test_contract": {
+    "sector_residual_tests": {
+      "metric": {
+        "residual_form": "EL_g(L_total) - E_metric",
+        "required_status": "SYMBOLIC_ZERO_ON_ADMISSIBLE_DOMAIN"
+      },
+      "gauge": {
+        "residual_form": "EL_A(L_total) - E_gauge",
+        "required_status": "SYMBOLIC_ZERO_ON_ADMISSIBLE_DOMAIN"
+      },
+      "higgs": {
+        "residual_form": "EL_H(L_total) - E_higgs",
+        "required_status": "SYMBOLIC_ZERO_ON_ADMISSIBLE_DOMAIN"
+      },
+      "fermion": {
+        "residual_form": "EL_psi(L_total)-E_fermion and EL_psibar(L_total)-E_fermion_adj",
+        "required_status": "SYMBOLIC_ZERO_ON_ADMISSIBLE_DOMAIN"
+      }
+    },
+    "cross_consistency_tests": {
+      "bianchi_ward": "∇^μE_{μν} - gauge/matter conservation coupling closure",
+      "brst_precheck": "gauge-fixed residual cochain compatibility precondition",
+      "background_family": "residual transport consistency across declared background family"
+    }
+  },
+  "execution_plan": [
+    "freeze_index_convention",
+    "expand_metric_sector_symbolically",
+    "expand_gauge_higgs_fermion_symbolically",
+    "compute_sector_residuals",
+    "run_cross_consistency_tests"
+  ],
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "open_obligations": [
+    "full_symbolic_sector_expansion",
+    "nonproxy_sector_residual_zero_certificates",
+    "global_helmholtz_integrability_nonproxy",
+    "brst_nilpotency_and_cohomology_nonproxy",
+    "cutkosky_unitarity_full_sector",
+    "counterterm_flow_renormalization_closure",
+    "background_independence_family_theorem",
+    "qw2191_selector_source_or_nonclosure_theorem"
+  ],
+  "next_honest_step": "Wykonać execution_plan krok 1-3 i wyeksportować pierwszy realny wynik residuals dla co najmniej jednego sektora nonproxy (preferencyjnie gauge+higgs).",
+  "lay_summary": "Mamy już wzory sektorowe, teraz dokładnie definiujemy testy, które muszą potwierdzić, że równania naprawdę wynikają z pełnego lagranżianu. To kluczowy etap przed finalnymi dowodami teorii."
+}

@@ -1,0 +1,76 @@
+{
+  "checkpoint": "P1773_S723",
+  "timestamp_utc": "2026-05-15T11:27:23.589404+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "input_anchors": [
+    "p1766_s716",
+    "p1772_s722"
+  ],
+  "previous_state_vector": {
+    "forward_chain": {
+      "K_strict": "LOCKED_INPUT",
+      "coefficient_map": "EXPORTED",
+      "full_nonskeleton_L_total": "EXPORTED",
+      "covariant_E_A_mu_nonproxy": "EXPLICIT_OPERATOR_EXPORTED_P1764",
+      "covariant_E_H_nonproxy": "EXPLICIT_OPERATOR_EXPORTED_P1764",
+      "covariant_EL_g_nonproxy": "EXPLICIT_OPERATOR_EXPORTED_P1765"
+    },
+    "reverse_chain": {
+      "H1_cross_variation": "OPEN_COMPONENTWISE_REQUIRED",
+      "metric_residual_EL_g_minus_E_munu": "OPEN_COMPONENTWISE_REQUIRED",
+      "Bianchi_Ward_divergence_gate": "OPEN_REQUIRES_COMPONENTWISE_DIVERGENCE_TRACE",
+      "global_helmholtz_integrability": "OPEN"
+    },
+    "qg_theorem_gates": {
+      "renormalization_counterterm_closure": "OPEN",
+      "BRST_nilpotency": "OPEN",
+      "Cutkosky_unitarity": "OPEN",
+      "background_independence": "OPEN"
+    }
+  },
+  "updated_reverse_state_vector": {
+    "G_BW": "OPEN_OBSTRUCTION_ACTIVE_W1_W4_REQUIRED",
+    "G_BRST": "BLOCKED_BY_G_BW",
+    "G_CUT": "BLOCKED_BY_G_BW_AND_G_BRST",
+    "global_helmholtz_integrability": "OPEN",
+    "qg_theorem_promotable": false
+  },
+  "workplan_binding": {
+    "W1_H_R2_componentwise": {
+      "target": "Expand full componentwise form of H_R2 and its divergence contribution.",
+      "deliverable": "explicit_H_R2_component_basis_export",
+      "status": "OPEN"
+    },
+    "W2_H_Ric2_componentwise": {
+      "target": "Resolve mixed-covariant derivative commutator terms for H_Ric2.",
+      "deliverable": "explicit_H_Ric2_component_basis_export",
+      "status": "OPEN"
+    },
+    "W3_H_Riem2_componentwise": {
+      "target": "Resolve double-divergence transport and index contractions in H_Riem2.",
+      "deliverable": "explicit_H_Riem2_component_basis_export",
+      "status": "OPEN"
+    },
+    "W4_CT_tensor_basis": {
+      "target": "Export full componentwise CT tensor basis compatible with B1/B2/B3/C1/C2.",
+      "deliverable": "explicit_T_CT_component_basis_export",
+      "status": "OPEN"
+    }
+  },
+  "promotion_guard": {
+    "forbid_qg_promotion_if": [
+      "G_BW != PASS_ZERO",
+      "W1..W4 not all delivered as FULL_EXPORT"
+    ],
+    "classification_lock": [
+      "LOCAL/GLOBAL",
+      "REDUCED/NONPROXY",
+      "SCAFFOLD/FULL_EXPORT"
+    ]
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "no_false_pass_claim": true,
+  "next_honest_step": "Dostarczyć pełne exporty W1-W4 i wykonać kolejną próbę G_BW; dopiero potem aktualizować BRST/Cutkosky readiness.",
+  "lay_summary": "Zaktualizowano mapę postępu: wiemy dokładnie, że bez dokończenia czterech bloków matematycznych nie można przejść do kolejnych testów teorii."
+}

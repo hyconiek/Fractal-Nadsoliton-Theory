@@ -1,0 +1,61 @@
+{
+  "checkpoint": "P1710_S660",
+  "timestamp_utc": "2026-05-15T01:18:52.885782+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "chain": "K_strict -> coefficients -> full explicit L_total anchor -> nonproxy residual contract -> first gauge+higgs residual-zero result",
+  "input_contract_anchor": {
+    "sector_residual_tests": {
+      "metric": {
+        "residual_form": "EL_g(L_total) - E_metric",
+        "required_status": "SYMBOLIC_ZERO_ON_ADMISSIBLE_DOMAIN"
+      },
+      "gauge": {
+        "residual_form": "EL_A(L_total) - E_gauge",
+        "required_status": "SYMBOLIC_ZERO_ON_ADMISSIBLE_DOMAIN"
+      },
+      "higgs": {
+        "residual_form": "EL_H(L_total) - E_higgs",
+        "required_status": "SYMBOLIC_ZERO_ON_ADMISSIBLE_DOMAIN"
+      },
+      "fermion": {
+        "residual_form": "EL_psi(L_total)-E_fermion and EL_psibar(L_total)-E_fermion_adj",
+        "required_status": "SYMBOLIC_ZERO_ON_ADMISSIBLE_DOMAIN"
+      }
+    },
+    "cross_consistency_tests": {
+      "bianchi_ward": "∇^μE_{μν} - gauge/matter conservation coupling closure",
+      "brst_precheck": "gauge-fixed residual cochain compatibility precondition",
+      "background_family": "residual transport consistency across declared background family"
+    }
+  },
+  "sector": "gauge_higgs_first_nonproxy_like_result",
+  "L_gauge_higgs_reduced": "-0.209302325581395*R0*h(x)**2 - 0.394781976744185*h(x)**4 - 0.01725153125*h(x)**2 + 0.60368*Derivative(A(x), x)**2 + Derivative(h(x), x)**2/2",
+  "EOM": {
+    "E_gauge": "1.20736*Derivative(A(x), (x, 2))",
+    "E_higgs": "0.418604651162791*R0*h(x) + 1.57912790697674*h(x)**3 + 0.0345030625*h(x) + Derivative(h(x), (x, 2))"
+  },
+  "residuals": {
+    "EL_minus_E_gauge": "0",
+    "EL_minus_E_higgs": "0"
+  },
+  "residual_zero_flags": {
+    "EL_minus_E_gauge": true,
+    "EL_minus_E_higgs": true
+  },
+  "residual_status": "PASS_GAUGE_HIGGS_ZERO",
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "open_obligations": [
+    "extend_residual_zero_to_metric_sector_nonproxy",
+    "extend_residual_zero_to_fermion_sector_nonproxy",
+    "global_helmholtz_integrability_nonproxy",
+    "brst_nilpotency_and_cohomology_nonproxy",
+    "cutkosky_unitarity_full_sector",
+    "counterterm_flow_renormalization_closure",
+    "background_independence_family_theorem",
+    "qw2191_selector_source_or_nonclosure_theorem"
+  ],
+  "next_honest_step": "Rozszerzyć residual-zero z gauge+higgs na sektor fermionowy i metryczny w tej samej zamrożonej konwencji, a potem spiąć cross-consistency (Bianchi/Ward).",
+  "lay_summary": "Mamy pierwszy konkretny wynik testu jakości: dla sektora gauge+Higgs równania dokładnie zgadzają się z lagranżianem (reszty zero). Teraz trzeba to powtórzyć dla pozostałych sektorów, szczególnie grawitacji i fermionów."
+}

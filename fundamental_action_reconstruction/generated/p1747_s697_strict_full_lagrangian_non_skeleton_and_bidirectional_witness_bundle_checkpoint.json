@@ -1,0 +1,70 @@
+{
+  "checkpoint": "P1747_S697",
+  "timestamp_utc": "2026-05-15T03:24:54.859835+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "chain": "K_strict -> coefficients -> non-skeleton L_total export -> EOM bundle -> reverse witness obligations",
+  "kernel": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+  "kernel_input": {
+    "omega": 0.18575,
+    "phi": 4.5231,
+    "beta": 0.72,
+    "eta": 1.31,
+    "A": 1.0
+  },
+  "forward_coefficient_map_symbolic": {
+    "Mpl2": "1.72000000000000",
+    "cR2": "0.311688311688312",
+    "cRic2": "0.408311688311688",
+    "cRiem2": "0.415800000000000",
+    "muH2": "0.0345030625000000",
+    "lambdaH": "1.57912790697674",
+    "xiHR": "0.418604651162791",
+    "Z1": "1.20736000000000"
+  },
+  "full_lagrangian_density_explicit_anchor": {
+    "L_scalar": "sqrt(-g)*[1/2 g^{μν}(∇_μφ)(∇_νφ) - (m_φ^2/2)φ^2 - (λ_3/3!)φ^3 - (λ_4/4!)φ^4]",
+    "L_gauge": "sqrt(-g)*[-1/4 G^A_{μν}G_A^{μν} - 1/4 W^I_{μν}W_I^{μν} - 1/4 B_{μν}B^{μν}]",
+    "L_fermion": "sqrt(-g)*[Σ_f i ψ̄_f γ^a e_a^{ μ}D_μ ψ_f - Σ_f y_f(ψ̄_{fL}Hψ_{fR}+h.c.)]",
+    "L_higgs": "sqrt(-g)*[(D_μH)^†(D^μH) - μ_H^2(H^†H) - λ_H(H^†H)^2]",
+    "L_gravity": "sqrt(-g)*[(M_Pl^2/2)R - Λ + c1 R^2 + c2 R_{μν}R^{μν} + c3 R_{μναβ}R^{μναβ}]",
+    "L_mix": "sqrt(-g)*[ξ_HR(H^†H)R + ξ_φR φ^2R + λ_{φH}φ^2(H^†H)]"
+  },
+  "strict_non_skeleton_reduced_proxy": {
+    "background_marker": "R0",
+    "L_total_reduced": "-0.209302325581395*R0*h(x)**2 - 0.394781976744185*h(x)**4 - h(x)**2*phi(x)**2/2 - 0.01725153125*h(x)**2 - 0.077922077922078*phi(x)**4 - I*psi(x)*Derivative(psib(x), x)/2 + I*psib(x)*Derivative(psi(x), x)/2 + 0.60368*Derivative(A(x), x)**2 + Derivative(h(x), x)**2/2 + Derivative(phi(x), x)**2/2",
+    "L_sector": {
+      "L_gauge": "0.60368*Derivative(A(x), x)**2",
+      "L_higgs": "-0.209302325581395*R0*h(x)**2 - 0.394781976744185*h(x)**4 - 0.01725153125*h(x)**2 + Derivative(h(x), x)**2/2",
+      "L_scalar": "-0.077922077922078*phi(x)**4 + Derivative(phi(x), x)**2/2",
+      "L_mix": "-h(x)**2*phi(x)**2/2",
+      "L_fermion_hermitian_independent_psi_psib": "-I*psi(x)*Derivative(psib(x), x)/2 + I*psib(x)*Derivative(psi(x), x)/2"
+    },
+    "EOM_bundle": {
+      "EOM_A": "1.20736*Derivative(A(x), (x, 2))",
+      "EOM_h": "0.418604651162791*R0*h(x) + 1.57912790697674*h(x)**3 + h(x)*phi(x)**2 + 0.0345030625*h(x) + Derivative(h(x), (x, 2))",
+      "EOM_phi": "h(x)**2*phi(x) + 0.311688311688312*phi(x)**3 + Derivative(phi(x), (x, 2))",
+      "EOM_psi": "I*Derivative(psib(x), x)",
+      "EOM_psib": "-I*Derivative(psi(x), x)"
+    }
+  },
+  "strict_core_closure_gate": {
+    "direction_forward_kernel_to_eom": "EXPORTED_REDUCED_NON_SKELETON_PROXY",
+    "direction_reverse_eom_to_action": "OPEN_WITNESS_CHAIN_REQUIRED",
+    "required_missing_exports": [
+      "nonproxy_metric_tensor_variational_export",
+      "nonproxy_spinor_connection_variational_export",
+      "nonproxy_BRST_cohomology_export"
+    ],
+    "required_missing_theorems": [
+      "helmholtz_integrability_full_sector",
+      "renormalization_closure_counterterm_stability",
+      "cutkosky_unitarity_full_sector",
+      "background_family_independence"
+    ],
+    "selector_boundary": "QW-2191 remains OPEN unless explicit strict selector source/symmetry-breaking premise is exported",
+    "final_status": "NO_FALSE_PASS_STRICT_CORE_CLOSURE_NOT_YET_DISCHARGED"
+  },
+  "next_honest_step": "Dostarczyć pierwszy nieproxy witness reverse: Helmholtz H1 dla sektora gauge+scalar z jawnym eksportem operatora Jacobian symmetry test.",
+  "lay_summary": "Mamy pełniejszy (nieszkieletowy) ścisły Lagrangian redukcyjny i równania ruchu, ale pełne domknięcie ToE nadal wymaga brakujących eksportów i twierdzeń reverse (renormalizacja, unitarność, niezależność od tła)."
+}

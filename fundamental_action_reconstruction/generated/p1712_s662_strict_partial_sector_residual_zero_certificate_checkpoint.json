@@ -1,0 +1,53 @@
+{
+  "checkpoint": "P1712_S662",
+  "timestamp_utc": "2026-05-15T01:30:22.936181+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "chain": "K_strict -> coefficients -> full explicit L_total -> sector EL residual checks -> partial-sector certificate",
+  "sector_inputs": {
+    "gauge_higgs": {
+      "source": "P1710_S660",
+      "status": "PASS_GAUGE_HIGGS_ZERO",
+      "flags": {
+        "EL_minus_E_gauge": true,
+        "EL_minus_E_higgs": true
+      }
+    },
+    "fermion": {
+      "source": "P1711_S661",
+      "status": "PASS_FERMION_ZERO",
+      "flags": {
+        "EL_minus_E_psi": true,
+        "EL_minus_E_psib": true
+      }
+    }
+  },
+  "partial_sector_certificate": {
+    "gauge_higgs_zero": true,
+    "fermion_zero": true,
+    "certificate_status": "PASS_PARTIAL_SECTORS_GH_F",
+    "coverage": [
+      "gauge",
+      "higgs",
+      "fermion"
+    ],
+    "missing_for_full_sector_certificate": [
+      "metric",
+      "cross_consistency_bianchi_ward"
+    ]
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "open_obligations": [
+    "metric_sector_residual_zero_nonproxy",
+    "bianchi_ward_cross_consistency_certificate",
+    "global_helmholtz_integrability_nonproxy",
+    "brst_nilpotency_and_cohomology_nonproxy",
+    "cutkosky_unitarity_full_sector",
+    "counterterm_flow_renormalization_closure",
+    "background_independence_family_theorem",
+    "qw2191_selector_source_or_nonclosure_theorem"
+  ],
+  "next_honest_step": "Uderzyć w metric_sector_residual_zero_nonproxy jako ostatni brakujący sektor residual-zero, następnie domknąć bianchi_ward_cross_consistency_certificate dla certyfikatu pełnosektorowego.",
+  "lay_summary": "Scaliliśmy dwa zaliczone testy (gauge+Higgs i fermiony) w jeden certyfikat częściowy. Do pełnego certyfikatu równań brakuje teraz głównie sektora grawitacyjnego i testów zgodności przekrojowej."
+}

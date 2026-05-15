@@ -1,0 +1,125 @@
+{
+  "checkpoint": "P1703_S653",
+  "timestamp_utc": "2026-05-15T00:55:14.711792+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "full_chain_anchor": {
+    "kernel_anchor": {
+      "kernel": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+      "kernel_input": {
+        "omega": 0.18575,
+        "phi": 4.5231,
+        "beta": 0.72,
+        "eta": 1.31,
+        "A": 1.0
+      }
+    },
+    "coefficient_anchor": {
+      "Mpl2": "1.72000000000000",
+      "cR2": "0.311688311688312",
+      "cRic2": "0.408311688311688",
+      "cRiem2": "0.415800000000000",
+      "muH2": "0.0345030625000000",
+      "lambdaH": "1.57912790697674",
+      "xiHR": "0.418604651162791",
+      "Z1": "1.20736000000000"
+    },
+    "full_lagrangian_explicit_anchor": {
+      "L_scalar": "sqrt(-g)*[1/2 g^{μν}(∇_μφ)(∇_νφ) - (m_φ^2/2)φ^2 - (λ_3/3!)φ^3 - (λ_4/4!)φ^4]",
+      "L_gauge": "sqrt(-g)*[-1/4 G^A_{μν}G_A^{μν} - 1/4 W^I_{μν}W_I^{μν} - 1/4 B_{μν}B^{μν}]",
+      "L_fermion": "sqrt(-g)*[Σ_f i ψ̄_f γ^a e_a^{ μ}D_μ ψ_f - Σ_f y_f(ψ̄_{fL}Hψ_{fR}+h.c.)]",
+      "L_higgs": "sqrt(-g)*[(D_μH)^†(D^μH) - μ_H^2(H^†H) - λ_H(H^†H)^2]",
+      "L_gravity": "sqrt(-g)*[(M_Pl^2/2)R - Λ + c1 R^2 + c2 R_{μν}R^{μν} + c3 R_{μναβ}R^{μναβ}]",
+      "L_mix": "sqrt(-g)*[ξ_HR(H^†H)R + ξ_φR φ^2R + λ_{φH}φ^2(H^†H)]"
+    },
+    "eom_anchor": {
+      "A": "1.20736*Derivative(A(x), (x, 2))",
+      "h": "0.418604651162791*R0*h(x) + 1.57912790697674*h(x)**3 + h(x)*phi(x)**2 + 0.0345030625*h(x) + 1.0*psi(x)*psib(x) + Derivative(h(x), (x, 2))",
+      "phi": "h(x)**2*phi(x) + 0.311688311688312*phi(x)**3 + Derivative(phi(x), (x, 2))",
+      "psi": "1.0*h(x)*psib(x) + 1.0*psib(x) + 1.0*I*Derivative(psib(x), x)",
+      "psib": "1.0*h(x)*psi(x) + 1.0*psi(x) - 1.0*I*Derivative(psi(x), x)"
+    }
+  },
+  "priority_start_pair_scaffold": {
+    "global_helmholtz_integrability_nonproxy": {
+      "status": "SCAFFOLD_EXPORTED",
+      "theorem_goal": "Given full nonproxy covariant EOM family for metric+gauge+higgs+fermion sectors, prove existence and local uniqueness class of variational origin modulo boundary terms on admissible atlas overlaps.",
+      "required_inputs": [
+        "nonproxy_covariant_metric_eom_bundle",
+        "nonproxy_covariant_spinor_eom_bundle",
+        "chart_overlap_transition_data",
+        "boundary_functional_class_registry"
+      ],
+      "witness_exports_planned": [
+        "helmholtz_h1_h2_h3_h4_nonproxy_bundle",
+        "global_overlap_consistency_certificate",
+        "variational_origin_uniqueness_domain_statement"
+      ]
+    },
+    "brst_nilpotency_nonproxy_proof": {
+      "status": "SCAFFOLD_EXPORTED",
+      "theorem_goal": "Construct nonproxy BRST differential for full strict field content and prove nilpotency/cohomology compatibility with gauge fixing and ghost sector on the same background family.",
+      "required_inputs": [
+        "nonproxy_gauge_fixing_sector",
+        "ghost_antighost_action_sector",
+        "full_constraint_algebra_closure_data",
+        "cutkosky_interface_conditions"
+      ],
+      "witness_exports_planned": [
+        "brst_operator_definition_nonproxy",
+        "nilpotency_symbolic_certificate",
+        "physical_state_cohomology_map"
+      ]
+    }
+  },
+  "execution_order_recommendation": [
+    "export_nonproxy_metric_spinor_eom_bundle",
+    "prove_global_helmholtz_integrability_nonproxy",
+    "export_nonproxy_brst_operator_and_nilpotency",
+    "attach_cutkosky_unitarity_interface"
+  ],
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "open_obligations": {
+    "renormalization_counterterm_flow": {
+      "status": "OPEN",
+      "needed_exports": [
+        "nonproxy_multifield_counterterm_basis",
+        "rg_stability_witness_family",
+        "strict_uv_ir_matching_theorem"
+      ]
+    },
+    "unitarity_brst_cutkosky": {
+      "status": "OPEN",
+      "needed_exports": [
+        "brst_nilpotency_nonproxy_proof",
+        "physical_state_cohomology_witness",
+        "cutkosky_discontinuity_full_sector_theorem"
+      ]
+    },
+    "background_independence": {
+      "status": "OPEN",
+      "needed_exports": [
+        "background_family_transport_invariance_witness",
+        "chart_overlap_covariant_consistency_nonproxy",
+        "global_background_independence_theorem"
+      ]
+    },
+    "reverse_nonproxy_inversion": {
+      "status": "OPEN",
+      "needed_exports": [
+        "global_helmholtz_integrability_nonproxy",
+        "eom_to_lagrangian_uniqueness_domain_statement"
+      ]
+    },
+    "strict_selector_qw2191": {
+      "status": "OPEN",
+      "needed_exports": [
+        "strict_internal_selector_source_or_symmetry_breaking_premise",
+        "qw2191_discharge_or_sharp_nonclosure_theorem"
+      ]
+    }
+  },
+  "next_honest_step": "Wykonać pierwszy element execution order: jawny nonproxy metric+spinor EOM bundle export, bo jest wspólnym wejściem dla Helmholtz i BRST.",
+  "lay_summary": "Zrobiliśmy plan wykonawczy dla dwóch najważniejszych dowodów: odwracalności równań do lagranżianu i unitarności BRST. To nie zamyka teorii, ale zamienia ogólne cele na konkretny porządek pracy."
+}

@@ -1,0 +1,53 @@
+{
+  "checkpoint_id": "P1791_S741",
+  "title": "STRICT_SV1_TO_SV5_LEDGER_COMPLETENESS_AND_VERDICT_PROTOCOL",
+  "input_reuse": [
+    "p1790_s740_strict_sv1_to_sv5_coordinated_run_pack_contract_checkpoint.json",
+    "p1788_s738_strict_theorem_gate_prerequisite_lock_matrix_checkpoint.json"
+  ],
+  "required_ledgers": [
+    "L1_EA_componentwise_ledger",
+    "L2_EH_componentwise_ledger",
+    "L3_ELg_componentwise_ledger",
+    "L4_H1_residual_vector_ledger",
+    "L5_boundary_control_confirmation_ledger"
+  ],
+  "verdict_protocol": {
+    "pass_zero_requires": [
+      "all_L1_to_L5_present",
+      "H1_residual_vector_componentwise_zero",
+      "no_background_or_index_freeze_mismatch"
+    ],
+    "otherwise": "OPEN_OBSTRUCTION_WITH_TRACE",
+    "obstruction_tags": [
+      "MISSING_LEDGER",
+      "NONZERO_H1_RESIDUAL",
+      "FREEZE_MISMATCH"
+    ]
+  },
+  "theorem_gate_relation": {
+    "local_pass_zero_unlocks_theorem_gates": false,
+    "global_closure_claim_allowed": false,
+    "required_after_local_pass": "export_global_BW_BRST_Cutkosky_witnesses",
+    "current_theorem_locks": {
+      "TG1_BIANCHI_WARD_GLOBAL": {
+        "required": "componentwise_divergence_trace_on_shared_background_family",
+        "status": "OPEN_LOCKED_BY_COMPONENTWISE_DIVERGENCE"
+      },
+      "TG2_BRST_GLOBAL_NILPOTENCY": {
+        "required": "explicit_nilpotency_witness_on_current_nonproxy_bundle",
+        "status": "OPEN_LOCKED_BY_NILPOTENCY_WITNESS"
+      },
+      "TG3_CUTKOSKY_GLOBAL_UNITARITY": {
+        "required": "explicit_cut_compatibility_witness_without_ghost_pole_contradiction",
+        "status": "OPEN_LOCKED_BY_UNITARITY_WITNESS"
+      }
+    }
+  },
+  "dependency_snapshot": {
+    "p1790_status": "RUN_PACK_CONTRACT_READY_EXECUTION_REQUIRED",
+    "p1788_status": "THEOREM_GATES_LOCKED_KEEP_GLOBAL_OPEN"
+  },
+  "next_honest_step": "Implement quality checkpoint that consumes SV1..SV5 execution outputs and emits deterministic PASS_ZERO or OPEN_OBSTRUCTION_WITH_TRACE with explicit obstruction tags.",
+  "status": "VERDICT_PROTOCOL_DEFINED_EXECUTION_EVIDENCE_PENDING"
+}

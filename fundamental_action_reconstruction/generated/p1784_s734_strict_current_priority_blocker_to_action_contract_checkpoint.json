@@ -1,0 +1,82 @@
+{
+  "checkpoint": "P1784_S734",
+  "timestamp_utc": "2026-05-15T13:07:55.341728+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "input_anchors": [
+    "p1782_s732",
+    "p1783_s733"
+  ],
+  "current_priority_blockers": {
+    "E_A_mu_nonproxy": {
+      "state": "OPEN_NEEDS_INDEX_LEVEL_EXPANSION",
+      "class": "NONPROXY_OPERATOR_EXPORT_DONE_COMPONENTWISE_OPEN"
+    },
+    "E_H_nonproxy": {
+      "state": "OPEN_NEEDS_INDEX_LEVEL_EXPANSION",
+      "class": "NONPROXY_OPERATOR_EXPORT_DONE_COMPONENTWISE_OPEN"
+    },
+    "EL_g_nonproxy": {
+      "state": "OPEN_COMPONENTWISE_REQUIRED",
+      "class": "NONPROXY_OPERATOR_EXPORT_DONE_COMPONENTWISE_OPEN"
+    },
+    "H1_weak_form": {
+      "state": "UPGRADED_OPERATOR_LEVEL",
+      "class": "WEAK_FORM_READY_STRICT_LOCAL_OPEN"
+    },
+    "Bianchi_Ward": {
+      "state": "BLOCKED",
+      "class": "PENDING_JOINT_COMPONENTWISE_WITNESS"
+    },
+    "BRST_Cutkosky": {
+      "state": "BLOCKED",
+      "class": "PENDING_BW_PASS_AND_THEOREM_WITNESSES"
+    }
+  },
+  "blocker_to_action_contract": {
+    "A1_W1_full_export_close": {
+      "trigger": true,
+      "required_delivery": [
+        "B2_B3_projection_coefficients_explicit",
+        "HR2_divergence_normalization_map_explicit"
+      ],
+      "success_flag": "W1_FULL_EXPORT=True"
+    },
+    "A2_joint_H1_metric_componentwise_run": {
+      "trigger": true,
+      "required_delivery": [
+        "shared_background_family_locked",
+        "shared_index_sign_convention_locked",
+        "shared_basis_B1_B2_B3_C1_C2_locked"
+      ],
+      "result_policy": [
+        "PASS_ZERO",
+        "OBSTRUCTION_WITH_DIVERGENCE_TRACE"
+      ]
+    },
+    "A3_bw_brst_cut_progression": {
+      "trigger": true,
+      "required_delivery": [
+        "joint_witness_trace_published",
+        "formal_freeze_release_conditions_met"
+      ],
+      "allowed_after": [
+        "A1",
+        "A2"
+      ]
+    }
+  },
+  "global_exit_ready": false,
+  "proofs_and_nonproofs": {
+    "proven_now": [
+      "Each current blocker is mapped to an explicit next-action contract with trigger and success flag semantics."
+    ],
+    "still_open": [
+      "No new residual witness produced in this mapping step."
+    ]
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "no_false_pass_claim": true,
+  "next_honest_step": "Wykonać kolejno A1->A2->A3 zgodnie z kontraktem, publikując jawne witnessy i utrzymując klasyfikację PASS_ZERO/OBSTRUCTION_WITH_DIVERGENCE_TRACE.",
+  "lay_summary": "To plan działań przypięty do realnych blokad: każdy problem ma przypisany konkretny następny krok i warunek sukcesu."
+}

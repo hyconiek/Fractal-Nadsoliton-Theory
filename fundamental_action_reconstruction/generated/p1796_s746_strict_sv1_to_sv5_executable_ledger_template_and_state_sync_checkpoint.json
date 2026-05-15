@@ -1,0 +1,31 @@
+{
+  "packet_id": "P1796_S746",
+  "as_of": "2026-05-15",
+  "mode": "strict_only",
+  "allowed_verdicts": [
+    "PASS_ZERO",
+    "OPEN_OBSTRUCTION_WITH_TRACE"
+  ],
+  "required_classification_axes": [
+    "scope",
+    "representation",
+    "artifact_level"
+  ],
+  "state_sync_scope": [
+    "SV1",
+    "SV2",
+    "SV3",
+    "SV4",
+    "SV5"
+  ],
+  "forbidden_state_sync_scope": [
+    "SV6",
+    "SV7",
+    "SV8"
+  ],
+  "gate_locks": {
+    "G_BW": "CAN_CHANGE_ONLY_WITH_PASS_ZERO_WITNESS",
+    "G_BRST": "LOCKED_IF_G_BW_NOT_PASS_ZERO",
+    "G_CUT": "LOCKED_IF_G_BRST_NOT_PASS"
+  }
+}

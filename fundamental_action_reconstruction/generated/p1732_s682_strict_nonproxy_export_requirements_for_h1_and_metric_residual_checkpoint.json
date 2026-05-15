@@ -1,0 +1,70 @@
+{
+  "checkpoint": "P1732_S682",
+  "timestamp_utc": "2026-05-15T02:44:16.625238+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "chain": "K_strict -> coefficients -> full nonskeleton L_total -> EOM -> nonproxy export requirements contract (H1 + metric residual)",
+  "input_obstruction_anchor": {
+    "status": "OBSTRUCTION_NONPROXY_EXPORT_MISSING",
+    "pass_zero_issued": false,
+    "obstruction_trace": [
+      {
+        "term": "deltaE_A_mu_over_deltaH",
+        "status": "NOT_COMPUTABLE_NONPROXY_EXPORT_MISSING"
+      },
+      {
+        "term": "deltaE_H_over_deltaA_mu",
+        "status": "NOT_COMPUTABLE_NONPROXY_EXPORT_MISSING"
+      },
+      {
+        "term": "cross_difference_deltaE_A_mu_over_deltaH_minus_deltaE_H_over_deltaA_mu",
+        "status": "OBSTRUCTION_EXPORT_MISSING"
+      }
+    ],
+    "no_false_pass_confirmed": true
+  },
+  "nonproxy_export_requirements_contract": {
+    "h1_gauge_scalar": {
+      "required_nonproxy_exports": [
+        "explicit_covariant_E_A_mu_expression_nonproxy",
+        "explicit_covariant_E_H_expression_nonproxy",
+        "shared_background_family_contract",
+        "boundary_term_control_clause"
+      ],
+      "target_expression": "deltaE_A_mu_over_deltaH_minus_deltaE_H_over_deltaA_mu",
+      "decision_policy": "PASS_ZERO_or_OBSTRUCTION_ONLY"
+    },
+    "metric_residual": {
+      "required_nonproxy_exports": [
+        "explicit_nonproxy_EL_g_munu",
+        "explicit_nonproxy_E_munu",
+        "componentwise_curvature_variation_terms_R2_Ric2_Riem2",
+        "shared_background_family_contract",
+        "index_and_sign_convention_lock"
+      ],
+      "basis_order": [
+        "B1",
+        "B2",
+        "B3",
+        "C1",
+        "C2"
+      ],
+      "target_expression": "EL_g_minus_E_munu_componentwise_basis_projection",
+      "decision_policy": "PASS_ZERO_or_OBSTRUCTION_ONLY"
+    }
+  },
+  "full_lagrangian_density_nonskeleton_instantiated": {
+    "L_gravity": "sqrt(-g)*[(1.72000000000000/2)R - Λ + 0.311688311688312 R^2 + 0.408311688311688 R_{μν}R^{μν} + 0.415800000000000 R_{μνρσ}R^{μνρσ}]",
+    "L_gauge": "sqrt(-g)*[-(1/4) Σ_a Z_a F^a_{μν}F_a^{μν}]",
+    "L_fermion": "sqrt(-g)*[Σ_f i ψ̄_f γ^a e_a^{ μ}D_μ ψ_f]",
+    "L_higgs": "sqrt(-g)*[(D_μH)^†(D^μH) - 0.0345030625000000(H^†H) - 1.57912790697674(H^†H)^2 - 0.418604651162791(H^†H)R]",
+    "L_yukawa": "sqrt(-g)*[-(y_u Q̄H~u + y_d Q̄Hd + y_e L̄He + h.c.)]",
+    "L_scalar_phi": "sqrt(-g)*[(1/2)(∇φ)^2 - (1/2)m_φ^2φ^2 - (λ_3/3!)φ^3 - (λ_4/4!)φ^4 - λ_{φH}φ^2(H^†H) - ξ_{φR}φ^2R]",
+    "L_mix": "sqrt(-g)*[χ_RG Σ_a R F^a_{μν}F_a^{μν} + CT_{1loop}(R^2,Ricci^2,Riemann^2,SM-mix)]"
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "no_false_pass_claim": true,
+  "next_honest_step": "Wyeksportować minimalny pakiet nonproxy z contractu P1732 i natychmiast uruchomić dwa obliczenia: (1) H1 cross-variation, (2) EL_g-E_munu na bazie B1/B2/B3/C1/C2 z decyzją PASS_ZERO albo OBSTRUCTION.",
+  "lay_summary": "Po pierwszej blokadzie H1 mamy teraz dokładną checklistę brakujących eksportów. To pozwala przejść od ogólnego planu do konkretnej pracy implementacyjnej bez powtarzania tych samych prób."
+}

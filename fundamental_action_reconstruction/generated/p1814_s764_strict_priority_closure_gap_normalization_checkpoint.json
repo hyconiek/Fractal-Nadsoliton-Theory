@@ -1,0 +1,50 @@
+{
+  "packet_id": "P1814",
+  "stage_id": "S764",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "priority_snapshot": {
+    "explicit_nonproxy_E_A_mu": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+    "explicit_nonproxy_E_H": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+    "metric_EL_g_export": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+    "boundary_term_control": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+    "H1_4D_weak_form_readiness": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+    "bianchi_ward_consistency": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED"
+  },
+  "theorem_gates": {
+    "TG1_BW": "OPEN_OBSTRUCTION_WITH_TRACE",
+    "TG2_BRST": "OPEN_OBSTRUCTION_WITH_TRACE",
+    "TG3_CUT": "OPEN_OBSTRUCTION_WITH_TRACE"
+  },
+  "evidence_requirements": {
+    "TG1_required": "unified_nonproxy_BW_residual_witness_trace",
+    "TG2_required": [
+      "G_BW_PASS_ZERO",
+      "brst_charge_definition_present",
+      "Q_squared_simplified_zero",
+      "cohomology_subspace_check_present",
+      "ghost_sector_consistency_present",
+      "shared_freeze_id",
+      "all_check_digests_present"
+    ],
+    "TG3_required": [
+      "G_BW_PASS_ZERO",
+      "TG2_BRST_PASS",
+      "cut_discontinuity_witness_present",
+      "optical_theorem_match_true",
+      "ghost_pole_exclusion_true",
+      "background_family_consistency_present",
+      "shared_freeze_id",
+      "all_check_digests_present"
+    ]
+  },
+  "no_false_pass_policy": {
+    "pass_allowed_only_with": [
+      "PASS_ZERO",
+      "witness_trace",
+      "residual_check"
+    ],
+    "current_decision": "KEEP_ALL_REMAINING_GATES_OPEN"
+  },
+  "next_honest_step": "execute_P1806_unified_nonproxy_runpack_then_sync_P1810_P1811_P1812"
+}

@@ -1,0 +1,82 @@
+{
+  "checkpoint": "P1768_S718",
+  "timestamp_utc": "2026-05-15T11:04:38.670423+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "goal": "Prepare concrete input pack for G_BW componentwise execution without symbolic placeholders",
+  "input_anchors": [
+    "p1716_s666",
+    "p1727_s677",
+    "p1767_s717"
+  ],
+  "gbw_execution_input_pack": {
+    "background_family": "shared_background_family_contract_v1",
+    "index_sign_lock": {
+      "H_R2_munu": "H^(R2)_{μν} = 2 R R_{μν} - (1/2) g_{μν} R^2 + 2(g_{μν}□ - ∇_μ∇_ν)R",
+      "H_Ric2_munu": "H^(Ric2)_{μν} = 2 R_{μα}R_{ν}^α - (1/2)g_{μν}R_{αβ}R^{αβ} + □R_{μν} + g_{μν}∇_α∇_βR^{αβ} - 2∇_α∇_{(μ}R_{ν)}^α",
+      "H_Riem2_munu": "H^(Riem2)_{μν} = 2 R_{μαβγ}R_{ν}^{αβγ} - (1/2)g_{μν}R_{αβγδ}R^{αβγδ} - 4∇_α∇_βR_{μν}^{\\ \u0007lpha\beta}"
+    },
+    "residual_basis": [
+      "B1",
+      "B2",
+      "B3",
+      "C1",
+      "C2"
+    ],
+    "coefficient_vector_slots": {},
+    "required_nonproxy_operators": [
+      "E_A_mu_nonproxy_explicit_v2",
+      "E_H_nonproxy_explicit_v2",
+      "EL_g_nonproxy_explicit_v1"
+    ],
+    "required_outputs": {
+      "metric_residual": "componentwise_EL_g_minus_E_munu_B1_B2_B3_C1_C2",
+      "divergence_trace": "componentwise_nabla_mu_E_total_munu_trace",
+      "verdict": [
+        "PASS_ZERO",
+        "OBSTRUCTION_WITH_DIVERGENCE_TRACE"
+      ]
+    }
+  },
+  "gate_dependency": {
+    "G_BW": {
+      "name": "Bianchi_Ward_divergence_gate",
+      "required_input": "componentwise_EL_g_minus_E_munu_B1_B2_B3_C1_C2",
+      "admissible_outputs": [
+        "PASS_ZERO",
+        "OBSTRUCTION_WITH_DIVERGENCE_TRACE"
+      ],
+      "status": "OPEN"
+    },
+    "G_BRST": {
+      "name": "BRST_nilpotency_gate",
+      "requires": [
+        "G_BW:PASS_ZERO",
+        "ghost_sector_nonproxy_export",
+        "BV_BRST_operator_map"
+      ],
+      "admissible_outputs": [
+        "PASS_NILPOTENT",
+        "OBSTRUCTION_WITH_NILPOTENCY_TRACE"
+      ],
+      "status": "OPEN_BLOCKED_BY_G_BW"
+    },
+    "G_CUT": {
+      "name": "Cutkosky_unitarity_gate",
+      "requires": [
+        "G_BW:PASS_ZERO",
+        "G_BRST:PASS_NILPOTENT",
+        "on_shell_cut_channel_pack"
+      ],
+      "admissible_outputs": [
+        "PASS_UNITARITY",
+        "OBSTRUCTION_WITH_CUT_TRACE"
+      ],
+      "status": "OPEN_BLOCKED_BY_G_BW_AND_G_BRST"
+    }
+  },
+  "status": "READY_FOR_COMPONENTWISE_EXECUTION_ATTEMPT",
+  "no_false_pass_claim": true,
+  "next_honest_step": "Uruchomić wykonanie G_BW na tym input-packu i opublikować wyłącznie wynik PASS_ZERO albo OBSTRUCTION_WITH_DIVERGENCE_TRACE z pełnym wektorem współczynników.",
+  "lay_summary": "Spakowano wszystkie potrzebne dane do pierwszej pełnej próby testu zgodności Bianchi/Ward. Teraz trzeba wykonać obliczenie i uczciwie pokazać wynik."
+}

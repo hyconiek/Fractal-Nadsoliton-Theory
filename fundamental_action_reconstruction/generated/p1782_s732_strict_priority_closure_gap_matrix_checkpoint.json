@@ -1,0 +1,61 @@
+{
+  "checkpoint": "P1782_S732",
+  "timestamp_utc": "2026-05-15T12:52:08.862457+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "input_anchors": [
+    "p1764_s714",
+    "p1765_s715",
+    "p1781_s731"
+  ],
+  "priority_closure_gap_matrix": {
+    "E_A_mu_nonproxy": {
+      "state": "OPEN_NEEDS_INDEX_LEVEL_EXPANSION",
+      "class": "NONPROXY_OPERATOR_EXPORT_DONE_COMPONENTWISE_OPEN"
+    },
+    "E_H_nonproxy": {
+      "state": "OPEN_NEEDS_INDEX_LEVEL_EXPANSION",
+      "class": "NONPROXY_OPERATOR_EXPORT_DONE_COMPONENTWISE_OPEN"
+    },
+    "EL_g_nonproxy": {
+      "state": "OPEN_COMPONENTWISE_REQUIRED",
+      "class": "NONPROXY_OPERATOR_EXPORT_DONE_COMPONENTWISE_OPEN"
+    },
+    "H1_weak_form": {
+      "state": "UPGRADED_OPERATOR_LEVEL",
+      "class": "WEAK_FORM_READY_STRICT_LOCAL_OPEN"
+    },
+    "Bianchi_Ward": {
+      "state": "BLOCKED",
+      "class": "PENDING_JOINT_COMPONENTWISE_WITNESS"
+    },
+    "BRST_Cutkosky": {
+      "state": "BLOCKED",
+      "class": "PENDING_BW_PASS_AND_THEOREM_WITNESSES"
+    }
+  },
+  "readiness_link": {
+    "H1_cross_variation_status": "OPEN_COMPONENTWISE_EXECUTION_REQUIRED",
+    "metric_residual_status": "OPEN_COMPONENTWISE_REQUIRED",
+    "joint_run_gate": {
+      "joint_run_allowed_now": false,
+      "reason": "W1 not FULL_EXPORT yet",
+      "next_blocker": "W1_B2_B3_projection_and_HR2_divergence_normalization"
+    },
+    "success_tracker_quantum_stage": "OPEN_THEOREM_LEVEL_REQUIRED",
+    "theorem_gate_freeze_active": true
+  },
+  "proofs_and_nonproofs": {
+    "proven_now": [
+      "Priority closure gaps are explicitly classified with NONPROXY/LOCAL/GLOBAL semantics and no false pass."
+    ],
+    "still_open": [
+      "Componentwise H1 and EL_g-E_munu residual witnesses.",
+      "Theorem-level BW/BRST/Cutkosky closures."
+    ]
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "no_false_pass_claim": true,
+  "next_honest_step": "Dowieźć W1 FULL_EXPORT, wykonać joint componentwise witness run, a następnie zaktualizować tylko te klasy, które mają jawny PASS_ZERO albo OBSTRUCTION_WITH_DIVERGENCE_TRACE.",
+  "lay_summary": "Mamy tabelę braków zamknięcia: wiemy dokładnie, które elementy są już jawnie zapisane, a które nadal czekają na twarde testy."
+}

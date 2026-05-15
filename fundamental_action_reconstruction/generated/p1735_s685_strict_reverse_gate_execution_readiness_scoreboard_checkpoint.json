@@ -1,0 +1,75 @@
+{
+  "checkpoint": "P1735_S685",
+  "timestamp_utc": "2026-05-15T02:55:43.966510+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "chain": "K_strict -> coefficients -> full nonskeleton L_total -> EOM -> reverse gate readiness scoreboard",
+  "full_lagrangian_density_nonskeleton_instantiated": {
+    "L_gravity": "sqrt(-g)*[(1.72000000000000/2)R - Λ + 0.311688311688312 R^2 + 0.408311688311688 R_{μν}R^{μν} + 0.415800000000000 R_{μνρσ}R^{μνρσ}]",
+    "L_gauge": "sqrt(-g)*[-(1/4) Σ_a Z_a F^a_{μν}F_a^{μν}]",
+    "L_fermion": "sqrt(-g)*[Σ_f i ψ̄_f γ^a e_a^{ μ}D_μ ψ_f]",
+    "L_higgs": "sqrt(-g)*[(D_μH)^†(D^μH) - 0.0345030625000000(H^†H) - 1.57912790697674(H^†H)^2 - 0.418604651162791(H^†H)R]",
+    "L_yukawa": "sqrt(-g)*[-(y_u Q̄H~u + y_d Q̄Hd + y_e L̄He + h.c.)]",
+    "L_scalar_phi": "sqrt(-g)*[(1/2)(∇φ)^2 - (1/2)m_φ^2φ^2 - (λ_3/3!)φ^3 - (λ_4/4!)φ^4 - λ_{φH}φ^2(H^†H) - ξ_{φR}φ^2R]",
+    "L_mix": "sqrt(-g)*[χ_RG Σ_a R F^a_{μν}F_a^{μν} + CT_{1loop}(R^2,Ricci^2,Riemann^2,SM-mix)]"
+  },
+  "reverse_execution_readiness_scoreboard": {
+    "phase_1": {
+      "name": "R1_phase_1_H1_cross_variation",
+      "required_exports": [
+        "explicit_covariant_E_A_mu_expression_nonproxy",
+        "explicit_covariant_E_H_expression_nonproxy",
+        "shared_background_family_contract",
+        "boundary_term_control_clause"
+      ],
+      "available_exports": [],
+      "missing_exports": [
+        "explicit_covariant_E_A_mu_expression_nonproxy",
+        "explicit_covariant_E_H_expression_nonproxy",
+        "shared_background_family_contract",
+        "boundary_term_control_clause"
+      ],
+      "readiness": "NOT_READY"
+    },
+    "phase_2": {
+      "name": "R1_phase_2_metric_ELg_minus_Emunu",
+      "required_exports": [
+        "explicit_nonproxy_EL_g_munu",
+        "explicit_nonproxy_E_munu",
+        "componentwise_curvature_variation_terms_R2_Ric2_Riem2",
+        "shared_background_family_contract",
+        "index_and_sign_convention_lock"
+      ],
+      "available_exports": [],
+      "missing_exports": [
+        "explicit_nonproxy_EL_g_munu",
+        "explicit_nonproxy_E_munu",
+        "componentwise_curvature_variation_terms_R2_Ric2_Riem2",
+        "shared_background_family_contract",
+        "index_and_sign_convention_lock"
+      ],
+      "readiness": "NOT_READY"
+    },
+    "global_reverse_status": "BLOCKED_BY_NONPROXY_EXPORTS",
+    "decision_policy": "PASS_ZERO_or_OBSTRUCTION_ONLY_AFTER_READINESS"
+  },
+  "qg_gate_map_anchor": {
+    "renormalization": {
+      "status": "OPEN_WITNESS_REQUIRED",
+      "dependency": "metric residual componentwise result + counterterm closure witness"
+    },
+    "unitarity": {
+      "status": "OPEN_WITNESS_REQUIRED",
+      "dependency": "nonproxy EOM lock + Cutkosky/ghost-pole witness"
+    },
+    "background_independence": {
+      "status": "OPEN_WITNESS_REQUIRED",
+      "dependency": "shared background family contract + cocycle witness"
+    }
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "no_false_pass_claim": true,
+  "next_honest_step": "Dostarczyć pierwszy jawny nonproxy exporter dla phase_1 (E_A^μ, E_H, background contract, boundary clause), przeliczyć H1 i dopiero po tym odblokować phase_2 residual metryczny.",
+  "lay_summary": "To tablica gotowości: pokazuje, że jeszcze nie da się uczciwie policzyć testów odwrotnych, bo brakuje konkretnych eksportów nonproxy. Dzięki temu wiadomo dokładnie, co trzeba zrobić najpierw."
+}

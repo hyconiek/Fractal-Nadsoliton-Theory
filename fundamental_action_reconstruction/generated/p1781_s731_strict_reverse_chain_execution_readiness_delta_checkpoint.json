@@ -1,0 +1,46 @@
+{
+  "checkpoint": "P1781_S731",
+  "timestamp_utc": "2026-05-15T12:37:59.794659+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "input_anchors": [
+    "p1777_s727",
+    "p1778_s728",
+    "p1779_s729",
+    "p1780_s730"
+  ],
+  "reverse_chain_readiness_delta": {
+    "H1_cross_variation_status": "OPEN_COMPONENTWISE_EXECUTION_REQUIRED",
+    "metric_residual_status": "OPEN_COMPONENTWISE_REQUIRED",
+    "joint_run_gate": {
+      "joint_run_allowed_now": false,
+      "reason": "W1 not FULL_EXPORT yet",
+      "next_blocker": "W1_B2_B3_projection_and_HR2_divergence_normalization"
+    },
+    "success_tracker_quantum_stage": "OPEN_THEOREM_LEVEL_REQUIRED",
+    "theorem_gate_freeze_active": true
+  },
+  "delta_assessment": {
+    "ready_now": false,
+    "reason": "Joint run is still blocked and theorem-gate freeze is active.",
+    "minimum_unblock_sequence": [
+      "W1 FULL_EXPORT",
+      "joint componentwise H1+metric execution",
+      "publish PASS_ZERO or OBSTRUCTION_WITH_DIVERGENCE_TRACE with witness trace",
+      "re-evaluate BW->BRST->CUT gates"
+    ]
+  },
+  "proofs_and_nonproofs": {
+    "proven_now": [
+      "Reverse-chain readiness delta is explicitly synchronized across state-vector, joint-lock, success-tracker and theorem-freeze artifacts."
+    ],
+    "still_open": [
+      "No componentwise residual witness is produced in this delta sync.",
+      "Quantum-consistency theorem gates remain OPEN/BLOCKED."
+    ]
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "no_false_pass_claim": true,
+  "next_honest_step": "Dowieźć brakujące warunki z minimum_unblock_sequence i dopiero wtedy wykonywać aktualizację theorem-gates.",
+  "lay_summary": "To raport gotowości: jasno pokazuje, że nadal nie wolno przechodzić do finałowych bramek, dopóki nie będzie wspólnego, twardego wyniku z dwóch kluczowych testów."
+}
