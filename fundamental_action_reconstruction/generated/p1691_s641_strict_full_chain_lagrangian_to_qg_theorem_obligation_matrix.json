@@ -1,0 +1,52 @@
+{
+  "checkpoint": "P1691_S641",
+  "timestamp_utc": "2026-05-14T23:16:49.008743+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "kernel": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+  "chain_forward": "K_strict -> coefficients -> full L_total -> sector EOM -> spin2 operator -> local 1-loop/BRST/Cutkosky gates",
+  "chain_reverse_obligation": "(QG theorem witnesses) -> consistency of EOM family -> integrable variational origin for full L_total -> strict coefficient closure",
+  "full_lagrangian_density": {
+    "L_gravity": "sqrt(-g)*[(M_Pl^2/2)R - Λ + c_R2 R^2 + c_Ric2 R_{μν}R^{μν} + c_Riem2 R_{μνρσ}R^{μνρσ}]",
+    "L_gauge": "sqrt(-g)*[-(1/4) Σ_a Z_a F^a_{μν}F_a^{μν}]",
+    "L_fermion": "sqrt(-g)*[Σ_f i ψ̄_f γ^a e_a^{ μ}D_μ ψ_f]",
+    "L_higgs": "sqrt(-g)*[(D_μH)^†(D^μH) - μ_H^2(H^†H) - λ_H(H^†H)^2 - ξ_HR(H^†H)R]",
+    "L_yukawa": "sqrt(-g)*[-(y_u Q̄H~u + y_d Q̄Hd + y_e L̄He + h.c.)]",
+    "L_scalar_phi": "sqrt(-g)*[(1/2)(∇φ)^2 - (1/2)m_φ^2φ^2 - (λ_3/3!)φ^3 - (λ_4/4!)φ^4 - λ_{φH}φ^2(H^†H) - ξ_{φR}φ^2R]",
+    "L_mix": "sqrt(-g)*[χ_RG Σ_a R F^a_{μν}F_a^{μν} + CT_{1loop}(R^2,Ricci^2,Riemann^2,SM-mix)]"
+  },
+  "sector_eom_anchor": {
+    "scalar_phi": "□φ + m_φ^2 φ + (λ_3/2)φ^2 + (λ_4/3!)φ^3 + 2λ_{φH}φ(H†H) + 2ξ_{φR}Rφ = 0",
+    "higgs_H": "D_μD^μH + μ_H^2 H + 2λ_H(H†H)H + ξ_HR R H + λ_{φH}φ^2 H + Yukawa_source = 0",
+    "gauge_A": "∇_ν(Z_a F_a^{νμ}) + J_a^μ + χ_RG ∇_ν(R F_a^{νμ}) = 0",
+    "fermion_psi": "iγ^a e_a^{ μ}D_μ ψ_f - y_f H·ψ_f = 0",
+    "metric_g": "(M_Pl^2/2)G_{μν} + Λg_{μν} + H_{μν}^{(R2,Ric2,Riem2)} = T_{μν}^{SM+mix}"
+  },
+  "local_gate_status_from_p1690": {
+    "counterterm_local_basis_present": {
+      "status": "LOCAL_PASS",
+      "detail": [
+        "R^2",
+        "Ricci^2",
+        "Riemann^2"
+      ]
+    },
+    "brst_nilpotency_local_stub": {
+      "status": "LOCAL_PASS",
+      "detail": "Local background sector consistent with positive spin-2 quadratic spectrum."
+    },
+    "cutkosky_positive_residue_local_stub": {
+      "status": "LOCAL_PASS",
+      "detail": "No negative local spectral mode detected on checked grid."
+    }
+  },
+  "theorem_level_obligation_matrix": {
+    "counterterm_flow_closure": "KEEP_OPEN",
+    "brst_global_nilpotency_and_cohomology": "KEEP_OPEN",
+    "cutkosky_full_sector_unitarity": "KEEP_OPEN",
+    "background_family_independence": "KEEP_OPEN"
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "next_honest_step": "Export theorem-grade counterterm-flow closure and BRST/Cutkosky compatibility on a background family for spin-2 + SM mix.",
+  "lay_summary": "Mamy pełną listę składników równania teorii oraz lokalne testy bezpieczeństwa. To wciąż nie jest certyfikat końcowy: brakuje globalnych dowodów kwantowej grawitacji."
+}

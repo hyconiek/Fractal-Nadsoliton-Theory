@@ -1,0 +1,34 @@
+{
+  "checkpoint": "P1693_S643",
+  "timestamp_utc": "2026-05-14T23:24:44.026922+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "forward_chain": "K_strict -> coefficients -> full nonskeleton L_total anchor -> multisector symbolic replay -> EOM witnesses",
+  "full_lagrangian_density_anchor": {
+    "L_gravity": "sqrt(-g)*[(M_Pl^2/2)R - Λ + c_R2 R^2 + c_Ric2 R_{μν}R^{μν} + c_Riem2 R_{μνρσ}R^{μνρσ}]",
+    "L_gauge": "sqrt(-g)*[-(1/4) Σ_a Z_a F^a_{μν}F_a^{μν}]",
+    "L_fermion": "sqrt(-g)*[Σ_f i ψ̄_f γ^a e_a^{ μ}D_μ ψ_f]",
+    "L_higgs": "sqrt(-g)*[(D_μH)^†(D^μH) - μ_H^2(H^†H) - λ_H(H^†H)^2 - ξ_HR(H^†H)R]",
+    "L_yukawa": "sqrt(-g)*[-(y_u Q̄H~u + y_d Q̄Hd + y_e L̄He + h.c.)]",
+    "L_scalar_phi": "sqrt(-g)*[(1/2)(∇φ)^2 - (1/2)m_φ^2φ^2 - (λ_3/3!)φ^3 - (λ_4/4!)φ^4 - λ_{φH}φ^2(H^†H) - ξ_{φR}φ^2R]",
+    "L_mix": "sqrt(-g)*[χ_RG Σ_a R F^a_{μν}F_a^{μν} + CT_{1loop}(R^2,Ricci^2,Riemann^2,SM-mix)]"
+  },
+  "reduced_multisector_density": "-0.394781976744186*h(x)**4 - 0.330515143320714*h(x)**2*phi(x)**2 - 0.01725153125*h(x)**2 - 0.017012987012987*phi(x)**4 - 0.0519480519480519*phi(x)**3 - 0.02967263375*phi(x)**2 - 0.055725*phi(x)*psi(x)**2 + 0.60368*Derivative(A(x), x)**2 + Derivative(h(x), x)**2/2 + Derivative(phi(x), x)**2/2",
+  "symbolic_eom_multisector": {
+    "phi": "0.661030286641428*h(x)**2*phi(x) + 0.068051948051948*phi(x)**3 + 0.155844155844156*phi(x)**2 + 0.0593452675*phi(x) + 0.055725*psi(x)**2 + Derivative(phi(x), (x, 2))",
+    "h": "1.57912790697674*h(x)**3 + 0.661030286641428*h(x)*phi(x)**2 + 0.0345030625*h(x) + Derivative(h(x), (x, 2))",
+    "A": "1.20736*Derivative(A(x), (x, 2))",
+    "psi_proxy": "-0.11145*phi(x)*psi(x)"
+  },
+  "theory_chain_bidirectional_note": "Forward replay exported; reverse global variational+QG theorem closure remains open.",
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "open_obligations": [
+    "covariant_spinor_gauge_EL_export_nonproxy",
+    "full_counterterm_1loop_flow_closure_theorem",
+    "BRST_nilpotency_cohomology_theorem_full_sector",
+    "Cutkosky_unitarity_theorem_spin2_plus_SM_mix",
+    "background_family_independence_quantum_theorem"
+  ],
+  "next_honest_step": "Zastąpić proxy fermionowy pełnym kowariantnym operatorem spinorowym i dołączyć BRST/Cutkosky theorem witnesses na rodzinie teł.",
+  "lay_summary": "Mamy teraz automatycznie policzony szkic równań ruchu dla wielu sektorów naraz, ale pełny dowód bezpieczeństwa kwantowej grawitacji nadal jest otwarty."
+}
