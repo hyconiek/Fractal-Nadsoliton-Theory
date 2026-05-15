@@ -1,0 +1,61 @@
+{
+  "checkpoint": "P1751_S701",
+  "timestamp_utc": "2026-05-15T03:37:51.740968+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "chain": "K_strict -> coefficients -> full nonskeleton L_total -> EOM -> H1 boundary-aware nonproxy contract upgrade",
+  "input_contract_anchor": "p1732_s682",
+  "input_boundary_audit_anchor": "p1750_s700",
+  "nonproxy_export_requirements_contract_upgraded": {
+    "h1_gauge_scalar": {
+      "required_nonproxy_exports": [
+        "explicit_covariant_E_A_mu_expression_nonproxy",
+        "explicit_covariant_E_H_expression_nonproxy",
+        "shared_background_family_contract",
+        "boundary_term_control_clause"
+      ],
+      "target_expression": "deltaE_A_mu_over_deltaH_minus_deltaE_H_over_deltaA_mu",
+      "decision_policy": "PASS_ZERO_or_OBSTRUCTION_ONLY",
+      "boundary_control_contract": {
+        "required": true,
+        "reason": "P1750 boundary-sensitive obstruction requires explicit boundary clause handling in nonproxy 4D run.",
+        "boundary_clause_template": "Integral boundary contribution must be explicitly exported and set by declared boundary family contract before PASS decisions.",
+        "audit_anchor": "p1750_s700",
+        "reduced_exact_derivative_confirmed": false
+      },
+      "verdict_schema": {
+        "strict_local": [
+          "PASS_ZERO",
+          "OBSTRUCTION"
+        ],
+        "weak_form_with_boundary": [
+          "PASS_WEAK_FORM_WITH_BOUNDARY_CLAUSE",
+          "OBSTRUCTION"
+        ],
+        "promotion_rule": "weak-form pass alone cannot promote strict-core closure"
+      }
+    },
+    "metric_residual": {
+      "required_nonproxy_exports": [
+        "explicit_nonproxy_EL_g_munu",
+        "explicit_nonproxy_E_munu",
+        "componentwise_curvature_variation_terms_R2_Ric2_Riem2",
+        "shared_background_family_contract",
+        "index_and_sign_convention_lock"
+      ],
+      "basis_order": [
+        "B1",
+        "B2",
+        "B3",
+        "C1",
+        "C2"
+      ],
+      "target_expression": "EL_g_minus_E_munu_componentwise_basis_projection",
+      "decision_policy": "PASS_ZERO_or_OBSTRUCTION_ONLY"
+    }
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "no_false_pass_claim": true,
+  "next_honest_step": "Wykonać pierwszy 4D nonproxy run H1(A_mu,H) zgodnie z kontraktem boundary-aware i zwrócić dualny raport: strict_local + weak_form_with_boundary.",
+  "lay_summary": "Po audycie brzegowym doprecyzowaliśmy zasady testu H1: zanim ogłosimy sukces, trzeba jawnie pokazać także kontrolę warunków brzegowych. To zwiększa rygor i usuwa ryzyko fałszywego passa."
+}

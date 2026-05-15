@@ -1,0 +1,79 @@
+{
+  "checkpoint": "P1725_S675",
+  "timestamp_utc": "2026-05-15T02:26:12.435400+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "chain": "K_strict -> coefficients -> full explicit L_total -> residual obstruction map -> basis reduction pass1",
+  "obstruction_anchor": {
+    "basis_mismatch_groups": [
+      {
+        "group": "second_covariant_derivative_curvature_terms",
+        "representatives": [
+          "∇_μ∇_ν R",
+          "g_{μν}□R",
+          "∇_α∇_{(μ}R_{ν)}^α"
+        ],
+        "status": "UNREDUCED"
+      },
+      {
+        "group": "riemann_contraction_transport_terms",
+        "representatives": [
+          "∇_α∇_β R_{μν}^{\\ \\ αβ}",
+          "R_{μαβγ}R_{ν}^{αβγ}"
+        ],
+        "status": "UNREDUCED"
+      },
+      {
+        "group": "matter_tensor_basis_alignment",
+        "representatives": [
+          "T^gauge_{μν}",
+          "T^higgs_{μν}",
+          "T^fermion_{μν}"
+        ],
+        "status": "PARTIAL"
+      }
+    ],
+    "provenance_links": {
+      "H_R2": "L_gravity:c1*R^2",
+      "H_Ric2": "L_gravity:c2*Ricci^2",
+      "H_Riem2": "L_gravity:c3*Riemann^2",
+      "T_matter": "L_gauge+L_higgs+L_fermion+L_scalar+L_mix"
+    }
+  },
+  "basis_reduction_pass1": {
+    "target_group": "second_covariant_derivative_curvature_terms",
+    "rewrite_rules_applied": [
+      "commute_covariant_derivatives_on_scalars: [∇_μ,∇_ν]R = 0",
+      "trace_transport: g_{μν}□R kept as basis atom",
+      "symmetrization_lock: ∇_α∇_{(μ}R_{ν)}^α kept as basis atom"
+    ],
+    "pre_basis": [
+      "∇_μ∇_νR",
+      "g_{μν}□R",
+      "∇_α∇_{(μ}R_{ν)}^α"
+    ],
+    "post_basis": [
+      "B1:=∇_μ∇_νR",
+      "B2:=g_{μν}□R",
+      "B3:=∇_α∇_{(μ}R_{ν)}^α"
+    ],
+    "status": "BASIS_NORMALIZED_PASS1"
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "open_obligations": [
+    "reduce_riemann_contraction_transport_basis",
+    "finalize_matter_tensor_alignment",
+    "assemble_componentwise_residual_coefficients_on_basis",
+    "metric_sector_PASS_ZERO_or_OBSTRUCTION_certificate",
+    "bianchi_ward_cross_consistency_certificate",
+    "global_helmholtz_integrability_nonproxy",
+    "brst_nilpotency_and_cohomology_nonproxy",
+    "cutkosky_unitarity_full_sector",
+    "counterterm_flow_renormalization_closure",
+    "background_independence_family_theorem",
+    "qw2191_selector_source_or_nonclosure_theorem"
+  ],
+  "next_honest_step": "Wykonać pass2 na grupie riemann_contraction_transport_terms i złożyć residual na wspólnej bazie B1/B2/B3 + Riemann-basis.",
+  "lay_summary": "Zrobiliśmy pierwszy porządkujący krok w najtrudniejszej części rachunku grawitacyjnego: ujednoliciliśmy bazę pochodnych krzywizny. To przybliża nas do twardego wyniku residualu."
+}

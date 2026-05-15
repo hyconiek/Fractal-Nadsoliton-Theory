@@ -1,0 +1,59 @@
+{
+  "checkpoint": "P1778_S728",
+  "timestamp_utc": "2026-05-15T12:18:15.415855+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "input_anchors": [
+    "p1716_s666",
+    "p1760_s710",
+    "p1775_s725",
+    "p1777_s727"
+  ],
+  "joint_execution_lock": {
+    "scope": "R1_phase_1_H1_and_phase_2_metric_ELg_minus_Emunu",
+    "required_same_background_family": true,
+    "required_same_index_sign_convention": true,
+    "required_same_residual_basis": [
+      "B1",
+      "B2",
+      "B3",
+      "C1",
+      "C2"
+    ],
+    "admissible_outcomes": [
+      "PASS_ZERO",
+      "OBSTRUCTION_WITH_DIVERGENCE_TRACE"
+    ],
+    "forbidden": [
+      "mixed-background evaluation across H1 and metric residual",
+      "index/sign drift between H1 and metric residual runs",
+      "declaring PASS without explicit residual witness"
+    ]
+  },
+  "readiness_snapshot": {
+    "index_convention_audit_anchor": "P1716_S666",
+    "shared_background_contract_anchor": "P1760_S710",
+    "w1_full_export_gate": "OBSTRUCTION_W1_NOT_YET_FULL_EXPORT",
+    "h1_status": "OPEN_COMPONENTWISE_EXECUTION_REQUIRED"
+  },
+  "gate_decision": {
+    "joint_run_allowed_now": false,
+    "reason": "W1 not FULL_EXPORT yet",
+    "next_blocker": "W1_B2_B3_projection_and_HR2_divergence_normalization"
+  },
+  "proofs_and_nonproofs": {
+    "proven_now": [
+      "A single-lock contract for same-background/same-convention H1+metric componentwise execution is exported.",
+      "Current gate remains blocked because W1 is not accepted as FULL_EXPORT."
+    ],
+    "still_open": [
+      "No H1 componentwise residual witness yet.",
+      "No EL_g-E_munu componentwise residual witness yet.",
+      "No Bianchi/Ward theorem-level divergence witness yet."
+    ]
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "no_false_pass_claim": true,
+  "next_honest_step": "Domknąć W1 do FULL_EXPORT i natychmiast uruchomić joint H1+metric run na tej samej rodzinie teł i tej samej konwencji indeksowej; opublikować wyłącznie PASS_ZERO albo OBSTRUCTION_WITH_DIVERGENCE_TRACE.",
+  "lay_summary": "Przygotowano rygorystyczny plan jednego wspólnego uruchomienia dwóch kluczowych testów. Jednak start jest zablokowany, dopóki W1 nie będzie formalnie domknięte."
+}

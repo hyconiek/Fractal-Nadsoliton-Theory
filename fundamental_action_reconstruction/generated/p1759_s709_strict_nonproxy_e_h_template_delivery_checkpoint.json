@@ -1,0 +1,40 @@
+{
+  "checkpoint": "P1759_S709",
+  "timestamp_utc": "2026-05-15T03:59:39.273958+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "chain": "K_strict -> coefficients -> full non-skeleton L_total -> EOM -> D2 delivery (E_H template)",
+  "input_anchors": [
+    "p1758_s708",
+    "p1730_s680"
+  ],
+  "d2_delivery": {
+    "formal_name": "E_H_nonproxy_template_v1",
+    "definition": "E_H := 1/sqrt(-g) * delta S / delta H^dagger",
+    "sector_anchor": "sqrt(-g)*[(D_μH)^†(D^μH) - 0.0345030625000000(H^†H) - 1.57912790697674(H^†H)^2 - 0.418604651162791(H^†H)R]",
+    "yukawa_anchor": "sqrt(-g)*[-(y_u Q̄H~u + y_d Q̄Hd + y_e L̄He + h.c.)]",
+    "mix_anchor": "sqrt(-g)*[χ_RG Σ_a R F^a_{μν}F_a^{μν} + CT_{1loop}(R^2,Ricci^2,Riemann^2,SM-mix)]",
+    "expected_structure": [
+      "D_mu D^mu H",
+      "mu_H^2 H + 2 lambda_H (H^dagger H) H",
+      "xi_HR R H",
+      "yukawa source terms",
+      "phi-mix and curvature-mix corrections"
+    ],
+    "index_sign_lock_required": true,
+    "background_family_contract_required": true,
+    "status": "TEMPLATE_EXPORTED_NOT_YET_FULL_COMPONENTWISE"
+  },
+  "execution_sequence_status": {
+    "D1_export_E_A_mu_nonproxy": "PARTIAL_TEMPLATE_DELIVERED",
+    "D2_export_E_H_nonproxy": "PARTIAL_TEMPLATE_DELIVERED",
+    "D3_export_shared_background_family_contract": "PENDING",
+    "D4_export_boundary_term_control_clause": "PENDING",
+    "D5_finalize_boundary_control_contract": "PENDING",
+    "D6_run_nonproxy_H1_4D": "BLOCKED"
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "no_false_pass_claim": true,
+  "next_honest_step": "Dostarczyć D3: wspólny kontrakt rodziny teł, który łączy E_A^mu i E_H w tym samym setupie 4D.",
+  "lay_summary": "Dostarczono drugi kluczowy szablon równania (dla Higgsa). Teraz oba pola pary H1 mają bazowy template, ale trzeba jeszcze ustalić wspólne tło obliczeń."
+}

@@ -1,0 +1,89 @@
+{
+  "checkpoint": "P1728_S678",
+  "timestamp_utc": "2026-05-15T02:34:43.930033+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "chain": "K_strict -> coefficients -> full instantiated nonskeleton L_total -> EOM bundle -> bidirectional closure gap map",
+  "kernel": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+  "kernel_input": {
+    "omega": 0.18575,
+    "phi": 4.5231,
+    "beta": 0.72,
+    "eta": 1.31,
+    "A": 1.0
+  },
+  "forward_coefficient_map_symbolic": {
+    "Mpl2": "1.72000000000000",
+    "cR2": "0.311688311688312",
+    "cRic2": "0.408311688311688",
+    "cRiem2": "0.415800000000000",
+    "muH2": "0.0345030625000000",
+    "lambdaH": "1.57912790697674",
+    "xiHR": "0.418604651162791",
+    "Z1": "1.20736000000000"
+  },
+  "full_lagrangian_density_nonskeleton_instantiated": {
+    "L_gravity": "sqrt(-g)*[(1.72000000000000/2)R - Λ + 0.311688311688312 R^2 + 0.408311688311688 R_{μν}R^{μν} + 0.415800000000000 R_{μνρσ}R^{μνρσ}]",
+    "L_gauge": "sqrt(-g)*[-(1/4) Σ_a Z_a F^a_{μν}F_a^{μν}]",
+    "L_fermion": "sqrt(-g)*[Σ_f i ψ̄_f γ^a e_a^{ μ}D_μ ψ_f]",
+    "L_higgs": "sqrt(-g)*[(D_μH)^†(D^μH) - 0.0345030625000000(H^†H) - 1.57912790697674(H^†H)^2 - 0.418604651162791(H^†H)R]",
+    "L_yukawa": "sqrt(-g)*[-(y_u Q̄H~u + y_d Q̄Hd + y_e L̄He + h.c.)]",
+    "L_scalar_phi": "sqrt(-g)*[(1/2)(∇φ)^2 - (1/2)m_φ^2φ^2 - (λ_3/3!)φ^3 - (λ_4/4!)φ^4 - λ_{φH}φ^2(H^†H) - ξ_{φR}φ^2R]",
+    "L_mix": "sqrt(-g)*[χ_RG Σ_a R F^a_{μν}F_a^{μν} + CT_{1loop}(R^2,Ricci^2,Riemann^2,SM-mix)]"
+  },
+  "eom_bundle_anchor": {
+    "background_marker": "R0",
+    "L_total_reduced": "-0.209302325581395*R0*h(x)**2 - 0.394781976744185*h(x)**4 - h(x)**2*phi(x)**2/2 - 0.01725153125*h(x)**2 - 1.0*h(x)*psi(x)*psib(x) - 0.077922077922078*phi(x)**4 - 1.0*psi(x)*psib(x) - I*psi(x)*Derivative(psib(x), x)/2 + I*psib(x)*Derivative(psi(x), x)/2 + 0.60368*Derivative(A(x), x)**2 + Derivative(h(x), x)**2/2 + Derivative(phi(x), x)**2/2",
+    "L_sector": {
+      "L_gauge": "0.60368*Derivative(A(x), x)**2",
+      "L_higgs": "-0.209302325581395*R0*h(x)**2 - 0.394781976744185*h(x)**4 - 0.01725153125*h(x)**2 + Derivative(h(x), x)**2/2",
+      "L_scalar": "-0.077922077922078*phi(x)**4 + Derivative(phi(x), x)**2/2",
+      "L_fermion": "-1.0*h(x)*psi(x)*psib(x) - 1.0*psi(x)*psib(x) - I*psi(x)*Derivative(psib(x), x)/2 + I*psib(x)*Derivative(psi(x), x)/2",
+      "L_mix": "-h(x)**2*phi(x)**2/2"
+    },
+    "EOM": {
+      "EOM_A": "1.20736*Derivative(A(x), (x, 2))",
+      "EOM_h": "0.418604651162791*R0*h(x) + 1.57912790697674*h(x)**3 + h(x)*phi(x)**2 + 0.0345030625*h(x) + 1.0*psi(x)*psib(x) + Derivative(h(x), (x, 2))",
+      "EOM_phi": "h(x)**2*phi(x) + 0.311688311688312*phi(x)**3 + Derivative(phi(x), (x, 2))",
+      "EOM_psi": "1.0*h(x)*psib(x) + 1.0*psib(x) + 1.0*I*Derivative(psib(x), x)",
+      "EOM_psib": "1.0*h(x)*psi(x) + 1.0*psi(x) - 1.0*I*Derivative(psi(x), x)"
+    }
+  },
+  "metric_residual_anchor": {
+    "basis_order": [
+      "B1",
+      "B2",
+      "B3",
+      "C1",
+      "C2"
+    ],
+    "residual_vector_symbolic": {
+      "B1": "k_B1",
+      "B2": "k_B2",
+      "B3": "k_B3",
+      "C1": "k_C1",
+      "C2": "k_C2"
+    },
+    "zero_condition": "k_B1=k_B2=k_B3=k_C1=k_C2=0",
+    "current_state": "COEFFICIENTS_NOT_EVALUATED_COMPONENTWISE"
+  },
+  "bidirectional_witness_map": {
+    "forward_kernel_to_coefficients": "EXPORTED",
+    "forward_coefficients_to_full_lagrangian": "EXPORTED_NONSKELETON_INSTANTIATED",
+    "forward_lagrangian_to_eom": "PARTIAL_EXPORTED_NONPROXY_PENDING_FULL_METRIC_CERTIFICATE",
+    "reverse_eom_to_variational_origin": "OPEN_THEOREM_REQUIRED",
+    "reverse_variational_origin_to_kernel_identifiability": "OPEN_THEOREM_REQUIRED"
+  },
+  "strict_core_closure_gate": {
+    "renormalization_counterterm_flow": "OPEN_WITNESS_REQUIRED",
+    "unitarity_cutkosky_full_sector": "OPEN_WITNESS_REQUIRED",
+    "background_independence_family": "OPEN_WITNESS_REQUIRED",
+    "brst_nilpotency_cohomology": "OPEN_WITNESS_REQUIRED",
+    "qw2191_selector_source": "OPEN_SELECTOR_PREMISE_OR_THEOREM_REQUIRED"
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "no_false_pass_claim": true,
+  "next_honest_step": "Wyeksportować pierwszy niezerowy/zerowy jawny EL_g-E_{μν} residual vector (k_B1..k_C2) dla konkretnej rodziny metryk oraz dołączyć theorem-level witness map dla renormalizacji/unitarności/background-independence.",
+  "lay_summary": "Mamy już pełny strict tor do jawnego lagranżianu (bez szkieletu) i do pakietu równań ruchu. Brakuje jeszcze dowodów domknięcia kwantowej grawitacji i pełnego kroku wstecznego z równań do źródła wariacyjnego."
+}

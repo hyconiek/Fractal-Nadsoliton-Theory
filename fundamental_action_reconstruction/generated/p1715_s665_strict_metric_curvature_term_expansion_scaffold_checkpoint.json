@@ -1,0 +1,46 @@
+{
+  "checkpoint": "P1715_S665",
+  "timestamp_utc": "2026-05-15T02:03:52.092246+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "chain": "K_strict -> coefficients -> full explicit L_total -> E_munu candidate -> curvature-term expansion scaffold",
+  "metric_candidate_anchor": {
+    "E_munu_candidate": "E_{μν} := (M_Pl^2/2)G_{μν} + Λ g_{μν} + c1*H^{(R2)}_{μν} + c2*H^{(Ric2)}_{μν} + c3*H^{(Riem2)}_{μν} - T^{gauge}_{μν} - T^{higgs}_{μν} - T^{fermion}_{μν} - T^{scalar}_{μν} - T^{mix}_{μν} = 0",
+    "matter_split": {
+      "T_gauge": "-(2/sqrt(-g)) * δL_gauge/δg^{μν}",
+      "T_higgs": "-(2/sqrt(-g)) * δL_higgs/δg^{μν}",
+      "T_fermion": "-(2/sqrt(-g)) * δL_fermion/δg^{μν}",
+      "T_scalar": "-(2/sqrt(-g)) * δL_scalar/δg^{μν}",
+      "T_mix": "-(2/sqrt(-g)) * δL_mix/δg^{μν}"
+    },
+    "source_terms_from_full_lagrangian": {
+      "L_gravity": "sqrt(-g)*[(M_Pl^2/2)R - Λ + c1 R^2 + c2 R_{μν}R^{μν} + c3 R_{μναβ}R^{μναβ}]",
+      "L_gauge": "sqrt(-g)*[-1/4 G^A_{μν}G_A^{μν} - 1/4 W^I_{μν}W_I^{μν} - 1/4 B_{μν}B^{μν}]",
+      "L_higgs": "sqrt(-g)*[(D_μH)^†(D^μH) - μ_H^2(H^†H) - λ_H(H^†H)^2]",
+      "L_fermion": "sqrt(-g)*[Σ_f i ψ̄_f γ^a e_a^{ μ}D_μ ψ_f - Σ_f y_f(ψ̄_{fL}Hψ_{fR}+h.c.)]",
+      "L_scalar": "sqrt(-g)*[1/2 g^{μν}(∇_μφ)(∇_νφ) - (m_φ^2/2)φ^2 - (λ_3/3!)φ^3 - (λ_4/4!)φ^4]",
+      "L_mix": "sqrt(-g)*[ξ_HR(H^†H)R + ξ_φR φ^2R + λ_{φH}φ^2(H^†H)]"
+    }
+  },
+  "curvature_term_expansion_scaffold": {
+    "H_R2_munu": "H^(R2)_{μν} = 2 R R_{μν} - (1/2) g_{μν} R^2 + 2(g_{μν}□ - ∇_μ∇_ν)R",
+    "H_Ric2_munu": "H^(Ric2)_{μν} = 2 R_{μα}R_{ν}^{ α} - (1/2)g_{μν}R_{αβ}R^{αβ} + □R_{μν} + g_{μν}∇_α∇_βR^{αβ} - 2∇_α∇_{(μ}R_{ν)}^{ α}",
+    "H_Riem2_munu": "H^(Riem2)_{μν} = 2 R_{μαβγ}R_{ν}^{ αβγ} - (1/2)g_{μν}R_{αβγδ}R^{αβγδ} - 4∇_α∇_βR_{μν}^{\\ \\ αβ}"
+  },
+  "assembled_metric_equation_scaffold": "E_{μν}= (M_Pl^2/2)G_{μν}+Λg_{μν}+c1*H^(R2)_{μν}+c2*H^(Ric2)_{μν}+c3*H^(Riem2)_{μν}-T_{μν}^{matter}=0",
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "open_obligations": [
+    "index_convention_normalization_audit",
+    "explicit_metric_EL_residual_zero_certificate",
+    "bianchi_ward_cross_consistency_certificate",
+    "global_helmholtz_integrability_nonproxy",
+    "brst_nilpotency_and_cohomology_nonproxy",
+    "cutkosky_unitarity_full_sector",
+    "counterterm_flow_renormalization_closure",
+    "background_independence_family_theorem",
+    "qw2191_selector_source_or_nonclosure_theorem"
+  ],
+  "next_honest_step": "Uruchomić index_convention_normalization_audit i policzyć pierwszy jawny residual test EL_g - E_munu z tymi H-terminami w jednej konwencji.",
+  "lay_summary": "Rozpisaliśmy trudne składniki krzywiznowe równania grawitacyjnego. To przybliża nas do kluczowego testu, czy pełne równanie metryczne naprawdę wynika z lagranżianu."
+}

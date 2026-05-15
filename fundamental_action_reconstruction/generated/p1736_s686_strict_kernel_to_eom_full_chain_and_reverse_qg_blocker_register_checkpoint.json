@@ -1,0 +1,108 @@
+{
+  "checkpoint": "P1736_S686",
+  "timestamp_utc": "2026-05-15T02:58:10.955133+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "chain": "K_strict -> coefficients -> full nonskeleton L_total -> EOM -> reverse readiness -> QG blocker register",
+  "full_lagrangian_density_nonskeleton_instantiated": {
+    "L_gravity": "sqrt(-g)*[(1.72000000000000/2)R - Λ + 0.311688311688312 R^2 + 0.408311688311688 R_{μν}R^{μν} + 0.415800000000000 R_{μνρσ}R^{μνρσ}]",
+    "L_gauge": "sqrt(-g)*[-(1/4) Σ_a Z_a F^a_{μν}F_a^{μν}]",
+    "L_fermion": "sqrt(-g)*[Σ_f i ψ̄_f γ^a e_a^{ μ}D_μ ψ_f]",
+    "L_higgs": "sqrt(-g)*[(D_μH)^†(D^μH) - 0.0345030625000000(H^†H) - 1.57912790697674(H^†H)^2 - 0.418604651162791(H^†H)R]",
+    "L_yukawa": "sqrt(-g)*[-(y_u Q̄H~u + y_d Q̄Hd + y_e L̄He + h.c.)]",
+    "L_scalar_phi": "sqrt(-g)*[(1/2)(∇φ)^2 - (1/2)m_φ^2φ^2 - (λ_3/3!)φ^3 - (λ_4/4!)φ^4 - λ_{φH}φ^2(H^†H) - ξ_{φR}φ^2R]",
+    "L_mix": "sqrt(-g)*[χ_RG Σ_a R F^a_{μν}F_a^{μν} + CT_{1loop}(R^2,Ricci^2,Riemann^2,SM-mix)]"
+  },
+  "reverse_readiness_anchor": {
+    "phase_1": {
+      "name": "R1_phase_1_H1_cross_variation",
+      "required_exports": [
+        "explicit_covariant_E_A_mu_expression_nonproxy",
+        "explicit_covariant_E_H_expression_nonproxy",
+        "shared_background_family_contract",
+        "boundary_term_control_clause"
+      ],
+      "available_exports": [],
+      "missing_exports": [
+        "explicit_covariant_E_A_mu_expression_nonproxy",
+        "explicit_covariant_E_H_expression_nonproxy",
+        "shared_background_family_contract",
+        "boundary_term_control_clause"
+      ],
+      "readiness": "NOT_READY"
+    },
+    "phase_2": {
+      "name": "R1_phase_2_metric_ELg_minus_Emunu",
+      "required_exports": [
+        "explicit_nonproxy_EL_g_munu",
+        "explicit_nonproxy_E_munu",
+        "componentwise_curvature_variation_terms_R2_Ric2_Riem2",
+        "shared_background_family_contract",
+        "index_and_sign_convention_lock"
+      ],
+      "available_exports": [],
+      "missing_exports": [
+        "explicit_nonproxy_EL_g_munu",
+        "explicit_nonproxy_E_munu",
+        "componentwise_curvature_variation_terms_R2_Ric2_Riem2",
+        "shared_background_family_contract",
+        "index_and_sign_convention_lock"
+      ],
+      "readiness": "NOT_READY"
+    },
+    "global_reverse_status": "BLOCKED_BY_NONPROXY_EXPORTS",
+    "decision_policy": "PASS_ZERO_or_OBSTRUCTION_ONLY_AFTER_READINESS"
+  },
+  "qg_blocker_register": {
+    "B1_H1_nonproxy_exports_missing": {
+      "status": "OPEN",
+      "missing": [
+        "explicit_covariant_E_A_mu_expression_nonproxy",
+        "explicit_covariant_E_H_expression_nonproxy",
+        "shared_background_family_contract",
+        "boundary_term_control_clause"
+      ],
+      "blocks": [
+        "R1_phase_1_H1_cross_variation",
+        "Helmholtz_H1"
+      ]
+    },
+    "B2_metric_nonproxy_exports_missing": {
+      "status": "OPEN",
+      "missing": [
+        "explicit_nonproxy_EL_g_munu",
+        "explicit_nonproxy_E_munu",
+        "componentwise_curvature_variation_terms_R2_Ric2_Riem2",
+        "shared_background_family_contract",
+        "index_and_sign_convention_lock"
+      ],
+      "blocks": [
+        "R1_phase_2_metric_ELg_minus_Emunu",
+        "metric_sector_PASS_ZERO_or_OBSTRUCTION"
+      ]
+    },
+    "B3_qg_renormalization_theorem": {
+      "status": "OPEN",
+      "blocks": [
+        "strict_core_closure"
+      ]
+    },
+    "B4_qg_unitarity_theorem": {
+      "status": "OPEN",
+      "blocks": [
+        "strict_core_closure"
+      ]
+    },
+    "B5_qg_background_independence_theorem": {
+      "status": "OPEN",
+      "blocks": [
+        "strict_core_closure"
+      ]
+    }
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "no_false_pass_claim": true,
+  "next_honest_step": "Zamknąć kolejno B1 i B2 przez dostarczenie nonproxy exporterów i realne obliczenia H1/EL_g-E_munu; dopiero po tym atakować B3-B5 theorem-level dla renormalizacji, unitarności i background-independence.",
+  "lay_summary": "Mamy teraz listę blokad w kolejności naprawy. Najpierw trzeba odblokować dwa techniczne testy (H1 i residual metryczny), a dopiero potem można uczciwie domykać duże twierdzenia kwantowej grawitacji."
+}

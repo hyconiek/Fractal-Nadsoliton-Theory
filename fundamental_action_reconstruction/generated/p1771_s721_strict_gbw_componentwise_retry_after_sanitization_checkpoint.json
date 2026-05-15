@@ -1,0 +1,47 @@
+{
+  "checkpoint": "P1771_S721",
+  "timestamp_utc": "2026-05-15T11:14:36.001893+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "input_anchor": "p1770_s720",
+  "retry_context": {
+    "precondition": [
+      "Use sanitized curvature tensor notation (ASCII-safe, parser-safe).",
+      "Keep same background family and same residual basis B1/B2/B3/C1/C2.",
+      "Keep no-false-pass verdict policy unchanged."
+    ],
+    "must_output": [
+      "componentwise_EL_g_minus_E_munu_B1_B2_B3_C1_C2",
+      "componentwise_nabla_mu_E_total_munu_trace",
+      "verdict in {PASS_ZERO, OBSTRUCTION_WITH_DIVERGENCE_TRACE}"
+    ]
+  },
+  "componentwise_retry_result": {
+    "verdict": "OBSTRUCTION_WITH_DIVERGENCE_TRACE",
+    "pass_zero_issued": false,
+    "notation_sanitization_applied": true,
+    "improvement": "REMOVED_PARSER_AMBIGUITY_INDEX_LOCK",
+    "remaining_blockers": [
+      "H_R2 componentwise second-derivative expansion incomplete",
+      "H_Ric2 mixed-covariant derivative commutator terms unresolved",
+      "H_Riem2 double-divergence transport expansion unresolved",
+      "CT tensor basis not yet exported in full componentwise form"
+    ],
+    "residual_vector_status": {
+      "B1": "OPEN",
+      "B2": "OPEN",
+      "B3": "OPEN",
+      "C1": "OPEN",
+      "C2": "OPEN"
+    }
+  },
+  "gate_update": {
+    "G_BW": "OBSTRUCTION_WITH_DIVERGENCE_TRACE",
+    "G_BRST": "BLOCKED_BY_G_BW",
+    "G_CUT": "BLOCKED_BY_G_BW_AND_G_BRST"
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "no_false_pass_claim": true,
+  "next_honest_step": "Wyeksportować pełny komponentowy basis dla H_R2/H_Ric2/H_Riem2 oraz T_CT^{mu nu}, następnie wykonać trzecią próbę G_BW bez zmiany tła i bazy B1/B2/B3/C1/C2.",
+  "lay_summary": "Poprawa zapisu zadziałała technicznie, ale nadal brakuje części najtrudniejszej matematyki tensorowej. Test nadal uczciwie pozostaje otwarty."
+}

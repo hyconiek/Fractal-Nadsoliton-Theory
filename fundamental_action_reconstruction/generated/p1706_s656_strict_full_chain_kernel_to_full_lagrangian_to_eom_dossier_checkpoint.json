@@ -1,0 +1,86 @@
+{
+  "checkpoint": "P1706_S656",
+  "timestamp_utc": "2026-05-15T01:04:49.538738+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "full_chain": {
+    "kernel": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+    "kernel_input": {
+      "omega": 0.18575,
+      "phi": 4.5231,
+      "beta": 0.72,
+      "eta": 1.31,
+      "A": 1.0
+    },
+    "coefficient_map": {
+      "Mpl2": "1.72000000000000",
+      "cR2": "0.311688311688312",
+      "cRic2": "0.408311688311688",
+      "cRiem2": "0.415800000000000",
+      "muH2": "0.0345030625000000",
+      "lambdaH": "1.57912790697674",
+      "xiHR": "0.418604651162791",
+      "Z1": "1.20736000000000"
+    },
+    "full_lagrangian_explicit": {
+      "L_scalar": "sqrt(-g)*[1/2 g^{μν}(∇_μφ)(∇_νφ) - (m_φ^2/2)φ^2 - (λ_3/3!)φ^3 - (λ_4/4!)φ^4]",
+      "L_gauge": "sqrt(-g)*[-1/4 G^A_{μν}G_A^{μν} - 1/4 W^I_{μν}W_I^{μν} - 1/4 B_{μν}B^{μν}]",
+      "L_fermion": "sqrt(-g)*[Σ_f i ψ̄_f γ^a e_a^{ μ}D_μ ψ_f - Σ_f y_f(ψ̄_{fL}Hψ_{fR}+h.c.)]",
+      "L_higgs": "sqrt(-g)*[(D_μH)^†(D^μH) - μ_H^2(H^†H) - λ_H(H^†H)^2]",
+      "L_gravity": "sqrt(-g)*[(M_Pl^2/2)R - Λ + c1 R^2 + c2 R_{μν}R^{μν} + c3 R_{μναβ}R^{μναβ}]",
+      "L_mix": "sqrt(-g)*[ξ_HR(H^†H)R + ξ_φR φ^2R + λ_{φH}φ^2(H^†H)]"
+    },
+    "reduced_eom_bundle_anchor": {
+      "A": "1.20736*Derivative(A(x), (x, 2))",
+      "h": "0.418604651162791*R0*h(x) + 1.57912790697674*h(x)**3 + h(x)*phi(x)**2 + 0.0345030625*h(x) + 1.0*psi(x)*psib(x) + Derivative(h(x), (x, 2))",
+      "phi": "h(x)**2*phi(x) + 0.311688311688312*phi(x)**3 + Derivative(phi(x), (x, 2))",
+      "psi": "1.0*h(x)*psib(x) + 1.0*psib(x) + 1.0*I*Derivative(psib(x), x)",
+      "psib": "1.0*h(x)*psi(x) + 1.0*psi(x) - 1.0*I*Derivative(psi(x), x)"
+    },
+    "reverse_variational_identity_anchor": {
+      "status": "PASS_ALL_ZERO",
+      "residuals": {
+        "EL_minus_EOM_A": "0",
+        "EL_minus_EOM_h": "0",
+        "EL_minus_EOM_phi": "0",
+        "EL_minus_EOM_psi": "0",
+        "EL_minus_EOM_psib": "0"
+      }
+    },
+    "nonproxy_variational_objects_anchor": {
+      "metric": {
+        "dL_dR_contract": "-H2*xiHR + Mpl2/2 + 2*R*c1 - phi2*xiphiR",
+        "dL_dRicci2_contract": "c2",
+        "dL_dRiemann2_contract": "c3",
+        "notes": "Contract-level symbolic objects for nonproxy metric variation assembly."
+      },
+      "spinor": {
+        "L_fermion_reduced_contract": "-mpsi*psi(x)*psib(x) - ypsi*h(x)*psi(x)*psib(x) - I*psi(x)*Derivative(psib(x), x)/2 + I*psib(x)*Derivative(psi(x), x)/2",
+        "EOM_psi_contract": "(mpsi + ypsi*h(x))*psib(x) + I*Derivative(psib(x), x)",
+        "EOM_psib_contract": "(mpsi + ypsi*h(x))*psi(x) - I*Derivative(psi(x), x)",
+        "notes": "Computable spinor-side variation templates; full curved gamma/tetrad export remains OPEN."
+      }
+    }
+  },
+  "bidirectional_readout": {
+    "forward_kernel_to_coefficients": "EXPORTED",
+    "forward_coefficients_to_full_lagrangian": "EXPORTED",
+    "forward_lagrangian_to_eom": "EXPORTED_REDUCED_PLUS_NONPROXY_OBJECT_SCAFFOLD",
+    "reverse_eom_to_variational_origin_local": "PASS_ALL_ZERO",
+    "reverse_global_nonproxy_theorem": "OPEN"
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "open_obligations": [
+    "full_nonproxy_metric_tensor_eom_export",
+    "full_nonproxy_spinor_connection_eom_export",
+    "global_helmholtz_integrability_nonproxy",
+    "brst_nilpotency_and_cohomology_nonproxy",
+    "cutkosky_unitarity_full_sector",
+    "counterterm_flow_renormalization_closure",
+    "background_independence_family_theorem",
+    "qw2191_selector_source_or_nonclosure_theorem"
+  ],
+  "next_honest_step": "Wyprowadzić jawny full nonproxy metric+spinor covariant EOM export (nie tylko obiekty kontraktowe), aby otworzyć formalny etap global_helmholtz_integrability_nonproxy i BRST nilpotency proof.",
+  "lay_summary": "To pełny raport: od kernela strict, przez współczynniki i pełny lagranżian, aż po równania ruchu i kontrolę wsteczną. Nadal brakuje finalnych, globalnych dowodów nonproxy wymaganych do domknięcia teorii."
+}

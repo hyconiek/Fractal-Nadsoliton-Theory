@@ -1,0 +1,54 @@
+{
+  "checkpoint": "P1770_S720",
+  "timestamp_utc": "2026-05-15T11:11:45.039555+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "input_anchor": "p1769_s719",
+  "issue_detected": "Curvature-tensor notation encoding ambiguity in componentwise lock string (risk for parser/backends).",
+  "sanitized_curvature_tensor_index_lock": {
+    "H_R2_munu": "H^(R2)_{mu nu} = 2 R R_{mu nu} - (1/2) g_{mu nu} R^2 + 2(g_{mu nu} Box - nabla_mu nabla_nu)R",
+    "H_Ric2_munu": "H^(Ric2)_{mu nu} = 2 R_{mu alpha}R_{nu}^alpha - (1/2)g_{mu nu}R_{alpha beta}R^{alpha beta} + Box R_{mu nu} + g_{mu nu} nabla_alpha nabla_beta R^{alpha beta} - 2 nabla_alpha nabla_(mu R_{nu)}^alpha",
+    "H_Riem2_munu": "H^(Riem2)_{mu nu} = 2 R_{mu alpha beta gamma}R_{nu}^{alpha beta gamma} - (1/2)g_{mu nu}R_{alpha beta gamma delta}R^{alpha beta gamma delta} - 4 nabla_alpha nabla_beta R_{mu nu}^{alpha beta}"
+  },
+  "gbw_retry_contract": {
+    "precondition": [
+      "Use sanitized curvature tensor notation (ASCII-safe, parser-safe).",
+      "Keep same background family and same residual basis B1/B2/B3/C1/C2.",
+      "Keep no-false-pass verdict policy unchanged."
+    ],
+    "must_output": [
+      "componentwise_EL_g_minus_E_munu_B1_B2_B3_C1_C2",
+      "componentwise_nabla_mu_E_total_munu_trace",
+      "verdict in {PASS_ZERO, OBSTRUCTION_WITH_DIVERGENCE_TRACE}"
+    ]
+  },
+  "gate_update": {
+    "G_BW": "RETRY_REQUIRED_AFTER_NOTATION_SANITIZATION",
+    "G_BRST": "BLOCKED_UNTIL_G_BW_FINAL_VERDICT",
+    "G_CUT": "BLOCKED_UNTIL_G_BW_AND_G_BRST"
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "no_false_pass_claim": true,
+  "next_honest_step": "Wykonać ponowną próbę G_BW z oczyszczoną notacją tensorową i opublikować pełny trace residual/divergence bez zmiany kryteriów werdyktu.",
+  "lay_summary": "Najpierw naprawiamy zapis matematyczny tak, by narzędzia liczące rozumiały go jednoznacznie. Potem dopiero powtarzamy test i sprawdzamy, czy blokada znika.",
+  "previous_obstruction_context": {
+    "verdict": "OBSTRUCTION_WITH_DIVERGENCE_TRACE",
+    "pass_zero_issued": false,
+    "metric_residual_status": "NOT_CLOSED",
+    "divergence_status": "NOT_CLOSED",
+    "residual_vector_B1_B2_B3_C1_C2": {
+      "B1": "UNRESOLVED_CURVATURE_VARIATION_TERM",
+      "B2": "UNRESOLVED_CURVATURE_VARIATION_TERM",
+      "B3": "UNRESOLVED_DOUBLE_DIVERGENCE_TERM",
+      "C1": "UNRESOLVED_MIX_COUNTERTERM_TERM",
+      "C2": "UNRESOLVED_MIX_COUNTERTERM_TERM"
+    },
+    "divergence_trace": [
+      "nabla_mu(H_R2^{mu nu}) not fully expanded componentwise",
+      "nabla_mu(H_Ricci2^{mu nu}) not fully expanded componentwise",
+      "nabla_mu(H_Riemann2^{mu nu}) not fully expanded componentwise",
+      "nabla_mu(T_CT^{mu nu}) dependency on unresolved CT tensor basis"
+    ],
+    "linked_obstruction_map": {}
+  }
+}

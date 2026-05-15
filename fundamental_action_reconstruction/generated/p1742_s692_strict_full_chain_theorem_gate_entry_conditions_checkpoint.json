@@ -1,0 +1,104 @@
+{
+  "checkpoint": "P1742_S692",
+  "timestamp_utc": "2026-05-15T03:13:07.017211+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "chain": "K_strict -> coefficients -> full nonskeleton L_total -> EOM -> reverse tests -> theorem gate entry conditions",
+  "full_lagrangian_density_nonskeleton_instantiated": {
+    "L_gravity": "sqrt(-g)*[(1.72000000000000/2)R - Λ + 0.311688311688312 R^2 + 0.408311688311688 R_{μν}R^{μν} + 0.415800000000000 R_{μνρσ}R^{μνρσ}]",
+    "L_gauge": "sqrt(-g)*[-(1/4) Σ_a Z_a F^a_{μν}F_a^{μν}]",
+    "L_fermion": "sqrt(-g)*[Σ_f i ψ̄_f γ^a e_a^{ μ}D_μ ψ_f]",
+    "L_higgs": "sqrt(-g)*[(D_μH)^†(D^μH) - 0.0345030625000000(H^†H) - 1.57912790697674(H^†H)^2 - 0.418604651162791(H^†H)R]",
+    "L_yukawa": "sqrt(-g)*[-(y_u Q̄H~u + y_d Q̄Hd + y_e L̄He + h.c.)]",
+    "L_scalar_phi": "sqrt(-g)*[(1/2)(∇φ)^2 - (1/2)m_φ^2φ^2 - (λ_3/3!)φ^3 - (λ_4/4!)φ^4 - λ_{φH}φ^2(H^†H) - ξ_{φR}φ^2R]",
+    "L_mix": "sqrt(-g)*[χ_RG Σ_a R F^a_{μν}F_a^{μν} + CT_{1loop}(R^2,Ricci^2,Riemann^2,SM-mix)]"
+  },
+  "dependency_dag_anchor": {
+    "nodes": [
+      "K_strict",
+      "coefficients",
+      "full_nonskeleton_L_total",
+      "EOM_bundle",
+      "T1_H1_cross_variation",
+      "T2_metric_ELg_minus_Emunu",
+      "T3_qg_gate_update",
+      "QG_renormalization",
+      "QG_unitarity",
+      "QG_background_independence"
+    ],
+    "edges": [
+      [
+        "K_strict",
+        "coefficients"
+      ],
+      [
+        "coefficients",
+        "full_nonskeleton_L_total"
+      ],
+      [
+        "full_nonskeleton_L_total",
+        "EOM_bundle"
+      ],
+      [
+        "EOM_bundle",
+        "T1_H1_cross_variation"
+      ],
+      [
+        "EOM_bundle",
+        "T2_metric_ELg_minus_Emunu"
+      ],
+      [
+        "T1_H1_cross_variation",
+        "T3_qg_gate_update"
+      ],
+      [
+        "T2_metric_ELg_minus_Emunu",
+        "T3_qg_gate_update"
+      ],
+      [
+        "T3_qg_gate_update",
+        "QG_renormalization"
+      ],
+      [
+        "T3_qg_gate_update",
+        "QG_unitarity"
+      ],
+      [
+        "T3_qg_gate_update",
+        "QG_background_independence"
+      ]
+    ],
+    "result_policy": "T1/T2 must be PASS_ZERO or OBSTRUCTION before any QG gate update"
+  },
+  "theorem_gate_entry_conditions": {
+    "QG_renormalization": {
+      "requires": [
+        "T1_H1_cross_variation_result_published",
+        "T2_metric_ELg_minus_Emunu_result_published",
+        "counterterm_flow_witness_exported"
+      ],
+      "entry_status": "BLOCKED"
+    },
+    "QG_unitarity": {
+      "requires": [
+        "T1_H1_cross_variation_result_published",
+        "T2_metric_ELg_minus_Emunu_result_published",
+        "Cutkosky_ghost_pole_witness_exported"
+      ],
+      "entry_status": "BLOCKED"
+    },
+    "QG_background_independence": {
+      "requires": [
+        "T1_H1_cross_variation_result_published",
+        "T2_metric_ELg_minus_Emunu_result_published",
+        "background_family_cocycle_witness_exported"
+      ],
+      "entry_status": "BLOCKED"
+    }
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "no_false_pass_claim": true,
+  "next_honest_step": "Wykonać T1 i T2 oraz opublikować ich klasyfikacje, a następnie dostarczyć pierwszy theorem witness dla jednej bramki (renormalization/unitarity/background-independence) bez claimu closure.",
+  "lay_summary": "To warunki wejścia do wielkich twierdzeń. Najpierw muszą być gotowe dwa testy techniczne, dopiero potem można uczciwie ruszać z dowodami kwantowej grawitacji."
+}

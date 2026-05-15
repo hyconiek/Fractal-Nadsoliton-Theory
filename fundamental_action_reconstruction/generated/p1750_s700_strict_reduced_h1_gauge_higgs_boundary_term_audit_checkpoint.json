@@ -1,0 +1,32 @@
+{
+  "checkpoint": "P1750_S700",
+  "timestamp_utc": "2026-05-15T03:34:36.138670+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "scope": "REDUCED_PROXY_ONLY_NOT_NONPROXY",
+  "input_anchor": "p1749_s699",
+  "h1_difference_raw": "g*Derivative(h(x), x)",
+  "boundary_term_audit": {
+    "statement": "Integral of H1 difference vanishes if boundary term [g*h]_{∂Ω} = 0 is imposed.",
+    "primitive": "g*h(x)",
+    "derivative": "g*Derivative(h(x), x)",
+    "exact_derivative_confirmed": false
+  },
+  "classification": {
+    "verdict": "OBSTRUCTION",
+    "strict_local_status": "FAIL_LOCAL_STRICT_ZERO",
+    "weak_form_status": "NOT_RECOVERED",
+    "pass_zero_issued": false
+  },
+  "policy_note": "No PASS_ZERO issued: weak-form salvage with boundary clause is not full strict-core closure.",
+  "remaining_open": [
+    "nonproxy_covariant_H1_A_mu_H_with_boundary_control",
+    "explicit_covariant_E_A_mu_expression_nonproxy",
+    "explicit_covariant_E_H_expression_nonproxy",
+    "renormalization_closure_counterterm_stability",
+    "cutkosky_unitarity_full_sector",
+    "background_family_independence"
+  ],
+  "next_honest_step": "Uruchomić analogiczny boundary-aware H1 audit na jawnych nonproxy E_A^μ i E_H (4D) oraz dołączyć formalną kontrolę wyrazów brzegowych w kontrakcie P1732.",
+  "lay_summary": "Wykryta przeszkoda nie jest losowa: to dokładna pochodna, więc znika po całkowaniu przy odpowiednim warunku brzegowym. To poprawia diagnozę, ale nadal nie zamyka pełnej teorii."
+}

@@ -1,0 +1,52 @@
+{
+  "checkpoint": "P1727_S677",
+  "timestamp_utc": "2026-05-15T02:31:52.484512+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "chain": "K_strict -> coefficients -> full explicit L_total -> basis reduction pass1+pass2 -> residual coefficient vector stub",
+  "basis_anchor": {
+    "second_derivative_basis": [
+      "B1",
+      "B2",
+      "B3"
+    ],
+    "riemann_transport_basis": [
+      "C1",
+      "C2"
+    ],
+    "ready_for_residual_coefficient_assembly": true
+  },
+  "residual_coefficient_vector_stub": {
+    "basis_order": [
+      "B1",
+      "B2",
+      "B3",
+      "C1",
+      "C2"
+    ],
+    "residual_vector_symbolic": {
+      "B1": "k_B1",
+      "B2": "k_B2",
+      "B3": "k_B3",
+      "C1": "k_C1",
+      "C2": "k_C2"
+    },
+    "zero_condition": "k_B1=k_B2=k_B3=k_C1=k_C2=0",
+    "current_state": "COEFFICIENTS_NOT_EVALUATED_COMPONENTWISE"
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "open_obligations": [
+    "evaluate_componentwise_coefficients_k_B1_to_k_C2",
+    "metric_sector_PASS_ZERO_or_OBSTRUCTION_certificate",
+    "bianchi_ward_cross_consistency_certificate",
+    "global_helmholtz_integrability_nonproxy",
+    "brst_nilpotency_and_cohomology_nonproxy",
+    "cutkosky_unitarity_full_sector",
+    "counterterm_flow_renormalization_closure",
+    "background_independence_family_theorem",
+    "qw2191_selector_source_or_nonclosure_theorem"
+  ],
+  "next_honest_step": "Policzyć numerycznie/symbolicznie k_B1..k_C2 dla pierwszego ansatzu i wydać PASS_ZERO lub OBSTRUCTION z wektorem niezerowym.",
+  "lay_summary": "Mamy już wspólną bazę i gotowy format wyniku. Następny krok to policzyć konkretne współczynniki i sprawdzić, czy wszystkie znikają."
+}

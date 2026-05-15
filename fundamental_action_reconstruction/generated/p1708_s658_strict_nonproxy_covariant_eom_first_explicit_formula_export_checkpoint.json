@@ -1,0 +1,89 @@
+{
+  "checkpoint": "P1708_S658",
+  "timestamp_utc": "2026-05-15T01:10:27.544819+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "chain": "K_strict -> coefficients -> full explicit L_total -> first explicit nonproxy covariant EOM formulas",
+  "contract_anchor": {
+    "fields": {
+      "metric": [
+        "g_{μν}"
+      ],
+      "gauge": [
+        "A^a_{μ}"
+      ],
+      "higgs": [
+        "H",
+        "H†"
+      ],
+      "fermion": [
+        "psi_f",
+        "psibar_f"
+      ],
+      "aux_geometry": [
+        "e^a_{μ}",
+        "omega_{μab}"
+      ]
+    },
+    "equations_contract": {
+      "metric": "E_{μν}(g,A,H,psi; couplings)=0",
+      "gauge": "D_μ F^{a μν} - J^{a ν}_{matter}=0",
+      "higgs": "D_μD^μH + ∂V_eff/∂H† + ξ_HR R H + Yukawa_backreaction = 0",
+      "fermion": "i γ^a e_a^{ μ}D_μ ψ_f - m_f(H) ψ_f = 0 and adjoint equation"
+    },
+    "variation_contract": {
+      "metric_required": [
+        "delta_sqrt_minus_g",
+        "delta_R",
+        "delta_R2",
+        "delta_Ricci2",
+        "delta_Riemann2"
+      ],
+      "spinor_required": [
+        "delta_gamma_curved",
+        "delta_spin_connection",
+        "delta_psibar",
+        "delta_psi"
+      ]
+    },
+    "consistency_contract": {
+      "local_EL_residual_identity": "REQUIRED_ALL_FIELDS",
+      "gauge_Bianchi_compatibility": "REQUIRED",
+      "diffeomorphism_ward_identity": "REQUIRED"
+    }
+  },
+  "full_lagrangian_explicit_anchor": {
+    "L_scalar": "sqrt(-g)*[1/2 g^{μν}(∇_μφ)(∇_νφ) - (m_φ^2/2)φ^2 - (λ_3/3!)φ^3 - (λ_4/4!)φ^4]",
+    "L_gauge": "sqrt(-g)*[-1/4 G^A_{μν}G_A^{μν} - 1/4 W^I_{μν}W_I^{μν} - 1/4 B_{μν}B^{μν}]",
+    "L_fermion": "sqrt(-g)*[Σ_f i ψ̄_f γ^a e_a^{ μ}D_μ ψ_f - Σ_f y_f(ψ̄_{fL}Hψ_{fR}+h.c.)]",
+    "L_higgs": "sqrt(-g)*[(D_μH)^†(D^μH) - μ_H^2(H^†H) - λ_H(H^†H)^2]",
+    "L_gravity": "sqrt(-g)*[(M_Pl^2/2)R - Λ + c1 R^2 + c2 R_{μν}R^{μν} + c3 R_{μναβ}R^{μναβ}]",
+    "L_mix": "sqrt(-g)*[ξ_HR(H^†H)R + ξ_φR φ^2R + λ_{φH}φ^2(H^†H)]"
+  },
+  "first_explicit_nonproxy_formula_pack": {
+    "metric_eom_template": "E_{μν} := (M_Pl^2/2)G_{μν} + Λ g_{μν} + H_{μν}[c1 R^2 + c2 R_{αβ}R^{αβ} + c3 R_{αβγδ}R^{αβγδ}] - T^{(gauge+higgs+fermion+scalar+mix)}_{μν} = 0",
+    "gauge_eom_template": "D_μ(Z_a F^{a μν}) + χ_RG ∇_μ(R F^{a μν}) - J^{a ν}_{matter} = 0",
+    "higgs_eom_template": "D_μD^μH + μ_H^2 H + 2 λ_H(H†H)H + ξ_HR R H + δ_Yukawa/δH† + δ_mix/δH† = 0",
+    "fermion_eom_template": "i γ^a e_a^{ μ}D_μ ψ_f - y_f H ψ_{fR/L} - m_f ψ_f = 0, and adjoint equation for ψ̄_f"
+  },
+  "formula_scope_note": "First explicit covariant formula export packet (template-level, convention-fixed). Full symbolic tensor expansion remains OPEN.",
+  "bidirectional_status": {
+    "forward_formula_export": "FIRST_EXPLICIT_PACK_EXPORTED",
+    "reverse_local_identity": "AVAILABLE_REDUCED_REFERENCE",
+    "reverse_global_nonproxy": "OPEN_THEOREM_REQUIRED"
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "open_obligations": [
+    "full_symbolic_tensor_expansion_metric_sector",
+    "full_symbolic_curved_gamma_spin_connection_expansion",
+    "global_helmholtz_integrability_nonproxy",
+    "brst_nilpotency_and_cohomology_nonproxy",
+    "cutkosky_unitarity_full_sector",
+    "counterterm_flow_renormalization_closure",
+    "background_independence_family_theorem",
+    "qw2191_selector_source_or_nonclosure_theorem"
+  ],
+  "next_honest_step": "Rozwinąć first_explicit_nonproxy_formula_pack do jawnej symbolicznej postaci tensorowej/spinorowej z jedną zamrożoną konwencją indeksową i podpisać local EL residual tests dla wszystkich sektorów.",
+  "lay_summary": "Po raz pierwszy zapisaliśmy docelowe równania w pełnej kowariantnej formie sektorowej (jeszcze jako pakiet jawnych szablonów). To zbliża teorię do finalnej postaci obliczeniowej potrzebnej do ścisłych dowodów."
+}
