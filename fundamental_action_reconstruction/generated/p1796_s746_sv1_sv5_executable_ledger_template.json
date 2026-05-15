@@ -1,0 +1,29 @@
+{
+  "sv_ledgers": [
+    {
+      "ledger_id": "SVX_RUN_YYYYMMDD_HHMM",
+      "sv_key": "SVX",
+      "freeze_id": "FREEZE_ID_REQUIRED",
+      "classification": {
+        "scope": "LOCAL",
+        "representation": "NONPROXY",
+        "artifact_level": "FULL_EXPORT"
+      },
+      "verdict": "OPEN_OBSTRUCTION_WITH_TRACE",
+      "residual_or_witness": {
+        "residual_value": null,
+        "witness_id": null,
+        "check_command": "python3 run_componentwise_check.py --sv SVX",
+        "check_output_digest": "REPLACE_WITH_HASH"
+      },
+      "obstruction_trace": "REQUIRED_IF_OPEN",
+      "upstream_dependencies": [],
+      "downstream_locks": [
+        "G_BW",
+        "G_BRST",
+        "G_CUT"
+      ]
+    }
+  ],
+  "notes": "Duplicate row for SV1..SV5 with common freeze_id."
+}

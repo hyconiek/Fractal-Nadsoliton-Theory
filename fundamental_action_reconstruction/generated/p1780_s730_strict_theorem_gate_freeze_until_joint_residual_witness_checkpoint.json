@@ -1,0 +1,52 @@
+{
+  "checkpoint": "P1780_S730",
+  "timestamp_utc": "2026-05-15T12:34:22.929810+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "input_anchors": [
+    "p1767_s717",
+    "p1778_s728",
+    "p1779_s729"
+  ],
+  "theorem_gate_freeze": {
+    "freeze_active": true,
+    "freeze_scope": [
+      "G_BW_promotion",
+      "G_BRST_promotion",
+      "G_CUT_promotion",
+      "renormalization_theorem_gate_update",
+      "background_independence_theorem_gate_update"
+    ],
+    "unfreeze_conditions": [
+      "W1 accepted as FULL_EXPORT under P1774 contract",
+      "joint H1+metric componentwise run executed on same background and index convention",
+      "joint run published with PASS_ZERO or OBSTRUCTION_WITH_DIVERGENCE_TRACE and explicit witness trace"
+    ],
+    "current_blocker": {
+      "joint_run_allowed_now": false,
+      "reason": "W1 not FULL_EXPORT yet",
+      "next_blocker": "W1_B2_B3_projection_and_HR2_divergence_normalization"
+    }
+  },
+  "consistency_link": {
+    "bw_brst_cut_sequence_ref": {},
+    "priority_success_tracker_ref": {
+      "K_strict_to_full_variational_structure": "OPEN_COMPONENTWISE_REQUIRED",
+      "full_variational_structure_to_covariant_EOM_bundle": "PARTIAL_OPERATOR_LEVEL_DONE",
+      "covariant_EOM_bundle_to_quantum_consistency_constraints": "OPEN_THEOREM_LEVEL_REQUIRED"
+    }
+  },
+  "proofs_and_nonproofs": {
+    "proven_now": [
+      "A formal freeze contract is exported to prevent theorem-gate drift before joint residual witness publication."
+    ],
+    "still_open": [
+      "No new residual theorem witness was generated in this freeze step.",
+      "QG theorem gates remain blocked pending joint witness execution."
+    ]
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "no_false_pass_claim": true,
+  "next_honest_step": "Dowieźć W1 FULL_EXPORT, wykonać joint H1+metric run i dopiero po publikacji witness trace rozważać odblokowanie BW->BRST->CUT oraz dalsze theorem-gates.",
+  "lay_summary": "Wprowadzono twardą blokadę formalną: dopóki nie ma wspólnego, jawnego wyniku kluczowych testów, nie wolno ogłaszać postępu w bramkach końcowych."
+}

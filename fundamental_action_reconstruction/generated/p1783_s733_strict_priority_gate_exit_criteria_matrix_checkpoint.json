@@ -1,0 +1,75 @@
+{
+  "checkpoint": "P1783_S733",
+  "timestamp_utc": "2026-05-15T13:04:49.381706+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "input_anchors": [
+    "p1778_s728",
+    "p1780_s730",
+    "p1782_s732"
+  ],
+  "priority_gate_exit_criteria_matrix": {
+    "W1_FULL_EXPORT": {
+      "required": true,
+      "met": false,
+      "source": "p1778.gate_decision"
+    },
+    "JOINT_H1_METRIC_COMPONENTWISE_RUN": {
+      "required": true,
+      "met": false,
+      "source": "pending joint execution witness"
+    },
+    "JOINT_RESULT_CLASSIFIED_PASS_OR_OBSTRUCTION": {
+      "required": true,
+      "met": false,
+      "allowed": [
+        "PASS_ZERO",
+        "OBSTRUCTION_WITH_DIVERGENCE_TRACE"
+      ]
+    },
+    "THEOREM_GATE_FREEZE_RELEASE": {
+      "required": true,
+      "met": false,
+      "source": "p1780.theorem_gate_freeze.freeze_active"
+    }
+  },
+  "closure_gap_ref": {
+    "E_A_mu_nonproxy": {
+      "state": "OPEN_NEEDS_INDEX_LEVEL_EXPANSION",
+      "class": "NONPROXY_OPERATOR_EXPORT_DONE_COMPONENTWISE_OPEN"
+    },
+    "E_H_nonproxy": {
+      "state": "OPEN_NEEDS_INDEX_LEVEL_EXPANSION",
+      "class": "NONPROXY_OPERATOR_EXPORT_DONE_COMPONENTWISE_OPEN"
+    },
+    "EL_g_nonproxy": {
+      "state": "OPEN_COMPONENTWISE_REQUIRED",
+      "class": "NONPROXY_OPERATOR_EXPORT_DONE_COMPONENTWISE_OPEN"
+    },
+    "H1_weak_form": {
+      "state": "UPGRADED_OPERATOR_LEVEL",
+      "class": "WEAK_FORM_READY_STRICT_LOCAL_OPEN"
+    },
+    "Bianchi_Ward": {
+      "state": "BLOCKED",
+      "class": "PENDING_JOINT_COMPONENTWISE_WITNESS"
+    },
+    "BRST_Cutkosky": {
+      "state": "BLOCKED",
+      "class": "PENDING_BW_PASS_AND_THEOREM_WITNESSES"
+    }
+  },
+  "global_exit_ready": false,
+  "proofs_and_nonproofs": {
+    "proven_now": [
+      "A formal exit-criteria matrix for promoting priority gates is exported with machine-readable required/met flags."
+    ],
+    "still_open": [
+      "Exit remains not ready because joint witness and freeze-release criteria are unmet."
+    ]
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "no_false_pass_claim": true,
+  "next_honest_step": "Spełnić kolejno wszystkie kryteria exit-matrix (W1 FULL_EXPORT, joint run, klasyfikacja PASS/OBSTRUCTION, release freeze) i dopiero wtedy promować theorem gates.",
+  "lay_summary": "To lista warunków wyjścia: dopóki choć jeden warunek nie jest spełniony, system uczciwie nie pozwala przejść do końcowych bramek."
+}

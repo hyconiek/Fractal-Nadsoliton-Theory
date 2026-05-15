@@ -1,0 +1,58 @@
+{
+  "checkpoint": "P1785_S735",
+  "timestamp_utc": "2026-05-15T13:19:39.139645+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "input_anchors": [
+    "p1783_s733",
+    "p1784_s734"
+  ],
+  "single_lane_execution_scoreboard": [
+    {
+      "lane_step": "L1_A1_W1_FULL_EXPORT",
+      "status": "OPEN",
+      "ready_to_execute": true,
+      "completion_condition": "W1_FULL_EXPORT met=True",
+      "source": {
+        "required": true,
+        "met": false,
+        "source": "p1778.gate_decision"
+      }
+    },
+    {
+      "lane_step": "L2_A2_JOINT_H1_METRIC_RUN",
+      "status": "OPEN_BLOCKED_BY_L1",
+      "ready_to_execute": false,
+      "completion_condition": "JOINT_H1_METRIC_COMPONENTWISE_RUN met=True + result classified PASS_ZERO/OBSTRUCTION_WITH_DIVERGENCE_TRACE",
+      "source": {
+        "required": true,
+        "met": false,
+        "source": "pending joint execution witness"
+      }
+    },
+    {
+      "lane_step": "L3_A3_BW_BRST_CUT_PROGRESS",
+      "status": "OPEN_BLOCKED_BY_L1_L2",
+      "ready_to_execute": false,
+      "completion_condition": "THEOREM_GATE_FREEZE_RELEASE met=True",
+      "source": {
+        "required": true,
+        "met": false,
+        "source": "p1780.theorem_gate_freeze.freeze_active"
+      }
+    }
+  ],
+  "global_exit_ready": false,
+  "proofs_and_nonproofs": {
+    "proven_now": [
+      "Single-lane ordering for current-priority execution is explicitly published with step-level readiness flags."
+    ],
+    "still_open": [
+      "Only L1 is executable now; L2 and L3 remain blocked by unmet upstream conditions."
+    ]
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "no_false_pass_claim": true,
+  "next_honest_step": "Wykonać L1 (A1), po sukcesie odblokować L2, a następnie L3 — bez zmiany kolejności i bez promotion theorem-gates przed witnessami.",
+  "lay_summary": "To tablica etapów: pokazuje, co można zrobić teraz, a co musi poczekać na wcześniejsze kroki."
+}

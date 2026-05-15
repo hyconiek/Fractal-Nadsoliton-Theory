@@ -1,0 +1,38 @@
+{
+  "checkpoint_id": "P1789_S739",
+  "title": "STRICT_CURRENT_PRIORITY_BIDIRECTIONAL_CLOSURE_STATE_VECTOR",
+  "input_reuse": [
+    "p1764_s714_strict_covariant_nonproxy_ea_eh_explicit_export_checkpoint.json",
+    "p1765_s715_strict_nonproxy_metric_elg_explicit_export_checkpoint.json",
+    "p1787_s737_strict_unified_ea_eh_componentwise_export_and_h1_run_contract_checkpoint.json",
+    "p1788_s738_strict_theorem_gate_prerequisite_lock_matrix_checkpoint.json"
+  ],
+  "state_vector": {
+    "SV1_E_A_mu_nonproxy_covariant_explicit": "OPEN_COMPONENTWISE_REQUIRED",
+    "SV2_E_H_nonproxy_covariant_explicit": "OPEN_COMPONENTWISE_REQUIRED",
+    "SV3_EL_g_nonproxy_explicit": "OPEN_COMPONENTWISE_REQUIRED",
+    "SV4_boundary_term_control": "PARTIAL_OPEN",
+    "SV5_H1_4D_weak_form": "OPEN_COMPONENTWISE_REQUIRED",
+    "SV6_Bianchi_Ward_global": "OPEN_LOCKED_BY_COMPONENTWISE_DIVERGENCE",
+    "SV7_BRST_global": "OPEN_LOCKED_BY_NILPOTENCY_WITNESS",
+    "SV8_Cutkosky_global": "OPEN_LOCKED_BY_UNITARITY_WITNESS"
+  },
+  "interpretation_discipline": {
+    "local_pass_implies_global_pass": false,
+    "scaffold_implies_full_export": false,
+    "missing_residual_or_witness_means_open": true
+  },
+  "minimal_bidirectional_closure_condition": [
+    "single_background_family_componentwise_run_for_EA_EH_ELg",
+    "explicit_H1_ledger_and_ELg_minus_E_munu_ledger",
+    "strict_theorem_gate_sequence_BW_then_BRST_then_Cutkosky"
+  ],
+  "dependency_snapshot": {
+    "p1764_status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+    "p1765_status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+    "p1787_status": "UNIFIED_CONTRACT_READY_GATES_STILL_OPEN",
+    "p1788_status": "THEOREM_GATES_LOCKED_KEEP_GLOBAL_OPEN"
+  },
+  "next_honest_step": "Execute coordinated run-pack for SV1..SV5 and publish only PASS_ZERO or OPEN_OBSTRUCTION_WITH_TRACE, then evaluate theorem gates without premature promotion.",
+  "status": "CURRENT_PRIORITY_VECTOR_SYNCHRONIZED_GLOBAL_STILL_OPEN"
+}

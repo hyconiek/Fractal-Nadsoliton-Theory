@@ -1,0 +1,45 @@
+{
+  "checkpoint": "P1779_S729",
+  "timestamp_utc": "2026-05-15T12:22:59.207917+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "input_anchors": [
+    "p1764_s714",
+    "p1765_s715",
+    "p1778_s728"
+  ],
+  "current_priority_tracker": {
+    "explicit_covariant_nonproxy_E_A_mu": "EXPORTED_OPERATOR_LEVEL",
+    "explicit_covariant_nonproxy_E_H": "EXPORTED_OPERATOR_LEVEL",
+    "metric_EL_g_export": "EXPORTED_OPERATOR_LEVEL",
+    "boundary_term_control": "FINALIZED_CONTRACT_PRESENT",
+    "H1_4D_weak_form_readiness": "OPEN_COMPONENTWISE_REQUIRED",
+    "Bianchi_Ward_consistency": "BLOCKED_PENDING_W1_AND_COMPONENTWISE_DIVERGENCE",
+    "BRST_Cutkosky_theorem_gates": "BLOCKED_PENDING_BW_PASS_AND_THEOREM_WITNESSES"
+  },
+  "success_condition_tracker": {
+    "K_strict_to_full_variational_structure": "OPEN_COMPONENTWISE_REQUIRED",
+    "full_variational_structure_to_covariant_EOM_bundle": "PARTIAL_OPERATOR_LEVEL_DONE",
+    "covariant_EOM_bundle_to_quantum_consistency_constraints": "OPEN_THEOREM_LEVEL_REQUIRED"
+  },
+  "blocking_fact": {
+    "joint_run_allowed_now": false,
+    "reason": "W1 not FULL_EXPORT yet",
+    "next_blocker": "W1_B2_B3_projection_and_HR2_divergence_normalization"
+  },
+  "proofs_and_nonproofs": {
+    "proven_now": [
+      "Priority tracker aligned to currently exported strict nonproxy operator-level artifacts.",
+      "Success condition decomposition exported with explicit OPEN/PARTIAL states (no solved claim)."
+    ],
+    "still_open": [
+      "Componentwise H1 and EL_g-E_munu residual witnesses.",
+      "Bianchi/Ward divergence closure at theorem gate quality.",
+      "BRST nilpotency and Cutkosky unitarity theorem witnesses."
+    ]
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "no_false_pass_claim": true,
+  "next_honest_step": "Zamknąć W1 FULL_EXPORT i uruchomić wspólny componentwise run H1+metric; dopiero po publikacji PASS_ZERO/OBSTRUCTION aktualizować BW, następnie BRST/Cutkosky.",
+  "lay_summary": "Mamy mapę postępu do celu końcowego: część operatorowa jest gotowa, ale kluczowe dowody komponentowe i kwantowe są nadal przed nami."
+}

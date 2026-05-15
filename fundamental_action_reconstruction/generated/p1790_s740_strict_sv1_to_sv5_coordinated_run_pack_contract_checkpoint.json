@@ -1,0 +1,51 @@
+{
+  "checkpoint_id": "P1790_S740",
+  "title": "STRICT_SV1_TO_SV5_COORDINATED_RUN_PACK_CONTRACT",
+  "input_reuse": [
+    "p1789_s739_strict_current_priority_bidirectional_closure_state_vector_checkpoint.json",
+    "p1788_s738_strict_theorem_gate_prerequisite_lock_matrix_checkpoint.json"
+  ],
+  "execution_contract": {
+    "strict_only": true,
+    "nonproxy_only": true,
+    "single_background_family": true,
+    "single_index_convention": true,
+    "single_boundary_control_clause": true,
+    "decision_policy": [
+      "PASS_ZERO",
+      "OPEN_OBSTRUCTION_WITH_TRACE"
+    ]
+  },
+  "run_order_no_skip": [
+    "SV1",
+    "SV2",
+    "SV3",
+    "SV4",
+    "SV5"
+  ],
+  "current_sv_snapshot": {
+    "SV1": "OPEN_COMPONENTWISE_REQUIRED",
+    "SV2": "OPEN_COMPONENTWISE_REQUIRED",
+    "SV3": "OPEN_COMPONENTWISE_REQUIRED",
+    "SV4": "PARTIAL_OPEN",
+    "SV5": "OPEN_COMPONENTWISE_REQUIRED"
+  },
+  "pass_requirements": [
+    "componentwise_ledger_E_A_mu",
+    "componentwise_ledger_E_H",
+    "componentwise_ledger_EL_g",
+    "componentwise_H1_zero_vector_ledger",
+    "boundary_control_confirmed_on_same_freeze"
+  ],
+  "theorem_gate_promotion_after_run_pack": {
+    "allowed": false,
+    "reason": "BW_BRST_CUT_still_locked_until_global_witnesses",
+    "locks": {
+      "TG1": "OPEN_LOCKED_BY_COMPONENTWISE_DIVERGENCE",
+      "TG2": "OPEN_LOCKED_BY_NILPOTENCY_WITNESS",
+      "TG3": "OPEN_LOCKED_BY_UNITARITY_WITNESS"
+    }
+  },
+  "next_honest_step": "Execute SV1->SV5 coordinated run-pack and update only SV1..SV5 from explicit ledgers, keeping SV6..SV8 unchanged until global theorem witnesses are exported.",
+  "status": "RUN_PACK_CONTRACT_READY_EXECUTION_REQUIRED"
+}

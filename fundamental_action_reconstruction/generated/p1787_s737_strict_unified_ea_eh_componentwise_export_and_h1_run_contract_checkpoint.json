@@ -1,0 +1,44 @@
+{
+  "checkpoint_id": "P1787_S737",
+  "title": "STRICT_UNIFIED_EA_EH_COMPONENTWISE_EXPORT_AND_H1_RUN_CONTRACT",
+  "scope": "strict-only local execution contract for G1+G2+G5",
+  "input_reuse": [
+    "p1760_s710_strict_shared_background_family_contract_delivery_checkpoint.json",
+    "p1761_s711_strict_boundary_term_control_clause_delivery_checkpoint.json",
+    "p1762_s712_strict_boundary_control_contract_finalization_checkpoint.json",
+    "p1764_s714_strict_covariant_nonproxy_ea_eh_explicit_export_checkpoint.json",
+    "p1786_s736_strict_current_priority_nonproxy_closure_gate_matrix_checkpoint.json"
+  ],
+  "strict_contract": {
+    "route_policy": "STRICT_ONLY_NO_LEGACY_BRIDGE",
+    "artifact_policy": "NONPROXY_EXPORTS_ONLY",
+    "background_policy": "SINGLE_SHARED_BACKGROUND_FAMILY_REQUIRED",
+    "index_policy": "SINGLE_INDEX_CONVENTION_REQUIRED",
+    "pass_policy": "PASS_REQUIRES_EXPLICIT_COMPONENTWISE_RESIDUAL_ZERO_AND_WITNESS_LEDGER"
+  },
+  "run_order": [
+    "G1_EA_NONPROXY_EXPLICIT_EXPORT",
+    "G2_EH_NONPROXY_EXPLICIT_EXPORT",
+    "G5_H1_4D_WEAK_FORM"
+  ],
+  "gate_status_snapshot": {
+    "G1": "OPEN",
+    "G2": "OPEN",
+    "G5": "OPEN",
+    "boundary_control": "PARTIAL_OPEN"
+  },
+  "dependency_snapshot": {
+    "shared_background_contract_status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+    "boundary_clause_status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+    "boundary_finalization_status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+    "ea_eh_export_status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED"
+  },
+  "status_discipline": {
+    "if_componentwise_missing": "OPEN_COMPONENTWISE_REQUIRED",
+    "if_nonzero_residual": "OPEN_OBSTRUCTION_WITH_TRACE",
+    "if_residual_zero_with_witness": "PASS_STRICT_LOCAL_H1_ZERO",
+    "theorem_level_qg": "KEEP_OPEN_UNTIL_BRST_CUTKOSKY_BIANCHI_WARD_CLOSURE"
+  },
+  "next_honest_step": "Execute unified componentwise EA/EH export under one background+index freeze and publish H1 residual ledger without PASS claim unless explicit zero is produced.",
+  "status": "UNIFIED_CONTRACT_READY_GATES_STILL_OPEN"
+}

@@ -1,0 +1,42 @@
+{
+  "packet_id": "P1815",
+  "stage_id": "S765",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "state_vector": {
+    "forward_chain": "EXPORTED_NONPROXY_KEEP_OPEN",
+    "reverse_chain": {
+      "H1_4D": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+      "metric_residual": "OPEN_OBSTRUCTION_WITH_TRACE",
+      "bianchi_ward": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED"
+    },
+    "theorem_gates": {
+      "TG1_BW": "OPEN_LOCKED_BY_UNIFIED_NONPROXY_RESIDUAL",
+      "TG2_BRST": "LOCKED_BY_TG1",
+      "TG3_CUT": "LOCKED_BY_TG2"
+    }
+  },
+  "hard_requirements": {
+    "TG2_BRST": [
+      "G_BW_PASS_ZERO",
+      "brst_charge_definition_present",
+      "Q_squared_simplified_zero",
+      "cohomology_subspace_check_present",
+      "ghost_sector_consistency_present",
+      "shared_freeze_id",
+      "all_check_digests_present"
+    ],
+    "TG3_CUT": [
+      "G_BW_PASS_ZERO",
+      "TG2_BRST_PASS",
+      "cut_discontinuity_witness_present",
+      "optical_theorem_match_true",
+      "ghost_pole_exclusion_true",
+      "background_family_consistency_present",
+      "shared_freeze_id",
+      "all_check_digests_present"
+    ]
+  },
+  "false_pass_guard": "NO_PROMOTION_WITHOUT_TG1_BINARY_WITNESS",
+  "next_honest_step": "run_P1806_and_publish_binary_TG1_verdict_with_trace"
+}
