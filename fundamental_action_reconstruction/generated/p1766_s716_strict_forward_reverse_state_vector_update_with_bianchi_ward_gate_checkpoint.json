@@ -1,0 +1,60 @@
+{
+  "checkpoint": "P1766_S716",
+  "timestamp_utc": "2026-05-15T04:27:43.084090+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "input_anchors": [
+    "p1753_s703",
+    "p1764_s714",
+    "p1765_s715"
+  ],
+  "prior_state_vector": {
+    "S1_kernel_to_coefficients": "EXPORTED",
+    "S2_coefficients_to_full_lagrangian": "EXPORTED_NONSKELETON_INSTANTIATED",
+    "S3_lagrangian_to_eom": "PARTIAL_EXPORTED_NONPROXY_PENDING_FULL_METRIC_CERTIFICATE",
+    "R1_eom_to_variational_origin": "OPEN_THEOREM_REQUIRED",
+    "R2_variational_origin_to_kernel_identifiability": "OPEN_THEOREM_REQUIRED",
+    "R3_nonproxy_h1_4d_trigger": "BLOCKED"
+  },
+  "updated_state_vector": {
+    "forward_chain": {
+      "K_strict": "LOCKED_INPUT",
+      "coefficient_map": "EXPORTED",
+      "full_nonskeleton_L_total": "EXPORTED",
+      "covariant_E_A_mu_nonproxy": "EXPLICIT_OPERATOR_EXPORTED_P1764",
+      "covariant_E_H_nonproxy": "EXPLICIT_OPERATOR_EXPORTED_P1764",
+      "covariant_EL_g_nonproxy": "EXPLICIT_OPERATOR_EXPORTED_P1765"
+    },
+    "reverse_chain": {
+      "H1_cross_variation": "OPEN_COMPONENTWISE_REQUIRED",
+      "metric_residual_EL_g_minus_E_munu": "OPEN_COMPONENTWISE_REQUIRED",
+      "Bianchi_Ward_divergence_gate": "OPEN_REQUIRES_COMPONENTWISE_DIVERGENCE_TRACE",
+      "global_helmholtz_integrability": "OPEN"
+    },
+    "qg_theorem_gates": {
+      "renormalization_counterterm_closure": "OPEN",
+      "BRST_nilpotency": "OPEN",
+      "Cutkosky_unitarity": "OPEN",
+      "background_independence": "OPEN"
+    }
+  },
+  "gate_contract_update": {
+    "H1_4D_weak_form_readiness": "UPGRADED_TO_EXPLICIT_COVARIANT_OPERATOR_LEVEL",
+    "metric_ELg_export_status": "NONPROXY_COVARIANT_OPERATOR_LEVEL",
+    "Bianchi_Ward_check_contract": {
+      "target": "nabla_mu(E_total^{mu nu}) == 0 on declared background family",
+      "input_required": [
+        "componentwise_EL_g_minus_E_munu_B1_B2_B3_C1_C2",
+        "shared_background_family_contract_v1",
+        "index_and_sign_lock"
+      ],
+      "admissible_outputs": [
+        "PASS_ZERO",
+        "OBSTRUCTION_WITH_DIVERGENCE_TRACE"
+      ]
+    }
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "no_false_pass_claim": true,
+  "next_honest_step": "Wykonać komponentowy EL_g-E_munu na B1/B2/B3/C1/C2 i natychmiast uruchomić divergence gate Bianchi/Ward z pełnym trace."
+}

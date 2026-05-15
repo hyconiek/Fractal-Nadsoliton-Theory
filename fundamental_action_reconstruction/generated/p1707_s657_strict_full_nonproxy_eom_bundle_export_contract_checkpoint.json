@@ -1,0 +1,132 @@
+{
+  "checkpoint": "P1707_S657",
+  "timestamp_utc": "2026-05-15T01:06:55.359424+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "chain": "K_strict -> coefficients -> full explicit L_total -> full nonproxy EOM bundle export contract",
+  "chain_anchor": {
+    "kernel": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+    "kernel_input": {
+      "omega": 0.18575,
+      "phi": 4.5231,
+      "beta": 0.72,
+      "eta": 1.31,
+      "A": 1.0
+    },
+    "coefficient_map": {
+      "Mpl2": "1.72000000000000",
+      "cR2": "0.311688311688312",
+      "cRic2": "0.408311688311688",
+      "cRiem2": "0.415800000000000",
+      "muH2": "0.0345030625000000",
+      "lambdaH": "1.57912790697674",
+      "xiHR": "0.418604651162791",
+      "Z1": "1.20736000000000"
+    },
+    "full_lagrangian_explicit": {
+      "L_scalar": "sqrt(-g)*[1/2 g^{μν}(∇_μφ)(∇_νφ) - (m_φ^2/2)φ^2 - (λ_3/3!)φ^3 - (λ_4/4!)φ^4]",
+      "L_gauge": "sqrt(-g)*[-1/4 G^A_{μν}G_A^{μν} - 1/4 W^I_{μν}W_I^{μν} - 1/4 B_{μν}B^{μν}]",
+      "L_fermion": "sqrt(-g)*[Σ_f i ψ̄_f γ^a e_a^{ μ}D_μ ψ_f - Σ_f y_f(ψ̄_{fL}Hψ_{fR}+h.c.)]",
+      "L_higgs": "sqrt(-g)*[(D_μH)^†(D^μH) - μ_H^2(H^†H) - λ_H(H^†H)^2]",
+      "L_gravity": "sqrt(-g)*[(M_Pl^2/2)R - Λ + c1 R^2 + c2 R_{μν}R^{μν} + c3 R_{μναβ}R^{μναβ}]",
+      "L_mix": "sqrt(-g)*[ξ_HR(H^†H)R + ξ_φR φ^2R + λ_{φH}φ^2(H^†H)]"
+    },
+    "reduced_eom_bundle_anchor": {
+      "A": "1.20736*Derivative(A(x), (x, 2))",
+      "h": "0.418604651162791*R0*h(x) + 1.57912790697674*h(x)**3 + h(x)*phi(x)**2 + 0.0345030625*h(x) + 1.0*psi(x)*psib(x) + Derivative(h(x), (x, 2))",
+      "phi": "h(x)**2*phi(x) + 0.311688311688312*phi(x)**3 + Derivative(phi(x), (x, 2))",
+      "psi": "1.0*h(x)*psib(x) + 1.0*psib(x) + 1.0*I*Derivative(psib(x), x)",
+      "psib": "1.0*h(x)*psi(x) + 1.0*psi(x) - 1.0*I*Derivative(psi(x), x)"
+    },
+    "reverse_variational_identity_anchor": {
+      "status": "PASS_ALL_ZERO",
+      "residuals": {
+        "EL_minus_EOM_A": "0",
+        "EL_minus_EOM_h": "0",
+        "EL_minus_EOM_phi": "0",
+        "EL_minus_EOM_psi": "0",
+        "EL_minus_EOM_psib": "0"
+      }
+    },
+    "nonproxy_variational_objects_anchor": {
+      "metric": {
+        "dL_dR_contract": "-H2*xiHR + Mpl2/2 + 2*R*c1 - phi2*xiphiR",
+        "dL_dRicci2_contract": "c2",
+        "dL_dRiemann2_contract": "c3",
+        "notes": "Contract-level symbolic objects for nonproxy metric variation assembly."
+      },
+      "spinor": {
+        "L_fermion_reduced_contract": "-mpsi*psi(x)*psib(x) - ypsi*h(x)*psi(x)*psib(x) - I*psi(x)*Derivative(psib(x), x)/2 + I*psib(x)*Derivative(psi(x), x)/2",
+        "EOM_psi_contract": "(mpsi + ypsi*h(x))*psib(x) + I*Derivative(psib(x), x)",
+        "EOM_psib_contract": "(mpsi + ypsi*h(x))*psi(x) - I*Derivative(psi(x), x)",
+        "notes": "Computable spinor-side variation templates; full curved gamma/tetrad export remains OPEN."
+      }
+    }
+  },
+  "full_nonproxy_eom_bundle_contract": {
+    "fields": {
+      "metric": [
+        "g_{μν}"
+      ],
+      "gauge": [
+        "A^a_{μ}"
+      ],
+      "higgs": [
+        "H",
+        "H†"
+      ],
+      "fermion": [
+        "psi_f",
+        "psibar_f"
+      ],
+      "aux_geometry": [
+        "e^a_{μ}",
+        "omega_{μab}"
+      ]
+    },
+    "equations_contract": {
+      "metric": "E_{μν}(g,A,H,psi; couplings)=0",
+      "gauge": "D_μ F^{a μν} - J^{a ν}_{matter}=0",
+      "higgs": "D_μD^μH + ∂V_eff/∂H† + ξ_HR R H + Yukawa_backreaction = 0",
+      "fermion": "i γ^a e_a^{ μ}D_μ ψ_f - m_f(H) ψ_f = 0 and adjoint equation"
+    },
+    "variation_contract": {
+      "metric_required": [
+        "delta_sqrt_minus_g",
+        "delta_R",
+        "delta_R2",
+        "delta_Ricci2",
+        "delta_Riemann2"
+      ],
+      "spinor_required": [
+        "delta_gamma_curved",
+        "delta_spin_connection",
+        "delta_psibar",
+        "delta_psi"
+      ]
+    },
+    "consistency_contract": {
+      "local_EL_residual_identity": "REQUIRED_ALL_FIELDS",
+      "gauge_Bianchi_compatibility": "REQUIRED",
+      "diffeomorphism_ward_identity": "REQUIRED"
+    }
+  },
+  "bidirectional_contract": {
+    "forward_export_status": "CONTRACT_EXPORTED",
+    "reverse_local_identity_status": "AVAILABLE_REDUCED_REFERENCE",
+    "reverse_global_nonproxy_status": "OPEN_THEOREM_REQUIRED"
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "open_obligations": [
+    "instantiate_contract_into_explicit_nonproxy_formulas",
+    "global_helmholtz_integrability_nonproxy",
+    "brst_nilpotency_and_cohomology_nonproxy",
+    "cutkosky_unitarity_full_sector",
+    "counterterm_flow_renormalization_closure",
+    "background_independence_family_theorem",
+    "qw2191_selector_source_or_nonclosure_theorem"
+  ],
+  "next_honest_step": "Zrealizować instantiate_contract_into_explicit_nonproxy_formulas: wyeksportować pierwszą jawnie obliczalną wersję E_{μν}, E_fermion, E_gauge, E_higgs na wspólnym zestawie znaków i konwencji.",
+  "lay_summary": "Zdefiniowaliśmy pełny kontrakt docelowych równań bez uproszczeń. To oznacza, że kolejny krok może już dostarczyć konkretne finalne wzory, a nie tylko plan działań."
+}

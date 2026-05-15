@@ -1,0 +1,37 @@
+{
+  "checkpoint": "P1711_S661",
+  "timestamp_utc": "2026-05-15T01:27:56.182974+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "chain": "K_strict -> coefficients -> full explicit L_total anchor -> residual contracts -> first fermion residual-zero result",
+  "input_anchor_from_p1710": "gauge_higgs_first_nonproxy_like_result",
+  "sector": "fermion_first_nonproxy_like_result",
+  "L_fermion_reduced": "-1.0*h(x)*psi(x)*psib(x) - 1.0*psi(x)*psib(x) - I*psi(x)*Derivative(psib(x), x)/2 + I*psib(x)*Derivative(psi(x), x)/2",
+  "EOM": {
+    "E_psi": "1.0*h(x)*psib(x) + 1.0*psib(x) + 1.0*I*Derivative(psib(x), x)",
+    "E_psib": "1.0*h(x)*psi(x) + 1.0*psi(x) - 1.0*I*Derivative(psi(x), x)"
+  },
+  "residuals": {
+    "EL_minus_E_psi": "0",
+    "EL_minus_E_psib": "0"
+  },
+  "residual_zero_flags": {
+    "EL_minus_E_psi": true,
+    "EL_minus_E_psib": true
+  },
+  "residual_status": "PASS_FERMION_ZERO",
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "open_obligations": [
+    "extend_residual_zero_to_metric_sector_nonproxy",
+    "bianchi_ward_cross_consistency_closure",
+    "global_helmholtz_integrability_nonproxy",
+    "brst_nilpotency_and_cohomology_nonproxy",
+    "cutkosky_unitarity_full_sector",
+    "counterterm_flow_renormalization_closure",
+    "background_independence_family_theorem",
+    "qw2191_selector_source_or_nonclosure_theorem"
+  ],
+  "next_honest_step": "Połączyć PASS_GAUGE_HIGGS_ZERO i PASS_FERMION_ZERO we wspólny partial-sector certificate, następnie zaatakować sektor metryczny i testy Bianchi/Ward.",
+  "lay_summary": "Drugi kluczowy test jakości (dla fermionów) też przeszedł: równania zgadzają się z lagranżianem. To wzmacnia łańcuch teorii, ale pozostaje najtrudniejszy sektor grawitacyjny i dowody globalne."
+}

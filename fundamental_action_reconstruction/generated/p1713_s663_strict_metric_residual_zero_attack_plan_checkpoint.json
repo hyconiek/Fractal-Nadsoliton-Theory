@@ -1,0 +1,73 @@
+{
+  "checkpoint": "P1713_S663",
+  "timestamp_utc": "2026-05-15T01:33:06.682479+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "chain": "K_strict -> coefficients -> full explicit L_total -> residual-zero partial certificate -> metric residual-zero attack plan",
+  "current_partial_certificate": {
+    "gauge_higgs_zero": true,
+    "fermion_zero": true,
+    "certificate_status": "PASS_PARTIAL_SECTORS_GH_F",
+    "coverage": [
+      "gauge",
+      "higgs",
+      "fermion"
+    ],
+    "missing_for_full_sector_certificate": [
+      "metric",
+      "cross_consistency_bianchi_ward"
+    ]
+  },
+  "metric_residual_zero_attack_plan": {
+    "goal": "Produce first metric-sector EL residual-zero certificate in nonproxy-like convention.",
+    "inputs": {
+      "metric_template": "E_{μν} := (M_Pl^2/2)G_{μν} + Λ g_{μν} + H_{μν}[c1 R^2 + c2 R_{αβ}R^{αβ} + c3 R_{αβγδ}R^{αβγδ}] - T^{(gauge+higgs+fermion+scalar+mix)}_{μν} = 0",
+      "full_lagrangian_anchor": {
+        "L_scalar": "sqrt(-g)*[1/2 g^{μν}(∇_μφ)(∇_νφ) - (m_φ^2/2)φ^2 - (λ_3/3!)φ^3 - (λ_4/4!)φ^4]",
+        "L_gauge": "sqrt(-g)*[-1/4 G^A_{μν}G_A^{μν} - 1/4 W^I_{μν}W_I^{μν} - 1/4 B_{μν}B^{μν}]",
+        "L_fermion": "sqrt(-g)*[Σ_f i ψ̄_f γ^a e_a^{ μ}D_μ ψ_f - Σ_f y_f(ψ̄_{fL}Hψ_{fR}+h.c.)]",
+        "L_higgs": "sqrt(-g)*[(D_μH)^†(D^μH) - μ_H^2(H^†H) - λ_H(H^†H)^2]",
+        "L_gravity": "sqrt(-g)*[(M_Pl^2/2)R - Λ + c1 R^2 + c2 R_{μν}R^{μν} + c3 R_{μναβ}R^{μναβ}]",
+        "L_mix": "sqrt(-g)*[ξ_HR(H^†H)R + ξ_φR φ^2R + λ_{φH}φ^2(H^†H)]"
+      },
+      "partial_sector_certificate": {
+        "gauge_higgs_zero": true,
+        "fermion_zero": true,
+        "certificate_status": "PASS_PARTIAL_SECTORS_GH_F",
+        "coverage": [
+          "gauge",
+          "higgs",
+          "fermion"
+        ],
+        "missing_for_full_sector_certificate": [
+          "metric",
+          "cross_consistency_bianchi_ward"
+        ]
+      }
+    },
+    "execution_steps": [
+      "freeze_metric_index_convention_and_signs",
+      "instantiate_metric_variation_terms(delta_sqrtg, delta_R, delta_R2, delta_Ric2, delta_Riem2)",
+      "assemble_Tmunu_from_matter_sectors_in_same_convention",
+      "construct_E_munu_candidate",
+      "compute_residual_ELg_minus_E_munu",
+      "check_symbolic_zero_or_export_nonzero_obstruction"
+    ],
+    "success_condition": "EL_g(L_total) - E_munu == 0 in declared admissible class",
+    "failure_condition": "export obstruction polynomial / unmatched tensor terms with provenance"
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "open_obligations": [
+    "metric_sector_residual_zero_nonproxy",
+    "bianchi_ward_cross_consistency_certificate",
+    "global_helmholtz_integrability_nonproxy",
+    "brst_nilpotency_and_cohomology_nonproxy",
+    "cutkosky_unitarity_full_sector",
+    "counterterm_flow_renormalization_closure",
+    "background_independence_family_theorem",
+    "qw2191_selector_source_or_nonclosure_theorem"
+  ],
+  "next_honest_step": "Wykonać krok 1-4 planu i wyeksportować pierwszy jawny E_munu_candidate z rozpisanym T_munu oraz konwencją indeksową.",
+  "lay_summary": "Mamy potwierdzone sektory cząstek, teraz atakujemy najtrudniejszy element: grawitację. Ten checkpoint ustawia konkretny plan, jak dojść do testu zero-reszty dla równań metrycznych."
+}

@@ -1,0 +1,83 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import json
+from datetime import UTC, datetime
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent
+GEN = ROOT / "generated"
+IN1717 = GEN / "p1717_s667_strict_metric_residual_first_execution_attempt_checkpoint.json"
+OUT = GEN / "p1718_s668_strict_metric_tensor_backend_interface_contract_checkpoint.json"
+
+
+def main() -> None:
+    p1717 = json.loads(IN1717.read_text(encoding="utf-8"))
+
+    backend_contract = {
+        "backend_options": [
+            {
+                "name": "componentwise_sympy",
+                "scope": "local-chart component expansion",
+                "required_inputs": ["metric_ansatz", "connection_symbols", "curvature_components", "index_rules"],
+            },
+            {
+                "name": "xact_like_tensor_backend",
+                "scope": "abstract index + canonicalization",
+                "required_inputs": ["manifold_bundle", "metric_signature", "riemann_conventions", "variation_rules"],
+            },
+        ],
+        "minimal_io_contract": {
+            "input": [
+                "L_gravity_terms: R, R2, Ric2, Riem2",
+                "matter_stress_split: T_gauge, T_higgs, T_fermion, T_scalar, T_mix",
+                "frozen_index_convention",
+            ],
+            "output": [
+                "ELg_expression_basis",
+                "Emunu_expression_basis",
+                "residual_expression_ELg_minus_Emunu",
+                "status: PASS_ZERO or OBSTRUCTION",
+            ],
+        },
+        "obstruction_export_contract": {
+            "required_fields": [
+                "nonzero_terms_grouped_by_tensor_basis",
+                "term_provenance_map_to_Lagrangian_sectors",
+                "candidate_fix_hypotheses",
+            ]
+        },
+    }
+
+    payload = {
+        "checkpoint": "P1718_S668",
+        "timestamp_utc": datetime.now(UTC).isoformat(),
+        "strict_only": True,
+        "legacy_bridge_used": False,
+        "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+        "chain": "K_strict -> coefficients -> full explicit L_total -> metric residual blocked -> tensor backend interface contract",
+        "blocked_anchor": p1717.get("execution_attempt", {}),
+        "tensor_backend_interface_contract": backend_contract,
+        "execution_decision": "SELECT_COMPONENTWISE_SYMPY_FIRST",
+        "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+        "open_obligations": [
+            "implement_componentwise_tensor_backend_runner",
+            "metric_sector_residual_zero_or_obstruction_certificate",
+            "bianchi_ward_cross_consistency_certificate",
+            "global_helmholtz_integrability_nonproxy",
+            "brst_nilpotency_and_cohomology_nonproxy",
+            "cutkosky_unitarity_full_sector",
+            "counterterm_flow_renormalization_closure",
+            "background_independence_family_theorem",
+            "qw2191_selector_source_or_nonclosure_theorem",
+        ],
+        "next_honest_step": "Zaimplementować runner componentwise_sympy zgodny z contractem i wyeksportować pierwszy residual_expression_ELg_minus_Emunu (zero lub obstruction).",
+        "lay_summary": "Przekuliśmy blokadę grawitacyjną na konkretny kontrakt techniczny: wiadomo dokładnie, jakie wejścia i wyjścia musi mieć narzędzie liczące test metryczny.",
+    }
+
+    OUT.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    print(f"Wrote {OUT}")
+
+
+if __name__ == "__main__":
+    main()

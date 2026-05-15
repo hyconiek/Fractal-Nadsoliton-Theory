@@ -1,0 +1,63 @@
+{
+  "checkpoint": "P1776_S726",
+  "timestamp_utc": "2026-05-15T11:56:20.686661+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "input_anchors": [
+    "p1764_s714",
+    "p1765_s715",
+    "p1775_s725"
+  ],
+  "priority_blocker_matrix": {
+    "explicit_covariant_nonproxy_E_A_mu": {
+      "status": "EXPORTED_OPERATOR_OPEN_COMPONENTWISE",
+      "evidence": "OPEN_NEEDS_INDEX_LEVEL_EXPANSION"
+    },
+    "explicit_covariant_nonproxy_E_H": {
+      "status": "EXPORTED_OPERATOR_OPEN_COMPONENTWISE",
+      "evidence": "OPEN_NEEDS_INDEX_LEVEL_EXPANSION"
+    },
+    "metric_EL_g_export": {
+      "status": "EXPORTED_OPERATOR_OPEN_COMPONENTWISE",
+      "evidence": "OPEN_COMPONENTWISE_REQUIRED"
+    },
+    "boundary_term_control": {
+      "status": "CONTRACT_FINALIZED_REUSED",
+      "evidence": "REUSED_FROM_P1762_FINALIZED_CONTRACT_TEMPLATE"
+    },
+    "H1_4D_weak_form_readiness": {
+      "status": "OPEN_COMPONENTWISE_EXECUTION_REQUIRED",
+      "evidence": "OPEN_COMPONENTWISE_REQUIRED"
+    },
+    "Bianchi_Ward_consistency": {
+      "status": "BLOCKED_BY_W1_NOT_FULL_EXPORT",
+      "evidence": "OBSTRUCTION_W1_NOT_YET_FULL_EXPORT"
+    },
+    "BRST_Cutkosky_theorem_gates": {
+      "status": "BLOCKED_BY_BW_GATE_AND_MISSING_FULL_EXPORTS",
+      "evidence": {
+        "G_BW_rerun_allowed": false,
+        "reason": "W1 not accepted as FULL_EXPORT under P1774 acceptance contract",
+        "G_BRST": "BLOCKED",
+        "G_CUT": "BLOCKED"
+      }
+    }
+  },
+  "proofs_and_nonproofs": {
+    "proven_now": [
+      "E_A^mu and E_H are explicitly exported at covariant operator level (nonproxy).",
+      "EL_g^{mu nu} is explicitly exported at covariant operator level (nonproxy).",
+      "W1 acceptance remains obstruction; GBW rerun is not admissible."
+    ],
+    "still_open": [
+      "Componentwise H1 residual witness on shared background family.",
+      "Componentwise EL_g-E_munu residual basis closure (B1/B2/B3/C1/C2).",
+      "Bianchi/Ward divergence pass-zero or obstruction trace at theorem gate quality.",
+      "BRST nilpotency and Cutkosky unitarity theorem-level witnesses."
+    ]
+  },
+  "no_false_pass_claim": true,
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "next_honest_step": "Dowieźć brakujące współczynniki projekcji W1 (B2/B3 + dywergencja H(R2)), zamknąć W1 jako FULL_EXPORT, a następnie uruchomić komponentowy H1 i EL_g-E_munu wraz z raportem Bianchi/Ward.",
+  "lay_summary": "Mamy już jawne równania, ale jeszcze nie końcowe dowody. Najpierw trzeba dokończyć jeden blok techniczny W1, żeby legalnie odblokować testy zgodności kwantowej."
+}

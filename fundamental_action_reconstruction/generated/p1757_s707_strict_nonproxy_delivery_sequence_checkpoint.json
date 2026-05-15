@@ -1,0 +1,61 @@
+{
+  "checkpoint": "P1757_S707",
+  "timestamp_utc": "2026-05-15T03:54:32.411374+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "chain": "K_strict -> coefficients -> full non-skeleton L_total -> EOM -> nonproxy delivery sequence",
+  "input_anchors": [
+    "p1754_s704",
+    "p1756_s706"
+  ],
+  "consistency_precondition": "PASS_CONSISTENT",
+  "delivery_sequence": [
+    {
+      "step": "D1_export_E_A_mu_nonproxy",
+      "depends_on": [],
+      "ready": true
+    },
+    {
+      "step": "D2_export_E_H_nonproxy",
+      "depends_on": [],
+      "ready": true
+    },
+    {
+      "step": "D3_export_shared_background_family_contract",
+      "depends_on": [
+        "D1_export_E_A_mu_nonproxy",
+        "D2_export_E_H_nonproxy"
+      ],
+      "ready": true
+    },
+    {
+      "step": "D4_export_boundary_term_control_clause",
+      "depends_on": [
+        "D3_export_shared_background_family_contract"
+      ],
+      "ready": true
+    },
+    {
+      "step": "D5_finalize_boundary_control_contract",
+      "depends_on": [
+        "D4_export_boundary_term_control_clause"
+      ],
+      "ready": true
+    },
+    {
+      "step": "D6_run_nonproxy_H1_4D",
+      "depends_on": [
+        "D1_export_E_A_mu_nonproxy",
+        "D2_export_E_H_nonproxy",
+        "D3_export_shared_background_family_contract",
+        "D4_export_boundary_term_control_clause",
+        "D5_finalize_boundary_control_contract"
+      ],
+      "ready": false
+    }
+  ],
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "no_false_pass_claim": true,
+  "next_honest_step": "Zrealizować sekwencję D1..D5 bez skipów, następnie uruchomić D6 (nonproxy H1 4D) i dopiero po wyniku przejść do metric residual gate.",
+  "lay_summary": "To jest plan wykonawczy krok po kroku. Najpierw trzeba dowieźć brakujące elementy techniczne, a dopiero potem uruchomić kluczowy test 4D."
+}

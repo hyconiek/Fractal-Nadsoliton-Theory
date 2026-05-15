@@ -55,3 +55,5 @@ _Last updated: 2026-05-14 (guardrail sync)._
 
 - Repository automation must treat these guardrails as binding for all edits under this tree.
 - Agent sync marker: guardrails revalidated on 2026-05-14 for automated edit sessions.
+
+- Agent acknowledgment: instructions received on 2026-05-15 for automated sessions.

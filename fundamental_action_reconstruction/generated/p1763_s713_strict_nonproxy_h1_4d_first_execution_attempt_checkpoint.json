@@ -1,0 +1,44 @@
+{
+  "checkpoint": "P1763_S713",
+  "timestamp_utc": "2026-05-15T04:15:35.740773+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "chain": "K_strict -> coefficients -> full non-skeleton L_total -> EOM -> D6 first nonproxy H1 4D execution attempt",
+  "input_anchor": "p1762_s712",
+  "execution_precondition": {
+    "contract_name": "boundary_control_contract_v1",
+    "binds": [
+      "shared_background_family_contract_v1",
+      "boundary_term_control_clause_v1",
+      "E_A_mu_nonproxy_template_v1",
+      "E_H_nonproxy_template_v1"
+    ],
+    "admissible_verdicts": {
+      "strict_local": [
+        "PASS_ZERO",
+        "OBSTRUCTION"
+      ],
+      "weak_form": [
+        "PASS_WEAK_FORM_WITH_BOUNDARY_CLAUSE",
+        "OBSTRUCTION"
+      ]
+    },
+    "promotion_rule": "STRICT_CORE_CLOSURE cannot be claimed from weak_form pass alone",
+    "status": "FINALIZED_CONTRACT_TEMPLATE"
+  },
+  "execution_result": {
+    "status": "OBSTRUCTION_TEMPLATE_NOT_FULLY_COMPONENTWISE",
+    "pass_zero_issued": false,
+    "strict_local": "NOT_COMPUTABLE_TEMPLATE_ONLY",
+    "weak_form": "NOT_COMPUTABLE_TEMPLATE_ONLY",
+    "obstruction_trace": [
+      "E_A_mu_nonproxy_template_v1 missing full componentwise covariant expansion",
+      "E_H_nonproxy_template_v1 missing full componentwise covariant expansion",
+      "surface_term_symbolic_form not yet instantiated on concrete boundary family"
+    ]
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "no_false_pass_claim": true,
+  "next_honest_step": "Zastąpić template E_A^mu i E_H pełnymi nieproxy postaciami komponentowymi na wspólnej rodzinie teł i powtórzyć D6 z werdyktem PASS_ZERO albo OBSTRUCTION.",
+  "lay_summary": "Pierwsza próba pełnego testu 4D była uczciwie zablokowana: mamy zasady i szablony, ale brakuje jeszcze pełnych równań obliczeniowych do wykonania testu końcowego."
+}

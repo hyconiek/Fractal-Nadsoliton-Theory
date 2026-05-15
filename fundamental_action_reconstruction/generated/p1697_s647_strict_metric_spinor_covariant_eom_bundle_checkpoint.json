@@ -1,0 +1,57 @@
+{
+  "checkpoint": "P1697_S647",
+  "timestamp_utc": "2026-05-15T00:31:56.325781+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "chain": "K_strict -> coefficients -> full L_total -> gauge+higgs block + metric+spinor block -> EOM bundle",
+  "full_lagrangian_density_anchor": {
+    "L_gravity": "sqrt(-g)*[(M_Pl^2/2)R - Λ + c_R2 R^2 + c_Ric2 R_{μν}R^{μν} + c_Riem2 R_{μνρσ}R^{μνρσ}]",
+    "L_gauge": "sqrt(-g)*[-(1/4) Σ_a Z_a F^a_{μν}F_a^{μν}]",
+    "L_fermion": "sqrt(-g)*[Σ_f i ψ̄_f γ^a e_a^{ μ}D_μ ψ_f]",
+    "L_higgs": "sqrt(-g)*[(D_μH)^†(D^μH) - μ_H^2(H^†H) - λ_H(H^†H)^2 - ξ_HR(H^†H)R]",
+    "L_yukawa": "sqrt(-g)*[-(y_u Q̄H~u + y_d Q̄Hd + y_e L̄He + h.c.)]",
+    "L_scalar_phi": "sqrt(-g)*[(1/2)(∇φ)^2 - (1/2)m_φ^2φ^2 - (λ_3/3!)φ^3 - (λ_4/4!)φ^4 - λ_{φH}φ^2(H^†H) - ξ_{φR}φ^2R]",
+    "L_mix": "sqrt(-g)*[χ_RG Σ_a R F^a_{μν}F_a^{μν} + CT_{1loop}(R^2,Ricci^2,Riemann^2,SM-mix)]"
+  },
+  "coefficient_anchor": {
+    "Mpl2": "1.72000000000000",
+    "cR2": "0.311688311688312",
+    "cRic2": "0.408311688311688",
+    "cRiem2": "0.415800000000000",
+    "muH2": "0.0345030625000000",
+    "lambdaH": "1.57912790697674",
+    "xiHR": "0.418604651162791",
+    "Z1": "1.20736000000000"
+  },
+  "covariant_bundle": {
+    "gauge_higgs_from_p1696": {
+      "background_marker": "R0",
+      "L_gauge_higgs_reduced": "-0.209302325581395*R0*h(x)**2 - 0.394781976744185*h(x)**4 - 0.01725153125*h(x)**2 + 0.60368*Derivative(A(x), x)**2 + Derivative(h(x), x)**2/2",
+      "EOM_A": "1.20736*Derivative(A(x), (x, 2))",
+      "EOM_h": "0.418604651162791*R0*h(x) + 1.57912790697674*h(x)**3 + 0.0345030625*h(x) + Derivative(h(x), (x, 2))"
+    },
+    "metric_spinor_block": {
+      "background_marker": "R1",
+      "L_metric_spinor_reduced": "-0.5*R1*g(x)**2 - 1.0*g(x)*psi(x)**2 - 1.0*psi(x)**2 + I*psi(x)*Derivative(psi(x), x) + 0.5*Derivative(g(x), x)**2",
+      "EOM_g": "1.0*R1*g(x) + 1.0*psi(x)**2 + 1.0*Derivative(g(x), (x, 2))",
+      "EOM_psi": "2.0*(g(x) + 1)*psi(x)"
+    }
+  },
+  "bidirectional_status": {
+    "forward_export": "GAUGE_HIGGS_METRIC_SPINOR_BUNDLE_EXPORTED",
+    "reverse_global_variational_origin": "KEEP_OPEN"
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "open_obligations": [
+    "full_metric_tensor_covariant_export_nonproxy",
+    "full_spinor_bundle_gamma_connection_export_nonproxy",
+    "counterterm_flow_closure_theorem",
+    "BRST_cohomology_theorem",
+    "Cutkosky_unitarity_theorem_full_sector",
+    "background_family_independence_theorem",
+    "strict_selector_source_or_symmetry_breaking_bridge_for_QW2191"
+  ],
+  "next_honest_step": "Podnieść metrykę i spinory z modelu reduced do pełnych obiektów tensorowo-spinorowych (bez proxy), a następnie skleić theorem-level pakiet QG: renormalizacja+unitarność+background-independence.",
+  "lay_summary": "Dołożyliśmy kolejne fragmenty równań ruchu (metryka i spinory) do wcześniejszego bloku gauge+Higgs. To zwiększa kompletność łańcucha strict, ale wciąż brakuje pełnych dowodów kwantowej grawitacji i pełnej wersji kowariantnej bez uproszczeń."
+}

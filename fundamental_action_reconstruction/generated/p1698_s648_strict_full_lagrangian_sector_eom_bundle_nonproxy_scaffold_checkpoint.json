@@ -1,0 +1,66 @@
+{
+  "checkpoint": "P1698_S648",
+  "timestamp_utc": "2026-05-15T00:35:33.296439+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "chain": "K_strict -> coefficients -> full explicit L_total anchor -> sector EOM bundle scaffold",
+  "kernel": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+  "kernel_input": {
+    "omega": 0.18575,
+    "phi": 4.5231,
+    "beta": 0.72,
+    "eta": 1.31,
+    "A": 1.0
+  },
+  "forward_coefficient_map_symbolic": {
+    "Mpl2": "1.72000000000000",
+    "cR2": "0.311688311688312",
+    "cRic2": "0.408311688311688",
+    "cRiem2": "0.415800000000000",
+    "muH2": "0.0345030625000000",
+    "lambdaH": "1.57912790697674",
+    "xiHR": "0.418604651162791",
+    "Z1": "1.20736000000000"
+  },
+  "full_lagrangian_density_explicit_anchor": {
+    "L_scalar": "sqrt(-g)*[1/2 g^{μν}(∇_μφ)(∇_νφ) - (m_φ^2/2)φ^2 - (λ_3/3!)φ^3 - (λ_4/4!)φ^4]",
+    "L_gauge": "sqrt(-g)*[-1/4 G^A_{μν}G_A^{μν} - 1/4 W^I_{μν}W_I^{μν} - 1/4 B_{μν}B^{μν}]",
+    "L_fermion": "sqrt(-g)*[Σ_f i ψ̄_f γ^a e_a^{ μ}D_μ ψ_f - Σ_f y_f(ψ̄_{fL}Hψ_{fR}+h.c.)]",
+    "L_higgs": "sqrt(-g)*[(D_μH)^†(D^μH) - μ_H^2(H^†H) - λ_H(H^†H)^2]",
+    "L_gravity": "sqrt(-g)*[(M_Pl^2/2)R - Λ + c1 R^2 + c2 R_{μν}R^{μν} + c3 R_{μναβ}R^{μναβ}]",
+    "L_mix": "sqrt(-g)*[ξ_HR(H^†H)R + ξ_φR φ^2R + λ_{φH}φ^2(H^†H)]"
+  },
+  "reduced_bundle_for_symbolic_el_scaffold": {
+    "background_marker": "R0",
+    "L_total_reduced": "-0.209302325581395*R0*h(x)**2 - 0.394781976744185*h(x)**4 - h(x)**2*phi(x)**2/2 - 0.01725153125*h(x)**2 - 0.077922077922078*phi(x)**4 + I*psi(x)*Derivative(psi(x), x) + 0.60368*Derivative(A(x), x)**2 + Derivative(h(x), x)**2/2 + Derivative(phi(x), x)**2/2",
+    "L_sector": {
+      "L_gauge": "0.60368*Derivative(A(x), x)**2",
+      "L_higgs": "-0.209302325581395*R0*h(x)**2 - 0.394781976744185*h(x)**4 - 0.01725153125*h(x)**2 + Derivative(h(x), x)**2/2",
+      "L_scalar": "-0.077922077922078*phi(x)**4 + Derivative(phi(x), x)**2/2",
+      "L_fermion": "I*psi(x)*Derivative(psi(x), x)",
+      "L_mix": "-h(x)**2*phi(x)**2/2"
+    },
+    "EOM": {
+      "EOM_A": "1.20736*Derivative(A(x), (x, 2))",
+      "EOM_h": "0.418604651162791*R0*h(x) + 1.57912790697674*h(x)**3 + h(x)*phi(x)**2 + 0.0345030625*h(x) + Derivative(h(x), (x, 2))",
+      "EOM_phi": "h(x)**2*phi(x) + 0.311688311688312*phi(x)**3 + Derivative(phi(x), (x, 2))",
+      "EOM_psi": "0"
+    }
+  },
+  "reverse_direction_status": {
+    "eom_to_variational_origin": "OPEN_THEOREM_REQUIRED",
+    "helmholtz_witness_link": "REQUIRES_NONPROXY_TENSOR_SPINOR_EXPORT"
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "open_obligations": [
+    "full_covariant_tensor_export_metric_nonproxy",
+    "full_covariant_spinor_export_gamma_connection_nonproxy",
+    "counterterm_flow_closure_theorem",
+    "BRST_nilpotency_and_cohomology_theorem",
+    "Cutkosky_unitarity_theorem_full_sector",
+    "background_family_independence_theorem",
+    "strict_selector_source_or_symmetry_breaking_premise_for_QW2191"
+  ],
+  "next_honest_step": "Przejść z reduced scaffold do pełnego nieproxy bundle tensor+spinor, a następnie zamknąć theorem-level tor QG (renormalizacja, unitarność, background independence) na jednej rodzinie teł.",
+  "lay_summary": "Wyprowadziliśmy spójny pakiet równań ruchu z pełnego strict łańcucha, ale na poziomie scaffold. To przybliża pełny model, lecz finalny certyfikat wymaga jeszcze pełnych obiektów kowariantnych i dowodów kwantowej grawitacji."
+}

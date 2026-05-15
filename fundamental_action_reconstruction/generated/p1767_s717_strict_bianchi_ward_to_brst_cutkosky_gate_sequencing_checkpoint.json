@@ -1,0 +1,78 @@
+{
+  "checkpoint": "P1767_S717",
+  "timestamp_utc": "2026-05-15T04:30:46.474918+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "input_anchor": "p1766_s716",
+  "state_vector_ref": {
+    "forward_chain": {
+      "K_strict": "LOCKED_INPUT",
+      "coefficient_map": "EXPORTED",
+      "full_nonskeleton_L_total": "EXPORTED",
+      "covariant_E_A_mu_nonproxy": "EXPLICIT_OPERATOR_EXPORTED_P1764",
+      "covariant_E_H_nonproxy": "EXPLICIT_OPERATOR_EXPORTED_P1764",
+      "covariant_EL_g_nonproxy": "EXPLICIT_OPERATOR_EXPORTED_P1765"
+    },
+    "reverse_chain": {
+      "H1_cross_variation": "OPEN_COMPONENTWISE_REQUIRED",
+      "metric_residual_EL_g_minus_E_munu": "OPEN_COMPONENTWISE_REQUIRED",
+      "Bianchi_Ward_divergence_gate": "OPEN_REQUIRES_COMPONENTWISE_DIVERGENCE_TRACE",
+      "global_helmholtz_integrability": "OPEN"
+    },
+    "qg_theorem_gates": {
+      "renormalization_counterterm_closure": "OPEN",
+      "BRST_nilpotency": "OPEN",
+      "Cutkosky_unitarity": "OPEN",
+      "background_independence": "OPEN"
+    }
+  },
+  "gate_sequencing_contract": {
+    "G_BW": {
+      "name": "Bianchi_Ward_divergence_gate",
+      "required_input": "componentwise_EL_g_minus_E_munu_B1_B2_B3_C1_C2",
+      "admissible_outputs": [
+        "PASS_ZERO",
+        "OBSTRUCTION_WITH_DIVERGENCE_TRACE"
+      ],
+      "status": "OPEN"
+    },
+    "G_BRST": {
+      "name": "BRST_nilpotency_gate",
+      "requires": [
+        "G_BW:PASS_ZERO",
+        "ghost_sector_nonproxy_export",
+        "BV_BRST_operator_map"
+      ],
+      "admissible_outputs": [
+        "PASS_NILPOTENT",
+        "OBSTRUCTION_WITH_NILPOTENCY_TRACE"
+      ],
+      "status": "OPEN_BLOCKED_BY_G_BW"
+    },
+    "G_CUT": {
+      "name": "Cutkosky_unitarity_gate",
+      "requires": [
+        "G_BW:PASS_ZERO",
+        "G_BRST:PASS_NILPOTENT",
+        "on_shell_cut_channel_pack"
+      ],
+      "admissible_outputs": [
+        "PASS_UNITARITY",
+        "OBSTRUCTION_WITH_CUT_TRACE"
+      ],
+      "status": "OPEN_BLOCKED_BY_G_BW_AND_G_BRST"
+    }
+  },
+  "policy": {
+    "no_false_pass": true,
+    "promotion_rule": "QG theorem gates cannot be promoted if G_BW is not PASS_ZERO",
+    "classification_required": [
+      "LOCAL_vs_GLOBAL",
+      "REDUCED_vs_NONPROXY",
+      "SCAFFOLD_vs_FULL_EXPORT"
+    ]
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "next_honest_step": "Wykonać G_BW na tej samej rodzinie teł i wydać PASS_ZERO albo OBSTRUCTION_WITH_DIVERGENCE_TRACE; bez tego nie uruchamiać formalnie G_BRST ani G_CUT.",
+  "lay_summary": "Ustalono twardą kolejność testów: najpierw zgodność Bianchi/Ward, potem BRST, a dopiero na końcu unitarność Cutkosky. Bez pierwszego kroku nie wolno ogłaszać sukcesu dalej."
+}

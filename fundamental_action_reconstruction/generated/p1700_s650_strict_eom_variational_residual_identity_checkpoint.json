@@ -1,0 +1,41 @@
+{
+  "checkpoint": "P1700_S650",
+  "timestamp_utc": "2026-05-15T00:46:12.900301+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "source_checkpoint": "P1699_S649",
+  "chain": "K_strict -> coefficients -> full explicit L_total anchor -> reduced corrected EOM -> EL residual identity",
+  "L_total_reduced": "-0.209302325581395*R0*h(x)**2 - 0.394781976744185*h(x)**4 - h(x)**2*phi(x)**2/2 - 0.01725153125*h(x)**2 - 1.0*h(x)*psi(x)*psib(x) - 0.077922077922078*phi(x)**4 - 1.0*psi(x)*psib(x) - I*psi(x)*Derivative(psib(x), x)/2 + I*psib(x)*Derivative(psi(x), x)/2 + 0.60368*Derivative(A(x), x)**2 + Derivative(h(x), x)**2/2 + Derivative(phi(x), x)**2/2",
+  "EOM_bundle": {
+    "A": "1.20736*Derivative(A(x), (x, 2))",
+    "h": "0.418604651162791*R0*h(x) + 1.57912790697674*h(x)**3 + h(x)*phi(x)**2 + 0.0345030625*h(x) + 1.0*psi(x)*psib(x) + Derivative(h(x), (x, 2))",
+    "phi": "h(x)**2*phi(x) + 0.311688311688312*phi(x)**3 + Derivative(phi(x), (x, 2))",
+    "psi": "1.0*h(x)*psib(x) + 1.0*psib(x) + 1.0*I*Derivative(psib(x), x)",
+    "psib": "1.0*h(x)*psi(x) + 1.0*psi(x) - 1.0*I*Derivative(psi(x), x)"
+  },
+  "variational_identity_residuals": {
+    "EL_minus_EOM_A": "0",
+    "EL_minus_EOM_h": "0",
+    "EL_minus_EOM_phi": "0",
+    "EL_minus_EOM_psi": "0",
+    "EL_minus_EOM_psib": "0"
+  },
+  "variational_identity_zero_flags": {
+    "EL_minus_EOM_A": true,
+    "EL_minus_EOM_h": true,
+    "EL_minus_EOM_phi": true,
+    "EL_minus_EOM_psi": true,
+    "EL_minus_EOM_psib": true
+  },
+  "identity_status": "PASS_ALL_ZERO",
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "open_obligations": [
+    "full_covariant_nonproxy_metric_spinor_export",
+    "global_helmholtz_integrability_theorem",
+    "counterterm_flow_closure_theorem",
+    "BRST_Cutkosky_unitarity_theorem",
+    "background_family_independence_theorem"
+  ],
+  "next_honest_step": "Przenieść ten identity-pass z reduced proxy na pełny nonproxy bundle (tensor+spinor) i domknąć theorem-level QG.",
+  "lay_summary": "Sprawdziliśmy automatycznie, że wyprowadzone równania są matematycznie zgodne z tym lagranżianem (reszty = 0). To wzmacnia poprawność lokalnego kroku, ale nie zamyka jeszcze całej teorii."
+}

@@ -1,0 +1,32 @@
+{
+  "checkpoint": "P1746_S696",
+  "timestamp_utc": "2026-05-15T03:22:14.701712+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "chain": "K_strict -> coefficients -> full nonskeleton L_total -> EOM -> reverse tests -> QG operational readiness",
+  "full_lagrangian_density_nonskeleton_instantiated": {
+    "L_gravity": "sqrt(-g)*[(1.72000000000000/2)R - Λ + 0.311688311688312 R^2 + 0.408311688311688 R_{μν}R^{μν} + 0.415800000000000 R_{μνρσ}R^{μνρσ}]",
+    "L_gauge": "sqrt(-g)*[-(1/4) Σ_a Z_a F^a_{μν}F_a^{μν}]",
+    "L_fermion": "sqrt(-g)*[Σ_f i ψ̄_f γ^a e_a^{ μ}D_μ ψ_f]",
+    "L_higgs": "sqrt(-g)*[(D_μH)^†(D^μH) - 0.0345030625000000(H^†H) - 1.57912790697674(H^†H)^2 - 0.418604651162791(H^†H)R]",
+    "L_yukawa": "sqrt(-g)*[-(y_u Q̄H~u + y_d Q̄Hd + y_e L̄He + h.c.)]",
+    "L_scalar_phi": "sqrt(-g)*[(1/2)(∇φ)^2 - (1/2)m_φ^2φ^2 - (λ_3/3!)φ^3 - (λ_4/4!)φ^4 - λ_{φH}φ^2(H^†H) - ξ_{φR}φ^2R]",
+    "L_mix": "sqrt(-g)*[χ_RG Σ_a R F^a_{μν}F_a^{μν} + CT_{1loop}(R^2,Ricci^2,Riemann^2,SM-mix)]"
+  },
+  "no_skip_enforcement_anchor": {
+    "R1": "M3 must be published before M4 closure claim",
+    "R2": "M4 must be published before M5 theorem gate entry",
+    "R3": "No strict-core closure claim unless QG theorem witnesses exported"
+  },
+  "operational_readiness": {
+    "forward_chain": "READY_ANCHORED",
+    "reverse_H1": "NOT_READY_NONPROXY_EXPORTS_REQUIRED",
+    "reverse_metric_residual": "NOT_READY_NONPROXY_EXPORTS_REQUIRED",
+    "qg_theorem_gates": "BLOCKED_UNTIL_REVERSE_RESULTS_AND_WITNESSES"
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "no_false_pass_claim": true,
+  "next_honest_step": "Dostarczyć minimalne eksporty nonproxy i wykonać H1, następnie wykonać EL_g-E_munu; dopiero po publikacji obu wyników uruchamiać theorem-level QG witnesses.",
+  "lay_summary": "Łańcuch do równań ruchu jest gotowy, ale domknięcie QG nadal czeka na dwa kluczowe testy odwrotne i formalne witnessy."
+}

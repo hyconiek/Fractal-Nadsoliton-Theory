@@ -1,0 +1,104 @@
+{
+  "checkpoint": "P1704_S654",
+  "timestamp_utc": "2026-05-15T00:57:53.619054+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "chain": "K_strict -> coefficients -> full explicit L_total -> nonproxy metric+spinor covariant EOM bundle scaffold",
+  "full_chain_anchor": {
+    "kernel_anchor": {
+      "kernel": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+      "kernel_input": {
+        "omega": 0.18575,
+        "phi": 4.5231,
+        "beta": 0.72,
+        "eta": 1.31,
+        "A": 1.0
+      }
+    },
+    "coefficient_anchor": {
+      "Mpl2": "1.72000000000000",
+      "cR2": "0.311688311688312",
+      "cRic2": "0.408311688311688",
+      "cRiem2": "0.415800000000000",
+      "muH2": "0.0345030625000000",
+      "lambdaH": "1.57912790697674",
+      "xiHR": "0.418604651162791",
+      "Z1": "1.20736000000000"
+    },
+    "full_lagrangian_explicit_anchor": {
+      "L_scalar": "sqrt(-g)*[1/2 g^{μν}(∇_μφ)(∇_νφ) - (m_φ^2/2)φ^2 - (λ_3/3!)φ^3 - (λ_4/4!)φ^4]",
+      "L_gauge": "sqrt(-g)*[-1/4 G^A_{μν}G_A^{μν} - 1/4 W^I_{μν}W_I^{μν} - 1/4 B_{μν}B^{μν}]",
+      "L_fermion": "sqrt(-g)*[Σ_f i ψ̄_f γ^a e_a^{ μ}D_μ ψ_f - Σ_f y_f(ψ̄_{fL}Hψ_{fR}+h.c.)]",
+      "L_higgs": "sqrt(-g)*[(D_μH)^†(D^μH) - μ_H^2(H^†H) - λ_H(H^†H)^2]",
+      "L_gravity": "sqrt(-g)*[(M_Pl^2/2)R - Λ + c1 R^2 + c2 R_{μν}R^{μν} + c3 R_{μναβ}R^{μναβ}]",
+      "L_mix": "sqrt(-g)*[ξ_HR(H^†H)R + ξ_φR φ^2R + λ_{φH}φ^2(H^†H)]"
+    },
+    "eom_anchor": {
+      "A": "1.20736*Derivative(A(x), (x, 2))",
+      "h": "0.418604651162791*R0*h(x) + 1.57912790697674*h(x)**3 + h(x)*phi(x)**2 + 0.0345030625*h(x) + 1.0*psi(x)*psib(x) + Derivative(h(x), (x, 2))",
+      "phi": "h(x)**2*phi(x) + 0.311688311688312*phi(x)**3 + Derivative(phi(x), (x, 2))",
+      "psi": "1.0*h(x)*psib(x) + 1.0*psib(x) + 1.0*I*Derivative(psib(x), x)",
+      "psib": "1.0*h(x)*psi(x) + 1.0*psi(x) - 1.0*I*Derivative(psi(x), x)"
+    }
+  },
+  "nonproxy_export_scaffold": {
+    "metric_sector": {
+      "fields": [
+        "g_{μν}"
+      ],
+      "lagrangian_anchor": [
+        "L_gravity",
+        "L_mix",
+        "L_higgs",
+        "L_scalar"
+      ],
+      "covariant_eom_target": "E_{μν}[g,H,phi,psi,A]=0",
+      "required_variation_objects": [
+        "delta_sqrt_minus_g",
+        "delta_R",
+        "delta_R2_Ricci2_Riemann2",
+        "matter_stress_energy_tensor_full"
+      ]
+    },
+    "spinor_sector": {
+      "fields": [
+        "psi_f",
+        "psibar_f",
+        "e^a_{μ}",
+        "omega_{μab}"
+      ],
+      "lagrangian_anchor": [
+        "L_fermion",
+        "L_yukawa",
+        "L_higgs",
+        "L_mix"
+      ],
+      "covariant_eom_target": "Dirac-Einstein-coupled system with spin connection",
+      "required_variation_objects": [
+        "gamma_curved_construction",
+        "covariant_spinor_derivative",
+        "torsionless_or_torsionful_choice_registry",
+        "yukawa_covariant_variation_terms"
+      ]
+    }
+  },
+  "interface_to_p1703_start_pair": {
+    "feeds_global_helmholtz_integrability_nonproxy": true,
+    "feeds_brst_nilpotency_nonproxy_proof": true,
+    "note": "This checkpoint exports the nonproxy object schema and derivation targets required before theorem proofs."
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "open_obligations": {
+    "nonproxy_metric_variation_full_export": "OPEN",
+    "nonproxy_spinor_connection_variation_full_export": "OPEN",
+    "global_helmholtz_integrability_nonproxy": "OPEN",
+    "brst_nilpotency_nonproxy_proof": "OPEN",
+    "cutkosky_full_sector_unitarity": "OPEN",
+    "counterterm_flow_renormalization_closure": "OPEN",
+    "background_independence_family_theorem": "OPEN",
+    "qw2191_selector_source_or_nonclosure_theorem": "OPEN"
+  },
+  "next_honest_step": "W kolejnym kroku wyeksportować jawne wzory wariacyjne dla sektora metrycznego (delta_g) i spinorowego (delta_psibar/delta_psi + spin connection), aby przejść ze scaffold do obiektu obliczalnego.",
+  "lay_summary": "Ustaliliśmy dokładnie, jak ma wyglądać pełny nieuproszczony pakiet równań dla metryki i fermionów. To przygotowuje grunt pod właściwe dowody matematyczne wymagane do domknięcia teorii."
+}

@@ -1,0 +1,33 @@
+{
+  "checkpoint": "P1756_S706",
+  "timestamp_utc": "2026-05-15T03:51:56.059972+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "chain": "K_strict -> coefficients -> full non-skeleton L_total -> EOM -> trigger/manifest consistency audit",
+  "input_anchors": [
+    "p1752_s702",
+    "p1754_s704"
+  ],
+  "consistency_result": {
+    "manifest_keys_checked": [
+      "M1_explicit_covariant_E_A_mu_expression_nonproxy",
+      "M2_explicit_covariant_E_H_expression_nonproxy",
+      "M3_shared_background_family_contract",
+      "M4_boundary_term_control_clause",
+      "M5_boundary_control_contract"
+    ],
+    "trigger_missing_keys": [
+      "boundary_control_contract",
+      "boundary_term_control_clause",
+      "explicit_covariant_E_A_mu_expression_nonproxy",
+      "explicit_covariant_E_H_expression_nonproxy",
+      "shared_background_family_contract"
+    ],
+    "mismatches": [],
+    "status": "PASS_CONSISTENT"
+  },
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "no_false_pass_claim": true,
+  "next_honest_step": "Jeśli status PASS_CONSISTENT, dostarczyć M1..M5; jeśli OBSTRUCTION, najpierw zsynchronizować manifest z trigger gate i dopiero kontynuować 4D H1.",
+  "lay_summary": "Sprawdziliśmy, czy lista braków i bramka uruchomienia mówią to samo. Dzięki temu nie powstaje chaos proceduralny przed krytycznym testem 4D."
+}

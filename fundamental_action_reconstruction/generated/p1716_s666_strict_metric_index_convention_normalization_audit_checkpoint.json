@@ -1,0 +1,49 @@
+{
+  "checkpoint": "P1716_S666",
+  "timestamp_utc": "2026-05-15T02:03:52.794592+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "route_target": "F_Nadsoliton => L_SM + L_GR (strict-only)",
+  "chain": "K_strict -> coefficients -> full explicit L_total -> E_munu scaffold -> index convention normalization audit",
+  "input_h_terms": {
+    "H_R2_munu": "H^(R2)_{μν} = 2 R R_{μν} - (1/2) g_{μν} R^2 + 2(g_{μν}□ - ∇_μ∇_ν)R",
+    "H_Ric2_munu": "H^(Ric2)_{μν} = 2 R_{μα}R_{ν}^{ α} - (1/2)g_{μν}R_{αβ}R^{αβ} + □R_{μν} + g_{μν}∇_α∇_βR^{αβ} - 2∇_α∇_{(μ}R_{ν)}^{ α}",
+    "H_Riem2_munu": "H^(Riem2)_{μν} = 2 R_{μαβγ}R_{ν}^{ αβγ} - (1/2)g_{μν}R_{αβγδ}R^{αβγδ} - 4∇_α∇_βR_{μν}^{\\ \\ αβ}"
+  },
+  "normalized_h_terms": {
+    "H_R2_munu": "H^(R2)_{μν} = 2 R R_{μν} - (1/2) g_{μν} R^2 + 2(g_{μν}□ - ∇_μ∇_ν)R",
+    "H_Ric2_munu": "H^(Ric2)_{μν} = 2 R_{μα}R_{ν}^α - (1/2)g_{μν}R_{αβ}R^{αβ} + □R_{μν} + g_{μν}∇_α∇_βR^{αβ} - 2∇_α∇_{(μ}R_{ν)}^α",
+    "H_Riem2_munu": "H^(Riem2)_{μν} = 2 R_{μαβγ}R_{ν}^{αβγ} - (1/2)g_{μν}R_{αβγδ}R^{αβγδ} - 4∇_α∇_βR_{μν}^{\\ \u0007lpha\beta}"
+  },
+  "token_audit": {
+    "H_R2_munu": {
+      "has_munu": true,
+      "has_covariant_derivative": true,
+      "has_quadratic_curvature": true
+    },
+    "H_Ric2_munu": {
+      "has_munu": true,
+      "has_covariant_derivative": true,
+      "has_quadratic_curvature": true
+    },
+    "H_Riem2_munu": {
+      "has_munu": true,
+      "has_covariant_derivative": true,
+      "has_quadratic_curvature": true
+    }
+  },
+  "audit_status": "PASS_INDEX_CONVENTION_NORMALIZED",
+  "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+  "open_obligations": [
+    "explicit_metric_sector_EL_residual_zero_certificate",
+    "bianchi_ward_cross_consistency_certificate",
+    "global_helmholtz_integrability_nonproxy",
+    "brst_nilpotency_and_cohomology_nonproxy",
+    "cutkosky_unitarity_full_sector",
+    "counterterm_flow_renormalization_closure",
+    "background_independence_family_theorem",
+    "qw2191_selector_source_or_nonclosure_theorem"
+  ],
+  "next_honest_step": "Użyć normalized_h_terms do pierwszego jawnego residual test EL_g - E_munu oraz wyeksportować pass/fail z pełnym obstrukcyjnym śladem składników.",
+  "lay_summary": "Uporządkowaliśmy zapis trudnych członów grawitacyjnych do jednej spójnej konwencji. To usuwa techniczne niejednoznaczności przed właściwym testem równania metrycznego."
+}

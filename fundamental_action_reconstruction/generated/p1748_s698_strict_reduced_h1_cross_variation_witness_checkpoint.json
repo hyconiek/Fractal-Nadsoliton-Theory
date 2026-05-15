@@ -1,0 +1,32 @@
+{
+  "checkpoint": "P1748_S698",
+  "timestamp_utc": "2026-05-15T03:27:58.750985+00:00",
+  "strict_only": true,
+  "legacy_bridge_used": false,
+  "scope": "REDUCED_PROXY_ONLY_NOT_NONPROXY",
+  "chain": "K_strict -> coefficients -> reduced non-skeleton L -> EOM(h,phi) -> Helmholtz H1 local cross-variation",
+  "input_anchor": "p1747_s697",
+  "EOM": {
+    "E_h": "0.418604651162791*R0*h(x) + 1.57912790697674*h(x)**3 + h(x)*phi(x)**2 + 0.0345030625*h(x) + Derivative(h(x), (x, 2))",
+    "E_phi": "h(x)**2*phi(x) + 0.311688311688312*phi(x)**3 + Derivative(phi(x), (x, 2))"
+  },
+  "cross_variation": {
+    "delta_E_h_over_delta_phi": "2*h(x)*phi(x)",
+    "delta_E_phi_over_delta_h": "2*h(x)*phi(x)",
+    "difference": "0"
+  },
+  "result": "PASS_ZERO",
+  "result_policy": "PASS valid only for reduced proxy scope; no automatic upgrade to nonproxy/full covariant theorem",
+  "qg_closure_impact": "NONE_DIRECT_OPEN",
+  "remaining_open": [
+    "nonproxy_metric_tensor_variational_export",
+    "nonproxy_spinor_connection_variational_export",
+    "helmholtz_integrability_full_sector_nonproxy",
+    "renormalization_closure_counterterm_stability",
+    "cutkosky_unitarity_full_sector",
+    "background_family_independence",
+    "QW-2191_selector_source_or_symmetry_breaking_premise"
+  ],
+  "next_honest_step": "Zastąpić reduced H1 przez nonproxy covariant H1 (A_mu,H) na wspólnej rodzinie teł z jawną kontrolą wyrazów brzegowych.",
+  "lay_summary": "W tej wersji testu pokazaliśmy matematycznie, że dwa sprzężone sektory w modelu redukcyjnym są wzajemnie spójne (H1). To ważny test lokalny, ale nie kończy jeszcze pełnej fizyki kwantowej grawitacji."
+}
