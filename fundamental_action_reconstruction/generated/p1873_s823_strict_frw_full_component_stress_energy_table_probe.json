@@ -1,0 +1,60 @@
+{
+  "packet_id": "P1873",
+  "stage_id": "S823",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "depends_on": {
+    "p1866_present": true,
+    "p1872_present": true
+  },
+  "strict_chain_step": "K_strict -> coefficients -> full L_total sector split -> T_mn components -> FRW Einstein residual table",
+  "full_lagrangian_density_non_skeleton": {
+    "L_scalar": "1/2*(d phi)^2 - V_eff(phi)",
+    "L_gauge": "-1/4 * F_{mu nu} F^{mu nu}",
+    "L_fermion": "i*psi_bar*gamma^mu*D_mu*psi - y*phi*psi_bar*psi",
+    "L_nonminimal": "-1/2*xi*R*phi^2",
+    "L_gravity": "(1/(2*kappa2))*(R - 2*Lambda_cc)",
+    "note": "Sector decomposition exported as full-L_total working form (not skeleton-only)."
+  },
+  "stress_energy_components": {
+    "rho_scalar": "lam*phi0**4*(1 + (-beta*eta*cos(omega + phi) - omega*(beta + 1)*sin(omega + phi))**2/(beta + 1)**4)/4 + m2*phi0**2*(1 + cos(omega + phi)/(beta + 1))/2 + phidot**2/2",
+    "p_scalar": "-lam*phi0**4*(1 + (-beta*eta*cos(omega + phi) - omega*(beta + 1)*sin(omega + phi))**2/(beta + 1)**4)/4 - m2*phi0**2*(1 + cos(omega + phi)/(beta + 1))/2 + phidot**2/2",
+    "rho_gauge": "B2/2 + E2/2",
+    "p_gauge": "B2/6 + E2/6",
+    "rho_fermion": "i_psi_dpsi",
+    "p_fermion": "0",
+    "rho_nonminimal": "3*H**2*phi0**2*xi",
+    "p_nonminimal": "-phi0**2*xi*(3*H**2 + R)",
+    "rho_total": "B2/2 + E2/2 + 3*H**2*phi0**2*xi + i_psi_dpsi + lam*phi0**4*(1 + (-beta*eta*cos(omega + phi) - omega*(beta + 1)*sin(omega + phi))**2/(beta + 1)**4)/4 + m2*phi0**2*(1 + cos(omega + phi)/(beta + 1))/2 + phidot**2/2",
+    "p_total": "B2/6 + E2/6 - lam*phi0**4*(1 + (-beta*eta*cos(omega + phi) - omega*(beta + 1)*sin(omega + phi))**2/(beta + 1)**4)/4 - m2*phi0**2*(1 + cos(omega + phi)/(beta + 1))/2 - phi0**2*xi*(3*H**2 + R) + phidot**2/2"
+  },
+  "frw_component_residual_table": {
+    "R_g_00": "3*H**2 + Lambda_cc - kappa2*(B2/2 + E2/2 + 3*H**2*phi0**2*xi + i_psi_dpsi + lam*phi0**4*(1 + (-beta*eta*cos(omega + phi) - omega*(beta + 1)*sin(omega + phi))**2/(beta + 1)**4)/4 + m2*phi0**2*(1 + cos(omega + phi)/(beta + 1))/2 + phidot**2/2)",
+    "R_g_11": "-3*H**2 + Lambda_cc - kappa2*(B2/6 + E2/6 - lam*phi0**4*(1 + (-beta*eta*cos(omega + phi) - omega*(beta + 1)*sin(omega + phi))**2/(beta + 1)**4)/4 - m2*phi0**2*(1 + cos(omega + phi)/(beta + 1))/2 - phi0**2*xi*(3*H**2 + R) + phidot**2/2)",
+    "R_g_22": "-3*H**2 + Lambda_cc - kappa2*(B2/6 + E2/6 - lam*phi0**4*(1 + (-beta*eta*cos(omega + phi) - omega*(beta + 1)*sin(omega + phi))**2/(beta + 1)**4)/4 - m2*phi0**2*(1 + cos(omega + phi)/(beta + 1))/2 - phi0**2*xi*(3*H**2 + R) + phidot**2/2)",
+    "R_g_33": "-3*H**2 + Lambda_cc - kappa2*(B2/6 + E2/6 - lam*phi0**4*(1 + (-beta*eta*cos(omega + phi) - omega*(beta + 1)*sin(omega + phi))**2/(beta + 1)**4)/4 - m2*phi0**2*(1 + cos(omega + phi)/(beta + 1))/2 - phi0**2*xi*(3*H**2 + R) + phidot**2/2)"
+  },
+  "symbolic_closure_branch": [
+    {
+      "H2": "kappa2*(2*B2/3 + 2*E2/3 + 3*H**2*phi0**2*xi + i_psi_dpsi - phi0**2*xi*(3*H**2 + R) + phidot**2)/6",
+      "Lambda_cc": "kappa2*(B2/3 + E2/3 + 3*H**2*phi0**2*xi + i_psi_dpsi + lam*phi0**4*(1 + (-beta*eta*cos(omega + phi) - omega*(beta + 1)*sin(omega + phi))**2/(beta + 1)**4)/2 + m2*phi0**2*(1 + cos(omega + phi)/(beta + 1)) + phi0**2*xi*(3*H**2 + R))/2"
+    }
+  ],
+  "qw2049_trace": {
+    "rho_total_qw2049": "0.5*B2 + 0.5*E2 + 3.0*H**2*phi0**2*xi + i_psi_dpsi + 0.301683705927*lam*phi0**4 + 0.734992836322*m2*phi0**2 + 0.5*phidot**2",
+    "p_total_qw2049": "0.166666666667*B2 + 0.166666666667*E2 - 0.301683705927*lam*phi0**4 - 0.734992836322*m2*phi0**2 - phi0**2*xi*(3.0*H**2 + R) + 0.5*phidot**2"
+  },
+  "bidirectional_chain_note": {
+    "forward": "Strict kernel fixes effective couplings, which feed all L_total sectors and then T_mn and Einstein residuals.",
+    "reverse": "Component-level residual constraints feed back onto admissible strict-sector coefficient ranges and sector-weight consistency."
+  },
+  "strict_core_closure_missing_exports": {
+    "renormalization": "Missing loop-level counterterm map on same FRW branch for scalar+gauge+fermion+nonminimal sectors.",
+    "unitarity": "Missing Cutkosky/optical witness with the same sector content around the FRW background.",
+    "background_independence": "Missing atlas-level closure witness beyond one FRW foliation.",
+    "selector_obstruction": "QW-2191 remains open; no strict selector closure is implied."
+  },
+  "false_pass_guard": "Full component table export is not strict-core closure theorem.",
+  "next_honest_step": "Export one-loop renormalized T_mn counterterm dictionary for these sectors and attach matching Cutkosky witness on same background branch.",
+  "lay_explanation": "To kolejny krok: nie tylko pole skalarne, ale też pola cechowania i fermiony dokładają energię i ciśnienie. Liczymy ich wspólny wpływ na równania grawitacji i jawnie pokazujemy, czego jeszcze brakuje do pełnego domknięcia teorii."
+}
