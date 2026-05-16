@@ -1,0 +1,36 @@
+{
+  "packet_id": "P1823",
+  "stage_id": "S773",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "tg1_preflight": {
+    "lock_precondition_required": "P1819 == LOCK_CONSISTENT",
+    "lock_precondition_observed": "LOCK_CONSISTENT",
+    "s1_readiness_required": "P1822 == PASS_ZERO",
+    "s1_readiness_observed": "OPEN_OBSTRUCTION_WITH_TRACE",
+    "s1_missing_witness_targets": [
+      "explicit_covariant_nonproxy_E_A_mu",
+      "explicit_covariant_nonproxy_E_H",
+      "metric_EL_g_export",
+      "boundary_term_control",
+      "H1_4D_weak_form_readiness",
+      "Bianchi_Ward_consistency"
+    ],
+    "tg1_run_allowed": false
+  },
+  "s2_contract": {
+    "step": "S2_EXECUTE_TG1_UNIFIED_NONPROXY_RESIDUAL_RUN",
+    "required_output": [
+      "binary TG1 verdict",
+      "full residual trace",
+      "no-autopromotion state sync"
+    ],
+    "completion_rule": "TG1 verdict exported with witness trace"
+  },
+  "technical_progress": "TG1 entry is now guarded by a two-key preflight gate: lock consistency + S1 evidence readiness.",
+  "proven": "TG1 cannot be launched under strict policy when S1 evidence pack is incomplete.",
+  "open": "S1 witness targets remain incomplete, so TG1 run stays blocked.",
+  "false_pass_risk": "Running TG1 without this preflight could create ambiguous non-reproducible partial-pass narratives.",
+  "next_honest_step": "Complete all P1822 missing witness targets, rerun P1822 then P1823, and only then execute TG1 runpack.",
+  "lay_explanation": "To jest zielone światło przed TG1: potrzebujesz i spójnego locka, i kompletnej teczki dowodów S1."
+}

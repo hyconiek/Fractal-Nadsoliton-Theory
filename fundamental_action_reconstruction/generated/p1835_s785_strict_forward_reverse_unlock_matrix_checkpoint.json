@@ -1,0 +1,50 @@
+{
+  "packet_id": "P1835",
+  "stage_id": "S785",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "forward_chain_ready": false,
+  "reverse_unlock_matrix": [
+    {
+      "theorem_gate": "helmholtz_integrability_global",
+      "forward_prerequisite": "ALL_FULL_LAGRANGIAN_SECTORS_PASS",
+      "forward_prerequisite_met": false,
+      "current_status": "OPEN_OBSTRUCTION_WITH_TRACE",
+      "unlock_state": "LOCKED_BY_FORWARD_CHAIN"
+    },
+    {
+      "theorem_gate": "brst_nilpotency",
+      "forward_prerequisite": "ALL_FULL_LAGRANGIAN_SECTORS_PASS",
+      "forward_prerequisite_met": false,
+      "current_status": "OPEN_OBSTRUCTION_WITH_TRACE",
+      "unlock_state": "LOCKED_BY_FORWARD_CHAIN"
+    },
+    {
+      "theorem_gate": "cutkosky_unitarity",
+      "forward_prerequisite": "ALL_FULL_LAGRANGIAN_SECTORS_PASS",
+      "forward_prerequisite_met": false,
+      "current_status": "OPEN_OBSTRUCTION_WITH_TRACE",
+      "unlock_state": "LOCKED_BY_FORWARD_CHAIN"
+    },
+    {
+      "theorem_gate": "renormalization_counterterm_closure",
+      "forward_prerequisite": "ALL_FULL_LAGRANGIAN_SECTORS_PASS",
+      "forward_prerequisite_met": false,
+      "current_status": "OPEN_OBSTRUCTION_WITH_TRACE",
+      "unlock_state": "LOCKED_BY_FORWARD_CHAIN"
+    },
+    {
+      "theorem_gate": "background_independence",
+      "forward_prerequisite": "ALL_FULL_LAGRANGIAN_SECTORS_PASS",
+      "forward_prerequisite_met": false,
+      "current_status": "OPEN_OBSTRUCTION_WITH_TRACE",
+      "unlock_state": "LOCKED_BY_FORWARD_CHAIN"
+    }
+  ],
+  "technical_progress": "Forward-completeness gate is now wired into an explicit reverse-theorem unlock matrix.",
+  "proven": "Reverse theorem gates remain locked until full non-skeleton Lagrangian sector exports are complete.",
+  "open": "Current forward sector gate is not passed, so reverse QG closure execution stays blocked.",
+  "false_pass_risk": "Attempting reverse theorem claims before forward sector completeness would decouple EOM/QG from declared L_total content.",
+  "next_honest_step": "Complete sector export gates in P1834, then execute reverse theorem worklist in this unlock order.",
+  "lay_explanation": "Najpierw trzeba domknąć pełny Lagrangian; dopiero wtedy odblokowują się końcowe testy QG."
+}

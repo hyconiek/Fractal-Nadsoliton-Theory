@@ -1,0 +1,45 @@
+{
+  "packet_id": "P1861",
+  "stage_id": "S811",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "depends_on": {
+    "p1860_present": true
+  },
+  "physical_pole_projection": {
+    "rule": "retain poles with s_pole>=0 and residue>=0; discard ghost/negative-residue poles",
+    "input_pole_count": 3,
+    "physical_pole_count": 2,
+    "physical_poles": [
+      {
+        "label": "spin2_physical",
+        "s_pole": 0.0,
+        "residue_seed": 1.0,
+        "nonnegative": true
+      },
+      {
+        "label": "massive_seed_mode",
+        "s_pole": 1.0,
+        "residue_seed": 0.12,
+        "nonnegative": true
+      }
+    ]
+  },
+  "discontinuity_certificate_seed": {
+    "channel": "graviton->gauge_gauge",
+    "statement": "Disc M_phys(s) = sum_{physical poles} Integral dPi_gg K_cut_phys >= 0 (seed projected corridor)",
+    "projected_corridor": "s in [0.5, 8.0] from current seed grid",
+    "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+    "missing": [
+      "full dressed propagator pole computation",
+      "exact K_cut_phys phase-space integral",
+      "background-family continuation beyond seed corridor"
+    ]
+  },
+  "strict_chain_extension": "K_strict -> K_cut sample -> pole table -> physical-pole projection -> projected discontinuity certificate",
+  "proven": "Physical-pole projection rule and projected discontinuity certificate seed are explicit in strict B1 lane.",
+  "open": "Projected certificate remains below theorem level until exact poles and integrals are computed.",
+  "false_pass_risk": "Seed projection cannot be treated as final unitarity or TG3 closure proof.",
+  "next_honest_step": "Replace seed poles with computed dressed poles and evaluate exact projected discontinuity integral with uncertainty-controlled positivity report.",
+  "lay_explanation": "Odfiltrowaliśmy nie-fizyczne bieguny i zapisaliśmy test unitarności dla fizycznych, ale to nadal etap przed pełnym ścisłym dowodem."
+}

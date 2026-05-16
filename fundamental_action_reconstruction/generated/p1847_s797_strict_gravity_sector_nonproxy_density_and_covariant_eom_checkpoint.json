@@ -1,0 +1,75 @@
+{
+  "packet_id": "P1847",
+  "stage_id": "S797",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "depends_on": {
+    "p1846_present": true,
+    "p1842_present": true
+  },
+  "gravity_sector_exports": {
+    "explicit_density_term_export": {
+      "density_name": "L_GR_strict_nonproxy_v1",
+      "density_formula": "sqrt(-g) * [(M_Pl^2/2)R + c_gr_1 R^2 + c_gr_2 R_{mu nu}R^{mu nu} + c_gr_3 R_{mu nu rho sigma}R^{mu nu rho sigma} + c_gr_4 G_GB]",
+      "coefficient_binding_rule": "c_gr_i = C_gr_i[K_strict, alpha_geo_strict, beta, eta, omega, phi]",
+      "coefficient_instances": {
+        "c_gr_1": "C_gr_1[K_strict(omega,phi,beta,eta), alpha_geo_strict_derived_v1]",
+        "c_gr_2": "C_gr_2[K_strict(omega,phi,beta,eta), alpha_geo_strict_derived_v1]",
+        "c_gr_3": "C_gr_3[K_strict(omega,phi,beta,eta), alpha_geo_strict_derived_v1]",
+        "c_gr_4": "C_gr_4[K_strict(omega,phi,beta,eta), alpha_geo_strict_derived_v1]"
+      },
+      "parameter_tuple": {
+        "omega": 0.18575,
+        "phi": 0.1625,
+        "beta": 1.0,
+        "eta": 1.8,
+        "alpha_geo_strict_derived_v1": "4*ln(2)"
+      }
+    },
+    "coefficient_binding_to_K_strict_map": "c_gr_i = C_gr_i[K_strict, alpha_geo_strict, beta, eta, omega, phi]",
+    "covariant_eom_term_export": {
+      "equation_name": "E_g_strict_nonproxy_v1",
+      "equation_form": "E_{mu nu} := delta S_total / delta g^{mu nu} = 0",
+      "expanded_structure": [
+        "(M_Pl^2/2) G_{mu nu}",
+        "+ c_gr_1 * H^{(R2)}_{mu nu}",
+        "+ c_gr_2 * H^{(Ric2)}_{mu nu}",
+        "+ c_gr_3 * H^{(Riem2)}_{mu nu}",
+        "+ c_gr_4 * H^{(GB)}_{mu nu}",
+        "= T^{(matter+gauge+higgs+mix)}_{mu nu}"
+      ],
+      "bianchi_consistency_constraint": "nabla^mu E_{mu nu} = 0 (required as residual check)"
+    },
+    "residual_zero_or_obstruction_trace": {
+      "residual_id": "gravity_sector_residual_trace_v1",
+      "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+      "checks": [
+        {
+          "name": "functional_variation_term_completeness",
+          "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+          "trace": "Need explicit symbolic variation export for each H^{(...)}_{mu nu} term under strict coefficient map."
+        },
+        {
+          "name": "counterterm_renormalization_closure_link",
+          "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+          "trace": "Need divergence-cancellation witness connecting c_gr_i running and counterterm basis."
+        },
+        {
+          "name": "unitarity_cut_structure_for_graviton_sector",
+          "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+          "trace": "Need strict cut/optical witness for dressed graviton propagator poles and residues."
+        },
+        {
+          "name": "background_independence_nonperturbative_control",
+          "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+          "trace": "Need diffeomorphism-invariant state-space witness beyond perturbative fixed-background expansion."
+        }
+      ]
+    }
+  },
+  "proven": "Gravity sector now has explicit nonproxy density and covariant EOM structural export on strict-only route.",
+  "open": "Residual trace stays open until functional variation, renormalization, unitarity, and background-independence witnesses are exported.",
+  "false_pass_risk": "Structural EOM export without residual-zero/theorem witness is not a QG closure proof.",
+  "next_honest_step": "Compute symbolic H^{(...)}_{mu nu} variation terms and attach first renormalization counterterm cancellation witness for gravity sector.",
+  "lay_explanation": "Rozpisaliśmy grawitacyjny składnik teorii i jego równanie ruchu w wersji strict, ale nadal trzeba wykazać że działa to kwantowo bez nieskończoności i bez łamania zasad fizyki."
+}

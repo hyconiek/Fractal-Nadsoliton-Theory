@@ -1,0 +1,113 @@
+{
+  "packet_id": "P1862",
+  "stage_id": "S812",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "depends_on": {
+    "p1861_present": true,
+    "p1860_present": true
+  },
+  "dressed_pole_residue_seed_table": {
+    "gauge_fixing": "strict_covariant_xi_family_seed_xi=1",
+    "rows": [
+      {
+        "label": "spin2_physical",
+        "s_pole": 0.0,
+        "residue_dressed_seed": 1.0,
+        "used_in_projection": true
+      },
+      {
+        "label": "massive_seed_mode",
+        "s_pole": 1.0,
+        "residue_dressed_seed": 0.12,
+        "used_in_projection": true
+      }
+    ],
+    "all_nonnegative_residues": true,
+    "note": "Seed dressed residues are inherited from physical-pole projection and still require full propagator computation."
+  },
+  "projected_discontinuity_seed_evaluation": {
+    "definition": "Disc_projected_seed := K_cut_sample restricted to physical-pole projection",
+    "rows": [
+      {
+        "s": 0.5,
+        "theta": 0.0,
+        "disc_projected_seed": 0.009739456703465451,
+        "nonnegative": true
+      },
+      {
+        "s": 0.5,
+        "theta": 0.5,
+        "disc_projected_seed": 0.01192033297434717,
+        "nonnegative": true
+      },
+      {
+        "s": 0.5,
+        "theta": 1.0,
+        "disc_projected_seed": 0.018462961786992325,
+        "nonnegative": true
+      },
+      {
+        "s": 1.0,
+        "theta": 0.0,
+        "disc_projected_seed": 0.019478913406930903,
+        "nonnegative": true
+      },
+      {
+        "s": 1.0,
+        "theta": 0.5,
+        "disc_projected_seed": 0.02384066594869434,
+        "nonnegative": true
+      },
+      {
+        "s": 1.0,
+        "theta": 1.0,
+        "disc_projected_seed": 0.03692592357398465,
+        "nonnegative": true
+      },
+      {
+        "s": 2.0,
+        "theta": 0.0,
+        "disc_projected_seed": 0.038957826813861805,
+        "nonnegative": true
+      },
+      {
+        "s": 2.0,
+        "theta": 0.5,
+        "disc_projected_seed": 0.04768133189738868,
+        "nonnegative": true
+      },
+      {
+        "s": 2.0,
+        "theta": 1.0,
+        "disc_projected_seed": 0.0738518471479693,
+        "nonnegative": true
+      },
+      {
+        "s": 4.0,
+        "theta": 0.0,
+        "disc_projected_seed": 0.07791565362772361,
+        "nonnegative": true
+      },
+      {
+        "s": 4.0,
+        "theta": 0.5,
+        "disc_projected_seed": 0.09536266379477736,
+        "nonnegative": true
+      },
+      {
+        "s": 4.0,
+        "theta": 1.0,
+        "disc_projected_seed": 0.1477036942959386,
+        "nonnegative": true
+      }
+    ],
+    "all_nonnegative": true
+  },
+  "strict_chain_extension": "K_strict -> K_cut sample -> physical-pole projection -> dressed-pole seed table -> projected discontinuity seed evaluation",
+  "proven": "Projected discontinuity seed values and dressed physical-pole seed table are now explicit in one artifact.",
+  "open": "This remains seed-level; full dressed propagator residues and exact phase-space integrals are still missing.",
+  "false_pass_risk": "Seed projected positivity cannot be interpreted as theorem-grade TG3 closure or global unitarity proof.",
+  "next_honest_step": "Compute exact dressed propagator residues and replace seed projected values with full integral outputs plus uncertainty-controlled positivity certificate.",
+  "lay_explanation": "Mamy już roboczą wersję projekcji na fizyczne bieguny i odpowiadające wartości testu unitarności, ale to nadal etap przed końcowym dowodem."
+}

@@ -1,0 +1,58 @@
+{
+  "packet_id": "P1821",
+  "stage_id": "S771",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "execution_lane": [
+    {
+      "step": "S1_EXPORT_EA_EH_ELG_BOUNDARY_H1_BW_INPUTS",
+      "targets": [
+        "explicit_covariant_nonproxy_E_A_mu",
+        "explicit_covariant_nonproxy_E_H",
+        "metric_EL_g_export",
+        "boundary_term_control",
+        "H1_4D_weak_form_readiness",
+        "Bianchi_Ward_consistency"
+      ],
+      "status_vector": {
+        "explicit_covariant_nonproxy_E_A_mu": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+        "explicit_covariant_nonproxy_E_H": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+        "metric_EL_g_export": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+        "boundary_term_control": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+        "H1_4D_weak_form_readiness": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+        "Bianchi_Ward_consistency": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED"
+      },
+      "completion_rule": "all targets must have residual/witness traces attached"
+    },
+    {
+      "step": "S2_EXECUTE_TG1_UNIFIED_NONPROXY_RESIDUAL_RUN",
+      "precondition": "P1819 status == LOCK_CONSISTENT",
+      "precondition_observed": "LOCK_CONSISTENT",
+      "required_output": [
+        "binary TG1 verdict",
+        "full residual trace",
+        "no-autopromotion state sync"
+      ],
+      "completion_rule": "TG1 verdict exported with witness trace"
+    },
+    {
+      "step": "S3_GATE_FORWARD_TO_TG2_TG3_ONLY_IF_TG1_PASS_ZERO",
+      "targets": [
+        "TG2_BRST",
+        "TG3_CUT"
+      ],
+      "status_vector": {
+        "TG1_BW": "OPEN_LOCKED_BY_UNIFIED_NONPROXY_RESIDUAL",
+        "TG2_BRST": "LOCKED_BY_TG1",
+        "TG3_CUT": "LOCKED_BY_TG2"
+      },
+      "completion_rule": "maintain OPEN/LOCKED unless strict witness closes predecessor gate"
+    }
+  ],
+  "technical_progress": "Priority obligations converted into an ordered execution lane with strict completion rules.",
+  "proven": "Current pipeline ordering is explicit: exports -> TG1 witness -> conditional TG2/TG3 progression.",
+  "open": "TG1 residual witness and theorem-level gate closures remain open.",
+  "false_pass_risk": "Skipping lane order could reintroduce passive gate promotion without witness trace.",
+  "next_honest_step": "Run S1 evidence packaging, then execute S2 TG1 runpack with full trace.",
+  "lay_explanation": "Mamy teraz kolejkę kroków: najpierw komplet dowodów, potem test TG1, a dopiero na końcu kolejne bramki."
+}

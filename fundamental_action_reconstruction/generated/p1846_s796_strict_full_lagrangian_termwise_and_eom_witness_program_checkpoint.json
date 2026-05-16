@@ -1,0 +1,110 @@
+{
+  "packet_id": "P1846",
+  "stage_id": "S796",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "input_dependency": {
+    "p1845_equation_sheet_present": true,
+    "p1844_blocker_matrix_present": true
+  },
+  "strict_chain": "K_strict -> coefficient_bindings -> full_termwise_L_total -> blockwise_EOM -> QG_closure_witness_set",
+  "full_lagrangian_non_skeleton_term_sheet": {
+    "strict_kernel_anchor": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+    "coefficient_bindings": {
+      "gravity": "c_gr_i = C_gr_i[K_strict, alpha_geo_strict, beta, eta, omega, phi]",
+      "gauge": "c_g_i = C_g_i[K_strict, beta, eta, spectral_inputs]",
+      "fermion": "y_f, m_f = C_f[K_strict, selector_constraints]",
+      "higgs": "lambda_H, mu_H2 = C_H[K_strict, stability_inputs]"
+    },
+    "L_total_termwise": {
+      "L_GR": [
+        "(M_Pl^2/2) * R",
+        "c_gr_1 * R^2 + c_gr_2 * R_{mu nu}R^{mu nu} + c_gr_3 * R_{mu nu rho sigma}R^{mu nu rho sigma}",
+        "c_gr_4 * G_{GB}"
+      ],
+      "L_gauge": [
+        "-(1/4) Z_A F^A_{mu nu}F_A^{mu nu}",
+        "-(1/4) Z_W F^I_{mu nu}F_I^{mu nu}",
+        "-(1/4) Z_G F^a_{mu nu}F_a^{mu nu}"
+      ],
+      "L_fermion": [
+        "sum_f i Z_psi_f * bar(psi_f) gamma^mu D_mu psi_f",
+        "-sum_f m_f * bar(psi_f)psi_f"
+      ],
+      "L_Higgs": [
+        "Z_H (D_mu H)^dagger(D^mu H)",
+        "-mu_H2 (H^dagger H)",
+        "-lambda_H (H^dagger H)^2",
+        "-xi_HR H^dagger H R"
+      ],
+      "L_mix": [
+        "(1/2) Z_chi (partial_mu chi)(partial^mu chi)",
+        "-(1/2) m_chi^2 chi^2",
+        "-kappa_Hchi chi(H^dagger H)"
+      ],
+      "L_int": [
+        "-sum_f y_f bar(psi_L,f) H psi_R,f + h.c.",
+        "-sum_J g_J J_J^mu A^J_mu",
+        "-sum_n c_mix_n O_mix_n/Lambda^{n-4}"
+      ],
+      "L_covariant": [
+        "sqrt(-g) * [L_GR + L_gauge + L_fermion + L_Higgs + L_mix + L_int]",
+        "spin_connection_and_tetrad_consistency_constraints"
+      ]
+    }
+  },
+  "eom_witness_program": {
+    "gravity_eom": {
+      "equation_form": "E_g^{mu nu} = delta(S_total)/delta(g_{mu nu}) = 0",
+      "required_exports": [
+        "gravity_sector::explicit_density_term_export",
+        "gravity_sector::coefficient_binding_to_K_strict_map",
+        "gravity_sector::covariant_eom_term_export",
+        "gravity_sector::residual_zero_or_obstruction_trace"
+      ]
+    },
+    "gauge_eom": {
+      "equation_form": "D_mu F_J^{mu nu} = J_J^nu with strict coefficient dressing",
+      "required_exports": [
+        "gauge_sector::explicit_density_term_export",
+        "gauge_sector::covariant_eom_term_export",
+        "gauge_sector::residual_zero_or_obstruction_trace"
+      ]
+    },
+    "fermion_eom": {
+      "equation_form": "(i gamma^mu D_mu - m_f - y_f H)psi_f = 0",
+      "required_exports": [
+        "fermion_sector::explicit_density_term_export",
+        "fermion_sector::covariant_eom_term_export",
+        "fermion_sector::residual_zero_or_obstruction_trace"
+      ]
+    },
+    "higgs_eom": {
+      "equation_form": "D^2 H + mu_H2 H + 2 lambda_H(H^dagger H)H + xi_HR R H + kappa_Hchi chi H = 0",
+      "required_exports": [
+        "higgs_sector::explicit_density_term_export",
+        "higgs_sector::covariant_eom_term_export",
+        "higgs_sector::residual_zero_or_obstruction_trace"
+      ]
+    },
+    "aux_scalar_eom": {
+      "equation_form": "Box chi + m_chi^2 chi + kappa_Hchi(H^dagger H) + dV_mix/dchi = 0",
+      "required_exports": [
+        "scalar_mix_sector::explicit_density_term_export",
+        "scalar_mix_sector::covariant_eom_term_export",
+        "scalar_mix_sector::residual_zero_or_obstruction_trace"
+      ]
+    }
+  },
+  "strict_core_closure_requirement": "Final strict-core closure remains blocked until each required export/witness/theorem is concretely delivered with residual trace evidence.",
+  "qg_obligation_blockers": {
+    "renormalization": "Missing explicit counterterm closure witness linking strict coefficients to divergence cancellation.",
+    "unitarity": "Missing cut/optical-theorem witness for strict dressed propagators across sectors.",
+    "background_independence": "Missing nonperturbative diffeomorphism-consistent state-space closure witness."
+  },
+  "proven": "A non-skeleton termwise L_total program and EOM witness contract are now explicit on the strict-only lane.",
+  "open": "No sector has delivered full residual-zero/theorem witnesses yet, so ToE/QG closure remains open.",
+  "false_pass_risk": "Termwise formula declaration is not equivalent to renormalization/unitarity/background-independence discharge.",
+  "next_honest_step": "Export first concrete sector package (gravity or gauge) with explicit coefficient values, computed EOM residual traces, and one theorem-level obstruction-or-zero witness.",
+  "lay_explanation": "Mamy już pełny zapis składników wzoru i równań ruchu w wersji strict, ale nadal trzeba policzyć i udowodnić brakujące testy fizyczne (renormalizacja, unitarność, niezależność od tła)."
+}

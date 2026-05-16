@@ -1,0 +1,162 @@
+{
+  "packet_id": "P1836",
+  "stage_id": "S786",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "kernel_anchor": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+  "coefficient_binding_rule": "all sector coefficients must be bound through strict kernel-derived map before theorem promotion",
+  "full_lagrangian_non_skeleton_manifest": {
+    "L_total": {
+      "gravity_sector": {
+        "density_symbol": "L_GR[g, R, Ric, Riem, curvature_corrections]",
+        "status": "OPEN_NONPROXY_EXPORT_REQUIRED"
+      },
+      "gauge_sector": {
+        "density_symbol": "L_gauge[F_A, F_W, F_G, covariant_derivatives]",
+        "status": "OPEN_NONPROXY_EXPORT_REQUIRED"
+      },
+      "fermion_sector": {
+        "density_symbol": "L_fermion[psi, D_mu, yukawa_structures]",
+        "status": "OPEN_NONPROXY_EXPORT_REQUIRED"
+      },
+      "higgs_sector": {
+        "density_symbol": "L_Higgs[H, D_mu H, V(H)]",
+        "status": "OPEN_NONPROXY_EXPORT_REQUIRED"
+      },
+      "scalar_mix_sector": {
+        "density_symbol": "L_mix[H, auxiliary_scalars, coupling_mix_terms]",
+        "status": "OPEN_NONPROXY_EXPORT_REQUIRED"
+      },
+      "interaction_terms": {
+        "density_symbol": "L_int[gauge-fermion, gauge-higgs, yukawa, higher_mix]",
+        "status": "OPEN_NONPROXY_EXPORT_REQUIRED"
+      },
+      "covariant_structures": {
+        "density_symbol": "L_covariant[sqrt(-g), tetrad/spin_connection, measure_terms]",
+        "status": "OPEN_NONPROXY_EXPORT_REQUIRED"
+      }
+    }
+  },
+  "sector_gate_status": {
+    "gravity_sector": {
+      "sector_gate_pass": false,
+      "missing_exports": [
+        "gravity_sector::explicit_density_term_export",
+        "gravity_sector::coefficient_binding_to_K_strict_map",
+        "gravity_sector::covariant_eom_term_export",
+        "gravity_sector::residual_zero_or_obstruction_trace"
+      ]
+    },
+    "gauge_sector": {
+      "sector_gate_pass": false,
+      "missing_exports": [
+        "gauge_sector::explicit_density_term_export",
+        "gauge_sector::coefficient_binding_to_K_strict_map",
+        "gauge_sector::covariant_eom_term_export",
+        "gauge_sector::residual_zero_or_obstruction_trace"
+      ]
+    },
+    "fermion_sector": {
+      "sector_gate_pass": false,
+      "missing_exports": [
+        "fermion_sector::explicit_density_term_export",
+        "fermion_sector::coefficient_binding_to_K_strict_map",
+        "fermion_sector::covariant_eom_term_export",
+        "fermion_sector::residual_zero_or_obstruction_trace"
+      ]
+    },
+    "higgs_sector": {
+      "sector_gate_pass": false,
+      "missing_exports": [
+        "higgs_sector::explicit_density_term_export",
+        "higgs_sector::coefficient_binding_to_K_strict_map",
+        "higgs_sector::covariant_eom_term_export",
+        "higgs_sector::residual_zero_or_obstruction_trace"
+      ]
+    },
+    "scalar_mix_sector": {
+      "sector_gate_pass": false,
+      "missing_exports": [
+        "scalar_mix_sector::explicit_density_term_export",
+        "scalar_mix_sector::coefficient_binding_to_K_strict_map",
+        "scalar_mix_sector::covariant_eom_term_export",
+        "scalar_mix_sector::residual_zero_or_obstruction_trace"
+      ]
+    },
+    "curvature_corrections": {
+      "sector_gate_pass": false,
+      "missing_exports": [
+        "curvature_corrections::explicit_density_term_export",
+        "curvature_corrections::coefficient_binding_to_K_strict_map",
+        "curvature_corrections::covariant_eom_term_export",
+        "curvature_corrections::residual_zero_or_obstruction_trace"
+      ]
+    },
+    "interaction_terms": {
+      "sector_gate_pass": false,
+      "missing_exports": [
+        "interaction_terms::explicit_density_term_export",
+        "interaction_terms::coefficient_binding_to_K_strict_map",
+        "interaction_terms::covariant_eom_term_export",
+        "interaction_terms::residual_zero_or_obstruction_trace"
+      ]
+    },
+    "covariant_structures": {
+      "sector_gate_pass": false,
+      "missing_exports": [
+        "covariant_structures::explicit_density_term_export",
+        "covariant_structures::coefficient_binding_to_K_strict_map",
+        "covariant_structures::covariant_eom_term_export",
+        "covariant_structures::residual_zero_or_obstruction_trace"
+      ]
+    }
+  },
+  "reverse_gate_dependency": [
+    {
+      "theorem_gate": "helmholtz_integrability_global",
+      "required_exports": [
+        "global_variational_integrability_theorem_object",
+        "nonproxy_operator_symmetry_witness"
+      ],
+      "status": "OPEN_OBSTRUCTION_WITH_TRACE"
+    },
+    {
+      "theorem_gate": "brst_nilpotency",
+      "required_exports": [
+        "ghost_sector_nonproxy_export",
+        "BRST_nilpotency_theorem_witness"
+      ],
+      "status": "OPEN_OBSTRUCTION_WITH_TRACE"
+    },
+    {
+      "theorem_gate": "cutkosky_unitarity",
+      "required_exports": [
+        "discontinuity_cut_structure_export",
+        "cutkosky_unitarity_theorem_witness"
+      ],
+      "status": "OPEN_OBSTRUCTION_WITH_TRACE"
+    },
+    {
+      "theorem_gate": "renormalization_counterterm_closure",
+      "required_exports": [
+        "counterterm_basis_closure_export",
+        "rg_flow_stability_witness"
+      ],
+      "status": "OPEN_OBSTRUCTION_WITH_TRACE"
+    },
+    {
+      "theorem_gate": "background_independence",
+      "required_exports": [
+        "background_family_covariance_export",
+        "background_independence_theorem_witness"
+      ],
+      "status": "OPEN_OBSTRUCTION_WITH_TRACE"
+    }
+  ],
+  "technical_progress": "A non-skeleton full-Lagrangian manifest is now explicit and linked to sector export gate status.",
+  "proven": "Strict chain now has an explicit full-Lagrangian target object rather than a skeleton-only placeholder.",
+  "open": "All sectors still require explicit nonproxy term-level exports and coefficient bindings from strict kernel map.",
+  "false_pass_risk": "Claiming full L_total without term-level sector exports would be a structural false-pass.",
+  "next_honest_step": "Fill each manifest sector with explicit term-level exports + kernel-bound coefficients, then rerun P1834/P1835.",
+  "lay_explanation": "To szkic pełnego wzoru teorii podzielony na sektory; teraz trzeba wypełnić każdy sektor konkretnymi składnikami i współczynnikami."
+}

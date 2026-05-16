@@ -1,0 +1,80 @@
+{
+  "packet_id": "P1824",
+  "stage_id": "S774",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "input_gate": {
+    "p1822_status": "OPEN_OBSTRUCTION_WITH_TRACE",
+    "p1823_tg1_run_allowed": false
+  },
+  "missing_count": 6,
+  "s1_missing_witness_worklist": [
+    {
+      "target": "explicit_covariant_nonproxy_E_A_mu",
+      "required_artifacts": [
+        "explicit_covariant_nonproxy_E_A_mu::explicit_covariant_formula_export",
+        "explicit_covariant_nonproxy_E_A_mu::residual_expression_export",
+        "explicit_covariant_nonproxy_E_A_mu::witness_trace_log",
+        "explicit_covariant_nonproxy_E_A_mu::independent_replay_check"
+      ],
+      "acceptance": "all artifacts present and status upgraded to PASS_ZERO by source checkpoint"
+    },
+    {
+      "target": "explicit_covariant_nonproxy_E_H",
+      "required_artifacts": [
+        "explicit_covariant_nonproxy_E_H::explicit_covariant_formula_export",
+        "explicit_covariant_nonproxy_E_H::residual_expression_export",
+        "explicit_covariant_nonproxy_E_H::witness_trace_log",
+        "explicit_covariant_nonproxy_E_H::independent_replay_check"
+      ],
+      "acceptance": "all artifacts present and status upgraded to PASS_ZERO by source checkpoint"
+    },
+    {
+      "target": "metric_EL_g_export",
+      "required_artifacts": [
+        "metric_EL_g_export::explicit_covariant_formula_export",
+        "metric_EL_g_export::residual_expression_export",
+        "metric_EL_g_export::witness_trace_log",
+        "metric_EL_g_export::independent_replay_check"
+      ],
+      "acceptance": "all artifacts present and status upgraded to PASS_ZERO by source checkpoint"
+    },
+    {
+      "target": "boundary_term_control",
+      "required_artifacts": [
+        "boundary_term_control::explicit_covariant_formula_export",
+        "boundary_term_control::residual_expression_export",
+        "boundary_term_control::witness_trace_log",
+        "boundary_term_control::independent_replay_check"
+      ],
+      "acceptance": "all artifacts present and status upgraded to PASS_ZERO by source checkpoint"
+    },
+    {
+      "target": "H1_4D_weak_form_readiness",
+      "required_artifacts": [
+        "H1_4D_weak_form_readiness::explicit_covariant_formula_export",
+        "H1_4D_weak_form_readiness::residual_expression_export",
+        "H1_4D_weak_form_readiness::witness_trace_log",
+        "H1_4D_weak_form_readiness::independent_replay_check"
+      ],
+      "acceptance": "all artifacts present and status upgraded to PASS_ZERO by source checkpoint"
+    },
+    {
+      "target": "Bianchi_Ward_consistency",
+      "required_artifacts": [
+        "Bianchi_Ward_consistency::explicit_covariant_formula_export",
+        "Bianchi_Ward_consistency::residual_expression_export",
+        "Bianchi_Ward_consistency::witness_trace_log",
+        "Bianchi_Ward_consistency::independent_replay_check"
+      ],
+      "acceptance": "all artifacts present and status upgraded to PASS_ZERO by source checkpoint"
+    }
+  ],
+  "execution_rule": "complete every workitem before rerunning P1822/P1823",
+  "technical_progress": "Missing S1 evidence obligations translated into explicit per-target artifact worklist.",
+  "proven": "TG1 remains blocked until each missing target has formula+residual+witness+replay artifacts.",
+  "open": "Worklist is non-empty, so strict TG1 preflight cannot pass yet.",
+  "false_pass_risk": "Claiming readiness without per-target replayable artifacts would create non-auditable PASS drift.",
+  "next_honest_step": "Produce artifacts for each workitem target, then rerun P1822 and P1823.",
+  "lay_explanation": "Rozbijamy brakujące dowody na konkretne zadania; dopóki lista nie jest pusta, TG1 nie startuje."
+}

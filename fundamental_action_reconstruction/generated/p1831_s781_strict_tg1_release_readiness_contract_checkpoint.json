@@ -1,0 +1,23 @@
+{
+  "packet_id": "P1831",
+  "stage_id": "S781",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "release_contract": {
+    "governance_state": "BLOCKED_BY_S1_EVIDENCE",
+    "preflight_tg1_allowed": false,
+    "pending_targets": 6,
+    "required_for_release": [
+      "governance_state == READY_FOR_TG1_EXECUTION",
+      "preflight_tg1_allowed == true",
+      "pending_targets == 0"
+    ],
+    "release_allowed": false
+  },
+  "technical_progress": "TG1 release conditions are consolidated into one explicit contract object for go/no-go governance.",
+  "proven": "Current release criteria remain unmet while governance/preflight/pending constraints are not jointly satisfied.",
+  "open": "Release contract is not yet satisfiable on current S1 evidence state.",
+  "false_pass_risk": "Running TG1 without all three release conditions can create an irreversible false-closure narrative.",
+  "next_honest_step": "Drive pending_targets to zero and rerun P1823/P1830 until release_contract.release_allowed becomes true.",
+  "lay_explanation": "To formalna umowa startu TG1: wszystkie warunki muszą być jednocześnie spełnione."
+}

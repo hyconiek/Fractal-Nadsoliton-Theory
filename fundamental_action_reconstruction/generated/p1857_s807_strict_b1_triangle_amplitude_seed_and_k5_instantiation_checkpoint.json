@@ -1,0 +1,34 @@
+{
+  "packet_id": "P1857",
+  "stage_id": "S807",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "depends_on": {
+    "p1856_present": true,
+    "p1853_present": true
+  },
+  "triangle_amplitude_seed": {
+    "scheme": "MSbar_B1_seed",
+    "amplitude_form": "I_triangle_f = (1/(16*pi^2))*C_triangle_f*log(mu_RG^2/m_f^2) + finite_f",
+    "strict_coupling_link": "C_triangle_f := strict_triangle_norm_f * (9937*log(2)/(40000*pi**2))",
+    "regularization": "dimensional_regularization_d=4-2*epsilon",
+    "status": "OPEN_OBSTRUCTION_WITH_TRACE"
+  },
+  "k5_instantiation_seed": {
+    "definition": "k5 = sum_f Tr[T_a {T_b,T_c}] * Y_f * I_triangle_f",
+    "family_sum_seed_count": 5,
+    "seed_partial_sum_note": "Current artifact exports first-family seed entries; full 3-family/chiral-complete sum required.",
+    "status": "OPEN_OBSTRUCTION_WITH_TRACE"
+  },
+  "cutkosky_discontinuity_numeric_symbolic_contract": {
+    "channel": "graviton->gauge_gauge",
+    "disc_form": "Disc M(s)=Integral dPi_gg M(grav->gg)M*(grav->gg)",
+    "numeric_symbolic_target": "evaluate Disc M(s) at seed grid s in B1 and verify nonnegative sign",
+    "status": "OPEN_OBSTRUCTION_WITH_TRACE"
+  },
+  "proven": "Regularized triangle amplitude seed and k5 instantiation formula are now explicit in B1 strict scheme.",
+  "open": "Full family-complete k5 value and explicit discontinuity evaluation/positivity certificate remain open.",
+  "false_pass_risk": "Seed instantiation without complete sums and evaluated integrals does not discharge BRST/Cutkosky gates.",
+  "next_honest_step": "Complete 3-family chiral sum for k5 and run first seed-grid Disc M(s) evaluation with signed positivity report.",
+  "lay_explanation": "Mamy już roboczy wzór na brakującą amplitudę trójkątną i sposób liczenia k5, ale jeszcze trzeba policzyć pełną sumę i sprawdzić znak całki unitarności."
+}

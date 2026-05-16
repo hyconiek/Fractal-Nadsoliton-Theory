@@ -1,0 +1,43 @@
+{
+  "packet_id": "P1832",
+  "stage_id": "S782",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "physics_chain": {
+    "forward": {
+      "kernel_to_coefficients": "OPEN_MISSING_ARTIFACT",
+      "coefficients_to_full_lagrangian": "OPEN_MISSING_ARTIFACT",
+      "full_lagrangian_to_covariant_eom": "OPEN_MISSING_ARTIFACT",
+      "full_chain_dossier": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED"
+    },
+    "reverse": {
+      "eom_to_variational_origin": "OPEN_OBSTRUCTION_WITH_TRACE",
+      "helmholtz_integrability_global": "OPEN_OBSTRUCTION_WITH_TRACE",
+      "kernel_identifiability_global": "OPEN_OBSTRUCTION_WITH_TRACE",
+      "current_s1_readiness": "OPEN_OBSTRUCTION_WITH_TRACE",
+      "tg1_release_contract": "OPEN_OBSTRUCTION_WITH_TRACE"
+    }
+  },
+  "full_lagrangian_scope_required": [
+    "gravity_sector",
+    "gauge_sector",
+    "fermion_sector",
+    "higgs_sector",
+    "scalar_mix_sector",
+    "curvature_corrections",
+    "interaction_terms",
+    "covariant_structures"
+  ],
+  "qg_closure_gates": {
+    "renormalization_counterterm_closure": "OPEN_OBSTRUCTION_WITH_TRACE",
+    "cutkosky_unitarity": "OPEN_OBSTRUCTION_WITH_TRACE",
+    "background_independence": "OPEN_OBSTRUCTION_WITH_TRACE",
+    "brst_nilpotency": "OPEN_OBSTRUCTION_WITH_TRACE"
+  },
+  "technical_progress": "Kernel->coefficients->full Lagrangian->EOM and reverse obligations are unified in one strict bidirectional dossier.",
+  "proven": "Forward-chain artifacts exist as explicit checkpoints, but theorem-level reverse/QG closures remain open.",
+  "open": "Global reverse variational closure and QG gates remain unresolved; TG1 release contract is still open.",
+  "false_pass_risk": "Treating forward export presence as theorem-level QG closure would be a false promotion.",
+  "next_honest_step": "Deliver missing nonproxy S1 artifacts and TG1 witness trace, then lift reverse chain (Helmholtz/BRST/Cutkosky/BI) with theorem objects.",
+  "lay_explanation": "Mamy mapę całej drogi fizycznej w obie strony: przód jest opisany, ale końcowe testy kwantowej grawitacji nadal czekają na dowody."
+}

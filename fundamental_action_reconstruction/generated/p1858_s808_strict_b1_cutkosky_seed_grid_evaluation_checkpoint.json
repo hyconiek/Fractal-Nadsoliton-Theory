@@ -1,0 +1,49 @@
+{
+  "packet_id": "P1858",
+  "stage_id": "S808",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "depends_on": {
+    "p1857_present": true,
+    "p1853_present": true
+  },
+  "cutkosky_seed_grid": {
+    "channel": "graviton->gauge_gauge",
+    "scheme": "MSbar_B1_seed",
+    "proxy_definition": "Disc_proxy(s) := (a_R2 + 0.5*a_Ric2)*s",
+    "grid_results": [
+      {
+        "s": 0.5,
+        "disc_proxy": 0.005377704161702015,
+        "nonnegative": true
+      },
+      {
+        "s": 1.0,
+        "disc_proxy": 0.01075540832340403,
+        "nonnegative": true
+      },
+      {
+        "s": 2.0,
+        "disc_proxy": 0.02151081664680806,
+        "nonnegative": true
+      },
+      {
+        "s": 4.0,
+        "disc_proxy": 0.04302163329361612,
+        "nonnegative": true
+      },
+      {
+        "s": 8.0,
+        "disc_proxy": 0.08604326658723224,
+        "nonnegative": true
+      }
+    ],
+    "all_nonnegative_on_seed_grid": true
+  },
+  "strict_chain_extension": "K_strict -> B1 coefficient evaluation -> first seed-grid discontinuity proxy scan",
+  "proven": "First numeric-symbolic seed-grid scan for discontinuity sign has been exported in strict B1 lane.",
+  "open": "Proxy positivity on seed grid is not a full Cutkosky integral theorem and does not prove global unitarity.",
+  "false_pass_risk": "Seed-grid proxy scan cannot replace explicit discontinuity integral evaluation and residue analysis.",
+  "next_honest_step": "Replace Disc_proxy with explicit discontinuity integral kernel and add residue/pole-structure certificate per channel.",
+  "lay_explanation": "Sprawdziliśmy pierwszy uproszczony test znaku dla unitarności na kilku punktach, ale to jeszcze nie jest pełny dowód fizyczny."
+}

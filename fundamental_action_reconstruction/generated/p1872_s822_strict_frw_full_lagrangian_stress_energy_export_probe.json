@@ -1,0 +1,39 @@
+{
+  "packet_id": "P1872",
+  "stage_id": "S822",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "depends_on": {
+    "p1866_present": true,
+    "p1871_present": true
+  },
+  "strict_chain_step": "K_strict -> couplings -> full-L scalar sector stress-energy -> FRW Einstein residuals",
+  "full_lagrangian_scalar_export": {
+    "rho_scalar": "(lam*phi0**4*((beta + 1)**4 + (beta*eta*cos(omega + phi) + omega*(beta + 1)*sin(omega + phi))**2) + 2*m2*phi0**2*(beta + 1)**3*(beta + cos(omega + phi) + 1) + 2*phidot**2*(beta + 1)**4)/(4*(beta + 1)**4)",
+    "p_scalar": "(-lam*phi0**4*((beta + 1)**4 + (beta*eta*cos(omega + phi) + omega*(beta + 1)*sin(omega + phi))**2) - 2*m2*phi0**2*(beta + 1)**3*(beta + cos(omega + phi) + 1) + 2*phidot**2*(beta + 1)**4)/(4*(beta + 1)**4)",
+    "note": "Derived from canonical scalar kinetic+potential slice compatible with full-L lane"
+  },
+  "frw_residuals": {
+    "R_g_00": "(-kappa2*(lam*phi0**4*((beta + 1)**4 + (beta*eta*cos(omega + phi) + omega*(beta + 1)*sin(omega + phi))**2) + 2*m2*phi0**2*(beta + 1)**3*(beta + cos(omega + phi) + 1) + 2*phidot**2*(beta + 1)**4) + 4*(3*H**2 + Lambda_cc)*(beta + 1)**4)/(4*(beta + 1)**4)",
+    "R_g_ii": "(kappa2*(lam*phi0**4*((beta + 1)**4 + (beta*eta*cos(omega + phi) + omega*(beta + 1)*sin(omega + phi))**2) + 2*m2*phi0**2*(beta + 1)**3*(beta + cos(omega + phi) + 1) - 2*phidot**2*(beta + 1)**4) + 4*(-3*H**2 + Lambda_cc)*(beta + 1)**4)/(4*(beta + 1)**4)",
+    "closure_branch": [
+      "{Lambda_cc: kappa2*phidot**2/2, H**2: beta**4*kappa2*lam*phi0**4/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + 2*beta**4*kappa2*m2*phi0**2/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + 4*beta**3*kappa2*lam*phi0**4/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + 2*beta**3*kappa2*m2*phi0**2*cos(omega + phi)/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + 8*beta**3*kappa2*m2*phi0**2/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + beta**2*eta**2*kappa2*lam*phi0**4*cos(omega + phi)**2/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + 2*beta**2*eta*kappa2*lam*omega*phi0**4*sin(omega + phi)*cos(omega + phi)/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + beta**2*kappa2*lam*omega**2*phi0**4*sin(omega + phi)**2/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + 6*beta**2*kappa2*lam*phi0**4/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + 6*beta**2*kappa2*m2*phi0**2*cos(omega + phi)/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + 12*beta**2*kappa2*m2*phi0**2/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + 2*beta*eta*kappa2*lam*omega*phi0**4*sin(omega + phi)*cos(omega + phi)/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + 2*beta*kappa2*lam*omega**2*phi0**4*sin(omega + phi)**2/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + 4*beta*kappa2*lam*phi0**4/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + 6*beta*kappa2*m2*phi0**2*cos(omega + phi)/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + 8*beta*kappa2*m2*phi0**2/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + kappa2*lam*omega**2*phi0**4*sin(omega + phi)**2/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + kappa2*lam*phi0**4/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + 2*kappa2*m2*phi0**2*cos(omega + phi)/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + 2*kappa2*m2*phi0**2/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12)}"
+    ]
+  },
+  "qw2049_trace": {
+    "rho_scalar_qw2049": "0.301683705927*lam*phi0**4 + 0.734992836322*m2*phi0**2 + 0.5*phidot**2",
+    "p_scalar_qw2049": "-0.301683705927*lam*phi0**4 - 0.734992836322*m2*phi0**2 + 0.5*phidot**2"
+  },
+  "bidirectional_note": {
+    "forward": "Kernel strict sets effective potential terms entering T_mn and Einstein residuals.",
+    "reverse": "FRW closure constraints restrict admissible strict-sector energy budget and feed back to parameter viability."
+  },
+  "qg_gap": {
+    "renormalization": "Need loop-corrected T_mn and counterterm consistency on same background family.",
+    "unitarity": "Need optical/Cutkosky consistency for perturbations around FRW branch.",
+    "background_independence": "Need atlas proof beyond single FRW slicing."
+  },
+  "false_pass_guard": "Stress-energy export on FRW slice is not full theorem closure.",
+  "next_honest_step": "Add gauge+fermion+nonminimal contributions to T_mn from full L_total and recompute full component residual table R_g_00..R_g_33.",
+  "lay_explanation": "Tu robimy bardziej fizyczny krok: energia i ciśnienie wynikają już z jawnego składnika lagranżianu, więc test równań kosmologii jest bliżej pełnej teorii."
+}

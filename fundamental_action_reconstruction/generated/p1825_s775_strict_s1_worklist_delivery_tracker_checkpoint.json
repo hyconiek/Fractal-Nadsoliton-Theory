@@ -1,0 +1,152 @@
+{
+  "packet_id": "P1825",
+  "stage_id": "S775",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "source_worklist_packet": "P1824_S774",
+  "delivery_tracker": [
+    {
+      "target": "explicit_covariant_nonproxy_E_A_mu",
+      "artifact_delivery": [
+        {
+          "artifact": "explicit_covariant_nonproxy_E_A_mu::explicit_covariant_formula_export",
+          "status": "OPEN_UNDELIVERED"
+        },
+        {
+          "artifact": "explicit_covariant_nonproxy_E_A_mu::residual_expression_export",
+          "status": "OPEN_UNDELIVERED"
+        },
+        {
+          "artifact": "explicit_covariant_nonproxy_E_A_mu::witness_trace_log",
+          "status": "OPEN_UNDELIVERED"
+        },
+        {
+          "artifact": "explicit_covariant_nonproxy_E_A_mu::independent_replay_check",
+          "status": "OPEN_UNDELIVERED"
+        }
+      ],
+      "target_ready": false
+    },
+    {
+      "target": "explicit_covariant_nonproxy_E_H",
+      "artifact_delivery": [
+        {
+          "artifact": "explicit_covariant_nonproxy_E_H::explicit_covariant_formula_export",
+          "status": "OPEN_UNDELIVERED"
+        },
+        {
+          "artifact": "explicit_covariant_nonproxy_E_H::residual_expression_export",
+          "status": "OPEN_UNDELIVERED"
+        },
+        {
+          "artifact": "explicit_covariant_nonproxy_E_H::witness_trace_log",
+          "status": "OPEN_UNDELIVERED"
+        },
+        {
+          "artifact": "explicit_covariant_nonproxy_E_H::independent_replay_check",
+          "status": "OPEN_UNDELIVERED"
+        }
+      ],
+      "target_ready": false
+    },
+    {
+      "target": "metric_EL_g_export",
+      "artifact_delivery": [
+        {
+          "artifact": "metric_EL_g_export::explicit_covariant_formula_export",
+          "status": "OPEN_UNDELIVERED"
+        },
+        {
+          "artifact": "metric_EL_g_export::residual_expression_export",
+          "status": "OPEN_UNDELIVERED"
+        },
+        {
+          "artifact": "metric_EL_g_export::witness_trace_log",
+          "status": "OPEN_UNDELIVERED"
+        },
+        {
+          "artifact": "metric_EL_g_export::independent_replay_check",
+          "status": "OPEN_UNDELIVERED"
+        }
+      ],
+      "target_ready": false
+    },
+    {
+      "target": "boundary_term_control",
+      "artifact_delivery": [
+        {
+          "artifact": "boundary_term_control::explicit_covariant_formula_export",
+          "status": "OPEN_UNDELIVERED"
+        },
+        {
+          "artifact": "boundary_term_control::residual_expression_export",
+          "status": "OPEN_UNDELIVERED"
+        },
+        {
+          "artifact": "boundary_term_control::witness_trace_log",
+          "status": "OPEN_UNDELIVERED"
+        },
+        {
+          "artifact": "boundary_term_control::independent_replay_check",
+          "status": "OPEN_UNDELIVERED"
+        }
+      ],
+      "target_ready": false
+    },
+    {
+      "target": "H1_4D_weak_form_readiness",
+      "artifact_delivery": [
+        {
+          "artifact": "H1_4D_weak_form_readiness::explicit_covariant_formula_export",
+          "status": "OPEN_UNDELIVERED"
+        },
+        {
+          "artifact": "H1_4D_weak_form_readiness::residual_expression_export",
+          "status": "OPEN_UNDELIVERED"
+        },
+        {
+          "artifact": "H1_4D_weak_form_readiness::witness_trace_log",
+          "status": "OPEN_UNDELIVERED"
+        },
+        {
+          "artifact": "H1_4D_weak_form_readiness::independent_replay_check",
+          "status": "OPEN_UNDELIVERED"
+        }
+      ],
+      "target_ready": false
+    },
+    {
+      "target": "Bianchi_Ward_consistency",
+      "artifact_delivery": [
+        {
+          "artifact": "Bianchi_Ward_consistency::explicit_covariant_formula_export",
+          "status": "OPEN_UNDELIVERED"
+        },
+        {
+          "artifact": "Bianchi_Ward_consistency::residual_expression_export",
+          "status": "OPEN_UNDELIVERED"
+        },
+        {
+          "artifact": "Bianchi_Ward_consistency::witness_trace_log",
+          "status": "OPEN_UNDELIVERED"
+        },
+        {
+          "artifact": "Bianchi_Ward_consistency::independent_replay_check",
+          "status": "OPEN_UNDELIVERED"
+        }
+      ],
+      "target_ready": false
+    }
+  ],
+  "summary": {
+    "total_targets": 6,
+    "ready_targets": 0,
+    "pending_targets": 6
+  },
+  "technical_progress": "Per-target S1 worklist is now executable as an artifact-delivery tracker with auditable statuses.",
+  "proven": "No target can be marked ready without explicit artifact-level delivery entries.",
+  "open": "All targets remain pending until required artifacts are delivered and replay-checked.",
+  "false_pass_risk": "Marking target readiness without artifact-level statuses would allow unverifiable completion claims.",
+  "next_honest_step": "Fill delivery statuses with real artifact paths/results, then rerun P1825 and propagate to P1822/P1823.",
+  "lay_explanation": "To tablica postępu: każdy brakujący dowód ma osobne pola 'dostarczone / niedostarczone'."
+}

@@ -1,0 +1,32 @@
+{
+  "packet_id": "P1859",
+  "stage_id": "S809",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "depends_on": {
+    "p1858_present": true,
+    "p1857_present": true
+  },
+  "cutkosky_kernel_contract": {
+    "channel": "graviton->gauge_gauge",
+    "integral_kernel": "Disc M(s) = Integral dPi_gg K_cut(s,theta,phi; c_gr_i^ren, y_f, g_J)",
+    "phase_space_domain": "2-body gauge phase-space in d=4-2*epsilon with MSbar_B1_seed",
+    "matching_rule": "K_cut must reduce to seed proxy sign in low-order limit used by P1858",
+    "status": "OPEN_OBSTRUCTION_WITH_TRACE"
+  },
+  "residue_certificate_stub": {
+    "target": "physical poles: Res D_phys(s_pole) >= 0 and ghost poles excluded by strict gauge-fixing constraints",
+    "required_exports": [
+      "dressed_graviton_propagator_pole_list",
+      "residue_values_per_pole",
+      "ghost_sector_exclusion_trace"
+    ],
+    "status": "OPEN_OBSTRUCTION_WITH_TRACE"
+  },
+  "strict_chain_extension": "K_strict -> renormalized coefficients -> explicit Cutkosky kernel -> residue positivity certificate",
+  "proven": "Explicit discontinuity kernel contract and residue-certificate target are now formalized in strict B1 lane.",
+  "open": "Kernel evaluation and residue data export remain missing.",
+  "false_pass_risk": "Without explicit kernel integrals and residue tables no TG3 unitarity closure can be claimed.",
+  "next_honest_step": "Export first computed K_cut sample table and corresponding dressed propagator pole/residue artifact under one fixed gauge-fixing choice.",
+  "lay_explanation": "Mamy już zapis jak dokładnie ma wyglądać pełna całka unitarności i co trzeba udowodnić o biegunach, ale wciąż brakuje policzonych danych."
+}
