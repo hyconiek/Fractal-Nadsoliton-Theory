@@ -1,0 +1,24 @@
+{
+  "packet_id": "P1818",
+  "stage_id": "S768",
+  "status": "LOCK_CONSISTENT",
+  "route": "strict_only",
+  "lock_name": "STRICT_VERDICT_TO_STATEVECTOR_CONSISTENCY_LOCK",
+  "source_verdict": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "hardened_verdict": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "checked_state_vector_keys": [
+    "SV1_E_A_mu_nonproxy_covariant_explicit",
+    "SV2_E_H_nonproxy_covariant_explicit",
+    "SV3_EL_g_nonproxy_explicit",
+    "SV4_boundary_term_control",
+    "SV5_H1_4D_weak_form"
+  ],
+  "consistency_rule": "SV1_to_SV5_must_not_exceed_source_verdict_strength",
+  "violations": [],
+  "technical_progress": "Executable lock added to prevent false-pass drift between intake verdict and state-vector SV1..SV5.",
+  "proven": "When source verdict is OPEN, state-vector cannot report PASS across SV1..SV5.",
+  "open": "Real P1806 evidence injection and rerun chain still required for any theorem-gate PASS_ZERO promotion.",
+  "false_pass_risk": "Manual edits or stale generated artifacts could bypass intent without this machine lock.",
+  "next_honest_step": "Bind this lock as mandatory pre-gate check before BW/BRST/Cutkosky theorem-gate evaluation.",
+  "lay_explanation": "To nie pozwala systemowi 'udawać sukcesu': jeśli źródłowy werdykt jest OPEN, wektor stanu też musi być OPEN."
+}

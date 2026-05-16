@@ -1,0 +1,117 @@
+{
+  "packet_id": "P1863",
+  "stage_id": "S813",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "depends_on": {
+    "p1862_present": true
+  },
+  "projected_discontinuity_uncertainty_report": {
+    "method": "seed_uncertainty_band_sigma=0.1*|disc_center|",
+    "rows": [
+      {
+        "s": 0.5,
+        "theta": 0.0,
+        "disc_center": 0.009739456703465451,
+        "sigma_seed": 0.0009739456703465451,
+        "lower_1sigma": 0.008765511033118907,
+        "positive_with_margin": true
+      },
+      {
+        "s": 0.5,
+        "theta": 0.5,
+        "disc_center": 0.01192033297434717,
+        "sigma_seed": 0.001192033297434717,
+        "lower_1sigma": 0.010728299676912453,
+        "positive_with_margin": true
+      },
+      {
+        "s": 0.5,
+        "theta": 1.0,
+        "disc_center": 0.018462961786992325,
+        "sigma_seed": 0.0018462961786992326,
+        "lower_1sigma": 0.016616665608293092,
+        "positive_with_margin": true
+      },
+      {
+        "s": 1.0,
+        "theta": 0.0,
+        "disc_center": 0.019478913406930903,
+        "sigma_seed": 0.0019478913406930903,
+        "lower_1sigma": 0.017531022066237814,
+        "positive_with_margin": true
+      },
+      {
+        "s": 1.0,
+        "theta": 0.5,
+        "disc_center": 0.02384066594869434,
+        "sigma_seed": 0.002384066594869434,
+        "lower_1sigma": 0.021456599353824907,
+        "positive_with_margin": true
+      },
+      {
+        "s": 1.0,
+        "theta": 1.0,
+        "disc_center": 0.03692592357398465,
+        "sigma_seed": 0.003692592357398465,
+        "lower_1sigma": 0.033233331216586184,
+        "positive_with_margin": true
+      },
+      {
+        "s": 2.0,
+        "theta": 0.0,
+        "disc_center": 0.038957826813861805,
+        "sigma_seed": 0.0038957826813861805,
+        "lower_1sigma": 0.03506204413247563,
+        "positive_with_margin": true
+      },
+      {
+        "s": 2.0,
+        "theta": 0.5,
+        "disc_center": 0.04768133189738868,
+        "sigma_seed": 0.004768133189738868,
+        "lower_1sigma": 0.04291319870764981,
+        "positive_with_margin": true
+      },
+      {
+        "s": 2.0,
+        "theta": 1.0,
+        "disc_center": 0.0738518471479693,
+        "sigma_seed": 0.00738518471479693,
+        "lower_1sigma": 0.06646666243317237,
+        "positive_with_margin": true
+      },
+      {
+        "s": 4.0,
+        "theta": 0.0,
+        "disc_center": 0.07791565362772361,
+        "sigma_seed": 0.007791565362772361,
+        "lower_1sigma": 0.07012408826495126,
+        "positive_with_margin": true
+      },
+      {
+        "s": 4.0,
+        "theta": 0.5,
+        "disc_center": 0.09536266379477736,
+        "sigma_seed": 0.009536266379477736,
+        "lower_1sigma": 0.08582639741529963,
+        "positive_with_margin": true
+      },
+      {
+        "s": 4.0,
+        "theta": 1.0,
+        "disc_center": 0.1477036942959386,
+        "sigma_seed": 0.01477036942959386,
+        "lower_1sigma": 0.13293332486634474,
+        "positive_with_margin": true
+      }
+    ],
+    "all_positive_with_1sigma_margin": true
+  },
+  "strict_chain_extension": "K_strict -> projected discontinuity seed -> uncertainty-banded positivity check",
+  "proven": "A first uncertainty-banded positivity report for projected discontinuity has been exported.",
+  "open": "Uncertainty model is seed-level; exact error propagation from full integrals is not yet available.",
+  "false_pass_risk": "Seed uncertainty bands cannot replace theorem-grade unitarity error analysis.",
+  "next_honest_step": "Derive uncertainty from exact phase-space integral inputs and dressed propagator covariance, then re-evaluate positivity certificate.",
+  "lay_explanation": "Dodaliśmy prosty margines niepewności do testu unitarności, ale pełna wiarygodność wymaga niepewności policzonej z dokładnych całek."
+}

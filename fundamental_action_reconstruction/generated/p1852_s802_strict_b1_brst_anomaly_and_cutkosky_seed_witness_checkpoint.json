@@ -1,0 +1,65 @@
+{
+  "packet_id": "P1852",
+  "stage_id": "S802",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "depends_on": {
+    "p1851_present": true,
+    "p1850_present": true
+  },
+  "strict_chain_extension": "K_strict -> B1 counterterm identity -> BRST anomaly check seed -> Cutkosky discontinuity seed",
+  "brst_anomaly_seed_contract": {
+    "sector": "gravity+SM strict B1",
+    "master_identity": "S_BRST(Gamma_eff_B1) = A_B1",
+    "target_condition": "A_B1 = 0",
+    "cochain_basis": [
+      "c * R^2",
+      "c * R_{mu nu}R^{mu nu}",
+      "c * R_{mu nu rho sigma}R^{mu nu rho sigma}",
+      "c * G_GB",
+      "c * Tr(F_{mu nu}F^{mu nu})"
+    ],
+    "ward_link": "diffeomorphism_ward_identity and gauge ward identity must remain compatible with delta_c_gr_i(B1)"
+  },
+  "cutkosky_seed_contract": {
+    "sector": "dressed graviton-matter channels on B1",
+    "optical_statement": "2*Im(M_{i->i}) = sum_f Integral dPi_f |M_{i->f}|^2",
+    "required_channels": [
+      "graviton->graviton",
+      "graviton->gauge_gauge",
+      "graviton->fermion_fermion",
+      "graviton->higgs_higgs"
+    ],
+    "pole_residue_constraints": "Residues at physical poles must be non-negative and ghost-free in declared gauge fixing family."
+  },
+  "residual_trace": {
+    "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+    "checks": [
+      {
+        "id": "brst_anomaly_basis_seed_exported",
+        "status": "PASS_WITH_TRACE",
+        "trace": "BRST anomaly cochain basis and target condition A_B1=0 exported."
+      },
+      {
+        "id": "cutkosky_channel_seed_exported",
+        "status": "PASS_WITH_TRACE",
+        "trace": "Cutkosky required channel set and optical statement exported."
+      },
+      {
+        "id": "explicit_A_B1_computation",
+        "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+        "trace": "Need computed BRST variation of effective action and explicit anomaly polynomial coefficients."
+      },
+      {
+        "id": "discontinuity_integral_evaluation",
+        "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+        "trace": "Need explicit discontinuity integrals and positivity certificate for dressed propagators."
+      }
+    ]
+  },
+  "proven": "B1-linked TG2/TG3 seed witness contracts are now explicit with concrete anomaly/cochain and discontinuity channel targets.",
+  "open": "Computed anomaly polynomial cancellation and explicit Cutkosky discontinuity integrals remain open.",
+  "false_pass_risk": "Seed contracts without computed anomaly/discontinuity witnesses do not discharge BRST or unitarity gates.",
+  "next_honest_step": "Compute A_B1 cochain coefficients and first graviton->gauge_gauge discontinuity integral in one fixed renormalization and gauge scheme.",
+  "lay_explanation": "Mamy już dokładnie opisane jakie testy symetrii i unitarności trzeba policzyć, ale nadal brakuje samych obliczeń końcowych, więc teoria nie jest jeszcze zamknięta."
+}

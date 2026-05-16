@@ -1,0 +1,20 @@
+{
+  "packet_id": "P1830",
+  "stage_id": "S780",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "governance_gate": {
+    "state": "BLOCKED_BY_S1_EVIDENCE",
+    "blocker_class": "S1_ARTIFACT_DEFICIT",
+    "pending_targets": 6,
+    "burndown_ratio": 0.0,
+    "tg1_allowed_flag": false
+  },
+  "release_rule": "TG1 execution release only if READY_FOR_TG1_EXECUTION",
+  "technical_progress": "TG1 blocker status is now translated into a governance gate state for release/no-release decisions.",
+  "proven": "Current governance state remains blocked while S1 evidence deficit persists.",
+  "open": "No release permission for TG1 execution under current blocker state.",
+  "false_pass_risk": "Executing TG1 outside governance gate can bypass strict evidence closure and create false theorem momentum.",
+  "next_honest_step": "Close S1 deficits until governance state flips to READY_FOR_TG1_EXECUTION, then run TG1 once.",
+  "lay_explanation": "To formalna zgoda/odmowa startu TG1: dziś status mówi 'blokada', więc nie uruchamiamy bramki."
+}

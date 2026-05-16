@@ -1,0 +1,58 @@
+{
+  "packet_id": "P1840",
+  "stage_id": "S790",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "bidirectional_closure_matrix": {
+    "TG1_BW": {
+      "forward_requirements": [
+        "gravity_sector",
+        "gauge_sector",
+        "higgs_sector",
+        "covariant_structures"
+      ],
+      "forward_ready": false,
+      "reverse_requirements": [
+        "helmholtz_integrability_global"
+      ],
+      "reverse_unlocked": false,
+      "gate_ready": false
+    },
+    "TG2_BRST": {
+      "forward_requirements": [
+        "gauge_sector",
+        "fermion_sector",
+        "interaction_terms",
+        "covariant_structures"
+      ],
+      "forward_ready": false,
+      "reverse_requirements": [
+        "brst_nilpotency"
+      ],
+      "reverse_unlocked": false,
+      "gate_ready": false
+    },
+    "TG3_CUT": {
+      "forward_requirements": [
+        "fermion_sector",
+        "interaction_terms",
+        "curvature_corrections"
+      ],
+      "forward_ready": false,
+      "reverse_requirements": [
+        "cutkosky_unitarity",
+        "renormalization_counterterm_closure",
+        "background_independence"
+      ],
+      "reverse_unlocked": false,
+      "gate_ready": false
+    }
+  },
+  "strict_core_ready": false,
+  "technical_progress": "Forward term-delivery and reverse unlock signals are fused into a single strict-core closure criteria matrix.",
+  "proven": "A theorem gate is ready only when both forward sector content and reverse unlock requirements are jointly satisfied.",
+  "open": "At least one TG criterion remains unsatisfied, so strict-core closure is not achieved.",
+  "false_pass_risk": "Evaluating TG readiness without bidirectional criteria matrix can yield one-sided false-pass claims.",
+  "next_honest_step": "Satisfy missing forward sector deliveries and reverse unlock states per gate row, then rerun P1840.",
+  "lay_explanation": "To tabela warunków domknięcia: każda bramka potrzebuje jednocześnie kompletu wzoru i odblokowanych dowodów QG."
+}

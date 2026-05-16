@@ -1,0 +1,41 @@
+{
+  "packet_id": "P1869",
+  "stage_id": "S819",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "depends_on": {
+    "p1868_present": true
+  },
+  "declared_background_family": "flat_minkowski_vacuum_probe",
+  "assumptions": [
+    "g_mn = eta_mn",
+    "A_mu = 0",
+    "psi = 0",
+    "phi = 0",
+    "T_mn_scalar = T_mn_fermion = T_mn_gauge = T_mn_nonminimal = 0"
+  ],
+  "residual_fill_result": {
+    "E_phi_under_assumptions": "0",
+    "E_A_mu_under_assumptions": "0",
+    "R_g_mn_under_assumptions": "-Lambda_cc*eta_mn",
+    "component_status": {
+      "scalar": "PASS_ZERO_LOCAL_BACKGROUND",
+      "gauge": "PASS_ZERO_LOCAL_BACKGROUND",
+      "metric": "OPEN_OBSTRUCTION_WITH_TRACE"
+    },
+    "metric_obstruction_reason": "Flat vacuum requires Lambda_cc=0; otherwise Einstein residual remains nonzero."
+  },
+  "coefficient_trace_qw2049": {
+    "m2_eff_factor": "1.46998567264",
+    "lam_eff_factor": "1.20673482371",
+    "y_eff_factor": "1.23499283632",
+    "g_eff_factor": "1.23191009715"
+  },
+  "bidirectional_note": {
+    "forward": "Kernel tuple fixes effective-coupling factors used in residual equations.",
+    "reverse": "Background residual conditions (e.g., Lambda_cc constraint) restrict admissible closure claims."
+  },
+  "false_pass_guard": "Local flat-vacuum partial zeros do not imply global TG2/TG3/ToE closure.",
+  "next_honest_step": "Repeat component fill for nontrivial curved background atlas and export explicit R_g_00..R_g_33 numeric/symbolic tables with obstruction/zero verdicts.",
+  "lay_explanation": "W najprostszym tle (płaska próżnia) równania dla pola skalarnego i cechowania się zerują, ale część grawitacyjna nadal blokuje domknięcie, jeśli stała kosmologiczna nie spełni warunku."
+}

@@ -1,0 +1,63 @@
+{
+  "packet_id": "P1864",
+  "stage_id": "S814",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "depends_on": {
+    "p1846_present": true,
+    "p1853_present": true,
+    "p1863_present": true
+  },
+  "strict_chain": "K_strict -> coefficients -> full non-skeleton L_total -> EOM -> BRST/CUT/QG witnesses",
+  "full_lagrangian_explicit_blocks": {
+    "L_GR": [
+      "(M_Pl^2/2) * R",
+      "c_gr_1 * R^2 + c_gr_2 * R_{mu nu}R^{mu nu} + c_gr_3 * R_{mu nu rho sigma}R^{mu nu rho sigma}",
+      "c_gr_4 * G_{GB}"
+    ],
+    "L_gauge": [
+      "-(1/4) Z_A F^A_{mu nu}F_A^{mu nu}",
+      "-(1/4) Z_W F^I_{mu nu}F_I^{mu nu}",
+      "-(1/4) Z_G F^a_{mu nu}F_a^{mu nu}"
+    ],
+    "L_fermion": [
+      "sum_f i Z_psi_f * bar(psi_f) gamma^mu D_mu psi_f",
+      "-sum_f m_f * bar(psi_f)psi_f"
+    ],
+    "L_Higgs": [
+      "Z_H (D_mu H)^dagger(D^mu H)",
+      "-mu_H2 (H^dagger H)",
+      "-lambda_H (H^dagger H)^2",
+      "-xi_HR H^dagger H R"
+    ],
+    "L_mix": [
+      "(1/2) Z_chi (partial_mu chi)(partial^mu chi)",
+      "-(1/2) m_chi^2 chi^2",
+      "-kappa_Hchi chi(H^dagger H)"
+    ],
+    "L_int": [
+      "-sum_f y_f bar(psi_L,f) H psi_R,f + h.c.",
+      "-sum_J g_J J_J^mu A^J_mu",
+      "-sum_n c_mix_n O_mix_n/Lambda^{n-4}"
+    ],
+    "L_covariant": [
+      "sqrt(-g) * [L_GR + L_gauge + L_fermion + L_Higgs + L_mix + L_int]",
+      "spin_connection_and_tetrad_consistency_constraints"
+    ]
+  },
+  "next_computation_contract": {
+    "renormalization": "compute exact 1-loop divergence coefficients on declared operator basis and prove counterterm cancellation identity",
+    "unitarity": "replace proxy Disc values with exact phase-space discontinuity integrals and pole-residue certified projection",
+    "background_independence": "export continuation witness from B1 seed corridor to declared background family atlas",
+    "brst": "compute full anomaly cochain including k5 with family-complete triangle amplitudes and prove A_B1=0 or obstruction"
+  },
+  "bidirectional_consistency_rule": {
+    "forward": "every coefficient update must propagate to L_total and EOM residual tables",
+    "reverse": "every BRST/Cutkosky/background witness must map back to coefficient and kernel constraints"
+  },
+  "proven": "A unified strict computation contract now ties full Lagrangian blocks to concrete theorem-grade closure tasks.",
+  "open": "All theorem-grade closures remain open pending exact computed witnesses.",
+  "false_pass_risk": "Contract completeness is not theorem discharge; no TG2/TG3/ToE closure claim is allowed yet.",
+  "next_honest_step": "Execute first exact (non-proxy) discontinuity integral and first full anomaly cochain computation in the same renormalization scheme, then update gate matrix.",
+  "lay_explanation": "Mamy pełny plan obliczeń łączący wzory teorii z brakującymi dowodami; teraz trzeba wykonać dokładne rachunki, żeby domknąć teorię."
+}

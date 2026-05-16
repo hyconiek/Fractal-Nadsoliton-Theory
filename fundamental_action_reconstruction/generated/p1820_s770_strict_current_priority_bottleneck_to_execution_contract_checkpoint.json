@@ -1,0 +1,111 @@
+{
+  "packet_id": "P1820",
+  "stage_id": "S770",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "current_priority_snapshot": {
+    "explicit_covariant_nonproxy_E_A_mu": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+    "explicit_covariant_nonproxy_E_H": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+    "metric_EL_g_export": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+    "boundary_term_control": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+    "H1_4D_weak_form_readiness": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+    "Bianchi_Ward_consistency": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+    "pre_TG_lock": "LOCK_CONSISTENT",
+    "TG1_BW": "OPEN_LOCKED_BY_UNIFIED_NONPROXY_RESIDUAL",
+    "TG2_BRST": "LOCKED_BY_TG1",
+    "TG3_CUT": "LOCKED_BY_TG2"
+  },
+  "bottleneck_ranking": [
+    {
+      "item": "explicit_covariant_nonproxy_E_A_mu",
+      "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+      "severity": 3
+    },
+    {
+      "item": "explicit_covariant_nonproxy_E_H",
+      "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+      "severity": 3
+    },
+    {
+      "item": "metric_EL_g_export",
+      "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+      "severity": 3
+    },
+    {
+      "item": "boundary_term_control",
+      "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+      "severity": 3
+    },
+    {
+      "item": "H1_4D_weak_form_readiness",
+      "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+      "severity": 3
+    },
+    {
+      "item": "Bianchi_Ward_consistency",
+      "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+      "severity": 3
+    },
+    {
+      "item": "TG1_BW",
+      "status": "OPEN_LOCKED_BY_UNIFIED_NONPROXY_RESIDUAL",
+      "severity": 3
+    },
+    {
+      "item": "TG2_BRST",
+      "status": "LOCKED_BY_TG1",
+      "severity": 2
+    },
+    {
+      "item": "TG3_CUT",
+      "status": "LOCKED_BY_TG2",
+      "severity": 2
+    },
+    {
+      "item": "pre_TG_lock",
+      "status": "LOCK_CONSISTENT",
+      "severity": 1
+    }
+  ],
+  "top_bottlenecks": [
+    {
+      "item": "explicit_covariant_nonproxy_E_A_mu",
+      "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+      "severity": 3
+    },
+    {
+      "item": "explicit_covariant_nonproxy_E_H",
+      "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+      "severity": 3
+    },
+    {
+      "item": "metric_EL_g_export",
+      "status": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+      "severity": 3
+    }
+  ],
+  "top_bottlenecks_policy": "ACTIVE_OPEN_ONLY",
+  "execution_contract": {
+    "hard_precondition": "P1819 must be LOCK_CONSISTENT",
+    "active_bottleneck": "TG1_BW unified nonproxy residual witness",
+    "required_inputs": [
+      "explicit covariant nonproxy E_A_mu export",
+      "explicit covariant nonproxy E_H export",
+      "metric EL_g export",
+      "boundary-term control clauses",
+      "H1 4D weak-form residual pack",
+      "Bianchi/Ward divergence trace"
+    ],
+    "required_output": [
+      "binary TG1 verdict",
+      "residual witness trace",
+      "state-vector sync without PASS promotion"
+    ]
+  },
+  "technical_progress": "Priority bottlenecks normalized with dependency-aware severity and active-open-only top list for TG1 execution focus.",
+  "proven": "Pre-TG consistency lock is satisfied at lock level, but theorem gates remain open.",
+  "open": "No global nonproxy residual witness exported yet for TG1/TG2/TG3 closure.",
+  "false_pass_risk": "Confusing lock consistency with theorem closure would overstate progress.",
+  "next_honest_step": "Execute unified TG1 nonproxy residual run with full witness trace and replay P1810/P1811/P1812.",
+  "lay_explanation": "Mamy uporządkowaną listę braków: dane są spójne, ale nadal brakuje kluczowego testu fizycznego TG1."
+}

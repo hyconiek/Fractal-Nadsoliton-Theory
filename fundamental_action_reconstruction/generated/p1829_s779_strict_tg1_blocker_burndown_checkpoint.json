@@ -1,0 +1,23 @@
+{
+  "packet_id": "P1829",
+  "stage_id": "S779",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "burndown": {
+    "blocker_class": "S1_ARTIFACT_DEFICIT",
+    "total_targets": 6,
+    "ready_targets": 0,
+    "pending_targets": 6,
+    "burndown_ratio": 0.0
+  },
+  "gate_projection": {
+    "tg1_allowed_now": false,
+    "condition_for_go": "pending_targets == 0 and preflight == PASS_ZERO"
+  },
+  "technical_progress": "Blocker dashboard is extended with a quantitative burndown metric for TG1 closure tracking.",
+  "proven": "As long as pending_targets > 0, TG1 go condition remains unsatisfied.",
+  "open": "S1 blocker burndown is incomplete.",
+  "false_pass_risk": "Narrative progress without burndown closure can mask unresolved critical blockers.",
+  "next_honest_step": "Burn down pending targets to zero via P1825 updates, then rerun P1823 and P1828.",
+  "lay_explanation": "To licznik spalania blokad: dopóki nie zejdzie do zera, TG1 nie przechodzi."
+}

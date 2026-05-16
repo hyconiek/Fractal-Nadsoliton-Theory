@@ -1,0 +1,42 @@
+{
+  "packet_id": "P1854",
+  "stage_id": "S804",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "depends_on": {
+    "p1853_present": true,
+    "p1852_present": true
+  },
+  "strict_chain_extension": "K_strict -> B1 evaluated coefficients -> BRST cochain coefficients -> first Cutkosky channel proxy",
+  "brst_cochain_b1": {
+    "anomaly_polynomial": "A_B1 = k1*c*R^2 + k2*c*Ricci^2 + k3*c*Riemann^2 + k4*c*G_GB + k5*c*Tr(F^2)",
+    "cochain_coeff_mapping": {
+      "k1": "18516431*log(2)/(640000000*pi**2)",
+      "k2": "9937*log(2)/(40000*pi**2)",
+      "k3": "13117491*log(2)/(320000000*pi**2)",
+      "k4": "8649*log(2)/(80000000*pi**2)",
+      "k5": "A_B1_k5_from_gauge_fermion_triangle_sector"
+    },
+    "target": "A_B1 == 0",
+    "status": "OPEN_OBSTRUCTION_WITH_TRACE"
+  },
+  "cutkosky_first_channel": {
+    "channel": "graviton -> gauge_gauge",
+    "optical_identity_form": "Disc M(grav->grav)|_gauge_loop = Integral dPi_gg * M(grav->gg) * M*(grav->gg)",
+    "normalization": "MSbar_B1_seed",
+    "residue_positivity_requirement": "rho_gg(s) >= 0 on physical cut",
+    "first_quantitative_proxy": {
+      "input_from_b1_coefficients": {
+        "a_R2_num": "0.0020319032398771580717",
+        "a_Ric2_num": "0.017447010167053743572"
+      },
+      "proxy_statement": "If projected gauge-loop discontinuity coefficient has positive sign under declared conventions, channel remains unitarity-compatible at seed level.",
+      "status": "OPEN_OBSTRUCTION_WITH_TRACE"
+    }
+  },
+  "proven": "First explicit B1 cochain-coefficient mapping and first unitarity channel proxy are exported on strict-only lane.",
+  "open": "A_B1 exact cancellation and full discontinuity integral evaluation remain open theorem tasks.",
+  "false_pass_risk": "Cochain mapping and channel proxy are not equivalent to full BRST nilpotency or Cutkosky theorem discharge.",
+  "next_honest_step": "Compute k5 from explicit gauge-fermion anomaly sector and evaluate full graviton->gauge_gauge discontinuity integral with positivity certificate.",
+  "lay_explanation": "Mamy już pierwszy konkretny szkic liczenia anomalii i unitarności na jednym kanale, ale nadal trzeba policzyć pełne całki i pokazać ścisły dowód."
+}

@@ -1,0 +1,34 @@
+{
+  "packet_id": "P1837",
+  "stage_id": "S787",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "explicit_anchor_registry": {
+    "reduced_non_skeleton_anchor_present": true,
+    "reduced_anchor_payload": {
+      "L_scalar": "sqrt(-g)*[1/2 g^{μν}(∇_μφ)(∇_νφ) - (m_φ^2/2)φ^2 - (λ_3/3!)φ^3 - (λ_4/4!)φ^4]",
+      "L_gauge": "sqrt(-g)*[-1/4 G^A_{μν}G_A^{μν} - 1/4 W^I_{μν}W_I^{μν} - 1/4 B_{μν}B^{μν}]",
+      "L_fermion": "sqrt(-g)*[Σ_f i ψ̄_f γ^a e_a^{ μ}D_μ ψ_f - Σ_f y_f(ψ̄_{fL}Hψ_{fR}+h.c.)]",
+      "L_higgs": "sqrt(-g)*[(D_μH)^†(D^μH) - μ_H^2(H^†H) - λ_H(H^†H)^2]",
+      "L_gravity": "sqrt(-g)*[(M_Pl^2/2)R - Λ + c1 R^2 + c2 R_{μν}R^{μν} + c3 R_{μναβ}R^{μναβ}]",
+      "L_mix": "sqrt(-g)*[ξ_HR(H^†H)R + ξ_φR φ^2R + λ_{φH}φ^2(H^†H)]"
+    },
+    "manifest_sector_count": 7,
+    "manifest_sector_keys": [
+      "gravity_sector",
+      "gauge_sector",
+      "fermion_sector",
+      "higgs_sector",
+      "scalar_mix_sector",
+      "interaction_terms",
+      "covariant_structures"
+    ]
+  },
+  "promotion_policy": "reduced_anchor_is_reference_only_not_full_nonproxy_sector_export",
+  "technical_progress": "Existing explicit reduced non-skeleton Lagrangian anchor is registered and linked to the current full-sector manifest.",
+  "proven": "Repo contains a concrete reduced explicit Lagrangian anchor, but it is insufficient for full nonproxy sector closure.",
+  "open": "Sector-by-sector nonproxy term exports and EOM witnesses are still required for strict full-chain closure.",
+  "false_pass_risk": "Confusing reduced explicit anchor with full nonproxy L_total export would be a category error.",
+  "next_honest_step": "Use reduced anchor as consistency reference while delivering full sector exports through P1834 gates.",
+  "lay_explanation": "Mamy już konkretny przykład pełniejszego wzoru w wersji zredukowanej, ale to jeszcze nie jest komplet całej teorii."
+}

@@ -1,0 +1,98 @@
+{
+  "packet_id": "P1838",
+  "stage_id": "S788",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "kernel_anchor": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+  "full_sector_keys": [
+    "gravity_sector",
+    "gauge_sector",
+    "fermion_sector",
+    "higgs_sector",
+    "scalar_mix_sector",
+    "interaction_terms",
+    "covariant_structures"
+  ],
+  "reverse_unlock_matrix": [
+    {
+      "theorem_gate": "helmholtz_integrability_global",
+      "forward_prerequisite": "ALL_FULL_LAGRANGIAN_SECTORS_PASS",
+      "forward_prerequisite_met": false,
+      "current_status": "OPEN_OBSTRUCTION_WITH_TRACE",
+      "unlock_state": "LOCKED_BY_FORWARD_CHAIN"
+    },
+    {
+      "theorem_gate": "brst_nilpotency",
+      "forward_prerequisite": "ALL_FULL_LAGRANGIAN_SECTORS_PASS",
+      "forward_prerequisite_met": false,
+      "current_status": "OPEN_OBSTRUCTION_WITH_TRACE",
+      "unlock_state": "LOCKED_BY_FORWARD_CHAIN"
+    },
+    {
+      "theorem_gate": "cutkosky_unitarity",
+      "forward_prerequisite": "ALL_FULL_LAGRANGIAN_SECTORS_PASS",
+      "forward_prerequisite_met": false,
+      "current_status": "OPEN_OBSTRUCTION_WITH_TRACE",
+      "unlock_state": "LOCKED_BY_FORWARD_CHAIN"
+    },
+    {
+      "theorem_gate": "renormalization_counterterm_closure",
+      "forward_prerequisite": "ALL_FULL_LAGRANGIAN_SECTORS_PASS",
+      "forward_prerequisite_met": false,
+      "current_status": "OPEN_OBSTRUCTION_WITH_TRACE",
+      "unlock_state": "LOCKED_BY_FORWARD_CHAIN"
+    },
+    {
+      "theorem_gate": "background_independence",
+      "forward_prerequisite": "ALL_FULL_LAGRANGIAN_SECTORS_PASS",
+      "forward_prerequisite_met": false,
+      "current_status": "OPEN_OBSTRUCTION_WITH_TRACE",
+      "unlock_state": "LOCKED_BY_FORWARD_CHAIN"
+    }
+  ],
+  "theorem_gate_map": {
+    "TG1_BW": {
+      "requires_forward": [
+        "gravity_sector",
+        "gauge_sector",
+        "higgs_sector",
+        "covariant_structures"
+      ],
+      "requires_reverse": [
+        "helmholtz_integrability_global"
+      ],
+      "status": "OPEN_OBSTRUCTION_WITH_TRACE"
+    },
+    "TG2_BRST": {
+      "requires_forward": [
+        "gauge_sector",
+        "fermion_sector",
+        "interaction_terms",
+        "covariant_structures"
+      ],
+      "requires_reverse": [
+        "brst_nilpotency"
+      ],
+      "status": "OPEN_OBSTRUCTION_WITH_TRACE"
+    },
+    "TG3_CUT": {
+      "requires_forward": [
+        "fermion_sector",
+        "interaction_terms",
+        "curvature_corrections"
+      ],
+      "requires_reverse": [
+        "cutkosky_unitarity",
+        "renormalization_counterterm_closure",
+        "background_independence"
+      ],
+      "status": "OPEN_OBSTRUCTION_WITH_TRACE"
+    }
+  },
+  "technical_progress": "Kernel->full Lagrangian sectors and reverse theorem obligations are now mapped directly to TG1/TG2/TG3 gate requirements.",
+  "proven": "Each theorem gate requires both forward non-skeleton sectors and reverse theorem witnesses; neither side alone is sufficient.",
+  "open": "All TG gates remain open pending missing sector exports and reverse-QG witness theorems.",
+  "false_pass_risk": "Promoting TG gates from only forward or only reverse partials would violate strict bidirectional closure logic.",
+  "next_honest_step": "Complete sector export gates then execute reverse theorem witnesses in unlock order and re-evaluate TG map.",
+  "lay_explanation": "To mapa warunków bramek teorii: każda bramka potrzebuje i pełnych składników Lagrangianu, i dowodów po stronie QG."
+}

@@ -1,0 +1,118 @@
+{
+  "packet_id": "P1860",
+  "stage_id": "S810",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "depends_on": {
+    "p1859_present": true,
+    "p1853_present": true
+  },
+  "k_cut_sample_table": {
+    "definition": "K_cut_sample(s,theta) := (a_R2 + a_Ric2*(1+theta^2))*s",
+    "rows": [
+      {
+        "s": 0.5,
+        "theta": 0.0,
+        "k_cut_sample": 0.009739456703465451,
+        "nonnegative": true
+      },
+      {
+        "s": 0.5,
+        "theta": 0.5,
+        "k_cut_sample": 0.01192033297434717,
+        "nonnegative": true
+      },
+      {
+        "s": 0.5,
+        "theta": 1.0,
+        "k_cut_sample": 0.018462961786992325,
+        "nonnegative": true
+      },
+      {
+        "s": 1.0,
+        "theta": 0.0,
+        "k_cut_sample": 0.019478913406930903,
+        "nonnegative": true
+      },
+      {
+        "s": 1.0,
+        "theta": 0.5,
+        "k_cut_sample": 0.02384066594869434,
+        "nonnegative": true
+      },
+      {
+        "s": 1.0,
+        "theta": 1.0,
+        "k_cut_sample": 0.03692592357398465,
+        "nonnegative": true
+      },
+      {
+        "s": 2.0,
+        "theta": 0.0,
+        "k_cut_sample": 0.038957826813861805,
+        "nonnegative": true
+      },
+      {
+        "s": 2.0,
+        "theta": 0.5,
+        "k_cut_sample": 0.04768133189738868,
+        "nonnegative": true
+      },
+      {
+        "s": 2.0,
+        "theta": 1.0,
+        "k_cut_sample": 0.0738518471479693,
+        "nonnegative": true
+      },
+      {
+        "s": 4.0,
+        "theta": 0.0,
+        "k_cut_sample": 0.07791565362772361,
+        "nonnegative": true
+      },
+      {
+        "s": 4.0,
+        "theta": 0.5,
+        "k_cut_sample": 0.09536266379477736,
+        "nonnegative": true
+      },
+      {
+        "s": 4.0,
+        "theta": 1.0,
+        "k_cut_sample": 0.1477036942959386,
+        "nonnegative": true
+      }
+    ],
+    "all_nonnegative": true
+  },
+  "pole_residue_seed_table": {
+    "gauge_fixing": "strict_covariant_xi_family_seed_xi=1",
+    "poles": [
+      {
+        "label": "spin2_physical",
+        "s_pole": 0.0,
+        "residue_seed": 1.0,
+        "nonnegative": true
+      },
+      {
+        "label": "massive_seed_mode",
+        "s_pole": 1.0,
+        "residue_seed": 0.12,
+        "nonnegative": true
+      },
+      {
+        "label": "ghost_candidate",
+        "s_pole": -1.0,
+        "residue_seed": -0.05,
+        "nonnegative": false
+      }
+    ],
+    "ghost_exclusion_seed_rule": "only poles in physical s>=0 corridor with nonnegative residue can enter unitarity channel sum"
+  },
+  "strict_chain_extension": "K_strict -> evaluated coefficients -> explicit K_cut sample table -> pole/residue seed classification",
+  "proven": "First explicit K_cut sample table and pole/residue seed export are now available for strict B1 TG3 preparation.",
+  "open": "Sample-level kernel and residue seeds are not sufficient for full discontinuity integral theorem closure.",
+  "false_pass_risk": "Seed pole table with proxy residues cannot be interpreted as final ghost-free unitarity proof.",
+  "next_honest_step": "Replace seed pole residues with computed dressed propagator residues and evaluate full phase-space discontinuity integral with certified physical-pole projection.",
+  "lay_explanation": "Mamy już przykładową tabelę wartości jądra unitarności i biegunów, ale to nadal wersja robocza przed pełnym dowodem."
+}

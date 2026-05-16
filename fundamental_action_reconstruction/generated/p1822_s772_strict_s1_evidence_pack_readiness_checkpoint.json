@@ -1,0 +1,46 @@
+{
+  "packet_id": "P1822",
+  "stage_id": "S772",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "lane_step": "S1_EXPORT_EA_EH_ELG_BOUNDARY_H1_BW_INPUTS",
+  "targets": [
+    "explicit_covariant_nonproxy_E_A_mu",
+    "explicit_covariant_nonproxy_E_H",
+    "metric_EL_g_export",
+    "boundary_term_control",
+    "H1_4D_weak_form_readiness",
+    "Bianchi_Ward_consistency"
+  ],
+  "target_status": {
+    "explicit_covariant_nonproxy_E_A_mu": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+    "explicit_covariant_nonproxy_E_H": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+    "metric_EL_g_export": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+    "boundary_term_control": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+    "H1_4D_weak_form_readiness": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED",
+    "Bianchi_Ward_consistency": "KEEP_OPEN_QG_THEOREM_LEVEL_REQUIRED"
+  },
+  "witness_readiness": {
+    "explicit_covariant_nonproxy_E_A_mu": false,
+    "explicit_covariant_nonproxy_E_H": false,
+    "metric_EL_g_export": false,
+    "boundary_term_control": false,
+    "H1_4D_weak_form_readiness": false,
+    "Bianchi_Ward_consistency": false
+  },
+  "missing_witness_targets": [
+    "explicit_covariant_nonproxy_E_A_mu",
+    "explicit_covariant_nonproxy_E_H",
+    "metric_EL_g_export",
+    "boundary_term_control",
+    "H1_4D_weak_form_readiness",
+    "Bianchi_Ward_consistency"
+  ],
+  "completion_rule": "all targets must have residual/witness traces attached",
+  "technical_progress": "S1 step converted to machine-checkable readiness gate for TG1 input packaging.",
+  "proven": "Readiness can be evaluated per target without theorem-gate promotion.",
+  "open": "At least one S1 target still lacks PASS_ZERO-level witness trace attachment.",
+  "false_pass_risk": "Skipping per-target readiness allows TG1 run with partial evidence and ambiguous failures.",
+  "next_honest_step": "Attach residual/witness traces for each missing S1 target, then rerun P1822 before TG1 execution.",
+  "lay_explanation": "To checklista przed głównym testem: każdy wymagany element musi mieć własny dowód, inaczej nie idziemy dalej."
+}

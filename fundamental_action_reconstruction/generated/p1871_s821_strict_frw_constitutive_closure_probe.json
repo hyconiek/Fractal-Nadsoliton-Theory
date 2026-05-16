@@ -1,0 +1,39 @@
+{
+  "packet_id": "P1871",
+  "stage_id": "S821",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "depends_on": {
+    "p1866_present": true,
+    "p1870_present": true
+  },
+  "strict_chain_step": "kernel strict -> effective couplings -> FRW constitutive map (rho,p) -> Einstein residual closure branch",
+  "constitutive_ansatz": {
+    "rho_eff": "phi0**2*(lam*phi0**2*((beta + 1)**4 + (beta*eta*cos(omega + phi) + omega*(beta + 1)*sin(omega + phi))**2) + 2*m2*(beta + 1)**3*(beta + cos(omega + phi) + 1))/(4*(beta + 1)**4)",
+    "p_eff": "-phi0**2*(lam*phi0**2*((beta + 1)**4 + (beta*eta*cos(omega + phi) + omega*(beta + 1)*sin(omega + phi))**2) + 2*m2*(beta + 1)**3*(beta + cos(omega + phi) + 1))/(4*(beta + 1)**4)",
+    "assumption": "homogeneous scalar condensate, static/slow-roll slice"
+  },
+  "frw_residuals_after_constitutive_injection": {
+    "R_g_00": "(-kappa2*phi0**2*(lam*phi0**2*((beta + 1)**4 + (beta*eta*cos(omega + phi) + omega*(beta + 1)*sin(omega + phi))**2) + 2*m2*(beta + 1)**3*(beta + cos(omega + phi) + 1)) + 4*(3*H**2 + Lambda_cc)*(beta + 1)**4)/(4*(beta + 1)**4)",
+    "R_g_ii": "(kappa2*phi0**2*(lam*phi0**2*((beta + 1)**4 + (beta*eta*cos(omega + phi) + omega*(beta + 1)*sin(omega + phi))**2) + 2*m2*(beta + 1)**3*(beta + cos(omega + phi) + 1)) + 4*(-3*H**2 + Lambda_cc)*(beta + 1)**4)/(4*(beta + 1)**4)",
+    "symbolic_closure_branches": [
+      "{Lambda_cc: 0, H**2: beta**4*kappa2*lam*phi0**4/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + 2*beta**4*kappa2*m2*phi0**2/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + 4*beta**3*kappa2*lam*phi0**4/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + 2*beta**3*kappa2*m2*phi0**2*cos(omega + phi)/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + 8*beta**3*kappa2*m2*phi0**2/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + beta**2*eta**2*kappa2*lam*phi0**4*cos(omega + phi)**2/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + 2*beta**2*eta*kappa2*lam*omega*phi0**4*sin(omega + phi)*cos(omega + phi)/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + beta**2*kappa2*lam*omega**2*phi0**4*sin(omega + phi)**2/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + 6*beta**2*kappa2*lam*phi0**4/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + 6*beta**2*kappa2*m2*phi0**2*cos(omega + phi)/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + 12*beta**2*kappa2*m2*phi0**2/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + 2*beta*eta*kappa2*lam*omega*phi0**4*sin(omega + phi)*cos(omega + phi)/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + 2*beta*kappa2*lam*omega**2*phi0**4*sin(omega + phi)**2/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + 4*beta*kappa2*lam*phi0**4/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + 6*beta*kappa2*m2*phi0**2*cos(omega + phi)/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + 8*beta*kappa2*m2*phi0**2/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + kappa2*lam*omega**2*phi0**4*sin(omega + phi)**2/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + kappa2*lam*phi0**4/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + 2*kappa2*m2*phi0**2*cos(omega + phi)/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12) + 2*kappa2*m2*phi0**2/(12*beta**4 + 48*beta**3 + 72*beta**2 + 48*beta + 12)}"
+    ]
+  },
+  "qw2049_trace": {
+    "rho_eff_factor_expr": "0.03125*(19.3077571794*lam*phi0**2 + 47.0395415246*m2)/m2",
+    "p_eff_relation": "p_eff = -rho_eff"
+  },
+  "bidirectional_note": {
+    "forward": "Strict kernel tuple fixes m2_eff/lambda_eff and thus the FRW energy-pressure source terms.",
+    "reverse": "Residual-zero FRW branch constrains admissible cosmological sector parameters and feeds back to closure viability."
+  },
+  "qg_obstruction_register": {
+    "renormalization": "Need loop-stable constitutive map and counterterm closure beyond tree-level ansatz.",
+    "unitarity": "Need Cutkosky/BRST witness compatibility for condensate background sector.",
+    "background_independence": "Need atlas-level proof that closure branch is not gauge/background artifact."
+  },
+  "false_pass_guard": "Existence of algebraic FRW closure branch under ansatz is not theorem-grade ToE closure.",
+  "next_honest_step": "Replace ansatz with explicit stress-energy export from full L_SM+L_GR sector terms and recompute FRW component residual table.",
+  "lay_explanation": "To pierwszy krok łączący kernel strict z kosmologią: z wyliczonych współczynników budujemy energię i ciśnienie, a potem sprawdzamy warunki równań grawitacji FRW."
+}

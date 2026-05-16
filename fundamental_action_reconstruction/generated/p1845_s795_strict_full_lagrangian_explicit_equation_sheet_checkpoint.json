@@ -1,0 +1,102 @@
+{
+  "packet_id": "P1845",
+  "stage_id": "S795",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "explicit_equation_sheet": {
+    "kernel": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+    "coefficient_map": {
+      "gravity": "c_gr_i = C_gr_i[K_strict, alpha_geo_strict, beta, eta, omega, phi]",
+      "gauge": "c_g_i = C_g_i[K_strict, beta, eta, spectral_inputs]",
+      "fermion": "y_f, m_f = C_f[K_strict, selector_constraints]",
+      "higgs": "lambda_H, mu_H2 = C_H[K_strict, stability_inputs]"
+    },
+    "L_total_explicit_structure": "L_total = L_GR[g,R,Ric,Riem] + L_gauge[F_A,F_W,F_G] + L_fermion[psi,D] + L_Higgs[H,DH,V(H)] + L_mix[H,chi] + L_int[gauge-fermion,gauge-higgs,yukawa,higher_mix] + L_covariant[sqrt(-g),tetrad,spin_connection]",
+    "eom_generation_rule": "E_X := d/dx^mu(∂L_total/∂(∂_mu X)) - ∂L_total/∂X for each field block"
+  },
+  "sector_delivery_table": [
+    {
+      "sector": "gravity_sector",
+      "density_symbol": "L_GR[g, R, Ric, Riem, curvature_corrections]",
+      "missing_exports": [
+        "gravity_sector::explicit_density_term_export",
+        "gravity_sector::coefficient_binding_to_K_strict_map",
+        "gravity_sector::covariant_eom_term_export",
+        "gravity_sector::residual_zero_or_obstruction_trace"
+      ],
+      "ready": false
+    },
+    {
+      "sector": "gauge_sector",
+      "density_symbol": "L_gauge[F_A, F_W, F_G, covariant_derivatives]",
+      "missing_exports": [
+        "gauge_sector::explicit_density_term_export",
+        "gauge_sector::coefficient_binding_to_K_strict_map",
+        "gauge_sector::covariant_eom_term_export",
+        "gauge_sector::residual_zero_or_obstruction_trace"
+      ],
+      "ready": false
+    },
+    {
+      "sector": "fermion_sector",
+      "density_symbol": "L_fermion[psi, D_mu, yukawa_structures]",
+      "missing_exports": [
+        "fermion_sector::explicit_density_term_export",
+        "fermion_sector::coefficient_binding_to_K_strict_map",
+        "fermion_sector::covariant_eom_term_export",
+        "fermion_sector::residual_zero_or_obstruction_trace"
+      ],
+      "ready": false
+    },
+    {
+      "sector": "higgs_sector",
+      "density_symbol": "L_Higgs[H, D_mu H, V(H)]",
+      "missing_exports": [
+        "higgs_sector::explicit_density_term_export",
+        "higgs_sector::coefficient_binding_to_K_strict_map",
+        "higgs_sector::covariant_eom_term_export",
+        "higgs_sector::residual_zero_or_obstruction_trace"
+      ],
+      "ready": false
+    },
+    {
+      "sector": "scalar_mix_sector",
+      "density_symbol": "L_mix[H, auxiliary_scalars, coupling_mix_terms]",
+      "missing_exports": [
+        "scalar_mix_sector::explicit_density_term_export",
+        "scalar_mix_sector::coefficient_binding_to_K_strict_map",
+        "scalar_mix_sector::covariant_eom_term_export",
+        "scalar_mix_sector::residual_zero_or_obstruction_trace"
+      ],
+      "ready": false
+    },
+    {
+      "sector": "interaction_terms",
+      "density_symbol": "L_int[gauge-fermion, gauge-higgs, yukawa, higher_mix]",
+      "missing_exports": [
+        "interaction_terms::explicit_density_term_export",
+        "interaction_terms::coefficient_binding_to_K_strict_map",
+        "interaction_terms::covariant_eom_term_export",
+        "interaction_terms::residual_zero_or_obstruction_trace"
+      ],
+      "ready": false
+    },
+    {
+      "sector": "covariant_structures",
+      "density_symbol": "L_covariant[sqrt(-g), tetrad/spin_connection, measure_terms]",
+      "missing_exports": [
+        "covariant_structures::explicit_density_term_export",
+        "covariant_structures::coefficient_binding_to_K_strict_map",
+        "covariant_structures::covariant_eom_term_export",
+        "covariant_structures::residual_zero_or_obstruction_trace"
+      ],
+      "ready": false
+    }
+  ],
+  "technical_progress": "Full-chain equation sheet is made explicit from K_strict through coefficient map and full L_total to EOM generation rule.",
+  "proven": "The strict derivation grammar is explicit and sector-addressable, preventing skeleton-only ambiguity.",
+  "open": "Sector term exports and theorem-level QG witnesses are still missing for closure.",
+  "false_pass_risk": "Equation-sheet explicitness alone is not a theorem witness; missing sector exports keep closure open.",
+  "next_honest_step": "Instantiate each sector equation term with explicit coefficients and export blockwise covariant EOM residual traces.",
+  "lay_explanation": "To jawna karta równań: pokazuje jak przejść od kernela do pełnego wzoru i równań ruchu, ale brakuje jeszcze dowodów końcowych."
+}
