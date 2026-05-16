@@ -1,0 +1,45 @@
+{
+  "packet_id": "P1879",
+  "stage_id": "S829",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "depends_on": {
+    "p1878_present": true
+  },
+  "strict_chain_step": "K_strict -> coefficients -> full-L/EOM channel amplitudes -> FRW->BianchiI transport contract",
+  "effective_couplings": {
+    "lam_eff": "lam*(1 + (-beta*eta*cos(omega + phi) - omega*(beta + 1)*sin(omega + phi))**2/(beta + 1)**4)",
+    "y_eff": "y*(1 + cos(omega + phi)/(2*(beta + 1)))"
+  },
+  "frw_channel_amplitudes": {
+    "Mss_frw": "6*lam*(1 + (-beta*eta*cos(omega + phi) - omega*(beta + 1)*sin(omega + phi))**2/(beta + 1)**4)",
+    "Msf_frw": "y**2*(1 + cos(omega + phi)/(2*(beta + 1)))**2",
+    "Mff_frw": "kappa2 + y**2*(1 + cos(omega + phi)/(2*(beta + 1)))**2"
+  },
+  "bianchiI_transport_ansatz": {
+    "Mss_b1": "6*lam*(1 + (-beta*eta*cos(omega + phi) - omega*(beta + 1)*sin(omega + phi))**2/(beta + 1)**4)*(a_ss*sigma2 + 1)",
+    "Msf_b1": "y**2*(1 + cos(omega + phi)/(2*(beta + 1)))**2*(a_sf*sigma2 + 1)",
+    "Mff_b1": "(kappa2 + y**2*(1 + cos(omega + phi)/(2*(beta + 1)))**2)*(a_ff*sigma2 + 1)",
+    "anisotropy_parameter": "sigma2",
+    "note": "a_* must be fixed by explicit anisotropic one-loop integrals in same renormalization scheme."
+  },
+  "transport_defect_equations": {
+    "delta_ss": "6*a_ss*beta**2*eta**2*lam*sigma2*cos(omega + phi)**2/(beta**4 + 4*beta**3 + 6*beta**2 + 4*beta + 1) + 12*a_ss*beta**2*eta*lam*omega*sigma2*sin(omega + phi)*cos(omega + phi)/(beta**4 + 4*beta**3 + 6*beta**2 + 4*beta + 1) + 6*a_ss*beta**2*lam*omega**2*sigma2*sin(omega + phi)**2/(beta**4 + 4*beta**3 + 6*beta**2 + 4*beta + 1) + 12*a_ss*beta*eta*lam*omega*sigma2*sin(omega + phi)*cos(omega + phi)/(beta**4 + 4*beta**3 + 6*beta**2 + 4*beta + 1) + 12*a_ss*beta*lam*omega**2*sigma2*sin(omega + phi)**2/(beta**4 + 4*beta**3 + 6*beta**2 + 4*beta + 1) + 6*a_ss*lam*omega**2*sigma2*sin(omega + phi)**2/(beta**4 + 4*beta**3 + 6*beta**2 + 4*beta + 1) + 6*a_ss*lam*sigma2",
+    "delta_sf": "a_sf*sigma2*y**2 + a_sf*sigma2*y**2*cos(omega + phi)**2/(4*beta**2 + 8*beta + 4) + a_sf*sigma2*y**2*cos(omega + phi)/(beta + 1)",
+    "delta_ff": "a_ff*kappa2*sigma2 + a_ff*sigma2*y**2 + a_ff*sigma2*y**2*cos(omega + phi)**2/(4*beta**2 + 8*beta + 4) + a_ff*sigma2*y**2*cos(omega + phi)/(beta + 1)",
+    "frw_limit_condition": "sigma2=0 => all deltas vanish"
+  },
+  "qw2049_trace": {
+    "Mss_frw_over_lam": "7.24040894226",
+    "Msf_frw_over_y2": "1.52520730577"
+  },
+  "strict_core_closure_missing_items": {
+    "background_independence": "Need explicit Bianchi-I loop/discontinuity integrals fixing a_* and matching FRW limit.",
+    "unitarity": "Need optical-defect closure on Bianchi-I and compatibility with FRW channel closure.",
+    "renormalization": "Need same-scheme counterterm map that absorbs anisotropic divergences.",
+    "selector_obstruction": "QW-2191 remains open."
+  },
+  "false_pass_guard": "Transport ansatz is a contract, not a proven background-independence theorem.",
+  "next_honest_step": "Compute anisotropic one-loop ImM/channel integrals to fix a_* and test Bianchi-I optical defects against FRW limit.",
+  "lay_explanation": "To pierwszy techniczny krok do niezależności od tła: sprawdzamy, jak wyniki z kosmologii FRW mają przenosić się na lekko anizotropowe tło Bianchi-I."
+}
