@@ -1,0 +1,100 @@
+{
+  "packet_id": "P1909",
+  "stage_id": "S859",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "depends_on": {
+    "p1908_present": true,
+    "p1908_row_count": 7
+  },
+  "strict_chain_step": "K_strict -> coefficients -> full L_SM+L_GR -> EOM -> divergent coefficients -> ST/Ward + Cutkosky binding",
+  "diagram_binding_matrix_v1": [
+    {
+      "diagram_id": "d_scalar4_bubble_s_channel",
+      "counterterm_symbol": "delta_lambda_H_s",
+      "st_ward_contract": "ST_H4_s: Z_lambda - Z_H^2 consistency",
+      "cutkosky_equality": "Disc M_H4_s = Sum_n M(HH->n)M*(HH->n)",
+      "coefficient_export": "c_scalar4_s",
+      "status": "OPEN_SYMBOLIC_ONLY"
+    },
+    {
+      "diagram_id": "d_scalar4_bubble_t_channel",
+      "counterterm_symbol": "delta_lambda_H_t",
+      "st_ward_contract": "ST_H4_t: crossing-preserved renormalized vertex identity",
+      "cutkosky_equality": "Disc M_H4_t = Sum_n M(HH->n)M*(HH->n)",
+      "coefficient_export": "c_scalar4_t",
+      "status": "OPEN_SYMBOLIC_ONLY"
+    },
+    {
+      "diagram_id": "d_scalar4_bubble_u_channel",
+      "counterterm_symbol": "delta_lambda_H_u",
+      "st_ward_contract": "ST_H4_u: crossing-preserved renormalized vertex identity",
+      "cutkosky_equality": "Disc M_H4_u = Sum_n M(HH->n)M*(HH->n)",
+      "coefficient_export": "c_scalar4_u",
+      "status": "OPEN_SYMBOLIC_ONLY"
+    },
+    {
+      "diagram_id": "d_yukawa_vertex_correction",
+      "counterterm_symbol": "delta_y_f",
+      "st_ward_contract": "ST_Yf: Z_yf = Z_psi^{-1} Z_H^{-1/2} Z_vertex",
+      "cutkosky_equality": "Disc M_Yf = Sum_n M(fH->n)M*(fH->n)",
+      "coefficient_export": "c_yukawa_vertex",
+      "status": "OPEN_SYMBOLIC_ONLY"
+    },
+    {
+      "diagram_id": "d_yukawa_fermion_self_energy",
+      "counterterm_symbol": "delta_Z_psi_f",
+      "st_ward_contract": "Ward_psi: dSigma/dslashp at p=mf gives Z_psi",
+      "cutkosky_equality": "Disc Sigma_f = Sum_n M(f->n)M*(f->n)",
+      "coefficient_export": "c_yukawa_self_energy",
+      "status": "OPEN_SYMBOLIC_ONLY"
+    },
+    {
+      "diagram_id": "d_nonminimal_curvature_scalar_loop",
+      "counterterm_symbol": "delta_xi_H",
+      "st_ward_contract": "Ward_gr_H: improved T_{mu nu} conservation with xi_H term",
+      "cutkosky_equality": "Disc M_xiH = Sum_n M(HR->n)M*(HR->n)",
+      "coefficient_export": "c_xiH_curvature",
+      "status": "OPEN_SYMBOLIC_ONLY"
+    },
+    {
+      "diagram_id": "d_gravity_mixed_counterterm_support",
+      "counterterm_symbol": "delta_c_R2_bundle",
+      "st_ward_contract": "Bianchi+BRST: covariant counterterm closure in R2/Rmunu2 sector",
+      "cutkosky_equality": "Disc M_grmix = Sum_n M(g_mix->n)M*(g_mix->n)",
+      "coefficient_export": "c_gravity_mixed",
+      "status": "OPEN_SYMBOLIC_ONLY"
+    }
+  ],
+  "coefficient_exports_required": {
+    "format": "{coefficient_symbol, expression, scheme, scale_mu, epsilon_order, uncertainty_if_numeric}",
+    "status": "OPEN_REQUIRED",
+    "note": "No coefficient value is asserted here; this packet defines binding contracts only."
+  },
+  "pass_fail_contract_v1": [
+    {
+      "contract_id": "renorm_scalar4_s",
+      "condition": "pole_coeff(c_scalar4_s) + delta_lambda_H_s = 0",
+      "status": "OPEN_FAIL_BY_MISSING_COEFFICIENT"
+    },
+    {
+      "contract_id": "st_yukawa_vertex",
+      "condition": "ST_Yf identity satisfied after renormalization",
+      "status": "OPEN_FAIL_BY_MISSING_COEFFICIENT"
+    },
+    {
+      "contract_id": "cutkosky_grmix",
+      "condition": "Disc M_grmix equals physical cut sum in common scheme",
+      "status": "OPEN_FAIL_BY_MISSING_COEFFICIENT"
+    }
+  ],
+  "closure_blockers_live": {
+    "renormalization": "OPEN: explicit c_* coefficients absent",
+    "unitarity": "OPEN: channel discontinuity values absent",
+    "background_independence": "OPEN: transport witness still not chained to renormalized metric EOM",
+    "selector_qw2191": "OPEN: strict-core selector source/premise missing"
+  },
+  "false_pass_guard": "Symbolic binding contracts are not proof of closure; strict-core closure requires exported coefficients and verified equalities.",
+  "next_honest_step": "Export P1910 coefficient_table_v1 with explicit c_* values (symbolic or numeric), then evaluate pass_fail_contract_v1 in the same renormalization and cut scheme.",
+  "lay_explanation": "Ten krok łączy każdy diagram z trzema testami: kasowaniem nieskończoności, zgodnością symetrii i warunkiem unitarności. Ale dopóki nie ma konkretnych liczb/wzorów współczynników, wynik pozostaje otwarty."
+}

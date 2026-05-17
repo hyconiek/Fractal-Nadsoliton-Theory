@@ -1,0 +1,127 @@
+{
+  "packet_id": "P1908",
+  "stage_id": "S858",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "depends_on": {
+    "p1906_present": true,
+    "p1907_present": true,
+    "p1907_missing_witness_exports_present": true
+  },
+  "strict_chain_step": "K_strict -> coefficients -> full L_SM+L_GR -> EOM -> divergent_coefficients_table_v1",
+  "divergent_coefficients_table_v1": [
+    {
+      "diagram_id": "d_scalar4_bubble_s_channel",
+      "sector": "scalar4_sector",
+      "integral_basis": "I_scalar4_s(mu,epsilon)",
+      "uv_pole_order": "1/epsilon",
+      "counterterm_symbol": "delta_lambda_H_s",
+      "scheme_tag": "MSbar_candidate",
+      "st_identity_contract": "OPEN_REQUIRED",
+      "cutkosky_pairing": "OPEN_REQUIRED",
+      "status": "OPEN_NO_NUMERIC",
+      "note": "Need explicit loop integral reduction and pole coefficient extraction."
+    },
+    {
+      "diagram_id": "d_scalar4_bubble_t_channel",
+      "sector": "scalar4_sector",
+      "integral_basis": "I_scalar4_t(mu,epsilon)",
+      "uv_pole_order": "1/epsilon",
+      "counterterm_symbol": "delta_lambda_H_t",
+      "scheme_tag": "MSbar_candidate",
+      "st_identity_contract": "OPEN_REQUIRED",
+      "cutkosky_pairing": "OPEN_REQUIRED",
+      "status": "OPEN_NO_NUMERIC",
+      "note": "Crossing-consistent coefficient matching still missing."
+    },
+    {
+      "diagram_id": "d_scalar4_bubble_u_channel",
+      "sector": "scalar4_sector",
+      "integral_basis": "I_scalar4_u(mu,epsilon)",
+      "uv_pole_order": "1/epsilon",
+      "counterterm_symbol": "delta_lambda_H_u",
+      "scheme_tag": "MSbar_candidate",
+      "st_identity_contract": "OPEN_REQUIRED",
+      "cutkosky_pairing": "OPEN_REQUIRED",
+      "status": "OPEN_NO_NUMERIC",
+      "note": "Joint channel cancellation matrix not exported."
+    },
+    {
+      "diagram_id": "d_yukawa_vertex_correction",
+      "sector": "yukawa_sector",
+      "integral_basis": "I_yukawa_v(mu,epsilon)",
+      "uv_pole_order": "1/epsilon",
+      "counterterm_symbol": "delta_y_f",
+      "scheme_tag": "MSbar_candidate",
+      "st_identity_contract": "OPEN_REQUIRED",
+      "cutkosky_pairing": "OPEN_REQUIRED",
+      "status": "OPEN_NO_NUMERIC",
+      "note": "Need explicit fermion-flavor block decomposition."
+    },
+    {
+      "diagram_id": "d_yukawa_fermion_self_energy",
+      "sector": "yukawa_sector",
+      "integral_basis": "I_yukawa_se(mu,epsilon)",
+      "uv_pole_order": "1/epsilon",
+      "counterterm_symbol": "delta_Z_psi_f",
+      "scheme_tag": "MSbar_candidate",
+      "st_identity_contract": "OPEN_REQUIRED",
+      "cutkosky_pairing": "OPEN_REQUIRED",
+      "status": "OPEN_NO_NUMERIC",
+      "note": "Wave-function and mass renormalization split not attached."
+    },
+    {
+      "diagram_id": "d_nonminimal_curvature_scalar_loop",
+      "sector": "nonminimal_gravity_mixed_sector",
+      "integral_basis": "I_xiH_R(mu,epsilon)",
+      "uv_pole_order": "1/epsilon",
+      "counterterm_symbol": "delta_xi_H",
+      "scheme_tag": "MSbar_candidate",
+      "st_identity_contract": "OPEN_REQUIRED",
+      "cutkosky_pairing": "OPEN_REQUIRED",
+      "status": "OPEN_NO_NUMERIC",
+      "note": "Curvature-mixed divergence basis requires covariant tensor projection."
+    },
+    {
+      "diagram_id": "d_gravity_mixed_counterterm_support",
+      "sector": "nonminimal_gravity_mixed_sector",
+      "integral_basis": "I_grmix(mu,epsilon)",
+      "uv_pole_order": "1/epsilon",
+      "counterterm_symbol": "delta_c_R2_bundle",
+      "scheme_tag": "MSbar_candidate",
+      "st_identity_contract": "OPEN_REQUIRED",
+      "cutkosky_pairing": "OPEN_REQUIRED",
+      "status": "OPEN_NO_NUMERIC",
+      "note": "Higher-curvature counterterm block is listed but not solved."
+    }
+  ],
+  "first_pass_fail_rows": [
+    {
+      "row_id": "trial_scalar4_s",
+      "pass_condition": "pole(d_scalar4_bubble_s_channel) + delta_lambda_H_s = 0",
+      "current_value": "UNSET",
+      "status": "OPEN_FAIL_BY_MISSING_DATA"
+    },
+    {
+      "row_id": "trial_yukawa_vertex",
+      "pass_condition": "pole(d_yukawa_vertex_correction) + delta_y_f = 0",
+      "current_value": "UNSET",
+      "status": "OPEN_FAIL_BY_MISSING_DATA"
+    },
+    {
+      "row_id": "trial_xiH_curvature",
+      "pass_condition": "pole(d_nonminimal_curvature_scalar_loop) + delta_xi_H = 0",
+      "current_value": "UNSET",
+      "status": "OPEN_FAIL_BY_MISSING_DATA"
+    }
+  ],
+  "closure_blockers_live": {
+    "renormalization": "OPEN: numeric/symbolic pole coefficients missing",
+    "unitarity": "OPEN: diagram rows not yet paired with ImM/Cutkosky equality rows",
+    "background_independence": "OPEN: FRW/Bianchi-I transport not yet tied to renormalized EOM closure",
+    "selector_qw2191": "OPEN: strict-core selector source/symmetry-breaking export missing"
+  },
+  "false_pass_guard": "Table seeding with scheme tags is not a renormalization proof; PASS requires explicit coefficients and cancellations.",
+  "next_honest_step": "Export P1909 with explicit coefficient values (symbolic or numeric), ST/Ward contracts, and matched ImM/Cutkosky rows for each diagram id.",
+  "lay_explanation": "To jak lista zadań do rachunku pętli: wiemy które diagramy i jakie kontrtermy trzeba zestawić, ale bez policzonych współczynników nie da się uczciwie ogłosić domknięcia teorii."
+}

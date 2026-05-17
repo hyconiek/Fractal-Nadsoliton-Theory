@@ -1,0 +1,88 @@
+{
+  "packet_id": "P1928",
+  "stage_id": "S878",
+  "status": "OPEN_STRICT_CORE_CLOSURE_GAPS_WITH_FULL_CHAIN_LEDGER",
+  "route": "strict_only",
+  "strict_chain_forward_kernel_to_eom": [
+    {
+      "step": "K_strict_gate(d) definition",
+      "exported_by": "QW-2049 lineage",
+      "state": "EXPORTED_WORKING_KERNEL",
+      "strict_basis": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)"
+    },
+    {
+      "step": "effective coefficients from strict kernel",
+      "exported_by": "P1874/P1907 family",
+      "state": "PARTIAL_EXPORTED",
+      "strict_basis": "strict-effective coefficient dictionary active, not yet globally witness-closed"
+    },
+    {
+      "step": "full non-skeleton L_total = L_SM + L_GR + interactions",
+      "exported_by": "P1907",
+      "state": "EXPORTED_NON_SKELETON_REGISTRY",
+      "strict_basis": "term registry includes sector decomposition and coupling placements"
+    },
+    {
+      "step": "covariant EOM and Einstein residual transport",
+      "exported_by": "P1874/P1907/P1927",
+      "state": "EXPORTED_WITH_ACTIVE_BLOCKERS",
+      "strict_basis": "EOM map exported, but strict closure still blocked by unresolved witness classes"
+    }
+  ],
+  "strict_chain_reverse_eom_to_kernel": [
+    {
+      "step": "EOM residual classes -> required coefficient equalities",
+      "exported_by": "P1907/P1927",
+      "state": "PARTIAL_RECONSTRUCTION",
+      "strict_basis": "some channel-level equalities exported"
+    },
+    {
+      "step": "coefficient equalities -> admissible strict parameter bands",
+      "exported_by": "P1910-P1917 family",
+      "state": "PARTIAL_RECONSTRUCTION",
+      "strict_basis": "selected channels solved; global basis-wide theorem missing"
+    },
+    {
+      "step": "parameter bands -> K_strict_gate admissibility",
+      "exported_by": "QW-2049 + follow-up probes",
+      "state": "WORKING_NOT_CLOSED",
+      "strict_basis": "operational admissibility retained; strict-core uniqueness/selector still open"
+    }
+  ],
+  "full_lagrangian_non_skeleton_anchor": {
+    "present": true,
+    "source": "P1907",
+    "note": "Current chain uses full Lagrangian route, not skeleton-only route."
+  },
+  "counterexample_pressure_from_p1927": {
+    "background_independence_branch": "FAIL_ON_CERTIFIED_COUNTEREXAMPLE_BRANCH",
+    "impact": "Any final strict-core PASS is forbidden until CE_curv_pair_v1 branch is either excluded by strict premise or neutralized by a stronger witness theorem."
+  },
+  "strict_core_missing_exports_witnesses_theorems": {
+    "renormalization": [
+      "Explicit regulator-and-scheme complete one-loop/two-loop export for all active strict sectors",
+      "Counterterm universality theorem over the shared strict operator basis (not only selected channels)"
+    ],
+    "unitarity": [
+      "Cutkosky completeness witness for all declared channels with explicit discontinuity equalities",
+      "Optical-theorem closure theorem on the same common basis used in renormalization exports"
+    ],
+    "background_independence": [
+      "Repaired background-independence witness that survives CE_curv_pair_v1 admissible branch",
+      "Transport-invariance theorem FRW <-> Bianchi-I under strict premises with no proxy shortcuts"
+    ],
+    "selector_qw2191": [
+      "QW-2191 discharge via explicit strict symmetry-breaking/selector premise or internal selector source theorem"
+    ]
+  },
+  "toe_gap_count": {
+    "renormalization_open": 2,
+    "unitarity_open": 2,
+    "background_independence_open": 2,
+    "selector_open": 1,
+    "total_minimum_open_obligations": 7
+  },
+  "strict_false_pass_guard": "No theorem-level strict-core closure claim is allowed while any item in toe_gap_count remains open.",
+  "next_honest_step": "Export P1929: explicit background-independence repair candidate (or admissibility-exclusion theorem) tied to CE_curv_pair_v1, then re-evaluate the full strict statusvector.",
+  "lay_explanation": "Mamy pełny tor od kernela strict do równań ruchu i z powrotem, ale nadal brakuje 7 twardych dowodów/eksportów. To nie porażka — to precyzyjna mapa braków, która mówi dokładnie co domknąć, żeby nie udawać sukcesu ToE."
+}

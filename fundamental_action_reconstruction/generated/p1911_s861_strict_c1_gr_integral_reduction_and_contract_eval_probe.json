@@ -1,0 +1,164 @@
+{
+  "packet_id": "P1911",
+  "stage_id": "S861",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "depends_on": {
+    "p1910_present": true,
+    "p1910_coeff_count": 7
+  },
+  "strict_chain_step": "K_strict -> coefficients -> full L_SM+L_GR -> EOM -> coefficient_table_v1 -> integral_reduction -> first contract evaluations",
+  "integral_reduction_plan_v1": [
+    {
+      "coefficient_symbol": "c_scalar4_s",
+      "master_integral_basis": [
+        "J_bub(s)",
+        "J_ct"
+      ],
+      "pole_projection": "A_s",
+      "finite_projection": "F_s",
+      "status": "OPEN_REDUCTION_PENDING"
+    },
+    {
+      "coefficient_symbol": "c_scalar4_t",
+      "master_integral_basis": [
+        "J_bub(t)",
+        "J_ct"
+      ],
+      "pole_projection": "A_t",
+      "finite_projection": "F_t",
+      "status": "OPEN_REDUCTION_PENDING"
+    },
+    {
+      "coefficient_symbol": "c_scalar4_u",
+      "master_integral_basis": [
+        "J_bub(u)",
+        "J_ct"
+      ],
+      "pole_projection": "A_u",
+      "finite_projection": "F_u",
+      "status": "OPEN_REDUCTION_PENDING"
+    },
+    {
+      "coefficient_symbol": "c_yukawa_vertex",
+      "master_integral_basis": [
+        "J_tri(m_f)",
+        "J_bub(m_f)"
+      ],
+      "pole_projection": "A_yv",
+      "finite_projection": "F_yv",
+      "status": "OPEN_REDUCTION_PENDING"
+    },
+    {
+      "coefficient_symbol": "c_yukawa_self_energy",
+      "master_integral_basis": [
+        "J_se(m_f)",
+        "J_tad(m_f)"
+      ],
+      "pole_projection": "A_ys",
+      "finite_projection": "F_ys",
+      "status": "OPEN_REDUCTION_PENDING"
+    },
+    {
+      "coefficient_symbol": "c_xiH_curvature",
+      "master_integral_basis": [
+        "J_curvH(R)",
+        "J_mix(R,H)"
+      ],
+      "pole_projection": "A_xi",
+      "finite_projection": "F_xi",
+      "status": "OPEN_REDUCTION_PENDING"
+    },
+    {
+      "coefficient_symbol": "c_gravity_mixed",
+      "master_integral_basis": [
+        "J_R2",
+        "J_Rmunu2",
+        "J_EH_mix"
+      ],
+      "pole_projection": "A_gr",
+      "finite_projection": "F_gr",
+      "status": "OPEN_REDUCTION_PENDING"
+    }
+  ],
+  "coefficient_export_template_v2": {
+    "required_fields": [
+      "coefficient_symbol",
+      "A_pole_value",
+      "B_log_value",
+      "F_finite_value",
+      "scheme",
+      "scale_mu",
+      "derivation_trace_ref"
+    ],
+    "status": "OPEN_REQUIRED"
+  },
+  "first_contract_evaluation_queue": [
+    {
+      "contract_id": "renorm_scalar4_s",
+      "inputs_required": [
+        "A_s",
+        "delta_lambda_H_s"
+      ],
+      "evaluation_condition": "A_s + delta_lambda_H_s == 0",
+      "status": "OPEN_FAIL_BY_MISSING_EVALUATION_INPUTS"
+    },
+    {
+      "contract_id": "renorm_yukawa_vertex",
+      "inputs_required": [
+        "A_yv",
+        "delta_y_f"
+      ],
+      "evaluation_condition": "A_yv + delta_y_f == 0",
+      "status": "OPEN_FAIL_BY_MISSING_EVALUATION_INPUTS"
+    },
+    {
+      "contract_id": "st_yukawa_vertex",
+      "inputs_required": [
+        "Z_yf",
+        "Z_psi",
+        "Z_H",
+        "Z_vertex"
+      ],
+      "evaluation_condition": "Z_yf - Z_psi**(-1)*Z_H**(-1/2)*Z_vertex == 0",
+      "status": "OPEN_FAIL_BY_MISSING_EVALUATION_INPUTS"
+    },
+    {
+      "contract_id": "cutkosky_H4_s",
+      "inputs_required": [
+        "DiscM_H4_s",
+        "CutSum_H4_s"
+      ],
+      "evaluation_condition": "DiscM_H4_s - CutSum_H4_s == 0",
+      "status": "OPEN_FAIL_BY_MISSING_EVALUATION_INPUTS"
+    },
+    {
+      "contract_id": "cutkosky_grmix",
+      "inputs_required": [
+        "DiscM_grmix",
+        "CutSum_grmix"
+      ],
+      "evaluation_condition": "DiscM_grmix - CutSum_grmix == 0",
+      "status": "OPEN_FAIL_BY_MISSING_EVALUATION_INPUTS"
+    },
+    {
+      "contract_id": "background_FRW_BI",
+      "inputs_required": [
+        "Residual_FRW_ren",
+        "Residual_BianchiI_ren",
+        "common_scheme_tag"
+      ],
+      "evaluation_condition": "Residual_FRW_ren - Residual_BianchiI_ren == 0",
+      "status": "OPEN_FAIL_BY_MISSING_EVALUATION_INPUTS"
+    }
+  ],
+  "strict_core_closure_statusvector": {
+    "renormalization": "OPEN",
+    "unitarity": "OPEN",
+    "background_independence": "OPEN",
+    "selector_qw2191": "OPEN"
+  },
+  "false_pass_guard": "Reduction plan and queued evaluations are not solved equalities; strict-core PASS is forbidden until explicit values are exported and checked.",
+  "next_honest_step": "Export P1912 with first explicit A_* values from integral reductions and evaluate at least two renorm + one Cutkosky + one FRW/Bianchi-I contract row.",
+  "lay_explanation": "To etap przejścia od wzorów ogólnych do konkretnych wyników: wskazujemy jakie całki zredukować i jakie równania sprawdzić. Bez tych liczb teoria wciąż nie jest domknięta."
+}

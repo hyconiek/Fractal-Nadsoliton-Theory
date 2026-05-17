@@ -1,0 +1,90 @@
+{
+  "packet_id": "P1913",
+  "stage_id": "S863",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "depends_on": {
+    "p1912_present": true,
+    "p1912_a_exports": 3
+  },
+  "strict_chain_step": "K_strict -> coefficients -> full L_SM+L_GR -> EOM -> A exports -> common-basis Disc/Cut and FRW/Bianchi-I residual rows",
+  "common_basis_definition": {
+    "loop_basis": [
+      "J_bub",
+      "J_tri",
+      "J_R2",
+      "J_Rmunu2",
+      "J_EH_mix"
+    ],
+    "kinematic_basis": [
+      "s",
+      "t",
+      "u",
+      "m_f^2",
+      "R"
+    ],
+    "scheme": "MSbar_candidate",
+    "status": "DECLARED"
+  },
+  "unitarity_common_basis_rows_v1": [
+    {
+      "channel": "H4_s",
+      "DiscM_common_basis": "alpha_H4s*J_bub + beta_H4s",
+      "CutSum_common_basis": "alphaH4s_cut*J_bub + betaH4s_cut",
+      "common_basis": "{J_bub,1}",
+      "delta": "(alpha_H4s*J_bub + beta_H4s)-(alphaH4s_cut*J_bub + betaH4s_cut)",
+      "status": "OPEN_SYMBOLIC_REDUCED_NOT_EVALUATED"
+    },
+    {
+      "channel": "Yf",
+      "DiscM_common_basis": "alpha_Yf*J_tri + beta_Yf*J_bub + gamma_Yf",
+      "CutSum_common_basis": "alphaYf_cut*J_tri + betaYf_cut*J_bub + gammaYf_cut",
+      "common_basis": "{J_tri,J_bub,1}",
+      "delta": "(alpha_Yf*J_tri + beta_Yf*J_bub + gamma_Yf)-(alphaYf_cut*J_tri + betaYf_cut*J_bub + gammaYf_cut)",
+      "status": "OPEN_SYMBOLIC_REDUCED_NOT_EVALUATED"
+    },
+    {
+      "channel": "grmix",
+      "DiscM_common_basis": "alpha_gr*J_R2 + beta_gr*J_Rmunu2 + gamma_gr*J_EH_mix",
+      "CutSum_common_basis": "alpha_gr_cut*J_R2 + beta_gr_cut*J_Rmunu2 + gamma_gr_cut*J_EH_mix",
+      "common_basis": "{J_R2,J_Rmunu2,J_EH_mix}",
+      "delta": "(alpha_gr*J_R2 + beta_gr*J_Rmunu2 + gamma_gr*J_EH_mix)-(alpha_gr_cut*J_R2 + beta_gr_cut*J_Rmunu2 + gamma_gr_cut*J_EH_mix)",
+      "status": "OPEN_SYMBOLIC_REDUCED_NOT_EVALUATED"
+    }
+  ],
+  "background_common_basis_rows_v1": [
+    {
+      "label": "metric_residual_match",
+      "Residual_FRW_ren": "r1*J_R2 + r2*J_Rmunu2 + r3",
+      "Residual_BianchiI_ren": "b1*J_R2 + b2*J_Rmunu2 + b3",
+      "common_basis": "{J_R2,J_Rmunu2,1}",
+      "delta": "(r1*J_R2 + r2*J_Rmunu2 + r3)-(b1*J_R2 + b2*J_Rmunu2 + b3)",
+      "status": "OPEN_SYMBOLIC_REDUCED_NOT_EVALUATED"
+    }
+  ],
+  "first_evaluated_contract_rows": [
+    {
+      "contract_id": "cutkosky_H4_s",
+      "condition": "DiscM_common_basis - CutSum_common_basis == 0",
+      "evaluation_state": "OPEN_COEFFICIENT_MATCH_REQUIRED"
+    },
+    {
+      "contract_id": "background_FRW_BI",
+      "condition": "Residual_FRW_ren - Residual_BianchiI_ren == 0",
+      "evaluation_state": "OPEN_COEFFICIENT_MATCH_REQUIRED"
+    }
+  ],
+  "full_lagrangian_anchor_non_skeleton": {
+    "reference": "P1907::full_lagrangian_term_registry_non_skeleton",
+    "status": "REQUIRED_AND_ACTIVE"
+  },
+  "strict_core_closure_statusvector": {
+    "renormalization": "OPEN_PARTIAL_A_ONLY",
+    "unitarity": "OPEN_COMMON_BASIS_DECLARED",
+    "background_independence": "OPEN_COMMON_BASIS_DECLARED",
+    "selector_qw2191": "OPEN"
+  },
+  "false_pass_guard": "Common-basis reduced rows are structural only; closure requires solved coefficient matching and verified zero deltas.",
+  "next_honest_step": "Export P1914 with solved coefficient-matching subrows for H4_s and FRW/Bianchi-I residual channel plus explicit PASS/FAIL evaluation stamps.",
+  "lay_explanation": "Ujednoliciliśmy obie strony porównań do tej samej bazy matematycznej, więc teraz da się uczciwie sprawdzać równości. Nadal jednak trzeba dopasować współczynniki, żeby uzyskać prawdziwe PASS albo FAIL."
+}

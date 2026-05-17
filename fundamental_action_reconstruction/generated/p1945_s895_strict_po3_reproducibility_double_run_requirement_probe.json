@@ -1,0 +1,52 @@
+{
+  "packet_id": "P1945",
+  "stage_id": "S895",
+  "status": "OPEN_DOUBLE_RUN_REPRODUCIBILITY_REQUIREMENT_NOT_SATISFIED",
+  "route": "strict_only",
+  "depends_on": {
+    "p1944_present": true,
+    "p1944_bundle_missing": true
+  },
+  "strict_chain_anchor": "K_strict -> coefficients -> full non-skeleton L_SM+L_GR -> EOM -> theorem object -> reproducible bundle -> double-run reproducibility",
+  "double_run_reproducibility_contract": {
+    "target_theorem": "THM_A_EPS_NONEMPTY_V1",
+    "run_requirements": [
+      "Run checker twice with identical domain encoding and toolchain stamp",
+      "Both runs must return exit_code == 0",
+      "Both runs must output identical proof_artifact_hash_sha256",
+      "Both runs must output identical domain_encoding_digest"
+    ],
+    "required_outputs": [
+      "artifacts/thm_a_eps_nonempty/run1/checker_meta.json",
+      "artifacts/thm_a_eps_nonempty/run2/checker_meta.json",
+      "artifacts/thm_a_eps_nonempty/repro_compare.json"
+    ],
+    "current_state": "NO_REAL_RUNS_EXPORTED"
+  },
+  "gate_recheck": {
+    "verdict": "NOT_PASSED",
+    "reason": "No run1/run2 machine artifacts available for deterministic comparison.",
+    "false_pass_guard": "Single-run or placeholder outputs cannot satisfy reproducibility gate."
+  },
+  "strict_core_statusvector_restamp": {
+    "renormalization": "OPEN",
+    "unitarity": "OPEN",
+    "background_independence": "OPEN_PO3_DOUBLE_RUN_EVIDENCE_REQUIRED",
+    "selector_qw2191": "OPEN"
+  },
+  "toe_remaining_minimum_after_p1945": {
+    "current_total_open": 7,
+    "exact_open_blocks": [
+      "R1 renormalization theorem-grade closure",
+      "U1 unitarity/Cutkosky theorem-grade closure",
+      "B1 background-independence global theorem closure",
+      "S1 selector obstruction QW-2191 discharge",
+      "PO2 sufficiency derivation for branch-policy closure",
+      "PO3 quantifier theorem certification for admissible class non-emptiness",
+      "cross-scheme finite-part transport theorem linking R1/U1/B1 on common basis"
+    ],
+    "explanation": "P1945 sharpens reproducibility acceptance criteria but discharges no theorem-grade block."
+  },
+  "next_honest_step": "Export P1946 with actual run1/run2 checker metadata and deterministic comparison artifact; restamp PO3 only if all equality checks pass.",
+  "lay_explanation": "Ile zostało do ToE? Nadal 7. Trzeba pokazać, że komputerowy dowód działa tak samo dwa razy z rzędu — bez tego nie ma wiarygodnego domknięcia."
+}

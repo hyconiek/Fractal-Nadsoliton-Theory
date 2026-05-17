@@ -1,0 +1,60 @@
+{
+  "packet_id": "P1916",
+  "stage_id": "S866",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "depends_on": {
+    "p1915_present": true,
+    "p1915_row_pass_count": 2
+  },
+  "strict_chain_step": "K_strict -> coefficients -> full L_SM+L_GR -> EOM -> A/B/F exports -> renorm+Cutkosky+FRW/Bianchi-I consistency frame",
+  "bf_exports_v1": [
+    {
+      "channel": "H4_s",
+      "B_log_value": "B_H4s = B_H4s_symbolic_common_basis",
+      "F_finite_value": "F_H4s = F_H4s_symbolic_common_basis",
+      "source_trace": "P1913::H4_s",
+      "status": "PARTIAL_SYMBOLIC_EXPORT"
+    },
+    {
+      "channel": "grmix",
+      "B_log_value": "B_gr = B_gr_symbolic_common_basis",
+      "F_finite_value": "F_gr = F_gr_symbolic_common_basis",
+      "source_trace": "P1913::grmix",
+      "status": "PARTIAL_SYMBOLIC_EXPORT"
+    }
+  ],
+  "cross_consistency_checks_v1": [
+    {
+      "check_id": "renorm_h4s",
+      "consistency_expression": "PolePart[c_H4s] + delta_lambda_H_s == 0 and B_H4s finite-scheme constraint satisfied",
+      "evaluation_stamp": "OPEN_SYMBOLIC_CONSISTENT_NOT_NUMERIC",
+      "note": "A/B/F symbolic slots aligned, but numeric coefficients not injected."
+    },
+    {
+      "check_id": "cutkosky_h4s",
+      "consistency_expression": "DiscM_H4s(A,B,F) - CutSum_H4s(A,B,F) == 0",
+      "evaluation_stamp": "OPEN_SYMBOLIC_CONSISTENT_NOT_NUMERIC",
+      "note": "Common-basis identity declared; coefficient valuation remains pending."
+    },
+    {
+      "check_id": "background_grmix",
+      "consistency_expression": "Residual_FRW_ren(A,B,F) - Residual_BianchiI_ren(A,B,F) == 0",
+      "evaluation_stamp": "OPEN_SYMBOLIC_CONSISTENT_NOT_NUMERIC",
+      "note": "Same-channel B/F included, but FRW/Bianchi-I coefficient tables still not fully exported."
+    }
+  ],
+  "full_lagrangian_anchor_non_skeleton": {
+    "reference": "P1907::full_lagrangian_term_registry_non_skeleton",
+    "status": "REQUIRED_AND_ACTIVE"
+  },
+  "strict_core_closure_statusvector": {
+    "renormalization": "OPEN_BF_PARTIAL_SYMBOLIC",
+    "unitarity": "OPEN_PARTIAL_SYMBOLIC",
+    "background_independence": "OPEN_PARTIAL_SYMBOLIC",
+    "selector_qw2191": "OPEN"
+  },
+  "false_pass_guard": "Symbolic A/B/F consistency does not imply numeric or theorem-level strict-core closure across all channels.",
+  "next_honest_step": "Export P1917 with one fully valued channel table (A,B,F numeric or fully reduced symbolic constants) and explicit PASS/FAIL stamps for renorm+Cutkosky+background checks in that channel.",
+  "lay_explanation": "Dołożyliśmy brakujące elementy B i F dla wybranych kanałów, więc testy są pełniejsze niż wcześniej. Nadal jednak brakują ostatecznych wartości, dlatego całość pozostaje otwarta."
+}

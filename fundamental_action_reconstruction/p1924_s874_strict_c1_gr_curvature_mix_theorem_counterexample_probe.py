@@ -1,0 +1,86 @@
+#!/usr/bin/env python3
+"""P1924 S874 strict C1/GR curvature-mix theorem/counterexample export probe."""
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent
+GEN = ROOT / "generated"
+
+
+def load(name: str) -> dict:
+    p = GEN / name
+    if not p.exists():
+        return {"_missing": name, "status": "OPEN_MISSING_ARTIFACT"}
+    return json.loads(p.read_text(encoding="utf-8"))
+
+
+def branch(kind: str, exported: str, verdict: str, note: str) -> dict:
+    return {
+        "branch_kind": kind,
+        "exported_object": exported,
+        "branch_verdict": verdict,
+        "note": note,
+    }
+
+
+def main() -> None:
+    p1923 = load("p1923_s873_strict_c1_gr_curvature_mix_transport_verdict_probe.json")
+
+    out = {
+        "packet_id": "P1924",
+        "stage_id": "S874",
+        "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+        "route": "strict_only",
+        "depends_on": {
+            "p1923_present": "curvature_mix_transport_branches_v1" in p1923,
+            "p1923_branch_count": len(p1923.get("curvature_mix_transport_branches_v1", [])),
+        },
+        "strict_chain_step": "K_strict -> coefficients -> full L_SM+L_GR -> EOM -> curvature-mix theorem/counterexample export -> DELTA_BG_Yf definitive branch",
+        "curvature_mix_exported_branches_v2": [
+            branch(
+                "theorem_attempt",
+                "T_curv_transport_v1: R_frw*chi_frw == R_bi*chi_bi under G_strict + C_geo",
+                "OPEN_PREMISE_SET_NOT_PROVED",
+                "Theorem skeleton exported with premises, but proof chain not completed.",
+            ),
+            branch(
+                "counterexample_dataset_attempt",
+                "CE_curv_pair_v1: candidate (FRW_i, BI_j) with metric invariants table",
+                "OPEN_DATASET_NOT_CERTIFIED",
+                "Candidate pair listed but not certified as admissible strict background counterexample.",
+            ),
+        ],
+        "delta_bg_yf_definitive_branch_state": {
+            "equation": "DELTA_BG_Yf = F_Yf*xi_H*(R_frw*chi_frw - R_bi*chi_bi)",
+            "branch_A_theorem": "PENDING",
+            "branch_B_counterexample": "PENDING",
+            "global_verdict": "OPEN_NO_DEFINITIVE_BRANCH",
+        },
+        "toe_potential_update": {
+            "assessment": "ToE potential remains high-structure but undecided at geometric branch certification stage.",
+            "bottleneck": "proof-grade theorem or certified counterexample missing",
+        },
+        "full_lagrangian_anchor_non_skeleton": {
+            "reference": "P1907::full_lagrangian_term_registry_non_skeleton",
+            "status": "REQUIRED_AND_ACTIVE",
+        },
+        "strict_core_closure_statusvector": {
+            "renormalization": "OPEN_WITH_TWO_LOCAL_PASS",
+            "unitarity": "OPEN_WITH_TWO_LOCAL_PASS",
+            "background_independence": "OPEN_BRANCH_CERTIFICATION_PENDING",
+            "selector_qw2191": "OPEN",
+        },
+        "false_pass_guard": "Exported branch skeletons are not certified witnesses; no PASS/FAIL closure verdict allowed until one branch is formally discharged.",
+        "next_honest_step": "Export P1925 with either (A) completed theorem proof chain for T_curv_transport_v1 or (B) certified strict-admissible counterexample packet CE_curv_pair_v1, then close DELTA_BG_Yf verdict.",
+        "lay_explanation": "Mamy już dwie możliwe drogi rozstrzygnięcia problemu krzywizny, ale żadna nie jest jeszcze formalnie domknięta. To ostatni twardy etap przed jednoznacznym werdyktem dla tego bloku.",
+    }
+
+    path = GEN / "p1924_s874_strict_c1_gr_curvature_mix_theorem_counterexample_probe.json"
+    path.write_text(json.dumps(out, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    print(path)
+
+
+if __name__ == "__main__":
+    main()
