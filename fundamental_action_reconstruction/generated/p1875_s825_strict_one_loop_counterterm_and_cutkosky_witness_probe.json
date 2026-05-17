@@ -1,0 +1,44 @@
+{
+  "packet_id": "P1875",
+  "stage_id": "S825",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "depends_on": {
+    "p1874_present": true
+  },
+  "strict_chain_step": "K_strict -> effective couplings -> one-loop counterterm dictionary candidate -> Cutkosky witness obligations",
+  "effective_couplings": {
+    "m2_eff": "m2*(beta + cos(omega + phi) + 1)/(beta + 1)",
+    "lam_eff": "lam*((beta + 1)**4 + (beta*eta*cos(omega + phi) + omega*(beta + 1)*sin(omega + phi))**2)/(beta + 1)**4",
+    "y_eff": "y*(2*beta + cos(omega + phi) + 2)/(2*(beta + 1))"
+  },
+  "one_loop_counterterm_dictionary_candidate": {
+    "DeltaZ_phi": "a_phi*lam*((beta + 1)**4 + (beta*eta*cos(omega + phi) + omega*(beta + 1)*sin(omega + phi))**2)/(16*pi**2*eps*(beta + 1)**4)",
+    "DeltaZ_F": "a_F*y**2*(2*beta + cos(omega + phi) + 2)**2/(64*pi**2*eps*(beta + 1)**2)",
+    "DeltaZ_psi": "a_psi*y**2*(2*beta + cos(omega + phi) + 2)**2/(64*pi**2*eps*(beta + 1)**2)",
+    "Delta_xi": "a_xi*lam*xi*((beta + 1)**4 + (beta*eta*cos(omega + phi) + omega*(beta + 1)*sin(omega + phi))**2)/(16*pi**2*eps*(beta + 1)**4)",
+    "Delta_kappa_inverse": "a_kappa*m2*(beta + cos(omega + phi) + 1)/(16*pi**2*eps*(beta + 1))",
+    "Delta_Lambda_cc": "a_Lambda*m2**2*(beta + cos(omega + phi) + 1)**2/(16*pi**2*eps*(beta + 1)**2)",
+    "scheme_note": "Symbolic MS-like 1/eps skeleton awaiting strict-sector amplitude matching coefficients a_*."
+  },
+  "cutkosky_witness_table": {
+    "channel": "2to2 scalar-sector proxy around same FRW branch",
+    "optical_identity_form": "Im M(2->2) = Integral dPi_2 |M_tree|^2",
+    "optical_defect_symbol": "Im_M_2to2 - M_tree_sq*phase_space_2",
+    "pass_condition": "optical_defect_symbol == 0 after strict one-loop amplitude export"
+  },
+  "qw2049_trace": {
+    "lam_eff_over_lam_qw2049": "1.20673482371",
+    "y_eff_over_y_qw2049": "1.23499283632",
+    "DeltaZ_phi_prefactor_qw2049": "0.00764173754254*lam"
+  },
+  "strict_core_closure_missing_items": {
+    "renormalization": "Need explicit loop integrals to fix a_* and verify cancellation in renormalized FRW residuals.",
+    "unitarity": "Need explicit discontinuity computation proving optical_defect_symbol=0 channel-by-channel.",
+    "background_independence": "Need atlas transport theorem showing branch-independent witness persistence.",
+    "selector_obstruction": "QW-2191 remains open and unaffected by this packet."
+  },
+  "false_pass_guard": "Counterterm dictionary candidate + optical form are not final witnesses without loop integral export and channel closure proofs.",
+  "next_honest_step": "Export strict one-loop amplitude/discontinuity tables that determine a_* and evaluate optical_defect_symbol per channel.",
+  "lay_explanation": "To krok kwantowy: zapisujemy, jakie poprawki 1-pętlowe muszą pojawić się w teorii i jak formalnie sprawdzić unitarność przez tożsamość optyczną. Nadal brakuje pełnych obliczeń całek i kanałów."
+}

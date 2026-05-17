@@ -1,0 +1,86 @@
+{
+  "packet_id": "P1929",
+  "stage_id": "S879",
+  "status": "OPEN_B1_REPAIR_CANDIDATE_WITH_STRICT_STATUS_RESTAMP",
+  "route": "strict_only",
+  "depends_on": {
+    "p1927_counterexample_present": true,
+    "p1928_gap_ledger_present": true,
+    "p1907_full_lagrangian_anchor": true
+  },
+  "strict_chain_restatement": {
+    "forward": "K_strict -> effective coefficients -> full non-skeleton L_SM+L_GR -> covariant EOM",
+    "reverse": "EOM residual equalities -> coefficient constraints -> admissible strict kernel region",
+    "note": "No legacy bridge assumptions are used in this packet."
+  },
+  "full_lagrangian_non_skeleton_anchor": {
+    "sm_gauge_sector": [
+      "-1/4 F^2_SU3",
+      "-1/4 F^2_SU2",
+      "-1/4 F^2_U1"
+    ],
+    "sm_fermion_kinetic_sector": [
+      "i psi_bar gamma^mu D_mu psi (all generations)"
+    ],
+    "higgs_sector": [
+      "|D_mu H|^2",
+      "-mu_H^2 H^dagger H",
+      "-lambda_H (H^dagger H)^2"
+    ],
+    "yukawa_sector": [
+      "-y_u qbar H_tilde u",
+      "-y_d qbar H d",
+      "-y_e lbar H e + h.c."
+    ],
+    "gravity_sector": [
+      "(M_Pl^2/2) R",
+      "Lambda",
+      "R^2",
+      "R_{mu nu}R^{mu nu}",
+      "R_{mu nu rho sigma}R^{mu nu rho sigma}"
+    ],
+    "nonminimal_mixed_sector": [
+      "-xi_H H^dagger H R",
+      "dimension-6 EFT placeholders"
+    ],
+    "note": "Registry is explicit and non-skeleton at sector level; coefficient tables and loop-normalization witnesses still missing."
+  },
+  "b1_repair_candidate_v1": {
+    "target_equation": "DELTA_BG_Yf = F_Yf*xi_H*(R_frw*chi_frw - R_bi*chi_bi)",
+    "observed_failure_branch": {
+      "equation": "DELTA_BG_Yf = F_Yf*xi_H*(R_frw*chi_frw - R_bi*chi_bi)",
+      "substitution_from_ce": "DELTA_BG_Yf = F_Yf*xi_H*[(R_frw_A*chi_frw_A)-(R_bi_B*chi_bi_B)]",
+      "verdict": "FAIL_NONPROXY_COUNTEREXAMPLE_BRANCH",
+      "reason": "Certified branch declares nonzero curvature-mix invariant delta."
+    },
+    "repair_strategy": "Replace single-scalar transport witness with tensorial transport witness on common invariant basis I_bg = {R, R_{mu nu}u^mu u^nu, nabla_mu chi nabla^mu chi} and require equality of each basis projection.",
+    "new_witness_form": {
+      "equations": [
+        "DELTA_BG_Yf^(R) = C_R*(R_frw-R_bi)",
+        "DELTA_BG_Yf^(RicUU) = C_U*(RicUU_frw-RicUU_bi)",
+        "DELTA_BG_Yf^(gradchi) = C_chi*((nabla chi)^2_frw-(nabla chi)^2_bi)"
+      ],
+      "closure_condition": "All three projections must vanish on the same admissible branch; scalar-proxy-only vanishing is insufficient."
+    },
+    "admissibility_exclusion_option": {
+      "label": "AX_BG_SPLIT_PREMISE_CE1",
+      "type": "EXPLICIT_PREMISE_OPTION",
+      "statement": "Exclude CE_curv_pair_v1 by imposing strict branch condition: matched invariant triplet (R, RicUU, gradchi^2) required before Yukawa background witness evaluation.",
+      "strictness_stamp": "NON_STRICT_UNTIL_DERIVED"
+    },
+    "no_false_pass_guard": "If exclusion option is used without derivation theorem, result remains non-strict and cannot promote strict-core closure."
+  },
+  "strict_core_statusvector_restamp": {
+    "renormalization": "OPEN",
+    "unitarity": "OPEN",
+    "background_independence": "OPEN_REPAIRED_FORM_PENDING_EVALUATION",
+    "selector_qw2191": "OPEN"
+  },
+  "toe_remaining_minimum_after_p1929": {
+    "from_p1928_total_open": 7,
+    "current_total_open": 7,
+    "explanation": "P1929 introduces a stricter B1 witness form but does not yet discharge any theorem-grade block."
+  },
+  "next_honest_step": "Export P1930 with explicit FRW/BI invariant-triplet computations for at least two admissible branches and evaluate PASS/FAIL of the new tensorial B1 witness form.",
+  "lay_explanation": "Ile zostało do ToE? Nadal co najmniej 7 dużych zobowiązań. Ten krok nie zamyka teorii, ale ulepsza test tła grawitacyjnego tak, by nie dało się ukryć błędu za zbyt prostym wskaźnikiem."
+}

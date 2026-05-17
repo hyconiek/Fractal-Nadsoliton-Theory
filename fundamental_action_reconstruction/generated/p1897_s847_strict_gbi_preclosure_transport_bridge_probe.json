@@ -1,0 +1,38 @@
+{
+  "packet_id": "P1897",
+  "stage_id": "S847",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "depends_on": {
+    "p1896_present": true,
+    "p1887_present": true
+  },
+  "strict_chain_step": "K_strict -> coefficients -> full L_total transport carriers -> G_BI preclosure bridge",
+  "effective_coefficients": {
+    "y_eff": "y*(1 + cos(omega + phi)/(2*(beta + 1)))"
+  },
+  "gbi_bridge_quantities": {
+    "G_BI_frw": "kappa2*log(mu2)/(16*pi**2) - kappa2*log(s)/(16*pi**2) + kappa2/(32*pi**2) + y**2*log(mu2)/(16*pi**2) - y**2*log(s)/(16*pi**2) + y**2/(32*pi**2) + y**2*cos(omega + phi)**2/(64*pi**2*beta**2*eps + 128*pi**2*beta*eps + 64*pi**2*eps) + y**2*cos(omega + phi)**2/(128*pi**2*beta**2 + 256*pi**2*beta + 128*pi**2) + y**2*log(mu2)*cos(omega + phi)**2/(64*pi**2*beta**2 + 128*pi**2*beta + 64*pi**2) - y**2*log(s)*cos(omega + phi)**2/(64*pi**2*beta**2 + 128*pi**2*beta + 64*pi**2) + y**2*cos(omega + phi)/(16*pi**2*beta*eps + 16*pi**2*eps) + y**2*cos(omega + phi)/(32*pi**2*beta + 32*pi**2) + y**2*log(mu2)*cos(omega + phi)/(16*pi**2*beta + 16*pi**2) - y**2*log(s)*cos(omega + phi)/(16*pi**2*beta + 16*pi**2) + kappa2/(16*pi**2*eps) + y**2/(16*pi**2*eps)",
+    "G_BI_b1": "kappa2*nu*sigma2*log(mu2)/(16*pi**2) - kappa2*nu*sigma2*log(s)/(16*pi**2) + kappa2*nu*sigma2/(32*pi**2) + kappa2*log(mu2)/(16*pi**2) - kappa2*log(s)/(16*pi**2) + kappa2/(32*pi**2) + nu*sigma2*y**2*log(mu2)/(16*pi**2) - nu*sigma2*y**2*log(s)/(16*pi**2) + nu*sigma2*y**2/(32*pi**2) + nu*sigma2*y**2*cos(omega + phi)**2/(64*pi**2*beta**2*eps + 128*pi**2*beta*eps + 64*pi**2*eps) + nu*sigma2*y**2*cos(omega + phi)**2/(128*pi**2*beta**2 + 256*pi**2*beta + 128*pi**2) + nu*sigma2*y**2*log(mu2)*cos(omega + phi)**2/(64*pi**2*beta**2 + 128*pi**2*beta + 64*pi**2) - nu*sigma2*y**2*log(s)*cos(omega + phi)**2/(64*pi**2*beta**2 + 128*pi**2*beta + 64*pi**2) + nu*sigma2*y**2*cos(omega + phi)/(16*pi**2*beta*eps + 16*pi**2*eps) + nu*sigma2*y**2*cos(omega + phi)/(32*pi**2*beta + 32*pi**2) + nu*sigma2*y**2*log(mu2)*cos(omega + phi)/(16*pi**2*beta + 16*pi**2) - nu*sigma2*y**2*log(s)*cos(omega + phi)/(16*pi**2*beta + 16*pi**2) + y**2*log(mu2)/(16*pi**2) - y**2*log(s)/(16*pi**2) + y**2/(32*pi**2) + y**2*cos(omega + phi)**2/(64*pi**2*beta**2*eps + 128*pi**2*beta*eps + 64*pi**2*eps) + y**2*cos(omega + phi)**2/(128*pi**2*beta**2 + 256*pi**2*beta + 128*pi**2) + y**2*log(mu2)*cos(omega + phi)**2/(64*pi**2*beta**2 + 128*pi**2*beta + 64*pi**2) - y**2*log(s)*cos(omega + phi)**2/(64*pi**2*beta**2 + 128*pi**2*beta + 64*pi**2) + y**2*cos(omega + phi)/(16*pi**2*beta*eps + 16*pi**2*eps) + y**2*cos(omega + phi)/(32*pi**2*beta + 32*pi**2) + y**2*log(mu2)*cos(omega + phi)/(16*pi**2*beta + 16*pi**2) - y**2*log(s)*cos(omega + phi)/(16*pi**2*beta + 16*pi**2) + kappa2*nu*sigma2/(16*pi**2*eps) + kappa2/(16*pi**2*eps) + nu*sigma2*y**2/(16*pi**2*eps) + y**2/(16*pi**2*eps)",
+    "delta_bi": "kappa2*nu*sigma2*log(mu2)/(16*pi**2) - kappa2*nu*sigma2*log(s)/(16*pi**2) + kappa2*nu*sigma2/(32*pi**2) + nu*sigma2*y**2*log(mu2)/(16*pi**2) - nu*sigma2*y**2*log(s)/(16*pi**2) + nu*sigma2*y**2/(32*pi**2) + nu*sigma2*y**2*cos(omega + phi)**2/(64*pi**2*beta**2*eps + 128*pi**2*beta*eps + 64*pi**2*eps) + nu*sigma2*y**2*cos(omega + phi)**2/(128*pi**2*beta**2 + 256*pi**2*beta + 128*pi**2) + nu*sigma2*y**2*log(mu2)*cos(omega + phi)**2/(64*pi**2*beta**2 + 128*pi**2*beta + 64*pi**2) - nu*sigma2*y**2*log(s)*cos(omega + phi)**2/(64*pi**2*beta**2 + 128*pi**2*beta + 64*pi**2) + nu*sigma2*y**2*cos(omega + phi)/(16*pi**2*beta*eps + 16*pi**2*eps) + nu*sigma2*y**2*cos(omega + phi)/(32*pi**2*beta + 32*pi**2) + nu*sigma2*y**2*log(mu2)*cos(omega + phi)/(16*pi**2*beta + 16*pi**2) - nu*sigma2*y**2*log(s)*cos(omega + phi)/(16*pi**2*beta + 16*pi**2) + kappa2*nu*sigma2/(16*pi**2*eps) + nu*sigma2*y**2/(16*pi**2*eps)",
+    "branch_parameter": "nu"
+  },
+  "promotion_readiness": {
+    "score_symbol": "b_cov/3 + b_overlap/3 + b_scheme/3",
+    "score_components": {
+      "b_cov": "covariant transport equation coverage",
+      "b_overlap": "FRW/Bianchi atlas overlap coherence",
+      "b_scheme": "same renormalization-scheme continuity across backgrounds"
+    },
+    "promotion_threshold_contract": "score_symbol >= 1 with theorem-grade transport witness"
+  },
+  "strict_core_closure_missing_items": {
+    "background_independence": "Need nontrivial nu-branch witness proving controlled delta_bi behavior.",
+    "unitarity": "Need compatibility with G_U discontinuity closures.",
+    "renormalization": "Need shared finite-part lock across FRW and Bianchi-I branches.",
+    "selector_obstruction": "QW-2191 remains open."
+  },
+  "false_pass_guard": "G_BI bridge probe is preclosure and not a background-independence theorem.",
+  "next_honest_step": "Attach explicit transport witness data for nu!=0 branch and attempt first controlled G_BI readiness upgrade.",
+  "lay_explanation": "Po renormalizacji i unitarności przychodzi krok tła: sprawdzamy, czy teoria działa spójnie także między różnymi geometriami czasoprzestrzeni."
+}

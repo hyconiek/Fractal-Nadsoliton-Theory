@@ -1,0 +1,62 @@
+{
+  "packet_id": "P1919",
+  "stage_id": "S869",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "depends_on": {
+    "p1918_present": true,
+    "p1918_channels": 2
+  },
+  "strict_chain_step": "K_strict -> coefficients -> full L_SM+L_GR -> EOM -> Yukawa background residual decomposition -> zero-witness attempt",
+  "yukawa_background_residual_decomposition_v1": [
+    {
+      "label": "kinetic_block",
+      "frw_term": "k_frw_1*J_tri + k_frw_2*J_bub",
+      "bianchiI_term": "k_bi_1*J_tri + k_bi_2*J_bub",
+      "delta_term": "(k_frw_1-k_bi_1)*J_tri + (k_frw_2-k_bi_2)*J_bub",
+      "status": "OPEN_COEFF_MATCH_REQUIRED"
+    },
+    {
+      "label": "mass_block",
+      "frw_term": "m_frw_1",
+      "bianchiI_term": "m_bi_1",
+      "delta_term": "(m_frw_1-m_bi_1)",
+      "status": "OPEN_COEFF_MATCH_REQUIRED"
+    },
+    {
+      "label": "finite_block",
+      "frw_term": "f_frw_1*F_Yf",
+      "bianchiI_term": "f_bi_1*F_Yf",
+      "delta_term": "(f_frw_1-f_bi_1)*F_Yf",
+      "status": "OPEN_COEFF_MATCH_REQUIRED"
+    }
+  ],
+  "zero_witness_attempt_v1": {
+    "target": "delta_kinetic + delta_mass + delta_finite = 0",
+    "expanded_target": "(k_frw_1-k_bi_1)*J_tri + (k_frw_2-k_bi_2)*J_bub + (m_frw_1-m_bi_1) + (f_frw_1-f_bi_1)*F_Yf = 0",
+    "current_state": "OPEN_NOT_PROVED",
+    "missing_equalities": [
+      "k_frw_1 = k_bi_1",
+      "k_frw_2 = k_bi_2",
+      "m_frw_1 = m_bi_1",
+      "f_frw_1 = f_bi_1"
+    ]
+  },
+  "local_stamp_update": {
+    "background_Yf_proxy_previous": "FAIL_BG_PROXY_NOT_ZERO",
+    "background_Yf_current": "OPEN_DECOMPOSED_NOT_RESOLVED"
+  },
+  "full_lagrangian_anchor_non_skeleton": {
+    "reference": "P1907::full_lagrangian_term_registry_non_skeleton",
+    "status": "REQUIRED_AND_ACTIVE"
+  },
+  "strict_core_closure_statusvector": {
+    "renormalization": "OPEN_WITH_TWO_LOCAL_PASS",
+    "unitarity": "OPEN_WITH_TWO_LOCAL_PASS",
+    "background_independence": "OPEN_DECOMPOSED_YUKAWA_GAP",
+    "selector_qw2191": "OPEN"
+  },
+  "false_pass_guard": "Decomposition is not proof: background zero witness requires explicit coefficient equalities, not structural expansion alone.",
+  "next_honest_step": "Export P1920 with explicit Yukawa FRW/Bianchi-I coefficient equalities (or counterexample) and re-stamp background_Yf as PASS/FAIL without proxy tags.",
+  "lay_explanation": "Rozpisaliśmy problem tła dla kanału Yukawa na dokładne składniki. Teraz jasno widać, jakie równości współczynników muszą zajść, żeby uzyskać pełną zgodność FRW i Bianchi-I."
+}

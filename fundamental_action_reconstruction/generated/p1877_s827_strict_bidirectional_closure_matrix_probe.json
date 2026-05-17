@@ -1,0 +1,58 @@
+{
+  "packet_id": "P1877",
+  "stage_id": "S827",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "depends_on": {
+    "p1874_present": true,
+    "p1876_present": true
+  },
+  "strict_forward_chain": [
+    "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+    "effective_coefficients(m2_eff, lam_eff, y_eff)",
+    "full_non_skeleton_L_total(L_SM + L_GR)",
+    "covariant_EOM_and_Einstein_residuals",
+    "channel_amplitudes_and_optical_defects"
+  ],
+  "strict_reverse_chain": [
+    "optical_defect_zero_per_channel",
+    "counterterm_consistency_in_same_scheme",
+    "residual_zero_stability_under_background_transport",
+    "admissible_strict_kernel_parameter_window"
+  ],
+  "effective_coefficients": {
+    "m2_eff": "m2*(1 + cos(omega + phi)/(beta + 1))",
+    "lam_eff": "lam*(1 + (-beta*eta*cos(omega + phi) - omega*(beta + 1)*sin(omega + phi))**2/(beta + 1)**4)",
+    "y_eff": "y*(1 + cos(omega + phi)/(2*(beta + 1)))"
+  },
+  "qw2049_trace": {
+    "m2_eff_over_m2": "1.46998567264",
+    "lam_eff_over_lam": "1.20673482371",
+    "y_eff_over_y": "1.23499283632"
+  },
+  "strict_core_closure_matrix": {
+    "renormalization": {
+      "forward_requirement": "explicit one-loop amplitudes + finite-part-fixed counterterms",
+      "reverse_requirement": "renormalized residual invariance back-constrains coefficient admissibility",
+      "status": "OPEN_MISSING_WITNESS"
+    },
+    "unitarity_cutkosky": {
+      "forward_requirement": "ImM channel exports on same branch",
+      "reverse_requirement": "defect_ss/sf/ff=0 constrains strict coupling corridors",
+      "status": "OPEN_MISSING_WITNESS"
+    },
+    "background_independence": {
+      "forward_requirement": "FRW->(BianchiI,static-spherical) transport theorem",
+      "reverse_requirement": "transport-stable closure returns same strict parameter lane",
+      "status": "OPEN_MISSING_THEOREM"
+    },
+    "selector": {
+      "forward_requirement": "explicit strict selector source or symmetry-breaking theorem",
+      "reverse_requirement": "QW-2191 obstruction discharged",
+      "status": "OPEN_QW2191"
+    }
+  },
+  "false_pass_guard": "Bidirectional matrix is a closure contract; not a proof of strict-core ToE closure.",
+  "next_honest_step": "Bind explicit one-loop ImM channel exports to this matrix and run first FRW->BianchiI transport check under identical renormalization scheme.",
+  "lay_explanation": "To mapa domknięcia w obie strony: od kernela do równań i z powrotem z testów kwantowych do ograniczeń kernela. Pokazuje dokładnie, czego jeszcze brakuje do pełnej teorii."
+}

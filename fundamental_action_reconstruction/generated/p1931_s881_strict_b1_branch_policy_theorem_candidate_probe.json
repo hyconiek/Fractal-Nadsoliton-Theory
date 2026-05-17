@@ -1,0 +1,85 @@
+{
+  "packet_id": "P1931",
+  "stage_id": "S881",
+  "status": "OPEN_THEOREM_CANDIDATE_WITH_BRANCH_POLICY_NOT_YET_PROVEN",
+  "route": "strict_only",
+  "depends_on": {
+    "p1930_present": true,
+    "p1930_mixed_outcome": true,
+    "p1907_full_lagrangian_anchor": true
+  },
+  "strict_chain_anchor": {
+    "forward": "K_strict -> coefficients -> full non-skeleton L_SM+L_GR -> EOM",
+    "reverse": "EOM constraints -> coefficient constraints -> strict-kernel admissibility region",
+    "full_lagrangian_non_skeleton": {
+      "sm_gauge_sector": [
+        "-1/4 F^2_SU3",
+        "-1/4 F^2_SU2",
+        "-1/4 F^2_U1"
+      ],
+      "sm_fermion_kinetic_sector": [
+        "i psi_bar gamma^mu D_mu psi (all generations)"
+      ],
+      "higgs_sector": [
+        "|D_mu H|^2",
+        "-mu_H^2 H^dagger H",
+        "-lambda_H (H^dagger H)^2"
+      ],
+      "yukawa_sector": [
+        "-y_u qbar H_tilde u",
+        "-y_d qbar H d",
+        "-y_e lbar H e + h.c."
+      ],
+      "gravity_sector": [
+        "(M_Pl^2/2) R",
+        "Lambda",
+        "R^2",
+        "R_{mu nu}R^{mu nu}",
+        "R_{mu nu rho sigma}R^{mu nu rho sigma}"
+      ],
+      "nonminimal_mixed_sector": [
+        "-xi_H H^dagger H R",
+        "dimension-6 EFT placeholders"
+      ],
+      "note": "Registry is explicit and non-skeleton at sector level; coefficient tables and loop-normalization witnesses still missing."
+    }
+  },
+  "theorem_candidate_branch_policy": {
+    "candidate_id": "T_BG_BRANCH_POLICY_V1",
+    "claim": "Background-independence witness is globally admissible only on branch class where invariant-triplet closure conditions hold jointly with strict EOM consistency constraints.",
+    "required_conditions": [
+      "C1: delta_R = 0",
+      "C2: delta_RicUU = 0",
+      "C3: delta_gradchi2 = 0",
+      "C4: same branch satisfies strict EOM residual consistency (matter+metric sectors)"
+    ],
+    "proof_obligations": [
+      "PO1: Necessity proof C1-C4 for B1 witness invariance",
+      "PO2: Sufficiency proof C1-C4 imply DELTA_BG_Yf tensorial closure",
+      "PO3: Non-emptiness proof of admissible branch class under strict kernel parameter region"
+    ],
+    "current_state": "UNPROVEN_CANDIDATE"
+  },
+  "counterexample_generalization_option": {
+    "candidate_id": "T_BG_COUNTEREXAMPLE_GEN_V1",
+    "claim": "If C1-C4 fail on any admissible branch then B1 remains globally open regardless of local-pass branches.",
+    "current_state": "SUPPORTED_BY_P1930_PATTERN_NOT_THEOREM_GRADE"
+  },
+  "b1_restamp_after_policy_candidate": {
+    "before": "OPEN_MIXED_BRANCH_OUTCOME",
+    "after": "OPEN_POLICY_THEOREM_PENDING",
+    "guard": "No PASS restamp allowed before theorem-grade branch-policy proof export."
+  },
+  "strict_core_statusvector_restamp": {
+    "renormalization": "OPEN",
+    "unitarity": "OPEN",
+    "background_independence": "OPEN_POLICY_THEOREM_PENDING",
+    "selector_qw2191": "OPEN"
+  },
+  "toe_remaining_minimum_after_p1931": {
+    "current_total_open": 7,
+    "explanation": "P1931 formalizes theorem candidate structure but discharges no theorem-grade block yet."
+  },
+  "next_honest_step": "Export P1932 with explicit PO1-PO3 proof attempt artifacts (or certified failure trace) and re-evaluate B1 global admissibility.",
+  "lay_explanation": "Ile zostało do ToE? Nadal minimum 7. Ten krok porządkuje dowód: mówimy dokładnie jakie warunki muszą być udowodnione, aby test tła był globalnie wiarygodny."
+}

@@ -1,0 +1,56 @@
+{
+  "packet_id": "P1888",
+  "stage_id": "S838",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "depends_on": {
+    "p1887_present": true,
+    "p1880_present": true
+  },
+  "full_chain_forward": [
+    "K_strict",
+    "effective_coefficients",
+    "full_non_skeleton_L_SM_plus_L_GR",
+    "covariant_EOM",
+    "one_loop_R/U checks",
+    "FRW<->BianchiI_nontrivial_transport"
+  ],
+  "full_chain_reverse": [
+    "R/U/BI_witness_solution",
+    "term_registry_consistency",
+    "EOM_residual_stability",
+    "admissible_kernel_corridor"
+  ],
+  "effective_coefficients": {
+    "m2_eff": "m2*(1 + cos(omega + phi)/(beta + 1))",
+    "lam_eff": "lam*(1 + (-beta*eta*cos(omega + phi) - omega*(beta + 1)*sin(omega + phi))**2/(beta + 1)**4)",
+    "y_eff": "y*(1 + cos(omega + phi)/(2*(beta + 1)))"
+  },
+  "reverse_contraction_contract": {
+    "corridor_parameters": [
+      "dm2",
+      "dlam",
+      "dy"
+    ],
+    "admissible_windows": {
+      "m2_eff_window": "Interval(-dm2 + m2*(1 + cos(omega + phi)/(beta + 1)), dm2 + m2*(1 + cos(omega + phi)/(beta + 1)))",
+      "lam_eff_window": "Interval(-dlam + lam*(1 + (-beta*eta*cos(omega + phi) - omega*(beta + 1)*sin(omega + phi))**2/(beta + 1)**4), dlam + lam*(1 + (-beta*eta*cos(omega + phi) - omega*(beta + 1)*sin(omega + phi))**2/(beta + 1)**4))",
+      "y_eff_window": "Interval(-dy + y*(1 + cos(omega + phi)/(2*(beta + 1))), dy + y*(1 + cos(omega + phi)/(2*(beta + 1))))"
+    },
+    "rule": "only witness-compatible coefficient windows are admissible for strict kernel continuation"
+  },
+  "qw2049_trace": {
+    "m2_eff_over_m2": "1.46998567264",
+    "lam_eff_over_lam": "1.20673482371",
+    "y_eff_over_y": "1.23499283632"
+  },
+  "strict_core_closure_missing_items": {
+    "renormalization": "Need solved one-loop finite/pole data to set corridor widths.",
+    "unitarity": "Need solved Cutkosky defects on nontrivial transport branch.",
+    "background_independence": "Need theorem-grade FRW<->BianchiI witness to legitimize reverse contraction.",
+    "selector_obstruction": "QW-2191 remains open."
+  },
+  "false_pass_guard": "Reverse contraction contract is not a solved strict-core closure theorem.",
+  "next_honest_step": "Fill corridor widths from computed joint witness solution and test stability of admissible windows under branch perturbations.",
+  "lay_explanation": "To krok spinający całość: z wyników testów kwantowych chcemy wrócić do tego, jakie ustawienia kernela są naprawdę dozwolone."
+}

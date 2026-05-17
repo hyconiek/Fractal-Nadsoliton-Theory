@@ -1,0 +1,41 @@
+{
+  "packet_id": "P1889",
+  "stage_id": "S839",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "depends_on": {
+    "p1888_present": true,
+    "p1884_present": true
+  },
+  "strict_chain_step": "K_strict -> coefficients -> full non-skeleton L_SM+L_GR -> EOM -> explicit one-loop gate vector (R/U/BI)",
+  "full_lagrangian_context": {
+    "statement": "Nadsoliton => L_SM + L_GR (strict-only, non-skeleton)",
+    "forward": "kernel -> coefficients -> L_total -> EOM -> joint quantum gates",
+    "reverse": "gate vector admissibility -> coefficient windows -> strict kernel corridor"
+  },
+  "effective_coefficients": {
+    "m2_eff": "m2*(1 + cos(omega + phi)/(beta + 1))",
+    "lam_eff": "lam*(1 + (-beta*eta*cos(omega + phi) - omega*(beta + 1)*sin(omega + phi))**2/(beta + 1)**4)",
+    "y_eff": "y*(1 + cos(omega + phi)/(2*(beta + 1)))"
+  },
+  "joint_gate_vector": {
+    "G_R": "beta**2*eta**2*lam*cos(omega + phi)**2/(16*pi**2*beta**4*eps + 64*pi**2*beta**3*eps + 96*pi**2*beta**2*eps + 64*pi**2*beta*eps + 16*pi**2*eps) + beta**2*eta**2*lam*log(mu2)*cos(omega + phi)**2/(16*pi**2*beta**4 + 64*pi**2*beta**3 + 96*pi**2*beta**2 + 64*pi**2*beta + 16*pi**2) - beta**2*eta**2*lam*log(s)*cos(omega + phi)**2/(16*pi**2*beta**4 + 64*pi**2*beta**3 + 96*pi**2*beta**2 + 64*pi**2*beta + 16*pi**2) + beta**2*eta*lam*omega*sin(omega + phi)*cos(omega + phi)/(8*pi**2*beta**4*eps + 32*pi**2*beta**3*eps + 48*pi**2*beta**2*eps + 32*pi**2*beta*eps + 8*pi**2*eps) + beta**2*eta*lam*omega*log(mu2)*sin(omega + phi)*cos(omega + phi)/(8*pi**2*beta**4 + 32*pi**2*beta**3 + 48*pi**2*beta**2 + 32*pi**2*beta + 8*pi**2) - beta**2*eta*lam*omega*log(s)*sin(omega + phi)*cos(omega + phi)/(8*pi**2*beta**4 + 32*pi**2*beta**3 + 48*pi**2*beta**2 + 32*pi**2*beta + 8*pi**2) + beta**2*lam*omega**2*sin(omega + phi)**2/(16*pi**2*beta**4*eps + 64*pi**2*beta**3*eps + 96*pi**2*beta**2*eps + 64*pi**2*beta*eps + 16*pi**2*eps) + beta**2*lam*omega**2*log(mu2)*sin(omega + phi)**2/(16*pi**2*beta**4 + 64*pi**2*beta**3 + 96*pi**2*beta**2 + 64*pi**2*beta + 16*pi**2) - beta**2*lam*omega**2*log(s)*sin(omega + phi)**2/(16*pi**2*beta**4 + 64*pi**2*beta**3 + 96*pi**2*beta**2 + 64*pi**2*beta + 16*pi**2) + beta*eta*lam*omega*sin(omega + phi)*cos(omega + phi)/(8*pi**2*beta**4*eps + 32*pi**2*beta**3*eps + 48*pi**2*beta**2*eps + 32*pi**2*beta*eps + 8*pi**2*eps) + beta*eta*lam*omega*log(mu2)*sin(omega + phi)*cos(omega + phi)/(8*pi**2*beta**4 + 32*pi**2*beta**3 + 48*pi**2*beta**2 + 32*pi**2*beta + 8*pi**2) - beta*eta*lam*omega*log(s)*sin(omega + phi)*cos(omega + phi)/(8*pi**2*beta**4 + 32*pi**2*beta**3 + 48*pi**2*beta**2 + 32*pi**2*beta + 8*pi**2) + 2*beta*lam*omega**2*sin(omega + phi)**2/(16*pi**2*beta**4*eps + 64*pi**2*beta**3*eps + 96*pi**2*beta**2*eps + 64*pi**2*beta*eps + 16*pi**2*eps) + 2*beta*lam*omega**2*log(mu2)*sin(omega + phi)**2/(16*pi**2*beta**4 + 64*pi**2*beta**3 + 96*pi**2*beta**2 + 64*pi**2*beta + 16*pi**2) - 2*beta*lam*omega**2*log(s)*sin(omega + phi)**2/(16*pi**2*beta**4 + 64*pi**2*beta**3 + 96*pi**2*beta**2 + 64*pi**2*beta + 16*pi**2) + lam*omega**2*sin(omega + phi)**2/(16*pi**2*beta**4*eps + 64*pi**2*beta**3*eps + 96*pi**2*beta**2*eps + 64*pi**2*beta*eps + 16*pi**2*eps) + lam*omega**2*log(mu2)*sin(omega + phi)**2/(16*pi**2*beta**4 + 64*pi**2*beta**3 + 96*pi**2*beta**2 + 64*pi**2*beta + 16*pi**2) - lam*omega**2*log(s)*sin(omega + phi)**2/(16*pi**2*beta**4 + 64*pi**2*beta**3 + 96*pi**2*beta**2 + 64*pi**2*beta + 16*pi**2) + lam*log(mu2)/(16*pi**2) - lam*log(s)/(16*pi**2) + lam/(16*pi**2*eps)",
+    "G_U": "y**2*log(mu2)/(16*pi**2) - y**2*log(s)/(16*pi**2) + y**2/(32*pi**2) + y**2*cos(omega + phi)**2/(64*pi**2*beta**2*eps + 128*pi**2*beta*eps + 64*pi**2*eps) + y**2*cos(omega + phi)**2/(128*pi**2*beta**2 + 256*pi**2*beta + 128*pi**2) + y**2*log(mu2)*cos(omega + phi)**2/(64*pi**2*beta**2 + 128*pi**2*beta + 64*pi**2) - y**2*log(s)*cos(omega + phi)**2/(64*pi**2*beta**2 + 128*pi**2*beta + 64*pi**2) + y**2*cos(omega + phi)/(16*pi**2*beta*eps + 16*pi**2*eps) + y**2*cos(omega + phi)/(32*pi**2*beta + 32*pi**2) + y**2*log(mu2)*cos(omega + phi)/(16*pi**2*beta + 16*pi**2) - y**2*log(s)*cos(omega + phi)/(16*pi**2*beta + 16*pi**2) + y**2/(16*pi**2*eps)",
+    "G_BI": "kappa2*log(mu2)/(16*pi**2) - kappa2*log(s)/(16*pi**2) + kappa2/(32*pi**2) + y**2*log(mu2)/(16*pi**2) - y**2*log(s)/(16*pi**2) + y**2/(32*pi**2) + y**2*cos(omega + phi)**2/(64*pi**2*beta**2*eps + 128*pi**2*beta*eps + 64*pi**2*eps) + y**2*cos(omega + phi)**2/(128*pi**2*beta**2 + 256*pi**2*beta + 128*pi**2) + y**2*log(mu2)*cos(omega + phi)**2/(64*pi**2*beta**2 + 128*pi**2*beta + 64*pi**2) - y**2*log(s)*cos(omega + phi)**2/(64*pi**2*beta**2 + 128*pi**2*beta + 64*pi**2) + y**2*cos(omega + phi)/(16*pi**2*beta*eps + 16*pi**2*eps) + y**2*cos(omega + phi)/(32*pi**2*beta + 32*pi**2) + y**2*log(mu2)*cos(omega + phi)/(16*pi**2*beta + 16*pi**2) - y**2*log(s)*cos(omega + phi)/(16*pi**2*beta + 16*pi**2) + kappa2/(16*pi**2*eps) + y**2/(16*pi**2*eps)"
+  },
+  "gate_rule": "strict-core closure requires simultaneous bounded/compatible G_R, G_U, G_BI with solved witness equations",
+  "qw2049_trace": {
+    "m2_eff_over_m2": "1.46998567264",
+    "lam_eff_over_lam": "1.20673482371",
+    "y_eff_over_y": "1.23499283632"
+  },
+  "strict_core_closure_missing_items": {
+    "renormalization": "Need full diagrammatic values for G_R and finite parts.",
+    "unitarity": "Need solved Cutkosky ImM equations linked to G_U.",
+    "background_independence": "Need transport theorem/witness linked to G_BI.",
+    "selector_obstruction": "QW-2191 remains open."
+  },
+  "false_pass_guard": "Gate vector export is not theorem-level strict-core closure.",
+  "next_honest_step": "Solve coupled gate equations numerically/symbolically and test reverse contraction stability under branch perturbations.",
+  "lay_explanation": "To kompresja całego toru do trzech bram kwantowych: renormalizacja, unitarność i niezależność od tła muszą zadziałać razem."
+}

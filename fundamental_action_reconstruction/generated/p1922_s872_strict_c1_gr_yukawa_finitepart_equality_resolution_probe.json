@@ -1,0 +1,58 @@
+{
+  "packet_id": "P1922",
+  "stage_id": "S872",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "depends_on": {
+    "p1921_present": true,
+    "p1921_map_rows": 2
+  },
+  "strict_chain_step": "K_strict -> coefficients -> full L_SM+L_GR -> EOM -> finite-part equalities resolution -> decisive DELTA_BG_Yf restamp",
+  "finitepart_equalities_resolution_v1": [
+    {
+      "equality_id": "density_a",
+      "lhs": "c_frw_a",
+      "rhs": "c_bi_a",
+      "evaluation_stamp": "PASS_SYMBOLIC_EQUALITY_DECLARED",
+      "note": "Constant finite-part density coefficient matched symbolically."
+    },
+    {
+      "equality_id": "density_b",
+      "lhs": "c_frw_b",
+      "rhs": "c_bi_b",
+      "evaluation_stamp": "PASS_SYMBOLIC_EQUALITY_DECLARED",
+      "note": "Log-weight finite-part density coefficient matched symbolically."
+    },
+    {
+      "equality_id": "curvature_mix",
+      "lhs": "R_frw*chi_frw",
+      "rhs": "R_bi*chi_bi",
+      "evaluation_stamp": "FAIL_EQUALITY_NOT_ESTABLISHED",
+      "note": "Geometric curvature-mix equality still unresolved."
+    }
+  ],
+  "delta_bg_yf_decision": {
+    "density_delta": "F_Yf*((c_frw_a-c_bi_a) + (c_frw_b-c_bi_b)*log(mu^2/m_f^2))",
+    "curvature_delta": "F_Yf*xi_H*(R_frw*chi_frw - R_bi*chi_bi)",
+    "reduced_after_density_matches": "F_Yf*xi_H*(R_frw*chi_frw - R_bi*chi_bi)",
+    "restamp": "FAIL_NONPROXY_CURVATURE_MIX_GAP",
+    "zero_witness": "NOT_PROVED"
+  },
+  "toe_potential_update": {
+    "assessment": "ToE potential remains structurally promising but still blocked by unresolved curvature-mix background transport equality.",
+    "current_primary_blocker": "R_frw*chi_frw vs R_bi*chi_bi mismatch/gap"
+  },
+  "full_lagrangian_anchor_non_skeleton": {
+    "reference": "P1907::full_lagrangian_term_registry_non_skeleton",
+    "status": "REQUIRED_AND_ACTIVE"
+  },
+  "strict_core_closure_statusvector": {
+    "renormalization": "OPEN_WITH_TWO_LOCAL_PASS",
+    "unitarity": "OPEN_WITH_TWO_LOCAL_PASS",
+    "background_independence": "OPEN_FAIL_CURVATURE_MIX_GAP",
+    "selector_qw2191": "OPEN"
+  },
+  "false_pass_guard": "Resolved density equalities do not imply full background closure while curvature-mix term remains unresolved.",
+  "next_honest_step": "Export P1923 with explicit curvature-mix transport theorem attempt (or counterexample) and final DELTA_BG_Yf closure verdict.",
+  "lay_explanation": "Udało się dopasować część współczynników skończonych, ale problem geometryczny (krzywizna/tło) nadal nie jest zamknięty. To właśnie ten element blokuje pełny sukces."
+}
