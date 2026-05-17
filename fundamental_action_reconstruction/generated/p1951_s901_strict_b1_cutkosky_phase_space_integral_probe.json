@@ -1,0 +1,203 @@
+{
+  "packet_id": "P1951",
+  "stage_id": "S901",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "local_verdict": "PASS_FOR_DECLARED_SEED_INTEGRAND_WITH_DOMAIN_OBSTRUCTION",
+  "route": "strict_only",
+  "channel": "graviton->gauge_gauge",
+  "legacy_bridge_used": false,
+  "depends_on": {
+    "p1677_present": true,
+    "p1853_present": true,
+    "p1858_present": true,
+    "p1860_present": true
+  },
+  "input_hashes": {
+    "p1853_coefficients_sha256": "c9baa41f8824ae026598d9730943866892479260f6aacdb591dcf48cba3664fd",
+    "p1677_restricted_domain_sha256": "8539121367cc5cb512729c85a4f205a1b818dd81438c285b2b8fbc1e14ac20f5"
+  },
+  "declared_integrand": {
+    "K_cut_seed(s,x)": "s*(9937*(x**2 + 1)*log(2)/(40000*pi**2) + 18516431*log(2)/(640000000*pi**2))",
+    "phase_space_measure": "dPhi2_massless_angle_reduced = dx/(32*pi), x in [-1,1]",
+    "scope_warning": "This integrand is the P1860 seed kernel, not a full dressed amplitude squared."
+  },
+  "exact_phase_space_integral": {
+    "Disc_seed(s)": "691517293*s*log(2)/(30720000000*pi**3)",
+    "positivity_reduction_Disc_over_s": "691517293*log(2)/(30720000000*pi**3)",
+    "positive_coefficients_required": [
+      "a_R2 > 0",
+      "a_Ric2 > 0",
+      "s > 0"
+    ],
+    "coefficients_positive_at_qw2049": true,
+    "grid_replay": [
+      {
+        "s": "1/2",
+        "disc_exact_symbolic": "691517293*log(2)/(61440000000*pi**3)",
+        "disc_exact_numeric_30d": "0.000251609874470360252614617002987",
+        "scipy_quad_numeric": "0.00025160987447036024",
+        "scipy_quad_abs_error_estimate": "2.793e-18",
+        "absolute_replay_delta": "0.000e+00",
+        "nonnegative": true
+      },
+      {
+        "s": "1",
+        "disc_exact_symbolic": "691517293*log(2)/(30720000000*pi**3)",
+        "disc_exact_numeric_30d": "0.000503219748940720505229234005974",
+        "scipy_quad_numeric": "0.00050321974894072048",
+        "scipy_quad_abs_error_estimate": "5.587e-18",
+        "absolute_replay_delta": "0.000e+00",
+        "nonnegative": true
+      },
+      {
+        "s": "2",
+        "disc_exact_symbolic": "691517293*log(2)/(15360000000*pi**3)",
+        "disc_exact_numeric_30d": "0.00100643949788144101045846801195",
+        "scipy_quad_numeric": "0.001006439497881441",
+        "scipy_quad_abs_error_estimate": "1.117e-17",
+        "absolute_replay_delta": "0.000e+00",
+        "nonnegative": true
+      },
+      {
+        "s": "4",
+        "disc_exact_symbolic": "691517293*log(2)/(7680000000*pi**3)",
+        "disc_exact_numeric_30d": "0.00201287899576288202091693602390",
+        "scipy_quad_numeric": "0.0020128789957628819",
+        "scipy_quad_abs_error_estimate": "2.235e-17",
+        "absolute_replay_delta": "0.000e+00",
+        "nonnegative": true
+      },
+      {
+        "s": "8",
+        "disc_exact_symbolic": "691517293*log(2)/(3840000000*pi**3)",
+        "disc_exact_numeric_30d": "0.00402575799152576404183387204779",
+        "scipy_quad_numeric": "0.0040257579915257639",
+        "scipy_quad_abs_error_estimate": "4.469e-17",
+        "absolute_replay_delta": "0.000e+00",
+        "nonnegative": true
+      }
+    ],
+    "all_grid_values_nonnegative": true
+  },
+  "pole_residue_interval_certificate": {
+    "admissible_rg_time_model": "|t| <= 1/20 seed-local interval",
+    "rows": [
+      {
+        "label": "spin2_physical",
+        "admissible_rg_time_abs_bound": "1/20",
+        "residue_interval_exact": [
+          "399/400",
+          "401/400"
+        ],
+        "residue_interval_numeric": [
+          "0.99750000000000000000",
+          "1.0025000000000000000"
+        ],
+        "strictly_positive_interval": true
+      },
+      {
+        "label": "massive_seed_mode",
+        "admissible_rg_time_abs_bound": "1/20",
+        "residue_interval_exact": [
+          "119/1000",
+          "121/1000"
+        ],
+        "residue_interval_numeric": [
+          "0.11900000000000000000",
+          "0.12100000000000000000"
+        ],
+        "strictly_positive_interval": true
+      }
+    ],
+    "all_physical_residue_intervals_strictly_positive": true,
+    "ghost_candidate_policy": "The negative-residue ghost_candidate in P1860 remains excluded from the physical channel sum; this is not a proof that the dressed theory has no ghost pole."
+  },
+  "p1677_domain_compatibility_check": {
+    "p1677_restricted_domain": {
+      "beta_range": [
+        0.6,
+        0.9
+      ],
+      "eta_range": [
+        1.1,
+        1.5
+      ],
+      "curvature_R_range": [
+        0.0,
+        0.15
+      ]
+    },
+    "qw2049_tuple": {
+      "beta": 1.0,
+      "eta": 1.8,
+      "omega": 0.18575,
+      "phi": 0.1625
+    },
+    "beta_in_p1677_range": false,
+    "eta_in_p1677_range": false,
+    "domain_compatible": false,
+    "obstruction": "P1677 restricted beta/eta domain does not contain the QW-2049 strict tuple used by P1853; UR_link cannot be promoted globally without a domain update or separate theorem."
+  },
+  "bounded_uncertainty_table": {
+    "source": "SymPy exact integral replayed by scipy.integrate.quad",
+    "rows": [
+      {
+        "s": "1/2",
+        "disc_exact_symbolic": "691517293*log(2)/(61440000000*pi**3)",
+        "disc_exact_numeric_30d": "0.000251609874470360252614617002987",
+        "scipy_quad_numeric": "0.00025160987447036024",
+        "scipy_quad_abs_error_estimate": "2.793e-18",
+        "absolute_replay_delta": "0.000e+00",
+        "nonnegative": true
+      },
+      {
+        "s": "1",
+        "disc_exact_symbolic": "691517293*log(2)/(30720000000*pi**3)",
+        "disc_exact_numeric_30d": "0.000503219748940720505229234005974",
+        "scipy_quad_numeric": "0.00050321974894072048",
+        "scipy_quad_abs_error_estimate": "5.587e-18",
+        "absolute_replay_delta": "0.000e+00",
+        "nonnegative": true
+      },
+      {
+        "s": "2",
+        "disc_exact_symbolic": "691517293*log(2)/(15360000000*pi**3)",
+        "disc_exact_numeric_30d": "0.00100643949788144101045846801195",
+        "scipy_quad_numeric": "0.001006439497881441",
+        "scipy_quad_abs_error_estimate": "1.117e-17",
+        "absolute_replay_delta": "0.000e+00",
+        "nonnegative": true
+      },
+      {
+        "s": "4",
+        "disc_exact_symbolic": "691517293*log(2)/(7680000000*pi**3)",
+        "disc_exact_numeric_30d": "0.00201287899576288202091693602390",
+        "scipy_quad_numeric": "0.0020128789957628819",
+        "scipy_quad_abs_error_estimate": "2.235e-17",
+        "absolute_replay_delta": "0.000e+00",
+        "nonnegative": true
+      },
+      {
+        "s": "8",
+        "disc_exact_symbolic": "691517293*log(2)/(3840000000*pi**3)",
+        "disc_exact_numeric_30d": "0.00402575799152576404183387204779",
+        "scipy_quad_numeric": "0.0040257579915257639",
+        "scipy_quad_abs_error_estimate": "4.469e-17",
+        "absolute_replay_delta": "0.000e+00",
+        "nonnegative": true
+      }
+    ]
+  },
+  "theorem_scope": {
+    "proved": "Exact Cutkosky-style two-body phase-space integral positivity for the declared P1860 seed integrand at positive s.",
+    "not_proved": [
+      "full dressed graviton-to-gauge-gauge discontinuity equality",
+      "BRST physical-state projection",
+      "absence of all dressed ghost poles",
+      "UR_link promotion over the P1677 restricted domain"
+    ]
+  },
+  "false_pass_guard": "Seed-integrand phase-space positivity is not full global unitarity closure.",
+  "next_honest_step": "Resolve the P1677/QW-2049 domain mismatch, then replace K_cut_seed with the dressed amplitude and recompute DiscM-CutSum in a common basis.",
+  "lay_explanation": "Policzylismy dokladna calke dla roboczego jadra unitarności i wychodzi dodatnia. Ale stara domena P1677 nie obejmuje aktualnego strict-tupla, wiec pelnego mostu unitarność-renormalizacja nie wolno jeszcze oglosic."
+}

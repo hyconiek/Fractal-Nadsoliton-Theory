@@ -1,0 +1,146 @@
+{
+  "packet_id": "P1958",
+  "stage_id": "S908",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "local_verdict": "LOCAL_ABELIAN_LORENZ_GAUGE_FIXING_AND_GHOST_ACTION_SEED_EXPORTED__FULL_BV_BRST_STILL_OPEN",
+  "route": "strict_only",
+  "legacy_bridge_used": false,
+  "higher_reasoning_used": true,
+  "ignored_files": [
+    "TOE_FINAL_DOCUMENTATION_RELEASE_8_STRICT_FULL.pdf"
+  ],
+  "pre_execution_grep_summary": {
+    "english_terms": [
+      "gauge sector",
+      "L_gauge",
+      "F_{mu nu}",
+      "Yang/Mills",
+      "structure constants",
+      "gauge fixing",
+      "Faddeev/Popov",
+      "ghost action",
+      "antighost",
+      "BRST differential",
+      "gauge transformation"
+    ],
+    "polish_terms": [
+      "sektor cechowania",
+      "cechowanie",
+      "ustalenie cechowania",
+      "duchy",
+      "antyduch",
+      "akcja duchow",
+      "transformacja cechowania",
+      "pochodna kowariantna"
+    ],
+    "key_existing_sources_found": [
+      "P1657 exports the minimal covariant gauge-metric density sqrt(-g)*[-1/4 g^{mu alpha}g^{nu beta}F_{mu nu}F_{alpha beta}] and notes gauge fixing is not discharged.",
+      "P1907 exports a sector-level SM gauge registry: -1/4 F^2_SU3, -1/4 F^2_SU2, -1/4 F^2_U1, with ghost/BRST constraints still OPEN_SYMBOLIC.",
+      "P1764 exports covariant operator-level E_A^mu with ghost/BRST still open.",
+      "P1957 proves that full BV/BRST ghost-sector data are not available in the current export state."
+    ],
+    "negative_search_result": "No theorem-grade structure-constant table, BV_BRST_operator_map, or nonproxy ghost/antighost action was found."
+  },
+  "depends_on": {
+    "p1657_present": true,
+    "p1764_present": true,
+    "p1907_present": true,
+    "p1957_present": true
+  },
+  "input_hashes": {
+    "p1657_sha256": "9c5a46470411bb05951466536b6c198ae9a5b90dd91e54321e3032b0c869299c",
+    "p1764_sha256": "7d91a24bfda9f444fce3b183b05fee17410bd300f64f821bdbe2e2cd5cab6e1e",
+    "p1907_sha256": "237f3711a71e98e219ef178a57c814a68a97cc05e8ff354fa68bbe15666d7be6",
+    "p1957_sha256": "486d814b496ff005f605f77d395d91a9a1a73960312c76e78bf4da5694d9e85d"
+  },
+  "scope": {
+    "field_content": "single local Abelianized gauge generator over flat B1 tangent patch",
+    "metric_signature": "eta_mu_nu = diag(-1,1,1,1)",
+    "gauge_potential_convention": "A_mu lower-index components",
+    "gauge_transformation": "delta A_mu = partial_mu alpha",
+    "not_in_scope": [
+      "SU(3)/SU(2) non-Abelian structure constants",
+      "diffeomorphism ghosts",
+      "BV antifield sector",
+      "BRST charge Q",
+      "Q^2=0 theorem",
+      "ghost-cancelled Cutkosky equality"
+    ]
+  },
+  "GaugeFixingFunctional_strict_B1_v1": {
+    "status": "EXPORTED_LOCAL_FREE_ABELIANIZED_ONLY",
+    "formula": "G[A] = partial_mu A^mu = -partial_t A_0 + partial_x A_1 + partial_y A_2 + partial_z A_3",
+    "gauge_fixing_lagrangian": "L_GF = -(1/(2*xi))*G[A]^2",
+    "symbolic_expression": "-Derivative(A0(t, x, y, z), t) + Derivative(A1(t, x, y, z), x) + Derivative(A2(t, x, y, z), y) + Derivative(A3(t, x, y, z), z)",
+    "gauge_parameter": "xi"
+  },
+  "FaddeevPopovOperator_strict_B1_v1": {
+    "status": "EXPORTED_LOCAL_FREE_ABELIANIZED_ONLY",
+    "derivation": "delta G[A + eps*partial alpha]/delta eps at eps=0",
+    "operator_on_alpha": "-Derivative(alpha(t, x, y, z), (t, 2)) + Derivative(alpha(t, x, y, z), (x, 2)) + Derivative(alpha(t, x, y, z), (y, 2)) + Derivative(alpha(t, x, y, z), (z, 2))",
+    "box_alpha": "-Derivative(alpha(t, x, y, z), (t, 2)) + Derivative(alpha(t, x, y, z), (x, 2)) + Derivative(alpha(t, x, y, z), (y, 2)) + Derivative(alpha(t, x, y, z), (z, 2))",
+    "residual_operator_minus_box": "0"
+  },
+  "GhostAntighostAction_strict_B1_v1": {
+    "status": "EXPORTED_LOCAL_FREE_ABELIANIZED_ONLY",
+    "operator_form": "L_ghost = - cbar * Box c",
+    "by_parts_form": "L_ghost = partial_mu cbar partial^mu c modulo boundary",
+    "operator_expression": "(Derivative(c(t, x, y, z), (t, 2)) - Derivative(c(t, x, y, z), (x, 2)) - Derivative(c(t, x, y, z), (y, 2)) - Derivative(c(t, x, y, z), (z, 2)))*cbar(t, x, y, z)",
+    "by_parts_expression": "-Derivative(c(t, x, y, z), t)*Derivative(cbar(t, x, y, z), t) + Derivative(c(t, x, y, z), x)*Derivative(cbar(t, x, y, z), x) + Derivative(c(t, x, y, z), y)*Derivative(cbar(t, x, y, z), y) + Derivative(c(t, x, y, z), z)*Derivative(cbar(t, x, y, z), z)",
+    "boundary_current_J_mu": [
+      "cbar(t, x, y, z)*Derivative(c(t, x, y, z), t)",
+      "-cbar(t, x, y, z)*Derivative(c(t, x, y, z), x)",
+      "-cbar(t, x, y, z)*Derivative(c(t, x, y, z), y)",
+      "-cbar(t, x, y, z)*Derivative(c(t, x, y, z), z)"
+    ],
+    "operator_minus_byparts_minus_boundary_residual": "0"
+  },
+  "machine_checks": {
+    "abelian_field_strength_variation_zero": true,
+    "fp_operator_equals_box": true,
+    "ghost_operator_equals_byparts_plus_boundary": true,
+    "all_local_checks_zero": true,
+    "field_strength_variation_residuals": [
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ]
+  },
+  "p1957_requirement_update": {
+    "B1_ghost_sector_nonproxy_export": "PARTIAL_SEED_ONLY_FOR_LOCAL_FREE_ABELIANIZED_GAUGE_FIELD",
+    "B2_BV_BRST_operator_map": "OPEN",
+    "B3_explicit_BRST_charge_Q": "OPEN",
+    "B4_Q_squared_simplified_zero": "OPEN",
+    "B5_physical_state_cohomology": "OPEN",
+    "B6_gauge_gauge_ghost_cancellation_trace": "OPEN"
+  },
+  "gatekeeper_status": {
+    "TG2_BRST_GLOBAL_NILPOTENCY": "NOT_PROMOTED",
+    "TG3_CUTKOSKY_GLOBAL_UNITARITY": "NOT_PROMOTED",
+    "reason": "P1958 exports a local Abelian gauge-fixing/ghost seed only. It does not export the non-Abelian SM ghost sector, BV map, Q, Q^2, cohomology map, or ghost-cancelled Cutkosky trace."
+  },
+  "false_pass_guard": "This packet discharges only the minimal local Abelian FP operator and ghost action seed derivable from the exported F^2 gauge sector. It is not a full strict BV/BRST witness pack and cannot close TG2/TG3.",
+  "next_honest_step": "Build P1959 with high reasoning: decide whether the strict lane has enough exported gauge-group data to extend this seed to SU(3)xSU(2)xU(1) structure constants and BRST differential, or prove a non-Abelian structure-data obstruction.",
+  "lay_explanation": "Zbudowalismy pierwszy maly, sprawdzalny fragment sektora duchow: dla prostego pola cechowania warunek Lorentza prowadzi do operatora Box i odpowiadajacej akcji duchow. To nie jest jeszcze pelny BRST Standard Modelu; to pierwszy uczciwy klocek, ktory pokazuje, gdzie zaczyna sie rachunek duchow."
+}

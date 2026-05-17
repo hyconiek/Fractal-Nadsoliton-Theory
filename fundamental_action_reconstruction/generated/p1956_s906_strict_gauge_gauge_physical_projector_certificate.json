@@ -1,0 +1,515 @@
+{
+  "packet_id": "P1956",
+  "stage_id": "S906",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "local_verdict": "GAUGE_GAUGE_TRANSVERSE_POLARIZATION_PROJECTOR_EXPORTED__BRST_COHOMOLOGY_STILL_OPEN",
+  "route": "strict_only",
+  "legacy_bridge_used": false,
+  "higher_reasoning_used": true,
+  "pre_execution_grep_summary": {
+    "english_terms": [
+      "BRST",
+      "physical-state projector",
+      "polarization projector",
+      "transverse polarization",
+      "ghost sector",
+      "ghost cancellation",
+      "gauge_gauge",
+      "Cutkosky"
+    ],
+    "polish_terms": [
+      "projektor",
+      "polaryzacja",
+      "poprzeczny",
+      "sektor duchow",
+      "kasowanie duchow",
+      "unitarnosc",
+      "kohomologia"
+    ],
+    "key_existing_sources_found": [
+      "P1767: BRST/Cutkosky gate sequencing requires G_BW PASS, ghost_sector_nonproxy_export, and BV_BRST_operator_map",
+      "P1801: BRST nilpotency intake template, not a channel projector",
+      "P1802: Cutkosky unitarity intake template, not a computed projector",
+      "P1854: B1 BRST cochain and first Cutkosky channel proxy, still pre-theorem",
+      "P1954: dressed amplitude nonavailability theorem lists missing M2 BRST projector",
+      "P1955: minimal tree-level hAA vertex exported, leaving BRST projection open"
+    ],
+    "negative_search_result": "No existing BRSTPhysicalProjector_gauge_gauge_strict_B1_v1 or channel-level ghost-subtracted BRST cohomology projector was found."
+  },
+  "depends_on": {
+    "p1767_present": true,
+    "p1801_present": true,
+    "p1802_present": true,
+    "p1954_present": true,
+    "p1955_present": true
+  },
+  "input_hashes": {
+    "p1767_sha256": "89f9658a8dac29e7ac4561dc934b64004f80a42c5c777f73063c0ed9e6a1e946",
+    "p1801_sha256": "49256efe75b4d501bf2972055f677f93fa86a0da4854567fc4bda3030129eb40",
+    "p1802_sha256": "59a4dd345d8264e83ddd3d451d6b847b23d611d2fb83aaba9e04346fdcc3b0f0",
+    "p1954_sha256": "b6a32fa1129bb32c76e5231c1a331160d18a4583bb2a93068024b18cce6c88eb",
+    "p1955_sha256": "86e9dc0219b8d829cd63230dd3ae4bef20ffac0c3922aa60da378eb685a2036d"
+  },
+  "kinematic_scope": {
+    "metric_signature": "eta_mu_nu = diag(-1,1,1,1)",
+    "frame": "flat two-body massless cut frame, E=1",
+    "channel": "graviton -> gauge_gauge external cut states",
+    "kernel_lane": "K_strict operational lane only; no legacy kernel role transfer",
+    "scheme_scope": "external on-shell polarization sum compatible with the P1955 minimal tree-level hAA seed; no loop dressing"
+  },
+  "projector_formula": {
+    "name": "TransverseAxialPolarizationProjector_v1",
+    "formula": "P^{mu nu}(k,n)=eta^{mu nu}-(k^mu n^nu+n^mu k^nu)/(k.n)+(n.n)k^mu k^nu/(k.n)^2",
+    "reference_choice": "n_i is the opposite lightlike cut momentum, so n_i^2=0 and k_i.n_i=-2",
+    "polarization_sum_identity": "sum_{lambda=x,y} eps_lambda^mu eps_lambda^nu = P^{mu nu}(k,n)"
+  },
+  "single_particle_projector_checks": [
+    {
+      "label": "gauge_boson_1",
+      "k": [
+        "1",
+        "0",
+        "0",
+        "1"
+      ],
+      "n_reference": [
+        "1",
+        "0",
+        "0",
+        "-1"
+      ],
+      "polarizations": [
+        [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0"
+        ]
+      ],
+      "kinematic_scalars": {
+        "k_squared": "0",
+        "n_squared": "0",
+        "k_dot_n": "-2"
+      },
+      "projector_contravariant": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "projector_mixed": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "polarization_sum": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "machine_checks": {
+        "k_is_lightlike": true,
+        "reference_is_lightlike": true,
+        "reference_not_collinear": true,
+        "polarization_norms": [
+          "1",
+          "1"
+        ],
+        "polarization_cross_terms": [
+          "0"
+        ],
+        "polarizations_transverse_to_k": [
+          "0",
+          "0"
+        ],
+        "polarizations_transverse_to_n": [
+          "0",
+          "0"
+        ],
+        "completeness_residual_zero": true,
+        "projector_k_transverse_zero": true,
+        "projector_n_transverse_zero": true,
+        "idempotence_residual_zero": true,
+        "projector_trace_mixed": "2",
+        "projector_rank_mixed": 2
+      },
+      "residuals": {
+        "polarization_sum_minus_axial_projector": [
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "projector_on_k_lower": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "projector_on_n_lower": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "mixed_idempotence_residual": [
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ]
+      }
+    },
+    {
+      "label": "gauge_boson_2",
+      "k": [
+        "1",
+        "0",
+        "0",
+        "-1"
+      ],
+      "n_reference": [
+        "1",
+        "0",
+        "0",
+        "1"
+      ],
+      "polarizations": [
+        [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0"
+        ]
+      ],
+      "kinematic_scalars": {
+        "k_squared": "0",
+        "n_squared": "0",
+        "k_dot_n": "-2"
+      },
+      "projector_contravariant": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "projector_mixed": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "polarization_sum": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "machine_checks": {
+        "k_is_lightlike": true,
+        "reference_is_lightlike": true,
+        "reference_not_collinear": true,
+        "polarization_norms": [
+          "1",
+          "1"
+        ],
+        "polarization_cross_terms": [
+          "0"
+        ],
+        "polarizations_transverse_to_k": [
+          "0",
+          "0"
+        ],
+        "polarizations_transverse_to_n": [
+          "0",
+          "0"
+        ],
+        "completeness_residual_zero": true,
+        "projector_k_transverse_zero": true,
+        "projector_n_transverse_zero": true,
+        "idempotence_residual_zero": true,
+        "projector_trace_mixed": "2",
+        "projector_rank_mixed": 2
+      },
+      "residuals": {
+        "polarization_sum_minus_axial_projector": [
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "projector_on_k_lower": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "projector_on_n_lower": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "mixed_idempotence_residual": [
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ]
+      }
+    }
+  ],
+  "two_particle_gauge_gauge_projector": {
+    "construction": "P_gauge_gauge = P_gauge_boson_1 mixed kron P_gauge_boson_2 mixed",
+    "rank": 4,
+    "trace": "4",
+    "physical_state_count": 4,
+    "idempotence_residual_zero": true
+  },
+  "machine_check_summary": {
+    "all_local_projector_checks_zero": true,
+    "single_particle_projector_ranks": [
+      2,
+      2
+    ],
+    "two_particle_rank_expected_4": true,
+    "two_particle_trace_expected_4": true,
+    "two_particle_idempotence_zero": true
+  },
+  "p1954_requirement_update": {
+    "M1_4D_hAA_vertex": "DISCHARGED_FOR_MINIMAL_TREE_LEVEL_FIELD_STRENGTH_VERTEX_BY_P1955",
+    "M2_BRST_projector": "DISCHARGED_ONLY_FOR_LOCAL_ONSHELL_TRANSVERSE_POLARIZATION_SUM",
+    "remaining_M2_limitations": [
+      "no BV/BRST charge Q exported",
+      "no Q^2=0 nilpotency proof for the interacting strict sector",
+      "no ghost-sector nonproxy action and cancellation trace",
+      "no proof that the full cut sum is restricted to BRST cohomology",
+      "no global Lorentz-covariant reference-vector family over all cut momenta"
+    ],
+    "M3_dressed_propagator_residues": "OPEN",
+    "M4_DiscM_CutSum_same_scheme": "OPEN",
+    "M5_integral_reductions": "OPEN"
+  },
+  "gatekeeper_status": {
+    "TG2_BRST_GLOBAL_NILPOTENCY": "NOT_PROMOTED",
+    "TG3_CUTKOSKY_GLOBAL_UNITARITY": "NOT_PROMOTED",
+    "reason": "P1956 supplies only external transverse polarization algebra; P1767/P1801/P1802 still require BRST charge, ghost sector, nilpotency, cohomology, and optical theorem matching."
+  },
+  "false_pass_guard": "This certificate is a local on-shell physical polarization projector. It is not a BRST cohomology theorem, not a ghost-cancellation theorem, not a dressed Cutkosky equality, and not a global UR_link theorem.",
+  "next_honest_step": "Build P1957 with high reasoning: either construct the strict BV/BRST charge, ghost-sector nonproxy action, Q^2=0 nilpotency check, and gauge_gauge ghost-cancellation trace, or export a formal obstruction proving those data are not yet available.",
+  "lay_explanation": "Wyodrebnilismy dokladnie dwie fizyczne polaryzacje dla kazdego z dwoch bozonow cechowania i pokazalismy rachunkowo, ze daja cztery dodatnie stany koncowe. To potrzebny klocek unitarnosci, ale jeszcze nie pelny test BRST: nadal trzeba pokazac, ze niefizyczne skladowe i duchy naprawde sie kasuja w calej teorii."
+}

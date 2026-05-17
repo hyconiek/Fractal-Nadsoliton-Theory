@@ -1,0 +1,124 @@
+{
+  "packet_id": "P1952",
+  "stage_id": "S902",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "local_verdict": "QW2049_SEED_LOCAL_POSITIVE_RECTANGLE_EXPORTED__UR_LINK_STILL_OPEN",
+  "route": "strict_only",
+  "legacy_bridge_used": false,
+  "depends_on": {
+    "p1677_present": true,
+    "p1950_present": true,
+    "p1951_present": true
+  },
+  "input_hashes": {
+    "p1677_restricted_domain_sha256": "8539121367cc5cb512729c85a4f205a1b818dd81438c285b2b8fbc1e14ac20f5",
+    "p1950_symbolic_cancellation_sha256": "6c9f44c444ed3ef44bd22240875aaced55da88f3cb646d7cb47c27de38f6000f",
+    "p1951_domain_check_sha256": "92829ee13833a7b91beb64f60475f495d4add7e86124efb0be5f97f833b1342f"
+  },
+  "old_p1677_domain": {
+    "beta_range": [
+      0.6,
+      0.9
+    ],
+    "eta_range": [
+      1.1,
+      1.5
+    ],
+    "curvature_R_range": [
+      0.0,
+      0.15
+    ]
+  },
+  "qw2049_tuple": {
+    "beta": "1",
+    "eta": "9/5",
+    "omega": "743/4000",
+    "phi": "13/80"
+  },
+  "qw2049_seed_local_rectangle": {
+    "beta": {
+      "lower": "19/20",
+      "upper": "21/20"
+    },
+    "eta": {
+      "lower": "17/10",
+      "upper": "19/10"
+    },
+    "omega": {
+      "lower": "9/50",
+      "upper": "19/100"
+    },
+    "phi": {
+      "lower": "3/20",
+      "upper": "17/100"
+    }
+  },
+  "contains_qw2049_tuple": {
+    "beta": true,
+    "eta": true,
+    "omega": true,
+    "phi": true
+  },
+  "domain_separation_from_p1677": {
+    "beta_disjoint": true,
+    "eta_disjoint": true,
+    "separated_from_p1677": true,
+    "meaning": "The new rectangle is a separate QW-2049 seed-local domain, not an extension theorem for P1677."
+  },
+  "positivity_certificate": {
+    "assumptions": [
+      "beta in [19/20, 21/20]",
+      "eta in [17/10, 19/10]",
+      "omega in [9/50, 19/100]",
+      "phi in [3/20, 17/100]",
+      "omega - phi >= 1/100",
+      "alpha_geo_strict = 4*log(2) > 0"
+    ],
+    "lower_bounds": {
+      "a_R2_lower": {
+        "exact": "4941*log(2)/(200000*pi**2)",
+        "numeric_30d": "0.00173504432394913046168282810057"
+      },
+      "a_Ric2_lower": {
+        "exact": "2223*log(2)/(10000*pi**2)",
+        "numeric_30d": "0.0156122385433674034257070506682"
+      },
+      "a_Riem2_lower": {
+        "exact": "264537*log(2)/(8000000*pi**2)",
+        "numeric_30d": "0.00232232048332590125957392378689"
+      },
+      "a_GB_lower": {
+        "exact": "7*log(2)/(400000*pi**2)",
+        "numeric_30d": "0.00000122903362352195033715642549120"
+      },
+      "Disc_seed_over_s_lower": {
+        "exact": "64221*log(2)/(3200000*pi**3)",
+        "numeric_30d": "0.000448645099564460654835331379251"
+      }
+    },
+    "all_lower_bounds_positive": true,
+    "disc_statement": "For s > 0, Disc_seed(s) >= s * Disc_seed_over_s_lower > 0 on the QW-2049 seed-local rectangle."
+  },
+  "renormalization_link_scope": {
+    "p1950_cancellation_reused": "PASS_ZERO_ON_DECLARED_B1_ANSATZ",
+    "safe_statement": "The declared B1 counterterm cancellation and seed Cutkosky positivity coexist on the QW-2049 seed-local rectangle.",
+    "unsafe_statement_rejected": "This does not prove P1677 UR_link, dressed unitarity, or background-global renormalization."
+  },
+  "theorem_scope": {
+    "proved": [
+      "P1677 restricted beta/eta domain is disjoint from a narrow QW-2049 seed-local rectangle.",
+      "The declared B1 a_* lower bounds are strictly positive on that rectangle.",
+      "The declared seed Disc_seed(s)/s has a strictly positive lower bound on that rectangle."
+    ],
+    "not_proved": [
+      "extension of P1677 to QW-2049",
+      "full dressed graviton->gauge_gauge Cutkosky equality",
+      "global UR_link theorem",
+      "background-independence transport",
+      "QW-2191 selector discharge"
+    ]
+  },
+  "false_pass_guard": "This certificate repairs the bookkeeping domain split only at seed-local level; it is not a global unitarity-renormalization theorem.",
+  "next_honest_step": "Build P1953: replace the seed integrand by a dressed amplitude model reduced to the same basis, or export a precise obstruction if the dressed amplitude is not available in the repo.",
+  "lay_explanation": "Zamiast udawac, ze stara domena P1677 obejmuje aktualny strict punkt, wyznaczylismy osobna mala bezpieczna okolice wokol QW-2049. W tej okolicy robocze wspolczynniki i calka sa dodatnie, ale pelny dowod unitarności nadal czeka na ubrana amplitude."
+}

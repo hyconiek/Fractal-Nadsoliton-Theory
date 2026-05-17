@@ -1,0 +1,171 @@
+{
+  "packet_id": "P1954",
+  "stage_id": "S904",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "local_verdict": "FORMAL_NONAVAILABILITY_THEOREM_EXPORTED__DRESSED_AMPLITUDE_UNDERDETERMINED",
+  "route": "strict_only",
+  "legacy_bridge_used": false,
+  "depends_on": {
+    "p1852_present": true,
+    "p1862_present": true,
+    "p1866_present": true,
+    "p1907_present": true,
+    "p1913_present": true,
+    "p1953_present": true
+  },
+  "input_hashes": {
+    "p1852_sha256": "b975ea11073f0b06e97dbc1b65b449b4213c0d1431377a236fd033983491fb19",
+    "p1862_sha256": "e247f31694785bb5c313a638b4b5e70e8d46e2462aa85dd8439405f0f2b26b9a",
+    "p1866_sha256": "855a9665d6b6adc098a12674e14b50e4af13a7a0d9d4c0613308ca9d050c4626",
+    "p1907_sha256": "237f3711a71e98e219ef178a57c814a68a97cc05e8ff354fa68bbe15666d7be6",
+    "p1908_sha256": "791e642c2f14e2972778ae44e3856d1121d8a1bfb0784f71d13e0b4984cc3e58",
+    "p1909_sha256": "994f0f55fdf6abb2ad1fe2d8542ef19f351f15bcc47d3a921ffe751cfc8b8a8a",
+    "p1910_sha256": "69eb09e1261663761dbb1d053e70cd20c3e2d87fc58b3d9091048e1c41328334",
+    "p1913_sha256": "fb6082ac4c37f78574a3a451e1c1964ee9e7b542d5c2b97776d24ebb3a3c6676",
+    "p1953_sha256": "88b684ebaf174aa5f47ff63fe6c22e64a5f8dcb2efb9ed6b66785876db39c331"
+  },
+  "p1953_required_interface_fields": [
+    "channel = graviton->gauge_gauge",
+    "scheme = MSbar_B1_seed",
+    "gauge_fixing_family and xi value",
+    "external_state_projectors including BRST physical-state projector",
+    "M_dressed_common_basis",
+    "AbsM_dressed_squared_common_basis",
+    "DiscM_common_basis",
+    "CutSum_common_basis",
+    "DiscM_minus_CutSum_simplified",
+    "dressed_graviton_propagator_pole_list",
+    "residue_values_per_pole",
+    "ghost_sector_exclusion_trace",
+    "phase_space_measure and integration_domain",
+    "uncertainty_or_exactness_certificate"
+  ],
+  "minimal_missing_data_matrix": [
+    {
+      "req_id": "M1",
+      "required_object": "4D graviton-gauge-gauge Feynman vertex V_hAA^{mu nu;rho sigma;ab}(p,q)",
+      "observed_sources": [
+        "P1907 sector registry present=True",
+        "P1866 1D proxy present=True",
+        "hAA vertex exported=False"
+      ],
+      "verdict": "MISSING",
+      "exact_missing_data": [
+        "metric perturbation convention g=eta+kappa*h",
+        "delta^3 S / delta h delta A delta A tensor",
+        "momentum routing and gauge-index normalization",
+        "contact terms from R^2/Ricci^2/Riemann^2 sector if included"
+      ]
+    },
+    {
+      "req_id": "M2",
+      "required_object": "BRST physical-state projector for the gauge_gauge final state",
+      "observed_sources": [
+        "P1852 seed contract present=True",
+        "BRST physical projector exported=False"
+      ],
+      "verdict": "MISSING",
+      "exact_missing_data": [
+        "physical polarization sum",
+        "ghost subtraction/cancellation trace",
+        "proof that the cut sum is restricted to BRST cohomology"
+      ]
+    },
+    {
+      "req_id": "M3",
+      "required_object": "computed dressed graviton propagator pole list and residues",
+      "observed_sources": [
+        "P1862 note=Seed dressed residues are inherited from physical-pole projection and still require full propagator computation.",
+        "computed residues exported=False"
+      ],
+      "verdict": "SEED_ONLY",
+      "exact_missing_data": [
+        "inverse quadratic operator in fixed gauge",
+        "pole polynomial after one-loop dressing",
+        "residue derivative at each physical pole",
+        "ghost-pole exclusion theorem"
+      ]
+    },
+    {
+      "req_id": "M4",
+      "required_object": "same-scheme DiscM_grmix and CutSum_grmix coefficients",
+      "observed_sources": [
+        "P1913 scheme=MSbar_candidate",
+        "grmix row evaluated=False",
+        "scheme_locked_to_MSbar_B1_seed=False"
+      ],
+      "verdict": "OPEN_PLACEHOLDER",
+      "exact_missing_data": [
+        "alpha_gr, beta_gr, gamma_gr values",
+        "alpha_gr_cut, beta_gr_cut, gamma_gr_cut values",
+        "DiscM_minus_CutSum simplified expression",
+        "scheme tag MSbar_B1_seed across both sides"
+      ]
+    },
+    {
+      "req_id": "M5",
+      "required_object": "diagram coefficient and integral reductions for gravity/gauge channel",
+      "observed_sources": [
+        "gravity mixed diagram inventory present=True",
+        "coefficients are placeholders=True",
+        "binding symbolic only=True"
+      ],
+      "verdict": "OPEN_PLACEHOLDER",
+      "exact_missing_data": [
+        "master integral reductions for d_gravity_mixed_counterterm_support",
+        "finite and pole parts in the same basis",
+        "channel normalization linking coefficient table to amplitude"
+      ]
+    }
+  ],
+  "acceptance_condition_currently_failed": true,
+  "formal_nonavailability_theorem": {
+    "statement": "On the current repository state, the strict dressed graviton->gauge_gauge Cutkosky amplitude object is underdetermined and not derivable as a theorem-grade export.",
+    "proof_trace": [
+      "P1907 exports a sector-level non-skeleton registry, but not a 4D hAA Feynman vertex tensor.",
+      "P1866 exports a 1D symbolic proxy chain, not a 4D perturbative expansion around g=eta+kappa*h.",
+      "P1852 exports BRST/Cutkosky seed contracts, not a channel BRST physical-state projector.",
+      "P1862 explicitly marks dressed residues as seed-inherited and still requiring full propagator computation.",
+      "P1913 leaves grmix DiscM/CutSum in open symbolic placeholders under MSbar_candidate rather than MSbar_B1_seed.",
+      "Therefore the P1953 acceptance contract cannot be satisfied from current strict exports."
+    ],
+    "underdetermination_witness": {
+      "free_symbols_if_one_attempts_derivation_now": [
+        "V_hAA_tensor_free",
+        "Pi_hh_dressed_free",
+        "P_BRST_phys_free",
+        "alpha_gr_minus_alpha_gr_cut",
+        "beta_gr_minus_beta_gr_cut",
+        "gamma_gr_minus_gamma_gr_cut"
+      ],
+      "meaning": "The current sector-level L_total and placeholder common-basis rows admit multiple incompatible dressed amplitude completions while preserving all currently exported seed/proxy artifacts. Therefore a unique theorem-grade Cutkosky amplitude is not derivable from current exports."
+    }
+  },
+  "safe_consequence": {
+    "may_continue_using": [
+      "P1950 declared B1 counterterm cancellation",
+      "P1951 seed phase-space positivity",
+      "P1952 QW-2049 seed-local positivity rectangle"
+    ],
+    "must_not_claim": [
+      "full dressed graviton->gauge_gauge Cutkosky equality",
+      "BRST-projected optical theorem closure",
+      "ghost-free dressed propagator theorem",
+      "global UR_link theorem"
+    ]
+  },
+  "next_solver_input_contract": {
+    "recommended_packet": "P1955",
+    "minimum_new_exports_required": [
+      "V_hAA_tensor_strict_B1_v1",
+      "BRSTPhysicalProjector_gauge_gauge_strict_B1_v1",
+      "DressedGravitonPropagatorPoleResidueTable_strict_B1_v1",
+      "DiscM_CutSum_grmix_MSbar_B1_seed_common_basis_v1",
+      "SchemeLock_MSbar_B1_seed_for_P1913_grmix_v1"
+    ]
+  },
+  "false_pass_guard": "This is a nonavailability theorem for the current export state, not a no-go theorem about the theory in principle.",
+  "higher_reasoning_required_for_next_step": true,
+  "next_honest_step": "Build P1955 with high reasoning: derive V_hAA_tensor_strict_B1_v1 from a 4D metric perturbation expansion of L_total, or prove that the current L_total export lacks the metric-density detail needed for that derivation.",
+  "lay_explanation": "Nie da sie uczciwie policzyc pelnej amplitudy z obecnych danych, bo brakuje reguly wierzcholka, projektora stanow fizycznych i policzonych residuow propagatora. To nie obala teorii; mowi dokladnie, jaki kawalek matematycznej maszynerii trzeba teraz zbudowac."
+}

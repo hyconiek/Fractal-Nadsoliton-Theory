@@ -1,0 +1,100 @@
+{
+  "packet_id": "P1950",
+  "stage_id": "S900",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "local_verdict": "PASS_ZERO_ON_DECLARED_B1_ANSATZ",
+  "route": "strict_only",
+  "kernel_anchor": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+  "legacy_bridge_used": false,
+  "depends_on": {
+    "p1849_present": true,
+    "p1850_present": true,
+    "p1853_present": true
+  },
+  "input_hashes": {
+    "p1850_coefficients_sha256": "9f8688634ad362fc5dc3e649afe4274ec159688487e3ae6fd70e8878182308d5",
+    "p1850_substitution_tuple_sha256": "afd61a00d612b4f5341ca32f8912c124d4e3f3895081e7e039b084e8805c67d1",
+    "p1853_evaluated_coefficients_sha256": "c9baa41f8824ae026598d9730943866892479260f6aacdb591dcf48cba3664fd"
+  },
+  "scheme": {
+    "name": "MSbar_B1_seed",
+    "epsilon_convention": "d=4-2*epsilon",
+    "background_family": "background_family_B1"
+  },
+  "computed_coefficients": {
+    "a_R2": {
+      "symbolic_exact": "18516431*log(2)/(640000000*pi**2)",
+      "numeric_30d": "0.00203190323987715807173068650129",
+      "positive": true
+    },
+    "a_Ric2": {
+      "symbolic_exact": "9937*log(2)/(40000*pi**2)",
+      "numeric_30d": "0.0174470101670537435718905715800",
+      "positive": true
+    },
+    "a_Riem2": {
+      "symbolic_exact": "13117491*log(2)/(320000000*pi**2)",
+      "numeric_30d": "0.00287889955272260211608863874517",
+      "positive": true
+    },
+    "a_GB": {
+      "symbolic_exact": "8649*log(2)/(80000000*pi**2)",
+      "numeric_30d": "0.00000759279414988667747576137433812",
+      "positive": true
+    }
+  },
+  "counterterm_assignments": {
+    "delta_c_gr_1": "-a_R2/epsilon",
+    "delta_c_gr_2": "-a_Ric2/epsilon",
+    "delta_c_gr_3": "-a_Riem2/epsilon",
+    "delta_c_gr_4": "-a_GB/epsilon"
+  },
+  "symbolic_cancellation": {
+    "gamma_divergent_density": "(GGB*alpha_geo_strict*(eta - 1)*(omega - phi)**2/(16*pi**2) + R2*alpha_geo_strict*(2*beta + eta)*(omega**2 + phi**2)/(32*pi**2) + Ric2*alpha_geo_strict*(beta + 1)*(eta*omega + phi)/(16*pi**2) + Riem2*alpha_geo_strict*beta*eta*(omega**2 + omega*phi + phi**2)/(16*pi**2))/epsilon",
+    "counterterm_density": "-GGB*alpha_geo_strict*(eta - 1)*(omega - phi)**2/(16*pi**2*epsilon) - R2*alpha_geo_strict*(2*beta + eta)*(omega**2 + phi**2)/(32*pi**2*epsilon) - Ric2*alpha_geo_strict*(beta + 1)*(eta*omega + phi)/(16*pi**2*epsilon) - Riem2*alpha_geo_strict*beta*eta*(omega**2 + omega*phi + phi**2)/(16*pi**2*epsilon)",
+    "residual_symbolic": "0",
+    "residual_at_qw2049_tuple": "0",
+    "residual_zero": true
+  },
+  "backend_replay_checks": {
+    "all_match_p1853": true,
+    "rows": [
+      {
+        "coefficient": "a_R2",
+        "matches_p1853_symbolic": true,
+        "p1853_symbolic": "18516431*log(2)/(640000000*pi**2)",
+        "p1950_symbolic": "18516431*log(2)/(640000000*pi**2)"
+      },
+      {
+        "coefficient": "a_Ric2",
+        "matches_p1853_symbolic": true,
+        "p1853_symbolic": "9937*log(2)/(40000*pi**2)",
+        "p1950_symbolic": "9937*log(2)/(40000*pi**2)"
+      },
+      {
+        "coefficient": "a_Riem2",
+        "matches_p1853_symbolic": true,
+        "p1853_symbolic": "13117491*log(2)/(320000000*pi**2)",
+        "p1950_symbolic": "13117491*log(2)/(320000000*pi**2)"
+      },
+      {
+        "coefficient": "a_GB",
+        "matches_p1853_symbolic": true,
+        "p1853_symbolic": "8649*log(2)/(80000000*pi**2)",
+        "p1950_symbolic": "8649*log(2)/(80000000*pi**2)"
+      }
+    ]
+  },
+  "theorem_scope": {
+    "proved": "Exact algebraic cancellation of the declared B1 divergent density by the declared delta_c_gr_i basis.",
+    "not_proved": [
+      "first-principles derivation of the B1 coefficient ansatz",
+      "background-family globalization beyond B1",
+      "BRST/Cutkosky unitarity closure",
+      "strict-core selector closure"
+    ]
+  },
+  "false_pass_guard": "This is a local theorem for the declared B1 coefficient ansatz, not full renormalization closure of the ToE.",
+  "next_honest_step": "Derive the same a_* coefficients from diagram-resolved heat-kernel/IBP data or export a non-ansatz obstruction.",
+  "lay_explanation": "Dla zadeklarowanych wzorow B1 nieskonczonosci kasuja sie dokladnie kontrterminami. Nadal trzeba udowodnic, ze same wzory B1 naprawde pochodza z pelnego rachunku petli."
+}

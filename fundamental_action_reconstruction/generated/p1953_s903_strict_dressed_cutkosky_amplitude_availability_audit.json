@@ -1,0 +1,144 @@
+{
+  "packet_id": "P1953",
+  "stage_id": "S903",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "local_verdict": "DRESSED_CUTKOSKY_AMPLITUDE_NOT_AVAILABLE__INTERFACE_CONTRACT_EXPORTED",
+  "route": "strict_only",
+  "legacy_bridge_used": false,
+  "depends_on": {
+    "p1852_present": true,
+    "p1857_present": true,
+    "p1859_present": true,
+    "p1862_present": true,
+    "p1913_present": true,
+    "p1951_present": true,
+    "p1952_present": true
+  },
+  "input_hashes": {
+    "p1859_sha256": "06bb992b25fcfc0fef018db40406bf904dc92954c3c681fc3acb9aa171358c98",
+    "p1862_sha256": "e247f31694785bb5c313a638b4b5e70e8d46e2462aa85dd8439405f0f2b26b9a",
+    "p1913_sha256": "fb6082ac4c37f78574a3a451e1c1964ee9e7b542d5c2b97776d24ebb3a3c6676",
+    "p1951_sha256": "5eaad716decf7bf79190207156167cecd758fa6e3a1b58def643fdd944b719d3",
+    "p1952_sha256": "37aeb64018092af7b54a07bdcb9317f0d4001778ad6423388e7345a700bc5045"
+  },
+  "generated_text_search_hits": {
+    "dressed amplitude": [
+      "p1951_s901_strict_b1_cutkosky_phase_space_integral_probe.json",
+      "p1952_s902_strict_qw2049_ur_domain_separation_certificate.json"
+    ],
+    "M_dressed": [],
+    "dressed_pole_residue": [
+      "p1862_s812_strict_b1_dressed_pole_residue_and_projected_disc_evaluation_checkpoint.json"
+    ],
+    "graviton->gauge_gauge": [
+      "p1852_s802_strict_b1_brst_anomaly_and_cutkosky_seed_witness_checkpoint.json",
+      "p1854_s804_strict_b1_brst_cochain_and_first_cutkosky_channel_checkpoint.json",
+      "p1857_s807_strict_b1_triangle_amplitude_seed_and_k5_instantiation_checkpoint.json",
+      "p1858_s808_strict_b1_cutkosky_seed_grid_evaluation_checkpoint.json",
+      "p1859_s809_strict_b1_cutkosky_kernel_and_residue_certificate_stub_checkpoint.json",
+      "p1861_s811_strict_b1_physical_pole_projection_and_disc_certificate_checkpoint.json",
+      "p1951_s901_strict_b1_cutkosky_phase_space_integral_probe.json",
+      "p1952_s902_strict_qw2049_ur_domain_separation_certificate.json"
+    ],
+    "BRST physical-state": [
+      "p1951_s901_strict_b1_cutkosky_phase_space_integral_probe.json"
+    ],
+    "DiscM_grmix": [
+      "p1911_s861_strict_c1_gr_integral_reduction_and_contract_eval_probe.json"
+    ],
+    "CutSum_grmix": [
+      "p1911_s861_strict_c1_gr_integral_reduction_and_contract_eval_probe.json"
+    ]
+  },
+  "readiness_matrix": [
+    {
+      "requirement": "full dressed graviton->gauge_gauge amplitude squared in common basis",
+      "verdict": "FAIL_MISSING",
+      "evidence": [
+        "P1857 exports triangle_amplitude_seed with status OPEN_OBSTRUCTION_WITH_TRACE.",
+        "P1951 scope warning: This integrand is the P1860 seed kernel, not a full dressed amplitude squared."
+      ],
+      "blocker": "No exported object supplies |M_dressed(graviton->gauge_gauge)|^2 or its tensor/polarization contraction."
+    },
+    {
+      "requirement": "DiscM and CutSum evaluated for the gravity/gauge channel in one common basis",
+      "verdict": "FAIL_OPEN_SYMBOLIC_ONLY",
+      "evidence": [
+        "P1913 grmix row is OPEN_SYMBOLIC_REDUCED_NOT_EVALUATED.",
+        "P1911 queues DiscM_grmix/CutSum_grmix as OPEN_FAIL_BY_MISSING_EVALUATION_INPUTS."
+      ],
+      "blocker": "The common-basis form exists only as symbolic placeholders alpha_gr, beta_gr, gamma_gr."
+    },
+    {
+      "requirement": "computed dressed propagator poles and residues, not seed inheritance",
+      "verdict": "FAIL_SEED_INHERITANCE_ONLY",
+      "evidence": [
+        "P1862 note: Seed dressed residues are inherited from physical-pole projection and still require full propagator computation.",
+        "P1859 required exports: ['dressed_graviton_propagator_pole_list', 'residue_values_per_pole', 'ghost_sector_exclusion_trace']"
+      ],
+      "blocker": "Residues labelled dressed are inherited from seed physical-pole projection, not computed from the dressed propagator."
+    },
+    {
+      "requirement": "BRST physical-state projection for the same channel",
+      "verdict": "FAIL_MISSING",
+      "evidence": [
+        "P1852 exports BRST/Cutkosky seed contracts, not a physical-state projector.",
+        "P1951 and P1952 explicitly list BRST physical-state projection as not proved."
+      ],
+      "blocker": "No channel-level BRST projector maps the gauge_gauge final state into the physical Hilbert subspace."
+    },
+    {
+      "requirement": "single fixed renormalization and gauge scheme across P1950/P1951/P1913",
+      "verdict": "FAIL_SCHEME_NOT_LOCKED",
+      "evidence": [
+        "P1950/P1951 use MSbar_B1_seed.",
+        "P1913 common basis scheme is MSbar_candidate."
+      ],
+      "blocker": "The amplitude common-basis row is not locked to the same scheme tag as the B1 seed calculation."
+    }
+  ],
+  "hard_failure_count": 5,
+  "dressed_amplitude_interface_contract": {
+    "object_name": "DressedCutkoskyAmplitude_graviton_to_gauge_gauge_strict_B1_v1",
+    "required_fields": [
+      "channel = graviton->gauge_gauge",
+      "scheme = MSbar_B1_seed",
+      "gauge_fixing_family and xi value",
+      "external_state_projectors including BRST physical-state projector",
+      "M_dressed_common_basis",
+      "AbsM_dressed_squared_common_basis",
+      "DiscM_common_basis",
+      "CutSum_common_basis",
+      "DiscM_minus_CutSum_simplified",
+      "dressed_graviton_propagator_pole_list",
+      "residue_values_per_pole",
+      "ghost_sector_exclusion_trace",
+      "phase_space_measure and integration_domain",
+      "uncertainty_or_exactness_certificate"
+    ],
+    "acceptance_rule": "All required fields present, same scheme tag, and DiscM_minus_CutSum_simplified == 0 with positive physical residues."
+  },
+  "safe_use_of_existing_results": {
+    "p1950": "Declared B1 counterterm cancellation remains valid within its declared ansatz scope.",
+    "p1951": "Seed-integrand phase-space positivity remains valid and cannot be promoted to dressed Cutkosky closure.",
+    "p1952": "QW-2049 seed-local positivity rectangle remains valid and cannot be promoted to P1677 UR_link."
+  },
+  "obstruction_statement": "The current repo does not export the dressed graviton->gauge_gauge amplitude and same-scheme DiscM/CutSum data required to replace K_cut_seed. The next step must build that object or prove it cannot be built from current strict inputs.",
+  "theorem_scope": {
+    "proved": [
+      "The repository contains seed/proxy/stub data for the target channel.",
+      "The repository does not currently contain the minimum dressed-amplitude interface needed for theorem-grade Cutkosky closure.",
+      "A precise acceptance contract for that missing interface is now exported."
+    ],
+    "not_proved": [
+      "full dressed Cutkosky equality",
+      "BRST physical-state projected optical theorem",
+      "ghost-free dressed propagator theorem",
+      "global UR_link theorem",
+      "QW-2191 selector discharge"
+    ]
+  },
+  "higher_reasoning_required_for_next_step": true,
+  "next_honest_step": "Build P1954 with high-reasoning support: either derive a same-scheme dressed amplitude from L_total and exported vertices/projectors, or export a formal nonavailability theorem identifying the exact missing vertex/projector data.",
+  "lay_explanation": "Sprawdzilismy, czy w repo jest juz prawdziwa ubrana amplituda potrzebna do pelnego testu unitarności. Nie ma jej: sa tylko wersje robocze, seedy i kontrakty. Teraz wiadomo dokladnie, jakiego obiektu brakuje."
+}
