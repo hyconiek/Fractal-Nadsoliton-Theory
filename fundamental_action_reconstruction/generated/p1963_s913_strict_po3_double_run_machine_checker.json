@@ -1,0 +1,76 @@
+{
+  "packet_id": "P1963",
+  "stage_id": "S913",
+  "status": "PO3_FORMAL_DOMAIN_NONEMPTY_MACHINE_CHECKED__GLOBAL_STRICT_CORE_CLOSURE_STILL_OPEN",
+  "route": "strict_only",
+  "generated_utc": "2026-05-17T12:08:26.559454+00:00",
+  "legacy_bridge_used": false,
+  "higher_reasoning_used": true,
+  "depends_on": {
+    "p1907_present": true,
+    "p1939_present": true,
+    "p1940_present": true,
+    "p1941_gate_required": true,
+    "p1945_double_run_required": true
+  },
+  "input_hashes": {
+    "p1907_sha256": "369d2091a3848eeff6ba8e3b35e363e32160876cdf1db6247959e4698db172a2",
+    "p1939_sha256": "638008d5f3ba4e405e1b0c248db6083da1800250b8845f465e191f8f369de7d6",
+    "p1940_sha256": "8185b657dbb81df929a4261c14e20407a6927daff80dbbcf9d4bdba87b285794",
+    "p1941_sha256": "c7cdf04d50bd159cfcfe6cc2840b0743ab60bc9cb11d023674fa99ee9c1d370a",
+    "p1945_sha256": "2b61d953610635f70827246c912112a00b2d1fe260641aab4f46c1b15f719452"
+  },
+  "machine_verified_artifact_gate_result": {
+    "target_theorem": "THM_A_EPS_NONEMPTY_V1",
+    "scope": "formal encoded admissible-branch domain A_eps/D_adm from P1939-P1945",
+    "checker_exit_code": 0,
+    "proof_artifact_hash_sha256": "ffc51f0e528515a3b8eb40d6e99b0d24b9d165301326c2208c2753b6f23ffed2",
+    "domain_encoding_digest": "3ff2b8b390671f03bc860cf96bdc4841a36776ddecaa2324a038ebcaef512bcb",
+    "gate_verdict": "PASS"
+  },
+  "double_run_reproducibility": {
+    "target_theorem": "THM_A_EPS_NONEMPTY_V1",
+    "run1_exit_code": 0,
+    "run2_exit_code": 0,
+    "both_exit_zero": true,
+    "proof_hashes_identical": true,
+    "domain_digests_identical": true,
+    "double_run_gate_pass": true
+  },
+  "artifact_paths": {
+    "run1": "generated/p1963_s913_strict_po3_run1_meta.json",
+    "run2": "generated/p1963_s913_strict_po3_run2_meta.json",
+    "compare": "generated/p1963_s913_strict_po3_repro_compare.json"
+  },
+  "po3_restamp": {
+    "before": "OPEN_PO3_DOUBLE_RUN_EVIDENCE_REQUIRED",
+    "after": "PASS_MACHINE_CHECKED_FORMAL_DOMAIN_NONEMPTY",
+    "not_promoted_to": [
+      "global background-independence closure",
+      "full strict-core ToE closure",
+      "QW-2191 selector discharge"
+    ]
+  },
+  "strict_core_statusvector_restamp": {
+    "renormalization": "OPEN",
+    "unitarity": "OPEN",
+    "background_independence": "OPEN_PO2_AND_GLOBAL_B1_PENDING_WITH_PO3_FORMAL_DOMAIN_PASS",
+    "selector_qw2191": "OPEN"
+  },
+  "toe_remaining_minimum_after_p1963": {
+    "previous_open_blocks_from_p1945": 7,
+    "formal_domain_po3_certified": true,
+    "current_minimum_open_blocks": 6,
+    "still_open": [
+      "R1 renormalization theorem-grade closure",
+      "U1 unitarity/Cutkosky theorem-grade closure",
+      "B1 background-independence global theorem closure",
+      "S1 selector obstruction QW-2191 discharge",
+      "PO2 sufficiency derivation for branch-policy closure",
+      "cross-scheme finite-part transport theorem linking R1/U1/B1 on common basis"
+    ]
+  },
+  "false_pass_guard": "The checker certifies only formal-domain non-emptiness of A_eps via BR_C. It is not a proof of full background independence, full renormalization, full unitarity, QW-2191 discharge, or ToE closure.",
+  "next_honest_step": "Build P1964: attack PO2 sufficiency by deriving DELTA_BG_Yf=0 from C1-C4 inside the full non-skeleton EOM trace, using the now machine-checked nonempty A_eps domain as a witness class rather than as global closure.",
+  "lay_explanation": "The formal checker now proves that the encoded admissible branch class is not empty: there is at least one branch satisfying the stated bounds and invariant constraints. This removes one formal blocker, but the theory still needs the larger renormalization, unitarity, background, and selector proofs."
+}

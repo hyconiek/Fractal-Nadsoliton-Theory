@@ -1,0 +1,199 @@
+{
+  "packet_id": "P1962",
+  "stage_id": "S912",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE__MATTER_HIGGS_BRST_EXTENSION_REPRESENTATION_REGISTRY_NOT_THEOREM_GRADE",
+  "route": "strict_only",
+  "generated_utc": "2026-05-17T11:53:53.471842+00:00",
+  "legacy_bridge_used": false,
+  "higher_reasoning_used": true,
+  "ignored_files": [
+    "TOE_FINAL_DOCUMENTATION_RELEASE_8_STRICT_FULL.pdf",
+    "p1962_s912_strict_matter_higgs_brst_extension_registry_audit.json",
+    "p1962_s912_strict_matter_higgs_brst_extension_registry_audit.py"
+  ],
+  "input_paths": {
+    "p1961_json": "generated/p1961_s911_strict_local_nonabelian_brst_differential_and_nilpotency_certificate.json",
+    "p1907_json": "generated/p1907_s857_strict_full_lagrangian_to_eom_witness_matrix_probe.json",
+    "p1837_json": "generated/p1837_s787_strict_full_lagrangian_explicit_anchor_registry_checkpoint.json",
+    "p1855_json": "generated/p1855_s805_strict_b1_gauge_fermion_k5_and_cutkosky_integral_stub_checkpoint.json",
+    "p1856_json": "generated/p1856_s806_strict_b1_representation_and_k5_triangle_seed_checkpoint.json",
+    "p1801_json": "generated/p1801_s751_strict_brst_nilpotency_witness_intake_and_gate_link_checkpoint.json",
+    "p1957_json": "generated/p1957_s907_strict_bv_brst_ghost_sector_nonavailability_theorem.json"
+  },
+  "input_hashes": {
+    "p1961_sha256": "655f507c0b4881d0e8bfa42c3b5bfdafc5ae4f3c0b8f48a781546f72dd725e35",
+    "p1907_sha256": "369d2091a3848eeff6ba8e3b35e363e32160876cdf1db6247959e4698db172a2",
+    "p1837_sha256": "11c1f3699a6cac0d8e90dbc19edd5331dc61535929238a27c743baac18b0a3bb",
+    "p1855_sha256": "7c7ad07c37127f23c20ba49e43747a800b390ec43bf61f7e0403c44977758021",
+    "p1856_sha256": "c224f8e2759f39f6bf4565948f43213500a16a4fdb83bb16533e1dbce1ac944c",
+    "p1801_sha256": "5f25c315eefadfc553d282e940a92d1927fc80f22788b1b663b1ac2013eed965",
+    "p1957_sha256": "b1e8557fcf64c1d256eb1d10fc6339fd2f19a1c0da4fe23bbf9b1e4b48bce467"
+  },
+  "depends_on": {
+    "p1961_present": true,
+    "p1907_present": true,
+    "p1837_present": true,
+    "p1855_present": true,
+    "p1856_present": true,
+    "p1801_present": true,
+    "p1957_present": true,
+    "p1957_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+  },
+  "ConditionalMatterHiggsBRSTExtension_strict_B1_v1": {
+    "scope": "conditional local matter/Higgs module rule only",
+    "rules": {
+      "s_Phi_R": "s Phi_R = - C_R Phi_R",
+      "C_R": "C_R = g3 c3^A T3_R^A + g2 c2^I T2_R^I + g1 c1 Y_R",
+      "s_C_R": "s C_R = - C_R^2",
+      "s_Phi_bar_R": "s Phi_bar_R = Phi_bar_R C_R"
+    },
+    "nilpotency_condition": "s^2 Phi_R=0 follows only after exporting representation operators satisfying [T_a,T_b]=f_ab^c T_c, cross-factor commutation, and central U(1) action.",
+    "not_claimed": [
+      "unconditional matter/Higgs BRST nilpotency",
+      "full strict L_total BRST invariance",
+      "BV master action",
+      "BRST charge Q",
+      "TG2_BRST_GLOBAL_NILPOTENCY PASS"
+    ]
+  },
+  "RepresentationRegistryAudit_strict_B1_v1": {
+    "seed_present": true,
+    "seed_row_count": 5,
+    "families_seen": [
+      "f1"
+    ],
+    "su3_labels_seen": [
+      "1",
+      "3"
+    ],
+    "su2_labels_seen": [
+      "1",
+      "2"
+    ],
+    "hypercharges_seen": [
+      "1/6",
+      "2/3",
+      "-1/3",
+      "-1/2",
+      "-1"
+    ],
+    "has_field_names": false,
+    "has_chirality_labels": false,
+    "has_generator_matrices": false,
+    "has_commutator_certificate": false,
+    "has_higgs_representation": false,
+    "classification": "REPRESENTATION_SEED_ONLY_NOT_THEOREM_GRADE"
+  },
+  "LTotalFieldRegistryAudit_strict_B1_v1": {
+    "p1907_registry_present": true,
+    "present_sector_keys": [
+      "sm_gauge_sector",
+      "sm_fermion_kinetic_sector",
+      "higgs_sector",
+      "yukawa_sector",
+      "gravity_sector",
+      "nonminimal_mixed_sector"
+    ],
+    "missing_sector_keys": [],
+    "eom_statuses": {
+      "H": "OPEN_SYMBOLIC",
+      "A_mu^a": "OPEN_SYMBOLIC",
+      "psi_f": "OPEN_SYMBOLIC",
+      "g_{mu nu}": "OPEN_SYMBOLIC"
+    },
+    "all_eom_concrete": false,
+    "p1837_reduced_anchor_present": true,
+    "p1837_promotion_policy": "reduced_anchor_is_reference_only_not_full_nonproxy_sector_export",
+    "classification": "SECTOR_LEVEL_AND_REDUCED_ANCHOR_ONLY_NOT_FULL_NONPROXY_FIELD_REGISTRY"
+  },
+  "ExtensionReadinessRequirements_strict_B1_v1": [
+    {
+      "id": "LOCAL_GAUGE_BRST_S2_ZERO",
+      "required": "P1961 local gauge-sector s^2=0 for A,c,cbar,B",
+      "available": true,
+      "source": "P1961"
+    },
+    {
+      "id": "FULL_NONPROXY_FIELD_REGISTRY",
+      "required": "field-by-field matter/Higgs/spinor registry, not only sector-level L_total text",
+      "available": false,
+      "source": "P1907/P1837",
+      "trace": "SECTOR_LEVEL_AND_REDUCED_ANCHOR_ONLY_NOT_FULL_NONPROXY_FIELD_REGISTRY"
+    },
+    {
+      "id": "CHIRAL_FAMILY_REPRESENTATION_REGISTRY",
+      "required": "all chiral fermion multiplets with family labels and Higgs multiplet",
+      "available": false,
+      "source": "P1856",
+      "trace": "P1856 gives a seed table, but no field/chirality-complete Higgs-inclusive registry."
+    },
+    {
+      "id": "REPRESENTATION_MATRICES",
+      "required": "explicit T_SU3, T_SU2, and Y matrices/operators for each multiplet",
+      "available": false,
+      "source": "P1856"
+    },
+    {
+      "id": "REPRESENTATION_COMMUTATOR_CERTIFICATE",
+      "required": "[T_a,T_b]=f_ab^c T_c for every exported representation, plus commuting product factors",
+      "available": false,
+      "source": "P1856/P1960"
+    },
+    {
+      "id": "YUKAWA_GAUGE_INVARIANCE_CERTIFICATE",
+      "required": "explicit BRST/gauge invariance of qbar H u, qbar H d, lbar H e terms",
+      "available": false,
+      "source": "not exported"
+    },
+    {
+      "id": "ANOMALY_CANCELLATION_CERTIFICATE",
+      "required": "full chiral family anomaly sums in the same representation convention",
+      "available": false,
+      "source": "P1856 marks this open"
+    },
+    {
+      "id": "GLOBAL_BRST_WITNESS_PACK",
+      "required": "P1801 TG2 pack: Q, Q^2, cohomology, ghost consistency, shared freeze",
+      "available": false,
+      "source": "P1801/P1957"
+    }
+  ],
+  "ReadinessAfterP1962_strict_v1": {
+    "formula_local_extension": "P1961_LOCAL_READY & FULL_NONPROXY_FIELD_REGISTRY & CHIRAL_REP_REGISTRY & REPRESENTATION_MATRICES & COMMUTATOR_CERTIFICATES & YUKAWA_GAUGE_INVARIANCE & ANOMALY_CANCELLATION",
+    "evaluated_local_matter_higgs_extension_ready": false,
+    "evaluated_global_TG2_ready": false,
+    "tg2_lock_source": "P1767/P1801/P1957: no G_BW PASS, no global Q, no cohomology pack, no shared freeze",
+    "p1801_requirements_reused": [
+      "G_BW_PASS_ZERO",
+      "brst_charge_definition_present",
+      "Q_squared_simplified_zero",
+      "cohomology_subspace_check_present",
+      "ghost_sector_consistency_present",
+      "shared_freeze_id",
+      "all_check_digests_present"
+    ]
+  },
+  "P1961_to_P1962_delta": {
+    "closed_by_P1961": [
+      "local gauge-sector BRST rules for SU3/SU2/U1",
+      "local s^2=0 on A,c,cbar,B"
+    ],
+    "new_in_P1962": [
+      "conditional matter/Higgs module BRST rule recorded",
+      "full-bundle extension readiness audited against current exported artifacts",
+      "precise representation/field-registry obstruction exported"
+    ],
+    "still_open": [
+      "field-by-field full nonproxy matter/Higgs/spinor registry",
+      "explicit representation matrices for each multiplet",
+      "representation commutator certificates",
+      "Higgs representation in the same registry",
+      "Yukawa gauge-invariance certificate",
+      "full anomaly cancellation witness",
+      "global BV/BRST Q and Q^2=0 witness pack"
+    ]
+  },
+  "false_pass_guard": "P1962 is a local extension-readiness obstruction and conditional rule packet. It does not promote TG2 and does not override the BW->BRST->Cutkosky gate order.",
+  "next_honest_step": "Build P1963: export a strict representation registry with explicit SU3/SU2/U1 operators for each chiral fermion multiplet and Higgs field, then machine-check commutators, Yukawa gauge invariance, and anomaly sums before reattempting local matter/Higgs BRST nilpotency.",
+  "lay_explanation": "P1961 proved the BRST lock works for gauge fields alone. P1962 checks whether the lock has the exact keys for matter and Higgs. The current repo has a seed list, but not the explicit representation matrices and full field registry needed for a theorem-grade extension."
+}

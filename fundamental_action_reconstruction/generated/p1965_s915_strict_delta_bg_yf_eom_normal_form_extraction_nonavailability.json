@@ -1,0 +1,171 @@
+{
+  "packet_id": "P1965",
+  "stage_id": "S915",
+  "status": "PO2_FULL_EOM_NORMAL_FORM_EXTRACTION_NONAVAILABLE_CURRENT_EXPORT_STATE",
+  "route": "strict_only",
+  "legacy_bridge_used": false,
+  "higher_reasoning_used": true,
+  "generated_utc": "2026-05-17T12:24:05.052510+00:00",
+  "depends_on": {
+    "p1662_present": true,
+    "p1708_present": true,
+    "p1848_present": true,
+    "p1880_present": true,
+    "p1907_present": true,
+    "p1930_present": true,
+    "p1964_present": true
+  },
+  "input_hashes": {
+    "p1662_sha256": "c7408ccf5989e9c7076253a8740b4726fc7773c81c96a4cc870caf8083b17633",
+    "p1708_sha256": "4c22d6c67a043148ef71d7c8941435429707201059dbfacc553c02a9f7ecc5c0",
+    "p1848_sha256": "078be3911696e797c06f9ba3d435431593176f76699e5c7781b09df5bbcd90c2",
+    "p1880_sha256": "33211c68922154afe56e90ab17f341aa4ff1afb9fdc6068dc3dbd9040f53a750",
+    "p1907_sha256": "237f3711a71e98e219ef178a57c814a68a97cc05e8ff354fa68bbe15666d7be6",
+    "p1930_sha256": "1616b65839880187e22f025bf202b30cdd442e47c1db3110f4e849b0647e1c12",
+    "p1964_sha256": "8eebd2a6405df7cc609a39ebec89a361cffdc9babadc4ca03b25ff2a959492af"
+  },
+  "acceptance_requirements_for_full_po2_eom_derivation": [
+    {
+      "req_id": "E1",
+      "required_object": "Full non-skeleton L_total density with all relevant sectors",
+      "source_checks": [
+        "P1662 density_present=True",
+        "P1907 registry_present=True"
+      ],
+      "verdict": "PRESENT_SECTOR_LEVEL",
+      "missing_or_insufficient": [
+        "Density is sector-level and formula-level; it is not yet tied to a complete variational derivation for DELTA_BG_Yf."
+      ]
+    },
+    {
+      "req_id": "E2",
+      "required_object": "Convention-fixed covariant field calculus for H, A_mu, psi, and g_mu_nu",
+      "source_checks": [
+        "P1708 template_level=True",
+        "P1880 eom_registry_present=True"
+      ],
+      "verdict": "TEMPLATE_ONLY",
+      "missing_or_insufficient": [
+        "Need explicit covariant derivative, tetrad/spin connection, metric-density variation, and boundary-term convention."
+      ]
+    },
+    {
+      "req_id": "E3",
+      "required_object": "Termwise Euler-Lagrange derivatives from L_total",
+      "source_checks": [
+        "P1907 eom_statuses={'H': 'OPEN_SYMBOLIC', 'A_mu^a': 'OPEN_SYMBOLIC', 'psi_f': 'OPEN_SYMBOLIC', 'g_{mu nu}': 'OPEN_SYMBOLIC'}",
+        "P1907 all_open_symbolic=True"
+      ],
+      "verdict": "MISSING_EXPLICIT_VARIATIONAL_ROWS",
+      "missing_or_insufficient": [
+        "H, A_mu, psi_f, and g_mu_nu rows are OPEN_SYMBOLIC in P1907.",
+        "P1693/P1866 provide reduced or 1D proxy EOMs, not full 4D covariant termwise derivatives."
+      ]
+    },
+    {
+      "req_id": "E4",
+      "required_object": "Gravity curvature variation pack linked to the background-Yukawa normal form",
+      "source_checks": [
+        "P1848 gravity_componentwise_variation_pack=True",
+        "P1930 tensorial_form_present=True"
+      ],
+      "verdict": "PARTIAL_UNLINKED",
+      "missing_or_insufficient": [
+        "P1848 exports gravity variation structures, but not a derivation of the P1930 DELTA_BG_Yf basis.",
+        "Need projection from metric/Higgs/Yukawa EOMs to {delta_R, delta_RicUU, delta_gradchi2}."
+      ]
+    },
+    {
+      "req_id": "E5",
+      "required_object": "Normal-form extraction theorem for DELTA_BG_Yf from the EOM bundle",
+      "source_checks": [
+        "P1930 declared_tensorial_form_present=True",
+        "P1964 conditional_algebra_pass=True"
+      ],
+      "verdict": "DECLARED_NOT_DERIVED",
+      "missing_or_insufficient": [
+        "The declared normal form is algebraically certified by P1964.",
+        "No current artifact derives that normal form from the full EOM bundle."
+      ]
+    },
+    {
+      "req_id": "E6",
+      "required_object": "Same-branch quantifier transport from PO3 formal nonempty domain to EOM-derived branch class",
+      "source_checks": [
+        "P1964 current_status=PO2_CONDITIONAL_TENSORIAL_ALGEBRA_PASS__FULL_EOM_DERIVATION_OPEN"
+      ],
+      "verdict": "MISSING_TRANSPORT_THEOREM",
+      "missing_or_insufficient": [
+        "P1963/P1964 provide formal-domain and conditional algebraic data.",
+        "Need proof that the nonempty formal branch lies in the full EOM-derived branch class."
+      ]
+    }
+  ],
+  "failed_or_partial_requirement_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5",
+    "E6"
+  ],
+  "symbolic_underdetermination_witness": {
+    "declared_normal_form": "C_R*delta_R + C_U*delta_RicUU + C_chi*delta_gradchi2",
+    "augmented_currently_unexcluded_form": "C_R*delta_R + C_U*delta_RicUU + C_chi*delta_gradchi2 + C_missing*Omega_unexported",
+    "c1_c3_substitution": {
+      "delta_R": "0",
+      "delta_RicUU": "0",
+      "delta_gradchi2": "0"
+    },
+    "declared_after_c1_c3": "0",
+    "augmented_after_c1_c3": "C_missing*Omega_unexported",
+    "declared_is_zero": true,
+    "augmented_is_not_identically_zero_without_extra_export": true,
+    "meaning": "Current exports prove the declared tensorial algebraic form, but they do not export a full EOM-derived normal-form theorem excluding an additional unexported contribution Omega_unexported."
+  },
+  "formal_nonavailability_theorem": {
+    "statement": "On the current repository state, the declared tensorial DELTA_BG_Yf normal form is not derivable as a full EOM theorem from L_total.",
+    "proof_trace": [
+      "P1662/P1907 provide a sector-level non-skeleton L_total anchor.",
+      "P1708/P1880 provide template or registry EOM forms, not a complete variational derivation.",
+      "P1907 marks H, A_mu, psi_f, and g_mu_nu EOM rows OPEN_SYMBOLIC.",
+      "P1848 exports gravity variation structures but not the projection theorem to DELTA_BG_Yf.",
+      "P1964 proves only conditional algebra on the declared normal form.",
+      "The symbolic Omega_unexported witness shows an extra unexported EOM contribution is not excluded by current artifacts."
+    ],
+    "not_a_no_go_theorem": true
+  },
+  "po2_restamp_after_p1965": {
+    "before": "PO2_CONDITIONAL_TENSORIAL_ALGEBRA_PASS__FULL_EOM_DERIVATION_OPEN",
+    "after": "OPEN_FULL_EOM_NORMAL_FORM_EXTRACTION_NONAVAILABLE_CURRENT_EXPORT_STATE",
+    "conditional_algebra_from_p1964_retained": true,
+    "full_po2_sufficiency_closed": false
+  },
+  "strict_core_statusvector_restamp": {
+    "renormalization": "OPEN",
+    "unitarity": "OPEN",
+    "background_independence": "OPEN_PO2_EOM_NORMAL_FORM_EXPORT_REQUIRED",
+    "selector_qw2191": "OPEN"
+  },
+  "toe_remaining_minimum_after_p1965": {
+    "previous_open_blocks_after_p1964": 6,
+    "current_minimum_open_blocks": 6,
+    "still_open": [
+      "R1 renormalization theorem-grade closure",
+      "U1 unitarity/Cutkosky theorem-grade closure",
+      "B1 background-independence global theorem closure",
+      "S1 selector obstruction QW-2191 discharge",
+      "PO2 full EOM-derived sufficiency",
+      "cross-scheme finite-part transport theorem linking R1/U1/B1 on common basis"
+    ]
+  },
+  "toolchain": {
+    "python": "3.12.3",
+    "implementation": "CPython",
+    "sympy": "1.12"
+  },
+  "false_pass_guard": "P1965 is a current-export nonavailability theorem. It does not refute PO2 in principle and does not weaken the P1964 conditional algebraic pass.",
+  "higher_reasoning_required_for_next_step": true,
+  "next_honest_step": "Build P1966: a narrow constructive variational extraction for the Higgs/Yukawa/curvature subsector sqrt(-g)[(D H)^dagger(D H)-mu_H^2 H^dagger H-lambda_H(H^dagger H)^2-xi_H H^dagger H R-y_f qbar H f], with frozen metric-density and integration-by-parts conventions, then test whether Omega_unexported can be forced to zero.",
+  "lay_explanation": "The repo has the recipe and the algebraic lock, but it still lacks the full mechanical derivation showing that the recipe produces exactly that lock. There may be an uncomputed leftover term until the variational calculation is done explicitly."
+}

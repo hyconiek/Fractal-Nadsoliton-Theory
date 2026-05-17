@@ -1,0 +1,130 @@
+{
+  "packet_id": "P1964",
+  "stage_id": "S914",
+  "status": "PO2_CONDITIONAL_TENSORIAL_ALGEBRA_PASS__FULL_EOM_DERIVATION_OPEN",
+  "route": "strict_only",
+  "legacy_bridge_used": false,
+  "higher_reasoning_used": true,
+  "generated_utc": "2026-05-17T12:14:25.308439+00:00",
+  "depends_on": {
+    "p1907_present": true,
+    "p1930_present": true,
+    "p1931_present": true,
+    "p1932_present": true,
+    "p1963_po3_machine_nonempty": true
+  },
+  "input_hashes": {
+    "p1907_sha256": "237f3711a71e98e219ef178a57c814a68a97cc05e8ff354fa68bbe15666d7be6",
+    "p1930_sha256": "1616b65839880187e22f025bf202b30cdd442e47c1db3110f4e849b0647e1c12",
+    "p1931_sha256": "5b02723d27d441491b26ccc17772794eb0e295b3881e9ba785c1a141c3430e8b",
+    "p1932_sha256": "1e96e1e4d187c2ede82bcc829594a9a4dccb7dc7f3b57039fc3748cc3dd69edb",
+    "p1963_sha256": "4e6b165554ab4913c1a56a1ff1d80b40491932583b71585da1314d5891bd8e99"
+  },
+  "c1_c4_formalization": {
+    "C1": "delta_R = 0",
+    "C2": "delta_RicUU = 0",
+    "C3": "delta_gradchi2 = 0",
+    "C4": "same branch satisfies strict EOM residual consistency in matter+metric sectors",
+    "c4_role": "domain/same-branch admissibility predicate; not an extra term in the declared tensorial DELTA_BG_Yf normal form"
+  },
+  "symbolic_po2_sufficiency_check": {
+    "normal_form": "DELTA_BG_Yf_tensor = C_R*delta_R + C_U*delta_RicUU + C_chi*delta_gradchi2",
+    "symbols": {
+      "basis_deltas": [
+        "delta_R",
+        "delta_RicUU",
+        "delta_gradchi2"
+      ],
+      "free_coefficients": [
+        "C_R",
+        "C_U",
+        "C_chi"
+      ],
+      "c4_eom_residual_symbols": [
+        "rho_H",
+        "rho_A",
+        "rho_psi",
+        "rho_g"
+      ]
+    },
+    "c1_c4_substitution": {
+      "C1": "delta_R -> 0",
+      "C2": "delta_RicUU -> 0",
+      "C3": "delta_gradchi2 -> 0",
+      "C4": "rho_H,rho_A,rho_psi,rho_g -> 0 on the same strict branch"
+    },
+    "delta_bg_yf_before": "C_R*delta_R + C_U*delta_RicUU + C_chi*delta_gradchi2",
+    "delta_bg_yf_after_c1_c4": "0",
+    "c4_residual_norm_proxy_before": "rho_A**2 + rho_H**2 + rho_g**2 + rho_psi**2",
+    "c4_residual_norm_proxy_after": "0",
+    "sympy_zero_check": true,
+    "verdict": "PASS_CONDITIONAL_ON_DECLARED_TENSORIAL_B1_NORMAL_FORM"
+  },
+  "full_eom_derivation_recheck": {
+    "full_lagrangian_non_skeleton_anchor_present": true,
+    "declared_tensorial_b1_normal_form_present": true,
+    "c1_c4_policy_present": true,
+    "p1907_eom_status_summary": {
+      "row_count": 4,
+      "statuses_by_field": {
+        "H": "OPEN_SYMBOLIC",
+        "A_mu^a": "OPEN_SYMBOLIC",
+        "psi_f": "OPEN_SYMBOLIC",
+        "g_{mu nu}": "OPEN_SYMBOLIC"
+      },
+      "all_rows_explicit_variational": false,
+      "all_rows_open_symbolic": true,
+      "accepted_explicit_statuses": [
+        "PASS_EXPLICIT_VARIATIONAL",
+        "PASS_FULL_VARIATIONAL_EOM_EXPORTED",
+        "PASS_NONPROXY_VARIATIONAL"
+      ]
+    },
+    "full_eom_derivation_available": false,
+    "verdict": "NOT_PASSED_CURRENT_EXPORT_STATE",
+    "blocking_gap": [
+      "P1907 exports sector-level non-skeleton L_total registry, but EOM rows are not explicit variational expressions.",
+      "Need termwise Euler-Lagrange derivatives for H, A_mu, psi_f, and g_mu_nu with coefficient substitution.",
+      "Need a normal-form extraction lemma deriving the P1930 tensorial DELTA_BG_Yf basis from those EOMs.",
+      "Need same-branch quantifier transport from the P1963 nonempty formal domain into the full EOM-derived branch class."
+    ]
+  },
+  "po2_restamp": {
+    "before": "PARTIAL",
+    "after": "PO2_CONDITIONAL_TENSORIAL_ALGEBRA_PASS__FULL_EOM_DERIVATION_OPEN",
+    "not_promoted_to": [
+      "full PO2 sufficiency from explicit L_total EOM",
+      "global background-independence closure",
+      "full strict-core ToE closure"
+    ]
+  },
+  "strict_core_statusvector_restamp": {
+    "renormalization": "OPEN",
+    "unitarity": "OPEN",
+    "background_independence": "OPEN_PO2_FULL_EOM_DERIVATION_PENDING_WITH_PO3_FORMAL_NONEMPTY_PASS",
+    "selector_qw2191": "OPEN"
+  },
+  "toe_remaining_minimum_after_p1964": {
+    "previous_open_blocks_after_p1963": 6,
+    "po2_conditional_algebraic_subtheorem_pass": true,
+    "po2_full_eom_sufficiency_closed": false,
+    "current_minimum_open_blocks": 6,
+    "still_open": [
+      "R1 renormalization theorem-grade closure",
+      "U1 unitarity/Cutkosky theorem-grade closure",
+      "B1 background-independence global theorem closure",
+      "S1 selector obstruction QW-2191 discharge",
+      "PO2 full EOM-derived sufficiency",
+      "cross-scheme finite-part transport theorem linking R1/U1/B1 on common basis"
+    ]
+  },
+  "toolchain": {
+    "python": "3.12.3",
+    "implementation": "CPython",
+    "sympy": "1.12"
+  },
+  "false_pass_guard": "P1964 proves only conditional algebraic sufficiency on the declared tensorial B1 normal form. It does not prove that the normal form is derived from the full non-skeleton L_total EOM, because those explicit variational EOM exports are not present in the current repo state.",
+  "higher_reasoning_required_for_next_step": true,
+  "next_honest_step": "Build P1965: export the explicit variational EOM normal-form extraction for DELTA_BG_Yf from the P1907 L_total registry, or prove a nonavailability theorem pinpointing the missing density/connection/coefficient data.",
+  "lay_explanation": "The algebra now checks out: if the three background differences are exactly zero on one EOM-consistent branch, the Yukawa background discrepancy is exactly zero. But the repo still has to prove that these conditions really follow from the full equations of motion, not only from the declared tensorial test form."
+}

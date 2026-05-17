@@ -1,0 +1,133 @@
+{
+  "run_label": "run2",
+  "checker_stdout_log": "THM_A_EPS_NONEMPTY_V1 checker run2\ndomain_digest=3ff2b8b390671f03bc860cf96bdc4841a36776ddecaa2324a038ebcaef512bcb\nproof_artifact_hash_sha256=ffc51f0e528515a3b8eb40d6e99b0d24b9d165301326c2208c2753b6f23ffed2\nexit_code=0\nverdict=PASS",
+  "checker_stderr_log": "",
+  "checker_exit_code": 0,
+  "proof_artifact_hash_sha256": "ffc51f0e528515a3b8eb40d6e99b0d24b9d165301326c2208c2753b6f23ffed2",
+  "domain_encoding_digest": "3ff2b8b390671f03bc860cf96bdc4841a36776ddecaa2324a038ebcaef512bcb",
+  "toolchain_version_stamp": {
+    "python": "3.12.3",
+    "implementation": "CPython"
+  },
+  "proof_artifact": {
+    "theorem_id": "THM_A_EPS_NONEMPTY_V1",
+    "domain_encoding": {
+      "theorem_id": "THM_A_EPS_NONEMPTY_V1",
+      "domain": "D_adm",
+      "admissible_class": "A_eps",
+      "kernel_tuple_qw2049": {
+        "omega": "743/4000",
+        "phi": "13/80",
+        "beta": "1",
+        "eta": "9/5"
+      },
+      "required_invariant_triplet": {
+        "delta_R": "0",
+        "delta_RicUU": "0",
+        "delta_gradchi2": "0"
+      },
+      "required_scheme": "shared_MSbar_B1_seed_operator_basis",
+      "required_predicates": [
+        "strict_kernel_tuple_present",
+        "full_non_skeleton_lagrangian_anchor_present",
+        "invariant_triplet_zero",
+        "shared_scheme_present",
+        "all_rho_i_le_eps_star"
+      ],
+      "existential_claim": "exists b in D_adm such that b in A_eps",
+      "no_claims": [
+        "global_background_independence",
+        "full_renormalization_closure",
+        "full_Cutkosky_unitarity",
+        "QW2191_selector_discharge",
+        "ToE_closure"
+      ]
+    },
+    "witness": {
+      "witness_label": "BR_C_strict_consistent_seed_machine_checked_v1",
+      "kernel_tuple_qw2049": {
+        "omega": "743/4000",
+        "phi": "13/80",
+        "beta": "1",
+        "eta": "9/5"
+      },
+      "invariant_triplet": {
+        "delta_R": "0",
+        "delta_RicUU": "0",
+        "delta_gradchi2": "0"
+      },
+      "shared_scheme": "shared_MSbar_B1_seed_operator_basis",
+      "eps_br_c": "1/1000",
+      "eps_star": "1/100",
+      "coefficient_bounds": [
+        {
+          "component": "EL_H",
+          "coefficient": "C_H",
+          "coefficient_abs": "2",
+          "eps_br_c": "1/1000",
+          "rho": "1/500",
+          "eps_star": "1/100",
+          "pass_bound": true
+        },
+        {
+          "component": "EL_A_mu",
+          "coefficient": "C_A",
+          "coefficient_abs": "3",
+          "eps_br_c": "1/1000",
+          "rho": "3/1000",
+          "eps_star": "1/100",
+          "pass_bound": true
+        },
+        {
+          "component": "EL_psi",
+          "coefficient": "C_psi",
+          "coefficient_abs": "4",
+          "eps_br_c": "1/1000",
+          "rho": "1/250",
+          "eps_star": "1/100",
+          "pass_bound": true
+        },
+        {
+          "component": "E_mu_nu",
+          "coefficient": "C_g",
+          "coefficient_abs": "5",
+          "eps_br_c": "1/1000",
+          "rho": "1/200",
+          "eps_star": "1/100",
+          "pass_bound": true
+        }
+      ]
+    },
+    "predicate_checks": [
+      {
+        "predicate": "strict_kernel_tuple_present",
+        "pass": true
+      },
+      {
+        "predicate": "full_non_skeleton_lagrangian_anchor_present",
+        "pass": true
+      },
+      {
+        "predicate": "invariant_triplet_zero",
+        "pass": true
+      },
+      {
+        "predicate": "shared_scheme_present",
+        "pass": true
+      },
+      {
+        "predicate": "all_rho_i_le_eps_star",
+        "pass": true
+      }
+    ],
+    "proof_steps": [
+      "S1: BR_C witness uses the QW-2049 strict tuple encoded in D_adm.",
+      "S2: invariant-triplet deltas are exactly zero for BR_C.",
+      "S3: P1907 full non-skeleton L_total anchor is present.",
+      "S4: all residual magnitudes rho_i=|C_i|*eps_BR_C are <= eps_star.",
+      "S5: therefore BR_C belongs to A_eps within D_adm.",
+      "S6: existential introduction yields exists b in D_adm such that b in A_eps."
+    ],
+    "verdict": "PASS"
+  }
+}
