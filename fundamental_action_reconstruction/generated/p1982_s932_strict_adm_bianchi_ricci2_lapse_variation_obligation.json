@@ -1,0 +1,168 @@
+{
+  "ledger_id": "P1982_S932_STRICT_ADM_BIANCHI_RICCI2_LAPSE_VARIATION_OBLIGATION",
+  "packet_id": "P1982",
+  "stage_id": "S932",
+  "produced_by": "p1982_s932_strict_adm_bianchi_ricci2_lapse_variation_obligation.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only",
+  "depends_on": {
+    "p1981_r2_lapse_obligation_present": true
+  },
+  "ricci_component_setup": {
+    "sigma3": "-sigma1 - sigma2",
+    "dsigma3": "-dsigma1 - dsigma2",
+    "h_i": [
+      "H + sigma1",
+      "H + sigma2",
+      "H - sigma1 - sigma2"
+    ],
+    "dh_i": [
+      "Hd + dsigma1",
+      "Hd + dsigma2",
+      "Hd - dsigma1 - dsigma2"
+    ],
+    "R00_BianchiI": "-(3*H**2*N - 3*H*Nd + 3*Hd*N + 2*N*sigma1**2 + 2*N*sigma1*sigma2 + 2*N*sigma2**2)/N",
+    "Rii_over_ai2_BianchiI": [
+      "(3*H**2*N + 3*H*N*sigma1 - H*Nd + Hd*N + N*dsigma1 - Nd*sigma1)/N**3",
+      "(3*H**2*N + 3*H*N*sigma2 - H*Nd + Hd*N + N*dsigma2 - Nd*sigma2)/N**3",
+      "(3*H**2*N - 3*H*N*sigma1 - 3*H*N*sigma2 - H*Nd + Hd*N - N*dsigma1 - N*dsigma2 + Nd*sigma1 + Nd*sigma2)/N**3"
+    ],
+    "R00_FRW": "-3*(H**2*N - H*Nd + Hd*N)/N",
+    "Rii_over_ai2_FRW": "(3*H**2*N - H*Nd + Hd*N)/N**3"
+  },
+  "ricci2_lapse_euler_operator": {
+    "Ricci2_BianchiI": "2*(18*H**4*N**2 - 18*H**3*N*Nd + 18*H**2*Hd*N**2 + 15*H**2*N**2*sigma1**2 + 15*H**2*N**2*sigma1*sigma2 + 15*H**2*N**2*sigma2**2 + 6*H**2*Nd**2 - 12*H*Hd*N*Nd + 6*H*N**2*dsigma1*sigma1 + 3*H*N**2*dsigma1*sigma2 + 3*H*N**2*dsigma2*sigma1 + 6*H*N**2*dsigma2*sigma2 - 12*H*N*Nd*sigma1**2 - 12*H*N*Nd*sigma1*sigma2 - 12*H*N*Nd*sigma2**2 + 6*Hd**2*N**2 + 6*Hd*N**2*sigma1**2 + 6*Hd*N**2*sigma1*sigma2 + 6*Hd*N**2*sigma2**2 + N**2*dsigma1**2 + N**2*dsigma1*dsigma2 + N**2*dsigma2**2 + 2*N**2*sigma1**4 + 4*N**2*sigma1**3*sigma2 + 6*N**2*sigma1**2*sigma2**2 + 4*N**2*sigma1*sigma2**3 + 2*N**2*sigma2**4 - 2*N*Nd*dsigma1*sigma1 - N*Nd*dsigma1*sigma2 - N*Nd*dsigma2*sigma1 - 2*N*Nd*dsigma2*sigma2 + Nd**2*sigma1**2 + Nd**2*sigma1*sigma2 + Nd**2*sigma2**2)/N**6",
+    "Ricci2_FRW": "12*(3*H**4*N**2 - 3*H**3*N*Nd + 3*H**2*Hd*N**2 + H**2*Nd**2 - 2*H*Hd*N*Nd + Hd**2*N**2)/N**6",
+    "Ricci2_Bianchi_minus_FRW": "2*(15*H**2*N**2*sigma1**2 + 15*H**2*N**2*sigma1*sigma2 + 15*H**2*N**2*sigma2**2 + 6*H*N**2*dsigma1*sigma1 + 3*H*N**2*dsigma1*sigma2 + 3*H*N**2*dsigma2*sigma1 + 6*H*N**2*dsigma2*sigma2 - 12*H*N*Nd*sigma1**2 - 12*H*N*Nd*sigma1*sigma2 - 12*H*N*Nd*sigma2**2 + 6*Hd*N**2*sigma1**2 + 6*Hd*N**2*sigma1*sigma2 + 6*Hd*N**2*sigma2**2 + N**2*dsigma1**2 + N**2*dsigma1*dsigma2 + N**2*dsigma2**2 + 2*N**2*sigma1**4 + 4*N**2*sigma1**3*sigma2 + 6*N**2*sigma1**2*sigma2**2 + 4*N**2*sigma1*sigma2**3 + 2*N**2*sigma2**4 - 2*N*Nd*dsigma1*sigma1 - N*Nd*dsigma1*sigma2 - N*Nd*dsigma2*sigma1 - 2*N*Nd*dsigma2*sigma2 + Nd**2*sigma1**2 + Nd**2*sigma1*sigma2 + Nd**2*sigma2**2)/N**6",
+    "density_difference_NV_Ricci2": "2*V*(15*H**2*N**2*sigma1**2 + 15*H**2*N**2*sigma1*sigma2 + 15*H**2*N**2*sigma2**2 + 6*H*N**2*dsigma1*sigma1 + 3*H*N**2*dsigma1*sigma2 + 3*H*N**2*dsigma2*sigma1 + 6*H*N**2*dsigma2*sigma2 - 12*H*N*Nd*sigma1**2 - 12*H*N*Nd*sigma1*sigma2 - 12*H*N*Nd*sigma2**2 + 6*Hd*N**2*sigma1**2 + 6*Hd*N**2*sigma1*sigma2 + 6*Hd*N**2*sigma2**2 + N**2*dsigma1**2 + N**2*dsigma1*dsigma2 + N**2*dsigma2**2 + 2*N**2*sigma1**4 + 4*N**2*sigma1**3*sigma2 + 6*N**2*sigma1**2*sigma2**2 + 4*N**2*sigma1*sigma2**3 + 2*N**2*sigma2**4 - 2*N*Nd*dsigma1*sigma1 - N*Nd*dsigma1*sigma2 - N*Nd*dsigma2*sigma1 - 2*N*Nd*dsigma2*sigma2 + Nd**2*sigma1**2 + Nd**2*sigma1*sigma2 + Nd**2*sigma2**2)/N**5",
+    "dL_dN": "-2*V*(45*H**2*N**2*sigma1**2 + 45*H**2*N**2*sigma1*sigma2 + 45*H**2*N**2*sigma2**2 + 18*H*N**2*dsigma1*sigma1 + 9*H*N**2*dsigma1*sigma2 + 9*H*N**2*dsigma2*sigma1 + 18*H*N**2*dsigma2*sigma2 - 48*H*N*Nd*sigma1**2 - 48*H*N*Nd*sigma1*sigma2 - 48*H*N*Nd*sigma2**2 + 18*Hd*N**2*sigma1**2 + 18*Hd*N**2*sigma1*sigma2 + 18*Hd*N**2*sigma2**2 + 3*N**2*dsigma1**2 + 3*N**2*dsigma1*dsigma2 + 3*N**2*dsigma2**2 + 6*N**2*sigma1**4 + 12*N**2*sigma1**3*sigma2 + 18*N**2*sigma1**2*sigma2**2 + 12*N**2*sigma1*sigma2**3 + 6*N**2*sigma2**4 - 8*N*Nd*dsigma1*sigma1 - 4*N*Nd*dsigma1*sigma2 - 4*N*Nd*dsigma2*sigma1 - 8*N*Nd*dsigma2*sigma2 + 5*Nd**2*sigma1**2 + 5*Nd**2*sigma1*sigma2 + 5*Nd**2*sigma2**2)/N**6",
+    "dL_dNdot": "-2*V*(12*H*N*sigma1**2 + 12*H*N*sigma1*sigma2 + 12*H*N*sigma2**2 + 2*N*dsigma1*sigma1 + N*dsigma1*sigma2 + N*dsigma2*sigma1 + 2*N*dsigma2*sigma2 - 2*Nd*sigma1**2 - 2*Nd*sigma1*sigma2 - 2*Nd*sigma2**2)/N**5",
+    "Dt_dL_dNdot": "-2*V*(36*H**2*N**2*sigma1**2 + 36*H**2*N**2*sigma1*sigma2 + 36*H**2*N**2*sigma2**2 + 30*H*N**2*dsigma1*sigma1 + 15*H*N**2*dsigma1*sigma2 + 15*H*N**2*dsigma2*sigma1 + 30*H*N**2*dsigma2*sigma2 - 54*H*N*Nd*sigma1**2 - 54*H*N*Nd*sigma1*sigma2 - 54*H*N*Nd*sigma2**2 + 12*Hd*N**2*sigma1**2 + 12*Hd*N**2*sigma1*sigma2 + 12*Hd*N**2*sigma2**2 + 2*N**2*d2sigma1*sigma1 + N**2*d2sigma1*sigma2 + N**2*d2sigma2*sigma1 + 2*N**2*d2sigma2*sigma2 + 2*N**2*dsigma1**2 + 2*N**2*dsigma1*dsigma2 + 2*N**2*dsigma2**2 - 12*N*Nd*dsigma1*sigma1 - 6*N*Nd*dsigma1*sigma2 - 6*N*Nd*dsigma2*sigma1 - 12*N*Nd*dsigma2*sigma2 - 2*N*Ndd*sigma1**2 - 2*N*Ndd*sigma1*sigma2 - 2*N*Ndd*sigma2**2 + 10*Nd**2*sigma1**2 + 10*Nd**2*sigma1*sigma2 + 10*Nd**2*sigma2**2)/N**6",
+    "EL_N_difference": "-2*V*(9*H**2*N**2*sigma1**2 + 9*H**2*N**2*sigma1*sigma2 + 9*H**2*N**2*sigma2**2 - 12*H*N**2*dsigma1*sigma1 - 6*H*N**2*dsigma1*sigma2 - 6*H*N**2*dsigma2*sigma1 - 12*H*N**2*dsigma2*sigma2 + 6*H*N*Nd*sigma1**2 + 6*H*N*Nd*sigma1*sigma2 + 6*H*N*Nd*sigma2**2 + 6*Hd*N**2*sigma1**2 + 6*Hd*N**2*sigma1*sigma2 + 6*Hd*N**2*sigma2**2 - 2*N**2*d2sigma1*sigma1 - N**2*d2sigma1*sigma2 - N**2*d2sigma2*sigma1 - 2*N**2*d2sigma2*sigma2 + N**2*dsigma1**2 + N**2*dsigma1*dsigma2 + N**2*dsigma2**2 + 6*N**2*sigma1**4 + 12*N**2*sigma1**3*sigma2 + 18*N**2*sigma1**2*sigma2**2 + 12*N**2*sigma1*sigma2**3 + 6*N**2*sigma2**4 + 4*N*Nd*dsigma1*sigma1 + 2*N*Nd*dsigma1*sigma2 + 2*N*Nd*dsigma2*sigma1 + 4*N*Nd*dsigma2*sigma2 + 2*N*Ndd*sigma1**2 + 2*N*Ndd*sigma1*sigma2 + 2*N*Ndd*sigma2**2 - 5*Nd**2*sigma1**2 - 5*Nd**2*sigma1*sigma2 - 5*Nd**2*sigma2**2)/N**6",
+    "isotropic_limit_zero": true,
+    "contains_shear_acceleration": true,
+    "contains_lapse_second_derivative": true,
+    "contains_shear_velocity_squared": true
+  },
+  "q_shear_checks": {
+    "Q_shear": "sigma1**2 + sigma1*sigma2 + sigma2**2",
+    "Q_matrix": "Matrix([[1, 1/2], [1/2, 1]])",
+    "Q_eigenvalues_exact": [
+      "1/2",
+      "3/2"
+    ],
+    "Q_eigenvalues_scipy": [
+      0.5,
+      1.5
+    ],
+    "Q_positive_definite": true
+  },
+  "numeric_replay_table": [
+    {
+      "sample_id": "ricci2_lapse_variation_sample_0",
+      "input": {
+        "N": "1",
+        "Nd": "1/20",
+        "Ndd": "-1/200",
+        "V": "1",
+        "H": "1",
+        "Hd": "1/10",
+        "sigma1": "1/10",
+        "sigma2": "-1/20",
+        "dsigma1": "1/100",
+        "dsigma2": "-1/200",
+        "d2sigma1": "1/1000",
+        "d2sigma2": "-1/2000"
+      },
+      "Ricci2_Bianchi_minus_FRW": "18741/80000",
+      "lapse_EL_difference": "-10479/80000",
+      "absolute_float_value": 0.1309875,
+      "matches_expected": true
+    },
+    {
+      "sample_id": "ricci2_lapse_variation_sample_1",
+      "input": {
+        "N": "5/4",
+        "Nd": "-1/30",
+        "Ndd": "1/300",
+        "V": "7/5",
+        "H": "3/2",
+        "Hd": "-1/20",
+        "sigma1": "1/5",
+        "sigma2": "1/10",
+        "dsigma1": "-1/50",
+        "dsigma2": "3/200",
+        "d2sigma1": "1/700",
+        "d2sigma2": "-1/900"
+      },
+      "Ricci2_Bianchi_minus_FRW": "170436104/87890625",
+      "lapse_EL_difference": "-145705688/87890625",
+      "absolute_float_value": 1.6578069390222223,
+      "matches_expected": true
+    },
+    {
+      "sample_id": "ricci2_lapse_variation_sample_2",
+      "input": {
+        "N": "4/3",
+        "Nd": "1/40",
+        "Ndd": "-1/400",
+        "V": "11/10",
+        "H": "4/5",
+        "Hd": "1/25",
+        "sigma1": "-1/8",
+        "sigma2": "1/16",
+        "dsigma1": "1/80",
+        "dsigma2": "1/160",
+        "d2sigma1": "-1/1600",
+        "d2sigma2": "1/3200"
+      },
+      "Ricci2_Bianchi_minus_FRW": "57423411/838860800",
+      "lapse_EL_difference": "-97451343/1677721600",
+      "absolute_float_value": 0.0580855268239975,
+      "matches_expected": true
+    }
+  ],
+  "gatekeeper_checks": {
+    "p1981_r2_lapse_obligation_present": true,
+    "isotropic_limit_zero": true,
+    "ricci2_lapse_el_contains_shear_acceleration": true,
+    "ricci2_lapse_el_contains_lapse_second_derivative": true,
+    "ricci2_lapse_el_contains_shear_velocity_squared": true,
+    "q_shear_positive_definite": true,
+    "all_numeric_replay_samples_match_expected": true,
+    "ricci2_lapse_obligation_passed": true
+  },
+  "result_kind": "PASS_RICCI2_LAPSE_VARIATION_OBLIGATION_EXPORTED",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "obstruction_tags": [
+    "RICCI2_LAPSE_EQUATION_HAS_D2SHEAR_AND_NDDOT_TERMS",
+    "RIEMANN2_GB_ADM_VARIATIONS_STILL_MISSING",
+    "SPATIAL_EOM_TRANSPORT_STILL_MISSING",
+    "STRICT_COEFFICIENT_COMBINATION_STILL_MISSING",
+    "GLOBAL_TOE_CLOSURE_STILL_OPEN"
+  ],
+  "theorem_export": {
+    "positive_statement": "For diagonal trace-free Bianchi-I, the Ricci^2 lapse Euler operator difference is exported exactly as the displayed polynomial-rational expression and vanishes in the isotropic limit.",
+    "obligation_statement": "The Ricci^2 lapse operator contains shear accelerations, lapse second-derivative terms, and shear-velocity-square terms.  These cannot be silently absorbed into the simpler EH or R^2 obligations; they require a full strict coefficient-level combination theorem.",
+    "not_licensed": [
+      "Riemann^2 ADM variation",
+      "Gauss-Bonnet ADM variation",
+      "strict coefficient-level curvature-squared cancellation",
+      "spatial Bianchi-I EOM cancellation",
+      "global background-independence closure",
+      "PO2/PO3 closure",
+      "BRST or Cutkosky closure",
+      "QW-2191 selector discharge",
+      "ToE closure"
+    ]
+  },
+  "false_pass_guard": "P1982 exports the Ricci^2 lapse obligation only.  Its d2sigma and Nddot structures must not be dropped or declared cancelled without the Riemann^2/Gauss-Bonnet calculations and strict coefficient combination.",
+  "next_honest_step": "Compute the Riemann^2 ADM/Bianchi-I lapse Euler operator with N(t) retained, then compute the Gauss-Bonnet combination and compare all curvature-squared shear structures using the strict coefficients from P1972/P1853.",
+  "lay_explanation": "Policzyliśmy kolejny trudny składnik, Ricci^2.  Wynik jest bardziej złożony niż R^2: pojawiają się przyspieszenia ścinania i druga pochodna funkcji lapse.  To znaczy, że pełnej niezależności od tła nie da się uzyskać przez proste dopasowanie jednego znaku; trzeba policzyć cały zestaw składników i sprawdzić ich wspólne kasowanie.",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0"
+  }
+}

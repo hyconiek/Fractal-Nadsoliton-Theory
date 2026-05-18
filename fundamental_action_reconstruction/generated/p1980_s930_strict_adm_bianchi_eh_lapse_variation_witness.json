@@ -1,0 +1,147 @@
+{
+  "ledger_id": "P1980_S930_STRICT_ADM_BIANCHI_EH_LAPSE_VARIATION_WITNESS",
+  "packet_id": "P1980",
+  "stage_id": "S930",
+  "produced_by": "p1980_s930_strict_adm_bianchi_eh_lapse_variation_witness.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only",
+  "depends_on": {
+    "p1979_current_export_audit_present": true
+  },
+  "adm_setup": {
+    "metric": "ds^2 = -N(t)^2 dt^2 + a1(t)^2 dx^2 + a2(t)^2 dy^2 + a3(t)^2 dz^2",
+    "spatial_curvature_R3": "0 for diagonal Bianchi-I",
+    "K_i^i": [
+      "v1/N",
+      "v2/N",
+      "v3/N"
+    ],
+    "EH_bulk_density_prefactor_removed": "N*V*(K_ij*K^ij - K^2)",
+    "boundary_terms_status": "not needed for lapse algebra of the bulk ADM constraint in this minisuperspace witness"
+  },
+  "symbolic_variation": {
+    "K_trace": "(v1 + v2 + v3)/N",
+    "KijKij": "(v1**2 + v2**2 + v3**2)/N**2",
+    "ADM_EH_bulk_lagrangian": "-2*V*(v1*v2 + v1*v3 + v2*v3)/N",
+    "dL_dN": "2*V*(v1*v2 + v1*v3 + v2*v3)/N**2",
+    "normalized_lapse_constraint_v": "v1*v2 + v1*v3 + v2*v3",
+    "expected_pair_sum_v": "v1*v2 + v1*v3 + v2*v3",
+    "variation_matches_pair_sum": true
+  },
+  "shear_specialization": {
+    "sigma3": "-sigma1 - sigma2",
+    "H_i": [
+      "H + sigma1",
+      "H + sigma2",
+      "H - sigma1 - sigma2"
+    ],
+    "Q_shear": "sigma1**2 + sigma1*sigma2 + sigma2**2",
+    "Gnn_BianchiI_EH_constraint": "3*H**2 - sigma1**2 - sigma1*sigma2 - sigma2**2",
+    "Gnn_FRW_EH_constraint": "3*H**2",
+    "Bianchi_minus_FRW": "-sigma1**2 - sigma1*sigma2 - sigma2**2",
+    "matches_P1974_G00_residual_minus_Q_shear": true,
+    "Q_matrix": "Matrix([[1, 1/2], [1/2, 1]])",
+    "Q_eigenvalues_exact": [
+      "1/2",
+      "3/2"
+    ],
+    "Q_eigenvalues_scipy": [
+      0.5,
+      1.5
+    ],
+    "Q_positive_definite": true
+  },
+  "numeric_replay_table": [
+    {
+      "sample_id": "eh_lapse_variation_sample_0",
+      "input": {
+        "H": "1",
+        "sigma1": "1/10",
+        "sigma2": "-1/20"
+      },
+      "Q_shear": "3/400",
+      "Gnn_BianchiI_EH_constraint": "1197/400",
+      "Gnn_FRW_EH_constraint": "3",
+      "Bianchi_minus_FRW": "-3/400",
+      "equals_minus_Q_shear": true
+    },
+    {
+      "sample_id": "eh_lapse_variation_sample_1",
+      "input": {
+        "H": "3/2",
+        "sigma1": "1/5",
+        "sigma2": "1/10"
+      },
+      "Q_shear": "7/100",
+      "Gnn_BianchiI_EH_constraint": "167/25",
+      "Gnn_FRW_EH_constraint": "27/4",
+      "Bianchi_minus_FRW": "-7/100",
+      "equals_minus_Q_shear": true
+    },
+    {
+      "sample_id": "eh_lapse_variation_sample_2",
+      "input": {
+        "H": "4/5",
+        "sigma1": "-1/8",
+        "sigma2": "1/16"
+      },
+      "Q_shear": "3/256",
+      "Gnn_BianchiI_EH_constraint": "12213/6400",
+      "Gnn_FRW_EH_constraint": "48/25",
+      "Bianchi_minus_FRW": "-3/256",
+      "equals_minus_Q_shear": true
+    },
+    {
+      "sample_id": "eh_lapse_variation_sample_3",
+      "input": {
+        "H": "5/4",
+        "sigma1": "2/7",
+        "sigma2": "-1/9"
+      },
+      "Q_shear": "247/3969",
+      "Gnn_BianchiI_EH_constraint": "293723/63504",
+      "Gnn_FRW_EH_constraint": "75/16",
+      "Bianchi_minus_FRW": "-247/3969",
+      "equals_minus_Q_shear": true
+    }
+  ],
+  "gatekeeper_checks": {
+    "p1979_identified_missing_export_before_variation": true,
+    "adm_lapse_variation_matches_pair_sum": true,
+    "eh_bianchi_minus_frw_equals_minus_q_shear": true,
+    "q_shear_positive_definite": true,
+    "all_numeric_replay_samples_match_minus_q": true,
+    "eh_lapse_witness_passed": true
+  },
+  "result_kind": "PASS_EH_LAPSE_SHEAR_TERM_DERIVED",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "obstruction_tags": [
+    "EH_LAPSE_EQUATION_DERIVES_GEOMETRIC_MINUS_Q_SHEAR_TERM",
+    "CURVATURE_SQUARED_ADM_VARIATION_STILL_MISSING",
+    "SPATIAL_EOM_TRANSPORT_STILL_MISSING",
+    "BACKGROUND_INDEPENDENCE_REMAINS_OPEN",
+    "GLOBAL_TOE_CLOSURE_STILL_OPEN"
+  ],
+  "theorem_export": {
+    "positive_statement": "For diagonal Bianchi-I in the ADM Einstein-Hilbert bulk term, lapse variation gives the normalized constraint H1*H2+H1*H3+H2*H3.  Under trace-free shear H_i=H+sigma_i, this equals 3H^2-Q_shear, so the Bianchi-I minus FRW lapse residual is exactly -Q_shear.",
+    "correction_to_P1979_audit_reading": "P1979 was only a current-export token/certificate audit.  P1980 shows that the EH covariant term does carry the required geometric shear-energy sign after explicit ADM lapse variation, even though the registry did not export that certificate textually.",
+    "not_licensed": [
+      "full curvature-squared ADM variation",
+      "spatial Bianchi-I EOM cancellation",
+      "global background-independence closure",
+      "PO2/PO3 closure",
+      "BRST or Cutkosky closure",
+      "QW-2191 selector discharge",
+      "ToE closure"
+    ]
+  },
+  "false_pass_guard": "P1980 is a positive EH lapse-equation witness only.  It must not be used to claim full background-independence, curvature-squared closure, spatial EOM closure, or ToE closure.",
+  "next_honest_step": "Extend the ADM/Bianchi-I variation from the Einstein-Hilbert bulk term to the strict curvature-squared terms R^2, Ricci^2, Riemann^2, and G_GB, with lapse N(t) retained until variation, then compare their shear contributions against the remaining P1974/P1975 component obligations.",
+  "lay_explanation": "Zamiast tylko szukać słów w rejestrze, wykonaliśmy pierwszy prawdziwy rachunek z funkcją lapse N(t).  Dla zwykłego składnika Einsteina-Hilberta anizotropia sama daje dokładnie brakujący znak -Q_shear w równaniu energii.  To dobry znak, ale jeszcze nie pełny dowód: trzeba policzyć trudniejsze składniki kwadratowe w krzywiźnie i równania przestrzenne.",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0"
+  }
+}

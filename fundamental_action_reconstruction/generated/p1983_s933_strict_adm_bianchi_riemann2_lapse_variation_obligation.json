@@ -1,0 +1,173 @@
+{
+  "ledger_id": "P1983_S933_STRICT_ADM_BIANCHI_RIEMANN2_LAPSE_VARIATION_OBLIGATION",
+  "packet_id": "P1983",
+  "stage_id": "S933",
+  "produced_by": "p1983_s933_strict_adm_bianchi_riemann2_lapse_variation_obligation.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only",
+  "depends_on": {
+    "p1982_ricci2_lapse_obligation_present": true
+  },
+  "riemann_block_setup": {
+    "sigma3": "-sigma1 - sigma2",
+    "dsigma3": "-dsigma1 - dsigma2",
+    "h_i": [
+      "H + sigma1",
+      "H + sigma2",
+      "H - sigma1 - sigma2"
+    ],
+    "dh_i": [
+      "Hd + dsigma1",
+      "Hd + dsigma2",
+      "Hd - dsigma1 - dsigma2"
+    ],
+    "E_i_orthonormal_time_space_blocks": [
+      "(H**2*N + 2*H*N*sigma1 - H*Nd + Hd*N + N*dsigma1 + N*sigma1**2 - Nd*sigma1)/N**3",
+      "(H**2*N + 2*H*N*sigma2 - H*Nd + Hd*N + N*dsigma2 + N*sigma2**2 - Nd*sigma2)/N**3",
+      "(H**2*N - 2*H*N*sigma1 - 2*H*N*sigma2 - H*Nd + Hd*N - N*dsigma1 - N*dsigma2 + N*sigma1**2 + 2*N*sigma1*sigma2 + N*sigma2**2 + Nd*sigma1 + Nd*sigma2)/N**3"
+    ],
+    "F_ij_orthonormal_spatial_blocks": [
+      "(H + sigma1)*(H + sigma2)/N**2",
+      "(H + sigma1)*(H - sigma1 - sigma2)/N**2",
+      "(H + sigma2)*(H - sigma1 - sigma2)/N**2"
+    ],
+    "Kretschmann_formula": "4*sum_i E_i^2 + 4*sum_{i<j} F_ij^2",
+    "FRW_check_formula": "12*((Hdot+H^2-H*Ndot/N)^2/N^4 + H^4/N^4)"
+  },
+  "riemann2_lapse_euler_operator": {
+    "Riemann2_BianchiI": "4*(6*H**4*N**2 - 6*H**3*N*Nd + 6*H**2*Hd*N**2 + 12*H**2*N**2*sigma1**2 + 12*H**2*N**2*sigma1*sigma2 + 12*H**2*N**2*sigma2**2 + 3*H**2*Nd**2 - 6*H*Hd*N*Nd + 8*H*N**2*dsigma1*sigma1 + 4*H*N**2*dsigma1*sigma2 + 4*H*N**2*dsigma2*sigma1 + 8*H*N**2*dsigma2*sigma2 - 6*H*N**2*sigma1**2*sigma2 - 6*H*N**2*sigma1*sigma2**2 - 12*H*N*Nd*sigma1**2 - 12*H*N*Nd*sigma1*sigma2 - 12*H*N*Nd*sigma2**2 + 3*Hd**2*N**2 + 4*Hd*N**2*sigma1**2 + 4*Hd*N**2*sigma1*sigma2 + 4*Hd*N**2*sigma2**2 + 2*N**2*dsigma1**2 + 2*N**2*dsigma1*dsigma2 - 4*N**2*dsigma1*sigma1*sigma2 - 2*N**2*dsigma1*sigma2**2 + 2*N**2*dsigma2**2 - 2*N**2*dsigma2*sigma1**2 - 4*N**2*dsigma2*sigma1*sigma2 + 3*N**2*sigma1**4 + 6*N**2*sigma1**3*sigma2 + 9*N**2*sigma1**2*sigma2**2 + 6*N**2*sigma1*sigma2**3 + 3*N**2*sigma2**4 - 4*N*Nd*dsigma1*sigma1 - 2*N*Nd*dsigma1*sigma2 - 2*N*Nd*dsigma2*sigma1 - 4*N*Nd*dsigma2*sigma2 + 6*N*Nd*sigma1**2*sigma2 + 6*N*Nd*sigma1*sigma2**2 + 2*Nd**2*sigma1**2 + 2*Nd**2*sigma1*sigma2 + 2*Nd**2*sigma2**2)/N**6",
+    "Riemann2_FRW": "12*(2*H**4*N**2 - 2*H**3*N*Nd + 2*H**2*Hd*N**2 + H**2*Nd**2 - 2*H*Hd*N*Nd + Hd**2*N**2)/N**6",
+    "Riemann2_Bianchi_minus_FRW": "4*(12*H**2*N**2*sigma1**2 + 12*H**2*N**2*sigma1*sigma2 + 12*H**2*N**2*sigma2**2 + 8*H*N**2*dsigma1*sigma1 + 4*H*N**2*dsigma1*sigma2 + 4*H*N**2*dsigma2*sigma1 + 8*H*N**2*dsigma2*sigma2 - 6*H*N**2*sigma1**2*sigma2 - 6*H*N**2*sigma1*sigma2**2 - 12*H*N*Nd*sigma1**2 - 12*H*N*Nd*sigma1*sigma2 - 12*H*N*Nd*sigma2**2 + 4*Hd*N**2*sigma1**2 + 4*Hd*N**2*sigma1*sigma2 + 4*Hd*N**2*sigma2**2 + 2*N**2*dsigma1**2 + 2*N**2*dsigma1*dsigma2 - 4*N**2*dsigma1*sigma1*sigma2 - 2*N**2*dsigma1*sigma2**2 + 2*N**2*dsigma2**2 - 2*N**2*dsigma2*sigma1**2 - 4*N**2*dsigma2*sigma1*sigma2 + 3*N**2*sigma1**4 + 6*N**2*sigma1**3*sigma2 + 9*N**2*sigma1**2*sigma2**2 + 6*N**2*sigma1*sigma2**3 + 3*N**2*sigma2**4 - 4*N*Nd*dsigma1*sigma1 - 2*N*Nd*dsigma1*sigma2 - 2*N*Nd*dsigma2*sigma1 - 4*N*Nd*dsigma2*sigma2 + 6*N*Nd*sigma1**2*sigma2 + 6*N*Nd*sigma1*sigma2**2 + 2*Nd**2*sigma1**2 + 2*Nd**2*sigma1*sigma2 + 2*Nd**2*sigma2**2)/N**6",
+    "density_difference_NV_Riemann2": "4*V*(12*H**2*N**2*sigma1**2 + 12*H**2*N**2*sigma1*sigma2 + 12*H**2*N**2*sigma2**2 + 8*H*N**2*dsigma1*sigma1 + 4*H*N**2*dsigma1*sigma2 + 4*H*N**2*dsigma2*sigma1 + 8*H*N**2*dsigma2*sigma2 - 6*H*N**2*sigma1**2*sigma2 - 6*H*N**2*sigma1*sigma2**2 - 12*H*N*Nd*sigma1**2 - 12*H*N*Nd*sigma1*sigma2 - 12*H*N*Nd*sigma2**2 + 4*Hd*N**2*sigma1**2 + 4*Hd*N**2*sigma1*sigma2 + 4*Hd*N**2*sigma2**2 + 2*N**2*dsigma1**2 + 2*N**2*dsigma1*dsigma2 - 4*N**2*dsigma1*sigma1*sigma2 - 2*N**2*dsigma1*sigma2**2 + 2*N**2*dsigma2**2 - 2*N**2*dsigma2*sigma1**2 - 4*N**2*dsigma2*sigma1*sigma2 + 3*N**2*sigma1**4 + 6*N**2*sigma1**3*sigma2 + 9*N**2*sigma1**2*sigma2**2 + 6*N**2*sigma1*sigma2**3 + 3*N**2*sigma2**4 - 4*N*Nd*dsigma1*sigma1 - 2*N*Nd*dsigma1*sigma2 - 2*N*Nd*dsigma2*sigma1 - 4*N*Nd*dsigma2*sigma2 + 6*N*Nd*sigma1**2*sigma2 + 6*N*Nd*sigma1*sigma2**2 + 2*Nd**2*sigma1**2 + 2*Nd**2*sigma1*sigma2 + 2*Nd**2*sigma2**2)/N**5",
+    "dL_dN": "-4*V*(36*H**2*N**2*sigma1**2 + 36*H**2*N**2*sigma1*sigma2 + 36*H**2*N**2*sigma2**2 + 24*H*N**2*dsigma1*sigma1 + 12*H*N**2*dsigma1*sigma2 + 12*H*N**2*dsigma2*sigma1 + 24*H*N**2*dsigma2*sigma2 - 18*H*N**2*sigma1**2*sigma2 - 18*H*N**2*sigma1*sigma2**2 - 48*H*N*Nd*sigma1**2 - 48*H*N*Nd*sigma1*sigma2 - 48*H*N*Nd*sigma2**2 + 12*Hd*N**2*sigma1**2 + 12*Hd*N**2*sigma1*sigma2 + 12*Hd*N**2*sigma2**2 + 6*N**2*dsigma1**2 + 6*N**2*dsigma1*dsigma2 - 12*N**2*dsigma1*sigma1*sigma2 - 6*N**2*dsigma1*sigma2**2 + 6*N**2*dsigma2**2 - 6*N**2*dsigma2*sigma1**2 - 12*N**2*dsigma2*sigma1*sigma2 + 9*N**2*sigma1**4 + 18*N**2*sigma1**3*sigma2 + 27*N**2*sigma1**2*sigma2**2 + 18*N**2*sigma1*sigma2**3 + 9*N**2*sigma2**4 - 16*N*Nd*dsigma1*sigma1 - 8*N*Nd*dsigma1*sigma2 - 8*N*Nd*dsigma2*sigma1 - 16*N*Nd*dsigma2*sigma2 + 24*N*Nd*sigma1**2*sigma2 + 24*N*Nd*sigma1*sigma2**2 + 10*Nd**2*sigma1**2 + 10*Nd**2*sigma1*sigma2 + 10*Nd**2*sigma2**2)/N**6",
+    "dL_dNdot": "-8*V*(6*H*N*sigma1**2 + 6*H*N*sigma1*sigma2 + 6*H*N*sigma2**2 + 2*N*dsigma1*sigma1 + N*dsigma1*sigma2 + N*dsigma2*sigma1 + 2*N*dsigma2*sigma2 - 3*N*sigma1**2*sigma2 - 3*N*sigma1*sigma2**2 - 2*Nd*sigma1**2 - 2*Nd*sigma1*sigma2 - 2*Nd*sigma2**2)/N**5",
+    "Dt_dL_dNdot": "-8*V*(18*H**2*N**2*sigma1**2 + 18*H**2*N**2*sigma1*sigma2 + 18*H**2*N**2*sigma2**2 + 18*H*N**2*dsigma1*sigma1 + 9*H*N**2*dsigma1*sigma2 + 9*H*N**2*dsigma2*sigma1 + 18*H*N**2*dsigma2*sigma2 - 9*H*N**2*sigma1**2*sigma2 - 9*H*N**2*sigma1*sigma2**2 - 30*H*N*Nd*sigma1**2 - 30*H*N*Nd*sigma1*sigma2 - 30*H*N*Nd*sigma2**2 + 6*Hd*N**2*sigma1**2 + 6*Hd*N**2*sigma1*sigma2 + 6*Hd*N**2*sigma2**2 + 2*N**2*d2sigma1*sigma1 + N**2*d2sigma1*sigma2 + N**2*d2sigma2*sigma1 + 2*N**2*d2sigma2*sigma2 + 2*N**2*dsigma1**2 + 2*N**2*dsigma1*dsigma2 - 6*N**2*dsigma1*sigma1*sigma2 - 3*N**2*dsigma1*sigma2**2 + 2*N**2*dsigma2**2 - 3*N**2*dsigma2*sigma1**2 - 6*N**2*dsigma2*sigma1*sigma2 - 12*N*Nd*dsigma1*sigma1 - 6*N*Nd*dsigma1*sigma2 - 6*N*Nd*dsigma2*sigma1 - 12*N*Nd*dsigma2*sigma2 + 12*N*Nd*sigma1**2*sigma2 + 12*N*Nd*sigma1*sigma2**2 - 2*N*Ndd*sigma1**2 - 2*N*Ndd*sigma1*sigma2 - 2*N*Ndd*sigma2**2 + 10*Nd**2*sigma1**2 + 10*Nd**2*sigma1*sigma2 + 10*Nd**2*sigma2**2)/N**6",
+    "EL_N_difference": "4*V*(12*H*N**2*dsigma1*sigma1 + 6*H*N**2*dsigma1*sigma2 + 6*H*N**2*dsigma2*sigma1 + 12*H*N**2*dsigma2*sigma2 - 12*H*N*Nd*sigma1**2 - 12*H*N*Nd*sigma1*sigma2 - 12*H*N*Nd*sigma2**2 + 4*N**2*d2sigma1*sigma1 + 2*N**2*d2sigma1*sigma2 + 2*N**2*d2sigma2*sigma1 + 4*N**2*d2sigma2*sigma2 - 2*N**2*dsigma1**2 - 2*N**2*dsigma1*dsigma2 - 2*N**2*dsigma2**2 - 9*N**2*sigma1**4 - 18*N**2*sigma1**3*sigma2 - 27*N**2*sigma1**2*sigma2**2 - 18*N**2*sigma1*sigma2**3 - 9*N**2*sigma2**4 - 8*N*Nd*dsigma1*sigma1 - 4*N*Nd*dsigma1*sigma2 - 4*N*Nd*dsigma2*sigma1 - 8*N*Nd*dsigma2*sigma2 - 4*N*Ndd*sigma1**2 - 4*N*Ndd*sigma1*sigma2 - 4*N*Ndd*sigma2**2 + 10*Nd**2*sigma1**2 + 10*Nd**2*sigma1*sigma2 + 10*Nd**2*sigma2**2)/N**6",
+    "isotropic_limit_zero": true,
+    "contains_shear_acceleration": true,
+    "contains_lapse_second_derivative": true,
+    "contains_shear_velocity_squared": true,
+    "contains_cubic_shear_velocity_mixing_in_invariant_difference": true
+  },
+  "q_shear_checks": {
+    "Q_shear": "sigma1**2 + sigma1*sigma2 + sigma2**2",
+    "Q_matrix": "Matrix([[1, 1/2], [1/2, 1]])",
+    "Q_eigenvalues_exact": [
+      "1/2",
+      "3/2"
+    ],
+    "Q_eigenvalues_scipy": [
+      0.5,
+      1.5
+    ],
+    "Q_positive_definite": true
+  },
+  "numeric_replay_table": [
+    {
+      "sample_id": "riemann2_lapse_variation_sample_0",
+      "input": {
+        "N": "1",
+        "Nd": "1/20",
+        "Ndd": "-1/200",
+        "V": "1",
+        "H": "1",
+        "Hd": "1/10",
+        "sigma1": "1/10",
+        "sigma2": "-1/20",
+        "dsigma1": "1/100",
+        "dsigma2": "-1/200",
+        "d2sigma1": "1/1000",
+        "d2sigma2": "-1/2000"
+      },
+      "Riemann2_Bianchi_minus_FRW": "3081/8000",
+      "lapse_EL_difference": "669/40000",
+      "absolute_float_value": 0.016725,
+      "matches_symbolic_self_replay": true
+    },
+    {
+      "sample_id": "riemann2_lapse_variation_sample_1",
+      "input": {
+        "N": "5/4",
+        "Nd": "-1/30",
+        "Ndd": "1/300",
+        "V": "7/5",
+        "H": "3/2",
+        "Hd": "-1/20",
+        "sigma1": "1/5",
+        "sigma2": "1/10",
+        "dsigma1": "-1/50",
+        "dsigma2": "3/200",
+        "d2sigma1": "1/700",
+        "d2sigma2": "-1/900"
+      },
+      "Riemann2_Bianchi_minus_FRW": "265748576/87890625",
+      "lapse_EL_difference": "-9532832/87890625",
+      "absolute_float_value": 0.10846244408888889,
+      "matches_symbolic_self_replay": true
+    },
+    {
+      "sample_id": "riemann2_lapse_variation_sample_2",
+      "input": {
+        "N": "4/3",
+        "Nd": "1/40",
+        "Ndd": "-1/400",
+        "V": "11/10",
+        "H": "4/5",
+        "Hd": "1/25",
+        "sigma1": "-1/8",
+        "sigma2": "1/16",
+        "dsigma1": "1/80",
+        "dsigma2": "1/160",
+        "d2sigma1": "-1/1600",
+        "d2sigma2": "1/3200"
+      },
+      "Riemann2_Bianchi_minus_FRW": "4317057/41943040",
+      "lapse_EL_difference": "-42635241/2097152000",
+      "absolute_float_value": 0.020330067157745362,
+      "matches_symbolic_self_replay": true
+    }
+  ],
+  "gatekeeper_checks": {
+    "p1982_ricci2_lapse_obligation_present": true,
+    "isotropic_limit_zero": true,
+    "riemann2_lapse_el_contains_shear_acceleration": true,
+    "riemann2_lapse_el_contains_lapse_second_derivative": true,
+    "riemann2_lapse_el_contains_shear_velocity_squared": true,
+    "riemann2_invariant_difference_contains_cubic_shear_velocity_mixing": true,
+    "q_shear_positive_definite": true,
+    "all_numeric_replay_samples_match_symbolic_self_replay": true,
+    "riemann2_lapse_obligation_passed": true
+  },
+  "result_kind": "PASS_RIEMANN2_LAPSE_VARIATION_OBLIGATION_EXPORTED",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "obstruction_tags": [
+    "RIEMANN2_LAPSE_EQUATION_HAS_D2SHEAR_AND_NDDOT_TERMS",
+    "GAUSS_BONNET_COMBINATION_STILL_MISSING",
+    "STRICT_COEFFICIENT_COMBINATION_STILL_MISSING",
+    "SPATIAL_EOM_TRANSPORT_STILL_MISSING",
+    "GLOBAL_TOE_CLOSURE_STILL_OPEN"
+  ],
+  "theorem_export": {
+    "positive_statement": "For diagonal trace-free Bianchi-I, the Riemann^2 lapse Euler operator difference is exported exactly from the orthonormal Kretschmann blocks and vanishes in the isotropic limit.",
+    "obligation_statement": "The Riemann^2 lapse operator has the same higher-derivative obstruction class as Ricci^2 and additionally records cubic shear/velocity mixing in the invariant difference.  Gauss-Bonnet and strict coefficient combinations remain mandatory before any background-independence claim.",
+    "not_licensed": [
+      "Gauss-Bonnet ADM variation",
+      "strict coefficient-level curvature-squared cancellation",
+      "spatial Bianchi-I EOM cancellation",
+      "global background-independence closure",
+      "PO2/PO3 closure",
+      "BRST or Cutkosky closure",
+      "QW-2191 selector discharge",
+      "ToE closure"
+    ]
+  },
+  "false_pass_guard": "P1983 exports the Riemann^2 lapse obligation only.  It must not be used to claim Gauss-Bonnet, strict coefficient-level, spatial-EOM, or ToE closure.",
+  "next_honest_step": "Build the Gauss-Bonnet ADM/Bianchi-I lapse combination GB = Riemann^2 - 4*Ricci^2 + R^2 from P1981/P1982/P1983 and test whether the higher-derivative shear structures cancel as expected before applying strict coefficients from P1972/P1853.",
+  "lay_explanation": "Policzyliśmy trzeci składnik kwadratowy, Riemann^2.  Tak jak Ricci^2, zawiera on wyższe pochodne ścinania i lapse, więc nie wolno udawać prostego domknięcia.  Teraz trzeba zbudować kombinację Gaussa-Bonneta i sprawdzić, czy część tych trudnych wyrazów rzeczywiście się kasuje.",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0"
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "ledger_id": "P1978_S928_STRICT_ENERGY_NEUTRAL_TENSOR_TRANSPORT_OBSTRUCTION",
+  "packet_id": "P1978",
+  "stage_id": "S928",
+  "produced_by": "p1978_s928_strict_energy_neutral_tensor_transport_obstruction.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only",
+  "depends_on": {
+    "p1974_present": true,
+    "p1977_bounded_no_go_present": true
+  },
+  "bounded_assumptions": {
+    "A1_residual_source": "Use the P1974 diagonal Bianchi-I residual vector in components (G00,G11/a1^2,G22/a2^2,G33/a3^2).",
+    "A2_energy_neutral_transport": "The non-minimal tensorial transport is spatial/shear-only and has no lapse/energy component: U00=0.",
+    "A3_tracefree_subcase": "For the stricter shear-only subcase, the spatial transport is trace-free: U11+U22+U33=0.",
+    "A4_nonzero_trace_free_shear": "(sigma1,sigma2) != (0,0), so Q_shear>0 by the positive-definite quadratic form."
+  },
+  "symbolic_core": {
+    "sigma3": "-sigma1 - sigma2",
+    "dsigma3": "-dsigma1 - dsigma2",
+    "Q_shear": "sigma1**2 + sigma1*sigma2 + sigma2**2",
+    "S_traceless_components": [
+      "3*H*sigma1 + dsigma1",
+      "3*H*sigma2 + dsigma2",
+      "-3*H*sigma1 - 3*H*sigma2 - dsigma1 - dsigma2"
+    ],
+    "S_traceless_sum": "0",
+    "P1974_residual_vector": [
+      "-sigma1**2 - sigma1*sigma2 - sigma2**2",
+      "3*H*sigma1 + dsigma1 - sigma1**2 - sigma1*sigma2 - sigma2**2",
+      "3*H*sigma2 + dsigma2 - sigma1**2 - sigma1*sigma2 - sigma2**2",
+      "-3*H*sigma1 - 3*H*sigma2 - dsigma1 - dsigma2 - sigma1**2 - sigma1*sigma2 - sigma2**2"
+    ],
+    "required_U00_for_full_cancellation": "-sigma1**2 - sigma1*sigma2 - sigma2**2",
+    "energy_neutral_condition": "Eq(u0, 0)",
+    "energy_neutral_leftover_G00": "-sigma1**2 - sigma1*sigma2 - sigma2**2",
+    "energy_neutral_full_cancellation_requires_Q_shear_zero": "sigma1**2 + sigma1*sigma2 + sigma2**2",
+    "spatial_trace_residual": "-3*(sigma1**2 + sigma1*sigma2 + sigma2**2)",
+    "post_spatial_trace_general": "-3*sigma1**2 - 3*sigma1*sigma2 - 3*sigma2**2 - u1 - u2 - u3",
+    "tracefree_spatial_leftover_sum": "-3*(sigma1**2 + sigma1*sigma2 + sigma2**2)",
+    "Q_matrix": "Matrix([[1, 1/2], [1/2, 1]])",
+    "Q_eigenvalues_exact": [
+      "1/2",
+      "3/2"
+    ],
+    "Q_eigenvalues_scipy": [
+      0.5,
+      1.5
+    ],
+    "Q_positive_definite": true
+  },
+  "numeric_replay_table": [
+    {
+      "sample_id": "energy_neutral_transport_sample_0",
+      "input": {
+        "H": "1",
+        "sigma1": "1/10",
+        "sigma2": "-1/20",
+        "dsigma1": "1/100",
+        "dsigma2": "-1/200"
+      },
+      "q_shear": "3/400",
+      "residual_vector": [
+        "-3/400",
+        "121/400",
+        "-13/80",
+        "-13/80"
+      ],
+      "energy_neutral_leftover_G00": "-3/400",
+      "tracefree_spatial_leftover_sum": "-9/400",
+      "energy_neutral_full_cancellation_impossible": true,
+      "tracefree_spatial_cancellation_impossible": true
+    },
+    {
+      "sample_id": "energy_neutral_transport_sample_1",
+      "input": {
+        "H": "3/2",
+        "sigma1": "1/5",
+        "sigma2": "1/10",
+        "dsigma1": "-1/50",
+        "dsigma2": "3/200"
+      },
+      "q_shear": "7/100",
+      "residual_vector": [
+        "-7/100",
+        "81/100",
+        "79/200",
+        "-283/200"
+      ],
+      "energy_neutral_leftover_G00": "-7/100",
+      "tracefree_spatial_leftover_sum": "-21/100",
+      "energy_neutral_full_cancellation_impossible": true,
+      "tracefree_spatial_cancellation_impossible": true
+    },
+    {
+      "sample_id": "energy_neutral_transport_sample_2",
+      "input": {
+        "H": "4/5",
+        "sigma1": "-1/8",
+        "sigma2": "1/16",
+        "dsigma1": "1/80",
+        "dsigma2": "1/160"
+      },
+      "q_shear": "3/256",
+      "residual_vector": [
+        "-3/256",
+        "-383/1280",
+        "37/256",
+        "153/1280"
+      ],
+      "energy_neutral_leftover_G00": "-3/256",
+      "tracefree_spatial_leftover_sum": "-9/256",
+      "energy_neutral_full_cancellation_impossible": true,
+      "tracefree_spatial_cancellation_impossible": true
+    },
+    {
+      "sample_id": "energy_neutral_transport_sample_3",
+      "input": {
+        "H": "5/4",
+        "sigma1": "2/7",
+        "sigma2": "-1/9",
+        "dsigma1": "1/70",
+        "dsigma2": "-1/90"
+      },
+      "q_shear": "247/3969",
+      "residual_vector": [
+        "-247/3969",
+        "20311/19845",
+        "-38897/79380",
+        "-57167/79380"
+      ],
+      "energy_neutral_leftover_G00": "-247/3969",
+      "tracefree_spatial_leftover_sum": "-247/1323",
+      "energy_neutral_full_cancellation_impossible": true,
+      "tracefree_spatial_cancellation_impossible": true
+    }
+  ],
+  "gatekeeper_checks": {
+    "energy_neutral_leaves_G00_minus_Q": true,
+    "tracefree_spatial_leaves_sum_minus_3Q": true,
+    "q_shear_positive_definite": true,
+    "all_nonzero_samples_obstruct_energy_neutral_cancellation": true,
+    "bounded_obstruction_passed": true
+  },
+  "result_kind": "PASS_BOUNDED_OBSTRUCTION",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "obstruction_tags": [
+    "ENERGY_NEUTRAL_TENSOR_TRANSPORT_CANNOT_CANCEL_BIANCHI_I_G00_RESIDUAL",
+    "TRACEFREE_SPATIAL_TRANSPORT_CANNOT_CANCEL_SPATIAL_TRACE_RESIDUAL",
+    "BACKGROUND_INDEPENDENCE_REQUIRES_LAPSE_ENERGY_OR_DERIVED_GRAVITATIONAL_SHEAR_SECTOR",
+    "GLOBAL_TOE_CLOSURE_STILL_OPEN"
+  ],
+  "theorem_export": {
+    "bounded_negative_statement": "For the P1974 residual, any non-minimal spatial/shear-only transport with U00=0 leaves the G00 residual -Q_shear.  Since Q_shear is positive definite for nonzero trace-free shear, full componentwise FRW/Bianchi-I cancellation is impossible in this energy-neutral transport class.",
+    "tracefree_subcase_statement": "If the spatial transport is also trace-free, the spatial trace residual remains -3*Q_shear, giving an independent obstruction.",
+    "remaining_escape_routes": [
+      "derive a strict lapse/energy component from a gravitational/shear variational sector and rerun the energy-sign audit",
+      "derive a non-energy-neutral tensorial connection whose U00 contribution is theorem-grade and not an ad hoc negative-energy source",
+      "prove that the current strict variational operator bundle cannot export such a lapse/energy contribution"
+    ],
+    "not_licensed": [
+      "global no-go theorem for all tensorial transports",
+      "negative-energy admission",
+      "background-independence closure",
+      "PO2/PO3 closure",
+      "BRST or Cutkosky closure",
+      "QW-2191 selector discharge",
+      "ToE closure"
+    ]
+  },
+  "false_pass_guard": "P1978 only rules out energy-neutral spatial/shear-only non-minimal transport for the P1974 residual.  It must not be read as a global no-go theorem or as background-independence closure.",
+  "next_honest_step": "Test the remaining non-energy-neutral escape route: construct a strict variational shear/lapse provider with U00=-Q_shear, or prove that the current strict variational operator bundle cannot export that lapse/energy term.",
+  "lay_explanation": "Sprawdziliśmy, czy da się naprawić błąd Bianchi-I samym geometrycznym przeniesieniem w częściach przestrzennych, bez dokładania energii.  Nie da się: równanie energii G00 zostawia składnik -Q_shear.  To zawęża drogę ToE do trudniejszego zadania: trzeba wyprowadzić prawdziwy sektor geometryczny z wkładem energii/lapse, a nie tylko przesunąć indeksy przestrzenne.",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0"
+  }
+}
