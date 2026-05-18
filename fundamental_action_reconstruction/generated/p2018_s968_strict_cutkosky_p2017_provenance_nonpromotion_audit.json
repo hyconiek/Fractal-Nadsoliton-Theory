@@ -1,0 +1,175 @@
+{
+  "ledger_id": "P2018_S968_STRICT_CUTKOSKY_P2017_PROVENANCE_NONPROMOTION_AUDIT",
+  "packet_id": "P2018",
+  "stage_id": "S968",
+  "produced_by": "p2018_s968_strict_cutkosky_p2017_provenance_nonpromotion_audit.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only",
+  "depends_on": {
+    "p2017": "P2017_S967_STRICT_CUTKOSKY_QUADRATURE_ANSATZ_PROVENANCE_WITNESS",
+    "p1953": "P1953"
+  },
+  "audit_target": "p2017_s967_strict_cutkosky_backend_loop_amplitude_tensor_quadrature_witness.json",
+  "contract_source": "p1953_s903_strict_dressed_cutkosky_amplitude_availability_audit.json",
+  "audit_scope": "nonpromotion audit of P2017 quadrature candidate against the P1953 dressed-amplitude interface; no new amplitude ansatz introduced",
+  "p2017_result_summary": {
+    "diagnostic_result_kind": "PASS_STRICT_KERNEL_QUADRATURE_NUMERICS",
+    "result_kind": "OPEN_PROVENANCE_GAP_WITH_STRICT_QUADRATURE_TRACE",
+    "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+    "false_pass_guard": "P2017 exports strict-kernel quadrature tensor candidates only. Because the amplitude is calibrated by P2004 cuts and lacks a strict Feynman-rule integrand derivation, it must not be called backend-derived Cutkosky closure or ToE closure."
+  },
+  "p1953_contract_audit": {
+    "object_name": "DressedCutkoskyAmplitude_graviton_to_gauge_gauge_strict_B1_v1",
+    "acceptance_rule": "All required fields present, same scheme tag, and DiscM_minus_CutSum_simplified == 0 with positive physical residues.",
+    "rows": [
+      {
+        "required_field": "channel = graviton->gauge_gauge",
+        "verdict": "PASS_PRESENT",
+        "evidence": "P2017 channel field"
+      },
+      {
+        "required_field": "scheme = MSbar_B1_seed",
+        "verdict": "FAIL_MISSING",
+        "evidence": "P2017 does not lock its candidate tensor to MSbar_B1_seed."
+      },
+      {
+        "required_field": "gauge_fixing_family and xi value",
+        "verdict": "FAIL_MISSING",
+        "evidence": "P2017 does not declare a gauge-fixing family or xi value."
+      },
+      {
+        "required_field": "external_state_projectors including BRST physical-state projector",
+        "verdict": "FAIL_MISSING",
+        "evidence": "No BRST physical-state projector is exported by P2017."
+      },
+      {
+        "required_field": "M_dressed_common_basis",
+        "verdict": "FAIL_MISSING",
+        "evidence": "P2017 is a quadrature-candidate witness and exports no dressed common-basis amplitude object."
+      },
+      {
+        "required_field": "AbsM_dressed_squared_common_basis",
+        "verdict": "FAIL_MISSING",
+        "evidence": "P2017 is a quadrature-candidate witness and exports no dressed common-basis amplitude object."
+      },
+      {
+        "required_field": "DiscM_common_basis",
+        "verdict": "FAIL_MISSING",
+        "evidence": "P2017 is a quadrature-candidate witness and exports no dressed common-basis amplitude object."
+      },
+      {
+        "required_field": "CutSum_common_basis",
+        "verdict": "FAIL_MISSING",
+        "evidence": "P2017 is a quadrature-candidate witness and exports no dressed common-basis amplitude object."
+      },
+      {
+        "required_field": "DiscM_minus_CutSum_simplified",
+        "verdict": "FAIL_MISSING",
+        "evidence": "P2017 is a quadrature-candidate witness and exports no dressed common-basis amplitude object."
+      },
+      {
+        "required_field": "dressed_graviton_propagator_pole_list",
+        "verdict": "FAIL_MISSING",
+        "evidence": "P2017 is a quadrature-candidate witness and exports no dressed common-basis amplitude object."
+      },
+      {
+        "required_field": "residue_values_per_pole",
+        "verdict": "FAIL_MISSING",
+        "evidence": "P2017 is a quadrature-candidate witness and exports no dressed common-basis amplitude object."
+      },
+      {
+        "required_field": "ghost_sector_exclusion_trace",
+        "verdict": "FAIL_MISSING",
+        "evidence": "P2017 is a quadrature-candidate witness and exports no dressed common-basis amplitude object."
+      },
+      {
+        "required_field": "phase_space_measure and integration_domain",
+        "verdict": "PARTIAL_INTERVAL_ONLY",
+        "evidence": "P2017 exports an ansatz interval but not a strict-derived phase-space measure."
+      },
+      {
+        "required_field": "uncertainty_or_exactness_certificate",
+        "verdict": "PARTIAL_QUADRATURE_ERROR_ONLY",
+        "evidence": "P2017 exports quadrature errors for candidate tensors, not theorem-grade exactness/uncertainty for a dressed amplitude."
+      }
+    ],
+    "missing_contract_fields": [
+      "scheme = MSbar_B1_seed",
+      "gauge_fixing_family and xi value",
+      "external_state_projectors including BRST physical-state projector",
+      "M_dressed_common_basis",
+      "AbsM_dressed_squared_common_basis",
+      "DiscM_common_basis",
+      "CutSum_common_basis",
+      "DiscM_minus_CutSum_simplified",
+      "dressed_graviton_propagator_pole_list",
+      "residue_values_per_pole",
+      "ghost_sector_exclusion_trace"
+    ],
+    "partial_contract_fields": [
+      "phase_space_measure and integration_domain",
+      "uncertainty_or_exactness_certificate"
+    ],
+    "contract_complete": false
+  },
+  "missing_provenance_gates": [
+    "strict_feynman_rule_integrand_exported",
+    "loop_measure_derived_from_strict_action",
+    "channel_distance_map_derived_not_assumed",
+    "normalization_independent_of_p2004_cut_values",
+    "all_state_phase_space_integral_exported"
+  ],
+  "numerical_gate_failures": [],
+  "provenance_gap_count": 5,
+  "quadrature_covariance_candidate_audit": {
+    "shape": [
+      4,
+      4
+    ],
+    "frobenius_norm": 0.0006249965314550582,
+    "numerical_rank_tol_1e_minus_18": 4,
+    "eigvals": [
+      1.818660798533447e-13,
+      3.9836084498578624e-10,
+      4.1614398005616006e-08,
+      0.0006249965300695173
+    ],
+    "min_eig": 1.818660798533447e-13,
+    "max_eig": 0.0006249965300695173
+  },
+  "symbolic_nonpromotion_rule": {
+    "rule": "promote_to_backend_cutkosky_closure => (provenance_complete and p1953_contract_complete)",
+    "sympy_expression": "Implies(promote_to_backend_cutkosky_closure, p1953_contract_complete & provenance_complete)",
+    "current_provenance_complete": false,
+    "current_p1953_contract_complete": false,
+    "current_rule_value_if_promotion_attempted": false,
+    "current_promote_allowed": false
+  },
+  "gatekeeper_checks": {
+    "p1953_contract_present": true,
+    "p2017_present": true,
+    "p2017_result_kind_open": true,
+    "p2017_status_open": true,
+    "p2017_declares_provenance_gap": true,
+    "p2017_blocks_false_pass": true,
+    "p2017_has_missing_provenance_gates": true,
+    "p2017_fails_p1953_dressed_amplitude_contract": true,
+    "numerical_diagnostics_do_not_override_provenance": true,
+    "no_closed_cutkosky_result_exported": true,
+    "covariance_candidate_shape_audited": true,
+    "covariance_candidate_psd_or_missing_nonfatal": true
+  },
+  "promotion_verdict": "BLOCK_PROMOTION_TO_BACKEND_CUTKOSKY_CLOSURE",
+  "result_kind": "PASS_PROVENANCE_NONPROMOTION_AUDIT",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "false_pass_guard": "P2018 is a non-promotion audit against the P1953 dressed-amplitude contract. It prevents P2017 numerical quadrature diagnostics from being read as backend-derived Cutkosky closure, all-state unitarity, QW-2191 discharge, or ToE closure.",
+  "next_honest_step": "Build one strict-side dressed-amplitude interface component from the P1953 contract, starting with a same-scheme BRST-projected M_dressed_common_basis component, then rerun P2018.",
+  "toe_progress": "Improves ToE rigor by tying the P2017 non-promotion boundary to the earlier P1953 dressed-amplitude contract instead of relying only on hard-open local provenance flags.",
+  "lay_explanation": "To jest kontrola bezpieczeństwa oparta na wcześniejszej liście wymagań: nawet dobre całki P2017 nie spełniają kontraktu prawdziwej ubranej amplitudy, więc nie wolno nazwać ich pełnym dowodem unitarności.",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0"
+  }
+}

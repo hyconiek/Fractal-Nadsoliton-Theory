@@ -1,0 +1,287 @@
+{
+  "ledger_id": "P2019_S969_STRICT_CUTKOSKY_FIRST_TRANSVERSE_TREE_AMPLITUDE_COMPONENT",
+  "packet_id": "P2019",
+  "stage_id": "S969",
+  "produced_by": "p2019_s969_strict_cutkosky_first_transverse_tree_amplitude_component.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only",
+  "channel": "graviton->gauge_gauge",
+  "depends_on": {
+    "p1955": "P1955",
+    "p1956": "P1956",
+    "p2018": "P2018_S968_STRICT_CUTKOSKY_P2017_PROVENANCE_NONPROMOTION_AUDIT"
+  },
+  "component_scope": {
+    "object_name": "TreeTransverse_hAA_Component_graviton_to_gauge_gauge_strict_local_v1",
+    "scheme_scope": "minimal tree-level hAA vertex from P1955 plus local transverse projector from P1956; not MSbar_B1_seed dressed loop scheme",
+    "normalization": "amplitudes are reported in units of kappa*Z_gauge",
+    "frame": "massless two-body cut center-of-mass frame, E=1",
+    "not_dressed": true,
+    "not_brst_cohomology": true
+  },
+  "kinematics": {
+    "metric_signature": "diag(-1,1,1,1)",
+    "k1": [
+      "1",
+      "0",
+      "0",
+      "1"
+    ],
+    "k2": [
+      "1",
+      "0",
+      "0",
+      "-1"
+    ],
+    "gauge_polarizations": {
+      "x": [
+        "0",
+        "1",
+        "0",
+        "0"
+      ],
+      "y": [
+        "0",
+        "0",
+        "1",
+        "0"
+      ]
+    },
+    "graviton_polarizations": {
+      "plus": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "-1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "cross": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ]
+    }
+  },
+  "M_tree_transverse_common_basis_component": {
+    "basis": "{h_plus,h_cross} x {eps_x,eps_y}^{⊗2}",
+    "amplitude_matrices_over_kappa_Zgauge": {
+      "plus": [
+        [
+          "-2",
+          "0"
+        ],
+        [
+          "0",
+          "2"
+        ]
+      ],
+      "cross": [
+        [
+          "0",
+          "-2"
+        ],
+        [
+          "-2",
+          "0"
+        ]
+      ]
+    },
+    "table": [
+      {
+        "graviton_polarization": "plus",
+        "gauge_polarizations": [
+          "x",
+          "x"
+        ],
+        "M_tree_transverse_component_over_kappa_Zgauge": "-2"
+      },
+      {
+        "graviton_polarization": "plus",
+        "gauge_polarizations": [
+          "x",
+          "y"
+        ],
+        "M_tree_transverse_component_over_kappa_Zgauge": "0"
+      },
+      {
+        "graviton_polarization": "plus",
+        "gauge_polarizations": [
+          "y",
+          "x"
+        ],
+        "M_tree_transverse_component_over_kappa_Zgauge": "0"
+      },
+      {
+        "graviton_polarization": "plus",
+        "gauge_polarizations": [
+          "y",
+          "y"
+        ],
+        "M_tree_transverse_component_over_kappa_Zgauge": "2"
+      },
+      {
+        "graviton_polarization": "cross",
+        "gauge_polarizations": [
+          "x",
+          "x"
+        ],
+        "M_tree_transverse_component_over_kappa_Zgauge": "0"
+      },
+      {
+        "graviton_polarization": "cross",
+        "gauge_polarizations": [
+          "x",
+          "y"
+        ],
+        "M_tree_transverse_component_over_kappa_Zgauge": "-2"
+      },
+      {
+        "graviton_polarization": "cross",
+        "gauge_polarizations": [
+          "y",
+          "x"
+        ],
+        "M_tree_transverse_component_over_kappa_Zgauge": "-2"
+      },
+      {
+        "graviton_polarization": "cross",
+        "gauge_polarizations": [
+          "y",
+          "y"
+        ],
+        "M_tree_transverse_component_over_kappa_Zgauge": "0"
+      }
+    ],
+    "AbsM_tree_transverse_sum_over_local_polarizations_over_kappa2_Zgauge2": "16",
+    "numeric_matrices": {
+      "plus": [
+        [
+          -2.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.0
+        ]
+      ],
+      "cross": [
+        [
+          0.0,
+          -2.0
+        ],
+        [
+          -2.0,
+          0.0
+        ]
+      ]
+    }
+  },
+  "machine_checks": {
+    "gauge_transversality": [
+      {
+        "polarization": "x",
+        "k1_dot_eps": "0",
+        "k2_dot_eps": "0"
+      },
+      {
+        "polarization": "y",
+        "k1_dot_eps": "0",
+        "k2_dot_eps": "0"
+      }
+    ],
+    "graviton_polarization_checks": {
+      "plus": {
+        "trace_eta_h": "0",
+        "h_00": "0",
+        "h_03": "0",
+        "h_33": "0"
+      },
+      "cross": {
+        "trace_eta_h": "0",
+        "h_00": "0",
+        "h_03": "0",
+        "h_33": "0"
+      }
+    },
+    "gatekeeper_checks": {
+      "p1955_minimal_vertex_available": true,
+      "p1956_local_transverse_projector_available": true,
+      "p2018_nonpromotion_still_active": true,
+      "amplitude_table_complete": true,
+      "nonzero_component_exported": true,
+      "gauge_transversality_reference_frame": true,
+      "graviton_polarizations_traceless_reference_frame": true,
+      "abs_sq_sum_positive": true
+    }
+  },
+  "p1953_contract_update": {
+    "M_dressed_common_basis": "PARTIAL_TREE_TRANSVERSE_COMPONENT_ONLY_NOT_DRESSED",
+    "AbsM_dressed_squared_common_basis": "PARTIAL_TREE_TRANSVERSE_POLARIZATION_SUM_ONLY_NOT_DRESSED",
+    "external_state_projectors including BRST physical-state projector": "PARTIAL_LOCAL_TRANSVERSE_PROJECTOR_ONLY_BRST_COHOMOLOGY_OPEN",
+    "scheme = MSbar_B1_seed": "OPEN_NOT_LOCKED_TREE_LOCAL_SCOPE",
+    "DiscM_common_basis": "OPEN_NOT_EXPORTED",
+    "CutSum_common_basis": "OPEN_NOT_EXPORTED",
+    "DiscM_minus_CutSum_simplified": "OPEN_NOT_EVALUATED"
+  },
+  "gatekeeper_checks": {
+    "p1955_minimal_vertex_available": true,
+    "p1956_local_transverse_projector_available": true,
+    "p2018_nonpromotion_still_active": true,
+    "amplitude_table_complete": true,
+    "nonzero_component_exported": true,
+    "gauge_transversality_reference_frame": true,
+    "graviton_polarizations_traceless_reference_frame": true,
+    "abs_sq_sum_positive": true
+  },
+  "result_kind": "PASS_FIRST_TREE_TRANSVERSE_COMPONENT_WITNESS",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "false_pass_guard": "P2019 exports only a local tree-level transverse hAA amplitude component. It is not a dressed loop amplitude, not a BRST cohomology projection, not DiscM=CutSum, not all-state unitarity, and not ToE closure.",
+  "next_honest_step": "Promote this local component toward the P1953 contract by adding the same-scheme dressing/residue layer or by deriving a genuine BRST cohomology projector; then rerun P2018.",
+  "toe_progress": "Provides the first explicit non-quadrature local amplitude component for the Cutkosky channel, replacing pure governance with a concrete strict-side tree-level calculation while keeping theorem closure blocked.",
+  "lay_explanation": "Po raz pierwszy liczymy konkretny lokalny element amplitudy z wierzchołka grawiton–dwa bozony cechowania i poprzecznych polaryzacji. To realny kawałek rachunku, ale jeszcze nie pełna ubrana amplituda pętlowa ani dowód unitarności.",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "sympy": "1.14.0"
+  }
+}
