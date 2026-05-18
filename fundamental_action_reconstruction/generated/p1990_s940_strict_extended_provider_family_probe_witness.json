@@ -1,0 +1,100 @@
+{
+  "ledger_id": "P1990_S940_STRICT_EXTENDED_PROVIDER_FAMILY_PROBE_WITNESS",
+  "packet_id": "P1990",
+  "stage_id": "S940",
+  "produced_by": "p1990_s940_strict_extended_provider_family_probe_witness.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only_with_explicit_non_strict_selector_labeling",
+  "depends_on": {
+    "p1987_present": true,
+    "p1989_present": true
+  },
+  "selector_premise_label": {
+    "status": "NON_STRICT_AUGMENTED_CLASS",
+    "reason": "eta1/eta2/eta3 extended channels are selector-premise-augmented and must not be claimed strict-core closure without a bridge."
+  },
+  "extended_provider_family": {
+    "definition": "P_ext = P_min + eta1*(d2sigma*sigma) + eta2*(Ndd*Q) + eta3*(Q^2)",
+    "P_min": "c1*(3H(sigma1+sigma2)) + c2*(dsigma1+dsigma2) + c3*Q",
+    "unknowns": [
+      "c1",
+      "c2",
+      "c3",
+      "eta1",
+      "eta2",
+      "eta3"
+    ]
+  },
+  "representative_outside_channel_equations": {
+    "d2sigma1_sigma1": "32991491*N**2*log(2)/(20000000*pi**2) - 2*eta1",
+    "Ndd_sigma1_sq": "-32991491*N*log(2)/(20000000*pi**2) - eta2",
+    "Qquartic_s1_4": "-768640131*N**2*log(2)/(160000000*pi**2) - eta3"
+  },
+  "augmented_channel_solver": {
+    "equations": [
+      "Eq(32991491*N**2*log(2)/(20000000*pi**2) - 2*eta1, 0)",
+      "Eq(-32991491*N*log(2)/(20000000*pi**2) - eta2, 0)",
+      "Eq(-768640131*N**2*log(2)/(160000000*pi**2) - eta3, 0)"
+    ],
+    "solutions_for_eta": [
+      {
+        "eta1": "32991491*N**2*log(2)/(40000000*pi**2)",
+        "eta2": "-32991491*N*log(2)/(20000000*pi**2)",
+        "eta3": "-768640131*N**2*log(2)/(160000000*pi**2)"
+      }
+    ],
+    "has_solution": true
+  },
+  "post_fit_residual_channel_flags": {
+    "H_sigma1_dsigma1": true,
+    "Hd_sigma1_sq": true,
+    "Nd2_sigma1_sq": true
+  },
+  "numeric_probe": {
+    "sample": {
+      "N": "1",
+      "Nd": "1/20",
+      "Ndd": "-1/200",
+      "V": "1",
+      "H": "1",
+      "Hd": "1/10",
+      "sigma1": "1/10",
+      "sigma2": "-1/20",
+      "dsigma1": "1/100",
+      "dsigma2": "-1/200",
+      "d2sigma1": "1/1000",
+      "d2sigma2": "-1/2000",
+      "c1": "0",
+      "c2": "0",
+      "c3": "0",
+      "eta1": "32991491*N**2*log(2)/(40000000*pi**2)",
+      "eta2": "-32991491*N*log(2)/(20000000*pi**2)",
+      "eta3": "-768640131*N**2*log(2)/(160000000*pi**2)"
+    },
+    "residual_value_after_augmented_fit": "-303443811951*log(2)/(6400000000000*pi**2)",
+    "l2_norm": 0.0033298450690843824
+  },
+  "gatekeeper_checks": {
+    "p1987_present": true,
+    "p1989_minimal_no_go_present": true,
+    "augmented_channel_solution_exists": true,
+    "mixed_channels_still_persist": true,
+    "numeric_residual_after_augmented_fit_nonzero": true
+  },
+  "result_kind": "PASS_EXTENDED_PROVIDER_PROBE_WITH_NONSTRICT_LABEL",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "obstruction_tags": [
+    "AUGMENTED_CLASS_CAN_FIT_SOME_OUTSIDE_CHANNELS",
+    "MIXED_CHANNELS_STILL_PERSIST_AFTER_FIT",
+    "STRICT_CORE_CLOSURE_STILL_BLOCKED_BY_SELECTOR_GUARDRAIL"
+  ],
+  "false_pass_guard": "P1990 does not prove strict-core closure. It probes one explicitly non-strict augmented class and still finds persistent mixed channels.",
+  "next_honest_step": "Derive full spatial Bianchi-I component equations for the same augmented class and test componentwise cancellation map; keep verdict non-strict unless a strict selector bridge is exported.",
+  "lay_explanation": "Nawet gdy dopuścimy bogatszy, jawnie oznaczony (niestety jeszcze nierygorystycznie strict) mechanizm, da się skasować tylko część problemu. Inne mieszane składniki nadal zostają.",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0"
+  }
+}

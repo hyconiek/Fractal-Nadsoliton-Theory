@@ -1,0 +1,180 @@
+{
+  "ledger_id": "P1991_S941_STRICT_AUGMENTED_PROVIDER_CHANNEL_MATRIX_WITNESS",
+  "packet_id": "P1991",
+  "stage_id": "S941",
+  "produced_by": "p1991_s941_strict_augmented_provider_channel_matrix_witness.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only_with_explicit_non_strict_selector_labeling",
+  "selector_premise_label": {
+    "status": "NON_STRICT_AUGMENTED_CLASS"
+  },
+  "depends_on": {
+    "p1987_present": true,
+    "p1990_present": true
+  },
+  "channel_system": {
+    "channels": [
+      "d2sigma1_sigma1",
+      "Ndd_sigma1_sq",
+      "Qquartic_s1_4",
+      "H_sigma1_dsigma1",
+      "Hd_sigma1_sq",
+      "Nd2_sigma1_sq"
+    ],
+    "unknowns": [
+      "c1",
+      "c2",
+      "c3",
+      "eta1",
+      "eta2",
+      "eta3"
+    ],
+    "A_matrix": [
+      [
+        "0",
+        "0",
+        "0",
+        "-2",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "-1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-1"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "b_vector": [
+      "-32991491*N**2*log(2)/(20000000*pi**2)",
+      "32991491*N*log(2)/(20000000*pi**2)",
+      "768640131*N**2*log(2)/(160000000*pi**2)",
+      "-372742239*N**2*log(2)/(40000000*pi**2)",
+      "174793293*N**2*log(2)/(40000000*pi**2)",
+      "-32991491*log(2)/(8000000*pi**2)"
+    ],
+    "rank_A": 3,
+    "rank_augmented": 4,
+    "consistent": false,
+    "full_solve": false
+  },
+  "numeric_lsq_probe": {
+    "A": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        -2.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "b": [
+      -0.11585043351177661,
+      0.11585043351177661,
+      0.3373873447811845,
+      -0.6544467780540784,
+      0.3068954775187485,
+      -0.28962608377944155
+    ],
+    "x_lsq": [
+      0.0,
+      0.0,
+      0.0,
+      0.057925216755888305,
+      -0.11585043351177661,
+      -0.3373873447811845
+    ],
+    "residual_l2": 0.7786967881224636
+  },
+  "gatekeeper_checks": {
+    "p1987_present": true,
+    "p1990_present": true,
+    "matrix_rank_aug_exceeds_rankA_or_not_full_solve": true,
+    "least_squares_residual_positive": true
+  },
+  "result_kind": "PASS_CHANNEL_MATRIX_OBSTRUCTION_WITNESS",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "next_honest_step": "Promote this channel matrix to full componentwise spatial-EOM matrix (three Bianchi-I spatial components) and test null-space compatibility constraints.",
+  "lay_explanation": "Zrobiliśmy tabelę równań kanał po kanale i policzyliśmy, że nawet rozszerzony model nie potrafi idealnie wyzerować wszystkiego naraz.",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0"
+  }
+}

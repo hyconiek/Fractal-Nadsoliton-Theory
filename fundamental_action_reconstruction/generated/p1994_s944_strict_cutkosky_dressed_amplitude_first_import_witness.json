@@ -1,0 +1,97 @@
+{
+  "ledger_id": "P1994_S944_STRICT_CUTKOSKY_DRESSED_AMPLITUDE_FIRST_IMPORT_WITNESS",
+  "packet_id": "P1994",
+  "stage_id": "S944",
+  "produced_by": "p1994_s944_strict_cutkosky_dressed_amplitude_first_import_witness.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only",
+  "depends_on": {
+    "p1993_present": true
+  },
+  "channel": "graviton->gauge_gauge",
+  "dressed_import": {
+    "Z(s)": "(51*s + 50)/(50*(s + 1))",
+    "z1": "1/50",
+    "M_tree": "98012431*s*log(2)/(640000000*pi**2)",
+    "M_dressed": "98012431*s*(51*s + 50)*log(2)/(32000000000*pi**2*(s + 1))"
+  },
+  "optical_defect_formulas": {
+    "ImM_dressed": "9606436630529761*s**2*(51*s + 50)**2*log(2)**2/(16384000000000000000000*pi**5*(s + 1)**2)",
+    "CutSum_dressed": "9606436630529761*s**2*(51*s + 50)**2*log(2)**2/(16384000000000000000000*pi**5*(s + 1)**2)",
+    "Delta_opt": "0"
+  },
+  "grid_table": [
+    {
+      "s": "1/2",
+      "ImM_dressed": 5.830359516202413e-07,
+      "CutSum_dressed": 5.830359516202413e-07,
+      "Delta_opt": 0.0,
+      "delta_zero": true
+    },
+    {
+      "s": "1",
+      "ImM_dressed": 2.347614038081783e-06,
+      "CutSum_dressed": 2.347614038081783e-06,
+      "Delta_opt": 0.0,
+      "delta_zero": true
+    },
+    {
+      "s": "2",
+      "ImM_dressed": 9.452541643776363e-06,
+      "CutSum_dressed": 9.452541643776363e-06,
+      "Delta_opt": 0.0,
+      "delta_zero": true
+    },
+    {
+      "s": "4",
+      "ImM_dressed": 3.800942929507537e-05,
+      "CutSum_dressed": 3.800942929507537e-05,
+      "Delta_opt": 0.0,
+      "delta_zero": true
+    },
+    {
+      "s": "8",
+      "ImM_dressed": 0.0001525702481813716,
+      "CutSum_dressed": 0.0001525702481813716,
+      "Delta_opt": 0.0,
+      "delta_zero": true
+    }
+  ],
+  "residue_table": [
+    {
+      "pole": "1/2",
+      "residue": 2.9306583398222147e-05,
+      "positive": true
+    },
+    {
+      "pole": "1",
+      "residue": 0.00011800395224803197,
+      "positive": true
+    },
+    {
+      "pole": "2",
+      "residue": 0.0004751365661734306,
+      "positive": true
+    }
+  ],
+  "im_signal_l2": 0.0001575360248057017,
+  "gatekeeper_checks": {
+    "p1993_present": true,
+    "dressed_amplitude_imported": true,
+    "optical_defect_zero_on_grid": true,
+    "imaginary_part_positive_on_grid": true,
+    "proxy_residue_positive_on_poles": true,
+    "nontrivial_dressed_signal_norm": true
+  },
+  "result_kind": "PASS_DRESSED_IMPORT_OPTICAL_ZERO_PROXY_WITNESS",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "false_pass_guard": "P1994 uses first-order dressed proxy import Z(s) and equal-form optical side; it is not full loop-derived dressed Cutkosky theorem closure.",
+  "next_honest_step": "Replace proxy Z(s) by loop-derived dressed kernel from explicit discontinuity backend and test Delta_opt(s)=0 without mirrored construction.",
+  "lay_explanation": "Dodaliśmy pierwszy jawny czynnik 'ubrania' amplitudy i sprawdziliśmy zgodność optyczną na siatce. To ważny krok ku realizmowi, ale nadal model proxy, nie końcowy dowód.",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0"
+  }
+}

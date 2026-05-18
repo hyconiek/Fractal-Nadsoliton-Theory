@@ -1,0 +1,45 @@
+{
+  "ledger_id": "P1986_S936_STRICT_ADM_BIANCHI_NON_GB_RESIDUAL_DECOMPOSITION_WITNESS",
+  "packet_id": "P1986",
+  "stage_id": "S936",
+  "produced_by": "p1986_s936_strict_adm_bianchi_non_gb_residual_decomposition_witness.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only",
+  "depends_on": {
+    "p1984_gb_lapse_zero": true,
+    "p1985_non_gb_present": true
+  },
+  "decomposition": {
+    "identity": "aRiem*Riem + aRic*Ric + aR2*R2 = aRiem*GB + (aRic+4*aRiem)*Ric + (aR2-aRiem)*R2",
+    "coeff_nonGB_R2": "-7718551*log(2)/(640000000*pi**2)",
+    "coeff_nonGB_Ric2": "32991491*log(2)/(80000000*pi**2)"
+  },
+  "strict_symbolic_identifications": {
+    "Q": "sigma1**2 + sigma1*sigma2 + sigma2**2",
+    "Qd": "2*dsigma1*sigma1 + dsigma1*sigma2 + dsigma2*sigma1 + 2*dsigma2*sigma2"
+  },
+  "non_gb_residual": {
+    "symbolic": "-V*(1048759758*H**2*N**2*sigma1**2 + 1048759758*H**2*N**2*sigma1*sigma2 + 1048759758*H**2*N**2*sigma2**2 - 1490968956*H*N**2*dsigma1*sigma1 - 745484478*H*N**2*dsigma1*sigma2 - 745484478*H*N**2*dsigma2*sigma1 - 1490968956*H*N**2*dsigma2*sigma2 + 791795784*H*N*Nd*sigma1**2 + 791795784*H*N*Nd*sigma1*sigma2 + 791795784*H*N*Nd*sigma2**2 + 699173172*Hd*N**2*sigma1**2 + 699173172*Hd*N**2*sigma1*sigma2 + 699173172*Hd*N**2*sigma2**2 - 263931928*N**2*d2sigma1*sigma1 - 131965964*N**2*d2sigma1*sigma2 - 131965964*N**2*d2sigma2*sigma1 - 263931928*N**2*d2sigma2*sigma2 + 131965964*N**2*dsigma1**2 + 131965964*N**2*dsigma1*dsigma2 + 131965964*N**2*dsigma2**2 + 768640131*N**2*sigma1**4 + 1537280262*N**2*sigma1**3*sigma2 + 2305920393*N**2*sigma1**2*sigma2**2 + 1537280262*N**2*sigma1*sigma2**3 + 768640131*N**2*sigma2**4 + 527863856*N*Nd*dsigma1*sigma1 + 263931928*N*Nd*dsigma1*sigma2 + 263931928*N*Nd*dsigma2*sigma1 + 527863856*N*Nd*dsigma2*sigma2 + 263931928*N*Ndd*sigma1**2 + 263931928*N*Ndd*sigma1*sigma2 + 263931928*N*Ndd*sigma2**2 - 659829820*Nd**2*sigma1**2 - 659829820*Nd**2*sigma1*sigma2 - 659829820*Nd**2*sigma2**2)*log(2)/(160000000*pi**2*N**6)",
+    "is_zero": false,
+    "isotropic_limit_zero": true,
+    "contains_high_derivatives": true
+  },
+  "numeric_replay_l2_norm": 0.003335789933458249,
+  "gatekeeper_checks": {
+    "gb_channel_zero": true,
+    "non_gb_channel_nonzero": true,
+    "isotropic_limit_zero": true,
+    "contains_high_derivatives": true,
+    "numeric_nonzero": true
+  },
+  "result_kind": "PASS_NON_GB_DECOMPOSITION_OBSTRUCTION_WITNESS",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "next_honest_step": "Export full Bianchi-I spatial EOM projection of this non-GB residual and test selector/provider admissibility under QW-2191 without non-strict closure claims.",
+  "lay_explanation": "Rozdzieliliśmy część Gauss-Bonnet (która się kasuje) od części nie-GB. Pozostałość nie-GB zostaje niezerowa, więc realna przeszkoda nadal istnieje.",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0"
+  }
+}

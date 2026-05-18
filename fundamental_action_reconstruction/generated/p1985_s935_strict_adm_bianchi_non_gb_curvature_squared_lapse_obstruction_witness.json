@@ -1,0 +1,74 @@
+{
+  "ledger_id": "P1985_S935_STRICT_ADM_BIANCHI_NON_GB_CURVATURE_SQUARED_LAPSE_OBSTRUCTION_WITNESS",
+  "packet_id": "P1985",
+  "stage_id": "S935",
+  "produced_by": "p1985_s935_strict_adm_bianchi_non_gb_curvature_squared_lapse_obstruction_witness.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only",
+  "strict_kernel": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+  "depends_on": {
+    "p1981_present": true,
+    "p1982_present": true,
+    "p1983_present": true,
+    "p1853_coefficients_present": true
+  },
+  "strict_coefficients": {
+    "a_R2": "18516431*log(2)/(640000000*pi**2)",
+    "a_Ric2": "9937*log(2)/(40000*pi**2)",
+    "a_Riem2": "13117491*log(2)/(320000000*pi**2)"
+  },
+  "input_lapse_operators": {
+    "EL_R2": "-12*V*(6*H**2*Q - 2*H*Qd + 4*Hd*Q + Q**2)/N**4",
+    "EL_Ric2": "-2*V*(9*H**2*N**2*sigma1**2 + 9*H**2*N**2*sigma1*sigma2 + 9*H**2*N**2*sigma2**2 - 12*H*N**2*dsigma1*sigma1 - 6*H*N**2*dsigma1*sigma2 - 6*H*N**2*dsigma2*sigma1 - 12*H*N**2*dsigma2*sigma2 + 6*H*N*Nd*sigma1**2 + 6*H*N*Nd*sigma1*sigma2 + 6*H*N*Nd*sigma2**2 + 6*Hd*N**2*sigma1**2 + 6*Hd*N**2*sigma1*sigma2 + 6*Hd*N**2*sigma2**2 - 2*N**2*d2sigma1*sigma1 - N**2*d2sigma1*sigma2 - N**2*d2sigma2*sigma1 - 2*N**2*d2sigma2*sigma2 + N**2*dsigma1**2 + N**2*dsigma1*dsigma2 + N**2*dsigma2**2 + 6*N**2*sigma1**4 + 12*N**2*sigma1**3*sigma2 + 18*N**2*sigma1**2*sigma2**2 + 12*N**2*sigma1*sigma2**3 + 6*N**2*sigma2**4 + 4*N*Nd*dsigma1*sigma1 + 2*N*Nd*dsigma1*sigma2 + 2*N*Nd*dsigma2*sigma1 + 4*N*Nd*dsigma2*sigma2 + 2*N*Ndd*sigma1**2 + 2*N*Ndd*sigma1*sigma2 + 2*N*Ndd*sigma2**2 - 5*Nd**2*sigma1**2 - 5*Nd**2*sigma1*sigma2 - 5*Nd**2*sigma2**2)/N**6",
+    "EL_Riem2": "4*V*(12*H*N**2*dsigma1*sigma1 + 6*H*N**2*dsigma1*sigma2 + 6*H*N**2*dsigma2*sigma1 + 12*H*N**2*dsigma2*sigma2 - 12*H*N*Nd*sigma1**2 - 12*H*N*Nd*sigma1*sigma2 - 12*H*N*Nd*sigma2**2 + 4*N**2*d2sigma1*sigma1 + 2*N**2*d2sigma1*sigma2 + 2*N**2*d2sigma2*sigma1 + 4*N**2*d2sigma2*sigma2 - 2*N**2*dsigma1**2 - 2*N**2*dsigma1*dsigma2 - 2*N**2*dsigma2**2 - 9*N**2*sigma1**4 - 18*N**2*sigma1**3*sigma2 - 27*N**2*sigma1**2*sigma2**2 - 18*N**2*sigma1*sigma2**3 - 9*N**2*sigma2**4 - 8*N*Nd*dsigma1*sigma1 - 4*N*Nd*dsigma1*sigma2 - 4*N*Nd*dsigma2*sigma1 - 8*N*Nd*dsigma2*sigma2 - 4*N*Ndd*sigma1**2 - 4*N*Ndd*sigma1*sigma2 - 4*N*Ndd*sigma2**2 + 10*Nd**2*sigma1**2 + 10*Nd**2*sigma1*sigma2 + 10*Nd**2*sigma2**2)/N**6"
+  },
+  "strict_symbolic_identifications": {
+    "Q": "sigma1**2 + sigma1*sigma2 + sigma2**2",
+    "Qd": "2*dsigma1*sigma1 + dsigma1*sigma2 + dsigma2*sigma1 + 2*dsigma2*sigma2",
+    "note": "P1981 symbols Q,Qd are identified with Bianchi-I shear invariants before combination."
+  },
+  "weighted_non_gb_lapse_operator": {
+    "definition": "EL_nonGB := a_R2*EL_R2 + a_Ric2*EL_Ric2 + a_Riem2*EL_Riem2",
+    "symbolic": "-V*(1048759758*H**2*N**2*sigma1**2 + 1048759758*H**2*N**2*sigma1*sigma2 + 1048759758*H**2*N**2*sigma2**2 - 1490968956*H*N**2*dsigma1*sigma1 - 745484478*H*N**2*dsigma1*sigma2 - 745484478*H*N**2*dsigma2*sigma1 - 1490968956*H*N**2*dsigma2*sigma2 + 791795784*H*N*Nd*sigma1**2 + 791795784*H*N*Nd*sigma1*sigma2 + 791795784*H*N*Nd*sigma2**2 + 699173172*Hd*N**2*sigma1**2 + 699173172*Hd*N**2*sigma1*sigma2 + 699173172*Hd*N**2*sigma2**2 - 263931928*N**2*d2sigma1*sigma1 - 131965964*N**2*d2sigma1*sigma2 - 131965964*N**2*d2sigma2*sigma1 - 263931928*N**2*d2sigma2*sigma2 + 131965964*N**2*dsigma1**2 + 131965964*N**2*dsigma1*dsigma2 + 131965964*N**2*dsigma2**2 + 768640131*N**2*sigma1**4 + 1537280262*N**2*sigma1**3*sigma2 + 2305920393*N**2*sigma1**2*sigma2**2 + 1537280262*N**2*sigma1*sigma2**3 + 768640131*N**2*sigma2**4 + 527863856*N*Nd*dsigma1*sigma1 + 263931928*N*Nd*dsigma1*sigma2 + 263931928*N*Nd*dsigma2*sigma1 + 527863856*N*Nd*dsigma2*sigma2 + 263931928*N*Ndd*sigma1**2 + 263931928*N*Ndd*sigma1*sigma2 + 263931928*N*Ndd*sigma2**2 - 659829820*Nd**2*sigma1**2 - 659829820*Nd**2*sigma1*sigma2 - 659829820*Nd**2*sigma2**2)*log(2)/(160000000*pi**2*N**6)",
+    "is_identically_zero": false,
+    "isotropic_limit_zero": true,
+    "contains_high_derivatives": true
+  },
+  "numeric_replay_table": [
+    {
+      "sample_id": "non_gb_lapse_sample_0",
+      "weighted_lapse_EL": "-1215942234279*log(2)/(25600000000000*pi**2)",
+      "is_zero": false
+    },
+    {
+      "sample_id": "non_gb_lapse_sample_1",
+      "weighted_lapse_EL": "-6858736020967*log(2)/(36700160000000*pi**2)",
+      "is_zero": false
+    }
+  ],
+  "numeric_replay_l2_norm": 0.013542345799315066,
+  "gatekeeper_checks": {
+    "prerequisites_present": true,
+    "non_gb_operator_nonzero": true,
+    "isotropic_limit_zero": true,
+    "high_derivatives_present": true,
+    "numeric_replay_nonzero_norm": true,
+    "obstruction_witness_passed": true
+  },
+  "result_kind": "PASS_NON_GB_LAPSE_OBSTRUCTION_WITNESS",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "obstruction_tags": [
+    "STRICT_NON_GB_CURVATURE_SQUARED_LAPSE_RESIDUAL_NONZERO",
+    "ANISOTROPIC_HIGH_DERIVATIVE_TERMS_PERSIST",
+    "GLOBAL_COUNTERTERM_BRIDGE_STILL_OPEN"
+  ],
+  "false_pass_guard": "P1985 exports only the non-GB lapse residual witness; it does not close spatial EOM, background-independence, PO2/PO3, Cutkosky, or QW-2191.",
+  "next_honest_step": "Project this strict non-GB lapse residual onto full Bianchi-I spatial EOM and test whether any admissible strict selector/provider class can cancel it without violating QW-2191 or kernel-split guardrails.",
+  "lay_explanation": "Po zważeniu składników R^2, Ricci^2 i Riemann^2 prawdziwymi współczynnikami strict zostaje niezerowa reszta w równaniu lapse dla anizotropii. To znaczy, że sam trik Gaussa-Bonneta nie wystarcza i przeszkoda jest realna.",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0"
+  }
+}

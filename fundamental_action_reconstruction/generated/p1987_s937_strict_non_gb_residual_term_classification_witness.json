@@ -1,0 +1,73 @@
+{
+  "ledger_id": "P1987_S937_STRICT_NON_GB_RESIDUAL_TERM_CLASSIFICATION_WITNESS",
+  "packet_id": "P1987",
+  "stage_id": "S937",
+  "produced_by": "p1987_s937_strict_non_gb_residual_term_classification_witness.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only",
+  "depends_on": {
+    "p1986_present": true,
+    "p1985_present": true
+  },
+  "residual_expression": "-V*(1048759758*H**2*N**2*sigma1**2 + 1048759758*H**2*N**2*sigma1*sigma2 + 1048759758*H**2*N**2*sigma2**2 - 1490968956*H*N**2*dsigma1*sigma1 - 745484478*H*N**2*dsigma1*sigma2 - 745484478*H*N**2*dsigma2*sigma1 - 1490968956*H*N**2*dsigma2*sigma2 + 791795784*H*N*Nd*sigma1**2 + 791795784*H*N*Nd*sigma1*sigma2 + 791795784*H*N*Nd*sigma2**2 + 699173172*Hd*N**2*sigma1**2 + 699173172*Hd*N**2*sigma1*sigma2 + 699173172*Hd*N**2*sigma2**2 - 263931928*N**2*d2sigma1*sigma1 - 131965964*N**2*d2sigma1*sigma2 - 131965964*N**2*d2sigma2*sigma1 - 263931928*N**2*d2sigma2*sigma2 + 131965964*N**2*dsigma1**2 + 131965964*N**2*dsigma1*dsigma2 + 131965964*N**2*dsigma2**2 + 768640131*N**2*sigma1**4 + 1537280262*N**2*sigma1**3*sigma2 + 2305920393*N**2*sigma1**2*sigma2**2 + 1537280262*N**2*sigma1*sigma2**3 + 768640131*N**2*sigma2**4 + 527863856*N*Nd*dsigma1*sigma1 + 263931928*N*Nd*dsigma1*sigma2 + 263931928*N*Nd*dsigma2*sigma1 + 527863856*N*Nd*dsigma2*sigma2 + 263931928*N*Ndd*sigma1**2 + 263931928*N*Ndd*sigma1*sigma2 + 263931928*N*Ndd*sigma2**2 - 659829820*Nd**2*sigma1**2 - 659829820*Nd**2*sigma1*sigma2 - 659829820*Nd**2*sigma2**2)*log(2)/(160000000*pi**2*N**6)",
+  "scaled_expression_N6_over_V": "-(1048759758*H**2*N**2*sigma1**2 + 1048759758*H**2*N**2*sigma1*sigma2 + 1048759758*H**2*N**2*sigma2**2 - 1490968956*H*N**2*dsigma1*sigma1 - 745484478*H*N**2*dsigma1*sigma2 - 745484478*H*N**2*dsigma2*sigma1 - 1490968956*H*N**2*dsigma2*sigma2 + 791795784*H*N*Nd*sigma1**2 + 791795784*H*N*Nd*sigma1*sigma2 + 791795784*H*N*Nd*sigma2**2 + 699173172*Hd*N**2*sigma1**2 + 699173172*Hd*N**2*sigma1*sigma2 + 699173172*Hd*N**2*sigma2**2 - 263931928*N**2*d2sigma1*sigma1 - 131965964*N**2*d2sigma1*sigma2 - 131965964*N**2*d2sigma2*sigma1 - 263931928*N**2*d2sigma2*sigma2 + 131965964*N**2*dsigma1**2 + 131965964*N**2*dsigma1*dsigma2 + 131965964*N**2*dsigma2**2 + 768640131*N**2*sigma1**4 + 1537280262*N**2*sigma1**3*sigma2 + 2305920393*N**2*sigma1**2*sigma2**2 + 1537280262*N**2*sigma1*sigma2**3 + 768640131*N**2*sigma2**4 + 527863856*N*Nd*dsigma1*sigma1 + 263931928*N*Nd*dsigma1*sigma2 + 263931928*N*Nd*dsigma2*sigma1 + 527863856*N*Nd*dsigma2*sigma2 + 263931928*N*Ndd*sigma1**2 + 263931928*N*Ndd*sigma1*sigma2 + 263931928*N*Ndd*sigma2**2 - 659829820*Nd**2*sigma1**2 - 659829820*Nd**2*sigma1*sigma2 - 659829820*Nd**2*sigma2**2)*log(2)/(160000000*pi**2)",
+  "term_family_coefficients": {
+    "H2_Q": "coeff[H**2*sigma1**2]=-524379879*N**2*log(2)/(80000000*pi**2); coeff[H**2*sigma1*sigma2]=-524379879*N**2*log(2)/(80000000*pi**2); coeff[H**2*sigma2**2]=-524379879*N**2*log(2)/(80000000*pi**2)",
+    "H_Qd": "coeff[H*dsigma1*sigma1]=372742239*N**2*log(2)/(40000000*pi**2); coeff[H*dsigma2*sigma1]=372742239*N**2*log(2)/(80000000*pi**2); coeff[H*dsigma1*sigma2]=372742239*N**2*log(2)/(80000000*pi**2); coeff[H*dsigma2*sigma2]=372742239*N**2*log(2)/(40000000*pi**2)",
+    "Hd_Q": "coeff[Hd*sigma1**2]=-174793293*N**2*log(2)/(40000000*pi**2); coeff[Hd*sigma1*sigma2]=-174793293*N**2*log(2)/(40000000*pi**2); coeff[Hd*sigma2**2]=-174793293*N**2*log(2)/(40000000*pi**2)",
+    "Q2": "coeff[sigma1**4]=-768640131*N**2*log(2)/(160000000*pi**2); coeff[sigma1**3*sigma2]=-768640131*N**2*log(2)/(80000000*pi**2); coeff[sigma1**2*sigma2**2]=-2305920393*N**2*log(2)/(160000000*pi**2); coeff[sigma1*sigma2**3]=-768640131*N**2*log(2)/(80000000*pi**2); coeff[sigma2**4]=-768640131*N**2*log(2)/(160000000*pi**2)",
+    "d2sigma_sigma": "coeff[d2sigma1*sigma1]=32991491*N**2*log(2)/(20000000*pi**2); coeff[d2sigma1*sigma2]=32991491*N**2*log(2)/(40000000*pi**2); coeff[d2sigma2*sigma1]=32991491*N**2*log(2)/(40000000*pi**2); coeff[d2sigma2*sigma2]=32991491*N**2*log(2)/(20000000*pi**2)",
+    "dsigma_sq": "coeff[dsigma1**2]=-32991491*N**2*log(2)/(40000000*pi**2); coeff[dsigma1*dsigma2]=-32991491*N**2*log(2)/(40000000*pi**2); coeff[dsigma2**2]=-32991491*N**2*log(2)/(40000000*pi**2)",
+    "Ndd_sigma_sq": "coeff[Ndd*sigma1**2]=-32991491*N*log(2)/(20000000*pi**2); coeff[Ndd*sigma1*sigma2]=-32991491*N*log(2)/(20000000*pi**2); coeff[Ndd*sigma2**2]=-32991491*N*log(2)/(20000000*pi**2)",
+    "Nd2_sigma_sq": "coeff[Nd**2*sigma1**2]=32991491*log(2)/(8000000*pi**2); coeff[Nd**2*sigma1*sigma2]=32991491*log(2)/(8000000*pi**2); coeff[Nd**2*sigma2**2]=32991491*log(2)/(8000000*pi**2)"
+  },
+  "term_family_nonzero_flags": {
+    "H2_Q": true,
+    "H_Qd": true,
+    "Hd_Q": true,
+    "Q2": true,
+    "d2sigma_sigma": true,
+    "dsigma_sq": true,
+    "Ndd_sigma_sq": true,
+    "Nd2_sigma_sq": true
+  },
+  "anisotropy_order_presence": {
+    "order2_present": true,
+    "order3_present": false,
+    "order4_present": true
+  },
+  "numeric_probe": {
+    "sample": {
+      "N": "1",
+      "Nd": "1/20",
+      "Ndd": "-1/200",
+      "V": "1",
+      "H": "1",
+      "Hd": "1/10",
+      "sigma1": "1/10",
+      "sigma2": "-1/20",
+      "dsigma1": "1/100",
+      "dsigma2": "-1/200",
+      "d2sigma1": "1/1000",
+      "d2sigma2": "-1/2000"
+    },
+    "residual_value": "-1215942234279*log(2)/(25600000000000*pi**2)",
+    "l2_norm": 0.003335789933458249
+  },
+  "gatekeeper_checks": {
+    "key_term_families_nonzero": true,
+    "anisotropy_orders_2_and_4_present": true,
+    "order3_present": false,
+    "numeric_probe_nonzero": true
+  },
+  "result_kind": "PASS_NON_GB_TERM_CLASSIFICATION_WITNESS",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "next_honest_step": "Project the classified term families onto full spatial Bianchi-I EOM equations and test if any strict admissible provider can cancel each family without violating QW-2191.",
+  "lay_explanation": "Rozpisaliśmy pozostały błąd na klasy składników. To pokazuje dokładnie, które typy wyrazów (np. z pochodnymi ścinania i lapse) blokują domknięcie i gdzie trzeba celować następnym dowodem.",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0"
+  }
+}

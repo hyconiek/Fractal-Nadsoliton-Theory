@@ -1,0 +1,100 @@
+{
+  "ledger_id": "P1996_S946_STRICT_CUTKOSKY_BACKEND_INJECTED_DELTA_OPT_WITNESS",
+  "packet_id": "P1996",
+  "stage_id": "S946",
+  "produced_by": "p1996_s946_strict_cutkosky_backend_injected_delta_opt_witness.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only",
+  "depends_on": {
+    "p1853_present": true,
+    "p1995_present": true
+  },
+  "channel": "graviton->gauge_gauge",
+  "backend_profile": {
+    "u": "18516431*log(2)/(640*(pi**2 + 248425*log(2)))",
+    "Z1(s)": "(640*pi**2*s + 177508431*s*log(2) + 640*pi**2 + 158992000*log(2))/(640*(pi**2 + 248425*log(2))*(s + 1))",
+    "xi": "177508431*log(2)/(16000*(9937*log(2) + 40000*pi**2))"
+  },
+  "formulas": {
+    "ImM": "9606436630529761*s**2*(640*pi**2*s + 177508431*s*log(2) + 640*pi**2 + 158992000*log(2))**2*log(2)**2/(2684354560000000000000000*pi**5*(pi**2 + 248425*log(2))**2*(s + 1)**2)",
+    "CutSum": "9606436630529761*s**2*(640*pi**2*s + 177508431*s*log(2) + 640*pi**2 + 158992000*log(2))**2*(158992000*s**2*log(2) + 640000000*pi**2*s**2 + 495492431*s*log(2) + 1280000000*pi**2*s + 158992000*log(2) + 640000000*pi**2)*log(2)**2/(42949672960000000000000000000*pi**5*(pi**2 + 248425*log(2))**2*(s + 1)**4*(9937*log(2) + 40000*pi**2))",
+    "Delta_opt": "-1705223493786264573914991*s**3*(640*pi**2*s + 177508431*s*log(2) + 640*pi**2 + 158992000*log(2))**2*log(2)**3/(42949672960000000000000000000*pi**5*(pi**2 + 248425*log(2))**2*(s + 1)**4*(9937*log(2) + 40000*pi**2))"
+  },
+  "grid_table": [
+    {
+      "s": "1/2",
+      "ImM": 6.208734569075502e-07,
+      "CutSum": 6.235149136742117e-07,
+      "Delta_opt": -2.6414567666615594e-09,
+      "abs_delta": 2.6414567666615594e-09
+    },
+    {
+      "s": "1",
+      "ImM": 2.5771632176922702e-06,
+      "CutSum": 2.589498095737839e-06,
+      "Delta_opt": -1.2334878045568387e-08,
+      "abs_delta": 1.2334878045568387e-08
+    },
+    {
+      "s": "2",
+      "ImM": 1.0690266057094344e-05,
+      "CutSum": 1.0735746944221605e-05,
+      "Delta_opt": -4.548088712726037e-08,
+      "abs_delta": 4.548088712726037e-08
+    },
+    {
+      "s": "4",
+      "ImM": 4.400220102771994e-05,
+      "CutSum": 4.413698781149831e-05,
+      "Delta_opt": -1.34786783778366e-07,
+      "abs_delta": 1.34786783778366e-07
+    },
+    {
+      "s": "8",
+      "ImM": 0.0001793579582485868,
+      "CutSum": 0.00017969709788213183,
+      "Delta_opt": -3.391396335450588e-07,
+      "abs_delta": 3.391396335450588e-07
+    }
+  ],
+  "delta_stats": {
+    "max_abs": 3.391396335450588e-07,
+    "l2": 3.6798207256132e-07
+  },
+  "residue_table": [
+    {
+      "pole": "1/2",
+      "residue": 3.120850385647454e-05,
+      "positive": true
+    },
+    {
+      "pole": "1",
+      "residue": 0.0001295423525088619,
+      "positive": true
+    },
+    {
+      "pole": "2",
+      "residue": 0.0005373513809582068,
+      "positive": true
+    }
+  ],
+  "gatekeeper_checks": {
+    "p1853_present": true,
+    "p1995_present": true,
+    "backend_profile_injected": true,
+    "nonzero_delta_detected": true,
+    "residue_positive": true,
+    "delta_norm_bounded": true
+  },
+  "result_kind": "PASS_BACKEND_INJECTED_DELTA_OPT_WITNESS",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "false_pass_guard": "P1996 injects first backend profile but still uses proxy channel model; not theorem-grade full dressed Cutkosky closure.",
+  "next_honest_step": "Promote this backend profile into full channel amplitude/discontinuity solver with explicit state sum and verify Delta_opt=0 or quantified obstruction per channel.",
+  "lay_explanation": "Podmieniliśmy sztuczny perturbator na profil oparty bezpośrednio o współczynniki backendu. Widzimy nadal kontrolowany, ale niezerowy defekt optyczny — to wskazuje co dokładnie musi domknąć pełny solver.",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0"
+  }
+}

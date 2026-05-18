@@ -1,0 +1,116 @@
+{
+  "ledger_id": "P1993_S943_STRICT_CUTKOSKY_OPTICAL_DEFECT_BOUNDED_TABLE_WITNESS",
+  "packet_id": "P1993",
+  "stage_id": "S943",
+  "produced_by": "p1993_s943_strict_cutkosky_optical_defect_bounded_table_witness.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only",
+  "depends_on": {
+    "p1992_present": true
+  },
+  "channel": "graviton->gauge_gauge",
+  "model": {
+    "M_tree": "g_eff*s",
+    "g_eff": "98012431*log(2)/(640000000*pi**2)",
+    "rho_interval": [
+      "1/(16*pi)",
+      "1/(8*pi)"
+    ],
+    "dressing_mismatch_eps0": "1/100"
+  },
+  "optical_defect_formulas": {
+    "ImM_ref": "9606436630529761*s**2*log(2)**2/(6553600000000000000*pi**5)",
+    "Cut_lo": "951037226422446339*s**2*log(2)**2/(655360000000000000000*pi**5)",
+    "Cut_hi": "970250099683505861*s**2*log(2)**2/(327680000000000000000*pi**5)",
+    "defect_lo": "-489928268157017811*s**2*log(2)**2/(327680000000000000000*pi**5)",
+    "defect_hi": "9606436630529761*s**2*log(2)**2/(655360000000000000000*pi**5)"
+  },
+  "bounded_defect_table": [
+    {
+      "s": "1/2",
+      "defect_interval": [
+        -5.868459756012691e-07,
+        5.7533919176595015e-09
+      ],
+      "contains_zero": true,
+      "interval_width": 5.925993675189287e-07,
+      "ImM_ref": 5.753391917659502e-07
+    },
+    {
+      "s": "1",
+      "defect_interval": [
+        -2.3473839024050766e-06,
+        2.3013567670638006e-08
+      ],
+      "contains_zero": true,
+      "interval_width": 2.3703974700757147e-06,
+      "ImM_ref": 2.3013567670638007e-06
+    },
+    {
+      "s": "2",
+      "defect_interval": [
+        -9.389535609620306e-06,
+        9.205427068255202e-08
+      ],
+      "contains_zero": true,
+      "interval_width": 9.481589880302859e-06,
+      "ImM_ref": 9.205427068255203e-06
+    },
+    {
+      "s": "4",
+      "defect_interval": [
+        -3.7558142438481225e-05,
+        3.682170827302081e-07
+      ],
+      "contains_zero": true,
+      "interval_width": 3.7926359521211435e-05,
+      "ImM_ref": 3.682170827302081e-05
+    },
+    {
+      "s": "8",
+      "defect_interval": [
+        -0.0001502325697539249,
+        1.4728683309208324e-06
+      ],
+      "contains_zero": true,
+      "interval_width": 0.00015170543808484574,
+      "ImM_ref": 0.00014728683309208325
+    }
+  ],
+  "proxy_residue_table": [
+    {
+      "pole": "1/2",
+      "proxy_residue": 2.891970205078717e-05,
+      "positive": true
+    },
+    {
+      "pole": "1",
+      "proxy_residue": 0.00011567880820314868,
+      "positive": true
+    },
+    {
+      "pole": "2",
+      "proxy_residue": 0.0004627152328125947,
+      "positive": true
+    }
+  ],
+  "interval_width_l2": 0.0001566806280172566,
+  "gatekeeper_checks": {
+    "p1992_present": true,
+    "optical_defect_bounded_table_exported": true,
+    "all_intervals_contain_zero": true,
+    "proxy_residue_positive_on_selected_poles": true,
+    "interval_width_bounded": true
+  },
+  "result_kind": "PASS_OPTICAL_DEFECT_BOUNDED_TABLE_WITNESS",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "false_pass_guard": "P1993 is a bounded defect proxy table, not full dressed Cutkosky theorem closure.",
+  "next_honest_step": "Import first dressed channel amplitude and replace bounded epsilon envelope by explicit loop/discontinuity evaluation to test Delta_opt(s)=0 directly.",
+  "lay_explanation": "Zamiast jednego numeru błędu mamy teraz przedziały błędu optycznego dla różnych energii i kontrolę dodatniości residuów. To bardziej rygorystyczny monitoring, ale jeszcze nie pełne zamknięcie unitarności.",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0"
+  }
+}

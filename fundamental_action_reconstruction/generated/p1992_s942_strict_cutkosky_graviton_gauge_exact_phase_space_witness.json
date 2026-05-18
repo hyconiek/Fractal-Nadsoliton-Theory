@@ -1,0 +1,91 @@
+{
+  "ledger_id": "P1992_S942_STRICT_CUTKOSKY_GRAVITON_GAUGE_EXACT_PHASE_SPACE_WITNESS",
+  "packet_id": "P1992",
+  "stage_id": "S942",
+  "produced_by": "p1992_s942_strict_cutkosky_graviton_gauge_exact_phase_space_witness.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only",
+  "depends_on": {
+    "p1853_present": true,
+    "p1858_present": true
+  },
+  "channel": "graviton->gauge_gauge",
+  "strict_proxy_model": {
+    "definition": "M_tree(s)=g_eff*s, g_eff:=a_R2+0.5*a_Ric2 (strict B1)",
+    "g_eff": "98012431*log(2)/(640000000*pi**2)",
+    "M_tree": "98012431*s*log(2)/(640000000*pi**2)"
+  },
+  "exact_phase_space_integral": {
+    "rho_lo": "1/(16*pi)",
+    "rho_hi": "1/(8*pi)",
+    "ImM_lo_formula": "9606436630529761*s**2*log(2)**2/(6553600000000000000*pi**5)",
+    "ImM_hi_formula": "9606436630529761*s**2*log(2)**2/(3276800000000000000*pi**5)",
+    "optical_identity_form": "ImM(s)=rho2(s)|M_tree(s)|^2 (massless 2-body COM)"
+  },
+  "bounded_uncertainty_table": [
+    {
+      "s": "1/2",
+      "ImM_lo": "9606436630529761*log(2)**2/(26214400000000000000*pi**5)",
+      "ImM_hi": "9606436630529761*log(2)**2/(13107200000000000000*pi**5)",
+      "ImM_lo_float": 5.753391917659502e-07,
+      "ImM_hi_float": 1.1506783835319004e-06,
+      "positive_band": true
+    },
+    {
+      "s": "1",
+      "ImM_lo": "9606436630529761*log(2)**2/(6553600000000000000*pi**5)",
+      "ImM_hi": "9606436630529761*log(2)**2/(3276800000000000000*pi**5)",
+      "ImM_lo_float": 2.3013567670638007e-06,
+      "ImM_hi_float": 4.6027135341276015e-06,
+      "positive_band": true
+    },
+    {
+      "s": "2",
+      "ImM_lo": "9606436630529761*log(2)**2/(1638400000000000000*pi**5)",
+      "ImM_hi": "9606436630529761*log(2)**2/(819200000000000000*pi**5)",
+      "ImM_lo_float": 9.205427068255203e-06,
+      "ImM_hi_float": 1.8410854136510406e-05,
+      "positive_band": true
+    },
+    {
+      "s": "4",
+      "ImM_lo": "9606436630529761*log(2)**2/(409600000000000000*pi**5)",
+      "ImM_hi": "9606436630529761*log(2)**2/(204800000000000000*pi**5)",
+      "ImM_lo_float": 3.682170827302081e-05,
+      "ImM_hi_float": 7.364341654604162e-05,
+      "positive_band": true
+    },
+    {
+      "s": "8",
+      "ImM_lo": "9606436630529761*log(2)**2/(102400000000000000*pi**5)",
+      "ImM_hi": "9606436630529761*log(2)**2/(51200000000000000*pi**5)",
+      "ImM_lo_float": 0.00014728683309208325,
+      "ImM_hi_float": 0.0002945736661841665,
+      "positive_band": true
+    }
+  ],
+  "uncertainty_width_l2": 0.0001521171145798608,
+  "pole_residue_certificate": {
+    "rho_lo": "1/(16*pi)",
+    "rho_hi": "1/(8*pi)",
+    "g_eff": "98012431*log(2)/(640000000*pi**2)"
+  },
+  "gatekeeper_checks": {
+    "p1853_coefficients_present": true,
+    "p1858_seed_proxy_present": true,
+    "exact_phase_space_formula_exported": true,
+    "positive_imaginary_part_band_on_grid": true,
+    "uncertainty_band_nonzero_and_bounded": true
+  },
+  "result_kind": "PASS_EXACT_PHASE_SPACE_BOUNDED_UNITARITY_PROXY_WITNESS",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "false_pass_guard": "P1992 upgrades phase-space integration exactness in the strict proxy channel only; it is not full dressed-propagator Cutkosky closure nor global UR_link theorem.",
+  "next_honest_step": "Replace proxy M_tree with dressed amplitude export and verify channelwise optical defect ImM-CutSum=0 including residue positivity for each physical pole.",
+  "lay_explanation": "Policzyliśmy dokładnie całkę fazową dla prostego modelu kanału graviton->gauge_gauge i pokazaliśmy dodatni, kontrolowany przedział części urojonej amplitudy. To mocniejszy krok niż sam skan znaków, ale jeszcze nie pełny dowód unitarności.",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0"
+  }
+}
