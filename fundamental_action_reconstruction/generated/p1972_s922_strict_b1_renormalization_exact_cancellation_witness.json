@@ -1,0 +1,237 @@
+{
+  "ledger_id": "P1972_S922_STRICT_B1_RENORMALIZATION_EXACT_CANCELLATION_WITNESS",
+  "packet_id": "P1972",
+  "stage_id": "S922",
+  "produced_by": "p1972_s922_strict_b1_renormalization_exact_cancellation_witness.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only",
+  "background_family_id": "background_family_B1",
+  "index_convention_id": "P1850_curvature_scalar_basis_R2_Ric2_Riem2_GB",
+  "boundary_clause_id": "MSbar_B1_seed_d_equals_4_minus_2epsilon_no_boundary_terms_added",
+  "component_basis": [
+    "R2",
+    "Ric2",
+    "Riem2",
+    "G_GB"
+  ],
+  "result_kind": "PASS_ZERO",
+  "status": "PASS_ZERO_B1_COUNTERTERM_CANCELLATION_WITH_TRACE",
+  "depends_on": {
+    "p1850_present": true,
+    "p1853_present": true
+  },
+  "input_hashes": {
+    "p1850_json_sha256": "a4250079ace877d24e63f59ffa09b6a5f2c047696305b75fd7562a10c067c61a",
+    "p1853_json_sha256": "f789c624a66c9610e6254fb8be3bee9cf94cfe552ab8793b98058b0fb655dbb1"
+  },
+  "strict_kernel_tuple": {
+    "kernel": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+    "omega": "743/4000",
+    "phi": "13/80",
+    "beta": "1",
+    "eta": "9/5",
+    "alpha_geo_strict": "4*log(2)",
+    "legacy_role_transfer_used": false
+  },
+  "computed_divergence_coefficients": {
+    "a_R2": {
+      "symbolic_functional": "alpha_geo_strict*(2*beta + eta)*(omega**2 + phi**2)/(32*pi**2)",
+      "strict_tuple_value": "18516431*log(2)/(640000000*pi**2)",
+      "numeric_30d": "0.00203190323987715807173068650129",
+      "positive_numeric": true
+    },
+    "a_Ric2": {
+      "symbolic_functional": "alpha_geo_strict*(beta + 1)*(eta*omega + phi)/(16*pi**2)",
+      "strict_tuple_value": "9937*log(2)/(40000*pi**2)",
+      "numeric_30d": "0.0174470101670537435718905715800",
+      "positive_numeric": true
+    },
+    "a_Riem2": {
+      "symbolic_functional": "alpha_geo_strict*beta*eta*(omega**2 + omega*phi + phi**2)/(16*pi**2)",
+      "strict_tuple_value": "13117491*log(2)/(320000000*pi**2)",
+      "numeric_30d": "0.00287889955272260211608863874517",
+      "positive_numeric": true
+    },
+    "a_GB": {
+      "symbolic_functional": "alpha_geo_strict*(eta - 1)*(omega - phi)**2/(16*pi**2)",
+      "strict_tuple_value": "8649*log(2)/(80000000*pi**2)",
+      "numeric_30d": "0.00000759279414988667747576137433812",
+      "positive_numeric": true
+    }
+  },
+  "p1853_backend_consistency": {
+    "a_R2": {
+      "p1972_symbolic": "18516431*log(2)/(640000000*pi**2)",
+      "p1853_symbolic": "18516431*log(2)/(640000000*pi**2)",
+      "match": true
+    },
+    "a_Ric2": {
+      "p1972_symbolic": "9937*log(2)/(40000*pi**2)",
+      "p1853_symbolic": "9937*log(2)/(40000*pi**2)",
+      "match": true
+    },
+    "a_Riem2": {
+      "p1972_symbolic": "13117491*log(2)/(320000000*pi**2)",
+      "p1853_symbolic": "13117491*log(2)/(320000000*pi**2)",
+      "match": true
+    },
+    "a_GB": {
+      "p1972_symbolic": "8649*log(2)/(80000000*pi**2)",
+      "p1853_symbolic": "8649*log(2)/(80000000*pi**2)",
+      "match": true
+    }
+  },
+  "counterterm_map": {
+    "delta_c_gr_1": "-18516431*log(2)/(640000000*pi**2*epsilon)",
+    "delta_c_gr_2": "-9937*log(2)/(40000*pi**2*epsilon)",
+    "delta_c_gr_3": "-13117491*log(2)/(320000000*pi**2*epsilon)",
+    "delta_c_gr_4": "-8649*log(2)/(80000000*pi**2*epsilon)"
+  },
+  "algebraic_cancellation": {
+    "gamma_1loop_div_density": "8649*O_GB*log(2)/(80000000*pi**2*epsilon) + 18516431*O_R2*log(2)/(640000000*pi**2*epsilon) + 9937*O_Ric2*log(2)/(40000*pi**2*epsilon) + 13117491*O_Riem2*log(2)/(320000000*pi**2*epsilon)",
+    "counterterm_density": "-8649*O_GB*log(2)/(80000000*pi**2*epsilon) - 18516431*O_R2*log(2)/(640000000*pi**2*epsilon) - 9937*O_Ric2*log(2)/(40000*pi**2*epsilon) - 13117491*O_Riem2*log(2)/(320000000*pi**2*epsilon)",
+    "renormalized_divergent_density_residual": "0",
+    "residual_is_zero": true
+  },
+  "residual_vector": [
+    "0",
+    "0",
+    "0",
+    "0"
+  ],
+  "obstruction_tags": [],
+  "probe_replay_table": [
+    {
+      "probe_id": "b1_ct_probe_0",
+      "operator_values": {
+        "R2": "29/7",
+        "Ric2": "23/7",
+        "Riem2": "8/7",
+        "G_GB": "25/7"
+      },
+      "epsilon": "1/13",
+      "exact_residual": "0",
+      "exact_zero": true,
+      "scipy_l2_norm_of_coefficient_residual_vector": 0.0
+    },
+    {
+      "probe_id": "b1_ct_probe_1",
+      "operator_values": {
+        "R2": "8/7",
+        "Ric2": "30/7",
+        "Riem2": "22/7",
+        "G_GB": "2/7"
+      },
+      "epsilon": "2/13",
+      "exact_residual": "0",
+      "exact_zero": true,
+      "scipy_l2_norm_of_coefficient_residual_vector": 0.0
+    },
+    {
+      "probe_id": "b1_ct_probe_2",
+      "operator_values": {
+        "R2": "24/7",
+        "Ric2": "13/7",
+        "Riem2": "18/7",
+        "G_GB": "1"
+      },
+      "epsilon": "3/13",
+      "exact_residual": "0",
+      "exact_zero": true,
+      "scipy_l2_norm_of_coefficient_residual_vector": 0.0
+    },
+    {
+      "probe_id": "b1_ct_probe_3",
+      "operator_values": {
+        "R2": "11/7",
+        "Ric2": "10/7",
+        "Riem2": "19/7",
+        "G_GB": "3"
+      },
+      "epsilon": "4/13",
+      "exact_residual": "0",
+      "exact_zero": true,
+      "scipy_l2_norm_of_coefficient_residual_vector": 0.0
+    },
+    {
+      "probe_id": "b1_ct_probe_4",
+      "operator_values": {
+        "R2": "25/7",
+        "Ric2": "23/7",
+        "Riem2": "6/7",
+        "G_GB": "16/7"
+      },
+      "epsilon": "5/13",
+      "exact_residual": "0",
+      "exact_zero": true,
+      "scipy_l2_norm_of_coefficient_residual_vector": 0.0
+    },
+    {
+      "probe_id": "b1_ct_probe_5",
+      "operator_values": {
+        "R2": "17/7",
+        "Ric2": "1",
+        "Riem2": "20/7",
+        "G_GB": "20/7"
+      },
+      "epsilon": "6/13",
+      "exact_residual": "0",
+      "exact_zero": true,
+      "scipy_l2_norm_of_coefficient_residual_vector": 0.0
+    },
+    {
+      "probe_id": "b1_ct_probe_6",
+      "operator_values": {
+        "R2": "26/7",
+        "Ric2": "2",
+        "Riem2": "2/7",
+        "G_GB": "8/7"
+      },
+      "epsilon": "7/13",
+      "exact_residual": "0",
+      "exact_zero": true,
+      "scipy_l2_norm_of_coefficient_residual_vector": 0.0
+    },
+    {
+      "probe_id": "b1_ct_probe_7",
+      "operator_values": {
+        "R2": "9/7",
+        "Ric2": "4",
+        "Riem2": "10/7",
+        "G_GB": "29/7"
+      },
+      "epsilon": "8/13",
+      "exact_residual": "0",
+      "exact_zero": true,
+      "scipy_l2_norm_of_coefficient_residual_vector": 0.0
+    }
+  ],
+  "gatekeeper_checks": {
+    "schema_minimal_fields_present": true,
+    "all_four_coefficients_computed": true,
+    "p1853_consistency_all_match": true,
+    "symbolic_residual_zero": true,
+    "residual_vector_zero": true,
+    "rational_probe_residuals_zero": true,
+    "positive_coefficients_on_strict_tuple": true
+  },
+  "theorem_export": {
+    "licensed_statement": "On background_family_B1 and the P1850 curvature-operator basis, the MSbar_B1 counterterm map delta_c_gr_i=-(1/epsilon)*a_i cancels the strict one-loop divergent density exactly: Gamma_div_B1+Gamma_ct_B1=0.",
+    "not_licensed": [
+      "universal background-independent renormalization closure beyond B1",
+      "BRST anomaly cancellation",
+      "Cutkosky/unitarity closure",
+      "QW-2191 selector discharge",
+      "ToE closure"
+    ]
+  },
+  "false_pass_guard": "PASS_ZERO applies only to exact B1 projected-basis counterterm cancellation for the declared P1850 coefficient functionals; all cross-gate and global theory closures remain open.",
+  "next_honest_step": "Propagate the finite-part scheme lock from this B1 PASS_ZERO ledger into the FRW/Bianchi-I transport matrix, then separately compute BRST k5 and full Cutkosky dressed residues without treating this renormalization pass as ToE closure.",
+  "lay_explanation": "Dla jednej zadeklarowanej rodziny tła pokazaliśmy algebraicznie, że cztery rozbieżności kwantowe są dokładnie kasowane przez cztery odpowiadające kontrterminy. To zamyka lokalny rachunek sprzątania nieskończoności w tej bazie, ale nie dowodzi jeszcze całej teorii ani unitarności.",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0"
+  }
+}

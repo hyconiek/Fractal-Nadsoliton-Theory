@@ -1,0 +1,508 @@
+{
+  "ledger_id": "P1976_S926_STRICT_LTOTAL_ANISOTROPIC_PROVIDER_NONEXPORT_AUDIT",
+  "packet_id": "P1976",
+  "stage_id": "S926",
+  "produced_by": "p1976_s926_strict_ltotal_anisotropic_provider_nonexport_audit.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only",
+  "depends_on": {
+    "p1846_present": true,
+    "p1907_present": true,
+    "p1975_present": true
+  },
+  "target_obligation_from_p1975": {
+    "rho_required": "-sigma1**2 - sigma1*sigma2 - sigma2**2",
+    "q_shear": "sigma1**2 + sigma1*sigma2 + sigma2**2",
+    "rho_required_equals_minus_q_shear": true,
+    "required_provider_minimum": "An exported strict L_total/EOM term with explicit trace-free shear/anisotropic carrier and the P1975 Delta_T component structure."
+  },
+  "audit_scope": {
+    "registries": [
+      "P1846 full_lagrangian_non_skeleton_term_sheet.L_total_termwise",
+      "P1907 full_lagrangian_term_registry_non_skeleton"
+    ],
+    "terms_audited": 38,
+    "shear_tokens": [
+      "sigma1",
+      "sigma2",
+      "sigma_1",
+      "sigma_2",
+      "shear",
+      "anisotropic",
+      "bianchi",
+      "pi_ij",
+      "piij",
+      "rho_required",
+      "delta_t"
+    ],
+    "strict_source_tokens": [
+      "k_strict",
+      "c_gr",
+      "z_",
+      "xi_h",
+      "kappa",
+      "lambda",
+      "y_f",
+      "m_chi"
+    ]
+  },
+  "term_audit_rows": [
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_GR",
+      "term_id": "L_GR[0]",
+      "term": "(M_Pl^2/2) * R",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_GR",
+      "term_id": "L_GR[1]",
+      "term": "c_gr_1 * R^2 + c_gr_2 * R_{mu nu}R^{mu nu} + c_gr_3 * R_{mu nu rho sigma}R^{mu nu rho sigma}",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [
+        "c_gr"
+      ],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_GR",
+      "term_id": "L_GR[2]",
+      "term": "c_gr_4 * G_{GB}",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [
+        "c_gr"
+      ],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_gauge",
+      "term_id": "L_gauge[0]",
+      "term": "-(1/4) Z_A F^A_{mu nu}F_A^{mu nu}",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [
+        "z_"
+      ],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_gauge",
+      "term_id": "L_gauge[1]",
+      "term": "-(1/4) Z_W F^I_{mu nu}F_I^{mu nu}",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [
+        "z_"
+      ],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_gauge",
+      "term_id": "L_gauge[2]",
+      "term": "-(1/4) Z_G F^a_{mu nu}F_a^{mu nu}",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [
+        "z_"
+      ],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_fermion",
+      "term_id": "L_fermion[0]",
+      "term": "sum_f i Z_psi_f * bar(psi_f) gamma^mu D_mu psi_f",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [
+        "z_"
+      ],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_fermion",
+      "term_id": "L_fermion[1]",
+      "term": "-sum_f m_f * bar(psi_f)psi_f",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_Higgs",
+      "term_id": "L_Higgs[0]",
+      "term": "Z_H (D_mu H)^dagger(D^mu H)",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [
+        "z_"
+      ],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_Higgs",
+      "term_id": "L_Higgs[1]",
+      "term": "-mu_H2 (H^dagger H)",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_Higgs",
+      "term_id": "L_Higgs[2]",
+      "term": "-lambda_H (H^dagger H)^2",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [
+        "lambda"
+      ],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_Higgs",
+      "term_id": "L_Higgs[3]",
+      "term": "-xi_HR H^dagger H R",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [
+        "xi_h"
+      ],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_mix",
+      "term_id": "L_mix[0]",
+      "term": "(1/2) Z_chi (partial_mu chi)(partial^mu chi)",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [
+        "z_"
+      ],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_mix",
+      "term_id": "L_mix[1]",
+      "term": "-(1/2) m_chi^2 chi^2",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [
+        "m_chi"
+      ],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_mix",
+      "term_id": "L_mix[2]",
+      "term": "-kappa_Hchi chi(H^dagger H)",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [
+        "kappa"
+      ],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_int",
+      "term_id": "L_int[0]",
+      "term": "-sum_f y_f bar(psi_L,f) H psi_R,f + h.c.",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [
+        "y_f"
+      ],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_int",
+      "term_id": "L_int[1]",
+      "term": "-sum_J g_J J_J^mu A^J_mu",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_int",
+      "term_id": "L_int[2]",
+      "term": "-sum_n c_mix_n O_mix_n/Lambda^{n-4}",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [
+        "lambda"
+      ],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_covariant",
+      "term_id": "L_covariant[0]",
+      "term": "sqrt(-g) * [L_GR + L_gauge + L_fermion + L_Higgs + L_mix + L_int]",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_covariant",
+      "term_id": "L_covariant[1]",
+      "term": "spin_connection_and_tetrad_consistency_constraints",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "sm_gauge_sector",
+      "term_id": "sm_gauge_sector[0]",
+      "term": "-1/4 F^2_SU3",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "sm_gauge_sector",
+      "term_id": "sm_gauge_sector[1]",
+      "term": "-1/4 F^2_SU2",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "sm_gauge_sector",
+      "term_id": "sm_gauge_sector[2]",
+      "term": "-1/4 F^2_U1",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "sm_fermion_kinetic_sector",
+      "term_id": "sm_fermion_kinetic_sector[0]",
+      "term": "i psi_bar gamma^mu D_mu psi (all generations)",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "higgs_sector",
+      "term_id": "higgs_sector[0]",
+      "term": "|D_mu H|^2",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "higgs_sector",
+      "term_id": "higgs_sector[1]",
+      "term": "-mu_H^2 H^dagger H",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "higgs_sector",
+      "term_id": "higgs_sector[2]",
+      "term": "-lambda_H (H^dagger H)^2",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [
+        "lambda"
+      ],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "yukawa_sector",
+      "term_id": "yukawa_sector[0]",
+      "term": "-y_u qbar H_tilde u",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "yukawa_sector",
+      "term_id": "yukawa_sector[1]",
+      "term": "-y_d qbar H d",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "yukawa_sector",
+      "term_id": "yukawa_sector[2]",
+      "term": "-y_e lbar H e + h.c.",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "gravity_sector",
+      "term_id": "gravity_sector[0]",
+      "term": "(M_Pl^2/2) R",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "gravity_sector",
+      "term_id": "gravity_sector[1]",
+      "term": "Lambda",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [
+        "lambda"
+      ],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "gravity_sector",
+      "term_id": "gravity_sector[2]",
+      "term": "R^2",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "gravity_sector",
+      "term_id": "gravity_sector[3]",
+      "term": "R_{mu nu}R^{mu nu}",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "gravity_sector",
+      "term_id": "gravity_sector[4]",
+      "term": "R_{mu nu rho sigma}R^{mu nu rho sigma}",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "nonminimal_mixed_sector",
+      "term_id": "nonminimal_mixed_sector[0]",
+      "term": "-xi_H H^dagger H R",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [
+        "xi_h"
+      ],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "nonminimal_mixed_sector",
+      "term_id": "nonminimal_mixed_sector[1]",
+      "term": "dimension-6 EFT placeholders",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "note",
+      "term_id": "note",
+      "term": "Registry is explicit and non-skeleton at sector level; coefficient tables and loop-normalization witnesses still missing.",
+      "shear_token_hits": [],
+      "strict_source_token_hits": [],
+      "explicit_anisotropic_provider_candidate": false,
+      "decision": "NO_EXPLICIT_PROVIDER_MATCH"
+    }
+  ],
+  "feature_replay": {
+    "shear_token_feature_matrix_shape": [
+      38,
+      11
+    ],
+    "total_shear_token_hits": 0,
+    "max_row_l2_norm": 0.0,
+    "candidate_count": 0
+  },
+  "gatekeeper_checks": {
+    "p1975_sign_obligation_confirmed": true,
+    "no_explicit_anisotropic_provider_in_current_registries": true,
+    "audited_at_least_one_term": true,
+    "nonexport_not_universal_no_go": true
+  },
+  "result_kind": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "obstruction_tags": [
+    "STRICT_LTOTAL_ANISOTROPIC_PROVIDER_NOT_EXPORTED",
+    "P1975_NEGATIVE_RHO_OBLIGATION_STILL_UNDERIVED",
+    "BACKGROUND_INDEPENDENCE_PROVIDER_GAP_REMAINS"
+  ],
+  "theorem_export": {
+    "nonexport_statement": "In the currently exported P1846/P1907 strict L_total sector registries, no term explicitly exports a trace-free shear/anisotropic stress carrier matching the P1975 minimal Delta_T obligation.",
+    "scope_limit": "This is a current-export nonavailability audit, not a theorem that no future strict tensorial provider can be derived.",
+    "not_licensed": [
+      "global no-go theorem for all possible strict completions",
+      "background-independence closure",
+      "positive-energy anisotropic source closure",
+      "BRST or Cutkosky closure",
+      "QW-2191 selector discharge",
+      "ToE closure"
+    ]
+  },
+  "false_pass_guard": "P1976 only proves that the required anisotropic provider is not exported in the current strict L_total registries; it must not be read as a universal impossibility theorem or as background-independence closure.",
+  "next_honest_step": "Either derive a new strict tensorial shear provider from the full variational L_total (beyond the current registries) or formalize a bounded no-go theorem for positive-energy providers under the current P1846/P1907 term basis.",
+  "lay_explanation": "Sprawdziliśmy aktualną listę składników teorii strict i nie znaleźliśmy jawnego składnika, który mógłby dostarczyć potrzebne anizotropowe źródło z P1975. To nie dowodzi, że taki składnik nigdy nie może powstać, ale pokazuje, że w obecnie wyeksportowanym lagranżianie nie ma jeszcze brakującej części.",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "packet_id": "P1969",
+  "stage_id": "S919",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "route": "strict_only",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "depends_on": {
+    "p1853_present": true,
+    "p1860_present": true,
+    "p1863_present": true
+  },
+  "kernel_scope": {
+    "object_integrated": "P1860 declared projected B1 polynomial K_cut_sample promoted from point grid to angular variable x=cos(theta)",
+    "formula": "K_proj(s,x)=s*(a_R2+a_Ric2*(1+x^2))",
+    "phase_space_convention": "massless two-body dPi_2=(1/(32*pi^2))*dphi*dx, x in [-1,1], phi in [0,2*pi]",
+    "strict_kernel_parameters_source": "P1853 evaluated coefficients from K_strict with omega=0.18575, phi=0.16250, beta=1.0, eta=1.8, alpha_geo_strict=4*ln(2)"
+  },
+  "symbolic_result": {
+    "a_R2": "18516431*log(2)/(640000000*pi**2)",
+    "a_Ric2": "9937*log(2)/(40000*pi**2)",
+    "integrand": "s*(9937*(x**2 + 1)*log(2)/(40000*pi**2) + 18516431*log(2)/(640000000*pi**2))",
+    "phase_space_integral": "691517293*s*log(2)/(15360000000*pi**3)",
+    "closed_form_check_target": "691517293*s*log(2)/(15360000000*pi**3)",
+    "closed_form_residual": "0",
+    "closed_form_residual_is_zero": true
+  },
+  "numeric_integral_table": {
+    "s_grid": [
+      0.5,
+      1.0,
+      2.0,
+      4.0,
+      8.0
+    ],
+    "rows": [
+      {
+        "s": 0.5,
+        "phase_space_integral_center": 0.0005032197489407205,
+        "sympy_exact_value": 0.0005032197489407205,
+        "scipy_reported_abs_error": 5.5868615172007864e-18,
+        "abs_numeric_minus_exact": 0.0,
+        "conservative_integration_error": 2.276314664422321e-16,
+        "lower_bound_from_integration_error": 0.0005032197489404928,
+        "positive_under_integration_error_only": true
+      },
+      {
+        "s": 1.0,
+        "phase_space_integral_center": 0.001006439497881441,
+        "sympy_exact_value": 0.001006439497881441,
+        "scipy_reported_abs_error": 1.1173723034401573e-17,
+        "abs_numeric_minus_exact": 0.0,
+        "conservative_integration_error": 2.3321832795943286e-16,
+        "lower_bound_from_integration_error": 0.0010064394978812076,
+        "positive_under_integration_error_only": true
+      },
+      {
+        "s": 2.0,
+        "phase_space_integral_center": 0.002012878995762882,
+        "sympy_exact_value": 0.002012878995762882,
+        "scipy_reported_abs_error": 2.2347446068803146e-17,
+        "abs_numeric_minus_exact": 0.0,
+        "conservative_integration_error": 2.4439205099383447e-16,
+        "lower_bound_from_integration_error": 0.0020128789957626373,
+        "positive_under_integration_error_only": true
+      },
+      {
+        "s": 4.0,
+        "phase_space_integral_center": 0.004025757991525764,
+        "sympy_exact_value": 0.004025757991525764,
+        "scipy_reported_abs_error": 4.469489213760629e-17,
+        "abs_numeric_minus_exact": 0.0,
+        "conservative_integration_error": 2.667394970626376e-16,
+        "lower_bound_from_integration_error": 0.004025757991525497,
+        "positive_under_integration_error_only": true
+      },
+      {
+        "s": 8.0,
+        "phase_space_integral_center": 0.008051515983051528,
+        "sympy_exact_value": 0.008051515983051528,
+        "scipy_reported_abs_error": 8.938978427521258e-17,
+        "abs_numeric_minus_exact": 0.0,
+        "conservative_integration_error": 3.114343892002439e-16,
+        "lower_bound_from_integration_error": 0.008051515983051215,
+        "positive_under_integration_error_only": true
+      }
+    ],
+    "all_positive_under_integration_error_only": true,
+    "minimum_lower_bound": 0.0005032197489404928
+  },
+  "strict_progress": {
+    "replaces": "P1863 seed sigma=0.1*|disc_center| for this projected polynomial by exact symbolic integration plus scipy quadrature cross-check",
+    "does_not_replace": [
+      "full dressed graviton propagator pole computation",
+      "full gauge-gauge vertex and polarization sum",
+      "global RG-safe pole transport theorem",
+      "background-family continuation beyond B1",
+      "global unitarity or ToE closure"
+    ]
+  },
+  "ur_link_theorem_candidate_boundary": {
+    "positive_statement": "Within the P1860 projected B1 polynomial and declared phase-space convention, the integrated discontinuity is exactly s*(a_R2/(8*pi)+a_Ric2/(6*pi)) and is positive for the sampled physical s>0 corridor because the P1853 strict coefficients are positive.",
+    "open_obstruction": "A genuine UR_link_theorem still needs dressed pole residues and RG flow covariance for the full amplitude, not just the projected polynomial backend."
+  },
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0"
+  },
+  "false_pass_guard": "P1969 is an exact integral for the declared B1 projected polynomial only; it is not theorem-grade Cutkosky closure for the full strict theory.",
+  "next_honest_step": "Compute the dressed graviton->gauge_gauge amplitude numerator and pole residues, then rerun this exact phase-space pipeline on the full polarization-summed integrand instead of the P1860 projected polynomial.",
+  "lay_explanation": "Zamiast patrzeć na kilka punktów tabeli, policzyliśmy całkę po wszystkich kierunkach w najprostszym dwucząstkowym stanie końcowym. Wynik jest dodatni w tym ograniczonym modelu, ale pełny dowód wymaga jeszcze prawdziwej amplitudy i biegunów propagatora."
+}
