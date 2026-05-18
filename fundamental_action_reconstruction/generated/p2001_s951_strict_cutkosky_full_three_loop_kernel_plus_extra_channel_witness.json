@@ -1,0 +1,123 @@
+{
+  "ledger_id": "P2001_S951_STRICT_CUTKOSKY_FULL_THREE_LOOP_KERNEL_PLUS_EXTRA_CHANNEL_WITNESS",
+  "packet_id": "P2001",
+  "stage_id": "S951",
+  "produced_by": "p2001_s951_strict_cutkosky_full_three_loop_kernel_plus_extra_channel_witness.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only",
+  "channel": "graviton->gauge_gauge",
+  "depends_on": {
+    "p1853_present": true,
+    "p2000_present": true
+  },
+  "weights": {
+    "gg": 0.08633707068605556,
+    "gh": 0.7413363591783615,
+    "hh": 0.12232657013554045,
+    "gx": 0.05
+  },
+  "loop_kernel_contract": {
+    "gg": "(640*pi**2*s + 177508431*s*log(2) + 18516431*log(2)*log(s + 1) + 640*pi**2 + 177508431*log(2))/((640*pi**2 + 177508431*log(2))*(s + 1))",
+    "gh": "(640*pi**2*s**2 + 177508431*s**2*log(2) + 1280*pi**2*s + 514008862*s*log(2) + 640*pi**2 + 177508431*log(2))/((640*pi**2 + 177508431*log(2))*(s + 1)**2)",
+    "hh": "(640*pi**2*s**2 + 44751413*s**2*log(2) + 1280*pi**2*s + 89502826*s*log(2) + 26234982*log(2)*log(s + 1) + 640*pi**2 + 44751413*log(2))/((640*pi**2 + 44751413*log(2))*(s + 1)**2)",
+    "gx": "(177508431*sqrt(s)*log(2) + 640*pi**2*s**2 + 203743413*s**2*log(2) + 1280*pi**2*s + 407486826*s*log(2) + 640*pi**2 + 203743413*log(2))/((640*pi**2 + 203743413*log(2))*(s + 1)**2)"
+  },
+  "formulas": {
+    "ImM": "9606436630529761*s**2*(640*pi**2*s + 177508431*s*log(2) + 640*pi**2 + 158992000*log(2))**2*log(2)**2/(2684354560000000000000000*pi**5*(pi**2 + 248425*log(2))**2*(s + 1)**2)",
+    "CutSum": "3.08972447518692e-10*s**2*(640*pi**2*s + 177508431*s*log(2) + 640*pi**2 + 158992000*log(2))**2*(640*pi**2*s + 177508431*s*log(2) + 18516431*log(2)*log(s + 1) + 640*pi**2 + 177508431*log(2))*log(2)**2/(pi**5*(pi**2 + 248425*log(2))**2*(640*pi**2 + 177508431*log(2))*(s + 1)**3) + 2.65300302071667e-9*s**2*(640*pi**2*s + 177508431*s*log(2) + 640*pi**2 + 158992000*log(2))**2*(640*pi**2*s**2 + 177508431*s**2*log(2) + 1280*pi**2*s + 514008862*s*log(2) + 640*pi**2 + 177508431*log(2))*log(2)**2/(pi**5*(pi**2 + 248425*log(2))**2*(640*pi**2 + 177508431*log(2))*(s + 1)**4) + 4.37767224102141e-10*s**2*(640*pi**2*s + 177508431*s*log(2) + 640*pi**2 + 158992000*log(2))**2*(640*pi**2*s**2 + 44751413*s**2*log(2) + 1280*pi**2*s + 89502826*s*log(2) + 26234982*log(2)*log(s + 1) + 640*pi**2 + 44751413*log(2))*log(2)**2/(pi**5*(pi**2 + 248425*log(2))**2*(640*pi**2 + 44751413*log(2))*(s + 1)**4) + 1.78933825912508e-10*s**2*(640*pi**2*s + 177508431*s*log(2) + 640*pi**2 + 158992000*log(2))**2*(177508431*sqrt(s)*log(2) + 640*pi**2*s**2 + 203743413*s**2*log(2) + 1280*pi**2*s + 407486826*s*log(2) + 640*pi**2 + 203743413*log(2))*log(2)**2/(pi**5*(pi**2 + 248425*log(2))**2*(640*pi**2 + 203743413*log(2))*(s + 1)**4)",
+    "Delta_opt": "9606436630529761*s**2*(640*pi**2*s + 177508431*s*log(2) + 640*pi**2 + 158992000*log(2))**2*log(2)**2/(2684354560000000000000000*pi**5*(pi**2 + 248425*log(2))**2*(s + 1)**2) - 3.08972447518692e-10*s**2*(640*pi**2*s + 177508431*s*log(2) + 640*pi**2 + 158992000*log(2))**2*(640*pi**2*s + 177508431*s*log(2) + 18516431*log(2)*log(s + 1) + 640*pi**2 + 177508431*log(2))*log(2)**2/(pi**5*(pi**2 + 248425*log(2))**2*(640*pi**2 + 177508431*log(2))*(s + 1)**3) - 2.65300302071667e-9*s**2*(640*pi**2*s + 177508431*s*log(2) + 640*pi**2 + 158992000*log(2))**2*(640*pi**2*s**2 + 177508431*s**2*log(2) + 1280*pi**2*s + 514008862*s*log(2) + 640*pi**2 + 177508431*log(2))*log(2)**2/(pi**5*(pi**2 + 248425*log(2))**2*(640*pi**2 + 177508431*log(2))*(s + 1)**4) - 4.37767224102141e-10*s**2*(640*pi**2*s + 177508431*s*log(2) + 640*pi**2 + 158992000*log(2))**2*(640*pi**2*s**2 + 44751413*s**2*log(2) + 1280*pi**2*s + 89502826*s*log(2) + 26234982*log(2)*log(s + 1) + 640*pi**2 + 44751413*log(2))*log(2)**2/(pi**5*(pi**2 + 248425*log(2))**2*(640*pi**2 + 44751413*log(2))*(s + 1)**4) - 1.78933825912508e-10*s**2*(640*pi**2*s + 177508431*s*log(2) + 640*pi**2 + 158992000*log(2))**2*(177508431*sqrt(s)*log(2) + 640*pi**2*s**2 + 203743413*s**2*log(2) + 1280*pi**2*s + 407486826*s*log(2) + 640*pi**2 + 203743413*log(2))*log(2)**2/(pi**5*(pi**2 + 248425*log(2))**2*(640*pi**2 + 203743413*log(2))*(s + 1)**4)"
+  },
+  "grid_table": [
+    {
+      "s": "1/2",
+      "ImM": 6.208734569075502e-07,
+      "Cut_channels": {
+        "gg": 5.511579280198988e-08,
+        "gh": 5.518854330589774e-07,
+        "hh": 8.397127973687943e-08,
+        "gx": 3.9543137379651495e-08
+      },
+      "CutSum": 7.305156429774982e-07,
+      "Delta_opt": -1.0964218606994798e-07,
+      "abs_delta": 1.0964218606994798e-07
+    },
+    {
+      "s": "1",
+      "ImM": 2.5771632176922702e-06,
+      "Cut_channels": {
+        "gg": 2.305483272389651e-07,
+        "gh": 2.3383353854853406e-06,
+        "hh": 3.4727498088527206e-07,
+        "gx": 1.5692334665920145e-07
+      },
+      "CutSum": 3.073082040268779e-06,
+      "Delta_opt": -4.959188225765091e-07,
+      "abs_delta": 4.959188225765091e-07
+    },
+    {
+      "s": "2",
+      "ImM": 1.0690266057094344e-05,
+      "Cut_channels": {
+        "gg": 9.582216055410037e-07,
+        "gh": 9.502422831571775e-06,
+        "hh": 1.4012650096462578e-06,
+        "gx": 6.076856507811289e-07
+      },
+      "CutSum": 1.2469595097540165e-05,
+      "Delta_opt": -1.7793290404458194e-06,
+      "abs_delta": 1.7793290404458194e-06
+    },
+    {
+      "s": "4",
+      "ImM": 4.400220102771994e-05,
+      "Cut_channels": {
+        "gg": 3.926574509579187e-06,
+        "gh": 3.729502312834662e-05,
+        "hh": 5.585740708488462e-06,
+        "gx": 2.3534482567871493e-06
+      },
+      "CutSum": 4.9160786603201415e-05,
+      "Delta_opt": -5.158585575481476e-06,
+      "abs_delta": 5.158585575481476e-06
+    },
+    {
+      "s": "8",
+      "ImM": 0.0001793579582485868,
+      "Cut_channels": {
+        "gg": 1.5879576241533743e-05,
+        "gh": 0.00014472640614955786,
+        "hh": 2.228907598135288e-05,
+        "gx": 9.240711888022624e-06
+      },
+      "CutSum": 0.0001921357702604671,
+      "Delta_opt": -1.2777812011880338e-05,
+      "abs_delta": 1.2777812011880338e-05
+    }
+  ],
+  "delta_stats": {
+    "max_abs": 1.2777812011880338e-05,
+    "l2": 1.3903505085849564e-05
+  },
+  "gatekeeper_checks": {
+    "p1853_present": true,
+    "p2000_present": true,
+    "loop_kernel_gg_exported": true,
+    "loop_kernel_gh_exported": true,
+    "loop_kernel_hh_exported": true,
+    "extra_channel_gx_exported": true,
+    "weights_normalized": true,
+    "nonzero_delta_detected": true,
+    "delta_norm_bounded": true
+  },
+  "result_kind": "PASS_FULL_THREE_LOOP_PLUS_EXTRA_CHANNEL_WITNESS",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "false_pass_guard": "Still finite proxy state-set despite three explicit loop kernels plus one extra channel; no theorem-grade all-state closure claim.",
+  "next_honest_step": "Replace gx proxy kernel by explicit loop-derived amplitude and compare delta contraction/expansion versus P2000 to classify missing-channel vs structural obstruction.",
+  "lay_explanation": "Teraz wszystkie trzy główne kanały mają jawne formy pętlowe, a dodatkowo dodaliśmy czwarty kanał kontrolny. To mocniejszy test, czy problem wynika z brakujących kanałów.",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0"
+  }
+}
