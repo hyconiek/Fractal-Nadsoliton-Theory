@@ -1,0 +1,598 @@
+{
+  "ledger_id": "P1979_S929_STRICT_LAPSE_SHEAR_PROVIDER_EXPORT_AUDIT",
+  "packet_id": "P1979",
+  "stage_id": "S929",
+  "produced_by": "p1979_s929_strict_lapse_shear_provider_export_audit.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only",
+  "depends_on": {
+    "p1846_present": true,
+    "p1907_present": true,
+    "p1978_bounded_obstruction_present": true
+  },
+  "required_non_energy_neutral_provider_signature": {
+    "Q_shear": "sigma1**2 + sigma1*sigma2 + sigma2**2",
+    "required_U_components": [
+      "-sigma1**2 - sigma1*sigma2 - sigma2**2",
+      "3*H*sigma1 + dsigma1 - sigma1**2 - sigma1*sigma2 - sigma2**2",
+      "3*H*sigma2 + dsigma2 - sigma1**2 - sigma1*sigma2 - sigma2**2",
+      "-3*H*sigma1 - 3*H*sigma2 - dsigma1 - dsigma2 - sigma1**2 - sigma1*sigma2 - sigma2**2"
+    ],
+    "required_U00": "-sigma1**2 - sigma1*sigma2 - sigma2**2",
+    "required_spatial_trace": "-3*(sigma1**2 + sigma1*sigma2 + sigma2**2)",
+    "requires_lapse_or_energy_slot": true,
+    "required_provider_is_not_tracefree_spatial": true,
+    "Q_eigenvalues_exact": [
+      "1/2",
+      "3/2"
+    ],
+    "Q_eigenvalues_scipy": [
+      0.5,
+      1.5
+    ]
+  },
+  "audit_scope": {
+    "registries": [
+      "P1846 full_lagrangian_non_skeleton_term_sheet.L_total_termwise",
+      "P1907 full_lagrangian_term_registry_non_skeleton"
+    ],
+    "terms_audited": 38,
+    "lapse_shear_tokens": [
+      "lapse",
+      "n(t)",
+      "adm",
+      "k_ij",
+      "extrinsic",
+      "sigma1",
+      "sigma2",
+      "sigma_1",
+      "sigma_2",
+      "shear",
+      "anisotropic",
+      "bianchi",
+      "u00",
+      "q_shear",
+      "delta_n"
+    ],
+    "covariant_curvature_tokens": [
+      "r",
+      "r^2",
+      "ricci",
+      "riemann",
+      "g_{gb}",
+      "g_gb",
+      "lambda"
+    ],
+    "scope_warning": "A covariant curvature term may require a future explicit ADM/Bianchi-I variation before it can be accepted or rejected as a provider; absence of an exported certificate is not a universal no-go."
+  },
+  "term_audit_rows": [
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_GR",
+      "term_id": "L_GR[0]",
+      "term": "(M_Pl^2/2) * R",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [
+        "r"
+      ],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_GR",
+      "term_id": "L_GR[1]",
+      "term": "c_gr_1 * R^2 + c_gr_2 * R_{mu nu}R^{mu nu} + c_gr_3 * R_{mu nu rho sigma}R^{mu nu rho sigma}",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [
+        "r",
+        "r^2"
+      ],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_GR",
+      "term_id": "L_GR[2]",
+      "term": "c_gr_4 * G_{GB}",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [
+        "r",
+        "g_{gb}"
+      ],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_gauge",
+      "term_id": "L_gauge[0]",
+      "term": "-(1/4) Z_A F^A_{mu nu}F_A^{mu nu}",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_gauge",
+      "term_id": "L_gauge[1]",
+      "term": "-(1/4) Z_W F^I_{mu nu}F_I^{mu nu}",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_gauge",
+      "term_id": "L_gauge[2]",
+      "term": "-(1/4) Z_G F^a_{mu nu}F_a^{mu nu}",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_fermion",
+      "term_id": "L_fermion[0]",
+      "term": "sum_f i Z_psi_f * bar(psi_f) gamma^mu D_mu psi_f",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [
+        "r"
+      ],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_fermion",
+      "term_id": "L_fermion[1]",
+      "term": "-sum_f m_f * bar(psi_f)psi_f",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [
+        "r"
+      ],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_Higgs",
+      "term_id": "L_Higgs[0]",
+      "term": "Z_H (D_mu H)^dagger(D^mu H)",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [
+        "r"
+      ],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_Higgs",
+      "term_id": "L_Higgs[1]",
+      "term": "-mu_H2 (H^dagger H)",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [
+        "r"
+      ],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_Higgs",
+      "term_id": "L_Higgs[2]",
+      "term": "-lambda_H (H^dagger H)^2",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [
+        "r",
+        "lambda"
+      ],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_Higgs",
+      "term_id": "L_Higgs[3]",
+      "term": "-xi_HR H^dagger H R",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [
+        "r"
+      ],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_mix",
+      "term_id": "L_mix[0]",
+      "term": "(1/2) Z_chi (partial_mu chi)(partial^mu chi)",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [
+        "r"
+      ],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_mix",
+      "term_id": "L_mix[1]",
+      "term": "-(1/2) m_chi^2 chi^2",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_mix",
+      "term_id": "L_mix[2]",
+      "term": "-kappa_Hchi chi(H^dagger H)",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [
+        "r"
+      ],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_int",
+      "term_id": "L_int[0]",
+      "term": "-sum_f y_f bar(psi_L,f) H psi_R,f + h.c.",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [
+        "r"
+      ],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_int",
+      "term_id": "L_int[1]",
+      "term": "-sum_J g_J J_J^mu A^J_mu",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_int",
+      "term_id": "L_int[2]",
+      "term": "-sum_n c_mix_n O_mix_n/Lambda^{n-4}",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [
+        "lambda"
+      ],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_covariant",
+      "term_id": "L_covariant[0]",
+      "term": "sqrt(-g) * [L_GR + L_gauge + L_fermion + L_Higgs + L_mix + L_int]",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [
+        "r"
+      ],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1846_L_total_termwise",
+      "sector": "L_covariant",
+      "term_id": "L_covariant[1]",
+      "term": "spin_connection_and_tetrad_consistency_constraints",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [
+        "r"
+      ],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "sm_gauge_sector",
+      "term_id": "sm_gauge_sector[0]",
+      "term": "-1/4 F^2_SU3",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "sm_gauge_sector",
+      "term_id": "sm_gauge_sector[1]",
+      "term": "-1/4 F^2_SU2",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "sm_gauge_sector",
+      "term_id": "sm_gauge_sector[2]",
+      "term": "-1/4 F^2_U1",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "sm_fermion_kinetic_sector",
+      "term_id": "sm_fermion_kinetic_sector[0]",
+      "term": "i psi_bar gamma^mu D_mu psi (all generations)",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [
+        "r"
+      ],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "higgs_sector",
+      "term_id": "higgs_sector[0]",
+      "term": "|D_mu H|^2",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "higgs_sector",
+      "term_id": "higgs_sector[1]",
+      "term": "-mu_H^2 H^dagger H",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [
+        "r"
+      ],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "higgs_sector",
+      "term_id": "higgs_sector[2]",
+      "term": "-lambda_H (H^dagger H)^2",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [
+        "r",
+        "lambda"
+      ],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "yukawa_sector",
+      "term_id": "yukawa_sector[0]",
+      "term": "-y_u qbar H_tilde u",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [
+        "r"
+      ],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "yukawa_sector",
+      "term_id": "yukawa_sector[1]",
+      "term": "-y_d qbar H d",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [
+        "r"
+      ],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "yukawa_sector",
+      "term_id": "yukawa_sector[2]",
+      "term": "-y_e lbar H e + h.c.",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [
+        "r"
+      ],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "gravity_sector",
+      "term_id": "gravity_sector[0]",
+      "term": "(M_Pl^2/2) R",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [
+        "r"
+      ],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "gravity_sector",
+      "term_id": "gravity_sector[1]",
+      "term": "Lambda",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [
+        "lambda"
+      ],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "gravity_sector",
+      "term_id": "gravity_sector[2]",
+      "term": "R^2",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [
+        "r",
+        "r^2"
+      ],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "gravity_sector",
+      "term_id": "gravity_sector[3]",
+      "term": "R_{mu nu}R^{mu nu}",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [
+        "r"
+      ],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "gravity_sector",
+      "term_id": "gravity_sector[4]",
+      "term": "R_{mu nu rho sigma}R^{mu nu rho sigma}",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [
+        "r"
+      ],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "nonminimal_mixed_sector",
+      "term_id": "nonminimal_mixed_sector[0]",
+      "term": "-xi_H H^dagger H R",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [
+        "r"
+      ],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "nonminimal_mixed_sector",
+      "term_id": "nonminimal_mixed_sector[1]",
+      "term": "dimension-6 EFT placeholders",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [
+        "r"
+      ],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    },
+    {
+      "source": "P1907_term_registry",
+      "sector": "note",
+      "term_id": "note",
+      "term": "Registry is explicit and non-skeleton at sector level; coefficient tables and loop-normalization witnesses still missing.",
+      "lapse_shear_token_hits": [],
+      "covariant_curvature_token_hits": [
+        "r"
+      ],
+      "exact_required_signature_hits": [],
+      "exports_required_lapse_shear_provider": false,
+      "decision": "NO_EXPORTED_LAPSE_SHEAR_PROVIDER_CERTIFICATE"
+    }
+  ],
+  "feature_replay": {
+    "lapse_shear_feature_matrix_shape": [
+      38,
+      15
+    ],
+    "total_lapse_shear_token_hits": 0,
+    "max_row_l2_norm": 0.0,
+    "direct_provider_candidate_count": 0
+  },
+  "gatekeeper_checks": {
+    "p1978_energy_neutral_route_closed_boundedly": true,
+    "required_provider_has_U00_minus_Q": true,
+    "required_provider_has_nonzero_spatial_trace_minus_3Q": true,
+    "no_exported_lapse_shear_provider_certificate_in_current_registries": true,
+    "audited_at_least_one_term": true,
+    "bounded_current_export_audit_passed": true
+  },
+  "result_kind": "PASS_CURRENT_EXPORT_NONAVAILABILITY_AUDIT",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "obstruction_tags": [
+    "NON_ENERGY_NEUTRAL_LAPSE_SHEAR_PROVIDER_NOT_EXPORTED",
+    "CURRENT_REGISTRY_HAS_COVARIANT_TERMS_BUT_NO_ADM_BIANCHI_PROVIDER_CERTIFICATE",
+    "BACKGROUND_INDEPENDENCE_REMAINS_OPEN",
+    "GLOBAL_TOE_CLOSURE_STILL_OPEN"
+  ],
+  "theorem_export": {
+    "current_export_statement": "The current P1846/P1907 strict term registries do not export a lapse/shear provider certificate with U00=-Q_shear and spatial trace -3*Q_shear for the P1974 Bianchi-I residual.",
+    "not_a_no_go_clause": "This is not a theorem that the covariant curvature terms cannot yield such a contribution after a future explicit ADM/Bianchi-I variation; it only says that no such provider is currently exported.",
+    "remaining_required_work": "Perform a real ADM/Bianchi-I variation of the strict covariant gravity sector, including lapse N(t), for R, R^2, Ricci^2, Riemann^2, and G_GB; then test whether the generated E_N equation supplies the required U00=-Q_shear without ad hoc negative-energy matter.",
+    "not_licensed": [
+      "global no-go theorem for all strict variational completions",
+      "background-independence closure",
+      "PO2/PO3 closure",
+      "BRST or Cutkosky closure",
+      "QW-2191 selector discharge",
+      "ToE closure"
+    ]
+  },
+  "false_pass_guard": "P1979 is only a current-export audit.  It must not be cited as proving that curvature-squared terms cannot generate the needed lapse/shear equation after a full ADM/Bianchi-I variational calculation.",
+  "next_honest_step": "Run the explicit ADM/Bianchi-I lapse variation for the strict gravity sector terms R, R^2, Ricci^2, Riemann^2, and G_GB, and compare the resulting E_N shear terms against U00=-Q_shear.",
+  "lay_explanation": "Po P1978 wiemy, że sama korekta przestrzenna nie wystarczy.  Teraz sprawdziliśmy, czy obecny wyeksportowany lagranżian strict ma już jawny certyfikat składnika energii/lapse potrzebnego do naprawy.  Nie ma go.  To nie dowodzi, że taki składnik nie wyjdzie z cięższego rachunku wariacyjnego; mówi tylko, że trzeba go naprawdę policzyć, zamiast go zakładać.",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0"
+  }
+}

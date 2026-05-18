@@ -1,0 +1,146 @@
+{
+  "ledger_id": "P1984_S934_STRICT_ADM_BIANCHI_GAUSS_BONNET_LAPSE_CANCELLATION_WITNESS",
+  "packet_id": "P1984",
+  "stage_id": "S934",
+  "produced_by": "p1984_s934_strict_adm_bianchi_gauss_bonnet_lapse_cancellation_witness.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only",
+  "depends_on": {
+    "p1981_r2_lapse_obligation_present": true,
+    "p1982_ricci2_lapse_obligation_present": true,
+    "p1983_riemann2_lapse_obligation_present": true
+  },
+  "gauss_bonnet_combination": {
+    "definition": "G_GB = Riemann^2 - 4*Ricci^2 + R^2",
+    "R2_difference": "4*(sigma1**2 + sigma1*sigma2 + sigma2**2)*(12*H**2*N - 6*H*Nd + 6*Hd*N + N*sigma1**2 + N*sigma1*sigma2 + N*sigma2**2)/N**5",
+    "Ricci2_difference": "2*(15*H**2*N**2*sigma1**2 + 15*H**2*N**2*sigma1*sigma2 + 15*H**2*N**2*sigma2**2 + 6*H*N**2*dsigma1*sigma1 + 3*H*N**2*dsigma1*sigma2 + 3*H*N**2*dsigma2*sigma1 + 6*H*N**2*dsigma2*sigma2 - 12*H*N*Nd*sigma1**2 - 12*H*N*Nd*sigma1*sigma2 - 12*H*N*Nd*sigma2**2 + 6*Hd*N**2*sigma1**2 + 6*Hd*N**2*sigma1*sigma2 + 6*Hd*N**2*sigma2**2 + N**2*dsigma1**2 + N**2*dsigma1*dsigma2 + N**2*dsigma2**2 + 2*N**2*sigma1**4 + 4*N**2*sigma1**3*sigma2 + 6*N**2*sigma1**2*sigma2**2 + 4*N**2*sigma1*sigma2**3 + 2*N**2*sigma2**4 - 2*N*Nd*dsigma1*sigma1 - N*Nd*dsigma1*sigma2 - N*Nd*dsigma2*sigma1 - 2*N*Nd*dsigma2*sigma2 + Nd**2*sigma1**2 + Nd**2*sigma1*sigma2 + Nd**2*sigma2**2)/N**6",
+    "Riemann2_difference": "4*(12*H**2*N**2*sigma1**2 + 12*H**2*N**2*sigma1*sigma2 + 12*H**2*N**2*sigma2**2 + 8*H*N**2*dsigma1*sigma1 + 4*H*N**2*dsigma1*sigma2 + 4*H*N**2*dsigma2*sigma1 + 8*H*N**2*dsigma2*sigma2 - 6*H*N**2*sigma1**2*sigma2 - 6*H*N**2*sigma1*sigma2**2 - 12*H*N*Nd*sigma1**2 - 12*H*N*Nd*sigma1*sigma2 - 12*H*N*Nd*sigma2**2 + 4*Hd*N**2*sigma1**2 + 4*Hd*N**2*sigma1*sigma2 + 4*Hd*N**2*sigma2**2 + 2*N**2*dsigma1**2 + 2*N**2*dsigma1*dsigma2 - 4*N**2*dsigma1*sigma1*sigma2 - 2*N**2*dsigma1*sigma2**2 + 2*N**2*dsigma2**2 - 2*N**2*dsigma2*sigma1**2 - 4*N**2*dsigma2*sigma1*sigma2 + 3*N**2*sigma1**4 + 6*N**2*sigma1**3*sigma2 + 9*N**2*sigma1**2*sigma2**2 + 6*N**2*sigma1*sigma2**3 + 3*N**2*sigma2**4 - 4*N*Nd*dsigma1*sigma1 - 2*N*Nd*dsigma1*sigma2 - 2*N*Nd*dsigma2*sigma1 - 4*N*Nd*dsigma2*sigma2 + 6*N*Nd*sigma1**2*sigma2 + 6*N*Nd*sigma1*sigma2**2 + 2*Nd**2*sigma1**2 + 2*Nd**2*sigma1*sigma2 + 2*Nd**2*sigma2**2)/N**6",
+    "GB_difference": "-8*(3*H**2*N*sigma1**2 + 3*H**2*N*sigma1*sigma2 + 3*H**2*N*sigma2**2 + 2*H*N*dsigma1*sigma1 + H*N*dsigma1*sigma2 + H*N*dsigma2*sigma1 + 2*H*N*dsigma2*sigma2 + 3*H*N*sigma1**2*sigma2 + 3*H*N*sigma1*sigma2**2 - 3*H*Nd*sigma1**2 - 3*H*Nd*sigma1*sigma2 - 3*H*Nd*sigma2**2 + Hd*N*sigma1**2 + Hd*N*sigma1*sigma2 + Hd*N*sigma2**2 + 2*N*dsigma1*sigma1*sigma2 + N*dsigma1*sigma2**2 + N*dsigma2*sigma1**2 + 2*N*dsigma2*sigma1*sigma2 - 3*Nd*sigma1**2*sigma2 - 3*Nd*sigma1*sigma2**2)/N**5",
+    "GB_density_difference_NV": "-8*V*(3*H**2*N*sigma1**2 + 3*H**2*N*sigma1*sigma2 + 3*H**2*N*sigma2**2 + 2*H*N*dsigma1*sigma1 + H*N*dsigma1*sigma2 + H*N*dsigma2*sigma1 + 2*H*N*dsigma2*sigma2 + 3*H*N*sigma1**2*sigma2 + 3*H*N*sigma1*sigma2**2 - 3*H*Nd*sigma1**2 - 3*H*Nd*sigma1*sigma2 - 3*H*Nd*sigma2**2 + Hd*N*sigma1**2 + Hd*N*sigma1*sigma2 + Hd*N*sigma2**2 + 2*N*dsigma1*sigma1*sigma2 + N*dsigma1*sigma2**2 + N*dsigma2*sigma1**2 + 2*N*dsigma2*sigma1*sigma2 - 3*Nd*sigma1**2*sigma2 - 3*Nd*sigma1*sigma2**2)/N**4",
+    "GB_density_nonzero_polynomial_before_variation": true
+  },
+  "gb_lapse_euler_operator": {
+    "dL_dN": "24*V*(3*H**2*N*sigma1**2 + 3*H**2*N*sigma1*sigma2 + 3*H**2*N*sigma2**2 + 2*H*N*dsigma1*sigma1 + H*N*dsigma1*sigma2 + H*N*dsigma2*sigma1 + 2*H*N*dsigma2*sigma2 + 3*H*N*sigma1**2*sigma2 + 3*H*N*sigma1*sigma2**2 - 4*H*Nd*sigma1**2 - 4*H*Nd*sigma1*sigma2 - 4*H*Nd*sigma2**2 + Hd*N*sigma1**2 + Hd*N*sigma1*sigma2 + Hd*N*sigma2**2 + 2*N*dsigma1*sigma1*sigma2 + N*dsigma1*sigma2**2 + N*dsigma2*sigma1**2 + 2*N*dsigma2*sigma1*sigma2 - 4*Nd*sigma1**2*sigma2 - 4*Nd*sigma1*sigma2**2)/N**5",
+    "dL_dNdot": "24*V*(H*sigma1**2 + H*sigma1*sigma2 + H*sigma2**2 + sigma1**2*sigma2 + sigma1*sigma2**2)/N**4",
+    "Dt_dL_dNdot": "24*V*(3*H**2*N*sigma1**2 + 3*H**2*N*sigma1*sigma2 + 3*H**2*N*sigma2**2 + 2*H*N*dsigma1*sigma1 + H*N*dsigma1*sigma2 + H*N*dsigma2*sigma1 + 2*H*N*dsigma2*sigma2 + 3*H*N*sigma1**2*sigma2 + 3*H*N*sigma1*sigma2**2 - 4*H*Nd*sigma1**2 - 4*H*Nd*sigma1*sigma2 - 4*H*Nd*sigma2**2 + Hd*N*sigma1**2 + Hd*N*sigma1*sigma2 + Hd*N*sigma2**2 + 2*N*dsigma1*sigma1*sigma2 + N*dsigma1*sigma2**2 + N*dsigma2*sigma1**2 + 2*N*dsigma2*sigma1*sigma2 - 4*Nd*sigma1**2*sigma2 - 4*Nd*sigma1*sigma2**2)/N**5",
+    "EL_N_GB_difference": "0",
+    "EL_N_GB_difference_is_zero": true,
+    "isotropic_limit_zero": true,
+    "higher_derivative_terms_cancelled_in_lapse_EL": true
+  },
+  "q_shear_checks": {
+    "Q_shear": "sigma1**2 + sigma1*sigma2 + sigma2**2",
+    "Q_matrix": "Matrix([[1, 1/2], [1/2, 1]])",
+    "Q_eigenvalues_exact": [
+      "1/2",
+      "3/2"
+    ],
+    "Q_eigenvalues_scipy": [
+      0.5,
+      1.5
+    ],
+    "Q_positive_definite": true
+  },
+  "numeric_replay_table": [
+    {
+      "sample_id": "gauss_bonnet_lapse_sample_0",
+      "input": {
+        "N": "1",
+        "Nd": "1/20",
+        "Ndd": "-1/200",
+        "V": "1",
+        "H": "1",
+        "Hd": "1/10",
+        "sigma1": "1/10",
+        "sigma2": "-1/20",
+        "dsigma1": "1/100",
+        "dsigma2": "-1/200",
+        "d2sigma1": "1/1000",
+        "d2sigma2": "-1/2000"
+      },
+      "GB_density_difference": "-1827/10000",
+      "GB_lapse_EL": "0",
+      "GB_lapse_EL_is_zero": true
+    },
+    {
+      "sample_id": "gauss_bonnet_lapse_sample_1",
+      "input": {
+        "N": "5/4",
+        "Nd": "-1/30",
+        "Ndd": "1/300",
+        "V": "7/5",
+        "H": "3/2",
+        "Hd": "-1/20",
+        "sigma1": "1/5",
+        "sigma2": "1/10",
+        "dsigma1": "-1/50",
+        "dsigma2": "3/200",
+        "d2sigma1": "1/700",
+        "d2sigma2": "-1/900"
+      },
+      "GB_density_difference": "-5589696/1953125",
+      "GB_lapse_EL": "0",
+      "GB_lapse_EL_is_zero": true
+    },
+    {
+      "sample_id": "gauss_bonnet_lapse_sample_2",
+      "input": {
+        "N": "4/3",
+        "Nd": "1/40",
+        "Ndd": "-1/400",
+        "V": "11/10",
+        "H": "4/5",
+        "Hd": "1/25",
+        "sigma1": "-1/8",
+        "sigma2": "1/16",
+        "dsigma1": "1/80",
+        "dsigma2": "1/160",
+        "d2sigma1": "-1/1600",
+        "d2sigma2": "1/3200"
+      },
+      "GB_density_difference": "-10493307/131072000",
+      "GB_lapse_EL": "0",
+      "GB_lapse_EL_is_zero": true
+    }
+  ],
+  "gatekeeper_checks": {
+    "all_input_lapse_obligations_present": true,
+    "gb_lapse_euler_operator_zero": true,
+    "higher_derivative_shear_lapse_terms_cancel_in_gb_lapse_EL": true,
+    "gb_density_difference_nonzero_before_variation": true,
+    "all_numeric_replay_samples_zero": true,
+    "q_shear_positive_definite": true,
+    "gb_lapse_cancellation_witness_passed": true
+  },
+  "result_kind": "PASS_GB_LAPSE_CANCELLATION_WITNESS",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "obstruction_tags": [
+    "GAUSS_BONNET_LAPSE_EL_CANCELS_IN_MINISUPERSPACE",
+    "STRICT_NON_GB_COEFFICIENT_COMBINATION_STILL_MISSING",
+    "SPATIAL_EOM_TRANSPORT_STILL_MISSING",
+    "GLOBAL_BACKGROUND_INDEPENDENCE_STILL_OPEN",
+    "GLOBAL_TOE_CLOSURE_STILL_OPEN"
+  ],
+  "theorem_export": {
+    "positive_statement": "In the diagonal trace-free Bianchi-I ADM minisuperspace witness, the Gauss-Bonnet combination Riemann^2 - 4*Ricci^2 + R^2 has identically zero lapse Euler operator, although the density difference is not the zero polynomial before variation.",
+    "interpretation": "The higher-derivative shear/lapse structures exposed separately by P1981/P1982/P1983 cancel in the GB lapse Euler equation, matching the expected topological behavior at the minisuperspace lapse level.",
+    "not_licensed": [
+      "strict coefficient-level cancellation for non-GB R^2/Ricci^2/Riemann^2 terms",
+      "spatial Bianchi-I EOM cancellation",
+      "global background-independence closure",
+      "PO2/PO3 closure",
+      "BRST or Cutkosky closure",
+      "QW-2191 selector discharge",
+      "ToE closure"
+    ]
+  },
+  "false_pass_guard": "P1984 proves only the Gauss-Bonnet lapse Euler cancellation in this ADM/Bianchi-I minisuperspace witness.  It must not be upgraded to full curvature-squared, spatial-EOM, or ToE closure.",
+  "next_honest_step": "Use P1981/P1982/P1983/P1984 to form the strict non-GB curvature-squared lapse operator with coefficients a_R2, a_Ric2, and a_Riem2 from P1972/P1853, then test whether the remaining shear structures cancel or persist.",
+  "lay_explanation": "Zbudowaliśmy kombinację Gaussa-Bonneta z trzech policzonych klocków.  Trudne wyrazy z wyższymi pochodnymi kasują się w równaniu lapse, co jest dobrym znakiem i zgodne z topologicznym charakterem Gaussa-Bonneta.  To jednak nie zamyka teorii, bo pozostałe nie-Gauss-Bonnetowe kombinacje ze ścisłymi współczynnikami nadal trzeba sprawdzić.",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0"
+  }
+}
