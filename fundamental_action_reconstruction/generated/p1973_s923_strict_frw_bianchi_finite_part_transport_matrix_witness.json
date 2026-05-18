@@ -1,0 +1,133 @@
+{
+  "ledger_id": "P1973_S923_STRICT_FRW_BIANCHI_FINITE_PART_TRANSPORT_MATRIX_WITNESS",
+  "packet_id": "P1973",
+  "stage_id": "S923",
+  "produced_by": "p1973_s923_strict_frw_bianchi_finite_part_transport_matrix_witness.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only",
+  "background_pair": [
+    "FRW",
+    "Bianchi-I"
+  ],
+  "branch_parameter": "nu",
+  "anisotropy_parameter": "sigma2",
+  "depends_on": {
+    "p1897_present": true,
+    "p1972_present": true
+  },
+  "source_bridge_reading": {
+    "p1897_delta_branch": "G_BI_b1=(1+nu*sigma2)*G_BI_frw in the preclosure nu branch",
+    "q_definition": "q=nu*sigma2",
+    "admissible_local_branch": "1+q>0 so the transport matrix is invertible and orientation preserving"
+  },
+  "symbolic_transport": {
+    "multiplier_m_lambda": "lambda*nu*sigma2 + 1",
+    "connection_scalar_A_lambda": "nu*sigma2/(lambda*nu*sigma2 + 1)",
+    "finite_part_path": "F0*(lambda*nu*sigma2 + 1)",
+    "transport_residual": "0",
+    "transport_residual_is_zero": true,
+    "transport_matrix_T_lambda": "Matrix([[lambda*nu*sigma2 + 1, 0, 0, 0], [0, lambda*nu*sigma2 + 1, 0, 0], [0, 0, lambda*nu*sigma2 + 1, 0], [0, 0, 0, lambda*nu*sigma2 + 1]])",
+    "connection_matrix_A_lambda": "Matrix([[nu*sigma2/(lambda*nu*sigma2 + 1), 0, 0, 0], [0, nu*sigma2/(lambda*nu*sigma2 + 1), 0, 0], [0, 0, nu*sigma2/(lambda*nu*sigma2 + 1), 0], [0, 0, 0, nu*sigma2/(lambda*nu*sigma2 + 1)]])",
+    "matrix_residual_entries": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "matrix_residual_zero": true,
+    "T_lambda_1_determinant": "(nu*sigma2 + 1)**4"
+  },
+  "renormalization_lock_from_p1972": {
+    "p1972_residual_vector": [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "zero_vector_transport_preserved": true,
+    "statement": "Because the P1972 divergent residual vector is zero, the scalar FRW/Bianchi finite-part transport maps it to zero on this local branch."
+  },
+  "numeric_transport_replay": {
+    "q_grid": [
+      0.0,
+      0.05,
+      0.2,
+      0.8
+    ],
+    "rows": [
+      {
+        "q_equals_nu_sigma2": 0.0,
+        "scipy_expm_transport_trace": 4.0,
+        "expected_transport_trace": 4.0,
+        "max_abs_transport_error": 0.0,
+        "determinant": 1.0,
+        "invertible_positive_branch": true
+      },
+      {
+        "q_equals_nu_sigma2": 0.05,
+        "scipy_expm_transport_trace": 4.2,
+        "expected_transport_trace": 4.2,
+        "max_abs_transport_error": 0.0,
+        "determinant": 1.2155062500000002,
+        "invertible_positive_branch": true
+      },
+      {
+        "q_equals_nu_sigma2": 0.2,
+        "scipy_expm_transport_trace": 4.8,
+        "expected_transport_trace": 4.8,
+        "max_abs_transport_error": 0.0,
+        "determinant": 2.0736,
+        "invertible_positive_branch": true
+      },
+      {
+        "q_equals_nu_sigma2": 0.8,
+        "scipy_expm_transport_trace": 7.2,
+        "expected_transport_trace": 7.2,
+        "max_abs_transport_error": 0.0,
+        "determinant": 10.497600000000002,
+        "invertible_positive_branch": true
+      }
+    ],
+    "all_scipy_expm_rows_match_closed_form": true
+  },
+  "gatekeeper_checks": {
+    "symbolic_transport_residual_zero": true,
+    "p1972_zero_residual_preserved": true,
+    "numeric_transport_replay_pass": true,
+    "admissible_branch_condition_exported": true
+  },
+  "local_result_kind": "PASS_ZERO_LOCAL_TRANSPORT_RESIDUAL",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "theorem_export": {
+    "licensed_statement": "For the P1897 nu-branch finite-part multiplier m(lambda)=1+lambda*nu*sigma2, the transport equation dF/dlambda=(nu*sigma2/(1+lambda*nu*sigma2))*F has exact solution F(lambda)=m(lambda)F_FRW and zero residual; the four-component B1 coefficient transport matrix is T(lambda)=m(lambda)I_4 on the local branch 1+nu*sigma2>0.",
+    "not_licensed": [
+      "global background-independence theorem",
+      "full variational covariance for all EOM operators",
+      "transport through singular branch 1+nu*sigma2=0",
+      "BRST or Cutkosky closure",
+      "QW-2191 selector discharge",
+      "ToE closure"
+    ]
+  },
+  "false_pass_guard": "P1973 proves only the local finite-part transport residual for the P1897 scalar nu-branch multiplier.  It is a background-independence input witness, not global background-independence closure.",
+  "next_honest_step": "Lift this scalar finite-part transport to the full variational operator bundle by checking the FRW/Bianchi-I EOM residual tensors componentwise, including the non-scalar nu-dependent anisotropic terms.",
+  "lay_explanation": "Po skasowaniu rozbieżności w B1 sprawdziliśmy pierwszy prosty most między dwoma typami geometrii: FRW i Bianchi-I.  Most działa algebraicznie dla lokalnego mnożnika gałęzi nu, ale nie jest jeszcze dowodem, że wszystkie równania teorii są niezależne od wyboru tła.",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0"
+  }
+}

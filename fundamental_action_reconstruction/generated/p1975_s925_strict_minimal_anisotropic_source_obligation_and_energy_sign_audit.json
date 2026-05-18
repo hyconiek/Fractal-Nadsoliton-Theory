@@ -1,0 +1,175 @@
+{
+  "ledger_id": "P1975_S925_STRICT_MINIMAL_ANISOTROPIC_SOURCE_OBLIGATION_AND_ENERGY_SIGN_AUDIT",
+  "packet_id": "P1975",
+  "stage_id": "S925",
+  "produced_by": "p1975_s925_strict_minimal_anisotropic_source_obligation_and_energy_sign_audit.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only",
+  "depends_on": {
+    "p1974_present": true
+  },
+  "convention": "Einstein component equation G_component = T_component; therefore a cancelling source must satisfy Delta_T = G_BI - G_FRW.",
+  "source_obligation": {
+    "q_shear": "sigma1**2 + sigma1*sigma2 + sigma2**2",
+    "minimal_delta_T_components": [
+      "-sigma1**2 - sigma1*sigma2 - sigma2**2",
+      "3*H*sigma1 + dsigma1 - sigma1**2 - sigma1*sigma2 - sigma2**2",
+      "3*H*sigma2 + dsigma2 - sigma1**2 - sigma1*sigma2 - sigma2**2",
+      "-3*H*sigma1 - 3*H*sigma2 - dsigma1 - dsigma2 - sigma1**2 - sigma1*sigma2 - sigma2**2"
+    ],
+    "rho_required": "-sigma1**2 - sigma1*sigma2 - sigma2**2",
+    "mean_spatial_pressure_shift": "-sigma1**2 - sigma1*sigma2 - sigma2**2",
+    "traceless_spatial_pressure_shift": [
+      "3*H*sigma1 + dsigma1",
+      "3*H*sigma2 + dsigma2",
+      "-3*H*sigma1 - 3*H*sigma2 - dsigma1 - dsigma2"
+    ],
+    "traceless_spatial_sum": "0",
+    "isotropic_limit": [
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  },
+  "symbolic_checks": {
+    "post_source_residual": [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "cancellation_if_source_admitted": true,
+    "source_frw_limit_zero": true,
+    "rho_required_equals_minus_q_shear": true,
+    "q_shear_matrix": "Matrix([[1, 1/2], [1/2, 1]])",
+    "q_shear_eigenvalues_exact": [
+      "3/2",
+      "1/2"
+    ],
+    "q_shear_eigenvalues_scipy": [
+      0.5,
+      1.5
+    ],
+    "q_shear_positive_definite": true
+  },
+  "numeric_probe_table": [
+    {
+      "sample_id": "minimal_source_sample_0",
+      "input": {
+        "H": "1",
+        "sigma1": "1/10",
+        "sigma2": "-1/20",
+        "dsigma1": "1/100",
+        "dsigma2": "-1/200"
+      },
+      "q_shear": "3/400",
+      "rho_required": "-3/400",
+      "rho_required_float": -0.0075,
+      "minimal_delta_T_components": [
+        "-3/400",
+        "121/400",
+        "-13/80",
+        "-13/80"
+      ],
+      "post_source_residual": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "post_source_l2_norm": 0.0,
+      "negative_energy_density_for_nonzero_shear": true
+    },
+    {
+      "sample_id": "minimal_source_sample_1",
+      "input": {
+        "H": "3/2",
+        "sigma1": "1/5",
+        "sigma2": "1/10",
+        "dsigma1": "-1/50",
+        "dsigma2": "3/200"
+      },
+      "q_shear": "7/100",
+      "rho_required": "-7/100",
+      "rho_required_float": -0.07,
+      "minimal_delta_T_components": [
+        "-7/100",
+        "81/100",
+        "79/200",
+        "-283/200"
+      ],
+      "post_source_residual": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "post_source_l2_norm": 0.0,
+      "negative_energy_density_for_nonzero_shear": true
+    },
+    {
+      "sample_id": "minimal_source_sample_2",
+      "input": {
+        "H": "4/5",
+        "sigma1": "-1/8",
+        "sigma2": "1/16",
+        "dsigma1": "1/80",
+        "dsigma2": "1/160"
+      },
+      "q_shear": "3/256",
+      "rho_required": "-3/256",
+      "rho_required_float": -0.01171875,
+      "minimal_delta_T_components": [
+        "-3/256",
+        "-383/1280",
+        "37/256",
+        "153/1280"
+      ],
+      "post_source_residual": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "post_source_l2_norm": 0.0,
+      "negative_energy_density_for_nonzero_shear": true
+    }
+  ],
+  "gatekeeper_checks": {
+    "minimal_source_cancels_residual_if_admitted": true,
+    "minimal_source_has_zero_frw_limit": true,
+    "required_energy_density_negative_for_nonzero_shear": true,
+    "strict_source_derivation_exported": false
+  },
+  "result_kind": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "obstruction_tags": [
+    "MINIMAL_SOURCE_IS_OBLIGATION_NOT_DERIVED_STRICT_SOURCE",
+    "REQUIRED_RHO_EQUALS_NEGATIVE_SHEAR_QUADRATIC",
+    "POSITIVE_ENERGY_STRICT_SOURCE_NOT_AVAILABLE",
+    "BACKGROUND_INDEPENDENCE_STILL_OPEN"
+  ],
+  "theorem_export": {
+    "conditional_positive_statement": "If a strict source with Delta_T equal to the exported minimal components is admitted, the P1974 FRW/Bianchi-I component residual cancels exactly and the source vanishes in the FRW isotropic limit.",
+    "negative_energy_statement": "Under the convention G=T, the required energy component is rho_required=-(sigma1^2+sigma1*sigma2+sigma2^2), which is strictly negative for nonzero trace-free shear because the quadratic form has positive eigenvalues 1/2 and 3/2.",
+    "missing_strict_provider": "No strict-side derivation of this source is exported in the current repo state; admitting it as an axiom would be non-strict.",
+    "not_licensed": [
+      "positive-energy anisotropic source closure",
+      "global background-independence closure",
+      "PO2/PO3 closure",
+      "BRST or Cutkosky closure",
+      "QW-2191 selector discharge",
+      "ToE closure"
+    ]
+  },
+  "false_pass_guard": "P1975 constructs the exact source obligation and a sign obstruction; it does not derive the source from K_strict or L_total and therefore cannot close background-independence.",
+  "next_honest_step": "Audit the full strict L_total sector list for a derived shear-energy term with the required negative rho signature, or prove a no-go theorem that no positive-energy strict anisotropic provider can cancel P1974.",
+  "lay_explanation": "Wyliczyliśmy dokładnie, jakie dodatkowe źródło musiałoby istnieć, żeby usunąć anizotropowy błąd z P1974.  Matematycznie takie źródło skasowałoby błąd, ale jego energia wychodzi ujemna dla niezerowej anizotropii, więc nie wolno go po prostu dopisać jako fizycznego składnika teorii bez osobnego ścisłego wyprowadzenia.",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0"
+  }
+}

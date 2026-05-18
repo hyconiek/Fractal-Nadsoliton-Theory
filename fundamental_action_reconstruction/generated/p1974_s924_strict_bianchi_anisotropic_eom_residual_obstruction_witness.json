@@ -1,0 +1,144 @@
+{
+  "ledger_id": "P1974_S924_STRICT_BIANCHI_ANISOTROPIC_EOM_RESIDUAL_OBSTRUCTION_WITNESS",
+  "packet_id": "P1974",
+  "stage_id": "S924",
+  "produced_by": "p1974_s924_strict_bianchi_anisotropic_eom_residual_obstruction_witness.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only",
+  "depends_on": {
+    "p1973_present": true
+  },
+  "background_pair": [
+    "FRW",
+    "diagonal_Bianchi-I"
+  ],
+  "constraint": "sigma1+sigma2+sigma3=0 and dsigma1+dsigma2+dsigma3=0",
+  "component_basis": [
+    "G00",
+    "G11/a1^2",
+    "G22/a2^2",
+    "G33/a3^2"
+  ],
+  "symbolic_setup": {
+    "H1": "H + sigma1",
+    "H2": "H + sigma2",
+    "H3": "H - sigma1 - sigma2",
+    "sigma3": "-sigma1 - sigma2",
+    "dsigma3": "-dsigma1 - dsigma2",
+    "G00_BianchiI": "3*H**2 - sigma1**2 - sigma1*sigma2 - sigma2**2",
+    "G00_FRW": "3*H**2",
+    "Gii_over_ai2_rule": "-(dot H_j + dot H_k + H_j^2 + H_k^2 + H_j*H_k)"
+  },
+  "anisotropic_eom_residual_vector": [
+    "-sigma1**2 - sigma1*sigma2 - sigma2**2",
+    "3*H*sigma1 + dsigma1 - sigma1**2 - sigma1*sigma2 - sigma2**2",
+    "3*H*sigma2 + dsigma2 - sigma1**2 - sigma1*sigma2 - sigma2**2",
+    "-3*H*sigma1 - 3*H*sigma2 - dsigma1 - dsigma2 - sigma1**2 - sigma1*sigma2 - sigma2**2"
+  ],
+  "polynomial_nonzero_flags": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "isotropic_limit_residual_vector": [
+    "0",
+    "0",
+    "0",
+    "0"
+  ],
+  "isotropic_limit_zero": true,
+  "numeric_probe_table": [
+    {
+      "sample_id": "anisotropic_eom_sample_0",
+      "input": {
+        "H": "1",
+        "Hdot": "1/10",
+        "sigma1": "1/10",
+        "sigma2": "-1/20",
+        "dsigma1": "1/100",
+        "dsigma2": "-1/200"
+      },
+      "exact_residual_vector": [
+        "-3/400",
+        "121/400",
+        "-13/80",
+        "-13/80"
+      ],
+      "scipy_l2_norm": 0.3799671038392666,
+      "nonzero": true
+    },
+    {
+      "sample_id": "anisotropic_eom_sample_1",
+      "input": {
+        "H": "3/2",
+        "Hdot": "-1/20",
+        "sigma1": "1/5",
+        "sigma2": "1/10",
+        "dsigma1": "-1/50",
+        "dsigma2": "3/200"
+      },
+      "exact_residual_vector": [
+        "-7/100",
+        "81/100",
+        "79/200",
+        "-283/200"
+      ],
+      "scipy_l2_norm": 1.6790622382746865,
+      "nonzero": true
+    },
+    {
+      "sample_id": "anisotropic_eom_sample_2",
+      "input": {
+        "H": "4/5",
+        "Hdot": "1/25",
+        "sigma1": "-1/8",
+        "sigma2": "1/16",
+        "dsigma1": "1/80",
+        "dsigma2": "1/160"
+      },
+      "exact_residual_vector": [
+        "-3/256",
+        "-383/1280",
+        "37/256",
+        "153/1280"
+      ],
+      "scipy_l2_norm": 0.3533358054404478,
+      "nonzero": true
+    }
+  ],
+  "gatekeeper_checks": {
+    "p1973_scalar_transport_available": true,
+    "generic_anisotropic_residual_nonzero": true,
+    "frw_isotropic_limit_zero": true,
+    "numeric_samples_nonzero": true
+  },
+  "result_kind": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "obstruction_tags": [
+    "SCALAR_TRANSPORT_INSUFFICIENT_FOR_TENSOR_EOM",
+    "NONZERO_BIANCHI_I_ANISOTROPIC_EINSTEIN_RESIDUAL",
+    "FULL_VARIATIONAL_BACKGROUND_INDEPENDENCE_NOT_CLOSED"
+  ],
+  "theorem_export": {
+    "negative_statement": "The P1973 scalar finite-part transport does not imply full FRW/Bianchi-I metric EOM covariance.  For a generic diagonal Bianchi-I anisotropy with sum_i sigma_i=0, the component residual vector G_BI-G_FRW is polynomially nonzero, while it vanishes in the isotropic FRW limit.",
+    "required_new_provider": "A strict anisotropic stress/source tensor or a genuinely tensorial transport connection must cancel/map the displayed residual components before background-independence can be promoted.",
+    "not_licensed": [
+      "global background-independence closure",
+      "PO2/DELTA_BG_Yf sufficiency",
+      "PO3 nonempty global admissible class",
+      "BRST or Cutkosky closure",
+      "QW-2191 selector discharge",
+      "ToE closure"
+    ]
+  },
+  "false_pass_guard": "P1974 is a negative obstruction witness: the scalar transport pass from P1973 must not be upgraded to tensor-level background-independence without an additional anisotropic tensor provider.",
+  "next_honest_step": "Construct or rule out a strict anisotropic stress/source tensor Pi_ij^strict whose FRW limit is zero and whose Bianchi-I components cancel the exported residual vector componentwise.",
+  "lay_explanation": "Poprzedni most działał dla jednego wspólnego mnożnika.  Teraz sprawdziliśmy pełniejsze równania geometrii i wyszło, że anizotropia Bianchi-I dodaje realne dodatkowe składniki.  To znaczy, że teoria potrzebuje jeszcze jawnego tensorowego źródła albo mocniejszego transportu, zanim można mówić o pełnej niezależności od tła.",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0"
+  }
+}
