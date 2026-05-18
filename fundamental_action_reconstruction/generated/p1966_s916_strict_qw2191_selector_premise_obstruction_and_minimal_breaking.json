@@ -1,0 +1,181 @@
+{
+  "packet_id": "P1966",
+  "stage_id": "S916",
+  "status": "QW2191_MINIMAL_SELECTOR_PREMISE_IDENTIFIED__STRICT_AXIS_ONLY_SOURCE_FOUND__GLOBAL_SELECTOR_CLOSURE_NOT_PASSED",
+  "route": "strict_only_with_lane_scoped_axis_source_distinguished_from_global_selector_closure",
+  "legacy_bridge_used": false,
+  "generated_utc": "2026-05-17T23:56:44.256901+00:00",
+  "python": "3.14.4",
+  "numpy": "2.4.5",
+  "sympy": "1.14.0",
+  "symbolic_o2_obstruction": {
+    "rotation_matrix_R_t": "Matrix([\n[cos(t), -sin(t)],\n[sin(t),  cos(t)]])",
+    "generic_operator_A": "Matrix([\n[x, y],\n[z, w]])",
+    "commutator_A_R_t": "Matrix([\n[(y + z)*sin(t),  (w - x)*sin(t)],\n[(w - x)*sin(t), (-y - z)*sin(t)]])",
+    "derivative_constraints_at_identity": [
+      "Eq(y + z, 0)",
+      "Eq(w - x, 0)",
+      "Eq(w - x, 0)",
+      "Eq(-y - z, 0)"
+    ],
+    "all_linear_equivariant_solutions": [
+      {
+        "w": "x",
+        "z": "-y"
+      }
+    ],
+    "symmetric_equivariant_solutions": [
+      {
+        "w": "x",
+        "y": "0",
+        "z": "0"
+      }
+    ],
+    "symmetric_equivariant_operator_normal_form": "Matrix([\n[x, 0],\n[0, x]])",
+    "scalar_eigenvalue_multiplicity": {
+      "x": 2
+    },
+    "unique_axis_possible_from_o2_equivariant_kernel_alone": false,
+    "verdict": "O2_EQUIVARIANT_SYMMETRIC_OPERATOR_IS_SCALAR_ON_PAIR_PLANE__NO_AXIS_SELECTOR"
+  },
+  "minimal_symmetry_breaking_premise": {
+    "minimal_datum_label": "Delta_sel_pair_m = [[sigma_c_m, sigma_s_m], [sigma_s_m, -sigma_c_m]]",
+    "matrix": "Matrix([\n[sigma_c,  sigma_s],\n[sigma_s, -sigma_c]])",
+    "trace": "0",
+    "determinant": "-sigma_c**2 - sigma_s**2",
+    "characteristic_polynomial": "lambda**2 - sigma_c**2 - sigma_s**2",
+    "eigenvalues_symbolic": {
+      "-sqrt(sigma_c**2 + sigma_s**2)": 1,
+      "sqrt(sigma_c**2 + sigma_s**2)": 1
+    },
+    "gap_squared": "4*sigma_c**2 + 4*sigma_s**2",
+    "nondegeneracy_condition": "sigma_c_m**2 + sigma_s_m**2 > 0 for every selected degenerate pair plane",
+    "residual_symmetry_after_breaking": "Z2 sign of each selected eigenvector, not continuous O(2)",
+    "numeric_probe_samples": [
+      {
+        "sample_id": 1,
+        "sigma_c": 1.0,
+        "sigma_s": 0.0,
+        "eigenvalues_numeric": [
+          -1.0,
+          1.0
+        ],
+        "gap_numeric": 2.0,
+        "residual_inf_norm": 0.0,
+        "selector_angle_half_atan2_rad": 0.0,
+        "passes_nonzero_gap": true
+      },
+      {
+        "sample_id": 2,
+        "sigma_c": 0.0,
+        "sigma_s": 1.0,
+        "eigenvalues_numeric": [
+          -1.0,
+          1.0
+        ],
+        "gap_numeric": 2.0,
+        "residual_inf_norm": 0.0,
+        "selector_angle_half_atan2_rad": 0.7853981633974483,
+        "passes_nonzero_gap": true
+      },
+      {
+        "sample_id": 3,
+        "sigma_c": 0.6,
+        "sigma_s": 0.8,
+        "eigenvalues_numeric": [
+          -1.0,
+          1.0
+        ],
+        "gap_numeric": 2.0,
+        "residual_inf_norm": 5.551115123125783e-17,
+        "selector_angle_half_atan2_rad": 0.46364760900080615,
+        "passes_nonzero_gap": true
+      },
+      {
+        "sample_id": 4,
+        "sigma_c": 2.0,
+        "sigma_s": -1.5,
+        "eigenvalues_numeric": [
+          -2.5,
+          2.5
+        ],
+        "gap_numeric": 5.0,
+        "residual_inf_norm": 1.1102230246251565e-16,
+        "selector_angle_half_atan2_rad": -0.3217505543966422,
+        "passes_nonzero_gap": true
+      }
+    ],
+    "all_numeric_samples_pass": true
+  },
+  "current_repository_source_audit": {
+    "inputs": {
+      "p1499_sha256": "bbfb9f879ac5fe96c9813b2776052e5e2d7651cada5ab3211c378609142fdcfd",
+      "p1552_sha256": "3cd8afb8ac00969db03755ec81073c540a86758796b5b2bc370637682549f2f2",
+      "p1965_sha256": "5a537b4e3b7decec3f93c82a349fa051f2635f834af067a0781a3f207fb2711f",
+      "shannon_assignment_sha256": "5d5e3dd9fbb3a666f4fd7b4cbc6aaff18a34d087f4d4afb5e41ae2aa549847e2",
+      "diagonal_assignment_sha256": "44829114ce6a034feb777c8031667739b00e9a84f6121f5741e30463e16c5ef8",
+      "p455_summary_sha256": "7ff70e67206c30d9ce536444b9127947c7cbb853e3f893c6c81d893e7a6f3432",
+      "n480_text_sha256": "ad11ddc3dc941c9c5ec22a77813b61d2c878f46c6c8ab430ce3633035a2724d1",
+      "n488_text_sha256": "ea893203b1c44d3727c0578d3399d340240fe57282c4d85c3db8ef9a02a65f6f",
+      "n496_text_sha256": "daea5604f3241973a717486d77f462331c53b1f42a374791fe8041c36a54a182",
+      "n487_text_sha256": "4699602e9ce31d8fa8f6cef95d51881200edad4da0e2e75785e45d22491aef9b",
+      "ax16_text_sha256": "a45b90acf4949448033c27e21edcde7ff0c8ecbc46b85fadfbf6fdded594c623"
+    },
+    "axis_only_strict_sources_found_by_repo_grep": {
+      "shannon_element_order_assignment_exported": true,
+      "diagonal_local_assignment_exported": true,
+      "shannon_pair_theorems_n480_n488_n496_present": true,
+      "p455_axis_alignment_audited_up_to_z2": true,
+      "axis_only_source_exported_now": true
+    },
+    "global_selector_closure_audit": {
+      "p1499_global_closed": false,
+      "p1499_requirements": {
+        "R1_cross_provider_replication": true,
+        "R2_strict_internal_selector_source_exported": false,
+        "R3_quantified_theorem_text_ready": true,
+        "R4_falsifier_set_non_obstructing": true,
+        "R5_F_to_LSM_LGR_mapping_witness_exported": false
+      },
+      "p1552_qw2191_closed": false,
+      "p1552_theorem_level_uniqueness_pass": false,
+      "n487_scoped_not_global": true,
+      "ax16_extension_only": true,
+      "p1965_status": "PO2_FULL_EOM_NORMAL_FORM_EXTRACTION_NONAVAILABLE_CURRENT_EXPORT_STATE",
+      "missing_for_global_strict_selector_closure": [
+        "P1499_R2_global_strict_internal_selector_source_not_restamped",
+        "P1499_R5_F_to_LSM_LGR_mapping_witness_missing",
+        "P1552_theorem_level_uniqueness_pass_false",
+        "N487_scoped_diagonal_local_not_global_selector_closure",
+        "AX16_extension_only_not_strict_core_admissible_S_sel_int"
+      ],
+      "admissible_S_sel_int_or_sign_sensitive_global_selector_exported_now": false
+    }
+  },
+  "theorem_export": {
+    "kernel_only_negative_statement": "On a degenerate Fourier pair plane, every symmetric O(2)-equivariant kernel/symmetry-only operator is scalar, so that layer alone cannot choose a unique selector axis.",
+    "axis_source_refinement": "Repository grep finds lane-scoped strict axis-only source exports (Shannon element-order plus diagonal/local mode-index assignments) that instantiate the nonzero traceless tensor shape up to residual Z2.",
+    "minimal_conditional_positive_statement": "If each affected pair plane receives a nonzero traceless symmetric selector tensor Delta_sel_pair_m with sigma_c_m**2 + sigma_s_m**2 > 0, the continuous O(2) family is cut to residual Z2 and a unique axis pair is selected.",
+    "remaining_nonclaim": "Axis-only O(2)->Z2 is not the same as sign-sensitive global selector closure/admissible S_sel_int/ToE closure.",
+    "status": "AXIS_ONLY_STRICT_SOURCE_RECOGNIZED__GLOBAL_SELECTOR_CLOSURE_STILL_OPEN"
+  },
+  "strict_axis_only_source_exported_now": true,
+  "strict_core_selector_discharge_pass": false,
+  "extension_premise_identified": true,
+  "false_pass_guard": [
+    "This packet does not claim QW-2191 global strict-core selector closure.",
+    "It corrects the previous audit by recognizing existing strict lane-scoped axis-only source exports.",
+    "Residual Z2 sign remains unresolved unless gauge-irrelevance is separately proved for each downstream observable or a sign-sensitive strict datum is exported.",
+    "AX16 remains strict_extension_only and is not re-labeled as strict-core admissible S_sel_int."
+  ],
+  "strict_core_statusvector_restamp": {
+    "renormalization": "OPEN_BACKEND_THEOREM_SCOPE_LIMITS_REMAIN",
+    "unitarity": "OPEN_DRESSED_AMPLITUDE_MISSING",
+    "background_independence": "OPEN_GLOBAL_TRANSPORT_PENDING",
+    "po3": "PASS_MACHINE_CHECKED_FORMAL_DOMAIN_NONEMPTY_BUT_COVARIANT_FULL_CHECK_OPEN",
+    "po2": "CONDITIONAL_TENSORIAL_PASS_FULL_EOM_NORMAL_FORM_OPEN",
+    "selector_qw2191": "AXIS_ONLY_O2_TO_Z2_SOURCE_FOUND_ON_EXPORTED_N12_LANES__GLOBAL_SIGN_SENSITIVE_SELECTOR_CLOSURE_OPEN"
+  },
+  "next_honest_step": "Build P1967: explicitly map the Shannon element-order strict source into the P1966 traceless tensor Delta_sel_pair_m for pair1..pair5, verify nonzero gaps, and keep the residual Z2/global selector limits explicit.",
+  "lay_explanation": "Po przeszukaniu repo widać, że istnieje wewnętrzny strict kompas wybierający osie (ale tylko do znaku). To naprawia zbyt ostrożną wersję P1966: brakowało rozróżnienia między wyborem osi a pełnym wyborem zwrotu/znaku i globalnym selektorem. Pełne domknięcie nadal nie jest udowodnione."
+}
