@@ -1,0 +1,45 @@
+{
+  "ledger_id": "P2007_S957_STRICT_CUTKOSKY_TENSOR_VS_SCALAR_BAND_COMPARATOR_WITNESS",
+  "packet_id": "P2007",
+  "stage_id": "S957",
+  "produced_by": "p2007_s957_strict_cutkosky_tensor_vs_scalar_band_comparator_witness.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only",
+  "depends_on": {
+    "p2005": "P2005_S955_STRICT_CUTKOSKY_GX_BACKEND_AMPLITUDE_BOUND_AND_CLASSIFIER_WITNESS",
+    "p2006": "P2006_S956_STRICT_CUTKOSKY_GX_BACKEND_TENSOR_SURROGATE_AND_COVARIANCE_CLASSIFIER_WITNESS"
+  },
+  "scalar_band_summary": {
+    "dominant_classifier": "MISSING_CHANNEL_PRESSURE_SUPPORTED",
+    "dominant_share": 0.6666666666666666,
+    "scan_count": 9,
+    "missing_fraction": 0.6666666666666666
+  },
+  "tensor_band_summary": {
+    "dominant_classifier": "MISSING_CHANNEL_PRESSURE_SUPPORTED",
+    "dominant_share": 0.6363636363636364,
+    "scan_count": 11,
+    "missing_fraction": 0.6363636363636364
+  },
+  "comparison": {
+    "dominant_share_shift_tensor_minus_scalar": -0.030303030303030276,
+    "missing_fraction_shift_tensor_minus_scalar": -0.030303030303030276,
+    "verdict": "TENSORIZATION_NEUTRAL_OR_MIXED"
+  },
+  "gatekeeper_checks": {
+    "p2005_present": true,
+    "p2006_present": true,
+    "scalar_scan_nonempty": true,
+    "tensor_scan_nonempty": true,
+    "shares_bounded": true
+  },
+  "result_kind": "PASS_TENSOR_VS_SCALAR_COMPARATOR_WITNESS",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "false_pass_guard": "Comparator summarizes diagnostics only; no theorem-grade closure claim.",
+  "next_honest_step": "Export explicit backend loop-amplitude tensor object and rerun comparator with direct tensor source (without surrogate).",
+  "lay_explanation": "Porównaliśmy dwa podejścia: prosty zakres skali i zakres z macierzy backendu. Sprawdzamy, czy wersja tensorowa daje stabilniejszy sygnał klasyfikacji.",
+  "environment": {
+    "python": "3.14.4"
+  },
+  "toe_progress": "Stage improves strict-lane diagnostic resolution and reproducibility, but does not establish theorem-grade unitarity closure, strict-core selector closure, or final ToE completion."
+}

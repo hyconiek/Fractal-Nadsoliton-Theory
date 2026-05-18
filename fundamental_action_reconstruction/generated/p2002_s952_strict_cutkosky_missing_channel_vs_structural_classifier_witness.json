@@ -1,0 +1,39 @@
+{
+  "ledger_id": "P2002_S952_STRICT_CUTKOSKY_MISSING_CHANNEL_VS_STRUCTURAL_CLASSIFIER_WITNESS",
+  "packet_id": "P2002",
+  "stage_id": "S952",
+  "produced_by": "p2002_s952_strict_cutkosky_missing_channel_vs_structural_classifier_witness.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only",
+  "inputs": {
+    "p2000": "P2000_S950_STRICT_CUTKOSKY_LOOP_KERNEL_TWO_CHANNEL_WITNESS",
+    "p2001": "P2001_S951_STRICT_CUTKOSKY_FULL_THREE_LOOP_KERNEL_PLUS_EXTRA_CHANNEL_WITNESS"
+  },
+  "delta_norm_comparison": {
+    "l2_p2000": 2.6100453885879823e-05,
+    "l2_p2001": 1.3903505085849564e-05,
+    "l2_ratio_p2001_over_p2000": 0.532692080629727,
+    "max_abs_p2000": 2.4828326776590508e-05,
+    "max_abs_p2001": 1.2777812011880338e-05,
+    "max_ratio_p2001_over_p2000": 0.5146465215661633
+  },
+  "classifier": "MISSING_CHANNEL_PRESSURE_SUPPORTED",
+  "gatekeeper_checks": {
+    "p2000_present": true,
+    "p2001_present": true,
+    "shared_grid_length": true,
+    "l2_ratio_finite": true,
+    "max_ratio_finite": true
+  },
+  "result_kind": "PASS_DELTA_NORM_CLASSIFIER_WITNESS",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "false_pass_guard": "Classifier is comparative diagnostic only; it is not a proof of full unitarity closure.",
+  "next_honest_step": "Replace gx by explicit loop-derived amplitude and rerun classifier with uncertainty bands to test robustness of obstruction class.",
+  "lay_explanation": "Porównaliśmy dwa kolejne modele: jeśli po dodaniu kanału błąd maleje, brakowało kanału; jeśli rośnie, bardziej prawdopodobna jest obstrukcja strukturalna.",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "scipy": "1.17.1"
+  },
+  "toe_progress": "Stage improves strict-lane diagnostic resolution and reproducibility, but does not establish theorem-grade unitarity closure, strict-core selector closure, or final ToE completion."
+}

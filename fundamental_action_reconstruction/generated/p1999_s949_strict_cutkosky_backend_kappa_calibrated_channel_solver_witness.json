@@ -1,0 +1,118 @@
+{
+  "ledger_id": "P1999_S949_STRICT_CUTKOSKY_BACKEND_KAPPA_CALIBRATED_CHANNEL_SOLVER_WITNESS",
+  "packet_id": "P1999",
+  "stage_id": "S949",
+  "produced_by": "p1999_s949_strict_cutkosky_backend_kappa_calibrated_channel_solver_witness.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only",
+  "channel": "graviton->gauge_gauge",
+  "depends_on": {
+    "p1853_present": true,
+    "p1998_present": true
+  },
+  "backend_weight_rule": "w_i = |a_i| / sum_j |a_j|",
+  "backend_kappa_rule": "kappa_i = |ratio_i| / max_j |ratio_j|",
+  "backend_weights": {
+    "gg": 0.09088112703795323,
+    "gh": 0.7803540622930122,
+    "hh": 0.12876481066898995
+  },
+  "backend_kappas": {
+    "gg": 0.019222658183379135,
+    "gh": 0.9999999999999999,
+    "hh": 0.23375781032659712
+  },
+  "formulas": {
+    "ImM": "9606436630529761*s**2*(640*pi**2*s + 177508431*s*log(2) + 640*pi**2 + 158992000*log(2))**2*log(2)**2/(2684354560000000000000000*pi**5*(pi**2 + 248425*log(2))**2*(s + 1)**2)",
+    "CutSum": "6.48528051846293e-9*s**2*(1.0*s + 0.551815223422006)*(640*pi**2*s + 177508431*s*log(2) + 640*pi**2 + 158992000*log(2))**2*log(2)**2/(pi**5*(pi**2 + 248425*log(2))**2*(s + 1)**3)",
+    "Delta_opt": "-2.90660400021277e-9*s**2*(1.0*s - 5.48552278750386e-14)*(640*pi**2*s + 177508431*s*log(2) + 640*pi**2 + 158992000*log(2))**2*log(2)**2/(pi**5*(pi**2 + 248425*log(2))**2*(s + 1)**3)"
+  },
+  "grid_table": [
+    {
+      "s": "1/2",
+      "ImM": 6.208734569075502e-07,
+      "Cut_channels": {
+        "gg": 5.678723002838108e-08,
+        "gh": 6.460014990236163e-07,
+        "hh": 8.617603798749036e-08
+      },
+      "CutSum": 7.889647670394878e-07,
+      "Delta_opt": -1.6809131013193764e-07,
+      "abs_delta": 1.6809131013193764e-07
+    },
+    {
+      "s": "1",
+      "ImM": 2.5771632176922702e-06,
+      "Cut_channels": {
+        "gg": 2.3646662001221355e-07,
+        "gh": 3.0166496791774406e-06,
+        "hh": 3.706339569712181e-07
+      },
+      "CutSum": 3.6237502561608722e-06,
+      "Delta_opt": -1.0465870384686022e-06,
+      "abs_delta": 1.0465870384686022e-06
+    },
+    {
+      "s": "2",
+      "ImM": 1.0690266057094344e-05,
+      "Cut_channels": {
+        "gg": 9.839938590837414e-07,
+        "gh": 1.390365424107779e-05,
+        "hh": 1.5910465238305878e-06
+      },
+      "CutSum": 1.647869462399212e-05,
+      "Delta_opt": -5.788428566897777e-06,
+      "abs_delta": 5.788428566897777e-06
+    },
+    {
+      "s": "4",
+      "ImM": 4.400220102771994e-05,
+      "Cut_channels": {
+        "gg": 4.060466282446387e-06,
+        "gh": 6.180713337926702e-05,
+        "hh": 6.725500347370029e-06
+      },
+      "CutSum": 7.259310000908344e-05,
+      "Delta_opt": -2.8590898981363505e-05,
+      "abs_delta": 2.8590898981363505e-05
+    },
+    {
+      "s": "8",
+      "ImM": 0.0001793579582485868,
+      "Cut_channels": {
+        "gg": 1.6578772677032372e-05,
+        "gh": 0.00026437401027841196,
+        "hh": 2.789378030781018e-05
+      },
+      "CutSum": 0.0003088465632632545,
+      "Delta_opt": -0.0001294886050146678,
+      "abs_delta": 0.0001294886050146678
+    }
+  ],
+  "delta_stats": {
+    "max_abs": 0.0001294886050146678,
+    "l2": 0.0001327379668278782
+  },
+  "gatekeeper_checks": {
+    "p1853_present": true,
+    "p1998_present": true,
+    "backend_weight_calibration": true,
+    "backend_kappa_calibration": true,
+    "weights_normalized": true,
+    "kappas_normalized": true,
+    "nonzero_delta_detected": true,
+    "delta_norm_bounded": true
+  },
+  "result_kind": "PASS_BACKEND_KAPPA_CALIBRATED_CHANNEL_SOLVER_WITNESS",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "false_pass_guard": "Finite proxy state-sum with backend-calibrated channels; not theorem-grade all-state Cutkosky closure.",
+  "next_honest_step": "Introduce explicit loop-derived channel kernels and add at least one extra intermediate state class to separate missing-channel vs structural obstruction.",
+  "lay_explanation": "Już nie tylko wagi, ale też siła reakcji każdego kanału pochodzi z backendu. To jeszcze bardziej ogranicza arbitralność, ale nadal nie jest pełnym dowodem unitarności.",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0"
+  },
+  "toe_progress": "Stage improves strict-lane diagnostic resolution and reproducibility, but does not establish theorem-grade unitarity closure, strict-core selector closure, or final ToE completion."
+}

@@ -1,0 +1,143 @@
+{
+  "ledger_id": "P2008_S958_STRICT_CUTKOSKY_DIRECT_BACKEND_TENSOR_OBJECT_CLASSIFIER_WITNESS",
+  "packet_id": "P2008",
+  "stage_id": "S958",
+  "produced_by": "p2008_s958_strict_cutkosky_direct_backend_tensor_object_classifier_witness.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only",
+  "depends_on": {
+    "p1853_present": true,
+    "p2007_present": true
+  },
+  "direct_backend_tensor_object": {
+    "matrix": [
+      [
+        4.128631776223291e-06,
+        3.545063648460622e-05,
+        5.849645328457956e-06
+      ],
+      [
+        3.545063648460622e-05,
+        0.0003043981647692767,
+        5.022818976627771e-05
+      ],
+      [
+        5.849645328457956e-06,
+        5.022818976627771e-05,
+        8.288063634666397e-06
+      ]
+    ],
+    "eigenvalues": [
+      9.999999991987043e-13,
+      1.0000000032914793e-12,
+      0.00031681485818016653
+    ]
+  },
+  "gx_covariance_band": {
+    "center": 0.9999999936871621,
+    "sigma": 1.5782088042252749e-09,
+    "min": 0.9999999905307445,
+    "max": 0.9999999968435797,
+    "rule": "band from direct backend tensor eigenspectrum"
+  },
+  "classifier_scan": {
+    "count": 13,
+    "table": [
+      {
+        "gx_scale": 0.9999999905307445,
+        "l2_ratio_vs_p2004": 0.9999999935473046,
+        "classifier": "MIXED_OR_INCONCLUSIVE"
+      },
+      {
+        "gx_scale": 0.9999999910568141,
+        "l2_ratio_vs_p2004": 0.9999999939057874,
+        "classifier": "MIXED_OR_INCONCLUSIVE"
+      },
+      {
+        "gx_scale": 0.9999999915828837,
+        "l2_ratio_vs_p2004": 0.9999999942642704,
+        "classifier": "MIXED_OR_INCONCLUSIVE"
+      },
+      {
+        "gx_scale": 0.9999999921089533,
+        "l2_ratio_vs_p2004": 0.9999999946227535,
+        "classifier": "MIXED_OR_INCONCLUSIVE"
+      },
+      {
+        "gx_scale": 0.9999999926350229,
+        "l2_ratio_vs_p2004": 0.9999999949812365,
+        "classifier": "MIXED_OR_INCONCLUSIVE"
+      },
+      {
+        "gx_scale": 0.9999999931610924,
+        "l2_ratio_vs_p2004": 0.9999999953397194,
+        "classifier": "MIXED_OR_INCONCLUSIVE"
+      },
+      {
+        "gx_scale": 0.9999999936871621,
+        "l2_ratio_vs_p2004": 0.9999999956982024,
+        "classifier": "MIXED_OR_INCONCLUSIVE"
+      },
+      {
+        "gx_scale": 0.9999999942132317,
+        "l2_ratio_vs_p2004": 0.9999999960566853,
+        "classifier": "MIXED_OR_INCONCLUSIVE"
+      },
+      {
+        "gx_scale": 0.9999999947393012,
+        "l2_ratio_vs_p2004": 0.9999999964151683,
+        "classifier": "MIXED_OR_INCONCLUSIVE"
+      },
+      {
+        "gx_scale": 0.9999999952653709,
+        "l2_ratio_vs_p2004": 0.9999999967736514,
+        "classifier": "MIXED_OR_INCONCLUSIVE"
+      },
+      {
+        "gx_scale": 0.9999999957914405,
+        "l2_ratio_vs_p2004": 0.9999999971321343,
+        "classifier": "MIXED_OR_INCONCLUSIVE"
+      },
+      {
+        "gx_scale": 0.99999999631751,
+        "l2_ratio_vs_p2004": 0.9999999974906172,
+        "classifier": "MIXED_OR_INCONCLUSIVE"
+      },
+      {
+        "gx_scale": 0.9999999968435797,
+        "l2_ratio_vs_p2004": 0.9999999978491002,
+        "classifier": "MIXED_OR_INCONCLUSIVE"
+      }
+    ],
+    "counts": {
+      "MISSING_CHANNEL_PRESSURE_SUPPORTED": 0,
+      "STRUCTURAL_OBSTRUCTION_PRESSURE_SUPPORTED": 0,
+      "MIXED_OR_INCONCLUSIVE": 13
+    },
+    "dominant_classifier": "MIXED_OR_INCONCLUSIVE",
+    "dominant_share": 1.0
+  },
+  "delta_stats": {
+    "l2_base_p2004": 1.39930383112735e-05
+  },
+  "gatekeeper_checks": {
+    "p1853_present": true,
+    "p2007_present": true,
+    "direct_backend_tensor_exported": true,
+    "tensor_psd": true,
+    "covariance_band_valid": true,
+    "scan_nonempty": true
+  },
+  "result_kind": "PASS_DIRECT_BACKEND_TENSOR_CLASSIFIER_WITNESS",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "false_pass_guard": "Direct-backend-tensor classifier is still diagnostic and does not claim theorem-grade closure.",
+  "next_honest_step": "Attach explicit channelwise loop amplitude tensors (gg/gh/hh/gx) and rerun classifier with coupled covariance propagation.",
+  "lay_explanation": "Użyliśmy teraz bezpośrednio obiektu tensorowego z backendowych współczynników, żeby wyznaczyć zakres niepewności gx i ponownie sprawdzić klasyfikację.",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0"
+  },
+  "toe_progress": "Stage improves strict-lane diagnostic resolution and reproducibility, but does not establish theorem-grade unitarity closure, strict-core selector closure, or final ToE completion."
+}
