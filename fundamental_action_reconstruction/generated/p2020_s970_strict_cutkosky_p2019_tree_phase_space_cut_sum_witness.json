@@ -1,0 +1,202 @@
+{
+  "ledger_id": "P2020_S970_STRICT_CUTKOSKY_P2019_TREE_PHASE_SPACE_CUT_SUM_WITNESS",
+  "packet_id": "P2020",
+  "stage_id": "S970",
+  "produced_by": "p2020_s970_strict_cutkosky_p2019_tree_phase_space_cut_sum_witness.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only",
+  "channel": "graviton->gauge_gauge",
+  "depends_on": {
+    "p2019": "P2019_S969_STRICT_CUTKOSKY_FIRST_TRANSVERSE_TREE_AMPLITUDE_COMPONENT",
+    "p2018": "P2018_S968_STRICT_CUTKOSKY_P2017_PROVENANCE_NONPROMOTION_AUDIT"
+  },
+  "input_scope": {
+    "source_component": "P2019 local transverse tree hAA amplitude component",
+    "not_dressed": true,
+    "not_discM": true,
+    "not_cutkosky_closure": true,
+    "normalization": "results are in units of kappa^2*Z_gauge^2"
+  },
+  "amplitude_input": {
+    "plus_matrix_over_kappa_Zgauge": [
+      [
+        "-2",
+        "0"
+      ],
+      [
+        "0",
+        "2"
+      ]
+    ],
+    "cross_matrix_over_kappa_Zgauge": [
+      [
+        "0",
+        "-2"
+      ],
+      [
+        "-2",
+        "0"
+      ]
+    ],
+    "polarization_sum_over_kappa2_Zgauge2": "16",
+    "amplitude_vector_order": [
+      "plus_xx",
+      "plus_xy",
+      "plus_yx",
+      "plus_yy",
+      "cross_xx",
+      "cross_xy",
+      "cross_yx",
+      "cross_yy"
+    ],
+    "amplitude_gram_eigvals_exact": [
+      "16",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "final_state_summed_graviton_linear_polarization_gram_over_kappa2_Zgauge2": [
+      [
+        "8",
+        "0"
+      ],
+      [
+        "0",
+        "8"
+      ]
+    ]
+  },
+  "angular_transport_certificate": {
+    "basis": "generic spherical real transverse-polarization frame {e_theta,e_phi} for k1=(1,n), k2=(1,-n); not a circular helicity eigenbasis",
+    "nomenclature_guard": "P2020 uses real plus/cross graviton linear polarizations and real transverse gauge polarizations; it does not claim circular helicity eigenstate diagonalization.",
+    "transversality_and_orthonormality": {
+      "k1_dot_e_theta": "0",
+      "k1_dot_e_phi": "0",
+      "k2_dot_e_theta": "0",
+      "k2_dot_e_phi": "0",
+      "e_theta_norm": "1",
+      "e_phi_norm": "1",
+      "e_theta_dot_e_phi": "0"
+    },
+    "transported_amplitude_matrices_over_kappa_Zgauge": {
+      "plus": [
+        [
+          "-2",
+          "0"
+        ],
+        [
+          "0",
+          "2"
+        ]
+      ],
+      "cross": [
+        [
+          "0",
+          "-2"
+        ],
+        [
+          "-2",
+          "0"
+        ]
+      ]
+    },
+    "transported_polarization_sum_over_kappa2_Zgauge2": "16",
+    "final_state_summed_graviton_linear_polarization_gram_over_kappa2_Zgauge2": [
+      [
+        "8",
+        "0"
+      ],
+      [
+        "0",
+        "8"
+      ]
+    ],
+    "matches_p2019_axis_frame": true,
+    "symbolic_angular_independence_verified": true
+  },
+  "exact_phase_space_cut_sum": {
+    "measure": "dPhi2_massless_COM = (1/(32*pi^2))*dphi*dx, phi in [0,2*pi], x=cos(theta) in [-1,1]",
+    "integrand_status": "The P2019 axis-frame local transverse polarization sum is symbolically rederived in a generic spherical real transverse-polarization frame by angular_transport_certificate; this remains a tree-component cut-sum candidate, not DiscM.",
+    "CutSum_tree_no_identical_symmetry_over_kappa2_Zgauge2": "2/pi",
+    "CutSum_tree_identical_final_state_over_kappa2_Zgauge2": "1/pi",
+    "convention_window_over_kappa2_Zgauge2": [
+      "1/pi",
+      "2/pi"
+    ],
+    "linear_polarization_resolved_CutSum_no_identical_symmetry_over_kappa2_Zgauge2": [
+      [
+        "1/pi",
+        "0"
+      ],
+      [
+        "0",
+        "1/pi"
+      ]
+    ],
+    "linear_polarization_resolved_CutSum_identical_final_state_over_kappa2_Zgauge2": [
+      [
+        "1/(2*pi)",
+        "0"
+      ],
+      [
+        "0",
+        "1/(2*pi)"
+      ]
+    ],
+    "linear_polarization_basis_order": [
+      "plus",
+      "cross"
+    ],
+    "trace_relation": "trace(linear_polarization_resolved_CutSum) equals the scalar polarization-summed CutSum; the matrix form avoids prematurely collapsing the external graviton linear-polarization indices."
+  },
+  "numeric_quadrature_cross_check": {
+    "scipy_dblquad_no_symmetry": 0.6366197723675814,
+    "scipy_dblquad_no_symmetry_abserr_estimate": 7.067899292141149e-15,
+    "scipy_dblquad_identical": 0.3183098861837907,
+    "scipy_dblquad_identical_abserr_estimate": 3.5339496460705744e-15,
+    "exact_no_symmetry_float": 0.6366197723675814,
+    "exact_identical_float": 0.3183098861837907,
+    "absolute_errors": [
+      0.0,
+      0.0
+    ],
+    "absolute_error_l2": 0.0
+  },
+  "p1953_contract_update": {
+    "phase_space_measure and integration_domain": "PARTIAL_TREE_COMPONENT_EXACT_DPHI2_EXPORTED",
+    "AbsM_dressed_squared_common_basis": "PARTIAL_TREE_TRANSVERSE_POLARIZATION_SUM_EXACT_NOT_DRESSED",
+    "CutSum_common_basis": "PARTIAL_TREE_LINEAR_POLARIZATION_RESOLVED_CUTSUM_CONVENTION_WINDOW_NOT_DRESSED_NOT_DISC_MATCHED",
+    "M_dressed_common_basis": "OPEN_STILL_TREE_ONLY_FROM_P2019",
+    "DiscM_common_basis": "OPEN_NOT_EVALUATED",
+    "DiscM_minus_CutSum_simplified": "OPEN_NOT_EVALUATED",
+    "external_state_projectors including BRST physical-state projector": "PARTIAL_LOCAL_TRANSVERSE_PROJECTOR_ONLY_BRST_COHOMOLOGY_OPEN"
+  },
+  "gatekeeper_checks": {
+    "p2019_tree_component_available": true,
+    "p2018_nonpromotion_still_active": true,
+    "polarization_sum_recomputed_exactly": true,
+    "two_body_phase_space_measure_exported": true,
+    "sympy_exact_integral_positive_convention_window": true,
+    "scipy_quadrature_matches_exact_integral": true,
+    "amplitude_gram_psd": true,
+    "generic_angular_transport_symbolically_verified": true,
+    "linear_polarization_resolved_cut_sum_exported": true,
+    "linear_polarization_resolved_cut_sum_psd": true
+  },
+  "result_kind": "PASS_TREE_PHASE_SPACE_LINEAR_POLARIZATION_CUT_SUM_COMPONENT_WITNESS",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "false_pass_guard": "P2020 integrates the P2019 tree transverse component over exact massless two-body phase space. It is not a dressed loop amplitude, not a BRST cohomology projector, not DiscM=CutSum, not all-state unitarity, not QW-2191 discharge, and not ToE closure.",
+  "next_honest_step": "Derive the matching same-scheme DiscM_common_basis or a first dressed-residue factor for this exact linear-polarization-resolved tree cut-sum component; only then compare DiscM_minus_CutSum for the same normalized object.",
+  "toe_progress": "Turns the first strict-side hAA amplitude component into an exact linear-polarization-resolved phase-space cut-sum object with a symbolic angular-transport certificate and checked convention window, while preserving the obstruction boundary required for theorem-grade unitarity.",
+  "lay_explanation": "Mieliśmy policzony lokalny kawałek amplitudy. Teraz uczciwie policzyliśmy, jak ten kawałek sumuje się po dostępnej przestrzeni dwóch cząstek końcowych, zachowując jeszcze indeksy polaryzacji grawitonu, po uprzednim symbolicznym sprawdzeniu obrotowego transportu lokalnej bazy polaryzacji. To nadal nie jest pełny dowód unitarności, bo nie mamy jeszcze pasującej nieciągłości pętlowej DiscM ani pełnego ubierania amplitudy.",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0"
+  }
+}
