@@ -1,0 +1,125 @@
+{
+  "ledger_id": "P2006_S956_STRICT_CUTKOSKY_GX_BACKEND_TENSOR_SURROGATE_AND_COVARIANCE_CLASSIFIER_WITNESS",
+  "packet_id": "P2006",
+  "stage_id": "S956",
+  "produced_by": "p2006_s956_strict_cutkosky_gx_backend_tensor_surrogate_and_covariance_classifier_witness.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only",
+  "depends_on": {
+    "p1853_present": true,
+    "p2005_present": true
+  },
+  "gx_tensor_surrogate": {
+    "matrix": [
+      [
+        0.002031903239877158,
+        0.009739456703465451
+      ],
+      [
+        0.009739456703465451,
+        0.020325909719776346
+      ]
+    ],
+    "eigenvalues": [
+      -0.002182406522656443,
+      0.024540219482309947
+    ]
+  },
+  "gx_covariance_band": {
+    "center": 0.9183311354860199,
+    "sigma": 0.016333772902788535,
+    "min": 0.8856635896804428,
+    "max": 0.9509986812915969,
+    "rule": "scale in [center-2sigma, center+2sigma] from tensor spectrum"
+  },
+  "classifier_scan": {
+    "count": 11,
+    "table": [
+      {
+        "gx_scale": 0.8856635896804428,
+        "l2_ratio_vs_p2004": 0.9221594682066894,
+        "classifier": "MISSING_CHANNEL_PRESSURE_SUPPORTED"
+      },
+      {
+        "gx_scale": 0.8921970988415582,
+        "l2_ratio_vs_p2004": 0.92660328533517,
+        "classifier": "MISSING_CHANNEL_PRESSURE_SUPPORTED"
+      },
+      {
+        "gx_scale": 0.8987306080026736,
+        "l2_ratio_vs_p2004": 0.931047650963471,
+        "classifier": "MISSING_CHANNEL_PRESSURE_SUPPORTED"
+      },
+      {
+        "gx_scale": 0.9052641171637891,
+        "l2_ratio_vs_p2004": 0.935492557274105,
+        "classifier": "MISSING_CHANNEL_PRESSURE_SUPPORTED"
+      },
+      {
+        "gx_scale": 0.9117976263249045,
+        "l2_ratio_vs_p2004": 0.9399379965965161,
+        "classifier": "MISSING_CHANNEL_PRESSURE_SUPPORTED"
+      },
+      {
+        "gx_scale": 0.9183311354860199,
+        "l2_ratio_vs_p2004": 0.9443839614036661,
+        "classifier": "MISSING_CHANNEL_PRESSURE_SUPPORTED"
+      },
+      {
+        "gx_scale": 0.9248646446471352,
+        "l2_ratio_vs_p2004": 0.9488304443087132,
+        "classifier": "MISSING_CHANNEL_PRESSURE_SUPPORTED"
+      },
+      {
+        "gx_scale": 0.9313981538082506,
+        "l2_ratio_vs_p2004": 0.9532774380617848,
+        "classifier": "MIXED_OR_INCONCLUSIVE"
+      },
+      {
+        "gx_scale": 0.9379316629693661,
+        "l2_ratio_vs_p2004": 0.9577249355468356,
+        "classifier": "MIXED_OR_INCONCLUSIVE"
+      },
+      {
+        "gx_scale": 0.9444651721304815,
+        "l2_ratio_vs_p2004": 0.9621729297785928,
+        "classifier": "MIXED_OR_INCONCLUSIVE"
+      },
+      {
+        "gx_scale": 0.9509986812915969,
+        "l2_ratio_vs_p2004": 0.9666214138995848,
+        "classifier": "MIXED_OR_INCONCLUSIVE"
+      }
+    ],
+    "counts": {
+      "MISSING_CHANNEL_PRESSURE_SUPPORTED": 7,
+      "STRUCTURAL_OBSTRUCTION_PRESSURE_SUPPORTED": 0,
+      "MIXED_OR_INCONCLUSIVE": 4
+    },
+    "dominant_classifier": "MISSING_CHANNEL_PRESSURE_SUPPORTED",
+    "dominant_share": 0.6363636363636364
+  },
+  "delta_stats": {
+    "l2_base_p2004": 1.39930383112735e-05
+  },
+  "gatekeeper_checks": {
+    "p1853_present": true,
+    "p2005_present": true,
+    "tensor_surrogate_exported": true,
+    "covariance_band_valid": true,
+    "scan_nonempty": true,
+    "dominant_share_bounded": true
+  },
+  "result_kind": "PASS_GX_TENSOR_COVARIANCE_CLASSIFIER_WITNESS",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "false_pass_guard": "Tensor-surrogate covariance scan remains diagnostics-only, not theorem-grade closure.",
+  "next_honest_step": "Replace tensor surrogate with explicit backend loop amplitude tensor export and rerun covariance classifier.",
+  "lay_explanation": "Zamiast jednego zakresu skali użyliśmy małej macierzy backendowej i jej widma, by zbudować bardziej fizyczny zakres niepewności gx.",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0"
+  },
+  "toe_progress": "Stage improves strict-lane diagnostic resolution and reproducibility, but does not establish theorem-grade unitarity closure, strict-core selector closure, or final ToE completion."
+}

@@ -1,0 +1,89 @@
+{
+  "ledger_id": "P2015_S965_STRICT_CUTKOSKY_UR_LINK_UNCERTAINTY_WITNESS",
+  "packet_id": "P2015",
+  "stage_id": "S965",
+  "produced_by": "p2015_s965_strict_cutkosky_ur_link_uncertainty_witness.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only",
+  "channel": "graviton->gauge_gauge",
+  "depends_on": {
+    "p1997": "P1997_S947_STRICT_CUTKOSKY_CHANNELWISE_STATESUM_SOLVER_WITNESS"
+  },
+  "scan_parameters": {
+    "epsilon_z1_min": -0.03,
+    "epsilon_z1_max": 0.03,
+    "epsilon_ch_min": -0.05,
+    "epsilon_ch_max": 0.05,
+    "samples": 77
+  },
+  "uncertainty_table": [
+    {
+      "s": "0.5",
+      "delta_interval": [
+        -4.878927103289008e-08,
+        4.642995189664145e-08
+      ],
+      "delta_center": -2.483493827629948e-10,
+      "delta_std": 2.56856918101923e-08,
+      "residue_positive_all_samples": true
+    },
+    {
+      "s": "1.0",
+      "delta_interval": [
+        -2.2530205139870234e-07,
+        2.1293166795377975e-07
+      ],
+      "delta_center": -1.03086528707675e-09,
+      "delta_std": 1.1086955174060383e-07,
+      "residue_positive_all_samples": true
+    },
+    {
+      "s": "2.0",
+      "delta_interval": [
+        -1.0290806448760918e-06,
+        9.670771017449454e-07
+      ],
+      "delta_center": -4.276106422837644e-09,
+      "delta_std": 4.835063556436621e-07,
+      "residue_positive_all_samples": true
+    },
+    {
+      "s": "4.0",
+      "delta_interval": [
+        -4.54701144540047e-06,
+        4.256596918617516e-06
+      ],
+      "delta_center": -1.76008804110867e-08,
+      "delta_std": 2.083334001345245e-06,
+      "residue_positive_all_samples": true
+    },
+    {
+      "s": "8.0",
+      "delta_interval": [
+        -1.9379826675380065e-05,
+        1.810040657320683e-05
+      ],
+      "delta_center": -7.174318329943104e-08,
+      "delta_std": 8.772309496607975e-06,
+      "residue_positive_all_samples": true
+    }
+  ],
+  "max_abs_delta_over_scan": 1.9379826675380065e-05,
+  "gatekeeper_checks": {
+    "p1997_present": true,
+    "bounded_uncertainty_table_exported": true,
+    "residue_positive_under_scan": true,
+    "max_abs_delta_small_scan": true
+  },
+  "result_kind": "PASS_UR_LINK_UNCERTAINTY_WITNESS",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "false_pass_guard": "This is a bounded local uncertainty scan around current strict diagnostic proxies, not a full all-state Cutkosky theorem.",
+  "next_honest_step": "Replace proxy multiplicative perturbation with explicit loop-derived channel amplitudes and re-run positivity/uncertainty transport across a wider RG-safe atlas.",
+  "toe_progress": "Adds machine-checkable uncertainty and positivity stability evidence for UR-link diagnostics, narrowing one obstruction in strict-lane unitarity work without claiming ToE closure.",
+  "lay_explanation": "Sprawdziliśmy, czy przy małych, kontrolowanych zmianach modelu wyniki nie 'psują się' gwałtownie: to zwiększa zaufanie do stabilności, ale nie jest jeszcze pełnym dowodem unitarności.",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "sympy": "1.14.0"
+  }
+}

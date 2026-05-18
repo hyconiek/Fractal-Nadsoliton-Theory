@@ -1,0 +1,98 @@
+{
+  "ledger_id": "P2005_S955_STRICT_CUTKOSKY_GX_BACKEND_AMPLITUDE_BOUND_AND_CLASSIFIER_WITNESS",
+  "packet_id": "P2005",
+  "stage_id": "S955",
+  "produced_by": "p2005_s955_strict_cutkosky_gx_backend_amplitude_bound_and_classifier_witness.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only",
+  "depends_on": {
+    "p1853_present": true,
+    "p2004_present": true
+  },
+  "gx_backend_bound": {
+    "center": 0.8712351893309654,
+    "half_width": 0.1306852783996448,
+    "min": 0.7405499109313206,
+    "max": 1.0019204677306102,
+    "construction_rule": "center=|a_R2+a_Ric2|/(|a_R2|+|a_Ric2|+|a_Riem2|), half_width=15%*center"
+  },
+  "classifier_scan": {
+    "count": 9,
+    "table": [
+      {
+        "gx_scale": 0.7405499109313206,
+        "l2_ratio_vs_p2004": 0.8236191090430754,
+        "classifier": "MISSING_CHANNEL_PRESSURE_SUPPORTED"
+      },
+      {
+        "gx_scale": 0.7732212305312318,
+        "l2_ratio_vs_p2004": 0.8457755421806092,
+        "classifier": "MISSING_CHANNEL_PRESSURE_SUPPORTED"
+      },
+      {
+        "gx_scale": 0.805892550131143,
+        "l2_ratio_vs_p2004": 0.8679500229039608,
+        "classifier": "MISSING_CHANNEL_PRESSURE_SUPPORTED"
+      },
+      {
+        "gx_scale": 0.8385638697310542,
+        "l2_ratio_vs_p2004": 0.8901412024533847,
+        "classifier": "MISSING_CHANNEL_PRESSURE_SUPPORTED"
+      },
+      {
+        "gx_scale": 0.8712351893309653,
+        "l2_ratio_vs_p2004": 0.9123478623252302,
+        "classifier": "MISSING_CHANNEL_PRESSURE_SUPPORTED"
+      },
+      {
+        "gx_scale": 0.9039065089308767,
+        "l2_ratio_vs_p2004": 0.9345688990180262,
+        "classifier": "MISSING_CHANNEL_PRESSURE_SUPPORTED"
+      },
+      {
+        "gx_scale": 0.9365778285307877,
+        "l2_ratio_vs_p2004": 0.9568033108597621,
+        "classifier": "MIXED_OR_INCONCLUSIVE"
+      },
+      {
+        "gx_scale": 0.969249148130699,
+        "l2_ratio_vs_p2004": 0.9790501865945014,
+        "classifier": "MIXED_OR_INCONCLUSIVE"
+      },
+      {
+        "gx_scale": 1.0019204677306102,
+        "l2_ratio_vs_p2004": 1.0013086954617652,
+        "classifier": "MIXED_OR_INCONCLUSIVE"
+      }
+    ],
+    "counts": {
+      "MISSING_CHANNEL_PRESSURE_SUPPORTED": 6,
+      "STRUCTURAL_OBSTRUCTION_PRESSURE_SUPPORTED": 0,
+      "MIXED_OR_INCONCLUSIVE": 3
+    },
+    "dominant_classifier": "MISSING_CHANNEL_PRESSURE_SUPPORTED",
+    "dominant_share": 0.6666666666666666
+  },
+  "delta_stats": {
+    "l2_base_p2004": 1.39930383112735e-05
+  },
+  "gatekeeper_checks": {
+    "p1853_present": true,
+    "p2004_present": true,
+    "backend_bound_exported": true,
+    "scan_nonempty": true,
+    "dominant_share_bounded": true,
+    "delta_norm_bounded": true
+  },
+  "result_kind": "PASS_GX_BACKEND_BOUND_CLASSIFIER_WITNESS",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "false_pass_guard": "Bounded classifier remains diagnostics-only and does not imply theorem-grade unitarity closure.",
+  "next_honest_step": "Bind gx to explicit backend loop amplitude tensor object and propagate coefficient covariance into bound construction.",
+  "lay_explanation": "Skalę nowego kanału ograniczyliśmy teraz jawnie przez dane backendu i dopiero w tym zakresie oceniliśmy stabilność klasyfikacji.",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "scipy": "1.17.1"
+  },
+  "toe_progress": "Stage improves strict-lane diagnostic resolution and reproducibility, but does not establish theorem-grade unitarity closure, strict-core selector closure, or final ToE completion."
+}

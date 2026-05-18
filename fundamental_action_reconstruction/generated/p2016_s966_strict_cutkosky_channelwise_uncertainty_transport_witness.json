@@ -1,0 +1,100 @@
+{
+  "ledger_id": "P2016_S966_STRICT_CUTKOSKY_CHANNELWISE_UNCERTAINTY_TRANSPORT_WITNESS",
+  "packet_id": "P2016",
+  "stage_id": "S966",
+  "produced_by": "p2016_s966_strict_cutkosky_channelwise_uncertainty_transport_witness.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only",
+  "channel": "graviton->gauge_gauge",
+  "depends_on": {
+    "p1997": "P1997_S947_STRICT_CUTKOSKY_CHANNELWISE_STATESUM_SOLVER_WITNESS"
+  },
+  "scan_parameters": {
+    "eps_gg": [
+      -0.05,
+      0.05,
+      7
+    ],
+    "eps_gh": [
+      -0.06,
+      0.06,
+      7
+    ],
+    "eps_hh": [
+      -0.08,
+      0.08,
+      7
+    ],
+    "samples": 343
+  },
+  "uncertainty_table": [
+    {
+      "s": "1/2",
+      "delta_interval": [
+        -3.97359012420832e-08,
+        3.3941082310946065e-08
+      ],
+      "delta_center": -2.8974094655685546e-09,
+      "delta_std": 1.4434957466429625e-08,
+      "residue_positive_all_samples": true
+    },
+    {
+      "s": "1",
+      "delta_interval": [
+        -1.71381353976536e-07,
+        1.3530106892884432e-07
+      ],
+      "delta_center": -1.8040142523845756e-08,
+      "delta_std": 6.005656171467606e-08,
+      "residue_positive_all_samples": true
+    },
+    {
+      "s": "2",
+      "delta_interval": [
+        -7.376283579395109e-07,
+        5.38076724873749e-07
+      ],
+      "delta_center": -9.977581653288031e-08,
+      "delta_std": 2.4969729583850777e-07,
+      "residue_positive_all_samples": true
+    },
+    {
+      "s": "4",
+      "delta_interval": [
+        -3.1241562729681166e-06,
+        2.138506969947189e-06
+      ],
+      "delta_center": -4.928246515104627e-07,
+      "delta_std": 1.0296878952733901e-06,
+      "residue_positive_all_samples": true
+    },
+    {
+      "s": "8",
+      "delta_interval": [
+        -1.2973558979981144e-05,
+        8.509538685794074e-06
+      ],
+      "delta_center": -2.2320101470935214e-06,
+      "delta_std": 4.202322010356216e-06,
+      "residue_positive_all_samples": true
+    }
+  ],
+  "max_abs_delta_over_scan": 1.2973558979981144e-05,
+  "gatekeeper_checks": {
+    "p1997_present": true,
+    "channelwise_uncertainty_table_exported": true,
+    "residue_positive_under_channelwise_scan": true,
+    "max_abs_delta_channelwise_bounded": true
+  },
+  "result_kind": "PASS_CHANNELWISE_UNCERTAINTY_TRANSPORT_WITNESS",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "false_pass_guard": "Channelwise uncertainty transport is still finite-grid diagnostic evidence; it is not a full all-state Cutkosky closure proof.",
+  "next_honest_step": "Import explicit loop-derived channel amplitudes from backend integrals and rerun this transport on an extended energy/RG atlas.",
+  "toe_progress": "Moves unitarity diagnostics from global proxy perturbation to channel-resolved uncertainty transport, improving strict-lane evidential granularity toward ToE.",
+  "lay_explanation": "To dokładniejszy test: zamiast ruszać cały wynik naraz, ruszamy osobno każdy kanał i patrzymy, jak zmienia się błąd całkowity.",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "sympy": "1.14.0"
+  }
+}
