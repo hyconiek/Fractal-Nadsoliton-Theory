@@ -1,0 +1,107 @@
+{
+  "packet_id": "P1970",
+  "stage_id": "S920",
+  "status": "PARTIAL_VARIATIONAL_ROW_EXPORTED__HIGGS_BRANCH_LEFTOVER_NOT_FORCED_ZERO__FULL_PO2_STILL_OPEN",
+  "route": "strict_only_higgs_yukawa_curvature_subsector",
+  "legacy_bridge_used": false,
+  "generated_utc": "2026-05-18T00:26:08.524442+00:00",
+  "python": "3.14.4",
+  "sympy": "1.14.0",
+  "depends_on": {
+    "p1907_present": true,
+    "p1930_present": true,
+    "p1964_conditional_po2_pass": true,
+    "p1965_nonavailability_status": "PO2_FULL_EOM_NORMAL_FORM_EXTRACTION_NONAVAILABLE_CURRENT_EXPORT_STATE",
+    "p1969_recommended_next": "P1970_STRICT_HIGGS_YUKAWA_CURVATURE_VARIATIONAL_NORMAL_FORM_EXTRACTION_ATTEMPT"
+  },
+  "input_hashes": {
+    "p1907_sha256": "237f3711a71e98e219ef178a57c814a68a97cc05e8ff354fa68bbe15666d7be6",
+    "p1930_sha256": "1616b65839880187e22f025bf202b30cdd442e47c1db3110f4e849b0647e1c12",
+    "p1964_sha256": "8eebd2a6405df7cc609a39ebec89a361cffdc9babadc4ca03b25ff2a959492af",
+    "p1965_sha256": "5a537b4e3b7decec3f93c82a349fa051f2635f834af067a0781a3f207fb2711f",
+    "p1969_sha256": "855cd4ba45472cf9c73918d298b7f41c807ba32ea7a35f95b27d54faacdd88d2"
+  },
+  "frozen_conventions": {
+    "density": "sqrt(-g) factored out locally; scalar proxy uses integration-by-parts carrier x",
+    "higgs_proxy": "single real H representative for H^dagger H channel; full doublet/gauge/spinor indices not claimed",
+    "euler_operator": "d/dx(dL/dh_x) - dL/dh = 0, mapped to covariant Box H row",
+    "yukawa_source": "J_yukawa is an external bilinear source placeholder for this narrow row",
+    "nonminimal_curvature": "-1/2 xi_H R h^2 proxy for -xi_H H^dagger H R up to representation normalization"
+  },
+  "variational_row_export": {
+    "coordinate": "x (symbolic integration-by-parts carrier only)",
+    "lagrangian_proxy": "-lambda_H*h(x)**4/4 - mu_H_sq*h(x)**2/2 - xi_H*R(x)*h(x)**2/2 - y_f*J_yukawa(x)*h(x) + Derivative(h(x), x)**2/2",
+    "dL_dh": "-lambda_H*h(x)**3 - mu_H_sq*h(x) - xi_H*R(x)*h(x) - y_f*J_yukawa(x)",
+    "dL_dh_x": "Derivative(h(x), x)",
+    "euler_lagrange_operator_d_dx_dL_dhx_minus_dL_dh": "lambda_H*h(x)**3 + mu_H_sq*h(x) + xi_H*R(x)*h(x) + y_f*J_yukawa(x) + Derivative(h(x), (x, 2))",
+    "covariant_dictionary": {
+      "Derivative(h(x), (x, 2))": "Box H",
+      "h(x)": "H radial/background component or local H representative",
+      "R(x)": "R",
+      "J_yukawa(x)": "Yukawa source bilinear qbar/f source in frozen channel"
+    },
+    "covariant_eom_row_exported": "Box H + mu_H_sq*H + lambda_H*(H^dagger H)H + xi_H*R*H + y_f*J_yukawa = 0",
+    "scope_limit": "single scalar-Higgs/Yukawa/nonminimal-curvature proxy row; not full SM spinor/gauge/metric EOM"
+  },
+  "branch_difference_and_omega_test": {
+    "eom_A_minus_eom_B_raw": "BoxH_A - BoxH_B + H_A**3*lambda_H + H_A*R_A*xi_H + H_A*mu_H_sq - H_B**3*lambda_H - H_B*R_B*xi_H - H_B*mu_H_sq + J_A*y_f - J_B*y_f",
+    "delta_substitution": {
+      "H_A": "H_B + delta_H",
+      "BoxH_A": "BoxH_B + delta_BoxH",
+      "R_A": "R_B + delta_R",
+      "J_A": "J_B + delta_J"
+    },
+    "eom_difference_in_delta_variables": "3*H_B**2*delta_H*lambda_H + 3*H_B*delta_H**2*lambda_H + H_B*delta_R*xi_H + R_B*delta_H*xi_H + delta_BoxH + delta_H**3*lambda_H + delta_H*delta_R*xi_H + delta_H*mu_H_sq + delta_J*y_f",
+    "constraints_applied": {
+      "delta_R": "0",
+      "delta_J": "0",
+      "delta_BoxH": "0",
+      "note": "These are narrower scalar-row analogues of equal-curvature/equal-source/equal-kinetic branch constraints; they do not include delta_H=0."
+    },
+    "eom_difference_after_constraints": "delta_H*(3*H_B**2*lambda_H + 3*H_B*delta_H*lambda_H + R_B*xi_H + delta_H**2*lambda_H + mu_H_sq)",
+    "delta_yukawa_background": "delta_H*y_f",
+    "omega_leftover_candidate": "delta_H (or equivalently y_f*delta_H in the Yukawa background)",
+    "omega_forced_zero_by_this_row": false,
+    "sufficient_extra_conditions_for_zero": [
+      "delta_H = 0 same-Higgs-background branch lock",
+      "or an exported invertibility theorem proving the only same-source/same-curvature solution has delta_H=0 on the admissible branch"
+    ],
+    "underdetermination_witness": {
+      "parameter_choice": "mu_H_sq=lambda_H=xi_H=0, R_A=R_B=J_A=J_B=BoxH_A=BoxH_B=0, y_f=y_nonzero",
+      "H_A": "a",
+      "H_B": "b",
+      "EOM_A": "0",
+      "EOM_B": "0",
+      "Delta_Yukawa_background": "y_nonzero*(a - b)",
+      "nonzero_if": "y_nonzero != 0 and a != b",
+      "meaning": "Current scalar-row variational data alone does not force the Yukawa background difference to vanish."
+    }
+  },
+  "p1965_requirement_update": {
+    "E1_full_non_skeleton_L_total_density": "PARTIAL_SUBSECTOR_ONLY_FROM_P1907_REGISTRY",
+    "E2_convention_fixed_covariant_field_calculus": "PARTIAL_FROZEN_FOR_SCALAR_HIGGS_PROXY",
+    "E3_termwise_euler_lagrange_derivatives": "PARTIAL_PASS_HIGGS_YUKAWA_CURVATURE_ROW_ONLY",
+    "E4_projection_to_DELTA_BG_Yf_basis": "OPEN_DELTA_H_BRANCH_LEFTOVER_NOT_IN_P1964_BASIS",
+    "E5_normal_form_extraction_theorem": "OPEN_REQUIRES_BRANCH_LOCK_OR_INVERTIBILITY_THEOREM",
+    "E6_same_branch_quantifier_transport": "OPEN"
+  },
+  "machine_checks": {
+    "variational_row_exported": true,
+    "omega_unexported_forced_zero": false,
+    "full_po2_closed": false,
+    "sharp_new_blocker_identified": "Higgs background branch-lock/invertibility needed to eliminate delta_H leftover"
+  },
+  "theorem_export": {
+    "positive_statement": "The Higgs/Yukawa/nonminimal-curvature scalar proxy row has an explicit Euler-Lagrange derivation with frozen conventions.",
+    "negative_statement": "That row alone does not force the Yukawa-background leftover y_f*delta_H to vanish under curvature/source/kinetic equality constraints that omit delta_H=0.",
+    "not_promoted_to": [
+      "full PO2 sufficiency from L_total",
+      "global background-independence closure",
+      "full strict-core ToE closure",
+      "QW-2191 discharge"
+    ]
+  },
+  "false_pass_guard": "P1970 is a constructive partial variational extraction and a sharper obstruction witness, not PO2 closure.",
+  "next_honest_step": "Build P1971: prove or refute a strict branch-lock/invertibility lemma for the Higgs background on the admissible PO3 domain; if unavailable, export the exact delta_H leftover as the PO2 normal-form obstruction.",
+  "lay_explanation": "Udało się wykonać kawałek rachunku wariacyjnego dla sektora Higgsa/Yukawy/krzywizny. Ten rachunek pokazuje jednak, że same równania w tej wąskiej postaci nie zmuszają dwóch gałęzi do posiadania tego samego tła Higgsa. Bez tego może pozostać różnica Yukawy, więc pełne domknięcie PO2 nadal byłoby fałszywym zaliczeniem."
+}

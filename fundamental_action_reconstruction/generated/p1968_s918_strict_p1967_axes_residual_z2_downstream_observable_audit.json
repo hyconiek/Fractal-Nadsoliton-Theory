@@ -1,0 +1,388 @@
+{
+  "packet_id": "P1968",
+  "stage_id": "S918",
+  "status": "P1967_AXES_DOWNSTREAM_Z2_AUDIT_PASS_FOR_PROJECTIVE_OS__SIGN_SENSITIVE_GLOBAL_SELECTOR_STILL_BLOCKED",
+  "route": "strict_only_projective_observable_audit_after_shannon_axis_source",
+  "legacy_bridge_used": false,
+  "generated_utc": "2026-05-18T00:10:31.054828+00:00",
+  "python": "3.14.4",
+  "numpy": "2.4.5",
+  "sympy": "1.14.0",
+  "repo_grep_evidence": [
+    {
+      "path": "P709_CURRENT_STRICT_RELEASE_7_OS_RESIDUAL_SIGN_GAUGE_IRRELEVANCE_AUDIT_PROBE.md",
+      "present": true,
+      "sha256": "a0f063a2005e29e6d7fd1ce14cd7309f26f6d393b53bfcd6a2a71402ac439d09",
+      "matches": [
+        {
+          "line": 1,
+          "text": "# P709 Current Strict Release‑7 OS Residual‑Sign Gauge‑Irrelevance Audit Probe (No False‑PASS)"
+        },
+        {
+          "line": 3,
+          "text": "Status: `P709_CURRENT_STRICT_RELEASE_7_OS_RESIDUAL_SIGN_GAUGE_IRRELEVANCE_AUDIT_PROBE_SPEC_NO_FALSE_PASS`"
+        },
+        {
+          "line": 10,
+          "text": "- kernel‑alone/global `QW-2191` discharge remains unclaimed, and"
+        },
+        {
+          "line": 11,
+          "text": "- any directed/sign‑sensitive physical orientation datum in strict core remains unclaimed."
+        },
+        {
+          "line": 13,
+          "text": "However, Release‑7 also exports an **Operational ToE closure** in **projective** scope (`N701`) and multiple downstream"
+        },
+        {
+          "line": 14,
+          "text": "OS observables (`P694`, `P696`, `F704`, …) that are *intended* to be sign‑gauge‑safe."
+        },
+        {
+          "line": 16,
+          "text": "This probe audits the minimal concrete claim needed to continue honestly without a false “need to break `QW-2191` first”:"
+        },
+        {
+          "line": 18,
+          "text": "> For the Release‑7 OS observables actually used downstream (quadratic proxy spectra and invariant mass observable),"
+        },
+        {
+          "line": 19,
+          "text": "> the residual per‑pair sign choice `u_m -> -u_m` does not change the exported numeric results (within tolerance)."
+        },
+        {
+          "line": 21,
+          "text": "This is an **audit** only; it does not upgrade any directed sign into strict core."
+        }
+      ]
+    },
+    {
+      "path": "N706_CURRENT_STRICT_RELEASE_7_OS_RESIDUAL_SIGN_GAUGE_IRRELEVANCE_PACKAGE_THEOREM.md",
+      "present": true,
+      "sha256": "904e59f0fdc52350da931c79681685aaf99310c90663978db807ddbd9bc9d109",
+      "matches": [
+        {
+          "line": 1,
+          "text": "# N706 Current Strict Release‑7 OS Residual‑Sign Gauge‑Irrelevance — Package Theorem (No False‑PASS)"
+        },
+        {
+          "line": 3,
+          "text": "Status: `N706_DERIVABLE_CURRENT_STRICT_RELEASE_7_OS_RESIDUAL_SIGN_GAUGE_IRRELEVANCE_PACKAGE_THEOREM_NO_FALSE_PASS`"
+        },
+        {
+          "line": 10,
+          "text": "- kernel‑alone/global `QW-2191` discharge remains unclaimed, and"
+        },
+        {
+          "line": 11,
+          "text": "- no directed/sign‑sensitive physical orientation datum is exported in strict core “for free”."
+        },
+        {
+          "line": 13,
+          "text": "At the same time, Release‑7 exports an **Operational ToE closure** in **projective** scope (`N701`) plus a concrete OS"
+        },
+        {
+          "line": 14,
+          "text": "pipeline producing dimensionless proxy observables (`P694`, `P696`, `F704`, …)."
+        },
+        {
+          "line": 18,
+          "text": "> For the Release‑7 OS observables actually used downstream in the operational closure stack, the residual per‑pair sign"
+        },
+        {
+          "line": 19,
+          "text": "> ambiguity `u_m -> -u_m` is a tracked gauge/convention layer and does not change the exported OS observable values."
+        },
+        {
+          "line": 21,
+          "text": "This is a *gauge‑irrelevance* statement, not a kernel‑alone `QW-2191` discharge."
+        },
+        {
+          "line": 26,
+          "text": "- projective strict‑core selector closure is discharged (ray/projector semantics; `u` and `-u` identified)."
+        }
+      ]
+    },
+    {
+      "path": "P687_CURRENT_STRICT_T173_GLOBAL_EDGE_SIGN_COHERENCE_SOLVABILITY_AUDIT_PROBE.md",
+      "present": true,
+      "sha256": "0725f9305f622ff392d61b2e99873e47b1382010e4d23157e14879e750df715f",
+      "matches": [
+        {
+          "line": 1,
+          "text": "# P687 Current Strict `T173` Global Edge Sign-Coherence Solvability Audit Probe (No False‑PASS)"
+        },
+        {
+          "line": 3,
+          "text": "Status: `P687_CURRENT_STRICT_T173_GLOBAL_EDGE_SIGN_COHERENCE_SOLVABILITY_AUDIT_PROBE_SPEC_NO_FALSE_PASS`"
+        },
+        {
+          "line": 8,
+          "text": "`P686` audits the exported `w_break`-rooted directed selector state representative (`F684`) against the **full** exported global transition/gluing object"
+        },
+        {
+          "line": 9,
+          "text": "on `C_v1` (`F469`). It confirms edgewise compatibility only **up to sign** and records which overlap edges force a sign flip under the currently exported"
+        },
+        {
+          "line": 14,
+          "text": "> Can the recorded edgewise sign flips be removed purely by a **per-chart sign relift** (`u_i -> t_i u_i`, `t_i∈{±1}`),"
+        },
+        {
+          "line": 17,
+          "text": "> Equivalently: does there exist a `Z2`-valued 0‑cochain `{t_i}` such that for every exported overlap edge `i→j`,"
+        },
+        {
+          "line": 18,
+          "text": "> the transported directed vectors satisfy `O_ij (t_i u_i) ≈ (t_j u_j)` (no sign flip on any edge)?"
+        },
+        {
+          "line": 20,
+          "text": "If the answer is **no**, this identifies a genuine **global edge sign-coherence obstruction** relative to the fixed exported axis-only transition representatives:"
+        },
+        {
+          "line": 21,
+          "text": "the sign-flip pattern is not eliminable by chart sign choices alone."
+        },
+        {
+          "line": 23,
+          "text": "This remains strictly below any physical sign datum claim; it is a compatibility/obstruction statement about exported artifacts."
+        }
+      ]
+    },
+    {
+      "path": "N687_CURRENT_STRICT_T173_GLOBAL_EDGE_SIGN_COHERENCE_OBSTRUCTION_BOUNDARY_THEOREM.md",
+      "present": true,
+      "sha256": "c93c5a08334eba7a0469fbc82aeddfb134c5fb2c5ce994dfd7e637da1de2909c",
+      "matches": [
+        {
+          "line": 1,
+          "text": "# N687 Current Strict `T173` Global Edge Sign-Coherence Obstruction Boundary Theorem"
+        },
+        {
+          "line": 3,
+          "text": "Status: `N687_DERIVABLE_CURRENT_STRICT_T173_GLOBAL_EDGE_SIGN_COHERENCE_OBSTRUCTION_BOUNDARY_THEOREM_NO_FALSE_PASS`"
+        },
+        {
+          "line": 8,
+          "text": "After `P686/N686`, the repo already records that the exported `w_break`-rooted directed state representative (`F684`) is compatible with the exported"
+        },
+        {
+          "line": 9,
+          "text": "global transition/gluing object (`F469`) only **up to sign**, and that sign flips occur on some edges under the currently exported axis-only (`α mod π`)"
+        },
+        {
+          "line": 14,
+          "text": "> the edgewise sign flips are **not eliminable** by any per-chart sign relift (`u_i -> t_i u_i`, `t_i ∈ {±1}`) while keeping the exported transition"
+        },
+        {
+          "line": 17,
+          "text": "> Therefore, even as a convention-layer directed representative, no globally edge-sign-consistent directed section exists under the fixed axis-only"
+        },
+        {
+          "line": 18,
+          "text": "> transition representatives; a sign-consistent directed transport would require an additional oriented (`α mod 2π`) edge lift / convention layer."
+        },
+        {
+          "line": 22,
+          "text": "1. `P687` — global edge sign-coherence solvability audit (Z2 0‑cochain solvability) based on the full-edge sign data from `P686`."
+        },
+        {
+          "line": 28,
+          "text": "- a directed/sign-sensitive physical orientation datum in strict core,"
+        },
+        {
+          "line": 29,
+          "text": "- kernel-alone/global `QW-2191` discharge,"
+        }
+      ]
+    },
+    {
+      "path": "N707_CURRENT_STRICT_T173_PREVIOUS_METHODOLOGY_SURVIVAL_AND_GLOBAL_GAP_BOUNDARY_THEOREM.md",
+      "present": true,
+      "sha256": "b99d5bb074210c75a5870cfea178ddb22959707e341402f73ae0e222879f906f",
+      "matches": [
+        {
+          "line": 16,
+          "text": "- but it still leaves one explicit global gap that blocks any claim of kernel-alone/global `QW-2191` discharge or any"
+        },
+        {
+          "line": 17,
+          "text": "directed/sign-sensitive physical orientation datum in strict core."
+        },
+        {
+          "line": 26,
+          "text": "- projective global strict-core selector closure is exported (`N680`),"
+        },
+        {
+          "line": 27,
+          "text": "- Release-7 OS observables used downstream are audited as residual-sign gauge-irrelevant (`P709`, packaged by `N706`);"
+        },
+        {
+          "line": 29,
+          "text": "- kernel-alone/global `QW-2191` discharge remains false (`N680`),"
+        },
+        {
+          "line": 30,
+          "text": "- directed output sign-lift is not determined in strict core (`N681`),"
+        },
+        {
+          "line": 31,
+          "text": "- global axis-only transition representatives still force edge sign flips (`N686`),"
+        },
+        {
+          "line": 39,
+          "text": "into a full directed/global T173 discharge on the C_v1 atlas."
+        },
+        {
+          "line": 48,
+          "text": "3. the exact remaining small gap is global chartwise directed-sign coherence / global-provider absence,"
+        },
+        {
+          "line": 49,
+          "text": "4. Release-7 may honestly continue in projective/basis-invariant OS scope without pretending that this global gap is gone."
+        }
+      ]
+    },
+    {
+      "path": "N493_CURRENT_FIRST_STRICT_QW2191_RESIDUAL_Z2_SIGN_FLIP_GAUGE_EQUIVALENCE_THEOREM.md",
+      "present": true,
+      "sha256": "7a00d1e46fc1c82b5b90abfe4fa2b7196334058bf95510a2420822f7774e46a3",
+      "matches": [
+        {
+          "line": 1,
+          "text": "# N493 Current First Strict `QW-2191` Residual `Z2` Sign‑Flip Gauge‑Equivalence (Conjugation) Theorem"
+        },
+        {
+          "line": 3,
+          "text": "Status: `N493_DISCHARGED_CURRENT_FIRST_STRICT_QW2191_RESIDUAL_Z2_SIGN_FLIP_GAUGE_EQUIVALENCE_CONJUGATION_THEOREM_NO_FALSE_PASS`"
+        },
+        {
+          "line": 8,
+          "text": "After the canonical local‑diagonal `O(2) -> Z2` cut (`N484/N485/N487`) and the exported lane‑scoped internal orientation datum"
+        },
+        {
+          "line": 9,
+          "text": "(`F453/N492`), the remaining ambiguity on each degenerate pair plane is residual `Z2`:"
+        },
+        {
+          "line": 18,
+          "text": "for the QW‑2190 SU(3)/SU(2) embedding audits, residual Z2 sign flips are pure basis conjugations and do not change"
+        },
+        {
+          "line": 22,
+          "text": "This does **not** claim global physical uniqueness, does **not** discharge `QW-2191` in kernel‑alone scope, and does **not** claim ToE closure."
+        },
+        {
+          "line": 28,
+          "text": "2. `QW-2191`"
+        },
+        {
+          "line": 31,
+          "text": "- diagonal/local lane cuts continuous `O(2)` down to residual `Z2` on the degenerate pair planes,"
+        },
+        {
+          "line": 33,
+          "text": "- exports an explicit strict‑derived eigenbasis representative (up to sign) on each pair plane,"
+        },
+        {
+          "line": 37,
+          "text": "## Theorem (residual sign flips are conjugation equivalences for QW‑2190 audits)"
+        }
+      ]
+    }
+  ],
+  "input_generated_hashes": {
+    "p1967_sha256": "85c7f0eef6568e9d399ed990a9c4704a9a7a2415dfd75692d18a4ca2817b05d2",
+    "p709_summary_sha256": "c0bfc863d249c4e3f18ae05fa6de0f27135e9df8a99e1e033fce84127504305e",
+    "p687_summary_sha256": "90185a104576b561b94db931b1c724d0134380de3f4378d34782d8cc47cb2d8c",
+    "n681_summary_sha256": "dacab369dfc9e6490b4d97163efa091da452f7052bf86a1b13ceb470f7e8bb56",
+    "n687_summary_sha256": "04dbfa7bc7e1afcde934cdca22c5a65ecf181d87daeea8465b87ec3b98a28c67"
+  },
+  "symbolic_z2_parity_lemma": {
+    "projector_difference_under_s_squared_1": "Matrix([\n[0, 0],\n[0, 0]])",
+    "quadratic_rayleigh_difference_under_s_squared_1": "0",
+    "linear_channel_difference_under_s_squared_1": "l1*s*u1 - l1*u1 + l2*s*u2 - l2*u2",
+    "classification": {
+      "projector_or_ray_observables": "Z2-even / sign-gauge-invariant",
+      "quadratic_forms": "Z2-even / sign-gauge-invariant",
+      "linear_or_directed_output_channels": "Z2-odd unless an extra sign convention or physical sign datum is supplied"
+    }
+  },
+  "numeric_delta_sel_projector_checks": [
+    {
+      "pair": "pair1",
+      "delta_sel_gap": 20.0,
+      "projector_sign_flip_inf_norm": 0.0,
+      "quadratic_value_sign_flip_diff": 0.0,
+      "linear_sum_channel_sign_flip_diff_example": 2.0,
+      "projector_and_quadratic_even_pass": true
+    },
+    {
+      "pair": "pair2",
+      "delta_sel_gap": 44.0,
+      "projector_sign_flip_inf_norm": 0.0,
+      "quadratic_value_sign_flip_diff": 0.0,
+      "linear_sum_channel_sign_flip_diff_example": 2.0,
+      "projector_and_quadratic_even_pass": true
+    },
+    {
+      "pair": "pair3",
+      "delta_sel_gap": 70.0,
+      "projector_sign_flip_inf_norm": 0.0,
+      "quadratic_value_sign_flip_diff": 0.0,
+      "linear_sum_channel_sign_flip_diff_example": 2.0,
+      "projector_and_quadratic_even_pass": true
+    },
+    {
+      "pair": "pair4",
+      "delta_sel_gap": 44.0,
+      "projector_sign_flip_inf_norm": 0.0,
+      "quadratic_value_sign_flip_diff": 0.0,
+      "linear_sum_channel_sign_flip_diff_example": 2.0,
+      "projector_and_quadratic_even_pass": true
+    },
+    {
+      "pair": "pair5",
+      "delta_sel_gap": 20.0,
+      "projector_sign_flip_inf_norm": 0.0,
+      "quadratic_value_sign_flip_diff": 0.0,
+      "linear_sum_channel_sign_flip_diff_example": 2.0,
+      "projector_and_quadratic_even_pass": true
+    }
+  ],
+  "imported_existing_machine_audits": {
+    "p1967_axis_only_source_pass": true,
+    "p709_release7_os_sign_gauge_irrelevance_pass": true,
+    "p709_patterns_tested": 32,
+    "p709_max_abs_diffs": {
+      "p694_m2": 0.0,
+      "p696_channel_m2": 0.0,
+      "p696_offdiag_to_diag_ratio": 0.0,
+      "p696_offblock_max_fro": 0.0
+    },
+    "p687_global_edge_sign_coherence_obstructed": true,
+    "n681_directed_output_sign_lift_blocks_physical_sign_claim": true,
+    "n687_global_edge_sign_coherence_blocks_global_directed_selector": true
+  },
+  "machine_checks": {
+    "numeric_p1967_projector_and_quadratic_even_pass": true,
+    "release7_projective_os_safe_under_residual_z2": true,
+    "global_sign_sensitive_selector_closure_pass": false,
+    "global_sign_sensitive_selector_blocked_by_existing_audits": true
+  },
+  "theorem_export": {
+    "positive_projective_statement": "For P1967 axes, projectors/rays and quadratic Release-7 OS observables are residual-Z2 even; P709 already audits all 2^5 sign patterns for the downstream OS values.",
+    "negative_directed_statement": "Linear/directed output channels remain residual-Z2 sensitive unless an additional sign convention or strict physical sign datum is supplied; P687/N687 keep global edge sign coherence obstructed.",
+    "not_promoted_to": [
+      "directed/sign-sensitive physical orientation datum in strict core",
+      "admissible S_sel_int",
+      "kernel-alone/global QW-2191 discharge",
+      "global T173 discharge",
+      "ToE closure"
+    ]
+  },
+  "false_pass_guard": "P1968 licenses projective/quadratic OS continuation under the P1967 axes, not global sign-sensitive selector closure.",
+  "next_honest_step": "If strict ToE closure needs only projective/quadratic OS observables, cite P1968 as the Z2-safety bridge; if a directed observable is required, build a new global sign-provider or prove a no-go theorem for that directed channel.",
+  "lay_explanation": "Mamy już osie z P1967. P1968 sprawdza, co zależy od odwrócenia strzałki na osi. Wielkości typu długość, projektor i energia kwadratowa się nie zmieniają, więc operacyjny tor OS jest bezpieczny. Ale wielkości kierunkowe, które widzą zwrot strzałki, nadal wymagają dodatkowego globalnego znaku."
+}
