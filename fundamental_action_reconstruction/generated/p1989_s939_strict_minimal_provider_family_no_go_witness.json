@@ -1,0 +1,81 @@
+{
+  "ledger_id": "P1989_S939_STRICT_MINIMAL_PROVIDER_FAMILY_NO_GO_WITNESS",
+  "packet_id": "P1989",
+  "stage_id": "S939",
+  "produced_by": "p1989_s939_strict_minimal_provider_family_no_go_witness.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only",
+  "depends_on": {
+    "p1987_present": true,
+    "p1988_present": true
+  },
+  "minimal_provider_family": {
+    "definition": "P_min = c1*(3H(sigma1+sigma2)) + c2*(dsigma1+dsigma2) + c3*Q",
+    "Q": "sigma1**2 + sigma1*sigma2 + sigma2**2",
+    "unknowns": [
+      "c1",
+      "c2",
+      "c3"
+    ]
+  },
+  "outside_channel_equations": {
+    "d2sigma1_sigma1": "32991491*N**2*log(2)/(20000000*pi**2)",
+    "d2sigma2_sigma2": "32991491*N**2*log(2)/(20000000*pi**2)",
+    "Ndd_sigma1_sq": "-32991491*N*log(2)/(20000000*pi**2)",
+    "Q_quartic_s1_4": "-768640131*N**2*log(2)/(160000000*pi**2)"
+  },
+  "symbolic_solver": {
+    "equations": [
+      "Eq(32991491*N**2*log(2)/(20000000*pi**2), 0)",
+      "Eq(32991491*N**2*log(2)/(20000000*pi**2), 0)",
+      "Eq(-32991491*N*log(2)/(20000000*pi**2), 0)",
+      "Eq(-768640131*N**2*log(2)/(160000000*pi**2), 0)"
+    ],
+    "solutions_for_c1_c2_c3": [],
+    "no_solution_in_minimal_family": true
+  },
+  "numeric_probe": {
+    "sample": {
+      "N": "1",
+      "Nd": "1/20",
+      "Ndd": "-1/200",
+      "V": "1",
+      "H": "1",
+      "Hd": "1/10",
+      "sigma1": "1/10",
+      "sigma2": "-1/20",
+      "dsigma1": "1/100",
+      "dsigma2": "-1/200",
+      "d2sigma1": "1/1000",
+      "d2sigma2": "-1/2000",
+      "c1": "0",
+      "c2": "0",
+      "c3": "0"
+    },
+    "residual_value": "-1215942234279*log(2)/(25600000000000*pi**2)",
+    "l2_norm": 0.003335789933458249
+  },
+  "gatekeeper_checks": {
+    "p1987_present": true,
+    "p1988_present": true,
+    "outside_eh_channels_reported": true,
+    "minimal_provider_has_no_exact_solution": true,
+    "numeric_residual_nonzero": true
+  },
+  "result_kind": "PASS_MINIMAL_PROVIDER_NO_GO_WITNESS",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "obstruction_tags": [
+    "MINIMAL_EH_LIKE_PROVIDER_INSUFFICIENT",
+    "OUTSIDE_EH_CHANNELS_PERSIST",
+    "STRICT_SELECTOR_AUGMENTED_PROVIDER_CLASS_STILL_OPEN"
+  ],
+  "false_pass_guard": "P1989 is only a no-go witness for one minimal EH-like provider family; it does not exclude broader strict admissible provider classes.",
+  "next_honest_step": "Introduce one extended strict provider ansatz class with explicit selector-premise label (non-strict unless bridged) and re-run channel-equation solvability family-by-family.",
+  "lay_explanation": "Sprawdziliśmy najprostszy legalny kandydat źródła anizotropowego. Okazało się, że nie potrafi on skasować wszystkich trudnych składników residualu. To znaczy, że potrzeba bogatszego (ale nadal rygorystycznego) mechanizmu.",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0"
+  }
+}

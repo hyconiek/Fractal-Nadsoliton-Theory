@@ -1,0 +1,85 @@
+{
+  "ledger_id": "P1988_S938_STRICT_NON_GB_TO_SPATIAL_EOM_FAMILY_PROJECTION_WITNESS",
+  "packet_id": "P1988",
+  "stage_id": "S938",
+  "produced_by": "p1988_s938_strict_non_gb_to_spatial_eom_family_projection_witness.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only",
+  "depends_on": {
+    "p1987_term_classification_present": true,
+    "p1974_anisotropic_eom_obstruction_present": true
+  },
+  "family_projection": {
+    "strict_non_gb_families_detected": [
+      "H2_Q",
+      "H_Qd",
+      "Hd_Q",
+      "Q2",
+      "d2sigma_sigma",
+      "dsigma_sq",
+      "Ndd_sigma_sq",
+      "Nd2_sigma_sq"
+    ],
+    "eh_family_capacity": {
+      "H2_Q": false,
+      "H_Qd": false,
+      "Hd_Q": false,
+      "Q2": false,
+      "d2sigma_sigma": false,
+      "dsigma_sq": false,
+      "Ndd_sigma_sq": false,
+      "Nd2_sigma_sq": false,
+      "H_sigma_linear": true,
+      "dsigma_linear": true,
+      "Q_quadratic": true
+    },
+    "outside_eh_family_capacity": [
+      "H2_Q",
+      "H_Qd",
+      "Hd_Q",
+      "Q2",
+      "d2sigma_sigma",
+      "dsigma_sq",
+      "Ndd_sigma_sq",
+      "Nd2_sigma_sq"
+    ],
+    "outside_eh_family_count": 8,
+    "family_gap_norm": 2.8284271247461903
+  },
+  "cross_packet_consistency": {
+    "p1974_component_residual_vector": [
+      "-sigma1**2 - sigma1*sigma2 - sigma2**2",
+      "3*H*sigma1 + dsigma1 - sigma1**2 - sigma1*sigma2 - sigma2**2",
+      "3*H*sigma2 + dsigma2 - sigma1**2 - sigma1*sigma2 - sigma2**2",
+      "-3*H*sigma1 - 3*H*sigma2 - dsigma1 - dsigma2 - sigma1**2 - sigma1*sigma2 - sigma2**2"
+    ],
+    "p1974_has_only_low_order_eh_families": true
+  },
+  "numeric_severity": {
+    "p1987_probe_l2_norm": 0.003335789933458249
+  },
+  "gatekeeper_checks": {
+    "p1987_present": true,
+    "p1974_present": true,
+    "strict_non_gb_families_detected": true,
+    "outside_eh_family_capacity_detected": true,
+    "family_gap_norm_positive": true,
+    "p1974_eh_residual_has_no_d2sigma_or_Ndd": true,
+    "numeric_probe_nonzero": true
+  },
+  "result_kind": "PASS_NON_GB_SPATIAL_PROJECTION_OBSTRUCTION_WITNESS",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "obstruction_tags": [
+    "NON_GB_FAMILY_CONTENT_EXCEEDS_EH_ANISOTROPIC_CAPACITY",
+    "SPATIAL_EOM_PROVIDER_CLASS_STILL_MISSING",
+    "QW_2191_SELECTOR_CONSTRAINED_EXTENSION_STILL_OPEN"
+  ],
+  "next_honest_step": "Construct and test a strict admissible anisotropic provider ansatz class (with explicit selector premise labels) against each outside-EH family channel one-by-one in spatial Bianchi-I equations.",
+  "lay_explanation": "Pokazaliśmy formalnie, że klasy składników z residualu non-GB są szersze niż to, co potrafi sam poziom Einsteinowski. Czyli bez nowego legalnego mechanizmu (providera) te składniki nie znikną.",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0"
+  }
+}
