@@ -1,5 +1,5 @@
 {
-  "schema_version": "p2025_s975_v78",
+  "schema_version": "p2025_s975_v83",
   "produced_by": "p2025_s975_strict_cutkosky_same_scheme_cohomology_amplitude_bridge_seed.py",
   "timestamp_utc": "2026-05-19T00:00:00+00:00",
   "status": "OPEN_OBSTRUCTION_WITH_TRACE",
@@ -2458,73 +2458,91 @@
               {
                 "channel": "gauge_gauge",
                 "seed": {
-                  "n_pairs": 1,
-                  "n_zero_deltas": 1,
+                  "n_pairs": 64,
+                  "n_zero_deltas": 64,
                   "n_nonzero_deltas": 0,
                   "zero_delta_fraction": 1.0,
-                  "effective_pair_fraction": 0.0
+                  "effective_pair_fraction": 0.0,
+                  "min_effective_pairs_required": 8,
+                  "low_power_flag": true
                 },
                 "extrap": {
-                  "n_pairs": 1,
-                  "n_zero_deltas": 1,
+                  "n_pairs": 64,
+                  "n_zero_deltas": 64,
                   "n_nonzero_deltas": 0,
                   "zero_delta_fraction": 1.0,
-                  "effective_pair_fraction": 0.0
+                  "effective_pair_fraction": 0.0,
+                  "min_effective_pairs_required": 8,
+                  "low_power_flag": true
                 },
                 "q05": {
-                  "n_pairs": 1,
+                  "n_pairs": 64,
                   "n_zero_deltas": 0,
-                  "n_nonzero_deltas": 1,
+                  "n_nonzero_deltas": 64,
                   "zero_delta_fraction": 0.0,
-                  "effective_pair_fraction": 1.0
+                  "effective_pair_fraction": 1.0,
+                  "min_effective_pairs_required": 8,
+                  "low_power_flag": false
                 }
               },
               {
                 "channel": "fermion_fermion",
                 "seed": {
-                  "n_pairs": 1,
-                  "n_zero_deltas": 1,
+                  "n_pairs": 64,
+                  "n_zero_deltas": 64,
                   "n_nonzero_deltas": 0,
                   "zero_delta_fraction": 1.0,
-                  "effective_pair_fraction": 0.0
+                  "effective_pair_fraction": 0.0,
+                  "min_effective_pairs_required": 8,
+                  "low_power_flag": true
                 },
                 "extrap": {
-                  "n_pairs": 1,
-                  "n_zero_deltas": 1,
+                  "n_pairs": 64,
+                  "n_zero_deltas": 64,
                   "n_nonzero_deltas": 0,
                   "zero_delta_fraction": 1.0,
-                  "effective_pair_fraction": 0.0
+                  "effective_pair_fraction": 0.0,
+                  "min_effective_pairs_required": 8,
+                  "low_power_flag": true
                 },
                 "q05": {
-                  "n_pairs": 1,
-                  "n_zero_deltas": 1,
+                  "n_pairs": 64,
+                  "n_zero_deltas": 64,
                   "n_nonzero_deltas": 0,
                   "zero_delta_fraction": 1.0,
-                  "effective_pair_fraction": 0.0
+                  "effective_pair_fraction": 0.0,
+                  "min_effective_pairs_required": 8,
+                  "low_power_flag": true
                 }
               },
               {
                 "channel": "scalar_scalar",
                 "seed": {
-                  "n_pairs": 1,
-                  "n_zero_deltas": 1,
+                  "n_pairs": 64,
+                  "n_zero_deltas": 64,
                   "n_nonzero_deltas": 0,
                   "zero_delta_fraction": 1.0,
-                  "effective_pair_fraction": 0.0
+                  "effective_pair_fraction": 0.0,
+                  "min_effective_pairs_required": 8,
+                  "low_power_flag": true
                 },
                 "extrap": {
-                  "n_pairs": 1,
-                  "n_zero_deltas": 1,
+                  "n_pairs": 64,
+                  "n_zero_deltas": 64,
                   "n_nonzero_deltas": 0,
                   "zero_delta_fraction": 1.0,
-                  "effective_pair_fraction": 0.0
+                  "effective_pair_fraction": 0.0,
+                  "min_effective_pairs_required": 8,
+                  "low_power_flag": true
                 },
                 "q05": {
-                  "n_pairs": 1,
-                  "n_zero_deltas": 1,
+                  "n_pairs": 64,
+                  "n_zero_deltas": 64,
                   "n_nonzero_deltas": 0,
                   "zero_delta_fraction": 1.0,
-                  "effective_pair_fraction": 0.0
+                  "effective_pair_fraction": 0.0,
+                  "min_effective_pairs_required": 8,
+                  "low_power_flag": true
                 }
               }
             ],
@@ -2535,10 +2553,132 @@
               "min_effective_pairs_required": 8
             },
             "power_aware_verdict": {
-              "status": "NON_WORSE_CONFIRMED",
+              "status": "NON_WORSE_NOT_CONFIRMED",
               "nonworse_probability_conditions_met": true,
+              "prob_seed_nonworse_ci95": {
+                "lower": 0.222922801866723,
+                "upper": 0.3798955299324333
+              },
+              "prob_extrap_nonworse_ci95": {
+                "lower": 0.9806043620785059,
+                "upper": 0.9999961712851044
+              },
+              "prob_q05_nonworse_ci95": {
+                "lower": 0.0247913501507101,
+                "upper": 0.10435987697805255
+              },
+              "nonworse_probability_ci95_conditions_met": false,
               "low_power_detected": false,
-              "ready_for_real_backend_substitution": true
+              "ready_for_real_backend_substitution": false
+            },
+            "per_channel_power_aware_verdicts": [
+              {
+                "channel": "gauge_gauge",
+                "status": "NON_WORSE_LOW_POWER",
+                "prob_seed_nonworse": 1.0,
+                "prob_extrap_nonworse": 1.0,
+                "prob_q05_nonworse": 1.0,
+                "prob_seed_nonworse_ci95": {
+                  "lower": 0.9616587711056291,
+                  "upper": 0.9999923575258525
+                },
+                "prob_extrap_nonworse_ci95": {
+                  "lower": 0.9616587711056291,
+                  "upper": 0.9999923575258525
+                },
+                "prob_q05_nonworse_ci95": {
+                  "lower": 0.9616587711056291,
+                  "upper": 0.9999923575258525
+                },
+                "nonworse_probability_conditions_met": true,
+                "nonworse_probability_ci95_conditions_met": true,
+                "low_power_detected": true,
+                "ready_for_real_backend_substitution": false
+              },
+              {
+                "channel": "fermion_fermion",
+                "status": "NON_WORSE_LOW_POWER",
+                "prob_seed_nonworse": 1.0,
+                "prob_extrap_nonworse": 1.0,
+                "prob_q05_nonworse": 1.0,
+                "prob_seed_nonworse_ci95": {
+                  "lower": 0.9616587711056291,
+                  "upper": 0.9999923575258525
+                },
+                "prob_extrap_nonworse_ci95": {
+                  "lower": 0.9616587711056291,
+                  "upper": 0.9999923575258525
+                },
+                "prob_q05_nonworse_ci95": {
+                  "lower": 0.9616587711056291,
+                  "upper": 0.9999923575258525
+                },
+                "nonworse_probability_conditions_met": true,
+                "nonworse_probability_ci95_conditions_met": true,
+                "low_power_detected": true,
+                "ready_for_real_backend_substitution": false
+              },
+              {
+                "channel": "scalar_scalar",
+                "status": "NON_WORSE_LOW_POWER",
+                "prob_seed_nonworse": 1.0,
+                "prob_extrap_nonworse": 1.0,
+                "prob_q05_nonworse": 1.0,
+                "prob_seed_nonworse_ci95": {
+                  "lower": 0.9616587711056291,
+                  "upper": 0.9999923575258525
+                },
+                "prob_extrap_nonworse_ci95": {
+                  "lower": 0.9616587711056291,
+                  "upper": 0.9999923575258525
+                },
+                "prob_q05_nonworse_ci95": {
+                  "lower": 0.9616587711056291,
+                  "upper": 0.9999923575258525
+                },
+                "nonworse_probability_conditions_met": true,
+                "nonworse_probability_ci95_conditions_met": true,
+                "low_power_detected": true,
+                "ready_for_real_backend_substitution": false
+              }
+            ],
+            "mixed_verdict_regime": {
+              "status_counts": {
+                "NON_WORSE_CONFIRMED": 0,
+                "NON_WORSE_LOW_POWER": 3,
+                "NON_WORSE_NOT_CONFIRMED": 0
+              },
+              "num_channels": 3,
+              "num_ready_channels": 0
+            },
+            "per_channel_risk_ranking": {
+              "rows": [
+                {
+                  "channel": "gauge_gauge",
+                  "min_ci_margin_to_threshold": 0.46165877110562914,
+                  "seed_ci_margin": 0.7116587711056291,
+                  "extrap_ci_margin": 0.46165877110562914,
+                  "q05_ci_margin": 0.9116587711056291,
+                  "status": "NON_WORSE_LOW_POWER"
+                },
+                {
+                  "channel": "fermion_fermion",
+                  "min_ci_margin_to_threshold": 0.46165877110562914,
+                  "seed_ci_margin": 0.7116587711056291,
+                  "extrap_ci_margin": 0.46165877110562914,
+                  "q05_ci_margin": 0.9116587711056291,
+                  "status": "NON_WORSE_LOW_POWER"
+                },
+                {
+                  "channel": "scalar_scalar",
+                  "min_ci_margin_to_threshold": 0.46165877110562914,
+                  "seed_ci_margin": 0.7116587711056291,
+                  "extrap_ci_margin": 0.46165877110562914,
+                  "q05_ci_margin": 0.9116587711056291,
+                  "status": "NON_WORSE_LOW_POWER"
+                }
+              ],
+              "most_critical_channel": "gauge_gauge"
             }
           }
         },
@@ -2833,6 +2973,12 @@
     "phase_backend_substitution_channel_first_paired_low_power_summary_exported": true,
     "phase_backend_substitution_channel_first_power_aware_verdict_exported": true,
     "phase_backend_substitution_channel_first_power_aware_ready_flag_consistent": true,
+    "phase_backend_substitution_channel_first_per_channel_power_aware_verdicts_exported": true,
+    "phase_backend_substitution_channel_first_per_channel_power_aware_ready_flag_consistent": true,
+    "phase_backend_substitution_channel_first_per_channel_quality_csv_json_consistent": true,
+    "phase_backend_substitution_channel_first_per_channel_verdict_csv_json_consistent": true,
+    "phase_backend_substitution_channel_first_mixed_verdict_regime_exported": true,
+    "phase_backend_substitution_channel_first_per_channel_risk_ranking_exported": true,
     "upstream_manifest_same_scheme_locked": true,
     "python_major_lock": true,
     "theorem_digest_self_consistent": true,
