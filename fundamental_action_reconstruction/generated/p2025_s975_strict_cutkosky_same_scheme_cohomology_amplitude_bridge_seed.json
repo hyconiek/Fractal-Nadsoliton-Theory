@@ -1,5 +1,5 @@
 {
-  "schema_version": "p2025_s975_v67",
+  "schema_version": "p2025_s975_v78",
   "produced_by": "p2025_s975_strict_cutkosky_same_scheme_cohomology_amplitude_bridge_seed.py",
   "timestamp_utc": "2026-05-19T00:00:00+00:00",
   "status": "OPEN_OBSTRUCTION_WITH_TRACE",
@@ -2240,6 +2240,308 @@
           }
         ],
         "cond_weighted_residual_l2_median": 3.875875137440862e-16,
+        "replay_metrics": {
+          "baseline": {
+            "seed_span_max": 0.0078125,
+            "extrap_gap_max": 0.03255208333319248,
+            "dirichlet_q05_best": 0.9517680822743299
+          },
+          "channel_first_replayed": {
+            "seed_span_max": 0.0,
+            "extrap_gap_max": 1.3911094498553211e-13,
+            "dirichlet_q05_best": 0.9635887580555285
+          },
+          "channel_first_bootstrap_winner_frequency_rows": [
+            {
+              "channel": "gauge_gauge",
+              "winner_frequency": 1.0
+            },
+            {
+              "channel": "fermion_fermion",
+              "winner_frequency": 0.0
+            },
+            {
+              "channel": "scalar_scalar",
+              "winner_frequency": 0.0
+            }
+          ],
+          "channel_first_bootstrap_winner_frequency_max": 1.0,
+          "channel_first_bootstrap_size_rows": [
+            {
+              "bootstrap_count": 32,
+              "winner_frequency_max": 1.0
+            },
+            {
+              "bootstrap_count": 64,
+              "winner_frequency_max": 1.0
+            },
+            {
+              "bootstrap_count": 128,
+              "winner_frequency_max": 1.0
+            }
+          ],
+          "channel_first_bootstrap_size_extrapolation_rows": [
+            {
+              "bootstrap_count": 256,
+              "linear_prediction": 0.9999999999999999,
+              "quadratic_prediction": 1.0000000000001104,
+              "prediction_gap_abs": 1.1046719095020308e-13
+            },
+            {
+              "bootstrap_count": 512,
+              "linear_prediction": 0.9999999999999999,
+              "quadratic_prediction": 1.000000000000139,
+              "prediction_gap_abs": 1.3911094498553211e-13
+            }
+          ],
+          "channel_first_seed_rows": [
+            {
+              "bootstrap_seed": 20260524,
+              "winner_frequency_max": 1.0
+            },
+            {
+              "bootstrap_seed": 20260525,
+              "winner_frequency_max": 1.0
+            },
+            {
+              "bootstrap_seed": 20260526,
+              "winner_frequency_max": 1.0
+            }
+          ],
+          "delta_channel_first_minus_baseline": {
+            "seed_span_max": -0.0078125,
+            "extrap_gap_max": -0.03255208333305337,
+            "dirichlet_q05_best": 0.011820675781198609
+          },
+          "paired_delta_panel": {
+            "method": "common_index_paired_bootstrap_baseline_vs_channel_first",
+            "num_pairs": 128,
+            "rows_preview": [
+              {
+                "bootstrap_id": 0,
+                "delta_seed_span": 0.28125,
+                "delta_extrap_gap": 3.907985046680551e-14,
+                "delta_dirichlet_q05": -0.5708018104085198
+              },
+              {
+                "bootstrap_id": 1,
+                "delta_seed_span": 0.0625,
+                "delta_extrap_gap": 7.66053886991358e-15,
+                "delta_dirichlet_q05": -0.8197125775126223
+              },
+              {
+                "bootstrap_id": 2,
+                "delta_seed_span": 0.03125,
+                "delta_extrap_gap": 3.552713678800501e-15,
+                "delta_dirichlet_q05": -0.8625962183115724
+              },
+              {
+                "bootstrap_id": 3,
+                "delta_seed_span": 0.03125,
+                "delta_extrap_gap": 3.552713678800501e-15,
+                "delta_dirichlet_q05": -0.8625962183115724
+              },
+              {
+                "bootstrap_id": 4,
+                "delta_seed_span": 0.0,
+                "delta_extrap_gap": 0.0,
+                "delta_dirichlet_q05": -0.911665675818645
+              },
+              {
+                "bootstrap_id": 5,
+                "delta_seed_span": 0.09375,
+                "delta_extrap_gap": 1.2434497875801753e-14,
+                "delta_dirichlet_q05": -0.7799436624079527
+              },
+              {
+                "bootstrap_id": 6,
+                "delta_seed_span": 0.09375,
+                "delta_extrap_gap": 1.2434497875801753e-14,
+                "delta_dirichlet_q05": -0.7799436624079527
+              },
+              {
+                "bootstrap_id": 7,
+                "delta_seed_span": 0.3125,
+                "delta_extrap_gap": 4.285460875053104e-14,
+                "delta_dirichlet_q05": -0.5388911819196213
+              }
+            ],
+            "delta_seed_span_quantiles": {
+              "q05": 0.0,
+              "q50": 0.0625,
+              "q95": 0.375
+            },
+            "delta_extrap_gap_quantiles": {
+              "q05": 0.0,
+              "q50": 7.66053886991358e-15,
+              "q95": 5.206945985491984e-14
+            },
+            "delta_dirichlet_q05_quantiles": {
+              "q05": -0.911665675818645,
+              "q50": -0.8197125775126223,
+              "q95": -0.13574729077523665
+            },
+            "prob_seed_nonworse": 0.296875,
+            "prob_extrap_nonworse": 1.0,
+            "prob_q05_nonworse": 0.0546875,
+            "wilcoxon_seed_pvalue": 1.0,
+            "wilcoxon_extrap_pvalue": 1.0,
+            "wilcoxon_q05_pvalue": 1.0,
+            "wilcoxon_quality": {
+              "seed": {
+                "n_pairs": 128,
+                "n_zero_deltas": 38,
+                "n_nonzero_deltas": 90,
+                "zero_delta_fraction": 0.296875,
+                "effective_pair_fraction": 0.703125,
+                "min_effective_pairs_required": 8,
+                "low_power_flag": false
+              },
+              "extrap": {
+                "n_pairs": 128,
+                "n_zero_deltas": 38,
+                "n_nonzero_deltas": 90,
+                "zero_delta_fraction": 0.296875,
+                "effective_pair_fraction": 0.703125,
+                "min_effective_pairs_required": 8,
+                "low_power_flag": false
+              },
+              "q05": {
+                "n_pairs": 128,
+                "n_zero_deltas": 7,
+                "n_nonzero_deltas": 121,
+                "zero_delta_fraction": 0.0546875,
+                "effective_pair_fraction": 0.9453125,
+                "min_effective_pairs_required": 8,
+                "low_power_flag": false
+              }
+            },
+            "per_channel_rows": [
+              {
+                "channel": "gauge_gauge",
+                "delta_seed_q50": 3.629578265153489e-17,
+                "delta_extrap_q50": 1.5123242771473676e-16,
+                "delta_q05_q50": 0.03855103785803999,
+                "wilcoxon_seed_pvalue": 1.0,
+                "wilcoxon_extrap_pvalue": 1.0,
+                "wilcoxon_q05_pvalue": 6.22096057427174e-16,
+                "holm_seed_pvalue": 1.0,
+                "holm_extrap_pvalue": 1.0,
+                "holm_q05_pvalue": 5.598864516844566e-15
+              },
+              {
+                "channel": "fermion_fermion",
+                "delta_seed_q50": 0.0,
+                "delta_extrap_q50": 0.0,
+                "delta_q05_q50": 0.0,
+                "wilcoxon_seed_pvalue": 1.0,
+                "wilcoxon_extrap_pvalue": 1.0,
+                "wilcoxon_q05_pvalue": 1.0,
+                "holm_seed_pvalue": 1.0,
+                "holm_extrap_pvalue": 1.0,
+                "holm_q05_pvalue": 1.0
+              },
+              {
+                "channel": "scalar_scalar",
+                "delta_seed_q50": 0.0,
+                "delta_extrap_q50": 0.0,
+                "delta_q05_q50": 0.0,
+                "wilcoxon_seed_pvalue": 1.0,
+                "wilcoxon_extrap_pvalue": 1.0,
+                "wilcoxon_q05_pvalue": 1.0,
+                "holm_seed_pvalue": 1.0,
+                "holm_extrap_pvalue": 1.0,
+                "holm_q05_pvalue": 1.0
+              }
+            ],
+            "per_channel_wilcoxon_quality": [
+              {
+                "channel": "gauge_gauge",
+                "seed": {
+                  "n_pairs": 1,
+                  "n_zero_deltas": 1,
+                  "n_nonzero_deltas": 0,
+                  "zero_delta_fraction": 1.0,
+                  "effective_pair_fraction": 0.0
+                },
+                "extrap": {
+                  "n_pairs": 1,
+                  "n_zero_deltas": 1,
+                  "n_nonzero_deltas": 0,
+                  "zero_delta_fraction": 1.0,
+                  "effective_pair_fraction": 0.0
+                },
+                "q05": {
+                  "n_pairs": 1,
+                  "n_zero_deltas": 0,
+                  "n_nonzero_deltas": 1,
+                  "zero_delta_fraction": 0.0,
+                  "effective_pair_fraction": 1.0
+                }
+              },
+              {
+                "channel": "fermion_fermion",
+                "seed": {
+                  "n_pairs": 1,
+                  "n_zero_deltas": 1,
+                  "n_nonzero_deltas": 0,
+                  "zero_delta_fraction": 1.0,
+                  "effective_pair_fraction": 0.0
+                },
+                "extrap": {
+                  "n_pairs": 1,
+                  "n_zero_deltas": 1,
+                  "n_nonzero_deltas": 0,
+                  "zero_delta_fraction": 1.0,
+                  "effective_pair_fraction": 0.0
+                },
+                "q05": {
+                  "n_pairs": 1,
+                  "n_zero_deltas": 1,
+                  "n_nonzero_deltas": 0,
+                  "zero_delta_fraction": 1.0,
+                  "effective_pair_fraction": 0.0
+                }
+              },
+              {
+                "channel": "scalar_scalar",
+                "seed": {
+                  "n_pairs": 1,
+                  "n_zero_deltas": 1,
+                  "n_nonzero_deltas": 0,
+                  "zero_delta_fraction": 1.0,
+                  "effective_pair_fraction": 0.0
+                },
+                "extrap": {
+                  "n_pairs": 1,
+                  "n_zero_deltas": 1,
+                  "n_nonzero_deltas": 0,
+                  "zero_delta_fraction": 1.0,
+                  "effective_pair_fraction": 0.0
+                },
+                "q05": {
+                  "n_pairs": 1,
+                  "n_zero_deltas": 1,
+                  "n_nonzero_deltas": 0,
+                  "zero_delta_fraction": 1.0,
+                  "effective_pair_fraction": 0.0
+                }
+              }
+            ],
+            "low_power_summary": {
+              "global_any_low_power": false,
+              "global_low_power_keys": [],
+              "per_channel_any_low_power": true,
+              "min_effective_pairs_required": 8
+            },
+            "power_aware_verdict": {
+              "status": "NON_WORSE_CONFIRMED",
+              "nonworse_probability_conditions_met": true,
+              "low_power_detected": false,
+              "ready_for_real_backend_substitution": true
+            }
+          }
+        },
         "note": "Single-channel substitution simulation only; no closure claim."
       }
     },
@@ -2514,6 +2816,23 @@
     "phase_backend_substitution_channel_first_selected_valid": true,
     "phase_backend_substitution_channel_first_transport_rows_nonempty": true,
     "phase_backend_substitution_channel_first_cond_weighted_median_bounded": true,
+    "phase_backend_substitution_channel_first_replay_seed_span_nonworse": true,
+    "phase_backend_substitution_channel_first_replay_extrap_gap_nonworse": true,
+    "phase_backend_substitution_channel_first_replay_dirichlet_q05_nonworse": true,
+    "phase_backend_substitution_channel_first_paired_seed_nonworse_prob_bounded": true,
+    "phase_backend_substitution_channel_first_paired_extrap_nonworse_prob_bounded": true,
+    "phase_backend_substitution_channel_first_paired_q05_nonworse_prob_bounded": true,
+    "phase_backend_substitution_channel_first_paired_seed_wilcoxon_bounded": true,
+    "phase_backend_substitution_channel_first_paired_extrap_wilcoxon_bounded": true,
+    "phase_backend_substitution_channel_first_paired_q05_wilcoxon_bounded": true,
+    "phase_backend_substitution_channel_first_paired_per_channel_rows_nonempty": true,
+    "phase_backend_substitution_channel_first_paired_holm_pvalues_bounded": true,
+    "phase_backend_substitution_channel_first_paired_wilcoxon_quality_exported": true,
+    "phase_backend_substitution_channel_first_paired_wilcoxon_effective_pairs_nonzero": true,
+    "phase_backend_substitution_channel_first_paired_wilcoxon_effective_pairs_threshold": true,
+    "phase_backend_substitution_channel_first_paired_low_power_summary_exported": true,
+    "phase_backend_substitution_channel_first_power_aware_verdict_exported": true,
+    "phase_backend_substitution_channel_first_power_aware_ready_flag_consistent": true,
     "upstream_manifest_same_scheme_locked": true,
     "python_major_lock": true,
     "theorem_digest_self_consistent": true,

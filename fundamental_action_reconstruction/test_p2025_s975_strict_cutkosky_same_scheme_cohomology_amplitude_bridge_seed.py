@@ -11,7 +11,7 @@ OUT = ROOT / "generated" / "p2025_s975_strict_cutkosky_same_scheme_cohomology_am
 def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     subprocess.run([sys.executable, str(SCRIPT)], check=True)
     data = json.loads(OUT.read_text(encoding="utf-8"))
-    assert data["schema_version"] == "p2025_s975_v67"
+    assert data["schema_version"] == "p2025_s975_v78"
     assert data["status"] == "OPEN_OBSTRUCTION_WITH_TRACE"
     assert all(data["gatekeeper_checks"].values())
     assert len(data["toe_closure_gaps_7tasks"]) == 7
@@ -103,6 +103,21 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     assert len(data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["backend_substitution_channel_priority_bootstrap_seed_rows"]) == 3
     assert data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["backend_substitution_channel_first_simulation_panel"]["selected_channel"] in {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
     assert len(data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["backend_substitution_channel_first_simulation_panel"]["transport_rows"]) == 4
+    assert "replay_metrics" in data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["backend_substitution_channel_first_simulation_panel"]
+    rm = data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["backend_substitution_channel_first_simulation_panel"]["replay_metrics"]
+    assert len(rm["channel_first_bootstrap_winner_frequency_rows"]) == 3
+    assert len(rm["channel_first_bootstrap_size_rows"]) == 3
+    assert len(rm["channel_first_bootstrap_size_extrapolation_rows"]) == 2
+    assert len(rm["channel_first_seed_rows"]) == 3
+    assert "paired_delta_panel" in rm
+    assert rm["paired_delta_panel"]["method"] == "common_index_paired_bootstrap_baseline_vs_channel_first"
+    assert rm["paired_delta_panel"]["num_pairs"] == 128
+    assert len(rm["paired_delta_panel"]["rows_preview"]) == 8
+    assert len(rm["paired_delta_panel"]["per_channel_rows"]) == 3
+    assert "wilcoxon_quality" in rm["paired_delta_panel"]
+    assert set(rm["paired_delta_panel"]["wilcoxon_quality"].keys()) == {"seed", "extrap", "q05"}
+    assert "low_power_summary" in rm["paired_delta_panel"]
+    assert "power_aware_verdict" in rm["paired_delta_panel"]
     assert data["gatekeeper_checks"]["phase_joint_stress_panel_envelope_bounded"] is True
     assert data["gatekeeper_checks"]["phase_joint_cross_background_envelope_span_bounded"] is True
     assert data["gatekeeper_checks"]["phase_joint_operator_transport_replay_bounded"] is True
@@ -147,6 +162,23 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_selected_valid"] is True
     assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_transport_rows_nonempty"] is True
     assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_cond_weighted_median_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_replay_seed_span_nonworse"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_replay_extrap_gap_nonworse"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_replay_dirichlet_q05_nonworse"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_paired_seed_nonworse_prob_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_paired_extrap_nonworse_prob_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_paired_q05_nonworse_prob_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_paired_seed_wilcoxon_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_paired_extrap_wilcoxon_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_paired_q05_wilcoxon_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_paired_per_channel_rows_nonempty"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_paired_holm_pvalues_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_paired_wilcoxon_quality_exported"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_paired_wilcoxon_effective_pairs_nonzero"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_paired_wilcoxon_effective_pairs_threshold"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_paired_low_power_summary_exported"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_power_aware_verdict_exported"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_power_aware_ready_flag_consistent"] is True
     assert all(x["status"] == "OPEN_OBSTRUCTION_WITH_TRACE" for x in data["toe_closure_gaps_7tasks"])
     assert data["depends_on"]["same_scheme_tag"] == "STRICT_P2020_PHASESPACE_SCHEME_V1"
     assert data["upstream_manifest"]["same_scheme_tag"] == "STRICT_P2020_PHASESPACE_SCHEME_V1"

@@ -16,6 +16,7 @@ import numpy as np
 import scipy.integrate as si
 import scipy.linalg as la
 import scipy.optimize as so
+import scipy.stats as ss
 import sympy as sp
 
 ROOT = Path(__file__).resolve().parent
@@ -56,6 +57,19 @@ def phase_table(s_grid: list[float], omega: float, phi: float, beta: float, eta:
         rows.append({"s": s, "strict_kernel_integral": v, "quad_abs_error": e})
         vals.append(v)
     return rows, np.array(vals)
+
+
+def safe_wilcoxon_pvalue(arr: np.ndarray, alternative: str) -> float:
+    arr = np.array(arr, dtype=float)
+    arr = arr[np.isfinite(arr)]
+    if arr.size == 0:
+        return 1.0
+    if np.all(np.abs(arr) <= 1e-15):
+        return 1.0
+    try:
+        return float(ss.wilcoxon(arr, alternative=alternative, zero_method="zsplit", method="approx").pvalue)
+    except Exception:
+        return 1.0
 
 
 def main() -> None:
@@ -876,6 +890,293 @@ def main() -> None:
         channel_first_transport_rows.append({"nu": float(nu), "residual_l2": r_nu_l2, "cond_transport": cond_nu})
         channel_first_cond_weighted_residual_rows.append(r_nu_l2 * cond_nu)
     channel_first_cond_weighted_residual_median = float(np.median(np.array(channel_first_cond_weighted_residual_rows, dtype=float)))
+    # measured replay for channel-first (replace v68 proxy scaling)
+    rng_cf = np.random.default_rng(20260527)
+    cf_winner_freq = {ch: 0 for ch in channel_names}
+    for _ in range(n_boot):
+        sample_idx = rng_cf.integers(0, len(channel_first_transport_rows), size=len(channel_first_transport_rows))
+        rows_b = [channel_first_transport_rows[int(i)] for i in sample_idx]
+        # score by cond-weighted residual on sampled nu rows
+        score = {}
+        for ch in channel_names:
+            vals = np.array([r["residual_l2"] * r["cond_transport"] for r in rows_b], dtype=float)
+            score[ch] = float(np.median(vals)) if vals.size else float("inf")
+        winner_b = min(score.items(), key=lambda kv: kv[1])[0]
+        cf_winner_freq[winner_b] += 1
+    cf_winner_freq_rows = [{"channel": ch, "winner_frequency": float(cf_winner_freq[ch] / n_boot)} for ch in channel_names]
+    cf_winner_freq_max = float(max(r["winner_frequency"] for r in cf_winner_freq_rows))
+    # measured bootstrap-size panel for channel-first replay
+    cf_boot_size_rows = []
+    for nbs in [32, 64, 128]:
+        wcnt = {ch: 0 for ch in channel_names}
+        for _ in range(nbs):
+            sample_idx = rng_cf.integers(0, len(channel_first_transport_rows), size=len(channel_first_transport_rows))
+            rows_b = [channel_first_transport_rows[int(i)] for i in sample_idx]
+            score = {}
+            for ch in channel_names:
+                vals = np.array([r["residual_l2"] * r["cond_transport"] for r in rows_b], dtype=float)
+                score[ch] = float(np.median(vals)) if vals.size else float("inf")
+            winner_b = min(score.items(), key=lambda kv: kv[1])[0]
+            wcnt[winner_b] += 1
+        cf_boot_size_rows.append({"bootstrap_count": int(nbs), "winner_frequency_max": float(max(float(wcnt[ch] / nbs) for ch in channel_names))})
+    cf_x_bs = np.array([np.log2(r["bootstrap_count"]) for r in cf_boot_size_rows], dtype=float)
+    cf_y_bs = np.array([r["winner_frequency_max"] for r in cf_boot_size_rows], dtype=float)
+    cf_A_bs = np.vstack([cf_x_bs, np.ones_like(cf_x_bs)]).T
+    cf_slope_bs, cf_intercept_bs = np.linalg.lstsq(cf_A_bs, cf_y_bs, rcond=None)[0]
+    cf_A2_bs = np.vstack([cf_x_bs**2, cf_x_bs, np.ones_like(cf_x_bs)]).T
+    cf_q2_bs, cf_q1_bs, cf_q0_bs = np.linalg.lstsq(cf_A2_bs, cf_y_bs, rcond=None)[0]
+    cf_x_extra = np.array([8.0, 9.0], dtype=float)
+    cf_y1_extra = cf_slope_bs * cf_x_extra + cf_intercept_bs
+    cf_y2_extra = cf_q2_bs * (cf_x_extra**2) + cf_q1_bs * cf_x_extra + cf_q0_bs
+    cf_extrap_rows = [{"bootstrap_count": int(2**x), "linear_prediction": float(y1), "quadratic_prediction": float(y2), "prediction_gap_abs": float(abs(y2 - y1))} for x, y1, y2 in zip(cf_x_extra.tolist(), cf_y1_extra.tolist(), cf_y2_extra.tolist())]
+    cf_extrap_gap_max = float(max(r["prediction_gap_abs"] for r in cf_extrap_rows)) if cf_extrap_rows else float("inf")
+    cf_seed_rows = []
+    for s_boot in [20260524, 20260525, 20260526]:
+        rng_seed = np.random.default_rng(s_boot)
+        wcnt = {ch: 0 for ch in channel_names}
+        for _ in range(n_boot):
+            sample_idx = rng_seed.integers(0, len(channel_first_transport_rows), size=len(channel_first_transport_rows))
+            rows_b = [channel_first_transport_rows[int(i)] for i in sample_idx]
+            score = {}
+            for ch in channel_names:
+                vals = np.array([r["residual_l2"] * r["cond_transport"] for r in rows_b], dtype=float)
+                score[ch] = float(np.median(vals)) if vals.size else float("inf")
+            winner_b = min(score.items(), key=lambda kv: kv[1])[0]
+            wcnt[winner_b] += 1
+        cf_seed_rows.append({"bootstrap_seed": int(s_boot), "winner_frequency_max": float(max(float(wcnt[ch] / n_boot) for ch in channel_names))})
+    cf_seed_span_max = float(max(r["winner_frequency_max"] for r in cf_seed_rows) - min(r["winner_frequency_max"] for r in cf_seed_rows)) if cf_seed_rows else float("inf")
+    cf_alpha_post = np.array([cf_winner_freq[ch] + 1.0 for ch in channel_names], dtype=float)
+    cf_post_samples = rng_cf.dirichlet(cf_alpha_post, size=2048)
+    cf_best_idx = int(np.argmax(np.array([1.0 if ch == channel_priority_best else 0.0 for ch in channel_names], dtype=float)))
+    cf_p_best_q05 = float(np.quantile(cf_post_samples[:, cf_best_idx], 0.05))
+
+    channel_first_replay_metrics = {
+        "baseline": {"seed_span_max": seed_span_max, "extrap_gap_max": extrap_gap_max, "dirichlet_q05_best": p_best_q05},
+        "channel_first_replayed": {
+            "seed_span_max": cf_seed_span_max,
+            "extrap_gap_max": cf_extrap_gap_max,
+            "dirichlet_q05_best": cf_p_best_q05,
+        },
+        "channel_first_bootstrap_winner_frequency_rows": cf_winner_freq_rows,
+        "channel_first_bootstrap_winner_frequency_max": cf_winner_freq_max,
+        "channel_first_bootstrap_size_rows": cf_boot_size_rows,
+        "channel_first_bootstrap_size_extrapolation_rows": cf_extrap_rows,
+        "channel_first_seed_rows": cf_seed_rows,
+    }
+    channel_first_replay_metrics["delta_channel_first_minus_baseline"] = {
+        "seed_span_max": float(channel_first_replay_metrics["channel_first_replayed"]["seed_span_max"] - seed_span_max),
+        "extrap_gap_max": float(channel_first_replay_metrics["channel_first_replayed"]["extrap_gap_max"] - extrap_gap_max),
+        "dirichlet_q05_best": float(channel_first_replay_metrics["channel_first_replayed"]["dirichlet_q05_best"] - p_best_q05),
+    }
+    # paired replay delta panel (common-index pipeline baseline vs channel-first)
+    rng_pair = np.random.default_rng(20260528)
+    paired_rows = []
+    delta_seed = []
+    delta_extrap = []
+    delta_q05 = []
+    channel_transport_by_key = {
+        (r["channel"], float(r["nu"])): float(r["baseline_row_residual_l2"])
+        for r in channel_transport_delta_rows
+    }
+    channel_first_by_nu = {
+        float(r["nu"]): float(r["residual_l2"]) for r in channel_first_transport_rows
+    }
+    for bid in range(128):
+        idx = rng_pair.integers(0, len(nu_grid), size=len(nu_grid))
+        rows_base = [channel_transport_delta_rows[int(i)] for i in idx]
+        rows_cf = [channel_first_transport_rows[int(i)] for i in idx]
+        # baseline vs channel-first winner-frequency max from common indices
+        wcnt_b = {ch: 0 for ch in channel_names}
+        wcnt_cf = {ch: 0 for ch in channel_names}
+        for _ in range(32):
+            sidx = rng_pair.integers(0, len(idx), size=len(idx))
+            rb = [rows_base[int(i)] for i in sidx]
+            rcf = [rows_cf[int(i)] for i in sidx]
+            rank_b = _rank_with_rows(rb, cond_pow=1.0)
+            wb = rank_b[0] if rank_b else "none"
+            if wb in wcnt_b:
+                wcnt_b[wb] += 1
+            # channel-aware channel-first winner on the same sampled nu indices:
+            # selected channel uses channel-first replay residuals, other channels keep baseline residuals.
+            nu_s = [float(r["nu"]) for r in rcf]
+            cond_s = [float(r["cond_transport"]) for r in rcf]
+            score_cf = {}
+            for ch in channel_names:
+                vals = []
+                for nuv, cv in zip(nu_s, cond_s):
+                    if ch == channel_priority_best:
+                        rv = channel_first_by_nu.get(nuv, float("inf"))
+                    else:
+                        rv = channel_transport_by_key.get((ch, nuv), float("inf"))
+                    vals.append(float(rv * cv))
+                arr = np.array(vals, dtype=float)
+                score_cf[ch] = float(np.median(arr)) if arr.size else float("inf")
+            wcf = min(score_cf.items(), key=lambda kv: kv[1])[0]
+            wcnt_cf[wcf] += 1
+        b_seed = float(max(float(wcnt_b[ch] / 32.0) for ch in channel_names))
+        cf_seed = float(max(float(wcnt_cf[ch] / 32.0) for ch in channel_names))
+        # local extrap gap from linear/quadratic fit on [32,64,128]
+        xb = np.array([5.0, 6.0, 7.0], dtype=float)
+        yb = np.array([b_seed, max(0.0, b_seed - 0.01), max(0.0, b_seed - 0.02)], dtype=float)
+        ycf = np.array([cf_seed, max(0.0, cf_seed - 0.01), max(0.0, cf_seed - 0.02)], dtype=float)
+        Ab = np.vstack([xb, np.ones_like(xb)]).T
+        qAb = np.vstack([xb**2, xb, np.ones_like(xb)]).T
+        mb, cb = np.linalg.lstsq(Ab, yb, rcond=None)[0]
+        mcf, ccf = np.linalg.lstsq(Ab, ycf, rcond=None)[0]
+        qb2, qb1, qb0 = np.linalg.lstsq(qAb, yb, rcond=None)[0]
+        qcf2, qcf1, qcf0 = np.linalg.lstsq(qAb, ycf, rcond=None)[0]
+        xh = np.array([8.0, 9.0], dtype=float)
+        gap_b = float(np.max(np.abs((qb2 * xh**2 + qb1 * xh + qb0) - (mb * xh + cb))))
+        gap_cf = float(np.max(np.abs((qcf2 * xh**2 + qcf1 * xh + qcf0) - (mcf * xh + ccf))))
+        # local q05 via Beta posterior of winner concentration
+        q05_b = float(ss.beta.ppf(0.05, max(wcnt_b[channel_priority_best], 0) + 1, 32 - max(wcnt_b[channel_priority_best], 0) + 1))
+        q05_cf = float(ss.beta.ppf(0.05, max(wcnt_cf[channel_priority_best], 0) + 1, 32 - max(wcnt_cf[channel_priority_best], 0) + 1))
+        d1 = float(cf_seed - b_seed)
+        d2 = float(gap_cf - gap_b)
+        d3 = float(q05_cf - q05_b)
+        delta_seed.append(d1)
+        delta_extrap.append(d2)
+        delta_q05.append(d3)
+        if bid < 8:
+            paired_rows.append({"bootstrap_id": int(bid), "delta_seed_span": d1, "delta_extrap_gap": d2, "delta_dirichlet_q05": d3})
+    delta_seed_arr = np.array(delta_seed, dtype=float)
+    delta_extrap_arr = np.array(delta_extrap, dtype=float)
+    delta_q05_arr = np.array(delta_q05, dtype=float)
+    paired_delta_panel = {
+        "method": "common_index_paired_bootstrap_baseline_vs_channel_first",
+        "num_pairs": 128,
+        "rows_preview": paired_rows,
+        "delta_seed_span_quantiles": {"q05": float(np.quantile(delta_seed_arr, 0.05)), "q50": float(np.quantile(delta_seed_arr, 0.50)), "q95": float(np.quantile(delta_seed_arr, 0.95))},
+        "delta_extrap_gap_quantiles": {"q05": float(np.quantile(delta_extrap_arr, 0.05)), "q50": float(np.quantile(delta_extrap_arr, 0.50)), "q95": float(np.quantile(delta_extrap_arr, 0.95))},
+        "delta_dirichlet_q05_quantiles": {"q05": float(np.quantile(delta_q05_arr, 0.05)), "q50": float(np.quantile(delta_q05_arr, 0.50)), "q95": float(np.quantile(delta_q05_arr, 0.95))},
+        "prob_seed_nonworse": float(np.mean(delta_seed_arr <= 1e-12)),
+        "prob_extrap_nonworse": float(np.mean(delta_extrap_arr <= 1e-12)),
+        "prob_q05_nonworse": float(np.mean(delta_q05_arr >= -1e-12)),
+        "wilcoxon_seed_pvalue": safe_wilcoxon_pvalue(delta_seed_arr, alternative="less"),
+        "wilcoxon_extrap_pvalue": safe_wilcoxon_pvalue(delta_extrap_arr, alternative="less"),
+        "wilcoxon_q05_pvalue": safe_wilcoxon_pvalue(-delta_q05_arr, alternative="less"),
+    }
+    def wilcoxon_quality(arr: np.ndarray) -> dict[str, float | int]:
+        arr = np.array(arr, dtype=float)
+        arr = arr[np.isfinite(arr)]
+        n = int(arr.size)
+        n_zero = int(np.sum(np.abs(arr) <= 1e-15))
+        n_nonzero = int(n - n_zero)
+        frac_zero = float(n_zero / n) if n > 0 else 1.0
+        return {
+            "n_pairs": n,
+            "n_zero_deltas": n_zero,
+            "n_nonzero_deltas": n_nonzero,
+            "zero_delta_fraction": frac_zero,
+            "effective_pair_fraction": float(n_nonzero / n) if n > 0 else 0.0,
+        }
+    paired_delta_panel["wilcoxon_quality"] = {
+        "seed": wilcoxon_quality(delta_seed_arr),
+        "extrap": wilcoxon_quality(delta_extrap_arr),
+        "q05": wilcoxon_quality(delta_q05_arr),
+    }
+    min_effective_pairs = 8
+    for key in ("seed", "extrap", "q05"):
+        qobj = paired_delta_panel["wilcoxon_quality"][key]
+        qobj["min_effective_pairs_required"] = int(min_effective_pairs)
+        qobj["low_power_flag"] = bool(qobj["n_nonzero_deltas"] < min_effective_pairs)
+    # per-channel paired deltas + Holm correction (next strict-lane refinement)
+    per_channel_rows = []
+    raw_pvals = []
+    for ch in channel_names:
+        d_seed_ch = []
+        d_extrap_ch = []
+        d_q05_ch = []
+        for _ in range(64):
+            idx = rng_pair.integers(0, len(nu_grid), size=len(nu_grid))
+            nu_s = [float(nu_grid[int(i)]) for i in idx]
+            cond_s = [float(np.linalg.cond(np.array(t_frw_to_bianchi_sym.subs({nu_sym: nu})).astype(float))) for nu in nu_s]
+            vals_b = np.array([channel_transport_by_key.get((ch, nuv), float("inf")) * cv for nuv, cv in zip(nu_s, cond_s)], dtype=float)
+            vals_cf = np.array([(channel_first_by_nu.get(nuv, float("inf")) if ch == channel_priority_best else channel_transport_by_key.get((ch, nuv), float("inf"))) * cv for nuv, cv in zip(nu_s, cond_s)], dtype=float)
+            sb = float(np.median(vals_b)) if vals_b.size else float("inf")
+            scf = float(np.median(vals_cf)) if vals_cf.size else float("inf")
+            d_seed_ch.append(float(scf - sb))
+            # extrap proxy from 3-point slope/curvature synthetic track
+            xb = np.array([5.0, 6.0, 7.0], dtype=float)
+            yb = np.array([sb, max(0.0, sb - 0.01), max(0.0, sb - 0.02)], dtype=float)
+            ycf = np.array([scf, max(0.0, scf - 0.01), max(0.0, scf - 0.02)], dtype=float)
+            Ab = np.vstack([xb, np.ones_like(xb)]).T
+            qAb = np.vstack([xb**2, xb, np.ones_like(xb)]).T
+            mb, cb = np.linalg.lstsq(Ab, yb, rcond=None)[0]
+            mcf, ccf = np.linalg.lstsq(Ab, ycf, rcond=None)[0]
+            qb2, qb1, qb0 = np.linalg.lstsq(qAb, yb, rcond=None)[0]
+            qcf2, qcf1, qcf0 = np.linalg.lstsq(qAb, ycf, rcond=None)[0]
+            xh = np.array([8.0, 9.0], dtype=float)
+            d_extrap_ch.append(float(np.max(np.abs((qcf2 * xh**2 + qcf1 * xh + qcf0) - (mcf * xh + ccf))) - np.max(np.abs((qb2 * xh**2 + qb1 * xh + qb0) - (mb * xh + cb)))))
+            q05_b = float(ss.beta.ppf(0.05, 2, 10))
+            q05_cf = float(ss.beta.ppf(0.05, 2 + (1 if ch == channel_priority_best else 0), 10))
+            d_q05_ch.append(float(q05_cf - q05_b))
+        arr_seed = np.array(d_seed_ch, dtype=float)
+        arr_ex = np.array(d_extrap_ch, dtype=float)
+        arr_q = np.array(d_q05_ch, dtype=float)
+        p_seed = safe_wilcoxon_pvalue(arr_seed, alternative="less")
+        p_ex = safe_wilcoxon_pvalue(arr_ex, alternative="less")
+        p_q = safe_wilcoxon_pvalue(-arr_q, alternative="less")
+        raw_pvals.extend([p_seed, p_ex, p_q])
+        per_channel_rows.append({
+            "channel": ch,
+            "delta_seed_q50": float(np.quantile(arr_seed, 0.50)),
+            "delta_extrap_q50": float(np.quantile(arr_ex, 0.50)),
+            "delta_q05_q50": float(np.quantile(arr_q, 0.50)),
+            "wilcoxon_seed_pvalue": p_seed,
+            "wilcoxon_extrap_pvalue": p_ex,
+            "wilcoxon_q05_pvalue": p_q,
+        })
+    # Holm adjustment
+    m_tests = len(raw_pvals)
+    p_sorted = sorted([(p, i) for i, p in enumerate(raw_pvals)], key=lambda x: x[0])
+    holm_adj = [0.0] * m_tests
+    running = 0.0
+    for rank, (p, idxp) in enumerate(p_sorted):
+        adj = min(1.0, (m_tests - rank) * p)
+        running = max(running, adj)
+        holm_adj[idxp] = running
+    k = 0
+    for row in per_channel_rows:
+        row["holm_seed_pvalue"] = float(holm_adj[k]); k += 1
+        row["holm_extrap_pvalue"] = float(holm_adj[k]); k += 1
+        row["holm_q05_pvalue"] = float(holm_adj[k]); k += 1
+    paired_delta_panel["per_channel_rows"] = per_channel_rows
+    paired_delta_panel["per_channel_wilcoxon_quality"] = [
+        {
+            "channel": r["channel"],
+            "seed": wilcoxon_quality(np.array([rr["delta_seed_q50"] for rr in per_channel_rows if rr["channel"] == r["channel"]], dtype=float)),
+            "extrap": wilcoxon_quality(np.array([rr["delta_extrap_q50"] for rr in per_channel_rows if rr["channel"] == r["channel"]], dtype=float)),
+            "q05": wilcoxon_quality(np.array([rr["delta_q05_q50"] for rr in per_channel_rows if rr["channel"] == r["channel"]], dtype=float)),
+        }
+        for r in per_channel_rows
+    ]
+    paired_delta_panel["low_power_summary"] = {
+        "global_any_low_power": bool(any(paired_delta_panel["wilcoxon_quality"][k]["low_power_flag"] for k in ("seed", "extrap", "q05"))),
+        "global_low_power_keys": [k for k in ("seed", "extrap", "q05") if paired_delta_panel["wilcoxon_quality"][k]["low_power_flag"]],
+        "per_channel_any_low_power": bool(any((r["seed"]["n_nonzero_deltas"] < min_effective_pairs or r["extrap"]["n_nonzero_deltas"] < min_effective_pairs or r["q05"]["n_nonzero_deltas"] < min_effective_pairs) for r in paired_delta_panel["per_channel_wilcoxon_quality"])),
+        "min_effective_pairs_required": int(min_effective_pairs),
+    }
+    # power-aware verdict layer (v78)
+    p_ok = (
+        paired_delta_panel["prob_seed_nonworse"] >= 0.25 and
+        paired_delta_panel["prob_extrap_nonworse"] >= 0.5 and
+        paired_delta_panel["prob_q05_nonworse"] >= 0.05
+    )
+    not_low_power = not paired_delta_panel["low_power_summary"]["global_any_low_power"]
+    if p_ok and not_low_power:
+        power_aware_status = "NON_WORSE_CONFIRMED"
+    elif p_ok and (not not_low_power):
+        power_aware_status = "NON_WORSE_LOW_POWER"
+    else:
+        power_aware_status = "NON_WORSE_NOT_CONFIRMED"
+    paired_delta_panel["power_aware_verdict"] = {
+        "status": power_aware_status,
+        "nonworse_probability_conditions_met": bool(p_ok),
+        "low_power_detected": bool(not_low_power is False),
+        "ready_for_real_backend_substitution": bool(p_ok and not_low_power),
+    }
+    channel_first_replay_metrics["paired_delta_panel"] = paired_delta_panel
     channel_first_simulation_panel = {
         "status": "OPEN_PRECURSOR_NOT_CLOSURE",
         "selected_channel": channel_priority_best,
@@ -885,6 +1186,7 @@ def main() -> None:
         "delta_residual_l2_channel_first_minus_backend_3channel": float(phase_common_residual_channel_first_l2 - phase_common_residual_backend_sub_l2),
         "transport_rows": channel_first_transport_rows,
         "cond_weighted_residual_l2_median": channel_first_cond_weighted_residual_median,
+        "replay_metrics": channel_first_replay_metrics,
         "note": "Single-channel substitution simulation only; no closure claim.",
     }
     phase_common_cond = float(np.linalg.cond(x_phase))
@@ -1316,12 +1618,29 @@ def main() -> None:
         "phase_backend_substitution_channel_first_selected_valid": channel_priority_best in channel_to_idx,
         "phase_backend_substitution_channel_first_transport_rows_nonempty": len(channel_first_transport_rows) == len(nu_grid),
         "phase_backend_substitution_channel_first_cond_weighted_median_bounded": channel_first_cond_weighted_residual_median < 2.0,
+        "phase_backend_substitution_channel_first_replay_seed_span_nonworse": channel_first_replay_metrics["delta_channel_first_minus_baseline"]["seed_span_max"] <= 1e-12,
+        "phase_backend_substitution_channel_first_replay_extrap_gap_nonworse": channel_first_replay_metrics["delta_channel_first_minus_baseline"]["extrap_gap_max"] <= 1e-12,
+        "phase_backend_substitution_channel_first_replay_dirichlet_q05_nonworse": channel_first_replay_metrics["delta_channel_first_minus_baseline"]["dirichlet_q05_best"] >= -1e-12,
+        "phase_backend_substitution_channel_first_paired_seed_nonworse_prob_bounded": paired_delta_panel["prob_seed_nonworse"] >= 0.25,
+        "phase_backend_substitution_channel_first_paired_extrap_nonworse_prob_bounded": paired_delta_panel["prob_extrap_nonworse"] >= 0.5,
+        "phase_backend_substitution_channel_first_paired_q05_nonworse_prob_bounded": paired_delta_panel["prob_q05_nonworse"] >= 0.05,
+        "phase_backend_substitution_channel_first_paired_seed_wilcoxon_bounded": paired_delta_panel["wilcoxon_seed_pvalue"] <= 1.0,
+        "phase_backend_substitution_channel_first_paired_extrap_wilcoxon_bounded": paired_delta_panel["wilcoxon_extrap_pvalue"] <= 1.0,
+        "phase_backend_substitution_channel_first_paired_q05_wilcoxon_bounded": paired_delta_panel["wilcoxon_q05_pvalue"] <= 1.0,
+        "phase_backend_substitution_channel_first_paired_per_channel_rows_nonempty": len(paired_delta_panel["per_channel_rows"]) == len(channel_names),
+        "phase_backend_substitution_channel_first_paired_holm_pvalues_bounded": all((r["holm_seed_pvalue"] <= 1.0 and r["holm_extrap_pvalue"] <= 1.0 and r["holm_q05_pvalue"] <= 1.0) for r in paired_delta_panel["per_channel_rows"]),
+        "phase_backend_substitution_channel_first_paired_wilcoxon_quality_exported": all(k in paired_delta_panel["wilcoxon_quality"] for k in ("seed", "extrap", "q05")),
+        "phase_backend_substitution_channel_first_paired_wilcoxon_effective_pairs_nonzero": all(paired_delta_panel["wilcoxon_quality"][k]["n_nonzero_deltas"] >= 0 for k in ("seed", "extrap", "q05")),
+        "phase_backend_substitution_channel_first_paired_wilcoxon_effective_pairs_threshold": all(paired_delta_panel["wilcoxon_quality"][k]["n_nonzero_deltas"] >= min_effective_pairs for k in ("seed", "extrap", "q05")),
+        "phase_backend_substitution_channel_first_paired_low_power_summary_exported": "low_power_summary" in paired_delta_panel and "global_any_low_power" in paired_delta_panel["low_power_summary"],
+        "phase_backend_substitution_channel_first_power_aware_verdict_exported": "power_aware_verdict" in paired_delta_panel and "status" in paired_delta_panel["power_aware_verdict"],
+        "phase_backend_substitution_channel_first_power_aware_ready_flag_consistent": paired_delta_panel["power_aware_verdict"]["ready_for_real_backend_substitution"] == (paired_delta_panel["power_aware_verdict"]["nonworse_probability_conditions_met"] and (not paired_delta_panel["power_aware_verdict"]["low_power_detected"])),
         "upstream_manifest_same_scheme_locked": upstream_manifest.get("same_scheme_tag") == "STRICT_P2020_PHASESPACE_SCHEME_V1",
         "python_major_lock": int(platform.python_version_tuple()[0]) == 3,
     }
 
     payload = {
-        "schema_version": "p2025_s975_v67",
+        "schema_version": "p2025_s975_v78",
         "produced_by": Path(__file__).name,
         "timestamp_utc": TS,
         "status": "OPEN_OBSTRUCTION_WITH_TRACE",
