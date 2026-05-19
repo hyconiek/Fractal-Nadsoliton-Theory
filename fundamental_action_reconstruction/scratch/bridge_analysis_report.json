@@ -1,84 +1,39 @@
 {
-  "title": "Badanie Mostu Konforemnego i Deformacji Współrzędnych Jądra",
-  "description": "Próba zrekonstruowania przejścia Legacy -> Strict za pomocą dodatkowego sprzężenia konforemnego / deformacji wymiarowej d na pierścieniu Z12.",
-  "d_values": [
-    1.0,
-    2.0,
-    3.0,
-    4.0,
-    5.0,
-    6.0,
-    7.0,
-    8.0,
-    9.0,
-    10.0,
-    11.0
-  ],
-  "legacy_values": [
-    0.7104938272793256,
-    -1.3591121187449902,
-    -2.6001117014458375,
-    -2.3087810266402764,
-    -0.6834273957639219,
-    1.307824868981029,
-    2.5029112640086097,
-    2.223270618246192,
-    0.6583474913322185,
-    -1.2602676010180802,
-    -2.4127162635037935
-  ],
-  "strict_values": [
-    0.4699856726450201,
-    0.1920435516901028,
-    0.09142861427792495,
-    0.0470291687456504,
-    0.02413122336363006,
-    0.011070817321442113,
-    0.0031528355078646996,
-    -0.0017958784054378975,
-    -0.0048954248870059355,
-    -0.0067749960252108405,
-    -0.007814314930515773
-  ],
-  "hypothesis_1_coordinate_deformation": {
-    "formula_d_eff": "d_eff = scale * d^gamma",
-    "optimized_parameters": {
-      "scale": -0.854528498654139,
-      "gamma": 0.007924759886602939,
-      "amplitude_absorption_factor": 32.68528378783691,
-      "expected_amplitude_absorption": 0.36067376022224085,
-      "phase_shift": -1.412468458526717
-    },
-    "residual_sum_of_squares": 0.033717509571650615,
-    "interpretation": "Pokazuje czy deformacja wymiarowa d (np. wymiar fraktalny sieci) wyjaśnia przejście częstotliwości i fazy."
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "result_kind": "SCRATCH_BRIDGE_HYPOTHESIS_TEST__NOT_A_THEOREM",
+  "hypothesis_h1_fractal_map": {
+    "lambda": 0.1,
+    "alpha": 2.1031765944572736,
+    "delta_phi": 0.11776953419204356,
+    "beta_tors_eff": 7.27069866895075,
+    "amplitude_renorm_c": 0.304166284485863,
+    "r2": 0.9998953270675139,
+    "max_abs_gap": 0.003328553788894073
   },
-  "hypothesis_2_pointwise_dephasing_factors": {
-    "d_values": [
-      1.0,
-      2.0,
-      3.0,
-      4.0,
-      5.0,
-      6.0,
-      7.0,
-      8.0,
-      9.0,
-      10.0,
-      11.0
+  "hypothesis_h2_no_fractal_exponent": {
+    "lambda": 0.5697542627721295,
+    "delta_phi": 0.6521178754076955,
+    "beta_tors_eff": 10.0,
+    "amplitude_renorm_c": 1.708547837392364,
+    "r2": 0.9773953512787933
+  },
+  "model_comparison": {
+    "delta_r2_h1_minus_h2": 0.02249997578872065,
+    "bootstrap_r2_h1_q05_q50_q95": [
+      0.999887226577731,
+      0.9998956442207246,
+      0.999903304163186
     ],
-    "ratios_strict_to_normalized_legacy": [
-      1.8340440487424037,
-      -0.3917688454478099,
-      -0.09749348256693204,
-      -0.05647679072893643,
-      -0.09789768184089788,
-      0.023470132721457277,
-      0.0034925393871864927,
-      -0.002239597902552637,
-      -0.020616771554515335,
-      0.014904991255463873,
-      0.008979871266302304
-    ],
-    "interpretation": "Stosunek wartości jądra ścisłego do znormalizowanego jądra legacy. Wskazuje na istnienie nieliniowego sprzężenia tłumiącego i przesunięcia fazowego, które nie były uwzględnione w uproszczonym modelu legacy."
-  }
+    "probability_h1_better_than_h2": 1.0,
+    "wilcoxon_pvalue_h1_gt_h2": 3.0417799248457183e-51
+  },
+  "symbolic_nonidentity": {
+    "expr_linear_minus_fractional": "b1*d - b2*d**(9/5)",
+    "exact_zero_identity": false
+  },
+  "hard_limits": [
+    "High R2 cannot prove a bridge theorem.",
+    "No legacy-role transfer to strict is inferred.",
+    "Strict selector closure remains open."
+  ]
 }
