@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""P2025 S975 strict same-scheme CohomologyAmplitudeBridge seed witness (v37).
+"""P2025 S975 strict same-scheme CohomologyAmplitudeBridge seed witness (v54).
 
 Honest refinement: keep OPEN obstruction while adding phase-space grid
 refinement convergence checks for integral and slope diagnostics.
@@ -522,6 +522,47 @@ def main() -> None:
             "min_integral": ch_min,
         })
     channel_phase_min_global = float(min(channel_phase_mins)) if channel_phase_mins else -1.0
+    # explicit backend-like channel substitutions (task #2/#7) for all three channels
+    gg_vals = None
+    ff_vals = None
+    ss_vals = None
+    for row in channel_phase_rows:
+        if row["channel"] == "gauge_gauge":
+            gg_vals = np.array(row["integrals_over_s_grid"], dtype=float)
+        if row["channel"] == "fermion_fermion":
+            ff_vals = np.array(row["integrals_over_s_grid"], dtype=float)
+        if row["channel"] == "scalar_scalar":
+            ss_vals = np.array(row["integrals_over_s_grid"], dtype=float)
+    if gg_vals is None:
+        gg_vals = np.zeros(len(s_grid_fine), dtype=float)
+    if ff_vals is None:
+        ff_vals = np.zeros(len(s_grid_fine), dtype=float)
+    if ss_vals is None:
+        ss_vals = np.zeros(len(s_grid_fine), dtype=float)
+    discm_loop_gauge_gauge_backend_vector = np.array([
+        float(np.mean(gg_vals)),
+        float(np.std(gg_vals)),
+        float(np.min(gg_vals)),
+        float(np.max(gg_vals)),
+        float(np.max(gg_vals) - np.min(gg_vals)),
+        float(np.linalg.norm(gg_vals, ord=2)),
+    ], dtype=float)
+    discm_loop_fermion_fermion_backend_vector = np.array([
+        float(np.mean(ff_vals)),
+        float(np.std(ff_vals)),
+        float(np.min(ff_vals)),
+        float(np.max(ff_vals)),
+        float(np.max(ff_vals) - np.min(ff_vals)),
+        float(np.linalg.norm(ff_vals, ord=2)),
+    ], dtype=float)
+    discm_loop_scalar_scalar_backend_vector = np.array([
+        float(np.mean(ss_vals)),
+        float(np.std(ss_vals)),
+        float(np.min(ss_vals)),
+        float(np.max(ss_vals)),
+        float(np.max(ss_vals) - np.min(ss_vals)),
+        float(np.linalg.norm(ss_vals, ord=2)),
+    ], dtype=float)
     # quadrature-tolerance sweep on channelwise phase-space table
     tol_grid = [1e-12, 1e-10, 1e-8]
     tol_rows = []
@@ -562,11 +603,91 @@ def main() -> None:
         ])
     x_phase = np.array(phase_feature_rows, dtype=float)
     y_phase = np.array(phase_target_rows, dtype=float)
+    y_phase_backend_sub = y_phase.copy()
+    y_phase_backend_sub[0, :] = np.array([
+        float(discm_loop_gauge_gauge_backend_vector[0]),
+        float(discm_loop_gauge_gauge_backend_vector[2]),
+        float(discm_loop_gauge_gauge_backend_vector[3]),
+    ], dtype=float)
+    y_phase_backend_sub[1, :] = np.array([
+        float(discm_loop_fermion_fermion_backend_vector[0]),
+        float(discm_loop_fermion_fermion_backend_vector[2]),
+        float(discm_loop_fermion_fermion_backend_vector[3]),
+    ], dtype=float)
+    y_phase_backend_sub[2, :] = np.array([
+        float(discm_loop_scalar_scalar_backend_vector[0]),
+        float(discm_loop_scalar_scalar_backend_vector[2]),
+        float(discm_loop_scalar_scalar_backend_vector[3]),
+    ], dtype=float)
+    phase_backend_sub_rows = [{
+        "channel": "gauge_gauge",
+        "backend_vector": discm_loop_gauge_gauge_backend_vector.tolist(),
+        "substituted_target_triplet": y_phase_backend_sub[0, :].astype(float).tolist(),
+    }, {
+        "channel": "fermion_fermion",
+        "backend_vector": discm_loop_fermion_fermion_backend_vector.tolist(),
+        "substituted_target_triplet": y_phase_backend_sub[1, :].astype(float).tolist(),
+    }, {
+        "channel": "scalar_scalar",
+        "backend_vector": discm_loop_scalar_scalar_backend_vector.tolist(),
+        "substituted_target_triplet": y_phase_backend_sub[2, :].astype(float).tolist(),
+    }]
     phase_common_coef, *_ = la.lstsq(x_phase, y_phase)
     y_phase_pred = x_phase @ phase_common_coef
     phase_common_residual = y_phase_pred - y_phase
     phase_common_residual_l2 = float(np.linalg.norm(phase_common_residual, ord=2))
     phase_common_residual_linf = float(np.linalg.norm(phase_common_residual, ord=np.inf))
+    phase_common_coef_backend_sub, *_ = la.lstsq(x_phase, y_phase_backend_sub)
+    y_phase_pred_backend_sub = x_phase @ phase_common_coef_backend_sub
+    phase_common_residual_backend_sub = y_phase_pred_backend_sub - y_phase_backend_sub
+    phase_common_residual_backend_sub_l2 = float(np.linalg.norm(phase_common_residual_backend_sub, ord=2))
+    phase_backend_sub_delta_report = {
+        "residual_l2_baseline": phase_common_residual_l2,
+        "residual_l2_backend_substituted": phase_common_residual_backend_sub_l2,
+        "delta_residual_l2_backend_minus_baseline": float(phase_common_residual_backend_sub_l2 - phase_common_residual_l2),
+        "residual_linf_baseline": phase_common_residual_linf,
+        "residual_linf_backend_substituted": float(np.linalg.norm(phase_common_residual_backend_sub, ord=np.inf)),
+        "delta_residual_linf_backend_minus_baseline": float(np.linalg.norm(phase_common_residual_backend_sub, ord=np.inf) - phase_common_residual_linf),
+    }
+    # per-channel backend-substitution delta breakdown (task-2/task-7 diagnostic refinement)
+    channel_delta_rows = []
+    for i, ch in enumerate(channel_names):
+        base_row_l2 = float(np.linalg.norm((y_phase_pred[i, :] - y_phase[i, :]), ord=2))
+        sub_row_l2 = float(np.linalg.norm((y_phase_pred_backend_sub[i, :] - y_phase_backend_sub[i, :]), ord=2))
+        channel_delta_rows.append({
+            "channel": ch,
+            "baseline_row_residual_l2": base_row_l2,
+            "backend_sub_row_residual_l2": sub_row_l2,
+            "delta_row_residual_l2_backend_minus_baseline": float(sub_row_l2 - base_row_l2),
+        })
+    channel_delta_abs_max = float(max(abs(r["delta_row_residual_l2_backend_minus_baseline"]) for r in channel_delta_rows)) if channel_delta_rows else float("inf")
+    # transport-conditioned channel delta map (per-channel, per-nu)
+    channel_transport_delta_rows = []
+    channel_transport_delta_abs_max = 0.0
+    for nu in nu_grid:
+        t_fb_nu = np.array(t_frw_to_bianchi_sym.subs({nu_sym: nu})).astype(float)
+        y_nu_base = y_phase @ t_fb_nu.T
+        y_nu_sub = y_phase_backend_sub @ t_fb_nu.T
+        c_nu_base, *_ = la.lstsq(x_phase, y_nu_base)
+        c_nu_sub, *_ = la.lstsq(x_phase, y_nu_sub)
+        pred_nu_base = x_phase @ c_nu_base
+        pred_nu_sub = x_phase @ c_nu_sub
+        det_nu = float(abs(np.linalg.det(t_fb_nu)))
+        cond_nu = float(np.linalg.cond(t_fb_nu))
+        for i, ch in enumerate(channel_names):
+            r_base = float(np.linalg.norm(pred_nu_base[i, :] - y_nu_base[i, :], ord=2))
+            r_sub = float(np.linalg.norm(pred_nu_sub[i, :] - y_nu_sub[i, :], ord=2))
+            dlt = float(r_sub - r_base)
+            channel_transport_delta_abs_max = max(channel_transport_delta_abs_max, abs(dlt))
+            channel_transport_delta_rows.append({
+                "nu": float(nu),
+                "channel": ch,
+                "det_transport": det_nu,
+                "cond_transport": cond_nu,
+                "baseline_row_residual_l2": r_base,
+                "backend_sub_row_residual_l2": r_sub,
+                "delta_row_residual_l2_backend_minus_baseline": dlt,
+            })
     phase_common_cond = float(np.linalg.cond(x_phase))
     # leave-one-channel-out stability check for phase/common-basis link
     loocv_rows = []
@@ -721,6 +842,152 @@ def main() -> None:
         pert_resids.append(rl2)
         pert_rows.append({"perturbation_id": int(pid), "residual_l2": rl2})
     perturb_resid_span = float(max(pert_resids) - min(pert_resids)) if pert_resids else float("inf")
+    stress_residual_values = [joint_resid_l2, holdout_joint_resid_max] + joint_ms_resids + pert_resids + lambda_resids
+    joint_worst_case_residual_envelope = float(max(stress_residual_values)) if stress_residual_values else float("inf")
+    joint_stress_panel = {
+        "solver_crosscheck_objective_gap": joint_solver_gap,
+        "lambda_sweep_residual_l2_span": lambda_resid_span,
+        "holdout_rotation_residual_l2_max": holdout_joint_resid_max,
+        "multistart_residual_l2_span": joint_ms_resid_span,
+        "perturbation_residual_l2_span": perturb_resid_span,
+        "worst_case_residual_envelope": joint_worst_case_residual_envelope,
+    }
+    transport_det_mean = float(np.mean(np.array([r["det_frw_to_bianchi"] for r in transport_rows], dtype=float)))
+    nu_mean = float(np.mean(np.array(nu_grid, dtype=float)))
+    t_fb_mean = np.array(t_frw_to_bianchi_sym.subs({nu_sym: nu_mean})).astype(float)
+    t_bf_mean = np.array(t_bianchi_to_frw_sym.subs({nu_sym: nu_mean})).astype(float)
+    background_scale = {"FRW": 1.00, "BianchiI": transport_det_mean}
+    bg_panel_rows = []
+    bg_env_vals = []
+    for bg_name, bg_scale in background_scale.items():
+        bg_vals = [v * bg_scale for v in stress_residual_values]
+        bg_env = float(max(bg_vals)) if bg_vals else float("inf")
+        bg_env_vals.append(bg_env)
+        bg_panel_rows.append({"background": bg_name, "scale_proxy": float(bg_scale), "worst_case_residual_envelope": bg_env})
+    cross_background_envelope_span = float(max(bg_env_vals) - min(bg_env_vals)) if bg_env_vals else float("inf")
+    # operator-level transport replay on phase target matrix (3x3 channel codomain)
+    y_frw = y_phase.copy()
+    y_bianchi = y_phase @ t_fb_mean.T
+    c_frw, *_ = la.lstsq(x_phase, y_frw)
+    c_bianchi, *_ = la.lstsq(x_phase, y_bianchi)
+    r_frw = x_phase @ c_frw - y_frw
+    r_bianchi = x_phase @ c_bianchi - y_bianchi
+    transport_operator_rows = [
+        {"background": "FRW", "residual_l2": float(np.linalg.norm(r_frw, ord=2)), "residual_linf": float(np.linalg.norm(r_frw, ord=np.inf))},
+        {"background": "BianchiI", "residual_l2": float(np.linalg.norm(r_bianchi, ord=2)), "residual_linf": float(np.linalg.norm(r_bianchi, ord=np.inf))},
+    ]
+    operator_resid_span = float(abs(transport_operator_rows[1]["residual_l2"] - transport_operator_rows[0]["residual_l2"]))
+    # nu-sweep operator replay for stronger background-independence proxy diagnostics
+    operator_nu_sweep_rows = []
+    operator_nu_resids = []
+    operator_nu_solver_gaps = []
+    operator_nu_lambda_rows = []
+    operator_nu_lambda_resids = []
+    operator_nu_lambda_solver_gaps = []
+    operator_nu_lambda_weighted_resids = []
+    operator_nu_lambda_cond_weighted_resids = []
+    lambda_grid_nu = [0.05, 0.1, 0.2]
+    for nu in nu_grid:
+        t_fb_nu = np.array(t_frw_to_bianchi_sym.subs({nu_sym: nu})).astype(float)
+        cond_t_fb_nu = float(np.linalg.cond(t_fb_nu))
+        y_bi_nu = y_phase @ t_fb_nu.T
+        c_bi_nu, *_ = la.lstsq(x_phase, y_bi_nu)
+        r_bi_nu = x_phase @ c_bi_nu - y_bi_nu
+        r_l2 = float(np.linalg.norm(r_bi_nu, ord=2))
+        # per-nu joint solver crosscheck (L-BFGS-B vs SLSQP) on transported targets
+        y_cols_nu = [y_bi_nu[:, i] for i in range(y_bi_nu.shape[1])]
+        def joint_loss_nu(v: np.ndarray, lam: float = 0.1) -> float:
+            c0, c1, c2 = unpack_joint(v)
+            p0 = x_phase @ c0
+            p1 = x_phase @ c1
+            p2 = x_phase @ c2
+            data_term = np.linalg.norm(p0 - y_cols_nu[0], ord=2) ** 2 + np.linalg.norm(p1 - y_cols_nu[1], ord=2) ** 2 + np.linalg.norm(p2 - y_cols_nu[2], ord=2) ** 2
+            cmat = np.stack([c0, c1, c2], axis=1)
+            mu = np.mean(cmat, axis=1, keepdims=True)
+            spread_term = np.linalg.norm(cmat - mu, ord=2) ** 2
+            return float(data_term + lam * spread_term)
+        r_lb = so.minimize(joint_loss_nu, x0=x0_joint, method="L-BFGS-B")
+        r_sq = so.minimize(joint_loss_nu, x0=x0_joint, method="SLSQP")
+        solver_gap_nu = float(abs(float(r_lb.fun) - float(r_sq.fun)))
+        for lam_nu in lambda_grid_nu:
+            r_lb_lam = so.minimize(lambda v: joint_loss_nu(v, lam=lam_nu), x0=x0_joint, method="L-BFGS-B")
+            r_sq_lam = so.minimize(lambda v: joint_loss_nu(v, lam=lam_nu), x0=x0_joint, method="SLSQP")
+            c0_l, c1_l, c2_l = unpack_joint(r_lb_lam.x.astype(float))
+            p_l = np.stack([x_phase @ c0_l, x_phase @ c1_l, x_phase @ c2_l], axis=1)
+            r_l = p_l - y_bi_nu
+            resid_l2_lam = float(np.linalg.norm(r_l, ord=2))
+            gap_lam = float(abs(float(r_lb_lam.fun) - float(r_sq_lam.fun)))
+            nu_weight = float(abs(np.linalg.det(t_fb_nu)))
+            resid_weighted = float(resid_l2_lam * nu_weight)
+            resid_cond_weighted = float(resid_l2_lam * cond_t_fb_nu)
+            operator_nu_lambda_resids.append(resid_l2_lam)
+            operator_nu_lambda_solver_gaps.append(gap_lam)
+            operator_nu_lambda_weighted_resids.append(resid_weighted)
+            operator_nu_lambda_cond_weighted_resids.append(resid_cond_weighted)
+            operator_nu_lambda_rows.append({
+                "nu": float(nu),
+                "lambda_spread": float(lam_nu),
+                "transport_det_weight": nu_weight,
+                "transport_condition_weight": cond_t_fb_nu,
+                "residual_l2": resid_l2_lam,
+                "residual_l2_weighted_by_det": resid_weighted,
+                "residual_l2_weighted_by_condition": resid_cond_weighted,
+                "solver_objective_gap_lbfgsb_vs_slsqp": gap_lam,
+            })
+        operator_nu_resids.append(r_l2)
+        operator_nu_solver_gaps.append(solver_gap_nu)
+        operator_nu_sweep_rows.append({
+            "nu": float(nu),
+            "det_frw_to_bianchi": float(np.linalg.det(t_fb_nu)),
+            "residual_l2": r_l2,
+            "residual_linf": float(np.linalg.norm(r_bi_nu, ord=np.inf)),
+            "joint_solver_objective_gap_lbfgsb_vs_slsqp": solver_gap_nu,
+        })
+    operator_nu_sweep_resid_span = float(max(operator_nu_resids) - min(operator_nu_resids)) if operator_nu_resids else float("inf")
+    operator_nu_sweep_solver_gap_max = float(max(operator_nu_solver_gaps)) if operator_nu_solver_gaps else float("inf")
+    operator_nu_lambda_resid_span = float(max(operator_nu_lambda_resids) - min(operator_nu_lambda_resids)) if operator_nu_lambda_resids else float("inf")
+    operator_nu_lambda_solver_gap_max = float(max(operator_nu_lambda_solver_gaps)) if operator_nu_lambda_solver_gaps else float("inf")
+    operator_nu_lambda_weighted_resid_max = float(max(operator_nu_lambda_weighted_resids)) if operator_nu_lambda_weighted_resids else float("inf")
+    operator_nu_lambda_weighted_resid_span = float(max(operator_nu_lambda_weighted_resids) - min(operator_nu_lambda_weighted_resids)) if operator_nu_lambda_weighted_resids else float("inf")
+    operator_nu_lambda_cond_weighted_resid_max = float(max(operator_nu_lambda_cond_weighted_resids)) if operator_nu_lambda_cond_weighted_resids else float("inf")
+    operator_nu_lambda_cond_weighted_resid_span = float(max(operator_nu_lambda_cond_weighted_resids) - min(operator_nu_lambda_cond_weighted_resids)) if operator_nu_lambda_cond_weighted_resids else float("inf")
+    # dual-criterion frontier map (det-weighted vs condition-weighted)
+    dual_rows = []
+    for row in operator_nu_lambda_rows:
+        dual_rows.append({
+            "nu": row["nu"],
+            "lambda_spread": row["lambda_spread"],
+            "det_weighted": row["residual_l2_weighted_by_det"],
+            "cond_weighted": row["residual_l2_weighted_by_condition"],
+        })
+    dual_with_front = []
+    for i, r in enumerate(dual_rows):
+        dominated = False
+        for j, s in enumerate(dual_rows):
+            if i == j:
+                continue
+            if (s["det_weighted"] <= r["det_weighted"] and s["cond_weighted"] <= r["cond_weighted"]) and (s["det_weighted"] < r["det_weighted"] or s["cond_weighted"] < r["cond_weighted"]):
+                dominated = True
+                break
+        dual_with_front.append({**r, "pareto_frontier": not dominated})
+    pareto_count = int(sum(1 for r in dual_with_front if r["pareto_frontier"]))
+    dual_stable_rows = [r for r in dual_with_front if r["det_weighted"] < 1.0 and r["cond_weighted"] < 2.0]
+    dual_unstable_rows = [r for r in dual_with_front if not (r["det_weighted"] < 1.0 and r["cond_weighted"] < 2.0)]
+    # frontier continuity check along nu for each lambda (detect local branch flips)
+    frontier_continuity_rows = []
+    branch_flip_total = 0
+    for lam in lambda_grid_nu:
+        lam_rows = sorted([r for r in dual_with_front if abs(float(r["lambda_spread"]) - float(lam)) < 1e-12], key=lambda z: float(z["nu"]))
+        flips = 0
+        for i in range(len(lam_rows) - 1):
+            if bool(lam_rows[i]["pareto_frontier"]) != bool(lam_rows[i + 1]["pareto_frontier"]):
+                flips += 1
+        branch_flip_total += flips
+        frontier_continuity_rows.append({
+            "lambda_spread": float(lam),
+            "num_nu_points": int(len(lam_rows)),
+            "frontier_membership_flips_along_nu": int(flips),
+        })
 
     same_scheme_tag = "STRICT_P2020_PHASESPACE_SCHEME_V1"
 
@@ -803,12 +1070,29 @@ def main() -> None:
         "phase_joint_holdout_rotation_bounded": holdout_joint_resid_max < 1.0,
         "phase_joint_multistart_bounded": joint_ms_resid_span < 1.0,
         "phase_joint_perturbation_span_bounded": perturb_resid_span < 1.0,
+        "phase_joint_stress_panel_envelope_bounded": joint_worst_case_residual_envelope < 1.0,
+        "phase_joint_cross_background_envelope_span_bounded": cross_background_envelope_span < 0.2,
+        "phase_joint_operator_transport_replay_bounded": operator_resid_span < 0.2,
+        "phase_joint_operator_transport_nu_sweep_bounded": operator_nu_sweep_resid_span < 0.2,
+        "phase_joint_operator_transport_nu_sweep_solver_agreement": operator_nu_sweep_solver_gap_max < 1.0,
+        "phase_joint_operator_transport_nu_lambda_panel_bounded": operator_nu_lambda_resid_span < 0.3,
+        "phase_joint_operator_transport_nu_lambda_solver_agreement": operator_nu_lambda_solver_gap_max < 1.0,
+        "phase_joint_operator_transport_nu_lambda_weighted_envelope_bounded": operator_nu_lambda_weighted_resid_max < 1.0,
+        "phase_joint_operator_transport_nu_lambda_condition_weighted_envelope_bounded": operator_nu_lambda_cond_weighted_resid_max < 2.0,
+        "phase_joint_operator_transport_dual_frontier_nonempty": pareto_count >= 1,
+        "phase_joint_operator_transport_dual_frontier_continuity_bounded": branch_flip_total <= 6,
+        "phase_backend_substitution_gauge_gauge_finite": bool(np.isfinite(phase_common_residual_backend_sub_l2)),
+        "phase_backend_substitution_fermion_fermion_finite": bool(np.isfinite(phase_common_residual_backend_sub_l2)),
+        "phase_backend_substitution_scalar_scalar_finite": bool(np.isfinite(phase_common_residual_backend_sub_l2)),
+        "phase_backend_substitution_delta_report_finite": bool(np.isfinite(phase_backend_sub_delta_report["delta_residual_l2_backend_minus_baseline"])) and bool(np.isfinite(phase_backend_sub_delta_report["delta_residual_linf_backend_minus_baseline"])),
+        "phase_backend_substitution_channel_delta_bounded": channel_delta_abs_max < 1.0,
+        "phase_backend_substitution_transport_channel_delta_bounded": channel_transport_delta_abs_max < 1.5,
         "upstream_manifest_same_scheme_locked": upstream_manifest.get("same_scheme_tag") == "STRICT_P2020_PHASESPACE_SCHEME_V1",
         "python_major_lock": int(platform.python_version_tuple()[0]) == 3,
     }
 
     payload = {
-        "schema_version": "p2025_s975_v37",
+        "schema_version": "p2025_s975_v54",
         "produced_by": Path(__file__).name,
         "timestamp_utc": TS,
         "status": "OPEN_OBSTRUCTION_WITH_TRACE",
@@ -955,6 +1239,73 @@ def main() -> None:
                 "multistart_residual_l2_span": joint_ms_resid_span,
                 "perturbation_rows": pert_rows,
                 "perturbation_residual_l2_span": perturb_resid_span,
+                "combined_stress_panel": joint_stress_panel,
+                "cross_background_stress_panel_rows": bg_panel_rows,
+                "cross_background_envelope_span": cross_background_envelope_span,
+                "cross_background_scale_source": {
+                    "method": "mean_det_frw_to_bianchi_over_nu_grid",
+                    "nu_grid": nu_grid,
+                    "det_mean": transport_det_mean,
+                },
+                "operator_transport_replay": {
+                    "method": "y_phase @ T_frw_to_bianchi(nu_mean)^T",
+                    "nu_mean": nu_mean,
+                    "T_frw_to_bianchi_nu_mean": t_fb_mean.tolist(),
+                    "T_bianchi_to_frw_nu_mean": t_bf_mean.tolist(),
+                    "rows": transport_operator_rows,
+                    "residual_l2_span": operator_resid_span,
+                },
+                "operator_transport_nu_sweep": {
+                    "method": "for nu in nu_grid: y_phase @ T_frw_to_bianchi(nu)^T",
+                    "rows": operator_nu_sweep_rows,
+                    "residual_l2_span": operator_nu_sweep_resid_span,
+                    "solver_crosscheck": "L-BFGS-B vs SLSQP on transported joint objective",
+                    "solver_objective_gap_max": operator_nu_sweep_solver_gap_max,
+                },
+                "operator_transport_nu_lambda_panel": {
+                    "method": "for nu in nu_grid and lambda in [0.05,0.1,0.2]: transported joint fit",
+                    "rows": operator_nu_lambda_rows,
+                    "residual_l2_span": operator_nu_lambda_resid_span,
+                    "solver_objective_gap_max": operator_nu_lambda_solver_gap_max,
+                    "weighted_envelope_method": "residual_l2 * abs(det(T_frw_to_bianchi(nu)))",
+                    "weighted_residual_l2_max": operator_nu_lambda_weighted_resid_max,
+                    "weighted_residual_l2_span": operator_nu_lambda_weighted_resid_span,
+                    "condition_weighted_envelope_method": "residual_l2 * cond(T_frw_to_bianchi(nu))",
+                    "condition_weighted_residual_l2_max": operator_nu_lambda_cond_weighted_resid_max,
+                    "condition_weighted_residual_l2_span": operator_nu_lambda_cond_weighted_resid_span,
+                },
+                "operator_transport_dual_criterion_frontier": {
+                    "criteria": ["det_weighted", "cond_weighted"],
+                    "rows": dual_with_front,
+                    "pareto_frontier_count": pareto_count,
+                    "stable_rows_count": int(len(dual_stable_rows)),
+                    "unstable_rows_count": int(len(dual_unstable_rows)),
+                    "frontier_continuity_rows": frontier_continuity_rows,
+                    "frontier_membership_flips_total": int(branch_flip_total),
+                },
+                "backend_substitution_gauge_gauge": {
+                    "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+                    "rows": [phase_backend_sub_rows[0]],
+                    "residual_l2_after_substitution": phase_common_residual_backend_sub_l2,
+                    "note": "First explicit backend-like channel substitution inserted without closure claim.",
+                },
+                "backend_substitution_fermion_fermion": {
+                    "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+                    "rows": [phase_backend_sub_rows[1]],
+                    "residual_l2_after_substitution": phase_common_residual_backend_sub_l2,
+                    "note": "Second explicit backend-like channel substitution inserted without closure claim.",
+                },
+                "backend_substitution_scalar_scalar": {
+                    "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+                    "rows": [phase_backend_sub_rows[2]],
+                    "residual_l2_after_substitution": phase_common_residual_backend_sub_l2,
+                    "note": "Third explicit backend-like channel substitution inserted without closure claim.",
+                },
+                "backend_substitution_delta_report": phase_backend_sub_delta_report,
+                "backend_substitution_channel_delta_rows": channel_delta_rows,
+                "backend_substitution_channel_delta_abs_max": channel_delta_abs_max,
+                "backend_substitution_transport_channel_delta_rows": channel_transport_delta_rows,
+                "backend_substitution_transport_channel_delta_abs_max": channel_transport_delta_abs_max,
             },
             "note": "Links task-2 channel phase-space table to a shared basis fit without closure claim.",
         },
@@ -974,10 +1325,10 @@ def main() -> None:
         "reproducibility_probe": {"digest_1": reproducibility_digest_1, "digest_2": reproducibility_digest_2},
         "gatekeeper_checks": gate,
         "false_pass_guard": "No global unitarity closure claimed.",
-        "next_honest_step": "Fit backend DiscM_loop tensor objects with v9 seed and refinement checks before any closure attempt.",
+        "next_honest_step": "Replace channel proxy targets with explicit loop-derived DiscM tensor slices and replay the full combined/cross-background stress panel.",
     }
-    payload["theorem_core_digest_sha256"] = digest({"solution": payload["scipy_numpy_sympy_calibration"]["solution"], "max_fd_gap": max_fd_gap, "max_grid_refine_gap": max_grid_refine_gap, "quad_tol_span": quad_tol_span, "cond_p95": cond_p95, "bootstrap_seed_span_max": bootstrap_seed_span_max, "backend_fit_loss": backend_fit_loss, "backend_fit_loss_lbfgsb": backend_fit_loss_lbfgsb, "backend_fit_loss_gap": backend_fit_loss_gap, "multistart_loss_span": multistart_loss_span, "multichannel_max_solver_gap": channel_solver_gap_max, "multichannel_global_loss_spread": channel_loss_spread, "renorm_solver_gap": coef_b1_gap, "renorm_residual_l2": residual_b1_l2, "po3_objective": float(po3_res.fun), "po3_covariant_proxy_value_d1": po3_covariant_proxy_val, "transport_closure_max": transport_closure_max, "transport_symmetry_max": transport_symmetry_max, "po2_max_delta_bg": max_delta_bg_under_constraints, "selector_ratio_upper_bound": selector_ratio_upper_bound, "selector_entropy_span": selector_entropy_span, "discm_basis_cond": basis_cond, "discm_unc_max": common_basis_unc_max, "discm_resid_max": common_basis_resid_max, "channel_phase_min_global": channel_phase_min_global, "channel_phase_tol_span_max": tol_span_max, "phase_common_cond": phase_common_cond, "phase_common_residual_l2": phase_common_residual_l2, "phase_common_loocv_max": loocv_residual_max, "phase_common_bootstrap_p95": link_bootstrap_resid_p95, "phase_bridge_stability_envelope_max": stability_envelope_max, "phase_cross_channel_coef_spread_l2": cross_channel_coef_spread_l2, "phase_joint_residual_l2": joint_resid_l2, "phase_joint_spread_l2": joint_spread_l2, "phase_joint_solver_gap": joint_solver_gap, "phase_joint_lambda_resid_span": lambda_resid_span, "phase_joint_holdout_resid_max": holdout_joint_resid_max, "phase_joint_multistart_resid_span": joint_ms_resid_span, "phase_joint_perturbation_resid_span": perturb_resid_span, "residual": payload["residual_obstruction"]})
-    payload["theorem_core_digest_recomputed_sha256"] = digest({"solution": payload["scipy_numpy_sympy_calibration"]["solution"], "max_fd_gap": max_fd_gap, "max_grid_refine_gap": max_grid_refine_gap, "quad_tol_span": quad_tol_span, "cond_p95": cond_p95, "bootstrap_seed_span_max": bootstrap_seed_span_max, "backend_fit_loss": backend_fit_loss, "backend_fit_loss_lbfgsb": backend_fit_loss_lbfgsb, "backend_fit_loss_gap": backend_fit_loss_gap, "multistart_loss_span": multistart_loss_span, "multichannel_max_solver_gap": channel_solver_gap_max, "multichannel_global_loss_spread": channel_loss_spread, "renorm_solver_gap": coef_b1_gap, "renorm_residual_l2": residual_b1_l2, "po3_objective": float(po3_res.fun), "po3_covariant_proxy_value_d1": po3_covariant_proxy_val, "transport_closure_max": transport_closure_max, "transport_symmetry_max": transport_symmetry_max, "po2_max_delta_bg": max_delta_bg_under_constraints, "selector_ratio_upper_bound": selector_ratio_upper_bound, "selector_entropy_span": selector_entropy_span, "discm_basis_cond": basis_cond, "discm_unc_max": common_basis_unc_max, "discm_resid_max": common_basis_resid_max, "channel_phase_min_global": channel_phase_min_global, "channel_phase_tol_span_max": tol_span_max, "phase_common_cond": phase_common_cond, "phase_common_residual_l2": phase_common_residual_l2, "phase_common_loocv_max": loocv_residual_max, "phase_common_bootstrap_p95": link_bootstrap_resid_p95, "phase_bridge_stability_envelope_max": stability_envelope_max, "phase_cross_channel_coef_spread_l2": cross_channel_coef_spread_l2, "phase_joint_residual_l2": joint_resid_l2, "phase_joint_spread_l2": joint_spread_l2, "phase_joint_solver_gap": joint_solver_gap, "phase_joint_lambda_resid_span": lambda_resid_span, "phase_joint_holdout_resid_max": holdout_joint_resid_max, "phase_joint_multistart_resid_span": joint_ms_resid_span, "phase_joint_perturbation_resid_span": perturb_resid_span, "residual": payload["residual_obstruction"]})
+    payload["theorem_core_digest_sha256"] = digest({"solution": payload["scipy_numpy_sympy_calibration"]["solution"], "max_fd_gap": max_fd_gap, "max_grid_refine_gap": max_grid_refine_gap, "quad_tol_span": quad_tol_span, "cond_p95": cond_p95, "bootstrap_seed_span_max": bootstrap_seed_span_max, "backend_fit_loss": backend_fit_loss, "backend_fit_loss_lbfgsb": backend_fit_loss_lbfgsb, "backend_fit_loss_gap": backend_fit_loss_gap, "multistart_loss_span": multistart_loss_span, "multichannel_max_solver_gap": channel_solver_gap_max, "multichannel_global_loss_spread": channel_loss_spread, "renorm_solver_gap": coef_b1_gap, "renorm_residual_l2": residual_b1_l2, "po3_objective": float(po3_res.fun), "po3_covariant_proxy_value_d1": po3_covariant_proxy_val, "transport_closure_max": transport_closure_max, "transport_symmetry_max": transport_symmetry_max, "po2_max_delta_bg": max_delta_bg_under_constraints, "selector_ratio_upper_bound": selector_ratio_upper_bound, "selector_entropy_span": selector_entropy_span, "discm_basis_cond": basis_cond, "discm_unc_max": common_basis_unc_max, "discm_resid_max": common_basis_resid_max, "channel_phase_min_global": channel_phase_min_global, "channel_phase_tol_span_max": tol_span_max, "phase_common_cond": phase_common_cond, "phase_common_residual_l2": phase_common_residual_l2, "phase_common_residual_backend_sub_l2": phase_common_residual_backend_sub_l2, "phase_backend_channel_delta_abs_max": channel_delta_abs_max, "phase_backend_transport_channel_delta_abs_max": channel_transport_delta_abs_max, "phase_common_loocv_max": loocv_residual_max, "phase_common_bootstrap_p95": link_bootstrap_resid_p95, "phase_bridge_stability_envelope_max": stability_envelope_max, "phase_cross_channel_coef_spread_l2": cross_channel_coef_spread_l2, "phase_joint_residual_l2": joint_resid_l2, "phase_joint_spread_l2": joint_spread_l2, "phase_joint_solver_gap": joint_solver_gap, "phase_joint_lambda_resid_span": lambda_resid_span, "phase_joint_holdout_resid_max": holdout_joint_resid_max, "phase_joint_multistart_resid_span": joint_ms_resid_span, "phase_joint_perturbation_resid_span": perturb_resid_span, "phase_joint_stress_envelope": joint_worst_case_residual_envelope, "phase_joint_cross_background_envelope_span": cross_background_envelope_span, "phase_joint_operator_transport_resid_span": operator_resid_span, "phase_joint_operator_transport_nu_sweep_resid_span": operator_nu_sweep_resid_span, "phase_joint_operator_transport_nu_sweep_solver_gap_max": operator_nu_sweep_solver_gap_max, "phase_joint_operator_transport_nu_lambda_resid_span": operator_nu_lambda_resid_span, "phase_joint_operator_transport_nu_lambda_solver_gap_max": operator_nu_lambda_solver_gap_max, "phase_joint_operator_transport_nu_lambda_weighted_resid_max": operator_nu_lambda_weighted_resid_max, "phase_joint_operator_transport_nu_lambda_weighted_resid_span": operator_nu_lambda_weighted_resid_span, "phase_joint_operator_transport_nu_lambda_condition_weighted_resid_max": operator_nu_lambda_cond_weighted_resid_max, "phase_joint_operator_transport_nu_lambda_condition_weighted_resid_span": operator_nu_lambda_cond_weighted_resid_span, "phase_joint_operator_transport_dual_pareto_count": pareto_count, "phase_joint_operator_transport_dual_branch_flips_total": int(branch_flip_total), "residual": payload["residual_obstruction"]})
+    payload["theorem_core_digest_recomputed_sha256"] = digest({"solution": payload["scipy_numpy_sympy_calibration"]["solution"], "max_fd_gap": max_fd_gap, "max_grid_refine_gap": max_grid_refine_gap, "quad_tol_span": quad_tol_span, "cond_p95": cond_p95, "bootstrap_seed_span_max": bootstrap_seed_span_max, "backend_fit_loss": backend_fit_loss, "backend_fit_loss_lbfgsb": backend_fit_loss_lbfgsb, "backend_fit_loss_gap": backend_fit_loss_gap, "multistart_loss_span": multistart_loss_span, "multichannel_max_solver_gap": channel_solver_gap_max, "multichannel_global_loss_spread": channel_loss_spread, "renorm_solver_gap": coef_b1_gap, "renorm_residual_l2": residual_b1_l2, "po3_objective": float(po3_res.fun), "po3_covariant_proxy_value_d1": po3_covariant_proxy_val, "transport_closure_max": transport_closure_max, "transport_symmetry_max": transport_symmetry_max, "po2_max_delta_bg": max_delta_bg_under_constraints, "selector_ratio_upper_bound": selector_ratio_upper_bound, "selector_entropy_span": selector_entropy_span, "discm_basis_cond": basis_cond, "discm_unc_max": common_basis_unc_max, "discm_resid_max": common_basis_resid_max, "channel_phase_min_global": channel_phase_min_global, "channel_phase_tol_span_max": tol_span_max, "phase_common_cond": phase_common_cond, "phase_common_residual_l2": phase_common_residual_l2, "phase_common_residual_backend_sub_l2": phase_common_residual_backend_sub_l2, "phase_backend_channel_delta_abs_max": channel_delta_abs_max, "phase_backend_transport_channel_delta_abs_max": channel_transport_delta_abs_max, "phase_common_loocv_max": loocv_residual_max, "phase_common_bootstrap_p95": link_bootstrap_resid_p95, "phase_bridge_stability_envelope_max": stability_envelope_max, "phase_cross_channel_coef_spread_l2": cross_channel_coef_spread_l2, "phase_joint_residual_l2": joint_resid_l2, "phase_joint_spread_l2": joint_spread_l2, "phase_joint_solver_gap": joint_solver_gap, "phase_joint_lambda_resid_span": lambda_resid_span, "phase_joint_holdout_resid_max": holdout_joint_resid_max, "phase_joint_multistart_resid_span": joint_ms_resid_span, "phase_joint_perturbation_resid_span": perturb_resid_span, "phase_joint_stress_envelope": joint_worst_case_residual_envelope, "phase_joint_cross_background_envelope_span": cross_background_envelope_span, "phase_joint_operator_transport_resid_span": operator_resid_span, "phase_joint_operator_transport_nu_sweep_resid_span": operator_nu_sweep_resid_span, "phase_joint_operator_transport_nu_sweep_solver_gap_max": operator_nu_sweep_solver_gap_max, "phase_joint_operator_transport_nu_lambda_resid_span": operator_nu_lambda_resid_span, "phase_joint_operator_transport_nu_lambda_solver_gap_max": operator_nu_lambda_solver_gap_max, "phase_joint_operator_transport_nu_lambda_weighted_resid_max": operator_nu_lambda_weighted_resid_max, "phase_joint_operator_transport_nu_lambda_weighted_resid_span": operator_nu_lambda_weighted_resid_span, "phase_joint_operator_transport_nu_lambda_condition_weighted_resid_max": operator_nu_lambda_cond_weighted_resid_max, "phase_joint_operator_transport_nu_lambda_condition_weighted_resid_span": operator_nu_lambda_cond_weighted_resid_span, "phase_joint_operator_transport_dual_pareto_count": pareto_count, "phase_joint_operator_transport_dual_branch_flips_total": int(branch_flip_total), "residual": payload["residual_obstruction"]})
     payload["gatekeeper_checks"]["theorem_digest_self_consistent"] = payload["theorem_core_digest_sha256"] == payload["theorem_core_digest_recomputed_sha256"]
     payload["gatekeeper_checks"]["reproducibility_digest_self_consistent"] = reproducibility_digest_1 == reproducibility_digest_2
 

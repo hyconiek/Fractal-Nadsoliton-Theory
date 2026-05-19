@@ -2,6 +2,76 @@
 
 Status: `OPEN_OBSTRUCTION_WITH_TRACE`.
 
+v54 adds transport-conditioned channel delta map (`nu` x channel), correlating
+backend-substitution row deltas with `det(T)` and `cond(T)` to isolate which
+channels degrade or improve under transport stress.
+
+v53 adds channel-level backend-substitution delta breakdown (`ΔL2` per channel)
+for `gauge_gauge`, `fermion_fermion`, and `scalar_scalar`, allowing direct
+comparison of backend-substituted vs baseline row residual behavior.
+
+v52 adds a backend-substitution delta report comparing baseline vs substituted
+phase/common-basis residuals (`L2`, `L∞`) after 3-channel backend-like
+substitution, still under strict OPEN non-closure discipline.
+
+v51 adds third explicit backend-like channel substitution (`scalar_scalar`),
+so the phase common-basis target matrix now has explicit substitution probes
+for all 3 channels under strict OPEN status.
+
+v50 adds second explicit backend-like channel substitution (`fermion_fermion`)
+alongside `gauge_gauge` in the phase common-basis target matrix, exporting
+post-substitution residual diagnostics under strict OPEN status.
+
+v49 adds first explicit gauge-gauge backend-like channel substitution into the
+phase common-basis target matrix and exports post-substitution residual
+diagnostics under strict OPEN (no closure claim).
+
+v48 adds dual-frontier continuity diagnostics along `nu` (for each fixed
+`lambda_spread`), exporting frontier-membership flip counts to detect local
+branch-instability artifacts under strict OPEN discipline.
+
+v47 adds a dual-criterion Pareto frontier map for transported `nu`-`lambda`
+rows (`det`-weighted vs `cond`-weighted residual criteria), exporting
+frontier/stable/unstable counts for strict diagnostic triage under OPEN status.
+
+v46 adds a condition-weighted envelope on the nested `nu`-`lambda` transport
+panel (`residual_l2 * cond(T_frw->b)`), complementing determinant weighting by
+penalizing numerically ill-conditioned transport branches under OPEN status.
+
+v45 adds a determinant-weighted envelope on the nested `nu`-`lambda` transport
+panel (`residual_l2 * |det(T_frw->b)|`) to prioritize physically stronger
+background transport branches while preserving explicit OPEN status.
+
+v44 adds a nested `nu`-`lambda_spread` operator transport panel:
+for each transported `nu` branch and each lambda in `{0.05,0.1,0.2}`, the
+joint fit is solved with solver crosscheck and exported with bounded residual
+and objective-gap envelopes.
+
+v43 adds per-`nu` solver crosscheck inside the operator transport replay:
+for each transported `nu` branch, the joint objective is solved with both
+`L-BFGS-B` and `SLSQP`, exporting bounded maximum objective gap.
+
+v42 adds `nu`-sweep operator transport replay:
+for each exported `nu` in the FRW->Bianchi transport grid, the phase target
+matrix is transported and re-fitted, exporting residual rows and bounded
+`residual_l2_span` under explicit OPEN status.
+
+v41 adds an operator-level cross-background replay for the joint bridge fit:
+the phase target matrix is transported with the exported FRW->Bianchi map
+at `nu_mean`, and residual spans are checked explicitly under OPEN status.
+
+v40 refines the cross-background stress panel by deriving the Bianchi-I scale
+from the explicit FRW->Bianchi transport proxy (`mean det` over the exported
+`nu` grid), replacing the fixed ad-hoc scale and preserving explicit OPEN status.
+
+v39 adds a cross-background stress panel (FRW/Bianchi proxy split) for the
+joint coupled bridge fit, exporting per-background worst-case residual envelopes
+and a bounded cross-background envelope span under explicit OPEN status.
+
+v38 adds a combined stress panel for the joint coupled bridge-fit precursor
+(solver crosscheck + lambda sweep + holdout rotation + multistart + perturbation),
+exporting a bounded `worst_case_residual_envelope` under explicit OPEN status.
+
 v37 adds joint-fit perturbation robustness diagnostics (feature-matrix jitter),
 exporting bounded perturbation residual span.
 
