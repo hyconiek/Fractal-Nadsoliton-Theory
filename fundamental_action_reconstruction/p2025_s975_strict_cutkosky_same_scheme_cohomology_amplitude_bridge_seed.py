@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""P2025 S975 strict same-scheme CohomologyAmplitudeBridge seed witness (v54).
+"""P2025 S975 strict same-scheme CohomologyAmplitudeBridge seed witness (v67).
 
 Honest refinement: keep OPEN obstruction while adding phase-space grid
 refinement convergence checks for integral and slope diagnostics.
@@ -688,6 +688,205 @@ def main() -> None:
                 "backend_sub_row_residual_l2": r_sub,
                 "delta_row_residual_l2_backend_minus_baseline": dlt,
             })
+    # ranked channel-priority panel: median |ΔL2| and cond(T)-weighted median |ΔL2|
+    # across nu-grid, used to prioritize next full backend loop-object replacement.
+    channel_priority_rows = []
+    for ch in channel_names:
+        rows_ch = [r for r in channel_transport_delta_rows if r["channel"] == ch]
+        abs_delta = np.array([abs(r["delta_row_residual_l2_backend_minus_baseline"]) for r in rows_ch], dtype=float)
+        cond_weighted_abs_delta = np.array([abs(r["delta_row_residual_l2_backend_minus_baseline"]) * r["cond_transport"] for r in rows_ch], dtype=float)
+        med_abs_delta = float(np.median(abs_delta)) if abs_delta.size else float("inf")
+        med_cond_weighted_abs_delta = float(np.median(cond_weighted_abs_delta)) if cond_weighted_abs_delta.size else float("inf")
+        channel_priority_rows.append({
+            "channel": ch,
+            "median_abs_delta_l2": med_abs_delta,
+            "median_cond_weighted_abs_delta_l2": med_cond_weighted_abs_delta,
+            "nu_rows": int(len(rows_ch)),
+        })
+    channel_priority_rows = sorted(channel_priority_rows, key=lambda r: r["median_cond_weighted_abs_delta_l2"])
+    channel_priority_best = channel_priority_rows[0]["channel"] if channel_priority_rows else "none"
+    channel_priority_cond_weighted_median_span = (
+        float(max(r["median_cond_weighted_abs_delta_l2"] for r in channel_priority_rows) - min(r["median_cond_weighted_abs_delta_l2"] for r in channel_priority_rows))
+        if channel_priority_rows else float("inf")
+    )
+    # rank-robustness panel: check whether the same priority winner remains
+    # under leave-one-nu-out and cond-exponent variants.
+    def _rank_with_rows(rows: list[dict], cond_pow: float) -> list[str]:
+        scores = {}
+        for ch in channel_names:
+            ch_rows = [r for r in rows if r["channel"] == ch]
+            vals = np.array([abs(r["delta_row_residual_l2_backend_minus_baseline"]) * (r["cond_transport"] ** cond_pow) for r in ch_rows], dtype=float)
+            scores[ch] = float(np.median(vals)) if vals.size else float("inf")
+        return [k for k, _ in sorted(scores.items(), key=lambda kv: kv[1])]
+
+    rank_robustness_rows = []
+    winner_set = set()
+    # leave-one-nu-out
+    for nu_drop in nu_grid:
+        rows_sub = [r for r in channel_transport_delta_rows if float(r["nu"]) != float(nu_drop)]
+        rank = _rank_with_rows(rows_sub, cond_pow=1.0)
+        winner = rank[0] if rank else "none"
+        winner_set.add(winner)
+        rank_robustness_rows.append({"mode": "leave_one_nu_out", "nu_dropped": float(nu_drop), "cond_power": 1.0, "ranked_channels": rank, "winner": winner})
+    # cond exponent sensitivity
+    for pw in [0.75, 1.0, 1.25]:
+        rank = _rank_with_rows(channel_transport_delta_rows, cond_pow=float(pw))
+        winner = rank[0] if rank else "none"
+        winner_set.add(winner)
+        rank_robustness_rows.append({"mode": "cond_power_sensitivity", "nu_dropped": None, "cond_power": float(pw), "ranked_channels": rank, "winner": winner})
+    channel_priority_winner_count = int(len(winner_set))
+    channel_priority_winner_stability = float(1.0 / channel_priority_winner_count) if channel_priority_winner_count > 0 else 0.0
+    # bootstrap winner-frequency over transport rows (task-2/task-7 diagnostic strengthening)
+    rng_prio = np.random.default_rng(20260524)
+    boot_rows = []
+    winner_freq = {ch: 0 for ch in channel_names}
+    n_boot = 128
+    for bid in range(n_boot):
+        sample_idx = rng_prio.integers(0, len(channel_transport_delta_rows), size=len(channel_transport_delta_rows))
+        rows_b = [channel_transport_delta_rows[int(i)] for i in sample_idx]
+        rank_b = _rank_with_rows(rows_b, cond_pow=1.0)
+        winner_b = rank_b[0] if rank_b else "none"
+        if winner_b in winner_freq:
+            winner_freq[winner_b] += 1
+        if bid < 8:
+            boot_rows.append({"bootstrap_id": int(bid), "winner": winner_b, "ranked_channels": rank_b, "sample_idx_preview": sample_idx[:8].astype(int).tolist()})
+    winner_freq_rows = [{"channel": ch, "winner_frequency": float(winner_freq[ch] / n_boot)} for ch in channel_names]
+    winner_freq_max = float(max(r["winner_frequency"] for r in winner_freq_rows))
+    boot_size_rows = []
+    for nbs in [32, 64, 128]:
+        wcnt = {ch: 0 for ch in channel_names}
+        for _ in range(nbs):
+            sample_idx = rng_prio.integers(0, len(channel_transport_delta_rows), size=len(channel_transport_delta_rows))
+            rows_b = [channel_transport_delta_rows[int(i)] for i in sample_idx]
+            rank_b = _rank_with_rows(rows_b, cond_pow=1.0)
+            winner_b = rank_b[0] if rank_b else "none"
+            if winner_b in wcnt:
+                wcnt[winner_b] += 1
+        wfmax = float(max(float(wcnt[ch] / nbs) for ch in channel_names))
+        boot_size_rows.append({"bootstrap_count": int(nbs), "winner_frequency_max": wfmax})
+    boot_size_freq_span = float(max(r["winner_frequency_max"] for r in boot_size_rows) - min(r["winner_frequency_max"] for r in boot_size_rows))
+    boot_size_freq_monotone_guard = bool(all(r["winner_frequency_max"] >= 0.0 for r in boot_size_rows))
+    boot_size_loo_rows = []
+    for i in range(len(boot_size_rows)):
+        subset = [r["winner_frequency_max"] for j, r in enumerate(boot_size_rows) if j != i]
+        span_i = float(max(subset) - min(subset)) if subset else float("inf")
+        boot_size_loo_rows.append({"left_out_bootstrap_count": int(boot_size_rows[i]["bootstrap_count"]), "winner_frequency_max_span": span_i})
+    boot_size_loo_span_max = float(max(r["winner_frequency_max_span"] for r in boot_size_loo_rows)) if boot_size_loo_rows else float("inf")
+    # bootstrap-size scaling trend (winner-frequency-max vs log2 bootstrap_count)
+    x_bs = np.array([np.log2(r["bootstrap_count"]) for r in boot_size_rows], dtype=float)
+    y_bs = np.array([r["winner_frequency_max"] for r in boot_size_rows], dtype=float)
+    A_bs = np.vstack([x_bs, np.ones_like(x_bs)]).T
+    slope_bs, intercept_bs = np.linalg.lstsq(A_bs, y_bs, rcond=None)[0]
+    y_hat_bs = A_bs @ np.array([slope_bs, intercept_bs], dtype=float)
+    ss_res_bs = float(np.sum((y_bs - y_hat_bs) ** 2))
+    ss_tot_bs = float(np.sum((y_bs - np.mean(y_bs)) ** 2))
+    r2_bs = float(1.0 - (ss_res_bs / ss_tot_bs)) if ss_tot_bs > 0.0 else 1.0
+    A2_bs = np.vstack([x_bs**2, x_bs, np.ones_like(x_bs)]).T
+    q2_bs, q1_bs, q0_bs = np.linalg.lstsq(A2_bs, y_bs, rcond=None)[0]
+    y_hat2_bs = A2_bs @ np.array([q2_bs, q1_bs, q0_bs], dtype=float)
+    rss1 = max(float(np.sum((y_bs - y_hat_bs) ** 2)), 1e-15)
+    rss2 = max(float(np.sum((y_bs - y_hat2_bs) ** 2)), 1e-15)
+    n_obs = float(len(y_bs))
+    aic_linear = float(2 * 2 + n_obs * np.log(rss1 / n_obs))
+    aic_quadratic = float(2 * 3 + n_obs * np.log(rss2 / n_obs))
+    aic_delta_quad_minus_linear = float(aic_quadratic - aic_linear)
+    x_extra = np.array([8.0, 9.0], dtype=float)  # log2(256), log2(512)
+    y1_extra = slope_bs * x_extra + intercept_bs
+    y2_extra = q2_bs * (x_extra**2) + q1_bs * x_extra + q0_bs
+    extrap_rows = [{
+        "bootstrap_count": int(2**x),
+        "linear_prediction": float(y1),
+        "quadratic_prediction": float(y2),
+        "prediction_gap_abs": float(abs(y2 - y1)),
+    } for x, y1, y2 in zip(x_extra.tolist(), y1_extra.tolist(), y2_extra.tolist())]
+    extrap_gap_max = float(max(r["prediction_gap_abs"] for r in extrap_rows)) if extrap_rows else float("inf")
+    # seed reproducibility panel for bootstrap winner-frequency max
+    seed_rows = []
+    for s_boot in [20260524, 20260525, 20260526]:
+        rng_seed = np.random.default_rng(s_boot)
+        wcnt = {ch: 0 for ch in channel_names}
+        for _ in range(n_boot):
+            sample_idx = rng_seed.integers(0, len(channel_transport_delta_rows), size=len(channel_transport_delta_rows))
+            rows_b = [channel_transport_delta_rows[int(i)] for i in sample_idx]
+            rank_b = _rank_with_rows(rows_b, cond_pow=1.0)
+            winner_b = rank_b[0] if rank_b else "none"
+            if winner_b in wcnt:
+                wcnt[winner_b] += 1
+        wfmax_seed = float(max(float(wcnt[ch] / n_boot) for ch in channel_names))
+        seed_rows.append({"bootstrap_seed": int(s_boot), "winner_frequency_max": wfmax_seed})
+    seed_span_max = float(max(r["winner_frequency_max"] for r in seed_rows) - min(r["winner_frequency_max"] for r in seed_rows)) if seed_rows else float("inf")
+    # bootstrap-size stability sweep (N=32/64/128) for winner frequency max
+    boot_size_rows = []
+    for nbs in [32, 64, 128]:
+        wcnt = {ch: 0 for ch in channel_names}
+        for _ in range(nbs):
+            sample_idx = rng_prio.integers(0, len(channel_transport_delta_rows), size=len(channel_transport_delta_rows))
+            rows_b = [channel_transport_delta_rows[int(i)] for i in sample_idx]
+            rank_b = _rank_with_rows(rows_b, cond_pow=1.0)
+            winner_b = rank_b[0] if rank_b else "none"
+            if winner_b in wcnt:
+                wcnt[winner_b] += 1
+        wfmax = float(max(float(wcnt[ch] / nbs) for ch in channel_names))
+        boot_size_rows.append({"bootstrap_count": int(nbs), "winner_frequency_max": wfmax})
+    boot_size_freq_span = float(max(r["winner_frequency_max"] for r in boot_size_rows) - min(r["winner_frequency_max"] for r in boot_size_rows))
+    boot_size_freq_monotone_guard = bool(all(r["winner_frequency_max"] >= 0.0 for r in boot_size_rows))
+    wf_sorted = sorted(winner_freq_rows, key=lambda r: r["winner_frequency"], reverse=True)
+    winner_freq_top2_margin = float(wf_sorted[0]["winner_frequency"] - wf_sorted[1]["winner_frequency"]) if len(wf_sorted) >= 2 else 0.0
+    # Wilson interval for winner concentration + normalized entropy diagnostic.
+    z = 1.959963984540054
+    wf = winner_freq_max
+    denom = 1.0 + (z**2) / n_boot
+    center = (wf + (z**2) / (2.0 * n_boot)) / denom
+    half = (z / denom) * np.sqrt((wf * (1.0 - wf) / n_boot) + ((z**2) / (4.0 * (n_boot**2))))
+    winner_freq_max_wilson_lb = float(max(0.0, center - half))
+    winner_freq_max_wilson_ub = float(min(1.0, center + half))
+    p_vec = np.array([r["winner_frequency"] for r in winner_freq_rows], dtype=float)
+    p_safe = np.clip(p_vec, 1e-15, 1.0)
+    winner_freq_entropy_norm = float((-np.sum(p_safe * np.log(p_safe))) / np.log(len(channel_names)))
+    # Dirichlet posterior stability for top winner frequency (Bayesian uncertainty proxy)
+    # posterior alpha_i = count_i + 1 (uniform prior), sampled with numpy RNG.
+    alpha_post = np.array([winner_freq[ch] + 1.0 for ch in channel_names], dtype=float)
+    post_samples = rng_prio.dirichlet(alpha_post, size=2048)
+    best_idx_post = int(np.argmax(np.array([1.0 if ch == channel_priority_best else 0.0 for ch in channel_names], dtype=float)))
+    p_best_q05 = float(np.quantile(post_samples[:, best_idx_post], 0.05))
+    p_best_q50 = float(np.quantile(post_samples[:, best_idx_post], 0.50))
+    p_best_q95 = float(np.quantile(post_samples[:, best_idx_post], 0.95))
+    p_best_gt_050 = float(np.mean(post_samples[:, best_idx_post] > 0.50))
+    # channel-first simulation panel: only the top-ranked channel is substituted,
+    # giving a controlled preview before any multi-channel full backend replacement.
+    channel_to_idx = {ch: i for i, ch in enumerate(channel_names)}
+    y_phase_channel_first = y_phase.copy()
+    if channel_priority_best in channel_to_idx:
+        best_idx = channel_to_idx[channel_priority_best]
+        y_phase_channel_first[best_idx, :] = y_phase_backend_sub[best_idx, :]
+    phase_common_coef_channel_first, *_ = la.lstsq(x_phase, y_phase_channel_first)
+    y_phase_pred_channel_first = x_phase @ phase_common_coef_channel_first
+    phase_common_residual_channel_first = y_phase_pred_channel_first - y_phase_channel_first
+    phase_common_residual_channel_first_l2 = float(np.linalg.norm(phase_common_residual_channel_first, ord=2))
+    phase_common_residual_channel_first_linf = float(np.linalg.norm(phase_common_residual_channel_first, ord=np.inf))
+    channel_first_transport_rows = []
+    channel_first_cond_weighted_residual_rows = []
+    for nu in nu_grid:
+        t_fb_nu = np.array(t_frw_to_bianchi_sym.subs({nu_sym: nu})).astype(float)
+        y_nu = y_phase_channel_first @ t_fb_nu.T
+        c_nu, *_ = la.lstsq(x_phase, y_nu)
+        pred_nu = x_phase @ c_nu
+        r_nu_l2 = float(np.linalg.norm(pred_nu - y_nu, ord=2))
+        cond_nu = float(np.linalg.cond(t_fb_nu))
+        channel_first_transport_rows.append({"nu": float(nu), "residual_l2": r_nu_l2, "cond_transport": cond_nu})
+        channel_first_cond_weighted_residual_rows.append(r_nu_l2 * cond_nu)
+    channel_first_cond_weighted_residual_median = float(np.median(np.array(channel_first_cond_weighted_residual_rows, dtype=float)))
+    channel_first_simulation_panel = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "selected_channel": channel_priority_best,
+        "residual_l2_channel_first": phase_common_residual_channel_first_l2,
+        "residual_linf_channel_first": phase_common_residual_channel_first_linf,
+        "delta_residual_l2_channel_first_minus_baseline": float(phase_common_residual_channel_first_l2 - phase_common_residual_l2),
+        "delta_residual_l2_channel_first_minus_backend_3channel": float(phase_common_residual_channel_first_l2 - phase_common_residual_backend_sub_l2),
+        "transport_rows": channel_first_transport_rows,
+        "cond_weighted_residual_l2_median": channel_first_cond_weighted_residual_median,
+        "note": "Single-channel substitution simulation only; no closure claim.",
+    }
     phase_common_cond = float(np.linalg.cond(x_phase))
     # leave-one-channel-out stability check for phase/common-basis link
     loocv_rows = []
@@ -1087,12 +1286,42 @@ def main() -> None:
         "phase_backend_substitution_delta_report_finite": bool(np.isfinite(phase_backend_sub_delta_report["delta_residual_l2_backend_minus_baseline"])) and bool(np.isfinite(phase_backend_sub_delta_report["delta_residual_linf_backend_minus_baseline"])),
         "phase_backend_substitution_channel_delta_bounded": channel_delta_abs_max < 1.0,
         "phase_backend_substitution_transport_channel_delta_bounded": channel_transport_delta_abs_max < 1.5,
+        "phase_backend_substitution_channel_priority_panel_nonempty": len(channel_priority_rows) == len(channel_names),
+        "phase_backend_substitution_channel_priority_span_bounded": channel_priority_cond_weighted_median_span < 2.0,
+        "phase_backend_substitution_channel_priority_rank_robustness_rows_nonempty": len(rank_robustness_rows) == (len(nu_grid) + 3),
+        "phase_backend_substitution_channel_priority_winner_set_bounded": channel_priority_winner_count <= 2,
+        "phase_backend_substitution_channel_priority_bootstrap_rows_nonempty": len(boot_rows) == 8,
+        "phase_backend_substitution_channel_priority_bootstrap_winner_freq_max_bounded": winner_freq_max >= 0.34,
+        "phase_backend_substitution_channel_priority_bootstrap_winner_freq_wilson_lb_bounded": winner_freq_max_wilson_lb >= 0.25,
+        "phase_backend_substitution_channel_priority_bootstrap_entropy_norm_bounded": winner_freq_entropy_norm <= 1.0,
+        "phase_backend_substitution_channel_priority_bootstrap_top2_margin_bounded": winner_freq_top2_margin >= 0.0,
+        "phase_backend_substitution_channel_priority_dirichlet_p_best_gt_050_bounded": p_best_gt_050 >= 0.30,
+        "phase_backend_substitution_channel_priority_dirichlet_q05_bounded": p_best_q05 >= 0.10,
+        "phase_backend_substitution_channel_priority_bootstrap_size_rows_nonempty": len(boot_size_rows) == 3,
+        "phase_backend_substitution_channel_priority_bootstrap_size_span_bounded": boot_size_freq_span < 0.35,
+        "phase_backend_substitution_channel_priority_bootstrap_size_monotone_guard": boot_size_freq_monotone_guard,
+        "phase_backend_substitution_channel_priority_bootstrap_size_loo_rows_nonempty": len(boot_size_loo_rows) == len(boot_size_rows),
+        "phase_backend_substitution_channel_priority_bootstrap_size_loo_span_bounded": boot_size_loo_span_max < 0.35,
+        "phase_backend_substitution_channel_priority_bootstrap_size_slope_finite": bool(np.isfinite(slope_bs)),
+        "phase_backend_substitution_channel_priority_bootstrap_size_r2_bounded": r2_bs >= 0.0 and r2_bs <= 1.0,
+        "phase_backend_substitution_channel_priority_bootstrap_size_curvature_finite": bool(np.isfinite(q2_bs)),
+        "phase_backend_substitution_channel_priority_bootstrap_size_aic_delta_finite": bool(np.isfinite(aic_delta_quad_minus_linear)),
+        "phase_backend_substitution_channel_priority_bootstrap_size_extrap_rows_nonempty": len(extrap_rows) == 2,
+        "phase_backend_substitution_channel_priority_bootstrap_size_extrap_gap_bounded": extrap_gap_max < 0.25,
+        "phase_backend_substitution_channel_priority_bootstrap_seed_rows_nonempty": len(seed_rows) == 3,
+        "phase_backend_substitution_channel_priority_bootstrap_seed_span_bounded": seed_span_max < 0.25,
+        "phase_backend_substitution_channel_priority_bootstrap_size_rows_nonempty": len(boot_size_rows) == 3,
+        "phase_backend_substitution_channel_priority_bootstrap_size_span_bounded": boot_size_freq_span < 0.35,
+        "phase_backend_substitution_channel_priority_bootstrap_size_monotone_guard": boot_size_freq_monotone_guard,
+        "phase_backend_substitution_channel_first_selected_valid": channel_priority_best in channel_to_idx,
+        "phase_backend_substitution_channel_first_transport_rows_nonempty": len(channel_first_transport_rows) == len(nu_grid),
+        "phase_backend_substitution_channel_first_cond_weighted_median_bounded": channel_first_cond_weighted_residual_median < 2.0,
         "upstream_manifest_same_scheme_locked": upstream_manifest.get("same_scheme_tag") == "STRICT_P2020_PHASESPACE_SCHEME_V1",
         "python_major_lock": int(platform.python_version_tuple()[0]) == 3,
     }
 
     payload = {
-        "schema_version": "p2025_s975_v54",
+        "schema_version": "p2025_s975_v67",
         "produced_by": Path(__file__).name,
         "timestamp_utc": TS,
         "status": "OPEN_OBSTRUCTION_WITH_TRACE",
@@ -1306,6 +1535,50 @@ def main() -> None:
                 "backend_substitution_channel_delta_abs_max": channel_delta_abs_max,
                 "backend_substitution_transport_channel_delta_rows": channel_transport_delta_rows,
                 "backend_substitution_transport_channel_delta_abs_max": channel_transport_delta_abs_max,
+                "backend_substitution_channel_priority_rows": channel_priority_rows,
+                "backend_substitution_channel_priority_best": channel_priority_best,
+                "backend_substitution_channel_priority_cond_weighted_median_span": channel_priority_cond_weighted_median_span,
+                "backend_substitution_channel_priority_rank_robustness_rows": rank_robustness_rows,
+                "backend_substitution_channel_priority_winner_count": channel_priority_winner_count,
+                "backend_substitution_channel_priority_winner_stability": channel_priority_winner_stability,
+                "backend_substitution_channel_priority_bootstrap_rows_preview": boot_rows,
+                "backend_substitution_channel_priority_bootstrap_winner_frequency_rows": winner_freq_rows,
+                "backend_substitution_channel_priority_bootstrap_winner_frequency_max": winner_freq_max,
+                "backend_substitution_channel_priority_bootstrap_winner_frequency_max_wilson_interval95": {
+                    "lower": winner_freq_max_wilson_lb,
+                    "upper": winner_freq_max_wilson_ub,
+                },
+                "backend_substitution_channel_priority_bootstrap_winner_frequency_entropy_norm": winner_freq_entropy_norm,
+                "backend_substitution_channel_priority_bootstrap_winner_frequency_top2_margin": winner_freq_top2_margin,
+                "backend_substitution_channel_priority_dirichlet_posterior_p_best_gt_050": p_best_gt_050,
+                "backend_substitution_channel_priority_dirichlet_posterior_best_quantiles": {
+                    "q05": p_best_q05,
+                    "q50": p_best_q50,
+                    "q95": p_best_q95,
+                },
+                "backend_substitution_channel_priority_bootstrap_size_rows": boot_size_rows,
+                "backend_substitution_channel_priority_bootstrap_size_winner_frequency_max_span": boot_size_freq_span,
+                "backend_substitution_channel_priority_bootstrap_size_loo_rows": boot_size_loo_rows,
+                "backend_substitution_channel_priority_bootstrap_size_loo_span_max": boot_size_loo_span_max,
+                "backend_substitution_channel_priority_bootstrap_size_trend": {
+                    "x_axis": "log2(bootstrap_count)",
+                    "slope": float(slope_bs),
+                    "intercept": float(intercept_bs),
+                    "r2": r2_bs,
+                },
+                "backend_substitution_channel_priority_bootstrap_size_curvature": {
+                    "quadratic_coef": float(q2_bs),
+                    "linear_coef": float(q1_bs),
+                    "constant_coef": float(q0_bs),
+                    "aic_linear": aic_linear,
+                    "aic_quadratic": aic_quadratic,
+                    "aic_delta_quadratic_minus_linear": aic_delta_quad_minus_linear,
+                },
+                "backend_substitution_channel_priority_bootstrap_size_extrapolation_rows": extrap_rows,
+                "backend_substitution_channel_priority_bootstrap_size_extrapolation_gap_max": extrap_gap_max,
+                "backend_substitution_channel_priority_bootstrap_seed_rows": seed_rows,
+                "backend_substitution_channel_priority_bootstrap_seed_span_max": seed_span_max,
+                "backend_substitution_channel_first_simulation_panel": channel_first_simulation_panel,
             },
             "note": "Links task-2 channel phase-space table to a shared basis fit without closure claim.",
         },
@@ -1325,10 +1598,10 @@ def main() -> None:
         "reproducibility_probe": {"digest_1": reproducibility_digest_1, "digest_2": reproducibility_digest_2},
         "gatekeeper_checks": gate,
         "false_pass_guard": "No global unitarity closure claimed.",
-        "next_honest_step": "Replace channel proxy targets with explicit loop-derived DiscM tensor slices and replay the full combined/cross-background stress panel.",
+        "next_honest_step": "Replace only the statistically most stable priority channel (bootstrap+Dirichlet backed) with explicit loop-derived DiscM tensor slices, then replay full combined/cross-background stress panel before any 2nd-channel substitution.",
     }
-    payload["theorem_core_digest_sha256"] = digest({"solution": payload["scipy_numpy_sympy_calibration"]["solution"], "max_fd_gap": max_fd_gap, "max_grid_refine_gap": max_grid_refine_gap, "quad_tol_span": quad_tol_span, "cond_p95": cond_p95, "bootstrap_seed_span_max": bootstrap_seed_span_max, "backend_fit_loss": backend_fit_loss, "backend_fit_loss_lbfgsb": backend_fit_loss_lbfgsb, "backend_fit_loss_gap": backend_fit_loss_gap, "multistart_loss_span": multistart_loss_span, "multichannel_max_solver_gap": channel_solver_gap_max, "multichannel_global_loss_spread": channel_loss_spread, "renorm_solver_gap": coef_b1_gap, "renorm_residual_l2": residual_b1_l2, "po3_objective": float(po3_res.fun), "po3_covariant_proxy_value_d1": po3_covariant_proxy_val, "transport_closure_max": transport_closure_max, "transport_symmetry_max": transport_symmetry_max, "po2_max_delta_bg": max_delta_bg_under_constraints, "selector_ratio_upper_bound": selector_ratio_upper_bound, "selector_entropy_span": selector_entropy_span, "discm_basis_cond": basis_cond, "discm_unc_max": common_basis_unc_max, "discm_resid_max": common_basis_resid_max, "channel_phase_min_global": channel_phase_min_global, "channel_phase_tol_span_max": tol_span_max, "phase_common_cond": phase_common_cond, "phase_common_residual_l2": phase_common_residual_l2, "phase_common_residual_backend_sub_l2": phase_common_residual_backend_sub_l2, "phase_backend_channel_delta_abs_max": channel_delta_abs_max, "phase_backend_transport_channel_delta_abs_max": channel_transport_delta_abs_max, "phase_common_loocv_max": loocv_residual_max, "phase_common_bootstrap_p95": link_bootstrap_resid_p95, "phase_bridge_stability_envelope_max": stability_envelope_max, "phase_cross_channel_coef_spread_l2": cross_channel_coef_spread_l2, "phase_joint_residual_l2": joint_resid_l2, "phase_joint_spread_l2": joint_spread_l2, "phase_joint_solver_gap": joint_solver_gap, "phase_joint_lambda_resid_span": lambda_resid_span, "phase_joint_holdout_resid_max": holdout_joint_resid_max, "phase_joint_multistart_resid_span": joint_ms_resid_span, "phase_joint_perturbation_resid_span": perturb_resid_span, "phase_joint_stress_envelope": joint_worst_case_residual_envelope, "phase_joint_cross_background_envelope_span": cross_background_envelope_span, "phase_joint_operator_transport_resid_span": operator_resid_span, "phase_joint_operator_transport_nu_sweep_resid_span": operator_nu_sweep_resid_span, "phase_joint_operator_transport_nu_sweep_solver_gap_max": operator_nu_sweep_solver_gap_max, "phase_joint_operator_transport_nu_lambda_resid_span": operator_nu_lambda_resid_span, "phase_joint_operator_transport_nu_lambda_solver_gap_max": operator_nu_lambda_solver_gap_max, "phase_joint_operator_transport_nu_lambda_weighted_resid_max": operator_nu_lambda_weighted_resid_max, "phase_joint_operator_transport_nu_lambda_weighted_resid_span": operator_nu_lambda_weighted_resid_span, "phase_joint_operator_transport_nu_lambda_condition_weighted_resid_max": operator_nu_lambda_cond_weighted_resid_max, "phase_joint_operator_transport_nu_lambda_condition_weighted_resid_span": operator_nu_lambda_cond_weighted_resid_span, "phase_joint_operator_transport_dual_pareto_count": pareto_count, "phase_joint_operator_transport_dual_branch_flips_total": int(branch_flip_total), "residual": payload["residual_obstruction"]})
-    payload["theorem_core_digest_recomputed_sha256"] = digest({"solution": payload["scipy_numpy_sympy_calibration"]["solution"], "max_fd_gap": max_fd_gap, "max_grid_refine_gap": max_grid_refine_gap, "quad_tol_span": quad_tol_span, "cond_p95": cond_p95, "bootstrap_seed_span_max": bootstrap_seed_span_max, "backend_fit_loss": backend_fit_loss, "backend_fit_loss_lbfgsb": backend_fit_loss_lbfgsb, "backend_fit_loss_gap": backend_fit_loss_gap, "multistart_loss_span": multistart_loss_span, "multichannel_max_solver_gap": channel_solver_gap_max, "multichannel_global_loss_spread": channel_loss_spread, "renorm_solver_gap": coef_b1_gap, "renorm_residual_l2": residual_b1_l2, "po3_objective": float(po3_res.fun), "po3_covariant_proxy_value_d1": po3_covariant_proxy_val, "transport_closure_max": transport_closure_max, "transport_symmetry_max": transport_symmetry_max, "po2_max_delta_bg": max_delta_bg_under_constraints, "selector_ratio_upper_bound": selector_ratio_upper_bound, "selector_entropy_span": selector_entropy_span, "discm_basis_cond": basis_cond, "discm_unc_max": common_basis_unc_max, "discm_resid_max": common_basis_resid_max, "channel_phase_min_global": channel_phase_min_global, "channel_phase_tol_span_max": tol_span_max, "phase_common_cond": phase_common_cond, "phase_common_residual_l2": phase_common_residual_l2, "phase_common_residual_backend_sub_l2": phase_common_residual_backend_sub_l2, "phase_backend_channel_delta_abs_max": channel_delta_abs_max, "phase_backend_transport_channel_delta_abs_max": channel_transport_delta_abs_max, "phase_common_loocv_max": loocv_residual_max, "phase_common_bootstrap_p95": link_bootstrap_resid_p95, "phase_bridge_stability_envelope_max": stability_envelope_max, "phase_cross_channel_coef_spread_l2": cross_channel_coef_spread_l2, "phase_joint_residual_l2": joint_resid_l2, "phase_joint_spread_l2": joint_spread_l2, "phase_joint_solver_gap": joint_solver_gap, "phase_joint_lambda_resid_span": lambda_resid_span, "phase_joint_holdout_resid_max": holdout_joint_resid_max, "phase_joint_multistart_resid_span": joint_ms_resid_span, "phase_joint_perturbation_resid_span": perturb_resid_span, "phase_joint_stress_envelope": joint_worst_case_residual_envelope, "phase_joint_cross_background_envelope_span": cross_background_envelope_span, "phase_joint_operator_transport_resid_span": operator_resid_span, "phase_joint_operator_transport_nu_sweep_resid_span": operator_nu_sweep_resid_span, "phase_joint_operator_transport_nu_sweep_solver_gap_max": operator_nu_sweep_solver_gap_max, "phase_joint_operator_transport_nu_lambda_resid_span": operator_nu_lambda_resid_span, "phase_joint_operator_transport_nu_lambda_solver_gap_max": operator_nu_lambda_solver_gap_max, "phase_joint_operator_transport_nu_lambda_weighted_resid_max": operator_nu_lambda_weighted_resid_max, "phase_joint_operator_transport_nu_lambda_weighted_resid_span": operator_nu_lambda_weighted_resid_span, "phase_joint_operator_transport_nu_lambda_condition_weighted_resid_max": operator_nu_lambda_cond_weighted_resid_max, "phase_joint_operator_transport_nu_lambda_condition_weighted_resid_span": operator_nu_lambda_cond_weighted_resid_span, "phase_joint_operator_transport_dual_pareto_count": pareto_count, "phase_joint_operator_transport_dual_branch_flips_total": int(branch_flip_total), "residual": payload["residual_obstruction"]})
+    payload["theorem_core_digest_sha256"] = digest({"solution": payload["scipy_numpy_sympy_calibration"]["solution"], "max_fd_gap": max_fd_gap, "max_grid_refine_gap": max_grid_refine_gap, "quad_tol_span": quad_tol_span, "cond_p95": cond_p95, "bootstrap_seed_span_max": bootstrap_seed_span_max, "backend_fit_loss": backend_fit_loss, "backend_fit_loss_lbfgsb": backend_fit_loss_lbfgsb, "backend_fit_loss_gap": backend_fit_loss_gap, "multistart_loss_span": multistart_loss_span, "multichannel_max_solver_gap": channel_solver_gap_max, "multichannel_global_loss_spread": channel_loss_spread, "renorm_solver_gap": coef_b1_gap, "renorm_residual_l2": residual_b1_l2, "po3_objective": float(po3_res.fun), "po3_covariant_proxy_value_d1": po3_covariant_proxy_val, "transport_closure_max": transport_closure_max, "transport_symmetry_max": transport_symmetry_max, "po2_max_delta_bg": max_delta_bg_under_constraints, "selector_ratio_upper_bound": selector_ratio_upper_bound, "selector_entropy_span": selector_entropy_span, "discm_basis_cond": basis_cond, "discm_unc_max": common_basis_unc_max, "discm_resid_max": common_basis_resid_max, "channel_phase_min_global": channel_phase_min_global, "channel_phase_tol_span_max": tol_span_max, "phase_common_cond": phase_common_cond, "phase_common_residual_l2": phase_common_residual_l2, "phase_common_residual_backend_sub_l2": phase_common_residual_backend_sub_l2, "phase_backend_channel_delta_abs_max": channel_delta_abs_max, "phase_backend_transport_channel_delta_abs_max": channel_transport_delta_abs_max, "phase_backend_channel_priority_cond_weighted_median_span": channel_priority_cond_weighted_median_span, "phase_backend_channel_priority_winner_count": channel_priority_winner_count, "phase_backend_channel_priority_bootstrap_winner_frequency_max": winner_freq_max, "phase_backend_channel_priority_bootstrap_winner_frequency_wilson_lb95": winner_freq_max_wilson_lb, "phase_backend_channel_priority_bootstrap_winner_frequency_entropy_norm": winner_freq_entropy_norm, "phase_backend_channel_priority_bootstrap_winner_frequency_top2_margin": winner_freq_top2_margin, "phase_backend_channel_priority_dirichlet_posterior_p_best_gt_050": p_best_gt_050, "phase_backend_channel_priority_dirichlet_posterior_q05": p_best_q05, "phase_backend_channel_priority_bootstrap_size_span": boot_size_freq_span, "phase_backend_channel_priority_bootstrap_size_loo_span_max": boot_size_loo_span_max, "phase_backend_channel_priority_bootstrap_size_curvature": float(q2_bs), "phase_backend_channel_priority_bootstrap_size_aic_delta_quad_minus_linear": aic_delta_quad_minus_linear, "phase_backend_channel_priority_bootstrap_size_extrap_gap_max": extrap_gap_max, "phase_backend_channel_priority_bootstrap_seed_span_max": seed_span_max, "phase_backend_channel_priority_bootstrap_size_slope": float(slope_bs), "phase_backend_channel_priority_bootstrap_size_r2": r2_bs, "phase_common_loocv_max": loocv_residual_max, "phase_common_bootstrap_p95": link_bootstrap_resid_p95, "phase_bridge_stability_envelope_max": stability_envelope_max, "phase_cross_channel_coef_spread_l2": cross_channel_coef_spread_l2, "phase_joint_residual_l2": joint_resid_l2, "phase_joint_spread_l2": joint_spread_l2, "phase_joint_solver_gap": joint_solver_gap, "phase_joint_lambda_resid_span": lambda_resid_span, "phase_joint_holdout_resid_max": holdout_joint_resid_max, "phase_joint_multistart_resid_span": joint_ms_resid_span, "phase_joint_perturbation_resid_span": perturb_resid_span, "phase_joint_stress_envelope": joint_worst_case_residual_envelope, "phase_joint_cross_background_envelope_span": cross_background_envelope_span, "phase_joint_operator_transport_resid_span": operator_resid_span, "phase_joint_operator_transport_nu_sweep_resid_span": operator_nu_sweep_resid_span, "phase_joint_operator_transport_nu_sweep_solver_gap_max": operator_nu_sweep_solver_gap_max, "phase_joint_operator_transport_nu_lambda_resid_span": operator_nu_lambda_resid_span, "phase_joint_operator_transport_nu_lambda_solver_gap_max": operator_nu_lambda_solver_gap_max, "phase_joint_operator_transport_nu_lambda_weighted_resid_max": operator_nu_lambda_weighted_resid_max, "phase_joint_operator_transport_nu_lambda_weighted_resid_span": operator_nu_lambda_weighted_resid_span, "phase_joint_operator_transport_nu_lambda_condition_weighted_resid_max": operator_nu_lambda_cond_weighted_resid_max, "phase_joint_operator_transport_nu_lambda_condition_weighted_resid_span": operator_nu_lambda_cond_weighted_resid_span, "phase_joint_operator_transport_dual_pareto_count": pareto_count, "phase_joint_operator_transport_dual_branch_flips_total": int(branch_flip_total), "residual": payload["residual_obstruction"]})
+    payload["theorem_core_digest_recomputed_sha256"] = digest({"solution": payload["scipy_numpy_sympy_calibration"]["solution"], "max_fd_gap": max_fd_gap, "max_grid_refine_gap": max_grid_refine_gap, "quad_tol_span": quad_tol_span, "cond_p95": cond_p95, "bootstrap_seed_span_max": bootstrap_seed_span_max, "backend_fit_loss": backend_fit_loss, "backend_fit_loss_lbfgsb": backend_fit_loss_lbfgsb, "backend_fit_loss_gap": backend_fit_loss_gap, "multistart_loss_span": multistart_loss_span, "multichannel_max_solver_gap": channel_solver_gap_max, "multichannel_global_loss_spread": channel_loss_spread, "renorm_solver_gap": coef_b1_gap, "renorm_residual_l2": residual_b1_l2, "po3_objective": float(po3_res.fun), "po3_covariant_proxy_value_d1": po3_covariant_proxy_val, "transport_closure_max": transport_closure_max, "transport_symmetry_max": transport_symmetry_max, "po2_max_delta_bg": max_delta_bg_under_constraints, "selector_ratio_upper_bound": selector_ratio_upper_bound, "selector_entropy_span": selector_entropy_span, "discm_basis_cond": basis_cond, "discm_unc_max": common_basis_unc_max, "discm_resid_max": common_basis_resid_max, "channel_phase_min_global": channel_phase_min_global, "channel_phase_tol_span_max": tol_span_max, "phase_common_cond": phase_common_cond, "phase_common_residual_l2": phase_common_residual_l2, "phase_common_residual_backend_sub_l2": phase_common_residual_backend_sub_l2, "phase_backend_channel_delta_abs_max": channel_delta_abs_max, "phase_backend_transport_channel_delta_abs_max": channel_transport_delta_abs_max, "phase_backend_channel_priority_cond_weighted_median_span": channel_priority_cond_weighted_median_span, "phase_backend_channel_priority_winner_count": channel_priority_winner_count, "phase_backend_channel_priority_bootstrap_winner_frequency_max": winner_freq_max, "phase_backend_channel_priority_bootstrap_winner_frequency_wilson_lb95": winner_freq_max_wilson_lb, "phase_backend_channel_priority_bootstrap_winner_frequency_entropy_norm": winner_freq_entropy_norm, "phase_backend_channel_priority_bootstrap_winner_frequency_top2_margin": winner_freq_top2_margin, "phase_backend_channel_priority_dirichlet_posterior_p_best_gt_050": p_best_gt_050, "phase_backend_channel_priority_dirichlet_posterior_q05": p_best_q05, "phase_backend_channel_priority_bootstrap_size_span": boot_size_freq_span, "phase_backend_channel_priority_bootstrap_size_loo_span_max": boot_size_loo_span_max, "phase_backend_channel_priority_bootstrap_size_curvature": float(q2_bs), "phase_backend_channel_priority_bootstrap_size_aic_delta_quad_minus_linear": aic_delta_quad_minus_linear, "phase_backend_channel_priority_bootstrap_size_extrap_gap_max": extrap_gap_max, "phase_backend_channel_priority_bootstrap_seed_span_max": seed_span_max, "phase_backend_channel_priority_bootstrap_size_slope": float(slope_bs), "phase_backend_channel_priority_bootstrap_size_r2": r2_bs, "phase_common_loocv_max": loocv_residual_max, "phase_common_bootstrap_p95": link_bootstrap_resid_p95, "phase_bridge_stability_envelope_max": stability_envelope_max, "phase_cross_channel_coef_spread_l2": cross_channel_coef_spread_l2, "phase_joint_residual_l2": joint_resid_l2, "phase_joint_spread_l2": joint_spread_l2, "phase_joint_solver_gap": joint_solver_gap, "phase_joint_lambda_resid_span": lambda_resid_span, "phase_joint_holdout_resid_max": holdout_joint_resid_max, "phase_joint_multistart_resid_span": joint_ms_resid_span, "phase_joint_perturbation_resid_span": perturb_resid_span, "phase_joint_stress_envelope": joint_worst_case_residual_envelope, "phase_joint_cross_background_envelope_span": cross_background_envelope_span, "phase_joint_operator_transport_resid_span": operator_resid_span, "phase_joint_operator_transport_nu_sweep_resid_span": operator_nu_sweep_resid_span, "phase_joint_operator_transport_nu_sweep_solver_gap_max": operator_nu_sweep_solver_gap_max, "phase_joint_operator_transport_nu_lambda_resid_span": operator_nu_lambda_resid_span, "phase_joint_operator_transport_nu_lambda_solver_gap_max": operator_nu_lambda_solver_gap_max, "phase_joint_operator_transport_nu_lambda_weighted_resid_max": operator_nu_lambda_weighted_resid_max, "phase_joint_operator_transport_nu_lambda_weighted_resid_span": operator_nu_lambda_weighted_resid_span, "phase_joint_operator_transport_nu_lambda_condition_weighted_resid_max": operator_nu_lambda_cond_weighted_resid_max, "phase_joint_operator_transport_nu_lambda_condition_weighted_resid_span": operator_nu_lambda_cond_weighted_resid_span, "phase_joint_operator_transport_dual_pareto_count": pareto_count, "phase_joint_operator_transport_dual_branch_flips_total": int(branch_flip_total), "residual": payload["residual_obstruction"]})
     payload["gatekeeper_checks"]["theorem_digest_self_consistent"] = payload["theorem_core_digest_sha256"] == payload["theorem_core_digest_recomputed_sha256"]
     payload["gatekeeper_checks"]["reproducibility_digest_self_consistent"] = reproducibility_digest_1 == reproducibility_digest_2
 
