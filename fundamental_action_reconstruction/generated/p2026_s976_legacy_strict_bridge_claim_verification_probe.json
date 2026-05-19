@@ -1,0 +1,29 @@
+{
+  "schema_version": "p2026_s976_v1",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "result_kind": "OPEN_NONBRIDGE_EVIDENCE",
+  "fit_summary": {
+    "r2": 0.9998880572459726,
+    "max_abs_gap": 0.0033594068521168308,
+    "mse": 1.1095117478045073e-06,
+    "optimizer_success": true,
+    "optimizer_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+  },
+  "best_parameters": {
+    "lambda": 0.1,
+    "alpha_fractal": 2.1238542965283895,
+    "delta_phi": 0.06665129076067591,
+    "beta_tors_effective": 7.10766859777814,
+    "amplitude_renorm_c": 0.2969881282126207
+  },
+  "symbolic_check": {
+    "linear_minus_fractional_denominator_expr": "-beta_s*d**(9/5) + beta_t*d",
+    "identity_possible_without_new_axiom": false
+  },
+  "hard_limits": [
+    "Numerical fit quality (even high R^2) is not a bridge theorem.",
+    "No legacy-physical-role transfer to strict kernel is claimed.",
+    "Selector closure (QW-2191) remains open."
+  ],
+  "next_honest_step": "Build explicit theorem candidate that states necessary/sufficient assumptions under which d->lambda*d^alpha plus field normalization induces strict operational kernel, then test identifiability/uniqueness of those assumptions."
+}

@@ -9,6 +9,7 @@ from __future__ import annotations
 import hashlib
 import json
 import platform
+import csv
 from pathlib import Path
 from typing import Any
 
@@ -22,6 +23,8 @@ import sympy as sp
 ROOT = Path(__file__).resolve().parent
 GEN = ROOT / "generated"
 OUT = GEN / "p2025_s975_strict_cutkosky_same_scheme_cohomology_amplitude_bridge_seed.json"
+OUT_CSV = GEN / "p2025_s975_strict_cutkosky_same_scheme_cohomology_amplitude_bridge_seed_per_channel_power_aware_verdicts.csv"
+OUT_QUALITY_CSV = GEN / "p2025_s975_strict_cutkosky_same_scheme_cohomology_amplitude_bridge_seed_per_channel_wilcoxon_quality.csv"
 TS = "2026-05-19T00:00:00+00:00"
 
 
@@ -70,6 +73,16 @@ def safe_wilcoxon_pvalue(arr: np.ndarray, alternative: str) -> float:
         return float(ss.wilcoxon(arr, alternative=alternative, zero_method="zsplit", method="approx").pvalue)
     except Exception:
         return 1.0
+
+
+def jeffreys_interval_from_successes(successes: int, total: int, alpha: float = 0.05) -> dict[str, float]:
+    if total <= 0:
+        return {"lower": 0.0, "upper": 1.0}
+    a = float(successes) + 0.5
+    b = float(total - successes) + 0.5
+    lo = float(ss.beta.ppf(alpha / 2.0, a, b))
+    hi = float(ss.beta.ppf(1.0 - alpha / 2.0, a, b))
+    return {"lower": lo, "upper": hi}
 
 
 def main() -> None:
@@ -1082,6 +1095,7 @@ def main() -> None:
         qobj["low_power_flag"] = bool(qobj["n_nonzero_deltas"] < min_effective_pairs)
     # per-channel paired deltas + Holm correction (next strict-lane refinement)
     per_channel_rows = []
+    per_channel_bootstrap_deltas: dict[str, dict[str, list[float]]] = {}
     raw_pvals = []
     for ch in channel_names:
         d_seed_ch = []
@@ -1114,6 +1128,11 @@ def main() -> None:
         arr_seed = np.array(d_seed_ch, dtype=float)
         arr_ex = np.array(d_extrap_ch, dtype=float)
         arr_q = np.array(d_q05_ch, dtype=float)
+        per_channel_bootstrap_deltas[ch] = {
+            "seed": d_seed_ch,
+            "extrap": d_extrap_ch,
+            "q05": d_q05_ch,
+        }
         p_seed = safe_wilcoxon_pvalue(arr_seed, alternative="less")
         p_ex = safe_wilcoxon_pvalue(arr_ex, alternative="less")
         p_q = safe_wilcoxon_pvalue(-arr_q, alternative="less")
@@ -1145,12 +1164,17 @@ def main() -> None:
     paired_delta_panel["per_channel_wilcoxon_quality"] = [
         {
             "channel": r["channel"],
-            "seed": wilcoxon_quality(np.array([rr["delta_seed_q50"] for rr in per_channel_rows if rr["channel"] == r["channel"]], dtype=float)),
-            "extrap": wilcoxon_quality(np.array([rr["delta_extrap_q50"] for rr in per_channel_rows if rr["channel"] == r["channel"]], dtype=float)),
-            "q05": wilcoxon_quality(np.array([rr["delta_q05_q50"] for rr in per_channel_rows if rr["channel"] == r["channel"]], dtype=float)),
+            "seed": wilcoxon_quality(np.array(per_channel_bootstrap_deltas[r["channel"]]["seed"], dtype=float)),
+            "extrap": wilcoxon_quality(np.array(per_channel_bootstrap_deltas[r["channel"]]["extrap"], dtype=float)),
+            "q05": wilcoxon_quality(np.array(per_channel_bootstrap_deltas[r["channel"]]["q05"], dtype=float)),
         }
         for r in per_channel_rows
     ]
+    for row in paired_delta_panel["per_channel_wilcoxon_quality"]:
+        for key in ("seed", "extrap", "q05"):
+            qobj = row[key]
+            qobj["min_effective_pairs_required"] = int(min_effective_pairs)
+            qobj["low_power_flag"] = bool(qobj["n_nonzero_deltas"] < min_effective_pairs)
     paired_delta_panel["low_power_summary"] = {
         "global_any_low_power": bool(any(paired_delta_panel["wilcoxon_quality"][k]["low_power_flag"] for k in ("seed", "extrap", "q05"))),
         "global_low_power_keys": [k for k in ("seed", "extrap", "q05") if paired_delta_panel["wilcoxon_quality"][k]["low_power_flag"]],
@@ -1163,8 +1187,20 @@ def main() -> None:
         paired_delta_panel["prob_extrap_nonworse"] >= 0.5 and
         paired_delta_panel["prob_q05_nonworse"] >= 0.05
     )
+    n_pairs_global = int(delta_seed_arr.size)
+    succ_seed_global = int(np.sum(delta_seed_arr <= 1e-12))
+    succ_extrap_global = int(np.sum(delta_extrap_arr <= 1e-12))
+    succ_q05_global = int(np.sum(delta_q05_arr >= -1e-12))
+    ci_seed_global = jeffreys_interval_from_successes(succ_seed_global, n_pairs_global, alpha=0.05)
+    ci_extrap_global = jeffreys_interval_from_successes(succ_extrap_global, n_pairs_global, alpha=0.05)
+    ci_q05_global = jeffreys_interval_from_successes(succ_q05_global, n_pairs_global, alpha=0.05)
+    p_ok_ci = (
+        ci_seed_global["lower"] >= 0.25 and
+        ci_extrap_global["lower"] >= 0.5 and
+        ci_q05_global["lower"] >= 0.05
+    )
     not_low_power = not paired_delta_panel["low_power_summary"]["global_any_low_power"]
-    if p_ok and not_low_power:
+    if p_ok_ci and not_low_power:
         power_aware_status = "NON_WORSE_CONFIRMED"
     elif p_ok and (not not_low_power):
         power_aware_status = "NON_WORSE_LOW_POWER"
@@ -1173,8 +1209,328 @@ def main() -> None:
     paired_delta_panel["power_aware_verdict"] = {
         "status": power_aware_status,
         "nonworse_probability_conditions_met": bool(p_ok),
+        "prob_seed_nonworse_ci95": ci_seed_global,
+        "prob_extrap_nonworse_ci95": ci_extrap_global,
+        "prob_q05_nonworse_ci95": ci_q05_global,
+        "nonworse_probability_ci95_conditions_met": bool(p_ok_ci),
         "low_power_detected": bool(not_low_power is False),
-        "ready_for_real_backend_substitution": bool(p_ok and not_low_power),
+        "ready_for_real_backend_substitution": bool(p_ok_ci and not_low_power),
+    }
+    per_channel_power_aware_verdicts = []
+    for row in paired_delta_panel["per_channel_rows"]:
+        quality_row = next(qr for qr in paired_delta_panel["per_channel_wilcoxon_quality"] if qr["channel"] == row["channel"])
+        ch = row["channel"]
+        arr_seed_ch = np.array(per_channel_bootstrap_deltas[ch]["seed"], dtype=float)
+        arr_extrap_ch = np.array(per_channel_bootstrap_deltas[ch]["extrap"], dtype=float)
+        arr_q05_ch = np.array(per_channel_bootstrap_deltas[ch]["q05"], dtype=float)
+        prob_seed_ch = float(np.mean(arr_seed_ch <= 1e-12))
+        prob_extrap_ch = float(np.mean(arr_extrap_ch <= 1e-12))
+        prob_q05_ch = float(np.mean(arr_q05_ch >= -1e-12))
+        succ_seed = int(np.sum(arr_seed_ch <= 1e-12))
+        succ_extrap = int(np.sum(arr_extrap_ch <= 1e-12))
+        succ_q05 = int(np.sum(arr_q05_ch >= -1e-12))
+        n_pairs_ch = int(arr_seed_ch.size)
+        ci_seed_ch = jeffreys_interval_from_successes(succ_seed, n_pairs_ch, alpha=0.05)
+        ci_extrap_ch = jeffreys_interval_from_successes(succ_extrap, n_pairs_ch, alpha=0.05)
+        ci_q05_ch = jeffreys_interval_from_successes(succ_q05, n_pairs_ch, alpha=0.05)
+        p_ok_ch = (
+            prob_seed_ch >= 0.25 and
+            prob_extrap_ch >= 0.5 and
+            prob_q05_ch >= 0.05
+        )
+        p_ok_ch_ci = (
+            ci_seed_ch["lower"] >= 0.25 and
+            ci_extrap_ch["lower"] >= 0.5 and
+            ci_q05_ch["lower"] >= 0.05
+        )
+        low_power_ch = bool(
+            quality_row["seed"]["low_power_flag"] or
+            quality_row["extrap"]["low_power_flag"] or
+            quality_row["q05"]["low_power_flag"]
+        )
+        if p_ok_ch_ci and (not low_power_ch):
+            status_ch = "NON_WORSE_CONFIRMED"
+        elif p_ok_ch and low_power_ch:
+            status_ch = "NON_WORSE_LOW_POWER"
+        else:
+            status_ch = "NON_WORSE_NOT_CONFIRMED"
+        per_channel_power_aware_verdicts.append({
+            "channel": row["channel"],
+            "status": status_ch,
+            "prob_seed_nonworse": prob_seed_ch,
+            "prob_extrap_nonworse": prob_extrap_ch,
+            "prob_q05_nonworse": prob_q05_ch,
+            "prob_seed_nonworse_ci95": ci_seed_ch,
+            "prob_extrap_nonworse_ci95": ci_extrap_ch,
+            "prob_q05_nonworse_ci95": ci_q05_ch,
+            "nonworse_probability_conditions_met": bool(p_ok_ch),
+            "nonworse_probability_ci95_conditions_met": bool(p_ok_ch_ci),
+            "low_power_detected": bool(low_power_ch),
+            "ready_for_real_backend_substitution": bool(p_ok_ch_ci and (not low_power_ch)),
+        })
+    paired_delta_panel["per_channel_power_aware_verdicts"] = per_channel_power_aware_verdicts
+    status_counts = {
+        "NON_WORSE_CONFIRMED": int(sum(1 for r in per_channel_power_aware_verdicts if r["status"] == "NON_WORSE_CONFIRMED")),
+        "NON_WORSE_LOW_POWER": int(sum(1 for r in per_channel_power_aware_verdicts if r["status"] == "NON_WORSE_LOW_POWER")),
+        "NON_WORSE_NOT_CONFIRMED": int(sum(1 for r in per_channel_power_aware_verdicts if r["status"] == "NON_WORSE_NOT_CONFIRMED")),
+    }
+    paired_delta_panel["mixed_verdict_regime"] = {
+        "status_counts": status_counts,
+        "num_channels": int(len(per_channel_power_aware_verdicts)),
+        "num_ready_channels": int(sum(1 for r in per_channel_power_aware_verdicts if r["ready_for_real_backend_substitution"])),
+    }
+    risk_rows = []
+    for r in per_channel_power_aware_verdicts:
+        m_seed = float(r["prob_seed_nonworse_ci95"]["lower"] - 0.25)
+        m_extrap = float(r["prob_extrap_nonworse_ci95"]["lower"] - 0.5)
+        m_q05 = float(r["prob_q05_nonworse_ci95"]["lower"] - 0.05)
+        risk_rows.append({
+            "channel": r["channel"],
+            "min_ci_margin_to_threshold": float(min(m_seed, m_extrap, m_q05)),
+            "seed_ci_margin": m_seed,
+            "extrap_ci_margin": m_extrap,
+            "q05_ci_margin": m_q05,
+            "status": r["status"],
+        })
+    risk_rows_sorted = sorted(risk_rows, key=lambda x: x["min_ci_margin_to_threshold"])
+    paired_delta_panel["per_channel_risk_ranking"] = {
+        "rows": risk_rows_sorted,
+        "most_critical_channel": risk_rows_sorted[0]["channel"] if risk_rows_sorted else "NONE",
+    }
+    # time-stability risk panel: repeat CI-margin ranking across RNG seeds
+    risk_seed_rows = []
+    critical_counts = {ch: 0 for ch in channel_names}
+    for risk_seed in [20260530, 20260531, 20260532, 20260533, 20260534, 20260535]:
+        rng_risk = np.random.default_rng(risk_seed)
+        local_risk_rows = []
+        for ch in channel_names:
+            d_seed_ch = []
+            d_extrap_ch = []
+            d_q05_ch = []
+            for _ in range(64):
+                idx = rng_risk.integers(0, len(nu_grid), size=len(nu_grid))
+                nu_s = [float(nu_grid[int(i)]) for i in idx]
+                cond_s = [float(np.linalg.cond(np.array(t_frw_to_bianchi_sym.subs({nu_sym: nu})).astype(float))) for nu in nu_s]
+                vals_b = np.array([channel_transport_by_key.get((ch, nuv), float("inf")) * cv for nuv, cv in zip(nu_s, cond_s)], dtype=float)
+                vals_cf = np.array([(channel_first_by_nu.get(nuv, float("inf")) if ch == channel_priority_best else channel_transport_by_key.get((ch, nuv), float("inf"))) * cv for nuv, cv in zip(nu_s, cond_s)], dtype=float)
+                sb = float(np.median(vals_b)) if vals_b.size else float("inf")
+                scf = float(np.median(vals_cf)) if vals_cf.size else float("inf")
+                d_seed_ch.append(float(scf - sb))
+                xb = np.array([5.0, 6.0, 7.0], dtype=float)
+                yb = np.array([sb, max(0.0, sb - 0.01), max(0.0, sb - 0.02)], dtype=float)
+                ycf = np.array([scf, max(0.0, scf - 0.01), max(0.0, scf - 0.02)], dtype=float)
+                Ab = np.vstack([xb, np.ones_like(xb)]).T
+                qAb = np.vstack([xb**2, xb, np.ones_like(xb)]).T
+                mb, cb = np.linalg.lstsq(Ab, yb, rcond=None)[0]
+                mcf, ccf = np.linalg.lstsq(Ab, ycf, rcond=None)[0]
+                qb2, qb1, qb0 = np.linalg.lstsq(qAb, yb, rcond=None)[0]
+                qcf2, qcf1, qcf0 = np.linalg.lstsq(qAb, ycf, rcond=None)[0]
+                xh = np.array([8.0, 9.0], dtype=float)
+                d_extrap_ch.append(float(np.max(np.abs((qcf2 * xh**2 + qcf1 * xh + qcf0) - (mcf * xh + ccf))) - np.max(np.abs((qb2 * xh**2 + qb1 * xh + qb0) - (mb * xh + cb)))))
+                q05_b = float(ss.beta.ppf(0.05, 2, 10))
+                q05_cf = float(ss.beta.ppf(0.05, 2 + (1 if ch == channel_priority_best else 0), 10))
+                d_q05_ch.append(float(q05_cf - q05_b))
+            arr_seed_ch = np.array(d_seed_ch, dtype=float)
+            arr_extrap_ch = np.array(d_extrap_ch, dtype=float)
+            arr_q05_ch = np.array(d_q05_ch, dtype=float)
+            n_pairs_ch = int(arr_seed_ch.size)
+            ci_seed_ch = jeffreys_interval_from_successes(int(np.sum(arr_seed_ch <= 1e-12)), n_pairs_ch, alpha=0.05)
+            ci_extrap_ch = jeffreys_interval_from_successes(int(np.sum(arr_extrap_ch <= 1e-12)), n_pairs_ch, alpha=0.05)
+            ci_q05_ch = jeffreys_interval_from_successes(int(np.sum(arr_q05_ch >= -1e-12)), n_pairs_ch, alpha=0.05)
+            m_seed = float(ci_seed_ch["lower"] - 0.25)
+            m_extrap = float(ci_extrap_ch["lower"] - 0.5)
+            m_q05 = float(ci_q05_ch["lower"] - 0.05)
+            local_risk_rows.append({"channel": ch, "min_ci_margin_to_threshold": float(min(m_seed, m_extrap, m_q05))})
+        local_risk_rows = sorted(local_risk_rows, key=lambda x: x["min_ci_margin_to_threshold"])
+        critical = local_risk_rows[0]["channel"] if local_risk_rows else "NONE"
+        if critical in critical_counts:
+            critical_counts[critical] += 1
+        risk_seed_rows.append({
+            "risk_seed": int(risk_seed),
+            "most_critical_channel": critical,
+            "most_critical_margin": float(local_risk_rows[0]["min_ci_margin_to_threshold"]) if local_risk_rows else float("nan"),
+        })
+    critical_count_rows = [{"channel": ch, "count": int(critical_counts[ch]), "frequency": float(critical_counts[ch] / len(risk_seed_rows))} for ch in channel_names]
+    critical_count_rows_sorted = sorted(critical_count_rows, key=lambda x: x["count"], reverse=True)
+    paired_delta_panel["time_stability_risk_panel"] = {
+        "rows": risk_seed_rows,
+        "critical_channel_frequency_rows": critical_count_rows_sorted,
+        "num_seeds": int(len(risk_seed_rows)),
+        "most_frequent_critical_channel": critical_count_rows_sorted[0]["channel"] if critical_count_rows_sorted else "NONE",
+        "critical_channel_frequency_span": float(max(r["frequency"] for r in critical_count_rows_sorted) - min(r["frequency"] for r in critical_count_rows_sorted)) if critical_count_rows_sorted else 0.0,
+    }
+    freq_top = float(critical_count_rows_sorted[0]["frequency"]) if critical_count_rows_sorted else 0.0
+    freq_span = float(paired_delta_panel["time_stability_risk_panel"]["critical_channel_frequency_span"])
+    seed_robust_ready = bool((freq_top >= 0.67) and (freq_span <= 0.5))
+    paired_delta_panel["time_stability_seed_robust_gate"] = {
+        "dominant_frequency_threshold": 0.67,
+        "frequency_span_threshold": 0.5,
+        "dominant_frequency_observed": freq_top,
+        "frequency_span_observed": freq_span,
+        "risk_signal_stable": bool(seed_robust_ready),
+    }
+    # branch-cut/regularization sensitivity proxy (Obstacle C guard)
+    eta_probe_grid = [1.8, 1.8 + 1e-4, 1.8 - 1e-4]
+    eps_floor_grid = [1e-15, 1e-12, 1e-10]
+    branch_rows = []
+    for eta_probe in eta_probe_grid:
+        for eps_floor in eps_floor_grid:
+            vals = []
+            for s_val in s_grid_fine:
+                def integrand_probe(x: float) -> float:
+                    kk = np.cos(omega * x + phi) / (1.0 + beta * (x ** eta_probe))
+                    return float((kk * kk) / np.sqrt(max(eps_floor, x + s_val)))
+                vv, _ = si.quad(integrand_probe, 0.0, 1.0, epsabs=1e-12, epsrel=1e-12, limit=400)
+                vals.append(float(vv))
+            mval = float(np.mean(np.array(vals, dtype=float)))
+            branch_rows.append({"eta_probe": float(eta_probe), "eps_floor": float(eps_floor), "phase_mean": mval})
+    phase_means_probe = [r["phase_mean"] for r in branch_rows]
+    branch_span = float(max(phase_means_probe) - min(phase_means_probe)) if phase_means_probe else float("inf")
+    # local log-log slope proxy d(log I)/d(eta) around eta=1.8
+    eta_minus = 1.8 - 1e-4
+    eta_plus = 1.8 + 1e-4
+    slope_rows = []
+    for s_val in s_grid_fine:
+        i_minus, _ = strict_kernel_phase_integral(s_val, omega, phi, beta, eta_minus)
+        i_plus, _ = strict_kernel_phase_integral(s_val, omega, phi, beta, eta_plus)
+        log_i_minus = float(np.log(max(1e-30, i_minus)))
+        log_i_plus = float(np.log(max(1e-30, i_plus)))
+        dlogi_deta = float((log_i_plus - log_i_minus) / (eta_plus - eta_minus))
+        slope_rows.append({"s": float(s_val), "dlogI_deta_local": dlogi_deta})
+    slope_vals = [r["dlogI_deta_local"] for r in slope_rows]
+    slope_span = float(max(slope_vals) - min(slope_vals)) if slope_vals else float("inf")
+    paired_delta_panel["branch_cut_sensitivity_panel"] = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "eta_probe_grid": eta_probe_grid,
+        "eps_floor_grid": eps_floor_grid,
+        "rows": branch_rows,
+        "phase_mean_span": branch_span,
+        "phase_mean_span_threshold": 1e-3,
+        "branch_choice_robustness_bounded": bool(branch_span < 1e-3),
+        "loglog_slope_rows": slope_rows,
+        "loglog_slope_span": slope_span,
+        "loglog_slope_span_threshold": 5e-2,
+        "loglog_slope_span_bounded": bool(slope_span < 5e-2),
+    }
+    # cross-integrator agreement proxy on baseline branch settings
+    cross_integrator_rows = []
+    for s_val in s_grid_fine:
+        v_quad, _ = strict_kernel_phase_integral(s_val, omega, phi, beta, eta)
+        xg = np.linspace(0.0, 1.0, 4001, dtype=float)
+        kg = np.cos(omega * xg + phi) / (1.0 + beta * (xg ** eta))
+        yg = (kg * kg) / np.sqrt(np.maximum(1e-15, xg + s_val))
+        v_trapz = float(np.trapezoid(yg, xg))
+        cross_integrator_rows.append({
+            "s": float(s_val),
+            "quad_value": float(v_quad),
+            "trapz_value": v_trapz,
+            "abs_gap": float(abs(v_quad - v_trapz)),
+        })
+    cross_integrator_gap_max = float(max(r["abs_gap"] for r in cross_integrator_rows)) if cross_integrator_rows else float("inf")
+    paired_delta_panel["branch_cross_integrator_panel"] = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "methods": ["scipy.integrate.quad", "numpy.trapezoid"],
+        "trapz_grid_points": 4001,
+        "rows": cross_integrator_rows,
+        "abs_gap_max": cross_integrator_gap_max,
+        "abs_gap_max_threshold": 1e-4,
+        "cross_integrator_agreement_bounded": bool(cross_integrator_gap_max < 1e-4),
+    }
+    # joint branch+integrator stress matrix (eta_probe x eps_floor x integrator)
+    branch_integrator_rows = []
+    for eta_probe in eta_probe_grid:
+        for eps_floor in eps_floor_grid:
+            for s_val in s_grid_fine:
+                def integrand_probe(x: float) -> float:
+                    kk = np.cos(omega * x + phi) / (1.0 + beta * (x ** eta_probe))
+                    return float((kk * kk) / np.sqrt(max(eps_floor, x + s_val)))
+                v_quad, _ = si.quad(integrand_probe, 0.0, 1.0, epsabs=1e-12, epsrel=1e-12, limit=400)
+                xg = np.linspace(0.0, 1.0, 4001, dtype=float)
+                yg = np.array([integrand_probe(float(xx)) for xx in xg], dtype=float)
+                v_trapezoid = float(np.trapezoid(yg, xg))
+                branch_integrator_rows.append({
+                    "eta_probe": float(eta_probe),
+                    "eps_floor": float(eps_floor),
+                    "s": float(s_val),
+                    "quad_value": float(v_quad),
+                    "trapezoid_value": v_trapezoid,
+                    "abs_gap": float(abs(v_quad - v_trapezoid)),
+                })
+    worst_case_gap_envelope = float(max(r["abs_gap"] for r in branch_integrator_rows)) if branch_integrator_rows else float("inf")
+    paired_delta_panel["branch_integrator_stress_matrix"] = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "rows": branch_integrator_rows,
+        "worst_case_gap_envelope": worst_case_gap_envelope,
+        "worst_case_gap_threshold": 2e-4,
+        "worst_case_gap_bounded": bool(worst_case_gap_envelope < 2e-4),
+    }
+    # cross-seed stress envelope over joint branch-integrator matrix
+    cross_seed_rows = []
+    for seed_scale in [0.9995, 1.0, 1.0005]:
+        rows_local = []
+        for eta_probe in eta_probe_grid:
+            eta_eff = float(eta_probe * seed_scale)
+            for eps_floor in eps_floor_grid:
+                for s_val in s_grid_fine:
+                    def integrand_probe_seed(x: float) -> float:
+                        kk = np.cos(omega * x + phi) / (1.0 + beta * (x ** eta_eff))
+                        return float((kk * kk) / np.sqrt(max(eps_floor, x + s_val)))
+                    vq, _ = si.quad(integrand_probe_seed, 0.0, 1.0, epsabs=1e-12, epsrel=1e-12, limit=400)
+                    xg = np.linspace(0.0, 1.0, 4001, dtype=float)
+                    yg = np.array([integrand_probe_seed(float(xx)) for xx in xg], dtype=float)
+                    vt = float(np.trapezoid(yg, xg))
+                    rows_local.append(abs(vq - vt))
+        cross_seed_rows.append({"eta_scale": seed_scale, "worst_case_gap_envelope": float(max(rows_local)) if rows_local else float("inf")})
+    cross_seed_worst = float(max(r["worst_case_gap_envelope"] for r in cross_seed_rows)) if cross_seed_rows else float("inf")
+    paired_delta_panel["branch_integrator_cross_seed_envelope"] = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "rows": cross_seed_rows,
+        "worst_case_across_seed_scales": cross_seed_worst,
+        "worst_case_across_seed_scales_threshold": 3e-4,
+        "cross_seed_envelope_bounded": bool(cross_seed_worst < 3e-4),
+    }
+    # adaptive threshold calibration panel (bootstrap CI over seed-scale envelopes)
+    env_arr = np.array([r["worst_case_gap_envelope"] for r in cross_seed_rows], dtype=float)
+    rng_env = np.random.default_rng(20260536)
+    env_boot = []
+    for _ in range(256):
+        idx = rng_env.integers(0, env_arr.size, size=env_arr.size)
+        env_boot.append(float(np.max(env_arr[idx])))
+    env_boot_arr = np.array(env_boot, dtype=float)
+    env_ci = {
+        "q05": float(np.quantile(env_boot_arr, 0.05)),
+        "q50": float(np.quantile(env_boot_arr, 0.50)),
+        "q95": float(np.quantile(env_boot_arr, 0.95)),
+    }
+    paired_delta_panel["branch_integrator_threshold_calibration_panel"] = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "bootstrap_size": 256,
+        "envelope_bootstrap_quantiles": env_ci,
+        "base_threshold": 3e-4,
+        "adaptive_threshold_q95": float(env_ci["q95"]),
+        "adaptive_threshold_consistency": bool(env_ci["q95"] >= env_ci["q50"] >= env_ci["q05"]),
+    }
+    joint_ready = bool(
+        paired_delta_panel["branch_integrator_cross_seed_envelope"]["cross_seed_envelope_bounded"] and
+        paired_delta_panel["branch_integrator_threshold_calibration_panel"]["adaptive_threshold_consistency"] and
+        paired_delta_panel["time_stability_seed_robust_gate"]["risk_signal_stable"]
+    )
+    fail_reasons = []
+    if not paired_delta_panel["branch_integrator_cross_seed_envelope"]["cross_seed_envelope_bounded"]:
+        fail_reasons.append("cross_seed_envelope_not_bounded")
+    if not paired_delta_panel["branch_integrator_threshold_calibration_panel"]["adaptive_threshold_consistency"]:
+        fail_reasons.append("adaptive_threshold_inconsistent")
+    if not paired_delta_panel["time_stability_seed_robust_gate"]["risk_signal_stable"]:
+        fail_reasons.append("risk_signal_not_stable")
+    paired_delta_panel["branch_robust_substitution_decision"] = {
+        "status": "READY_FOR_BRANCH_ROBUST_SUBSTITUTION" if joint_ready else "NOT_READY_FOR_BRANCH_ROBUST_SUBSTITUTION",
+        "ready_for_branch_robust_substitution": joint_ready,
+        "criteria": {
+            "cross_seed_envelope_bounded": bool(paired_delta_panel["branch_integrator_cross_seed_envelope"]["cross_seed_envelope_bounded"]),
+            "adaptive_threshold_consistency": bool(paired_delta_panel["branch_integrator_threshold_calibration_panel"]["adaptive_threshold_consistency"]),
+            "time_stability_risk_signal_stable": bool(paired_delta_panel["time_stability_seed_robust_gate"]["risk_signal_stable"]),
+        },
+        "failed_criteria": fail_reasons,
     }
     channel_first_replay_metrics["paired_delta_panel"] = paired_delta_panel
     channel_first_simulation_panel = {
@@ -1512,6 +1868,178 @@ def main() -> None:
         {"task_id": 6, "name": "QW-2191 selector obstruction resolution", "status": "OPEN_OBSTRUCTION_WITH_TRACE", "missing": ["strict-core selector source or explicit symmetry-breaking premise"]},
         {"task_id": 7, "name": "DiscM common-basis integration gate", "status": "OPEN_OBSTRUCTION_WITH_TRACE", "missing": ["backend loop/channel common-basis fit with bounded uncertainty"]},
     ]
+    task_numeric_evidence_7 = [
+        {
+            "task_id": 1,
+            "name": "Renormalization exact divergence cancellation coefficients",
+            "method_stack": ["numpy.linalg", "scipy.linalg", "sympy"],
+            "metrics": {
+                "fit_residual_l2": residual_b1_l2,
+                "fit_residual_linf": residual_b1_linf,
+                "solver_gap_abs_max": coef_b1_gap,
+            },
+            "local_readiness_score_0_1": float(np.exp(-5.0 * residual_b1_l2)),
+            "honest_verdict": "OPEN_OBSTRUCTION_WITH_TRACE",
+        },
+        {
+            "task_id": 2,
+            "name": "Cutkosky full unitarity closure",
+            "method_stack": ["numpy", "scipy.integrate", "scipy.optimize"],
+            "metrics": {
+                "phase_min_integral": channel_phase_min_global,
+                "phase_tolerance_span_max": tol_span_max,
+                "joint_solver_gap": joint_solver_gap,
+            },
+            "local_readiness_score_0_1": float(np.clip(1.0 - min(1.0, tol_span_max * 1e8), 0.0, 1.0) * np.exp(-joint_resid_l2)),
+            "honest_verdict": "OPEN_OBSTRUCTION_WITH_TRACE",
+        },
+        {
+            "task_id": 3,
+            "name": "Background-independence global transport",
+            "method_stack": ["numpy.linalg", "sympy"],
+            "metrics": {
+                "transport_closure_max": transport_closure_max,
+                "transport_symmetry_commutator_max": transport_symmetry_max,
+                "operator_nu_sweep_resid_span": operator_nu_sweep_resid_span,
+            },
+            "local_readiness_score_0_1": float(np.exp(-10.0 * operator_nu_sweep_resid_span)),
+            "honest_verdict": "OPEN_OBSTRUCTION_WITH_TRACE",
+        },
+        {
+            "task_id": 4,
+            "name": "PO3 nonempty certifier",
+            "method_stack": ["scipy.optimize", "numpy", "sympy"],
+            "metrics": {
+                "solver_success": bool(po3_res.success),
+                "objective_value": float(po3_res.fun),
+                "covariant_proxy_d1": po3_covariant_proxy_val,
+            },
+            "local_readiness_score_0_1": float(1.0 if po3_res.success else 0.0) * float(np.exp(-float(po3_res.fun))),
+            "honest_verdict": "OPEN_OBSTRUCTION_WITH_TRACE",
+        },
+        {
+            "task_id": 5,
+            "name": "PO2 sufficiency theorem",
+            "method_stack": ["sympy", "numpy"],
+            "metrics": {
+                "hessian_rank_symbolic": po2_trace_rank,
+                "max_abs_delta_bg_yf_under_constraints": max_delta_bg_under_constraints,
+                "delta_symbolic_zero": bool(delta_bg_yf_under_constraints == 0),
+            },
+            "local_readiness_score_0_1": float((1.0 if po2_trace_rank == 4 else 0.0) * np.exp(-1e10 * max_delta_bg_under_constraints)),
+            "honest_verdict": "OPEN_OBSTRUCTION_WITH_TRACE",
+        },
+        {
+            "task_id": 6,
+            "name": "QW-2191 selector obstruction resolution",
+            "method_stack": ["numpy", "sympy"],
+            "metrics": {
+                "selector_ratio_upper_bound": selector_ratio_upper_bound,
+                "entropy_span": selector_entropy_span,
+                "strict_core_closure_claimed": False,
+            },
+            "local_readiness_score_0_1": float(np.clip(1.0 - selector_ratio_upper_bound, 0.0, 1.0)),
+            "honest_verdict": "OPEN_OBSTRUCTION_WITH_TRACE",
+        },
+        {
+            "task_id": 7,
+            "name": "DiscM common-basis integration gate",
+            "method_stack": ["numpy.linalg", "scipy.linalg"],
+            "metrics": {
+                "basis_condition_number": basis_cond,
+                "max_bootstrap_coef_std": common_basis_unc_max,
+                "max_channel_residual_l2": common_basis_resid_max,
+            },
+            "local_readiness_score_0_1": float(np.exp(-0.1 * common_basis_resid_max)),
+            "honest_verdict": "OPEN_OBSTRUCTION_WITH_TRACE",
+        },
+    ]
+    # Professor-grade strict prioritization panel:
+    # build robust ranking from the 7-task evidence with numpy/scipy/sympy diagnostics.
+    task_scores = np.array([float(row["local_readiness_score_0_1"]) for row in task_numeric_evidence_7], dtype=float)
+    task_ids = np.array([int(row["task_id"]) for row in task_numeric_evidence_7], dtype=int)
+    # keep rank 1 = strongest local readiness (still OPEN; this is sequencing only)
+    raw_ranks = ss.rankdata(-task_scores, method="average")
+    score_gaps = np.abs(task_scores[:, None] - task_scores[None, :])
+    score_gap_l2 = float(np.linalg.norm(score_gaps, ord=2))
+    # symbolic normalization certificate (sum to one over positive mass)
+    t_syms = sp.symbols("t1:8", nonnegative=True, real=True)
+    z_sym = sp.simplify(sum(t_syms))
+    norm_syms = [sp.simplify(ts / z_sym) for ts in t_syms]
+    norm_sum_symbolic = sp.simplify(sum(norm_syms))
+    score_mass = float(np.sum(np.clip(task_scores, 0.0, None)))
+    if score_mass <= 1e-15:
+        normalized_scores = np.full_like(task_scores, 1.0 / float(len(task_scores)))
+    else:
+        normalized_scores = task_scores / score_mass
+    scipy_entropy = float(ss.entropy(np.clip(normalized_scores, 1e-15, None)))
+    # additional SciPy/NumPy diagnostics for 7-task prioritization stability
+    score_mean = float(np.mean(task_scores))
+    score_std = float(np.std(task_scores, ddof=1)) if task_scores.size > 1 else 0.0
+    score_cv = float(score_std / max(abs(score_mean), 1e-15))
+    zscores = ss.zscore(task_scores, ddof=1) if task_scores.size > 1 and score_std > 0 else np.zeros_like(task_scores)
+    score_dispersion_l2 = float(np.linalg.norm(task_scores - score_mean, ord=2))
+    score_mad = float(np.median(np.abs(task_scores - np.median(task_scores))))
+    score_ci95_mean = ss.t.interval(
+        0.95,
+        max(int(task_scores.size) - 1, 1),
+        loc=score_mean,
+        scale=(score_std / np.sqrt(max(task_scores.size, 1))) if score_std > 0 else 0.0,
+    ) if task_scores.size > 1 else (score_mean, score_mean)
+    score_spearman_rank_stability = float(ss.spearmanr(task_scores, np.arange(1, len(task_scores) + 1)).correlation) if task_scores.size > 2 else 0.0
+    # second-order structure diagnostics for 7-task vector (NumPy/SciPy linear algebra)
+    centered_scores = task_scores - score_mean
+    score_cov_scalar = float(np.cov(task_scores, ddof=1)) if task_scores.size > 1 else 0.0
+    score_cov_matrix = np.outer(centered_scores, centered_scores) / max(len(centered_scores) - 1, 1)
+    eigvals_cov = np.linalg.eigvalsh(score_cov_matrix)
+    eigvals_cov_desc = np.sort(eigvals_cov)[::-1]
+    eigvals_cov_desc = np.clip(eigvals_cov_desc, 0.0, None)
+    eig_energy = float(np.sum(eigvals_cov_desc))
+    pca_var_ratio = (eigvals_cov_desc / eig_energy) if eig_energy > 0 else np.zeros_like(eigvals_cov_desc)
+    pca_effective_rank = float(np.exp(ss.entropy(np.clip(pca_var_ratio, 1e-15, None)))) if eig_energy > 0 else 0.0
+    # symbolic certificate that centered sum is exactly zero in exact arithmetic
+    s_syms = sp.symbols("s1:8", real=True)
+    centered_sym = [si - (sum(s_syms) / 7) for si in s_syms]
+    centered_sum_symbolic = sp.simplify(sum(centered_sym))
+    # bootstrap + robust spread diagnostics on the 7-task readiness vector
+    rng_priority = np.random.default_rng(20260519)
+    bs_means = []
+    bs_stds = []
+    bs_top_task = []
+    for _ in range(512):
+        sample = rng_priority.choice(task_scores, size=task_scores.size, replace=True)
+        bs_means.append(float(np.mean(sample)))
+        bs_stds.append(float(np.std(sample, ddof=1)) if sample.size > 1 else 0.0)
+        bs_top_task.append(int(np.argmax(sample)))
+    bs_means_arr = np.array(bs_means, dtype=float)
+    bs_stds_arr = np.array(bs_stds, dtype=float)
+    bs_mean_ci = np.quantile(bs_means_arr, [0.05, 0.5, 0.95]).tolist()
+    bs_std_ci = np.quantile(bs_stds_arr, [0.05, 0.5, 0.95]).tolist()
+    bs_top_counts = np.bincount(np.array(bs_top_task, dtype=int), minlength=task_scores.size).astype(float)
+    bs_top_freq = (bs_top_counts / np.sum(bs_top_counts)).tolist() if np.sum(bs_top_counts) > 0 else [0.0] * int(task_scores.size)
+    robust_iqr = float(np.subtract(*np.percentile(task_scores, [75, 25])))
+    robust_mad_scaled = float(score_mad * 1.4826)
+    next_task_idx = int(np.argmin(raw_ranks))
+    next_task_id = int(task_ids[next_task_idx])
+    next_task_name = str(task_numeric_evidence_7[next_task_idx]["name"])
+    task_priority_rows = []
+    for i, row in enumerate(task_numeric_evidence_7):
+        task_priority_rows.append({
+            "task_id": int(row["task_id"]),
+            "name": row["name"],
+            "local_readiness_score_0_1": float(task_scores[i]),
+            "zscore_vs_task_mean": float(zscores[i]),
+            "normalized_priority_weight": float(normalized_scores[i]),
+            "readiness_rank_1_is_best": float(raw_ranks[i]),
+            "status": row["honest_verdict"],
+        })
+    # hard guardrail: if top numeric task would imply strict-core selector closure, keep selector task open.
+    strict_selector_task_id = 6
+    selector_row = next((r for r in task_numeric_evidence_7 if int(r["task_id"]) == strict_selector_task_id), None)
+    selector_is_explicitly_non_strict = bool(selector_row is not None and selector_row["honest_verdict"] == "OPEN_OBSTRUCTION_WITH_TRACE")
+    recommended_lane = "kernel_split_robust_discm_integration"
+    if next_task_id == strict_selector_task_id and selector_is_explicitly_non_strict:
+        recommended_lane = "non_selector_fallback_due_to_qw2191_guardrail"
     gate = {
         "same_scheme_tag_lock": same_scheme_tag == p2024.get("symbolic_lock_guard", {}).get("same_scheme_tag"),
         "strict_lane_only": p2024.get("legacy_bridge_used") is False,
@@ -1634,26 +2162,98 @@ def main() -> None:
         "phase_backend_substitution_channel_first_paired_wilcoxon_effective_pairs_threshold": all(paired_delta_panel["wilcoxon_quality"][k]["n_nonzero_deltas"] >= min_effective_pairs for k in ("seed", "extrap", "q05")),
         "phase_backend_substitution_channel_first_paired_low_power_summary_exported": "low_power_summary" in paired_delta_panel and "global_any_low_power" in paired_delta_panel["low_power_summary"],
         "phase_backend_substitution_channel_first_power_aware_verdict_exported": "power_aware_verdict" in paired_delta_panel and "status" in paired_delta_panel["power_aware_verdict"],
-        "phase_backend_substitution_channel_first_power_aware_ready_flag_consistent": paired_delta_panel["power_aware_verdict"]["ready_for_real_backend_substitution"] == (paired_delta_panel["power_aware_verdict"]["nonworse_probability_conditions_met"] and (not paired_delta_panel["power_aware_verdict"]["low_power_detected"])),
+        "phase_backend_substitution_channel_first_power_aware_ready_flag_consistent": paired_delta_panel["power_aware_verdict"]["ready_for_real_backend_substitution"] == (paired_delta_panel["power_aware_verdict"]["nonworse_probability_ci95_conditions_met"] and (not paired_delta_panel["power_aware_verdict"]["low_power_detected"])),
+        "phase_backend_substitution_channel_first_per_channel_power_aware_verdicts_exported": "per_channel_power_aware_verdicts" in paired_delta_panel and len(paired_delta_panel["per_channel_power_aware_verdicts"]) == len(channel_names),
+        "phase_backend_substitution_channel_first_per_channel_power_aware_ready_flag_consistent": all(
+            r["ready_for_real_backend_substitution"] == (r["nonworse_probability_ci95_conditions_met"] and (not r["low_power_detected"]))
+            for r in paired_delta_panel.get("per_channel_power_aware_verdicts", [])
+        ),
+        "phase_backend_substitution_channel_first_per_channel_quality_csv_json_consistent": True,
+        "phase_backend_substitution_channel_first_per_channel_verdict_csv_json_consistent": True,
+        "phase_backend_substitution_channel_first_mixed_verdict_regime_exported": "mixed_verdict_regime" in paired_delta_panel and paired_delta_panel["mixed_verdict_regime"]["num_channels"] == len(channel_names),
+        "phase_backend_substitution_channel_first_per_channel_risk_ranking_exported": "per_channel_risk_ranking" in paired_delta_panel and len(paired_delta_panel["per_channel_risk_ranking"]["rows"]) == len(channel_names),
+        "phase_backend_substitution_channel_first_time_stability_risk_panel_exported": "time_stability_risk_panel" in paired_delta_panel and paired_delta_panel["time_stability_risk_panel"]["num_seeds"] == 6,
+        "phase_backend_substitution_channel_first_time_stability_seed_robust_gate_exported": "time_stability_seed_robust_gate" in paired_delta_panel and "risk_signal_stable" in paired_delta_panel["time_stability_seed_robust_gate"],
+        "phase_backend_substitution_channel_first_branch_cut_sensitivity_exported": "branch_cut_sensitivity_panel" in paired_delta_panel and len(paired_delta_panel["branch_cut_sensitivity_panel"]["rows"]) == 9,
+        "phase_backend_substitution_channel_first_branch_choice_robustness_bounded": bool(paired_delta_panel["branch_cut_sensitivity_panel"]["branch_choice_robustness_bounded"]),
+        "phase_backend_substitution_channel_first_branch_loglog_slope_span_bounded": bool(paired_delta_panel["branch_cut_sensitivity_panel"]["loglog_slope_span_bounded"]),
+        "phase_backend_substitution_channel_first_branch_cross_integrator_exported": "branch_cross_integrator_panel" in paired_delta_panel and len(paired_delta_panel["branch_cross_integrator_panel"]["rows"]) == len(s_grid_fine),
+        "phase_backend_substitution_channel_first_branch_cross_integrator_agreement_bounded": bool(paired_delta_panel["branch_cross_integrator_panel"]["cross_integrator_agreement_bounded"]),
+        "phase_backend_substitution_channel_first_branch_integrator_stress_matrix_exported": "branch_integrator_stress_matrix" in paired_delta_panel and len(paired_delta_panel["branch_integrator_stress_matrix"]["rows"]) == (len(eta_probe_grid) * len(eps_floor_grid) * len(s_grid_fine)),
+        "phase_backend_substitution_channel_first_branch_integrator_worst_case_gap_bounded": bool(paired_delta_panel["branch_integrator_stress_matrix"]["worst_case_gap_bounded"]),
+        "phase_backend_substitution_channel_first_branch_integrator_cross_seed_envelope_exported": "branch_integrator_cross_seed_envelope" in paired_delta_panel and len(paired_delta_panel["branch_integrator_cross_seed_envelope"]["rows"]) == 3,
+        "phase_backend_substitution_channel_first_branch_integrator_cross_seed_envelope_bounded": bool(paired_delta_panel["branch_integrator_cross_seed_envelope"]["cross_seed_envelope_bounded"]),
+        "phase_backend_substitution_channel_first_branch_integrator_threshold_calibration_exported": "branch_integrator_threshold_calibration_panel" in paired_delta_panel and paired_delta_panel["branch_integrator_threshold_calibration_panel"]["bootstrap_size"] == 256,
+        "phase_backend_substitution_channel_first_branch_integrator_threshold_calibration_consistent": bool(paired_delta_panel["branch_integrator_threshold_calibration_panel"]["adaptive_threshold_consistency"]),
+        "phase_backend_substitution_channel_first_branch_robust_substitution_decision_exported": "branch_robust_substitution_decision" in paired_delta_panel and "ready_for_branch_robust_substitution" in paired_delta_panel["branch_robust_substitution_decision"],
+        "phase_backend_substitution_channel_first_branch_robust_substitution_decision_consistent": paired_delta_panel["branch_robust_substitution_decision"]["ready_for_branch_robust_substitution"] == (
+            paired_delta_panel["branch_robust_substitution_decision"]["criteria"]["cross_seed_envelope_bounded"] and
+            paired_delta_panel["branch_robust_substitution_decision"]["criteria"]["adaptive_threshold_consistency"] and
+            paired_delta_panel["branch_robust_substitution_decision"]["criteria"]["time_stability_risk_signal_stable"]
+        ),
         "upstream_manifest_same_scheme_locked": upstream_manifest.get("same_scheme_tag") == "STRICT_P2020_PHASESPACE_SCHEME_V1",
         "python_major_lock": int(platform.python_version_tuple()[0]) == 3,
     }
 
     payload = {
-        "schema_version": "p2025_s975_v78",
+        "schema_version": "p2025_s975_v92",
         "produced_by": Path(__file__).name,
         "timestamp_utc": TS,
         "status": "OPEN_OBSTRUCTION_WITH_TRACE",
         "result_kind": "PARTIAL_SAME_SCHEME_COHOMOLOGY_AMPLITUDE_BRIDGE_SEED__NOT_DISCM_CUTSUM_CLOSURE",
         "depends_on": {"same_scheme_tag": p2024.get("symbolic_lock_guard", {}).get("same_scheme_tag", "MISSING")},
         "toe_closure_gaps_7tasks": toe_closure_gaps_7tasks,
+        "task_numeric_evidence_7": task_numeric_evidence_7,
+        "task_priority_decision_panel": {
+            "rows": task_priority_rows,
+            "score_gap_l2": score_gap_l2,
+            "score_dispersion_l2": score_dispersion_l2,
+            "score_mad": score_mad,
+            "score_mean": score_mean,
+            "score_std": score_std,
+            "score_cv": score_cv,
+            "score_mean_ci95_t_interval": {"lower": float(score_ci95_mean[0]), "upper": float(score_ci95_mean[1])},
+            "score_spearman_rank_stability": score_spearman_rank_stability,
+            "score_covariance_scalar": score_cov_scalar,
+            "score_pca_effective_rank": pca_effective_rank,
+            "score_pca_variance_ratio": [float(x) for x in pca_var_ratio.tolist()],
+            "score_centering_symbolic_certificate": {
+                "centered_sum_symbolic": sp.sstr(centered_sum_symbolic),
+                "exactly_zero": bool(centered_sum_symbolic == 0),
+            },
+            "bootstrap_readiness_summary": {
+                "bootstrap_size": 512,
+                "mean_q05_q50_q95": [float(x) for x in bs_mean_ci],
+                "std_q05_q50_q95": [float(x) for x in bs_std_ci],
+                "top_index_frequency_over_resamples": [float(x) for x in bs_top_freq],
+            },
+            "robust_spread": {
+                "iqr": robust_iqr,
+                "mad_scaled": robust_mad_scaled,
+            },
+            "normalized_weight_entropy_nats": scipy_entropy,
+            "symbolic_normalization_certificate": {
+                "weights_symbolic": [sp.sstr(x) for x in norm_syms],
+                "sum_symbolic": sp.sstr(norm_sum_symbolic),
+                "exactly_one": bool(norm_sum_symbolic == 1),
+            },
+            "recommended_next_task_id": next_task_id,
+            "recommended_next_task_name": next_task_name,
+            "recommended_lane": recommended_lane,
+            "note": "Ranking is sequencing-only; all 7 tasks remain OPEN_OBSTRUCTION_WITH_TRACE.",
+        },
         "upstream_manifest": upstream_manifest,
         "upstream_manifest_digest_sha256": upstream_manifest_digest,
         "environment_lock": {"python_major": int(platform.python_version_tuple()[0]), "numpy": np.__version__, "scipy": si.__version__ if hasattr(si, "__version__") else "scipy.integrate"},
         "operators": {"A_map_symbolic": sp.sstr(a_map), "symbols": ["GhostCut_scheme", "WardLift", "CohomologyAmplitudeBridge"]},
         "strict_phase_space_integral_table": {
-            "kernel": "K_strict_gate(d)=cos(omega*d+phi)/(1+beta*d^eta)",
-            "parameters": {"omega": omega, "phi": phi, "beta": beta, "eta": eta},
+            "kernel": "K_strict_gate(d)=cos(omega*d+phi_kernel)/(1+beta*d^eta)",
+            "parameters": {"omega": omega, "phi_kernel": phi, "phi": phi, "beta": beta, "eta": eta},
+            "notation_disambiguation": {
+                "phi_kernel": "phase constant of K_strict_gate",
+                "phi": "legacy compatibility alias of phi_kernel",
+                "note": "avoid confusion with potential dynamic field notation phi(x)/Phi(x) in separate Lagrangian texts",
+            },
             "s_grid": s_grid_fine,
             "rows": phase_rows,
             "mean_integral": phase_center,
@@ -1697,8 +2297,8 @@ def main() -> None:
         },
         "po3_nonempty_certifier_precursor": {
             "optimizer_method": "L-BFGS-B",
-            "bounds": {"omega": po3_bounds[0], "phi": po3_bounds[1], "beta": po3_bounds[2], "eta": po3_bounds[3]},
-            "solution": {"omega": float(po3_solution[0]), "phi": float(po3_solution[1]), "beta": float(po3_solution[2]), "eta": float(po3_solution[3])},
+            "bounds": {"omega": po3_bounds[0], "phi_kernel": po3_bounds[1], "phi": po3_bounds[1], "beta": po3_bounds[2], "eta": po3_bounds[3]},
+            "solution": {"omega": float(po3_solution[0]), "phi_kernel": float(po3_solution[1]), "phi": float(po3_solution[1]), "beta": float(po3_solution[2]), "eta": float(po3_solution[3])},
             "objective_value": float(po3_res.fun),
             "solver_success": bool(po3_res.success),
             "solver_message": str(po3_res.message),
@@ -1917,12 +2517,109 @@ def main() -> None:
         "reproducibility_probe": {"digest_1": reproducibility_digest_1, "digest_2": reproducibility_digest_2},
         "gatekeeper_checks": gate,
         "false_pass_guard": "No global unitarity closure claimed.",
-        "next_honest_step": "Replace only the statistically most stable priority channel (bootstrap+Dirichlet backed) with explicit loop-derived DiscM tensor slices, then replay full combined/cross-background stress panel before any 2nd-channel substitution.",
+        "next_honest_step": "Execute task-priority lane on strict DiscM integration: replay task #7 with expanded bootstrap/integrator stress envelope and only then decide whether one-channel substitution remains nonworse under CI-aware criteria.",
     }
     payload["theorem_core_digest_sha256"] = digest({"solution": payload["scipy_numpy_sympy_calibration"]["solution"], "max_fd_gap": max_fd_gap, "max_grid_refine_gap": max_grid_refine_gap, "quad_tol_span": quad_tol_span, "cond_p95": cond_p95, "bootstrap_seed_span_max": bootstrap_seed_span_max, "backend_fit_loss": backend_fit_loss, "backend_fit_loss_lbfgsb": backend_fit_loss_lbfgsb, "backend_fit_loss_gap": backend_fit_loss_gap, "multistart_loss_span": multistart_loss_span, "multichannel_max_solver_gap": channel_solver_gap_max, "multichannel_global_loss_spread": channel_loss_spread, "renorm_solver_gap": coef_b1_gap, "renorm_residual_l2": residual_b1_l2, "po3_objective": float(po3_res.fun), "po3_covariant_proxy_value_d1": po3_covariant_proxy_val, "transport_closure_max": transport_closure_max, "transport_symmetry_max": transport_symmetry_max, "po2_max_delta_bg": max_delta_bg_under_constraints, "selector_ratio_upper_bound": selector_ratio_upper_bound, "selector_entropy_span": selector_entropy_span, "discm_basis_cond": basis_cond, "discm_unc_max": common_basis_unc_max, "discm_resid_max": common_basis_resid_max, "channel_phase_min_global": channel_phase_min_global, "channel_phase_tol_span_max": tol_span_max, "phase_common_cond": phase_common_cond, "phase_common_residual_l2": phase_common_residual_l2, "phase_common_residual_backend_sub_l2": phase_common_residual_backend_sub_l2, "phase_backend_channel_delta_abs_max": channel_delta_abs_max, "phase_backend_transport_channel_delta_abs_max": channel_transport_delta_abs_max, "phase_backend_channel_priority_cond_weighted_median_span": channel_priority_cond_weighted_median_span, "phase_backend_channel_priority_winner_count": channel_priority_winner_count, "phase_backend_channel_priority_bootstrap_winner_frequency_max": winner_freq_max, "phase_backend_channel_priority_bootstrap_winner_frequency_wilson_lb95": winner_freq_max_wilson_lb, "phase_backend_channel_priority_bootstrap_winner_frequency_entropy_norm": winner_freq_entropy_norm, "phase_backend_channel_priority_bootstrap_winner_frequency_top2_margin": winner_freq_top2_margin, "phase_backend_channel_priority_dirichlet_posterior_p_best_gt_050": p_best_gt_050, "phase_backend_channel_priority_dirichlet_posterior_q05": p_best_q05, "phase_backend_channel_priority_bootstrap_size_span": boot_size_freq_span, "phase_backend_channel_priority_bootstrap_size_loo_span_max": boot_size_loo_span_max, "phase_backend_channel_priority_bootstrap_size_curvature": float(q2_bs), "phase_backend_channel_priority_bootstrap_size_aic_delta_quad_minus_linear": aic_delta_quad_minus_linear, "phase_backend_channel_priority_bootstrap_size_extrap_gap_max": extrap_gap_max, "phase_backend_channel_priority_bootstrap_seed_span_max": seed_span_max, "phase_backend_channel_priority_bootstrap_size_slope": float(slope_bs), "phase_backend_channel_priority_bootstrap_size_r2": r2_bs, "phase_common_loocv_max": loocv_residual_max, "phase_common_bootstrap_p95": link_bootstrap_resid_p95, "phase_bridge_stability_envelope_max": stability_envelope_max, "phase_cross_channel_coef_spread_l2": cross_channel_coef_spread_l2, "phase_joint_residual_l2": joint_resid_l2, "phase_joint_spread_l2": joint_spread_l2, "phase_joint_solver_gap": joint_solver_gap, "phase_joint_lambda_resid_span": lambda_resid_span, "phase_joint_holdout_resid_max": holdout_joint_resid_max, "phase_joint_multistart_resid_span": joint_ms_resid_span, "phase_joint_perturbation_resid_span": perturb_resid_span, "phase_joint_stress_envelope": joint_worst_case_residual_envelope, "phase_joint_cross_background_envelope_span": cross_background_envelope_span, "phase_joint_operator_transport_resid_span": operator_resid_span, "phase_joint_operator_transport_nu_sweep_resid_span": operator_nu_sweep_resid_span, "phase_joint_operator_transport_nu_sweep_solver_gap_max": operator_nu_sweep_solver_gap_max, "phase_joint_operator_transport_nu_lambda_resid_span": operator_nu_lambda_resid_span, "phase_joint_operator_transport_nu_lambda_solver_gap_max": operator_nu_lambda_solver_gap_max, "phase_joint_operator_transport_nu_lambda_weighted_resid_max": operator_nu_lambda_weighted_resid_max, "phase_joint_operator_transport_nu_lambda_weighted_resid_span": operator_nu_lambda_weighted_resid_span, "phase_joint_operator_transport_nu_lambda_condition_weighted_resid_max": operator_nu_lambda_cond_weighted_resid_max, "phase_joint_operator_transport_nu_lambda_condition_weighted_resid_span": operator_nu_lambda_cond_weighted_resid_span, "phase_joint_operator_transport_dual_pareto_count": pareto_count, "phase_joint_operator_transport_dual_branch_flips_total": int(branch_flip_total), "residual": payload["residual_obstruction"]})
     payload["theorem_core_digest_recomputed_sha256"] = digest({"solution": payload["scipy_numpy_sympy_calibration"]["solution"], "max_fd_gap": max_fd_gap, "max_grid_refine_gap": max_grid_refine_gap, "quad_tol_span": quad_tol_span, "cond_p95": cond_p95, "bootstrap_seed_span_max": bootstrap_seed_span_max, "backend_fit_loss": backend_fit_loss, "backend_fit_loss_lbfgsb": backend_fit_loss_lbfgsb, "backend_fit_loss_gap": backend_fit_loss_gap, "multistart_loss_span": multistart_loss_span, "multichannel_max_solver_gap": channel_solver_gap_max, "multichannel_global_loss_spread": channel_loss_spread, "renorm_solver_gap": coef_b1_gap, "renorm_residual_l2": residual_b1_l2, "po3_objective": float(po3_res.fun), "po3_covariant_proxy_value_d1": po3_covariant_proxy_val, "transport_closure_max": transport_closure_max, "transport_symmetry_max": transport_symmetry_max, "po2_max_delta_bg": max_delta_bg_under_constraints, "selector_ratio_upper_bound": selector_ratio_upper_bound, "selector_entropy_span": selector_entropy_span, "discm_basis_cond": basis_cond, "discm_unc_max": common_basis_unc_max, "discm_resid_max": common_basis_resid_max, "channel_phase_min_global": channel_phase_min_global, "channel_phase_tol_span_max": tol_span_max, "phase_common_cond": phase_common_cond, "phase_common_residual_l2": phase_common_residual_l2, "phase_common_residual_backend_sub_l2": phase_common_residual_backend_sub_l2, "phase_backend_channel_delta_abs_max": channel_delta_abs_max, "phase_backend_transport_channel_delta_abs_max": channel_transport_delta_abs_max, "phase_backend_channel_priority_cond_weighted_median_span": channel_priority_cond_weighted_median_span, "phase_backend_channel_priority_winner_count": channel_priority_winner_count, "phase_backend_channel_priority_bootstrap_winner_frequency_max": winner_freq_max, "phase_backend_channel_priority_bootstrap_winner_frequency_wilson_lb95": winner_freq_max_wilson_lb, "phase_backend_channel_priority_bootstrap_winner_frequency_entropy_norm": winner_freq_entropy_norm, "phase_backend_channel_priority_bootstrap_winner_frequency_top2_margin": winner_freq_top2_margin, "phase_backend_channel_priority_dirichlet_posterior_p_best_gt_050": p_best_gt_050, "phase_backend_channel_priority_dirichlet_posterior_q05": p_best_q05, "phase_backend_channel_priority_bootstrap_size_span": boot_size_freq_span, "phase_backend_channel_priority_bootstrap_size_loo_span_max": boot_size_loo_span_max, "phase_backend_channel_priority_bootstrap_size_curvature": float(q2_bs), "phase_backend_channel_priority_bootstrap_size_aic_delta_quad_minus_linear": aic_delta_quad_minus_linear, "phase_backend_channel_priority_bootstrap_size_extrap_gap_max": extrap_gap_max, "phase_backend_channel_priority_bootstrap_seed_span_max": seed_span_max, "phase_backend_channel_priority_bootstrap_size_slope": float(slope_bs), "phase_backend_channel_priority_bootstrap_size_r2": r2_bs, "phase_common_loocv_max": loocv_residual_max, "phase_common_bootstrap_p95": link_bootstrap_resid_p95, "phase_bridge_stability_envelope_max": stability_envelope_max, "phase_cross_channel_coef_spread_l2": cross_channel_coef_spread_l2, "phase_joint_residual_l2": joint_resid_l2, "phase_joint_spread_l2": joint_spread_l2, "phase_joint_solver_gap": joint_solver_gap, "phase_joint_lambda_resid_span": lambda_resid_span, "phase_joint_holdout_resid_max": holdout_joint_resid_max, "phase_joint_multistart_resid_span": joint_ms_resid_span, "phase_joint_perturbation_resid_span": perturb_resid_span, "phase_joint_stress_envelope": joint_worst_case_residual_envelope, "phase_joint_cross_background_envelope_span": cross_background_envelope_span, "phase_joint_operator_transport_resid_span": operator_resid_span, "phase_joint_operator_transport_nu_sweep_resid_span": operator_nu_sweep_resid_span, "phase_joint_operator_transport_nu_sweep_solver_gap_max": operator_nu_sweep_solver_gap_max, "phase_joint_operator_transport_nu_lambda_resid_span": operator_nu_lambda_resid_span, "phase_joint_operator_transport_nu_lambda_solver_gap_max": operator_nu_lambda_solver_gap_max, "phase_joint_operator_transport_nu_lambda_weighted_resid_max": operator_nu_lambda_weighted_resid_max, "phase_joint_operator_transport_nu_lambda_weighted_resid_span": operator_nu_lambda_weighted_resid_span, "phase_joint_operator_transport_nu_lambda_condition_weighted_resid_max": operator_nu_lambda_cond_weighted_resid_max, "phase_joint_operator_transport_nu_lambda_condition_weighted_resid_span": operator_nu_lambda_cond_weighted_resid_span, "phase_joint_operator_transport_dual_pareto_count": pareto_count, "phase_joint_operator_transport_dual_branch_flips_total": int(branch_flip_total), "residual": payload["residual_obstruction"]})
     payload["gatekeeper_checks"]["theorem_digest_self_consistent"] = payload["theorem_core_digest_sha256"] == payload["theorem_core_digest_recomputed_sha256"]
     payload["gatekeeper_checks"]["reproducibility_digest_self_consistent"] = reproducibility_digest_1 == reproducibility_digest_2
+
+    csv_fields = [
+        "channel",
+        "status",
+        "prob_seed_nonworse",
+        "prob_extrap_nonworse",
+        "prob_q05_nonworse",
+        "prob_seed_nonworse_ci95_lower",
+        "prob_seed_nonworse_ci95_upper",
+        "prob_extrap_nonworse_ci95_lower",
+        "prob_extrap_nonworse_ci95_upper",
+        "prob_q05_nonworse_ci95_lower",
+        "prob_q05_nonworse_ci95_upper",
+        "min_ci_margin_to_threshold",
+        "seed_ci_margin",
+        "extrap_ci_margin",
+        "q05_ci_margin",
+        "nonworse_probability_conditions_met",
+        "nonworse_probability_ci95_conditions_met",
+        "low_power_detected",
+        "ready_for_real_backend_substitution",
+    ]
+    verdict_rows_csv = []
+    risk_by_channel = {r["channel"]: r for r in paired_delta_panel["per_channel_risk_ranking"]["rows"]}
+    for row in paired_delta_panel["per_channel_power_aware_verdicts"]:
+        rr = risk_by_channel[row["channel"]]
+        verdict_rows_csv.append({
+            "channel": row["channel"],
+            "status": row["status"],
+            "prob_seed_nonworse": row["prob_seed_nonworse"],
+            "prob_extrap_nonworse": row["prob_extrap_nonworse"],
+            "prob_q05_nonworse": row["prob_q05_nonworse"],
+            "prob_seed_nonworse_ci95_lower": row["prob_seed_nonworse_ci95"]["lower"],
+            "prob_seed_nonworse_ci95_upper": row["prob_seed_nonworse_ci95"]["upper"],
+            "prob_extrap_nonworse_ci95_lower": row["prob_extrap_nonworse_ci95"]["lower"],
+            "prob_extrap_nonworse_ci95_upper": row["prob_extrap_nonworse_ci95"]["upper"],
+            "prob_q05_nonworse_ci95_lower": row["prob_q05_nonworse_ci95"]["lower"],
+            "prob_q05_nonworse_ci95_upper": row["prob_q05_nonworse_ci95"]["upper"],
+            "min_ci_margin_to_threshold": rr["min_ci_margin_to_threshold"],
+            "seed_ci_margin": rr["seed_ci_margin"],
+            "extrap_ci_margin": rr["extrap_ci_margin"],
+            "q05_ci_margin": rr["q05_ci_margin"],
+            "nonworse_probability_conditions_met": row["nonworse_probability_conditions_met"],
+            "nonworse_probability_ci95_conditions_met": row["nonworse_probability_ci95_conditions_met"],
+            "low_power_detected": row["low_power_detected"],
+            "ready_for_real_backend_substitution": row["ready_for_real_backend_substitution"],
+        })
+    with OUT_CSV.open("w", encoding="utf-8", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=csv_fields)
+        w.writeheader()
+        for row in verdict_rows_csv:
+            w.writerow(row)
+    quality_fields = [
+        "channel",
+        "seed_n_pairs", "seed_n_zero_deltas", "seed_n_nonzero_deltas", "seed_zero_delta_fraction", "seed_effective_pair_fraction", "seed_min_effective_pairs_required", "seed_low_power_flag",
+        "extrap_n_pairs", "extrap_n_zero_deltas", "extrap_n_nonzero_deltas", "extrap_zero_delta_fraction", "extrap_effective_pair_fraction", "extrap_min_effective_pairs_required", "extrap_low_power_flag",
+        "q05_n_pairs", "q05_n_zero_deltas", "q05_n_nonzero_deltas", "q05_zero_delta_fraction", "q05_effective_pair_fraction", "q05_min_effective_pairs_required", "q05_low_power_flag",
+    ]
+    quality_rows_csv = []
+    for row in paired_delta_panel["per_channel_wilcoxon_quality"]:
+        quality_rows_csv.append({
+            "channel": row["channel"],
+            "seed_n_pairs": row["seed"]["n_pairs"],
+            "seed_n_zero_deltas": row["seed"]["n_zero_deltas"],
+            "seed_n_nonzero_deltas": row["seed"]["n_nonzero_deltas"],
+            "seed_zero_delta_fraction": row["seed"]["zero_delta_fraction"],
+            "seed_effective_pair_fraction": row["seed"]["effective_pair_fraction"],
+            "seed_min_effective_pairs_required": row["seed"]["min_effective_pairs_required"],
+            "seed_low_power_flag": row["seed"]["low_power_flag"],
+            "extrap_n_pairs": row["extrap"]["n_pairs"],
+            "extrap_n_zero_deltas": row["extrap"]["n_zero_deltas"],
+            "extrap_n_nonzero_deltas": row["extrap"]["n_nonzero_deltas"],
+            "extrap_zero_delta_fraction": row["extrap"]["zero_delta_fraction"],
+            "extrap_effective_pair_fraction": row["extrap"]["effective_pair_fraction"],
+            "extrap_min_effective_pairs_required": row["extrap"]["min_effective_pairs_required"],
+            "extrap_low_power_flag": row["extrap"]["low_power_flag"],
+            "q05_n_pairs": row["q05"]["n_pairs"],
+            "q05_n_zero_deltas": row["q05"]["n_zero_deltas"],
+            "q05_n_nonzero_deltas": row["q05"]["n_nonzero_deltas"],
+            "q05_zero_delta_fraction": row["q05"]["zero_delta_fraction"],
+            "q05_effective_pair_fraction": row["q05"]["effective_pair_fraction"],
+            "q05_min_effective_pairs_required": row["q05"]["min_effective_pairs_required"],
+            "q05_low_power_flag": row["q05"]["low_power_flag"],
+        })
+    with OUT_QUALITY_CSV.open("w", encoding="utf-8", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=quality_fields)
+        w.writeheader()
+        for row in quality_rows_csv:
+            w.writerow(row)
+    payload["gatekeeper_checks"]["phase_backend_substitution_channel_first_per_channel_quality_csv_json_consistent"] = bool(
+        len(quality_rows_csv) == len(paired_delta_panel["per_channel_wilcoxon_quality"]) and
+        {r["channel"] for r in quality_rows_csv} == {r["channel"] for r in paired_delta_panel["per_channel_wilcoxon_quality"]}
+    )
+    payload["gatekeeper_checks"]["phase_backend_substitution_channel_first_per_channel_verdict_csv_json_consistent"] = bool(
+        len(verdict_rows_csv) == len(paired_delta_panel["per_channel_power_aware_verdicts"]) and
+        {r["channel"] for r in verdict_rows_csv} == {r["channel"] for r in paired_delta_panel["per_channel_power_aware_verdicts"]}
+    )
 
     OUT.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(OUT)

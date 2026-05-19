@@ -131,8 +131,14 @@ This matches the strict kernel-mode lane convention where distance classes $1 \d
 Define the strict working kernel:
 
 $$
-K_{\mathrm{sg}}(d) = \frac{\cos(\omega d+\phi)}{1+\beta d^{\eta}}, \qquad (\omega,\phi,\beta,\eta)=(0.18575, 0.16250, 1.0, 1.8).
+K_{\mathrm{sg}}(d) = \frac{\cos(\omega d+\phi_{\mathrm{kernel}})}{1+\beta d^{\eta}}, \qquad (\omega,\phi_{\mathrm{kernel}},\beta,\eta)=(0.18575, 0.16250, 1.0, 1.8).
 $$
+
+Notation legend (kernel vs field):
+
+- $\phi_{\mathrm{kernel}}$: phase constant in $K_{\mathrm{sg}}$ (dimensionless parameter),
+- $\Phi(x)$: coherence/order field,
+- $\phi(x)$: legacy alias for $\Phi(x)$ in older formulas.
 
 This is the later-pipeline strict working kernel selected by the strict gate chain (`QW-2049`) and used in the
 kernel-mode ring lane (`QW-2118`).
@@ -154,7 +160,7 @@ $$
 2. one real scalar order / coherence field:
 
 $$
-\Phi(x)=\phi(x)\in\mathbb{R}.
+\Phi(x)\in\mathbb{R}, \qquad \phi(x)\equiv \Phi(x) \text{ (legacy alias only)}.
 $$
 
 $\Phi$ is not treated as an independent ontological substrate; it is an internal order/coherence projection used in the
@@ -190,7 +196,7 @@ $(K_{k,j}+K_{j,k})/2$ exactly as exported in `QW-2165`.
 Define:
 
 $$
-V_{\Phi}(\phi) := \frac{1}{2} m_{\phi}^2\,\phi^2 + \frac{1}{4} \lambda_{\phi}\,\phi^4,
+V_{\Phi}(\Phi) := \frac{1}{2} m_{\phi}^2\,\Phi^2 + \frac{1}{4} \lambda_{\phi}\,\Phi^4,
 $$
 
 $$
@@ -198,7 +204,7 @@ V_{\Psi}(\Psi) := \sum_{i=0}^{11}\left( \frac{1}{2} m_{\psi i}^2\,\psi_i^2 + \fr
 $$
 
 $$
-V_{\mathrm{Y}}(\Psi,\phi) := \sum_{i=0}^{11} gY_i\,\phi^2\,\psi_i^2.
+V_{\mathrm{Y}}(\Psi,\Phi) := \sum_{i=0}^{11} gY_i\,\Phi^2\,\psi_i^2.
 $$
 
 These coefficient families appear in the strict canonical action/EoM/Hessian exports (`QW-2163/2165/2166`).

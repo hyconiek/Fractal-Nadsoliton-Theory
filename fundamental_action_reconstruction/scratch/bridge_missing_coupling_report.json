@@ -1,0 +1,39 @@
+{
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "result_kind": "SCRATCH_MISSING_COUPLING_HYPOTHESIS_TEST__NOT_A_THEOREM",
+  "models": {
+    "M0_legacy": {
+      "delta_phi": 0.11842938500129246,
+      "beta_tors": 20.0,
+      "scale_c": 3.6577680942720483,
+      "sse": 0.12359529388851365,
+      "aic": -4148.675454220636,
+      "bic": -4140.246238023792
+    },
+    "M1_legacy_plus_eta_eff": {
+      "delta_phi": 0.007115701093607691,
+      "beta_tors": 1.1799154945384065,
+      "eta_eff": 1.7388862982059556,
+      "scale_c": 0.39716733913446106,
+      "sse": 0.00017918857995359336,
+      "aic": -7414.839942906942,
+      "bic": -7402.196118611676
+    }
+  },
+  "comparison": {
+    "delta_aic_M0_minus_M1": 3266.164488686306,
+    "delta_bic_M0_minus_M1": 3261.949880587884,
+    "bootstrap_prob_M1_better": 1.0,
+    "wilcoxon_pvalue_M1_better": 3.0417799248457183e-51
+  },
+  "symbolic_class_separation": {
+    "denominator_difference_symbolic": "b*(d - d**eta)",
+    "note": "Model classes coincide only on constrained submanifolds (e.g., eta_eff=1)."
+  },
+  "hard_limits": [
+    "Evidence for missing coupling is model-selection evidence, not a bridge theorem.",
+    "No role-transfer from legacy ontology to strict kernel is inferred.",
+    "Kernel split remains open pending explicit theorem/non-bridge theorem."
+  ],
+  "next_honest_step": "Test whether eta_eff remains stable across independent observables/channels; if unstable, classify as phenomenological fit artifact rather than missing fundamental coupling."
+}
