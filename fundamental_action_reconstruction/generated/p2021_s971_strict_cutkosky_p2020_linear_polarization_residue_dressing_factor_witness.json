@@ -1,0 +1,252 @@
+{
+  "ledger_id": "P2021_S971_STRICT_CUTKOSKY_P2020_PROXY_RESIDUE_ADMISSIBILITY_AUDIT",
+  "packet_id": "P2021",
+  "stage_id": "S971",
+  "produced_by": "p2021_s971_strict_cutkosky_p2020_linear_polarization_residue_dressing_factor_witness.py",
+  "timestamp_utc": "2026-05-18T00:00:00+00:00",
+  "route": "strict_only",
+  "legacy_bridge_used": false,
+  "channel": "graviton->gauge_gauge",
+  "depends_on": {
+    "p2020": "P2020_S970_STRICT_CUTKOSKY_P2019_TREE_PHASE_SPACE_CUT_SUM_WITNESS",
+    "p1994": "P1994_S944_STRICT_CUTKOSKY_DRESSED_AMPLITUDE_FIRST_IMPORT_WITNESS"
+  },
+  "corrective_review_note": "The P1994 Z(s) factor is retained only as an algebraic proxy sandbox.  P2021 now rejects it as a theorem-grade dressed-residue input because it is not loop-derived, not same-scheme locked to P1953, and not tied to BRST-projected DiscM.",
+  "input_scope": {
+    "tree_cut_sum_source": "P2020 exact linear-polarization-resolved tree phase-space CutSum matrix",
+    "proxy_factor_source": "P1994 first dressed proxy import Z(s); P1994 itself labels the construction proxy and mirrored, not a loop-derived backend",
+    "normalization": "matrices are in units of kappa^2*Z_gauge^2 and preserve the P2020 {plus,cross} real linear-polarization basis",
+    "scheme_guard": "No MSbar_B1_seed loop discontinuity is locked to this proxy factor."
+  },
+  "p2020_tree_linear_polarization_matrices_over_kappa2_Zgauge2": {
+    "no_identical_symmetry": [
+      [
+        "1/pi",
+        "0"
+      ],
+      [
+        "0",
+        "1/pi"
+      ]
+    ],
+    "identical_final_state": [
+      [
+        "1/(2*pi)",
+        "0"
+      ],
+      [
+        "0",
+        "1/(2*pi)"
+      ]
+    ],
+    "basis_order": [
+      "plus",
+      "cross"
+    ]
+  },
+  "proxy_residue_factor_sandbox": {
+    "domain": "s > 0 real",
+    "Z_proxy(s)": "(51*s + 50)/(50*(s + 1))",
+    "R_proxy(s)=Z_proxy(s)^2": "(51*s + 50)**2/(2500*(s + 1)**2)",
+    "numerator": "(51*s + 50)**2",
+    "denominator": "2500*(s + 1)**2",
+    "algebraic_reason": "R_proxy(s) is the square of a real rational function; for P1994 z1=1/50, Z_proxy(s)=(51*s + 50)/(50*(s + 1)) is strictly positive for s>0.",
+    "admissibility_warning": "This positivity is only a scalar proxy-transport fact.  It is not a loop-derived dressed residue and is not accepted as P1953 M_dressed_common_basis or DiscM_common_basis input."
+  },
+  "proxy_transport_linear_polarization_matrices_over_kappa2_Zgauge2": {
+    "no_identical_symmetry": [
+      [
+        "(51*s + 50)**2/(2500*pi*(s + 1)**2)",
+        "0"
+      ],
+      [
+        "0",
+        "(51*s + 50)**2/(2500*pi*(s + 1)**2)"
+      ]
+    ],
+    "identical_final_state": [
+      [
+        "(51*s + 50)**2/(5000*pi*(s + 1)**2)",
+        "0"
+      ],
+      [
+        "0",
+        "(51*s + 50)**2/(5000*pi*(s + 1)**2)"
+      ]
+    ],
+    "basis_order": [
+      "plus",
+      "cross"
+    ],
+    "trace_no_identical_symmetry": "(51*s + 50)**2/(1250*pi*(s + 1)**2)",
+    "trace_identical_final_state": "(51*s + 50)**2/(2500*pi*(s + 1)**2)",
+    "eigenvalues_no_identical_symmetry": [
+      "(51*s + 50)**2/(2500*pi*(s + 1)**2)"
+    ],
+    "eigenvalues_identical_final_state": [
+      "(51*s + 50)**2/(5000*pi*(s + 1)**2)"
+    ],
+    "accepted_as_dressed_residue": false
+  },
+  "numeric_grid_certificate": {
+    "grid_s_values": [
+      "1/2",
+      "1",
+      "2",
+      "4",
+      "8"
+    ],
+    "max_exact_numeric_eigenvalue_l2_error": 0.0,
+    "rows": [
+      {
+        "s": "1/2",
+        "Z_proxy(s)": 1.0066666666666666,
+        "R_proxy(s)=Z_proxy(s)^2": 1.0133777777777777,
+        "proxy_transport_no_symmetry_matrix_over_kappa2_Zgauge2": [
+          [
+            0.32256816510562714,
+            0.0
+          ],
+          [
+            0.0,
+            0.32256816510562714
+          ]
+        ],
+        "proxy_transport_no_symmetry_eigvals_numeric": [
+          0.32256816510562714,
+          0.32256816510562714
+        ],
+        "proxy_transport_no_symmetry_trace_numeric": 0.6451363302112543,
+        "positive_semidefinite_numeric": true,
+        "eig_numeric_vs_exact_l2_error": 0.0
+      },
+      {
+        "s": "1",
+        "Z_proxy(s)": 1.01,
+        "R_proxy(s)=Z_proxy(s)^2": 1.0201,
+        "proxy_transport_no_symmetry_matrix_over_kappa2_Zgauge2": [
+          [
+            0.32470791489608486,
+            0.0
+          ],
+          [
+            0.0,
+            0.32470791489608486
+          ]
+        ],
+        "proxy_transport_no_symmetry_eigvals_numeric": [
+          0.32470791489608486,
+          0.32470791489608486
+        ],
+        "proxy_transport_no_symmetry_trace_numeric": 0.6494158297921697,
+        "positive_semidefinite_numeric": true,
+        "eig_numeric_vs_exact_l2_error": 0.0
+      },
+      {
+        "s": "2",
+        "Z_proxy(s)": 1.0133333333333334,
+        "R_proxy(s)=Z_proxy(s)^2": 1.0268444444444444,
+        "proxy_transport_no_symmetry_matrix_over_kappa2_Zgauge2": [
+          [
+            0.3268547382395689,
+            0.0
+          ],
+          [
+            0.0,
+            0.3268547382395689
+          ]
+        ],
+        "proxy_transport_no_symmetry_eigvals_numeric": [
+          0.3268547382395689,
+          0.3268547382395689
+        ],
+        "proxy_transport_no_symmetry_trace_numeric": 0.6537094764791378,
+        "positive_semidefinite_numeric": true,
+        "eig_numeric_vs_exact_l2_error": 0.0
+      },
+      {
+        "s": "4",
+        "Z_proxy(s)": 1.016,
+        "R_proxy(s)=Z_proxy(s)^2": 1.032256,
+        "proxy_transport_no_symmetry_matrix_over_kappa2_Zgauge2": [
+          [
+            0.32857728987253504,
+            0.0
+          ],
+          [
+            0.0,
+            0.32857728987253504
+          ]
+        ],
+        "proxy_transport_no_symmetry_eigvals_numeric": [
+          0.32857728987253504,
+          0.32857728987253504
+        ],
+        "proxy_transport_no_symmetry_trace_numeric": 0.6571545797450701,
+        "positive_semidefinite_numeric": true,
+        "eig_numeric_vs_exact_l2_error": 0.0
+      },
+      {
+        "s": "8",
+        "Z_proxy(s)": 1.0177777777777777,
+        "R_proxy(s)=Z_proxy(s)^2": 1.0358716049382717,
+        "proxy_transport_no_symmetry_matrix_over_kappa2_Zgauge2": [
+          [
+            0.3297281726689218,
+            0.0
+          ],
+          [
+            0.0,
+            0.3297281726689218
+          ]
+        ],
+        "proxy_transport_no_symmetry_eigvals_numeric": [
+          0.3297281726689218,
+          0.3297281726689218
+        ],
+        "proxy_transport_no_symmetry_trace_numeric": 0.6594563453378436,
+        "positive_semidefinite_numeric": true,
+        "eig_numeric_vs_exact_l2_error": 0.0
+      }
+    ],
+    "interpretation": "Numerical PSD confirms only the proxy scalar-transport algebra, not theorem-grade unitarity."
+  },
+  "p1953_contract_non_update": {
+    "M_dressed_common_basis": "OPEN_NOT_EXPORTED__P2021_PROXY_FACTOR_REJECTED_AS_DRESSED_INPUT",
+    "AbsM_dressed_squared_common_basis": "OPEN_NOT_EXPORTED__PROXY_TRANSPORT_SANDBOX_ONLY",
+    "CutSum_common_basis": "P2020_TREE_LINEAR_POLARIZATION_CUTSUM_REMAINS_AVAILABLE_BUT_NOT_DRESSED",
+    "DiscM_common_basis": "OPEN_NOT_EVALUATED",
+    "DiscM_minus_CutSum_simplified": "OPEN_NOT_EVALUATED",
+    "external_state_projectors including BRST physical-state projector": "OPEN_BRST_COHOMOLOGY_PROJECTOR_NOT_EXPORTED"
+  },
+  "local_algebra_sanity_checks": {
+    "p2020_linear_polarization_matrix_available": true,
+    "p1994_proxy_factor_available": true,
+    "p2020_matrix_normalization_matches_expected": true,
+    "proxy_factor_symbolically_positive_on_s_positive": true,
+    "linear_polarization_basis_preserved_no_rotation": true,
+    "proxy_transport_matrices_symbolically_psd_given_R_positive": true,
+    "numeric_grid_psd_and_exact_eigenvalue_match": true
+  },
+  "admissibility_checks_for_dressed_cutkosky": {
+    "loop_derived_from_L_total": false,
+    "same_scheme_as_P1953_MSbar_B1_seed_locked": false,
+    "DiscM_common_basis_exported": false,
+    "DiscM_minus_CutSum_simplified_evaluated": false,
+    "BRST_physical_state_projector_exported": false,
+    "proxy_not_promoted_to_dressed_residue": true
+  },
+  "admissible_for_p1953_dressed_interface": false,
+  "result_kind": "OPEN_PROXY_RESIDUE_TRANSPORT_SANITY_ONLY_NOT_P1953_ADMISSIBLE",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "false_pass_guard": "P2021 proves only that a scalar positive proxy factor would preserve the P2020 linear-polarization matrix algebra.  It explicitly rejects that proxy as a loop-derived dressed residue, does not update M_dressed_common_basis, does not export DiscM_common_basis, does not evaluate DiscM=CutSum, does not supply BRST projection, does not discharge QW-2191, and does not close ToE.",
+  "next_honest_step": "Build P2022 as a real same-scheme source audit/derivation: either extract a loop-derived hAA self-energy/discontinuity residue from L_total with BRST projector data, or export a nonavailability theorem listing the exact missing vertices, gauges, and projector inputs.",
+  "toe_progress": "Corrects the unitarity route by preventing a proxy residue factor from being mistaken for dressed Cutkosky data.  The useful local algebra survives as a sandbox, but the theorem frontier is sharpened to the missing loop-derived same-scheme DiscM/residue and BRST projector.",
+  "lay_explanation": "Sprawdziliśmy, że dodatni próbny mnożnik nie psuje macierzy dwóch polaryzacji. Ale po recenzji nie wolno go uznać za prawdziwą poprawkę pętlową: nie pochodzi z pełnego rachunku pętli i nie ma projektora BRST. Dlatego wynik jest audytem blokady, nie krokiem domykającym unitarność.",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.4.5",
+    "scipy": "1.17.1",
+    "sympy": "1.14.0"
+  }
+}
