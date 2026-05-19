@@ -1,5 +1,5 @@
 {
-  "schema_version": "p2025_s975_v18",
+  "schema_version": "p2025_s975_v37",
   "produced_by": "p2025_s975_strict_cutkosky_same_scheme_cohomology_amplitude_bridge_seed.py",
   "timestamp_utc": "2026-05-19T00:00:00+00:00",
   "status": "OPEN_OBSTRUCTION_WITH_TRACE",
@@ -183,7 +183,7 @@
     "exact_match": true
   },
   "finite_difference_slope_consistency": {
-    "step_h": 0.0001,
+    "step_h": 2,
     "rows": [
       {
         "s": 0.5,
@@ -338,6 +338,950 @@
     ],
     "multistart_loss_span": 0.45649238383910756
   },
+  "backend_multichannel_discm_loop_precursor": {
+    "channels": [
+      {
+        "channel": "graviton_to_gauge_gauge",
+        "target_vector": [
+          0.4564915035333617,
+          0.0015054678003150745,
+          5.459826701859072e-09
+        ],
+        "nelder_mead_solution": [
+          1.2729589094613835e-08,
+          1.6570754076914055e-07,
+          -6.395486047088764e-08
+        ],
+        "nelder_mead_loss_l2": 0.45649377505721817,
+        "lbfgsb_solution": [
+          0.22780566693533652,
+          0.22905641090594386,
+          -9.757855054233436e-09
+        ],
+        "lbfgsb_loss_l2": 0.00044968117947424656,
+        "solver_loss_gap": 0.4560440938777439
+      },
+      {
+        "channel": "graviton_to_fermion_fermion",
+        "target_vector": [
+          0.4199721832506928,
+          0.0015807411903308284,
+          6.005809372044979e-09
+        ],
+        "nelder_mead_solution": [
+          1.2729589094613835e-08,
+          1.6570754076914055e-07,
+          -6.395486047088764e-08
+        ],
+        "nelder_mead_loss_l2": 0.41997494714205336,
+        "lbfgsb_solution": [
+          0.2091957121653339,
+          0.21077646402815792,
+          8.549791363436777e-09
+        ],
+        "lbfgsb_loss_l2": 1.2517724304548979e-08,
+        "solver_loss_gap": 0.41997493462432905
+      },
+      {
+        "channel": "graviton_to_scalar_scalar",
+        "target_vector": [
+          0.4930108238160307,
+          0.0014301944102993206,
+          4.913844031673165e-09
+        ],
+        "nelder_mead_solution": [
+          1.2729589094613835e-08,
+          1.6570754076914055e-07,
+          -6.395486047088764e-08
+        ],
+        "nelder_mead_loss_l2": 0.49301268740773047,
+        "lbfgsb_solution": [
+          0.2457893472899066,
+          0.24721953420783557,
+          3.875614869663936e-06
+        ],
+        "lbfgsb_loss_l2": 3.4954041244666605e-08,
+        "solver_loss_gap": 0.49301265245368925
+      }
+    ],
+    "max_solver_loss_gap": 0.49301265245368925,
+    "global_loss_spread": 0.49301267489000616
+  },
+  "backend_renormalization_b1_precursor": {
+    "d_grid": [
+      0.25,
+      0.5,
+      0.9,
+      1.4,
+      2.0
+    ],
+    "rows": [
+      {
+        "d": 0.25,
+        "R2": 0.8167144230114534,
+        "Ric2": 0.28230279610746806,
+        "Riem2": 1.0704172237597458,
+        "GB": -1.217302895190063,
+        "target_divergence": 0.31323530340473066
+      },
+      {
+        "d": 0.5,
+        "R2": 0.5650523028086781,
+        "Ric2": 0.4098573408729534,
+        "Riem2": 0.0013291095114987491,
+        "GB": -0.3824526626198287,
+        "target_divergence": 0.11079913622893738
+      },
+      {
+        "d": 0.9,
+        "R2": 0.26811560042432747,
+        "Ric2": 0.2517580309361302,
+        "Riem2": 0.22469462650860322,
+        "GB": -0.006311224685826372,
+        "target_divergence": 0.07845421129748714
+      },
+      {
+        "d": 1.4,
+        "R2": 0.10368389799706665,
+        "Ric2": 0.08686553394156259,
+        "Riem2": 0.10637189511547591,
+        "GB": 0.018153762965756673,
+        "target_divergence": 0.03651769011156393
+      },
+      {
+        "d": 2.0,
+        "R2": 0.03688072574574919,
+        "Ric2": 0.024140142381500137,
+        "Riem2": 0.024628694520929438,
+        "GB": 0.005998273769688603,
+        "target_divergence": 0.013040204343066906
+      }
+    ],
+    "basis_labels": [
+      "R2",
+      "Ric2",
+      "Riem2",
+      "GB"
+    ],
+    "scipy_lstsq_coefficients": {
+      "a_R2": 0.4129352324537382,
+      "a_Ric2": -0.233218773887147,
+      "a_Riem2": 0.11965561789536455,
+      "a_GB": 0.07086020309728758
+    },
+    "sympy_normal_eq_coefficients": {
+      "a_R2": 0.4129352324534562,
+      "a_Ric2": -0.23321877388685722,
+      "a_Riem2": 0.11965561789538406,
+      "a_GB": 0.07086020309718256
+    },
+    "max_abs_solver_gap": 2.897959650027815e-13,
+    "fit_residual_l2": 8.815046586005348e-05,
+    "fit_residual_linf": 6.878713344675609e-05,
+    "counterterm_operator_symbolic": "-0.304078976984435*(-1.8*d**0.8*cos(0.18575*d + 0.1625)/(1.0*d**1.8 + 1)**2 - 0.18575*sin(0.18575*d + 0.1625)/(1.0*d**1.8 + 1))**2 + 0.119655617895365*(0.6687*d**0.8*sin(0.18575*d + 0.1625)/(1.0*d**1.8 + 1) - (1.44/d**0.2 - 6.48*d**1.6/(1.0*d**1.8 + 1))*cos(0.18575*d + 0.1625)/(1.0*d**1.8 + 1) - 0.0345030625*cos(0.18575*d + 0.1625))**2/(1.0*d**1.8 + 1)**2 + 0.0708602030972876*(0.6687*d**0.8*sin(0.18575*d + 0.1625)/(1.0*d**1.8 + 1) - (1.44/d**0.2 - 6.48*d**1.6/(1.0*d**1.8 + 1))*cos(0.18575*d + 0.1625)/(1.0*d**1.8 + 1) - 0.0345030625*cos(0.18575*d + 0.1625))*cos(0.18575*d + 0.1625)/(1.0*d**1.8 + 1)**2 + 0.412935232453738*cos(0.18575*d + 0.1625)**2/(1.0*d**1.8 + 1)**2"
+  },
+  "po3_nonempty_certifier_precursor": {
+    "optimizer_method": "L-BFGS-B",
+    "bounds": {
+      "omega": [
+        0.05,
+        0.5
+      ],
+      "phi": [
+        0.0,
+        0.8
+      ],
+      "beta": [
+        0.2,
+        2.0
+      ],
+      "eta": [
+        1.0,
+        2.4
+      ]
+    },
+    "solution": {
+      "omega": 0.18575,
+      "phi": 0.1625,
+      "beta": 1.0,
+      "eta": 1.8
+    },
+    "objective_value": 0.0,
+    "solver_success": true,
+    "solver_message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+    "phase_integrals_over_s_grid": [
+      0.6458024652478899,
+      0.5054282196818368,
+      0.43037239937294364,
+      0.38147247078644214,
+      0.3193819625776963
+    ],
+    "constraints": {
+      "beta_positive": true,
+      "eta_ge_one": true,
+      "phase_integrals_positive_floor": true,
+      "phase_monotone_nonincreasing": true
+    },
+    "covariant_consistency_proxy_symbolic": "((1.0*d**1.8 + 1)**2*cos(0.18575*d + 0.1625)**2 + (1.8*d**0.8*cos(0.18575*d + 0.1625) + (0.18575*d**1.8 + 0.18575)*sin(0.18575*d + 0.1625))**2)/(1.0*d**1.8 + 1)**4",
+    "covariant_consistency_proxy_value_d1": 0.42762135620114655
+  },
+  "background_transport_nu_precursor": {
+    "nu_grid": [
+      0.1,
+      0.2,
+      0.35,
+      0.5
+    ],
+    "frw_to_bianchi_symbolic": "Matrix([\n[0.1*nu + 1,     0.02*nu,     0.01*nu],\n[   0.03*nu, 0.08*nu + 1,    0.015*nu],\n[   0.01*nu,    0.025*nu, 0.06*nu + 1]])",
+    "bianchi_to_frw_symbolic": "Matrix([\n[(0.004425*nu**2 + 0.14*nu + 1.0)/(0.000409*nu**3 + 0.017725*nu**2 + 0.24*nu + 1.0),        nu*(-0.00095*nu - 0.02)/(0.000409*nu**3 + 0.017725*nu**2 + 0.24*nu + 1.0),         nu*(-0.0005*nu - 0.01)/(0.000409*nu**3 + 0.017725*nu**2 + 0.24*nu + 1.0)],\n[         nu*(-0.00165*nu - 0.03)/(0.000409*nu**3 + 0.017725*nu**2 + 0.24*nu + 1.0), (0.0059*nu**2 + 0.16*nu + 1.0)/(0.000409*nu**3 + 0.017725*nu**2 + 0.24*nu + 1.0),        nu*(-0.0012*nu - 0.015)/(0.000409*nu**3 + 0.017725*nu**2 + 0.24*nu + 1.0)],\n[          nu*(-5.0e-5*nu - 0.01)/(0.000409*nu**3 + 0.017725*nu**2 + 0.24*nu + 1.0),        nu*(-0.0023*nu - 0.025)/(0.000409*nu**3 + 0.017725*nu**2 + 0.24*nu + 1.0), (0.0074*nu**2 + 0.18*nu + 1.0)/(0.000409*nu**3 + 0.017725*nu**2 + 0.24*nu + 1.0)]])",
+    "rows": [
+      {
+        "nu": 0.1,
+        "det_frw_to_bianchi": 1.024177659,
+        "closure_fro_error": 1.1102315647873303e-16,
+        "symmetry_commutator_fro_error": 7.905694150517888e-06
+      },
+      {
+        "nu": 0.2,
+        "det_frw_to_bianchi": 1.048712272,
+        "closure_fro_error": 2.482601877218758e-16,
+        "symmetry_commutator_fro_error": 3.1622776601620844e-05
+      },
+      {
+        "nu": 0.35,
+        "det_frw_to_bianchi": 1.086188848375,
+        "closure_fro_error": 4.710385008714656e-16,
+        "symmetry_commutator_fro_error": 9.684475334268204e-05
+      },
+      {
+        "nu": 0.5,
+        "det_frw_to_bianchi": 1.1244823750000001,
+        "closure_fro_error": 2.719606211453273e-16,
+        "symmetry_commutator_fro_error": 0.00019764235376046793
+      }
+    ],
+    "max_closure_fro_error": 4.710385008714656e-16,
+    "max_symmetry_commutator_fro_error": 0.00019764235376046793
+  },
+  "po2_sufficiency_trace_precursor": {
+    "l_total_symbolic": "C1**2*Y1 + C1*C2 + C2**2*Y2 + C3**2*Y3 + C3*C4 + C4**2*(Y1 + Y2)",
+    "eom_symbolic": {
+      "dL_dC1": "2*C1*Y1 + C2",
+      "dL_dC2": "C1 + 2*C2*Y2",
+      "dL_dC3": "2*C3*Y3 + C4",
+      "dL_dC4": "C3 + 2*C4*(Y1 + Y2)"
+    },
+    "delta_bg_yf_symbolic": "2*C1**2*Y1 + 2*C1*C2 + 2*C2**2*Y2 + 2*C3**2*Y3 + 2*C3*C4 + 2*C4**2*Y1 + 2*C4**2*Y2",
+    "delta_bg_yf_under_constraints_symbolic": "0",
+    "constraint_substitution": {
+      "C1": 0,
+      "C2": 0,
+      "C3": 0,
+      "C4": 0
+    },
+    "hessian_rank_symbolic": 4,
+    "hessian_det_symbolic": "(4*Y1*Y2 - 1)*(4*Y1*Y3 + 4*Y2*Y3 - 1)",
+    "numeric_rows": [
+      {
+        "Y1": 0.6400376923242629,
+        "Y2": 1.0921351578929623,
+        "Y3": 0.5082405609331966,
+        "eom_values_under_constraints": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "delta_bg_yf_under_constraints": 0.0
+      },
+      {
+        "Y1": 1.0218190429538347,
+        "Y2": 1.1772564731327086,
+        "Y3": 0.4126797369153831,
+        "eom_values_under_constraints": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "delta_bg_yf_under_constraints": 0.0
+      },
+      {
+        "Y1": 0.638433133033544,
+        "Y2": 0.6809706211654871,
+        "Y3": 0.9879543530329129,
+        "eom_values_under_constraints": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "delta_bg_yf_under_constraints": 0.0
+      },
+      {
+        "Y1": 1.4770000364517204,
+        "Y2": 0.4043380871804983,
+        "Y3": 0.7953084736848728,
+        "eom_values_under_constraints": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "delta_bg_yf_under_constraints": 0.0
+      },
+      {
+        "Y1": 1.298473510606582,
+        "Y2": 1.062927709184155,
+        "Y3": 0.7854168820656218,
+        "eom_values_under_constraints": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "delta_bg_yf_under_constraints": 0.0
+      },
+      {
+        "Y1": 1.6664859104751966,
+        "Y2": 0.796698611362032,
+        "Y3": 1.1945356344456874,
+        "eom_values_under_constraints": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "delta_bg_yf_under_constraints": 0.0
+      },
+      {
+        "Y1": 0.39239803882015906,
+        "Y2": 1.62434911686676,
+        "Y3": 1.4668896832396887,
+        "eom_values_under_constraints": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "delta_bg_yf_under_constraints": 0.0
+      },
+      {
+        "Y1": 0.37863545723485786,
+        "Y2": 0.792285866077747,
+        "Y3": 0.3987370640416753,
+        "eom_values_under_constraints": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "delta_bg_yf_under_constraints": 0.0
+      }
+    ],
+    "max_abs_delta_bg_yf_under_constraints": 0.0
+  },
+  "qw2191_selector_premise_precursor": {
+    "status": "NON_STRICT_PREMISE_PACKET",
+    "strict_core_closure_claimed": false,
+    "selector_source_kind": "explicit_symmetry_breaking_premise",
+    "selector_weight_symbolic": "exp(-epsilon_selector_break*m)/(m + 1)",
+    "selector_ratio_w1_w0_symbolic": "exp(-epsilon_selector_break)/2",
+    "epsilon_scan_rows": [
+      {
+        "epsilon_selector_break": 0.02,
+        "weights_m0_to_m5": [
+          1.0,
+          0.4900993366533776,
+          0.3202631463841077,
+          0.23544113339606218,
+          0.18462326927732717,
+          0.15080623633932658
+        ],
+        "ratio_w1_w0": 0.4900993366533776,
+        "gap_w0_w1": 0.5099006633466223,
+        "shannon_entropy": 1.5613281129429981
+      },
+      {
+        "epsilon_selector_break": 0.05,
+        "weights_m0_to_m5": [
+          1.0,
+          0.475614712250357,
+          0.30161247267865315,
+          0.21517699410626445,
+          0.1637461506155964,
+          0.1298001305119008
+        ],
+        "ratio_w1_w0": 0.475614712250357,
+        "gap_w0_w1": 0.524385287749643,
+        "shannon_entropy": 1.5297072277739199
+      },
+      {
+        "epsilon_selector_break": 0.1,
+        "weights_m0_to_m5": [
+          1.0,
+          0.45241870901797976,
+          0.2729102510259939,
+          0.18520455517042947,
+          0.13406400920712788,
+          0.1010884432854389
+        ],
+        "ratio_w1_w0": 0.45241870901797976,
+        "gap_w0_w1": 0.5475812909820202,
+        "shannon_entropy": 1.474939147709142
+      },
+      {
+        "epsilon_selector_break": 0.2,
+        "weights_m0_to_m5": [
+          1.0,
+          0.4093653765389909,
+          0.2234400153452131,
+          0.1372029090235066,
+          0.08986579282344431,
+          0.061313240195240384
+        ],
+        "ratio_w1_w0": 0.4093653765389909,
+        "gap_w0_w1": 0.5906346234610091,
+        "shannon_entropy": 1.3612016153520732
+      }
+    ],
+    "max_ratio_w1_w0": 0.4900993366533776,
+    "entropy_span": 0.20012649759092493,
+    "note": "QW-2191 remains open in strict-core; this packet is explicitly non-strict."
+  },
+  "discm_common_basis_integration_precursor": {
+    "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+    "common_basis_matrix": [
+      [
+        1.0,
+        0.2,
+        0.1
+      ],
+      [
+        0.3,
+        1.0,
+        0.15
+      ],
+      [
+        0.25,
+        0.35,
+        1.0
+      ],
+      [
+        0.6,
+        0.4,
+        0.3
+      ],
+      [
+        0.2,
+        0.7,
+        0.5
+      ],
+      [
+        0.4,
+        0.1,
+        0.8
+      ]
+    ],
+    "common_basis_condition_number": 2.2702280878834147,
+    "rows": [
+      {
+        "channel": "gauge_gauge",
+        "target_vector": [
+          0.4564915035333617,
+          0.0015054678003150745,
+          5.459826701859072e-09,
+          0.14037424556605305,
+          0.0,
+          4.642397577470092e-12
+        ],
+        "coefficients": [
+          0.4419052804062466,
+          -0.08716519231502465,
+          -0.12841826015920446
+        ],
+        "residual_l2": 0.11501979990805812,
+        "residual_linf": 0.06531098479899022,
+        "max_coef_std_bootstrap": 0.11721403855051613
+      },
+      {
+        "channel": "fermion_fermion",
+        "target_vector": [
+          0.4701862486393626,
+          0.001535577156321376,
+          5.678219769933435e-09,
+          0.14177798802171357,
+          0.0,
+          4.735245529019494e-12
+        ],
+        "coefficients": [
+          0.4541908170664778,
+          -0.08995894638790833,
+          -0.13211499469325563
+        ],
+        "residual_l2": 0.11974683460753491,
+        "residual_linf": 0.06698843642846054,
+        "max_coef_std_bootstrap": 0.120635133547121
+      },
+      {
+        "channel": "scalar_scalar",
+        "target_vector": [
+          0.4838809937453634,
+          0.0015656865123276776,
+          5.896612838007798e-09,
+          0.14318173047737412,
+          0.0,
+          4.8280934805688956e-12
+        ],
+        "coefficients": [
+          0.4664763537267087,
+          -0.09275270046079201,
+          -0.13581172922730667
+        ],
+        "residual_l2": 0.12450927486783257,
+        "residual_linf": 0.06866588805793086,
+        "max_coef_std_bootstrap": 0.12841179633353378
+      }
+    ],
+    "max_bootstrap_coef_std": 0.12841179633353378,
+    "max_channel_residual_l2": 0.12450927486783257,
+    "note": "DiscM common-basis gate remains open; this is bounded-uncertainty precursor only."
+  },
+  "channel_phase_space_cutkosky_precursor": {
+    "s_grid": [
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      3.0
+    ],
+    "rows": [
+      {
+        "channel": "gauge_gauge",
+        "parameters": {
+          "omega": 0.18575,
+          "phi": 0.1625,
+          "beta": 1.0,
+          "eta": 1.8
+        },
+        "integrals_over_s_grid": [
+          0.6458024652478899,
+          0.5054282196818368,
+          0.43037239937294364,
+          0.38147247078644214,
+          0.3193819625776963
+        ],
+        "quad_abs_errors_over_s_grid": [
+          4.6851411639181606e-14,
+          1.3100631690576847e-14,
+          5.051514762044462e-15,
+          2.0539125955565396e-15,
+          4.440892098500626e-16
+        ],
+        "monotone_nonincreasing": true,
+        "min_integral": 0.3193819625776963
+      },
+      {
+        "channel": "fermion_fermion",
+        "parameters": {
+          "omega": 0.1876075,
+          "phi": 0.160875,
+          "beta": 1.02,
+          "eta": 1.8
+        },
+        "integrals_over_s_grid": [
+          0.6424308011075204,
+          0.5026387822031492,
+          0.42793769762585715,
+          0.37928361357431684,
+          0.3175203868961344
+        ],
+        "quad_abs_errors_over_s_grid": [
+          4.785061236134425e-14,
+          1.2656542480726785e-14,
+          4.9960036108132044e-15,
+          1.9984014443252818e-15,
+          4.996003610813204e-16
+        ],
+        "monotone_nonincreasing": true,
+        "min_integral": 0.3175203868961344
+      },
+      {
+        "channel": "scalar_scalar",
+        "parameters": {
+          "omega": 0.1838925,
+          "phi": 0.16412500000000002,
+          "beta": 0.98,
+          "eta": 1.818
+        },
+        "integrals_over_s_grid": [
+          0.6512716303666449,
+          0.509897589117813,
+          0.43425077785401484,
+          0.38494731535858356,
+          0.3223258228893616
+        ],
+        "quad_abs_errors_over_s_grid": [
+          3.8968828164342995e-14,
+          1.0769163338864018e-14,
+          4.3298697960381105e-15,
+          1.887379141862766e-15,
+          3.578535500030196e-16
+        ],
+        "monotone_nonincreasing": true,
+        "min_integral": 0.3223258228893616
+      }
+    ],
+    "global_min_integral": 0.3175203868961344,
+    "tolerance_sweep_rows": [
+      {
+        "channel": "gauge_gauge",
+        "tolerances": [
+          1e-12,
+          1e-10,
+          1e-08
+        ],
+        "mean_integrals": [
+          0.4564915035333617,
+          0.4564915035334319,
+          0.4564915035380041
+        ],
+        "span": 4.642397577470092e-12
+      },
+      {
+        "channel": "fermion_fermion",
+        "tolerances": [
+          1e-12,
+          1e-10,
+          1e-08
+        ],
+        "mean_integrals": [
+          0.4539622562813955,
+          0.4539622562814672,
+          0.4539622562861334
+        ],
+        "span": 4.7378767575878555e-12
+      },
+      {
+        "channel": "scalar_scalar",
+        "tolerances": [
+          1e-12,
+          1e-10,
+          1e-08
+        ],
+        "mean_integrals": [
+          0.46053862711728355,
+          0.46053862711735194,
+          0.4605386271206764
+        ],
+        "span": 3.3928415632544784e-12
+      }
+    ],
+    "tolerance_span_max": 4.7378767575878555e-12,
+    "note": "Channelwise phase-space table only; no DiscM=CutSum closure claim."
+  },
+  "phase_common_basis_link_precursor": {
+    "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+    "feature_matrix": [
+      [
+        1.0,
+        0.4564915035333617,
+        0.11255445927210118,
+        0.3193819625776963,
+        0.32642050267019357
+      ],
+      [
+        1.0,
+        0.4539622562813955,
+        0.11203602779090298,
+        0.3175203868961344,
+        0.324910414211386
+      ],
+      [
+        1.0,
+        0.46053862711728355,
+        0.11342245134286756,
+        0.3223258228893616,
+        0.3289458074772833
+      ]
+    ],
+    "target_matrix": [
+      [
+        0.4564915035333617,
+        0.3193819625776963,
+        0.6458024652478899
+      ],
+      [
+        0.4539622562813955,
+        0.3175203868961344,
+        0.6424308011075204
+      ],
+      [
+        0.46053862711728355,
+        0.3223258228893616,
+        0.6512716303666449
+      ]
+    ],
+    "coefficients_matrix": [
+      [
+        -0.00030835495983094763,
+        0.0003326707878176238,
+        0.00043196867417671925
+      ],
+      [
+        0.5596031225278961,
+        0.47521936228410483,
+        0.6115759798484387
+      ],
+      [
+        0.04495334535245927,
+        -0.05389891754374446,
+        0.24451625922342637
+      ],
+      [
+        0.47521936228227607,
+        0.4871720740908142,
+        0.3419247056287319
+      ],
+      [
+        0.136356617568804,
+        -0.14524736845940325,
+        0.7029744677589091
+      ]
+    ],
+    "residual_l2": 5.841815678261509e-16,
+    "residual_linf": 8.326672684688674e-16,
+    "condition_number": 57751.56962128351,
+    "loocv_rows": [
+      {
+        "held_out_channel": "gauge_gauge",
+        "residual_l2": 2.738637538656584e-05
+      },
+      {
+        "held_out_channel": "fermion_fermion",
+        "residual_l2": 4.4478186017252095e-05
+      },
+      {
+        "held_out_channel": "scalar_scalar",
+        "residual_l2": 7.128252738896313e-05
+      }
+    ],
+    "loocv_residual_l2_max": 7.128252738896313e-05,
+    "bootstrap_rows_preview": [
+      {
+        "bootstrap_id": 0,
+        "sample_idx": [
+          2,
+          2,
+          0
+        ],
+        "residual_l2_full_eval": 4.447818601754481e-05
+      },
+      {
+        "bootstrap_id": 1,
+        "sample_idx": [
+          1,
+          1,
+          1
+        ],
+        "residual_l2_full_eval": 0.009066996647298686
+      },
+      {
+        "bootstrap_id": 2,
+        "sample_idx": [
+          1,
+          2,
+          2
+        ],
+        "residual_l2_full_eval": 2.738637538635929e-05
+      },
+      {
+        "bootstrap_id": 3,
+        "sample_idx": [
+          0,
+          1,
+          0
+        ],
+        "residual_l2_full_eval": 7.12825273890564e-05
+      },
+      {
+        "bootstrap_id": 4,
+        "sample_idx": [
+          0,
+          0,
+          0
+        ],
+        "residual_l2_full_eval": 0.006126481925085053
+      },
+      {
+        "bootstrap_id": 5,
+        "sample_idx": [
+          0,
+          2,
+          2
+        ],
+        "residual_l2_full_eval": 4.447818601751984e-05
+      },
+      {
+        "bootstrap_id": 6,
+        "sample_idx": [
+          1,
+          0,
+          0
+        ],
+        "residual_l2_full_eval": 7.128252738884821e-05
+      },
+      {
+        "bootstrap_id": 7,
+        "sample_idx": [
+          0,
+          1,
+          1
+        ],
+        "residual_l2_full_eval": 7.128252738843692e-05
+      }
+    ],
+    "bootstrap_residual_l2_p95": 0.009066996647298686,
+    "stability_envelope": {
+      "loocv_residual_l2_max": 7.128252738896313e-05,
+      "bootstrap_residual_l2_p95": 0.009066996647298686,
+      "tolerance_span_max": 4.7378767575878555e-12
+    },
+    "stability_envelope_max": 0.009066996647298686,
+    "cross_channel_coef_spread_l2": 0.6634315548638133,
+    "joint_coupled_fit": {
+      "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+      "method": "L-BFGS-B",
+      "objective": "sum_channel_residuals_sq + lambda*coef_spread_sq",
+      "lambda_spread": 0.1,
+      "solution_coefficients_matrix": [
+        [
+          -0.02512499309388432,
+          -0.09772204897191765,
+          0.12330306660157539
+        ],
+        [
+          0.5627437812545351,
+          0.4892462287365133,
+          0.594408599236253
+        ],
+        [
+          0.07546040194901625,
+          0.06761141217405649,
+          0.0924989449435632
+        ],
+        [
+          0.45039646054161386,
+          0.38970173100139416,
+          0.46421810611071124
+        ],
+        [
+          0.22289748879852972,
+          0.19947125678663435,
+          0.27171512936330006
+        ]
+      ],
+      "residual_l2": 0.009249876483530163,
+      "coef_spread_l2": 0.1895847583884092,
+      "solver_crosscheck_method": "SLSQP",
+      "solver_crosscheck_objective_gap": 8.54354578186476e-07,
+      "lambda_sweep_rows": [
+        {
+          "lambda_spread": 0.05,
+          "objective": 0.001862001874221678,
+          "residual_l2": 0.004818929751883393,
+          "coef_spread_l2": 0.19176881761734232
+        },
+        {
+          "lambda_spread": 0.1,
+          "objective": 0.0036798152291528615,
+          "residual_l2": 0.009249876483530163,
+          "coef_spread_l2": 0.1895847583884092
+        },
+        {
+          "lambda_spread": 0.2,
+          "objective": 0.007194029108852338,
+          "residual_l2": 0.017945956666407088,
+          "coef_spread_l2": 0.18536389561075103
+        }
+      ],
+      "lambda_sweep_residual_span": 0.013127026914523696,
+      "holdout_rotation_rows": [
+        {
+          "held_out_channel": "gauge_gauge",
+          "test_residual_l2": 0.007586278960692762
+        },
+        {
+          "held_out_channel": "fermion_fermion",
+          "test_residual_l2": 0.006533893429410764
+        },
+        {
+          "held_out_channel": "scalar_scalar",
+          "test_residual_l2": 0.009393807373792995
+        }
+      ],
+      "holdout_rotation_residual_l2_max": 0.009393807373792995,
+      "multistart_rows": [
+        {
+          "start_id": 0,
+          "residual_l2": 0.009249876483530163,
+          "objective": 0.0036798152291528615
+        },
+        {
+          "start_id": 1,
+          "residual_l2": 0.009250534610477456,
+          "objective": 0.00367979789577754
+        },
+        {
+          "start_id": 2,
+          "residual_l2": 0.009249967299323727,
+          "objective": 0.0036806690293487657
+        },
+        {
+          "start_id": 3,
+          "residual_l2": 0.009249967556981228,
+          "objective": 0.0036806690242594154
+        }
+      ],
+      "multistart_residual_l2_span": 6.58126947293558e-07,
+      "perturbation_rows": [
+        {
+          "perturbation_id": 0,
+          "residual_l2": 0.009234210207854846
+        },
+        {
+          "perturbation_id": 1,
+          "residual_l2": 0.009202977231500603
+        },
+        {
+          "perturbation_id": 2,
+          "residual_l2": 0.009280157152197734
+        },
+        {
+          "perturbation_id": 3,
+          "residual_l2": 0.00929727377674419
+        },
+        {
+          "perturbation_id": 4,
+          "residual_l2": 0.009263026498740539
+        },
+        {
+          "perturbation_id": 5,
+          "residual_l2": 0.009270030560534588
+        },
+        {
+          "perturbation_id": 6,
+          "residual_l2": 0.009235014634581472
+        },
+        {
+          "perturbation_id": 7,
+          "residual_l2": 0.009238623640818
+        }
+      ],
+      "perturbation_residual_l2_span": 9.429654524358705e-05
+    },
+    "note": "Links task-2 channel phase-space table to a shared basis fit without closure claim."
+  },
   "scipy_numpy_sympy_calibration": {
     "feature_matrix": [
       [
@@ -439,9 +1383,9 @@
       "holdout_l2": 1.568807719306756e-05
     },
     "bootstrap_std_solution": {
-      "GhostCut_scheme": 0.40447086462528214,
-      "WardLift": 4.6920215091962865,
-      "CohomologyAmplitudeBridge": 2.149763225436142
+      "GhostCut_scheme": 0.12841179633353378,
+      "WardLift": 0.11052407445036275,
+      "CohomologyAmplitudeBridge": 0.09878141046466096
     },
     "bootstrap_seed_robustness": {
       "rows": [
@@ -524,6 +1468,45 @@
     "backend_fit_preclosure_nonzero_loss": true,
     "backend_fit_solver_agreement": true,
     "backend_fit_multistart_robust": true,
+    "backend_multichannel_rows_nonempty": true,
+    "backend_multichannel_solver_agreement": true,
+    "backend_multichannel_preclosure_open": true,
+    "renorm_b1_design_rank4": true,
+    "renorm_b1_solver_symbolic_agreement": true,
+    "renorm_b1_preclosure_residual_open": true,
+    "po3_constructive_candidate_found": true,
+    "po3_constraints_satisfied": true,
+    "po3_covariant_proxy_positive": true,
+    "transport_nu_rows_nonempty": true,
+    "transport_bijective_closure_small": true,
+    "transport_symmetry_commutator_bounded": true,
+    "po2_trace_rank4": true,
+    "po2_delta_bg_yf_symbolic_zero_under_constraints": true,
+    "po2_numeric_constraint_residual_small": true,
+    "selector_premise_packet_non_strict_marked": true,
+    "selector_ratio_strictly_below_unity_over_scan": true,
+    "selector_entropy_scan_finite": true,
+    "discm_common_basis_rows_nonempty": true,
+    "discm_common_basis_condition_bounded": true,
+    "discm_common_basis_uncertainty_bounded": true,
+    "discm_common_basis_residual_open": true,
+    "channel_phase_space_rows_nonempty": true,
+    "channel_phase_space_positive": true,
+    "channel_phase_space_monotone_all": true,
+    "channel_phase_space_tolerance_robust": true,
+    "phase_common_basis_cond_bounded": true,
+    "phase_common_basis_residual_open": true,
+    "phase_common_basis_loocv_bounded": true,
+    "phase_common_basis_bootstrap_p95_bounded": true,
+    "phase_bridge_stability_envelope_bounded": true,
+    "phase_common_cross_channel_coef_spread_bounded": true,
+    "phase_joint_fit_finite": true,
+    "phase_joint_fit_residual_open": true,
+    "phase_joint_solver_agreement": true,
+    "phase_joint_lambda_sweep_bounded": true,
+    "phase_joint_holdout_rotation_bounded": true,
+    "phase_joint_multistart_bounded": true,
+    "phase_joint_perturbation_span_bounded": true,
     "upstream_manifest_same_scheme_locked": true,
     "python_major_lock": true,
     "theorem_digest_self_consistent": true,
@@ -531,6 +1514,6 @@
   },
   "false_pass_guard": "No global unitarity closure claimed.",
   "next_honest_step": "Fit backend DiscM_loop tensor objects with v9 seed and refinement checks before any closure attempt.",
-  "theorem_core_digest_sha256": "9198030728eb7269089bf7ce7595a8319a3556ac620449c72d5ef49f15d82ad8",
-  "theorem_core_digest_recomputed_sha256": "9198030728eb7269089bf7ce7595a8319a3556ac620449c72d5ef49f15d82ad8"
+  "theorem_core_digest_sha256": "12140c377aa6603923d26f4d7b19333506b7dc3f722282092d8e83ab4ee6db3d",
+  "theorem_core_digest_recomputed_sha256": "12140c377aa6603923d26f4d7b19333506b7dc3f722282092d8e83ab4ee6db3d"
 }
