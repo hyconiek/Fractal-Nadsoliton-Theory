@@ -1,0 +1,133 @@
+{
+  "ledger_id": "P2023_S973_STRICT_CUTKOSKY_BRST_PROJECTOR_SOURCE_STATUS",
+  "packet_id": "P2023",
+  "stage_id": "S973",
+  "produced_by": "p2023_s973_strict_cutkosky_brst_projector_source_status.py",
+  "timestamp_utc": "2026-05-19T00:00:00+00:00",
+  "route": "strict_only",
+  "legacy_bridge_used": false,
+  "channel": "graviton->gauge_gauge",
+  "depends_on": {
+    "p1956": "P1956",
+    "p2020": "P2020_S970_STRICT_CUTKOSKY_P2019_TREE_PHASE_SPACE_CUT_SUM_WITNESS",
+    "p2022": "P2022_S972_STRICT_CUTKOSKY_SAME_SCHEME_DISCM_SOURCE_NONAVAILABILITY"
+  },
+  "input_hashes": {
+    "p1767_sha256": "89f9658a8dac29e7ac4561dc934b64004f80a42c5c777f73063c0ed9e6a1e946",
+    "p1801_sha256": "49256efe75b4d501bf2972055f677f93fa86a0da4854567fc4bda3030129eb40",
+    "p1802_sha256": "59a4dd345d8264e83ddd3d451d6b847b23d611d2fb83aaba9e04346fdcc3b0f0",
+    "p1852_sha256": "b975ea11073f0b06e97dbc1b65b449b4213c0d1431377a236fd033983491fb19",
+    "p1854_sha256": "c7bf1a88d4ac0807acf2955f8fb5b1f7829be4768b22e309272184fc43cf6aa8",
+    "p1956_sha256": "cc843855ce63ce5bc6119fff5960819df4a9ea80b97ae1ce7f1c5f93797c7fff",
+    "p2020_sha256": "c90308a288bdcbb236d6434a8792b9b278e923e259f6c4295cdc15539ab6fc60",
+    "p2022_sha256": "d036bd778c9ce1f4f2f5f409e4a3448494cdbeb5adb2243fe70b12a009a22ecd"
+  },
+  "local_projector_summary": {
+    "p1956_packet_id": "P1956",
+    "local_verdict": "GAUGE_GAUGE_TRANSVERSE_POLARIZATION_PROJECTOR_EXPORTED__BRST_COHOMOLOGY_STILL_OPEN",
+    "single_particle_projector_count": 2,
+    "all_local_projector_checks_pass": true,
+    "declared_limitation": "P1956 proves local on-shell transverse polarization-sum algebra, not BRST nilpotency, ghost cancellation, or cohomology projection."
+  },
+  "brst_projector_requirements": [
+    {
+      "req_id": "B1",
+      "required_object": "Local on-shell transverse gauge-gauge projector in the P2020 channel",
+      "verdict": "PASS_LOCAL_TRANSVERSE_PROJECTOR_AVAILABLE_NOT_BRST",
+      "evidence": [
+        "P1956 local projector checks pass=True.",
+        "P2020 already uses the matching real transverse polarization basis and preserves {plus,cross} indices."
+      ],
+      "missing_or_insufficient": [
+        "No missing local-transverse algebra at this level; limitation is that this is not a BRST cohomology projector."
+      ]
+    },
+    {
+      "req_id": "B2",
+      "required_object": "Nilpotent BRST charge/operator map acting on the same channel Hilbert space",
+      "verdict": "FAIL_OPERATOR_MAP_NOT_EXPORTED",
+      "evidence": [
+        "P1767 mentions BV_BRST_operator_map=True.",
+        "P1801 BRST intake present=True."
+      ],
+      "missing_or_insufficient": [
+        "Need explicit Q_BRST action on graviton, gauge, ghost, and antighost states for the channel.",
+        "Need machine-checked Q_BRST^2=0 in the same gauge-fixing family."
+      ]
+    },
+    {
+      "req_id": "B3",
+      "required_object": "Channel-level BRST physical-state projector/cohomology representative map",
+      "verdict": "FAIL_COHOMOLOGY_PROJECTOR_NOT_EXPORTED",
+      "evidence": [
+        "P1852 seed contract present=True.",
+        "P1956 explicitly limits itself to local transverse polarization algebra."
+      ],
+      "missing_or_insufficient": [
+        "Need Pi_phys^BRST with kernel/image conditions and proof that it maps gauge_gauge cuts to BRST cohomology classes.",
+        "Need proof that the P2020 transverse states are exactly the BRST physical representatives, not only a convenient local basis."
+      ]
+    },
+    {
+      "req_id": "B4",
+      "required_object": "Ghost-sector exclusion/cancellation trace in the same scheme",
+      "verdict": "FAIL_GHOST_TRACE_NOT_EXPORTED",
+      "evidence": [
+        "P1854 cochain proxy present=True.",
+        "P2022 lists ghost trace as a remaining blocker."
+      ],
+      "missing_or_insufficient": [
+        "Need ghost and longitudinal contributions on the same cut and their cancellation/exclusion certificate.",
+        "Need sign convention and state-counting trace compatible with the P2020 phase-space normalization."
+      ]
+    },
+    {
+      "req_id": "B5",
+      "required_object": "Same-scheme bridge from BRST projector data to DiscM_common_basis",
+      "verdict": "FAIL_SCHEME_BRIDGE_NOT_EXPORTED",
+      "evidence": [
+        "P1802 Cutkosky intake present=False.",
+        "P2022 next step already targets BRST/ghost data=True."
+      ],
+      "missing_or_insufficient": [
+        "Need one scheme tag and finite-part convention shared by BRST projector, ghost trace, loop DiscM, and P2020 CutSum."
+      ]
+    }
+  ],
+  "local_pass_count": 1,
+  "hard_failure_count": 4,
+  "symbolic_projector_gap_witness": {
+    "local_transverse_trace_from_P2020_no_symmetry": "2/pi",
+    "formal_BRST_physical_trace": "BRST_exact - GhostTrace - Q_P_T + 2/pi",
+    "formal_optical_defect": "-BRST_exact + DiscM_loop + GhostTrace + Q_P_T - 2/pi",
+    "unexported_symbols": [
+      "Q_P_T",
+      "GhostTrace",
+      "BRST_exact",
+      "DiscM_loop"
+    ],
+    "optimistic_unproved_assignment_defect": "0",
+    "ghost_shifted_assignment_defect": "1/5",
+    "q_shifted_assignment_defect": "1/7",
+    "meaning": "The local transverse CutSum trace equals 2/pi, but without exported BRST exact-state and ghost-sector data the physical-state trace and optical defect are underdetermined."
+  },
+  "gatekeeper_checks": {
+    "p1956_local_transverse_projector_available": true,
+    "p2020_cut_sum_available": true,
+    "p2022_brst_next_step_alignment": true,
+    "exactly_one_local_projector_pass": true,
+    "remaining_brst_ghost_requirements_fail": true,
+    "symbolic_projector_gap_exported": true,
+    "no_brst_or_cutkosky_promotion": true
+  },
+  "result_kind": "OPEN_BRST_PROJECTOR_SOURCE_STATUS_LOCAL_TRANSVERSE_ONLY_WITH_TRACE",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "false_pass_guard": "P2023 credits the P1956/P2020 local transverse projector but does not promote it to a BRST physical-state projector. It does not export Q_BRST, ghost cancellation, BRST cohomology, DiscM=CutSum, all-state unitarity, QW-2191 discharge, or ToE closure.",
+  "next_honest_step": "Build P2024 by exporting the smallest channel-level BRST data object: Q_BRST action on gauge/ghost/antighost cut states, a nilpotency check Q_BRST^2=0, and a ghost-sector trace convention compatible with the P2020 phase-space normalization.",
+  "toe_progress": "Separates the already valid local transverse projector from the missing BRST cohomology/ghost trace layer, preventing the P2020 CutSum from being over-read as a BRST-projected optical theorem.",
+  "lay_explanation": "Mamy lokalny filtr wybierający dwie poprzeczne polaryzacje bozonów cechowania, ale to nie jest jeszcze pełny filtr BRST. Nadal trzeba pokazać, jak duchy i stany niefizyczne kasują się w tym samym schemacie rachunku.",
+  "environment": {
+    "python": "3.14.4",
+    "sympy": "1.14.0"
+  }
+}
