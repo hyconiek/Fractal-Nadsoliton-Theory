@@ -1,0 +1,298 @@
+{
+  "ledger_id": "P2024_S974_STRICT_CUTKOSKY_MINIMAL_CHANNEL_BRST_DATA_OBJECT",
+  "packet_id": "P2024",
+  "stage_id": "S974",
+  "produced_by": "p2024_s974_strict_cutkosky_minimal_channel_brst_data_object.py",
+  "timestamp_utc": "2026-05-19T00:00:00+00:00",
+  "route": "strict_only",
+  "legacy_bridge_used": false,
+  "channel": "graviton->gauge_gauge",
+  "model_scope": "finite_algebraic_quartet_not_full_channel_projector_v11",
+  "depends_on": {
+    "p1956": "P1956",
+    "p1961": "P1961",
+    "p2020": "P2020_S970_STRICT_CUTKOSKY_P2019_TREE_PHASE_SPACE_CUT_SUM_WITNESS",
+    "p2023": "P2023_S973_STRICT_CUTKOSKY_BRST_PROJECTOR_SOURCE_STATUS"
+  },
+  "input_hashes": {
+    "p1956_sha256": "cc843855ce63ce5bc6119fff5960819df4a9ea80b97ae1ce7f1c5f93797c7fff",
+    "p1961_sha256": "982528aec31887d81305d626dcfc94add683e0b22a78e37669047e3887c17e2f",
+    "p2020_sha256": "c90308a288bdcbb236d6434a8792b9b278e923e259f6c4295cdc15539ab6fc60",
+    "p2023_sha256": "0823764bcb86ad23d9150f90ddce9787aad1cd95029c1181783a059d4ba80e84"
+  },
+  "source_credit": {
+    "p1961_local_BRST": {
+      "packet_id": "P1961",
+      "local_verdict": "PASS_LOCAL_GAUGE_SECTOR_S2_ZERO_FOR_SU3_SU2_U1__NO_GLOBAL_TG2_PROMOTION",
+      "all_local_generator_s2_zero": true,
+      "factor_passes": {
+        "SU3": true,
+        "SU2": true,
+        "U1": true
+      },
+      "scope": "generators A_mu^a, c^a, cbar^a, B^a for SU3/SU2/U1 local gauge sector"
+    },
+    "p1956_projector_and_p2020_tree_status": "P2020_TREE_CUTSUM_AVAILABLE",
+    "p2023_boundary": "local transverse projector is not automatically a BRST physical-state projector"
+  },
+  "FiniteBRSTQuartetModel_strict_gauge_polarization_v11": {
+    "basis_order": [
+      "gauge_T1",
+      "gauge_T2",
+      "gauge_L",
+      "ghost",
+      "antighost",
+      "B"
+    ],
+    "parity_assignment": {
+      "gauge_T1": "even_physical_transverse_candidate_not_graviton_plus",
+      "gauge_T2": "even_physical_transverse_candidate_not_graviton_cross",
+      "gauge_L": "even_unphysical_gauge_quartet",
+      "ghost": "odd_ghost_quartet",
+      "antighost": "odd_antighost_quartet",
+      "B": "even_nakanishi_lautrup_quartet"
+    },
+    "q_matrix_rows_columns_basis_order": [
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "1",
+        "0"
+      ]
+    ],
+    "q_action": {
+      "Q(gauge_T1)": "0",
+      "Q(gauge_T2)": "0",
+      "Q(gauge_L)": "ghost",
+      "Q(ghost)": "0",
+      "Q(antighost)": "B",
+      "Q(B)": "0"
+    },
+    "exact_checks": {
+      "Q_squared_matrix": [
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "Q_squared_zero": true,
+      "Q2_characteristic_polynomial": "lambda_q2**6",
+      "rank_Q": 2,
+      "kernel_dimension": 4,
+      "image_dimension": 2,
+      "minimal_cohomology_dimension_kernel_mod_image": 2,
+      "minimal_cohomology_basis_interpretation": [
+        "gauge_T1",
+        "gauge_T2"
+      ]
+    },
+    "numeric_cross_checks": {
+      "rank_numpy": 2,
+      "q2_frobenius_norm": 0.0,
+      "q2_max_abs_eigenvalue": 0.0,
+      "kernel_dimension_scipy": 4,
+      "image_dimension_numpy": 2,
+      "cohomology_dimension_numeric": 2
+    },
+    "ghost_sector_trace_convention_candidate": {
+      "supertrace_weight_diagonal_basis_order": [
+        "1",
+        "1",
+        "1",
+        "-1",
+        "-1",
+        "1"
+      ],
+      "quartet_supertrace": "0",
+      "physical_transverse_supertrace": "2",
+      "total_supertrace": "2",
+      "meaning": "The unphysical gauge_L/ghost/antighost/B quartet has zero supertrace, leaving two gauge-transverse representatives in the finite model; this is not yet an amplitude-normalized P2020 CutSum trace."
+    }
+  },
+  "symbolic_cutkosky_gap_after_minimal_BRST_witness": {
+    "p2020_tree_cutsum_symbol": "CutSum_tree",
+    "amplitude_normalization_symbol": "AmpNorm",
+    "finite_quartet_cohomology_dimension": "2",
+    "cohomology_trace_not_identified_with_p2020_amplitude_trace": true,
+    "formal_required_loop_discontinuity": "AmpNorm*CutSum_tree + CohomologyAmplitudeBridge + GhostCut_scheme + SchemeLock + WardLift",
+    "formal_optical_defect": "-AmpNorm*CutSum_tree - CohomologyAmplitudeBridge + DiscM_loop - GhostCut_scheme - SchemeLock - WardLift",
+    "unexported_symbols": [
+      "DiscM_loop",
+      "GhostCut_scheme",
+      "SchemeLock",
+      "WardLift",
+      "CohomologyAmplitudeBridge"
+    ],
+    "optimistic_unproved_assignment_defect": "0",
+    "ghost_shifted_assignment_defect": "-1/11",
+    "bridge_shifted_assignment_defect": "-1/17",
+    "meaning": "The quartet proves a two-dimensional finite BRST model, but it is not amplitude-normalized to the P2020 CutSum. DiscM=CutSum remains underdetermined until the ghost cut, Ward lift, cohomology-to-amplitude bridge, and same-scheme loop discontinuity are exported."
+  },
+  "transverse_label_nonuniqueness_witness": {
+    "transverse_subblock_Q": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ],
+    "swap_permutation": [
+      [
+        "0",
+        "1"
+      ],
+      [
+        "1",
+        "0"
+      ]
+    ],
+    "permuted_transverse_subblock_Q": [
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ],
+    "invariant_under_T1_T2_swap": true,
+    "meaning": "Any relabeling of gauge_T1/gauge_T2 leaves the transverse BRST subblock unchanged, so the finite quartet cannot uniquely identify a physical plus/cross basis without extra amplitude-level data."
+  },
+  "theorem_core_digest_sha256": "d49169f7b136e180b412dcfa70c8a4c2a71551e7628303f5a32db31fb7c06f7b",
+  "theorem_core_digest_recomputed_sha256": "d49169f7b136e180b412dcfa70c8a4c2a71551e7628303f5a32db31fb7c06f7b",
+  "symbolic_lock_guard": {
+    "same_scheme_tag": "STRICT_P2020_PHASESPACE_SCHEME_V1",
+    "same_scheme_tag_lock": true,
+    "python_major_version_required": 3,
+    "required_formal_symbols": [
+      "AmpNorm",
+      "CutSum_tree",
+      "GhostCut_scheme",
+      "WardLift",
+      "CohomologyAmplitudeBridge"
+    ],
+    "present_in_formal_required_loop_discontinuity": true,
+    "meaning": "Prevents silent regression from symbolic bridge requirements to hardwired numeric substitution."
+  },
+  "gatekeeper_checks": {
+    "p1961_local_brst_nilpotency_available": true,
+    "p1956_local_projector_available": true,
+    "p2020_tree_cutsum_available": true,
+    "p2023_requested_p2024": true,
+    "minimal_Q_squared_zero": true,
+    "minimal_cohomology_dimension_two": true,
+    "cohomology_not_identified_with_p2020_trace": true,
+    "transverse_label_nonunique_without_bridge": true,
+    "formal_symbol_lock_preserved": true,
+    "same_scheme_tag_lock": true,
+    "python_major_version_required": 3,
+    "theorem_core_digest_self_consistent": true,
+    "python_major_version_lock": true,
+    "quartet_supertrace_zero": true,
+    "numeric_cross_checks_match_exact": true,
+    "cutkosky_gap_still_open": true,
+    "no_discM_or_full_cohomology_promotion": true
+  },
+  "result_kind": "PARTIAL_FINITE_BRST_QUARTET_MODEL_V11_EXPORTED__NOT_CHANNEL_PROJECTOR__DISCM_GHOST_CUT_STILL_OPEN_WITH_TRACE",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "false_pass_guard": "P2024 exports a finite minimal BRST-quartet model and exact Q^2=0 check for one gauge polarization layer only, with symbolic lock on AmpNorm/CutSum_tree bridge terms, a same-scheme tag lock, a deterministic core digest guard, a Q^2 spectral lock gate, and an exact Q^2 characteristic-polynomial lock. It deliberately does not identify gauge_T1/gauge_T2 with P2020 graviton plus/cross labels; the transverse block is permutation-invariant without extra bridge data and does not export a full Hilbert-space BRST charge, interacting cohomology projector, cohomology-to-amplitude bridge, ghost-cut amplitude, same-scheme loop DiscM, DiscM=CutSum theorem, all-state unitarity, QW-2191 discharge, or ToE closure.",
+  "next_honest_step": "Build P2025 by deriving the ghost-sector Cutkosky integrand, Ward-lift bridge, and explicit cohomology-to-amplitude normalization map in the same P2020 phase-space normalization; only then test DiscM_common_basis rather than reading it off from the finite quartet model.",
+  "toe_progress": "P2024 turns the P2023 BRST request into an executable strict-side finite model: a nilpotent minimal quartet with two gauge-transverse cohomology representatives. It narrows the bottleneck while correcting the amplitude-level boundary: the missing objects are now the same-scheme ghost cut, Ward lift, cohomology-to-amplitude bridge, and loop DiscM.",
+  "lay_explanation": "Dodaliśmy najmniejszy sprawdzalny model BRST dla jednej warstwy polaryzacji cechowania: dwa stany poprzeczne zostają w modelu kohomologii, a pakiet stanów niefizycznych z duchami kasuje się algebraicznie. Nie utożsamiamy tego z macierzą plus/cross P2020 ani z pełnym rachunkiem unitarności, bo brakuje normalizacji amplitudy, prawdziwego wkładu pętli i duchów w tym samym schemacie.",
+  "environment": {
+    "python": "3.14.4",
+    "sympy": "1.14.0",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1"
+  }
+}
