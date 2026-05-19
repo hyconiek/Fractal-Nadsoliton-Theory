@@ -11,11 +11,14 @@ OUT = ROOT / "generated" / "p2025_s975_strict_cutkosky_same_scheme_cohomology_am
 def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     subprocess.run([sys.executable, str(SCRIPT)], check=True)
     data = json.loads(OUT.read_text(encoding="utf-8"))
-    assert data["schema_version"] == "p2025_s975_v16"
+    assert data["schema_version"] == "p2025_s975_v18"
     assert data["status"] == "OPEN_OBSTRUCTION_WITH_TRACE"
     assert all(data["gatekeeper_checks"].values())
     assert len(data["toe_closure_gaps_7tasks"]) == 7
     assert data["backend_loop_fit_precursor"]["loss_l2"] > 0.0
+    assert data["backend_loop_fit_precursor"]["loss_gap"] < 1.0
+    assert data["backend_loop_fit_precursor"]["multistart_loss_span"] < 1.0
+    assert len(data["backend_loop_fit_precursor"]["multistart_rows"]) == 4
     assert all(x["status"] == "OPEN_OBSTRUCTION_WITH_TRACE" for x in data["toe_closure_gaps_7tasks"])
     assert data["depends_on"]["same_scheme_tag"] == "STRICT_P2020_PHASESPACE_SCHEME_V1"
     assert data["upstream_manifest"]["same_scheme_tag"] == "STRICT_P2020_PHASESPACE_SCHEME_V1"

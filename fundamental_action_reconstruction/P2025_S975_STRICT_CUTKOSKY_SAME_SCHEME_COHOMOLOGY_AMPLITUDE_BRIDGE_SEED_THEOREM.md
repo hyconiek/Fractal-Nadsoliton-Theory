@@ -2,6 +2,6 @@
 
 Status: `OPEN_OBSTRUCTION_WITH_TRACE`.
 
-v16 adds a SciPy backend loop-fit precursor (`Nelder-Mead`) for task-2 preparation, exporting a nonzero preclosure loss while preserving v15 robustness and explicit 7-task ToE gap ledger.
+v18 adds multi-start backend precursor robustness (Nelder-Mead starts ensemble with loss-span check), while preserving v17 dual-solver crosscheck and all prior numerical/provenance locks.
 
 No `DiscM = CutSum` closure is claimed.

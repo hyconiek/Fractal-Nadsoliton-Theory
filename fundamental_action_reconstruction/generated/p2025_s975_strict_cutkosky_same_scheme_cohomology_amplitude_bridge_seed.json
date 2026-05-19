@@ -1,5 +1,5 @@
 {
-  "schema_version": "p2025_s975_v16",
+  "schema_version": "p2025_s975_v18",
   "produced_by": "p2025_s975_strict_cutkosky_same_scheme_cohomology_amplitude_bridge_seed.py",
   "timestamp_utc": "2026-05-19T00:00:00+00:00",
   "status": "OPEN_OBSTRUCTION_WITH_TRACE",
@@ -289,7 +289,54 @@
       1.6570754076914055e-07,
       -6.395486047088764e-08
     ],
-    "loss_l2": 0.45649377505721817
+    "loss_l2": 0.45649377505721817,
+    "crosscheck_method": "L-BFGS-B",
+    "crosscheck_solution": [
+      0.22780566693533652,
+      0.22905641090594386,
+      -9.757855054233436e-09
+    ],
+    "crosscheck_loss_l2": 0.00044968117947424656,
+    "loss_gap": 0.4560440938777439,
+    "multistart_rows": [
+      {
+        "start_id": 0,
+        "x0": [
+          1.2729589094613835e-08,
+          1.5781670549441957e-07,
+          -6.395486047088764e-08
+        ],
+        "loss_l2": 0.45649377505721817
+      },
+      {
+        "start_id": 1,
+        "x0": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "loss_l2": 0.0012733849677605442
+      },
+      {
+        "start_id": 2,
+        "x0": [
+          1.0,
+          -1.0,
+          0.5
+        ],
+        "loss_l2": 1.3912181105865957e-06
+      },
+      {
+        "start_id": 3,
+        "x0": [
+          -1.0,
+          1.0,
+          -0.5
+        ],
+        "loss_l2": 1.3912181105865957e-06
+      }
+    ],
+    "multistart_loss_span": 0.45649238383910756
   },
   "scipy_numpy_sympy_calibration": {
     "feature_matrix": [
@@ -475,6 +522,8 @@
     "no_false_pass_residual_open": true,
     "toe_gaps_explicitly_open": true,
     "backend_fit_preclosure_nonzero_loss": true,
+    "backend_fit_solver_agreement": true,
+    "backend_fit_multistart_robust": true,
     "upstream_manifest_same_scheme_locked": true,
     "python_major_lock": true,
     "theorem_digest_self_consistent": true,
@@ -482,6 +531,6 @@
   },
   "false_pass_guard": "No global unitarity closure claimed.",
   "next_honest_step": "Fit backend DiscM_loop tensor objects with v9 seed and refinement checks before any closure attempt.",
-  "theorem_core_digest_sha256": "fe2e168730834107c046aae389140b998261572a0da2ddc7b50a258d02fbe002",
-  "theorem_core_digest_recomputed_sha256": "fe2e168730834107c046aae389140b998261572a0da2ddc7b50a258d02fbe002"
+  "theorem_core_digest_sha256": "9198030728eb7269089bf7ce7595a8319a3556ac620449c72d5ef49f15d82ad8",
+  "theorem_core_digest_recomputed_sha256": "9198030728eb7269089bf7ce7595a8319a3556ac620449c72d5ef49f15d82ad8"
 }

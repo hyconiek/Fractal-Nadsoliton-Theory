@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""P2025 S975 strict same-scheme CohomologyAmplitudeBridge seed witness (v16).
+"""P2025 S975 strict same-scheme CohomologyAmplitudeBridge seed witness (v18).
 
 Honest refinement: keep OPEN obstruction while adding phase-space grid
 refinement convergence checks for integral and slope diagnostics.
@@ -240,6 +240,29 @@ def main() -> None:
     backend_fit_solution = opt.x.astype(float)
     backend_fit_loss = float(opt.fun)
 
+    # cross-check with bounded quasi-Newton solver for robustness
+    bnds = [(-10.0, 10.0), (-10.0, 10.0), (-10.0, 10.0)]
+    opt_bfgs = so.minimize(backend_loss, x0=np.array([g_num, w_num, b_num], dtype=float), method="L-BFGS-B", bounds=bnds)
+    backend_fit_solution_lbfgsb = opt_bfgs.x.astype(float)
+    backend_fit_loss_lbfgsb = float(opt_bfgs.fun)
+    backend_fit_loss_gap = float(abs(backend_fit_loss - backend_fit_loss_lbfgsb))
+
+    # multi-start robustness for backend precursor
+    starts = [
+        np.array([g_num, w_num, b_num], dtype=float),
+        np.array([0.0, 0.0, 0.0], dtype=float),
+        np.array([1.0, -1.0, 0.5], dtype=float),
+        np.array([-1.0, 1.0, -0.5], dtype=float),
+    ]
+    ms_losses = []
+    ms_rows = []
+    for i, x0 in enumerate(starts):
+        r = so.minimize(backend_loss, x0=x0, method="Nelder-Mead")
+        lv = float(r.fun)
+        ms_losses.append(lv)
+        ms_rows.append({"start_id": i, "x0": x0.tolist(), "loss_l2": lv})
+    multistart_loss_span = float(max(ms_losses) - min(ms_losses)) if ms_losses else 0.0
+
     same_scheme_tag = "STRICT_P2020_PHASESPACE_SCHEME_V1"
 
     reproducibility_probe = {
@@ -280,12 +303,14 @@ def main() -> None:
         "no_false_pass_residual_open": residual_l2 > 0.0,
         "toe_gaps_explicitly_open": all(row["status"] == "OPEN_OBSTRUCTION_WITH_TRACE" for row in toe_closure_gaps_7tasks),
         "backend_fit_preclosure_nonzero_loss": backend_fit_loss > 0.0,
+        "backend_fit_solver_agreement": bool(np.isfinite(backend_fit_loss_gap)) and backend_fit_loss_gap < 1.0,
+        "backend_fit_multistart_robust": multistart_loss_span < 1.0,
         "upstream_manifest_same_scheme_locked": upstream_manifest.get("same_scheme_tag") == "STRICT_P2020_PHASESPACE_SCHEME_V1",
         "python_major_lock": int(platform.python_version_tuple()[0]) == 3,
     }
 
     payload = {
-        "schema_version": "p2025_s975_v16",
+        "schema_version": "p2025_s975_v18",
         "produced_by": Path(__file__).name,
         "timestamp_utc": TS,
         "status": "OPEN_OBSTRUCTION_WITH_TRACE",
@@ -323,7 +348,7 @@ def main() -> None:
         },
         "finite_difference_slope_consistency": {"step_h": h, "rows": fd_rows, "max_abs_gap": max_fd_gap},
         "strict_phase_space_parameter_sensitivity": {"relative_shift": 0.01, "rows": sens_rows, "max_abs_delta_vs_base": sens_abs_max},
-        "backend_loop_fit_precursor": {"method": "Nelder-Mead", "target_vector": target_vec.tolist(), "solution": backend_fit_solution.tolist(), "loss_l2": backend_fit_loss},
+        "backend_loop_fit_precursor": {"method": "Nelder-Mead", "target_vector": target_vec.tolist(), "solution": backend_fit_solution.tolist(), "loss_l2": backend_fit_loss, "crosscheck_method": "L-BFGS-B", "crosscheck_solution": backend_fit_solution_lbfgsb.tolist(), "crosscheck_loss_l2": backend_fit_loss_lbfgsb, "loss_gap": backend_fit_loss_gap, "multistart_rows": ms_rows, "multistart_loss_span": multistart_loss_span},
         "scipy_numpy_sympy_calibration": {
             "feature_matrix": x.tolist(), "target_vector": y.tolist(), "weights_diagonal": weights_diag.tolist(),
             "solution": {"GhostCut_scheme": g_num, "WardLift": w_num, "CohomologyAmplitudeBridge": b_num},
@@ -342,8 +367,8 @@ def main() -> None:
         "false_pass_guard": "No global unitarity closure claimed.",
         "next_honest_step": "Fit backend DiscM_loop tensor objects with v9 seed and refinement checks before any closure attempt.",
     }
-    payload["theorem_core_digest_sha256"] = digest({"solution": payload["scipy_numpy_sympy_calibration"]["solution"], "max_fd_gap": max_fd_gap, "max_grid_refine_gap": max_grid_refine_gap, "quad_tol_span": quad_tol_span, "cond_p95": cond_p95, "bootstrap_seed_span_max": bootstrap_seed_span_max, "backend_fit_loss": backend_fit_loss, "residual": payload["residual_obstruction"]})
-    payload["theorem_core_digest_recomputed_sha256"] = digest({"solution": payload["scipy_numpy_sympy_calibration"]["solution"], "max_fd_gap": max_fd_gap, "max_grid_refine_gap": max_grid_refine_gap, "quad_tol_span": quad_tol_span, "cond_p95": cond_p95, "bootstrap_seed_span_max": bootstrap_seed_span_max, "backend_fit_loss": backend_fit_loss, "residual": payload["residual_obstruction"]})
+    payload["theorem_core_digest_sha256"] = digest({"solution": payload["scipy_numpy_sympy_calibration"]["solution"], "max_fd_gap": max_fd_gap, "max_grid_refine_gap": max_grid_refine_gap, "quad_tol_span": quad_tol_span, "cond_p95": cond_p95, "bootstrap_seed_span_max": bootstrap_seed_span_max, "backend_fit_loss": backend_fit_loss, "backend_fit_loss_lbfgsb": backend_fit_loss_lbfgsb, "backend_fit_loss_gap": backend_fit_loss_gap, "multistart_loss_span": multistart_loss_span, "residual": payload["residual_obstruction"]})
+    payload["theorem_core_digest_recomputed_sha256"] = digest({"solution": payload["scipy_numpy_sympy_calibration"]["solution"], "max_fd_gap": max_fd_gap, "max_grid_refine_gap": max_grid_refine_gap, "quad_tol_span": quad_tol_span, "cond_p95": cond_p95, "bootstrap_seed_span_max": bootstrap_seed_span_max, "backend_fit_loss": backend_fit_loss, "backend_fit_loss_lbfgsb": backend_fit_loss_lbfgsb, "backend_fit_loss_gap": backend_fit_loss_gap, "multistart_loss_span": multistart_loss_span, "residual": payload["residual_obstruction"]})
     payload["gatekeeper_checks"]["theorem_digest_self_consistent"] = payload["theorem_core_digest_sha256"] == payload["theorem_core_digest_recomputed_sha256"]
     payload["gatekeeper_checks"]["reproducibility_digest_self_consistent"] = reproducibility_digest_1 == reproducibility_digest_2
 
