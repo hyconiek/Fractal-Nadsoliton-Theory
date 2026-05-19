@@ -9,7 +9,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parent
 REPO = ROOT.parent
-DEFAULT_CONFIG = ROOT / "pair1_operator_probe_config.json"
+DEFAULT_CONFIG = ROOT / "generated" / "pair1_operator_probe_config.json"
 DEFAULT_REPORT = ROOT / "generated" / "pair1_operator_probe_report.json"
 
 
