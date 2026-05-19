@@ -2,6 +2,61 @@
 
 Status: `OPEN_OBSTRUCTION_WITH_TRACE`.
 
+v67 adds bootstrap-seed reproducibility diagnostics for winner-frequency-max
+using multiple RNG seeds, exporting cross-seed span to detect seed-sensitive
+priority artifacts before escalation to explicit loop-slice substitution.
+
+v66 adds bootstrap-size extrapolation sanity diagnostics (`N=256/512`)
+from linear and quadratic trend models, exporting disagreement envelopes to
+flag unstable asymptotic priority scaling before heavier backend substitution.
+
+v65 adds bootstrap-size curvature diagnostics (quadratic term over
+`log2(bootstrap_count)` plus linear-vs-quadratic AIC comparison), guarding
+against hidden nonlinear scaling artifacts in winner-frequency stability.
+
+v64 adds bootstrap-size slope diagnostics for winner-frequency-max versus
+`log2(bootstrap_count)`, exporting slope/intercept/R² as an additional
+non-artifact check on scaling behavior of the priority signal.
+
+v63 adds leave-one-bootstrap-size-out winner-frequency stability diagnostics,
+testing sensitivity of the `{32,64,128}` bootstrap-size panel itself and
+exporting span/consensus controls before channel-first replacement escalation.
+
+v62 adds bootstrap-size stability diagnostics for priority winner frequency
+(32/64/128 resample panel), exporting span and monotonicity checks to verify
+that channel-priority statistics are not artifacts of a single bootstrap count.
+
+v61 adds Dirichlet posterior quantile diagnostics (`q05/q50/q95`) for the
+priority winner frequency and enforces a lower-tail (`q05`) gate, tightening
+the statistical confidence criterion for channel-first sequencing.
+
+v60 adds channel-priority posterior-separation diagnostics: bootstrap top-2
+winner frequency margin and Dirichlet posterior `P(best > 0.50)` for the ranked
+winner, as additional strict OPEN uncertainty controls.
+
+v59 adds bootstrap winner-frequency uncertainty diagnostics (Wilson 95%
+interval for top winner frequency + normalized winner-frequency entropy),
+providing stricter statistical stability evidence for channel-first priority
+under OPEN precursor discipline.
+
+v58 adds bootstrap winner-frequency diagnostics for channel priority over
+transport-row resampling, exporting per-channel winner frequencies and maximum
+winner concentration as an additional strict OPEN stability check.
+
+v57 adds channel-priority rank-robustness diagnostics (leave-one-`nu`-out and
+`cond(T)` exponent sensitivity), exporting winner-set size/stability so the
+channel-first decision is tested against transport-branch perturbations under
+strict OPEN precursor discipline.
+
+v56 adds a channel-first substitution simulation panel for the v55 top-ranked
+channel, with residual deltas vs baseline and 3-channel substituted variants,
+plus a transport-conditioned median envelope (`residual_l2 * cond(T)`), still
+under explicit OPEN precursor discipline.
+
+v55 adds a ranked channel-priority table based on median `|ΔL2|` corrected by
+transport conditioning (`cond(T)`), exported as a strict OPEN triage signal for
+which channel should be prioritized for full backend loop-object substitution.
+
 v54 adds transport-conditioned channel delta map (`nu` x channel), correlating
 backend-substitution row deltas with `det(T)` and `cond(T)` to isolate which
 channels degrade or improve under transport stress.

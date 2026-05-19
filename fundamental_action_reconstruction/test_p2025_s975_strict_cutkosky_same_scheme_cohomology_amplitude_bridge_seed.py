@@ -11,7 +11,7 @@ OUT = ROOT / "generated" / "p2025_s975_strict_cutkosky_same_scheme_cohomology_am
 def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     subprocess.run([sys.executable, str(SCRIPT)], check=True)
     data = json.loads(OUT.read_text(encoding="utf-8"))
-    assert data["schema_version"] == "p2025_s975_v54"
+    assert data["schema_version"] == "p2025_s975_v67"
     assert data["status"] == "OPEN_OBSTRUCTION_WITH_TRACE"
     assert all(data["gatekeeper_checks"].values())
     assert len(data["toe_closure_gaps_7tasks"]) == 7
@@ -84,6 +84,25 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     assert "delta_residual_l2_backend_minus_baseline" in data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["backend_substitution_delta_report"]
     assert len(data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["backend_substitution_channel_delta_rows"]) == 3
     assert len(data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["backend_substitution_transport_channel_delta_rows"]) == 12
+    assert len(data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["backend_substitution_channel_priority_rows"]) == 3
+    assert data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["backend_substitution_channel_priority_best"] in {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
+    assert len(data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["backend_substitution_channel_priority_rank_robustness_rows"]) == 7
+    assert data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["backend_substitution_channel_priority_winner_count"] >= 1
+    assert len(data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["backend_substitution_channel_priority_bootstrap_rows_preview"]) == 8
+    assert len(data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["backend_substitution_channel_priority_bootstrap_winner_frequency_rows"]) == 3
+    assert data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["backend_substitution_channel_priority_bootstrap_winner_frequency_max_wilson_interval95"]["upper"] <= 1.0
+    assert data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["backend_substitution_channel_priority_bootstrap_winner_frequency_entropy_norm"] <= 1.0
+    assert data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["backend_substitution_channel_priority_bootstrap_winner_frequency_top2_margin"] >= 0.0
+    assert data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["backend_substitution_channel_priority_dirichlet_posterior_p_best_gt_050"] <= 1.0
+    assert data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["backend_substitution_channel_priority_dirichlet_posterior_best_quantiles"]["q05"] <= data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["backend_substitution_channel_priority_dirichlet_posterior_best_quantiles"]["q95"]
+    assert len(data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["backend_substitution_channel_priority_bootstrap_size_rows"]) == 3
+    assert len(data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["backend_substitution_channel_priority_bootstrap_size_loo_rows"]) == 3
+    assert data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["backend_substitution_channel_priority_bootstrap_size_trend"]["r2"] <= 1.0
+    assert "quadratic_coef" in data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["backend_substitution_channel_priority_bootstrap_size_curvature"]
+    assert len(data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["backend_substitution_channel_priority_bootstrap_size_extrapolation_rows"]) == 2
+    assert len(data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["backend_substitution_channel_priority_bootstrap_seed_rows"]) == 3
+    assert data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["backend_substitution_channel_first_simulation_panel"]["selected_channel"] in {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
+    assert len(data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["backend_substitution_channel_first_simulation_panel"]["transport_rows"]) == 4
     assert data["gatekeeper_checks"]["phase_joint_stress_panel_envelope_bounded"] is True
     assert data["gatekeeper_checks"]["phase_joint_cross_background_envelope_span_bounded"] is True
     assert data["gatekeeper_checks"]["phase_joint_operator_transport_replay_bounded"] is True
@@ -101,6 +120,33 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     assert data["gatekeeper_checks"]["phase_backend_substitution_delta_report_finite"] is True
     assert data["gatekeeper_checks"]["phase_backend_substitution_channel_delta_bounded"] is True
     assert data["gatekeeper_checks"]["phase_backend_substitution_transport_channel_delta_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_priority_panel_nonempty"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_priority_span_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_priority_rank_robustness_rows_nonempty"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_priority_winner_set_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_priority_bootstrap_rows_nonempty"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_priority_bootstrap_winner_freq_max_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_priority_bootstrap_winner_freq_wilson_lb_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_priority_bootstrap_entropy_norm_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_priority_bootstrap_top2_margin_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_priority_dirichlet_p_best_gt_050_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_priority_dirichlet_q05_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_priority_bootstrap_size_rows_nonempty"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_priority_bootstrap_size_span_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_priority_bootstrap_size_monotone_guard"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_priority_bootstrap_size_loo_rows_nonempty"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_priority_bootstrap_size_loo_span_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_priority_bootstrap_size_slope_finite"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_priority_bootstrap_size_r2_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_priority_bootstrap_size_curvature_finite"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_priority_bootstrap_size_aic_delta_finite"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_priority_bootstrap_size_extrap_rows_nonempty"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_priority_bootstrap_size_extrap_gap_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_priority_bootstrap_seed_rows_nonempty"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_priority_bootstrap_seed_span_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_selected_valid"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_transport_rows_nonempty"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_cond_weighted_median_bounded"] is True
     assert all(x["status"] == "OPEN_OBSTRUCTION_WITH_TRACE" for x in data["toe_closure_gaps_7tasks"])
     assert data["depends_on"]["same_scheme_tag"] == "STRICT_P2020_PHASESPACE_SCHEME_V1"
     assert data["upstream_manifest"]["same_scheme_tag"] == "STRICT_P2020_PHASESPACE_SCHEME_V1"
