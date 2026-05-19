@@ -1,4 +1,5 @@
 import json
+import csv
 import subprocess
 import sys
 from pathlib import Path
@@ -6,12 +7,14 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 SCRIPT = ROOT / "p2025_s975_strict_cutkosky_same_scheme_cohomology_amplitude_bridge_seed.py"
 OUT = ROOT / "generated" / "p2025_s975_strict_cutkosky_same_scheme_cohomology_amplitude_bridge_seed.json"
+OUT_CSV = ROOT / "generated" / "p2025_s975_strict_cutkosky_same_scheme_cohomology_amplitude_bridge_seed_per_channel_power_aware_verdicts.csv"
+OUT_QUALITY_CSV = ROOT / "generated" / "p2025_s975_strict_cutkosky_same_scheme_cohomology_amplitude_bridge_seed_per_channel_wilcoxon_quality.csv"
 
 
 def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     subprocess.run([sys.executable, str(SCRIPT)], check=True)
     data = json.loads(OUT.read_text(encoding="utf-8"))
-    assert data["schema_version"] == "p2025_s975_v78"
+    assert data["schema_version"] == "p2025_s975_v83"
     assert data["status"] == "OPEN_OBSTRUCTION_WITH_TRACE"
     assert all(data["gatekeeper_checks"].values())
     assert len(data["toe_closure_gaps_7tasks"]) == 7
@@ -118,6 +121,26 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     assert set(rm["paired_delta_panel"]["wilcoxon_quality"].keys()) == {"seed", "extrap", "q05"}
     assert "low_power_summary" in rm["paired_delta_panel"]
     assert "power_aware_verdict" in rm["paired_delta_panel"]
+    assert "nonworse_probability_ci95_conditions_met" in rm["paired_delta_panel"]["power_aware_verdict"]
+    assert "per_channel_power_aware_verdicts" in rm["paired_delta_panel"]
+    assert len(rm["paired_delta_panel"]["per_channel_power_aware_verdicts"]) == 3
+    assert "mixed_verdict_regime" in rm["paired_delta_panel"]
+    assert rm["paired_delta_panel"]["mixed_verdict_regime"]["num_channels"] == 3
+    assert "per_channel_risk_ranking" in rm["paired_delta_panel"]
+    assert len(rm["paired_delta_panel"]["per_channel_risk_ranking"]["rows"]) == 3
+    for vrow in rm["paired_delta_panel"]["per_channel_power_aware_verdicts"]:
+        assert "nonworse_probability_conditions_met" in vrow
+        assert "nonworse_probability_ci95_conditions_met" in vrow
+        assert 0.0 <= vrow["prob_seed_nonworse"] <= 1.0
+        assert 0.0 <= vrow["prob_extrap_nonworse"] <= 1.0
+        assert 0.0 <= vrow["prob_q05_nonworse"] <= 1.0
+        assert 0.0 <= vrow["prob_seed_nonworse_ci95"]["lower"] <= vrow["prob_seed_nonworse_ci95"]["upper"] <= 1.0
+        assert 0.0 <= vrow["prob_extrap_nonworse_ci95"]["lower"] <= vrow["prob_extrap_nonworse_ci95"]["upper"] <= 1.0
+        assert 0.0 <= vrow["prob_q05_nonworse_ci95"]["lower"] <= vrow["prob_q05_nonworse_ci95"]["upper"] <= 1.0
+    for qrow in rm["paired_delta_panel"]["per_channel_wilcoxon_quality"]:
+        assert qrow["seed"]["n_pairs"] == 64
+        assert qrow["extrap"]["n_pairs"] == 64
+        assert qrow["q05"]["n_pairs"] == 64
     assert data["gatekeeper_checks"]["phase_joint_stress_panel_envelope_bounded"] is True
     assert data["gatekeeper_checks"]["phase_joint_cross_background_envelope_span_bounded"] is True
     assert data["gatekeeper_checks"]["phase_joint_operator_transport_replay_bounded"] is True
@@ -179,6 +202,12 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_paired_low_power_summary_exported"] is True
     assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_power_aware_verdict_exported"] is True
     assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_power_aware_ready_flag_consistent"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_per_channel_power_aware_verdicts_exported"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_per_channel_power_aware_ready_flag_consistent"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_per_channel_quality_csv_json_consistent"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_per_channel_verdict_csv_json_consistent"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_mixed_verdict_regime_exported"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_per_channel_risk_ranking_exported"] is True
     assert all(x["status"] == "OPEN_OBSTRUCTION_WITH_TRACE" for x in data["toe_closure_gaps_7tasks"])
     assert data["depends_on"]["same_scheme_tag"] == "STRICT_P2020_PHASESPACE_SCHEME_V1"
     assert data["upstream_manifest"]["same_scheme_tag"] == "STRICT_P2020_PHASESPACE_SCHEME_V1"
@@ -197,3 +226,11 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     assert data["environment_lock"]["python_major"] == 3
     assert data["reproducibility_probe"]["digest_1"] == data["reproducibility_probe"]["digest_2"]
     assert data["theorem_core_digest_sha256"] == data["theorem_core_digest_recomputed_sha256"]
+    assert OUT_CSV.exists()
+    with OUT_CSV.open("r", encoding="utf-8", newline="") as f:
+        rows = list(csv.DictReader(f))
+    assert len(rows) == 3
+    assert OUT_QUALITY_CSV.exists()
+    with OUT_QUALITY_CSV.open("r", encoding="utf-8", newline="") as f:
+        qrows = list(csv.DictReader(f))
+    assert len(qrows) == 3
