@@ -1,0 +1,487 @@
+{
+  "schema_version": "p2025_s975_v16",
+  "produced_by": "p2025_s975_strict_cutkosky_same_scheme_cohomology_amplitude_bridge_seed.py",
+  "timestamp_utc": "2026-05-19T00:00:00+00:00",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "result_kind": "PARTIAL_SAME_SCHEME_COHOMOLOGY_AMPLITUDE_BRIDGE_SEED__NOT_DISCM_CUTSUM_CLOSURE",
+  "depends_on": {
+    "same_scheme_tag": "STRICT_P2020_PHASESPACE_SCHEME_V1"
+  },
+  "toe_closure_gaps_7tasks": [
+    {
+      "task_id": 1,
+      "name": "Renormalization exact divergence cancellation coefficients",
+      "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+      "missing": [
+        "backend-computed a_R2/a_Ric2/a_Riem2/a_GB on strict B1"
+      ]
+    },
+    {
+      "task_id": 2,
+      "name": "Cutkosky full unitarity closure",
+      "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+      "missing": [
+        "DiscM_loop backend objects",
+        "same-scheme GhostCut/WardLift/CohomologyAmplitudeBridge global fit"
+      ]
+    },
+    {
+      "task_id": 3,
+      "name": "Background-independence global transport",
+      "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+      "missing": [
+        "global FRW<->Bianchi transport closure for nu branch"
+      ]
+    },
+    {
+      "task_id": 4,
+      "name": "PO3 nonempty certifier",
+      "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+      "missing": [
+        "constructive strict-kernel admissible region witness"
+      ]
+    },
+    {
+      "task_id": 5,
+      "name": "PO2 sufficiency theorem",
+      "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+      "missing": [
+        "full L_total symbolic trace forcing C1-C4 -> DELTA_BG_Yf"
+      ]
+    },
+    {
+      "task_id": 6,
+      "name": "QW-2191 selector obstruction resolution",
+      "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+      "missing": [
+        "strict-core selector source or explicit symmetry-breaking premise"
+      ]
+    },
+    {
+      "task_id": 7,
+      "name": "DiscM common-basis integration gate",
+      "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+      "missing": [
+        "backend loop/channel common-basis fit with bounded uncertainty"
+      ]
+    }
+  ],
+  "upstream_manifest": {
+    "p2024_result_kind": "PARTIAL_FINITE_BRST_QUARTET_MODEL_V11_EXPORTED__NOT_CHANNEL_PROJECTOR__DISCM_GHOST_CUT_STILL_OPEN_WITH_TRACE",
+    "p2015_result_kind": "PASS_UR_LINK_UNCERTAINTY_WITNESS",
+    "p2016_result_kind": "PASS_CHANNELWISE_UNCERTAINTY_TRANSPORT_WITNESS",
+    "p2017_result_kind": "OPEN_PROVENANCE_GAP_WITH_STRICT_QUADRATURE_TRACE",
+    "same_scheme_tag": "STRICT_P2020_PHASESPACE_SCHEME_V1"
+  },
+  "upstream_manifest_digest_sha256": "9e327a88d2a3ac5b210828a150ff311ad8b0df4d274efb42d8d111fcfa8df268",
+  "environment_lock": {
+    "python_major": 3,
+    "numpy": "2.4.6",
+    "scipy": "scipy.integrate"
+  },
+  "operators": {
+    "A_map_symbolic": "Matrix([\n[WardLift,                         0,               0,               0,               0,               0],\n[       0, CohomologyAmplitudeBridge,               0,               0,               0,               0],\n[       0,                         0, GhostCut_scheme,               0,               0,               0],\n[       0,                         0,               0, GhostCut_scheme,               0,               0],\n[       0,                         0,               0,               0, GhostCut_scheme,               0],\n[       0,                         0,               0,               0,               0, GhostCut_scheme]])",
+    "symbols": [
+      "GhostCut_scheme",
+      "WardLift",
+      "CohomologyAmplitudeBridge"
+    ]
+  },
+  "strict_phase_space_integral_table": {
+    "kernel": "K_strict_gate(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+    "parameters": {
+      "omega": 0.18575,
+      "phi": 0.1625,
+      "beta": 1.0,
+      "eta": 1.8
+    },
+    "s_grid": [
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      3.0
+    ],
+    "rows": [
+      {
+        "s": 0.5,
+        "strict_kernel_integral": 0.6458024652478899,
+        "quad_abs_error": 4.6851411639181606e-14
+      },
+      {
+        "s": 1.0,
+        "strict_kernel_integral": 0.5054282196818368,
+        "quad_abs_error": 1.3100631690576847e-14
+      },
+      {
+        "s": 1.5,
+        "strict_kernel_integral": 0.43037239937294364,
+        "quad_abs_error": 5.051514762044462e-15
+      },
+      {
+        "s": 2.0,
+        "strict_kernel_integral": 0.38147247078644214,
+        "quad_abs_error": 2.0539125955565396e-15
+      },
+      {
+        "s": 3.0,
+        "strict_kernel_integral": 0.3193819625776963,
+        "quad_abs_error": 4.440892098500626e-16
+      }
+    ],
+    "mean_integral": 0.4564915035333617,
+    "min_integral": 0.3193819625776963,
+    "diffs_successive": [
+      -0.14037424556605305,
+      -0.07505582030889318,
+      -0.048899928586501495,
+      -0.06209050820874584
+    ],
+    "monotone_nonincreasing": true
+  },
+  "phase_space_grid_refinement": {
+    "coarse_s_grid": [
+      0.5,
+      1.5,
+      3.0
+    ],
+    "coarse_rows": [
+      {
+        "s": 0.5,
+        "strict_kernel_integral": 0.6458024652478899,
+        "quad_abs_error": 4.6851411639181606e-14
+      },
+      {
+        "s": 1.5,
+        "strict_kernel_integral": 0.43037239937294364,
+        "quad_abs_error": 5.051514762044462e-15
+      },
+      {
+        "s": 3.0,
+        "strict_kernel_integral": 0.3193819625776963,
+        "quad_abs_error": 4.440892098500626e-16
+      }
+    ],
+    "fine_on_coarse": [
+      0.6458024652478899,
+      0.43037239937294364,
+      0.3193819625776963
+    ],
+    "max_abs_gap": 0.0
+  },
+  "quadrature_tolerance_robustness": {
+    "phase_means": {
+      "tight_1e-12": 0.4564915035333617,
+      "medium_1e-10": 0.4564915035334319,
+      "loose_1e-8": 0.4564915035380041
+    },
+    "max_span": 4.642397577470092e-12
+  },
+  "symbolic_phase_space_slope_certificate": {
+    "d_ds_integrand_symbolic": "-cos(omega*x + phi)**2/(2*(s + x)**(3/2)*(beta*x**eta + 1)**2)",
+    "expected_nonpositive_form": "-cos(omega*x + phi)**2/(2*(s + x)**(3/2)*(beta*x**eta + 1)**2)",
+    "exact_match": true
+  },
+  "finite_difference_slope_consistency": {
+    "step_h": 0.0001,
+    "rows": [
+      {
+        "s": 0.5,
+        "finite_difference_dI_ds": -0.41838107052050155,
+        "analytic_dI_ds_numeric": -0.41838106506067485,
+        "abs_gap": 5.459826701859072e-09,
+        "quad_abs_error": 1.7486012637846216e-13
+      },
+      {
+        "s": 1.0,
+        "finite_difference_dI_ds": -0.19295956874276765,
+        "analytic_dI_ds_numeric": -0.19295956797272032,
+        "abs_gap": 7.700473314553591e-10,
+        "quad_abs_error": 2.6367796834847468e-14
+      },
+      {
+        "s": 1.5,
+        "finite_difference_dI_ds": -0.11774553523635767,
+        "analytic_dI_ds_numeric": -0.11774553500364207,
+        "abs_gap": 2.3271559679294285e-10,
+        "quad_abs_error": 8.659739592076221e-15
+      },
+      {
+        "s": 2.0,
+        "finite_difference_dI_ds": -0.0815772975321094,
+        "analytic_dI_ds_numeric": -0.0815772974365907,
+        "abs_gap": 9.551870405744012e-11,
+        "quad_abs_error": 3.816391647148976e-15
+      },
+      {
+        "s": 3.0,
+        "finite_difference_dI_ds": -0.047667823517005825,
+        "analytic_dI_ds_numeric": -0.047667823489372256,
+        "abs_gap": 2.7633569044116513e-11,
+        "quad_abs_error": 9.779601146023046e-13
+      }
+    ],
+    "max_abs_gap": 5.459826701859072e-09
+  },
+  "strict_phase_space_parameter_sensitivity": {
+    "relative_shift": 0.01,
+    "rows": [
+      {
+        "parameter": "omega",
+        "shift": -0.01,
+        "mean_integral": 0.4566550388410658,
+        "delta_vs_base": 0.00016353530770407687
+      },
+      {
+        "parameter": "omega",
+        "shift": 0.01,
+        "mean_integral": 0.4563274085936217,
+        "delta_vs_base": -0.00016409493974001155
+      },
+      {
+        "parameter": "phi",
+        "shift": -0.01,
+        "mean_integral": 0.45683663666646207,
+        "delta_vs_base": 0.00034513313310036153
+      },
+      {
+        "parameter": "phi",
+        "shift": 0.01,
+        "mean_integral": 0.45614409726772626,
+        "delta_vs_base": -0.0003474062656354526
+      },
+      {
+        "parameter": "beta",
+        "shift": -0.01,
+        "mean_integral": 0.4578640045739858,
+        "delta_vs_base": 0.0013725010406240856
+      },
+      {
+        "parameter": "beta",
+        "shift": 0.01,
+        "mean_integral": 0.4551305493186752,
+        "delta_vs_base": -0.0013609542146865161
+      },
+      {
+        "parameter": "eta",
+        "shift": -0.01,
+        "mean_integral": 0.45498603573304663,
+        "delta_vs_base": -0.0015054678003150745
+      },
+      {
+        "parameter": "eta",
+        "shift": 0.01,
+        "mean_integral": 0.4579798695329528,
+        "delta_vs_base": 0.001488365999591068
+      }
+    ],
+    "max_abs_delta_vs_base": 0.0015054678003150745
+  },
+  "backend_loop_fit_precursor": {
+    "method": "Nelder-Mead",
+    "target_vector": [
+      0.4564915035333617,
+      0.0015054678003150745,
+      5.459826701859072e-09
+    ],
+    "solution": [
+      1.2729589094613835e-08,
+      1.6570754076914055e-07,
+      -6.395486047088764e-08
+    ],
+    "loss_l2": 0.45649377505721817
+  },
+  "scipy_numpy_sympy_calibration": {
+    "feature_matrix": [
+      [
+        1.0,
+        0.0,
+        0.4
+      ],
+      [
+        0.0,
+        1.0,
+        0.4
+      ],
+      [
+        0.7,
+        0.7,
+        1.0
+      ],
+      [
+        0.6,
+        0.1,
+        0.3
+      ],
+      [
+        0.1,
+        0.6,
+        0.3
+      ],
+      [
+        0.5,
+        0.5,
+        0.8
+      ],
+      [
+        0.4,
+        0.2,
+        0.4
+      ],
+      [
+        0.2,
+        0.2,
+        0.6
+      ],
+      [
+        0.3,
+        0.3,
+        0.7
+      ],
+      [
+        0.15,
+        0.15,
+        0.4
+      ]
+    ],
+    "target_vector": [
+      1.9379826675380065e-05,
+      1.2973558979981144e-05,
+      1.39930383112735e-05,
+      4.276106422837644e-09,
+      9.977581653288031e-08,
+      0.4564915035333617,
+      0.0015054678003150745,
+      0.14037424556605305,
+      5.459826701859072e-09,
+      0.0
+    ],
+    "weights_diagonal": [
+      51600.048687245995,
+      77079.85153056694,
+      71464.1079196038,
+      233857603.41680068,
+      10022468.71786269,
+      2.1906212761020583,
+      664.2453593432641,
+      7.123813887423177,
+      183155996.44572964,
+      999999999999999.9
+    ],
+    "solution": {
+      "GhostCut_scheme": 1.2729589094613835e-08,
+      "WardLift": 1.5781670549441957e-07,
+      "CohomologyAmplitudeBridge": -6.395486047088764e-08
+    },
+    "train_holdout_split": {
+      "train_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "holdout_indices": [
+        8,
+        9
+      ],
+      "train_l2": 0.4775748767963567,
+      "holdout_l2": 1.568807719306756e-05
+    },
+    "bootstrap_std_solution": {
+      "GhostCut_scheme": 0.40447086462528214,
+      "WardLift": 4.6920215091962865,
+      "CohomologyAmplitudeBridge": 2.149763225436142
+    },
+    "bootstrap_seed_robustness": {
+      "rows": [
+        {
+          "seed": 20260517,
+          "GhostCut_scheme_std": 0.47774597953871245,
+          "WardLift_std": 4.877460716475667,
+          "CohomologyAmplitudeBridge_std": 2.2670540092348084
+        },
+        {
+          "seed": 20260518,
+          "GhostCut_scheme_std": 0.396486735189855,
+          "WardLift_std": 4.6856438100791005,
+          "CohomologyAmplitudeBridge_std": 2.128069076144991
+        },
+        {
+          "seed": 20260519,
+          "GhostCut_scheme_std": 0.41761895731354803,
+          "WardLift_std": 4.638683768309273,
+          "CohomologyAmplitudeBridge_std": 2.0897699834424084
+        }
+      ],
+      "max_span": 4.480973981285812
+    },
+    "fit_residual_vector": [
+      -1.9392679030473807e-05,
+      -1.284132421867508e-05,
+      -1.3937610765532065e-05,
+      -4.3140557893679624e-11,
+      -2.2999292468033475e-08,
+      -0.4564914694241028,
+      -0.0015054567270825262,
+      -0.14037424982971042,
+      9.356593452296038e-10,
+      -4.70804529855565e-23
+    ],
+    "fit_residual_l2": 0.47758942493256773,
+    "fit_residual_linf": 0.4564914694241028,
+    "weighted_design_singular_values": [
+      452769256906910.56,
+      108086429.66806766,
+      7992151.7695244225
+    ],
+    "weighted_design_condition_number": 56651734.09661774,
+    "condition_robustness": {
+      "median": 56657736.41686688,
+      "p95": 56746249.008493885
+    },
+    "weighted_design_rank_numeric": 3,
+    "weighted_design_rank_symbolic": 3,
+    "amplitude_map_frobenius_norm": 1.7217580104368298e-07,
+    "amplitude_map_spectral_radius": 1.5781670549441957e-07
+  },
+  "residual_obstruction": {
+    "delta_target": 0.0,
+    "delta_observed_l2": 0.47758942493256773,
+    "delta_observed_linf": 0.4564914694241028
+  },
+  "reproducibility_probe": {
+    "digest_1": "47387daaa8eee7d2b5cc8d9b7da42db58a14321a83375d9253e10682ae467e69",
+    "digest_2": "47387daaa8eee7d2b5cc8d9b7da42db58a14321a83375d9253e10682ae467e69"
+  },
+  "gatekeeper_checks": {
+    "same_scheme_tag_lock": true,
+    "strict_lane_only": true,
+    "identifiable_weighted_design_rank3": true,
+    "phase_space_positive_local": true,
+    "phase_space_monotone_nonincreasing": true,
+    "symbolic_slope_sign_certificate": true,
+    "finite_difference_symbolic_consistency": true,
+    "grid_refinement_consistency": true,
+    "quadrature_tolerance_robust": true,
+    "condition_robustness_p95_bounded": true,
+    "sensitivity_table_nonempty": true,
+    "bootstrap_uncertainty_finite": true,
+    "bootstrap_seed_robust": true,
+    "split_holdout_finite": true,
+    "no_false_pass_residual_open": true,
+    "toe_gaps_explicitly_open": true,
+    "backend_fit_preclosure_nonzero_loss": true,
+    "upstream_manifest_same_scheme_locked": true,
+    "python_major_lock": true,
+    "theorem_digest_self_consistent": true,
+    "reproducibility_digest_self_consistent": true
+  },
+  "false_pass_guard": "No global unitarity closure claimed.",
+  "next_honest_step": "Fit backend DiscM_loop tensor objects with v9 seed and refinement checks before any closure attempt.",
+  "theorem_core_digest_sha256": "fe2e168730834107c046aae389140b998261572a0da2ddc7b50a258d02fbe002",
+  "theorem_core_digest_recomputed_sha256": "fe2e168730834107c046aae389140b998261572a0da2ddc7b50a258d02fbe002"
+}
