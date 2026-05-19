@@ -4071,8 +4071,8 @@ Ale sama drabinka nie jest naturalnym mechanizmem konstrukcji pelnego lagranzian
 - `generated/c14_control_mode_to_psi_transport_schema_summary.json`
 - `generated/pair1_operator_probe_report.json`
 - `pair1_operator_probe.py`
-- `pair1_operator_probe_config.json`
-- `manifest_action_reconstruction.json`
+- `generated/pair1_operator_probe_config.json`
+- `generated/manifest_action_reconstruction.json`
 - `N196`: `S_preLM_strict_core_source_object_v1` eksportuje pierwszy admissible preobserver orientation datum `E_orient_preLM_v1` na `span{u_T, u_L}`; export jest source-derived, strict-core only, selector-bearing bez `psi0`, quotient-safe i bridge-ready dla przyszlego `B_sel`, ale nadal bez samego `B_sel/R_sel/O_sel`, bez `QW-2191` discharge i bez closure.
 - `N197`: z `E_orient_preLM_v1` repo eksportuje juz pierwszy rzeczywisty preobserver selector bridge operator `B_sel_preLM_v1` na carrierze `V_topo ⊕ L_int ⊕ M_int`; operator jest symetryczny, bezsladowy na plaszczyznie topological-light, daje jawny signed selector decomposition `P_sel_plus_v1/P_sel_minus_v1` i dodatni source-alignment witness, ale nadal bez `R_sel`, `O_sel`, `QW-2191` discharge i bez closure.
 - `N198`: z `B_sel_preLM_v1` repo eksportuje juz pierwszy rzeczywisty preobserver selector reduction operator `R_sel_preLM_v1 : V_topo ⊕ L_int ⊕ M_int -> Q_sel_v1`; redukcja daje dodatni `q_+` channel i zanikajacy `q_-` channel dla `S_preLM_strict_core_source_object_v1`, pozostaje strict-core only i preobserver only, ale nadal bez `O_sel`, `QW-2191` discharge i bez closure.
