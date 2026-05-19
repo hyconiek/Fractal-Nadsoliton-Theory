@@ -92,6 +92,12 @@ rozwiązaniu globalnym selektora w sensie końcowego ToE.
 - Dobra praktyka: rozdzielić fazę jądra i pole skalarne różnymi symbolami
   (`phi_kernel`, `Phi_field` albo równoważne).
 
+Mini-legenda (zalecana w pakietach FAR/A11):
+
+- `phi_kernel` := stała fazowa jądra strict `K_strict_gate`,
+- `Phi(x)` := pole koherencji/porządku w Lagrangianie,
+- `phi(x)` := wyłącznie alias legacy dla `Phi(x)` (jeśli musi zostać dla kompatybilności).
+
 ---
 
 ## 7) Jordan vs Einstein frame
@@ -139,4 +145,3 @@ powinien być zapisany w języku statusowym repo:
 
 To jest właśnie nasza obecna strategia: **maksymalny rygor, minimalna
 nadinterpretacja, ciągłe podnoszenie jakości obiektów świadków**.
-

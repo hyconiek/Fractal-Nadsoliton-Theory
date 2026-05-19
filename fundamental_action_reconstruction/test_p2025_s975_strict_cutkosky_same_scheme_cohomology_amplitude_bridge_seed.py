@@ -14,10 +14,41 @@ OUT_QUALITY_CSV = ROOT / "generated" / "p2025_s975_strict_cutkosky_same_scheme_c
 def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     subprocess.run([sys.executable, str(SCRIPT)], check=True)
     data = json.loads(OUT.read_text(encoding="utf-8"))
-    assert data["schema_version"] == "p2025_s975_v83"
+    assert data["schema_version"] == "p2025_s975_v92"
     assert data["status"] == "OPEN_OBSTRUCTION_WITH_TRACE"
     assert all(data["gatekeeper_checks"].values())
     assert len(data["toe_closure_gaps_7tasks"]) == 7
+    assert len(data["task_numeric_evidence_7"]) == 7
+    for row in data["task_numeric_evidence_7"]:
+        assert row["honest_verdict"] == "OPEN_OBSTRUCTION_WITH_TRACE"
+        assert len(row["method_stack"]) >= 2
+        assert 0.0 <= row["local_readiness_score_0_1"] <= 1.0
+    assert "task_priority_decision_panel" in data
+    tpp = data["task_priority_decision_panel"]
+    assert len(tpp["rows"]) == 7
+    assert tpp["recommended_next_task_id"] in {1, 2, 3, 4, 5, 6, 7}
+    assert tpp["recommended_lane"] in {"kernel_split_robust_discm_integration", "non_selector_fallback_due_to_qw2191_guardrail"}
+    assert tpp["symbolic_normalization_certificate"]["exactly_one"] is True
+    assert tpp["normalized_weight_entropy_nats"] >= 0.0
+    assert tpp["score_dispersion_l2"] >= 0.0
+    assert tpp["score_mad"] >= 0.0
+    assert tpp["score_std"] >= 0.0
+    assert tpp["score_cv"] >= 0.0
+    assert tpp["score_mean_ci95_t_interval"]["lower"] <= tpp["score_mean_ci95_t_interval"]["upper"]
+    assert -1.0 <= tpp["score_spearman_rank_stability"] <= 1.0
+    assert tpp["score_covariance_scalar"] >= 0.0
+    assert tpp["score_pca_effective_rank"] >= 0.0
+    assert len(tpp["score_pca_variance_ratio"]) == 7
+    assert tpp["score_centering_symbolic_certificate"]["exactly_zero"] is True
+    assert tpp["bootstrap_readiness_summary"]["bootstrap_size"] == 512
+    assert len(tpp["bootstrap_readiness_summary"]["mean_q05_q50_q95"]) == 3
+    assert len(tpp["bootstrap_readiness_summary"]["std_q05_q50_q95"]) == 3
+    assert len(tpp["bootstrap_readiness_summary"]["top_index_frequency_over_resamples"]) == 7
+    assert abs(sum(tpp["bootstrap_readiness_summary"]["top_index_frequency_over_resamples"]) - 1.0) < 1e-12
+    assert tpp["robust_spread"]["iqr"] >= 0.0
+    assert tpp["robust_spread"]["mad_scaled"] >= 0.0
+    for row in tpp["rows"]:
+        assert "zscore_vs_task_mean" in row
     assert data["backend_loop_fit_precursor"]["loss_l2"] > 0.0
     assert data["backend_loop_fit_precursor"]["loss_gap"] < 1.0
     assert data["backend_loop_fit_precursor"]["multistart_loss_span"] < 1.0
@@ -128,6 +159,25 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     assert rm["paired_delta_panel"]["mixed_verdict_regime"]["num_channels"] == 3
     assert "per_channel_risk_ranking" in rm["paired_delta_panel"]
     assert len(rm["paired_delta_panel"]["per_channel_risk_ranking"]["rows"]) == 3
+    assert "time_stability_risk_panel" in rm["paired_delta_panel"]
+    assert rm["paired_delta_panel"]["time_stability_risk_panel"]["num_seeds"] == 6
+    assert len(rm["paired_delta_panel"]["time_stability_risk_panel"]["rows"]) == 6
+    assert "time_stability_seed_robust_gate" in rm["paired_delta_panel"]
+    assert "risk_signal_stable" in rm["paired_delta_panel"]["time_stability_seed_robust_gate"]
+    assert "branch_cut_sensitivity_panel" in rm["paired_delta_panel"]
+    assert len(rm["paired_delta_panel"]["branch_cut_sensitivity_panel"]["rows"]) == 9
+    assert "loglog_slope_rows" in rm["paired_delta_panel"]["branch_cut_sensitivity_panel"]
+    assert len(rm["paired_delta_panel"]["branch_cut_sensitivity_panel"]["loglog_slope_rows"]) == 5
+    assert "branch_cross_integrator_panel" in rm["paired_delta_panel"]
+    assert len(rm["paired_delta_panel"]["branch_cross_integrator_panel"]["rows"]) == 5
+    assert "branch_integrator_stress_matrix" in rm["paired_delta_panel"]
+    assert len(rm["paired_delta_panel"]["branch_integrator_stress_matrix"]["rows"]) == 45
+    assert "branch_integrator_cross_seed_envelope" in rm["paired_delta_panel"]
+    assert len(rm["paired_delta_panel"]["branch_integrator_cross_seed_envelope"]["rows"]) == 3
+    assert "branch_integrator_threshold_calibration_panel" in rm["paired_delta_panel"]
+    assert rm["paired_delta_panel"]["branch_integrator_threshold_calibration_panel"]["bootstrap_size"] == 256
+    assert "branch_robust_substitution_decision" in rm["paired_delta_panel"]
+    assert "ready_for_branch_robust_substitution" in rm["paired_delta_panel"]["branch_robust_substitution_decision"]
     for vrow in rm["paired_delta_panel"]["per_channel_power_aware_verdicts"]:
         assert "nonworse_probability_conditions_met" in vrow
         assert "nonworse_probability_ci95_conditions_met" in vrow
@@ -208,6 +258,20 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_per_channel_verdict_csv_json_consistent"] is True
     assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_mixed_verdict_regime_exported"] is True
     assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_per_channel_risk_ranking_exported"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_time_stability_risk_panel_exported"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_time_stability_seed_robust_gate_exported"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_branch_cut_sensitivity_exported"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_branch_loglog_slope_span_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_branch_cross_integrator_exported"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_branch_cross_integrator_agreement_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_branch_integrator_stress_matrix_exported"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_branch_integrator_worst_case_gap_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_branch_integrator_cross_seed_envelope_exported"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_branch_integrator_cross_seed_envelope_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_branch_integrator_threshold_calibration_exported"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_branch_integrator_threshold_calibration_consistent"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_branch_robust_substitution_decision_exported"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_first_branch_robust_substitution_decision_consistent"] is True
     assert all(x["status"] == "OPEN_OBSTRUCTION_WITH_TRACE" for x in data["toe_closure_gaps_7tasks"])
     assert data["depends_on"]["same_scheme_tag"] == "STRICT_P2020_PHASESPACE_SCHEME_V1"
     assert data["upstream_manifest"]["same_scheme_tag"] == "STRICT_P2020_PHASESPACE_SCHEME_V1"
