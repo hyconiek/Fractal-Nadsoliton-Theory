@@ -1,5 +1,5 @@
 {
-  "schema_version": "p2025_s975_v37",
+  "schema_version": "p2025_s975_v54",
   "produced_by": "p2025_s975_strict_cutkosky_same_scheme_cohomology_amplitude_bridge_seed.py",
   "timestamp_utc": "2026-05-19T00:00:00+00:00",
   "status": "OPEN_OBSTRUCTION_WITH_TRACE",
@@ -1278,7 +1278,580 @@
           "residual_l2": 0.009238623640818
         }
       ],
-      "perturbation_residual_l2_span": 9.429654524358705e-05
+      "perturbation_residual_l2_span": 9.429654524358705e-05,
+      "combined_stress_panel": {
+        "solver_crosscheck_objective_gap": 8.54354578186476e-07,
+        "lambda_sweep_residual_l2_span": 0.013127026914523696,
+        "holdout_rotation_residual_l2_max": 0.009393807373792995,
+        "multistart_residual_l2_span": 6.58126947293558e-07,
+        "perturbation_residual_l2_span": 9.429654524358705e-05,
+        "worst_case_residual_envelope": 0.017945956666407088
+      },
+      "cross_background_stress_panel_rows": [
+        {
+          "background": "FRW",
+          "scale_proxy": 1.0,
+          "worst_case_residual_envelope": 0.017945956666407088
+        },
+        {
+          "background": "BianchiI",
+          "scale_proxy": 1.07089028859375,
+          "worst_case_residual_envelope": 0.019218150713579615
+        }
+      ],
+      "cross_background_envelope_span": 0.001272194047172527,
+      "cross_background_scale_source": {
+        "method": "mean_det_frw_to_bianchi_over_nu_grid",
+        "nu_grid": [
+          0.1,
+          0.2,
+          0.35,
+          0.5
+        ],
+        "det_mean": 1.07089028859375
+      },
+      "operator_transport_replay": {
+        "method": "y_phase @ T_frw_to_bianchi(nu_mean)^T",
+        "nu_mean": 0.2875,
+        "T_frw_to_bianchi_nu_mean": [
+          [
+            1.02875,
+            0.00575,
+            0.002875
+          ],
+          [
+            0.008624999999999999,
+            1.023,
+            0.0043124999999999995
+          ],
+          [
+            0.002875,
+            0.0071874999999999994,
+            1.01725
+          ]
+        ],
+        "T_bianchi_to_frw_nu_mean": [
+          [
+            0.9721067255123631,
+            -0.005444802091580325,
+            -0.0027243314100055087
+          ],
+          [
+            -0.0081845764153086,
+            0.9775920652524658,
+            -0.004121243670884489
+          ],
+          [
+            -0.0026895848541292834,
+            -0.006891903822058298,
+            0.9830793353567837
+          ]
+        ],
+        "rows": [
+          {
+            "background": "FRW",
+            "residual_l2": 5.841815678261509e-16,
+            "residual_linf": 8.326672684688674e-16
+          },
+          {
+            "background": "BianchiI",
+            "residual_l2": 1.9775075916341818e-16,
+            "residual_linf": 2.220446049250313e-16
+          }
+        ],
+        "residual_l2_span": 3.8643080866273266e-16
+      },
+      "operator_transport_nu_sweep": {
+        "method": "for nu in nu_grid: y_phase @ T_frw_to_bianchi(nu)^T",
+        "rows": [
+          {
+            "nu": 0.1,
+            "det_frw_to_bianchi": 1.024177659,
+            "residual_l2": 4.906299306740623e-16,
+            "residual_linf": 7.216449660063518e-16,
+            "joint_solver_objective_gap_lbfgsb_vs_slsqp": 1.131364513900536e-06
+          },
+          {
+            "nu": 0.2,
+            "det_frw_to_bianchi": 1.048712272,
+            "residual_l2": 3.7263465669530725e-16,
+            "residual_linf": 4.996003610813204e-16,
+            "joint_solver_objective_gap_lbfgsb_vs_slsqp": 5.789036987553613e-07
+          },
+          {
+            "nu": 0.35,
+            "det_frw_to_bianchi": 1.086188848375,
+            "residual_l2": 3.6079032145206463e-16,
+            "residual_linf": 4.996003610813204e-16,
+            "joint_solver_objective_gap_lbfgsb_vs_slsqp": 6.274821852947365e-07
+          },
+          {
+            "nu": 0.5,
+            "det_frw_to_bianchi": 1.1244823750000001,
+            "residual_l2": 3.827014249683148e-16,
+            "residual_linf": 5.551115123125783e-16,
+            "joint_solver_objective_gap_lbfgsb_vs_slsqp": 6.737268252623822e-07
+          }
+        ],
+        "residual_l2_span": 1.2983960922199764e-16,
+        "solver_crosscheck": "L-BFGS-B vs SLSQP on transported joint objective",
+        "solver_objective_gap_max": 1.131364513900536e-06
+      },
+      "operator_transport_nu_lambda_panel": {
+        "method": "for nu in nu_grid and lambda in [0.05,0.1,0.2]: transported joint fit",
+        "rows": [
+          {
+            "nu": 0.1,
+            "lambda_spread": 0.05,
+            "transport_det_weight": 1.024177659,
+            "transport_condition_weight": 1.007571934537308,
+            "residual_l2": 0.004824173087892663,
+            "residual_l2_weighted_by_det": 0.0049408102997687085,
+            "residual_l2_weighted_by_condition": 0.004860701410710829,
+            "solver_objective_gap_lbfgsb_vs_slsqp": 5.811465156341927e-07
+          },
+          {
+            "nu": 0.1,
+            "lambda_spread": 0.1,
+            "transport_det_weight": 1.024177659,
+            "transport_condition_weight": 1.007571934537308,
+            "residual_l2": 0.009254915027262552,
+            "residual_l2_weighted_by_det": 0.009478677206865682,
+            "residual_l2_weighted_by_condition": 0.009324992637997333,
+            "solver_objective_gap_lbfgsb_vs_slsqp": 1.131364513900536e-06
+          },
+          {
+            "nu": 0.1,
+            "lambda_spread": 0.2,
+            "transport_det_weight": 1.024177659,
+            "transport_condition_weight": 1.007571934537308,
+            "residual_l2": 0.01795406047575607,
+            "residual_l2_weighted_by_det": 0.018388147627604278,
+            "residual_l2_weighted_by_condition": 0.018090007446357366,
+            "solver_objective_gap_lbfgsb_vs_slsqp": 7.940481778472702e-07
+          },
+          {
+            "nu": 0.2,
+            "lambda_spread": 0.05,
+            "transport_det_weight": 1.048712272,
+            "transport_condition_weight": 1.0150731868403111,
+            "residual_l2": 0.0048240800977384,
+            "residual_l2_weighted_by_det": 0.00505907199960922,
+            "residual_l2_weighted_by_condition": 0.0048967943583842375,
+            "solver_objective_gap_lbfgsb_vs_slsqp": 4.4688115494531666e-07
+          },
+          {
+            "nu": 0.2,
+            "lambda_spread": 0.1,
+            "transport_det_weight": 1.048712272,
+            "transport_condition_weight": 1.0150731868403111,
+            "residual_l2": 0.009256520143925627,
+            "residual_l2_weighted_by_det": 0.00970742627095001,
+            "residual_l2_weighted_by_condition": 0.009396045401546121,
+            "solver_objective_gap_lbfgsb_vs_slsqp": 5.789036987553613e-07
+          },
+          {
+            "nu": 0.2,
+            "lambda_spread": 0.2,
+            "transport_det_weight": 1.048712272,
+            "transport_condition_weight": 1.0150731868403111,
+            "residual_l2": 0.01796201730660194,
+            "residual_l2_weighted_by_det": 0.018836987979309838,
+            "residual_l2_weighted_by_condition": 0.01823276214949325,
+            "solver_objective_gap_lbfgsb_vs_slsqp": 1.6229287964127787e-06
+          },
+          {
+            "nu": 0.35,
+            "lambda_spread": 0.05,
+            "transport_det_weight": 1.086188848375,
+            "transport_condition_weight": 1.0261946684276013,
+            "residual_l2": 0.004827219907710386,
+            "residual_l2_weighted_by_det": 0.005243272432408817,
+            "residual_l2_weighted_by_condition": 0.004953667332619976,
+            "solver_objective_gap_lbfgsb_vs_slsqp": 4.7460645272146516e-07
+          },
+          {
+            "nu": 0.35,
+            "lambda_spread": 0.1,
+            "transport_det_weight": 1.086188848375,
+            "transport_condition_weight": 1.0261946684276013,
+            "residual_l2": 0.009263092664435335,
+            "residual_l2_weighted_by_det": 0.010061467953573927,
+            "residual_l2_weighted_by_condition": 0.009505736305394365,
+            "solver_objective_gap_lbfgsb_vs_slsqp": 6.274821852947365e-07
+          },
+          {
+            "nu": 0.35,
+            "lambda_spread": 0.2,
+            "transport_det_weight": 1.086188848375,
+            "transport_condition_weight": 1.0261946684276013,
+            "residual_l2": 0.01797347762691212,
+            "residual_l2_weighted_by_det": 0.019522590964869503,
+            "residual_l2_weighted_by_condition": 0.018444286913839994,
+            "solver_objective_gap_lbfgsb_vs_slsqp": 1.2791526929891925e-06
+          },
+          {
+            "nu": 0.5,
+            "lambda_spread": 0.05,
+            "transport_det_weight": 1.1244823750000001,
+            "transport_condition_weight": 1.0371625321807576,
+            "residual_l2": 0.00483058872936274,
+            "residual_l2_weighted_by_det": 0.005431911887042047,
+            "residual_l2_weighted_by_condition": 0.005010105638469688,
+            "solver_objective_gap_lbfgsb_vs_slsqp": 5.186761076151226e-07
+          },
+          {
+            "nu": 0.5,
+            "lambda_spread": 0.1,
+            "transport_det_weight": 1.1244823750000001,
+            "transport_condition_weight": 1.0371625321807576,
+            "residual_l2": 0.009268662132116044,
+            "residual_l2_weighted_by_det": 0.010422447207394414,
+            "residual_l2_weighted_by_condition": 0.009613109086873376,
+            "solver_objective_gap_lbfgsb_vs_slsqp": 6.737268252623822e-07
+          },
+          {
+            "nu": 0.5,
+            "lambda_spread": 0.2,
+            "transport_det_weight": 1.1244823750000001,
+            "transport_condition_weight": 1.0371625321807576,
+            "residual_l2": 0.017985817069063423,
+            "residual_l2_weighted_by_det": 0.02022473429413598,
+            "residual_l2_weighted_by_condition": 0.01865421557468971,
+            "solver_objective_gap_lbfgsb_vs_slsqp": 2.2050607882163897e-06
+          }
+        ],
+        "residual_l2_span": 0.013161736971325022,
+        "solver_objective_gap_max": 2.2050607882163897e-06,
+        "weighted_envelope_method": "residual_l2 * abs(det(T_frw_to_bianchi(nu)))",
+        "weighted_residual_l2_max": 0.02022473429413598,
+        "weighted_residual_l2_span": 0.015283923994367272,
+        "condition_weighted_envelope_method": "residual_l2 * cond(T_frw_to_bianchi(nu))",
+        "condition_weighted_residual_l2_max": 0.01865421557468971,
+        "condition_weighted_residual_l2_span": 0.013793514163978882
+      },
+      "operator_transport_dual_criterion_frontier": {
+        "criteria": [
+          "det_weighted",
+          "cond_weighted"
+        ],
+        "rows": [
+          {
+            "nu": 0.1,
+            "lambda_spread": 0.05,
+            "det_weighted": 0.0049408102997687085,
+            "cond_weighted": 0.004860701410710829,
+            "pareto_frontier": true
+          },
+          {
+            "nu": 0.1,
+            "lambda_spread": 0.1,
+            "det_weighted": 0.009478677206865682,
+            "cond_weighted": 0.009324992637997333,
+            "pareto_frontier": false
+          },
+          {
+            "nu": 0.1,
+            "lambda_spread": 0.2,
+            "det_weighted": 0.018388147627604278,
+            "cond_weighted": 0.018090007446357366,
+            "pareto_frontier": false
+          },
+          {
+            "nu": 0.2,
+            "lambda_spread": 0.05,
+            "det_weighted": 0.00505907199960922,
+            "cond_weighted": 0.0048967943583842375,
+            "pareto_frontier": false
+          },
+          {
+            "nu": 0.2,
+            "lambda_spread": 0.1,
+            "det_weighted": 0.00970742627095001,
+            "cond_weighted": 0.009396045401546121,
+            "pareto_frontier": false
+          },
+          {
+            "nu": 0.2,
+            "lambda_spread": 0.2,
+            "det_weighted": 0.018836987979309838,
+            "cond_weighted": 0.01823276214949325,
+            "pareto_frontier": false
+          },
+          {
+            "nu": 0.35,
+            "lambda_spread": 0.05,
+            "det_weighted": 0.005243272432408817,
+            "cond_weighted": 0.004953667332619976,
+            "pareto_frontier": false
+          },
+          {
+            "nu": 0.35,
+            "lambda_spread": 0.1,
+            "det_weighted": 0.010061467953573927,
+            "cond_weighted": 0.009505736305394365,
+            "pareto_frontier": false
+          },
+          {
+            "nu": 0.35,
+            "lambda_spread": 0.2,
+            "det_weighted": 0.019522590964869503,
+            "cond_weighted": 0.018444286913839994,
+            "pareto_frontier": false
+          },
+          {
+            "nu": 0.5,
+            "lambda_spread": 0.05,
+            "det_weighted": 0.005431911887042047,
+            "cond_weighted": 0.005010105638469688,
+            "pareto_frontier": false
+          },
+          {
+            "nu": 0.5,
+            "lambda_spread": 0.1,
+            "det_weighted": 0.010422447207394414,
+            "cond_weighted": 0.009613109086873376,
+            "pareto_frontier": false
+          },
+          {
+            "nu": 0.5,
+            "lambda_spread": 0.2,
+            "det_weighted": 0.02022473429413598,
+            "cond_weighted": 0.01865421557468971,
+            "pareto_frontier": false
+          }
+        ],
+        "pareto_frontier_count": 1,
+        "stable_rows_count": 12,
+        "unstable_rows_count": 0,
+        "frontier_continuity_rows": [
+          {
+            "lambda_spread": 0.05,
+            "num_nu_points": 4,
+            "frontier_membership_flips_along_nu": 1
+          },
+          {
+            "lambda_spread": 0.1,
+            "num_nu_points": 4,
+            "frontier_membership_flips_along_nu": 0
+          },
+          {
+            "lambda_spread": 0.2,
+            "num_nu_points": 4,
+            "frontier_membership_flips_along_nu": 0
+          }
+        ],
+        "frontier_membership_flips_total": 1
+      },
+      "backend_substitution_gauge_gauge": {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "rows": [
+          {
+            "channel": "gauge_gauge",
+            "backend_vector": [
+              0.4564915035333617,
+              0.11255445927210118,
+              0.3193819625776963,
+              0.6458024652478899,
+              0.32642050267019357,
+              1.0513158400313969
+            ],
+            "substituted_target_triplet": [
+              0.4564915035333617,
+              0.3193819625776963,
+              0.6458024652478899
+            ]
+          }
+        ],
+        "residual_l2_after_substitution": 5.841815678261509e-16,
+        "note": "First explicit backend-like channel substitution inserted without closure claim."
+      },
+      "backend_substitution_fermion_fermion": {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "rows": [
+          {
+            "channel": "fermion_fermion",
+            "backend_vector": [
+              0.4539622562813955,
+              0.11203602779090298,
+              0.3175203868961344,
+              0.6424308011075204,
+              0.324910414211386,
+              1.0455472290892924
+            ],
+            "substituted_target_triplet": [
+              0.4539622562813955,
+              0.3175203868961344,
+              0.6424308011075204
+            ]
+          }
+        ],
+        "residual_l2_after_substitution": 5.841815678261509e-16,
+        "note": "Second explicit backend-like channel substitution inserted without closure claim."
+      },
+      "backend_substitution_scalar_scalar": {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "rows": [
+          {
+            "channel": "scalar_scalar",
+            "backend_vector": [
+              0.46053862711728355,
+              0.11342245134286756,
+              0.3223258228893616,
+              0.6512716303666449,
+              0.3289458074772833,
+              1.0605670170613868
+            ],
+            "substituted_target_triplet": [
+              0.46053862711728355,
+              0.3223258228893616,
+              0.6512716303666449
+            ]
+          }
+        ],
+        "residual_l2_after_substitution": 5.841815678261509e-16,
+        "note": "Third explicit backend-like channel substitution inserted without closure claim."
+      },
+      "backend_substitution_delta_report": {
+        "residual_l2_baseline": 5.841815678261509e-16,
+        "residual_l2_backend_substituted": 5.841815678261509e-16,
+        "delta_residual_l2_backend_minus_baseline": 0.0,
+        "residual_linf_baseline": 8.326672684688674e-16,
+        "residual_linf_backend_substituted": 8.326672684688674e-16,
+        "delta_residual_linf_backend_minus_baseline": 0.0
+      },
+      "backend_substitution_channel_delta_rows": [
+        {
+          "channel": "gauge_gauge",
+          "baseline_row_residual_l2": 4.996003610813204e-16,
+          "backend_sub_row_residual_l2": 4.996003610813204e-16,
+          "delta_row_residual_l2_backend_minus_baseline": 0.0
+        },
+        {
+          "channel": "fermion_fermion",
+          "baseline_row_residual_l2": 2.2887833992611187e-16,
+          "backend_sub_row_residual_l2": 2.2887833992611187e-16,
+          "delta_row_residual_l2_backend_minus_baseline": 0.0
+        },
+        {
+          "channel": "scalar_scalar",
+          "baseline_row_residual_l2": 2.0770370905276122e-16,
+          "backend_sub_row_residual_l2": 2.0770370905276122e-16,
+          "delta_row_residual_l2_backend_minus_baseline": 0.0
+        }
+      ],
+      "backend_substitution_channel_delta_abs_max": 0.0,
+      "backend_substitution_transport_channel_delta_rows": [
+        {
+          "nu": 0.1,
+          "channel": "gauge_gauge",
+          "det_transport": 1.024177659,
+          "cond_transport": 1.007571934537308,
+          "baseline_row_residual_l2": 4.335559509131367e-16,
+          "backend_sub_row_residual_l2": 4.335559509131367e-16,
+          "delta_row_residual_l2_backend_minus_baseline": 0.0
+        },
+        {
+          "nu": 0.1,
+          "channel": "fermion_fermion",
+          "det_transport": 1.024177659,
+          "cond_transport": 1.007571934537308,
+          "baseline_row_residual_l2": 1.3597399555105182e-16,
+          "backend_sub_row_residual_l2": 1.3597399555105182e-16,
+          "delta_row_residual_l2_backend_minus_baseline": 0.0
+        },
+        {
+          "nu": 0.1,
+          "channel": "scalar_scalar",
+          "det_transport": 1.024177659,
+          "cond_transport": 1.007571934537308,
+          "baseline_row_residual_l2": 1.9229626863835638e-16,
+          "backend_sub_row_residual_l2": 1.9229626863835638e-16,
+          "delta_row_residual_l2_backend_minus_baseline": 0.0
+        },
+        {
+          "nu": 0.2,
+          "channel": "gauge_gauge",
+          "det_transport": 1.048712272,
+          "cond_transport": 1.0150731868403111,
+          "baseline_row_residual_l2": 3.188872858294072e-16,
+          "backend_sub_row_residual_l2": 3.188872858294072e-16,
+          "delta_row_residual_l2_backend_minus_baseline": 0.0
+        },
+        {
+          "nu": 0.2,
+          "channel": "fermion_fermion",
+          "det_transport": 1.048712272,
+          "cond_transport": 1.0150731868403111,
+          "baseline_row_residual_l2": 1.6653345369377348e-16,
+          "backend_sub_row_residual_l2": 1.6653345369377348e-16,
+          "delta_row_residual_l2_backend_minus_baseline": 0.0
+        },
+        {
+          "nu": 0.2,
+          "channel": "scalar_scalar",
+          "det_transport": 1.048712272,
+          "cond_transport": 1.0150731868403111,
+          "baseline_row_residual_l2": 1.9229626863835638e-16,
+          "backend_sub_row_residual_l2": 1.9229626863835638e-16,
+          "delta_row_residual_l2_backend_minus_baseline": 0.0
+        },
+        {
+          "nu": 0.35,
+          "channel": "gauge_gauge",
+          "det_transport": 1.086188848375,
+          "cond_transport": 1.0261946684276013,
+          "baseline_row_residual_l2": 3.554447978966673e-16,
+          "backend_sub_row_residual_l2": 3.554447978966673e-16,
+          "delta_row_residual_l2_backend_minus_baseline": 0.0
+        },
+        {
+          "nu": 0.35,
+          "channel": "fermion_fermion",
+          "det_transport": 1.086188848375,
+          "cond_transport": 1.0261946684276013,
+          "baseline_row_residual_l2": 5.551115123125783e-17,
+          "backend_sub_row_residual_l2": 5.551115123125783e-17,
+          "delta_row_residual_l2_backend_minus_baseline": 0.0
+        },
+        {
+          "nu": 0.35,
+          "channel": "scalar_scalar",
+          "det_transport": 1.086188848375,
+          "cond_transport": 1.0261946684276013,
+          "baseline_row_residual_l2": 5.551115123125783e-17,
+          "backend_sub_row_residual_l2": 5.551115123125783e-17,
+          "delta_row_residual_l2_backend_minus_baseline": 0.0
+        },
+        {
+          "nu": 0.5,
+          "channel": "gauge_gauge",
+          "det_transport": 1.1244823750000001,
+          "cond_transport": 1.0371625321807576,
+          "baseline_row_residual_l2": 3.4219371797089426e-16,
+          "backend_sub_row_residual_l2": 3.4219371797089426e-16,
+          "delta_row_residual_l2_backend_minus_baseline": 0.0
+        },
+        {
+          "nu": 0.5,
+          "channel": "fermion_fermion",
+          "det_transport": 1.1244823750000001,
+          "cond_transport": 1.0371625321807576,
+          "baseline_row_residual_l2": 1.1102230246251565e-16,
+          "backend_sub_row_residual_l2": 1.1102230246251565e-16,
+          "delta_row_residual_l2_backend_minus_baseline": 0.0
+        },
+        {
+          "nu": 0.5,
+          "channel": "scalar_scalar",
+          "det_transport": 1.1244823750000001,
+          "cond_transport": 1.0371625321807576,
+          "baseline_row_residual_l2": 2.0770370905276122e-16,
+          "backend_sub_row_residual_l2": 2.0770370905276122e-16,
+          "delta_row_residual_l2_backend_minus_baseline": 0.0
+        }
+      ],
+      "backend_substitution_transport_channel_delta_abs_max": 0.0
     },
     "note": "Links task-2 channel phase-space table to a shared basis fit without closure claim."
   },
@@ -1507,13 +2080,30 @@
     "phase_joint_holdout_rotation_bounded": true,
     "phase_joint_multistart_bounded": true,
     "phase_joint_perturbation_span_bounded": true,
+    "phase_joint_stress_panel_envelope_bounded": true,
+    "phase_joint_cross_background_envelope_span_bounded": true,
+    "phase_joint_operator_transport_replay_bounded": true,
+    "phase_joint_operator_transport_nu_sweep_bounded": true,
+    "phase_joint_operator_transport_nu_sweep_solver_agreement": true,
+    "phase_joint_operator_transport_nu_lambda_panel_bounded": true,
+    "phase_joint_operator_transport_nu_lambda_solver_agreement": true,
+    "phase_joint_operator_transport_nu_lambda_weighted_envelope_bounded": true,
+    "phase_joint_operator_transport_nu_lambda_condition_weighted_envelope_bounded": true,
+    "phase_joint_operator_transport_dual_frontier_nonempty": true,
+    "phase_joint_operator_transport_dual_frontier_continuity_bounded": true,
+    "phase_backend_substitution_gauge_gauge_finite": true,
+    "phase_backend_substitution_fermion_fermion_finite": true,
+    "phase_backend_substitution_scalar_scalar_finite": true,
+    "phase_backend_substitution_delta_report_finite": true,
+    "phase_backend_substitution_channel_delta_bounded": true,
+    "phase_backend_substitution_transport_channel_delta_bounded": true,
     "upstream_manifest_same_scheme_locked": true,
     "python_major_lock": true,
     "theorem_digest_self_consistent": true,
     "reproducibility_digest_self_consistent": true
   },
   "false_pass_guard": "No global unitarity closure claimed.",
-  "next_honest_step": "Fit backend DiscM_loop tensor objects with v9 seed and refinement checks before any closure attempt.",
-  "theorem_core_digest_sha256": "12140c377aa6603923d26f4d7b19333506b7dc3f722282092d8e83ab4ee6db3d",
-  "theorem_core_digest_recomputed_sha256": "12140c377aa6603923d26f4d7b19333506b7dc3f722282092d8e83ab4ee6db3d"
+  "next_honest_step": "Replace channel proxy targets with explicit loop-derived DiscM tensor slices and replay the full combined/cross-background stress panel.",
+  "theorem_core_digest_sha256": "c970fd9f5c3a9c34d508bf9cac75365113558989e49a0bc4df382f8cbac979e7",
+  "theorem_core_digest_recomputed_sha256": "c970fd9f5c3a9c34d508bf9cac75365113558989e49a0bc4df382f8cbac979e7"
 }

@@ -11,7 +11,7 @@ OUT = ROOT / "generated" / "p2025_s975_strict_cutkosky_same_scheme_cohomology_am
 def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     subprocess.run([sys.executable, str(SCRIPT)], check=True)
     data = json.loads(OUT.read_text(encoding="utf-8"))
-    assert data["schema_version"] == "p2025_s975_v37"
+    assert data["schema_version"] == "p2025_s975_v54"
     assert data["status"] == "OPEN_OBSTRUCTION_WITH_TRACE"
     assert all(data["gatekeeper_checks"].values())
     assert len(data["toe_closure_gaps_7tasks"]) == 7
@@ -60,6 +60,47 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     assert data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["holdout_rotation_residual_l2_max"] < 1.0
     assert data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["multistart_residual_l2_span"] < 1.0
     assert data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["perturbation_residual_l2_span"] < 1.0
+    assert data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["combined_stress_panel"]["worst_case_residual_envelope"] < 1.0
+    assert len(data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["cross_background_stress_panel_rows"]) == 2
+    assert data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["cross_background_envelope_span"] < 0.2
+    assert data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["cross_background_scale_source"]["method"] == "mean_det_frw_to_bianchi_over_nu_grid"
+    assert len(data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["operator_transport_replay"]["rows"]) == 2
+    assert data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["operator_transport_replay"]["residual_l2_span"] < 0.2
+    assert len(data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["operator_transport_nu_sweep"]["rows"]) == 4
+    assert data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["operator_transport_nu_sweep"]["residual_l2_span"] < 0.2
+    assert data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["operator_transport_nu_sweep"]["solver_objective_gap_max"] < 1.0
+    assert len(data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["operator_transport_nu_lambda_panel"]["rows"]) == 12
+    assert data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["operator_transport_nu_lambda_panel"]["residual_l2_span"] < 0.3
+    assert data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["operator_transport_nu_lambda_panel"]["solver_objective_gap_max"] < 1.0
+    assert data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["operator_transport_nu_lambda_panel"]["weighted_envelope_method"] == "residual_l2 * abs(det(T_frw_to_bianchi(nu)))"
+    assert data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["operator_transport_nu_lambda_panel"]["weighted_residual_l2_max"] < 1.0
+    assert data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["operator_transport_nu_lambda_panel"]["condition_weighted_envelope_method"] == "residual_l2 * cond(T_frw_to_bianchi(nu))"
+    assert data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["operator_transport_nu_lambda_panel"]["condition_weighted_residual_l2_max"] < 2.0
+    assert data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["operator_transport_dual_criterion_frontier"]["pareto_frontier_count"] >= 1
+    assert len(data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["operator_transport_dual_criterion_frontier"]["frontier_continuity_rows"]) == 3
+    assert data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["backend_substitution_gauge_gauge"]["residual_l2_after_substitution"] >= 0.0
+    assert data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["backend_substitution_fermion_fermion"]["residual_l2_after_substitution"] >= 0.0
+    assert data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["backend_substitution_scalar_scalar"]["residual_l2_after_substitution"] >= 0.0
+    assert "delta_residual_l2_backend_minus_baseline" in data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["backend_substitution_delta_report"]
+    assert len(data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["backend_substitution_channel_delta_rows"]) == 3
+    assert len(data["phase_common_basis_link_precursor"]["joint_coupled_fit"]["backend_substitution_transport_channel_delta_rows"]) == 12
+    assert data["gatekeeper_checks"]["phase_joint_stress_panel_envelope_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_joint_cross_background_envelope_span_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_joint_operator_transport_replay_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_joint_operator_transport_nu_sweep_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_joint_operator_transport_nu_sweep_solver_agreement"] is True
+    assert data["gatekeeper_checks"]["phase_joint_operator_transport_nu_lambda_panel_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_joint_operator_transport_nu_lambda_solver_agreement"] is True
+    assert data["gatekeeper_checks"]["phase_joint_operator_transport_nu_lambda_weighted_envelope_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_joint_operator_transport_nu_lambda_condition_weighted_envelope_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_joint_operator_transport_dual_frontier_nonempty"] is True
+    assert data["gatekeeper_checks"]["phase_joint_operator_transport_dual_frontier_continuity_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_gauge_gauge_finite"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_fermion_fermion_finite"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_scalar_scalar_finite"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_delta_report_finite"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_channel_delta_bounded"] is True
+    assert data["gatekeeper_checks"]["phase_backend_substitution_transport_channel_delta_bounded"] is True
     assert all(x["status"] == "OPEN_OBSTRUCTION_WITH_TRACE" for x in data["toe_closure_gaps_7tasks"])
     assert data["depends_on"]["same_scheme_tag"] == "STRICT_P2020_PHASESPACE_SCHEME_V1"
     assert data["upstream_manifest"]["same_scheme_tag"] == "STRICT_P2020_PHASESPACE_SCHEME_V1"
