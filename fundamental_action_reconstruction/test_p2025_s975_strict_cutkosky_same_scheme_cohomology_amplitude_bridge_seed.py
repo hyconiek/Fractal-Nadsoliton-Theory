@@ -14,7 +14,7 @@ OUT_QUALITY_CSV = ROOT / "generated" / "p2025_s975_strict_cutkosky_same_scheme_c
 def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     subprocess.run([sys.executable, str(SCRIPT)], check=True)
     data = json.loads(OUT.read_text(encoding="utf-8"))
-    assert data["schema_version"] == "p2025_s975_v109"
+    assert data["schema_version"] == "p2025_s975_v129"
     assert data["status"] == "OPEN_OBSTRUCTION_WITH_TRACE"
     assert all(data["gatekeeper_checks"].values())
     assert len(data["toe_closure_gaps_7tasks"]) == 7
@@ -223,6 +223,61 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     assert gnfs["simulated_case"]["ready_for_costlier_step"] is True
     assert gnfs["simulated_case"]["all_7_tasks_open"] is False
     assert gnfs["would_be_consistent_under_simulation"] is False
+    assert "governance_history_nonclosure_failure_simulation" in rpt
+    ghnfs = rpt["governance_history_nonclosure_failure_simulation"]
+    assert ghnfs["status"] == "SIMULATED_FAILURE_DETECTED"
+    assert ghnfs["scope"] == "TEST_ONLY_DIAGNOSTIC_NOT_RUNTIME_CLAIM"
+    assert ghnfs["simulated_case"]["global_payload_open"] is True
+    assert ghnfs["simulated_case"]["history_all_rows_all7_open"] is False
+    assert ghnfs["would_be_consistent_under_simulation"] is False
+    assert "governance_history_global_nonclosure_failure_simulation" in rpt
+    ghgnfs = rpt["governance_history_global_nonclosure_failure_simulation"]
+    assert ghgnfs["status"] == "SIMULATED_FAILURE_DETECTED"
+    assert ghgnfs["scope"] == "TEST_ONLY_DIAGNOSTIC_NOT_RUNTIME_CLAIM"
+    assert ghgnfs["simulated_case"]["if_go_then_all7_open"] is True
+    assert ghgnfs["simulated_case"]["global_payload_open"] is True
+    assert ghgnfs["simulated_case"]["history_all_rows_global_open"] is False
+    assert ghgnfs["would_be_consistent_under_simulation"] is False
+    assert "governance_nonclosure_single_flip_matrix" in rpt
+    gnsm = rpt["governance_nonclosure_single_flip_matrix"]
+    assert gnsm["status"] == "SIMULATED_FAILURE_MATRIX_EXPORTED"
+    assert gnsm["scope"] == "TEST_ONLY_DIAGNOSTIC_NOT_RUNTIME_CLAIM"
+    assert gnsm["baseline_checks"] == {
+        "if_go_then_all7_open": True,
+        "global_payload_open": True,
+        "history_all_rows_global_open": True,
+        "history_all_rows_all7_open": True,
+    }
+    assert len(gnsm["rows"]) == 4
+    seen = set()
+    for rr in gnsm["rows"]:
+        assert rr["status"] == "SIMULATED_FAILURE_DETECTED"
+        assert rr["would_be_consistent_under_simulation"] is False
+        assert rr["flipped_check"] in gnsm["baseline_checks"]
+        seen.add(rr["flipped_check"])
+        false_count = sum(1 for _, v in rr["simulated_checks"].items() if not bool(v))
+        assert false_count == 1
+    assert seen == set(gnsm["baseline_checks"].keys())
+    assert "governance_nonclosure_two_flip_matrix" in rpt
+    gntm = rpt["governance_nonclosure_two_flip_matrix"]
+    assert gntm["status"] == "SIMULATED_FAILURE_MATRIX_EXPORTED"
+    assert gntm["scope"] == "TEST_ONLY_DIAGNOSTIC_NOT_RUNTIME_CLAIM"
+    assert gntm["baseline_checks"] == gnsm["baseline_checks"]
+    assert gntm["coverage_summary"]["num_checks"] == 4
+    assert gntm["coverage_summary"]["expected_rows_n_choose_2"] == 6
+    assert gntm["coverage_summary"]["exported_rows"] == 6
+    assert gntm["coverage_summary"]["all_rows_have_exactly_two_false"] is True
+    assert len(gntm["rows"]) == 6
+    seen_pairs = set()
+    for rr in gntm["rows"]:
+        assert rr["status"] == "SIMULATED_FAILURE_DETECTED"
+        assert rr["would_be_consistent_under_simulation"] is False
+        assert len(rr["flipped_checks"]) == 2
+        pair = tuple(sorted(rr["flipped_checks"]))
+        seen_pairs.add(pair)
+        false_count = sum(1 for _, v in rr["simulated_checks"].items() if not bool(v))
+        assert false_count == 2
+    assert len(seen_pairs) == 6
     for row in tpp["rows"]:
         assert "zscore_vs_task_mean" in row
     assert data["backend_loop_fit_precursor"]["loss_l2"] > 0.0
@@ -254,6 +309,171 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     assert data["channel_phase_space_cutkosky_precursor"]["global_min_integral"] > 0.0
     assert len(data["channel_phase_space_cutkosky_precursor"]["tolerance_sweep_rows"]) == 3
     assert data["channel_phase_space_cutkosky_precursor"]["tolerance_span_max"] < 1e-10
+    assert "ur_uncertainty_transport_bridge_precursor" in data
+    uutbp = data["ur_uncertainty_transport_bridge_precursor"]
+    assert uutbp["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert uutbp["scope"] == "STRICT_UR_LINK_UNCERTAINTY_SYNTHESIS"
+    assert uutbp["rows_count"] == 10
+    assert uutbp["median_abs_delta_center"] >= 0.0
+    assert uutbp["p95_abs_delta_center"] >= 0.0
+    assert uutbp["median_delta_std"] >= 0.0
+    assert uutbp["p95_delta_std"] >= 0.0
+    assert 0.0 <= uutbp["residue_positive_rate"] <= 1.0
+    assert uutbp["bounded_p95_abs_delta_center"] is True
+    assert uutbp["bounded_p95_delta_std"] is True
+    assert "ur_transport_cross_source_agreement_precursor" in data
+    utcsa = data["ur_transport_cross_source_agreement_precursor"]
+    assert utcsa["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert utcsa["scope"] == "STRICT_UR_LINK_CROSS_SOURCE_AGREEMENT"
+    assert utcsa["common_s_count"] == 5
+    assert len(utcsa["rows"]) == 5
+    assert utcsa["max_delta_center_abs_gap"] >= 0.0
+    assert utcsa["p95_delta_center_abs_gap"] >= 0.0
+    assert utcsa["median_delta_std_ratio_p2016_over_p2015"] >= 0.0
+    assert utcsa["max_delta_std_ratio_p2016_over_p2015"] >= 0.0
+    assert utcsa["center_gap_bounded_p95"] is True
+    assert utcsa["std_ratio_bounded_max"] is True
+    assert "ur_channel_trace_budget_precursor" in data
+    uctbp = data["ur_channel_trace_budget_precursor"]
+    assert uctbp["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert uctbp["scope"] == "STRICT_UR_CHANNEL_TRACE_BUDGET"
+    assert uctbp["num_channels"] == 4
+    assert len(uctbp["rows"]) == 4
+    assert uctbp["total_trace_all_channels"] > 0.0
+    assert abs(uctbp["trace_share_sum"] - 1.0) < 1e-12
+    assert uctbp["all_channels_monotone_nonincreasing"] is True
+    assert 0.0 <= uctbp["max_channel_trace_share"] <= 1.0
+    assert "ur_channel_class_mapping_precursor" in data
+    uccmp = data["ur_channel_class_mapping_precursor"]
+    assert uccmp["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert uccmp["scope"] == "STRICT_CHANNEL_MAP_TO_TASK2_CLASSES"
+    assert uccmp["mapping_kind"] == "EXPLICIT_WEIGHTED_PRECURSOR_NOT_UNIQUENESS_THEOREM"
+    assert len(uccmp["rows"]) == 4
+    assert set(uccmp["class_trace_budget"].keys()) == {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
+    assert abs(sum(v["trace_share"] for v in uccmp["class_trace_budget"].values()) - 1.0) < 1e-12
+    assert uccmp["trace_conservation_gap_abs"] < 1e-12
+    assert "ur_class_bounded_uncertainty_residual_budget_precursor" in data
+    ucburbp = data["ur_class_bounded_uncertainty_residual_budget_precursor"]
+    assert ucburbp["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert ucburbp["scope"] == "STRICT_TASK2_CLASS_BOUNDED_UNCERTAINTY_RESIDUAL_BUDGET"
+    assert len(ucburbp["rows"]) == 3
+    for rr in ucburbp["rows"]:
+        assert rr["class"] in {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
+        assert rr["trace_sum"] >= 0.0
+        assert 0.0 <= rr["trace_share"] <= 1.0
+        assert rr["residual_l2_backend_sub"] >= 0.0
+        assert rr["uncertainty_p95_delta_std"] >= 0.0
+        assert rr["risk_proxy_residual_uncertainty_trace"] >= 0.0
+    assert ucburbp["risk_proxy_min"] >= 0.0
+    assert ucburbp["risk_proxy_max"] >= ucburbp["risk_proxy_min"]
+    assert ucburbp["risk_proxy_span"] >= 0.0
+    assert ucburbp["all_rows_bounded_uncertainty"] is True
+    assert "ur_class_readiness_gate_precursor" in data
+    ucrgp = data["ur_class_readiness_gate_precursor"]
+    assert ucrgp["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert ucrgp["scope"] == "STRICT_TASK2_CLASS_SEQUENCING_GATE"
+    assert len(ucrgp["rows"]) == 3
+    assert ucrgp["risk_threshold_go"] >= 0.0
+    assert ucrgp["uncertainty_threshold_go"] > 0.0
+    assert 0 <= ucrgp["go_count"] <= 3
+    assert set(ucrgp["priority_order_low_risk_to_high_risk"]) == {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
+    assert "ur_class_first_exact_integration_replay_precursor" in data
+    ucfirp = data["ur_class_first_exact_integration_replay_precursor"]
+    assert ucfirp["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert ucfirp["scope"] == "STRICT_TASK2_CLASS_FIRST_REPLAY_PACKET"
+    assert ucfirp["selected_class"] in {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
+    assert ucfirp["selection_basis"] == "min_risk_proxy_from_ur_class_readiness_gate_precursor"
+    assert ucfirp["baseline_mean_risk_proxy"] >= 0.0
+    assert ucfirp["selected_class_risk_proxy"] >= 0.0
+    assert ucfirp["selected_class_uncertainty_p95_delta_std"] >= 0.0
+    assert 0.0 <= ucfirp["selected_class_trace_share"] <= 1.0
+    assert isinstance(ucfirp["ready_for_costlier_exact_integration_replay"], bool)
+    assert "ur_class_first_replay_delta_precursor" in data
+    ucfrdp = data["ur_class_first_replay_delta_precursor"]
+    assert ucfrdp["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert ucfrdp["scope"] == "STRICT_TASK2_CLASS_FIRST_REPLAY_DELTA_PANEL"
+    assert ucfrdp["selected_class"] in {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
+    assert len(ucfrdp["baseline_integrals_over_s_grid"]) == 5
+    assert len(ucfrdp["replay_integrals_over_s_grid"]) == 5
+    assert ucfrdp["delta_l2_replay_minus_baseline"] >= 0.0
+    assert ucfrdp["delta_linf_replay_minus_baseline"] >= 0.0
+    assert ucfrdp["replay_settings"]["epsabs"] < 1e-12
+    assert "ur_class_first_vs_all_class_replay_comparison_precursor" in data
+    ucfvac = data["ur_class_first_vs_all_class_replay_comparison_precursor"]
+    assert ucfvac["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert ucfvac["scope"] == "STRICT_TASK2_CLASS_FIRST_VS_ALL_CLASS_REPLAY_COMPARISON"
+    assert ucfvac["selected_class"] in {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
+    assert len(ucfvac["rows"]) == 3
+    assert ucfvac["selected_class_delta_l2"] >= 0.0
+    assert ucfvac["mean_other_classes_delta_l2"] >= 0.0
+    assert isinstance(ucfvac["selected_is_min_delta_l2"], bool)
+    assert ucfvac["replay_settings"]["epsabs"] < 1e-12
+    assert "ur_cost_vs_gain_precursor" in data
+    ucvg = data["ur_cost_vs_gain_precursor"]
+    assert ucvg["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert ucvg["scope"] == "STRICT_TASK2_COST_VS_GAIN_PANEL"
+    assert ucvg["class_first"]["estimated_cost_units"] > 0.0
+    assert ucvg["all_class"]["estimated_cost_units"] > ucvg["class_first"]["estimated_cost_units"]
+    assert ucvg["class_first"]["gain_proxy_delta_l2"] >= 0.0
+    assert ucvg["all_class"]["gain_proxy_delta_l2_mean"] >= 0.0
+    assert ucvg["class_first"]["gain_per_cost"] >= 0.0
+    assert ucvg["all_class"]["gain_per_cost"] >= 0.0
+    assert isinstance(ucvg["class_first_more_cost_efficient"], bool)
+    assert ucvg["cost_ratio_all_over_class_first"] >= 1.0
+    assert "ur_runtime_tolerance_benchmark_precursor" in data
+    urtbp = data["ur_runtime_tolerance_benchmark_precursor"]
+    assert urtbp["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert urtbp["scope"] == "STRICT_TASK2_RUNTIME_TOLERANCE_BENCHMARK"
+    assert urtbp["selected_class"] in {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
+    assert len(urtbp["rows"]) == 3
+    for rr in urtbp["rows"]:
+        assert rr["tol"] > 0.0
+        assert rr["runtime_seconds"] > 0.0
+        assert rr["delta_l2_vs_baseline"] >= 0.0
+        assert rr["gain_per_second"] >= 0.0
+    assert urtbp["slowest_runtime_seconds"] >= urtbp["fastest_runtime_seconds"]
+    assert "ur_all_class_exact_integration_sweep_precursor" in data
+    uaeisp = data["ur_all_class_exact_integration_sweep_precursor"]
+    assert uaeisp["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert uaeisp["scope"] == "STRICT_TASK2_ALL_CLASS_EXACT_INTEGRATION_SWEEP"
+    assert uaeisp["num_rows"] == 15
+    assert len(uaeisp["rows"]) == 15
+    for rr in uaeisp["rows"]:
+        assert rr["class"] in {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
+        assert rr["epsabs"] > 0.0
+        assert rr["epsrel"] > 0.0
+        assert rr["limit"] in {600, 1200, 2000}
+        assert rr["delta_l2_vs_baseline"] >= 0.0
+        assert rr["delta_linf_vs_baseline"] >= 0.0
+        assert rr["integration_warning_count"] >= 0
+        assert isinstance(rr["numerical_stress_flag"], bool)
+    assert uaeisp["delta_l2_min"] >= 0.0
+    assert uaeisp["delta_l2_max"] >= uaeisp["delta_l2_min"]
+    assert uaeisp["integration_warning_total"] >= 0
+    assert isinstance(uaeisp["any_numerical_stress_flag"], bool)
+    assert "ur_numerical_stress_ranking_precursor" in data
+    unsrp = data["ur_numerical_stress_ranking_precursor"]
+    assert unsrp["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsrp["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_RANKING"
+    assert unsrp["ranking_key"] == "integration_warning_count_desc_then_delta_l2_desc"
+    assert 1 <= unsrp["top_k"] <= 5
+    assert len(unsrp["rows_top_k"]) == unsrp["top_k"]
+    for rr in unsrp["rows_top_k"]:
+        assert rr["class"] in {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
+        assert rr["integration_warning_count"] >= 0
+        assert rr["delta_l2_vs_baseline"] >= 0.0
+    assert "ur_numerical_stress_alt_parameterization_precursor" in data
+    unsapp = data["ur_numerical_stress_alt_parameterization_precursor"]
+    assert unsapp["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsapp["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_ALT_PARAMETERIZATION"
+    assert unsapp["transform"] == "x_equals_u_squared"
+    assert len(unsapp["rows"]) == unsrp["top_k"]
+    for rr in unsapp["rows"]:
+        assert rr["class"] in {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
+        assert rr["original_integration_warning_count"] >= 0
+        assert rr["alt_integration_warning_count"] >= 0
+        assert rr["original_delta_l2_vs_baseline"] >= 0.0
+        assert rr["alt_delta_l2_vs_baseline"] >= 0.0
     assert data["phase_common_basis_link_precursor"]["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
     assert data["phase_common_basis_link_precursor"]["condition_number"] < 1e6
     assert data["phase_common_basis_link_precursor"]["residual_l2"] > 0.0
