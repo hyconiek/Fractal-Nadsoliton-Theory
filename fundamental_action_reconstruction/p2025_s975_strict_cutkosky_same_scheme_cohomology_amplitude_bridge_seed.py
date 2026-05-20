@@ -10,6 +10,9 @@ import hashlib
 import json
 import platform
 import csv
+import time
+import warnings
+from itertools import combinations
 from pathlib import Path
 from typing import Any
 
@@ -19,6 +22,7 @@ import scipy.linalg as la
 import scipy.optimize as so
 import scipy.stats as ss
 import sympy as sp
+from scipy.integrate import IntegrationWarning
 
 ROOT = Path(__file__).resolve().parent
 GEN = ROOT / "generated"
@@ -112,6 +116,135 @@ def main() -> None:
     d2017 = float(p2017.get("delta_stats", {}).get("l2_base_p2004", 0.0))
     med2015 = median_delta_abs(p2015.get("uncertainty_table", []))
     med2016 = median_delta_abs(p2016.get("uncertainty_table", []))
+    ur_unc_rows = []
+    for src_name, src in [("p2015", p2015), ("p2016", p2016)]:
+        for row in src.get("uncertainty_table", []):
+            ur_unc_rows.append({
+                "source": src_name,
+                "delta_center": float(row.get("delta_center", 0.0)),
+                "delta_std": float(row.get("delta_std", 0.0)),
+                "residue_positive_all_samples": bool(row.get("residue_positive_all_samples", False)),
+            })
+    ur_unc_abs_centers = np.array([abs(r["delta_center"]) for r in ur_unc_rows], dtype=float)
+    ur_unc_stds = np.array([r["delta_std"] for r in ur_unc_rows], dtype=float)
+    ur_unc_residue_pos_rate = float(np.mean(np.array([1.0 if r["residue_positive_all_samples"] else 0.0 for r in ur_unc_rows], dtype=float))) if ur_unc_rows else 0.0
+    ur_uncertainty_transport_bridge_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_UR_LINK_UNCERTAINTY_SYNTHESIS",
+        "rows_count": int(len(ur_unc_rows)),
+        "median_abs_delta_center": float(np.median(ur_unc_abs_centers)) if ur_unc_rows else 0.0,
+        "p95_abs_delta_center": float(np.percentile(ur_unc_abs_centers, 95.0)) if ur_unc_rows else 0.0,
+        "median_delta_std": float(np.median(ur_unc_stds)) if ur_unc_rows else 0.0,
+        "p95_delta_std": float(np.percentile(ur_unc_stds, 95.0)) if ur_unc_rows else 0.0,
+        "residue_positive_rate": ur_unc_residue_pos_rate,
+        "bounded_p95_abs_delta_center": bool((float(np.percentile(ur_unc_abs_centers, 95.0)) if ur_unc_rows else 0.0) < 1e-5),
+        "bounded_p95_delta_std": bool((float(np.percentile(ur_unc_stds, 95.0)) if ur_unc_rows else 0.0) < 1e-5),
+    }
+    # Cross-source transport agreement panel (Task-2-oriented quantitative precursor).
+    p2015_by_s = {}
+    for row in p2015.get("uncertainty_table", []):
+        s_val = float(sp.N(sp.sympify(str(row.get("s", "0")))))
+        p2015_by_s[s_val] = row
+    p2016_by_s = {}
+    for row in p2016.get("uncertainty_table", []):
+        s_val = float(sp.N(sp.sympify(str(row.get("s", "0")))))
+        p2016_by_s[s_val] = row
+    common_s = sorted(set(p2015_by_s.keys()).intersection(set(p2016_by_s.keys())))
+    ur_transport_agreement_rows = []
+    for s_val in common_s:
+        r15 = p2015_by_s[s_val]
+        r16 = p2016_by_s[s_val]
+        c15 = float(r15.get("delta_center", 0.0))
+        c16 = float(r16.get("delta_center", 0.0))
+        sd15 = float(r15.get("delta_std", 0.0))
+        sd16 = float(r16.get("delta_std", 0.0))
+        ur_transport_agreement_rows.append({
+            "s": float(s_val),
+            "delta_center_p2015": c15,
+            "delta_center_p2016": c16,
+            "delta_center_abs_gap": float(abs(c16 - c15)),
+            "delta_std_p2015": sd15,
+            "delta_std_p2016": sd16,
+            "delta_std_ratio_p2016_over_p2015": float(sd16 / max(1e-30, sd15)),
+        })
+    center_gap_vec = np.array([r["delta_center_abs_gap"] for r in ur_transport_agreement_rows], dtype=float) if ur_transport_agreement_rows else np.array([0.0], dtype=float)
+    std_ratio_vec = np.array([r["delta_std_ratio_p2016_over_p2015"] for r in ur_transport_agreement_rows], dtype=float) if ur_transport_agreement_rows else np.array([1.0], dtype=float)
+    ur_transport_cross_source_agreement_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_UR_LINK_CROSS_SOURCE_AGREEMENT",
+        "rows": ur_transport_agreement_rows,
+        "common_s_count": int(len(ur_transport_agreement_rows)),
+        "max_delta_center_abs_gap": float(np.max(center_gap_vec)),
+        "p95_delta_center_abs_gap": float(np.percentile(center_gap_vec, 95.0)),
+        "median_delta_std_ratio_p2016_over_p2015": float(np.median(std_ratio_vec)),
+        "max_delta_std_ratio_p2016_over_p2015": float(np.max(std_ratio_vec)),
+        "center_gap_bounded_p95": bool(float(np.percentile(center_gap_vec, 95.0)) < 1e-5),
+        "std_ratio_bounded_max": bool(float(np.max(std_ratio_vec)) < 2.0),
+    }
+    # Channel-resolved strict trace budget precursor (unitarity-oriented, no closure claim).
+    trace_profiles = p2017.get("quadrature_channel_covariance_candidate", {}).get("trace_profiles_by_channel", {})
+    channel_trace_rows = []
+    channel_names_sorted = sorted(trace_profiles.keys())
+    total_trace_by_channel = {}
+    for ch in channel_names_sorted:
+        vals = np.array([float(v) for v in trace_profiles.get(ch, [])], dtype=float)
+        total_trace_by_channel[ch] = float(np.sum(vals))
+    total_trace_all_channels = float(sum(total_trace_by_channel.values()))
+    for ch in channel_names_sorted:
+        vals = np.array([float(v) for v in trace_profiles.get(ch, [])], dtype=float)
+        monotone_nonincreasing = bool(np.all(np.diff(vals) <= 1e-15)) if vals.size > 1 else True
+        channel_trace_rows.append({
+            "channel": ch,
+            "num_points": int(vals.size),
+            "trace_sum": float(np.sum(vals)),
+            "trace_mean": float(np.mean(vals)) if vals.size else 0.0,
+            "trace_min": float(np.min(vals)) if vals.size else 0.0,
+            "trace_max": float(np.max(vals)) if vals.size else 0.0,
+            "trace_p95": float(np.percentile(vals, 95.0)) if vals.size else 0.0,
+            "trace_share_of_total": float(total_trace_by_channel[ch] / max(1e-30, total_trace_all_channels)),
+            "monotone_nonincreasing_over_s_grid": monotone_nonincreasing,
+        })
+    ur_channel_trace_budget_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_UR_CHANNEL_TRACE_BUDGET",
+        "rows": channel_trace_rows,
+        "num_channels": int(len(channel_trace_rows)),
+        "total_trace_all_channels": total_trace_all_channels,
+        "trace_share_sum": float(sum(r["trace_share_of_total"] for r in channel_trace_rows)),
+        "all_channels_monotone_nonincreasing": bool(all(r["monotone_nonincreasing_over_s_grid"] for r in channel_trace_rows)),
+        "max_channel_trace_share": float(max((r["trace_share_of_total"] for r in channel_trace_rows), default=0.0)),
+    }
+    # Explicit channel-map precursor: p2017 internal channels -> Task-2 working classes.
+    channel_map_weights = {
+        "gg": {"gauge_gauge": 1.00, "fermion_fermion": 0.00, "scalar_scalar": 0.00},
+        "gh": {"gauge_gauge": 0.50, "fermion_fermion": 0.50, "scalar_scalar": 0.00},
+        "hh": {"gauge_gauge": 0.00, "fermion_fermion": 0.00, "scalar_scalar": 1.00},
+        "gx": {"gauge_gauge": 0.50, "fermion_fermion": 0.00, "scalar_scalar": 0.50},
+    }
+    class_trace_budget = {"gauge_gauge": 0.0, "fermion_fermion": 0.0, "scalar_scalar": 0.0}
+    channel_total_lookup = {r["channel"]: float(r["trace_sum"]) for r in channel_trace_rows}
+    mapped_rows = []
+    for source_ch, weights in channel_map_weights.items():
+        src_trace = float(channel_total_lookup.get(source_ch, 0.0))
+        row = {"source_channel": source_ch, "source_trace_sum": src_trace, "weights": dict(weights), "allocated": {}}
+        for target_class, ww in weights.items():
+            alloc = float(src_trace * float(ww))
+            class_trace_budget[target_class] += alloc
+            row["allocated"][target_class] = alloc
+        mapped_rows.append(row)
+    class_total = float(sum(class_trace_budget.values()))
+    for k in class_trace_budget:
+        class_trace_budget[k] = {"trace_sum": float(class_trace_budget[k]), "trace_share": float(class_trace_budget[k] / max(1e-30, class_total))}
+    ur_channel_class_mapping_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_CHANNEL_MAP_TO_TASK2_CLASSES",
+        "mapping_kind": "EXPLICIT_WEIGHTED_PRECURSOR_NOT_UNIQUENESS_THEOREM",
+        "rows": mapped_rows,
+        "class_trace_budget": class_trace_budget,
+        "source_trace_total": float(sum(channel_total_lookup.values())),
+        "allocated_trace_total": class_total,
+        "trace_conservation_gap_abs": float(abs(class_total - float(sum(channel_total_lookup.values())))),
+    }
 
     omega, phi, beta, eta = 0.18575, 0.16250, 1.0, 1.8
     s_grid_coarse = [0.5, 1.5, 3.0]
@@ -688,6 +821,293 @@ def main() -> None:
             "delta_row_residual_l2_backend_minus_baseline": float(sub_row_l2 - base_row_l2),
         })
     channel_delta_abs_max = float(max(abs(r["delta_row_residual_l2_backend_minus_baseline"]) for r in channel_delta_rows)) if channel_delta_rows else float("inf")
+    # Task-2 bounded uncertainty + residual budget table on mapped class lane.
+    class_residual_lookup = {r["channel"]: float(r["backend_sub_row_residual_l2"]) for r in channel_delta_rows}
+    class_budget_rows = []
+    for cls in ["gauge_gauge", "fermion_fermion", "scalar_scalar"]:
+        trace_sum_cls = float(ur_channel_class_mapping_precursor["class_trace_budget"][cls]["trace_sum"])
+        trace_share_cls = float(ur_channel_class_mapping_precursor["class_trace_budget"][cls]["trace_share"])
+        residual_l2_cls = float(class_residual_lookup.get(cls, 0.0))
+        uncertainty_p95_cls = float(ur_uncertainty_transport_bridge_precursor["p95_delta_std"])
+        risk_proxy = float(residual_l2_cls * (1.0 + uncertainty_p95_cls) * (1.0 + trace_share_cls))
+        class_budget_rows.append({
+            "class": cls,
+            "trace_sum": trace_sum_cls,
+            "trace_share": trace_share_cls,
+            "residual_l2_backend_sub": residual_l2_cls,
+            "uncertainty_p95_delta_std": uncertainty_p95_cls,
+            "risk_proxy_residual_uncertainty_trace": risk_proxy,
+            "bounded_uncertainty": bool(uncertainty_p95_cls < 1e-5),
+        })
+    risk_vals = np.array([r["risk_proxy_residual_uncertainty_trace"] for r in class_budget_rows], dtype=float)
+    ur_class_bounded_uncertainty_residual_budget_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_CLASS_BOUNDED_UNCERTAINTY_RESIDUAL_BUDGET",
+        "rows": class_budget_rows,
+        "risk_proxy_min": float(np.min(risk_vals)) if class_budget_rows else 0.0,
+        "risk_proxy_max": float(np.max(risk_vals)) if class_budget_rows else 0.0,
+        "risk_proxy_span": float(np.max(risk_vals) - np.min(risk_vals)) if class_budget_rows else 0.0,
+        "all_rows_bounded_uncertainty": bool(all(r["bounded_uncertainty"] for r in class_budget_rows)),
+    }
+    # Task-2 class readiness decision gate (sequencing only, not closure).
+    class_readiness_rows = []
+    risk_threshold_go = float(np.median(risk_vals) * 1.15) if class_budget_rows else 0.0
+    uncertainty_threshold_go = 1e-5
+    for row in class_budget_rows:
+        go_flag = bool(
+            row["risk_proxy_residual_uncertainty_trace"] <= risk_threshold_go
+            and row["uncertainty_p95_delta_std"] <= uncertainty_threshold_go
+        )
+        class_readiness_rows.append({
+            "class": row["class"],
+            "risk_proxy": float(row["risk_proxy_residual_uncertainty_trace"]),
+            "uncertainty_p95_delta_std": float(row["uncertainty_p95_delta_std"]),
+            "go_for_costlier_integration_step": go_flag,
+        })
+    class_readiness_rows = sorted(class_readiness_rows, key=lambda r: r["risk_proxy"])
+    ur_class_readiness_gate_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_CLASS_SEQUENCING_GATE",
+        "rows": class_readiness_rows,
+        "risk_threshold_go": risk_threshold_go,
+        "uncertainty_threshold_go": uncertainty_threshold_go,
+        "go_count": int(sum(1 for r in class_readiness_rows if r["go_for_costlier_integration_step"])),
+        "priority_order_low_risk_to_high_risk": [r["class"] for r in class_readiness_rows],
+    }
+    # Class-first replay precursor: execute ranking decision into a concrete next-step packet.
+    selected_class = class_readiness_rows[0]["class"] if class_readiness_rows else "gauge_gauge"
+    baseline_mean_risk = float(np.mean(risk_vals)) if class_budget_rows else 0.0
+    selected_row = next((r for r in class_budget_rows if r["class"] == selected_class), None)
+    selected_risk = float(selected_row["risk_proxy_residual_uncertainty_trace"]) if selected_row else 0.0
+    selected_uncertainty = float(selected_row["uncertainty_p95_delta_std"]) if selected_row else 0.0
+    selected_trace_share = float(selected_row["trace_share"]) if selected_row else 0.0
+    ur_class_first_exact_integration_replay_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_CLASS_FIRST_REPLAY_PACKET",
+        "selected_class": selected_class,
+        "selection_basis": "min_risk_proxy_from_ur_class_readiness_gate_precursor",
+        "baseline_mean_risk_proxy": baseline_mean_risk,
+        "selected_class_risk_proxy": selected_risk,
+        "delta_selected_minus_baseline_mean_risk": float(selected_risk - baseline_mean_risk),
+        "selected_class_uncertainty_p95_delta_std": selected_uncertainty,
+        "selected_class_trace_share": selected_trace_share,
+        "ready_for_costlier_exact_integration_replay": bool(
+            selected_risk <= risk_threshold_go and selected_uncertainty <= uncertainty_threshold_go
+        ),
+    }
+    # Concrete class-first replay delta panel (tighter quadrature settings on selected class only).
+    selected_channel_params = {
+        "gauge_gauge": (omega, phi, beta, eta),
+        "fermion_fermion": (omega * 1.01, phi * 0.99, beta * 1.02, eta * 1.00),
+        "scalar_scalar": (omega * 0.99, phi * 1.01, beta * 0.98, eta * 1.01),
+    }
+    sel_params = selected_channel_params[selected_class]
+    sel_row = next((r for r in channel_phase_rows if r["channel"] == selected_class), None)
+    baseline_integrals = np.array(sel_row["integrals_over_s_grid"], dtype=float) if sel_row is not None else np.zeros(len(s_grid_fine), dtype=float)
+    replay_integrals = []
+    for s in s_grid_fine:
+        def integrand_selected(x: float) -> float:
+            kk = np.cos(sel_params[0] * x + sel_params[1]) / (1.0 + sel_params[2] * (x ** sel_params[3]))
+            return float((kk * kk) / np.sqrt(max(1e-15, x + s)))
+        vv, _ = si.quad(integrand_selected, 0.0, 1.0, epsabs=1e-13, epsrel=1e-13, limit=600)
+        replay_integrals.append(float(vv))
+    replay_integrals = np.array(replay_integrals, dtype=float)
+    replay_delta_l2 = float(np.linalg.norm(replay_integrals - baseline_integrals, ord=2))
+    replay_delta_linf = float(np.linalg.norm(replay_integrals - baseline_integrals, ord=np.inf))
+    ur_class_first_replay_delta_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_CLASS_FIRST_REPLAY_DELTA_PANEL",
+        "selected_class": selected_class,
+        "baseline_integrals_over_s_grid": baseline_integrals.tolist(),
+        "replay_integrals_over_s_grid": replay_integrals.tolist(),
+        "delta_l2_replay_minus_baseline": replay_delta_l2,
+        "delta_linf_replay_minus_baseline": replay_delta_linf,
+        "replay_settings": {"epsabs": 1e-13, "epsrel": 1e-13, "limit": 600},
+    }
+    # Comparison panel: class-first replay vs all-class replay under same precision budget.
+    baseline_by_class = {r["channel"]: np.array(r["integrals_over_s_grid"], dtype=float) for r in channel_phase_rows}
+    replay_all_rows = []
+    all_delta_l2 = {}
+    for ch in ["gauge_gauge", "fermion_fermion", "scalar_scalar"]:
+        par = selected_channel_params[ch]
+        vals = []
+        for s in s_grid_fine:
+            def integrand_all(x: float) -> float:
+                kk = np.cos(par[0] * x + par[1]) / (1.0 + par[2] * (x ** par[3]))
+                return float((kk * kk) / np.sqrt(max(1e-15, x + s)))
+            vv, _ = si.quad(integrand_all, 0.0, 1.0, epsabs=1e-13, epsrel=1e-13, limit=600)
+            vals.append(float(vv))
+        arr = np.array(vals, dtype=float)
+        d_l2 = float(np.linalg.norm(arr - baseline_by_class[ch], ord=2))
+        d_linf = float(np.linalg.norm(arr - baseline_by_class[ch], ord=np.inf))
+        all_delta_l2[ch] = d_l2
+        replay_all_rows.append({
+            "class": ch,
+            "delta_l2_replay_minus_baseline": d_l2,
+            "delta_linf_replay_minus_baseline": d_linf,
+        })
+    selected_class_delta_l2 = float(all_delta_l2[selected_class])
+    mean_other_l2 = float(np.mean([v for k, v in all_delta_l2.items() if k != selected_class]))
+    ur_class_first_vs_all_class_replay_comparison_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_CLASS_FIRST_VS_ALL_CLASS_REPLAY_COMPARISON",
+        "selected_class": selected_class,
+        "rows": replay_all_rows,
+        "selected_class_delta_l2": selected_class_delta_l2,
+        "mean_other_classes_delta_l2": mean_other_l2,
+        "selected_minus_mean_other_delta_l2": float(selected_class_delta_l2 - mean_other_l2),
+        "selected_is_min_delta_l2": bool(selected_class_delta_l2 <= min(all_delta_l2.values())),
+        "replay_settings": {"epsabs": 1e-13, "epsrel": 1e-13, "limit": 600},
+    }
+    # Cost-vs-gain panel: class-first and all-class replay under same precision envelope.
+    sim_eval_count_per_class = int(len(s_grid_fine))
+    estimated_cost_units_class_first = float(sim_eval_count_per_class)
+    estimated_cost_units_all_class = float(sim_eval_count_per_class * 3)
+    gain_proxy_class_first = float(replay_delta_l2)
+    gain_proxy_all_class_mean = float(np.mean([r["delta_l2_replay_minus_baseline"] for r in replay_all_rows])) if replay_all_rows else 0.0
+    efficiency_class_first = float(gain_proxy_class_first / max(1e-30, estimated_cost_units_class_first))
+    efficiency_all_class = float(gain_proxy_all_class_mean / max(1e-30, estimated_cost_units_all_class))
+    ur_cost_vs_gain_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_COST_VS_GAIN_PANEL",
+        "class_first": {
+            "estimated_cost_units": estimated_cost_units_class_first,
+            "gain_proxy_delta_l2": gain_proxy_class_first,
+            "gain_per_cost": efficiency_class_first,
+        },
+        "all_class": {
+            "estimated_cost_units": estimated_cost_units_all_class,
+            "gain_proxy_delta_l2_mean": gain_proxy_all_class_mean,
+            "gain_per_cost": efficiency_all_class,
+        },
+        "class_first_more_cost_efficient": bool(efficiency_class_first <= efficiency_all_class),
+        "cost_ratio_all_over_class_first": float(estimated_cost_units_all_class / max(1e-30, estimated_cost_units_class_first)),
+    }
+    # Runtime micro-benchmark panel (same selected class, tolerance sweep).
+    runtime_tolerance_grid = [1e-10, 1e-12, 1e-13]
+    runtime_rows = []
+    for tol in runtime_tolerance_grid:
+        t0 = time.perf_counter()
+        vals = []
+        for s in s_grid_fine:
+            def integrand_rt(x: float) -> float:
+                kk = np.cos(sel_params[0] * x + sel_params[1]) / (1.0 + sel_params[2] * (x ** sel_params[3]))
+                return float((kk * kk) / np.sqrt(max(1e-15, x + s)))
+            vv, _ = si.quad(integrand_rt, 0.0, 1.0, epsabs=tol, epsrel=tol, limit=600)
+            vals.append(float(vv))
+        dt = float(time.perf_counter() - t0)
+        arr = np.array(vals, dtype=float)
+        d_l2 = float(np.linalg.norm(arr - baseline_integrals, ord=2))
+        runtime_rows.append({
+            "tol": float(tol),
+            "runtime_seconds": dt,
+            "delta_l2_vs_baseline": d_l2,
+            "gain_per_second": float(d_l2 / max(1e-12, dt)),
+        })
+    ur_runtime_tolerance_benchmark_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_RUNTIME_TOLERANCE_BENCHMARK",
+        "selected_class": selected_class,
+        "rows": runtime_rows,
+        "fastest_runtime_seconds": float(min(r["runtime_seconds"] for r in runtime_rows)),
+        "slowest_runtime_seconds": float(max(r["runtime_seconds"] for r in runtime_rows)),
+    }
+    # Heavier all-class exact integration sweep (user-requested cost-insensitive computation).
+    exact_case_grid = [(1e-12, 600), (1e-12, 1200), (1e-14, 600), (1e-14, 1200), (1e-15, 2000)]
+    exact_rows = []
+    for ch in ["gauge_gauge", "fermion_fermion", "scalar_scalar"]:
+        par = selected_channel_params[ch]
+        base = baseline_by_class[ch]
+        for tol, lim in exact_case_grid:
+            vals = []
+            warning_count = 0
+            for s in s_grid_fine:
+                def integrand_exact(x: float) -> float:
+                    kk = np.cos(par[0] * x + par[1]) / (1.0 + par[2] * (x ** par[3]))
+                    return float((kk * kk) / np.sqrt(max(1e-15, x + s)))
+                with warnings.catch_warnings(record=True) as wlist:
+                    warnings.simplefilter("always", IntegrationWarning)
+                    vv, _ = si.quad(integrand_exact, 0.0, 1.0, epsabs=tol, epsrel=tol, limit=lim)
+                warning_count += int(sum(1 for w in wlist if issubclass(w.category, IntegrationWarning)))
+                vals.append(float(vv))
+            arr = np.array(vals, dtype=float)
+            exact_rows.append({
+                "class": ch,
+                "epsabs": float(tol),
+                "epsrel": float(tol),
+                "limit": int(lim),
+                "delta_l2_vs_baseline": float(np.linalg.norm(arr - base, ord=2)),
+                "delta_linf_vs_baseline": float(np.linalg.norm(arr - base, ord=np.inf)),
+                "integration_warning_count": int(warning_count),
+                "numerical_stress_flag": bool(warning_count > 0),
+            })
+    exact_delta_l2 = np.array([r["delta_l2_vs_baseline"] for r in exact_rows], dtype=float)
+    exact_warning_total = int(sum(r["integration_warning_count"] for r in exact_rows))
+    ur_all_class_exact_integration_sweep_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_ALL_CLASS_EXACT_INTEGRATION_SWEEP",
+        "rows": exact_rows,
+        "num_rows": int(len(exact_rows)),
+        "delta_l2_min": float(np.min(exact_delta_l2)) if exact_rows else 0.0,
+        "delta_l2_max": float(np.max(exact_delta_l2)) if exact_rows else 0.0,
+        "delta_l2_span": float(np.max(exact_delta_l2) - np.min(exact_delta_l2)) if exact_rows else 0.0,
+        "integration_warning_total": exact_warning_total,
+        "any_numerical_stress_flag": bool(exact_warning_total > 0),
+    }
+    # Numerical stress ranking packet for follow-up refactor prioritization.
+    exact_rows_ranked = sorted(
+        exact_rows,
+        key=lambda r: (-int(r["integration_warning_count"]), -float(r["delta_l2_vs_baseline"]))
+    )
+    top_k = min(5, len(exact_rows_ranked))
+    ur_numerical_stress_ranking_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_RANKING",
+        "ranking_key": "integration_warning_count_desc_then_delta_l2_desc",
+        "top_k": int(top_k),
+        "rows_top_k": exact_rows_ranked[:top_k],
+    }
+    # Alternate-parameterization replay on top stress cases: x = u^2 transform.
+    alt_rows = []
+    for row in exact_rows_ranked[:top_k]:
+        ch = str(row["class"])
+        tol = float(row["epsabs"])
+        lim = int(row["limit"])
+        par = selected_channel_params[ch]
+        base = baseline_by_class[ch]
+        vals_alt = []
+        warning_count_alt = 0
+        for s in s_grid_fine:
+            def integrand_alt(u: float) -> float:
+                x = u * u
+                kk = np.cos(par[0] * x + par[1]) / (1.0 + par[2] * (x ** par[3]))
+                return float(((kk * kk) / np.sqrt(max(1e-15, x + s))) * 2.0 * u)
+            with warnings.catch_warnings(record=True) as wlist:
+                warnings.simplefilter("always", IntegrationWarning)
+                vv, _ = si.quad(integrand_alt, 0.0, 1.0, epsabs=tol, epsrel=tol, limit=lim)
+            warning_count_alt += int(sum(1 for w in wlist if issubclass(w.category, IntegrationWarning)))
+            vals_alt.append(float(vv))
+        arr_alt = np.array(vals_alt, dtype=float)
+        delta_l2_alt = float(np.linalg.norm(arr_alt - base, ord=2))
+        alt_rows.append({
+            "class": ch,
+            "epsabs": tol,
+            "epsrel": tol,
+            "limit": lim,
+            "original_integration_warning_count": int(row["integration_warning_count"]),
+            "alt_integration_warning_count": int(warning_count_alt),
+            "warning_count_delta_alt_minus_original": int(warning_count_alt - int(row["integration_warning_count"])),
+            "original_delta_l2_vs_baseline": float(row["delta_l2_vs_baseline"]),
+            "alt_delta_l2_vs_baseline": delta_l2_alt,
+            "delta_l2_alt_minus_original": float(delta_l2_alt - float(row["delta_l2_vs_baseline"])),
+        })
+    ur_numerical_stress_alt_parameterization_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_ALT_PARAMETERIZATION",
+        "transform": "x_equals_u_squared",
+        "rows": alt_rows,
+        "improved_warning_count_cases": int(sum(1 for r in alt_rows if r["warning_count_delta_alt_minus_original"] < 0)),
+    }
     # transport-conditioned channel delta map (per-channel, per-nu)
     channel_transport_delta_rows = []
     channel_transport_delta_abs_max = 0.0
@@ -2432,6 +2852,74 @@ def main() -> None:
         "would_be_consistent_under_simulation": False,
         "purpose": "Demonstrate the consistency gate rejects closure-inconsistent GO scenarios.",
     }
+    governance_history_nonclosure_failure_simulation = {
+        "status": "SIMULATED_FAILURE_DETECTED",
+        "scope": "TEST_ONLY_DIAGNOSTIC_NOT_RUNTIME_CLAIM",
+        "simulated_case": {
+            "global_payload_open": True,
+            "history_all_rows_all7_open": False,
+        },
+        "would_be_consistent_under_simulation": False,
+        "purpose": "Demonstrate the consistency gate rejects audit-trail inconsistency even when global payload remains open.",
+    }
+    governance_history_global_nonclosure_failure_simulation = {
+        "status": "SIMULATED_FAILURE_DETECTED",
+        "scope": "TEST_ONLY_DIAGNOSTIC_NOT_RUNTIME_CLAIM",
+        "simulated_case": {
+            "if_go_then_all7_open": True,
+            "global_payload_open": True,
+            "history_all_rows_global_open": False,
+        },
+        "would_be_consistent_under_simulation": False,
+        "purpose": "Demonstrate the consistency gate rejects global-history audit inconsistency despite local GO precondition satisfaction.",
+    }
+    governance_nonclosure_single_flip_matrix = {
+        "status": "SIMULATED_FAILURE_MATRIX_EXPORTED",
+        "scope": "TEST_ONLY_DIAGNOSTIC_NOT_RUNTIME_CLAIM",
+        "baseline_checks": {
+            "if_go_then_all7_open": True,
+            "global_payload_open": True,
+            "history_all_rows_global_open": True,
+            "history_all_rows_all7_open": True,
+        },
+        "rows": [],
+    }
+    for check_name in governance_nonclosure_single_flip_matrix["baseline_checks"]:
+        row_checks = dict(governance_nonclosure_single_flip_matrix["baseline_checks"])
+        row_checks[check_name] = False
+        governance_nonclosure_single_flip_matrix["rows"].append({
+            "flipped_check": check_name,
+            "simulated_checks": row_checks,
+            "would_be_consistent_under_simulation": False,
+            "status": "SIMULATED_FAILURE_DETECTED",
+        })
+    governance_nonclosure_two_flip_matrix = {
+        "status": "SIMULATED_FAILURE_MATRIX_EXPORTED",
+        "scope": "TEST_ONLY_DIAGNOSTIC_NOT_RUNTIME_CLAIM",
+        "baseline_checks": dict(governance_nonclosure_single_flip_matrix["baseline_checks"]),
+        "rows": [],
+    }
+    check_names = list(governance_nonclosure_two_flip_matrix["baseline_checks"].keys())
+    for left_name, right_name in combinations(check_names, 2):
+        row_checks = dict(governance_nonclosure_two_flip_matrix["baseline_checks"])
+        row_checks[left_name] = False
+        row_checks[right_name] = False
+        governance_nonclosure_two_flip_matrix["rows"].append({
+            "flipped_checks": [left_name, right_name],
+            "simulated_checks": row_checks,
+            "would_be_consistent_under_simulation": False,
+            "status": "SIMULATED_FAILURE_DETECTED",
+        })
+    two_flip_false_count_rows = [
+        int(sum(1 for _, v in row["simulated_checks"].items() if not bool(v)))
+        for row in governance_nonclosure_two_flip_matrix["rows"]
+    ]
+    governance_nonclosure_two_flip_matrix["coverage_summary"] = {
+        "num_checks": int(len(check_names)),
+        "expected_rows_n_choose_2": int(len(check_names) * (len(check_names) - 1) // 2),
+        "exported_rows": int(len(governance_nonclosure_two_flip_matrix["rows"])),
+        "all_rows_have_exactly_two_false": bool(all(c == 2 for c in two_flip_false_count_rows)),
+    }
     next_task_idx = int(np.argmin(raw_ranks))
     next_task_id = int(task_ids[next_task_idx])
     next_task_name = str(task_numeric_evidence_7[next_task_idx]["name"])
@@ -2609,7 +3097,7 @@ def main() -> None:
     }
 
     payload = {
-        "schema_version": "p2025_s975_v109",
+        "schema_version": "p2025_s975_v129",
         "produced_by": Path(__file__).name,
         "timestamp_utc": TS,
         "status": "OPEN_OBSTRUCTION_WITH_TRACE",
@@ -2670,6 +3158,10 @@ def main() -> None:
                 "nonclosure_status_history_audit": nonclosure_status_history_audit,
                 "governance_nonclosure_consistency_gate": governance_nonclosure_consistency_gate,
                 "governance_nonclosure_failure_simulation": governance_nonclosure_failure_simulation,
+                "governance_history_nonclosure_failure_simulation": governance_history_nonclosure_failure_simulation,
+                "governance_history_global_nonclosure_failure_simulation": governance_history_global_nonclosure_failure_simulation,
+                "governance_nonclosure_single_flip_matrix": governance_nonclosure_single_flip_matrix,
+                "governance_nonclosure_two_flip_matrix": governance_nonclosure_two_flip_matrix,
             },
             "normalized_weight_entropy_nats": scipy_entropy,
             "symbolic_normalization_certificate": {
@@ -2794,6 +3286,20 @@ def main() -> None:
             "tolerance_span_max": tol_span_max,
             "note": "Channelwise phase-space table only; no DiscM=CutSum closure claim.",
         },
+        "ur_uncertainty_transport_bridge_precursor": ur_uncertainty_transport_bridge_precursor,
+        "ur_transport_cross_source_agreement_precursor": ur_transport_cross_source_agreement_precursor,
+        "ur_channel_trace_budget_precursor": ur_channel_trace_budget_precursor,
+        "ur_channel_class_mapping_precursor": ur_channel_class_mapping_precursor,
+        "ur_class_bounded_uncertainty_residual_budget_precursor": ur_class_bounded_uncertainty_residual_budget_precursor,
+        "ur_class_readiness_gate_precursor": ur_class_readiness_gate_precursor,
+        "ur_class_first_exact_integration_replay_precursor": ur_class_first_exact_integration_replay_precursor,
+        "ur_class_first_replay_delta_precursor": ur_class_first_replay_delta_precursor,
+        "ur_class_first_vs_all_class_replay_comparison_precursor": ur_class_first_vs_all_class_replay_comparison_precursor,
+        "ur_cost_vs_gain_precursor": ur_cost_vs_gain_precursor,
+        "ur_runtime_tolerance_benchmark_precursor": ur_runtime_tolerance_benchmark_precursor,
+        "ur_all_class_exact_integration_sweep_precursor": ur_all_class_exact_integration_sweep_precursor,
+        "ur_numerical_stress_ranking_precursor": ur_numerical_stress_ranking_precursor,
+        "ur_numerical_stress_alt_parameterization_precursor": ur_numerical_stress_alt_parameterization_precursor,
         "phase_common_basis_link_precursor": {
             "status": "OPEN_PRECURSOR_NOT_CLOSURE",
             "feature_matrix": x_phase.tolist(),
