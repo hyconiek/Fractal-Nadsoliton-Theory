@@ -1,0 +1,164 @@
+{
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "result_kind": "SCRATCH_MEMORY_REGULARIZED_STABILITY__EVIDENCE_NOT_THEOREM",
+  "scenarios": [
+    {
+      "scenario": {
+        "name": "base_window",
+        "d_min": 1.0,
+        "d_max": 11.0,
+        "npts": 700,
+        "phase_shift": 0.0,
+        "eta_shift": 0.0
+      },
+      "seed_count": 8,
+      "rho_q05_q50_q95": [
+        0.2199846284062739,
+        0.21999697084322412,
+        0.2200010712013127
+      ],
+      "gamma_q05_q50_q95": [
+        0.9999805049444951,
+        1.000016461122771,
+        1.0012118904038034
+      ],
+      "r2_q05_q50_q95": [
+        0.988692236513128,
+        0.9889458411693233,
+        0.988946047030816
+      ],
+      "rho_cv": 2.6970669542668213e-05,
+      "gamma_cv": 0.0005365685640434925
+    },
+    {
+      "scenario": {
+        "name": "short_window",
+        "d_min": 1.0,
+        "d_max": 8.0,
+        "npts": 640,
+        "phase_shift": 0.0,
+        "eta_shift": 0.0
+      },
+      "seed_count": 8,
+      "rho_q05_q50_q95": [
+        0.2199916593121402,
+        0.21999535560289468,
+        0.21999959914494832
+      ],
+      "gamma_q05_q50_q95": [
+        0.999635415941598,
+        1.0000047294397254,
+        1.0003638839981932
+      ],
+      "r2_q05_q50_q95": [
+        0.9938775049340178,
+        0.9940699915497028,
+        0.9940699952758387
+      ],
+      "rho_cv": 1.2751519498894893e-05,
+      "gamma_cv": 0.0002632463730047828
+    },
+    {
+      "scenario": {
+        "name": "long_window",
+        "d_min": 1.0,
+        "d_max": 14.0,
+        "npts": 800,
+        "phase_shift": 0.0,
+        "eta_shift": 0.0
+      },
+      "seed_count": 8,
+      "rho_q05_q50_q95": [
+        0.21999601382029965,
+        0.21999839098969243,
+        0.22001196966780373
+      ],
+      "gamma_q05_q50_q95": [
+        0.9998292123152008,
+        0.9999979063331318,
+        1.0000996451965591
+      ],
+      "r2_q05_q50_q95": [
+        0.9840321317813455,
+        0.9843026408001714,
+        0.9843026435934911
+      ],
+      "rho_cv": 2.8472422351931882e-05,
+      "gamma_cv": 9.571877885717284e-05
+    },
+    {
+      "scenario": {
+        "name": "phase_eta_perturbed_plus",
+        "d_min": 1.0,
+        "d_max": 11.0,
+        "npts": 700,
+        "phase_shift": 0.04,
+        "eta_shift": 0.1
+      },
+      "seed_count": 8,
+      "rho_q05_q50_q95": [
+        0.2199811411892239,
+        0.2199888598905499,
+        0.21999476008083252
+      ],
+      "gamma_q05_q50_q95": [
+        0.9993404579457509,
+        0.9999831078125733,
+        1.0004272531002514
+      ],
+      "r2_q05_q50_q95": [
+        0.9846859063596598,
+        0.9850192532478017,
+        0.9850192974235111
+      ],
+      "rho_cv": 2.189374660667572e-05,
+      "gamma_cv": 0.0003883127421110368
+    },
+    {
+      "scenario": {
+        "name": "phase_eta_perturbed_minus",
+        "d_min": 1.0,
+        "d_max": 11.0,
+        "npts": 700,
+        "phase_shift": -0.04,
+        "eta_shift": -0.1
+      },
+      "seed_count": 8,
+      "rho_q05_q50_q95": [
+        0.22000044965876417,
+        0.22000522628607605,
+        0.220020692434411
+      ],
+      "gamma_q05_q50_q95": [
+        0.9997203123639296,
+        1.0000127811461987,
+        1.0001515978938516
+      ],
+      "r2_q05_q50_q95": [
+        0.992086335851482,
+        0.9922647950424619,
+        0.9922647974870376
+      ],
+      "rho_cv": 3.685165095429767e-05,
+      "gamma_cv": 0.00015358182425929723
+    }
+  ],
+  "global_summary": {
+    "max_rho_cv": 3.685165095429767e-05,
+    "max_gamma_cv": 0.0005365685640434925,
+    "stability_flag_strict_threshold": true
+  },
+  "regularization_note": {
+    "type": "quadratic_prior_penalty",
+    "intent": "degeneracy control only, not physical proof"
+  },
+  "symbolic_trace": {
+    "regularization_term": "g0**2*lam/sg**2 - 2*g0*gamma*lam/sg**2 + gamma**2*lam/sg**2 + lam*rho**2/sr**2 - 2*lam*rho*rho0/sr**2 + lam*rho0**2/sr**2"
+  },
+  "hard_limits": [
+    "Regularization can suppress variance without proving mechanism truth.",
+    "No theorem-level bridge is claimed.",
+    "Legacy physical-role transfer to strict remains blocked."
+  ],
+  "next_honest_step": "Compare regularized vs unregularized out-of-window prediction error; if regularization only shrinks variance without predictive gain, classify as non-bridge fit stabilization artifact."
+}

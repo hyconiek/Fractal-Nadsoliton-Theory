@@ -1,0 +1,161 @@
+{
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "result_kind": "SCRATCH_MEMORY_SEED_DRANGE_STABILITY__EVIDENCE_NOT_THEOREM",
+  "scenarios": [
+    {
+      "scenario": {
+        "name": "base_window",
+        "d_min": 1.0,
+        "d_max": 11.0,
+        "npts": 700,
+        "phase_shift": 0.0,
+        "eta_shift": 0.0
+      },
+      "seed_count": 8,
+      "rho_q05_q50_q95": [
+        0.11375612334344772,
+        0.19935268510451298,
+        0.7492565376494589
+      ],
+      "gamma_q05_q50_q95": [
+        -6.043207507769687,
+        -0.1816362489910146,
+        3.1797175278472634
+      ],
+      "r2_q05_q50_q95": [
+        0.9884883981275615,
+        0.9889495547187754,
+        0.9933226171387396
+      ],
+      "rho_cv": 0.905506547076395,
+      "gamma_cv": 3.899463290516402
+    },
+    {
+      "scenario": {
+        "name": "short_window",
+        "d_min": 1.0,
+        "d_max": 8.0,
+        "npts": 640,
+        "phase_shift": 0.0,
+        "eta_shift": 0.0
+      },
+      "seed_count": 8,
+      "rho_q05_q50_q95": [
+        0.18190466100677583,
+        0.21454739188619215,
+        0.315305301858471
+      ],
+      "gamma_q05_q50_q95": [
+        -1.2333186274522103,
+        1.765278609334152,
+        7.382844779502983
+      ],
+      "r2_q05_q50_q95": [
+        0.9938999322511047,
+        0.9940845326560559,
+        0.9941802781903127
+      ],
+      "rho_cv": 0.22573615560602306,
+      "gamma_cv": 1.1901165848273187
+    },
+    {
+      "scenario": {
+        "name": "long_window",
+        "d_min": 1.0,
+        "d_max": 14.0,
+        "npts": 800,
+        "phase_shift": 0.0,
+        "eta_shift": 0.0
+      },
+      "seed_count": 8,
+      "rho_q05_q50_q95": [
+        0.15980824409945765,
+        0.226807737067737,
+        0.7386089110168546
+      ],
+      "gamma_q05_q50_q95": [
+        -1.8950844194127172,
+        1.7572088784325492,
+        7.654899346973122
+      ],
+      "r2_q05_q50_q95": [
+        0.984096705718579,
+        0.9844234374828496,
+        0.9852924073078116
+      ],
+      "rho_cv": 0.8332176128382268,
+      "gamma_cv": 1.569157340770413
+    },
+    {
+      "scenario": {
+        "name": "phase_eta_perturbed_plus",
+        "d_min": 1.0,
+        "d_max": 11.0,
+        "npts": 700,
+        "phase_shift": 0.04,
+        "eta_shift": 0.1
+      },
+      "seed_count": 8,
+      "rho_q05_q50_q95": [
+        0.12988853730883312,
+        0.15701339439247508,
+        0.16737342341875072
+      ],
+      "gamma_q05_q50_q95": [
+        -5.638589551401404,
+        1.2583217920644572,
+        6.483047363175515
+      ],
+      "r2_q05_q50_q95": [
+        0.9849851103067572,
+        0.9851795954022551,
+        0.9852511166173714
+      ],
+      "rho_cv": 0.09183839193107804,
+      "gamma_cv": 5.35807766663455
+    },
+    {
+      "scenario": {
+        "name": "phase_eta_perturbed_minus",
+        "d_min": 1.0,
+        "d_max": 11.0,
+        "npts": 700,
+        "phase_shift": -0.04,
+        "eta_shift": -0.1
+      },
+      "seed_count": 8,
+      "rho_q05_q50_q95": [
+        0.16149435491922792,
+        0.29870901234211544,
+        0.3690100711547853
+      ],
+      "gamma_q05_q50_q95": [
+        -4.133669142531498,
+        0.36145217735708446,
+        3.17971916000623
+      ],
+      "r2_q05_q50_q95": [
+        0.9921171757666336,
+        0.9922917871730939,
+        0.9923775054500306
+      ],
+      "rho_cv": 0.255702134006329,
+      "gamma_cv": 21.416740106340935
+    }
+  ],
+  "global_summary": {
+    "max_rho_cv": 0.905506547076395,
+    "max_gamma_cv": 21.416740106340935,
+    "stability_flag_strict_threshold": false
+  },
+  "symbolic_trace": {
+    "memory_recurrence_rearranged": "Eq(-rho*y_tm1 + y_t, x_t*(1 - rho))",
+    "z_transfer_form": "z*(rho - 1)/(rho - z)"
+  },
+  "hard_limits": [
+    "Even seed-range stability does not identify a unique physical mechanism.",
+    "No theorem-level legacy->strict bridge is claimed.",
+    "Physical-role transfer remains blocked without explicit bridge theorem."
+  ],
+  "next_honest_step": "If instability persists, classify memory hypothesis as non-bridge fit family; if stabilized under tighter priors and independent observables, draft assumption-explicit theorem candidate."
+}

@@ -14,7 +14,7 @@ OUT_QUALITY_CSV = ROOT / "generated" / "p2025_s975_strict_cutkosky_same_scheme_c
 def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     subprocess.run([sys.executable, str(SCRIPT)], check=True)
     data = json.loads(OUT.read_text(encoding="utf-8"))
-    assert data["schema_version"] == "p2025_s975_v92"
+    assert data["schema_version"] == "p2025_s975_v96"
     assert data["status"] == "OPEN_OBSTRUCTION_WITH_TRACE"
     assert all(data["gatekeeper_checks"].values())
     assert len(data["toe_closure_gaps_7tasks"]) == 7
@@ -47,6 +47,40 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     assert abs(sum(tpp["bootstrap_readiness_summary"]["top_index_frequency_over_resamples"]) - 1.0) < 1e-12
     assert tpp["robust_spread"]["iqr"] >= 0.0
     assert tpp["robust_spread"]["mad_scaled"] >= 0.0
+    assert "branch_integrator_replay_task7_panel" in tpp
+    rpt = tpp["branch_integrator_replay_task7_panel"]
+    assert len(rpt["seeds"]) == 4
+    assert len(rpt["stress_abs_gap_q05_q50_q95"]) == 3
+    assert len(rpt["rows"]) == 4
+    for rr in rpt["rows"]:
+        assert rr["bootstrap_size"] == 512
+        assert len(rr["top_index_frequency_over_resamples"]) == 7
+        assert abs(sum(rr["top_index_frequency_over_resamples"]) - 1.0) < 1e-12
+        assert 0.0 <= rr["task7_frequency"] <= 1.0
+    assert rpt["task7_frequency_span_over_seeds"] >= 0.0
+    assert len(rpt["leader_task_id_per_seed"]) == 4
+    assert "controlled_substitution_replay" in rpt
+    csr = rpt["controlled_substitution_replay"]
+    assert csr["guard_threshold_task7_frequency_span"] >= 0.0
+    assert "preconditions" in csr
+    assert "leader_stable_over_seeds" in csr["preconditions"]
+    assert "task7_frequency_span_bounded" in csr["preconditions"]
+    assert csr["status"] in {"SKIPPED_DUE_TO_STABILITY_GUARD", "EXECUTED_LOCAL_ONLY"}
+    if csr["executed"]:
+        assert isinstance(csr["leader_changed"], bool)
+    assert "controlled_substitution_guard_sensitivity" in rpt
+    csg = rpt["controlled_substitution_guard_sensitivity"]
+    assert len(csg["rows"]) == 4
+    for gr in csg["rows"]:
+        assert gr["threshold"] > 0.0
+        assert isinstance(gr["allow_controlled_replay"], bool)
+    assert 0.0 <= csg["allow_frequency_over_threshold_grid"] <= 1.0
+    assert "substitution_replay_governance" in rpt
+    srg = rpt["substitution_replay_governance"]
+    assert isinstance(srg["go_for_actual_substitution_replay"], bool)
+    assert 0.0 <= srg["allow_frequency_observed"] <= 1.0
+    assert 0.0 <= srg["allow_frequency_threshold"] <= 1.0
+    assert srg["reason"] in {"GO", "HOLD_AND_RECALIBRATE"}
     for row in tpp["rows"]:
         assert "zscore_vs_task_mean" in row
     assert data["backend_loop_fit_precursor"]["loss_l2"] > 0.0

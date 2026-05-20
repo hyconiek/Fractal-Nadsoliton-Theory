@@ -2019,6 +2019,96 @@ def main() -> None:
     bs_top_freq = (bs_top_counts / np.sum(bs_top_counts)).tolist() if np.sum(bs_top_counts) > 0 else [0.0] * int(task_scores.size)
     robust_iqr = float(np.subtract(*np.percentile(task_scores, [75, 25])))
     robust_mad_scaled = float(score_mad * 1.4826)
+    # expanded replay for task #7 readiness under branch/integrator stress matrix (seed sweep)
+    replay_seeds = [20260519, 20260520, 20260521, 20260522]
+    branch_integrator_abs = np.array([float(r.get("abs_gap", 0.0)) for r in branch_integrator_rows], dtype=float)
+    if branch_integrator_abs.size == 0:
+        branch_integrator_abs = np.array([0.0], dtype=float)
+    stress_q = np.quantile(branch_integrator_abs, [0.05, 0.5, 0.95])
+    replay_rows = []
+    replay_top_task7_freq = []
+    replay_leaders = []
+    for rs in replay_seeds:
+        rng_rs = np.random.default_rng(rs)
+        rs_top = []
+        for _ in range(512):
+            sample = rng_rs.choice(task_scores, size=task_scores.size, replace=True)
+            # controlled stress injection for task-7 only; no closure claim, sequencing sensitivity only
+            stress_draw = float(rng_rs.choice(branch_integrator_abs))
+            sample[6] = max(0.0, float(sample[6] - 5e3 * stress_draw))
+            rs_top.append(int(np.argmax(sample)))
+        rs_counts = np.bincount(np.array(rs_top, dtype=int), minlength=task_scores.size).astype(float)
+        rs_freq = (rs_counts / max(float(np.sum(rs_counts)), 1.0)).tolist()
+        rs_leader = int(np.argmax(rs_freq))
+        replay_rows.append({
+            "seed": int(rs),
+            "bootstrap_size": 512,
+            "top_index_frequency_over_resamples": [float(x) for x in rs_freq],
+            "leader_task_id": int(task_ids[rs_leader]),
+            "task7_frequency": float(rs_freq[6]),
+        })
+        replay_top_task7_freq.append(float(rs_freq[6]))
+        replay_leaders.append(int(task_ids[rs_leader]))
+    replay_task7_span = float(max(replay_top_task7_freq) - min(replay_top_task7_freq)) if replay_top_task7_freq else float('inf')
+    replay_leader_stable = bool(len(set(replay_leaders)) == 1)
+    # single controlled substitution replay gate (only after stability check)
+    replay_span_threshold = 0.05
+    controlled_ready = bool(replay_leader_stable and replay_task7_span <= replay_span_threshold)
+    controlled_replay = {
+        "executed": False,
+        "guard_threshold_task7_frequency_span": float(replay_span_threshold),
+        "preconditions": {
+            "leader_stable_over_seeds": bool(replay_leader_stable),
+            "task7_frequency_span_bounded": bool(replay_task7_span <= replay_span_threshold),
+        },
+        "status": "SKIPPED_DUE_TO_STABILITY_GUARD",
+    }
+    if controlled_ready:
+        # strict local-only substitution: perturb task-7 score by conservative stress median
+        stress_med = float(stress_q[1])
+        baseline = task_scores.copy()
+        substituted = task_scores.copy()
+        substituted[6] = max(0.0, float(substituted[6] - 5e3 * stress_med))
+        base_rank = ss.rankdata(-baseline, method="average")
+        sub_rank = ss.rankdata(-substituted, method="average")
+        base_leader = int(task_ids[int(np.argmin(base_rank))])
+        sub_leader = int(task_ids[int(np.argmin(sub_rank))])
+        controlled_replay = {
+            "executed": True,
+            "guard_threshold_task7_frequency_span": float(replay_span_threshold),
+            "preconditions": {
+                "leader_stable_over_seeds": bool(replay_leader_stable),
+                "task7_frequency_span_bounded": bool(replay_task7_span <= replay_span_threshold),
+            },
+            "status": "EXECUTED_LOCAL_ONLY",
+            "stress_median_abs_gap": stress_med,
+            "baseline_top_task_id": base_leader,
+            "substituted_top_task_id": sub_leader,
+            "task7_score_delta": float(substituted[6] - baseline[6]),
+            "task7_rank_delta": float(sub_rank[6] - base_rank[6]),
+            "leader_changed": bool(base_leader != sub_leader),
+            "note": "Sequencing robustness diagnostic only; no closure upgrade.",
+        }
+    # guard sensitivity sweep: how robust is the controlled-replay decision to threshold choice?
+    threshold_grid = [0.02, 0.05, 0.08, 0.12]
+    guard_rows = []
+    for th in threshold_grid:
+        allow = bool(replay_leader_stable and replay_task7_span <= th)
+        guard_rows.append({
+            "threshold": float(th),
+            "allow_controlled_replay": allow,
+            "margin": float(th - replay_task7_span),
+        })
+    guard_allow_freq = float(np.mean([1.0 if r["allow_controlled_replay"] else 0.0 for r in guard_rows])) if guard_rows else 0.0
+    # final go/no-go recommendation for actual single substitution replay
+    go_threshold = 0.75
+    go_for_actual_substitution_replay = bool(controlled_replay.get("executed") and guard_allow_freq >= go_threshold)
+    substitution_governance = {
+        "go_for_actual_substitution_replay": go_for_actual_substitution_replay,
+        "allow_frequency_threshold": float(go_threshold),
+        "allow_frequency_observed": float(guard_allow_freq),
+        "reason": "GO" if go_for_actual_substitution_replay else "HOLD_AND_RECALIBRATE",
+    }
     next_task_idx = int(np.argmin(raw_ranks))
     next_task_id = int(task_ids[next_task_idx])
     next_task_name = str(task_numeric_evidence_7[next_task_idx]["name"])
@@ -2196,7 +2286,7 @@ def main() -> None:
     }
 
     payload = {
-        "schema_version": "p2025_s975_v92",
+        "schema_version": "p2025_s975_v96",
         "produced_by": Path(__file__).name,
         "timestamp_utc": TS,
         "status": "OPEN_OBSTRUCTION_WITH_TRACE",
@@ -2230,6 +2320,20 @@ def main() -> None:
             "robust_spread": {
                 "iqr": robust_iqr,
                 "mad_scaled": robust_mad_scaled,
+            },
+            "branch_integrator_replay_task7_panel": {
+                "seeds": [int(x) for x in replay_seeds],
+                "stress_abs_gap_q05_q50_q95": [float(x) for x in stress_q.tolist()],
+                "rows": replay_rows,
+                "task7_frequency_span_over_seeds": replay_task7_span,
+                "leader_task_id_per_seed": [int(x) for x in replay_leaders],
+                "leader_stable_over_seeds": replay_leader_stable,
+                "controlled_substitution_replay": controlled_replay,
+                "controlled_substitution_guard_sensitivity": {
+                    "rows": guard_rows,
+                    "allow_frequency_over_threshold_grid": guard_allow_freq,
+                },
+                "substitution_replay_governance": substitution_governance,
             },
             "normalized_weight_entropy_nats": scipy_entropy,
             "symbolic_normalization_certificate": {
