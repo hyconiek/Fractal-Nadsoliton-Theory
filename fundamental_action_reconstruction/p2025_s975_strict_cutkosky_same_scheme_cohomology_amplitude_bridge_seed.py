@@ -1419,7 +1419,7 @@ def main() -> None:
         xg = np.linspace(0.0, 1.0, 4001, dtype=float)
         kg = np.cos(omega * xg + phi) / (1.0 + beta * (xg ** eta))
         yg = (kg * kg) / np.sqrt(np.maximum(1e-15, xg + s_val))
-        v_trapz = float(np.trapezoid(yg, xg))
+        v_trapz = float(np.trapz(yg, xg))
         cross_integrator_rows.append({
             "s": float(s_val),
             "quad_value": float(v_quad),
@@ -1429,7 +1429,7 @@ def main() -> None:
     cross_integrator_gap_max = float(max(r["abs_gap"] for r in cross_integrator_rows)) if cross_integrator_rows else float("inf")
     paired_delta_panel["branch_cross_integrator_panel"] = {
         "status": "OPEN_PRECURSOR_NOT_CLOSURE",
-        "methods": ["scipy.integrate.quad", "numpy.trapezoid"],
+        "methods": ["scipy.integrate.quad", "numpy.trapz"],
         "trapz_grid_points": 4001,
         "rows": cross_integrator_rows,
         "abs_gap_max": cross_integrator_gap_max,
@@ -1447,7 +1447,7 @@ def main() -> None:
                 v_quad, _ = si.quad(integrand_probe, 0.0, 1.0, epsabs=1e-12, epsrel=1e-12, limit=400)
                 xg = np.linspace(0.0, 1.0, 4001, dtype=float)
                 yg = np.array([integrand_probe(float(xx)) for xx in xg], dtype=float)
-                v_trapezoid = float(np.trapezoid(yg, xg))
+                v_trapezoid = float(np.trapz(yg, xg))
                 branch_integrator_rows.append({
                     "eta_probe": float(eta_probe),
                     "eps_floor": float(eps_floor),
@@ -1478,7 +1478,7 @@ def main() -> None:
                     vq, _ = si.quad(integrand_probe_seed, 0.0, 1.0, epsabs=1e-12, epsrel=1e-12, limit=400)
                     xg = np.linspace(0.0, 1.0, 4001, dtype=float)
                     yg = np.array([integrand_probe_seed(float(xx)) for xx in xg], dtype=float)
-                    vt = float(np.trapezoid(yg, xg))
+                    vt = float(np.trapz(yg, xg))
                     rows_local.append(abs(vq - vt))
         cross_seed_rows.append({"eta_scale": seed_scale, "worst_case_gap_envelope": float(max(rows_local)) if rows_local else float("inf")})
     cross_seed_worst = float(max(r["worst_case_gap_envelope"] for r in cross_seed_rows)) if cross_seed_rows else float("inf")
