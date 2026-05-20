@@ -14,7 +14,7 @@ OUT_QUALITY_CSV = ROOT / "generated" / "p2025_s975_strict_cutkosky_same_scheme_c
 def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     subprocess.run([sys.executable, str(SCRIPT)], check=True)
     data = json.loads(OUT.read_text(encoding="utf-8"))
-    assert data["schema_version"] == "p2025_s975_v96"
+    assert data["schema_version"] == "p2025_s975_v109"
     assert data["status"] == "OPEN_OBSTRUCTION_WITH_TRACE"
     assert all(data["gatekeeper_checks"].values())
     assert len(data["toe_closure_gaps_7tasks"]) == 7
@@ -81,6 +81,148 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     assert 0.0 <= srg["allow_frequency_observed"] <= 1.0
     assert 0.0 <= srg["allow_frequency_threshold"] <= 1.0
     assert srg["reason"] in {"GO", "HOLD_AND_RECALIBRATE"}
+    assert "actual_substitution_replay" in rpt
+    asr = rpt["actual_substitution_replay"]
+    assert isinstance(asr["executed"], bool)
+    assert isinstance(asr["governance_go"], bool)
+    assert 0.0 <= asr["allow_frequency_observed"] <= 1.0
+    assert 0.0 <= asr["allow_frequency_threshold"] <= 1.0
+    assert asr["status"] in {"SKIPPED_DUE_TO_GOVERNANCE_HOLD", "EXECUTED_SINGLE_BRANCH_ROBUST_SUBSTITUTION_REPLAY_LOCAL_ONLY"}
+    if asr["executed"]:
+        assert asr["status"] == "EXECUTED_SINGLE_BRANCH_ROBUST_SUBSTITUTION_REPLAY_LOCAL_ONLY"
+        assert isinstance(asr["leader_changed"], bool)
+    else:
+        assert asr["status"] == "SKIPPED_DUE_TO_GOVERNANCE_HOLD"
+    assert "actual_substitution_replay_comparative_report" in rpt
+    asrcr = rpt["actual_substitution_replay_comparative_report"]
+    assert isinstance(asrcr["executed"], bool)
+    assert asrcr["report_scope"] == "LOCAL_SEQUENCING_DIAGNOSTIC_ONLY"
+    assert asrcr["status"] in {"SKIPPED_DUE_TO_GOVERNANCE_HOLD", "EXECUTED_COMPARATIVE_REPORT_LOCAL_ONLY"}
+    if asrcr["executed"]:
+        assert asrcr["status"] == "EXECUTED_COMPARATIVE_REPORT_LOCAL_ONLY"
+        assert isinstance(asrcr["leader_changed"], bool)
+        assert asrcr["task7_rank_delta_abs"] >= 0.0
+        assert asrcr["task7_score_delta_abs"] >= 0.0
+        assert asrcr["stability_verdict"] in {"LEADER_STABLE_UNDER_SINGLE_REPLAY", "LEADER_SHIFTED_UNDER_SINGLE_REPLAY"}
+    else:
+        assert asrcr["status"] == "SKIPPED_DUE_TO_GOVERNANCE_HOLD"
+    assert "cross_seed_actual_substitution_replay_panel" in rpt
+    csrp = rpt["cross_seed_actual_substitution_replay_panel"]
+    assert csrp["report_scope"] == "LOCAL_SEQUENCING_DIAGNOSTIC_ONLY"
+    assert csrp["status"] in {"SKIPPED_DUE_TO_GOVERNANCE_HOLD", "EXECUTED_CROSS_SEED_COMPARATIVE_REPORT_LOCAL_ONLY"}
+    assert len(csrp["seeds"]) == 4
+    if csrp["status"] == "EXECUTED_CROSS_SEED_COMPARATIVE_REPORT_LOCAL_ONLY":
+        assert len(csrp["rows"]) == 4
+        assert 0.0 <= csrp["leader_changed_frequency_over_seeds"] <= 1.0
+        assert len(csrp["task7_rank_delta_abs_q05_q50_q95"]) == 3
+        assert len(csrp["task7_score_delta_abs_q05_q50_q95"]) == 3
+        assert csrp["stability_verdict"] in {"SEED_ROBUST_LEADER_STABILITY", "SEED_SENSITIVE_LEADER_SHIFT_DETECTED"}
+    assert "cross_seed_substitution_governance" in rpt
+    cssg = rpt["cross_seed_substitution_governance"]
+    assert isinstance(cssg["ready_for_costlier_next_replay_step"], bool)
+    assert cssg["reason"] in {"GO_CROSS_SEED_STABLE", "HOLD_AND_RECALIBRATE"}
+    assert "criteria" in cssg
+    assert "cross_seed_panel_executed" in cssg["criteria"]
+    assert "leader_change_frequency_zero" in cssg["criteria"]
+    assert "rank_delta_q95_bounded" in cssg["criteria"]
+    assert "score_delta_q95_bounded" in cssg["criteria"]
+    assert "thresholds" in cssg
+    assert cssg["thresholds"]["leader_changed_frequency_max"] >= 0.0
+    assert cssg["thresholds"]["task7_rank_delta_abs_q95_max"] >= 0.0
+    assert cssg["thresholds"]["task7_score_delta_abs_q95_max"] >= 0.0
+    if cssg["criteria"]["cross_seed_panel_executed"]:
+        assert "observed" in cssg
+        assert 0.0 <= cssg["observed"]["leader_changed_frequency_over_seeds"] <= 1.0
+        assert cssg["observed"]["task7_rank_delta_abs_q95"] >= 0.0
+        assert cssg["observed"]["task7_score_delta_abs_q95"] >= 0.0
+    assert "nonclosure_lock_after_governance" in rpt
+    nlg = rpt["nonclosure_lock_after_governance"]
+    assert nlg["global_status_must_remain_open_obstruction_with_trace"] is True
+    assert nlg["actual_substitution_replay_is_local_only"] is True
+    assert nlg["cross_seed_replay_is_local_only"] is True
+    assert nlg["costlier_step_readiness_is_not_closure_claim"] is True
+    assert "task7_attack_and_task4_verification_packet" in rpt
+    t74 = rpt["task7_attack_and_task4_verification_packet"]
+    assert t74["status"] in {"HOLD_DUE_TO_GOVERNANCE", "EXECUTED_LOCAL_STRICT_GOVERNANCE_STEP"}
+    assert t74["scope"] == "SEQUENCING_EXECUTION_ONLY_NOT_CLOSURE"
+    assert "task7_discm_common_basis_attack" in t74
+    assert "task4_po3_nonempty_verification" in t74
+    if t74["status"] == "EXECUTED_LOCAL_STRICT_GOVERNANCE_STEP":
+        t7 = t74["task7_discm_common_basis_attack"]
+        t4 = t74["task4_po3_nonempty_verification"]
+        assert t7["executed"] is True and t7["result_kind"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+        assert t4["executed"] is True and t4["result_kind"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+        assert t7["basis_condition_number"] >= 0.0
+        assert t7["max_bootstrap_coef_std"] >= 0.0
+        assert t7["max_channel_residual_l2"] >= 0.0
+        assert isinstance(t4["solver_success"], bool)
+        assert t4["objective_value"] >= 0.0
+        assert t4["covariant_proxy_d1"] > 0.0
+    assert "governance_result_discussion" in rpt
+    grd = rpt["governance_result_discussion"]
+    assert grd["status"] == "SEQUENCING_DISCUSSION_ONLY_NOT_CLOSURE"
+    assert grd["cross_seed_governance_reason"] in {"GO_CROSS_SEED_STABLE", "HOLD_AND_RECALIBRATE"}
+    assert isinstance(grd["task7_discm_attack_executed"], bool)
+    assert isinstance(grd["task4_po3_verification_executed"], bool)
+    assert grd["task7_result_snapshot"]["basis_condition_number"] >= 0.0
+    assert grd["task7_result_snapshot"]["max_bootstrap_coef_std"] >= 0.0
+    assert grd["task7_result_snapshot"]["max_channel_residual_l2"] >= 0.0
+    assert isinstance(grd["task4_result_snapshot"]["solver_success"], bool)
+    assert grd["task4_result_snapshot"]["objective_value"] >= 0.0
+    assert grd["task4_result_snapshot"]["covariant_proxy_d1"] > 0.0
+    assert grd["task4_result_snapshot"]["constraints_hold"] is True
+    assert "task7_task4_trend_panel" in rpt
+    ttp = rpt["task7_task4_trend_panel"]
+    assert ttp["status"] == "LOCAL_TREND_ESTIMATE_NOT_CLOSURE"
+    assert ttp["num_runs"] == 3
+    assert len(ttp["rows"]) == 3
+    assert ttp["task7_residual_l2_span"] >= 0.0
+    assert ttp["task7_uncertainty_span"] >= 0.0
+    assert ttp["task4_objective_span"] >= 0.0
+    assert ttp["task4_covariant_proxy_span"] >= 0.0
+    assert ttp["stability_snapshot"] in {"STABLE_LOCAL_TREND", "DRIFT_REVIEW_NEEDED"}
+    assert "trend_gate_for_costlier_step" in rpt
+    tg = rpt["trend_gate_for_costlier_step"]
+    assert tg["scope"] == "SEQUENCING_GOVERNANCE_ONLY_NOT_CLOSURE"
+    assert tg["status"] in {"GO_COMPOSITE_GOVERNANCE_STABLE", "HOLD_DUE_TO_COMPOSITE_GOVERNANCE"}
+    assert isinstance(tg["ready_for_costlier_step"], bool)
+    assert isinstance(tg["criteria"]["cross_seed_governance_go"], bool)
+    assert isinstance(tg["criteria"]["nonclosure_lock_active"], bool)
+    assert isinstance(tg["criteria"]["trend_stable"], bool)
+    assert "composite_nonclosure_enforcement" in rpt
+    cne = rpt["composite_nonclosure_enforcement"]
+    assert cne["status"] == "ENFORCED"
+    assert cne["scope"] == "STRICT_NONCLOSURE_GUARD"
+    assert cne["checks"]["global_payload_status_open"] is True
+    assert cne["checks"]["all_7_tasks_open"] is True
+    assert cne["checks"]["composite_governance_not_interpreted_as_closure"] is True
+    assert "nonclosure_status_history_audit" in rpt
+    nsha = rpt["nonclosure_status_history_audit"]
+    assert nsha["status"] == "AUDIT_TRAIL_LOCAL_PACKET"
+    assert nsha["scope"] == "SEQUENCING_AUDIT_ONLY_NOT_CLOSURE"
+    assert len(nsha["rows"]) == 5
+    assert nsha["all_rows_global_open"] is True
+    assert nsha["all_rows_all7_open"] is True
+    for hr in nsha["rows"]:
+        assert hr["global_status"] == "OPEN_OBSTRUCTION_WITH_TRACE"
+        assert hr["all_7_tasks_status"] == "OPEN_OBSTRUCTION_WITH_TRACE"
+        assert hr["nonclosure_guard_active"] is True
+    assert "governance_nonclosure_consistency_gate" in rpt
+    gncg = rpt["governance_nonclosure_consistency_gate"]
+    assert gncg["status"] in {"CONSISTENT", "INCONSISTENT"}
+    assert gncg["scope"] == "SEQUENCING_GOVERNANCE_ONLY_NOT_CLOSURE"
+    assert isinstance(gncg["checks"]["if_go_then_all7_open"], bool)
+    assert isinstance(gncg["checks"]["global_payload_open"], bool)
+    assert isinstance(gncg["checks"]["history_all_rows_global_open"], bool)
+    assert isinstance(gncg["checks"]["history_all_rows_all7_open"], bool)
+    assert gncg["status"] == "CONSISTENT"
+    assert "governance_nonclosure_failure_simulation" in rpt
+    gnfs = rpt["governance_nonclosure_failure_simulation"]
+    assert gnfs["status"] == "SIMULATED_FAILURE_DETECTED"
+    assert gnfs["scope"] == "TEST_ONLY_DIAGNOSTIC_NOT_RUNTIME_CLAIM"
+    assert gnfs["simulated_case"]["ready_for_costlier_step"] is True
+    assert gnfs["simulated_case"]["all_7_tasks_open"] is False
+    assert gnfs["would_be_consistent_under_simulation"] is False
     for row in tpp["rows"]:
         assert "zscore_vs_task_mean" in row
     assert data["backend_loop_fit_precursor"]["loss_l2"] > 0.0
@@ -204,6 +346,8 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     assert len(rm["paired_delta_panel"]["branch_cut_sensitivity_panel"]["loglog_slope_rows"]) == 5
     assert "branch_cross_integrator_panel" in rm["paired_delta_panel"]
     assert len(rm["paired_delta_panel"]["branch_cross_integrator_panel"]["rows"]) == 5
+    assert rm["paired_delta_panel"]["branch_cross_integrator_panel"]["methods"] == ["scipy.integrate.quad", "numpy.trapezoid"]
+    assert rm["paired_delta_panel"]["branch_cross_integrator_panel"]["trapz_grid_points"] == 4001
     assert "branch_integrator_stress_matrix" in rm["paired_delta_panel"]
     assert len(rm["paired_delta_panel"]["branch_integrator_stress_matrix"]["rows"]) == 45
     assert "branch_integrator_cross_seed_envelope" in rm["paired_delta_panel"]
