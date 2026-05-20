@@ -1,0 +1,44 @@
+{
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "result_kind": "SCRATCH_MATTER_HISTORY_MEMORY_PROBE__EVIDENCE_NOT_THEOREM",
+  "models": {
+    "M0_no_memory": {
+      "delta_phi": 0.1172430115516681,
+      "beta_tors": 30.0,
+      "r2": 0.9754478855344388,
+      "sse": 0.16540582498385015,
+      "aic": -5839.30353014968,
+      "bic": -5825.65028914455
+    },
+    "M1_memory_augmented": {
+      "delta_phi": 0.16466112232294516,
+      "beta_tors": 30.0,
+      "rho_memory": 0.18797799082931432,
+      "gamma_memory": 4.322879336107659,
+      "linear_coef_raw": -735.972728681595,
+      "linear_coef_memory_channel": 171.1195973447781,
+      "r2": 0.9887929494497892,
+      "sse": 0.07550109154523144,
+      "aic": -6382.281950225636,
+      "bic": -6354.975468215376
+    }
+  },
+  "comparison": {
+    "delta_r2_M1_minus_M0": 0.013345063915350397,
+    "delta_aic_M0_minus_M1": 542.9784200759559,
+    "delta_bic_M0_minus_M1": 529.3251790708264,
+    "bootstrap_prob_M1_better": 0.99,
+    "wilcoxon_pvalue_M1_better": 1.9871821175940134e-67
+  },
+  "symbolic_trace": {
+    "memory_update": "-r*x_t + r*y_tm1 + x_t",
+    "extra_term": "-g*r*x_t + g*r*y_tm1 + g*x_t",
+    "note": "Memory extension collapses to baseline only on degenerate submanifolds (e.g., gamma=0)."
+  },
+  "hard_limits": [
+    "A better fit from memory channel does not prove physical causality.",
+    "No legacy->strict role transfer is licensed by this probe.",
+    "Bridge theorem remains open unless identifiability and mechanism export are proven."
+  ],
+  "next_honest_step": "Run cross-observable validation: check if (rho_memory, gamma_memory) are stable across independent channels; unstable values classify this as fit-level artifact."
+}
