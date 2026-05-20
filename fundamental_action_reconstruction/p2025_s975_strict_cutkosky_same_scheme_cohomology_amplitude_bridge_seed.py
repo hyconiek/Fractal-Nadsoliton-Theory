@@ -1067,9 +1067,9 @@ def main() -> None:
         "top_k": int(top_k),
         "rows_top_k": exact_rows_ranked[:top_k],
     }
-    # Alternate-parameterization replay on top stress cases: x = u^2 transform.
+    # Alternate-parameterization replay on full exact sweep grid: x = u^2 transform.
     alt_rows = []
-    for row in exact_rows_ranked[:top_k]:
+    for row in exact_rows:
         ch = str(row["class"])
         tol = float(row["epsabs"])
         lim = int(row["limit"])
@@ -1106,7 +1106,567 @@ def main() -> None:
         "scope": "STRICT_TASK2_NUMERICAL_STRESS_ALT_PARAMETERIZATION",
         "transform": "x_equals_u_squared",
         "rows": alt_rows,
+        "num_rows": int(len(alt_rows)),
         "improved_warning_count_cases": int(sum(1 for r in alt_rows if r["warning_count_delta_alt_minus_original"] < 0)),
+    }
+    # Secondary transform research pass on top stress rows: x = u^4.
+    # This is a methodological numeric comparison only (non-closure).
+    alt_u4_rows = []
+    for row in exact_rows_ranked[:top_k]:
+        ch = str(row["class"])
+        tol = float(row["epsabs"])
+        lim = int(row["limit"])
+        par = selected_channel_params[ch]
+        base = baseline_by_class[ch]
+        vals_u4 = []
+        warning_count_u4 = 0
+        for s in s_grid_fine:
+            def integrand_u4(u: float) -> float:
+                x = u ** 4
+                kk = np.cos(par[0] * x + par[1]) / (1.0 + par[2] * (x ** par[3]))
+                return float(((kk * kk) / np.sqrt(max(1e-15, x + s))) * 4.0 * (u ** 3))
+            with warnings.catch_warnings(record=True) as wlist:
+                warnings.simplefilter("always", IntegrationWarning)
+                vv, _ = si.quad(integrand_u4, 0.0, 1.0, epsabs=tol, epsrel=tol, limit=lim)
+            warning_count_u4 += int(sum(1 for w in wlist if issubclass(w.category, IntegrationWarning)))
+            vals_u4.append(float(vv))
+        arr_u4 = np.array(vals_u4, dtype=float)
+        delta_l2_u4 = float(np.linalg.norm(arr_u4 - base, ord=2))
+        alt_u4_rows.append({
+            "class": ch,
+            "epsabs": tol,
+            "epsrel": tol,
+            "limit": lim,
+            "original_integration_warning_count": int(row["integration_warning_count"]),
+            "u4_integration_warning_count": int(warning_count_u4),
+            "warning_count_delta_u4_minus_original": int(warning_count_u4 - int(row["integration_warning_count"])),
+            "original_delta_l2_vs_baseline": float(row["delta_l2_vs_baseline"]),
+            "u4_delta_l2_vs_baseline": delta_l2_u4,
+            "delta_l2_u4_minus_original": float(delta_l2_u4 - float(row["delta_l2_vs_baseline"])),
+        })
+    alt_u1_rows = []
+    for row in exact_rows_ranked[:top_k]:
+        ch = str(row["class"])
+        tol = float(row["epsabs"])
+        lim = int(row["limit"])
+        par = selected_channel_params[ch]
+        base = baseline_by_class[ch]
+        vals_u1 = []
+        warning_count_u1 = 0
+        t0 = time.perf_counter()
+        for s in s_grid_fine:
+            def integrand_u1(u: float) -> float:
+                x = u
+                kk = np.cos(par[0] * x + par[1]) / (1.0 + par[2] * (x ** par[3]))
+                return float((kk * kk) / np.sqrt(max(1e-15, x + s)))
+            with warnings.catch_warnings(record=True) as wlist:
+                warnings.simplefilter("always", IntegrationWarning)
+                vv, _ = si.quad(integrand_u1, 0.0, 1.0, epsabs=tol, epsrel=tol, limit=lim)
+            warning_count_u1 += int(sum(1 for w in wlist if issubclass(w.category, IntegrationWarning)))
+            vals_u1.append(float(vv))
+        runtime_u1 = float(time.perf_counter() - t0)
+        arr_u1 = np.array(vals_u1, dtype=float)
+        delta_l2_u1 = float(np.linalg.norm(arr_u1 - base, ord=2))
+        alt_u1_rows.append({
+            "class": ch,
+            "epsabs": tol,
+            "epsrel": tol,
+            "limit": lim,
+            "u1_integration_warning_count": int(warning_count_u1),
+            "u1_delta_l2_vs_baseline": delta_l2_u1,
+            "u1_runtime_seconds": runtime_u1,
+        })
+    transform_ranking_rows = []
+    for i in range(min(top_k, len(alt_u1_rows), len(alt_u4_rows))):
+        r_u2 = alt_rows[i]
+        r_u4 = alt_u4_rows[i]
+        r_u1 = alt_u1_rows[i]
+        candidates = [
+            ("u1", int(r_u1["u1_integration_warning_count"]), float(r_u1["u1_delta_l2_vs_baseline"]), float(r_u1["u1_runtime_seconds"])),
+            ("u2", int(r_u2["alt_integration_warning_count"]), float(r_u2["alt_delta_l2_vs_baseline"]), None),
+            ("u4", int(r_u4["u4_integration_warning_count"]), float(r_u4["u4_delta_l2_vs_baseline"]), None),
+        ]
+        ranked = sorted(candidates, key=lambda t: (t[1], t[2], t[3] if isinstance(t[3], float) else 0.0))
+        transform_ranking_rows.append({
+            "class": str(r_u2["class"]),
+            "epsabs": float(r_u2["epsabs"]),
+            "epsrel": float(r_u2["epsrel"]),
+            "limit": int(r_u2["limit"]),
+            "ranked_transforms": [x[0] for x in ranked],
+            "winner": ranked[0][0],
+        })
+    ur_numerical_stress_alt_transform_comparison_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_ALT_TRANSFORM_COMPARISON",
+        "top_k": int(top_k),
+        "rows_u1": alt_u1_rows,
+        "rows_u2": alt_rows[:top_k],
+        "rows_u4": alt_u4_rows,
+        "ranking_key": "warning_count_then_delta_l2_then_runtime",
+        "ranking_rows": transform_ranking_rows,
+        "u2_better_warning_count_cases": int(sum(1 for i in range(min(len(alt_u4_rows), top_k)) if int(alt_rows[i]["alt_integration_warning_count"]) < int(alt_u4_rows[i]["u4_integration_warning_count"]))),
+        "u4_better_warning_count_cases": int(sum(1 for i in range(min(len(alt_u4_rows), top_k)) if int(alt_rows[i]["alt_integration_warning_count"]) > int(alt_u4_rows[i]["u4_integration_warning_count"]))),
+    }
+    # Full-grid tri-transform sweep (u1/u2/u4) for class-level operational choice.
+    tri_rows = []
+    for row in exact_rows:
+        ch = str(row["class"])
+        tol = float(row["epsabs"])
+        lim = int(row["limit"])
+        par = selected_channel_params[ch]
+        base = baseline_by_class[ch]
+
+        def _run_transform(pow_x: float) -> tuple[int, float, float]:
+            vals = []
+            wc = 0
+            t0 = time.perf_counter()
+            for s in s_grid_fine:
+                def integ(u: float) -> float:
+                    x = u ** pow_x
+                    kk = np.cos(par[0] * x + par[1]) / (1.0 + par[2] * (x ** par[3]))
+                    jac = pow_x * (u ** (pow_x - 1.0))
+                    return float(((kk * kk) / np.sqrt(max(1e-15, x + s))) * jac)
+                with warnings.catch_warnings(record=True) as wlist:
+                    warnings.simplefilter("always", IntegrationWarning)
+                    vv, _ = si.quad(integ, 0.0, 1.0, epsabs=tol, epsrel=tol, limit=lim)
+                wc += int(sum(1 for w in wlist if issubclass(w.category, IntegrationWarning)))
+                vals.append(float(vv))
+            dt = float(time.perf_counter() - t0)
+            d2 = float(np.linalg.norm(np.array(vals, dtype=float) - base, ord=2))
+            return int(wc), d2, dt
+
+        u1_wc, u1_d2, u1_t = _run_transform(1.0)
+        u2_wc, u2_d2, u2_t = _run_transform(2.0)
+        u4_wc, u4_d2, u4_t = _run_transform(4.0)
+        cand = [("u1", u1_wc, u1_d2, u1_t), ("u2", u2_wc, u2_d2, u2_t), ("u4", u4_wc, u4_d2, u4_t)]
+        rank = sorted(cand, key=lambda z: (z[1], z[2], z[3]))
+        tri_rows.append({
+            "class": ch, "epsabs": tol, "epsrel": tol, "limit": lim,
+            "u1_warning_count": u1_wc, "u1_delta_l2_vs_baseline": u1_d2, "u1_runtime_seconds": u1_t,
+            "u2_warning_count": u2_wc, "u2_delta_l2_vs_baseline": u2_d2, "u2_runtime_seconds": u2_t,
+            "u4_warning_count": u4_wc, "u4_delta_l2_vs_baseline": u4_d2, "u4_runtime_seconds": u4_t,
+            "winner": rank[0][0], "ranked_transforms": [x[0] for x in rank],
+        })
+    by_class_best = []
+    for ch in sorted({r["class"] for r in tri_rows}):
+        rows_ch = [r for r in tri_rows if r["class"] == ch]
+        winners = [r["winner"] for r in rows_ch]
+        freq = {k: winners.count(k) for k in ("u1", "u2", "u4")}
+        best = sorted(freq.items(), key=lambda kv: (-kv[1], kv[0]))[0][0]
+        by_class_best.append({
+            "class": ch,
+            "num_rows": int(len(rows_ch)),
+            "winner_counts": freq,
+            "recommended_transform_majority": best,
+            "recommended_transform_frequency": float(freq[best] / len(rows_ch)) if rows_ch else 0.0,
+        })
+    ur_numerical_stress_alt_fullgrid_tritransform_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_ALT_FULLGRID_TRITRANSFORM",
+        "ranking_key": "warning_count_then_delta_l2_then_runtime",
+        "rows": tri_rows,
+        "num_rows": int(len(tri_rows)),
+        "by_class": by_class_best,
+    }
+    # Class-conditional replay: use class-majority transform on full grid and
+    # compare against original exact sweep and global u2-only policy.
+    class_choice = {str(r["class"]): str(r["recommended_transform_majority"]) for r in by_class_best}
+    tri_by_key = {(str(r["class"]), float(r["epsabs"]), int(r["limit"])): r for r in tri_rows}
+    baseline_rows_by_key = {(str(r["class"]), float(r["epsabs"]), int(r["limit"])): r for r in exact_rows}
+    replay_policy_rows = []
+    for key, rr in tri_by_key.items():
+        ch, epsabs, lim = key
+        chosen = class_choice[ch]
+        if chosen == "u1":
+            wc = int(rr["u1_warning_count"]); d2 = float(rr["u1_delta_l2_vs_baseline"]); rt = float(rr["u1_runtime_seconds"])
+        elif chosen == "u2":
+            wc = int(rr["u2_warning_count"]); d2 = float(rr["u2_delta_l2_vs_baseline"]); rt = float(rr["u2_runtime_seconds"])
+        else:
+            wc = int(rr["u4_warning_count"]); d2 = float(rr["u4_delta_l2_vs_baseline"]); rt = float(rr["u4_runtime_seconds"])
+        base = baseline_rows_by_key[key]
+        replay_policy_rows.append({
+            "class": ch, "epsabs": epsabs, "epsrel": epsabs, "limit": lim,
+            "chosen_transform": chosen,
+            "chosen_warning_count": wc,
+            "chosen_delta_l2_vs_baseline": d2,
+            "chosen_runtime_seconds": rt,
+            "baseline_warning_count": int(base["integration_warning_count"]),
+            "warning_count_delta_chosen_minus_baseline": int(wc - int(base["integration_warning_count"])),
+        })
+    chosen_warn = np.array([int(r["chosen_warning_count"]) for r in replay_policy_rows], dtype=float)
+    base_warn = np.array([int(r["baseline_warning_count"]) for r in replay_policy_rows], dtype=float)
+    chosen_d2 = np.array([float(r["chosen_delta_l2_vs_baseline"]) for r in replay_policy_rows], dtype=float)
+    chosen_rt = np.array([float(r["chosen_runtime_seconds"]) for r in replay_policy_rows], dtype=float)
+    ur_numerical_stress_class_conditional_replay_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_CLASS_CONDITIONAL_REPLAY",
+        "class_transform_policy": class_choice,
+        "rows": replay_policy_rows,
+        "num_rows": int(len(replay_policy_rows)),
+        "chosen_warning_total": int(np.sum(chosen_warn)),
+        "baseline_warning_total": int(np.sum(base_warn)),
+        "warning_total_delta_chosen_minus_baseline": int(np.sum(chosen_warn) - np.sum(base_warn)),
+        "chosen_delta_l2_span": float(np.max(chosen_d2) - np.min(chosen_d2)) if chosen_d2.size else 0.0,
+        "chosen_runtime_total_seconds": float(np.sum(chosen_rt)),
+    }
+    # Cross-policy counterfactual on full grid: always-u1/u2/u4 vs class-conditional.
+    policy_defs = {
+        "always_u1": {c: "u1" for c in ("gauge_gauge", "fermion_fermion", "scalar_scalar")},
+        "always_u2": {c: "u2" for c in ("gauge_gauge", "fermion_fermion", "scalar_scalar")},
+        "always_u4": {c: "u4" for c in ("gauge_gauge", "fermion_fermion", "scalar_scalar")},
+        "class_conditional": class_choice,
+    }
+    policy_rows = []
+    for pname, pmap in policy_defs.items():
+        vals_warn = []
+        vals_d2 = []
+        vals_rt = []
+        for rr in tri_rows:
+            ch = str(rr["class"])
+            pick = pmap[ch]
+            vals_warn.append(float(rr[f"{pick}_warning_count"]))
+            vals_d2.append(float(rr[f"{pick}_delta_l2_vs_baseline"]))
+            vals_rt.append(float(rr[f"{pick}_runtime_seconds"]))
+        arr_warn = np.array(vals_warn, dtype=float)
+        arr_d2 = np.array(vals_d2, dtype=float)
+        arr_rt = np.array(vals_rt, dtype=float)
+        policy_rows.append({
+            "policy": pname,
+            "warning_total": int(np.sum(arr_warn)),
+            "delta_l2_span": float(np.max(arr_d2) - np.min(arr_d2)) if arr_d2.size else 0.0,
+            "runtime_total_seconds": float(np.sum(arr_rt)),
+        })
+    policy_rows_sorted = sorted(policy_rows, key=lambda r: (r["warning_total"], r["delta_l2_span"], r["runtime_total_seconds"], r["policy"]))
+    ur_numerical_stress_policy_counterfactual_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_POLICY_COUNTERFACTUAL",
+        "ranking_key": "warning_total_then_delta_l2_span_then_runtime_total",
+        "rows": policy_rows_sorted,
+        "best_policy": policy_rows_sorted[0]["policy"] if policy_rows_sorted else "none",
+    }
+    improved_classes = sorted({str(r["class"]) for r in alt_rows if int(r["warning_count_delta_alt_minus_original"]) < 0})
+    stress_replay_rows = []
+    for ch in improved_classes:
+        class_rows = [r for r in alt_rows if str(r["class"]) == ch]
+        if not class_rows:
+            continue
+        best_row = sorted(
+            class_rows,
+            key=lambda r: (int(r["alt_integration_warning_count"]), abs(float(r["delta_l2_alt_minus_original"])))
+        )[0]
+        stress_replay_rows.append({
+            "class": ch,
+            "selected_epsabs": float(best_row["epsabs"]),
+            "selected_epsrel": float(best_row["epsrel"]),
+            "selected_limit": int(best_row["limit"]),
+            "selected_alt_integration_warning_count": int(best_row["alt_integration_warning_count"]),
+            "selected_original_integration_warning_count": int(best_row["original_integration_warning_count"]),
+            "selected_warning_reduction": int(best_row["original_integration_warning_count"] - best_row["alt_integration_warning_count"]),
+            "selected_alt_delta_l2_vs_baseline": float(best_row["alt_delta_l2_vs_baseline"]),
+            "selected_original_delta_l2_vs_baseline": float(best_row["original_delta_l2_vs_baseline"]),
+            "selected_delta_l2_alt_minus_original": float(best_row["delta_l2_alt_minus_original"]),
+        })
+    replay_alt_delta = np.array([r["selected_alt_delta_l2_vs_baseline"] for r in stress_replay_rows], dtype=float)
+    replay_orig_delta = np.array([r["selected_original_delta_l2_vs_baseline"] for r in stress_replay_rows], dtype=float)
+    ur_numerical_stress_alt_replay_trend_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_ALT_REPLAY_TREND",
+        "selection_rule": "per_improved_class_min_alt_warning_then_min_abs_delta_shift",
+        "num_improved_classes_replayed": int(len(stress_replay_rows)),
+        "rows": stress_replay_rows,
+        "delta_l2_span_original_selected_cases": float(np.max(replay_orig_delta) - np.min(replay_orig_delta)) if replay_orig_delta.size else 0.0,
+        "delta_l2_span_alt_selected_cases": float(np.max(replay_alt_delta) - np.min(replay_alt_delta)) if replay_alt_delta.size else 0.0,
+        "delta_l2_span_change_alt_minus_original": (
+            float((np.max(replay_alt_delta) - np.min(replay_alt_delta)) - (np.max(replay_orig_delta) - np.min(replay_orig_delta)))
+            if replay_alt_delta.size and replay_orig_delta.size else 0.0
+        ),
+    }
+    # Pareto-style dominance map across the full (class, eps, limit) grid:
+    # alt dominates original if warning count does not worsen and delta_l2 does not worsen,
+    # with at least one strict improvement.
+    dominance_rows = []
+    for r in alt_rows:
+        warn_delta = int(r["warning_count_delta_alt_minus_original"])
+        dlt_delta = float(r["delta_l2_alt_minus_original"])
+        nonworse_both = bool(warn_delta <= 0 and dlt_delta <= 0.0)
+        strict_improvement = bool(warn_delta < 0 or dlt_delta < 0.0)
+        dominance_rows.append({
+            "class": str(r["class"]),
+            "epsabs": float(r["epsabs"]),
+            "epsrel": float(r["epsrel"]),
+            "limit": int(r["limit"]),
+            "warning_count_delta_alt_minus_original": warn_delta,
+            "delta_l2_alt_minus_original": dlt_delta,
+            "alt_nonworse_both_axes": nonworse_both,
+            "alt_strictly_better_on_at_least_one_axis": strict_improvement,
+            "alt_pareto_dominates_original": bool(nonworse_both and strict_improvement),
+        })
+    dominance_by_class = []
+    for ch in sorted({str(r["class"]) for r in dominance_rows}):
+        rows_ch = [r for r in dominance_rows if str(r["class"]) == ch]
+        n = len(rows_ch)
+        n_dom = sum(1 for r in rows_ch if bool(r["alt_pareto_dominates_original"]))
+        n_nonworse = sum(1 for r in rows_ch if bool(r["alt_nonworse_both_axes"]))
+        p_dom = float(n_dom / n) if n > 0 else 0.0
+        # Wilson 95% CI for binomial dominance frequency (small-n robust summary).
+        z = 1.959963984540054
+        if n > 0:
+            denom = 1.0 + (z * z) / n
+            center = (p_dom + (z * z) / (2.0 * n)) / denom
+            half = (z / denom) * np.sqrt((p_dom * (1.0 - p_dom) / n) + ((z * z) / (4.0 * n * n)))
+            p_dom_lb = float(max(0.0, center - half))
+            p_dom_ub = float(min(1.0, center + half))
+        else:
+            p_dom_lb, p_dom_ub = 0.0, 1.0
+        dominance_by_class.append({
+            "class": ch,
+            "num_cases": int(n),
+            "num_pareto_dominant_cases": int(n_dom),
+            "num_nonworse_both_axes_cases": int(n_nonworse),
+            "pareto_dominance_frequency": p_dom,
+            "pareto_dominance_frequency_wilson_interval95": {"lower": p_dom_lb, "upper": p_dom_ub},
+            "nonworse_both_axes_frequency": float(n_nonworse / n) if n > 0 else 0.0,
+        })
+    ur_numerical_stress_alt_dominance_map_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_ALT_DOMINANCE_MAP",
+        "dominance_rule": "alt_pareto_dominates_original_if_warning_delta_le_0_and_delta_l2_le_0_and_one_strict",
+        "rows": dominance_rows,
+        "num_rows": int(len(dominance_rows)),
+        "by_class": dominance_by_class,
+    }
+    # Decision gate: recommend alt parameterization per class only when
+    # (i) dominance lower-bound is strong enough and
+    # (ii) selected replay span does not worsen above tolerance.
+    dominance_lb_threshold = 0.50
+    span_worsening_tolerance = 1e-9
+    replay_by_class = {str(r["class"]): r for r in stress_replay_rows}
+    gate_rows = []
+    for r in dominance_by_class:
+        ch = str(r["class"])
+        replay_row = replay_by_class.get(ch)
+        has_replay = replay_row is not None
+        span_ok = bool(has_replay and float(replay_row["selected_delta_l2_alt_minus_original"]) <= span_worsening_tolerance)
+        lb = float(r["pareto_dominance_frequency_wilson_interval95"]["lower"])
+        dominates_with_confidence = bool(lb >= dominance_lb_threshold)
+        recommend_alt = bool(dominates_with_confidence and span_ok)
+        gate_rows.append({
+            "class": ch,
+            "dominance_wilson_lb95": lb,
+            "dominance_lb_threshold": float(dominance_lb_threshold),
+            "selected_delta_l2_alt_minus_original": float(replay_row["selected_delta_l2_alt_minus_original"]) if has_replay else None,
+            "span_worsening_tolerance": float(span_worsening_tolerance),
+            "criteria": {
+                "dominance_wilson_lb95_ge_threshold": dominates_with_confidence,
+                "selected_delta_l2_alt_minus_original_le_tolerance": span_ok,
+            },
+            "recommend_alt_parameterization_for_class": recommend_alt,
+        })
+    ur_numerical_stress_alt_decision_gate_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_ALT_DECISION_GATE",
+        "rows": gate_rows,
+        "num_recommended_classes": int(sum(1 for r in gate_rows if bool(r["recommend_alt_parameterization_for_class"]))),
+    }
+    # Hysteresis gate to reduce flip-flop near threshold boundaries.
+    hysteresis_threshold_on = 0.55
+    hysteresis_threshold_off = 0.45
+    hysteresis_rows = []
+    for r in gate_rows:
+        lb = float(r["dominance_wilson_lb95"])
+        span_ok = bool(r["criteria"]["selected_delta_l2_alt_minus_original_le_tolerance"])
+        recommend_on_state = bool(span_ok and lb >= hysteresis_threshold_on)
+        hold_state = bool(span_ok and lb > hysteresis_threshold_off and lb < hysteresis_threshold_on)
+        force_off_state = bool((not span_ok) or (lb <= hysteresis_threshold_off))
+        hysteresis_rows.append({
+            "class": str(r["class"]),
+            "dominance_wilson_lb95": lb,
+            "hysteresis_threshold_on": float(hysteresis_threshold_on),
+            "hysteresis_threshold_off": float(hysteresis_threshold_off),
+            "span_ok": span_ok,
+            "states": {
+                "force_on": recommend_on_state,
+                "hold_previous_state": hold_state,
+                "force_off": force_off_state,
+            },
+            "state_partition_valid": bool((int(recommend_on_state) + int(hold_state) + int(force_off_state)) == 1),
+        })
+    ur_numerical_stress_alt_hysteresis_gate_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_ALT_HYSTERESIS_GATE",
+        "rows": hysteresis_rows,
+        "num_force_on_classes": int(sum(1 for r in hysteresis_rows if bool(r["states"]["force_on"]))),
+        "num_hold_classes": int(sum(1 for r in hysteresis_rows if bool(r["states"]["hold_previous_state"]))),
+        "num_force_off_classes": int(sum(1 for r in hysteresis_rows if bool(r["states"]["force_off"]))),
+    }
+    # Time-stability replay for hysteresis gate:
+    # simulate binomial re-measurements of dominance counts per class to estimate
+    # ON/HOLD/OFF transition volatility under finite-sample noise.
+    hysteresis_replay_seeds = [101, 202, 303, 404, 505, 606]
+    by_class_rows = {str(r["class"]): r for r in dominance_by_class}
+    span_ok_by_class = {str(r["class"]): bool(r["criteria"]["selected_delta_l2_alt_minus_original_le_tolerance"]) for r in gate_rows}
+    replay_rows = []
+    replay_state_by_class = {str(ch): [] for ch in by_class_rows.keys()}
+    for sd in hysteresis_replay_seeds:
+        rng_local = np.random.default_rng(int(sd))
+        seed_rows = []
+        for ch, rr in by_class_rows.items():
+            n_cases = int(rr["num_cases"])
+            p_hat = float(rr["pareto_dominance_frequency"])
+            k_sim = int(rng_local.binomial(n_cases, p_hat)) if n_cases > 0 else 0
+            p_sim = float(k_sim / n_cases) if n_cases > 0 else 0.0
+            z = 1.959963984540054
+            if n_cases > 0:
+                denom = 1.0 + (z * z) / n_cases
+                center = (p_sim + (z * z) / (2.0 * n_cases)) / denom
+                half = (z / denom) * np.sqrt((p_sim * (1.0 - p_sim) / n_cases) + ((z * z) / (4.0 * n_cases * n_cases)))
+                lb_sim = float(max(0.0, center - half))
+            else:
+                lb_sim = 0.0
+            span_ok = bool(span_ok_by_class.get(ch, False))
+            s_on = bool(span_ok and lb_sim >= hysteresis_threshold_on)
+            s_hold = bool(span_ok and lb_sim > hysteresis_threshold_off and lb_sim < hysteresis_threshold_on)
+            s_off = bool((not span_ok) or (lb_sim <= hysteresis_threshold_off))
+            state = "ON" if s_on else ("HOLD" if s_hold else "OFF")
+            replay_state_by_class[ch].append(state)
+            seed_rows.append({"class": ch, "seed": int(sd), "n_cases": n_cases, "k_sim": k_sim, "p_sim": p_sim, "lb95_sim": lb_sim, "state": state})
+        replay_rows.extend(seed_rows)
+    replay_summary_by_class = []
+    replay_transition_matrix_by_class = []
+    entropy_rate_rows = []
+    for ch, seq in replay_state_by_class.items():
+        n = len(seq)
+        on_n = int(sum(1 for s in seq if s == "ON"))
+        hold_n = int(sum(1 for s in seq if s == "HOLD"))
+        off_n = int(sum(1 for s in seq if s == "OFF"))
+        transitions = int(sum(1 for i in range(max(0, n - 1)) if seq[i] != seq[i + 1]))
+        states = ["ON", "HOLD", "OFF"]
+        counts = {a: {b: 0 for b in states} for a in states}
+        for i in range(max(0, n - 1)):
+            counts[seq[i]][seq[i + 1]] += 1
+        rowsum = {a: int(sum(counts[a][b] for b in states)) for a in states}
+        probs = {
+            a: {
+                b: (float(counts[a][b] / rowsum[a]) if rowsum[a] > 0 else 0.0)
+                for b in states
+            }
+            for a in states
+        }
+        # Wilson lower-bound for self-transition stability per state.
+        z = 1.959963984540054
+        self_lb95 = {}
+        for a in states:
+            n_a = rowsum[a]
+            k_a = int(counts[a][a])
+            p_a = float(k_a / n_a) if n_a > 0 else 0.0
+            if n_a > 0:
+                denom = 1.0 + (z * z) / n_a
+                center = (p_a + (z * z) / (2.0 * n_a)) / denom
+                half = (z / denom) * np.sqrt((p_a * (1.0 - p_a) / n_a) + ((z * z) / (4.0 * n_a * n_a)))
+                self_lb95[a] = float(max(0.0, center - half))
+            else:
+                self_lb95[a] = 0.0
+        replay_summary_by_class.append({
+            "class": ch,
+            "num_replays": int(n),
+            "state_counts": {"ON": on_n, "HOLD": hold_n, "OFF": off_n},
+            "state_frequencies": {"ON": float(on_n / n) if n else 0.0, "HOLD": float(hold_n / n) if n else 0.0, "OFF": float(off_n / n) if n else 0.0},
+            "transition_count": transitions,
+            "transition_frequency": float(transitions / max(1, n - 1)),
+        })
+        replay_transition_matrix_by_class.append({
+            "class": ch,
+            "states_order": states,
+            "counts": counts,
+            "row_totals": rowsum,
+            "transition_probabilities": probs,
+            "self_transition_wilson_lb95": self_lb95,
+        })
+        # Entropy-rate proxy from empirical transition matrix and empirical state occupancy.
+        pi = {
+            "ON": float(on_n / n) if n else 0.0,
+            "HOLD": float(hold_n / n) if n else 0.0,
+            "OFF": float(off_n / n) if n else 0.0,
+        }
+        h_rate = 0.0
+        log_base = np.log(2.0)
+        for a in states:
+            for b in states:
+                pab = float(probs[a][b])
+                if pab > 0.0 and pi[a] > 0.0:
+                    h_rate += -pi[a] * pab * (np.log(pab) / log_base)
+        entropy_rate_rows.append({
+            "class": ch,
+            "entropy_rate_bits_per_step": float(h_rate),
+            "state_occupancy_pi": pi,
+            "max_entropy_bits_per_step_for_3states": float(np.log2(3.0)),
+            "normalized_entropy_rate_0_1": float(h_rate / np.log2(3.0)) if np.log2(3.0) > 0 else 0.0,
+        })
+    ur_numerical_stress_alt_hysteresis_time_stability_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_ALT_HYSTERESIS_TIME_STABILITY",
+        "seeds": [int(x) for x in hysteresis_replay_seeds],
+        "rows": replay_rows,
+        "by_class": replay_summary_by_class,
+        "transition_matrix_by_class": replay_transition_matrix_by_class,
+        "entropy_rate_by_class": entropy_rate_rows,
+        "entropy_rate_global_max_bits_per_step": float(max((r["entropy_rate_bits_per_step"] for r in entropy_rate_rows), default=0.0)),
+        "global_transition_frequency_max": float(max((r["transition_frequency"] for r in replay_summary_by_class), default=0.0)),
+    }
+    # Composite entropy gate: require dominance confidence + span safety + low
+    # decision-process entropy to recommend alt as operational default.
+    entropy_threshold_norm = 0.60
+    entropy_by_class = {str(r["class"]): float(r["normalized_entropy_rate_0_1"]) for r in entropy_rate_rows}
+    entropy_gate_rows = []
+    for r in gate_rows:
+        ch = str(r["class"])
+        entropy_norm = float(entropy_by_class.get(ch, 1.0))
+        entropy_ok = bool(entropy_norm <= entropy_threshold_norm)
+        recommend = bool(r["criteria"]["dominance_wilson_lb95_ge_threshold"] and r["criteria"]["selected_delta_l2_alt_minus_original_le_tolerance"] and entropy_ok)
+        entropy_gate_rows.append({
+            "class": ch,
+            "dominance_wilson_lb95": float(r["dominance_wilson_lb95"]),
+            "dominance_lb_threshold": float(r["dominance_lb_threshold"]),
+            "selected_delta_l2_alt_minus_original": r["selected_delta_l2_alt_minus_original"],
+            "span_worsening_tolerance": float(r["span_worsening_tolerance"]),
+            "normalized_entropy_rate_0_1": entropy_norm,
+            "entropy_threshold_norm": float(entropy_threshold_norm),
+            "criteria": {
+                "dominance_wilson_lb95_ge_threshold": bool(r["criteria"]["dominance_wilson_lb95_ge_threshold"]),
+                "selected_delta_l2_alt_minus_original_le_tolerance": bool(r["criteria"]["selected_delta_l2_alt_minus_original_le_tolerance"]),
+                "normalized_entropy_rate_le_threshold": entropy_ok,
+            },
+            "recommend_alt_parameterization_entropy_gated": recommend,
+        })
+    ur_numerical_stress_alt_entropy_gate_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_ALT_ENTROPY_GATE",
+        "rows": entropy_gate_rows,
+        "num_recommended_classes": int(sum(1 for r in entropy_gate_rows if bool(r["recommend_alt_parameterization_entropy_gated"]))),
+    }
+    # Entropy-threshold calibration sweep: quantify recommendation sensitivity
+    # to entropy cutoff choice (non-closure governance diagnostic only).
+    entropy_threshold_grid = [0.40, 0.50, 0.60, 0.70, 0.80]
+    entropy_calib_rows = []
+    for thr in entropy_threshold_grid:
+        rec_n = 0
+        for r in gate_rows:
+            ch = str(r["class"])
+            ent = float(entropy_by_class.get(ch, 1.0))
+            rec = bool(
+                r["criteria"]["dominance_wilson_lb95_ge_threshold"]
+                and r["criteria"]["selected_delta_l2_alt_minus_original_le_tolerance"]
+                and (ent <= float(thr))
+            )
+            rec_n += int(rec)
+        entropy_calib_rows.append({"entropy_threshold_norm": float(thr), "num_recommended_classes": int(rec_n)})
+    rec_counts = np.array([int(r["num_recommended_classes"]) for r in entropy_calib_rows], dtype=float)
+    ur_numerical_stress_alt_entropy_threshold_calibration_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_ALT_ENTROPY_THRESHOLD_CALIBRATION",
+        "rows": entropy_calib_rows,
+        "recommendation_count_span": float(np.max(rec_counts) - np.min(rec_counts)) if rec_counts.size else 0.0,
+        "selected_entropy_threshold_norm": float(entropy_threshold_norm),
     }
     # transport-conditioned channel delta map (per-channel, per-nu)
     channel_transport_delta_rows = []
@@ -3097,7 +3657,7 @@ def main() -> None:
     }
 
     payload = {
-        "schema_version": "p2025_s975_v129",
+        "schema_version": "p2025_s975_v144",
         "produced_by": Path(__file__).name,
         "timestamp_utc": TS,
         "status": "OPEN_OBSTRUCTION_WITH_TRACE",
@@ -3300,6 +3860,17 @@ def main() -> None:
         "ur_all_class_exact_integration_sweep_precursor": ur_all_class_exact_integration_sweep_precursor,
         "ur_numerical_stress_ranking_precursor": ur_numerical_stress_ranking_precursor,
         "ur_numerical_stress_alt_parameterization_precursor": ur_numerical_stress_alt_parameterization_precursor,
+        "ur_numerical_stress_alt_transform_comparison_precursor": ur_numerical_stress_alt_transform_comparison_precursor,
+        "ur_numerical_stress_alt_fullgrid_tritransform_precursor": ur_numerical_stress_alt_fullgrid_tritransform_precursor,
+        "ur_numerical_stress_class_conditional_replay_precursor": ur_numerical_stress_class_conditional_replay_precursor,
+        "ur_numerical_stress_policy_counterfactual_precursor": ur_numerical_stress_policy_counterfactual_precursor,
+        "ur_numerical_stress_alt_replay_trend_precursor": ur_numerical_stress_alt_replay_trend_precursor,
+        "ur_numerical_stress_alt_dominance_map_precursor": ur_numerical_stress_alt_dominance_map_precursor,
+        "ur_numerical_stress_alt_decision_gate_precursor": ur_numerical_stress_alt_decision_gate_precursor,
+        "ur_numerical_stress_alt_hysteresis_gate_precursor": ur_numerical_stress_alt_hysteresis_gate_precursor,
+        "ur_numerical_stress_alt_hysteresis_time_stability_precursor": ur_numerical_stress_alt_hysteresis_time_stability_precursor,
+        "ur_numerical_stress_alt_entropy_gate_precursor": ur_numerical_stress_alt_entropy_gate_precursor,
+        "ur_numerical_stress_alt_entropy_threshold_calibration_precursor": ur_numerical_stress_alt_entropy_threshold_calibration_precursor,
         "phase_common_basis_link_precursor": {
             "status": "OPEN_PRECURSOR_NOT_CLOSURE",
             "feature_matrix": x_phase.tolist(),
