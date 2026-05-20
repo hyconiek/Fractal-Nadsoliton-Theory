@@ -14,7 +14,7 @@ OUT_QUALITY_CSV = ROOT / "generated" / "p2025_s975_strict_cutkosky_same_scheme_c
 def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     subprocess.run([sys.executable, str(SCRIPT)], check=True)
     data = json.loads(OUT.read_text(encoding="utf-8"))
-    assert data["schema_version"] == "p2025_s975_v129"
+    assert data["schema_version"] == "p2025_s975_v144"
     assert data["status"] == "OPEN_OBSTRUCTION_WITH_TRACE"
     assert all(data["gatekeeper_checks"].values())
     assert len(data["toe_closure_gaps_7tasks"]) == 7
@@ -467,13 +467,211 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     assert unsapp["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
     assert unsapp["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_ALT_PARAMETERIZATION"
     assert unsapp["transform"] == "x_equals_u_squared"
-    assert len(unsapp["rows"]) == unsrp["top_k"]
+    assert unsapp["num_rows"] == len(unsapp["rows"])
+    assert len(unsapp["rows"]) == uaeisp["num_rows"]
     for rr in unsapp["rows"]:
         assert rr["class"] in {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
         assert rr["original_integration_warning_count"] >= 0
         assert rr["alt_integration_warning_count"] >= 0
         assert rr["original_delta_l2_vs_baseline"] >= 0.0
         assert rr["alt_delta_l2_vs_baseline"] >= 0.0
+    assert "ur_numerical_stress_alt_transform_comparison_precursor" in data
+    unsatc = data["ur_numerical_stress_alt_transform_comparison_precursor"]
+    assert unsatc["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsatc["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_ALT_TRANSFORM_COMPARISON"
+    assert 1 <= unsatc["top_k"] <= 5
+    assert len(unsatc["rows_u1"]) == unsatc["top_k"]
+    assert len(unsatc["rows_u2"]) == unsatc["top_k"]
+    assert len(unsatc["rows_u4"]) == unsatc["top_k"]
+    assert unsatc["ranking_key"] == "warning_count_then_delta_l2_then_runtime"
+    assert len(unsatc["ranking_rows"]) == unsatc["top_k"]
+    for rr in unsatc["rows_u1"]:
+        assert rr["class"] in {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
+        assert rr["u1_integration_warning_count"] >= 0
+        assert rr["u1_delta_l2_vs_baseline"] >= 0.0
+        assert rr["u1_runtime_seconds"] > 0.0
+    for rr in unsatc["rows_u4"]:
+        assert rr["class"] in {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
+        assert rr["u4_integration_warning_count"] >= 0
+        assert rr["u4_delta_l2_vs_baseline"] >= 0.0
+    for rr in unsatc["ranking_rows"]:
+        assert rr["winner"] in {"u1", "u2", "u4"}
+        assert len(rr["ranked_transforms"]) == 3
+        assert set(rr["ranked_transforms"]) == {"u1", "u2", "u4"}
+    assert "ur_numerical_stress_alt_fullgrid_tritransform_precursor" in data
+    unsaft = data["ur_numerical_stress_alt_fullgrid_tritransform_precursor"]
+    assert unsaft["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsaft["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_ALT_FULLGRID_TRITRANSFORM"
+    assert unsaft["ranking_key"] == "warning_count_then_delta_l2_then_runtime"
+    assert unsaft["num_rows"] == 15
+    assert len(unsaft["rows"]) == 15
+    assert len(unsaft["by_class"]) == 3
+    for rr in unsaft["rows"]:
+        assert rr["class"] in {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
+        assert rr["winner"] in {"u1", "u2", "u4"}
+        assert len(rr["ranked_transforms"]) == 3
+        assert set(rr["ranked_transforms"]) == {"u1", "u2", "u4"}
+        assert rr["u1_runtime_seconds"] > 0.0 and rr["u2_runtime_seconds"] > 0.0 and rr["u4_runtime_seconds"] > 0.0
+    for rr in unsaft["by_class"]:
+        assert rr["class"] in {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
+        assert rr["num_rows"] == 5
+        assert set(rr["winner_counts"].keys()) == {"u1", "u2", "u4"}
+        assert 0.0 <= rr["recommended_transform_frequency"] <= 1.0
+    assert "ur_numerical_stress_class_conditional_replay_precursor" in data
+    unsccr = data["ur_numerical_stress_class_conditional_replay_precursor"]
+    assert unsccr["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsccr["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_CLASS_CONDITIONAL_REPLAY"
+    assert unsccr["num_rows"] == 15
+    assert len(unsccr["rows"]) == 15
+    assert set(unsccr["class_transform_policy"].keys()) == {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
+    assert set(unsccr["class_transform_policy"].values()).issubset({"u1", "u2", "u4"})
+    for rr in unsccr["rows"]:
+        assert rr["class"] in {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
+        assert rr["chosen_transform"] in {"u1", "u2", "u4"}
+        assert rr["chosen_warning_count"] >= 0
+        assert rr["baseline_warning_count"] >= 0
+        assert rr["chosen_delta_l2_vs_baseline"] >= 0.0
+        assert rr["chosen_runtime_seconds"] > 0.0
+    assert "ur_numerical_stress_policy_counterfactual_precursor" in data
+    unspc = data["ur_numerical_stress_policy_counterfactual_precursor"]
+    assert unspc["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unspc["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_POLICY_COUNTERFACTUAL"
+    assert unspc["ranking_key"] == "warning_total_then_delta_l2_span_then_runtime_total"
+    assert len(unspc["rows"]) == 4
+    assert unspc["best_policy"] in {"always_u1", "always_u2", "always_u4", "class_conditional"}
+    names = [r["policy"] for r in unspc["rows"]]
+    assert set(names) == {"always_u1", "always_u2", "always_u4", "class_conditional"}
+    for rr in unspc["rows"]:
+        assert rr["warning_total"] >= 0
+        assert rr["delta_l2_span"] >= 0.0
+        assert rr["runtime_total_seconds"] > 0.0
+    assert "ur_numerical_stress_alt_replay_trend_precursor" in data
+    unsart = data["ur_numerical_stress_alt_replay_trend_precursor"]
+    assert unsart["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsart["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_ALT_REPLAY_TREND"
+    assert unsart["selection_rule"] == "per_improved_class_min_alt_warning_then_min_abs_delta_shift"
+    assert unsart["num_improved_classes_replayed"] == len(unsart["rows"])
+    for rr in unsart["rows"]:
+        assert rr["class"] in {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
+        assert rr["selected_alt_integration_warning_count"] >= 0
+        assert rr["selected_original_integration_warning_count"] >= rr["selected_alt_integration_warning_count"]
+        assert rr["selected_alt_delta_l2_vs_baseline"] >= 0.0
+        assert rr["selected_original_delta_l2_vs_baseline"] >= 0.0
+    assert "ur_numerical_stress_alt_dominance_map_precursor" in data
+    unsad = data["ur_numerical_stress_alt_dominance_map_precursor"]
+    assert unsad["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsad["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_ALT_DOMINANCE_MAP"
+    assert unsad["num_rows"] == len(unsad["rows"]) == uaeisp["num_rows"]
+    assert len(unsad["by_class"]) == 3
+    for rr in unsad["rows"]:
+        assert rr["class"] in {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
+        assert isinstance(rr["alt_nonworse_both_axes"], bool)
+        assert isinstance(rr["alt_strictly_better_on_at_least_one_axis"], bool)
+        assert isinstance(rr["alt_pareto_dominates_original"], bool)
+    for rr in unsad["by_class"]:
+        assert rr["class"] in {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
+        assert rr["num_cases"] > 0
+        assert 0.0 <= rr["pareto_dominance_frequency"] <= 1.0
+        assert 0.0 <= rr["pareto_dominance_frequency_wilson_interval95"]["lower"] <= rr["pareto_dominance_frequency_wilson_interval95"]["upper"] <= 1.0
+        assert 0.0 <= rr["nonworse_both_axes_frequency"] <= 1.0
+    assert "ur_numerical_stress_alt_decision_gate_precursor" in data
+    unsadg = data["ur_numerical_stress_alt_decision_gate_precursor"]
+    assert unsadg["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsadg["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_ALT_DECISION_GATE"
+    assert len(unsadg["rows"]) == 3
+    assert 0 <= unsadg["num_recommended_classes"] <= 3
+    for rr in unsadg["rows"]:
+        assert rr["class"] in {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
+        assert 0.0 <= rr["dominance_wilson_lb95"] <= 1.0
+        assert rr["dominance_lb_threshold"] == 0.5
+        assert rr["span_worsening_tolerance"] >= 0.0
+        assert isinstance(rr["criteria"]["dominance_wilson_lb95_ge_threshold"], bool)
+        assert isinstance(rr["criteria"]["selected_delta_l2_alt_minus_original_le_tolerance"], bool)
+        assert isinstance(rr["recommend_alt_parameterization_for_class"], bool)
+    assert "ur_numerical_stress_alt_hysteresis_gate_precursor" in data
+    unsah = data["ur_numerical_stress_alt_hysteresis_gate_precursor"]
+    assert unsah["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsah["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_ALT_HYSTERESIS_GATE"
+    assert len(unsah["rows"]) == 3
+    assert unsah["num_force_on_classes"] + unsah["num_hold_classes"] + unsah["num_force_off_classes"] == 3
+    for rr in unsah["rows"]:
+        assert rr["class"] in {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
+        assert rr["hysteresis_threshold_on"] > rr["hysteresis_threshold_off"]
+        assert isinstance(rr["span_ok"], bool)
+        assert isinstance(rr["states"]["force_on"], bool)
+        assert isinstance(rr["states"]["hold_previous_state"], bool)
+        assert isinstance(rr["states"]["force_off"], bool)
+        assert rr["state_partition_valid"] is True
+    assert "ur_numerical_stress_alt_hysteresis_time_stability_precursor" in data
+    unsaht = data["ur_numerical_stress_alt_hysteresis_time_stability_precursor"]
+    assert unsaht["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsaht["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_ALT_HYSTERESIS_TIME_STABILITY"
+    assert len(unsaht["seeds"]) == 6
+    assert len(unsaht["rows"]) == 18
+    assert len(unsaht["by_class"]) == 3
+    assert len(unsaht["transition_matrix_by_class"]) == 3
+    assert len(unsaht["entropy_rate_by_class"]) == 3
+    for rr in unsaht["rows"]:
+        assert rr["class"] in {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
+        assert rr["state"] in {"ON", "HOLD", "OFF"}
+        assert rr["n_cases"] > 0
+        assert 0 <= rr["k_sim"] <= rr["n_cases"]
+        assert 0.0 <= rr["p_sim"] <= 1.0
+        assert 0.0 <= rr["lb95_sim"] <= 1.0
+    for rr in unsaht["by_class"]:
+        assert rr["class"] in {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
+        assert rr["num_replays"] == 6
+        assert rr["state_counts"]["ON"] + rr["state_counts"]["HOLD"] + rr["state_counts"]["OFF"] == 6
+        assert 0.0 <= rr["transition_frequency"] <= 1.0
+    for rr in unsaht["transition_matrix_by_class"]:
+        assert rr["class"] in {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
+        assert rr["states_order"] == ["ON", "HOLD", "OFF"]
+        for s in rr["states_order"]:
+            assert rr["row_totals"][s] >= 0
+            assert 0.0 <= rr["self_transition_wilson_lb95"][s] <= 1.0
+            rowsum = sum(rr["counts"][s][t] for t in rr["states_order"])
+            assert rowsum == rr["row_totals"][s]
+            if rr["row_totals"][s] > 0:
+                psum = sum(rr["transition_probabilities"][s][t] for t in rr["states_order"])
+                assert abs(psum - 1.0) < 1e-12
+            else:
+                psum = sum(rr["transition_probabilities"][s][t] for t in rr["states_order"])
+                assert psum == 0.0
+    for rr in unsaht["entropy_rate_by_class"]:
+        assert rr["class"] in {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
+        assert 0.0 <= rr["entropy_rate_bits_per_step"] <= rr["max_entropy_bits_per_step_for_3states"] + 1e-12
+        assert 0.0 <= rr["normalized_entropy_rate_0_1"] <= 1.0 + 1e-12
+        assert set(rr["state_occupancy_pi"].keys()) == {"ON", "HOLD", "OFF"}
+        assert abs(sum(rr["state_occupancy_pi"].values()) - 1.0) < 1e-12
+    assert 0.0 <= unsaht["entropy_rate_global_max_bits_per_step"] <= 2.0
+    assert 0.0 <= unsaht["global_transition_frequency_max"] <= 1.0
+    assert "ur_numerical_stress_alt_entropy_gate_precursor" in data
+    unsaeg = data["ur_numerical_stress_alt_entropy_gate_precursor"]
+    assert unsaeg["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsaeg["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_ALT_ENTROPY_GATE"
+    assert len(unsaeg["rows"]) == 3
+    assert 0 <= unsaeg["num_recommended_classes"] <= 3
+    for rr in unsaeg["rows"]:
+        assert rr["class"] in {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
+        assert 0.0 <= rr["dominance_wilson_lb95"] <= 1.0
+        assert rr["dominance_lb_threshold"] == 0.5
+        assert rr["span_worsening_tolerance"] >= 0.0
+        assert 0.0 <= rr["normalized_entropy_rate_0_1"] <= 1.0 + 1e-12
+        assert rr["entropy_threshold_norm"] == 0.6
+        assert isinstance(rr["criteria"]["dominance_wilson_lb95_ge_threshold"], bool)
+        assert isinstance(rr["criteria"]["selected_delta_l2_alt_minus_original_le_tolerance"], bool)
+        assert isinstance(rr["criteria"]["normalized_entropy_rate_le_threshold"], bool)
+        assert isinstance(rr["recommend_alt_parameterization_entropy_gated"], bool)
+    assert "ur_numerical_stress_alt_entropy_threshold_calibration_precursor" in data
+    unsetc = data["ur_numerical_stress_alt_entropy_threshold_calibration_precursor"]
+    assert unsetc["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsetc["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_ALT_ENTROPY_THRESHOLD_CALIBRATION"
+    assert len(unsetc["rows"]) == 5
+    assert unsetc["selected_entropy_threshold_norm"] == 0.6
+    for rr in unsetc["rows"]:
+        assert 0.0 <= rr["entropy_threshold_norm"] <= 1.0
+        assert 0 <= rr["num_recommended_classes"] <= 3
+    assert 0.0 <= unsetc["recommendation_count_span"] <= 3.0
     assert data["phase_common_basis_link_precursor"]["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
     assert data["phase_common_basis_link_precursor"]["condition_number"] < 1e6
     assert data["phase_common_basis_link_precursor"]["residual_l2"] > 0.0
