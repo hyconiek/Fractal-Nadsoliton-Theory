@@ -14,7 +14,7 @@ OUT_QUALITY_CSV = ROOT / "generated" / "p2025_s975_strict_cutkosky_same_scheme_c
 def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     subprocess.run([sys.executable, str(SCRIPT)], check=True)
     data = json.loads(OUT.read_text(encoding="utf-8"))
-    assert data["schema_version"] == "p2025_s975_v151"
+    assert data["schema_version"] == "p2025_s975_v168"
     assert data["status"] == "OPEN_OBSTRUCTION_WITH_TRACE"
     assert all(data["gatekeeper_checks"].values())
     assert len(data["toe_closure_gaps_7tasks"]) == 7
@@ -669,6 +669,268 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
         assert 0.0 <= rr["b_dominates_a_frequency"] <= 1.0
         assert 0.0 <= rr["tie_or_incomparable_frequency"] <= 1.0
         assert abs(rr["a_dominates_b_frequency"] + rr["b_dominates_a_frequency"] + rr["tie_or_incomparable_frequency"] - 1.0) < 1e-12
+    assert "ur_numerical_stress_policy_cross_class_constrained_ablation_precursor" in data
+    unsp_cc = data["ur_numerical_stress_policy_cross_class_constrained_ablation_precursor"]
+    assert unsp_cc["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsp_cc["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_POLICY_CROSS_CLASS_CONSTRAINED_ABLATION"
+    assert unsp_cc["constraint_rule"] == "row_runtime_le_class_q75_u2_and_row_warning_le_class_q75_u2"
+    assert unsp_cc["feasibility_pass_rate_threshold"] == 0.80
+    assert set(unsp_cc["class_runtime_caps_seconds"].keys()) == {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
+    assert set(unsp_cc["class_warning_caps"].keys()) == {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
+    assert len(unsp_cc["rows"]) == 3
+    assert unsp_cc["best_feasible_regime_lexicographic"] in {"base_budget_policy", "class_adaptive_fallback", "robust_winner_only", "none"}
+    for rr in unsp_cc["rows"]:
+        assert rr["regime"] in {"base_budget_policy", "class_adaptive_fallback", "robust_winner_only"}
+        assert 0 <= rr["constraint_pass_rows"] <= rr["constraint_total_rows"]
+        assert rr["constraint_total_rows"] > 0
+        assert 0.0 <= rr["constraint_pass_rate"] <= 1.0
+        assert rr["warning_total"] >= 0
+        assert rr["delta_l2_span"] >= 0.0
+        assert rr["runtime_total_seconds"] >= 0.0
+    assert "ur_numerical_stress_policy_cross_class_constrained_bootstrap_dominance_precursor" in data
+    unsp_ccd = data["ur_numerical_stress_policy_cross_class_constrained_bootstrap_dominance_precursor"]
+    assert unsp_ccd["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsp_ccd["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_POLICY_CROSS_CLASS_CONSTRAINED_BOOTSTRAP_DOMINANCE"
+    assert len(unsp_ccd["rows"]) == 3
+    for rr in unsp_ccd["rows"]:
+        assert rr["regime_a"] in {"base_budget_policy", "class_adaptive_fallback", "robust_winner_only"}
+        assert rr["regime_b"] in {"base_budget_policy", "class_adaptive_fallback", "robust_winner_only"}
+        assert rr["regime_a"] != rr["regime_b"]
+        assert 0 <= rr["usable_bootstrap_trials"] <= rr["bootstrap_size_requested"] == 256
+        assert 0.0 <= rr["a_dominates_b_frequency"] <= 1.0
+        assert 0.0 <= rr["b_dominates_a_frequency"] <= 1.0
+        assert 0.0 <= rr["tie_or_incomparable_frequency"] <= 1.0
+        assert abs(rr["a_dominates_b_frequency"] + rr["b_dominates_a_frequency"] + rr["tie_or_incomparable_frequency"] - 1.0) < 1e-12
+    assert "ur_numerical_stress_policy_cross_class_threshold_sweep_precursor" in data
+    unsp_th = data["ur_numerical_stress_policy_cross_class_threshold_sweep_precursor"]
+    assert unsp_th["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsp_th["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_POLICY_CROSS_CLASS_THRESHOLD_SWEEP"
+    assert unsp_th["threshold_grid"] == [0.70, 0.75, 0.80, 0.85, 0.90, 0.95]
+    assert len(unsp_th["rows"]) == len(unsp_th["threshold_grid"]) == 6
+    assert len(unsp_th["best_regime_sequence"]) == 6
+    assert isinstance(unsp_th["best_regime_stable_over_nonempty_thresholds"], bool)
+    for rr in unsp_th["rows"]:
+        assert rr["feasibility_pass_rate_threshold"] in {0.70, 0.75, 0.80, 0.85, 0.90, 0.95}
+        assert 0 <= rr["num_feasible_regimes"] <= 3
+        assert rr["best_feasible_regime_lexicographic"] in {"base_budget_policy", "class_adaptive_fallback", "robust_winner_only", "none"}
+    assert "ur_numerical_stress_policy_joint_stress_map_precursor" in data
+    unsp_js = data["ur_numerical_stress_policy_joint_stress_map_precursor"]
+    assert unsp_js["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsp_js["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_POLICY_JOINT_STRESS_MAP"
+    assert unsp_js["threshold_grid"] == [0.70, 0.75, 0.80, 0.85, 0.90, 0.95]
+    assert unsp_js["cap_scale_grid"] == [0.85, 1.0, 1.15]
+    assert unsp_js["jitter_grid"] == [0.0, 0.01, 0.02]
+    assert len(unsp_js["rows"]) == unsp_js["num_cells"] == 54
+    assert 0 <= unsp_js["num_stable_cells_winner_freq_ge_070"] <= unsp_js["num_cells"]
+    assert 0.0 <= unsp_js["stable_cell_frequency"] <= 1.0
+    for rr in unsp_js["rows"]:
+        assert rr["threshold"] in {0.70, 0.75, 0.80, 0.85, 0.90, 0.95}
+        assert rr["cap_scale"] in {0.85, 1.0, 1.15}
+        assert rr["jitter"] in {0.0, 0.01, 0.02}
+        assert rr["bootstrap_size_requested"] == 128
+        assert 0 <= rr["usable_trials"] <= rr["bootstrap_size_requested"]
+        assert rr["winner"] in {"base_budget_policy", "class_adaptive_fallback", "robust_winner_only", "none"}
+        assert 0.0 <= rr["winner_frequency"] <= 1.0
+        assert 0.0 <= rr["winner_frequency_ci95_jeffreys"]["lower"] <= rr["winner_frequency_ci95_jeffreys"]["upper"] <= 1.0
+        assert 0.0 <= rr["winner_entropy_norm"] <= 1.0
+        assert set(rr["winner_counts"].keys()) == {"base_budget_policy", "class_adaptive_fallback", "robust_winner_only"}
+    assert "ur_numerical_stress_policy_stability_topology_precursor" in data
+    unsp_top = data["ur_numerical_stress_policy_stability_topology_precursor"]
+    assert unsp_top["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsp_top["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_POLICY_STABILITY_TOPOLOGY"
+    assert unsp_top["stable_cell_definition"] == "winner_frequency_ge_0p70_and_winner_not_none"
+    assert unsp_top["num_components"] >= 0
+    assert unsp_top["largest_component_size"] >= 0
+    assert len(unsp_top["components"]) == unsp_top["num_components"]
+    for cc in unsp_top["components"]:
+        assert cc["size"] == len(cc["rows"])
+        assert cc["dominant_winner"] in {"base_budget_policy", "class_adaptive_fallback", "robust_winner_only"}
+        assert set(cc["winner_counts"].keys()) == {"base_budget_policy", "class_adaptive_fallback", "robust_winner_only"}
+        for rr in cc["rows"]:
+            assert rr["threshold"] in {0.70, 0.75, 0.80, 0.85, 0.90, 0.95}
+            assert rr["cap_scale"] in {0.85, 1.0, 1.15}
+            assert rr["jitter"] in {0.0, 0.01, 0.02}
+            assert rr["winner"] in {"base_budget_policy", "class_adaptive_fallback", "robust_winner_only"}
+    assert "ur_numerical_stress_policy_stability_boundary_margin_precursor" in data
+    unsp_bm = data["ur_numerical_stress_policy_stability_boundary_margin_precursor"]
+    assert unsp_bm["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsp_bm["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_POLICY_STABILITY_BOUNDARY_MARGIN"
+    assert unsp_bm["distance_metric"] == "manhattan_on_threshold_cap_jitter_grid"
+    assert unsp_bm["num_stable_rows"] == len(unsp_bm["rows"])
+    for rr in unsp_bm["rows"]:
+        assert rr["threshold"] in {0.70, 0.75, 0.80, 0.85, 0.90, 0.95}
+        assert rr["cap_scale"] in {0.85, 1.0, 1.15}
+        assert rr["jitter"] in {0.0, 0.01, 0.02}
+        assert rr["winner"] in {"base_budget_policy", "class_adaptive_fallback", "robust_winner_only"}
+        assert rr["boundary_manhattan_margin"] >= 0
+    for rr in unsp_bm["component_margin_rows"]:
+        assert rr["dominant_winner"] in {"base_budget_policy", "class_adaptive_fallback", "robust_winner_only"}
+        assert rr["size"] >= 0
+        q = rr["boundary_margin_q05_q50_q95"]
+        assert len(q) == 3 and q[0] <= q[1] <= q[2]
+        assert rr["boundary_margin_min"] <= rr["boundary_margin_max"]
+    assert "ur_numerical_stress_policy_weighted_boundary_risk_precursor" in data
+    unsp_wr = data["ur_numerical_stress_policy_weighted_boundary_risk_precursor"]
+    assert unsp_wr["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsp_wr["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_POLICY_WEIGHTED_BOUNDARY_RISK"
+    assert "winner_frequency" in unsp_wr["risk_definition"]
+    assert unsp_wr["margin_normalization_divisor"] >= 1.0
+    assert len(unsp_wr["rows"]) == 54
+    assert len(unsp_wr["best_corridor_rows"]) <= 8
+    for rr in unsp_wr["rows"]:
+        assert rr["threshold"] in {0.70, 0.75, 0.80, 0.85, 0.90, 0.95}
+        assert rr["cap_scale"] in {0.85, 1.0, 1.15}
+        assert rr["jitter"] in {0.0, 0.01, 0.02}
+        assert rr["winner"] in {"base_budget_policy", "class_adaptive_fallback", "robust_winner_only", "none"}
+        assert 0.0 <= rr["winner_frequency"] <= 1.0
+        assert 0.0 <= rr["winner_entropy_norm"] <= 1.0
+        assert rr["boundary_manhattan_margin"] >= 0
+        assert 0.0 <= rr["boundary_margin_norm"] <= 1.0
+        assert 0.0 <= rr["weighted_boundary_risk_score"] <= 1.0
+    assert "ur_numerical_stress_policy_weighted_boundary_risk_sensitivity_precursor" in data
+    unsp_ws = data["ur_numerical_stress_policy_weighted_boundary_risk_sensitivity_precursor"]
+    assert unsp_ws["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsp_ws["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_POLICY_WEIGHTED_BOUNDARY_RISK_SENSITIVITY"
+    assert len(unsp_ws["rows"]) == 5
+    assert isinstance(unsp_ws["winner_set_stable_over_weight_grid"], bool)
+    for rr in unsp_ws["rows"]:
+        w = rr["weights"]
+        assert abs((w["wf"] + w["ent"] + w["margin"]) - 1.0) < 1e-12
+        assert 0.0 <= w["wf"] <= 1.0 and 0.0 <= w["ent"] <= 1.0 and 0.0 <= w["margin"] <= 1.0
+        assert len(rr["best_corridor_rows"]) <= 8
+        for cr in rr["best_corridor_rows"]:
+            assert cr["winner"] in {"base_budget_policy", "class_adaptive_fallback", "robust_winner_only"}
+            assert 0.0 <= cr["weighted_boundary_risk_score"] <= 1.0
+    assert "ur_numerical_stress_policy_weighted_boundary_risk_bayesian_precursor" in data
+    unsp_wb = data["ur_numerical_stress_policy_weighted_boundary_risk_bayesian_precursor"]
+    assert unsp_wb["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsp_wb["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_POLICY_WEIGHTED_BOUNDARY_RISK_BAYESIAN"
+    assert len(unsp_wb["dirichlet_alpha"]) == 3
+    assert unsp_wb["posterior_sample_size"] == 512
+    assert len(unsp_wb["winner_set_posterior_rows"]) >= 1
+    p_sum = 0.0
+    for rr in unsp_wb["winner_set_posterior_rows"]:
+        assert rr["count"] >= 0
+        assert 0.0 <= rr["posterior_probability"] <= 1.0
+        assert 0.0 <= rr["posterior_probability_ci95_jeffreys"]["lower"] <= rr["posterior_probability_ci95_jeffreys"]["upper"] <= 1.0
+        p_sum += rr["posterior_probability"]
+    assert abs(p_sum - 1.0) < 1e-12
+    assert 0.0 <= unsp_wb["most_probable_winner_set_probability"] <= 1.0
+    assert set(unsp_wb["best_cell_winner_posterior_counts"].keys()) == {"base_budget_policy", "class_adaptive_fallback", "robust_winner_only", "none"}
+    assert "ur_numerical_stress_policy_weighted_boundary_risk_posterior_predictive_precursor" in data
+    unsp_pp = data["ur_numerical_stress_policy_weighted_boundary_risk_posterior_predictive_precursor"]
+    assert unsp_pp["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsp_pp["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_POLICY_WEIGHTED_BOUNDARY_RISK_POSTERIOR_PREDICTIVE"
+    assert len(unsp_pp["rows"]) == 9
+    assert 0.0 <= unsp_pp["global_p_stays_optimal_mean"] <= 1.0
+    for rr in unsp_pp["rows"]:
+        assert rr["cap_scale"] in {0.85, 1.0, 1.15}
+        assert rr["jitter"] in {0.0, 0.01, 0.02}
+        assert rr["posterior_samples"] == 256
+        assert 0 <= rr["valid_samples"] <= rr["posterior_samples"]
+        assert 0 <= rr["stay_count"] <= rr["valid_samples"]
+        assert 0.0 <= rr["p_winner_set_stays_optimal"] <= 1.0
+        assert 0.0 <= rr["p_winner_set_stays_optimal_ci95_jeffreys"]["lower"] <= rr["p_winner_set_stays_optimal_ci95_jeffreys"]["upper"] <= 1.0
+    assert "ur_numerical_stress_policy_posterior_predictive_decision_gate_precursor" in data
+    unsp_pg = data["ur_numerical_stress_policy_posterior_predictive_decision_gate_precursor"]
+    assert unsp_pg["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsp_pg["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_POLICY_POSTERIOR_PREDICTIVE_DECISION_GATE"
+    assert unsp_pg["rule"] == "GO_if_all_critical_cells_lb95_ge_threshold_else_HOLD"
+    assert 0.0 <= unsp_pg["lb95_threshold"] <= 1.0
+    assert len(unsp_pg["rows"]) == 9
+    assert unsp_pg["decision"] in {"GO", "HOLD_AND_RECALIBRATE"}
+    assert isinstance(unsp_pg["ready_for_next_costlier_policy_step"], bool)
+    for rr in unsp_pg["rows"]:
+        assert rr["cap_scale"] in {0.85, 1.0, 1.15}
+        assert rr["jitter"] in {0.0, 0.01, 0.02}
+        assert 0.0 <= rr["p_stay"] <= 1.0
+        assert 0.0 <= rr["p_stay_lb95"] <= 1.0
+        assert isinstance(rr["criterion_lb95_ge_threshold"], bool)
+    assert "ur_numerical_stress_policy_posterior_predictive_gate_calibration_precursor" in data
+    unsp_gc = data["ur_numerical_stress_policy_posterior_predictive_gate_calibration_precursor"]
+    assert unsp_gc["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsp_gc["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_POLICY_POSTERIOR_PREDICTIVE_GATE_CALIBRATION"
+    assert unsp_gc["threshold_grid"] == [0.70, 0.75, 0.80, 0.85, 0.90, 0.95]
+    assert len(unsp_gc["rows"]) == 6
+    assert 0.0 <= unsp_gc["go_rate_over_threshold_grid"] <= 1.0
+    assert 0.70 <= unsp_gc["recommended_threshold_max_go_with_min_pass_rate_0p90"] <= 0.95
+    for rr in unsp_gc["rows"]:
+        assert rr["lb95_threshold"] in {0.70, 0.75, 0.80, 0.85, 0.90, 0.95}
+        assert 0 <= rr["critical_cells_pass_count"] <= rr["critical_cells_total"] == 9
+        assert 0.0 <= rr["critical_cells_pass_rate"] <= 1.0
+        assert isinstance(rr["decision_go"], bool)
+    assert "ur_numerical_stress_policy_posterior_predictive_gate_cost_calibration_precursor" in data
+    unsp_gcc = data["ur_numerical_stress_policy_posterior_predictive_gate_cost_calibration_precursor"]
+    assert unsp_gcc["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsp_gcc["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_POLICY_POSTERIOR_PREDICTIVE_GATE_COST_CALIBRATION"
+    assert "go_rate_local" in unsp_gcc["utility_definition"]
+    assert unsp_gcc["base_runtime_reference_seconds"] > 0.0
+    assert unsp_gcc["lambda_grid"] == [0.0, 0.1, 0.2, 0.4]
+    assert len(unsp_gcc["rows"]) == 24
+    assert len(unsp_gcc["selected_rows"]) == 4
+    for rr in unsp_gcc["rows"]:
+        assert rr["lambda_cost"] in {0.0, 0.1, 0.2, 0.4}
+        assert rr["lb95_threshold"] in {0.70, 0.75, 0.80, 0.85, 0.90, 0.95}
+        assert rr["go_rate_local"] in {0.0, 1.0}
+        assert 0.0 <= rr["runtime_uplift_proxy"] <= 1.0
+    for rr in unsp_gcc["selected_rows"]:
+        assert rr["lambda_cost"] in {0.0, 0.1, 0.2, 0.4}
+        assert rr["lb95_threshold"] in {0.70, 0.75, 0.80, 0.85, 0.90, 0.95}
+    assert "ur_numerical_stress_policy_gate_frontier_utility_precursor" in data
+    unsp_fu = data["ur_numerical_stress_policy_gate_frontier_utility_precursor"]
+    assert unsp_fu["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsp_fu["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_POLICY_GATE_FRONTIER_UTILITY"
+    assert unsp_fu["axes"] == ["false_hold_risk", "false_go_risk", "runtime_uplift_proxy"]
+    assert len(unsp_fu["rows"]) == 6
+    assert 1 <= unsp_fu["pareto_frontier_count"] <= 6
+    assert len(unsp_fu["pareto_frontier_thresholds"]) == unsp_fu["pareto_frontier_count"]
+    for rr in unsp_fu["rows"]:
+        assert rr["lb95_threshold"] in {0.70, 0.75, 0.80, 0.85, 0.90, 0.95}
+        assert 0.0 <= rr["false_hold_risk"] <= 1.0
+        assert 0.0 <= rr["false_go_risk"] <= 1.0
+        assert 0.0 <= rr["runtime_uplift_proxy"] <= 1.0
+        assert isinstance(rr["pareto_frontier"], bool)
+    assert "ur_numerical_stress_policy_gate_frontier_knee_precursor" in data
+    unsp_fk = data["ur_numerical_stress_policy_gate_frontier_knee_precursor"]
+    assert unsp_fk["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsp_fk["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_POLICY_GATE_FRONTIER_KNEE"
+    assert unsp_fk["ideal_point"] == {"false_hold_risk": 0.0, "false_go_risk": 0.0, "runtime_uplift_proxy": 0.0}
+    assert unsp_fk["recommended_knee_threshold"] in {0.70, 0.75, 0.80, 0.85, 0.90, 0.95}
+    for rr in unsp_fk["rows"]:
+        assert rr["lb95_threshold"] in {0.70, 0.75, 0.80, 0.85, 0.90, 0.95}
+        assert isinstance(rr["pareto_frontier"], bool) and rr["pareto_frontier"] is True
+        assert rr["ideal_point_distance_l2"] >= 0.0
+    assert "ur_numerical_stress_policy_gate_frontier_knee_stability_precursor" in data
+    unsp_fks = data["ur_numerical_stress_policy_gate_frontier_knee_stability_precursor"]
+    assert unsp_fks["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsp_fks["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_POLICY_GATE_FRONTIER_KNEE_STABILITY"
+    assert unsp_fks["bootstrap_size"] == 512
+    assert len(unsp_fks["rows"]) >= 1
+    assert unsp_fks["most_stable_knee_threshold"] in {0.70, 0.75, 0.80, 0.85, 0.90, 0.95}
+    for rr in unsp_fks["rows"]:
+        assert rr["lb95_threshold"] in {0.70, 0.75, 0.80, 0.85, 0.90, 0.95}
+        assert 0 <= rr["knee_selection_count"] <= 512
+        assert 0.0 <= rr["knee_selection_frequency"] <= 1.0
+        assert 0.0 <= rr["knee_selection_frequency_ci95_jeffreys"]["lower"] <= rr["knee_selection_frequency_ci95_jeffreys"]["upper"] <= 1.0
+    assert "ur_numerical_stress_policy_gate_frontier_knee_cross_seed_stability_precursor" in data
+    unsp_fkcs = data["ur_numerical_stress_policy_gate_frontier_knee_cross_seed_stability_precursor"]
+    assert unsp_fkcs["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsp_fkcs["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_POLICY_GATE_FRONTIER_KNEE_CROSS_SEED_STABILITY"
+    assert unsp_fkcs["seed_grid"] == [975166, 975167, 975168, 975169]
+    assert len(unsp_fkcs["rows"]) == 4
+    assert len(unsp_fkcs["span_rows"]) == 6
+    assert 0.0 <= unsp_fkcs["max_span_over_thresholds"] <= 1.0
+    for sr in unsp_fkcs["rows"]:
+        assert sr["seed"] in {975166, 975167, 975168, 975169}
+        assert sr["most_stable_knee_threshold"] in {0.70, 0.75, 0.80, 0.85, 0.90, 0.95}
+        assert len(sr["rows"]) == 6
+        for rr in sr["rows"]:
+            assert rr["lb95_threshold"] in {0.70, 0.75, 0.80, 0.85, 0.90, 0.95}
+            assert 0.0 <= rr["knee_selection_frequency"] <= 1.0
+    for rr in unsp_fkcs["span_rows"]:
+        assert rr["lb95_threshold"] in {0.70, 0.75, 0.80, 0.85, 0.90, 0.95}
+        assert 0.0 <= rr["knee_selection_frequency_span_over_seeds"] <= 1.0
+        assert 0.0 <= rr["knee_selection_frequency_mean_over_seeds"] <= 1.0
     assert "ur_numerical_stress_alt_replay_trend_precursor" in data
     unsart = data["ur_numerical_stress_alt_replay_trend_precursor"]
     assert unsart["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"

@@ -1846,6 +1846,838 @@ def main() -> None:
         "best_regime_lexicographic": str(ablation_rows_sorted[0]["regime"]) if ablation_rows_sorted else "none",
         "pairwise_dominance_rows": pair_rows,
     }
+    # Cross-class constrained ablation:
+    # require class-local runtime/warning constraints before global ranking.
+    class_runtime_caps = {
+        "gauge_gauge": float(np.quantile(np.array([float(r["u2_runtime_seconds"]) for r in tri_rows if str(r["class"]) == "gauge_gauge"], dtype=float), 0.75)),
+        "fermion_fermion": float(np.quantile(np.array([float(r["u2_runtime_seconds"]) for r in tri_rows if str(r["class"]) == "fermion_fermion"], dtype=float), 0.75)),
+        "scalar_scalar": float(np.quantile(np.array([float(r["u2_runtime_seconds"]) for r in tri_rows if str(r["class"]) == "scalar_scalar"], dtype=float), 0.75)),
+    }
+    class_warning_caps = {
+        "gauge_gauge": float(np.quantile(np.array([float(r["u2_warning_count"]) for r in tri_rows if str(r["class"]) == "gauge_gauge"], dtype=float), 0.75)),
+        "fermion_fermion": float(np.quantile(np.array([float(r["u2_warning_count"]) for r in tri_rows if str(r["class"]) == "fermion_fermion"], dtype=float), 0.75)),
+        "scalar_scalar": float(np.quantile(np.array([float(r["u2_warning_count"]) for r in tri_rows if str(r["class"]) == "scalar_scalar"], dtype=float), 0.75)),
+    }
+    constrained_rows = []
+    for ab in ablation_rows_sorted:
+        name = str(ab["regime"])
+        cmap = ablation_defs[name]
+        pass_rows = 0
+        total_rows = 0
+        for rtri in tri_rows:
+            cls = str(rtri["class"])
+            pp = str(cmap[cls])
+            tp = str(policy_defs[pp][cls])
+            rt = float(rtri[f"{tp}_runtime_seconds"])
+            wc = float(rtri[f"{tp}_warning_count"])
+            ok = (rt <= class_runtime_caps[cls] + 1e-15) and (wc <= class_warning_caps[cls] + 1e-15)
+            pass_rows += 1 if ok else 0
+            total_rows += 1
+        constrained_rows.append({
+            "regime": name,
+            "class_policy_map": cmap,
+            "constraint_pass_rows": int(pass_rows),
+            "constraint_total_rows": int(total_rows),
+            "constraint_pass_rate": float(pass_rows / max(1, total_rows)),
+            "warning_total": int(ab["warning_total"]),
+            "delta_l2_span": float(ab["delta_l2_span"]),
+            "runtime_total_seconds": float(ab["runtime_total_seconds"]),
+        })
+    feasible_rows = [r for r in constrained_rows if float(r["constraint_pass_rate"]) >= 0.80]
+    constrained_best = (
+        sorted(feasible_rows, key=lambda r: (r["warning_total"], r["delta_l2_span"], r["runtime_total_seconds"], r["regime"]))[0]["regime"]
+        if feasible_rows else "none"
+    )
+    ur_numerical_stress_policy_cross_class_constrained_ablation_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_POLICY_CROSS_CLASS_CONSTRAINED_ABLATION",
+        "constraint_rule": "row_runtime_le_class_q75_u2_and_row_warning_le_class_q75_u2",
+        "feasibility_pass_rate_threshold": 0.80,
+        "class_runtime_caps_seconds": class_runtime_caps,
+        "class_warning_caps": class_warning_caps,
+        "rows": constrained_rows,
+        "feasible_regimes": [str(r["regime"]) for r in feasible_rows],
+        "best_feasible_regime_lexicographic": str(constrained_best),
+    }
+    # Constrained bootstrap pairwise dominance:
+    # compare regimes only over rows satisfying class-local constraints.
+    cboot_n = 256
+    cboot_rng = np.random.default_rng(975152)
+    constrained_pair_rows = []
+    regime_names = [r["regime"] for r in ablation_rows_sorted]
+    for ra, rb in combinations(regime_names, 2):
+        a_dom = 0
+        b_dom = 0
+        ties = 0
+        usable = 0
+        for _ in range(cboot_n):
+            idx = cboot_rng.integers(0, len(tri_rows), size=len(tri_rows))
+            metrics = {}
+            for rn in (ra, rb):
+                cmap = ablation_defs[rn]
+                vals_warn, vals_d2, vals_rt = [], [], []
+                for ii in idx:
+                    rr = tri_rows[int(ii)]
+                    cls = str(rr["class"])
+                    pp = str(cmap[cls])
+                    tp = str(policy_defs[pp][cls])
+                    rt = float(rr[f"{tp}_runtime_seconds"])
+                    wc = float(rr[f"{tp}_warning_count"])
+                    if (rt <= class_runtime_caps[cls] + 1e-15) and (wc <= class_warning_caps[cls] + 1e-15):
+                        vals_warn.append(float(rr[f"{tp}_warning_count"]))
+                        vals_d2.append(float(rr[f"{tp}_delta_l2_vs_baseline"]))
+                        vals_rt.append(float(rr[f"{tp}_runtime_seconds"]))
+                if len(vals_warn) == 0:
+                    metrics[rn] = None
+                else:
+                    awn = np.array(vals_warn, dtype=float)
+                    ad2 = np.array(vals_d2, dtype=float)
+                    art = np.array(vals_rt, dtype=float)
+                    metrics[rn] = (
+                        float(np.sum(awn)),
+                        float(np.max(ad2) - np.min(ad2)) if ad2.size else 0.0,
+                        float(np.sum(art)),
+                    )
+            if metrics[ra] is None or metrics[rb] is None:
+                continue
+            usable += 1
+            a_nonworse = metrics[ra][0] <= metrics[rb][0] and metrics[ra][1] <= metrics[rb][1] and metrics[ra][2] <= metrics[rb][2]
+            b_nonworse = metrics[rb][0] <= metrics[ra][0] and metrics[rb][1] <= metrics[ra][1] and metrics[rb][2] <= metrics[ra][2]
+            a_strict = metrics[ra][0] < metrics[rb][0] or metrics[ra][1] < metrics[rb][1] or metrics[ra][2] < metrics[rb][2]
+            b_strict = metrics[rb][0] < metrics[ra][0] or metrics[rb][1] < metrics[ra][1] or metrics[rb][2] < metrics[ra][2]
+            if a_nonworse and a_strict:
+                a_dom += 1
+            elif b_nonworse and b_strict:
+                b_dom += 1
+            else:
+                ties += 1
+        denom = max(1, usable)
+        if usable == 0:
+            # No constrained-overlap rows under current bootstrap draws:
+            # treat as fully tie/incomparable (non-informative) mass.
+            ties = denom
+        constrained_pair_rows.append({
+            "regime_a": ra,
+            "regime_b": rb,
+            "usable_bootstrap_trials": int(usable),
+            "a_dominates_b_frequency": float(a_dom / denom),
+            "b_dominates_a_frequency": float(b_dom / denom),
+            "tie_or_incomparable_frequency": float(ties / denom),
+            "a_dominates_b_ci95_jeffreys": jeffreys_interval_from_successes(a_dom, denom),
+            "b_dominates_a_ci95_jeffreys": jeffreys_interval_from_successes(b_dom, denom),
+            "bootstrap_size_requested": int(cboot_n),
+        })
+    ur_numerical_stress_policy_cross_class_constrained_bootstrap_dominance_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_POLICY_CROSS_CLASS_CONSTRAINED_BOOTSTRAP_DOMINANCE",
+        "rows": constrained_pair_rows,
+    }
+    # Threshold sweep for constrained-feasibility pass-rate:
+    # evaluate whether best feasible regime is stable vs threshold choice.
+    threshold_grid = [0.70, 0.75, 0.80, 0.85, 0.90, 0.95]
+    threshold_rows = []
+    for th in threshold_grid:
+        feasible_th = [r for r in constrained_rows if float(r["constraint_pass_rate"]) >= float(th)]
+        best_th = (
+            sorted(feasible_th, key=lambda r: (r["warning_total"], r["delta_l2_span"], r["runtime_total_seconds"], r["regime"]))[0]["regime"]
+            if feasible_th else "none"
+        )
+        threshold_rows.append({
+            "feasibility_pass_rate_threshold": float(th),
+            "num_feasible_regimes": int(len(feasible_th)),
+            "feasible_regimes": [str(r["regime"]) for r in feasible_th],
+            "best_feasible_regime_lexicographic": str(best_th),
+        })
+    best_seq = [str(r["best_feasible_regime_lexicographic"]) for r in threshold_rows]
+    stable_non_none = [b for b in best_seq if b != "none"]
+    threshold_stable = bool(len(set(stable_non_none)) <= 1) if stable_non_none else True
+    ur_numerical_stress_policy_cross_class_threshold_sweep_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_POLICY_CROSS_CLASS_THRESHOLD_SWEEP",
+        "threshold_grid": threshold_grid,
+        "rows": threshold_rows,
+        "best_regime_sequence": best_seq,
+        "best_regime_stable_over_nonempty_thresholds": threshold_stable,
+    }
+    # Joint stress map: sweep (threshold, cap_scale, jitter) and track
+    # stability of winning regime under constrained feasibility.
+    joint_rows = []
+    joint_boot_n = 128
+    joint_rng = np.random.default_rng(975154)
+    for th in threshold_grid:
+        for cap_scale in cap_scale_grid:
+            for jitter in jitter_grid:
+                winner_counts = {rn: 0 for rn in regime_names}
+                usable_trials = 0
+                for _ in range(joint_boot_n):
+                    idx = joint_rng.integers(0, len(tri_rows), size=len(tri_rows))
+                    rows_boot = []
+                    for rn in regime_names:
+                        cmap = ablation_defs[rn]
+                        pass_rows = 0
+                        total_rows = 0
+                        vals_warn, vals_d2, vals_rt = [], [], []
+                        for ii in idx:
+                            rr = tri_rows[int(ii)]
+                            cls = str(rr["class"])
+                            pp = str(cmap[cls])
+                            tp = str(policy_defs[pp][cls])
+                            rt = float(rr[f"{tp}_runtime_seconds"])
+                            wc = float(rr[f"{tp}_warning_count"])
+                            cap_rt = float(cap_scale * class_runtime_caps[cls])
+                            cap_wc = float((1.0 + jitter) * class_warning_caps[cls])
+                            ok = (rt <= cap_rt + 1e-15) and (wc <= cap_wc + 1e-15)
+                            pass_rows += 1 if ok else 0
+                            total_rows += 1
+                            vals_warn.append(float(rr[f"{tp}_warning_count"]))
+                            vals_d2.append(float(rr[f"{tp}_delta_l2_vs_baseline"]))
+                            vals_rt.append(float(rr[f"{tp}_runtime_seconds"]))
+                        aw = np.array(vals_warn, dtype=float)
+                        ad2 = np.array(vals_d2, dtype=float)
+                        art = np.array(vals_rt, dtype=float)
+                        rows_boot.append({
+                            "regime": rn,
+                            "constraint_pass_rate": float(pass_rows / max(1, total_rows)),
+                            "warning_total": float(np.sum(aw)),
+                            "delta_l2_span": float(np.max(ad2) - np.min(ad2)) if ad2.size else 0.0,
+                            "runtime_total_seconds": float(np.sum(art)),
+                        })
+                    feasible = [r for r in rows_boot if float(r["constraint_pass_rate"]) >= float(th)]
+                    if not feasible:
+                        continue
+                    usable_trials += 1
+                    winner = sorted(feasible, key=lambda r: (r["warning_total"], r["delta_l2_span"], r["runtime_total_seconds"], r["regime"]))[0]["regime"]
+                    winner_counts[str(winner)] += 1
+                if usable_trials == 0:
+                    winner = "none"
+                    winner_freq = 0.0
+                    entropy = 0.0
+                else:
+                    winner = sorted(regime_names, key=lambda rn: (-winner_counts[rn], rn))[0]
+                    freqs = np.array([winner_counts[rn] / usable_trials for rn in regime_names], dtype=float)
+                    winner_freq = float(np.max(freqs))
+                    entropy = float(-np.sum([p * np.log(p) for p in freqs if p > 0.0]) / np.log(max(2, len(regime_names))))
+                joint_rows.append({
+                    "threshold": float(th),
+                    "cap_scale": float(cap_scale),
+                    "jitter": float(jitter),
+                    "bootstrap_size_requested": int(joint_boot_n),
+                    "usable_trials": int(usable_trials),
+                    "winner": str(winner),
+                    "winner_frequency": float(winner_freq),
+                    "winner_frequency_ci95_jeffreys": jeffreys_interval_from_successes(int(max(winner_counts.values()) if usable_trials > 0 else 0), int(max(1, usable_trials))),
+                    "winner_entropy_norm": float(entropy),
+                    "winner_counts": {k: int(v) for k, v in winner_counts.items()},
+                })
+    stable_cells = [r for r in joint_rows if r["winner"] != "none" and r["winner_frequency"] >= 0.70]
+    ur_numerical_stress_policy_joint_stress_map_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_POLICY_JOINT_STRESS_MAP",
+        "threshold_grid": threshold_grid,
+        "cap_scale_grid": cap_scale_grid,
+        "jitter_grid": jitter_grid,
+        "rows": joint_rows,
+        "num_cells": int(len(joint_rows)),
+        "num_stable_cells_winner_freq_ge_070": int(len(stable_cells)),
+        "stable_cell_frequency": float(len(stable_cells) / max(1, len(joint_rows))),
+    }
+    # Stability-topology report: connected components over stable cells
+    # in the (threshold, cap_scale, jitter) grid.
+    tvals = threshold_grid
+    cvals = cap_scale_grid
+    jvals = jitter_grid
+    t_index = {float(v): i for i, v in enumerate(tvals)}
+    c_index = {float(v): i for i, v in enumerate(cvals)}
+    j_index = {float(v): i for i, v in enumerate(jvals)}
+    stable_points = {}
+    for rr in stable_cells:
+        key = (t_index[float(rr["threshold"])], c_index[float(rr["cap_scale"])], j_index[float(rr["jitter"])])
+        stable_points[key] = str(rr["winner"])
+    seen = set()
+    components = []
+    for p0, winner0 in stable_points.items():
+        if p0 in seen:
+            continue
+        stack = [p0]
+        seen.add(p0)
+        comp = []
+        winners = []
+        while stack:
+            p = stack.pop()
+            comp.append(p)
+            winners.append(stable_points[p])
+            ti, ci, ji = p
+            for dt, dc, dj in ((1, 0, 0), (-1, 0, 0), (0, 1, 0), (0, -1, 0), (0, 0, 1), (0, 0, -1)):
+                q = (ti + dt, ci + dc, ji + dj)
+                if q in stable_points and q not in seen:
+                    seen.add(q)
+                    stack.append(q)
+        comp_rows = [{
+            "threshold": float(tvals[ti]),
+            "cap_scale": float(cvals[ci]),
+            "jitter": float(jvals[ji]),
+            "winner": str(stable_points[(ti, ci, ji)]),
+        } for ti, ci, ji in comp]
+        win_counts = {rn: 0 for rn in regime_names}
+        for w in winners:
+            win_counts[w] += 1
+        dominant = sorted(regime_names, key=lambda rn: (-win_counts[rn], rn))[0]
+        components.append({
+            "size": int(len(comp_rows)),
+            "rows": sorted(comp_rows, key=lambda r: (r["threshold"], r["cap_scale"], r["jitter"])),
+            "winner_counts": win_counts,
+            "dominant_winner": dominant,
+        })
+    components = sorted(components, key=lambda r: (-r["size"], r["dominant_winner"]))
+    ur_numerical_stress_policy_stability_topology_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_POLICY_STABILITY_TOPOLOGY",
+        "stable_cell_definition": "winner_frequency_ge_0p70_and_winner_not_none",
+        "num_components": int(len(components)),
+        "largest_component_size": int(max([c["size"] for c in components], default=0)),
+        "components": components,
+    }
+    # Boundary-margin panel: distance from stable cells to nearest unstable cell
+    # in 3D stress-grid (Manhattan graph distance).
+    all_points = [(ti, ci, ji) for ti in range(len(tvals)) for ci in range(len(cvals)) for ji in range(len(jvals))]
+    stable_set = set(stable_points.keys())
+    unstable_set = set(all_points) - stable_set
+    margin_rows = []
+    for p in stable_set:
+        if not unstable_set:
+            dmin = int(len(tvals) + len(cvals) + len(jvals))
+        else:
+            dmin = min(abs(p[0] - q[0]) + abs(p[1] - q[1]) + abs(p[2] - q[2]) for q in unstable_set)
+        margin_rows.append({
+            "threshold": float(tvals[p[0]]),
+            "cap_scale": float(cvals[p[1]]),
+            "jitter": float(jvals[p[2]]),
+            "winner": str(stable_points[p]),
+            "boundary_manhattan_margin": int(dmin),
+        })
+    component_margin_rows = []
+    for comp in components:
+        crows = comp["rows"]
+        vals = np.array([
+            int(next(
+                mr["boundary_manhattan_margin"] for mr in margin_rows
+                if float(mr["threshold"]) == float(rr["threshold"])
+                and float(mr["cap_scale"]) == float(rr["cap_scale"])
+                and float(mr["jitter"]) == float(rr["jitter"])
+            ))
+            for rr in crows
+        ], dtype=float) if crows else np.array([], dtype=float)
+        component_margin_rows.append({
+            "dominant_winner": str(comp["dominant_winner"]),
+            "size": int(comp["size"]),
+            "boundary_margin_q05_q50_q95": [
+                float(np.quantile(vals, 0.05)) if vals.size else 0.0,
+                float(np.quantile(vals, 0.50)) if vals.size else 0.0,
+                float(np.quantile(vals, 0.95)) if vals.size else 0.0,
+            ],
+            "boundary_margin_min": float(np.min(vals)) if vals.size else 0.0,
+            "boundary_margin_max": float(np.max(vals)) if vals.size else 0.0,
+        })
+    ur_numerical_stress_policy_stability_boundary_margin_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_POLICY_STABILITY_BOUNDARY_MARGIN",
+        "distance_metric": "manhattan_on_threshold_cap_jitter_grid",
+        "rows": sorted(margin_rows, key=lambda r: (r["threshold"], r["cap_scale"], r["jitter"])),
+        "num_stable_rows": int(len(margin_rows)),
+        "component_margin_rows": component_margin_rows,
+    }
+    # Weighted boundary-risk score: combine winner confidence, entropy,
+    # and boundary margin into one operational risk index (lower is better).
+    risk_rows = []
+    max_margin = max([int(r["boundary_manhattan_margin"]) for r in margin_rows], default=1)
+    margin_scale = float(max(1, max_margin))
+    row_index = {(float(r["threshold"]), float(r["cap_scale"]), float(r["jitter"])): r for r in margin_rows}
+    for jr in joint_rows:
+        key = (float(jr["threshold"]), float(jr["cap_scale"]), float(jr["jitter"]))
+        mr = row_index.get(key)
+        if mr is None:
+            margin_norm = 0.0
+            margin_raw = 0
+        else:
+            margin_raw = int(mr["boundary_manhattan_margin"])
+            margin_norm = float(margin_raw / margin_scale)
+        win_freq = float(jr["winner_frequency"])
+        ent = float(jr["winner_entropy_norm"])
+        risk = float((1.0 - win_freq) * 0.50 + ent * 0.30 + (1.0 - margin_norm) * 0.20)
+        risk_rows.append({
+            "threshold": float(jr["threshold"]),
+            "cap_scale": float(jr["cap_scale"]),
+            "jitter": float(jr["jitter"]),
+            "winner": str(jr["winner"]),
+            "winner_frequency": win_freq,
+            "winner_entropy_norm": ent,
+            "boundary_manhattan_margin": int(margin_raw),
+            "boundary_margin_norm": margin_norm,
+            "weighted_boundary_risk_score": risk,
+        })
+    risk_rows_sorted = sorted(risk_rows, key=lambda r: (r["weighted_boundary_risk_score"], -r["winner_frequency"], r["winner_entropy_norm"], -r["boundary_manhattan_margin"], r["threshold"], r["cap_scale"], r["jitter"]))
+    best_corridor_rows = [r for r in risk_rows_sorted if r["winner"] != "none"][:8]
+    ur_numerical_stress_policy_weighted_boundary_risk_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_POLICY_WEIGHTED_BOUNDARY_RISK",
+        "risk_definition": "0p50*(1-winner_frequency)+0p30*winner_entropy_norm+0p20*(1-boundary_margin_norm)",
+        "margin_normalization_divisor": margin_scale,
+        "rows": risk_rows_sorted,
+        "best_corridor_rows": best_corridor_rows,
+        "best_corridor_winner_set": sorted({str(r["winner"]) for r in best_corridor_rows}),
+    }
+    # Sensitivity sweep over risk weights:
+    # test winner-set robustness against reasonable weight choices.
+    weight_grid = [
+        {"wf": 0.50, "ent": 0.30, "margin": 0.20},
+        {"wf": 0.60, "ent": 0.25, "margin": 0.15},
+        {"wf": 0.45, "ent": 0.35, "margin": 0.20},
+        {"wf": 0.40, "ent": 0.30, "margin": 0.30},
+        {"wf": 0.55, "ent": 0.20, "margin": 0.25},
+    ]
+    risk_weight_rows = []
+    winner_sets = []
+    for wg in weight_grid:
+        rw = []
+        for rr in risk_rows:
+            risk_v = float(
+                wg["wf"] * (1.0 - float(rr["winner_frequency"])) +
+                wg["ent"] * float(rr["winner_entropy_norm"]) +
+                wg["margin"] * (1.0 - float(rr["boundary_margin_norm"]))
+            )
+            rw.append({**rr, "weighted_boundary_risk_score": risk_v})
+        rw_sorted = sorted(
+            rw,
+            key=lambda r: (
+                r["weighted_boundary_risk_score"],
+                -r["winner_frequency"],
+                r["winner_entropy_norm"],
+                -r["boundary_manhattan_margin"],
+                r["threshold"], r["cap_scale"], r["jitter"]
+            )
+        )
+        corridor = [r for r in rw_sorted if r["winner"] != "none"][:8]
+        wset = sorted({str(r["winner"]) for r in corridor})
+        winner_sets.append(tuple(wset))
+        risk_weight_rows.append({
+            "weights": wg,
+            "best_corridor_winner_set": wset,
+            "best_corridor_rows": corridor,
+            "best_cell_score": float(corridor[0]["weighted_boundary_risk_score"]) if corridor else 1.0,
+        })
+    winner_set_stable = bool(len(set(winner_sets)) <= 1)
+    ur_numerical_stress_policy_weighted_boundary_risk_sensitivity_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_POLICY_WEIGHTED_BOUNDARY_RISK_SENSITIVITY",
+        "rows": risk_weight_rows,
+        "winner_set_stable_over_weight_grid": winner_set_stable,
+    }
+    # Bayesian-like posterior over risk weights (Dirichlet prior) for winner-set
+    # optimality probability under weighted boundary-risk objective.
+    dirichlet_alpha = [5.0, 3.0, 2.0]  # prior emphasizing confidence term
+    n_post = 512
+    post_rng = np.random.default_rng(975159)
+    winner_set_counts = {}
+    winner_cell_counts = {rn: 0 for rn in ("base_budget_policy", "class_adaptive_fallback", "robust_winner_only", "none")}
+    for _ in range(n_post):
+        w = post_rng.dirichlet(np.array(dirichlet_alpha, dtype=float))
+        rows_post = []
+        for rr in risk_rows:
+            risk_v = float(
+                w[0] * (1.0 - float(rr["winner_frequency"])) +
+                w[1] * float(rr["winner_entropy_norm"]) +
+                w[2] * (1.0 - float(rr["boundary_margin_norm"]))
+            )
+            rows_post.append({**rr, "weighted_boundary_risk_score": risk_v})
+        rows_post = sorted(
+            rows_post,
+            key=lambda r: (
+                r["weighted_boundary_risk_score"],
+                -r["winner_frequency"],
+                r["winner_entropy_norm"],
+                -r["boundary_manhattan_margin"],
+                r["threshold"], r["cap_scale"], r["jitter"]
+            )
+        )
+        corridor = [r for r in rows_post if r["winner"] != "none"][:8]
+        wset = tuple(sorted({str(r["winner"]) for r in corridor}))
+        winner_set_counts[wset] = winner_set_counts.get(wset, 0) + 1
+        best_cell_winner = str(rows_post[0]["winner"]) if rows_post else "none"
+        winner_cell_counts[best_cell_winner] = winner_cell_counts.get(best_cell_winner, 0) + 1
+    posterior_rows = []
+    for wset, cnt in sorted(winner_set_counts.items(), key=lambda kv: (-kv[1], kv[0])):
+        posterior_rows.append({
+            "winner_set": list(wset),
+            "count": int(cnt),
+            "posterior_probability": float(cnt / n_post),
+            "posterior_probability_ci95_jeffreys": jeffreys_interval_from_successes(int(cnt), int(n_post)),
+        })
+    ur_numerical_stress_policy_weighted_boundary_risk_bayesian_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_POLICY_WEIGHTED_BOUNDARY_RISK_BAYESIAN",
+        "dirichlet_alpha": dirichlet_alpha,
+        "posterior_sample_size": int(n_post),
+        "winner_set_posterior_rows": posterior_rows,
+        "most_probable_winner_set": posterior_rows[0]["winner_set"] if posterior_rows else [],
+        "most_probable_winner_set_probability": posterior_rows[0]["posterior_probability"] if posterior_rows else 0.0,
+        "best_cell_winner_posterior_counts": winner_cell_counts,
+    }
+    # Posterior predictive stress-check:
+    # sample weights from posterior prior proxy and apply stress perturbations;
+    # estimate P(winner-set remains optimal).
+    pp_n = 256
+    pp_rng = np.random.default_rng(975160)
+    base_wset = tuple(sorted({str(x) for x in ur_numerical_stress_policy_weighted_boundary_risk_bayesian_precursor["most_probable_winner_set"]}))
+    pp_rows = []
+    for cap_scale in cap_scale_grid:
+        for jitter in jitter_grid:
+            stay = 0
+            valid = 0
+            for _ in range(pp_n):
+                w = pp_rng.dirichlet(np.array(dirichlet_alpha, dtype=float))
+                rows_pp = []
+                for rr in risk_rows:
+                    risk_v = float(
+                        w[0] * (1.0 - float(rr["winner_frequency"])) +
+                        w[1] * float(rr["winner_entropy_norm"]) +
+                        w[2] * (1.0 - float(rr["boundary_margin_norm"]))
+                    )
+                    # small predictive stress proxy on risk
+                    risk_v = float(risk_v * (1.0 + 0.25 * abs(float(cap_scale) - 1.0) + 0.50 * float(jitter)))
+                    rows_pp.append({**rr, "weighted_boundary_risk_score": risk_v})
+                rows_pp = sorted(
+                    rows_pp,
+                    key=lambda r: (
+                        r["weighted_boundary_risk_score"],
+                        -r["winner_frequency"],
+                        r["winner_entropy_norm"],
+                        -r["boundary_manhattan_margin"],
+                        r["threshold"], r["cap_scale"], r["jitter"]
+                    )
+                )
+                corridor = [r for r in rows_pp if r["winner"] != "none"][:8]
+                if not corridor:
+                    continue
+                valid += 1
+                wset = tuple(sorted({str(r["winner"]) for r in corridor}))
+                if wset == base_wset:
+                    stay += 1
+            p_stay = float(stay / max(1, valid))
+            pp_rows.append({
+                "cap_scale": float(cap_scale),
+                "jitter": float(jitter),
+                "posterior_samples": int(pp_n),
+                "valid_samples": int(valid),
+                "stay_count": int(stay),
+                "p_winner_set_stays_optimal": p_stay,
+                "p_winner_set_stays_optimal_ci95_jeffreys": jeffreys_interval_from_successes(int(stay), int(max(1, valid))),
+            })
+    ur_numerical_stress_policy_weighted_boundary_risk_posterior_predictive_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_POLICY_WEIGHTED_BOUNDARY_RISK_POSTERIOR_PREDICTIVE",
+        "reference_winner_set": list(base_wset),
+        "rows": pp_rows,
+        "global_p_stays_optimal_mean": float(np.mean(np.array([r["p_winner_set_stays_optimal"] for r in pp_rows], dtype=float))) if pp_rows else 0.0,
+    }
+    # Decision gate from posterior-predictive robustness.
+    pp_lb_threshold = 0.80
+    critical_rows = []
+    for rr in pp_rows:
+        lb = float(rr["p_winner_set_stays_optimal_ci95_jeffreys"]["lower"])
+        critical_rows.append({
+            "cap_scale": float(rr["cap_scale"]),
+            "jitter": float(rr["jitter"]),
+            "p_stay": float(rr["p_winner_set_stays_optimal"]),
+            "p_stay_lb95": lb,
+            "criterion_lb95_ge_threshold": bool(lb >= pp_lb_threshold),
+        })
+    all_pass = bool(all(r["criterion_lb95_ge_threshold"] for r in critical_rows)) if critical_rows else False
+    ur_numerical_stress_policy_posterior_predictive_decision_gate_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_POLICY_POSTERIOR_PREDICTIVE_DECISION_GATE",
+        "rule": "GO_if_all_critical_cells_lb95_ge_threshold_else_HOLD",
+        "lb95_threshold": float(pp_lb_threshold),
+        "rows": critical_rows,
+        "decision": "GO" if all_pass else "HOLD_AND_RECALIBRATE",
+        "ready_for_next_costlier_policy_step": bool(all_pass),
+    }
+    # Calibration sweep for LB95 threshold: GO-rate vs threshold.
+    gate_threshold_grid = [0.70, 0.75, 0.80, 0.85, 0.90, 0.95]
+    gate_rows = []
+    for th in gate_threshold_grid:
+        pass_flags = [float(r["p_stay_lb95"]) >= float(th) for r in critical_rows]
+        pass_count = int(sum(1 for x in pass_flags if x))
+        total = int(len(pass_flags))
+        go = bool(all(pass_flags)) if pass_flags else False
+        gate_rows.append({
+            "lb95_threshold": float(th),
+            "critical_cells_pass_count": pass_count,
+            "critical_cells_total": total,
+            "critical_cells_pass_rate": float(pass_count / max(1, total)),
+            "decision_go": go,
+        })
+    go_rate = float(np.mean(np.array([1.0 if r["decision_go"] else 0.0 for r in gate_rows], dtype=float))) if gate_rows else 0.0
+    ur_numerical_stress_policy_posterior_predictive_gate_calibration_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_POLICY_POSTERIOR_PREDICTIVE_GATE_CALIBRATION",
+        "threshold_grid": gate_threshold_grid,
+        "rows": gate_rows,
+        "go_rate_over_threshold_grid": go_rate,
+        "recommended_threshold_max_go_with_min_pass_rate_0p90": (
+            float(max([r["lb95_threshold"] for r in gate_rows if r["critical_cells_pass_rate"] >= 0.90], default=0.70))
+        ),
+    }
+    # Cost-aware gate calibration:
+    # optimize threshold by utility = go_rate - lambda * expected_runtime_uplift.
+    base_runtime_ref = float(np.mean(np.array([float(r["runtime_total_seconds"]) for r in policy_rows_sorted], dtype=float))) if policy_rows_sorted else 1.0
+    lambda_grid = [0.0, 0.1, 0.2, 0.4]
+    cost_rows = []
+    for lam in lambda_grid:
+        best_u = -1e9
+        best_row = None
+        for gr in gate_rows:
+            th = float(gr["lb95_threshold"])
+            # proxy uplift: stricter thresholds imply more conservative (and typically costlier) policy posture
+            runtime_uplift = float((th - 0.70) / 0.25)
+            go_rate_local = 1.0 if bool(gr["decision_go"]) else 0.0
+            utility = float(go_rate_local - float(lam) * runtime_uplift)
+            row = {
+                "lambda_cost": float(lam),
+                "lb95_threshold": th,
+                "go_rate_local": go_rate_local,
+                "runtime_uplift_proxy": runtime_uplift,
+                "utility": utility,
+            }
+            if utility > best_u:
+                best_u = utility
+                best_row = row
+            cost_rows.append(row)
+        if best_row is not None:
+            best_row["selected_for_lambda"] = True
+    selected_rows = []
+    for lam in lambda_grid:
+        rows_lam = [r for r in cost_rows if float(r["lambda_cost"]) == float(lam)]
+        if rows_lam:
+            selected_rows.append(sorted(rows_lam, key=lambda r: (-r["utility"], r["lb95_threshold"]))[0])
+    ur_numerical_stress_policy_posterior_predictive_gate_cost_calibration_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_POLICY_POSTERIOR_PREDICTIVE_GATE_COST_CALIBRATION",
+        "utility_definition": "go_rate_local - lambda_cost*runtime_uplift_proxy",
+        "base_runtime_reference_seconds": base_runtime_ref,
+        "lambda_grid": lambda_grid,
+        "rows": cost_rows,
+        "selected_rows": selected_rows,
+    }
+    # Frontier utility panel:
+    # construct Pareto front in (false_hold_risk, false_go_risk, runtime_uplift).
+    frontier_rows = []
+    for rr in gate_rows:
+        th = float(rr["lb95_threshold"])
+        pass_rate = float(rr["critical_cells_pass_rate"])
+        go = bool(rr["decision_go"])
+        false_hold_risk = float(1.0 - pass_rate)
+        false_go_risk = float(0.0 if go else 1.0)
+        runtime_uplift_proxy = float((th - 0.70) / 0.25)
+        frontier_rows.append({
+            "lb95_threshold": th,
+            "false_hold_risk": false_hold_risk,
+            "false_go_risk": false_go_risk,
+            "runtime_uplift_proxy": runtime_uplift_proxy,
+        })
+    frontier_tagged = []
+    for i, ri in enumerate(frontier_rows):
+        dominated = False
+        for j, rj in enumerate(frontier_rows):
+            if i == j:
+                continue
+            nonworse = (
+                float(rj["false_hold_risk"]) <= float(ri["false_hold_risk"]) and
+                float(rj["false_go_risk"]) <= float(ri["false_go_risk"]) and
+                float(rj["runtime_uplift_proxy"]) <= float(ri["runtime_uplift_proxy"])
+            )
+            strict = (
+                float(rj["false_hold_risk"]) < float(ri["false_hold_risk"]) or
+                float(rj["false_go_risk"]) < float(ri["false_go_risk"]) or
+                float(rj["runtime_uplift_proxy"]) < float(ri["runtime_uplift_proxy"])
+            )
+            if nonworse and strict:
+                dominated = True
+                break
+        frontier_tagged.append({**ri, "pareto_frontier": bool(not dominated)})
+    frontier_tagged = sorted(frontier_tagged, key=lambda r: (not bool(r["pareto_frontier"]), r["false_hold_risk"], r["false_go_risk"], r["runtime_uplift_proxy"], r["lb95_threshold"]))
+    ur_numerical_stress_policy_gate_frontier_utility_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_POLICY_GATE_FRONTIER_UTILITY",
+        "axes": ["false_hold_risk", "false_go_risk", "runtime_uplift_proxy"],
+        "rows": frontier_tagged,
+        "pareto_frontier_thresholds": [float(r["lb95_threshold"]) for r in frontier_tagged if bool(r["pareto_frontier"])],
+        "pareto_frontier_count": int(sum(1 for r in frontier_tagged if bool(r["pareto_frontier"]))),
+    }
+    # Pareto-knee detector over frontier utility panel:
+    # pick frontier point closest to ideal point (0,0,0).
+    frontier_only = [r for r in frontier_tagged if bool(r["pareto_frontier"])]
+    knee_rows = []
+    for r in frontier_only:
+        d2 = (
+            float(r["false_hold_risk"]) ** 2 +
+            float(r["false_go_risk"]) ** 2 +
+            float(r["runtime_uplift_proxy"]) ** 2
+        )
+        knee_rows.append({**r, "ideal_point_distance_l2": float(np.sqrt(d2))})
+    knee_rows = sorted(knee_rows, key=lambda r: (r["ideal_point_distance_l2"], r["lb95_threshold"]))
+    recommended_knee_threshold = float(knee_rows[0]["lb95_threshold"]) if knee_rows else 0.70
+    ur_numerical_stress_policy_gate_frontier_knee_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_POLICY_GATE_FRONTIER_KNEE",
+        "ideal_point": {"false_hold_risk": 0.0, "false_go_risk": 0.0, "runtime_uplift_proxy": 0.0},
+        "rows": knee_rows,
+        "recommended_knee_threshold": recommended_knee_threshold,
+    }
+    # Knee stability bootstrap over frontier utility points.
+    knee_boot_n = 512
+    knee_rng = np.random.default_rng(975166)
+    knee_count = {float(t): 0 for t in sorted({float(r["lb95_threshold"]) for r in frontier_tagged})}
+    for _ in range(knee_boot_n):
+        idx = knee_rng.integers(0, len(frontier_tagged), size=len(frontier_tagged))
+        sample = [frontier_tagged[int(i)] for i in idx]
+        # aggregate duplicates by threshold with mean coordinates
+        by_th = {}
+        for rr in sample:
+            th = float(rr["lb95_threshold"])
+            if th not in by_th:
+                by_th[th] = {"fh": [], "fg": [], "ru": []}
+            by_th[th]["fh"].append(float(rr["false_hold_risk"]))
+            by_th[th]["fg"].append(float(rr["false_go_risk"]))
+            by_th[th]["ru"].append(float(rr["runtime_uplift_proxy"]))
+        rows_bs = []
+        for th, vals in by_th.items():
+            rows_bs.append({
+                "lb95_threshold": float(th),
+                "false_hold_risk": float(np.mean(np.array(vals["fh"], dtype=float))),
+                "false_go_risk": float(np.mean(np.array(vals["fg"], dtype=float))),
+                "runtime_uplift_proxy": float(np.mean(np.array(vals["ru"], dtype=float))),
+            })
+        # pareto on bootstrap sample
+        rows_front = []
+        for i, ri in enumerate(rows_bs):
+            dominated = False
+            for j, rj in enumerate(rows_bs):
+                if i == j:
+                    continue
+                nonworse = (
+                    float(rj["false_hold_risk"]) <= float(ri["false_hold_risk"]) and
+                    float(rj["false_go_risk"]) <= float(ri["false_go_risk"]) and
+                    float(rj["runtime_uplift_proxy"]) <= float(ri["runtime_uplift_proxy"])
+                )
+                strict = (
+                    float(rj["false_hold_risk"]) < float(ri["false_hold_risk"]) or
+                    float(rj["false_go_risk"]) < float(ri["false_go_risk"]) or
+                    float(rj["runtime_uplift_proxy"]) < float(ri["runtime_uplift_proxy"])
+                )
+                if nonworse and strict:
+                    dominated = True
+                    break
+            if not dominated:
+                d2 = float(ri["false_hold_risk"] ** 2 + ri["false_go_risk"] ** 2 + ri["runtime_uplift_proxy"] ** 2)
+                rows_front.append({**ri, "ideal_point_distance_l2": float(np.sqrt(d2))})
+        if not rows_front:
+            continue
+        knee = sorted(rows_front, key=lambda r: (r["ideal_point_distance_l2"], r["lb95_threshold"]))[0]
+        knee_count[float(knee["lb95_threshold"])] += 1
+    knee_stability_rows = []
+    for th in sorted(knee_count.keys()):
+        cnt = int(knee_count[th])
+        knee_stability_rows.append({
+            "lb95_threshold": float(th),
+            "knee_selection_count": cnt,
+            "knee_selection_frequency": float(cnt / knee_boot_n),
+            "knee_selection_frequency_ci95_jeffreys": jeffreys_interval_from_successes(cnt, knee_boot_n),
+        })
+    knee_stability_rows = sorted(knee_stability_rows, key=lambda r: (-r["knee_selection_frequency"], r["lb95_threshold"]))
+    ur_numerical_stress_policy_gate_frontier_knee_stability_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_POLICY_GATE_FRONTIER_KNEE_STABILITY",
+        "bootstrap_size": int(knee_boot_n),
+        "rows": knee_stability_rows,
+        "most_stable_knee_threshold": float(knee_stability_rows[0]["lb95_threshold"]) if knee_stability_rows else 0.70,
+    }
+    # Cross-seed knee-stability panel: detect seed sensitivity.
+    knee_seed_grid = [975166, 975167, 975168, 975169]
+    knee_seed_rows = []
+    for s in knee_seed_grid:
+        rng = np.random.default_rng(int(s))
+        local_count = {float(t): 0 for t in sorted({float(r["lb95_threshold"]) for r in frontier_tagged})}
+        for _ in range(knee_boot_n):
+            idx = rng.integers(0, len(frontier_tagged), size=len(frontier_tagged))
+            sample = [frontier_tagged[int(i)] for i in idx]
+            by_th = {}
+            for rr in sample:
+                th = float(rr["lb95_threshold"])
+                if th not in by_th:
+                    by_th[th] = {"fh": [], "fg": [], "ru": []}
+                by_th[th]["fh"].append(float(rr["false_hold_risk"]))
+                by_th[th]["fg"].append(float(rr["false_go_risk"]))
+                by_th[th]["ru"].append(float(rr["runtime_uplift_proxy"]))
+            rows_bs = []
+            for th, vals in by_th.items():
+                rows_bs.append({
+                    "lb95_threshold": float(th),
+                    "false_hold_risk": float(np.mean(np.array(vals["fh"], dtype=float))),
+                    "false_go_risk": float(np.mean(np.array(vals["fg"], dtype=float))),
+                    "runtime_uplift_proxy": float(np.mean(np.array(vals["ru"], dtype=float))),
+                })
+            rows_front = []
+            for i, ri in enumerate(rows_bs):
+                dominated = False
+                for j, rj in enumerate(rows_bs):
+                    if i == j:
+                        continue
+                    nonworse = (
+                        float(rj["false_hold_risk"]) <= float(ri["false_hold_risk"]) and
+                        float(rj["false_go_risk"]) <= float(ri["false_go_risk"]) and
+                        float(rj["runtime_uplift_proxy"]) <= float(ri["runtime_uplift_proxy"])
+                    )
+                    strict = (
+                        float(rj["false_hold_risk"]) < float(ri["false_hold_risk"]) or
+                        float(rj["false_go_risk"]) < float(ri["false_go_risk"]) or
+                        float(rj["runtime_uplift_proxy"]) < float(ri["runtime_uplift_proxy"])
+                    )
+                    if nonworse and strict:
+                        dominated = True
+                        break
+                if not dominated:
+                    d2 = float(ri["false_hold_risk"] ** 2 + ri["false_go_risk"] ** 2 + ri["runtime_uplift_proxy"] ** 2)
+                    rows_front.append({**ri, "ideal_point_distance_l2": float(np.sqrt(d2))})
+            if rows_front:
+                knee = sorted(rows_front, key=lambda r: (r["ideal_point_distance_l2"], r["lb95_threshold"]))[0]
+                local_count[float(knee["lb95_threshold"])] += 1
+        local_rows = []
+        for th in sorted(local_count.keys()):
+            cnt = int(local_count[th])
+            local_rows.append({"lb95_threshold": float(th), "knee_selection_frequency": float(cnt / knee_boot_n)})
+        best_th = sorted(local_rows, key=lambda r: (-r["knee_selection_frequency"], r["lb95_threshold"]))[0]["lb95_threshold"] if local_rows else 0.70
+        knee_seed_rows.append({"seed": int(s), "most_stable_knee_threshold": float(best_th), "rows": local_rows})
+    freq_by_threshold = {}
+    for sr in knee_seed_rows:
+        for rr in sr["rows"]:
+            th = float(rr["lb95_threshold"])
+            freq_by_threshold.setdefault(th, []).append(float(rr["knee_selection_frequency"]))
+    span_rows = []
+    for th, vals in sorted(freq_by_threshold.items()):
+        arr = np.array(vals, dtype=float)
+        span_rows.append({
+            "lb95_threshold": float(th),
+            "knee_selection_frequency_span_over_seeds": float(np.max(arr) - np.min(arr)),
+            "knee_selection_frequency_mean_over_seeds": float(np.mean(arr)),
+        })
+    ur_numerical_stress_policy_gate_frontier_knee_cross_seed_stability_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_POLICY_GATE_FRONTIER_KNEE_CROSS_SEED_STABILITY",
+        "seed_grid": knee_seed_grid,
+        "rows": knee_seed_rows,
+        "span_rows": span_rows,
+        "max_span_over_thresholds": float(max([r["knee_selection_frequency_span_over_seeds"] for r in span_rows], default=0.0)),
+    }
     improved_classes = sorted({str(r["class"]) for r in alt_rows if int(r["warning_count_delta_alt_minus_original"]) < 0})
     stress_replay_rows = []
     for ch in improved_classes:
@@ -4159,7 +4991,7 @@ def main() -> None:
     }
 
     payload = {
-        "schema_version": "p2025_s975_v151",
+        "schema_version": "p2025_s975_v168",
         "produced_by": Path(__file__).name,
         "timestamp_utc": TS,
         "status": "OPEN_OBSTRUCTION_WITH_TRACE",
@@ -4373,6 +5205,23 @@ def main() -> None:
         "ur_numerical_stress_policy_budget_fragility_by_class_precursor": ur_numerical_stress_policy_budget_fragility_by_class_precursor,
         "ur_numerical_stress_policy_class_adaptive_fallback_precursor": ur_numerical_stress_policy_class_adaptive_fallback_precursor,
         "ur_numerical_stress_policy_ablation_precursor": ur_numerical_stress_policy_ablation_precursor,
+        "ur_numerical_stress_policy_cross_class_constrained_ablation_precursor": ur_numerical_stress_policy_cross_class_constrained_ablation_precursor,
+        "ur_numerical_stress_policy_cross_class_constrained_bootstrap_dominance_precursor": ur_numerical_stress_policy_cross_class_constrained_bootstrap_dominance_precursor,
+        "ur_numerical_stress_policy_cross_class_threshold_sweep_precursor": ur_numerical_stress_policy_cross_class_threshold_sweep_precursor,
+        "ur_numerical_stress_policy_joint_stress_map_precursor": ur_numerical_stress_policy_joint_stress_map_precursor,
+        "ur_numerical_stress_policy_stability_topology_precursor": ur_numerical_stress_policy_stability_topology_precursor,
+        "ur_numerical_stress_policy_stability_boundary_margin_precursor": ur_numerical_stress_policy_stability_boundary_margin_precursor,
+        "ur_numerical_stress_policy_weighted_boundary_risk_precursor": ur_numerical_stress_policy_weighted_boundary_risk_precursor,
+        "ur_numerical_stress_policy_weighted_boundary_risk_sensitivity_precursor": ur_numerical_stress_policy_weighted_boundary_risk_sensitivity_precursor,
+        "ur_numerical_stress_policy_weighted_boundary_risk_bayesian_precursor": ur_numerical_stress_policy_weighted_boundary_risk_bayesian_precursor,
+        "ur_numerical_stress_policy_weighted_boundary_risk_posterior_predictive_precursor": ur_numerical_stress_policy_weighted_boundary_risk_posterior_predictive_precursor,
+        "ur_numerical_stress_policy_posterior_predictive_decision_gate_precursor": ur_numerical_stress_policy_posterior_predictive_decision_gate_precursor,
+        "ur_numerical_stress_policy_posterior_predictive_gate_calibration_precursor": ur_numerical_stress_policy_posterior_predictive_gate_calibration_precursor,
+        "ur_numerical_stress_policy_posterior_predictive_gate_cost_calibration_precursor": ur_numerical_stress_policy_posterior_predictive_gate_cost_calibration_precursor,
+        "ur_numerical_stress_policy_gate_frontier_utility_precursor": ur_numerical_stress_policy_gate_frontier_utility_precursor,
+        "ur_numerical_stress_policy_gate_frontier_knee_precursor": ur_numerical_stress_policy_gate_frontier_knee_precursor,
+        "ur_numerical_stress_policy_gate_frontier_knee_stability_precursor": ur_numerical_stress_policy_gate_frontier_knee_stability_precursor,
+        "ur_numerical_stress_policy_gate_frontier_knee_cross_seed_stability_precursor": ur_numerical_stress_policy_gate_frontier_knee_cross_seed_stability_precursor,
         "ur_numerical_stress_alt_replay_trend_precursor": ur_numerical_stress_alt_replay_trend_precursor,
         "ur_numerical_stress_alt_dominance_map_precursor": ur_numerical_stress_alt_dominance_map_precursor,
         "ur_numerical_stress_alt_decision_gate_precursor": ur_numerical_stress_alt_decision_gate_precursor,
