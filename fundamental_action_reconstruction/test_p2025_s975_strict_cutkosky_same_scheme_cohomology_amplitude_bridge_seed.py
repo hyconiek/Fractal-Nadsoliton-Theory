@@ -14,7 +14,7 @@ OUT_QUALITY_CSV = ROOT / "generated" / "p2025_s975_strict_cutkosky_same_scheme_c
 def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     subprocess.run([sys.executable, str(SCRIPT)], check=True)
     data = json.loads(OUT.read_text(encoding="utf-8"))
-    assert data["schema_version"] == "p2025_s975_v144"
+    assert data["schema_version"] == "p2025_s975_v151"
     assert data["status"] == "OPEN_OBSTRUCTION_WITH_TRACE"
     assert all(data["gatekeeper_checks"].values())
     assert len(data["toe_closure_gaps_7tasks"]) == 7
@@ -545,6 +545,130 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
         assert rr["warning_total"] >= 0
         assert rr["delta_l2_span"] >= 0.0
         assert rr["runtime_total_seconds"] > 0.0
+    assert "ur_numerical_stress_policy_pareto_front_precursor" in data
+    unsp_pf = data["ur_numerical_stress_policy_pareto_front_precursor"]
+    assert unsp_pf["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsp_pf["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_POLICY_PARETO_FRONT"
+    assert unsp_pf["axes"] == ["warning_total", "delta_l2_span", "runtime_total_seconds"]
+    assert len(unsp_pf["rows"]) == 4
+    assert 1 <= unsp_pf["pareto_frontier_count"] <= 4
+    assert len(unsp_pf["pareto_frontier_policies"]) == unsp_pf["pareto_frontier_count"]
+    for rr in unsp_pf["rows"]:
+        assert rr["policy"] in {"always_u1", "always_u2", "always_u4", "class_conditional"}
+        assert rr["warning_total"] >= 0
+        assert rr["delta_l2_span"] >= 0.0
+        assert rr["runtime_total_seconds"] > 0.0
+        assert isinstance(rr["pareto_frontier"], bool)
+        assert rr["dominated_by_policy"] in {"none", "always_u1", "always_u2", "always_u4", "class_conditional"}
+        assert rr["dominance_margin"]["warning_total"] >= 0.0
+        assert rr["dominance_margin"]["delta_l2_span"] >= 0.0
+        assert rr["dominance_margin"]["runtime_total_seconds"] >= 0.0
+    assert "ur_numerical_stress_policy_pareto_stability_precursor" in data
+    unsp_ps = data["ur_numerical_stress_policy_pareto_stability_precursor"]
+    assert unsp_ps["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsp_ps["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_POLICY_PARETO_STABILITY"
+    assert unsp_ps["bootstrap_size"] == 512
+    assert unsp_ps["resampling_rule"] == "iid_row_resample_with_replacement_over_fullgrid_tri_rows"
+    assert len(unsp_ps["rows"]) == 4
+    assert unsp_ps["most_stable_frontier_policy"] in {"always_u1", "always_u2", "always_u4", "class_conditional"}
+    for rr in unsp_ps["rows"]:
+        assert rr["policy"] in {"always_u1", "always_u2", "always_u4", "class_conditional"}
+        assert 0.0 <= rr["pareto_front_frequency"] <= 1.0
+        assert 0.0 <= rr["pareto_front_frequency_ci95_jeffreys"]["lower"] <= rr["pareto_front_frequency_ci95_jeffreys"]["upper"] <= 1.0
+        assert 0 <= rr["bootstrap_successes"] <= rr["bootstrap_trials"]
+        assert rr["bootstrap_trials"] == 512
+    assert "ur_numerical_stress_policy_budgeted_selection_precursor" in data
+    unsp_bs = data["ur_numerical_stress_policy_budgeted_selection_precursor"]
+    assert unsp_bs["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsp_bs["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_POLICY_BUDGETED_SELECTION"
+    assert unsp_bs["selection_rule"] == "argmin_warning_then_delta_l2_then_runtime_under_runtime_cap"
+    assert unsp_bs["runtime_budget_quantiles"] == [0.25, 0.5, 0.75, 1.0]
+    assert len(unsp_bs["rows"]) == 4
+    assert len(unsp_bs["budget_vote_rows"]) == 4
+    assert unsp_bs["budget_recommended_policy"] in {"always_u1", "always_u2", "always_u4", "class_conditional"}
+    for rr in unsp_bs["rows"]:
+        assert rr["runtime_budget_quantile"] in {0.25, 0.5, 0.75, 1.0}
+        assert rr["runtime_budget_cap_seconds"] >= 0.0
+        assert rr["eligible_policy_count"] >= 0
+        assert rr["selected_policy"] in {"none", "always_u1", "always_u2", "always_u4", "class_conditional"}
+        assert rr["selected_warning_total"] >= 0
+        assert rr["selected_delta_l2_span"] >= 0.0
+        assert rr["selected_runtime_total_seconds"] >= 0.0
+    for rr in unsp_bs["budget_vote_rows"]:
+        assert rr["policy"] in {"always_u1", "always_u2", "always_u4", "class_conditional"}
+        assert rr["wins_across_budgets"] >= 0
+    assert "ur_numerical_stress_policy_budget_fragility_precursor" in data
+    unsp_bf = data["ur_numerical_stress_policy_budget_fragility_precursor"]
+    assert unsp_bf["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsp_bf["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_POLICY_BUDGET_FRAGILITY"
+    assert unsp_bf["base_policy"] in {"always_u1", "always_u2", "always_u4", "class_conditional"}
+    assert unsp_bf["cap_scale_grid"] == [0.85, 1.0, 1.15]
+    assert unsp_bf["objective_jitter_grid"] == [0.0, 0.01, 0.02]
+    assert unsp_bf["bootstrap_size_per_cell"] == 256
+    assert len(unsp_bf["rows"]) == 9
+    assert 0 <= unsp_bf["global_flip_count_vs_base_policy"] <= unsp_bf["global_trials"]
+    assert 0.0 <= unsp_bf["global_flip_frequency_vs_base_policy"] <= 1.0
+    assert 0.0 <= unsp_bf["global_flip_frequency_ci95_jeffreys"]["lower"] <= unsp_bf["global_flip_frequency_ci95_jeffreys"]["upper"] <= 1.0
+    assert set(unsp_bf["policy_win_counter_global"].keys()) == {"always_u1", "always_u2", "always_u4", "class_conditional"}
+    for rr in unsp_bf["rows"]:
+        assert rr["runtime_cap_scale"] in {0.85, 1.0, 1.15}
+        assert rr["objective_jitter_frac"] in {0.0, 0.01, 0.02}
+        assert rr["bootstrap_size"] == 256
+        assert 0 <= rr["flip_count_vs_base_policy"] <= rr["local_trials"] <= 256
+        assert 0.0 <= rr["flip_frequency_vs_base_policy"] <= 1.0
+        assert set(rr["winner_counts"].keys()) == {"always_u1", "always_u2", "always_u4", "class_conditional"}
+    assert "ur_numerical_stress_policy_budget_fragility_by_class_precursor" in data
+    unsp_bfc = data["ur_numerical_stress_policy_budget_fragility_by_class_precursor"]
+    assert unsp_bfc["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsp_bfc["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_POLICY_BUDGET_FRAGILITY_BY_CLASS"
+    assert len(unsp_bfc["rows"]) == 3
+    for rr in unsp_bfc["rows"]:
+        assert rr["class"] in {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
+        assert rr["base_policy"] in {"always_u1", "always_u2", "always_u4", "class_conditional", "none"}
+        assert 0 <= rr["global_flip_count_vs_base_policy"] <= rr["global_trials"]
+        assert 0.0 <= rr["global_flip_frequency_vs_base_policy"] <= 1.0
+        assert 0.0 <= rr["global_flip_frequency_ci95_jeffreys"]["lower"] <= rr["global_flip_frequency_ci95_jeffreys"]["upper"] <= 1.0
+        assert set(rr["policy_win_counter_global"].keys()) == {"always_u1", "always_u2", "always_u4", "class_conditional"}
+    assert "ur_numerical_stress_policy_class_adaptive_fallback_precursor" in data
+    unsp_caf = data["ur_numerical_stress_policy_class_adaptive_fallback_precursor"]
+    assert unsp_caf["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsp_caf["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_POLICY_CLASS_ADAPTIVE_FALLBACK"
+    assert 0.0 <= unsp_caf["class_fragility_lb_threshold"] <= 1.0
+    assert set(unsp_caf["class_policy_map"].keys()) == {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
+    assert len(unsp_caf["rows"]) == 3
+    for rr in unsp_caf["rows"]:
+        assert rr["class"] in {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
+        assert 0.0 <= rr["fragility_flip_frequency_wilson_lb95_proxy"] <= 1.0
+        assert rr["base_policy"] in {"always_u1", "always_u2", "always_u4", "class_conditional", "none"}
+        assert rr["robust_winner_policy"] in {"always_u1", "always_u2", "always_u4", "class_conditional"}
+        assert isinstance(rr["use_fallback"], bool)
+        assert rr["selected_policy"] in {"always_u1", "always_u2", "always_u4", "class_conditional"}
+    assert unsp_caf["base_budget_policy"] in {"always_u1", "always_u2", "always_u4", "class_conditional"}
+    assert unsp_caf["adaptive_warning_total"] >= 0
+    assert unsp_caf["adaptive_delta_l2_span"] >= 0.0
+    assert unsp_caf["adaptive_runtime_total_seconds"] >= 0.0
+    assert "ur_numerical_stress_policy_ablation_precursor" in data
+    unsp_ab = data["ur_numerical_stress_policy_ablation_precursor"]
+    assert unsp_ab["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsp_ab["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_POLICY_ABLATION"
+    assert len(unsp_ab["rows"]) == 3
+    assert unsp_ab["best_regime_lexicographic"] in {"base_budget_policy", "class_adaptive_fallback", "robust_winner_only"}
+    for rr in unsp_ab["rows"]:
+        assert rr["regime"] in {"base_budget_policy", "class_adaptive_fallback", "robust_winner_only"}
+        assert set(rr["class_policy_map"].keys()) == {"gauge_gauge", "fermion_fermion", "scalar_scalar"}
+        assert rr["warning_total"] >= 0
+        assert rr["delta_l2_span"] >= 0.0
+        assert rr["runtime_total_seconds"] >= 0.0
+    assert len(unsp_ab["pairwise_dominance_rows"]) == 3
+    for rr in unsp_ab["pairwise_dominance_rows"]:
+        assert rr["regime_a"] in {"base_budget_policy", "class_adaptive_fallback", "robust_winner_only"}
+        assert rr["regime_b"] in {"base_budget_policy", "class_adaptive_fallback", "robust_winner_only"}
+        assert rr["regime_a"] != rr["regime_b"]
+        assert rr["bootstrap_size"] == 256
+        assert 0.0 <= rr["a_dominates_b_frequency"] <= 1.0
+        assert 0.0 <= rr["b_dominates_a_frequency"] <= 1.0
+        assert 0.0 <= rr["tie_or_incomparable_frequency"] <= 1.0
+        assert abs(rr["a_dominates_b_frequency"] + rr["b_dominates_a_frequency"] + rr["tie_or_incomparable_frequency"] - 1.0) < 1e-12
     assert "ur_numerical_stress_alt_replay_trend_precursor" in data
     unsart = data["ur_numerical_stress_alt_replay_trend_precursor"]
     assert unsart["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"

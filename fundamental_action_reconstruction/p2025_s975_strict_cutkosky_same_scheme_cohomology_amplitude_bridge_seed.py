@@ -1337,12 +1337,514 @@ def main() -> None:
             "runtime_total_seconds": float(np.sum(arr_rt)),
         })
     policy_rows_sorted = sorted(policy_rows, key=lambda r: (r["warning_total"], r["delta_l2_span"], r["runtime_total_seconds"], r["policy"]))
+    policy_pareto_rows = []
+    for i, ri in enumerate(policy_rows_sorted):
+        dominated = False
+        best_margin = {
+            "warning_total": 0.0,
+            "delta_l2_span": 0.0,
+            "runtime_total_seconds": 0.0,
+        }
+        dominator = "none"
+        for j, rj in enumerate(policy_rows_sorted):
+            if i == j:
+                continue
+            nonworse = (
+                float(rj["warning_total"]) <= float(ri["warning_total"]) and
+                float(rj["delta_l2_span"]) <= float(ri["delta_l2_span"]) and
+                float(rj["runtime_total_seconds"]) <= float(ri["runtime_total_seconds"])
+            )
+            strictly_better = (
+                float(rj["warning_total"]) < float(ri["warning_total"]) or
+                float(rj["delta_l2_span"]) < float(ri["delta_l2_span"]) or
+                float(rj["runtime_total_seconds"]) < float(ri["runtime_total_seconds"])
+            )
+            if nonworse and strictly_better:
+                dominated = True
+                margins = {
+                    "warning_total": float(ri["warning_total"]) - float(rj["warning_total"]),
+                    "delta_l2_span": float(ri["delta_l2_span"]) - float(rj["delta_l2_span"]),
+                    "runtime_total_seconds": float(ri["runtime_total_seconds"]) - float(rj["runtime_total_seconds"]),
+                }
+                current_score = sum(abs(float(v)) for v in margins.values())
+                best_score = sum(abs(float(v)) for v in best_margin.values())
+                if current_score >= best_score:
+                    best_margin = margins
+                    dominator = str(rj["policy"])
+        policy_pareto_rows.append({
+            "policy": str(ri["policy"]),
+            "warning_total": int(ri["warning_total"]),
+            "delta_l2_span": float(ri["delta_l2_span"]),
+            "runtime_total_seconds": float(ri["runtime_total_seconds"]),
+            "pareto_frontier": bool(not dominated),
+            "dominated_by_policy": dominator,
+            "dominance_margin": best_margin,
+        })
+    policy_pareto_rows_sorted = sorted(policy_pareto_rows, key=lambda r: (not bool(r["pareto_frontier"]), r["warning_total"], r["delta_l2_span"], r["runtime_total_seconds"], r["policy"]))
     ur_numerical_stress_policy_counterfactual_precursor = {
         "status": "OPEN_PRECURSOR_NOT_CLOSURE",
         "scope": "STRICT_TASK2_NUMERICAL_STRESS_POLICY_COUNTERFACTUAL",
         "ranking_key": "warning_total_then_delta_l2_span_then_runtime_total",
         "rows": policy_rows_sorted,
         "best_policy": policy_rows_sorted[0]["policy"] if policy_rows_sorted else "none",
+    }
+    ur_numerical_stress_policy_pareto_front_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_POLICY_PARETO_FRONT",
+        "axes": ["warning_total", "delta_l2_span", "runtime_total_seconds"],
+        "rows": policy_pareto_rows_sorted,
+        "pareto_frontier_policies": [str(r["policy"]) for r in policy_pareto_rows_sorted if bool(r["pareto_frontier"])],
+        "pareto_frontier_count": int(sum(1 for r in policy_pareto_rows_sorted if bool(r["pareto_frontier"]))),
+    }
+    # Bootstrap policy Pareto-front stability: resample full-grid rows and track
+    # frontier-membership frequency per policy under numerical stress replay noise.
+    policy_names = ["always_u1", "always_u2", "always_u4", "class_conditional"]
+    policy_boot_counts = {pn: 0 for pn in policy_names}
+    policy_boot_n = 512
+    policy_boot_rng = np.random.default_rng(975145)
+    if tri_rows:
+        for _ in range(policy_boot_n):
+            idx = policy_boot_rng.integers(0, len(tri_rows), size=len(tri_rows))
+            policy_boot_rows = []
+            for pname, pmap in policy_defs.items():
+                vals_warn = []
+                vals_d2 = []
+                vals_rt = []
+                for ii in idx:
+                    rr = tri_rows[int(ii)]
+                    ch = str(rr["class"])
+                    pick = pmap[ch]
+                    vals_warn.append(float(rr[f"{pick}_warning_count"]))
+                    vals_d2.append(float(rr[f"{pick}_delta_l2_vs_baseline"]))
+                    vals_rt.append(float(rr[f"{pick}_runtime_seconds"]))
+                arr_warn = np.array(vals_warn, dtype=float)
+                arr_d2 = np.array(vals_d2, dtype=float)
+                arr_rt = np.array(vals_rt, dtype=float)
+                policy_boot_rows.append({
+                    "policy": pname,
+                    "warning_total": float(np.sum(arr_warn)),
+                    "delta_l2_span": float(np.max(arr_d2) - np.min(arr_d2)) if arr_d2.size else 0.0,
+                    "runtime_total_seconds": float(np.sum(arr_rt)),
+                })
+            for ri in policy_boot_rows:
+                dominated = False
+                for rj in policy_boot_rows:
+                    if str(ri["policy"]) == str(rj["policy"]):
+                        continue
+                    nonworse = (
+                        float(rj["warning_total"]) <= float(ri["warning_total"]) and
+                        float(rj["delta_l2_span"]) <= float(ri["delta_l2_span"]) and
+                        float(rj["runtime_total_seconds"]) <= float(ri["runtime_total_seconds"])
+                    )
+                    strict = (
+                        float(rj["warning_total"]) < float(ri["warning_total"]) or
+                        float(rj["delta_l2_span"]) < float(ri["delta_l2_span"]) or
+                        float(rj["runtime_total_seconds"]) < float(ri["runtime_total_seconds"])
+                    )
+                    if nonworse and strict:
+                        dominated = True
+                        break
+                if not dominated:
+                    policy_boot_counts[str(ri["policy"])] += 1
+    policy_pareto_frequency_rows = []
+    for pn in policy_names:
+        succ = int(policy_boot_counts[pn])
+        freq = float(succ / policy_boot_n) if policy_boot_n > 0 else 0.0
+        ci = jeffreys_interval_from_successes(succ, policy_boot_n)
+        policy_pareto_frequency_rows.append({
+            "policy": pn,
+            "pareto_front_frequency": freq,
+            "pareto_front_frequency_ci95_jeffreys": ci,
+            "bootstrap_successes": succ,
+            "bootstrap_trials": int(policy_boot_n),
+        })
+    policy_pareto_frequency_rows = sorted(policy_pareto_frequency_rows, key=lambda r: (-float(r["pareto_front_frequency"]), r["policy"]))
+    ur_numerical_stress_policy_pareto_stability_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_POLICY_PARETO_STABILITY",
+        "bootstrap_size": int(policy_boot_n),
+        "resampling_rule": "iid_row_resample_with_replacement_over_fullgrid_tri_rows",
+        "rows": policy_pareto_frequency_rows,
+        "most_stable_frontier_policy": str(policy_pareto_frequency_rows[0]["policy"]) if policy_pareto_frequency_rows else "none",
+    }
+    # Budget-constrained policy decision panel:
+    # among Pareto-front candidates, choose policy robust to runtime caps.
+    runtime_vals = np.array([float(r["runtime_total_seconds"]) for r in policy_rows_sorted], dtype=float)
+    budget_quantiles = [0.25, 0.50, 0.75, 1.00]
+    runtime_budget_rows = []
+    for q in budget_quantiles:
+        bcap = float(np.quantile(runtime_vals, q)) if runtime_vals.size else 0.0
+        eligible = [r for r in policy_rows_sorted if float(r["runtime_total_seconds"]) <= bcap + 1e-15]
+        if not eligible:
+            runtime_budget_rows.append({
+                "runtime_budget_quantile": float(q),
+                "runtime_budget_cap_seconds": bcap,
+                "eligible_policy_count": 0,
+                "selected_policy": "none",
+                "selected_warning_total": 0,
+                "selected_delta_l2_span": 0.0,
+                "selected_runtime_total_seconds": 0.0,
+            })
+            continue
+        best_eligible = sorted(
+            eligible,
+            key=lambda r: (int(r["warning_total"]), float(r["delta_l2_span"]), float(r["runtime_total_seconds"]), str(r["policy"]))
+        )[0]
+        runtime_budget_rows.append({
+            "runtime_budget_quantile": float(q),
+            "runtime_budget_cap_seconds": bcap,
+            "eligible_policy_count": int(len(eligible)),
+            "selected_policy": str(best_eligible["policy"]),
+            "selected_warning_total": int(best_eligible["warning_total"]),
+            "selected_delta_l2_span": float(best_eligible["delta_l2_span"]),
+            "selected_runtime_total_seconds": float(best_eligible["runtime_total_seconds"]),
+        })
+    budget_policy_votes: dict[str, int] = {pn: 0 for pn in policy_names}
+    for rr in runtime_budget_rows:
+        spn = str(rr["selected_policy"])
+        if spn in budget_policy_votes:
+            budget_policy_votes[spn] += 1
+    budget_recommended_policy = sorted(policy_names, key=lambda pn: (-budget_policy_votes[pn], pn))[0] if policy_names else "none"
+    ur_numerical_stress_policy_budgeted_selection_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_POLICY_BUDGETED_SELECTION",
+        "selection_rule": "argmin_warning_then_delta_l2_then_runtime_under_runtime_cap",
+        "runtime_budget_quantiles": budget_quantiles,
+        "rows": runtime_budget_rows,
+        "budget_vote_rows": [{"policy": pn, "wins_across_budgets": int(budget_policy_votes[pn])} for pn in policy_names],
+        "budget_recommended_policy": budget_recommended_policy,
+    }
+    # Budget recommendation fragility panel:
+    # perturb runtime caps and integration tolerances (eps-like objective jitter proxy)
+    # using bootstrap row resamples; track policy flip frequency.
+    stress_boot_n = 256
+    cap_scale_grid = [0.85, 1.00, 1.15]
+    jitter_grid = [0.0, 0.01, 0.02]
+    stress_rng = np.random.default_rng(975147)
+    base_policy = str(budget_recommended_policy)
+    stress_rows = []
+    total_trials = 0
+    total_flips = 0
+    policy_win_counter = {pn: 0 for pn in policy_names}
+    if tri_rows:
+        for cap_scale in cap_scale_grid:
+            for jitter in jitter_grid:
+                local_flips = 0
+                local_trials = 0
+                local_counts = {pn: 0 for pn in policy_names}
+                for _ in range(stress_boot_n):
+                    idx = stress_rng.integers(0, len(tri_rows), size=len(tri_rows))
+                    boot_policy_rows = []
+                    for pname, pmap in policy_defs.items():
+                        vals_warn = []
+                        vals_d2 = []
+                        vals_rt = []
+                        for ii in idx:
+                            rr = tri_rows[int(ii)]
+                            ch = str(rr["class"])
+                            pick = pmap[ch]
+                            vals_warn.append(float(rr[f"{pick}_warning_count"]))
+                            vals_d2.append(float(rr[f"{pick}_delta_l2_vs_baseline"]))
+                            vals_rt.append(float(rr[f"{pick}_runtime_seconds"]))
+                        arr_warn = np.array(vals_warn, dtype=float)
+                        arr_d2 = np.array(vals_d2, dtype=float)
+                        arr_rt = np.array(vals_rt, dtype=float)
+                        # jitter as conservative ambiguity proxy on warning and delta_l2 axes
+                        wsum = float(np.sum(arr_warn) * (1.0 + jitter))
+                        dspan = float((np.max(arr_d2) - np.min(arr_d2)) * (1.0 + jitter)) if arr_d2.size else 0.0
+                        rsum = float(np.sum(arr_rt))
+                        boot_policy_rows.append({
+                            "policy": pname,
+                            "warning_total": wsum,
+                            "delta_l2_span": dspan,
+                            "runtime_total_seconds": rsum,
+                        })
+                    runtime_arr = np.array([float(r["runtime_total_seconds"]) for r in boot_policy_rows], dtype=float)
+                    q50 = float(np.quantile(runtime_arr, 0.50)) if runtime_arr.size else 0.0
+                    cap = float(cap_scale * q50)
+                    eligible = [r for r in boot_policy_rows if float(r["runtime_total_seconds"]) <= cap + 1e-15]
+                    if not eligible:
+                        chosen = "none"
+                    else:
+                        chosen = str(sorted(eligible, key=lambda r: (float(r["warning_total"]), float(r["delta_l2_span"]), float(r["runtime_total_seconds"]), str(r["policy"])))[0]["policy"])
+                    if chosen in local_counts:
+                        local_counts[chosen] += 1
+                        policy_win_counter[chosen] += 1
+                    if chosen != "none":
+                        local_trials += 1
+                        total_trials += 1
+                        if chosen != base_policy:
+                            local_flips += 1
+                            total_flips += 1
+                flip_freq = float(local_flips / local_trials) if local_trials > 0 else 0.0
+                stress_rows.append({
+                    "runtime_cap_scale": float(cap_scale),
+                    "objective_jitter_frac": float(jitter),
+                    "bootstrap_size": int(stress_boot_n),
+                    "flip_count_vs_base_policy": int(local_flips),
+                    "local_trials": int(local_trials),
+                    "flip_frequency_vs_base_policy": flip_freq,
+                    "winner_counts": {k: int(v) for k, v in local_counts.items()},
+                })
+    flip_ci = jeffreys_interval_from_successes(int(total_flips), int(max(1, total_trials)))
+    ur_numerical_stress_policy_budget_fragility_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_POLICY_BUDGET_FRAGILITY",
+        "base_policy": base_policy,
+        "cap_scale_grid": cap_scale_grid,
+        "objective_jitter_grid": jitter_grid,
+        "bootstrap_size_per_cell": int(stress_boot_n),
+        "rows": stress_rows,
+        "global_flip_count_vs_base_policy": int(total_flips),
+        "global_trials": int(total_trials),
+        "global_flip_frequency_vs_base_policy": float(total_flips / max(1, total_trials)),
+        "global_flip_frequency_ci95_jeffreys": flip_ci,
+        "policy_win_counter_global": {k: int(v) for k, v in policy_win_counter.items()},
+    }
+    # Class-conditional decomposition of budget-fragility stress:
+    # isolate whether flip-instability is concentrated in one channel class.
+    class_names = ["gauge_gauge", "fermion_fermion", "scalar_scalar"]
+    class_fragility_rows = []
+    for cls in class_names:
+        tri_cls = [r for r in tri_rows if str(r["class"]) == cls]
+        if not tri_cls:
+            class_fragility_rows.append({
+                "class": cls,
+                "base_policy": "none",
+                "global_flip_count_vs_base_policy": 0,
+                "global_trials": 0,
+                "global_flip_frequency_vs_base_policy": 0.0,
+                "global_flip_frequency_ci95_jeffreys": {"lower": 0.0, "upper": 1.0},
+                "policy_win_counter_global": {pn: 0 for pn in policy_names},
+            })
+            continue
+        policy_rows_cls = []
+        for pname, pmap in policy_defs.items():
+            vals_warn = []
+            vals_d2 = []
+            vals_rt = []
+            for rr in tri_cls:
+                pick = pmap[cls]
+                vals_warn.append(float(rr[f"{pick}_warning_count"]))
+                vals_d2.append(float(rr[f"{pick}_delta_l2_vs_baseline"]))
+                vals_rt.append(float(rr[f"{pick}_runtime_seconds"]))
+            arr_warn = np.array(vals_warn, dtype=float)
+            arr_d2 = np.array(vals_d2, dtype=float)
+            arr_rt = np.array(vals_rt, dtype=float)
+            policy_rows_cls.append({
+                "policy": pname,
+                "warning_total": int(np.sum(arr_warn)),
+                "delta_l2_span": float(np.max(arr_d2) - np.min(arr_d2)) if arr_d2.size else 0.0,
+                "runtime_total_seconds": float(np.sum(arr_rt)),
+            })
+        base_policy_cls = str(sorted(policy_rows_cls, key=lambda r: (int(r["warning_total"]), float(r["delta_l2_span"]), float(r["runtime_total_seconds"]), str(r["policy"])))[0]["policy"])
+        cls_total_trials = 0
+        cls_total_flips = 0
+        cls_policy_wins = {pn: 0 for pn in policy_names}
+        for cap_scale in cap_scale_grid:
+            for jitter in jitter_grid:
+                for _ in range(stress_boot_n):
+                    idx = stress_rng.integers(0, len(tri_cls), size=len(tri_cls))
+                    boot_rows_cls = []
+                    for pname, pmap in policy_defs.items():
+                        vals_warn = []
+                        vals_d2 = []
+                        vals_rt = []
+                        for ii in idx:
+                            rr = tri_cls[int(ii)]
+                            pick = pmap[cls]
+                            vals_warn.append(float(rr[f"{pick}_warning_count"]))
+                            vals_d2.append(float(rr[f"{pick}_delta_l2_vs_baseline"]))
+                            vals_rt.append(float(rr[f"{pick}_runtime_seconds"]))
+                        arr_warn = np.array(vals_warn, dtype=float)
+                        arr_d2 = np.array(vals_d2, dtype=float)
+                        arr_rt = np.array(vals_rt, dtype=float)
+                        boot_rows_cls.append({
+                            "policy": pname,
+                            "warning_total": float(np.sum(arr_warn) * (1.0 + jitter)),
+                            "delta_l2_span": float((np.max(arr_d2) - np.min(arr_d2)) * (1.0 + jitter)) if arr_d2.size else 0.0,
+                            "runtime_total_seconds": float(np.sum(arr_rt)),
+                        })
+                    runtime_arr = np.array([float(r["runtime_total_seconds"]) for r in boot_rows_cls], dtype=float)
+                    cap = float(cap_scale * (float(np.quantile(runtime_arr, 0.50)) if runtime_arr.size else 0.0))
+                    eligible = [r for r in boot_rows_cls if float(r["runtime_total_seconds"]) <= cap + 1e-15]
+                    if not eligible:
+                        continue
+                    chosen = str(sorted(eligible, key=lambda r: (float(r["warning_total"]), float(r["delta_l2_span"]), float(r["runtime_total_seconds"]), str(r["policy"])))[0]["policy"])
+                    cls_policy_wins[chosen] += 1
+                    cls_total_trials += 1
+                    if chosen != base_policy_cls:
+                        cls_total_flips += 1
+        class_fragility_rows.append({
+            "class": cls,
+            "base_policy": base_policy_cls,
+            "global_flip_count_vs_base_policy": int(cls_total_flips),
+            "global_trials": int(cls_total_trials),
+            "global_flip_frequency_vs_base_policy": float(cls_total_flips / max(1, cls_total_trials)),
+            "global_flip_frequency_ci95_jeffreys": jeffreys_interval_from_successes(int(cls_total_flips), int(max(1, cls_total_trials))),
+            "policy_win_counter_global": {k: int(v) for k, v in cls_policy_wins.items()},
+        })
+    ur_numerical_stress_policy_budget_fragility_by_class_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_POLICY_BUDGET_FRAGILITY_BY_CLASS",
+        "rows": class_fragility_rows,
+    }
+    # Class-aware adaptive fallback gate:
+    # if class-level fragility is high, fallback to class-local robust winner.
+    fragility_lb_threshold = 0.30
+    adaptive_rows = []
+    adaptive_policy_map = {}
+    for rr in class_fragility_rows:
+        cls = str(rr["class"])
+        lb = float(rr["global_flip_frequency_ci95_jeffreys"]["lower"])
+        wins = rr["policy_win_counter_global"]
+        robust_winner = sorted(policy_names, key=lambda pn: (-int(wins[pn]), pn))[0]
+        base_cls = str(rr["base_policy"])
+        use_fallback = bool(lb > fragility_lb_threshold)
+        selected_policy = robust_winner if use_fallback else base_cls
+        if selected_policy == "none":
+            selected_policy = robust_winner
+        adaptive_policy_map[cls] = selected_policy
+        adaptive_rows.append({
+            "class": cls,
+            "fragility_flip_frequency_wilson_lb95_proxy": lb,
+            "fragility_lb_threshold": float(fragility_lb_threshold),
+            "base_policy": base_cls,
+            "robust_winner_policy": robust_winner,
+            "use_fallback": use_fallback,
+            "selected_policy": selected_policy,
+        })
+    adaptive_warn = []
+    adaptive_d2 = []
+    adaptive_rt = []
+    for rr in tri_rows:
+        cls = str(rr["class"])
+        policy_pick = adaptive_policy_map[cls]
+        transform_pick = str(policy_defs[policy_pick][cls])
+        adaptive_warn.append(float(rr[f"{transform_pick}_warning_count"]))
+        adaptive_d2.append(float(rr[f"{transform_pick}_delta_l2_vs_baseline"]))
+        adaptive_rt.append(float(rr[f"{transform_pick}_runtime_seconds"]))
+    aw = np.array(adaptive_warn, dtype=float)
+    ad = np.array(adaptive_d2, dtype=float)
+    ar = np.array(adaptive_rt, dtype=float)
+    base_policy_row = next((r for r in policy_rows_sorted if str(r["policy"]) == str(base_policy)), None)
+    ur_numerical_stress_policy_class_adaptive_fallback_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_POLICY_CLASS_ADAPTIVE_FALLBACK",
+        "class_fragility_lb_threshold": float(fragility_lb_threshold),
+        "class_policy_map": adaptive_policy_map,
+        "rows": adaptive_rows,
+        "adaptive_warning_total": int(np.sum(aw)),
+        "adaptive_delta_l2_span": float(np.max(ad) - np.min(ad)) if ad.size else 0.0,
+        "adaptive_runtime_total_seconds": float(np.sum(ar)),
+        "base_budget_policy": str(base_policy),
+        "base_budget_warning_total": int(base_policy_row["warning_total"]) if base_policy_row else 0,
+        "base_budget_delta_l2_span": float(base_policy_row["delta_l2_span"]) if base_policy_row else 0.0,
+        "base_budget_runtime_total_seconds": float(base_policy_row["runtime_total_seconds"]) if base_policy_row else 0.0,
+        "delta_warning_total_adaptive_minus_base": int(np.sum(aw) - (int(base_policy_row["warning_total"]) if base_policy_row else 0)),
+        "delta_delta_l2_span_adaptive_minus_base": float((np.max(ad) - np.min(ad)) - (float(base_policy_row["delta_l2_span"]) if base_policy_row else 0.0)) if ad.size else 0.0,
+        "delta_runtime_total_seconds_adaptive_minus_base": float(np.sum(ar) - (float(base_policy_row["runtime_total_seconds"]) if base_policy_row else 0.0)),
+    }
+    # Policy ablation: base budget policy vs class-adaptive fallback vs robust-winner-only.
+    robust_only_map = {}
+    for rr in class_fragility_rows:
+        wins = rr["policy_win_counter_global"]
+        robust_only_map[str(rr["class"])] = sorted(policy_names, key=lambda pn: (-int(wins[pn]), pn))[0]
+
+    def aggregate_policy_from_class_map(class_map: dict[str, str]) -> dict[str, float]:
+        vals_warn, vals_d2, vals_rt = [], [], []
+        for rtri in tri_rows:
+            cls = str(rtri["class"])
+            policy_pick = str(class_map[cls])
+            transform_pick = str(policy_defs[policy_pick][cls])
+            vals_warn.append(float(rtri[f"{transform_pick}_warning_count"]))
+            vals_d2.append(float(rtri[f"{transform_pick}_delta_l2_vs_baseline"]))
+            vals_rt.append(float(rtri[f"{transform_pick}_runtime_seconds"]))
+        arr_warn = np.array(vals_warn, dtype=float)
+        arr_d2 = np.array(vals_d2, dtype=float)
+        arr_rt = np.array(vals_rt, dtype=float)
+        return {
+            "warning_total": float(np.sum(arr_warn)),
+            "delta_l2_span": float(np.max(arr_d2) - np.min(arr_d2)) if arr_d2.size else 0.0,
+            "runtime_total_seconds": float(np.sum(arr_rt)),
+        }
+
+    base_map = {cls: str(base_policy) for cls in ("gauge_gauge", "fermion_fermion", "scalar_scalar")}
+    adaptive_map = {k: str(v) for k, v in adaptive_policy_map.items()}
+    ablation_defs = {
+        "base_budget_policy": base_map,
+        "class_adaptive_fallback": adaptive_map,
+        "robust_winner_only": robust_only_map,
+    }
+    ablation_rows = []
+    for name, cmap in ablation_defs.items():
+        agg = aggregate_policy_from_class_map(cmap)
+        ablation_rows.append({
+            "regime": name,
+            "class_policy_map": cmap,
+            "warning_total": int(agg["warning_total"]),
+            "delta_l2_span": float(agg["delta_l2_span"]),
+            "runtime_total_seconds": float(agg["runtime_total_seconds"]),
+        })
+    ablation_rows_sorted = sorted(ablation_rows, key=lambda r: (r["warning_total"], r["delta_l2_span"], r["runtime_total_seconds"], r["regime"]))
+
+    # Bootstrap pairwise dominance frequencies.
+    abl_boot_n = 256
+    abl_rng = np.random.default_rng(975150)
+    pair_rows = []
+    regimes = [r["regime"] for r in ablation_rows_sorted]
+    for ra, rb in combinations(regimes, 2):
+        a_dom = 0
+        b_dom = 0
+        ties = 0
+        for _ in range(abl_boot_n):
+            idx = abl_rng.integers(0, len(tri_rows), size=len(tri_rows))
+            met = {}
+            for rn in (ra, rb):
+                cmap = ablation_defs[rn]
+                vals_warn, vals_d2, vals_rt = [], [], []
+                for ii in idx:
+                    rtri = tri_rows[int(ii)]
+                    cls = str(rtri["class"])
+                    pp = str(cmap[cls])
+                    tp = str(policy_defs[pp][cls])
+                    vals_warn.append(float(rtri[f"{tp}_warning_count"]))
+                    vals_d2.append(float(rtri[f"{tp}_delta_l2_vs_baseline"]))
+                    vals_rt.append(float(rtri[f"{tp}_runtime_seconds"]))
+                awn = np.array(vals_warn, dtype=float)
+                ad2 = np.array(vals_d2, dtype=float)
+                art = np.array(vals_rt, dtype=float)
+                met[rn] = (
+                    float(np.sum(awn)),
+                    float(np.max(ad2) - np.min(ad2)) if ad2.size else 0.0,
+                    float(np.sum(art)),
+                )
+            a_nonworse = met[ra][0] <= met[rb][0] and met[ra][1] <= met[rb][1] and met[ra][2] <= met[rb][2]
+            b_nonworse = met[rb][0] <= met[ra][0] and met[rb][1] <= met[ra][1] and met[rb][2] <= met[ra][2]
+            a_strict = met[ra][0] < met[rb][0] or met[ra][1] < met[rb][1] or met[ra][2] < met[rb][2]
+            b_strict = met[rb][0] < met[ra][0] or met[rb][1] < met[ra][1] or met[rb][2] < met[ra][2]
+            if a_nonworse and a_strict:
+                a_dom += 1
+            elif b_nonworse and b_strict:
+                b_dom += 1
+            else:
+                ties += 1
+        pair_rows.append({
+            "regime_a": ra,
+            "regime_b": rb,
+            "a_dominates_b_frequency": float(a_dom / abl_boot_n),
+            "b_dominates_a_frequency": float(b_dom / abl_boot_n),
+            "tie_or_incomparable_frequency": float(ties / abl_boot_n),
+            "a_dominates_b_ci95_jeffreys": jeffreys_interval_from_successes(a_dom, abl_boot_n),
+            "b_dominates_a_ci95_jeffreys": jeffreys_interval_from_successes(b_dom, abl_boot_n),
+            "bootstrap_size": int(abl_boot_n),
+        })
+    ur_numerical_stress_policy_ablation_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_POLICY_ABLATION",
+        "rows": ablation_rows_sorted,
+        "best_regime_lexicographic": str(ablation_rows_sorted[0]["regime"]) if ablation_rows_sorted else "none",
+        "pairwise_dominance_rows": pair_rows,
     }
     improved_classes = sorted({str(r["class"]) for r in alt_rows if int(r["warning_count_delta_alt_minus_original"]) < 0})
     stress_replay_rows = []
@@ -3657,7 +4159,7 @@ def main() -> None:
     }
 
     payload = {
-        "schema_version": "p2025_s975_v144",
+        "schema_version": "p2025_s975_v151",
         "produced_by": Path(__file__).name,
         "timestamp_utc": TS,
         "status": "OPEN_OBSTRUCTION_WITH_TRACE",
@@ -3864,6 +4366,13 @@ def main() -> None:
         "ur_numerical_stress_alt_fullgrid_tritransform_precursor": ur_numerical_stress_alt_fullgrid_tritransform_precursor,
         "ur_numerical_stress_class_conditional_replay_precursor": ur_numerical_stress_class_conditional_replay_precursor,
         "ur_numerical_stress_policy_counterfactual_precursor": ur_numerical_stress_policy_counterfactual_precursor,
+        "ur_numerical_stress_policy_pareto_front_precursor": ur_numerical_stress_policy_pareto_front_precursor,
+        "ur_numerical_stress_policy_pareto_stability_precursor": ur_numerical_stress_policy_pareto_stability_precursor,
+        "ur_numerical_stress_policy_budgeted_selection_precursor": ur_numerical_stress_policy_budgeted_selection_precursor,
+        "ur_numerical_stress_policy_budget_fragility_precursor": ur_numerical_stress_policy_budget_fragility_precursor,
+        "ur_numerical_stress_policy_budget_fragility_by_class_precursor": ur_numerical_stress_policy_budget_fragility_by_class_precursor,
+        "ur_numerical_stress_policy_class_adaptive_fallback_precursor": ur_numerical_stress_policy_class_adaptive_fallback_precursor,
+        "ur_numerical_stress_policy_ablation_precursor": ur_numerical_stress_policy_ablation_precursor,
         "ur_numerical_stress_alt_replay_trend_precursor": ur_numerical_stress_alt_replay_trend_precursor,
         "ur_numerical_stress_alt_dominance_map_precursor": ur_numerical_stress_alt_dominance_map_precursor,
         "ur_numerical_stress_alt_decision_gate_precursor": ur_numerical_stress_alt_decision_gate_precursor,
