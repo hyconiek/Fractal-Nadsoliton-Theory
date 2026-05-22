@@ -744,6 +744,407 @@ def main() -> None:
         tol_rows.append({"channel": ch, "tolerances": tol_grid, "mean_integrals": means, "span": span})
     tol_span_max = float(max(tol_channel_spans)) if tol_channel_spans else float("inf")
 
+    # Strict Task-2 theorem witness (single-channel): bounded DiscM-CutSum gap for graviton->gauge_gauge.
+    gg_pars = channel_param_map["gauge_gauge"]
+    om_gg, ph_gg, be_gg, et_gg = gg_pars
+    task2_rows = []
+    residue_rows = []
+    for s in s_grid_fine:
+        s = float(s)
+        disc_v, disc_err = strict_kernel_phase_integral(s, float(om_gg), float(ph_gg), float(be_gg), float(et_gg))
+        def gg_integrand(x):
+            xa = np.array(x, dtype=float)
+            kk = np.cos(om_gg * xa + ph_gg) / (1.0 + be_gg * (xa ** et_gg))
+            out = (kk * kk) / np.sqrt(np.maximum(1e-15, xa + s))
+            return out
+        cutsum_v_fixed, _ = si.fixed_quad(gg_integrand, 0.0, 1.0, n=240)
+        cutsum_v_quad, cutsum_quad_err = si.quad(gg_integrand, 0.0, 1.0, epsabs=1e-10, epsrel=1e-10, limit=400)
+        cutsum_v = float(cutsum_v_fixed)
+        gap_abs = float(abs(float(disc_v) - cutsum_v))
+        gap_rel = float(gap_abs / max(1e-15, abs(cutsum_v)))
+        uncertainty = float(max(abs(cutsum_v - float(cutsum_v_quad)), abs(float(disc_err)), abs(float(cutsum_quad_err))))
+        task2_rows.append({
+            "s": s,
+            "disc_value": float(disc_v),
+            "cutsum_value": cutsum_v,
+            "gap_abs": gap_abs,
+            "gap_rel": gap_rel,
+            "uncertainty_estimate": uncertainty,
+        })
+        x_probe = np.linspace(0.0, 1.0, 17)
+        vals_probe = np.array([gg_integrand(float(xp)) for xp in x_probe], dtype=float)
+        residue_rows.append({
+            "s": s,
+            "min_effective_weight": float(np.min(vals_probe)),
+            "max_effective_weight": float(np.max(vals_probe)),
+            "all_nonnegative": bool(np.min(vals_probe) >= -1e-12),
+        })
+    gap_abs_arr = np.array([r["gap_abs"] for r in task2_rows], dtype=float)
+    gap_rel_arr = np.array([r["gap_rel"] for r in task2_rows], dtype=float)
+    unc_arr = np.array([r["uncertainty_estimate"] for r in task2_rows], dtype=float)
+    pass_fail_criteria_task2 = {
+        "q95_gap_abs_max": 1e-8,
+        "max_gap_rel_max": 1e-6,
+        "all_nonnegative_weights_required": True,
+    }
+    q95_gap_abs = float(np.quantile(gap_abs_arr, 0.95)) if gap_abs_arr.size else float("inf")
+    max_gap_rel = float(np.max(gap_rel_arr)) if gap_rel_arr.size else float("inf")
+    all_nonnegative = bool(all(rr["all_nonnegative"] for rr in residue_rows))
+    consistency_ci95 = {
+        "lower": float(max(0.0, q95_gap_abs - 1.96 * (float(np.std(unc_arr, ddof=1)) if unc_arr.size > 1 else 0.0))),
+        "upper": float(q95_gap_abs + 1.96 * (float(np.std(unc_arr, ddof=1)) if unc_arr.size > 1 else 0.0)),
+    }
+    closure_ready = bool(
+        q95_gap_abs <= float(pass_fail_criteria_task2["q95_gap_abs_max"]) and
+        max_gap_rel <= float(pass_fail_criteria_task2["max_gap_rel_max"]) and
+        all_nonnegative
+    )
+    if closure_ready:
+        verdict_task2 = "CLOSED_NUMERICAL_WITNESS_TASK2"
+        fail_trace_task2 = ""
+    else:
+        verdict_task2 = "OPEN_OBSTRUCTION_WITH_TRACE"
+        fail_trace_task2 = f"q95_gap_abs={q95_gap_abs:.6e} > {pass_fail_criteria_task2['q95_gap_abs_max']:.1e}"
+    s_grid_task2_extended = sorted(set([float(x) for x in s_grid_fine] + [0.35, 0.75, 1.25, 2.5, 3.5]))
+    scheme_rows = []
+    for s in s_grid_task2_extended:
+        disc_v, disc_err = strict_kernel_phase_integral(float(s), float(om_gg), float(ph_gg), float(be_gg), float(et_gg))
+        def gg_integrand_native(x):
+            xa = np.array(x, dtype=float)
+            kk = np.cos(om_gg * xa + ph_gg) / (1.0 + be_gg * (xa ** et_gg))
+            return (kk * kk) / np.sqrt(np.maximum(1e-15, xa + s))
+        native_v, native_err = si.quad(gg_integrand_native, 0.0, 1.0, epsabs=1e-10, epsrel=1e-10, limit=400)
+        def gg_integrand_warp(t):
+            ta = np.array(t, dtype=float)
+            x = ta * ta
+            jac = 2.0 * ta
+            kk = np.cos(om_gg * x + ph_gg) / (1.0 + be_gg * (x ** et_gg))
+            return ((kk * kk) / np.sqrt(np.maximum(1e-15, x + s))) * jac
+        warp_v, warp_err = si.quad(gg_integrand_warp, 0.0, 1.0, epsabs=1e-10, epsrel=1e-10, limit=400)
+        cutsum_value = float(native_v)
+        gap_abs = float(abs(float(disc_v) - cutsum_value))
+        gap_rel = float(gap_abs / max(1e-15, abs(cutsum_value)))
+        uncertainty = float(max(abs(float(native_v) - float(warp_v)), abs(float(native_err)), abs(float(warp_err)), abs(float(disc_err))))
+        scheme_rows.append({
+            "s": float(s),
+            "disc_value": float(disc_v),
+            "cutsum_value": cutsum_value,
+            "gap_abs": gap_abs,
+            "gap_rel": gap_rel,
+            "uncertainty_estimate": uncertainty,
+            "cutsum_native": float(native_v),
+            "cutsum_warped": float(warp_v),
+            "cutsum_scheme_gap_abs": float(abs(float(native_v) - float(warp_v))),
+        })
+    # Local phase-space contribution map: identify x-bins driving DiscM-CutSum mismatch.
+    x_edges = np.linspace(0.0, 1.0, 9)
+    phase_space_bin_rows = []
+    for rr in scheme_rows:
+        s_loc = float(rr["s"])
+        disc_total = float(rr["disc_value"])
+        bin_contrib_native = []
+        bin_contrib_warp = []
+        for i in range(len(x_edges) - 1):
+            a = float(x_edges[i]); b = float(x_edges[i + 1])
+            def bin_native(x):
+                xa = np.array(x, dtype=float)
+                kk = np.cos(om_gg * xa + ph_gg) / (1.0 + be_gg * (xa ** et_gg))
+                return (kk * kk) / np.sqrt(np.maximum(1e-15, xa + s_loc))
+            vv_n, _ = si.quad(bin_native, a, b, epsabs=1e-10, epsrel=1e-10, limit=200)
+            bin_contrib_native.append(float(vv_n))
+            ta = np.sqrt(a); tb = np.sqrt(b)
+            def bin_warp(t):
+                tt = np.array(t, dtype=float)
+                x = tt * tt
+                jac = 2.0 * tt
+                kk = np.cos(om_gg * x + ph_gg) / (1.0 + be_gg * (x ** et_gg))
+                return ((kk * kk) / np.sqrt(np.maximum(1e-15, x + s_loc))) * jac
+            vv_w, _ = si.quad(bin_warp, ta, tb, epsabs=1e-10, epsrel=1e-10, limit=200)
+            bin_contrib_warp.append(float(vv_w))
+        native_arr = np.array(bin_contrib_native, dtype=float)
+        warp_arr = np.array(bin_contrib_warp, dtype=float)
+        disc_bin = float(disc_total / max(1, native_arr.size))
+        bin_rows = []
+        for i in range(native_arr.size):
+            gap_bin = float(abs(disc_bin - native_arr[i]))
+            bin_rows.append({
+                "bin_index": int(i),
+                "x_left": float(x_edges[i]),
+                "x_right": float(x_edges[i + 1]),
+                "native_bin_integral": float(native_arr[i]),
+                "warped_bin_integral": float(warp_arr[i]),
+                "bin_scheme_gap_abs": float(abs(native_arr[i] - warp_arr[i])),
+                "bin_disc_proxy_gap_abs": gap_bin,
+            })
+        phase_space_bin_rows.append({
+            "s": s_loc,
+            "rows": bin_rows,
+            "max_bin_disc_proxy_gap_abs": float(max([r["bin_disc_proxy_gap_abs"] for r in bin_rows], default=0.0)),
+            "max_bin_scheme_gap_abs": float(max([r["bin_scheme_gap_abs"] for r in bin_rows], default=0.0)),
+        })
+    # Bin-weighted obstruction ranking across s-grid.
+    bin_acc = {}
+    for sr in phase_space_bin_rows:
+        for br in sr["rows"]:
+            bi = int(br["bin_index"])
+            rec = bin_acc.setdefault(bi, {"bin_index": bi, "x_left": float(br["x_left"]), "x_right": float(br["x_right"]), "disc_proxy_sum": 0.0, "scheme_gap_sum": 0.0, "count": 0})
+            rec["disc_proxy_sum"] += float(br["bin_disc_proxy_gap_abs"])
+            rec["scheme_gap_sum"] += float(br["bin_scheme_gap_abs"])
+            rec["count"] += 1
+    total_disc_proxy = float(sum(v["disc_proxy_sum"] for v in bin_acc.values()))
+    bin_obstruction_ranking_rows = []
+    for bi in sorted(bin_acc.keys()):
+        v = bin_acc[bi]
+        share = float(v["disc_proxy_sum"] / total_disc_proxy) if total_disc_proxy > 0.0 else 0.0
+        bin_obstruction_ranking_rows.append({
+            "bin_index": int(v["bin_index"]),
+            "x_left": float(v["x_left"]),
+            "x_right": float(v["x_right"]),
+            "disc_proxy_gap_sum": float(v["disc_proxy_sum"]),
+            "disc_proxy_gap_share": share,
+            "scheme_gap_sum": float(v["scheme_gap_sum"]),
+            "mean_disc_proxy_gap": float(v["disc_proxy_sum"] / max(1, int(v["count"]))),
+        })
+    bin_obstruction_ranking_rows = sorted(bin_obstruction_ranking_rows, key=lambda r: (-r["disc_proxy_gap_share"], r["bin_index"]))
+    top2_share = float(sum(r["disc_proxy_gap_share"] for r in bin_obstruction_ranking_rows[:2])) if bin_obstruction_ranking_rows else 0.0
+    top_bins = [int(r["bin_index"]) for r in bin_obstruction_ranking_rows[:2]]
+    x_edges_ref = np.linspace(0.0, 1.0, 9)
+    endpoint_refinement_rows = []
+    for s_loc in s_grid_task2_extended:
+        disc_v_loc, _ = strict_kernel_phase_integral(float(s_loc), float(om_gg), float(ph_gg), float(be_gg), float(et_gg))
+        cutsum_local = 0.0
+        bin_rows_local = []
+        for bi in range(8):
+            a = float(x_edges_ref[bi]); b = float(x_edges_ref[bi + 1])
+            is_top = bool(bi in top_bins)
+            lim = 600 if is_top else 250
+            eps = 1e-12 if is_top else 1e-10
+            def f_local(x):
+                xa = np.array(x, dtype=float)
+                kk = np.cos(om_gg * xa + ph_gg) / (1.0 + be_gg * (xa ** et_gg))
+                return (kk * kk) / np.sqrt(np.maximum(1e-15, xa + s_loc))
+            v_local, _ = si.quad(f_local, a, b, epsabs=eps, epsrel=eps, limit=lim)
+            cutsum_local += float(v_local)
+            bin_rows_local.append({"bin_index": int(bi), "is_top2": is_top, "bin_integral_refined": float(v_local)})
+        gap_refined = float(abs(float(disc_v_loc) - float(cutsum_local)))
+        endpoint_refinement_rows.append({
+            "s": float(s_loc),
+            "disc_value": float(disc_v_loc),
+            "cutsum_value_refined": float(cutsum_local),
+            "gap_abs_refined": gap_refined,
+            "rows": bin_rows_local,
+        })
+    q95_gap_abs_refined = float(np.quantile(np.array([r["gap_abs_refined"] for r in endpoint_refinement_rows], dtype=float), 0.95)) if endpoint_refinement_rows else float("inf")
+    # Split-domain endpoint decomposition on top-2 bins: left/right half contribution mismatch.
+    endpoint_split_rows = []
+    left_total = 0.0
+    right_total = 0.0
+    for s_loc in s_grid_task2_extended:
+        for bi in top_bins:
+            a = float(x_edges_ref[int(bi)]); b = float(x_edges_ref[int(bi) + 1]); m = 0.5 * (a + b)
+            def f_split(x):
+                xa = np.array(x, dtype=float)
+                kk = np.cos(om_gg * xa + ph_gg) / (1.0 + be_gg * (xa ** et_gg))
+                return (kk * kk) / np.sqrt(np.maximum(1e-15, xa + s_loc))
+            lv, _ = si.quad(f_split, a, m, epsabs=1e-12, epsrel=1e-12, limit=700)
+            rv, _ = si.quad(f_split, m, b, epsabs=1e-12, epsrel=1e-12, limit=700)
+            left_total += float(abs(lv))
+            right_total += float(abs(rv))
+            endpoint_split_rows.append({
+                "s": float(s_loc),
+                "bin_index": int(bi),
+                "x_left": a,
+                "x_mid": m,
+                "x_right": b,
+                "left_half_integral_abs": float(abs(lv)),
+                "right_half_integral_abs": float(abs(rv)),
+                "left_minus_right_abs": float(abs(abs(lv) - abs(rv))),
+                "left_dominates": bool(abs(lv) >= abs(rv)),
+            })
+    endpoint_dominance = "LEFT" if left_total > right_total else ("RIGHT" if right_total > left_total else "BALANCED")
+    ur_task2_endpoint_split_domain_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_TOP2_BIN_ENDPOINT_SPLIT_DOMAIN",
+        "top2_bins": top_bins,
+        "rows": endpoint_split_rows,
+        "left_total_abs": float(left_total),
+        "right_total_abs": float(right_total),
+        "left_to_right_abs_ratio": float(left_total / max(1e-15, right_total)),
+        "dominant_endpoint_half": endpoint_dominance,
+    }
+    # Endpoint-adaptive transform selection on dominant endpoint half.
+    transform_grid = ["native", "left_focus", "right_focus"]
+    adaptive_rows = []
+    dominant_half = str(ur_task2_endpoint_split_domain_precursor["dominant_endpoint_half"])
+    for tf in transform_grid:
+        rows_tf = []
+        for s_loc in s_grid_task2_extended:
+            def base_integrand(x):
+                xa = np.array(x, dtype=float)
+                kk = np.cos(om_gg * xa + ph_gg) / (1.0 + be_gg * (xa ** et_gg))
+                return (kk * kk) / np.sqrt(np.maximum(1e-15, xa + s_loc))
+            if tf == "native":
+                cutsum_tf, _ = si.quad(base_integrand, 0.0, 1.0, epsabs=1e-10, epsrel=1e-10, limit=500)
+            elif tf == "left_focus":
+                # x = t^2 concentrates quadrature near x=0
+                def f_left(t):
+                    ta = np.array(t, dtype=float)
+                    x = ta * ta
+                    jac = 2.0 * ta
+                    return base_integrand(x) * jac
+                cutsum_tf, _ = si.quad(f_left, 0.0, 1.0, epsabs=1e-10, epsrel=1e-10, limit=500)
+            else:
+                # x = 1-(1-t)^2 concentrates quadrature near x=1
+                def f_right(t):
+                    ta = np.array(t, dtype=float)
+                    x = 1.0 - (1.0 - ta) * (1.0 - ta)
+                    jac = 2.0 * (1.0 - ta)
+                    return base_integrand(x) * jac
+                cutsum_tf, _ = si.quad(f_right, 0.0, 1.0, epsabs=1e-10, epsrel=1e-10, limit=500)
+            disc_tf, _ = strict_kernel_phase_integral(float(s_loc), float(om_gg), float(ph_gg), float(be_gg), float(et_gg))
+            rows_tf.append(float(abs(float(disc_tf) - float(cutsum_tf))))
+        q95_tf = float(np.quantile(np.array(rows_tf, dtype=float), 0.95)) if rows_tf else float("inf")
+        adaptive_rows.append({"transform": tf, "q95_gap_abs": q95_tf})
+    adaptive_rows = sorted(adaptive_rows, key=lambda r: (r["q95_gap_abs"], r["transform"]))
+    recommended_transform = str(adaptive_rows[0]["transform"]) if adaptive_rows else "native"
+    adaptive_boot_n = 256
+    adaptive_boot_rng = np.random.default_rng(975171)
+    transform_pick_counts = {k: 0 for k in transform_grid}
+    transform_q95_by_name = {r["transform"]: float(r["q95_gap_abs"]) for r in adaptive_rows}
+    for _ in range(adaptive_boot_n):
+        idx = adaptive_boot_rng.integers(0, len(s_grid_task2_extended), size=len(s_grid_task2_extended))
+        q95_boot_rows = []
+        for tf in transform_grid:
+            vals = []
+            for ii in idx.tolist():
+                s_loc = float(s_grid_task2_extended[ii])
+                def base_integrand(x):
+                    xa = np.array(x, dtype=float)
+                    kk = np.cos(om_gg * xa + ph_gg) / (1.0 + be_gg * (xa ** et_gg))
+                    return (kk * kk) / np.sqrt(np.maximum(1e-15, xa + s_loc))
+                if tf == "native":
+                    cutsum_tf, _ = si.quad(base_integrand, 0.0, 1.0, epsabs=1e-10, epsrel=1e-10, limit=300)
+                elif tf == "left_focus":
+                    def f_left(t):
+                        ta = np.array(t, dtype=float)
+                        x = ta * ta
+                        jac = 2.0 * ta
+                        return base_integrand(x) * jac
+                    cutsum_tf, _ = si.quad(f_left, 0.0, 1.0, epsabs=1e-10, epsrel=1e-10, limit=300)
+                else:
+                    def f_right(t):
+                        ta = np.array(t, dtype=float)
+                        x = 1.0 - (1.0 - ta) * (1.0 - ta)
+                        jac = 2.0 * (1.0 - ta)
+                        return base_integrand(x) * jac
+                    cutsum_tf, _ = si.quad(f_right, 0.0, 1.0, epsabs=1e-10, epsrel=1e-10, limit=300)
+                disc_tf, _ = strict_kernel_phase_integral(float(s_loc), float(om_gg), float(ph_gg), float(be_gg), float(et_gg))
+                vals.append(float(abs(float(disc_tf) - float(cutsum_tf))))
+            q95_boot_rows.append((tf, float(np.quantile(np.array(vals, dtype=float), 0.95))))
+        pick_tf = sorted(q95_boot_rows, key=lambda x: (x[1], x[0]))[0][0]
+        transform_pick_counts[pick_tf] += 1
+    adaptive_boot_rows = []
+    for tf in transform_grid:
+        cnt = int(transform_pick_counts[tf])
+        adaptive_boot_rows.append({
+            "transform": tf,
+            "selection_count": cnt,
+            "selection_frequency": float(cnt / adaptive_boot_n),
+            "selection_frequency_ci95_jeffreys": jeffreys_interval_from_successes(cnt, adaptive_boot_n),
+            "q95_gap_abs_point_estimate": float(transform_q95_by_name.get(tf, float("inf"))),
+        })
+    adaptive_boot_rows = sorted(adaptive_boot_rows, key=lambda r: (-r["selection_frequency"], r["transform"]))
+    ur_task2_endpoint_adaptive_transform_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_ENDPOINT_ADAPTIVE_TRANSFORM_SELECTION",
+        "dominant_endpoint_half": dominant_half,
+        "transform_grid": transform_grid,
+        "rows": adaptive_rows,
+        "recommended_transform": recommended_transform,
+        "q95_gap_abs_baseline": float(np.quantile(np.array([r["gap_abs"] for r in scheme_rows], dtype=float), 0.95)) if scheme_rows else float("inf"),
+        "delta_q95_gap_abs_recommended_minus_baseline": float(adaptive_rows[0]["q95_gap_abs"] - (float(np.quantile(np.array([r["gap_abs"] for r in scheme_rows], dtype=float), 0.95)) if scheme_rows else float("inf"))) if adaptive_rows else 0.0,
+        "bootstrap_size": int(adaptive_boot_n),
+        "bootstrap_rows": adaptive_boot_rows,
+        "most_frequent_bootstrap_transform": str(adaptive_boot_rows[0]["transform"]) if adaptive_boot_rows else "native",
+    }
+    ur_task2_endpoint_refinement_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_ENDPOINT_REFINEMENT_TOP2_BINS",
+        "top2_bins": top_bins,
+        "rows": endpoint_refinement_rows,
+        "q95_gap_abs_baseline": float(np.quantile(np.array([r["gap_abs"] for r in scheme_rows], dtype=float), 0.95)) if scheme_rows else float("inf"),
+        "q95_gap_abs_refined": q95_gap_abs_refined,
+        "delta_q95_gap_abs_refined_minus_baseline": float(q95_gap_abs_refined - (float(np.quantile(np.array([r["gap_abs"] for r in scheme_rows], dtype=float), 0.95)) if scheme_rows else float("inf"))),
+    }
+    gap_abs_arr_ext = np.array([r["gap_abs"] for r in scheme_rows], dtype=float)
+    gap_rel_arr_ext = np.array([r["gap_rel"] for r in scheme_rows], dtype=float)
+    q95_gap_abs_ext = float(np.quantile(gap_abs_arr_ext, 0.95)) if gap_abs_arr_ext.size else float("inf")
+    max_gap_rel_ext = float(np.max(gap_rel_arr_ext)) if gap_rel_arr_ext.size else float("inf")
+    obstruction_is_numerically_sensitive = bool(float(np.max(np.array([r["cutsum_scheme_gap_abs"] for r in scheme_rows], dtype=float))) > 0.05 * q95_gap_abs_ext)
+    criteria_eval = {
+        "q95_gap_abs_le_threshold": bool(q95_gap_abs_ext <= float(pass_fail_criteria_task2["q95_gap_abs_max"])),
+        "max_gap_rel_le_threshold": bool(max_gap_rel_ext <= float(pass_fail_criteria_task2["max_gap_rel_max"])),
+        "all_nonnegative_weights": bool(all_nonnegative),
+    }
+    dominant_blocker = "q95_gap_abs" if not criteria_eval["q95_gap_abs_le_threshold"] else (
+        "max_gap_rel" if not criteria_eval["max_gap_rel_le_threshold"] else (
+            "weight_sign_nonnegativity" if not criteria_eval["all_nonnegative_weights"] else "none"
+        )
+    )
+    dominant_inequality = (
+        f"q95_gap_abs={q95_gap_abs_ext:.6e} > {pass_fail_criteria_task2['q95_gap_abs_max']:.1e}" if dominant_blocker == "q95_gap_abs" else
+        (f"max_gap_rel={max_gap_rel_ext:.6e} > {pass_fail_criteria_task2['max_gap_rel_max']:.1e}" if dominant_blocker == "max_gap_rel" else
+         ("min_effective_weight < 0" if dominant_blocker == "weight_sign_nonnegativity" else "all_criteria_satisfied"))
+    )
+    if q95_gap_abs_ext <= float(pass_fail_criteria_task2["q95_gap_abs_max"]) and max_gap_rel_ext <= float(pass_fail_criteria_task2["max_gap_rel_max"]) and all_nonnegative:
+        verdict_task2 = "CLOSED_NUMERICAL_WITNESS_TASK2"
+        fail_trace_task2 = ""
+    else:
+        verdict_task2 = "OPEN_OBSTRUCTION_WITH_TRACE"
+        fail_trace_task2 = f"q95_gap_abs={q95_gap_abs_ext:.6e} > {pass_fail_criteria_task2['q95_gap_abs_max']:.1e}"
+    task2_strict_unitarity_witness = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "theorem_target": "bounded DiscM-CutSum gap for graviton_to_gauge_gauge on strict s-grid",
+        "strict_lane_assumptions": [
+            "K_strict_gate only",
+            "no legacy-role transfer",
+            "channel fixed to graviton_to_gauge_gauge",
+        ],
+        "channel": "graviton_to_gauge_gauge",
+        "s_grid": [float(x) for x in s_grid_task2_extended],
+        "rows": scheme_rows,
+        "residue_or_weight_sign_proxy_rows": residue_rows,
+        "aggregate_metrics": {
+            "max_gap_abs": float(np.max(gap_abs_arr_ext)) if gap_abs_arr_ext.size else float("inf"),
+            "q95_gap_abs": q95_gap_abs_ext,
+            "max_gap_rel": max_gap_rel_ext,
+            "consistency_ci95": consistency_ci95,
+            "all_nonnegative_weights": all_nonnegative,
+            "obstruction_is_numerically_sensitive": obstruction_is_numerically_sensitive,
+            "max_bin_disc_proxy_gap_abs": float(max([r["max_bin_disc_proxy_gap_abs"] for r in phase_space_bin_rows], default=0.0)),
+            "max_bin_scheme_gap_abs": float(max([r["max_bin_scheme_gap_abs"] for r in phase_space_bin_rows], default=0.0)),
+        },
+        "phase_space_bin_contribution_rows": phase_space_bin_rows,
+        "bin_obstruction_ranking": {
+            "rows": bin_obstruction_ranking_rows,
+            "top2_disc_proxy_gap_share": top2_share,
+            "total_disc_proxy_gap_sum": total_disc_proxy,
+        },
+        "endpoint_refinement": ur_task2_endpoint_refinement_precursor,
+        "endpoint_split_domain": ur_task2_endpoint_split_domain_precursor,
+        "endpoint_adaptive_transform": ur_task2_endpoint_adaptive_transform_precursor,
+        "pass_fail_criteria": pass_fail_criteria_task2,
+        "closure_consistency": {
+            "criteria_evaluation": criteria_eval,
+            "all_criteria_satisfied": bool(all(criteria_eval.values())),
+            "dominant_blocker": dominant_blocker,
+            "dominant_inequality": dominant_inequality,
+            "verdict_matches_criteria": bool((verdict_task2 == "CLOSED_NUMERICAL_WITNESS_TASK2") == bool(all(criteria_eval.values()))),
+        },
+        "verdict": verdict_task2,
+        "fail_trace": fail_trace_task2,
+    }
+
     # Task-2/7 integration step: common-basis fit directly on channel phase-space aggregates
     phase_feature_rows = []
     phase_target_rows = []
@@ -2677,6 +3078,131 @@ def main() -> None:
         "rows": knee_seed_rows,
         "span_rows": span_rows,
         "max_span_over_thresholds": float(max([r["knee_selection_frequency_span_over_seeds"] for r in span_rows], default=0.0)),
+    }
+    consensus_counts = {}
+    for sr in knee_seed_rows:
+        th = float(sr["most_stable_knee_threshold"])
+        consensus_counts[th] = int(consensus_counts.get(th, 0) + 1)
+    total_seeds = int(len(knee_seed_grid))
+    consensus_rows = []
+    for th in sorted({float(r["lb95_threshold"]) for r in span_rows}):
+        cnt = int(consensus_counts.get(float(th), 0))
+        freq = float(cnt / total_seeds) if total_seeds > 0 else 0.0
+        consensus_rows.append({
+            "lb95_threshold": float(th),
+            "most_stable_vote_count": cnt,
+            "most_stable_vote_frequency": freq,
+        })
+    consensus_rows = sorted(consensus_rows, key=lambda r: (-r["most_stable_vote_frequency"], r["lb95_threshold"]))
+    consensus_strength = float(consensus_rows[0]["most_stable_vote_frequency"]) if consensus_rows else 0.0
+    consensus_threshold = float(consensus_rows[0]["lb95_threshold"]) if consensus_rows else 0.70
+    consensus_min_frequency_for_go = 0.75
+    ur_numerical_stress_policy_gate_frontier_knee_cross_seed_consensus_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_POLICY_GATE_FRONTIER_KNEE_CROSS_SEED_CONSENSUS",
+        "seed_grid": knee_seed_grid,
+        "consensus_min_frequency_for_go": float(consensus_min_frequency_for_go),
+        "rows": consensus_rows,
+        "consensus_strength": consensus_strength,
+        "consensus_knee_threshold": consensus_threshold,
+        "consensus_go": bool(consensus_strength >= consensus_min_frequency_for_go),
+    }
+    consensus_threshold_grid = [0.50, 0.60, 0.75, 0.90]
+    consensus_threshold_sweep_rows = []
+    for cth in consensus_threshold_grid:
+        go_local = bool(consensus_strength >= float(cth))
+        margin = float(consensus_strength - float(cth))
+        consensus_threshold_sweep_rows.append({
+            "consensus_min_frequency_for_go": float(cth),
+            "consensus_go": go_local,
+            "consensus_margin": margin,
+        })
+    robust_go = bool(all(r["consensus_go"] for r in consensus_threshold_sweep_rows))
+    robust_hold = bool(all((not r["consensus_go"]) for r in consensus_threshold_sweep_rows))
+    ur_numerical_stress_policy_gate_frontier_knee_consensus_threshold_sweep_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_POLICY_GATE_FRONTIER_KNEE_CONSENSUS_THRESHOLD_SWEEP",
+        "seed_grid": knee_seed_grid,
+        "consensus_strength": consensus_strength,
+        "rows": consensus_threshold_sweep_rows,
+        "go_is_robust_across_threshold_grid": robust_go,
+        "hold_is_robust_across_threshold_grid": robust_hold,
+    }
+    # Weighted cross-seed consensus: downweight seeds with larger local instability span.
+    weighted_vote_grid = sorted({float(r["lb95_threshold"]) for r in span_rows})
+    weighted_scores = {float(th): 0.0 for th in weighted_vote_grid}
+    seed_weight_rows = []
+    for sr in knee_seed_rows:
+        freq_arr = np.array([float(rr["knee_selection_frequency"]) for rr in sr["rows"]], dtype=float)
+        local_span = float(np.max(freq_arr) - np.min(freq_arr)) if freq_arr.size else 1.0
+        # stability weight in (0,1], higher for smaller local span
+        w = float(1.0 / (1.0 + local_span))
+        voted_th = float(sr["most_stable_knee_threshold"])
+        weighted_scores[voted_th] = float(weighted_scores.get(voted_th, 0.0) + w)
+        seed_weight_rows.append({
+            "seed": int(sr["seed"]),
+            "local_frequency_span": local_span,
+            "stability_weight": w,
+            "most_stable_knee_threshold": voted_th,
+        })
+    total_weight = float(np.sum(np.array([r["stability_weight"] for r in seed_weight_rows], dtype=float))) if seed_weight_rows else 0.0
+    weighted_rows = []
+    for th in weighted_vote_grid:
+        score = float(weighted_scores.get(float(th), 0.0))
+        freq = float(score / total_weight) if total_weight > 0.0 else 0.0
+        weighted_rows.append({
+            "lb95_threshold": float(th),
+            "weighted_vote_score": score,
+            "weighted_vote_frequency": freq,
+        })
+    weighted_rows = sorted(weighted_rows, key=lambda r: (-r["weighted_vote_frequency"], r["lb95_threshold"]))
+    weighted_consensus_strength = float(weighted_rows[0]["weighted_vote_frequency"]) if weighted_rows else 0.0
+    weighted_consensus_threshold = float(weighted_rows[0]["lb95_threshold"]) if weighted_rows else 0.70
+    weighted_consensus_go = bool(weighted_consensus_strength >= consensus_min_frequency_for_go)
+    # Bootstrap CI for weighted consensus strength over seeds.
+    weighted_boot_n = 512
+    weighted_boot_rng = np.random.default_rng(975170)
+    weighted_strength_samples = []
+    seed_weight_vec = np.array([float(r["stability_weight"]) for r in seed_weight_rows], dtype=float)
+    seed_vote_vec = np.array([float(r["most_stable_knee_threshold"]) for r in seed_weight_rows], dtype=float)
+    for _ in range(weighted_boot_n):
+        if seed_weight_vec.size == 0:
+            weighted_strength_samples.append(0.0)
+            continue
+        idx = weighted_boot_rng.integers(0, seed_weight_vec.size, size=seed_weight_vec.size)
+        w_boot = seed_weight_vec[idx]
+        v_boot = seed_vote_vec[idx]
+        tot_w = float(np.sum(w_boot))
+        if tot_w <= 0.0:
+            weighted_strength_samples.append(0.0)
+            continue
+        score = {}
+        for ww, vv in zip(w_boot.tolist(), v_boot.tolist()):
+            score[float(vv)] = float(score.get(float(vv), 0.0) + float(ww))
+        best_freq = float(max(score.values()) / tot_w) if score else 0.0
+        weighted_strength_samples.append(best_freq)
+    ws_arr = np.array(weighted_strength_samples, dtype=float)
+    weighted_consensus_strength_ci95 = {
+        "lower": float(np.quantile(ws_arr, 0.025)) if ws_arr.size else 0.0,
+        "upper": float(np.quantile(ws_arr, 0.975)) if ws_arr.size else 1.0,
+    }
+    weighted_consensus_go_ci95_lb = bool(weighted_consensus_strength_ci95["lower"] >= consensus_min_frequency_for_go)
+    unweighted_weighted_agree = bool(abs(weighted_consensus_threshold - consensus_threshold) < 1e-12)
+    ur_numerical_stress_policy_gate_frontier_knee_weighted_cross_seed_consensus_precursor = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_NUMERICAL_STRESS_POLICY_GATE_FRONTIER_KNEE_WEIGHTED_CROSS_SEED_CONSENSUS",
+        "seed_grid": knee_seed_grid,
+        "weight_rule": "stability_weight = 1/(1+local_frequency_span)",
+        "consensus_min_frequency_for_go": float(consensus_min_frequency_for_go),
+        "seed_weight_rows": seed_weight_rows,
+        "rows": weighted_rows,
+        "weighted_consensus_strength": weighted_consensus_strength,
+        "weighted_consensus_strength_ci95_bootstrap": weighted_consensus_strength_ci95,
+        "weighted_consensus_bootstrap_size": int(weighted_boot_n),
+        "weighted_consensus_knee_threshold": weighted_consensus_threshold,
+        "weighted_consensus_go": weighted_consensus_go,
+        "weighted_consensus_go_ci95_lb": weighted_consensus_go_ci95_lb,
+        "unweighted_weighted_threshold_agreement": unweighted_weighted_agree,
     }
     improved_classes = sorted({str(r["class"]) for r in alt_rows if int(r["warning_count_delta_alt_minus_original"]) < 0})
     stress_replay_rows = []
@@ -4991,7 +5517,7 @@ def main() -> None:
     }
 
     payload = {
-        "schema_version": "p2025_s975_v168",
+        "schema_version": "p2025_s975_v181",
         "produced_by": Path(__file__).name,
         "timestamp_utc": TS,
         "status": "OPEN_OBSTRUCTION_WITH_TRACE",
@@ -5180,6 +5706,7 @@ def main() -> None:
             "tolerance_span_max": tol_span_max,
             "note": "Channelwise phase-space table only; no DiscM=CutSum closure claim.",
         },
+        "task2_strict_unitarity_witness": task2_strict_unitarity_witness,
         "ur_uncertainty_transport_bridge_precursor": ur_uncertainty_transport_bridge_precursor,
         "ur_transport_cross_source_agreement_precursor": ur_transport_cross_source_agreement_precursor,
         "ur_channel_trace_budget_precursor": ur_channel_trace_budget_precursor,
@@ -5222,6 +5749,9 @@ def main() -> None:
         "ur_numerical_stress_policy_gate_frontier_knee_precursor": ur_numerical_stress_policy_gate_frontier_knee_precursor,
         "ur_numerical_stress_policy_gate_frontier_knee_stability_precursor": ur_numerical_stress_policy_gate_frontier_knee_stability_precursor,
         "ur_numerical_stress_policy_gate_frontier_knee_cross_seed_stability_precursor": ur_numerical_stress_policy_gate_frontier_knee_cross_seed_stability_precursor,
+        "ur_numerical_stress_policy_gate_frontier_knee_cross_seed_consensus_precursor": ur_numerical_stress_policy_gate_frontier_knee_cross_seed_consensus_precursor,
+        "ur_numerical_stress_policy_gate_frontier_knee_consensus_threshold_sweep_precursor": ur_numerical_stress_policy_gate_frontier_knee_consensus_threshold_sweep_precursor,
+        "ur_numerical_stress_policy_gate_frontier_knee_weighted_cross_seed_consensus_precursor": ur_numerical_stress_policy_gate_frontier_knee_weighted_cross_seed_consensus_precursor,
         "ur_numerical_stress_alt_replay_trend_precursor": ur_numerical_stress_alt_replay_trend_precursor,
         "ur_numerical_stress_alt_dominance_map_precursor": ur_numerical_stress_alt_dominance_map_precursor,
         "ur_numerical_stress_alt_decision_gate_precursor": ur_numerical_stress_alt_decision_gate_precursor,
