@@ -14,7 +14,7 @@ OUT_QUALITY_CSV = ROOT / "generated" / "p2025_s975_strict_cutkosky_same_scheme_c
 def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     subprocess.run([sys.executable, str(SCRIPT)], check=True)
     data = json.loads(OUT.read_text(encoding="utf-8"))
-    assert data["schema_version"] == "p2025_s975_v201"
+    assert data["schema_version"] == "p2025_s975_v202"
     assert data["status"] == "OPEN_OBSTRUCTION_WITH_TRACE"
     assert all(data["gatekeeper_checks"].values())
     assert len(data["toe_closure_gaps_7tasks"]) == 7
@@ -23,6 +23,13 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
         assert row["honest_verdict"] == "OPEN_OBSTRUCTION_WITH_TRACE"
         assert len(row["method_stack"]) >= 2
         assert 0.0 <= row["local_readiness_score_0_1"] <= 1.0
+    task2 = next(r for r in data["task_numeric_evidence_7"] if r["task_id"] == 2)
+    assert task2["metrics"]["q95_margin_before_abs"] >= 0.0
+    assert task2["metrics"]["q95_margin_after_abs"] >= 0.0
+    assert task2["metrics"]["q95_margin_improvement_abs"] >= 0.0
+    assert 0.0 <= task2["metrics"]["q95_progress_score_0_1"] <= 1.0
+    assert data["verdict"] == data["task2_strict_unitarity_witness"]["verdict"]
+    assert data["fail_trace"] == data["task2_strict_unitarity_witness"]["fail_trace"]
     assert "task_priority_decision_panel" in data
     tpp = data["task_priority_decision_panel"]
     assert len(tpp["rows"]) == 7
@@ -840,6 +847,7 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     ci = t2w["aggregate_metrics"]["consistency_ci95"]
     assert 0.0 <= ci["lower"] <= ci["upper"]
     assert isinstance(t2w["aggregate_metrics"]["all_nonnegative_weights"], bool)
+    assert isinstance(t2w["aggregate_metrics"]["min_effective_weight_global"], float)
     assert isinstance(t2w["aggregate_metrics"]["obstruction_is_numerically_sensitive"], bool)
     assert t2w["aggregate_metrics"]["max_bin_disc_proxy_gap_abs"] >= 0.0
     assert t2w["aggregate_metrics"]["max_bin_scheme_gap_abs"] >= 0.0
@@ -953,13 +961,34 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
             assert br["bin_disc_proxy_gap_abs"] >= 0.0
     assert t2w["verdict"] in {"OPEN_OBSTRUCTION_WITH_TRACE", "CLOSED_NUMERICAL_WITNESS_TASK2"}
     if t2w["verdict"] == "OPEN_OBSTRUCTION_WITH_TRACE":
-        assert "q95_gap_abs=" in t2w["fail_trace"] and ">" in t2w["fail_trace"]
+        assert ">" in t2w["fail_trace"]
+        assert any(
+            tag in t2w["fail_trace"]
+            for tag in {"q95_gap_abs=", "max_gap_rel=", "q95_cross_integrator_gap_abs=", "q95_convergence_delta_n400_to_n800_abs=", "min_effective_weight_global="}
+        )
     assert "closure_consistency" in t2w
     cc = t2w["closure_consistency"]
-    assert set(cc["criteria_evaluation"].keys()) == {"q95_gap_abs_le_threshold", "max_gap_rel_le_threshold", "all_nonnegative_weights"}
+    assert set(cc["criteria_evaluation"].keys()) == {
+        "q95_gap_abs_le_threshold",
+        "max_gap_rel_le_threshold",
+        "all_nonnegative_weights",
+        "q95_cross_integrator_gap_le_threshold",
+        "q95_convergence_delta_le_threshold",
+    }
     assert isinstance(cc["all_criteria_satisfied"], bool)
-    assert cc["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "none"}
+    assert cc["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none"}
     assert isinstance(cc["dominant_inequality"], str) and len(cc["dominant_inequality"]) > 0
+    assert "falsifier_trace_consistency" in t2w
+    ftc = t2w["falsifier_trace_consistency"]
+    assert ftc["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert ftc["scope"] == "STRICT_TASK2_FALSIFIER_TRACE_CONSISTENCY"
+    assert set(ftc["checks"].keys()) == {
+        "if_open_then_fail_trace_equals_dominant_inequality",
+        "if_closed_then_fail_trace_empty",
+        "if_open_then_dominant_not_none",
+    }
+    assert all(isinstance(v, bool) for v in ftc["checks"].values())
+    assert ftc["all_checks_pass"] is True
     assert "q95_dominant_s_attribution" in t2w
     qsa = t2w["q95_dominant_s_attribution"]
     assert qsa["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
@@ -988,6 +1017,8 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     assert qsc["scope"] == "STRICT_TASK2_Q95_DOMINANT_S_DUAL_INTEGRATOR_CROSSCHECK"
     assert len(qsc["rows"]) <= 3
     assert qsc["crosscheck_gap_abs_max"] >= 0.0
+    assert qsc["crosscheck_gap_abs_q95"] >= 0.0
+    assert qsc["crosscheck_gap_abs_max"] >= qsc["crosscheck_gap_abs_q95"]
     assert qsc["q95_gap_abs_quad_top3"] >= 0.0
     assert qsc["q95_gap_abs_fixed_quad_top3"] >= 0.0
     assert isinstance(qsc["delta_q95_fixed_minus_quad_top3"], float)
@@ -1198,19 +1229,46 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     qcp = t2w["q95_blocker_choice_panel"]
     assert qcp["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
     assert qcp["scope"] == "STRICT_TASK2_BLOCKER_CHOICE_NORMALIZED_OVERSHOOT"
-    assert len(qcp["rows"]) == 3
+    assert len(qcp["rows"]) == 5
     for rr in qcp["rows"]:
-        assert rr["criterion"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity"}
+        assert rr["criterion"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs"}
         assert rr["normalized_overshoot"] >= 0.0
         assert isinstance(rr["is_satisfied"], bool)
-    assert qcp["easiest_unresolved_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "none"}
+    assert qcp["easiest_unresolved_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none"}
+    assert qcp["dominant_unresolved_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none"}
     assert "q95_blocker_choice_consistency" in t2w
     qcc = t2w["q95_blocker_choice_consistency"]
     assert qcc["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
     assert qcc["scope"] == "STRICT_TASK2_BLOCKER_CHOICE_CONSISTENCY"
-    assert qcc["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "none", "pending"}
-    assert qcc["easiest_unresolved_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "none"}
+    assert qcc["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none", "pending"}
+    assert qcc["easiest_unresolved_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none"}
     assert isinstance(qcc["is_consistent_when_q95_dominates"], bool)
+    if qcc["dominant_blocker"] != "pending":
+        assert qcc["dominant_blocker"] == qcp["dominant_unresolved_blocker"]
+    assert "dominant_blocker_numeric_margin" in t2w
+    dbm = t2w["dominant_blocker_numeric_margin"]
+    assert dbm["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert dbm["scope"] == "STRICT_TASK2_DOMINANT_BLOCKER_NUMERIC_MARGIN"
+    assert dbm["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none"}
+    assert isinstance(dbm["observed_value"], float)
+    assert isinstance(dbm["threshold_value"], float)
+    assert isinstance(dbm["signed_margin_observed_minus_threshold"], float)
+    assert dbm["normalized_overshoot_vs_threshold"] >= 0.0
+    assert "dominant_blocker_selection_consistency" in t2w
+    dsc = t2w["dominant_blocker_selection_consistency"]
+    assert dsc["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert dsc["scope"] == "STRICT_TASK2_DOMINANT_BLOCKER_SELECTION_CONSISTENCY"
+    assert dsc["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none"}
+    assert dsc["dominant_unresolved_expected"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none"}
+    assert dsc["is_argmax_overshoot"] is True
+    assert "criterion_coherence_sign" in t2w
+    ccs = t2w["criterion_coherence_sign"]
+    assert ccs["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert ccs["scope"] == "STRICT_TASK2_SIGN_CRITERION_COHERENCE"
+    assert isinstance(ccs["min_effective_weight_global"], float)
+    assert isinstance(ccs["min_effective_weight_global_min"], float)
+    assert isinstance(ccs["all_nonnegative_weights_flag"], bool)
+    assert ccs["flag_equals_numeric_inequality"] is True
     assert cc["verdict_matches_criteria"] is True
 
     assert "ur_numerical_stress_policy_weighted_boundary_risk_posterior_predictive_precursor" in data
