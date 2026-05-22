@@ -14,7 +14,7 @@ OUT_QUALITY_CSV = ROOT / "generated" / "p2025_s975_strict_cutkosky_same_scheme_c
 def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     subprocess.run([sys.executable, str(SCRIPT)], check=True)
     data = json.loads(OUT.read_text(encoding="utf-8"))
-    assert data["schema_version"] == "p2025_s975_v168"
+    assert data["schema_version"] == "p2025_s975_v181"
     assert data["status"] == "OPEN_OBSTRUCTION_WITH_TRACE"
     assert all(data["gatekeeper_checks"].values())
     assert len(data["toe_closure_gaps_7tasks"]) == 7
@@ -817,6 +817,131 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     assert abs(p_sum - 1.0) < 1e-12
     assert 0.0 <= unsp_wb["most_probable_winner_set_probability"] <= 1.0
     assert set(unsp_wb["best_cell_winner_posterior_counts"].keys()) == {"base_budget_policy", "class_adaptive_fallback", "robust_winner_only", "none"}
+    assert "task2_strict_unitarity_witness" in data
+    t2w = data["task2_strict_unitarity_witness"]
+    assert t2w["theorem_target"].startswith("bounded DiscM-CutSum gap")
+    assert t2w["channel"] == "graviton_to_gauge_gauge"
+    assert len(t2w["s_grid"]) >= 10
+    assert len(t2w["rows"]) == len(t2w["s_grid"])
+    assert len(t2w["residue_or_weight_sign_proxy_rows"]) >= 5
+    for rr in t2w["rows"]:
+        assert rr["s"] in set(t2w["s_grid"])
+        assert rr["disc_value"] >= 0.0 and rr["cutsum_value"] >= 0.0
+        assert rr["gap_abs"] >= 0.0 and rr["gap_rel"] >= 0.0 and rr["uncertainty_estimate"] >= 0.0
+        assert rr["cutsum_native"] >= 0.0 and rr["cutsum_warped"] >= 0.0
+        assert rr["cutsum_scheme_gap_abs"] >= 0.0
+    for rr in t2w["residue_or_weight_sign_proxy_rows"]:
+        assert rr["s"] in set(t2w["s_grid"])
+        assert rr["min_effective_weight"] <= rr["max_effective_weight"]
+        assert isinstance(rr["all_nonnegative"], bool)
+    assert t2w["aggregate_metrics"]["max_gap_abs"] >= 0.0
+    assert t2w["aggregate_metrics"]["q95_gap_abs"] >= 0.0
+    assert t2w["aggregate_metrics"]["max_gap_rel"] >= 0.0
+    ci = t2w["aggregate_metrics"]["consistency_ci95"]
+    assert 0.0 <= ci["lower"] <= ci["upper"]
+    assert isinstance(t2w["aggregate_metrics"]["all_nonnegative_weights"], bool)
+    assert isinstance(t2w["aggregate_metrics"]["obstruction_is_numerically_sensitive"], bool)
+    assert t2w["aggregate_metrics"]["max_bin_disc_proxy_gap_abs"] >= 0.0
+    assert t2w["aggregate_metrics"]["max_bin_scheme_gap_abs"] >= 0.0
+    assert len(t2w["phase_space_bin_contribution_rows"]) == len(t2w["rows"])
+    assert "bin_obstruction_ranking" in t2w
+    bor = t2w["bin_obstruction_ranking"]
+    assert len(bor["rows"]) == 8
+    assert bor["total_disc_proxy_gap_sum"] >= 0.0
+    assert 0.0 <= bor["top2_disc_proxy_gap_share"] <= 1.0
+    share_sum = 0.0
+    for rr in bor["rows"]:
+        assert 0 <= rr["bin_index"] <= 7
+        assert 0.0 <= rr["x_left"] < rr["x_right"] <= 1.0
+        assert rr["disc_proxy_gap_sum"] >= 0.0
+        assert rr["scheme_gap_sum"] >= 0.0
+        assert rr["mean_disc_proxy_gap"] >= 0.0
+        assert 0.0 <= rr["disc_proxy_gap_share"] <= 1.0
+        share_sum += rr["disc_proxy_gap_share"]
+    assert abs(share_sum - 1.0) < 1e-9 or bor["total_disc_proxy_gap_sum"] == 0.0
+    assert "endpoint_refinement" in t2w
+    erf = t2w["endpoint_refinement"]
+    assert erf["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert erf["scope"] == "STRICT_TASK2_ENDPOINT_REFINEMENT_TOP2_BINS"
+    assert len(erf["top2_bins"]) == 2
+    assert all(0 <= int(b) <= 7 for b in erf["top2_bins"])
+    assert len(erf["rows"]) == len(t2w["s_grid"])
+    assert erf["q95_gap_abs_baseline"] >= 0.0
+    assert erf["q95_gap_abs_refined"] >= 0.0
+    for rr in erf["rows"]:
+        assert rr["s"] in set(t2w["s_grid"])
+        assert rr["disc_value"] >= 0.0
+        assert rr["cutsum_value_refined"] >= 0.0
+        assert rr["gap_abs_refined"] >= 0.0
+        assert len(rr["rows"]) == 8
+        for br in rr["rows"]:
+            assert 0 <= br["bin_index"] <= 7
+            assert isinstance(br["is_top2"], bool)
+            assert br["bin_integral_refined"] >= 0.0
+    assert "endpoint_split_domain" in t2w
+    esd = t2w["endpoint_split_domain"]
+    assert esd["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert esd["scope"] == "STRICT_TASK2_TOP2_BIN_ENDPOINT_SPLIT_DOMAIN"
+    assert len(esd["top2_bins"]) == 2
+    assert esd["left_total_abs"] >= 0.0 and esd["right_total_abs"] >= 0.0
+    assert esd["left_to_right_abs_ratio"] >= 0.0
+    assert esd["dominant_endpoint_half"] in {"LEFT", "RIGHT", "BALANCED"}
+    assert len(esd["rows"]) == len(t2w["s_grid"]) * 2
+    assert "endpoint_adaptive_transform" in t2w
+    eat = t2w["endpoint_adaptive_transform"]
+    assert eat["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert eat["scope"] == "STRICT_TASK2_ENDPOINT_ADAPTIVE_TRANSFORM_SELECTION"
+    assert eat["dominant_endpoint_half"] in {"LEFT", "RIGHT", "BALANCED"}
+    assert eat["transform_grid"] == ["native", "left_focus", "right_focus"]
+    assert len(eat["rows"]) == 3
+    assert eat["recommended_transform"] in {"native", "left_focus", "right_focus"}
+    assert eat["q95_gap_abs_baseline"] >= 0.0
+    for rr in eat["rows"]:
+        assert rr["transform"] in {"native", "left_focus", "right_focus"}
+        assert rr["q95_gap_abs"] >= 0.0
+    assert eat["bootstrap_size"] == 256
+    assert len(eat["bootstrap_rows"]) == 3
+    assert eat["most_frequent_bootstrap_transform"] in {"native", "left_focus", "right_focus"}
+    total_freq = 0.0
+    for rr in eat["bootstrap_rows"]:
+        assert rr["transform"] in {"native", "left_focus", "right_focus"}
+        assert 0 <= rr["selection_count"] <= 256
+        assert 0.0 <= rr["selection_frequency"] <= 1.0
+        assert 0.0 <= rr["selection_frequency_ci95_jeffreys"]["lower"] <= rr["selection_frequency_ci95_jeffreys"]["upper"] <= 1.0
+        assert rr["q95_gap_abs_point_estimate"] >= 0.0
+        total_freq += rr["selection_frequency"]
+    assert abs(total_freq - 1.0) < 1e-12
+    for rr in esd["rows"]:
+        assert rr["s"] in set(t2w["s_grid"])
+        assert rr["bin_index"] in set(esd["top2_bins"])
+        assert rr["x_left"] < rr["x_mid"] < rr["x_right"]
+        assert rr["left_half_integral_abs"] >= 0.0
+        assert rr["right_half_integral_abs"] >= 0.0
+        assert rr["left_minus_right_abs"] >= 0.0
+        assert isinstance(rr["left_dominates"], bool)
+    for sr in t2w["phase_space_bin_contribution_rows"]:
+        assert sr["s"] in set(t2w["s_grid"])
+        assert len(sr["rows"]) == 8
+        assert sr["max_bin_disc_proxy_gap_abs"] >= 0.0
+        assert sr["max_bin_scheme_gap_abs"] >= 0.0
+        for br in sr["rows"]:
+            assert 0 <= br["bin_index"] <= 7
+            assert 0.0 <= br["x_left"] < br["x_right"] <= 1.0
+            assert br["native_bin_integral"] >= 0.0
+            assert br["warped_bin_integral"] >= 0.0
+            assert br["bin_scheme_gap_abs"] >= 0.0
+            assert br["bin_disc_proxy_gap_abs"] >= 0.0
+    assert t2w["verdict"] in {"OPEN_OBSTRUCTION_WITH_TRACE", "CLOSED_NUMERICAL_WITNESS_TASK2"}
+    if t2w["verdict"] == "OPEN_OBSTRUCTION_WITH_TRACE":
+        assert "q95_gap_abs=" in t2w["fail_trace"] and ">" in t2w["fail_trace"]
+    assert "closure_consistency" in t2w
+    cc = t2w["closure_consistency"]
+    assert set(cc["criteria_evaluation"].keys()) == {"q95_gap_abs_le_threshold", "max_gap_rel_le_threshold", "all_nonnegative_weights"}
+    assert isinstance(cc["all_criteria_satisfied"], bool)
+    assert cc["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "none"}
+    assert isinstance(cc["dominant_inequality"], str) and len(cc["dominant_inequality"]) > 0
+    assert cc["verdict_matches_criteria"] is True
+
     assert "ur_numerical_stress_policy_weighted_boundary_risk_posterior_predictive_precursor" in data
     unsp_pp = data["ur_numerical_stress_policy_weighted_boundary_risk_posterior_predictive_precursor"]
     assert unsp_pp["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
@@ -931,6 +1056,58 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
         assert rr["lb95_threshold"] in {0.70, 0.75, 0.80, 0.85, 0.90, 0.95}
         assert 0.0 <= rr["knee_selection_frequency_span_over_seeds"] <= 1.0
         assert 0.0 <= rr["knee_selection_frequency_mean_over_seeds"] <= 1.0
+    assert "ur_numerical_stress_policy_gate_frontier_knee_cross_seed_consensus_precursor" in data
+    unsp_fkcc = data["ur_numerical_stress_policy_gate_frontier_knee_cross_seed_consensus_precursor"]
+    assert unsp_fkcc["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsp_fkcc["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_POLICY_GATE_FRONTIER_KNEE_CROSS_SEED_CONSENSUS"
+    assert unsp_fkcc["seed_grid"] == [975166, 975167, 975168, 975169]
+    assert unsp_fkcc["consensus_min_frequency_for_go"] == 0.75
+    assert len(unsp_fkcc["rows"]) == 6
+    assert 0.0 <= unsp_fkcc["consensus_strength"] <= 1.0
+    assert unsp_fkcc["consensus_knee_threshold"] in {0.70, 0.75, 0.80, 0.85, 0.90, 0.95}
+    assert isinstance(unsp_fkcc["consensus_go"], bool)
+    for rr in unsp_fkcc["rows"]:
+        assert rr["lb95_threshold"] in {0.70, 0.75, 0.80, 0.85, 0.90, 0.95}
+        assert 0 <= rr["most_stable_vote_count"] <= 4
+        assert 0.0 <= rr["most_stable_vote_frequency"] <= 1.0
+    assert "ur_numerical_stress_policy_gate_frontier_knee_consensus_threshold_sweep_precursor" in data
+    unsp_fkcts = data["ur_numerical_stress_policy_gate_frontier_knee_consensus_threshold_sweep_precursor"]
+    assert unsp_fkcts["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsp_fkcts["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_POLICY_GATE_FRONTIER_KNEE_CONSENSUS_THRESHOLD_SWEEP"
+    assert unsp_fkcts["seed_grid"] == [975166, 975167, 975168, 975169]
+    assert 0.0 <= unsp_fkcts["consensus_strength"] <= 1.0
+    assert len(unsp_fkcts["rows"]) == 4
+    assert isinstance(unsp_fkcts["go_is_robust_across_threshold_grid"], bool)
+    assert isinstance(unsp_fkcts["hold_is_robust_across_threshold_grid"], bool)
+    for rr in unsp_fkcts["rows"]:
+        assert rr["consensus_min_frequency_for_go"] in {0.50, 0.60, 0.75, 0.90}
+        assert isinstance(rr["consensus_go"], bool)
+        assert -1.0 <= rr["consensus_margin"] <= 1.0
+    assert "ur_numerical_stress_policy_gate_frontier_knee_weighted_cross_seed_consensus_precursor" in data
+    unsp_fkw = data["ur_numerical_stress_policy_gate_frontier_knee_weighted_cross_seed_consensus_precursor"]
+    assert unsp_fkw["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert unsp_fkw["scope"] == "STRICT_TASK2_NUMERICAL_STRESS_POLICY_GATE_FRONTIER_KNEE_WEIGHTED_CROSS_SEED_CONSENSUS"
+    assert unsp_fkw["seed_grid"] == [975166, 975167, 975168, 975169]
+    assert unsp_fkw["weight_rule"] == "stability_weight = 1/(1+local_frequency_span)"
+    assert unsp_fkw["consensus_min_frequency_for_go"] == 0.75
+    assert len(unsp_fkw["seed_weight_rows"]) == 4
+    assert len(unsp_fkw["rows"]) == 6
+    assert 0.0 <= unsp_fkw["weighted_consensus_strength"] <= 1.0
+    assert unsp_fkw["weighted_consensus_knee_threshold"] in {0.70, 0.75, 0.80, 0.85, 0.90, 0.95}
+    assert isinstance(unsp_fkw["weighted_consensus_go"], bool)
+    assert isinstance(unsp_fkw["unweighted_weighted_threshold_agreement"], bool)
+    assert unsp_fkw["weighted_consensus_bootstrap_size"] == 512
+    assert 0.0 <= unsp_fkw["weighted_consensus_strength_ci95_bootstrap"]["lower"] <= unsp_fkw["weighted_consensus_strength_ci95_bootstrap"]["upper"] <= 1.0
+    assert isinstance(unsp_fkw["weighted_consensus_go_ci95_lb"], bool)
+    for rr in unsp_fkw["seed_weight_rows"]:
+        assert rr["seed"] in {975166, 975167, 975168, 975169}
+        assert 0.0 <= rr["local_frequency_span"] <= 1.0
+        assert 0.0 < rr["stability_weight"] <= 1.0
+        assert rr["most_stable_knee_threshold"] in {0.70, 0.75, 0.80, 0.85, 0.90, 0.95}
+    for rr in unsp_fkw["rows"]:
+        assert rr["lb95_threshold"] in {0.70, 0.75, 0.80, 0.85, 0.90, 0.95}
+        assert rr["weighted_vote_score"] >= 0.0
+        assert 0.0 <= rr["weighted_vote_frequency"] <= 1.0
     assert "ur_numerical_stress_alt_replay_trend_precursor" in data
     unsart = data["ur_numerical_stress_alt_replay_trend_precursor"]
     assert unsart["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
