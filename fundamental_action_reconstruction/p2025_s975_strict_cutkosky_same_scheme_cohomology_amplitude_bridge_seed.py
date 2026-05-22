@@ -1054,6 +1054,60 @@ def main() -> None:
             "q95_gap_abs_point_estimate": float(transform_q95_by_name.get(tf, float("inf"))),
         })
     adaptive_boot_rows = sorted(adaptive_boot_rows, key=lambda r: (-r["selection_frequency"], r["transform"]))
+    dominant_boot_row = adaptive_boot_rows[0] if adaptive_boot_rows else {
+        "transform": "native",
+        "selection_frequency_ci95_jeffreys": {"lower": 0.0, "upper": 1.0},
+    }
+    dominant_boot_tf = str(dominant_boot_row["transform"])
+    dominant_boot_ci95_lower = float(dominant_boot_row["selection_frequency_ci95_jeffreys"]["lower"])
+    stability_gate_ci95_lower_min = 0.60
+    stability_gate_passed = bool(dominant_boot_ci95_lower >= stability_gate_ci95_lower_min)
+    if stability_gate_passed:
+        recompute_gaps_abs = []
+        recompute_gaps_rel = []
+        for s_loc in s_grid_task2_extended:
+            def base_integrand_recompute(x):
+                xa = np.array(x, dtype=float)
+                kk = np.cos(om_gg * xa + ph_gg) / (1.0 + be_gg * (xa ** et_gg))
+                return (kk * kk) / np.sqrt(np.maximum(1e-15, xa + s_loc))
+            if dominant_boot_tf == "native":
+                cutsum_rc, _ = si.quad(base_integrand_recompute, 0.0, 1.0, epsabs=1e-12, epsrel=1e-12, limit=800)
+            elif dominant_boot_tf == "left_focus":
+                def f_left_recompute(t):
+                    ta = np.array(t, dtype=float)
+                    x = ta * ta
+                    jac = 2.0 * ta
+                    return base_integrand_recompute(x) * jac
+                cutsum_rc, _ = si.quad(f_left_recompute, 0.0, 1.0, epsabs=1e-12, epsrel=1e-12, limit=800)
+            else:
+                def f_right_recompute(t):
+                    ta = np.array(t, dtype=float)
+                    x = 1.0 - (1.0 - ta) * (1.0 - ta)
+                    jac = 2.0 * (1.0 - ta)
+                    return base_integrand_recompute(x) * jac
+                cutsum_rc, _ = si.quad(f_right_recompute, 0.0, 1.0, epsabs=1e-12, epsrel=1e-12, limit=800)
+            disc_rc, _ = strict_kernel_phase_integral(float(s_loc), float(om_gg), float(ph_gg), float(be_gg), float(et_gg))
+            gap_abs = float(abs(float(disc_rc) - float(cutsum_rc)))
+            recompute_gaps_abs.append(gap_abs)
+            recompute_gaps_rel.append(float(gap_abs / max(1e-30, abs(float(disc_rc)))))
+        recompute_q95_gap_abs = float(np.quantile(np.array(recompute_gaps_abs, dtype=float), 0.95))
+        recompute_max_gap_rel = float(np.max(np.array(recompute_gaps_rel, dtype=float)))
+    else:
+        recompute_q95_gap_abs = None
+        recompute_max_gap_rel = None
+
+    adaptive_recompute_gate = {
+        "status": "EXECUTED_LOCAL_RECOMPUTE" if stability_gate_passed else "SKIPPED_DUE_TO_STABILITY_CI95_GATE",
+        "scope": "STRICT_TASK2_ENDPOINT_ADAPTIVE_RECOMPUTE_GATE",
+        "ci95_lower_threshold": float(stability_gate_ci95_lower_min),
+        "dominant_transform": dominant_boot_tf,
+        "dominant_transform_ci95_lower": dominant_boot_ci95_lower,
+        "gate_passed": stability_gate_passed,
+        "q95_gap_abs_recompute": recompute_q95_gap_abs,
+        "max_gap_rel_recompute": recompute_max_gap_rel,
+        "delta_q95_gap_abs_recompute_minus_baseline": (float(recompute_q95_gap_abs) - float(np.quantile(np.array([r["gap_abs"] for r in scheme_rows], dtype=float), 0.95))) if recompute_q95_gap_abs is not None else None,
+        "delta_max_gap_rel_recompute_minus_baseline": (float(recompute_max_gap_rel) - float(np.max(np.array([r["gap_rel"] for r in scheme_rows], dtype=float)))) if recompute_max_gap_rel is not None else None,
+    }
     ur_task2_endpoint_adaptive_transform_precursor = {
         "status": "OPEN_PRECURSOR_NOT_CLOSURE",
         "scope": "STRICT_TASK2_ENDPOINT_ADAPTIVE_TRANSFORM_SELECTION",
@@ -1066,6 +1120,7 @@ def main() -> None:
         "bootstrap_size": int(adaptive_boot_n),
         "bootstrap_rows": adaptive_boot_rows,
         "most_frequent_bootstrap_transform": str(adaptive_boot_rows[0]["transform"]) if adaptive_boot_rows else "native",
+        "conditional_recompute_gate": adaptive_recompute_gate,
     }
     ur_task2_endpoint_refinement_precursor = {
         "status": "OPEN_PRECURSOR_NOT_CLOSURE",
@@ -1080,11 +1135,513 @@ def main() -> None:
     gap_rel_arr_ext = np.array([r["gap_rel"] for r in scheme_rows], dtype=float)
     q95_gap_abs_ext = float(np.quantile(gap_abs_arr_ext, 0.95)) if gap_abs_arr_ext.size else float("inf")
     max_gap_rel_ext = float(np.max(gap_rel_arr_ext)) if gap_rel_arr_ext.size else float("inf")
+    q95_ref = q95_gap_abs_ext
+    q95_contrib_rows = []
+    q95_tail_rows = []
+    for rr in scheme_rows:
+        ga = float(rr["gap_abs"])
+        is_q95_tail = bool(ga >= q95_ref)
+        if is_q95_tail:
+            q95_tail_rows.append(rr)
+        q95_contrib_rows.append({
+            "s": float(rr["s"]),
+            "gap_abs": ga,
+            "gap_rel": float(rr["gap_rel"]),
+            "is_q95_tail": is_q95_tail,
+        })
+    q95_contrib_rows = sorted(q95_contrib_rows, key=lambda r: (-r["gap_abs"], r["s"]))
+    topk = q95_contrib_rows[:3]
+    topk_sum = float(sum(r["gap_abs"] for r in topk))
+    total_sum = float(sum(r["gap_abs"] for r in q95_contrib_rows))
+    q95_tail_count = int(sum(1 for r in q95_contrib_rows if r["is_q95_tail"]))
+    q95_tail_abs_mean = float(np.mean(np.array([r["gap_abs"] for r in q95_tail_rows], dtype=float))) if q95_tail_rows else 0.0
+    q95_tail_abs_std = float(np.std(np.array([r["gap_abs"] for r in q95_tail_rows], dtype=float), ddof=1)) if len(q95_tail_rows) > 1 else 0.0
+    q95_dominant_s_attribution = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_Q95_BLOCKER_S_POINT_ATTRIBUTION",
+        "q95_gap_abs_reference": q95_ref,
+        "rows_sorted_by_gap_abs_desc": q95_contrib_rows,
+        "top3_rows": topk,
+        "top3_gap_abs_share_of_total": float(topk_sum / max(1e-30, total_sum)),
+        "q95_tail_count": q95_tail_count,
+        "q95_tail_abs_mean": q95_tail_abs_mean,
+        "q95_tail_abs_std": q95_tail_abs_std,
+        "dominant_s_value": float(topk[0]["s"]) if topk else None,
+    }
+    # Task-2 direct falsification cross-check on dominant blocker support:
+    # independent integrator comparison at top-3 s locations (quad vs fixed_quad).
+    cross_rows = []
+    for rr in topk:
+        s_loc = float(rr["s"])
+        def integrand_cross(x):
+            xa = np.array(x, dtype=float)
+            kk = np.cos(om_gg * xa + ph_gg) / (1.0 + be_gg * (xa ** et_gg))
+            return (kk * kk) / np.sqrt(np.maximum(1e-15, xa + s_loc))
+        disc_quad, _ = strict_kernel_phase_integral(s_loc, float(om_gg), float(ph_gg), float(be_gg), float(et_gg))
+        cutsum_quad, _ = si.quad(integrand_cross, 0.0, 1.0, epsabs=1e-12, epsrel=1e-12, limit=600)
+        cutsum_fixed, _ = si.fixed_quad(integrand_cross, 0.0, 1.0, n=400)
+        gap_quad = float(abs(float(disc_quad) - float(cutsum_quad)))
+        gap_fixed = float(abs(float(disc_quad) - float(cutsum_fixed)))
+        cross_rows.append({
+            "s": s_loc,
+            "disc_quad": float(disc_quad),
+            "cutsum_quad": float(cutsum_quad),
+            "cutsum_fixed_quad_n400": float(cutsum_fixed),
+            "gap_abs_quad": gap_quad,
+            "gap_abs_fixed_quad": gap_fixed,
+            "crosscheck_gap_abs": float(abs(float(cutsum_quad) - float(cutsum_fixed))),
+        })
+    crosscheck_gap_max = float(max((r["crosscheck_gap_abs"] for r in cross_rows), default=0.0))
+    top3_gap_quad_q95 = float(np.quantile(np.array([r["gap_abs_quad"] for r in cross_rows], dtype=float), 0.95)) if cross_rows else 0.0
+    top3_gap_fixed_q95 = float(np.quantile(np.array([r["gap_abs_fixed_quad"] for r in cross_rows], dtype=float), 0.95)) if cross_rows else 0.0
+    q95_dominant_crosscheck = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_Q95_DOMINANT_S_DUAL_INTEGRATOR_CROSSCHECK",
+        "rows": cross_rows,
+        "crosscheck_gap_abs_max": crosscheck_gap_max,
+        "q95_gap_abs_quad_top3": top3_gap_quad_q95,
+        "q95_gap_abs_fixed_quad_top3": top3_gap_fixed_q95,
+        "delta_q95_fixed_minus_quad_top3": float(top3_gap_fixed_q95 - top3_gap_quad_q95),
+    }
+    # Direct sign/residue-type strict check on dominant s support (symbolic + numeric).
+    xx, ssym, oms, phs, bes, ets = sp.symbols("xx ssym oms phs bes ets", positive=True, real=True)
+    strict_kernel_sym = sp.cos(oms * xx + phs) / (1 + bes * xx**ets)
+    dominant_integrand_sym = sp.simplify((strict_kernel_sym**2) / sp.sqrt(xx + ssym))
+    dominant_nonnegativity_symbolic = bool(sp.simplify(dominant_integrand_sym >= 0) == True)
+    sign_rows = []
+    for rr in topk:
+        s_loc = float(rr["s"])
+        x_grid = np.linspace(0.0, 1.0, 801)
+        kx = np.cos(om_gg * x_grid + ph_gg) / (1.0 + be_gg * (x_grid ** et_gg))
+        vals = (kx * kx) / np.sqrt(np.maximum(1e-15, x_grid + s_loc))
+        sign_rows.append({
+            "s": s_loc,
+            "integrand_min_over_x_grid": float(np.min(vals)),
+            "integrand_max_over_x_grid": float(np.max(vals)),
+            "all_nonnegative_over_x_grid": bool(np.all(vals >= -1e-15)),
+        })
+    q95_dominant_sign_check = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_Q95_DOMINANT_S_SIGN_RESIDUE_CHECK",
+        "symbolic_integrand": str(dominant_integrand_sym),
+        "symbolic_nonnegativity_certificate": dominant_nonnegativity_symbolic,
+        "rows": sign_rows,
+        "all_rows_nonnegative_numeric": bool(all(r["all_nonnegative_over_x_grid"] for r in sign_rows)),
+    }
+    # Direct numerical uncertainty estimate on dominant-s support:
+    # fixed-quadrature order-convergence (n=200, 400, 800) for CutSum integral.
+    conv_rows = []
+    for rr in topk:
+        s_loc = float(rr["s"])
+        def integrand_conv(x):
+            xa = np.array(x, dtype=float)
+            kk = np.cos(om_gg * xa + ph_gg) / (1.0 + be_gg * (xa ** et_gg))
+            return (kk * kk) / np.sqrt(np.maximum(1e-15, xa + s_loc))
+        disc_ref, _ = strict_kernel_phase_integral(s_loc, float(om_gg), float(ph_gg), float(be_gg), float(et_gg))
+        cut_200, _ = si.fixed_quad(integrand_conv, 0.0, 1.0, n=200)
+        cut_400, _ = si.fixed_quad(integrand_conv, 0.0, 1.0, n=400)
+        cut_800, _ = si.fixed_quad(integrand_conv, 0.0, 1.0, n=800)
+        d200_400 = float(abs(float(cut_400) - float(cut_200)))
+        d400_800 = float(abs(float(cut_800) - float(cut_400)))
+        conv_rows.append({
+            "s": s_loc,
+            "disc_reference": float(disc_ref),
+            "cutsum_fixed_quad_n200": float(cut_200),
+            "cutsum_fixed_quad_n400": float(cut_400),
+            "cutsum_fixed_quad_n800": float(cut_800),
+            "gap_abs_n200": float(abs(float(disc_ref) - float(cut_200))),
+            "gap_abs_n400": float(abs(float(disc_ref) - float(cut_400))),
+            "gap_abs_n800": float(abs(float(disc_ref) - float(cut_800))),
+            "delta_n200_to_n400_abs": d200_400,
+            "delta_n400_to_n800_abs": d400_800,
+            "convergence_ratio_400_800_over_200_400": float(d400_800 / max(1e-30, d200_400)),
+        })
+    q95_dominant_convergence = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_Q95_DOMINANT_S_FIXED_QUAD_CONVERGENCE",
+        "rows": conv_rows,
+        "max_delta_n400_to_n800_abs": float(max((r["delta_n400_to_n800_abs"] for r in conv_rows), default=0.0)),
+        "median_convergence_ratio_400_800_over_200_400": float(np.median(np.array([r["convergence_ratio_400_800_over_200_400"] for r in conv_rows], dtype=float))) if conv_rows else 0.0,
+        "q95_gap_abs_n800_top3": float(np.quantile(np.array([r["gap_abs_n800"] for r in conv_rows], dtype=float), 0.95)) if conv_rows else 0.0,
+    }
+    # Direct blocker-margin falsification panel: distance to closure threshold with uncertainty envelope.
+    q95_threshold = float(pass_fail_criteria_task2["q95_gap_abs_max"])
+    q95_observed = q95_gap_abs_ext
+    q95_margin = float(q95_observed - q95_threshold)
+    q95_unc_abs = float(q95_dominant_convergence["max_delta_n400_to_n800_abs"])
+    q95_upper_bound = float(q95_observed + q95_unc_abs)
+    q95_lower_bound = float(max(0.0, q95_observed - q95_unc_abs))
+    q95_margin_robust_sign = "ABOVE_THRESHOLD_ROBUST" if q95_lower_bound > q95_threshold else (
+        "BELOW_THRESHOLD_ROBUST" if q95_upper_bound < q95_threshold else "AMBIGUOUS_WITHIN_UNCERTAINTY"
+    )
+    q95_blocker_margin = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_Q95_BLOCKER_MARGIN_WITH_UNCERTAINTY",
+        "q95_gap_abs_observed": q95_observed,
+        "q95_gap_abs_threshold": q95_threshold,
+        "q95_margin_observed_minus_threshold": q95_margin,
+        "uncertainty_abs_from_fixed_quad_convergence": q95_unc_abs,
+        "q95_gap_abs_interval_from_uncertainty": {"lower": q95_lower_bound, "upper": q95_upper_bound},
+        "margin_robust_sign": q95_margin_robust_sign,
+    }
+    # Counterfactual closure pressure panel:
+    # how much threshold tightening/loosening would be needed to flip closure state.
+    threshold_scale_required_for_observed_crossing = float(q95_observed / max(1e-30, q95_threshold))
+    threshold_scale_required_for_upper_bound_crossing = float(q95_upper_bound / max(1e-30, q95_threshold))
+    q95_blocker_counterfactual = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_Q95_BLOCKER_COUNTERFACTUAL_THRESHOLD_PRESSURE",
+        "threshold_scale_required_for_observed_crossing": threshold_scale_required_for_observed_crossing,
+        "threshold_scale_required_for_upper_bound_crossing": threshold_scale_required_for_upper_bound_crossing,
+        "observed_would_close_under_current_threshold": bool(q95_observed <= q95_threshold),
+        "upper_bound_would_close_under_current_threshold": bool(q95_upper_bound <= q95_threshold),
+        "pressure_interpretation": (
+            "THRESHOLD_MUCH_LOOSER_NEEDED_FOR_CLOSURE" if threshold_scale_required_for_upper_bound_crossing > 1.0 else
+            "CLOSURE_WITHIN_CURRENT_OR_STRICTER_THRESHOLD"
+        ),
+    }
+    # Local blocker sensitivity panel: how gap_abs responds to small s perturbation on dominant support.
+    s_eps = 0.05
+    sensitivity_rows = []
+    for rr in topk:
+        s0 = float(rr["s"])
+        s_minus = max(0.05, s0 - s_eps)
+        s_plus = min(3.5, s0 + s_eps)
+        def gap_abs_at_s(s_loc: float) -> float:
+            disc_loc, _ = strict_kernel_phase_integral(float(s_loc), float(om_gg), float(ph_gg), float(be_gg), float(et_gg))
+            def base_integrand(x):
+                xa = np.array(x, dtype=float)
+                kk = np.cos(om_gg * xa + ph_gg) / (1.0 + be_gg * (xa ** et_gg))
+                return (kk * kk) / np.sqrt(np.maximum(1e-15, xa + s_loc))
+            cutsum_loc, _ = si.quad(base_integrand, 0.0, 1.0, epsabs=1e-12, epsrel=1e-12, limit=600)
+            return float(abs(float(disc_loc) - float(cutsum_loc)))
+        g_minus = gap_abs_at_s(s_minus)
+        g0 = gap_abs_at_s(s0)
+        g_plus = gap_abs_at_s(s_plus)
+        dsd = max(1e-15, s_plus - s_minus)
+        local_slope_abs = float(abs((g_plus - g_minus) / dsd))
+        sensitivity_rows.append({
+            "s_center": s0,
+            "s_minus": float(s_minus),
+            "s_plus": float(s_plus),
+            "gap_abs_s_minus": g_minus,
+            "gap_abs_s_center": g0,
+            "gap_abs_s_plus": g_plus,
+            "local_slope_abs_dgap_ds": local_slope_abs,
+        })
+    q95_blocker_sensitivity = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_Q95_BLOCKER_LOCAL_S_SENSITIVITY",
+        "s_perturbation_eps": float(s_eps),
+        "rows": sensitivity_rows,
+        "max_local_slope_abs_dgap_ds": float(max((r["local_slope_abs_dgap_ds"] for r in sensitivity_rows), default=0.0)),
+        "median_local_slope_abs_dgap_ds": float(np.median(np.array([r["local_slope_abs_dgap_ds"] for r in sensitivity_rows], dtype=float))) if sensitivity_rows else 0.0,
+    }
+    # Directionality panel: does increasing s locally reduce or increase blocker gap on dominant support?
+    dir_rows = []
+    for rr in sensitivity_rows:
+        dplus = float(rr["gap_abs_s_plus"] - rr["gap_abs_s_center"])
+        dminus = float(rr["gap_abs_s_center"] - rr["gap_abs_s_minus"])
+        dir_rows.append({
+            "s_center": float(rr["s_center"]),
+            "delta_plus": dplus,
+            "delta_minus": dminus,
+            "upward_step_reduces_gap": bool(dplus < 0.0),
+            "downward_step_reduces_gap": bool(dminus > 0.0),
+        })
+    q95_blocker_directionality = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_Q95_BLOCKER_LOCAL_DIRECTIONALITY",
+        "rows": dir_rows,
+        "upward_step_reduces_gap_frequency": float(np.mean(np.array([1.0 if r["upward_step_reduces_gap"] else 0.0 for r in dir_rows], dtype=float))) if dir_rows else 0.0,
+        "downward_step_reduces_gap_frequency": float(np.mean(np.array([1.0 if r["downward_step_reduces_gap"] else 0.0 for r in dir_rows], dtype=float))) if dir_rows else 0.0,
+    }
+    # Actionability panel: strict local recommended move on dominant support.
+    action_rows = []
+    for rr in dir_rows:
+        if bool(rr["upward_step_reduces_gap"]) and not bool(rr["downward_step_reduces_gap"]):
+            move = "INCREASE_S"
+            effect = float(-rr["delta_plus"])
+        elif bool(rr["downward_step_reduces_gap"]) and not bool(rr["upward_step_reduces_gap"]):
+            move = "DECREASE_S"
+            effect = float(rr["delta_minus"])
+        elif bool(rr["downward_step_reduces_gap"]) and bool(rr["upward_step_reduces_gap"]):
+            if float(-rr["delta_plus"]) >= float(rr["delta_minus"]):
+                move = "INCREASE_S"
+                effect = float(-rr["delta_plus"])
+            else:
+                move = "DECREASE_S"
+                effect = float(rr["delta_minus"])
+        else:
+            move = "NO_LOCAL_RELIEF"
+            effect = 0.0
+        action_rows.append({
+            "s_center": float(rr["s_center"]),
+            "recommended_move": move,
+            "estimated_local_gap_reduction": float(max(0.0, effect)),
+        })
+    action_rows = sorted(action_rows, key=lambda r: (-r["estimated_local_gap_reduction"], r["s_center"]))
+    q95_blocker_actionability = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_Q95_BLOCKER_LOCAL_ACTIONABILITY",
+        "rows": action_rows,
+        "best_action_s": float(action_rows[0]["s_center"]) if action_rows else None,
+        "best_action_move": str(action_rows[0]["recommended_move"]) if action_rows else "NO_LOCAL_RELIEF",
+        "best_action_estimated_local_gap_reduction": float(action_rows[0]["estimated_local_gap_reduction"]) if action_rows else 0.0,
+    }
+    # One-step execution preview on best local action (strict diagnostic, not closure claim).
+    if action_rows and action_rows[0]["recommended_move"] in {"INCREASE_S", "DECREASE_S"}:
+        best_s = float(action_rows[0]["s_center"])
+        best_move = str(action_rows[0]["recommended_move"])
+        s_step = float(s_eps)
+        s_new = min(3.5, best_s + s_step) if best_move == "INCREASE_S" else max(0.05, best_s - s_step)
+        def gap_abs_at_action_s(s_loc: float) -> float:
+            disc_loc, _ = strict_kernel_phase_integral(float(s_loc), float(om_gg), float(ph_gg), float(be_gg), float(et_gg))
+            def base_integrand(x):
+                xa = np.array(x, dtype=float)
+                kk = np.cos(om_gg * xa + ph_gg) / (1.0 + be_gg * (xa ** et_gg))
+                return (kk * kk) / np.sqrt(np.maximum(1e-15, xa + s_loc))
+            cutsum_loc, _ = si.quad(base_integrand, 0.0, 1.0, epsabs=1e-12, epsrel=1e-12, limit=600)
+            return float(abs(float(disc_loc) - float(cutsum_loc)))
+        gap_before = gap_abs_at_action_s(best_s)
+        gap_after = gap_abs_at_action_s(s_new)
+        q95_blocker_action_execution = {
+            "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+            "scope": "STRICT_TASK2_Q95_BLOCKER_ONE_STEP_ACTION_EXECUTION",
+            "s_before": best_s,
+            "s_after": float(s_new),
+            "move": best_move,
+            "gap_abs_before": gap_before,
+            "gap_abs_after": gap_after,
+            "delta_gap_abs_after_minus_before": float(gap_after - gap_before),
+            "improves_locally": bool(gap_after < gap_before),
+        }
+    else:
+        q95_blocker_action_execution = {
+            "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+            "scope": "STRICT_TASK2_Q95_BLOCKER_ONE_STEP_ACTION_EXECUTION",
+            "s_before": None,
+            "s_after": None,
+            "move": "NO_LOCAL_RELIEF",
+            "gap_abs_before": None,
+            "gap_abs_after": None,
+            "delta_gap_abs_after_minus_before": None,
+            "improves_locally": False,
+        }
+    # One-step uncertainty cross-check: verify action effect sign against independent fixed_quad estimate.
+    if q95_blocker_action_execution["s_before"] is not None:
+        s_before = float(q95_blocker_action_execution["s_before"])
+        s_after = float(q95_blocker_action_execution["s_after"])
+        def gap_abs_fixedq(s_loc: float, n: int) -> float:
+            disc_loc, _ = strict_kernel_phase_integral(float(s_loc), float(om_gg), float(ph_gg), float(be_gg), float(et_gg))
+            def base_integrand(x):
+                xa = np.array(x, dtype=float)
+                kk = np.cos(om_gg * xa + ph_gg) / (1.0 + be_gg * (xa ** et_gg))
+                return (kk * kk) / np.sqrt(np.maximum(1e-15, xa + s_loc))
+            cut_loc, _ = si.fixed_quad(base_integrand, 0.0, 1.0, n=n)
+            return float(abs(float(disc_loc) - float(cut_loc)))
+        before_n400 = gap_abs_fixedq(s_before, 400)
+        after_n400 = gap_abs_fixedq(s_after, 400)
+        before_n800 = gap_abs_fixedq(s_before, 800)
+        after_n800 = gap_abs_fixedq(s_after, 800)
+        delta_n400 = float(after_n400 - before_n400)
+        delta_n800 = float(after_n800 - before_n800)
+        q95_action_effect_crosscheck = {
+            "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+            "scope": "STRICT_TASK2_Q95_ACTION_EFFECT_FIXED_QUAD_CROSSCHECK",
+            "delta_gap_abs_n400_after_minus_before": delta_n400,
+            "delta_gap_abs_n800_after_minus_before": delta_n800,
+            "effect_sign_consistent_across_orders": bool((delta_n400 <= 0.0 and delta_n800 <= 0.0) or (delta_n400 >= 0.0 and delta_n800 >= 0.0)),
+            "both_orders_improve": bool(delta_n400 < 0.0 and delta_n800 < 0.0),
+        }
+    else:
+        q95_action_effect_crosscheck = {
+            "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+            "scope": "STRICT_TASK2_Q95_ACTION_EFFECT_FIXED_QUAD_CROSSCHECK",
+            "delta_gap_abs_n400_after_minus_before": None,
+            "delta_gap_abs_n800_after_minus_before": None,
+            "effect_sign_consistent_across_orders": True,
+            "both_orders_improve": False,
+        }
+    # Bootstrap robustness of one-step action effect sign on dominant local support.
+    if q95_blocker_action_execution["s_before"] is not None:
+        s_before = float(q95_blocker_action_execution["s_before"])
+        s_after = float(q95_blocker_action_execution["s_after"])
+        boot_rng = np.random.default_rng(193975)
+        boot_n = 128
+        improve_count = 0
+        delta_samples = []
+        for _ in range(boot_n):
+            n_loc = int(boot_rng.integers(300, 901))
+            def gap_abs_fixedq(s_loc: float) -> float:
+                disc_loc, _ = strict_kernel_phase_integral(float(s_loc), float(om_gg), float(ph_gg), float(be_gg), float(et_gg))
+                def base_integrand(x):
+                    xa = np.array(x, dtype=float)
+                    kk = np.cos(om_gg * xa + ph_gg) / (1.0 + be_gg * (xa ** et_gg))
+                    return (kk * kk) / np.sqrt(np.maximum(1e-15, xa + s_loc))
+                cut_loc, _ = si.fixed_quad(base_integrand, 0.0, 1.0, n=n_loc)
+                return float(abs(float(disc_loc) - float(cut_loc)))
+            before = gap_abs_fixedq(s_before)
+            after = gap_abs_fixedq(s_after)
+            delta = float(after - before)
+            delta_samples.append(delta)
+            if delta < 0.0:
+                improve_count += 1
+        p_improve = float(improve_count / boot_n)
+        q95_action_effect_bootstrap = {
+            "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+            "scope": "STRICT_TASK2_Q95_ACTION_EFFECT_BOOTSTRAP_ROBUSTNESS",
+            "bootstrap_size": int(boot_n),
+            "n_range_inclusive": [300, 900],
+            "p_improve": p_improve,
+            "p_improve_ci95_jeffreys": jeffreys_interval_from_successes(improve_count, boot_n),
+            "delta_q05_q50_q95": [float(np.quantile(np.array(delta_samples, dtype=float), q)) for q in [0.05, 0.50, 0.95]],
+        }
+    else:
+        q95_action_effect_bootstrap = {
+            "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+            "scope": "STRICT_TASK2_Q95_ACTION_EFFECT_BOOTSTRAP_ROBUSTNESS",
+            "bootstrap_size": 0,
+            "n_range_inclusive": [300, 900],
+            "p_improve": 0.0,
+            "p_improve_ci95_jeffreys": {"lower": 0.0, "upper": 1.0},
+            "delta_q05_q50_q95": [0.0, 0.0, 0.0],
+        }
+    # Strict decision gate for local action execution validity under bootstrap robustness.
+    q95_action_gate = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_Q95_ACTION_BOOTSTRAP_DECISION_GATE",
+        "p_improve_lb95_threshold": 0.60,
+        "criterion_p_improve_lb95_ge_threshold": bool(q95_action_effect_bootstrap["p_improve_ci95_jeffreys"]["lower"] >= 0.60),
+        "criterion_fixed_quad_sign_consistent": bool(q95_action_effect_crosscheck["effect_sign_consistent_across_orders"]),
+    }
+    q95_action_gate["go_for_next_local_step"] = bool(
+        q95_action_gate["criterion_p_improve_lb95_ge_threshold"] and
+        q95_action_gate["criterion_fixed_quad_sign_consistent"]
+    )
+    q95_action_gate["reason"] = "GO" if q95_action_gate["go_for_next_local_step"] else "HOLD_AND_RECALIBRATE"
+    q95_action_gate_consistency = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_Q95_ACTION_GATE_CONSISTENCY",
+        "checks": {
+            "if_go_then_action_exists": bool((not q95_action_gate["go_for_next_local_step"]) or (q95_blocker_action_execution["move"] != "NO_LOCAL_RELIEF")),
+            "if_go_then_bootstrap_executed": bool((not q95_action_gate["go_for_next_local_step"]) or (q95_action_effect_bootstrap["bootstrap_size"] > 0)),
+            "if_go_then_crosscheck_not_none": bool((not q95_action_gate["go_for_next_local_step"]) or (q95_action_effect_crosscheck["delta_gap_abs_n400_after_minus_before"] is not None)),
+        },
+    }
+    q95_action_gate_consistency["all_checks_pass"] = bool(all(q95_action_gate_consistency["checks"].values()))
+    # Direct one-step efficiency panel: realized blocker reduction per unit local step.
+    if q95_blocker_action_execution["s_before"] is not None:
+        s_before = float(q95_blocker_action_execution["s_before"])
+        s_after = float(q95_blocker_action_execution["s_after"])
+        step_abs = float(abs(s_after - s_before))
+        gap_before = float(q95_blocker_action_execution["gap_abs_before"])
+        gap_after = float(q95_blocker_action_execution["gap_abs_after"])
+        gap_reduction = float(max(0.0, gap_before - gap_after))
+        q95_blocker_step_efficiency = {
+            "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+            "scope": "STRICT_TASK2_Q95_BLOCKER_ONE_STEP_EFFICIENCY",
+            "step_abs": step_abs,
+            "gap_abs_before": gap_before,
+            "gap_abs_after": gap_after,
+            "gap_abs_reduction": gap_reduction,
+            "reduction_per_unit_s_step": float(gap_reduction / max(1e-15, step_abs)),
+            "relative_reduction_fraction": float(gap_reduction / max(1e-30, gap_before)),
+        }
+    else:
+        q95_blocker_step_efficiency = {
+            "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+            "scope": "STRICT_TASK2_Q95_BLOCKER_ONE_STEP_EFFICIENCY",
+            "step_abs": 0.0,
+            "gap_abs_before": 0.0,
+            "gap_abs_after": 0.0,
+            "gap_abs_reduction": 0.0,
+            "reduction_per_unit_s_step": 0.0,
+            "relative_reduction_fraction": 0.0,
+        }
+    # Immediate closure-distance update after one-step action on dominant support.
+    if q95_blocker_action_execution["s_before"] is not None:
+        q95_after_one_step_local_margin = {
+            "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+            "scope": "STRICT_TASK2_Q95_AFTER_ONE_STEP_LOCAL_MARGIN",
+            "q95_gap_abs_threshold": float(pass_fail_criteria_task2["q95_gap_abs_max"]),
+            "gap_abs_before": float(q95_blocker_action_execution["gap_abs_before"]),
+            "gap_abs_after": float(q95_blocker_action_execution["gap_abs_after"]),
+            "margin_before": float(q95_blocker_action_execution["gap_abs_before"] - float(pass_fail_criteria_task2["q95_gap_abs_max"])),
+            "margin_after": float(q95_blocker_action_execution["gap_abs_after"] - float(pass_fail_criteria_task2["q95_gap_abs_max"])),
+            "margin_delta_after_minus_before": float(
+                (q95_blocker_action_execution["gap_abs_after"] - float(pass_fail_criteria_task2["q95_gap_abs_max"]))
+                - (q95_blocker_action_execution["gap_abs_before"] - float(pass_fail_criteria_task2["q95_gap_abs_max"]))
+            ),
+            "moves_toward_closure": bool(q95_blocker_action_execution["gap_abs_after"] < q95_blocker_action_execution["gap_abs_before"]),
+        }
+    else:
+        q95_after_one_step_local_margin = {
+            "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+            "scope": "STRICT_TASK2_Q95_AFTER_ONE_STEP_LOCAL_MARGIN",
+            "q95_gap_abs_threshold": float(pass_fail_criteria_task2["q95_gap_abs_max"]),
+            "gap_abs_before": None,
+            "gap_abs_after": None,
+            "margin_before": None,
+            "margin_after": None,
+            "margin_delta_after_minus_before": None,
+            "moves_toward_closure": False,
+        }
+    # One-step normalized closure progress score on local margin (0..1 when improving).
+    if q95_after_one_step_local_margin["margin_before"] is not None:
+        mb = float(q95_after_one_step_local_margin["margin_before"])
+        ma = float(q95_after_one_step_local_margin["margin_after"])
+        progress = float(max(0.0, mb - ma))
+        denom = float(max(1e-30, abs(mb)))
+        q95_after_one_step_progress_score = {
+            "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+            "scope": "STRICT_TASK2_Q95_AFTER_ONE_STEP_PROGRESS_SCORE",
+            "margin_before_abs": float(abs(mb)),
+            "margin_after_abs": float(abs(ma)),
+            "absolute_margin_improvement": progress,
+            "normalized_progress_score_0_1": float(min(1.0, progress / denom)),
+        }
+    else:
+        q95_after_one_step_progress_score = {
+            "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+            "scope": "STRICT_TASK2_Q95_AFTER_ONE_STEP_PROGRESS_SCORE",
+            "margin_before_abs": 0.0,
+            "margin_after_abs": 0.0,
+            "absolute_margin_improvement": 0.0,
+            "normalized_progress_score_0_1": 0.0,
+        }
     obstruction_is_numerically_sensitive = bool(float(np.max(np.array([r["cutsum_scheme_gap_abs"] for r in scheme_rows], dtype=float))) > 0.05 * q95_gap_abs_ext)
     criteria_eval = {
         "q95_gap_abs_le_threshold": bool(q95_gap_abs_ext <= float(pass_fail_criteria_task2["q95_gap_abs_max"])),
         "max_gap_rel_le_threshold": bool(max_gap_rel_ext <= float(pass_fail_criteria_task2["max_gap_rel_max"])),
         "all_nonnegative_weights": bool(all_nonnegative),
+    }
+    # Blocker-choice panel: identify easiest unresolved criterion to close (smallest normalized overshoot).
+    q95_thr = float(pass_fail_criteria_task2["q95_gap_abs_max"])
+    rel_thr = float(pass_fail_criteria_task2["max_gap_rel_max"])
+    overs_q95 = float(max(0.0, q95_gap_abs_ext - q95_thr) / max(1e-30, q95_thr))
+    overs_rel = float(max(0.0, max_gap_rel_ext - rel_thr) / max(1e-30, rel_thr))
+    overs_sign = 1.0 if not all_nonnegative else 0.0
+    blocker_rows = [
+        {"criterion": "q95_gap_abs", "normalized_overshoot": overs_q95, "is_satisfied": bool(criteria_eval["q95_gap_abs_le_threshold"])},
+        {"criterion": "max_gap_rel", "normalized_overshoot": overs_rel, "is_satisfied": bool(criteria_eval["max_gap_rel_le_threshold"])},
+        {"criterion": "weight_sign_nonnegativity", "normalized_overshoot": overs_sign, "is_satisfied": bool(criteria_eval["all_nonnegative_weights"])},
+    ]
+    unresolved = [r for r in blocker_rows if not r["is_satisfied"]]
+    easiest_unresolved = sorted(unresolved, key=lambda r: (r["normalized_overshoot"], r["criterion"]))[0]["criterion"] if unresolved else "none"
+    q95_blocker_choice_panel = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_BLOCKER_CHOICE_NORMALIZED_OVERSHOOT",
+        "rows": blocker_rows,
+        "easiest_unresolved_blocker": easiest_unresolved,
+    }
+    dominant_blocker_snapshot = str(locals().get("dominant_blocker", "pending"))
+    q95_blocker_choice_consistency = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_BLOCKER_CHOICE_CONSISTENCY",
+        "dominant_blocker": dominant_blocker_snapshot,
+        "easiest_unresolved_blocker": easiest_unresolved,
+        "is_consistent_when_q95_dominates": bool((dominant_blocker_snapshot != "q95_gap_abs") or (easiest_unresolved in {"q95_gap_abs", "none"})),
     }
     dominant_blocker = "q95_gap_abs" if not criteria_eval["q95_gap_abs_le_threshold"] else (
         "max_gap_rel" if not criteria_eval["max_gap_rel_le_threshold"] else (
@@ -1133,6 +1690,25 @@ def main() -> None:
         "endpoint_refinement": ur_task2_endpoint_refinement_precursor,
         "endpoint_split_domain": ur_task2_endpoint_split_domain_precursor,
         "endpoint_adaptive_transform": ur_task2_endpoint_adaptive_transform_precursor,
+        "q95_dominant_s_attribution": q95_dominant_s_attribution,
+        "q95_dominant_s_crosscheck": q95_dominant_crosscheck,
+        "q95_dominant_s_sign_check": q95_dominant_sign_check,
+        "q95_dominant_s_convergence": q95_dominant_convergence,
+        "q95_blocker_margin": q95_blocker_margin,
+        "q95_blocker_counterfactual": q95_blocker_counterfactual,
+        "q95_blocker_sensitivity": q95_blocker_sensitivity,
+        "q95_blocker_directionality": q95_blocker_directionality,
+        "q95_blocker_actionability": q95_blocker_actionability,
+        "q95_blocker_action_execution": q95_blocker_action_execution,
+        "q95_action_effect_crosscheck": q95_action_effect_crosscheck,
+        "q95_action_effect_bootstrap": q95_action_effect_bootstrap,
+        "q95_action_gate": q95_action_gate,
+        "q95_action_gate_consistency": q95_action_gate_consistency,
+        "q95_blocker_step_efficiency": q95_blocker_step_efficiency,
+        "q95_after_one_step_local_margin": q95_after_one_step_local_margin,
+        "q95_after_one_step_progress_score": q95_after_one_step_progress_score,
+        "q95_blocker_choice_panel": q95_blocker_choice_panel,
+        "q95_blocker_choice_consistency": q95_blocker_choice_consistency,
         "pass_fail_criteria": pass_fail_criteria_task2,
         "closure_consistency": {
             "criteria_evaluation": criteria_eval,
@@ -5517,7 +6093,7 @@ def main() -> None:
     }
 
     payload = {
-        "schema_version": "p2025_s975_v181",
+        "schema_version": "p2025_s975_v201",
         "produced_by": Path(__file__).name,
         "timestamp_utc": TS,
         "status": "OPEN_OBSTRUCTION_WITH_TRACE",

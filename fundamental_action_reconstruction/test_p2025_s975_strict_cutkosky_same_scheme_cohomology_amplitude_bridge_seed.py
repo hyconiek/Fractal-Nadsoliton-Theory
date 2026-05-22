@@ -14,7 +14,7 @@ OUT_QUALITY_CSV = ROOT / "generated" / "p2025_s975_strict_cutkosky_same_scheme_c
 def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     subprocess.run([sys.executable, str(SCRIPT)], check=True)
     data = json.loads(OUT.read_text(encoding="utf-8"))
-    assert data["schema_version"] == "p2025_s975_v181"
+    assert data["schema_version"] == "p2025_s975_v201"
     assert data["status"] == "OPEN_OBSTRUCTION_WITH_TRACE"
     assert all(data["gatekeeper_checks"].values())
     assert len(data["toe_closure_gaps_7tasks"]) == 7
@@ -902,6 +902,26 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     assert eat["bootstrap_size"] == 256
     assert len(eat["bootstrap_rows"]) == 3
     assert eat["most_frequent_bootstrap_transform"] in {"native", "left_focus", "right_focus"}
+    assert "conditional_recompute_gate" in eat
+    crg = eat["conditional_recompute_gate"]
+    assert crg["status"] in {"EXECUTED_LOCAL_RECOMPUTE", "SKIPPED_DUE_TO_STABILITY_CI95_GATE"}
+    assert crg["scope"] == "STRICT_TASK2_ENDPOINT_ADAPTIVE_RECOMPUTE_GATE"
+    assert crg["ci95_lower_threshold"] == 0.6
+    assert crg["dominant_transform"] in {"native", "left_focus", "right_focus"}
+    assert 0.0 <= crg["dominant_transform_ci95_lower"] <= 1.0
+    assert isinstance(crg["gate_passed"], bool)
+    if crg["gate_passed"]:
+        assert crg["status"] == "EXECUTED_LOCAL_RECOMPUTE"
+        assert crg["q95_gap_abs_recompute"] >= 0.0
+        assert crg["max_gap_rel_recompute"] >= 0.0
+        assert isinstance(crg["delta_q95_gap_abs_recompute_minus_baseline"], float)
+        assert isinstance(crg["delta_max_gap_rel_recompute_minus_baseline"], float)
+    else:
+        assert crg["status"] == "SKIPPED_DUE_TO_STABILITY_CI95_GATE"
+        assert crg["q95_gap_abs_recompute"] is None
+        assert crg["max_gap_rel_recompute"] is None
+        assert crg["delta_q95_gap_abs_recompute_minus_baseline"] is None
+        assert crg["delta_max_gap_rel_recompute_minus_baseline"] is None
     total_freq = 0.0
     for rr in eat["bootstrap_rows"]:
         assert rr["transform"] in {"native", "left_focus", "right_focus"}
@@ -940,6 +960,257 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     assert isinstance(cc["all_criteria_satisfied"], bool)
     assert cc["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "none"}
     assert isinstance(cc["dominant_inequality"], str) and len(cc["dominant_inequality"]) > 0
+    assert "q95_dominant_s_attribution" in t2w
+    qsa = t2w["q95_dominant_s_attribution"]
+    assert qsa["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert qsa["scope"] == "STRICT_TASK2_Q95_BLOCKER_S_POINT_ATTRIBUTION"
+    assert qsa["q95_gap_abs_reference"] >= 0.0
+    assert len(qsa["rows_sorted_by_gap_abs_desc"]) == len(t2w["s_grid"])
+    assert len(qsa["top3_rows"]) <= 3
+    assert 0.0 <= qsa["top3_gap_abs_share_of_total"] <= 1.0
+    assert 0 <= qsa["q95_tail_count"] <= len(t2w["s_grid"])
+    assert qsa["q95_tail_abs_mean"] >= 0.0
+    assert qsa["q95_tail_abs_std"] >= 0.0
+    if qsa["dominant_s_value"] is not None:
+        assert qsa["dominant_s_value"] in set(t2w["s_grid"])
+    prev_gap = None
+    for rr in qsa["rows_sorted_by_gap_abs_desc"]:
+        assert rr["s"] in set(t2w["s_grid"])
+        assert rr["gap_abs"] >= 0.0
+        assert rr["gap_rel"] >= 0.0
+        assert isinstance(rr["is_q95_tail"], bool)
+        if prev_gap is not None:
+            assert prev_gap + 1e-18 >= rr["gap_abs"]
+        prev_gap = rr["gap_abs"]
+    assert "q95_dominant_s_crosscheck" in t2w
+    qsc = t2w["q95_dominant_s_crosscheck"]
+    assert qsc["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert qsc["scope"] == "STRICT_TASK2_Q95_DOMINANT_S_DUAL_INTEGRATOR_CROSSCHECK"
+    assert len(qsc["rows"]) <= 3
+    assert qsc["crosscheck_gap_abs_max"] >= 0.0
+    assert qsc["q95_gap_abs_quad_top3"] >= 0.0
+    assert qsc["q95_gap_abs_fixed_quad_top3"] >= 0.0
+    assert isinstance(qsc["delta_q95_fixed_minus_quad_top3"], float)
+    for rr in qsc["rows"]:
+        assert rr["s"] in set(t2w["s_grid"])
+        assert rr["disc_quad"] >= 0.0
+        assert rr["cutsum_quad"] >= 0.0
+        assert rr["cutsum_fixed_quad_n400"] >= 0.0
+        assert rr["gap_abs_quad"] >= 0.0
+        assert rr["gap_abs_fixed_quad"] >= 0.0
+        assert rr["crosscheck_gap_abs"] >= 0.0
+    assert "q95_dominant_s_sign_check" in t2w
+    qss = t2w["q95_dominant_s_sign_check"]
+    assert qss["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert qss["scope"] == "STRICT_TASK2_Q95_DOMINANT_S_SIGN_RESIDUE_CHECK"
+    assert isinstance(qss["symbolic_integrand"], str) and len(qss["symbolic_integrand"]) > 0
+    assert isinstance(qss["symbolic_nonnegativity_certificate"], bool)
+    assert isinstance(qss["all_rows_nonnegative_numeric"], bool)
+    assert len(qss["rows"]) <= 3
+    for rr in qss["rows"]:
+        assert rr["s"] in set(t2w["s_grid"])
+        assert rr["integrand_min_over_x_grid"] >= -1e-12
+        assert rr["integrand_max_over_x_grid"] >= rr["integrand_min_over_x_grid"]
+        assert isinstance(rr["all_nonnegative_over_x_grid"], bool)
+    assert "q95_dominant_s_convergence" in t2w
+    qcv = t2w["q95_dominant_s_convergence"]
+    assert qcv["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert qcv["scope"] == "STRICT_TASK2_Q95_DOMINANT_S_FIXED_QUAD_CONVERGENCE"
+    assert len(qcv["rows"]) <= 3
+    assert qcv["max_delta_n400_to_n800_abs"] >= 0.0
+    assert qcv["median_convergence_ratio_400_800_over_200_400"] >= 0.0
+    assert qcv["q95_gap_abs_n800_top3"] >= 0.0
+    for rr in qcv["rows"]:
+        assert rr["s"] in set(t2w["s_grid"])
+        assert rr["disc_reference"] >= 0.0
+        assert rr["cutsum_fixed_quad_n200"] >= 0.0
+        assert rr["cutsum_fixed_quad_n400"] >= 0.0
+        assert rr["cutsum_fixed_quad_n800"] >= 0.0
+        assert rr["gap_abs_n200"] >= 0.0
+        assert rr["gap_abs_n400"] >= 0.0
+        assert rr["gap_abs_n800"] >= 0.0
+        assert rr["delta_n200_to_n400_abs"] >= 0.0
+        assert rr["delta_n400_to_n800_abs"] >= 0.0
+        assert rr["convergence_ratio_400_800_over_200_400"] >= 0.0
+    assert "q95_blocker_margin" in t2w
+    qbm = t2w["q95_blocker_margin"]
+    assert qbm["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert qbm["scope"] == "STRICT_TASK2_Q95_BLOCKER_MARGIN_WITH_UNCERTAINTY"
+    assert qbm["q95_gap_abs_observed"] >= 0.0
+    assert qbm["q95_gap_abs_threshold"] > 0.0
+    assert isinstance(qbm["q95_margin_observed_minus_threshold"], float)
+    assert qbm["uncertainty_abs_from_fixed_quad_convergence"] >= 0.0
+    iv = qbm["q95_gap_abs_interval_from_uncertainty"]
+    assert 0.0 <= iv["lower"] <= iv["upper"]
+    assert qbm["margin_robust_sign"] in {"ABOVE_THRESHOLD_ROBUST", "BELOW_THRESHOLD_ROBUST", "AMBIGUOUS_WITHIN_UNCERTAINTY"}
+    assert "q95_blocker_counterfactual" in t2w
+    qbc = t2w["q95_blocker_counterfactual"]
+    assert qbc["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert qbc["scope"] == "STRICT_TASK2_Q95_BLOCKER_COUNTERFACTUAL_THRESHOLD_PRESSURE"
+    assert qbc["threshold_scale_required_for_observed_crossing"] >= 0.0
+    assert qbc["threshold_scale_required_for_upper_bound_crossing"] >= 0.0
+    assert isinstance(qbc["observed_would_close_under_current_threshold"], bool)
+    assert isinstance(qbc["upper_bound_would_close_under_current_threshold"], bool)
+    assert qbc["pressure_interpretation"] in {
+        "THRESHOLD_MUCH_LOOSER_NEEDED_FOR_CLOSURE",
+        "CLOSURE_WITHIN_CURRENT_OR_STRICTER_THRESHOLD",
+    }
+    assert "q95_blocker_sensitivity" in t2w
+    qbs = t2w["q95_blocker_sensitivity"]
+    assert qbs["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert qbs["scope"] == "STRICT_TASK2_Q95_BLOCKER_LOCAL_S_SENSITIVITY"
+    assert qbs["s_perturbation_eps"] > 0.0
+    assert len(qbs["rows"]) <= 3
+    assert qbs["max_local_slope_abs_dgap_ds"] >= 0.0
+    assert qbs["median_local_slope_abs_dgap_ds"] >= 0.0
+    for rr in qbs["rows"]:
+        assert rr["s_center"] in set(t2w["s_grid"])
+        assert rr["s_minus"] <= rr["s_center"] <= rr["s_plus"]
+        assert rr["gap_abs_s_minus"] >= 0.0
+        assert rr["gap_abs_s_center"] >= 0.0
+        assert rr["gap_abs_s_plus"] >= 0.0
+        assert rr["local_slope_abs_dgap_ds"] >= 0.0
+    assert "q95_blocker_directionality" in t2w
+    qbd = t2w["q95_blocker_directionality"]
+    assert qbd["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert qbd["scope"] == "STRICT_TASK2_Q95_BLOCKER_LOCAL_DIRECTIONALITY"
+    assert 0.0 <= qbd["upward_step_reduces_gap_frequency"] <= 1.0
+    assert 0.0 <= qbd["downward_step_reduces_gap_frequency"] <= 1.0
+    assert len(qbd["rows"]) <= 3
+    for rr in qbd["rows"]:
+        assert rr["s_center"] in set(t2w["s_grid"])
+        assert isinstance(rr["delta_plus"], float)
+        assert isinstance(rr["delta_minus"], float)
+        assert isinstance(rr["upward_step_reduces_gap"], bool)
+        assert isinstance(rr["downward_step_reduces_gap"], bool)
+    assert "q95_blocker_actionability" in t2w
+    qba = t2w["q95_blocker_actionability"]
+    assert qba["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert qba["scope"] == "STRICT_TASK2_Q95_BLOCKER_LOCAL_ACTIONABILITY"
+    assert len(qba["rows"]) <= 3
+    if qba["best_action_s"] is not None:
+        assert qba["best_action_s"] in set(t2w["s_grid"])
+    assert qba["best_action_move"] in {"INCREASE_S", "DECREASE_S", "NO_LOCAL_RELIEF"}
+    assert qba["best_action_estimated_local_gap_reduction"] >= 0.0
+    prev_est = None
+    for rr in qba["rows"]:
+        assert rr["s_center"] in set(t2w["s_grid"])
+        assert rr["recommended_move"] in {"INCREASE_S", "DECREASE_S", "NO_LOCAL_RELIEF"}
+        assert rr["estimated_local_gap_reduction"] >= 0.0
+        if prev_est is not None:
+            assert prev_est + 1e-18 >= rr["estimated_local_gap_reduction"]
+        prev_est = rr["estimated_local_gap_reduction"]
+    assert "q95_blocker_action_execution" in t2w
+    qex = t2w["q95_blocker_action_execution"]
+    assert qex["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert qex["scope"] == "STRICT_TASK2_Q95_BLOCKER_ONE_STEP_ACTION_EXECUTION"
+    assert qex["move"] in {"INCREASE_S", "DECREASE_S", "NO_LOCAL_RELIEF"}
+    assert isinstance(qex["improves_locally"], bool)
+    if qex["move"] == "NO_LOCAL_RELIEF":
+        assert qex["s_before"] is None
+        assert qex["s_after"] is None
+        assert qex["gap_abs_before"] is None
+        assert qex["gap_abs_after"] is None
+        assert qex["delta_gap_abs_after_minus_before"] is None
+    else:
+        assert qex["s_before"] in set(t2w["s_grid"])
+        assert 0.0 <= qex["s_after"] <= 3.5
+        assert qex["gap_abs_before"] >= 0.0
+        assert qex["gap_abs_after"] >= 0.0
+        assert isinstance(qex["delta_gap_abs_after_minus_before"], float)
+    assert "q95_action_effect_crosscheck" in t2w
+    qec = t2w["q95_action_effect_crosscheck"]
+    assert qec["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert qec["scope"] == "STRICT_TASK2_Q95_ACTION_EFFECT_FIXED_QUAD_CROSSCHECK"
+    assert isinstance(qec["effect_sign_consistent_across_orders"], bool)
+    assert isinstance(qec["both_orders_improve"], bool)
+    if qex["move"] == "NO_LOCAL_RELIEF":
+        assert qec["delta_gap_abs_n400_after_minus_before"] is None
+        assert qec["delta_gap_abs_n800_after_minus_before"] is None
+    else:
+        assert isinstance(qec["delta_gap_abs_n400_after_minus_before"], float)
+        assert isinstance(qec["delta_gap_abs_n800_after_minus_before"], float)
+    assert "q95_action_effect_bootstrap" in t2w
+    qeb = t2w["q95_action_effect_bootstrap"]
+    assert qeb["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert qeb["scope"] == "STRICT_TASK2_Q95_ACTION_EFFECT_BOOTSTRAP_ROBUSTNESS"
+    assert qeb["n_range_inclusive"] == [300, 900]
+    assert 0.0 <= qeb["p_improve"] <= 1.0
+    assert 0.0 <= qeb["p_improve_ci95_jeffreys"]["lower"] <= qeb["p_improve_ci95_jeffreys"]["upper"] <= 1.0
+    assert len(qeb["delta_q05_q50_q95"]) == 3
+    if qex["move"] == "NO_LOCAL_RELIEF":
+        assert qeb["bootstrap_size"] == 0
+    else:
+        assert qeb["bootstrap_size"] == 128
+    assert "q95_action_gate" in t2w
+    qag = t2w["q95_action_gate"]
+    assert qag["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert qag["scope"] == "STRICT_TASK2_Q95_ACTION_BOOTSTRAP_DECISION_GATE"
+    assert qag["p_improve_lb95_threshold"] == 0.60
+    assert isinstance(qag["criterion_p_improve_lb95_ge_threshold"], bool)
+    assert isinstance(qag["criterion_fixed_quad_sign_consistent"], bool)
+    assert isinstance(qag["go_for_next_local_step"], bool)
+    assert qag["reason"] in {"GO", "HOLD_AND_RECALIBRATE"}
+    assert "q95_action_gate_consistency" in t2w
+    qgc = t2w["q95_action_gate_consistency"]
+    assert qgc["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert qgc["scope"] == "STRICT_TASK2_Q95_ACTION_GATE_CONSISTENCY"
+    assert set(qgc["checks"].keys()) == {"if_go_then_action_exists", "if_go_then_bootstrap_executed", "if_go_then_crosscheck_not_none"}
+    assert all(isinstance(v, bool) for v in qgc["checks"].values())
+    assert qgc["all_checks_pass"] is True
+    assert "q95_blocker_step_efficiency" in t2w
+    qse = t2w["q95_blocker_step_efficiency"]
+    assert qse["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert qse["scope"] == "STRICT_TASK2_Q95_BLOCKER_ONE_STEP_EFFICIENCY"
+    assert qse["step_abs"] >= 0.0
+    assert qse["gap_abs_before"] >= 0.0
+    assert qse["gap_abs_after"] >= 0.0
+    assert qse["gap_abs_reduction"] >= 0.0
+    assert qse["reduction_per_unit_s_step"] >= 0.0
+    assert 0.0 <= qse["relative_reduction_fraction"] <= 1.0
+    assert "q95_after_one_step_local_margin" in t2w
+    qlm = t2w["q95_after_one_step_local_margin"]
+    assert qlm["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert qlm["scope"] == "STRICT_TASK2_Q95_AFTER_ONE_STEP_LOCAL_MARGIN"
+    assert qlm["q95_gap_abs_threshold"] > 0.0
+    assert isinstance(qlm["moves_toward_closure"], bool)
+    if qex["move"] == "NO_LOCAL_RELIEF":
+        assert qlm["gap_abs_before"] is None
+        assert qlm["gap_abs_after"] is None
+        assert qlm["margin_before"] is None
+        assert qlm["margin_after"] is None
+        assert qlm["margin_delta_after_minus_before"] is None
+    else:
+        assert qlm["gap_abs_before"] >= 0.0
+        assert qlm["gap_abs_after"] >= 0.0
+        assert isinstance(qlm["margin_before"], float)
+        assert isinstance(qlm["margin_after"], float)
+        assert isinstance(qlm["margin_delta_after_minus_before"], float)
+    assert "q95_after_one_step_progress_score" in t2w
+    qps = t2w["q95_after_one_step_progress_score"]
+    assert qps["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert qps["scope"] == "STRICT_TASK2_Q95_AFTER_ONE_STEP_PROGRESS_SCORE"
+    assert qps["margin_before_abs"] >= 0.0
+    assert qps["margin_after_abs"] >= 0.0
+    assert qps["absolute_margin_improvement"] >= 0.0
+    assert 0.0 <= qps["normalized_progress_score_0_1"] <= 1.0
+    assert "q95_blocker_choice_panel" in t2w
+    qcp = t2w["q95_blocker_choice_panel"]
+    assert qcp["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert qcp["scope"] == "STRICT_TASK2_BLOCKER_CHOICE_NORMALIZED_OVERSHOOT"
+    assert len(qcp["rows"]) == 3
+    for rr in qcp["rows"]:
+        assert rr["criterion"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity"}
+        assert rr["normalized_overshoot"] >= 0.0
+        assert isinstance(rr["is_satisfied"], bool)
+    assert qcp["easiest_unresolved_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "none"}
+    assert "q95_blocker_choice_consistency" in t2w
+    qcc = t2w["q95_blocker_choice_consistency"]
+    assert qcc["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
+    assert qcc["scope"] == "STRICT_TASK2_BLOCKER_CHOICE_CONSISTENCY"
+    assert qcc["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "none", "pending"}
+    assert qcc["easiest_unresolved_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "none"}
+    assert isinstance(qcc["is_consistent_when_q95_dominates"], bool)
     assert cc["verdict_matches_criteria"] is True
 
     assert "ur_numerical_stress_policy_weighted_boundary_risk_posterior_predictive_precursor" in data
