@@ -1637,6 +1637,163 @@ def main() -> None:
             (float(min_effective_weight_global) >= float(pass_fail_criteria_task2["min_effective_weight_global_min"]))
         ),
     }
+    criterion_coherence_convergence = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_CONVERGENCE_CRITERION_COHERENCE",
+        "q95_convergence_delta_n400_to_n800_abs": float(q95_unc_abs),
+        "q95_convergence_delta_n400_to_n800_abs_max": float(pass_fail_criteria_task2["q95_convergence_delta_n400_to_n800_abs_max"]),
+        "q95_convergence_delta_le_threshold_flag": bool(criteria_eval["q95_convergence_delta_le_threshold"]),
+        "flag_equals_numeric_inequality": bool(
+            criteria_eval["q95_convergence_delta_le_threshold"] ==
+            (float(q95_unc_abs) <= float(pass_fail_criteria_task2["q95_convergence_delta_n400_to_n800_abs_max"]))
+        ),
+    }
+    criterion_coherence_cross_integrator = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_CROSS_INTEGRATOR_CRITERION_COHERENCE",
+        "q95_cross_integrator_gap_abs": float(crosscheck_gap_q95),
+        "q95_cross_integrator_gap_abs_max": float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"]),
+        "q95_cross_integrator_gap_le_threshold_flag": bool(criteria_eval["q95_cross_integrator_gap_le_threshold"]),
+        "flag_equals_numeric_inequality": bool(
+            criteria_eval["q95_cross_integrator_gap_le_threshold"] ==
+            (float(crosscheck_gap_q95) <= float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"]))
+        ),
+    }
+    criterion_coherence_q95_gap = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_Q95_GAP_CRITERION_COHERENCE",
+        "q95_gap_abs": float(q95_gap_abs_ext),
+        "q95_gap_abs_max": float(pass_fail_criteria_task2["q95_gap_abs_max"]),
+        "q95_gap_abs_le_threshold_flag": bool(criteria_eval["q95_gap_abs_le_threshold"]),
+        "flag_equals_numeric_inequality": bool(
+            criteria_eval["q95_gap_abs_le_threshold"] ==
+            (float(q95_gap_abs_ext) <= float(pass_fail_criteria_task2["q95_gap_abs_max"]))
+        ),
+    }
+    criterion_coherence_max_gap_rel = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_MAX_GAP_REL_CRITERION_COHERENCE",
+        "max_gap_rel": float(max_gap_rel_ext),
+        "max_gap_rel_max": float(pass_fail_criteria_task2["max_gap_rel_max"]),
+        "max_gap_rel_le_threshold_flag": bool(criteria_eval["max_gap_rel_le_threshold"]),
+        "flag_equals_numeric_inequality": bool(
+            criteria_eval["max_gap_rel_le_threshold"] ==
+            (float(max_gap_rel_ext) <= float(pass_fail_criteria_task2["max_gap_rel_max"]))
+        ),
+    }
+    criterion_coherence_global_closure = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_GLOBAL_CLOSURE_CRITERION_COHERENCE",
+        "all_criteria_satisfied_flag": bool(all(criteria_eval.values())),
+        "numeric_conjunction_recomputed": bool(
+            (float(q95_gap_abs_ext) <= float(pass_fail_criteria_task2["q95_gap_abs_max"])) and
+            (float(max_gap_rel_ext) <= float(pass_fail_criteria_task2["max_gap_rel_max"])) and
+            (float(crosscheck_gap_q95) <= float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"])) and
+            (float(q95_unc_abs) <= float(pass_fail_criteria_task2["q95_convergence_delta_n400_to_n800_abs_max"])) and
+            (float(min_effective_weight_global) >= float(pass_fail_criteria_task2["min_effective_weight_global_min"]))
+        ),
+        "flag_equals_numeric_conjunction": bool(
+            bool(all(criteria_eval.values())) ==
+            bool(
+                (float(q95_gap_abs_ext) <= float(pass_fail_criteria_task2["q95_gap_abs_max"])) and
+                (float(max_gap_rel_ext) <= float(pass_fail_criteria_task2["max_gap_rel_max"])) and
+                (float(crosscheck_gap_q95) <= float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"])) and
+                (float(q95_unc_abs) <= float(pass_fail_criteria_task2["q95_convergence_delta_n400_to_n800_abs_max"])) and
+                (float(min_effective_weight_global) >= float(pass_fail_criteria_task2["min_effective_weight_global_min"]))
+            )
+        ),
+    }
+    criterion_coherence_weight_sign = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_WEIGHT_SIGN_CRITERION_COHERENCE",
+        "min_effective_weight_global": float(min_effective_weight_global),
+        "min_effective_weight_global_min": float(pass_fail_criteria_task2["min_effective_weight_global_min"]),
+        "weight_sign_nonnegative_flag": bool(criteria_eval["all_nonnegative_weights"]),
+        "flag_equals_numeric_inequality": bool(
+            criteria_eval["all_nonnegative_weights"] ==
+            (float(min_effective_weight_global) >= float(pass_fail_criteria_task2["min_effective_weight_global_min"]))
+        ),
+    }
+    criterion_coherence_verdict_gate = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_VERDICT_GATE_COHERENCE",
+        "all_criteria_satisfied_flag": bool(all(criteria_eval.values())),
+        "verdict_task2": str(verdict_task2),
+        "closed_label": "CLOSED_NUMERICAL_WITNESS_TASK2",
+        "open_label": "OPEN_OBSTRUCTION_WITH_TRACE",
+        "flag_matches_verdict_label": bool(
+            (bool(all(criteria_eval.values())) and str(verdict_task2) == "CLOSED_NUMERICAL_WITNESS_TASK2") or
+            ((not bool(all(criteria_eval.values()))) and str(verdict_task2) == "OPEN_OBSTRUCTION_WITH_TRACE")
+        ),
+    }
+    criterion_coherence_fail_trace_numeric = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_FAIL_TRACE_NUMERIC_COHERENCE",
+        "verdict_task2": str(locals().get("verdict_task2", "PENDING")),
+        "dominant_blocker": str(locals().get("dominant_blocker", "pending")),
+        "fail_trace": str(locals().get("fail_trace_task2", "")),
+        "trace_prefix_matches_dominant_blocker": bool(
+            (str(locals().get("verdict_task2", "PENDING")) != "OPEN_OBSTRUCTION_WITH_TRACE") or
+            (
+                (str(locals().get("dominant_blocker", "pending")) == "q95_gap_abs" and str(locals().get("fail_trace_task2", "")).startswith("q95_gap_abs=")) or
+                (str(locals().get("dominant_blocker", "pending")) == "max_gap_rel" and str(locals().get("fail_trace_task2", "")).startswith("max_gap_rel=")) or
+                (str(locals().get("dominant_blocker", "pending")) == "q95_cross_integrator_gap" and str(locals().get("fail_trace_task2", "")).startswith("q95_cross_integrator_gap_abs=")) or
+                (str(locals().get("dominant_blocker", "pending")) == "q95_convergence_delta_n400_to_n800_abs" and str(locals().get("fail_trace_task2", "")).startswith("q95_convergence_delta_n400_to_n800_abs=")) or
+                (str(locals().get("dominant_blocker", "pending")) == "weight_sign_nonnegativity" and str(locals().get("fail_trace_task2", "")).startswith("min_effective_weight_global="))
+            )
+        ),
+    }
+    criterion_coherence_dominant_margin_sign = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_DOMINANT_MARGIN_SIGN_COHERENCE",
+        "verdict_task2": str(locals().get("verdict_task2", "PENDING")),
+        "dominant_blocker": str(locals().get("dominant_blocker", "pending")),
+        "signed_margin_observed_minus_threshold": float(
+            float(locals().get("dominant_observed", 0.0)) - float(locals().get("dominant_threshold", 0.0))
+        ),
+        "open_requires_positive_margin": bool(
+            (str(locals().get("verdict_task2", "PENDING")) != "OPEN_OBSTRUCTION_WITH_TRACE") or
+            ((float(locals().get("dominant_observed", 0.0)) - float(locals().get("dominant_threshold", 0.0))) > 0.0)
+        ),
+    }
+    criterion_coherence_open_trace_inequality = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_OPEN_TRACE_INEQUALITY_COHERENCE",
+        "verdict_task2": str(locals().get("verdict_task2", "PENDING")),
+        "fail_trace": str(locals().get("fail_trace_task2", "")),
+        "open_trace_contains_numeric_inequality_token": bool(
+            (str(locals().get("verdict_task2", "PENDING")) != "OPEN_OBSTRUCTION_WITH_TRACE") or
+            (
+                (">" in str(locals().get("fail_trace_task2", ""))) and
+                ("=" in str(locals().get("fail_trace_task2", "")))
+            )
+        ),
+    }
+    criterion_coherence_dominant_inequality_prefix = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_DOMINANT_INEQUALITY_PREFIX_COHERENCE",
+        "dominant_blocker": str(locals().get("dominant_blocker", "pending")),
+        "dominant_inequality": str(locals().get("dominant_inequality", "")),
+        "prefix_matches_dominant_blocker": bool(
+            (str(locals().get("dominant_blocker", "pending")) == "q95_gap_abs" and str(locals().get("dominant_inequality", "")).startswith("q95_gap_abs=")) or
+            (str(locals().get("dominant_blocker", "pending")) == "max_gap_rel" and str(locals().get("dominant_inequality", "")).startswith("max_gap_rel=")) or
+            (str(locals().get("dominant_blocker", "pending")) == "q95_cross_integrator_gap" and str(locals().get("dominant_inequality", "")).startswith("q95_cross_integrator_gap_abs=")) or
+            (str(locals().get("dominant_blocker", "pending")) == "q95_convergence_delta_n400_to_n800_abs" and str(locals().get("dominant_inequality", "")).startswith("q95_convergence_delta_n400_to_n800_abs=")) or
+            (str(locals().get("dominant_blocker", "pending")) == "weight_sign_nonnegativity" and str(locals().get("dominant_inequality", "")).startswith("min_effective_weight_global=")) or
+            (str(locals().get("dominant_blocker", "pending")) in {"none", "pending"} and str(locals().get("dominant_inequality", "")) in {"all_criteria_satisfied", ""})
+        ),
+    }
+    criterion_coherence_fail_trace_equals_dominant = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_FAIL_TRACE_EQUALS_DOMINANT_COHERENCE",
+        "verdict_task2": str(locals().get("verdict_task2", "PENDING")),
+        "fail_trace": str(locals().get("fail_trace_task2", "")),
+        "dominant_inequality": str(locals().get("dominant_inequality", "")),
+        "open_requires_exact_equality": bool(
+            (str(locals().get("verdict_task2", "PENDING")) != "OPEN_OBSTRUCTION_WITH_TRACE") or
+            (str(locals().get("fail_trace_task2", "")) == str(locals().get("dominant_inequality", "")))
+        ),
+    }
     # Blocker-choice panel: identify easiest unresolved criterion to close (smallest normalized overshoot).
     q95_thr = float(pass_fail_criteria_task2["q95_gap_abs_max"])
     rel_thr = float(pass_fail_criteria_task2["max_gap_rel_max"])
@@ -1784,6 +1941,7 @@ def main() -> None:
             "max_bin_disc_proxy_gap_abs": float(max([r["max_bin_disc_proxy_gap_abs"] for r in phase_space_bin_rows], default=0.0)),
             "max_bin_scheme_gap_abs": float(max([r["max_bin_scheme_gap_abs"] for r in phase_space_bin_rows], default=0.0)),
             "q95_cross_integrator_gap_abs": crosscheck_gap_q95,
+            "q95_convergence_delta_n400_to_n800_abs": q95_unc_abs,
         },
         "phase_space_bin_contribution_rows": phase_space_bin_rows,
         "bin_obstruction_ranking": {
@@ -1814,6 +1972,18 @@ def main() -> None:
         "q95_blocker_choice_panel": q95_blocker_choice_panel,
         "q95_blocker_choice_consistency": q95_blocker_choice_consistency,
         "criterion_coherence_sign": criterion_coherence_sign,
+        "criterion_coherence_convergence": criterion_coherence_convergence,
+        "criterion_coherence_cross_integrator": criterion_coherence_cross_integrator,
+        "criterion_coherence_q95_gap": criterion_coherence_q95_gap,
+        "criterion_coherence_max_gap_rel": criterion_coherence_max_gap_rel,
+        "criterion_coherence_global_closure": criterion_coherence_global_closure,
+        "criterion_coherence_weight_sign": criterion_coherence_weight_sign,
+        "criterion_coherence_verdict_gate": criterion_coherence_verdict_gate,
+        "criterion_coherence_fail_trace_numeric": criterion_coherence_fail_trace_numeric,
+        "criterion_coherence_dominant_margin_sign": criterion_coherence_dominant_margin_sign,
+        "criterion_coherence_open_trace_inequality": criterion_coherence_open_trace_inequality,
+        "criterion_coherence_dominant_inequality_prefix": criterion_coherence_dominant_inequality_prefix,
+        "criterion_coherence_fail_trace_equals_dominant": criterion_coherence_fail_trace_equals_dominant,
         "dominant_blocker_numeric_margin": dominant_blocker_numeric_margin,
         "dominant_blocker_selection_consistency": dominant_blocker_selection_consistency,
         "falsifier_trace_consistency": falsifier_trace_consistency,
