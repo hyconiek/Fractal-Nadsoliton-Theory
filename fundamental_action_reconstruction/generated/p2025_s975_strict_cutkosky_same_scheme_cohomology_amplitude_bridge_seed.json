@@ -6107,6 +6107,16 @@
     "resampling_rule": "iid_row_resample_with_replacement_over_fullgrid_tri_rows",
     "rows": [
       {
+        "policy": "always_u2",
+        "pareto_front_frequency": 1.0,
+        "pareto_front_frequency_ci95_jeffreys": {
+          "lower": 0.9951082608317374,
+          "upper": 0.9999990414167599
+        },
+        "bootstrap_successes": 512,
+        "bootstrap_trials": 512
+      },
+      {
         "policy": "always_u4",
         "pareto_front_frequency": 1.0,
         "pareto_front_frequency_ci95_jeffreys": {
@@ -6147,7 +6157,7 @@
         "bootstrap_trials": 512
       }
     ],
-    "most_stable_frontier_policy": "always_u4"
+    "most_stable_frontier_policy": "always_u2"
   },
   "ur_numerical_stress_policy_budgeted_selection_precursor": {
     "status": "OPEN_PRECURSOR_NOT_CLOSURE",
@@ -7371,7 +7381,7 @@
           "lower": 0.6696110908484498,
           "upper": 0.9999215001516338
         },
-        "winner_entropy_norm": -0.0,
+        "winner_entropy_norm": 0.0,
         "winner_counts": {
           "base_budget_policy": 0,
           "class_adaptive_fallback": 6,
@@ -7542,7 +7552,7 @@
           "lower": 0.5552373823423603,
           "upper": 0.9998846672117617
         },
-        "winner_entropy_norm": -0.0,
+        "winner_entropy_norm": 0.0,
         "winner_counts": {
           "base_budget_policy": 0,
           "class_adaptive_fallback": 4,
@@ -7946,12 +7956,6 @@
           {
             "threshold": 0.85,
             "cap_scale": 1.0,
-            "jitter": 0.01,
-            "winner": "class_adaptive_fallback"
-          },
-          {
-            "threshold": 0.85,
-            "cap_scale": 1.0,
             "jitter": 0.02,
             "winner": "class_adaptive_fallback"
           },
@@ -8217,13 +8221,6 @@
       {
         "threshold": 0.85,
         "cap_scale": 1.0,
-        "jitter": 0.01,
-        "winner": "class_adaptive_fallback",
-        "boundary_manhattan_margin": 1
-      },
-      {
-        "threshold": 0.85,
-        "cap_scale": 1.0,
         "jitter": 0.02,
         "winner": "class_adaptive_fallback",
         "boundary_manhattan_margin": 1
@@ -8240,7 +8237,7 @@
         "cap_scale": 1.15,
         "jitter": 0.01,
         "winner": "class_adaptive_fallback",
-        "boundary_manhattan_margin": 2
+        "boundary_manhattan_margin": 1
       },
       {
         "threshold": 0.85,
@@ -8346,6 +8343,17 @@
         ],
         "boundary_margin_min": 1.0,
         "boundary_margin_max": 3.0
+      },
+      {
+        "dominant_winner": "class_adaptive_fallback",
+        "size": 1,
+        "boundary_margin_q05_q50_q95": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "boundary_margin_min": 1.0,
+        "boundary_margin_max": 1.0
       }
     ]
   },
@@ -8512,17 +8520,6 @@
       {
         "threshold": 0.85,
         "cap_scale": 1.15,
-        "jitter": 0.01,
-        "winner": "class_adaptive_fallback",
-        "winner_frequency": 1.0,
-        "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 2,
-        "boundary_margin_norm": 0.6666666666666666,
-        "weighted_boundary_risk_score": 0.06666666666666668
-      },
-      {
-        "threshold": 0.85,
-        "cap_scale": 1.15,
         "jitter": 0.02,
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
@@ -8699,7 +8696,7 @@
       {
         "threshold": 0.85,
         "cap_scale": 1.0,
-        "jitter": 0.01,
+        "jitter": 0.02,
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_entropy_norm": -0.0,
@@ -8709,8 +8706,8 @@
       },
       {
         "threshold": 0.85,
-        "cap_scale": 1.0,
-        "jitter": 0.02,
+        "cap_scale": 1.15,
+        "jitter": 0.01,
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_entropy_norm": -0.0,
@@ -8876,6 +8873,17 @@
         "threshold": 0.85,
         "cap_scale": 0.85,
         "jitter": 0.02,
+        "winner": "none",
+        "winner_frequency": 0.0,
+        "winner_entropy_norm": 0.0,
+        "boundary_manhattan_margin": 0,
+        "boundary_margin_norm": 0.0,
+        "weighted_boundary_risk_score": 0.7
+      },
+      {
+        "threshold": 0.85,
+        "cap_scale": 1.0,
+        "jitter": 0.01,
         "winner": "none",
         "winner_frequency": 0.0,
         "winner_entropy_norm": 0.0,
