@@ -1378,6 +1378,61 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
         assert isinstance(rr["signed_margin_n2400_minus_threshold"], float)
     if qn96["verdict"] == "OPEN_OBSTRUCTION_WITH_TRACE":
         assert "=" in qn96["fail_trace"] and ">" in qn96["fail_trace"]
+    qn256 = t2w["q95_blocker_n25600_recompute_certificate"]
+    assert qn256["scope"] == "STRICT_TASK2_Q95_BLOCKER_N25600_RECOMPUTE_CERTIFICATE"
+    assert qn256["theorem_target"] == "Q95_DELTA_GAP_ABS_N25600_MINUS_N12800_TOP3_LE_CROSS_INTEGRATOR_THRESHOLD"
+    assert qn256["verdict"] in {"CLOSED_NUMERICAL_WITNESS_TASK2", "OPEN_OBSTRUCTION_WITH_TRACE"}
+    assert qn256["domain"]["n_levels"] == [12800, 25600, 51200]
+    for rr in qn256["computed_rows"]:
+        assert rr["cutsum_fixed_quad_n25600"] >= 0.0
+        assert rr["cutsum_simpson_n25600"] >= 0.0
+        assert rr["gap_abs_n25600"] >= 0.0
+        assert rr["gap_abs_n25600_simpson"] >= 0.0
+        assert rr["cross_method_n25600_abs"] >= 0.0
+        assert rr["cutsum_fixed_quad_n51200"] >= 0.0
+        assert rr["gap_abs_n51200"] >= 0.0
+        assert rr["delta_gap_abs_n51200_minus_n25600_abs"] >= 0.0
+    assert "q95_cross_method_n25600_abs_top3" in qn256["aggregate_metrics"]
+    assert qn256["aggregate_metrics"]["q95_cross_method_n25600_abs_top3"] >= 0.0
+    assert "q95_delta_gap_abs_n51200_minus_n25600_abs_top3" in qn256["aggregate_metrics"]
+    assert qn256["aggregate_metrics"]["q95_delta_gap_abs_n51200_minus_n25600_abs_top3"] >= 0.0
+    assert "q95_refinement_ratio_51200_25600_over_25600_12800" in qn256["aggregate_metrics"]
+    assert qn256["aggregate_metrics"]["q95_refinement_ratio_51200_25600_over_25600_12800"] >= 0.0
+    assert "q95_refinement_effective_order_p" in qn256["aggregate_metrics"]
+    assert isinstance(qn256["aggregate_metrics"]["q95_refinement_effective_order_p"], float)
+    assert "q95_richardson_ninf_from_25600_51200_top3" in qn256["aggregate_metrics"]
+    assert qn256["aggregate_metrics"]["q95_richardson_ninf_from_25600_51200_top3"] >= 0.0
+    assert "q95_richardson_consistency_residual_top3" in qn256["aggregate_metrics"]
+    assert qn256["aggregate_metrics"]["q95_richardson_consistency_residual_top3"] >= 0.0
+    assert "q95_cross_method_n51200_abs_top3" in qn256["aggregate_metrics"]
+    assert qn256["aggregate_metrics"]["q95_cross_method_n51200_abs_top3"] >= 0.0
+    assert "q95_cross_method_n51200_relative_to_refinement" in qn256["aggregate_metrics"]
+    assert qn256["aggregate_metrics"]["q95_cross_method_n51200_relative_to_refinement"] >= 0.0
+    assert "q95_cross_method_n51200_to_n25600_ratio" in qn256["aggregate_metrics"]
+    assert qn256["aggregate_metrics"]["q95_cross_method_n51200_to_n25600_ratio"] >= 0.0
+    assert "q95_cross_method_decay_effective_order_p" in qn256["aggregate_metrics"]
+    assert isinstance(qn256["aggregate_metrics"]["q95_cross_method_decay_effective_order_p"], float)
+    assert "q95_cross_method_n51200_consistency_residual" in qn256["aggregate_metrics"]
+    assert qn256["aggregate_metrics"]["q95_cross_method_n51200_consistency_residual"] >= 0.0
+    assert "q95_cross_method_mixed_residual_top3" in qn256["aggregate_metrics"]
+    assert qn256["aggregate_metrics"]["q95_cross_method_mixed_residual_top3"] >= 0.0
+    assert "q95_gap_abs_ninf_upper_from_25600_51200_top3" in qn256["aggregate_metrics"]
+    assert qn256["aggregate_metrics"]["q95_gap_abs_ninf_upper_from_25600_51200_top3"] >= 0.0
+    assert "q95_cross_method_n25600_abs_top3_le_threshold" in qn256["pass_fail_criteria"]
+    assert "q95_delta_gap_abs_n51200_minus_n25600_abs_top3_le_threshold" in qn256["pass_fail_criteria"]
+    assert "q95_refinement_delta_decay_n51200_vs_n25600_le_n25600_vs_n12800" in qn256["pass_fail_criteria"]
+    assert "q95_refinement_ratio_51200_25600_over_25600_12800_lt_one" in qn256["pass_fail_criteria"]
+    assert "q95_refinement_effective_order_p_gt_zero" in qn256["pass_fail_criteria"]
+    assert "q95_richardson_consistency_residual_top3_le_threshold" in qn256["pass_fail_criteria"]
+    assert "q95_cross_method_n51200_abs_top3_le_threshold" in qn256["pass_fail_criteria"]
+    assert "q95_cross_method_n51200_relative_to_refinement_lt_one" in qn256["pass_fail_criteria"]
+    assert "q95_cross_method_n51200_to_n25600_ratio_le_one" in qn256["pass_fail_criteria"]
+    assert "q95_cross_method_decay_effective_order_p_gt_zero" in qn256["pass_fail_criteria"]
+    assert "q95_cross_method_n51200_consistency_residual_le_threshold" in qn256["pass_fail_criteria"]
+    assert "q95_cross_method_mixed_residual_top3_le_threshold" in qn256["pass_fail_criteria"]
+    assert "q95_gap_abs_ninf_upper_from_25600_51200_top3_le_threshold" in qn256["pass_fail_criteria"]
+    if qn256["verdict"] == "OPEN_OBSTRUCTION_WITH_TRACE":
+        assert "=" in qn256["fail_trace"] and ">" in qn256["fail_trace"]
     assert "q95_blocker_margin" in t2w
     qbm = t2w["q95_blocker_margin"]
     assert qbm["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
