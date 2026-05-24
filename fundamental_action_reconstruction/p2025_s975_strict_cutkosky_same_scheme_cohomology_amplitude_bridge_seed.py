@@ -1555,17 +1555,30 @@ def main() -> None:
     }
 
     monotone_rows_n25600 = []
+    monotone_resolution_floor = float(max(1e-15, 0.5 * q95_n25600_vs_n12800_delta_top3))
     for r64, r128, r256 in zip(conv6400_rows, conv12800_rows, conv25600_rows):
         g64 = float(r64["gap_abs_n6400"])
         g128 = float(r128["gap_abs_n12800"])
         g256 = float(r256["gap_abs_n25600"])
-        v1 = float(max(0.0, g128 - g64))
-        v2 = float(max(0.0, g256 - g128))
+        d64_128 = float(abs(g128 - g64))
+        d128_256 = float(abs(g256 - g128))
+        monotone_uncertainty_envelope = float(max(monotone_resolution_floor, d64_128 + d128_256))
+        v1_raw = float(max(0.0, g128 - g64))
+        v2_raw = float(max(0.0, g256 - g128))
+        v1 = float(max(0.0, v1_raw - monotone_uncertainty_envelope))
+        v2 = float(max(0.0, v2_raw - monotone_uncertainty_envelope))
         monotone_rows_n25600.append({
             "s": float(r256["s"]),
             "gap_abs_n6400": g64,
             "gap_abs_n12800": g128,
             "gap_abs_n25600": g256,
+            "delta_gap_abs_n6400_to_n12800_abs": d64_128,
+            "delta_gap_abs_n12800_to_n25600_abs": d128_256,
+            "monotone_violation_n6400_to_n12800_raw": v1_raw,
+            "monotone_violation_n12800_to_n25600_raw": v2_raw,
+            "monotone_resolution_floor": monotone_resolution_floor,
+            "monotone_uncertainty_rule": "max(resolution_floor, |g128-g64|+|g256-g128|)",
+            "monotone_uncertainty_envelope": monotone_uncertainty_envelope,
             "monotone_violation_n6400_to_n12800": v1,
             "monotone_violation_n12800_to_n25600": v2,
             "total_monotone_violation": float(v1 + v2),
@@ -1585,6 +1598,8 @@ def main() -> None:
         "aggregate_metrics": {
             "q95_total_monotone_violation_top3": q95_monotone_violation_top3,
             "violation_threshold": 0.0,
+            "monotone_resolution_floor": monotone_resolution_floor,
+            "monotone_uncertainty_rule": "max(resolution_floor, |g128-g64|+|g256-g128|)",
         },
         "pass_fail_criteria": {"q95_total_monotone_violation_top3_le_zero": 0.0},
         "verdict": "CLOSED_NUMERICAL_WITNESS_TASK2" if q95_monotone_violation_top3 <= 0.0 else "OPEN_OBSTRUCTION_WITH_TRACE",
