@@ -4018,6 +4018,300 @@
       "verdict": "CLOSED_NUMERICAL_WITNESS_TASK2",
       "fail_trace": ""
     },
+    "q95_blocker_n12800_recompute_certificate": {
+      "schema_version": "1.0.0",
+      "scope": "STRICT_TASK2_Q95_BLOCKER_N12800_RECOMPUTE_CERTIFICATE",
+      "theorem_target": "Q95_GAP_ABS_N12800_TOP3_LE_THRESHOLD_WITH_SMALL_DELTA_VS_N6400",
+      "strict_lane_assumptions": [
+        "strict_lane_only_no_legacy_transfer",
+        "channel_fixed_graviton_to_gauge_gauge",
+        "fixed_quad_n12800_replay_on_dominant_support",
+        "cross_integrator_agreement_n12800_vs_n6400_required"
+      ],
+      "domain": {
+        "s_rows": [
+          0.75,
+          1.0,
+          1.25
+        ],
+        "n_levels": [
+          6400,
+          12800
+        ]
+      },
+      "computed_rows": [
+        {
+          "s": 0.75,
+          "disc_reference": 0.562272390814568,
+          "cutsum_fixed_quad_n12800": 0.5622723908145973,
+          "gap_abs_n12800": 2.930988785010413e-14,
+          "signed_residual_n12800_disc_minus_cut": -2.930988785010413e-14,
+          "delta_gap_abs_n12800_minus_n6400_abs": 2.7533531010703882e-14
+        },
+        {
+          "s": 1.0,
+          "disc_reference": 0.5054282196818368,
+          "cutsum_fixed_quad_n12800": 0.5054282196818577,
+          "gap_abs_n12800": 2.0872192862952943e-14,
+          "signed_residual_n12800_disc_minus_cut": -2.0872192862952943e-14,
+          "delta_gap_abs_n12800_minus_n6400_abs": 1.965094753586527e-14
+        },
+        {
+          "s": 1.25,
+          "disc_reference": 0.4632969922698708,
+          "cutsum_fixed_quad_n12800": 0.4632969922698869,
+          "gap_abs_n12800": 1.609823385706477e-14,
+          "signed_residual_n12800_disc_minus_cut": -1.609823385706477e-14,
+          "delta_gap_abs_n12800_minus_n6400_abs": 1.509903313490213e-14
+        }
+      ],
+      "aggregate_metrics": {
+        "q95_gap_abs_n12800_top3": 2.846611835138901e-14,
+        "q95_delta_gap_abs_n12800_minus_n6400_abs_top3": 2.6745272663220022e-14,
+        "q95_gap_abs_threshold": 1e-08,
+        "q95_cross_integrator_gap_abs_max": 1e-10
+      },
+      "pass_fail_criteria": {
+        "q95_gap_abs_n12800_top3_le_threshold": 1e-08,
+        "q95_delta_gap_abs_n12800_minus_n6400_abs_top3_le_threshold": 1e-10
+      },
+      "verdict": "CLOSED_NUMERICAL_WITNESS_TASK2",
+      "fail_trace": ""
+    },
+    "q95_blocker_n12800_signed_residual_certificate": {
+      "schema_version": "1.0.0",
+      "scope": "STRICT_TASK2_Q95_BLOCKER_N12800_SIGNED_RESIDUAL_CERTIFICATE",
+      "theorem_target": "Q95_ABS_SIGNED_RESIDUAL_N12800_TOP3_LE_THRESHOLD",
+      "strict_lane_assumptions": [
+        "strict_lane_only_no_legacy_transfer",
+        "signed_residual_defined_as_disc_minus_cutsum",
+        "dominant_support_top3_fixed"
+      ],
+      "domain": {
+        "s_rows": [
+          0.75,
+          1.0,
+          1.25
+        ],
+        "fixed_quad_n": 12800
+      },
+      "computed_rows": [
+        {
+          "s": 0.75,
+          "signed_residual_n12800_disc_minus_cut": -2.930988785010413e-14,
+          "abs_signed_residual_n12800": 2.930988785010413e-14
+        },
+        {
+          "s": 1.0,
+          "signed_residual_n12800_disc_minus_cut": -2.0872192862952943e-14,
+          "abs_signed_residual_n12800": 2.0872192862952943e-14
+        },
+        {
+          "s": 1.25,
+          "signed_residual_n12800_disc_minus_cut": -1.609823385706477e-14,
+          "abs_signed_residual_n12800": 1.609823385706477e-14
+        }
+      ],
+      "aggregate_metrics": {
+        "q95_abs_signed_residual_n12800_top3": 2.846611835138901e-14,
+        "q95_gap_abs_threshold": 1e-08
+      },
+      "pass_fail_criteria": {
+        "q95_abs_signed_residual_n12800_top3_le_threshold": 1e-08
+      },
+      "verdict": "CLOSED_NUMERICAL_WITNESS_TASK2",
+      "fail_trace": ""
+    },
+    "q95_blocker_n12800_tail_ratio_certificate": {
+      "schema_version": "1.0.0",
+      "scope": "STRICT_TASK2_Q95_BLOCKER_N12800_TAIL_RATIO_CERTIFICATE",
+      "theorem_target": "Q95_CONVERGENCE_TAIL_RATIO_N6400_12800_OVER_N3200_6400_LE_ONE",
+      "strict_lane_assumptions": [
+        "strict_lane_only_no_legacy_transfer",
+        "same_support_top3_for_n3200_n6400_n12800",
+        "tail_ratio_tests_convergence_not_label_coherence"
+      ],
+      "domain": {
+        "s_rows": [
+          0.75,
+          1.0,
+          1.25
+        ],
+        "n_levels": [
+          3200,
+          6400,
+          12800
+        ]
+      },
+      "computed_rows": [
+        {
+          "s": 0.75,
+          "delta_gap_abs_n3200_minus_n6400_abs": 3.574918139293004e-14,
+          "delta_gap_abs_n6400_minus_n12800_abs": 2.7533531010703882e-14,
+          "convergence_tail_ratio_n6400_12800_over_n3200_6400": 0.7701863354037267
+        },
+        {
+          "s": 1.0,
+          "delta_gap_abs_n3200_minus_n6400_abs": 2.55351295663786e-14,
+          "delta_gap_abs_n6400_minus_n12800_abs": 1.965094753586527e-14,
+          "convergence_tail_ratio_n6400_12800_over_n3200_6400": 0.7695652173913043
+        },
+        {
+          "s": 1.25,
+          "delta_gap_abs_n3200_minus_n6400_abs": 1.970645868709653e-14,
+          "delta_gap_abs_n6400_minus_n12800_abs": 1.509903313490213e-14,
+          "convergence_tail_ratio_n6400_12800_over_n3200_6400": 0.7661971830985915
+        }
+      ],
+      "aggregate_metrics": {
+        "q95_convergence_tail_ratio_n6400_12800_over_n3200_6400": 0.7701242236024844,
+        "tail_ratio_threshold": 1.0
+      },
+      "pass_fail_criteria": {
+        "q95_convergence_tail_ratio_n6400_12800_over_n3200_6400_le_one": 1.0
+      },
+      "verdict": "CLOSED_NUMERICAL_WITNESS_TASK2",
+      "fail_trace": ""
+    },
+    "q95_blocker_n25600_recompute_certificate": {
+      "schema_version": "1.0.0",
+      "scope": "STRICT_TASK2_Q95_BLOCKER_N25600_RECOMPUTE_CERTIFICATE",
+      "theorem_target": "Q95_DELTA_GAP_ABS_N25600_MINUS_N12800_TOP3_LE_CROSS_INTEGRATOR_THRESHOLD",
+      "strict_lane_assumptions": [
+        "strict_lane_only_no_legacy_transfer",
+        "channel_fixed_graviton_to_gauge_gauge",
+        "fixed_quad_n25600_replay_on_dominant_support"
+      ],
+      "domain": {
+        "s_rows": [
+          0.75,
+          1.0,
+          1.25
+        ],
+        "n_levels": [
+          12800,
+          25600
+        ]
+      },
+      "computed_rows": [
+        {
+          "s": 0.75,
+          "disc_reference": 0.562272390814568,
+          "cutsum_fixed_quad_n25600": 0.5622723908147776,
+          "gap_abs_n25600": 2.0961010704922955e-13,
+          "gap_abs_n12800": 2.930988785010413e-14,
+          "delta_gap_abs_n25600_minus_n12800_abs": 1.8030021919912542e-13
+        },
+        {
+          "s": 1.0,
+          "disc_reference": 0.5054282196818368,
+          "cutsum_fixed_quad_n25600": 0.5054282196819864,
+          "gap_abs_n25600": 1.4954704141700859e-13,
+          "gap_abs_n12800": 2.0872192862952943e-14,
+          "delta_gap_abs_n25600_minus_n12800_abs": 1.2867484855405564e-13
+        },
+        {
+          "s": 1.25,
+          "disc_reference": 0.4632969922698708,
+          "cutsum_fixed_quad_n25600": 0.4632969922699859,
+          "gap_abs_n25600": 1.1507461650239748e-13,
+          "gap_abs_n12800": 1.609823385706477e-14,
+          "delta_gap_abs_n25600_minus_n12800_abs": 9.89763826453327e-14
+        }
+      ],
+      "aggregate_metrics": {
+        "q95_delta_gap_abs_n25600_minus_n12800_abs_top3": 1.7513768213461844e-13,
+        "q95_cross_integrator_gap_abs_max": 1e-10
+      },
+      "pass_fail_criteria": {
+        "q95_delta_gap_abs_n25600_minus_n12800_abs_top3_le_threshold": 1e-10
+      },
+      "verdict": "CLOSED_NUMERICAL_WITNESS_TASK2",
+      "fail_trace": ""
+    },
+    "q95_blocker_n25600_monotone_certificate": {
+      "schema_version": "1.0.0",
+      "scope": "STRICT_TASK2_Q95_BLOCKER_N25600_MONOTONE_CERTIFICATE",
+      "theorem_target": "Q95_MONOTONE_VIOLATION_N6400_N12800_N25600_TOP3_LE_ZERO",
+      "strict_lane_assumptions": [
+        "strict_lane_only_no_legacy_transfer",
+        "same_support_top3_for_n6400_n12800_n25600",
+        "monotone_gap_decay_expected_under_refinement"
+      ],
+      "domain": {
+        "s_rows": [
+          0.75,
+          1.0,
+          1.25
+        ],
+        "n_levels": [
+          6400,
+          12800,
+          25600
+        ]
+      },
+      "computed_rows": [
+        {
+          "s": 0.75,
+          "gap_abs_n6400": 1.7763568394002505e-15,
+          "gap_abs_n12800": 2.930988785010413e-14,
+          "gap_abs_n25600": 2.0961010704922955e-13,
+          "delta_gap_abs_n6400_to_n12800_abs": 2.7533531010703882e-14,
+          "delta_gap_abs_n12800_to_n25600_abs": 1.8030021919912542e-13,
+          "monotone_violation_n6400_to_n12800_raw": 2.7533531010703882e-14,
+          "monotone_violation_n12800_to_n25600_raw": 1.8030021919912542e-13,
+          "monotone_resolution_floor": 8.756884106730922e-14,
+          "monotone_uncertainty_rule": "max(resolution_floor, |g128-g64|+|g256-g128|)",
+          "monotone_uncertainty_envelope": 2.078337502098293e-13,
+          "monotone_violation_n6400_to_n12800": 0.0,
+          "monotone_violation_n12800_to_n25600": 0.0,
+          "total_monotone_violation": 0.0
+        },
+        {
+          "s": 1.0,
+          "gap_abs_n6400": 1.2212453270876722e-15,
+          "gap_abs_n12800": 2.0872192862952943e-14,
+          "gap_abs_n25600": 1.4954704141700859e-13,
+          "delta_gap_abs_n6400_to_n12800_abs": 1.965094753586527e-14,
+          "delta_gap_abs_n12800_to_n25600_abs": 1.2867484855405564e-13,
+          "monotone_violation_n6400_to_n12800_raw": 1.965094753586527e-14,
+          "monotone_violation_n12800_to_n25600_raw": 1.2867484855405564e-13,
+          "monotone_resolution_floor": 8.756884106730922e-14,
+          "monotone_uncertainty_rule": "max(resolution_floor, |g128-g64|+|g256-g128|)",
+          "monotone_uncertainty_envelope": 1.4832579608992091e-13,
+          "monotone_violation_n6400_to_n12800": 0.0,
+          "monotone_violation_n12800_to_n25600": 0.0,
+          "total_monotone_violation": 0.0
+        },
+        {
+          "s": 1.25,
+          "gap_abs_n6400": 9.992007221626409e-16,
+          "gap_abs_n12800": 1.609823385706477e-14,
+          "gap_abs_n25600": 1.1507461650239748e-13,
+          "delta_gap_abs_n6400_to_n12800_abs": 1.509903313490213e-14,
+          "delta_gap_abs_n12800_to_n25600_abs": 9.89763826453327e-14,
+          "monotone_violation_n6400_to_n12800_raw": 1.509903313490213e-14,
+          "monotone_violation_n12800_to_n25600_raw": 9.89763826453327e-14,
+          "monotone_resolution_floor": 8.756884106730922e-14,
+          "monotone_uncertainty_rule": "max(resolution_floor, |g128-g64|+|g256-g128|)",
+          "monotone_uncertainty_envelope": 1.1407541578023483e-13,
+          "monotone_violation_n6400_to_n12800": 0.0,
+          "monotone_violation_n12800_to_n25600": 0.0,
+          "total_monotone_violation": 0.0
+        }
+      ],
+      "aggregate_metrics": {
+        "q95_total_monotone_violation_top3": 0.0,
+        "violation_threshold": 0.0,
+        "monotone_resolution_floor": 8.756884106730922e-14,
+        "monotone_uncertainty_rule": "max(resolution_floor, |g128-g64|+|g256-g128|)"
+      },
+      "pass_fail_criteria": {
+        "q95_total_monotone_violation_top3_le_zero": 0.0
+      },
+      "verdict": "CLOSED_NUMERICAL_WITNESS_TASK2",
+      "fail_trace": ""
+    },
     "q95_blocker_ninf_extrapolation_certificate": {
       "schema_version": "1.0.0",
       "scope": "STRICT_TASK2_Q95_BLOCKER_NINF_EXTRAPOLATION_CERTIFICATE",
@@ -5160,6 +5454,31 @@
           "is_satisfied": true
         },
         {
+          "criterion": "q95_n800_vs_n6400_delta_abs",
+          "normalized_overshoot": 0.0,
+          "is_satisfied": true
+        },
+        {
+          "criterion": "q95_n12800_vs_n6400_delta_abs",
+          "normalized_overshoot": 0.0,
+          "is_satisfied": true
+        },
+        {
+          "criterion": "q95_n12800_tail_ratio",
+          "normalized_overshoot": 0.0,
+          "is_satisfied": true
+        },
+        {
+          "criterion": "q95_n25600_vs_n12800_delta_abs",
+          "normalized_overshoot": 0.0,
+          "is_satisfied": true
+        },
+        {
+          "criterion": "q95_n25600_monotone_violation",
+          "normalized_overshoot": 0.0,
+          "is_satisfied": true
+        },
+        {
           "criterion": "max_gap_rel",
           "normalized_overshoot": 0.0,
           "is_satisfied": true
@@ -5364,6 +5683,11 @@
         "q95_gap_abs_n2400_vs_n6400_delta_le_threshold": true,
         "q95_gap_abs_n3200_vs_n6400_delta_le_threshold": true,
         "q95_gap_abs_n1600_vs_n6400_delta_le_threshold": true,
+        "q95_gap_abs_n800_vs_n6400_delta_le_threshold": true,
+        "q95_gap_abs_n12800_vs_n6400_delta_le_threshold": true,
+        "q95_convergence_tail_ratio_n12800_le_one": true,
+        "q95_gap_abs_n25600_vs_n12800_delta_le_threshold": true,
+        "q95_monotone_violation_n25600_le_zero": true,
         "max_gap_rel_le_threshold": true,
         "all_nonnegative_weights": true,
         "q95_cross_integrator_gap_le_threshold": true,
@@ -5887,25 +6211,25 @@
     "rows": [
       {
         "tol": 1e-10,
-        "runtime_seconds": 0.0013807109971821774,
+        "runtime_seconds": 0.001560046999657061,
         "delta_l2_vs_baseline": 1.6048048203311556e-13,
-        "gain_per_second": 1.1623032072651843e-10
+        "gain_per_second": 1.0286900463152287e-10
       },
       {
         "tol": 1e-12,
-        "runtime_seconds": 0.0016453270000056364,
+        "runtime_seconds": 0.0020732519997181953,
         "delta_l2_vs_baseline": 0.0,
         "gain_per_second": 0.0
       },
       {
         "tol": 1e-13,
-        "runtime_seconds": 0.0016549659994780086,
+        "runtime_seconds": 0.0018830590006473358,
         "delta_l2_vs_baseline": 0.0,
         "gain_per_second": 0.0
       }
     ],
-    "fastest_runtime_seconds": 0.0013807109971821774,
-    "slowest_runtime_seconds": 0.0016549659994780086
+    "fastest_runtime_seconds": 0.001560046999657061,
+    "slowest_runtime_seconds": 0.0020732519997181953
   },
   "ur_all_class_exact_integration_sweep_precursor": {
     "status": "OPEN_PRECURSOR_NOT_CLOSURE",
@@ -6328,7 +6652,7 @@
         "limit": 2000,
         "u1_integration_warning_count": 5,
         "u1_delta_l2_vs_baseline": 2.7755575615628914e-16,
-        "u1_runtime_seconds": 0.004530996000539744
+        "u1_runtime_seconds": 0.005255877999843506
       },
       {
         "class": "gauge_gauge",
@@ -6337,7 +6661,7 @@
         "limit": 2000,
         "u1_integration_warning_count": 5,
         "u1_delta_l2_vs_baseline": 2.0770370905276122e-16,
-        "u1_runtime_seconds": 0.0045242769992910326
+        "u1_runtime_seconds": 0.004677331000493723
       },
       {
         "class": "fermion_fermion",
@@ -6346,7 +6670,7 @@
         "limit": 2000,
         "u1_integration_warning_count": 5,
         "u1_delta_l2_vs_baseline": 1.2412670766236366e-16,
-        "u1_runtime_seconds": 0.004502518000663258
+        "u1_runtime_seconds": 0.00487019699994562
       },
       {
         "class": "gauge_gauge",
@@ -6355,7 +6679,7 @@
         "limit": 600,
         "u1_integration_warning_count": 0,
         "u1_delta_l2_vs_baseline": 1.1102230246251565e-16,
-        "u1_runtime_seconds": 0.0018421629974909592
+        "u1_runtime_seconds": 0.0018379670000285842
       },
       {
         "class": "gauge_gauge",
@@ -6364,7 +6688,7 @@
         "limit": 1200,
         "u1_integration_warning_count": 0,
         "u1_delta_l2_vs_baseline": 1.1102230246251565e-16,
-        "u1_runtime_seconds": 0.0018145850008295383
+        "u1_runtime_seconds": 0.0018591469997772947
       }
     ],
     "rows_u2": [
@@ -6569,13 +6893,13 @@
         "limit": 600,
         "u1_warning_count": 0,
         "u1_delta_l2_vs_baseline": 0.0,
-        "u1_runtime_seconds": 0.0019859390013152733,
+        "u1_runtime_seconds": 0.0021250230001896853,
         "u2_warning_count": 0,
         "u2_delta_l2_vs_baseline": 7.087189354717363e-16,
-        "u2_runtime_seconds": 0.0005991350008116569,
+        "u2_runtime_seconds": 0.0005999550003252807,
         "u4_warning_count": 0,
         "u4_delta_l2_vs_baseline": 1.6653345369377348e-16,
-        "u4_runtime_seconds": 0.0006037210005160887,
+        "u4_runtime_seconds": 0.0006545849992107833,
         "winner": "u1",
         "ranked_transforms": [
           "u1",
@@ -6590,13 +6914,13 @@
         "limit": 1200,
         "u1_warning_count": 0,
         "u1_delta_l2_vs_baseline": 0.0,
-        "u1_runtime_seconds": 0.0019846499999403022,
+        "u1_runtime_seconds": 0.0021266420008032583,
         "u2_warning_count": 0,
         "u2_delta_l2_vs_baseline": 7.087189354717363e-16,
-        "u2_runtime_seconds": 0.0005695289983123075,
+        "u2_runtime_seconds": 0.0006192099999680067,
         "u4_warning_count": 0,
         "u4_delta_l2_vs_baseline": 1.6653345369377348e-16,
-        "u4_runtime_seconds": 0.0005777129990747198,
+        "u4_runtime_seconds": 0.0006325989998003934,
         "winner": "u1",
         "ranked_transforms": [
           "u1",
@@ -6611,13 +6935,13 @@
         "limit": 600,
         "u1_warning_count": 0,
         "u1_delta_l2_vs_baseline": 1.1102230246251565e-16,
-        "u1_runtime_seconds": 0.0021078060017316602,
+        "u1_runtime_seconds": 0.0022628240003541578,
         "u2_warning_count": 0,
         "u2_delta_l2_vs_baseline": 2.0770370905276122e-16,
-        "u2_runtime_seconds": 0.0008913900019251741,
+        "u2_runtime_seconds": 0.0011671980000755866,
         "u4_warning_count": 0,
         "u4_delta_l2_vs_baseline": 1.6653345369377348e-16,
-        "u4_runtime_seconds": 0.0009562749983160757,
+        "u4_runtime_seconds": 0.0012166469996373053,
         "winner": "u1",
         "ranked_transforms": [
           "u1",
@@ -6632,13 +6956,13 @@
         "limit": 1200,
         "u1_warning_count": 0,
         "u1_delta_l2_vs_baseline": 1.1102230246251565e-16,
-        "u1_runtime_seconds": 0.0021385399995779153,
+        "u1_runtime_seconds": 0.002608114999929967,
         "u2_warning_count": 0,
         "u2_delta_l2_vs_baseline": 2.0770370905276122e-16,
-        "u2_runtime_seconds": 0.0009381950003444217,
+        "u2_runtime_seconds": 0.0010561179997239378,
         "u4_warning_count": 0,
         "u4_delta_l2_vs_baseline": 1.6653345369377348e-16,
-        "u4_runtime_seconds": 0.0009501319982518908,
+        "u4_runtime_seconds": 0.0010770569997475832,
         "winner": "u1",
         "ranked_transforms": [
           "u1",
@@ -6653,13 +6977,13 @@
         "limit": 2000,
         "u1_warning_count": 5,
         "u1_delta_l2_vs_baseline": 2.0770370905276122e-16,
-        "u1_runtime_seconds": 0.004298757001379272,
+        "u1_runtime_seconds": 0.004750617999889073,
         "u2_warning_count": 5,
         "u2_delta_l2_vs_baseline": 1.6653345369377348e-16,
-        "u2_runtime_seconds": 0.004606259000865975,
+        "u2_runtime_seconds": 0.005038206000790524,
         "u4_warning_count": 5,
         "u4_delta_l2_vs_baseline": 2.603703785810335e-16,
-        "u4_runtime_seconds": 0.004619055001967354,
+        "u4_runtime_seconds": 0.005277186999592232,
         "winner": "u2",
         "ranked_transforms": [
           "u2",
@@ -6674,13 +6998,13 @@
         "limit": 600,
         "u1_warning_count": 0,
         "u1_delta_l2_vs_baseline": 0.0,
-        "u1_runtime_seconds": 0.002021754000452347,
+        "u1_runtime_seconds": 0.0020140579999861075,
         "u2_warning_count": 0,
         "u2_delta_l2_vs_baseline": 8.044330061068549e-16,
-        "u2_runtime_seconds": 0.0005898409981455188,
+        "u2_runtime_seconds": 0.0006905330001245602,
         "u4_warning_count": 0,
         "u4_delta_l2_vs_baseline": 2.830524433501838e-16,
-        "u4_runtime_seconds": 0.0006058380022295751,
+        "u4_runtime_seconds": 0.0005763749995821854,
         "winner": "u1",
         "ranked_transforms": [
           "u1",
@@ -6695,13 +7019,13 @@
         "limit": 1200,
         "u1_warning_count": 0,
         "u1_delta_l2_vs_baseline": 0.0,
-        "u1_runtime_seconds": 0.0019906649977201596,
+        "u1_runtime_seconds": 0.002343709999877319,
         "u2_warning_count": 0,
         "u2_delta_l2_vs_baseline": 8.044330061068549e-16,
-        "u2_runtime_seconds": 0.00057366699911654,
+        "u2_runtime_seconds": 0.0005766879994553165,
         "u4_warning_count": 0,
         "u4_delta_l2_vs_baseline": 2.830524433501838e-16,
-        "u4_runtime_seconds": 0.0005732490026275627,
+        "u4_runtime_seconds": 0.0006110489994171076,
         "winner": "u1",
         "ranked_transforms": [
           "u1",
@@ -6716,13 +7040,13 @@
         "limit": 600,
         "u1_warning_count": 0,
         "u1_delta_l2_vs_baseline": 1.1102230246251565e-16,
-        "u1_runtime_seconds": 0.002143921003153082,
+        "u1_runtime_seconds": 0.002320204999705311,
         "u2_warning_count": 0,
         "u2_delta_l2_vs_baseline": 1.7554167342883506e-16,
-        "u2_runtime_seconds": 0.0009691369996289723,
+        "u2_runtime_seconds": 0.0012444530002539977,
         "u4_warning_count": 0,
         "u4_delta_l2_vs_baseline": 2.0014830212433605e-16,
-        "u4_runtime_seconds": 0.0009248140013369266,
+        "u4_runtime_seconds": 0.0010422320001453045,
         "winner": "u1",
         "ranked_transforms": [
           "u1",
@@ -6737,13 +7061,13 @@
         "limit": 1200,
         "u1_warning_count": 0,
         "u1_delta_l2_vs_baseline": 1.1102230246251565e-16,
-        "u1_runtime_seconds": 0.002100955000059912,
+        "u1_runtime_seconds": 0.0024719189996176283,
         "u2_warning_count": 0,
         "u2_delta_l2_vs_baseline": 1.7554167342883506e-16,
-        "u2_runtime_seconds": 0.0009515810015727766,
+        "u2_runtime_seconds": 0.001160545999482565,
         "u4_warning_count": 0,
         "u4_delta_l2_vs_baseline": 2.0014830212433605e-16,
-        "u4_runtime_seconds": 0.0009426969991181977,
+        "u4_runtime_seconds": 0.0012257170001248596,
         "winner": "u1",
         "ranked_transforms": [
           "u1",
@@ -6758,13 +7082,13 @@
         "limit": 2000,
         "u1_warning_count": 5,
         "u1_delta_l2_vs_baseline": 1.2412670766236366e-16,
-        "u1_runtime_seconds": 0.004252629998518387,
+        "u1_runtime_seconds": 0.004816875999495096,
         "u2_warning_count": 5,
         "u2_delta_l2_vs_baseline": 2.220446049250313e-16,
-        "u2_runtime_seconds": 0.004894434001471382,
+        "u2_runtime_seconds": 0.004686221000156365,
         "u4_warning_count": 5,
         "u4_delta_l2_vs_baseline": 1.7554167342883506e-16,
-        "u4_runtime_seconds": 0.005714896000426961,
+        "u4_runtime_seconds": 0.005676062000020465,
         "winner": "u1",
         "ranked_transforms": [
           "u1",
@@ -6779,13 +7103,13 @@
         "limit": 600,
         "u1_warning_count": 0,
         "u1_delta_l2_vs_baseline": 0.0,
-        "u1_runtime_seconds": 0.0027192859997740015,
+        "u1_runtime_seconds": 0.003506569999444764,
         "u2_warning_count": 0,
         "u2_delta_l2_vs_baseline": 6.055551679337975e-16,
-        "u2_runtime_seconds": 0.0010195769973506685,
+        "u2_runtime_seconds": 0.0005822110006192815,
         "u4_warning_count": 0,
         "u4_delta_l2_vs_baseline": 5.147892387644517e-16,
-        "u4_runtime_seconds": 0.0007653339998796582,
+        "u4_runtime_seconds": 0.0006157950001579593,
         "winner": "u1",
         "ranked_transforms": [
           "u1",
@@ -6800,13 +7124,13 @@
         "limit": 1200,
         "u1_warning_count": 0,
         "u1_delta_l2_vs_baseline": 0.0,
-        "u1_runtime_seconds": 0.0024665389973961283,
+        "u1_runtime_seconds": 0.0022269700002652826,
         "u2_warning_count": 0,
         "u2_delta_l2_vs_baseline": 6.055551679337975e-16,
-        "u2_runtime_seconds": 0.0009251799965568352,
+        "u2_runtime_seconds": 0.0005788800008303951,
         "u4_warning_count": 0,
         "u4_delta_l2_vs_baseline": 5.147892387644517e-16,
-        "u4_runtime_seconds": 0.0008535449996998068,
+        "u4_runtime_seconds": 0.0005815500007884111,
         "winner": "u1",
         "ranked_transforms": [
           "u1",
@@ -6821,13 +7145,13 @@
         "limit": 600,
         "u1_warning_count": 0,
         "u1_delta_l2_vs_baseline": 1.1102230246251565e-16,
-        "u1_runtime_seconds": 0.0033379829983459786,
+        "u1_runtime_seconds": 0.002444630999889341,
         "u2_warning_count": 0,
         "u2_delta_l2_vs_baseline": 6.255789036560346e-16,
-        "u2_runtime_seconds": 0.001034543998684967,
+        "u2_runtime_seconds": 0.0008754299997235648,
         "u4_warning_count": 0,
         "u4_delta_l2_vs_baseline": 4.902612130890298e-16,
-        "u4_runtime_seconds": 0.0014531100023305044,
+        "u4_runtime_seconds": 0.0009584669996911543,
         "winner": "u1",
         "ranked_transforms": [
           "u1",
@@ -6842,13 +7166,13 @@
         "limit": 1200,
         "u1_warning_count": 0,
         "u1_delta_l2_vs_baseline": 1.1102230246251565e-16,
-        "u1_runtime_seconds": 0.00262542899872642,
+        "u1_runtime_seconds": 0.0025608710002416046,
         "u2_warning_count": 0,
         "u2_delta_l2_vs_baseline": 6.255789036560346e-16,
-        "u2_runtime_seconds": 0.0010859699978027493,
+        "u2_runtime_seconds": 0.0008198929999707616,
         "u4_warning_count": 0,
         "u4_delta_l2_vs_baseline": 4.902612130890298e-16,
-        "u4_runtime_seconds": 0.001158267001301283,
+        "u4_runtime_seconds": 0.0010025719993791427,
         "winner": "u1",
         "ranked_transforms": [
           "u1",
@@ -6863,13 +7187,13 @@
         "limit": 2000,
         "u1_warning_count": 5,
         "u1_delta_l2_vs_baseline": 2.7755575615628914e-16,
-        "u1_runtime_seconds": 0.0052172529976814985,
+        "u1_runtime_seconds": 0.005151770999873406,
         "u2_warning_count": 5,
         "u2_delta_l2_vs_baseline": 5.117875266520903e-16,
-        "u2_runtime_seconds": 0.005772173997684149,
+        "u2_runtime_seconds": 0.005178448999686225,
         "u4_warning_count": 5,
         "u4_delta_l2_vs_baseline": 3.885780586188048e-16,
-        "u4_runtime_seconds": 0.006051426997146336,
+        "u4_runtime_seconds": 0.005371840000407246,
         "winner": "u1",
         "ranked_transforms": [
           "u1",
@@ -6932,7 +7256,7 @@
         "chosen_transform": "u1",
         "chosen_warning_count": 0,
         "chosen_delta_l2_vs_baseline": 0.0,
-        "chosen_runtime_seconds": 0.0019859390013152733,
+        "chosen_runtime_seconds": 0.0021250230001896853,
         "baseline_warning_count": 0,
         "warning_count_delta_chosen_minus_baseline": 0
       },
@@ -6944,7 +7268,7 @@
         "chosen_transform": "u1",
         "chosen_warning_count": 0,
         "chosen_delta_l2_vs_baseline": 0.0,
-        "chosen_runtime_seconds": 0.0019846499999403022,
+        "chosen_runtime_seconds": 0.0021266420008032583,
         "baseline_warning_count": 0,
         "warning_count_delta_chosen_minus_baseline": 0
       },
@@ -6956,7 +7280,7 @@
         "chosen_transform": "u1",
         "chosen_warning_count": 0,
         "chosen_delta_l2_vs_baseline": 1.1102230246251565e-16,
-        "chosen_runtime_seconds": 0.0021078060017316602,
+        "chosen_runtime_seconds": 0.0022628240003541578,
         "baseline_warning_count": 0,
         "warning_count_delta_chosen_minus_baseline": 0
       },
@@ -6968,7 +7292,7 @@
         "chosen_transform": "u1",
         "chosen_warning_count": 0,
         "chosen_delta_l2_vs_baseline": 1.1102230246251565e-16,
-        "chosen_runtime_seconds": 0.0021385399995779153,
+        "chosen_runtime_seconds": 0.002608114999929967,
         "baseline_warning_count": 0,
         "warning_count_delta_chosen_minus_baseline": 0
       },
@@ -6980,7 +7304,7 @@
         "chosen_transform": "u1",
         "chosen_warning_count": 5,
         "chosen_delta_l2_vs_baseline": 2.0770370905276122e-16,
-        "chosen_runtime_seconds": 0.004298757001379272,
+        "chosen_runtime_seconds": 0.004750617999889073,
         "baseline_warning_count": 5,
         "warning_count_delta_chosen_minus_baseline": 0
       },
@@ -6992,7 +7316,7 @@
         "chosen_transform": "u1",
         "chosen_warning_count": 0,
         "chosen_delta_l2_vs_baseline": 0.0,
-        "chosen_runtime_seconds": 0.002021754000452347,
+        "chosen_runtime_seconds": 0.0020140579999861075,
         "baseline_warning_count": 0,
         "warning_count_delta_chosen_minus_baseline": 0
       },
@@ -7004,7 +7328,7 @@
         "chosen_transform": "u1",
         "chosen_warning_count": 0,
         "chosen_delta_l2_vs_baseline": 0.0,
-        "chosen_runtime_seconds": 0.0019906649977201596,
+        "chosen_runtime_seconds": 0.002343709999877319,
         "baseline_warning_count": 0,
         "warning_count_delta_chosen_minus_baseline": 0
       },
@@ -7016,7 +7340,7 @@
         "chosen_transform": "u1",
         "chosen_warning_count": 0,
         "chosen_delta_l2_vs_baseline": 1.1102230246251565e-16,
-        "chosen_runtime_seconds": 0.002143921003153082,
+        "chosen_runtime_seconds": 0.002320204999705311,
         "baseline_warning_count": 0,
         "warning_count_delta_chosen_minus_baseline": 0
       },
@@ -7028,7 +7352,7 @@
         "chosen_transform": "u1",
         "chosen_warning_count": 0,
         "chosen_delta_l2_vs_baseline": 1.1102230246251565e-16,
-        "chosen_runtime_seconds": 0.002100955000059912,
+        "chosen_runtime_seconds": 0.0024719189996176283,
         "baseline_warning_count": 0,
         "warning_count_delta_chosen_minus_baseline": 0
       },
@@ -7040,7 +7364,7 @@
         "chosen_transform": "u1",
         "chosen_warning_count": 5,
         "chosen_delta_l2_vs_baseline": 1.2412670766236366e-16,
-        "chosen_runtime_seconds": 0.004252629998518387,
+        "chosen_runtime_seconds": 0.004816875999495096,
         "baseline_warning_count": 5,
         "warning_count_delta_chosen_minus_baseline": 0
       },
@@ -7052,7 +7376,7 @@
         "chosen_transform": "u1",
         "chosen_warning_count": 0,
         "chosen_delta_l2_vs_baseline": 0.0,
-        "chosen_runtime_seconds": 0.0027192859997740015,
+        "chosen_runtime_seconds": 0.003506569999444764,
         "baseline_warning_count": 0,
         "warning_count_delta_chosen_minus_baseline": 0
       },
@@ -7064,7 +7388,7 @@
         "chosen_transform": "u1",
         "chosen_warning_count": 0,
         "chosen_delta_l2_vs_baseline": 0.0,
-        "chosen_runtime_seconds": 0.0024665389973961283,
+        "chosen_runtime_seconds": 0.0022269700002652826,
         "baseline_warning_count": 0,
         "warning_count_delta_chosen_minus_baseline": 0
       },
@@ -7076,7 +7400,7 @@
         "chosen_transform": "u1",
         "chosen_warning_count": 0,
         "chosen_delta_l2_vs_baseline": 1.1102230246251565e-16,
-        "chosen_runtime_seconds": 0.0033379829983459786,
+        "chosen_runtime_seconds": 0.002444630999889341,
         "baseline_warning_count": 0,
         "warning_count_delta_chosen_minus_baseline": 0
       },
@@ -7088,7 +7412,7 @@
         "chosen_transform": "u1",
         "chosen_warning_count": 0,
         "chosen_delta_l2_vs_baseline": 1.1102230246251565e-16,
-        "chosen_runtime_seconds": 0.00262542899872642,
+        "chosen_runtime_seconds": 0.0025608710002416046,
         "baseline_warning_count": 0,
         "warning_count_delta_chosen_minus_baseline": 0
       },
@@ -7100,7 +7424,7 @@
         "chosen_transform": "u1",
         "chosen_warning_count": 5,
         "chosen_delta_l2_vs_baseline": 2.7755575615628914e-16,
-        "chosen_runtime_seconds": 0.0052172529976814985,
+        "chosen_runtime_seconds": 0.005151770999873406,
         "baseline_warning_count": 5,
         "warning_count_delta_chosen_minus_baseline": 0
       }
@@ -7110,7 +7434,7 @@
     "baseline_warning_total": 15,
     "warning_total_delta_chosen_minus_baseline": 0,
     "chosen_delta_l2_span": 2.7755575615628914e-16,
-    "chosen_runtime_total_seconds": 0.04139210699577234
+    "chosen_runtime_total_seconds": 0.043730802999562
   },
   "ur_numerical_stress_policy_counterfactual_precursor": {
     "status": "OPEN_PRECURSOR_NOT_CLOSURE",
@@ -7121,25 +7445,25 @@
         "policy": "always_u1",
         "warning_total": 15,
         "delta_l2_span": 2.7755575615628914e-16,
-        "runtime_total_seconds": 0.04139210699577234
+        "runtime_total_seconds": 0.043730802999562
       },
       {
         "policy": "class_conditional",
         "warning_total": 15,
         "delta_l2_span": 2.7755575615628914e-16,
-        "runtime_total_seconds": 0.04139210699577234
+        "runtime_total_seconds": 0.043730802999562
       },
       {
         "policy": "always_u4",
         "warning_total": 15,
         "delta_l2_span": 3.482557850706782e-16,
-        "runtime_total_seconds": 0.02675007300422294
+        "runtime_total_seconds": 0.026519733997702133
       },
       {
         "policy": "always_u2",
         "warning_total": 15,
         "delta_l2_span": 6.378995524130814e-16,
-        "runtime_total_seconds": 0.025420612990274094
+        "runtime_total_seconds": 0.02487399100118637
       }
     ],
     "best_policy": "always_u1"
@@ -7157,7 +7481,7 @@
         "policy": "always_u1",
         "warning_total": 15,
         "delta_l2_span": 2.7755575615628914e-16,
-        "runtime_total_seconds": 0.04139210699577234,
+        "runtime_total_seconds": 0.043730802999562,
         "pareto_frontier": true,
         "dominated_by_policy": "none",
         "dominance_margin": {
@@ -7170,7 +7494,7 @@
         "policy": "class_conditional",
         "warning_total": 15,
         "delta_l2_span": 2.7755575615628914e-16,
-        "runtime_total_seconds": 0.04139210699577234,
+        "runtime_total_seconds": 0.043730802999562,
         "pareto_frontier": true,
         "dominated_by_policy": "none",
         "dominance_margin": {
@@ -7183,7 +7507,7 @@
         "policy": "always_u4",
         "warning_total": 15,
         "delta_l2_span": 3.482557850706782e-16,
-        "runtime_total_seconds": 0.02675007300422294,
+        "runtime_total_seconds": 0.026519733997702133,
         "pareto_frontier": true,
         "dominated_by_policy": "none",
         "dominance_margin": {
@@ -7196,7 +7520,7 @@
         "policy": "always_u2",
         "warning_total": 15,
         "delta_l2_span": 6.378995524130814e-16,
-        "runtime_total_seconds": 0.025420612990274094,
+        "runtime_total_seconds": 0.02487399100118637,
         "pareto_frontier": true,
         "dominated_by_policy": "none",
         "dominance_margin": {
@@ -7252,12 +7576,12 @@
       },
       {
         "policy": "always_u2",
-        "pareto_front_frequency": 0.943359375,
+        "pareto_front_frequency": 0.9765625,
         "pareto_front_frequency_ci95_jeffreys": {
-          "lower": 0.9207958638092644,
-          "upper": 0.9609328379932497
+          "lower": 0.9606480215912844,
+          "upper": 0.9871253622565732
         },
-        "bootstrap_successes": 483,
+        "bootstrap_successes": 500,
         "bootstrap_trials": 512
       }
     ],
@@ -7276,39 +7600,39 @@
     "rows": [
       {
         "runtime_budget_quantile": 0.25,
-        "runtime_budget_cap_seconds": 0.02641770800073573,
+        "runtime_budget_cap_seconds": 0.026108298248573192,
         "eligible_policy_count": 1,
         "selected_policy": "always_u2",
         "selected_warning_total": 15,
         "selected_delta_l2_span": 6.378995524130814e-16,
-        "selected_runtime_total_seconds": 0.025420612990274094
+        "selected_runtime_total_seconds": 0.02487399100118637
       },
       {
         "runtime_budget_quantile": 0.5,
-        "runtime_budget_cap_seconds": 0.03407108999999764,
+        "runtime_budget_cap_seconds": 0.03512526849863207,
         "eligible_policy_count": 2,
         "selected_policy": "always_u4",
         "selected_warning_total": 15,
         "selected_delta_l2_span": 3.482557850706782e-16,
-        "selected_runtime_total_seconds": 0.02675007300422294
+        "selected_runtime_total_seconds": 0.026519733997702133
       },
       {
         "runtime_budget_quantile": 0.75,
-        "runtime_budget_cap_seconds": 0.04139210699577234,
+        "runtime_budget_cap_seconds": 0.043730802999562,
         "eligible_policy_count": 4,
         "selected_policy": "always_u1",
         "selected_warning_total": 15,
         "selected_delta_l2_span": 2.7755575615628914e-16,
-        "selected_runtime_total_seconds": 0.04139210699577234
+        "selected_runtime_total_seconds": 0.043730802999562
       },
       {
         "runtime_budget_quantile": 1.0,
-        "runtime_budget_cap_seconds": 0.04139210699577234,
+        "runtime_budget_cap_seconds": 0.043730802999562,
         "eligible_policy_count": 4,
         "selected_policy": "always_u1",
         "selected_warning_total": 15,
         "selected_delta_l2_span": 2.7755575615628914e-16,
-        "selected_runtime_total_seconds": 0.04139210699577234
+        "selected_runtime_total_seconds": 0.043730802999562
       }
     ],
     "budget_vote_rows": [
@@ -7351,13 +7675,13 @@
         "runtime_cap_scale": 0.85,
         "objective_jitter_frac": 0.0,
         "bootstrap_size": 256,
-        "flip_count_vs_base_policy": 247,
-        "local_trials": 247,
+        "flip_count_vs_base_policy": 256,
+        "local_trials": 256,
         "flip_frequency_vs_base_policy": 1.0,
         "winner_counts": {
           "always_u1": 0,
-          "always_u2": 36,
-          "always_u4": 211,
+          "always_u2": 23,
+          "always_u4": 233,
           "class_conditional": 0
         }
       },
@@ -7365,13 +7689,13 @@
         "runtime_cap_scale": 0.85,
         "objective_jitter_frac": 0.01,
         "bootstrap_size": 256,
-        "flip_count_vs_base_policy": 242,
-        "local_trials": 242,
+        "flip_count_vs_base_policy": 253,
+        "local_trials": 253,
         "flip_frequency_vs_base_policy": 1.0,
         "winner_counts": {
           "always_u1": 0,
-          "always_u2": 37,
-          "always_u4": 205,
+          "always_u2": 20,
+          "always_u4": 233,
           "class_conditional": 0
         }
       },
@@ -7379,13 +7703,13 @@
         "runtime_cap_scale": 0.85,
         "objective_jitter_frac": 0.02,
         "bootstrap_size": 256,
-        "flip_count_vs_base_policy": 243,
-        "local_trials": 243,
+        "flip_count_vs_base_policy": 253,
+        "local_trials": 253,
         "flip_frequency_vs_base_policy": 1.0,
         "winner_counts": {
           "always_u1": 0,
-          "always_u2": 45,
-          "always_u4": 198,
+          "always_u2": 28,
+          "always_u4": 225,
           "class_conditional": 0
         }
       },
@@ -7435,13 +7759,13 @@
         "runtime_cap_scale": 1.15,
         "objective_jitter_frac": 0.0,
         "bootstrap_size": 256,
-        "flip_count_vs_base_policy": 201,
+        "flip_count_vs_base_policy": 222,
         "local_trials": 256,
-        "flip_frequency_vs_base_policy": 0.78515625,
+        "flip_frequency_vs_base_policy": 0.8671875,
         "winner_counts": {
-          "always_u1": 55,
+          "always_u1": 34,
           "always_u2": 0,
-          "always_u4": 201,
+          "always_u4": 222,
           "class_conditional": 0
         }
       },
@@ -7449,13 +7773,13 @@
         "runtime_cap_scale": 1.15,
         "objective_jitter_frac": 0.01,
         "bootstrap_size": 256,
-        "flip_count_vs_base_policy": 204,
+        "flip_count_vs_base_policy": 229,
         "local_trials": 256,
-        "flip_frequency_vs_base_policy": 0.796875,
+        "flip_frequency_vs_base_policy": 0.89453125,
         "winner_counts": {
-          "always_u1": 52,
+          "always_u1": 27,
           "always_u2": 0,
-          "always_u4": 204,
+          "always_u4": 229,
           "class_conditional": 0
         }
       },
@@ -7463,28 +7787,28 @@
         "runtime_cap_scale": 1.15,
         "objective_jitter_frac": 0.02,
         "bootstrap_size": 256,
-        "flip_count_vs_base_policy": 214,
+        "flip_count_vs_base_policy": 235,
         "local_trials": 256,
-        "flip_frequency_vs_base_policy": 0.8359375,
+        "flip_frequency_vs_base_policy": 0.91796875,
         "winner_counts": {
-          "always_u1": 42,
+          "always_u1": 21,
           "always_u2": 0,
-          "always_u4": 214,
+          "always_u4": 235,
           "class_conditional": 0
         }
       }
     ],
-    "global_flip_count_vs_base_policy": 2119,
-    "global_trials": 2268,
-    "global_flip_frequency_vs_base_policy": 0.9343033509700176,
+    "global_flip_count_vs_base_policy": 2216,
+    "global_trials": 2298,
+    "global_flip_frequency_vs_base_policy": 0.9643167972149695,
     "global_flip_frequency_ci95_jeffreys": {
-      "lower": 0.9235498355575225,
-      "upper": 0.9439494666037813
+      "lower": 0.9561389868646633,
+      "upper": 0.9713264247596458
     },
     "policy_win_counter_global": {
-      "always_u1": 149,
-      "always_u2": 119,
-      "always_u4": 2000,
+      "always_u1": 82,
+      "always_u2": 72,
+      "always_u4": 2144,
       "class_conditional": 0
     }
   },
@@ -7495,51 +7819,51 @@
       {
         "class": "gauge_gauge",
         "base_policy": "always_u4",
-        "global_flip_count_vs_base_policy": 174,
-        "global_trials": 2101,
-        "global_flip_frequency_vs_base_policy": 0.08281770585435506,
+        "global_flip_count_vs_base_policy": 244,
+        "global_trials": 2169,
+        "global_flip_frequency_vs_base_policy": 0.11249423697556478,
         "global_flip_frequency_ci95_jeffreys": {
-          "lower": 0.07160543413541468,
-          "upper": 0.09517826632703401
+          "lower": 0.0997148334882904,
+          "upper": 0.12630690807957928
         },
         "policy_win_counter_global": {
           "always_u1": 4,
-          "always_u2": 170,
-          "always_u4": 1927,
+          "always_u2": 240,
+          "always_u4": 1925,
           "class_conditional": 0
         }
       },
       {
         "class": "fermion_fermion",
         "base_policy": "always_u4",
-        "global_flip_count_vs_base_policy": 205,
-        "global_trials": 2164,
-        "global_flip_frequency_vs_base_policy": 0.09473197781885398,
+        "global_flip_count_vs_base_policy": 250,
+        "global_trials": 2284,
+        "global_flip_frequency_vs_base_policy": 0.10945709281961472,
         "global_flip_frequency_ci95_jeffreys": {
-          "lower": 0.08293500325462999,
-          "upper": 0.10761203824315944
+          "lower": 0.09714855794940731,
+          "upper": 0.12275459931303906
         },
         "policy_win_counter_global": {
-          "always_u1": 82,
-          "always_u2": 123,
-          "always_u4": 1959,
+          "always_u1": 38,
+          "always_u2": 212,
+          "always_u4": 2034,
           "class_conditional": 0
         }
       },
       {
         "class": "scalar_scalar",
         "base_policy": "always_u2",
-        "global_flip_count_vs_base_policy": 149,
-        "global_trials": 2166,
-        "global_flip_frequency_vs_base_policy": 0.06879039704524469,
+        "global_flip_count_vs_base_policy": 121,
+        "global_trials": 2262,
+        "global_flip_frequency_vs_base_policy": 0.05349248452696728,
         "global_flip_frequency_ci95_jeffreys": {
-          "lower": 0.05870395180276744,
-          "upper": 0.08002809565104833
+          "lower": 0.0447849087354412,
+          "upper": 0.06334151363723592
         },
         "policy_win_counter_global": {
-          "always_u1": 5,
-          "always_u2": 2017,
-          "always_u4": 144,
+          "always_u1": 1,
+          "always_u2": 2141,
+          "always_u4": 120,
           "class_conditional": 0
         }
       }
@@ -7557,7 +7881,7 @@
     "rows": [
       {
         "class": "gauge_gauge",
-        "fragility_flip_frequency_wilson_lb95_proxy": 0.07160543413541468,
+        "fragility_flip_frequency_wilson_lb95_proxy": 0.0997148334882904,
         "fragility_lb_threshold": 0.3,
         "base_policy": "always_u4",
         "robust_winner_policy": "always_u4",
@@ -7566,7 +7890,7 @@
       },
       {
         "class": "fermion_fermion",
-        "fragility_flip_frequency_wilson_lb95_proxy": 0.08293500325462999,
+        "fragility_flip_frequency_wilson_lb95_proxy": 0.09714855794940731,
         "fragility_lb_threshold": 0.3,
         "base_policy": "always_u4",
         "robust_winner_policy": "always_u4",
@@ -7575,7 +7899,7 @@
       },
       {
         "class": "scalar_scalar",
-        "fragility_flip_frequency_wilson_lb95_proxy": 0.05870395180276744,
+        "fragility_flip_frequency_wilson_lb95_proxy": 0.0447849087354412,
         "fragility_lb_threshold": 0.3,
         "base_policy": "always_u2",
         "robust_winner_policy": "always_u2",
@@ -7585,14 +7909,14 @@
     ],
     "adaptive_warning_total": 15,
     "adaptive_delta_l2_span": 4.590454499622612e-16,
-    "adaptive_runtime_total_seconds": 0.02630583499194472,
+    "adaptive_runtime_total_seconds": 0.026024372998108447,
     "base_budget_policy": "always_u1",
     "base_budget_warning_total": 15,
     "base_budget_delta_l2_span": 2.7755575615628914e-16,
-    "base_budget_runtime_total_seconds": 0.04139210699577234,
+    "base_budget_runtime_total_seconds": 0.043730802999562,
     "delta_warning_total_adaptive_minus_base": 0,
     "delta_delta_l2_span_adaptive_minus_base": 1.8148969380597202e-16,
-    "delta_runtime_total_seconds_adaptive_minus_base": -0.015086272003827617
+    "delta_runtime_total_seconds_adaptive_minus_base": -0.017706430001453555
   },
   "ur_numerical_stress_policy_ablation_precursor": {
     "status": "OPEN_PRECURSOR_NOT_CLOSURE",
@@ -7607,7 +7931,7 @@
         },
         "warning_total": 15,
         "delta_l2_span": 2.7755575615628914e-16,
-        "runtime_total_seconds": 0.04139210699577234
+        "runtime_total_seconds": 0.043730802999562
       },
       {
         "regime": "class_adaptive_fallback",
@@ -7618,7 +7942,7 @@
         },
         "warning_total": 15,
         "delta_l2_span": 4.590454499622612e-16,
-        "runtime_total_seconds": 0.02630583499194472
+        "runtime_total_seconds": 0.026024372998108447
       },
       {
         "regime": "robust_winner_only",
@@ -7629,7 +7953,7 @@
         },
         "warning_total": 15,
         "delta_l2_span": 4.590454499622612e-16,
-        "runtime_total_seconds": 0.02630583499194472
+        "runtime_total_seconds": 0.026024372998108447
       }
     ],
     "best_regime_lexicographic": "base_budget_policy",
@@ -7690,9 +8014,9 @@
     "constraint_rule": "row_runtime_le_class_q75_u2_and_row_warning_le_class_q75_u2",
     "feasibility_pass_rate_threshold": 0.8,
     "class_runtime_caps_seconds": {
-      "gauge_gauge": 0.0009381950003444217,
-      "fermion_fermion": 0.0009691369996289723,
-      "scalar_scalar": 0.0010859699978027493
+      "gauge_gauge": 0.0011671980000755866,
+      "fermion_fermion": 0.0012444530002539977,
+      "scalar_scalar": 0.0008754299997235648
     },
     "class_warning_caps": {
       "gauge_gauge": 0.0,
@@ -7712,7 +8036,7 @@
         "constraint_pass_rate": 0.0,
         "warning_total": 15,
         "delta_l2_span": 2.7755575615628914e-16,
-        "runtime_total_seconds": 0.04139210699577234
+        "runtime_total_seconds": 0.043730802999562
       },
       {
         "regime": "class_adaptive_fallback",
@@ -7721,12 +8045,12 @@
           "fermion_fermion": "always_u4",
           "scalar_scalar": "always_u2"
         },
-        "constraint_pass_rows": 10,
+        "constraint_pass_rows": 11,
         "constraint_total_rows": 15,
-        "constraint_pass_rate": 0.6666666666666666,
+        "constraint_pass_rate": 0.7333333333333333,
         "warning_total": 15,
         "delta_l2_span": 4.590454499622612e-16,
-        "runtime_total_seconds": 0.02630583499194472
+        "runtime_total_seconds": 0.026024372998108447
       },
       {
         "regime": "robust_winner_only",
@@ -7735,12 +8059,12 @@
           "fermion_fermion": "always_u4",
           "scalar_scalar": "always_u2"
         },
-        "constraint_pass_rows": 10,
+        "constraint_pass_rows": 11,
         "constraint_total_rows": 15,
-        "constraint_pass_rate": 0.6666666666666666,
+        "constraint_pass_rate": 0.7333333333333333,
         "warning_total": 15,
         "delta_l2_span": 4.590454499622612e-16,
-        "runtime_total_seconds": 0.02630583499194472
+        "runtime_total_seconds": 0.026024372998108447
       }
     ],
     "feasible_regimes": [],
@@ -7817,9 +8141,12 @@
     "rows": [
       {
         "feasibility_pass_rate_threshold": 0.7,
-        "num_feasible_regimes": 0,
-        "feasible_regimes": [],
-        "best_feasible_regime_lexicographic": "none"
+        "num_feasible_regimes": 2,
+        "feasible_regimes": [
+          "class_adaptive_fallback",
+          "robust_winner_only"
+        ],
+        "best_feasible_regime_lexicographic": "class_adaptive_fallback"
       },
       {
         "feasibility_pass_rate_threshold": 0.75,
@@ -7853,7 +8180,7 @@
       }
     ],
     "best_regime_sequence": [
-      "none",
+      "class_adaptive_fallback",
       "none",
       "none",
       "none",
@@ -7889,17 +8216,17 @@
         "cap_scale": 0.85,
         "jitter": 0.0,
         "bootstrap_size_requested": 128,
-        "usable_trials": 0,
-        "winner": "none",
-        "winner_frequency": 0.0,
+        "usable_trials": 2,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
         "winner_frequency_ci95_jeffreys": {
-          "lower": 0.0003855809807559011,
-          "upper": 0.8532536836904248
+          "lower": 0.3331782455987909,
+          "upper": 0.999783091529969
         },
-        "winner_entropy_norm": 0.0,
+        "winner_entropy_norm": -0.0,
         "winner_counts": {
           "base_budget_policy": 0,
-          "class_adaptive_fallback": 0,
+          "class_adaptive_fallback": 2,
           "robust_winner_only": 0
         }
       },
@@ -7908,17 +8235,17 @@
         "cap_scale": 0.85,
         "jitter": 0.01,
         "bootstrap_size_requested": 128,
-        "usable_trials": 0,
-        "winner": "none",
-        "winner_frequency": 0.0,
+        "usable_trials": 3,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
         "winner_frequency_ci95_jeffreys": {
-          "lower": 0.0003855809807559011,
-          "upper": 0.8532536836904248
+          "lower": 0.46441675695704965,
+          "upper": 0.9998493639745635
         },
-        "winner_entropy_norm": 0.0,
+        "winner_entropy_norm": -0.0,
         "winner_counts": {
           "base_budget_policy": 0,
-          "class_adaptive_fallback": 0,
+          "class_adaptive_fallback": 3,
           "robust_winner_only": 0
         }
       },
@@ -7927,17 +8254,17 @@
         "cap_scale": 0.85,
         "jitter": 0.02,
         "bootstrap_size_requested": 128,
-        "usable_trials": 0,
-        "winner": "none",
-        "winner_frequency": 0.0,
+        "usable_trials": 7,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
         "winner_frequency_ci95_jeffreys": {
-          "lower": 0.0003855809807559011,
-          "upper": 0.8532536836904248
+          "lower": 0.7075638263376901,
+          "upper": 0.9999323135357562
         },
-        "winner_entropy_norm": 0.0,
+        "winner_entropy_norm": -0.0,
         "winner_counts": {
           "base_budget_policy": 0,
-          "class_adaptive_fallback": 0,
+          "class_adaptive_fallback": 7,
           "robust_winner_only": 0
         }
       },
@@ -7946,17 +8273,17 @@
         "cap_scale": 1.0,
         "jitter": 0.0,
         "bootstrap_size_requested": 128,
-        "usable_trials": 57,
+        "usable_trials": 86,
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_frequency_ci95_jeffreys": {
-          "lower": 0.9570729941962437,
-          "upper": 0.9999914230957248
+          "lower": 0.9712963555787582,
+          "upper": 0.9999943068858265
         },
         "winner_entropy_norm": -0.0,
         "winner_counts": {
           "base_budget_policy": 0,
-          "class_adaptive_fallback": 57,
+          "class_adaptive_fallback": 86,
           "robust_winner_only": 0
         }
       },
@@ -7965,17 +8292,17 @@
         "cap_scale": 1.0,
         "jitter": 0.01,
         "bootstrap_size_requested": 128,
-        "usable_trials": 59,
+        "usable_trials": 81,
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_frequency_ci95_jeffreys": {
-          "lower": 0.9584914327354616,
-          "upper": 0.9999917126050356
+          "lower": 0.9695571760264196,
+          "upper": 0.9999939565446191
         },
         "winner_entropy_norm": -0.0,
         "winner_counts": {
           "base_budget_policy": 0,
-          "class_adaptive_fallback": 59,
+          "class_adaptive_fallback": 81,
           "robust_winner_only": 0
         }
       },
@@ -7984,17 +8311,17 @@
         "cap_scale": 1.0,
         "jitter": 0.02,
         "bootstrap_size_requested": 128,
-        "usable_trials": 51,
+        "usable_trials": 79,
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_frequency_ci95_jeffreys": {
-          "lower": 0.9521697376090908,
-          "upper": 0.9999904189978027
+          "lower": 0.9688010324671031,
+          "upper": 0.999993804030367
         },
         "winner_entropy_norm": -0.0,
         "winner_counts": {
           "base_budget_policy": 0,
-          "class_adaptive_fallback": 51,
+          "class_adaptive_fallback": 79,
           "robust_winner_only": 0
         }
       },
@@ -8079,17 +8406,17 @@
         "cap_scale": 0.85,
         "jitter": 0.01,
         "bootstrap_size_requested": 128,
-        "usable_trials": 0,
-        "winner": "none",
-        "winner_frequency": 0.0,
+        "usable_trials": 1,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
         "winner_frequency_ci95_jeffreys": {
-          "lower": 0.0003855809807559011,
-          "upper": 0.8532536836904248
+          "lower": 0.14674631630957513,
+          "upper": 0.9996144190192441
         },
-        "winner_entropy_norm": 0.0,
+        "winner_entropy_norm": -0.0,
         "winner_counts": {
           "base_budget_policy": 0,
-          "class_adaptive_fallback": 0,
+          "class_adaptive_fallback": 1,
           "robust_winner_only": 0
         }
       },
@@ -8098,17 +8425,17 @@
         "cap_scale": 0.85,
         "jitter": 0.02,
         "bootstrap_size_requested": 128,
-        "usable_trials": 0,
-        "winner": "none",
-        "winner_frequency": 0.0,
+        "usable_trials": 1,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
         "winner_frequency_ci95_jeffreys": {
-          "lower": 0.0003855809807559011,
-          "upper": 0.8532536836904248
+          "lower": 0.14674631630957513,
+          "upper": 0.9996144190192441
         },
-        "winner_entropy_norm": 0.0,
+        "winner_entropy_norm": -0.0,
         "winner_counts": {
           "base_budget_policy": 0,
-          "class_adaptive_fallback": 0,
+          "class_adaptive_fallback": 1,
           "robust_winner_only": 0
         }
       },
@@ -8117,17 +8444,17 @@
         "cap_scale": 1.0,
         "jitter": 0.0,
         "bootstrap_size_requested": 128,
-        "usable_trials": 19,
+        "usable_trials": 46,
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_frequency_ci95_jeffreys": {
-          "lower": 0.8776905956800861,
-          "upper": 0.9999744941873743
+          "lower": 0.9471382953607669,
+          "upper": 0.9999893832480728
         },
         "winner_entropy_norm": -0.0,
         "winner_counts": {
           "base_budget_policy": 0,
-          "class_adaptive_fallback": 19,
+          "class_adaptive_fallback": 46,
           "robust_winner_only": 0
         }
       },
@@ -8136,17 +8463,17 @@
         "cap_scale": 1.0,
         "jitter": 0.01,
         "bootstrap_size_requested": 128,
-        "usable_trials": 16,
+        "usable_trials": 44,
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_frequency_ci95_jeffreys": {
-          "lower": 0.8568158620685553,
-          "upper": 0.999969786520022
+          "lower": 0.9448164030878292,
+          "upper": 0.9999889034125288
         },
         "winner_entropy_norm": -0.0,
         "winner_counts": {
           "base_budget_policy": 0,
-          "class_adaptive_fallback": 16,
+          "class_adaptive_fallback": 44,
           "robust_winner_only": 0
         }
       },
@@ -8155,17 +8482,17 @@
         "cap_scale": 1.0,
         "jitter": 0.02,
         "bootstrap_size_requested": 128,
-        "usable_trials": 17,
+        "usable_trials": 49,
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_frequency_ci95_jeffreys": {
-          "lower": 0.8645215621083114,
-          "upper": 0.9999715376222769
+          "lower": 0.950276614712178,
+          "upper": 0.9999900299333427
         },
         "winner_entropy_norm": -0.0,
         "winner_counts": {
           "base_budget_policy": 0,
-          "class_adaptive_fallback": 17,
+          "class_adaptive_fallback": 49,
           "robust_winner_only": 0
         }
       },
@@ -8231,17 +8558,17 @@
         "cap_scale": 0.85,
         "jitter": 0.0,
         "bootstrap_size_requested": 128,
-        "usable_trials": 0,
-        "winner": "none",
-        "winner_frequency": 0.0,
+        "usable_trials": 1,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
         "winner_frequency_ci95_jeffreys": {
-          "lower": 0.0003855809807559011,
-          "upper": 0.8532536836904248
+          "lower": 0.14674631630957513,
+          "upper": 0.9996144190192441
         },
-        "winner_entropy_norm": 0.0,
+        "winner_entropy_norm": -0.0,
         "winner_counts": {
           "base_budget_policy": 0,
-          "class_adaptive_fallback": 0,
+          "class_adaptive_fallback": 1,
           "robust_winner_only": 0
         }
       },
@@ -8250,17 +8577,17 @@
         "cap_scale": 0.85,
         "jitter": 0.01,
         "bootstrap_size_requested": 128,
-        "usable_trials": 0,
-        "winner": "none",
-        "winner_frequency": 0.0,
+        "usable_trials": 2,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
         "winner_frequency_ci95_jeffreys": {
-          "lower": 0.0003855809807559011,
-          "upper": 0.8532536836904248
+          "lower": 0.3331782455987909,
+          "upper": 0.999783091529969
         },
-        "winner_entropy_norm": 0.0,
+        "winner_entropy_norm": -0.0,
         "winner_counts": {
           "base_budget_policy": 0,
-          "class_adaptive_fallback": 0,
+          "class_adaptive_fallback": 2,
           "robust_winner_only": 0
         }
       },
@@ -8269,17 +8596,17 @@
         "cap_scale": 0.85,
         "jitter": 0.02,
         "bootstrap_size_requested": 128,
-        "usable_trials": 0,
-        "winner": "none",
-        "winner_frequency": 0.0,
+        "usable_trials": 1,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
         "winner_frequency_ci95_jeffreys": {
-          "lower": 0.0003855809807559011,
-          "upper": 0.8532536836904248
+          "lower": 0.14674631630957513,
+          "upper": 0.9996144190192441
         },
-        "winner_entropy_norm": 0.0,
+        "winner_entropy_norm": -0.0,
         "winner_counts": {
           "base_budget_policy": 0,
-          "class_adaptive_fallback": 0,
+          "class_adaptive_fallback": 1,
           "robust_winner_only": 0
         }
       },
@@ -8288,17 +8615,17 @@
         "cap_scale": 1.0,
         "jitter": 0.0,
         "bootstrap_size_requested": 128,
-        "usable_trials": 25,
+        "usable_trials": 52,
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_frequency_ci95_jeffreys": {
-          "lower": 0.9053172358904165,
-          "upper": 0.9999805542291018
+          "lower": 0.9530632632810079,
+          "upper": 0.9999906023611645
         },
         "winner_entropy_norm": -0.0,
         "winner_counts": {
           "base_budget_policy": 0,
-          "class_adaptive_fallback": 25,
+          "class_adaptive_fallback": 52,
           "robust_winner_only": 0
         }
       },
@@ -8307,17 +8634,17 @@
         "cap_scale": 1.0,
         "jitter": 0.01,
         "bootstrap_size_requested": 128,
-        "usable_trials": 24,
+        "usable_trials": 55,
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_frequency_ci95_jeffreys": {
-          "lower": 0.9016123956141302,
-          "upper": 0.999979752433282
+          "lower": 0.9555542038730933,
+          "upper": 0.9999911126271788
         },
         "winner_entropy_norm": -0.0,
         "winner_counts": {
           "base_budget_policy": 0,
-          "class_adaptive_fallback": 24,
+          "class_adaptive_fallback": 55,
           "robust_winner_only": 0
         }
       },
@@ -8326,17 +8653,17 @@
         "cap_scale": 1.0,
         "jitter": 0.02,
         "bootstrap_size_requested": 128,
-        "usable_trials": 30,
+        "usable_trials": 62,
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_frequency_ci95_jeffreys": {
-          "lower": 0.9203218261827399,
-          "upper": 0.9999837681387765
+          "lower": 0.9604516569217453,
+          "upper": 0.9999921119893824
         },
         "winner_entropy_norm": -0.0,
         "winner_counts": {
           "base_budget_policy": 0,
-          "class_adaptive_fallback": 30,
+          "class_adaptive_fallback": 62,
           "robust_winner_only": 0
         }
       },
@@ -8421,17 +8748,17 @@
         "cap_scale": 0.85,
         "jitter": 0.01,
         "bootstrap_size_requested": 128,
-        "usable_trials": 0,
-        "winner": "none",
-        "winner_frequency": 0.0,
+        "usable_trials": 1,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
         "winner_frequency_ci95_jeffreys": {
-          "lower": 0.0003855809807559011,
-          "upper": 0.8532536836904248
+          "lower": 0.14674631630957513,
+          "upper": 0.9996144190192441
         },
-        "winner_entropy_norm": 0.0,
+        "winner_entropy_norm": -0.0,
         "winner_counts": {
           "base_budget_policy": 0,
-          "class_adaptive_fallback": 0,
+          "class_adaptive_fallback": 1,
           "robust_winner_only": 0
         }
       },
@@ -8459,17 +8786,17 @@
         "cap_scale": 1.0,
         "jitter": 0.0,
         "bootstrap_size_requested": 128,
-        "usable_trials": 10,
+        "usable_trials": 27,
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_frequency_ci95_jeffreys": {
-          "lower": 0.7828037324907894,
-          "upper": 0.9999521095668424
+          "lower": 0.9119491684889438,
+          "upper": 0.99998198130392
         },
         "winner_entropy_norm": -0.0,
         "winner_counts": {
           "base_budget_policy": 0,
-          "class_adaptive_fallback": 10,
+          "class_adaptive_fallback": 27,
           "robust_winner_only": 0
         }
       },
@@ -8478,17 +8805,17 @@
         "cap_scale": 1.0,
         "jitter": 0.01,
         "bootstrap_size_requested": 128,
-        "usable_trials": 6,
+        "usable_trials": 21,
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_frequency_ci95_jeffreys": {
-          "lower": 0.6696110908484498,
-          "upper": 0.9999215001516338
+          "lower": 0.888529683806959,
+          "upper": 0.9999768943573508
         },
         "winner_entropy_norm": -0.0,
         "winner_counts": {
           "base_budget_policy": 0,
-          "class_adaptive_fallback": 6,
+          "class_adaptive_fallback": 21,
           "robust_winner_only": 0
         }
       },
@@ -8497,17 +8824,17 @@
         "cap_scale": 1.0,
         "jitter": 0.02,
         "bootstrap_size_requested": 128,
-        "usable_trials": 7,
+        "usable_trials": 24,
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_frequency_ci95_jeffreys": {
-          "lower": 0.7075638263376901,
-          "upper": 0.9999323135357562
+          "lower": 0.9016123956141302,
+          "upper": 0.999979752433282
         },
         "winner_entropy_norm": -0.0,
         "winner_counts": {
           "base_budget_policy": 0,
-          "class_adaptive_fallback": 7,
+          "class_adaptive_fallback": 24,
           "robust_winner_only": 0
         }
       },
@@ -8592,17 +8919,17 @@
         "cap_scale": 0.85,
         "jitter": 0.01,
         "bootstrap_size_requested": 128,
-        "usable_trials": 0,
-        "winner": "none",
-        "winner_frequency": 0.0,
+        "usable_trials": 2,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
         "winner_frequency_ci95_jeffreys": {
-          "lower": 0.0003855809807559011,
-          "upper": 0.8532536836904248
+          "lower": 0.3331782455987909,
+          "upper": 0.999783091529969
         },
-        "winner_entropy_norm": 0.0,
+        "winner_entropy_norm": -0.0,
         "winner_counts": {
           "base_budget_policy": 0,
-          "class_adaptive_fallback": 0,
+          "class_adaptive_fallback": 2,
           "robust_winner_only": 0
         }
       },
@@ -8630,17 +8957,17 @@
         "cap_scale": 1.0,
         "jitter": 0.0,
         "bootstrap_size_requested": 128,
-        "usable_trials": 4,
+        "usable_trials": 10,
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_frequency_ci95_jeffreys": {
-          "lower": 0.5552373823423603,
-          "upper": 0.9998846672117617
+          "lower": 0.7828037324907894,
+          "upper": 0.9999521095668424
         },
         "winner_entropy_norm": -0.0,
         "winner_counts": {
           "base_budget_policy": 0,
-          "class_adaptive_fallback": 4,
+          "class_adaptive_fallback": 10,
           "robust_winner_only": 0
         }
       },
@@ -8649,17 +8976,17 @@
         "cap_scale": 1.0,
         "jitter": 0.01,
         "bootstrap_size_requested": 128,
-        "usable_trials": 4,
+        "usable_trials": 13,
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_frequency_ci95_jeffreys": {
-          "lower": 0.5552373823423603,
-          "upper": 0.9998846672117617
+          "lower": 0.8273805547179431,
+          "upper": 0.9999629480667013
         },
         "winner_entropy_norm": -0.0,
         "winner_counts": {
           "base_budget_policy": 0,
-          "class_adaptive_fallback": 4,
+          "class_adaptive_fallback": 13,
           "robust_winner_only": 0
         }
       },
@@ -8668,17 +8995,17 @@
         "cap_scale": 1.0,
         "jitter": 0.02,
         "bootstrap_size_requested": 128,
-        "usable_trials": 1,
+        "usable_trials": 5,
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_frequency_ci95_jeffreys": {
-          "lower": 0.14674631630957513,
-          "upper": 0.9996144190192441
+          "lower": 0.6206228577009606,
+          "upper": 0.9999065793999604
         },
         "winner_entropy_norm": -0.0,
         "winner_counts": {
           "base_budget_policy": 0,
-          "class_adaptive_fallback": 1,
+          "class_adaptive_fallback": 5,
           "robust_winner_only": 0
         }
       },
@@ -8801,17 +9128,17 @@
         "cap_scale": 1.0,
         "jitter": 0.0,
         "bootstrap_size_requested": 128,
-        "usable_trials": 0,
-        "winner": "none",
-        "winner_frequency": 0.0,
+        "usable_trials": 5,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
         "winner_frequency_ci95_jeffreys": {
-          "lower": 0.0003855809807559011,
-          "upper": 0.8532536836904248
+          "lower": 0.6206228577009606,
+          "upper": 0.9999065793999604
         },
-        "winner_entropy_norm": 0.0,
+        "winner_entropy_norm": -0.0,
         "winner_counts": {
           "base_budget_policy": 0,
-          "class_adaptive_fallback": 0,
+          "class_adaptive_fallback": 5,
           "robust_winner_only": 0
         }
       },
@@ -8820,17 +9147,17 @@
         "cap_scale": 1.0,
         "jitter": 0.01,
         "bootstrap_size_requested": 128,
-        "usable_trials": 1,
+        "usable_trials": 6,
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_frequency_ci95_jeffreys": {
-          "lower": 0.14674631630957513,
-          "upper": 0.9996144190192441
+          "lower": 0.6696110908484498,
+          "upper": 0.9999215001516338
         },
         "winner_entropy_norm": -0.0,
         "winner_counts": {
           "base_budget_policy": 0,
-          "class_adaptive_fallback": 1,
+          "class_adaptive_fallback": 6,
           "robust_winner_only": 0
         }
       },
@@ -8839,17 +9166,17 @@
         "cap_scale": 1.0,
         "jitter": 0.02,
         "bootstrap_size_requested": 128,
-        "usable_trials": 1,
+        "usable_trials": 2,
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_frequency_ci95_jeffreys": {
-          "lower": 0.14674631630957513,
-          "upper": 0.9996144190192441
+          "lower": 0.3331782455987909,
+          "upper": 0.999783091529969
         },
         "winner_entropy_norm": -0.0,
         "winner_counts": {
           "base_budget_policy": 0,
-          "class_adaptive_fallback": 1,
+          "class_adaptive_fallback": 2,
           "robust_winner_only": 0
         }
       },
@@ -8912,21 +9239,39 @@
       }
     ],
     "num_cells": 54,
-    "num_stable_cells_winner_freq_ge_070": 35,
-    "stable_cell_frequency": 0.6481481481481481
+    "num_stable_cells_winner_freq_ge_070": 46,
+    "stable_cell_frequency": 0.8518518518518519
   },
   "ur_numerical_stress_policy_stability_topology_precursor": {
     "status": "OPEN_PRECURSOR_NOT_CLOSURE",
     "scope": "STRICT_TASK2_NUMERICAL_STRESS_POLICY_STABILITY_TOPOLOGY",
     "stable_cell_definition": "winner_frequency_ge_0p70_and_winner_not_none",
     "num_components": 1,
-    "largest_component_size": 35,
+    "largest_component_size": 46,
     "components": [
       {
-        "size": 35,
+        "size": 46,
         "rows": [
           {
             "threshold": 0.7,
+            "cap_scale": 0.85,
+            "jitter": 0.0,
+            "winner": "class_adaptive_fallback"
+          },
+          {
+            "threshold": 0.7,
+            "cap_scale": 0.85,
+            "jitter": 0.01,
+            "winner": "class_adaptive_fallback"
+          },
+          {
+            "threshold": 0.7,
+            "cap_scale": 0.85,
+            "jitter": 0.02,
+            "winner": "class_adaptive_fallback"
+          },
+          {
+            "threshold": 0.7,
             "cap_scale": 1.0,
             "jitter": 0.0,
             "winner": "class_adaptive_fallback"
@@ -8963,6 +9308,18 @@
           },
           {
             "threshold": 0.75,
+            "cap_scale": 0.85,
+            "jitter": 0.01,
+            "winner": "class_adaptive_fallback"
+          },
+          {
+            "threshold": 0.75,
+            "cap_scale": 0.85,
+            "jitter": 0.02,
+            "winner": "class_adaptive_fallback"
+          },
+          {
+            "threshold": 0.75,
             "cap_scale": 1.0,
             "jitter": 0.0,
             "winner": "class_adaptive_fallback"
@@ -8999,6 +9356,24 @@
           },
           {
             "threshold": 0.8,
+            "cap_scale": 0.85,
+            "jitter": 0.0,
+            "winner": "class_adaptive_fallback"
+          },
+          {
+            "threshold": 0.8,
+            "cap_scale": 0.85,
+            "jitter": 0.01,
+            "winner": "class_adaptive_fallback"
+          },
+          {
+            "threshold": 0.8,
+            "cap_scale": 0.85,
+            "jitter": 0.02,
+            "winner": "class_adaptive_fallback"
+          },
+          {
+            "threshold": 0.8,
             "cap_scale": 1.0,
             "jitter": 0.0,
             "winner": "class_adaptive_fallback"
@@ -9035,6 +9410,12 @@
           },
           {
             "threshold": 0.85,
+            "cap_scale": 0.85,
+            "jitter": 0.01,
+            "winner": "class_adaptive_fallback"
+          },
+          {
+            "threshold": 0.85,
             "cap_scale": 1.0,
             "jitter": 0.0,
             "winner": "class_adaptive_fallback"
@@ -9071,6 +9452,12 @@
           },
           {
             "threshold": 0.9,
+            "cap_scale": 0.85,
+            "jitter": 0.01,
+            "winner": "class_adaptive_fallback"
+          },
+          {
+            "threshold": 0.9,
             "cap_scale": 1.0,
             "jitter": 0.0,
             "winner": "class_adaptive_fallback"
@@ -9103,6 +9490,12 @@
             "threshold": 0.9,
             "cap_scale": 1.15,
             "jitter": 0.02,
+            "winner": "class_adaptive_fallback"
+          },
+          {
+            "threshold": 0.95,
+            "cap_scale": 1.0,
+            "jitter": 0.0,
             "winner": "class_adaptive_fallback"
           },
           {
@@ -9138,7 +9531,7 @@
         ],
         "winner_counts": {
           "base_budget_policy": 0,
-          "class_adaptive_fallback": 35,
+          "class_adaptive_fallback": 46,
           "robust_winner_only": 0
         },
         "dominant_winner": "class_adaptive_fallback"
@@ -9152,42 +9545,77 @@
     "rows": [
       {
         "threshold": 0.7,
-        "cap_scale": 1.0,
+        "cap_scale": 0.85,
         "jitter": 0.0,
         "winner": "class_adaptive_fallback",
         "boundary_manhattan_margin": 1
       },
       {
         "threshold": 0.7,
-        "cap_scale": 1.0,
-        "jitter": 0.01,
-        "winner": "class_adaptive_fallback",
-        "boundary_manhattan_margin": 1
-      },
-      {
-        "threshold": 0.7,
-        "cap_scale": 1.0,
-        "jitter": 0.02,
-        "winner": "class_adaptive_fallback",
-        "boundary_manhattan_margin": 1
-      },
-      {
-        "threshold": 0.7,
-        "cap_scale": 1.15,
-        "jitter": 0.0,
-        "winner": "class_adaptive_fallback",
-        "boundary_manhattan_margin": 2
-      },
-      {
-        "threshold": 0.7,
-        "cap_scale": 1.15,
+        "cap_scale": 0.85,
         "jitter": 0.01,
         "winner": "class_adaptive_fallback",
         "boundary_manhattan_margin": 2
       },
       {
         "threshold": 0.7,
+        "cap_scale": 0.85,
+        "jitter": 0.02,
+        "winner": "class_adaptive_fallback",
+        "boundary_manhattan_margin": 3
+      },
+      {
+        "threshold": 0.7,
+        "cap_scale": 1.0,
+        "jitter": 0.0,
+        "winner": "class_adaptive_fallback",
+        "boundary_manhattan_margin": 2
+      },
+      {
+        "threshold": 0.7,
+        "cap_scale": 1.0,
+        "jitter": 0.01,
+        "winner": "class_adaptive_fallback",
+        "boundary_manhattan_margin": 3
+      },
+      {
+        "threshold": 0.7,
+        "cap_scale": 1.0,
+        "jitter": 0.02,
+        "winner": "class_adaptive_fallback",
+        "boundary_manhattan_margin": 4
+      },
+      {
+        "threshold": 0.7,
         "cap_scale": 1.15,
+        "jitter": 0.0,
+        "winner": "class_adaptive_fallback",
+        "boundary_manhattan_margin": 3
+      },
+      {
+        "threshold": 0.7,
+        "cap_scale": 1.15,
+        "jitter": 0.01,
+        "winner": "class_adaptive_fallback",
+        "boundary_manhattan_margin": 4
+      },
+      {
+        "threshold": 0.7,
+        "cap_scale": 1.15,
+        "jitter": 0.02,
+        "winner": "class_adaptive_fallback",
+        "boundary_manhattan_margin": 5
+      },
+      {
+        "threshold": 0.75,
+        "cap_scale": 0.85,
+        "jitter": 0.01,
+        "winner": "class_adaptive_fallback",
+        "boundary_manhattan_margin": 1
+      },
+      {
+        "threshold": 0.75,
+        "cap_scale": 0.85,
         "jitter": 0.02,
         "winner": "class_adaptive_fallback",
         "boundary_manhattan_margin": 2
@@ -9204,77 +9632,105 @@
         "cap_scale": 1.0,
         "jitter": 0.01,
         "winner": "class_adaptive_fallback",
-        "boundary_manhattan_margin": 1
+        "boundary_manhattan_margin": 2
       },
       {
         "threshold": 0.75,
         "cap_scale": 1.0,
         "jitter": 0.02,
         "winner": "class_adaptive_fallback",
-        "boundary_manhattan_margin": 1
+        "boundary_manhattan_margin": 3
       },
       {
         "threshold": 0.75,
         "cap_scale": 1.15,
         "jitter": 0.0,
-        "winner": "class_adaptive_fallback",
-        "boundary_manhattan_margin": 2
-      },
-      {
-        "threshold": 0.75,
-        "cap_scale": 1.15,
-        "jitter": 0.01,
         "winner": "class_adaptive_fallback",
         "boundary_manhattan_margin": 2
       },
       {
         "threshold": 0.75,
         "cap_scale": 1.15,
+        "jitter": 0.01,
+        "winner": "class_adaptive_fallback",
+        "boundary_manhattan_margin": 3
+      },
+      {
+        "threshold": 0.75,
+        "cap_scale": 1.15,
         "jitter": 0.02,
         "winner": "class_adaptive_fallback",
-        "boundary_manhattan_margin": 2
+        "boundary_manhattan_margin": 4
       },
       {
         "threshold": 0.8,
-        "cap_scale": 1.0,
+        "cap_scale": 0.85,
         "jitter": 0.0,
         "winner": "class_adaptive_fallback",
         "boundary_manhattan_margin": 1
       },
       {
         "threshold": 0.8,
-        "cap_scale": 1.0,
+        "cap_scale": 0.85,
         "jitter": 0.01,
         "winner": "class_adaptive_fallback",
-        "boundary_manhattan_margin": 1
+        "boundary_manhattan_margin": 2
       },
       {
         "threshold": 0.8,
-        "cap_scale": 1.0,
+        "cap_scale": 0.85,
         "jitter": 0.02,
         "winner": "class_adaptive_fallback",
         "boundary_manhattan_margin": 1
       },
       {
         "threshold": 0.8,
-        "cap_scale": 1.15,
+        "cap_scale": 1.0,
         "jitter": 0.0,
         "winner": "class_adaptive_fallback",
         "boundary_manhattan_margin": 2
       },
       {
         "threshold": 0.8,
-        "cap_scale": 1.15,
+        "cap_scale": 1.0,
         "jitter": 0.01,
+        "winner": "class_adaptive_fallback",
+        "boundary_manhattan_margin": 3
+      },
+      {
+        "threshold": 0.8,
+        "cap_scale": 1.0,
+        "jitter": 0.02,
         "winner": "class_adaptive_fallback",
         "boundary_manhattan_margin": 2
       },
       {
         "threshold": 0.8,
         "cap_scale": 1.15,
+        "jitter": 0.0,
+        "winner": "class_adaptive_fallback",
+        "boundary_manhattan_margin": 3
+      },
+      {
+        "threshold": 0.8,
+        "cap_scale": 1.15,
+        "jitter": 0.01,
+        "winner": "class_adaptive_fallback",
+        "boundary_manhattan_margin": 4
+      },
+      {
+        "threshold": 0.8,
+        "cap_scale": 1.15,
         "jitter": 0.02,
         "winner": "class_adaptive_fallback",
-        "boundary_manhattan_margin": 2
+        "boundary_manhattan_margin": 3
+      },
+      {
+        "threshold": 0.85,
+        "cap_scale": 0.85,
+        "jitter": 0.01,
+        "winner": "class_adaptive_fallback",
+        "boundary_manhattan_margin": 1
       },
       {
         "threshold": 0.85,
@@ -9288,7 +9744,7 @@
         "cap_scale": 1.0,
         "jitter": 0.01,
         "winner": "class_adaptive_fallback",
-        "boundary_manhattan_margin": 1
+        "boundary_manhattan_margin": 2
       },
       {
         "threshold": 0.85,
@@ -9309,7 +9765,7 @@
         "cap_scale": 1.15,
         "jitter": 0.01,
         "winner": "class_adaptive_fallback",
-        "boundary_manhattan_margin": 2
+        "boundary_manhattan_margin": 3
       },
       {
         "threshold": 0.85,
@@ -9320,6 +9776,13 @@
       },
       {
         "threshold": 0.9,
+        "cap_scale": 0.85,
+        "jitter": 0.01,
+        "winner": "class_adaptive_fallback",
+        "boundary_manhattan_margin": 1
+      },
+      {
+        "threshold": 0.9,
         "cap_scale": 1.0,
         "jitter": 0.0,
         "winner": "class_adaptive_fallback",
@@ -9330,7 +9793,7 @@
         "cap_scale": 1.0,
         "jitter": 0.01,
         "winner": "class_adaptive_fallback",
-        "boundary_manhattan_margin": 1
+        "boundary_manhattan_margin": 2
       },
       {
         "threshold": 0.9,
@@ -9351,7 +9814,7 @@
         "cap_scale": 1.15,
         "jitter": 0.01,
         "winner": "class_adaptive_fallback",
-        "boundary_manhattan_margin": 2
+        "boundary_manhattan_margin": 3
       },
       {
         "threshold": 0.9,
@@ -9359,6 +9822,13 @@
         "jitter": 0.02,
         "winner": "class_adaptive_fallback",
         "boundary_manhattan_margin": 2
+      },
+      {
+        "threshold": 0.95,
+        "cap_scale": 1.0,
+        "jitter": 0.0,
+        "winner": "class_adaptive_fallback",
+        "boundary_manhattan_margin": 1
       },
       {
         "threshold": 0.95,
@@ -9379,7 +9849,7 @@
         "cap_scale": 1.15,
         "jitter": 0.0,
         "winner": "class_adaptive_fallback",
-        "boundary_manhattan_margin": 1
+        "boundary_manhattan_margin": 2
       },
       {
         "threshold": 0.95,
@@ -9396,18 +9866,18 @@
         "boundary_manhattan_margin": 2
       }
     ],
-    "num_stable_rows": 35,
+    "num_stable_rows": 46,
     "component_margin_rows": [
       {
         "dominant_winner": "class_adaptive_fallback",
-        "size": 35,
+        "size": 46,
         "boundary_margin_q05_q50_q95": [
           1.0,
-          1.0,
-          2.0
+          2.0,
+          4.0
         ],
         "boundary_margin_min": 1.0,
-        "boundary_margin_max": 2.0
+        "boundary_margin_max": 5.0
       }
     ]
   },
@@ -9415,18 +9885,29 @@
     "status": "OPEN_PRECURSOR_NOT_CLOSURE",
     "scope": "STRICT_TASK2_NUMERICAL_STRESS_POLICY_WEIGHTED_BOUNDARY_RISK",
     "risk_definition": "0p50*(1-winner_frequency)+0p30*winner_entropy_norm+0p20*(1-boundary_margin_norm)",
-    "margin_normalization_divisor": 2.0,
+    "margin_normalization_divisor": 5.0,
     "rows": [
       {
         "threshold": 0.7,
         "cap_scale": 1.15,
-        "jitter": 0.0,
+        "jitter": 0.02,
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 2,
+        "boundary_manhattan_margin": 5,
         "boundary_margin_norm": 1.0,
         "weighted_boundary_risk_score": 0.0
+      },
+      {
+        "threshold": 0.7,
+        "cap_scale": 1.0,
+        "jitter": 0.02,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 4,
+        "boundary_margin_norm": 0.8,
+        "weighted_boundary_risk_score": 0.039999999999999994
       },
       {
         "threshold": 0.7,
@@ -9435,185 +9916,42 @@
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 2,
-        "boundary_margin_norm": 1.0,
-        "weighted_boundary_risk_score": 0.0
+        "boundary_manhattan_margin": 4,
+        "boundary_margin_norm": 0.8,
+        "weighted_boundary_risk_score": 0.039999999999999994
+      },
+      {
+        "threshold": 0.75,
+        "cap_scale": 1.15,
+        "jitter": 0.02,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 4,
+        "boundary_margin_norm": 0.8,
+        "weighted_boundary_risk_score": 0.039999999999999994
+      },
+      {
+        "threshold": 0.8,
+        "cap_scale": 1.15,
+        "jitter": 0.01,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 4,
+        "boundary_margin_norm": 0.8,
+        "weighted_boundary_risk_score": 0.039999999999999994
       },
       {
         "threshold": 0.7,
-        "cap_scale": 1.15,
+        "cap_scale": 0.85,
         "jitter": 0.02,
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 2,
-        "boundary_margin_norm": 1.0,
-        "weighted_boundary_risk_score": 0.0
-      },
-      {
-        "threshold": 0.75,
-        "cap_scale": 1.15,
-        "jitter": 0.0,
-        "winner": "class_adaptive_fallback",
-        "winner_frequency": 1.0,
-        "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 2,
-        "boundary_margin_norm": 1.0,
-        "weighted_boundary_risk_score": 0.0
-      },
-      {
-        "threshold": 0.75,
-        "cap_scale": 1.15,
-        "jitter": 0.01,
-        "winner": "class_adaptive_fallback",
-        "winner_frequency": 1.0,
-        "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 2,
-        "boundary_margin_norm": 1.0,
-        "weighted_boundary_risk_score": 0.0
-      },
-      {
-        "threshold": 0.75,
-        "cap_scale": 1.15,
-        "jitter": 0.02,
-        "winner": "class_adaptive_fallback",
-        "winner_frequency": 1.0,
-        "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 2,
-        "boundary_margin_norm": 1.0,
-        "weighted_boundary_risk_score": 0.0
-      },
-      {
-        "threshold": 0.8,
-        "cap_scale": 1.15,
-        "jitter": 0.0,
-        "winner": "class_adaptive_fallback",
-        "winner_frequency": 1.0,
-        "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 2,
-        "boundary_margin_norm": 1.0,
-        "weighted_boundary_risk_score": 0.0
-      },
-      {
-        "threshold": 0.8,
-        "cap_scale": 1.15,
-        "jitter": 0.01,
-        "winner": "class_adaptive_fallback",
-        "winner_frequency": 1.0,
-        "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 2,
-        "boundary_margin_norm": 1.0,
-        "weighted_boundary_risk_score": 0.0
-      },
-      {
-        "threshold": 0.8,
-        "cap_scale": 1.15,
-        "jitter": 0.02,
-        "winner": "class_adaptive_fallback",
-        "winner_frequency": 1.0,
-        "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 2,
-        "boundary_margin_norm": 1.0,
-        "weighted_boundary_risk_score": 0.0
-      },
-      {
-        "threshold": 0.85,
-        "cap_scale": 1.15,
-        "jitter": 0.0,
-        "winner": "class_adaptive_fallback",
-        "winner_frequency": 1.0,
-        "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 2,
-        "boundary_margin_norm": 1.0,
-        "weighted_boundary_risk_score": 0.0
-      },
-      {
-        "threshold": 0.85,
-        "cap_scale": 1.15,
-        "jitter": 0.01,
-        "winner": "class_adaptive_fallback",
-        "winner_frequency": 1.0,
-        "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 2,
-        "boundary_margin_norm": 1.0,
-        "weighted_boundary_risk_score": 0.0
-      },
-      {
-        "threshold": 0.85,
-        "cap_scale": 1.15,
-        "jitter": 0.02,
-        "winner": "class_adaptive_fallback",
-        "winner_frequency": 1.0,
-        "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 2,
-        "boundary_margin_norm": 1.0,
-        "weighted_boundary_risk_score": 0.0
-      },
-      {
-        "threshold": 0.9,
-        "cap_scale": 1.15,
-        "jitter": 0.0,
-        "winner": "class_adaptive_fallback",
-        "winner_frequency": 1.0,
-        "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 2,
-        "boundary_margin_norm": 1.0,
-        "weighted_boundary_risk_score": 0.0
-      },
-      {
-        "threshold": 0.9,
-        "cap_scale": 1.15,
-        "jitter": 0.01,
-        "winner": "class_adaptive_fallback",
-        "winner_frequency": 1.0,
-        "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 2,
-        "boundary_margin_norm": 1.0,
-        "weighted_boundary_risk_score": 0.0
-      },
-      {
-        "threshold": 0.9,
-        "cap_scale": 1.15,
-        "jitter": 0.02,
-        "winner": "class_adaptive_fallback",
-        "winner_frequency": 1.0,
-        "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 2,
-        "boundary_margin_norm": 1.0,
-        "weighted_boundary_risk_score": 0.0
-      },
-      {
-        "threshold": 0.95,
-        "cap_scale": 1.15,
-        "jitter": 0.01,
-        "winner": "class_adaptive_fallback",
-        "winner_frequency": 1.0,
-        "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 2,
-        "boundary_margin_norm": 1.0,
-        "weighted_boundary_risk_score": 0.0
-      },
-      {
-        "threshold": 0.95,
-        "cap_scale": 1.15,
-        "jitter": 0.02,
-        "winner": "class_adaptive_fallback",
-        "winner_frequency": 1.0,
-        "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 2,
-        "boundary_margin_norm": 1.0,
-        "weighted_boundary_risk_score": 0.0
-      },
-      {
-        "threshold": 0.7,
-        "cap_scale": 1.0,
-        "jitter": 0.0,
-        "winner": "class_adaptive_fallback",
-        "winner_frequency": 1.0,
-        "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 1,
-        "boundary_margin_norm": 0.5,
-        "weighted_boundary_risk_score": 0.1
+        "boundary_manhattan_margin": 3,
+        "boundary_margin_norm": 0.6,
+        "weighted_boundary_risk_score": 0.08000000000000002
       },
       {
         "threshold": 0.7,
@@ -9622,31 +9960,130 @@
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 1,
-        "boundary_margin_norm": 0.5,
-        "weighted_boundary_risk_score": 0.1
+        "boundary_manhattan_margin": 3,
+        "boundary_margin_norm": 0.6,
+        "weighted_boundary_risk_score": 0.08000000000000002
+      },
+      {
+        "threshold": 0.7,
+        "cap_scale": 1.15,
+        "jitter": 0.0,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 3,
+        "boundary_margin_norm": 0.6,
+        "weighted_boundary_risk_score": 0.08000000000000002
+      },
+      {
+        "threshold": 0.75,
+        "cap_scale": 1.0,
+        "jitter": 0.02,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 3,
+        "boundary_margin_norm": 0.6,
+        "weighted_boundary_risk_score": 0.08000000000000002
+      },
+      {
+        "threshold": 0.75,
+        "cap_scale": 1.15,
+        "jitter": 0.01,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 3,
+        "boundary_margin_norm": 0.6,
+        "weighted_boundary_risk_score": 0.08000000000000002
+      },
+      {
+        "threshold": 0.8,
+        "cap_scale": 1.0,
+        "jitter": 0.01,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 3,
+        "boundary_margin_norm": 0.6,
+        "weighted_boundary_risk_score": 0.08000000000000002
+      },
+      {
+        "threshold": 0.8,
+        "cap_scale": 1.15,
+        "jitter": 0.0,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 3,
+        "boundary_margin_norm": 0.6,
+        "weighted_boundary_risk_score": 0.08000000000000002
+      },
+      {
+        "threshold": 0.8,
+        "cap_scale": 1.15,
+        "jitter": 0.02,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 3,
+        "boundary_margin_norm": 0.6,
+        "weighted_boundary_risk_score": 0.08000000000000002
+      },
+      {
+        "threshold": 0.85,
+        "cap_scale": 1.15,
+        "jitter": 0.01,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 3,
+        "boundary_margin_norm": 0.6,
+        "weighted_boundary_risk_score": 0.08000000000000002
+      },
+      {
+        "threshold": 0.9,
+        "cap_scale": 1.15,
+        "jitter": 0.01,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 3,
+        "boundary_margin_norm": 0.6,
+        "weighted_boundary_risk_score": 0.08000000000000002
+      },
+      {
+        "threshold": 0.7,
+        "cap_scale": 0.85,
+        "jitter": 0.01,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 2,
+        "boundary_margin_norm": 0.4,
+        "weighted_boundary_risk_score": 0.12
       },
       {
         "threshold": 0.7,
         "cap_scale": 1.0,
-        "jitter": 0.02,
-        "winner": "class_adaptive_fallback",
-        "winner_frequency": 1.0,
-        "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 1,
-        "boundary_margin_norm": 0.5,
-        "weighted_boundary_risk_score": 0.1
-      },
-      {
-        "threshold": 0.75,
-        "cap_scale": 1.0,
         "jitter": 0.0,
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 1,
-        "boundary_margin_norm": 0.5,
-        "weighted_boundary_risk_score": 0.1
+        "boundary_manhattan_margin": 2,
+        "boundary_margin_norm": 0.4,
+        "weighted_boundary_risk_score": 0.12
+      },
+      {
+        "threshold": 0.75,
+        "cap_scale": 0.85,
+        "jitter": 0.02,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 2,
+        "boundary_margin_norm": 0.4,
+        "weighted_boundary_risk_score": 0.12
       },
       {
         "threshold": 0.75,
@@ -9655,20 +10092,31 @@
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 1,
-        "boundary_margin_norm": 0.5,
-        "weighted_boundary_risk_score": 0.1
+        "boundary_manhattan_margin": 2,
+        "boundary_margin_norm": 0.4,
+        "weighted_boundary_risk_score": 0.12
       },
       {
         "threshold": 0.75,
-        "cap_scale": 1.0,
-        "jitter": 0.02,
+        "cap_scale": 1.15,
+        "jitter": 0.0,
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 1,
-        "boundary_margin_norm": 0.5,
-        "weighted_boundary_risk_score": 0.1
+        "boundary_manhattan_margin": 2,
+        "boundary_margin_norm": 0.4,
+        "weighted_boundary_risk_score": 0.12
+      },
+      {
+        "threshold": 0.8,
+        "cap_scale": 0.85,
+        "jitter": 0.01,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 2,
+        "boundary_margin_norm": 0.4,
+        "weighted_boundary_risk_score": 0.12
       },
       {
         "threshold": 0.8,
@@ -9677,20 +10125,9 @@
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 1,
-        "boundary_margin_norm": 0.5,
-        "weighted_boundary_risk_score": 0.1
-      },
-      {
-        "threshold": 0.8,
-        "cap_scale": 1.0,
-        "jitter": 0.01,
-        "winner": "class_adaptive_fallback",
-        "winner_frequency": 1.0,
-        "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 1,
-        "boundary_margin_norm": 0.5,
-        "weighted_boundary_risk_score": 0.1
+        "boundary_manhattan_margin": 2,
+        "boundary_margin_norm": 0.4,
+        "weighted_boundary_risk_score": 0.12
       },
       {
         "threshold": 0.8,
@@ -9699,97 +10136,75 @@
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 1,
-        "boundary_margin_norm": 0.5,
-        "weighted_boundary_risk_score": 0.1
+        "boundary_manhattan_margin": 2,
+        "boundary_margin_norm": 0.4,
+        "weighted_boundary_risk_score": 0.12
       },
       {
         "threshold": 0.85,
         "cap_scale": 1.0,
+        "jitter": 0.01,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 2,
+        "boundary_margin_norm": 0.4,
+        "weighted_boundary_risk_score": 0.12
+      },
+      {
+        "threshold": 0.85,
+        "cap_scale": 1.15,
         "jitter": 0.0,
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 1,
-        "boundary_margin_norm": 0.5,
-        "weighted_boundary_risk_score": 0.1
+        "boundary_manhattan_margin": 2,
+        "boundary_margin_norm": 0.4,
+        "weighted_boundary_risk_score": 0.12
       },
       {
         "threshold": 0.85,
+        "cap_scale": 1.15,
+        "jitter": 0.02,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 2,
+        "boundary_margin_norm": 0.4,
+        "weighted_boundary_risk_score": 0.12
+      },
+      {
+        "threshold": 0.9,
         "cap_scale": 1.0,
         "jitter": 0.01,
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 1,
-        "boundary_margin_norm": 0.5,
-        "weighted_boundary_risk_score": 0.1
-      },
-      {
-        "threshold": 0.85,
-        "cap_scale": 1.0,
-        "jitter": 0.02,
-        "winner": "class_adaptive_fallback",
-        "winner_frequency": 1.0,
-        "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 1,
-        "boundary_margin_norm": 0.5,
-        "weighted_boundary_risk_score": 0.1
+        "boundary_manhattan_margin": 2,
+        "boundary_margin_norm": 0.4,
+        "weighted_boundary_risk_score": 0.12
       },
       {
         "threshold": 0.9,
-        "cap_scale": 1.0,
+        "cap_scale": 1.15,
         "jitter": 0.0,
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 1,
-        "boundary_margin_norm": 0.5,
-        "weighted_boundary_risk_score": 0.1
+        "boundary_manhattan_margin": 2,
+        "boundary_margin_norm": 0.4,
+        "weighted_boundary_risk_score": 0.12
       },
       {
         "threshold": 0.9,
-        "cap_scale": 1.0,
-        "jitter": 0.01,
-        "winner": "class_adaptive_fallback",
-        "winner_frequency": 1.0,
-        "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 1,
-        "boundary_margin_norm": 0.5,
-        "weighted_boundary_risk_score": 0.1
-      },
-      {
-        "threshold": 0.9,
-        "cap_scale": 1.0,
+        "cap_scale": 1.15,
         "jitter": 0.02,
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 1,
-        "boundary_margin_norm": 0.5,
-        "weighted_boundary_risk_score": 0.1
-      },
-      {
-        "threshold": 0.95,
-        "cap_scale": 1.0,
-        "jitter": 0.01,
-        "winner": "class_adaptive_fallback",
-        "winner_frequency": 1.0,
-        "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 1,
-        "boundary_margin_norm": 0.5,
-        "weighted_boundary_risk_score": 0.1
-      },
-      {
-        "threshold": 0.95,
-        "cap_scale": 1.0,
-        "jitter": 0.02,
-        "winner": "class_adaptive_fallback",
-        "winner_frequency": 1.0,
-        "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 1,
-        "boundary_margin_norm": 0.5,
-        "weighted_boundary_risk_score": 0.1
+        "boundary_manhattan_margin": 2,
+        "boundary_margin_norm": 0.4,
+        "weighted_boundary_risk_score": 0.12
       },
       {
         "threshold": 0.95,
@@ -9798,212 +10213,267 @@
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 2,
+        "boundary_margin_norm": 0.4,
+        "weighted_boundary_risk_score": 0.12
+      },
+      {
+        "threshold": 0.95,
+        "cap_scale": 1.15,
+        "jitter": 0.01,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 2,
+        "boundary_margin_norm": 0.4,
+        "weighted_boundary_risk_score": 0.12
+      },
+      {
+        "threshold": 0.95,
+        "cap_scale": 1.15,
+        "jitter": 0.02,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 2,
+        "boundary_margin_norm": 0.4,
+        "weighted_boundary_risk_score": 0.12
+      },
+      {
+        "threshold": 0.7,
+        "cap_scale": 0.85,
+        "jitter": 0.0,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
         "boundary_manhattan_margin": 1,
-        "boundary_margin_norm": 0.5,
-        "weighted_boundary_risk_score": 0.1
-      },
-      {
-        "threshold": 0.7,
-        "cap_scale": 0.85,
-        "jitter": 0.0,
-        "winner": "none",
-        "winner_frequency": 0.0,
-        "winner_entropy_norm": 0.0,
-        "boundary_manhattan_margin": 0,
-        "boundary_margin_norm": 0.0,
-        "weighted_boundary_risk_score": 0.7
-      },
-      {
-        "threshold": 0.7,
-        "cap_scale": 0.85,
-        "jitter": 0.01,
-        "winner": "none",
-        "winner_frequency": 0.0,
-        "winner_entropy_norm": 0.0,
-        "boundary_manhattan_margin": 0,
-        "boundary_margin_norm": 0.0,
-        "weighted_boundary_risk_score": 0.7
-      },
-      {
-        "threshold": 0.7,
-        "cap_scale": 0.85,
-        "jitter": 0.02,
-        "winner": "none",
-        "winner_frequency": 0.0,
-        "winner_entropy_norm": 0.0,
-        "boundary_manhattan_margin": 0,
-        "boundary_margin_norm": 0.0,
-        "weighted_boundary_risk_score": 0.7
-      },
-      {
-        "threshold": 0.75,
-        "cap_scale": 0.85,
-        "jitter": 0.0,
-        "winner": "none",
-        "winner_frequency": 0.0,
-        "winner_entropy_norm": 0.0,
-        "boundary_manhattan_margin": 0,
-        "boundary_margin_norm": 0.0,
-        "weighted_boundary_risk_score": 0.7
+        "boundary_margin_norm": 0.2,
+        "weighted_boundary_risk_score": 0.16000000000000003
       },
       {
         "threshold": 0.75,
         "cap_scale": 0.85,
         "jitter": 0.01,
-        "winner": "none",
-        "winner_frequency": 0.0,
-        "winner_entropy_norm": 0.0,
-        "boundary_manhattan_margin": 0,
-        "boundary_margin_norm": 0.0,
-        "weighted_boundary_risk_score": 0.7
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 1,
+        "boundary_margin_norm": 0.2,
+        "weighted_boundary_risk_score": 0.16000000000000003
       },
       {
         "threshold": 0.75,
-        "cap_scale": 0.85,
-        "jitter": 0.02,
-        "winner": "none",
-        "winner_frequency": 0.0,
-        "winner_entropy_norm": 0.0,
-        "boundary_manhattan_margin": 0,
-        "boundary_margin_norm": 0.0,
-        "weighted_boundary_risk_score": 0.7
+        "cap_scale": 1.0,
+        "jitter": 0.0,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 1,
+        "boundary_margin_norm": 0.2,
+        "weighted_boundary_risk_score": 0.16000000000000003
       },
       {
         "threshold": 0.8,
         "cap_scale": 0.85,
         "jitter": 0.0,
-        "winner": "none",
-        "winner_frequency": 0.0,
-        "winner_entropy_norm": 0.0,
-        "boundary_manhattan_margin": 0,
-        "boundary_margin_norm": 0.0,
-        "weighted_boundary_risk_score": 0.7
-      },
-      {
-        "threshold": 0.8,
-        "cap_scale": 0.85,
-        "jitter": 0.01,
-        "winner": "none",
-        "winner_frequency": 0.0,
-        "winner_entropy_norm": 0.0,
-        "boundary_manhattan_margin": 0,
-        "boundary_margin_norm": 0.0,
-        "weighted_boundary_risk_score": 0.7
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 1,
+        "boundary_margin_norm": 0.2,
+        "weighted_boundary_risk_score": 0.16000000000000003
       },
       {
         "threshold": 0.8,
         "cap_scale": 0.85,
         "jitter": 0.02,
-        "winner": "none",
-        "winner_frequency": 0.0,
-        "winner_entropy_norm": 0.0,
-        "boundary_manhattan_margin": 0,
-        "boundary_margin_norm": 0.0,
-        "weighted_boundary_risk_score": 0.7
-      },
-      {
-        "threshold": 0.85,
-        "cap_scale": 0.85,
-        "jitter": 0.0,
-        "winner": "none",
-        "winner_frequency": 0.0,
-        "winner_entropy_norm": 0.0,
-        "boundary_manhattan_margin": 0,
-        "boundary_margin_norm": 0.0,
-        "weighted_boundary_risk_score": 0.7
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 1,
+        "boundary_margin_norm": 0.2,
+        "weighted_boundary_risk_score": 0.16000000000000003
       },
       {
         "threshold": 0.85,
         "cap_scale": 0.85,
         "jitter": 0.01,
-        "winner": "none",
-        "winner_frequency": 0.0,
-        "winner_entropy_norm": 0.0,
-        "boundary_manhattan_margin": 0,
-        "boundary_margin_norm": 0.0,
-        "weighted_boundary_risk_score": 0.7
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 1,
+        "boundary_margin_norm": 0.2,
+        "weighted_boundary_risk_score": 0.16000000000000003
       },
       {
         "threshold": 0.85,
-        "cap_scale": 0.85,
-        "jitter": 0.02,
-        "winner": "none",
-        "winner_frequency": 0.0,
-        "winner_entropy_norm": 0.0,
-        "boundary_manhattan_margin": 0,
-        "boundary_margin_norm": 0.0,
-        "weighted_boundary_risk_score": 0.7
+        "cap_scale": 1.0,
+        "jitter": 0.0,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 1,
+        "boundary_margin_norm": 0.2,
+        "weighted_boundary_risk_score": 0.16000000000000003
       },
       {
-        "threshold": 0.9,
-        "cap_scale": 0.85,
-        "jitter": 0.0,
-        "winner": "none",
-        "winner_frequency": 0.0,
-        "winner_entropy_norm": 0.0,
-        "boundary_manhattan_margin": 0,
-        "boundary_margin_norm": 0.0,
-        "weighted_boundary_risk_score": 0.7
+        "threshold": 0.85,
+        "cap_scale": 1.0,
+        "jitter": 0.02,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 1,
+        "boundary_margin_norm": 0.2,
+        "weighted_boundary_risk_score": 0.16000000000000003
       },
       {
         "threshold": 0.9,
         "cap_scale": 0.85,
         "jitter": 0.01,
-        "winner": "none",
-        "winner_frequency": 0.0,
-        "winner_entropy_norm": 0.0,
-        "boundary_manhattan_margin": 0,
-        "boundary_margin_norm": 0.0,
-        "weighted_boundary_risk_score": 0.7
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 1,
+        "boundary_margin_norm": 0.2,
+        "weighted_boundary_risk_score": 0.16000000000000003
       },
       {
         "threshold": 0.9,
-        "cap_scale": 0.85,
-        "jitter": 0.02,
-        "winner": "none",
-        "winner_frequency": 0.0,
-        "winner_entropy_norm": 0.0,
-        "boundary_manhattan_margin": 0,
-        "boundary_margin_norm": 0.0,
-        "weighted_boundary_risk_score": 0.7
-      },
-      {
-        "threshold": 0.95,
-        "cap_scale": 0.85,
+        "cap_scale": 1.0,
         "jitter": 0.0,
-        "winner": "none",
-        "winner_frequency": 0.0,
-        "winner_entropy_norm": 0.0,
-        "boundary_manhattan_margin": 0,
-        "boundary_margin_norm": 0.0,
-        "weighted_boundary_risk_score": 0.7
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 1,
+        "boundary_margin_norm": 0.2,
+        "weighted_boundary_risk_score": 0.16000000000000003
       },
       {
-        "threshold": 0.95,
-        "cap_scale": 0.85,
-        "jitter": 0.01,
-        "winner": "none",
-        "winner_frequency": 0.0,
-        "winner_entropy_norm": 0.0,
-        "boundary_manhattan_margin": 0,
-        "boundary_margin_norm": 0.0,
-        "weighted_boundary_risk_score": 0.7
-      },
-      {
-        "threshold": 0.95,
-        "cap_scale": 0.85,
+        "threshold": 0.9,
+        "cap_scale": 1.0,
         "jitter": 0.02,
-        "winner": "none",
-        "winner_frequency": 0.0,
-        "winner_entropy_norm": 0.0,
-        "boundary_manhattan_margin": 0,
-        "boundary_margin_norm": 0.0,
-        "weighted_boundary_risk_score": 0.7
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 1,
+        "boundary_margin_norm": 0.2,
+        "weighted_boundary_risk_score": 0.16000000000000003
       },
       {
         "threshold": 0.95,
         "cap_scale": 1.0,
         "jitter": 0.0,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 1,
+        "boundary_margin_norm": 0.2,
+        "weighted_boundary_risk_score": 0.16000000000000003
+      },
+      {
+        "threshold": 0.95,
+        "cap_scale": 1.0,
+        "jitter": 0.01,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 1,
+        "boundary_margin_norm": 0.2,
+        "weighted_boundary_risk_score": 0.16000000000000003
+      },
+      {
+        "threshold": 0.95,
+        "cap_scale": 1.0,
+        "jitter": 0.02,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 1,
+        "boundary_margin_norm": 0.2,
+        "weighted_boundary_risk_score": 0.16000000000000003
+      },
+      {
+        "threshold": 0.75,
+        "cap_scale": 0.85,
+        "jitter": 0.0,
+        "winner": "none",
+        "winner_frequency": 0.0,
+        "winner_entropy_norm": 0.0,
+        "boundary_manhattan_margin": 0,
+        "boundary_margin_norm": 0.0,
+        "weighted_boundary_risk_score": 0.7
+      },
+      {
+        "threshold": 0.85,
+        "cap_scale": 0.85,
+        "jitter": 0.0,
+        "winner": "none",
+        "winner_frequency": 0.0,
+        "winner_entropy_norm": 0.0,
+        "boundary_manhattan_margin": 0,
+        "boundary_margin_norm": 0.0,
+        "weighted_boundary_risk_score": 0.7
+      },
+      {
+        "threshold": 0.85,
+        "cap_scale": 0.85,
+        "jitter": 0.02,
+        "winner": "none",
+        "winner_frequency": 0.0,
+        "winner_entropy_norm": 0.0,
+        "boundary_manhattan_margin": 0,
+        "boundary_margin_norm": 0.0,
+        "weighted_boundary_risk_score": 0.7
+      },
+      {
+        "threshold": 0.9,
+        "cap_scale": 0.85,
+        "jitter": 0.0,
+        "winner": "none",
+        "winner_frequency": 0.0,
+        "winner_entropy_norm": 0.0,
+        "boundary_manhattan_margin": 0,
+        "boundary_margin_norm": 0.0,
+        "weighted_boundary_risk_score": 0.7
+      },
+      {
+        "threshold": 0.9,
+        "cap_scale": 0.85,
+        "jitter": 0.02,
+        "winner": "none",
+        "winner_frequency": 0.0,
+        "winner_entropy_norm": 0.0,
+        "boundary_manhattan_margin": 0,
+        "boundary_margin_norm": 0.0,
+        "weighted_boundary_risk_score": 0.7
+      },
+      {
+        "threshold": 0.95,
+        "cap_scale": 0.85,
+        "jitter": 0.0,
+        "winner": "none",
+        "winner_frequency": 0.0,
+        "winner_entropy_norm": 0.0,
+        "boundary_manhattan_margin": 0,
+        "boundary_margin_norm": 0.0,
+        "weighted_boundary_risk_score": 0.7
+      },
+      {
+        "threshold": 0.95,
+        "cap_scale": 0.85,
+        "jitter": 0.01,
+        "winner": "none",
+        "winner_frequency": 0.0,
+        "winner_entropy_norm": 0.0,
+        "boundary_manhattan_margin": 0,
+        "boundary_margin_norm": 0.0,
+        "weighted_boundary_risk_score": 0.7
+      },
+      {
+        "threshold": 0.95,
+        "cap_scale": 0.85,
+        "jitter": 0.02,
         "winner": "none",
         "winner_frequency": 0.0,
         "winner_entropy_norm": 0.0,
@@ -10016,13 +10486,24 @@
       {
         "threshold": 0.7,
         "cap_scale": 1.15,
-        "jitter": 0.0,
+        "jitter": 0.02,
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 2,
+        "boundary_manhattan_margin": 5,
         "boundary_margin_norm": 1.0,
         "weighted_boundary_risk_score": 0.0
+      },
+      {
+        "threshold": 0.7,
+        "cap_scale": 1.0,
+        "jitter": 0.02,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 4,
+        "boundary_margin_norm": 0.8,
+        "weighted_boundary_risk_score": 0.039999999999999994
       },
       {
         "threshold": 0.7,
@@ -10031,75 +10512,64 @@
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 2,
-        "boundary_margin_norm": 1.0,
-        "weighted_boundary_risk_score": 0.0
+        "boundary_manhattan_margin": 4,
+        "boundary_margin_norm": 0.8,
+        "weighted_boundary_risk_score": 0.039999999999999994
+      },
+      {
+        "threshold": 0.75,
+        "cap_scale": 1.15,
+        "jitter": 0.02,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 4,
+        "boundary_margin_norm": 0.8,
+        "weighted_boundary_risk_score": 0.039999999999999994
+      },
+      {
+        "threshold": 0.8,
+        "cap_scale": 1.15,
+        "jitter": 0.01,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 4,
+        "boundary_margin_norm": 0.8,
+        "weighted_boundary_risk_score": 0.039999999999999994
+      },
+      {
+        "threshold": 0.7,
+        "cap_scale": 0.85,
+        "jitter": 0.02,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 3,
+        "boundary_margin_norm": 0.6,
+        "weighted_boundary_risk_score": 0.08000000000000002
+      },
+      {
+        "threshold": 0.7,
+        "cap_scale": 1.0,
+        "jitter": 0.01,
+        "winner": "class_adaptive_fallback",
+        "winner_frequency": 1.0,
+        "winner_entropy_norm": -0.0,
+        "boundary_manhattan_margin": 3,
+        "boundary_margin_norm": 0.6,
+        "weighted_boundary_risk_score": 0.08000000000000002
       },
       {
         "threshold": 0.7,
         "cap_scale": 1.15,
-        "jitter": 0.02,
-        "winner": "class_adaptive_fallback",
-        "winner_frequency": 1.0,
-        "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 2,
-        "boundary_margin_norm": 1.0,
-        "weighted_boundary_risk_score": 0.0
-      },
-      {
-        "threshold": 0.75,
-        "cap_scale": 1.15,
         "jitter": 0.0,
         "winner": "class_adaptive_fallback",
         "winner_frequency": 1.0,
         "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 2,
-        "boundary_margin_norm": 1.0,
-        "weighted_boundary_risk_score": 0.0
-      },
-      {
-        "threshold": 0.75,
-        "cap_scale": 1.15,
-        "jitter": 0.01,
-        "winner": "class_adaptive_fallback",
-        "winner_frequency": 1.0,
-        "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 2,
-        "boundary_margin_norm": 1.0,
-        "weighted_boundary_risk_score": 0.0
-      },
-      {
-        "threshold": 0.75,
-        "cap_scale": 1.15,
-        "jitter": 0.02,
-        "winner": "class_adaptive_fallback",
-        "winner_frequency": 1.0,
-        "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 2,
-        "boundary_margin_norm": 1.0,
-        "weighted_boundary_risk_score": 0.0
-      },
-      {
-        "threshold": 0.8,
-        "cap_scale": 1.15,
-        "jitter": 0.0,
-        "winner": "class_adaptive_fallback",
-        "winner_frequency": 1.0,
-        "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 2,
-        "boundary_margin_norm": 1.0,
-        "weighted_boundary_risk_score": 0.0
-      },
-      {
-        "threshold": 0.8,
-        "cap_scale": 1.15,
-        "jitter": 0.01,
-        "winner": "class_adaptive_fallback",
-        "winner_frequency": 1.0,
-        "winner_entropy_norm": -0.0,
-        "boundary_manhattan_margin": 2,
-        "boundary_margin_norm": 1.0,
-        "weighted_boundary_risk_score": 0.0
+        "boundary_manhattan_margin": 3,
+        "boundary_margin_norm": 0.6,
+        "weighted_boundary_risk_score": 0.08000000000000002
       }
     ],
     "best_corridor_winner_set": [
@@ -10123,13 +10593,24 @@
           {
             "threshold": 0.7,
             "cap_scale": 1.15,
-            "jitter": 0.0,
+            "jitter": 0.02,
             "winner": "class_adaptive_fallback",
             "winner_frequency": 1.0,
             "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
+            "boundary_manhattan_margin": 5,
             "boundary_margin_norm": 1.0,
             "weighted_boundary_risk_score": 0.0
+          },
+          {
+            "threshold": 0.7,
+            "cap_scale": 1.0,
+            "jitter": 0.02,
+            "winner": "class_adaptive_fallback",
+            "winner_frequency": 1.0,
+            "winner_entropy_norm": -0.0,
+            "boundary_manhattan_margin": 4,
+            "boundary_margin_norm": 0.8,
+            "weighted_boundary_risk_score": 0.039999999999999994
           },
           {
             "threshold": 0.7,
@@ -10138,75 +10619,64 @@
             "winner": "class_adaptive_fallback",
             "winner_frequency": 1.0,
             "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
+            "boundary_manhattan_margin": 4,
+            "boundary_margin_norm": 0.8,
+            "weighted_boundary_risk_score": 0.039999999999999994
+          },
+          {
+            "threshold": 0.75,
+            "cap_scale": 1.15,
+            "jitter": 0.02,
+            "winner": "class_adaptive_fallback",
+            "winner_frequency": 1.0,
+            "winner_entropy_norm": -0.0,
+            "boundary_manhattan_margin": 4,
+            "boundary_margin_norm": 0.8,
+            "weighted_boundary_risk_score": 0.039999999999999994
+          },
+          {
+            "threshold": 0.8,
+            "cap_scale": 1.15,
+            "jitter": 0.01,
+            "winner": "class_adaptive_fallback",
+            "winner_frequency": 1.0,
+            "winner_entropy_norm": -0.0,
+            "boundary_manhattan_margin": 4,
+            "boundary_margin_norm": 0.8,
+            "weighted_boundary_risk_score": 0.039999999999999994
+          },
+          {
+            "threshold": 0.7,
+            "cap_scale": 0.85,
+            "jitter": 0.02,
+            "winner": "class_adaptive_fallback",
+            "winner_frequency": 1.0,
+            "winner_entropy_norm": -0.0,
+            "boundary_manhattan_margin": 3,
+            "boundary_margin_norm": 0.6,
+            "weighted_boundary_risk_score": 0.08000000000000002
+          },
+          {
+            "threshold": 0.7,
+            "cap_scale": 1.0,
+            "jitter": 0.01,
+            "winner": "class_adaptive_fallback",
+            "winner_frequency": 1.0,
+            "winner_entropy_norm": -0.0,
+            "boundary_manhattan_margin": 3,
+            "boundary_margin_norm": 0.6,
+            "weighted_boundary_risk_score": 0.08000000000000002
           },
           {
             "threshold": 0.7,
             "cap_scale": 1.15,
-            "jitter": 0.02,
-            "winner": "class_adaptive_fallback",
-            "winner_frequency": 1.0,
-            "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
-          },
-          {
-            "threshold": 0.75,
-            "cap_scale": 1.15,
             "jitter": 0.0,
             "winner": "class_adaptive_fallback",
             "winner_frequency": 1.0,
             "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
-          },
-          {
-            "threshold": 0.75,
-            "cap_scale": 1.15,
-            "jitter": 0.01,
-            "winner": "class_adaptive_fallback",
-            "winner_frequency": 1.0,
-            "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
-          },
-          {
-            "threshold": 0.75,
-            "cap_scale": 1.15,
-            "jitter": 0.02,
-            "winner": "class_adaptive_fallback",
-            "winner_frequency": 1.0,
-            "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
-          },
-          {
-            "threshold": 0.8,
-            "cap_scale": 1.15,
-            "jitter": 0.0,
-            "winner": "class_adaptive_fallback",
-            "winner_frequency": 1.0,
-            "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
-          },
-          {
-            "threshold": 0.8,
-            "cap_scale": 1.15,
-            "jitter": 0.01,
-            "winner": "class_adaptive_fallback",
-            "winner_frequency": 1.0,
-            "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
+            "boundary_manhattan_margin": 3,
+            "boundary_margin_norm": 0.6,
+            "weighted_boundary_risk_score": 0.08000000000000002
           }
         ],
         "best_cell_score": 0.0
@@ -10224,13 +10694,24 @@
           {
             "threshold": 0.7,
             "cap_scale": 1.15,
-            "jitter": 0.0,
+            "jitter": 0.02,
             "winner": "class_adaptive_fallback",
             "winner_frequency": 1.0,
             "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
+            "boundary_manhattan_margin": 5,
             "boundary_margin_norm": 1.0,
             "weighted_boundary_risk_score": 0.0
+          },
+          {
+            "threshold": 0.7,
+            "cap_scale": 1.0,
+            "jitter": 0.02,
+            "winner": "class_adaptive_fallback",
+            "winner_frequency": 1.0,
+            "winner_entropy_norm": -0.0,
+            "boundary_manhattan_margin": 4,
+            "boundary_margin_norm": 0.8,
+            "weighted_boundary_risk_score": 0.029999999999999992
           },
           {
             "threshold": 0.7,
@@ -10239,75 +10720,64 @@
             "winner": "class_adaptive_fallback",
             "winner_frequency": 1.0,
             "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
+            "boundary_manhattan_margin": 4,
+            "boundary_margin_norm": 0.8,
+            "weighted_boundary_risk_score": 0.029999999999999992
+          },
+          {
+            "threshold": 0.75,
+            "cap_scale": 1.15,
+            "jitter": 0.02,
+            "winner": "class_adaptive_fallback",
+            "winner_frequency": 1.0,
+            "winner_entropy_norm": -0.0,
+            "boundary_manhattan_margin": 4,
+            "boundary_margin_norm": 0.8,
+            "weighted_boundary_risk_score": 0.029999999999999992
+          },
+          {
+            "threshold": 0.8,
+            "cap_scale": 1.15,
+            "jitter": 0.01,
+            "winner": "class_adaptive_fallback",
+            "winner_frequency": 1.0,
+            "winner_entropy_norm": -0.0,
+            "boundary_manhattan_margin": 4,
+            "boundary_margin_norm": 0.8,
+            "weighted_boundary_risk_score": 0.029999999999999992
+          },
+          {
+            "threshold": 0.7,
+            "cap_scale": 0.85,
+            "jitter": 0.02,
+            "winner": "class_adaptive_fallback",
+            "winner_frequency": 1.0,
+            "winner_entropy_norm": -0.0,
+            "boundary_manhattan_margin": 3,
+            "boundary_margin_norm": 0.6,
+            "weighted_boundary_risk_score": 0.06
+          },
+          {
+            "threshold": 0.7,
+            "cap_scale": 1.0,
+            "jitter": 0.01,
+            "winner": "class_adaptive_fallback",
+            "winner_frequency": 1.0,
+            "winner_entropy_norm": -0.0,
+            "boundary_manhattan_margin": 3,
+            "boundary_margin_norm": 0.6,
+            "weighted_boundary_risk_score": 0.06
           },
           {
             "threshold": 0.7,
             "cap_scale": 1.15,
-            "jitter": 0.02,
-            "winner": "class_adaptive_fallback",
-            "winner_frequency": 1.0,
-            "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
-          },
-          {
-            "threshold": 0.75,
-            "cap_scale": 1.15,
             "jitter": 0.0,
             "winner": "class_adaptive_fallback",
             "winner_frequency": 1.0,
             "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
-          },
-          {
-            "threshold": 0.75,
-            "cap_scale": 1.15,
-            "jitter": 0.01,
-            "winner": "class_adaptive_fallback",
-            "winner_frequency": 1.0,
-            "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
-          },
-          {
-            "threshold": 0.75,
-            "cap_scale": 1.15,
-            "jitter": 0.02,
-            "winner": "class_adaptive_fallback",
-            "winner_frequency": 1.0,
-            "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
-          },
-          {
-            "threshold": 0.8,
-            "cap_scale": 1.15,
-            "jitter": 0.0,
-            "winner": "class_adaptive_fallback",
-            "winner_frequency": 1.0,
-            "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
-          },
-          {
-            "threshold": 0.8,
-            "cap_scale": 1.15,
-            "jitter": 0.01,
-            "winner": "class_adaptive_fallback",
-            "winner_frequency": 1.0,
-            "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
+            "boundary_manhattan_margin": 3,
+            "boundary_margin_norm": 0.6,
+            "weighted_boundary_risk_score": 0.06
           }
         ],
         "best_cell_score": 0.0
@@ -10325,13 +10795,24 @@
           {
             "threshold": 0.7,
             "cap_scale": 1.15,
-            "jitter": 0.0,
+            "jitter": 0.02,
             "winner": "class_adaptive_fallback",
             "winner_frequency": 1.0,
             "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
+            "boundary_manhattan_margin": 5,
             "boundary_margin_norm": 1.0,
             "weighted_boundary_risk_score": 0.0
+          },
+          {
+            "threshold": 0.7,
+            "cap_scale": 1.0,
+            "jitter": 0.02,
+            "winner": "class_adaptive_fallback",
+            "winner_frequency": 1.0,
+            "winner_entropy_norm": -0.0,
+            "boundary_manhattan_margin": 4,
+            "boundary_margin_norm": 0.8,
+            "weighted_boundary_risk_score": 0.039999999999999994
           },
           {
             "threshold": 0.7,
@@ -10340,75 +10821,64 @@
             "winner": "class_adaptive_fallback",
             "winner_frequency": 1.0,
             "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
+            "boundary_manhattan_margin": 4,
+            "boundary_margin_norm": 0.8,
+            "weighted_boundary_risk_score": 0.039999999999999994
+          },
+          {
+            "threshold": 0.75,
+            "cap_scale": 1.15,
+            "jitter": 0.02,
+            "winner": "class_adaptive_fallback",
+            "winner_frequency": 1.0,
+            "winner_entropy_norm": -0.0,
+            "boundary_manhattan_margin": 4,
+            "boundary_margin_norm": 0.8,
+            "weighted_boundary_risk_score": 0.039999999999999994
+          },
+          {
+            "threshold": 0.8,
+            "cap_scale": 1.15,
+            "jitter": 0.01,
+            "winner": "class_adaptive_fallback",
+            "winner_frequency": 1.0,
+            "winner_entropy_norm": -0.0,
+            "boundary_manhattan_margin": 4,
+            "boundary_margin_norm": 0.8,
+            "weighted_boundary_risk_score": 0.039999999999999994
+          },
+          {
+            "threshold": 0.7,
+            "cap_scale": 0.85,
+            "jitter": 0.02,
+            "winner": "class_adaptive_fallback",
+            "winner_frequency": 1.0,
+            "winner_entropy_norm": -0.0,
+            "boundary_manhattan_margin": 3,
+            "boundary_margin_norm": 0.6,
+            "weighted_boundary_risk_score": 0.08000000000000002
+          },
+          {
+            "threshold": 0.7,
+            "cap_scale": 1.0,
+            "jitter": 0.01,
+            "winner": "class_adaptive_fallback",
+            "winner_frequency": 1.0,
+            "winner_entropy_norm": -0.0,
+            "boundary_manhattan_margin": 3,
+            "boundary_margin_norm": 0.6,
+            "weighted_boundary_risk_score": 0.08000000000000002
           },
           {
             "threshold": 0.7,
             "cap_scale": 1.15,
-            "jitter": 0.02,
-            "winner": "class_adaptive_fallback",
-            "winner_frequency": 1.0,
-            "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
-          },
-          {
-            "threshold": 0.75,
-            "cap_scale": 1.15,
             "jitter": 0.0,
             "winner": "class_adaptive_fallback",
             "winner_frequency": 1.0,
             "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
-          },
-          {
-            "threshold": 0.75,
-            "cap_scale": 1.15,
-            "jitter": 0.01,
-            "winner": "class_adaptive_fallback",
-            "winner_frequency": 1.0,
-            "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
-          },
-          {
-            "threshold": 0.75,
-            "cap_scale": 1.15,
-            "jitter": 0.02,
-            "winner": "class_adaptive_fallback",
-            "winner_frequency": 1.0,
-            "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
-          },
-          {
-            "threshold": 0.8,
-            "cap_scale": 1.15,
-            "jitter": 0.0,
-            "winner": "class_adaptive_fallback",
-            "winner_frequency": 1.0,
-            "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
-          },
-          {
-            "threshold": 0.8,
-            "cap_scale": 1.15,
-            "jitter": 0.01,
-            "winner": "class_adaptive_fallback",
-            "winner_frequency": 1.0,
-            "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
+            "boundary_manhattan_margin": 3,
+            "boundary_margin_norm": 0.6,
+            "weighted_boundary_risk_score": 0.08000000000000002
           }
         ],
         "best_cell_score": 0.0
@@ -10426,13 +10896,24 @@
           {
             "threshold": 0.7,
             "cap_scale": 1.15,
-            "jitter": 0.0,
+            "jitter": 0.02,
             "winner": "class_adaptive_fallback",
             "winner_frequency": 1.0,
             "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
+            "boundary_manhattan_margin": 5,
             "boundary_margin_norm": 1.0,
             "weighted_boundary_risk_score": 0.0
+          },
+          {
+            "threshold": 0.7,
+            "cap_scale": 1.0,
+            "jitter": 0.02,
+            "winner": "class_adaptive_fallback",
+            "winner_frequency": 1.0,
+            "winner_entropy_norm": -0.0,
+            "boundary_manhattan_margin": 4,
+            "boundary_margin_norm": 0.8,
+            "weighted_boundary_risk_score": 0.059999999999999984
           },
           {
             "threshold": 0.7,
@@ -10441,75 +10922,64 @@
             "winner": "class_adaptive_fallback",
             "winner_frequency": 1.0,
             "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
+            "boundary_manhattan_margin": 4,
+            "boundary_margin_norm": 0.8,
+            "weighted_boundary_risk_score": 0.059999999999999984
+          },
+          {
+            "threshold": 0.75,
+            "cap_scale": 1.15,
+            "jitter": 0.02,
+            "winner": "class_adaptive_fallback",
+            "winner_frequency": 1.0,
+            "winner_entropy_norm": -0.0,
+            "boundary_manhattan_margin": 4,
+            "boundary_margin_norm": 0.8,
+            "weighted_boundary_risk_score": 0.059999999999999984
+          },
+          {
+            "threshold": 0.8,
+            "cap_scale": 1.15,
+            "jitter": 0.01,
+            "winner": "class_adaptive_fallback",
+            "winner_frequency": 1.0,
+            "winner_entropy_norm": -0.0,
+            "boundary_manhattan_margin": 4,
+            "boundary_margin_norm": 0.8,
+            "weighted_boundary_risk_score": 0.059999999999999984
+          },
+          {
+            "threshold": 0.7,
+            "cap_scale": 0.85,
+            "jitter": 0.02,
+            "winner": "class_adaptive_fallback",
+            "winner_frequency": 1.0,
+            "winner_entropy_norm": -0.0,
+            "boundary_manhattan_margin": 3,
+            "boundary_margin_norm": 0.6,
+            "weighted_boundary_risk_score": 0.12
+          },
+          {
+            "threshold": 0.7,
+            "cap_scale": 1.0,
+            "jitter": 0.01,
+            "winner": "class_adaptive_fallback",
+            "winner_frequency": 1.0,
+            "winner_entropy_norm": -0.0,
+            "boundary_manhattan_margin": 3,
+            "boundary_margin_norm": 0.6,
+            "weighted_boundary_risk_score": 0.12
           },
           {
             "threshold": 0.7,
             "cap_scale": 1.15,
-            "jitter": 0.02,
-            "winner": "class_adaptive_fallback",
-            "winner_frequency": 1.0,
-            "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
-          },
-          {
-            "threshold": 0.75,
-            "cap_scale": 1.15,
             "jitter": 0.0,
             "winner": "class_adaptive_fallback",
             "winner_frequency": 1.0,
             "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
-          },
-          {
-            "threshold": 0.75,
-            "cap_scale": 1.15,
-            "jitter": 0.01,
-            "winner": "class_adaptive_fallback",
-            "winner_frequency": 1.0,
-            "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
-          },
-          {
-            "threshold": 0.75,
-            "cap_scale": 1.15,
-            "jitter": 0.02,
-            "winner": "class_adaptive_fallback",
-            "winner_frequency": 1.0,
-            "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
-          },
-          {
-            "threshold": 0.8,
-            "cap_scale": 1.15,
-            "jitter": 0.0,
-            "winner": "class_adaptive_fallback",
-            "winner_frequency": 1.0,
-            "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
-          },
-          {
-            "threshold": 0.8,
-            "cap_scale": 1.15,
-            "jitter": 0.01,
-            "winner": "class_adaptive_fallback",
-            "winner_frequency": 1.0,
-            "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
+            "boundary_manhattan_margin": 3,
+            "boundary_margin_norm": 0.6,
+            "weighted_boundary_risk_score": 0.12
           }
         ],
         "best_cell_score": 0.0
@@ -10527,13 +10997,24 @@
           {
             "threshold": 0.7,
             "cap_scale": 1.15,
-            "jitter": 0.0,
+            "jitter": 0.02,
             "winner": "class_adaptive_fallback",
             "winner_frequency": 1.0,
             "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
+            "boundary_manhattan_margin": 5,
             "boundary_margin_norm": 1.0,
             "weighted_boundary_risk_score": 0.0
+          },
+          {
+            "threshold": 0.7,
+            "cap_scale": 1.0,
+            "jitter": 0.02,
+            "winner": "class_adaptive_fallback",
+            "winner_frequency": 1.0,
+            "winner_entropy_norm": -0.0,
+            "boundary_manhattan_margin": 4,
+            "boundary_margin_norm": 0.8,
+            "weighted_boundary_risk_score": 0.04999999999999999
           },
           {
             "threshold": 0.7,
@@ -10542,75 +11023,64 @@
             "winner": "class_adaptive_fallback",
             "winner_frequency": 1.0,
             "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
+            "boundary_manhattan_margin": 4,
+            "boundary_margin_norm": 0.8,
+            "weighted_boundary_risk_score": 0.04999999999999999
+          },
+          {
+            "threshold": 0.75,
+            "cap_scale": 1.15,
+            "jitter": 0.02,
+            "winner": "class_adaptive_fallback",
+            "winner_frequency": 1.0,
+            "winner_entropy_norm": -0.0,
+            "boundary_manhattan_margin": 4,
+            "boundary_margin_norm": 0.8,
+            "weighted_boundary_risk_score": 0.04999999999999999
+          },
+          {
+            "threshold": 0.8,
+            "cap_scale": 1.15,
+            "jitter": 0.01,
+            "winner": "class_adaptive_fallback",
+            "winner_frequency": 1.0,
+            "winner_entropy_norm": -0.0,
+            "boundary_manhattan_margin": 4,
+            "boundary_margin_norm": 0.8,
+            "weighted_boundary_risk_score": 0.04999999999999999
+          },
+          {
+            "threshold": 0.7,
+            "cap_scale": 0.85,
+            "jitter": 0.02,
+            "winner": "class_adaptive_fallback",
+            "winner_frequency": 1.0,
+            "winner_entropy_norm": -0.0,
+            "boundary_manhattan_margin": 3,
+            "boundary_margin_norm": 0.6,
+            "weighted_boundary_risk_score": 0.1
+          },
+          {
+            "threshold": 0.7,
+            "cap_scale": 1.0,
+            "jitter": 0.01,
+            "winner": "class_adaptive_fallback",
+            "winner_frequency": 1.0,
+            "winner_entropy_norm": -0.0,
+            "boundary_manhattan_margin": 3,
+            "boundary_margin_norm": 0.6,
+            "weighted_boundary_risk_score": 0.1
           },
           {
             "threshold": 0.7,
             "cap_scale": 1.15,
-            "jitter": 0.02,
-            "winner": "class_adaptive_fallback",
-            "winner_frequency": 1.0,
-            "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
-          },
-          {
-            "threshold": 0.75,
-            "cap_scale": 1.15,
             "jitter": 0.0,
             "winner": "class_adaptive_fallback",
             "winner_frequency": 1.0,
             "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
-          },
-          {
-            "threshold": 0.75,
-            "cap_scale": 1.15,
-            "jitter": 0.01,
-            "winner": "class_adaptive_fallback",
-            "winner_frequency": 1.0,
-            "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
-          },
-          {
-            "threshold": 0.75,
-            "cap_scale": 1.15,
-            "jitter": 0.02,
-            "winner": "class_adaptive_fallback",
-            "winner_frequency": 1.0,
-            "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
-          },
-          {
-            "threshold": 0.8,
-            "cap_scale": 1.15,
-            "jitter": 0.0,
-            "winner": "class_adaptive_fallback",
-            "winner_frequency": 1.0,
-            "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
-          },
-          {
-            "threshold": 0.8,
-            "cap_scale": 1.15,
-            "jitter": 0.01,
-            "winner": "class_adaptive_fallback",
-            "winner_frequency": 1.0,
-            "winner_entropy_norm": -0.0,
-            "boundary_manhattan_margin": 2,
-            "boundary_margin_norm": 1.0,
-            "weighted_boundary_risk_score": 0.0
+            "boundary_manhattan_margin": 3,
+            "boundary_margin_norm": 0.6,
+            "weighted_boundary_risk_score": 0.1
           }
         ],
         "best_cell_score": 0.0
@@ -10904,7 +11374,7 @@
     "status": "OPEN_PRECURSOR_NOT_CLOSURE",
     "scope": "STRICT_TASK2_NUMERICAL_STRESS_POLICY_POSTERIOR_PREDICTIVE_GATE_COST_CALIBRATION",
     "utility_definition": "go_rate_local - lambda_cost*runtime_uplift_proxy",
-    "base_runtime_reference_seconds": 0.03373872499651043,
+    "base_runtime_reference_seconds": 0.034713832749503126,
     "lambda_grid": [
       0.0,
       0.1,
