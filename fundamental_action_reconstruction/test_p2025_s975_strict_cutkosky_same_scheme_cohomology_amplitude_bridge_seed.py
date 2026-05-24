@@ -1155,7 +1155,7 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
         assert ">" in t2w["fail_trace"]
         assert any(
             tag in t2w["fail_trace"]
-            for tag in {"q95_gap_abs=", "max_gap_rel=", "q95_cross_integrator_gap_abs=", "q95_convergence_delta_n400_to_n800_abs=", "q95_refined_window_best_gap_abs=", "q95_gap_abs_quad_high_precision_top3=", "q95_gap_abs_quad_high_precision_upper_envelope_top3=", "q95_gap_abs_upper_tail_envelope_top3=", "q95_gap_abs_n2400_top3=", "q95_delta_gap_abs_n2400_minus_n6400_abs_top3=", "q95_delta_gap_abs_n3200_minus_n6400_abs_top3=", "q95_delta_gap_abs_n1600_minus_n6400_abs_top3=", "min_effective_weight_global="}
+            for tag in {"q95_gap_abs=", "max_gap_rel=", "q95_cross_integrator_gap_abs=", "q95_convergence_delta_n400_to_n800_abs=", "q95_refined_window_best_gap_abs=", "q95_gap_abs_quad_high_precision_top3=", "q95_gap_abs_quad_high_precision_upper_envelope_top3=", "q95_gap_abs_upper_tail_envelope_top3=", "q95_gap_abs_n2400_top3=", "q95_delta_gap_abs_n2400_minus_n6400_abs_top3=", "q95_delta_gap_abs_n3200_minus_n6400_abs_top3=", "q95_delta_gap_abs_n1600_minus_n6400_abs_top3=", "q95_delta_gap_abs_n800_minus_n6400_abs_top3=", "q95_delta_gap_abs_n12800_minus_n6400_abs_top3=", "q95_total_monotone_violation_top3=", "min_effective_weight_global="}
         )
     assert "closure_consistency" in t2w
     cc = t2w["closure_consistency"]
@@ -1165,13 +1165,18 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
         "q95_gap_abs_n2400_vs_n6400_delta_le_threshold",
         "q95_gap_abs_n3200_vs_n6400_delta_le_threshold",
         "q95_gap_abs_n1600_vs_n6400_delta_le_threshold",
+        "q95_gap_abs_n800_vs_n6400_delta_le_threshold",
+        "q95_gap_abs_n12800_vs_n6400_delta_le_threshold",
+        "q95_convergence_tail_ratio_n12800_le_one",
+        "q95_gap_abs_n25600_vs_n12800_delta_le_threshold",
+        "q95_monotone_violation_n25600_le_zero",
         "max_gap_rel_le_threshold",
         "all_nonnegative_weights",
         "q95_cross_integrator_gap_le_threshold",
         "q95_convergence_delta_le_threshold",
     }
     assert isinstance(cc["all_criteria_satisfied"], bool)
-    assert cc["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none", "q95_refined_window_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs"}
+    assert cc["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none", "q95_refined_window_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs", "q95_n800_vs_n6400_delta_abs", "q95_n12800_vs_n6400_delta_abs", "q95_n12800_tail_ratio", "q95_n25600_vs_n12800_delta_abs", "q95_n25600_monotone_violation"}
     assert isinstance(cc["dominant_inequality"], str) and len(cc["dominant_inequality"]) > 0
     assert "falsifier_trace_consistency" in t2w
     ftc = t2w["falsifier_trace_consistency"]
@@ -1549,19 +1554,19 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     qcp = t2w["q95_blocker_choice_panel"]
     assert qcp["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
     assert qcp["scope"] == "STRICT_TASK2_BLOCKER_CHOICE_NORMALIZED_OVERSHOOT"
-    assert len(qcp["rows"]) == 13
+    assert len(qcp["rows"]) == 18
     for rr in qcp["rows"]:
-        assert rr["criterion"] in {"q95_gap_abs", "q95_refined_window_gap_abs", "q95_quad_hp_top3_gap_abs", "q95_quad_hp_upper_envelope_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs"}
+        assert rr["criterion"] in {"q95_gap_abs", "q95_refined_window_gap_abs", "q95_quad_hp_top3_gap_abs", "q95_quad_hp_upper_envelope_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs", "q95_n800_vs_n6400_delta_abs", "q95_n12800_vs_n6400_delta_abs", "q95_n12800_tail_ratio", "q95_n25600_vs_n12800_delta_abs", "q95_n25600_monotone_violation", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs"}
         assert rr["normalized_overshoot"] >= 0.0
         assert isinstance(rr["is_satisfied"], bool)
-    assert qcp["easiest_unresolved_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none", "q95_refined_window_gap_abs", "q95_quad_hp_top3_gap_abs", "q95_quad_hp_upper_envelope_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs"}
-    assert qcp["dominant_unresolved_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none", "q95_refined_window_gap_abs", "q95_quad_hp_top3_gap_abs", "q95_quad_hp_upper_envelope_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs"}
+    assert qcp["easiest_unresolved_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none", "q95_refined_window_gap_abs", "q95_quad_hp_top3_gap_abs", "q95_quad_hp_upper_envelope_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs", "q95_n800_vs_n6400_delta_abs", "q95_n12800_vs_n6400_delta_abs", "q95_n12800_tail_ratio", "q95_n25600_vs_n12800_delta_abs", "q95_n25600_monotone_violation"}
+    assert qcp["dominant_unresolved_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none", "q95_refined_window_gap_abs", "q95_quad_hp_top3_gap_abs", "q95_quad_hp_upper_envelope_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs", "q95_n800_vs_n6400_delta_abs", "q95_n12800_vs_n6400_delta_abs", "q95_n12800_tail_ratio", "q95_n25600_vs_n12800_delta_abs", "q95_n25600_monotone_violation"}
     assert "q95_blocker_choice_consistency" in t2w
     qcc = t2w["q95_blocker_choice_consistency"]
     assert qcc["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
     assert qcc["scope"] == "STRICT_TASK2_BLOCKER_CHOICE_CONSISTENCY"
-    assert qcc["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none", "pending", "q95_refined_window_gap_abs", "q95_quad_hp_top3_gap_abs", "q95_quad_hp_upper_envelope_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs"}
-    assert qcc["easiest_unresolved_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none", "q95_refined_window_gap_abs", "q95_quad_hp_top3_gap_abs", "q95_quad_hp_upper_envelope_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs"}
+    assert qcc["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none", "pending", "q95_refined_window_gap_abs", "q95_quad_hp_top3_gap_abs", "q95_quad_hp_upper_envelope_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs", "q95_n800_vs_n6400_delta_abs", "q95_n12800_vs_n6400_delta_abs", "q95_n12800_tail_ratio", "q95_n25600_vs_n12800_delta_abs", "q95_n25600_monotone_violation"}
+    assert qcc["easiest_unresolved_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none", "q95_refined_window_gap_abs", "q95_quad_hp_top3_gap_abs", "q95_quad_hp_upper_envelope_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs", "q95_n800_vs_n6400_delta_abs", "q95_n12800_vs_n6400_delta_abs", "q95_n12800_tail_ratio", "q95_n25600_vs_n12800_delta_abs", "q95_n25600_monotone_violation"}
     assert isinstance(qcc["is_consistent_when_q95_dominates"], bool)
     if qcc["dominant_blocker"] != "pending":
         assert qcc["dominant_blocker"] == qcp["dominant_unresolved_blocker"]
@@ -1569,7 +1574,7 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     dbm = t2w["dominant_blocker_numeric_margin"]
     assert dbm["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
     assert dbm["scope"] == "STRICT_TASK2_DOMINANT_BLOCKER_NUMERIC_MARGIN"
-    assert dbm["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none", "q95_refined_window_gap_abs", "q95_quad_hp_top3_gap_abs", "q95_quad_hp_upper_envelope_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs"}
+    assert dbm["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none", "q95_refined_window_gap_abs", "q95_quad_hp_top3_gap_abs", "q95_quad_hp_upper_envelope_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs", "q95_n800_vs_n6400_delta_abs", "q95_n12800_vs_n6400_delta_abs", "q95_n12800_tail_ratio", "q95_n25600_vs_n12800_delta_abs", "q95_n25600_monotone_violation"}
     assert isinstance(dbm["observed_value"], float)
     assert isinstance(dbm["threshold_value"], float)
     assert isinstance(dbm["signed_margin_observed_minus_threshold"], float)
@@ -1578,8 +1583,8 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     dsc = t2w["dominant_blocker_selection_consistency"]
     assert dsc["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
     assert dsc["scope"] == "STRICT_TASK2_DOMINANT_BLOCKER_SELECTION_CONSISTENCY"
-    assert dsc["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none", "q95_refined_window_gap_abs", "q95_quad_hp_top3_gap_abs", "q95_quad_hp_upper_envelope_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs"}
-    assert dsc["dominant_unresolved_expected"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none", "q95_refined_window_gap_abs", "q95_quad_hp_top3_gap_abs", "q95_quad_hp_upper_envelope_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs"}
+    assert dsc["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none", "q95_refined_window_gap_abs", "q95_quad_hp_top3_gap_abs", "q95_quad_hp_upper_envelope_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs", "q95_n800_vs_n6400_delta_abs", "q95_n12800_vs_n6400_delta_abs", "q95_n12800_tail_ratio", "q95_n25600_vs_n12800_delta_abs", "q95_n25600_monotone_violation"}
+    assert dsc["dominant_unresolved_expected"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none", "q95_refined_window_gap_abs", "q95_quad_hp_top3_gap_abs", "q95_quad_hp_upper_envelope_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs", "q95_n800_vs_n6400_delta_abs", "q95_n12800_vs_n6400_delta_abs", "q95_n12800_tail_ratio", "q95_n25600_vs_n12800_delta_abs", "q95_n25600_monotone_violation"}
     assert dsc["is_argmax_overshoot"] is True
     assert "dominant_blocker_robustness_certificate" in t2w
     drc = t2w["dominant_blocker_robustness_certificate"]
@@ -1662,7 +1667,7 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     assert cfn["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
     assert cfn["scope"] == "STRICT_TASK2_FAIL_TRACE_NUMERIC_COHERENCE"
     assert cfn["verdict_task2"] in {"CLOSED_NUMERICAL_WITNESS_TASK2", "OPEN_OBSTRUCTION_WITH_TRACE", "PENDING"}
-    assert cfn["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "weight_sign_nonnegativity", "none", "pending", "q95_refined_window_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs"}
+    assert cfn["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "weight_sign_nonnegativity", "none", "pending", "q95_refined_window_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs", "q95_n800_vs_n6400_delta_abs", "q95_n12800_vs_n6400_delta_abs", "q95_n12800_tail_ratio", "q95_n25600_vs_n12800_delta_abs", "q95_n25600_monotone_violation"}
     assert isinstance(cfn["fail_trace"], str)
     assert cfn["trace_prefix_matches_dominant_blocker"] is True
     assert "criterion_coherence_dominant_margin_sign" in t2w
@@ -1670,7 +1675,7 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     assert cds["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
     assert cds["scope"] == "STRICT_TASK2_DOMINANT_MARGIN_SIGN_COHERENCE"
     assert cds["verdict_task2"] in {"CLOSED_NUMERICAL_WITNESS_TASK2", "OPEN_OBSTRUCTION_WITH_TRACE", "PENDING"}
-    assert cds["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "weight_sign_nonnegativity", "none", "pending", "q95_refined_window_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs"}
+    assert cds["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "weight_sign_nonnegativity", "none", "pending", "q95_refined_window_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs", "q95_n800_vs_n6400_delta_abs", "q95_n12800_vs_n6400_delta_abs", "q95_n12800_tail_ratio", "q95_n25600_vs_n12800_delta_abs", "q95_n25600_monotone_violation"}
     assert isinstance(cds["signed_margin_observed_minus_threshold"], float)
     assert cds["open_requires_positive_margin"] is True
     assert "criterion_coherence_open_trace_inequality" in t2w
@@ -1684,7 +1689,7 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     cdp = t2w["criterion_coherence_dominant_inequality_prefix"]
     assert cdp["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
     assert cdp["scope"] == "STRICT_TASK2_DOMINANT_INEQUALITY_PREFIX_COHERENCE"
-    assert cdp["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "weight_sign_nonnegativity", "none", "pending", "q95_refined_window_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs"}
+    assert cdp["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "weight_sign_nonnegativity", "none", "pending", "q95_refined_window_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs", "q95_n800_vs_n6400_delta_abs", "q95_n12800_vs_n6400_delta_abs", "q95_n12800_tail_ratio", "q95_n25600_vs_n12800_delta_abs", "q95_n25600_monotone_violation"}
     assert isinstance(cdp["dominant_inequality"], str)
     assert cdp["prefix_matches_dominant_blocker"] is True
     assert "criterion_coherence_fail_trace_equals_dominant" in t2w

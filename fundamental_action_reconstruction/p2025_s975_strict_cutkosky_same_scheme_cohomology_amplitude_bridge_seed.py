@@ -1394,6 +1394,202 @@ def main() -> None:
             else f"q95_gap_abs_n6400_top3={q95_gap_abs_n6400_top3:.6e} > q95_gap_abs_max={float(pass_fail_criteria_task2['q95_gap_abs_max']):.1e}"
         ),
     }
+
+    # Ultra-high-order independent replay on dominant support for strict blocker falsification.
+    conv12800_rows = []
+    for rr in topk:
+        s_loc = float(rr["s"])
+        def integrand_conv12800(x):
+            xa = np.array(x, dtype=float)
+            kk = np.cos(om_gg * xa + ph_gg) / (1.0 + be_gg * (xa ** et_gg))
+            return (kk * kk) / np.sqrt(np.maximum(1e-15, xa + s_loc))
+        disc_ref, _ = strict_kernel_phase_integral(s_loc, float(om_gg), float(ph_gg), float(be_gg), float(et_gg))
+        cut_12800, _ = si.fixed_quad(integrand_conv12800, 0.0, 1.0, n=12800)
+        conv12800_rows.append({
+            "s": s_loc,
+            "disc_reference": float(disc_ref),
+            "cutsum_fixed_quad_n12800": float(cut_12800),
+            "gap_abs_n12800": float(abs(float(disc_ref) - float(cut_12800))),
+            "signed_residual_n12800_disc_minus_cut": float(float(disc_ref) - float(cut_12800)),
+            "delta_gap_abs_n12800_minus_n6400_abs": float(abs(float(abs(float(disc_ref) - float(cut_12800))) - float(abs(float(disc_ref) - float(next(r["cutsum_fixed_quad_n6400"] for r in conv6400_rows if float(r["s"])==s_loc)))))),
+        })
+    q95_gap_abs_n12800_top3 = float(np.quantile(np.array([r["gap_abs_n12800"] for r in conv12800_rows], dtype=float), 0.95)) if conv12800_rows else float("inf")
+    q95_n12800_vs_n6400_delta_top3 = float(np.quantile(np.array([r["delta_gap_abs_n12800_minus_n6400_abs"] for r in conv12800_rows], dtype=float), 0.95)) if conv12800_rows else float("inf")
+    
+    q95_signed_residual_abs_n12800_top3 = float(np.quantile(np.abs(np.array([r["signed_residual_n12800_disc_minus_cut"] for r in conv12800_rows], dtype=float)), 0.95)) if conv12800_rows else float("inf")
+    signed_residual_rows_n12800 = [{"s": float(r["s"]), "signed_residual_n12800_disc_minus_cut": float(r["signed_residual_n12800_disc_minus_cut"]), "abs_signed_residual_n12800": float(abs(r["signed_residual_n12800_disc_minus_cut"]))} for r in conv12800_rows]
+    q95_blocker_n12800_signed_residual_certificate = {
+        "schema_version": "1.0.0",
+        "scope": "STRICT_TASK2_Q95_BLOCKER_N12800_SIGNED_RESIDUAL_CERTIFICATE",
+        "theorem_target": "Q95_ABS_SIGNED_RESIDUAL_N12800_TOP3_LE_THRESHOLD",
+        "strict_lane_assumptions": [
+            "strict_lane_only_no_legacy_transfer",
+            "signed_residual_defined_as_disc_minus_cutsum",
+            "dominant_support_top3_fixed",
+        ],
+        "domain": {"s_rows": [float(r["s"]) for r in topk], "fixed_quad_n": 12800},
+        "computed_rows": signed_residual_rows_n12800,
+        "aggregate_metrics": {
+            "q95_abs_signed_residual_n12800_top3": q95_signed_residual_abs_n12800_top3,
+            "q95_gap_abs_threshold": float(pass_fail_criteria_task2["q95_gap_abs_max"]),
+        },
+        "pass_fail_criteria": {"q95_abs_signed_residual_n12800_top3_le_threshold": float(pass_fail_criteria_task2["q95_gap_abs_max"])},
+        "verdict": "CLOSED_NUMERICAL_WITNESS_TASK2" if q95_signed_residual_abs_n12800_top3 <= float(pass_fail_criteria_task2["q95_gap_abs_max"]) else "OPEN_OBSTRUCTION_WITH_TRACE",
+        "fail_trace": "" if q95_signed_residual_abs_n12800_top3 <= float(pass_fail_criteria_task2["q95_gap_abs_max"]) else f"q95_abs_signed_residual_n12800_top3={q95_signed_residual_abs_n12800_top3:.6e} > q95_gap_abs_max={float(pass_fail_criteria_task2['q95_gap_abs_max']):.1e}",
+    }
+    q95_blocker_n12800_recompute_certificate = {
+        "schema_version": "1.0.0",
+        "scope": "STRICT_TASK2_Q95_BLOCKER_N12800_RECOMPUTE_CERTIFICATE",
+        "theorem_target": "Q95_GAP_ABS_N12800_TOP3_LE_THRESHOLD_WITH_SMALL_DELTA_VS_N6400",
+        "strict_lane_assumptions": [
+            "strict_lane_only_no_legacy_transfer",
+            "channel_fixed_graviton_to_gauge_gauge",
+            "fixed_quad_n12800_replay_on_dominant_support",
+            "cross_integrator_agreement_n12800_vs_n6400_required",
+        ],
+        "domain": {"s_rows": [float(r["s"]) for r in topk], "n_levels": [6400, 12800]},
+        "computed_rows": conv12800_rows,
+        "aggregate_metrics": {
+            "q95_gap_abs_n12800_top3": q95_gap_abs_n12800_top3,
+            "q95_delta_gap_abs_n12800_minus_n6400_abs_top3": q95_n12800_vs_n6400_delta_top3,
+            "q95_gap_abs_threshold": float(pass_fail_criteria_task2["q95_gap_abs_max"]),
+            "q95_cross_integrator_gap_abs_max": float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"]),
+        },
+        "pass_fail_criteria": {
+            "q95_gap_abs_n12800_top3_le_threshold": float(pass_fail_criteria_task2["q95_gap_abs_max"]),
+            "q95_delta_gap_abs_n12800_minus_n6400_abs_top3_le_threshold": float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"]),
+        },
+        "verdict": (
+            "CLOSED_NUMERICAL_WITNESS_TASK2"
+            if (
+                q95_gap_abs_n12800_top3 <= float(pass_fail_criteria_task2["q95_gap_abs_max"])
+                and q95_n12800_vs_n6400_delta_top3 <= float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"])
+            )
+            else "OPEN_OBSTRUCTION_WITH_TRACE"
+        ),
+        "fail_trace": (
+            ""
+            if (
+                q95_gap_abs_n12800_top3 <= float(pass_fail_criteria_task2["q95_gap_abs_max"])
+                and q95_n12800_vs_n6400_delta_top3 <= float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"])
+            )
+            else (
+                f"q95_gap_abs_n12800_top3={q95_gap_abs_n12800_top3:.6e} > q95_gap_abs_max={float(pass_fail_criteria_task2['q95_gap_abs_max']):.1e}"
+                if q95_gap_abs_n12800_top3 > float(pass_fail_criteria_task2["q95_gap_abs_max"])
+                else f"q95_delta_gap_abs_n12800_minus_n6400_abs_top3={q95_n12800_vs_n6400_delta_top3:.6e} > q95_cross_integrator_gap_abs_max={float(pass_fail_criteria_task2['q95_cross_integrator_gap_abs_max']):.1e}"
+            )
+        ),
+    }
+
+    convergence_tail_rows_n12800 = []
+    for r32, r64, r128 in zip(conv3200_rows, conv6400_rows, conv12800_rows):
+        d32_64 = float(abs(float(r32["gap_abs_n3200"]) - float(r64["gap_abs_n6400"])))
+        d64_128 = float(abs(float(r64["gap_abs_n6400"]) - float(r128["gap_abs_n12800"])))
+        ratio = float(d64_128 / max(1e-30, d32_64))
+        convergence_tail_rows_n12800.append({
+            "s": float(r128["s"]),
+            "delta_gap_abs_n3200_minus_n6400_abs": d32_64,
+            "delta_gap_abs_n6400_minus_n12800_abs": d64_128,
+            "convergence_tail_ratio_n6400_12800_over_n3200_6400": ratio,
+        })
+    q95_convergence_tail_ratio_n12800 = float(np.quantile(np.array([r["convergence_tail_ratio_n6400_12800_over_n3200_6400"] for r in convergence_tail_rows_n12800], dtype=float), 0.95)) if convergence_tail_rows_n12800 else float("inf")
+    q95_blocker_n12800_tail_ratio_certificate = {
+        "schema_version": "1.0.0",
+        "scope": "STRICT_TASK2_Q95_BLOCKER_N12800_TAIL_RATIO_CERTIFICATE",
+        "theorem_target": "Q95_CONVERGENCE_TAIL_RATIO_N6400_12800_OVER_N3200_6400_LE_ONE",
+        "strict_lane_assumptions": [
+            "strict_lane_only_no_legacy_transfer",
+            "same_support_top3_for_n3200_n6400_n12800",
+            "tail_ratio_tests_convergence_not_label_coherence",
+        ],
+        "domain": {"s_rows": [float(r["s"]) for r in topk], "n_levels": [3200, 6400, 12800]},
+        "computed_rows": convergence_tail_rows_n12800,
+        "aggregate_metrics": {
+            "q95_convergence_tail_ratio_n6400_12800_over_n3200_6400": q95_convergence_tail_ratio_n12800,
+            "tail_ratio_threshold": 1.0,
+        },
+        "pass_fail_criteria": {"q95_convergence_tail_ratio_n6400_12800_over_n3200_6400_le_one": 1.0},
+        "verdict": "CLOSED_NUMERICAL_WITNESS_TASK2" if q95_convergence_tail_ratio_n12800 <= 1.0 else "OPEN_OBSTRUCTION_WITH_TRACE",
+        "fail_trace": "" if q95_convergence_tail_ratio_n12800 <= 1.0 else f"q95_convergence_tail_ratio_n6400_12800_over_n3200_6400={q95_convergence_tail_ratio_n12800:.6e} > 1.0",
+    }
+
+    # Ultra-high-order independent replay continuation for direct blocker closure/falsification.
+    conv25600_rows = []
+    for rr, rr128 in zip(topk, conv12800_rows):
+        s_loc = float(rr["s"])
+        def integrand_conv25600(x):
+            xa = np.array(x, dtype=float)
+            kk = np.cos(om_gg * xa + ph_gg) / (1.0 + be_gg * (xa ** et_gg))
+            return (kk * kk) / np.sqrt(np.maximum(1e-15, xa + s_loc))
+        disc_ref, _ = strict_kernel_phase_integral(s_loc, float(om_gg), float(ph_gg), float(be_gg), float(et_gg))
+        cut_25600, _ = si.fixed_quad(integrand_conv25600, 0.0, 1.0, n=25600)
+        gap_25600 = float(abs(float(disc_ref) - float(cut_25600)))
+        gap_12800 = float(rr128["gap_abs_n12800"])
+        conv25600_rows.append({
+            "s": s_loc,
+            "disc_reference": float(disc_ref),
+            "cutsum_fixed_quad_n25600": float(cut_25600),
+            "gap_abs_n25600": gap_25600,
+            "gap_abs_n12800": gap_12800,
+            "delta_gap_abs_n25600_minus_n12800_abs": float(abs(gap_25600 - gap_12800)),
+        })
+    q95_n25600_vs_n12800_delta_top3 = float(np.quantile(np.array([r["delta_gap_abs_n25600_minus_n12800_abs"] for r in conv25600_rows], dtype=float), 0.95)) if conv25600_rows else float("inf")
+    q95_blocker_n25600_recompute_certificate = {
+        "schema_version": "1.0.0",
+        "scope": "STRICT_TASK2_Q95_BLOCKER_N25600_RECOMPUTE_CERTIFICATE",
+        "theorem_target": "Q95_DELTA_GAP_ABS_N25600_MINUS_N12800_TOP3_LE_CROSS_INTEGRATOR_THRESHOLD",
+        "strict_lane_assumptions": [
+            "strict_lane_only_no_legacy_transfer",
+            "channel_fixed_graviton_to_gauge_gauge",
+            "fixed_quad_n25600_replay_on_dominant_support",
+        ],
+        "domain": {"s_rows": [float(r["s"]) for r in topk], "n_levels": [12800, 25600]},
+        "computed_rows": conv25600_rows,
+        "aggregate_metrics": {
+            "q95_delta_gap_abs_n25600_minus_n12800_abs_top3": q95_n25600_vs_n12800_delta_top3,
+            "q95_cross_integrator_gap_abs_max": float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"]),
+        },
+        "pass_fail_criteria": {"q95_delta_gap_abs_n25600_minus_n12800_abs_top3_le_threshold": float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"])},
+        "verdict": "CLOSED_NUMERICAL_WITNESS_TASK2" if q95_n25600_vs_n12800_delta_top3 <= float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"]) else "OPEN_OBSTRUCTION_WITH_TRACE",
+        "fail_trace": "" if q95_n25600_vs_n12800_delta_top3 <= float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"]) else f"q95_delta_gap_abs_n25600_minus_n12800_abs_top3={q95_n25600_vs_n12800_delta_top3:.6e} > q95_cross_integrator_gap_abs_max={float(pass_fail_criteria_task2['q95_cross_integrator_gap_abs_max']):.1e}",
+    }
+
+    monotone_rows_n25600 = []
+    for r64, r128, r256 in zip(conv6400_rows, conv12800_rows, conv25600_rows):
+        g64 = float(r64["gap_abs_n6400"])
+        g128 = float(r128["gap_abs_n12800"])
+        g256 = float(r256["gap_abs_n25600"])
+        v1 = float(max(0.0, g128 - g64))
+        v2 = float(max(0.0, g256 - g128))
+        monotone_rows_n25600.append({
+            "s": float(r256["s"]),
+            "gap_abs_n6400": g64,
+            "gap_abs_n12800": g128,
+            "gap_abs_n25600": g256,
+            "monotone_violation_n6400_to_n12800": v1,
+            "monotone_violation_n12800_to_n25600": v2,
+            "total_monotone_violation": float(v1 + v2),
+        })
+    q95_monotone_violation_top3 = float(np.quantile(np.array([r["total_monotone_violation"] for r in monotone_rows_n25600], dtype=float), 0.95)) if monotone_rows_n25600 else float("inf")
+    q95_blocker_n25600_monotone_certificate = {
+        "schema_version": "1.0.0",
+        "scope": "STRICT_TASK2_Q95_BLOCKER_N25600_MONOTONE_CERTIFICATE",
+        "theorem_target": "Q95_MONOTONE_VIOLATION_N6400_N12800_N25600_TOP3_LE_ZERO",
+        "strict_lane_assumptions": [
+            "strict_lane_only_no_legacy_transfer",
+            "same_support_top3_for_n6400_n12800_n25600",
+            "monotone_gap_decay_expected_under_refinement",
+        ],
+        "domain": {"s_rows": [float(r["s"]) for r in topk], "n_levels": [6400, 12800, 25600]},
+        "computed_rows": monotone_rows_n25600,
+        "aggregate_metrics": {
+            "q95_total_monotone_violation_top3": q95_monotone_violation_top3,
+            "violation_threshold": 0.0,
+        },
+        "pass_fail_criteria": {"q95_total_monotone_violation_top3_le_zero": 0.0},
+        "verdict": "CLOSED_NUMERICAL_WITNESS_TASK2" if q95_monotone_violation_top3 <= 0.0 else "OPEN_OBSTRUCTION_WITH_TRACE",
+        "fail_trace": "" if q95_monotone_violation_top3 <= 0.0 else f"q95_total_monotone_violation_top3={q95_monotone_violation_top3:.6e} > 0.0",
+    }
     # One-step non-duplicative closure/falsification object:
     # Richardson-style extrapolation from n={1600,3200,6400} to estimate infinite-n q95 blocker.
     richardson_rows = []
@@ -2935,6 +3131,7 @@ def main() -> None:
             "fail_trace": "projection_unavailable=1 > 0",
         }
     obstruction_is_numerically_sensitive = bool(float(np.max(np.array([r["cutsum_scheme_gap_abs"] for r in scheme_rows], dtype=float))) > 0.05 * q95_gap_abs_ext)
+    q95_gap_abs_n800_top3 = float(q95_dominant_convergence["q95_gap_abs_n800_top3"])
     criteria_eval = {
         "q95_gap_abs_le_threshold": bool(q95_gap_abs_ext <= float(pass_fail_criteria_task2["q95_gap_abs_max"])),
         "q95_gap_abs_n2400_le_threshold": bool(q95_gap_abs_n2400_top3 <= float(pass_fail_criteria_task2["q95_gap_abs_max"])),
@@ -2947,6 +3144,15 @@ def main() -> None:
         "q95_gap_abs_n1600_vs_n6400_delta_le_threshold": bool(
             abs(q95_gap_abs_n1600_top3 - q95_gap_abs_n6400_top3) <= float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"])
         ),
+        "q95_gap_abs_n800_vs_n6400_delta_le_threshold": bool(
+            abs(float(q95_dominant_convergence["q95_gap_abs_n800_top3"]) - q95_gap_abs_n6400_top3) <= float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"])
+        ),
+        "q95_gap_abs_n12800_vs_n6400_delta_le_threshold": bool(
+            q95_n12800_vs_n6400_delta_top3 <= float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"])
+        ),
+        "q95_convergence_tail_ratio_n12800_le_one": bool(q95_convergence_tail_ratio_n12800 <= 1.0),
+        "q95_gap_abs_n25600_vs_n12800_delta_le_threshold": bool(q95_n25600_vs_n12800_delta_top3 <= float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"])),
+        "q95_monotone_violation_n25600_le_zero": bool(q95_monotone_violation_top3 <= 0.0),
         "max_gap_rel_le_threshold": bool(max_gap_rel_ext <= float(pass_fail_criteria_task2["max_gap_rel_max"])),
         "all_nonnegative_weights": bool(all_nonnegative),
         "q95_cross_integrator_gap_le_threshold": bool(crosscheck_gap_q95 <= float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"])),
@@ -3009,35 +3215,28 @@ def main() -> None:
             (float(max_gap_rel_ext) <= float(pass_fail_criteria_task2["max_gap_rel_max"]))
         ),
     }
+    closure_numeric_conjunction_recomputed = bool(
+        (float(q95_gap_abs_ext) <= float(pass_fail_criteria_task2["q95_gap_abs_max"])) and
+        (float(q95_gap_abs_n2400_top3) <= float(pass_fail_criteria_task2["q95_gap_abs_max"])) and
+        (float(q95_n2400_vs_n6400_delta_top3) <= float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"])) and
+        (abs(float(q95_gap_abs_n3200_top3) - float(q95_gap_abs_n6400_top3)) <= float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"])) and
+        (abs(float(q95_gap_abs_n1600_top3) - float(q95_gap_abs_n6400_top3)) <= float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"])) and
+        (abs(float(q95_gap_abs_n800_top3) - float(q95_gap_abs_n6400_top3)) <= float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"])) and
+        (float(q95_n12800_vs_n6400_delta_top3) <= float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"])) and
+        (float(q95_convergence_tail_ratio_n12800) <= 1.0) and
+        (float(q95_n25600_vs_n12800_delta_top3) <= float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"])) and
+        (float(q95_monotone_violation_top3) <= 0.0) and
+        (float(max_gap_rel_ext) <= float(pass_fail_criteria_task2["max_gap_rel_max"])) and
+        (float(crosscheck_gap_q95) <= float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"])) and
+        (float(q95_unc_abs) <= float(pass_fail_criteria_task2["q95_convergence_delta_n400_to_n800_abs_max"])) and
+        (float(min_effective_weight_global) >= float(pass_fail_criteria_task2["min_effective_weight_global_min"]))
+    )
     criterion_coherence_global_closure = {
         "status": "OPEN_PRECURSOR_NOT_CLOSURE",
         "scope": "STRICT_TASK2_GLOBAL_CLOSURE_CRITERION_COHERENCE",
         "all_criteria_satisfied_flag": bool(all(criteria_eval.values())),
-        "numeric_conjunction_recomputed": bool(
-            (float(q95_gap_abs_ext) <= float(pass_fail_criteria_task2["q95_gap_abs_max"])) and
-            (float(q95_gap_abs_n2400_top3) <= float(pass_fail_criteria_task2["q95_gap_abs_max"])) and
-            (float(q95_n2400_vs_n6400_delta_top3) <= float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"])) and
-            (abs(float(q95_gap_abs_n3200_top3) - float(q95_gap_abs_n6400_top3)) <= float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"])) and
-            (abs(float(q95_gap_abs_n1600_top3) - float(q95_gap_abs_n6400_top3)) <= float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"])) and
-            (float(max_gap_rel_ext) <= float(pass_fail_criteria_task2["max_gap_rel_max"])) and
-            (float(crosscheck_gap_q95) <= float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"])) and
-            (float(q95_unc_abs) <= float(pass_fail_criteria_task2["q95_convergence_delta_n400_to_n800_abs_max"])) and
-            (float(min_effective_weight_global) >= float(pass_fail_criteria_task2["min_effective_weight_global_min"]))
-        ),
-        "flag_equals_numeric_conjunction": bool(
-            bool(all(criteria_eval.values())) ==
-            bool(
-                (float(q95_gap_abs_ext) <= float(pass_fail_criteria_task2["q95_gap_abs_max"])) and
-                (float(q95_gap_abs_n2400_top3) <= float(pass_fail_criteria_task2["q95_gap_abs_max"])) and
-                (float(q95_n2400_vs_n6400_delta_top3) <= float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"])) and
-                (abs(float(q95_gap_abs_n3200_top3) - float(q95_gap_abs_n6400_top3)) <= float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"])) and
-                (abs(float(q95_gap_abs_n1600_top3) - float(q95_gap_abs_n6400_top3)) <= float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"])) and
-                (float(max_gap_rel_ext) <= float(pass_fail_criteria_task2["max_gap_rel_max"])) and
-                (float(crosscheck_gap_q95) <= float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"])) and
-                (float(q95_unc_abs) <= float(pass_fail_criteria_task2["q95_convergence_delta_n400_to_n800_abs_max"])) and
-                (float(min_effective_weight_global) >= float(pass_fail_criteria_task2["min_effective_weight_global_min"]))
-            )
-        ),
+        "numeric_conjunction_recomputed": closure_numeric_conjunction_recomputed,
+        "flag_equals_numeric_conjunction": bool(bool(all(criteria_eval.values())) == closure_numeric_conjunction_recomputed),
     }
     criterion_coherence_weight_sign = {
         "status": "OPEN_PRECURSOR_NOT_CLOSURE",
@@ -3120,6 +3319,11 @@ def main() -> None:
             (str(locals().get("dominant_blocker", "pending")) == "q95_n2400_vs_n6400_delta_abs" and str(locals().get("dominant_inequality", "")).startswith("q95_delta_gap_abs_n2400_minus_n6400_abs_top3=")) or
             (str(locals().get("dominant_blocker", "pending")) == "q95_n3200_vs_n6400_delta_abs" and str(locals().get("dominant_inequality", "")).startswith("q95_delta_gap_abs_n3200_minus_n6400_abs_top3=")) or
             (str(locals().get("dominant_blocker", "pending")) == "q95_n1600_vs_n6400_delta_abs" and str(locals().get("dominant_inequality", "")).startswith("q95_delta_gap_abs_n1600_minus_n6400_abs_top3=")) or
+            (str(locals().get("dominant_blocker", "pending")) == "q95_n800_vs_n6400_delta_abs" and str(locals().get("dominant_inequality", "")).startswith("q95_delta_gap_abs_n800_minus_n6400_abs_top3=")) or
+            (str(locals().get("dominant_blocker", "pending")) == "q95_n12800_vs_n6400_delta_abs" and str(locals().get("dominant_inequality", "")).startswith("q95_delta_gap_abs_n12800_minus_n6400_abs_top3=")) or
+            (str(locals().get("dominant_blocker", "pending")) == "q95_n12800_tail_ratio" and str(locals().get("dominant_inequality", "")).startswith("q95_convergence_tail_ratio_n6400_12800_over_n3200_6400=")) or
+            (str(locals().get("dominant_blocker", "pending")) == "q95_n25600_vs_n12800_delta_abs" and str(locals().get("dominant_inequality", "")).startswith("q95_delta_gap_abs_n25600_minus_n12800_abs_top3=")) or
+            (str(locals().get("dominant_blocker", "pending")) == "q95_n25600_monotone_violation" and str(locals().get("dominant_inequality", "")).startswith("q95_total_monotone_violation_top3=")) or
             (str(locals().get("dominant_blocker", "pending")) == "weight_sign_nonnegativity" and str(locals().get("dominant_inequality", "")).startswith("min_effective_weight_global=")) or
             (str(locals().get("dominant_blocker", "pending")) in {"none", "pending"} and str(locals().get("dominant_inequality", "")) in {"all_criteria_satisfied", ""})
         ),
@@ -3175,6 +3379,13 @@ def main() -> None:
     overs_q95_n3200_delta = float(max(0.0, n3200_vs_6400_delta - cross_thr) / max(1e-30, cross_thr))
     n1600_vs_6400_delta = float(abs(q95_gap_abs_n1600_top3 - q95_gap_abs_n6400_top3))
     overs_q95_n1600_delta = float(max(0.0, n1600_vs_6400_delta - cross_thr) / max(1e-30, cross_thr))
+    n800_vs_6400_delta = float(abs(q95_gap_abs_n800_top3 - q95_gap_abs_n6400_top3))
+    overs_q95_n800_delta = float(max(0.0, n800_vs_6400_delta - cross_thr) / max(1e-30, cross_thr))
+    n12800_vs_6400_delta = float(q95_n12800_vs_n6400_delta_top3)
+    overs_q95_n12800_delta = float(max(0.0, n12800_vs_6400_delta - cross_thr) / max(1e-30, cross_thr))
+    overs_q95_n12800_tail_ratio = float(max(0.0, q95_convergence_tail_ratio_n12800 - 1.0) / 1.0)
+    overs_q95_n25600_delta = float(max(0.0, q95_n25600_vs_n12800_delta_top3 - cross_thr) / max(1e-30, cross_thr))
+    overs_q95_n25600_monotone = float(max(0.0, q95_monotone_violation_top3 - 0.0))
     overs_rel = float(max(0.0, max_gap_rel_ext - rel_thr) / max(1e-30, rel_thr))
     sign_thr = float(pass_fail_criteria_task2["min_effective_weight_global_min"])
     overs_sign = float(max(0.0, sign_thr - min_effective_weight_global) / max(1e-30, abs(sign_thr) + 1e-12))
@@ -3220,6 +3431,31 @@ def main() -> None:
             "normalized_overshoot": overs_q95_n1600_delta,
             "is_satisfied": bool(n1600_vs_6400_delta <= cross_thr),
         },
+        {
+            "criterion": "q95_n800_vs_n6400_delta_abs",
+            "normalized_overshoot": overs_q95_n800_delta,
+            "is_satisfied": bool(n800_vs_6400_delta <= cross_thr),
+        },
+        {
+            "criterion": "q95_n12800_vs_n6400_delta_abs",
+            "normalized_overshoot": overs_q95_n12800_delta,
+            "is_satisfied": bool(n12800_vs_6400_delta <= cross_thr),
+        },
+        {
+            "criterion": "q95_n12800_tail_ratio",
+            "normalized_overshoot": overs_q95_n12800_tail_ratio,
+            "is_satisfied": bool(q95_convergence_tail_ratio_n12800 <= 1.0),
+        },
+        {
+            "criterion": "q95_n25600_vs_n12800_delta_abs",
+            "normalized_overshoot": overs_q95_n25600_delta,
+            "is_satisfied": bool(q95_n25600_vs_n12800_delta_top3 <= cross_thr),
+        },
+        {
+            "criterion": "q95_n25600_monotone_violation",
+            "normalized_overshoot": overs_q95_n25600_monotone,
+            "is_satisfied": bool(q95_monotone_violation_top3 <= 0.0),
+        },
         {"criterion": "max_gap_rel", "normalized_overshoot": overs_rel, "is_satisfied": bool(criteria_eval["max_gap_rel_le_threshold"])},
         {"criterion": "weight_sign_nonnegativity", "normalized_overshoot": overs_sign, "is_satisfied": bool(criteria_eval["all_nonnegative_weights"])},
         {
@@ -3261,50 +3497,27 @@ def main() -> None:
         "is_consistent_when_q95_dominates": bool((dominant_blocker_snapshot != "q95_gap_abs") or (easiest_unresolved in {"q95_gap_abs", "none"})),
     }
     dominant_blocker = dominant_unresolved
-    dominant_inequality = (
-        f"q95_gap_abs={q95_gap_abs_ext:.6e} > {pass_fail_criteria_task2['q95_gap_abs_max']:.1e}" if dominant_blocker == "q95_gap_abs" else
-        (f"max_gap_rel={max_gap_rel_ext:.6e} > {pass_fail_criteria_task2['max_gap_rel_max']:.1e}" if dominant_blocker == "max_gap_rel" else
-         (
-             f"q95_cross_integrator_gap_abs={crosscheck_gap_q95:.6e} > {pass_fail_criteria_task2['q95_cross_integrator_gap_abs_max']:.1e}"
-             if dominant_blocker == "q95_cross_integrator_gap" else
-             (
-                f"q95_convergence_delta_n400_to_n800_abs={q95_unc_abs:.6e} > {pass_fail_criteria_task2['q95_convergence_delta_n400_to_n800_abs_max']:.1e}"
-                if dominant_blocker == "q95_convergence_delta_n400_to_n800_abs" else
-            (
-                f"q95_refined_window_best_gap_abs={refined_best_gap:.6e} > {pass_fail_criteria_task2['q95_gap_abs_max']:.1e}"
-                if dominant_blocker == "q95_refined_window_gap_abs" else
-                (
-                    f"q95_gap_abs_quad_high_precision_top3={quad_hp_q95_gap:.6e} > {pass_fail_criteria_task2['q95_gap_abs_max']:.1e}"
-                    if dominant_blocker == "q95_quad_hp_top3_gap_abs" else
-                    (
-                        f"q95_gap_abs_quad_high_precision_upper_envelope_top3={quad_hp_q95_gap_upper_envelope:.6e} > {pass_fail_criteria_task2['q95_gap_abs_max']:.1e}"
-                        if dominant_blocker == "q95_quad_hp_upper_envelope_gap_abs" else
-                        (
-                            f"q95_gap_abs_upper_tail_envelope_top3={tail_budget_q95_upper:.6e} > {pass_fail_criteria_task2['q95_gap_abs_max']:.1e}"
-                            if dominant_blocker == "q95_tail_budget_upper_envelope_gap_abs" else
-                            (
-                                f"q95_gap_abs_n2400_top3={n2400_q95_gap:.6e} > {pass_fail_criteria_task2['q95_gap_abs_max']:.1e}"
-                                if dominant_blocker == "q95_n2400_gap_abs" else
-                                (
-                                    f"q95_delta_gap_abs_n2400_minus_n6400_abs_top3={n2400_vs_6400_delta:.6e} > {pass_fail_criteria_task2['q95_cross_integrator_gap_abs_max']:.1e}"
-                                    if dominant_blocker == "q95_n2400_vs_n6400_delta_abs" else
-                                    (
-                                        f"q95_delta_gap_abs_n3200_minus_n6400_abs_top3={n3200_vs_6400_delta:.6e} > {pass_fail_criteria_task2['q95_cross_integrator_gap_abs_max']:.1e}"
-                                        if dominant_blocker == "q95_n3200_vs_n6400_delta_abs" else
-                                        (
-                                            f"q95_delta_gap_abs_n1600_minus_n6400_abs_top3={n1600_vs_6400_delta:.6e} > {pass_fail_criteria_task2['q95_cross_integrator_gap_abs_max']:.1e}"
-                                            if dominant_blocker == "q95_n1600_vs_n6400_delta_abs" else
-                        (f"min_effective_weight_global={min_effective_weight_global:.6e} < {pass_fail_criteria_task2['min_effective_weight_global_min']:.1e}" if dominant_blocker == "weight_sign_nonnegativity" else "all_criteria_satisfied")
-                                        )
-                                    )
-                                )
-                            )
-                        )
-                    )
-                )
-            )
-         )))
-    )
+    dominant_inequality_map = {
+        "q95_gap_abs": f"q95_gap_abs={q95_gap_abs_ext:.6e} > {pass_fail_criteria_task2['q95_gap_abs_max']:.1e}",
+        "max_gap_rel": f"max_gap_rel={max_gap_rel_ext:.6e} > {pass_fail_criteria_task2['max_gap_rel_max']:.1e}",
+        "q95_cross_integrator_gap": f"q95_cross_integrator_gap_abs={crosscheck_gap_q95:.6e} > {pass_fail_criteria_task2['q95_cross_integrator_gap_abs_max']:.1e}",
+        "q95_convergence_delta_n400_to_n800_abs": f"q95_convergence_delta_n400_to_n800_abs={q95_unc_abs:.6e} > {pass_fail_criteria_task2['q95_convergence_delta_n400_to_n800_abs_max']:.1e}",
+        "q95_refined_window_gap_abs": f"q95_refined_window_best_gap_abs={refined_best_gap:.6e} > {pass_fail_criteria_task2['q95_gap_abs_max']:.1e}",
+        "q95_quad_hp_top3_gap_abs": f"q95_gap_abs_quad_high_precision_top3={quad_hp_q95_gap:.6e} > {pass_fail_criteria_task2['q95_gap_abs_max']:.1e}",
+        "q95_quad_hp_upper_envelope_gap_abs": f"q95_gap_abs_quad_high_precision_upper_envelope_top3={quad_hp_q95_gap_upper_envelope:.6e} > {pass_fail_criteria_task2['q95_gap_abs_max']:.1e}",
+        "q95_tail_budget_upper_envelope_gap_abs": f"q95_gap_abs_upper_tail_envelope_top3={tail_budget_q95_upper:.6e} > {pass_fail_criteria_task2['q95_gap_abs_max']:.1e}",
+        "q95_n2400_gap_abs": f"q95_gap_abs_n2400_top3={n2400_q95_gap:.6e} > {pass_fail_criteria_task2['q95_gap_abs_max']:.1e}",
+        "q95_n2400_vs_n6400_delta_abs": f"q95_delta_gap_abs_n2400_minus_n6400_abs_top3={n2400_vs_6400_delta:.6e} > {pass_fail_criteria_task2['q95_cross_integrator_gap_abs_max']:.1e}",
+        "q95_n3200_vs_n6400_delta_abs": f"q95_delta_gap_abs_n3200_minus_n6400_abs_top3={n3200_vs_6400_delta:.6e} > {pass_fail_criteria_task2['q95_cross_integrator_gap_abs_max']:.1e}",
+        "q95_n1600_vs_n6400_delta_abs": f"q95_delta_gap_abs_n1600_minus_n6400_abs_top3={n1600_vs_6400_delta:.6e} > {pass_fail_criteria_task2['q95_cross_integrator_gap_abs_max']:.1e}",
+        "q95_n800_vs_n6400_delta_abs": f"q95_delta_gap_abs_n800_minus_n6400_abs_top3={n800_vs_6400_delta:.6e} > {pass_fail_criteria_task2['q95_cross_integrator_gap_abs_max']:.1e}",
+        "q95_n12800_vs_n6400_delta_abs": f"q95_delta_gap_abs_n12800_minus_n6400_abs_top3={n12800_vs_6400_delta:.6e} > {pass_fail_criteria_task2['q95_cross_integrator_gap_abs_max']:.1e}",
+        "q95_n12800_tail_ratio": f"q95_convergence_tail_ratio_n6400_12800_over_n3200_6400={q95_convergence_tail_ratio_n12800:.6e} > 1.0",
+        "q95_n25600_vs_n12800_delta_abs": f"q95_delta_gap_abs_n25600_minus_n12800_abs_top3={q95_n25600_vs_n12800_delta_top3:.6e} > {pass_fail_criteria_task2['q95_cross_integrator_gap_abs_max']:.1e}",
+        "q95_n25600_monotone_violation": f"q95_total_monotone_violation_top3={q95_monotone_violation_top3:.6e} > 0.0",
+        "weight_sign_nonnegativity": f"min_effective_weight_global={min_effective_weight_global:.6e} < {pass_fail_criteria_task2['min_effective_weight_global_min']:.1e}",
+    }
+    dominant_inequality = dominant_inequality_map.get(dominant_blocker, "all_criteria_satisfied")
     if dominant_blocker == "q95_gap_abs":
         dominant_observed = float(q95_gap_abs_ext)
         dominant_threshold = float(pass_fail_criteria_task2["q95_gap_abs_max"])
@@ -3344,6 +3557,21 @@ def main() -> None:
     elif dominant_blocker == "q95_n1600_vs_n6400_delta_abs":
         dominant_observed = float(n1600_vs_6400_delta)
         dominant_threshold = float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"])
+    elif dominant_blocker == "q95_n800_vs_n6400_delta_abs":
+        dominant_observed = float(n800_vs_6400_delta)
+        dominant_threshold = float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"])
+    elif dominant_blocker == "q95_n12800_vs_n6400_delta_abs":
+        dominant_observed = float(n12800_vs_6400_delta)
+        dominant_threshold = float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"])
+    elif dominant_blocker == "q95_n12800_tail_ratio":
+        dominant_observed = float(q95_convergence_tail_ratio_n12800)
+        dominant_threshold = 1.0
+    elif dominant_blocker == "q95_n25600_vs_n12800_delta_abs":
+        dominant_observed = float(q95_n25600_vs_n12800_delta_top3)
+        dominant_threshold = float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"])
+    elif dominant_blocker == "q95_n25600_monotone_violation":
+        dominant_observed = float(q95_monotone_violation_top3)
+        dominant_threshold = 0.0
     else:
         dominant_observed = 0.0
         dominant_threshold = 0.0
@@ -3406,6 +3634,11 @@ def main() -> None:
         q95_n2400_vs_n6400_delta_top3 <= float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"]) and
         abs(q95_gap_abs_n3200_top3 - q95_gap_abs_n6400_top3) <= float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"]) and
         abs(q95_gap_abs_n1600_top3 - q95_gap_abs_n6400_top3) <= float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"]) and
+        abs(q95_gap_abs_n800_top3 - q95_gap_abs_n6400_top3) <= float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"]) and
+        q95_n12800_vs_n6400_delta_top3 <= float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"]) and
+        q95_convergence_tail_ratio_n12800 <= 1.0 and
+        q95_n25600_vs_n12800_delta_top3 <= float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"]) and
+        q95_monotone_violation_top3 <= 0.0 and
         max_gap_rel_ext <= float(pass_fail_criteria_task2["max_gap_rel_max"]) and
         all_nonnegative and
         crosscheck_gap_q95 <= float(pass_fail_criteria_task2["q95_cross_integrator_gap_abs_max"]) and
@@ -3416,6 +3649,18 @@ def main() -> None:
     else:
         verdict_task2 = "OPEN_OBSTRUCTION_WITH_TRACE"
         fail_trace_task2 = dominant_inequality
+    criterion_coherence_verdict_gate = {
+        "status": "OPEN_PRECURSOR_NOT_CLOSURE",
+        "scope": "STRICT_TASK2_VERDICT_GATE_COHERENCE",
+        "all_criteria_satisfied_flag": bool(all(criteria_eval.values())),
+        "verdict_task2": str(verdict_task2),
+        "closed_label": "CLOSED_NUMERICAL_WITNESS_TASK2",
+        "open_label": "OPEN_OBSTRUCTION_WITH_TRACE",
+        "flag_matches_verdict_label": bool(
+            (bool(all(criteria_eval.values())) and str(verdict_task2) == "CLOSED_NUMERICAL_WITNESS_TASK2") or
+            ((not bool(all(criteria_eval.values()))) and str(verdict_task2) == "OPEN_OBSTRUCTION_WITH_TRACE")
+        ),
+    }
     falsifier_trace_consistency = {
         "status": "OPEN_PRECURSOR_NOT_CLOSURE",
         "scope": "STRICT_TASK2_FALSIFIER_TRACE_CONSISTENCY",
@@ -3473,6 +3718,11 @@ def main() -> None:
         "q95_blocker_n1600_recompute_certificate": q95_blocker_n1600_recompute_certificate,
         "q95_blocker_n3200_recompute_certificate": q95_blocker_n3200_recompute_certificate,
         "q95_blocker_n6400_recompute_certificate": q95_blocker_n6400_recompute_certificate,
+        "q95_blocker_n12800_recompute_certificate": q95_blocker_n12800_recompute_certificate,
+        "q95_blocker_n12800_signed_residual_certificate": q95_blocker_n12800_signed_residual_certificate,
+        "q95_blocker_n12800_tail_ratio_certificate": q95_blocker_n12800_tail_ratio_certificate,
+        "q95_blocker_n25600_recompute_certificate": q95_blocker_n25600_recompute_certificate,
+        "q95_blocker_n25600_monotone_certificate": q95_blocker_n25600_monotone_certificate,
         "q95_blocker_ninf_extrapolation_certificate": q95_blocker_ninf_extrapolation_certificate,
         "q95_blocker_uniform_top3_obstruction_certificate": q95_blocker_uniform_top3_obstruction_certificate,
         "q95_blocker_quad_hp_top3_certificate": q95_blocker_quad_hp_top3_certificate,
