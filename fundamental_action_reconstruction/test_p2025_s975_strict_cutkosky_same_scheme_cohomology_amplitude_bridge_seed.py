@@ -28,6 +28,195 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     assert task2["metrics"]["q95_margin_after_abs"] >= 0.0
     assert task2["metrics"]["q95_margin_improvement_abs"] >= 0.0
     assert 0.0 <= task2["metrics"]["q95_progress_score_0_1"] <= 1.0
+    q95_proj = data["task2_strict_unitarity_witness"]["q95_blocker_direct_relief_projection"]
+    assert q95_proj["scope"] == "STRICT_TASK2_Q95_BLOCKER_DIRECT_RELIEF_PROJECTION"
+    assert q95_proj["theorem_target"] == "ONE_MORE_LOCAL_STEP_CAN_CLOSE_Q95_MARGIN"
+    assert "projected_margin_after_next_step_le_zero" in q95_proj["pass_fail_criteria"]
+    assert q95_proj["verdict"] in {"PREDICTED_CLOSE_IN_NEXT_STEP", "OPEN_OBSTRUCTION_WITH_TRACE"}
+    if q95_proj["projected_margin_after_next_step"] is not None:
+        assert q95_proj["estimated_steps_to_closure"] >= 0.0
+        if q95_proj["verdict"] == "OPEN_OBSTRUCTION_WITH_TRACE":
+            assert "projected_margin_after_next_step=" in q95_proj["fail_trace"]
+            assert " > 0" in q95_proj["fail_trace"]
+    ls_exec = data["task2_strict_unitarity_witness"]["q95_blocker_local_line_search_execution"]
+    assert ls_exec["scope"] == "STRICT_TASK2_Q95_BLOCKER_LOCAL_LINE_SEARCH_EXECUTION"
+    assert ls_exec["theorem_target"] == "EXISTS_LOCAL_S_STEP_WITH_Q95_GAP_NOT_WORSE_THAN_BASELINE"
+    assert isinstance(ls_exec["computed_rows"], list)
+    assert ls_exec["verdict"] in {"CLOSED_NUMERICAL_WITNESS_TASK2", "OPEN_OBSTRUCTION_WITH_TRACE"}
+    if ls_exec["computed_rows"]:
+        best_gap = ls_exec["aggregate_metrics"]["best_gap_abs_quad"]
+        baseline_gap = ls_exec["aggregate_metrics"]["baseline_gap_abs_quad"]
+        assert best_gap is not None and baseline_gap is not None
+        assert best_gap <= baseline_gap + 1e-18
+    if ls_exec["verdict"] == "OPEN_OBSTRUCTION_WITH_TRACE":
+        assert "=" in ls_exec["fail_trace"]
+        assert ">" in ls_exec["fail_trace"]
+    opt_exec = data["task2_strict_unitarity_witness"]["q95_blocker_continuous_optimization_execution"]
+    assert opt_exec["scope"] == "STRICT_TASK2_Q95_BLOCKER_CONTINUOUS_OPTIMIZATION_EXECUTION"
+    assert opt_exec["theorem_target"] == "EXISTS_S_IN_RANGE_WITH_Q95_GAP_BELOW_THRESHOLD_UNDER_CROSSCHECK"
+    assert opt_exec["verdict"] in {"CLOSED_NUMERICAL_WITNESS_TASK2", "OPEN_OBSTRUCTION_WITH_TRACE"}
+    if opt_exec["computed_rows"]:
+        row = opt_exec["computed_rows"][0]
+        assert 0.05 <= row["s_opt"] <= 3.5
+        assert row["gap_abs_quad_opt"] >= 0.0
+        assert row["cross_integrator_gap_abs_n400_vs_n800"] >= 0.0
+    if opt_exec["verdict"] == "OPEN_OBSTRUCTION_WITH_TRACE":
+        assert "=" in opt_exec["fail_trace"]
+        assert ">" in opt_exec["fail_trace"]
+    refined_exec = data["task2_strict_unitarity_witness"]["q95_blocker_refined_window_execution"]
+    assert refined_exec["scope"] == "STRICT_TASK2_Q95_BLOCKER_REFINED_WINDOW_EXECUTION"
+    assert refined_exec["theorem_target"] == "EXISTS_S_IN_LOCAL_WINDOW_WITH_Q95_GAP_AND_CROSSCHECK_BELOW_THRESHOLDS"
+    assert refined_exec["verdict"] in {"CLOSED_NUMERICAL_WITNESS_TASK2", "OPEN_OBSTRUCTION_WITH_TRACE"}
+    if refined_exec["computed_rows"]:
+        br = refined_exec["computed_rows"][0]
+        assert br["gap_abs_quad"] >= 0.0
+        assert br["cross_integrator_gap_abs_n600_vs_n1200"] >= 0.0
+        assert br["gap_uncertainty_std_across_3_integrators"] >= 0.0
+    if refined_exec["verdict"] == "OPEN_OBSTRUCTION_WITH_TRACE":
+        assert "=" in refined_exec["fail_trace"]
+        assert ">" in refined_exec["fail_trace"]
+    sub_attempt = data["task2_strict_unitarity_witness"]["q95_blocker_single_row_substitution_attempt"]
+    assert sub_attempt["scope"] == "STRICT_TASK2_Q95_BLOCKER_SINGLE_ROW_SUBSTITUTION_ATTEMPT"
+    assert sub_attempt["theorem_target"] == "SINGLE_DOMINANT_ROW_REPLACEMENT_CAN_CLOSE_GLOBAL_Q95"
+    assert sub_attempt["verdict"] in {"CLOSED_NUMERICAL_WITNESS_TASK2", "OPEN_OBSTRUCTION_WITH_TRACE"}
+    if sub_attempt["computed_rows"]:
+        row = sub_attempt["computed_rows"][0]
+        assert row["q95_gap_abs_baseline"] >= 0.0
+        assert row["q95_gap_abs_after_single_substitution"] >= 0.0
+    if sub_attempt["verdict"] == "OPEN_OBSTRUCTION_WITH_TRACE":
+        assert "=" in sub_attempt["fail_trace"]
+        assert ">" in sub_attempt["fail_trace"]
+    sub2_attempt = data["task2_strict_unitarity_witness"]["q95_blocker_two_row_substitution_attempt"]
+    assert sub2_attempt["scope"] == "STRICT_TASK2_Q95_BLOCKER_TWO_ROW_SUBSTITUTION_ATTEMPT"
+    assert sub2_attempt["theorem_target"] == "TOP2_DOMINANT_ROW_REPLACEMENT_CAN_CLOSE_GLOBAL_Q95"
+    assert sub2_attempt["verdict"] in {"CLOSED_NUMERICAL_WITNESS_TASK2", "OPEN_OBSTRUCTION_WITH_TRACE"}
+    if sub2_attempt["computed_rows"]:
+        assert 1 <= len(sub2_attempt["computed_rows"]) <= 2
+        for rr in sub2_attempt["computed_rows"]:
+            assert rr["baseline_gap_abs"] >= 0.0
+            assert rr["replacement_gap_abs"] >= 0.0
+            assert rr["replacement_cross_integrator_gap_abs_n600_vs_n1200"] >= 0.0
+        am = sub2_attempt["aggregate_metrics"]
+        assert am["q95_gap_abs_baseline"] >= 0.0
+        assert am["q95_gap_abs_after_two_row_substitution"] >= 0.0
+        assert 0.0 <= am["improvement_fraction_of_baseline"] <= 1.0
+    if sub2_attempt["verdict"] == "OPEN_OBSTRUCTION_WITH_TRACE":
+        assert "=" in sub2_attempt["fail_trace"]
+        assert ">" in sub2_attempt["fail_trace"]
+    mk_scan = data["task2_strict_unitarity_witness"]["q95_blocker_min_k_substitution_scan"]
+    assert mk_scan["scope"] == "STRICT_TASK2_Q95_BLOCKER_MIN_K_SUBSTITUTION_SCAN"
+    assert mk_scan["theorem_target"] == "FIND_MIN_K_DOMINANT_ROW_SUBSTITUTIONS_TO_CLOSE_GLOBAL_Q95"
+    assert mk_scan["verdict"] in {"CLOSED_NUMERICAL_WITNESS_TASK2", "OPEN_OBSTRUCTION_WITH_TRACE"}
+    if mk_scan["computed_rows"]:
+        assert mk_scan["domain"]["k_scan_range_inclusive"][0] == 1
+        for rr in mk_scan["computed_rows"]:
+            assert rr["k"] >= 1
+            assert rr["q95_gap_abs_after_k_row_substitution"] >= 0.0
+            assert rr["improvement_abs"] >= 0.0
+            assert isinstance(rr["closes_threshold"], bool)
+            assert len(rr["replacement_pairs"]) == rr["k"]
+        am = mk_scan["aggregate_metrics"]
+        assert am["q95_gap_abs_baseline"] >= 0.0
+        assert am["best_q95_after_k_substitution"] >= 0.0
+        assert am["best_k_by_q95"] >= 1
+    if mk_scan["verdict"] == "OPEN_OBSTRUCTION_WITH_TRACE":
+        assert "=" in mk_scan["fail_trace"]
+        assert ">" in mk_scan["fail_trace"]
+    joint_exec = data["task2_strict_unitarity_witness"]["q95_blocker_joint_topk_continuous_execution"]
+    assert joint_exec["scope"] == "STRICT_TASK2_Q95_BLOCKER_JOINT_TOPK_CONTINUOUS_EXECUTION"
+    assert joint_exec["theorem_target"] == "JOINT_TOPK_LOCAL_CONTINUOUS_OPTIMIZATION_CAN_CLOSE_GLOBAL_Q95"
+    assert joint_exec["verdict"] in {"CLOSED_NUMERICAL_WITNESS_TASK2", "OPEN_OBSTRUCTION_WITH_TRACE"}
+    if joint_exec["computed_rows"]:
+        assert 1 <= len(joint_exec["computed_rows"]) <= 3
+        for rr in joint_exec["computed_rows"]:
+            assert rr["gap_abs_baseline"] >= 0.0
+            assert rr["gap_abs_optimized"] >= 0.0
+            assert rr["improvement_abs"] >= 0.0
+            assert rr["s_window"][0] <= rr["s_optimized"] <= rr["s_window"][1]
+            assert isinstance(rr["optimizer_success"], bool)
+            assert rr["optimizer_nfev"] >= 1
+        am = joint_exec["aggregate_metrics"]
+        assert am["q95_gap_abs_baseline"] >= 0.0
+        assert am["q95_gap_abs_after_joint_topk_optimization"] >= 0.0
+        assert 0.0 <= am["improvement_fraction_of_baseline"] <= 1.0
+    if joint_exec["verdict"] == "OPEN_OBSTRUCTION_WITH_TRACE":
+        assert "=" in joint_exec["fail_trace"]
+        assert ">" in joint_exec["fail_trace"]
+    joint4_exec = data["task2_strict_unitarity_witness"]["q95_blocker_joint_top4_vector_optimization_execution"]
+    assert joint4_exec["scope"] == "STRICT_TASK2_Q95_BLOCKER_JOINT_TOP4_VECTOR_OPTIMIZATION_EXECUTION"
+    assert joint4_exec["theorem_target"] == "JOINT_TOP4_VECTOR_OPTIMIZATION_CAN_CLOSE_GLOBAL_Q95"
+    assert joint4_exec["verdict"] in {"CLOSED_NUMERICAL_WITNESS_TASK2", "OPEN_OBSTRUCTION_WITH_TRACE"}
+    if joint4_exec["computed_rows"]:
+        assert 1 <= len(joint4_exec["computed_rows"]) <= 4
+        for rr in joint4_exec["computed_rows"]:
+            assert rr["gap_abs_baseline"] >= 0.0
+            assert rr["gap_abs_optimized"] >= 0.0
+            assert rr["improvement_abs"] >= 0.0
+            assert rr["s_window"][0] <= rr["s_optimized"] <= rr["s_window"][1]
+        am = joint4_exec["aggregate_metrics"]
+        assert am["q95_gap_abs_baseline"] >= 0.0
+        assert am["q95_gap_abs_after_joint_top4_vector_optimization"] >= 0.0
+        assert 0.0 <= am["improvement_fraction_of_baseline"] <= 1.0
+        assert isinstance(am["optimizer_success"], bool)
+        assert am["optimizer_nfev"] >= 0
+    if joint4_exec["verdict"] == "OPEN_OBSTRUCTION_WITH_TRACE":
+        assert "=" in joint4_exec["fail_trace"]
+        assert ">" in joint4_exec["fail_trace"]
+    joint_profile = data["task2_strict_unitarity_witness"]["q95_blocker_adaptive_joint_topk_profile_execution"]
+    assert joint_profile["scope"] == "STRICT_TASK2_Q95_BLOCKER_ADAPTIVE_JOINT_TOPK_PROFILE_EXECUTION"
+    assert joint_profile["theorem_target"] == "EXISTS_K_IN_{2,4,6}_JOINT_VECTOR_OPTIMIZATION_THAT_CLOSES_GLOBAL_Q95"
+    assert joint_profile["domain"]["k_grid"] == [2, 4, 6]
+    assert joint_profile["verdict"] in {"CLOSED_NUMERICAL_WITNESS_TASK2", "OPEN_OBSTRUCTION_WITH_TRACE"}
+    if joint_profile["computed_rows"]:
+        for rr in joint_profile["computed_rows"]:
+            assert rr["k"] in {2, 4, 6}
+            assert rr["q95_gap_abs_after_joint_vector_optimization"] >= 0.0
+            assert rr["improvement_abs"] >= 0.0
+            assert 0.0 <= rr["improvement_fraction_of_baseline"] <= 1.0
+            assert isinstance(rr["closes_threshold"], bool)
+            assert isinstance(rr["optimizer_success"], bool)
+            assert rr["optimizer_nfev"] >= 0
+        am = joint_profile["aggregate_metrics"]
+        assert am["q95_gap_abs_baseline"] >= 0.0
+        assert am["best_q95_after_joint_vector_optimization"] >= 0.0
+        assert am["best_k_by_q95"] in {2, 4, 6}
+        assert (am["first_k_that_closes_threshold"] in {2, 4, 6}) or (am["first_k_that_closes_threshold"] is None)
+    if joint_profile["verdict"] == "OPEN_OBSTRUCTION_WITH_TRACE":
+        assert "=" in joint_profile["fail_trace"]
+        assert ">" in joint_profile["fail_trace"]
+    bestk_cert = data["task2_strict_unitarity_witness"]["q95_blocker_joint_bestk_exact_recompute_certificate"]
+    assert bestk_cert["scope"] == "STRICT_TASK2_Q95_BLOCKER_JOINT_BESTK_EXACT_RECOMPUTE_CERTIFICATE"
+    assert bestk_cert["theorem_target"] == "BEST_K_JOINT_OPTIMIZATION_RECOMPUTE_CLOSES_Q95_UNDER_INDEPENDENT_INTEGRATOR_REPLAY"
+    assert bestk_cert["verdict"] in {"CLOSED_NUMERICAL_WITNESS_TASK2", "OPEN_OBSTRUCTION_WITH_TRACE"}
+    if bestk_cert["computed_rows"]:
+        for rr in bestk_cert["computed_rows"]:
+            assert rr["gap_abs_quad_optimized"] >= 0.0
+            assert rr["gap_abs_fixed_quad_n1200_optimized"] >= 0.0
+            assert rr["cross_integrator_gap_abs"] >= 0.0
+        am = bestk_cert["aggregate_metrics"]
+        assert am["q95_gap_abs_after_joint_bestk_quad"] >= 0.0
+        assert am["q95_gap_abs_after_joint_bestk_fixed_quad_n1200"] >= 0.0
+        assert am["q95_cross_integrator_gap_abs"] >= 0.0
+    if bestk_cert["verdict"] == "OPEN_OBSTRUCTION_WITH_TRACE":
+        assert "=" in bestk_cert["fail_trace"]
+        assert ">" in bestk_cert["fail_trace"]
+    knee_cert = data["task2_strict_unitarity_witness"]["q95_blocker_adaptive_profile_knee_certificate"]
+    assert knee_cert["scope"] == "STRICT_TASK2_Q95_BLOCKER_ADAPTIVE_PROFILE_KNEE_CERTIFICATE"
+    assert knee_cert["theorem_target"] == "ADAPTIVE_PROFILE_EXHIBITS_NONZERO_MARGINAL_Q95_GAIN_AND_IDENTIFIES_BEST_K"
+    assert knee_cert["verdict"] in {"CLOSED_NUMERICAL_WITNESS_TASK2", "OPEN_OBSTRUCTION_WITH_TRACE"}
+    if knee_cert["computed_rows"]:
+        for rr in knee_cert["computed_rows"]:
+            assert rr["k_from"] in {2, 4, 6}
+            assert rr["k_to"] in {2, 4, 6}
+            assert rr["k_from"] < rr["k_to"]
+            assert rr["delta_k"] > 0
+            assert rr["marginal_q95_gain_per_k"] >= 0.0
+        assert knee_cert["aggregate_metrics"]["best_q95_after_joint_vector_optimization"] >= 0.0
+    if knee_cert["verdict"] == "OPEN_OBSTRUCTION_WITH_TRACE":
+        assert "=" in knee_cert["fail_trace"]
+        assert ">" in knee_cert["fail_trace"]
+    blocker_rows = data["task2_strict_unitarity_witness"]["q95_blocker_choice_panel"]["rows"]
+    assert any(r["criterion"] == "q95_refined_window_gap_abs" for r in blocker_rows)
     assert data["verdict"] == data["task2_strict_unitarity_witness"]["verdict"]
     assert data["fail_trace"] == data["task2_strict_unitarity_witness"]["fail_trace"]
     assert "task_priority_decision_panel" in data
@@ -966,19 +1155,23 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
         assert ">" in t2w["fail_trace"]
         assert any(
             tag in t2w["fail_trace"]
-            for tag in {"q95_gap_abs=", "max_gap_rel=", "q95_cross_integrator_gap_abs=", "q95_convergence_delta_n400_to_n800_abs=", "min_effective_weight_global="}
+            for tag in {"q95_gap_abs=", "max_gap_rel=", "q95_cross_integrator_gap_abs=", "q95_convergence_delta_n400_to_n800_abs=", "q95_refined_window_best_gap_abs=", "q95_gap_abs_quad_high_precision_top3=", "q95_gap_abs_quad_high_precision_upper_envelope_top3=", "q95_gap_abs_upper_tail_envelope_top3=", "q95_gap_abs_n2400_top3=", "q95_delta_gap_abs_n2400_minus_n6400_abs_top3=", "q95_delta_gap_abs_n3200_minus_n6400_abs_top3=", "q95_delta_gap_abs_n1600_minus_n6400_abs_top3=", "min_effective_weight_global="}
         )
     assert "closure_consistency" in t2w
     cc = t2w["closure_consistency"]
     assert set(cc["criteria_evaluation"].keys()) == {
         "q95_gap_abs_le_threshold",
+        "q95_gap_abs_n2400_le_threshold",
+        "q95_gap_abs_n2400_vs_n6400_delta_le_threshold",
+        "q95_gap_abs_n3200_vs_n6400_delta_le_threshold",
+        "q95_gap_abs_n1600_vs_n6400_delta_le_threshold",
         "max_gap_rel_le_threshold",
         "all_nonnegative_weights",
         "q95_cross_integrator_gap_le_threshold",
         "q95_convergence_delta_le_threshold",
     }
     assert isinstance(cc["all_criteria_satisfied"], bool)
-    assert cc["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none"}
+    assert cc["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none", "q95_refined_window_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs"}
     assert isinstance(cc["dominant_inequality"], str) and len(cc["dominant_inequality"]) > 0
     assert "falsifier_trace_consistency" in t2w
     ftc = t2w["falsifier_trace_consistency"]
@@ -1065,6 +1258,121 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
         assert rr["delta_n200_to_n400_abs"] >= 0.0
         assert rr["delta_n400_to_n800_abs"] >= 0.0
         assert rr["convergence_ratio_400_800_over_200_400"] >= 0.0
+    assert "q95_blocker_n1600_recompute_certificate" in t2w
+    qn16 = t2w["q95_blocker_n1600_recompute_certificate"]
+    assert qn16["scope"] == "STRICT_TASK2_Q95_BLOCKER_N1600_RECOMPUTE_CERTIFICATE"
+    assert qn16["theorem_target"] == "Q95_GAP_ABS_N1600_TOP3_LE_THRESHOLD"
+    assert qn16["verdict"] in {"CLOSED_NUMERICAL_WITNESS_TASK2", "OPEN_OBSTRUCTION_WITH_TRACE"}
+    for rr in qn16["computed_rows"]:
+        assert rr["cutsum_fixed_quad_n1600"] >= 0.0
+        assert rr["gap_abs_n1600"] >= 0.0
+    if qn16["verdict"] == "OPEN_OBSTRUCTION_WITH_TRACE":
+        assert "q95_gap_abs_n1600_top3=" in qn16["fail_trace"] and ">" in qn16["fail_trace"]
+    assert "q95_blocker_n3200_recompute_certificate" in t2w
+    qn32 = t2w["q95_blocker_n3200_recompute_certificate"]
+    assert qn32["scope"] == "STRICT_TASK2_Q95_BLOCKER_N3200_RECOMPUTE_CERTIFICATE"
+    assert qn32["theorem_target"] == "Q95_GAP_ABS_N3200_TOP3_LE_THRESHOLD"
+    assert qn32["verdict"] in {"CLOSED_NUMERICAL_WITNESS_TASK2", "OPEN_OBSTRUCTION_WITH_TRACE"}
+    for rr in qn32["computed_rows"]:
+        assert rr["cutsum_fixed_quad_n3200"] >= 0.0
+        assert rr["gap_abs_n3200"] >= 0.0
+    if qn32["verdict"] == "OPEN_OBSTRUCTION_WITH_TRACE":
+        assert "q95_gap_abs_n3200_top3=" in qn32["fail_trace"] and ">" in qn32["fail_trace"]
+    assert "q95_blocker_n6400_recompute_certificate" in t2w
+    qn64 = t2w["q95_blocker_n6400_recompute_certificate"]
+    assert qn64["scope"] == "STRICT_TASK2_Q95_BLOCKER_N6400_RECOMPUTE_CERTIFICATE"
+    assert qn64["theorem_target"] == "Q95_GAP_ABS_N6400_TOP3_LE_THRESHOLD"
+    assert qn64["verdict"] in {"CLOSED_NUMERICAL_WITNESS_TASK2", "OPEN_OBSTRUCTION_WITH_TRACE"}
+    for rr in qn64["computed_rows"]:
+        assert rr["cutsum_fixed_quad_n6400"] >= 0.0
+        assert rr["gap_abs_n6400"] >= 0.0
+    if qn64["verdict"] == "OPEN_OBSTRUCTION_WITH_TRACE":
+        assert "q95_gap_abs_n6400_top3=" in qn64["fail_trace"] and ">" in qn64["fail_trace"]
+    assert "q95_blocker_ninf_extrapolation_certificate" in t2w
+    qninf = t2w["q95_blocker_ninf_extrapolation_certificate"]
+    assert qninf["scope"] == "STRICT_TASK2_Q95_BLOCKER_NINF_EXTRAPOLATION_CERTIFICATE"
+    assert qninf["theorem_target"] == "Q95_GAP_ABS_EXTRAPOLATED_NINF_UPPER_TOP3_LE_THRESHOLD"
+    assert qninf["verdict"] in {"CLOSED_NUMERICAL_WITNESS_TASK2", "OPEN_OBSTRUCTION_WITH_TRACE"}
+    assert qninf["domain"]["fixed_quad_n_levels"] == [1600, 3200, 6400]
+    for rr in qninf["computed_rows"]:
+        assert rr["gap_abs_n1600"] >= 0.0
+        assert rr["gap_abs_n3200"] >= 0.0
+        assert rr["gap_abs_n6400"] >= 0.0
+        assert rr["delta_1600_3200_abs"] >= 0.0
+        assert rr["delta_3200_6400_abs"] >= 0.0
+        assert rr["effective_order_p"] >= 1.0
+        assert rr["gap_abs_extrapolated_ninf"] >= 0.0
+        assert rr["gap_abs_extrapolation_error_abs"] >= 0.0
+    assert qninf["aggregate_metrics"]["q95_gap_abs_extrapolated_ninf_upper_top3"] >= qninf["aggregate_metrics"]["q95_gap_abs_extrapolated_ninf_top3"]
+    if qninf["verdict"] == "OPEN_OBSTRUCTION_WITH_TRACE":
+        assert "q95_gap_abs_extrapolated_ninf_upper_top3=" in qninf["fail_trace"] and ">" in qninf["fail_trace"]
+    assert "q95_blocker_uniform_top3_obstruction_certificate" in t2w
+    qunif = t2w["q95_blocker_uniform_top3_obstruction_certificate"]
+    assert qunif["scope"] == "STRICT_TASK2_Q95_BLOCKER_UNIFORM_TOP3_OBSTRUCTION_CERTIFICATE"
+    assert qunif["theorem_target"] == "MIN_TOP3_EXTRAPOLATED_NINF_UPPER_MARGIN_GT_ZERO_IMPLIES_OPEN_OBSTRUCTION"
+    assert qunif["verdict"] in {"CLOSED_NUMERICAL_WITNESS_TASK2", "OPEN_OBSTRUCTION_WITH_TRACE"}
+    for rr in qunif["computed_rows"]:
+        assert rr["gap_abs_extrapolated_ninf_upper"] >= 0.0
+        assert isinstance(rr["signed_margin_upper_minus_threshold"], float)
+    assert isinstance(qunif["aggregate_metrics"]["all_top3_upper_bounds_above_threshold"], bool)
+    if qunif["verdict"] == "OPEN_OBSTRUCTION_WITH_TRACE":
+        assert "min_signed_margin_upper_minus_threshold=" in qunif["fail_trace"] and "> 0" in qunif["fail_trace"]
+    assert "q95_blocker_quad_hp_top3_certificate" in t2w
+    qhp = t2w["q95_blocker_quad_hp_top3_certificate"]
+    assert qhp["scope"] == "STRICT_TASK2_Q95_BLOCKER_QUAD_HP_TOP3_CERTIFICATE"
+    assert qhp["theorem_target"] == "Q95_GAP_ABS_QUAD_HP_TOP3_AND_CROSSCHECK_LE_THRESHOLDS"
+    assert qhp["verdict"] in {"CLOSED_NUMERICAL_WITNESS_TASK2", "OPEN_OBSTRUCTION_WITH_TRACE"}
+    assert qhp["domain"]["quad_limit"] == 400
+    for rr in qhp["computed_rows"]:
+        assert rr["cutsum_quad_high_precision"] >= 0.0
+        assert rr["cutsum_quad_high_precision_abs_error_estimate"] >= 0.0
+        assert rr["gap_abs_quad_high_precision"] >= 0.0
+        assert rr["gap_abs_fixed_quad_n6400"] >= 0.0
+        assert rr["cross_integrator_gap_abs_quad_hp_vs_n6400"] >= 0.0
+    if qhp["verdict"] == "OPEN_OBSTRUCTION_WITH_TRACE":
+        assert "=" in qhp["fail_trace"] and ">" in qhp["fail_trace"]
+    assert "q95_blocker_quad_hp_error_envelope_certificate" in t2w
+    qhpe = t2w["q95_blocker_quad_hp_error_envelope_certificate"]
+    assert qhpe["scope"] == "STRICT_TASK2_Q95_BLOCKER_QUAD_HP_ERROR_ENVELOPE_CERTIFICATE"
+    assert qhpe["theorem_target"] == "Q95_GAP_ABS_QUAD_HP_UPPER_ENVELOPE_TOP3_LE_THRESHOLD"
+    assert qhpe["verdict"] in {"CLOSED_NUMERICAL_WITNESS_TASK2", "OPEN_OBSTRUCTION_WITH_TRACE"}
+    for rr in qhpe["computed_rows"]:
+        assert rr["gap_abs_quad_high_precision"] >= 0.0
+        assert rr["quad_abs_error_estimate"] >= 0.0
+        assert rr["gap_abs_quad_high_precision_upper_envelope"] >= rr["gap_abs_quad_high_precision"]
+    if qhpe["verdict"] == "OPEN_OBSTRUCTION_WITH_TRACE":
+        assert "q95_gap_abs_quad_high_precision_upper_envelope_top3=" in qhpe["fail_trace"] and ">" in qhpe["fail_trace"]
+    assert "q95_blocker_tail_budget_certificate" in t2w
+    qtb = t2w["q95_blocker_tail_budget_certificate"]
+    assert qtb["scope"] == "STRICT_TASK2_Q95_BLOCKER_TAIL_BUDGET_CERTIFICATE"
+    assert qtb["theorem_target"] == "Q95_GAP_ABS_UPPER_TAIL_ENVELOPE_TOP3_LE_THRESHOLD"
+    assert qtb["verdict"] in {"CLOSED_NUMERICAL_WITNESS_TASK2", "OPEN_OBSTRUCTION_WITH_TRACE"}
+    assert qtb["domain"]["n_levels"] == [1600, 3200, 6400]
+    for rr in qtb["computed_rows"]:
+        assert rr["gap_abs_n1600"] >= 0.0
+        assert rr["gap_abs_n3200"] >= 0.0
+        assert rr["gap_abs_n6400"] >= 0.0
+        assert rr["delta_n1600_n3200_abs"] >= 0.0
+        assert rr["delta_n3200_n6400_abs"] >= 0.0
+        assert rr["delta_ratio_32_64_over_16_32"] >= 0.0
+        assert rr["tail_budget_beyond_n6400"] >= 0.0
+        assert rr["gap_abs_upper_tail_envelope"] >= rr["gap_abs_n6400"]
+    if qtb["verdict"] == "OPEN_OBSTRUCTION_WITH_TRACE":
+        assert "q95_gap_abs_upper_tail_envelope_top3=" in qtb["fail_trace"] and ">" in qtb["fail_trace"]
+    assert "q95_blocker_n2400_recompute_certificate" in t2w
+    qn96 = t2w["q95_blocker_n2400_recompute_certificate"]
+    assert qn96["scope"] == "STRICT_TASK2_Q95_BLOCKER_N2400_RECOMPUTE_CERTIFICATE"
+    assert qn96["theorem_target"] == "Q95_GAP_ABS_N2400_TOP3_LE_THRESHOLD_WITH_SMALL_DELTA_VS_N6400"
+    assert qn96["verdict"] in {"CLOSED_NUMERICAL_WITNESS_TASK2", "OPEN_OBSTRUCTION_WITH_TRACE"}
+    assert qn96["domain"]["n_levels"] == [2400, 6400]
+    for rr in qn96["computed_rows"]:
+        assert rr["cutsum_fixed_quad_n2400"] >= 0.0
+        assert rr["gap_abs_n6400"] >= 0.0
+        assert rr["gap_abs_n2400"] >= 0.0
+        assert rr["delta_gap_abs_n2400_minus_n6400_abs"] >= 0.0
+        assert isinstance(rr["signed_margin_n2400_minus_threshold"], float)
+    if qn96["verdict"] == "OPEN_OBSTRUCTION_WITH_TRACE":
+        assert "=" in qn96["fail_trace"] and ">" in qn96["fail_trace"]
     assert "q95_blocker_margin" in t2w
     qbm = t2w["q95_blocker_margin"]
     assert qbm["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
@@ -1076,6 +1384,16 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     iv = qbm["q95_gap_abs_interval_from_uncertainty"]
     assert 0.0 <= iv["lower"] <= iv["upper"]
     assert qbm["margin_robust_sign"] in {"ABOVE_THRESHOLD_ROBUST", "BELOW_THRESHOLD_ROBUST", "AMBIGUOUS_WITHIN_UNCERTAINTY"}
+    assert "q95_blocker_interval_separation_certificate" in t2w
+    qisc = t2w["q95_blocker_interval_separation_certificate"]
+    assert qisc["scope"] == "STRICT_TASK2_Q95_BLOCKER_INTERVAL_SEPARATION_CERTIFICATE"
+    assert qisc["theorem_target"] == "Q95_LOWER_BOUND_EXCEEDS_THRESHOLD_IMPLIES_OPEN_OBSTRUCTION"
+    assert qisc["verdict"] in {"CLOSED_NUMERICAL_WITNESS_TASK2", "OPEN_OBSTRUCTION_WITH_TRACE"}
+    assert len(qisc["computed_rows"]) == 1
+    qisc_row = qisc["computed_rows"][0]
+    assert qisc_row["q95_gap_abs_lower_bound"] <= qisc_row["q95_gap_abs_upper_bound"]
+    if qisc["verdict"] == "OPEN_OBSTRUCTION_WITH_TRACE":
+        assert "q95_gap_abs_lower_bound=" in qisc["fail_trace"] and ">" in qisc["fail_trace"]
     assert "q95_blocker_counterfactual" in t2w
     qbc = t2w["q95_blocker_counterfactual"]
     assert qbc["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
@@ -1231,19 +1549,19 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     qcp = t2w["q95_blocker_choice_panel"]
     assert qcp["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
     assert qcp["scope"] == "STRICT_TASK2_BLOCKER_CHOICE_NORMALIZED_OVERSHOOT"
-    assert len(qcp["rows"]) == 5
+    assert len(qcp["rows"]) == 13
     for rr in qcp["rows"]:
-        assert rr["criterion"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs"}
+        assert rr["criterion"] in {"q95_gap_abs", "q95_refined_window_gap_abs", "q95_quad_hp_top3_gap_abs", "q95_quad_hp_upper_envelope_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs"}
         assert rr["normalized_overshoot"] >= 0.0
         assert isinstance(rr["is_satisfied"], bool)
-    assert qcp["easiest_unresolved_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none"}
-    assert qcp["dominant_unresolved_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none"}
+    assert qcp["easiest_unresolved_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none", "q95_refined_window_gap_abs", "q95_quad_hp_top3_gap_abs", "q95_quad_hp_upper_envelope_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs"}
+    assert qcp["dominant_unresolved_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none", "q95_refined_window_gap_abs", "q95_quad_hp_top3_gap_abs", "q95_quad_hp_upper_envelope_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs"}
     assert "q95_blocker_choice_consistency" in t2w
     qcc = t2w["q95_blocker_choice_consistency"]
     assert qcc["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
     assert qcc["scope"] == "STRICT_TASK2_BLOCKER_CHOICE_CONSISTENCY"
-    assert qcc["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none", "pending"}
-    assert qcc["easiest_unresolved_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none"}
+    assert qcc["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none", "pending", "q95_refined_window_gap_abs", "q95_quad_hp_top3_gap_abs", "q95_quad_hp_upper_envelope_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs"}
+    assert qcc["easiest_unresolved_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none", "q95_refined_window_gap_abs", "q95_quad_hp_top3_gap_abs", "q95_quad_hp_upper_envelope_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs"}
     assert isinstance(qcc["is_consistent_when_q95_dominates"], bool)
     if qcc["dominant_blocker"] != "pending":
         assert qcc["dominant_blocker"] == qcp["dominant_unresolved_blocker"]
@@ -1251,7 +1569,7 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     dbm = t2w["dominant_blocker_numeric_margin"]
     assert dbm["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
     assert dbm["scope"] == "STRICT_TASK2_DOMINANT_BLOCKER_NUMERIC_MARGIN"
-    assert dbm["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none"}
+    assert dbm["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none", "q95_refined_window_gap_abs", "q95_quad_hp_top3_gap_abs", "q95_quad_hp_upper_envelope_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs"}
     assert isinstance(dbm["observed_value"], float)
     assert isinstance(dbm["threshold_value"], float)
     assert isinstance(dbm["signed_margin_observed_minus_threshold"], float)
@@ -1260,9 +1578,21 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     dsc = t2w["dominant_blocker_selection_consistency"]
     assert dsc["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
     assert dsc["scope"] == "STRICT_TASK2_DOMINANT_BLOCKER_SELECTION_CONSISTENCY"
-    assert dsc["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none"}
-    assert dsc["dominant_unresolved_expected"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none"}
+    assert dsc["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none", "q95_refined_window_gap_abs", "q95_quad_hp_top3_gap_abs", "q95_quad_hp_upper_envelope_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs"}
+    assert dsc["dominant_unresolved_expected"] in {"q95_gap_abs", "max_gap_rel", "weight_sign_nonnegativity", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "none", "q95_refined_window_gap_abs", "q95_quad_hp_top3_gap_abs", "q95_quad_hp_upper_envelope_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs"}
     assert dsc["is_argmax_overshoot"] is True
+    assert "dominant_blocker_robustness_certificate" in t2w
+    drc = t2w["dominant_blocker_robustness_certificate"]
+    assert drc["scope"] == "STRICT_TASK2_DOMINANT_BLOCKER_ROBUSTNESS_CERTIFICATE"
+    assert drc["theorem_target"] == "DOMINANT_BLOCKER_NORMALIZED_OVERSHOOT_GAP_GT_ZERO"
+    assert drc["verdict"] in {"CLOSED_NUMERICAL_WITNESS_TASK2", "OPEN_OBSTRUCTION_WITH_TRACE"}
+    assert len(drc["computed_rows"]) == 1
+    rr = drc["computed_rows"][0]
+    assert rr["dominant_normalized_overshoot"] >= 0.0
+    assert rr["second_largest_normalized_overshoot"] >= 0.0
+    assert isinstance(rr["dominance_gap"], float)
+    if drc["verdict"] == "OPEN_OBSTRUCTION_WITH_TRACE":
+        assert "dominance_gap=" in drc["fail_trace"] and "<= 0" in drc["fail_trace"]
     assert "criterion_coherence_sign" in t2w
     ccs = t2w["criterion_coherence_sign"]
     assert ccs["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
@@ -1332,7 +1662,7 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     assert cfn["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
     assert cfn["scope"] == "STRICT_TASK2_FAIL_TRACE_NUMERIC_COHERENCE"
     assert cfn["verdict_task2"] in {"CLOSED_NUMERICAL_WITNESS_TASK2", "OPEN_OBSTRUCTION_WITH_TRACE", "PENDING"}
-    assert cfn["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "weight_sign_nonnegativity", "none", "pending"}
+    assert cfn["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "weight_sign_nonnegativity", "none", "pending", "q95_refined_window_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs"}
     assert isinstance(cfn["fail_trace"], str)
     assert cfn["trace_prefix_matches_dominant_blocker"] is True
     assert "criterion_coherence_dominant_margin_sign" in t2w
@@ -1340,7 +1670,7 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     assert cds["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
     assert cds["scope"] == "STRICT_TASK2_DOMINANT_MARGIN_SIGN_COHERENCE"
     assert cds["verdict_task2"] in {"CLOSED_NUMERICAL_WITNESS_TASK2", "OPEN_OBSTRUCTION_WITH_TRACE", "PENDING"}
-    assert cds["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "weight_sign_nonnegativity", "none", "pending"}
+    assert cds["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "weight_sign_nonnegativity", "none", "pending", "q95_refined_window_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs"}
     assert isinstance(cds["signed_margin_observed_minus_threshold"], float)
     assert cds["open_requires_positive_margin"] is True
     assert "criterion_coherence_open_trace_inequality" in t2w
@@ -1354,7 +1684,7 @@ def test_p2025_exports_same_scheme_bridge_seed_without_false_closure():
     cdp = t2w["criterion_coherence_dominant_inequality_prefix"]
     assert cdp["status"] == "OPEN_PRECURSOR_NOT_CLOSURE"
     assert cdp["scope"] == "STRICT_TASK2_DOMINANT_INEQUALITY_PREFIX_COHERENCE"
-    assert cdp["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "weight_sign_nonnegativity", "none", "pending"}
+    assert cdp["dominant_blocker"] in {"q95_gap_abs", "max_gap_rel", "q95_cross_integrator_gap", "q95_convergence_delta_n400_to_n800_abs", "weight_sign_nonnegativity", "none", "pending", "q95_refined_window_gap_abs", "q95_tail_budget_upper_envelope_gap_abs", "q95_n2400_gap_abs", "q95_n2400_vs_n6400_delta_abs", "q95_n3200_vs_n6400_delta_abs", "q95_n1600_vs_n6400_delta_abs"}
     assert isinstance(cdp["dominant_inequality"], str)
     assert cdp["prefix_matches_dominant_blocker"] is True
     assert "criterion_coherence_fail_trace_equals_dominant" in t2w
