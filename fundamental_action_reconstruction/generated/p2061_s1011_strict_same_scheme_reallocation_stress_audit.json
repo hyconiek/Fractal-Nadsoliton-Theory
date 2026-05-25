@@ -1,0 +1,111 @@
+{
+  "schema_version": "p2061_s1011_v1",
+  "packet_id": "P2061",
+  "stage_id": "S1011",
+  "produced_by": "p2061_s1011_strict_same_scheme_reallocation_stress_audit.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_REALLOCATION_STRESS_AUDIT_WITH_ENVELOPE_CI__C3_STILL_OPEN",
+  "depends_on": {
+    "p2060_present": true,
+    "p2059_present": true,
+    "preconditions_ready": true
+  },
+  "input_hashes": {
+    "p2060_json_sha256": "3d40dc6ffafcd4e657baa2fa4acf16eebfcb359d7e5f3e776b4dd2deb0d017dc",
+    "p2059_json_sha256": "05ab7d7e2338a45d96c9f2515368108843e0e85a8acc999632d99110695011fe"
+  },
+  "stress_grid": {
+    "worst_bucket_budget_shares": [
+      0.6,
+      0.7,
+      0.8,
+      0.9
+    ],
+    "points_total": 4
+  },
+  "baseline": {
+    "fixed_regret_max": 0.0,
+    "reference_worst_case_ci95": {
+      "low": 0.0,
+      "high": 0.0
+    }
+  },
+  "stress_rows": [
+    {
+      "worst_bucket_budget_share": 0.6,
+      "modeled_shrink_factor": 0.5,
+      "regime_aware_regret_max": 0.0,
+      "regret_shrink_absolute": 0.0,
+      "regret_shrink_relative": 0.0,
+      "envelope_ci95_after_reallocation": {
+        "low": 0.0,
+        "high": 0.0
+      }
+    },
+    {
+      "worst_bucket_budget_share": 0.7,
+      "modeled_shrink_factor": 0.55,
+      "regime_aware_regret_max": 0.0,
+      "regret_shrink_absolute": 0.0,
+      "regret_shrink_relative": 0.0,
+      "envelope_ci95_after_reallocation": {
+        "low": 0.0,
+        "high": 0.0
+      }
+    },
+    {
+      "worst_bucket_budget_share": 0.8,
+      "modeled_shrink_factor": 0.6000000000000001,
+      "regime_aware_regret_max": 0.0,
+      "regret_shrink_absolute": 0.0,
+      "regret_shrink_relative": 0.0,
+      "envelope_ci95_after_reallocation": {
+        "low": 0.0,
+        "high": 0.0
+      }
+    },
+    {
+      "worst_bucket_budget_share": 0.9,
+      "modeled_shrink_factor": 0.65,
+      "regime_aware_regret_max": 0.0,
+      "regret_shrink_absolute": 0.0,
+      "regret_shrink_relative": 0.0,
+      "envelope_ci95_after_reallocation": {
+        "low": 0.0,
+        "high": 0.0
+      }
+    }
+  ],
+  "best_shrink_row": {
+    "worst_bucket_budget_share": 0.6,
+    "modeled_shrink_factor": 0.5,
+    "regime_aware_regret_max": 0.0,
+    "regret_shrink_absolute": 0.0,
+    "regret_shrink_relative": 0.0,
+    "envelope_ci95_after_reallocation": {
+      "low": 0.0,
+      "high": 0.0
+    }
+  },
+  "c3_gate_update": {
+    "C3_reallocation_stress_audit": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED",
+    "missing_for_c3_theorem": [
+      "theorem-grade operator identity across full background family",
+      "cross-background finite-part transport identity theorem",
+      "global finite-part lock/cocycle theorem"
+    ]
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "stress_rows_nonempty": true,
+    "ci_ordered_all_rows": true,
+    "c3_theorem_proven": false,
+    "no_background_globalization_claimed": true,
+    "no_tensor_component_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

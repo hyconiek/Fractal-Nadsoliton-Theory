@@ -1,0 +1,264 @@
+{
+  "schema_version": "p2050_s1000_v1",
+  "packet_id": "P2050",
+  "stage_id": "S1000",
+  "produced_by": "p2050_s1000_strict_same_scheme_censoring_resolution_audit.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_CENSORING_RESOLUTION_AUDIT_WITH_FRONTIER_OR_CERTIFICATE__C3_STILL_OPEN",
+  "route": "strict_only_censoring_resolution_audit",
+  "depends_on": {
+    "p2038_present": true,
+    "p2049_present": true,
+    "preconditions_ready": true
+  },
+  "input_hashes": {
+    "p2038_json_sha256": "22ad318da50b6e1e828ee05a52a75bfaa33cd22a213cd46987416d6d8a6156aa",
+    "p2049_json_sha256": "146fab72d74212bc3e9ca42fa19c7b1b867aaad811b0fef9f71e8d3ed14dfaad"
+  },
+  "resolution_scope": {
+    "controlled_background_pair": "B1_scalar_to_FRW_controlled_pair_v1",
+    "basis": [
+      "R2_bar",
+      "Ric2_bar",
+      "Riem2_bar"
+    ],
+    "norm_buckets": [
+      0.01,
+      0.015,
+      0.02,
+      0.025
+    ],
+    "trial_seeds": [
+      8040,
+      9455,
+      9022,
+      9704
+    ],
+    "vectors_per_bucket": 20,
+    "epsilon_star_input": 1.6e-06,
+    "limits": {
+      "max_horizon_eps": 0.002,
+      "max_scan_steps": 40,
+      "max_sign_patterns": 72
+    }
+  },
+  "resolution_result": {
+    "break_found": false,
+    "epsilon_last_stable": 0.0024683568359818104,
+    "epsilon_break": Infinity,
+    "frontier_gap": Infinity,
+    "final_sign_pattern_budget": 18,
+    "scan_steps_used": 30,
+    "expansion_trace": [
+      {
+        "sign_pattern_budget": 18,
+        "epsilon": 2.02e-06,
+        "stable": true,
+        "scan_step": 1
+      },
+      {
+        "sign_pattern_budget": 18,
+        "epsilon": 2.5576000000000003e-06,
+        "stable": true,
+        "scan_step": 2
+      },
+      {
+        "sign_pattern_budget": 18,
+        "epsilon": 3.2457280000000005e-06,
+        "stable": true,
+        "scan_step": 3
+      },
+      {
+        "sign_pattern_budget": 18,
+        "epsilon": 4.1265318400000005e-06,
+        "stable": true,
+        "scan_step": 4
+      },
+      {
+        "sign_pattern_budget": 18,
+        "epsilon": 5.253960755200001e-06,
+        "stable": true,
+        "scan_step": 5
+      },
+      {
+        "sign_pattern_budget": 18,
+        "epsilon": 6.697069766656001e-06,
+        "stable": true,
+        "scan_step": 6
+      },
+      {
+        "sign_pattern_budget": 18,
+        "epsilon": 8.544249301319682e-06,
+        "stable": true,
+        "scan_step": 7
+      },
+      {
+        "sign_pattern_budget": 18,
+        "epsilon": 1.0908639105689193e-05,
+        "stable": true,
+        "scan_step": 8
+      },
+      {
+        "sign_pattern_budget": 18,
+        "epsilon": 1.3935058055282168e-05,
+        "stable": true,
+        "scan_step": 9
+      },
+      {
+        "sign_pattern_budget": 18,
+        "epsilon": 1.7808874310761176e-05,
+        "stable": true,
+        "scan_step": 10
+      },
+      {
+        "sign_pattern_budget": 18,
+        "epsilon": 2.2767359117774303e-05,
+        "stable": true,
+        "scan_step": 11
+      },
+      {
+        "sign_pattern_budget": 18,
+        "epsilon": 2.911421967075111e-05,
+        "stable": true,
+        "scan_step": 12
+      },
+      {
+        "sign_pattern_budget": 18,
+        "epsilon": 3.723820117856142e-05,
+        "stable": true,
+        "scan_step": 13
+      },
+      {
+        "sign_pattern_budget": 18,
+        "epsilon": 4.763689750855861e-05,
+        "stable": true,
+        "scan_step": 14
+      },
+      {
+        "sign_pattern_budget": 18,
+        "epsilon": 6.0947228810955024e-05,
+        "stable": true,
+        "scan_step": 15
+      },
+      {
+        "sign_pattern_budget": 18,
+        "epsilon": 7.798445287802243e-05,
+        "stable": true,
+        "scan_step": 16
+      },
+      {
+        "sign_pattern_budget": 18,
+        "epsilon": 9.979209968386871e-05,
+        "stable": true,
+        "scan_step": 17
+      },
+      {
+        "sign_pattern_budget": 18,
+        "epsilon": 0.00012770588759535196,
+        "stable": true,
+        "scan_step": 18
+      },
+      {
+        "sign_pattern_budget": 18,
+        "epsilon": 0.00016343553612205053,
+        "stable": true,
+        "scan_step": 19
+      },
+      {
+        "sign_pattern_budget": 18,
+        "epsilon": 0.00020916948623622467,
+        "stable": true,
+        "scan_step": 20
+      },
+      {
+        "sign_pattern_budget": 18,
+        "epsilon": 0.0002677089423823676,
+        "stable": true,
+        "scan_step": 21
+      },
+      {
+        "sign_pattern_budget": 18,
+        "epsilon": 0.0003426394462494305,
+        "stable": true,
+        "scan_step": 22
+      },
+      {
+        "sign_pattern_budget": 18,
+        "epsilon": 0.0004385504911992711,
+        "stable": true,
+        "scan_step": 23
+      },
+      {
+        "sign_pattern_budget": 18,
+        "epsilon": 0.000561316628735067,
+        "stable": true,
+        "scan_step": 24
+      },
+      {
+        "sign_pattern_budget": 18,
+        "epsilon": 0.0007184572847808858,
+        "stable": true,
+        "scan_step": 25
+      },
+      {
+        "sign_pattern_budget": 18,
+        "epsilon": 0.0009195973245195338,
+        "stable": true,
+        "scan_step": 26
+      },
+      {
+        "sign_pattern_budget": 18,
+        "epsilon": 0.0011770565753850032,
+        "stable": true,
+        "scan_step": 27
+      },
+      {
+        "sign_pattern_budget": 18,
+        "epsilon": 0.0015066044164928042,
+        "stable": true,
+        "scan_step": 28
+      },
+      {
+        "sign_pattern_budget": 18,
+        "epsilon": 0.0019284256531107893,
+        "stable": true,
+        "scan_step": 29
+      },
+      {
+        "sign_pattern_budget": 18,
+        "epsilon": 0.0024683568359818104,
+        "stable": true,
+        "scan_step": 30
+      }
+    ],
+    "bisect_trace": [],
+    "resolution_kind": "computational_censoring_certificate",
+    "censoring_certificate": {
+      "horizon_reached": true,
+      "pattern_budget_reached": false,
+      "certificate_statement": "No instability detected up to declared limits"
+    }
+  },
+  "c3_gate_update": {
+    "C3_censoring_resolution_audit": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED",
+    "missing_for_c3_theorem": [
+      "theorem-grade operator identity across full background family",
+      "cross-background finite-part transport identity theorem",
+      "global finite-part lock/cocycle theorem"
+    ]
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "resolution_kind_set": true,
+    "epsilon_last_stable_finite": true,
+    "trace_nonempty": true,
+    "c3_theorem_proven": false,
+    "no_background_globalization_claimed": true,
+    "no_tensor_component_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

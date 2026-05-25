@@ -1,0 +1,98 @@
+{
+  "schema_version": "p2043_s993_v1",
+  "packet_id": "P2043",
+  "stage_id": "S993",
+  "produced_by": "p2043_s993_strict_same_scheme_stratified_residual_envelope_audit.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRATIFIED_RESIDUAL_ENVELOPE_AUDIT_WITH_BOOTSTRAP_CI__C3_STILL_OPEN",
+  "route": "strict_only_stratified_envelope_audit",
+  "depends_on": {
+    "p2042_present": true,
+    "preconditions_ready": true
+  },
+  "input_hashes": {
+    "p2042_json_sha256": "9659f2bfc77dd10cf1bba40f8a7d7ebddeefb521fb8078b35f0b36e7ae702fae"
+  },
+  "audit_scope": {
+    "controlled_background_pair": "B1_scalar_to_FRW_controlled_pair_v1",
+    "basis": [
+      "R2_bar",
+      "Ric2_bar",
+      "Riem2_bar"
+    ],
+    "strata_key": "norm_bucket"
+  },
+  "stratified_envelope": {
+    "per_bucket": [
+      {
+        "norm_bucket": 0.01,
+        "sample_count": 12,
+        "sup_residual_with_buffer_linf": 8.212709249639874e-06,
+        "mean_residual_with_buffer_linf": 5.176449656937553e-06
+      },
+      {
+        "norm_bucket": 0.015,
+        "sample_count": 12,
+        "sup_residual_with_buffer_linf": 1.0598821741313891e-05,
+        "mean_residual_with_buffer_linf": 7.967335684287188e-06
+      },
+      {
+        "norm_bucket": 0.02,
+        "sample_count": 12,
+        "sup_residual_with_buffer_linf": 1.6595311535308617e-05,
+        "mean_residual_with_buffer_linf": 1.1635085221350702e-05
+      },
+      {
+        "norm_bucket": 0.025,
+        "sample_count": 12,
+        "sup_residual_with_buffer_linf": 2.0721771689764953e-05,
+        "mean_residual_with_buffer_linf": 1.4151161472869263e-05
+      }
+    ],
+    "norm_bucket_order": [
+      0.01,
+      0.015,
+      0.02,
+      0.025
+    ],
+    "sup_sequence": [
+      8.212709249639874e-06,
+      1.0598821741313891e-05,
+      1.6595311535308617e-05,
+      2.0721771689764953e-05
+    ],
+    "monotonic_non_decreasing_vs_norm": true,
+    "global_sup_residual_with_buffer_linf": 2.0721771689764953e-05
+  },
+  "bootstrap_ci": {
+    "bootstrap_seed": 2043,
+    "replicates": 600,
+    "statistic": "sup_residual_with_buffer_linf",
+    "ci_level": 0.95,
+    "ci_low": 1.6595311535308617e-05,
+    "ci_high": 2.0721771689764953e-05,
+    "ci_width": 4.126460154456335e-06
+  },
+  "c3_gate_update": {
+    "C3_stratified_envelope_audit": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED",
+    "missing_for_c3_theorem": [
+      "theorem-grade operator identity across full background family",
+      "cross-background finite-part transport identity theorem",
+      "global finite-part lock/cocycle theorem"
+    ]
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "per_bucket_nonempty": true,
+    "bootstrap_ci_finite": true,
+    "global_sup_finite": true,
+    "c3_theorem_proven": false,
+    "no_background_globalization_claimed": true,
+    "no_tensor_component_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

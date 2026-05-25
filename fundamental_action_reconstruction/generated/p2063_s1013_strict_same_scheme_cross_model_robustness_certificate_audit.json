@@ -1,0 +1,78 @@
+{
+  "schema_version": "p2063_s1013_v1",
+  "packet_id": "P2063",
+  "stage_id": "S1013",
+  "produced_by": "p2063_s1013_strict_same_scheme_cross_model_robustness_certificate_audit.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_CROSS_MODEL_ROBUSTNESS_CERTIFICATE_AUDIT_WITH_TRACE__C3_STILL_OPEN",
+  "depends_on": {
+    "p2062_present": true,
+    "preconditions_ready": true
+  },
+  "input_hashes": {
+    "p2062_json_sha256": "b665301b3fc36cd3594d3cc7c7f403db009237b39f79204653fed63c7c36d56d"
+  },
+  "cross_model_summary": {
+    "models_considered": [
+      "convex",
+      "linear",
+      "quadratic",
+      "saturating"
+    ],
+    "model_best_share": {
+      "linear": 0.6,
+      "quadratic": 0.6,
+      "saturating": 0.6,
+      "convex": 0.6
+    },
+    "common_shares": [
+      0.6,
+      0.7,
+      0.8,
+      0.9
+    ],
+    "dominant_share": 0.6,
+    "unanimous_models": [
+      "linear",
+      "quadratic",
+      "saturating",
+      "convex"
+    ],
+    "unanimous": true
+  },
+  "robustness_certificate": {
+    "certificate_kind": "POINT_STABLE_SHARE_CERTIFICATE",
+    "stable_share_interval": {
+      "low": 0.6,
+      "high": 0.6
+    },
+    "stable_model_set": [
+      "linear",
+      "quadratic",
+      "saturating",
+      "convex"
+    ],
+    "interpretation": "certificate is local/audit-level and not a theorem-grade C3 discharge"
+  },
+  "c3_gate_update": {
+    "C3_cross_model_robustness_certificate_audit": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED",
+    "missing_for_c3_theorem": [
+      "theorem-grade operator identity across full background family",
+      "cross-background finite-part transport identity theorem",
+      "global finite-part lock/cocycle theorem"
+    ]
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "models_nonempty": true,
+    "certificate_emitted": true,
+    "c3_theorem_proven": false,
+    "no_background_globalization_claimed": true,
+    "no_tensor_component_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

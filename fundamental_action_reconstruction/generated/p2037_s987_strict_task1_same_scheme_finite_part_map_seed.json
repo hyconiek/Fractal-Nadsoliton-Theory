@@ -1,0 +1,92 @@
+{
+  "schema_version": "p2037_s987_v1",
+  "packet_id": "P2037",
+  "stage_id": "S987",
+  "produced_by": "p2037_s987_strict_task1_same_scheme_finite_part_map_seed.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_EXPLICIT_SAME_SCHEME_FINITE_PART_MAP_SEED_WITH_TRACE__C2_C3_STILL_OPEN",
+  "route": "strict_only_with_local_quotient_transport_seed",
+  "depends_on": {
+    "p2034_present": true,
+    "p2035_present": true,
+    "p2036_present": true,
+    "p2034_local_source_ready": true,
+    "p2035_obstruction_context_ready": true,
+    "p2036_contract_context_ready": true
+  },
+  "input_hashes": {
+    "p2034_json_sha256": "2454a107762f4e54f8abcfc4f769238dd67463777cac284c59d4f128a3d8af27",
+    "p2035_json_sha256": "18b9f4f3047505d184cd8470f1994082a12bce3dc85fcd4d67166b61a2cd089f",
+    "p2036_json_sha256": "247ebcd8f6dfb284d043bb0f7b0e17c7df5b98a0761928ae738efb8abecdcb1d"
+  },
+  "same_scheme_finite_part_map_seed": {
+    "map_id": "M_same_scheme_seed_v1",
+    "basis": [
+      "R2_bar",
+      "Ric2_bar",
+      "Riem2_bar"
+    ],
+    "domain": "quotient coefficients (R2_bar,Ric2_bar,Riem2_bar)",
+    "codomain": "quotient coefficients (R2_bar,Ric2_bar,Riem2_bar)",
+    "sigma2_anchor": 0.0,
+    "delta_finite_part_matrix": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "transport_matrix": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "residual_vs_identity_linf": 0.0,
+    "scope": "same renormalization scheme seed only",
+    "warning": "Seed map is not a theorem-grade finite-part transport proof."
+  },
+  "c2_c3_gate_update": {
+    "C2_basis_preserving_map_seed": "EXPORTED",
+    "C3_finite_part_scheme_transport_theorem": "OPEN",
+    "C2_C3_discharge_status": "NOT_DISCHARGED",
+    "missing_for_discharge": [
+      "nontrivial anisotropic finite-part correction matrix from loop data",
+      "proof of subtraction compatibility on same operator basis",
+      "cross-background witness that transported targets agree"
+    ]
+  },
+  "gatekeeper_checks": {
+    "map_seed_exported": true,
+    "basis_is_rank3_quotient_basis": true,
+    "residual_vs_identity_zero": true,
+    "c2_basis_preserving_seed_exported": true,
+    "c3_theorem_proven": false,
+    "no_background_globalization_claimed": true,
+    "no_tensor_component_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": "p2055_s1005_v1",
+  "packet_id": "P2055",
+  "stage_id": "S1005",
+  "produced_by": "p2055_s1005_strict_same_scheme_adaptive_vs_fixed_realized_frontier_gain_audit.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_ADAPTIVE_VS_FIXED_REALIZED_FRONTIER_GAIN_AUDIT_WITH_BOOTSTRAP_CI__C3_STILL_OPEN",
+  "depends_on": {
+    "p2054_present": true,
+    "preconditions_ready": true
+  },
+  "input_hashes": {
+    "p2054_json_sha256": "aeaa9e27d5da0e629226d3558c3f9cbf74cb671bc2a499dbc0d7c0e5aaa8e9c3"
+  },
+  "budget_match_check": {
+    "profiles_compared": 3,
+    "same_total_compute_limit": true
+  },
+  "realized_detection_summary": {
+    "fixed_detected_frontier_rate": 1.0,
+    "adaptive_detected_frontier_rate": 0.3333333333333333,
+    "realized_frontier_gain": -0.6666666666666667
+  },
+  "bootstrap": {
+    "reps": 2000,
+    "seed": 2055001,
+    "gain_samples_count": 2000,
+    "ci95": {
+      "low": -1.0,
+      "high": 0.0
+    }
+  },
+  "c3_gate_update": {
+    "C3_adaptive_vs_fixed_realized_gain_audit": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED",
+    "missing_for_c3_theorem": [
+      "theorem-grade operator identity across full background family",
+      "cross-background finite-part transport identity theorem",
+      "global finite-part lock/cocycle theorem"
+    ]
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "profiles_nonempty": true,
+    "bootstrap_nonempty": true,
+    "c3_theorem_proven": false,
+    "no_background_globalization_claimed": true,
+    "no_tensor_component_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

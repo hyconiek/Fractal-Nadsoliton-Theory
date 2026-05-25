@@ -1,0 +1,152 @@
+{
+  "schema_version": "p2048_s998_v1",
+  "packet_id": "P2048",
+  "stage_id": "S998",
+  "produced_by": "p2048_s998_strict_same_scheme_certificate_falsification_frontier_audit.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_CERTIFICATE_FALSIFICATION_FRONTIER_AUDIT_WITH_TRACE__C3_STILL_OPEN",
+  "route": "strict_only_certificate_frontier_audit",
+  "depends_on": {
+    "p2038_present": true,
+    "p2047_present": true,
+    "preconditions_ready": true
+  },
+  "input_hashes": {
+    "p2038_json_sha256": "22ad318da50b6e1e828ee05a52a75bfaa33cd22a213cd46987416d6d8a6156aa",
+    "p2047_json_sha256": "bff324443ba5eed765956a36fd4f330f934f8a592d6a17aeecd01f2c7b864a92"
+  },
+  "frontier_scope": {
+    "controlled_background_pair": "B1_scalar_to_FRW_controlled_pair_v1",
+    "basis": [
+      "R2_bar",
+      "Ric2_bar",
+      "Riem2_bar"
+    ],
+    "norm_buckets": [
+      0.01,
+      0.015,
+      0.02,
+      0.025
+    ],
+    "trial_seeds": [
+      4013,
+      4019,
+      4021
+    ],
+    "vectors_per_bucket": 20,
+    "sign_patterns_checked": 28
+  },
+  "certificate_frontier": {
+    "epsilon_star_input": 1.6e-06,
+    "epsilon_last_stable": 0.0004855283066774321,
+    "epsilon_break_first_detected": Infinity,
+    "frontier_gap": Infinity,
+    "scan_trace": [
+      {
+        "epsilon": 2.02e-06,
+        "stable": true
+      },
+      {
+        "epsilon": 2.587e-06,
+        "stable": true
+      },
+      {
+        "epsilon": 3.35245e-06,
+        "stable": true
+      },
+      {
+        "epsilon": 4.3858075e-06,
+        "stable": true
+      },
+      {
+        "epsilon": 5.780840125e-06,
+        "stable": true
+      },
+      {
+        "epsilon": 7.664134168750001e-06,
+        "stable": true
+      },
+      {
+        "epsilon": 1.0206581127812502e-05,
+        "stable": true
+      },
+      {
+        "epsilon": 1.3638884522546879e-05,
+        "stable": true
+      },
+      {
+        "epsilon": 1.8272494105438287e-05,
+        "stable": true
+      },
+      {
+        "epsilon": 2.452786704234169e-05,
+        "stable": true
+      },
+      {
+        "epsilon": 3.297262050716129e-05,
+        "stable": true
+      },
+      {
+        "epsilon": 4.437303768466774e-05,
+        "stable": true
+      },
+      {
+        "epsilon": 5.976360087430145e-05,
+        "stable": true
+      },
+      {
+        "epsilon": 8.054086118030697e-05,
+        "stable": true
+      },
+      {
+        "epsilon": 0.00010859016259341442,
+        "stable": true
+      },
+      {
+        "epsilon": 0.00014645671950110946,
+        "stable": true
+      },
+      {
+        "epsilon": 0.00019757657132649778,
+        "stable": true
+      },
+      {
+        "epsilon": 0.000266588371290772,
+        "stable": true
+      },
+      {
+        "epsilon": 0.00035975430124254225,
+        "stable": true
+      },
+      {
+        "epsilon": 0.0004855283066774321,
+        "stable": true
+      }
+    ],
+    "bisect_trace": [],
+    "break_found": false,
+    "statement": "Frontier audit locates the first detected instability epsilon_break above epsilon* in the present local adversarial model."
+  },
+  "c3_gate_update": {
+    "C3_certificate_falsification_frontier_audit": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED",
+    "missing_for_c3_theorem": [
+      "theorem-grade operator identity across full background family",
+      "cross-background finite-part transport identity theorem",
+      "global finite-part lock/cocycle theorem"
+    ]
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "scan_trace_nonempty": true,
+    "epsilon_last_stable_finite": true,
+    "break_or_censored": true,
+    "c3_theorem_proven": false,
+    "no_background_globalization_claimed": true,
+    "no_tensor_component_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

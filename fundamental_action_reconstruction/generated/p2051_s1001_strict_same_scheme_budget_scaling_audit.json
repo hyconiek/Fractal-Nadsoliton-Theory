@@ -1,0 +1,107 @@
+{
+  "schema_version": "p2051_s1001_v1",
+  "packet_id": "P2051",
+  "stage_id": "S1001",
+  "produced_by": "p2051_s1001_strict_same_scheme_budget_scaling_audit.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_BUDGET_SCALING_AUDIT_WITH_SENSITIVITY_MAP__C3_STILL_OPEN",
+  "route": "strict_only_budget_scaling_audit",
+  "depends_on": {
+    "p2038_present": true,
+    "p2050_present": true,
+    "preconditions_ready": true
+  },
+  "input_hashes": {
+    "p2038_json_sha256": "22ad318da50b6e1e828ee05a52a75bfaa33cd22a213cd46987416d6d8a6156aa",
+    "p2050_json_sha256": "b3822089c502704cec4546eefe84d37d9518441259c68ef20a1db2fcc11fce72"
+  },
+  "audit_scope": {
+    "controlled_background_pair": "B1_scalar_to_FRW_controlled_pair_v1",
+    "basis": [
+      "R2_bar",
+      "Ric2_bar",
+      "Riem2_bar"
+    ],
+    "norm_buckets": [
+      0.01,
+      0.015,
+      0.02,
+      0.025
+    ],
+    "trial_seeds": [
+      8513,
+      8643,
+      9130,
+      7834
+    ],
+    "epsilon_star_input": 1.6e-06
+  },
+  "budget_profiles": [
+    {
+      "profile_id": "B1_small",
+      "max_horizon_eps": 0.00075,
+      "max_sign_patterns": 24,
+      "vectors_per_bucket": 12,
+      "resolution_kind": "computational_censoring_certificate",
+      "epsilon_last_stable": 0.0009195973245195338,
+      "epsilon_break": Infinity,
+      "horizon_reached": true,
+      "pattern_budget_reached": false,
+      "final_sign_pattern_budget": 18,
+      "scan_steps_used": 26
+    },
+    {
+      "profile_id": "B2_medium",
+      "max_horizon_eps": 0.002,
+      "max_sign_patterns": 72,
+      "vectors_per_bucket": 20,
+      "resolution_kind": "computational_censoring_certificate",
+      "epsilon_last_stable": 0.0024683568359818104,
+      "epsilon_break": Infinity,
+      "horizon_reached": true,
+      "pattern_budget_reached": false,
+      "final_sign_pattern_budget": 18,
+      "scan_steps_used": 30
+    },
+    {
+      "profile_id": "B3_large",
+      "max_horizon_eps": 0.005,
+      "max_sign_patterns": 120,
+      "vectors_per_bucket": 32,
+      "resolution_kind": "computational_censoring_certificate",
+      "epsilon_last_stable": 0.005176409760092927,
+      "epsilon_break": Infinity,
+      "horizon_reached": true,
+      "pattern_budget_reached": false,
+      "final_sign_pattern_budget": 18,
+      "scan_steps_used": 33
+    }
+  ],
+  "sensitivity_map": {
+    "detected_frontier_count": 0,
+    "computational_censoring_count": 3,
+    "profiles_total": 3,
+    "interpretation": "Mixed outcomes suggest compute-limit sensitivity; all-censor suggests unresolved frontier under tested budgets; all-detected suggests robust break detection under tested budgets."
+  },
+  "c3_gate_update": {
+    "C3_budget_scaling_audit": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED",
+    "missing_for_c3_theorem": [
+      "theorem-grade operator identity across full background family",
+      "cross-background finite-part transport identity theorem",
+      "global finite-part lock/cocycle theorem"
+    ]
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "profiles_nonempty": true,
+    "counts_consistent": true,
+    "c3_theorem_proven": false,
+    "no_background_globalization_claimed": true,
+    "no_tensor_component_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

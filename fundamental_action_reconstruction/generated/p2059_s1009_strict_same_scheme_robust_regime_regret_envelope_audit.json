@@ -1,0 +1,73 @@
+{
+  "schema_version": "p2059_s1009_v1",
+  "packet_id": "P2059",
+  "stage_id": "S1009",
+  "produced_by": "p2059_s1009_strict_same_scheme_robust_regime_regret_envelope_audit.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_ROBUST_REGIME_REGRET_ENVELOPE_AUDIT_WITH_WORST_CASE_CI__C3_STILL_OPEN",
+  "depends_on": {
+    "p2058_present": true,
+    "p2057_present": true,
+    "preconditions_ready": true
+  },
+  "input_hashes": {
+    "p2058_json_sha256": "9565edad4db73678b9cf73b5f9da306742325a29eb53a74f199367ab788a2049",
+    "p2057_json_sha256": "ec24c36e0feb908c74dbdeb5d7727b8968f1dd2aadd00393ecf84cf79b7c0a0f"
+  },
+  "regime_regret_envelope": {
+    "regimes_total": 27,
+    "regret_min": 0.0,
+    "regret_max": 0.0,
+    "worst_case_regime": {
+      "softmax_tau": 0.05,
+      "top_k": 1,
+      "objective_weight": 0.25,
+      "selected_policy": "softmax",
+      "oracle_objective": 1.0,
+      "selected_objective": 1.0,
+      "regret_proxy": 0.0
+    },
+    "best_case_regime": {
+      "softmax_tau": 0.05,
+      "top_k": 1,
+      "objective_weight": 0.25,
+      "selected_policy": "softmax",
+      "oracle_objective": 1.0,
+      "selected_objective": 1.0,
+      "regret_proxy": 0.0
+    }
+  },
+  "worst_case_regret_bootstrap_ci95": {
+    "low": 0.0,
+    "high": 0.0
+  },
+  "reference_regret_from_p2057": {
+    "mean": 0.0,
+    "ci95": {
+      "low": 0.0,
+      "high": 0.0
+    }
+  },
+  "c3_gate_update": {
+    "C3_robust_regime_regret_envelope_audit": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED",
+    "missing_for_c3_theorem": [
+      "theorem-grade operator identity across full background family",
+      "cross-background finite-part transport identity theorem",
+      "global finite-part lock/cocycle theorem"
+    ]
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "regime_grid_nonempty": true,
+    "worst_case_present": true,
+    "worst_ci_ordered": true,
+    "c3_theorem_proven": false,
+    "no_background_globalization_claimed": true,
+    "no_tensor_component_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}
