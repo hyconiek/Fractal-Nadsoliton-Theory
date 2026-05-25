@@ -1,0 +1,61 @@
+{
+  "schema_version": "p2075_s1025_v1",
+  "packet_id": "P2075",
+  "stage_id": "S1025",
+  "produced_by": "p2075_s1025_strict_missing_characteristic_candidate_screening_audit.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_MISSING_CHARACTERISTIC_CANDIDATE_SCREENING_AUDIT_WITH_TRACE__C3_STILL_OPEN",
+  "depends_on": {
+    "p2074_present": true,
+    "preconditions_ready": true
+  },
+  "input_hashes": {
+    "p2074_json_sha256": "c004702fce7c498b69a0eb3264169fa69bf4ae58ba478850137d7b2bb64a9150"
+  },
+  "screening_table": {
+    "candidate_count": 3,
+    "rows": [
+      {
+        "candidate_id": "mc_phase_lock",
+        "priority_rank": 1,
+        "screening_outcome": "RETAIN_FOR_NUMERIC_FIT_STAGE",
+        "screening_rationale": "direct phase-coupling candidate; highest bridge-signal priority",
+        "selector_qw2191_screening": "QW2191_UNCHANGED_PROXY_ONLY",
+        "legacy_strict_alignment_signal": "OPEN_REQUIRES_NUMERIC_FIT_AND_BRIDGE_CHECK"
+      },
+      {
+        "candidate_id": "mc_grad_cross",
+        "priority_rank": 2,
+        "screening_outcome": "RETAIN_FOR_NUMERIC_FIT_STAGE",
+        "screening_rationale": "kinetic-mixing candidate; medium bridge-signal priority",
+        "selector_qw2191_screening": "QW2191_UNCHANGED_PROXY_ONLY",
+        "legacy_strict_alignment_signal": "OPEN_REQUIRES_NUMERIC_FIT_AND_BRIDGE_CHECK"
+      },
+      {
+        "candidate_id": "mc_curv_like",
+        "priority_rank": 3,
+        "screening_outcome": "RETAIN_FOR_NUMERIC_FIT_STAGE",
+        "screening_rationale": "higher structure complexity; deferred until top candidates tested",
+        "selector_qw2191_screening": "QW2191_UNCHANGED_PROXY_ONLY",
+        "legacy_strict_alignment_signal": "OPEN_REQUIRES_NUMERIC_FIT_AND_BRIDGE_CHECK"
+      }
+    ],
+    "next_stage_contract": "run numeric fit on priority 1->2 candidates before any closure claims"
+  },
+  "c3_gate_update": {
+    "C3_missing_characteristic_candidate_screening_audit": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "screening_rows_nonempty": true,
+    "priority_ranking_monotone": true,
+    "c3_theorem_proven": false,
+    "no_background_globalization_claimed": true,
+    "no_tensor_component_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

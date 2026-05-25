@@ -1,0 +1,152 @@
+{
+  "schema_version": "p2085_s1035_v1",
+  "packet_id": "P2085",
+  "stage_id": "S1035",
+  "produced_by": "p2085_s1035_strict_operator_family_expansion_audit.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_OPERATOR_FAMILY_EXPANSION_AUDIT_WITH_TRACE__C3_STILL_OPEN",
+  "depends_on": {
+    "p2084_present": true,
+    "preconditions_ready": true
+  },
+  "input_hashes": {
+    "p2084_json_sha256": "ec17a1a64e6e859320a804ef84254909b13cc80d8b7b7e5eed1a035c6f74c2bf"
+  },
+  "expansion_protocol": {
+    "d_grid": [
+      0.025,
+      0.05,
+      0.075,
+      0.1,
+      0.125,
+      0.15,
+      0.175,
+      0.2,
+      0.225,
+      0.25,
+      0.275,
+      0.3,
+      0.325,
+      0.35,
+      0.375,
+      0.4,
+      0.425,
+      0.45,
+      0.475,
+      0.5,
+      0.525,
+      0.55,
+      0.575,
+      0.6,
+      0.625,
+      0.65,
+      0.675,
+      0.7,
+      0.725,
+      0.75,
+      0.775,
+      0.8,
+      0.825,
+      0.85,
+      0.875,
+      0.9,
+      0.925,
+      0.95,
+      0.975,
+      1.0
+    ],
+    "coefficient_bound": 0.2,
+    "lambda_l2": 0.05,
+    "operator_families": [
+      "phase_curvature_plus_base",
+      "nonlinear_damping_plus_base"
+    ],
+    "acceptance_rule": "improved_dimensions>=3 and qw2191_proxy_risk=LOW_PROXY"
+  },
+  "expansion_results": {
+    "strict_shape_error": {
+      "d1_rmse": 1.1959304934856108,
+      "d2_rmse": 0.906979265704645,
+      "zero_gap": 0,
+      "damp_gap": 0.0
+    },
+    "family_results": [
+      {
+        "coefficients": {
+          "c1": 0.1,
+          "c2": -0.2,
+          "c3": 0.2,
+          "c4": -0.2
+        },
+        "shape_error": {
+          "d1_rmse": 0.8404526381715378,
+          "d2_rmse": 0.8318825926012513,
+          "zero_gap": 0,
+          "damp_gap": 0.0
+        },
+        "weighted_objective": 3.3511704615455784,
+        "improved_dimensions": 2,
+        "qw2191_proxy_risk": "LOW_PROXY",
+        "family_name": "phase_curvature_plus_base",
+        "decision": "REJECT_EXPANDED_FAMILY"
+      },
+      {
+        "coefficients": {
+          "c1": 0.2,
+          "c2": -0.2,
+          "c3": 0.2,
+          "c4": -0.2
+        },
+        "shape_error": {
+          "d1_rmse": 1.0624845098321805,
+          "d2_rmse": 0.6712643338790234,
+          "zero_gap": 0,
+          "damp_gap": 0.0
+        },
+        "weighted_objective": 3.4754976874224077,
+        "improved_dimensions": 2,
+        "qw2191_proxy_risk": "LOW_PROXY",
+        "family_name": "nonlinear_damping_plus_base",
+        "decision": "REJECT_EXPANDED_FAMILY"
+      }
+    ],
+    "robust_family_count": 0,
+    "selected_best_family": {
+      "coefficients": {
+        "c1": 0.1,
+        "c2": -0.2,
+        "c3": 0.2,
+        "c4": -0.2
+      },
+      "shape_error": {
+        "d1_rmse": 0.8404526381715378,
+        "d2_rmse": 0.8318825926012513,
+        "zero_gap": 0,
+        "damp_gap": 0.0
+      },
+      "weighted_objective": 3.3511704615455784,
+      "improved_dimensions": 2,
+      "qw2191_proxy_risk": "LOW_PROXY",
+      "family_name": "phase_curvature_plus_base",
+      "decision": "REJECT_EXPANDED_FAMILY"
+    },
+    "functional_basis_limit_hypothesis": "OPEN"
+  },
+  "c3_gate_update": {
+    "C3_operator_family_expansion_audit": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "family_count_expected": true,
+    "all_coefficients_within_bound": true,
+    "decision_domain_ok": true,
+    "c3_theorem_proven": false,
+    "no_background_globalization_claimed": true,
+    "no_tensor_component_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

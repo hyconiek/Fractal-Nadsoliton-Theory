@@ -1,0 +1,89 @@
+{
+  "schema_version": "p2071_s1021_v1",
+  "packet_id": "P2071",
+  "stage_id": "S1021",
+  "produced_by": "p2071_s1021_strict_same_scheme_tau_boundary_refinement_audit.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_TAU_BOUNDARY_REFINEMENT_AUDIT_WITH_TRACE__C3_STILL_OPEN",
+  "depends_on": {
+    "p2070_present": true,
+    "preconditions_ready": true
+  },
+  "input_hashes": {
+    "p2070_json_sha256": "09a5b8f9c7fd42f7d8ca655f5e09a2066c681e67ef168edc63366799ab57a83a"
+  },
+  "tau_boundary_refinement": {
+    "radius_star": 0.03,
+    "current_tau_amplitude_proxy": 0.2,
+    "refine_grid": [
+      0.025,
+      0.0275,
+      0.029,
+      0.03,
+      0.031,
+      0.0325,
+      0.035
+    ],
+    "rows": [
+      {
+        "tau_candidate": 0.025,
+        "transportable_under_radius_star": true,
+        "signed_margin": 0.0049999999999999975
+      },
+      {
+        "tau_candidate": 0.0275,
+        "transportable_under_radius_star": true,
+        "signed_margin": 0.0024999999999999988
+      },
+      {
+        "tau_candidate": 0.029,
+        "transportable_under_radius_star": true,
+        "signed_margin": 0.0009999999999999974
+      },
+      {
+        "tau_candidate": 0.03,
+        "transportable_under_radius_star": true,
+        "signed_margin": 0.0
+      },
+      {
+        "tau_candidate": 0.031,
+        "transportable_under_radius_star": false,
+        "signed_margin": -0.0010000000000000009
+      },
+      {
+        "tau_candidate": 0.0325,
+        "transportable_under_radius_star": false,
+        "signed_margin": -0.0025000000000000022
+      },
+      {
+        "tau_candidate": 0.035,
+        "transportable_under_radius_star": false,
+        "signed_margin": -0.0050000000000000044
+      }
+    ],
+    "tight_feasible_tau": {
+      "tau_candidate": 0.03,
+      "transportable_under_radius_star": true,
+      "signed_margin": 0.0
+    },
+    "required_tau_reduction_factor": 0.15,
+    "required_tau_reduction_percent": 85.0
+  },
+  "c3_gate_update": {
+    "C3_tau_boundary_refinement_audit": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "rows_nonempty": true,
+    "tight_feasible_exists": true,
+    "required_tau_reduction_factor_in_0_1": true,
+    "c3_theorem_proven": false,
+    "no_background_globalization_claimed": true,
+    "no_tensor_component_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

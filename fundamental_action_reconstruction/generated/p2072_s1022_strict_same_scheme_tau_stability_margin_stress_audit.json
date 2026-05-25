@@ -1,0 +1,98 @@
+{
+  "schema_version": "p2072_s1022_v1",
+  "packet_id": "P2072",
+  "stage_id": "S1022",
+  "produced_by": "p2072_s1022_strict_same_scheme_tau_stability_margin_stress_audit.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_TAU_STABILITY_MARGIN_STRESS_AUDIT_WITH_TRACE__C3_STILL_OPEN",
+  "depends_on": {
+    "p2071_present": true,
+    "preconditions_ready": true
+  },
+  "input_hashes": {
+    "p2071_json_sha256": "5c9fbb6f98c6da630cb7d1d462ba7a6ef0a5ad60989018f618d6f76af51b7d67"
+  },
+  "tau_stability_margin": {
+    "radius_star": 0.03,
+    "tight_feasible_tau": 0.03,
+    "stress_deltas": [
+      -0.001,
+      -0.0005,
+      -0.0001,
+      0.0,
+      0.0001,
+      0.0005,
+      0.001
+    ],
+    "stress_rows": [
+      {
+        "delta": -0.001,
+        "tau_candidate": 0.028999999999999998,
+        "positive_domain": true,
+        "transportable_under_radius_star": true,
+        "signed_margin": 0.0010000000000000009
+      },
+      {
+        "delta": -0.0005,
+        "tau_candidate": 0.0295,
+        "positive_domain": true,
+        "transportable_under_radius_star": true,
+        "signed_margin": 0.0005000000000000004
+      },
+      {
+        "delta": -0.0001,
+        "tau_candidate": 0.0299,
+        "positive_domain": true,
+        "transportable_under_radius_star": true,
+        "signed_margin": 9.99999999999994e-05
+      },
+      {
+        "delta": 0.0,
+        "tau_candidate": 0.03,
+        "positive_domain": true,
+        "transportable_under_radius_star": true,
+        "signed_margin": 0.0
+      },
+      {
+        "delta": 0.0001,
+        "tau_candidate": 0.0301,
+        "positive_domain": true,
+        "transportable_under_radius_star": false,
+        "signed_margin": -9.99999999999994e-05
+      },
+      {
+        "delta": 0.0005,
+        "tau_candidate": 0.0305,
+        "positive_domain": true,
+        "transportable_under_radius_star": false,
+        "signed_margin": -0.0005000000000000004
+      },
+      {
+        "delta": 0.001,
+        "tau_candidate": 0.031,
+        "positive_domain": true,
+        "transportable_under_radius_star": false,
+        "signed_margin": -0.0010000000000000009
+      }
+    ],
+    "positive_side_all_fail": true,
+    "negative_side_all_pass": true,
+    "boundary_classification": "SHARP_STABLE_BOUNDARY"
+  },
+  "c3_gate_update": {
+    "C3_tau_stability_margin_stress_audit": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "stress_rows_nonempty": true,
+    "contains_requested_deltas": true,
+    "c3_theorem_proven": false,
+    "no_background_globalization_claimed": true,
+    "no_tensor_component_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

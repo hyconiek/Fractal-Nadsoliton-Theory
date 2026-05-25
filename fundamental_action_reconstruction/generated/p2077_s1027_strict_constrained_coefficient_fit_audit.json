@@ -1,0 +1,140 @@
+{
+  "schema_version": "p2077_s1027_v1",
+  "packet_id": "P2077",
+  "stage_id": "S1027",
+  "produced_by": "p2077_s1027_strict_constrained_coefficient_fit_audit.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_CONSTRAINED_COEFFICIENT_FIT_AUDIT_WITH_TRACE__C3_STILL_OPEN",
+  "depends_on": {
+    "p2076_present": true,
+    "preconditions_ready": true
+  },
+  "input_hashes": {
+    "p2076_json_sha256": "0f593847a4e7a2e2bdeb0c883550f4fbab62457616009861750187f08af7eb04"
+  },
+  "fit_protocol": {
+    "d_grid": [
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+    ],
+    "coefficient_bound": 0.2,
+    "coefficient_grid": [
+      -0.2,
+      -0.19,
+      -0.18,
+      -0.17,
+      -0.16,
+      -0.15,
+      -0.14,
+      -0.13,
+      -0.12,
+      -0.11,
+      -0.1,
+      -0.09,
+      -0.08,
+      -0.07,
+      -0.06,
+      -0.05,
+      -0.04,
+      -0.03,
+      -0.02,
+      -0.01,
+      0.0,
+      0.01,
+      0.02,
+      0.03,
+      0.04,
+      0.05,
+      0.06,
+      0.07,
+      0.08,
+      0.09,
+      0.1,
+      0.11,
+      0.12,
+      0.13,
+      0.14,
+      0.15,
+      0.16,
+      0.17,
+      0.18,
+      0.19,
+      0.2
+    ],
+    "regularization": {
+      "type": "l2",
+      "lambda": 0.05
+    },
+    "error_metric": "MSE(legacy, augmented_strict)",
+    "top_candidate_ids": [
+      "mc_phase_lock",
+      "mc_grad_cross"
+    ]
+  },
+  "fit_results": {
+    "rows": [
+      {
+        "candidate_id": "mc_phase_lock",
+        "baseline_mse": 0.8543024428957479,
+        "best_raw_mse": 0.7754084300071213,
+        "best_regularized_objective": 0.7774084300071213,
+        "best_coefficient": 0.2,
+        "absolute_improvement": 0.07889401288862652,
+        "relative_improvement": 0.09234904282985189,
+        "qw2191_proxy_risk": "LOW_PROXY",
+        "decision": "RETAIN"
+      },
+      {
+        "candidate_id": "mc_grad_cross",
+        "baseline_mse": 0.8543024428957479,
+        "best_raw_mse": 0.8010566200307447,
+        "best_regularized_objective": 0.8030566200307447,
+        "best_coefficient": 0.2,
+        "absolute_improvement": 0.05324582286500312,
+        "relative_improvement": 0.06232666581699195,
+        "qw2191_proxy_risk": "LOW_PROXY",
+        "decision": "RETAIN"
+      }
+    ],
+    "retained_candidates": [
+      "mc_phase_lock",
+      "mc_grad_cross"
+    ],
+    "rejected_candidates": []
+  },
+  "c3_gate_update": {
+    "C3_constrained_coefficient_fit_audit": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "rows_nonempty": true,
+    "all_coefficients_within_bound": true,
+    "all_qw2191_proxy_low": true,
+    "c3_theorem_proven": false,
+    "no_background_globalization_claimed": true,
+    "no_tensor_component_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}
