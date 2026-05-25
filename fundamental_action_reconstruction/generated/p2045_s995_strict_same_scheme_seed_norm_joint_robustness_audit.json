@@ -1,0 +1,230 @@
+{
+  "schema_version": "p2045_s995_v1",
+  "packet_id": "P2045",
+  "stage_id": "S995",
+  "produced_by": "p2045_s995_strict_same_scheme_seed_norm_joint_robustness_audit.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_SEED_NORM_JOINT_ROBUSTNESS_AUDIT_WITH_RANK_STABILITY__C3_STILL_OPEN",
+  "route": "strict_only_seed_norm_joint_robustness_audit",
+  "depends_on": {
+    "p2044_present": true,
+    "preconditions_ready": true
+  },
+  "input_hashes": {
+    "p2044_json_sha256": "7ec28762ea18d769b0e6a2bacd7c3b7368b2a30700842ee94290cfcdc4f7a7fd"
+  },
+  "audit_scope": {
+    "controlled_background_pair": "B1_scalar_to_FRW_controlled_pair_v1",
+    "basis": [
+      "R2_bar",
+      "Ric2_bar",
+      "Riem2_bar"
+    ],
+    "seeds": [
+      2037,
+      2042,
+      2043,
+      2051,
+      2063
+    ],
+    "norm_buckets": [
+      0.01,
+      0.015,
+      0.02,
+      0.025
+    ]
+  },
+  "seed_norm_worst_case_table": [
+    {
+      "seed": 2037,
+      "norm_bucket": 0.01,
+      "worst_case_residual_with_buffer_linf": 8.096008026312549e-06
+    },
+    {
+      "seed": 2037,
+      "norm_bucket": 0.015,
+      "worst_case_residual_with_buffer_linf": 1.183891546056978e-05
+    },
+    {
+      "seed": 2037,
+      "norm_bucket": 0.02,
+      "worst_case_residual_with_buffer_linf": 1.631955149895088e-05
+    },
+    {
+      "seed": 2037,
+      "norm_bucket": 0.025,
+      "worst_case_residual_with_buffer_linf": 1.7581445569739436e-05
+    },
+    {
+      "seed": 2042,
+      "norm_bucket": 0.01,
+      "worst_case_residual_with_buffer_linf": 8.212709249639874e-06
+    },
+    {
+      "seed": 2042,
+      "norm_bucket": 0.015,
+      "worst_case_residual_with_buffer_linf": 1.0598821741313891e-05
+    },
+    {
+      "seed": 2042,
+      "norm_bucket": 0.02,
+      "worst_case_residual_with_buffer_linf": 1.6595311535308617e-05
+    },
+    {
+      "seed": 2042,
+      "norm_bucket": 0.025,
+      "worst_case_residual_with_buffer_linf": 2.0721771689764953e-05
+    },
+    {
+      "seed": 2043,
+      "norm_bucket": 0.01,
+      "worst_case_residual_with_buffer_linf": 7.491323284364107e-06
+    },
+    {
+      "seed": 2043,
+      "norm_bucket": 0.015,
+      "worst_case_residual_with_buffer_linf": 1.0551924633132673e-05
+    },
+    {
+      "seed": 2043,
+      "norm_bucket": 0.02,
+      "worst_case_residual_with_buffer_linf": 1.5475230801048775e-05
+    },
+    {
+      "seed": 2043,
+      "norm_bucket": 0.025,
+      "worst_case_residual_with_buffer_linf": 2.0335426393197783e-05
+    },
+    {
+      "seed": 2051,
+      "norm_bucket": 0.01,
+      "worst_case_residual_with_buffer_linf": 6.5008100249593195e-06
+    },
+    {
+      "seed": 2051,
+      "norm_bucket": 0.015,
+      "worst_case_residual_with_buffer_linf": 1.1871801446084404e-05
+    },
+    {
+      "seed": 2051,
+      "norm_bucket": 0.02,
+      "worst_case_residual_with_buffer_linf": 1.2099224870036768e-05
+    },
+    {
+      "seed": 2051,
+      "norm_bucket": 0.025,
+      "worst_case_residual_with_buffer_linf": 1.9992914833014282e-05
+    },
+    {
+      "seed": 2063,
+      "norm_bucket": 0.01,
+      "worst_case_residual_with_buffer_linf": 8.181323738116833e-06
+    },
+    {
+      "seed": 2063,
+      "norm_bucket": 0.015,
+      "worst_case_residual_with_buffer_linf": 1.1270033393149537e-05
+    },
+    {
+      "seed": 2063,
+      "norm_bucket": 0.02,
+      "worst_case_residual_with_buffer_linf": 1.4774819688415941e-05
+    },
+    {
+      "seed": 2063,
+      "norm_bucket": 0.025,
+      "worst_case_residual_with_buffer_linf": 2.016719862060702e-05
+    }
+  ],
+  "ranking_stability": {
+    "pairwise": [
+      {
+        "seed_i": 2037,
+        "seed_j": 2042,
+        "spearman": 1.0,
+        "kendall_tau": 1.0
+      },
+      {
+        "seed_i": 2037,
+        "seed_j": 2043,
+        "spearman": 1.0,
+        "kendall_tau": 1.0
+      },
+      {
+        "seed_i": 2037,
+        "seed_j": 2051,
+        "spearman": 1.0,
+        "kendall_tau": 1.0
+      },
+      {
+        "seed_i": 2037,
+        "seed_j": 2063,
+        "spearman": 1.0,
+        "kendall_tau": 1.0
+      },
+      {
+        "seed_i": 2042,
+        "seed_j": 2043,
+        "spearman": 1.0,
+        "kendall_tau": 1.0
+      },
+      {
+        "seed_i": 2042,
+        "seed_j": 2051,
+        "spearman": 1.0,
+        "kendall_tau": 1.0
+      },
+      {
+        "seed_i": 2042,
+        "seed_j": 2063,
+        "spearman": 1.0,
+        "kendall_tau": 1.0
+      },
+      {
+        "seed_i": 2043,
+        "seed_j": 2051,
+        "spearman": 1.0,
+        "kendall_tau": 1.0
+      },
+      {
+        "seed_i": 2043,
+        "seed_j": 2063,
+        "spearman": 1.0,
+        "kendall_tau": 1.0
+      },
+      {
+        "seed_i": 2051,
+        "seed_j": 2063,
+        "spearman": 1.0,
+        "kendall_tau": 1.0
+      }
+    ],
+    "mean_spearman": 1.0,
+    "mean_kendall_tau": 1.0,
+    "min_spearman": 1.0,
+    "min_kendall_tau": 1.0
+  },
+  "c3_gate_update": {
+    "C3_seed_norm_joint_robustness_audit": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED",
+    "missing_for_c3_theorem": [
+      "theorem-grade operator identity across full background family",
+      "cross-background finite-part transport identity theorem",
+      "global finite-part lock/cocycle theorem"
+    ]
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "table_nonempty": true,
+    "pairwise_nonempty": true,
+    "mean_spearman_finite": true,
+    "mean_kendall_finite": true,
+    "c3_theorem_proven": false,
+    "no_background_globalization_claimed": true,
+    "no_tensor_component_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

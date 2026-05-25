@@ -1,0 +1,68 @@
+{
+  "schema_version": "p2040_s990_v1",
+  "packet_id": "P2040",
+  "stage_id": "S990",
+  "produced_by": "p2040_s990_strict_same_scheme_subtraction_compatibility_residual_audit.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_SAME_SCHEME_SUBTRACTION_COMPATIBILITY_RESIDUAL_AUDIT_WITH_BOUND__C3_STILL_OPEN",
+  "route": "strict_only_same_scheme_residual_audit",
+  "depends_on": {
+    "p2038_present": true,
+    "p2039_present": true,
+    "preconditions_ready": true
+  },
+  "input_hashes": {
+    "p2038_json_sha256": "22ad318da50b6e1e828ee05a52a75bfaa33cd22a213cd46987416d6d8a6156aa",
+    "p2039_json_sha256": "c3ab1ea295f3ae3d246914081fc5fdea9c8db8e99b4d557ac20094f16209cf4b"
+  },
+  "audit_scope": {
+    "controlled_background_pair": "B1_scalar_to_FRW_controlled_pair_v1",
+    "basis": [
+      "R2_bar",
+      "Ric2_bar",
+      "Riem2_bar"
+    ],
+    "subtraction_model": "residual = D_ref - M*a_ref with M in same-scheme quotient basis",
+    "a_ref": [
+      0.013,
+      -0.021,
+      0.008
+    ],
+    "D_ref": [
+      0.013,
+      -0.021,
+      0.008
+    ]
+  },
+  "residual_audit": {
+    "before_candidate_linf": 0.0,
+    "after_candidate_linf": 1.4599999999998295e-05,
+    "propagated_uncertainty_bound_linf": 1.131534990839292e-07,
+    "after_candidate_with_uncertainty_upper_bound_linf": 1.4713153499082224e-05,
+    "residual_bound_threshold_linf": 0.0001,
+    "residual_bound_pass": true
+  },
+  "c3_gate_update": {
+    "C3_subtraction_compatibility_residual_audit": "COMPUTED_FOR_ONE_CONTROLLED_PAIR",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED",
+    "missing_for_c3_theorem": [
+      "operator-level same-scheme subtraction identity proof",
+      "cross-background transport identity theorem",
+      "global finite-part lock cocycle theorem"
+    ]
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "base_candidate_nonzero": true,
+    "before_residual_finite": true,
+    "after_residual_finite": true,
+    "uncertainty_bound_finite": true,
+    "c3_theorem_proven": false,
+    "no_background_globalization_claimed": true,
+    "no_tensor_component_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

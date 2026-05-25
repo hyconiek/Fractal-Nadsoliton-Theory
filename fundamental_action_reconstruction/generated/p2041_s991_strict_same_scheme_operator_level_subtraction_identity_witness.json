@@ -1,0 +1,120 @@
+{
+  "schema_version": "p2041_s991_v1",
+  "packet_id": "P2041",
+  "stage_id": "S991",
+  "produced_by": "p2041_s991_strict_same_scheme_operator_level_subtraction_identity_witness.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_OPERATOR_LEVEL_SAME_SCHEME_SUBTRACTION_IDENTITY_WITNESS_WITH_BOUND__C3_STILL_OPEN",
+  "route": "strict_only_operator_level_same_scheme_witness",
+  "depends_on": {
+    "p2038_present": true,
+    "p2040_present": true,
+    "preconditions_ready": true
+  },
+  "input_hashes": {
+    "p2038_json_sha256": "22ad318da50b6e1e828ee05a52a75bfaa33cd22a213cd46987416d6d8a6156aa",
+    "p2040_json_sha256": "6722de8a2962f0758400872725bd9c93e30dfe75234d302130c5628bb980dea9"
+  },
+  "symbolic_witness": {
+    "identity_form": "residual(x)=x-(I+delta)*x=-delta*x",
+    "delta_matrix": [
+      [
+        0.0008,
+        -0.0002,
+        0.0
+      ],
+      [
+        0.0001,
+        0.0005,
+        -0.0001
+      ],
+      [
+        0.0,
+        0.0003,
+        0.0004
+      ]
+    ],
+    "residual_symbolic_components": [
+      "-0.000799999999999912*x1 + 0.0002*x2",
+      "-0.0001*x1 - 0.000499999999999945*x2 + 0.0001*x3",
+      "-0.0003*x2 - 0.000399999999999956*x3"
+    ]
+  },
+  "numeric_witness": {
+    "controlled_background_pair": "B1_scalar_to_FRW_controlled_pair_v1",
+    "basis": [
+      "R2_bar",
+      "Ric2_bar",
+      "Riem2_bar"
+    ],
+    "test_vectors_count": 4,
+    "rows": [
+      {
+        "vector_id": "v1",
+        "a_test": [
+          0.013,
+          -0.021,
+          0.008
+        ],
+        "residual_linf": 1.4599999999998295e-05,
+        "residual_with_uncertainty_bound_linf": 1.4713153499082224e-05
+      },
+      {
+        "vector_id": "v2",
+        "a_test": [
+          0.02,
+          0.015,
+          -0.01
+        ],
+        "residual_linf": 1.2999999999999123e-05,
+        "residual_with_uncertainty_bound_linf": 1.3113153499083052e-05
+      },
+      {
+        "vector_id": "v3",
+        "a_test": [
+          -0.017,
+          0.011,
+          0.019
+        ],
+        "residual_linf": 1.5799999999999842e-05,
+        "residual_with_uncertainty_bound_linf": 1.5913153499083773e-05
+      },
+      {
+        "vector_id": "v4",
+        "a_test": [
+          0.009,
+          -0.014,
+          -0.016
+        ],
+        "residual_linf": 1.0599999999999499e-05,
+        "residual_with_uncertainty_bound_linf": 1.0713153499083428e-05
+      }
+    ],
+    "worst_case_residual_linf": 1.5799999999999842e-05,
+    "worst_case_residual_with_uncertainty_bound_linf": 1.5913153499083773e-05,
+    "worst_case_threshold_linf": 0.0002,
+    "worst_case_pass": true
+  },
+  "c3_gate_update": {
+    "C3_operator_level_same_scheme_identity_witness": "COMPUTED_FOR_MULTIPLE_TEST_VECTORS",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED",
+    "missing_for_c3_theorem": [
+      "theorem-grade operator identity proof across background family",
+      "cross-background finite-part transport identity theorem",
+      "global finite-part lock/cocycle theorem"
+    ]
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "test_vectors_count_ge_4": true,
+    "worst_case_finite": true,
+    "symbolic_identity_exported": true,
+    "c3_theorem_proven": false,
+    "no_background_globalization_claimed": true,
+    "no_tensor_component_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

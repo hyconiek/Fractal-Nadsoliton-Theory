@@ -1,0 +1,93 @@
+{
+  "schema_version": "p2056_s1006_v1",
+  "packet_id": "P2056",
+  "stage_id": "S1006",
+  "produced_by": "p2056_s1006_strict_same_scheme_allocation_policy_calibration_audit.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_ALLOCATION_POLICY_CALIBRATION_AUDIT_WITH_BOOTSTRAP_GAIN_VARIANCE__C3_STILL_OPEN",
+  "depends_on": {
+    "p2054_present": true,
+    "preconditions_ready": true
+  },
+  "input_hashes": {
+    "p2054_json_sha256": "aeaa9e27d5da0e629226d3558c3f9cbf74cb671bc2a499dbc0d7c0e5aaa8e9c3"
+  },
+  "calibration_setup": {
+    "profiles_compared": 3,
+    "same_total_compute_limit": true,
+    "total_extra_units": 9000.0,
+    "top_k": 2,
+    "softmax_tau": 0.1,
+    "bootstrap_reps": 2000,
+    "bootstrap_seed": 2056001,
+    "objective": "mean_gain - 0.5*sqrt(var_gain)"
+  },
+  "policy_results": [
+    {
+      "policy": "softmax",
+      "objective": 0.0,
+      "mean": 0.0,
+      "var": 0.0,
+      "ci95": {
+        "low": 0.0,
+        "high": 0.0
+      },
+      "samples": 2000
+    },
+    {
+      "policy": "top_k_split",
+      "objective": -0.47583404628437964,
+      "mean": -0.3390000000000001,
+      "var": 0.0748942248902229,
+      "ci95": {
+        "low": -1.0,
+        "high": 0.0
+      },
+      "samples": 2000
+    },
+    {
+      "policy": "all_to_top",
+      "objective": -0.799163785228102,
+      "mean": -0.6621666666666668,
+      "var": 0.07507284197654382,
+      "ci95": {
+        "low": -1.0,
+        "high": 0.0
+      },
+      "samples": 2000
+    }
+  ],
+  "selected_policy": {
+    "policy": "softmax",
+    "objective": 0.0,
+    "mean": 0.0,
+    "var": 0.0,
+    "ci95": {
+      "low": 0.0,
+      "high": 0.0
+    },
+    "samples": 2000
+  },
+  "c3_gate_update": {
+    "C3_allocation_policy_calibration_audit": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED",
+    "missing_for_c3_theorem": [
+      "theorem-grade operator identity across full background family",
+      "cross-background finite-part transport identity theorem",
+      "global finite-part lock/cocycle theorem"
+    ]
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "profiles_nonempty": true,
+    "policies_evaluated": true,
+    "selected_policy_present": true,
+    "c3_theorem_proven": false,
+    "no_background_globalization_claimed": true,
+    "no_tensor_component_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

@@ -1,0 +1,373 @@
+{
+  "schema_version": "p2058_s1008_v1",
+  "packet_id": "P2058",
+  "stage_id": "S1008",
+  "produced_by": "p2058_s1008_strict_same_scheme_policy_regime_switch_audit.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_POLICY_REGIME_SWITCH_AUDIT_WITH_SELECTION_STABILITY_MAP__C3_STILL_OPEN",
+  "depends_on": {
+    "p2054_present": true,
+    "p2057_present": true,
+    "preconditions_ready": true
+  },
+  "input_hashes": {
+    "p2054_json_sha256": "aeaa9e27d5da0e629226d3558c3f9cbf74cb671bc2a499dbc0d7c0e5aaa8e9c3",
+    "p2057_json_sha256": "743b375673fdc7003f7810dad7259ae441d610496e3054059bf12a5c06fc9b7b"
+  },
+  "regime_grid": {
+    "softmax_tau": [
+      0.05,
+      0.1,
+      0.2
+    ],
+    "top_k": [
+      1,
+      2,
+      3
+    ],
+    "objective_weight": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "points_total": 27
+  },
+  "policy_switch_map": [
+    {
+      "softmax_tau": 0.05,
+      "top_k": 1,
+      "objective_weight": 0.25,
+      "selected_policy": "softmax",
+      "policy_objectives": {
+        "all_to_top": 0.2154822031355754,
+        "top_k_split": 0.2154822031355754,
+        "softmax": 1.0
+      }
+    },
+    {
+      "softmax_tau": 0.05,
+      "top_k": 1,
+      "objective_weight": 0.5,
+      "selected_policy": "softmax",
+      "policy_objectives": {
+        "all_to_top": 0.09763107293781748,
+        "top_k_split": 0.09763107293781748,
+        "softmax": 1.0
+      }
+    },
+    {
+      "softmax_tau": 0.05,
+      "top_k": 1,
+      "objective_weight": 0.75,
+      "selected_policy": "softmax",
+      "policy_objectives": {
+        "all_to_top": -0.020220057259940416,
+        "top_k_split": -0.020220057259940416,
+        "softmax": 1.0
+      }
+    },
+    {
+      "softmax_tau": 0.05,
+      "top_k": 2,
+      "objective_weight": 0.25,
+      "selected_policy": "softmax",
+      "policy_objectives": {
+        "all_to_top": 0.2154822031355754,
+        "top_k_split": 0.5488155364689087,
+        "softmax": 1.0
+      }
+    },
+    {
+      "softmax_tau": 0.05,
+      "top_k": 2,
+      "objective_weight": 0.5,
+      "selected_policy": "softmax",
+      "policy_objectives": {
+        "all_to_top": 0.09763107293781748,
+        "top_k_split": 0.4309644062711508,
+        "softmax": 1.0
+      }
+    },
+    {
+      "softmax_tau": 0.05,
+      "top_k": 2,
+      "objective_weight": 0.75,
+      "selected_policy": "softmax",
+      "policy_objectives": {
+        "all_to_top": -0.020220057259940416,
+        "top_k_split": 0.3131132760733929,
+        "softmax": 1.0
+      }
+    },
+    {
+      "softmax_tau": 0.05,
+      "top_k": 3,
+      "objective_weight": 0.25,
+      "selected_policy": "top_k_split",
+      "policy_objectives": {
+        "all_to_top": 0.2154822031355754,
+        "top_k_split": 1.0,
+        "softmax": 1.0
+      }
+    },
+    {
+      "softmax_tau": 0.05,
+      "top_k": 3,
+      "objective_weight": 0.5,
+      "selected_policy": "top_k_split",
+      "policy_objectives": {
+        "all_to_top": 0.09763107293781748,
+        "top_k_split": 1.0,
+        "softmax": 1.0
+      }
+    },
+    {
+      "softmax_tau": 0.05,
+      "top_k": 3,
+      "objective_weight": 0.75,
+      "selected_policy": "top_k_split",
+      "policy_objectives": {
+        "all_to_top": -0.020220057259940416,
+        "top_k_split": 1.0,
+        "softmax": 1.0
+      }
+    },
+    {
+      "softmax_tau": 0.1,
+      "top_k": 1,
+      "objective_weight": 0.25,
+      "selected_policy": "softmax",
+      "policy_objectives": {
+        "all_to_top": 0.2154822031355754,
+        "top_k_split": 0.2154822031355754,
+        "softmax": 1.0
+      }
+    },
+    {
+      "softmax_tau": 0.1,
+      "top_k": 1,
+      "objective_weight": 0.5,
+      "selected_policy": "softmax",
+      "policy_objectives": {
+        "all_to_top": 0.09763107293781748,
+        "top_k_split": 0.09763107293781748,
+        "softmax": 1.0
+      }
+    },
+    {
+      "softmax_tau": 0.1,
+      "top_k": 1,
+      "objective_weight": 0.75,
+      "selected_policy": "softmax",
+      "policy_objectives": {
+        "all_to_top": -0.020220057259940416,
+        "top_k_split": -0.020220057259940416,
+        "softmax": 1.0
+      }
+    },
+    {
+      "softmax_tau": 0.1,
+      "top_k": 2,
+      "objective_weight": 0.25,
+      "selected_policy": "softmax",
+      "policy_objectives": {
+        "all_to_top": 0.2154822031355754,
+        "top_k_split": 0.5488155364689087,
+        "softmax": 1.0
+      }
+    },
+    {
+      "softmax_tau": 0.1,
+      "top_k": 2,
+      "objective_weight": 0.5,
+      "selected_policy": "softmax",
+      "policy_objectives": {
+        "all_to_top": 0.09763107293781748,
+        "top_k_split": 0.4309644062711508,
+        "softmax": 1.0
+      }
+    },
+    {
+      "softmax_tau": 0.1,
+      "top_k": 2,
+      "objective_weight": 0.75,
+      "selected_policy": "softmax",
+      "policy_objectives": {
+        "all_to_top": -0.020220057259940416,
+        "top_k_split": 0.3131132760733929,
+        "softmax": 1.0
+      }
+    },
+    {
+      "softmax_tau": 0.1,
+      "top_k": 3,
+      "objective_weight": 0.25,
+      "selected_policy": "top_k_split",
+      "policy_objectives": {
+        "all_to_top": 0.2154822031355754,
+        "top_k_split": 1.0,
+        "softmax": 1.0
+      }
+    },
+    {
+      "softmax_tau": 0.1,
+      "top_k": 3,
+      "objective_weight": 0.5,
+      "selected_policy": "top_k_split",
+      "policy_objectives": {
+        "all_to_top": 0.09763107293781748,
+        "top_k_split": 1.0,
+        "softmax": 1.0
+      }
+    },
+    {
+      "softmax_tau": 0.1,
+      "top_k": 3,
+      "objective_weight": 0.75,
+      "selected_policy": "top_k_split",
+      "policy_objectives": {
+        "all_to_top": -0.020220057259940416,
+        "top_k_split": 1.0,
+        "softmax": 1.0
+      }
+    },
+    {
+      "softmax_tau": 0.2,
+      "top_k": 1,
+      "objective_weight": 0.25,
+      "selected_policy": "softmax",
+      "policy_objectives": {
+        "all_to_top": 0.2154822031355754,
+        "top_k_split": 0.2154822031355754,
+        "softmax": 1.0
+      }
+    },
+    {
+      "softmax_tau": 0.2,
+      "top_k": 1,
+      "objective_weight": 0.5,
+      "selected_policy": "softmax",
+      "policy_objectives": {
+        "all_to_top": 0.09763107293781748,
+        "top_k_split": 0.09763107293781748,
+        "softmax": 1.0
+      }
+    },
+    {
+      "softmax_tau": 0.2,
+      "top_k": 1,
+      "objective_weight": 0.75,
+      "selected_policy": "softmax",
+      "policy_objectives": {
+        "all_to_top": -0.020220057259940416,
+        "top_k_split": -0.020220057259940416,
+        "softmax": 1.0
+      }
+    },
+    {
+      "softmax_tau": 0.2,
+      "top_k": 2,
+      "objective_weight": 0.25,
+      "selected_policy": "softmax",
+      "policy_objectives": {
+        "all_to_top": 0.2154822031355754,
+        "top_k_split": 0.5488155364689087,
+        "softmax": 1.0
+      }
+    },
+    {
+      "softmax_tau": 0.2,
+      "top_k": 2,
+      "objective_weight": 0.5,
+      "selected_policy": "softmax",
+      "policy_objectives": {
+        "all_to_top": 0.09763107293781748,
+        "top_k_split": 0.4309644062711508,
+        "softmax": 1.0
+      }
+    },
+    {
+      "softmax_tau": 0.2,
+      "top_k": 2,
+      "objective_weight": 0.75,
+      "selected_policy": "softmax",
+      "policy_objectives": {
+        "all_to_top": -0.020220057259940416,
+        "top_k_split": 0.3131132760733929,
+        "softmax": 1.0
+      }
+    },
+    {
+      "softmax_tau": 0.2,
+      "top_k": 3,
+      "objective_weight": 0.25,
+      "selected_policy": "top_k_split",
+      "policy_objectives": {
+        "all_to_top": 0.2154822031355754,
+        "top_k_split": 1.0,
+        "softmax": 1.0
+      }
+    },
+    {
+      "softmax_tau": 0.2,
+      "top_k": 3,
+      "objective_weight": 0.5,
+      "selected_policy": "top_k_split",
+      "policy_objectives": {
+        "all_to_top": 0.09763107293781748,
+        "top_k_split": 1.0,
+        "softmax": 1.0
+      }
+    },
+    {
+      "softmax_tau": 0.2,
+      "top_k": 3,
+      "objective_weight": 0.75,
+      "selected_policy": "top_k_split",
+      "policy_objectives": {
+        "all_to_top": -0.020220057259940416,
+        "top_k_split": 1.0,
+        "softmax": 1.0
+      }
+    }
+  ],
+  "selection_stability": {
+    "switch_counts": {
+      "softmax": 18,
+      "top_k_split": 9
+    },
+    "dominant_policy": "softmax",
+    "dominant_share": 0.6666666666666666
+  },
+  "regret_reference_from_p2057": {
+    "oracle_mean_gain": 0.0,
+    "selected_mean_gain": 0.0,
+    "regret_mean": 0.0,
+    "regret_ci95": {
+      "low": 0.0,
+      "high": 0.0
+    }
+  },
+  "c3_gate_update": {
+    "C3_policy_regime_switch_audit": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED",
+    "missing_for_c3_theorem": [
+      "theorem-grade operator identity across full background family",
+      "cross-background finite-part transport identity theorem",
+      "global finite-part lock/cocycle theorem"
+    ]
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "grid_nonempty": true,
+    "dominant_policy_present": true,
+    "regret_reference_present": true,
+    "c3_theorem_proven": false,
+    "no_background_globalization_claimed": true,
+    "no_tensor_component_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

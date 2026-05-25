@@ -1,0 +1,63 @@
+{
+  "schema_version": "p2060_s1010_v1",
+  "packet_id": "P2060",
+  "stage_id": "S1010",
+  "produced_by": "p2060_s1010_strict_same_scheme_regime_aware_budget_reallocation_audit.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_REGIME_AWARE_BUDGET_REALLOCATION_AUDIT_WITH_ENVELOPE_SHRINK_ESTIMATE__C3_STILL_OPEN",
+  "depends_on": {
+    "p2059_present": true,
+    "p2058_present": true,
+    "preconditions_ready": true
+  },
+  "input_hashes": {
+    "p2059_json_sha256": "05ab7d7e2338a45d96c9f2515368108843e0e85a8acc999632d99110695011fe",
+    "p2058_json_sha256": "d37436220d4a83a8b74ea054c72177b1a192fa6fb5fe7297001ef0cc992dbed8"
+  },
+  "reallocation_policy": {
+    "worst_quantile": 0.25,
+    "total_budget_units": 1.0,
+    "fixed_equal_allocation_per_regime": 0.037037037037037035,
+    "aware_worst_bucket_per_regime": 0.13333333333333333,
+    "aware_rest_bucket_per_regime": 0.009523809523809525,
+    "shrink_model_factor": 0.4
+  },
+  "worst_bucket_size": 6,
+  "rest_bucket_size": 21,
+  "envelope_comparison": {
+    "fixed_regret_max": 0.0,
+    "regime_aware_regret_max": 0.0,
+    "regret_shrink_absolute": 0.0,
+    "regret_shrink_relative": 0.0,
+    "worst_case_regime_reference": {
+      "softmax_tau": 0.05,
+      "top_k": 1,
+      "objective_weight": 0.25,
+      "selected_policy": "softmax",
+      "oracle_objective": 1.0,
+      "selected_objective": 1.0,
+      "regret_proxy": 0.0
+    }
+  },
+  "c3_gate_update": {
+    "C3_regime_aware_budget_reallocation_audit": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED",
+    "missing_for_c3_theorem": [
+      "theorem-grade operator identity across full background family",
+      "cross-background finite-part transport identity theorem",
+      "global finite-part lock/cocycle theorem"
+    ]
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "regime_grid_nonempty": true,
+    "envelope_shrink_nonnegative": true,
+    "c3_theorem_proven": false,
+    "no_background_globalization_claimed": true,
+    "no_tensor_component_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

@@ -1,0 +1,75 @@
+{
+  "schema_version": "p2053_s1003_v1",
+  "packet_id": "P2053",
+  "stage_id": "S1003",
+  "produced_by": "p2053_s1003_strict_same_scheme_censoring_aware_budget_profile_recommendation_audit.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_CENSORING_AWARE_BUDGET_PROFILE_RECOMMENDATION_AUDIT_WITH_TRACE__C3_STILL_OPEN",
+  "depends_on": {
+    "p2052_present": true,
+    "preconditions_ready": true
+  },
+  "input_hashes": {
+    "p2052_json_sha256": "ba8b6759216927a2151947ef948621a8ea2873d789db615d216d54f6a44acae6"
+  },
+  "recommendation_policy": {
+    "mode": "cost_minimization_under_censoring",
+    "score_formula": "detected_frontier_flag - 0.25 * normalized_compute_cost",
+    "interpretation": "if no frontier is detected, minimize compute under censoring while preserving explicit OPEN status"
+  },
+  "ranked_profiles": [
+    {
+      "profile_id": "B1_small",
+      "resolution_kind": "computational_censoring_certificate",
+      "compute_units_proxy": 5616.0,
+      "detected_frontier_flag": 0,
+      "normalized_compute_cost": 0.0,
+      "censoring_aware_priority_score": 0.0
+    },
+    {
+      "profile_id": "B2_medium",
+      "resolution_kind": "computational_censoring_certificate",
+      "compute_units_proxy": 10800.0,
+      "detected_frontier_flag": 0,
+      "normalized_compute_cost": 0.3870967741935484,
+      "censoring_aware_priority_score": -0.0967741935483871
+    },
+    {
+      "profile_id": "B3_large",
+      "resolution_kind": "computational_censoring_certificate",
+      "compute_units_proxy": 19008.0,
+      "detected_frontier_flag": 0,
+      "normalized_compute_cost": 1.0,
+      "censoring_aware_priority_score": -0.25
+    }
+  ],
+  "recommended_profile": {
+    "profile_id": "B1_small",
+    "resolution_kind": "computational_censoring_certificate",
+    "compute_units_proxy": 5616.0,
+    "detected_frontier_flag": 0,
+    "normalized_compute_cost": 0.0,
+    "censoring_aware_priority_score": 0.0
+  },
+  "c3_gate_update": {
+    "C3_censoring_aware_budget_recommendation": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED",
+    "missing_for_c3_theorem": [
+      "theorem-grade operator identity across full background family",
+      "cross-background finite-part transport identity theorem",
+      "global finite-part lock/cocycle theorem"
+    ]
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "rows_nonempty": true,
+    "has_recommendation": true,
+    "c3_theorem_proven": false,
+    "no_background_globalization_claimed": true,
+    "no_tensor_component_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

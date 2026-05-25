@@ -1,0 +1,204 @@
+{
+  "schema_version": "p2062_s1012_v1",
+  "packet_id": "P2062",
+  "stage_id": "S1012",
+  "produced_by": "p2062_s1012_strict_same_scheme_nonlinearity_stress_audit.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_NONLINEARITY_STRESS_AUDIT_WITH_BEST_SHARE_STABILITY_MAP__C3_STILL_OPEN",
+  "depends_on": {
+    "p2061_present": true,
+    "preconditions_ready": true
+  },
+  "input_hashes": {
+    "p2061_json_sha256": "2bd5f84a0315f2622c9ad8b223fd1dd661a3f4135d00a9904da0c5bebc432e8c"
+  },
+  "stress_setup": {
+    "shares": [
+      0.6,
+      0.7,
+      0.8,
+      0.9
+    ],
+    "models": [
+      "linear",
+      "quadratic",
+      "saturating",
+      "convex"
+    ],
+    "base_fixed_regret_max": 0.0
+  },
+  "per_model_results": [
+    {
+      "model": "linear",
+      "rows": [
+        {
+          "share": 0.6,
+          "shrink_factor": 0.5,
+          "regime_aware_regret_max": 0.0,
+          "regret_shrink_absolute": 0.0
+        },
+        {
+          "share": 0.7,
+          "shrink_factor": 0.55,
+          "regime_aware_regret_max": 0.0,
+          "regret_shrink_absolute": 0.0
+        },
+        {
+          "share": 0.8,
+          "shrink_factor": 0.6000000000000001,
+          "regime_aware_regret_max": 0.0,
+          "regret_shrink_absolute": 0.0
+        },
+        {
+          "share": 0.9,
+          "shrink_factor": 0.65,
+          "regime_aware_regret_max": 0.0,
+          "regret_shrink_absolute": 0.0
+        }
+      ],
+      "best_row": {
+        "share": 0.6,
+        "shrink_factor": 0.5,
+        "regime_aware_regret_max": 0.0,
+        "regret_shrink_absolute": 0.0
+      }
+    },
+    {
+      "model": "quadratic",
+      "rows": [
+        {
+          "share": 0.6,
+          "shrink_factor": 0.366,
+          "regime_aware_regret_max": 0.0,
+          "regret_shrink_absolute": 0.0
+        },
+        {
+          "share": 0.7,
+          "shrink_factor": 0.44399999999999995,
+          "regime_aware_regret_max": 0.0,
+          "regret_shrink_absolute": 0.0
+        },
+        {
+          "share": 0.8,
+          "shrink_factor": 0.534,
+          "regime_aware_regret_max": 0.0,
+          "regret_shrink_absolute": 0.0
+        },
+        {
+          "share": 0.9,
+          "shrink_factor": 0.636,
+          "regime_aware_regret_max": 0.0,
+          "regret_shrink_absolute": 0.0
+        }
+      ],
+      "best_row": {
+        "share": 0.6,
+        "shrink_factor": 0.366,
+        "regime_aware_regret_max": 0.0,
+        "regret_shrink_absolute": 0.0
+      }
+    },
+    {
+      "model": "saturating",
+      "rows": [
+        {
+          "share": 0.6,
+          "shrink_factor": 0.688,
+          "regime_aware_regret_max": 0.0,
+          "regret_shrink_absolute": 0.0
+        },
+        {
+          "share": 0.7,
+          "shrink_factor": 0.7369999999999999,
+          "regime_aware_regret_max": 0.0,
+          "regret_shrink_absolute": 0.0
+        },
+        {
+          "share": 0.8,
+          "shrink_factor": 0.7719999999999999,
+          "regime_aware_regret_max": 0.0,
+          "regret_shrink_absolute": 0.0
+        },
+        {
+          "share": 0.9,
+          "shrink_factor": 0.7929999999999999,
+          "regime_aware_regret_max": 0.0,
+          "regret_shrink_absolute": 0.0
+        }
+      ],
+      "best_row": {
+        "share": 0.6,
+        "shrink_factor": 0.688,
+        "regime_aware_regret_max": 0.0,
+        "regret_shrink_absolute": 0.0
+      }
+    },
+    {
+      "model": "convex",
+      "rows": [
+        {
+          "share": 0.6,
+          "shrink_factor": 0.20055480479109444,
+          "regime_aware_regret_max": 0.0,
+          "regret_shrink_absolute": 0.0
+        },
+        {
+          "share": 0.7,
+          "shrink_factor": 0.2381377674149945,
+          "regime_aware_regret_max": 0.0,
+          "regret_shrink_absolute": 0.0
+        },
+        {
+          "share": 0.8,
+          "shrink_factor": 0.2868058987135074,
+          "regime_aware_regret_max": 0.0,
+          "regret_shrink_absolute": 0.0
+        },
+        {
+          "share": 0.9,
+          "shrink_factor": 0.34443843832875576,
+          "regime_aware_regret_max": 0.0,
+          "regret_shrink_absolute": 0.0
+        }
+      ],
+      "best_row": {
+        "share": 0.6,
+        "shrink_factor": 0.20055480479109444,
+        "regime_aware_regret_max": 0.0,
+        "regret_shrink_absolute": 0.0
+      }
+    }
+  ],
+  "best_share_stability": {
+    "best_share_votes": {
+      "0.6": 4,
+      "0.7": 0,
+      "0.8": 0,
+      "0.9": 0
+    },
+    "dominant_best_share": "0.6",
+    "stability_fraction": 1.0
+  },
+  "c3_gate_update": {
+    "C3_nonlinearity_stress_audit": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED",
+    "missing_for_c3_theorem": [
+      "theorem-grade operator identity across full background family",
+      "cross-background finite-part transport identity theorem",
+      "global finite-part lock/cocycle theorem"
+    ]
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "models_nonempty": true,
+    "dominant_best_share_present": true,
+    "stability_fraction_in_unit_interval": true,
+    "c3_theorem_proven": false,
+    "no_background_globalization_claimed": true,
+    "no_tensor_component_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

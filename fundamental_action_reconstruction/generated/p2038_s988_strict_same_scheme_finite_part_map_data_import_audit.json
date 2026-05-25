@@ -1,0 +1,85 @@
+{
+  "schema_version": "p2038_s988_v1",
+  "packet_id": "P2038",
+  "stage_id": "S988",
+  "produced_by": "p2038_s988_strict_same_scheme_finite_part_map_data_import_audit.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_FIRST_NONZERO_SAME_SCHEME_FINITE_PART_CANDIDATE_IMPORTED_WITH_TRACE__C3_STILL_OPEN",
+  "route": "strict_only_with_controlled_same_scheme_pair",
+  "depends_on": {
+    "p2037_present": true,
+    "p2037_seed_ready": true
+  },
+  "input_hashes": {
+    "p2037_json_sha256": "b96f04fe6d39159e07812eced58f2ceec16541c80b367e7ae65f16703fcb2d18"
+  },
+  "candidate_data_import": {
+    "import_id": "same_scheme_finite_part_candidate_import_v1",
+    "controlled_background_pair": "B1_scalar_to_FRW_controlled_pair_v1",
+    "basis": [
+      "R2_bar",
+      "Ric2_bar",
+      "Riem2_bar"
+    ],
+    "delta_finite_part_candidate_matrix": [
+      [
+        0.0008,
+        -0.0002,
+        0.0
+      ],
+      [
+        0.0001,
+        0.0005,
+        -0.0001
+      ],
+      [
+        0.0,
+        0.0003,
+        0.0004
+      ]
+    ],
+    "candidate_transport_matrix": [
+      [
+        1.0008,
+        -0.0002,
+        0.0
+      ],
+      [
+        0.0001,
+        1.0005,
+        -0.0001
+      ],
+      [
+        0.0,
+        0.0003,
+        1.0004
+      ]
+    ],
+    "candidate_norm_linf": 0.0008,
+    "data_role": "first nonzero candidate for C3 preparation",
+    "warning": "Data import is not a finite-part transport theorem and does not discharge C3."
+  },
+  "c2_c3_gate_update": {
+    "C2_basis_preserving_seed": "KEPT_FROM_P2037",
+    "C3_nonzero_candidate_data": "IMPORTED_FOR_ONE_CONTROLLED_PAIR",
+    "C3_finite_part_scheme_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED",
+    "missing_for_c3_theorem": [
+      "proof of subtraction compatibility for transported divergences",
+      "loop-derived uncertainty bounds for candidate coefficients",
+      "cross-background equality witness on common operator basis"
+    ]
+  },
+  "gatekeeper_checks": {
+    "seed_ready": true,
+    "basis_rank3_quotient": true,
+    "nonzero_candidate_present": true,
+    "candidate_norm_positive": true,
+    "c3_theorem_proven": false,
+    "no_background_globalization_claimed": true,
+    "no_tensor_component_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

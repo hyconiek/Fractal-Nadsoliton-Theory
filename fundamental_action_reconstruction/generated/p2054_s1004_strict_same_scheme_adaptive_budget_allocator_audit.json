@@ -1,0 +1,94 @@
+{
+  "schema_version": "p2054_s1004_v1",
+  "packet_id": "P2054",
+  "stage_id": "S1004",
+  "produced_by": "p2054_s1004_strict_same_scheme_adaptive_budget_allocator_audit.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_ADAPTIVE_BUDGET_ALLOCATOR_AUDIT_FIXED_VS_ADAPTIVE_WITH_TRACE__C3_STILL_OPEN",
+  "depends_on": {
+    "p2053_present": true,
+    "preconditions_ready": true
+  },
+  "input_hashes": {
+    "p2053_json_sha256": "11008c93789d74d7dabbebc68a40afc50be1b77cc5c4d09f7e3ecbbd03c448bf"
+  },
+  "allocation_parameters": {
+    "total_extra_units": 9000.0,
+    "adaptive_rule": "allocate all extra units to highest censoring_aware_priority_score profile",
+    "fixed_rule": "equal split across profiles",
+    "information_compute_proxy": "censoring_aware_priority_score per added compute unit"
+  },
+  "fixed_allocation": [
+    {
+      "profile_id": "B1_small",
+      "base_compute_units": 5616.0,
+      "extra_units_allocated": 3000.0,
+      "post_allocation_units": 8616.0
+    },
+    {
+      "profile_id": "B2_medium",
+      "base_compute_units": 10800.0,
+      "extra_units_allocated": 3000.0,
+      "post_allocation_units": 13800.0
+    },
+    {
+      "profile_id": "B3_large",
+      "base_compute_units": 19008.0,
+      "extra_units_allocated": 3000.0,
+      "post_allocation_units": 22008.0
+    }
+  ],
+  "adaptive_allocation": [
+    {
+      "profile_id": "B1_small",
+      "base_compute_units": 5616.0,
+      "extra_units_allocated": 9000.0,
+      "post_allocation_units": 14616.0,
+      "priority_score": 0.0
+    },
+    {
+      "profile_id": "B2_medium",
+      "base_compute_units": 10800.0,
+      "extra_units_allocated": 0.0,
+      "post_allocation_units": 10800.0,
+      "priority_score": -0.0967741935483871
+    },
+    {
+      "profile_id": "B3_large",
+      "base_compute_units": 19008.0,
+      "extra_units_allocated": 0.0,
+      "post_allocation_units": 19008.0,
+      "priority_score": -0.25
+    }
+  ],
+  "comparison_summary": {
+    "profiles_total": 3,
+    "top_profile_id": "B1_small",
+    "fixed_info_proxy": -0.3467741935483871,
+    "adaptive_info_proxy": -0.3467741935483871,
+    "fixed_followup_signal": -3.853046594982079e-05,
+    "adaptive_followup_signal": 0.0
+  },
+  "c3_gate_update": {
+    "C3_adaptive_budget_allocator_audit": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED",
+    "missing_for_c3_theorem": [
+      "theorem-grade operator identity across full background family",
+      "cross-background finite-part transport identity theorem",
+      "global finite-part lock/cocycle theorem"
+    ]
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "rows_nonempty": true,
+    "budget_conserved_fixed": true,
+    "budget_conserved_adaptive": true,
+    "c3_theorem_proven": false,
+    "no_background_globalization_claimed": true,
+    "no_tensor_component_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}
