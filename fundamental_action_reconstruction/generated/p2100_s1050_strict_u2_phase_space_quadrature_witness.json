@@ -1,0 +1,83 @@
+{
+  "schema_version": "p2100_s1050_v1",
+  "packet_id": "P2100",
+  "stage_id": "S1050",
+  "produced_by": "p2100_s1050_strict_u2_phase_space_quadrature_witness.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_U2_PHASE_SPACE_QUADRATURE_WITNESS_WITH_TRACE__TASK2_ENTRY_PARTIAL",
+  "depends_on": {
+    "p2099_present": true,
+    "p1951_present": true,
+    "p1969_present": true,
+    "preconditions_ready": true
+  },
+  "u2_phase_space_quadrature": {
+    "channel": "graviton -> gauge_gauge",
+    "scheme_tag": "STRICT_P2020_PHASESPACE_SCHEME_V1",
+    "formula": "Disc(s)=s*(a_R2/(8*pi)+a_Ric2/(6*pi))",
+    "coefficients": {
+      "a_R2": 0.002031903239877158,
+      "a_Ric2": 0.017447010167053745
+    },
+    "s_grid": [
+      0.5,
+      1.0,
+      2.0,
+      4.0,
+      8.0
+    ],
+    "rows": [
+      {
+        "s": 0.5,
+        "disc_integral_value": 0.0005032197489407205,
+        "positive": true
+      },
+      {
+        "s": 1.0,
+        "disc_integral_value": 0.001006439497881441,
+        "positive": true
+      },
+      {
+        "s": 2.0,
+        "disc_integral_value": 0.002012878995762882,
+        "positive": true
+      },
+      {
+        "s": 4.0,
+        "disc_integral_value": 0.004025757991525764,
+        "positive": true
+      },
+      {
+        "s": 8.0,
+        "disc_integral_value": 0.008051515983051528,
+        "positive": true
+      }
+    ],
+    "all_positive": true,
+    "scope_limit": "phase-space quadrature witness in strict B1 chain; not full dressed optical-theorem closure"
+  },
+  "unitarity_blocker_update": {
+    "U1_shared_rg_scheme_lock": "COMPUTED",
+    "U2_exact_discontinuity_integration": "COMPUTED",
+    "U3_positive_residue_uncertainty_table": "OPEN"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2101_candidate",
+    "goal": "build U3 positivity uncertainty table with explicit residue-uncertainty propagation on same scheme"
+  },
+  "c3_gate_update": {
+    "C3_u2_phase_space_quadrature_witness": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "u2_computed": true,
+    "all_grid_points_positive": true,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": false,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

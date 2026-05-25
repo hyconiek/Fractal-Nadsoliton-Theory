@@ -1,0 +1,59 @@
+{
+  "schema_version": "p2087_s1037_v1",
+  "packet_id": "P2087",
+  "stage_id": "S1037",
+  "produced_by": "p2087_s1037_strict_full_ltotal_eom_normal_form_extraction_audit.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_FULL_LTOTAL_EOM_NORMAL_FORM_EXTRACTION_AUDIT_WITH_TRACE__C3_STILL_OPEN",
+  "depends_on": {
+    "p2086_present": true,
+    "preconditions_ready": true
+  },
+  "input_hashes": {
+    "p2086_json_sha256": "91267e3dd509672d9a0161372d17187bd3a7f04ca3d3820502812a0db73a0bfd"
+  },
+  "eom_normal_form_results": {
+    "full_ltotal": "Add(Mul(Integer(-1), Symbol('gA', real=True), Pow(Function('A')(Symbol('x', real=True)), Integer(4))), Mul(Integer(-1), Symbol('gh', real=True), Pow(Function('h')(Symbol('x', real=True)), Integer(4))), Mul(Integer(-1), Symbol('gmix', real=True), Function('A')(Symbol('x', real=True)), Function('h')(Symbol('x', real=True)), Function('psi')(Symbol('x', real=True))), Mul(Rational(1, 2), Symbol('kA', real=True), Pow(Derivative(Function('A')(Symbol('x', real=True)), Tuple(Symbol('x', real=True), Integer(1))), Integer(2))), Mul(Rational(1, 2), Symbol('kh', real=True), Pow(Derivative(Function('h')(Symbol('x', real=True)), Tuple(Symbol('x', real=True), Integer(1))), Integer(2))), Mul(Rational(1, 2), Symbol('kpsi', real=True), Pow(Derivative(Function('psi')(Symbol('x', real=True)), Tuple(Symbol('x', real=True), Integer(1))), Integer(2))), Mul(Integer(-1), Symbol('lam4', real=True), Pow(Function('psi')(Symbol('x', real=True)), Integer(4))), Mul(Integer(-1), Rational(1, 2), Symbol('mA', real=True), Pow(Function('A')(Symbol('x', real=True)), Integer(2))), Mul(Integer(-1), Rational(1, 2), Symbol('mh', real=True), Pow(Function('h')(Symbol('x', real=True)), Integer(2))), Mul(Integer(-1), Rational(1, 2), Symbol('mpsi', real=True), Pow(Function('psi')(Symbol('x', real=True)), Integer(2))), Mul(Integer(-1), Symbol('zeta', real=True), Pow(Function('A')(Symbol('x', real=True)), Integer(2)), Pow(Function('psi')(Symbol('x', real=True)), Integer(2))))",
+    "eom_full": {
+      "psi": "Add(Mul(Integer(-1), Symbol('gmix', real=True), Function('A')(Symbol('x', real=True)), Function('h')(Symbol('x', real=True))), Mul(Integer(-1), Symbol('kpsi', real=True), Derivative(Function('psi')(Symbol('x', real=True)), Tuple(Symbol('x', real=True), Integer(2)))), Mul(Integer(-1), Integer(4), Symbol('lam4', real=True), Pow(Function('psi')(Symbol('x', real=True)), Integer(3))), Mul(Integer(-1), Symbol('mpsi', real=True), Function('psi')(Symbol('x', real=True))), Mul(Integer(-1), Integer(2), Symbol('zeta', real=True), Pow(Function('A')(Symbol('x', real=True)), Integer(2)), Function('psi')(Symbol('x', real=True))))",
+      "A": "Add(Mul(Integer(-1), Integer(4), Symbol('gA', real=True), Pow(Function('A')(Symbol('x', real=True)), Integer(3))), Mul(Integer(-1), Symbol('gmix', real=True), Function('h')(Symbol('x', real=True)), Function('psi')(Symbol('x', real=True))), Mul(Integer(-1), Symbol('kA', real=True), Derivative(Function('A')(Symbol('x', real=True)), Tuple(Symbol('x', real=True), Integer(2)))), Mul(Integer(-1), Symbol('mA', real=True), Function('A')(Symbol('x', real=True))), Mul(Integer(-1), Integer(2), Symbol('zeta', real=True), Function('A')(Symbol('x', real=True)), Pow(Function('psi')(Symbol('x', real=True)), Integer(2))))",
+      "h": "Add(Mul(Integer(-1), Integer(4), Symbol('gh', real=True), Pow(Function('h')(Symbol('x', real=True)), Integer(3))), Mul(Integer(-1), Symbol('gmix', real=True), Function('A')(Symbol('x', real=True)), Function('psi')(Symbol('x', real=True))), Mul(Integer(-1), Symbol('kh', real=True), Derivative(Function('h')(Symbol('x', real=True)), Tuple(Symbol('x', real=True), Integer(2)))), Mul(Integer(-1), Symbol('mh', real=True), Function('h')(Symbol('x', real=True))))"
+    },
+    "solved_second_derivative_rhs": {
+      "psi_ddot": "Add(Mul(Integer(-1), Symbol('gmix', real=True), Pow(Symbol('kpsi', real=True), Integer(-1)), Function('A')(Symbol('x', real=True)), Function('h')(Symbol('x', real=True))), Mul(Integer(-1), Integer(4), Pow(Symbol('kpsi', real=True), Integer(-1)), Symbol('lam4', real=True), Pow(Function('psi')(Symbol('x', real=True)), Integer(3))), Mul(Integer(-1), Pow(Symbol('kpsi', real=True), Integer(-1)), Symbol('mpsi', real=True), Function('psi')(Symbol('x', real=True))), Mul(Integer(-1), Integer(2), Pow(Symbol('kpsi', real=True), Integer(-1)), Symbol('zeta', real=True), Pow(Function('A')(Symbol('x', real=True)), Integer(2)), Function('psi')(Symbol('x', real=True))))",
+      "A_ddot": "Add(Mul(Integer(-1), Integer(4), Symbol('gA', real=True), Pow(Symbol('kA', real=True), Integer(-1)), Pow(Function('A')(Symbol('x', real=True)), Integer(3))), Mul(Integer(-1), Symbol('gmix', real=True), Pow(Symbol('kA', real=True), Integer(-1)), Function('h')(Symbol('x', real=True)), Function('psi')(Symbol('x', real=True))), Mul(Integer(-1), Pow(Symbol('kA', real=True), Integer(-1)), Symbol('mA', real=True), Function('A')(Symbol('x', real=True))), Mul(Integer(-1), Integer(2), Pow(Symbol('kA', real=True), Integer(-1)), Symbol('zeta', real=True), Function('A')(Symbol('x', real=True)), Pow(Function('psi')(Symbol('x', real=True)), Integer(2))))",
+      "h_ddot": "Add(Mul(Integer(-1), Integer(4), Symbol('gh', real=True), Pow(Symbol('kh', real=True), Integer(-1)), Pow(Function('h')(Symbol('x', real=True)), Integer(3))), Mul(Integer(-1), Symbol('gmix', real=True), Pow(Symbol('kh', real=True), Integer(-1)), Function('A')(Symbol('x', real=True)), Function('psi')(Symbol('x', real=True))), Mul(Integer(-1), Pow(Symbol('kh', real=True), Integer(-1)), Symbol('mh', real=True), Function('h')(Symbol('x', real=True))))"
+    },
+    "residual_after_substitute_normal_form": {
+      "psi": "Integer(0)",
+      "A": "Integer(0)",
+      "h": "Integer(0)"
+    },
+    "sample_normal_form_rhs": {
+      "psi_ddot": "(5*(-4*sin(x)**4 - 4*sin(x)**2 - 10)*exp(x)*sin(x) - 4*cos(2*x))*exp(-x)/55",
+      "A_ddot": "(5*(-24*sin(x)**4 + 23*sin(x)**2 - 14)*exp(x)*cos(2*x) - 4*sin(x))*exp(-x)/65",
+      "h_ddot": "-sin(x)*cos(2*x)/15 - 7*exp(-x)/12 - exp(-3*x)/3"
+    }
+  },
+  "c3_gate_update": {
+    "C3_full_ltotal_eom_normal_form_extraction_audit": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED",
+    "missing_for_full_eom_theorem": [
+      "strict background-family tensor closure proof (FRW/Bianchi-I and targeted branches)",
+      "global non-perturbative well-posedness/export layer",
+      "QW-2191-compatible strict selector premise or source"
+    ]
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "normal_form_solved_all_fields": true,
+    "residual_zero_after_normal_form_substitution": true,
+    "c3_theorem_proven": false,
+    "no_background_globalization_claimed": true,
+    "no_tensor_component_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": "p2091_s1041_v1",
+  "packet_id": "P2091",
+  "stage_id": "S1041",
+  "produced_by": "p2091_s1041_strict_delta_bg_yf_projection_row_level_gap_witness.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_DELTA_BG_YF_PROJECTION_ROW_LEVEL_GAP_WITNESS__C3_STILL_OPEN",
+  "depends_on": {
+    "p2090_present": true,
+    "p1965_present": true,
+    "preconditions_ready": true
+  },
+  "input_hashes": {
+    "p2090_json_sha256": "1b6cdcc2d56d11379ac61b0f4e188a13bf7a11d23fd6951f7681453bc72faaeb",
+    "p1965_json_sha256": "1a796a6bcbcbd7503604a33bdb3df098655f545c0424c8a86fab1fa3b6c04e86"
+  },
+  "row_level_gap_register": [
+    {
+      "row_id": "PRJ_ROW_1",
+      "target": "E_gmunu/L_total -> delta_R",
+      "status": "OPEN_MISSING_EXPORT",
+      "required_object": "explicit full-covariant EL_g projection row with basis certificate"
+    },
+    {
+      "row_id": "PRJ_ROW_2",
+      "target": "(E_gmunu,E_h,E_yf) joint map -> delta_RicUU",
+      "status": "OPEN_MISSING_EXPORT",
+      "required_object": "joint projection operator contract + termwise witness"
+    },
+    {
+      "row_id": "PRJ_ROW_3",
+      "target": "Higgs/Yukawa derivative sector -> delta_gradchi2",
+      "status": "OPEN_MISSING_EXPORT",
+      "required_object": "covariant derivative convention-fixed projection row"
+    },
+    {
+      "row_id": "PRJ_ROW_4",
+      "target": "Omega_unexported exclusion",
+      "status": "OPEN_MISSING_EXPORT",
+      "required_object": "proof row that remainder term is identically zero on admissible branch class"
+    }
+  ],
+  "recommended_next_honest_step": {
+    "id": "P2092_candidate",
+    "goal": "Attempt explicit export of PRJ_ROW_1 only (minimal noncyclic anchor), else certify row-specific nonavailability."
+  },
+  "c3_gate_update": {
+    "C3_delta_bg_yf_projection_row_level_gap_witness": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "row_count_expected": true,
+    "all_rows_open": true,
+    "c3_theorem_proven": false,
+    "no_background_globalization_claimed": true,
+    "no_tensor_component_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

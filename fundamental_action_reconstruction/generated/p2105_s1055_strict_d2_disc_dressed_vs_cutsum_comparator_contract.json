@@ -1,0 +1,58 @@
+{
+  "schema_version": "p2105_s1055_v1",
+  "packet_id": "P2105",
+  "stage_id": "S1055",
+  "produced_by": "p2105_s1055_strict_d2_disc_dressed_vs_cutsum_comparator_contract.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_D2_COMPARATOR_CONTRACT_WITH_TRACE__ROWS_REGISTERED",
+  "depends_on": {
+    "p2104_present": true,
+    "p2020_present": true,
+    "preconditions_ready": true
+  },
+  "d2_comparator_contract": {
+    "target": "Disc_dressed vs CutSum on common basis",
+    "scheme_tag": "STRICT_P2020_PHASESPACE_SCHEME_V1",
+    "rows": [
+      {
+        "row_id": "CMP1",
+        "lhs": "Disc_dressed_common_basis_row_i",
+        "rhs": "CutSum_common_basis_row_i",
+        "status": "OPEN_MISSING_DRESSED_ROW",
+        "missing": "dressed discontinuity row value on common basis"
+      },
+      {
+        "row_id": "CMP2",
+        "lhs": "Disc_dressed_covariance_row_i",
+        "rhs": "CutSum_uncertainty_row_i",
+        "status": "OPEN_MISSING_COVARIANCE_LINK",
+        "missing": "same-scheme covariance propagation row"
+      }
+    ],
+    "scope_limit": "contract registration only; comparator execution remains OPEN until dressed rows are exported"
+  },
+  "backend_import_blocker_update": {
+    "D1_dressed_pole_residue_backend_on_common_basis": "COMPUTED",
+    "D2_disc_dressed_to_cutsum_same_scheme_comparator": "OPEN_REGISTERED_CONTRACT",
+    "D3_uncertainty_propagation_from_dressed_backend": "OPEN"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2106_candidate",
+    "goal": "export first concrete Disc_dressed common-basis row (CMP1) or object-specific nonavailability for CMP1"
+  },
+  "c3_gate_update": {
+    "C3_d2_comparator_contract": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "comparator_rows_registered": true,
+    "d2_executed": false,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": false,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

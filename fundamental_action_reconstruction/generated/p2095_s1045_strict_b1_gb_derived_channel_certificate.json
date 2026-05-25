@@ -1,0 +1,53 @@
+{
+  "schema_version": "p2095_s1045_v1",
+  "packet_id": "P2095",
+  "stage_id": "S1045",
+  "produced_by": "p2095_s1045_strict_b1_gb_derived_channel_certificate.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_B1_GB_DERIVED_CHANNEL_CERTIFICATE_WITH_TRACE__NO_FULL_4CHANNEL_INDEPENDENCE",
+  "depends_on": {
+    "p1950_present": true,
+    "preconditions_ready": true
+  },
+  "derived_channel_certificate": {
+    "identity": "GB = Riem2 - 4*Ric2 + R2",
+    "operator_vector_gb": [
+      0.9756149568440182,
+      -0.0943442940018053,
+      18.8924487506066,
+      20.245440883457842
+    ],
+    "operator_vector_combo": [
+      0.975614956844018,
+      -0.09434429400180533,
+      18.892448750606597,
+      20.245440883457842
+    ],
+    "operator_residual": [
+      2.220446049250313e-16,
+      2.7755575615628914e-17,
+      3.552713678800501e-15,
+      0.0
+    ],
+    "operator_residual_l2": 3.559754017076216e-15,
+    "operator_residual_abs_max": 3.552713678800501e-15,
+    "rhs_gb": 0.9756149568440182,
+    "rhs_combo": 0.975614956844018,
+    "rhs_residual": 2.220446049250313e-16
+  },
+  "c3_gate_update": {
+    "C3_strict_b1_gb_derived_channel_certificate": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "gb_derived_identity_operator_level": true,
+    "full_4channel_independence_proven": false,
+    "c3_theorem_proven": false,
+    "no_background_globalization_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

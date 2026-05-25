@@ -1,0 +1,63 @@
+{
+  "schema_version": "p2096_s1046_v1",
+  "packet_id": "P2096",
+  "stage_id": "S1046",
+  "produced_by": "p2096_s1046_strict_b1_renormalization_closure_contract.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_B1_RENORMALIZATION_CLOSURE_CONTRACT_WITH_TRACE__QUOTIENT_SCOPE_ONLY",
+  "depends_on": {
+    "p2094_present": true,
+    "p2095_present": true,
+    "preconditions_ready": true
+  },
+  "closure_contract": {
+    "counterterm_rows": [
+      {
+        "delta_label": "delta_c_gr_1",
+        "channel": "R2",
+        "coefficient": 0.9999999999999998
+      },
+      {
+        "delta_label": "delta_c_gr_2",
+        "channel": "Ric2",
+        "coefficient": 4.14253026334369e-16
+      },
+      {
+        "delta_label": "delta_c_gr_3",
+        "channel": "Riem2",
+        "coefficient": 1.0796839533475845e-17
+      },
+      {
+        "delta_label": "delta_c_gr_4",
+        "channel": "GB (derived)",
+        "coefficient": "derived via GB=Riem2-4Ric2+R2; no independent solve"
+      }
+    ],
+    "contract_conditions": {
+      "C_RANK": "3x3 quotient solve residual <= tolerance",
+      "C_GB_DERIVED": "operator-level and RHS-level GB derived identity residual <= tolerance",
+      "C_SCOPE": "contract valid only for current strict B1 projection basis and exported conventions"
+    },
+    "residuals": {
+      "quotient_residual_abs_max": 0.0,
+      "gb_derived_operator_residual_abs_max": 3.552713678800501e-15,
+      "gb_derived_rhs_residual": 2.220446049250313e-16
+    },
+    "scope_limit": "Not a full 4-channel independence theorem; not global background-family closure."
+  },
+  "c3_gate_update": {
+    "C3_strict_b1_renormalization_closure_contract": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "quotient_scope_contract_exported": true,
+    "full_4channel_independence_proven": false,
+    "global_background_family_closure_proven": false,
+    "c3_theorem_proven": false,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

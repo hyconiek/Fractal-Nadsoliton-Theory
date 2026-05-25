@@ -1,0 +1,45 @@
+{
+  "schema_version": "p2107_s1057_v1",
+  "packet_id": "P2107",
+  "stage_id": "S1057",
+  "produced_by": "p2107_s1057_strict_cmp1_first_residual_execution.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_CMP1_FIRST_RESIDUAL_EXECUTION_WITH_TRACE",
+  "depends_on": {
+    "p2106_present": true,
+    "p1862_present": true,
+    "p2020_present": true,
+    "preconditions_ready": true
+  },
+  "cmp1_residual_execution": {
+    "lhs_disc_dressed_seed_row": 0.0,
+    "rhs_cutsum_row": 0.3183098861837907,
+    "signed_residual": -0.3183098861837907,
+    "abs_residual": 0.3183098861837907,
+    "scope_limit": "first seed-level row residual only; not full dressed Disc=CutSum theorem"
+  },
+  "backend_import_blocker_update": {
+    "D1_dressed_pole_residue_backend_on_common_basis": "COMPUTED",
+    "D2_cmp1_source_row": "COMPUTED",
+    "D2_cmp1_first_residual_execution": "COMPUTED",
+    "D3_uncertainty_propagation_from_dressed_backend": "OPEN"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2108_candidate",
+    "goal": "add uncertainty-aware CMP1 residual bound and connect to D3 covariance propagation"
+  },
+  "c3_gate_update": {
+    "C3_cmp1_first_residual_execution": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "cmp1_residual_computed": true,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": false,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

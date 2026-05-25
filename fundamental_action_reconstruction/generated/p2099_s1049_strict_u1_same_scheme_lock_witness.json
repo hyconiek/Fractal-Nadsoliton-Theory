@@ -1,0 +1,70 @@
+{
+  "schema_version": "p2099_s1049_v1",
+  "packet_id": "P2099",
+  "stage_id": "S1049",
+  "produced_by": "p2099_s1049_strict_u1_same_scheme_lock_witness.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_U1_SAME_SCHEME_LOCK_WITNESS_WITH_TRACE__TASK2_ENTRY_PARTIAL",
+  "depends_on": {
+    "p2098_present": true,
+    "p1953_present": true,
+    "preconditions_ready": true
+  },
+  "u1_same_scheme_lock": {
+    "channel": "graviton -> gauge_gauge",
+    "matrix_rows": [
+      "renormalization",
+      "gauge",
+      "projector_norm"
+    ],
+    "matrix": [
+      [
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0
+      ]
+    ],
+    "column_labels": [
+      "sourceA",
+      "sourceB"
+    ],
+    "difference_vector": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "lock_residual_l2": 0.0,
+    "lock_residual_abs_max": 0.0,
+    "scope_limit": "strict proxy lock witness only; full Cutkosky discontinuity integration remains OPEN"
+  },
+  "unitarity_blocker_update": {
+    "U1_shared_rg_scheme_lock": "COMPUTED",
+    "U2_exact_discontinuity_integration": "OPEN",
+    "U3_positive_residue_uncertainty_table": "OPEN"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2100_candidate",
+    "goal": "build U2 exact discontinuity integration table for graviton->gauge_gauge with explicit phase-space quadrature witness"
+  },
+  "c3_gate_update": {
+    "C3_u1_same_scheme_lock_witness": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "u1_computed": true,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": false,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

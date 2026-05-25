@@ -1,0 +1,51 @@
+{
+  "schema_version": "p2090_s1040_v1",
+  "packet_id": "P2090",
+  "stage_id": "S1040",
+  "produced_by": "p2090_s1040_strict_delta_bg_yf_projection_theorem_object_decision.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_DELTA_BG_YF_PROJECTION_THEOREM_OBJECT_DECISION__CURRENT_EXPORT_NONAVAILABILITY__C3_STILL_OPEN",
+  "depends_on": {
+    "p2089_present": true,
+    "p1965_present": true,
+    "preconditions_ready": true,
+    "r2_open": true,
+    "r3_open": true
+  },
+  "input_hashes": {
+    "p2089_json_sha256": "3344c0f37fd618346e6b75c79a44e07afebfc75c327f6c766842772bd4d5c932",
+    "p1965_json_sha256": "1a796a6bcbcbd7503604a33bdb3df098655f545c0424c8a86fab1fa3b6c04e86"
+  },
+  "projection_theorem_object_decision": {
+    "mode": "NONAVAILABILITY_CURRENT_EXPORT_STATE",
+    "availability_object_exported": false,
+    "nonavailability_object_exported": true,
+    "missing_projection_rows": [
+      "explicit full-covariant termwise projection rows from EOM bundle to {delta_R, delta_RicUU, delta_gradchi2}",
+      "linked metric/Higgs/Yukawa projection operator contract proving no Omega_unexported remainder"
+    ],
+    "inherits_prior_nonavailability_statement": "On the current repository state, the declared tensorial DELTA_BG_Yf normal form is not derivable as a full EOM theorem from L_total.",
+    "licensed_statement": "Current export state does not provide the required projection theorem object from full EOM to DELTA_BG_Yf tensor basis; this is a current-state nonavailability result, not a no-go theorem."
+  },
+  "recommended_next_honest_step": {
+    "id": "P2091_candidate",
+    "goal": "export explicit projection-row pack or certify exact nonavailability of each missing row/operator",
+    "decision_target": "close R2/R3 one-by-one with machine-checkable row-level witnesses"
+  },
+  "c3_gate_update": {
+    "C3_delta_bg_yf_projection_theorem_object_decision": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "decision_mode_is_nonavailability": true,
+    "missing_rows_registered": true,
+    "c3_theorem_proven": false,
+    "no_background_globalization_claimed": true,
+    "no_tensor_component_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}
