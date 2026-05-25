@@ -1,0 +1,399 @@
+{
+  "schema_version": "p2027_s977_v1",
+  "packet_id": "P2027",
+  "stage_id": "S977",
+  "p1950_next_alias": "p1950-next",
+  "produced_by": "p2027_s977_strict_b1_rank3_gb_null_adaptive_quadrature_witness.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "result_kind": "PARTIAL_P1950_NEXT_RANK3_QUOTIENT_PASS__FOUR_CHANNEL_GB_AND_TENSOR_PROJECTION_OPEN",
+  "local_verdict": "PASS_RANK3_QUOTIENT_IDENTIFIABLE_ON_SCALAR_B1_WITH_GB_NULL_TRACE",
+  "route": "strict_only",
+  "strict_lane_assumptions": [
+    "strict_kernel_only",
+    "no_legacy_transfer",
+    "background_family_B1_backend_projection_channels",
+    "GB_exported_as_tensor_identity_not_independent_surrogate"
+  ],
+  "depends_on": {
+    "p1848_present": true,
+    "p1950_probe_present": true,
+    "p1950_previous_rank": 3,
+    "p1950_previous_quadrature_relative_discretization_bound": 0.16149915685637756
+  },
+  "input_hashes": {
+    "p1848_json_sha256": "fd79beddcc99bee9162e4967e813d5c939007e6577e488f000afb564a8b43acb",
+    "p1950_probe_json_sha256": "e3aea485748b753a2811ea58b0f7581ed5c793343bfbe53c15264b9de177acc6"
+  },
+  "domain": {
+    "background_family": "B1",
+    "epsilon_uv": 1e-06,
+    "kernel": "K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+    "kernel_params": {
+      "omega": 0.18575,
+      "phi": 0.1625,
+      "beta": 1.0,
+      "eta": 1.8
+    },
+    "backend_counterterm_basis": [
+      {
+        "delta_label": "delta_c_gr_1",
+        "channel": "R2"
+      },
+      {
+        "delta_label": "delta_c_gr_2",
+        "channel": "Ric2"
+      },
+      {
+        "delta_label": "delta_c_gr_3",
+        "channel": "Riem2"
+      },
+      {
+        "delta_label": "delta_c_gr_4",
+        "channel": "GB"
+      }
+    ],
+    "backend_direct_operator_profile_source_kind": "p1848_direct_gravity_operator_profiles_B1",
+    "backend_direct_operator_profile_generation_rule": "Project the scalar curvature-operator basis O_i=(R2,Ric2,Riem2,GB) onto the declared one-dimensional strict B1 kernel-jet profile.  GB is exported by its tensor identity GB=Riem2-4*Ric2+R2, not as an independent surrogate channel."
+  },
+  "basis_decomposition": {
+    "full_channels": [
+      "R2",
+      "Ric2",
+      "Riem2",
+      "GB"
+    ],
+    "full_gram_rank": 3,
+    "full_gram_nullity": 1,
+    "full_gram_rank_tolerance": 2.3614027715121283e-12,
+    "full_gram_singular_values": [
+      26.587031604634195,
+      0.6112417587520537,
+      0.09808201351891709,
+      4.9101360685431e-16
+    ],
+    "full_gram_condition_number": null,
+    "gb_dependency_rule": "GB = Riem2 - 4*Ric2 + R2",
+    "symbolic_null_relation": "R2 - 4*Ric2 + Riem2 - GB = 0",
+    "symbolic_gb_relation_zero": true,
+    "symbolic_gb_relation_residual": "0",
+    "exact_null_vector_R2_Ric2_Riem2_GB": [
+      1.0,
+      -4.0,
+      1.0,
+      -1.0
+    ],
+    "svd_null_vector_R2_Ric2_Riem2_GB": [
+      0.22941573387055533,
+      -0.9176629354822484,
+      0.2294157338705622,
+      -0.22941573387056208
+    ],
+    "null_vector_cosine_alignment_with_exact": 0.9999999999999998,
+    "exact_null_gram_residual_l2": 4.443059973708341e-16,
+    "exact_null_gram_residual_linf": 4.440892098500626e-16
+  },
+  "quotient_identifiability": {
+    "independent_channels": [
+      "R2",
+      "Ric2",
+      "Riem2"
+    ],
+    "dropped_dependent_channel": "GB",
+    "dependency_rule": "GB = Riem2 - 4*Ric2 + R2",
+    "rank3_gram_rank": 3,
+    "rank3_gram_rank_tolerance": 8.333242072549243e-13,
+    "rank3_gram_singular_values": [
+      12.509861964240303,
+      0.36155814172543577,
+      0.018547610927565083
+    ],
+    "rank3_gram_condition_number": 674.4729557405369,
+    "rank3_quotient_coefficients": {
+      "a_R2": 0.9999999999999992,
+      "a_Ric2": 1.1656308464946203e-15,
+      "a_Riem2": 6.066324488242904e-17,
+      "a_GB_representative": 0.0
+    },
+    "rank3_residual_l2": 5.551115123125783e-17,
+    "rank3_residual_linf": 5.551115123125783e-17,
+    "full_row_residual_l2_for_gb_zero_representative": 1.5700924586837752e-16,
+    "full_row_residual_linf_for_gb_zero_representative": 1.1102230246251565e-16,
+    "quotient_gate_pass": true,
+    "meaning": "The scalar B1 profile determines the rank-3 quotient representative after dropping the dependent GB direction; it does not determine an independent GB coefficient."
+  },
+  "full_four_channel_min_norm_family": {
+    "minimum_norm_coefficients_from_full_rank_deficient_lstsq": {
+      "a_R2": 0.9473684210526309,
+      "a_Ric2": 0.21052631578946812,
+      "a_Riem2": -0.05263157894736506,
+      "a_GB": 0.05263157894736545
+    },
+    "minimum_norm_residual_l2": 1.357755553392238e-15,
+    "minimum_norm_residual_linf": 1.1102230246251565e-15,
+    "canonical_rank3_representative": {
+      "a_R2": 1.0,
+      "a_Ric2": 0.0,
+      "a_Riem2": 0.0,
+      "a_GB": 0.0
+    },
+    "coefficient_family_rule": "a_full = canonical_rank3_representative + tau*(1,-4,1,-1)",
+    "minimum_norm_tau_from_canonical": -0.05263157894736842,
+    "analytic_minimum_norm_from_canonical": {
+      "a_R2": 0.9473684210526316,
+      "a_Ric2": 0.21052631578947367,
+      "a_Riem2": -0.05263157894736842,
+      "a_GB": 0.05263157894736842
+    },
+    "gb_coefficient_identified": false
+  },
+  "adaptive_quadrature": {
+    "policy": "scipy.integrate.quad; entries involving Riem2 or GB use x=epsilon+(1-epsilon)*t**power to resolve Kdd**2 near the UV endpoint",
+    "epsabs": 1e-10,
+    "epsrel": 1e-10,
+    "limit": 800,
+    "primary_left_endpoint_power": 5.0,
+    "check_left_endpoint_power": 7.0,
+    "adaptive_abs_gap_primary_vs_check": 1.7763568394002505e-15,
+    "adaptive_scale": 14.406387660011863,
+    "adaptive_relative_gap_primary_vs_check": 1.2330341799220942e-16,
+    "adaptive_relative_stability_tolerance": 1e-08,
+    "adaptive_transform_gate_pass": true,
+    "independent_matrix_entries_directly_integrated": [
+      {
+        "row_channel": "R2",
+        "col_channel": "R2",
+        "value": 0.40294081084207256,
+        "quad_error_estimate": 3.707461575670616e-11,
+        "transform": "native_adaptive_quad"
+      },
+      {
+        "row_channel": "R2",
+        "col_channel": "Ric2",
+        "value": 0.15440474156527395,
+        "quad_error_estimate": 3.102179624292489e-11,
+        "transform": "native_adaptive_quad"
+      },
+      {
+        "row_channel": "R2",
+        "col_channel": "Riem2",
+        "value": 1.1824416587955568,
+        "quad_error_estimate": 6.005780282097418e-13,
+        "transform": "left_endpoint_power_5"
+      },
+      {
+        "row_channel": "Ric2",
+        "col_channel": "R2",
+        "value": 0.15440474156527395,
+        "quad_error_estimate": 3.102179624292489e-11,
+        "transform": "native_adaptive_quad"
+      },
+      {
+        "row_channel": "Ric2",
+        "col_channel": "Ric2",
+        "value": 0.09431033925107814,
+        "quad_error_estimate": 5.781701615262334e-11,
+        "transform": "native_adaptive_quad"
+      },
+      {
+        "row_channel": "Ric2",
+        "col_channel": "Riem2",
+        "value": 0.12848506633956727,
+        "quad_error_estimate": 1.4621216124376093e-11,
+        "transform": "left_endpoint_power_5"
+      },
+      {
+        "row_channel": "Riem2",
+        "col_channel": "R2",
+        "value": 1.1824416587955568,
+        "quad_error_estimate": 6.005780282097418e-13,
+        "transform": "left_endpoint_power_5"
+      },
+      {
+        "row_channel": "Riem2",
+        "col_channel": "Ric2",
+        "value": 0.12848506633956727,
+        "quad_error_estimate": 1.4621216124376093e-11,
+        "transform": "left_endpoint_power_5"
+      },
+      {
+        "row_channel": "Riem2",
+        "col_channel": "Riem2",
+        "value": 12.392716566800157,
+        "quad_error_estimate": 1.4276783350967436e-10,
+        "transform": "left_endpoint_power_5"
+      }
+    ],
+    "independent_rhs_entries_directly_integrated": [
+      {
+        "channel": "R2",
+        "value": 0.40294081084207256,
+        "quad_error_estimate": 3.707461575670616e-11,
+        "transform": "native_adaptive_quad"
+      },
+      {
+        "channel": "Ric2",
+        "value": 0.15440474156527395,
+        "quad_error_estimate": 3.102179624292489e-11,
+        "transform": "native_adaptive_quad"
+      },
+      {
+        "channel": "Riem2",
+        "value": 1.1824416587955568,
+        "quad_error_estimate": 6.005780282097418e-13,
+        "transform": "left_endpoint_power_5"
+      }
+    ],
+    "assembled_full_matrix_entries": [
+      {
+        "row_channel": "R2",
+        "col_channel": "R2",
+        "value": 0.40294081084207256,
+        "assembly": "assembled_from_rank3_integrals_and_GB_identity"
+      },
+      {
+        "row_channel": "R2",
+        "col_channel": "Ric2",
+        "value": 0.15440474156527395,
+        "assembly": "assembled_from_rank3_integrals_and_GB_identity"
+      },
+      {
+        "row_channel": "R2",
+        "col_channel": "Riem2",
+        "value": 1.1824416587955568,
+        "assembly": "assembled_from_rank3_integrals_and_GB_identity"
+      },
+      {
+        "row_channel": "R2",
+        "col_channel": "GB",
+        "value": 0.9677635033765336,
+        "assembly": "assembled_from_rank3_integrals_and_GB_identity"
+      },
+      {
+        "row_channel": "Ric2",
+        "col_channel": "R2",
+        "value": 0.15440474156527395,
+        "assembly": "assembled_from_rank3_integrals_and_GB_identity"
+      },
+      {
+        "row_channel": "Ric2",
+        "col_channel": "Ric2",
+        "value": 0.09431033925107814,
+        "assembly": "assembled_from_rank3_integrals_and_GB_identity"
+      },
+      {
+        "row_channel": "Ric2",
+        "col_channel": "Riem2",
+        "value": 0.12848506633956727,
+        "assembly": "assembled_from_rank3_integrals_and_GB_identity"
+      },
+      {
+        "row_channel": "Ric2",
+        "col_channel": "GB",
+        "value": -0.09435154909947133,
+        "assembly": "assembled_from_rank3_integrals_and_GB_identity"
+      },
+      {
+        "row_channel": "Riem2",
+        "col_channel": "R2",
+        "value": 1.1824416587955568,
+        "assembly": "assembled_from_rank3_integrals_and_GB_identity"
+      },
+      {
+        "row_channel": "Riem2",
+        "col_channel": "Ric2",
+        "value": 0.12848506633956727,
+        "assembly": "assembled_from_rank3_integrals_and_GB_identity"
+      },
+      {
+        "row_channel": "Riem2",
+        "col_channel": "Riem2",
+        "value": 12.392716566800157,
+        "assembly": "assembled_from_rank3_integrals_and_GB_identity"
+      },
+      {
+        "row_channel": "Riem2",
+        "col_channel": "GB",
+        "value": 13.061217960237444,
+        "assembly": "assembled_from_rank3_integrals_and_GB_identity"
+      },
+      {
+        "row_channel": "GB",
+        "col_channel": "R2",
+        "value": 0.9677635033765336,
+        "assembly": "assembled_from_rank3_integrals_and_GB_identity"
+      },
+      {
+        "row_channel": "GB",
+        "col_channel": "Ric2",
+        "value": -0.09435154909947133,
+        "assembly": "assembled_from_rank3_integrals_and_GB_identity"
+      },
+      {
+        "row_channel": "GB",
+        "col_channel": "Riem2",
+        "value": 13.061217960237444,
+        "assembly": "assembled_from_rank3_integrals_and_GB_identity"
+      },
+      {
+        "row_channel": "GB",
+        "col_channel": "GB",
+        "value": 14.406387660011863,
+        "assembly": "assembled_from_rank3_integrals_and_GB_identity"
+      }
+    ],
+    "assembled_full_rhs_entries": [
+      {
+        "channel": "R2",
+        "value": 0.40294081084207256,
+        "assembly": "assembled_from_rank3_integrals_and_GB_identity"
+      },
+      {
+        "channel": "Ric2",
+        "value": 0.15440474156527395,
+        "assembly": "assembled_from_rank3_integrals_and_GB_identity"
+      },
+      {
+        "channel": "Riem2",
+        "value": 1.1824416587955568,
+        "assembly": "assembled_from_rank3_integrals_and_GB_identity"
+      },
+      {
+        "channel": "GB",
+        "value": 0.9677635033765336,
+        "assembly": "assembled_from_rank3_integrals_and_GB_identity"
+      }
+    ]
+  },
+  "gatekeeper_checks": {
+    "p1848_direct_profiles_present": true,
+    "symbolic_gb_relation_zero": true,
+    "full_gram_rank_eq_3": true,
+    "full_gram_nullity_eq_1": true,
+    "rank3_quotient_gate_pass": true,
+    "adaptive_transform_gate_pass": true,
+    "no_four_channel_closure_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "theorem_scope": {
+    "licensed_statement": "On the B1 scalar projection, the direct p1848 profiles split into an identifiable rank-3 quotient plus the explicit GB null direction R2-4*Ric2+Riem2-GB.",
+    "not_licensed": [
+      "independent identification of a_GB on the scalar B1 projection",
+      "four-channel counterterm uniqueness",
+      "full tensor projection closure",
+      "background-family globalization beyond B1",
+      "BRST/Cutkosky unitarity closure",
+      "QW-2191 selector closure",
+      "ToE closure"
+    ]
+  },
+  "false_pass_guard": "The rank-3 quotient pass is not full renormalization closure: GB remains a null/topological direction in scalar B1, and a full tensor projection is still required if the goal is four-channel coefficient identification.",
+  "next_honest_step": "Lift the p1848 profile projection from scalar B1 to a tensor-resolved background family, or explicitly formulate the renormalization theorem in the quotient by the GB/topological null direction.",
+  "lay_explanation": "Po usunieciu zaleznego kierunku GB trzy niezalezne profile B1 sa identyfikowalne, a nowa kwadratura stabilizuje osobliwy profil Kdd**2. Nadal nie ma dowodu na niezalezny czwarty wspolczynnik GB ani na pelna tensorowa renormalizacje.",
+  "environment": {
+    "python": "3.12.3",
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "sympy": "1.12"
+  }
+}

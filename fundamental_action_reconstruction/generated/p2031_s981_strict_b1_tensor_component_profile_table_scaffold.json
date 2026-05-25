@@ -1,0 +1,714 @@
+{
+  "schema_version": "p2031_s981_v1",
+  "packet_id": "P2031",
+  "stage_id": "S981",
+  "produced_by": "p2031_s981_strict_b1_tensor_component_profile_table_scaffold.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "result_kind": "OPEN_TENSOR_COMPONENT_PROFILE_TABLE_SCAFFOLD_EXPORTED_WITH_MISSING_ENTRIES",
+  "route": "strict_only",
+  "strict_lane_assumptions": [
+    "strict_kernel_only",
+    "no_legacy_transfer",
+    "scalar_B1_shadow_not_tensor_component_profile",
+    "ADM_lapse_witness_not_H_munu_component_profile",
+    "GB_identity_conditional_until_non_GB_components_exist"
+  ],
+  "depends_on": {
+    "p1848_present": true,
+    "p2030_present": true,
+    "p2030_result_kind": "OPEN_TENSOR_RESOLVED_SOURCE_GAP_WITH_TRACE",
+    "p1981_present": true,
+    "p1982_present": true,
+    "p1983_present": true,
+    "p1984_present": true
+  },
+  "input_hashes": {
+    "p1848_json_sha256": "fd79beddcc99bee9162e4967e813d5c939007e6577e488f000afb564a8b43acb",
+    "p2030_json_sha256": "bed7a2b4a8d073284cecc28600e0582f4d837cd061918cbf18c7bb95461cbd93",
+    "p1981_json_sha256": "ec2aeff9aadf02b94c3d6665bed96e287824f5c4e28de9114e3dde276b0c97d0",
+    "p1982_json_sha256": "7aadaa0922a86b261cd5cdb7035cccd39b68aae7bd4e6a9f2d1da3eea9f80b2c",
+    "p1983_json_sha256": "bed10041155684c728d2a42274857139e8baab245b5c991e163bcf3ffc5d43b5",
+    "p1984_json_sha256": "d69d18a541197b4f6391512e29936328afa8c6cbda42a5429d8599138fefe46f"
+  },
+  "professor_decision": {
+    "decision": "BUILD_SCAFFOLD_DO_NOT_FILL_UNDERIVED_COMPONENTS",
+    "rationale": [
+      "P2030 identified the missing tensor-component table as the next strict object.",
+      "P1848 provides covariant templates and scalar shadows, but not component profiles.",
+      "P1981-P1984 provide lapse-level ADM evidence, including GB cancellation, but not H_munu component profiles.",
+      "Filling any entry without a component projection rule would create a false tensor pass."
+    ],
+    "next_route_preference": "derive_B1_metric_gauge_component_projection_rule_then_fill_non_GB_rows_before_GB_identity_rows"
+  },
+  "table_object": {
+    "object_id": "strict_B1_tensor_component_profile_table_v1",
+    "channels": [
+      "R2",
+      "Ric2",
+      "Riem2",
+      "GB"
+    ],
+    "components": [
+      "00",
+      "11",
+      "22",
+      "33"
+    ],
+    "component_grid": {
+      "R2": {
+        "00": "R2.H_00_profile_B1",
+        "11": "R2.H_11_profile_B1",
+        "22": "R2.H_22_profile_B1",
+        "33": "R2.H_33_profile_B1"
+      },
+      "Ric2": {
+        "00": "Ric2.H_00_profile_B1",
+        "11": "Ric2.H_11_profile_B1",
+        "22": "Ric2.H_22_profile_B1",
+        "33": "Ric2.H_33_profile_B1"
+      },
+      "Riem2": {
+        "00": "Riem2.H_00_profile_B1",
+        "11": "Riem2.H_11_profile_B1",
+        "22": "Riem2.H_22_profile_B1",
+        "33": "Riem2.H_33_profile_B1"
+      },
+      "GB": {
+        "00": "GB.H_00_profile_B1",
+        "11": "GB.H_11_profile_B1",
+        "22": "GB.H_22_profile_B1",
+        "33": "GB.H_33_profile_B1"
+      }
+    },
+    "entries": [
+      {
+        "entry_id": "R2.H_00_profile_B1",
+        "table_object_id": "strict_B1_tensor_component_profile_table_v1",
+        "channel": "R2",
+        "component": "00",
+        "required_symbol": "R2.H_00_profile(d)",
+        "profile_status": "OPEN_MISSING_TENSOR_COMPONENT_PROFILE",
+        "fill_status": "UNFILLED_BY_DESIGN",
+        "covariant_template_available": true,
+        "covariant_template_key": "H_R2_munu",
+        "covariant_template_source": "P1848.gravity_componentwise_variation_pack",
+        "scalar_shadow": {
+          "available": true,
+          "operator": "R^2",
+          "expression": "K**2",
+          "source": "P1848.gravity_operator_profiles_B1",
+          "scope": "scalar shadow only; not an H_munu component profile"
+        },
+        "adm_lapse_relation": {
+          "status": "RELATED_REDUCED_LAPSE_EQUATION_NOT_H_00_PROFILE",
+          "adm_lapse_source_available": true,
+          "can_fill_from_adm_lapse": false,
+          "reason": "A reduced lapse Euler operator is not the same object as a B1 H_00(d) tensor profile."
+        },
+        "not_fill_reason": "No declared B1 metric/gauge component projection rule, no component Gram rule, and no same-basis divergence tensor target are exported.",
+        "gb_identity_condition": {
+          "status": "NOT_APPLICABLE_FOR_NON_GB_CHANNEL",
+          "can_fill_now": false
+        }
+      },
+      {
+        "entry_id": "R2.H_11_profile_B1",
+        "table_object_id": "strict_B1_tensor_component_profile_table_v1",
+        "channel": "R2",
+        "component": "11",
+        "required_symbol": "R2.H_11_profile(d)",
+        "profile_status": "OPEN_MISSING_TENSOR_COMPONENT_PROFILE",
+        "fill_status": "UNFILLED_BY_DESIGN",
+        "covariant_template_available": true,
+        "covariant_template_key": "H_R2_munu",
+        "covariant_template_source": "P1848.gravity_componentwise_variation_pack",
+        "scalar_shadow": {
+          "available": true,
+          "operator": "R^2",
+          "expression": "K**2",
+          "source": "P1848.gravity_operator_profiles_B1",
+          "scope": "scalar shadow only; not an H_munu component profile"
+        },
+        "adm_lapse_relation": {
+          "status": "NO_SPATIAL_COMPONENT_PROFILE_FROM_LAPSE_SOURCE",
+          "adm_lapse_source_available": true,
+          "can_fill_from_adm_lapse": false,
+          "reason": "Lapse-only ADM evidence does not export spatial H_ii(d) component profiles."
+        },
+        "not_fill_reason": "No declared B1 metric/gauge component projection rule, no component Gram rule, and no same-basis divergence tensor target are exported.",
+        "gb_identity_condition": {
+          "status": "NOT_APPLICABLE_FOR_NON_GB_CHANNEL",
+          "can_fill_now": false
+        }
+      },
+      {
+        "entry_id": "R2.H_22_profile_B1",
+        "table_object_id": "strict_B1_tensor_component_profile_table_v1",
+        "channel": "R2",
+        "component": "22",
+        "required_symbol": "R2.H_22_profile(d)",
+        "profile_status": "OPEN_MISSING_TENSOR_COMPONENT_PROFILE",
+        "fill_status": "UNFILLED_BY_DESIGN",
+        "covariant_template_available": true,
+        "covariant_template_key": "H_R2_munu",
+        "covariant_template_source": "P1848.gravity_componentwise_variation_pack",
+        "scalar_shadow": {
+          "available": true,
+          "operator": "R^2",
+          "expression": "K**2",
+          "source": "P1848.gravity_operator_profiles_B1",
+          "scope": "scalar shadow only; not an H_munu component profile"
+        },
+        "adm_lapse_relation": {
+          "status": "NO_SPATIAL_COMPONENT_PROFILE_FROM_LAPSE_SOURCE",
+          "adm_lapse_source_available": true,
+          "can_fill_from_adm_lapse": false,
+          "reason": "Lapse-only ADM evidence does not export spatial H_ii(d) component profiles."
+        },
+        "not_fill_reason": "No declared B1 metric/gauge component projection rule, no component Gram rule, and no same-basis divergence tensor target are exported.",
+        "gb_identity_condition": {
+          "status": "NOT_APPLICABLE_FOR_NON_GB_CHANNEL",
+          "can_fill_now": false
+        }
+      },
+      {
+        "entry_id": "R2.H_33_profile_B1",
+        "table_object_id": "strict_B1_tensor_component_profile_table_v1",
+        "channel": "R2",
+        "component": "33",
+        "required_symbol": "R2.H_33_profile(d)",
+        "profile_status": "OPEN_MISSING_TENSOR_COMPONENT_PROFILE",
+        "fill_status": "UNFILLED_BY_DESIGN",
+        "covariant_template_available": true,
+        "covariant_template_key": "H_R2_munu",
+        "covariant_template_source": "P1848.gravity_componentwise_variation_pack",
+        "scalar_shadow": {
+          "available": true,
+          "operator": "R^2",
+          "expression": "K**2",
+          "source": "P1848.gravity_operator_profiles_B1",
+          "scope": "scalar shadow only; not an H_munu component profile"
+        },
+        "adm_lapse_relation": {
+          "status": "NO_SPATIAL_COMPONENT_PROFILE_FROM_LAPSE_SOURCE",
+          "adm_lapse_source_available": true,
+          "can_fill_from_adm_lapse": false,
+          "reason": "Lapse-only ADM evidence does not export spatial H_ii(d) component profiles."
+        },
+        "not_fill_reason": "No declared B1 metric/gauge component projection rule, no component Gram rule, and no same-basis divergence tensor target are exported.",
+        "gb_identity_condition": {
+          "status": "NOT_APPLICABLE_FOR_NON_GB_CHANNEL",
+          "can_fill_now": false
+        }
+      },
+      {
+        "entry_id": "Ric2.H_00_profile_B1",
+        "table_object_id": "strict_B1_tensor_component_profile_table_v1",
+        "channel": "Ric2",
+        "component": "00",
+        "required_symbol": "Ric2.H_00_profile(d)",
+        "profile_status": "OPEN_MISSING_TENSOR_COMPONENT_PROFILE",
+        "fill_status": "UNFILLED_BY_DESIGN",
+        "covariant_template_available": true,
+        "covariant_template_key": "H_Ric2_munu",
+        "covariant_template_source": "P1848.gravity_componentwise_variation_pack",
+        "scalar_shadow": {
+          "available": true,
+          "operator": "Ricci^2",
+          "expression": "Kd**2",
+          "source": "P1848.gravity_operator_profiles_B1",
+          "scope": "scalar shadow only; not an H_munu component profile"
+        },
+        "adm_lapse_relation": {
+          "status": "RELATED_REDUCED_LAPSE_EQUATION_NOT_H_00_PROFILE",
+          "adm_lapse_source_available": true,
+          "can_fill_from_adm_lapse": false,
+          "reason": "A reduced lapse Euler operator is not the same object as a B1 H_00(d) tensor profile."
+        },
+        "not_fill_reason": "No declared B1 metric/gauge component projection rule, no component Gram rule, and no same-basis divergence tensor target are exported.",
+        "gb_identity_condition": {
+          "status": "NOT_APPLICABLE_FOR_NON_GB_CHANNEL",
+          "can_fill_now": false
+        }
+      },
+      {
+        "entry_id": "Ric2.H_11_profile_B1",
+        "table_object_id": "strict_B1_tensor_component_profile_table_v1",
+        "channel": "Ric2",
+        "component": "11",
+        "required_symbol": "Ric2.H_11_profile(d)",
+        "profile_status": "OPEN_MISSING_TENSOR_COMPONENT_PROFILE",
+        "fill_status": "UNFILLED_BY_DESIGN",
+        "covariant_template_available": true,
+        "covariant_template_key": "H_Ric2_munu",
+        "covariant_template_source": "P1848.gravity_componentwise_variation_pack",
+        "scalar_shadow": {
+          "available": true,
+          "operator": "Ricci^2",
+          "expression": "Kd**2",
+          "source": "P1848.gravity_operator_profiles_B1",
+          "scope": "scalar shadow only; not an H_munu component profile"
+        },
+        "adm_lapse_relation": {
+          "status": "NO_SPATIAL_COMPONENT_PROFILE_FROM_LAPSE_SOURCE",
+          "adm_lapse_source_available": true,
+          "can_fill_from_adm_lapse": false,
+          "reason": "Lapse-only ADM evidence does not export spatial H_ii(d) component profiles."
+        },
+        "not_fill_reason": "No declared B1 metric/gauge component projection rule, no component Gram rule, and no same-basis divergence tensor target are exported.",
+        "gb_identity_condition": {
+          "status": "NOT_APPLICABLE_FOR_NON_GB_CHANNEL",
+          "can_fill_now": false
+        }
+      },
+      {
+        "entry_id": "Ric2.H_22_profile_B1",
+        "table_object_id": "strict_B1_tensor_component_profile_table_v1",
+        "channel": "Ric2",
+        "component": "22",
+        "required_symbol": "Ric2.H_22_profile(d)",
+        "profile_status": "OPEN_MISSING_TENSOR_COMPONENT_PROFILE",
+        "fill_status": "UNFILLED_BY_DESIGN",
+        "covariant_template_available": true,
+        "covariant_template_key": "H_Ric2_munu",
+        "covariant_template_source": "P1848.gravity_componentwise_variation_pack",
+        "scalar_shadow": {
+          "available": true,
+          "operator": "Ricci^2",
+          "expression": "Kd**2",
+          "source": "P1848.gravity_operator_profiles_B1",
+          "scope": "scalar shadow only; not an H_munu component profile"
+        },
+        "adm_lapse_relation": {
+          "status": "NO_SPATIAL_COMPONENT_PROFILE_FROM_LAPSE_SOURCE",
+          "adm_lapse_source_available": true,
+          "can_fill_from_adm_lapse": false,
+          "reason": "Lapse-only ADM evidence does not export spatial H_ii(d) component profiles."
+        },
+        "not_fill_reason": "No declared B1 metric/gauge component projection rule, no component Gram rule, and no same-basis divergence tensor target are exported.",
+        "gb_identity_condition": {
+          "status": "NOT_APPLICABLE_FOR_NON_GB_CHANNEL",
+          "can_fill_now": false
+        }
+      },
+      {
+        "entry_id": "Ric2.H_33_profile_B1",
+        "table_object_id": "strict_B1_tensor_component_profile_table_v1",
+        "channel": "Ric2",
+        "component": "33",
+        "required_symbol": "Ric2.H_33_profile(d)",
+        "profile_status": "OPEN_MISSING_TENSOR_COMPONENT_PROFILE",
+        "fill_status": "UNFILLED_BY_DESIGN",
+        "covariant_template_available": true,
+        "covariant_template_key": "H_Ric2_munu",
+        "covariant_template_source": "P1848.gravity_componentwise_variation_pack",
+        "scalar_shadow": {
+          "available": true,
+          "operator": "Ricci^2",
+          "expression": "Kd**2",
+          "source": "P1848.gravity_operator_profiles_B1",
+          "scope": "scalar shadow only; not an H_munu component profile"
+        },
+        "adm_lapse_relation": {
+          "status": "NO_SPATIAL_COMPONENT_PROFILE_FROM_LAPSE_SOURCE",
+          "adm_lapse_source_available": true,
+          "can_fill_from_adm_lapse": false,
+          "reason": "Lapse-only ADM evidence does not export spatial H_ii(d) component profiles."
+        },
+        "not_fill_reason": "No declared B1 metric/gauge component projection rule, no component Gram rule, and no same-basis divergence tensor target are exported.",
+        "gb_identity_condition": {
+          "status": "NOT_APPLICABLE_FOR_NON_GB_CHANNEL",
+          "can_fill_now": false
+        }
+      },
+      {
+        "entry_id": "Riem2.H_00_profile_B1",
+        "table_object_id": "strict_B1_tensor_component_profile_table_v1",
+        "channel": "Riem2",
+        "component": "00",
+        "required_symbol": "Riem2.H_00_profile(d)",
+        "profile_status": "OPEN_MISSING_TENSOR_COMPONENT_PROFILE",
+        "fill_status": "UNFILLED_BY_DESIGN",
+        "covariant_template_available": true,
+        "covariant_template_key": "H_Riem2_munu",
+        "covariant_template_source": "P1848.gravity_componentwise_variation_pack",
+        "scalar_shadow": {
+          "available": true,
+          "operator": "Riemann^2",
+          "expression": "Kdd**2",
+          "source": "P1848.gravity_operator_profiles_B1",
+          "scope": "scalar shadow only; not an H_munu component profile"
+        },
+        "adm_lapse_relation": {
+          "status": "RELATED_REDUCED_LAPSE_EQUATION_NOT_H_00_PROFILE",
+          "adm_lapse_source_available": true,
+          "can_fill_from_adm_lapse": false,
+          "reason": "A reduced lapse Euler operator is not the same object as a B1 H_00(d) tensor profile."
+        },
+        "not_fill_reason": "No declared B1 metric/gauge component projection rule, no component Gram rule, and no same-basis divergence tensor target are exported.",
+        "gb_identity_condition": {
+          "status": "NOT_APPLICABLE_FOR_NON_GB_CHANNEL",
+          "can_fill_now": false
+        }
+      },
+      {
+        "entry_id": "Riem2.H_11_profile_B1",
+        "table_object_id": "strict_B1_tensor_component_profile_table_v1",
+        "channel": "Riem2",
+        "component": "11",
+        "required_symbol": "Riem2.H_11_profile(d)",
+        "profile_status": "OPEN_MISSING_TENSOR_COMPONENT_PROFILE",
+        "fill_status": "UNFILLED_BY_DESIGN",
+        "covariant_template_available": true,
+        "covariant_template_key": "H_Riem2_munu",
+        "covariant_template_source": "P1848.gravity_componentwise_variation_pack",
+        "scalar_shadow": {
+          "available": true,
+          "operator": "Riemann^2",
+          "expression": "Kdd**2",
+          "source": "P1848.gravity_operator_profiles_B1",
+          "scope": "scalar shadow only; not an H_munu component profile"
+        },
+        "adm_lapse_relation": {
+          "status": "NO_SPATIAL_COMPONENT_PROFILE_FROM_LAPSE_SOURCE",
+          "adm_lapse_source_available": true,
+          "can_fill_from_adm_lapse": false,
+          "reason": "Lapse-only ADM evidence does not export spatial H_ii(d) component profiles."
+        },
+        "not_fill_reason": "No declared B1 metric/gauge component projection rule, no component Gram rule, and no same-basis divergence tensor target are exported.",
+        "gb_identity_condition": {
+          "status": "NOT_APPLICABLE_FOR_NON_GB_CHANNEL",
+          "can_fill_now": false
+        }
+      },
+      {
+        "entry_id": "Riem2.H_22_profile_B1",
+        "table_object_id": "strict_B1_tensor_component_profile_table_v1",
+        "channel": "Riem2",
+        "component": "22",
+        "required_symbol": "Riem2.H_22_profile(d)",
+        "profile_status": "OPEN_MISSING_TENSOR_COMPONENT_PROFILE",
+        "fill_status": "UNFILLED_BY_DESIGN",
+        "covariant_template_available": true,
+        "covariant_template_key": "H_Riem2_munu",
+        "covariant_template_source": "P1848.gravity_componentwise_variation_pack",
+        "scalar_shadow": {
+          "available": true,
+          "operator": "Riemann^2",
+          "expression": "Kdd**2",
+          "source": "P1848.gravity_operator_profiles_B1",
+          "scope": "scalar shadow only; not an H_munu component profile"
+        },
+        "adm_lapse_relation": {
+          "status": "NO_SPATIAL_COMPONENT_PROFILE_FROM_LAPSE_SOURCE",
+          "adm_lapse_source_available": true,
+          "can_fill_from_adm_lapse": false,
+          "reason": "Lapse-only ADM evidence does not export spatial H_ii(d) component profiles."
+        },
+        "not_fill_reason": "No declared B1 metric/gauge component projection rule, no component Gram rule, and no same-basis divergence tensor target are exported.",
+        "gb_identity_condition": {
+          "status": "NOT_APPLICABLE_FOR_NON_GB_CHANNEL",
+          "can_fill_now": false
+        }
+      },
+      {
+        "entry_id": "Riem2.H_33_profile_B1",
+        "table_object_id": "strict_B1_tensor_component_profile_table_v1",
+        "channel": "Riem2",
+        "component": "33",
+        "required_symbol": "Riem2.H_33_profile(d)",
+        "profile_status": "OPEN_MISSING_TENSOR_COMPONENT_PROFILE",
+        "fill_status": "UNFILLED_BY_DESIGN",
+        "covariant_template_available": true,
+        "covariant_template_key": "H_Riem2_munu",
+        "covariant_template_source": "P1848.gravity_componentwise_variation_pack",
+        "scalar_shadow": {
+          "available": true,
+          "operator": "Riemann^2",
+          "expression": "Kdd**2",
+          "source": "P1848.gravity_operator_profiles_B1",
+          "scope": "scalar shadow only; not an H_munu component profile"
+        },
+        "adm_lapse_relation": {
+          "status": "NO_SPATIAL_COMPONENT_PROFILE_FROM_LAPSE_SOURCE",
+          "adm_lapse_source_available": true,
+          "can_fill_from_adm_lapse": false,
+          "reason": "Lapse-only ADM evidence does not export spatial H_ii(d) component profiles."
+        },
+        "not_fill_reason": "No declared B1 metric/gauge component projection rule, no component Gram rule, and no same-basis divergence tensor target are exported.",
+        "gb_identity_condition": {
+          "status": "NOT_APPLICABLE_FOR_NON_GB_CHANNEL",
+          "can_fill_now": false
+        }
+      },
+      {
+        "entry_id": "GB.H_00_profile_B1",
+        "table_object_id": "strict_B1_tensor_component_profile_table_v1",
+        "channel": "GB",
+        "component": "00",
+        "required_symbol": "GB.H_00_profile(d)",
+        "profile_status": "OPEN_MISSING_TENSOR_COMPONENT_PROFILE",
+        "fill_status": "UNFILLED_BY_DESIGN",
+        "covariant_template_available": true,
+        "covariant_template_key": "H_GB_munu",
+        "covariant_template_source": "P1848.gravity_componentwise_variation_pack",
+        "scalar_shadow": {
+          "available": true,
+          "operator": "GaussBonnet",
+          "expression": "Riem2 - 4*Ric2 + R2",
+          "source": "P1848.gravity_operator_profiles_B1",
+          "scope": "scalar shadow only; not an H_munu component profile"
+        },
+        "adm_lapse_relation": {
+          "status": "RELATED_REDUCED_LAPSE_EQUATION_NOT_H_00_PROFILE",
+          "adm_lapse_source_available": true,
+          "can_fill_from_adm_lapse": false,
+          "reason": "A reduced lapse Euler operator is not the same object as a B1 H_00(d) tensor profile."
+        },
+        "not_fill_reason": "No declared B1 metric/gauge component projection rule, no component Gram rule, and no same-basis divergence tensor target are exported.",
+        "gb_identity_condition": {
+          "status": "CONDITIONAL_ON_NON_GB_COMPONENT_PROFILES",
+          "formula": "GB.H_00_profile(d) = Riem2.H_00_profile(d) - 4*Ric2.H_00_profile(d) + R2.H_00_profile(d)",
+          "can_fill_now": false,
+          "reason": "The non-GB tensor component profiles are not exported yet."
+        }
+      },
+      {
+        "entry_id": "GB.H_11_profile_B1",
+        "table_object_id": "strict_B1_tensor_component_profile_table_v1",
+        "channel": "GB",
+        "component": "11",
+        "required_symbol": "GB.H_11_profile(d)",
+        "profile_status": "OPEN_MISSING_TENSOR_COMPONENT_PROFILE",
+        "fill_status": "UNFILLED_BY_DESIGN",
+        "covariant_template_available": true,
+        "covariant_template_key": "H_GB_munu",
+        "covariant_template_source": "P1848.gravity_componentwise_variation_pack",
+        "scalar_shadow": {
+          "available": true,
+          "operator": "GaussBonnet",
+          "expression": "Riem2 - 4*Ric2 + R2",
+          "source": "P1848.gravity_operator_profiles_B1",
+          "scope": "scalar shadow only; not an H_munu component profile"
+        },
+        "adm_lapse_relation": {
+          "status": "NO_SPATIAL_COMPONENT_PROFILE_FROM_LAPSE_SOURCE",
+          "adm_lapse_source_available": true,
+          "can_fill_from_adm_lapse": false,
+          "reason": "Lapse-only ADM evidence does not export spatial H_ii(d) component profiles."
+        },
+        "not_fill_reason": "No declared B1 metric/gauge component projection rule, no component Gram rule, and no same-basis divergence tensor target are exported.",
+        "gb_identity_condition": {
+          "status": "CONDITIONAL_ON_NON_GB_COMPONENT_PROFILES",
+          "formula": "GB.H_11_profile(d) = Riem2.H_11_profile(d) - 4*Ric2.H_11_profile(d) + R2.H_11_profile(d)",
+          "can_fill_now": false,
+          "reason": "The non-GB tensor component profiles are not exported yet."
+        }
+      },
+      {
+        "entry_id": "GB.H_22_profile_B1",
+        "table_object_id": "strict_B1_tensor_component_profile_table_v1",
+        "channel": "GB",
+        "component": "22",
+        "required_symbol": "GB.H_22_profile(d)",
+        "profile_status": "OPEN_MISSING_TENSOR_COMPONENT_PROFILE",
+        "fill_status": "UNFILLED_BY_DESIGN",
+        "covariant_template_available": true,
+        "covariant_template_key": "H_GB_munu",
+        "covariant_template_source": "P1848.gravity_componentwise_variation_pack",
+        "scalar_shadow": {
+          "available": true,
+          "operator": "GaussBonnet",
+          "expression": "Riem2 - 4*Ric2 + R2",
+          "source": "P1848.gravity_operator_profiles_B1",
+          "scope": "scalar shadow only; not an H_munu component profile"
+        },
+        "adm_lapse_relation": {
+          "status": "NO_SPATIAL_COMPONENT_PROFILE_FROM_LAPSE_SOURCE",
+          "adm_lapse_source_available": true,
+          "can_fill_from_adm_lapse": false,
+          "reason": "Lapse-only ADM evidence does not export spatial H_ii(d) component profiles."
+        },
+        "not_fill_reason": "No declared B1 metric/gauge component projection rule, no component Gram rule, and no same-basis divergence tensor target are exported.",
+        "gb_identity_condition": {
+          "status": "CONDITIONAL_ON_NON_GB_COMPONENT_PROFILES",
+          "formula": "GB.H_22_profile(d) = Riem2.H_22_profile(d) - 4*Ric2.H_22_profile(d) + R2.H_22_profile(d)",
+          "can_fill_now": false,
+          "reason": "The non-GB tensor component profiles are not exported yet."
+        }
+      },
+      {
+        "entry_id": "GB.H_33_profile_B1",
+        "table_object_id": "strict_B1_tensor_component_profile_table_v1",
+        "channel": "GB",
+        "component": "33",
+        "required_symbol": "GB.H_33_profile(d)",
+        "profile_status": "OPEN_MISSING_TENSOR_COMPONENT_PROFILE",
+        "fill_status": "UNFILLED_BY_DESIGN",
+        "covariant_template_available": true,
+        "covariant_template_key": "H_GB_munu",
+        "covariant_template_source": "P1848.gravity_componentwise_variation_pack",
+        "scalar_shadow": {
+          "available": true,
+          "operator": "GaussBonnet",
+          "expression": "Riem2 - 4*Ric2 + R2",
+          "source": "P1848.gravity_operator_profiles_B1",
+          "scope": "scalar shadow only; not an H_munu component profile"
+        },
+        "adm_lapse_relation": {
+          "status": "NO_SPATIAL_COMPONENT_PROFILE_FROM_LAPSE_SOURCE",
+          "adm_lapse_source_available": true,
+          "can_fill_from_adm_lapse": false,
+          "reason": "Lapse-only ADM evidence does not export spatial H_ii(d) component profiles."
+        },
+        "not_fill_reason": "No declared B1 metric/gauge component projection rule, no component Gram rule, and no same-basis divergence tensor target are exported.",
+        "gb_identity_condition": {
+          "status": "CONDITIONAL_ON_NON_GB_COMPONENT_PROFILES",
+          "formula": "GB.H_33_profile(d) = Riem2.H_33_profile(d) - 4*Ric2.H_33_profile(d) + R2.H_33_profile(d)",
+          "can_fill_now": false,
+          "reason": "The non-GB tensor component profiles are not exported yet."
+        }
+      }
+    ]
+  },
+  "table_summary": {
+    "total_required_entries": 16,
+    "derived_entry_count": 0,
+    "missing_entry_count": 16,
+    "conditional_gb_identity_row_count": 4,
+    "tensor_component_profile_table_ready": false,
+    "all_scalar_shadows_present": true,
+    "all_covariant_templates_present": true,
+    "all_adm_lapse_sources_present": true
+  },
+  "scalar_shadows_by_channel": {
+    "R2": {
+      "available": true,
+      "operator": "R^2",
+      "expression": "K**2",
+      "source": "P1848.gravity_operator_profiles_B1",
+      "scope": "scalar shadow only; not an H_munu component profile"
+    },
+    "Ric2": {
+      "available": true,
+      "operator": "Ricci^2",
+      "expression": "Kd**2",
+      "source": "P1848.gravity_operator_profiles_B1",
+      "scope": "scalar shadow only; not an H_munu component profile"
+    },
+    "Riem2": {
+      "available": true,
+      "operator": "Riemann^2",
+      "expression": "Kdd**2",
+      "source": "P1848.gravity_operator_profiles_B1",
+      "scope": "scalar shadow only; not an H_munu component profile"
+    },
+    "GB": {
+      "available": true,
+      "operator": "GaussBonnet",
+      "expression": "Riem2 - 4*Ric2 + R2",
+      "source": "P1848.gravity_operator_profiles_B1",
+      "scope": "scalar shadow only; not an H_munu component profile"
+    }
+  },
+  "adm_lapse_evidence_by_channel": {
+    "R2": {
+      "channel": "R2",
+      "packet": "P1981",
+      "available": true,
+      "result_kind": "PASS_R2_LAPSE_VARIATION_OBLIGATION_EXPORTED",
+      "operator_key": "r2_lapse_euler_operator",
+      "scope": "ADM/Bianchi-I lapse Euler witness only",
+      "can_fill_tensor_component_profile": false,
+      "gb_lapse_cancels": null
+    },
+    "Ric2": {
+      "channel": "Ric2",
+      "packet": "P1982",
+      "available": true,
+      "result_kind": "PASS_RICCI2_LAPSE_VARIATION_OBLIGATION_EXPORTED",
+      "operator_key": "ricci2_lapse_euler_operator",
+      "scope": "ADM/Bianchi-I lapse Euler witness only",
+      "can_fill_tensor_component_profile": false,
+      "gb_lapse_cancels": null
+    },
+    "Riem2": {
+      "channel": "Riem2",
+      "packet": "P1983",
+      "available": true,
+      "result_kind": "PASS_RIEMANN2_LAPSE_VARIATION_OBLIGATION_EXPORTED",
+      "operator_key": "riemann2_lapse_euler_operator",
+      "scope": "ADM/Bianchi-I lapse Euler witness only",
+      "can_fill_tensor_component_profile": false,
+      "gb_lapse_cancels": null
+    },
+    "GB": {
+      "channel": "GB",
+      "packet": "P1984",
+      "available": true,
+      "result_kind": "PASS_GB_LAPSE_CANCELLATION_WITNESS",
+      "operator_key": "gb_lapse_euler_operator",
+      "scope": "ADM/Bianchi-I lapse Euler witness only",
+      "can_fill_tensor_component_profile": false,
+      "gb_lapse_cancels": true
+    }
+  },
+  "component_gram_rule_stub": {
+    "object_id": "strict_B1_tensor_component_Gram_rule_v1",
+    "status": "OPEN_MISSING_RULE",
+    "required_form": "G[(channel,component),(channel_prime,component_prime)] = integral_B1 <H_channel_component(d), H_channel_prime_component_prime(d)>",
+    "not_supplied_by": [
+      "P1848 covariant templates alone",
+      "P2027 scalar Gram matrix",
+      "P1981-P1984 ADM lapse Euler witnesses"
+    ]
+  },
+  "divergence_tensor_target_stub": {
+    "object_id": "strict_B1_divergence_tensor_target_v1",
+    "status": "OPEN_MISSING_TARGET",
+    "required_form": "one-loop divergence tensor target in the same channel x component basis",
+    "same_basis_required": true
+  },
+  "blocking_requirements": [
+    "B1 metric/gauge component projection rule",
+    "derived non-GB tensor component profiles for R2/Ric2/Riem2",
+    "conditional GB component rows assembled from non-GB rows",
+    "tensor-component Gram rule",
+    "same-basis divergence tensor target"
+  ],
+  "gatekeeper_checks": {
+    "scaffold_exported": true,
+    "entry_count_4x4": true,
+    "no_component_profile_marked_derived": true,
+    "all_entries_marked_missing": true,
+    "conditional_gb_identity_rows_only": true,
+    "scalar_shadows_available_but_not_promoted": true,
+    "adm_lapse_available_but_not_promoted": true,
+    "gb_lapse_cancellation_not_promoted_to_H00_zero": true,
+    "tensor_component_profile_table_ready": false,
+    "no_tensor_projection_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "theorem_scope": {
+    "licensed_statement": "The strict B1 tensor-component profile table object is now named and scaffolded with 16 required channel/component entries, but every entry remains open until a real component projection derivation is exported.",
+    "not_licensed": [
+      "any derived H_00/H_11/H_22/H_33 profile",
+      "using the scalar B1 profile as a tensor component",
+      "using ADM lapse cancellation as H_00 cancellation",
+      "tensor-resolved Gram rank",
+      "independent a_GB identification",
+      "four-channel counterterm uniqueness",
+      "background-global renormalization",
+      "BRST/Cutkosky unitarity closure",
+      "QW-2191 selector closure",
+      "ToE closure"
+    ]
+  },
+  "false_pass_guard": "This packet exports the table shape and missing-entry ledger only; it proves no tensor component profile and performs no tensor Gram projection.",
+  "next_honest_step": "Build P2032: derive or audit the B1 metric/gauge component projection rule needed to fill the R2/Ric2/Riem2 rows componentwise, then assemble GB conditionally.",
+  "lay_explanation": "Nazwalismy brakujaca tabele tensorowa i pokazalismy wszystkie 16 miejsc, ktore trzeba wypelnic. Na razie nie wpisujemy tam niczego na sile: skalarne profile i rachunek lapse pomagaja, ale nie sa tym samym co komponenty tensora.",
+  "environment": {
+    "python": "3.12.3"
+  }
+}

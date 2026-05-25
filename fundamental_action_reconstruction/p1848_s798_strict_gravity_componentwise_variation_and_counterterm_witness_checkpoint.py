@@ -34,6 +34,52 @@ def main() -> None:
         "assembly_rule": "E_{mu nu} = (M_Pl^2/2)G_{mu nu} + c_gr_1 H^(R2)_{mu nu} + c_gr_2 H^(Ric2)_{mu nu} + c_gr_3 H^(Riem2)_{mu nu} + c_gr_4 H^(GB)_{mu nu} - T_{mu nu}^{SM+mix}",
     }
 
+    gravity_operator_profiles_b1 = {
+        "profile_id": "gravity_operator_profiles_B1_strict_kernel_jet_v1",
+        "background_family": "B1",
+        "profile_coordinate": "d",
+        "profile_symbols": {
+            "K": "K_strict(d)",
+            "Kd": "d K_strict(d) / d d",
+            "Kdd": "d^2 K_strict(d) / d d^2",
+        },
+        "source_operator_pack": "gravity_componentwise_variation_pack",
+        "profile_generation_rule": (
+            "Project the scalar curvature-operator basis O_i=(R2,Ric2,Riem2,GB) "
+            "onto the declared one-dimensional strict B1 kernel-jet profile.  "
+            "GB is exported by its tensor identity GB=Riem2-4*Ric2+R2, not as an "
+            "independent surrogate channel."
+        ),
+        "profiles": {
+            "R2": {
+                "operator": "R^2",
+                "delta_label": "delta_c_gr_1",
+                "expression": "K**2",
+            },
+            "Ric2": {
+                "operator": "Ricci^2",
+                "delta_label": "delta_c_gr_2",
+                "expression": "Kd**2",
+            },
+            "Riem2": {
+                "operator": "Riemann^2",
+                "delta_label": "delta_c_gr_3",
+                "expression": "Kdd**2",
+            },
+            "GB": {
+                "operator": "GaussBonnet",
+                "delta_label": "delta_c_gr_4",
+                "expression": "Riem2 - 4*Ric2 + R2",
+            },
+        },
+        "linearity_warning": (
+            "Because GB is the exported tensor combination rather than an "
+            "independent proxy, the B1 scalar-profile Gram matrix may be rank "
+            "deficient.  A downstream rank obstruction is admissible evidence "
+            "and must not be force-promoted to closure."
+        ),
+    }
+
     counterterm_basis = p1663.get("counterterm_basis", ["R^2", "Ricci^2", "Riemann^2"])
     counterterm_map = {
         "basis": counterterm_basis,
@@ -88,6 +134,7 @@ def main() -> None:
             "p1663_present": "counterterm_basis" in p1663,
         },
         "gravity_componentwise_variation_pack": componentwise_variation_pack,
+        "gravity_operator_profiles_B1": gravity_operator_profiles_b1,
         "gravity_counterterm_projection_pack": counterterm_map,
         "gravity_residual_trace": residual_trace,
         "proven": "Componentwise gravity variation structure and counterterm projection map are now explicitly exported in strict-only lane.",

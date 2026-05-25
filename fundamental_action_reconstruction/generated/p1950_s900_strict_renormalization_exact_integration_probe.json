@@ -38,7 +38,9 @@
     "backend_tensor_operator_source": "p1848_s798_strict_gravity_componentwise_variation_and_counterterm_witness_checkpoint.json::gravity_componentwise_variation_pack",
     "backend_tensor_operator_exports_present": true,
     "backend_direct_operator_profiles_source": "p1848::gravity_operator_profiles_B1",
-    "backend_direct_operator_profiles_present": false
+    "backend_direct_operator_profiles_present": true,
+    "backend_direct_operator_profile_source_kind": "p1848_direct_gravity_operator_profiles_B1",
+    "backend_direct_operator_profile_generation_rule": "Project the scalar curvature-operator basis O_i=(R2,Ric2,Riem2,GB) onto the declared one-dimensional strict B1 kernel-jet profile.  GB is exported by its tensor identity GB=Riem2-4*Ric2+R2, not as an independent surrogate channel."
   },
   "computed_rows": [
     {
@@ -56,83 +58,104 @@
     {
       "delta_c_gr_i": "delta_c_gr_1",
       "channel": "R2",
-      "lhs_counterterm_combo": 0.4029408108419455,
+      "lhs_counterterm_combo": 0.4029408108419461,
       "rhs_divergence_target": 0.40294081084194555,
-      "signed_residual": -5.551115123125783e-17,
-      "residual_abs": 5.551115123125783e-17,
+      "signed_residual": 5.551115123125783e-16,
+      "residual_abs": 5.551115123125783e-16,
       "row_operator": {
         "a_R2": 0.40294081084194555,
-        "a_Ric2": 0.1544047414877819,
-        "a_Riem2": 0.5567386643602356,
-        "a_GB": 0.32069583619681485
+        "a_Ric2": 0.15440474148778183,
+        "a_Riem2": 1.1902931119531976,
+        "a_GB": 0.975614956844016
       }
     },
     {
       "delta_c_gr_i": "delta_c_gr_2",
       "channel": "Ric2",
-      "lhs_counterterm_combo": 0.15440474148778188,
-      "rhs_divergence_target": 0.1544047414877819,
-      "signed_residual": -2.7755575615628914e-17,
-      "residual_abs": 2.7755575615628914e-17,
+      "lhs_counterterm_combo": 0.154404741487782,
+      "rhs_divergence_target": 0.15440474148778183,
+      "signed_residual": 1.6653345369377348e-16,
+      "residual_abs": 1.6653345369377348e-16,
       "row_operator": {
-        "a_R2": 0.1544047414877819,
-        "a_Ric2": 0.09431033921933688,
-        "a_Riem2": 0.11268798007583881,
-        "a_GB": 0.1079717277848179
+        "a_R2": 0.15440474148778183,
+        "a_Ric2": 0.09431033921933678,
+        "a_Riem2": 0.12849232138775993,
+        "a_GB": -0.0943442940018054
       }
     },
     {
       "delta_c_gr_i": "delta_c_gr_3",
       "channel": "Riem2",
-      "lhs_counterterm_combo": 0.5567386643602354,
-      "rhs_divergence_target": 0.5567386643602356,
-      "signed_residual": -1.1102230246251565e-16,
-      "residual_abs": 1.1102230246251565e-16,
+      "lhs_counterterm_combo": 1.1902931119531976,
+      "rhs_divergence_target": 1.1902931119531976,
+      "signed_residual": 0.0,
+      "residual_abs": 0.0,
       "row_operator": {
-        "a_R2": 0.5567386643602356,
-        "a_Ric2": 0.11268798007583881,
-        "a_Riem2": 1.1902931119532,
-        "a_GB": 0.48696585083697413
+        "a_R2": 1.1902931119531976,
+        "a_Ric2": 0.12849232138775993,
+        "a_Riem2": 18.216124924204376,
+        "a_GB": 18.892448750606533
       }
     },
     {
       "delta_c_gr_i": "delta_c_gr_4",
       "channel": "GB",
-      "lhs_counterterm_combo": 0.3206958361968148,
-      "rhs_divergence_target": 0.32069583619681485,
-      "signed_residual": -5.551115123125783e-17,
-      "residual_abs": 5.551115123125783e-17,
+      "lhs_counterterm_combo": 0.9756149568440162,
+      "rhs_divergence_target": 0.975614956844016,
+      "signed_residual": 2.220446049250313e-16,
+      "residual_abs": 2.220446049250313e-16,
       "row_operator": {
-        "a_R2": 0.32069583619681485,
-        "a_Ric2": 0.1079717277848179,
-        "a_Riem2": 0.48696585083697413,
-        "a_GB": 0.2616633664171314
+        "a_R2": 0.975614956844016,
+        "a_Ric2": -0.0943442940018054,
+        "a_Riem2": 18.892448750606533,
+        "a_GB": 20.245440883457775
       }
     }
   ],
   "aggregate_metrics": {
-    "a_R2": 0.9999999999999999,
-    "a_Ric2": 0.0,
-    "a_Riem2": 0.0,
-    "a_GB": 0.0,
-    "linear_residual_l2": 1.3877787807814457e-16,
-    "termwise_residual_abs_max": 1.1102230246251565e-16,
-    "residual_tolerance": 0.0046608780900703195,
-    "backward_error_bound": 2.785911415078736e-14,
-    "quadrature_discretization_bound": 0.0046608780900703195,
+    "a_R2": 0.9473684210526333,
+    "a_Ric2": 0.21052631578947498,
+    "a_Riem2": -0.05263157894736947,
+    "a_GB": 0.05263157894736932,
+    "linear_residual_l2": 6.591583993652515e-16,
+    "termwise_residual_abs_max": 5.551115123125783e-16,
+    "residual_tolerance": 3.269621632864066,
+    "backward_error_bound": 4.3067049614858376e-13,
+    "quadrature_discretization_bound": 3.269621632864066,
+    "quadrature_scale": 20.245440883457775,
+    "quadrature_relative_discretization_bound": 0.16149915685637756,
+    "quadrature_relative_stability_tolerance": 1e-06,
     "backend_tensor_operator_exports": {
       "R2": "H^(R2)_{μν} = 2 R R_{μν} - (1/2) g_{μν} R^2 + 2(g_{μν}□ - ∇_μ∇_ν)R",
       "Ric2": "H^(Ric2)_{mu nu} = 2 R_{mu alpha}R_nu^alpha - (1/2) g_{mu nu}R_{alpha beta}R^{alpha beta} + Box R_{mu nu} + g_{mu nu} nabla_alpha nabla_beta R^{alpha beta} - 2 nabla_alpha nabla_(mu R_{nu)}^alpha",
       "Riem2": "H^(Riem2)_{mu nu} = 2 R_{mu alpha beta gamma}R_nu^{alpha beta gamma} - (1/2) g_{mu nu}R_{alpha beta gamma delta}R^{alpha beta gamma delta} - 4 nabla_alpha nabla_beta R_{mu~~nu}^{~alpha~beta}",
       "GB": "H^(GB)_{mu nu} = 2 R R_{mu nu} -4 R_{mu alpha}R_nu^alpha -4 R_{mu alpha nu beta}R^{alpha beta} +2 R_{mu alpha beta gamma}R_nu^{alpha beta gamma} -(1/2) g_{mu nu} G_GB"
     },
-    "missing_direct_operator_profiles_count": 4
+    "backend_direct_operator_profile_expressions": {
+      "R2": "cos(0.18575*d + 0.1625)**2/(1.0*d**(9/5) + 1)**2",
+      "Ric2": "3.24*(-d**(4/5)*cos(0.18575*d + 0.1625)/(1.0*d**(9/5) + 1)**2 - 0.103194444444444*sin(0.18575*d + 0.1625)/(1.0*d**(9/5) + 1))**2",
+      "Riem2": "41.9904*(d**(8/5)*cos(0.18575*d + 0.1625)/(1.0*d**(9/5) + 1)**3 + 0.103194444444444*d**(4/5)*sin(0.18575*d + 0.1625)/(1.0*d**(9/5) + 1)**2 - 0.00532454668209876*cos(0.18575*d + 0.1625)/(1.0*d**(9/5) + 1) - 0.222222222222222*cos(0.18575*d + 0.1625)/(d**(1/5)*(1.0*d**(9/5) + 1)**2))**2",
+      "GB": "-12.96*(-d**(4/5)*cos(0.18575*d + 0.1625)/(1.0*d**(9/5) + 1)**2 - 0.103194444444444*sin(0.18575*d + 0.1625)/(1.0*d**(9/5) + 1))**2 + 41.9904*(d**(8/5)*cos(0.18575*d + 0.1625)/(1.0*d**(9/5) + 1)**3 + 0.103194444444444*d**(4/5)*sin(0.18575*d + 0.1625)/(1.0*d**(9/5) + 1)**2 - 0.00532454668209876*cos(0.18575*d + 0.1625)/(1.0*d**(9/5) + 1) - 0.222222222222222*cos(0.18575*d + 0.1625)/(d**(1/5)*(1.0*d**(9/5) + 1)**2))**2 + cos(0.18575*d + 0.1625)**2/(1.0*d**(9/5) + 1)**2"
+    },
+    "missing_direct_operator_profiles_count": 0,
+    "operator_profile_gram_rank": 3,
+    "operator_profile_gram_nullity": 1,
+    "operator_profile_gram_singular_values": [
+      38.21214204920885,
+      0.6128847493604671,
+      0.13379015915411668,
+      2.134088485505147e-17
+    ],
+    "operator_profile_gram_rank_tolerance": 3.3939199938623022e-12,
+    "operator_profile_gram_condition_number": null
   },
   "pass_fail_criteria": {
-    "linear_residual_l2_le_residual_tolerance": 0.0046608780900703195,
-    "termwise_residual_abs_max_le_residual_tolerance": 0.0046608780900703195,
-    "missing_direct_operator_profiles_count_eq_0": 0
+    "linear_residual_l2_le_residual_tolerance": 3.269621632864066,
+    "termwise_residual_abs_max_le_residual_tolerance": 3.269621632864066,
+    "missing_direct_operator_profiles_count_eq_0": 0,
+    "operator_profile_gram_rank_eq_channel_count": 4,
+    "quadrature_relative_discretization_bound_le": 1e-06
   },
   "verdict": "OPEN_OBSTRUCTION_WITH_TRACE",
-  "fail_trace": "missing_direct_operator_profiles_count=4 > 0"
+  "fail_trace": "operator_profile_gram_rank=3 < 4; nullity=1; condition_number=rank_deficient"
 }

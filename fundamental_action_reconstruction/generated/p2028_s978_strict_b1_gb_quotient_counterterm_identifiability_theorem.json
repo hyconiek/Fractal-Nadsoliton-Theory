@@ -1,0 +1,283 @@
+{
+  "schema_version": "p2028_s978_v1",
+  "packet_id": "P2028",
+  "stage_id": "S978",
+  "produced_by": "p2028_s978_strict_b1_gb_quotient_counterterm_identifiability_theorem.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "result_kind": "PASS_B1_SCALAR_GB_QUOTIENT_COUNTERTERM_CLASS_THEOREM__TENSOR_EXTENSION_OPEN",
+  "local_verdict": "PASS_QUOTIENT_THEOREM_WITH_TRACE",
+  "route": "strict_only",
+  "strict_lane_assumptions": [
+    "strict_kernel_only",
+    "no_legacy_transfer",
+    "B1_scalar_projection_only",
+    "GB_direction_quotiented_not_independently_identified"
+  ],
+  "depends_on": {
+    "p2027_present": true,
+    "p2027_local_verdict": "PASS_RANK3_QUOTIENT_IDENTIFIABLE_ON_SCALAR_B1_WITH_GB_NULL_TRACE",
+    "p2027_full_gram_rank": 3,
+    "p2027_full_gram_nullity": 1
+  },
+  "input_hashes": {
+    "p2027_json_sha256": "240e5b28ba9d86202248a3b412c8ac2f74eabfce59ada521025d1b0e4b1598ae"
+  },
+  "quotient_space": {
+    "full_channel_order": [
+      "R2",
+      "Ric2",
+      "Riem2",
+      "GB"
+    ],
+    "quotient_channel_order": [
+      "R2_bar",
+      "Ric2_bar",
+      "Riem2_bar"
+    ],
+    "null_direction_R2_Ric2_Riem2_GB": [
+      1.0,
+      -4.0,
+      1.0,
+      -1.0
+    ],
+    "target_quotient_coefficients": {
+      "R2_bar": 0.9999999999999992,
+      "Ric2_bar": 1.1656308464946203e-15,
+      "Riem2_bar": 6.066324488242904e-17
+    },
+    "canonical_section_representative_R2_Ric2_Riem2_GB": [
+      0.9999999999999992,
+      1.1656308464946203e-15,
+      6.066324488242904e-17,
+      0.0
+    ],
+    "minimum_norm_representative_quotient_coefficients": [
+      0.9999999999999963,
+      6.328271240363392e-15,
+      3.885780586188048e-16
+    ],
+    "minimum_norm_quotient_gap_linf": 5.1626403938687724e-15
+  },
+  "exact_linear_algebra": {
+    "T_matrix_rows": [
+      [
+        "1",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "0",
+        "1",
+        "0",
+        "-4"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "1"
+      ]
+    ],
+    "section_matrix_rows": [
+      [
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "projector_matrix_rows": [
+      [
+        "1",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "0",
+        "1",
+        "0",
+        "-4"
+      ],
+      [
+        "0",
+        "0",
+        "1",
+        "1"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "T_null_vector": [
+      "0",
+      "0",
+      "0"
+    ],
+    "T_section_equals_identity": true,
+    "projector_idempotent": true,
+    "projector_null_vector_zero": true,
+    "projector_kernel_direction": [
+      "1",
+      "-4",
+      "1",
+      "-1"
+    ],
+    "quotient_rule": "T(a_R2,a_Ric2,a_Riem2,a_GB)=(a_R2+a_GB, a_Ric2-4*a_GB, a_Riem2+a_GB)",
+    "section_rule": "s(q_R2,q_Ric2,q_Riem2)=(q_R2,q_Ric2,q_Riem2,0)"
+  },
+  "tau_family_invariance": {
+    "coefficient_family_rule": "a(tau)=section(target_q)+tau*(1,-4,1,-1)",
+    "tau_samples": [
+      {
+        "tau": -3.0,
+        "coefficients_R2_Ric2_Riem2_GB": [
+          -2.000000000000001,
+          12.000000000000002,
+          -3.0,
+          3.0
+        ],
+        "quotient_coefficients": [
+          0.9999999999999991,
+          1.7763568394002505e-15,
+          0.0
+        ],
+        "quotient_gap_linf": 6.107259929056302e-16,
+        "full_system_residual_linf": 4.218847493575595e-15
+      },
+      {
+        "tau": -1.0,
+        "coefficients_R2_Ric2_Riem2_GB": [
+          -7.771561172376096e-16,
+          4.000000000000001,
+          -0.9999999999999999,
+          1.0
+        ],
+        "quotient_coefficients": [
+          0.9999999999999992,
+          8.881784197001252e-16,
+          1.1102230246251565e-16
+        ],
+        "quotient_gap_linf": 2.7745242679449503e-16,
+        "full_system_residual_linf": 1.2212453270876722e-15
+      },
+      {
+        "tau": -0.05263157894736842,
+        "coefficients_R2_Ric2_Riem2_GB": [
+          0.9473684210526307,
+          0.21052631578947484,
+          -0.052631578947368356,
+          0.05263157894736842
+        ],
+        "quotient_coefficients": [
+          0.9999999999999991,
+          1.1657341758564144e-15,
+          6.245004513516506e-17
+        ],
+        "quotient_gap_linf": 1.1102230246251565e-16,
+        "full_system_residual_linf": 1.1102230246251565e-16
+      },
+      {
+        "tau": 0.0,
+        "coefficients_R2_Ric2_Riem2_GB": [
+          0.9999999999999992,
+          1.1656308464946203e-15,
+          6.066324488242904e-17,
+          0.0
+        ],
+        "quotient_coefficients": [
+          0.9999999999999992,
+          1.1656308464946203e-15,
+          6.066324488242904e-17
+        ],
+        "quotient_gap_linf": 0.0,
+        "full_system_residual_linf": 1.1102230246251565e-16
+      },
+      {
+        "tau": 1.0,
+        "coefficients_R2_Ric2_Riem2_GB": [
+          1.9999999999999991,
+          -3.9999999999999987,
+          1.0,
+          -1.0
+        ],
+        "quotient_coefficients": [
+          0.9999999999999991,
+          1.3322676295501878e-15,
+          0.0
+        ],
+        "quotient_gap_linf": 1.666367830555676e-16,
+        "full_system_residual_linf": 6.661338147750939e-16
+      },
+      {
+        "tau": 3.0,
+        "coefficients_R2_Ric2_Riem2_GB": [
+          3.999999999999999,
+          -11.999999999999998,
+          3.0,
+          -3.0
+        ],
+        "quotient_coefficients": [
+          0.9999999999999991,
+          1.7763568394002505e-15,
+          0.0
+        ],
+        "quotient_gap_linf": 6.107259929056302e-16,
+        "full_system_residual_linf": 2.886579864025407e-15
+      }
+    ],
+    "max_quotient_gap_linf": 6.107259929056302e-16,
+    "max_full_system_residual_linf": 4.218847493575595e-15,
+    "numerical_tolerance": 1e-10,
+    "tau_family_invariance_pass": true
+  },
+  "gatekeeper_checks": {
+    "p2027_rank3_null1": true,
+    "exact_quotient_map_valid": true,
+    "exact_projector_valid": true,
+    "tau_family_invariance_pass": true,
+    "minimum_norm_rep_maps_to_same_quotient": true,
+    "independent_a_GB_identified": false,
+    "full_tensor_projection_claimed": false,
+    "toe_closure_claimed": false
+  },
+  "theorem_scope": {
+    "licensed_statement": "On the strict B1 scalar projection, counterterm coefficients are identifiable as the quotient class T(a)=(a_R2+a_GB, a_Ric2-4*a_GB, a_Riem2+a_GB) modulo span(1,-4,1,-1).",
+    "not_licensed": [
+      "independent scalar B1 identification of a_GB",
+      "four-channel coefficient uniqueness",
+      "tensor-resolved curvature-operator projection",
+      "background-family globalization beyond B1",
+      "BRST/Cutkosky unitarity closure",
+      "QW-2191 selector closure",
+      "ToE closure"
+    ]
+  },
+  "false_pass_guard": "This is a quotient-class theorem only.  The apparent four-coefficient minimum-norm vector is a gauge/section choice inside the GB-null family, not an independent a_GB measurement.",
+  "next_honest_step": "Attempt a tensor-resolved B1 projection that separates the GB/topological direction at the operator level, or explicitly carry this quotient object into the Task-1 ledger without upgrading it to four-channel uniqueness.",
+  "lay_explanation": "W skalarnej projekcji B1 da sie jednoznacznie okreslic tylko klase trzech kombinacji wspolczynnikow. Przesuniecie wzdluz kierunku Gaussa-Bonneta zmienia cztery liczby, ale nie zmienia tego, co widzi B1.",
+  "environment": {
+    "python": "3.12.3",
+    "numpy": "1.26.4",
+    "sympy": "1.12"
+  }
+}

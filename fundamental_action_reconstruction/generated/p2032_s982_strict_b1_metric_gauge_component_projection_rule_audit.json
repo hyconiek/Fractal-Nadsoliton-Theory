@@ -1,0 +1,170 @@
+{
+  "schema_version": "p2032_s982_v1",
+  "packet_id": "P2032",
+  "stage_id": "S982",
+  "produced_by": "p2032_s982_strict_b1_metric_gauge_component_projection_rule_audit.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "result_kind": "OPEN_B1_METRIC_GAUGE_COMPONENT_PROJECTION_RULE_MISSING_WITH_TRACE",
+  "route": "strict_only",
+  "strict_lane_assumptions": [
+    "strict_kernel_only",
+    "no_legacy_transfer",
+    "flat_B1_gauge_tangent_patch_not_curved_gravity_B1_component_rule",
+    "ADM_lapse_witness_not_H00_profile",
+    "P2031_scaffold_not_tensor_projection"
+  ],
+  "depends_on": {
+    "p1848_present": true,
+    "p1950_present": true,
+    "p1954_present": true,
+    "p1958_present": true,
+    "p1984_present": true,
+    "p2031_present": true
+  },
+  "input_hashes": {
+    "p1848_json_sha256": "fd79beddcc99bee9162e4967e813d5c939007e6577e488f000afb564a8b43acb",
+    "p1950_json_sha256": "e3aea485748b753a2811ea58b0f7581ed5c793343bfbe53c15264b9de177acc6",
+    "p1954_json_sha256": "12bfaf638bdc852926d8c5a46a9fbe712b015bf1eecac0505cb47ea9054185bd",
+    "p1958_json_sha256": "d54f38f7170ec8f3028c515062c0c4cc5760282eff67ace8b6617f638e021494",
+    "p1984_json_sha256": "d69d18a541197b4f6391512e29936328afa8c6cbda42a5429d8599138fefe46f",
+    "p2031_json_sha256": "7f7fcbbc11d825e25d465c865c894dbafa8f93bd006cf9cb3c8f4d8467951eaf"
+  },
+  "audited_rule": {
+    "rule_id": "strict_B1_metric_gauge_component_projection_rule_v1",
+    "rule_ready": false,
+    "required_rule_fields": [
+      {
+        "field": "B1_background_metric_ansatz_g_munu_of_d",
+        "present": false,
+        "why_required": "needed before evaluating curvature tensors componentwise"
+      },
+      {
+        "field": "coordinate_and_gauge_convention_for_00_11_22_33",
+        "present": false,
+        "why_required": "needed to distinguish lapse, time-time, and spatial component statements"
+      },
+      {
+        "field": "curvature_jet_map_from_K_Kd_Kdd_to_R_Ricci_Riemann_components",
+        "present": false,
+        "why_required": "needed to connect the strict kernel-jet scalar profiles to tensor components"
+      },
+      {
+        "field": "component_projection_operator_from_covariant_H_munu_templates",
+        "present": false,
+        "why_required": "needed to fill P2031 entries from P1848 templates"
+      },
+      {
+        "field": "component_inner_product_and_weight_for_tensor_Gram",
+        "present": false,
+        "why_required": "needed before a tensor-resolved Gram rank can be computed"
+      },
+      {
+        "field": "same_basis_one_loop_divergence_tensor_target",
+        "present": false,
+        "why_required": "needed before counterterm identifiability can be tested componentwise"
+      }
+    ],
+    "missing_rule_fields": [
+      "B1_background_metric_ansatz_g_munu_of_d",
+      "coordinate_and_gauge_convention_for_00_11_22_33",
+      "curvature_jet_map_from_K_Kd_Kdd_to_R_Ricci_Riemann_components",
+      "component_projection_operator_from_covariant_H_munu_templates",
+      "component_inner_product_and_weight_for_tensor_Gram",
+      "same_basis_one_loop_divergence_tensor_target"
+    ]
+  },
+  "candidate_source_rows": [
+    {
+      "source": "P1848",
+      "available": true,
+      "exports": "covariant curvature-squared H_munu templates",
+      "insufficient_for_rule": "does not choose B1 metric ansatz, component gauge, or component projection map",
+      "can_supply_rule": false
+    },
+    {
+      "source": "P1950",
+      "available": true,
+      "exports": "scalar B1 Gram projection over strict kernel-jet profiles",
+      "insufficient_for_rule": "scalar projection has no 00/11/22/33 tensor components",
+      "can_supply_rule": false
+    },
+    {
+      "source": "P1954",
+      "available": true,
+      "exports": "nonavailability theorem for dressed graviton-to-gauge-gauge amplitude",
+      "insufficient_for_rule": "explicitly records missing 4D metric perturbation convention and hAA tensor data",
+      "can_supply_rule": false
+    },
+    {
+      "source": "P1958",
+      "available": true,
+      "exports": "flat local B1 tangent-patch eta_mu_nu convention for an Abelianized gauge seed",
+      "insufficient_for_rule": "flat gauge tangent patch is not a curved B1 gravitational component ansatz",
+      "can_supply_rule": false
+    },
+    {
+      "source": "P1984",
+      "available": true,
+      "exports": "ADM/Bianchi-I Gauss-Bonnet lapse Euler cancellation",
+      "insufficient_for_rule": "lapse Euler cancellation is not an H_00(d) profile and gives no spatial H_ii(d)",
+      "can_supply_rule": false
+    },
+    {
+      "source": "P2031",
+      "available": true,
+      "exports": "strict_B1_tensor_component_profile_table_v1 scaffold",
+      "insufficient_for_rule": "the scaffold records required entries but intentionally derives none",
+      "can_supply_rule": false
+    }
+  ],
+  "positive_but_insufficient_evidence": {
+    "p1848_covariant_templates_present": true,
+    "p1950_scalar_b1_projection_present": true,
+    "p1954_metric_perturbation_missing_recorded": true,
+    "p1958_flat_tangent_metric_present": true,
+    "p1984_gb_lapse_cancellation_present": true,
+    "p2031_table_scaffold_missing_all_entries": true
+  },
+  "professor_decision": {
+    "decision": "DO_NOT_FILL_P2031_FROM_FLAT_TANGENT_OR_LAPSE_SHADOWS",
+    "rationale": [
+      "The only explicit B1 metric signature found here is the flat gauge tangent-patch eta convention from P1958.",
+      "That convention is useful for local gauge ghosts, but it does not define a curved gravitational B1 background.",
+      "P1984's GB lapse cancellation is real but reduced; it is not an H_00 profile.",
+      "P1954 independently warns that 4D metric perturbation data remain missing for dressed gravity amplitudes."
+    ],
+    "next_route_preference": "export_minimal_curved_B1_metric_ansatz_or_prove_nonavailability_before_component_derivation"
+  },
+  "gatekeeper_checks": {
+    "candidate_sources_audited": true,
+    "no_candidate_source_can_supply_rule": true,
+    "required_rule_fields_all_missing": true,
+    "flat_tangent_metric_not_promoted": true,
+    "gb_lapse_not_promoted_to_H00": true,
+    "p2031_remains_unfilled": true,
+    "rule_ready": false,
+    "no_tensor_projection_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "theorem_scope": {
+    "licensed_statement": "The current strict repository does not export the B1 metric/gauge component projection rule needed to fill the P2031 tensor component table.",
+    "not_licensed": [
+      "deriving H_00/H_ii from flat tangent-patch eta alone",
+      "deriving H_00 from ADM lapse Euler cancellation",
+      "tensor-resolved Gram rank",
+      "independent a_GB identification",
+      "four-channel counterterm uniqueness",
+      "background-global renormalization",
+      "BRST/Cutkosky unitarity closure",
+      "QW-2191 selector closure",
+      "ToE closure"
+    ]
+  },
+  "false_pass_guard": "A local flat B1 gauge tangent metric and a minisuperspace lapse cancellation are insufficient to fill curved gravitational B1 tensor profiles.",
+  "next_honest_step": "Build P2033: either export a minimal curved B1 metric ansatz g_munu(d) plus component projection rule, or prove that such an ansatz is absent from current strict sources.",
+  "lay_explanation": "Mamy lokalna plaska metryke dla prostego sektora cechowania i mamy rachunek lapse. To sa przydatne cienie, ale nie sa regula, ktora pozwala policzyc komponenty tensora grawitacyjnego na B1.",
+  "environment": {
+    "python": "3.12.3"
+  }
+}

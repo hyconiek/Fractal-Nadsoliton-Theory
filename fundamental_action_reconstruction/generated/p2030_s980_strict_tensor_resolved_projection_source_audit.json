@@ -1,0 +1,242 @@
+{
+  "schema_version": "p2030_s980_v1",
+  "packet_id": "P2030",
+  "stage_id": "S980",
+  "produced_by": "p2030_s980_strict_tensor_resolved_projection_source_audit.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "result_kind": "OPEN_TENSOR_RESOLVED_SOURCE_GAP_WITH_TRACE",
+  "route": "strict_only",
+  "strict_lane_assumptions": [
+    "strict_kernel_only",
+    "no_legacy_transfer",
+    "scalar_B1_quotient_pass_not_tensor_projection",
+    "ADM_lapse_witness_not_full_H_munu_component_table"
+  ],
+  "depends_on": {
+    "p1848_present": true,
+    "p1981_present": true,
+    "p1982_present": true,
+    "p1983_present": true,
+    "p1984_present": true,
+    "p1985_present": true,
+    "p1988_present": true,
+    "p1991_present": true,
+    "p2029_present": true
+  },
+  "input_hashes": {
+    "p1848_json_sha256": "fd79beddcc99bee9162e4967e813d5c939007e6577e488f000afb564a8b43acb",
+    "p1984_json_sha256": "d69d18a541197b4f6391512e29936328afa8c6cbda42a5429d8599138fefe46f",
+    "p1985_json_sha256": "a127e42e199bd2cc8d4323056d2b3bccbf8d40db51cf1a095fb65b268e8e66f6",
+    "p1988_json_sha256": "7c221d57fcbb6edfb2230fae4cd5ca545d65cb0ae8b18f5052bf237b8b2de0b1",
+    "p1991_json_sha256": "f8d523bde2c223ff37cc5fbf8ee2451e0e92c7d3d95874c8d348e7348ffa984a",
+    "p2029_json_sha256": "2f7169a5855491e0dfa7328e9f8607911134c2358df1237ada7f52f3d77ffedc"
+  },
+  "source_audit_rows": [
+    {
+      "source": "P1848",
+      "available": true,
+      "level": "covariant_H_munu_template",
+      "useful_for": "symbolic operator definitions and strict index convention",
+      "insufficient_for": "component-profile Gram matrix; no H_00/H_11/H_22/H_33 B1 profiles exported"
+    },
+    {
+      "source": "P1848.gravity_operator_profiles_B1",
+      "available": true,
+      "level": "scalar_B1_profile",
+      "useful_for": "rank-3 quotient scalar projection from P2027/P2028",
+      "insufficient_for": "tensor-resolved separation of GB across components"
+    },
+    {
+      "source": "P1981/P1982/P1983/P1984",
+      "available": true,
+      "level": "ADM_BianchiI_lapse_Euler_chain",
+      "useful_for": "lapse-level GB cancellation and non-GB residual diagnosis",
+      "insufficient_for": "full H_munu component table and tensor inner product"
+    },
+    {
+      "source": "P1985",
+      "available": true,
+      "level": "weighted_non_GB_lapse_obstruction",
+      "useful_for": "proving strict non-GB anisotropic lapse residual persists",
+      "insufficient_for": "four-component tensor projection closure"
+    },
+    {
+      "source": "P1988",
+      "available": true,
+      "level": "spatial_family_projection_obstruction",
+      "useful_for": "showing non-GB families exceed EH anisotropic capacity",
+      "insufficient_for": "channel-resolved R2/Ric2/Riem2/GB spatial components"
+    },
+    {
+      "source": "P1991",
+      "available": true,
+      "level": "augmented_provider_channel_matrix_obstruction",
+      "useful_for": "testing non-strict augmented provider insufficiency",
+      "insufficient_for": "strict tensor source or selector-safe closure"
+    },
+    {
+      "source": "P2029",
+      "available": true,
+      "level": "task1_quotient_ledger",
+      "useful_for": "preventing scalar quotient pass from becoming four-channel uniqueness",
+      "insufficient_for": "new tensor data"
+    }
+  ],
+  "adm_lapse_sources": [
+    {
+      "packet": "P1981",
+      "channel": "R2",
+      "result_kind": "PASS_R2_LAPSE_VARIATION_OBLIGATION_EXPORTED",
+      "has_lapse_operator": true,
+      "scope": "ADM/Bianchi-I lapse Euler operator"
+    },
+    {
+      "packet": "P1982",
+      "channel": "Ric2",
+      "result_kind": "PASS_RICCI2_LAPSE_VARIATION_OBLIGATION_EXPORTED",
+      "has_lapse_operator": true,
+      "scope": "ADM/Bianchi-I lapse Euler operator"
+    },
+    {
+      "packet": "P1983",
+      "channel": "Riem2",
+      "result_kind": "PASS_RIEMANN2_LAPSE_VARIATION_OBLIGATION_EXPORTED",
+      "has_lapse_operator": true,
+      "scope": "ADM/Bianchi-I lapse Euler operator"
+    },
+    {
+      "packet": "P1984",
+      "channel": "GB",
+      "result_kind": "PASS_GB_LAPSE_CANCELLATION_WITNESS",
+      "has_lapse_operator": true,
+      "scope": "ADM/Bianchi-I lapse Euler cancellation"
+    }
+  ],
+  "known_positive_evidence": {
+    "covariant_H_munu_templates_present": true,
+    "scalar_B1_profiles_present": true,
+    "adm_lapse_chain_present": true,
+    "gb_lapse_cancels": true,
+    "non_gb_lapse_obstruction_present": true,
+    "spatial_family_obstruction_present": true,
+    "provider_matrix_obstruction_present": true
+  },
+  "required_tensor_object": {
+    "object_id": "strict_B1_tensor_component_profile_table_v1",
+    "required_channels": [
+      "R2",
+      "Ric2",
+      "Riem2",
+      "GB"
+    ],
+    "required_components": [
+      "00",
+      "11",
+      "22",
+      "33"
+    ],
+    "required_entries": [
+      "R2.H_00_profile(d)",
+      "R2.H_11_profile(d)",
+      "R2.H_22_profile(d)",
+      "R2.H_33_profile(d)",
+      "Ric2.H_00_profile(d)",
+      "Ric2.H_11_profile(d)",
+      "Ric2.H_22_profile(d)",
+      "Ric2.H_33_profile(d)",
+      "Riem2.H_00_profile(d)",
+      "Riem2.H_11_profile(d)",
+      "Riem2.H_22_profile(d)",
+      "Riem2.H_33_profile(d)",
+      "GB.H_00_profile(d)",
+      "GB.H_11_profile(d)",
+      "GB.H_22_profile(d)",
+      "GB.H_33_profile(d)"
+    ],
+    "required_metadata": [
+      "background metric and gauge convention",
+      "component inner-product/Gram rule",
+      "UV endpoint quadrature rule for every component",
+      "GB identity row and topological/null classification",
+      "one-loop divergence tensor target vector in the same component basis"
+    ]
+  },
+  "minimal_requirements": [
+    {
+      "requirement": "covariant_H_munu_templates",
+      "present": true,
+      "source": "P1848"
+    },
+    {
+      "requirement": "scalar_B1_profiles",
+      "present": true,
+      "source": "P1848/P2027"
+    },
+    {
+      "requirement": "ADM_lapse_channel_chain",
+      "present": true,
+      "source": "P1981-P1984"
+    },
+    {
+      "requirement": "tensor_component_profile_table",
+      "present": false,
+      "source": "MISSING"
+    },
+    {
+      "requirement": "tensor_component_Gram_rule",
+      "present": false,
+      "source": "MISSING"
+    },
+    {
+      "requirement": "same_basis_divergence_tensor_target",
+      "present": false,
+      "source": "MISSING"
+    }
+  ],
+  "blocking_requirements": [
+    "tensor_component_profile_table",
+    "tensor_component_Gram_rule",
+    "same_basis_divergence_tensor_target"
+  ],
+  "tensor_projection_ready": false,
+  "professor_decision": {
+    "decision": "DO_NOT_ATTEMPT_TENSOR_PROJECTION_UNTIL_COMPONENT_TABLE_EXISTS",
+    "rationale": [
+      "P1848 exports covariant templates and scalar B1 profiles, not componentwise tensor profiles.",
+      "P1981-P1984 prove valuable ADM/Bianchi-I lapse facts, including GB lapse cancellation, but lapse-only is not full H_munu.",
+      "P1988/P1991 expose spatial/provider obstructions rather than a strict tensor source table."
+    ],
+    "next_route_preference": "construct_minimal_strict_B1_tensor_component_profile_table_v1"
+  },
+  "gatekeeper_checks": {
+    "h_templates_present": true,
+    "scalar_profiles_present": true,
+    "adm_lapse_chain_present": true,
+    "p1848_has_only_templates_not_components": true,
+    "adm_is_lapse_not_full_tensor": true,
+    "tensor_component_profile_table_missing": true,
+    "component_gram_missing": true,
+    "divergence_tensor_target_missing": true,
+    "no_tensor_projection_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "theorem_scope": {
+    "licensed_statement": "The repo currently has scalar B1 quotient evidence and ADM/Bianchi-I lapse/operator obstruction evidence, but it does not yet export the minimal tensor-component profile table needed for a tensor-resolved B1 projection.",
+    "not_licensed": [
+      "tensor-resolved Gram rank or coefficient identification",
+      "independent a_GB identification",
+      "four-channel counterterm uniqueness",
+      "background-global renormalization",
+      "BRST/Cutkosky unitarity closure",
+      "QW-2191 selector closure",
+      "ToE closure"
+    ]
+  },
+  "false_pass_guard": "ADM lapse cancellation of GB and scalar B1 quotient identifiability are real, but neither is a full tensor-resolved H_munu projection.",
+  "next_honest_step": "Build P2031: minimal strict_B1_tensor_component_profile_table_v1 scaffold with explicit missing entries for each channel/component, then fill only entries that can be derived from existing strict sources.",
+  "lay_explanation": "Mamy wzory tensorowe, skalarne profile B1 oraz mocne rachunki lapse dla Bianchi-I. Brakuje jednak tabeli komponentow tensorowych dla kazdego kanalu. Bez niej nie wolno twierdzic, ze GB zostal rozdzielony tensorowo.",
+  "environment": {
+    "python": "3.12.3"
+  }
+}
