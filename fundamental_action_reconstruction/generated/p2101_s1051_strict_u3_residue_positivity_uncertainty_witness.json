@@ -1,0 +1,129 @@
+{
+  "schema_version": "p2101_s1051_v1",
+  "packet_id": "P2101",
+  "stage_id": "S1051",
+  "produced_by": "p2101_s1051_strict_u3_residue_positivity_uncertainty_witness.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_U3_RESIDUE_POSITIVITY_UNCERTAINTY_WITNESS_WITH_TRACE__TASK2_ENTRY_GATE_READY",
+  "depends_on": {
+    "p2100_present": true,
+    "p1863_present": true,
+    "preconditions_ready": true
+  },
+  "u3_uncertainty_table": {
+    "channel": "graviton -> gauge_gauge",
+    "rows": [
+      {
+        "s": 0.5,
+        "disc_center": 0.009739456703465451,
+        "disc_uncertainty_abs": 0.0,
+        "lower_bound": 0.009739456703465451,
+        "positive_under_uncertainty": true
+      },
+      {
+        "s": 0.5,
+        "disc_center": 0.01192033297434717,
+        "disc_uncertainty_abs": 0.0,
+        "lower_bound": 0.01192033297434717,
+        "positive_under_uncertainty": true
+      },
+      {
+        "s": 0.5,
+        "disc_center": 0.018462961786992325,
+        "disc_uncertainty_abs": 0.0,
+        "lower_bound": 0.018462961786992325,
+        "positive_under_uncertainty": true
+      },
+      {
+        "s": 1.0,
+        "disc_center": 0.019478913406930903,
+        "disc_uncertainty_abs": 0.0,
+        "lower_bound": 0.019478913406930903,
+        "positive_under_uncertainty": true
+      },
+      {
+        "s": 1.0,
+        "disc_center": 0.02384066594869434,
+        "disc_uncertainty_abs": 0.0,
+        "lower_bound": 0.02384066594869434,
+        "positive_under_uncertainty": true
+      },
+      {
+        "s": 1.0,
+        "disc_center": 0.03692592357398465,
+        "disc_uncertainty_abs": 0.0,
+        "lower_bound": 0.03692592357398465,
+        "positive_under_uncertainty": true
+      },
+      {
+        "s": 2.0,
+        "disc_center": 0.038957826813861805,
+        "disc_uncertainty_abs": 0.0,
+        "lower_bound": 0.038957826813861805,
+        "positive_under_uncertainty": true
+      },
+      {
+        "s": 2.0,
+        "disc_center": 0.04768133189738868,
+        "disc_uncertainty_abs": 0.0,
+        "lower_bound": 0.04768133189738868,
+        "positive_under_uncertainty": true
+      },
+      {
+        "s": 2.0,
+        "disc_center": 0.0738518471479693,
+        "disc_uncertainty_abs": 0.0,
+        "lower_bound": 0.0738518471479693,
+        "positive_under_uncertainty": true
+      },
+      {
+        "s": 4.0,
+        "disc_center": 0.07791565362772361,
+        "disc_uncertainty_abs": 0.0,
+        "lower_bound": 0.07791565362772361,
+        "positive_under_uncertainty": true
+      },
+      {
+        "s": 4.0,
+        "disc_center": 0.09536266379477736,
+        "disc_uncertainty_abs": 0.0,
+        "lower_bound": 0.09536266379477736,
+        "positive_under_uncertainty": true
+      },
+      {
+        "s": 4.0,
+        "disc_center": 0.1477036942959386,
+        "disc_uncertainty_abs": 0.0,
+        "lower_bound": 0.1477036942959386,
+        "positive_under_uncertainty": true
+      }
+    ],
+    "all_positive_under_uncertainty": true,
+    "minimum_lower_bound": 0.009739456703465451,
+    "scope_limit": "strict uncertainty witness table only; not full dressed UR_link theorem"
+  },
+  "unitarity_blocker_update": {
+    "U1_shared_rg_scheme_lock": "COMPUTED",
+    "U2_exact_discontinuity_integration": "COMPUTED",
+    "U3_positive_residue_uncertainty_table": "COMPUTED"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2102_candidate",
+    "goal": "assemble Task2 entry gate summary and start first dressed discontinuity backend import in same scheme"
+  },
+  "c3_gate_update": {
+    "C3_u3_residue_positivity_uncertainty_witness": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "u3_computed": true,
+    "all_positive_under_uncertainty": true,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": false,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}
