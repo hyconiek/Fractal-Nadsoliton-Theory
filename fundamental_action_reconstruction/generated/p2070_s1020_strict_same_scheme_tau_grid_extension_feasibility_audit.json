@@ -1,0 +1,90 @@
+{
+  "schema_version": "p2070_s1020_v1",
+  "packet_id": "P2070",
+  "stage_id": "S1020",
+  "produced_by": "p2070_s1020_strict_same_scheme_tau_grid_extension_feasibility_audit.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_TAU_GRID_EXTENSION_FEASIBILITY_AUDIT_WITH_TRACE__C3_STILL_OPEN",
+  "depends_on": {
+    "p2069_present": true,
+    "preconditions_ready": true
+  },
+  "input_hashes": {
+    "p2069_json_sha256": "dd0aa20eb7705c80152b6fde87e11456ebf84048153ec875e5688b8953ee35c1"
+  },
+  "tau_grid_extension_audit": {
+    "radius_star": 0.03,
+    "current_tau_amplitude_proxy": 0.2,
+    "extension_grid": [
+      0.005,
+      0.01,
+      0.015,
+      0.02,
+      0.025,
+      0.03,
+      0.04
+    ],
+    "extension_rows": [
+      {
+        "tau_candidate": 0.005,
+        "transportable_under_radius_star": true,
+        "margin_to_radius_star": 0.024999999999999998
+      },
+      {
+        "tau_candidate": 0.01,
+        "transportable_under_radius_star": true,
+        "margin_to_radius_star": 0.019999999999999997
+      },
+      {
+        "tau_candidate": 0.015,
+        "transportable_under_radius_star": true,
+        "margin_to_radius_star": 0.015
+      },
+      {
+        "tau_candidate": 0.02,
+        "transportable_under_radius_star": true,
+        "margin_to_radius_star": 0.009999999999999998
+      },
+      {
+        "tau_candidate": 0.025,
+        "transportable_under_radius_star": true,
+        "margin_to_radius_star": 0.0049999999999999975
+      },
+      {
+        "tau_candidate": 0.03,
+        "transportable_under_radius_star": true,
+        "margin_to_radius_star": 0.0
+      },
+      {
+        "tau_candidate": 0.04,
+        "transportable_under_radius_star": false,
+        "margin_to_radius_star": -0.010000000000000002
+      }
+    ],
+    "maximal_feasible_tau_in_extension": {
+      "tau_candidate": 0.03,
+      "transportable_under_radius_star": true,
+      "margin_to_radius_star": 0.0
+    },
+    "required_tau_reduction_factor": 0.15,
+    "required_tau_reduction_percent": 85.0
+  },
+  "c3_gate_update": {
+    "C3_tau_grid_extension_feasibility_audit": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "extension_rows_nonempty": true,
+    "maximal_feasible_exists": true,
+    "required_tau_reduction_factor_in_0_1": true,
+    "required_tau_reduction_percent_nonnegative": true,
+    "c3_theorem_proven": false,
+    "no_background_globalization_claimed": true,
+    "no_tensor_component_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

@@ -1,0 +1,132 @@
+{
+  "schema_version": "p2081_s1031_v1",
+  "packet_id": "P2081",
+  "stage_id": "S1031",
+  "produced_by": "p2081_s1031_strict_feature_weighted_candidate_redesign_audit.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_FEATURE_WEIGHTED_CANDIDATE_REDESIGN_AUDIT_WITH_TRACE__C3_STILL_OPEN",
+  "depends_on": {
+    "p2080_present": true,
+    "preconditions_ready": true
+  },
+  "input_hashes": {
+    "p2080_json_sha256": "fc2c6d3e13c2c737b22db00b7228166ad283d00176b17c9dbaf8ee22d9d79ca1"
+  },
+  "redesign_protocol": {
+    "d_grid": [
+      0.025,
+      0.05,
+      0.075,
+      0.1,
+      0.125,
+      0.15,
+      0.175,
+      0.2,
+      0.225,
+      0.25,
+      0.275,
+      0.3,
+      0.325,
+      0.35,
+      0.375,
+      0.4,
+      0.425,
+      0.45,
+      0.475,
+      0.5,
+      0.525,
+      0.55,
+      0.575,
+      0.6,
+      0.625,
+      0.65,
+      0.675,
+      0.7,
+      0.725,
+      0.75,
+      0.775,
+      0.8,
+      0.825,
+      0.85,
+      0.875,
+      0.9,
+      0.925,
+      0.95,
+      0.975,
+      1.0
+    ],
+    "coefficient_bound": 0.2,
+    "lambda_l2": 0.05,
+    "feature_weights": {
+      "d1_rmse": 2.0,
+      "d2_rmse": 2.0,
+      "zero_gap": 1.0,
+      "damp_gap": 1.0
+    },
+    "retain_rule": "improved_dimensions>=3"
+  },
+  "redesign_results": {
+    "rows": [
+      {
+        "candidate_id": "mc_phase_lock",
+        "best_coefficient": 0.1,
+        "strict_shape_error": {
+          "d1_rmse": 1.1959304934856108,
+          "d2_rmse": 0.906979265704645,
+          "zero_gap": 0,
+          "damp_gap": 0.0
+        },
+        "redesigned_shape_error": {
+          "d1_rmse": 1.187985220107492,
+          "d2_rmse": 0.8976133457724393,
+          "zero_gap": 0,
+          "damp_gap": 0.0
+        },
+        "weighted_objective": 4.171697131759863,
+        "improved_dimensions": 2,
+        "decision": "REJECT_REDESIGNED"
+      },
+      {
+        "candidate_id": "mc_grad_cross",
+        "best_coefficient": 0.16,
+        "strict_shape_error": {
+          "d1_rmse": 1.1959304934856108,
+          "d2_rmse": 0.906979265704645,
+          "zero_gap": 0,
+          "damp_gap": 0.0
+        },
+        "redesigned_shape_error": {
+          "d1_rmse": 1.222871169775147,
+          "d2_rmse": 0.8115027127939374,
+          "zero_gap": 0,
+          "damp_gap": 0.0
+        },
+        "weighted_objective": 4.070027765138169,
+        "improved_dimensions": 1,
+        "decision": "REJECT_REDESIGNED"
+      }
+    ],
+    "retained_redesigned_candidates": [],
+    "rejected_redesigned_candidates": [
+      "mc_phase_lock",
+      "mc_grad_cross"
+    ]
+  },
+  "c3_gate_update": {
+    "C3_feature_weighted_candidate_redesign_audit": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "rows_nonempty": true,
+    "coefficients_within_bound": true,
+    "decision_domain_ok": true,
+    "c3_theorem_proven": false,
+    "no_background_globalization_claimed": true,
+    "no_tensor_component_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

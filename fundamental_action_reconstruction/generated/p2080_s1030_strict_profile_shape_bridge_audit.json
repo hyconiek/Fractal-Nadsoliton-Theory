@@ -1,0 +1,131 @@
+{
+  "schema_version": "p2080_s1030_v1",
+  "packet_id": "P2080",
+  "stage_id": "S1030",
+  "produced_by": "p2080_s1030_strict_profile_shape_bridge_audit.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_PROFILE_SHAPE_BRIDGE_AUDIT_WITH_TRACE__C3_STILL_OPEN",
+  "depends_on": {
+    "p2079_present": true,
+    "preconditions_ready": true
+  },
+  "input_hashes": {
+    "p2079_json_sha256": "d107688821645b8288756da66ae6bf8e481f1bda4e45881f05831a843ee86366",
+    "p2078_json_sha256": "306f9f9718266336014cd75e87d24659eba3d8d7120c4cfbf2887477ac0578d6",
+    "p2077_json_sha256": "2de47917af122ee5e0f22465a92cec5f1f774bf7fccc50b4ed0d170c553b73ed"
+  },
+  "shape_protocol": {
+    "d_grid": [
+      0.025,
+      0.05,
+      0.075,
+      0.1,
+      0.125,
+      0.15,
+      0.175,
+      0.2,
+      0.225,
+      0.25,
+      0.275,
+      0.3,
+      0.325,
+      0.35,
+      0.375,
+      0.4,
+      0.425,
+      0.45,
+      0.475,
+      0.5,
+      0.525,
+      0.55,
+      0.575,
+      0.6,
+      0.625,
+      0.65,
+      0.675,
+      0.7,
+      0.725,
+      0.75,
+      0.775,
+      0.8,
+      0.825,
+      0.85,
+      0.875,
+      0.9,
+      0.925,
+      0.95,
+      0.975,
+      1.0
+    ],
+    "features": [
+      "derivative_rmse",
+      "curvature_rmse",
+      "zero_cross_gap",
+      "damping_gap"
+    ],
+    "retain_rule": "improved_dimensions>=3"
+  },
+  "shape_results": {
+    "legacy_zero_cross": 0,
+    "legacy_damping_score": 1.0,
+    "rows": [
+      {
+        "candidate_id": "mc_phase_lock",
+        "coefficient_used": 0.2,
+        "strict_shape_error": {
+          "d1_rmse": 1.1959304934856108,
+          "d2_rmse": 0.906979265704645,
+          "zero_cross_gap": 0,
+          "damping_gap": 0.0
+        },
+        "augmented_shape_error": {
+          "d1_rmse": 1.2571115212359945,
+          "d2_rmse": 0.8457705155721059,
+          "zero_cross_gap": 0,
+          "damping_gap": 0.02564102564102566
+        },
+        "improved_dimensions": 1,
+        "decision": "REJECT_MSE_ONLY_RISK"
+      },
+      {
+        "candidate_id": "mc_grad_cross",
+        "coefficient_used": 0.2,
+        "strict_shape_error": {
+          "d1_rmse": 1.1959304934856108,
+          "d2_rmse": 0.906979265704645,
+          "zero_cross_gap": 0,
+          "damping_gap": 0.0
+        },
+        "augmented_shape_error": {
+          "d1_rmse": 1.3005199858047423,
+          "d2_rmse": 0.8834526642504965,
+          "zero_cross_gap": 0,
+          "damping_gap": 0.0
+        },
+        "improved_dimensions": 1,
+        "decision": "REJECT_MSE_ONLY_RISK"
+      }
+    ],
+    "retained_shape_signal_candidates": [],
+    "rejected_mse_only_risk_candidates": [
+      "mc_phase_lock",
+      "mc_grad_cross"
+    ]
+  },
+  "c3_gate_update": {
+    "C3_profile_shape_bridge_audit": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "rows_nonempty": true,
+    "decision_domain_ok": true,
+    "c3_theorem_proven": false,
+    "no_background_globalization_claimed": true,
+    "no_tensor_component_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

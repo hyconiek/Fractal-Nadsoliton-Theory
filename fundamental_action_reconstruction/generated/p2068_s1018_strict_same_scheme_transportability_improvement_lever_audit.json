@@ -1,0 +1,57 @@
+{
+  "schema_version": "p2068_s1018_v1",
+  "packet_id": "P2068",
+  "stage_id": "S1018",
+  "produced_by": "p2068_s1018_strict_same_scheme_transportability_improvement_lever_audit.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_TRANSPORTABILITY_IMPROVEMENT_LEVER_AUDIT_WITH_TRACE__C3_STILL_OPEN",
+  "depends_on": {
+    "p2067_present": true,
+    "preconditions_ready": true
+  },
+  "input_hashes": {
+    "p2067_json_sha256": "2f789ee4a549d7df4a9a62535f6d406539b505394637cefe333632f7ee5932da",
+    "p2046_json_sha256": "b55583c47522ef707365bd2d428284a8fd72c919e12568447424b4483d7deaa0",
+    "p2058_json_sha256": "d37436220d4a83a8b74ea054c72177b1a192fa6fb5fe7297001ef0cc992dbed8"
+  },
+  "transportability_components": {
+    "radius_star": 0.03,
+    "epsilon_amplitude_proxy": 0.0,
+    "tau_amplitude_proxy": 0.2,
+    "observed_amplitude_proxy": 0.2,
+    "transportability_gap": 0.17
+  },
+  "improvement_lever_ranking": [
+    {
+      "lever": "tau_regime_amplitude_shrink",
+      "current_amplitude": 0.2,
+      "deficit_to_radius_star": 0.17,
+      "required_shrink_factor": 0.15,
+      "required_shrink_percent": 85.0
+    },
+    {
+      "lever": "epsilon_amplitude_shrink",
+      "current_amplitude": 0.0,
+      "deficit_to_radius_star": 0.0,
+      "required_shrink_factor": 1.0,
+      "required_shrink_percent": 0.0
+    }
+  ],
+  "c3_gate_update": {
+    "C3_transportability_improvement_lever_audit": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "gap_nonnegative": true,
+    "ranking_nonempty": true,
+    "ranked_descending_deficit": true,
+    "c3_theorem_proven": false,
+    "no_background_globalization_claimed": true,
+    "no_tensor_component_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

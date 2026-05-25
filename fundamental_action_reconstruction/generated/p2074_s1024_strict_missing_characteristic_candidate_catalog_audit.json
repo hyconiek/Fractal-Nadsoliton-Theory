@@ -1,0 +1,89 @@
+{
+  "schema_version": "p2074_s1024_v1",
+  "packet_id": "P2074",
+  "stage_id": "S1024",
+  "produced_by": "p2074_s1024_strict_missing_characteristic_candidate_catalog_audit.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_MISSING_CHARACTERISTIC_CANDIDATE_CATALOG_AUDIT_WITH_TRACE__C3_STILL_OPEN",
+  "depends_on": {
+    "p2073_present": true,
+    "preconditions_ready": true
+  },
+  "input_hashes": {
+    "p2073_json_sha256": "2e02255133059725cd1db98ee0eecdc55db20f0b79bd054378dff9f15d965c6b"
+  },
+  "kernel_split_context": {
+    "legacy_kernel": "alpha_geo*cos(omega*d+phi)/(1+beta_tors*d)",
+    "strict_kernel": "cos(omega*d+phi)/(1+beta*d^eta)",
+    "bridge_status": "OPEN_NO_RIGOROUS_IDENTIFICATION_EXPORT",
+    "missing_characteristic_hypothesis": "OPEN_CANDIDATE_REQUIRED"
+  },
+  "candidate_catalog": {
+    "base_lagrangian_srepr": "Add(Mul(Integer(-1), Symbol('gA', real=True), Pow(Function('A')(Symbol('x', real=True)), Integer(4))), Mul(Integer(-1), Symbol('gh', real=True), Pow(Function('h')(Symbol('x', real=True)), Integer(4))), Mul(Integer(-1), Symbol('gmix', real=True), Function('A')(Symbol('x', real=True)), Function('h')(Symbol('x', real=True)), Function('psi')(Symbol('x', real=True))), Mul(Rational(1, 2), Symbol('kA', real=True), Pow(Derivative(Function('A')(Symbol('x', real=True)), Tuple(Symbol('x', real=True), Integer(1))), Integer(2))), Mul(Rational(1, 2), Symbol('kh', real=True), Pow(Derivative(Function('h')(Symbol('x', real=True)), Tuple(Symbol('x', real=True), Integer(1))), Integer(2))), Mul(Rational(1, 2), Symbol('kpsi', real=True), Pow(Derivative(Function('psi')(Symbol('x', real=True)), Tuple(Symbol('x', real=True), Integer(1))), Integer(2))), Mul(Integer(-1), Symbol('lam4', real=True), Pow(Function('psi')(Symbol('x', real=True)), Integer(4))), Mul(Integer(-1), Rational(1, 2), Symbol('mA', real=True), Pow(Function('A')(Symbol('x', real=True)), Integer(2))), Mul(Integer(-1), Rational(1, 2), Symbol('mh', real=True), Pow(Function('h')(Symbol('x', real=True)), Integer(2))), Mul(Integer(-1), Rational(1, 2), Symbol('mpsi', real=True), Pow(Function('psi')(Symbol('x', real=True)), Integer(2))), Mul(Integer(-1), Symbol('zeta', real=True), Pow(Function('A')(Symbol('x', real=True)), Integer(2)), Pow(Function('psi')(Symbol('x', real=True)), Integer(2))))",
+    "candidate_count": 3,
+    "rows": [
+      {
+        "candidate_id": "mc_grad_cross",
+        "operator_srepr": "Mul(Symbol('c1', real=True), Derivative(Function('A')(Symbol('x', real=True)), Tuple(Symbol('x', real=True), Integer(1))), Derivative(Function('psi')(Symbol('x', real=True)), Tuple(Symbol('x', real=True), Integer(1))))",
+        "delta_eom": {
+          "psi": "Mul(Integer(-1), Symbol('c1', real=True), Derivative(Function('A')(Symbol('x', real=True)), Tuple(Symbol('x', real=True), Integer(2))))",
+          "A": "Mul(Integer(-1), Symbol('c1', real=True), Derivative(Function('psi')(Symbol('x', real=True)), Tuple(Symbol('x', real=True), Integer(2))))",
+          "h": "Integer(0)"
+        },
+        "legacy_strict_alignment_signal": "OPEN_REQUIRES_NUMERIC_FIT_AND_BRIDGE_CHECK",
+        "selector_qw2191_screening": "QW2191_UNCHANGED_PROXY_ONLY",
+        "false_discharge_risk": "LOW_IF_MARKED_NON_THEOREM_GRADE",
+        "admission": "CANDIDATE_RETAINED_FOR_NEXT_STAGE"
+      },
+      {
+        "candidate_id": "mc_curv_like",
+        "operator_srepr": "Mul(Symbol('c2', real=True), Pow(Function('psi')(Symbol('x', real=True)), Integer(2)), Pow(Derivative(Function('h')(Symbol('x', real=True)), Tuple(Symbol('x', real=True), Integer(1))), Integer(2)))",
+        "delta_eom": {
+          "psi": "Mul(Integer(2), Symbol('c2', real=True), Function('psi')(Symbol('x', real=True)), Pow(Derivative(Function('h')(Symbol('x', real=True)), Tuple(Symbol('x', real=True), Integer(1))), Integer(2)))",
+          "A": "Integer(0)",
+          "h": "Mul(Integer(2), Symbol('c2', real=True), Add(Mul(Integer(-1), Function('psi')(Symbol('x', real=True)), Derivative(Function('h')(Symbol('x', real=True)), Tuple(Symbol('x', real=True), Integer(2)))), Mul(Integer(-1), Integer(2), Derivative(Function('h')(Symbol('x', real=True)), Tuple(Symbol('x', real=True), Integer(1))), Derivative(Function('psi')(Symbol('x', real=True)), Tuple(Symbol('x', real=True), Integer(1))))), Function('psi')(Symbol('x', real=True)))"
+        },
+        "legacy_strict_alignment_signal": "OPEN_REQUIRES_NUMERIC_FIT_AND_BRIDGE_CHECK",
+        "selector_qw2191_screening": "QW2191_UNCHANGED_PROXY_ONLY",
+        "false_discharge_risk": "LOW_IF_MARKED_NON_THEOREM_GRADE",
+        "admission": "CANDIDATE_RETAINED_FOR_NEXT_STAGE"
+      },
+      {
+        "candidate_id": "mc_phase_lock",
+        "operator_srepr": "Mul(Symbol('c3', real=True), Function('A')(Symbol('x', real=True)), Function('psi')(Symbol('x', real=True)), Derivative(Function('h')(Symbol('x', real=True)), Tuple(Symbol('x', real=True), Integer(1))))",
+        "delta_eom": {
+          "psi": "Mul(Symbol('c3', real=True), Function('A')(Symbol('x', real=True)), Derivative(Function('h')(Symbol('x', real=True)), Tuple(Symbol('x', real=True), Integer(1))))",
+          "A": "Mul(Symbol('c3', real=True), Function('psi')(Symbol('x', real=True)), Derivative(Function('h')(Symbol('x', real=True)), Tuple(Symbol('x', real=True), Integer(1))))",
+          "h": "Mul(Symbol('c3', real=True), Add(Mul(Integer(-1), Function('A')(Symbol('x', real=True)), Derivative(Function('psi')(Symbol('x', real=True)), Tuple(Symbol('x', real=True), Integer(1)))), Mul(Integer(-1), Function('psi')(Symbol('x', real=True)), Derivative(Function('A')(Symbol('x', real=True)), Tuple(Symbol('x', real=True), Integer(1))))))"
+        },
+        "legacy_strict_alignment_signal": "OPEN_REQUIRES_NUMERIC_FIT_AND_BRIDGE_CHECK",
+        "selector_qw2191_screening": "QW2191_UNCHANGED_PROXY_ONLY",
+        "false_discharge_risk": "LOW_IF_MARKED_NON_THEOREM_GRADE",
+        "admission": "CANDIDATE_RETAINED_FOR_NEXT_STAGE"
+      }
+    ],
+    "screening_policy": "retain_only_non-discharge_candidates_with_qw2191_proxy_safety"
+  },
+  "c3_gate_update": {
+    "C3_missing_characteristic_candidate_catalog_audit": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED",
+    "missing_for_next_stage": [
+      "numeric fit objective linking candidate-augmented strict model to legacy observable traces",
+      "explicit legacy<->strict bridge/non-bridge theorem for admitted candidate",
+      "strict selector closure theorem beyond QW-2191 proxy checks"
+    ]
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "candidate_rows_nonempty": true,
+    "delta_eom_exported": true,
+    "qw2191_proxy_screening_exported": true,
+    "c3_theorem_proven": false,
+    "no_background_globalization_claimed": true,
+    "no_tensor_component_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}
