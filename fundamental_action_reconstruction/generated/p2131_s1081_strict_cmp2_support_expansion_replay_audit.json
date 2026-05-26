@@ -1,0 +1,83 @@
+{
+  "schema_version": "p2131_s1081_v1",
+  "packet_id": "P2131",
+  "stage_id": "S1081",
+  "produced_by": "p2131_s1081_strict_cmp2_support_expansion_replay_audit.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_CMP2_SUPPORT_EXPANSION_REPLAY_AUDIT_WITH_TRACE",
+  "support_expansion_replay_audit": {
+    "n_bootstrap": 400,
+    "rng_seed": 2131,
+    "synthetic_expansion_multipliers": [
+      "x2",
+      "x3",
+      "x5",
+      "x8"
+    ],
+    "results": {
+      "x2": {
+        "n_rows": 8,
+        "iid_coverage_rate_ci95": [
+          1.0,
+          1.0
+        ],
+        "block_coverage_rate_ci95": [
+          1.0,
+          1.0
+        ],
+        "coverage_ci_width_inflation_block_over_iid": null
+      },
+      "x3": {
+        "n_rows": 12,
+        "iid_coverage_rate_ci95": [
+          1.0,
+          1.0
+        ],
+        "block_coverage_rate_ci95": [
+          1.0,
+          1.0
+        ],
+        "coverage_ci_width_inflation_block_over_iid": null
+      },
+      "x5": {
+        "n_rows": 20,
+        "iid_coverage_rate_ci95": [
+          1.0,
+          1.0
+        ],
+        "block_coverage_rate_ci95": [
+          1.0,
+          1.0
+        ],
+        "coverage_ci_width_inflation_block_over_iid": null
+      },
+      "x8": {
+        "n_rows": 32,
+        "iid_coverage_rate_ci95": [
+          1.0,
+          1.0
+        ],
+        "block_coverage_rate_ci95": [
+          1.0,
+          1.0
+        ],
+        "coverage_ci_width_inflation_block_over_iid": null
+      }
+    },
+    "scope_limit": "synthetic resampling replay only; not substitute for new backend acquisition and not theorem-grade closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2132_candidate",
+    "goal": "acquire real additional CMP2 backend rows (non-synthetic) and rerun P2127-P2131"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "replay_executed": true,
+    "no_toe_closure_claimed": true,
+    "full_d3_covariance_transport_proven": false,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}
