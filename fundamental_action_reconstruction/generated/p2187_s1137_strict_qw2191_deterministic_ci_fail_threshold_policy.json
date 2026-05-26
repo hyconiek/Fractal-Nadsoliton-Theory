@@ -1,0 +1,56 @@
+{
+  "schema_version": "p2187_s1137_v1",
+  "packet_id": "P2187",
+  "stage_id": "S1137",
+  "produced_by": "p2187_s1137_strict_qw2191_deterministic_ci_fail_threshold_policy.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_QW2191_DETERMINISTIC_CI_FAIL_THRESHOLD_POLICY",
+  "strict_qw2191_deterministic_ci_fail_threshold_policy": {
+    "policy_id": "QW2191_DETERMINISTIC_CI_FAIL_THRESHOLD_POLICY_V1",
+    "input_trendline_audit_packet": "generated/p2186_s1136_strict_qw2191_scope_delta_trendline_stability_audit.json",
+    "trend_status": "STABLE_ZERO_REGRESSION_TREND",
+    "latest_regression_count": 0,
+    "policy_table": {
+      "STABLE_ZERO_REGRESSION_TREND": {
+        "ci_outcome": "PASS",
+        "severity": "none",
+        "deterministic_action": "allow_merge",
+        "max_allowed_latest_regression_count": 0
+      },
+      "NONINCREASING_REGRESSION_TREND": {
+        "ci_outcome": "WARN",
+        "severity": "medium",
+        "deterministic_action": "allow_merge_with_notice",
+        "max_allowed_latest_regression_count": 1
+      },
+      "OPEN_TRENDLINE_REGRESSION_INSTABILITY": {
+        "ci_outcome": "FAIL",
+        "severity": "high",
+        "deterministic_action": "block_merge",
+        "max_allowed_latest_regression_count": 0
+      }
+    },
+    "selected_policy": {
+      "ci_outcome": "PASS",
+      "severity": "none",
+      "deterministic_action": "allow_merge",
+      "max_allowed_latest_regression_count": 0
+    },
+    "threshold_respected": true,
+    "final_ci_decision": "PASS"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2188_candidate",
+    "goal": "wire deterministic policy decision into a compact machine-checkable release gate contract"
+  },
+  "gatekeeper_checks": {
+    "deterministic_policy_exported": true,
+    "threshold_check_executed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

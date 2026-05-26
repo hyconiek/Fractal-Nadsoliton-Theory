@@ -1,0 +1,45 @@
+{
+  "schema_version": "p2204_s1154_v1",
+  "packet_id": "P2204",
+  "stage_id": "S1154",
+  "produced_by": "p2204_s1154_strict_frw_bianchi_symbolic_transport_operator_mismatch_certificate.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_FRW_BIANCHI_SYMBOLIC_TRANSPORT_OPERATOR_MISMATCH_CERTIFICATE",
+  "strict_frw_bianchi_symbolic_transport_operator_mismatch_certificate": {
+    "certificate_id": "STRICT_FRW_BIANCHI_SYMBOLIC_TRANSPORT_OPERATOR_MISMATCH_CERTIFICATE_V1",
+    "source_packet": "generated/p2203_s1153_strict_frw_bianchi_transport_residual_map_under_shared_majorant.json",
+    "symbolic_objects": {
+      "delta_sq_kernel": "((-sin(phi)*sin(d*omega0) + cos(phi)*cos(d*omega0))**2 - (-sin(phi)*sin(d*m*omega0) + cos(phi)*cos(d*m*omega0))**2)/(beta*d**eta + 1)**2",
+      "delta_sq_under_m_eq_1": "0",
+      "first_dm_at_m_eq_1": "d*omega0*sin(2*d*omega0 + 2*phi)/(beta*d**eta + 1)**2"
+    },
+    "residual_context": {
+      "max_residual_from_p2203": 0.0001706491692635688,
+      "residual_map_size": 17
+    },
+    "theorem_gap_statement": {
+      "task3_requirement": "global FRW<->Bianchi transport closure for nu branch",
+      "symbolic_zero_mismatch_condition": "Eq(m, 1)",
+      "symbolic_zero_mismatch_verified": true,
+      "first_order_mismatch_term_at_m_eq_1": "d*omega0*sin(2*d*omega0 + 2*phi)/(beta*d**eta + 1)**2",
+      "numeric_at_m_eq_1_residual": 0.0,
+      "global_closure_proven": false,
+      "reason": "symbolic sufficient condition and local expansion exported; no global transport theorem proved"
+    }
+  },
+  "recommended_next_honest_step": {
+    "id": "P2205_candidate",
+    "goal": "connect symbolic mismatch term to explicit nu-branch transport operator and derive computable sufficient vanishing constraints"
+  },
+  "gatekeeper_checks": {
+    "symbolic_mismatch_certificate_exported": true,
+    "symbolic_zero_mismatch_at_m_eq_1": true,
+    "numeric_residual_context_present": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

@@ -1,0 +1,59 @@
+{
+  "schema_version": "p2201_s1151_v1",
+  "packet_id": "P2201",
+  "stage_id": "S1151",
+  "produced_by": "p2201_s1151_strict_cutkosky_shared_majorant_frw_bianchi_certificate.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_CUTKOSKY_SHARED_MAJORANT_FRW_BIANCHI_CERTIFICATE",
+  "strict_cutkosky_shared_majorant_frw_bianchi_certificate": {
+    "certificate_id": "STRICT_CUTKOSKY_SHARED_MAJORANT_FRW_BIANCHI_CERTIFICATE_V1",
+    "source_packet": "generated/p2200_s1150_strict_cutkosky_integrand_bound_and_monotonicity_certificate.json",
+    "same_channel": "graviton_to_gauge_gauge",
+    "integration_domain": {
+      "d_min": 0.0,
+      "d_max": 20.0
+    },
+    "rows": [
+      {
+        "background": "FRW_flat_fixed_chart_seed",
+        "omega_mult": 1.0,
+        "observed_integral": 0.020135927197116557,
+        "observed_abs_error": 1.4766959892233922e-11,
+        "majorant_integral_upper_bound": 0.19687746150274069,
+        "majorant_abs_error": 3.161526596073827e-12,
+        "bound_margin": 0.17674153430562412,
+        "bound_respected": true
+      },
+      {
+        "background": "BianchiI_diag_fixed_chart_seed",
+        "omega_mult": 1.03,
+        "observed_integral": 0.019991616760469115,
+        "observed_abs_error": 1.4782097940891517e-11,
+        "majorant_integral_upper_bound": 0.19687746150274069,
+        "majorant_abs_error": 3.161526596073827e-12,
+        "bound_margin": 0.17688584474227156,
+        "bound_respected": true
+      }
+    ],
+    "margin_summary": {
+      "min_margin": 0.17674153430562412,
+      "max_margin": 0.17688584474227156,
+      "margin_spread": 0.00014431043664744903,
+      "all_bounds_respected": true
+    }
+  },
+  "recommended_next_honest_step": {
+    "id": "P2202_candidate",
+    "goal": "bind FRW/Bianchi shared-majorant margin spread into transport-obstruction ledger and compare against task-3 blockers"
+  },
+  "gatekeeper_checks": {
+    "shared_majorant_certificate_exported": true,
+    "all_bounds_respected": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

@@ -1,0 +1,68 @@
+{
+  "schema_version": "p2194_s1144_v1",
+  "packet_id": "P2194",
+  "stage_id": "S1144",
+  "produced_by": "p2194_s1144_strict_cutkosky_multi_background_tolerance_stability_audit.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_CUTKOSKY_MULTI_BACKGROUND_TOLERANCE_STABILITY_AUDIT",
+  "strict_cutkosky_multi_background_tolerance_stability_audit": {
+    "audit_id": "STRICT_CUTKOSKY_MULTI_BACKGROUND_TOLERANCE_STABILITY_AUDIT_V1",
+    "source_packet": "generated/p2193_s1143_strict_cutkosky_uncertainty_to_ci_tolerance_bridge.json",
+    "same_channel": "graviton_to_gauge_gauge",
+    "background_rows": [
+      {
+        "background": "B1_fixed_chart_seed",
+        "multiplier": 1.0,
+        "center_integral": 0.020135927197116557,
+        "ur_radius": 5.20804889678865e-05,
+        "lower_band": 0.02008384670814867,
+        "negative_count_proxy": 0,
+        "tolerance_class": "TOL_A_STRICT"
+      },
+      {
+        "background": "FRW_flat_fixed_chart_seed",
+        "multiplier": 1.03,
+        "center_integral": 0.019991616760469115,
+        "ur_radius": 5.165871479306805e-05,
+        "lower_band": 0.019939958045676047,
+        "negative_count_proxy": 0,
+        "tolerance_class": "TOL_A_STRICT"
+      },
+      {
+        "background": "BianchiI_diag_fixed_chart_seed",
+        "multiplier": 0.97,
+        "center_integral": 0.020281414260572832,
+        "ur_radius": 5.250375476809066e-05,
+        "lower_band": 0.02022891050580474,
+        "negative_count_proxy": 0,
+        "tolerance_class": "TOL_A_STRICT"
+      }
+    ],
+    "class_stability": {
+      "stable": true,
+      "class_set": [
+        "TOL_A_STRICT"
+      ]
+    },
+    "background_drift_detected": false,
+    "prior_bridge_output": {
+      "tolerance_class": "TOL_B_MONITORED",
+      "ci_recommendation": "WARN",
+      "release_gate_hint": "OPEN"
+    }
+  },
+  "recommended_next_honest_step": {
+    "id": "P2195_candidate",
+    "goal": "bind multi-background class stability to release-gate override policy with explicit drift clauses"
+  },
+  "gatekeeper_checks": {
+    "multi_background_audit_exported": true,
+    "same_channel_policy_respected": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

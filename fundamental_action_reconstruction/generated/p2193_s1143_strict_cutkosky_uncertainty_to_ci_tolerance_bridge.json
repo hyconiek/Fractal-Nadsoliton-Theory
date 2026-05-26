@@ -1,0 +1,40 @@
+{
+  "schema_version": "p2193_s1143_v1",
+  "packet_id": "P2193",
+  "stage_id": "S1143",
+  "produced_by": "p2193_s1143_strict_cutkosky_uncertainty_to_ci_tolerance_bridge.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_CUTKOSKY_UNCERTAINTY_TO_CI_TOLERANCE_BRIDGE",
+  "strict_cutkosky_uncertainty_to_ci_tolerance_bridge": {
+    "bridge_id": "STRICT_CUTKOSKY_UNCERTAINTY_TO_CI_TOLERANCE_BRIDGE_V1",
+    "source_packet": "generated/p2192_s1142_strict_cutkosky_residue_sign_and_positivity_band_certificate.json",
+    "input_metrics": {
+      "ur_radius": 0.0015803756822029141,
+      "negative_count": 0,
+      "band_lower_bound_nonnegative": true
+    },
+    "tolerance_policy": {
+      "TOL_A_STRICT": "ur_radius <= 1e-3 and no negative rows and nonnegative lower band",
+      "TOL_B_MONITORED": "ur_radius <= 5e-3 and no negative rows and nonnegative lower band",
+      "TOL_C_BLOCK": "otherwise"
+    },
+    "output": {
+      "tolerance_class": "TOL_B_MONITORED",
+      "ci_recommendation": "WARN",
+      "release_gate_hint": "OPEN"
+    }
+  },
+  "recommended_next_honest_step": {
+    "id": "P2194_candidate",
+    "goal": "add replayed multi-background comparison table for the same tolerance policy"
+  },
+  "gatekeeper_checks": {
+    "ci_tolerance_bridge_exported": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

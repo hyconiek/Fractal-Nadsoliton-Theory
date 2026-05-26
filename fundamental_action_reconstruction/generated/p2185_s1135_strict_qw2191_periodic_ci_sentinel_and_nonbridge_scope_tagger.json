@@ -1,0 +1,72 @@
+{
+  "schema_version": "p2185_s1135_v1",
+  "packet_id": "P2185",
+  "stage_id": "S1135",
+  "produced_by": "p2185_s1135_strict_qw2191_periodic_ci_sentinel_and_nonbridge_scope_tagger.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_QW2191_PERIODIC_CI_SENTINEL_AND_NONBRIDGE_SCOPE_TAGGER",
+  "strict_qw2191_periodic_ci_sentinel_and_nonbridge_scope_tagger": {
+    "sentinel_id": "QW2191_PERIODIC_CI_SENTINEL_V1",
+    "input_dashboard_packet": "generated/p2184_s1134_strict_qw2191_external_audit_replay_dashboard_scope_delta_regression_guard.json",
+    "schedule": {
+      "mode": "periodic",
+      "recommended_cadence": "per-commit-or-daily",
+      "hard_fail_on_scope_delta_regression": true
+    },
+    "monitored_packet_count": 5,
+    "nonbridge_scope_tagged_rows": [
+      {
+        "packet": "P2173",
+        "lane": "strict_qw2191_external_replay",
+        "scope_tag": "nonbridge_operational_strict_lane",
+        "selector_closure_claimed": false,
+        "toe_closure_claimed": false
+      },
+      {
+        "packet": "P2174",
+        "lane": "strict_qw2191_external_replay",
+        "scope_tag": "nonbridge_operational_strict_lane",
+        "selector_closure_claimed": false,
+        "toe_closure_claimed": false
+      },
+      {
+        "packet": "P2175",
+        "lane": "strict_qw2191_external_replay",
+        "scope_tag": "nonbridge_operational_strict_lane",
+        "selector_closure_claimed": false,
+        "toe_closure_claimed": false
+      },
+      {
+        "packet": "P2176",
+        "lane": "strict_qw2191_external_replay",
+        "scope_tag": "nonbridge_operational_strict_lane",
+        "selector_closure_claimed": false,
+        "toe_closure_claimed": false
+      },
+      {
+        "packet": "P2177",
+        "lane": "strict_qw2191_external_replay",
+        "scope_tag": "nonbridge_operational_strict_lane",
+        "selector_closure_claimed": false,
+        "toe_closure_claimed": false
+      }
+    ],
+    "regression_count": 0,
+    "ci_status": "GREEN"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2186_candidate",
+    "goal": "add cross-packet trendline audit that checks multi-run stability of scope-delta regression count"
+  },
+  "gatekeeper_checks": {
+    "ci_sentinel_exported": true,
+    "nonbridge_scope_tags_applied": true,
+    "scope_delta_regressions_absent": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

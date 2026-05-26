@@ -1,0 +1,55 @@
+{
+  "schema_version": "p2200_s1150_v1",
+  "packet_id": "P2200",
+  "stage_id": "S1150",
+  "produced_by": "p2200_s1150_strict_cutkosky_integrand_bound_and_monotonicity_certificate.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_CUTKOSKY_INTEGRAND_BOUND_AND_MONOTONICITY_CERTIFICATE",
+  "strict_cutkosky_integrand_bound_and_monotonicity_certificate": {
+    "certificate_id": "STRICT_CUTKOSKY_INTEGRAND_BOUND_AND_MONOTONICITY_CERTIFICATE_V1",
+    "source_packet": "generated/p2190_s1140_strict_cutkosky_fixed_channel_real_discontinuity_integral_packet.json",
+    "same_channel": "graviton_to_gauge_gauge",
+    "same_background": "B1_fixed_chart_seed",
+    "symbolic_objects": {
+      "integrand": "Mul(Integer(-1), Float('0.050000000000000003', precision=53), Symbol('d', positive=True, real=True), Add(Mul(Float('0.050000000000000003', precision=53), Symbol('d', positive=True, real=True)), Integer(-1)), Pow(Add(Mul(Symbol('beta', positive=True, real=True), Pow(Symbol('d', positive=True, real=True), Symbol('eta', positive=True, real=True))), Integer(1)), Integer(-2)), Pow(cos(Add(Mul(Symbol('d', positive=True, real=True), Symbol('omega', positive=True, real=True)), Symbol('phi', positive=True, real=True))), Integer(2)))",
+      "integrand_derivative": "Add(Mul(Float('0.10000000000000001', precision=53), Symbol('beta', positive=True, real=True), Pow(Symbol('d', positive=True, real=True), Symbol('eta', positive=True, real=True)), Symbol('eta', positive=True, real=True), Add(Mul(Float('0.050000000000000003', precision=53), Symbol('d', positive=True, real=True)), Integer(-1)), Pow(Add(Mul(Symbol('beta', positive=True, real=True), Pow(Symbol('d', positive=True, real=True), Symbol('eta', positive=True, real=True))), Integer(1)), Integer(-3)), Pow(cos(Add(Mul(Symbol('d', positive=True, real=True), Symbol('omega', positive=True, real=True)), Symbol('phi', positive=True, real=True))), Integer(2))), Mul(Float('0.10000000000000001', precision=53), Symbol('d', positive=True, real=True), Symbol('omega', positive=True, real=True), Add(Mul(Float('0.050000000000000003', precision=53), Symbol('d', positive=True, real=True)), Integer(-1)), Pow(Add(Mul(Symbol('beta', positive=True, real=True), Pow(Symbol('d', positive=True, real=True), Symbol('eta', positive=True, real=True))), Integer(1)), Integer(-2)), sin(Add(Mul(Symbol('d', positive=True, real=True), Symbol('omega', positive=True, real=True)), Symbol('phi', positive=True, real=True))), cos(Add(Mul(Symbol('d', positive=True, real=True), Symbol('omega', positive=True, real=True)), Symbol('phi', positive=True, real=True)))), Mul(Integer(-1), Float('0.0025000000000000005', precision=53), Symbol('d', positive=True, real=True), Pow(Add(Mul(Symbol('beta', positive=True, real=True), Pow(Symbol('d', positive=True, real=True), Symbol('eta', positive=True, real=True))), Integer(1)), Integer(-2)), Pow(cos(Add(Mul(Symbol('d', positive=True, real=True), Symbol('omega', positive=True, real=True)), Symbol('phi', positive=True, real=True))), Integer(2))), Mul(Integer(-1), Float('0.050000000000000003', precision=53), Add(Mul(Float('0.050000000000000003', precision=53), Symbol('d', positive=True, real=True)), Integer(-1)), Pow(Add(Mul(Symbol('beta', positive=True, real=True), Pow(Symbol('d', positive=True, real=True), Symbol('eta', positive=True, real=True))), Integer(1)), Integer(-2)), Pow(cos(Add(Mul(Symbol('d', positive=True, real=True), Symbol('omega', positive=True, real=True)), Symbol('phi', positive=True, real=True))), Integer(2))))",
+      "upper_majorant": "Mul(Rational(1, 4), Pow(Add(Mul(Symbol('beta', positive=True, real=True), Pow(Symbol('d', positive=True, real=True), Symbol('eta', positive=True, real=True))), Integer(1)), Integer(-2)))"
+    },
+    "analytic_claims": {
+      "integrand_nonnegative_by_square_and_weight": true,
+      "integrand_upper_bounded_by_majorant": true,
+      "majorant_reason": "cos^2<=1 and (d/d_max)(1-d/d_max)<=1/4"
+    },
+    "numeric_bound_check": {
+      "observed_integral": 0.020135927197116557,
+      "majorant_integral_upper_bound": 0.19687746150274069,
+      "upper_bound_margin": 0.17674153430562412,
+      "upper_integral_quad_abs_error": 3.161526596073827e-12,
+      "bound_respected": true
+    },
+    "tail_monotonicity_probe": {
+      "interval": [
+        10.0,
+        20.0
+      ],
+      "sample_count": 101,
+      "derivative_positive_violations": 21,
+      "tail_nonincreasing_empirical": false
+    }
+  },
+  "recommended_next_honest_step": {
+    "id": "P2201_candidate",
+    "goal": "extend bound certificate to FRW/BianchiI pair with shared majorant ledger and compare bound margins"
+  },
+  "gatekeeper_checks": {
+    "bound_certificate_exported": true,
+    "bound_respected": true,
+    "tail_monotonicity_empirical": false,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}
