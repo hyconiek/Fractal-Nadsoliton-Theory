@@ -1,0 +1,135 @@
+{
+  "schema_version": "p2124_s1074_v1",
+  "packet_id": "P2124",
+  "stage_id": "S1074",
+  "produced_by": "p2124_s1074_strict_cmp2_mapping_posterior_envelope_audit.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_CMP2_MAPPING_POSTERIOR_AND_CONSERVATIVE_ENVELOPE_AUDIT_WITH_TRACE",
+  "depends_on": {
+    "p2123_present": true,
+    "preconditions_ready": true
+  },
+  "mapping_posterior_envelope_audit": {
+    "rows": [
+      {
+        "cmp_bin_index": 0,
+        "posterior_map_weights": {
+          "nearest_neighbor": 0.5,
+          "monotone": 0.5
+        },
+        "unnormalized_posterior_envelope": [
+          -0.10639651547067512,
+          0.10642399586045985
+        ],
+        "normalized_posterior_envelope": [
+          -1.9796890968887852,
+          1.9797165772785699
+        ],
+        "unnormalized_conservative_q95_envelope": [
+          -0.10639651547067512,
+          0.10642399586045985
+        ],
+        "normalized_conservative_q95_envelope": [
+          -1.9796890968887852,
+          1.9797165772785699
+        ]
+      },
+      {
+        "cmp_bin_index": 1,
+        "posterior_map_weights": {
+          "nearest_neighbor": 0.5,
+          "monotone": 0.5
+        },
+        "unnormalized_posterior_envelope": [
+          -0.04441454823208324,
+          0.044524469791222154
+        ],
+        "normalized_posterior_envelope": [
+          -1.979647490013364,
+          1.979757411572503
+        ],
+        "unnormalized_conservative_q95_envelope": [
+          -0.04441454823208324,
+          0.044524469791222154
+        ],
+        "normalized_conservative_q95_envelope": [
+          -1.979647490013364,
+          1.979757411572503
+        ]
+      },
+      {
+        "cmp_bin_index": 2,
+        "posterior_map_weights": {
+          "nearest_neighbor": 0.5,
+          "monotone": 0.5
+        },
+        "unnormalized_posterior_envelope": [
+          -0.014058856982491477,
+          0.014498543219047108
+        ],
+        "normalized_posterior_envelope": [
+          -1.9794818586307452,
+          1.9799215448673009
+        ],
+        "unnormalized_conservative_q95_envelope": [
+          -0.014058856982491477,
+          0.014498543219047108
+        ],
+        "normalized_conservative_q95_envelope": [
+          -1.9794818586307452,
+          1.9799215448673009
+        ]
+      },
+      {
+        "cmp_bin_index": 3,
+        "posterior_map_weights": {
+          "nearest_neighbor": 0.5,
+          "monotone": 0.5
+        },
+        "unnormalized_posterior_envelope": [
+          -0.002574091764029872,
+          0.004332836710252366
+        ],
+        "normalized_posterior_envelope": [
+          -1.978822328520418,
+          1.9805810734666407
+        ],
+        "unnormalized_conservative_q95_envelope": [
+          -0.002574091764029872,
+          0.004332836710252366
+        ],
+        "normalized_conservative_q95_envelope": [
+          -1.978822328520418,
+          1.9805810734666407
+        ]
+      }
+    ],
+    "posterior_rule": "softmax(-beta*distance), beta=10",
+    "conservative_rule": "95% map-quantile envelope over two-map mixture",
+    "scope_limit": "operational posterior map uncertainty audit only; not theorem-grade closure"
+  },
+  "backend_import_blocker_update": {
+    "D3_uncertainty_propagation_from_dressed_backend": "COMPUTED_MAPPING_POSTERIOR_AND_CONSERVATIVE_ENVELOPE_AUDIT_PARTIAL"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2125_candidate",
+    "goal": "add richer mapping family posterior (beyond two maps) and perform posterior predictive calibration audit"
+  },
+  "c3_gate_update": {
+    "C3_cmp2_map_choice_sensitivity_object": "COMPUTED",
+    "C3_cmp2_mapping_posterior_envelope_audit": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "posterior_rows_exported": true,
+    "conservative_q95_exported": true,
+    "full_d3_covariance_transport_proven": false,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": false,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

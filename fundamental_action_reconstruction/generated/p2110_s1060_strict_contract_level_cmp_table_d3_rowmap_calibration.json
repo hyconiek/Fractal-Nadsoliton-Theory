@@ -1,0 +1,107 @@
+{
+  "schema_version": "p2110_s1060_v1",
+  "packet_id": "P2110",
+  "stage_id": "S1060",
+  "produced_by": "p2110_s1060_strict_contract_level_cmp_table_d3_rowmap_calibration.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_CONTRACT_LEVEL_CMP_TABLE_WITH_CALIBRATED_ROW_MAPS_AND_D3_LINK_TRACE",
+  "depends_on": {
+    "p2105_present": true,
+    "p2109_present": true,
+    "p2107_present": true,
+    "p2009_present": true,
+    "preconditions_ready": true
+  },
+  "d3_channel_decomposition_export": {
+    "source": "p2009::backend_tensor_objects.C4_channel_covariance",
+    "shape": [
+      4,
+      4
+    ],
+    "channel_labels": [
+      "gg",
+      "gh",
+      "hh",
+      "gx"
+    ],
+    "diag_entries": [
+      5.706135058423685e-05,
+      0.0003396343357123425,
+      4.318450797478663e-05,
+      0.0001648375570523162
+    ],
+    "trace": 0.0006047177513236821,
+    "scope_limit": "operational channel decomposition for contract-level row-map calibration; not theorem-grade global transport"
+  },
+  "contract_level_cmp_table": {
+    "scheme_tag": "STRICT_P2020_PHASESPACE_SCHEME_V1",
+    "rows": [
+      {
+        "row_id": "CMP1",
+        "lhs": "Disc_dressed_common_basis_row_i",
+        "rhs": "CutSum_common_basis_row_i",
+        "channel_projection": "gg",
+        "row_map_to_channels": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sigma_from_c4_row_link": 0.007553896384266655,
+        "residual_center": -0.3183098861837907,
+        "residual_interval_95": [
+          -0.33311552309695336,
+          -0.303504249270628
+        ],
+        "status": "COMPUTED_OBJECT_SPECIFIC_ROW_LINK_AND_BOUND"
+      },
+      {
+        "row_id": "CMP2",
+        "lhs": "Disc_dressed_covariance_row_i",
+        "rhs": "CutSum_uncertainty_row_i",
+        "channel_projection": "gh",
+        "row_map_to_channels": [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "sigma_from_c4_row_link": 0.01842917078200597,
+        "status": "COMPUTED_OBJECT_SPECIFIC_ROW_LINK_PENDING_DRESSED_COV_ROW",
+        "missing": "numeric dressed covariance row value for same-scheme residual execution"
+      }
+    ],
+    "calibration_rule": "row-map chosen by explicit channel projection (CMP1->gg, CMP2->gh) on exported C4 channel decomposition"
+  },
+  "backend_import_blocker_update": {
+    "D1_dressed_pole_residue_backend_on_common_basis": "COMPUTED",
+    "D2_cmp1_source_row": "COMPUTED",
+    "D2_cmp1_first_residual_execution": "COMPUTED",
+    "D2_cmp2_residual_execution": "OPEN_MISSING_DRESSED_COV_ROW_VALUE",
+    "D3_uncertainty_propagation_from_dressed_backend": "COMPUTED_CONTRACT_LEVEL_ROW_LINK_TABLE_PARTIAL"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2111_candidate",
+    "goal": "export numeric dressed covariance row for CMP2 and execute CMP2 residual with same calibrated row-map table"
+  },
+  "c3_gate_update": {
+    "C3_cmp1_object_specific_d3_row_link": "COMPUTED",
+    "C3_cmp_contract_level_rowmap_calibration": "COMPUTED",
+    "C3_cmp2_residual_execution": "OPEN",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "channel_decomposition_exported": true,
+    "cmp1_sigma_nonzero": true,
+    "cmp2_sigma_nonzero": true,
+    "contract_level_row_maps_exported": true,
+    "full_d3_covariance_transport_proven": false,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": false,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

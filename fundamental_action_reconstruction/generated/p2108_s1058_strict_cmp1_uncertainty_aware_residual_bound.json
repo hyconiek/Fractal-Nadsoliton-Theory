@@ -1,0 +1,53 @@
+{
+  "schema_version": "p2108_s1058_v1",
+  "packet_id": "P2108",
+  "stage_id": "S1058",
+  "produced_by": "p2108_s1058_strict_cmp1_uncertainty_aware_residual_bound.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_CMP1_UNCERTAINTY_AWARE_BOUND_WITH_TRACE__SEED_LEVEL",
+  "depends_on": {
+    "p2107_present": true,
+    "p2101_present": true,
+    "preconditions_ready": true
+  },
+  "cmp1_uncertainty_aware_residual_bound": {
+    "residual_center": -0.3183098861837907,
+    "sigma_disc_seed_proxy": 0.0,
+    "sigma_cutsum_seed_proxy": 0.0,
+    "sigma_total": 0.0,
+    "z95": 1.96,
+    "residual_interval_95": [
+      -0.3183098861837907,
+      -0.3183098861837907
+    ],
+    "contains_zero": false,
+    "scope_limit": "seed-level uncertainty proxy only; D3 covariance transport remains OPEN"
+  },
+  "backend_import_blocker_update": {
+    "D1_dressed_pole_residue_backend_on_common_basis": "COMPUTED",
+    "D2_cmp1_source_row": "COMPUTED",
+    "D2_cmp1_first_residual_execution": "COMPUTED",
+    "D3_uncertainty_propagation_from_dressed_backend": "OPEN_PARTIAL_SEED_PROXY_ONLY"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2109_candidate",
+    "goal": "export object-specific covariance row link and recompute CMP1 bound with nonzero D3 backend uncertainty"
+  },
+  "c3_gate_update": {
+    "C3_cmp1_first_residual_execution": "COMPUTED",
+    "C3_cmp1_uncertainty_bound_seed_level": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "cmp1_residual_present": true,
+    "seed_uncertainty_bound_exported": true,
+    "full_d3_covariance_transport_proven": false,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": false,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

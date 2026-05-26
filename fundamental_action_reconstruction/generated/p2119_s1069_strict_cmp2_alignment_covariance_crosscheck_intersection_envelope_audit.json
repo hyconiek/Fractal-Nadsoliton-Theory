@@ -1,0 +1,168 @@
+{
+  "schema_version": "p2119_s1069_v1",
+  "packet_id": "P2119",
+  "stage_id": "S1069",
+  "produced_by": "p2119_s1069_strict_cmp2_alignment_covariance_crosscheck_intersection_envelope_audit.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_CMP2_ALIGNMENT_COVARIANCE_CROSSCHECK_INTERSECTION_ENVELOPE_AUDIT_WITH_TRACE",
+  "depends_on": {
+    "p2118_present": true,
+    "p2017_present": true,
+    "preconditions_ready": true
+  },
+  "alignment_covariance_crosscheck_intersection_audit": {
+    "independent_estimator": "local curvature norm over p2017 trace_profiles_by_channel",
+    "rows": [
+      {
+        "bin_index": 0,
+        "sigma_alignment_backend": 6.368027532627364e-16,
+        "sigma_alignment_independent_curvature": 0.017965583199371946,
+        "unnormalized_interval_backend": [
+          -0.10639259547067263,
+          0.10642007586045736
+        ],
+        "unnormalized_interval_independent": [
+          -0.14160513854144163,
+          0.14163261893122636
+        ],
+        "unnormalized_interval_intersection": [
+          -0.10639259547067263,
+          0.10642007586045736
+        ],
+        "unnormalized_intersection_nonempty": true,
+        "normalized_interval_backend": [
+          -1.9796851768887798,
+          1.9797126572785644
+        ],
+        "normalized_interval_independent": [
+          -2.014897719959549,
+          2.0149252003493334
+        ],
+        "normalized_interval_intersection": [
+          -1.9796851768887798,
+          1.9797126572785644
+        ],
+        "normalized_intersection_nonempty": true
+      },
+      {
+        "bin_index": 1,
+        "sigma_alignment_backend": 2.659249379836884e-16,
+        "sigma_alignment_independent_curvature": 0.017965583199371946,
+        "unnormalized_interval_backend": [
+          -0.044410628232082194,
+          0.04452054979122111
+        ],
+        "unnormalized_interval_independent": [
+          -0.07962317130285121,
+          0.07973309286199012
+        ],
+        "unnormalized_interval_intersection": [
+          -0.044410628232082194,
+          0.04452054979122111
+        ],
+        "unnormalized_intersection_nonempty": true,
+        "normalized_interval_backend": [
+          -1.9796435700133628,
+          1.9797534915725017
+        ],
+        "normalized_interval_independent": [
+          -2.014856113084132,
+          2.0149660346432707
+        ],
+        "normalized_interval_intersection": [
+          -1.9796435700133628,
+          1.9797534915725017
+        ],
+        "normalized_intersection_nonempty": true
+      },
+      {
+        "bin_index": 2,
+        "sigma_alignment_backend": 8.583039112064668e-17,
+        "sigma_alignment_independent_curvature": 0.010956496666169324,
+        "unnormalized_interval_backend": [
+          -0.01405493698249114,
+          0.01449462321904677
+        ],
+        "unnormalized_interval_independent": [
+          -0.03552967044818301,
+          0.03596935668473864
+        ],
+        "unnormalized_interval_intersection": [
+          -0.01405493698249114,
+          0.01449462321904677
+        ],
+        "unnormalized_intersection_nonempty": true,
+        "normalized_interval_backend": [
+          -1.9794779386307446,
+          1.9799176248673003
+        ],
+        "normalized_interval_independent": [
+          -2.0009526720964366,
+          2.0013923583329922
+        ],
+        "normalized_interval_intersection": [
+          -1.9794779386307446,
+          1.9799176248673003
+        ],
+        "normalized_intersection_nonempty": true
+      },
+      {
+        "bin_index": 3,
+        "sigma_alignment_backend": 3.725052598879228e-17,
+        "sigma_alignment_independent_curvature": 0.004496063476673714,
+        "unnormalized_interval_backend": [
+          -0.0025701717640297258,
+          0.004328916710252221
+        ],
+        "unnormalized_interval_independent": [
+          -0.011382456178310206,
+          0.013141201124532702
+        ],
+        "unnormalized_interval_intersection": [
+          -0.0025701717640297258,
+          0.004328916710252221
+        ],
+        "unnormalized_intersection_nonempty": true,
+        "normalized_interval_backend": [
+          -1.978818408520421,
+          1.9805771534666436
+        ],
+        "normalized_interval_independent": [
+          -1.9876306929347014,
+          1.989389437880924
+        ],
+        "normalized_interval_intersection": [
+          -1.978818408520421,
+          1.9805771534666436
+        ],
+        "normalized_intersection_nonempty": true
+      }
+    ],
+    "intersection_nonempty_pass_rate": 1.0,
+    "scope_limit": "operational cross-check only; no theorem-grade closure claim"
+  },
+  "backend_import_blocker_update": {
+    "D3_uncertainty_propagation_from_dressed_backend": "COMPUTED_ALIGNMENT_CROSSCHECK_INTERSECTION_AUDIT_PARTIAL"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2120_candidate",
+    "goal": "add third independent alignment estimator and perform triple-intersection consistency audit"
+  },
+  "c3_gate_update": {
+    "C3_cmp2_backend_alignment_covariance_object": "COMPUTED",
+    "C3_cmp2_alignment_crosscheck_intersection_audit": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "crosscheck_rows_exported": true,
+    "intersection_audit_computed": true,
+    "full_d3_covariance_transport_proven": false,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": false,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

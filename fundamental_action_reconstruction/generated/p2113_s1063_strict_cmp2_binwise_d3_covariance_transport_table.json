@@ -1,0 +1,110 @@
+{
+  "schema_version": "p2113_s1063_v1",
+  "packet_id": "P2113",
+  "stage_id": "S1063",
+  "produced_by": "p2113_s1063_strict_cmp2_binwise_d3_covariance_transport_table.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_CMP2_BINWISE_D3_COVARIANCE_TRANSPORT_TABLE_WITH_TRACE",
+  "depends_on": {
+    "p2112_present": true,
+    "p2110_present": true,
+    "p2009_present": true,
+    "p1862_present": true,
+    "preconditions_ready": true
+  },
+  "cmp2_binwise_d3_transport_table": {
+    "row_id": "CMP2",
+    "row_map_to_channels": [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "channel_covariance_source": "p2009::backend_tensor_objects.C4_channel_covariance",
+    "rows": [
+      {
+        "s": 0.5,
+        "transport_factor": 1.2771577286196818,
+        "sigma_d3_base_from_row_map": 0.01842917078200597,
+        "sigma_d3_binwise": 0.02353695789629095,
+        "dressed_covariance_row_value": 1.3740194892363194e-05,
+        "cutsum_uncertainty_row_center": 0.0,
+        "signed_residual": 1.3740194892363194e-05,
+        "residual_interval_95": [
+          -0.04611869728183789,
+          0.04614617767162262
+        ],
+        "contains_zero": true
+      },
+      {
+        "s": 1.0,
+        "transport_factor": 1.2771577286196818,
+        "sigma_d3_base_from_row_map": 0.01842917078200597,
+        "sigma_d3_binwise": 0.02353695789629095,
+        "dressed_covariance_row_value": 5.4960779569452776e-05,
+        "cutsum_uncertainty_row_center": 0.0,
+        "signed_residual": 5.4960779569452776e-05,
+        "residual_interval_95": [
+          -0.04607747669716081,
+          0.04618739825629971
+        ],
+        "contains_zero": true
+      },
+      {
+        "s": 2.0,
+        "transport_factor": 1.2771577286196818,
+        "sigma_d3_base_from_row_map": 0.01842917078200597,
+        "sigma_d3_binwise": 0.02353695789629095,
+        "dressed_covariance_row_value": 0.0002198431182778111,
+        "cutsum_uncertainty_row_center": 0.0,
+        "signed_residual": 0.0002198431182778111,
+        "residual_interval_95": [
+          -0.04591259435845245,
+          0.046352280595008066
+        ],
+        "contains_zero": true
+      },
+      {
+        "s": 4.0,
+        "transport_factor": 1.2771577286196818,
+        "sigma_d3_base_from_row_map": 0.01842917078200597,
+        "sigma_d3_binwise": 0.02353695789629095,
+        "dressed_covariance_row_value": 0.0008793724731112444,
+        "cutsum_uncertainty_row_center": 0.0,
+        "signed_residual": 0.0008793724731112444,
+        "residual_interval_95": [
+          -0.04525306500361902,
+          0.0470118099498415
+        ],
+        "contains_zero": true
+      }
+    ],
+    "scope_limit": "bin-wise operational D3 transport only; not global C3/D3 transport theorem"
+  },
+  "backend_import_blocker_update": {
+    "D2_cmp2_residual_execution": "COMPUTED_MULTIBIN_TABLE",
+    "D3_uncertainty_propagation_from_dressed_backend": "COMPUTED_BINWISE_ROWMAP_TRANSPORT_PARTIAL"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2114_candidate",
+    "goal": "replace operational transport_factor by explicit backend-exported binwise covariance objects and test stability under row-map perturbations"
+  },
+  "c3_gate_update": {
+    "C3_cmp2_multibin_residual_table": "COMPUTED",
+    "C3_cmp2_binwise_d3_transport_table": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "cmp2_row_map_present": true,
+    "base_sigma_nonzero": true,
+    "binwise_rows_exported": true,
+    "full_d3_covariance_transport_proven": false,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": false,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

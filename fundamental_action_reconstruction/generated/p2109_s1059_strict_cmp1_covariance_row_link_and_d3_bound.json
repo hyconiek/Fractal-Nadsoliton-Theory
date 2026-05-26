@@ -1,0 +1,72 @@
+{
+  "schema_version": "p2109_s1059_v1",
+  "packet_id": "P2109",
+  "stage_id": "S1059",
+  "produced_by": "p2109_s1059_strict_cmp1_covariance_row_link_and_d3_bound.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_CMP1_OBJECT_SPECIFIC_COVARIANCE_ROW_LINK_WITH_TRACE__D3_NONZERO_BOUND",
+  "depends_on": {
+    "p2108_present": true,
+    "p2107_present": true,
+    "p2009_present": true,
+    "preconditions_ready": true
+  },
+  "cmp1_covariance_row_link": {
+    "source_covariance_object": "p2009::backend_tensor_objects.C4_channel_covariance",
+    "source_shape": [
+      4,
+      4
+    ],
+    "row_id": "CMP1",
+    "row_map_to_channels": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "mapped_channel_interpretation": "CMP1 -> gg projected channel row",
+    "sigma_cutsum_from_covariance_row_link": 0.007553896384266655,
+    "row_link_exported": true,
+    "scope_limit": "object-specific row link only; not global D3 transport theorem"
+  },
+  "cmp1_uncertainty_aware_residual_bound_d3": {
+    "residual_center": -0.3183098861837907,
+    "sigma_disc_seed_proxy": 0.0,
+    "sigma_cutsum_from_row_link": 0.007553896384266655,
+    "sigma_total": 0.007553896384266655,
+    "z95": 1.96,
+    "residual_interval_95": [
+      -0.33311552309695336,
+      -0.303504249270628
+    ],
+    "contains_zero": false
+  },
+  "backend_import_blocker_update": {
+    "D1_dressed_pole_residue_backend_on_common_basis": "COMPUTED",
+    "D2_cmp1_source_row": "COMPUTED",
+    "D2_cmp1_first_residual_execution": "COMPUTED",
+    "D3_uncertainty_propagation_from_dressed_backend": "COMPUTED_OBJECT_SPECIFIC_ROW_LINK"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2110_candidate",
+    "goal": "extend covariance row-link from CMP1-only to contract-level CMP-table and reconcile row-map with explicit dressed backend channel decomposition"
+  },
+  "c3_gate_update": {
+    "C3_cmp1_first_residual_execution": "COMPUTED",
+    "C3_cmp1_uncertainty_bound_seed_level": "COMPUTED",
+    "C3_cmp1_object_specific_d3_row_link": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "covariance_row_link_exported": true,
+    "sigma_cutsum_nonzero": true,
+    "full_d3_covariance_transport_proven": false,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": false,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

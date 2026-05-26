@@ -1,0 +1,52 @@
+{
+  "schema_version": "p2111_s1061_v1",
+  "packet_id": "P2111",
+  "stage_id": "S1061",
+  "produced_by": "p2111_s1061_strict_cmp2_covariance_row_export_and_residual_execution.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_CMP2_NUMERIC_COVARIANCE_ROW_EXPORT_AND_FIRST_RESIDUAL_WITH_TRACE",
+  "depends_on": {
+    "p2110_present": true,
+    "p1862_present": true,
+    "p2101_present": true,
+    "preconditions_ready": true
+  },
+  "cmp2_covariance_row_execution": {
+    "row_id": "CMP2",
+    "dressed_covariance_row_value": 1.3740194892363194e-05,
+    "dressed_covariance_row_source": "variance over p1862 projected_disc rows at fixed s (first available s)",
+    "cutsum_uncertainty_row_value": 0.0,
+    "cutsum_uncertainty_row_source": "p2101 u3_uncertainty_table first matching s disc_uncertainty_abs",
+    "signed_residual": 1.3740194892363194e-05,
+    "abs_residual": 1.3740194892363194e-05,
+    "scope_limit": "first operational CMP2 row only; not full covariance transport theorem"
+  },
+  "backend_import_blocker_update": {
+    "D1_dressed_pole_residue_backend_on_common_basis": "COMPUTED",
+    "D2_cmp1_first_residual_execution": "COMPUTED",
+    "D2_cmp2_residual_execution": "COMPUTED_FIRST_ROW",
+    "D3_uncertainty_propagation_from_dressed_backend": "COMPUTED_CONTRACT_LEVEL_ROW_LINK_TABLE_PARTIAL"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2112_candidate",
+    "goal": "execute multi-row CMP2 covariance residual table across all available s bins and attach explicit rowwise uncertainty intervals"
+  },
+  "c3_gate_update": {
+    "C3_cmp_contract_level_rowmap_calibration": "COMPUTED",
+    "C3_cmp2_first_residual_execution": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "cmp2_dressed_cov_row_exported": true,
+    "cmp2_cutsum_unc_row_linked": true,
+    "cmp2_residual_computed": true,
+    "full_d3_covariance_transport_proven": false,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": false,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

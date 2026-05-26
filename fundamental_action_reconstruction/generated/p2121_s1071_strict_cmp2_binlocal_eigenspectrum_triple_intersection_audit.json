@@ -1,0 +1,108 @@
+{
+  "schema_version": "p2121_s1071_v1",
+  "packet_id": "P2121",
+  "stage_id": "S1071",
+  "produced_by": "p2121_s1071_strict_cmp2_binlocal_eigenspectrum_triple_intersection_audit.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_CMP2_BINLOCAL_EIGENSPECTRUM_TRIPLE_INTERSECTION_AUDIT_WITH_TRACE",
+  "depends_on": {
+    "p2120_present": true,
+    "p2017_present": true,
+    "preconditions_ready": true
+  },
+  "binlocal_triple_intersection_audit": {
+    "eigenspectrum_local_rule": "adjacent-eigenvalue local delta at bin index",
+    "rows": [
+      {
+        "bin_index": 0,
+        "sigma_backend": 6.368027532627364e-16,
+        "sigma_curvature": 0.017965583199371946,
+        "sigma_eigenspectrum_binlocal": 3.9817897890598635e-10,
+        "unnormalized_triple_intersection_binlocal": [
+          -0.10639259547067513,
+          0.10642007586045986
+        ],
+        "unnormalized_nonempty": true,
+        "normalized_triple_intersection_binlocal": [
+          -1.9796851768887824,
+          1.979712657278567
+        ],
+        "normalized_nonempty": true
+      },
+      {
+        "bin_index": 1,
+        "sigma_backend": 2.659249379836884e-16,
+        "sigma_curvature": 0.017965583199371946,
+        "sigma_eigenspectrum_binlocal": 2.08071080697681e-08,
+        "unnormalized_triple_intersection_binlocal": [
+          -0.044410628232083235,
+          0.04452054979122215
+        ],
+        "unnormalized_nonempty": true,
+        "normalized_triple_intersection_binlocal": [
+          -1.9796435700133637,
+          1.9797534915725026
+        ],
+        "normalized_nonempty": true
+      },
+      {
+        "bin_index": 2,
+        "sigma_backend": 8.583039112064668e-17,
+        "sigma_curvature": 0.010956496666169324,
+        "sigma_eigenspectrum_binlocal": 0.0003124980658543361,
+        "unnormalized_triple_intersection_binlocal": [
+          -0.014054936982491476,
+          0.014494623219047107
+        ],
+        "unnormalized_nonempty": true,
+        "normalized_triple_intersection_binlocal": [
+          -1.979477938630745,
+          1.9799176248673007
+        ],
+        "normalized_nonempty": true
+      },
+      {
+        "bin_index": 3,
+        "sigma_backend": 3.725052598879228e-17,
+        "sigma_curvature": 0.004496063476673714,
+        "sigma_eigenspectrum_binlocal": 0.0006249549156715116,
+        "unnormalized_triple_intersection_binlocal": [
+          -0.0025701717640298715,
+          0.004328916710252367
+        ],
+        "unnormalized_nonempty": true,
+        "normalized_triple_intersection_binlocal": [
+          -1.978818408520421,
+          1.9805771534666436
+        ],
+        "normalized_nonempty": true
+      }
+    ],
+    "triple_intersection_nonempty_pass_rate": 1.0,
+    "scope_limit": "operational bin-local propagation audit only; not theorem-grade closure"
+  },
+  "backend_import_blocker_update": {
+    "D3_uncertainty_propagation_from_dressed_backend": "COMPUTED_BINLOCAL_EIGENSPECTRUM_TRIPLE_INTERSECTION_AUDIT_PARTIAL"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2122_candidate",
+    "goal": "bind bin indices to explicit backend s-grid provenance map and rerun binlocal audit with index-to-s uncertainty"
+  },
+  "c3_gate_update": {
+    "C3_cmp2_triple_alignment_estimator_consistency_audit": "COMPUTED",
+    "C3_cmp2_binlocal_eigenspectrum_triple_intersection_audit": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "binlocal_rows_exported": true,
+    "binlocal_propagation_computed": true,
+    "full_d3_covariance_transport_proven": false,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": false,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

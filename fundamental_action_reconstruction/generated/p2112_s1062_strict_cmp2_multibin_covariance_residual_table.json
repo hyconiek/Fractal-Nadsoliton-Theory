@@ -1,0 +1,105 @@
+{
+  "schema_version": "p2112_s1062_v1",
+  "packet_id": "P2112",
+  "stage_id": "S1062",
+  "produced_by": "p2112_s1062_strict_cmp2_multibin_covariance_residual_table.py",
+  "timestamp_utc": "2026-05-25T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_CMP2_MULTIBIN_RESIDUAL_TABLE_WITH_TRACE",
+  "depends_on": {
+    "p2111_present": true,
+    "p1862_present": true,
+    "p2101_present": true,
+    "preconditions_ready": true
+  },
+  "cmp2_multibin_residual_table": {
+    "row_id": "CMP2",
+    "scheme_tag": "STRICT_P2020_PHASESPACE_SCHEME_V1",
+    "rows": [
+      {
+        "s": 0.5,
+        "dressed_covariance_row_value": 1.3740194892363194e-05,
+        "cutsum_uncertainty_row_value": 0.0,
+        "signed_residual": 1.3740194892363194e-05,
+        "abs_residual": 1.3740194892363194e-05,
+        "sigma_proxy": 0.0,
+        "residual_interval_95": [
+          1.3740194892363194e-05,
+          1.3740194892363194e-05
+        ],
+        "contains_zero": false
+      },
+      {
+        "s": 1.0,
+        "dressed_covariance_row_value": 5.4960779569452776e-05,
+        "cutsum_uncertainty_row_value": 0.0,
+        "signed_residual": 5.4960779569452776e-05,
+        "abs_residual": 5.4960779569452776e-05,
+        "sigma_proxy": 0.0,
+        "residual_interval_95": [
+          5.4960779569452776e-05,
+          5.4960779569452776e-05
+        ],
+        "contains_zero": false
+      },
+      {
+        "s": 2.0,
+        "dressed_covariance_row_value": 0.0002198431182778111,
+        "cutsum_uncertainty_row_value": 0.0,
+        "signed_residual": 0.0002198431182778111,
+        "abs_residual": 0.0002198431182778111,
+        "sigma_proxy": 0.0,
+        "residual_interval_95": [
+          0.0002198431182778111,
+          0.0002198431182778111
+        ],
+        "contains_zero": false
+      },
+      {
+        "s": 4.0,
+        "dressed_covariance_row_value": 0.0008793724731112444,
+        "cutsum_uncertainty_row_value": 0.0,
+        "signed_residual": 0.0008793724731112444,
+        "abs_residual": 0.0008793724731112444,
+        "sigma_proxy": 0.0,
+        "residual_interval_95": [
+          0.0008793724731112444,
+          0.0008793724731112444
+        ],
+        "contains_zero": false
+      }
+    ],
+    "residual_summary": {
+      "n_bins": 4,
+      "mean_signed_residual": 0.0002919791414627179,
+      "max_abs_residual": 0.0008793724731112444
+    },
+    "scope_limit": "multibin operational table only; not global covariance transport theorem"
+  },
+  "backend_import_blocker_update": {
+    "D1_dressed_pole_residue_backend_on_common_basis": "COMPUTED",
+    "D2_cmp1_first_residual_execution": "COMPUTED",
+    "D2_cmp2_residual_execution": "COMPUTED_MULTIBIN_TABLE",
+    "D3_uncertainty_propagation_from_dressed_backend": "COMPUTED_MULTIBIN_PROXY_TABLE_PARTIAL"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2113_candidate",
+    "goal": "replace CMP2 sigma_proxy by explicit dressed-backend covariance transport per s-bin and re-evaluate interval table"
+  },
+  "c3_gate_update": {
+    "C3_cmp2_first_residual_execution": "COMPUTED",
+    "C3_cmp2_multibin_residual_table": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "cmp2_multibin_rows_exported": true,
+    "cmp2_multibin_residuals_computed": true,
+    "full_d3_covariance_transport_proven": false,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": false,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}
