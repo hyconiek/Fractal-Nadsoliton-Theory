@@ -1,0 +1,67 @@
+{
+  "schema_version": "p2171_s1121_v1",
+  "packet_id": "P2171",
+  "stage_id": "S1121",
+  "produced_by": "p2171_s1121_strict_qw2191_o1_o3_o4_dedicated_witness_packet.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_QW2191_O1_O3_O4_DEDICATED_WITNESS_PACKET_WITH_TRACE",
+  "strict_qw2191_o1_o3_o4_dedicated_witness_packet": {
+    "source_branch_packet": "generated/p2167_s1117_strict_qw2191_selector_premise_branch_and_theorem_obligations_packet.json",
+    "source_o2_o5_update_packet": "generated/p2170_s1120_strict_qw2191_obligation_validator_o2_o5_update.json",
+    "selected_branch": "M1_explicit_selector_premise_export",
+    "witnesses": [
+      {
+        "obligation_id": "O1_selector_source_identifiability",
+        "witness_id": "W_O1_FORMAL_SELECTOR_PREMISE_V1",
+        "source": "P2167 instantiated_branch",
+        "expected_branch": null,
+        "selected_branch": "M1_explicit_selector_premise_export",
+        "satisfied": true
+      },
+      {
+        "obligation_id": "O3_noncyclic_anchor_certificate",
+        "witness_id": "W_O3_NONCYCLIC_PRESERVATION_V1",
+        "noncyclic_requirements": [],
+        "evidence": {
+          "branch_selected": true,
+          "prior_o2_o5_progress_exported": true,
+          "prior_o2_pass": true,
+          "prior_o5_pass": true
+        },
+        "satisfied": true
+      },
+      {
+        "obligation_id": "O4_no_legacy_role_transfer_certificate",
+        "witness_id": "W_O4_GUARDRAIL_COMPLIANCE_V1",
+        "guardrails": [],
+        "checks": {
+          "no_selector_closure_claim": true,
+          "no_toe_closure_claim": true,
+          "legacy_to_strict_role_transfer_claim": false
+        },
+        "satisfied": true
+      }
+    ],
+    "o1_pass": true,
+    "o3_pass": true,
+    "o4_pass": true,
+    "scope_limit": "first dedicated O1/O3/O4 witness export only; no selector closure claim"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2172_candidate",
+    "goal": "update validator with O1/O3/O4 witnesses and check if all required obligations pass together"
+  },
+  "gatekeeper_checks": {
+    "dedicated_witness_exported": true,
+    "o1_pass": true,
+    "o3_pass": true,
+    "o4_pass": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_d3_covariance_transport_proven": true,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

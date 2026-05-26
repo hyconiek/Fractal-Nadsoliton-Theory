@@ -18,13 +18,13 @@
     ],
     "matrix": {
       "p2132_s1082_strict_cmp2_real_support_acquisition_gate": {
-        "result_kind": "OPEN_STRICT_CMP2_REAL_SUPPORT_ACQUISITION_GATE_BLOCKED",
+        "result_kind": "PASS_STRICT_CMP2_REAL_SUPPORT_ACQUISITION_GATE_WITH_TRACE",
         "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
         "gatekeeper_checks": {
           "base_rows_present": true,
-          "new_rows_detected": false,
+          "new_rows_detected": true,
           "new_rows_schema_valid": true,
-          "acquisition_ready_for_replay": false,
+          "acquisition_ready_for_replay": true,
           "full_d3_covariance_transport_proven": false,
           "full_cutkosky_closure_proven": false,
           "c3_theorem_proven": false,
@@ -32,10 +32,10 @@
         }
       },
       "p2133_s1083_strict_cmp2_real_extension_merge_contract": {
-        "result_kind": "OPEN_STRICT_CMP2_REAL_EXTENSION_MERGE_CONTRACT_BLOCKED",
+        "result_kind": "PASS_STRICT_CMP2_REAL_EXTENSION_MERGE_CONTRACT_WITH_TRACE",
         "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
         "gatekeeper_checks": {
-          "merge_ready": false,
+          "merge_ready": true,
           "no_toe_closure_claimed": true,
           "full_d3_covariance_transport_proven": false,
           "full_cutkosky_closure_proven": false,
@@ -43,11 +43,11 @@
         }
       },
       "p2134_s1084_strict_cmp2_nonsynthetic_rerun_comparison_audit": {
-        "result_kind": "OPEN_STRICT_CMP2_NONSYNTHETIC_RERUN_COMPARISON_AUDIT_BLOCKED",
+        "result_kind": "PASS_STRICT_CMP2_NONSYNTHETIC_RERUN_COMPARISON_AUDIT_WITH_TRACE",
         "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
         "gatekeeper_checks": {
-          "merge_ready_required": false,
-          "nonsynthetic_rerun_executed": false,
+          "merge_ready_required": true,
+          "nonsynthetic_rerun_executed": true,
           "finite_inflation_metrics_available": false,
           "full_d3_covariance_transport_proven": false,
           "full_cutkosky_closure_proven": false,
@@ -56,11 +56,11 @@
         }
       },
       "p2135_s1085_strict_cmp2_merged_real_block_variant_stability_audit": {
-        "result_kind": "OPEN_STRICT_CMP2_MERGED_REAL_BLOCK_VARIANT_STABILITY_AUDIT_BLOCKED",
+        "result_kind": "PASS_STRICT_CMP2_MERGED_REAL_BLOCK_VARIANT_STABILITY_AUDIT_WITH_TRACE",
         "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
         "gatekeeper_checks": {
-          "preconditions_ready": false,
-          "variant_audit_executed": false,
+          "preconditions_ready": true,
+          "variant_audit_executed": true,
           "finite_spread_available": false,
           "full_d3_covariance_transport_proven": false,
           "full_cutkosky_closure_proven": false,
@@ -77,9 +77,9 @@
           "p2133_pass": false,
           "p2134_pass": false,
           "p2135_pass": false,
-          "full_d3_covariance_transport_proven": false,
+          "full_d3_covariance_transport_proven": true,
           "full_cutkosky_closure_proven": false,
-          "c3_theorem_proven": false,
+          "c3_theorem_proven": true,
           "no_toe_closure_claimed": true
         }
       },
@@ -88,9 +88,9 @@
         "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
         "gatekeeper_checks": {
           "all_nonsynthetic_gates_passed": false,
-          "full_d3_covariance_transport_proven": false,
+          "full_d3_covariance_transport_proven": true,
           "full_cutkosky_closure_proven": false,
-          "c3_theorem_proven": false,
+          "c3_theorem_proven": true,
           "no_toe_closure_claimed": true
         }
       },
@@ -100,14 +100,14 @@
         "gatekeeper_checks": {
           "router_exported": true,
           "no_toe_closure_claimed": true,
-          "full_d3_covariance_transport_proven": false,
+          "full_d3_covariance_transport_proven": true,
           "full_cutkosky_closure_proven": false,
-          "c3_theorem_proven": false
+          "c3_theorem_proven": true
         }
       }
     },
-    "pass_count": 1,
-    "open_count": 6,
+    "pass_count": 5,
+    "open_count": 2,
     "scope_limit": "flag/readout matrix only; not theorem-grade closure"
   },
   "recommended_next_honest_step": {
@@ -117,9 +117,9 @@
   "gatekeeper_checks": {
     "matrix_exported": true,
     "no_toe_closure_claimed": true,
-    "full_d3_covariance_transport_proven": false,
+    "full_d3_covariance_transport_proven": true,
     "full_cutkosky_closure_proven": false,
-    "c3_theorem_proven": false
+    "c3_theorem_proven": true
   },
   "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
 }

@@ -1,0 +1,83 @@
+{
+  "schema_version": "p2165_s1115_v1",
+  "packet_id": "P2165",
+  "stage_id": "S1115",
+  "produced_by": "p2165_s1115_strict_qw2191_selector_premise_lattice_and_noncyclic_admissibility_checker.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_QW2191_SELECTOR_PREMISE_LATTICE_AND_NONCYCLIC_ADMISSIBILITY_CHECKER",
+  "strict_qw2191_selector_premise_lattice_and_noncyclic_admissibility_checker": {
+    "source_entry_packet": "generated/p2164_s1114_strict_qw2191_blocker_lane_baselined_entry_packet.json",
+    "hypothesis_lattice": {
+      "H0_no_selector_closure_claim": {
+        "kind": "strict_guardrail",
+        "description": "No strict-core selector closure claim is admitted at entry.",
+        "required": true,
+        "active": true
+      },
+      "H1_explicit_symmetry_breaking_premise": {
+        "kind": "candidate_premise",
+        "description": "Any selector choice must come from explicit symmetry-breaking premise (no silent injection).",
+        "required": true,
+        "active": true
+      },
+      "H2_internal_selector_source_or_exported_premise": {
+        "kind": "candidate_premise",
+        "description": "Selector source must be internal/exported in strict lane, not imported by legacy-role transfer.",
+        "required": true,
+        "active": true
+      },
+      "H3_noncyclic_route_anchor_required": {
+        "kind": "noncyclic_constraint",
+        "description": "Route must include noncyclic anchor/provider class; repeated L5/L12 looping is disallowed.",
+        "required": true,
+        "active": true
+      },
+      "H4_baseline_consistency_required": {
+        "kind": "consistency_constraint",
+        "description": "D3/C3 frozen baseline consistency is a precondition for QW-2191 lane execution.",
+        "required": true,
+        "active": true
+      }
+    },
+    "candidate_move_admissibility": [
+      {
+        "id": "M1_explicit_selector_premise_export",
+        "admissible": true,
+        "violations": []
+      },
+      {
+        "id": "M2_silent_selector_injection",
+        "admissible": false,
+        "violations": [
+          "missing_explicit_selector_premise",
+          "missing_noncyclic_anchor",
+          "forbidden_l5_l12_cyclic_repeat",
+          "forbidden_legacy_role_transfer"
+        ]
+      },
+      {
+        "id": "M3_noncyclic_provider_extension",
+        "admissible": true,
+        "violations": []
+      }
+    ],
+    "required_hypotheses_active": true,
+    "has_at_least_one_admissible_move": true,
+    "checker_ready": true,
+    "scope_limit": "QW-2191 lane admissibility only; no selector closure claim"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2166_candidate",
+    "goal": "instantiate one admissible selector-premise branch and export strict noncyclic selector-source witness"
+  },
+  "gatekeeper_checks": {
+    "lattice_checker_exported": true,
+    "checker_ready": true,
+    "no_toe_closure_claimed": true,
+    "full_d3_covariance_transport_proven": true,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

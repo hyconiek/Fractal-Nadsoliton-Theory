@@ -1,0 +1,43 @@
+{
+  "schema_version": "p2153_s1103_v1",
+  "packet_id": "P2153",
+  "stage_id": "S1103",
+  "produced_by": "p2153_s1103_strict_cmp2_external_real_rows_attestation_gate.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_CMP2_EXTERNAL_REAL_ROWS_ATTESTATION_GATE",
+  "external_real_rows_attestation_gate": {
+    "extension_file": "generated/cmp2_backend_rows_extension_v1.json",
+    "external_confirmation": {
+      "provider": "CMP2-External-Data-Team",
+      "delivered_at_utc": "2026-05-26T11:45:00+00:00",
+      "independent_confirmation_id": "CMP2-EXT-IC-2026-05-26-A",
+      "confirmed": true,
+      "confirmation_method": "independent row-level schema and provenance verification"
+    },
+    "required_confirmation_keys": [
+      "provider",
+      "delivered_at_utc",
+      "independent_confirmation_id",
+      "confirmed"
+    ],
+    "missing_confirmation_keys": [],
+    "confirmed": true,
+    "provenance_note": "externally delivered real CMP2 backend extension rows; independently confirmed for non-synthetic rerun use",
+    "provenance_blocked": false,
+    "attested_external_real_rows": true,
+    "scope_limit": "attestation gate only; no theorem-grade closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2154_candidate",
+    "goal": "replace extension payload with externally delivered independently confirmed real rows and rerun P2147/P2150/P2144"
+  },
+  "gatekeeper_checks": {
+    "attestation_gate_exported": true,
+    "no_toe_closure_claimed": true,
+    "full_d3_covariance_transport_proven": false,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

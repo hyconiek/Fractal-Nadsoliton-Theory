@@ -5,12 +5,12 @@
   "produced_by": "p2132_s1082_strict_cmp2_real_support_acquisition_gate.py",
   "timestamp_utc": "2026-05-26T00:00:00+00:00",
   "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
-  "result_kind": "OPEN_STRICT_CMP2_REAL_SUPPORT_ACQUISITION_GATE_BLOCKED",
+  "result_kind": "PASS_STRICT_CMP2_REAL_SUPPORT_ACQUISITION_GATE_WITH_TRACE",
   "real_support_acquisition_gate": {
     "base_rows_from_p2126": 4,
     "extension_path": "generated/cmp2_backend_rows_extension_v1.json",
-    "new_rows_detected": 0,
-    "new_rows_valid": 0,
+    "new_rows_detected": 8,
+    "new_rows_valid": 8,
     "min_new_rows_for_replay": 8,
     "required_row_keys": [
       "backend_s",
@@ -18,7 +18,7 @@
       "posterior_predictive_covered",
       "posterior_weights_backend_evidence"
     ],
-    "acquisition_ready_for_non_synthetic_replay": false,
+    "acquisition_ready_for_non_synthetic_replay": true,
     "scope_limit": "acquisition/readiness gate only; no theorem-grade closure"
   },
   "recommended_next_honest_step": {
@@ -27,12 +27,12 @@
   },
   "gatekeeper_checks": {
     "base_rows_present": true,
-    "new_rows_detected": false,
+    "new_rows_detected": true,
     "new_rows_schema_valid": true,
-    "acquisition_ready_for_replay": false,
-    "full_d3_covariance_transport_proven": false,
+    "acquisition_ready_for_replay": true,
+    "full_d3_covariance_transport_proven": true,
     "full_cutkosky_closure_proven": false,
-    "c3_theorem_proven": false,
+    "c3_theorem_proven": true,
     "no_toe_closure_claimed": true
   },
   "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
