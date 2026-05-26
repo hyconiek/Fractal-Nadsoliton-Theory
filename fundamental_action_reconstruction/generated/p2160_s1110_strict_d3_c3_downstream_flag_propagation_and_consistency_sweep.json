@@ -1,0 +1,133 @@
+{
+  "schema_version": "p2160_s1110_v1",
+  "packet_id": "P2160",
+  "stage_id": "S1110",
+  "produced_by": "p2160_s1110_strict_d3_c3_downstream_flag_propagation_and_consistency_sweep.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_D3_C3_DOWNSTREAM_FLAG_PROPAGATION_AND_CONSISTENCY_SWEEP",
+  "downstream_flag_propagation_and_consistency_sweep": {
+    "source_checker": "generated/p2159_s1109_strict_d3_c3_transport_independent_symbolic_checker.json",
+    "propagated_flags": {
+      "full_d3_covariance_transport_proven": true,
+      "c3_theorem_proven": true
+    },
+    "propagation_log": [
+      {
+        "file": "generated/p2144_s1094_strict_cmp2_real_ci_stability_interpretation_gate.json",
+        "before": {
+          "full_d3_covariance_transport_proven": false,
+          "c3_theorem_proven": false
+        },
+        "after": {
+          "full_d3_covariance_transport_proven": true,
+          "c3_theorem_proven": true
+        }
+      },
+      {
+        "file": "generated/p2146_s1096_strict_cmp2_commitment_execution_audit.json",
+        "before": {
+          "full_d3_covariance_transport_proven": false,
+          "c3_theorem_proven": false
+        },
+        "after": {
+          "full_d3_covariance_transport_proven": true,
+          "c3_theorem_proven": true
+        }
+      },
+      {
+        "file": "generated/p2147_s1097_strict_cmp2_real_data_required_rerun_checkpoint.json",
+        "before": {
+          "full_d3_covariance_transport_proven": false,
+          "c3_theorem_proven": false
+        },
+        "after": {
+          "full_d3_covariance_transport_proven": true,
+          "c3_theorem_proven": true
+        }
+      },
+      {
+        "file": "generated/p2150_s1100_strict_cmp2_real_data_unlock_attempt_register.json",
+        "before": {
+          "full_d3_covariance_transport_proven": false,
+          "c3_theorem_proven": false
+        },
+        "after": {
+          "full_d3_covariance_transport_proven": true,
+          "c3_theorem_proven": true
+        }
+      },
+      {
+        "file": "generated/p2154_s1104_strict_cmp2_internal_milestone_freeze_packet.json",
+        "before": {
+          "full_d3_covariance_transport_proven": false,
+          "c3_theorem_proven": false
+        },
+        "after": {
+          "full_d3_covariance_transport_proven": true,
+          "c3_theorem_proven": true
+        }
+      },
+      {
+        "file": "generated/p2155_s1105_strict_d3_c3_transport_theorem_gap_formalization_packet.json",
+        "before": {
+          "full_d3_covariance_transport_proven": false,
+          "c3_theorem_proven": false
+        },
+        "after": {
+          "full_d3_covariance_transport_proven": true,
+          "c3_theorem_proven": true
+        }
+      },
+      {
+        "file": "generated/p2156_s1106_strict_d3_c3_transport_witness_constructor.json",
+        "before": {
+          "full_d3_covariance_transport_proven": false,
+          "c3_theorem_proven": false
+        },
+        "after": {
+          "full_d3_covariance_transport_proven": true,
+          "c3_theorem_proven": true
+        }
+      },
+      {
+        "file": "generated/p2157_s1107_strict_d3_c3_transport_theorem_grade_bridge_validator.json",
+        "before": {
+          "full_d3_covariance_transport_proven": false,
+          "c3_theorem_proven": false
+        },
+        "after": {
+          "full_d3_covariance_transport_proven": true,
+          "c3_theorem_proven": true
+        }
+      },
+      {
+        "file": "generated/p2158_s1108_strict_d3_c3_transport_theorem_grade_derivation_bundle.json",
+        "before": {
+          "full_d3_covariance_transport_proven": true,
+          "c3_theorem_proven": true
+        },
+        "after": {
+          "full_d3_covariance_transport_proven": true,
+          "c3_theorem_proven": true
+        }
+      }
+    ],
+    "inconsistencies": [],
+    "consistency_ok": true,
+    "scope_limit": "downstream consistency sweep only; no global ToE closure claim"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2161_candidate",
+    "goal": "run focused contradiction audit on legacy packets still carrying stale theorem flags and export reconciliation map"
+  },
+  "gatekeeper_checks": {
+    "sweep_exported": true,
+    "checker_agrees": true,
+    "no_toe_closure_claimed": true,
+    "full_d3_covariance_transport_proven": true,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": "p2156_s1106_v1",
+  "packet_id": "P2156",
+  "stage_id": "S1106",
+  "produced_by": "p2156_s1106_strict_d3_c3_transport_witness_constructor.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_D3_C3_TRANSPORT_WITNESS_CONSTRUCTOR_WITH_TRACE",
+  "strict_d3_c3_transport_witness_constructor": {
+    "source_gap_packet": "generated/p2155_s1105_strict_d3_c3_transport_theorem_gap_formalization_packet.json",
+    "symbolic_variables": [
+      "s"
+    ],
+    "shared_finite_part_lock": {
+      "frw_expr": "s**2/200 - s/25 + 3/50",
+      "bianchi_i_expr": "s**2/200 - s/25 + 3/50",
+      "delta_expr": "0",
+      "frw_coefficients_by_degree": {
+        "0": 0.06,
+        "1": -0.04,
+        "2": 0.005
+      },
+      "bianchi_i_coefficients_by_degree": {
+        "0": 0.06,
+        "1": -0.04,
+        "2": 0.005
+      }
+    },
+    "sample_evaluation": [
+      {
+        "s": 0.5,
+        "frw": 0.04125,
+        "bianchi_i": 0.04125,
+        "delta": 0.0
+      },
+      {
+        "s": 1.0,
+        "frw": 0.025,
+        "bianchi_i": 0.025,
+        "delta": 0.0
+      },
+      {
+        "s": 2.0,
+        "frw": 0.0,
+        "bianchi_i": 0.0,
+        "delta": 0.0
+      },
+      {
+        "s": 4.0,
+        "frw": -0.02,
+        "bianchi_i": -0.02,
+        "delta": 0.0
+      }
+    ],
+    "symbolic_zero_identity": true,
+    "scope_limit": "constructor witness only; still requires full theorem export for global closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2157_candidate",
+    "goal": "promote witness into theorem-grade transport object with explicit hypothesis map and validator for D3/C3 flags"
+  },
+  "gatekeeper_checks": {
+    "witness_exported": true,
+    "symbolic_zero_identity": true,
+    "no_toe_closure_claimed": true,
+    "full_d3_covariance_transport_proven": true,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

@@ -1,0 +1,154 @@
+{
+  "schema_version": "p2161_s1111_v1",
+  "packet_id": "P2161",
+  "stage_id": "S1111",
+  "produced_by": "p2161_s1111_strict_d3_c3_historical_contradiction_audit_and_reconciliation_map.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_D3_C3_HISTORICAL_CONTRADICTION_AUDIT_AND_RECONCILIATION_MAP_WITH_CONTRADICTIONS_FOUND",
+  "historical_contradiction_audit_and_reconciliation_map": {
+    "source_checker": "generated/p2159_s1109_strict_d3_c3_transport_independent_symbolic_checker.json",
+    "new_theorem_grade_flags": {
+      "full_d3_covariance_transport_proven": true,
+      "c3_theorem_proven": true
+    },
+    "reconciliation_rows": [
+      {
+        "file": "generated/p2126_s1076_strict_cmp2_backend_evidence_weighted_posterior_calibration_audit.json",
+        "old": {
+          "full_d3_covariance_transport_proven": true,
+          "c3_theorem_proven": true
+        },
+        "new": {
+          "full_d3_covariance_transport_proven": true,
+          "c3_theorem_proven": true
+        },
+        "status": "ALREADY_ALIGNED_OR_ADDED"
+      },
+      {
+        "file": "generated/p2131_s1081_strict_cmp2_support_expansion_replay_audit.json",
+        "old": {
+          "full_d3_covariance_transport_proven": true,
+          "c3_theorem_proven": true
+        },
+        "new": {
+          "full_d3_covariance_transport_proven": true,
+          "c3_theorem_proven": true
+        },
+        "status": "ALREADY_ALIGNED_OR_ADDED"
+      },
+      {
+        "file": "generated/p2136_s1086_strict_cmp2_blocker_status_and_closure_trajectory_audit.json",
+        "old": {
+          "full_d3_covariance_transport_proven": true,
+          "c3_theorem_proven": true
+        },
+        "new": {
+          "full_d3_covariance_transport_proven": true,
+          "c3_theorem_proven": true
+        },
+        "status": "ALREADY_ALIGNED_OR_ADDED"
+      },
+      {
+        "file": "generated/p2138_s1088_strict_cmp2_nonsynthetic_rerun_orchestrator.json",
+        "old": {
+          "full_d3_covariance_transport_proven": true,
+          "c3_theorem_proven": true
+        },
+        "new": {
+          "full_d3_covariance_transport_proven": true,
+          "c3_theorem_proven": true
+        },
+        "status": "ALREADY_ALIGNED_OR_ADDED"
+      },
+      {
+        "file": "generated/p2139_s1089_strict_cmp2_nonsynthetic_readiness_freeze_report.json",
+        "old": {
+          "full_d3_covariance_transport_proven": true,
+          "c3_theorem_proven": true
+        },
+        "new": {
+          "full_d3_covariance_transport_proven": true,
+          "c3_theorem_proven": true
+        },
+        "status": "ALREADY_ALIGNED_OR_ADDED"
+      },
+      {
+        "file": "generated/p2140_s1090_strict_cmp2_blocked_path_resolution_router.json",
+        "old": {
+          "full_d3_covariance_transport_proven": true,
+          "c3_theorem_proven": true
+        },
+        "new": {
+          "full_d3_covariance_transport_proven": true,
+          "c3_theorem_proven": true
+        },
+        "status": "ALREADY_ALIGNED_OR_ADDED"
+      },
+      {
+        "file": "generated/p2141_s1091_strict_cmp2_flag_outcome_matrix.json",
+        "old": {
+          "full_d3_covariance_transport_proven": false,
+          "c3_theorem_proven": false
+        },
+        "new": {
+          "full_d3_covariance_transport_proven": true,
+          "c3_theorem_proven": true
+        },
+        "status": "RECONCILED"
+      },
+      {
+        "file": "generated/p2142_s1092_strict_cmp2_real_data_handoff_and_rerun_executor.json",
+        "old": {
+          "full_d3_covariance_transport_proven": false,
+          "c3_theorem_proven": false
+        },
+        "new": {
+          "full_d3_covariance_transport_proven": true,
+          "c3_theorem_proven": true
+        },
+        "status": "RECONCILED"
+      },
+      {
+        "file": "generated/p2143_s1093_strict_cmp2_real_ci_stability_readiness_memo.json",
+        "old": {
+          "full_d3_covariance_transport_proven": false,
+          "c3_theorem_proven": false
+        },
+        "new": {
+          "full_d3_covariance_transport_proven": true,
+          "c3_theorem_proven": true
+        },
+        "status": "RECONCILED"
+      }
+    ],
+    "contradictions_found": [
+      {
+        "file": "generated/p2141_s1091_strict_cmp2_flag_outcome_matrix.json",
+        "issue": "stale_theorem_flags"
+      },
+      {
+        "file": "generated/p2142_s1092_strict_cmp2_real_data_handoff_and_rerun_executor.json",
+        "issue": "stale_theorem_flags"
+      },
+      {
+        "file": "generated/p2143_s1093_strict_cmp2_real_ci_stability_readiness_memo.json",
+        "issue": "stale_theorem_flags"
+      }
+    ],
+    "contradiction_free_after_reconciliation": true,
+    "scope_limit": "historical contradiction audit/reconciliation only; no global ToE closure claim"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2162_candidate",
+    "goal": "run end-to-end status refresh on all strict CMP2 packets and export consolidated theorem-flag ledger"
+  },
+  "gatekeeper_checks": {
+    "reconciliation_map_exported": true,
+    "no_toe_closure_claimed": true,
+    "full_d3_covariance_transport_proven": true,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

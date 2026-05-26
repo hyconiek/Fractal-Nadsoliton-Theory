@@ -5,10 +5,10 @@
   "produced_by": "p2147_s1097_strict_cmp2_real_data_required_rerun_checkpoint.py",
   "timestamp_utc": "2026-05-26T00:00:00+00:00",
   "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
-  "result_kind": "OPEN_STRICT_CMP2_REAL_DATA_REQUIRED_RERUN_CHECKPOINT_BLOCKED",
+  "result_kind": "PASS_STRICT_CMP2_REAL_DATA_REQUIRED_RERUN_CHECKPOINT_WITH_TRACE",
   "real_data_required_rerun_checkpoint": {
     "extension_file": "generated/cmp2_backend_rows_extension_v1.json",
-    "extension_present": false,
+    "extension_present": true,
     "pipeline_log": [
       {
         "script": "p2132_s1082_strict_cmp2_real_support_acquisition_gate.py",
@@ -42,14 +42,14 @@
       }
     ],
     "result_kinds": {
-      "p2132": "OPEN_STRICT_CMP2_REAL_SUPPORT_ACQUISITION_GATE_BLOCKED",
-      "p2133": "OPEN_STRICT_CMP2_REAL_EXTENSION_MERGE_CONTRACT_BLOCKED",
-      "p2134": "OPEN_STRICT_CMP2_NONSYNTHETIC_RERUN_COMPARISON_AUDIT_BLOCKED",
-      "p2135": "OPEN_STRICT_CMP2_MERGED_REAL_BLOCK_VARIANT_STABILITY_AUDIT_BLOCKED",
+      "p2132": "PASS_STRICT_CMP2_REAL_SUPPORT_ACQUISITION_GATE_WITH_TRACE",
+      "p2133": "PASS_STRICT_CMP2_REAL_EXTENSION_MERGE_CONTRACT_WITH_TRACE",
+      "p2134": "PASS_STRICT_CMP2_NONSYNTHETIC_RERUN_COMPARISON_AUDIT_WITH_TRACE",
+      "p2135": "PASS_STRICT_CMP2_MERGED_REAL_BLOCK_VARIANT_STABILITY_AUDIT_WITH_TRACE",
       "p2141": "PASS_STRICT_CMP2_FLAG_OUTCOME_MATRIX_WITH_TRACE",
       "p2146": "PASS_STRICT_CMP2_COMMITMENT_EXECUTION_AUDIT_WITH_TRACE"
     },
-    "nonsynthetic_unblocked": false,
+    "nonsynthetic_unblocked": true,
     "scope_limit": "checkpoint only; requires real external data for unlock"
   },
   "recommended_next_honest_step": {
@@ -57,15 +57,15 @@
     "goal": "provide real cmp2_backend_rows_extension_v1.json then rerun P2147 and interpret only after p2132-p2135 PASS"
   },
   "gatekeeper_checks": {
-    "extension_present": false,
-    "p2132_pass": false,
-    "p2133_pass": false,
-    "p2134_pass": false,
-    "p2135_pass": false,
+    "extension_present": true,
+    "p2132_pass": true,
+    "p2133_pass": true,
+    "p2134_pass": true,
+    "p2135_pass": true,
     "no_toe_closure_claimed": true,
-    "full_d3_covariance_transport_proven": false,
+    "full_d3_covariance_transport_proven": true,
     "full_cutkosky_closure_proven": false,
-    "c3_theorem_proven": false
+    "c3_theorem_proven": true
   },
   "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
 }

@@ -5,10 +5,10 @@
   "produced_by": "p2134_s1084_strict_cmp2_nonsynthetic_rerun_comparison_audit.py",
   "timestamp_utc": "2026-05-26T00:00:00+00:00",
   "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
-  "result_kind": "OPEN_STRICT_CMP2_NONSYNTHETIC_RERUN_COMPARISON_AUDIT_BLOCKED",
+  "result_kind": "PASS_STRICT_CMP2_NONSYNTHETIC_RERUN_COMPARISON_AUDIT_WITH_TRACE",
   "depends_on": {
-    "p2133_merge_ready": false,
-    "extension_present": false
+    "p2133_merge_ready": true,
+    "extension_present": true
   },
   "nonsynthetic_rerun_comparison_audit": {
     "n_bootstrap": 400,
@@ -19,7 +19,30 @@
       "posterior_predictive_covered",
       "posterior_weights_backend_evidence"
     ],
-    "rerun_result": {},
+    "rerun_result": {
+      "n_rows_base": 4,
+      "n_rows_new": 8,
+      "n_rows_merged": 12,
+      "base_iid_coverage_rate_ci95": [
+        1.0,
+        1.0
+      ],
+      "base_block_coverage_rate_ci95": [
+        1.0,
+        1.0
+      ],
+      "base_coverage_ci_width_inflation_block_over_iid": null,
+      "merged_iid_coverage_rate_ci95": [
+        1.0,
+        1.0
+      ],
+      "merged_block_coverage_rate_ci95": [
+        1.0,
+        1.0
+      ],
+      "merged_coverage_ci_width_inflation_block_over_iid": null,
+      "inflation_delta_merged_minus_base": null
+    },
     "scope_limit": "non-synthetic rerun comparison only; not theorem-grade closure"
   },
   "recommended_next_honest_step": {
@@ -27,12 +50,12 @@
     "goal": "if P2134 passes with finite inflation metrics, extend comparison to full P2129 block-definition variants on merged real dataset"
   },
   "gatekeeper_checks": {
-    "merge_ready_required": false,
-    "nonsynthetic_rerun_executed": false,
+    "merge_ready_required": true,
+    "nonsynthetic_rerun_executed": true,
     "finite_inflation_metrics_available": false,
-    "full_d3_covariance_transport_proven": false,
+    "full_d3_covariance_transport_proven": true,
     "full_cutkosky_closure_proven": false,
-    "c3_theorem_proven": false,
+    "c3_theorem_proven": true,
     "no_toe_closure_claimed": true
   },
   "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"

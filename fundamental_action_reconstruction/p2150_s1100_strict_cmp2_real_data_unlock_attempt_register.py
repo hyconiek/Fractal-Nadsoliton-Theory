@@ -38,7 +38,7 @@ def main() -> None:
             "source_checklist": str(IN_2149.relative_to(ROOT)),
             "source_checkpoint": str(IN_2147.relative_to(ROOT)),
             "unresolved_stages": unresolved,
-            "attempt_note": "external real data delivery still required" if unresolved else "non-synthetic path unlocked",
+            "attempt_note": "real data delivery still required" if unresolved else "non-synthetic path unlocked",
             "scope_limit": "attempt register only; not theorem-grade closure",
         },
         "recommended_next_honest_step": {

@@ -1,0 +1,68 @@
+{
+  "schema_version": "p2170_s1120_v1",
+  "packet_id": "P2170",
+  "stage_id": "S1120",
+  "produced_by": "p2170_s1120_strict_qw2191_obligation_validator_o2_o5_update.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_QW2191_OBLIGATION_VALIDATOR_O2_O5_UPDATE_WITH_TRACE",
+  "strict_qw2191_obligation_validator_o2_o5_update": {
+    "source_validator": "generated/p2168_s1118_strict_qw2191_theorem_obligations_executable_validator.json",
+    "source_witness": "generated/p2169_s1119_strict_qw2191_o2_o5_dedicated_witness_packet.json",
+    "updated_obligation_evaluations": [
+      {
+        "id": "O1_selector_source_identifiability",
+        "status": "PARTIAL_PASS_WITH_TRACE",
+        "pass": false,
+        "required_for_legal_progress": true
+      },
+      {
+        "id": "O2_qw2191_uniqueness_obstruction_interface",
+        "status": "PASS_WITH_TRACE",
+        "pass": true,
+        "required_for_legal_progress": true
+      },
+      {
+        "id": "O3_noncyclic_anchor_certificate",
+        "status": "PARTIAL_PASS_WITH_TRACE",
+        "pass": false,
+        "required_for_legal_progress": true
+      },
+      {
+        "id": "O4_no_legacy_role_transfer_certificate",
+        "status": "PARTIAL_PASS_WITH_TRACE",
+        "pass": false,
+        "required_for_legal_progress": true
+      },
+      {
+        "id": "O5_transition_rule_to_next_branch_step",
+        "status": "PASS_WITH_TRACE",
+        "pass": true,
+        "required_for_legal_progress": true
+      }
+    ],
+    "required_summary": {
+      "n_required": 5,
+      "n_pass": 2,
+      "n_open": 3,
+      "all_required_pass": false
+    },
+    "scope_limit": "O2/O5 update only; remaining obligations may stay OPEN"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2171_candidate",
+    "goal": "export dedicated witnesses for O1/O3/O4 and iterate validator until all required obligations pass"
+  },
+  "gatekeeper_checks": {
+    "validator_update_exported": true,
+    "o2_promoted": true,
+    "o5_promoted": true,
+    "all_required_pass": false,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_d3_covariance_transport_proven": true,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}
