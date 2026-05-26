@@ -1,0 +1,40 @@
+{
+  "schema_version": "p2137_s1087_v1",
+  "packet_id": "P2137",
+  "stage_id": "S1087",
+  "produced_by": "p2137_s1087_strict_cmp2_real_extension_schema_delivery_packet.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "OPEN_STRICT_CMP2_REAL_EXTENSION_SCHEMA_DELIVERY_PACKET_BLOCKED",
+  "real_extension_schema_delivery": {
+    "target_file": "generated/cmp2_backend_rows_extension_v1.json",
+    "template_file": "generated/cmp2_backend_rows_extension_v1.template.json",
+    "required_keys": [
+      "cmp_bin_index",
+      "backend_s",
+      "posterior_weights_backend_evidence",
+      "posterior_predictive_covered"
+    ],
+    "min_rows_required": 8,
+    "rows_detected": 0,
+    "rows_valid": 0,
+    "validation_errors": [],
+    "ready_for_p2132_p2133": false,
+    "scope_limit": "schema-delivery/readiness only; not theorem-grade closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2138_candidate",
+    "goal": "after real rows are delivered and P2132/P2133 unlock, rerun P2134/P2135 and compare non-synthetic CI inflation stability"
+  },
+  "gatekeeper_checks": {
+    "template_exported": true,
+    "rows_detected": false,
+    "rows_schema_valid": true,
+    "rows_count_sufficient": false,
+    "full_d3_covariance_transport_proven": false,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": false,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

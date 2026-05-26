@@ -1,0 +1,76 @@
+{
+  "schema_version": "p2130_s1080_v1",
+  "packet_id": "P2130",
+  "stage_id": "S1080",
+  "produced_by": "p2130_s1080_strict_cmp2_sample_support_expansion_planner.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_CMP2_SAMPLE_SUPPORT_EXPANSION_PLANNER_WITH_TRACE",
+  "depends_on": {
+    "p2126_present": true,
+    "p2129_present": true,
+    "preconditions_ready": true
+  },
+  "sample_support_expansion_planner": {
+    "n_rows_current": 4,
+    "coverage_successes_current": 4,
+    "coverage_rate_current": 1.0,
+    "null_inflation_variants_from_p2129": [
+      "backend_s_unique",
+      "backend_s_quantile_q2",
+      "backend_s_quantile_q4",
+      "bin_adjacency_k2"
+    ],
+    "null_inflation_root_cause": "degenerate/near-degenerate CI widths at tiny sample support",
+    "projection_model": "beta-bernoulli + wilson-width planner",
+    "n_sim": 2000,
+    "rng_seed": 2130,
+    "projected_ci95_widths_by_support_multiplier": {
+      "x2": {
+        "projected_n_rows": 8,
+        "projected_wilson_ci95_width_median": 0.4519555004643678,
+        "projected_wilson_ci95_width_q95": 0.5633715057969154,
+        "degenerate_zero_width_probability": 0.0
+      },
+      "x3": {
+        "projected_n_rows": 12,
+        "projected_wilson_ci95_width_median": 0.37655981973590513,
+        "projected_wilson_ci95_width_q95": 0.48642595122910326,
+        "degenerate_zero_width_probability": 0.0
+      },
+      "x5": {
+        "projected_n_rows": 20,
+        "projected_wilson_ci95_width_median": 0.2950080439281865,
+        "projected_wilson_ci95_width_q95": 0.39597436213418713,
+        "degenerate_zero_width_probability": 0.0
+      },
+      "x8": {
+        "projected_n_rows": 32,
+        "projected_wilson_ci95_width_median": 0.23392676429651196,
+        "projected_wilson_ci95_width_q95": 0.32266710483158,
+        "degenerate_zero_width_probability": 0.0
+      },
+      "x12": {
+        "projected_n_rows": 48,
+        "projected_wilson_ci95_width_median": 0.19102089980946013,
+        "projected_wilson_ci95_width_q95": 0.26814637063330576,
+        "degenerate_zero_width_probability": 0.0
+      }
+    },
+    "scope_limit": "operational planning for support expansion only; not theorem-grade closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2131_candidate",
+    "goal": "materially increase CMP2 bin/backend support and rerun P2127-P2129 to obtain non-degenerate finite inflation factors"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "root_cause_diagnosed": true,
+    "support_expansion_plan_exported": true,
+    "full_d3_covariance_transport_proven": false,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": false,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

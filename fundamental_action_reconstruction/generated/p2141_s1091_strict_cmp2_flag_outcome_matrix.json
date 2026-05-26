@@ -1,0 +1,125 @@
+{
+  "schema_version": "p2141_s1091_v1",
+  "packet_id": "P2141",
+  "stage_id": "S1091",
+  "produced_by": "p2141_s1091_strict_cmp2_flag_outcome_matrix.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_CMP2_FLAG_OUTCOME_MATRIX_WITH_TRACE",
+  "flag_outcome_matrix": {
+    "tracked_stages": [
+      "p2132_s1082_strict_cmp2_real_support_acquisition_gate",
+      "p2133_s1083_strict_cmp2_real_extension_merge_contract",
+      "p2134_s1084_strict_cmp2_nonsynthetic_rerun_comparison_audit",
+      "p2135_s1085_strict_cmp2_merged_real_block_variant_stability_audit",
+      "p2138_s1088_strict_cmp2_nonsynthetic_rerun_orchestrator",
+      "p2139_s1089_strict_cmp2_nonsynthetic_readiness_freeze_report",
+      "p2140_s1090_strict_cmp2_blocked_path_resolution_router"
+    ],
+    "matrix": {
+      "p2132_s1082_strict_cmp2_real_support_acquisition_gate": {
+        "result_kind": "OPEN_STRICT_CMP2_REAL_SUPPORT_ACQUISITION_GATE_BLOCKED",
+        "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+        "gatekeeper_checks": {
+          "base_rows_present": true,
+          "new_rows_detected": false,
+          "new_rows_schema_valid": true,
+          "acquisition_ready_for_replay": false,
+          "full_d3_covariance_transport_proven": false,
+          "full_cutkosky_closure_proven": false,
+          "c3_theorem_proven": false,
+          "no_toe_closure_claimed": true
+        }
+      },
+      "p2133_s1083_strict_cmp2_real_extension_merge_contract": {
+        "result_kind": "OPEN_STRICT_CMP2_REAL_EXTENSION_MERGE_CONTRACT_BLOCKED",
+        "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+        "gatekeeper_checks": {
+          "merge_ready": false,
+          "no_toe_closure_claimed": true,
+          "full_d3_covariance_transport_proven": false,
+          "full_cutkosky_closure_proven": false,
+          "c3_theorem_proven": false
+        }
+      },
+      "p2134_s1084_strict_cmp2_nonsynthetic_rerun_comparison_audit": {
+        "result_kind": "OPEN_STRICT_CMP2_NONSYNTHETIC_RERUN_COMPARISON_AUDIT_BLOCKED",
+        "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+        "gatekeeper_checks": {
+          "merge_ready_required": false,
+          "nonsynthetic_rerun_executed": false,
+          "finite_inflation_metrics_available": false,
+          "full_d3_covariance_transport_proven": false,
+          "full_cutkosky_closure_proven": false,
+          "c3_theorem_proven": false,
+          "no_toe_closure_claimed": true
+        }
+      },
+      "p2135_s1085_strict_cmp2_merged_real_block_variant_stability_audit": {
+        "result_kind": "OPEN_STRICT_CMP2_MERGED_REAL_BLOCK_VARIANT_STABILITY_AUDIT_BLOCKED",
+        "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+        "gatekeeper_checks": {
+          "preconditions_ready": false,
+          "variant_audit_executed": false,
+          "finite_spread_available": false,
+          "full_d3_covariance_transport_proven": false,
+          "full_cutkosky_closure_proven": false,
+          "c3_theorem_proven": false,
+          "no_toe_closure_claimed": true
+        }
+      },
+      "p2138_s1088_strict_cmp2_nonsynthetic_rerun_orchestrator": {
+        "result_kind": "OPEN_STRICT_CMP2_NONSYNTHETIC_RERUN_ORCHESTRATOR_BLOCKED",
+        "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+        "gatekeeper_checks": {
+          "extension_rows_present": false,
+          "p2132_pass": false,
+          "p2133_pass": false,
+          "p2134_pass": false,
+          "p2135_pass": false,
+          "full_d3_covariance_transport_proven": false,
+          "full_cutkosky_closure_proven": false,
+          "c3_theorem_proven": false,
+          "no_toe_closure_claimed": true
+        }
+      },
+      "p2139_s1089_strict_cmp2_nonsynthetic_readiness_freeze_report": {
+        "result_kind": "OPEN_STRICT_CMP2_NONSYNTHETIC_READINESS_FREEZE_REPORT_BLOCKED",
+        "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+        "gatekeeper_checks": {
+          "all_nonsynthetic_gates_passed": false,
+          "full_d3_covariance_transport_proven": false,
+          "full_cutkosky_closure_proven": false,
+          "c3_theorem_proven": false,
+          "no_toe_closure_claimed": true
+        }
+      },
+      "p2140_s1090_strict_cmp2_blocked_path_resolution_router": {
+        "result_kind": "PASS_STRICT_CMP2_BLOCKED_PATH_RESOLUTION_ROUTER_WITH_TRACE",
+        "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+        "gatekeeper_checks": {
+          "router_exported": true,
+          "no_toe_closure_claimed": true,
+          "full_d3_covariance_transport_proven": false,
+          "full_cutkosky_closure_proven": false,
+          "c3_theorem_proven": false
+        }
+      }
+    },
+    "pass_count": 1,
+    "open_count": 6,
+    "scope_limit": "flag/readout matrix only; not theorem-grade closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2142_candidate",
+    "goal": "resolve OPEN_* flags in P2132/P2133 first by delivering real extension rows, then rerun P2138-P2141"
+  },
+  "gatekeeper_checks": {
+    "matrix_exported": true,
+    "no_toe_closure_claimed": true,
+    "full_d3_covariance_transport_proven": false,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

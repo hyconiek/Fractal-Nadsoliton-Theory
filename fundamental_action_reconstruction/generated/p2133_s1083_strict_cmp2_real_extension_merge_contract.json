@@ -1,0 +1,35 @@
+{
+  "schema_version": "p2133_s1083_v1",
+  "packet_id": "P2133",
+  "stage_id": "S1083",
+  "produced_by": "p2133_s1083_strict_cmp2_real_extension_merge_contract.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "OPEN_STRICT_CMP2_REAL_EXTENSION_MERGE_CONTRACT_BLOCKED",
+  "real_extension_merge_contract": {
+    "base_rows": 4,
+    "extension_rows": 0,
+    "valid_extension_rows": 0,
+    "merged_rows": 4,
+    "required_row_keys": [
+      "backend_s",
+      "cmp_bin_index",
+      "posterior_predictive_covered",
+      "posterior_weights_backend_evidence"
+    ],
+    "merge_ready": false,
+    "scope_limit": "merge-contract/readiness only; no theorem-grade closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2134_candidate",
+    "goal": "if merge-ready, execute non-synthetic rerun of P2127/P2128/P2129/P2131 on merged dataset"
+  },
+  "gatekeeper_checks": {
+    "merge_ready": false,
+    "no_toe_closure_claimed": true,
+    "full_d3_covariance_transport_proven": false,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

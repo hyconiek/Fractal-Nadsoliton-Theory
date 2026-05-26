@@ -1,0 +1,71 @@
+{
+  "schema_version": "p2147_s1097_v1",
+  "packet_id": "P2147",
+  "stage_id": "S1097",
+  "produced_by": "p2147_s1097_strict_cmp2_real_data_required_rerun_checkpoint.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "OPEN_STRICT_CMP2_REAL_DATA_REQUIRED_RERUN_CHECKPOINT_BLOCKED",
+  "real_data_required_rerun_checkpoint": {
+    "extension_file": "generated/cmp2_backend_rows_extension_v1.json",
+    "extension_present": false,
+    "pipeline_log": [
+      {
+        "script": "p2132_s1082_strict_cmp2_real_support_acquisition_gate.py",
+        "ok": true,
+        "message": "OK"
+      },
+      {
+        "script": "p2133_s1083_strict_cmp2_real_extension_merge_contract.py",
+        "ok": true,
+        "message": "OK"
+      },
+      {
+        "script": "p2134_s1084_strict_cmp2_nonsynthetic_rerun_comparison_audit.py",
+        "ok": true,
+        "message": "OK"
+      },
+      {
+        "script": "p2135_s1085_strict_cmp2_merged_real_block_variant_stability_audit.py",
+        "ok": true,
+        "message": "OK"
+      },
+      {
+        "script": "p2141_s1091_strict_cmp2_flag_outcome_matrix.py",
+        "ok": true,
+        "message": "OK"
+      },
+      {
+        "script": "p2146_s1096_strict_cmp2_commitment_execution_audit.py",
+        "ok": true,
+        "message": "OK"
+      }
+    ],
+    "result_kinds": {
+      "p2132": "OPEN_STRICT_CMP2_REAL_SUPPORT_ACQUISITION_GATE_BLOCKED",
+      "p2133": "OPEN_STRICT_CMP2_REAL_EXTENSION_MERGE_CONTRACT_BLOCKED",
+      "p2134": "OPEN_STRICT_CMP2_NONSYNTHETIC_RERUN_COMPARISON_AUDIT_BLOCKED",
+      "p2135": "OPEN_STRICT_CMP2_MERGED_REAL_BLOCK_VARIANT_STABILITY_AUDIT_BLOCKED",
+      "p2141": "PASS_STRICT_CMP2_FLAG_OUTCOME_MATRIX_WITH_TRACE",
+      "p2146": "PASS_STRICT_CMP2_COMMITMENT_EXECUTION_AUDIT_WITH_TRACE"
+    },
+    "nonsynthetic_unblocked": false,
+    "scope_limit": "checkpoint only; requires real external data for unlock"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2148_candidate",
+    "goal": "provide real cmp2_backend_rows_extension_v1.json then rerun P2147 and interpret only after p2132-p2135 PASS"
+  },
+  "gatekeeper_checks": {
+    "extension_present": false,
+    "p2132_pass": false,
+    "p2133_pass": false,
+    "p2134_pass": false,
+    "p2135_pass": false,
+    "no_toe_closure_claimed": true,
+    "full_d3_covariance_transport_proven": false,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

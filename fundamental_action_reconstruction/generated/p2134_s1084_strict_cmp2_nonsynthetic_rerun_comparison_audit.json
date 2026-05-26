@@ -1,0 +1,39 @@
+{
+  "schema_version": "p2134_s1084_v1",
+  "packet_id": "P2134",
+  "stage_id": "S1084",
+  "produced_by": "p2134_s1084_strict_cmp2_nonsynthetic_rerun_comparison_audit.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "OPEN_STRICT_CMP2_NONSYNTHETIC_RERUN_COMPARISON_AUDIT_BLOCKED",
+  "depends_on": {
+    "p2133_merge_ready": false,
+    "extension_present": false
+  },
+  "nonsynthetic_rerun_comparison_audit": {
+    "n_bootstrap": 400,
+    "rng_seed": 2134,
+    "required_row_keys": [
+      "backend_s",
+      "cmp_bin_index",
+      "posterior_predictive_covered",
+      "posterior_weights_backend_evidence"
+    ],
+    "rerun_result": {},
+    "scope_limit": "non-synthetic rerun comparison only; not theorem-grade closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2135_candidate",
+    "goal": "if P2134 passes with finite inflation metrics, extend comparison to full P2129 block-definition variants on merged real dataset"
+  },
+  "gatekeeper_checks": {
+    "merge_ready_required": false,
+    "nonsynthetic_rerun_executed": false,
+    "finite_inflation_metrics_available": false,
+    "full_d3_covariance_transport_proven": false,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": false,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

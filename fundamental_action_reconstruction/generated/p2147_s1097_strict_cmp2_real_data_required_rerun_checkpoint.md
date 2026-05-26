@@ -1,0 +1,4 @@
+# P2147 S1097
+
+- Result kind: `OPEN_STRICT_CMP2_REAL_DATA_REQUIRED_RERUN_CHECKPOINT_BLOCKED`
+- Extension present: `False`

@@ -1,0 +1,111 @@
+{
+  "schema_version": "p2128_s1078_v1",
+  "packet_id": "P2128",
+  "stage_id": "S1078",
+  "produced_by": "p2128_s1078_strict_cmp2_block_bootstrap_dependence_aware_uncertainty_inflation.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_CMP2_BLOCK_BOOTSTRAP_DEPENDENCE_AWARE_UNCERTAINTY_INFLATION_WITH_TRACE",
+  "depends_on": {
+    "p2126_present": true,
+    "p2127_present": true,
+    "preconditions_ready": true
+  },
+  "dependence_aware_uncertainty_inflation_object": {
+    "n_rows": 4,
+    "n_clusters": 4,
+    "cluster_key": "backend_s",
+    "n_bootstrap": 400,
+    "rng_seed": 2128,
+    "iid_coverage_rate_ci95": [
+      1.0,
+      1.0
+    ],
+    "block_coverage_rate_ci95": [
+      1.0,
+      1.0
+    ],
+    "coverage_ci_width_inflation_block_over_iid": null,
+    "iid_posterior_top_model_rank_stability": {
+      "M1_nn": {
+        "mean_frequency": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "M2_monotone": {
+        "mean_frequency": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "M3_nn_tiebreak": {
+        "mean_frequency": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "M4_monotone_penalized": {
+        "mean_frequency": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "block_posterior_top_model_rank_stability": {
+      "M1_nn": {
+        "mean_frequency": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "M2_monotone": {
+        "mean_frequency": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "M3_nn_tiebreak": {
+        "mean_frequency": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "M4_monotone_penalized": {
+        "mean_frequency": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "rank_ci_width_inflation_block_over_iid": {
+      "M1_nn": null,
+      "M2_monotone": null,
+      "M3_nn_tiebreak": null,
+      "M4_monotone_penalized": null
+    },
+    "scope_limit": "dependence-aware uncertainty quantification only; not theorem-grade closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2129_candidate",
+    "goal": "run sensitivity sweep over block definitions and report robustness of uncertainty inflation factors"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "block_bootstrap_executed": true,
+    "inflation_object_exported": true,
+    "full_d3_covariance_transport_proven": false,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": false,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}
