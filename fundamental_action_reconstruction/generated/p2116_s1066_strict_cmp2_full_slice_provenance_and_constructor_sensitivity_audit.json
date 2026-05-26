@@ -1,0 +1,178 @@
+{
+  "schema_version": "p2116_s1066_v1",
+  "packet_id": "P2116",
+  "stage_id": "S1066",
+  "produced_by": "p2116_s1066_strict_cmp2_full_slice_provenance_and_constructor_sensitivity_audit.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_CMP2_FULL_SLICE_PROVENANCE_AND_CONSTRUCTOR_SENSITIVITY_AUDIT_WITH_TRACE",
+  "depends_on": {
+    "p2115_present": true,
+    "p2110_present": true,
+    "p2017_present": true,
+    "preconditions_ready": true
+  },
+  "cmp2_full_slice_provenance_and_constructor_sensitivity": {
+    "rows": [
+      {
+        "bin_index": 0,
+        "s": "1/2",
+        "provenance_map": {
+          "backend_tensor_candidate_row_index": 0,
+          "backend_tensor_candidate_s": "1/2",
+          "channel_tuple": [
+            "gg",
+            "gh",
+            "hh",
+            "gx"
+          ],
+          "tensor_source_path": "p2017::tensor_candidate_table[0].strict_quadrature_tensor_candidates"
+        },
+        "constructor_comparison": {
+          "unnormalized": {
+            "sigma_nominal": 0.054214081913431474,
+            "interval_95_envelope": [
+              -0.10639063547067139,
+              0.10641811586045612
+            ]
+          },
+          "normalized": {
+            "sigma_nominal": 0.9999999999999992,
+            "interval_95_envelope": [
+              -1.9796832168887784,
+              1.979710697278563
+            ]
+          },
+          "relative_envelope_width_delta": 17.60540926724662
+        },
+        "constructor_stability_pass": false
+      },
+      {
+        "bin_index": 1,
+        "s": "1",
+        "provenance_map": {
+          "backend_tensor_candidate_row_index": 1,
+          "backend_tensor_candidate_s": "1",
+          "channel_tuple": [
+            "gg",
+            "gh",
+            "hh",
+            "gx"
+          ],
+          "tensor_source_path": "p2017::tensor_candidate_table[1].strict_quadrature_tensor_candidates"
+        },
+        "constructor_comparison": {
+          "unnormalized": {
+            "sigma_nominal": 0.02265152778317453,
+            "interval_95_envelope": [
+              -0.04440866823208167,
+              0.044518589791220586
+            ]
+          },
+          "normalized": {
+            "sigma_nominal": 0.9999999999999996,
+            "interval_95_envelope": [
+              -1.9796416100133623,
+              1.9797515315725012
+            ]
+          },
+          "relative_envelope_width_delta": 43.523953955134374
+        },
+        "constructor_stability_pass": false
+      },
+      {
+        "bin_index": 2,
+        "s": "2",
+        "provenance_map": {
+          "backend_tensor_candidate_row_index": 2,
+          "backend_tensor_candidate_s": "2",
+          "channel_tuple": [
+            "gg",
+            "gh",
+            "hh",
+            "gx"
+          ],
+          "tensor_source_path": "p2017::tensor_candidate_table[2].strict_quadrature_tensor_candidates"
+        },
+        "constructor_comparison": {
+          "unnormalized": {
+            "sigma_nominal": 0.007269518685801213,
+            "interval_95_envelope": [
+              -0.01405297698249097,
+              0.014492663219046601
+            ]
+          },
+          "normalized": {
+            "sigma_nominal": 1.0000000000000004,
+            "interval_95_envelope": [
+              -1.9794759786307443,
+              1.9799156648673
+            ]
+          },
+          "relative_envelope_width_delta": 137.703900684798
+        },
+        "constructor_stability_pass": false
+      },
+      {
+        "bin_index": 3,
+        "s": "4",
+        "provenance_map": {
+          "backend_tensor_candidate_row_index": 3,
+          "backend_tensor_candidate_s": "4",
+          "channel_tuple": [
+            "gg",
+            "gh",
+            "hh",
+            "gx"
+          ],
+          "tensor_source_path": "p2017::tensor_candidate_table[3].strict_quadrature_tensor_candidates"
+        },
+        "constructor_comparison": {
+          "unnormalized": {
+            "sigma_nominal": 0.0017553255454832877,
+            "interval_95_envelope": [
+              -0.002568211764029653,
+              0.004326956710252149
+            ]
+          },
+          "normalized": {
+            "sigma_nominal": 1.000000000000001,
+            "interval_95_envelope": [
+              -1.978816448520421,
+              1.9805751934666436
+            ]
+          },
+          "relative_envelope_width_delta": 573.2269614955961
+        },
+        "constructor_stability_pass": false
+      }
+    ],
+    "constructor_stability_pass_rate": 0.0,
+    "stability_threshold_relative_width_delta": 0.25,
+    "scope_limit": "operational constructor-sensitivity audit only; not theorem-grade D3/C3 closure"
+  },
+  "backend_import_blocker_update": {
+    "D3_uncertainty_propagation_from_dressed_backend": "COMPUTED_FULL_SLICE_PROVENANCE_AND_CONSTRUCTOR_SENSITIVITY_PARTIAL"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2117_candidate",
+    "goal": "add explicit bin-alignment theorem object linking p2017 s-grid to CMP s-grid and rerun constructor sensitivity with alignment uncertainty"
+  },
+  "c3_gate_update": {
+    "C3_cmp2_full_binwise_channel_covariance_slices": "COMPUTED",
+    "C3_cmp2_full_slice_provenance_map": "COMPUTED",
+    "C3_cmp2_constructor_sensitivity_audit": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "provenance_map_exported_all_rows": true,
+    "constructor_comparison_exported": true,
+    "full_d3_covariance_transport_proven": false,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": false,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

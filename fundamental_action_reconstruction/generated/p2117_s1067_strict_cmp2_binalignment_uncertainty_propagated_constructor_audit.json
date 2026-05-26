@@ -1,0 +1,148 @@
+{
+  "schema_version": "p2117_s1067_v1",
+  "packet_id": "P2117",
+  "stage_id": "S1067",
+  "produced_by": "p2117_s1067_strict_cmp2_binalignment_uncertainty_propagated_constructor_audit.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_CMP2_BINALIGNMENT_UNCERTAINTY_PROPAGATED_CONSTRUCTOR_AUDIT_WITH_TRACE",
+  "depends_on": {
+    "p2116_present": true,
+    "p2115_present": true,
+    "p2017_present": true,
+    "preconditions_ready": true
+  },
+  "bin_alignment_object": {
+    "source_cmp": "p2115::cmp2_full_binwise_channel_covariance.rows",
+    "source_backend": "p2017::tensor_candidate_table",
+    "rows": [
+      {
+        "cmp_bin_index": 0,
+        "cmp_s": 0.5,
+        "backend_row_index": 0,
+        "backend_s_raw": "1/2",
+        "backend_s_numeric": 0.5,
+        "abs_delta_s": 0.0,
+        "sigma_alignment": 1e-06
+      },
+      {
+        "cmp_bin_index": 1,
+        "cmp_s": 1.0,
+        "backend_row_index": 1,
+        "backend_s_raw": "1",
+        "backend_s_numeric": 1.0,
+        "abs_delta_s": 0.0,
+        "sigma_alignment": 1e-06
+      },
+      {
+        "cmp_bin_index": 2,
+        "cmp_s": 2.0,
+        "backend_row_index": 2,
+        "backend_s_raw": "2",
+        "backend_s_numeric": 2.0,
+        "abs_delta_s": 0.0,
+        "sigma_alignment": 1e-06
+      },
+      {
+        "cmp_bin_index": 3,
+        "cmp_s": 4.0,
+        "backend_row_index": 3,
+        "backend_s_raw": "4",
+        "backend_s_numeric": 4.0,
+        "abs_delta_s": 0.0,
+        "sigma_alignment": 1e-06
+      }
+    ],
+    "scope_limit": "operational bin alignment map with uncertainty; not theorem-grade alignment proof"
+  },
+  "constructor_audit_with_alignment_uncertainty": {
+    "rows": [
+      {
+        "bin_index": 0,
+        "alignment_object_ref": "bin_alignment_rows[0]",
+        "sigma_alignment": 1e-06,
+        "unnormalized_interval_95_with_alignment": [
+          -0.10639259547067138,
+          0.10642007586045611
+        ],
+        "normalized_interval_95_with_alignment": [
+          -1.9796851768887784,
+          1.979712657278563
+        ],
+        "relative_envelope_width_delta_with_alignment": 17.605084976386046,
+        "constructor_stability_with_alignment_pass": false
+      },
+      {
+        "bin_index": 1,
+        "alignment_object_ref": "bin_alignment_rows[1]",
+        "sigma_alignment": 1e-06,
+        "unnormalized_interval_95_with_alignment": [
+          -0.044410628232081674,
+          0.04452054979122059
+        ],
+        "normalized_interval_95_with_alignment": [
+          -1.9796435700133623,
+          1.9797534915725012
+        ],
+        "relative_envelope_width_delta_with_alignment": 43.522035461493594,
+        "constructor_stability_with_alignment_pass": false
+      },
+      {
+        "bin_index": 2,
+        "alignment_object_ref": "bin_alignment_rows[2]",
+        "sigma_alignment": 1e-06,
+        "unnormalized_interval_95_with_alignment": [
+          -0.014054936982490971,
+          0.014494623219046602
+        ],
+        "normalized_interval_95_with_alignment": [
+          -1.9794779386307444,
+          1.9799176248673
+        ],
+        "relative_envelope_width_delta_with_alignment": 137.68499323799762,
+        "constructor_stability_with_alignment_pass": false
+      },
+      {
+        "bin_index": 3,
+        "alignment_object_ref": "bin_alignment_rows[3]",
+        "sigma_alignment": 1e-06,
+        "unnormalized_interval_95_with_alignment": [
+          -0.002570171764029653,
+          0.004328916710252148
+        ],
+        "normalized_interval_95_with_alignment": [
+          -1.978818408520421,
+          1.9805771534666436
+        ],
+        "relative_envelope_width_delta_with_alignment": 572.9012590933964,
+        "constructor_stability_with_alignment_pass": false
+      }
+    ],
+    "constructor_stability_pass_rate": 0.0,
+    "stability_threshold_relative_width_delta": 0.25
+  },
+  "backend_import_blocker_update": {
+    "D3_uncertainty_propagation_from_dressed_backend": "COMPUTED_BINALIGNMENT_UNCERTAINTY_PROPAGATED_CONSTRUCTOR_AUDIT_PARTIAL"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2118_candidate",
+    "goal": "replace heuristic sigma_alignment by backend-exported alignment covariance and rerun propagated constructor audit"
+  },
+  "c3_gate_update": {
+    "C3_cmp2_full_slice_provenance_map": "COMPUTED",
+    "C3_cmp2_binalignment_object": "COMPUTED",
+    "C3_cmp2_constructor_sensitivity_with_alignment_uncertainty": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "binalignment_rows_exported": true,
+    "alignment_uncertainty_propagated": true,
+    "full_d3_covariance_transport_proven": false,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": false,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

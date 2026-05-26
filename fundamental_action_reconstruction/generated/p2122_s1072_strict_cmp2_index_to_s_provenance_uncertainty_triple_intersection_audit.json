@@ -1,0 +1,119 @@
+{
+  "schema_version": "p2122_s1072_v1",
+  "packet_id": "P2122",
+  "stage_id": "S1072",
+  "produced_by": "p2122_s1072_strict_cmp2_index_to_s_provenance_uncertainty_triple_intersection_audit.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_CMP2_INDEX_TO_S_PROVENANCE_UNCERTAINTY_TRIPLE_INTERSECTION_AUDIT_WITH_TRACE",
+  "depends_on": {
+    "p2121_present": true,
+    "p2115_present": true,
+    "p2017_present": true,
+    "preconditions_ready": true
+  },
+  "index_to_s_provenance_and_mapping_uncertainty": {
+    "cmp_source": "p2115::cmp2_full_binwise_channel_covariance.rows",
+    "backend_source": "p2017::tensor_candidate_table",
+    "rows": [
+      {
+        "cmp_bin_index": 0,
+        "backend_bin_index": 0,
+        "cmp_s": 0.5,
+        "backend_s": 0.5,
+        "abs_delta_s": 0.0,
+        "sigma_index_to_s_mapping": 1e-06,
+        "unnormalized_triple_intersection_with_mapping_uncertainty": [
+          -0.10639455547067513,
+          0.10642203586045985
+        ],
+        "unnormalized_nonempty": true,
+        "normalized_triple_intersection_with_mapping_uncertainty": [
+          -1.9796871368887825,
+          1.9797146172785671
+        ],
+        "normalized_nonempty": true
+      },
+      {
+        "cmp_bin_index": 1,
+        "backend_bin_index": 1,
+        "cmp_s": 1.0,
+        "backend_s": 1.0,
+        "abs_delta_s": 0.0,
+        "sigma_index_to_s_mapping": 1e-06,
+        "unnormalized_triple_intersection_with_mapping_uncertainty": [
+          -0.04441258823208324,
+          0.04452250979122215
+        ],
+        "unnormalized_nonempty": true,
+        "normalized_triple_intersection_with_mapping_uncertainty": [
+          -1.9796455300133637,
+          1.9797554515725027
+        ],
+        "normalized_nonempty": true
+      },
+      {
+        "cmp_bin_index": 2,
+        "backend_bin_index": 2,
+        "cmp_s": 2.0,
+        "backend_s": 2.0,
+        "abs_delta_s": 0.0,
+        "sigma_index_to_s_mapping": 1e-06,
+        "unnormalized_triple_intersection_with_mapping_uncertainty": [
+          -0.014056896982491476,
+          0.014496583219047107
+        ],
+        "unnormalized_nonempty": true,
+        "normalized_triple_intersection_with_mapping_uncertainty": [
+          -1.9794798986307451,
+          1.9799195848673008
+        ],
+        "normalized_nonempty": true
+      },
+      {
+        "cmp_bin_index": 3,
+        "backend_bin_index": 3,
+        "cmp_s": 4.0,
+        "backend_s": 4.0,
+        "abs_delta_s": 0.0,
+        "sigma_index_to_s_mapping": 1e-06,
+        "unnormalized_triple_intersection_with_mapping_uncertainty": [
+          -0.0025721317640298716,
+          0.0043308767102523665
+        ],
+        "unnormalized_nonempty": true,
+        "normalized_triple_intersection_with_mapping_uncertainty": [
+          -1.978820368520421,
+          1.9805791134666437
+        ],
+        "normalized_nonempty": true
+      }
+    ],
+    "triple_intersection_nonempty_pass_rate": 1.0,
+    "scope_limit": "operational provenance+mapping uncertainty propagation only; not theorem-grade closure"
+  },
+  "backend_import_blocker_update": {
+    "D3_uncertainty_propagation_from_dressed_backend": "COMPUTED_INDEX_TO_S_PROVENANCE_AND_MAPPING_UNCERTAINTY_PROPAGATION_PARTIAL"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2123_candidate",
+    "goal": "replace simple index-locked map by nearest-neighbor / monotone matching map and compare propagated envelopes"
+  },
+  "c3_gate_update": {
+    "C3_cmp2_binlocal_eigenspectrum_triple_intersection_audit": "COMPUTED",
+    "C3_cmp2_index_to_s_provenance_object": "COMPUTED",
+    "C3_cmp2_mapping_uncertainty_propagation": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "index_to_s_rows_exported": true,
+    "mapping_uncertainty_propagated": true,
+    "full_d3_covariance_transport_proven": false,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": false,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

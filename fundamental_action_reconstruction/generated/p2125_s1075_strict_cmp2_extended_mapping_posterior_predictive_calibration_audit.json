@@ -1,0 +1,157 @@
+{
+  "schema_version": "p2125_s1075_v1",
+  "packet_id": "P2125",
+  "stage_id": "S1075",
+  "produced_by": "p2125_s1075_strict_cmp2_extended_mapping_posterior_predictive_calibration_audit.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_CMP2_EXTENDED_MAPPING_POSTERIOR_PREDICTIVE_CALIBRATION_AUDIT_WITH_TRACE",
+  "depends_on": {
+    "p2123_present": true,
+    "p2112_present": true,
+    "preconditions_ready": true
+  },
+  "extended_mapping_posterior_predictive_calibration_audit": {
+    "rows": [
+      {
+        "cmp_bin_index": 0,
+        "posterior_weights_extended_family": {
+          "M1_nn": 0.26855960574527105,
+          "M2_monotone": 0.26855960574527105,
+          "M3_nn_tiebreak": 0.2430027802513063,
+          "M4_monotone_penalized": 0.21987800825815168
+        },
+        "unnormalized_posterior_envelope": [
+          -0.10981030945451317,
+          0.1098377898442979
+        ],
+        "normalized_posterior_envelope": [
+          -1.9831028908726207,
+          1.9831303712624053
+        ],
+        "unnormalized_conservative_q95_envelope": [
+          -0.11639651547067512,
+          0.11642399586045984
+        ],
+        "normalized_conservative_q95_envelope": [
+          -1.9896890968887826,
+          1.9897165772785672
+        ],
+        "historical_residual": 1.3740194892363194e-05,
+        "posterior_predictive_covered": true
+      },
+      {
+        "cmp_bin_index": 1,
+        "posterior_weights_extended_family": {
+          "M1_nn": 0.26855960574527105,
+          "M2_monotone": 0.26855960574527105,
+          "M3_nn_tiebreak": 0.2430027802513063,
+          "M4_monotone_penalized": 0.21987800825815168
+        },
+        "unnormalized_posterior_envelope": [
+          -0.04782834221592129,
+          0.047938263775060205
+        ],
+        "normalized_posterior_envelope": [
+          -1.983061283997202,
+          1.9831712055563409
+        ],
+        "unnormalized_conservative_q95_envelope": [
+          -0.05441454823208324,
+          0.054524469791222156
+        ],
+        "normalized_conservative_q95_envelope": [
+          -1.9896474900133638,
+          1.9897574115725027
+        ],
+        "historical_residual": 5.4960779569452776e-05,
+        "posterior_predictive_covered": true
+      },
+      {
+        "cmp_bin_index": 2,
+        "posterior_weights_extended_family": {
+          "M1_nn": 0.26855960574527105,
+          "M2_monotone": 0.26855960574527105,
+          "M3_nn_tiebreak": 0.2430027802513063,
+          "M4_monotone_penalized": 0.21987800825815168
+        },
+        "unnormalized_posterior_envelope": [
+          -0.017472650966329526,
+          0.017912337202885157
+        ],
+        "normalized_posterior_envelope": [
+          -1.9828956526145836,
+          1.983335338851139
+        ],
+        "unnormalized_conservative_q95_envelope": [
+          -0.024058856982491477,
+          0.024498543219047108
+        ],
+        "normalized_conservative_q95_envelope": [
+          -1.9894818586307452,
+          1.9899215448673009
+        ],
+        "historical_residual": 0.0002198431182778111,
+        "posterior_predictive_covered": true
+      },
+      {
+        "cmp_bin_index": 3,
+        "posterior_weights_extended_family": {
+          "M1_nn": 0.26855960574527105,
+          "M2_monotone": 0.26855960574527105,
+          "M3_nn_tiebreak": 0.2430027802513063,
+          "M4_monotone_penalized": 0.21987800825815168
+        },
+        "unnormalized_posterior_envelope": [
+          -0.0059878857478679205,
+          0.007746630694090415
+        ],
+        "normalized_posterior_envelope": [
+          -1.9822361225042595,
+          1.983994867450482
+        ],
+        "unnormalized_conservative_q95_envelope": [
+          -0.012574091764029871,
+          0.014332836710252365
+        ],
+        "normalized_conservative_q95_envelope": [
+          -1.9888223285204212,
+          1.9905810734666438
+        ],
+        "historical_residual": 0.0008793724731112444,
+        "posterior_predictive_covered": true
+      }
+    ],
+    "coverage_rate": 1.0,
+    "posterior_family": [
+      "M1_nn",
+      "M2_monotone",
+      "M3_nn_tiebreak",
+      "M4_monotone_penalized"
+    ],
+    "scope_limit": "operational posterior predictive calibration audit only; not theorem-grade closure"
+  },
+  "backend_import_blocker_update": {
+    "D3_uncertainty_propagation_from_dressed_backend": "COMPUTED_EXTENDED_MAPPING_POSTERIOR_PREDICTIVE_CALIBRATION_AUDIT_PARTIAL"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2126_candidate",
+    "goal": "replace synthetic penalties in extended posterior family by backend-supported map evidence scores and rerun calibration"
+  },
+  "c3_gate_update": {
+    "C3_cmp2_mapping_posterior_envelope_audit": "COMPUTED",
+    "C3_cmp2_extended_mapping_posterior_predictive_calibration": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "extended_posterior_rows_exported": true,
+    "posterior_predictive_calibration_computed": true,
+    "full_d3_covariance_transport_proven": false,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": false,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

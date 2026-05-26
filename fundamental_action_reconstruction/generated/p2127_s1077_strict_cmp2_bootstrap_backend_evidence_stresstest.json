@@ -1,0 +1,78 @@
+{
+  "schema_version": "p2127_s1077_v1",
+  "packet_id": "P2127",
+  "stage_id": "S1077",
+  "produced_by": "p2127_s1077_strict_cmp2_bootstrap_backend_evidence_stresstest.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_CMP2_BOOTSTRAP_BACKEND_EVIDENCE_STRESSTEST_WITH_TRACE",
+  "depends_on": {
+    "p2126_present": true,
+    "preconditions_ready": true
+  },
+  "bootstrap_backend_evidence_stresstest": {
+    "n_rows": 4,
+    "n_bootstrap": 400,
+    "rng_seed": 2127,
+    "coverage_rate_point": 1.0,
+    "coverage_rate_ci95": [
+      1.0,
+      1.0
+    ],
+    "posterior_top_model_rank_stability": {
+      "M1_nn": {
+        "mean_frequency": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ]
+      },
+      "M2_monotone": {
+        "mean_frequency": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "M3_nn_tiebreak": {
+        "mean_frequency": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "M4_monotone_penalized": {
+        "mean_frequency": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "scope_limit": "operational bootstrap stress-test only; not theorem-grade closure"
+  },
+  "backend_import_blocker_update": {
+    "D3_uncertainty_propagation_from_dressed_backend": "COMPUTED_BOOTSTRAP_STRESSTEST_PARTIAL"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2128_candidate",
+    "goal": "run block-bootstrap by s-clusters and compare CI inflation vs iid bootstrap"
+  },
+  "c3_gate_update": {
+    "C3_cmp2_backend_evidence_weighted_posterior_calibration": "COMPUTED",
+    "C3_cmp2_bootstrap_stresstest": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "bootstrap_executed": true,
+    "coverage_ci_exported": true,
+    "rank_stability_exported": true,
+    "full_d3_covariance_transport_proven": false,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": false,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

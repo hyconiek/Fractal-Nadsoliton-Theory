@@ -1,0 +1,175 @@
+{
+  "schema_version": "p2126_s1076_v1",
+  "packet_id": "P2126",
+  "stage_id": "S1076",
+  "produced_by": "p2126_s1076_strict_cmp2_backend_evidence_weighted_posterior_calibration_audit.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_CMP2_BACKEND_EVIDENCE_WEIGHTED_POSTERIOR_CALIBRATION_AUDIT_WITH_TRACE",
+  "depends_on": {
+    "p2125_present": true,
+    "p2017_present": true,
+    "preconditions_ready": true
+  },
+  "backend_evidence_weighted_posterior_predictive_calibration_audit": {
+    "rows": [
+      {
+        "cmp_bin_index": 0,
+        "backend_s": 0.5,
+        "backend_evidence_components": {
+          "psd_ok_score": 2.0,
+          "quadrature_error_norm_sum": 7.14184378942733e-16,
+          "local_trace_smoothness_penalty": 0.019739545423601547
+        },
+        "posterior_weights_backend_evidence": {
+          "M1_nn": 0.3088060015107929,
+          "M2_monotone": 0.2553366895959739,
+          "M3_nn_tiebreak": 0.20618325151580114,
+          "M4_monotone_penalized": 0.229674057377432
+        },
+        "unnormalized_posterior_envelope": [
+          -0.11433575288667394,
+          0.11436323327645866
+        ],
+        "normalized_posterior_envelope": [
+          -1.9876283343047811,
+          1.9876558146945658
+        ],
+        "unnormalized_conservative_q95_envelope": [
+          -0.12039651547067512,
+          0.12042399586045985
+        ],
+        "normalized_conservative_q95_envelope": [
+          -1.9936890968887826,
+          1.9937165772785672
+        ],
+        "historical_residual": 1.3740194892363194e-05,
+        "posterior_predictive_covered": true
+      },
+      {
+        "cmp_bin_index": 1,
+        "backend_s": 1.0,
+        "backend_evidence_components": {
+          "psd_ok_score": 2.0,
+          "quadrature_error_norm_sum": 3.016716997508564e-16,
+          "local_trace_smoothness_penalty": 0.019739545423601547
+        },
+        "posterior_weights_backend_evidence": {
+          "M1_nn": 0.3088060015107929,
+          "M2_monotone": 0.2553366895959739,
+          "M3_nn_tiebreak": 0.20618325151580114,
+          "M4_monotone_penalized": 0.229674057377432
+        },
+        "unnormalized_posterior_envelope": [
+          -0.05235378564808206,
+          0.052463707207220975
+        ],
+        "normalized_posterior_envelope": [
+          -1.9875867274293624,
+          1.9876966489885013
+        ],
+        "unnormalized_conservative_q95_envelope": [
+          -0.05841454823208324,
+          0.05852446979122215
+        ],
+        "normalized_conservative_q95_envelope": [
+          -1.9936474900133638,
+          1.9937574115725027
+        ],
+        "historical_residual": 5.4960779569452776e-05,
+        "posterior_predictive_covered": true
+      },
+      {
+        "cmp_bin_index": 2,
+        "backend_s": 2.0,
+        "backend_evidence_components": {
+          "psd_ok_score": 2.0,
+          "quadrature_error_norm_sum": 1.0073383976569694e-16,
+          "local_trace_smoothness_penalty": 0.012208364493764844
+        },
+        "posterior_weights_backend_evidence": {
+          "M1_nn": 0.30911343759645604,
+          "M2_monotone": 0.2546302527619867,
+          "M3_nn_tiebreak": 0.20669962420006416,
+          "M4_monotone_penalized": 0.22955668544149307
+        },
+        "unnormalized_posterior_envelope": [
+          -0.021993231881838417,
+          0.022432918118394048
+        ],
+        "normalized_posterior_envelope": [
+          -1.9874162335300922,
+          1.9878559197666479
+        ],
+        "unnormalized_conservative_q95_envelope": [
+          -0.028058856982491477,
+          0.028498543219047108
+        ],
+        "normalized_conservative_q95_envelope": [
+          -1.9934818586307452,
+          1.9939215448673009
+        ],
+        "historical_residual": 0.0002198431182778111,
+        "posterior_predictive_covered": true
+      },
+      {
+        "cmp_bin_index": 3,
+        "backend_s": 4.0,
+        "backend_evidence_components": {
+          "psd_ok_score": 2.0,
+          "quadrature_error_norm_sum": 5.1448498389328426e-17,
+          "local_trace_smoothness_penalty": 0.005098595283450281
+        },
+        "posterior_weights_backend_evidence": {
+          "M1_nn": 0.3094029257456983,
+          "M2_monotone": 0.25396429643648616,
+          "M3_nn_tiebreak": 0.2071876025265609,
+          "M4_monotone_penalized": 0.22944517529125466
+        },
+        "unnormalized_posterior_envelope": [
+          -0.010503876025048979,
+          0.012262620971271471
+        ],
+        "normalized_posterior_envelope": [
+          -1.9867521127814407,
+          1.988510857727663
+        ],
+        "unnormalized_conservative_q95_envelope": [
+          -0.016574091764029873,
+          0.018332836710252366
+        ],
+        "normalized_conservative_q95_envelope": [
+          -1.9928223285204212,
+          1.9945810734666438
+        ],
+        "historical_residual": 0.0008793724731112444,
+        "posterior_predictive_covered": true
+      }
+    ],
+    "coverage_rate": 1.0,
+    "scope_limit": "operational backend-evidence weighted calibration only; not theorem-grade closure"
+  },
+  "backend_import_blocker_update": {
+    "D3_uncertainty_propagation_from_dressed_backend": "COMPUTED_BACKEND_EVIDENCE_WEIGHTED_POSTERIOR_CALIBRATION_AUDIT_PARTIAL"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2127_candidate",
+    "goal": "stress-test backend evidence weighting under bootstrap resampling of trace/tensor rows and report calibration stability intervals"
+  },
+  "c3_gate_update": {
+    "C3_cmp2_extended_mapping_posterior_predictive_calibration": "COMPUTED",
+    "C3_cmp2_backend_evidence_weighted_posterior_calibration": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "backend_evidence_rows_exported": true,
+    "backend_evidence_weighted_calibration_computed": true,
+    "full_d3_covariance_transport_proven": false,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": false,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

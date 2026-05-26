@@ -1,0 +1,218 @@
+{
+  "schema_version": "p2115_s1065_v1",
+  "packet_id": "P2115",
+  "stage_id": "S1065",
+  "produced_by": "p2115_s1065_strict_cmp2_full_binwise_channel_covariance_slices_and_coupled_robustness.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_CMP2_FULL_BINWISE_CHANNEL_COVARIANCE_SLICES_AND_COUPLED_ROBUSTNESS_WITH_TRACE",
+  "depends_on": {
+    "p2114_present": true,
+    "p2110_present": true,
+    "p2017_present": true,
+    "preconditions_ready": true
+  },
+  "cmp2_full_binwise_channel_covariance": {
+    "channels": [
+      "gg",
+      "gh",
+      "hh",
+      "gx"
+    ],
+    "construction_rule": "Frobenius inner-product covariance from p2017 per-bin channel 3x3 tensors",
+    "rows": [
+      {
+        "bin_index": 0,
+        "s": 0.5,
+        "full_channel_covariance_slice": [
+          [
+            5.755964075203737e-05,
+            0.00041131113403955184,
+            4.501037596429016e-05,
+            1.6062171845381623e-05
+          ],
+          [
+            0.00041131113403955184,
+            0.0029391666777162577,
+            0.0003216388688467218,
+            0.00011477904724850859
+          ],
+          [
+            4.501037596429017e-05,
+            0.0003216388688467218,
+            3.5197859794895e-05,
+            1.2560713419906577e-05
+          ],
+          [
+            1.6062171845381623e-05,
+            0.00011477904724850859,
+            1.2560713419906577e-05,
+            4.4824654384114e-06
+          ]
+        ],
+        "offdiag_l1": 0.0018427246227287212,
+        "sigma_nominal": 0.054214081913431474,
+        "sigma_min_under_rowmap_perturbation": 0.05413631171427477,
+        "sigma_max_under_rowmap_perturbation": 0.054287946768144774,
+        "interval_95_nominal": [
+          -0.10624586035543332,
+          0.10627334074521805
+        ],
+        "interval_95_envelope": [
+          -0.10639063547067139,
+          0.10641811586045612
+        ]
+      },
+      {
+        "bin_index": 1,
+        "s": 1.0,
+        "full_channel_covariance_slice": [
+          [
+            1.2112971266317489e-05,
+            7.883400739781324e-05,
+            7.68113317400989e-06,
+            2.4788531101868953e-06
+          ],
+          [
+            7.883400739781324e-05,
+            0.0005130917109119277,
+            4.999480788566656e-05,
+            1.6134922999505336e-05
+          ],
+          [
+            7.68113317400989e-06,
+            4.999480788566656e-05,
+            4.871612833108662e-06,
+            1.5722840954144212e-06
+          ],
+          [
+            2.478853110186895e-06,
+            1.6134922999505336e-05,
+            1.5722840954144212e-06,
+            5.074625568078354e-07
+          ]
+        ],
+        "offdiag_l1": 0.0003133920173251927,
+        "sigma_nominal": 0.02265152778317453,
+        "sigma_min_under_rowmap_perturbation": 0.022615960924542464,
+        "sigma_max_under_rowmap_perturbation": 0.022685525005944455,
+        "interval_95_nominal": [
+          -0.04434203367545262,
+          0.044451955234591535
+        ],
+        "interval_95_envelope": [
+          -0.04440866823208167,
+          0.044518589791220586
+        ]
+      },
+      {
+        "bin_index": 2,
+        "s": 2.0,
+        "full_channel_covariance_slice": [
+          [
+            1.632157466924072e-06,
+            9.286687839860689e-06,
+            8.125314991198134e-07,
+            2.2566676111802738e-07
+          ],
+          [
+            9.286687839860687e-06,
+            5.2845901923212994e-05,
+            4.6241453409450195e-06,
+            1.284366175489033e-06
+          ],
+          [
+            8.125314991198134e-07,
+            4.6241453409450195e-06,
+            4.0465401057417235e-07,
+            1.1239963693261663e-07
+          ],
+          [
+            2.2566676111802738e-07,
+            1.2843661754890331e-06,
+            1.1239963693261663e-07,
+            3.122219042183454e-08
+          ]
+        ],
+        "offdiag_l1": 3.2691594506930395e-05,
+        "sigma_nominal": 0.007269518685801213,
+        "sigma_min_under_rowmap_perturbation": 0.007256514670889912,
+        "sigma_max_under_rowmap_perturbation": 0.007282051071820809,
+        "interval_95_nominal": [
+          -0.01402841350589256,
+          0.014468099742448191
+        ],
+        "interval_95_envelope": [
+          -0.01405297698249097,
+          0.014492663219046601
+        ]
+      },
+      {
+        "bin_index": 3,
+        "s": 4.0,
+        "full_channel_covariance_slice": [
+          [
+            1.36796303484831e-07,
+            6.49185782092381e-07,
+            4.9943245528550546e-08,
+            1.1161121320415005e-08
+          ],
+          [
+            6.49185782092381e-07,
+            3.0811677706262013e-06,
+            2.3705374001321772e-07,
+            5.2975382357193164e-08
+          ],
+          [
+            4.9943245528550546e-08,
+            2.3705374001321772e-07,
+            1.8238507957089576e-08,
+            4.075822462799915e-09
+          ],
+          [
+            1.1161121320415005e-08,
+            5.2975382357193164e-08,
+            4.0758224627999144e-09,
+            9.108407009473486e-10
+          ]
+        ],
+        "offdiag_l1": 2.0087901875491148e-06,
+        "sigma_nominal": 0.0017553255454832877,
+        "sigma_min_under_rowmap_perturbation": 0.0017515779341518987,
+        "sigma_max_under_rowmap_perturbation": 0.0017589715495616842,
+        "interval_95_nominal": [
+          -0.002561065596035996,
+          0.004319810542258492
+        ],
+        "interval_95_envelope": [
+          -0.002568211764029653,
+          0.004326956710252149
+        ]
+      }
+    ],
+    "scope_limit": "operational full-slice export and coupled robustness only; not theorem-grade D3/C3 closure"
+  },
+  "backend_import_blocker_update": {
+    "D3_uncertainty_propagation_from_dressed_backend": "COMPUTED_FULL_BINWISE_CHANNEL_COVARIANCE_SLICES_PARTIAL"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2116_candidate",
+    "goal": "bind full binwise covariance slices to explicit backend provenance map and perform sensitivity audit vs alternative slice constructors"
+  },
+  "c3_gate_update": {
+    "C3_cmp2_rowmap_robustness_audit": "COMPUTED",
+    "C3_cmp2_full_binwise_channel_covariance_slices": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "full_binwise_slices_exported": true,
+    "offdiagonal_couplings_present": true,
+    "full_d3_covariance_transport_proven": false,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": false,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

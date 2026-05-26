@@ -1,0 +1,108 @@
+{
+  "schema_version": "p2120_s1070_v1",
+  "packet_id": "P2120",
+  "stage_id": "S1070",
+  "produced_by": "p2120_s1070_strict_cmp2_triple_alignment_estimator_intersection_consistency_audit.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_CMP2_TRIPLE_ALIGNMENT_ESTIMATOR_INTERSECTION_CONSISTENCY_AUDIT_WITH_TRACE",
+  "depends_on": {
+    "p2119_present": true,
+    "p2017_present": true,
+    "preconditions_ready": true
+  },
+  "triple_alignment_estimator_consistency_audit": {
+    "third_estimator": "local eigenspectrum-change scale over p2017 C4_eigvals",
+    "rows": [
+      {
+        "bin_index": 0,
+        "sigma_backend": 6.368027532627364e-16,
+        "sigma_curvature": 0.017965583199371946,
+        "sigma_eigenspectrum": 0.00029459676444461313,
+        "unnormalized_triple_intersection": [
+          -0.10639259547067388,
+          0.10642007586045861
+        ],
+        "unnormalized_triple_intersection_nonempty": true,
+        "normalized_triple_intersection": [
+          -1.9796851768887838,
+          1.9797126572785684
+        ],
+        "normalized_triple_intersection_nonempty": true
+      },
+      {
+        "bin_index": 1,
+        "sigma_backend": 2.659249379836884e-16,
+        "sigma_curvature": 0.017965583199371946,
+        "sigma_eigenspectrum": 0.00029459676444461313,
+        "unnormalized_triple_intersection": [
+          -0.044410628232082715,
+          0.04452054979122163
+        ],
+        "unnormalized_triple_intersection_nonempty": true,
+        "normalized_triple_intersection": [
+          -1.9796435700133634,
+          1.9797534915725024
+        ],
+        "normalized_triple_intersection_nonempty": true
+      },
+      {
+        "bin_index": 2,
+        "sigma_backend": 8.583039112064668e-17,
+        "sigma_curvature": 0.010956496666169324,
+        "sigma_eigenspectrum": 0.00029459676444461313,
+        "unnormalized_triple_intersection": [
+          -0.014054936982491308,
+          0.014494623219046938
+        ],
+        "unnormalized_triple_intersection_nonempty": true,
+        "normalized_triple_intersection": [
+          -1.9794779386307448,
+          1.9799176248673005
+        ],
+        "normalized_triple_intersection_nonempty": true
+      },
+      {
+        "bin_index": 3,
+        "sigma_backend": 3.725052598879228e-17,
+        "sigma_curvature": 0.004496063476673714,
+        "sigma_eigenspectrum": 0.00029459676444461313,
+        "unnormalized_triple_intersection": [
+          -0.002570171764029799,
+          0.004328916710252294
+        ],
+        "unnormalized_triple_intersection_nonempty": true,
+        "normalized_triple_intersection": [
+          -1.978818408520418,
+          1.9805771534666405
+        ],
+        "normalized_triple_intersection_nonempty": true
+      }
+    ],
+    "triple_intersection_pass_rate": 1.0,
+    "scope_limit": "operational consistency audit only; not theorem-grade closure"
+  },
+  "backend_import_blocker_update": {
+    "D3_uncertainty_propagation_from_dressed_backend": "COMPUTED_TRIPLE_ALIGNMENT_ESTIMATOR_INTERSECTION_AUDIT_PARTIAL"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2121_candidate",
+    "goal": "replace global eigenspectrum fallback by explicit bin-local C4 eigenspectrum deltas and rerun triple-intersection audit"
+  },
+  "c3_gate_update": {
+    "C3_cmp2_alignment_crosscheck_intersection_audit": "COMPUTED",
+    "C3_cmp2_triple_alignment_estimator_consistency_audit": "COMPUTED",
+    "C3_transport_theorem": "OPEN",
+    "C3_discharge_status": "NOT_DISCHARGED"
+  },
+  "gatekeeper_checks": {
+    "preconditions_ready": true,
+    "triple_estimator_rows_exported": true,
+    "triple_intersection_audit_computed": true,
+    "full_d3_covariance_transport_proven": false,
+    "full_cutkosky_closure_proven": false,
+    "c3_theorem_proven": false,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}
