@@ -1,0 +1,61 @@
+{
+  "schema_version": "p2206_s1156_v1",
+  "packet_id": "P2206",
+  "stage_id": "S1156",
+  "produced_by": "p2206_s1156_strict_nu_branch_transport_operator_constraint_solver.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_TRANSPORT_OPERATOR_CONSTRAINT_SOLVER",
+  "strict_nu_branch_transport_operator_constraint_solver": {
+    "solver_id": "STRICT_NU_BRANCH_TRANSPORT_OPERATOR_CONSTRAINT_SOLVER_V1",
+    "source_packet": "generated/p2205_s1155_strict_nu_branch_transport_vanishing_constraints_probe.json",
+    "symbolic_operator_mismatch_equation": "Eq(cos(d*om + ph)**2 - cos(d*m*om + ph)**2, 0)",
+    "reduced_mismatch_expression": "cos(d*om + ph)**2 - cos(d*m*om + ph)**2",
+    "frozen_params": {
+      "omega": 0.18575,
+      "phi": 0.1625,
+      "beta": 1.0,
+      "eta": 1.8
+    },
+    "witness_d_samples": [
+      0.7,
+      1.9,
+      3.3,
+      5.1,
+      7.7,
+      11.3,
+      15.9
+    ],
+    "grid_scan_range": {
+      "m_min": 0.94,
+      "m_max": 1.06,
+      "count": 2401
+    },
+    "solver_verdict": {
+      "sampled_constraint_family": "for all d in fixed noncyclic witness set: cos^2(omega*d+phi)=cos^2(omega*m*d+phi)",
+      "best_m_on_grid": {
+        "m": 1.0,
+        "max_abs_mismatch_on_samples": 0.0
+      },
+      "near_zero_solution_count": 1,
+      "nontrivial_near_zero_solution_count": 0,
+      "m_equal_1_selected": true,
+      "interpretation": "on this frozen channel/domain witness set, transport-operator mismatch solver selects m≈1 and finds no nontrivial near-zero branch"
+    },
+    "theorem_scope_limit": "finite witness-set constraint solver only; not full global transport theorem closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2207_candidate",
+    "goal": "lift finite witness-set solver to interval-certified bound proving absence/presence of nontrivial m branches on a compact domain"
+  },
+  "gatekeeper_checks": {
+    "constraint_solver_exported": true,
+    "best_m_finite": true,
+    "best_score_finite": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

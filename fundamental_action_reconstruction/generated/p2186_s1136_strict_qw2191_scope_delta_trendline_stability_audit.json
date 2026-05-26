@@ -1,0 +1,55 @@
+{
+  "schema_version": "p2186_s1136_v1",
+  "packet_id": "P2186",
+  "stage_id": "S1136",
+  "produced_by": "p2186_s1136_strict_qw2191_scope_delta_trendline_stability_audit.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_QW2191_SCOPE_DELTA_TRENDLINE_STABILITY_AUDIT",
+  "strict_qw2191_scope_delta_trendline_stability_audit": {
+    "audit_id": "QW2191_SCOPE_DELTA_TRENDLINE_STABILITY_AUDIT_V1",
+    "input_sentinel_packet": "generated/p2185_s1135_strict_qw2191_periodic_ci_sentinel_and_nonbridge_scope_tagger.json",
+    "trend_status": "STABLE_ZERO_REGRESSION_TREND",
+    "trendline": {
+      "window_size": 2,
+      "window": [
+        {
+          "run_label": "S1136_latest",
+          "source_packet": "P2185",
+          "monitored_packet_count": 5,
+          "regression_count": 0,
+          "ci_status": "GREEN"
+        },
+        {
+          "run_label": "S1136_latest",
+          "source_packet": "P2185",
+          "monitored_packet_count": 5,
+          "regression_count": 0,
+          "ci_status": "GREEN"
+        }
+      ],
+      "regression_count_series": [
+        0,
+        0
+      ],
+      "stability_checks": {
+        "bounded_nonnegative": true,
+        "nonincreasing_series": true,
+        "stable_zero_regressions": true
+      }
+    }
+  },
+  "recommended_next_honest_step": {
+    "id": "P2187_candidate",
+    "goal": "add deterministic CI fail-threshold policy object keyed to trendline status classes"
+  },
+  "gatekeeper_checks": {
+    "trendline_audit_exported": true,
+    "bounded_nonnegative_regression_series": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

@@ -1,0 +1,133 @@
+{
+  "schema_version": "p2203_s1153_v1",
+  "packet_id": "P2203",
+  "stage_id": "S1153",
+  "produced_by": "p2203_s1153_strict_frw_bianchi_transport_residual_map_under_shared_majorant.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_FRW_BIANCHI_TRANSPORT_RESIDUAL_MAP_UNDER_SHARED_MAJORANT",
+  "strict_frw_bianchi_transport_residual_map_under_shared_majorant": {
+    "map_id": "STRICT_FRW_BIANCHI_TRANSPORT_RESIDUAL_MAP_UNDER_SHARED_MAJORANT_V1",
+    "source_packets": [
+      "generated/p2201_s1151_strict_cutkosky_shared_majorant_frw_bianchi_certificate.json",
+      "generated/p2190_s1140_strict_cutkosky_fixed_channel_real_discontinuity_integral_packet.json"
+    ],
+    "integration_domain": {
+      "d_min": 0.0,
+      "d_max": 20.0
+    },
+    "residual_map_rows": [
+      {
+        "omega_mult_probe": 1.0,
+        "transport_residual_l1": 0.0,
+        "transport_residual_abs_error": 0.0
+      },
+      {
+        "omega_mult_probe": 1.001875,
+        "transport_residual_l1": 1.0659336614097082e-05,
+        "transport_residual_abs_error": 2.670230725408966e-11
+      },
+      {
+        "omega_mult_probe": 1.00375,
+        "transport_residual_l1": 2.1319634864765793e-05,
+        "transport_residual_abs_error": 8.177115623210713e-11
+      },
+      {
+        "omega_mult_probe": 1.005625,
+        "transport_residual_l1": 3.198089077984035e-05,
+        "transport_residual_abs_error": 9.00131605740379e-11
+      },
+      {
+        "omega_mult_probe": 1.0075,
+        "transport_residual_l1": 4.264302974646723e-05,
+        "transport_residual_abs_error": 5.345951005280517e-11
+      },
+      {
+        "omega_mult_probe": 1.009375,
+        "transport_residual_l1": 5.330606137309282e-05,
+        "transport_residual_abs_error": 7.522713139538565e-11
+      },
+      {
+        "omega_mult_probe": 1.01125,
+        "transport_residual_l1": 6.396995089384812e-05,
+        "transport_residual_abs_error": 9.976176442827011e-11
+      },
+      {
+        "omega_mult_probe": 1.013125,
+        "transport_residual_l1": 7.463464352124804e-05,
+        "transport_residual_abs_error": 6.314369650252134e-11
+      },
+      {
+        "omega_mult_probe": 1.0150000000000001,
+        "transport_residual_l1": 8.53001685329924e-05,
+        "transport_residual_abs_error": 9.662582784949764e-11
+      },
+      {
+        "omega_mult_probe": 1.016875,
+        "transport_residual_l1": 9.596640075909886e-05,
+        "transport_residual_abs_error": 1.2257723468515024e-11
+      },
+      {
+        "omega_mult_probe": 1.01875,
+        "transport_residual_l1": 0.00010663339534092302,
+        "transport_residual_abs_error": 8.649438734957982e-11
+      },
+      {
+        "omega_mult_probe": 1.0206250000000001,
+        "transport_residual_l1": 0.00011730106224098967,
+        "transport_residual_abs_error": 5.941501416087925e-11
+      },
+      {
+        "omega_mult_probe": 1.0225,
+        "transport_residual_l1": 0.00012796946329030642,
+        "transport_residual_abs_error": 3.7689296932846017e-11
+      },
+      {
+        "omega_mult_probe": 1.024375,
+        "transport_residual_l1": 0.0001386384961582569,
+        "transport_residual_abs_error": 4.754260940091234e-11
+      },
+      {
+        "omega_mult_probe": 1.02625,
+        "transport_residual_l1": 0.00014930813834939042,
+        "transport_residual_abs_error": 6.620723113086487e-11
+      },
+      {
+        "omega_mult_probe": 1.028125,
+        "transport_residual_l1": 0.0001599784761565144,
+        "transport_residual_abs_error": 8.965445097513982e-11
+      },
+      {
+        "omega_mult_probe": 1.03,
+        "transport_residual_l1": 0.0001706491692635688,
+        "transport_residual_abs_error": 5.308816082051637e-11
+      }
+    ],
+    "summary": {
+      "max_residual": 0.0001706491692635688,
+      "mean_residual": 8.530931281678825e-05,
+      "min_majorant_margin_from_p2201": 0.17674153430562412
+    },
+    "theorem_gap_delta": {
+      "task3_requirement": "global FRW<->Bianchi transport closure for nu branch",
+      "computed_residual_map_kind": "L1 absolute squared-kernel transport residual with shared phase-space weight",
+      "residual_identically_zero_proven": false,
+      "residual_nonzero_detected": true,
+      "max_residual_over_min_margin": 0.0009655295227237289,
+      "interpretation": "quantitative residual profile exported; theorem-grade global covariance transport closure remains open"
+    }
+  },
+  "recommended_next_honest_step": {
+    "id": "P2204_candidate",
+    "goal": "derive symbolic transport-operator mismatch terms and attempt sufficient conditions for zero residual on nu branch"
+  },
+  "gatekeeper_checks": {
+    "transport_residual_map_exported": true,
+    "residual_map_finite": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

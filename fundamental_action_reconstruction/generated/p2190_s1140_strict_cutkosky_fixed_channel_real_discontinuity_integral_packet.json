@@ -1,0 +1,51 @@
+{
+  "schema_version": "p2190_s1140_v1",
+  "packet_id": "P2190",
+  "stage_id": "S1140",
+  "produced_by": "p2190_s1140_strict_cutkosky_fixed_channel_real_discontinuity_integral_packet.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_CUTKOSKY_FIXED_CHANNEL_REAL_DISCONTINUITY_INTEGRAL_PACKET",
+  "strict_cutkosky_fixed_channel_real_discontinuity_integral_packet": {
+    "witness_id": "STRICT_CUTKOSKY_FIXED_CHANNEL_REAL_DISCONTINUITY_INTEGRAL_V1",
+    "frozen_channel": "graviton_to_gauge_gauge",
+    "frozen_background": "B1_fixed_chart_seed",
+    "integration_domain": {
+      "d_min": 0.0,
+      "d_max": 20.0
+    },
+    "strict_kernel_params": {
+      "omega": 0.18575,
+      "phi": 0.1625,
+      "beta": 1.0,
+      "eta": 1.8
+    },
+    "integral_observable": "I_disc_proxy = integral[(K_strict(d)^2)*phase_space_weight(d)]dd",
+    "quad_value": 0.020135927197116557,
+    "quad_abs_error": 1.4766959892233922e-11,
+    "trapz_value": 0.02013592313942034,
+    "abs_delta_quad_vs_trapz": 4.057696217224516e-09,
+    "positivity": {
+      "integrand_nonnegative_expected": true,
+      "integral_nonnegative_observed": true
+    },
+    "numerical_checks": {
+      "quad_finite": true,
+      "quad_error_bounded": true,
+      "quad_trapz_consistent": true
+    }
+  },
+  "recommended_next_honest_step": {
+    "id": "P2191_candidate",
+    "goal": "extend fixed-channel integral packet with explicit residue-band table and UR-link uncertainty envelope"
+  },
+  "gatekeeper_checks": {
+    "real_discontinuity_integral_exported": true,
+    "integral_numerical_checks_pass": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

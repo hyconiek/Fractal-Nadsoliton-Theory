@@ -1,0 +1,43 @@
+{
+  "schema_version": "p2208_s1158_v1",
+  "packet_id": "P2208",
+  "stage_id": "S1158",
+  "produced_by": "p2208_s1158_strict_nu_branch_separation_lower_bound_certificate.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_SEPARATION_LOWER_BOUND_CERTIFICATE",
+  "strict_nu_branch_separation_lower_bound_certificate": {
+    "certificate_id": "STRICT_NU_BRANCH_SEPARATION_LOWER_BOUND_CERTIFICATE_V1",
+    "source_packet": "generated/p2207_s1157_strict_nu_branch_interval_certified_mismatch_bound.json",
+    "scan_exclusion_radius": 0.0005,
+    "min_linear_coefficient_c1": 0.03070832436552759,
+    "min_quadratic_coefficient_c2": 0.511805406092126,
+    "worst_case_row_for_linear_bound": {
+      "m": 0.94,
+      "abs_dm": 0.06000000000000005,
+      "sup_norm": 0.001842499461931657,
+      "ratio_sup_over_dm": 0.03070832436552759,
+      "ratio_sup_over_dm2": 0.511805406092126
+    },
+    "certified_bounds": {
+      "linear_bound_holds_on_scan": true,
+      "quadratic_bound_holds_on_scan": true,
+      "statement": "For scanned m with |m-1|>=eps on compact d-domain: sup_norm >= c1*|m-1| and sup_norm >= c2*|m-1|^2"
+    },
+    "theorem_scope_limit": "numeric lower-bound certificate on scanned compact set only; not a global all-background theorem"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2209_candidate",
+    "goal": "combine lower-bound certificate with transport residual integral to derive explicit non-vanishing threshold map vs |m-1|"
+  },
+  "gatekeeper_checks": {
+    "lower_bound_certificate_exported": true,
+    "linear_bound_holds_on_scan": true,
+    "quadratic_bound_holds_on_scan": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

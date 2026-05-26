@@ -1,0 +1,105 @@
+{
+  "schema_version": "p2205_s1155_v1",
+  "packet_id": "P2205",
+  "stage_id": "S1155",
+  "produced_by": "p2205_s1155_strict_nu_branch_transport_vanishing_constraints_probe.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_TRANSPORT_VANISHING_CONSTRAINTS_PROBE",
+  "strict_nu_branch_transport_vanishing_constraints_probe": {
+    "probe_id": "STRICT_NU_BRANCH_TRANSPORT_VANISHING_CONSTRAINTS_PROBE_V1",
+    "source_packet": "generated/p2204_s1154_strict_frw_bianchi_symbolic_transport_operator_mismatch_certificate.json",
+    "symbolic_first_variation_at_m_eq_1": "d*om*sin(2*d*om + 2*ph)/(be*d**et + 1)**2",
+    "sufficient_zero_constraint_candidate": "m = 1 (equivalently delta_omega = 0 on frozen channel/domain)",
+    "numeric_local_scaling_rows": [
+      {
+        "dm": 0.0,
+        "m": 1.0,
+        "residual_l1": 0.0,
+        "abs_err": 0.0
+      },
+      {
+        "dm": 0.0001,
+        "m": 1.0001,
+        "residual_l1": 5.684736949440138e-07,
+        "abs_err": 7.704647807067894e-12
+      },
+      {
+        "dm": 0.0002,
+        "m": 1.0002,
+        "residual_l1": 1.1369489533959425e-06,
+        "abs_err": 4.041503670933234e-12
+      },
+      {
+        "dm": 0.0005,
+        "m": 1.0005,
+        "residual_l1": 2.842393475659002e-06,
+        "abs_err": 8.289803979536115e-12
+      },
+      {
+        "dm": 0.001,
+        "m": 1.001,
+        "residual_l1": 5.684857168648998e-06,
+        "abs_err": 1.202549471885961e-13
+      },
+      {
+        "dm": 0.002,
+        "m": 1.002,
+        "residual_l1": 1.1369996461393034e-05,
+        "abs_err": 8.181229539923969e-12
+      }
+    ],
+    "numeric_local_scaling_ratios": [
+      {
+        "dm": 0.0,
+        "residual_over_dm": null,
+        "residual_over_dm2": null
+      },
+      {
+        "dm": 0.0001,
+        "residual_over_dm": 0.005684736949440138,
+        "residual_over_dm2": 56.84736949440138
+      },
+      {
+        "dm": 0.0002,
+        "residual_over_dm": 0.005684744766979712,
+        "residual_over_dm2": 28.42372383489856
+      },
+      {
+        "dm": 0.0005,
+        "residual_over_dm": 0.005684786951318004,
+        "residual_over_dm2": 11.36957390263601
+      },
+      {
+        "dm": 0.001,
+        "residual_over_dm": 0.005684857168648998,
+        "residual_over_dm2": 5.684857168648999
+      },
+      {
+        "dm": 0.002,
+        "residual_over_dm": 0.005684998230696517,
+        "residual_over_dm2": 2.8424991153482586
+      }
+    ],
+    "local_behavior_assessment": {
+      "residual_at_dm_1e3": 5.684857168648998e-06,
+      "approximately_linear_in_dm_near_zero": true,
+      "interpretation": "local transport mismatch behaves as nonzero first-order effect when m departs from 1"
+    },
+    "theorem_scope_limit": "local sufficient-constraint probe only; no global nu-branch transport theorem closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2206_candidate",
+    "goal": "build explicit nu-branch transport operator equation and test if project constraints can force m=1 without ad-hoc selector assumptions"
+  },
+  "gatekeeper_checks": {
+    "vanishing_constraints_probe_exported": true,
+    "numeric_rows_finite": true,
+    "symbolic_first_variation_exported": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}
