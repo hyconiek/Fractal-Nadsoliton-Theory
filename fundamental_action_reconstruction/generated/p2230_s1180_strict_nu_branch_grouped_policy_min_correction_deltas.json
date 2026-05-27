@@ -1,0 +1,44 @@
+{
+  "schema_version": "p2230_s1180_v1",
+  "packet_id": "P2230",
+  "stage_id": "S1180",
+  "produced_by": "p2230_s1180_strict_nu_branch_grouped_policy_min_correction_deltas.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_GROUPED_POLICY_MIN_CORRECTION_DELTAS",
+  "strict_nu_branch_grouped_policy_min_correction_deltas": {
+    "certificate_id": "STRICT_NU_BRANCH_GROUPED_POLICY_MIN_CORRECTION_DELTAS_V1",
+    "source_packet": "generated/p2229_s1179_strict_nu_branch_grouped_policy_miss_set_certificate.json",
+    "input_policy": {
+      "factor_above": 1.0,
+      "factor_below": 1.0
+    },
+    "required_policy": {
+      "factor_above": 1.0,
+      "factor_below": 1.0
+    },
+    "minimal_nonnegative_deltas": {
+      "delta_above": 0.0,
+      "delta_below": 0.0
+    },
+    "corrected_policy": {
+      "factor_above": 1.0,
+      "factor_below": 1.0
+    },
+    "theorem_scope_limit": "local correction-delta computation on exported grouped-policy matrix only; not global Task-3 closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2231_candidate",
+    "goal": "re-run grouped policy coverage matrix with corrected policy and export strict pass-zero miss-set witness"
+  },
+  "gatekeeper_checks": {
+    "correction_delta_certificate_exported": true,
+    "deltas_nonnegative": true,
+    "corrected_policy_meets_required": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

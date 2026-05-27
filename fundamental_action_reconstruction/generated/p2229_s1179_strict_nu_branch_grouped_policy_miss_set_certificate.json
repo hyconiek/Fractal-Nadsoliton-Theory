@@ -1,0 +1,135 @@
+{
+  "schema_version": "p2229_s1179_v1",
+  "packet_id": "P2229",
+  "stage_id": "S1179",
+  "produced_by": "p2229_s1179_strict_nu_branch_grouped_policy_miss_set_certificate.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_GROUPED_POLICY_MISS_SET_CERTIFICATE",
+  "strict_nu_branch_grouped_policy_miss_set_certificate": {
+    "certificate_id": "STRICT_NU_BRANCH_GROUPED_POLICY_MISS_SET_CERTIFICATE_V1",
+    "source_packets": [
+      "generated/p2227_s1177_strict_nu_branch_grouped_policy_direct_coverage_matrix.json",
+      "generated/p2228_s1178_strict_nu_branch_grouped_factor_slack_regularized_optimization.json"
+    ],
+    "evaluated_grouped_policy": {
+      "factor_above": 1.0,
+      "factor_below": 1.0
+    },
+    "coverage_rows": [
+      {
+        "certification_side": "above_dm_star",
+        "target_safety_factor": 1.001,
+        "required_factor": 1.0,
+        "applied_factor": 1.0,
+        "covered": true,
+        "deficit": 0.0
+      },
+      {
+        "certification_side": "above_dm_star",
+        "target_safety_factor": 1.005,
+        "required_factor": 1.0,
+        "applied_factor": 1.0,
+        "covered": true,
+        "deficit": 0.0
+      },
+      {
+        "certification_side": "above_dm_star",
+        "target_safety_factor": 1.01,
+        "required_factor": 1.0,
+        "applied_factor": 1.0,
+        "covered": true,
+        "deficit": 0.0
+      },
+      {
+        "certification_side": "above_dm_star",
+        "target_safety_factor": 1.02,
+        "required_factor": 1.0,
+        "applied_factor": 1.0,
+        "covered": true,
+        "deficit": 0.0
+      },
+      {
+        "certification_side": "above_dm_star",
+        "target_safety_factor": 1.05,
+        "required_factor": 1.0,
+        "applied_factor": 1.0,
+        "covered": true,
+        "deficit": 0.0
+      },
+      {
+        "certification_side": "above_dm_star",
+        "target_safety_factor": 1.1,
+        "required_factor": 1.0,
+        "applied_factor": 1.0,
+        "covered": true,
+        "deficit": 0.0
+      },
+      {
+        "certification_side": "below_dm_star",
+        "target_safety_factor": 0.999,
+        "required_factor": 1.0,
+        "applied_factor": 1.0,
+        "covered": true,
+        "deficit": 0.0
+      },
+      {
+        "certification_side": "below_dm_star",
+        "target_safety_factor": 0.995,
+        "required_factor": 1.0,
+        "applied_factor": 1.0,
+        "covered": true,
+        "deficit": 0.0
+      },
+      {
+        "certification_side": "below_dm_star",
+        "target_safety_factor": 0.99,
+        "required_factor": 1.0,
+        "applied_factor": 1.0,
+        "covered": true,
+        "deficit": 0.0
+      },
+      {
+        "certification_side": "below_dm_star",
+        "target_safety_factor": 0.98,
+        "required_factor": 1.0,
+        "applied_factor": 1.0,
+        "covered": true,
+        "deficit": 0.0
+      },
+      {
+        "certification_side": "below_dm_star",
+        "target_safety_factor": 0.95,
+        "required_factor": 1.0,
+        "applied_factor": 1.0,
+        "covered": true,
+        "deficit": 0.0
+      },
+      {
+        "certification_side": "below_dm_star",
+        "target_safety_factor": 0.9,
+        "required_factor": 1.0,
+        "applied_factor": 1.0,
+        "covered": true,
+        "deficit": 0.0
+      }
+    ],
+    "miss_set_rows": [],
+    "miss_set_size": 0,
+    "theorem_scope_limit": "local grouped-policy coverage audit only; not global Task-3 closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2230_candidate",
+    "goal": "if miss_set nonempty, produce minimal correction deltas per side; if empty, freeze grouped policy as local certified control map"
+  },
+  "gatekeeper_checks": {
+    "miss_set_certificate_exported": true,
+    "all_rows_covered": true,
+    "miss_set_empty": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}
