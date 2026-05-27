@@ -1,0 +1,56 @@
+{
+  "schema_version": "p2286_s1236_v1",
+  "packet_id": "P2286",
+  "stage_id": "S1236",
+  "produced_by": "p2286_s1236_strict_task3_bianchi_i_immutable_a1_a2_a3_certificate_bundle_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_TASK3_BIANCHI_I_IMMUTABLE_A1_A2_A3_CERTIFICATE_BUNDLE_PROBE",
+  "strict_task3_bianchi_i_immutable_a1_a2_a3_certificate_bundle_probe": {
+    "probe_id": "STRICT_TASK3_BIANCHI_I_IMMUTABLE_A1_A2_A3_CERTIFICATE_BUNDLE_PROBE_V1",
+    "source_packets": [
+      "generated/p2285_s1235_strict_task3_bianchi_i_machine_checkable_a1_a2_a3_verifier_probe.json"
+    ],
+    "bundle": {
+      "bundle_version": "v1",
+      "payload": {
+        "certificate_id": "TASK3_BIANCHI_I_A1_A2_A3_IMMUTABLE_CERTIFICATE_V1",
+        "source_packet": "generated/p2285_s1235_strict_task3_bianchi_i_machine_checkable_a1_a2_a3_verifier_probe.json",
+        "recomputed": {
+          "A1": false,
+          "A2": false,
+          "A3": true
+        },
+        "reported": {
+          "A1": false,
+          "A2": false,
+          "A3": true
+        },
+        "consistency": {
+          "A1": true,
+          "A2": true,
+          "A3": true
+        },
+        "verifier_pass": false,
+        "scope": "task3_bianchi_i_transport_premise_verification"
+      },
+      "payload_sha256": "8ec07915287208d6049ec957d0f8f430cefa879b8370bf1821a51f7996c64881",
+      "integrity_rule": "payload_sha256 must match canonical JSON of payload"
+    },
+    "theorem_scope_limit": "immutable verifier bundle packaging only; not theorem proof and not selector/ToE closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2287_candidate",
+    "goal": "export deterministic re-check utility that recomputes payload hash and rejects mutated certificate bundles"
+  },
+  "gatekeeper_checks": {
+    "bundle_exported": true,
+    "sha256_length_ok": true,
+    "verifier_pass_boolean": true,
+    "consistency_has_A1_A2_A3": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

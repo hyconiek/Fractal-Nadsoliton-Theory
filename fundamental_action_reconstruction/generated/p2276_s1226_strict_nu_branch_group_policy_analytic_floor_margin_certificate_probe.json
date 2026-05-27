@@ -1,0 +1,82 @@
+{
+  "schema_version": "p2276_s1226_v1",
+  "packet_id": "P2276",
+  "stage_id": "S1226",
+  "produced_by": "p2276_s1226_strict_nu_branch_group_policy_analytic_floor_margin_certificate_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_GROUP_POLICY_ANALYTIC_FLOOR_MARGIN_CERTIFICATE_PROBE",
+  "strict_nu_branch_group_policy_analytic_floor_margin_certificate_probe": {
+    "probe_id": "STRICT_NU_BRANCH_GROUP_POLICY_ANALYTIC_FLOOR_MARGIN_CERTIFICATE_PROBE_V1",
+    "source_packets": [
+      "generated/p2274_s1224_strict_nu_branch_group_policy_robustness_region_certificate_probe.json",
+      "generated/p2275_s1225_strict_nu_branch_group_policy_certified_box_corner_replay_passrate_floor_probe.json"
+    ],
+    "certificate_rows": [
+      {
+        "risk_tolerance": 0.01,
+        "target_floor": 0.99,
+        "empirical_corner_floor": 0.0,
+        "confidence_margin": 0.02,
+        "certified_analytic_floor": 0.0,
+        "analytic_floor_meets_target": false,
+        "margin_to_target": -0.99,
+        "certificate_statement": "certified_analytic_floor := empirical_corner_floor - confidence_margin"
+      },
+      {
+        "risk_tolerance": 0.02,
+        "target_floor": 0.98,
+        "empirical_corner_floor": 0.0,
+        "confidence_margin": 0.02,
+        "certified_analytic_floor": 0.0,
+        "analytic_floor_meets_target": false,
+        "margin_to_target": -0.98,
+        "certificate_statement": "certified_analytic_floor := empirical_corner_floor - confidence_margin"
+      },
+      {
+        "risk_tolerance": 0.05,
+        "target_floor": 0.95,
+        "empirical_corner_floor": 0.0,
+        "confidence_margin": 0.02,
+        "certified_analytic_floor": 0.0,
+        "analytic_floor_meets_target": false,
+        "margin_to_target": -0.95,
+        "certificate_statement": "certified_analytic_floor := empirical_corner_floor - confidence_margin"
+      },
+      {
+        "risk_tolerance": 0.1,
+        "target_floor": 0.9,
+        "empirical_corner_floor": 0.0,
+        "confidence_margin": 0.02,
+        "certified_analytic_floor": 0.0,
+        "analytic_floor_meets_target": false,
+        "margin_to_target": -0.9,
+        "certificate_statement": "certified_analytic_floor := empirical_corner_floor - confidence_margin"
+      }
+    ],
+    "global_summary": {
+      "all_rows_meet_target_after_margin": false,
+      "worst_margin_to_target": -0.99
+    },
+    "proof_stub": {
+      "assumption": "corner replay empirical floor is baseline estimator for certified box floor",
+      "confidence_policy": "subtract fixed confidence_margin from empirical floor",
+      "sufficient_condition": "if empirical_floor - confidence_margin >= 1-risk then analytic floor target holds"
+    },
+    "theorem_scope_limit": "analytic sufficient-condition packaging over surrogate replay only; not selector closure and not ToE closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2277_candidate",
+    "goal": "replace fixed confidence_margin with seed-count/trial-count dependent concentration bound and export adaptive confidence certificate"
+  },
+  "gatekeeper_checks": {
+    "certificate_rows_exported": true,
+    "all_targets_bounded": true,
+    "all_certified_floors_bounded": true,
+    "confidence_margin_nonnegative": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

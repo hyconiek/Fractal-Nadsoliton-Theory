@@ -1,0 +1,62 @@
+{
+  "schema_version": "p2284_s1234_v1",
+  "packet_id": "P2284",
+  "stage_id": "S1234",
+  "produced_by": "p2284_s1234_strict_task3_bianchi_i_quantified_premise_table_and_theorem_bridge_draft_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_TASK3_BIANCHI_I_QUANTIFIED_PREMISE_TABLE_AND_THEOREM_BRIDGE_DRAFT_PROBE",
+  "strict_task3_bianchi_i_quantified_premise_table_and_theorem_bridge_draft_probe": {
+    "probe_id": "STRICT_TASK3_BIANCHI_I_QUANTIFIED_PREMISE_TABLE_AND_THEOREM_BRIDGE_DRAFT_PROBE_V1",
+    "source_packets": [
+      "generated/p2281_s1231_strict_nu_branch_group_policy_minimal_config_fresh_replay_validation_probe.json",
+      "generated/p2282_s1232_strict_task3_global_bianchi_i_g1_g2_g3_closure_matrix_probe.json",
+      "generated/p2283_s1233_strict_task3_bianchi_i_sufficient_condition_implication_stub_probe.json"
+    ],
+    "premise_table": [
+      {
+        "premise_id": "A1",
+        "symbol": "min_margin_to_target",
+        "value": -0.99,
+        "required_relation": ">= 0",
+        "satisfied": false
+      },
+      {
+        "premise_id": "A2",
+        "symbol": "max_transport_residual_l1",
+        "value": 1.0,
+        "required_relation": "<= 5e-5",
+        "satisfied": false
+      },
+      {
+        "premise_id": "A3",
+        "symbol": "locked_trials_budget",
+        "value": 700.0,
+        "required_relation": "> 0",
+        "satisfied": true
+      }
+    ],
+    "theorem_bridge_draft": {
+      "draft_id": "TASK3_BIANCHI_I_THEOREM_BRIDGE_DRAFT_V1",
+      "premise_layer": "quantified machine-checkable A1/A2/A3 table",
+      "logical_form": "(A1_quant & A2_quant & A3_quant) => TASK3_TRANSPORT_SUFFICIENT_CONDITION_CANDIDATE",
+      "compatibility_with_stub": false,
+      "quantified_ready": false,
+      "note": "draft object only; no theorem proof export"
+    },
+    "theorem_scope_limit": "quantified draft packaging only; not theorem proof and not selector/ToE closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2285_candidate",
+    "goal": "export machine-checkable verifier that re-evaluates A1/A2/A3 from source packets and produces deterministic PASS/OPEN certificate"
+  },
+  "gatekeeper_checks": {
+    "premise_table_exported": true,
+    "all_premise_ids_present": true,
+    "draft_exported": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

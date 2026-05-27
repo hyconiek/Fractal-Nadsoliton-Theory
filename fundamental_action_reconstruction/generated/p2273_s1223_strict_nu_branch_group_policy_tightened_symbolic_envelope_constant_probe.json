@@ -1,0 +1,51 @@
+{
+  "schema_version": "p2273_s1223_v1",
+  "packet_id": "P2273",
+  "stage_id": "S1223",
+  "produced_by": "p2273_s1223_strict_nu_branch_group_policy_tightened_symbolic_envelope_constant_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_GROUP_POLICY_TIGHTENED_SYMBOLIC_ENVELOPE_CONSTANT_PROBE",
+  "strict_nu_branch_group_policy_tightened_symbolic_envelope_constant_probe": {
+    "probe_id": "STRICT_NU_BRANCH_GROUP_POLICY_TIGHTENED_SYMBOLIC_ENVELOPE_CONSTANT_PROBE_V1",
+    "source_packets": [
+      "generated/p2270_s1220_strict_nu_branch_group_policy_symbolic_derivative_bound_probe.json",
+      "generated/p2272_s1222_strict_nu_branch_group_policy_empirical_derivative_resolution_and_quantile_calibration_probe.json"
+    ],
+    "inputs": {
+      "legacy_symbolic_box_max_abs_d_bound_d_rho": 0.2704552898774412,
+      "legacy_symbolic_box_max_abs_d_bound_d_kappa": 0.09261280280764869,
+      "empirical_max_abs_d_rho_across_rows": 4.999999999999999,
+      "empirical_max_abs_d_kappa_across_rows": 3.6000000000000005,
+      "safety_multiplier": 1.25
+    },
+    "tightened_envelope_constants": {
+      "tightened_abs_d_bound_d_rho": 6.249999999999999,
+      "tightened_abs_d_bound_d_kappa": 4.500000000000001,
+      "tightened_l1_lipschitz": 10.75
+    },
+    "diagnostics": {
+      "legacy_symbolic_dominates_empirical_rho": false,
+      "legacy_symbolic_dominates_empirical_kappa": false,
+      "tightened_vs_legacy_ratio_rho": 23.109180089737688,
+      "tightened_vs_legacy_ratio_kappa": 48.58939437721407,
+      "tightening_is_nonexpansive_vs_legacy": false
+    },
+    "calibration_policy": "tightened_constant = safety_multiplier * empirical_max_abs_derivative, with safety_multiplier>=1",
+    "theorem_scope_limit": "surrogate envelope-constant calibration only; not selector closure and not ToE closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2274_candidate",
+    "goal": "prove closed-form monotone robustness region under tightened constants and export certified risk->parameter admissible set"
+  },
+  "gatekeeper_checks": {
+    "tightened_constants_exported": true,
+    "safety_multiplier_ge_one": true,
+    "tightening_nonexpansive_vs_legacy": false,
+    "tightened_constants_nonnegative": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

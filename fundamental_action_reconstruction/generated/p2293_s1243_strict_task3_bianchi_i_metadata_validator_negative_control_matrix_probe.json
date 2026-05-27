@@ -1,0 +1,69 @@
+{
+  "schema_version": "p2293_s1243_v1",
+  "packet_id": "P2293",
+  "stage_id": "S1243",
+  "produced_by": "p2293_s1243_strict_task3_bianchi_i_metadata_validator_negative_control_matrix_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_TASK3_BIANCHI_I_METADATA_VALIDATOR_NEGATIVE_CONTROL_MATRIX_PROBE",
+  "strict_task3_bianchi_i_metadata_validator_negative_control_matrix_probe": {
+    "probe_id": "STRICT_TASK3_BIANCHI_I_METADATA_VALIDATOR_NEGATIVE_CONTROL_MATRIX_PROBE_V1",
+    "source_packets": [
+      "generated/p2291_s1241_strict_task3_bianchi_i_signed_precheck_transcript_hash_contract_probe.json"
+    ],
+    "required_contract": {
+      "required_hash": "dc259542b4fc3b0c29720b12a80b4a84b9746a8ffba4c89d64b9af58f2253092",
+      "required_precheck_decision": "PRECHECK_PASS"
+    },
+    "matrix": [
+      {
+        "candidate_id": "C0_baseline_valid",
+        "hash_match": true,
+        "decision_match": true,
+        "validator_decision": "METADATA_ACCEPT",
+        "expected_decision": "METADATA_ACCEPT",
+        "matches_expectation": true
+      },
+      {
+        "candidate_id": "C1_hash_mismatch",
+        "hash_match": false,
+        "decision_match": true,
+        "validator_decision": "METADATA_REJECT",
+        "expected_decision": "METADATA_REJECT",
+        "matches_expectation": true
+      },
+      {
+        "candidate_id": "C2_decision_mismatch",
+        "hash_match": true,
+        "decision_match": false,
+        "validator_decision": "METADATA_REJECT",
+        "expected_decision": "METADATA_REJECT",
+        "matches_expectation": true
+      },
+      {
+        "candidate_id": "C3_both_mismatch",
+        "hash_match": false,
+        "decision_match": false,
+        "validator_decision": "METADATA_REJECT",
+        "expected_decision": "METADATA_REJECT",
+        "matches_expectation": true
+      }
+    ],
+    "all_expectations_met": true,
+    "theorem_scope_limit": "negative-control matrix for metadata validator only; not theorem proof and not selector/ToE closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2294_candidate",
+    "goal": "wire matrix-evaluated validator into CI gate that blocks theorem-draft artifacts on any mismatch path"
+  },
+  "gatekeeper_checks": {
+    "matrix_rows_exported": true,
+    "all_expectations_met": true,
+    "contains_accept_case": true,
+    "contains_reject_cases": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

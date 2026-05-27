@@ -1,0 +1,128 @@
+{
+  "schema_version": "p2274_s1224_v1",
+  "packet_id": "P2274",
+  "stage_id": "S1224",
+  "produced_by": "p2274_s1224_strict_nu_branch_group_policy_robustness_region_certificate_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_GROUP_POLICY_ROBUSTNESS_REGION_CERTIFICATE_PROBE",
+  "strict_nu_branch_group_policy_robustness_region_certificate_probe": {
+    "probe_id": "STRICT_NU_BRANCH_GROUP_POLICY_ROBUSTNESS_REGION_CERTIFICATE_PROBE_V1",
+    "source_packets": [
+      "generated/p2266_s1216_strict_nu_branch_group_policy_risk_calibrated_controller_map_probe.json",
+      "generated/p2273_s1223_strict_nu_branch_group_policy_tightened_symbolic_envelope_constant_probe.json"
+    ],
+    "admissible_box": {
+      "rho_min": 0.55,
+      "rho_max": 0.95,
+      "kappa_scale_min": 1.0,
+      "kappa_scale_max": 1.8
+    },
+    "certified_rows": [
+      {
+        "risk_tolerance": 0.01,
+        "center": {
+          "rho": 0.885,
+          "kappa_scale": 1.16
+        },
+        "risk_budget_for_transport": 0.005,
+        "tightened_lipschitz_constants": {
+          "L_rho": 6.249999999999999,
+          "L_kappa": 4.500000000000001
+        },
+        "certified_l1_radius": 0.00046511627906976747,
+        "certified_box": {
+          "rho_min": 0.8847674418604651,
+          "rho_max": 0.8852325581395349,
+          "kappa_scale_min": 1.159767441860465,
+          "kappa_scale_max": 1.1602325581395347
+        },
+        "boundary_clipped_to_admissible_box": false,
+        "certificate_rule": "if |Δrho|+|Δkappa| <= radius_l1 then predicted bound-transport <= 0.5*risk"
+      },
+      {
+        "risk_tolerance": 0.02,
+        "center": {
+          "rho": 0.87,
+          "kappa_scale": 1.12
+        },
+        "risk_budget_for_transport": 0.01,
+        "tightened_lipschitz_constants": {
+          "L_rho": 6.249999999999999,
+          "L_kappa": 4.500000000000001
+        },
+        "certified_l1_radius": 0.0009302325581395349,
+        "certified_box": {
+          "rho_min": 0.8695348837209302,
+          "rho_max": 0.8704651162790698,
+          "kappa_scale_min": 1.1195348837209302,
+          "kappa_scale_max": 1.12046511627907
+        },
+        "boundary_clipped_to_admissible_box": false,
+        "certificate_rule": "if |Δrho|+|Δkappa| <= radius_l1 then predicted bound-transport <= 0.5*risk"
+      },
+      {
+        "risk_tolerance": 0.05,
+        "center": {
+          "rho": 0.825,
+          "kappa_scale": 1.0
+        },
+        "risk_budget_for_transport": 0.025,
+        "tightened_lipschitz_constants": {
+          "L_rho": 6.249999999999999,
+          "L_kappa": 4.500000000000001
+        },
+        "certified_l1_radius": 0.002325581395348837,
+        "certified_box": {
+          "rho_min": 0.8238372093023255,
+          "rho_max": 0.8261627906976744,
+          "kappa_scale_min": 1.0,
+          "kappa_scale_max": 1.0011627906976743
+        },
+        "boundary_clipped_to_admissible_box": true,
+        "certificate_rule": "if |Δrho|+|Δkappa| <= radius_l1 then predicted bound-transport <= 0.5*risk"
+      },
+      {
+        "risk_tolerance": 0.1,
+        "center": {
+          "rho": 0.75,
+          "kappa_scale": 1.0
+        },
+        "risk_budget_for_transport": 0.05,
+        "tightened_lipschitz_constants": {
+          "L_rho": 6.249999999999999,
+          "L_kappa": 4.500000000000001
+        },
+        "certified_l1_radius": 0.004651162790697674,
+        "certified_box": {
+          "rho_min": 0.7476744186046511,
+          "rho_max": 0.7523255813953489,
+          "kappa_scale_min": 1.0,
+          "kappa_scale_max": 1.0023255813953489
+        },
+        "boundary_clipped_to_admissible_box": true,
+        "certificate_rule": "if |Δrho|+|Δkappa| <= radius_l1 then predicted bound-transport <= 0.5*risk"
+      }
+    ],
+    "proof_stub": {
+      "norm_used": "L1",
+      "transport_bound": "|ΔB| <= L_rho*|Δrho| + L_kappa*|Δkappa| <= (L_rho+L_kappa)*radius_l1",
+      "budget_policy": "radius_l1 := (0.5*risk)/(L_rho+L_kappa)",
+      "result": "|ΔB| <= 0.5*risk (inside certified region)"
+    },
+    "theorem_scope_limit": "local robustness-region certificate for surrogate transport only; not selector closure and not ToE closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2275_candidate",
+    "goal": "replay nonlinear profiles at certified-box corners and certify empirical pass-rate floor under robustness transport budget"
+  },
+  "gatekeeper_checks": {
+    "certified_rows_exported": true,
+    "all_radius_positive": true,
+    "all_boxes_within_admissible_domain": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

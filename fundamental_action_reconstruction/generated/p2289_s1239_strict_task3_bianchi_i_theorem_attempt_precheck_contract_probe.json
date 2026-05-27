@@ -1,0 +1,38 @@
+{
+  "schema_version": "p2289_s1239_v1",
+  "packet_id": "P2289",
+  "stage_id": "S1239",
+  "produced_by": "p2289_s1239_strict_task3_bianchi_i_theorem_attempt_precheck_contract_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_TASK3_BIANCHI_I_THEOREM_ATTEMPT_PRECHECK_CONTRACT_PROBE",
+  "strict_task3_bianchi_i_theorem_attempt_precheck_contract_probe": {
+    "probe_id": "STRICT_TASK3_BIANCHI_I_THEOREM_ATTEMPT_PRECHECK_CONTRACT_PROBE_V1",
+    "source_packets": [
+      "generated/p2288_s1238_strict_task3_bianchi_i_certificate_chain_index_gating_ledger_probe.json"
+    ],
+    "precheck_contract": {
+      "contract_id": "TASK3_THEOREM_ATTEMPT_PRECHECK_CONTRACT_V1",
+      "required_chain_index_fingerprint_sha256": "02bc2ea18a6e6d484f124cb5a930f0f9e94ae852e5b8dd098ba658a31e551edc",
+      "required_gating_decision": "ALLOW_THEOREM_ATTEMPT_PRECHECK",
+      "observed_gating_decision": "ALLOW_THEOREM_ATTEMPT_PRECHECK",
+      "status": "READY_FOR_PRECHECK_ONLY",
+      "rule": "Theorem draft attempt must be blocked unless observed gating decision is ALLOW and fingerprint matches exactly."
+    },
+    "theorem_scope_limit": "precheck-contract export only; not theorem proof and not selector/ToE closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2290_candidate",
+    "goal": "run deterministic precheck evaluator that takes proposed theorem-draft metadata and verifies exact fingerprint+gating compliance"
+  },
+  "gatekeeper_checks": {
+    "precheck_contract_exported": true,
+    "fingerprint_length_ok": true,
+    "observed_gating_decision_valid": true,
+    "contract_status_valid": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

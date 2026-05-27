@@ -1,0 +1,494 @@
+{
+  "schema_version": "p2272_s1222_v1",
+  "packet_id": "P2272",
+  "stage_id": "S1222",
+  "produced_by": "p2272_s1222_strict_nu_branch_group_policy_empirical_derivative_resolution_and_quantile_calibration_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_GROUP_POLICY_EMPIRICAL_DERIVATIVE_RESOLUTION_AND_QUANTILE_CALIBRATION_PROBE",
+  "strict_nu_branch_group_policy_empirical_derivative_resolution_and_quantile_calibration_probe": {
+    "probe_id": "STRICT_NU_BRANCH_GROUP_POLICY_EMPIRICAL_DERIVATIVE_RESOLUTION_AND_QUANTILE_CALIBRATION_PROBE_V1",
+    "source_packets": [
+      "generated/p2270_s1220_strict_nu_branch_group_policy_symbolic_derivative_bound_probe.json",
+      "generated/p2271_s1221_strict_nu_branch_group_policy_symbolic_vs_empirical_derivative_slack_probe.json"
+    ],
+    "settings": {
+      "eps": 0.02,
+      "seeds": [
+        12221,
+        12222,
+        12223,
+        12224,
+        12225,
+        12226,
+        12227
+      ],
+      "profiles": [
+        {
+          "name": "baseline",
+          "horizon": 12,
+          "noise_amp": 0.01,
+          "trials": 400
+        },
+        {
+          "name": "stress_h24_n15",
+          "horizon": 24,
+          "noise_amp": 0.015,
+          "trials": 500
+        },
+        {
+          "name": "stress_h36_n20",
+          "horizon": 36,
+          "noise_amp": 0.02,
+          "trials": 600
+        }
+      ]
+    },
+    "prior_zero_sensitivity_summary": {
+      "prior_max_abs_empirical_d_rho": 0.0,
+      "prior_max_abs_empirical_d_kappa": 0.0
+    },
+    "calibrated_rows": [
+      {
+        "risk_tolerance": 0.01,
+        "rho": 0.885,
+        "kappa_scale": 1.16,
+        "symbolic_abs_d_bound_d_rho": 0.06608395118729994,
+        "symbolic_abs_d_bound_d_kappa": 0.04445728923474005,
+        "empirical_profiles": [
+          {
+            "profile": {
+              "name": "baseline",
+              "horizon": 12,
+              "noise_amp": 0.01,
+              "trials": 400
+            },
+            "empirical_fd_samples_d_rho": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "empirical_fd_samples_d_kappa": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "empirical_abs_d_rho_q95": 0.0,
+            "empirical_abs_d_kappa_q95": 0.0,
+            "empirical_abs_d_rho_max": 0.0,
+            "empirical_abs_d_kappa_max": 0.0
+          },
+          {
+            "profile": {
+              "name": "stress_h24_n15",
+              "horizon": 24,
+              "noise_amp": 0.015,
+              "trials": 500
+            },
+            "empirical_fd_samples_d_rho": [
+              2.4999999999999996,
+              2.3000000000000007,
+              2.2000000000000006,
+              1.1999999999999997,
+              2.700000000000001,
+              1.5,
+              2.4999999999999996
+            ],
+            "empirical_fd_samples_d_kappa": [
+              -0.7000000000000006,
+              -2.0000000000000004,
+              -1.2999999999999998,
+              -2.2000000000000006,
+              -0.8999999999999994,
+              -1.8000000000000003,
+              -1.100000000000001
+            ],
+            "empirical_abs_d_rho_q95": 2.4999999999999996,
+            "empirical_abs_d_kappa_q95": 2.0000000000000004,
+            "empirical_abs_d_rho_max": 2.700000000000001,
+            "empirical_abs_d_kappa_max": 2.2000000000000006
+          },
+          {
+            "profile": {
+              "name": "stress_h36_n20",
+              "horizon": 36,
+              "noise_amp": 0.02,
+              "trials": 600
+            },
+            "empirical_fd_samples_d_rho": [
+              0.0,
+              0.08333333333333334,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "empirical_fd_samples_d_kappa": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "empirical_abs_d_rho_q95": 0.0,
+            "empirical_abs_d_kappa_q95": 0.0,
+            "empirical_abs_d_rho_max": 0.08333333333333334,
+            "empirical_abs_d_kappa_max": 0.0
+          }
+        ],
+        "empirical_abs_max_d_rho_across_profiles": 2.700000000000001,
+        "empirical_abs_max_d_kappa_across_profiles": 2.2000000000000006,
+        "symbolic_covers_empirical_max_rho": false,
+        "symbolic_covers_empirical_max_kappa": false,
+        "calibrated_slack_factor_rho": 0.024475537476777748,
+        "calibrated_slack_factor_kappa": 0.020207858743063654
+      },
+      {
+        "risk_tolerance": 0.02,
+        "rho": 0.87,
+        "kappa_scale": 1.12,
+        "symbolic_abs_d_bound_d_rho": 0.06556686469956928,
+        "symbolic_abs_d_bound_d_kappa": 0.04476392914669602,
+        "empirical_profiles": [
+          {
+            "profile": {
+              "name": "baseline",
+              "horizon": 12,
+              "noise_amp": 0.01,
+              "trials": 400
+            },
+            "empirical_fd_samples_d_rho": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "empirical_fd_samples_d_kappa": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "empirical_abs_d_rho_q95": 0.0,
+            "empirical_abs_d_kappa_q95": 0.0,
+            "empirical_abs_d_rho_max": 0.0,
+            "empirical_abs_d_kappa_max": 0.0
+          },
+          {
+            "profile": {
+              "name": "stress_h24_n15",
+              "horizon": 24,
+              "noise_amp": 0.015,
+              "trials": 500
+            },
+            "empirical_fd_samples_d_rho": [
+              1.8000000000000016,
+              3.1,
+              3.999999999999999,
+              3.3000000000000003,
+              3.4000000000000004,
+              2.4999999999999996,
+              4.000000000000001
+            ],
+            "empirical_fd_samples_d_kappa": [
+              -2.8,
+              -1.0999999999999996,
+              -1.6,
+              -1.2999999999999998,
+              -1.0999999999999996,
+              -1.5,
+              -1.999999999999999
+            ],
+            "empirical_abs_d_rho_q95": 3.999999999999999,
+            "empirical_abs_d_kappa_q95": 1.999999999999999,
+            "empirical_abs_d_rho_max": 4.000000000000001,
+            "empirical_abs_d_kappa_max": 2.8
+          },
+          {
+            "profile": {
+              "name": "stress_h36_n20",
+              "horizon": 36,
+              "noise_amp": 0.02,
+              "trials": 600
+            },
+            "empirical_fd_samples_d_rho": [
+              0.08333333333333334,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "empirical_fd_samples_d_kappa": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "empirical_abs_d_rho_q95": 0.0,
+            "empirical_abs_d_kappa_q95": 0.0,
+            "empirical_abs_d_rho_max": 0.08333333333333334,
+            "empirical_abs_d_kappa_max": 0.0
+          }
+        ],
+        "empirical_abs_max_d_rho_across_profiles": 4.000000000000001,
+        "empirical_abs_max_d_kappa_across_profiles": 2.8,
+        "symbolic_covers_empirical_max_rho": false,
+        "symbolic_covers_empirical_max_kappa": false,
+        "calibrated_slack_factor_rho": 0.016391716174892317,
+        "calibrated_slack_factor_kappa": 0.015987117552391437
+      },
+      {
+        "risk_tolerance": 0.05,
+        "rho": 0.825,
+        "kappa_scale": 1.0,
+        "symbolic_abs_d_bound_d_rho": 0.0637430921999627,
+        "symbolic_abs_d_bound_d_kappa": 0.04575160442652323,
+        "empirical_profiles": [
+          {
+            "profile": {
+              "name": "baseline",
+              "horizon": 12,
+              "noise_amp": 0.01,
+              "trials": 400
+            },
+            "empirical_fd_samples_d_rho": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "empirical_fd_samples_d_kappa": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "empirical_abs_d_rho_q95": 0.0,
+            "empirical_abs_d_kappa_q95": 0.0,
+            "empirical_abs_d_rho_max": 0.0,
+            "empirical_abs_d_kappa_max": 0.0
+          },
+          {
+            "profile": {
+              "name": "stress_h24_n15",
+              "horizon": 24,
+              "noise_amp": 0.015,
+              "trials": 500
+            },
+            "empirical_fd_samples_d_rho": [
+              2.8,
+              3.6000000000000005,
+              3.3000000000000003,
+              4.499999999999998,
+              4.999999999999999,
+              3.8999999999999977,
+              4.499999999999998
+            ],
+            "empirical_fd_samples_d_kappa": [
+              -3.2,
+              -2.100000000000002,
+              -3.6000000000000005,
+              -0.40000000000000036,
+              -2.9000000000000026,
+              -3.0,
+              -2.400000000000002
+            ],
+            "empirical_abs_d_rho_q95": 4.499999999999998,
+            "empirical_abs_d_kappa_q95": 3.2,
+            "empirical_abs_d_rho_max": 4.999999999999999,
+            "empirical_abs_d_kappa_max": 3.6000000000000005
+          },
+          {
+            "profile": {
+              "name": "stress_h36_n20",
+              "horizon": 36,
+              "noise_amp": 0.02,
+              "trials": 600
+            },
+            "empirical_fd_samples_d_rho": [
+              0.0,
+              0.08333333333333334,
+              0.0,
+              -0.08333333333333334,
+              -0.08333333333333334,
+              0.16666666666666669,
+              0.08333333333333333
+            ],
+            "empirical_fd_samples_d_kappa": [
+              0.0,
+              0.08333333333333334,
+              0.0,
+              -0.08333333333333334,
+              -0.08333333333333334,
+              0.16666666666666669,
+              -0.16666666666666669
+            ],
+            "empirical_abs_d_rho_q95": 0.08333333333333334,
+            "empirical_abs_d_kappa_q95": 0.16666666666666669,
+            "empirical_abs_d_rho_max": 0.16666666666666669,
+            "empirical_abs_d_kappa_max": 0.16666666666666669
+          }
+        ],
+        "empirical_abs_max_d_rho_across_profiles": 4.999999999999999,
+        "empirical_abs_max_d_kappa_across_profiles": 3.6000000000000005,
+        "symbolic_covers_empirical_max_rho": false,
+        "symbolic_covers_empirical_max_kappa": false,
+        "calibrated_slack_factor_rho": 0.012748618439992542,
+        "calibrated_slack_factor_kappa": 0.012708779007367561
+      },
+      {
+        "risk_tolerance": 0.1,
+        "rho": 0.75,
+        "kappa_scale": 1.0,
+        "symbolic_abs_d_bound_d_rho": 0.07670958244579874,
+        "symbolic_abs_d_bound_d_kappa": 0.051778968150914165,
+        "empirical_profiles": [
+          {
+            "profile": {
+              "name": "baseline",
+              "horizon": 12,
+              "noise_amp": 0.01,
+              "trials": 400
+            },
+            "empirical_fd_samples_d_rho": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "empirical_fd_samples_d_kappa": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "empirical_abs_d_rho_q95": 0.0,
+            "empirical_abs_d_kappa_q95": 0.0,
+            "empirical_abs_d_rho_max": 0.0,
+            "empirical_abs_d_kappa_max": 0.0
+          },
+          {
+            "profile": {
+              "name": "stress_h24_n15",
+              "horizon": 24,
+              "noise_amp": 0.015,
+              "trials": 500
+            },
+            "empirical_fd_samples_d_rho": [
+              1.5,
+              2.1000000000000005,
+              2.6999999999999997,
+              2.3000000000000007,
+              1.9000000000000004,
+              1.8000000000000003,
+              2.0000000000000004
+            ],
+            "empirical_fd_samples_d_kappa": [
+              -2.3999999999999995,
+              -0.8999999999999994,
+              -1.5,
+              -1.8000000000000003,
+              -1.6,
+              -1.1999999999999997,
+              -2.2999999999999994
+            ],
+            "empirical_abs_d_rho_q95": 2.3000000000000007,
+            "empirical_abs_d_kappa_q95": 2.2999999999999994,
+            "empirical_abs_d_rho_max": 2.6999999999999997,
+            "empirical_abs_d_kappa_max": 2.3999999999999995
+          },
+          {
+            "profile": {
+              "name": "stress_h36_n20",
+              "horizon": 36,
+              "noise_amp": 0.02,
+              "trials": 600
+            },
+            "empirical_fd_samples_d_rho": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "empirical_fd_samples_d_kappa": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "empirical_abs_d_rho_q95": 0.0,
+            "empirical_abs_d_kappa_q95": 0.0,
+            "empirical_abs_d_rho_max": 0.0,
+            "empirical_abs_d_kappa_max": 0.0
+          }
+        ],
+        "empirical_abs_max_d_rho_across_profiles": 2.6999999999999997,
+        "empirical_abs_max_d_kappa_across_profiles": 2.3999999999999995,
+        "symbolic_covers_empirical_max_rho": false,
+        "symbolic_covers_empirical_max_kappa": false,
+        "calibrated_slack_factor_rho": 0.028410956461406945,
+        "calibrated_slack_factor_kappa": 0.021574570062880907
+      }
+    ],
+    "global_summary": {
+      "resolved_zero_sensitivity_issue": true,
+      "all_symbolic_cover_empirical_max_rho": false,
+      "all_symbolic_cover_empirical_max_kappa": false
+    },
+    "theorem_scope_limit": "empirical sensitivity resolution and surrogate slack calibration only; not selector closure and not ToE closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2273_candidate",
+    "goal": "derive closed-form tightened envelope constants from calibrated empirical maxima with explicit safety multiplier policy"
+  },
+  "gatekeeper_checks": {
+    "calibrated_rows_exported": true,
+    "resolved_zero_sensitivity_issue": true,
+    "all_symbolic_cover_empirical_max_rho": false,
+    "all_symbolic_cover_empirical_max_kappa": false,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

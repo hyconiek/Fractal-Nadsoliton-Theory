@@ -1,0 +1,71 @@
+{
+  "schema_version": "p2266_s1216_v1",
+  "packet_id": "P2266",
+  "stage_id": "S1216",
+  "produced_by": "p2266_s1216_strict_nu_branch_open_gaps_g1_g2_g3_execution_contract.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_OPEN_GAPS_G1_G2_G3_EXECUTION_CONTRACT",
+  "strict_nu_branch_open_gaps_execution_contract": {
+    "contract_id": "STRICT_NU_BRANCH_OPEN_GAPS_CONTRACT_V1",
+    "source_packets": [
+      "generated/p2265_s1215_strict_nu_branch_task3_closure_gap_matrix_probe.json"
+    ],
+    "gap_contract_rows": [
+      {
+        "id": "G1_reduction_certainty",
+        "prior_status": "PARTIAL",
+        "description": "Need stronger-than-overlap evidence that reduction stays positive under broader sampling assumptions.",
+        "execution_contract": {
+          "objective": "Tighten reduction certainty beyond overlap-only evidence.",
+          "deliverable": "seed_draw_sensitivity_table + one-sided positive-lift certificate",
+          "acceptance_rule": "bootstrap_ci95_low > 0 for every declared seed/draw slice",
+          "status_after_contract": "PARTIAL_READY_FOR_NUMERIC_REPLAY"
+        },
+        "post_contract_status": "PARTIAL_READY_FOR_NUMERIC_REPLAY"
+      },
+      {
+        "id": "G2_nonlinear_trajectory_realism",
+        "prior_status": "OPEN",
+        "description": "Current validation is still synthetic/proxy; need nonlinear trajectory residual validation with perturbation families.",
+        "execution_contract": {
+          "objective": "Move from proxy consistency to nonlinear trajectory residual validation.",
+          "deliverable": "nonlinear trajectory family residual ledger (bounded perturbation classes)",
+          "acceptance_rule": "max_abs_residual <= declared epsilon on each perturbation family",
+          "status_after_contract": "PARTIAL_READY_FOR_RESIDUAL_REPLAY"
+        },
+        "post_contract_status": "PARTIAL_READY_FOR_RESIDUAL_REPLAY"
+      },
+      {
+        "id": "G3_operational_policy_rule",
+        "prior_status": "OPEN",
+        "description": "Need exportable decision rule mapping risk tolerance -> controller parameters with explicit safety certificate.",
+        "execution_contract": {
+          "objective": "Export risk->controller policy rule with explicit no-false-pass safety bounds.",
+          "deliverable": "risk-calibrated parameter map + safety certificate",
+          "acceptance_rule": "every exported policy row includes bounded-risk domain + positivity_guard=true",
+          "status_after_contract": "PARTIAL_READY_FOR_POLICY_REPLAY"
+        },
+        "post_contract_status": "PARTIAL_READY_FOR_POLICY_REPLAY"
+      }
+    ],
+    "closure_score": 0.0,
+    "closure_score_interpretation": "Execution contracts exported for G1/G2/G3, but no theorem-grade gap discharge claimed yet.",
+    "theorem_scope_limit": "execution-contract freeze only; not strict-core selector closure and not ToE closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2267_candidate",
+    "goal": "run G1 contract replay and export one-sided positivity lift certificate table"
+  },
+  "gatekeeper_checks": {
+    "all_three_gaps_contracted": true,
+    "g1_contracted": true,
+    "g2_contracted": true,
+    "g3_contracted": true,
+    "closure_score_bounded": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

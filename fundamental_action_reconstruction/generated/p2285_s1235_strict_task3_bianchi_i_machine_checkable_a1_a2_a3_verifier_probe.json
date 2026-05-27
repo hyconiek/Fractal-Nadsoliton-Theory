@@ -1,0 +1,47 @@
+{
+  "schema_version": "p2285_s1235_v1",
+  "packet_id": "P2285",
+  "stage_id": "S1235",
+  "produced_by": "p2285_s1235_strict_task3_bianchi_i_machine_checkable_a1_a2_a3_verifier_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_TASK3_BIANCHI_I_MACHINE_CHECKABLE_A1_A2_A3_VERIFIER_PROBE",
+  "strict_task3_bianchi_i_machine_checkable_a1_a2_a3_verifier_probe": {
+    "probe_id": "STRICT_TASK3_BIANCHI_I_MACHINE_CHECKABLE_A1_A2_A3_VERIFIER_PROBE_V1",
+    "source_packets": [
+      "generated/p2281_s1231_strict_nu_branch_group_policy_minimal_config_fresh_replay_validation_probe.json",
+      "generated/p2282_s1232_strict_task3_global_bianchi_i_g1_g2_g3_closure_matrix_probe.json",
+      "generated/p2284_s1234_strict_task3_bianchi_i_quantified_premise_table_and_theorem_bridge_draft_probe.json"
+    ],
+    "recomputed": {
+      "A1": false,
+      "A2": false,
+      "A3": true
+    },
+    "reported_from_p2284": {
+      "A1": false,
+      "A2": false,
+      "A3": true
+    },
+    "consistency": {
+      "A1": true,
+      "A2": true,
+      "A3": true
+    },
+    "verifier_pass": false,
+    "theorem_scope_limit": "deterministic verifier for premise consistency only; not theorem proof and not selector/ToE closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2286_candidate",
+    "goal": "export immutable signed certificate bundle (A1/A2/A3 + verifier_pass) for downstream theorem-attempt gating"
+  },
+  "gatekeeper_checks": {
+    "consistency_rows_exported": true,
+    "all_consistency_flags_boolean": true,
+    "contains_verifier_pass": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}
