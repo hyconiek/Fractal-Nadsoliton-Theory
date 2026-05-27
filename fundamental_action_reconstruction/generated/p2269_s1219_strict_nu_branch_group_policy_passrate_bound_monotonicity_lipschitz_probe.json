@@ -1,0 +1,83 @@
+{
+  "schema_version": "p2269_s1219_v1",
+  "packet_id": "P2269",
+  "stage_id": "S1219",
+  "produced_by": "p2269_s1219_strict_nu_branch_group_policy_passrate_bound_monotonicity_lipschitz_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_GROUP_POLICY_PASSRATE_BOUND_MONOTONICITY_LIPSCHITZ_PROBE",
+  "strict_nu_branch_group_policy_passrate_bound_monotonicity_lipschitz_probe": {
+    "probe_id": "STRICT_NU_BRANCH_GROUP_POLICY_PASSRATE_BOUND_MONOTONICITY_LIPSCHITZ_PROBE_V1",
+    "source_packets": [
+      "generated/p2268_s1218_strict_nu_branch_group_policy_certificate_passrate_lower_bound_probe.json"
+    ],
+    "finite_difference_eps": 1e-05,
+    "local_checks": [
+      {
+        "risk_tolerance": 0.01,
+        "rho": 0.885,
+        "kappa_scale": 1.16,
+        "bound_value": 0.9607985585529902,
+        "d_bound_d_rho_fd": 0.06608322721257665,
+        "d_bound_d_kappa_fd": -0.04445737665781379,
+        "monotone_in_rho_non_decreasing_local": true,
+        "monotone_in_kappa_non_increasing_local": true
+      },
+      {
+        "risk_tolerance": 0.02,
+        "rho": 0.87,
+        "kappa_scale": 1.12,
+        "bound_value": 0.9615955150030997,
+        "d_bound_d_rho_fd": 0.06556613342256767,
+        "d_bound_d_kappa_fd": -0.04476401820330266,
+        "monotone_in_rho_non_decreasing_local": true,
+        "monotone_in_kappa_non_increasing_local": true
+      },
+      {
+        "risk_tolerance": 0.05,
+        "rho": 0.825,
+        "kappa_scale": 1.0,
+        "bound_value": 0.9641142695244356,
+        "d_bound_d_rho_fd": 0.06374234063910578,
+        "d_bound_d_kappa_fd": -0.0457516987406592,
+        "monotone_in_rho_non_decreasing_local": true,
+        "monotone_in_kappa_non_increasing_local": true
+      },
+      {
+        "risk_tolerance": 0.1,
+        "rho": 0.75,
+        "kappa_scale": 1.0,
+        "bound_value": 0.9588697805724845,
+        "d_bound_d_rho_fd": 0.07670859035746602,
+        "d_bound_d_kappa_fd": -0.051779069232260604,
+        "monotone_in_rho_non_decreasing_local": true,
+        "monotone_in_kappa_non_increasing_local": true
+      }
+    ],
+    "lipschitz_certificate_l1": 0.12848765958972663,
+    "monotonicity_summary": {
+      "min_d_bound_d_rho_fd": 0.06374234063910578,
+      "max_d_bound_d_kappa_fd": -0.04445737665781379,
+      "all_rows_monotone_in_rho": true,
+      "all_rows_monotone_in_kappa": true
+    },
+    "physical_interpretation_note": "Higher rho increases effective control attenuation and should weakly raise conservative certificate survival; larger kappa_scale weakens attenuation and should weakly lower survival.",
+    "theorem_scope_limit": "local finite-difference monotonicity/Lipschitz evidence for synthetic surrogate only; not a legacy->strict bridge theorem and not strict-core selector closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2270_candidate",
+    "goal": "derive closed-form symbolic derivative bounds under explicit admissible box constraints for rho and kappa_scale"
+  },
+  "gatekeeper_checks": {
+    "monotonicity_lipschitz_exported": true,
+    "all_rows_monotone_in_rho": true,
+    "all_rows_monotone_in_kappa": true,
+    "lipschitz_l1_nonnegative": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": "p2252_s1202_v1",
+  "packet_id": "P2252",
+  "stage_id": "S1202",
+  "produced_by": "p2252_s1202_strict_nu_branch_group_policy_adaptive_rho_curvature_proxy_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_GROUP_POLICY_ADAPTIVE_RHO_CURVATURE_PROXY_PROBE",
+  "strict_nu_branch_group_policy_adaptive_rho_curvature_proxy_probe": {
+    "probe_id": "STRICT_NU_BRANCH_GROUP_POLICY_ADAPTIVE_RHO_CURVATURE_PROXY_PROBE_V1",
+    "source_packets": [
+      "generated/p2251_s1201_strict_nu_branch_group_policy_direction_field_rho_schedule_probe.json"
+    ],
+    "inputs": {
+      "initial_group_count": 1.0,
+      "initial_load_ratio": 1.0,
+      "total_coverage_mass": 1.0,
+      "kappa_reference": 1.0
+    },
+    "curvature_proxy_model": {
+      "base_margin": 0.0,
+      "normalization_scale": 1.0,
+      "curvature_proxy": 1.0,
+      "rho_min": 0.55,
+      "rho_max": 0.9,
+      "rho_adaptive": 0.55,
+      "rho_baseline": 0.8,
+      "conservative_gap_vs_baseline": 0.25
+    },
+    "physical_interpretation_note": "Curvature proxy acts as near-boundary fragility indicator: shrinking margin raises effective geometric stress, and adaptive rho tightens controller aggressiveness to preserve sign-stability budget.",
+    "theorem_scope_limit": "local adaptive-rho proxy diagnostic only; not a legacy->strict bridge theorem and not strict-core selector closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2253_candidate",
+    "goal": "embed adaptive rho into multi-step trajectory and compare invariant preservation vs fixed rho under matched direction fields"
+  },
+  "gatekeeper_checks": {
+    "adaptive_rho_exported": true,
+    "curvature_proxy_bounded": true,
+    "rho_within_bounds": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

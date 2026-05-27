@@ -1,0 +1,46 @@
+{
+  "schema_version": "p2244_s1194_v1",
+  "packet_id": "P2244",
+  "stage_id": "S1194",
+  "produced_by": "p2244_s1194_strict_nu_branch_group_policy_violation_tail_bound_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_GROUP_POLICY_VIOLATION_TAIL_BOUND_PROBE",
+  "strict_nu_branch_group_policy_violation_tail_bound_probe": {
+    "probe_id": "STRICT_NU_BRANCH_GROUP_POLICY_VIOLATION_TAIL_BOUND_PROBE_V1",
+    "source_packets": [
+      "generated/p2243_s1193_strict_nu_branch_group_policy_constraint_monte_carlo_envelope_probe.json"
+    ],
+    "inputs": {
+      "group_count": 1,
+      "total_coverage_mass": 1.0,
+      "load_ratio_threshold": 1.989228286066882e-16,
+      "draw_count": 2000,
+      "empirical_violation_probability": 1.0
+    },
+    "derived_bounds": {
+      "required_mass_threshold": 1.989228286066882e-16,
+      "mass_gap": 0.9999999999999998,
+      "deterministic_adversarial_violation_upper_bound": 0.0,
+      "hoeffding_empirical_violation_upper_bound_95": 1.0
+    },
+    "physical_interpretation_note": "Mass-threshold surplus controls deterministic worst-case starvation risk (0/1 bound), while Hoeffding upper bound quantifies residual finite-sample uncertainty of observed violation frequency.",
+    "theorem_scope_limit": "finite-sample strict-lane tail-bound diagnostic only; not a legacy->strict bridge theorem and not strict-core selector closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2245_candidate",
+    "goal": "calibrate conservative policy reserve factor kappa so deterministic and statistical bounds stay below operational risk tolerance"
+  },
+  "gatekeeper_checks": {
+    "tail_bound_exported": true,
+    "deterministic_bound_computable": true,
+    "statistical_bound_computable": true,
+    "mass_gap_reported": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

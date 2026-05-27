@@ -1,0 +1,50 @@
+{
+  "schema_version": "p2249_s1199_v1",
+  "packet_id": "P2249",
+  "stage_id": "S1199",
+  "produced_by": "p2249_s1199_strict_nu_branch_group_policy_conservative_step_controller_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_GROUP_POLICY_CONSERVATIVE_STEP_CONTROLLER_PROBE",
+  "strict_nu_branch_group_policy_conservative_step_controller_probe": {
+    "probe_id": "STRICT_NU_BRANCH_GROUP_POLICY_CONSERVATIVE_STEP_CONTROLLER_PROBE_V1",
+    "source_packets": [
+      "generated/p2248_s1198_strict_nu_branch_group_policy_sensitivity_finite_difference_validation_probe.json"
+    ],
+    "inputs": {
+      "base_group_count": 1.0,
+      "base_load_ratio": 1.989228286066882e-16,
+      "base_total_coverage_mass": 1.0,
+      "kappa_reference": 20.0,
+      "base_margin": 0.999999999999996
+    },
+    "controller_rule": {
+      "inequality": "delta_group_count + kappa_reference*delta_load_ratio <= rho*base_margin",
+      "rho": 0.8,
+      "proposed_delta_group_count": 0.1,
+      "proposed_delta_load_ratio": 5e-14,
+      "lhs_budget_use": 0.10000000000100001,
+      "rhs_budget_cap": 0.7999999999999968,
+      "step_admissible": true,
+      "guaranteed_post_step_margin_lower_bound": 0.899999999998996
+    },
+    "physical_interpretation_note": "Controller treats margin as a conserved safety budget: each policy move spends budget at rates set by sensitivity slopes; admissible moves preserve nonnegative safety margin by construction.",
+    "theorem_scope_limit": "local first-order controller diagnostic only; not a legacy->strict bridge theorem and not strict-core selector closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2250_candidate",
+    "goal": "run multi-step simulated policy trajectory with controller to verify cumulative margin invariance and stopping behavior near boundary"
+  },
+  "gatekeeper_checks": {
+    "controller_exported": true,
+    "base_margin_nonnegative": true,
+    "step_admissibility_computable": true,
+    "guaranteed_margin_nonnegative": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

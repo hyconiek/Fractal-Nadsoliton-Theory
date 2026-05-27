@@ -1,0 +1,65 @@
+{
+  "schema_version": "p2247_s1197_v1",
+  "packet_id": "P2247",
+  "stage_id": "S1197",
+  "produced_by": "p2247_s1197_strict_nu_branch_group_policy_boundary_sensitivity_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_GROUP_POLICY_BOUNDARY_SENSITIVITY_PROBE",
+  "strict_nu_branch_group_policy_boundary_sensitivity_probe": {
+    "probe_id": "STRICT_NU_BRANCH_GROUP_POLICY_BOUNDARY_SENSITIVITY_PROBE_V1",
+    "source_packets": [
+      "generated/p2246_s1196_strict_nu_branch_group_policy_feasibility_surface_probe.json"
+    ],
+    "inputs": {
+      "base_group_count": 1,
+      "base_load_ratio": 1.989228286066882e-16,
+      "base_total_coverage_mass": 1.0,
+      "kappa_reference": 20.0
+    },
+    "analytic_sensitivity": {
+      "base_margin": 0.999999999999996,
+      "dmargin_d_group_count": -1.0,
+      "dmargin_d_load_ratio": -20.0
+    },
+    "closed_form_boundary": {
+      "equation": "critical_load_ratio(n) = (total_coverage_mass - (n-1))/kappa_reference",
+      "rows": [
+        {
+          "group_count": 1,
+          "critical_load_ratio": 0.05
+        },
+        {
+          "group_count": 1,
+          "critical_load_ratio": 0.05
+        },
+        {
+          "group_count": 2,
+          "critical_load_ratio": 0.0
+        },
+        {
+          "group_count": 3,
+          "critical_load_ratio": -0.05
+        }
+      ]
+    },
+    "physical_interpretation_note": "Boundary sensitivity quantifies robustness erosion rate: each added group consumes one full margin unit, while load increase consumes kappa-weighted margin, giving a physical slope map of policy fragility.",
+    "theorem_scope_limit": "local analytic sensitivity diagnostic only; not a legacy->strict bridge theorem and not strict-core selector closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2248_candidate",
+    "goal": "validate analytic sensitivity against finite-difference estimates on random neighborhood points of feasibility surface"
+  },
+  "gatekeeper_checks": {
+    "boundary_sensitivity_exported": true,
+    "derivative_wrt_group_count_negative": true,
+    "derivative_wrt_load_negative": true,
+    "closed_form_boundary_exported": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": "p2256_s1206_v1",
+  "packet_id": "P2256",
+  "stage_id": "S1206",
+  "produced_by": "p2256_s1206_strict_nu_branch_group_policy_dominance_boundary_curve_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_GROUP_POLICY_DOMINANCE_BOUNDARY_CURVE_PROBE",
+  "strict_nu_branch_group_policy_dominance_boundary_curve_probe": {
+    "probe_id": "STRICT_NU_BRANCH_GROUP_POLICY_DOMINANCE_BOUNDARY_CURVE_PROBE_V1",
+    "source_packets": [
+      "generated/p2255_s1205_strict_nu_branch_group_policy_dominance_envelope_scan_probe.json"
+    ],
+    "inputs": {
+      "adaptive_minimum_margin": 0.0,
+      "progress_gap": 0.0,
+      "horizon_scales": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    "analytic_boundary": {
+      "equation": "critical_margin_floor(h) = adaptive_minimum_margin, with progress_gap*h >= 0",
+      "rows": [
+        {
+          "horizon_scale": 0.8,
+          "critical_margin_floor": 0.0,
+          "progress_viable": true,
+          "dominance_region_statement": "m_floor <= critical_margin_floor and progress_viable"
+        },
+        {
+          "horizon_scale": 1.0,
+          "critical_margin_floor": 0.0,
+          "progress_viable": true,
+          "dominance_region_statement": "m_floor <= critical_margin_floor and progress_viable"
+        },
+        {
+          "horizon_scale": 1.2,
+          "critical_margin_floor": 0.0,
+          "progress_viable": true,
+          "dominance_region_statement": "m_floor <= critical_margin_floor and progress_viable"
+        }
+      ],
+      "all_progress_viable": true
+    },
+    "physical_interpretation_note": "Boundary curve identifies safety-floor threshold above which adaptive controller cannot dominate; when progress gap is nonnegative, dominance region is margin-floor limited by adaptive minimum margin.",
+    "theorem_scope_limit": "finite-grid boundary-curve diagnostic only; not a legacy->strict bridge theorem and not strict-core selector closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2257_candidate",
+    "goal": "extend boundary model with second-order correction from trajectory curvature and evaluate shift of critical margin floor"
+  },
+  "gatekeeper_checks": {
+    "boundary_curve_exported": true,
+    "rows_nonempty": true,
+    "all_progress_viable_flag_exported": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

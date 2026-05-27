@@ -1,0 +1,90 @@
+{
+  "schema_version": "p2270_s1220_v1",
+  "packet_id": "P2270",
+  "stage_id": "S1220",
+  "produced_by": "p2270_s1220_strict_nu_branch_group_policy_symbolic_derivative_bound_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_GROUP_POLICY_SYMBOLIC_DERIVATIVE_BOUND_PROBE",
+  "strict_nu_branch_group_policy_symbolic_derivative_bound_probe": {
+    "probe_id": "STRICT_NU_BRANCH_GROUP_POLICY_SYMBOLIC_DERIVATIVE_BOUND_PROBE_V1",
+    "source_packets": [
+      "generated/p2269_s1219_strict_nu_branch_group_policy_passrate_bound_monotonicity_lipschitz_probe.json"
+    ],
+    "admissible_box": {
+      "rho_min": 0.55,
+      "rho_max": 0.95,
+      "kappa_scale_min": 1.0,
+      "kappa_scale_max": 1.8
+    },
+    "symbolic_row_checks": [
+      {
+        "risk_tolerance": 0.01,
+        "rho": 0.885,
+        "kappa_scale": 1.16,
+        "symbolic_bound_value": 0.9607985585529902,
+        "symbolic_d_bound_d_rho": 0.06608395118729994,
+        "symbolic_d_bound_d_kappa": -0.04445728923474005,
+        "symbolic_monotone_in_rho": true,
+        "symbolic_monotone_in_kappa": true
+      },
+      {
+        "risk_tolerance": 0.02,
+        "rho": 0.87,
+        "kappa_scale": 1.12,
+        "symbolic_bound_value": 0.9615955150030997,
+        "symbolic_d_bound_d_rho": 0.06556686469956928,
+        "symbolic_d_bound_d_kappa": -0.04476392914669602,
+        "symbolic_monotone_in_rho": true,
+        "symbolic_monotone_in_kappa": true
+      },
+      {
+        "risk_tolerance": 0.05,
+        "rho": 0.825,
+        "kappa_scale": 1.0,
+        "symbolic_bound_value": 0.9641142695244356,
+        "symbolic_d_bound_d_rho": 0.0637430921999627,
+        "symbolic_d_bound_d_kappa": -0.04575160442652323,
+        "symbolic_monotone_in_rho": true,
+        "symbolic_monotone_in_kappa": true
+      },
+      {
+        "risk_tolerance": 0.1,
+        "rho": 0.75,
+        "kappa_scale": 1.0,
+        "symbolic_bound_value": 0.9588697805724845,
+        "symbolic_d_bound_d_rho": 0.07670958244579874,
+        "symbolic_d_bound_d_kappa": -0.051778968150914165,
+        "symbolic_monotone_in_rho": true,
+        "symbolic_monotone_in_kappa": true
+      }
+    ],
+    "symbolic_box_certificates": {
+      "min_d_bound_d_rho_over_box": 0.048418436348939324,
+      "max_d_bound_d_kappa_over_box": -0.03771796191582373,
+      "max_abs_d_bound_d_rho_over_box": 0.2704552898774412,
+      "max_abs_d_bound_d_kappa_over_box": 0.09261280280764869,
+      "l1_lipschitz_over_box": 0.3630680926850899,
+      "monotone_in_rho_over_box": true,
+      "monotone_in_kappa_over_box": true
+    },
+    "physical_interpretation_note": "W operational box, stronger controller response (higher rho) increases conservative survival bound, while stronger reserve scaling (higher kappa_scale) lowers it; symbolic derivatives quantify this transport direction.",
+    "theorem_scope_limit": "symbolic derivatives for synthetic surrogate in bounded box only; not a legacy->strict bridge theorem and not strict-core selector closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2271_candidate",
+    "goal": "compare symbolic derivative bounds against multi-seed empirical finite-difference envelopes to quantify model-form slack"
+  },
+  "gatekeeper_checks": {
+    "symbolic_derivative_bounds_exported": true,
+    "symbolic_monotone_in_rho_over_box": true,
+    "symbolic_monotone_in_kappa_over_box": true,
+    "symbolic_lipschitz_nonnegative": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

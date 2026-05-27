@@ -1,0 +1,49 @@
+{
+  "schema_version": "p2240_s1190_v1",
+  "packet_id": "P2240",
+  "stage_id": "S1190",
+  "produced_by": "p2240_s1190_strict_nu_branch_group_policy_sign_stability_condition_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_GROUP_POLICY_SIGN_STABILITY_CONDITION_PROBE",
+  "strict_nu_branch_group_policy_sign_stability_condition_probe": {
+    "probe_id": "STRICT_NU_BRANCH_GROUP_POLICY_SIGN_STABILITY_CONDITION_PROBE_V1",
+    "source_packets": [
+      "generated/p2239_s1189_strict_nu_branch_budget_inequality_target_group_aggregation_probe.json"
+    ],
+    "derived_condition": {
+      "inequality": "coverage_fraction >= inequality_load_ratio",
+      "required_min_coverage": 1.989228286066882e-16,
+      "observed_min_coverage": 1.0,
+      "signed_margin": 0.9999999999999998,
+      "normalized_margin": 999999999999.9998
+    },
+    "per_group_condition_rows": [
+      {
+        "group_id": "fallback",
+        "coverage_fraction": 1.0,
+        "required_min_coverage": 1.989228286066882e-16,
+        "signed_slack": 0.9999999999999998,
+        "condition_holds": true
+      }
+    ],
+    "all_groups_satisfy_sufficient_condition": true,
+    "physical_interpretation_note": "If each policy-group keeps coverage above load ratio, signed safety response remains monotone-stable under grouped mixing in this finite-sample strict-lane diagnostic.",
+    "theorem_scope_limit": "finite grouped-policy sufficient-condition check only; not a legacy->strict bridge theorem and not strict-core selector closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2241_candidate",
+    "goal": "stress-test sufficient condition against adversarial coverage redistributions while preserving fixed global coverage mass"
+  },
+  "gatekeeper_checks": {
+    "group_sign_stability_condition_exported": true,
+    "all_groups_satisfy_sufficient_condition": true,
+    "signed_margin_nonnegative": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

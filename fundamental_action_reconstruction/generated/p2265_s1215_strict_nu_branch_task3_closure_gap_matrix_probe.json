@@ -1,0 +1,57 @@
+{
+  "schema_version": "p2265_s1215_v1",
+  "packet_id": "P2265",
+  "stage_id": "S1215",
+  "produced_by": "p2265_s1215_strict_nu_branch_task3_closure_gap_matrix_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_TASK3_CLOSURE_GAP_MATRIX_PROBE",
+  "strict_nu_branch_task3_closure_gap_matrix_probe": {
+    "probe_id": "STRICT_NU_BRANCH_TASK3_CLOSURE_GAP_MATRIX_PROBE_V1",
+    "source_packets": [
+      "generated/p2264_s1214_strict_nu_branch_group_policy_bootstrap_ci_crosscheck_probe.json"
+    ],
+    "upstream_summary": {
+      "bootstrap_ci95_low": 0.0,
+      "bootstrap_ci_overlap_with_normal": true
+    },
+    "task3_gap_matrix": [
+      {
+        "id": "G1_reduction_certainty",
+        "description": "Need stronger-than-overlap evidence that reduction stays positive under broader sampling assumptions.",
+        "status": "PARTIAL",
+        "next_object": "larger-seed + larger-draw CI tightening"
+      },
+      {
+        "id": "G2_nonlinear_trajectory_realism",
+        "description": "Current validation is still synthetic/proxy; need nonlinear trajectory residual validation with perturbation families.",
+        "status": "OPEN",
+        "next_object": "nonlinear residual simulator packet"
+      },
+      {
+        "id": "G3_operational_policy_rule",
+        "description": "Need exportable decision rule mapping risk tolerance -> controller parameters with explicit safety certificate.",
+        "status": "OPEN",
+        "next_object": "risk-calibrated controller map"
+      }
+    ],
+    "closure_score": 0.0,
+    "physical_interpretation_note": "Task-3 closure still requires moving from proxy/synthetic statistical consistency to stronger physically anchored nonlinear validation and operationally certifiable control rules.",
+    "theorem_scope_limit": "closure-gap planning diagnostic only; not a legacy->strict bridge theorem and not strict-core selector closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2266_candidate",
+    "goal": "export risk-calibrated controller map with explicit positivity certificate over selected perturbation family"
+  },
+  "gatekeeper_checks": {
+    "task3_gap_matrix_exported": true,
+    "closure_score_bounded": true,
+    "contains_open_gaps": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

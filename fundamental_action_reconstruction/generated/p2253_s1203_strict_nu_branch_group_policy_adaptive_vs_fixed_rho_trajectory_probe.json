@@ -1,0 +1,81 @@
+{
+  "schema_version": "p2253_s1203_v1",
+  "packet_id": "P2253",
+  "stage_id": "S1203",
+  "produced_by": "p2253_s1203_strict_nu_branch_group_policy_adaptive_vs_fixed_rho_trajectory_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_GROUP_POLICY_ADAPTIVE_VS_FIXED_RHO_TRAJECTORY_PROBE",
+  "strict_nu_branch_group_policy_adaptive_vs_fixed_rho_trajectory_probe": {
+    "probe_id": "STRICT_NU_BRANCH_GROUP_POLICY_ADAPTIVE_VS_FIXED_RHO_TRAJECTORY_PROBE_V1",
+    "source_packets": [
+      "generated/p2252_s1202_strict_nu_branch_group_policy_adaptive_rho_curvature_proxy_probe.json"
+    ],
+    "inputs": {
+      "initial_group_count": 1.0,
+      "initial_load_ratio": 1.0,
+      "total_coverage_mass": 1.0,
+      "kappa_reference": 1.0,
+      "horizon": 10,
+      "direction": {
+        "delta_group_count": 0.1,
+        "delta_load_ratio": 0.05
+      }
+    },
+    "fixed_rho_result": {
+      "mode": "fixed",
+      "rows": [
+        {
+          "step": 0,
+          "rho": 0.8,
+          "scale": 0.0,
+          "budget_use": 0.0,
+          "margin_after": 0.0
+        }
+      ],
+      "executed_steps": 1,
+      "stop_reason": "controller_stopped_near_boundary",
+      "minimum_margin": 0.0,
+      "cumulative_budget_use": 0.0,
+      "nonnegative_margin": true
+    },
+    "adaptive_rho_result": {
+      "mode": "adaptive",
+      "rows": [
+        {
+          "step": 0,
+          "rho": 0.55,
+          "scale": 0.0,
+          "budget_use": 0.0,
+          "margin_after": 0.0
+        }
+      ],
+      "executed_steps": 1,
+      "stop_reason": "controller_stopped_near_boundary",
+      "minimum_margin": 0.0,
+      "cumulative_budget_use": 0.0,
+      "nonnegative_margin": true
+    },
+    "comparison": {
+      "adaptive_minus_fixed_cumulative_progress": 0.0,
+      "adaptive_minus_fixed_min_margin": 0.0
+    },
+    "physical_interpretation_note": "Direct trajectory comparison quantifies trade-off between stability reserve and policy progress: adaptive rho modulates local aggressiveness near boundary while preserving nonnegative margin invariants.",
+    "theorem_scope_limit": "finite-horizon comparative controller diagnostic only; not a legacy->strict bridge theorem and not strict-core selector closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2254_candidate",
+    "goal": "derive sufficient dominance condition when adaptive-rho outperforms fixed-rho in cumulative progress under minimum-margin floor constraint"
+  },
+  "gatekeeper_checks": {
+    "adaptive_vs_fixed_exported": true,
+    "fixed_nonnegative_margin": true,
+    "adaptive_nonnegative_margin": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

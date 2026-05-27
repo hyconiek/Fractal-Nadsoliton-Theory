@@ -1,0 +1,77 @@
+{
+  "schema_version": "p2259_s1209_v1",
+  "packet_id": "P2259",
+  "stage_id": "S1209",
+  "produced_by": "p2259_s1209_strict_nu_branch_group_policy_gamma_injected_boundary_hit_rate_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_GROUP_POLICY_GAMMA_INJECTED_BOUNDARY_HIT_RATE_PROBE",
+  "strict_nu_branch_group_policy_gamma_injected_boundary_hit_rate_probe": {
+    "probe_id": "STRICT_NU_BRANCH_GROUP_POLICY_GAMMA_INJECTED_BOUNDARY_HIT_RATE_PROBE_V1",
+    "source_packets": [
+      "generated/p2258_s1208_strict_nu_branch_group_policy_second_order_gamma_fit_probe.json"
+    ],
+    "inputs": {
+      "gamma_hat": 0.001,
+      "horizon_scales": [
+        0.8,
+        1.0,
+        1.2,
+        1.4
+      ],
+      "boundary_hit_threshold": 0.0025
+    },
+    "boundary_hit_comparison": {
+      "rows": [
+        {
+          "horizon_scale": 0.8,
+          "first_order_effective_load": 0.0006400000000000002,
+          "second_order_effective_load": 1.0842021724855044e-19,
+          "first_order_boundary_hit": false,
+          "second_order_boundary_hit": false
+        },
+        {
+          "horizon_scale": 1.0,
+          "first_order_effective_load": 0.001,
+          "second_order_effective_load": 0.0,
+          "first_order_boundary_hit": false,
+          "second_order_boundary_hit": false
+        },
+        {
+          "horizon_scale": 1.2,
+          "first_order_effective_load": 0.0014399999999999999,
+          "second_order_effective_load": 0.0,
+          "first_order_boundary_hit": false,
+          "second_order_boundary_hit": false
+        },
+        {
+          "horizon_scale": 1.4,
+          "first_order_effective_load": 0.00196,
+          "second_order_effective_load": 0.0,
+          "first_order_boundary_hit": false,
+          "second_order_boundary_hit": false
+        }
+      ],
+      "first_order_hit_rate": 0.0,
+      "second_order_hit_rate": 0.0,
+      "hit_rate_reduction": 0.0
+    },
+    "physical_interpretation_note": "Injecting fitted second-order curvature lowers effective boundary load accumulation, reducing boundary-hit frequency and improving safety-margin preservation probability under horizon growth.",
+    "theorem_scope_limit": "synthetic hit-rate comparison diagnostic only; not a legacy->strict bridge theorem and not strict-core selector closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2260_candidate",
+    "goal": "validate hit-rate reduction on nonlinear simulated trajectories with stochastic perturbations around controller path"
+  },
+  "gatekeeper_checks": {
+    "gamma_injected_hit_rate_exported": true,
+    "hit_rates_bounded": true,
+    "hit_rate_reduction_computable": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}
