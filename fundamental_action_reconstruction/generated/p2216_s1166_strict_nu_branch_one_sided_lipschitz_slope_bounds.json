@@ -1,0 +1,46 @@
+{
+  "schema_version": "p2216_s1166_v1",
+  "packet_id": "P2216",
+  "stage_id": "S1166",
+  "produced_by": "p2216_s1166_strict_nu_branch_one_sided_lipschitz_slope_bounds.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_ONE_SIDED_LIPSCHITZ_SLOPE_BOUNDS",
+  "strict_nu_branch_one_sided_lipschitz_slope_bounds": {
+    "certificate_id": "STRICT_NU_BRANCH_ONE_SIDED_LIPSCHITZ_SLOPE_BOUNDS_V1",
+    "source_packets": [
+      "generated/p2209_s1159_strict_nu_branch_transport_nonvanishing_threshold_map.json",
+      "generated/p2215_s1165_strict_nu_branch_crossing_neighborhood_safety_factor_map.json"
+    ],
+    "reference": {
+      "dm_star": 0.5876474770575525,
+      "margin": 0.17674153430562412
+    },
+    "one_sided_local_slopes": {
+      "left_secant_at_dm_star": 3.3863839763809844,
+      "right_secant_at_dm_star": 3.4204179859551096
+    },
+    "neighborhood_slope_envelopes": {
+      "below_dm_star_min_secant": 2.8928908339928445,
+      "below_dm_star_max_secant": 3.3523499664505243,
+      "above_dm_star_min_secant": 3.4544519958855693,
+      "above_dm_star_max_secant": 3.9139111283432593
+    },
+    "robustness_interpretation": "safety-factor perturbation scales approximately linearly with |delta dm| under exported one-sided secant slope bounds in local neighborhood",
+    "theorem_scope_limit": "finite-sample one-sided local slope bounds only; not global Task-3 closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2217_candidate",
+    "goal": "convert one-sided slope bounds into explicit perturbation budget map for certifying minimal signed offset away from dm*"
+  },
+  "gatekeeper_checks": {
+    "one_sided_slope_bounds_exported": true,
+    "left_local_slope_positive": true,
+    "right_local_slope_positive": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

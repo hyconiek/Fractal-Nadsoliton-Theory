@@ -1,0 +1,49 @@
+{
+  "schema_version": "p2232_s1182_v1",
+  "packet_id": "P2232",
+  "stage_id": "S1182",
+  "produced_by": "p2232_s1182_strict_nu_branch_widened_compact_interval_monotone_extrapolation_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_WIDENED_COMPACT_INTERVAL_MONOTONE_EXTRAPOLATION_PROBE",
+  "strict_nu_branch_widened_compact_interval_monotone_extrapolation_probe": {
+    "probe_id": "STRICT_NU_BRANCH_WIDENED_COMPACT_INTERVAL_MONOTONE_EXTRAPOLATION_PROBE_V1",
+    "source_packets": [
+      "generated/p2209_s1159_strict_nu_branch_transport_nonvanishing_threshold_map.json",
+      "generated/p2214_s1164_strict_nu_branch_closed_form_threshold_consistency_certificate.json"
+    ],
+    "interval": {
+      "abs_dm_lo": 0.29382373852877625,
+      "abs_dm_hi": 0.8814712155863287,
+      "grid_size": 4001
+    },
+    "summary": {
+      "monotone_safety_factor_on_interval": true,
+      "first_crossing_row": {
+        "abs_dm": 0.5877943889268168,
+        "safety_factor": 1.0005000624993015,
+        "above_margin": true
+      },
+      "last_below_row": {
+        "abs_dm": 0.5876474770575524,
+        "safety_factor": 0.9999999999993017,
+        "above_margin": false
+      }
+    },
+    "theorem_scope_limit": "widened compact interval monotonic probe only; not global Task-3 closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2233_candidate",
+    "goal": "replace sampled monotonic probe with interval-arithmetic monotonic certificate on widened compact domain"
+  },
+  "gatekeeper_checks": {
+    "widened_compact_probe_exported": true,
+    "monotone_on_widened_interval": true,
+    "crossing_detected_on_widened_interval": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

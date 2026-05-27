@@ -1,0 +1,138 @@
+{
+  "schema_version": "p2227_s1177_v1",
+  "packet_id": "P2227",
+  "stage_id": "S1177",
+  "produced_by": "p2227_s1177_strict_nu_branch_grouped_policy_direct_coverage_matrix.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_GROUPED_POLICY_DIRECT_COVERAGE_MATRIX",
+  "strict_nu_branch_grouped_policy_direct_coverage_matrix": {
+    "matrix_id": "STRICT_NU_BRANCH_GROUPED_POLICY_DIRECT_COVERAGE_MATRIX_V1",
+    "source_packets": [
+      "generated/p2226_s1176_strict_nu_branch_grouped_policy_width_coverage_tradeoff.json",
+      "generated/p2223_s1173_strict_nu_branch_targetwise_min_inflation_optimization.json"
+    ],
+    "grouped_policy": {
+      "factor_above_dm_star": 1.0,
+      "factor_below_dm_star": 1.0
+    },
+    "rows": [
+      {
+        "certification_side": "above_dm_star",
+        "target_safety_factor": 1.001,
+        "required_factor": 1.0,
+        "applied_grouped_factor": 1.0,
+        "covered": true,
+        "slack": 0.0
+      },
+      {
+        "certification_side": "above_dm_star",
+        "target_safety_factor": 1.005,
+        "required_factor": 1.0,
+        "applied_grouped_factor": 1.0,
+        "covered": true,
+        "slack": 0.0
+      },
+      {
+        "certification_side": "above_dm_star",
+        "target_safety_factor": 1.01,
+        "required_factor": 1.0,
+        "applied_grouped_factor": 1.0,
+        "covered": true,
+        "slack": 0.0
+      },
+      {
+        "certification_side": "above_dm_star",
+        "target_safety_factor": 1.02,
+        "required_factor": 1.0,
+        "applied_grouped_factor": 1.0,
+        "covered": true,
+        "slack": 0.0
+      },
+      {
+        "certification_side": "above_dm_star",
+        "target_safety_factor": 1.05,
+        "required_factor": 1.0,
+        "applied_grouped_factor": 1.0,
+        "covered": true,
+        "slack": 0.0
+      },
+      {
+        "certification_side": "above_dm_star",
+        "target_safety_factor": 1.1,
+        "required_factor": 1.0,
+        "applied_grouped_factor": 1.0,
+        "covered": true,
+        "slack": 0.0
+      },
+      {
+        "certification_side": "below_dm_star",
+        "target_safety_factor": 0.999,
+        "required_factor": 1.0,
+        "applied_grouped_factor": 1.0,
+        "covered": true,
+        "slack": 0.0
+      },
+      {
+        "certification_side": "below_dm_star",
+        "target_safety_factor": 0.995,
+        "required_factor": 1.0,
+        "applied_grouped_factor": 1.0,
+        "covered": true,
+        "slack": 0.0
+      },
+      {
+        "certification_side": "below_dm_star",
+        "target_safety_factor": 0.99,
+        "required_factor": 1.0,
+        "applied_grouped_factor": 1.0,
+        "covered": true,
+        "slack": 0.0
+      },
+      {
+        "certification_side": "below_dm_star",
+        "target_safety_factor": 0.98,
+        "required_factor": 1.0,
+        "applied_grouped_factor": 1.0,
+        "covered": true,
+        "slack": 0.0
+      },
+      {
+        "certification_side": "below_dm_star",
+        "target_safety_factor": 0.95,
+        "required_factor": 1.0,
+        "applied_grouped_factor": 1.0,
+        "covered": true,
+        "slack": 0.0
+      },
+      {
+        "certification_side": "below_dm_star",
+        "target_safety_factor": 0.9,
+        "required_factor": 1.0,
+        "applied_grouped_factor": 1.0,
+        "covered": true,
+        "slack": 0.0
+      }
+    ],
+    "coverage_summary": {
+      "all_above_rows_covered": true,
+      "all_below_rows_covered": true,
+      "all_rows_covered": true
+    },
+    "theorem_scope_limit": "direct coverage matrix against targetwise factors only; not global Task-3 closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2228_candidate",
+    "goal": "optimize grouped factors under explicit slack regularization and verify width-cost improvement vs current grouped policy"
+  },
+  "gatekeeper_checks": {
+    "coverage_matrix_exported": true,
+    "all_rows_covered": true,
+    "nonnegative_slack_all_rows": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

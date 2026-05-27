@@ -1,0 +1,48 @@
+{
+  "schema_version": "p2212_s1162_v1",
+  "packet_id": "P2212",
+  "stage_id": "S1162",
+  "produced_by": "p2212_s1162_strict_nu_branch_monotonic_threshold_bracket_certificate.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_MONOTONIC_THRESHOLD_BRACKET_CERTIFICATE",
+  "strict_nu_branch_monotonic_threshold_bracket_certificate": {
+    "certificate_id": "STRICT_NU_BRANCH_MONOTONIC_THRESHOLD_BRACKET_CERTIFICATE_V1",
+    "source_packets": [
+      "generated/p2209_s1159_strict_nu_branch_transport_nonvanishing_threshold_map.json",
+      "generated/p2211_s1161_strict_nu_branch_extended_threshold_crossing_certificate.json"
+    ],
+    "input_bracket": {
+      "abs_dm_lo": 0.5874271092538609,
+      "abs_dm_hi": 0.5876964476808457,
+      "width": 0.0002693384269848442
+    },
+    "monotonicity_witness": {
+      "check_samples": 401,
+      "effective_bound_nondecreasing_on_bracket": true
+    },
+    "endpoint_certificate": {
+      "lo_uncertified": true,
+      "hi_certified": true,
+      "margin_at_lo": -0.00013253129645096617,
+      "margin_at_hi": 2.9458149756023122e-05
+    },
+    "certified_statement": "There exists dm* in [lo,hi] such that effective lower bound crosses min_margin on this modeled lane.",
+    "theorem_scope_limit": "modeled lower-bound lane + finite bracket certificate; not global Task-3 closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2213_candidate",
+    "goal": "bisection-refine dm* bracket to target precision and export deterministic crossing tolerance certificate"
+  },
+  "gatekeeper_checks": {
+    "monotonic_bracket_certificate_exported": true,
+    "monotonicity_verified_on_bracket": true,
+    "lo_uncertified_endpoint_verified": true,
+    "hi_certified_endpoint_verified": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": "p2233_s1183_v1",
+  "packet_id": "P2233",
+  "stage_id": "S1183",
+  "produced_by": "p2233_s1183_strict_nu_branch_widened_compact_monotonic_analytic_certificate.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_WIDENED_COMPACT_MONOTONIC_ANALYTIC_CERTIFICATE",
+  "strict_nu_branch_widened_compact_monotonic_analytic_certificate": {
+    "certificate_id": "STRICT_NU_BRANCH_WIDENED_COMPACT_MONOTONIC_ANALYTIC_CERTIFICATE_V1",
+    "source_packets": [
+      "generated/p2209_s1159_strict_nu_branch_transport_nonvanishing_threshold_map.json",
+      "generated/p2214_s1164_strict_nu_branch_closed_form_threshold_consistency_certificate.json"
+    ],
+    "interval": {
+      "abs_dm_lo": 0.29382373852877625,
+      "abs_dm_hi": 0.8814712155863287
+    },
+    "analytic_claim": "For c1>0,c2>0,margin>0 and dm>=0, safety_factor(dm)=max(c1*dm,c2*dm^2)/margin is nondecreasing.",
+    "endpoint_check": {
+      "safety_factor_lo": 0.2499999999998255,
+      "safety_factor_hi": 2.2499999999984293,
+      "crossing_persists": true
+    },
+    "theorem_scope_limit": "analytic monotonicity for the modeled max(c1*dm,c2*dm^2) lane on widened compact interval only; not global Task-3 closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2234_candidate",
+    "goal": "connect analytic monotonic lane to direct transport residual witness to reduce model-gap between safety-factor lane and residual lane"
+  },
+  "gatekeeper_checks": {
+    "analytic_monotonic_certificate_exported": true,
+    "analytic_monotonicity_holds": true,
+    "crossing_persists_on_endpoints": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

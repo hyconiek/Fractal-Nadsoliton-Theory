@@ -1,0 +1,39 @@
+{
+  "schema_version": "p2225_s1175_v1",
+  "packet_id": "P2225",
+  "stage_id": "S1175",
+  "produced_by": "p2225_s1175_strict_nu_branch_continuous_alpha_mixture_optimization.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_CONTINUOUS_ALPHA_MIXTURE_OPTIMIZATION",
+  "strict_nu_branch_continuous_alpha_mixture_optimization": {
+    "optimization_id": "STRICT_NU_BRANCH_CONTINUOUS_ALPHA_MIXTURE_OPTIMIZATION_V1",
+    "source_packets": [
+      "generated/p2221_s1171_strict_nu_branch_min_inflation_factor_for_full_coverage.json",
+      "generated/p2223_s1173_strict_nu_branch_targetwise_min_inflation_optimization.json"
+    ],
+    "global_factor": 1.0482334665049586,
+    "alpha_star": 1.0,
+    "has_global_targetwise_gap": true,
+    "objective_summary": {
+      "mean_ratio_vs_global": 0.9539859506052791,
+      "worst_deficit_vs_targetwise_min": 0.0
+    },
+    "analytic_note": "For convex one-parameter mixing between global and target-wise factors, exact feasibility across all targets forces alpha=1 unless all target-wise factors equal global factor.",
+    "theorem_scope_limit": "analytic statement for this one-parameter mixture family only; not global Task-3 closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2226_candidate",
+    "goal": "optimize richer piecewise/grouped policy beyond single-alpha family to trade off feasibility and width cost"
+  },
+  "gatekeeper_checks": {
+    "continuous_alpha_optimization_exported": true,
+    "alpha_star_in_unit_interval": true,
+    "worst_deficit_zero_at_alpha_star": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}
