@@ -1,0 +1,45 @@
+{
+  "schema_version": "p2294_s1244_v1",
+  "packet_id": "P2294",
+  "stage_id": "S1244",
+  "produced_by": "p2294_s1244_strict_task3_bianchi_i_theorem_draft_ci_gate_admission_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_TASK3_BIANCHI_I_THEOREM_DRAFT_CI_GATE_ADMISSION_PROBE",
+  "strict_task3_bianchi_i_theorem_draft_ci_gate_admission_probe": {
+    "probe_id": "STRICT_TASK3_BIANCHI_I_THEOREM_DRAFT_CI_GATE_ADMISSION_PROBE_V1",
+    "source_packets": [
+      "generated/p2292_s1242_strict_task3_bianchi_i_theorem_draft_metadata_hash_validator_probe.json",
+      "generated/p2293_s1243_strict_task3_bianchi_i_metadata_validator_negative_control_matrix_probe.json"
+    ],
+    "inputs": {
+      "validator_decision": "METADATA_ACCEPT",
+      "all_expectations_met": true,
+      "matrix_has_baseline_accept": true,
+      "matrix_reject_paths_stable": true
+    },
+    "checks": {
+      "metadata_accept_required": true,
+      "negative_controls_consistent": true,
+      "baseline_accept_present": true,
+      "reject_paths_present": true
+    },
+    "ci_gate_decision": "CI_GATE_OPEN",
+    "theorem_attempt_decision": "THEOREM_DRAFT_ADMIT",
+    "theorem_scope_limit": "CI admission gating only; no theorem proof and no bridge/selector/ToE closure claim"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2295_candidate",
+    "goal": "export append-only CI-gate admission ledger with monotonic run-index and mismatch evidence pointers"
+  },
+  "gatekeeper_checks": {
+    "ci_gate_decision_exported": true,
+    "theorem_attempt_decision_exported": true,
+    "open_implies_metadata_accept": true,
+    "open_implies_negative_controls_ok": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}
