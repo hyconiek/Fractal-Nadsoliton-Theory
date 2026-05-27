@@ -1,0 +1,86 @@
+{
+  "schema_version": "p2251_s1201_v1",
+  "packet_id": "P2251",
+  "stage_id": "S1201",
+  "produced_by": "p2251_s1201_strict_nu_branch_group_policy_direction_field_rho_schedule_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_GROUP_POLICY_DIRECTION_FIELD_RHO_SCHEDULE_PROBE",
+  "strict_nu_branch_group_policy_direction_field_rho_schedule_probe": {
+    "probe_id": "STRICT_NU_BRANCH_GROUP_POLICY_DIRECTION_FIELD_RHO_SCHEDULE_PROBE_V1",
+    "source_packets": [
+      "generated/p2250_s1200_strict_nu_branch_group_policy_multistep_controller_trajectory_probe.json"
+    ],
+    "inputs": {
+      "initial_group_count": 1.0,
+      "initial_load_ratio": 1.0,
+      "total_coverage_mass": 1.0,
+      "kappa_reference": 1.0,
+      "horizon": 10
+    },
+    "scenario_results": [
+      {
+        "direction_field": "balanced",
+        "rho_schedule": "const_0p8",
+        "executed_steps": 1,
+        "cumulative_budget_progress": 0.0,
+        "minimum_margin": 0.0,
+        "stop_reason": "controller_stopped_near_boundary",
+        "nonnegative_margin": true
+      },
+      {
+        "direction_field": "balanced",
+        "rho_schedule": "adaptive_0p9_0p6",
+        "executed_steps": 1,
+        "cumulative_budget_progress": 0.0,
+        "minimum_margin": 0.0,
+        "stop_reason": "controller_stopped_near_boundary",
+        "nonnegative_margin": true
+      },
+      {
+        "direction_field": "load_heavy",
+        "rho_schedule": "const_0p8",
+        "executed_steps": 1,
+        "cumulative_budget_progress": 0.0,
+        "minimum_margin": 0.0,
+        "stop_reason": "controller_stopped_near_boundary",
+        "nonnegative_margin": true
+      },
+      {
+        "direction_field": "load_heavy",
+        "rho_schedule": "adaptive_0p9_0p6",
+        "executed_steps": 1,
+        "cumulative_budget_progress": 0.0,
+        "minimum_margin": 0.0,
+        "stop_reason": "controller_stopped_near_boundary",
+        "nonnegative_margin": true
+      }
+    ],
+    "best_progress_scenario": {
+      "direction_field": "balanced",
+      "rho_schedule": "const_0p8",
+      "executed_steps": 1,
+      "cumulative_budget_progress": 0.0,
+      "minimum_margin": 0.0,
+      "stop_reason": "controller_stopped_near_boundary",
+      "nonnegative_margin": true
+    },
+    "physical_interpretation_note": "Comparing direction fields and rho schedules exposes policy-navigation anisotropy: some update geometries consume safety budget more efficiently while preserving nonnegative margin invariants.",
+    "theorem_scope_limit": "finite-horizon scenario-comparison diagnostic only; not a legacy->strict bridge theorem and not strict-core selector closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2252_candidate",
+    "goal": "derive analytic sufficient criterion selecting rho schedule by local curvature proxy of margin landscape"
+  },
+  "gatekeeper_checks": {
+    "scenario_comparison_exported": true,
+    "all_scenarios_nonnegative_margin": true,
+    "best_scenario_identified": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

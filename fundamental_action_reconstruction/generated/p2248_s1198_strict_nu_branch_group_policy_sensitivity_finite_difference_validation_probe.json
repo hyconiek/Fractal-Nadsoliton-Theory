@@ -1,0 +1,107 @@
+{
+  "schema_version": "p2248_s1198_v1",
+  "packet_id": "P2248",
+  "stage_id": "S1198",
+  "produced_by": "p2248_s1198_strict_nu_branch_group_policy_sensitivity_finite_difference_validation_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_GROUP_POLICY_SENSITIVITY_FINITE_DIFFERENCE_VALIDATION_PROBE",
+  "strict_nu_branch_group_policy_sensitivity_finite_difference_validation_probe": {
+    "probe_id": "STRICT_NU_BRANCH_GROUP_POLICY_SENSITIVITY_FINITE_DIFFERENCE_VALIDATION_PROBE_V1",
+    "source_packets": [
+      "generated/p2247_s1197_strict_nu_branch_group_policy_boundary_sensitivity_probe.json"
+    ],
+    "inputs": {
+      "base_group_count": 1.0,
+      "base_load_ratio": 1.989228286066882e-16,
+      "base_total_coverage_mass": 1.0,
+      "kappa_reference": 20.0,
+      "analytic_dmargin_d_group_count": -1.0,
+      "analytic_dmargin_d_load_ratio": -20.0,
+      "finite_difference_eps": 1e-05,
+      "sample_count": 7,
+      "random_seed": 2248
+    },
+    "finite_difference_validation": {
+      "rows": [
+        {
+          "n": 1.0,
+          "load_ratio": 1.8300584596655476e-07,
+          "fd_dmargin_d_group_count": -0.9999999999954489,
+          "fd_dmargin_d_load_ratio": -19.999999999997797,
+          "abs_err_group_count": 4.551137244845904e-12,
+          "abs_err_load_ratio": 2.2026824808563106e-12
+        },
+        {
+          "n": 1.1681730642900683,
+          "load_ratio": 1e-12,
+          "fd_dmargin_d_group_count": -1.0000000000065512,
+          "fd_dmargin_d_load_ratio": -19.999999999997797,
+          "abs_err_group_count": 6.551204023708124e-12,
+          "abs_err_load_ratio": 2.2026824808563106e-12
+        },
+        {
+          "n": 1.0,
+          "load_ratio": 1.6082485190775656e-07,
+          "fd_dmargin_d_group_count": -1.000000000001,
+          "fd_dmargin_d_load_ratio": -20.000000000003347,
+          "abs_err_group_count": 1.000088900582341e-12,
+          "abs_err_load_ratio": 3.346656285430072e-12
+        },
+        {
+          "n": 1.0596037494189516,
+          "load_ratio": 1e-12,
+          "fd_dmargin_d_group_count": -1.0000000000065512,
+          "fd_dmargin_d_load_ratio": -19.999999999997797,
+          "abs_err_group_count": 6.551204023708124e-12,
+          "abs_err_load_ratio": 2.2026824808563106e-12
+        },
+        {
+          "n": 1.134267977618418,
+          "load_ratio": 1e-12,
+          "fd_dmargin_d_group_count": -1.0000000000065512,
+          "fd_dmargin_d_load_ratio": -19.999999999997797,
+          "abs_err_group_count": 6.551204023708124e-12,
+          "abs_err_load_ratio": 2.2026824808563106e-12
+        },
+        {
+          "n": 1.1151084424554143,
+          "load_ratio": 1e-12,
+          "fd_dmargin_d_group_count": -1.0000000000065512,
+          "fd_dmargin_d_load_ratio": -19.999999999997797,
+          "abs_err_group_count": 6.551204023708124e-12,
+          "abs_err_load_ratio": 2.2026824808563106e-12
+        },
+        {
+          "n": 1.0,
+          "load_ratio": 1e-12,
+          "fd_dmargin_d_group_count": -1.0000000000065512,
+          "fd_dmargin_d_load_ratio": -19.999999999997797,
+          "abs_err_group_count": 6.551204023708124e-12,
+          "abs_err_load_ratio": 2.2026824808563106e-12
+        }
+      ],
+      "max_abs_error_group_count": 6.551204023708124e-12,
+      "max_abs_error_load_ratio": 3.346656285430072e-12,
+      "tolerance": 1e-07,
+      "validation_pass": true
+    },
+    "physical_interpretation_note": "Finite-difference agreement validates that local robustness-erosion slopes are structurally stable, supporting interpretation of margin flow as a first-order physical response law in policy space.",
+    "theorem_scope_limit": "local finite-difference validation only; not a legacy->strict bridge theorem and not strict-core selector closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2249_candidate",
+    "goal": "integrate first-order slope law into conservative step-size controller for policy updates with guaranteed nonnegative margin"
+  },
+  "gatekeeper_checks": {
+    "finite_difference_validation_exported": true,
+    "validation_pass": true,
+    "tolerance_strict": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

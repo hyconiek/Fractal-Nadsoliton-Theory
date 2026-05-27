@@ -1,0 +1,126 @@
+{
+  "schema_version": "p2246_s1196_v1",
+  "packet_id": "P2246",
+  "stage_id": "S1196",
+  "produced_by": "p2246_s1196_strict_nu_branch_group_policy_feasibility_surface_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_GROUP_POLICY_FEASIBILITY_SURFACE_PROBE",
+  "strict_nu_branch_group_policy_feasibility_surface_probe": {
+    "probe_id": "STRICT_NU_BRANCH_GROUP_POLICY_FEASIBILITY_SURFACE_PROBE_V1",
+    "source_packets": [
+      "generated/p2245_s1195_strict_nu_branch_group_policy_reserve_factor_calibration_probe.json"
+    ],
+    "inputs": {
+      "base_group_count": 1,
+      "base_load_ratio": 1.989228286066882e-16,
+      "base_total_coverage_mass": 1.0,
+      "target_risk": 0.05,
+      "kappa_reference": 20.0
+    },
+    "grid": {
+      "group_count_grid": [
+        1,
+        1,
+        2
+      ],
+      "load_ratio_grid": [
+        1.5913826288535057e-16,
+        1.989228286066882e-16,
+        2.387073943280258e-16
+      ],
+      "surface_rows": [
+        {
+          "group_count": 1,
+          "load_ratio": 1.5913826288535057e-16,
+          "required_total_coverage_mass": 3.1827652577070112e-15,
+          "available_total_coverage_mass": 1.0,
+          "deterministic_margin": 0.9999999999999968,
+          "deterministic_admissible": true
+        },
+        {
+          "group_count": 1,
+          "load_ratio": 1.989228286066882e-16,
+          "required_total_coverage_mass": 3.978456572133764e-15,
+          "available_total_coverage_mass": 1.0,
+          "deterministic_margin": 0.999999999999996,
+          "deterministic_admissible": true
+        },
+        {
+          "group_count": 1,
+          "load_ratio": 2.387073943280258e-16,
+          "required_total_coverage_mass": 4.774147886560516e-15,
+          "available_total_coverage_mass": 1.0,
+          "deterministic_margin": 0.9999999999999952,
+          "deterministic_admissible": true
+        },
+        {
+          "group_count": 1,
+          "load_ratio": 1.5913826288535057e-16,
+          "required_total_coverage_mass": 3.1827652577070112e-15,
+          "available_total_coverage_mass": 1.0,
+          "deterministic_margin": 0.9999999999999968,
+          "deterministic_admissible": true
+        },
+        {
+          "group_count": 1,
+          "load_ratio": 1.989228286066882e-16,
+          "required_total_coverage_mass": 3.978456572133764e-15,
+          "available_total_coverage_mass": 1.0,
+          "deterministic_margin": 0.999999999999996,
+          "deterministic_admissible": true
+        },
+        {
+          "group_count": 1,
+          "load_ratio": 2.387073943280258e-16,
+          "required_total_coverage_mass": 4.774147886560516e-15,
+          "available_total_coverage_mass": 1.0,
+          "deterministic_margin": 0.9999999999999952,
+          "deterministic_admissible": true
+        },
+        {
+          "group_count": 2,
+          "load_ratio": 1.5913826288535057e-16,
+          "required_total_coverage_mass": 1.000000000000003,
+          "available_total_coverage_mass": 1.0,
+          "deterministic_margin": -3.1086244689504383e-15,
+          "deterministic_admissible": false
+        },
+        {
+          "group_count": 2,
+          "load_ratio": 1.989228286066882e-16,
+          "required_total_coverage_mass": 1.000000000000004,
+          "available_total_coverage_mass": 1.0,
+          "deterministic_margin": -3.9968028886505635e-15,
+          "deterministic_admissible": false
+        },
+        {
+          "group_count": 2,
+          "load_ratio": 2.387073943280258e-16,
+          "required_total_coverage_mass": 1.0000000000000049,
+          "available_total_coverage_mass": 1.0,
+          "deterministic_margin": -4.884981308350689e-15,
+          "deterministic_admissible": false
+        }
+      ],
+      "admissible_cell_fraction": 0.6666666666666666
+    },
+    "physical_interpretation_note": "Feasibility surface maps where current coverage budget can sustain reserve-calibrated safety under varying group fragmentation and load demand, exposing robustness phase-space boundaries.",
+    "theorem_scope_limit": "finite-grid strict-lane feasibility diagnostic only; not a legacy->strict bridge theorem and not strict-core selector closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2247_candidate",
+    "goal": "derive closed-form boundary curve and sensitivity coefficients d(margin)/d(group_count), d(margin)/d(load_ratio)"
+  },
+  "gatekeeper_checks": {
+    "feasibility_surface_exported": true,
+    "nonempty_surface_grid": true,
+    "admissible_fraction_computable": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}
