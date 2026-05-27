@@ -1,0 +1,126 @@
+{
+  "schema_version": "p2209_s1159_v1",
+  "packet_id": "P2209",
+  "stage_id": "S1159",
+  "produced_by": "p2209_s1159_strict_nu_branch_transport_nonvanishing_threshold_map.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_TRANSPORT_NONVANISHING_THRESHOLD_MAP",
+  "strict_nu_branch_transport_nonvanishing_threshold_map": {
+    "map_id": "STRICT_NU_BRANCH_TRANSPORT_NONVANISHING_THRESHOLD_MAP_V1",
+    "source_packets": [
+      "generated/p2203_s1153_strict_frw_bianchi_transport_residual_map_under_shared_majorant.json",
+      "generated/p2208_s1158_strict_nu_branch_separation_lower_bound_certificate.json"
+    ],
+    "inputs": {
+      "min_majorant_margin": 0.17674153430562412,
+      "linear_lower_bound_coeff_c1": 0.03070832436552759,
+      "quadratic_lower_bound_coeff_c2": 0.511805406092126,
+      "scan_exclusion_radius_eps": 0.0005
+    },
+    "threshold_estimates": {
+      "dm_threshold_from_linear_bound": 5.755492621539123,
+      "dm_threshold_from_quadratic_bound": 0.5876474770577576,
+      "interpretation": "if |m-1| is above threshold, certified lower bound exceeds min_margin on scanned compact lane"
+    },
+    "threshold_map_rows": [
+      {
+        "abs_dm": 0.0,
+        "lower_bound_linear": 0.0,
+        "lower_bound_quadratic": 0.0,
+        "effective_lower_bound": 0.0,
+        "effective_over_min_margin": 0.0,
+        "certifies_margin_exceedance": false
+      },
+      {
+        "abs_dm": 0.0001,
+        "lower_bound_linear": 3.070832436552759e-06,
+        "lower_bound_quadratic": 5.1180540609212604e-09,
+        "effective_lower_bound": 3.070832436552759e-06,
+        "effective_over_min_margin": 1.7374707357935626e-05,
+        "certifies_margin_exceedance": false
+      },
+      {
+        "abs_dm": 0.0002,
+        "lower_bound_linear": 6.141664873105518e-06,
+        "lower_bound_quadratic": 2.0472216243685042e-08,
+        "effective_lower_bound": 6.141664873105518e-06,
+        "effective_over_min_margin": 3.474941471587125e-05,
+        "certifies_margin_exceedance": false
+      },
+      {
+        "abs_dm": 0.0005,
+        "lower_bound_linear": 1.5354162182763796e-05,
+        "lower_bound_quadratic": 1.279513515230315e-07,
+        "effective_lower_bound": 1.5354162182763796e-05,
+        "effective_over_min_margin": 8.687353678967813e-05,
+        "certifies_margin_exceedance": false
+      },
+      {
+        "abs_dm": 0.001,
+        "lower_bound_linear": 3.070832436552759e-05,
+        "lower_bound_quadratic": 5.11805406092126e-07,
+        "effective_lower_bound": 3.070832436552759e-05,
+        "effective_over_min_margin": 0.00017374707357935626,
+        "certifies_margin_exceedance": false
+      },
+      {
+        "abs_dm": 0.002,
+        "lower_bound_linear": 6.141664873105519e-05,
+        "lower_bound_quadratic": 2.047221624368504e-06,
+        "effective_lower_bound": 6.141664873105519e-05,
+        "effective_over_min_margin": 0.0003474941471587125,
+        "certifies_margin_exceedance": false
+      },
+      {
+        "abs_dm": 0.005,
+        "lower_bound_linear": 0.00015354162182763795,
+        "lower_bound_quadratic": 1.2795135152303149e-05,
+        "effective_lower_bound": 0.00015354162182763795,
+        "effective_over_min_margin": 0.0008687353678967812,
+        "certifies_margin_exceedance": false
+      },
+      {
+        "abs_dm": 0.01,
+        "lower_bound_linear": 0.0003070832436552759,
+        "lower_bound_quadratic": 5.1180540609212596e-05,
+        "effective_lower_bound": 0.0003070832436552759,
+        "effective_over_min_margin": 0.0017374707357935624,
+        "certifies_margin_exceedance": false
+      },
+      {
+        "abs_dm": 0.02,
+        "lower_bound_linear": 0.0006141664873105518,
+        "lower_bound_quadratic": 0.00020472216243685038,
+        "effective_lower_bound": 0.0006141664873105518,
+        "effective_over_min_margin": 0.003474941471587125,
+        "certifies_margin_exceedance": false
+      },
+      {
+        "abs_dm": 0.05,
+        "lower_bound_linear": 0.0015354162182763796,
+        "lower_bound_quadratic": 0.0012795135152303151,
+        "effective_lower_bound": 0.0015354162182763796,
+        "effective_over_min_margin": 0.008687353678967813,
+        "certifies_margin_exceedance": false
+      }
+    ],
+    "first_certified_row": null,
+    "theorem_scope_limit": "certificate links compact-scan lower bounds and shared-majorant margin; it is not a global all-background Task-3 closure theorem"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2210_candidate",
+    "goal": "refine near-threshold dm grid adaptively and export a narrow interval certificate where margin exceedance flips from unproven to certified"
+  },
+  "gatekeeper_checks": {
+    "threshold_map_exported": true,
+    "positive_linear_coeff": true,
+    "positive_quadratic_coeff": true,
+    "first_certified_row_present": false,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

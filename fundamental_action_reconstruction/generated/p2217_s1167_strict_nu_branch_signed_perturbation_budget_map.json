@@ -1,0 +1,110 @@
+{
+  "schema_version": "p2217_s1167_v1",
+  "packet_id": "P2217",
+  "stage_id": "S1167",
+  "produced_by": "p2217_s1167_strict_nu_branch_signed_perturbation_budget_map.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_SIGNED_PERTURBATION_BUDGET_MAP",
+  "strict_nu_branch_signed_perturbation_budget_map": {
+    "map_id": "STRICT_NU_BRANCH_SIGNED_PERTURBATION_BUDGET_MAP_V1",
+    "source_packet": "generated/p2216_s1166_strict_nu_branch_one_sided_lipschitz_slope_bounds.json",
+    "reference_dm_star": 0.5876474770575525,
+    "one_sided_local_slopes": {
+      "left_secant_at_dm_star": 3.3863839763809844,
+      "right_secant_at_dm_star": 3.4204179859551096
+    },
+    "above_target_budgets": [
+      {
+        "target_safety_factor": 1.001,
+        "required_signed_delta_dm": 0.00029236192889467926,
+        "required_abs_dm": 0.5879398389864472,
+        "certification_side": "above_dm_star"
+      },
+      {
+        "target_safety_factor": 1.005,
+        "required_signed_delta_dm": 0.0014618096444735263,
+        "required_abs_dm": 0.589109286702026,
+        "certification_side": "above_dm_star"
+      },
+      {
+        "target_safety_factor": 1.01,
+        "required_signed_delta_dm": 0.0029236192889471172,
+        "required_abs_dm": 0.5905710963464996,
+        "certification_side": "above_dm_star"
+      },
+      {
+        "target_safety_factor": 1.02,
+        "required_signed_delta_dm": 0.0058472385778942345,
+        "required_abs_dm": 0.5934947156354468,
+        "certification_side": "above_dm_star"
+      },
+      {
+        "target_safety_factor": 1.05,
+        "required_signed_delta_dm": 0.014618096444735587,
+        "required_abs_dm": 0.602265573502288,
+        "certification_side": "above_dm_star"
+      },
+      {
+        "target_safety_factor": 1.1,
+        "required_signed_delta_dm": 0.029236192889471175,
+        "required_abs_dm": 0.6168836699470237,
+        "certification_side": "above_dm_star"
+      }
+    ],
+    "below_target_budgets": [
+      {
+        "target_safety_factor": 0.999,
+        "required_signed_delta_dm": -0.0002953002397172624,
+        "required_abs_dm": 0.5873521768178352,
+        "certification_side": "below_dm_star"
+      },
+      {
+        "target_safety_factor": 0.995,
+        "required_signed_delta_dm": -0.001476501198586312,
+        "required_abs_dm": 0.5861709758589662,
+        "certification_side": "below_dm_star"
+      },
+      {
+        "target_safety_factor": 0.99,
+        "required_signed_delta_dm": -0.002953002397172624,
+        "required_abs_dm": 0.5846944746603798,
+        "certification_side": "below_dm_star"
+      },
+      {
+        "target_safety_factor": 0.98,
+        "required_signed_delta_dm": -0.005906004794345248,
+        "required_abs_dm": 0.5817414722632073,
+        "certification_side": "below_dm_star"
+      },
+      {
+        "target_safety_factor": 0.95,
+        "required_signed_delta_dm": -0.014765011985863118,
+        "required_abs_dm": 0.5728824650716894,
+        "certification_side": "below_dm_star"
+      },
+      {
+        "target_safety_factor": 0.9,
+        "required_signed_delta_dm": -0.029530023971726205,
+        "required_abs_dm": 0.5581174530858263,
+        "certification_side": "below_dm_star"
+      }
+    ],
+    "interpretation": "For each target safety-factor, map to minimal signed local perturbation estimate using one-sided secant slope bounds.",
+    "theorem_scope_limit": "local linearized perturbation-budget map only; not global Task-3 closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2218_candidate",
+    "goal": "validate perturbation budget map against direct recomputation on denser neighborhood grid and export mismatch envelope"
+  },
+  "gatekeeper_checks": {
+    "signed_perturbation_budget_map_exported": true,
+    "above_budgets_positive_delta": true,
+    "below_budgets_negative_delta": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

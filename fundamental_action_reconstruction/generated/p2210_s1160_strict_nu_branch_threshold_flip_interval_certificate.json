@@ -1,0 +1,42 @@
+{
+  "schema_version": "p2210_s1160_v1",
+  "packet_id": "P2210",
+  "stage_id": "S1160",
+  "produced_by": "p2210_s1160_strict_nu_branch_threshold_flip_interval_certificate.py",
+  "timestamp_utc": "2026-05-26T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_THRESHOLD_FLIP_INTERVAL_CERTIFICATE",
+  "strict_nu_branch_threshold_flip_interval_certificate": {
+    "certificate_id": "STRICT_NU_BRANCH_THRESHOLD_FLIP_INTERVAL_CERTIFICATE_V1",
+    "source_packet": "generated/p2209_s1159_strict_nu_branch_transport_nonvanishing_threshold_map.json",
+    "has_flip_in_coarse_window": false,
+    "coarse_flip_interval": null,
+    "coarse_window_summary": {
+      "max_scanned_abs_dm": 0.05,
+      "max_scanned_effective_over_min_margin": 0.008687353678967813,
+      "all_rows_uncertified": true
+    },
+    "implied_needed_abs_dm_estimates": {
+      "linear_needed_abs_dm": 5.755492621539123,
+      "quadratic_needed_abs_dm": 0.5876474770577576,
+      "conservative_needed_abs_dm": 0.5876474770577576,
+      "interpretation": "minimum modeled |m-1| scale where lower bound can reach min_margin"
+    },
+    "theorem_scope_limit": "finite-grid compact-lane certificate: either flip interval if observed or explicit no-flip-in-window evidence; not global Task-3 closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2211_candidate",
+    "goal": "extend |m-1| scan up to conservative_needed_abs_dm and certify first exceedance interval"
+  },
+  "gatekeeper_checks": {
+    "flip_interval_certificate_exported": true,
+    "coarse_rows_present": true,
+    "no_flip_detected_in_coarse_window": true,
+    "needed_abs_dm_exceeds_current_window": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}
