@@ -1,0 +1,56 @@
+{
+  "schema_version": "p2211_s1161_v1",
+  "packet_id": "P2211",
+  "stage_id": "S1161",
+  "produced_by": "p2211_s1161_strict_nu_branch_extended_threshold_crossing_certificate.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_EXTENDED_THRESHOLD_CROSSING_CERTIFICATE",
+  "strict_nu_branch_extended_threshold_crossing_certificate": {
+    "certificate_id": "STRICT_NU_BRANCH_EXTENDED_THRESHOLD_CROSSING_CERTIFICATE_V1",
+    "source_packets": [
+      "generated/p2209_s1159_strict_nu_branch_transport_nonvanishing_threshold_map.json",
+      "generated/p2210_s1160_strict_nu_branch_threshold_flip_interval_certificate.json"
+    ],
+    "scan_setup": {
+      "dm_max": 0.6464122247635333,
+      "grid_size": 2401,
+      "conservative_needed_abs_dm_from_p2210": 0.5876474770577576
+    },
+    "crossing_summary": {
+      "first_certified_row": {
+        "abs_dm": 0.5876964476808457,
+        "effective_lower_bound": 0.17677099245538014,
+        "effective_over_min_margin": 1.000166673611111,
+        "certifies_margin_exceedance": true
+      },
+      "last_uncertified_row": {
+        "abs_dm": 0.5874271092538609,
+        "effective_lower_bound": 0.17660900300917315,
+        "effective_over_min_margin": 0.999250140625,
+        "certifies_margin_exceedance": false
+      },
+      "crossing_interval": {
+        "abs_dm_lo_uncertified": 0.5874271092538609,
+        "abs_dm_hi_certified": 0.5876964476808457,
+        "interval_width": 0.0002693384269848442
+      },
+      "crossing_detected_on_extended_grid": true
+    },
+    "theorem_scope_limit": "extended finite-grid compact-lane certificate only; no global all-background Task-3 closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2212_candidate",
+    "goal": "replace grid crossing estimate with interval/monotonic proof of minimal certified |m-1| in this modeled lane"
+  },
+  "gatekeeper_checks": {
+    "extended_crossing_certificate_exported": true,
+    "crossing_detected_on_extended_grid": true,
+    "crossing_interval_exported": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

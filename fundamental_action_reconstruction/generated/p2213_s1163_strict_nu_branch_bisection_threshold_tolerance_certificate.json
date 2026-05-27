@@ -1,0 +1,114 @@
+{
+  "schema_version": "p2213_s1163_v1",
+  "packet_id": "P2213",
+  "stage_id": "S1163",
+  "produced_by": "p2213_s1163_strict_nu_branch_bisection_threshold_tolerance_certificate.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_BISECTION_THRESHOLD_TOLERANCE_CERTIFICATE",
+  "strict_nu_branch_bisection_threshold_tolerance_certificate": {
+    "certificate_id": "STRICT_NU_BRANCH_BISECTION_THRESHOLD_TOLERANCE_CERTIFICATE_V1",
+    "source_packets": [
+      "generated/p2209_s1159_strict_nu_branch_transport_nonvanishing_threshold_map.json",
+      "generated/p2212_s1162_strict_nu_branch_monotonic_threshold_bracket_certificate.json"
+    ],
+    "input_bracket": {
+      "abs_dm_lo": 0.5874271092538609,
+      "abs_dm_hi": 0.5876964476808457,
+      "f_lo": -0.00013253129645096617,
+      "f_hi": 2.9458149756023122e-05
+    },
+    "bisection_result": {
+      "abs_dm_star_estimate": 0.5876474770575525,
+      "final_bracket": {
+        "abs_dm_lo": 0.5876474770573017,
+        "abs_dm_hi": 0.5876474770578033,
+        "width": 5.015987625256457e-13
+      },
+      "tolerance_target": 1e-12,
+      "iterations_used": 30,
+      "trace_tail": [
+        {
+          "iter": 22,
+          "a": 0.5876474770402444,
+          "b": 0.5876474771044596,
+          "m": 0.5876474770723521,
+          "f_m": 8.778949789345347e-12,
+          "width": 6.421518872201659e-11
+        },
+        {
+          "iter": 23,
+          "a": 0.5876474770402444,
+          "b": 0.5876474770723521,
+          "m": 0.5876474770562983,
+          "f_m": -8.778255899954956e-13,
+          "width": 3.210764987215953e-11
+        },
+        {
+          "iter": 24,
+          "a": 0.5876474770562983,
+          "b": 0.5876474770723521,
+          "m": 0.5876474770643252,
+          "f_m": 3.95053434409931e-12,
+          "width": 1.6053824936079764e-11
+        },
+        {
+          "iter": 25,
+          "a": 0.5876474770562983,
+          "b": 0.5876474770643252,
+          "m": 0.5876474770603117,
+          "f_m": 1.5363821326275229e-12,
+          "width": 8.026912468039882e-12
+        },
+        {
+          "iter": 26,
+          "a": 0.5876474770562983,
+          "b": 0.5876474770603117,
+          "m": 0.587647477058305,
+          "f_m": 3.2929214910382143e-13,
+          "width": 4.013456234019941e-12
+        },
+        {
+          "iter": 27,
+          "a": 0.5876474770562983,
+          "b": 0.587647477058305,
+          "m": 0.5876474770573017,
+          "f_m": -2.7422508708241367e-13,
+          "width": 2.0067281170099704e-12
+        },
+        {
+          "iter": 28,
+          "a": 0.5876474770573017,
+          "b": 0.587647477058305,
+          "m": 0.5876474770578033,
+          "f_m": 2.7505775435088253e-14,
+          "width": 1.003308547353754e-12
+        },
+        {
+          "iter": 29,
+          "a": 0.5876474770573017,
+          "b": 0.5876474770578033,
+          "m": 0.5876474770575525,
+          "f_m": -1.2337353361147052e-13,
+          "width": 5.015987625256457e-13
+        }
+      ]
+    },
+    "certified_statement": "Threshold crossing dm* is bracketed within final interval; effective lower bound crosses min_margin within certified tolerance on modeled lane.",
+    "theorem_scope_limit": "modeled lower-bound lane bisection certificate only; not global Task-3 closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2214_candidate",
+    "goal": "derive closed-form dm* candidate per active branch and compare with bisection bracket for algebraic consistency"
+  },
+  "gatekeeper_checks": {
+    "bisection_certificate_exported": true,
+    "input_bracket_straddles_crossing": true,
+    "final_width_within_tolerance": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

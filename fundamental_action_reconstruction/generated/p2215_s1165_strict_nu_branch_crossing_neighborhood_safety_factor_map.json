@@ -1,0 +1,128 @@
+{
+  "schema_version": "p2215_s1165_v1",
+  "packet_id": "P2215",
+  "stage_id": "S1165",
+  "produced_by": "p2215_s1165_strict_nu_branch_crossing_neighborhood_safety_factor_map.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_CROSSING_NEIGHBORHOOD_SAFETY_FACTOR_MAP",
+  "strict_nu_branch_crossing_neighborhood_safety_factor_map": {
+    "map_id": "STRICT_NU_BRANCH_CROSSING_NEIGHBORHOOD_SAFETY_FACTOR_MAP_V1",
+    "source_packets": [
+      "generated/p2209_s1159_strict_nu_branch_transport_nonvanishing_threshold_map.json",
+      "generated/p2214_s1164_strict_nu_branch_closed_form_threshold_consistency_certificate.json"
+    ],
+    "reference_dm_star": 0.5876474770575525,
+    "rows": [
+      {
+        "relative_offset_from_dm_star": -0.2,
+        "abs_dm": 0.470117981646042,
+        "effective_lower_bound": 0.11311458195552049,
+        "safety_factor_vs_margin": 0.6399999999995534,
+        "margin_gap": -0.06362695235010363,
+        "certifies_margin_exceedance": false
+      },
+      {
+        "relative_offset_from_dm_star": -0.1,
+        "abs_dm": 0.5288827293517973,
+        "effective_lower_bound": 0.14316064278745563,
+        "safety_factor_vs_margin": 0.8099999999994347,
+        "margin_gap": -0.03358089151816848,
+        "certifies_margin_exceedance": false
+      },
+      {
+        "relative_offset_from_dm_star": -0.05,
+        "abs_dm": 0.5582651032046748,
+        "effective_lower_bound": 0.15950923471071438,
+        "safety_factor_vs_margin": 0.9024999999993698,
+        "margin_gap": -0.01723229959490974,
+        "certifies_margin_exceedance": false
+      },
+      {
+        "relative_offset_from_dm_star": -0.02,
+        "abs_dm": 0.5758945275164015,
+        "effective_lower_bound": 0.16974256954700295,
+        "safety_factor_vs_margin": 0.9603999999993298,
+        "margin_gap": -0.006998964758621162,
+        "certifies_margin_exceedance": false
+      },
+      {
+        "relative_offset_from_dm_star": -0.01,
+        "abs_dm": 0.581771002286977,
+        "effective_lower_bound": 0.1732243777728213,
+        "safety_factor_vs_margin": 0.980099999999316,
+        "margin_gap": -0.003517156532802823,
+        "certifies_margin_exceedance": false
+      },
+      {
+        "relative_offset_from_dm_star": 0.0,
+        "abs_dm": 0.5876474770575525,
+        "effective_lower_bound": 0.17674153430550074,
+        "safety_factor_vs_margin": 0.999999999999302,
+        "margin_gap": -1.2337353361147052e-13,
+        "certifies_margin_exceedance": false
+      },
+      {
+        "relative_offset_from_dm_star": 0.01,
+        "abs_dm": 0.593523951828128,
+        "effective_lower_bound": 0.1802940391450413,
+        "safety_factor_vs_margin": 1.020099999999288,
+        "margin_gap": 0.0035525048394171865,
+        "certifies_margin_exceedance": true
+      },
+      {
+        "relative_offset_from_dm_star": 0.02,
+        "abs_dm": 0.5994004265987035,
+        "effective_lower_bound": 0.18388189229144297,
+        "safety_factor_vs_margin": 1.0403999999992737,
+        "margin_gap": 0.007140357985818857,
+        "certifies_margin_exceedance": true
+      },
+      {
+        "relative_offset_from_dm_star": 0.05,
+        "abs_dm": 0.6170298509104302,
+        "effective_lower_bound": 0.19485754157181462,
+        "safety_factor_vs_margin": 1.1024999999992307,
+        "margin_gap": 0.018116007266190504,
+        "certifies_margin_exceedance": true
+      },
+      {
+        "relative_offset_from_dm_star": 0.1,
+        "abs_dm": 0.6464122247633078,
+        "effective_lower_bound": 0.21385725650965598,
+        "safety_factor_vs_margin": 1.2099999999991558,
+        "margin_gap": 0.037115722204031865,
+        "certifies_margin_exceedance": true
+      },
+      {
+        "relative_offset_from_dm_star": 0.2,
+        "abs_dm": 0.705176972469063,
+        "effective_lower_bound": 0.25450780939992107,
+        "safety_factor_vs_margin": 1.4399999999989948,
+        "margin_gap": 0.07776627509429695,
+        "certifies_margin_exceedance": true
+      }
+    ],
+    "local_transition_summary": {
+      "max_safety_factor_below_dm_star": 0.980099999999316,
+      "min_safety_factor_above_dm_star": 1.020099999999288,
+      "all_below_not_certified": true,
+      "all_above_certified": true
+    },
+    "theorem_scope_limit": "local neighborhood map around modeled dm* only; not global Task-3 closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2216_candidate",
+    "goal": "export asymmetric one-sided local Lipschitz slope bounds around dm* for robustness-to-perturbation accounting"
+  },
+  "gatekeeper_checks": {
+    "safety_factor_map_exported": true,
+    "below_dm_star_not_certified": true,
+    "above_dm_star_certified": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}
