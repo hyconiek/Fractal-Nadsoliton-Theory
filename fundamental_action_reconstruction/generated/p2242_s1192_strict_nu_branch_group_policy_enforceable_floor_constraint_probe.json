@@ -1,0 +1,49 @@
+{
+  "schema_version": "p2242_s1192_v1",
+  "packet_id": "P2242",
+  "stage_id": "S1192",
+  "produced_by": "p2242_s1192_strict_nu_branch_group_policy_enforceable_floor_constraint_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_GROUP_POLICY_ENFORCEABLE_FLOOR_CONSTRAINT_PROBE",
+  "strict_nu_branch_group_policy_enforceable_floor_constraint_probe": {
+    "probe_id": "STRICT_NU_BRANCH_GROUP_POLICY_ENFORCEABLE_FLOOR_CONSTRAINT_PROBE_V1",
+    "source_packets": [
+      "generated/p2241_s1191_strict_nu_branch_group_policy_adversarial_coverage_redistribution_probe.json"
+    ],
+    "inputs": {
+      "group_count": 1,
+      "total_coverage_mass": 1.0,
+      "load_ratio_threshold": 1.989228286066882e-16
+    },
+    "derived_constraint": {
+      "sufficient_mass_condition": "total_coverage_mass >= (group_count - 1) + load_ratio_threshold",
+      "required_total_coverage_mass": 1.989228286066882e-16,
+      "observed_total_coverage_mass": 1.0,
+      "condition_holds": true
+    },
+    "policy_floor_translation": {
+      "uniform_floor_candidate": 1.0,
+      "uniform_floor_above_ratio": true,
+      "note": "Uniform floor is a deployable policy form; sufficient mass condition is the stricter adversarial guarantee."
+    },
+    "physical_interpretation_note": "This exports a concrete conservation-style control law: maintain enough global coverage mass so no group can be adversarially starved below the safety load-ratio threshold.",
+    "theorem_scope_limit": "finite-sample strict-lane policy-constraint diagnostic only; not a legacy->strict bridge theorem and not strict-core selector closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2243_candidate",
+    "goal": "validate constraint tightness by Monte-Carlo policy-mixing perturbations and compute empirical violation probability envelope"
+  },
+  "gatekeeper_checks": {
+    "enforceable_floor_constraint_exported": true,
+    "mass_condition_computable": true,
+    "mass_condition_holds": true,
+    "uniform_floor_translation_exported": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

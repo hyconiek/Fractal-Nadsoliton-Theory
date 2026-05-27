@@ -1,0 +1,48 @@
+{
+  "schema_version": "p2245_s1195_v1",
+  "packet_id": "P2245",
+  "stage_id": "S1195",
+  "produced_by": "p2245_s1195_strict_nu_branch_group_policy_reserve_factor_calibration_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_GROUP_POLICY_RESERVE_FACTOR_CALIBRATION_PROBE",
+  "strict_nu_branch_group_policy_reserve_factor_calibration_probe": {
+    "probe_id": "STRICT_NU_BRANCH_GROUP_POLICY_RESERVE_FACTOR_CALIBRATION_PROBE_V1",
+    "source_packets": [
+      "generated/p2244_s1194_strict_nu_branch_group_policy_violation_tail_bound_probe.json"
+    ],
+    "inputs": {
+      "group_count": 1,
+      "total_coverage_mass": 1.0,
+      "load_ratio_threshold": 1.989228286066882e-16,
+      "hoeffding_empirical_violation_upper_bound_95": 1.0,
+      "target_risk": 0.05
+    },
+    "reserve_calibration": {
+      "kappa_capacity_from_mass": 1000000000000.0,
+      "kappa_needed_for_deterministic_condition": 1.0,
+      "suggested_kappa": 20.0,
+      "deterministic_pass": true,
+      "statistical_pass": false,
+      "joint_pass": false
+    },
+    "physical_interpretation_note": "Reserve factor kappa calibrates how much coverage buffer is available relative to load-ratio demand; joint deterministic+statistical pass indicates robust safety-lane protection under both worst-case structure and finite-sample uncertainty.",
+    "theorem_scope_limit": "finite-sample strict-lane reserve-calibration diagnostic only; not a legacy->strict bridge theorem and not strict-core selector closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2246_candidate",
+    "goal": "map reserve-factor feasibility surface over (group_count, load_ratio, target_risk) and export admissible operational region"
+  },
+  "gatekeeper_checks": {
+    "reserve_factor_exported": true,
+    "kappa_capacity_computable": true,
+    "target_risk_applied": true,
+    "joint_pass_computable": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

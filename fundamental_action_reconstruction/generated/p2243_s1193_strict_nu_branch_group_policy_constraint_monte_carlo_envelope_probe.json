@@ -1,0 +1,45 @@
+{
+  "schema_version": "p2243_s1193_v1",
+  "packet_id": "P2243",
+  "stage_id": "S1193",
+  "produced_by": "p2243_s1193_strict_nu_branch_group_policy_constraint_monte_carlo_envelope_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_GROUP_POLICY_CONSTRAINT_MONTE_CARLO_ENVELOPE_PROBE",
+  "strict_nu_branch_group_policy_constraint_monte_carlo_envelope_probe": {
+    "probe_id": "STRICT_NU_BRANCH_GROUP_POLICY_CONSTRAINT_MONTE_CARLO_ENVELOPE_PROBE_V1",
+    "source_packets": [
+      "generated/p2242_s1192_strict_nu_branch_group_policy_enforceable_floor_constraint_probe.json"
+    ],
+    "inputs": {
+      "group_count": 1,
+      "total_coverage_mass": 1.0,
+      "load_ratio_threshold": 1.989228286066882e-16,
+      "draw_count": 2000,
+      "random_seed": 2243
+    },
+    "empirical_violation_envelope": {
+      "violation_probability": 0.0,
+      "empirical_min_of_min_coverages": 1.0,
+      "empirical_max_of_min_coverages": 1.0,
+      "empirical_mean_of_min_coverages": 1.0
+    },
+    "physical_interpretation_note": "Monte-Carlo policy-mixing perturbations estimate how often grouped mixing can starve at least one lane below load-ratio safety threshold under fixed global coverage mass.",
+    "theorem_scope_limit": "finite-sample empirical stress envelope only; not a legacy->strict bridge theorem and not strict-core selector closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2244_candidate",
+    "goal": "derive analytic tail bound linking violation probability to distance from enforceable mass threshold"
+  },
+  "gatekeeper_checks": {
+    "monte_carlo_envelope_exported": true,
+    "draw_count_sufficient": true,
+    "violation_probability_computable": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

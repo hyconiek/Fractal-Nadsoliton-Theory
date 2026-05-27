@@ -1,0 +1,140 @@
+{
+  "schema_version": "p2255_s1205_v1",
+  "packet_id": "P2255",
+  "stage_id": "S1205",
+  "produced_by": "p2255_s1205_strict_nu_branch_group_policy_dominance_envelope_scan_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_GROUP_POLICY_DOMINANCE_ENVELOPE_SCAN_PROBE",
+  "strict_nu_branch_group_policy_dominance_envelope_scan_probe": {
+    "probe_id": "STRICT_NU_BRANCH_GROUP_POLICY_DOMINANCE_ENVELOPE_SCAN_PROBE_V1",
+    "source_packets": [
+      "generated/p2253_s1203_strict_nu_branch_group_policy_adaptive_vs_fixed_rho_trajectory_probe.json"
+    ],
+    "inputs": {
+      "fixed_progress": 0.0,
+      "adaptive_progress": 0.0,
+      "fixed_minimum_margin": 0.0,
+      "adaptive_minimum_margin": 0.0,
+      "margin_floors": [
+        0.0,
+        0.01,
+        0.02,
+        0.05
+      ],
+      "horizon_scales": [
+        0.8,
+        1.0,
+        1.2
+      ]
+    },
+    "dominance_envelope": {
+      "rows": [
+        {
+          "margin_floor": 0.0,
+          "horizon_scale": 0.8,
+          "scaled_progress_gap": 0.0,
+          "adaptive_min_margin": 0.0,
+          "adaptive_dominates": true
+        },
+        {
+          "margin_floor": 0.0,
+          "horizon_scale": 1.0,
+          "scaled_progress_gap": 0.0,
+          "adaptive_min_margin": 0.0,
+          "adaptive_dominates": true
+        },
+        {
+          "margin_floor": 0.0,
+          "horizon_scale": 1.2,
+          "scaled_progress_gap": 0.0,
+          "adaptive_min_margin": 0.0,
+          "adaptive_dominates": true
+        },
+        {
+          "margin_floor": 0.01,
+          "horizon_scale": 0.8,
+          "scaled_progress_gap": 0.0,
+          "adaptive_min_margin": 0.0,
+          "adaptive_dominates": false
+        },
+        {
+          "margin_floor": 0.01,
+          "horizon_scale": 1.0,
+          "scaled_progress_gap": 0.0,
+          "adaptive_min_margin": 0.0,
+          "adaptive_dominates": false
+        },
+        {
+          "margin_floor": 0.01,
+          "horizon_scale": 1.2,
+          "scaled_progress_gap": 0.0,
+          "adaptive_min_margin": 0.0,
+          "adaptive_dominates": false
+        },
+        {
+          "margin_floor": 0.02,
+          "horizon_scale": 0.8,
+          "scaled_progress_gap": 0.0,
+          "adaptive_min_margin": 0.0,
+          "adaptive_dominates": false
+        },
+        {
+          "margin_floor": 0.02,
+          "horizon_scale": 1.0,
+          "scaled_progress_gap": 0.0,
+          "adaptive_min_margin": 0.0,
+          "adaptive_dominates": false
+        },
+        {
+          "margin_floor": 0.02,
+          "horizon_scale": 1.2,
+          "scaled_progress_gap": 0.0,
+          "adaptive_min_margin": 0.0,
+          "adaptive_dominates": false
+        },
+        {
+          "margin_floor": 0.05,
+          "horizon_scale": 0.8,
+          "scaled_progress_gap": 0.0,
+          "adaptive_min_margin": 0.0,
+          "adaptive_dominates": false
+        },
+        {
+          "margin_floor": 0.05,
+          "horizon_scale": 1.0,
+          "scaled_progress_gap": 0.0,
+          "adaptive_min_margin": 0.0,
+          "adaptive_dominates": false
+        },
+        {
+          "margin_floor": 0.05,
+          "horizon_scale": 1.2,
+          "scaled_progress_gap": 0.0,
+          "adaptive_min_margin": 0.0,
+          "adaptive_dominates": false
+        }
+      ],
+      "dominance_fraction": 0.25,
+      "dominant_cells": 3,
+      "total_cells": 12
+    },
+    "physical_interpretation_note": "Dominance envelope maps where adaptive control remains physically preferable under stricter safety floors and effective horizon scaling, exposing robustness domain of controller preference.",
+    "theorem_scope_limit": "finite-grid dominance-envelope diagnostic only; not a legacy->strict bridge theorem and not strict-core selector closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2256_candidate",
+    "goal": "derive analytic boundary in (margin_floor, horizon_scale) separating adaptive-dominant and non-dominant regions"
+  },
+  "gatekeeper_checks": {
+    "dominance_envelope_exported": true,
+    "dominance_fraction_bounded": true,
+    "nonempty_scan_grid": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}
