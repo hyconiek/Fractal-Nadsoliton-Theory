@@ -1,0 +1,123 @@
+{
+  "schema_version": "p2223_s1173_v1",
+  "packet_id": "P2223",
+  "stage_id": "S1173",
+  "produced_by": "p2223_s1173_strict_nu_branch_targetwise_min_inflation_optimization.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_TARGETWISE_MIN_INFLATION_OPTIMIZATION",
+  "strict_nu_branch_targetwise_min_inflation_optimization": {
+    "optimization_id": "STRICT_NU_BRANCH_TARGETWISE_MIN_INFLATION_OPTIMIZATION_V1",
+    "source_packets": [
+      "generated/p2218_s1168_strict_nu_branch_budget_map_direct_recompute_mismatch_envelope.json",
+      "generated/p2221_s1171_strict_nu_branch_min_inflation_factor_for_full_coverage.json"
+    ],
+    "base_eps": 0.0020226761976972485,
+    "global_min_inflation_factor": 1.0482334665049586,
+    "targetwise_rows": [
+      {
+        "certification_side": "above_dm_star",
+        "target_safety_factor": 1.001,
+        "abs_mismatch": 4.727606415677599e-06,
+        "targetwise_min_inflation_factor": 1.0,
+        "width_cost_ratio_vs_global": 0.9539859506052791
+      },
+      {
+        "certification_side": "above_dm_star",
+        "target_safety_factor": 1.005,
+        "abs_mismatch": 1.8687656771154693e-05,
+        "targetwise_min_inflation_factor": 1.0,
+        "width_cost_ratio_vs_global": 0.9539859506052791
+      },
+      {
+        "certification_side": "above_dm_star",
+        "target_safety_factor": 1.01,
+        "abs_mismatch": 2.4999381553980626e-05,
+        "targetwise_min_inflation_factor": 1.0,
+        "width_cost_ratio_vs_global": 0.9539859506052791
+      },
+      {
+        "certification_side": "above_dm_star",
+        "target_safety_factor": 1.02,
+        "abs_mismatch": 4.950372514134216e-07,
+        "targetwise_min_inflation_factor": 1.0,
+        "width_cost_ratio_vs_global": 0.9539859506052791
+      },
+      {
+        "certification_side": "above_dm_star",
+        "target_safety_factor": 1.05,
+        "abs_mismatch": 0.0003700403466091462,
+        "targetwise_min_inflation_factor": 1.0,
+        "width_cost_ratio_vs_global": 0.9539859506052791
+      },
+      {
+        "certification_side": "above_dm_star",
+        "target_safety_factor": 1.1,
+        "abs_mismatch": 0.0019776738228862722,
+        "targetwise_min_inflation_factor": 1.0,
+        "width_cost_ratio_vs_global": 0.9539859506052791
+      },
+      {
+        "certification_side": "below_dm_star",
+        "target_safety_factor": 0.999,
+        "abs_mismatch": 4.772607414937902e-06,
+        "targetwise_min_inflation_factor": 1.0,
+        "width_cost_ratio_vs_global": 0.9539859506052791
+      },
+      {
+        "certification_side": "below_dm_star",
+        "target_safety_factor": 0.995,
+        "abs_mismatch": 1.8812656768285585e-05,
+        "targetwise_min_inflation_factor": 1.0,
+        "width_cost_ratio_vs_global": 0.9539859506052791
+      },
+      {
+        "certification_side": "below_dm_star",
+        "target_safety_factor": 0.99,
+        "abs_mismatch": 2.4999369050315856e-05,
+        "targetwise_min_inflation_factor": 1.0,
+        "width_cost_ratio_vs_global": 0.9539859506052791
+      },
+      {
+        "certification_side": "below_dm_star",
+        "target_safety_factor": 0.98,
+        "abs_mismatch": 5.050377516191418e-07,
+        "targetwise_min_inflation_factor": 1.0,
+        "width_cost_ratio_vs_global": 0.9539859506052791
+      },
+      {
+        "certification_side": "below_dm_star",
+        "target_safety_factor": 0.95,
+        "abs_mismatch": 0.0003800409090787271,
+        "targetwise_min_inflation_factor": 1.0,
+        "width_cost_ratio_vs_global": 0.9539859506052791
+      },
+      {
+        "certification_side": "below_dm_star",
+        "target_safety_factor": 0.9,
+        "abs_mismatch": 0.0020226761976972485,
+        "targetwise_min_inflation_factor": 1.0,
+        "width_cost_ratio_vs_global": 0.9539859506052791
+      }
+    ],
+    "summary": {
+      "mean_targetwise_min_factor": 1.0,
+      "mean_width_cost_ratio_vs_global": 0.9539859506052791
+    },
+    "theorem_scope_limit": "target-wise local inflation optimization only; not global Task-3 closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2224_candidate",
+    "goal": "construct mixed policy (global floor + target-wise deltas) and verify coverage/width Pareto frontier"
+  },
+  "gatekeeper_checks": {
+    "targetwise_optimization_exported": true,
+    "all_targetwise_factors_ge_1": true,
+    "mean_cost_not_worse_than_global": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

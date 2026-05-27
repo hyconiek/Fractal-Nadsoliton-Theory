@@ -1,0 +1,42 @@
+{
+  "schema_version": "p2234_s1184_v1",
+  "packet_id": "P2234",
+  "stage_id": "S1184",
+  "produced_by": "p2234_s1184_strict_nu_branch_modeled_lane_to_residual_lane_gap_quantification_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_MODELED_TO_RESIDUAL_LANE_GAP_QUANTIFICATION_PROBE",
+  "strict_nu_branch_modeled_lane_to_residual_lane_gap_quantification_probe": {
+    "probe_id": "STRICT_NU_BRANCH_MODELED_TO_RESIDUAL_LANE_GAP_QUANTIFICATION_PROBE_V1",
+    "source_packets": [
+      "generated/p2203_s1153_strict_frw_bianchi_transport_residual_map_under_shared_majorant.json",
+      "generated/p2233_s1183_strict_nu_branch_widened_compact_monotonic_analytic_certificate.json"
+    ],
+    "residual_lane_observables": {
+      "max_residual": 0.0001706491692635688,
+      "mean_residual": 8.530931281678825e-05,
+      "max_over_mean_ratio": 2.0003580339471014
+    },
+    "modeled_lane_observables": {
+      "safety_factor_lo": 0.2499999999998255,
+      "safety_factor_hi": 2.2499999999984293,
+      "safety_factor_span": 1.9999999999986038
+    },
+    "bridge_gap_statement": "No theorem-grade operator bridge exported between residual lane and modeled safety-factor lane; current packet exports only side-by-side quantitative diagnostics.",
+    "theorem_scope_limit": "diagnostic gap quantification only; not a bridge theorem and not global Task-3 closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2235_candidate",
+    "goal": "construct explicit residual->safety surrogate map or prove non-existence on current strict lane"
+  },
+  "gatekeeper_checks": {
+    "gap_quantification_exported": true,
+    "no_bridge_theorem_claimed": true,
+    "diagnostic_observables_finite": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": "p2226_s1176_v1",
+  "packet_id": "P2226",
+  "stage_id": "S1176",
+  "produced_by": "p2226_s1176_strict_nu_branch_grouped_policy_width_coverage_tradeoff.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_GROUPED_POLICY_WIDTH_COVERAGE_TRADEOFF",
+  "strict_nu_branch_grouped_policy_width_coverage_tradeoff": {
+    "tradeoff_id": "STRICT_NU_BRANCH_GROUPED_POLICY_WIDTH_COVERAGE_TRADEOFF_V1",
+    "source_packets": [
+      "generated/p2221_s1171_strict_nu_branch_min_inflation_factor_for_full_coverage.json",
+      "generated/p2223_s1173_strict_nu_branch_targetwise_min_inflation_optimization.json"
+    ],
+    "global_factor": 1.0482334665049586,
+    "grouped_policy": {
+      "factor_above_dm_star": 1.0,
+      "factor_below_dm_star": 1.0
+    },
+    "summary": {
+      "global_mean_ratio_vs_global": 1.0,
+      "grouped_mean_ratio_vs_global": 0.9539859506052792,
+      "grouped_better_than_global": true
+    },
+    "theorem_scope_limit": "grouped-policy local tradeoff only; not global Task-3 closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2227_candidate",
+    "goal": "validate grouped policy against direct recompute coverage table and export strict pass/fail matrix"
+  },
+  "gatekeeper_checks": {
+    "grouped_tradeoff_exported": true,
+    "grouped_factors_ge_1": true,
+    "grouped_not_worse_than_global": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

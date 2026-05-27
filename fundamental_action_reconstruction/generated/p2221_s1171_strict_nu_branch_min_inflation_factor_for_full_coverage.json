@@ -1,0 +1,40 @@
+{
+  "schema_version": "p2221_s1171_v1",
+  "packet_id": "P2221",
+  "stage_id": "S1171",
+  "produced_by": "p2221_s1171_strict_nu_branch_min_inflation_factor_for_full_coverage.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_MIN_INFLATION_FACTOR_FOR_FULL_COVERAGE",
+  "strict_nu_branch_min_inflation_factor_for_full_coverage": {
+    "certificate_id": "STRICT_NU_BRANCH_MIN_INFLATION_FACTOR_FOR_FULL_COVERAGE_V1",
+    "source_packets": [
+      "generated/p2209_s1159_strict_nu_branch_transport_nonvanishing_threshold_map.json",
+      "generated/p2217_s1167_strict_nu_branch_signed_perturbation_budget_map.json",
+      "generated/p2218_s1168_strict_nu_branch_budget_map_direct_recompute_mismatch_envelope.json"
+    ],
+    "base_abs_mismatch_envelope": 0.0020226761976972485,
+    "required_abs_mismatch_envelope": 0.0020226761976972485,
+    "min_inflation_factor": 1.0482334665049586,
+    "verification": {
+      "all_above_targets_covered": true,
+      "all_below_targets_covered": true,
+      "all_targets_covered": true
+    },
+    "theorem_scope_limit": "local endpoint-band inflation calibration only; not global Task-3 closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2222_candidate",
+    "goal": "export calibrated inflated intervals with min_inflation_factor and compare width-cost vs base inflation"
+  },
+  "gatekeeper_checks": {
+    "min_inflation_factor_exported": true,
+    "inflation_factor_ge_1": true,
+    "all_targets_covered_with_min_factor": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

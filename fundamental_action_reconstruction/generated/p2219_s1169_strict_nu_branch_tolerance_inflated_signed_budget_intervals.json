@@ -1,0 +1,170 @@
+{
+  "schema_version": "p2219_s1169_v1",
+  "packet_id": "P2219",
+  "stage_id": "S1169",
+  "produced_by": "p2219_s1169_strict_nu_branch_tolerance_inflated_signed_budget_intervals.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_TOLERANCE_INFLATED_SIGNED_BUDGET_INTERVALS",
+  "strict_nu_branch_tolerance_inflated_signed_budget_intervals": {
+    "interval_id": "STRICT_NU_BRANCH_TOLERANCE_INFLATED_SIGNED_BUDGET_INTERVALS_V1",
+    "source_packets": [
+      "generated/p2217_s1167_strict_nu_branch_signed_perturbation_budget_map.json",
+      "generated/p2218_s1168_strict_nu_branch_budget_map_direct_recompute_mismatch_envelope.json"
+    ],
+    "reference_dm_star": 0.5876474770575525,
+    "inflation_abs_safety_factor_tolerance": 0.0020226761976972485,
+    "inflated_above_target_intervals": [
+      {
+        "target_safety_factor": 1.001,
+        "signed_delta_dm_interval": [
+          -0.00029899158579350905,
+          0.0008837154435828676
+        ],
+        "abs_dm_interval": [
+          0.587348485471759,
+          0.5885311925011354
+        ]
+      },
+      {
+        "target_safety_factor": 1.005,
+        "signed_delta_dm_interval": [
+          0.0008704561297853379,
+          0.0020531631591617144
+        ],
+        "abs_dm_interval": [
+          0.5885179331873378,
+          0.5897006402167142
+        ]
+      },
+      {
+        "target_safety_factor": 1.01,
+        "signed_delta_dm_interval": [
+          0.002332265774258929,
+          0.0035149728036353058
+        ],
+        "abs_dm_interval": [
+          0.5899797428318114,
+          0.5911624498611878
+        ]
+      },
+      {
+        "target_safety_factor": 1.02,
+        "signed_delta_dm_interval": [
+          0.005255885063206046,
+          0.006438592092582423
+        ],
+        "abs_dm_interval": [
+          0.5929033621207586,
+          0.594086069150135
+        ]
+      },
+      {
+        "target_safety_factor": 1.05,
+        "signed_delta_dm_interval": [
+          0.014026742930047398,
+          0.015209449959423775
+        ],
+        "abs_dm_interval": [
+          0.6016742199875998,
+          0.6028569270169762
+        ]
+      },
+      {
+        "target_safety_factor": 1.1,
+        "signed_delta_dm_interval": [
+          0.028644839374782984,
+          0.029827546404159362
+        ],
+        "abs_dm_interval": [
+          0.6162923164323355,
+          0.6174750234617119
+        ]
+      }
+    ],
+    "inflated_below_target_intervals": [
+      {
+        "target_safety_factor": 0.999,
+        "signed_delta_dm_interval": [
+          -0.0008925970057676601,
+          0.00030199652633313535
+        ],
+        "abs_dm_interval": [
+          0.5867548800517848,
+          0.5879494735838856
+        ]
+      },
+      {
+        "target_safety_factor": 0.995,
+        "signed_delta_dm_interval": [
+          -0.0020737979646367095,
+          -0.0008792044325359142
+        ],
+        "abs_dm_interval": [
+          0.5855736790929158,
+          0.5867682726250166
+        ]
+      },
+      {
+        "target_safety_factor": 0.99,
+        "signed_delta_dm_interval": [
+          -0.0035502991632230217,
+          -0.002355705631122226
+        ],
+        "abs_dm_interval": [
+          0.5840971778943295,
+          0.5852917714264303
+        ]
+      },
+      {
+        "target_safety_factor": 0.98,
+        "signed_delta_dm_interval": [
+          -0.006503301560395645,
+          -0.00530870802829485
+        ],
+        "abs_dm_interval": [
+          0.5811441754971568,
+          0.5823387690292576
+        ]
+      },
+      {
+        "target_safety_factor": 0.95,
+        "signed_delta_dm_interval": [
+          -0.015362308751913517,
+          -0.014167715219812721
+        ],
+        "abs_dm_interval": [
+          0.572285168305639,
+          0.5734797618377397
+        ]
+      },
+      {
+        "target_safety_factor": 0.9,
+        "signed_delta_dm_interval": [
+          -0.030127320737776603,
+          -0.028932727205675808
+        ],
+        "abs_dm_interval": [
+          0.5575201563197759,
+          0.5587147498518766
+        ]
+      }
+    ],
+    "theorem_scope_limit": "local tolerance-inflated budget intervals only; not global Task-3 closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2220_candidate",
+    "goal": "validate interval coverage against direct neighborhood recompute table and export pass-rate certificate"
+  },
+  "gatekeeper_checks": {
+    "inflated_interval_map_exported": true,
+    "interval_endpoints_ordered": true,
+    "above_intervals_include_positive_side": true,
+    "below_intervals_include_negative_side": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

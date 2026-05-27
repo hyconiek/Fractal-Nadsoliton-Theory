@@ -1,0 +1,131 @@
+{
+  "schema_version": "p2235_s1185_v1",
+  "packet_id": "P2235",
+  "stage_id": "S1185",
+  "produced_by": "p2235_s1185_strict_nu_branch_residual_to_modeled_affine_surrogate_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_RESIDUAL_TO_MODELED_AFFINE_SURROGATE_PROBE",
+  "strict_nu_branch_residual_to_modeled_affine_surrogate_probe": {
+    "probe_id": "STRICT_NU_BRANCH_RESIDUAL_TO_MODELED_AFFINE_SURROGATE_PROBE_V1",
+    "source_packets": [
+      "generated/p2203_s1153_strict_frw_bianchi_transport_residual_map_under_shared_majorant.json",
+      "generated/p2234_s1184_strict_nu_branch_modeled_lane_to_residual_lane_gap_quantification_probe.json"
+    ],
+    "anchoring": {
+      "residual_min": 0.0,
+      "residual_max": 0.0001706491692635688,
+      "modeled_safety_lo": 0.2499999999998255,
+      "modeled_safety_hi": 2.2499999999984293
+    },
+    "affine_map": {
+      "a": 11719.951574505412,
+      "b": 0.2499999999998255,
+      "formula": "sf_hat = a*residual_l1 + b"
+    },
+    "surrogate_rows": [
+      {
+        "residual_l1": 0.0,
+        "modeled_safety_surrogate": 0.2499999999998255,
+        "inside_modeled_range": true
+      },
+      {
+        "residual_l1": 1.0659336614097082e-05,
+        "modeled_safety_surrogate": 0.3749269089333958,
+        "inside_modeled_range": true
+      },
+      {
+        "residual_l1": 2.1319634864765793e-05,
+        "modeled_safety_surrogate": 0.4998650882010178,
+        "inside_modeled_range": true
+      },
+      {
+        "residual_l1": 3.198089077984035e-05,
+        "modeled_safety_surrogate": 0.624814491249101,
+        "inside_modeled_range": true
+      },
+      {
+        "residual_l1": 4.264302974646723e-05,
+        "modeled_safety_surrogate": 0.7497742436186152,
+        "inside_modeled_range": true
+      },
+      {
+        "residual_l1": 5.330606137309282e-05,
+        "modeled_safety_surrogate": 0.8747444579200868,
+        "inside_modeled_range": true
+      },
+      {
+        "residual_l1": 6.396995089384812e-05,
+        "modeled_safety_surrogate": 0.9997247266992146,
+        "inside_modeled_range": true
+      },
+      {
+        "residual_l1": 7.463464352124804e-05,
+        "modeled_safety_surrogate": 1.1247144078493267,
+        "inside_modeled_range": true
+      },
+      {
+        "residual_l1": 8.53001685329924e-05,
+        "modeled_safety_surrogate": 1.2497138445036469,
+        "inside_modeled_range": true
+      },
+      {
+        "residual_l1": 9.596640075909886e-05,
+        "modeled_safety_surrogate": 1.3747215696760435,
+        "inside_modeled_range": true
+      },
+      {
+        "residual_l1": 0.00010663339534092302,
+        "modeled_safety_surrogate": 1.4997382296205344,
+        "inside_modeled_range": true
+      },
+      {
+        "residual_l1": 0.00011730106224098967,
+        "modeled_safety_surrogate": 1.6247627691022697,
+        "inside_modeled_range": true
+      },
+      {
+        "residual_l1": 0.00012796946329030642,
+        "modeled_safety_surrogate": 1.7497959127776648,
+        "inside_modeled_range": true
+      },
+      {
+        "residual_l1": 0.0001386384961582569,
+        "modeled_safety_surrogate": 1.8748364613368511,
+        "inside_modeled_range": true
+      },
+      {
+        "residual_l1": 0.00014930813834939042,
+        "modeled_safety_surrogate": 1.9998841511342356,
+        "inside_modeled_range": true
+      },
+      {
+        "residual_l1": 0.0001599784761565144,
+        "modeled_safety_surrogate": 2.1249399935173434,
+        "inside_modeled_range": true
+      },
+      {
+        "residual_l1": 0.0001706491692635688,
+        "modeled_safety_surrogate": 2.2499999999984293,
+        "inside_modeled_range": true
+      }
+    ],
+    "bridge_gap_statement": "Affine surrogate is diagnostic-only and does not constitute theorem-level residual->modeled bridge.",
+    "theorem_scope_limit": "diagnostic affine surrogate on current sampled rows only; not global Task-3 closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2236_candidate",
+    "goal": "test non-affine surrogate families and export model-selection evidence (error/complexity) before any bridge claim"
+  },
+  "gatekeeper_checks": {
+    "affine_surrogate_exported": true,
+    "positive_slope_map": true,
+    "all_surrogates_inside_modeled_range": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}
