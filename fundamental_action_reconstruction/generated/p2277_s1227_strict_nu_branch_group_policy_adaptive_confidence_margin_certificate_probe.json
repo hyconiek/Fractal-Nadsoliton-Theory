@@ -1,0 +1,91 @@
+{
+  "schema_version": "p2277_s1227_v1",
+  "packet_id": "P2277",
+  "stage_id": "S1227",
+  "produced_by": "p2277_s1227_strict_nu_branch_group_policy_adaptive_confidence_margin_certificate_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_GROUP_POLICY_ADAPTIVE_CONFIDENCE_MARGIN_CERTIFICATE_PROBE",
+  "strict_nu_branch_group_policy_adaptive_confidence_margin_certificate_probe": {
+    "probe_id": "STRICT_NU_BRANCH_GROUP_POLICY_ADAPTIVE_CONFIDENCE_MARGIN_CERTIFICATE_PROBE_V1",
+    "source_packets": [
+      "generated/p2275_s1225_strict_nu_branch_group_policy_certified_box_corner_replay_passrate_floor_probe.json",
+      "generated/p2276_s1226_strict_nu_branch_group_policy_analytic_floor_margin_certificate_probe.json"
+    ],
+    "confidence_model": {
+      "type": "hoeffding_bernoulli_floor_surrogate",
+      "delta": 0.01,
+      "n_seeds": 5,
+      "trials": 700,
+      "corners": 4,
+      "n_eff": 14000,
+      "adaptive_margin": 0.013755930365986099,
+      "formula": "sqrt(log(2/delta)/(2*n_eff))"
+    },
+    "certificate_rows": [
+      {
+        "risk_tolerance": 0.01,
+        "target_floor": 0.99,
+        "empirical_corner_floor": 0.0,
+        "fixed_margin_previous": 0.02,
+        "fixed_certified_floor_previous": 0.0,
+        "adaptive_margin": 0.013755930365986099,
+        "adaptive_certified_floor": 0.0,
+        "adaptive_floor_meets_target": false,
+        "adaptive_minus_fixed_certified_floor": 0.0
+      },
+      {
+        "risk_tolerance": 0.02,
+        "target_floor": 0.98,
+        "empirical_corner_floor": 0.0,
+        "fixed_margin_previous": 0.02,
+        "fixed_certified_floor_previous": 0.0,
+        "adaptive_margin": 0.013755930365986099,
+        "adaptive_certified_floor": 0.0,
+        "adaptive_floor_meets_target": false,
+        "adaptive_minus_fixed_certified_floor": 0.0
+      },
+      {
+        "risk_tolerance": 0.05,
+        "target_floor": 0.95,
+        "empirical_corner_floor": 0.0,
+        "fixed_margin_previous": 0.02,
+        "fixed_certified_floor_previous": 0.0,
+        "adaptive_margin": 0.013755930365986099,
+        "adaptive_certified_floor": 0.0,
+        "adaptive_floor_meets_target": false,
+        "adaptive_minus_fixed_certified_floor": 0.0
+      },
+      {
+        "risk_tolerance": 0.1,
+        "target_floor": 0.9,
+        "empirical_corner_floor": 0.0,
+        "fixed_margin_previous": 0.02,
+        "fixed_certified_floor_previous": 0.0,
+        "adaptive_margin": 0.013755930365986099,
+        "adaptive_certified_floor": 0.0,
+        "adaptive_floor_meets_target": false,
+        "adaptive_minus_fixed_certified_floor": 0.0
+      }
+    ],
+    "global_summary": {
+      "all_rows_meet_target_adaptive": false,
+      "worst_adaptive_margin_to_target": -0.99
+    },
+    "theorem_scope_limit": "adaptive concentration-margin packaging for surrogate replay only; not selector closure and not ToE closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2278_candidate",
+    "goal": "export finite-sample confidence-curve sweep over delta and replay budgets to optimize floor-tightness vs confidence"
+  },
+  "gatekeeper_checks": {
+    "certificate_rows_exported": true,
+    "adaptive_margin_nonnegative": true,
+    "all_adaptive_floors_bounded": true,
+    "all_targets_bounded": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

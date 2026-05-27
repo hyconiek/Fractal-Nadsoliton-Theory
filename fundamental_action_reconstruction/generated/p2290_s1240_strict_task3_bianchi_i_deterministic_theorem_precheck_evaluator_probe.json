@@ -1,0 +1,41 @@
+{
+  "schema_version": "p2290_s1240_v1",
+  "packet_id": "P2290",
+  "stage_id": "S1240",
+  "produced_by": "p2290_s1240_strict_task3_bianchi_i_deterministic_theorem_precheck_evaluator_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_TASK3_BIANCHI_I_DETERMINISTIC_THEOREM_PRECHECK_EVALUATOR_PROBE",
+  "strict_task3_bianchi_i_deterministic_theorem_precheck_evaluator_probe": {
+    "probe_id": "STRICT_TASK3_BIANCHI_I_DETERMINISTIC_THEOREM_PRECHECK_EVALUATOR_PROBE_V1",
+    "source_packets": [
+      "generated/p2289_s1239_strict_task3_bianchi_i_theorem_attempt_precheck_contract_probe.json",
+      "generated/p2288_s1238_strict_task3_bianchi_i_certificate_chain_index_gating_ledger_probe.json"
+    ],
+    "inputs": {
+      "expected_fingerprint": "02bc2ea18a6e6d484f124cb5a930f0f9e94ae852e5b8dd098ba658a31e551edc",
+      "expected_gating_decision": "ALLOW_THEOREM_ATTEMPT_PRECHECK",
+      "actual_fingerprint": "02bc2ea18a6e6d484f124cb5a930f0f9e94ae852e5b8dd098ba658a31e551edc",
+      "actual_gating_decision": "ALLOW_THEOREM_ATTEMPT_PRECHECK"
+    },
+    "checks": {
+      "fingerprint_match": true,
+      "gating_match": true
+    },
+    "evaluator_decision": "PRECHECK_PASS",
+    "theorem_scope_limit": "deterministic precheck evaluator only; not theorem proof and not selector/ToE closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2291_candidate",
+    "goal": "freeze signed precheck transcript and require transcript hash in any theorem-draft metadata packet"
+  },
+  "gatekeeper_checks": {
+    "checks_exported": true,
+    "fingerprint_length_ok": true,
+    "decision_valid": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

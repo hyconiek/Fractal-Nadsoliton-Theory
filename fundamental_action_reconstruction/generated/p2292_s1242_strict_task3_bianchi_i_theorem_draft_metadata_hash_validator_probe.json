@@ -1,0 +1,44 @@
+{
+  "schema_version": "p2292_s1242_v1",
+  "packet_id": "P2292",
+  "stage_id": "S1242",
+  "produced_by": "p2292_s1242_strict_task3_bianchi_i_theorem_draft_metadata_hash_validator_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_TASK3_BIANCHI_I_THEOREM_DRAFT_METADATA_HASH_VALIDATOR_PROBE",
+  "strict_task3_bianchi_i_theorem_draft_metadata_hash_validator_probe": {
+    "probe_id": "STRICT_TASK3_BIANCHI_I_THEOREM_DRAFT_METADATA_HASH_VALIDATOR_PROBE_V1",
+    "source_packets": [
+      "generated/p2291_s1241_strict_task3_bianchi_i_signed_precheck_transcript_hash_contract_probe.json"
+    ],
+    "contract_snapshot": {
+      "required_hash": "dc259542b4fc3b0c29720b12a80b4a84b9746a8ffba4c89d64b9af58f2253092",
+      "required_precheck_decision": "PRECHECK_PASS"
+    },
+    "draft_metadata_candidate": {
+      "theorem_draft_id": "TASK3_BIANCHI_I_DRAFT_ATTEMPT_PLACEHOLDER_V1",
+      "precheck_transcript_hash_sha256": "dc259542b4fc3b0c29720b12a80b4a84b9746a8ffba4c89d64b9af58f2253092",
+      "precheck_decision": "PRECHECK_PASS"
+    },
+    "checks": {
+      "hash_match": true,
+      "decision_match": true
+    },
+    "validator_decision": "METADATA_ACCEPT",
+    "theorem_scope_limit": "metadata validator only; not theorem proof and not selector/ToE closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2293_candidate",
+    "goal": "run negative-control metadata replay matrix (hash mismatch / decision mismatch) and export rejection trace table"
+  },
+  "gatekeeper_checks": {
+    "validator_exported": true,
+    "required_hash_length_ok": true,
+    "checks_exported": true,
+    "decision_valid": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": "p2282_s1232_v1",
+  "packet_id": "P2282",
+  "stage_id": "S1232",
+  "produced_by": "p2282_s1232_strict_task3_global_bianchi_i_g1_g2_g3_closure_matrix_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_TASK3_GLOBAL_BIANCHI_I_G1_G2_G3_CLOSURE_MATRIX_PROBE",
+  "strict_task3_global_bianchi_i_g1_g2_g3_closure_matrix_probe": {
+    "probe_id": "STRICT_TASK3_GLOBAL_BIANCHI_I_G1_G2_G3_CLOSURE_MATRIX_PROBE_V1",
+    "source_packets": [
+      "generated/p2203_s1153_strict_frw_bianchi_transport_residual_map_under_shared_majorant.json",
+      "generated/p2280_s1230_strict_nu_branch_group_policy_minimal_lock_criterion_grid_probe.json",
+      "generated/p2281_s1231_strict_nu_branch_group_policy_minimal_config_fresh_replay_validation_probe.json"
+    ],
+    "task3_scope": "global Bianchi-I transport calibration lane with G1/G2/G3 closure diagnostics",
+    "gap_rows": [
+      {
+        "id": "G1_reduction_certainty",
+        "status": "OPEN",
+        "metric": -0.99,
+        "criterion": "min margin_to_target from P2281 >= 0"
+      },
+      {
+        "id": "G2_nonlinear_trajectory_realism",
+        "status": "OPEN",
+        "metric": 1.0,
+        "criterion": "max Bianchi-I transport_residual_l1 <= 5e-05"
+      },
+      {
+        "id": "G3_operational_policy_rule",
+        "status": "OPEN",
+        "metric": -1.0,
+        "criterion": "minimal feasible policy-lock config exists in P2280"
+      }
+    ],
+    "closure_score": 0.0,
+    "theorem_scope_limit": "closure-matrix diagnostic only; not strict-core selector closure and not ToE closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2283_candidate",
+    "goal": "export theorem-ready implication stub from Bianchi-I residual threshold + minimal-config replay margin to Task-3 transport closure sufficient condition"
+  },
+  "gatekeeper_checks": {
+    "gap_rows_exported": true,
+    "contains_G1": true,
+    "contains_G2": true,
+    "contains_G3": true,
+    "closure_score_bounded": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

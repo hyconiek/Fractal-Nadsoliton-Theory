@@ -1,0 +1,55 @@
+{
+  "schema_version": "p2291_s1241_v1",
+  "packet_id": "P2291",
+  "stage_id": "S1241",
+  "produced_by": "p2291_s1241_strict_task3_bianchi_i_signed_precheck_transcript_hash_contract_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_TASK3_BIANCHI_I_SIGNED_PRECHECK_TRANSCRIPT_HASH_CONTRACT_PROBE",
+  "strict_task3_bianchi_i_signed_precheck_transcript_hash_contract_probe": {
+    "probe_id": "STRICT_TASK3_BIANCHI_I_SIGNED_PRECHECK_TRANSCRIPT_HASH_CONTRACT_PROBE_V1",
+    "source_packets": [
+      "generated/p2290_s1240_strict_task3_bianchi_i_deterministic_theorem_precheck_evaluator_probe.json"
+    ],
+    "transcript_payload": {
+      "transcript_id": "TASK3_PRECHECK_TRANSCRIPT_V1",
+      "source_packet": "generated/p2290_s1240_strict_task3_bianchi_i_deterministic_theorem_precheck_evaluator_probe.json",
+      "inputs": {
+        "expected_fingerprint": "02bc2ea18a6e6d484f124cb5a930f0f9e94ae852e5b8dd098ba658a31e551edc",
+        "expected_gating_decision": "ALLOW_THEOREM_ATTEMPT_PRECHECK",
+        "actual_fingerprint": "02bc2ea18a6e6d484f124cb5a930f0f9e94ae852e5b8dd098ba658a31e551edc",
+        "actual_gating_decision": "ALLOW_THEOREM_ATTEMPT_PRECHECK"
+      },
+      "checks": {
+        "fingerprint_match": true,
+        "gating_match": true
+      },
+      "evaluator_decision": "PRECHECK_PASS",
+      "scope": "task3_bianchi_i_theorem_attempt_precheck"
+    },
+    "transcript_hash_sha256": "dc259542b4fc3b0c29720b12a80b4a84b9746a8ffba4c89d64b9af58f2253092",
+    "hash_contract": {
+      "contract_id": "TASK3_THEOREM_DRAFT_METADATA_HASH_CONTRACT_V1",
+      "required_transcript_hash_sha256": "dc259542b4fc3b0c29720b12a80b4a84b9746a8ffba4c89d64b9af58f2253092",
+      "required_precheck_decision": "PRECHECK_PASS",
+      "observed_precheck_decision": "PRECHECK_PASS",
+      "status": "READY_FOR_DRAFT_METADATA_BINDING",
+      "rule": "Any theorem-draft metadata packet must include transcript_hash exactly equal to required_transcript_hash_sha256."
+    },
+    "theorem_scope_limit": "transcript-hash contract packaging only; not theorem proof and not selector/ToE closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2292_candidate",
+    "goal": "build metadata validator that rejects theorem-draft packets missing exact transcript_hash or with non-PRECHECK_PASS decision"
+  },
+  "gatekeeper_checks": {
+    "transcript_hash_exported": true,
+    "hash_contract_exported": true,
+    "decision_valid": true,
+    "contract_status_valid": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

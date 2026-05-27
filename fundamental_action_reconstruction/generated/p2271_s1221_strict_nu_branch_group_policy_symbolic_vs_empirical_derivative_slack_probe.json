@@ -1,0 +1,158 @@
+{
+  "schema_version": "p2271_s1221_v1",
+  "packet_id": "P2271",
+  "stage_id": "S1221",
+  "produced_by": "p2271_s1221_strict_nu_branch_group_policy_symbolic_vs_empirical_derivative_slack_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_GROUP_POLICY_SYMBOLIC_VS_EMPIRICAL_DERIVATIVE_SLACK_PROBE",
+  "strict_nu_branch_group_policy_symbolic_vs_empirical_derivative_slack_probe": {
+    "probe_id": "STRICT_NU_BRANCH_GROUP_POLICY_SYMBOLIC_VS_EMPIRICAL_DERIVATIVE_SLACK_PROBE_V1",
+    "source_packets": [
+      "generated/p2270_s1220_strict_nu_branch_group_policy_symbolic_derivative_bound_probe.json"
+    ],
+    "empirical_settings": {
+      "finite_difference_eps": 0.01,
+      "seeds": [
+        12211,
+        12212,
+        12213,
+        12214,
+        12215
+      ],
+      "trials_per_seed": 300,
+      "horizon": 12
+    },
+    "slack_rows": [
+      {
+        "risk_tolerance": 0.01,
+        "rho": 0.885,
+        "kappa_scale": 1.16,
+        "symbolic_abs_d_bound_d_rho": 0.06608395118729994,
+        "symbolic_abs_d_bound_d_kappa": 0.04445728923474005,
+        "empirical_fd_samples_d_rho": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "empirical_fd_samples_d_kappa": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "empirical_abs_max_d_rho": 0.0,
+        "empirical_abs_max_d_kappa": 0.0,
+        "slack_factor_rho": 66083951187.29994,
+        "slack_factor_kappa": 44457289234.74005,
+        "symbolic_upper_bounds_empirical_rho": true,
+        "symbolic_upper_bounds_empirical_kappa": true
+      },
+      {
+        "risk_tolerance": 0.02,
+        "rho": 0.87,
+        "kappa_scale": 1.12,
+        "symbolic_abs_d_bound_d_rho": 0.06556686469956928,
+        "symbolic_abs_d_bound_d_kappa": 0.04476392914669602,
+        "empirical_fd_samples_d_rho": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "empirical_fd_samples_d_kappa": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "empirical_abs_max_d_rho": 0.0,
+        "empirical_abs_max_d_kappa": 0.0,
+        "slack_factor_rho": 65566864699.56928,
+        "slack_factor_kappa": 44763929146.69602,
+        "symbolic_upper_bounds_empirical_rho": true,
+        "symbolic_upper_bounds_empirical_kappa": true
+      },
+      {
+        "risk_tolerance": 0.05,
+        "rho": 0.825,
+        "kappa_scale": 1.0,
+        "symbolic_abs_d_bound_d_rho": 0.0637430921999627,
+        "symbolic_abs_d_bound_d_kappa": 0.04575160442652323,
+        "empirical_fd_samples_d_rho": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "empirical_fd_samples_d_kappa": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "empirical_abs_max_d_rho": 0.0,
+        "empirical_abs_max_d_kappa": 0.0,
+        "slack_factor_rho": 63743092199.9627,
+        "slack_factor_kappa": 45751604426.52323,
+        "symbolic_upper_bounds_empirical_rho": true,
+        "symbolic_upper_bounds_empirical_kappa": true
+      },
+      {
+        "risk_tolerance": 0.1,
+        "rho": 0.75,
+        "kappa_scale": 1.0,
+        "symbolic_abs_d_bound_d_rho": 0.07670958244579874,
+        "symbolic_abs_d_bound_d_kappa": 0.051778968150914165,
+        "empirical_fd_samples_d_rho": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "empirical_fd_samples_d_kappa": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "empirical_abs_max_d_rho": 0.0,
+        "empirical_abs_max_d_kappa": 0.0,
+        "slack_factor_rho": 76709582445.79875,
+        "slack_factor_kappa": 51778968150.91417,
+        "symbolic_upper_bounds_empirical_rho": true,
+        "symbolic_upper_bounds_empirical_kappa": true
+      }
+    ],
+    "global_summary": {
+      "all_symbolic_rho_bounds_cover_empirical": true,
+      "all_symbolic_kappa_bounds_cover_empirical": true,
+      "max_abs_empirical_d_rho": 0.0,
+      "max_abs_empirical_d_kappa": 0.0
+    },
+    "physical_interpretation_note": "This packet quantifies model-form slack: how conservative symbolic derivative envelopes are versus multi-seed empirical finite-difference sensitivity under nonlinear perturbation replay.",
+    "theorem_scope_limit": "surrogate derivative-sensitivity comparison only; not strict-core selector closure and not ToE closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2272_candidate",
+    "goal": "tighten symbolic envelope constants using calibrated empirical quantiles while preserving explicit no-false-pass safety margin"
+  },
+  "gatekeeper_checks": {
+    "slack_rows_exported": true,
+    "all_symbolic_rho_bounds_cover_empirical": true,
+    "all_symbolic_kappa_bounds_cover_empirical": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}
