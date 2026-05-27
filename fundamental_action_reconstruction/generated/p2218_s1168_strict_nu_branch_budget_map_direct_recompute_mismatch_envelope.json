@@ -1,0 +1,134 @@
+{
+  "schema_version": "p2218_s1168_v1",
+  "packet_id": "P2218",
+  "stage_id": "S1168",
+  "produced_by": "p2218_s1168_strict_nu_branch_budget_map_direct_recompute_mismatch_envelope.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_BUDGET_MAP_DIRECT_RECOMPUTE_MISMATCH_ENVELOPE",
+  "strict_nu_branch_budget_map_direct_recompute_mismatch_envelope": {
+    "envelope_id": "STRICT_NU_BRANCH_BUDGET_MAP_DIRECT_RECOMPUTE_MISMATCH_ENVELOPE_V1",
+    "source_packets": [
+      "generated/p2209_s1159_strict_nu_branch_transport_nonvanishing_threshold_map.json",
+      "generated/p2217_s1167_strict_nu_branch_signed_perturbation_budget_map.json"
+    ],
+    "reference_dm_star": 0.5876474770575525,
+    "comparison_rows": [
+      {
+        "certification_side": "above_dm_star",
+        "target_safety_factor": 1.001,
+        "required_abs_dm": 0.5879398389864472,
+        "recomputed_safety_factor": 1.0009952723935842,
+        "abs_mismatch": 4.727606415677599e-06,
+        "rel_mismatch": 4.7228835321454535e-06
+      },
+      {
+        "certification_side": "above_dm_star",
+        "target_safety_factor": 1.005,
+        "required_abs_dm": 0.589109286702026,
+        "recomputed_safety_factor": 1.0049813123432287,
+        "abs_mismatch": 1.8687656771154693e-05,
+        "rel_mismatch": 1.859468335438278e-05
+      },
+      {
+        "certification_side": "above_dm_star",
+        "target_safety_factor": 1.01,
+        "required_abs_dm": 0.5905710963464996,
+        "recomputed_safety_factor": 1.009975000618446,
+        "abs_mismatch": 2.4999381553980626e-05,
+        "rel_mismatch": 2.4751862924733294e-05
+      },
+      {
+        "certification_side": "above_dm_star",
+        "target_safety_factor": 1.02,
+        "required_abs_dm": 0.5934947156354468,
+        "recomputed_safety_factor": 1.0199995049627486,
+        "abs_mismatch": 4.950372514134216e-07,
+        "rel_mismatch": 4.853306386406094e-07
+      },
+      {
+        "certification_side": "above_dm_star",
+        "target_safety_factor": 1.05,
+        "required_abs_dm": 0.602265573502288,
+        "recomputed_safety_factor": 1.0503700403466092,
+        "abs_mismatch": 0.0003700403466091462,
+        "rel_mismatch": 0.00035241937772299636
+      },
+      {
+        "certification_side": "above_dm_star",
+        "target_safety_factor": 1.1,
+        "required_abs_dm": 0.6168836699470237,
+        "recomputed_safety_factor": 1.1019776738228864,
+        "abs_mismatch": 0.0019776738228862722,
+        "rel_mismatch": 0.0017978852935329746
+      },
+      {
+        "certification_side": "below_dm_star",
+        "target_safety_factor": 0.999,
+        "required_abs_dm": 0.5873521768178352,
+        "recomputed_safety_factor": 0.9989952273925851,
+        "abs_mismatch": 4.772607414937902e-06,
+        "rel_mismatch": 4.777384799737639e-06
+      },
+      {
+        "certification_side": "below_dm_star",
+        "target_safety_factor": 0.995,
+        "required_abs_dm": 0.5861709758589662,
+        "recomputed_safety_factor": 0.9949811873432317,
+        "abs_mismatch": 1.8812656768285585e-05,
+        "rel_mismatch": 1.8907192731945312e-05
+      },
+      {
+        "certification_side": "below_dm_star",
+        "target_safety_factor": 0.99,
+        "required_abs_dm": 0.5846944746603798,
+        "recomputed_safety_factor": 0.9899750006309497,
+        "abs_mismatch": 2.4999369050315856e-05,
+        "rel_mismatch": 2.5251887929611977e-05
+      },
+      {
+        "certification_side": "below_dm_star",
+        "target_safety_factor": 0.98,
+        "required_abs_dm": 0.5817414722632073,
+        "recomputed_safety_factor": 0.9800005050377516,
+        "abs_mismatch": 5.050377516191418e-07,
+        "rel_mismatch": 5.153446445093283e-07
+      },
+      {
+        "certification_side": "below_dm_star",
+        "target_safety_factor": 0.95,
+        "required_abs_dm": 0.5728824650716894,
+        "recomputed_safety_factor": 0.9503800409090787,
+        "abs_mismatch": 0.0003800409090787271,
+        "rel_mismatch": 0.0004000430621881338
+      },
+      {
+        "certification_side": "below_dm_star",
+        "target_safety_factor": 0.9,
+        "required_abs_dm": 0.5581174530858263,
+        "recomputed_safety_factor": 0.9020226761976973,
+        "abs_mismatch": 0.0020226761976972485,
+        "rel_mismatch": 0.002247417997441387
+      }
+    ],
+    "mismatch_envelopes": {
+      "max_abs_mismatch": 0.0020226761976972485,
+      "max_rel_mismatch": 0.002247417997441387
+    },
+    "theorem_scope_limit": "direct recompute envelope on local budget-map rows only; not global Task-3 closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2219_candidate",
+    "goal": "lift mismatch envelope into conservative signed budget intervals with explicit tolerance inflation"
+  },
+  "gatekeeper_checks": {
+    "mismatch_envelope_exported": true,
+    "max_abs_mismatch_bounded": true,
+    "max_rel_mismatch_bounded": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

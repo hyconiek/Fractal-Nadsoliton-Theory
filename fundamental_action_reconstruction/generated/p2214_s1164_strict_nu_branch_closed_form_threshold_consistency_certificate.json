@@ -1,0 +1,51 @@
+{
+  "schema_version": "p2214_s1164_v1",
+  "packet_id": "P2214",
+  "stage_id": "S1164",
+  "produced_by": "p2214_s1164_strict_nu_branch_closed_form_threshold_consistency_certificate.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_CLOSED_FORM_THRESHOLD_CONSISTENCY_CERTIFICATE",
+  "strict_nu_branch_closed_form_threshold_consistency_certificate": {
+    "certificate_id": "STRICT_NU_BRANCH_CLOSED_FORM_THRESHOLD_CONSISTENCY_CERTIFICATE_V1",
+    "source_packets": [
+      "generated/p2209_s1159_strict_nu_branch_transport_nonvanishing_threshold_map.json",
+      "generated/p2213_s1163_strict_nu_branch_bisection_threshold_tolerance_certificate.json"
+    ],
+    "closed_form_candidates": {
+      "dm_linear": 5.755492621539123,
+      "dm_quadratic": 0.5876474770577576,
+      "active_branch": "quadratic",
+      "dm_closed_form_selected": 0.5876474770577576
+    },
+    "bisection_reference": {
+      "dm_star_bisection": 0.5876474770575525,
+      "bisection_final_bracket": {
+        "abs_dm_lo": 0.5876474770573017,
+        "abs_dm_hi": 0.5876474770578033,
+        "width": 5.015987625256457e-13
+      }
+    },
+    "consistency_metrics": {
+      "closed_form_inside_bisection_bracket": true,
+      "abs_gap_closed_form_vs_bisection": 2.0505819264826641e-13,
+      "rel_gap_closed_form_vs_bisection": 3.489476270279504e-13
+    },
+    "certified_statement": "Closed-form threshold candidate agrees with bisection-certified crossing to numerical tolerance on modeled lane.",
+    "theorem_scope_limit": "modeled lower-bound lane algebraic consistency only; not global Task-3 closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2215_candidate",
+    "goal": "propagate dm* certificate into explicit residual-vs-margin safety factor map around crossing neighborhood"
+  },
+  "gatekeeper_checks": {
+    "closed_form_consistency_certificate_exported": true,
+    "closed_form_inside_bisection_bracket": true,
+    "small_relative_gap_vs_bisection": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}
