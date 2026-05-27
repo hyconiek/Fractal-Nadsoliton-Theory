@@ -1,0 +1,46 @@
+{
+  "schema_version": "p2238_s1188_v1",
+  "packet_id": "P2238",
+  "stage_id": "S1188",
+  "produced_by": "p2238_s1188_strict_nu_branch_weighted_stability_to_budget_inequality_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_WEIGHTED_STABILITY_TO_BUDGET_INEQUALITY_PROBE",
+  "strict_nu_branch_weighted_stability_to_budget_inequality_probe": {
+    "probe_id": "STRICT_NU_BRANCH_WEIGHTED_STABILITY_TO_BUDGET_INEQUALITY_PROBE_V1",
+    "source_packets": [
+      "generated/p2217_s1167_strict_nu_branch_signed_perturbation_budget_map.json",
+      "generated/p2237_s1187_strict_nu_branch_residual_to_modeled_weighted_stability_probe.json"
+    ],
+    "inputs": {
+      "weighted_slope": 1.9999999999986038,
+      "surrogate_uncertainty_band_radius": 2.220446049250313e-16,
+      "min_abs_signed_budget": 0.5581174530858263
+    },
+    "derived_inequality": {
+      "statement": "|delta_residual| <= band/slope <= min_abs_signed_budget",
+      "lhs_bound_band_over_slope": 1.1102230246259316e-16,
+      "rhs_min_abs_signed_budget": 0.5581174530858263,
+      "holds": true,
+      "relative_load_ratio": 1.989228286066882e-16,
+      "conservative_margin_factor": 0.9999999999999998
+    },
+    "physical_interpretation_note": "If inequality holds, surrogate-fit uncertainty remains below smallest local residual budget, supporting robustness of sign-preserving local response.",
+    "theorem_scope_limit": "local budget compatibility check only; not a legacy->strict kernel bridge theorem"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2239_candidate",
+    "goal": "propagate inequality margins target-wise and grouped-wise with worst-case aggregation under policy mixes"
+  },
+  "gatekeeper_checks": {
+    "weighted_to_budget_inequality_exported": true,
+    "weighted_slope_positive": true,
+    "inequality_holds_against_min_budget": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": "p2236_s1186_v1",
+  "packet_id": "P2236",
+  "stage_id": "S1186",
+  "produced_by": "p2236_s1186_strict_nu_branch_residual_to_modeled_surrogate_family_evidence_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_RESIDUAL_TO_MODELED_SURROGATE_FAMILY_EVIDENCE_PROBE",
+  "strict_nu_branch_residual_to_modeled_surrogate_family_evidence_probe": {
+    "probe_id": "STRICT_NU_BRANCH_RESIDUAL_TO_MODELED_SURROGATE_FAMILY_EVIDENCE_PROBE_V1",
+    "source_packets": [
+      "generated/p2203_s1153_strict_frw_bianchi_transport_residual_map_under_shared_majorant.json",
+      "generated/p2234_s1184_strict_nu_branch_modeled_lane_to_residual_lane_gap_quantification_probe.json"
+    ],
+    "domain_normalization": {
+      "residual_min": 0.0,
+      "residual_max": 0.0001706491692635688
+    },
+    "target_range": {
+      "modeled_safety_lo": 0.2499999999998255,
+      "modeled_safety_hi": 2.2499999999984293
+    },
+    "family_metrics": {
+      "affine": {
+        "params": {
+          "a": 1.9999999999986038,
+          "b": 0.2499999999998255
+        },
+        "mse": 0.0,
+        "derivative_min_on_unit_interval": 1.9999999999986038
+      },
+      "quadratic": {
+        "params": {
+          "a": -8.881784197001252e-16,
+          "b": 1.9999999999986038,
+          "c": 0.2499999999998255
+        },
+        "mse": 1.8996466651461866e-31,
+        "derivative_min_on_unit_interval": 1.999999999998602
+      }
+    },
+    "selected_family_under_complexity_penalty": "affine",
+    "selection_rule": "prefer lower MSE; tie -> affine (lower complexity)",
+    "physical_interpretation_note": "Monotone positive derivative surrogate is compatible with one-directional local response, but remains a modeled-lane diagnostic only.",
+    "theorem_scope_limit": "finite-sample surrogate-family evidence only; not a legacy->strict bridge theorem"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2237_candidate",
+    "goal": "export weighted regression with uncertainty bands and out-of-sample split checks for surrogate stability"
+  },
+  "gatekeeper_checks": {
+    "surrogate_family_evidence_exported": true,
+    "affine_derivative_positive": true,
+    "quadratic_derivative_positive_on_unit_interval": true,
+    "complexity_tie_breaker_explicit": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

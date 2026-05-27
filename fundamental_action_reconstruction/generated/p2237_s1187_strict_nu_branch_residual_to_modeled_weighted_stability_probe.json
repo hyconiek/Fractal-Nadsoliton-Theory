@@ -1,0 +1,55 @@
+{
+  "schema_version": "p2237_s1187_v1",
+  "packet_id": "P2237",
+  "stage_id": "S1187",
+  "produced_by": "p2237_s1187_strict_nu_branch_residual_to_modeled_weighted_stability_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_RESIDUAL_TO_MODELED_WEIGHTED_STABILITY_PROBE",
+  "strict_nu_branch_residual_to_modeled_weighted_stability_probe": {
+    "probe_id": "STRICT_NU_BRANCH_RESIDUAL_TO_MODELED_WEIGHTED_STABILITY_PROBE_V1",
+    "source_packets": [
+      "generated/p2203_s1153_strict_frw_bianchi_transport_residual_map_under_shared_majorant.json",
+      "generated/p2234_s1184_strict_nu_branch_modeled_lane_to_residual_lane_gap_quantification_probe.json",
+      "generated/p2236_s1186_strict_nu_branch_residual_to_modeled_surrogate_family_evidence_probe.json"
+    ],
+    "prior_selected_family": "affine",
+    "weighted_fit": {
+      "weight_formula": "w=1+2*|x-0.5|",
+      "params": {
+        "a": 1.9999999999986038,
+        "b": 0.24999999999982547
+      },
+      "mse_full": 2.2657999345732187e-34
+    },
+    "split_stability": {
+      "train_size": 9,
+      "test_size": 8,
+      "train_params": {
+        "a": 1.9999999999986036,
+        "b": 0.2499999999998257
+      },
+      "test_mse": 1.1170393677445968e-32,
+      "uncertainty_band_radius_from_train_residual": 2.220446049250313e-16,
+      "all_test_points_inside_band": true
+    },
+    "physical_interpretation_note": "Edge-weighted fit tests whether boundary-dominant transport responses preserve monotone safety mapping under holdout perturbation.",
+    "theorem_scope_limit": "finite-sample weighted stability evidence only; no legacy->strict bridge theorem"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2238_candidate",
+    "goal": "connect weighted stability bounds to explicit perturbation-budget safety margins in a shared inequality packet"
+  },
+  "gatekeeper_checks": {
+    "weighted_stability_probe_exported": true,
+    "weighted_slope_positive": true,
+    "train_split_slope_positive": true,
+    "test_points_inside_train_band": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

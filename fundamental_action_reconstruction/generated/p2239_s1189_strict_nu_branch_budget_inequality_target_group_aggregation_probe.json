@@ -1,0 +1,47 @@
+{
+  "schema_version": "p2239_s1189_v1",
+  "packet_id": "P2239",
+  "stage_id": "S1189",
+  "produced_by": "p2239_s1189_strict_nu_branch_budget_inequality_target_group_aggregation_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_BUDGET_INEQUALITY_TARGET_GROUP_AGGREGATION_PROBE",
+  "strict_nu_branch_budget_inequality_target_group_aggregation_probe": {
+    "probe_id": "STRICT_NU_BRANCH_BUDGET_INEQUALITY_TARGET_GROUP_AGGREGATION_PROBE_V1",
+    "source_packets": [
+      "generated/p2226_s1176_strict_nu_branch_grouped_policy_width_coverage_tradeoff.json",
+      "generated/p2238_s1188_strict_nu_branch_weighted_stability_to_budget_inequality_probe.json"
+    ],
+    "global_inputs": {
+      "inequality_load_ratio": 1.989228286066882e-16,
+      "conservative_margin_factor": 0.9999999999999998
+    },
+    "group_rows": [
+      {
+        "group_id": "fallback",
+        "coverage_fraction": 1.0,
+        "inequality_load_ratio": 1.989228286066882e-16,
+        "risk_score": 1.989228286066882e-16
+      }
+    ],
+    "worst_case_group_risk_score": 1.0,
+    "groupwise_compatibility_holds": true,
+    "physical_interpretation_note": "Aggregates local uncertainty-to-budget load against coverage dilution across grouped policies; controls worst-case robustness leakage.",
+    "theorem_scope_limit": "finite grouped-policy aggregation check only; not a legacy->strict bridge theorem"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2240_candidate",
+    "goal": "derive analytic sufficient condition on grouped coverage/load ensuring preserved sign-stability under policy mixing"
+  },
+  "gatekeeper_checks": {
+    "target_group_aggregation_exported": true,
+    "global_margin_nonnegative": true,
+    "groupwise_compatibility_holds": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}
