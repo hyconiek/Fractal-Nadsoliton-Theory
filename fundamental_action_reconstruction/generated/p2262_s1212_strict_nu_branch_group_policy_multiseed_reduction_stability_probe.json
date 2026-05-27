@@ -1,0 +1,73 @@
+{
+  "schema_version": "p2262_s1212_v1",
+  "packet_id": "P2262",
+  "stage_id": "S1212",
+  "produced_by": "p2262_s1212_strict_nu_branch_group_policy_multiseed_reduction_stability_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_GROUP_POLICY_MULTISEED_REDUCTION_STABILITY_PROBE",
+  "strict_nu_branch_group_policy_multiseed_reduction_stability_probe": {
+    "probe_id": "STRICT_NU_BRANCH_GROUP_POLICY_MULTISEED_REDUCTION_STABILITY_PROBE_V1",
+    "source_packets": [
+      "generated/p2259_s1209_strict_nu_branch_group_policy_gamma_injected_boundary_hit_rate_probe.json"
+    ],
+    "inputs": {
+      "gamma_hat": 0.001,
+      "horizon_scales": [
+        0.8,
+        1.0,
+        1.2,
+        1.4
+      ],
+      "boundary_hit_threshold": 0.0025,
+      "draws_per_horizon": 1000,
+      "seeds": [
+        2262,
+        2263,
+        2264
+      ]
+    },
+    "multiseed_reduction_summary": {
+      "rows": [
+        {
+          "seed": 2262,
+          "first_hit_rate": 0.0,
+          "second_hit_rate": 0.0,
+          "reduction": 0.0
+        },
+        {
+          "seed": 2263,
+          "first_hit_rate": 0.0,
+          "second_hit_rate": 0.0,
+          "reduction": 0.0
+        },
+        {
+          "seed": 2264,
+          "first_hit_rate": 0.0,
+          "second_hit_rate": 0.0,
+          "reduction": 0.0
+        }
+      ],
+      "mean_reduction": 0.0,
+      "min_reduction": 0.0,
+      "max_reduction": 0.0
+    },
+    "physical_interpretation_note": "Cross-seed stability of hit-rate reduction supports robustness of nonlinear correction effect against stochastic realization noise.",
+    "theorem_scope_limit": "finite multiseed stability diagnostic only; not a legacy->strict bridge theorem and not strict-core selector closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2263_candidate",
+    "goal": "derive confidence interval for mean reduction and compare with single-seed concentration lower bound"
+  },
+  "gatekeeper_checks": {
+    "multiseed_scan_exported": true,
+    "all_seed_reductions_nonnegative": true,
+    "reduction_interval_ordered": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

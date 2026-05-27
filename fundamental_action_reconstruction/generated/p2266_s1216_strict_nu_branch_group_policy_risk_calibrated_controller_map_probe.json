@@ -1,0 +1,63 @@
+{
+  "schema_version": "p2266_s1216_v1",
+  "packet_id": "P2266",
+  "stage_id": "S1216",
+  "produced_by": "p2266_s1216_strict_nu_branch_group_policy_risk_calibrated_controller_map_probe.py",
+  "timestamp_utc": "2026-05-27T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NU_BRANCH_GROUP_POLICY_RISK_CALIBRATED_CONTROLLER_MAP_PROBE",
+  "strict_nu_branch_group_policy_risk_calibrated_controller_map_probe": {
+    "probe_id": "STRICT_NU_BRANCH_GROUP_POLICY_RISK_CALIBRATED_CONTROLLER_MAP_PROBE_V1",
+    "source_packets": [
+      "generated/p2265_s1215_strict_nu_branch_task3_closure_gap_matrix_probe.json",
+      "generated/p2261_s1211_strict_nu_branch_group_policy_stochastic_reduction_concentration_bound_probe.json"
+    ],
+    "controller_map_rows": [
+      {
+        "risk_tolerance": 0.01,
+        "rho_recommended": 0.885,
+        "kappa_scale_recommended": 1.16,
+        "reduction_lb95_reference": -0.060736146190830516,
+        "certificate_pass": false
+      },
+      {
+        "risk_tolerance": 0.02,
+        "rho_recommended": 0.87,
+        "kappa_scale_recommended": 1.12,
+        "reduction_lb95_reference": -0.060736146190830516,
+        "certificate_pass": false
+      },
+      {
+        "risk_tolerance": 0.05,
+        "rho_recommended": 0.825,
+        "kappa_scale_recommended": 1.0,
+        "reduction_lb95_reference": -0.060736146190830516,
+        "certificate_pass": false
+      },
+      {
+        "risk_tolerance": 0.1,
+        "rho_recommended": 0.75,
+        "kappa_scale_recommended": 1.0,
+        "reduction_lb95_reference": -0.060736146190830516,
+        "certificate_pass": false
+      }
+    ],
+    "physical_interpretation_note": "Map ties operational risk tolerance to admissible controller aggressiveness and reserve scaling, creating an explicit safety-certificate interface from stochastic reduction evidence.",
+    "theorem_scope_limit": "risk-calibrated mapping diagnostic only; not a legacy->strict bridge theorem and not strict-core selector closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2267_candidate",
+    "goal": "validate mapped rho/kappa schedule on nonlinear perturbed trajectories and measure certificate pass-rate"
+  },
+  "gatekeeper_checks": {
+    "risk_controller_map_exported": true,
+    "all_rho_bounded": true,
+    "all_kappa_scale_ge_one": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "full_cutkosky_closure_proven": false,
+    "full_d3_covariance_transport_proven": false
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}
