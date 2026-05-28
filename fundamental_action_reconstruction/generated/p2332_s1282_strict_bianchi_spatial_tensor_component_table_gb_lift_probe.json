@@ -1,0 +1,317 @@
+{
+  "gatekeeper_checks": {
+    "all_tracefree_sums_zero": true,
+    "component_entry_count_12": true,
+    "full_global_renormalization_not_claimed": true,
+    "gb_component_identity_zero": true,
+    "gb_lift_nullity_is_2": true,
+    "gb_lift_rank_is_2": true,
+    "gb_null_residual_small": true,
+    "grep_hits_found": true,
+    "no_g1_g3_update_claimed": true,
+    "no_legacy_kernel_role_transfer": true,
+    "no_qw2191_discharge_claimed": true,
+    "no_selector_premise_added": true,
+    "no_toe_closure_claimed": true,
+    "p1853_coefficients_loaded": true,
+    "p1981_loaded": true,
+    "p1982_loaded": true,
+    "p1983_loaded": true,
+    "same_basis_target_reconstructs": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "packet_id": "P2332",
+  "produced_by": "p2332_s1282_strict_bianchi_spatial_tensor_component_table_gb_lift_probe.py",
+  "recommended_next_honest_step": "Extend the component table from tracefree spatial ADM/Bianchi-I components to a complete spacetime tensor-component basis including lapse/time and same-basis divergence target; only then rerun the full global GB-lift test.",
+  "result_kind": "STRICT_BIANCHI_SPATIAL_TENSOR_COMPONENT_TABLE_AND_GB_LIFT_RANK_TEST_NO_GLOBAL_RENORMALIZATION_CLAIM",
+  "schema_version": "p2332_s1282_v1",
+  "stage_id": "S1282",
+  "status": "OPEN_TRACEFREE_SPATIAL_COMPONENT_TABLE_BUILT_GB_LIFT_NEGATIVE",
+  "strict_bianchi_spatial_tensor_component_table_gb_lift_probe": {
+    "component_table_rows": [
+      {
+        "channel": "R2",
+        "component": "E_spatial_1",
+        "expression_excerpt": "8*N**4*(2*sigma1 + sigma2)*(6*H**2*N - 3*H*Nd + 3*Hd*N + N*sigma1**2 + N*sigma1*sigma2 + N*sigma2**2)",
+        "expression_sha256": "3e7285479ed01d9e7167018bf6fb0bb99eb1ec1f507113a0f6d15aabedf658dd",
+        "term_count": 10
+      },
+      {
+        "channel": "R2",
+        "component": "E_spatial_2",
+        "expression_excerpt": "8*N**4*(sigma1 + 2*sigma2)*(6*H**2*N - 3*H*Nd + 3*Hd*N + N*sigma1**2 + N*sigma1*sigma2 + N*sigma2**2)",
+        "expression_sha256": "b79f670e4ba00bfa79452c6f2d647ca0aeac642567e3518763cb979a25df6b74",
+        "term_count": 10
+      },
+      {
+        "channel": "R2",
+        "component": "E_spatial_3",
+        "expression_excerpt": "-24*N**4*(sigma1 + sigma2)*(6*H**2*N - 3*H*Nd + 3*Hd*N + N*sigma1**2 + N*sigma1*sigma2 + N*sigma2**2)",
+        "expression_sha256": "7f26c4516fbdc2971619e67781e6a3e93372510bd595037f2c805a7985e305f0",
+        "term_count": 10
+      },
+      {
+        "channel": "Ric2",
+        "component": "E_spatial_1",
+        "expression_excerpt": "2*N**3*(12*H**2*N**2*sigma1 + 6*H**2*N**2*sigma2 - 6*H*N**2*dsigma1 - 3*H*N**2*dsigma2 + 6*Hd*N**2*sigma1 + 3*Hd*N**2*sigma2 - 2*N**2*d2sigma1 - N**2*d2sigma2 + 8*N**2*sigma1**3 + 12*N**2*sigma1**2*sigma2 + 12*N**2*sigma1*sigma2**2 + 4*N**2*sigma2**3 + 6*N*Nd*",
+        "expression_sha256": "c1b4a4b60c53c08a4817d01b92c02cd47e0a493f5cf25ee38fed73e3b9405c00",
+        "term_count": 18
+      },
+      {
+        "channel": "Ric2",
+        "component": "E_spatial_2",
+        "expression_excerpt": "2*N**3*(6*H**2*N**2*sigma1 + 12*H**2*N**2*sigma2 - 3*H*N**2*dsigma1 - 6*H*N**2*dsigma2 + 3*Hd*N**2*sigma1 + 6*Hd*N**2*sigma2 - N**2*d2sigma1 - 2*N**2*d2sigma2 + 4*N**2*sigma1**3 + 12*N**2*sigma1**2*sigma2 + 12*N**2*sigma1*sigma2**2 + 8*N**2*sigma2**3 + 3*N*Nd*",
+        "expression_sha256": "51bcee465491e8d6aa2db34913450e374b838757ca0dd865c9c61c53e06f53ea",
+        "term_count": 18
+      },
+      {
+        "channel": "Ric2",
+        "component": "E_spatial_3",
+        "expression_excerpt": "-6*N**3*(6*H**2*N**2*sigma1 + 6*H**2*N**2*sigma2 - 3*H*N**2*dsigma1 - 3*H*N**2*dsigma2 + 3*Hd*N**2*sigma1 + 3*Hd*N**2*sigma2 - N**2*d2sigma1 - N**2*d2sigma2 + 4*N**2*sigma1**3 + 8*N**2*sigma1**2*sigma2 + 8*N**2*sigma1*sigma2**2 + 4*N**2*sigma2**3 + 3*N*Nd*dsig",
+        "expression_sha256": "a5e329ebbbc28662d43556684a42a82d01dd5bd3cb273fe049519fec7a1918ef",
+        "term_count": 18
+      },
+      {
+        "channel": "Riem2",
+        "component": "E_spatial_1",
+        "expression_excerpt": "-8*N**3*(6*H*N**2*dsigma1 + 3*H*N**2*dsigma2 - 6*H*N*Nd*sigma1 - 3*H*N*Nd*sigma2 + 2*N**2*d2sigma1 + N**2*d2sigma2 - 6*N**2*sigma1**3 - 9*N**2*sigma1**2*sigma2 - 9*N**2*sigma1*sigma2**2 - 3*N**2*sigma2**3 - 6*N*Nd*dsigma1 - 3*N*Nd*dsigma2 - 2*N*Ndd*sigma1 - N*",
+        "expression_sha256": "fe9eb157ac1b510446ed67300ce9575a0b63499c91eca384a165e615fb50111d",
+        "term_count": 16
+      },
+      {
+        "channel": "Riem2",
+        "component": "E_spatial_2",
+        "expression_excerpt": "-8*N**3*(3*H*N**2*dsigma1 + 6*H*N**2*dsigma2 - 3*H*N*Nd*sigma1 - 6*H*N*Nd*sigma2 + N**2*d2sigma1 + 2*N**2*d2sigma2 - 3*N**2*sigma1**3 - 9*N**2*sigma1**2*sigma2 - 9*N**2*sigma1*sigma2**2 - 6*N**2*sigma2**3 - 3*N*Nd*dsigma1 - 6*N*Nd*dsigma2 - N*Ndd*sigma1 - 2*N*",
+        "expression_sha256": "c910bf7381b4794232d01d3168da4b1132f567c09a6e048d617ef796ddb4af91",
+        "term_count": 16
+      },
+      {
+        "channel": "Riem2",
+        "component": "E_spatial_3",
+        "expression_excerpt": "24*N**3*(3*H*N**2*dsigma1 + 3*H*N**2*dsigma2 - 3*H*N*Nd*sigma1 - 3*H*N*Nd*sigma2 + N**2*d2sigma1 + N**2*d2sigma2 - 3*N**2*sigma1**3 - 6*N**2*sigma1**2*sigma2 - 6*N**2*sigma1*sigma2**2 - 3*N**2*sigma2**3 - 3*N*Nd*dsigma1 - 3*N*Nd*dsigma2 - N*Ndd*sigma1 - N*Ndd*",
+        "expression_sha256": "8fed47693edb87f89a3265e26034e834f9d6e019d4170bb576f828d5405d1717",
+        "term_count": 16
+      },
+      {
+        "channel": "GB",
+        "component": "E_spatial_1",
+        "expression_excerpt": "0",
+        "expression_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "term_count": 1
+      },
+      {
+        "channel": "GB",
+        "component": "E_spatial_2",
+        "expression_excerpt": "0",
+        "expression_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "term_count": 1
+      },
+      {
+        "channel": "GB",
+        "component": "E_spatial_3",
+        "expression_excerpt": "0",
+        "expression_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+        "term_count": 1
+      }
+    ],
+    "component_table_summary": {
+      "all_tracefree_sums_zero": true,
+      "background_family_witness": "ADM_BianchiI_tracefree_spatial_EOM",
+      "channels": [
+        "R2",
+        "Ric2",
+        "Riem2",
+        "GB"
+      ],
+      "component_basis": [
+        "E_spatial_1",
+        "E_spatial_2",
+        "E_spatial_3"
+      ],
+      "component_entry_count": 12,
+      "gb_component_identity_zero": true,
+      "monomial_basis_size_per_component": 21,
+      "same_basis_vector_length": 63,
+      "tracefree_zero_by_channel": {
+        "GB": true,
+        "R2": true,
+        "Ric2": true,
+        "Riem2": true
+      }
+    },
+    "gb_lift_rank_test": {
+      "channel_gram_matrix": [
+        [
+          105472.0,
+          28864.0,
+          9984.0,
+          0.0
+        ],
+        [
+          28864.0,
+          16992.0,
+          39104.0,
+          0.0
+        ],
+        [
+          9984.0,
+          39104.0,
+          146432.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "gb_dependence_lifted": false,
+      "null_vector_R2_Ric2_Riem2_GB": [
+        -1.0,
+        4.0,
+        -1.0,
+        1.0
+      ],
+      "null_vector_residual_l2": 0.0,
+      "numeric_nullity": 2,
+      "numeric_rank": 2,
+      "rank_tolerance": 1.4474433681969078e-08,
+      "singular_values": [
+        162967.63534128724,
+        105928.3646587128,
+        1.2692500622542872e-11,
+        0.0
+      ],
+      "verdict": "GB_DEPENDENCE_PERSISTS_IN_TRACEFREE_SPATIAL_BIANCHI_WITNESS"
+    },
+    "probe_id": "P2332_S1282_STRICT_BIANCHI_SPATIAL_TENSOR_COMPONENT_TABLE_GB_LIFT",
+    "repo_grep_audit": {
+      "hit_count": 10,
+      "search_patterns": [
+        "spatial_eom_projection",
+        "tracefree spatial",
+        "density_difference_NV_R2",
+        "density_difference_NV_Ricci2",
+        "density_difference_NV_Riemann2",
+        "Gauss-Bonnet",
+        "same-basis divergence",
+        "GB-lift"
+      ],
+      "top_hits": [
+        {
+          "first_hit_excerpt": "\"recommended_next_honest_step\": \"Build the missing tensor-resolved curvature component table and same-basis divergence target for at least one independent background-family witness, then rerun the GB-lift rank test. Unti",
+          "first_hit_line": 23,
+          "path": "fundamental_action_reconstruction/generated/p2331_s1281_strict_second_background_curvature_witness_gap_audit.json",
+          "pattern_hit_count": 8
+        },
+        {
+          "first_hit_excerpt": "Scope: Riemann^2 minisuperspace lapse equation only.  Gauss-Bonnet, strict",
+          "first_hit_line": 8,
+          "path": "fundamental_action_reconstruction/p1983_s933_strict_adm_bianchi_riemann2_lapse_variation_obligation.py",
+          "pattern_hit_count": 6
+        },
+        {
+          "first_hit_excerpt": "\"Gauss-Bonnet\",",
+          "first_hit_line": 35,
+          "path": "fundamental_action_reconstruction/p2331_s1281_strict_second_background_curvature_witness_gap_audit.py",
+          "pattern_hit_count": 6
+        },
+        {
+          "first_hit_excerpt": "\"density_difference_NV_Riemann2\": \"4*V*(12*H**2*N**2*sigma1**2 + 12*H**2*N**2*sigma1*sigma2 + 12*H**2*N**2*sigma2**2 + 8*H*N**2*dsigma1*sigma1 + 4*H*N**2*dsigma1*sigma2 + 4*H*N**2*dsigma2*sigma1 + 8*H*N**2*dsigma2*sigma2",
+          "first_hit_line": 41,
+          "path": "fundamental_action_reconstruction/generated/p1983_s933_strict_adm_bianchi_riemann2_lapse_variation_obligation.json",
+          "pattern_hit_count": 5
+        },
+        {
+          "first_hit_excerpt": "Gauss-Bonnet, spatial EOM, or full background-independence closure.",
+          "first_hit_line": 9,
+          "path": "fundamental_action_reconstruction/p1982_s932_strict_adm_bianchi_ricci2_lapse_variation_obligation.py",
+          "pattern_hit_count": 5
+        },
+        {
+          "first_hit_excerpt": "(p1981.get(\"r2_lapse_euler_operator\", {}) or {}).get(\"density_difference_NV_R2\", \"0\"),",
+          "first_hit_line": 127,
+          "path": "fundamental_action_reconstruction/p2297_s1247_strict_non_gb_spatial_eom_provider_matrix_obstruction_probe.py",
+          "pattern_hit_count": 5
+        },
+        {
+          "first_hit_excerpt": "\"density_difference_NV_Ricci2\": \"2*V*(15*H**2*N**2*sigma1**2 + 15*H**2*N**2*sigma1*sigma2 + 15*H**2*N**2*sigma2**2 + 6*H*N**2*dsigma1*sigma1 + 3*H*N**2*dsigma1*sigma2 + 3*H*N**2*dsigma2*sigma1 + 6*H*N**2*dsigma2*sigma2 -",
+          "first_hit_line": 37,
+          "path": "fundamental_action_reconstruction/generated/p1982_s932_strict_adm_bianchi_ricci2_lapse_variation_obligation.json",
+          "pattern_hit_count": 4
+        },
+        {
+          "first_hit_excerpt": "Riemann^2, Gauss-Bonnet, spatial equations, or global background independence.",
+          "first_hit_line": 10,
+          "path": "fundamental_action_reconstruction/p1981_s931_strict_adm_bianchi_r2_lapse_variation_obligation.py",
+          "pattern_hit_count": 4
+        },
+        {
+          "first_hit_excerpt": "\"density_difference_NV_R2\": \"4*Q*V*(12*H**2*N - 6*H*Nd + 6*Hd*N + N*Q)/N**4\",",
+          "first_hit_line": 30,
+          "path": "fundamental_action_reconstruction/generated/p1981_s931_strict_adm_bianchi_r2_lapse_variation_obligation.json",
+          "pattern_hit_count": 3
+        },
+        {
+          "first_hit_excerpt": "\"spatial_eom_projection\": {",
+          "first_hit_line": 36,
+          "path": "fundamental_action_reconstruction/generated/p2297_s1247_strict_non_gb_spatial_eom_provider_matrix_obstruction_probe.json",
+          "pattern_hit_count": 1
+        }
+      ]
+    },
+    "same_basis_divergence_target": {
+      "coefficient_null_ambiguity": "tracefree spatial basis has at least the GB null vector (-1,4,-1,1), and the rank test finds an additional spatial-projection null direction",
+      "direct_reconstruction_residual_l2": 1.7554167342883506e-16,
+      "least_squares_residual_l2": 1.0090783723762647e-15,
+      "least_squares_solution_R2_Ric2_Riem2_GB": [
+        0.005636194232966894,
+        0.0030298461946948073,
+        0.006483190545812338,
+        0.0
+      ],
+      "strict_coefficients": {
+        "GB": "8649*log(2)/(80000000*pi**2)",
+        "R2": "18516431*log(2)/(640000000*pi**2)",
+        "Ric2": "9937*log(2)/(40000*pi**2)",
+        "Riem2": "13117491*log(2)/(320000000*pi**2)"
+      },
+      "target_definition": "sum_i a_i * E_channel_i in concatenated tracefree spatial Bianchi-I component coefficient basis",
+      "target_vector_sha256": "d6d03ddfa300c9ca11ce064dc689109098157142cd218de95655cbabe664bead"
+    },
+    "source_hashes": {
+      "P1853_B1_COEFFICIENTS": "f789c624a66c9610e6254fb8be3bee9cf94cfe552ab8793b98058b0fb655dbb1",
+      "P1981_R2_LAPSE": "ec2aeff9aadf02b94c3d6665bed96e287824f5c4e28de9114e3dde276b0c97d0",
+      "P1982_RICCI2_LAPSE": "7aadaa0922a86b261cd5cdb7035cccd39b68aae7bd4e6a9f2d1da3eea9f80b2c",
+      "P1983_RIEMANN2_LAPSE": "bed10041155684c728d2a42274857139e8baab245b5c991e163bcf3ffc5d43b5",
+      "P2297_SPATIAL_PROVIDER_OBSTRUCTION": "477da8b9bab1dd79ac2d701b6e10e63a8eac8d0e37e368984a2f6910efda24b5",
+      "P2331_SECOND_BACKGROUND_GAP_AUDIT": "963819c9da492a6fd5f780a2695e2c994702ac5d2792868e25fe36379e6f5917"
+    },
+    "theorem_export": {
+      "claim": "A same-basis tracefree spatial Bianchi-I component table and divergence target can be built from existing strict ADM/Bianchi-I curvature densities, but the Gauss-Bonnet channel remains linearly dependent in this witness: the channel Gram rank is 2 with nullity 2, including null vector (-1,4,-1,1). Thus this independent background-family witness does not lift B1 quotient renormalization to full four-channel/global closure.",
+      "proof_witnesses": [
+        "R2/Ric2/Riem2 tracefree spatial Euler components are derived from P1981/P1982/P1983 densities using the P2297 Euler-operator rule.",
+        "GB components are assembled in the same basis as Riem2 - 4*Ric2 + R2 and satisfy the component identity exactly.",
+        "The same-basis strict divergence target reconstructs with zero numerical residual from the exported strict coefficients.",
+        "The channel Gram matrix has numeric rank 2 and nullity 2 in this tracefree spatial projection; the GB null vector residual is small, so dependence is not lifted."
+      ],
+      "scope_limits": [
+        "This table is tracefree spatial ADM/Bianchi-I, not the complete spacetime tensor-component table.",
+        "The result is a negative lift test, not full/global renormalization closure.",
+        "No selector, QW-2191, G1/G3, or ToE closure is claimed."
+      ],
+      "strict_guardrails": {
+        "no_g1_g3_update_claimed": true,
+        "no_legacy_kernel_role_transfer": true,
+        "no_qw2191_discharge_claimed": true,
+        "no_selector_premise_added": true,
+        "no_toe_closure_claimed": true,
+        "strict_kernel_only": true
+      },
+      "theorem_name": "P2332 tracefree spatial Bianchi-I tensor-component table and GB-lift rank test"
+    },
+    "theorem_fingerprint_sha256": "8c3aa854c408fc9388786c26764bd30f168c79a88a52a2356a67ca9f6570c9fd"
+  },
+  "timestamp_utc": "2026-05-28T00:00:00+00:00"
+}
