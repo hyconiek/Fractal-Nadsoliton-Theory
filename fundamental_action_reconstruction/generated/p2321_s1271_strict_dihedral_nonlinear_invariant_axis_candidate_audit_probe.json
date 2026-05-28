@@ -1,0 +1,579 @@
+{
+  "gatekeeper_checks": {
+    "all_axis_harmonics_nonradial": true,
+    "d12_invariance_residual_small": true,
+    "degree_sequence_matches_d12_pair_orders": true,
+    "far_nonlinear_invariant_grep_hits_found": true,
+    "no_legacy_kernel_role_transfer": true,
+    "no_qw2191_discharge_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "nonlinear_axis_candidates_not_promoted_to_bridge": true,
+    "outside_p2319_linear_quadratic_scope": true,
+    "p2318_bridge_fields_still_unfilled": true,
+    "p2318_loaded": true,
+    "p2320_loaded": true,
+    "pair_count_is_5": true,
+    "strict_g1_g3_not_updated": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_NEW_NONLINEAR_AXIS_CANDIDATE_TRACE",
+  "packet_id": "P2321",
+  "produced_by": "p2321_s1271_strict_dihedral_nonlinear_invariant_axis_candidate_audit_probe.py",
+  "recommended_next_honest_step": "Either derive a strict sign/branch and response/replay bridge for one nonlinear D12 axis harmonic, or prove that such harmonics remain selector-premise-only under the current P2318 interface.",
+  "result_kind": "STRICT_DIHEDRAL_NONLINEAR_INVARIANT_AXIS_CANDIDATE_AUDIT_NO_G1_G3_UPDATE",
+  "schema_version": "p2321_s1271_v1",
+  "stage_id": "S1271",
+  "status": "OPEN_NONLINEAR_D12_AXIS_CANDIDATES_WITHOUT_SIGNED_TASK3_BRIDGE",
+  "strict_dihedral_nonlinear_invariant_axis_candidate_audit_probe": {
+    "bridge_obligation_update": {
+      "fields_still_unfilled_after_nonlinear_axis_candidates": [
+        "signed_scalar_lift_per_step",
+        "time_step_normalization",
+        "margin_response_functional",
+        "orientation_to_policy_sign_rule",
+        "p2281_replay_semantics",
+        "admissibility_theorem_no_selector_premise"
+      ],
+      "g1_g3_update_allowed": false,
+      "nonlinear_axis_candidates_exported": true,
+      "nonlinear_axis_candidates_fill_any_missing_p2318_field": false,
+      "p2318_missing_fields_loaded": [
+        "signed_scalar_lift_per_step",
+        "time_step_normalization",
+        "margin_response_functional",
+        "orientation_to_policy_sign_rule",
+        "p2281_replay_semantics",
+        "admissibility_theorem_no_selector_premise"
+      ],
+      "reason": "The new harmonics supply a D12-invariant finite-axis object but no signed scalar lift, no response map, no preferred sign/branch, no P2281 replay clock, and no admissibility theorem without selector premise.",
+      "required_lift_per_step": 0.0068
+    },
+    "existing_blocker_context": {
+      "p2317_result_kind": "STRICT_FOURIER_PAIR_DEGENERACY_RECOMPUTATION_AND_EXISTING_SELECTOR_LANE_AUDIT_NO_G1_G3_UPDATE",
+      "p2318_result_kind": "STRICT_SELECTOR_LANE_TO_PROVIDER_LIFT_OBLIGATION_AUDIT_NO_G1_G3_UPDATE",
+      "p2319_result_kind": "STRICT_DIHEDRAL_ORIENTATION_RESPONSE_NO_GO_NO_G1_G3_UPDATE",
+      "p2320_result_kind": "STRICT_DIHEDRAL_COMMUTANT_ORIENTATION_NO_GO_NO_G1_G3_UPDATE"
+    },
+    "far_nonlinear_invariant_grep_audit": {
+      "hit_count": 47,
+      "patterns": [
+        "nonlinear invariant",
+        "invariant ring",
+        "higher-degree",
+        "polynomial",
+        "angular harmonic",
+        "orientation axis",
+        "D12",
+        "QW-2191",
+        "provider_lift_per_step",
+        "selector closure"
+      ],
+      "top_hits": [
+        {
+          "first_hit_excerpt": "\"d12_commutant_dimension_is_7\": true,",
+          "first_hit_line": 5,
+          "path": "fundamental_action_reconstruction/generated/p2320_s1270_strict_dihedral_commutant_orientation_no_go_probe.json",
+          "pattern_hit_count": 143
+        },
+        {
+          "first_hit_excerpt": "\"alpha_scaled_kernel_d12_invariance_verified\": true,",
+          "first_hit_line": 4,
+          "path": "fundamental_action_reconstruction/generated/p2319_s1269_strict_dihedral_orientation_response_no_go_probe.json",
+          "pattern_hit_count": 60
+        },
+        {
+          "first_hit_excerpt": "\"recommended_next_honest_step\": \"A theorem-grade bridge from diagonal/local or Shannon lane source data to Task-3 provider_lift_per_step / policy-margin lift, or a nonexistence theorem for that bridge class.\",",
+          "first_hit_line": 21,
+          "path": "fundamental_action_reconstruction/generated/p2317_s1267_strict_fourier_degeneracy_existing_lane_audit_probe.json",
+          "pattern_hit_count": 17
+        },
+        {
+          "first_hit_excerpt": "\"reason\": \"Existing lane defects are enough to cut O(2) to Z2 inside their lanes, but no exported theorem maps them to the signed P2302 provider_lift_per_step with replay semantics.\",",
+          "first_hit_line": 38,
+          "path": "fundamental_action_reconstruction/generated/p2318_s1268_strict_selector_lane_to_task3_margin_bridge_obligation_probe.json",
+          "pattern_hit_count": 15
+        },
+        {
+          "first_hit_excerpt": "\"status\": \"PASS_LOW_COMPLEXITY_ODD_POLYNOMIAL_TWO_READOUT_PROVIDER_CLASS_AUDITED\",",
+          "first_hit_line": 3,
+          "path": "fundamental_action_reconstruction/generated/p719_current_strict_t176_low_complexity_odd_polynomial_two_readout_provider_class_audit_probe.json",
+          "pattern_hit_count": 10
+        },
+        {
+          "first_hit_excerpt": "- `F692`: exports a sign-fixed directed closure object on `C_v1` in `strict_convention` scope (built from `F690` + `F660`) with an explicit output sign-lift, yielding a glued directed output vector in the fixed `(o_+,o_-)` basis (no physica",
+          "first_hit_line": 42,
+          "path": "fundamental_action_reconstruction/H37_SIGN_DISTINCTION_STATE_AUDIT.md",
+          "pattern_hit_count": 8
+        },
+        {
+          "first_hit_excerpt": "- `H39/F470/N516`: global projective selector state object exported on `C_v1` (projector/span semantics). A directed/sign-sensitive lift is exported separately as premise-based strict continuation (`F474/N524`), without implying any global ",
+          "first_hit_line": 13,
+          "path": "fundamental_action_reconstruction/H40_GLOBAL_SELECTOR_TRANSITION_OBJECT_AUDIT.md",
+          "pattern_hit_count": 8
+        },
+        {
+          "first_hit_excerpt": "- `H39/F470/N516`: global projective selector state object exported on `C_v1` (projector/span semantics). A directed/sign-sensitive lift is exported separately as premise-based strict continuation (`F474/N524`), without implying any global ",
+          "first_hit_line": 14,
+          "path": "fundamental_action_reconstruction/H41_SELECTOR_ATLAS_AND_GLUING_DATA_AUDIT.md",
+          "pattern_hit_count": 7
+        },
+        {
+          "first_hit_excerpt": "- `QW-2191`",
+          "first_hit_line": 24,
+          "path": "fundamental_action_reconstruction/H1_INTERNAL_LIGHT_FEEDBACK_KERNEL_TERM_HYPOTHESIS_AUDIT.md",
+          "pattern_hit_count": 5
+        },
+        {
+          "first_hit_excerpt": "- any strict-core selector closure claim (`S_sel_int`),",
+          "first_hit_line": 46,
+          "path": "fundamental_action_reconstruction/H39_GLOBAL_SELECTOR_OBJECT_ABSENCE_AUDIT.md",
+          "pattern_hit_count": 4
+        },
+        {
+          "first_hit_excerpt": "- `QW-2191`",
+          "first_hit_line": 19,
+          "path": "fundamental_action_reconstruction/H2_MINIMAL_INTERNAL_LIGHT_FEEDBACK_OPERATOR_ADMISSIBILITY_SPEC.md",
+          "pattern_hit_count": 3
+        },
+        {
+          "first_hit_excerpt": "- `QW-2191`: residualna degeneracja `O(2)` pozostaje nierozladowana.",
+          "first_hit_line": 22,
+          "path": "fundamental_action_reconstruction/H34_BASIS_COVARIANCE_TARGET_INDEPENDENCE_AUDIT.md",
+          "pattern_hit_count": 3
+        },
+        {
+          "first_hit_excerpt": "- strict-core selector closure (`S_sel_int`) or global discharge of `QW-2191`.",
+          "first_hit_line": 37,
+          "path": "fundamental_action_reconstruction/H36_DIRECTED_AXIS_ORIENTATION_AUDIT.md",
+          "pattern_hit_count": 3
+        },
+        {
+          "first_hit_excerpt": "- a strict-core selector closure claim (`S_sel_int`),",
+          "first_hit_line": 41,
+          "path": "fundamental_action_reconstruction/H38_PROJECTIVE_SELECTOR_STATE_AUDIT.md",
+          "pattern_hit_count": 3
+        },
+        {
+          "first_hit_excerpt": "- gotowy do pozniejszego testu przeciw `QW-2191`.",
+          "first_hit_line": 12,
+          "path": "fundamental_action_reconstruction/H3_MINIMAL_INTERNAL_LIGHT_FEEDBACK_OPERATOR_ANSATZ_PACKET.md",
+          "pattern_hit_count": 3
+        },
+        {
+          "first_hit_excerpt": "- `retard_phase` changes weights of already present angular harmonics,",
+          "first_hit_line": 31,
+          "path": "fundamental_action_reconstruction/H29_WAVE_RETARDATION_PROXY_SELECTOR_REDUCTION_AUDIT.md",
+          "pattern_hit_count": 2
+        },
+        {
+          "first_hit_excerpt": "`H32_B1 := psi0 is now the primary working anchor candidate and informational viscosity is now the retained secondary lane, but no strict-core selector closure follows from this prioritization alone`",
+          "first_hit_line": 35,
+          "path": "fundamental_action_reconstruction/H32_PRIMARY_PSI0_LANE_PRIORITY_AUDIT.md",
+          "pattern_hit_count": 2
+        },
+        {
+          "first_hit_excerpt": "- `QW-2191`: residualna degeneracja `O(2)` pozostaje nierozladowana.",
+          "first_hit_line": 17,
+          "path": "fundamental_action_reconstruction/H33_PAIR1_SELECTOR_TARGET_JUSTIFICATION_AUDIT.md",
+          "pattern_hit_count": 2
+        },
+        {
+          "first_hit_excerpt": "- `QW-2191` is discharged,",
+          "first_hit_line": 68,
+          "path": "fundamental_action_reconstruction/H10_MINIMAL_ROUTE_A_CANDIDATE_INSTANCE.md",
+          "pattern_hit_count": 1
+        },
+        {
+          "first_hit_excerpt": "- `QW-2191` is discharged,",
+          "first_hit_line": 90,
+          "path": "fundamental_action_reconstruction/H11_MINIMAL_ROUTE_A_PROVENANCE_SPEC.md",
+          "pattern_hit_count": 1
+        },
+        {
+          "first_hit_excerpt": "- `QW-2191` is discharged,",
+          "first_hit_line": 60,
+          "path": "fundamental_action_reconstruction/H12_PARTIAL_ROUTE_A_PROVENANCE_RECORD.md",
+          "pattern_hit_count": 1
+        },
+        {
+          "first_hit_excerpt": "- `QW-2191` is discharged,",
+          "first_hit_line": 66,
+          "path": "fundamental_action_reconstruction/H13_OPERATOR_ORIGIN_VALUE_SET_AUDIT.md",
+          "pattern_hit_count": 1
+        },
+        {
+          "first_hit_excerpt": "- `QW-2191` is discharged,",
+          "first_hit_line": 71,
+          "path": "fundamental_action_reconstruction/H14_EXISTING_KERNEL_FEEDBACK_VS_NEW_KOBS_SEPARATION_AUDIT.md",
+          "pattern_hit_count": 1
+        },
+        {
+          "first_hit_excerpt": "- no claim that `QW-2191` is discharged",
+          "first_hit_line": 69,
+          "path": "fundamental_action_reconstruction/H15_EXISTING_FEEDBACK_SELECTOR_SECTOR_REDUCTION_AUDIT.md",
+          "pattern_hit_count": 1
+        },
+        {
+          "first_hit_excerpt": "- no claim that `QW-2191` is discharged",
+          "first_hit_line": 92,
+          "path": "fundamental_action_reconstruction/H16_OPERATOR_ORIGIN_PARTIAL_WITNESS_AUDIT.md",
+          "pattern_hit_count": 1
+        },
+        {
+          "first_hit_excerpt": "- no claim that `QW-2191` is discharged",
+          "first_hit_line": 66,
+          "path": "fundamental_action_reconstruction/H17_COMPOSITE_WITNESS_ELEVATION_AUDIT.md",
+          "pattern_hit_count": 1
+        },
+        {
+          "first_hit_excerpt": "- no claim that `QW-2191` is discharged",
+          "first_hit_line": 65,
+          "path": "fundamental_action_reconstruction/H18_COMPOSITE_ROUTE_A_PROVENANCE_BINDING_INSTANCE.md",
+          "pattern_hit_count": 1
+        },
+        {
+          "first_hit_excerpt": "- no claim that `QW-2191` is discharged",
+          "first_hit_line": 67,
+          "path": "fundamental_action_reconstruction/H19_FIRST_COEFFICIENT_OR_INVARIANT_EXTRACTION_ATTEMPT.md",
+          "pattern_hit_count": 1
+        },
+        {
+          "first_hit_excerpt": "- no claim that `QW-2191` is discharged",
+          "first_hit_line": 73,
+          "path": "fundamental_action_reconstruction/H20_COEFFICIENT_EXPORT_SEMANTICS_PACKET.md",
+          "pattern_hit_count": 1
+        },
+        {
+          "first_hit_excerpt": "- no claim that `QW-2191` is discharged",
+          "first_hit_line": 63,
+          "path": "fundamental_action_reconstruction/H21_TRACE_VALUE_EXPORT_PACKET.md",
+          "pattern_hit_count": 1
+        }
+      ]
+    },
+    "nonlinear_axis_certificate": {
+      "all_axis_harmonics_fail_signed_policy_orientation": true,
+      "all_axis_harmonics_nonradial": true,
+      "all_axis_harmonics_outside_p2319_linear_quadratic_scope": true,
+      "all_pairs_have_nonlinear_d12_axis_harmonic": true,
+      "degree_sequence_by_pair": {
+        "pair1": 12,
+        "pair2": 6,
+        "pair3": 4,
+        "pair4": 3,
+        "pair5": 12
+      },
+      "honest_upgrade_over_p2319_p2320": "P2319/P2320 no-go remains true for linear/quadratic and full linear-commutant classes, but D12-invariant nonlinear harmonics Re(z^q) do exist and can cut continuous O(2) to finite axis sets.  This is axis-candidate evidence, not a signed provider-lift bridge.",
+      "max_d12_sample_invariance_residual": 5.861977570020827e-13,
+      "min_angular_spread": 2.0,
+      "pair_count": 5
+    },
+    "nonlinear_invariant_class_contract": {
+      "allowed_inputs": [
+        "strict Z12 pair-plane representation",
+        "D12 group action",
+        "polynomial invariant Re((x+i*y)^q)"
+      ],
+      "class_id": "PAIR_PLANE_LOWEST_DEGREE_D12_NONRADIAL_POLYNOMIAL_INVARIANTS",
+      "excluded_inputs": [
+        "coefficient sign as physical selector",
+        "preferred extremum branch",
+        "Task-3 response functional",
+        "P2281 replay semantics",
+        "legacy kernel role transfer"
+      ]
+    },
+    "pair_nonlinear_axis_rows": [
+      {
+        "breaks_continuous_o2_to_finite_axis_set": true,
+        "coefficients": [
+          {
+            "coefficient": 1,
+            "x_power": 12,
+            "y_power": 0
+          },
+          {
+            "coefficient": -66,
+            "x_power": 10,
+            "y_power": 2
+          },
+          {
+            "coefficient": 495,
+            "x_power": 8,
+            "y_power": 4
+          },
+          {
+            "coefficient": -924,
+            "x_power": 6,
+            "y_power": 6
+          },
+          {
+            "coefficient": 495,
+            "x_power": 4,
+            "y_power": 8
+          },
+          {
+            "coefficient": -66,
+            "x_power": 2,
+            "y_power": 10
+          },
+          {
+            "coefficient": 1,
+            "x_power": 0,
+            "y_power": 12
+          }
+        ],
+        "d12_sample_invariance_residual": 3.907985046680551e-13,
+        "directed_extremal_ray_count": 24,
+        "is_linear_or_quadratic": false,
+        "lowest_d12_invariant_axis_degree": 12,
+        "m": 1,
+        "maxima_count": 12,
+        "minima_count": 12,
+        "pair": "pair1",
+        "partner_modes": [
+          1,
+          11
+        ],
+        "polynomial_expansion": "1*x^12 -66*x^10*y^2 +495*x^8*y^4 -924*x^6*y^6 +495*x^4*y^8 -66*x^2*y^10 +1*y^12",
+        "polynomial_id": "Re((x+i*y)^12)",
+        "rotation_order_q": 12,
+        "supplies_signed_policy_orientation": false,
+        "unit_circle_angular_form": "cos(12*theta)",
+        "unit_circle_angular_max": 1.0,
+        "unit_circle_angular_min": -1.0,
+        "unit_circle_angular_spread": 2.0,
+        "why_not_signed_policy_orientation": "D12-invariant harmonic fixes only a finite axis/extrema set after a nonlinear degree-q premise; coefficient sign, preferred extremum branch, response functional, and replay semantics remain unexported."
+      },
+      {
+        "breaks_continuous_o2_to_finite_axis_set": true,
+        "coefficients": [
+          {
+            "coefficient": 1,
+            "x_power": 6,
+            "y_power": 0
+          },
+          {
+            "coefficient": -15,
+            "x_power": 4,
+            "y_power": 2
+          },
+          {
+            "coefficient": 15,
+            "x_power": 2,
+            "y_power": 4
+          },
+          {
+            "coefficient": -1,
+            "x_power": 0,
+            "y_power": 6
+          }
+        ],
+        "d12_sample_invariance_residual": 3.907985046680551e-14,
+        "directed_extremal_ray_count": 12,
+        "is_linear_or_quadratic": false,
+        "lowest_d12_invariant_axis_degree": 6,
+        "m": 2,
+        "maxima_count": 6,
+        "minima_count": 6,
+        "pair": "pair2",
+        "partner_modes": [
+          2,
+          10
+        ],
+        "polynomial_expansion": "1*x^6 -15*x^4*y^2 +15*x^2*y^4 -1*y^6",
+        "polynomial_id": "Re((x+i*y)^6)",
+        "rotation_order_q": 6,
+        "supplies_signed_policy_orientation": false,
+        "unit_circle_angular_form": "cos(6*theta)",
+        "unit_circle_angular_max": 1.0,
+        "unit_circle_angular_min": -1.0,
+        "unit_circle_angular_spread": 2.0,
+        "why_not_signed_policy_orientation": "D12-invariant harmonic fixes only a finite axis/extrema set after a nonlinear degree-q premise; coefficient sign, preferred extremum branch, response functional, and replay semantics remain unexported."
+      },
+      {
+        "breaks_continuous_o2_to_finite_axis_set": true,
+        "coefficients": [
+          {
+            "coefficient": 1,
+            "x_power": 4,
+            "y_power": 0
+          },
+          {
+            "coefficient": -6,
+            "x_power": 2,
+            "y_power": 2
+          },
+          {
+            "coefficient": 1,
+            "x_power": 0,
+            "y_power": 4
+          }
+        ],
+        "d12_sample_invariance_residual": 1.8096635301390052e-14,
+        "directed_extremal_ray_count": 8,
+        "is_linear_or_quadratic": false,
+        "lowest_d12_invariant_axis_degree": 4,
+        "m": 3,
+        "maxima_count": 4,
+        "minima_count": 4,
+        "pair": "pair3",
+        "partner_modes": [
+          3,
+          9
+        ],
+        "polynomial_expansion": "1*x^4 -6*x^2*y^2 +1*y^4",
+        "polynomial_id": "Re((x+i*y)^4)",
+        "rotation_order_q": 4,
+        "supplies_signed_policy_orientation": false,
+        "unit_circle_angular_form": "cos(4*theta)",
+        "unit_circle_angular_max": 1.0,
+        "unit_circle_angular_min": -1.0,
+        "unit_circle_angular_spread": 2.0,
+        "why_not_signed_policy_orientation": "D12-invariant harmonic fixes only a finite axis/extrema set after a nonlinear degree-q premise; coefficient sign, preferred extremum branch, response functional, and replay semantics remain unexported."
+      },
+      {
+        "breaks_continuous_o2_to_finite_axis_set": true,
+        "coefficients": [
+          {
+            "coefficient": 1,
+            "x_power": 3,
+            "y_power": 0
+          },
+          {
+            "coefficient": -3,
+            "x_power": 1,
+            "y_power": 2
+          }
+        ],
+        "d12_sample_invariance_residual": 1.2878587085651816e-14,
+        "directed_extremal_ray_count": 6,
+        "is_linear_or_quadratic": false,
+        "lowest_d12_invariant_axis_degree": 3,
+        "m": 4,
+        "maxima_count": 3,
+        "minima_count": 3,
+        "pair": "pair4",
+        "partner_modes": [
+          4,
+          8
+        ],
+        "polynomial_expansion": "1*x^3 -3*x*y^2",
+        "polynomial_id": "Re((x+i*y)^3)",
+        "rotation_order_q": 3,
+        "supplies_signed_policy_orientation": false,
+        "unit_circle_angular_form": "cos(3*theta)",
+        "unit_circle_angular_max": 1.0,
+        "unit_circle_angular_min": -1.0,
+        "unit_circle_angular_spread": 2.0,
+        "why_not_signed_policy_orientation": "D12-invariant harmonic fixes only a finite axis/extrema set after a nonlinear degree-q premise; coefficient sign, preferred extremum branch, response functional, and replay semantics remain unexported."
+      },
+      {
+        "breaks_continuous_o2_to_finite_axis_set": true,
+        "coefficients": [
+          {
+            "coefficient": 1,
+            "x_power": 12,
+            "y_power": 0
+          },
+          {
+            "coefficient": -66,
+            "x_power": 10,
+            "y_power": 2
+          },
+          {
+            "coefficient": 495,
+            "x_power": 8,
+            "y_power": 4
+          },
+          {
+            "coefficient": -924,
+            "x_power": 6,
+            "y_power": 6
+          },
+          {
+            "coefficient": 495,
+            "x_power": 4,
+            "y_power": 8
+          },
+          {
+            "coefficient": -66,
+            "x_power": 2,
+            "y_power": 10
+          },
+          {
+            "coefficient": 1,
+            "x_power": 0,
+            "y_power": 12
+          }
+        ],
+        "d12_sample_invariance_residual": 5.861977570020827e-13,
+        "directed_extremal_ray_count": 24,
+        "is_linear_or_quadratic": false,
+        "lowest_d12_invariant_axis_degree": 12,
+        "m": 5,
+        "maxima_count": 12,
+        "minima_count": 12,
+        "pair": "pair5",
+        "partner_modes": [
+          5,
+          7
+        ],
+        "polynomial_expansion": "1*x^12 -66*x^10*y^2 +495*x^8*y^4 -924*x^6*y^6 +495*x^4*y^8 -66*x^2*y^10 +1*y^12",
+        "polynomial_id": "Re((x+i*y)^12)",
+        "rotation_order_q": 12,
+        "supplies_signed_policy_orientation": false,
+        "unit_circle_angular_form": "cos(12*theta)",
+        "unit_circle_angular_max": 1.0,
+        "unit_circle_angular_min": -1.0,
+        "unit_circle_angular_spread": 2.0,
+        "why_not_signed_policy_orientation": "D12-invariant harmonic fixes only a finite axis/extrema set after a nonlinear degree-q premise; coefficient sign, preferred extremum branch, response functional, and replay semantics remain unexported."
+      }
+    ],
+    "probe_id": "P2321_S1271_STRICT_DIHEDRAL_NONLINEAR_INVARIANT_AXIS_CANDIDATE_AUDIT",
+    "source_hashes": {
+      "H29_WAVE_RETARDATION_PROXY_SELECTOR_REDUCTION_AUDIT_sha256": "c5ec7721f31ca69bbe2fe8bfd7009495f7c264e8c16ef1537702d9188bfe673f",
+      "P2317_FOURIER_DEGENERACY_LANE_AUDIT_sha256": "af128a4f52857652230985a002cd562585977e7889e9000480f4ca47556008fe",
+      "P2318_SELECTOR_LANE_TO_MARGIN_OBLIGATION_sha256": "607f3d99c14d258ce82660ca14cb7288f4386fea4c05f6436a0ebefb6972ad3f",
+      "P2319_D12_RESPONSE_NO_GO_sha256": "2301b9e6a8c8f3cdca162e408f4aebfd164576e24981722ddcf13a534939ec6e",
+      "P2320_D12_COMMUTANT_NO_GO_sha256": "b54b5134900c26886720c13c4e15fc50e36cdb0172d6267e08ec64efa26c78dd",
+      "P719_LOW_COMPLEXITY_ODD_POLYNOMIAL_AUDIT_sha256": "08d0a9090c8c697b9d6baa336a497299bcebf8d9a7b42c4f53f1a4a4f23936f7"
+    },
+    "source_packets": {
+      "H29_WAVE_RETARDATION_PROXY_SELECTOR_REDUCTION_AUDIT": "fundamental_action_reconstruction/H29_WAVE_RETARDATION_PROXY_SELECTOR_REDUCTION_AUDIT.md",
+      "P2317_FOURIER_DEGENERACY_LANE_AUDIT": "fundamental_action_reconstruction/generated/p2317_s1267_strict_fourier_degeneracy_existing_lane_audit_probe.json",
+      "P2318_SELECTOR_LANE_TO_MARGIN_OBLIGATION": "fundamental_action_reconstruction/generated/p2318_s1268_strict_selector_lane_to_task3_margin_bridge_obligation_probe.json",
+      "P2319_D12_RESPONSE_NO_GO": "fundamental_action_reconstruction/generated/p2319_s1269_strict_dihedral_orientation_response_no_go_probe.json",
+      "P2320_D12_COMMUTANT_NO_GO": "fundamental_action_reconstruction/generated/p2320_s1270_strict_dihedral_commutant_orientation_no_go_probe.json",
+      "P719_LOW_COMPLEXITY_ODD_POLYNOMIAL_AUDIT": "fundamental_action_reconstruction/generated/p719_current_strict_t176_low_complexity_odd_polynomial_two_readout_provider_class_audit_probe.json"
+    },
+    "theorem_export": {
+      "formal_statement": "For each real Fourier pair m on strict Z12, the lowest-degree nonradial D12-invariant polynomial on the pair plane is Re((x+i y)^q) with q=12/gcd(12,m). These degrees are pair1=12, pair2=6, pair3=4, pair4=3, pair5=12.  The harmonics are D12-invariant and nonradial, so they are genuine nonlinear finite-axis candidates beyond the P2319/P2320 linear/quadratic no-go scope.  However, they do not define a signed policy orientation or provider_lift_per_step bridge: coefficient sign, preferred extremum branch, response functional, replay semantics, and selector-free admissibility remain unexported.",
+      "nonpromotion_rule": "Nonlinear D12 finite-axis harmonics may be tracked as candidate selector ingredients, but they must not be promoted to strict signed provider_lift_per_step without an exported sign/response/replay bridge.",
+      "proof_bits": {
+        "all_axis_harmonics_outside_p2319_linear_quadratic_scope": true,
+        "degree_sequence_by_pair": {
+          "pair1": 12,
+          "pair2": 6,
+          "pair3": 4,
+          "pair4": 3,
+          "pair5": 12
+        },
+        "max_d12_sample_invariance_residual": 5.861977570020827e-13,
+        "min_angular_spread": 2.0,
+        "p2318_missing_field_count": 6,
+        "required_lift_per_step_not_supplied": 0.0068
+      },
+      "scope_limits": [
+        "constructive nonlinear axis-candidate audit, not Task-3 closure",
+        "does not choose a coefficient sign or preferred extremum branch",
+        "does not export margin response functional or replay semantics",
+        "does not discharge QW-2191",
+        "does not update G1/G3 or close ToE"
+      ],
+      "theorem_name": "P2321 D12 nonlinear invariant axis-candidate audit without Task-3 bridge"
+    },
+    "theorem_fingerprint_sha256": "035fed97841d9b1866ef080e88b15c75d72e3a28c511b50f521cda459b9ba93c"
+  },
+  "timestamp_utc": "2026-05-28T00:00:00+00:00"
+}

@@ -1,0 +1,423 @@
+{
+  "gatekeeper_checks": {
+    "current_exports_only_quotient_scope": true,
+    "current_union_does_not_cover_lift_fields": true,
+    "grep_hits_found": true,
+    "no_admissible_second_background_lift_source": true,
+    "no_full_global_renormalization_claimed": true,
+    "no_g1_g3_update_claimed": true,
+    "no_legacy_kernel_role_transfer": true,
+    "no_qw2191_discharge_claimed": true,
+    "no_selector_premise_added": true,
+    "no_toe_closure_claimed": true,
+    "p1985_loaded": true,
+    "p2030_tensor_projection_not_ready": true,
+    "p2031_all_tensor_entries_missing": true,
+    "p2033_ansatz_nonavailable": true,
+    "p2297_loaded": true,
+    "p2330_rank3_nullity1_preserved": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "packet_id": "P2331",
+  "produced_by": "p2331_s1281_strict_second_background_curvature_witness_gap_audit.py",
+  "recommended_next_honest_step": "Build the missing tensor-resolved curvature component table and same-basis divergence target for at least one independent background-family witness, then rerun the GB-lift rank test. Until then, current strict exports license only quotient-scope renormalization.",
+  "result_kind": "STRICT_SECOND_BACKGROUND_CURVATURE_WITNESS_GAP_AUDIT_NO_GLOBAL_RENORMALIZATION_CLAIM",
+  "schema_version": "p2331_s1281_v1",
+  "stage_id": "S1281",
+  "status": "OPEN_CURRENT_EXPORTS_ONLY_QUOTIENT_SCOPE_RENORMALIZATION_BOUNDARY",
+  "strict_second_background_curvature_witness_gap_audit": {
+    "current_backend_scope_theorem": {
+      "claim": "The repo already contains independent ADM/Bianchi-I obstruction evidence, but no current export supplies the full tensor-component profiles, GB row in the same basis, component Gram rule, same-basis divergence target, and transport theorem required to lift the B1 Gauss-Bonnet quotient dependence. Therefore, on current exports, strict Task-1 renormalization remains quotient-scope only.",
+      "formal_current_export_condition": "~all_lift_fields_met & Eq(missing_tensor_entries, 16)",
+      "formal_current_export_condition_evaluates_true": true,
+      "proof_witnesses": [
+        "P1985/P2297 provide independent ADM/Bianchi-I non-GB lapse/spatial obstruction evidence, not a full tensor-resolved curvature witness.",
+        "P2030 says tensor_projection_ready is false and names the missing tensor component table, Gram rule, and divergence target.",
+        "P2031 reports 16/16 required tensor component entries missing and no derived component profile.",
+        "P2033 proves current nonavailability of the curved B1 metric ansatz/component projection rule.",
+        "P2330 shows the current B1 GB channel has rank-3/nullity-1 quotient dependence."
+      ],
+      "scope_limits": [
+        "This is a current-export boundary theorem, not an eternal no-go theorem.",
+        "A future tensor-resolved background-family witness may reopen the lift test.",
+        "No full/global renormalization, QW-2191 discharge, G1/G3 update, or ToE closure is claimed."
+      ],
+      "strict_guardrails": {
+        "no_g1_g3_update_claimed": true,
+        "no_legacy_kernel_role_transfer": true,
+        "no_qw2191_discharge_claimed": true,
+        "no_selector_premise_added": true,
+        "no_toe_closure_claimed": true,
+        "strict_kernel_only": true
+      },
+      "theorem_name": "P2331 current-export quotient-scope renormalization boundary"
+    },
+    "lift_capability_matrix": {
+      "admissible_single_source_rows": [],
+      "all_fields_met_by_current_union": false,
+      "binary_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "covered_field_count": 1,
+      "field_coverage_by_current_union": {
+        "component_gram_rule": false,
+        "full_tensor_component_profiles": false,
+        "gb_channel_in_same_basis": false,
+        "independent_background_family": true,
+        "same_basis_divergence_target": false,
+        "transport_or_globalization_theorem": false
+      },
+      "matrix_rows": [
+        "P1985_ADM_BIANCHI_NON_GB_LAPSE",
+        "P2297_NON_GB_SPATIAL_EOM_PROVIDER",
+        "P2030_TENSOR_RESOLVED_SOURCE_AUDIT",
+        "P2031_TENSOR_COMPONENT_TABLE_SCAFFOLD",
+        "P2033_CURVED_B1_ANSATZ_NONAVAILABILITY",
+        "P2036_BACKGROUND_TRANSPORT_CONTRACT"
+      ],
+      "numeric_rank_of_capability_matrix": 1,
+      "required_field_count": 6,
+      "required_fields": [
+        "independent_background_family",
+        "full_tensor_component_profiles",
+        "gb_channel_in_same_basis",
+        "component_gram_rule",
+        "same_basis_divergence_target",
+        "transport_or_globalization_theorem"
+      ]
+    },
+    "p2031_tensor_table_summary": {
+      "all_adm_lapse_sources_present": true,
+      "all_covariant_templates_present": true,
+      "all_scalar_shadows_present": true,
+      "conditional_gb_identity_row_count": 4,
+      "derived_entry_count": 0,
+      "missing_entry_count": 16,
+      "tensor_component_profile_table_ready": false,
+      "total_required_entries": 16
+    },
+    "p2330_gb_dependence_summary": {
+      "gram_null_residual_l2": 5.0292000132872715e-15,
+      "numeric_nullity": 1,
+      "numeric_rank": 3
+    },
+    "probe_id": "P2331_S1281_STRICT_SECOND_BACKGROUND_CURVATURE_WITNESS_GAP_AUDIT",
+    "repo_grep_audit": {
+      "hit_count": 18,
+      "search_patterns": [
+        "second background",
+        "tensor-resolved curvature",
+        "tensor_component_profile_table",
+        "background-global renormalization",
+        "Gauss-Bonnet",
+        "GB null",
+        "quotient-only",
+        "P1985",
+        "P2297",
+        "globalization"
+      ],
+      "top_hits": [
+        {
+          "first_hit_excerpt": "\"produced_by\": \"p2031_s981_strict_b1_tensor_component_profile_table_scaffold.py\",",
+          "first_hit_line": 5,
+          "path": "fundamental_action_reconstruction/generated/p2031_s981_strict_b1_tensor_component_profile_table_scaffold.json",
+          "pattern_hit_count": 22
+        },
+        {
+          "first_hit_excerpt": "p1985 = load(\"p1985_s935_strict_adm_bianchi_non_gb_curvature_squared_lapse_obstruction_witness.json\")",
+          "first_hit_line": 56,
+          "path": "fundamental_action_reconstruction/p2030_s980_strict_tensor_resolved_projection_source_audit.py",
+          "pattern_hit_count": 17
+        },
+        {
+          "first_hit_excerpt": "\"\"\"P2034 S984: strict Task-1 quotient-only renormalization theorem.",
+          "first_hit_line": 2,
+          "path": "fundamental_action_reconstruction/p2034_s984_strict_task1_quotient_only_renormalization_theorem.py",
+          "pattern_hit_count": 16
+        },
+        {
+          "first_hit_excerpt": "OUT = GEN / \"p2330_s1280_strict_b1_renormalization_gb_dependence_globalization_obstruction_probe.json\"",
+          "first_hit_line": 16,
+          "path": "fundamental_action_reconstruction/p2330_s1280_strict_b1_renormalization_gb_dependence_globalization_obstruction_probe.py",
+          "pattern_hit_count": 15
+        },
+        {
+          "first_hit_excerpt": "IN_1985 = GEN / \"p1985_s935_strict_adm_bianchi_non_gb_curvature_squared_lapse_obstruction_witness.json\"",
+          "first_hit_line": 19,
+          "path": "fundamental_action_reconstruction/p2297_s1247_strict_non_gb_spatial_eom_provider_matrix_obstruction_probe.py",
+          "pattern_hit_count": 14
+        },
+        {
+          "first_hit_excerpt": "\"produced_by\": \"p2330_s1280_strict_b1_renormalization_gb_dependence_globalization_obstruction_probe.py\",",
+          "first_hit_line": 23,
+          "path": "fundamental_action_reconstruction/generated/p2330_s1280_strict_b1_renormalization_gb_dependence_globalization_obstruction_probe.json",
+          "pattern_hit_count": 11
+        },
+        {
+          "first_hit_excerpt": "OUT = GEN / \"p2031_s981_strict_b1_tensor_component_profile_table_scaffold.json\"",
+          "first_hit_line": 24,
+          "path": "fundamental_action_reconstruction/p2031_s981_strict_b1_tensor_component_profile_table_scaffold.py",
+          "pattern_hit_count": 11
+        },
+        {
+          "first_hit_excerpt": "IN_1985 = GEN / \"p1985_s935_strict_adm_bianchi_non_gb_curvature_squared_lapse_obstruction_witness.json\"",
+          "first_hit_line": 17,
+          "path": "fundamental_action_reconstruction/p2296_s1246_strict_global_task1_renormalization_replay_and_7task_reclassification_probe.py",
+          "pattern_hit_count": 11
+        },
+        {
+          "first_hit_excerpt": "\"p1985_present\": true,",
+          "first_hit_line": 22,
+          "path": "fundamental_action_reconstruction/generated/p2030_s980_strict_tensor_resolved_projection_source_audit.json",
+          "pattern_hit_count": 10
+        },
+        {
+          "first_hit_excerpt": "transportable to background-global renormalization.  P2036 records the",
+          "first_hit_line": 5,
+          "path": "fundamental_action_reconstruction/p2036_s986_strict_task1_quotient_background_transport_candidate_contract.py",
+          "pattern_hit_count": 9
+        },
+        {
+          "first_hit_excerpt": "\"\"\"P1985 S935 strict ADM/Bianchi-I non-GB curvature-squared lapse obstruction witness.",
+          "first_hit_line": 2,
+          "path": "fundamental_action_reconstruction/p1985_s935_strict_adm_bianchi_non_gb_curvature_squared_lapse_obstruction_witness.py",
+          "pattern_hit_count": 8
+        },
+        {
+          "first_hit_excerpt": "\"result_kind\": \"OPEN_NEW_PREMISE_BACKGROUND_TRANSPORT_CONTRACT_CANDIDATE_EXPORTED__NO_GLOBALIZATION\",",
+          "first_hit_line": 8,
+          "path": "fundamental_action_reconstruction/generated/p2036_s986_strict_task1_quotient_background_transport_candidate_contract.json",
+          "pattern_hit_count": 7
+        },
+        {
+          "first_hit_excerpt": "\"generated/p1985_s935_strict_adm_bianchi_non_gb_curvature_squared_lapse_obstruction_witness.json\",",
+          "first_hit_line": 13,
+          "path": "fundamental_action_reconstruction/generated/p2296_s1246_strict_global_task1_renormalization_replay_and_7task_reclassification_probe.json",
+          "pattern_hit_count": 7
+        },
+        {
+          "first_hit_excerpt": "\"schema_version\": \"p2297_s1247_v1\",",
+          "first_hit_line": 2,
+          "path": "fundamental_action_reconstruction/generated/p2297_s1247_strict_non_gb_spatial_eom_provider_matrix_obstruction_probe.json",
+          "pattern_hit_count": 7
+        },
+        {
+          "first_hit_excerpt": "\"section_warning\": \"The canonical section a_GB=0 and the minimum-norm representative are section choices, not physical measurements of an independent Gauss-Bonnet coefficient.\"",
+          "first_hit_line": 77,
+          "path": "fundamental_action_reconstruction/generated/p2034_s984_strict_task1_quotient_only_renormalization_theorem.json",
+          "pattern_hit_count": 6
+        },
+        {
+          "first_hit_excerpt": "p2031 = load(\"p2031_s981_strict_b1_tensor_component_profile_table_scaffold.json\")",
+          "first_hit_line": 83,
+          "path": "fundamental_action_reconstruction/p2033_s983_strict_curved_b1_metric_ansatz_nonavailability_theorem.py",
+          "pattern_hit_count": 6
+        },
+        {
+          "first_hit_excerpt": "\"ledger_id\": \"P1985_S935_STRICT_ADM_BIANCHI_NON_GB_CURVATURE_SQUARED_LAPSE_OBSTRUCTION_WITNESS\",",
+          "first_hit_line": 2,
+          "path": "fundamental_action_reconstruction/generated/p1985_s935_strict_adm_bianchi_non_gb_curvature_squared_lapse_obstruction_witness.json",
+          "pattern_hit_count": 4
+        },
+        {
+          "first_hit_excerpt": "\"positive_export\": \"ADM/Bianchi-I Gauss-Bonnet lapse Euler cancellation\",",
+          "first_hit_line": 176,
+          "path": "fundamental_action_reconstruction/generated/p2033_s983_strict_curved_b1_metric_ansatz_nonavailability_theorem.json",
+          "pattern_hit_count": 4
+        }
+      ]
+    },
+    "second_background_candidate_rows": [
+      {
+        "blocking_reason": "lapse-only and non-GB; does not export a full tensor component basis or GB row in the same basis",
+        "component_gram_rule": false,
+        "full_tensor_component_profiles": false,
+        "gb_channel_in_same_basis": false,
+        "independent_background_family": true,
+        "numeric_indicator": {
+          "numeric_replay_l2_norm": 0.013542345799315066
+        },
+        "positive_evidence": "ADM/Bianchi-I non-GB lapse residual is nonzero and strict-only.",
+        "same_basis_divergence_target": false,
+        "source_id": "P1985_ADM_BIANCHI_NON_GB_LAPSE",
+        "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+        "transport_or_globalization_theorem": false
+      },
+      {
+        "blocking_reason": "strict-core provider matrix is inconsistent and formal full-basis reconstruction is marked non-admissible",
+        "component_gram_rule": false,
+        "full_tensor_component_profiles": false,
+        "gb_channel_in_same_basis": false,
+        "independent_background_family": true,
+        "numeric_indicator": {
+          "augmented_non_strict_matrix_inconsistent": true,
+          "formal_full_basis_marked_non_admissible": true,
+          "formal_full_basis_reconstructs_zero": true,
+          "no_legacy_transfer_used": true,
+          "no_selector_closure_claimed": true,
+          "no_toe_closure_claimed": true,
+          "p1985_obstruction_preserved": true,
+          "qw2191_not_discharged": true,
+          "strict_core_matrix_inconsistent": true,
+          "tracefree_spatial_component_sum_zero": true
+        },
+        "positive_evidence": "tracefree spatial Bianchi-I provider matrix obstruction is exported.",
+        "same_basis_divergence_target": false,
+        "source_id": "P2297_NON_GB_SPATIAL_EOM_PROVIDER",
+        "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+        "transport_or_globalization_theorem": false
+      },
+      {
+        "blocking_reason": "tensor_projection_ready is false; tensor component table, Gram rule, and divergence tensor target are missing",
+        "component_gram_rule": false,
+        "full_tensor_component_profiles": false,
+        "gb_channel_in_same_basis": false,
+        "independent_background_family": false,
+        "numeric_indicator": {
+          "tensor_projection_ready": false
+        },
+        "positive_evidence": "covariant_H_munu_templates_present, scalar_B1_profiles_present, adm_lapse_chain_present, gb_lapse_cancels, non_gb_lapse_obstruction_present, spatial_family_obstruction_present, provider_matrix_obstruction_present",
+        "same_basis_divergence_target": false,
+        "source_id": "P2030_TENSOR_RESOLVED_SOURCE_AUDIT",
+        "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+        "transport_or_globalization_theorem": false
+      },
+      {
+        "blocking_reason": "all 16 required tensor entries are still marked missing and no component profile is derived",
+        "component_gram_rule": false,
+        "full_tensor_component_profiles": false,
+        "gb_channel_in_same_basis": false,
+        "independent_background_family": false,
+        "numeric_indicator": {
+          "all_adm_lapse_sources_present": true,
+          "all_covariant_templates_present": true,
+          "all_scalar_shadows_present": true,
+          "conditional_gb_identity_row_count": 4,
+          "derived_entry_count": 0,
+          "missing_entry_count": 16,
+          "tensor_component_profile_table_ready": false,
+          "total_required_entries": 16
+        },
+        "positive_evidence": "4x4 tensor table scaffold exists with conditional GB identity rows.",
+        "same_basis_divergence_target": false,
+        "source_id": "P2031_TENSOR_COMPONENT_TABLE_SCAFFOLD",
+        "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+        "transport_or_globalization_theorem": false
+      },
+      {
+        "blocking_reason": "minimal curved B1 ansatz and component projection rule are not exported",
+        "component_gram_rule": false,
+        "full_tensor_component_profiles": false,
+        "gb_channel_in_same_basis": false,
+        "independent_background_family": false,
+        "numeric_indicator": {
+          "all_near_miss_sources_available_or_audited": true,
+          "component_projection_rule_not_exported": true,
+          "minimal_curved_b1_ansatz_not_exported": true,
+          "no_independent_a_GB_claimed": true,
+          "no_near_miss_source_can_export_ansatz": true,
+          "no_tensor_component_profile_filled": true,
+          "no_tensor_projection_claimed": true,
+          "no_toe_closure_claimed": true,
+          "nonavailability_theorem_passed": true,
+          "p2031_table_remains_unfilled": true,
+          "p2032_all_required_fields_missing": true
+        },
+        "positive_evidence": "formal nonavailability theorem for the currently missing curved B1 ansatz/projection rule.",
+        "same_basis_divergence_target": false,
+        "source_id": "P2033_CURVED_B1_ANSATZ_NONAVAILABILITY",
+        "status": "OPEN_OBSTRUCTION_WITH_TRACE",
+        "transport_or_globalization_theorem": false
+      },
+      {
+        "blocking_reason": "contract is a new-premise scaffold; global transport theorem and finite-part scheme transport are not exported",
+        "component_gram_rule": false,
+        "full_tensor_component_profiles": false,
+        "gb_channel_in_same_basis": false,
+        "independent_background_family": false,
+        "numeric_indicator": {
+          "all_acceptance_gates_passed": false,
+          "background_globalization_exported": false,
+          "candidate_contract_syntactically_complete": true,
+          "finite_part_scheme_transport_proven": false,
+          "gb_null_transport_classified": false,
+          "global_cocycle_proven": false,
+          "identity_seed_rank3": true,
+          "no_global_renormalization_claimed": true,
+          "no_tensor_projection_claimed": true,
+          "no_toe_closure_claimed": true,
+          "p1879_anisotropy_contract_available": true,
+          "p1935_scheme_transfer_still_partial": true,
+          "p2034_local_source_ready": true,
+          "p2035_obstruction_ready": true,
+          "strict_transport_theorem_exported": false
+        },
+        "positive_evidence": "candidate contract for background transport exists.",
+        "same_basis_divergence_target": false,
+        "source_id": "P2036_BACKGROUND_TRANSPORT_CONTRACT",
+        "status": "OPEN_CANDIDATE_CONTRACT_WITH_TRACE",
+        "transport_or_globalization_theorem": false
+      }
+    ],
+    "source_hashes": {
+      "P1985_ADM_BIANCHI_NON_GB_LAPSE": "a127e42e199bd2cc8d4323056d2b3bccbf8d40db51cf1a095fb65b268e8e66f6",
+      "P2030_TENSOR_RESOLVED_SOURCE_AUDIT": "bed7a2b4a8d073284cecc28600e0582f4d837cd061918cbf18c7bb95461cbd93",
+      "P2031_TENSOR_COMPONENT_TABLE_SCAFFOLD": "7f7fcbbc11d825e25d465c865c894dbafa8f93bd006cf9cb3c8f4d8467951eaf",
+      "P2033_CURVED_B1_ANSATZ_NONAVAILABILITY": "795bf9f52fe7bcc68a7d678936105951e7e42af8fcbc0a71d2a25c0f68f948ac",
+      "P2034_QUOTIENT_ONLY_RENORMALIZATION": "2454a107762f4e54f8abcfc4f769238dd67463777cac284c59d4f128a3d8af27",
+      "P2036_BACKGROUND_TRANSPORT_CONTRACT": "247ebcd8f6dfb284d043bb0f7b0e17c7df5b98a0761928ae738efb8abecdcb1d",
+      "P2296_GLOBAL_TASK1_REPLAY": "32be249a011d9ceffb17730e001ce1c1f585c6f0c28eb9203c7478d9d1666ea2",
+      "P2297_NON_GB_SPATIAL_EOM_PROVIDER": "477da8b9bab1dd79ac2d701b6e10e63a8eac8d0e37e368984a2f6910efda24b5",
+      "P2330_B1_GB_DEPENDENCE": "14c1f4e7269007d914b231f322bfd98099617abd5b2c6602755bcca89e142272"
+    },
+    "theorem_fingerprint_sha256": "74bb887811f03570ef00d87d55c05158c6599f21324959b328c910b51cb3a860"
+  },
+  "timestamp_utc": "2026-05-28T00:00:00+00:00"
+}

@@ -1,0 +1,209 @@
+{
+  "gatekeeper_checks": {
+    "full_4channel_renormalization_not_claimed": true,
+    "global_background_renormalization_not_claimed": true,
+    "no_g1_g3_update_claimed": true,
+    "no_legacy_kernel_role_transfer": true,
+    "no_qw2191_discharge_claimed": true,
+    "no_selector_premise_added": true,
+    "no_toe_closure_claimed": true,
+    "null_vector_residual_small": true,
+    "numeric_nullity_is_1": true,
+    "numeric_rank_is_3": true,
+    "p1848_profiles_loaded": true,
+    "p1950_loaded": true,
+    "p1950_rank_defect_preserved": true,
+    "p2096_loaded": true,
+    "p2096_quotient_scope_only_preserved": true,
+    "sampled_gb_relation_residual_small": true,
+    "symbolic_gb_relation_zero": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "packet_id": "P2330",
+  "produced_by": "p2330_s1280_strict_b1_renormalization_gb_dependence_globalization_obstruction_probe.py",
+  "recommended_next_honest_step": "Do not force B1 quotient closure into full four-channel renormalization. Add a second independent background-family/tensor-resolved curvature witness and test whether the GB dependence is lifted globally, or prove that the current strict backend admits only quotient-scope renormalization closure.",
+  "result_kind": "STRICT_B1_GAUSS_BONNET_DEPENDENCE_AND_RENORMALIZATION_GLOBALIZATION_OBSTRUCTION_NO_FALSE_PASS",
+  "schema_version": "p2330_s1280_v1",
+  "stage_id": "S1280",
+  "status": "OPEN_RENORMALIZATION_GLOBALIZATION_OBSTRUCTION_WITH_EXACT_B1_GB_DEPENDENCE_TRACE",
+  "strict_b1_renormalization_gb_dependence_globalization_obstruction_probe": {
+    "gb_dependence_certificate": {
+      "backend_gb_expression_text": "Riem2 - 4*Ric2 + R2",
+      "background_family": "B1",
+      "channel_order": [
+        "R2",
+        "Ric2",
+        "Riem2",
+        "GB"
+      ],
+      "exact_symbolic_relation": "GB - Riem2 + 4*Ric2 - R2 == 0",
+      "gram_matrix": [
+        [
+          0.40294081084194555,
+          0.15440474148778183,
+          1.1902931119531976,
+          0.975614956844016
+        ],
+        [
+          0.15440474148778183,
+          0.09431033921933678,
+          0.12849232138775993,
+          -0.0943442940018054
+        ],
+        [
+          1.1902931119531976,
+          0.12849232138775993,
+          18.216124924204376,
+          18.892448750606533
+        ],
+        [
+          0.975614956844016,
+          -0.0943442940018054,
+          18.892448750606533,
+          20.245440883457775
+        ]
+      ],
+      "gram_null_residual_l2": 5.0292000132872715e-15,
+      "gram_singular_values": [
+        38.21214204920885,
+        0.6128847493604669,
+        0.1337901591541169,
+        1.3714830751528796e-16
+      ],
+      "gram_times_null_vector": [
+        2.220446049250313e-16,
+        0.0,
+        -3.552713678800501e-15,
+        3.552713678800501e-15
+      ],
+      "null_vector_for_channel_profiles": {
+        "GB": 1.0,
+        "R2": -1.0,
+        "Ric2": 4.0,
+        "Riem2": -1.0
+      },
+      "numeric_nullity": 1,
+      "numeric_rank": 3,
+      "p1950_fail_trace": "operator_profile_gram_rank=3 < 4; nullity=1; condition_number=rank_deficient",
+      "p1950_full_4channel_rank_gate": 4,
+      "p1950_reported_nullity": 1,
+      "p1950_reported_rank": 3,
+      "p1950_verdict": "OPEN_OBSTRUCTION_WITH_TRACE",
+      "profile_relation_residual_abs_max_on_grid": 5.0292000132872715e-15,
+      "rank_tolerance": 3.3939199938623022e-12,
+      "symbolic_relation_zero": true
+    },
+    "globalization_obstruction": {
+      "claim": "The current B1 backend cannot honestly certify four independent one-loop gravitational counterterm channels because Gauss-Bonnet is exported as the dependent tensor identity GB=Riem2-4*Ric2+R2 on the B1 scalar profile.",
+      "needed_next_input": "Add an independent background-family witness or tensor-resolved global curvature backend where GB independence/global transport can be tested instead of forcing B1 quotient data to behave as a four-channel theorem.",
+      "what_is_closed": "quotient-scope three-channel cancellation/contract inherited from P2094/P2096",
+      "what_remains_open": [
+        "full four-channel independence on B1",
+        "global background-family renormalization closure beyond B1 quotient scope",
+        "full Task-3/global ToE renormalization theorem"
+      ]
+    },
+    "probe_id": "P2330_S1280_STRICT_B1_RENORMALIZATION_GB_DEPENDENCE_GLOBALIZATION_OBSTRUCTION",
+    "quotient_closure_summary": {
+      "full_4channel_independence_proven": false,
+      "gb_derived_operator_residual_abs_max": 3.552713678800501e-15,
+      "global_background_family_closure_proven": false,
+      "p2096_loaded": true,
+      "quotient_residual_abs_max": 0.0,
+      "result_kind": "PASS_STRICT_B1_RENORMALIZATION_CLOSURE_CONTRACT_WITH_TRACE__QUOTIENT_SCOPE_ONLY",
+      "scope_limit": "Not a full 4-channel independence theorem; not global background-family closure.",
+      "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE"
+    },
+    "repo_grep_audit": {
+      "hit_count": 7,
+      "search_patterns": [
+        "a_R2",
+        "a_Ric2",
+        "a_Riem2",
+        "a_GB",
+        "GaussBonnet",
+        "rank_deficient",
+        "renormalization",
+        "counterterm",
+        "background_family_B1",
+        "delta_c_gr"
+      ],
+      "top_hits": [
+        {
+          "first_hit_excerpt": "\"background_family_B1_backend_projection_channels\"",
+          "first_hit_line": 7,
+          "path": "fundamental_action_reconstruction/generated/p1950_s900_strict_renormalization_exact_integration_probe.json",
+          "pattern_hit_count": 42
+        },
+        {
+          "first_hit_excerpt": "OUT=GEN/'p1950_s900_strict_renormalization_exact_integration_probe.json'",
+          "first_hit_line": 12,
+          "path": "fundamental_action_reconstruction/p1950_s900_strict_renormalization_exact_integration.py",
+          "pattern_hit_count": 38
+        },
+        {
+          "first_hit_excerpt": "INP = GEN / \"p1950_s900_strict_renormalization_exact_integration_probe.json\"",
+          "first_hit_line": 12,
+          "path": "fundamental_action_reconstruction/p2094_s1044_strict_b1_quotient_renormalization_rank_repair.py",
+          "pattern_hit_count": 21
+        },
+        {
+          "first_hit_excerpt": "\"delta_label\": \"delta_c_gr_1\",",
+          "first_hit_line": 33,
+          "path": "fundamental_action_reconstruction/generated/p1848_s798_strict_gravity_componentwise_variation_and_counterterm_witness_checkpoint.json",
+          "pattern_hit_count": 19
+        },
+        {
+          "first_hit_excerpt": "IN_2094 = GEN / \"p2094_s1044_strict_b1_quotient_renormalization_rank_repair.json\"",
+          "first_hit_line": 10,
+          "path": "fundamental_action_reconstruction/p2096_s1046_strict_b1_renormalization_closure_contract.py",
+          "pattern_hit_count": 16
+        },
+        {
+          "first_hit_excerpt": "\"produced_by\": \"p2096_s1046_strict_b1_renormalization_closure_contract.py\",",
+          "first_hit_line": 5,
+          "path": "fundamental_action_reconstruction/generated/p2096_s1046_strict_b1_renormalization_closure_contract.json",
+          "pattern_hit_count": 8
+        },
+        {
+          "first_hit_excerpt": "\"produced_by\": \"p2094_s1044_strict_b1_quotient_renormalization_rank_repair.py\",",
+          "first_hit_line": 5,
+          "path": "fundamental_action_reconstruction/generated/p2094_s1044_strict_b1_quotient_renormalization_rank_repair.json",
+          "pattern_hit_count": 6
+        }
+      ]
+    },
+    "source_hashes": {
+      "P1848_GRAVITY_COUNTERTERM_PROFILES": "fd79beddcc99bee9162e4967e813d5c939007e6577e488f000afb564a8b43acb",
+      "P1950_RENORMALIZATION_EXACT_INTEGRATION": "e3aea485748b753a2811ea58b0f7581ed5c793343bfbe53c15264b9de177acc6",
+      "P2094_QUOTIENT_RANK_REPAIR": "8cb7ebbe526ea4861436a14de5dc8658790b44a08b8ea2418f7e630ba07509d9",
+      "P2096_QUOTIENT_CLOSURE_CONTRACT": "36979a6103bba6c135b61c156cf8f80dbdef83efeba02edab3a3badd0667bd73",
+      "P2329_SELECTOR_INDEPENDENCE_AUDIT": "dc8ed271017dd957b196f90e57880c07af9259cc3ca86ce7dac628ff40755550"
+    },
+    "theorem_export": {
+      "claim": "On the current strict B1 backend profiles, the Gauss-Bonnet channel is exactly dependent: GB - Riem2 + 4 Ric2 - R2 = 0. Therefore P1950's rank-3/nullity-1 result is a structural B1 quotient obstruction, not a numerical accident; P2096 quotient closure may be used only in quotient scope and cannot be promoted to full four-channel/global renormalization closure.",
+      "proof_witnesses": [
+        "P1848 exports GB by the tensor identity GB=Riem2-4*Ric2+R2 on B1 profiles.",
+        "The backend GB expression is exactly the symbolic string Riem2 - 4*Ric2 + R2, and the sampled profile relation residual is numerically zero within tolerance.",
+        "The B1 Gram matrix has numeric rank 3 and nullity 1 with null vector (-1,4,-1,1).",
+        "P1950 records the same rank-defect obstruction and P2096 records quotient-scope-only closure."
+      ],
+      "scope_limits": [
+        "This is not a full renormalization closure theorem.",
+        "This is not a global background-family theorem.",
+        "This does not update G1/G3 or close ToE."
+      ],
+      "strict_guardrails": {
+        "no_g1_g3_update_claimed": true,
+        "no_legacy_kernel_role_transfer": true,
+        "no_qw2191_discharge_claimed": true,
+        "no_selector_premise_added": true,
+        "no_toe_closure_claimed": true,
+        "strict_kernel_only": true
+      },
+      "theorem_name": "P2330 strict B1 Gauss-Bonnet dependence and renormalization globalization obstruction"
+    },
+    "theorem_fingerprint_sha256": "fea87afd3e9ac5f6ed5cd87b0bc18fc02f1abe1c8ed8d2ac91a39f9efac8c190"
+  },
+  "timestamp_utc": "2026-05-28T00:00:00+00:00"
+}

@@ -1,0 +1,924 @@
+{
+  "gatekeeper_checks": {
+    "adjacent_maxima_detected_by_negative_angular_hessian": true,
+    "all_axis_branches_energy_degenerate": true,
+    "all_axis_branches_locally_stable": true,
+    "energy_spread_small": true,
+    "far_hessian_branch_degeneracy_grep_hits_found": true,
+    "hessian_stability_not_promoted_to_bridge": true,
+    "no_legacy_kernel_role_transfer": true,
+    "no_qw2191_discharge_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "p2318_bridge_fields_still_unfilled": true,
+    "p2318_loaded": true,
+    "p2322_loaded": true,
+    "pair_count_is_5": true,
+    "physical_hessian_positive": true,
+    "radial_and_arc_angular_hessians_match": true,
+    "strict_g1_g3_not_updated": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_HESSIAN_STABILITY_AND_BRANCH_DEGENERACY_TRACE",
+  "packet_id": "P2323",
+  "produced_by": "p2323_s1273_strict_self_coupled_axis_potential_hessian_branch_degeneracy_probe.py",
+  "recommended_next_honest_step": "Search for or rule out an internal source that splits the exactly degenerate D12 branch orbit while also exporting a signed Task-3 response/replay bridge.",
+  "result_kind": "STRICT_SELF_COUPLED_AXIS_POTENTIAL_HESSIAN_BRANCH_DEGENERACY_AUDIT_NO_G1_G3_UPDATE",
+  "schema_version": "p2323_s1273_v1",
+  "stage_id": "S1273",
+  "status": "OPEN_HESSIAN_STABLE_SELF_COUPLED_AXIS_POTENTIALS_WITH_BRANCH_DEGENERACY",
+  "strict_self_coupled_axis_potential_hessian_branch_degeneracy_probe": {
+    "bridge_obligation_update": {
+      "fields_still_unfilled_after_hessian_stability": [
+        "signed_scalar_lift_per_step",
+        "time_step_normalization",
+        "margin_response_functional",
+        "orientation_to_policy_sign_rule",
+        "p2281_replay_semantics",
+        "admissibility_theorem_no_selector_premise"
+      ],
+      "g1_g3_update_allowed": false,
+      "hessian_stability_certificate_exported": true,
+      "hessian_stability_fills_any_missing_p2318_field": false,
+      "p2318_missing_fields_loaded": [
+        "signed_scalar_lift_per_step",
+        "time_step_normalization",
+        "margin_response_functional",
+        "orientation_to_policy_sign_rule",
+        "p2281_replay_semantics",
+        "admissibility_theorem_no_selector_premise"
+      ],
+      "reason": "Second variation certifies local stability of every branch, but the Hessian spectrum and energy are identical on all D12-related minima, so no signed branch/response/replay bridge is produced.",
+      "required_lift_per_step": 0.0068
+    },
+    "existing_blocker_context": {
+      "p2318_result_kind": "STRICT_SELECTOR_LANE_TO_PROVIDER_LIFT_OBLIGATION_AUDIT_NO_G1_G3_UPDATE",
+      "p2321_result_kind": "STRICT_DIHEDRAL_NONLINEAR_INVARIANT_AXIS_CANDIDATE_AUDIT_NO_G1_G3_UPDATE",
+      "p2322_result_kind": "STRICT_NADSOLITON_FRACTAL_SELF_COUPLING_AXIS_POTENTIAL_AUDIT_NO_G1_G3_UPDATE",
+      "psi_hessian_loaded": true
+    },
+    "far_hessian_branch_degeneracy_grep_audit": {
+      "hit_count": 1243,
+      "patterns": [
+        "Hessian",
+        "hessian",
+        "second variation",
+        "mass matrix",
+        "local stability",
+        "axis potential",
+        "branch degeneracy",
+        "degenerate minima",
+        "selector closure",
+        "QW-2191",
+        "provider_lift_per_step"
+      ],
+      "top_hits": [
+        {
+          "first_hit_excerpt": "\"QW-2191\",",
+          "first_hit_line": 67,
+          "path": "fundamental_action_reconstruction/generated/p2321_s1271_strict_dihedral_nonlinear_invariant_axis_candidate_audit_probe.json",
+          "pattern_hit_count": 30
+        },
+        {
+          "first_hit_excerpt": "1. an actual quotient-safe `QW-2191` resolution witness,",
+          "first_hit_line": 14,
+          "path": "fundamental_action_reconstruction/F149_FIRST_ACTUAL_SOURCE_TOPOLOGY_QUOTIENT_SAFE_QW2191_RESOLUTION_WITNESS_PACKET.md",
+          "pattern_hit_count": 24
+        },
+        {
+          "first_hit_excerpt": "5. one actual quotient-safe `QW-2191` resolution witness for",
+          "first_hit_line": 16,
+          "path": "fundamental_action_reconstruction/F150_FIRST_ACTUAL_DECLARED_SCOPE_SOURCE_TOPOLOGY_SELECTOR_THEOREM_PACKET.md",
+          "pattern_hit_count": 23
+        },
+        {
+          "first_hit_excerpt": "2. an actual quotient-safe `QW-2191` resolution discharge,",
+          "first_hit_line": 11,
+          "path": "fundamental_action_reconstruction/F137_FIRST_SOURCE_TOPOLOGY_QUOTIENT_SAFE_QW2191_RESOLUTION_TARGET_PACKET.md",
+          "pattern_hit_count": 20
+        },
+        {
+          "first_hit_excerpt": "2. a quotient-safe `QW-2191` resolution,",
+          "first_hit_line": 18,
+          "path": "fundamental_action_reconstruction/F148_FIRST_ACTUAL_SOURCE_TOPOLOGY_BASIS_INDEPENDENT_PROMOTION_WITNESS_PACKET.md",
+          "pattern_hit_count": 20
+        },
+        {
+          "first_hit_excerpt": "# F460 Current Strict Diagonal/Local `Psi` Hessian Eigenprojectors Export Packet (No False‑PASS)",
+          "first_hit_line": 1,
+          "path": "fundamental_action_reconstruction/F460_CURRENT_STRICT_DIAGONAL_LOCAL_PSI_HESSIAN_EIGENPROJECTORS_EXPORT_PACKET.md",
+          "pattern_hit_count": 17
+        },
+        {
+          "first_hit_excerpt": "# F704 Current Strict: Invariant Mass Observable From Diagonal/Local Psi-Hessian Eigensystem Export Packet (No False-PASS)",
+          "first_hit_line": 1,
+          "path": "fundamental_action_reconstruction/F704_CURRENT_STRICT_INVARIANT_MASS_OBSERVABLE_FROM_DIAGONAL_LOCAL_PSI_HESSIAN_EIGENSYSTEM_EXPORT_PACKET.md",
+          "pattern_hit_count": 17
+        },
+        {
+          "first_hit_excerpt": "# F459 Current Strict Diagonal/Local `Psi` Hessian Eigensystem Value‑Instantiation Packet (No False‑PASS)",
+          "first_hit_line": 1,
+          "path": "fundamental_action_reconstruction/F459_CURRENT_STRICT_DIAGONAL_LOCAL_PSI_HESSIAN_EIGENSYSTEM_VALUE_INSTANTIATION_PACKET.md",
+          "pattern_hit_count": 16
+        },
+        {
+          "first_hit_excerpt": "limits (no theta-source export; `QW-2191` stays open).",
+          "first_hit_line": 32,
+          "path": "fundamental_action_reconstruction/P388_CURRENT_STRICT_RESIDUAL_DATUM_SIGMA_INT_BRIDGE_EXPORT_MAP_OBJECT_ACTUAL_INHABITANT_DISCHARGE_PROBE.md",
+          "pattern_hit_count": 15
+        },
+        {
+          "first_hit_excerpt": "\"reason\": \"Existing lane defects are enough to cut O(2) to Z2 inside their lanes, but no exported theorem maps them to the signed P2302 provider_lift_per_step with replay semantics.\",",
+          "first_hit_line": 38,
+          "path": "fundamental_action_reconstruction/generated/p2318_s1268_strict_selector_lane_to_task3_margin_bridge_obligation_probe.json",
+          "pattern_hit_count": 15
+        },
+        {
+          "first_hit_excerpt": "quotient-safe `QW-2191` resolution target introduced by `F137`, while keeping",
+          "first_hit_line": 9,
+          "path": "fundamental_action_reconstruction/P225_CURRENT_SOURCE_TOPOLOGY_QUOTIENT_SAFE_QW2191_RESOLUTION_TARGET_PROBE.md",
+          "pattern_hit_count": 14
+        },
+        {
+          "first_hit_excerpt": "\"recommended_next_honest_step\": \"Derive, rather than choose, a sign/branch and Task-3 response/replay map for one self-coupled axis potential, or prove that such potentials remain selector-premise candidates under P2318.\",",
+          "first_hit_line": 24,
+          "path": "fundamental_action_reconstruction/generated/p2322_s1272_strict_nadsoliton_fractal_self_coupling_axis_potential_audit_probe.json",
+          "pattern_hit_count": 14
+        },
+        {
+          "first_hit_excerpt": "3. a quotient-safe `QW-2191` resolution,",
+          "first_hit_line": 12,
+          "path": "fundamental_action_reconstruction/F136_FIRST_SOURCE_TOPOLOGY_BASIS_INDEPENDENT_PROMOTION_TARGET_PACKET.md",
+          "pattern_hit_count": 13
+        },
+        {
+          "first_hit_excerpt": "2. a quotient-safe `QW-2191` resolution,",
+          "first_hit_line": 20,
+          "path": "fundamental_action_reconstruction/F147_FIRST_ACTUAL_SOURCE_TOPOLOGY_SELECTOR_WITNESS_PACKET.md",
+          "pattern_hit_count": 13
+        },
+        {
+          "first_hit_excerpt": "4. a quotient-safe `QW-2191` resolution,",
+          "first_hit_line": 13,
+          "path": "fundamental_action_reconstruction/F138_FIRST_ACTUAL_SOURCE_TOPOLOGY_NONZERO_FLOW_COMPONENT_WITNESS_PACKET.md",
+          "pattern_hit_count": 12
+        },
+        {
+          "first_hit_excerpt": "4. a quotient-safe `QW-2191` resolution,",
+          "first_hit_line": 13,
+          "path": "fundamental_action_reconstruction/F139_FIRST_ACTUAL_SOURCE_TOPOLOGY_BARRIER_SIGN_COMPONENT_WITNESS_PACKET.md",
+          "pattern_hit_count": 12
+        },
+        {
+          "first_hit_excerpt": "4. a quotient-safe `QW-2191` resolution,",
+          "first_hit_line": 13,
+          "path": "fundamental_action_reconstruction/F140_FIRST_ACTUAL_SOURCE_TOPOLOGY_LOCAL_BARRIER_SIGN_STABILITY_WITNESS_PACKET.md",
+          "pattern_hit_count": 12
+        },
+        {
+          "first_hit_excerpt": "3. a quotient-safe `QW-2191` resolution,",
+          "first_hit_line": 12,
+          "path": "fundamental_action_reconstruction/F141_FIRST_ACTUAL_SOURCE_TOPOLOGY_BARRIER_PROTECTED_SIGN_WITNESS_PACKET.md",
+          "pattern_hit_count": 12
+        },
+        {
+          "first_hit_excerpt": "3. a quotient-safe `QW-2191` resolution,",
+          "first_hit_line": 18,
+          "path": "fundamental_action_reconstruction/F146_FIRST_ACTUAL_SOURCE_TOPOLOGY_FULL_NONTRIVIALITY_WITNESS_PACKET.md",
+          "pattern_hit_count": 12
+        },
+        {
+          "first_hit_excerpt": "1. below current strict-core selector closure,",
+          "first_hit_line": 11,
+          "path": "fundamental_action_reconstruction/P238_CURRENT_ACTUAL_DECLARED_SCOPE_SOURCE_TOPOLOGY_SELECTOR_THEOREM_PROBE.md",
+          "pattern_hit_count": 12
+        },
+        {
+          "first_hit_excerpt": "# P463 Current Strict Diagonal/Local `Psi` Hessian Eigenmodes → Mode‑Index Assignment Projection Audit Probe",
+          "first_hit_line": 1,
+          "path": "fundamental_action_reconstruction/P463_CURRENT_STRICT_DIAGONAL_LOCAL_PSI_HESSIAN_EIGENMODES_TO_MODE_INDEX_ASSIGNMENT_PROJECTION_AUDIT_PROBE.md",
+          "pattern_hit_count": 12
+        },
+        {
+          "first_hit_excerpt": "# P464 Current Strict Diagonal/Local `Psi` Hessian Eigenprojectors → Pair‑Plane Weight Profile Probe",
+          "first_hit_line": 1,
+          "path": "fundamental_action_reconstruction/P464_CURRENT_STRICT_DIAGONAL_LOCAL_PSI_HESSIAN_EIGENPROJECTORS_TO_PAIR_PLANE_WEIGHT_PROFILE_PROBE.md",
+          "pattern_hit_count": 12
+        },
+        {
+          "first_hit_excerpt": "3. a quotient-safe `QW-2191` resolution,",
+          "first_hit_line": 12,
+          "path": "fundamental_action_reconstruction/F142_FIRST_ACTUAL_SOURCE_TOPOLOGY_OBSERVER_FREE_SCOPE_WITNESS_PACKET.md",
+          "pattern_hit_count": 11
+        },
+        {
+          "first_hit_excerpt": "3. a quotient-safe `QW-2191` resolution,",
+          "first_hit_line": 18,
+          "path": "fundamental_action_reconstruction/F143_FIRST_ACTUAL_SOURCE_TOPOLOGY_NONZERO_FLOW_WITNESS_PACKET.md",
+          "pattern_hit_count": 11
+        },
+        {
+          "first_hit_excerpt": "3. a quotient-safe `QW-2191` resolution,",
+          "first_hit_line": 17,
+          "path": "fundamental_action_reconstruction/F145_FIRST_ACTUAL_SOURCE_TOPOLOGY_NONTRIVIALITY_ASSEMBLY_WITNESS_PACKET.md",
+          "pattern_hit_count": 11
+        },
+        {
+          "first_hit_excerpt": "# P1966 Strict QW-2191 Selector Premise Obstruction and Minimal Breaking Packet",
+          "first_hit_line": 1,
+          "path": "fundamental_action_reconstruction/P1966_STRICT_QW2191_SELECTOR_PREMISE_OBSTRUCTION_AND_MINIMAL_BREAKING_PACKET.md",
+          "pattern_hit_count": 11
+        },
+        {
+          "first_hit_excerpt": "quotient-safe `QW-2191` resolution witness introduced by `F149`, while",
+          "first_hit_line": 9,
+          "path": "fundamental_action_reconstruction/P237_CURRENT_ACTUAL_SOURCE_TOPOLOGY_QUOTIENT_SAFE_QW2191_RESOLUTION_WITNESS_PROBE.md",
+          "pattern_hit_count": 11
+        },
+        {
+          "first_hit_excerpt": "# P399 Current “Time-Arrow Selector / Ontological Symmetry Breaking” QW-2191 Attack Strict-Admissibility Audit Probe",
+          "first_hit_line": 1,
+          "path": "fundamental_action_reconstruction/P399_CURRENT_TIME_ARROW_SELECTOR_QW2191_ATTACK_STRICT_ADMISSIBILITY_AUDIT_PROBE.md",
+          "pattern_hit_count": 11
+        },
+        {
+          "first_hit_excerpt": "4. a quotient-safe `QW-2191` discharge,",
+          "first_hit_line": 13,
+          "path": "fundamental_action_reconstruction/F135_FIRST_SOURCE_TOPOLOGY_FULL_NONTRIVIALITY_DISCHARGE_TARGET_PACKET.md",
+          "pattern_hit_count": 10
+        },
+        {
+          "first_hit_excerpt": "4. a quotient-safe `QW-2191` resolution,",
+          "first_hit_line": 18,
+          "path": "fundamental_action_reconstruction/F144_FIRST_ACTUAL_SOURCE_TOPOLOGY_NONTRIVIALITY_COMPONENTS_PACKAGE_PACKET.md",
+          "pattern_hit_count": 10
+        }
+      ]
+    },
+    "hessian_branch_rows": [
+      {
+        "all_branches_energy_degenerate": true,
+        "all_branches_locally_stable": true,
+        "branch_count": 12,
+        "branch_rows": [
+          {
+            "angular_second_variation_arc_coordinate": 80.81726747827489,
+            "branch_index": 0,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              80.81726747827489,
+              80.81726747827489
+            ],
+            "radial_second_variation": 80.81726747827489,
+            "theta_radians": 0.0
+          },
+          {
+            "angular_second_variation_arc_coordinate": 80.81726747827489,
+            "branch_index": 1,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              80.81726747827489,
+              80.81726747827489
+            ],
+            "radial_second_variation": 80.81726747827489,
+            "theta_radians": 0.5235987755982988
+          },
+          {
+            "angular_second_variation_arc_coordinate": 80.81726747827489,
+            "branch_index": 2,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              80.81726747827489,
+              80.81726747827489
+            ],
+            "radial_second_variation": 80.81726747827489,
+            "theta_radians": 1.0471975511965976
+          },
+          {
+            "angular_second_variation_arc_coordinate": 80.81726747827489,
+            "branch_index": 3,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              80.81726747827489,
+              80.81726747827489
+            ],
+            "radial_second_variation": 80.81726747827489,
+            "theta_radians": 1.5707963267948966
+          },
+          {
+            "angular_second_variation_arc_coordinate": 80.81726747827489,
+            "branch_index": 4,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              80.81726747827489,
+              80.81726747827489
+            ],
+            "radial_second_variation": 80.81726747827489,
+            "theta_radians": 2.0943951023931953
+          },
+          {
+            "angular_second_variation_arc_coordinate": 80.81726747827489,
+            "branch_index": 5,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              80.81726747827489,
+              80.81726747827489
+            ],
+            "radial_second_variation": 80.81726747827489,
+            "theta_radians": 2.6179938779914944
+          },
+          {
+            "angular_second_variation_arc_coordinate": 80.81726747827489,
+            "branch_index": 6,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              80.81726747827489,
+              80.81726747827489
+            ],
+            "radial_second_variation": 80.81726747827489,
+            "theta_radians": 3.141592653589793
+          },
+          {
+            "angular_second_variation_arc_coordinate": 80.81726747827489,
+            "branch_index": 7,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              80.81726747827489,
+              80.81726747827489
+            ],
+            "radial_second_variation": 80.81726747827489,
+            "theta_radians": 3.665191429188092
+          },
+          {
+            "angular_second_variation_arc_coordinate": 80.81726747827489,
+            "branch_index": 8,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              80.81726747827489,
+              80.81726747827489
+            ],
+            "radial_second_variation": 80.81726747827489,
+            "theta_radians": 4.1887902047863905
+          },
+          {
+            "angular_second_variation_arc_coordinate": 80.81726747827489,
+            "branch_index": 9,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              80.81726747827489,
+              80.81726747827489
+            ],
+            "radial_second_variation": 80.81726747827489,
+            "theta_radians": 4.71238898038469
+          },
+          {
+            "angular_second_variation_arc_coordinate": 80.81726747827489,
+            "branch_index": 10,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              80.81726747827489,
+              80.81726747827489
+            ],
+            "radial_second_variation": 80.81726747827489,
+            "theta_radians": 5.235987755982989
+          },
+          {
+            "angular_second_variation_arc_coordinate": 80.81726747827489,
+            "branch_index": 11,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              80.81726747827489,
+              80.81726747827489
+            ],
+            "radial_second_variation": 80.81726747827489,
+            "theta_radians": 5.759586531581287
+          }
+        ],
+        "degree_q": 12,
+        "derivative_formulae": {
+          "arc_coordinate_angular_hessian": "(1/r0^2)*d2V_dtheta2 = q^2*epsilon*r0^(q-2)",
+          "d2V_dr2_at_min": "q^2*epsilon*r0^(q-2)",
+          "d2V_dtheta2_at_min": "q^2*epsilon*r0^q",
+          "mixed_second_derivative_at_min": "0",
+          "r0_condition": "r0^q = epsilon/(2*lambda)"
+        },
+        "derivative_values": {
+          "angular_second_variation_arc_coordinate": 80.81726747827489,
+          "angular_second_variation_at_adjacent_maximum": -72.00000000000003,
+          "angular_second_variation_theta_coordinate": 72.00000000000003,
+          "barrier_to_origin": 0.25,
+          "cross_second_variation_at_minimum": 0.0,
+          "minimum_value": -0.25,
+          "physical_hessian_determinant": 6531.430722655027,
+          "r0": 0.9438743126816935,
+          "r0_power_q": 0.5,
+          "radial_minus_arc_angular_second_variation": 0.0,
+          "radial_second_variation": 80.81726747827489
+        },
+        "energy_spread_across_minima": 0.0,
+        "local_stability_supplies_branch_selector": false,
+        "pair": "pair1",
+        "why_no_branch_selector": "The physical Hessian is positive at every D12-related minimum and identical across branches; second variation proves local stability but preserves exact branch degeneracy."
+      },
+      {
+        "all_branches_energy_degenerate": true,
+        "all_branches_locally_stable": true,
+        "branch_count": 6,
+        "branch_rows": [
+          {
+            "angular_second_variation_arc_coordinate": 22.678578898107713,
+            "branch_index": 0,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              22.678578898107713,
+              22.678578898107713
+            ],
+            "radial_second_variation": 22.678578898107713,
+            "theta_radians": 0.0
+          },
+          {
+            "angular_second_variation_arc_coordinate": 22.678578898107713,
+            "branch_index": 1,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              22.678578898107713,
+              22.678578898107713
+            ],
+            "radial_second_variation": 22.678578898107713,
+            "theta_radians": 1.0471975511965976
+          },
+          {
+            "angular_second_variation_arc_coordinate": 22.678578898107713,
+            "branch_index": 2,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              22.678578898107713,
+              22.678578898107713
+            ],
+            "radial_second_variation": 22.678578898107713,
+            "theta_radians": 2.0943951023931953
+          },
+          {
+            "angular_second_variation_arc_coordinate": 22.678578898107713,
+            "branch_index": 3,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              22.678578898107713,
+              22.678578898107713
+            ],
+            "radial_second_variation": 22.678578898107713,
+            "theta_radians": 3.141592653589793
+          },
+          {
+            "angular_second_variation_arc_coordinate": 22.678578898107713,
+            "branch_index": 4,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              22.678578898107713,
+              22.678578898107713
+            ],
+            "radial_second_variation": 22.678578898107713,
+            "theta_radians": 4.1887902047863905
+          },
+          {
+            "angular_second_variation_arc_coordinate": 22.678578898107713,
+            "branch_index": 5,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              22.678578898107713,
+              22.678578898107713
+            ],
+            "radial_second_variation": 22.678578898107713,
+            "theta_radians": 5.235987755982989
+          }
+        ],
+        "degree_q": 6,
+        "derivative_formulae": {
+          "arc_coordinate_angular_hessian": "(1/r0^2)*d2V_dtheta2 = q^2*epsilon*r0^(q-2)",
+          "d2V_dr2_at_min": "q^2*epsilon*r0^(q-2)",
+          "d2V_dtheta2_at_min": "q^2*epsilon*r0^q",
+          "mixed_second_derivative_at_min": "0",
+          "r0_condition": "r0^q = epsilon/(2*lambda)"
+        },
+        "derivative_values": {
+          "angular_second_variation_arc_coordinate": 22.678578898107713,
+          "angular_second_variation_at_adjacent_maximum": -17.999999999999996,
+          "angular_second_variation_theta_coordinate": 17.999999999999996,
+          "barrier_to_origin": 0.25,
+          "cross_second_variation_at_minimum": 0.0,
+          "minimum_value": -0.25,
+          "physical_hessian_determinant": 514.3179408376965,
+          "r0": 0.8908987181403393,
+          "r0_power_q": 0.5,
+          "radial_minus_arc_angular_second_variation": 0.0,
+          "radial_second_variation": 22.678578898107713
+        },
+        "energy_spread_across_minima": 0.0,
+        "local_stability_supplies_branch_selector": false,
+        "pair": "pair2",
+        "why_no_branch_selector": "The physical Hessian is positive at every D12-related minimum and identical across branches; second variation proves local stability but preserves exact branch degeneracy."
+      },
+      {
+        "all_branches_energy_degenerate": true,
+        "all_branches_locally_stable": true,
+        "branch_count": 4,
+        "branch_rows": [
+          {
+            "angular_second_variation_arc_coordinate": 11.31370849898476,
+            "branch_index": 0,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              11.31370849898476,
+              11.31370849898476
+            ],
+            "radial_second_variation": 11.31370849898476,
+            "theta_radians": 0.0
+          },
+          {
+            "angular_second_variation_arc_coordinate": 11.31370849898476,
+            "branch_index": 1,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              11.31370849898476,
+              11.31370849898476
+            ],
+            "radial_second_variation": 11.31370849898476,
+            "theta_radians": 1.5707963267948966
+          },
+          {
+            "angular_second_variation_arc_coordinate": 11.31370849898476,
+            "branch_index": 2,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              11.31370849898476,
+              11.31370849898476
+            ],
+            "radial_second_variation": 11.31370849898476,
+            "theta_radians": 3.141592653589793
+          },
+          {
+            "angular_second_variation_arc_coordinate": 11.31370849898476,
+            "branch_index": 3,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              11.31370849898476,
+              11.31370849898476
+            ],
+            "radial_second_variation": 11.31370849898476,
+            "theta_radians": 4.71238898038469
+          }
+        ],
+        "degree_q": 4,
+        "derivative_formulae": {
+          "arc_coordinate_angular_hessian": "(1/r0^2)*d2V_dtheta2 = q^2*epsilon*r0^(q-2)",
+          "d2V_dr2_at_min": "q^2*epsilon*r0^(q-2)",
+          "d2V_dtheta2_at_min": "q^2*epsilon*r0^q",
+          "mixed_second_derivative_at_min": "0",
+          "r0_condition": "r0^q = epsilon/(2*lambda)"
+        },
+        "derivative_values": {
+          "angular_second_variation_arc_coordinate": 11.31370849898476,
+          "angular_second_variation_at_adjacent_maximum": -7.999999999999998,
+          "angular_second_variation_theta_coordinate": 7.999999999999998,
+          "barrier_to_origin": 0.25,
+          "cross_second_variation_at_minimum": 0.0,
+          "minimum_value": -0.25,
+          "physical_hessian_determinant": 127.99999999999997,
+          "r0": 0.8408964152537145,
+          "r0_power_q": 0.5,
+          "radial_minus_arc_angular_second_variation": 0.0,
+          "radial_second_variation": 11.31370849898476
+        },
+        "energy_spread_across_minima": 0.0,
+        "local_stability_supplies_branch_selector": false,
+        "pair": "pair3",
+        "why_no_branch_selector": "The physical Hessian is positive at every D12-related minimum and identical across branches; second variation proves local stability but preserves exact branch degeneracy."
+      },
+      {
+        "all_branches_energy_degenerate": true,
+        "all_branches_locally_stable": true,
+        "branch_count": 3,
+        "branch_rows": [
+          {
+            "angular_second_variation_arc_coordinate": 7.143304733856898,
+            "branch_index": 0,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              7.1433047338568985,
+              7.143304733856898
+            ],
+            "radial_second_variation": 7.1433047338568985,
+            "theta_radians": 0.0
+          },
+          {
+            "angular_second_variation_arc_coordinate": 7.143304733856898,
+            "branch_index": 1,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              7.1433047338568985,
+              7.143304733856898
+            ],
+            "radial_second_variation": 7.1433047338568985,
+            "theta_radians": 2.0943951023931953
+          },
+          {
+            "angular_second_variation_arc_coordinate": 7.143304733856898,
+            "branch_index": 2,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              7.1433047338568985,
+              7.143304733856898
+            ],
+            "radial_second_variation": 7.1433047338568985,
+            "theta_radians": 4.1887902047863905
+          }
+        ],
+        "degree_q": 3,
+        "derivative_formulae": {
+          "arc_coordinate_angular_hessian": "(1/r0^2)*d2V_dtheta2 = q^2*epsilon*r0^(q-2)",
+          "d2V_dr2_at_min": "q^2*epsilon*r0^(q-2)",
+          "d2V_dtheta2_at_min": "q^2*epsilon*r0^q",
+          "mixed_second_derivative_at_min": "0",
+          "r0_condition": "r0^q = epsilon/(2*lambda)"
+        },
+        "derivative_values": {
+          "angular_second_variation_arc_coordinate": 7.143304733856898,
+          "angular_second_variation_at_adjacent_maximum": -4.500000000000001,
+          "angular_second_variation_theta_coordinate": 4.500000000000001,
+          "barrier_to_origin": 0.25,
+          "cross_second_variation_at_minimum": 0.0,
+          "minimum_value": -0.25,
+          "physical_hessian_determinant": 51.02680252074237,
+          "r0": 0.7937005259840998,
+          "r0_power_q": 0.5,
+          "radial_minus_arc_angular_second_variation": 8.881784197001252e-16,
+          "radial_second_variation": 7.1433047338568985
+        },
+        "energy_spread_across_minima": 0.0,
+        "local_stability_supplies_branch_selector": false,
+        "pair": "pair4",
+        "why_no_branch_selector": "The physical Hessian is positive at every D12-related minimum and identical across branches; second variation proves local stability but preserves exact branch degeneracy."
+      },
+      {
+        "all_branches_energy_degenerate": true,
+        "all_branches_locally_stable": true,
+        "branch_count": 12,
+        "branch_rows": [
+          {
+            "angular_second_variation_arc_coordinate": 80.81726747827489,
+            "branch_index": 0,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              80.81726747827489,
+              80.81726747827489
+            ],
+            "radial_second_variation": 80.81726747827489,
+            "theta_radians": 0.0
+          },
+          {
+            "angular_second_variation_arc_coordinate": 80.81726747827489,
+            "branch_index": 1,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              80.81726747827489,
+              80.81726747827489
+            ],
+            "radial_second_variation": 80.81726747827489,
+            "theta_radians": 0.5235987755982988
+          },
+          {
+            "angular_second_variation_arc_coordinate": 80.81726747827489,
+            "branch_index": 2,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              80.81726747827489,
+              80.81726747827489
+            ],
+            "radial_second_variation": 80.81726747827489,
+            "theta_radians": 1.0471975511965976
+          },
+          {
+            "angular_second_variation_arc_coordinate": 80.81726747827489,
+            "branch_index": 3,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              80.81726747827489,
+              80.81726747827489
+            ],
+            "radial_second_variation": 80.81726747827489,
+            "theta_radians": 1.5707963267948966
+          },
+          {
+            "angular_second_variation_arc_coordinate": 80.81726747827489,
+            "branch_index": 4,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              80.81726747827489,
+              80.81726747827489
+            ],
+            "radial_second_variation": 80.81726747827489,
+            "theta_radians": 2.0943951023931953
+          },
+          {
+            "angular_second_variation_arc_coordinate": 80.81726747827489,
+            "branch_index": 5,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              80.81726747827489,
+              80.81726747827489
+            ],
+            "radial_second_variation": 80.81726747827489,
+            "theta_radians": 2.6179938779914944
+          },
+          {
+            "angular_second_variation_arc_coordinate": 80.81726747827489,
+            "branch_index": 6,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              80.81726747827489,
+              80.81726747827489
+            ],
+            "radial_second_variation": 80.81726747827489,
+            "theta_radians": 3.141592653589793
+          },
+          {
+            "angular_second_variation_arc_coordinate": 80.81726747827489,
+            "branch_index": 7,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              80.81726747827489,
+              80.81726747827489
+            ],
+            "radial_second_variation": 80.81726747827489,
+            "theta_radians": 3.665191429188092
+          },
+          {
+            "angular_second_variation_arc_coordinate": 80.81726747827489,
+            "branch_index": 8,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              80.81726747827489,
+              80.81726747827489
+            ],
+            "radial_second_variation": 80.81726747827489,
+            "theta_radians": 4.1887902047863905
+          },
+          {
+            "angular_second_variation_arc_coordinate": 80.81726747827489,
+            "branch_index": 9,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              80.81726747827489,
+              80.81726747827489
+            ],
+            "radial_second_variation": 80.81726747827489,
+            "theta_radians": 4.71238898038469
+          },
+          {
+            "angular_second_variation_arc_coordinate": 80.81726747827489,
+            "branch_index": 10,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              80.81726747827489,
+              80.81726747827489
+            ],
+            "radial_second_variation": 80.81726747827489,
+            "theta_radians": 5.235987755982989
+          },
+          {
+            "angular_second_variation_arc_coordinate": 80.81726747827489,
+            "branch_index": 11,
+            "energy": -0.25,
+            "locally_stable_minimum": true,
+            "physical_hessian_eigenvalues": [
+              80.81726747827489,
+              80.81726747827489
+            ],
+            "radial_second_variation": 80.81726747827489,
+            "theta_radians": 5.759586531581287
+          }
+        ],
+        "degree_q": 12,
+        "derivative_formulae": {
+          "arc_coordinate_angular_hessian": "(1/r0^2)*d2V_dtheta2 = q^2*epsilon*r0^(q-2)",
+          "d2V_dr2_at_min": "q^2*epsilon*r0^(q-2)",
+          "d2V_dtheta2_at_min": "q^2*epsilon*r0^q",
+          "mixed_second_derivative_at_min": "0",
+          "r0_condition": "r0^q = epsilon/(2*lambda)"
+        },
+        "derivative_values": {
+          "angular_second_variation_arc_coordinate": 80.81726747827489,
+          "angular_second_variation_at_adjacent_maximum": -72.00000000000003,
+          "angular_second_variation_theta_coordinate": 72.00000000000003,
+          "barrier_to_origin": 0.25,
+          "cross_second_variation_at_minimum": 0.0,
+          "minimum_value": -0.25,
+          "physical_hessian_determinant": 6531.430722655027,
+          "r0": 0.9438743126816935,
+          "r0_power_q": 0.5,
+          "radial_minus_arc_angular_second_variation": 0.0,
+          "radial_second_variation": 80.81726747827489
+        },
+        "energy_spread_across_minima": 0.0,
+        "local_stability_supplies_branch_selector": false,
+        "pair": "pair5",
+        "why_no_branch_selector": "The physical Hessian is positive at every D12-related minimum and identical across branches; second variation proves local stability but preserves exact branch degeneracy."
+      }
+    ],
+    "hessian_certificate": {
+      "all_adjacent_axis_maxima_have_negative_angular_second_variation": true,
+      "all_axis_branches_energy_degenerate": true,
+      "all_axis_branches_locally_stable": true,
+      "branch_count_by_pair": {
+        "pair1": 12,
+        "pair2": 6,
+        "pair3": 4,
+        "pair4": 3,
+        "pair5": 12
+      },
+      "honest_progress": "P2323 upgrades P2322 from stable-potential candidate to explicit second-variation/Hessian stability and exact branch-degeneracy trace.",
+      "local_stability_breaks_branch_degeneracy": false,
+      "max_energy_spread_across_minima": 0.0,
+      "max_radial_arc_angular_hessian_difference": 8.881784197001252e-16,
+      "min_physical_hessian_eigenvalue": 7.143304733856898,
+      "pair_count": 5
+    },
+    "probe_id": "P2323_S1273_STRICT_SELF_COUPLED_AXIS_POTENTIAL_HESSIAN_BRANCH_DEGENERACY",
+    "source_hashes": {
+      "P2318_SELECTOR_LANE_TO_MARGIN_OBLIGATION_sha256": "607f3d99c14d258ce82660ca14cb7288f4386fea4c05f6436a0ebefb6972ad3f",
+      "P2321_NONLINEAR_AXIS_CANDIDATE_sha256": "9d668770f05ac1ce03ee99230846e388870a9c11e4d954df8e996a88ea253cc9",
+      "P2322_SELF_COUPLED_AXIS_POTENTIAL_sha256": "8088376f2d164b7fb0a8a3ea91dc19911413ae7c69f4ca214dab212a69ca3145",
+      "PSI_HESSIAN_DIAGONAL_LOCAL_sha256": "eb35b2e9edeaa7cf0378c757b0f57007bad4280295ab8f39c58f835c973b58e6"
+    },
+    "source_packets": {
+      "P2318_SELECTOR_LANE_TO_MARGIN_OBLIGATION": "fundamental_action_reconstruction/generated/p2318_s1268_strict_selector_lane_to_task3_margin_bridge_obligation_probe.json",
+      "P2321_NONLINEAR_AXIS_CANDIDATE": "fundamental_action_reconstruction/generated/p2321_s1271_strict_dihedral_nonlinear_invariant_axis_candidate_audit_probe.json",
+      "P2322_SELF_COUPLED_AXIS_POTENTIAL": "fundamental_action_reconstruction/generated/p2322_s1272_strict_nadsoliton_fractal_self_coupling_axis_potential_audit_probe.json",
+      "PSI_HESSIAN_DIAGONAL_LOCAL": "fundamental_action_reconstruction/generated/psi_hessian_diagonal_local_strict_derived_value_instantiated_v1.json"
+    },
+    "theorem_export": {
+      "formal_statement": "For each P2322 self-coupled finite-axis potential V_q=lambda r^(2q)-epsilon r^q cos(q theta), the stationary minima at r0^q=epsilon/(2 lambda), theta=2*pi*j/q have positive radial and physical angular second variations q^2 epsilon r0^(q-2), zero mixed second variation, and equal energy -epsilon^2/(4 lambda).  Thus the self-coupled nadsoliton-internal potentials are locally stable on every D12 branch, but the entire branch orbit remains exactly degenerate.  Hessian stability therefore does not supply the signed provider_lift_per_step bridge, branch selector, response functional, replay semantics, or QW-2191 discharge.",
+      "nonpromotion_rule": "Do not promote local Hessian stability of the self-coupled axis potentials into selector closure; exact branch degeneracy must be broken by an exported internal source or explicit premise.",
+      "proof_bits": {
+        "all_axis_branches_energy_degenerate": true,
+        "all_axis_branches_locally_stable": true,
+        "branch_count_by_pair": {
+          "pair1": 12,
+          "pair2": 6,
+          "pair3": 4,
+          "pair4": 3,
+          "pair5": 12
+        },
+        "max_energy_spread_across_minima": 0.0,
+        "max_radial_arc_angular_hessian_difference": 8.881784197001252e-16,
+        "min_physical_hessian_eigenvalue": 7.143304733856898,
+        "p2318_missing_field_count": 6,
+        "required_lift_per_step_not_supplied": 0.0068
+      },
+      "scope_limits": [
+        "second-variation certificate for P2322 candidate potentials, not full Lagrangian/EOM theorem",
+        "does not choose a physical sign/branch among D12-related minima",
+        "does not export Task-3 response functional or P2281 replay semantics",
+        "does not discharge QW-2191, update G1/G3, or close ToE"
+      ],
+      "theorem_name": "P2323 self-coupled axis-potential Hessian stability with branch-degeneracy obstruction"
+    },
+    "theorem_fingerprint_sha256": "e901b6d8f6a887dc0b787533620bce62e65b8ecb52542b154eb74e8193dd5c2a"
+  },
+  "timestamp_utc": "2026-05-28T00:00:00+00:00"
+}
