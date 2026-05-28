@@ -1,0 +1,454 @@
+{
+  "gatekeeper_checks": {
+    "all_residuals_selector_independent": true,
+    "all_terms_selector_independent": true,
+    "all_variations_selector_independent": true,
+    "blocked_claims_nonempty": true,
+    "no_g1_g3_update_claimed": true,
+    "no_legacy_kernel_role_transfer": true,
+    "no_qw2191_discharge_claimed": true,
+    "no_selector_premise_added": true,
+    "no_toe_closure_claimed": true,
+    "p2086_loaded": true,
+    "p2325_no_admissible_signed_source_preserved": true,
+    "p2328_strategy_packet_loaded": true,
+    "safe_claims_nonempty": true,
+    "term_count_is_11": true,
+    "variation_fields_are_psi_A_h": true
+  },
+  "global_status": "OPEN_DYNAMICS_PROGRESS_ALLOWED_SELECTOR_ACTUALIZATION_UNRESOLVED",
+  "packet_id": "P2329",
+  "produced_by": "p2329_s1279_selector_independence_lagrangian_eom_audit_probe.py",
+  "recommended_next_honest_step": "Use the selector-independent P2086 term/variation/residual subset to continue Lagrangian/EOM sharpening, while separately auditing any term or observable claim that requires branch sign, S_future, provider_lift_per_step, or QW-2191 discharge.",
+  "result_kind": "STRICT_SELECTOR_INDEPENDENCE_LAGRANGIAN_EOM_AUDIT_NO_QW2191_DISCHARGE",
+  "schema_version": "p2329_s1279_v1",
+  "stage_id": "S1279",
+  "status": "OPEN_SELECTOR_FREE_DYNAMICS_AUDIT_WITH_BRANCH_ACTUALIZATION_STILL_BLOCKED",
+  "strict_selector_independence_lagrangian_eom_audit_probe": {
+    "blocked_selector_dependent_claims": [
+      {
+        "claim_id": "exact_future_branch_actualization",
+        "description": "A single next branch/state is selected as the actual future.",
+        "selector_required": true,
+        "status": "blocked_by_QW2191_S_future_missing"
+      },
+      {
+        "claim_id": "provider_lift_per_step_policy_margin",
+        "description": "A signed source is mapped into Task-3 provider_lift_per_step/policy-margin semantics.",
+        "selector_required": true,
+        "status": "blocked_by_P2318_P2325_bridge_fields_missing"
+      },
+      {
+        "claim_id": "G1_G3_update_or_ToE_closure",
+        "description": "The global goal status is upgraded or the full theory is declared closed.",
+        "selector_required": true,
+        "status": "blocked_no_false_pass"
+      }
+    ],
+    "bridge_dependency_summary": {
+      "p2318_missing_required_bridge_fields": [
+        "signed_scalar_lift_per_step",
+        "time_step_normalization",
+        "margin_response_functional",
+        "orientation_to_policy_sign_rule",
+        "p2281_replay_semantics",
+        "admissibility_theorem_no_selector_premise"
+      ],
+      "p2324_mu_template_present_but_source_missing": true,
+      "p2325_admissible_signed_source_count": 0,
+      "selector_dependent_boundary": [
+        "exact future branch actualization",
+        "signed mu/theta_ref source descent",
+        "provider_lift_per_step bridge",
+        "QW-2191 discharge",
+        "G1/G3 or ToE closure"
+      ]
+    },
+    "probe_id": "P2329_S1279_SELECTOR_INDEPENDENCE_LAGRANGIAN_EOM_AUDIT",
+    "repo_grep_audit": {
+      "hit_count": 32,
+      "search_patterns": [
+        "S_future",
+        "selector-free",
+        "selector_independent",
+        "Lagrangian",
+        "Euler-Lagrange",
+        "EOM",
+        "QW-2191",
+        "provider_lift",
+        "future-state selector"
+      ],
+      "top_hits": [
+        {
+          "first_hit_excerpt": "\"repo_lagrangian_grep_hits_found\": true,",
+          "first_hit_line": 18,
+          "path": "fundamental_action_reconstruction/generated/p2316_s1266_strict_current_best_lagrangian_eom_coverage_audit_probe.json",
+          "pattern_hit_count": 130
+        },
+        {
+          "first_hit_excerpt": "\"all_residuals_selector_independent\": true,",
+          "first_hit_line": 3,
+          "path": "fundamental_action_reconstruction/generated/p2329_s1279_selector_independence_lagrangian_eom_audit_probe.json",
+          "pattern_hit_count": 129
+        },
+        {
+          "first_hit_excerpt": "OUT = GEN / \"p2316_s1266_strict_current_best_lagrangian_eom_coverage_audit_probe.json\"",
+          "first_hit_line": 13,
+          "path": "fundamental_action_reconstruction/p2316_s1266_strict_current_best_lagrangian_eom_coverage_audit_probe.py",
+          "pattern_hit_count": 107
+        },
+        {
+          "first_hit_excerpt": "\"produced_by\": \"p2314_s1264_strict_full_eom_lagrangian_symmetry_vortex_inventory_probe.py\",",
+          "first_hit_line": 5,
+          "path": "fundamental_action_reconstruction/generated/p2314_s1264_strict_full_eom_lagrangian_symmetry_vortex_inventory_probe.json",
+          "pattern_hit_count": 60
+        },
+        {
+          "first_hit_excerpt": "# P2328/S1278 — Selector-free dynamics closure as a legitimate interim priority",
+          "first_hit_line": 1,
+          "path": "fundamental_action_reconstruction/P2328_S1278_SELECTOR_FREE_DYNAMICS_CLOSURE_PRIORITY_PACKET.md",
+          "pattern_hit_count": 49
+        },
+        {
+          "first_hit_excerpt": "\"produced_by\": \"p2315_s1265_strict_schematic_lagrangian_eom_kernel_spectrum_probe.py\",",
+          "first_hit_line": 5,
+          "path": "fundamental_action_reconstruction/generated/p2315_s1265_strict_schematic_lagrangian_eom_kernel_spectrum_probe.json",
+          "pattern_hit_count": 46
+        },
+        {
+          "first_hit_excerpt": "\"p2318_result_kind\": \"STRICT_SELECTOR_LANE_TO_PROVIDER_LIFT_OBLIGATION_AUDIT_NO_G1_G3_UPDATE\",",
+          "first_hit_line": 54,
+          "path": "fundamental_action_reconstruction/generated/p2323_s1273_strict_self_coupled_axis_potential_hessian_branch_degeneracy_probe.json",
+          "pattern_hit_count": 31
+        },
+        {
+          "first_hit_excerpt": "\"p2318_result_kind\": \"STRICT_SELECTOR_LANE_TO_PROVIDER_LIFT_OBLIGATION_AUDIT_NO_G1_G3_UPDATE\",",
+          "first_hit_line": 53,
+          "path": "fundamental_action_reconstruction/generated/p2324_s1274_strict_axis_branch_susceptibility_nonpromotion_probe.json",
+          "pattern_hit_count": 31
+        },
+        {
+          "first_hit_excerpt": "\"produced_by\": \"p2302_s1252_strict_task3_provider_lift_policy_lock_candidate_probe.py\",",
+          "first_hit_line": 5,
+          "path": "fundamental_action_reconstruction/generated/p2302_s1252_strict_task3_provider_lift_policy_lock_candidate_probe.json",
+          "pattern_hit_count": 27
+        },
+        {
+          "first_hit_excerpt": "\"p2318_result_kind\": \"STRICT_SELECTOR_LANE_TO_PROVIDER_LIFT_OBLIGATION_AUDIT_NO_G1_G3_UPDATE\",",
+          "first_hit_line": 53,
+          "path": "fundamental_action_reconstruction/generated/p2321_s1271_strict_dihedral_nonlinear_invariant_axis_candidate_audit_probe.json",
+          "pattern_hit_count": 27
+        },
+        {
+          "first_hit_excerpt": "# P2327/S1277 — Kernel-derived future-state selector as the QW-2191 discharge condition",
+          "first_hit_line": 1,
+          "path": "fundamental_action_reconstruction/P2327_S1277_KERNEL_DERIVED_FUTURE_STATE_SELECTOR_QW2191_CONDITION_PACKET.md",
+          "pattern_hit_count": 22
+        },
+        {
+          "first_hit_excerpt": "\"p2300\": \"generated/p2300_s1250_strict_shannon_nad12_sigma_adm_bianchi_spatial_eom_provider_operator_probe.json\"",
+          "first_hit_line": 17,
+          "path": "fundamental_action_reconstruction/generated/p2301_s1251_strict_task3_provider_corrected_g1_g2_g3_replay_probe.json",
+          "pattern_hit_count": 21
+        },
+        {
+          "first_hit_excerpt": "\"p2300\": \"generated/p2300_s1250_strict_shannon_nad12_sigma_adm_bianchi_spatial_eom_provider_operator_probe.json\",",
+          "first_hit_line": 13,
+          "path": "fundamental_action_reconstruction/generated/p2308_s1258_strict_current_interface_class_response_functional_nonexistence_probe.json",
+          "pattern_hit_count": 21
+        },
+        {
+          "first_hit_excerpt": "\"reason\": \"A stable finite-axis potential is closer to a dynamical candidate than P2321's raw harmonics, but it still does not choose a physical sign/branch, define a Task-3 margin response, normalize replay time, or pro",
+          "first_hit_line": 48,
+          "path": "fundamental_action_reconstruction/generated/p2322_s1272_strict_nadsoliton_fractal_self_coupling_axis_potential_audit_probe.json",
+          "pattern_hit_count": 19
+        },
+        {
+          "first_hit_excerpt": "\"recommended_next_honest_step\": \"A theorem-grade bridge from diagonal/local or Shannon lane source data to Task-3 provider_lift_per_step / policy-margin lift, or a nonexistence theorem for that bridge class.\",",
+          "first_hit_line": 21,
+          "path": "fundamental_action_reconstruction/generated/p2317_s1267_strict_fourier_degeneracy_existing_lane_audit_probe.json",
+          "pattern_hit_count": 17
+        },
+        {
+          "first_hit_excerpt": "\"result_kind\": \"STRICT_SELECTOR_LANE_TO_PROVIDER_LIFT_OBLIGATION_AUDIT_NO_G1_G3_UPDATE\",",
+          "first_hit_line": 21,
+          "path": "fundamental_action_reconstruction/generated/p2318_s1268_strict_selector_lane_to_task3_margin_bridge_obligation_probe.json",
+          "pattern_hit_count": 17
+        },
+        {
+          "first_hit_excerpt": "\"p2318_result_kind\": \"STRICT_SELECTOR_LANE_TO_PROVIDER_LIFT_OBLIGATION_AUDIT_NO_G1_G3_UPDATE\"",
+          "first_hit_line": 62,
+          "path": "fundamental_action_reconstruction/generated/p2319_s1269_strict_dihedral_orientation_response_no_go_probe.json",
+          "pattern_hit_count": 15
+        },
+        {
+          "first_hit_excerpt": "\"p2318_result_kind\": \"STRICT_SELECTOR_LANE_TO_PROVIDER_LIFT_OBLIGATION_AUDIT_NO_G1_G3_UPDATE\",",
+          "first_hit_line": 224,
+          "path": "fundamental_action_reconstruction/generated/p2320_s1270_strict_dihedral_commutant_orientation_no_go_probe.json",
+          "pattern_hit_count": 15
+        },
+        {
+          "first_hit_excerpt": "\"reason\": \"No current signed-looking source satisfies the joint predicates needed to turn P2324 susceptibility into a strict Task-3 provider_lift_per_step bridge.\",",
+          "first_hit_line": 71,
+          "path": "fundamental_action_reconstruction/generated/p2325_s1275_strict_signed_source_to_axis_susceptibility_bridge_audit_probe.json",
+          "pattern_hit_count": 15
+        },
+        {
+          "first_hit_excerpt": "\"p1988\": \"generated/p1988_s938_strict_non_gb_to_spatial_eom_family_projection_witness.json\",",
+          "first_hit_line": 14,
+          "path": "fundamental_action_reconstruction/generated/p2310_s1260_strict_self_energy_response_source_audit_and_replay_probe.json",
+          "pattern_hit_count": 13
+        }
+      ]
+    },
+    "safe_observable_claims": [
+      {
+        "claim_id": "local_termwise_lagrangian_density",
+        "description": "The reduced P2086 L_total can be assembled and audited term-by-term.",
+        "selector_required": false,
+        "status": "safe_selector_independent_computational_claim"
+      },
+      {
+        "claim_id": "euler_lagrange_variations_for_psi_A_h",
+        "description": "P2086 Euler-Lagrange variations for psi, A, and h have zero recomposition residuals.",
+        "selector_required": false,
+        "status": "safe_selector_independent_computational_claim"
+      },
+      {
+        "claim_id": "mass_energy_sector_audit_inside_reduced_model",
+        "description": "Mass/quadratic, kinetic, self, and local mix terms can be inspected as reduced-sector ingredients.",
+        "selector_required": false,
+        "status": "safe_if_not_promoted_to_unique_future_branch"
+      },
+      {
+        "claim_id": "hessian_branch_stability_classification",
+        "description": "Branch stability can be classified without selecting which branch becomes actual.",
+        "selector_required": false,
+        "status": "safe_as_classification_not_actualization"
+      }
+    ],
+    "selector_independence_certificate": {
+      "all_recomposition_residuals_selector_independent": true,
+      "blocked_observable_claim_count": 3,
+      "p2086_loaded": true,
+      "p2328_strategy_confirmed": true,
+      "safe_observable_claim_count": 4,
+      "selector_boundary_preserved": true,
+      "selector_independent_term_count": 11,
+      "selector_independent_variation_field_count": 3,
+      "term_count": 11,
+      "variation_field_count": 3
+    },
+    "selector_independent_residuals": [
+      {
+        "field": "A",
+        "interpretation": "recomposition consistency check for reduced EOM; does not choose a future branch",
+        "numeric_residual": "0",
+        "requires_S_future": false,
+        "selector_independence_class": "selector_independent_residual_check",
+        "symbolic_residual": "Integer(0)"
+      },
+      {
+        "field": "h",
+        "interpretation": "recomposition consistency check for reduced EOM; does not choose a future branch",
+        "numeric_residual": "0",
+        "requires_S_future": false,
+        "selector_independence_class": "selector_independent_residual_check",
+        "symbolic_residual": "Integer(0)"
+      },
+      {
+        "field": "psi",
+        "interpretation": "recomposition consistency check for reduced EOM; does not choose a future branch",
+        "numeric_residual": "0",
+        "requires_S_future": false,
+        "selector_independence_class": "selector_independent_residual_check",
+        "symbolic_residual": "Integer(0)"
+      }
+    ],
+    "selector_independent_terms": [
+      {
+        "expression_srepr_excerpt": "Mul(Rational(1, 2), Symbol('kA', real=True), Pow(Derivative(Function('A')(Symbol('x', real=True)), Tuple(Symbol('x', real=True), Integer(1))), Integer(2)))",
+        "requires_S_future_for_termwise_variation": false,
+        "safe_claim_scope": "term can be varied and included in reduced L_total without asserting branch actualization",
+        "sector_hint": "A kinetic term",
+        "selector_independence_class": "selector_independent_reduced_local_dynamics",
+        "selector_marker_hits": [],
+        "term_id": "L_A_kin"
+      },
+      {
+        "expression_srepr_excerpt": "Mul(Integer(-1), Rational(1, 2), Symbol('mA', real=True), Pow(Function('A')(Symbol('x', real=True)), Integer(2)))",
+        "requires_S_future_for_termwise_variation": false,
+        "safe_claim_scope": "term can be varied and included in reduced L_total without asserting branch actualization",
+        "sector_hint": "A mass/quadratic term",
+        "selector_independence_class": "selector_independent_reduced_local_dynamics",
+        "selector_marker_hits": [],
+        "term_id": "L_A_mass"
+      },
+      {
+        "expression_srepr_excerpt": "Mul(Integer(-1), Symbol('gA', real=True), Pow(Function('A')(Symbol('x', real=True)), Integer(4)))",
+        "requires_S_future_for_termwise_variation": false,
+        "safe_claim_scope": "term can be varied and included in reduced L_total without asserting branch actualization",
+        "sector_hint": "A local quartic self-interaction",
+        "selector_independence_class": "selector_independent_reduced_local_dynamics",
+        "selector_marker_hits": [],
+        "term_id": "L_A_self"
+      },
+      {
+        "expression_srepr_excerpt": "Mul(Rational(1, 2), Symbol('kh', real=True), Pow(Derivative(Function('h')(Symbol('x', real=True)), Tuple(Symbol('x', real=True), Integer(1))), Integer(2)))",
+        "requires_S_future_for_termwise_variation": false,
+        "safe_claim_scope": "term can be varied and included in reduced L_total without asserting branch actualization",
+        "sector_hint": "h kinetic term",
+        "selector_independence_class": "selector_independent_reduced_local_dynamics",
+        "selector_marker_hits": [],
+        "term_id": "L_h_kin"
+      },
+      {
+        "expression_srepr_excerpt": "Mul(Integer(-1), Rational(1, 2), Symbol('mh', real=True), Pow(Function('h')(Symbol('x', real=True)), Integer(2)))",
+        "requires_S_future_for_termwise_variation": false,
+        "safe_claim_scope": "term can be varied and included in reduced L_total without asserting branch actualization",
+        "sector_hint": "h mass/quadratic term",
+        "selector_independence_class": "selector_independent_reduced_local_dynamics",
+        "selector_marker_hits": [],
+        "term_id": "L_h_mass"
+      },
+      {
+        "expression_srepr_excerpt": "Mul(Integer(-1), Symbol('gh', real=True), Pow(Function('h')(Symbol('x', real=True)), Integer(4)))",
+        "requires_S_future_for_termwise_variation": false,
+        "safe_claim_scope": "term can be varied and included in reduced L_total without asserting branch actualization",
+        "sector_hint": "h local quartic self-interaction",
+        "selector_independence_class": "selector_independent_reduced_local_dynamics",
+        "selector_marker_hits": [],
+        "term_id": "L_h_self"
+      },
+      {
+        "expression_srepr_excerpt": "Mul(Integer(-1), Symbol('zeta', real=True), Pow(Function('A')(Symbol('x', real=True)), Integer(2)), Pow(Function('psi')(Symbol('x', real=True)), Integer(2)))",
+        "requires_S_future_for_termwise_variation": false,
+        "safe_claim_scope": "term can be varied and included in reduced L_total without asserting branch actualization",
+        "sector_hint": "A^2-psi^2 local biquadratic mixing term",
+        "selector_independence_class": "selector_independent_reduced_local_dynamics",
+        "selector_marker_hits": [],
+        "term_id": "L_mix_biquadratic"
+      },
+      {
+        "expression_srepr_excerpt": "Mul(Integer(-1), Symbol('gmix', real=True), Function('A')(Symbol('x', real=True)), Function('h')(Symbol('x', real=True)), Function('psi')(Symbol('x', real=True)))",
+        "requires_S_future_for_termwise_variation": false,
+        "safe_claim_scope": "term can be varied and included in reduced L_total without asserting branch actualization",
+        "sector_hint": "A-h-psi local trilinear mixing term",
+        "selector_independence_class": "selector_independent_reduced_local_dynamics",
+        "selector_marker_hits": [],
+        "term_id": "L_mix_trilinear"
+      },
+      {
+        "expression_srepr_excerpt": "Mul(Rational(1, 2), Symbol('kpsi', real=True), Pow(Derivative(Function('psi')(Symbol('x', real=True)), Tuple(Symbol('x', real=True), Integer(1))), Integer(2)))",
+        "requires_S_future_for_termwise_variation": false,
+        "safe_claim_scope": "term can be varied and included in reduced L_total without asserting branch actualization",
+        "sector_hint": "psi kinetic term",
+        "selector_independence_class": "selector_independent_reduced_local_dynamics",
+        "selector_marker_hits": [],
+        "term_id": "L_psi_kin"
+      },
+      {
+        "expression_srepr_excerpt": "Mul(Integer(-1), Rational(1, 2), Symbol('mpsi', real=True), Pow(Function('psi')(Symbol('x', real=True)), Integer(2)))",
+        "requires_S_future_for_termwise_variation": false,
+        "safe_claim_scope": "term can be varied and included in reduced L_total without asserting branch actualization",
+        "sector_hint": "psi mass/quadratic term",
+        "selector_independence_class": "selector_independent_reduced_local_dynamics",
+        "selector_marker_hits": [],
+        "term_id": "L_psi_mass"
+      },
+      {
+        "expression_srepr_excerpt": "Mul(Integer(-1), Symbol('lam4', real=True), Pow(Function('psi')(Symbol('x', real=True)), Integer(4)))",
+        "requires_S_future_for_termwise_variation": false,
+        "safe_claim_scope": "term can be varied and included in reduced L_total without asserting branch actualization",
+        "sector_hint": "psi local quartic self-interaction",
+        "selector_independence_class": "selector_independent_reduced_local_dynamics",
+        "selector_marker_hits": [],
+        "term_id": "L_psi_self"
+      }
+    ],
+    "selector_independent_variations": [
+      {
+        "field": "A",
+        "nonzero_termwise_variations": [
+          "L_A_kin",
+          "L_A_mass",
+          "L_A_self",
+          "L_mix_biquadratic",
+          "L_mix_trilinear"
+        ],
+        "numeric_probe_residual": "0",
+        "requires_S_future_for_reduced_variation": false,
+        "residual_zero": true,
+        "selector_independence_class": "selector_independent_reduced_EOM_variation",
+        "selector_marker_hits": [],
+        "symbolic_recomposition_residual": "Integer(0)",
+        "termwise_variation_count": 11
+      },
+      {
+        "field": "h",
+        "nonzero_termwise_variations": [
+          "L_h_kin",
+          "L_h_mass",
+          "L_h_self",
+          "L_mix_trilinear"
+        ],
+        "numeric_probe_residual": "0",
+        "requires_S_future_for_reduced_variation": false,
+        "residual_zero": true,
+        "selector_independence_class": "selector_independent_reduced_EOM_variation",
+        "selector_marker_hits": [],
+        "symbolic_recomposition_residual": "Integer(0)",
+        "termwise_variation_count": 11
+      },
+      {
+        "field": "psi",
+        "nonzero_termwise_variations": [
+          "L_mix_biquadratic",
+          "L_mix_trilinear",
+          "L_psi_kin",
+          "L_psi_mass",
+          "L_psi_self"
+        ],
+        "numeric_probe_residual": "0",
+        "requires_S_future_for_reduced_variation": false,
+        "residual_zero": true,
+        "selector_independence_class": "selector_independent_reduced_EOM_variation",
+        "selector_marker_hits": [],
+        "symbolic_recomposition_residual": "Integer(0)",
+        "termwise_variation_count": 11
+      }
+    ],
+    "source_hashes": {
+      "P2086_FULL_LTOTAL_TERMWISE_EOM_AUDIT": "91267e3dd509672d9a0161372d17187bd3a7f04ca3d3820502812a0db73a0bfd",
+      "P2316_CURRENT_BEST_LAGRANGIAN_EOM": "ff14cac1b203afdbe5c7c310d12d31e817f07ec0dfa997e7344573eb39f3472c",
+      "P2318_SELECTOR_LANE_TO_MARGIN_BRIDGE": "607f3d99c14d258ce82660ca14cb7288f4386fea4c05f6436a0ebefb6972ad3f",
+      "P2324_AXIS_BRANCH_SUSCEPTIBILITY": "f84caa7d87ba17118d48685a88f7f6f9d902352278b6d8a500acce8fe6f755e8",
+      "P2325_SIGNED_SOURCE_BRIDGE_AUDIT": "c636b8361323ec396264d520f93bafb1ffcf4985e943357a73feb4b97d6ba40b",
+      "P2328_SELECTOR_FREE_DYNAMICS_PRIORITY": "f3785ee42fed6626f9567316cc6cfb6ced6dee53db9d15cfc0b38a03e15c8fbb"
+    },
+    "theorem_export": {
+      "claim": "For the current P2086 reduced L_total artifact, termwise Lagrangian terms, psi/A/h Euler-Lagrange variations, and recomposition residual checks are selector-independent reduced-dynamics computations; exact future-branch actualization, provider_lift_per_step, QW-2191 discharge, and G1/G3 or ToE closure remain selector-dependent and unclaimed.",
+      "proof_witnesses": [
+        "P2086 provides 11 reduced L_total terms and termwise psi/A/h EOM recomposition residuals.",
+        "No P2086 reduced term or psi/A/h variation expression contains S_future/selector/future-branch markers.",
+        "P2318/P2324/P2325 keep the signed-source/provider-lift/future-branch boundary unfilled.",
+        "P2328 explicitly permits selector-free dynamics work while preserving QW-2191 as branch-actualization frontier."
+      ],
+      "scope_limits": [
+        "This is an audit of the reduced P2086 L_total, not a full tensor-resolved global Lagrangian theorem.",
+        "Selector-independent does not mean final ToE-closed.",
+        "No exact future-state selector is exported here."
+      ],
+      "strict_guardrails": {
+        "no_g1_g3_update_claimed": true,
+        "no_legacy_kernel_role_transfer": true,
+        "no_qw2191_discharge_claimed": true,
+        "no_selector_premise_added": true,
+        "no_toe_closure_claimed": true
+      },
+      "theorem_name": "P2329 selector-independence audit for reduced Lagrangian/EOM work"
+    },
+    "theorem_fingerprint_sha256": "5691895912ff2b5522504d5340e66f33d75dee9ed5fe7cc36dad35aa0fa99ef1"
+  },
+  "timestamp_utc": "2026-05-28T00:00:00+00:00"
+}
