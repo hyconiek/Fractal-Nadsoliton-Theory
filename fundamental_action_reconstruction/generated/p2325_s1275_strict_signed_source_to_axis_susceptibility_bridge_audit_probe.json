@@ -1,0 +1,488 @@
+{
+  "gatekeeper_checks": {
+    "all_candidates_fail_at_least_one_required_predicate": true,
+    "candidate_class_nonempty": true,
+    "far_signed_source_grep_hits_found": true,
+    "no_admissible_signed_source_bridge": true,
+    "no_legacy_kernel_role_transfer": true,
+    "no_qw2191_discharge_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "p1967_loaded": true,
+    "p2318_bridge_fields_still_unfilled": true,
+    "p2318_loaded": true,
+    "p2324_loaded": true,
+    "p2324_mu_values_loaded": true,
+    "p731_closest_candidate_not_promoted": true,
+    "strict_g1_g3_not_updated": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_SIGNED_SOURCE_BRIDGE_NONEXISTENCE_TRACE",
+  "packet_id": "P2325",
+  "produced_by": "p2325_s1275_strict_signed_source_to_axis_susceptibility_bridge_audit_probe.py",
+  "recommended_next_honest_step": "Either export a real strict signed source with mu/theta_ref descent plus response/replay semantics, or prove a broader nonexistence theorem over larger signed-source classes.",
+  "result_kind": "STRICT_SIGNED_SOURCE_TO_AXIS_SUSCEPTIBILITY_BRIDGE_AUDIT_NO_G1_G3_UPDATE",
+  "schema_version": "p2325_s1275_v1",
+  "stage_id": "S1275",
+  "status": "OPEN_NO_CURRENT_SIGNED_SOURCE_TO_P2324_MU_BRIDGE",
+  "strict_signed_source_to_axis_susceptibility_bridge_audit_probe": {
+    "bridge_audit_certificate": {
+      "admissible_candidate_count": 0,
+      "admissible_candidates": [],
+      "all_candidates_fail_at_least_one_required_predicate": true,
+      "candidate_count": 5,
+      "closest_candidate": "P731_W_BREAK_PAIR12_ANTISYMMETRIC_SCORES",
+      "closest_candidate_still_nonexported": true,
+      "formal_status": "NO_CURRENT_EXPORTED_SIGNED_SOURCE_TO_P2324_MU_RESPONSE_BRIDGE",
+      "lay_symptom": "The repo contains several signs that look like a possible compass needle, but every current candidate either stays quotient-level, branch-blind, nonexported, or lacks replay/response semantics.",
+      "p2324_required_mu_by_pair_loaded": {
+        "pair1": 0.0034,
+        "pair2": 0.0034,
+        "pair3": 0.0034,
+        "pair4": 0.004533333333333332,
+        "pair5": 0.0034
+      },
+      "required_lift_per_step": 0.0068
+    },
+    "bridge_obligation_update": {
+      "fields_still_unfilled_after_signed_source_audit": [
+        "signed_scalar_lift_per_step",
+        "time_step_normalization",
+        "margin_response_functional",
+        "orientation_to_policy_sign_rule",
+        "p2281_replay_semantics",
+        "admissibility_theorem_no_selector_premise"
+      ],
+      "g1_g3_update_allowed": false,
+      "p2318_missing_fields_loaded": [
+        "signed_scalar_lift_per_step",
+        "time_step_normalization",
+        "margin_response_functional",
+        "orientation_to_policy_sign_rule",
+        "p2281_replay_semantics",
+        "admissibility_theorem_no_selector_premise"
+      ],
+      "p2324_mu_values_loaded": {
+        "pair1": 0.0034,
+        "pair2": 0.0034,
+        "pair3": 0.0034,
+        "pair4": 0.004533333333333332,
+        "pair5": 0.0034
+      },
+      "reason": "No current signed-looking source satisfies the joint predicates needed to turn P2324 susceptibility into a strict Task-3 provider_lift_per_step bridge.",
+      "required_lift_per_step": 0.0068,
+      "signed_source_to_mu_bridge_exported": false
+    },
+    "candidate_source_rows": [
+      {
+        "blocking_reason": "P1967 provides an axis/delta_sel typed source but still leaves global selector closure open and does not export the signed mu/theta_ref response needed by P2324.",
+        "candidate_id": "P1967_SHANNON_DELTA_SEL_AXIS_SOURCE",
+        "p2281_replay_semantics": false,
+        "pairwise_sign_descent_to_axis_branch": false,
+        "positive_evidence": [
+          "strict Shannon axis source is exported",
+          "legacy_bridge_used is false",
+          "delta_sel tensor map exists at packet level"
+        ],
+        "selector_free_admissibility_theorem": false,
+        "status": "STRICT_SHANNON_AXIS_SOURCE_INSTANTIATES_P1966_DELTA_SEL_ON_PAIR1_TO_PAIR5__GLOBAL_SELECTOR_CLOSURE_STILL_OPEN",
+        "strict_internal_signed_mu_source": false,
+        "task3_margin_response_functional": false,
+        "theta_ref_or_branch_reference": false
+      },
+      {
+        "blocking_reason": "The pair12 direction split is localized but the bridge target is explicitly not exported, so it cannot supply P2324 signed perturbation semantics.",
+        "candidate_id": "P729_PAIR12_ORBIT_DIRECTION_LOCALIZATION",
+        "p2281_replay_semantics": false,
+        "pairwise_sign_descent_to_axis_branch": false,
+        "positive_evidence": [
+          "pair1/pair2 ambiguity localized as opposite orbit directions",
+          "target_exported=False"
+        ],
+        "selector_free_admissibility_theorem": false,
+        "status": "PASS_RESIDUAL_DATUM_PAIR12_ORBIT_DIRECTION_SELECTION_BRIDGE_NONEXPORT_AUDITED",
+        "strict_internal_signed_mu_source": false,
+        "task3_margin_response_functional": false,
+        "theta_ref_or_branch_reference": true
+      },
+      {
+        "blocking_reason": "P731 is the closest signed-looking witness, but its promotion bridge is explicitly non-exported; sign scores do not descend into a strict mu/theta_ref response theorem.",
+        "candidate_id": "P731_W_BREAK_PAIR12_ANTISYMMETRIC_SCORES",
+        "p2281_replay_semantics": false,
+        "pairwise_sign_descent_to_axis_branch": false,
+        "positive_evidence": [
+          "w_break separates pair12 orbit-direction branches",
+          "pair1_sign=negative",
+          "pair2_sign=positive",
+          "antisymmetric=True"
+        ],
+        "selector_free_admissibility_theorem": false,
+        "status": "PASS_W_BREAK_WITNESS_PAYLOAD_PAIR12_ORBIT_DIRECTION_PROMOTION_BRIDGE_NONEXPORT_AUDITED",
+        "strict_internal_signed_mu_source": false,
+        "task3_margin_response_functional": false,
+        "theta_ref_or_branch_reference": true
+      },
+      {
+        "blocking_reason": "The theorem remains quotient-class only and P731 does not descend to it, so it is not a signed branch source for P2324.",
+        "candidate_id": "P734_SCOPE_TOPOLOGY_SELECTOR_DESCENT",
+        "p2281_replay_semantics": false,
+        "pairwise_sign_descent_to_axis_branch": false,
+        "positive_evidence": [
+          "declared scope source topology selector theorem exists",
+          "quotient_class_only=True"
+        ],
+        "selector_free_admissibility_theorem": false,
+        "status": "PASS_DECLARED_SCOPE_SOURCE_TOPOLOGY_SELECTOR_THEOREM_PAIR12_ORBIT_DIRECTION_DESCENT_BRIDGE_NONEXPORT_AUDITED",
+        "strict_internal_signed_mu_source": false,
+        "task3_margin_response_functional": false,
+        "theta_ref_or_branch_reference": false
+      },
+      {
+        "blocking_reason": "The local scalar bind factors through shared cos-phi data and is branch-blind, so it cannot create the signed P2324 tilt.",
+        "candidate_id": "P735_LOCAL_SOURCE_SIDE_SCALAR_BIND",
+        "p2281_replay_semantics": false,
+        "pairwise_sign_descent_to_axis_branch": false,
+        "positive_evidence": [
+          "local source-side scalar bind audited",
+          "branch_blind=True"
+        ],
+        "selector_free_admissibility_theorem": false,
+        "status": "PASS_LOCAL_SOURCE_SIDE_SCALAR_BIND_PAIR12_ORBIT_DIRECTION_DESCENT_BRIDGE_NONEXPORT_AUDITED",
+        "strict_internal_signed_mu_source": false,
+        "task3_margin_response_functional": false,
+        "theta_ref_or_branch_reference": false
+      }
+    ],
+    "existing_blocker_context": {
+      "p2308_result_kind": "THEOREM_GRADE_NONEXISTENCE_FOR_CURRENT_P2300_P2281_INTERFACE_CLASS",
+      "p2318_result_kind": "STRICT_SELECTOR_LANE_TO_PROVIDER_LIFT_OBLIGATION_AUDIT_NO_G1_G3_UPDATE",
+      "p2324_result_kind": "STRICT_AXIS_BRANCH_SUSCEPTIBILITY_NONPROMOTION_AUDIT_NO_G1_G3_UPDATE"
+    },
+    "far_signed_source_grep_audit": {
+      "hit_count": 40,
+      "patterns": [
+        "delta_sel",
+        "WBreak",
+        "w_break",
+        "orbit direction",
+        "signed source",
+        "selector theorem",
+        "descent bridge",
+        "nonexport",
+        "provider_lift_per_step",
+        "QW-2191"
+      ],
+      "top_hits": [
+        {
+          "first_hit_excerpt": "\"status\": \"STRICT_SHANNON_AXIS_SOURCE_INSTANTIATES_P1966_DELTA_SEL_ON_PAIR1_TO_PAIR5__GLOBAL_SELECTOR_CLOSURE_STILL_OPEN\",",
+          "first_hit_line": 4,
+          "path": "fundamental_action_reconstruction/generated/p1967_s917_strict_shannon_axis_source_to_delta_sel_tensor_map.json",
+          "pattern_hit_count": 33
+        },
+        {
+          "first_hit_excerpt": "\"provider_lift_per_step\",",
+          "first_hit_line": 66,
+          "path": "fundamental_action_reconstruction/generated/p2324_s1274_strict_axis_branch_susceptibility_nonpromotion_probe.json",
+          "pattern_hit_count": 29
+        },
+        {
+          "first_hit_excerpt": "\"status\": \"PASS_W_BREAK_WITNESS_PAYLOAD_PAIR12_ORBIT_DIRECTION_PROMOTION_BRIDGE_NONEXPORT_AUDITED\",",
+          "first_hit_line": 3,
+          "path": "fundamental_action_reconstruction/generated/p731_current_strict_t185_w_break_witness_payload_residual_datum_pair12_orbit_direction_promotion_bridge_nonexport_audit_probe.json",
+          "pattern_hit_count": 20
+        },
+        {
+          "first_hit_excerpt": "\"reason\": \"Existing lane defects are enough to cut O(2) to Z2 inside their lanes, but no exported theorem maps them to the signed P2302 provider_lift_per_step with replay semantics.\",",
+          "first_hit_line": 38,
+          "path": "fundamental_action_reconstruction/generated/p2318_s1268_strict_selector_lane_to_task3_margin_bridge_obligation_probe.json",
+          "pattern_hit_count": 13
+        },
+        {
+          "first_hit_excerpt": "\"status\": \"PASS_DECLARED_SCOPE_SOURCE_TOPOLOGY_SELECTOR_THEOREM_PAIR12_ORBIT_DIRECTION_DESCENT_BRIDGE_NONEXPORT_AUDITED\",",
+          "first_hit_line": 3,
+          "path": "fundamental_action_reconstruction/generated/p734_current_strict_t188_declared_scope_source_topology_selector_theorem_pair12_orbit_direction_descent_bridge_nonexport_audit_probe.json",
+          "pattern_hit_count": 12
+        },
+        {
+          "first_hit_excerpt": "\"status\": \"PASS_DECLARED_SCOPE_SOURCE_TOPOLOGY_SELECTOR_THEOREM_TO_RESIDUAL_DATUM_PAIR12_TYPED_CARRIER_BRIDGE_NONEXPORT_AUDITED\",",
+          "first_hit_line": 3,
+          "path": "fundamental_action_reconstruction/generated/p744_current_strict_t198_declared_scope_source_topology_selector_theorem_to_residual_datum_pair12_typed_carrier_bridge_nonexport_audit_probe.json",
+          "pattern_hit_count": 12
+        },
+        {
+          "first_hit_excerpt": "\"status\": \"PASS_DECLARED_SCOPE_SOURCE_TOPOLOGY_SELECTOR_THEOREM_TARGET_TO_RESIDUAL_DATUM_PAIR12_TYPED_CARRIER_BRIDGE_NONEXPORT_AUDITED\",",
+          "first_hit_line": 3,
+          "path": "fundamental_action_reconstruction/generated/p745_current_strict_t199_declared_scope_source_topology_selector_theorem_target_to_residual_datum_pair12_typed_carrier_bridge_nonexport_audit_probe.json",
+          "pattern_hit_count": 10
+        },
+        {
+          "first_hit_excerpt": "\"status\": \"PASS_LOCAL_SOURCE_SIDE_SCALAR_BIND_PAIR12_ORBIT_DIRECTION_DESCENT_BRIDGE_NONEXPORT_AUDITED\",",
+          "first_hit_line": 3,
+          "path": "fundamental_action_reconstruction/generated/p735_current_strict_t189_local_source_side_scalar_bind_pair12_orbit_direction_descent_bridge_nonexport_audit_probe.json",
+          "pattern_hit_count": 8
+        },
+        {
+          "first_hit_excerpt": "\"status\": \"PASS_LOCAL_PROVIDER_OPERATOR_SHIFT_DIRECTION_PAIR12_ORBIT_DIRECTION_DESCENT_BRIDGE_NONEXPORT_AUDITED\",",
+          "first_hit_line": 3,
+          "path": "fundamental_action_reconstruction/generated/p736_current_strict_t190_local_provider_operator_shift_direction_pair12_orbit_direction_descent_bridge_nonexport_audit_probe.json",
+          "pattern_hit_count": 8
+        },
+        {
+          "first_hit_excerpt": "\"status\": \"PASS_LOCAL_PAIR12_PROJECTOR_ATLAS_GLUE_ORBIT_DIRECTION_DESCENT_BRIDGE_NONEXPORT_AUDITED\",",
+          "first_hit_line": 3,
+          "path": "fundamental_action_reconstruction/generated/p737_current_strict_t191_local_pair12_projector_atlas_glue_orbit_direction_descent_bridge_nonexport_audit_probe.json",
+          "pattern_hit_count": 8
+        },
+        {
+          "first_hit_excerpt": "\"status\": \"PASS_ACTUAL_SOURCE_TOPOLOGY_SELECTOR_WITNESS_PAIR12_WITNESS_SPLIT_PROMOTION_BRIDGE_NONEXPORT_AUDITED\",",
+          "first_hit_line": 3,
+          "path": "fundamental_action_reconstruction/generated/p741_current_strict_t195_actual_source_topology_selector_witness_pair12_witness_split_promotion_bridge_nonexport_audit_probe.json",
+          "pattern_hit_count": 8
+        },
+        {
+          "first_hit_excerpt": "\"status\": \"PASS_ACTUAL_SOURCE_TOPOLOGY_SELECTOR_WITNESS_TO_RESIDUAL_DATUM_PAIR12_TYPED_CARRIER_BRIDGE_NONEXPORT_AUDITED\",",
+          "first_hit_line": 3,
+          "path": "fundamental_action_reconstruction/generated/p742_current_strict_t196_actual_source_topology_selector_witness_to_residual_datum_pair12_typed_carrier_bridge_nonexport_audit_probe.json",
+          "pattern_hit_count": 8
+        },
+        {
+          "first_hit_excerpt": "\"status\": \"PASS_AXIOM_AUGMENTED_DECLARED_SCOPE_SELECTOR_CLOSURE_TO_RESIDUAL_DATUM_PAIR12_TYPED_CARRIER_STRICT_CORE_UPGRADE_BRIDGE_NONEXPORT_AUDITED\",",
+          "first_hit_line": 3,
+          "path": "fundamental_action_reconstruction/generated/p746_current_strict_t200_axiom_augmented_declared_scope_selector_closure_to_residual_datum_pair12_typed_carrier_strict_core_upgrade_bridge_nonexport_audit_probe.json",
+          "pattern_hit_count": 8
+        },
+        {
+          "first_hit_excerpt": "\"status\": \"PASS_ACTUAL_SOURCE_TOPOLOGY_SELECTOR_WITNESS_TARGET_TO_LOCAL_PAIR12_CHART_SENSITIVE_ATLAS_BRIDGE_NONEXPORT_AUDITED\",",
+          "first_hit_line": 3,
+          "path": "fundamental_action_reconstruction/generated/p747_current_strict_t201_actual_source_topology_selector_witness_target_to_local_pair12_chart_sensitive_atlas_bridge_nonexport_audit_probe.json",
+          "pattern_hit_count": 8
+        },
+        {
+          "first_hit_excerpt": "\"status\": \"PASS_W_BREAK_WITNESS_PAYLOAD_PAIR12_ORBIT_DIRECTION_PROMOTION_BRIDGE_NONEXPORT_AUDITED\",",
+          "first_hit_line": 3,
+          "path": "fundamental_action_reconstruction/generated/p731_current_strict_t185_w_break_witness_payload_residual_datum_pair12_orbit_direction_promotion_bridge_nonexport_audit_probe_summary.json",
+          "pattern_hit_count": 7
+        },
+        {
+          "first_hit_excerpt": "\"dot_w_break_u_m\": 0.00016200023852512268",
+          "first_hit_line": 28,
+          "path": "fundamental_action_reconstruction/generated/p716_current_strict_t176_pair4_negative_cosine_polarity_global_z2_orbit_split_audit_probe.json",
+          "pattern_hit_count": 6
+        },
+        {
+          "first_hit_excerpt": "\"status\": \"PASS_GLOBAL_PROJECTIVE_SELECTOR_STATE_PAIR12_ORBIT_DIRECTION_DESCENT_BRIDGE_NONEXPORT_AUDITED\",",
+          "first_hit_line": 3,
+          "path": "fundamental_action_reconstruction/generated/p738_current_strict_t192_global_projective_selector_state_pair12_orbit_direction_descent_bridge_nonexport_audit_probe.json",
+          "pattern_hit_count": 6
+        },
+        {
+          "first_hit_excerpt": "\"status\": \"PASS_GLOBAL_PREMISE_BASED_DIRECTED_SELECTOR_STATE_STRICT_CORE_UPGRADE_NONEXPORT_AUDITED\",",
+          "first_hit_line": 3,
+          "path": "fundamental_action_reconstruction/generated/p739_current_strict_t193_global_premise_based_directed_selector_state_pair12_witness_split_strict_core_upgrade_bridge_nonexport_audit_probe.json",
+          "pattern_hit_count": 5
+        },
+        {
+          "first_hit_excerpt": "\"status\": \"PASS_DIRECTION_FREE_SHANNON_PAIR12_ORBIT_DIRECTION_SELECTION_BRIDGE_NONEXPORT_AUDITED\",",
+          "first_hit_line": 3,
+          "path": "fundamental_action_reconstruction/generated/p730_current_strict_t184_direction_free_shannon_residual_datum_pair12_orbit_direction_selection_bridge_nonexport_audit_probe.json",
+          "pattern_hit_count": 4
+        },
+        {
+          "first_hit_excerpt": "“Use Shannon entropy of squared site-amplitudes on the QW-2190 12-octave ring to select a unique theta on the QW-2191 O(2) family.”",
+          "first_hit_line": 11,
+          "path": "fundamental_action_reconstruction/N463_CURRENT_FIRST_STRICT_QW2191_SHANNON_SITE_AMPLITUDE_ENTROPY_O2_CUT_NONUNIQUENESS_BOUNDARY_THEOREM.md",
+          "pattern_hit_count": 3
+        },
+        {
+          "first_hit_excerpt": "3. the `pair1` `O(2)` family from the `n=12` ring Fourier scaffold (`QW-2190/QW-2191`).",
+          "first_hit_line": 16,
+          "path": "fundamental_action_reconstruction/N480_CURRENT_FIRST_STRICT_SHANNON_ELEMENT_ORDER_REFERENCE_CROSS_ENTROPY_CUTS_PAIR1_O2_TO_Z2_UNIQUENESS_THEOREM.md",
+          "pattern_hit_count": 3
+        },
+        {
+          "first_hit_excerpt": "\"definition\": \"lambda is the scalar provider_lift_per_step argument in the P2281/P2302 replay recurrence\",",
+          "first_hit_line": 112,
+          "path": "fundamental_action_reconstruction/generated/p2308_s1258_strict_current_interface_class_response_functional_nonexistence_probe.json",
+          "pattern_hit_count": 3
+        },
+        {
+          "first_hit_excerpt": "\"status\": \"PASS_RESIDUAL_DATUM_PAIR12_ORBIT_DIRECTION_SELECTION_BRIDGE_NONEXPORT_AUDITED\",",
+          "first_hit_line": 3,
+          "path": "fundamental_action_reconstruction/generated/p729_current_strict_t183_residual_datum_pair12_orbit_direction_selection_bridge_nonexport_audit_probe.json",
+          "pattern_hit_count": 3
+        },
+        {
+          "first_hit_excerpt": "does **not** claim global `QW-2191` discharge, and does **not** claim ToE closure.",
+          "first_hit_line": 21,
+          "path": "fundamental_action_reconstruction/N496_CURRENT_FIRST_STRICT_SHANNON_ELEMENT_ORDER_REFERENCE_CROSS_ENTROPY_CUTS_PAIR3_TO_PAIR5_O2_TO_Z2_UNIQUENESS_THEOREM.md",
+          "pattern_hit_count": 2
+        },
+        {
+          "first_hit_excerpt": "This does **not** claim any global discharge of `QW-2191`, does **not** claim strict‑core selector closure, and does **not** claim ToE closure.",
+          "first_hit_line": 22,
+          "path": "fundamental_action_reconstruction/N497_CURRENT_FIRST_STRICT_SHANNON_VS_DIAGONAL_MODE_INDEX_ASSIGNMENT_AXIS_ALIGNMENT_UP_TO_RESIDUAL_Z2_VALUE_INSTANTIATION_THEOREM.md",
+          "pattern_hit_count": 2
+        },
+        {
+          "first_hit_excerpt": "3. it does **not** claim global `QW-2191` discharge or ToE closure.",
+          "first_hit_line": 19,
+          "path": "fundamental_action_reconstruction/N488_CURRENT_FIRST_STRICT_SHANNON_ELEMENT_ORDER_REFERENCE_CROSS_ENTROPY_CUTS_PAIR2_O2_TO_Z2_UNIQUENESS_THEOREM.md",
+          "pattern_hit_count": 1
+        },
+        {
+          "first_hit_excerpt": "\"status\": \"PASS_RESIDUAL_DATUM_PAIR12_ORBIT_DIRECTION_SELECTION_BRIDGE_NONEXPORT_AUDITED\",",
+          "first_hit_line": 3,
+          "path": "fundamental_action_reconstruction/generated/p729_current_strict_t183_residual_datum_pair12_orbit_direction_selection_bridge_nonexport_audit_probe_summary.json",
+          "pattern_hit_count": 1
+        },
+        {
+          "first_hit_excerpt": "\"status\": \"PASS_DIRECTION_FREE_SHANNON_PAIR12_ORBIT_DIRECTION_SELECTION_BRIDGE_NONEXPORT_AUDITED\",",
+          "first_hit_line": 3,
+          "path": "fundamental_action_reconstruction/generated/p730_current_strict_t184_direction_free_shannon_residual_datum_pair12_orbit_direction_selection_bridge_nonexport_audit_probe_summary.json",
+          "pattern_hit_count": 1
+        },
+        {
+          "first_hit_excerpt": "\"status\": \"PASS_DECLARED_SCOPE_SOURCE_TOPOLOGY_SELECTOR_THEOREM_PAIR12_ORBIT_DIRECTION_DESCENT_BRIDGE_NONEXPORT_AUDITED\",",
+          "first_hit_line": 3,
+          "path": "fundamental_action_reconstruction/generated/p734_current_strict_t188_declared_scope_source_topology_selector_theorem_pair12_orbit_direction_descent_bridge_nonexport_audit_probe_summary.json",
+          "pattern_hit_count": 1
+        },
+        {
+          "first_hit_excerpt": "\"status\": \"PASS_LOCAL_SOURCE_SIDE_SCALAR_BIND_PAIR12_ORBIT_DIRECTION_DESCENT_BRIDGE_NONEXPORT_AUDITED\",",
+          "first_hit_line": 3,
+          "path": "fundamental_action_reconstruction/generated/p735_current_strict_t189_local_source_side_scalar_bind_pair12_orbit_direction_descent_bridge_nonexport_audit_probe_summary.json",
+          "pattern_hit_count": 1
+        }
+      ]
+    },
+    "predicate_matrix": [
+      {
+        "admissible_for_p2324_signed_mu_bridge": false,
+        "blocking_reason": "P1967 provides an axis/delta_sel typed source but still leaves global selector closure open and does not export the signed mu/theta_ref response needed by P2324.",
+        "candidate_id": "P1967_SHANNON_DELTA_SEL_AXIS_SOURCE",
+        "failed_predicates": [
+          "strict_internal_signed_mu_source",
+          "theta_ref_or_branch_reference",
+          "pairwise_sign_descent_to_axis_branch",
+          "task3_margin_response_functional",
+          "p2281_replay_semantics",
+          "selector_free_admissibility_theorem"
+        ],
+        "passed_predicates": []
+      },
+      {
+        "admissible_for_p2324_signed_mu_bridge": false,
+        "blocking_reason": "The pair12 direction split is localized but the bridge target is explicitly not exported, so it cannot supply P2324 signed perturbation semantics.",
+        "candidate_id": "P729_PAIR12_ORBIT_DIRECTION_LOCALIZATION",
+        "failed_predicates": [
+          "strict_internal_signed_mu_source",
+          "pairwise_sign_descent_to_axis_branch",
+          "task3_margin_response_functional",
+          "p2281_replay_semantics",
+          "selector_free_admissibility_theorem"
+        ],
+        "passed_predicates": [
+          "theta_ref_or_branch_reference"
+        ]
+      },
+      {
+        "admissible_for_p2324_signed_mu_bridge": false,
+        "blocking_reason": "P731 is the closest signed-looking witness, but its promotion bridge is explicitly non-exported; sign scores do not descend into a strict mu/theta_ref response theorem.",
+        "candidate_id": "P731_W_BREAK_PAIR12_ANTISYMMETRIC_SCORES",
+        "failed_predicates": [
+          "strict_internal_signed_mu_source",
+          "pairwise_sign_descent_to_axis_branch",
+          "task3_margin_response_functional",
+          "p2281_replay_semantics",
+          "selector_free_admissibility_theorem"
+        ],
+        "passed_predicates": [
+          "theta_ref_or_branch_reference"
+        ]
+      },
+      {
+        "admissible_for_p2324_signed_mu_bridge": false,
+        "blocking_reason": "The theorem remains quotient-class only and P731 does not descend to it, so it is not a signed branch source for P2324.",
+        "candidate_id": "P734_SCOPE_TOPOLOGY_SELECTOR_DESCENT",
+        "failed_predicates": [
+          "strict_internal_signed_mu_source",
+          "theta_ref_or_branch_reference",
+          "pairwise_sign_descent_to_axis_branch",
+          "task3_margin_response_functional",
+          "p2281_replay_semantics",
+          "selector_free_admissibility_theorem"
+        ],
+        "passed_predicates": []
+      },
+      {
+        "admissible_for_p2324_signed_mu_bridge": false,
+        "blocking_reason": "The local scalar bind factors through shared cos-phi data and is branch-blind, so it cannot create the signed P2324 tilt.",
+        "candidate_id": "P735_LOCAL_SOURCE_SIDE_SCALAR_BIND",
+        "failed_predicates": [
+          "strict_internal_signed_mu_source",
+          "theta_ref_or_branch_reference",
+          "pairwise_sign_descent_to_axis_branch",
+          "task3_margin_response_functional",
+          "p2281_replay_semantics",
+          "selector_free_admissibility_theorem"
+        ],
+        "passed_predicates": []
+      }
+    ],
+    "probe_id": "P2325_S1275_STRICT_SIGNED_SOURCE_TO_AXIS_SUSCEPTIBILITY_BRIDGE_AUDIT",
+    "required_signed_source_fields": [
+      "strict_internal_signed_mu_source",
+      "theta_ref_or_branch_reference",
+      "pairwise_sign_descent_to_axis_branch",
+      "task3_margin_response_functional",
+      "p2281_replay_semantics",
+      "selector_free_admissibility_theorem"
+    ],
+    "source_hashes": {
+      "P1967_SHANNON_AXIS_TO_DELTA_SEL_sha256": "d98b17fb4f0b4f89f0535306b36ed8421979dd49218b3de9f37e957acbc220e3",
+      "P2308_CURRENT_INTERFACE_NONEXISTENCE_sha256": "f00ef2ab7ba6dba05bc8fd54a3886d25ffa18c30fe1b540adf7f5f1a8e26cb29",
+      "P2318_SELECTOR_LANE_TO_MARGIN_OBLIGATION_sha256": "607f3d99c14d258ce82660ca14cb7288f4386fea4c05f6436a0ebefb6972ad3f",
+      "P2324_AXIS_BRANCH_SUSCEPTIBILITY_sha256": "f84caa7d87ba17118d48685a88f7f6f9d902352278b6d8a500acce8fe6f755e8",
+      "P729_PAIR12_ORBIT_DIRECTION_BRIDGE_NONEXPORT_sha256": "3cd88677bcd184f144674ad612db082aa657afc9dee8facc8dc50cdb9eb57b6d",
+      "P731_W_BREAK_PAIR12_PROMOTION_NONEXPORT_sha256": "134f99bb7271cc5f76219923872f7b4dbc708e4d909b9de61255d136766d79c3",
+      "P734_SCOPE_TOPOLOGY_DESCENT_NONEXPORT_sha256": "420471eb05cb25b8b212a8c39a18b3b876881ed556ea5b557f852d2dd9cab341",
+      "P735_LOCAL_SCALAR_BIND_DESCENT_NONEXPORT_sha256": "a96243c0bcbcca63aa9f994c9b8f8630faed01bfbd6fb19ca0e27349deb8b7d2"
+    },
+    "source_packets": {
+      "P1967_SHANNON_AXIS_TO_DELTA_SEL": "fundamental_action_reconstruction/generated/p1967_s917_strict_shannon_axis_source_to_delta_sel_tensor_map.json",
+      "P2308_CURRENT_INTERFACE_NONEXISTENCE": "fundamental_action_reconstruction/generated/p2308_s1258_strict_current_interface_class_response_functional_nonexistence_probe.json",
+      "P2318_SELECTOR_LANE_TO_MARGIN_OBLIGATION": "fundamental_action_reconstruction/generated/p2318_s1268_strict_selector_lane_to_task3_margin_bridge_obligation_probe.json",
+      "P2324_AXIS_BRANCH_SUSCEPTIBILITY": "fundamental_action_reconstruction/generated/p2324_s1274_strict_axis_branch_susceptibility_nonpromotion_probe.json",
+      "P729_PAIR12_ORBIT_DIRECTION_BRIDGE_NONEXPORT": "fundamental_action_reconstruction/generated/p729_current_strict_t183_residual_datum_pair12_orbit_direction_selection_bridge_nonexport_audit_probe_summary.json",
+      "P731_W_BREAK_PAIR12_PROMOTION_NONEXPORT": "fundamental_action_reconstruction/generated/p731_current_strict_t185_w_break_witness_payload_residual_datum_pair12_orbit_direction_promotion_bridge_nonexport_audit_probe_summary.json",
+      "P734_SCOPE_TOPOLOGY_DESCENT_NONEXPORT": "fundamental_action_reconstruction/generated/p734_current_strict_t188_declared_scope_source_topology_selector_theorem_pair12_orbit_direction_descent_bridge_nonexport_audit_probe_summary.json",
+      "P735_LOCAL_SCALAR_BIND_DESCENT_NONEXPORT": "fundamental_action_reconstruction/generated/p735_current_strict_t189_local_source_side_scalar_bind_pair12_orbit_direction_descent_bridge_nonexport_audit_probe_summary.json"
+    },
+    "theorem_export": {
+      "formal_statement": "Within the current exported source class P1967/P729/P731/P734/P735, there is no admissible signed-source bridge to the P2324 perturbation parameter mu.  P731 supplies the closest antisymmetric sign-looking witness, and P2324 shows finite mu values would be sufficient numerically, but the promotion/descent targets are explicitly nonexported or branch-blind and no candidate exports a Task-3 margin response functional, P2281 replay semantics, or selector-free admissibility theorem.  Therefore the P2324 susceptibility trace remains non-promoted and G1/G3 remain open.",
+      "nonpromotion_rule": "Do not use P1967/P729/P731/P734/P735 as the P2324 signed perturbation source unless a new export supplies mu/theta_ref descent, response functional, replay semantics, and selector-free admissibility.",
+      "proof_bits": {
+        "admissible_candidate_count": 0,
+        "all_candidates_fail_at_least_one_required_predicate": true,
+        "candidate_count": 5,
+        "closest_candidate": "P731_W_BREAK_PAIR12_ANTISYMMETRIC_SCORES",
+        "p2318_missing_field_count": 6,
+        "p2324_required_mu_by_pair_loaded": {
+          "pair1": 0.0034,
+          "pair2": 0.0034,
+          "pair3": 0.0034,
+          "pair4": 0.004533333333333332,
+          "pair5": 0.0034
+        }
+      },
+      "scope_limits": [
+        "finite current-export source-class audit, not a universal future nonexistence theorem",
+        "does not deny that a future strict signed source could be exported",
+        "does not promote P731 sign scores into a branch selector",
+        "does not discharge QW-2191, update G1/G3, or close ToE"
+      ],
+      "theorem_name": "P2325 current signed-source to P2324 susceptibility bridge nonexistence audit"
+    },
+    "theorem_fingerprint_sha256": "b57eda3c7a0aba89c8587a31c3286065aee47fe397be6b2d561c4830cce07f02"
+  },
+  "timestamp_utc": "2026-05-28T00:00:00+00:00"
+}
