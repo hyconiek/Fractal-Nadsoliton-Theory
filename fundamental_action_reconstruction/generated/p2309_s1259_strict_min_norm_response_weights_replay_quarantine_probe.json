@@ -1,0 +1,447 @@
+{
+  "schema_version": "p2309_s1259_v1",
+  "packet_id": "P2309",
+  "stage_id": "S1259",
+  "produced_by": "p2309_s1259_strict_min_norm_response_weights_replay_quarantine_probe.py",
+  "timestamp_utc": "2026-05-28T00:00:00+00:00",
+  "status": "OPEN_OBSTRUCTION_TARGET_CALIBRATED_WEIGHTS_REPLAY_QUARANTINED",
+  "result_kind": "MIN_NORM_RESPONSE_WEIGHTS_EXPORT_REPLAY_PASS_BUT_STRICT_ADMISSIBILITY_FAILS",
+  "strict_min_norm_response_weights_replay_quarantine_probe": {
+    "probe_id": "P2309_S1259_STRICT_MIN_NORM_RESPONSE_WEIGHTS_REPLAY_QUARANTINE",
+    "source_packets": {
+      "alpha_geo_strict_derived_v1": "generated/alpha_geo_strict_derived_v1.json",
+      "p2274": "generated/p2274_s1224_strict_nu_branch_group_policy_robustness_region_certificate_probe.json",
+      "p2300": "generated/p2300_s1250_strict_shannon_nad12_sigma_adm_bianchi_spatial_eom_provider_operator_probe.json",
+      "p2302": "generated/p2302_s1252_strict_task3_provider_lift_policy_lock_candidate_probe.json",
+      "p2308": "generated/p2308_s1258_strict_current_interface_class_response_functional_nonexistence_probe.json"
+    },
+    "source_hashes": {
+      "alpha_geo_strict_derived_v1_sha256": "fde8d28194230eafaf65e0803b5c67ad9a756ff688cd0cfc00acccfd9f9c5328",
+      "p2274_sha256": "dc28056a0b6f4ea6f21d759cafac2417cb3961f30bbc648b77b2f21969393be6",
+      "p2300_sha256": "13126823c36db20fa4eb705974176e81f9b8c76d1b7a1ca4fe5f087a8ffea67d",
+      "p2302_sha256": "1912c3247bf0d48e34b800b9c3103887d00a430620e9ce7f6a46a94579b87fa9",
+      "p2308_sha256": "f00ef2ab7ba6dba05bc8fd54a3886d25ffa18c30fe1b540adf7f5f1a8e26cb29"
+    },
+    "variational_identity_attempt": {
+      "identity_id": "TARGET_CALIBRATED_MIN_NORM_WEIGHTS",
+      "optimization_problem": "minimize ||w||_2^2 subject to w\u00b7c = lambda_star",
+      "symbolic_solution": [
+        "c0*lambda_star/(c0**2 + c1**2 + c2**2 + c3**2 + c4**2 + c5**2 + c6**2 + c7**2 + c8**2 + c9**2)",
+        "c1*lambda_star/(c0**2 + c1**2 + c2**2 + c3**2 + c4**2 + c5**2 + c6**2 + c7**2 + c8**2 + c9**2)",
+        "c2*lambda_star/(c0**2 + c1**2 + c2**2 + c3**2 + c4**2 + c5**2 + c6**2 + c7**2 + c8**2 + c9**2)",
+        "c3*lambda_star/(c0**2 + c1**2 + c2**2 + c3**2 + c4**2 + c5**2 + c6**2 + c7**2 + c8**2 + c9**2)",
+        "c4*lambda_star/(c0**2 + c1**2 + c2**2 + c3**2 + c4**2 + c5**2 + c6**2 + c7**2 + c8**2 + c9**2)",
+        "c5*lambda_star/(c0**2 + c1**2 + c2**2 + c3**2 + c4**2 + c5**2 + c6**2 + c7**2 + c8**2 + c9**2)",
+        "c6*lambda_star/(c0**2 + c1**2 + c2**2 + c3**2 + c4**2 + c5**2 + c6**2 + c7**2 + c8**2 + c9**2)",
+        "c7*lambda_star/(c0**2 + c1**2 + c2**2 + c3**2 + c4**2 + c5**2 + c6**2 + c7**2 + c8**2 + c9**2)",
+        "c8*lambda_star/(c0**2 + c1**2 + c2**2 + c3**2 + c4**2 + c5**2 + c6**2 + c7**2 + c8**2 + c9**2)",
+        "c9*lambda_star/(c0**2 + c1**2 + c2**2 + c3**2 + c4**2 + c5**2 + c6**2 + c7**2 + c8**2 + c9**2)"
+      ],
+      "lambda_star_source": "P2302 required policy-lock lift, not independently derived from strict ADM/Bianchi-I dynamics",
+      "coefficient_norm_sq": 0.0094608371836785,
+      "required_lift": 0.0068,
+      "weights": [
+        {
+          "name": "H2_Q",
+          "coefficient_numeric": -0.07101365224021955,
+          "weight_numeric": -0.051041237245532826
+        },
+        {
+          "name": "Hd_Q",
+          "coefficient_numeric": -0.042119408392054386,
+          "weight_numeric": -0.030273428398078513
+        },
+        {
+          "name": "H_Qdot",
+          "coefficient_numeric": 0.02889424384816516,
+          "weight_numeric": 0.02076780884745431
+        },
+        {
+          "name": "Q2",
+          "coefficient_numeric": -0.04056225409787581,
+          "weight_numeric": -0.029154219918444014
+        },
+        {
+          "name": "dot_sigma_sq",
+          "coefficient_numeric": -0.010446052869517292,
+          "weight_numeric": -0.007508126197886744
+        },
+        {
+          "name": "ddot_sigma_sigma",
+          "coefficient_numeric": 0.005223026434758646,
+          "weight_numeric": 0.003754063098943372
+        },
+        {
+          "name": "Ndd_Q",
+          "coefficient_numeric": -0.005223026434758646,
+          "weight_numeric": -0.003754063098943372
+        },
+        {
+          "name": "Nd2_Q",
+          "coefficient_numeric": 0.0,
+          "weight_numeric": 0.0
+        },
+        {
+          "name": "Nd_H_Q",
+          "coefficient_numeric": 0.0,
+          "weight_numeric": 0.0
+        },
+        {
+          "name": "Nd_Qdot",
+          "coefficient_numeric": 0.0,
+          "weight_numeric": 0.0
+        }
+      ],
+      "induced_lift": 0.0068,
+      "weight_l2_norm": 0.06991077691179552,
+      "weights_exported": true,
+      "strict_admissible": false,
+      "nonadmissibility_reason": "Weights are target-calibrated using the already-required lift; this is a tautological projection, not an internally derived variational identity from the strict dynamics."
+    },
+    "target_calibrated_replay": {
+      "summary": {
+        "all_rows_meet_target": true,
+        "worst_margin_to_target": 0.0005576116041714485,
+        "delta": 0.1,
+        "trial_multiplier": 1,
+        "trials": 700,
+        "n_eff": 16800,
+        "adaptive_margin": 0.009442388395828585
+      },
+      "rows": [
+        {
+          "risk_tolerance": 0.01,
+          "target_floor": 0.99,
+          "provider_lift_per_step": 0.0068,
+          "empirical_corner_floor": 1.0,
+          "adaptive_margin": 0.009442388395828585,
+          "predicted_certified_floor": 0.9905576116041714,
+          "meets_target": true,
+          "margin_to_target": 0.0005576116041714485,
+          "corner_rows": [
+            {
+              "rho": 0.8847674418604651,
+              "kappa_scale": 1.159767441860465,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            },
+            {
+              "rho": 0.8847674418604651,
+              "kappa_scale": 1.1602325581395347,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            },
+            {
+              "rho": 0.8852325581395349,
+              "kappa_scale": 1.159767441860465,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            },
+            {
+              "rho": 0.8852325581395349,
+              "kappa_scale": 1.1602325581395347,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            }
+          ]
+        },
+        {
+          "risk_tolerance": 0.02,
+          "target_floor": 0.98,
+          "provider_lift_per_step": 0.0068,
+          "empirical_corner_floor": 1.0,
+          "adaptive_margin": 0.009442388395828585,
+          "predicted_certified_floor": 0.9905576116041714,
+          "meets_target": true,
+          "margin_to_target": 0.010557611604171457,
+          "corner_rows": [
+            {
+              "rho": 0.8695348837209302,
+              "kappa_scale": 1.1195348837209302,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            },
+            {
+              "rho": 0.8695348837209302,
+              "kappa_scale": 1.12046511627907,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            },
+            {
+              "rho": 0.8704651162790698,
+              "kappa_scale": 1.1195348837209302,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            },
+            {
+              "rho": 0.8704651162790698,
+              "kappa_scale": 1.12046511627907,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            }
+          ]
+        },
+        {
+          "risk_tolerance": 0.05,
+          "target_floor": 0.95,
+          "provider_lift_per_step": 0.0068,
+          "empirical_corner_floor": 1.0,
+          "adaptive_margin": 0.009442388395828585,
+          "predicted_certified_floor": 0.9905576116041714,
+          "meets_target": true,
+          "margin_to_target": 0.040557611604171484,
+          "corner_rows": [
+            {
+              "rho": 0.8238372093023255,
+              "kappa_scale": 1.0,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            },
+            {
+              "rho": 0.8238372093023255,
+              "kappa_scale": 1.0011627906976743,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            },
+            {
+              "rho": 0.8261627906976744,
+              "kappa_scale": 1.0,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            },
+            {
+              "rho": 0.8261627906976744,
+              "kappa_scale": 1.0011627906976743,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            }
+          ]
+        },
+        {
+          "risk_tolerance": 0.1,
+          "target_floor": 0.9,
+          "provider_lift_per_step": 0.0068,
+          "empirical_corner_floor": 0.9971428571428571,
+          "adaptive_margin": 0.009442388395828585,
+          "predicted_certified_floor": 0.9877004687470285,
+          "meets_target": true,
+          "margin_to_target": 0.08770046874702853,
+          "corner_rows": [
+            {
+              "rho": 0.7476744186046511,
+              "kappa_scale": 1.0,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                0.9971428571428571,
+                1.0,
+                1.0
+              ],
+              "sample_min": 0.9971428571428571,
+              "sample_mean": 0.9995238095238096
+            },
+            {
+              "rho": 0.7476744186046511,
+              "kappa_scale": 1.0023255813953489,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                0.9971428571428571,
+                1.0,
+                1.0
+              ],
+              "sample_min": 0.9971428571428571,
+              "sample_mean": 0.9995238095238096
+            },
+            {
+              "rho": 0.7523255813953489,
+              "kappa_scale": 1.0,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                0.9985714285714286,
+                1.0,
+                1.0
+              ],
+              "sample_min": 0.9985714285714286,
+              "sample_mean": 0.9997619047619047
+            },
+            {
+              "rho": 0.7523255813953489,
+              "kappa_scale": 1.0023255813953489,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                0.9985714285714286,
+                1.0,
+                1.0
+              ],
+              "sample_min": 0.9985714285714286,
+              "sample_mean": 0.9997619047619047
+            }
+          ]
+        }
+      ]
+    },
+    "strict_admissibility_verdict": {
+      "lambda_equals_R_of_c_exported": true,
+      "lambda_equals_R_of_c_strictly_derived": false,
+      "replay_passes": true,
+      "admissible_for_g1_g3_update": false,
+      "reason": "The only exported weights are calibrated to the P2302 target lift, so the replay pass is circular evidence rather than a strict derivation."
+    },
+    "task3_g1_g3_update": {
+      "G1_reduction_certainty": "OPEN_UNCHANGED",
+      "G2_nonlinear_trajectory_realism": "CLOSED_FROM_P2301_UNCHANGED",
+      "G3_operational_policy_rule": "OPEN_UNCHANGED",
+      "reason": "P2309 replay passes only under quarantined target-calibrated weights."
+    },
+    "theorem_export": {
+      "statement_id": "P2309_TARGET_CALIBRATED_RESPONSE_WEIGHTS_QUARANTINE_THEOREM",
+      "formal_statement": "The minimum-norm constrained identity min ||w||_2^2 subject to w\u00b7c=lambda_star exports concrete weights for the P2300 coefficient vector and, when lambda_star is set to the P2302 required lift, the replay passes.  However lambda_star is imported from the target policy-lock requirement rather than derived from strict ADM/Bianchi-I dynamics.  Therefore the weights are quarantined as target-calibrated and cannot close G1/G3.",
+      "proof_bits": {
+        "required_lift": 0.0068,
+        "induced_lift": 0.0068,
+        "lift_error_abs": 0.0,
+        "replay_all_rows_meet_target": true,
+        "replay_worst_margin_to_target": 0.0005576116041714485,
+        "strict_admissible": false,
+        "target_calibrated": true
+      },
+      "not_claimed": [
+        "strict derivation of lambda=R(c)",
+        "strict admissible response-functional bridge",
+        "strict G1 closure",
+        "strict G3 closure",
+        "full Task-3 closure",
+        "QW-2191 discharge",
+        "selector closure",
+        "legacy-kernel role transfer",
+        "ToE closure"
+      ]
+    },
+    "theorem_fingerprint_sha256": "033d14d8cf0769e1e193d70e80db21139374d50a035fd22cd26064d494672faf"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2310_candidate",
+    "goal": "Replace the target-calibrated constraint w\u00b7c=lambda_star with a strict variational source for lambda_star or w_i from ADM/Bianchi-I equations; otherwise keep P2308/P2309 as blockers for G1/G3."
+  },
+  "gatekeeper_checks": {
+    "alpha_geo_strict_source_loaded": true,
+    "alpha_geo_is_four_ln2_not_legacy_import": true,
+    "p2300_coefficients_loaded": true,
+    "p2302_required_lift_loaded": true,
+    "p2308_current_class_nonexistence_loaded": true,
+    "min_norm_weights_exported": true,
+    "induced_lift_matches_required_lift": true,
+    "replay_passes_if_target_calibrated_weights_are_admitted": true,
+    "weights_are_target_calibrated_not_strictly_derived": true,
+    "strict_admissible_response_bridge_not_claimed": true,
+    "strict_g1_g3_not_updated": true,
+    "no_qw2191_discharge_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_legacy_kernel_role_transfer": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TARGET_CALIBRATED_REPLAY_QUARANTINE_TRACE"
+}

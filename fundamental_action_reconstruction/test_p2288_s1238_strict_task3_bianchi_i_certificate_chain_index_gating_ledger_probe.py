@@ -24,6 +24,10 @@ class TestP2288S1238StrictTask3BianchiICertificateChainIndexGatingLedgerProbe(un
         self.assertTrue(g["bundle_hash_length_ok"])
         self.assertTrue(g["chain_fingerprint_length_ok"])
         self.assertTrue(g["gating_decision_present"])
+        self.assertTrue(g["block_if_verifier_fails"])
+        rec = data["strict_task3_bianchi_i_certificate_chain_index_gating_ledger_probe"]["chain_index_record"]
+        self.assertFalse(rec["verifier_pass"])
+        self.assertEqual(rec["gating_decision"], "BLOCK_THEOREM_ATTEMPT_PRECHECK")
 
 
 if __name__ == "__main__":

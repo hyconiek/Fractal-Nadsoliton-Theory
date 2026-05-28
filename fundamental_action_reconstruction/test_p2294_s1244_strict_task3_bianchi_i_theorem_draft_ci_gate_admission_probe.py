@@ -24,6 +24,9 @@ class TestP2294S1244StrictTask3BianchiITheoremDraftCiGateAdmissionProbe(unittest
         self.assertTrue(g["theorem_attempt_decision_exported"])
         self.assertTrue(g["open_implies_metadata_accept"])
         self.assertTrue(g["open_implies_negative_controls_ok"])
+        probe = data["strict_task3_bianchi_i_theorem_draft_ci_gate_admission_probe"]
+        self.assertEqual(probe["ci_gate_decision"], "CI_GATE_BLOCK")
+        self.assertEqual(probe["theorem_attempt_decision"], "THEOREM_DRAFT_HOLD")
 
 
 if __name__ == "__main__":

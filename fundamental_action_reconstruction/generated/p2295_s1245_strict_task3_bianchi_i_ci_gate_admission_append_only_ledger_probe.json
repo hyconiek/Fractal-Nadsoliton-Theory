@@ -1,0 +1,111 @@
+{
+  "schema_version": "p2295_s1245_v1",
+  "packet_id": "P2295",
+  "stage_id": "S1245",
+  "produced_by": "p2295_s1245_strict_task3_bianchi_i_ci_gate_admission_append_only_ledger_probe.py",
+  "timestamp_utc": "2026-05-28T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_TASK3_BIANCHI_I_CI_GATE_ADMISSION_APPEND_ONLY_LEDGER_PROBE",
+  "strict_task3_bianchi_i_ci_gate_admission_append_only_ledger_probe": {
+    "probe_id": "STRICT_TASK3_BIANCHI_I_CI_GATE_ADMISSION_APPEND_ONLY_LEDGER_PROBE_V1",
+    "ledger_policy": {
+      "append_only": true,
+      "run_index_base": 1,
+      "run_index_rule": "new entries must increment by exactly one and preserve all prior entry_sha256 values",
+      "entry_hash_rule": "entry_sha256 is canonical SHA-256 over the admission record before adding entry_sha256"
+    },
+    "ledger": [
+      {
+        "record_id": "TASK3_BIANCHI_I_CI_GATE_ADMISSION_LEDGER_ENTRY_V1",
+        "run_index": 1,
+        "previous_entry_sha256": null,
+        "source_artifacts": [
+          {
+            "packet_id": "P2293",
+            "path": "generated/p2293_s1243_strict_task3_bianchi_i_metadata_validator_negative_control_matrix_probe.json",
+            "sha256": "89b37a98c2569c2374acc26cc49be71d5db5d631f1235e2eb6fa29c519a6ca6e"
+          },
+          {
+            "packet_id": "P2294",
+            "path": "generated/p2294_s1244_strict_task3_bianchi_i_theorem_draft_ci_gate_admission_probe.json",
+            "sha256": "3074344f32c1c8fac8cc4f77a65708645cb08866b05eb6bb68229a557516146b"
+          }
+        ],
+        "gate_decision": "CI_GATE_BLOCK",
+        "theorem_attempt_decision": "THEOREM_DRAFT_HOLD",
+        "admission_inputs": {
+          "validator_decision": "METADATA_REJECT",
+          "all_expectations_met": true,
+          "matrix_has_baseline_accept": true,
+          "matrix_reject_paths_stable": true
+        },
+        "admission_checks": {
+          "metadata_accept_required": false,
+          "negative_controls_consistent": true,
+          "baseline_accept_present": true,
+          "reject_paths_present": true
+        },
+        "negative_control_summary": {
+          "accept_rows": 1,
+          "reject_rows": 3,
+          "all_expectations_met": true
+        },
+        "mismatch_evidence_pointers": [
+          {
+            "candidate_id": "C1_hash_mismatch",
+            "source_packet": "generated/p2293_s1243_strict_task3_bianchi_i_metadata_validator_negative_control_matrix_probe.json",
+            "json_pointer": "/strict_task3_bianchi_i_metadata_validator_negative_control_matrix_probe/matrix/1",
+            "hash_match": false,
+            "decision_match": true,
+            "validator_decision": "METADATA_REJECT",
+            "expected_decision": "METADATA_REJECT",
+            "matches_expectation": true
+          },
+          {
+            "candidate_id": "C2_decision_mismatch",
+            "source_packet": "generated/p2293_s1243_strict_task3_bianchi_i_metadata_validator_negative_control_matrix_probe.json",
+            "json_pointer": "/strict_task3_bianchi_i_metadata_validator_negative_control_matrix_probe/matrix/2",
+            "hash_match": true,
+            "decision_match": false,
+            "validator_decision": "METADATA_REJECT",
+            "expected_decision": "METADATA_REJECT",
+            "matches_expectation": true
+          },
+          {
+            "candidate_id": "C3_both_mismatch",
+            "source_packet": "generated/p2293_s1243_strict_task3_bianchi_i_metadata_validator_negative_control_matrix_probe.json",
+            "json_pointer": "/strict_task3_bianchi_i_metadata_validator_negative_control_matrix_probe/matrix/3",
+            "hash_match": false,
+            "decision_match": false,
+            "validator_decision": "METADATA_REJECT",
+            "expected_decision": "METADATA_REJECT",
+            "matches_expectation": true
+          }
+        ],
+        "scope_limit": "append-only CI admission ledger only; no theorem proof and no bridge/selector/ToE closure claim",
+        "entry_sha256": "321ca617bb36528fc2590db680c92a3dcbc93edb6290e51d209ce05f180211b5"
+      }
+    ],
+    "ledger_fingerprint_sha256": "0dce3a3f500a9fe361ba35db254a42c95af670fe82d8ee601e795de74f871cb2",
+    "theorem_scope_limit": "CI-gate admission ledger only; not theorem proof and not bridge/selector/ToE closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2296_candidate",
+    "goal": "export hold-path replay instructions tied to the blocked ledger entry and unresolved A1/A2/A3 verifier status"
+  },
+  "gatekeeper_checks": {
+    "ledger_exported": true,
+    "run_indices_monotonic": true,
+    "first_run_index_is_one": true,
+    "source_hashes_present": true,
+    "entry_hash_length_ok": true,
+    "ledger_fingerprint_length_ok": true,
+    "mismatch_evidence_pointers_present": true,
+    "gate_decision_preserved": true,
+    "theorem_attempt_decision_preserved": true,
+    "no_bridge_theorem_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

@@ -1,0 +1,472 @@
+{
+  "schema_version": "p2315_s1265_v1",
+  "packet_id": "P2315",
+  "stage_id": "S1265",
+  "produced_by": "p2315_s1265_strict_schematic_lagrangian_eom_kernel_spectrum_probe.py",
+  "timestamp_utc": "2026-05-28T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_SCHEMATIC_EOM_DERIVED_KERNEL_SPECTRUM_NONSELECTOR",
+  "result_kind": "STRICT_SCHEMATIC_LAGRANGIAN_EOM_AND_KERNEL_SPECTRUM_COMPUTATION_NO_G1_G3_CLOSURE",
+  "strict_schematic_lagrangian_eom_kernel_spectrum_probe": {
+    "probe_id": "P2315_S1265_STRICT_SCHEMATIC_LAGRANGIAN_EOM_KERNEL_SPECTRUM",
+    "source_packets": {
+      "alpha_geo_strict_derived_v1": "generated/alpha_geo_strict_derived_v1.json",
+      "p2314": "generated/p2314_s1264_strict_full_eom_lagrangian_symmetry_vortex_inventory_probe.json",
+      "release7": "RELEASE_7_STRICT_PROJECTIVE_OPERATIONAL_MODEL_BRIEF.md"
+    },
+    "source_hashes": {
+      "alpha_geo_strict_derived_v1_sha256": "fde8d28194230eafaf65e0803b5c67ad9a756ff688cd0cfc00acccfd9f9c5328",
+      "p2314_sha256": "a404d3c66c8a545150d45ec470bf8bda2516c7b282947fe879a5f294f31517cd",
+      "release7_sha256": "aded9fa7412d54475398fc783e054d36d6807eb7730abf489f82eefce0d95610"
+    },
+    "schematic_eom_export": {
+      "lagrangian_source": "RELEASE_7 schematic L_ZTP candidate layer",
+      "normalized_euler_lagrange_row": "Box(Psi_o) + dV/d(Psi_o^dagger) + sum_{o' != o} K(o,o') Psi_o' = 0, up to the explicit 1/2 convention of the schematic complex-field representative",
+      "derived_scope": "schematic Z12 kernel-coupled field equations only",
+      "potential_term_unspecified": true,
+      "metric_tensor_variation_missing": true,
+      "full_tensor_eom_exported": false,
+      "full_lagrangian_exported_for_task3": false
+    },
+    "kernel_spectrum_audit": {
+      "strict_kernel_parameters": {
+        "n": 12,
+        "omega": 0.18575,
+        "phi": 0.1625,
+        "beta": 1.0,
+        "eta": 1.8,
+        "distance_rule": "cyclic_distance_on_Z12",
+        "diagonal_set_to_zero": true
+      },
+      "matrix_properties": {
+        "real_symmetric": true,
+        "circulant": true,
+        "row_sums": [
+          1.6603072787660986,
+          1.6603072787660986,
+          1.6603072787660986,
+          1.6603072787660986,
+          1.6603072787660986,
+          1.6603072787660986,
+          1.6603072787660986,
+          1.6603072787660986,
+          1.6603072787660986,
+          1.6603072787660986,
+          1.6603072787660986,
+          1.6603072787660986
+        ],
+        "max_row_sum_spread": 0.0
+      },
+      "first_row": [
+        0.0,
+        0.4699856726450201,
+        0.1920435516901028,
+        0.09142861427792495,
+        0.0470291687456504,
+        0.02413122336363006,
+        0.011070817321442113,
+        0.02413122336363006,
+        0.0470291687456504,
+        0.09142861427792495,
+        0.1920435516901028,
+        0.4699856726450201
+      ],
+      "fourier_eigenvalues": [
+        {
+          "mode_k": 0,
+          "eigenvalue_real": 1.6603072787660986,
+          "eigenvalue_imag_abs": 0.0,
+          "paired_with": 0
+        },
+        {
+          "mode_k": 1,
+          "eigenvalue_real": 0.906186124559019,
+          "eigenvalue_imag_abs": 1.3877787807814457e-16,
+          "paired_with": 11
+        },
+        {
+          "mode_k": 2,
+          "eigenvalue_real": 0.08325776433848894,
+          "eigenvalue_imag_abs": 5.551115123125783e-17,
+          "paired_with": 10
+        },
+        {
+          "mode_k": 3,
+          "eigenvalue_real": -0.3010995832103463,
+          "eigenvalue_imag_abs": 4.440892098500626e-16,
+          "paired_with": 9
+        },
+        {
+          "mode_k": 4,
+          "eigenvalue_real": -0.5392615705671122,
+          "eigenvalue_imag_abs": 5.551115123125783e-16,
+          "paired_with": 8
+        },
+        {
+          "mode_k": 5,
+          "eigenvalue_real": -0.638298993312998,
+          "eigenvalue_imag_abs": 5.828670879282072e-16,
+          "paired_with": 7
+        },
+        {
+          "mode_k": 6,
+          "eigenvalue_real": -0.6818747623802017,
+          "eigenvalue_imag_abs": 1.8081011702950317e-15,
+          "paired_with": 6
+        },
+        {
+          "mode_k": 7,
+          "eigenvalue_real": -0.6382989933129983,
+          "eigenvalue_imag_abs": 5.273559366969494e-16,
+          "paired_with": 5
+        },
+        {
+          "mode_k": 8,
+          "eigenvalue_real": -0.5392615705671095,
+          "eigenvalue_imag_abs": 9.992007221626409e-16,
+          "paired_with": 4
+        },
+        {
+          "mode_k": 9,
+          "eigenvalue_real": -0.3010995832103471,
+          "eigenvalue_imag_abs": 3.3306690738754696e-16,
+          "paired_with": 3
+        },
+        {
+          "mode_k": 10,
+          "eigenvalue_real": 0.0832577643384873,
+          "eigenvalue_imag_abs": 6.661338147750939e-16,
+          "paired_with": 2
+        },
+        {
+          "mode_k": 11,
+          "eigenvalue_real": 0.9061861245590226,
+          "eigenvalue_imag_abs": 3.6637359812630166e-15,
+          "paired_with": 1
+        }
+      ],
+      "pair_degeneracy_report": {
+        "translation_invariant_circulant_matrix": true,
+        "pair_planes": [
+          {
+            "pair": [
+              1,
+              11
+            ],
+            "eigenvalue_k": 0.906186124559019,
+            "eigenvalue_partner": 0.9061861245590226,
+            "abs_difference": 3.552713678800501e-15,
+            "degenerate": true
+          },
+          {
+            "pair": [
+              2,
+              10
+            ],
+            "eigenvalue_k": 0.08325776433848894,
+            "eigenvalue_partner": 0.0832577643384873,
+            "abs_difference": 1.6375789613221059e-15,
+            "degenerate": true
+          },
+          {
+            "pair": [
+              3,
+              9
+            ],
+            "eigenvalue_k": -0.3010995832103463,
+            "eigenvalue_partner": -0.3010995832103471,
+            "abs_difference": 7.771561172376096e-16,
+            "degenerate": true
+          },
+          {
+            "pair": [
+              4,
+              8
+            ],
+            "eigenvalue_k": -0.5392615705671122,
+            "eigenvalue_partner": -0.5392615705671095,
+            "abs_difference": 2.6645352591003757e-15,
+            "degenerate": true
+          },
+          {
+            "pair": [
+              5,
+              7
+            ],
+            "eigenvalue_k": -0.638298993312998,
+            "eigenvalue_partner": -0.6382989933129983,
+            "abs_difference": 3.3306690738754696e-16,
+            "degenerate": true
+          }
+        ],
+        "nyquist_mode": {
+          "mode": 6,
+          "self_paired": true,
+          "eigenvalue": -0.6818747623802017
+        },
+        "all_pair_planes_degenerate": true,
+        "max_pair_difference": 3.552713678800501e-15
+      },
+      "alpha_scaled_pair_degeneracy_report": {
+        "translation_invariant_circulant_matrix": true,
+        "pair_planes": [
+          {
+            "pair": [
+              1,
+              11
+            ],
+            "eigenvalue_k": 2.5124814292025097,
+            "eigenvalue_partner": 2.5124814292025195,
+            "abs_difference": 9.769962616701378e-15,
+            "degenerate": true
+          },
+          {
+            "pair": [
+              2,
+              10
+            ],
+            "eigenvalue_k": 0.23083953844379188,
+            "eigenvalue_partner": 0.23083953844378732,
+            "abs_difference": 4.551914400963142e-15,
+            "degenerate": true
+          },
+          {
+            "pair": [
+              3,
+              9
+            ],
+            "eigenvalue_k": -0.8348253086801047,
+            "eigenvalue_partner": -0.8348253086801068,
+            "abs_difference": 2.1094237467877974e-15,
+            "degenerate": true
+          },
+          {
+            "pair": [
+              4,
+              8
+            ],
+            "eigenvalue_k": -1.4951505488916872,
+            "eigenvalue_partner": -1.4951505488916799,
+            "abs_difference": 7.327471962526033e-15,
+            "degenerate": true
+          },
+          {
+            "pair": [
+              5,
+              7
+            ],
+            "eigenvalue_k": -1.7697405902766237,
+            "eigenvalue_partner": -1.7697405902766246,
+            "abs_difference": 8.881784197001252e-16,
+            "degenerate": true
+          }
+        ],
+        "nyquist_mode": {
+          "mode": 6,
+          "self_paired": true,
+          "eigenvalue": -1.890558276155278
+        },
+        "all_pair_planes_degenerate": true,
+        "max_pair_difference": 9.769962616701378e-15
+      },
+      "selector_breaking_verdict": "The strict gate kernel matrix is circulant/translation-invariant on Z12.  Its Fourier pair planes k and 12-k remain exactly degenerate; multiplying by the scalar 4 ln 2 rescales eigenvalues but does not select an orientation inside a pair plane."
+    },
+    "computational_verdict": {
+      "schematic_eom_derived": true,
+      "full_eom_derived": false,
+      "full_lagrangian_derived": false,
+      "kernel_spectrum_computed": true,
+      "kernel_breaks_pair_plane_degeneracy": false,
+      "alpha_4ln2_breaks_pair_plane_degeneracy": false,
+      "selector_source_exported": false,
+      "admissible_for_g1_g3_update": false,
+      "reason": "P2315 derives the schematic Z12 Euler-Lagrange row and computes the strict kernel spectrum, but the resulting circulant operator preserves Fourier pair degeneracy and does not fill the full tensor EOM/Lagrangian gaps recorded by P2314."
+    },
+    "task3_g1_g3_update": {
+      "G1_reduction_certainty": "OPEN_UNCHANGED",
+      "G2_nonlinear_trajectory_realism": "CLOSED_FROM_P2301_UNCHANGED",
+      "G3_operational_policy_rule": "OPEN_UNCHANGED",
+      "reason": "P2315 derives only schematic Z12 EOM rows and verifies kernel pair degeneracy; it exports no full EOM/Lagrangian or selector source."
+    },
+    "theorem_export": {
+      "statement_id": "P2315_SCHEMATIC_LAGRANGIAN_EOM_KERNEL_SPECTRUM_NONSELECTOR_THEOREM",
+      "formal_statement": "From the Release-7 schematic L_ZTP one can derive a normalized Z12 kernel-coupled Euler-Lagrange row.  With the frozen strict gate kernel parameters, the corresponding 12x12 coupling matrix is real symmetric and circulant.  Its Fourier modes k and 12-k are pairwise degenerate for k=1..5, and multiplication by the scalar alpha_geo_strict=4 ln 2 preserves this degeneracy.  Therefore this schematic EOM/spectrum computation does not export a full tensor-resolved EOM, does not export a theorem-grade Task-3 Lagrangian, and does not provide a selector/orientation source for G1/G3.",
+      "proof_bits": {
+        "schematic_eom_export": {
+          "lagrangian_source": "RELEASE_7 schematic L_ZTP candidate layer",
+          "normalized_euler_lagrange_row": "Box(Psi_o) + dV/d(Psi_o^dagger) + sum_{o' != o} K(o,o') Psi_o' = 0, up to the explicit 1/2 convention of the schematic complex-field representative",
+          "derived_scope": "schematic Z12 kernel-coupled field equations only",
+          "potential_term_unspecified": true,
+          "metric_tensor_variation_missing": true,
+          "full_tensor_eom_exported": false,
+          "full_lagrangian_exported_for_task3": false
+        },
+        "matrix_real_symmetric": true,
+        "matrix_circulant": true,
+        "max_row_sum_spread": 0.0,
+        "pair_degeneracy_report": {
+          "translation_invariant_circulant_matrix": true,
+          "pair_planes": [
+            {
+              "pair": [
+                1,
+                11
+              ],
+              "eigenvalue_k": 0.906186124559019,
+              "eigenvalue_partner": 0.9061861245590226,
+              "abs_difference": 3.552713678800501e-15,
+              "degenerate": true
+            },
+            {
+              "pair": [
+                2,
+                10
+              ],
+              "eigenvalue_k": 0.08325776433848894,
+              "eigenvalue_partner": 0.0832577643384873,
+              "abs_difference": 1.6375789613221059e-15,
+              "degenerate": true
+            },
+            {
+              "pair": [
+                3,
+                9
+              ],
+              "eigenvalue_k": -0.3010995832103463,
+              "eigenvalue_partner": -0.3010995832103471,
+              "abs_difference": 7.771561172376096e-16,
+              "degenerate": true
+            },
+            {
+              "pair": [
+                4,
+                8
+              ],
+              "eigenvalue_k": -0.5392615705671122,
+              "eigenvalue_partner": -0.5392615705671095,
+              "abs_difference": 2.6645352591003757e-15,
+              "degenerate": true
+            },
+            {
+              "pair": [
+                5,
+                7
+              ],
+              "eigenvalue_k": -0.638298993312998,
+              "eigenvalue_partner": -0.6382989933129983,
+              "abs_difference": 3.3306690738754696e-16,
+              "degenerate": true
+            }
+          ],
+          "nyquist_mode": {
+            "mode": 6,
+            "self_paired": true,
+            "eigenvalue": -0.6818747623802017
+          },
+          "all_pair_planes_degenerate": true,
+          "max_pair_difference": 3.552713678800501e-15
+        },
+        "alpha_scaled_pair_degeneracy_report": {
+          "translation_invariant_circulant_matrix": true,
+          "pair_planes": [
+            {
+              "pair": [
+                1,
+                11
+              ],
+              "eigenvalue_k": 2.5124814292025097,
+              "eigenvalue_partner": 2.5124814292025195,
+              "abs_difference": 9.769962616701378e-15,
+              "degenerate": true
+            },
+            {
+              "pair": [
+                2,
+                10
+              ],
+              "eigenvalue_k": 0.23083953844379188,
+              "eigenvalue_partner": 0.23083953844378732,
+              "abs_difference": 4.551914400963142e-15,
+              "degenerate": true
+            },
+            {
+              "pair": [
+                3,
+                9
+              ],
+              "eigenvalue_k": -0.8348253086801047,
+              "eigenvalue_partner": -0.8348253086801068,
+              "abs_difference": 2.1094237467877974e-15,
+              "degenerate": true
+            },
+            {
+              "pair": [
+                4,
+                8
+              ],
+              "eigenvalue_k": -1.4951505488916872,
+              "eigenvalue_partner": -1.4951505488916799,
+              "abs_difference": 7.327471962526033e-15,
+              "degenerate": true
+            },
+            {
+              "pair": [
+                5,
+                7
+              ],
+              "eigenvalue_k": -1.7697405902766237,
+              "eigenvalue_partner": -1.7697405902766246,
+              "abs_difference": 8.881784197001252e-16,
+              "degenerate": true
+            }
+          ],
+          "nyquist_mode": {
+            "mode": 6,
+            "self_paired": true,
+            "eigenvalue": -1.890558276155278
+          },
+          "all_pair_planes_degenerate": true,
+          "max_pair_difference": 9.769962616701378e-15
+        },
+        "p2314_full_eom_answer": {
+          "is_full_eom_exported": false,
+          "is_full_lagrangian_exported": false,
+          "does_4ln2_break_symmetry": false,
+          "does_current_strict_route_have_twisted_vortex_bridge": false,
+          "current_provider_margin_route_stopped": true
+        }
+      },
+      "not_claimed": [
+        "full strict EOM",
+        "full theorem-grade Lagrangian for Task-3",
+        "4 ln 2 selector/symmetry-breaking theorem",
+        "strict twisted-vortex/torsion bridge",
+        "strict G1 closure",
+        "strict G3 closure",
+        "QW-2191 discharge",
+        "ToE closure"
+      ]
+    },
+    "theorem_fingerprint_sha256": "a2e28afa1ade855d51139659b5457b01db7ffbf8bdf74c0d83f4ed9bf760a0f2"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2316_candidate",
+    "goal": "To get a real closure-relevant advance, add one missing nonlinear/tensor object: an explicit potential V with stability theorem, a full tensor-resolved EOM variation, or an internal selector/orientation source that breaks the Fourier pair-plane degeneracy before replaying P2302/P2281."
+  },
+  "gatekeeper_checks": {
+    "release7_schematic_lagrangian_detected": true,
+    "schematic_eom_derived": true,
+    "kernel_matrix_real_symmetric": true,
+    "kernel_matrix_circulant": true,
+    "fourier_pair_degeneracy_verified": true,
+    "alpha_scaling_preserves_pair_degeneracy": true,
+    "full_eom_not_derived": true,
+    "full_lagrangian_not_derived": true,
+    "selector_source_not_exported": true,
+    "p2314_inventory_loaded": true,
+    "strict_g1_g3_not_updated": true,
+    "no_selector_premise_added": true,
+    "no_qw2191_discharge_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_PARTIAL_COMPUTATIONAL_EOM_PROGRESS_WITH_NONSELECTOR_SPECTRUM_TRACE"
+}

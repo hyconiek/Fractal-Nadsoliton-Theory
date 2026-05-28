@@ -25,6 +25,10 @@ class TestP2282S1232StrictTask3GlobalBianchiIG1G2G3ClosureMatrixProbe(unittest.T
         self.assertTrue(g["contains_G2"])
         self.assertTrue(g["contains_G3"])
         self.assertTrue(g["closure_score_bounded"])
+        rows = data["strict_task3_global_bianchi_i_g1_g2_g3_closure_matrix_probe"]["gap_rows"]
+        by_id = {row["id"]: row for row in rows}
+        self.assertLess(by_id["G2_nonlinear_trajectory_realism"]["metric"], 1.0)
+        self.assertEqual(by_id["G3_operational_policy_rule"]["status"], "OPEN")
 
 
 if __name__ == "__main__":

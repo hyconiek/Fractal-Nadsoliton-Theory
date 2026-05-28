@@ -1,0 +1,165 @@
+{
+  "schema_version": "p2311_s1261_v1",
+  "packet_id": "P2311",
+  "stage_id": "S1261",
+  "produced_by": "p2311_s1261_strict_self_energy_to_policy_margin_theorem_audit_probe.py",
+  "timestamp_utc": "2026-05-28T00:00:00+00:00",
+  "status": "OPEN_OBSTRUCTION_SELF_ENERGY_TO_POLICY_MARGIN_THEOREM_NOT_DERIVED",
+  "result_kind": "CURRENT_ADM_BIANCHI_EXPORT_SET_REFUTES_SELF_ENERGY_BRIDGE_USE_WITHOUT_NEW_LAPSE_SHEAR_SOURCE",
+  "strict_self_energy_to_policy_margin_theorem_audit_probe": {
+    "probe_id": "P2311_S1261_STRICT_SELF_ENERGY_TO_POLICY_MARGIN_THEOREM_AUDIT",
+    "source_packets": {
+      "p1980": "generated/p1980_s930_strict_adm_bianchi_eh_lapse_variation_witness.json",
+      "p1981": "generated/p1981_s931_strict_adm_bianchi_r2_lapse_variation_obligation.json",
+      "p1982": "generated/p1982_s932_strict_adm_bianchi_ricci2_lapse_variation_obligation.json",
+      "p1983": "generated/p1983_s933_strict_adm_bianchi_riemann2_lapse_variation_obligation.json",
+      "p1984": "generated/p1984_s934_strict_adm_bianchi_gauss_bonnet_lapse_cancellation_witness.json",
+      "p1985": "generated/p1985_s935_strict_adm_bianchi_non_gb_curvature_squared_lapse_obstruction_witness.json",
+      "p1986": "generated/p1986_s936_strict_adm_bianchi_non_gb_residual_decomposition_witness.json",
+      "p2281": "generated/p2281_s1231_strict_nu_branch_group_policy_minimal_config_fresh_replay_validation_probe.json",
+      "p2300": "generated/p2300_s1250_strict_shannon_nad12_sigma_adm_bianchi_spatial_eom_provider_operator_probe.json",
+      "p2302": "generated/p2302_s1252_strict_task3_provider_lift_policy_lock_candidate_probe.json",
+      "p2310": "generated/p2310_s1260_strict_self_energy_response_source_audit_and_replay_probe.json"
+    },
+    "source_hashes": {
+      "p1980_sha256": "32985ff98c8133cca40416fe0510cdf1fb0c26360b9e3033ef6be2b6b066f418",
+      "p1981_sha256": "ec2aeff9aadf02b94c3d6665bed96e287824f5c4e28de9114e3dde276b0c97d0",
+      "p1982_sha256": "7aadaa0922a86b261cd5cdb7035cccd39b68aae7bd4e6a9f2d1da3eea9f80b2c",
+      "p1983_sha256": "bed10041155684c728d2a42274857139e8baab245b5c991e163bcf3ffc5d43b5",
+      "p1984_sha256": "d69d18a541197b4f6391512e29936328afa8c6cbda42a5429d8599138fefe46f",
+      "p1985_sha256": "a127e42e199bd2cc8d4323056d2b3bccbf8d40db51cf1a095fb65b268e8e66f6",
+      "p1986_sha256": "2888c2881ff17f904543f2626f16cf5e0311043942e3d80eea00803c554d80bb",
+      "p2281_sha256": "3f1dcff92a20b76ea948c54e906921ff4172c2c40db35f7d6678836b4a23d14b",
+      "p2300_sha256": "13126823c36db20fa4eb705974176e81f9b8c76d1b7a1ca4fe5f087a8ffea67d",
+      "p2302_sha256": "1912c3247bf0d48e34b800b9c3103887d00a430620e9ce7f6a46a94579b87fa9",
+      "p2310_sha256": "f4515e81fdb9fcd608d046f0ce8abb3ffc2c1a18d343769e813e13c2fcd2e553"
+    },
+    "attempted_theorem": {
+      "theorem_id": "P2311_ATTEMPT_E_NORM_SQUARED_TO_PROVIDER_LIFT_PER_STEP",
+      "candidate_statement": "E(c)=||c||_2^2 from P2300 is a strict ADM/Bianchi-I lapse/shear energy whose signed policy-margin response is provider_lift_per_step >= 0.0068.",
+      "candidate_lambda_numeric": 0.0094608371836785,
+      "required_lift": 0.0068,
+      "numeric_condition_passes": true,
+      "p2310_replay_passes": true,
+      "strict_theorem_proven": false,
+      "failure_mode": "MISSING_ADM_LAPSE_SHEAR_TO_POLICY_MARGIN_RESPONSE_SOURCE",
+      "why_numeric_pass_is_insufficient": "The replay uses lambda as an injected margin lift.  Without a strict theorem proving E(c) is that lambda, the replay is a conditional simulation, not a G1/G3 closure proof."
+    },
+    "theorem_obligations": [
+      {
+        "obligation_id": "O1_TYPED_SELF_ENERGY_DOMAIN",
+        "requirement": "P2300 must export the canonical ADM/Bianchi-I coefficient vector c used in E(c)=||c||^2.",
+        "satisfied": true,
+        "evidence": "P2300 provider basis / provider-matrix pass."
+      },
+      {
+        "obligation_id": "O2_SELF_ENERGY_NUMERIC_LIFT_AND_REPLAY",
+        "requirement": "The self-energy candidate must exceed the P2302 required lift and replay through the policy-lock simulator.",
+        "satisfied": true,
+        "evidence": "P2310 lambda=||c||^2 replay."
+      },
+      {
+        "obligation_id": "O3_ADM_LAPSE_SHEAR_ENERGY_SOURCE_THEOREM",
+        "requirement": "A strict ADM lapse/shear theorem must identify E(c)=||c||^2 as a physical margin source rather than a norm diagnostic.",
+        "satisfied": false,
+        "evidence": "P1980 gives an EH shear-sign witness, P1981-P1983 export curvature-squared lapse obligations, P1984 cancels GB, and P1985/P1986 leave a non-GB residual obstruction; none exports E(c)->provider_lift_per_step."
+      },
+      {
+        "obligation_id": "O4_SIGNED_MONOTONE_POLICY_MARGIN_RESPONSE",
+        "requirement": "The ADM source must be mapped to the P2281 policy-margin recurrence with a signed monotone orientation.",
+        "satisfied": false,
+        "evidence": "P2281 global replay remains open, while P2306/P2307/P2308/P2309/P2310 already quarantine norm/response routes without a typed response functional."
+      },
+      {
+        "obligation_id": "O5_NO_SELECTOR_OR_CONVENTION_LAYER",
+        "requirement": "The bridge must not select positive channels, signs, lapse normalization, or policy response orientation by a convention/selector premise.",
+        "satisfied": true,
+        "evidence": "P2311 does not add a selector/convention layer and therefore refuses G1/G3 closure."
+      }
+    ],
+    "adm_lapse_shear_evidence_audit": {
+      "eh_lapse_shear_sign_present": true,
+      "eh_lapse_shear_sign_is_only_sub_witness": true,
+      "curvature_squared_lapse_obligations_present": {
+        "R2": true,
+        "Ricci2": true,
+        "Riemann2": true
+      },
+      "gb_lapse_cancellation_present": true,
+      "non_gb_lapse_obstruction_present": true,
+      "non_gb_decomposition_obstruction_present": true,
+      "missing_bridge_objects": [
+        "strict theorem identifying coefficient self-energy E(c)=||c||^2 with ADM lapse/shear energy density",
+        "normalization from ADM lapse/shear source to provider_lift_per_step",
+        "signed monotone response functional from ADM source to P2281 policy margin",
+        "proof that the non-GB residual obstruction is exactly cancelled or positively oriented by the P2300 coefficients"
+      ],
+      "current_export_set_conclusion": "The current ADM/Bianchi-I export set contains real lapse/shear facts, but it does not export the self-energy-to-policy-margin bridge theorem requested for P2311."
+    },
+    "admissibility_verdict": {
+      "self_energy_to_policy_margin_theorem_proven": false,
+      "current_export_set_nonexistence_scope": "current exported interface set P1980-P1986/P2281/P2300/P2302/P2310 only; not a universal no-go for future lapse/shear sources",
+      "current_export_set_can_supply_bridge_without_new_lapse_shear_source": false,
+      "formal_blocker": "P2310 supplies a non-target-calibrated scalar and replay pass, but P2311 finds no strict ADM/Bianchi-I lapse/shear source theorem or signed response functional tying that scalar to P2281 policy margin.",
+      "admissible_for_g1_g3_update": false
+    },
+    "task3_g1_g3_update": {
+      "G1_reduction_certainty": "OPEN_UNCHANGED",
+      "G2_nonlinear_trajectory_realism": "CLOSED_FROM_P2301_UNCHANGED",
+      "G3_operational_policy_rule": "OPEN_UNCHANGED",
+      "reason": "P2311 does not export E(c)=||c||^2 as a strict ADM lapse/shear policy-margin source."
+    },
+    "theorem_export": {
+      "statement_id": "P2311_SELF_ENERGY_TO_POLICY_MARGIN_CURRENT_EXPORT_NONDERIVATION_THEOREM",
+      "formal_statement": "Within the currently exported strict ADM/Bianchi-I interface class P1980-P1986 together with P2281, P2300, P2302, and P2310, the implication E(c)=||c||_2^2 -> provider_lift_per_step is not derivable.  P2310's self-energy scalar is large enough and passes the conditional replay, but the export set lacks both an ADM lapse/shear energy-source theorem for E(c) and a signed monotone response functional from that source to the P2281 policy margin.  Therefore G1 and G3 remain open unless a new lapse/shear source or equivalent strict bridge is exported.",
+      "proof_bits": {
+        "self_energy_lambda": 0.0094608371836785,
+        "required_lift": 0.0068,
+        "numeric_condition_passes": true,
+        "conditional_replay_passes": true,
+        "eh_lapse_sign_present": true,
+        "gb_lapse_cancellation_present": true,
+        "non_gb_lapse_obstruction_present": true,
+        "non_gb_decomposition_obstruction_present": true,
+        "p2281_global_all_rows_meet_target": false,
+        "failed_obligations": [
+          "O3_ADM_LAPSE_SHEAR_ENERGY_SOURCE_THEOREM",
+          "O4_SIGNED_MONOTONE_POLICY_MARGIN_RESPONSE"
+        ]
+      },
+      "not_claimed": [
+        "universal impossibility of future ADM lapse/shear sources",
+        "strict G1 closure",
+        "strict G3 closure",
+        "full Task-3 closure",
+        "QW-2191 discharge",
+        "selector closure",
+        "legacy-kernel role transfer",
+        "ToE closure"
+      ]
+    },
+    "theorem_fingerprint_sha256": "acbe2ac1fb8a3a7a7e51bdc9344c1c007ed31b878f8058e5c5ef38416a4706c3"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2312_candidate",
+    "goal": "Introduce a genuinely new lapse/shear source or variational identity that maps ADM energy into the P2281 policy margin with signed monotone orientation; otherwise keep P2308/P2309/P2310/P2311 as the formal G1/G3 blocker stack."
+  },
+  "gatekeeper_checks": {
+    "p1980_eh_lapse_witness_loaded": true,
+    "p1981_p1983_curvature_squared_obligations_loaded": true,
+    "p1984_gb_lapse_cancellation_loaded": true,
+    "p1985_p1986_non_gb_obstruction_loaded": true,
+    "p2300_coefficients_loaded": true,
+    "p2310_self_energy_replay_loaded": true,
+    "self_energy_numeric_condition_passes": true,
+    "adm_lapse_shear_energy_to_policy_margin_theorem_not_exported": true,
+    "signed_monotone_policy_response_not_exported": true,
+    "current_export_set_blocks_self_energy_bridge_use": true,
+    "strict_g1_g3_not_updated": true,
+    "no_selector_premise_added": true,
+    "no_qw2191_discharge_claimed": true,
+    "no_legacy_kernel_role_transfer": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_THEOREM_GRADE_CURRENT_EXPORT_NONDERIVATION_TRACE"
+}

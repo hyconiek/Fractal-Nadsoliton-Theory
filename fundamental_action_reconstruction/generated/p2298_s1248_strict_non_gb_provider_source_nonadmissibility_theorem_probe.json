@@ -1,0 +1,203 @@
+{
+  "schema_version": "p2298_s1248_v1",
+  "packet_id": "P2298",
+  "stage_id": "S1248",
+  "produced_by": "p2298_s1248_strict_non_gb_provider_source_nonadmissibility_theorem_probe.py",
+  "timestamp_utc": "2026-05-28T00:00:00+00:00",
+  "status": "OPEN_OBSTRUCTION_WITH_THEOREM_GRADE_NONADMISSIBILITY_TRACE",
+  "result_kind": "STRICT_NON_GB_PROVIDER_SOURCE_NONADMISSIBILITY_THEOREM_WITH_TRACE",
+  "strict_non_gb_provider_source_nonadmissibility_theorem_probe": {
+    "probe_id": "P2298_S1248_STRICT_NON_GB_PROVIDER_SOURCE_NONADMISSIBILITY_THEOREM",
+    "source_packets": {
+      "p1988": "generated/p1988_s938_strict_non_gb_to_spatial_eom_family_projection_witness.json",
+      "p1991": "generated/p1991_s941_strict_augmented_provider_channel_matrix_witness.json",
+      "p2168": "generated/p2168_s1118_strict_qw2191_theorem_obligations_executable_validator.json",
+      "p2181": "generated/p2181_s1131_strict_qw2191_replay_certificate_freeze.json",
+      "p2297": "generated/p2297_s1247_strict_non_gb_spatial_eom_provider_matrix_obstruction_probe.json"
+    },
+    "source_hashes": {
+      "p1988_sha256": "7c221d57fcbb6edfb2230fae4cd5ca545d65cb0ae8b18f5052bf237b8b2de0b1",
+      "p1991_sha256": "f8d523bde2c223ff37cc5fbf8ee2451e0e92c7d3d95874c8d348e7348ffa984a",
+      "p2168_sha256": "4ea39f70a6bc43ac9ff9dcf5de6efc9f528ad6083eda29e632974257e929b50d",
+      "p2181_sha256": "c33850581bc17e70f98e2b41ef1615a49f7f0eb106f3afd684abd14ba5a9634e",
+      "p2297_sha256": "477da8b9bab1dd79ac2d701b6e10e63a8eac8d0e37e368984a2f6910efda24b5"
+    },
+    "residual_family_scope": {
+      "strict_non_gb_families_detected": [
+        "H2_Q",
+        "H_Qd",
+        "Hd_Q",
+        "Q2",
+        "d2sigma_sigma",
+        "dsigma_sq",
+        "Ndd_sigma_sq",
+        "Nd2_sigma_sq"
+      ],
+      "outside_eh_families": [
+        "H2_Q",
+        "H_Qd",
+        "Hd_Q",
+        "Q2",
+        "d2sigma_sigma",
+        "dsigma_sq",
+        "Ndd_sigma_sq",
+        "Nd2_sigma_sq"
+      ],
+      "formal_full_basis_monomial_count": 36,
+      "formal_full_basis_rank": 31
+    },
+    "exported_provider_source_inventory": [
+      {
+        "source_id": "strict_core_minimal_provider_from_P2297",
+        "source_packet": "P2297.strict_core_minimal_provider",
+        "exported_current_source": true,
+        "algebraically_capable_for_full_residual_family": false,
+        "strict_admissible_source": true,
+        "internal_selector_source_exported": false,
+        "noncyclic_anchor_exported": false,
+        "no_legacy_transfer_used": true,
+        "qw2191_discharged": false,
+        "failure_mode": "rank_A<rank_augmented; no componentwise full-family solution in the strict-core provider class"
+      },
+      {
+        "source_id": "p1990_augmented_provider_channel_from_P1991_P2297",
+        "source_packet": "P1991/P2297.p1990_augmented_provider_non_strict",
+        "exported_current_source": true,
+        "algebraically_capable_for_full_residual_family": false,
+        "strict_admissible_source": false,
+        "internal_selector_source_exported": false,
+        "noncyclic_anchor_exported": false,
+        "no_legacy_transfer_used": true,
+        "qw2191_discharged": false,
+        "failure_mode": "explicitly non-strict augmented selector label and still rank-inconsistent for the full P2297 residual system"
+      },
+      {
+        "source_id": "formal_full_residual_basis_provider_from_P2297",
+        "source_packet": "P2297.formal_full_residual_basis_provider",
+        "exported_current_source": true,
+        "algebraically_capable_for_full_residual_family": true,
+        "strict_admissible_source": false,
+        "internal_selector_source_exported": false,
+        "noncyclic_anchor_exported": false,
+        "no_legacy_transfer_used": true,
+        "qw2191_discharged": false,
+        "failure_mode": "copies the residual-family basis; no internal strict selector/source exported, so strict promotion would require a new source or explicit non-strict selector premise"
+      }
+    ],
+    "admissibility_matrix": {
+      "columns": [
+        "exported_current_source",
+        "algebraically_capable_for_full_residual_family",
+        "strict_admissible_source",
+        "internal_selector_source_exported",
+        "noncyclic_anchor_exported",
+        "no_legacy_transfer_used",
+        "qw2191_discharged"
+      ],
+      "rows": [
+        "strict_core_minimal_provider_from_P2297",
+        "p1990_augmented_provider_channel_from_P1991_P2297",
+        "formal_full_residual_basis_provider_from_P2297"
+      ],
+      "matrix": [
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "deficiency_l1_scores_for_required_bits": [
+        4.0,
+        5.0,
+        4.0
+      ],
+      "capability_polynomial": "x**2",
+      "strict_legal_polynomial": "0",
+      "strict_legal_polynomial_is_zero": true
+    },
+    "nonadmissibility_result": {
+      "legal_strict_capable_sources": [],
+      "algebraically_capable_sources": [
+        "formal_full_residual_basis_provider_from_P2297"
+      ],
+      "capable_but_non_admissible_sources": [
+        "formal_full_residual_basis_provider_from_P2297"
+      ],
+      "theorem_grade_current_inventory_verdict": "NO_CURRENT_LEGAL_STRICT_PROVIDER_SOURCE_FOR_FULL_P2297_RESIDUAL_FAMILY",
+      "required_escape_hatches": [
+        "export a genuinely new noncyclic internal strict provider source and re-run P2297/P2298",
+        "or introduce an explicit non-strict selector premise and keep the closure outside strict-core"
+      ]
+    },
+    "qw2191_binding": {
+      "p2168_all_required_pass": false,
+      "p2181_replay_certified": true,
+      "selector_closure_status": "NOT_CLAIMED_AND_NOT_DISCHARGED",
+      "reason": "P2168 required QW-2191 obligations do not all pass; P2181 certifies replay consistency only."
+    },
+    "theorem_export": {
+      "statement_id": "P2298_CURRENT_STRICT_PROVIDER_SOURCE_NONADMISSIBILITY_THEOREM",
+      "scope": "current exported provider-source inventory for the P2297 strict non-GB ADM/Bianchi-I full residual family",
+      "formal_statement": "For every provider source exported in the current strict inventory, algebraic cancellation of the P2297 full non-GB spatial-EOM residual is not simultaneously legal as a strict provider: the strict-core source is matrix-inconsistent, the augmented channel is non-strict and matrix-inconsistent, and the only algebraically capable full-basis source is a residual-copying basis with no internal selector source. Any promotion of that basis therefore requires either a new noncyclic internal strict provider source or an explicit non-strict selector premise; QW-2191 remains undischarged.",
+      "not_claimed": [
+        "absolute impossibility over all future mathematical ansatz classes",
+        "strict selector closure",
+        "QW-2191 discharge",
+        "legacy-to-strict bridge",
+        "ToE closure"
+      ],
+      "proof_obligations": {
+        "full_residual_family_present": true,
+        "p2297_formal_basis_spans_residual": true,
+        "strict_core_rejected_by_rank": true,
+        "p1990_augmented_rejected_by_rank_and_label": true,
+        "qW2191_replay_available_but_not_discharged": true,
+        "legal_strict_capable_source_count_zero": true
+      }
+    },
+    "theorem_fingerprint_sha256": "b200ad4719a2fce5f195d64103a45cfeec5d1bc798a702c174f8940ff2c00874"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2299_candidate",
+    "goal": "Either construct a genuinely noncyclic internal strict provider source for the P2297 residual family, or formalize an explicitly non-strict selector-premise theorem branch without promoting it to strict closure."
+  },
+  "gatekeeper_checks": {
+    "p2297_provider_matrix_loaded": true,
+    "full_residual_family_detected": true,
+    "formal_basis_rank_positive": true,
+    "strict_core_matrix_inconsistent": true,
+    "augmented_non_strict_matrix_inconsistent": true,
+    "formal_full_basis_algebraically_capable": true,
+    "formal_full_basis_marked_non_admissible": true,
+    "no_current_legal_strict_capable_provider_source": true,
+    "all_capable_sources_require_new_source_or_non_strict_selector": true,
+    "qw2191_replay_certified": true,
+    "qw2191_not_discharged": true,
+    "no_selector_closure_claimed": true,
+    "no_legacy_transfer_used": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_THEOREM_GRADE_NONADMISSIBILITY_TRACE"
+}

@@ -1,0 +1,354 @@
+{
+  "gatekeeper_checks": {
+    "all_required_bridge_fields_not_exported": true,
+    "diagonal_lane_target_calibration_possible": true,
+    "far_bridge_grep_hits_found": true,
+    "missing_bridge_fields_detected": true,
+    "no_qw2191_global_discharge_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true,
+    "p2302_required_lift_loaded": true,
+    "p2305_norm_bridge_refutation_loaded": true,
+    "p2317_loaded": true,
+    "shannon_lane_target_calibration_possible": true,
+    "strict_g1_g3_not_updated": true,
+    "target_calibration_not_promoted": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE",
+  "packet_id": "P2318",
+  "produced_by": "p2318_s1268_strict_selector_lane_to_task3_margin_bridge_obligation_probe.py",
+  "recommended_next_honest_step": "Either export the missing signed response/margin bridge fields for a lane source and replay P2302/P2281/P2282, or package the current matrix as a theorem-grade nonexistence result for direct lane-defect-to-margin bridges.",
+  "result_kind": "STRICT_SELECTOR_LANE_TO_PROVIDER_LIFT_OBLIGATION_AUDIT_NO_G1_G3_UPDATE",
+  "schema_version": "p2318_s1268_v1",
+  "stage_id": "S1268",
+  "status": "OPEN_SELECTOR_LANE_TO_TASK3_MARGIN_BRIDGE_FIELDS_MISSING",
+  "strict_selector_lane_to_task3_margin_bridge_obligation_probe": {
+    "bridge_obligation_verdict": {
+      "all_required_bridge_fields_exported": false,
+      "diagonal_local_can_be_target_calibrated_numerically": true,
+      "formal_status": "OPEN_NONEXISTENCE_FOR_DIRECT_LANE_DEFECT_TO_TASK3_MARGIN_BRIDGE_CURRENT_EXPORT_SET",
+      "missing_required_bridge_fields": [
+        "signed_scalar_lift_per_step",
+        "time_step_normalization",
+        "margin_response_functional",
+        "orientation_to_policy_sign_rule",
+        "p2281_replay_semantics",
+        "admissibility_theorem_no_selector_premise"
+      ],
+      "reason": "Existing lane defects are enough to cut O(2) to Z2 inside their lanes, but no exported theorem maps them to the signed P2302 provider_lift_per_step with replay semantics.",
+      "required_lift_per_step": 0.0068,
+      "shannon_can_be_target_calibrated_numerically": true,
+      "target_calibration_is_strict_bridge": false
+    },
+    "diagonal_local_lane_scale_witness": {
+      "max_strength": 25.57352236877763,
+      "min_nonzero_strength": 12.880483219862722,
+      "pair_strengths": [
+        12.88048321986275,
+        13.370999870061631,
+        25.57352236877763,
+        13.370999870061581,
+        12.880483219862722
+      ],
+      "reason": "Lane defect magnitudes are dimensionless axis-splitting data; P2302 requires a signed per-step policy-margin lift.  A scale/sign/response map can make the same lane data pass, fail, or vanish.",
+      "required_lift": 0.0068,
+      "scale_needed_if_every_pair_must_individually_exceed_required_lift": 0.0005279305041532808,
+      "target_calibrated_scale_using_max_strength": 0.000265900015724937,
+      "underdetermined": true,
+      "witnesses": [
+        {
+          "chosen_strength": 25.57352236877763,
+          "lift_value": 0.0068,
+          "passes_required_lift": true,
+          "scale": 0.000265900015724937,
+          "strict_admissible_without_exported_scale": false,
+          "witness_id": "POSITIVE_TARGET_CALIBRATED_SCALE"
+        },
+        {
+          "chosen_strength": 25.57352236877763,
+          "lift_value": -0.0068,
+          "passes_required_lift": false,
+          "scale": -0.000265900015724937,
+          "strict_admissible_without_exported_sign_rule": true,
+          "witness_id": "NEGATIVE_SAME_MAGNITUDE_SCALE"
+        },
+        {
+          "chosen_strength": 25.57352236877763,
+          "lift_value": 0.0,
+          "passes_required_lift": false,
+          "scale": 0.0,
+          "strict_admissible_without_exported_response": true,
+          "witness_id": "ZERO_RESPONSE_SCALE"
+        }
+      ]
+    },
+    "existing_bridge_blockers": {
+      "p2305_norm_to_margin_verdict": {
+        "norm_to_margin_bridge_proven": false,
+        "norm_to_margin_bridge_refuted_as_norm_only_theorem": true,
+        "reason": "Norm magnitude alone does not determine signed policy-margin lift; current strict artifacts lack the required response/orientation theorem."
+      },
+      "p2306_status": "OPEN_OBSTRUCTION_STRICT_RESPONSE_ORIENTATION_FUNCTIONAL_NOT_EXPORTED",
+      "p2307_status": "OPEN_OBSTRUCTION_STRICT_DYNAMICAL_RESPONSE_FUNCTIONAL_NONDERIVED",
+      "p2308_status": "OPEN_OBSTRUCTION_CURRENT_INTERFACE_CLASS_RESPONSE_FUNCTIONAL_NONEXISTENCE",
+      "p2313_status": "OPEN_OBSTRUCTION_CURRENT_PROVIDER_MARGIN_ROUTE_STOPPED_NEW_SOURCE_CLASS_REQUIRED"
+    },
+    "far_bridge_grep_audit": {
+      "hit_count": 22,
+      "search_patterns": [
+        "provider_lift_per_step",
+        "policy-margin",
+        "policy margin",
+        "response functional",
+        "orientation interface",
+        "mode-index assignment",
+        "Task-3",
+        "G1/G3",
+        "bridge_obligation",
+        "underdetermination"
+      ],
+      "top_hits": [
+        {
+          "first_hit_excerpt": "\"produced_by\": \"p2318_s1268_strict_selector_lane_to_task3_margin_bridge_obligation_probe.py\",",
+          "first_hit_line": 19,
+          "path": "fundamental_action_reconstruction/generated/p2318_s1268_strict_selector_lane_to_task3_margin_bridge_obligation_probe.json",
+          "pattern_hit_count": 53
+        },
+        {
+          "first_hit_excerpt": "OUT = GEN / \"p2318_s1268_strict_selector_lane_to_task3_margin_bridge_obligation_probe.json\"",
+          "first_hit_line": 13,
+          "path": "fundamental_action_reconstruction/p2318_s1268_strict_selector_lane_to_task3_margin_bridge_obligation_probe.py",
+          "pattern_hit_count": 42
+        },
+        {
+          "first_hit_excerpt": "required_lift = float(nested(p2302_probe, \"policy_lock_candidate\", \"provider_lift_per_step\", default=0.0) or 0.0)",
+          "first_hit_line": 72,
+          "path": "fundamental_action_reconstruction/p2311_s1261_strict_self_energy_to_policy_margin_theorem_audit_probe.py",
+          "pattern_hit_count": 27
+        },
+        {
+          "first_hit_excerpt": "\"status\": \"OPEN_BRIDGE_OBLIGATION_WITH_CONDITIONAL_G1_G3_POLICY_LOCK_CANDIDATE_TRACE\",",
+          "first_hit_line": 7,
+          "path": "fundamental_action_reconstruction/generated/p2302_s1252_strict_task3_provider_lift_policy_lock_candidate_probe.json",
+          "pattern_hit_count": 23
+        },
+        {
+          "first_hit_excerpt": "\"theorem_id\": \"P2311_ATTEMPT_E_NORM_SQUARED_TO_PROVIDER_LIFT_PER_STEP\",",
+          "first_hit_line": 38,
+          "path": "fundamental_action_reconstruction/generated/p2311_s1261_strict_self_energy_to_policy_margin_theorem_audit_probe.json",
+          "pattern_hit_count": 21
+        },
+        {
+          "first_hit_excerpt": "\"recommended_next_honest_step\": \"A theorem-grade bridge from diagonal/local or Shannon lane source data to Task-3 provider_lift_per_step / policy-margin lift, or a nonexistence theorem for that bridge class.\",",
+          "first_hit_line": 21,
+          "path": "fundamental_action_reconstruction/generated/p2317_s1267_strict_fourier_degeneracy_existing_lane_audit_probe.json",
+          "pattern_hit_count": 21
+        },
+        {
+          "first_hit_excerpt": "OUT = GEN / \"p2305_s1255_strict_norm_to_margin_bridge_underdetermination_probe.json\"",
+          "first_hit_line": 17,
+          "path": "fundamental_action_reconstruction/p2305_s1255_strict_norm_to_margin_bridge_underdetermination_probe.py",
+          "pattern_hit_count": 21
+        },
+        {
+          "first_hit_excerpt": "IN_2305 = GEN / \"p2305_s1255_strict_norm_to_margin_bridge_underdetermination_probe.json\"",
+          "first_hit_line": 14,
+          "path": "fundamental_action_reconstruction/p2306_s1256_strict_response_orientation_functional_interface_audit_probe.py",
+          "pattern_hit_count": 19
+        },
+        {
+          "first_hit_excerpt": "\"produced_by\": \"p2305_s1255_strict_norm_to_margin_bridge_underdetermination_probe.py\",",
+          "first_hit_line": 5,
+          "path": "fundamental_action_reconstruction/generated/p2305_s1255_strict_norm_to_margin_bridge_underdetermination_probe.json",
+          "pattern_hit_count": 17
+        },
+        {
+          "first_hit_excerpt": "\"p2305\": \"generated/p2305_s1255_strict_norm_to_margin_bridge_underdetermination_probe.json\",",
+          "first_hit_line": 15,
+          "path": "fundamental_action_reconstruction/generated/p2306_s1256_strict_response_orientation_functional_interface_audit_probe.json",
+          "pattern_hit_count": 14
+        },
+        {
+          "first_hit_excerpt": "required_lift = float((p2302_probe.get(\"policy_lock_candidate\", {}) or {}).get(\"provider_lift_per_step\", 0.0) or 0.0)",
+          "first_hit_line": 52,
+          "path": "fundamental_action_reconstruction/p2307_s1257_strict_dynamical_margin_response_functional_nonderivation_probe.py",
+          "pattern_hit_count": 13
+        },
+        {
+          "first_hit_excerpt": "required_lift = float((p2302_probe.get(\"policy_lock_candidate\", {}) or {}).get(\"provider_lift_per_step\", 0.0) or 0.0)",
+          "first_hit_line": 58,
+          "path": "fundamental_action_reconstruction/p2308_s1258_strict_current_interface_class_response_functional_nonexistence_probe.py",
+          "pattern_hit_count": 10
+        },
+        {
+          "first_hit_excerpt": "\"missing_object\": \"exported strict weights/response functional w_i mapping P2300 coefficients to provider_lift_per_step\"",
+          "first_hit_line": 56,
+          "path": "fundamental_action_reconstruction/generated/p2307_s1257_strict_dynamical_margin_response_functional_nonderivation_probe.json",
+          "pattern_hit_count": 8
+        },
+        {
+          "first_hit_excerpt": "\"failure_reason\": \"Would select/weight channels by a sign rule not exported as an ADM/Bianchi policy-margin theorem; this is a selector/orientation premise.\",",
+          "first_hit_line": 57,
+          "path": "fundamental_action_reconstruction/generated/p2308_s1258_strict_current_interface_class_response_functional_nonexistence_probe.json",
+          "pattern_hit_count": 8
+        },
+        {
+          "first_hit_excerpt": "required_lift_float = float((p2302_probe.get(\"policy_lock_candidate\", {}) or {}).get(\"provider_lift_per_step\", 0.0) or 0.0)",
+          "first_hit_line": 47,
+          "path": "fundamental_action_reconstruction/p2303_s1253_strict_provider_to_margin_bridge_bound_audit_probe.py",
+          "pattern_hit_count": 8
+        },
+        {
+          "first_hit_excerpt": "\"blocker\": \"self-energy scalar is non-target-calibrated and replay-passing but lacks ADM/policy-margin source theorem\",",
+          "first_hit_line": 72,
+          "path": "fundamental_action_reconstruction/p2313_s1263_strict_provider_margin_route_stop_and_source_class_contract_probe.py",
+          "pattern_hit_count": 8
+        },
+        {
+          "first_hit_excerpt": "\"provider_lift_per_step\": 0.0068,",
+          "first_hit_line": 115,
+          "path": "fundamental_action_reconstruction/generated/p2309_s1259_strict_min_norm_response_weights_replay_quarantine_probe.json",
+          "pattern_hit_count": 7
+        },
+        {
+          "first_hit_excerpt": "\"provider_lift_per_step\": provider_lift,",
+          "first_hit_line": 102,
+          "path": "fundamental_action_reconstruction/p2309_s1259_strict_min_norm_response_weights_replay_quarantine_probe.py",
+          "pattern_hit_count": 7
+        },
+        {
+          "first_hit_excerpt": "\"status\": \"OPEN_BRIDGE_OBLIGATION_STRICT_DIRECT_BOUND_REFUTED_WITH_TRACE\",",
+          "first_hit_line": 7,
+          "path": "fundamental_action_reconstruction/generated/p2303_s1253_strict_provider_to_margin_bridge_bound_audit_probe.json",
+          "pattern_hit_count": 6
+        },
+        {
+          "first_hit_excerpt": "\"blocker\": \"self-energy scalar is non-target-calibrated and replay-passing but lacks ADM/policy-margin source theorem\",",
+          "first_hit_line": 40,
+          "path": "fundamental_action_reconstruction/generated/p2313_s1263_strict_provider_margin_route_stop_and_source_class_contract_probe.json",
+          "pattern_hit_count": 6
+        },
+        {
+          "first_hit_excerpt": "\"intent\": \"Export one strict-derived canonical mode-index assignment basis on the QW-2190 real Fourier scaffold for n=12, constructed by diagonal/local defect reconstruction on each Fourier-degenerate pair plane pair_m (m=1..5) from the can",
+          "first_hit_line": 5,
+          "path": "fundamental_action_reconstruction/generated/mode_index_assignment_canonical_local_diagonal_strict_derived_v1.json",
+          "pattern_hit_count": 1
+        },
+        {
+          "first_hit_excerpt": "\"intent\": \"Export one strict-core mode-index assignment basis object on the n=12 QW-2190 Fourier scaffold by using the strict Shannon element-order reference datum (r_ord) as an internal symmetry-breaking selector ingredient. This cuts each",
+          "first_hit_line": 5,
+          "path": "fundamental_action_reconstruction/generated/mode_index_assignment_shannon_element_order_reference_strict_core_v1.json",
+          "pattern_hit_count": 1
+        }
+      ]
+    },
+    "interface_obligation_matrix": [
+      {
+        "diagonal_local_lane_exports": "pairwise defect magnitudes, angles, residual Z2 axes",
+        "required_field": "signed_scalar_lift_per_step",
+        "shannon_lane_exports": "pairwise element-order defects, angles, residual Z2 axes",
+        "status": "MISSING_TYPED_MAP_TO_PROVIDER_LIFT_PER_STEP"
+      },
+      {
+        "diagonal_local_lane_exports": "none",
+        "required_field": "time_step_normalization",
+        "shannon_lane_exports": "none",
+        "status": "MISSING_DELTA_T_OR_REPLAY_CLOCK_THEOREM"
+      },
+      {
+        "diagonal_local_lane_exports": "none",
+        "required_field": "margin_response_functional",
+        "shannon_lane_exports": "none",
+        "status": "MISSING_RESPONSE_FUNCTIONAL_R"
+      },
+      {
+        "diagonal_local_lane_exports": "axis up to residual Z2; no signed policy orientation",
+        "required_field": "orientation_to_policy_sign_rule",
+        "shannon_lane_exports": "axis up to residual Z2; r_ord is not translation-invariant but direction-free under Aut(Z12)",
+        "status": "MISSING_SIGN_ORIENTATION_RULE"
+      },
+      {
+        "diagonal_local_lane_exports": "mode-index basis object, not replay row semantics",
+        "required_field": "p2281_replay_semantics",
+        "shannon_lane_exports": "mode-index basis object, not replay row semantics",
+        "status": "MISSING_REPLAY_COUPLING_THEOREM"
+      },
+      {
+        "diagonal_local_lane_exports": "lane-scoped hard limits preserve no global selector closure",
+        "required_field": "admissibility_theorem_no_selector_premise",
+        "shannon_lane_exports": "lane-scoped hard limits preserve no global selector closure",
+        "status": "MISSING_TASK3_ADMISSIBILITY_THEOREM"
+      }
+    ],
+    "probe_id": "P2318_S1268_STRICT_SELECTOR_LANE_TO_TASK3_MARGIN_BRIDGE_OBLIGATION",
+    "shannon_element_order_lane_scale_witness": {
+      "max_strength": 35.0,
+      "min_nonzero_strength": 10.0,
+      "pair_strengths": [
+        10.0,
+        22.0,
+        35.0,
+        22.0,
+        10.0
+      ],
+      "reason": "Lane defect magnitudes are dimensionless axis-splitting data; P2302 requires a signed per-step policy-margin lift.  A scale/sign/response map can make the same lane data pass, fail, or vanish.",
+      "required_lift": 0.0068,
+      "scale_needed_if_every_pair_must_individually_exceed_required_lift": 0.0006799999999999999,
+      "target_calibrated_scale_using_max_strength": 0.00019428571428571428,
+      "underdetermined": true,
+      "witnesses": [
+        {
+          "chosen_strength": 35.0,
+          "lift_value": 0.0068,
+          "passes_required_lift": true,
+          "scale": 0.00019428571428571428,
+          "strict_admissible_without_exported_scale": false,
+          "witness_id": "POSITIVE_TARGET_CALIBRATED_SCALE"
+        },
+        {
+          "chosen_strength": 35.0,
+          "lift_value": -0.0068,
+          "passes_required_lift": false,
+          "scale": -0.00019428571428571428,
+          "strict_admissible_without_exported_sign_rule": true,
+          "witness_id": "NEGATIVE_SAME_MAGNITUDE_SCALE"
+        },
+        {
+          "chosen_strength": 35.0,
+          "lift_value": 0.0,
+          "passes_required_lift": false,
+          "scale": 0.0,
+          "strict_admissible_without_exported_response": true,
+          "witness_id": "ZERO_RESPONSE_SCALE"
+        }
+      ]
+    },
+    "source_hashes": {
+      "DIAGONAL_MODE_ASSIGNMENT": "774d2a5dad85a7698688b491b4472a9a0dcfff23c1d76a31589723878ccf6ac4",
+      "P2302_PROVIDER_LIFT_CANDIDATE": "1912c3247bf0d48e34b800b9c3103887d00a430620e9ce7f6a46a94579b87fa9",
+      "P2305_NORM_TO_MARGIN_UNDERDETERMINATION": "2a04c9cebff784c72c3a081ac17a80987c047ded0fd370b9ee77cc1b40ed7cd7",
+      "P2306_RESPONSE_ORIENTATION_INTERFACE": "8f193bac65583b7291a6638ed42abb039b90ce8f07ea2de837656524d750a843",
+      "P2307_DYNAMICAL_RESPONSE_NONDERIVATION": "08ec049881ebcdec7cd5c07003f289723ab721e89f7be00e2390f941b9939299",
+      "P2308_CURRENT_INTERFACE_NONEXISTENCE": "f00ef2ab7ba6dba05bc8fd54a3886d25ffa18c30fe1b540adf7f5f1a8e26cb29",
+      "P2313_ROUTE_STOP_SOURCE_CONTRACT": "bd81909fe96356c4d424deb94847223be3b24a38018d1ac27f20a4c418fcb3fe",
+      "P2317_FOURIER_DEGENERACY_LANE_AUDIT": "af128a4f52857652230985a002cd562585977e7889e9000480f4ca47556008fe",
+      "SHANNON_MODE_ASSIGNMENT": "e926baf783bc0c1455f3c1717d455892b0796ff5077ca216f80e9c8b591eff3b"
+    },
+    "theorem_export": {
+      "claim": "On the current export set, diagonal/local and Shannon O(2)->Z2 lane data do not supply a strict Task-3 provider_lift_per_step bridge.  They can be target-calibrated numerically, but sign, scale, response functional, replay clock, and admissibility theorem remain unexported.",
+      "nonpromotion_rule": "Do not promote lane O(2)->Z2 axis data to Task-3 G1/G3 closure until a theorem-grade signed response/margin bridge is exported and replayed through P2302/P2281/P2282.",
+      "proof_bits": {
+        "diagonal_max_defect": 25.57352236877763,
+        "diagonal_target_scale": 0.000265900015724937,
+        "missing_bridge_field_count": 6,
+        "required_lift_per_step": 0.0068,
+        "shannon_max_defect": 35.0,
+        "shannon_target_scale": 0.00019428571428571428,
+        "witnesses_per_lane": 3
+      },
+      "theorem_name": "P2318 selector-lane to Task-3 margin bridge obligation audit"
+    },
+    "theorem_fingerprint_sha256": "239d954eeb53c29beaa205a1d8e8d708a90b5cd5eb293473d1be6cd885ffabf5"
+  },
+  "timestamp_utc": "2026-05-28T00:00:00+00:00"
+}

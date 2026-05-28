@@ -13,19 +13,19 @@
       "generated/p2293_s1243_strict_task3_bianchi_i_metadata_validator_negative_control_matrix_probe.json"
     ],
     "inputs": {
-      "validator_decision": "METADATA_ACCEPT",
+      "validator_decision": "METADATA_REJECT",
       "all_expectations_met": true,
       "matrix_has_baseline_accept": true,
       "matrix_reject_paths_stable": true
     },
     "checks": {
-      "metadata_accept_required": true,
+      "metadata_accept_required": false,
       "negative_controls_consistent": true,
       "baseline_accept_present": true,
       "reject_paths_present": true
     },
-    "ci_gate_decision": "CI_GATE_OPEN",
-    "theorem_attempt_decision": "THEOREM_DRAFT_ADMIT",
+    "ci_gate_decision": "CI_GATE_BLOCK",
+    "theorem_attempt_decision": "THEOREM_DRAFT_HOLD",
     "theorem_scope_limit": "CI admission gating only; no theorem proof and no bridge/selector/ToE closure claim"
   },
   "recommended_next_honest_step": {
