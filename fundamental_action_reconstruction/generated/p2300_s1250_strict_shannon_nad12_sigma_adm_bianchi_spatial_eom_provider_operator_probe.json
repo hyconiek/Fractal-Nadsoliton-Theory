@@ -1,0 +1,237 @@
+{
+  "schema_version": "p2300_s1250_v1",
+  "packet_id": "P2300",
+  "stage_id": "S1250",
+  "produced_by": "p2300_s1250_strict_shannon_nad12_sigma_adm_bianchi_spatial_eom_provider_operator_probe.py",
+  "timestamp_utc": "2026-05-28T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_STRICT_PROVIDER_OPERATOR_MATRIX_PASS_TRACE",
+  "result_kind": "STRICT_SHANNON_NAD12_SIGMA_ADM_BIANCHI_SPATIAL_EOM_PROVIDER_OPERATOR_MATRIX_PASS_WITH_G1_G2_G3_HOLD",
+  "strict_shannon_nad12_sigma_adm_bianchi_spatial_eom_provider_operator_probe": {
+    "probe_id": "P2300_S1250_STRICT_SHANNON_NAD12_SIGMA_ADM_BIANCHI_SPATIAL_EOM_PROVIDER_OPERATOR",
+    "source_packets": {
+      "alpha_geo_strict_derived_v1": "generated/alpha_geo_strict_derived_v1.json",
+      "p1853": "generated/p1853_s803_strict_b1_symbolic_evaluation_and_scheme_trace_checkpoint.json",
+      "p1981": "generated/p1981_s931_strict_adm_bianchi_r2_lapse_variation_obligation.json",
+      "p1982": "generated/p1982_s932_strict_adm_bianchi_ricci2_lapse_variation_obligation.json",
+      "p1983": "generated/p1983_s933_strict_adm_bianchi_riemann2_lapse_variation_obligation.json",
+      "p1988": "generated/p1988_s938_strict_non_gb_to_spatial_eom_family_projection_witness.json",
+      "p2282": "generated/p2282_s1232_strict_task3_global_bianchi_i_g1_g2_g3_closure_matrix_probe.json",
+      "p2297": "generated/p2297_s1247_strict_non_gb_spatial_eom_provider_matrix_obstruction_probe.json",
+      "p2299": "generated/p2299_s1249_strict_shannon_provider_source_attempt_and_non_strict_selector_branch_probe.json"
+    },
+    "source_hashes": {
+      "alpha_geo_strict_derived_v1_sha256": "fde8d28194230eafaf65e0803b5c67ad9a756ff688cd0cfc00acccfd9f9c5328",
+      "p1853_sha256": "f789c624a66c9610e6254fb8be3bee9cf94cfe552ab8793b98058b0fb655dbb1",
+      "p1981_sha256": "ec2aeff9aadf02b94c3d6665bed96e287824f5c4e28de9114e3dde276b0c97d0",
+      "p1982_sha256": "7aadaa0922a86b261cd5cdb7035cccd39b68aae7bd4e6a9f2d1da3eea9f80b2c",
+      "p1983_sha256": "bed10041155684c728d2a42274857139e8baab245b5c991e163bcf3ffc5d43b5",
+      "p1988_sha256": "7c221d57fcbb6edfb2230fae4cd5ca545d65cb0ae8b18f5052bf237b8b2de0b1",
+      "p2282_sha256": "ac7b4272e3be29b6729e43168693f26c66ab943a2fcc7ec3c4369d28d15c224f",
+      "p2297_sha256": "477da8b9bab1dd79ac2d701b6e10e63a8eac8d0e37e368984a2f6910efda24b5",
+      "p2299_sha256": "82d9d90d7481e6bfd26b447d0417f8ac80e5f6a5efb8c02d2bf998a9d110ab6b"
+    },
+    "operator_basis_policy": {
+      "basis_kind": "density_level_shannon_nad12_sigma_provider_ansatz",
+      "base_density_factor": "V*(4*log(2))/N**3",
+      "uses_formal_full_residual_basis": false,
+      "uses_explicit_selector_premise": false,
+      "column_count": 10,
+      "p2297_formal_residual_basis_column_count": 36
+    },
+    "provider_basis": [
+      {
+        "column": 0,
+        "name": "H2_Q",
+        "density_term": "4*H**2*V*(sigma1**2 + sigma1*sigma2 + sigma2**2)*log(2)/N**3",
+        "canonical_coefficient": "-448561059/(640000000*pi**2)",
+        "canonical_coefficient_numeric": -0.07101365224021955
+      },
+      {
+        "column": 1,
+        "name": "Hd_Q",
+        "density_term": "4*Hd*V*(sigma1**2 + sigma1*sigma2 + sigma2**2)*log(2)/N**3",
+        "canonical_coefficient": "-53209843/(128000000*pi**2)",
+        "canonical_coefficient_numeric": -0.042119408392054386
+      },
+      {
+        "column": 2,
+        "name": "H_Qdot",
+        "density_term": "4*H*V*(2*dsigma1*sigma1 + dsigma1*sigma2 + dsigma2*sigma1 + 2*dsigma2*sigma2)*log(2)/N**3",
+        "canonical_coefficient": "45627961/(160000000*pi**2)",
+        "canonical_coefficient_numeric": 0.02889424384816516
+      },
+      {
+        "column": 3,
+        "name": "Q2",
+        "density_term": "4*V*(sigma1**2 + sigma1*sigma2 + sigma2**2)**2*log(2)/N**3",
+        "canonical_coefficient": "-256213377/(640000000*pi**2)",
+        "canonical_coefficient_numeric": -0.04056225409787581
+      },
+      {
+        "column": 4,
+        "name": "dot_sigma_sq",
+        "density_term": "4*V*(dsigma1**2 + dsigma1*dsigma2 + dsigma2**2)*log(2)/N**3",
+        "canonical_coefficient": "-32991491/(320000000*pi**2)",
+        "canonical_coefficient_numeric": -0.010446052869517292
+      },
+      {
+        "column": 5,
+        "name": "ddot_sigma_sigma",
+        "density_term": "4*V*(2*d2sigma1*sigma1 + d2sigma1*sigma2 + d2sigma2*sigma1 + 2*d2sigma2*sigma2)*log(2)/N**3",
+        "canonical_coefficient": "32991491/(640000000*pi**2)",
+        "canonical_coefficient_numeric": 0.005223026434758646
+      },
+      {
+        "column": 6,
+        "name": "Ndd_Q",
+        "density_term": "4*Ndd*V*(sigma1**2 + sigma1*sigma2 + sigma2**2)*log(2)/N**4",
+        "canonical_coefficient": "-32991491/(640000000*pi**2)",
+        "canonical_coefficient_numeric": -0.005223026434758646
+      },
+      {
+        "column": 7,
+        "name": "Nd2_Q",
+        "density_term": "4*Nd**2*V*(sigma1**2 + sigma1*sigma2 + sigma2**2)*log(2)/N**5",
+        "canonical_coefficient": "0",
+        "canonical_coefficient_numeric": 0.0
+      },
+      {
+        "column": 8,
+        "name": "Nd_H_Q",
+        "density_term": "4*H*Nd*V*(sigma1**2 + sigma1*sigma2 + sigma2**2)*log(2)/N**4",
+        "canonical_coefficient": "0",
+        "canonical_coefficient_numeric": 0.0
+      },
+      {
+        "column": 9,
+        "name": "Nd_Qdot",
+        "density_term": "4*Nd*V*(2*dsigma1*sigma1 + dsigma1*sigma2 + dsigma2*sigma1 + 2*dsigma2*sigma2)*log(2)/N**4",
+        "canonical_coefficient": "0",
+        "canonical_coefficient_numeric": 0.0
+      }
+    ],
+    "provider_matrix_report": {
+      "equation_count": 40,
+      "unknown_count": 10,
+      "rank_A": 7,
+      "rank_augmented": 7,
+      "consistent": true,
+      "full_solve": false,
+      "least_squares_residual_l2": 1.9606028603474197e-15,
+      "least_squares_residual_max_abs": 7.632783294297951e-16,
+      "least_squares_solution_preview": {
+        "u0": -0.029246821625721477,
+        "u1": -0.02819713152055507,
+        "u2": 0.029809155610632077,
+        "u3": -0.0405622540978758,
+        "u4": -0.019117629608872276,
+        "u5": 0.0008872380650811543,
+        "u6": -0.0008705763173801249,
+        "u7": -0.01740980046951414,
+        "u8": -0.02870948026236248,
+        "u9": 0.017359815226410995
+      }
+    },
+    "solution_space": {
+      "linsolve_tuple": [
+        "-3*u7/4 - u8 - 448561059/(640000000*pi**2)",
+        "-u7/4 - u8/3 - 53209843/(128000000*pi**2)",
+        "-u7/2 - u8/3 - u9 + 45627961/(160000000*pi**2)",
+        "-256213377/(640000000*pi**2)",
+        "-u7/6 - 2*u9/3 - 32991491/(320000000*pi**2)",
+        "-u7/12 - u9/3 + 32991491/(640000000*pi**2)",
+        "-u7/4 - 32991491/(640000000*pi**2)",
+        "u7",
+        "u8",
+        "u9"
+      ],
+      "canonical_free_parameters_set_to_zero": [
+        "u7",
+        "u8",
+        "u9"
+      ],
+      "canonical_solution": [
+        "-448561059/(640000000*pi**2)",
+        "-53209843/(128000000*pi**2)",
+        "45627961/(160000000*pi**2)",
+        "-256213377/(640000000*pi**2)",
+        "-32991491/(320000000*pi**2)",
+        "32991491/(640000000*pi**2)",
+        "-32991491/(640000000*pi**2)",
+        "0",
+        "0",
+        "0"
+      ],
+      "canonical_solution_numeric": [
+        -0.07101365224021955,
+        -0.042119408392054386,
+        0.02889424384816516,
+        -0.04056225409787581,
+        -0.010446052869517292,
+        0.005223026434758646,
+        -0.005223026434758646,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "exact_reconstruction_zero": true
+    },
+    "task3_g1_g2_g3_impact": {
+      "gap_status_before_p2300": {
+        "G1_reduction_certainty": "OPEN",
+        "G2_nonlinear_trajectory_realism": "OPEN",
+        "G3_operational_policy_rule": "OPEN"
+      },
+      "gap_status_after_p2300": {
+        "G1_reduction_certainty": "OPEN",
+        "G2_nonlinear_trajectory_realism": "OPEN",
+        "G3_operational_policy_rule": "OPEN"
+      },
+      "closure_score_after_p2300": 0.0,
+      "reason": "P2300 resolves a provider-matrix subproblem for the non-GB spatial residual, but it does not replay the global Bianchi-I transport atlas or the P2280/P2281 policy-lock feasibility criteria required by P2282 G1/G2/G3."
+    },
+    "theorem_export": {
+      "statement_id": "P2300_STRICT_SHANNON_NAD12_SIGMA_SPATIAL_EOM_PROVIDER_OPERATOR_MATRIX_THEOREM",
+      "formal_statement": "Using alpha_geo_strict_derived_v1 = 4 ln 2 as a strict-side Shannon source, the density-level Shannon/nad12-sigma ADM/Bianchi-I provider ansatz with ten non-residual-copying spatial-EOM columns has an exact componentwise solution for the P2297 strict non-GB residual matrix.  This is a provider-matrix pass for the local non-GB spatial-EOM subproblem only; it does not by itself close P2282 G1/G2/G3, discharge QW-2191, or prove global background-independence/ToE closure.",
+      "proof_bits": {
+        "new_density_level_columns": 10,
+        "rank_A": 7,
+        "rank_augmented": 7,
+        "matrix_consistent": true,
+        "exact_reconstruction_zero": true,
+        "formal_residual_basis_column_count_from_p2297": 36,
+        "task3_gaps_remain_open": true
+      },
+      "not_claimed": [
+        "P2282 G1/G2/G3 strict closure",
+        "QW-2191 discharge",
+        "selector closure",
+        "legacy-kernel role transfer",
+        "global background-independence theorem",
+        "ToE closure"
+      ]
+    },
+    "theorem_fingerprint_sha256": "e4fae08dd032418a18c026ce6e6969e178fc645ee22ff49daba089d459adf4a1"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2301_candidate",
+    "goal": "Integrate the P2300 provider coefficients into the global Bianchi-I transport/policy-lock replay and recompute P2282 G1/G2/G3; do not mark Task-3 closure until G1, G2, and G3 pass their own gate criteria."
+  },
+  "gatekeeper_checks": {
+    "alpha_geo_strict_source_loaded": true,
+    "alpha_geo_is_four_ln2_not_legacy_import": true,
+    "p1988_family_scope_loaded": true,
+    "p2299_no_column_blocker_was_real": true,
+    "new_spatial_eom_operator_columns_exported": true,
+    "operator_basis_not_formal_residual_copy": true,
+    "provider_matrix_consistent": true,
+    "exact_reconstruction_zero": true,
+    "canonical_solution_exported": true,
+    "strict_selector_premise_not_used": true,
+    "task3_g1_g2_g3_not_closed_by_p2300": true,
+    "no_qw2191_discharge_claimed": true,
+    "no_legacy_kernel_role_transfer": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE"
+}

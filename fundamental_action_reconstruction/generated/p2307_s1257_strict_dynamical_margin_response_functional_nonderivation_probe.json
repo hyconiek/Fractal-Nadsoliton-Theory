@@ -1,0 +1,199 @@
+{
+  "schema_version": "p2307_s1257_v1",
+  "packet_id": "P2307",
+  "stage_id": "S1257",
+  "produced_by": "p2307_s1257_strict_dynamical_margin_response_functional_nonderivation_probe.py",
+  "timestamp_utc": "2026-05-28T00:00:00+00:00",
+  "status": "OPEN_OBSTRUCTION_STRICT_DYNAMICAL_RESPONSE_FUNCTIONAL_NONDERIVED",
+  "result_kind": "STRICT_DYNAMICAL_MARGIN_REPLAY_DERIVES_SCALAR_LIFT_SENSITIVITY_BUT_NOT_P2300_RESPONSE_FUNCTIONAL",
+  "strict_dynamical_margin_response_functional_nonderivation_probe": {
+    "probe_id": "P2307_S1257_STRICT_DYNAMICAL_MARGIN_RESPONSE_FUNCTIONAL_NONDERIVATION",
+    "source_packets": {
+      "alpha_geo_strict_derived_v1": "generated/alpha_geo_strict_derived_v1.json",
+      "p2300": "generated/p2300_s1250_strict_shannon_nad12_sigma_adm_bianchi_spatial_eom_provider_operator_probe.json",
+      "p2302": "generated/p2302_s1252_strict_task3_provider_lift_policy_lock_candidate_probe.json",
+      "p2306": "generated/p2306_s1256_strict_response_orientation_functional_interface_audit_probe.json",
+      "p2302_script": "p2302_s1252_strict_task3_provider_lift_policy_lock_candidate_probe.py"
+    },
+    "source_hashes": {
+      "alpha_geo_strict_derived_v1_sha256": "fde8d28194230eafaf65e0803b5c67ad9a756ff688cd0cfc00acccfd9f9c5328",
+      "p2300_sha256": "13126823c36db20fa4eb705974176e81f9b8c76d1b7a1ca4fe5f087a8ffea67d",
+      "p2302_sha256": "1912c3247bf0d48e34b800b9c3103887d00a430620e9ce7f6a46a94579b87fa9",
+      "p2306_sha256": "8f193bac65583b7291a6638ed42abb039b90ce8f07ea2de837656524d750a843",
+      "p2302_script_sha256": "944473e8577f00246a115356a2c386cf8cf1f470fabc32c5a89a84a461407075"
+    },
+    "dynamical_interface_audit": {
+      "one_step_update_formula": "lambda - m**2/100 + m + xi - 3/200 + rho/(125*kappa)",
+      "d_update_d_provider_lift": "1",
+      "d_update_d_p2300_coefficients_without_bridge": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "horizon": 36,
+      "scalar_lift_total_derivative_over_horizon": "36",
+      "chain_rule_if_lambda_equals_w_dot_c": {
+        "lambda_response_ansatz": "c0*w0 + c1*w1 + c2*w2 + c3*w3 + c4*w4 + c5*w5 + c6*w6 + c7*w7 + c8*w8 + c9*w9",
+        "d_update_d_coefficients": [
+          "w0",
+          "w1",
+          "w2",
+          "w3",
+          "w4",
+          "w5",
+          "w6",
+          "w7",
+          "w8",
+          "w9"
+        ],
+        "missing_object": "exported strict weights/response functional w_i mapping P2300 coefficients to provider_lift_per_step"
+      }
+    },
+    "candidate_functionals": [
+      {
+        "candidate_id": "DYNAMICS_NATIVE_PROVIDER_LIFT_PARAMETER",
+        "definition": "lambda is the scalar provider_lift_per_step argument in the P2281/P2302 replay recurrence",
+        "derived_from_margin_dynamics": true,
+        "typed_on_p2300_coefficients": false,
+        "value": 0.0068,
+        "passes_required_lift": true,
+        "admissible_as_p2300_response_functional": false,
+        "rejection_reason": "The dynamics differentiates with respect to lambda, but does not derive lambda from P2300 coefficients."
+      },
+      {
+        "candidate_id": "CANONICAL_SIGNED_TOTAL_FROM_P2300",
+        "definition": "sum_i c_i",
+        "derived_from_margin_dynamics": false,
+        "typed_on_p2300_coefficients": true,
+        "value": -0.13524712375150189,
+        "passes_required_lift": false,
+        "admissible_as_p2300_response_functional": false,
+        "rejection_reason": "Well typed but negative, so it cannot lower-bound the positive policy lift."
+      },
+      {
+        "candidate_id": "POSITIVE_CHANNEL_SUM_FROM_P2300",
+        "definition": "sum_{i:c_i>0} c_i",
+        "derived_from_margin_dynamics": false,
+        "typed_on_p2300_coefficients": true,
+        "value": 0.03411727028292381,
+        "passes_required_lift": true,
+        "admissible_as_p2300_response_functional": false,
+        "rejection_reason": "Numerically sufficient but requires a channel-selection/sign premise not derived from the replay dynamics."
+      },
+      {
+        "candidate_id": "NORM_RESPONSE_FROM_P2300",
+        "definition": "||c||_2 or ||c||_1",
+        "derived_from_margin_dynamics": false,
+        "typed_on_p2300_coefficients": true,
+        "value": {
+          "l1": 0.2034816643173495,
+          "l2": 0.09726683496278934
+        },
+        "passes_required_lift": true,
+        "admissible_as_p2300_response_functional": false,
+        "rejection_reason": "P2305/P2306 already show unsigned norms need an orientation theorem absent from current dynamics."
+      }
+    ],
+    "strict_nonderivation_verdict": {
+      "scalar_lift_sensitivity_derived": true,
+      "p2300_to_margin_response_functional_derived": false,
+      "current_dynamics_refutes_closure_use": true,
+      "reason": "Replay dynamics contains lambda as an external scalar input; no strict equation maps P2300 coefficients to lambda."
+    },
+    "task3_g1_g3_update": {
+      "G1_reduction_certainty": "OPEN_UNCHANGED",
+      "G2_nonlinear_trajectory_realism": "CLOSED_FROM_P2301_UNCHANGED",
+      "G3_operational_policy_rule": "OPEN_UNCHANGED",
+      "reason": "P2307 proves a nonderivation of R(c) from current dynamics, not a strict response bridge."
+    },
+    "theorem_export": {
+      "statement_id": "P2307_STRICT_DYNAMICAL_MARGIN_RESPONSE_FUNCTIONAL_NONDERIVATION_THEOREM",
+      "formal_statement": "The P2281/P2302 margin dynamics exports a scalar sensitivity dM_{t+1}/d(lambda)=1 to an already supplied provider_lift_per_step lambda, but it does not export a typed functional lambda=R(c) from the P2300 ADM/Bianchi-I coefficient vector c.  Symbolically, with no bridge, dM_{t+1}/dc_i=0 for every P2300 coefficient; with the ansatz lambda=w\u00b7c the missing data are exactly the weights w_i.  Therefore the current strict dynamics does not derive the P2302 lift from P2300, and G1/G3 remain open.",
+      "proof_bits": {
+        "p2300_coefficient_names": [
+          "H2_Q",
+          "Hd_Q",
+          "H_Qdot",
+          "Q2",
+          "dot_sigma_sq",
+          "ddot_sigma_sigma",
+          "Ndd_Q",
+          "Nd2_Q",
+          "Nd_H_Q",
+          "Nd_Qdot"
+        ],
+        "required_lift": 0.0068,
+        "d_update_d_provider_lift": "1",
+        "d_update_d_coefficients_without_bridge": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "chain_rule_requires_unexported_weights": [
+          "w0",
+          "w1",
+          "w2",
+          "w3",
+          "w4",
+          "w5",
+          "w6",
+          "w7",
+          "w8",
+          "w9"
+        ],
+        "signed_total": -0.13524712375150189,
+        "positive_sum": 0.03411727028292381,
+        "l1_norm": 0.2034816643173495,
+        "l2_norm": 0.09726683496278934
+      },
+      "not_claimed": [
+        "strict response-functional bridge",
+        "strict derivation of provider_lift_per_step from P2300 coefficients",
+        "strict G1 closure",
+        "strict G3 closure",
+        "full Task-3 closure",
+        "QW-2191 discharge",
+        "selector closure",
+        "legacy-kernel role transfer",
+        "ToE closure"
+      ]
+    },
+    "theorem_fingerprint_sha256": "e34a6b90e495021ebc13d69a2af1aab37c4594572ea751825ff983b80beb3199"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2308_candidate",
+    "goal": "Either extend the strict ADM/Bianchi-I dynamics with an internally derived typed equation lambda=R(c), or package a stronger nonexistence theorem over the current P2300/P2281 interface class. Do not update G1/G3 until lambda=R(c) is exported and replayed."
+  },
+  "gatekeeper_checks": {
+    "alpha_geo_strict_source_loaded": true,
+    "alpha_geo_is_four_ln2_not_legacy_import": true,
+    "p2300_coefficients_loaded": true,
+    "p2302_required_lift_loaded": true,
+    "p2306_interface_audit_loaded": true,
+    "dynamics_derivative_to_scalar_lift_is_one": true,
+    "dynamics_derivative_to_coefficients_without_bridge_is_zero": true,
+    "chain_rule_requires_unexported_weights": true,
+    "no_candidate_derives_admissible_response_functional": true,
+    "strict_response_functional_not_derived": true,
+    "strict_g1_g3_not_updated": true,
+    "no_qw2191_discharge_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_legacy_kernel_role_transfer": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_DYNAMICAL_RESPONSE_NONDERIVATION_TRACE"
+}

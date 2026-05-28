@@ -1,0 +1,216 @@
+{
+  "schema_version": "p2306_s1256_v1",
+  "packet_id": "P2306",
+  "stage_id": "S1256",
+  "produced_by": "p2306_s1256_strict_response_orientation_functional_interface_audit_probe.py",
+  "timestamp_utc": "2026-05-28T00:00:00+00:00",
+  "status": "OPEN_OBSTRUCTION_STRICT_RESPONSE_ORIENTATION_FUNCTIONAL_NOT_EXPORTED",
+  "result_kind": "STRICT_RESPONSE_ORIENTATION_INTERFACE_AUDIT_REFUTES_CURRENT_EXPORT_SET",
+  "strict_response_orientation_functional_interface_audit_probe": {
+    "probe_id": "P2306_S1256_STRICT_RESPONSE_ORIENTATION_FUNCTIONAL_INTERFACE_AUDIT",
+    "source_packets": {
+      "alpha_geo_strict_derived_v1": "generated/alpha_geo_strict_derived_v1.json",
+      "p2300": "generated/p2300_s1250_strict_shannon_nad12_sigma_adm_bianchi_spatial_eom_provider_operator_probe.json",
+      "p2302": "generated/p2302_s1252_strict_task3_provider_lift_policy_lock_candidate_probe.json",
+      "p2305": "generated/p2305_s1255_strict_norm_to_margin_bridge_underdetermination_probe.json",
+      "a1_pair1_projector": "generated/a_1_pair1_orientation_projector_operator_strict_core_v1.json",
+      "theta_pair_sigma_int": "generated/theta_pair_sigma_int_strict_selector_ingredient_o2_cut_slot_free_v1.json",
+      "f456_summary": "generated/f456_current_strict_sigma_int_orientation_slice_to_a1_pair1_operator_bridge_packet_summary.json",
+      "h37_sign_audit": "H37_SIGN_DISTINCTION_STATE_AUDIT.md"
+    },
+    "source_hashes": {
+      "alpha_geo_strict_derived_v1_sha256": "fde8d28194230eafaf65e0803b5c67ad9a756ff688cd0cfc00acccfd9f9c5328",
+      "p2300_sha256": "13126823c36db20fa4eb705974176e81f9b8c76d1b7a1ca4fe5f087a8ffea67d",
+      "p2302_sha256": "1912c3247bf0d48e34b800b9c3103887d00a430620e9ce7f6a46a94579b87fa9",
+      "p2305_sha256": "2a04c9cebff784c72c3a081ac17a80987c047ded0fd370b9ee77cc1b40ed7cd7",
+      "a1_pair1_projector_sha256": "18a580fcb76bc75f524be309d67ebebd61666f6e251b856e8edb4c625b84e2b1",
+      "theta_pair_sigma_int_sha256": "413b8d401327a7fe6658643189c9ea1d8c89feb78cc1c864852203d68f076358",
+      "f456_summary_sha256": "ab29b702995c386dabf8aca982e4dc0143f7abac52fb36833babc14d627f4dc6",
+      "h37_sign_audit_sha256": "d6612664bc14dcfbe49be8f2dd6d584b99e5635d8305461e77fa7d647d494b86"
+    },
+    "required_interface_conditions": [
+      {
+        "id": "domain_match",
+        "required": "response functional R is typed on the 10-dimensional P2300 ADM/Bianchi-I provider coefficient basis",
+        "current_status": "MISSING_EXPORTED_TYPED_MAP"
+      },
+      {
+        "id": "signed_orientation",
+        "required": "R fixes a signed orientation so that R(c) is a policy-margin lift, not just an unsigned norm",
+        "current_status": "MISSING_STRICT_PHYSICAL_ORIENTATION_OR_RESPONSE_THEOREM"
+      },
+      {
+        "id": "monotone_margin_map",
+        "required": "R(c) lower-bounds the P2281/P2302 per-step policy margin under the replay dynamics",
+        "current_status": "MISSING_DYNAMICAL_MARGIN_THEOREM"
+      },
+      {
+        "id": "selector_safety",
+        "required": "R is exported without an external selector premise and without discharging QW-2191 by convention",
+        "current_status": "NOT_SATISFIED_BY_EXISTING_CONVENTION_OR_PREMISE_BASED_SIGN_LIFTS"
+      }
+    ],
+    "orientation_source_audit": [
+      {
+        "source_id": "A1_PAIR1_PROJECTOR_F456",
+        "artifact": "generated/a_1_pair1_orientation_projector_operator_strict_core_v1.json",
+        "loaded": true,
+        "scope": "pair1 rank-one projector on span{c1,s1}",
+        "sign_sensitive": false,
+        "provider_basis_dimension": 10,
+        "artifact_dimension": 2,
+        "exports_provider_margin_response": false,
+        "blocking_reason": "Projector is sign-gauge invariant and pair1-local; it does not define a signed functional on the P2300 10-column ADM/Bianchi provider basis.",
+        "hard_limits_include_no_qw2191": true
+      },
+      {
+        "source_id": "THETA_PAIR_SIGMA_INT_O2_CUT",
+        "artifact": "generated/theta_pair_sigma_int_strict_selector_ingredient_o2_cut_slot_free_v1.json",
+        "loaded": true,
+        "scope": "slot-free pair1/pair2 theta source",
+        "sign_sensitive": true,
+        "provider_basis_dimension": 10,
+        "artifact_dimension": 2,
+        "exports_provider_margin_response": false,
+        "blocking_reason": "Theta-pair source is pair1/pair2 scoped and explicitly below selector closure/QW-2191 discharge; it does not type-map ADM/Bianchi provider columns to P2281 margin.",
+        "hard_limits_include_no_qw2191": true
+      },
+      {
+        "source_id": "H37_DIRECTED_SIGN_DISTINCTION_AUDIT",
+        "artifact": "H37_SIGN_DISTINCTION_STATE_AUDIT.md",
+        "loaded": true,
+        "scope": "directed sign distinction and convention-layer sign lifts on C_v1",
+        "sign_sensitive": true,
+        "provider_basis_dimension": 10,
+        "artifact_dimension": "C_v1/chart/sign-lift layer, not P2300 coefficient space",
+        "exports_provider_margin_response": false,
+        "blocking_reason": "H37 records directed/convention-layer structure but no strict physical sign datum; using it as a policy-margin orientation would add an unexported premise.",
+        "hard_limits_include_no_physical_sign_datum": true,
+        "convention_layer_detected": true
+      },
+      {
+        "source_id": "F456_PACKET_SUMMARY",
+        "artifact": "generated/f456_current_strict_sigma_int_orientation_slice_to_a1_pair1_operator_bridge_packet_summary.json",
+        "loaded": true,
+        "scope": "summary of sigma-int orientation slice to A1(pair1) operator bridge",
+        "sign_sensitive": false,
+        "provider_basis_dimension": 10,
+        "artifact_dimension": "summary only",
+        "exports_provider_margin_response": false,
+        "blocking_reason": "F456 confirms a narrow operator-level bridge object, not a P2300-to-P2281 response functional.",
+        "audits_pass": true,
+        "no_false_pass": true
+      }
+    ],
+    "candidate_response_functionals": [
+      {
+        "candidate_id": "PROJECTOR_TRACE_PULLBACK",
+        "definition_attempt": "Use A1(pair1) projector trace/eigenvalue as a scalar orientation source.",
+        "well_typed_on_p2300_basis": false,
+        "signed_margin_value": null,
+        "passes_required_lift": false,
+        "rejection_reason": "Projector trace is sign invariant and has no exported pullback to the 10 P2300 provider coefficients."
+      },
+      {
+        "candidate_id": "THETA_PAIR_SIGN_PULLBACK",
+        "definition_attempt": "Use theta-pair sigma-int sign to orient positive P2300 channels.",
+        "well_typed_on_p2300_basis": false,
+        "signed_margin_value": null,
+        "passes_required_lift": false,
+        "rejection_reason": "Would select/weight channels by a sign rule not exported as an ADM/Bianchi policy-margin theorem; this is a selector/orientation premise."
+      },
+      {
+        "candidate_id": "H37_CONVENTION_SIGN_LIFT_PULLBACK",
+        "definition_attempt": "Use C_v1 convention-layer directed sign lift as response orientation.",
+        "well_typed_on_p2300_basis": false,
+        "signed_margin_value": null,
+        "passes_required_lift": false,
+        "rejection_reason": "Convention-layer sign lifts are explicitly below strict physical sign datum and do not type-map to P2281 margin."
+      },
+      {
+        "candidate_id": "SIGNED_TOTAL_CANONICAL_RESPONSE",
+        "definition_attempt": "Use the all-ones signed response on the exported P2300 coefficient vector.",
+        "well_typed_on_p2300_basis": true,
+        "signed_margin_value": -0.13524712375150189,
+        "passes_required_lift": false,
+        "rejection_reason": "This is well-typed but negative, hence it cannot certify a positive provider lift."
+      }
+    ],
+    "strict_interface_verdict": {
+      "response_orientation_functional_exported": false,
+      "current_export_set_refutes_closure_use": true,
+      "reason": "No audited orientation artifact exports a signed monotone P2300-provider-basis to P2281-policy-margin functional."
+    },
+    "task3_g1_g3_update": {
+      "G1_reduction_certainty": "OPEN_UNCHANGED",
+      "G2_nonlinear_trajectory_realism": "CLOSED_FROM_P2301_UNCHANGED",
+      "G3_operational_policy_rule": "OPEN_UNCHANGED",
+      "reason": "P2306 finds an interface obstruction, not a response/orientation bridge."
+    },
+    "theorem_export": {
+      "statement_id": "P2306_STRICT_RESPONSE_ORIENTATION_INTERFACE_AUDIT_THEOREM",
+      "formal_statement": "On the current exported repository state, no strict response/orientation functional maps the P2300 ADM/Bianchi-I provider coefficient basis to the P2281/P2302 policy margin.  Existing orientation artifacts are either pair-local projectors, pair1/pair2 theta sources, or convention/premise-scoped directed sign lifts; none exports a typed, signed, monotone provider-to-margin response theorem.  Consequently P2305 norm sufficiency remains non-admissible for strict G1/G3 closure.",
+      "proof_bits": {
+        "p2300_provider_basis_dimension": 10,
+        "p2300_coefficient_names": [
+          "H2_Q",
+          "Hd_Q",
+          "H_Qdot",
+          "Q2",
+          "dot_sigma_sq",
+          "ddot_sigma_sigma",
+          "Ndd_Q",
+          "Nd2_Q",
+          "Nd_H_Q",
+          "Nd_Qdot"
+        ],
+        "required_lift": 0.0068,
+        "orientation_sources_audited": [
+          "A1_PAIR1_PROJECTOR_F456",
+          "THETA_PAIR_SIGMA_INT_O2_CUT",
+          "H37_DIRECTED_SIGN_DISTINCTION_AUDIT",
+          "F456_PACKET_SUMMARY"
+        ],
+        "candidate_response_functionals_rejected": [
+          "PROJECTOR_TRACE_PULLBACK",
+          "THETA_PAIR_SIGN_PULLBACK",
+          "H37_CONVENTION_SIGN_LIFT_PULLBACK",
+          "SIGNED_TOTAL_CANONICAL_RESPONSE"
+        ],
+        "all_required_interface_conditions_missing": true
+      },
+      "not_claimed": [
+        "strict response-functional bridge",
+        "strict orientation theorem for P2300 to P2281 margin",
+        "strict G1 closure",
+        "strict G3 closure",
+        "full Task-3 closure",
+        "QW-2191 discharge",
+        "selector closure",
+        "legacy-kernel role transfer",
+        "ToE closure"
+      ]
+    },
+    "theorem_fingerprint_sha256": "973d5b09c322b49c8882d6b0ef1dd793535b06282a43526e82908cd4853de0a3"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2307_candidate",
+    "goal": "Construct a genuinely typed ADM/Bianchi-I response functional from strict-side dynamics, or prove a theorem-grade nonexistence result for all current orientation/convention-layer sources. Do not move G1/G3 until such a functional is exported and replayed."
+  },
+  "gatekeeper_checks": {
+    "alpha_geo_strict_source_loaded": true,
+    "alpha_geo_is_four_ln2_not_legacy_import": true,
+    "p2300_coefficients_loaded": true,
+    "p2305_underdetermination_loaded": true,
+    "orientation_artifacts_audited": true,
+    "no_orientation_source_exports_provider_margin_response": true,
+    "candidate_response_functionals_do_not_close_required_lift": true,
+    "strict_response_orientation_bridge_not_proven": true,
+    "strict_g1_g3_not_updated": true,
+    "no_qw2191_discharge_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_legacy_kernel_role_transfer": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_RESPONSE_ORIENTATION_INTERFACE_AUDIT_TRACE"
+}

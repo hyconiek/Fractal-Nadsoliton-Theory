@@ -23,6 +23,9 @@ class TestP2285S1235StrictTask3BianchiIMachineCheckableA1A2A3VerifierProbe(unitt
         self.assertTrue(g["consistency_rows_exported"])
         self.assertTrue(g["all_consistency_flags_boolean"])
         self.assertTrue(g["contains_verifier_pass"])
+        probe = data["strict_task3_bianchi_i_machine_checkable_a1_a2_a3_verifier_probe"]
+        self.assertEqual(probe["recomputed"], {"A1": False, "A2": False, "A3": False})
+        self.assertFalse(probe["verifier_pass"])
 
 
 if __name__ == "__main__":

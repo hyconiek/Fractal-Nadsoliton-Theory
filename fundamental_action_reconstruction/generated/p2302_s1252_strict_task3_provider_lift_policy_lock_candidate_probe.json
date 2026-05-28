@@ -1,0 +1,434 @@
+{
+  "schema_version": "p2302_s1252_v1",
+  "packet_id": "P2302",
+  "stage_id": "S1252",
+  "produced_by": "p2302_s1252_strict_task3_provider_lift_policy_lock_candidate_probe.py",
+  "timestamp_utc": "2026-05-28T00:00:00+00:00",
+  "status": "OPEN_BRIDGE_OBLIGATION_WITH_CONDITIONAL_G1_G3_POLICY_LOCK_CANDIDATE_TRACE",
+  "result_kind": "STRICT_TASK3_PROVIDER_MARGIN_LIFT_POLICY_LOCK_CANDIDATE_WITH_OPEN_BRIDGE_OBLIGATION",
+  "strict_task3_provider_lift_policy_lock_candidate_probe": {
+    "probe_id": "P2302_S1252_STRICT_TASK3_PROVIDER_LIFT_POLICY_LOCK_CANDIDATE",
+    "source_packets": {
+      "alpha_geo_strict_derived_v1": "generated/alpha_geo_strict_derived_v1.json",
+      "p2274": "generated/p2274_s1224_strict_nu_branch_group_policy_robustness_region_certificate_probe.json",
+      "p2280": "generated/p2280_s1230_strict_nu_branch_group_policy_minimal_lock_criterion_grid_probe.json",
+      "p2281": "generated/p2281_s1231_strict_nu_branch_group_policy_minimal_config_fresh_replay_validation_probe.json",
+      "p2300": "generated/p2300_s1250_strict_shannon_nad12_sigma_adm_bianchi_spatial_eom_provider_operator_probe.json",
+      "p2301": "generated/p2301_s1251_strict_task3_provider_corrected_g1_g2_g3_replay_probe.json"
+    },
+    "source_hashes": {
+      "alpha_geo_strict_derived_v1_sha256": "fde8d28194230eafaf65e0803b5c67ad9a756ff688cd0cfc00acccfd9f9c5328",
+      "p2274_sha256": "dc28056a0b6f4ea6f21d759cafac2417cb3961f30bbc648b77b2f21969393be6",
+      "p2280_sha256": "8e66666d069df3ffbc9febb0f8bad17bd17e8075ff3ae9ceb0c2daa59c8204d8",
+      "p2281_sha256": "3f1dcff92a20b76ea948c54e906921ff4172c2c40db35f7d6678836b4a23d14b",
+      "p2300_sha256": "13126823c36db20fa4eb705974176e81f9b8c76d1b7a1ca4fe5f087a8ffea67d",
+      "p2301_sha256": "c21a96b8793be7344c32c5d3aca1c93909ef93990d94587ae5ad43c156d1db54"
+    },
+    "policy_lock_candidate": {
+      "candidate_id": "P2302_PROVIDER_MARGIN_LIFT_POLICY_LOCK_CANDIDATE_V1",
+      "status": "CONDITIONAL_CANDIDATE_REQUIRES_PROVIDER_TO_MARGIN_BRIDGE",
+      "delta": 0.1,
+      "trial_multiplier": 1,
+      "provider_lift_per_step": 0.0068,
+      "cost_proxy": 9.795732273553991,
+      "bridge_obligation": "prove that P2300 canonical spatial-EOM provider coefficients induce at least this provider_lift_per_step in the P2281 margin dynamics without adding a selector premise"
+    },
+    "provider_lift_scan_rows": [
+      {
+        "provider_lift_per_step": 0.0,
+        "all_rows_meet_target": false,
+        "worst_margin_to_target": -0.99,
+        "min_empirical_corner_floor": 0.0
+      },
+      {
+        "provider_lift_per_step": 0.004,
+        "all_rows_meet_target": false,
+        "worst_margin_to_target": -0.31372810268154283,
+        "min_empirical_corner_floor": 0.6257142857142857
+      },
+      {
+        "provider_lift_per_step": 0.006,
+        "all_rows_meet_target": false,
+        "worst_margin_to_target": -0.008013816967257115,
+        "min_empirical_corner_floor": 0.9842857142857143
+      },
+      {
+        "provider_lift_per_step": 0.0062,
+        "all_rows_meet_target": false,
+        "worst_margin_to_target": -0.0037281026815428886,
+        "min_empirical_corner_floor": 0.9914285714285714
+      },
+      {
+        "provider_lift_per_step": 0.0064,
+        "all_rows_meet_target": false,
+        "worst_margin_to_target": -0.002299531252971443,
+        "min_empirical_corner_floor": 0.9971428571428571
+      },
+      {
+        "provider_lift_per_step": 0.0066,
+        "all_rows_meet_target": false,
+        "worst_margin_to_target": -0.0037281026815428886,
+        "min_empirical_corner_floor": 0.9957142857142857
+      },
+      {
+        "provider_lift_per_step": 0.0068,
+        "all_rows_meet_target": true,
+        "worst_margin_to_target": 0.0005576116041714485,
+        "min_empirical_corner_floor": 0.9971428571428571
+      }
+    ],
+    "conditional_fresh_replay": {
+      "rows": [
+        {
+          "risk_tolerance": 0.01,
+          "target_floor": 0.99,
+          "provider_lift_per_step": 0.0068,
+          "empirical_corner_floor": 1.0,
+          "adaptive_margin": 0.009442388395828585,
+          "predicted_certified_floor": 0.9905576116041714,
+          "meets_target": true,
+          "margin_to_target": 0.0005576116041714485,
+          "corner_rows": [
+            {
+              "rho": 0.8847674418604651,
+              "kappa_scale": 1.159767441860465,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            },
+            {
+              "rho": 0.8847674418604651,
+              "kappa_scale": 1.1602325581395347,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            },
+            {
+              "rho": 0.8852325581395349,
+              "kappa_scale": 1.159767441860465,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            },
+            {
+              "rho": 0.8852325581395349,
+              "kappa_scale": 1.1602325581395347,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            }
+          ]
+        },
+        {
+          "risk_tolerance": 0.02,
+          "target_floor": 0.98,
+          "provider_lift_per_step": 0.0068,
+          "empirical_corner_floor": 1.0,
+          "adaptive_margin": 0.009442388395828585,
+          "predicted_certified_floor": 0.9905576116041714,
+          "meets_target": true,
+          "margin_to_target": 0.010557611604171457,
+          "corner_rows": [
+            {
+              "rho": 0.8695348837209302,
+              "kappa_scale": 1.1195348837209302,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            },
+            {
+              "rho": 0.8695348837209302,
+              "kappa_scale": 1.12046511627907,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            },
+            {
+              "rho": 0.8704651162790698,
+              "kappa_scale": 1.1195348837209302,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            },
+            {
+              "rho": 0.8704651162790698,
+              "kappa_scale": 1.12046511627907,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            }
+          ]
+        },
+        {
+          "risk_tolerance": 0.05,
+          "target_floor": 0.95,
+          "provider_lift_per_step": 0.0068,
+          "empirical_corner_floor": 1.0,
+          "adaptive_margin": 0.009442388395828585,
+          "predicted_certified_floor": 0.9905576116041714,
+          "meets_target": true,
+          "margin_to_target": 0.040557611604171484,
+          "corner_rows": [
+            {
+              "rho": 0.8238372093023255,
+              "kappa_scale": 1.0,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            },
+            {
+              "rho": 0.8238372093023255,
+              "kappa_scale": 1.0011627906976743,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            },
+            {
+              "rho": 0.8261627906976744,
+              "kappa_scale": 1.0,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            },
+            {
+              "rho": 0.8261627906976744,
+              "kappa_scale": 1.0011627906976743,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            }
+          ]
+        },
+        {
+          "risk_tolerance": 0.1,
+          "target_floor": 0.9,
+          "provider_lift_per_step": 0.0068,
+          "empirical_corner_floor": 0.9971428571428571,
+          "adaptive_margin": 0.009442388395828585,
+          "predicted_certified_floor": 0.9877004687470285,
+          "meets_target": true,
+          "margin_to_target": 0.08770046874702853,
+          "corner_rows": [
+            {
+              "rho": 0.7476744186046511,
+              "kappa_scale": 1.0,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                0.9971428571428571,
+                1.0,
+                1.0
+              ],
+              "sample_min": 0.9971428571428571,
+              "sample_mean": 0.9995238095238096
+            },
+            {
+              "rho": 0.7476744186046511,
+              "kappa_scale": 1.0023255813953489,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                0.9971428571428571,
+                1.0,
+                1.0
+              ],
+              "sample_min": 0.9971428571428571,
+              "sample_mean": 0.9995238095238096
+            },
+            {
+              "rho": 0.7523255813953489,
+              "kappa_scale": 1.0,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                0.9985714285714286,
+                1.0,
+                1.0
+              ],
+              "sample_min": 0.9985714285714286,
+              "sample_mean": 0.9997619047619047
+            },
+            {
+              "rho": 0.7523255813953489,
+              "kappa_scale": 1.0023255813953489,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                0.9985714285714286,
+                1.0,
+                1.0
+              ],
+              "sample_min": 0.9985714285714286,
+              "sample_mean": 0.9997619047619047
+            }
+          ]
+        }
+      ],
+      "summary": {
+        "all_rows_meet_target": true,
+        "worst_margin_to_target": 0.0005576116041714485,
+        "delta": 0.1,
+        "trial_multiplier": 1,
+        "trials": 700,
+        "n_eff": 16800,
+        "adaptive_margin": 0.009442388395828585
+      }
+    },
+    "conditional_gap_rows": [
+      {
+        "id": "G1_reduction_certainty",
+        "status": "CONDITIONALLY_CLOSED_UNDER_PROVIDER_MARGIN_LIFT",
+        "metric": 0.0005576116041714485,
+        "criterion": "provider-lift replay rows meet all P2281 target floors"
+      },
+      {
+        "id": "G2_nonlinear_trajectory_realism",
+        "status": "CLOSED_FROM_P2301",
+        "metric": 7.632783294297951e-16,
+        "criterion": "P2301 provider-corrected transport residual below threshold"
+      },
+      {
+        "id": "G3_operational_policy_rule",
+        "status": "CONDITIONALLY_CLOSED_UNDER_PROVIDER_MARGIN_LIFT",
+        "metric": 0.0068,
+        "criterion": "minimal provider_lift_per_step exists on the P2280/P2281 replay contract"
+      }
+    ],
+    "strict_closure_status": "HELD_OPEN_UNTIL_PROVIDER_TO_MARGIN_BRIDGE_PROVEN",
+    "theorem_export": {
+      "statement_id": "P2302_PROVIDER_MARGIN_LIFT_POLICY_LOCK_CANDIDATE_THEOREM",
+      "formal_statement": "A deterministic search over a provider-lift augmentation of the P2281 margin replay finds a minimal candidate provider_lift_per_step that would make all P2281 target floors pass and would supply a conditional policy-lock candidate for G3.  This is not yet strict Task-3 closure: the required provider-to-margin bridge from the P2300 spatial-EOM coefficients to the replay lift is still an explicit proof obligation.",
+      "proof_bits": {
+        "baseline_p2280_feasible_count": 0,
+        "baseline_p2281_worst_margin": -0.99,
+        "p2301_gap_pattern": [
+          "OPEN",
+          "CLOSED",
+          "OPEN"
+        ],
+        "conditional_candidate_found": true,
+        "minimal_provider_lift_per_step": 0.0068,
+        "conditional_worst_margin": 0.0005576116041714485,
+        "provider_to_margin_bridge_proven": false
+      },
+      "not_claimed": [
+        "strict G1 closure",
+        "strict G3 closure",
+        "full Task-3 closure",
+        "QW-2191 discharge",
+        "selector closure",
+        "legacy-kernel role transfer",
+        "ToE closure"
+      ]
+    },
+    "theorem_fingerprint_sha256": "7c8da2c6d1100354192abf32e99e4a0f94941e5c28c7c68602c980544e762c34"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2303_candidate",
+    "goal": "Prove or refute the provider-to-margin bridge: derive the P2302 provider_lift_per_step bound directly from the P2300 canonical spatial-EOM coefficients without adding a selector premise; only then update strict G1/G3."
+  },
+  "gatekeeper_checks": {
+    "alpha_geo_strict_source_loaded": true,
+    "alpha_geo_is_four_ln2_not_legacy_import": true,
+    "p2300_canonical_coefficients_loaded": true,
+    "p2301_only_g2_closed_input": true,
+    "provider_lift_candidate_found": true,
+    "conditional_replay_all_rows_meet_target": true,
+    "baseline_p2280_had_no_feasible_lock": true,
+    "provider_to_margin_bridge_still_open": true,
+    "strict_task3_closure_not_claimed": true,
+    "no_qw2191_discharge_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_legacy_kernel_role_transfer": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_CONDITIONAL_POLICY_LOCK_TRACE"
+}

@@ -1,0 +1,228 @@
+{
+  "schema_version": "p2312_s1262_v1",
+  "packet_id": "P2312",
+  "stage_id": "S1262",
+  "produced_by": "p2312_s1262_strict_lapse_shear_source_normalization_attempt_probe.py",
+  "timestamp_utc": "2026-05-28T00:00:00+00:00",
+  "status": "OPEN_OBSTRUCTION_NON_GB_LAPSE_SOURCE_NORMALIZATION_SIGN_INDEFINITE",
+  "result_kind": "STRICT_LAPSE_SHEAR_SOURCE_NORMALIZATION_ATTEMPT_REFUTED_FOR_CURRENT_NON_GB_RESIDUAL",
+  "strict_lapse_shear_source_normalization_attempt_probe": {
+    "probe_id": "P2312_S1262_STRICT_LAPSE_SHEAR_SOURCE_NORMALIZATION_ATTEMPT",
+    "source_packets": {
+      "p1985": "generated/p1985_s935_strict_adm_bianchi_non_gb_curvature_squared_lapse_obstruction_witness.json",
+      "p1986": "generated/p1986_s936_strict_adm_bianchi_non_gb_residual_decomposition_witness.json",
+      "p2300": "generated/p2300_s1250_strict_shannon_nad12_sigma_adm_bianchi_spatial_eom_provider_operator_probe.json",
+      "p2302": "generated/p2302_s1252_strict_task3_provider_lift_policy_lock_candidate_probe.json",
+      "p2310": "generated/p2310_s1260_strict_self_energy_response_source_audit_and_replay_probe.json",
+      "p2311": "generated/p2311_s1261_strict_self_energy_to_policy_margin_theorem_audit_probe.json"
+    },
+    "source_hashes": {
+      "p1985_sha256": "a127e42e199bd2cc8d4323056d2b3bccbf8d40db51cf1a095fb65b268e8e66f6",
+      "p1986_sha256": "2888c2881ff17f904543f2626f16cf5e0311043942e3d80eea00803c554d80bb",
+      "p2300_sha256": "13126823c36db20fa4eb705974176e81f9b8c76d1b7a1ca4fe5f087a8ffea67d",
+      "p2302_sha256": "1912c3247bf0d48e34b800b9c3103887d00a430620e9ce7f6a46a94579b87fa9",
+      "p2310_sha256": "f4515e81fdb9fcd608d046f0ce8abb3ffc2c1a18d343769e813e13c2fcd2e553",
+      "p2311_sha256": "82cfb971bc80d89023c1962ad7a621aaa66d9f09010dc6d682f0d6c5a076b6b9"
+    },
+    "candidate_source": {
+      "source_id": "P1985_STRICT_NON_GB_LAPSE_RESIDUAL",
+      "definition": "Use the P1985 weighted non-GB ADM/Bianchi-I lapse residual as the missing lapse/shear policy-margin source.",
+      "symbolic_source": "-V*(1048759758*H**2*N**2*sigma1**2 + 1048759758*H**2*N**2*sigma1*sigma2 + 1048759758*H**2*N**2*sigma2**2 - 1490968956*H*N**2*dsigma1*sigma1 - 745484478*H*N**2*dsigma1*sigma2 - 745484478*H*N**2*dsigma2*sigma1 - 1490968956*H*N**2*dsigma2*sigma2 + 791795784*H*N*Nd*sigma1**2 + 791795784*H*N*Nd*sigma1*sigma2 + 791795784*H*N*Nd*sigma2**2 + 699173172*Hd*N**2*sigma1**2 + 699173172*Hd*N**2*sigma1*sigma2 + 699173172*Hd*N**2*sigma2**2 - 263931928*N**2*d2sigma1*sigma1 - 131965964*N**2*d2sigma1*sigma2 - 131965964*N**2*d2sigma2*sigma1 - 263931928*N**2*d2sigma2*sigma2 + 131965964*N**2*dsigma1**2 + 131965964*N**2*dsigma1*dsigma2 + 131965964*N**2*dsigma2**2 + 768640131*N**2*sigma1**4 + 1537280262*N**2*sigma1**3*sigma2 + 2305920393*N**2*sigma1**2*sigma2**2 + 1537280262*N**2*sigma1*sigma2**3 + 768640131*N**2*sigma2**4 + 527863856*N*Nd*dsigma1*sigma1 + 263931928*N*Nd*dsigma1*sigma2 + 263931928*N*Nd*dsigma2*sigma1 + 527863856*N*Nd*dsigma2*sigma2 + 263931928*N*Ndd*sigma1**2 + 263931928*N*Ndd*sigma1*sigma2 + 263931928*N*Ndd*sigma2**2 - 659829820*Nd**2*sigma1**2 - 659829820*Nd**2*sigma1*sigma2 - 659829820*Nd**2*sigma2**2)*log(2)/(160000000*pi**2*N**6)",
+      "strict_admissible": false
+    },
+    "orientation_witnesses": [
+      {
+        "witness_id": "STATIC_SHEAR_NEGATIVE_LAPSE_SOURCE",
+        "assignment": {
+          "H": 1.0,
+          "N": 1.0,
+          "V": 1.0,
+          "sigma1": 1.0,
+          "sigma2": 0.0
+        },
+        "shear_energy_Q": 1.0,
+        "non_gb_lapse_source_value": -0.7977305610593072,
+        "source_sign": "negative",
+        "interpretation": "ordinary expanding anisotropic shear with no lapse/shear acceleration terms"
+      },
+      {
+        "witness_id": "SHEAR_ACCELERATION_POSITIVE_LAPSE_SOURCE",
+        "assignment": {
+          "H": 0.0,
+          "N": 1.0,
+          "V": 1.0,
+          "sigma1": 1.0,
+          "sigma2": 0.0,
+          "d2sigma1": 10.0
+        },
+        "shear_energy_Q": 1.0,
+        "non_gb_lapse_source_value": 0.8211169903365816,
+        "source_sign": "positive",
+        "interpretation": "same shear energy but nonzero shear acceleration flips the candidate source sign"
+      },
+      {
+        "witness_id": "LAPSE_DERIVATIVE_POSITIVE_LAPSE_SOURCE",
+        "assignment": {
+          "H": 0.0,
+          "N": 1.0,
+          "V": 1.0,
+          "sigma1": 1.0,
+          "sigma2": 0.0,
+          "Nd": 10.0
+        },
+        "shear_energy_Q": 1.0,
+        "non_gb_lapse_source_value": 28.62522103316297,
+        "source_sign": "positive",
+        "interpretation": "same shear energy but lapse-derivative terms flip the candidate source sign"
+      }
+    ],
+    "normalization_attempts": [
+      {
+        "attempt_id": "DIRECT_NON_GB_LAPSE_SOURCE",
+        "definition": "lambda = C * EL_nonGB_lapse with a fixed positive normalization C",
+        "strict_admissible": false,
+        "failure_reason": "P1985 non-GB lapse source is sign-indefinite on explicit Bianchi-I shear/lapse witnesses, so no fixed positive normalization gives a monotone policy lift."
+      },
+      {
+        "attempt_id": "SIGN_FLIPPED_NON_GB_LAPSE_SOURCE",
+        "definition": "lambda = -C * EL_nonGB_lapse",
+        "strict_admissible": false,
+        "failure_reason": "Flipping the global sign only swaps the positive and negative witnesses; sign-indefiniteness remains."
+      },
+      {
+        "attempt_id": "ABSOLUTE_VALUE_NON_GB_LAPSE_SOURCE",
+        "definition": "lambda = C * |EL_nonGB_lapse|",
+        "strict_admissible": false,
+        "failure_reason": "Absolute value is a convention-layer rectifier not exported by the ADM/Bianchi-I variational equations."
+      },
+      {
+        "attempt_id": "POSITIVE_PART_NON_GB_LAPSE_SOURCE",
+        "definition": "lambda = C * max(EL_nonGB_lapse, 0)",
+        "strict_admissible": false,
+        "failure_reason": "Positive-part extraction is a selector/channel premise and cannot be used for strict G1/G3 closure."
+      },
+      {
+        "attempt_id": "SELF_ENERGY_TIMES_NON_GB_ORIENTATION",
+        "definition": "lambda = ||c||^2 * sign(EL_nonGB_lapse)",
+        "strict_admissible": false,
+        "failure_reason": "The sign is dynamical and not determined by the P2300 coefficient self-energy alone; P2311's missing response theorem remains missing."
+      }
+    ],
+    "source_normalization_verdict": {
+      "new_lapse_shear_source_found": false,
+      "direct_non_gb_lapse_source_sign_indefinite": true,
+      "same_shear_energy_allows_opposite_source_signs": true,
+      "self_energy_lambda_numeric": 0.0094608371836785,
+      "required_lift": 0.0068,
+      "self_energy_numeric_condition_passes": true,
+      "admissible_for_provider_lift_export": false,
+      "admissible_for_g1_g3_update": false,
+      "reason": "The only concrete current non-GB lapse/shear source candidate is a sign-indefinite residual, while rectifying it requires a non-strict selector/convention layer."
+    },
+    "task3_g1_g3_update": {
+      "G1_reduction_certainty": "OPEN_UNCHANGED",
+      "G2_nonlinear_trajectory_realism": "CLOSED_FROM_P2301_UNCHANGED",
+      "G3_operational_policy_rule": "OPEN_UNCHANGED",
+      "reason": "P2312 finds sign-indefiniteness in the concrete non-GB lapse source normalization attempt; no strict provider_lift export is admitted."
+    },
+    "theorem_export": {
+      "statement_id": "P2312_NON_GB_LAPSE_SOURCE_NORMALIZATION_SIGN_INDEFINITE_THEOREM",
+      "formal_statement": "For the currently exported P1985 strict non-GB ADM/Bianchi-I lapse residual, no direct fixed-sign normalization can be promoted to provider_lift_per_step for P2281/P2302.  Explicit Bianchi-I witnesses with the same shear energy Q give opposite signs for the candidate lapse source.  Absolute-value, positive-part, or sign-conditioned normalizations would introduce a convention/selector layer.  Therefore P2312 does not supply the missing P2311 energy-to-policy-margin theorem, and G1/G3 remain open.",
+      "proof_bits": {
+        "witness_values": [
+          {
+            "witness_id": "STATIC_SHEAR_NEGATIVE_LAPSE_SOURCE",
+            "assignment": {
+              "H": 1.0,
+              "N": 1.0,
+              "V": 1.0,
+              "sigma1": 1.0,
+              "sigma2": 0.0
+            },
+            "shear_energy_Q": 1.0,
+            "non_gb_lapse_source_value": -0.7977305610593072,
+            "source_sign": "negative",
+            "interpretation": "ordinary expanding anisotropic shear with no lapse/shear acceleration terms"
+          },
+          {
+            "witness_id": "SHEAR_ACCELERATION_POSITIVE_LAPSE_SOURCE",
+            "assignment": {
+              "H": 0.0,
+              "N": 1.0,
+              "V": 1.0,
+              "sigma1": 1.0,
+              "sigma2": 0.0,
+              "d2sigma1": 10.0
+            },
+            "shear_energy_Q": 1.0,
+            "non_gb_lapse_source_value": 0.8211169903365816,
+            "source_sign": "positive",
+            "interpretation": "same shear energy but nonzero shear acceleration flips the candidate source sign"
+          },
+          {
+            "witness_id": "LAPSE_DERIVATIVE_POSITIVE_LAPSE_SOURCE",
+            "assignment": {
+              "H": 0.0,
+              "N": 1.0,
+              "V": 1.0,
+              "sigma1": 1.0,
+              "sigma2": 0.0,
+              "Nd": 10.0
+            },
+            "shear_energy_Q": 1.0,
+            "non_gb_lapse_source_value": 28.62522103316297,
+            "source_sign": "positive",
+            "interpretation": "same shear energy but lapse-derivative terms flip the candidate source sign"
+          }
+        ],
+        "sign_indefinite": true,
+        "same_shear_energy_sign_flip": true,
+        "required_lift": 0.0068,
+        "self_energy_lambda": 0.0094608371836785,
+        "failed_normalization_attempts": [
+          "DIRECT_NON_GB_LAPSE_SOURCE",
+          "SIGN_FLIPPED_NON_GB_LAPSE_SOURCE",
+          "ABSOLUTE_VALUE_NON_GB_LAPSE_SOURCE",
+          "POSITIVE_PART_NON_GB_LAPSE_SOURCE",
+          "SELF_ENERGY_TIMES_NON_GB_ORIENTATION"
+        ],
+        "p2311_failed_obligations": [
+          "O3_ADM_LAPSE_SHEAR_ENERGY_SOURCE_THEOREM",
+          "O4_SIGNED_MONOTONE_POLICY_MARGIN_RESPONSE"
+        ]
+      },
+      "not_claimed": [
+        "universal no-go for all future lapse/shear sources",
+        "strict G1 closure",
+        "strict G3 closure",
+        "full Task-3 closure",
+        "QW-2191 discharge",
+        "selector closure",
+        "legacy-kernel role transfer",
+        "ToE closure"
+      ]
+    },
+    "theorem_fingerprint_sha256": "474ec20b8e2b197480f932cd5ec8c6b40edba1140aef17b96fa288b09fca8afb"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2313_candidate",
+    "goal": "Either export a new strict dynamical constraint fixing the lapse/shear derivative orientation used by P1985, or stop the G1/G3 bridge route at the P2308-P2312 blocker stack and move to a genuinely new provider/source class."
+  },
+  "gatekeeper_checks": {
+    "p1985_non_gb_lapse_operator_loaded": true,
+    "p1986_non_gb_decomposition_loaded": true,
+    "p2300_coefficients_loaded": true,
+    "p2310_self_energy_numeric_condition_loaded": true,
+    "p2311_bridge_blocker_loaded": true,
+    "explicit_positive_and_negative_lapse_source_witnesses": true,
+    "same_shear_energy_sign_flip_witnessed": true,
+    "all_normalization_attempts_quarantined": true,
+    "no_new_lapse_shear_source_exported": true,
+    "strict_g1_g3_not_updated": true,
+    "no_selector_premise_added": true,
+    "no_qw2191_discharge_claimed": true,
+    "no_legacy_kernel_role_transfer": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_SIGN_INDEFINITE_LAPSE_SOURCE_NORMALIZATION_TRACE"
+}

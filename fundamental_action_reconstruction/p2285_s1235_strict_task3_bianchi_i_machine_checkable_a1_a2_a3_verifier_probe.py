@@ -29,14 +29,24 @@ def main() -> None:
     closure_rows = (p2282.get("strict_task3_global_bianchi_i_g1_g2_g3_closure_matrix_probe", {}) or {}).get("gap_rows", []) or []
     quantified = (p2284.get("strict_task3_bianchi_i_quantified_premise_table_and_theorem_bridge_draft_probe", {}) or {}).get("premise_table", []) or []
 
-    # Deterministic recomputation from source packets
-    a1_recomputed = min((float(r.get("margin_to_target", -1.0)) for r in rows2281), default=-1.0) >= -1e-12
+    # Deterministic recomputation from source packets.
+    # A3 is intentionally tied to the P2282 G3 closure row, not to P2281's
+    # fallback replay parameters, because fallback parameters are not a feasible
+    # policy lock.
+    replay_summary = (
+        p2281.get("strict_nu_branch_group_policy_minimal_config_fresh_replay_validation_probe", {}) or {}
+    ).get("global_summary", {}) or {}
+    a1_recomputed = (
+        len(rows2281) > 0
+        and bool(replay_summary.get("all_rows_meet_target", False))
+        and min((float(r.get("margin_to_target", -1.0)) for r in rows2281), default=-1.0) >= -1e-12
+    )
 
     g2 = next((g for g in closure_rows if g.get("id") == "G2_nonlinear_trajectory_realism"), {})
-    a2_recomputed = float(g2.get("metric", 1.0) or 1.0) <= 5e-5
+    a2_recomputed = g2.get("status") == "CLOSED" and float(g2.get("metric", 1.0) or 1.0) <= 5e-5
 
-    lock = (p2281.get("strict_nu_branch_group_policy_minimal_config_fresh_replay_validation_probe", {}) or {}).get("locked_minimal_config", {}) or {}
-    a3_recomputed = float(lock.get("trials", 0) or 0) > 0
+    g3 = next((g for g in closure_rows if g.get("id") == "G3_operational_policy_rule"), {})
+    a3_recomputed = g3.get("status") == "CLOSED"
 
     by_id = {p.get("premise_id", ""): bool(p.get("satisfied", False)) for p in quantified}
     a1_reported = by_id.get("A1", False)

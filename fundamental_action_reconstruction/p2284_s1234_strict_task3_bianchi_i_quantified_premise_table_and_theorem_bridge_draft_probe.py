@@ -31,11 +31,13 @@ def main() -> None:
     assumptions = (p2283.get("strict_task3_bianchi_i_sufficient_condition_implication_stub_probe", {}) or {}).get("assumptions", {}) or {}
 
     g2_row = next((r for r in closure_rows if r.get("id") == "G2_nonlinear_trajectory_realism"), {})
+    g3_row = next((r for r in closure_rows if r.get("id") == "G3_operational_policy_rule"), {})
     g2_metric = float(g2_row.get("metric", 1.0) or 1.0)
 
     a1_min_margin = min((float(r.get("margin_to_target", -1.0)) for r in rows2281), default=-1.0)
     a2_max_residual = g2_metric
-    a3_lock_cost = float(lock.get("trials", 0) or 0) * 1.0
+    a3_lock_cost = float(g3_row.get("metric", -1.0) or -1.0)
+    a3_policy_lock_closed = g3_row.get("status") == "CLOSED"
 
     premise_table = [
         {
@@ -54,10 +56,10 @@ def main() -> None:
         },
         {
             "premise_id": "A3",
-            "symbol": "locked_trials_budget",
+            "symbol": "policy_lock_cost_proxy",
             "value": a3_lock_cost,
-            "required_relation": "> 0",
-            "satisfied": a3_lock_cost > 0,
+            "required_relation": "G3 status == CLOSED with real P2280 feasible policy lock",
+            "satisfied": a3_policy_lock_closed,
         },
     ]
 

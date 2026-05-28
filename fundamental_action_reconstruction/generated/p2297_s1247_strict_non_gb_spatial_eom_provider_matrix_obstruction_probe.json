@@ -1,0 +1,332 @@
+{
+  "schema_version": "p2297_s1247_v1",
+  "packet_id": "P2297",
+  "stage_id": "S1247",
+  "produced_by": "p2297_s1247_strict_non_gb_spatial_eom_provider_matrix_obstruction_probe.py",
+  "timestamp_utc": "2026-05-28T00:00:00+00:00",
+  "status": "OPEN_PARTIAL_PROGRESS_WITH_TRACE",
+  "result_kind": "PASS_STRICT_NON_GB_SPATIAL_EOM_PROVIDER_MATRIX_OBSTRUCTION_PROBE",
+  "strict_non_gb_spatial_eom_provider_matrix_obstruction_probe": {
+    "probe_id": "STRICT_NON_GB_SPATIAL_EOM_PROVIDER_MATRIX_OBSTRUCTION_PROBE_V1",
+    "source_packets": [
+      "generated/p1853_s803_strict_b1_symbolic_evaluation_and_scheme_trace_checkpoint.json",
+      "generated/p1981_s931_strict_adm_bianchi_r2_lapse_variation_obligation.json",
+      "generated/p1982_s932_strict_adm_bianchi_ricci2_lapse_variation_obligation.json",
+      "generated/p1983_s933_strict_adm_bianchi_riemann2_lapse_variation_obligation.json",
+      "generated/p1985_s935_strict_adm_bianchi_non_gb_curvature_squared_lapse_obstruction_witness.json",
+      "generated/p1988_s938_strict_non_gb_to_spatial_eom_family_projection_witness.json",
+      "generated/p1991_s941_strict_augmented_provider_channel_matrix_witness.json",
+      "generated/p2296_s1246_strict_global_task1_renormalization_replay_and_7task_reclassification_probe.json"
+    ],
+    "source_hashes": {
+      "generated/p1853_s803_strict_b1_symbolic_evaluation_and_scheme_trace_checkpoint.json": "f789c624a66c9610e6254fb8be3bee9cf94cfe552ab8793b98058b0fb655dbb1",
+      "generated/p1981_s931_strict_adm_bianchi_r2_lapse_variation_obligation.json": "ec2aeff9aadf02b94c3d6665bed96e287824f5c4e28de9114e3dde276b0c97d0",
+      "generated/p1982_s932_strict_adm_bianchi_ricci2_lapse_variation_obligation.json": "7aadaa0922a86b261cd5cdb7035cccd39b68aae7bd4e6a9f2d1da3eea9f80b2c",
+      "generated/p1983_s933_strict_adm_bianchi_riemann2_lapse_variation_obligation.json": "bed10041155684c728d2a42274857139e8baab245b5c991e163bcf3ffc5d43b5",
+      "generated/p1985_s935_strict_adm_bianchi_non_gb_curvature_squared_lapse_obstruction_witness.json": "a127e42e199bd2cc8d4323056d2b3bccbf8d40db51cf1a095fb65b268e8e66f6",
+      "generated/p1988_s938_strict_non_gb_to_spatial_eom_family_projection_witness.json": "7c221d57fcbb6edfb2230fae4cd5ca545d65cb0ae8b18f5052bf237b8b2de0b1",
+      "generated/p1991_s941_strict_augmented_provider_channel_matrix_witness.json": "f8d523bde2c223ff37cc5fbf8ee2451e0e92c7d3d95874c8d348e7348ffa984a",
+      "generated/p2296_s1246_strict_global_task1_renormalization_replay_and_7task_reclassification_probe.json": "32be249a011d9ceffb17730e001ce1c1f585c6f0c28eb9203c7478d9d1666ea2"
+    },
+    "strict_coefficients": {
+      "a_R2": "18516431*log(2)/(640000000*pi**2)",
+      "a_Ric2": "9937*log(2)/(40000*pi**2)",
+      "a_Riem2": "13117491*log(2)/(320000000*pi**2)"
+    },
+    "spatial_eom_projection": {
+      "definition": "E_i = tracefree diagonal Bianchi-I anisotropic Euler projection dL/dsigma - Dt(dL/ddot_sigma) + Dt^2(dL/ddotdot_sigma) of the strict non-GB density; equations are scaled by N^8/V for zero-equivalent polynomial testing",
+      "components": [
+        "E_spatial_1 := EL_sigma1",
+        "E_spatial_2 := EL_sigma2",
+        "E_spatial_3 := -EL_sigma1-EL_sigma2"
+      ],
+      "tracefree_sum_zero": true,
+      "component_sha256": [
+        "28d23217554c6a1ecf1028d5140d33fb1ff02f608f58e398b3ba52d474f07728",
+        "10c9607f0c2c4cc63dd2e751cfba4f2b00783507b009f73f0fa2d08c46641a33",
+        "105ab1fcbeb84bf60d2a12baf5b79d99cff3ee6e10fa983c2294a6a8d819aa07"
+      ]
+    },
+    "provider_matrix_results": {
+      "strict_core_minimal_provider": {
+        "unknowns": [
+          "c1",
+          "c2",
+          "c3"
+        ],
+        "provider_scaled_polynomial": "3*H*c1*(sigma1 + sigma2) + c2*(dsigma1 + dsigma2) + c3*(sigma1**2 + sigma1*sigma2 + sigma2**2)",
+        "matrix_report": {
+          "equation_count": 72,
+          "unknown_count": 3,
+          "rank_A": 3,
+          "rank_augmented": 4,
+          "consistent": false,
+          "full_solve": false,
+          "least_squares_residual_l2": 3.5934624608947687,
+          "least_squares_solution_preview": {
+            "c1": 0.0,
+            "c2": 0.0,
+            "c3": 0.0
+          }
+        },
+        "zero_row_obstruction_preview": [
+          {
+            "component": "E_spatial_1",
+            "monomial_powers": {
+              "N": 5,
+              "H": 2,
+              "sigma1": 1
+            },
+            "row_nonzero": false,
+            "rhs": "-174793293*log(2)/(20000000*pi**2)",
+            "obstruction_rhs": "-174793293*log(2)/(20000000*pi**2)"
+          },
+          {
+            "component": "E_spatial_1",
+            "monomial_powers": {
+              "N": 5,
+              "H": 2,
+              "sigma2": 1
+            },
+            "row_nonzero": false,
+            "rhs": "-174793293*log(2)/(40000000*pi**2)",
+            "obstruction_rhs": "-174793293*log(2)/(40000000*pi**2)"
+          },
+          {
+            "component": "E_spatial_1",
+            "monomial_powers": {
+              "N": 5,
+              "H": 1,
+              "dsigma1": 1
+            },
+            "row_nonzero": false,
+            "rhs": "98974473*log(2)/(20000000*pi**2)",
+            "obstruction_rhs": "98974473*log(2)/(20000000*pi**2)"
+          },
+          {
+            "component": "E_spatial_1",
+            "monomial_powers": {
+              "N": 5,
+              "H": 1,
+              "dsigma2": 1
+            },
+            "row_nonzero": false,
+            "rhs": "98974473*log(2)/(40000000*pi**2)",
+            "obstruction_rhs": "98974473*log(2)/(40000000*pi**2)"
+          },
+          {
+            "component": "E_spatial_1",
+            "monomial_powers": {
+              "N": 5,
+              "Hd": 1,
+              "sigma1": 1
+            },
+            "row_nonzero": false,
+            "rhs": "-174793293*log(2)/(40000000*pi**2)",
+            "obstruction_rhs": "-174793293*log(2)/(40000000*pi**2)"
+          },
+          {
+            "component": "E_spatial_1",
+            "monomial_powers": {
+              "N": 5,
+              "Hd": 1,
+              "sigma2": 1
+            },
+            "row_nonzero": false,
+            "rhs": "-174793293*log(2)/(80000000*pi**2)",
+            "obstruction_rhs": "-174793293*log(2)/(80000000*pi**2)"
+          },
+          {
+            "component": "E_spatial_1",
+            "monomial_powers": {
+              "N": 5,
+              "sigma1": 3
+            },
+            "row_nonzero": false,
+            "rhs": "-256213377*log(2)/(40000000*pi**2)",
+            "obstruction_rhs": "-256213377*log(2)/(40000000*pi**2)"
+          },
+          {
+            "component": "E_spatial_1",
+            "monomial_powers": {
+              "N": 5,
+              "sigma1": 2,
+              "sigma2": 1
+            },
+            "row_nonzero": false,
+            "rhs": "-768640131*log(2)/(80000000*pi**2)",
+            "obstruction_rhs": "-768640131*log(2)/(80000000*pi**2)"
+          }
+        ],
+        "verdict": "NO_STRICT_CORE_SOLUTION_FOR_CURRENT_PROVIDER_CLASS"
+      },
+      "p1990_augmented_provider_non_strict": {
+        "unknowns": [
+          "c1",
+          "c2",
+          "c3",
+          "eta1",
+          "eta2",
+          "eta3"
+        ],
+        "provider_scaled_polynomial": "3*H*c1*(sigma1 + sigma2) + Ndd*eta2*(sigma1**2 + sigma1*sigma2 + sigma2**2) + c2*(dsigma1 + dsigma2) + c3*(sigma1**2 + sigma1*sigma2 + sigma2**2) + eta1*(2*d2sigma1*sigma1 + d2sigma1*sigma2 + d2sigma2*sigma1 + 2*d2sigma2*sigma2) + eta3*(sigma1**2 + sigma1*sigma2 + sigma2**2)**2",
+        "selector_premise_label": "NON_STRICT_AUGMENTED_CLASS_FROM_P1990; QW-2191_NOT_DISCHARGED",
+        "matrix_report": {
+          "equation_count": 138,
+          "unknown_count": 6,
+          "rank_A": 6,
+          "rank_augmented": 7,
+          "consistent": false,
+          "full_solve": false,
+          "least_squares_residual_l2": 3.5934624608947687,
+          "least_squares_solution_preview": {
+            "c1": -4.532466518368395e-18,
+            "c2": -4.532466518368393e-18,
+            "c3": 0.0,
+            "eta1": 0.0,
+            "eta2": 0.0,
+            "eta3": 0.0
+          }
+        },
+        "zero_row_obstruction_preview": [
+          {
+            "component": "E_spatial_1",
+            "monomial_powers": {
+              "N": 5,
+              "H": 2,
+              "sigma1": 1
+            },
+            "row_nonzero": false,
+            "rhs": "-174793293*log(2)/(20000000*pi**2)",
+            "obstruction_rhs": "-174793293*log(2)/(20000000*pi**2)"
+          },
+          {
+            "component": "E_spatial_1",
+            "monomial_powers": {
+              "N": 5,
+              "H": 2,
+              "sigma2": 1
+            },
+            "row_nonzero": false,
+            "rhs": "-174793293*log(2)/(40000000*pi**2)",
+            "obstruction_rhs": "-174793293*log(2)/(40000000*pi**2)"
+          },
+          {
+            "component": "E_spatial_1",
+            "monomial_powers": {
+              "N": 5,
+              "H": 1,
+              "dsigma1": 1
+            },
+            "row_nonzero": false,
+            "rhs": "98974473*log(2)/(20000000*pi**2)",
+            "obstruction_rhs": "98974473*log(2)/(20000000*pi**2)"
+          },
+          {
+            "component": "E_spatial_1",
+            "monomial_powers": {
+              "N": 5,
+              "H": 1,
+              "dsigma2": 1
+            },
+            "row_nonzero": false,
+            "rhs": "98974473*log(2)/(40000000*pi**2)",
+            "obstruction_rhs": "98974473*log(2)/(40000000*pi**2)"
+          },
+          {
+            "component": "E_spatial_1",
+            "monomial_powers": {
+              "N": 5,
+              "Hd": 1,
+              "sigma1": 1
+            },
+            "row_nonzero": false,
+            "rhs": "-174793293*log(2)/(40000000*pi**2)",
+            "obstruction_rhs": "-174793293*log(2)/(40000000*pi**2)"
+          },
+          {
+            "component": "E_spatial_1",
+            "monomial_powers": {
+              "N": 5,
+              "Hd": 1,
+              "sigma2": 1
+            },
+            "row_nonzero": false,
+            "rhs": "-174793293*log(2)/(80000000*pi**2)",
+            "obstruction_rhs": "-174793293*log(2)/(80000000*pi**2)"
+          },
+          {
+            "component": "E_spatial_1",
+            "monomial_powers": {
+              "N": 5,
+              "sigma1": 3
+            },
+            "row_nonzero": false,
+            "rhs": "-256213377*log(2)/(40000000*pi**2)",
+            "obstruction_rhs": "-256213377*log(2)/(40000000*pi**2)"
+          },
+          {
+            "component": "E_spatial_1",
+            "monomial_powers": {
+              "N": 5,
+              "sigma1": 2,
+              "sigma2": 1
+            },
+            "row_nonzero": false,
+            "rhs": "-768640131*log(2)/(80000000*pi**2)",
+            "obstruction_rhs": "-768640131*log(2)/(80000000*pi**2)"
+          }
+        ],
+        "verdict": "NO_FULL_COMPONENTWISE_SOLUTION_EVEN_BEFORE_STRICT_PROMOTION"
+      },
+      "formal_full_residual_basis_provider": {
+        "basis_monomial_count": 36,
+        "matrix_report": {
+          "equation_count": 82,
+          "unknown_count": 36,
+          "rank_A": 31,
+          "rank_augmented": 31,
+          "consistent": true,
+          "full_solve": false,
+          "least_squares_residual_l2": 3.439834013097666e-15,
+          "least_squares_solution_preview": {
+            "u0": 0.10674625304999925,
+            "u1": 0.0876844221482139,
+            "u2": 0.10674625304999937,
+            "u3": 3.470902991060155e-17,
+            "u4": -3.191627926444484e-16,
+            "u5": -0.1334328163124993,
+            "u6": -0.07307035179017816,
+            "u7": -0.07307035179017812
+          }
+        },
+        "exact_reconstruction_zero": true,
+        "admissibility_verdict": "ALGEBRAICALLY_CAPABLE_BUT_NOT_A_LEGAL_STRICT_PROVIDER; it copies the full residual basis and supplies no internal selector source"
+      }
+    },
+    "upstream_consistency": {
+      "p1985_obstruction_witness_passed": true,
+      "p1988_spatial_projection_obstruction_present": true,
+      "p1991_augmented_channel_obstruction_present": true,
+      "p2296_task1_b1_projected_pass": true
+    },
+    "theorem_scope_limit": "Componentwise spatial-EOM/provider matrix obstruction for the strict non-GB Bianchi-I residual; not a legal-provider existence theorem, not QW-2191 discharge, and not ToE closure"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2298_candidate",
+    "goal": "derive a noncyclic strict internal provider-source candidate for the full residual-family basis, or prove a non-admissibility theorem showing that any such source would require an explicit non-strict selector premise"
+  },
+  "gatekeeper_checks": {
+    "tracefree_spatial_component_sum_zero": true,
+    "strict_core_matrix_inconsistent": true,
+    "augmented_non_strict_matrix_inconsistent": true,
+    "formal_full_basis_reconstructs_zero": true,
+    "formal_full_basis_marked_non_admissible": true,
+    "p1985_obstruction_preserved": true,
+    "no_legacy_transfer_used": true,
+    "qw2191_not_discharged": true,
+    "no_selector_closure_claimed": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

@@ -1,0 +1,255 @@
+{
+  "schema_version": "p2313_s1263_v1",
+  "packet_id": "P2313",
+  "stage_id": "S1263",
+  "produced_by": "p2313_s1263_strict_provider_margin_route_stop_and_source_class_contract_probe.py",
+  "timestamp_utc": "2026-05-28T00:00:00+00:00",
+  "status": "OPEN_OBSTRUCTION_CURRENT_PROVIDER_MARGIN_ROUTE_STOPPED_NEW_SOURCE_CLASS_REQUIRED",
+  "result_kind": "STRICT_PROVIDER_MARGIN_ROUTE_STOP_AND_NEW_SOURCE_CLASS_ADMISSION_CONTRACT",
+  "strict_provider_margin_route_stop_and_source_class_contract_probe": {
+    "probe_id": "P2313_S1263_STRICT_PROVIDER_MARGIN_ROUTE_STOP_AND_SOURCE_CLASS_CONTRACT",
+    "source_packets": {
+      "p2308": "generated/p2308_s1258_strict_current_interface_class_response_functional_nonexistence_probe.json",
+      "p2309": "generated/p2309_s1259_strict_min_norm_response_weights_replay_quarantine_probe.json",
+      "p2310": "generated/p2310_s1260_strict_self_energy_response_source_audit_and_replay_probe.json",
+      "p2311": "generated/p2311_s1261_strict_self_energy_to_policy_margin_theorem_audit_probe.json",
+      "p2312": "generated/p2312_s1262_strict_lapse_shear_source_normalization_attempt_probe.json"
+    },
+    "source_hashes": {
+      "p2308_sha256": "f00ef2ab7ba6dba05bc8fd54a3886d25ffa18c30fe1b540adf7f5f1a8e26cb29",
+      "p2309_sha256": "f8b7831f6dba4e34d0c82f37586016582dadc22c78135788d00f551cb4851e11",
+      "p2310_sha256": "f4515e81fdb9fcd608d046f0ce8abb3ffc2c1a18d343769e813e13c2fcd2e553",
+      "p2311_sha256": "82cfb971bc80d89023c1962ad7a621aaa66d9f09010dc6d682f0d6c5a076b6b9",
+      "p2312_sha256": "13de73c79018b041b8803cc731e5b3ff410195c2eb8a02b323eaeaec3941791e"
+    },
+    "blocker_stack": [
+      {
+        "packet": "P2308",
+        "blocker": "current exported P2300/P2281 response-functional interface class has no admissible strict functional",
+        "active": true,
+        "source": "generated/p2308_s1258_strict_current_interface_class_response_functional_nonexistence_probe.json"
+      },
+      {
+        "packet": "P2309",
+        "blocker": "min-norm weights only work by target-calibrated replay and are quarantined",
+        "active": true,
+        "source": "generated/p2309_s1259_strict_min_norm_response_weights_replay_quarantine_probe.json"
+      },
+      {
+        "packet": "P2310",
+        "blocker": "self-energy scalar is non-target-calibrated and replay-passing but lacks ADM/policy-margin source theorem",
+        "active": true,
+        "source": "generated/p2310_s1260_strict_self_energy_response_source_audit_and_replay_probe.json"
+      },
+      {
+        "packet": "P2311",
+        "blocker": "E(c)=||c||^2 -> provider_lift theorem obligations O3/O4 fail in the current export set",
+        "active": true,
+        "source": "generated/p2311_s1261_strict_self_energy_to_policy_margin_theorem_audit_probe.json"
+      },
+      {
+        "packet": "P2312",
+        "blocker": "concrete P1985 non-GB lapse-source normalization is sign-indefinite and rectifiers are non-strict",
+        "active": true,
+        "source": "generated/p2312_s1262_strict_lapse_shear_source_normalization_attempt_probe.json"
+      }
+    ],
+    "dynamical_orientation_constraint_audit": {
+      "attempt_id": "P2313_DERIVATIVE_ORIENTATION_CONSTRAINT_INVENTORY",
+      "question": "Does the current export set contain a strict dynamical constraint fixing the P1985 lapse/shear derivative orientation enough to make the source monotone?",
+      "candidate_constraints": [
+        {
+          "constraint_id": "FREEZE_SHEAR_AND_LAPSE_DERIVATIVES",
+          "definition": "Set dsigma_i=d2sigma_i=Nd=Ndd=0 before source normalization.",
+          "strict_admissible": false,
+          "reason": "This is an imposed kinematic slice/convention, not an exported ADM/Bianchi-I equation valid over the P2281 policy replay domain."
+        },
+        {
+          "constraint_id": "REQUIRE_NONNEGATIVE_NON_GB_LAPSE_SOURCE",
+          "definition": "Restrict admissible trajectories to EL_nonGB_lapse >= 0.",
+          "strict_admissible": false,
+          "reason": "This is exactly a sign/selector premise and is contradicted as a universal property by P2312's negative witness."
+        },
+        {
+          "constraint_id": "USE_ABSOLUTE_VALUE_OR_POSITIVE_PART_RECTIFIER",
+          "definition": "Replace the source by |EL_nonGB_lapse| or max(EL_nonGB_lapse,0).",
+          "strict_admissible": false,
+          "reason": "The rectifier is not exported by the variational equations and would be a convention layer."
+        },
+        {
+          "constraint_id": "DERIVE_NEW_ADM_ORIENTATION_EQUATION",
+          "definition": "Export a new strict equation tying lapse/shear derivatives to a signed monotone P2281 margin response.",
+          "strict_admissible": false,
+          "reason": "This is the missing future object; it is not present in the current export set audited by P2308-P2312."
+        }
+      ],
+      "positive_negative_witness_available": true,
+      "constraint_exported_now": false,
+      "conclusion": "No current strict dynamical constraint fixes the P1985 orientation. The current bridge route must stop unless a genuinely new source class is exported."
+    },
+    "new_source_class_admission_contract": [
+      {
+        "criterion_id": "NSC1_TYPED_DOMAIN",
+        "requirement": "The source must declare its typed domain: P2300 coefficients, ADM lapse/shear trajectories, or a new strict state object.",
+        "mandatory": true
+      },
+      {
+        "criterion_id": "NSC2_INTERNAL_STRICT_ORIGIN",
+        "requirement": "The source must be derived from strict-side dynamics/ontology, not from legacy role transfer, target calibration, or convention.",
+        "mandatory": true
+      },
+      {
+        "criterion_id": "NSC3_SIGNED_MONOTONE_RESPONSE",
+        "requirement": "It must export a signed monotone response functional into the P2281/P2302 margin recurrence.",
+        "mandatory": true
+      },
+      {
+        "criterion_id": "NSC4_SELECTOR_FREE_OR_EXPLICITLY_NONSTRICT",
+        "requirement": "Any positive-channel, absolute-value, branch, or selector operation must either be internally derived or explicitly marked non-strict.",
+        "mandatory": true
+      },
+      {
+        "criterion_id": "NSC5_REPLAY_AND_GATE_ROWS",
+        "requirement": "After the source is exported, replay P2302/P2281 and then recompute P2282-style G1/G2/G3 rows before any closure claim.",
+        "mandatory": true
+      },
+      {
+        "criterion_id": "NSC6_GUARDRAILS",
+        "requirement": "The packet must preserve QW-2191, no legacy-kernel role transfer, and no ToE closure claim unless separately proven.",
+        "mandatory": true
+      }
+    ],
+    "candidate_next_source_classes": [
+      {
+        "class_id": "NEW_ADM_LAPSE_SHEAR_ORIENTATION_EQUATION",
+        "description": "A future variational/dynamical identity that fixes the sign of the P1985 lapse/shear derivative contribution on the P2281 replay domain.",
+        "admitted_now": false,
+        "why_not_now": "P2312 exhibits opposite signs for the current source at the same shear energy, so the needed orientation equation is not already exported.",
+        "required_contracts": [
+          "NSC1_TYPED_DOMAIN",
+          "NSC2_INTERNAL_STRICT_ORIGIN",
+          "NSC3_SIGNED_MONOTONE_RESPONSE",
+          "NSC5_REPLAY_AND_GATE_ROWS"
+        ]
+      },
+      {
+        "class_id": "NEW_SELECTOR_SOURCE_FROM_STRICT_SHANNON_SYMMETRY_BREAKING",
+        "description": "A strict internal selector/orientation source possibly related to the strict-side 4 ln 2 Shannon premise, but not a legacy import and not a free selector premise.",
+        "admitted_now": false,
+        "why_not_now": "QW-2191 remains active; no internal selector source has been exported in the current Task-3 bridge packets.",
+        "required_contracts": [
+          "NSC2_INTERNAL_STRICT_ORIGIN",
+          "NSC4_SELECTOR_FREE_OR_EXPLICITLY_NONSTRICT",
+          "NSC6_GUARDRAILS"
+        ]
+      },
+      {
+        "class_id": "NEW_POLICY_MARGIN_FUNCTIONAL_FROM_DYNAMICS",
+        "description": "A direct derivation of the P2281 margin recurrence response from strict dynamics, bypassing coefficient norm and lapse-source rectification.",
+        "admitted_now": false,
+        "why_not_now": "P2307/P2308 show the current exported dynamics only responds to an already supplied lambda and does not derive lambda=R(c).",
+        "required_contracts": [
+          "NSC1_TYPED_DOMAIN",
+          "NSC3_SIGNED_MONOTONE_RESPONSE",
+          "NSC5_REPLAY_AND_GATE_ROWS"
+        ]
+      }
+    ],
+    "route_stop_verdict": {
+      "current_provider_margin_bridge_route_stopped": true,
+      "stopped_route_scope": "current P2300/P2281/P1985/P2310 interface and normalization class only",
+      "not_universal_no_go": true,
+      "new_source_class_required": true,
+      "admissible_for_g1_g3_update": false,
+      "reason": "P2308-P2312 now block response weights, target-calibrated weights, self-energy theorem use, and concrete non-GB lapse-source normalization; continuing this same route would be cyclic without a new source class."
+    },
+    "task3_g1_g3_update": {
+      "G1_reduction_certainty": "OPEN_UNCHANGED",
+      "G2_nonlinear_trajectory_realism": "CLOSED_FROM_P2301_UNCHANGED",
+      "G3_operational_policy_rule": "OPEN_UNCHANGED",
+      "reason": "P2313 stops the current route rather than cycling the same blocker cut without a new source class."
+    },
+    "theorem_export": {
+      "statement_id": "P2313_CURRENT_PROVIDER_MARGIN_ROUTE_STOP_AND_NEW_SOURCE_CONTRACT_THEOREM",
+      "formal_statement": "Given the active blocker stack P2308-P2312, the current P2300/P2281/P1985/P2310 provider-to-margin route is stopped for strict G1/G3 use. P2313 does not prove a universal impossibility theorem; it certifies that further progress must introduce a genuinely new strict source class or dynamical orientation constraint satisfying the listed NSC admission contract before replaying P2302/P2281 and recomputing P2282-style gate rows.",
+      "proof_bits": {
+        "blocker_stack_active": [
+          {
+            "packet": "P2308",
+            "blocker": "current exported P2300/P2281 response-functional interface class has no admissible strict functional",
+            "active": true,
+            "source": "generated/p2308_s1258_strict_current_interface_class_response_functional_nonexistence_probe.json"
+          },
+          {
+            "packet": "P2309",
+            "blocker": "min-norm weights only work by target-calibrated replay and are quarantined",
+            "active": true,
+            "source": "generated/p2309_s1259_strict_min_norm_response_weights_replay_quarantine_probe.json"
+          },
+          {
+            "packet": "P2310",
+            "blocker": "self-energy scalar is non-target-calibrated and replay-passing but lacks ADM/policy-margin source theorem",
+            "active": true,
+            "source": "generated/p2310_s1260_strict_self_energy_response_source_audit_and_replay_probe.json"
+          },
+          {
+            "packet": "P2311",
+            "blocker": "E(c)=||c||^2 -> provider_lift theorem obligations O3/O4 fail in the current export set",
+            "active": true,
+            "source": "generated/p2311_s1261_strict_self_energy_to_policy_margin_theorem_audit_probe.json"
+          },
+          {
+            "packet": "P2312",
+            "blocker": "concrete P1985 non-GB lapse-source normalization is sign-indefinite and rectifiers are non-strict",
+            "active": true,
+            "source": "generated/p2312_s1262_strict_lapse_shear_source_normalization_attempt_probe.json"
+          }
+        ],
+        "all_blockers_active": true,
+        "positive_negative_p2312_witness_available": true,
+        "constraint_exported_now": false,
+        "new_source_class_required": true,
+        "admission_contract_ids": [
+          "NSC1_TYPED_DOMAIN",
+          "NSC2_INTERNAL_STRICT_ORIGIN",
+          "NSC3_SIGNED_MONOTONE_RESPONSE",
+          "NSC4_SELECTOR_FREE_OR_EXPLICITLY_NONSTRICT",
+          "NSC5_REPLAY_AND_GATE_ROWS",
+          "NSC6_GUARDRAILS"
+        ]
+      },
+      "not_claimed": [
+        "universal no-go for all future provider-to-margin bridges",
+        "strict G1 closure",
+        "strict G3 closure",
+        "full Task-3 closure",
+        "QW-2191 discharge",
+        "selector closure",
+        "legacy-kernel role transfer",
+        "ToE closure"
+      ]
+    },
+    "theorem_fingerprint_sha256": "29585181882ae1c91f376dce2d1aba3d7f2aa2cf4acd9ff83d76c0c1ae01f96b"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2314_candidate",
+    "goal": "Start a genuinely new source-class construction attempt satisfying NSC1-NSC6, or explicitly mark any Shannon/selector branch as non-strict until it exports an internal selector/orientation source and survives P2302/P2282 replay."
+  },
+  "gatekeeper_checks": {
+    "p2308_current_interface_blocker_loaded": true,
+    "p2309_target_calibration_quarantine_loaded": true,
+    "p2310_self_energy_quarantine_loaded": true,
+    "p2311_self_energy_theorem_blocker_loaded": true,
+    "p2312_sign_indefinite_source_blocker_loaded": true,
+    "all_current_route_blockers_active": true,
+    "no_current_dynamical_orientation_constraint_exported": true,
+    "new_source_class_contract_exported": true,
+    "current_route_stop_scope_not_universal_no_go": true,
+    "strict_g1_g3_not_updated": true,
+    "no_selector_premise_added": true,
+    "no_qw2191_discharge_claimed": true,
+    "no_legacy_kernel_role_transfer": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_ROUTE_STOP_AND_NEW_SOURCE_CLASS_CONTRACT_TRACE"
+}

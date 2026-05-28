@@ -1,0 +1,462 @@
+{
+  "schema_version": "p2308_s1258_v1",
+  "packet_id": "P2308",
+  "stage_id": "S1258",
+  "produced_by": "p2308_s1258_strict_current_interface_class_response_functional_nonexistence_probe.py",
+  "timestamp_utc": "2026-05-28T00:00:00+00:00",
+  "status": "OPEN_OBSTRUCTION_CURRENT_INTERFACE_CLASS_RESPONSE_FUNCTIONAL_NONEXISTENCE",
+  "result_kind": "THEOREM_GRADE_NONEXISTENCE_FOR_CURRENT_P2300_P2281_INTERFACE_CLASS",
+  "strict_current_interface_class_response_functional_nonexistence_probe": {
+    "probe_id": "P2308_S1258_STRICT_CURRENT_INTERFACE_CLASS_RESPONSE_FUNCTIONAL_NONEXISTENCE",
+    "source_packets": {
+      "alpha_geo_strict_derived_v1": "generated/alpha_geo_strict_derived_v1.json",
+      "p2300": "generated/p2300_s1250_strict_shannon_nad12_sigma_adm_bianchi_spatial_eom_provider_operator_probe.json",
+      "p2302": "generated/p2302_s1252_strict_task3_provider_lift_policy_lock_candidate_probe.json",
+      "p2306": "generated/p2306_s1256_strict_response_orientation_functional_interface_audit_probe.json",
+      "p2307": "generated/p2307_s1257_strict_dynamical_margin_response_functional_nonderivation_probe.json"
+    },
+    "source_hashes": {
+      "alpha_geo_strict_derived_v1_sha256": "fde8d28194230eafaf65e0803b5c67ad9a756ff688cd0cfc00acccfd9f9c5328",
+      "p2300_sha256": "13126823c36db20fa4eb705974176e81f9b8c76d1b7a1ca4fe5f087a8ffea67d",
+      "p2302_sha256": "1912c3247bf0d48e34b800b9c3103887d00a430620e9ce7f6a46a94579b87fa9",
+      "p2306_sha256": "8f193bac65583b7291a6638ed42abb039b90ce8f07ea2de837656524d750a843",
+      "p2307_sha256": "08ec049881ebcdec7cd5c07003f289723ab721e89f7be00e2390f941b9939299"
+    },
+    "current_interface_class": [
+      {
+        "candidate_id": "P2306::PROJECTOR_TRACE_PULLBACK",
+        "source_probe": "P2306",
+        "definition": "Use A1(pair1) projector trace/eigenvalue as a scalar orientation source.",
+        "typed_on_p2300_coefficients": false,
+        "derived_from_margin_dynamics": false,
+        "exports_or_derives_signed_orientation": false,
+        "strict_internal_no_selector_or_convention_premise": false,
+        "passes_required_lift": false,
+        "admissible_as_p2300_response_functional": false,
+        "failure_reason": "Projector trace is sign invariant and has no exported pullback to the 10 P2300 provider coefficients.",
+        "failed_predicates": [
+          "typed_on_p2300_coefficients",
+          "derived_from_margin_dynamics",
+          "exports_or_derives_signed_orientation",
+          "strict_internal_no_selector_or_convention_premise",
+          "passes_required_lift",
+          "admissible_as_p2300_response_functional"
+        ],
+        "passes_all_required_predicates": false
+      },
+      {
+        "candidate_id": "P2306::THETA_PAIR_SIGN_PULLBACK",
+        "source_probe": "P2306",
+        "definition": "Use theta-pair sigma-int sign to orient positive P2300 channels.",
+        "typed_on_p2300_coefficients": false,
+        "derived_from_margin_dynamics": false,
+        "exports_or_derives_signed_orientation": false,
+        "strict_internal_no_selector_or_convention_premise": false,
+        "passes_required_lift": false,
+        "admissible_as_p2300_response_functional": false,
+        "failure_reason": "Would select/weight channels by a sign rule not exported as an ADM/Bianchi policy-margin theorem; this is a selector/orientation premise.",
+        "failed_predicates": [
+          "typed_on_p2300_coefficients",
+          "derived_from_margin_dynamics",
+          "exports_or_derives_signed_orientation",
+          "strict_internal_no_selector_or_convention_premise",
+          "passes_required_lift",
+          "admissible_as_p2300_response_functional"
+        ],
+        "passes_all_required_predicates": false
+      },
+      {
+        "candidate_id": "P2306::H37_CONVENTION_SIGN_LIFT_PULLBACK",
+        "source_probe": "P2306",
+        "definition": "Use C_v1 convention-layer directed sign lift as response orientation.",
+        "typed_on_p2300_coefficients": false,
+        "derived_from_margin_dynamics": false,
+        "exports_or_derives_signed_orientation": false,
+        "strict_internal_no_selector_or_convention_premise": false,
+        "passes_required_lift": false,
+        "admissible_as_p2300_response_functional": false,
+        "failure_reason": "Convention-layer sign lifts are explicitly below strict physical sign datum and do not type-map to P2281 margin.",
+        "failed_predicates": [
+          "typed_on_p2300_coefficients",
+          "derived_from_margin_dynamics",
+          "exports_or_derives_signed_orientation",
+          "strict_internal_no_selector_or_convention_premise",
+          "passes_required_lift",
+          "admissible_as_p2300_response_functional"
+        ],
+        "passes_all_required_predicates": false
+      },
+      {
+        "candidate_id": "P2306::SIGNED_TOTAL_CANONICAL_RESPONSE",
+        "source_probe": "P2306",
+        "definition": "Use the all-ones signed response on the exported P2300 coefficient vector.",
+        "typed_on_p2300_coefficients": true,
+        "derived_from_margin_dynamics": false,
+        "exports_or_derives_signed_orientation": false,
+        "strict_internal_no_selector_or_convention_premise": false,
+        "passes_required_lift": false,
+        "admissible_as_p2300_response_functional": false,
+        "failure_reason": "This is well-typed but negative, hence it cannot certify a positive provider lift.",
+        "failed_predicates": [
+          "derived_from_margin_dynamics",
+          "exports_or_derives_signed_orientation",
+          "strict_internal_no_selector_or_convention_premise",
+          "passes_required_lift",
+          "admissible_as_p2300_response_functional"
+        ],
+        "passes_all_required_predicates": false
+      },
+      {
+        "candidate_id": "P2307::DYNAMICS_NATIVE_PROVIDER_LIFT_PARAMETER",
+        "source_probe": "P2307",
+        "definition": "lambda is the scalar provider_lift_per_step argument in the P2281/P2302 replay recurrence",
+        "typed_on_p2300_coefficients": false,
+        "derived_from_margin_dynamics": true,
+        "exports_or_derives_signed_orientation": false,
+        "strict_internal_no_selector_or_convention_premise": false,
+        "passes_required_lift": true,
+        "admissible_as_p2300_response_functional": false,
+        "failure_reason": "The dynamics differentiates with respect to lambda, but does not derive lambda from P2300 coefficients.",
+        "failed_predicates": [
+          "typed_on_p2300_coefficients",
+          "exports_or_derives_signed_orientation",
+          "strict_internal_no_selector_or_convention_premise",
+          "admissible_as_p2300_response_functional"
+        ],
+        "passes_all_required_predicates": false
+      },
+      {
+        "candidate_id": "P2307::CANONICAL_SIGNED_TOTAL_FROM_P2300",
+        "source_probe": "P2307",
+        "definition": "sum_i c_i",
+        "typed_on_p2300_coefficients": true,
+        "derived_from_margin_dynamics": false,
+        "exports_or_derives_signed_orientation": false,
+        "strict_internal_no_selector_or_convention_premise": false,
+        "passes_required_lift": false,
+        "admissible_as_p2300_response_functional": false,
+        "failure_reason": "Well typed but negative, so it cannot lower-bound the positive policy lift.",
+        "failed_predicates": [
+          "derived_from_margin_dynamics",
+          "exports_or_derives_signed_orientation",
+          "strict_internal_no_selector_or_convention_premise",
+          "passes_required_lift",
+          "admissible_as_p2300_response_functional"
+        ],
+        "passes_all_required_predicates": false
+      },
+      {
+        "candidate_id": "P2307::POSITIVE_CHANNEL_SUM_FROM_P2300",
+        "source_probe": "P2307",
+        "definition": "sum_{i:c_i>0} c_i",
+        "typed_on_p2300_coefficients": true,
+        "derived_from_margin_dynamics": false,
+        "exports_or_derives_signed_orientation": false,
+        "strict_internal_no_selector_or_convention_premise": false,
+        "passes_required_lift": true,
+        "admissible_as_p2300_response_functional": false,
+        "failure_reason": "Numerically sufficient but requires a channel-selection/sign premise not derived from the replay dynamics.",
+        "failed_predicates": [
+          "derived_from_margin_dynamics",
+          "exports_or_derives_signed_orientation",
+          "strict_internal_no_selector_or_convention_premise",
+          "admissible_as_p2300_response_functional"
+        ],
+        "passes_all_required_predicates": false
+      },
+      {
+        "candidate_id": "P2307::NORM_RESPONSE_FROM_P2300",
+        "source_probe": "P2307",
+        "definition": "||c||_2 or ||c||_1",
+        "typed_on_p2300_coefficients": true,
+        "derived_from_margin_dynamics": false,
+        "exports_or_derives_signed_orientation": false,
+        "strict_internal_no_selector_or_convention_premise": false,
+        "passes_required_lift": true,
+        "admissible_as_p2300_response_functional": false,
+        "failure_reason": "P2305/P2306 already show unsigned norms need an orientation theorem absent from current dynamics.",
+        "failed_predicates": [
+          "derived_from_margin_dynamics",
+          "exports_or_derives_signed_orientation",
+          "strict_internal_no_selector_or_convention_premise",
+          "admissible_as_p2300_response_functional"
+        ],
+        "passes_all_required_predicates": false
+      }
+    ],
+    "predicate_matrix": {
+      "typed_on_p2300_coefficients": {
+        "satisfied_by": [
+          "P2306::SIGNED_TOTAL_CANONICAL_RESPONSE",
+          "P2307::CANONICAL_SIGNED_TOTAL_FROM_P2300",
+          "P2307::POSITIVE_CHANNEL_SUM_FROM_P2300",
+          "P2307::NORM_RESPONSE_FROM_P2300"
+        ],
+        "failed_by": [
+          "P2306::PROJECTOR_TRACE_PULLBACK",
+          "P2306::THETA_PAIR_SIGN_PULLBACK",
+          "P2306::H37_CONVENTION_SIGN_LIFT_PULLBACK",
+          "P2307::DYNAMICS_NATIVE_PROVIDER_LIFT_PARAMETER"
+        ]
+      },
+      "derived_from_margin_dynamics": {
+        "satisfied_by": [
+          "P2307::DYNAMICS_NATIVE_PROVIDER_LIFT_PARAMETER"
+        ],
+        "failed_by": [
+          "P2306::PROJECTOR_TRACE_PULLBACK",
+          "P2306::THETA_PAIR_SIGN_PULLBACK",
+          "P2306::H37_CONVENTION_SIGN_LIFT_PULLBACK",
+          "P2306::SIGNED_TOTAL_CANONICAL_RESPONSE",
+          "P2307::CANONICAL_SIGNED_TOTAL_FROM_P2300",
+          "P2307::POSITIVE_CHANNEL_SUM_FROM_P2300",
+          "P2307::NORM_RESPONSE_FROM_P2300"
+        ]
+      },
+      "exports_or_derives_signed_orientation": {
+        "satisfied_by": [],
+        "failed_by": [
+          "P2306::PROJECTOR_TRACE_PULLBACK",
+          "P2306::THETA_PAIR_SIGN_PULLBACK",
+          "P2306::H37_CONVENTION_SIGN_LIFT_PULLBACK",
+          "P2306::SIGNED_TOTAL_CANONICAL_RESPONSE",
+          "P2307::DYNAMICS_NATIVE_PROVIDER_LIFT_PARAMETER",
+          "P2307::CANONICAL_SIGNED_TOTAL_FROM_P2300",
+          "P2307::POSITIVE_CHANNEL_SUM_FROM_P2300",
+          "P2307::NORM_RESPONSE_FROM_P2300"
+        ]
+      },
+      "strict_internal_no_selector_or_convention_premise": {
+        "satisfied_by": [],
+        "failed_by": [
+          "P2306::PROJECTOR_TRACE_PULLBACK",
+          "P2306::THETA_PAIR_SIGN_PULLBACK",
+          "P2306::H37_CONVENTION_SIGN_LIFT_PULLBACK",
+          "P2306::SIGNED_TOTAL_CANONICAL_RESPONSE",
+          "P2307::DYNAMICS_NATIVE_PROVIDER_LIFT_PARAMETER",
+          "P2307::CANONICAL_SIGNED_TOTAL_FROM_P2300",
+          "P2307::POSITIVE_CHANNEL_SUM_FROM_P2300",
+          "P2307::NORM_RESPONSE_FROM_P2300"
+        ]
+      },
+      "passes_required_lift": {
+        "satisfied_by": [
+          "P2307::DYNAMICS_NATIVE_PROVIDER_LIFT_PARAMETER",
+          "P2307::POSITIVE_CHANNEL_SUM_FROM_P2300",
+          "P2307::NORM_RESPONSE_FROM_P2300"
+        ],
+        "failed_by": [
+          "P2306::PROJECTOR_TRACE_PULLBACK",
+          "P2306::THETA_PAIR_SIGN_PULLBACK",
+          "P2306::H37_CONVENTION_SIGN_LIFT_PULLBACK",
+          "P2306::SIGNED_TOTAL_CANONICAL_RESPONSE",
+          "P2307::CANONICAL_SIGNED_TOTAL_FROM_P2300"
+        ]
+      },
+      "admissible_as_p2300_response_functional": {
+        "satisfied_by": [],
+        "failed_by": [
+          "P2306::PROJECTOR_TRACE_PULLBACK",
+          "P2306::THETA_PAIR_SIGN_PULLBACK",
+          "P2306::H37_CONVENTION_SIGN_LIFT_PULLBACK",
+          "P2306::SIGNED_TOTAL_CANONICAL_RESPONSE",
+          "P2307::DYNAMICS_NATIVE_PROVIDER_LIFT_PARAMETER",
+          "P2307::CANONICAL_SIGNED_TOTAL_FROM_P2300",
+          "P2307::POSITIVE_CHANNEL_SUM_FROM_P2300",
+          "P2307::NORM_RESPONSE_FROM_P2300"
+        ]
+      }
+    },
+    "class_nonexistence_certificate": {
+      "class_id": "CURRENT_EXPORTED_P2300_P2281_INTERFACE_CLASS_V1",
+      "class_scope": "Finite current export class assembled from P2306 candidate response functionals and P2307 dynamical candidate functionals; not a universal theorem over all future possible dynamics.",
+      "candidate_count": 8,
+      "required_predicates": [
+        "typed_on_p2300_coefficients",
+        "derived_from_margin_dynamics",
+        "exports_or_derives_signed_orientation",
+        "strict_internal_no_selector_or_convention_premise",
+        "passes_required_lift",
+        "admissible_as_p2300_response_functional"
+      ],
+      "admissible_candidate_count": 0,
+      "admissible_candidates": [],
+      "nonexistence_over_current_class": true,
+      "dominant_missing_predicates": {
+        "typed_and_dynamics_joint": [
+          "P2306::PROJECTOR_TRACE_PULLBACK",
+          "P2306::THETA_PAIR_SIGN_PULLBACK",
+          "P2306::H37_CONVENTION_SIGN_LIFT_PULLBACK",
+          "P2306::SIGNED_TOTAL_CANONICAL_RESPONSE",
+          "P2307::DYNAMICS_NATIVE_PROVIDER_LIFT_PARAMETER",
+          "P2307::CANONICAL_SIGNED_TOTAL_FROM_P2300",
+          "P2307::POSITIVE_CHANNEL_SUM_FROM_P2300",
+          "P2307::NORM_RESPONSE_FROM_P2300"
+        ],
+        "signed_orientation": [
+          "P2306::PROJECTOR_TRACE_PULLBACK",
+          "P2306::THETA_PAIR_SIGN_PULLBACK",
+          "P2306::H37_CONVENTION_SIGN_LIFT_PULLBACK",
+          "P2306::SIGNED_TOTAL_CANONICAL_RESPONSE",
+          "P2307::DYNAMICS_NATIVE_PROVIDER_LIFT_PARAMETER",
+          "P2307::CANONICAL_SIGNED_TOTAL_FROM_P2300",
+          "P2307::POSITIVE_CHANNEL_SUM_FROM_P2300",
+          "P2307::NORM_RESPONSE_FROM_P2300"
+        ],
+        "strict_internal_no_selector_or_convention_premise": [
+          "P2306::PROJECTOR_TRACE_PULLBACK",
+          "P2306::THETA_PAIR_SIGN_PULLBACK",
+          "P2306::H37_CONVENTION_SIGN_LIFT_PULLBACK",
+          "P2306::SIGNED_TOTAL_CANONICAL_RESPONSE",
+          "P2307::DYNAMICS_NATIVE_PROVIDER_LIFT_PARAMETER",
+          "P2307::CANONICAL_SIGNED_TOTAL_FROM_P2300",
+          "P2307::POSITIVE_CHANNEL_SUM_FROM_P2300",
+          "P2307::NORM_RESPONSE_FROM_P2300"
+        ]
+      }
+    },
+    "strict_nonexistence_verdict": {
+      "lambda_equals_R_of_c_exported_in_current_class": false,
+      "nonexistence_proven_for_current_interface_class": true,
+      "universal_future_nonexistence_claimed": false,
+      "reason": "The current finite interface class has zero candidates satisfying all required strict response-functional predicates."
+    },
+    "task3_g1_g3_update": {
+      "G1_reduction_certainty": "OPEN_UNCHANGED",
+      "G2_nonlinear_trajectory_realism": "CLOSED_FROM_P2301_UNCHANGED",
+      "G3_operational_policy_rule": "OPEN_UNCHANGED",
+      "reason": "P2308 proves current-class nonexistence, not a new lambda=R(c) bridge."
+    },
+    "theorem_export": {
+      "statement_id": "P2308_CURRENT_INTERFACE_CLASS_RESPONSE_FUNCTIONAL_NONEXISTENCE_THEOREM",
+      "formal_statement": "Within the finite current exported P2300/P2281 interface class assembled from P2306 and P2307, there is no admissible strict response functional lambda=R(c).  Each candidate fails at least one required predicate: typed P2300 domain, derivation from margin dynamics, signed orientation, strict internal/no-selector provenance, positive required lift, or final admissibility.  Therefore G1/G3 cannot be updated on the current export set.  This is a theorem over the current interface class, not a universal impossibility theorem for future strict dynamics.",
+      "proof_bits": {
+        "required_lift": 0.0068,
+        "p2300_coefficient_count": 10,
+        "candidate_count": 8,
+        "admissible_candidate_count": 0,
+        "admissible_candidates": [],
+        "all_candidates_have_failed_predicates": true,
+        "predicate_matrix": {
+          "typed_on_p2300_coefficients": {
+            "satisfied_by": [
+              "P2306::SIGNED_TOTAL_CANONICAL_RESPONSE",
+              "P2307::CANONICAL_SIGNED_TOTAL_FROM_P2300",
+              "P2307::POSITIVE_CHANNEL_SUM_FROM_P2300",
+              "P2307::NORM_RESPONSE_FROM_P2300"
+            ],
+            "failed_by": [
+              "P2306::PROJECTOR_TRACE_PULLBACK",
+              "P2306::THETA_PAIR_SIGN_PULLBACK",
+              "P2306::H37_CONVENTION_SIGN_LIFT_PULLBACK",
+              "P2307::DYNAMICS_NATIVE_PROVIDER_LIFT_PARAMETER"
+            ]
+          },
+          "derived_from_margin_dynamics": {
+            "satisfied_by": [
+              "P2307::DYNAMICS_NATIVE_PROVIDER_LIFT_PARAMETER"
+            ],
+            "failed_by": [
+              "P2306::PROJECTOR_TRACE_PULLBACK",
+              "P2306::THETA_PAIR_SIGN_PULLBACK",
+              "P2306::H37_CONVENTION_SIGN_LIFT_PULLBACK",
+              "P2306::SIGNED_TOTAL_CANONICAL_RESPONSE",
+              "P2307::CANONICAL_SIGNED_TOTAL_FROM_P2300",
+              "P2307::POSITIVE_CHANNEL_SUM_FROM_P2300",
+              "P2307::NORM_RESPONSE_FROM_P2300"
+            ]
+          },
+          "exports_or_derives_signed_orientation": {
+            "satisfied_by": [],
+            "failed_by": [
+              "P2306::PROJECTOR_TRACE_PULLBACK",
+              "P2306::THETA_PAIR_SIGN_PULLBACK",
+              "P2306::H37_CONVENTION_SIGN_LIFT_PULLBACK",
+              "P2306::SIGNED_TOTAL_CANONICAL_RESPONSE",
+              "P2307::DYNAMICS_NATIVE_PROVIDER_LIFT_PARAMETER",
+              "P2307::CANONICAL_SIGNED_TOTAL_FROM_P2300",
+              "P2307::POSITIVE_CHANNEL_SUM_FROM_P2300",
+              "P2307::NORM_RESPONSE_FROM_P2300"
+            ]
+          },
+          "strict_internal_no_selector_or_convention_premise": {
+            "satisfied_by": [],
+            "failed_by": [
+              "P2306::PROJECTOR_TRACE_PULLBACK",
+              "P2306::THETA_PAIR_SIGN_PULLBACK",
+              "P2306::H37_CONVENTION_SIGN_LIFT_PULLBACK",
+              "P2306::SIGNED_TOTAL_CANONICAL_RESPONSE",
+              "P2307::DYNAMICS_NATIVE_PROVIDER_LIFT_PARAMETER",
+              "P2307::CANONICAL_SIGNED_TOTAL_FROM_P2300",
+              "P2307::POSITIVE_CHANNEL_SUM_FROM_P2300",
+              "P2307::NORM_RESPONSE_FROM_P2300"
+            ]
+          },
+          "passes_required_lift": {
+            "satisfied_by": [
+              "P2307::DYNAMICS_NATIVE_PROVIDER_LIFT_PARAMETER",
+              "P2307::POSITIVE_CHANNEL_SUM_FROM_P2300",
+              "P2307::NORM_RESPONSE_FROM_P2300"
+            ],
+            "failed_by": [
+              "P2306::PROJECTOR_TRACE_PULLBACK",
+              "P2306::THETA_PAIR_SIGN_PULLBACK",
+              "P2306::H37_CONVENTION_SIGN_LIFT_PULLBACK",
+              "P2306::SIGNED_TOTAL_CANONICAL_RESPONSE",
+              "P2307::CANONICAL_SIGNED_TOTAL_FROM_P2300"
+            ]
+          },
+          "admissible_as_p2300_response_functional": {
+            "satisfied_by": [],
+            "failed_by": [
+              "P2306::PROJECTOR_TRACE_PULLBACK",
+              "P2306::THETA_PAIR_SIGN_PULLBACK",
+              "P2306::H37_CONVENTION_SIGN_LIFT_PULLBACK",
+              "P2306::SIGNED_TOTAL_CANONICAL_RESPONSE",
+              "P2307::DYNAMICS_NATIVE_PROVIDER_LIFT_PARAMETER",
+              "P2307::CANONICAL_SIGNED_TOTAL_FROM_P2300",
+              "P2307::POSITIVE_CHANNEL_SUM_FROM_P2300",
+              "P2307::NORM_RESPONSE_FROM_P2300"
+            ]
+          }
+        }
+      },
+      "not_claimed": [
+        "universal nonexistence over all future strict dynamics",
+        "strict response-functional bridge",
+        "strict derivation of provider_lift_per_step from P2300 coefficients",
+        "strict G1 closure",
+        "strict G3 closure",
+        "full Task-3 closure",
+        "QW-2191 discharge",
+        "selector closure",
+        "legacy-kernel role transfer",
+        "ToE closure"
+      ]
+    },
+    "theorem_fingerprint_sha256": "71bf42c01d9bac71873002b53f937a27dcb75ca3dcfea8408c92920b87122698"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2309_candidate",
+    "goal": "Introduce a genuinely new strict dynamical equation or variational identity that exports weights w_i for lambda=R(c), then replay P2302; otherwise keep the current-class nonexistence certificate as the blocker for G1/G3."
+  },
+  "gatekeeper_checks": {
+    "alpha_geo_strict_source_loaded": true,
+    "alpha_geo_is_four_ln2_not_legacy_import": true,
+    "p2300_coefficients_loaded": true,
+    "p2302_required_lift_loaded": true,
+    "p2306_candidates_loaded": true,
+    "p2307_candidates_loaded": true,
+    "current_interface_class_nonempty": true,
+    "all_candidates_fail_at_least_one_required_predicate": true,
+    "no_admissible_current_class_response_functional": true,
+    "theorem_scoped_to_current_export_class": true,
+    "strict_response_functional_not_exported": true,
+    "strict_g1_g3_not_updated": true,
+    "no_qw2191_discharge_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_legacy_kernel_role_transfer": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_CURRENT_CLASS_NONEXISTENCE_TRACE"
+}

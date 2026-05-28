@@ -30,18 +30,25 @@ def main() -> None:
 
     bundle = (p2286.get("strict_task3_bianchi_i_immutable_a1_a2_a3_certificate_bundle_probe", {}) or {}).get("bundle", {}) or {}
     bundle_hash = str(bundle.get("payload_sha256", "") or "")
+    bundle_payload = bundle.get("payload", {}) or {}
+    verifier_pass = bool(bundle_payload.get("verifier_pass", False))
 
     integrity_probe = (p2287.get("strict_task3_bianchi_i_certificate_bundle_integrity_recheck_probe", {}) or {})
     integrity_ok = bool((integrity_probe.get("integrity_recheck", {}) or {}).get("integrity_ok", False))
     mutation_detected = bool((integrity_probe.get("negative_control", {}) or {}).get("mutation_detected", False))
 
-    gating_decision = "ALLOW_THEOREM_ATTEMPT_PRECHECK" if (integrity_ok and mutation_detected and len(bundle_hash) == 64) else "BLOCK_THEOREM_ATTEMPT_PRECHECK"
+    gating_decision = (
+        "ALLOW_THEOREM_ATTEMPT_PRECHECK"
+        if (integrity_ok and mutation_detected and len(bundle_hash) == 64 and verifier_pass)
+        else "BLOCK_THEOREM_ATTEMPT_PRECHECK"
+    )
 
     chain_index_record = {
         "record_id": "TASK3_CHAIN_INDEX_RECORD_V1",
         "bundle_payload_sha256": bundle_hash,
         "integrity_ok": integrity_ok,
         "mutation_detected": mutation_detected,
+        "verifier_pass": verifier_pass,
         "gating_decision": gating_decision,
         "source_packets": [str(IN_2286.relative_to(ROOT)), str(IN_2287.relative_to(ROOT))],
     }
@@ -71,6 +78,7 @@ def main() -> None:
             "bundle_hash_length_ok": len(bundle_hash) == 64,
             "chain_fingerprint_length_ok": len(chain_index_fingerprint) == 64,
             "gating_decision_present": gating_decision in ["ALLOW_THEOREM_ATTEMPT_PRECHECK", "BLOCK_THEOREM_ATTEMPT_PRECHECK"],
+            "block_if_verifier_fails": verifier_pass or gating_decision == "BLOCK_THEOREM_ATTEMPT_PRECHECK",
             "no_bridge_theorem_claimed": True,
             "no_selector_closure_claimed": True,
             "no_toe_closure_claimed": True,
@@ -85,6 +93,7 @@ def main() -> None:
         f"- bundle hash length ok: `{len(bundle_hash) == 64}`",
         f"- integrity ok: `{integrity_ok}`",
         f"- mutation detected: `{mutation_detected}`",
+        f"- verifier pass: `{verifier_pass}`",
         f"- gating decision: `{gating_decision}`",
         f"- chain fingerprint: `{chain_index_fingerprint}`",
         "",

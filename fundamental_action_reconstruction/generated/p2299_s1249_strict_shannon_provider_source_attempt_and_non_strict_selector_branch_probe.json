@@ -1,0 +1,208 @@
+{
+  "schema_version": "p2299_s1249_v1",
+  "packet_id": "P2299",
+  "stage_id": "S1249",
+  "produced_by": "p2299_s1249_strict_shannon_provider_source_attempt_and_non_strict_selector_branch_probe.py",
+  "timestamp_utc": "2026-05-28T00:00:00+00:00",
+  "status": "OPEN_OBSTRUCTION_WITH_STRICT_SHANNON_ATTEMPT_AND_NON_STRICT_BRANCH_TRACE",
+  "result_kind": "STRICT_SHANNON_PROVIDER_SOURCE_ATTEMPT_FAILS_AND_NON_STRICT_SELECTOR_BRANCH_FORMALIZED",
+  "strict_shannon_provider_source_attempt_and_non_strict_selector_branch_probe": {
+    "probe_id": "P2299_S1249_STRICT_SHANNON_PROVIDER_SOURCE_ATTEMPT_AND_NON_STRICT_SELECTOR_BRANCH",
+    "source_packets": {
+      "alpha_geo_strict_derived_v1": "generated/alpha_geo_strict_derived_v1.json",
+      "p1535": "generated/p1535_s485_strict_selector_tie_break_candidate_summary.json",
+      "p753": "generated/p753_current_strict_t207_strict_source_shannon_minimal_designated_pair12_entry_lane_split_exhaustion_boundary_audit_probe_summary.json",
+      "p2282": "generated/p2282_s1232_strict_task3_global_bianchi_i_g1_g2_g3_closure_matrix_probe.json",
+      "p2297": "generated/p2297_s1247_strict_non_gb_spatial_eom_provider_matrix_obstruction_probe.json",
+      "p2298": "generated/p2298_s1248_strict_non_gb_provider_source_nonadmissibility_theorem_probe.json"
+    },
+    "source_hashes": {
+      "alpha_geo_strict_derived_v1_sha256": "fde8d28194230eafaf65e0803b5c67ad9a756ff688cd0cfc00acccfd9f9c5328",
+      "p1535_sha256": "3c4a7e961336bfeaf0feed1514e531bc3178533baeebdb7ff9cf8fa23e83313a",
+      "p753_sha256": "082b4b3798d7cd7b647732a86bad5a717dfa582aea14ab79ab18c715c1ad6370",
+      "p2282_sha256": "ac7b4272e3be29b6729e43168693f26c66ab943a2fcc7ec3c4369d28d15c224f",
+      "p2297_sha256": "477da8b9bab1dd79ac2d701b6e10e63a8eac8d0e37e368984a2f6910efda24b5",
+      "p2298_sha256": "b7ed54296b61a86cdbfdad58816dd35a5c98c594fcabaca5a82c5445651f2795"
+    },
+    "strict_shannon_provider_attempt": {
+      "attempt_id": "STRICT_SHANNON_NONCYCLIC_PROVIDER_SOURCE_ATTEMPT_V1",
+      "uses_alpha_geo_strict_derived_v1": true,
+      "alpha_geo_value": "4*log(2)",
+      "shannon_weights_exact_first_8": [
+        "1",
+        "1/16",
+        "1/256",
+        "1/4096",
+        "1/65536",
+        "1/1048576",
+        "1/16777216",
+        "1/268435456"
+      ],
+      "shannon_weights_numeric_first_8": [
+        1.0,
+        0.0625,
+        0.00390625,
+        0.000244140625,
+        1.52587890625e-05,
+        9.5367431640625e-07,
+        5.960464477539063e-08,
+        3.725290298461914e-09
+      ],
+      "successive_weight_ratios": [
+        0.0625,
+        0.0625,
+        0.0625,
+        0.0625,
+        0.0625,
+        0.0625,
+        0.0625
+      ],
+      "weights_monotone_strict": true,
+      "normalized_entropy": 0.24937776388971034,
+      "anisotropy_l2_from_uniform": 0.8702602723250948,
+      "branch_B_noncyclic_available_as_candidate": true,
+      "selected_tie_break_branch": "strict_anchor_branch_candidate_trace",
+      "qw2191_closed_by_tie_break": false,
+      "shannon_lane_candidate_only": true,
+      "provider_shift_required_by_P753": true,
+      "does_not_copy_residual_basis": true,
+      "new_spatial_eom_operator_columns_exported": false,
+      "scaled_rank_invariance_certificate": {
+        "lemma": "rank(alpha*A)=rank(A) and rank([alpha*A|b])=rank([A|b]) for alpha != 0 after reparametrizing unknowns by alpha*c",
+        "alpha_expr": "4*log(2)",
+        "alpha_nonzero": true,
+        "source_rank_A": 3,
+        "source_rank_augmented": 4,
+        "scaled_rank_A": 3,
+        "scaled_rank_augmented": 4,
+        "inconsistency_preserved": true
+      },
+      "full_residual_family_cancellation_status": "FAILS_CURRENT_STRICT_PROVIDER_TEST",
+      "failure_reason": "4*ln(2) is accepted here as a strict-side Shannon source, but it supplies a value/orientation weight, not a new ADM/Bianchi-I spatial-EOM provider operator.  Without new operator columns, the P2297 strict-core matrix inconsistency is unchanged; with an explicit selector premise the route becomes non-strict."
+    },
+    "non_strict_selector_premise_branch": {
+      "branch_id": "NON_STRICT_SHANNON_SELECTOR_PREMISE_BRANCH_V1",
+      "status": "FORMALIZED_AS_NON_STRICT_BRANCH_ONLY",
+      "premise": "Use alpha_geo_strict_derived_v1 = 4 ln 2 plus an explicit selector/tie-break premise to orient the provider lane.",
+      "why_non_strict": [
+        "P1535 tie-break candidate leaves qw2191_closed=false.",
+        "P753 says the strict-source Shannon entry lane remains candidate-only and requires a provider shift.",
+        "P2297/P2298 show the only full-family algebraic cancellation is the residual-copying formal basis, not a legal strict provider.",
+        "An explicit selector/tie-break premise is exactly the extra symmetry-breaking datum forbidden from silent strict-core promotion by QW-2191 guardrails."
+      ],
+      "may_be_used_for_control_experiments": true,
+      "may_close_strict_G1_G2_G3": false,
+      "may_discharge_QW2191": false,
+      "may_claim_ToE_closure": false
+    },
+    "task3_g1_g2_g3_impact": {
+      "source_packet": "P2282",
+      "gap_status_before_p2299": {
+        "G1_reduction_certainty": "OPEN",
+        "G2_nonlinear_trajectory_realism": "OPEN",
+        "G3_operational_policy_rule": "OPEN"
+      },
+      "gap_status_after_p2299": {
+        "G1_reduction_certainty": "OPEN",
+        "G2_nonlinear_trajectory_realism": "OPEN",
+        "G3_operational_policy_rule": "OPEN"
+      },
+      "closure_score_after_p2299": 0.0,
+      "reason": "P2299 does not produce a legal strict full-family provider, so it must not update G1/G2/G3 closure rows."
+    },
+    "upstream_provider_reports_used": {
+      "p2297_strict_core_matrix_report": {
+        "equation_count": 72,
+        "unknown_count": 3,
+        "rank_A": 3,
+        "rank_augmented": 4,
+        "consistent": false,
+        "full_solve": false,
+        "least_squares_residual_l2": 3.5934624608947687,
+        "least_squares_solution_preview": {
+          "c1": 0.0,
+          "c2": 0.0,
+          "c3": 0.0
+        }
+      },
+      "p2297_augmented_matrix_report": {
+        "equation_count": 138,
+        "unknown_count": 6,
+        "rank_A": 6,
+        "rank_augmented": 7,
+        "consistent": false,
+        "full_solve": false,
+        "least_squares_residual_l2": 3.5934624608947687,
+        "least_squares_solution_preview": {
+          "c1": -4.532466518368395e-18,
+          "c2": -4.532466518368393e-18,
+          "c3": 0.0,
+          "eta1": 0.0,
+          "eta2": 0.0,
+          "eta3": 0.0
+        }
+      },
+      "p2297_formal_full_basis_matrix_report": {
+        "equation_count": 82,
+        "unknown_count": 36,
+        "rank_A": 31,
+        "rank_augmented": 31,
+        "consistent": true,
+        "full_solve": false,
+        "least_squares_residual_l2": 3.439834013097666e-15,
+        "least_squares_solution_preview": {
+          "u0": 0.10674625304999925,
+          "u1": 0.0876844221482139,
+          "u2": 0.10674625304999937,
+          "u3": 3.470902991060155e-17,
+          "u4": -3.191627926444484e-16,
+          "u5": -0.1334328163124993,
+          "u6": -0.07307035179017816,
+          "u7": -0.07307035179017812
+        }
+      }
+    },
+    "theorem_export": {
+      "statement_id": "P2299_STRICT_SHANNON_PROVIDER_ATTEMPT_FAILURE_AND_NON_STRICT_BRANCH_THEOREM",
+      "formal_statement": "The strict-derived Shannon value alpha_geo_strict_derived_v1 = 4 ln 2 is admissible as a strict-side candidate source, but the current artifacts export no new ADM/Bianchi-I spatial-EOM provider columns from it. Thus the Shannon-scaled strict-core provider is rank-equivalent to the P2297 strict-core provider and remains inconsistent for the full non-GB residual family.  Any use of the Shannon/tie-break datum as an actual selector premise is therefore a separate non-strict selector-premise branch and cannot close strict G1/G2/G3 or QW-2191.",
+      "proof_bits": {
+        "alpha_strict_source_exists": true,
+        "alpha_rescaling_preserves_strict_core_inconsistency": true,
+        "no_new_eom_provider_columns": true,
+        "p2298_no_legal_provider": true,
+        "task3_gaps_remain_open": true
+      },
+      "not_claimed": [
+        "strict provider closure",
+        "strict G1/G2/G3 closure",
+        "QW-2191 discharge",
+        "selector closure",
+        "legacy-kernel role transfer",
+        "ToE closure"
+      ]
+    },
+    "theorem_fingerprint_sha256": "abfd5af61b97ffd5b51c032293a21189ea2363ff842afa6369af7df8d434c1d2"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2300_candidate",
+    "goal": "If strict closure is still desired, derive an actual ADM/Bianchi-I spatial-EOM provider operator from the Shannon/nad12-sigma source and re-run the provider matrix; otherwise keep the selector-premise branch explicitly non-strict and do not update G1/G2/G3."
+  },
+  "gatekeeper_checks": {
+    "alpha_geo_strict_source_loaded": true,
+    "alpha_geo_is_four_ln2_not_legacy_import": true,
+    "shannon_weights_nonuniform": true,
+    "branch_B_noncyclic_candidate_seen": true,
+    "candidate_does_not_copy_residual_basis": true,
+    "no_new_spatial_eom_operator_columns_exported": true,
+    "scaled_strict_core_inconsistency_preserved": true,
+    "p2298_no_current_legal_strict_provider_confirmed": true,
+    "strict_shannon_provider_attempt_fails_full_residual": true,
+    "non_strict_selector_branch_formalized": true,
+    "task3_g1_g2_g3_not_closed_by_p2299": true,
+    "qw2191_not_discharged": true,
+    "no_selector_closure_claimed": true,
+    "no_legacy_kernel_role_transfer": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_TRACE"
+}

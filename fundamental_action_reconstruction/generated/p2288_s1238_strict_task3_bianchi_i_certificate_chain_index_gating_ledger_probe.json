@@ -10,16 +10,17 @@
     "probe_id": "STRICT_TASK3_BIANCHI_I_CERTIFICATE_CHAIN_INDEX_GATING_LEDGER_PROBE_V1",
     "chain_index_record": {
       "record_id": "TASK3_CHAIN_INDEX_RECORD_V1",
-      "bundle_payload_sha256": "8ec07915287208d6049ec957d0f8f430cefa879b8370bf1821a51f7996c64881",
+      "bundle_payload_sha256": "039345c446ee94629cc876110ddcbd2213e2311e17547c970f2d4f7263c77658",
       "integrity_ok": true,
       "mutation_detected": true,
-      "gating_decision": "ALLOW_THEOREM_ATTEMPT_PRECHECK",
+      "verifier_pass": false,
+      "gating_decision": "BLOCK_THEOREM_ATTEMPT_PRECHECK",
       "source_packets": [
         "generated/p2286_s1236_strict_task3_bianchi_i_immutable_a1_a2_a3_certificate_bundle_probe.json",
         "generated/p2287_s1237_strict_task3_bianchi_i_certificate_bundle_integrity_recheck_probe.json"
       ]
     },
-    "chain_index_fingerprint_sha256": "02bc2ea18a6e6d484f124cb5a930f0f9e94ae852e5b8dd098ba658a31e551edc",
+    "chain_index_fingerprint_sha256": "840afa46484f68353391531af957ebfae98f4a49b39475a71d30db9b79d8bf44",
     "theorem_scope_limit": "gating-ledger packaging only; not theorem proof and not selector/ToE closure"
   },
   "recommended_next_honest_step": {
@@ -31,6 +32,7 @@
     "bundle_hash_length_ok": true,
     "chain_fingerprint_length_ok": true,
     "gating_decision_present": true,
+    "block_if_verifier_fails": true,
     "no_bridge_theorem_claimed": true,
     "no_selector_closure_claimed": true,
     "no_toe_closure_claimed": true

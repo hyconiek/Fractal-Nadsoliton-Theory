@@ -3,7 +3,8 @@
 - bundle hash length ok: `True`
 - integrity ok: `True`
 - mutation detected: `True`
-- gating decision: `ALLOW_THEOREM_ATTEMPT_PRECHECK`
-- chain fingerprint: `02bc2ea18a6e6d484f124cb5a930f0f9e94ae852e5b8dd098ba658a31e551edc`
+- verifier pass: `False`
+- gating decision: `BLOCK_THEOREM_ATTEMPT_PRECHECK`
+- chain fingerprint: `840afa46484f68353391531af957ebfae98f4a49b39475a71d30db9b79d8bf44`
 
 Gating-ledger packaging only; no selector closure / ToE closure claim.

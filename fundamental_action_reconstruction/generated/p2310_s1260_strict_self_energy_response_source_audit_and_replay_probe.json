@@ -1,0 +1,509 @@
+{
+  "schema_version": "p2310_s1260_v1",
+  "packet_id": "P2310",
+  "stage_id": "S1260",
+  "produced_by": "p2310_s1260_strict_self_energy_response_source_audit_and_replay_probe.py",
+  "timestamp_utc": "2026-05-28T00:00:00+00:00",
+  "status": "OPEN_OBSTRUCTION_SELF_ENERGY_SOURCE_CANDIDATE_REPLAY_PASS_QUARANTINED",
+  "result_kind": "STRICT_SELF_ENERGY_LAMBDA_CANDIDATE_NUMERICALLY_PASSES_BUT_ADM_MARGIN_SOURCE_NOT_EXPORTED",
+  "strict_self_energy_response_source_audit_and_replay_probe": {
+    "probe_id": "P2310_S1260_STRICT_SELF_ENERGY_RESPONSE_SOURCE_AUDIT_AND_REPLAY",
+    "source_packets": {
+      "alpha_geo_strict_derived_v1": "generated/alpha_geo_strict_derived_v1.json",
+      "p1979": "generated/p1979_s929_strict_lapse_shear_provider_export_audit.json",
+      "p1988": "generated/p1988_s938_strict_non_gb_to_spatial_eom_family_projection_witness.json",
+      "p2274": "generated/p2274_s1224_strict_nu_branch_group_policy_robustness_region_certificate_probe.json",
+      "p2300": "generated/p2300_s1250_strict_shannon_nad12_sigma_adm_bianchi_spatial_eom_provider_operator_probe.json",
+      "p2302": "generated/p2302_s1252_strict_task3_provider_lift_policy_lock_candidate_probe.json",
+      "p2309": "generated/p2309_s1259_strict_min_norm_response_weights_replay_quarantine_probe.json"
+    },
+    "source_hashes": {
+      "alpha_geo_strict_derived_v1_sha256": "fde8d28194230eafaf65e0803b5c67ad9a756ff688cd0cfc00acccfd9f9c5328",
+      "p1979_sha256": "4d1f54bb1afe7950fe12d49fcd18e916056789c3be1bc94eddda5ee41c9a5ab3",
+      "p1988_sha256": "7c221d57fcbb6edfb2230fae4cd5ca545d65cb0ae8b18f5052bf237b8b2de0b1",
+      "p2274_sha256": "dc28056a0b6f4ea6f21d759cafac2417cb3961f30bbc648b77b2f21969393be6",
+      "p2300_sha256": "13126823c36db20fa4eb705974176e81f9b8c76d1b7a1ca4fe5f087a8ffea67d",
+      "p2302_sha256": "1912c3247bf0d48e34b800b9c3103887d00a430620e9ce7f6a46a94579b87fa9",
+      "p2309_sha256": "f8b7831f6dba4e34d0c82f37586016582dadc22c78135788d00f551cb4851e11"
+    },
+    "self_energy_variational_attempt": {
+      "functional": "E(c)=1/2 ||c||_2^2",
+      "gradient_symbolic": [
+        "c0",
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6",
+        "c7",
+        "c8",
+        "c9"
+      ],
+      "lambda_candidate": "||c||_2^2",
+      "lambda_numeric": 0.0094608371836785,
+      "target_calibrated": false,
+      "strict_admissible": false
+    },
+    "source_candidates": [
+      {
+        "candidate_id": "ADM_COEFFICIENT_SELF_ENERGY_NORM_SQUARED",
+        "definition": "lambda_candidate = ||c||_2^2 using the P2300 coefficient vector",
+        "lambda_numeric": 0.0094608371836785,
+        "passes_required_lift": true,
+        "target_calibrated": false,
+        "weights_or_gradient": [
+          -0.07101365224021955,
+          -0.042119408392054386,
+          0.02889424384816516,
+          -0.04056225409787581,
+          -0.010446052869517292,
+          0.005223026434758646,
+          -0.005223026434758646,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "replay_all_rows_meet_target": true,
+        "strict_admissible": false,
+        "failure_reason": "The self-energy scalar is generated from P2300 coefficients, but no ADM/Bianchi-I lapse/shear or policy-margin theorem exports ||c||^2 as provider_lift_per_step."
+      },
+      {
+        "candidate_id": "P1988_PROJECTION_SEVERITY_NORM",
+        "definition": "lambda_candidate = P1988 numeric non-GB projection severity",
+        "lambda_numeric": 0.003335789933458249,
+        "passes_required_lift": false,
+        "target_calibrated": false,
+        "weights_or_gradient": null,
+        "replay_all_rows_meet_target": null,
+        "strict_admissible": false,
+        "failure_reason": "Projection severity is a diagnostic residual norm, not a signed monotone provider lift."
+      },
+      {
+        "candidate_id": "SIGNED_TOTAL_COEFFICIENT_SOURCE",
+        "definition": "lambda_candidate = sum_i c_i",
+        "lambda_numeric": -0.13524712375150189,
+        "passes_required_lift": false,
+        "target_calibrated": false,
+        "weights_or_gradient": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "replay_all_rows_meet_target": null,
+        "strict_admissible": false,
+        "failure_reason": "Signed total is negative and cannot certify a positive policy lift."
+      },
+      {
+        "candidate_id": "POSITIVE_CHANNEL_SOURCE",
+        "definition": "lambda_candidate = sum_{i:c_i>0} c_i",
+        "lambda_numeric": 0.03411727028292381,
+        "passes_required_lift": true,
+        "target_calibrated": false,
+        "weights_or_gradient": [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "replay_all_rows_meet_target": null,
+        "strict_admissible": false,
+        "failure_reason": "Positive-channel selection is a sign/channel-selection premise, not derived from strict ADM/Bianchi-I equations."
+      }
+    ],
+    "self_energy_replay": {
+      "summary": {
+        "all_rows_meet_target": true,
+        "worst_margin_to_target": 0.0005576116041714485,
+        "delta": 0.1,
+        "trial_multiplier": 1,
+        "trials": 700,
+        "n_eff": 16800,
+        "adaptive_margin": 0.009442388395828585
+      },
+      "rows": [
+        {
+          "risk_tolerance": 0.01,
+          "target_floor": 0.99,
+          "provider_lift_per_step": 0.0094608371836785,
+          "empirical_corner_floor": 1.0,
+          "adaptive_margin": 0.009442388395828585,
+          "predicted_certified_floor": 0.9905576116041714,
+          "meets_target": true,
+          "margin_to_target": 0.0005576116041714485,
+          "corner_rows": [
+            {
+              "rho": 0.8847674418604651,
+              "kappa_scale": 1.159767441860465,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            },
+            {
+              "rho": 0.8847674418604651,
+              "kappa_scale": 1.1602325581395347,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            },
+            {
+              "rho": 0.8852325581395349,
+              "kappa_scale": 1.159767441860465,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            },
+            {
+              "rho": 0.8852325581395349,
+              "kappa_scale": 1.1602325581395347,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            }
+          ]
+        },
+        {
+          "risk_tolerance": 0.02,
+          "target_floor": 0.98,
+          "provider_lift_per_step": 0.0094608371836785,
+          "empirical_corner_floor": 1.0,
+          "adaptive_margin": 0.009442388395828585,
+          "predicted_certified_floor": 0.9905576116041714,
+          "meets_target": true,
+          "margin_to_target": 0.010557611604171457,
+          "corner_rows": [
+            {
+              "rho": 0.8695348837209302,
+              "kappa_scale": 1.1195348837209302,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            },
+            {
+              "rho": 0.8695348837209302,
+              "kappa_scale": 1.12046511627907,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            },
+            {
+              "rho": 0.8704651162790698,
+              "kappa_scale": 1.1195348837209302,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            },
+            {
+              "rho": 0.8704651162790698,
+              "kappa_scale": 1.12046511627907,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            }
+          ]
+        },
+        {
+          "risk_tolerance": 0.05,
+          "target_floor": 0.95,
+          "provider_lift_per_step": 0.0094608371836785,
+          "empirical_corner_floor": 1.0,
+          "adaptive_margin": 0.009442388395828585,
+          "predicted_certified_floor": 0.9905576116041714,
+          "meets_target": true,
+          "margin_to_target": 0.040557611604171484,
+          "corner_rows": [
+            {
+              "rho": 0.8238372093023255,
+              "kappa_scale": 1.0,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            },
+            {
+              "rho": 0.8238372093023255,
+              "kappa_scale": 1.0011627906976743,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            },
+            {
+              "rho": 0.8261627906976744,
+              "kappa_scale": 1.0,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            },
+            {
+              "rho": 0.8261627906976744,
+              "kappa_scale": 1.0011627906976743,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            }
+          ]
+        },
+        {
+          "risk_tolerance": 0.1,
+          "target_floor": 0.9,
+          "provider_lift_per_step": 0.0094608371836785,
+          "empirical_corner_floor": 1.0,
+          "adaptive_margin": 0.009442388395828585,
+          "predicted_certified_floor": 0.9905576116041714,
+          "meets_target": true,
+          "margin_to_target": 0.09055761160417142,
+          "corner_rows": [
+            {
+              "rho": 0.7476744186046511,
+              "kappa_scale": 1.0,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            },
+            {
+              "rho": 0.7476744186046511,
+              "kappa_scale": 1.0023255813953489,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            },
+            {
+              "rho": 0.7523255813953489,
+              "kappa_scale": 1.0,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            },
+            {
+              "rho": 0.7523255813953489,
+              "kappa_scale": 1.0023255813953489,
+              "samples": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "sample_min": 1.0,
+              "sample_mean": 1.0
+            }
+          ]
+        }
+      ]
+    },
+    "adm_source_audit": {
+      "p1979_status": "OPEN_OBSTRUCTION_WITH_TRACE",
+      "p1979_no_exported_lapse_shear_provider_certificate": true,
+      "p1979_false_pass_guard": "P1979 is only a current-export audit.  It must not be cited as proving that curvature-squared terms cannot generate the needed lapse/shear equation after a full ADM/Bianchi-I variational calculation.",
+      "p1988_status": "OPEN_OBSTRUCTION_WITH_TRACE",
+      "p1988_obstruction_tags": [
+        "NON_GB_FAMILY_CONTENT_EXCEEDS_EH_ANISOTROPIC_CAPACITY",
+        "SPATIAL_EOM_PROVIDER_CLASS_STILL_MISSING",
+        "QW_2191_SELECTOR_CONSTRAINED_EXTENSION_STILL_OPEN"
+      ],
+      "p2300_scope_reason": "P2300 resolves a provider-matrix subproblem for the non-GB spatial residual, but it does not replay the global Bianchi-I transport atlas or the P2280/P2281 policy-lock feasibility criteria required by P2282 G1/G2/G3.",
+      "conclusion": "Current strict ADM/Bianchi-I exports a spatial-EOM provider coefficient vector, but not a lapse/shear or policy-margin identity mapping coefficient self-energy to provider_lift_per_step."
+    },
+    "strict_admissibility_verdict": {
+      "non_target_lambda_candidate_found": true,
+      "non_target_lambda_candidate_replay_passes": true,
+      "adm_bianchi_margin_source_exported": false,
+      "admissible_for_g1_g3_update": false,
+      "reason": "Self-energy is a useful candidate scalar, but the current strict ADM/Bianchi-I artifacts do not export it as a signed monotone policy-margin source."
+    },
+    "task3_g1_g3_update": {
+      "G1_reduction_certainty": "OPEN_UNCHANGED",
+      "G2_nonlinear_trajectory_realism": "CLOSED_FROM_P2301_UNCHANGED",
+      "G3_operational_policy_rule": "OPEN_UNCHANGED",
+      "reason": "P2310 finds a replay-passing self-energy candidate, but no strict ADM margin-source theorem."
+    },
+    "theorem_export": {
+      "statement_id": "P2310_SELF_ENERGY_RESPONSE_SOURCE_AUDIT_THEOREM",
+      "formal_statement": "A non-target-calibrated self-energy candidate lambda=||c||_2^2 can be formed from the P2300 coefficients and numerically passes the P2302 replay.  However the current ADM/Bianchi-I export set does not prove that this self-energy is a signed monotone policy-margin source: P1979 still reports no exported lapse/shear provider certificate, P1988 is a residual projection witness, and P2300 is scoped to a spatial-EOM provider matrix pass.  Therefore the candidate is quarantined and G1/G3 remain open.",
+      "proof_bits": {
+        "required_lift": 0.0068,
+        "coefficient_names": [
+          "H2_Q",
+          "Hd_Q",
+          "H_Qdot",
+          "Q2",
+          "dot_sigma_sq",
+          "ddot_sigma_sigma",
+          "Ndd_Q",
+          "Nd2_Q",
+          "Nd_H_Q",
+          "Nd_Qdot"
+        ],
+        "self_energy_lambda": 0.0094608371836785,
+        "self_energy_replay_all_rows_meet_target": true,
+        "self_energy_replay_worst_margin_to_target": 0.0005576116041714485,
+        "self_energy_gradient_symbolic": [
+          "c0",
+          "c1",
+          "c2",
+          "c3",
+          "c4",
+          "c5",
+          "c6",
+          "c7",
+          "c8",
+          "c9"
+        ],
+        "p1979_no_exported_lapse_shear_provider_certificate": true,
+        "strict_admissible_candidates": []
+      },
+      "not_claimed": [
+        "strict ADM/Bianchi-I derivation of lambda=R(c)",
+        "strict admissible self-energy-to-margin theorem",
+        "strict G1 closure",
+        "strict G3 closure",
+        "full Task-3 closure",
+        "QW-2191 discharge",
+        "selector closure",
+        "legacy-kernel role transfer",
+        "ToE closure"
+      ]
+    },
+    "theorem_fingerprint_sha256": "a88351e91a967f8c3ec44bdf7e10ad836562f16efcd4110a2112b8a41ea91e0d"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2311_candidate",
+    "goal": "Derive or refute an ADM lapse/shear energy-to-policy-margin theorem for E(c)=||c||^2. If this theorem is proven, replay P2302 and only then update G1/G3; otherwise keep P2310 quarantined."
+  },
+  "gatekeeper_checks": {
+    "alpha_geo_strict_source_loaded": true,
+    "alpha_geo_is_four_ln2_not_legacy_import": true,
+    "p2300_coefficients_loaded": true,
+    "p2302_required_lift_loaded": true,
+    "p2309_quarantine_loaded": true,
+    "self_energy_candidate_not_target_calibrated": true,
+    "self_energy_candidate_passes_replay": true,
+    "p1979_blocks_adm_lapse_shear_source_export": true,
+    "no_source_candidate_strict_admissible": true,
+    "strict_self_energy_bridge_not_claimed": true,
+    "strict_g1_g3_not_updated": true,
+    "no_qw2191_discharge_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_legacy_kernel_role_transfer": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_SELF_ENERGY_REPLAY_PASS_QUARANTINE_TRACE"
+}

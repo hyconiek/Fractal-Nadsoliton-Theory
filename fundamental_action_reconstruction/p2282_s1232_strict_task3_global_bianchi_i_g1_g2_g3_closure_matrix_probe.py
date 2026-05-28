@@ -26,19 +26,32 @@ def main() -> None:
     p2281 = load(IN_2281)
 
     # G1: reduction certainty from fresh minimal-config replay margins.
-    rows2281 = (p2281.get("strict_nu_branch_group_policy_minimal_config_fresh_replay_validation_probe", {}) or {}).get("rows", []) or []
-    g1_pass = len(rows2281) > 0 and all(float(r.get("margin_to_target", -1.0)) >= -1e-12 for r in rows2281)
-    g1_metric = min((float(r.get("margin_to_target", 0.0)) for r in rows2281), default=-1.0)
+    # Require both row-level nonnegative margins and the upstream all-rows summary,
+    # so an empty/default replay cannot silently close G1.
+    replay_probe = p2281.get("strict_nu_branch_group_policy_minimal_config_fresh_replay_validation_probe", {}) or {}
+    rows2281 = replay_probe.get("rows", []) or []
+    replay_summary = replay_probe.get("global_summary", {}) or {}
+    g1_metric = min((float(r.get("margin_to_target", -1.0)) for r in rows2281), default=-1.0)
+    g1_pass = (
+        len(rows2281) > 0
+        and bool(replay_summary.get("all_rows_meet_target", False))
+        and all(float(r.get("margin_to_target", -1.0)) >= -1e-12 for r in rows2281)
+    )
 
     # G2: nonlinear trajectory realism anchored to Bianchi-I transport residual map amplitude control.
-    map2203 = (p2203.get("strict_frw_bianchi_transport_residual_map_under_shared_majorant", {}) or {}).get("residual_map", []) or []
+    # P2203 exports residual_map_rows; keep residual_map as backward-compatible fallback only.
+    transport_probe = p2203.get("strict_frw_bianchi_transport_residual_map_under_shared_majorant", {}) or {}
+    map2203 = transport_probe.get("residual_map_rows", []) or transport_probe.get("residual_map", []) or []
     max_transport_residual = max((float(r.get("transport_residual_l1", 1.0)) for r in map2203), default=1.0)
     g2_threshold = 5e-5
     g2_pass = max_transport_residual <= g2_threshold
 
-    # G3: operational policy rule requires feasible minimal lock config exported.
-    minimal = (p2280.get("strict_nu_branch_group_policy_minimal_lock_criterion_grid_probe", {}) or {}).get("minimal_feasible_config", {}) or {}
-    g3_pass = bool(minimal)
+    # G3: operational policy rule requires an actual feasible minimal lock config from P2280.
+    # Do not count P2281's deterministic fallback replay parameters as a real policy lock.
+    lock_probe = p2280.get("strict_nu_branch_group_policy_minimal_lock_criterion_grid_probe", {}) or {}
+    minimal = lock_probe.get("minimal_feasible_config", {}) or {}
+    feasible_count = int(lock_probe.get("feasible_count", 0) or 0)
+    g3_pass = feasible_count > 0 and bool(minimal)
     g3_metric = float(minimal.get("cost_proxy", -1.0) or -1.0)
 
     gaps = [
@@ -58,7 +71,7 @@ def main() -> None:
             "id": "G3_operational_policy_rule",
             "status": "CLOSED" if g3_pass else "OPEN",
             "metric": g3_metric,
-            "criterion": "minimal feasible policy-lock config exists in P2280",
+            "criterion": "P2280 feasible_count > 0 and minimal feasible policy-lock config exists",
         },
     ]
 

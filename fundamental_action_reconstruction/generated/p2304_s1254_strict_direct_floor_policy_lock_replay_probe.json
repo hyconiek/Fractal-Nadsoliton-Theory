@@ -1,0 +1,392 @@
+{
+  "schema_version": "p2304_s1254_v1",
+  "packet_id": "P2304",
+  "stage_id": "S1254",
+  "produced_by": "p2304_s1254_strict_direct_floor_policy_lock_replay_probe.py",
+  "timestamp_utc": "2026-05-28T00:00:00+00:00",
+  "status": "OPEN_OBSTRUCTION_STRICT_DIRECT_FLOOR_POLICY_LOCK_REPLAY_REFUTED",
+  "result_kind": "STRICT_DIRECT_FLOOR_POLICY_LOCK_REPLAY_REFUTES_G1_G3_CLOSURE",
+  "strict_direct_floor_policy_lock_replay_probe": {
+    "probe_id": "P2304_S1254_STRICT_DIRECT_FLOOR_POLICY_LOCK_REPLAY",
+    "source_packets": {
+      "alpha_geo_strict_derived_v1": "generated/alpha_geo_strict_derived_v1.json",
+      "p2274": "generated/p2274_s1224_strict_nu_branch_group_policy_robustness_region_certificate_probe.json",
+      "p2302": "generated/p2302_s1252_strict_task3_provider_lift_policy_lock_candidate_probe.json",
+      "p2303": "generated/p2303_s1253_strict_provider_to_margin_bridge_bound_audit_probe.json"
+    },
+    "source_hashes": {
+      "alpha_geo_strict_derived_v1_sha256": "fde8d28194230eafaf65e0803b5c67ad9a756ff688cd0cfc00acccfd9f9c5328",
+      "p2274_sha256": "dc28056a0b6f4ea6f21d759cafac2417cb3961f30bbc648b77b2f21969393be6",
+      "p2302_sha256": "1912c3247bf0d48e34b800b9c3103887d00a430620e9ce7f6a46a94579b87fa9",
+      "p2303_sha256": "2eba61fbbb3649b5c1f757cc41e1d6ea11e2f4f258df34288ed038379d650875"
+    },
+    "lift_comparison": {
+      "p2302_required_lift": 0.0068,
+      "p2303_strict_direct_floor_lift": 0.005223026434758646,
+      "direct_floor_shortfall": 0.0015769735652413535
+    },
+    "direct_floor_fresh_replay": {
+      "summary": {
+        "all_rows_meet_target": false,
+        "worst_margin_to_target": -0.05087095982439993,
+        "delta": 0.1,
+        "trial_multiplier": 1,
+        "trials": 700,
+        "n_eff": 16800,
+        "adaptive_margin": 0.009442388395828585
+      },
+      "rows": [
+        {
+          "risk_tolerance": 0.01,
+          "target_floor": 0.99,
+          "provider_lift_per_step": 0.005223026434758646,
+          "empirical_corner_floor": 0.9485714285714286,
+          "adaptive_margin": 0.009442388395828585,
+          "predicted_certified_floor": 0.9391290401756001,
+          "meets_target": false,
+          "margin_to_target": -0.05087095982439993,
+          "corner_rows": [
+            {
+              "rho": 0.8847674418604651,
+              "kappa_scale": 1.159767441860465,
+              "samples": [
+                0.9614285714285714,
+                0.9485714285714286,
+                0.9671428571428572,
+                0.9514285714285714,
+                0.9685714285714285,
+                0.9628571428571429
+              ],
+              "sample_min": 0.9485714285714286,
+              "sample_mean": 0.96
+            },
+            {
+              "rho": 0.8847674418604651,
+              "kappa_scale": 1.1602325581395347,
+              "samples": [
+                0.9614285714285714,
+                0.9485714285714286,
+                0.9728571428571429,
+                0.9514285714285714,
+                0.9685714285714285,
+                0.9628571428571429
+              ],
+              "sample_min": 0.9485714285714286,
+              "sample_mean": 0.960952380952381
+            },
+            {
+              "rho": 0.8852325581395349,
+              "kappa_scale": 1.159767441860465,
+              "samples": [
+                0.9614285714285714,
+                0.9485714285714286,
+                0.9671428571428572,
+                0.9528571428571428,
+                0.9657142857142857,
+                0.9628571428571429
+              ],
+              "sample_min": 0.9485714285714286,
+              "sample_mean": 0.9597619047619048
+            },
+            {
+              "rho": 0.8852325581395349,
+              "kappa_scale": 1.1602325581395347,
+              "samples": [
+                0.9614285714285714,
+                0.9485714285714286,
+                0.9671428571428572,
+                0.9528571428571428,
+                0.9657142857142857,
+                0.9628571428571429
+              ],
+              "sample_min": 0.9485714285714286,
+              "sample_mean": 0.9597619047619048
+            }
+          ]
+        },
+        {
+          "risk_tolerance": 0.02,
+          "target_floor": 0.98,
+          "provider_lift_per_step": 0.005223026434758646,
+          "empirical_corner_floor": 0.9571428571428572,
+          "adaptive_margin": 0.009442388395828585,
+          "predicted_certified_floor": 0.9477004687470286,
+          "meets_target": false,
+          "margin_to_target": -0.03229953125297136,
+          "corner_rows": [
+            {
+              "rho": 0.8695348837209302,
+              "kappa_scale": 1.1195348837209302,
+              "samples": [
+                0.9714285714285714,
+                0.9571428571428572,
+                0.9757142857142858,
+                0.9642857142857143,
+                0.9685714285714285,
+                0.9657142857142857
+              ],
+              "sample_min": 0.9571428571428572,
+              "sample_mean": 0.9671428571428571
+            },
+            {
+              "rho": 0.8695348837209302,
+              "kappa_scale": 1.12046511627907,
+              "samples": [
+                0.9714285714285714,
+                0.9571428571428572,
+                0.9757142857142858,
+                0.9642857142857143,
+                0.9685714285714285,
+                0.9657142857142857
+              ],
+              "sample_min": 0.9571428571428572,
+              "sample_mean": 0.9671428571428571
+            },
+            {
+              "rho": 0.8704651162790698,
+              "kappa_scale": 1.1195348837209302,
+              "samples": [
+                0.9714285714285714,
+                0.96,
+                0.9771428571428571,
+                0.9657142857142857,
+                0.9685714285714285,
+                0.97
+              ],
+              "sample_min": 0.96,
+              "sample_mean": 0.9688095238095237
+            },
+            {
+              "rho": 0.8704651162790698,
+              "kappa_scale": 1.12046511627907,
+              "samples": [
+                0.9714285714285714,
+                0.9571428571428572,
+                0.9757142857142858,
+                0.9742857142857143,
+                0.9685714285714285,
+                0.9671428571428572
+              ],
+              "sample_min": 0.9571428571428572,
+              "sample_mean": 0.969047619047619
+            }
+          ]
+        },
+        {
+          "risk_tolerance": 0.05,
+          "target_floor": 0.95,
+          "provider_lift_per_step": 0.005223026434758646,
+          "empirical_corner_floor": 0.9785714285714285,
+          "adaptive_margin": 0.009442388395828585,
+          "predicted_certified_floor": 0.9691290401756,
+          "meets_target": true,
+          "margin_to_target": 0.01912904017560002,
+          "corner_rows": [
+            {
+              "rho": 0.8238372093023255,
+              "kappa_scale": 1.0,
+              "samples": [
+                0.9914285714285714,
+                0.9814285714285714,
+                0.9942857142857143,
+                0.9842857142857143,
+                0.9914285714285714,
+                0.9971428571428571
+              ],
+              "sample_min": 0.9814285714285714,
+              "sample_mean": 0.9900000000000001
+            },
+            {
+              "rho": 0.8238372093023255,
+              "kappa_scale": 1.0011627906976743,
+              "samples": [
+                0.9914285714285714,
+                0.9785714285714285,
+                0.9942857142857143,
+                0.9871428571428571,
+                0.9914285714285714,
+                0.9957142857142857
+              ],
+              "sample_min": 0.9785714285714285,
+              "sample_mean": 0.9897619047619047
+            },
+            {
+              "rho": 0.8261627906976744,
+              "kappa_scale": 1.0,
+              "samples": [
+                0.9914285714285714,
+                0.9814285714285714,
+                0.9942857142857143,
+                0.9842857142857143,
+                0.9914285714285714,
+                0.9971428571428571
+              ],
+              "sample_min": 0.9814285714285714,
+              "sample_mean": 0.9900000000000001
+            },
+            {
+              "rho": 0.8261627906976744,
+              "kappa_scale": 1.0011627906976743,
+              "samples": [
+                0.9914285714285714,
+                0.9814285714285714,
+                0.9928571428571429,
+                0.9842857142857143,
+                0.9914285714285714,
+                0.9971428571428571
+              ],
+              "sample_min": 0.9814285714285714,
+              "sample_mean": 0.9897619047619047
+            }
+          ]
+        },
+        {
+          "risk_tolerance": 0.1,
+          "target_floor": 0.9,
+          "provider_lift_per_step": 0.005223026434758646,
+          "empirical_corner_floor": 0.9271428571428572,
+          "adaptive_margin": 0.009442388395828585,
+          "predicted_certified_floor": 0.9177004687470286,
+          "meets_target": true,
+          "margin_to_target": 0.017700468747028575,
+          "corner_rows": [
+            {
+              "rho": 0.7476744186046511,
+              "kappa_scale": 1.0,
+              "samples": [
+                0.9485714285714286,
+                0.9428571428571428,
+                0.9614285714285714,
+                0.9485714285714286,
+                0.9514285714285714,
+                0.9557142857142857
+              ],
+              "sample_min": 0.9428571428571428,
+              "sample_mean": 0.9514285714285714
+            },
+            {
+              "rho": 0.7476744186046511,
+              "kappa_scale": 1.0023255813953489,
+              "samples": [
+                0.9485714285714286,
+                0.9271428571428572,
+                0.9585714285714285,
+                0.9485714285714286,
+                0.9514285714285714,
+                0.9571428571428572
+              ],
+              "sample_min": 0.9271428571428572,
+              "sample_mean": 0.9485714285714285
+            },
+            {
+              "rho": 0.7523255813953489,
+              "kappa_scale": 1.0,
+              "samples": [
+                0.9585714285714285,
+                0.9471428571428572,
+                0.9671428571428572,
+                0.9471428571428572,
+                0.9557142857142857,
+                0.9571428571428572
+              ],
+              "sample_min": 0.9471428571428572,
+              "sample_mean": 0.9554761904761905
+            },
+            {
+              "rho": 0.7523255813953489,
+              "kappa_scale": 1.0023255813953489,
+              "samples": [
+                0.9557142857142857,
+                0.9428571428571428,
+                0.9657142857142857,
+                0.9485714285714286,
+                0.9528571428571428,
+                0.9542857142857143
+              ],
+              "sample_min": 0.9428571428571428,
+              "sample_mean": 0.9533333333333333
+            }
+          ]
+        }
+      ]
+    },
+    "required_lift_reference_summary": {
+      "all_rows_meet_target": true,
+      "worst_margin_to_target": 0.0005576116041714485,
+      "delta": 0.1,
+      "trial_multiplier": 1,
+      "trials": 700,
+      "n_eff": 16800,
+      "adaptive_margin": 0.009442388395828585
+    },
+    "direct_floor_gap_rows": [
+      {
+        "id": "G1_reduction_certainty",
+        "status": "OPEN",
+        "metric": -0.05087095982439993,
+        "criterion": "strict direct coefficient-floor replay rows all meet P2281 target floors",
+        "reason": "direct-floor replay still has negative worst margin"
+      },
+      {
+        "id": "G2_nonlinear_trajectory_realism",
+        "status": "CLOSED_FROM_P2301",
+        "metric": 7.632783294297951e-16,
+        "criterion": "P2301 provider-corrected transport residual below threshold"
+      },
+      {
+        "id": "G3_operational_policy_rule",
+        "status": "OPEN",
+        "metric": 0.005223026434758646,
+        "criterion": "strict direct coefficient-floor must be sufficient for policy-lock replay",
+        "reason": "direct-floor replay does not meet all target floors"
+      }
+    ],
+    "strict_closure_status": "HELD_OPEN_DIRECT_FLOOR_ROUTE_REFUTED",
+    "theorem_export": {
+      "statement_id": "P2304_STRICT_DIRECT_FLOOR_POLICY_LOCK_REPLAY_THEOREM",
+      "formal_statement": "Lowering the P2302 conditional policy-lock candidate to the strict direct coefficient floor certified by P2303 does not close G1/G3: replaying the P2281 corner-margin contract at provider_lift_per_step equal to the P2303 direct floor still leaves a negative worst margin.  Therefore the direct-floor route is refuted for strict Task-3 closure, and progress now requires a strict aggregation/norm-to-margin theorem or a different certified policy-lock mechanism.",
+      "proof_bits": {
+        "required_p2302_lift": 0.0068,
+        "strict_direct_floor_lift": 0.005223026434758646,
+        "required_lift_worst_margin": 0.0005576116041714485,
+        "direct_floor_worst_margin": -0.05087095982439993,
+        "direct_floor_all_rows_meet_target": false,
+        "direct_floor_gap_pattern": [
+          "OPEN",
+          "CLOSED_FROM_P2301",
+          "OPEN"
+        ]
+      },
+      "not_claimed": [
+        "strict G1 closure",
+        "strict G3 closure",
+        "full Task-3 closure",
+        "QW-2191 discharge",
+        "selector closure",
+        "legacy-kernel role transfer",
+        "ToE closure"
+      ]
+    },
+    "theorem_fingerprint_sha256": "dd6eaefcc08fe28e6df36b11fea13467bdec346a2eea8670a6182cb872192c09"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2305_candidate",
+    "goal": "Attempt a strict aggregation/norm-to-margin theorem for the P2300 operator basis; if that cannot be proven without a selector premise, keep G1/G3 open and route the sufficient positive/norm bounds as non-strict controls only."
+  },
+  "gatekeeper_checks": {
+    "alpha_geo_strict_source_loaded": true,
+    "alpha_geo_is_four_ln2_not_legacy_import": true,
+    "p2303_direct_floor_loaded": true,
+    "p2302_required_lift_loaded": true,
+    "direct_floor_below_required_lift": true,
+    "direct_floor_replay_rows_exported": true,
+    "direct_floor_replay_fails_g1_g3": true,
+    "direct_floor_route_refuted": true,
+    "strict_task3_closure_not_claimed": true,
+    "no_qw2191_discharge_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_legacy_kernel_role_transfer": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_DIRECT_FLOOR_REFUTATION_TRACE"
+}

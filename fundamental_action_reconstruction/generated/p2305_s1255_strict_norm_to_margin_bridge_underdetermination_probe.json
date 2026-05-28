@@ -1,0 +1,244 @@
+{
+  "schema_version": "p2305_s1255_v1",
+  "packet_id": "P2305",
+  "stage_id": "S1255",
+  "produced_by": "p2305_s1255_strict_norm_to_margin_bridge_underdetermination_probe.py",
+  "timestamp_utc": "2026-05-28T00:00:00+00:00",
+  "status": "OPEN_OBSTRUCTION_STRICT_NORM_TO_MARGIN_BRIDGE_UNDERDETERMINED",
+  "result_kind": "STRICT_NORM_AGGREGATION_NUMERICALLY_SUFFICIENT_BUT_THEOREM_UNDERDETERMINED",
+  "strict_norm_to_margin_bridge_underdetermination_probe": {
+    "probe_id": "P2305_S1255_STRICT_NORM_TO_MARGIN_BRIDGE_UNDERDETERMINATION",
+    "source_packets": {
+      "alpha_geo_strict_derived_v1": "generated/alpha_geo_strict_derived_v1.json",
+      "p2300": "generated/p2300_s1250_strict_shannon_nad12_sigma_adm_bianchi_spatial_eom_provider_operator_probe.json",
+      "p2302": "generated/p2302_s1252_strict_task3_provider_lift_policy_lock_candidate_probe.json",
+      "p2303": "generated/p2303_s1253_strict_provider_to_margin_bridge_bound_audit_probe.json",
+      "p2304": "generated/p2304_s1254_strict_direct_floor_policy_lock_replay_probe.json"
+    },
+    "source_hashes": {
+      "alpha_geo_strict_derived_v1_sha256": "fde8d28194230eafaf65e0803b5c67ad9a756ff688cd0cfc00acccfd9f9c5328",
+      "p2300_sha256": "13126823c36db20fa4eb705974176e81f9b8c76d1b7a1ca4fe5f087a8ffea67d",
+      "p2302_sha256": "1912c3247bf0d48e34b800b9c3103887d00a430620e9ce7f6a46a94579b87fa9",
+      "p2303_sha256": "2eba61fbbb3649b5c1f757cc41e1d6ea11e2f4f258df34288ed038379d650875",
+      "p2304_sha256": "c64cb6dfe65aa12985c788c7fdf5b3cb7f7470b6faa11e2b0ebd11a01b090279"
+    },
+    "coefficient_vector": [
+      {
+        "name": "H2_Q",
+        "coefficient_numeric": -0.07101365224021955
+      },
+      {
+        "name": "Hd_Q",
+        "coefficient_numeric": -0.042119408392054386
+      },
+      {
+        "name": "H_Qdot",
+        "coefficient_numeric": 0.02889424384816516
+      },
+      {
+        "name": "Q2",
+        "coefficient_numeric": -0.04056225409787581
+      },
+      {
+        "name": "dot_sigma_sq",
+        "coefficient_numeric": -0.010446052869517292
+      },
+      {
+        "name": "ddot_sigma_sigma",
+        "coefficient_numeric": 0.005223026434758646
+      },
+      {
+        "name": "Ndd_Q",
+        "coefficient_numeric": -0.005223026434758646
+      },
+      {
+        "name": "Nd2_Q",
+        "coefficient_numeric": 0.0
+      },
+      {
+        "name": "Nd_H_Q",
+        "coefficient_numeric": 0.0
+      },
+      {
+        "name": "Nd_Qdot",
+        "coefficient_numeric": 0.0
+      }
+    ],
+    "norm_summary": {
+      "l1_norm": 0.2034816643173495,
+      "l2_norm": 0.09726683496278934,
+      "linf_norm": 0.07101365224021955,
+      "positive_channel_sum": 0.03411727028292381,
+      "signed_total": -0.13524712375150189,
+      "required_lift": 0.0068
+    },
+    "aggregation_contracts": [
+      {
+        "contract_id": "L2_NORM_AS_MARGIN",
+        "bound_numeric": 0.09726683496278934,
+        "required_lift": 0.0068,
+        "passes_required_lift": true,
+        "strict_admissible_without_orientation_theorem": false,
+        "obstruction": "A norm is unsigned; P2300/P2303/P2304 do not export a theorem mapping unsigned operator energy to signed policy margin."
+      },
+      {
+        "contract_id": "L1_NORM_AS_MARGIN",
+        "bound_numeric": 0.2034816643173495,
+        "required_lift": 0.0068,
+        "passes_required_lift": true,
+        "strict_admissible_without_orientation_theorem": false,
+        "obstruction": "Absolute aggregation erases cancellations and requires a sign/monotonicity premise not exported by current strict artifacts."
+      },
+      {
+        "contract_id": "POSITIVE_CHANNEL_SUM_AS_MARGIN",
+        "bound_numeric": 0.03411727028292381,
+        "required_lift": 0.0068,
+        "passes_required_lift": true,
+        "strict_admissible_without_orientation_theorem": false,
+        "obstruction": "Selecting only positive channels is a selector/orientation premise unless independently derived."
+      },
+      {
+        "contract_id": "SIGNED_TOTAL_AS_MARGIN",
+        "bound_numeric": -0.13524712375150189,
+        "required_lift": 0.0068,
+        "passes_required_lift": false,
+        "strict_admissible_without_orientation_theorem": true,
+        "obstruction": "The exported signed total is negative and therefore cannot certify a positive policy lift."
+      }
+    ],
+    "response_functional_underdetermination_witnesses": [
+      {
+        "witness_id": "UNIT_ALIGNED_POSITIVE_RESPONSE",
+        "response_vector": [
+          -0.7300911175673261,
+          -0.4330294946696651,
+          0.297061622897661,
+          -0.4170203966582588,
+          -0.10739583408377132,
+          0.05369791704188566,
+          -0.05369791704188566,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "response_norm_l2": 0.9999999999999999,
+        "lift_value": 0.09726683496278933,
+        "passes_required_lift": true,
+        "strict_admissible_without_exported_response_functional": false,
+        "meaning": "Numerically sufficient only if an aligned provider-to-margin response functional is added."
+      },
+      {
+        "witness_id": "UNIT_ANTI_ALIGNED_NEGATIVE_RESPONSE",
+        "response_vector": [
+          0.7300911175673261,
+          0.4330294946696651,
+          -0.297061622897661,
+          0.4170203966582588,
+          0.10739583408377132,
+          -0.05369791704188566,
+          0.05369791704188566,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "response_norm_l2": 0.9999999999999999,
+        "lift_value": -0.09726683496278933,
+        "passes_required_lift": false,
+        "strict_admissible_without_exported_response_functional": true,
+        "meaning": "Same coefficient vector and norm can produce a negative margin response under a unit functional."
+      },
+      {
+        "witness_id": "UNIT_ORTHOGONAL_ZERO_RESPONSE",
+        "response_vector": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "response_norm_l2": 1.0,
+        "lift_value": 0.0,
+        "passes_required_lift": false,
+        "strict_admissible_without_exported_response_functional": true,
+        "meaning": "Same coefficient vector can be invisible to a unit response functional if orientation is not fixed."
+      }
+    ],
+    "strict_bridge_verdict": {
+      "norm_to_margin_bridge_proven": false,
+      "norm_to_margin_bridge_refuted_as_norm_only_theorem": true,
+      "reason": "Norm magnitude alone does not determine signed policy-margin lift; current strict artifacts lack the required response/orientation theorem."
+    },
+    "task3_g1_g3_update": {
+      "G1_reduction_certainty": "OPEN_UNCHANGED",
+      "G2_nonlinear_trajectory_realism": "CLOSED_FROM_P2301_UNCHANGED",
+      "G3_operational_policy_rule": "OPEN_UNCHANGED",
+      "reason": "P2305 supplies an underdetermination theorem, not a strict policy-lock bridge."
+    },
+    "theorem_export": {
+      "statement_id": "P2305_STRICT_NORM_TO_MARGIN_UNDERDETERMINATION_THEOREM",
+      "formal_statement": "For the P2300 canonical coefficient vector c, the numerical L1/L2/positive-channel aggregations exceed the P2302 candidate lift, but this does not prove a strict provider-to-margin bridge.  In the absence of an exported response functional or monotone orientation theorem, unit response witnesses can map the same c to +||c||_2, 0, or -||c||_2.  Therefore norm aggregation remains underdetermined and cannot move strict G1/G3 after the P2304 direct-floor refutation.",
+      "proof_bits": {
+        "coefficient_names": [
+          "H2_Q",
+          "Hd_Q",
+          "H_Qdot",
+          "Q2",
+          "dot_sigma_sq",
+          "ddot_sigma_sigma",
+          "Ndd_Q",
+          "Nd2_Q",
+          "Nd_H_Q",
+          "Nd_Qdot"
+        ],
+        "coefficient_l2_norm": 0.09726683496278934,
+        "coefficient_l1_norm": 0.2034816643173495,
+        "coefficient_linf_norm": 0.07101365224021955,
+        "positive_channel_sum": 0.03411727028292381,
+        "signed_total": -0.13524712375150189,
+        "required_lift": 0.0068,
+        "aligned_lift": 0.09726683496278933,
+        "orthogonal_lift_abs": 0.0,
+        "anti_aligned_lift": -0.09726683496278933,
+        "underdetermination_witness_count": 3
+      },
+      "not_claimed": [
+        "strict norm-to-margin bridge",
+        "strict G1 closure",
+        "strict G3 closure",
+        "full Task-3 closure",
+        "QW-2191 discharge",
+        "selector closure",
+        "legacy-kernel role transfer",
+        "ToE closure"
+      ]
+    },
+    "theorem_fingerprint_sha256": "ee0fee2700b495b681edc33f2d8e513724740b617e7c1ed225acd786648cef7d"
+  },
+  "recommended_next_honest_step": {
+    "id": "P2306_candidate",
+    "goal": "Export or refute a strict response-functional/orientation theorem mapping the P2300 operator basis into the P2281 policy margin. Without that theorem, keep P2302/P2303 norm and positive-channel bounds non-strict and do not move G1/G3."
+  },
+  "gatekeeper_checks": {
+    "alpha_geo_strict_source_loaded": true,
+    "alpha_geo_is_four_ln2_not_legacy_import": true,
+    "p2300_coefficients_loaded": true,
+    "p2302_required_lift_loaded": true,
+    "p2304_direct_floor_refutation_loaded": true,
+    "norms_numerically_exceed_required_lift": true,
+    "aligned_witness_can_pass_only_with_extra_functional": true,
+    "anti_aligned_witness_refutes_norm_only_implication": true,
+    "orthogonal_witness_refutes_norm_only_implication": true,
+    "strict_norm_to_margin_bridge_not_proven": true,
+    "strict_g1_g3_not_updated": true,
+    "no_qw2191_discharge_claimed": true,
+    "no_selector_closure_claimed": true,
+    "no_legacy_kernel_role_transfer": true,
+    "no_toe_closure_claimed": true
+  },
+  "global_status": "OPEN_OBSTRUCTION_WITH_NORM_TO_MARGIN_UNDERDETERMINATION_TRACE"
+}
