@@ -1,0 +1,794 @@
+{
+  "deterministic_lexicographic_kwta_certificate": {
+    "all_initial_states_reach_d5": false,
+    "all_teacher_patterns_fixed": true,
+    "d5_basin_counts": {
+      "0 2 4 7 9": 68,
+      "0 2 5 7 10": 68,
+      "0 2 5 7 9": 68,
+      "0 3 5 7 10": 64,
+      "0 3 5 8 10": 70,
+      "1 3 5 8 10": 63,
+      "1 3 6 8 10": 65,
+      "1 3 6 8 11": 66,
+      "1 4 6 8 11": 64,
+      "1 4 6 9 11": 65,
+      "2 4 6 9 11": 61,
+      "2 4 7 9 11": 64
+    },
+    "max_steps_to_d5": 4,
+    "non_d5_attractor_count": 6,
+    "non_d5_attractor_examples": [
+      {
+        "cycle_start_step": 0,
+        "initial": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "repeat_step": 2,
+        "repeated_state": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "cycle_start_step": 0,
+        "initial": [
+          0,
+          1,
+          2,
+          3,
+          11
+        ],
+        "repeat_step": 2,
+        "repeated_state": [
+          0,
+          1,
+          2,
+          3,
+          11
+        ]
+      },
+      {
+        "cycle_start_step": 0,
+        "initial": [
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "repeat_step": 2,
+        "repeated_state": [
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "cycle_start_step": 0,
+        "initial": [
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "repeat_step": 2,
+        "repeated_state": [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      {
+        "cycle_start_step": 1,
+        "initial": [
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "repeat_step": 3,
+        "repeated_state": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "cycle_start_step": 1,
+        "initial": [
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "repeat_step": 3,
+        "repeated_state": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    ],
+    "reached_d5_count": 786,
+    "steps_to_d5_histogram": {
+      "0": 12,
+      "1": 444,
+      "2": 289,
+      "3": 33,
+      "4": 8
+    },
+    "support_count": 792,
+    "teacher_fixed_failures": []
+  },
+  "exact_weight_certificate": {
+    "circulant_check": true,
+    "diagonal_zero_check": true,
+    "first_row_by_cyclic_distance": [
+      "0",
+      "-25/12",
+      "11/12",
+      "-1/12",
+      "-13/12",
+      "23/12",
+      "-25/12",
+      "23/12",
+      "-13/12",
+      "-1/12",
+      "11/12",
+      "-25/12"
+    ],
+    "negative_opposite_parity_weight": "-25/12 at cyclic distances 1, 6, and 11",
+    "positive_d5_neighbor_weight": "23/12 at cyclic distances 5 and 7"
+  },
+  "finite_model": {
+    "active_count": 5,
+    "learning_rule": "centered Hebbian covariance W=sum (x-rho)(x-rho)^T with rho=5/12 and diag(W)=0",
+    "ring": "Z_12",
+    "support_count": 792,
+    "target_eta": "9/5",
+    "target_q_power": "256/243",
+    "teacher_record": "12 translated fifth-step/d5 supports",
+    "update_rule": "5-winner-take-all from y_i=sum_j W_ij x_j"
+  },
+  "hard_limits": [
+    "No identity K_legacy_ont == K_strict_gate is asserted or used.",
+    "No legacy physical-role claim is transferred onto K_strict_gate.",
+    "No theorem derives the d5 teacher/self-record trace from strict nadsoliton geometry.",
+    "No theorem derives the centered zero-self Hebbian rule, kWTA rule, or lexicographic tie selector from strict geometry.",
+    "The exact deterministic all-state version is not fully closed: 6/792 states enter non-d5 tie-artifact cycles.",
+    "The tie-robust all-branches version is not fully closed: 24/792 states are tie-sensitive blockers.",
+    "No endpoint, arrow orientation, ledger selector, positive lambda action, or fifth-mode source theorem is claimed.",
+    "No QW-2191 discharge and no strict-core selector closure are claimed.",
+    "No ToE closure is claimed."
+  ],
+  "impact_on_hebbian_hypothesis": {
+    "honest_limit": "The exact all-state deterministic claim is false: 6/792 states enter non-d5 tie-artifact cycles, and if boundary ties are treated as unresolved selector data, only 768/792 states are guaranteed for every tie branch.",
+    "meaning_for_highest_resonance": "Hebbian learning can be upgraded from a spectral amplification story to a concrete conditional attractor mechanism for most states and an existential branch for all states, but the d5 teacher trace and tie selector are still extra premises.",
+    "positive_gain": "Given a centered zero-self Hebbian d5 self-record/teacher trace, exact kWTA dynamics reaches the d5 resonance attractor family from 786/792 states and all 12 teacher patterns are fixed.",
+    "selector_status": "conditional non-strict mechanism certificate; no QW-2191 discharge"
+  },
+  "next_honest_step": "Either seek a strict internal source for the d5 teacher trace plus a canonical tie selector, or record the non-bridge result that Hebbian kWTA dynamics is only a conditional attractor mechanism once those premises are supplied.",
+  "ontology_guardrail": {
+    "allowed_reading": "The nadsoliton itself may contain and update finite self-recorded formation/resonance patterns as primordial information in a solitonic state.",
+    "forbidden_reading": "The Hebbian network/dynamics is not a separate informational substrate under the nadsoliton.",
+    "preferred_order_preserved": "nadsoliton -> light -> matter -> emergent observer"
+  },
+  "result_kind": "SCRATCH_STRICT_ALPHA_HEBBIAN_KWTA_ATTRACTOR_BASIN_CERTIFICATE_PROBE__NOT_A_THEOREM",
+  "set_valued_tie_branch_audit": {
+    "boundary_tie_examples": [
+      {
+        "boundary_tie_nodes": [
+          5,
+          6,
+          8,
+          10,
+          11
+        ],
+        "branch_count": 10,
+        "example_updates": [
+          [
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          [
+            5,
+            6,
+            7,
+            9,
+            10
+          ],
+          [
+            5,
+            6,
+            7,
+            9,
+            11
+          ],
+          [
+            5,
+            7,
+            8,
+            9,
+            10
+          ],
+          [
+            5,
+            7,
+            8,
+            9,
+            11
+          ],
+          [
+            5,
+            7,
+            9,
+            10,
+            11
+          ]
+        ],
+        "support": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "boundary_tie_nodes": [
+          1,
+          3,
+          6
+        ],
+        "branch_count": 3,
+        "example_updates": [
+          [
+            1,
+            5,
+            8,
+            10,
+            11
+          ],
+          [
+            3,
+            5,
+            8,
+            10,
+            11
+          ],
+          [
+            5,
+            6,
+            8,
+            10,
+            11
+          ]
+        ],
+        "support": [
+          0,
+          1,
+          2,
+          3,
+          6
+        ]
+      },
+      {
+        "boundary_tie_nodes": [
+          0,
+          2,
+          9
+        ],
+        "branch_count": 3,
+        "example_updates": [
+          [
+            0,
+            4,
+            5,
+            7,
+            10
+          ],
+          [
+            2,
+            4,
+            5,
+            7,
+            10
+          ],
+          [
+            4,
+            5,
+            7,
+            9,
+            10
+          ]
+        ],
+        "support": [
+          0,
+          1,
+          2,
+          3,
+          9
+        ]
+      },
+      {
+        "boundary_tie_nodes": [
+          4,
+          5,
+          7,
+          9,
+          10
+        ],
+        "branch_count": 10,
+        "example_updates": [
+          [
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            4,
+            5,
+            6,
+            8,
+            9
+          ],
+          [
+            4,
+            5,
+            6,
+            8,
+            10
+          ],
+          [
+            4,
+            6,
+            7,
+            8,
+            9
+          ],
+          [
+            4,
+            6,
+            7,
+            8,
+            10
+          ],
+          [
+            4,
+            6,
+            8,
+            9,
+            10
+          ]
+        ],
+        "support": [
+          0,
+          1,
+          2,
+          3,
+          11
+        ]
+      },
+      {
+        "boundary_tie_nodes": [
+          0,
+          2,
+          5
+        ],
+        "branch_count": 3,
+        "example_updates": [
+          [
+            0,
+            4,
+            7,
+            9,
+            10
+          ],
+          [
+            2,
+            4,
+            7,
+            9,
+            10
+          ],
+          [
+            4,
+            5,
+            7,
+            9,
+            10
+          ]
+        ],
+        "support": [
+          0,
+          1,
+          2,
+          5,
+          11
+        ]
+      },
+      {
+        "boundary_tie_nodes": [
+          5,
+          11
+        ],
+        "branch_count": 2,
+        "example_updates": [
+          [
+            2,
+            4,
+            5,
+            7,
+            9
+          ],
+          [
+            2,
+            4,
+            7,
+            9,
+            11
+          ]
+        ],
+        "support": [
+          0,
+          1,
+          2,
+          6,
+          7
+        ]
+      },
+      {
+        "boundary_tie_nodes": [
+          3,
+          9
+        ],
+        "branch_count": 2,
+        "example_updates": [
+          [
+            0,
+            3,
+            5,
+            7,
+            10
+          ],
+          [
+            0,
+            5,
+            7,
+            9,
+            10
+          ]
+        ],
+        "support": [
+          0,
+          1,
+          2,
+          7,
+          8
+        ]
+      },
+      {
+        "boundary_tie_nodes": [
+          1,
+          8,
+          11
+        ],
+        "branch_count": 3,
+        "example_updates": [
+          [
+            1,
+            3,
+            4,
+            6,
+            9
+          ],
+          [
+            3,
+            4,
+            6,
+            8,
+            9
+          ],
+          [
+            3,
+            4,
+            6,
+            9,
+            11
+          ]
+        ],
+        "support": [
+          0,
+          1,
+          2,
+          8,
+          11
+        ]
+      },
+      {
+        "boundary_tie_nodes": [
+          3,
+          4,
+          6,
+          8,
+          9
+        ],
+        "branch_count": 10,
+        "example_updates": [
+          [
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          [
+            3,
+            4,
+            5,
+            7,
+            8
+          ],
+          [
+            3,
+            4,
+            5,
+            7,
+            9
+          ],
+          [
+            3,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            3,
+            5,
+            6,
+            7,
+            9
+          ],
+          [
+            3,
+            5,
+            7,
+            8,
+            9
+          ]
+        ],
+        "support": [
+          0,
+          1,
+          2,
+          10,
+          11
+        ]
+      },
+      {
+        "boundary_tie_nodes": [
+          0,
+          3
+        ],
+        "branch_count": 2,
+        "example_updates": [
+          [
+            0,
+            5,
+            7,
+            8,
+            10
+          ],
+          [
+            3,
+            5,
+            7,
+            8,
+            10
+          ]
+        ],
+        "support": [
+          0,
+          1,
+          3,
+          5,
+          9
+        ]
+      },
+      {
+        "boundary_tie_nodes": [
+          4,
+          10
+        ],
+        "branch_count": 2,
+        "example_updates": [
+          [
+            1,
+            4,
+            6,
+            8,
+            11
+          ],
+          [
+            1,
+            6,
+            8,
+            10,
+            11
+          ]
+        ],
+        "support": [
+          0,
+          1,
+          3,
+          6,
+          9
+        ]
+      },
+      {
+        "boundary_tie_nodes": [
+          0,
+          1
+        ],
+        "branch_count": 2,
+        "example_updates": [
+          [
+            0,
+            3,
+            5,
+            8,
+            10
+          ],
+          [
+            1,
+            3,
+            5,
+            8,
+            10
+          ]
+        ],
+        "support": [
+          0,
+          1,
+          3,
+          7,
+          8
+        ]
+      }
+    ],
+    "boundary_tie_size_histogram": {
+      "2": 120,
+      "3": 24,
+      "5": 12,
+      "7": 12
+    },
+    "boundary_tie_support_count": 168,
+    "branch_count_histogram": {
+      "1": 624,
+      "10": 12,
+      "2": 120,
+      "21": 12,
+      "3": 24
+    },
+    "existential_some_tie_branch_reaches_d5_count": 792,
+    "existential_some_tie_branch_reaches_d5_fraction": "792/792",
+    "guaranteed_all_tie_branches_reach_d5_count": 768,
+    "guaranteed_all_tie_branches_reach_d5_fraction": "768/792",
+    "set_valued_rule": "At a kWTA boundary tie, keep every top-k completion instead of using lexicographic tie resolution.",
+    "support_count": 792,
+    "tie_sensitive_blocker_count": 24,
+    "tie_sensitive_blocker_examples": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        11
+      ],
+      [
+        0,
+        1,
+        2,
+        10,
+        11
+      ],
+      [
+        0,
+        1,
+        4,
+        7,
+        8
+      ],
+      [
+        0,
+        1,
+        5,
+        6,
+        9
+      ],
+      [
+        0,
+        1,
+        9,
+        10,
+        11
+      ],
+      [
+        0,
+        3,
+        4,
+        8,
+        9
+      ],
+      [
+        0,
+        3,
+        6,
+        7,
+        11
+      ],
+      [
+        0,
+        4,
+        5,
+        8,
+        11
+      ],
+      [
+        0,
+        8,
+        9,
+        10,
+        11
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        1,
+        2,
+        5,
+        8,
+        9
+      ]
+    ],
+    "tie_sensitive_blocker_fraction": "24/792"
+  },
+  "status": "conditional-d5-teacher-hebbian-dynamics-certificate-with-exact-tie-nonclosure"
+}
