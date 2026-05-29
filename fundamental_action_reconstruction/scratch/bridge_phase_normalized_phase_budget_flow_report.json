@@ -1,0 +1,119 @@
+{
+  "affine_budget_failure": {
+    "affine_phase_budget_acceptable": false,
+    "max_abs_u_minus_v": 0.5726813591051478,
+    "mean_abs_u_minus_v": 0.3431818489265824,
+    "v_at_max_abs_error": 0.265
+  },
+  "candidate_ontological_reading": {
+    "content": "The bridge candidate can be written as a nonlinear normalized flow from strict phase budget v to finite information-horizon budget u.",
+    "name": "normalized_phase_budget_compression_flow_candidate",
+    "not_yet_proven_because": "The normalized flow is still induced by output matching, not derived from strict-side information geometry.",
+    "supported_by_this_probe": true
+  },
+  "flow_density": {
+    "definition": "du/dv=(dx/dd)*(d_h/x_h)",
+    "density_at_v0": 0.37363913983222224,
+    "density_at_v1": 0.030405090389460897,
+    "density_max": 5.720376593388293,
+    "density_min": 0.030405090389460897,
+    "integral_residual_vs_1": -3.923330901001165e-05,
+    "trapezoid_integral_density": 0.99996076669099
+  },
+  "hard_limits": [
+    "No identity K_legacy_ont == K_strict_gate is exported.",
+    "No strict-side derivation of the normalized phase-budget flow is exported.",
+    "No proof that u is the nadsoliton information-horizon coordinate is exported.",
+    "No legacy physical-role transfer is licensed.",
+    "No QW-2191 selector discharge and no ToE closure are claimed."
+  ],
+  "honest_interpretation": [
+    "The normalized compression flow exactly maps endpoints u(0)=0 and u(1)=1 and has density integrating to one.",
+    "The flow is strongly non-affine, with a large u-v deviation and a resolved inflection point.",
+    "This is a useful ontological coordinate candidate, but a strict-side derivation of the flow remains missing."
+  ],
+  "inflection": {
+    "d_inflection": 0.349616744584084,
+    "v_inflection": 0.046113384712357916,
+    "x_inflection": 0.26333894364731336
+  },
+  "next_honest_step": "Try to derive the normalized density du/dv from strict-side information geometry; otherwise classify the phase-budget flow as an output-matching coordinate artifact.",
+  "normalized_coordinates": {
+    "d_h": 7.581676052731611,
+    "endpoint_residual_u0": 0.0,
+    "endpoint_residual_u1_minus_1": 0.0,
+    "u": "x(d)/x_h",
+    "v": "d/d_h",
+    "x_h": 1.3333333333333335
+  },
+  "result_kind": "SCRATCH_PHASE_NORMALIZED_PHASE_BUDGET_FLOW_PROBE__NOT_A_THEOREM",
+  "sample_rows": [
+    {
+      "affine_abs_error": 0.0,
+      "d": 0.0,
+      "du_dv": 0.37363913983222224,
+      "u": 0.0,
+      "u_minus_v": 0.0,
+      "v": 0.0
+    },
+    {
+      "affine_abs_error": 0.16971614341992153,
+      "d": 0.3790838026365806,
+      "du_dv": 5.704268190628897,
+      "u": 0.21971614341992152,
+      "u_minus_v": 0.16971614341992153,
+      "v": 0.05
+    },
+    {
+      "affine_abs_error": 0.3730024395319419,
+      "d": 0.7581676052731612,
+      "du_dv": 4.225814978693425,
+      "u": 0.47300243953194193,
+      "u_minus_v": 0.3730024395319419,
+      "v": 0.1
+    },
+    {
+      "affine_abs_error": 0.5717385750238588,
+      "d": 1.8954190131829027,
+      "du_dv": 1.1274631026380981,
+      "u": 0.8217385750238588,
+      "u_minus_v": 0.5717385750238588,
+      "v": 0.25
+    },
+    {
+      "affine_abs_error": 0.45422834989387983,
+      "d": 3.7908380263658055,
+      "du_dv": 0.22698162654461895,
+      "u": 0.9542283498938798,
+      "u_minus_v": 0.45422834989387983,
+      "v": 0.5
+    },
+    {
+      "affine_abs_error": 0.23771763937611812,
+      "d": 5.686257039548709,
+      "du_dv": 0.07531564399802529,
+      "u": 0.9877176393761181,
+      "u_minus_v": 0.23771763937611812,
+      "v": 0.75
+    },
+    {
+      "affine_abs_error": 0.0,
+      "d": 7.581676052731611,
+      "du_dv": 0.030405090389460897,
+      "u": 1.0,
+      "u_minus_v": 0.0,
+      "v": 1.0
+    }
+  ],
+  "source_reports": {
+    "compression_curvature": "fundamental_action_reconstruction/scratch/bridge_phase_normalized_compression_curvature_report.json",
+    "compression_horizon": "fundamental_action_reconstruction/scratch/bridge_phase_normalized_compression_horizon_report.json"
+  },
+  "status": "OPEN_PHASE_BUDGET_COMPRESSION_FLOW_TRACE_NO_ONTOLOGICAL_BRIDGE_THEOREM",
+  "upstream_replay": {
+    "curvature_affine_ruled_out": true,
+    "curvature_negative_on_tail": true,
+    "curvature_positive_near_origin": true,
+    "horizon_candidate_supported": true
+  }
+}

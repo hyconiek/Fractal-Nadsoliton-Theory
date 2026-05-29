@@ -1,0 +1,123 @@
+{
+  "coefficient_match": {
+    "first_unmatched_expected_order": 2.8,
+    "legacy_coefficients": {
+      "L1_x": -0.4634498410585544,
+      "L2_x2": -0.3037906391234569,
+      "formula_L1_x": "-(omega_l*tan(phi_l)+beta_tors)",
+      "formula_L2_x2": "beta_tors**2 + beta_tors*omega_l*tan(phi_l) - omega_l**2/2"
+    },
+    "matched_coefficient_residuals": {
+      "d^1_residual": 0.0,
+      "d^2_residual": 0.0,
+      "d^eta_residual": 0.0
+    },
+    "puiseux_map_coefficients": {
+      "a": 0.06570915405925375,
+      "b": 0.03439391956571716,
+      "c": 2.1577308079681816,
+      "map": "x(d)=a*d+c*d**eta+b*d**2+O(d**(eta+1))"
+    },
+    "strict_coefficients": {
+      "S1_d": -0.030452897004853215,
+      "S2_d2": -0.01725153125,
+      "S_eta_d_eta": -1.0,
+      "formula_S1_d": "-omega_s*tan(phi_s)",
+      "formula_S2_d2": "-omega_s**2/2",
+      "formula_S_eta_d_eta": "-beta"
+    }
+  },
+  "coefficient_match_passes_to_order_2": true,
+  "constants": {
+    "alpha_geo": 2.772588722239781,
+    "eta": 1.8,
+    "legacy": {
+      "beta_tors": 0.01,
+      "omega": 0.7853981633974483,
+      "phi": 0.5235987755982988
+    },
+    "strict": {
+      "beta": 1.0,
+      "eta": 1.8,
+      "omega": 0.18575,
+      "phi": 0.1625
+    }
+  },
+  "hard_limits": [
+    "No identity K_legacy_ont == K_strict_gate is exported.",
+    "No global distance map on Z12 is derived.",
+    "No physical-role transfer from legacy electroweak/gravity formulas is licensed.",
+    "No QW-2191 selector discharge and no ToE closure are claimed."
+  ],
+  "honest_interpretation": [
+    "The exact-denominator one-channel map remains obstructed by phase slope.",
+    "A formal local Puiseux map with analytic d and fractional d**eta channels can match normalized kernels through d**2.",
+    "This is a local asymptotic construction only; no repo artifact derives this map from strict nadsoliton dynamics."
+  ],
+  "next_honest_step": "Try to derive the Puiseux coefficients a,c,b from a strict-side two-channel transport/RG equation, or show that such a derivation is impossible under the current axioms.",
+  "result_kind": "SCRATCH_PHASE_NORMALIZED_PUISEUX_MAP_PROBE__NOT_A_THEOREM",
+  "sample_residual_rows": [
+    {
+      "abs_three_term_residual_over_d_eta_plus_1": 14.010067427965106,
+      "d": 1e-06,
+      "improvement_abs_two_over_three": 71.5,
+      "three_term_puiseux_residual": -2.220446049250313e-16,
+      "two_term_residual": 1.587618925213974e-14,
+      "x_three_term": 6.574338618186043e-08
+    },
+    {
+      "abs_three_term_residual_over_d_eta_plus_1": 0.12212453270876696,
+      "d": 1e-05,
+      "improvement_abs_two_over_three": 1304.1818181818182,
+      "three_term_puiseux_residual": -1.2212453270876722e-15,
+      "two_term_residual": 1.5927259511272496e-12,
+      "x_three_term": 6.592527107924622e-07
+    },
+    {
+      "abs_three_term_residual_over_d_eta_plus_1": 0.1183848730032894,
+      "d": 0.0001,
+      "improvement_abs_two_over_three": 212.3986325802616,
+      "three_term_puiseux_residual": -7.469580509678053e-13,
+      "two_term_residual": 1.586528686203792e-10,
+      "x_three_term": 6.707402955190903e-06
+    },
+    {
+      "abs_three_term_residual_over_d_eta_plus_1": 0.12665534137168138,
+      "d": 0.001,
+      "improvement_abs_two_over_three": 30.6157300679093,
+      "three_term_puiseux_residual": -5.042239958896744e-10,
+      "two_term_residual": 1.543718575192088e-08,
+      "x_three_term": 7.433362904658271e-05
+    },
+    {
+      "abs_three_term_residual_over_d_eta_plus_1": 0.17843711449124916,
+      "d": 0.01,
+      "improvement_abs_two_over_three": 2.561903665778089,
+      "three_term_puiseux_residual": -4.482137667682906e-07,
+      "two_term_residual": 1.1482804921358891e-06,
+      "x_three_term": 0.0012025284064876567
+    },
+    {
+      "abs_three_term_residual_over_d_eta_plus_1": 0.33929589920344205,
+      "d": 0.05,
+      "improvement_abs_two_over_three": 0.47503695176599076,
+      "three_term_puiseux_residual": -7.721374604041653e-05,
+      "two_term_residual": -3.6679382553472806e-05,
+      "x_three_term": 0.013192161173760514
+    }
+  ],
+  "source_reports": {
+    "near_field_obstruction": "fundamental_action_reconstruction/scratch/bridge_phase_normalized_near_field_obstruction_report.json",
+    "strict_kernel_robustness": "fundamental_action_reconstruction/scratch/bridge_strict_kernel_robustness_opinion_audit_report.json"
+  },
+  "status": "OPEN_PHASE_NORMALIZED_PUISEUX_MAP_WITNESS_NO_BRIDGE_THEOREM",
+  "upstream_replay": {
+    "previous_obstruction_is_zero": false,
+    "previous_two_term_status": "ASYMPTOTIC_WITNESS_ONLY_NOT_GLOBAL_IDENTITY",
+    "robustness_support": {
+      "near_field_alpha_geo_full_kernel_limit_disconfirmed": true,
+      "operational_robustness_supported": true,
+      "physical_law_or_bridge_discharged": false
+    }
+  }
+}
