@@ -1,0 +1,327 @@
+{
+  "branch_supports": [
+    {
+      "distance_histogram_d1_to_d6": [
+        4,
+        3,
+        2,
+        1,
+        0,
+        0
+      ],
+      "mode": 1,
+      "name": "A1_k1",
+      "orientation_pair": "contiguous_pair_A1_A11",
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "distance_histogram_d1_to_d6": [
+        0,
+        3,
+        2,
+        1,
+        4,
+        0
+      ],
+      "mode": 5,
+      "name": "A5_k5",
+      "orientation_pair": "d5_pair_A5_A7",
+      "support": [
+        0,
+        3,
+        5,
+        8,
+        10
+      ]
+    },
+    {
+      "distance_histogram_d1_to_d6": [
+        0,
+        3,
+        2,
+        1,
+        4,
+        0
+      ],
+      "mode": 7,
+      "name": "A7_k7",
+      "orientation_pair": "d5_pair_A5_A7",
+      "support": [
+        0,
+        2,
+        4,
+        7,
+        9
+      ]
+    },
+    {
+      "distance_histogram_d1_to_d6": [
+        4,
+        3,
+        2,
+        1,
+        0,
+        0
+      ],
+      "mode": 11,
+      "name": "A11_k11",
+      "orientation_pair": "contiguous_pair_A1_A11",
+      "support": [
+        0,
+        8,
+        9,
+        10,
+        11
+      ]
+    }
+  ],
+  "exact_proof_certificate": {
+    "conditional_positive": "After reducing symmetry to {1,11}, singleton d5_pair is invariant, exactly matching the chi_11-kernel condition.",
+    "orientation_pairs": "Orientation reversal groups them into contiguous_pair={A1,A11} and d5_pair={A5,A7}.",
+    "pair_action": "Units 5 and 7 swap contiguous_pair with d5_pair; units 1 and 11 preserve each pair.",
+    "selector_no_go": "A full-Aut invariant subset of the two-pair universe must be empty or both pairs; singleton d5_pair is not invariant.",
+    "source_obstruction": "The reduction from full Aut to {1,11} is not derived here from strict core; it is the missing selector premise.",
+    "unit_orbit": "The four anchored unit supports A1,A5,A7,A11 form one full Aut(Z_12) orbit."
+  },
+  "finite_model": {
+    "active_count": 5,
+    "automorphism_units": [
+      1,
+      5,
+      7,
+      11
+    ],
+    "branch_modes": [
+      1,
+      5,
+      7,
+      11
+    ],
+    "ring": "Z_12",
+    "target_eta": "9/5",
+    "target_q_power": "256/243"
+  },
+  "hard_limits": [
+    "No identity K_legacy_ont == K_strict_gate is asserted or used.",
+    "No legacy physical-role or matter-generation claim is transferred onto K_strict_gate.",
+    "No theorem derives the chi_11-kernel symmetry reduction or the unit-axis bit from strict nadsoliton geometry.",
+    "This is a finite branch-pair no-go audit, not a global impossibility theorem for all conceivable strict sources.",
+    "No endpoint, arrow orientation, ledger selector, positive lambda action, cycle metric source, anti-Nyquist source, fifth-mode source, future-probability source, future-value source, future-path source, matter-bit source, existence-bit source, recursive-self-information source, character-source, meta-character source, cyclic-adjacency source theorem, variational tie-break source theorem, exclusion-energy source theorem, exact-cover source theorem, dual-shell-label source theorem, full-Aut shell-linear selector theorem, or legacy-strict bridge theorem is claimed.",
+    "No QW-2191 discharge and no strict-core selector closure are claimed.",
+    "No ToE closure is claimed."
+  ],
+  "interpretation": {
+    "conditional_positive": "Reducing symmetry to the chi_11 kernel {1,11} makes singleton d5_pair invariant and therefore selectable.",
+    "direct_no_go": "On the two unoriented branch pairs, full Aut symmetry swaps contiguous_pair and d5_pair, so it cannot select singleton d5_pair.",
+    "honest_limit": "The symmetry reduction is not proven from strict nadsoliton geometry here; QW-2191 remains open.",
+    "relation_to_previous_probe": "This removes the shell-linear restriction: the obstruction is already present at the finite branch-pair action level."
+  },
+  "next_honest_step": "Search for a strict source of the symmetry reduction full Aut -> {1,11}; without it, singleton d5_pair selection remains conditional/non-strict.",
+  "ontology_guardrail": {
+    "allowed_reading": "The nadsoliton itself may later export the symmetry reduction to the chi_11 kernel.",
+    "forbidden_reading": "No separate informational layer underneath the nadsoliton is introduced to choose d5_pair.",
+    "preferred_order_preserved": "nadsoliton -> light -> matter -> emergent observer"
+  },
+  "result_kind": "SCRATCH_STRICT_ALPHA_UNIT_ORBIT_PAIR_SELECTOR_NO_GO_AUDIT_PROBE__NO_GO_NOT_A_THEOREM",
+  "selector_subset_audit": {
+    "all_selector_rows": [
+      {
+        "invariant_under": "full_Aut_Z12",
+        "is_invariant": true,
+        "selected_pairs": [],
+        "selector": "empty_selector",
+        "selects_singleton_d5_pair": false
+      },
+      {
+        "invariant_under": "full_Aut_Z12",
+        "is_invariant": false,
+        "selected_pairs": [
+          "contiguous_pair_A1_A11"
+        ],
+        "selector": "singleton_contiguous_pair",
+        "selects_singleton_d5_pair": false
+      },
+      {
+        "invariant_under": "full_Aut_Z12",
+        "is_invariant": false,
+        "selected_pairs": [
+          "d5_pair_A5_A7"
+        ],
+        "selector": "singleton_d5_pair",
+        "selects_singleton_d5_pair": true
+      },
+      {
+        "invariant_under": "full_Aut_Z12",
+        "is_invariant": true,
+        "selected_pairs": [
+          "contiguous_pair_A1_A11",
+          "d5_pair_A5_A7"
+        ],
+        "selector": "both_pairs_unoriented_orbit",
+        "selects_singleton_d5_pair": false
+      },
+      {
+        "invariant_under": "chi_11_kernel_units_{1,11}",
+        "is_invariant": true,
+        "selected_pairs": [],
+        "selector": "empty_selector",
+        "selects_singleton_d5_pair": false
+      },
+      {
+        "invariant_under": "chi_11_kernel_units_{1,11}",
+        "is_invariant": true,
+        "selected_pairs": [
+          "contiguous_pair_A1_A11"
+        ],
+        "selector": "singleton_contiguous_pair",
+        "selects_singleton_d5_pair": false
+      },
+      {
+        "invariant_under": "chi_11_kernel_units_{1,11}",
+        "is_invariant": true,
+        "selected_pairs": [
+          "d5_pair_A5_A7"
+        ],
+        "selector": "singleton_d5_pair",
+        "selects_singleton_d5_pair": true
+      },
+      {
+        "invariant_under": "chi_11_kernel_units_{1,11}",
+        "is_invariant": true,
+        "selected_pairs": [
+          "contiguous_pair_A1_A11",
+          "d5_pair_A5_A7"
+        ],
+        "selector": "both_pairs_unoriented_orbit",
+        "selects_singleton_d5_pair": false
+      }
+    ],
+    "chi_11_kernel_invariant_selectors": [
+      {
+        "invariant_under": "chi_11_kernel_units_{1,11}",
+        "is_invariant": true,
+        "selected_pairs": [],
+        "selector": "empty_selector",
+        "selects_singleton_d5_pair": false
+      },
+      {
+        "invariant_under": "chi_11_kernel_units_{1,11}",
+        "is_invariant": true,
+        "selected_pairs": [
+          "contiguous_pair_A1_A11"
+        ],
+        "selector": "singleton_contiguous_pair",
+        "selects_singleton_d5_pair": false
+      },
+      {
+        "invariant_under": "chi_11_kernel_units_{1,11}",
+        "is_invariant": true,
+        "selected_pairs": [
+          "d5_pair_A5_A7"
+        ],
+        "selector": "singleton_d5_pair",
+        "selects_singleton_d5_pair": true
+      },
+      {
+        "invariant_under": "chi_11_kernel_units_{1,11}",
+        "is_invariant": true,
+        "selected_pairs": [
+          "contiguous_pair_A1_A11",
+          "d5_pair_A5_A7"
+        ],
+        "selector": "both_pairs_unoriented_orbit",
+        "selects_singleton_d5_pair": false
+      }
+    ],
+    "chi_11_kernel_singleton_d5_selector_count": 1,
+    "full_Aut_invariant_selectors": [
+      {
+        "invariant_under": "full_Aut_Z12",
+        "is_invariant": true,
+        "selected_pairs": [],
+        "selector": "empty_selector",
+        "selects_singleton_d5_pair": false
+      },
+      {
+        "invariant_under": "full_Aut_Z12",
+        "is_invariant": true,
+        "selected_pairs": [
+          "contiguous_pair_A1_A11",
+          "d5_pair_A5_A7"
+        ],
+        "selector": "both_pairs_unoriented_orbit",
+        "selects_singleton_d5_pair": false
+      }
+    ],
+    "full_Aut_singleton_d5_selector_count": 0,
+    "pair_universe": [
+      "contiguous_pair_A1_A11",
+      "d5_pair_A5_A7"
+    ]
+  },
+  "status": "full-aut-on-branch-pairs-forbids-singleton-d5-selector-chi_11-kernel-allows-it-conditionally",
+  "unit_action_on_supports_and_pairs": [
+    {
+      "pair_action": {
+        "contiguous_pair_A1_A11": "contiguous_pair_A1_A11",
+        "d5_pair_A5_A7": "d5_pair_A5_A7"
+      },
+      "preserves_d5_pair": true,
+      "support_action": {
+        "A11_k11": "A11_k11",
+        "A1_k1": "A1_k1",
+        "A5_k5": "A5_k5",
+        "A7_k7": "A7_k7"
+      },
+      "unit": 1
+    },
+    {
+      "pair_action": {
+        "contiguous_pair_A1_A11": "d5_pair_A5_A7",
+        "d5_pair_A5_A7": "contiguous_pair_A1_A11"
+      },
+      "preserves_d5_pair": false,
+      "support_action": {
+        "A11_k11": "A7_k7",
+        "A1_k1": "A5_k5",
+        "A5_k5": "A1_k1",
+        "A7_k7": "A11_k11"
+      },
+      "unit": 5
+    },
+    {
+      "pair_action": {
+        "contiguous_pair_A1_A11": "d5_pair_A5_A7",
+        "d5_pair_A5_A7": "contiguous_pair_A1_A11"
+      },
+      "preserves_d5_pair": false,
+      "support_action": {
+        "A11_k11": "A5_k5",
+        "A1_k1": "A7_k7",
+        "A5_k5": "A11_k11",
+        "A7_k7": "A1_k1"
+      },
+      "unit": 7
+    },
+    {
+      "pair_action": {
+        "contiguous_pair_A1_A11": "contiguous_pair_A1_A11",
+        "d5_pair_A5_A7": "d5_pair_A5_A7"
+      },
+      "preserves_d5_pair": true,
+      "support_action": {
+        "A11_k11": "A1_k1",
+        "A1_k1": "A11_k11",
+        "A5_k5": "A7_k7",
+        "A7_k7": "A5_k5"
+      },
+      "unit": 11
+    }
+  ]
+}

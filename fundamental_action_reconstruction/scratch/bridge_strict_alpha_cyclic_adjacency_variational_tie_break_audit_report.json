@@ -1,0 +1,263 @@
+{
+  "adjacency_minimizer_audit": {
+    "minimum_d1": 0,
+    "minimum_d1_dihedral_orbit_count": 3,
+    "minimum_d1_dihedral_orbits": [
+      {
+        "d1_nearest_neighbor_count": 0,
+        "d5_fifth_shell_count": 4,
+        "distance_histogram_d1_to_d6": [
+          0,
+          3,
+          2,
+          1,
+          4,
+          0
+        ],
+        "is_A1_contiguous_orbit": false,
+        "is_A5_d5_orbit": true,
+        "orbit_size": 12,
+        "representative": [
+          0,
+          2,
+          4,
+          7,
+          9
+        ]
+      },
+      {
+        "d1_nearest_neighbor_count": 0,
+        "d5_fifth_shell_count": 2,
+        "distance_histogram_d1_to_d6": [
+          0,
+          3,
+          2,
+          2,
+          2,
+          1
+        ],
+        "is_A1_contiguous_orbit": false,
+        "is_A5_d5_orbit": false,
+        "orbit_size": 12,
+        "representative": [
+          0,
+          2,
+          4,
+          6,
+          9
+        ]
+      },
+      {
+        "d1_nearest_neighbor_count": 0,
+        "d5_fifth_shell_count": 0,
+        "distance_histogram_d1_to_d6": [
+          0,
+          4,
+          0,
+          4,
+          0,
+          2
+        ],
+        "is_A1_contiguous_orbit": false,
+        "is_A5_d5_orbit": false,
+        "orbit_size": 12,
+        "representative": [
+          0,
+          2,
+          4,
+          6,
+          8
+        ]
+      }
+    ],
+    "minimum_d1_histogram_class_count": 3,
+    "minimum_d1_histogram_rows": [
+      {
+        "distance_histogram_d1_to_d6": [
+          0,
+          3,
+          2,
+          1,
+          4,
+          0
+        ],
+        "is_A5_d5_histogram": true,
+        "support_count": 12
+      },
+      {
+        "distance_histogram_d1_to_d6": [
+          0,
+          3,
+          2,
+          2,
+          2,
+          1
+        ],
+        "is_A5_d5_histogram": false,
+        "support_count": 12
+      },
+      {
+        "distance_histogram_d1_to_d6": [
+          0,
+          4,
+          0,
+          4,
+          0,
+          2
+        ],
+        "is_A5_d5_histogram": false,
+        "support_count": 12
+      }
+    ],
+    "minimum_d1_support_count": 36,
+    "nearest_neighbor_minimization_uniquely_selects_A5": false
+  },
+  "d1_distribution": [
+    {
+      "d1_nearest_neighbor_count": 0,
+      "dihedral_orbit_count": 3,
+      "histogram_class_count": 3,
+      "support_count": 36
+    },
+    {
+      "d1_nearest_neighbor_count": 1,
+      "dihedral_orbit_count": 10,
+      "histogram_class_count": 10,
+      "support_count": 240
+    },
+    {
+      "d1_nearest_neighbor_count": 2,
+      "dihedral_orbit_count": 18,
+      "histogram_class_count": 15,
+      "support_count": 360
+    },
+    {
+      "d1_nearest_neighbor_count": 3,
+      "dihedral_orbit_count": 6,
+      "histogram_class_count": 6,
+      "support_count": 144
+    },
+    {
+      "d1_nearest_neighbor_count": 4,
+      "dihedral_orbit_count": 1,
+      "histogram_class_count": 1,
+      "support_count": 12
+    }
+  ],
+  "exact_proof_certificate": {
+    "adjacency_energy": "The nearest-neighbour adjacency scalar is d1, the first entry of the folded distance histogram.",
+    "conditional_positive": "The lexicographic rule min d1 then max d5 has 12 support winners forming one dihedral orbit with histogram [0,3,2,1,4,0], the A5/d5 orbit.",
+    "enumeration_domain": "All 5-subsets of Z_12 are enumerated exactly: C(12,5)=792.",
+    "missing_source": "The polarity/tie-break rule is extra variational structure and is not derived here from strict nadsoliton geometry.",
+    "no_go": "The minimum d1 value is 0, but its minimizer set has 36 supports, 3 histograms, and 3 dihedral orbits; therefore d1 alone does not uniquely select A5/d5."
+  },
+  "finite_model": {
+    "active_count": 5,
+    "histogram_class_count": 35,
+    "ring": "Z_12",
+    "support_count": 792,
+    "target_eta": "9/5",
+    "target_q_power": "256/243"
+  },
+  "hard_limits": [
+    "No identity K_legacy_ont == K_strict_gate is asserted or used.",
+    "No legacy physical-role or matter-generation claim is transferred onto K_strict_gate.",
+    "No theorem derives cyclic adjacency, anti-adjacency polarity, d5 maximization, chi_11, or the unit-axis bit from strict nadsoliton geometry.",
+    "The lexicographic d1/d5 rule is a conditional variational tie-break audit, not a strict-core theorem.",
+    "No endpoint, arrow orientation, ledger selector, positive lambda action, cycle metric source, anti-Nyquist source, fifth-mode source, future-probability source, future-value source, future-path source, matter-bit source, existence-bit source, recursive-self-information source, character-source, meta-character source, cyclic-adjacency source theorem, or legacy-strict bridge theorem is claimed.",
+    "No QW-2191 discharge and no strict-core selector closure are claimed.",
+    "No ToE closure is claimed."
+  ],
+  "interpretation": {
+    "conditional_positive_result": "Adding a second rule, maximize d5 among d1-minimizers, uniquely selects the A5/d5 orbit.",
+    "direct_result": "Cyclic adjacency can provide a chi_11-compatible label, but nearest-neighbour minimization alone does not globally select the A5/d5 support orbit.",
+    "global_negative_result": "Among all 5-subsets of Z_12, d1=0 has three dihedral-orbit minimizers, so adjacency alone leaves a selector ambiguity.",
+    "honest_limit": "The extra d5 polarity/tie-break is not derived from strict core here; it must remain an explicit conditional premise unless exported elsewhere.",
+    "pairwise_result": "Against the contiguous A1 support alone, minimizing d1 prefers A5 because A5 has d1=0 while A1 has d1=4."
+  },
+  "lexicographic_tie_break_audit": {
+    "best_d1": 0,
+    "best_d5": 4,
+    "honest_status": "conditional: requires both adjacency/anti-adjacency polarity and a fifth-shell maximization tie-break",
+    "rule": "lexicographic_minimize_d1_then_maximize_d5",
+    "selects_A5_d5_orbit": true,
+    "winner_dihedral_orbit_count": 1,
+    "winner_histograms": [
+      [
+        0,
+        3,
+        2,
+        1,
+        4,
+        0
+      ]
+    ],
+    "winner_orbits": [
+      {
+        "d1_nearest_neighbor_count": 0,
+        "d5_fifth_shell_count": 4,
+        "distance_histogram_d1_to_d6": [
+          0,
+          3,
+          2,
+          1,
+          4,
+          0
+        ],
+        "is_A1_contiguous_orbit": false,
+        "is_A5_d5_orbit": true,
+        "orbit_size": 12,
+        "representative": [
+          0,
+          2,
+          4,
+          7,
+          9
+        ]
+      }
+    ],
+    "winner_support_count": 12
+  },
+  "next_honest_step": "Search existing strict-side nad12/sigma artifacts for an exported variational polarity that justifies min d1 and then max d5; absent that, record d1/d5 selection as an explicit non-strict selector premise.",
+  "ontology_guardrail": {
+    "allowed_reading": "Adjacency and any future variational rule may be investigated as candidate structures of the nadsoliton itself.",
+    "forbidden_reading": "No separate informational layer underneath the nadsoliton is introduced to provide the tie-break or unit-axis bit.",
+    "preferred_order_preserved": "nadsoliton -> light -> matter -> emergent observer"
+  },
+  "pairwise_A1_A5_audit": {
+    "A1_histogram_d1_to_d6": [
+      4,
+      3,
+      2,
+      1,
+      0,
+      0
+    ],
+    "A1_support": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "A5_histogram_d1_to_d6": [
+      0,
+      3,
+      2,
+      1,
+      4,
+      0
+    ],
+    "A5_support": [
+      0,
+      3,
+      5,
+      8,
+      10
+    ],
+    "global_warning": "Pairwise A1-vs-A5 preference is weaker than global support-orbit uniqueness; d1 minimization has three global dihedral-orbit minimizers.",
+    "minimize_d1_prefers_A5_over_A1_pairwise": true
+  },
+  "result_kind": "SCRATCH_STRICT_ALPHA_CYCLIC_ADJACENCY_VARIATIONAL_TIE_BREAK_AUDIT_PROBE__CONDITIONAL_NOT_A_THEOREM",
+  "status": "nearest-neighbor-adjacency-alone-not-global-d5-selector-lexicographic-d1-d5-rule-conditionally-selects-A5"
+}

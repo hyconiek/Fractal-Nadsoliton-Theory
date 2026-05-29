@@ -1,0 +1,297 @@
+{
+  "aut_conjugate_selector_audit": [
+    {
+      "formula": "d5 + d6_antipodal",
+      "minimum_score": 0,
+      "name": "E_A1_conjugate_d5_plus_d6",
+      "selects_A1_contiguous_orbit": true,
+      "selects_A5_d5_orbit": false,
+      "weight": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "winner_dihedral_orbit_count": 1,
+      "winner_histogram_rows": [
+        {
+          "distance_histogram_d1_to_d6": [
+            4,
+            3,
+            2,
+            1,
+            0,
+            0
+          ],
+          "support_count": 12
+        }
+      ],
+      "winner_orbits": [
+        {
+          "distance_histogram_d1_to_d6": [
+            4,
+            3,
+            2,
+            1,
+            0,
+            0
+          ],
+          "is_A1_contiguous_orbit": true,
+          "is_A5_d5_orbit": false,
+          "orbit_size": 12,
+          "representative": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "winner_support_count": 12
+    },
+    {
+      "formula": "d1_nearest + d6_antipodal",
+      "minimum_score": 0,
+      "name": "E_A5_candidate_d1_plus_d6",
+      "selects_A1_contiguous_orbit": false,
+      "selects_A5_d5_orbit": true,
+      "weight": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "winner_dihedral_orbit_count": 1,
+      "winner_histogram_rows": [
+        {
+          "distance_histogram_d1_to_d6": [
+            0,
+            3,
+            2,
+            1,
+            4,
+            0
+          ],
+          "support_count": 12
+        }
+      ],
+      "winner_orbits": [
+        {
+          "distance_histogram_d1_to_d6": [
+            0,
+            3,
+            2,
+            1,
+            4,
+            0
+          ],
+          "is_A1_contiguous_orbit": false,
+          "is_A5_d5_orbit": true,
+          "orbit_size": 12,
+          "representative": [
+            0,
+            2,
+            4,
+            7,
+            9
+          ]
+        }
+      ],
+      "winner_support_count": 12
+    }
+  ],
+  "exact_proof_certificate": {
+    "orbit_fact": "The full Aut orbit of E_A5 has two weights: d1+d6 and d5+d6.",
+    "selector_conjugates": "Minimizing d1+d6 selects A5/d5; minimizing the Aut-conjugate d5+d6 selects A1/contiguous.",
+    "shell_action": "Units 5 and 7 send folded shell d1 to d5 and d5 to d1; units 1 and 11 preserve d1 and d5.",
+    "source_obstruction": "Choosing d1+d6 rather than d5+d6 is therefore already a unit-label/chi_11 premise, not a strict-core consequence proven here.",
+    "stabilizer": "The weight E_A5=d1+d6 is fixed exactly by {1,11}, the chi_11 kernel."
+  },
+  "finite_model": {
+    "A1_histogram_d1_to_d6": [
+      4,
+      3,
+      2,
+      1,
+      0,
+      0
+    ],
+    "A5_histogram_d1_to_d6": [
+      0,
+      3,
+      2,
+      1,
+      4,
+      0
+    ],
+    "active_count": 5,
+    "automorphism_units": [
+      1,
+      5,
+      7,
+      11
+    ],
+    "histogram_class_count": 35,
+    "ring": "Z_12",
+    "support_count": 792,
+    "target_eta": "9/5",
+    "target_q_power": "256/243"
+  },
+  "hard_limits": [
+    "No identity K_legacy_ont == K_strict_gate is asserted or used.",
+    "No legacy physical-role or matter-generation claim is transferred onto K_strict_gate.",
+    "No theorem derives the d1-vs-d5 shell label, chi_11, or the unit-axis bit from strict nadsoliton geometry.",
+    "The d1+d6 exclusion selector is classified as chi_11-kernel-stabilized conditional data, not a strict-core theorem.",
+    "No endpoint, arrow orientation, ledger selector, positive lambda action, cycle metric source, anti-Nyquist source, fifth-mode source, future-probability source, future-value source, future-path source, matter-bit source, existence-bit source, recursive-self-information source, character-source, meta-character source, cyclic-adjacency source theorem, variational tie-break source theorem, exclusion-energy source theorem, exact-cover source theorem, or legacy-strict bridge theorem is claimed.",
+    "No QW-2191 discharge and no strict-core selector closure are claimed.",
+    "No ToE closure is claimed."
+  ],
+  "interpretation": {
+    "conjugate_warning": "The Aut-conjugate selector d5+d6 is equally natural under abstract unit symmetry and selects A1/contiguous instead of A5/d5.",
+    "direct_result": "The successful d1+d6 selector is not full-Aut invariant; its stabilizer is exactly {1,11}, the chi_11 kernel.",
+    "honest_limit": "The finite selector remains conditional unless strict nadsoliton geometry exports why the d1 shell, not the d5 shell, is the penalized neighbour shell.",
+    "research_value": "This identifies the exact symmetry cost of the exclusion-energy certificate and prevents mistaking a conditional selector for a strict-core discharge."
+  },
+  "next_honest_step": "Search for a strict source that distinguishes shell d1 from its Aut-conjugate d5; absent that, keep d1+d6 as an explicit chi_11-shell-label premise.",
+  "ontology_guardrail": {
+    "allowed_reading": "The nadsoliton itself may later export the shell-label premise that distinguishes d1 from d5.",
+    "forbidden_reading": "No separate informational layer underneath the nadsoliton is introduced to choose d1+d6 over d5+d6.",
+    "preferred_order_preserved": "nadsoliton -> light -> matter -> emergent observer"
+  },
+  "result_kind": "SCRATCH_STRICT_ALPHA_EXCLUSION_ENERGY_DUAL_SYMMETRY_SOURCE_OBSTRUCTION_PROBE__NOT_A_THEOREM",
+  "shell_action_audit": {
+    "Aut_orbit_size": 2,
+    "Aut_orbit_weights": [
+      {
+        "formula": "d5 + d6_antipodal",
+        "name": "E_A1_conjugate_d5_plus_d6",
+        "weight": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "formula": "d1_nearest + d6_antipodal",
+        "name": "E_A5_candidate_d1_plus_d6",
+        "weight": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      }
+    ],
+    "E_A5_formula": "d1_nearest + d6_antipodal",
+    "E_A5_weight": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "rows": [
+      {
+        "E_A5_maps_to_name": "E_A5_candidate_d1_plus_d6",
+        "E_A5_maps_to_weight": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "preserves_E_A5": true,
+        "shell_permutation_source_to_target": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "unit": 1
+      },
+      {
+        "E_A5_maps_to_name": "E_A1_conjugate_d5_plus_d6",
+        "E_A5_maps_to_weight": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        "preserves_E_A5": false,
+        "shell_permutation_source_to_target": [
+          5,
+          2,
+          3,
+          4,
+          1,
+          6
+        ],
+        "unit": 5
+      },
+      {
+        "E_A5_maps_to_name": "E_A1_conjugate_d5_plus_d6",
+        "E_A5_maps_to_weight": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        "preserves_E_A5": false,
+        "shell_permutation_source_to_target": [
+          5,
+          2,
+          3,
+          4,
+          1,
+          6
+        ],
+        "unit": 7
+      },
+      {
+        "E_A5_maps_to_name": "E_A5_candidate_d1_plus_d6",
+        "E_A5_maps_to_weight": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "preserves_E_A5": true,
+        "shell_permutation_source_to_target": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "unit": 11
+      }
+    ],
+    "stabilizer_is_chi_11_kernel": true,
+    "stabilizer_units": [
+      1,
+      11
+    ]
+  },
+  "status": "d1_plus_d6-selector-success-imports-chi_11-shell-label-premise"
+}

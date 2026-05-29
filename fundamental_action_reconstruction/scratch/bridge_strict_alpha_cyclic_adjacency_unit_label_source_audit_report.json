@@ -1,0 +1,256 @@
+{
+  "character_table": [
+    {
+      "is_required_chi_11": true,
+      "kernel": [
+        1,
+        11
+      ],
+      "name": "chi_11_required_d5_unit_axis",
+      "nonzero_coset": [
+        5,
+        7
+      ],
+      "values_mod2": {
+        "1": 0,
+        "11": 0,
+        "5": 1,
+        "7": 1
+      }
+    },
+    {
+      "is_required_chi_11": false,
+      "kernel": [
+        1,
+        5
+      ],
+      "name": "chi_5_kernel",
+      "nonzero_coset": [
+        7,
+        11
+      ],
+      "values_mod2": {
+        "1": 0,
+        "11": 1,
+        "5": 0,
+        "7": 1
+      }
+    },
+    {
+      "is_required_chi_11": false,
+      "kernel": [
+        1,
+        7
+      ],
+      "name": "chi_7_kernel",
+      "nonzero_coset": [
+        5,
+        11
+      ],
+      "values_mod2": {
+        "1": 0,
+        "11": 1,
+        "5": 1,
+        "7": 0
+      }
+    },
+    {
+      "is_required_chi_11": false,
+      "kernel": [
+        1,
+        5,
+        7,
+        11
+      ],
+      "name": "trivial_character",
+      "nonzero_coset": [],
+      "values_mod2": {
+        "1": 0,
+        "11": 0,
+        "5": 0,
+        "7": 0
+      }
+    }
+  ],
+  "cyclic_adjacency_source_audit": {
+    "exact_positive_if_adjacency_admitted": true,
+    "long_step_shell_5_preserving_character": "no_Z2_character_for_kernel_[5, 7]",
+    "long_step_shell_5_preserving_units": [
+      5,
+      7
+    ],
+    "nearest_neighbor_shell_1_preserving_character": "chi_11_required_d5_unit_axis",
+    "nearest_neighbor_shell_1_preserving_units": [
+      1,
+      11
+    ],
+    "shell_rows": [
+      {
+        "cyclic_shell": 1,
+        "is_required_kernel_{1,11}": true,
+        "preserving_unit_count": 2,
+        "preserving_units": [
+          1,
+          11
+        ],
+        "selected_character": "chi_11_required_d5_unit_axis"
+      },
+      {
+        "cyclic_shell": 2,
+        "is_required_kernel_{1,11}": false,
+        "preserving_unit_count": 0,
+        "preserving_units": [],
+        "selected_character": "no_character_empty_kernel"
+      },
+      {
+        "cyclic_shell": 3,
+        "is_required_kernel_{1,11}": false,
+        "preserving_unit_count": 0,
+        "preserving_units": [],
+        "selected_character": "no_character_empty_kernel"
+      },
+      {
+        "cyclic_shell": 4,
+        "is_required_kernel_{1,11}": false,
+        "preserving_unit_count": 0,
+        "preserving_units": [],
+        "selected_character": "no_character_empty_kernel"
+      },
+      {
+        "cyclic_shell": 5,
+        "is_required_kernel_{1,11}": false,
+        "preserving_unit_count": 2,
+        "preserving_units": [
+          5,
+          7
+        ],
+        "selected_character": "no_Z2_character_for_kernel_[5, 7]"
+      },
+      {
+        "cyclic_shell": 6,
+        "is_required_kernel_{1,11}": false,
+        "preserving_unit_count": 0,
+        "preserving_units": [],
+        "selected_character": "no_character_empty_kernel"
+      }
+    ],
+    "unit_image_folded_shell": {
+      "1": 1,
+      "11": 1,
+      "5": 5,
+      "7": 5
+    },
+    "unit_image_of_generator_plus_one": {
+      "1": 1,
+      "11": 11,
+      "5": 5,
+      "7": 7
+    },
+    "why_this_breaks_meta_symmetry": "The cyclic graph/ring adjacency labels ±1 as nearest neighbours, so the abstract V4 meta-automorphisms may no longer freely permute 5,7,11."
+  },
+  "exact_proof_certificate": {
+    "character_identification": "The subgroup {1,11} is the kernel of chi_11, whose nonzero coset is {5,7}; this is the required d5 unit-axis character.",
+    "conditionality": "The proof is conditional on admitting cyclic adjacency as strict-side geometry; it does not derive that source premise from the strict core here.",
+    "cyclic_adjacency_datum": "The cyclic Z_12 nearest-neighbour edge class is the unoriented shell {+1,-1} = {1,11} modulo 12.",
+    "finite_group": "Units(Z_12)={1,5,7,11}; every nonidentity unit has abstract order 2, so V4 alone does not distinguish 11.",
+    "stabilizer_computation": "A unit u preserves the nearest-neighbour shell iff folded(u*1)=1; among units this holds exactly for u=1 and u=11."
+  },
+  "finite_model": {
+    "active_count": 5,
+    "automorphism_units": [
+      1,
+      5,
+      7,
+      11
+    ],
+    "histogram_class_count": 35,
+    "ring": "Z_12",
+    "support_count": 792,
+    "survivor_axes": [
+      {
+        "distance_histogram_d1_to_d6": [
+          4,
+          3,
+          2,
+          1,
+          0,
+          0
+        ],
+        "mode": 1,
+        "name": "A1_k1_contiguous"
+      },
+      {
+        "distance_histogram_d1_to_d6": [
+          0,
+          3,
+          2,
+          1,
+          4,
+          0
+        ],
+        "mode": 5,
+        "name": "A5_k5_d5"
+      }
+    ],
+    "target_eta": "9/5",
+    "target_q_power": "256/243"
+  },
+  "hard_limits": [
+    "No identity K_legacy_ont == K_strict_gate is asserted or used.",
+    "No legacy physical-role or matter-generation claim is transferred onto K_strict_gate.",
+    "No theorem derives cyclic adjacency, chi_11, or the unit-axis bit from strict nadsoliton geometry.",
+    "Cyclic adjacency selecting {1,11} is a conditional source audit, not a strict-core theorem.",
+    "No endpoint, arrow orientation, ledger selector, positive lambda action, cycle metric source, anti-Nyquist source, fifth-mode source, future-probability source, future-value source, future-path source, matter-bit source, existence-bit source, recursive-self-information source, character-source, meta-character source, or legacy-strict bridge theorem is claimed.",
+    "No QW-2191 discharge and no strict-core selector closure are claimed.",
+    "No ToE closure is claimed."
+  ],
+  "interpretation": {
+    "direct_result": "Cyclic nearest-neighbour adjacency is an exact finite source that would name the {1,11} kernel and hence chi_11.",
+    "honest_limit": "This audit does not prove that cyclic adjacency is already an accepted strict-core selector source, so QW-2191 is not discharged.",
+    "negative_result": "The abstract V4 unit group alone still cannot provide this label; adjacency is extra structure relative to the meta-symmetry audit.",
+    "positive_conditional": "If strict nadsoliton geometry exports the unoriented edge shell {+1,-1}, the previous three-character ambiguity collapses to chi_11."
+  },
+  "next_honest_step": "Audit whether an existing strict-side nad12/cyclic graph object already exports the nearest-neighbour shell {+1,-1}; if yes, test its compatibility with the d5 branch without importing an orientation bit; if no, mark adjacency as an explicit non-strict selector premise.",
+  "ontology_guardrail": {
+    "allowed_reading": "Cyclic adjacency may be investigated as a candidate structure of the nadsoliton itself.",
+    "forbidden_reading": "No separate informational layer underneath the nadsoliton is introduced to provide adjacency or the unit-axis bit.",
+    "preferred_order_preserved": "nadsoliton -> light -> matter -> emergent observer"
+  },
+  "result_kind": "SCRATCH_STRICT_ALPHA_CYCLIC_ADJACENCY_UNIT_LABEL_SOURCE_AUDIT_PROBE__CONDITIONAL_NOT_A_THEOREM",
+  "selection_source_audit": [
+    {
+      "candidate_source": "abstract_unit_group_V4_only",
+      "selects_kernel": null,
+      "selects_required_chi_11": false,
+      "strict_status": "insufficient: three nontrivial characters remain meta-symmetric"
+    },
+    {
+      "candidate_source": "cyclic_adjacency_shell_{+1,-1}",
+      "selects_kernel": [
+        1,
+        11
+      ],
+      "selects_required_chi_11": true,
+      "strict_status": "sufficient if this nearest-neighbour geometry is exported as a strict-side source"
+    },
+    {
+      "candidate_source": "choose_long_step_shell_{+5,-5}",
+      "selects_kernel": [
+        5,
+        7
+      ],
+      "selects_required_chi_11": false,
+      "strict_status": "not a character kernel containing identity; does not select required chi_11"
+    },
+    {
+      "candidate_source": "name_11_by_decree_without_adjacency_or_geometry",
+      "selects_kernel": [
+        1,
+        11
+      ],
+      "selects_required_chi_11": true,
+      "strict_status": "works only as explicit non-strict/unit-label axiom unless derived elsewhere"
+    }
+  ],
+  "status": "cyclic-adjacency-conditionally-selects-chi_11-kernel-but-source-premise-not-derived"
+}
