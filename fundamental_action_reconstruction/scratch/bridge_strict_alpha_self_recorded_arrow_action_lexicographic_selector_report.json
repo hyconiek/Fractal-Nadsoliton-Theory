@@ -1,0 +1,907 @@
+{
+  "action_definition": {
+    "arrow_term_A": "A(e)=sum_i max(0, e_{i+1}-e_i), penalizing increases away from the self-recorded source endpoint.",
+    "epsilon_action": "R + epsilon*A has the same winner for every symbolic epsilon>0 under the recorded dominance split.",
+    "lexicographic_action": "First minimize R, then minimize A among equal-R ledgers.",
+    "ripple_term_R": "R(e)=sum_i e_i^2, equivalent to Parseval non-DC ripple at fixed sum and m=5."
+  },
+  "candidate_interpretation": {
+    "content": "The lexicographic pair (sum squares, arrow-increase penalty) uniquely selects the ordered balanced ledger from all 35 positive ledgers.",
+    "status": "candidate-supported-but-arrow-action-not-derived",
+    "supported_by_this_probe": true,
+    "why_this_is_more_proof_like": "The probe provides a dominance certificate: equal-ripple competitors have positive arrow penalty, while all remaining competitors have higher ripple.",
+    "why_this_is_not_enough": "The arrow action and ripple action are still conditional model-internal selector terms, not derived strict geometry."
+  },
+  "finite_action_scan": {
+    "arrow_only_minimizers": {
+      "minimum": 0,
+      "winner_count": 3,
+      "winners": [
+        [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        [
+          3,
+          2,
+          1,
+          1,
+          1
+        ],
+        [
+          4,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    "dominance_certificate": {
+      "all_equal_ripple_competitors_have_positive_arrow_penalty": true,
+      "all_other_ledgers_have_higher_ripple_or_positive_arrow_tiebreak": true,
+      "epsilon_statement": "For every epsilon>0, R+epsilon*A is uniquely minimized by (2,2,2,1,1) in the symbolic/lexicographic sense: equal-R competitors have A>0, higher-R competitors already lose in R.",
+      "equal_ripple_competitor_arrow_penalties": [
+        1,
+        2
+      ],
+      "equal_ripple_competitor_count": 9,
+      "higher_ripple_competitor_count": 25,
+      "target_arrow_penalty": 0,
+      "target_ledger": [
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "target_ripple": 14
+    },
+    "lexicographic_ripple_then_arrow_minimizers": {
+      "minimum_pair": [
+        14,
+        0
+      ],
+      "winner_count": 1,
+      "winners": [
+        [
+          2,
+          2,
+          2,
+          1,
+          1
+        ]
+      ]
+    },
+    "lexicographic_uniquely_selects_balanced": true,
+    "parseval_minimizers": {
+      "minimum": 6,
+      "winner_count": 10,
+      "winners": [
+        [
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        [
+          1,
+          2,
+          1,
+          2,
+          2
+        ],
+        [
+          1,
+          2,
+          2,
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          1,
+          2,
+          2
+        ],
+        [
+          2,
+          1,
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          2,
+          1,
+          1
+        ]
+      ]
+    },
+    "ripple_only_minimizers": {
+      "minimum": 14,
+      "winner_count": 10,
+      "winners": [
+        [
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        [
+          1,
+          2,
+          1,
+          2,
+          2
+        ],
+        [
+          1,
+          2,
+          2,
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          1,
+          2,
+          2
+        ],
+        [
+          2,
+          1,
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          2,
+          1,
+          1
+        ]
+      ]
+    },
+    "rows": [
+      {
+        "endpoint_self_recorded_from_left": false,
+        "is_balanced_target_order": false,
+        "lexicographic_pair_ripple_then_arrow": [
+          20,
+          3
+        ],
+        "ordered_ledger": [
+          1,
+          1,
+          1,
+          1,
+          4
+        ],
+        "parseval_non_dc_power_n5": 36,
+        "ripple_sum_squares": 20,
+        "self_recorded_arrow_increase_penalty": 3
+      },
+      {
+        "endpoint_self_recorded_from_left": false,
+        "is_balanced_target_order": false,
+        "lexicographic_pair_ripple_then_arrow": [
+          16,
+          2
+        ],
+        "ordered_ledger": [
+          1,
+          1,
+          1,
+          2,
+          3
+        ],
+        "parseval_non_dc_power_n5": 16,
+        "ripple_sum_squares": 16,
+        "self_recorded_arrow_increase_penalty": 2
+      },
+      {
+        "endpoint_self_recorded_from_left": false,
+        "is_balanced_target_order": false,
+        "lexicographic_pair_ripple_then_arrow": [
+          16,
+          2
+        ],
+        "ordered_ledger": [
+          1,
+          1,
+          1,
+          3,
+          2
+        ],
+        "parseval_non_dc_power_n5": 16,
+        "ripple_sum_squares": 16,
+        "self_recorded_arrow_increase_penalty": 2
+      },
+      {
+        "endpoint_self_recorded_from_left": false,
+        "is_balanced_target_order": false,
+        "lexicographic_pair_ripple_then_arrow": [
+          20,
+          3
+        ],
+        "ordered_ledger": [
+          1,
+          1,
+          1,
+          4,
+          1
+        ],
+        "parseval_non_dc_power_n5": 36,
+        "ripple_sum_squares": 20,
+        "self_recorded_arrow_increase_penalty": 3
+      },
+      {
+        "endpoint_self_recorded_from_left": false,
+        "is_balanced_target_order": false,
+        "lexicographic_pair_ripple_then_arrow": [
+          16,
+          3
+        ],
+        "ordered_ledger": [
+          1,
+          1,
+          2,
+          1,
+          3
+        ],
+        "parseval_non_dc_power_n5": 16,
+        "ripple_sum_squares": 16,
+        "self_recorded_arrow_increase_penalty": 3
+      },
+      {
+        "endpoint_self_recorded_from_left": false,
+        "is_balanced_target_order": false,
+        "lexicographic_pair_ripple_then_arrow": [
+          14,
+          1
+        ],
+        "ordered_ledger": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "parseval_non_dc_power_n5": 6,
+        "ripple_sum_squares": 14,
+        "self_recorded_arrow_increase_penalty": 1
+      },
+      {
+        "endpoint_self_recorded_from_left": false,
+        "is_balanced_target_order": false,
+        "lexicographic_pair_ripple_then_arrow": [
+          16,
+          2
+        ],
+        "ordered_ledger": [
+          1,
+          1,
+          2,
+          3,
+          1
+        ],
+        "parseval_non_dc_power_n5": 16,
+        "ripple_sum_squares": 16,
+        "self_recorded_arrow_increase_penalty": 2
+      },
+      {
+        "endpoint_self_recorded_from_left": false,
+        "is_balanced_target_order": false,
+        "lexicographic_pair_ripple_then_arrow": [
+          16,
+          3
+        ],
+        "ordered_ledger": [
+          1,
+          1,
+          3,
+          1,
+          2
+        ],
+        "parseval_non_dc_power_n5": 16,
+        "ripple_sum_squares": 16,
+        "self_recorded_arrow_increase_penalty": 3
+      },
+      {
+        "endpoint_self_recorded_from_left": false,
+        "is_balanced_target_order": false,
+        "lexicographic_pair_ripple_then_arrow": [
+          16,
+          2
+        ],
+        "ordered_ledger": [
+          1,
+          1,
+          3,
+          2,
+          1
+        ],
+        "parseval_non_dc_power_n5": 16,
+        "ripple_sum_squares": 16,
+        "self_recorded_arrow_increase_penalty": 2
+      },
+      {
+        "endpoint_self_recorded_from_left": false,
+        "is_balanced_target_order": false,
+        "lexicographic_pair_ripple_then_arrow": [
+          20,
+          3
+        ],
+        "ordered_ledger": [
+          1,
+          1,
+          4,
+          1,
+          1
+        ],
+        "parseval_non_dc_power_n5": 36,
+        "ripple_sum_squares": 20,
+        "self_recorded_arrow_increase_penalty": 3
+      },
+      {
+        "endpoint_self_recorded_from_left": false,
+        "is_balanced_target_order": false,
+        "lexicographic_pair_ripple_then_arrow": [
+          16,
+          3
+        ],
+        "ordered_ledger": [
+          1,
+          2,
+          1,
+          1,
+          3
+        ],
+        "parseval_non_dc_power_n5": 16,
+        "ripple_sum_squares": 16,
+        "self_recorded_arrow_increase_penalty": 3
+      },
+      {
+        "endpoint_self_recorded_from_left": false,
+        "is_balanced_target_order": false,
+        "lexicographic_pair_ripple_then_arrow": [
+          14,
+          2
+        ],
+        "ordered_ledger": [
+          1,
+          2,
+          1,
+          2,
+          2
+        ],
+        "parseval_non_dc_power_n5": 6,
+        "ripple_sum_squares": 14,
+        "self_recorded_arrow_increase_penalty": 2
+      },
+      {
+        "endpoint_self_recorded_from_left": false,
+        "is_balanced_target_order": false,
+        "lexicographic_pair_ripple_then_arrow": [
+          16,
+          3
+        ],
+        "ordered_ledger": [
+          1,
+          2,
+          1,
+          3,
+          1
+        ],
+        "parseval_non_dc_power_n5": 16,
+        "ripple_sum_squares": 16,
+        "self_recorded_arrow_increase_penalty": 3
+      },
+      {
+        "endpoint_self_recorded_from_left": false,
+        "is_balanced_target_order": false,
+        "lexicographic_pair_ripple_then_arrow": [
+          14,
+          2
+        ],
+        "ordered_ledger": [
+          1,
+          2,
+          2,
+          1,
+          2
+        ],
+        "parseval_non_dc_power_n5": 6,
+        "ripple_sum_squares": 14,
+        "self_recorded_arrow_increase_penalty": 2
+      },
+      {
+        "endpoint_self_recorded_from_left": false,
+        "is_balanced_target_order": false,
+        "lexicographic_pair_ripple_then_arrow": [
+          14,
+          1
+        ],
+        "ordered_ledger": [
+          1,
+          2,
+          2,
+          2,
+          1
+        ],
+        "parseval_non_dc_power_n5": 6,
+        "ripple_sum_squares": 14,
+        "self_recorded_arrow_increase_penalty": 1
+      },
+      {
+        "endpoint_self_recorded_from_left": false,
+        "is_balanced_target_order": false,
+        "lexicographic_pair_ripple_then_arrow": [
+          16,
+          2
+        ],
+        "ordered_ledger": [
+          1,
+          2,
+          3,
+          1,
+          1
+        ],
+        "parseval_non_dc_power_n5": 16,
+        "ripple_sum_squares": 16,
+        "self_recorded_arrow_increase_penalty": 2
+      },
+      {
+        "endpoint_self_recorded_from_left": false,
+        "is_balanced_target_order": false,
+        "lexicographic_pair_ripple_then_arrow": [
+          16,
+          3
+        ],
+        "ordered_ledger": [
+          1,
+          3,
+          1,
+          1,
+          2
+        ],
+        "parseval_non_dc_power_n5": 16,
+        "ripple_sum_squares": 16,
+        "self_recorded_arrow_increase_penalty": 3
+      },
+      {
+        "endpoint_self_recorded_from_left": false,
+        "is_balanced_target_order": false,
+        "lexicographic_pair_ripple_then_arrow": [
+          16,
+          3
+        ],
+        "ordered_ledger": [
+          1,
+          3,
+          1,
+          2,
+          1
+        ],
+        "parseval_non_dc_power_n5": 16,
+        "ripple_sum_squares": 16,
+        "self_recorded_arrow_increase_penalty": 3
+      },
+      {
+        "endpoint_self_recorded_from_left": false,
+        "is_balanced_target_order": false,
+        "lexicographic_pair_ripple_then_arrow": [
+          16,
+          2
+        ],
+        "ordered_ledger": [
+          1,
+          3,
+          2,
+          1,
+          1
+        ],
+        "parseval_non_dc_power_n5": 16,
+        "ripple_sum_squares": 16,
+        "self_recorded_arrow_increase_penalty": 2
+      },
+      {
+        "endpoint_self_recorded_from_left": false,
+        "is_balanced_target_order": false,
+        "lexicographic_pair_ripple_then_arrow": [
+          20,
+          3
+        ],
+        "ordered_ledger": [
+          1,
+          4,
+          1,
+          1,
+          1
+        ],
+        "parseval_non_dc_power_n5": 36,
+        "ripple_sum_squares": 20,
+        "self_recorded_arrow_increase_penalty": 3
+      },
+      {
+        "endpoint_self_recorded_from_left": false,
+        "is_balanced_target_order": false,
+        "lexicographic_pair_ripple_then_arrow": [
+          16,
+          2
+        ],
+        "ordered_ledger": [
+          2,
+          1,
+          1,
+          1,
+          3
+        ],
+        "parseval_non_dc_power_n5": 16,
+        "ripple_sum_squares": 16,
+        "self_recorded_arrow_increase_penalty": 2
+      },
+      {
+        "endpoint_self_recorded_from_left": false,
+        "is_balanced_target_order": false,
+        "lexicographic_pair_ripple_then_arrow": [
+          14,
+          1
+        ],
+        "ordered_ledger": [
+          2,
+          1,
+          1,
+          2,
+          2
+        ],
+        "parseval_non_dc_power_n5": 6,
+        "ripple_sum_squares": 14,
+        "self_recorded_arrow_increase_penalty": 1
+      },
+      {
+        "endpoint_self_recorded_from_left": true,
+        "is_balanced_target_order": false,
+        "lexicographic_pair_ripple_then_arrow": [
+          16,
+          2
+        ],
+        "ordered_ledger": [
+          2,
+          1,
+          1,
+          3,
+          1
+        ],
+        "parseval_non_dc_power_n5": 16,
+        "ripple_sum_squares": 16,
+        "self_recorded_arrow_increase_penalty": 2
+      },
+      {
+        "endpoint_self_recorded_from_left": false,
+        "is_balanced_target_order": false,
+        "lexicographic_pair_ripple_then_arrow": [
+          14,
+          2
+        ],
+        "ordered_ledger": [
+          2,
+          1,
+          2,
+          1,
+          2
+        ],
+        "parseval_non_dc_power_n5": 6,
+        "ripple_sum_squares": 14,
+        "self_recorded_arrow_increase_penalty": 2
+      },
+      {
+        "endpoint_self_recorded_from_left": true,
+        "is_balanced_target_order": false,
+        "lexicographic_pair_ripple_then_arrow": [
+          14,
+          1
+        ],
+        "ordered_ledger": [
+          2,
+          1,
+          2,
+          2,
+          1
+        ],
+        "parseval_non_dc_power_n5": 6,
+        "ripple_sum_squares": 14,
+        "self_recorded_arrow_increase_penalty": 1
+      },
+      {
+        "endpoint_self_recorded_from_left": true,
+        "is_balanced_target_order": false,
+        "lexicographic_pair_ripple_then_arrow": [
+          16,
+          2
+        ],
+        "ordered_ledger": [
+          2,
+          1,
+          3,
+          1,
+          1
+        ],
+        "parseval_non_dc_power_n5": 16,
+        "ripple_sum_squares": 16,
+        "self_recorded_arrow_increase_penalty": 2
+      },
+      {
+        "endpoint_self_recorded_from_left": false,
+        "is_balanced_target_order": false,
+        "lexicographic_pair_ripple_then_arrow": [
+          14,
+          1
+        ],
+        "ordered_ledger": [
+          2,
+          2,
+          1,
+          1,
+          2
+        ],
+        "parseval_non_dc_power_n5": 6,
+        "ripple_sum_squares": 14,
+        "self_recorded_arrow_increase_penalty": 1
+      },
+      {
+        "endpoint_self_recorded_from_left": true,
+        "is_balanced_target_order": false,
+        "lexicographic_pair_ripple_then_arrow": [
+          14,
+          1
+        ],
+        "ordered_ledger": [
+          2,
+          2,
+          1,
+          2,
+          1
+        ],
+        "parseval_non_dc_power_n5": 6,
+        "ripple_sum_squares": 14,
+        "self_recorded_arrow_increase_penalty": 1
+      },
+      {
+        "endpoint_self_recorded_from_left": true,
+        "is_balanced_target_order": true,
+        "lexicographic_pair_ripple_then_arrow": [
+          14,
+          0
+        ],
+        "ordered_ledger": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "parseval_non_dc_power_n5": 6,
+        "ripple_sum_squares": 14,
+        "self_recorded_arrow_increase_penalty": 0
+      },
+      {
+        "endpoint_self_recorded_from_left": true,
+        "is_balanced_target_order": false,
+        "lexicographic_pair_ripple_then_arrow": [
+          16,
+          1
+        ],
+        "ordered_ledger": [
+          2,
+          3,
+          1,
+          1,
+          1
+        ],
+        "parseval_non_dc_power_n5": 16,
+        "ripple_sum_squares": 16,
+        "self_recorded_arrow_increase_penalty": 1
+      },
+      {
+        "endpoint_self_recorded_from_left": true,
+        "is_balanced_target_order": false,
+        "lexicographic_pair_ripple_then_arrow": [
+          16,
+          1
+        ],
+        "ordered_ledger": [
+          3,
+          1,
+          1,
+          1,
+          2
+        ],
+        "parseval_non_dc_power_n5": 16,
+        "ripple_sum_squares": 16,
+        "self_recorded_arrow_increase_penalty": 1
+      },
+      {
+        "endpoint_self_recorded_from_left": true,
+        "is_balanced_target_order": false,
+        "lexicographic_pair_ripple_then_arrow": [
+          16,
+          1
+        ],
+        "ordered_ledger": [
+          3,
+          1,
+          1,
+          2,
+          1
+        ],
+        "parseval_non_dc_power_n5": 16,
+        "ripple_sum_squares": 16,
+        "self_recorded_arrow_increase_penalty": 1
+      },
+      {
+        "endpoint_self_recorded_from_left": true,
+        "is_balanced_target_order": false,
+        "lexicographic_pair_ripple_then_arrow": [
+          16,
+          1
+        ],
+        "ordered_ledger": [
+          3,
+          1,
+          2,
+          1,
+          1
+        ],
+        "parseval_non_dc_power_n5": 16,
+        "ripple_sum_squares": 16,
+        "self_recorded_arrow_increase_penalty": 1
+      },
+      {
+        "endpoint_self_recorded_from_left": true,
+        "is_balanced_target_order": false,
+        "lexicographic_pair_ripple_then_arrow": [
+          16,
+          0
+        ],
+        "ordered_ledger": [
+          3,
+          2,
+          1,
+          1,
+          1
+        ],
+        "parseval_non_dc_power_n5": 16,
+        "ripple_sum_squares": 16,
+        "self_recorded_arrow_increase_penalty": 0
+      },
+      {
+        "endpoint_self_recorded_from_left": true,
+        "is_balanced_target_order": false,
+        "lexicographic_pair_ripple_then_arrow": [
+          20,
+          0
+        ],
+        "ordered_ledger": [
+          4,
+          1,
+          1,
+          1,
+          1
+        ],
+        "parseval_non_dc_power_n5": 36,
+        "ripple_sum_squares": 20,
+        "self_recorded_arrow_increase_penalty": 0
+      }
+    ],
+    "total_positive_ordered_ledgers": 35
+  },
+  "hard_limits": [
+    "No identity K_legacy_ont == K_strict_gate is exported.",
+    "No legacy physical-role transfer is licensed.",
+    "The nadsoliton is treated as information carrying finite self-record patterns, but no separate sub-nadsoliton informational layer is introduced.",
+    "The arrow-increase penalty is a finite selector-action candidate, not a strict-core theorem.",
+    "The ripple term is used as a model-internal selector action here and is not derived from strict nadsoliton geometry.",
+    "No theorem derives the d5 support, arrow action, balanced ledger, endpoint-source convention, or strict source-localizing term from strict nadsoliton geometry.",
+    "No theorem derives branch count m=5, total exponent n=8, denominator 3, or binary-rescale quotient.",
+    "No Aut(Z_12)/N462/QW-2191 selector obstruction is discharged by this arrow-action certificate.",
+    "No theorem derives eta=9/5 without the branch model, denominator/quotient convention, support premise, self-record arrow action, and ripple ledger selector premise.",
+    "No QW-2191 discharge and no ToE closure are claimed.",
+    "No ToE closure is claimed."
+  ],
+  "next_honest_step": "Try to derive the arrow-increase penalty and ripple term as strict internal action components of nadsoliton self-record formation, or prove a no-go for such an action derivation.",
+  "previous_monotone_stack_replay": {
+    "all_checked_power_costs_uniquely_select_balanced": true,
+    "candidate_status": "candidate-supported-but-monotone-min-ripple-premises-not-derived",
+    "result_kind": "SCRATCH_STRICT_ALPHA_SELF_RECORDED_MONOTONE_MIN_RIPPLE_STACK_PROBE__NOT_A_THEOREM",
+    "self_recorded_monotone_count": 3
+  },
+  "result_kind": "SCRATCH_STRICT_ALPHA_SELF_RECORDED_ARROW_ACTION_LEXICOGRAPHIC_SELECTOR_PROBE__NOT_A_THEOREM",
+  "selector_consequence": {
+    "what_each_term_does": "Ripple selects the balanced multiset but leaves 10 orderings; arrow penalty breaks that ordering degeneracy in favor of the self-recorded monotone order.",
+    "what_is_gained": "The monotone/min-ripple stack can be packaged as a single finite lexicographic arrow action over all 35 ordered ledgers.",
+    "what_remains_unproved": "The strict theory still has to derive R and A as genuine nadsoliton formation/action terms rather than assume them."
+  },
+  "source_reports": {
+    "self_recorded_monotone_min_ripple_stack": "fundamental_action_reconstruction/scratch/bridge_strict_alpha_self_recorded_monotone_min_ripple_stack_report.json"
+  },
+  "status": "OPEN_STRICT_ALPHA_SELF_RECORDED_ARROW_ACTION_LEXICOGRAPHIC_SELECTOR_PREMISE_BASED_NO_STRICT_DISCHARGE",
+  "target_identity_replay": {
+    "balanced_ledger": [
+      2,
+      2,
+      2,
+      1,
+      1
+    ],
+    "eta_residual_vs_9_5": 0.0,
+    "q_power_product": "256/243"
+  }
+}
