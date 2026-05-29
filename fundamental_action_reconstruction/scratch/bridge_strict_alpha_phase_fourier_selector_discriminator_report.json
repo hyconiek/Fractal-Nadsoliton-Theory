@@ -1,0 +1,486 @@
+{
+  "bounded_z12_placement_scan": {
+    "all_ledgers_can_reach_dc_sized_single_mode_power_64": true,
+    "interpretation": "Scan every 5-node support in Z12 and every distinct assignment of each ledger; this is a finite obstruction check, not a physical theorem.",
+    "rows": [
+      {
+        "best_min_ripple_placement": {
+          "max_single_non_dc_power": 16.000000000000007,
+          "mode": 5,
+          "nodes": [
+            1,
+            4,
+            6,
+            7,
+            10
+          ],
+          "weights": [
+            1,
+            1,
+            4,
+            1,
+            1
+          ]
+        },
+        "distinct_rounded_max_single_values": 39,
+        "ledger": [
+          4,
+          1,
+          1,
+          1,
+          1
+        ],
+        "max_possible_max_single_non_dc_power": 64.0,
+        "min_possible_max_single_non_dc_power": 16.000000000000007,
+        "rows_scanned": 3960,
+        "worst_highest_resonance_placement": {
+          "max_single_non_dc_power": 64.0,
+          "mode": 6,
+          "nodes": [
+            0,
+            2,
+            4,
+            6,
+            8
+          ],
+          "weights": [
+            1,
+            1,
+            1,
+            1,
+            4
+          ]
+        }
+      },
+      {
+        "best_min_ripple_placement": {
+          "max_single_non_dc_power": 16.0,
+          "mode": 3,
+          "nodes": [
+            0,
+            1,
+            2,
+            3,
+            6
+          ],
+          "weights": [
+            1,
+            1,
+            2,
+            1,
+            3
+          ]
+        },
+        "distinct_rounded_max_single_values": 82,
+        "ledger": [
+          3,
+          2,
+          1,
+          1,
+          1
+        ],
+        "max_possible_max_single_non_dc_power": 64.0,
+        "min_possible_max_single_non_dc_power": 16.0,
+        "rows_scanned": 15840,
+        "worst_highest_resonance_placement": {
+          "max_single_non_dc_power": 64.0,
+          "mode": 6,
+          "nodes": [
+            0,
+            2,
+            4,
+            6,
+            8
+          ],
+          "weights": [
+            1,
+            1,
+            1,
+            2,
+            3
+          ]
+        }
+      },
+      {
+        "best_min_ripple_placement": {
+          "max_single_non_dc_power": 12.99999999999999,
+          "mode": 2,
+          "nodes": [
+            0,
+            1,
+            2,
+            6,
+            11
+          ],
+          "weights": [
+            1,
+            1,
+            2,
+            2,
+            2
+          ]
+        },
+        "distinct_rounded_max_single_values": 68,
+        "ledger": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "max_possible_max_single_non_dc_power": 64.0,
+        "min_possible_max_single_non_dc_power": 12.99999999999999,
+        "rows_scanned": 7920,
+        "worst_highest_resonance_placement": {
+          "max_single_non_dc_power": 64.0,
+          "mode": 6,
+          "nodes": [
+            0,
+            2,
+            4,
+            6,
+            8
+          ],
+          "weights": [
+            1,
+            1,
+            2,
+            2,
+            2
+          ]
+        }
+      }
+    ],
+    "verdict": "HIGHEST_SINGLE_MODE_RESONANCE_IS_PLACEMENT_DOMINATED_AND_DOES_NOT_SELECT_THE_BALANCED_LEDGER"
+  },
+  "candidate_interpretation": {
+    "content": "Fourier arithmetic gives a precise selector discriminator: balanced (2,2,2,1,1) is selected by minimum ripple / coherence compression, not by naive maximum resonance power.",
+    "supported_by_this_probe": true,
+    "why_this_is_more_proof_like": "The Parseval identity is exact and independent of numerical fitting; bounded scans show that single-mode resonance language is underdetermined by phase labels alone.",
+    "why_this_is_not_enough": "No strict theorem derives the minimum-ripple/coherence-compression variational principle, the branch support, or the labelled placement convention from strict nadsoliton geometry."
+  },
+  "fixed_fifth_window_single_mode_scan": {
+    "interpretation": "Use the first five nodes of the Z12 fifth-step orbit as phase-labelled branch slots; scan all label permutations.",
+    "rows": [
+      {
+        "fifth_window_nodes": [
+          0,
+          7,
+          2,
+          9,
+          4
+        ],
+        "ledger": [
+          4,
+          1,
+          1,
+          1,
+          1
+        ],
+        "max_over_label_permutations": 45.32050807568878,
+        "maximizing_assignment": {
+          "max_single_non_dc_power": 45.32050807568878,
+          "mode": 5,
+          "weights_on_fifth_window": [
+            1,
+            1,
+            4,
+            1,
+            1
+          ]
+        },
+        "mean_over_label_permutations": 39.642047106606135,
+        "min_over_label_permutations": 34.12435565298215,
+        "minimizing_assignment": {
+          "max_single_non_dc_power": 34.12435565298215,
+          "mode": 5,
+          "weights_on_fifth_window": [
+            1,
+            1,
+            1,
+            1,
+            4
+          ]
+        },
+        "permutation_count": 5
+      },
+      {
+        "fifth_window_nodes": [
+          0,
+          7,
+          2,
+          9,
+          4
+        ],
+        "ledger": [
+          3,
+          2,
+          1,
+          1,
+          1
+        ],
+        "max_over_label_permutations": 43.78460969082656,
+        "maximizing_assignment": {
+          "max_single_non_dc_power": 43.78460969082656,
+          "mode": 5,
+          "weights_on_fifth_window": [
+            1,
+            1,
+            3,
+            2,
+            1
+          ]
+        },
+        "mean_over_label_permutations": 37.427687752661235,
+        "min_over_label_permutations": 28.124355652982153,
+        "minimizing_assignment": {
+          "max_single_non_dc_power": 28.124355652982153,
+          "mode": 7,
+          "weights_on_fifth_window": [
+            2,
+            1,
+            1,
+            1,
+            3
+          ]
+        },
+        "permutation_count": 20
+      },
+      {
+        "fifth_window_nodes": [
+          0,
+          7,
+          2,
+          9,
+          4
+        ],
+        "ledger": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "max_over_label_permutations": 41.784609690826535,
+        "maximizing_assignment": {
+          "max_single_non_dc_power": 41.784609690826535,
+          "mode": 5,
+          "weights_on_fifth_window": [
+            1,
+            2,
+            2,
+            2,
+            1
+          ]
+        },
+        "mean_over_label_permutations": 36.32050807568878,
+        "min_over_label_permutations": 31.588457268119903,
+        "minimizing_assignment": {
+          "max_single_non_dc_power": 31.588457268119903,
+          "mode": 5,
+          "weights_on_fifth_window": [
+            2,
+            1,
+            1,
+            2,
+            2
+          ]
+        },
+        "permutation_count": 10
+      }
+    ],
+    "verdict": "SINGLE_MODE_CRITERIA_DEPEND_ON_ASSIGNMENT_AND_NEED_AN_EXTRA_PLACEMENT_OR_COHERENCE_PRINCIPLE"
+  },
+  "hard_limits": [
+    "No identity K_legacy_ont == K_strict_gate is exported.",
+    "No legacy physical-role transfer is licensed.",
+    "No theorem derives a strict-core phase/Fourier selector from nadsoliton geometry.",
+    "Naive highest total Fourier resonance selects (4,1,1,1,1), not (2,2,2,1,1).",
+    "Balanced (2,2,2,1,1) is supported only after adding a minimum-ripple/coherence-compression premise.",
+    "Single-mode resonance scans are placement-sensitive and do not discharge Aut(Z_12)/N462/QW-2191 selector obstructions.",
+    "No theorem derives eta=9/5 without adopting branch count, denominator/quotient, phase labelling, and minimum-ripple selector premises.",
+    "No QW-2191 selector discharge and no ToE closure are claimed."
+  ],
+  "next_honest_step": "Try to derive the minimum Fourier ripple / coherence-compression variational principle as a strict nadsoliton theorem; otherwise record it as an explicit non-strict selector premise.",
+  "parseval_discriminator": {
+    "fixed_total_binary_units": 8,
+    "identity": "total_non_dc_power = N*sum(e_i^2) - (sum e_i)^2",
+    "ledger_rows": [
+      {
+        "eta_from_product": 1.8,
+        "eta_residual_vs_9_5": 0.0,
+        "five_branch_max_single_non_dc_power": 9.000000000000004,
+        "five_branch_non_dc_powers": [
+          9.0,
+          9.0,
+          9.0,
+          9.000000000000004
+        ],
+        "five_branch_total_non_dc_power_parseval": 36,
+        "ledger": [
+          4,
+          1,
+          1,
+          1,
+          1
+        ],
+        "product_fraction": "256/243",
+        "sum": 8,
+        "sum_squares": 20,
+        "z12_zero_padded_total_non_dc_power_parseval": 176
+      },
+      {
+        "eta_from_product": 1.8,
+        "eta_residual_vs_9_5": 0.0,
+        "five_branch_max_single_non_dc_power": 6.236067977499791,
+        "five_branch_non_dc_powers": [
+          6.236067977499791,
+          1.7639320225002109,
+          1.7639320225002098,
+          6.236067977499791
+        ],
+        "five_branch_total_non_dc_power_parseval": 16,
+        "ledger": [
+          3,
+          2,
+          1,
+          1,
+          1
+        ],
+        "product_fraction": "256/243",
+        "sum": 8,
+        "sum_squares": 16,
+        "z12_zero_padded_total_non_dc_power_parseval": 128
+      },
+      {
+        "eta_from_product": 1.8,
+        "eta_residual_vs_9_5": 0.0,
+        "five_branch_max_single_non_dc_power": 2.618033988749896,
+        "five_branch_non_dc_powers": [
+          2.618033988749896,
+          0.38196601125010465,
+          0.38196601125010565,
+          2.6180339887498936
+        ],
+        "five_branch_total_non_dc_power_parseval": 6,
+        "ledger": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "product_fraction": "256/243",
+        "sum": 8,
+        "sum_squares": 14,
+        "z12_zero_padded_total_non_dc_power_parseval": 104
+      }
+    ],
+    "maximum_fourier_ripple_winner": {
+      "eta_from_product": 1.8,
+      "eta_residual_vs_9_5": 0.0,
+      "five_branch_max_single_non_dc_power": 9.000000000000004,
+      "five_branch_non_dc_powers": [
+        9.0,
+        9.0,
+        9.0,
+        9.000000000000004
+      ],
+      "five_branch_total_non_dc_power_parseval": 36,
+      "ledger": [
+        4,
+        1,
+        1,
+        1,
+        1
+      ],
+      "product_fraction": "256/243",
+      "sum": 8,
+      "sum_squares": 20,
+      "z12_zero_padded_total_non_dc_power_parseval": 176
+    },
+    "minimum_fourier_ripple_winner": {
+      "eta_from_product": 1.8,
+      "eta_residual_vs_9_5": 0.0,
+      "five_branch_max_single_non_dc_power": 2.618033988749896,
+      "five_branch_non_dc_powers": [
+        2.618033988749896,
+        0.38196601125010465,
+        0.38196601125010565,
+        2.6180339887498936
+      ],
+      "five_branch_total_non_dc_power_parseval": 6,
+      "ledger": [
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "product_fraction": "256/243",
+      "sum": 8,
+      "sum_squares": 14,
+      "z12_zero_padded_total_non_dc_power_parseval": 104
+    },
+    "verdict": "BALANCED_LEDGER_IS_MINIMUM_RIPPLE_NOT_HIGHEST_TOTAL_RESONANCE_POWER",
+    "z12_zero_padded_maximum_fourier_ripple_winner": {
+      "eta_from_product": 1.8,
+      "eta_residual_vs_9_5": 0.0,
+      "five_branch_max_single_non_dc_power": 9.000000000000004,
+      "five_branch_non_dc_powers": [
+        9.0,
+        9.0,
+        9.0,
+        9.000000000000004
+      ],
+      "five_branch_total_non_dc_power_parseval": 36,
+      "ledger": [
+        4,
+        1,
+        1,
+        1,
+        1
+      ],
+      "product_fraction": "256/243",
+      "sum": 8,
+      "sum_squares": 20,
+      "z12_zero_padded_total_non_dc_power_parseval": 176
+    },
+    "z12_zero_padded_minimum_fourier_ripple_winner": {
+      "eta_from_product": 1.8,
+      "eta_residual_vs_9_5": 0.0,
+      "five_branch_max_single_non_dc_power": 2.618033988749896,
+      "five_branch_non_dc_powers": [
+        2.618033988749896,
+        0.38196601125010465,
+        0.38196601125010565,
+        2.6180339887498936
+      ],
+      "five_branch_total_non_dc_power_parseval": 6,
+      "ledger": [
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "product_fraction": "256/243",
+      "sum": 8,
+      "sum_squares": 14,
+      "z12_zero_padded_total_non_dc_power_parseval": 104
+    }
+  },
+  "result_kind": "SCRATCH_STRICT_ALPHA_PHASE_FOURIER_SELECTOR_DISCRIMINATOR_PROBE__NOT_A_THEOREM",
+  "source_reports": {
+    "entropy_selector_discriminator": "fundamental_action_reconstruction/scratch/bridge_strict_alpha_entropy_selector_discriminator_report.json",
+    "phase_resonance_limmatic_audit": "fundamental_action_reconstruction/scratch/bridge_strict_alpha_phase_resonance_limmatic_audit_report.json"
+  },
+  "status": "OPEN_STRICT_ALPHA_PHASE_FOURIER_SELECTOR_DISCRIMINATOR_NO_SELECTOR_THEOREM",
+  "target_identity_replay": {
+    "all_canonical_ledgers_share_product": "2^8/3^5 = 256/243",
+    "entropy_audit_result_kind": "SCRATCH_STRICT_ALPHA_ENTROPY_SELECTOR_DISCRIMINATOR_PROBE__NOT_A_THEOREM",
+    "eta_target": 1.8,
+    "phase_audit_result_kind": "SCRATCH_STRICT_ALPHA_PHASE_RESONANCE_LIMMATIC_AUDIT_PROBE__NOT_A_THEOREM",
+    "q_radical_power_5": "256/243"
+  }
+}
