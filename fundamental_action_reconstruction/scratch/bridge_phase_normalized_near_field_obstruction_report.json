@@ -1,0 +1,133 @@
+{
+  "constants": {
+    "alpha_geo": 2.772588722239781,
+    "legacy": {
+      "beta_tors": 0.01,
+      "omega": 0.7853981633974483,
+      "phi": 0.5235987755982988
+    },
+    "strict": {
+      "beta": 1.0,
+      "eta": 1.8,
+      "omega": 0.18575,
+      "phi": 0.1625
+    },
+    "strict_eta": 1.8
+  },
+  "hard_limits": [
+    "No identity K_legacy_ont == K_strict_gate is exported.",
+    "No physical-role transfer from legacy alpha_geo/beta_tors formulas is licensed.",
+    "No theorem derives the two-term distance map from nadsoliton dynamics.",
+    "No QW-2191 selector discharge and no ToE closure are claimed."
+  ],
+  "local_two_term_witness": {
+    "a": 0.06570915405925375,
+    "c": 2.1577308079681816,
+    "claim": "A two-term distance map x(d)=a*d+c*d**eta matches the first ordinary and first fractional coefficients of the normalized kernels.",
+    "interpretation": "The bridge candidate would need a phase-carrying linear channel plus a fractal damping channel; denominator-only D_f is insufficient by itself.",
+    "status": "ASYMPTOTIC_WITNESS_ONLY_NOT_GLOBAL_IDENTITY"
+  },
+  "next_honest_step": "If continuing this route, derive or falsify a two-channel near-field transport law: one analytic phase channel proportional to d and one fractal damping/RG channel proportional to d**eta.",
+  "numeric_coefficients": {
+    "exact_denominator_prefactor_beta_over_beta_tors": 100.0,
+    "legacy_normalized_linear_coefficient_in_x": -0.4634498410585544,
+    "linear_phase_slope_residual_under_exact_denominator_map": 0.030452897004853215,
+    "local_two_term_a": 0.06570915405925375,
+    "local_two_term_c": 2.1577308079681816,
+    "strict_normalized_linear_coefficient_in_d": -0.030452897004853215
+  },
+  "restricted_obstruction": {
+    "claim": "Exact denominator matching x(d)=(beta/beta_tors)*d**eta cannot also match the nonzero strict linear phase slope at d=0 when eta>1.",
+    "interpretation": "This blocks the strongest naive near-field story: exact fractal damping replacement plus a single shared distance variable is not a full normalized-kernel bridge.",
+    "is_zero": false,
+    "obstruction_residual_linear_coefficient": 0.030452897004853215
+  },
+  "result_kind": "SCRATCH_PHASE_NORMALIZED_NEAR_FIELD_OBSTRUCTION_PROBE__NOT_A_THEOREM",
+  "sample_residual_rows": [
+    {
+      "d": 1e-06,
+      "exact_denominator_abs_residual_over_d": 0.029734244622048323,
+      "exact_denominator_residual": 2.9734244622048323e-08,
+      "exact_denominator_x": 1.5848931924611124e-09,
+      "strict_normalized": 0.9999999695312369,
+      "two_term_abs_residual_over_d_eta": 0.0010017198210995081,
+      "two_term_residual": 1.587618925213974e-14,
+      "two_term_x": 6.574335178794086e-08
+    },
+    {
+      "d": 0.0001,
+      "exact_denominator_abs_residual_over_d": 0.0018437484960998063,
+      "exact_denominator_residual": 1.8437484960998063e-07,
+      "exact_denominator_x": 6.309573444801931e-06,
+      "strict_normalized": 0.9999968914422462,
+      "two_term_abs_residual_over_d_eta": 0.0025144785144086646,
+      "two_term_residual": 1.586528686203792e-10,
+      "two_term_x": 6.707059015995246e-06
+    },
+    {
+      "d": 0.001,
+      "exact_denominator_abs_residual_over_d": 0.1500997664410919,
+      "exact_denominator_residual": -0.0001500997664410919,
+      "exact_denominator_x": 0.0003981071705534972,
+      "strict_normalized": 0.9999655489170857,
+      "two_term_abs_residual_over_d_eta": 0.0038776457430943078,
+      "two_term_residual": 1.543718575192088e-08,
+      "two_term_x": 7.429923512701699e-05
+    },
+    {
+      "d": 0.01,
+      "exact_denominator_abs_residual_over_d": 1.1274916908562638,
+      "exact_denominator_residual": -0.011274916908562638,
+      "exact_denominator_x": 0.025118864315095794,
+      "strict_normalized": 0.9994426973973759,
+      "two_term_abs_residual_over_d_eta": 0.004571386977259962,
+      "two_term_residual": 1.1482804921358891e-06,
+      "two_term_x": 0.001199089014531085
+    },
+    {
+      "d": 0.05,
+      "exact_denominator_abs_residual_over_d": 5.249395035271489,
+      "exact_denominator_residual": -0.26246975176357445,
+      "exact_denominator_x": 0.45514105075652006,
+      "strict_normalized": 0.993910553584352,
+      "two_term_abs_residual_over_d_eta": 0.008058904485215205,
+      "two_term_residual": -3.6679382553472806e-05,
+      "two_term_x": 0.01310617637484622
+    },
+    {
+      "d": 0.1,
+      "exact_denominator_abs_residual_over_d": 12.043528530638813,
+      "exact_denominator_residual": -1.2043528530638814,
+      "exact_denominator_x": 1.5848931924611134,
+      "strict_normalized": 0.981230913119538,
+      "two_term_abs_residual_over_d_eta": 0.03953911864216152,
+      "two_term_residual": -0.000626652799718741,
+      "two_term_x": 0.04076864409304926
+    }
+  ],
+  "source_reports": {
+    "df_marginal_rg_flow": "fundamental_action_reconstruction/scratch/bridge_df_marginal_rg_flow_report.json",
+    "strict_kernel_robustness_opinion_audit": "fundamental_action_reconstruction/scratch/bridge_strict_kernel_robustness_opinion_audit_report.json"
+  },
+  "status": "OPEN_PHASE_NORMALIZED_NEAR_FIELD_PROBE_NO_BRIDGE_THEOREM",
+  "symbolic_coefficients": {
+    "exact_denominator_map_linear_phase_slope_at_origin_for_eta_gt_1": "0",
+    "exact_denominator_map_x_of_d": "(beta/beta_tors)*d**eta",
+    "exact_denominator_prefactor_beta_over_beta_tors": "beta/beta_t",
+    "legacy_normalized_linear_coefficient_in_x": "-beta_t - omega_l*tan(phi_l)",
+    "linear_phase_slope_residual_under_exact_denominator_map": "omega_s*tan(phi_s)",
+    "local_two_term_a_matching_linear_slope": "omega_s*tan(phi_s)/(beta_t + omega_l*tan(phi_l))",
+    "local_two_term_c_matching_fractional_damping_coefficient": "beta/(beta_t + omega_l*tan(phi_l))",
+    "local_two_term_map": "x(d)=a*d+c*d**eta",
+    "strict_normalized_linear_coefficient_in_d": "-omega_s*tan(phi_s)"
+  },
+  "upstream_replay": {
+    "rg_denominator_residual": "0",
+    "rg_flow_status": "OPEN_MARGINAL_RG_FLOW_TRACE_NO_BRIDGE_THEOREM",
+    "robustness_support": {
+      "near_field_alpha_geo_full_kernel_limit_disconfirmed": true,
+      "operational_robustness_supported": true,
+      "physical_law_or_bridge_discharged": false
+    }
+  }
+}

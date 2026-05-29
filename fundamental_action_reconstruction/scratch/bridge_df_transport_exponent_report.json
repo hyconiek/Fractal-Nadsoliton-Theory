@@ -1,0 +1,336 @@
+{
+  "aggregate_summary": {
+    "all_windows_bic_strongly_prefers_D_f_minus_1_over_linear": true,
+    "all_windows_capture_at_least_99_percent_of_linear_to_free_improvement": true,
+    "gamma_F_between_eta_eff_and_strict_eta_replayed": true,
+    "median_capture_fraction": 0.9986025905343039,
+    "median_sse_reduction_factor_linear_over_df": 715.6098656465681,
+    "min_capture_fraction": 0.9962234405921432,
+    "min_delta_bic_linear_minus_df": 2789.4709467022894,
+    "min_sse_reduction_factor_linear_over_df": 264.7912801052655
+  },
+  "constants": {
+    "D_f": 2.772588722239781,
+    "gamma_F_D_f_minus_1": 1.7725887222397811,
+    "previous_eta_eff": 1.7388862982059556,
+    "strict_eta": 1.8,
+    "strict_eta_minus_gamma_F": 0.0274112777602189
+  },
+  "hard_limits": [
+    "No identity K_legacy_ont == K_strict_gate is exported.",
+    "No legacy physical-role formula is transferred to the strict kernel.",
+    "The fixed D_f-1 exponent remains distinguishable from eta=1.8 and from the previous fitted eta_eff.",
+    "No QW-2191 selector discharge and no ToE closure are claimed."
+  ],
+  "honest_interpretation": [
+    "If the documented fractal path multiplicity N(d)~d^(D_f-1) is admitted as a transport multiplicity, then after absorbing constants into beta it induces a denominator exponent gamma_F=D_f-1.",
+    "The fixed gamma_F denominator is not identical to strict eta=1.8, but across all tested windows it captures at least 99% of the linear-to-free exponent improvement and strongly beats the linear legacy denominator by BIC.",
+    "This upgrades the D_f link from a grep/numerical coincidence to a concrete theorem-prep obligation: prove or refute that path multiplicity really enters the damping denominator in this normalized way."
+  ],
+  "next_honest_step": "Prove or falsify the transport insertion lemma: N(d)~d^(D_f-1) must enter the effective damping denominator, not merely the numerator or measure, and finite-window renormalization must explain the small D_f-1 -> eta_eff/eta offsets.",
+  "result_kind": "SCRATCH_DF_TRANSPORT_EXPONENT_THEOREM_PREP__NOT_A_THEOREM",
+  "source_reports": {
+    "previous_df_eta_eff_audit": "fundamental_action_reconstruction/scratch/bridge_df_eta_eff_report.json"
+  },
+  "status": "OPEN_THEOREM_PREP_TRACE_NO_BRIDGE_THEOREM",
+  "symbolic_transport_derivation": {
+    "asymptotic_coupling_log_slope": "D_f - 1",
+    "finite_denominator_log_slope": "beta*d**D_f*(D_f - 1)/(beta*d**D_f + d)",
+    "induced_denominator": "beta*d**(D_f - 1) + 1",
+    "normalized_coupling_after_absorbing_c_d0_into_beta": "beta*d**(D_f - 1)",
+    "path_multiplicity_ansatz": "c*(d/d0)**(D_f - 1)",
+    "specialized_gamma_F": "D_f - 1 = 4*log(2) - 1"
+  },
+  "window_rows": [
+    {
+      "df_transport_vs_linear": {
+        "captured_fraction_of_linear_to_free_sse_improvement": 0.9962234405921432,
+        "delta_aic_linear_minus_df": 2789.4709467022894,
+        "delta_bic_linear_minus_df": 2789.4709467022894,
+        "sse_reduction_factor_linear_over_df": 264.7912801052655
+      },
+      "df_transport_vs_strict_eta": {
+        "gamma_gap_strict_eta_minus_D_f_minus_1": 0.0274112777602189,
+        "sse_ratio_df_over_strict_eta": 4.308176770402187e+26
+      },
+      "fixed_D_f_minus_1_transport": {
+        "aic": -6938.146477953208,
+        "beta_eff": 1.0000243176420687,
+        "bic": -6929.717261756364,
+        "delta_phi": 3.91134248199556e-05,
+        "gamma": 1.7725887222397811,
+        "mse": 9.335297959828593e-07,
+        "scale": 0.35754171990181505,
+        "sse": 0.00046676489799142963
+      },
+      "fixed_strict_eta_oracle": {
+        "aic": -37602.010082629604,
+        "beta_eff": 1.0,
+        "bic": -37593.580866432756,
+        "delta_phi": 0.0,
+        "gamma": 1.8,
+        "mse": 2.166879043581376e-33,
+        "scale": 0.360673760222241,
+        "sse": 1.083439521790688e-30
+      },
+      "free_gamma_oracle": {
+        "aic": -37600.010082629604,
+        "beta_eff": 1.0,
+        "bic": -37587.36625833434,
+        "delta_phi": 0.0,
+        "gamma": 1.8,
+        "mse": 2.166879043581376e-33,
+        "scale": 0.360673760222241,
+        "sse": 1.083439521790688e-30
+      },
+      "linear_gamma_1_baseline": {
+        "aic": -4148.6755312509185,
+        "beta_eff": 20.0,
+        "bic": -4140.246315054074,
+        "delta_phi": 0.11841427328171782,
+        "gamma": 1.0,
+        "mse": 0.00024719054969470864,
+        "scale": 3.657729367222542,
+        "sse": 0.12359527484735433
+      },
+      "window": {
+        "d_max": 11.0,
+        "d_min": 1.0,
+        "n": 500,
+        "name": "baseline_bridge_missing_coupling_window"
+      }
+    },
+    {
+      "df_transport_vs_linear": {
+        "captured_fraction_of_linear_to_free_sse_improvement": 0.9986025905343039,
+        "delta_aic_linear_minus_df": 3286.567569038748,
+        "delta_bic_linear_minus_df": 3286.567569038748,
+        "sse_reduction_factor_linear_over_df": 715.6098656465681
+      },
+      "df_transport_vs_strict_eta": {
+        "gamma_gap_strict_eta_minus_D_f_minus_1": 0.0274112777602189,
+        "sse_ratio_df_over_strict_eta": 1.203938732155391e+26
+      },
+      "fixed_D_f_minus_1_transport": {
+        "aic": -7715.634220633552,
+        "beta_eff": 1.017950240489767,
+        "bic": -7707.205004436708,
+        "delta_phi": 0.02590982589327844,
+        "gamma": 1.7725887222397811,
+        "mse": 1.9715641444971797e-07,
+        "scale": 0.3668423233830003,
+        "sse": 9.857820722485898e-05
+      },
+      "fixed_strict_eta_oracle": {
+        "aic": -37742.03965889501,
+        "beta_eff": 1.0,
+        "bic": -37733.61044269816,
+        "delta_phi": 0.0,
+        "gamma": 1.8,
+        "mse": 1.6375950800814604e-33,
+        "scale": 0.36067376022224096,
+        "sse": 8.187975400407302e-31
+      },
+      "free_gamma_oracle": {
+        "aic": -37740.03965889501,
+        "beta_eff": 1.0,
+        "bic": -37727.395834599745,
+        "delta_phi": 0.0,
+        "gamma": 1.8,
+        "mse": 1.6375950800814604e-33,
+        "scale": 0.36067376022224096,
+        "sse": 8.187975400407302e-31
+      },
+      "linear_gamma_1_baseline": {
+        "aic": -4429.066651594804,
+        "beta_eff": 20.0,
+        "bic": -4420.63743539796,
+        "delta_phi": 0.2401789456301991,
+        "gamma": 1.0,
+        "mse": 0.00014108707525572177,
+        "scale": 4.092846167029877,
+        "sse": 0.07054353762786088
+      },
+      "window": {
+        "d_max": 8.0,
+        "d_min": 1.0,
+        "n": 500,
+        "name": "short_training_window"
+      }
+    },
+    {
+      "df_transport_vs_linear": {
+        "captured_fraction_of_linear_to_free_sse_improvement": 0.9988184662234416,
+        "delta_aic_linear_minus_df": 3370.470936942196,
+        "delta_bic_linear_minus_df": 3370.470936942196,
+        "sse_reduction_factor_linear_over_df": 846.3575226032161
+      },
+      "df_transport_vs_strict_eta": {
+        "gamma_gap_strict_eta_minus_D_f_minus_1": 0.0274112777602189,
+        "sse_ratio_df_over_strict_eta": 6.277956690410964e+27
+      },
+      "fixed_D_f_minus_1_transport": {
+        "aic": -7863.025050851484,
+        "beta_eff": 1.0,
+        "bic": -7854.5958346546395,
+        "delta_phi": 0.0,
+        "gamma": 1.7725887222397811,
+        "mse": 1.4682123161366346e-07,
+        "scale": 0.3524261002577509,
+        "sse": 7.341061580683173e-05
+      },
+      "fixed_strict_eta_oracle": {
+        "aic": -39866.44608615489,
+        "beta_eff": 1.0,
+        "bic": -39858.01686995804,
+        "delta_phi": 0.0,
+        "gamma": 1.8,
+        "mse": 2.3386786315031482e-35,
+        "scale": 0.36067376022224085,
+        "sse": 1.1693393157515741e-32
+      },
+      "free_gamma_oracle": {
+        "aic": -39864.44608615489,
+        "beta_eff": 1.0,
+        "bic": -39851.80226185962,
+        "delta_phi": 0.0,
+        "gamma": 1.8,
+        "mse": 2.3386786315031482e-35,
+        "scale": 0.36067376022224085,
+        "sse": 1.1693393157515741e-32
+      },
+      "linear_gamma_1_baseline": {
+        "aic": -4492.5541139092875,
+        "beta_eff": 5.449742854608425,
+        "bic": -4484.124897712443,
+        "delta_phi": -0.07611797633478266,
+        "gamma": 1.0,
+        "mse": 0.0001242632538540932,
+        "scale": 0.7065218675432985,
+        "sse": 0.0621316269270466
+      },
+      "window": {
+        "d_max": 14.0,
+        "d_min": 2.0,
+        "n": 500,
+        "name": "right_holdout_window"
+      }
+    },
+    {
+      "df_transport_vs_linear": {
+        "captured_fraction_of_linear_to_free_sse_improvement": 0.9991846901447378,
+        "delta_aic_linear_minus_df": 3555.971163235882,
+        "delta_bic_linear_minus_df": 3555.971163235882,
+        "sse_reduction_factor_linear_over_df": 1226.5275509007888
+      },
+      "df_transport_vs_strict_eta": {
+        "gamma_gap_strict_eta_minus_D_f_minus_1": 0.0274112777602189,
+        "sse_ratio_df_over_strict_eta": 7.813732438827514e+26
+      },
+      "fixed_D_f_minus_1_transport": {
+        "aic": -7578.104261975292,
+        "beta_eff": 1.0226870372451748,
+        "bic": -7569.675045778447,
+        "delta_phi": 0.019207632804181238,
+        "gamma": 1.7725887222397811,
+        "mse": 2.595780201224172e-07,
+        "scale": 0.3667246285918632,
+        "sse": 0.0001297890100612086
+      },
+      "fixed_strict_eta_oracle": {
+        "aic": -38539.651848293324,
+        "beta_eff": 1.0,
+        "bic": -38531.22263209648,
+        "delta_phi": 0.0,
+        "gamma": 1.8,
+        "mse": 3.322074593091238e-34,
+        "scale": 0.36067376022224085,
+        "sse": 1.661037296545619e-31
+      },
+      "free_gamma_oracle": {
+        "aic": -38537.651848293324,
+        "beta_eff": 1.0,
+        "bic": -38525.00802399806,
+        "delta_phi": 0.0,
+        "gamma": 1.8,
+        "mse": 3.322074593091238e-34,
+        "scale": 0.36067376022224085,
+        "sse": 1.661037296545619e-31
+      },
+      "linear_gamma_1_baseline": {
+        "aic": -4022.1330987394094,
+        "beta_eff": 16.638547389096818,
+        "bic": -4013.703882542565,
+        "delta_phi": 0.1074809570982529,
+        "gamma": 1.0,
+        "mse": 0.000318379593288424,
+        "scale": 3.0335293467568154,
+        "sse": 0.159189796644212
+      },
+      "window": {
+        "d_max": 11.0,
+        "d_min": 0.5,
+        "n": 500,
+        "name": "near_origin_extended_window"
+      }
+    },
+    {
+      "df_transport_vs_linear": {
+        "captured_fraction_of_linear_to_free_sse_improvement": 0.9976168612530002,
+        "delta_aic_linear_minus_df": 3019.6684294464544,
+        "delta_bic_linear_minus_df": 3019.6684294464544,
+        "sse_reduction_factor_linear_over_df": 419.61467885952305
+      },
+      "df_transport_vs_strict_eta": {
+        "gamma_gap_strict_eta_minus_D_f_minus_1": 0.0274112777602189,
+        "sse_ratio_df_over_strict_eta": 3.7376300393514796e+27
+      },
+      "fixed_D_f_minus_1_transport": {
+        "aic": -7027.409865024204,
+        "beta_eff": 1.0000195093313053,
+        "bic": -7018.98064882736,
+        "delta_phi": 2.760408761642448e-05,
+        "gamma": 1.7725887222397811,
+        "mse": 7.808992239649029e-07,
+        "scale": 0.3575183576814739,
+        "sse": 0.00039044961198245144
+      },
+      "fixed_strict_eta_oracle": {
+        "aic": -38771.534486068354,
+        "beta_eff": 1.0,
+        "bic": -38763.10526987151,
+        "delta_phi": 0.0,
+        "gamma": 1.8,
+        "mse": 2.0892897792002912e-34,
+        "scale": 0.3606737602222409,
+        "sse": 1.0446448896001456e-31
+      },
+      "free_gamma_oracle": {
+        "aic": -38769.534486068354,
+        "beta_eff": 1.0,
+        "bic": -38756.89066177309,
+        "delta_phi": 0.0,
+        "gamma": 1.8,
+        "mse": 2.0892897792002912e-34,
+        "scale": 0.3606737602222409,
+        "sse": 1.0446448896001456e-31
+      },
+      "linear_gamma_1_baseline": {
+        "aic": -4007.7414355777496,
+        "beta_eff": 17.35814507121793,
+        "bic": -3999.3122193809054,
+        "delta_phi": 0.03661583786792602,
+        "gamma": 1.0,
+        "mse": 0.0003276767770856835,
+        "scale": 2.9723493776247927,
+        "sse": 0.16383838854284175
+      },
+      "window": {
+        "d_max": 14.0,
+        "d_min": 1.0,
+        "n": 500,
+        "name": "wide_window"
+      }
+    }
+  ]
+}
