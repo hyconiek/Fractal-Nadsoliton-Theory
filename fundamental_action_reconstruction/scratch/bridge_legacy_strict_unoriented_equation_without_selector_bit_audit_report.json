@@ -1,0 +1,210 @@
+{
+  "aut_invariant_output_subset_audit": {
+    "full_aut_invariant_output_names": [
+      "empty_relation",
+      "unoriented_orbit_A1_A5"
+    ],
+    "rows": [
+      {
+        "can_be_output_of_unoriented_bridge_relation": true,
+        "full_aut_invariant": true,
+        "is_singleton_d5": false,
+        "name": "empty_relation",
+        "selected_axes": []
+      },
+      {
+        "can_be_output_of_unoriented_bridge_relation": false,
+        "full_aut_invariant": false,
+        "is_singleton_d5": false,
+        "name": "singleton_A1_contiguous",
+        "selected_axes": [
+          "A1_k1_contiguous"
+        ]
+      },
+      {
+        "can_be_output_of_unoriented_bridge_relation": false,
+        "full_aut_invariant": false,
+        "is_singleton_d5": true,
+        "name": "singleton_A5_d5",
+        "selected_axes": [
+          "A5_k5_d5"
+        ]
+      },
+      {
+        "can_be_output_of_unoriented_bridge_relation": true,
+        "full_aut_invariant": true,
+        "is_singleton_d5": false,
+        "name": "unoriented_orbit_A1_A5",
+        "selected_axes": [
+          "A1_k1_contiguous",
+          "A5_k5_d5"
+        ]
+      }
+    ],
+    "selector_subset_count": 4,
+    "singleton_d5_full_aut_invariant": false,
+    "unoriented_orbit_output_available": true
+  },
+  "bridge_equation_classification": [
+    {
+      "equation_type": "quotient_or_relation_bridge_without_selector_bit",
+      "honest_status": "allowed as a bridge ansatz/classification target, not as strict kernel identity",
+      "schematic_equation": "Bridge_0(K_legacy_ont) -> Orbit_strict({A1_k1_contiguous,A5_k5_d5}) with amplitude/damping/phase maps left explicit",
+      "selects_singleton_d5": false,
+      "well_formed_without_selector_bit": true
+    },
+    {
+      "equation_type": "deterministic_strict_d5_branch_bridge_without_selector_bit",
+      "honest_status": "blocked by full Aut(Z_12) unit-mirror symmetry / QW-2191 selector obstruction",
+      "schematic_equation": "Bridge_d5(K_legacy_ont) -> K_strict_gate on A5_k5_d5",
+      "selects_singleton_d5": true,
+      "well_formed_without_selector_bit": false
+    },
+    {
+      "equation_type": "conditional_oriented_bridge_with_selector_bit",
+      "honest_status": "non-strict/axiom-augmented unless a strict source theorem derives b",
+      "schematic_equation": "Bridge_b(K_legacy_ont, b) -> K_strict_gate on A5 iff b=1, otherwise mirror branch A1",
+      "selects_singleton_d5": "only conditionally when b=1 is supplied",
+      "well_formed_without_selector_bit": false
+    }
+  ],
+  "conditional_oriented_equation_after_bit": {
+    "bit_meaning": "one binary unit-axis record separating {1,11} from {5,7}",
+    "branches": [
+      {
+        "distance_histogram_d1_to_d6": [
+          4,
+          3,
+          2,
+          1,
+          0,
+          0
+        ],
+        "oriented_branch": "A1_k1_contiguous",
+        "selector_bit_b": 0,
+        "status": "conditional branch after supplying an orientation convention",
+        "unit_axis_character": "{5,7}-side / mirror of d5 convention not selected"
+      },
+      {
+        "distance_histogram_d1_to_d6": [
+          0,
+          3,
+          2,
+          1,
+          4,
+          0
+        ],
+        "oriented_branch": "A5_k5_d5",
+        "selector_bit_b": 1,
+        "status": "conditional d5 branch after supplying the missing one-bit selector",
+        "unit_axis_character": "{1,11}-stabilized d5-side selected"
+      }
+    ],
+    "requires_external_or_derived_bit": true
+  },
+  "exact_proof_certificate": {
+    "codomain_action": "Aut units 5 and 7 swap A1_k1_contiguous with A5_k5_d5; units 1 and 11 preserve each branch.",
+    "deterministic_map_obstruction": "An equivariant deterministic map from a fixed input point to the two-point branch set would need a fixed output point; none exists.",
+    "domain_assumption": "Before the one-bit selector is supplied, the legacy-side bridge input is treated as full-Aut invariant for the A1/A5 unit-mirror question.",
+    "fixed_point_fact": "The two-point branch set {A1,A5} has no singleton fixed point under the full unit action.",
+    "relation_map_permission": "An equivariant relation-valued map may output the whole orbit {A1,A5}; this is the maximal honest bridge equation without the bit.",
+    "selector_bit_role": "Supplying b chooses one member of the orbit; b=1 is the conditional d5 convention, not a strict derivation by itself."
+  },
+  "finite_model": {
+    "active_count": 5,
+    "automorphism_units": [
+      1,
+      5,
+      7,
+      11
+    ],
+    "histogram_class_count": 35,
+    "ring": "Z_12",
+    "support_count": 792,
+    "survivor_axes": [
+      {
+        "distance_histogram_d1_to_d6": [
+          4,
+          3,
+          2,
+          1,
+          0,
+          0
+        ],
+        "mode": 1,
+        "name": "A1_k1_contiguous"
+      },
+      {
+        "distance_histogram_d1_to_d6": [
+          0,
+          3,
+          2,
+          1,
+          4,
+          0
+        ],
+        "mode": 5,
+        "name": "A5_k5_d5"
+      }
+    ],
+    "target_eta": "9/5",
+    "target_q_power": "256/243"
+  },
+  "hard_limits": [
+    "No identity K_legacy_ont == K_strict_gate is asserted or used.",
+    "No legacy physical-role or matter-generation claim is transferred onto K_strict_gate.",
+    "No theorem derives amplitude normalization, damping renormalization, or phase/frequency translation maps.",
+    "No theorem derives the required one-bit unit-axis record from strict core.",
+    "Without the bit, singleton d5 branch selection is blocked by full Aut(Z_12) symmetry.",
+    "The quotient/orbit bridge equation is a NOT_A_THEOREM ansatz/classification, not ToE closure.",
+    "No endpoint, arrow orientation, ledger selector, positive lambda action, cycle metric source, anti-Nyquist source, fifth-mode source, future-probability source, future-value source, future-path source, matter-bit source, or legacy-strict bridge theorem is claimed.",
+    "No QW-2191 discharge and no strict-core selector closure are claimed.",
+    "No ToE closure is claimed."
+  ],
+  "interpretation": {
+    "direct_answer": "Without the one-bit selector we can write only an unoriented/quotient bridge equation, not a deterministic equation selecting the strict d5 branch.",
+    "matter_shannon_relation": "Matter/Shannon self-replication may later carry an already supplied bit, but it does not remove the need for a strict source of the bit in the bridge equation.",
+    "what_can_be_done_now": "Formulate Bridge_0 as a relation from K_legacy_ont to the strict A1/A5 orbit while keeping amplitude, damping, phase/frequency, and selector slots explicit.",
+    "what_cannot_be_done_now": "Do not write K_legacy_ont -> K_strict_gate(d5) as a strict theorem; that silently imports the missing bit and would falsely discharge QW-2191."
+  },
+  "kernel_forms_kept_separate": {
+    "identity_asserted": false,
+    "legacy_kernel_form": "K_legacy_ont(d)=alpha_geo*cos(omega_L*d+phi_L)/(1+beta_tors*d)",
+    "reason": "Current repo guardrails require the legacy and strict kernel objects to remain split unless an explicit bridge theorem is supplied.",
+    "strict_kernel_form": "K_strict_gate(d)=cos(omega_S*d+phi_S)/(1+beta*d^eta)"
+  },
+  "missing_bridge_slots": [
+    {
+      "legacy_side": "explicit alpha_geo in K_legacy_ont",
+      "slot": "amplitude_normalization",
+      "strict_side": "no explicit alpha_geo in K_strict_gate",
+      "without_selector_bit_status": "can be written as an unknown normalization map, but not solved here"
+    },
+    {
+      "legacy_side": "linear beta_tors*d damping",
+      "slot": "damping_renormalization",
+      "strict_side": "nonlinear beta*d^eta damping",
+      "without_selector_bit_status": "can be written as an unknown beta_tors -> (beta, eta) map; target replay q^5=256/243 and eta=9/5 remain conditional data in this lane"
+    },
+    {
+      "legacy_side": "legacy omega_L, phi_L layer",
+      "slot": "phase_frequency_translation",
+      "strict_side": "strict omega_S, phi_S layer",
+      "without_selector_bit_status": "can be represented as an unknown phase/frequency map, not derived here"
+    },
+    {
+      "legacy_side": "no strict source currently exported",
+      "slot": "unit_orientation_selector",
+      "strict_side": "A5/d5 branch requires one bit separating {1,11} from {5,7}",
+      "without_selector_bit_status": "cannot be eliminated for singleton d5; only quotient/orbit equation is available"
+    }
+  ],
+  "next_honest_step": "Develop either a strict source theorem for the unit-orientation bit or a formal non-bridge theorem proving that only quotient/orbit legacy->strict equations are available without extra selector data.",
+  "ontology_guardrail": {
+    "allowed_reading": "The bridge ansatz may describe internal projections of the informational nadsoliton route.",
+    "forbidden_reading": "No separate informational layer underneath the nadsoliton is introduced to provide the selector bit.",
+    "preferred_order_preserved": "nadsoliton -> light -> matter -> emergent observer"
+  },
+  "result_kind": "SCRATCH_LEGACY_STRICT_UNORIENTED_EQUATION_WITHOUT_SELECTOR_BIT_AUDIT_PROBE__NOT_A_THEOREM",
+  "status": "quotient-bridge-equation-possible-singleton-d5-bridge-blocked-without-unit-bit"
+}
