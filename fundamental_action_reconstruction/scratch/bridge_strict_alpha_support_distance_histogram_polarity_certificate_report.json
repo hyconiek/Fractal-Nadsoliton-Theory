@@ -1,0 +1,261 @@
+{
+  "candidate_interpretation": {
+    "content": "The support obstruction is exactly a distance-histogram polarity problem: the attractive strict-gate Dirichlet minimizer rewards short internal distances and therefore clusters support.",
+    "supported_by_this_probe": true,
+    "why_this_is_more_proof_like": "It derives the support-only energy as a linear histogram functional and gives the exact gap E(fifth)-E(contiguous)=8*(w_1-w_5), matching the exhaustive scan.",
+    "why_this_is_not_enough": "It does not derive a new support selector; it says the plain attractive Dirichlet polarity must be changed or supplemented before fifth-step resonance support can be selected."
+  },
+  "contiguous_vs_fifth_certificate": {
+    "computed_gap": 3.5668355942511214,
+    "contiguous_histogram": [
+      4,
+      3,
+      2,
+      1,
+      0,
+      0
+    ],
+    "contiguous_indicator_energy": 2.9296169079267154,
+    "contiguous_is_global_indicator_minimum": true,
+    "contiguous_support": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "exact_two_orbit_gap_formula": "E_ind(fifth)-E_ind(contiguous)=8*(w_1-w_5)",
+    "fifth_step_histogram": [
+      0,
+      3,
+      2,
+      1,
+      4,
+      0
+    ],
+    "fifth_step_indicator_energy": 6.496452502177837,
+    "fifth_step_is_global_indicator_maximum": true,
+    "fifth_step_support_canonical": [
+      0,
+      2,
+      4,
+      7,
+      9
+    ],
+    "fifth_step_support_ordered": [
+      0,
+      7,
+      2,
+      9,
+      4
+    ],
+    "formula_gap": 3.5668355942511205,
+    "histogram_difference_fifth_minus_contiguous": [
+      -4,
+      0,
+      0,
+      0,
+      4,
+      0
+    ],
+    "polarity_condition_for_plain_minimization_to_prefer_fifth_over_contiguous": "requires w_5>w_1 for this pairwise comparison; current strict weights have w_1>w_5"
+  },
+  "extremal_histogram_classes": {
+    "contiguous_histogram_support_count": 12,
+    "fifth_step_histogram_support_count": 12,
+    "fifth_step_orbit_supports": [
+      [
+        0,
+        2,
+        4,
+        7,
+        9
+      ],
+      [
+        1,
+        3,
+        5,
+        8,
+        10
+      ],
+      [
+        2,
+        4,
+        6,
+        9,
+        11
+      ],
+      [
+        0,
+        3,
+        5,
+        7,
+        10
+      ],
+      [
+        1,
+        4,
+        6,
+        8,
+        11
+      ],
+      [
+        0,
+        2,
+        5,
+        7,
+        9
+      ],
+      [
+        1,
+        3,
+        6,
+        8,
+        10
+      ],
+      [
+        2,
+        4,
+        7,
+        9,
+        11
+      ],
+      [
+        0,
+        3,
+        5,
+        8,
+        10
+      ],
+      [
+        1,
+        4,
+        6,
+        9,
+        11
+      ],
+      [
+        0,
+        2,
+        5,
+        7,
+        10
+      ],
+      [
+        1,
+        3,
+        6,
+        8,
+        11
+      ]
+    ],
+    "max_indicator_energy": 6.496452502177837,
+    "maximizer_classes": [
+      {
+        "distance_histogram": [
+          0,
+          3,
+          2,
+          1,
+          4,
+          0
+        ],
+        "indicator_energy_from_histogram": 6.496452502177837,
+        "internal_weighted_score": 0.9025419458263289,
+        "sample_gap_signature": [
+          2,
+          2,
+          2,
+          3,
+          3
+        ],
+        "sample_support": [
+          0,
+          2,
+          4,
+          7,
+          9
+        ],
+        "support_count": 12
+      }
+    ],
+    "min_indicator_energy": 2.9296169079267154,
+    "minimizer_classes": [
+      {
+        "distance_histogram": [
+          4,
+          3,
+          2,
+          1,
+          0,
+          0
+        ],
+        "indicator_energy_from_histogram": 2.9296169079267154,
+        "internal_weighted_score": 2.6859597429518893,
+        "sample_gap_signature": [
+          1,
+          1,
+          1,
+          1,
+          8
+        ],
+        "sample_support": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "support_count": 12
+      }
+    ]
+  },
+  "hard_limits": [
+    "No identity K_legacy_ont == K_strict_gate is exported.",
+    "No legacy physical-role transfer is licensed.",
+    "This packet explains a support obstruction for the strict-gate Dirichlet candidate; it does not derive a replacement support/phase-placement theorem.",
+    "The polarity condition is a model-internal support-functional statement, not a strict nadsoliton action theorem.",
+    "No theorem derives branch count m=5, total exponent n=8, denominator 3, or binary-rescale quotient.",
+    "No Aut(Z_12)/N462/QW-2191 selector obstruction is discharged.",
+    "No theorem derives eta=9/5 without the branch model, denominator/quotient convention, convex ledger selector, and support/phase-placement premise.",
+    "No QW-2191 selector discharge and no ToE closure are claimed."
+  ],
+  "linear_histogram_identity": {
+    "distance_weights": {
+      "w_1": 0.4699856726450201,
+      "w_2": 0.1920435516901028,
+      "w_3": 0.09142861427792495,
+      "w_4": 0.0470291687456504,
+      "w_5": 0.02413122336363006,
+      "w_6": 0.011070817321442113
+    },
+    "histogram_class_count": 35,
+    "indicator_energy_formula": "E_ind(S)=5*T-2*sum_d h_d(S)*w_d",
+    "support_count": 792,
+    "support_size": 5,
+    "total_node_weight_T": 1.6603072787660988
+  },
+  "next_honest_step": "Search for a strict source of the required support polarity change, such as a repulsive or band-pass phase action, or keep fifth-step support as an explicit non-strict support premise.",
+  "previous_support_obstruction_replay": {
+    "balanced_fifth_step_is_maximum_of_support_minima": true,
+    "indicator_fifth_step_is_maximum": true,
+    "result_kind": "SCRATCH_STRICT_ALPHA_DIRICHLET_SUPPORT_OBSTRUCTION_CERTIFICATE_PROBE__NOT_A_THEOREM"
+  },
+  "result_kind": "SCRATCH_STRICT_ALPHA_SUPPORT_DISTANCE_HISTOGRAM_POLARITY_CERTIFICATE_PROBE__NOT_A_THEOREM",
+  "source_reports": {
+    "dirichlet_support_obstruction_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_alpha_dirichlet_support_obstruction_certificate_report.json"
+  },
+  "status": "OPEN_STRICT_ALPHA_SUPPORT_DISTANCE_HISTOGRAM_POLARITY_CERTIFICATE_NO_SUPPORT_SELECTOR_THEOREM",
+  "strict_gate_parameters": {
+    "beta": 1.0,
+    "eta": 1.8,
+    "kernel": "K_strict_gate(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+    "note": "strict-side working tuple only; no K_legacy_ont identification is used",
+    "omega": 0.18575,
+    "phi": 0.1625
+  },
+  "target_identity_replay": {
+    "eta_residual_vs_9_5": 0.0,
+    "q_power_product": "256/243"
+  }
+}
