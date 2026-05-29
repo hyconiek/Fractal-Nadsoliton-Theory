@@ -1,0 +1,320 @@
+{
+  "character_meta_orbit_audit": {
+    "character_count": 4,
+    "characters": [
+      {
+        "is_required_chi_11": true,
+        "is_trivial": false,
+        "kernel": [
+          1,
+          11
+        ],
+        "name": "chi_11_required_d5_unit_axis",
+        "nonzero_coset": [
+          5,
+          7
+        ],
+        "values_mod2": {
+          "1": 0,
+          "11": 0,
+          "5": 1,
+          "7": 1
+        }
+      },
+      {
+        "is_required_chi_11": false,
+        "is_trivial": false,
+        "kernel": [
+          1,
+          5
+        ],
+        "name": "chi_5_kernel",
+        "nonzero_coset": [
+          7,
+          11
+        ],
+        "values_mod2": {
+          "1": 0,
+          "11": 1,
+          "5": 0,
+          "7": 1
+        }
+      },
+      {
+        "is_required_chi_11": false,
+        "is_trivial": false,
+        "kernel": [
+          1,
+          7
+        ],
+        "name": "chi_7_kernel",
+        "nonzero_coset": [
+          5,
+          11
+        ],
+        "values_mod2": {
+          "1": 0,
+          "11": 1,
+          "5": 1,
+          "7": 0
+        }
+      },
+      {
+        "is_required_chi_11": false,
+        "is_trivial": true,
+        "kernel": [
+          1,
+          5,
+          7,
+          11
+        ],
+        "name": "trivial_character",
+        "nonzero_coset": [],
+        "values_mod2": {
+          "1": 0,
+          "11": 0,
+          "5": 0,
+          "7": 0
+        }
+      }
+    ],
+    "meta_action_on_required_chi_11": [
+      {
+        "meta_automorphism_index": 0,
+        "preserves_required_chi_11": true,
+        "required_chi_11_maps_to": "chi_11_required_d5_unit_axis",
+        "unit_mapping": {
+          "1": 1,
+          "11": 11,
+          "5": 5,
+          "7": 7
+        }
+      },
+      {
+        "meta_automorphism_index": 1,
+        "preserves_required_chi_11": false,
+        "required_chi_11_maps_to": "chi_7_kernel",
+        "unit_mapping": {
+          "1": 1,
+          "11": 7,
+          "5": 5,
+          "7": 11
+        }
+      },
+      {
+        "meta_automorphism_index": 2,
+        "preserves_required_chi_11": true,
+        "required_chi_11_maps_to": "chi_11_required_d5_unit_axis",
+        "unit_mapping": {
+          "1": 1,
+          "11": 11,
+          "5": 7,
+          "7": 5
+        }
+      },
+      {
+        "meta_automorphism_index": 3,
+        "preserves_required_chi_11": false,
+        "required_chi_11_maps_to": "chi_5_kernel",
+        "unit_mapping": {
+          "1": 1,
+          "11": 5,
+          "5": 7,
+          "7": 11
+        }
+      },
+      {
+        "meta_automorphism_index": 4,
+        "preserves_required_chi_11": false,
+        "required_chi_11_maps_to": "chi_7_kernel",
+        "unit_mapping": {
+          "1": 1,
+          "11": 7,
+          "5": 11,
+          "7": 5
+        }
+      },
+      {
+        "meta_automorphism_index": 5,
+        "preserves_required_chi_11": false,
+        "required_chi_11_maps_to": "chi_5_kernel",
+        "unit_mapping": {
+          "1": 1,
+          "11": 5,
+          "5": 11,
+          "7": 7
+        }
+      }
+    ],
+    "nontrivial_characters_form_single_meta_orbit": true,
+    "required_chi_11_meta_orbit": {
+      "character": "chi_11_required_d5_unit_axis",
+      "is_required_chi_11": true,
+      "meta_orbit": [
+        "chi_11_required_d5_unit_axis",
+        "chi_5_kernel",
+        "chi_7_kernel"
+      ],
+      "meta_orbit_size": 3
+    },
+    "required_chi_11_stabilizer_size_in_meta_group": 2
+  },
+  "exact_proof_certificate": {
+    "dual_action": "The same S3 action permutes the three nontrivial Z2 characters by precomposition.",
+    "meta_group": "Aut(Aut(Z_12))=Aut(V4) has 6 elements and permutes nonidentity units {5,7,11}.",
+    "orbit_fact": "The nontrivial characters chi_5, chi_7, chi_11 form one meta-orbit of size 3.",
+    "required_extra_datum": "Choosing chi_11 requires a unit-label/geometry datum identifying 11, equivalently the {1,11} d5 stabilizer.",
+    "uniqueness_obstruction": "Any selector invariant under abstract V4 meta-automorphisms must choose all three nontrivial characters or none; singleton chi_11 is not meta-invariant."
+  },
+  "finite_model": {
+    "active_count": 5,
+    "automorphism_units": [
+      1,
+      5,
+      7,
+      11
+    ],
+    "histogram_class_count": 35,
+    "ring": "Z_12",
+    "support_count": 792,
+    "survivor_axes": [
+      {
+        "distance_histogram_d1_to_d6": [
+          4,
+          3,
+          2,
+          1,
+          0,
+          0
+        ],
+        "mode": 1,
+        "name": "A1_k1_contiguous"
+      },
+      {
+        "distance_histogram_d1_to_d6": [
+          0,
+          3,
+          2,
+          1,
+          4,
+          0
+        ],
+        "mode": 5,
+        "name": "A5_k5_d5"
+      }
+    ],
+    "target_eta": "9/5",
+    "target_q_power": "256/243"
+  },
+  "hard_limits": [
+    "No identity K_legacy_ont == K_strict_gate is asserted or used.",
+    "No legacy physical-role or matter-generation claim is transferred onto K_strict_gate.",
+    "No theorem derives chi_11 or its unit-label/geometry source from strict nadsoliton geometry.",
+    "No theorem derives the required one-bit unit-axis record from strict core.",
+    "Classifying the bit as a nontrivial character and isolating chi_11's meta-orbit does not discharge QW-2191.",
+    "Without a strict source selecting chi_11 from the nontrivial character orbit, singleton d5 branch selection remains conditional/non-strict.",
+    "No endpoint, arrow orientation, ledger selector, positive lambda action, cycle metric source, anti-Nyquist source, fifth-mode source, future-probability source, future-value source, future-path source, matter-bit source, existence-bit source, recursive-self-information source, character-source, meta-character source, or legacy-strict bridge theorem is claimed.",
+    "No QW-2191 discharge and no strict-core selector closure are claimed.",
+    "No ToE closure is claimed."
+  ],
+  "interpretation": {
+    "conditional_positive_result": "If a unit-label/geometry premise identifies 11 or the {1,11} stabilizer, chi_11 becomes the required d5 character.",
+    "direct_result": "Classifying the bit as a nontrivial character is still not enough; abstract V4 symmetry leaves a three-character ambiguity.",
+    "honest_limit": "This probe sharpens the missing datum; it does not derive the unit-label/geometry premise from strict nadsoliton geometry.",
+    "negative_result": "No meta-invariant rule over the abstract unit group selects singleton chi_11 from the three nontrivial characters."
+  },
+  "meta_automorphism_audit": {
+    "meta_automorphism_count": 6,
+    "rows": [
+      {
+        "unit_mapping": {
+          "1": 1,
+          "11": 11,
+          "5": 5,
+          "7": 7
+        }
+      },
+      {
+        "unit_mapping": {
+          "1": 1,
+          "11": 7,
+          "5": 5,
+          "7": 11
+        }
+      },
+      {
+        "unit_mapping": {
+          "1": 1,
+          "11": 11,
+          "5": 7,
+          "7": 5
+        }
+      },
+      {
+        "unit_mapping": {
+          "1": 1,
+          "11": 5,
+          "5": 7,
+          "7": 11
+        }
+      },
+      {
+        "unit_mapping": {
+          "1": 1,
+          "11": 7,
+          "5": 11,
+          "7": 5
+        }
+      },
+      {
+        "unit_mapping": {
+          "1": 1,
+          "11": 5,
+          "5": 11,
+          "7": 7
+        }
+      }
+    ]
+  },
+  "next_honest_step": "Search for a strict source that names the {1,11} stabilizer inside the nontrivial character meta-orbit; otherwise keep chi_11 selection explicitly unit-label/geometry-augmented.",
+  "ontology_guardrail": {
+    "allowed_reading": "The nadsoliton itself may later be shown to export the unit-label/geometry datum selecting chi_11.",
+    "forbidden_reading": "No separate informational layer underneath the nadsoliton is introduced to choose among nontrivial characters.",
+    "preferred_order_preserved": "nadsoliton -> light -> matter -> emergent observer"
+  },
+  "result_kind": "SCRATCH_STRICT_ALPHA_UNIT_CHARACTER_META_SYMMETRY_UNIQUENESS_OBSTRUCTION_PROBE__NOT_A_THEOREM",
+  "selection_rule_audit": [
+    {
+      "honest_status": "too weak: leaves three-character ambiguity",
+      "meta_invariant": true,
+      "rule": "choose_any_nontrivial_character",
+      "selected_set": [
+        "chi_11_required_d5_unit_axis",
+        "chi_5_kernel",
+        "chi_7_kernel"
+      ],
+      "selects_unique_required_chi_11": false
+    },
+    {
+      "honest_status": "too weak: all nontrivial characters have kernel size 2",
+      "meta_invariant": true,
+      "rule": "choose_character_with_kernel_size_2",
+      "selected_set": [
+        "chi_11_required_d5_unit_axis",
+        "chi_5_kernel",
+        "chi_7_kernel"
+      ],
+      "selects_unique_required_chi_11": false
+    },
+    {
+      "honest_status": "works only after unit-label/geometry premise names 11 or the d5 stabilizer",
+      "meta_invariant": false,
+      "rule": "choose_chi_11_by_kernel_{1,11}",
+      "selected_set": [
+        "chi_11_required_d5_unit_axis"
+      ],
+      "selects_unique_required_chi_11": true
+    }
+  ],
+  "status": "abstract-nontrivial-character-class-does-not-uniquely-select-chi_11"
+}
