@@ -1,0 +1,630 @@
+{
+  "bit_character_table": [
+    {
+      "aut_action": "trivial/fixed",
+      "can_gate_nonempty_state": true,
+      "can_select_A5_over_A1_without_extra_bit": false,
+      "datum": "existence_bit_E",
+      "symmetry_type": "Aut-invariant scalar",
+      "values": [
+        0,
+        1
+      ]
+    },
+    {
+      "aut_action": "changes under unit mirror 5 or 7",
+      "can_gate_nonempty_state": false,
+      "can_select_A5_over_A1_without_extra_bit": true,
+      "datum": "unit_orientation_bit_U",
+      "symmetry_type": "Aut-breaking character",
+      "values": [
+        "{1,11}-d5 side",
+        "{5,7}-mirror side"
+      ]
+    }
+  ],
+  "exact_proof_certificate": {
+    "allowed_equation": "E=0 -> empty; E=1 -> {A1,A5} is Aut-invariant and well formed.",
+    "blocked_equation": "E=1 -> A5/d5 is not Aut-invariant; it requires a second, Aut-breaking unit-orientation bit.",
+    "existence_bit_action": "Aut(Z_12) fixes E=0 and E=1; E is a scalar yes/no datum.",
+    "information_reading": "The nadsoliton may be primordial information, but an information-bearing distinction must still have the right symmetry type to solve a selector problem.",
+    "type_mismatch": "A fixed scalar bit can distinguish empty vs nonempty, but cannot choose a member of a swapped two-point orbit equivariantly.",
+    "unit_branch_action": "Aut units 5 and 7 swap A1_k1_contiguous with A5_k5_d5."
+  },
+  "existence_gate_function_audit": {
+    "canonical_existence_gate_count": 1,
+    "canonical_existence_gate_example": {
+      "E0_output": "nothingness_only",
+      "E1_output": "existence_unoriented_A1_A5_orbit",
+      "classification": "canonical_existence_bit_gates_nothingness_to_unoriented_orbit",
+      "full_aut_invariant": true,
+      "honest_existence_gate": true,
+      "selects_singleton_d5_when_E1": false
+    },
+    "full_aut_invariant_singleton_d5_gate_count": 0,
+    "function_count": 64,
+    "rows": [
+      {
+        "E0_output": "empty_output",
+        "E1_output": "empty_output",
+        "classification": "aut_invariant_but_not_canonical_existence_gate",
+        "full_aut_invariant": true,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "empty_output",
+        "E1_output": "nothingness_only",
+        "classification": "aut_invariant_but_not_canonical_existence_gate",
+        "full_aut_invariant": true,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "empty_output",
+        "E1_output": "singleton_A1_contiguous",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "empty_output",
+        "E1_output": "A1_k1_contiguous+empty_or_nothingness",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "empty_output",
+        "E1_output": "singleton_A5_d5",
+        "classification": "forbidden_singleton_d5_imports_unit_orientation_bit",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": true
+      },
+      {
+        "E0_output": "empty_output",
+        "E1_output": "A5_k5_d5+empty_or_nothingness",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "empty_output",
+        "E1_output": "existence_unoriented_A1_A5_orbit",
+        "classification": "aut_invariant_but_not_canonical_existence_gate",
+        "full_aut_invariant": true,
+        "honest_existence_gate": true,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "empty_output",
+        "E1_output": "nothingness_plus_unoriented_orbit",
+        "classification": "aut_invariant_but_not_canonical_existence_gate",
+        "full_aut_invariant": true,
+        "honest_existence_gate": true,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "nothingness_only",
+        "E1_output": "empty_output",
+        "classification": "aut_invariant_but_not_canonical_existence_gate",
+        "full_aut_invariant": true,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "nothingness_only",
+        "E1_output": "nothingness_only",
+        "classification": "aut_invariant_but_not_canonical_existence_gate",
+        "full_aut_invariant": true,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "nothingness_only",
+        "E1_output": "singleton_A1_contiguous",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "nothingness_only",
+        "E1_output": "A1_k1_contiguous+empty_or_nothingness",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "nothingness_only",
+        "E1_output": "singleton_A5_d5",
+        "classification": "forbidden_singleton_d5_imports_unit_orientation_bit",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": true
+      },
+      {
+        "E0_output": "nothingness_only",
+        "E1_output": "A5_k5_d5+empty_or_nothingness",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "nothingness_only",
+        "E1_output": "existence_unoriented_A1_A5_orbit",
+        "classification": "canonical_existence_bit_gates_nothingness_to_unoriented_orbit",
+        "full_aut_invariant": true,
+        "honest_existence_gate": true,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "nothingness_only",
+        "E1_output": "nothingness_plus_unoriented_orbit",
+        "classification": "aut_invariant_but_not_canonical_existence_gate",
+        "full_aut_invariant": true,
+        "honest_existence_gate": true,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "singleton_A1_contiguous",
+        "E1_output": "empty_output",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "singleton_A1_contiguous",
+        "E1_output": "nothingness_only",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "singleton_A1_contiguous",
+        "E1_output": "singleton_A1_contiguous",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "singleton_A1_contiguous",
+        "E1_output": "A1_k1_contiguous+empty_or_nothingness",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "singleton_A1_contiguous",
+        "E1_output": "singleton_A5_d5",
+        "classification": "forbidden_singleton_d5_imports_unit_orientation_bit",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": true
+      },
+      {
+        "E0_output": "singleton_A1_contiguous",
+        "E1_output": "A5_k5_d5+empty_or_nothingness",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "singleton_A1_contiguous",
+        "E1_output": "existence_unoriented_A1_A5_orbit",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "singleton_A1_contiguous",
+        "E1_output": "nothingness_plus_unoriented_orbit",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "A1_k1_contiguous+empty_or_nothingness",
+        "E1_output": "empty_output",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "A1_k1_contiguous+empty_or_nothingness",
+        "E1_output": "nothingness_only",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "A1_k1_contiguous+empty_or_nothingness",
+        "E1_output": "singleton_A1_contiguous",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "A1_k1_contiguous+empty_or_nothingness",
+        "E1_output": "A1_k1_contiguous+empty_or_nothingness",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "A1_k1_contiguous+empty_or_nothingness",
+        "E1_output": "singleton_A5_d5",
+        "classification": "forbidden_singleton_d5_imports_unit_orientation_bit",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": true
+      },
+      {
+        "E0_output": "A1_k1_contiguous+empty_or_nothingness",
+        "E1_output": "A5_k5_d5+empty_or_nothingness",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "A1_k1_contiguous+empty_or_nothingness",
+        "E1_output": "existence_unoriented_A1_A5_orbit",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "A1_k1_contiguous+empty_or_nothingness",
+        "E1_output": "nothingness_plus_unoriented_orbit",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "singleton_A5_d5",
+        "E1_output": "empty_output",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "singleton_A5_d5",
+        "E1_output": "nothingness_only",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "singleton_A5_d5",
+        "E1_output": "singleton_A1_contiguous",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "singleton_A5_d5",
+        "E1_output": "A1_k1_contiguous+empty_or_nothingness",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "singleton_A5_d5",
+        "E1_output": "singleton_A5_d5",
+        "classification": "forbidden_singleton_d5_imports_unit_orientation_bit",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": true
+      },
+      {
+        "E0_output": "singleton_A5_d5",
+        "E1_output": "A5_k5_d5+empty_or_nothingness",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "singleton_A5_d5",
+        "E1_output": "existence_unoriented_A1_A5_orbit",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "singleton_A5_d5",
+        "E1_output": "nothingness_plus_unoriented_orbit",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "A5_k5_d5+empty_or_nothingness",
+        "E1_output": "empty_output",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "A5_k5_d5+empty_or_nothingness",
+        "E1_output": "nothingness_only",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "A5_k5_d5+empty_or_nothingness",
+        "E1_output": "singleton_A1_contiguous",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "A5_k5_d5+empty_or_nothingness",
+        "E1_output": "A1_k1_contiguous+empty_or_nothingness",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "A5_k5_d5+empty_or_nothingness",
+        "E1_output": "singleton_A5_d5",
+        "classification": "forbidden_singleton_d5_imports_unit_orientation_bit",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": true
+      },
+      {
+        "E0_output": "A5_k5_d5+empty_or_nothingness",
+        "E1_output": "A5_k5_d5+empty_or_nothingness",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "A5_k5_d5+empty_or_nothingness",
+        "E1_output": "existence_unoriented_A1_A5_orbit",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "A5_k5_d5+empty_or_nothingness",
+        "E1_output": "nothingness_plus_unoriented_orbit",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "existence_unoriented_A1_A5_orbit",
+        "E1_output": "empty_output",
+        "classification": "aut_invariant_but_not_canonical_existence_gate",
+        "full_aut_invariant": true,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "existence_unoriented_A1_A5_orbit",
+        "E1_output": "nothingness_only",
+        "classification": "aut_invariant_but_not_canonical_existence_gate",
+        "full_aut_invariant": true,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "existence_unoriented_A1_A5_orbit",
+        "E1_output": "singleton_A1_contiguous",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "existence_unoriented_A1_A5_orbit",
+        "E1_output": "A1_k1_contiguous+empty_or_nothingness",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "existence_unoriented_A1_A5_orbit",
+        "E1_output": "singleton_A5_d5",
+        "classification": "forbidden_singleton_d5_imports_unit_orientation_bit",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": true
+      },
+      {
+        "E0_output": "existence_unoriented_A1_A5_orbit",
+        "E1_output": "A5_k5_d5+empty_or_nothingness",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "existence_unoriented_A1_A5_orbit",
+        "E1_output": "existence_unoriented_A1_A5_orbit",
+        "classification": "aut_invariant_but_not_canonical_existence_gate",
+        "full_aut_invariant": true,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "existence_unoriented_A1_A5_orbit",
+        "E1_output": "nothingness_plus_unoriented_orbit",
+        "classification": "aut_invariant_but_not_canonical_existence_gate",
+        "full_aut_invariant": true,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "nothingness_plus_unoriented_orbit",
+        "E1_output": "empty_output",
+        "classification": "aut_invariant_but_not_canonical_existence_gate",
+        "full_aut_invariant": true,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "nothingness_plus_unoriented_orbit",
+        "E1_output": "nothingness_only",
+        "classification": "aut_invariant_but_not_canonical_existence_gate",
+        "full_aut_invariant": true,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "nothingness_plus_unoriented_orbit",
+        "E1_output": "singleton_A1_contiguous",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "nothingness_plus_unoriented_orbit",
+        "E1_output": "A1_k1_contiguous+empty_or_nothingness",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "nothingness_plus_unoriented_orbit",
+        "E1_output": "singleton_A5_d5",
+        "classification": "forbidden_singleton_d5_imports_unit_orientation_bit",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": true
+      },
+      {
+        "E0_output": "nothingness_plus_unoriented_orbit",
+        "E1_output": "A5_k5_d5+empty_or_nothingness",
+        "classification": "not_full_aut_invariant",
+        "full_aut_invariant": false,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "nothingness_plus_unoriented_orbit",
+        "E1_output": "existence_unoriented_A1_A5_orbit",
+        "classification": "aut_invariant_but_not_canonical_existence_gate",
+        "full_aut_invariant": true,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      },
+      {
+        "E0_output": "nothingness_plus_unoriented_orbit",
+        "E1_output": "nothingness_plus_unoriented_orbit",
+        "classification": "aut_invariant_but_not_canonical_existence_gate",
+        "full_aut_invariant": true,
+        "honest_existence_gate": false,
+        "selects_singleton_d5_when_E1": false
+      }
+    ]
+  },
+  "finite_model": {
+    "active_count": 5,
+    "automorphism_units": [
+      1,
+      5,
+      7,
+      11
+    ],
+    "existence_states": [
+      0,
+      1
+    ],
+    "histogram_class_count": 35,
+    "ring": "Z_12",
+    "support_count": 792,
+    "survivor_axes": [
+      {
+        "distance_histogram_d1_to_d6": [
+          4,
+          3,
+          2,
+          1,
+          0,
+          0
+        ],
+        "mode": 1,
+        "name": "A1_k1_contiguous"
+      },
+      {
+        "distance_histogram_d1_to_d6": [
+          0,
+          3,
+          2,
+          1,
+          4,
+          0
+        ],
+        "mode": 5,
+        "name": "A5_k5_d5"
+      }
+    ],
+    "target_eta": "9/5",
+    "target_q_power": "256/243"
+  },
+  "hard_limits": [
+    "No identity K_legacy_ont == K_strict_gate is asserted or used.",
+    "No legacy physical-role or matter-generation claim is transferred onto K_strict_gate.",
+    "No theorem derives the existence bit from strict nadsoliton geometry.",
+    "No theorem derives the required one-bit unit-axis record from strict core.",
+    "The existence bit does not discharge QW-2191 because it is Aut-invariant rather than Aut-breaking.",
+    "Without an Aut-breaking unit-orientation bit, singleton d5 branch selection remains blocked.",
+    "No endpoint, arrow orientation, ledger selector, positive lambda action, cycle metric source, anti-Nyquist source, fifth-mode source, future-probability source, future-value source, future-path source, matter-bit source, existence-bit source, or legacy-strict bridge theorem is claimed.",
+    "No QW-2191 discharge and no strict-core selector closure are claimed.",
+    "No ToE closure is claimed."
+  ],
+  "interpretation": {
+    "direct_correction": "The existence/nothingness bit is a plausible first scalar distinction, but it is not the same symmetry type as the missing unit-orientation bit.",
+    "information_principle": "Being information is not enough; the information must transform as the selector obstruction requires.",
+    "what_it_can_do": "It can support an equation E=0 -> empty and E=1 -> nonempty strict survivor orbit {A1,A5}.",
+    "what_it_cannot_do": "It cannot by itself support E=1 -> A5/d5 without silently adding the unit-orientation bit."
+  },
+  "next_honest_step": "If pursuing the origin intuition, search for a strict theorem that turns an existence/nonexistence distinction into an Aut-breaking unit character; otherwise keep them as two different bits.",
+  "ontology_guardrail": {
+    "allowed_reading": "The nadsoliton itself may be read as primordial information whose internal state includes an existence/nonexistence distinction.",
+    "forbidden_reading": "No separate informational layer underneath the nadsoliton is introduced to produce the existence bit or unit-orientation bit.",
+    "preferred_order_preserved": "nadsoliton -> light -> matter -> emergent observer"
+  },
+  "result_kind": "SCRATCH_STRICT_ALPHA_EXISTENCE_BIT_VS_UNIT_ORIENTATION_SELECTOR_AUDIT_PROBE__NOT_A_THEOREM",
+  "status": "existence-bit-can-gate-unoriented-orbit-not-select-d5-unit-branch"
+}
