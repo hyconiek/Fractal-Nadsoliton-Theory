@@ -1,0 +1,207 @@
+{
+  "aggregate_summary": {
+    "delta": 0.0274112777602189,
+    "domain_warning_replayed": true,
+    "exact_rg_matches_strict_to_numeric_precision": true,
+    "max_abs_delta_ell_all_windows": 0.07233993348722541,
+    "max_exact_rg_abs_residual_vs_strict": 2.220446049250313e-16,
+    "max_exact_rg_sse_vs_strict": 4.923765821229816e-31,
+    "max_first_order_relative_factor_error": 0.002493704511397299,
+    "max_second_order_relative_factor_error": 5.976724314415982e-05,
+    "previous_first_order_epsilon_match_replayed": true,
+    "second_order_improves_first_order_factor_error": true
+  },
+  "constants": {
+    "D_f": 2.772588722239781,
+    "delta_14_over_5_minus_4log2": 0.0274112777602189,
+    "gamma_F_D_f_minus_1": 1.7725887222397811,
+    "strict_eta_9_over_5": 1.8
+  },
+  "hard_limits": [
+    "No identity K_legacy_ont == K_strict_gate is exported.",
+    "No derivation of the marginal RG law dB/dlog(d)=delta*B is exported.",
+    "No derivation of delta=14/5-4log(2) from strict-side dynamics is exported.",
+    "No legacy physical-role formula is transferred to the strict kernel.",
+    "No QW-2191 selector discharge and no ToE closure are claimed."
+  ],
+  "honest_interpretation": [
+    "An exact marginal flow dB/dlog(d)=delta*B converts the D_f-1 denominator into the strict 9/5 denominator with zero symbolic residual.",
+    "The previous first-order log correction is the small-delta Euler/Taylor shadow of this flow; second-order terms reduce the factor error further.",
+    "This is a sharper bridge target, not a bridge theorem: the missing ingredient is a derivation of this marginal RG flow and of delta=14/5-4log(2) from strict-side/nadsoliton dynamics."
+  ],
+  "next_honest_step": "Search for or construct a strict-side transport/RG balance whose linearized beta function is dB/dlog(d)=(14/5-4log(2))*B; absent that, keep this as an exact reparameterization target only.",
+  "result_kind": "SCRATCH_DF_MARGINAL_RG_FLOW_TRACE__NOT_A_THEOREM",
+  "source_reports": {
+    "analytic_domain_audit": "fundamental_action_reconstruction/scratch/bridge_kernel_analytic_domain_audit_report.json",
+    "log_correction_trace": "fundamental_action_reconstruction/scratch/bridge_df_log_correction_report.json"
+  },
+  "status": "OPEN_MARGINAL_RG_FLOW_TRACE_NO_BRIDGE_THEOREM",
+  "symbolic_rg_flow": {
+    "delta": "14/5 - 4*log(2)",
+    "denominator_after_flow": "beta0*exp(ell*(-1 + 4*log(2)))*exp(ell*(14/5 - 4*log(2))) + 1",
+    "denominator_residual": "0",
+    "first_order_running_beta_factor": "0",
+    "gamma_F": "-1 + 4*log(2)",
+    "gamma_F_plus_delta": "9/5",
+    "rg_ode_residual": "0",
+    "running_beta_solution": "beta0*exp(ell*(14/5 - 4*log(2)))",
+    "strict_denominator": "beta0*exp(9*ell/5) + 1"
+  },
+  "window_rows": [
+    {
+      "delta_ell_bounds": {
+        "max": 0.065729373362592,
+        "max_abs": 0.065729373362592,
+        "min": 0.0
+      },
+      "ell_bounds": {
+        "ell_max": 2.3978952727983707,
+        "ell_min": 0.0
+      },
+      "exact_rg_residual_vs_strict": {
+        "max_abs_residual": 1.6653345369377348e-16,
+        "scale": 0.36067376022224096,
+        "sse": 4.923765821229816e-31
+      },
+      "expected_projected_scale_1_over_alpha_geo": 0.36067376022224085,
+      "first_order_factor_error": {
+        "max_abs_exp_minus_linear": 0.0022082923132258347,
+        "max_rel_linear_vs_exp": 0.0020678101205732213
+      },
+      "second_order_factor_error": {
+        "max_abs_exp_minus_second_order": 4.8117051906215735e-05,
+        "max_rel_second_order_vs_exp": 4.505604910542971e-05
+      },
+      "window": {
+        "d_max": 11.0,
+        "d_min": 1.0,
+        "n": 500,
+        "name": "baseline"
+      }
+    },
+    {
+      "delta_ell_bounds": {
+        "max": 0.057000149685123784,
+        "max_abs": 0.057000149685123784,
+        "min": 0.0
+      },
+      "ell_bounds": {
+        "ell_max": 2.0794415416798357,
+        "ell_min": 0.0
+      },
+      "exact_rg_residual_vs_strict": {
+        "max_abs_residual": 2.220446049250313e-16,
+        "scale": 0.3606737602222409,
+        "sse": 3.3398887164769523e-31
+      },
+      "expected_projected_scale_1_over_alpha_geo": 0.36067376022224085,
+      "first_order_factor_error": {
+        "max_abs_exp_minus_linear": 0.0016558191754141305,
+        "max_rel_linear_vs_exp": 0.0015640767389205612
+      },
+      "second_order_factor_error": {
+        "max_abs_exp_minus_second_order": 3.13106433509347e-05,
+        "max_rel_second_order_vs_exp": 2.9575843590312623e-05
+      },
+      "window": {
+        "d_max": 8.0,
+        "d_min": 1.0,
+        "n": 500,
+        "name": "short"
+      }
+    },
+    {
+      "delta_ell_bounds": {
+        "max": 0.07233993348722541,
+        "max_abs": 0.07233993348722541,
+        "min": 0.01900004989504126
+      },
+      "ell_bounds": {
+        "ell_max": 2.6390573296152584,
+        "ell_min": 0.6931471805599453
+      },
+      "exact_rg_residual_vs_strict": {
+        "max_abs_residual": 2.7755575615628914e-17,
+        "scale": 0.36067376022224085,
+        "sse": 1.630530436444602e-32
+      },
+      "expected_projected_scale_1_over_alpha_geo": 0.36067376022224085,
+      "first_order_factor_error": {
+        "max_abs_exp_minus_linear": 0.002680784013076032,
+        "max_rel_linear_vs_exp": 0.002493704511397299
+      },
+      "second_order_factor_error": {
+        "max_abs_exp_minus_second_order": 6.425102460783094e-05,
+        "max_rel_second_order_vs_exp": 5.976724314415982e-05
+      },
+      "window": {
+        "d_max": 14.0,
+        "d_min": 2.0,
+        "n": 500,
+        "name": "right_holdout"
+      }
+    },
+    {
+      "delta_ell_bounds": {
+        "max": 0.065729373362592,
+        "max_abs": 0.065729373362592,
+        "min": -0.01900004989504126
+      },
+      "ell_bounds": {
+        "ell_max": 2.3978952727983707,
+        "ell_min": -0.6931471805599453
+      },
+      "exact_rg_residual_vs_strict": {
+        "max_abs_residual": 2.220446049250313e-16,
+        "scale": 0.3606737602222409,
+        "sse": 3.333608184125539e-31
+      },
+      "expected_projected_scale_1_over_alpha_geo": 0.36067376022224085,
+      "first_order_factor_error": {
+        "max_abs_exp_minus_linear": 0.0022082923132258347,
+        "max_rel_linear_vs_exp": 0.0020678101205732213
+      },
+      "second_order_factor_error": {
+        "max_abs_exp_minus_second_order": 4.8117051906215735e-05,
+        "max_rel_second_order_vs_exp": 4.505604910542971e-05
+      },
+      "window": {
+        "d_max": 11.0,
+        "d_min": 0.5,
+        "n": 500,
+        "name": "near_origin"
+      }
+    },
+    {
+      "delta_ell_bounds": {
+        "max": 0.07233993348722541,
+        "max_abs": 0.07233993348722541,
+        "min": 0.0
+      },
+      "ell_bounds": {
+        "ell_max": 2.6390573296152584,
+        "ell_min": 0.0
+      },
+      "exact_rg_residual_vs_strict": {
+        "max_abs_residual": 1.1102230246251565e-16,
+        "scale": 0.3606737602222409,
+        "sse": 1.2724594288207787e-31
+      },
+      "expected_projected_scale_1_over_alpha_geo": 0.36067376022224085,
+      "first_order_factor_error": {
+        "max_abs_exp_minus_linear": 0.002680784013076032,
+        "max_rel_linear_vs_exp": 0.002493704511397299
+      },
+      "second_order_factor_error": {
+        "max_abs_exp_minus_second_order": 6.425102460783094e-05,
+        "max_rel_second_order_vs_exp": 5.976724314415982e-05
+      },
+      "window": {
+        "d_max": 14.0,
+        "d_min": 1.0,
+        "n": 500,
+        "name": "wide"
+      }
+    }
+  ]
+}

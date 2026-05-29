@@ -1,0 +1,104 @@
+{
+  "claim_audit": {
+    "alpha_geo_limit_claim": {
+      "alpha_geo": 2.772588722239781,
+      "damping_only_ratio_limit": "1",
+      "numeric_full_kernel_limit_with_repo_parameters": 2.4331873129223913,
+      "numeric_limit_equals_alpha_geo": false,
+      "phase_factor_ratio_cos_phi_legacy_over_cos_phi_strict": 0.8775868174767691,
+      "symbolic_full_kernel_limit_Klegacy_over_Kstrict_d_to_0_plus": "alpha*cos(phi_l)/cos(phi_s)",
+      "verdict": "The claimed alpha_geo near-field limit is true only for amplitude/damping-normalized or phase-aligned comparison; the full kernels give alpha_geo*cos(phi_legacy)/cos(phi_strict), not alpha_geo."
+    },
+    "eta_1p8_is_physical_law": {
+      "reason": "The evidence supports an operational strict parameter, but no theorem derives eta=1.8 from strict-side nadsoliton dynamics; P1620 is posterior evidence and the D_f RG flow remains a target.",
+      "verdict": "not_discharged"
+    },
+    "legacy_near_field_strict_whole_ring_generalization": {
+      "reason": "Scratch D_f probes give a denominator/RG candidate, but K1/F2 still forbid silent identification or role transfer.",
+      "verdict": "plausible_bridge_story_but_not_exported"
+    },
+    "strict_is_not_single_point_overfit": {
+      "reason": "P2086 residual zeros, P2260 finite-sample zero hit rates, P2270 Lipschitz/monotonic box bounds, and P1620 posterior concentration jointly argue against a single calibration-point artifact.",
+      "verdict": "supported_operationally_not_theorem_level"
+    }
+  },
+  "constants": {
+    "D_f_minus_1": 1.7725887222397811,
+    "alpha_geo": 2.772588722239781,
+    "strict_eta": 1.8
+  },
+  "evidence_bundle": {
+    "DF_marginal_rg_bridge_prep_replay": {
+      "denominator_residual": "0",
+      "max_exact_rg_abs_residual_vs_strict": 2.220446049250313e-16,
+      "no_bridge_theorem_status": "OPEN_MARGINAL_RG_FLOW_TRACE_NO_BRIDGE_THEOREM",
+      "result_kind": "SCRATCH_DF_MARGINAL_RG_FLOW_TRACE__NOT_A_THEOREM"
+    },
+    "P1620_posterior_evidence": {
+      "eta_ci_contains_D_f_minus_1": true,
+      "eta_ci_contains_strict_eta_1p8": true,
+      "eta_posterior": {
+        "mean": 1.8009,
+        "q05": 1.6841,
+        "q95": 1.9211
+      },
+      "legacy_bridge_used": false,
+      "status": "PASS_P1620_STRICT_MEASURED_COV_POSTERIOR",
+      "strict_only": true
+    },
+    "P2086_EOM_residual_evidence": {
+      "all_numeric_probe_residual_zero": true,
+      "all_symbolic_residual_zero": true,
+      "c3_theorem_proven": false,
+      "global_status": "OPEN_OBSTRUCTION_WITH_TRACE",
+      "result_kind": "PASS_STRICT_FULL_LTOTAL_EOM_TERMWISE_EXECUTION_AUDIT_WITH_TRACE__C3_STILL_OPEN"
+    },
+    "P2260_stochastic_boundary_evidence": {
+      "draws_per_horizon": 500,
+      "global_first_hit_rate": 0.0,
+      "global_second_hit_rate": 0.0,
+      "horizon_count": 4,
+      "result_kind": "PASS_STRICT_NU_BRANCH_GROUP_POLICY_STOCHASTIC_BOUNDARY_HIT_VALIDATION_PROBE",
+      "total_draws": 2000
+    },
+    "P2270_lipschitz_evidence": {
+      "admissible_box": {
+        "kappa_scale_max": 1.8,
+        "kappa_scale_min": 1.0,
+        "rho_max": 0.95,
+        "rho_min": 0.55
+      },
+      "l1_lipschitz_over_box": 0.3630680926850899,
+      "monotone_in_kappa_over_box": true,
+      "monotone_in_rho_over_box": true,
+      "result_kind": "PASS_STRICT_NU_BRANCH_GROUP_POLICY_SYMBOLIC_DERIVATIVE_BOUND_PROBE"
+    }
+  },
+  "hard_limits": [
+    "No identity K_legacy_ont == K_strict_gate is exported.",
+    "No theorem deriving eta=1.8 from nadsoliton/fractal dynamics is exported.",
+    "No theorem deriving the D_f marginal RG law is exported.",
+    "No legacy physical-role formula is transferred to the strict kernel.",
+    "No QW-2191 selector discharge and no ToE closure are claimed."
+  ],
+  "honest_interpretation": [
+    "The cited artifacts support strict-kernel operational robustness beyond a single fitting point.",
+    "They do not by themselves prove that eta=1.8 is a physical fractal law or that legacy and strict kernels are bridged.",
+    "The alpha_geo near-field limit must be stated with normalization/phase caveats: the full-kernel d->0 ratio is not alpha_geo for the repo parameter values."
+  ],
+  "next_honest_step": "Use the robustness evidence only as operational support; the next proof task remains deriving the D_f marginal RG beta law and a phase-normalized near-field map, not declaring eta=1.8 a physical law by posterior robustness alone.",
+  "result_kind": "SCRATCH_STRICT_KERNEL_ROBUSTNESS_OPINION_AUDIT__NOT_A_THEOREM",
+  "source_reports": {
+    "DF_MARGINAL_RG": "fundamental_action_reconstruction/scratch/bridge_df_marginal_rg_flow_report.json",
+    "P1620_POSTERIOR": "fundamental_action_reconstruction/generated/p1620_s570_strict_measured_covariance_posterior_summary.json",
+    "P2086_EOM": "fundamental_action_reconstruction/generated/p2086_s1036_strict_full_ltotal_eom_termwise_execution_audit.json",
+    "P2260_STOCHASTIC": "fundamental_action_reconstruction/generated/p2260_s1210_strict_nu_branch_group_policy_stochastic_boundary_hit_validation_probe.json",
+    "P2270_LIPSCHITZ": "fundamental_action_reconstruction/generated/p2270_s1220_strict_nu_branch_group_policy_symbolic_derivative_bound_probe.json"
+  },
+  "status": "OPEN_ROBUSTNESS_OPINION_AUDIT_NO_BRIDGE_THEOREM",
+  "support_score": {
+    "near_field_alpha_geo_full_kernel_limit_disconfirmed": true,
+    "operational_robustness_supported": true,
+    "physical_law_or_bridge_discharged": false
+  }
+}

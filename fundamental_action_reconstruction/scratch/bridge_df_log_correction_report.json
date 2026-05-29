@@ -1,0 +1,225 @@
+{
+  "aggregate_summary": {
+    "all_first_order_factor_errors_below_0p003": true,
+    "all_fit_epsilons_match_delta_strict_to_1e_12": true,
+    "delta_strict": 0.0274112777602189,
+    "domain_rationalization_warning_replayed": true,
+    "max_abs_epsilon_fit_minus_delta_strict": 0.0,
+    "max_relative_error_first_order_factor_all_windows": 0.002493704511397299,
+    "median_sse_reduction_factor_base_over_log_corrected": 963.3656604628376,
+    "min_sse_reduction_factor_base_over_log_corrected": 536.9476827560628,
+    "placement_denominator_win_replayed": true
+  },
+  "constants": {
+    "D_f": 2.772588722239781,
+    "delta_strict_eta_minus_gamma_F": 0.0274112777602189,
+    "gamma_F_D_f_minus_1": 1.7725887222397811,
+    "strict_eta_9_over_5": 1.8
+  },
+  "hard_limits": [
+    "No identity K_legacy_ont == K_strict_gate is exported.",
+    "No theorem deriving delta_strict = 14/5 - 4 log(2) from nadsoliton dynamics is exported.",
+    "No legacy physical-role formula is transferred to the strict kernel.",
+    "No QW-2191 selector discharge and no ToE closure are claimed."
+  ],
+  "honest_interpretation": [
+    "The strict eta=9/5 exponent differs from D_f-1 by the small marginal log-correction delta=14/5-4 log(2).",
+    "A first-order denominator correction 1+epsilon log(d) recovers the strict target with epsilon equal to delta_strict in all tested windows and substantially reduces the fixed-D_f-1 residual.",
+    "This does not prove the correction exists physically; it only turns the remaining bridge problem into a precise marginal-renormalization obligation."
+  ],
+  "next_honest_step": "Derive or falsify the marginal log-renormalization term epsilon*log(d) from a concrete transport/RG balance equation; until then, treat eta=9/5 as D_f-1 plus an observed small correction, not as an explained theorem.",
+  "result_kind": "SCRATCH_DF_LOG_CORRECTION_RENORMALIZATION_TRACE__NOT_A_THEOREM",
+  "source_reports": {
+    "analytic_domain_audit": "fundamental_action_reconstruction/scratch/bridge_kernel_analytic_domain_audit_report.json",
+    "placement_discriminator": "fundamental_action_reconstruction/scratch/bridge_df_transport_placement_discriminator_report.json"
+  },
+  "status": "OPEN_LOG_CORRECTION_TRACE_NO_BRIDGE_THEOREM",
+  "symbolic_log_correction": {
+    "delta_strict_exact_expression": "14/5 - 4*log(2)",
+    "exact_factorization": "d**(D_f - 1)*exp(eps*log(d))",
+    "first_order_log_corrected_power": "d**(D_f - 1)*(eps*log(d) + 1)",
+    "second_order_remainder_factor": "eps**2*log(d)**2/2"
+  },
+  "window_rows": [
+    {
+      "base_D_f_minus_1_denominator_fit": {
+        "beta_eff": 1.0000243176417936,
+        "delta_phi": 3.911342468231274e-05,
+        "mse": 9.335297959949096e-07,
+        "scale": 0.35754171990172423,
+        "sse": 0.00046676489799745476
+      },
+      "improvement": {
+        "epsilon_close_to_delta_strict_abs": 0.0,
+        "sse_reduction_factor_base_over_log_corrected": 3213.9100075536608
+      },
+      "linear_log_corrected_fit": {
+        "beta_eff": 1.0,
+        "delta_phi": 0.0,
+        "epsilon": 0.0274112777602189,
+        "epsilon_minus_delta_strict": 0.0,
+        "mse": 2.904654435876649e-10,
+        "scale": 0.3606420385518029,
+        "sse": 1.4523272179383246e-07
+      },
+      "log_correction_bounds": {
+        "delta_strict": 0.0274112777602189,
+        "exact_factor_max": 1.067937665675818,
+        "exact_factor_min": 1.0,
+        "linear_factor_max": 1.065729373362592,
+        "linear_factor_min": 1.0,
+        "max_relative_error_linear_vs_exact_factor": 0.0020678101205732213
+      },
+      "window": {
+        "d_max": 11.0,
+        "d_min": 1.0,
+        "n": 500,
+        "name": "baseline"
+      }
+    },
+    {
+      "base_D_f_minus_1_denominator_fit": {
+        "beta_eff": 1.0179501649937368,
+        "delta_phi": 0.02590973619344648,
+        "mse": 1.9715645400161715e-07,
+        "scale": 0.366842287146934,
+        "sse": 9.857822700080858e-05
+      },
+      "improvement": {
+        "epsilon_close_to_delta_strict_abs": 0.0,
+        "sse_reduction_factor_base_over_log_corrected": 536.9476827560628
+      },
+      "linear_log_corrected_fit": {
+        "beta_eff": 1.0,
+        "delta_phi": 0.0,
+        "epsilon": 0.0274112777602189,
+        "epsilon_minus_delta_strict": 0.0,
+        "mse": 3.671800071650295e-10,
+        "scale": 0.36064239446967883,
+        "sse": 1.8359000358251475e-07
+      },
+      "log_correction_bounds": {
+        "delta_strict": 0.0274112777602189,
+        "exact_factor_max": 1.058655968860538,
+        "exact_factor_min": 1.0,
+        "linear_factor_max": 1.0570001496851238,
+        "linear_factor_min": 1.0,
+        "max_relative_error_linear_vs_exact_factor": 0.0015640767389205612
+      },
+      "window": {
+        "d_max": 8.0,
+        "d_min": 1.0,
+        "n": 500,
+        "name": "short"
+      }
+    },
+    {
+      "base_D_f_minus_1_denominator_fit": {
+        "beta_eff": 1.0,
+        "delta_phi": 0.0,
+        "mse": 1.4682123161366346e-07,
+        "scale": 0.35242610025775095,
+        "sse": 7.341061580683173e-05
+      },
+      "improvement": {
+        "epsilon_close_to_delta_strict_abs": 0.0,
+        "sse_reduction_factor_base_over_log_corrected": 963.3656604628376
+      },
+      "linear_log_corrected_fit": {
+        "beta_eff": 1.0,
+        "delta_phi": 0.0,
+        "epsilon": 0.0274112777602189,
+        "epsilon_minus_delta_strict": 0.0,
+        "mse": 1.524044686657452e-10,
+        "scale": 0.36055317174068446,
+        "sse": 7.62022343328726e-08
+      },
+      "log_correction_bounds": {
+        "delta_strict": 0.0274112777602189,
+        "exact_factor_max": 1.0750207175003015,
+        "exact_factor_min": 1.0191816994695198,
+        "linear_factor_max": 1.0723399334872254,
+        "linear_factor_min": 1.0190000498950413,
+        "max_relative_error_linear_vs_exact_factor": 0.002493704511397299
+      },
+      "window": {
+        "d_max": 14.0,
+        "d_min": 2.0,
+        "n": 500,
+        "name": "right_holdout"
+      }
+    },
+    {
+      "base_D_f_minus_1_denominator_fit": {
+        "beta_eff": 1.0226869880919895,
+        "delta_phi": 0.01920758355869405,
+        "mse": 2.595781492279003e-07,
+        "scale": 0.3667246127843617,
+        "sse": 0.00012978907461395016
+      },
+      "improvement": {
+        "epsilon_close_to_delta_strict_abs": 0.0,
+        "sse_reduction_factor_base_over_log_corrected": 826.3179747404233
+      },
+      "linear_log_corrected_fit": {
+        "beta_eff": 1.0,
+        "delta_phi": 0.0,
+        "epsilon": 0.0274112777602189,
+        "epsilon_minus_delta_strict": 0.0,
+        "mse": 3.141383307188051e-10,
+        "scale": 0.36065686901058375,
+        "sse": 1.5706916535940254e-07
+      },
+      "log_correction_bounds": {
+        "delta_strict": 0.0274112777602189,
+        "exact_factor_max": 1.067937665675818,
+        "exact_factor_min": 0.9811793132868225,
+        "linear_factor_max": 1.065729373362592,
+        "linear_factor_min": 0.9809999501049588,
+        "max_relative_error_linear_vs_exact_factor": 0.0020678101205732213
+      },
+      "window": {
+        "d_max": 11.0,
+        "d_min": 0.5,
+        "n": 500,
+        "name": "near_origin"
+      }
+    },
+    {
+      "base_D_f_minus_1_denominator_fit": {
+        "beta_eff": 1.000019509331337,
+        "delta_phi": 2.7604087764655246e-05,
+        "mse": 7.808992239601937e-07,
+        "scale": 0.3575183576815087,
+        "sse": 0.0003904496119800969
+      },
+      "improvement": {
+        "epsilon_close_to_delta_strict_abs": 0.0,
+        "sse_reduction_factor_base_over_log_corrected": 2627.083512958492
+      },
+      "linear_log_corrected_fit": {
+        "beta_eff": 1.0,
+        "delta_phi": 0.0,
+        "epsilon": 0.0274112777602189,
+        "epsilon_minus_delta_strict": 0.0,
+        "mse": 2.972494860206342e-10,
+        "scale": 0.3606409733343198,
+        "sse": 1.486247430103171e-07
+      },
+      "log_correction_bounds": {
+        "delta_strict": 0.0274112777602189,
+        "exact_factor_max": 1.0750207175003015,
+        "exact_factor_min": 1.0,
+        "linear_factor_max": 1.0723399334872254,
+        "linear_factor_min": 1.0,
+        "max_relative_error_linear_vs_exact_factor": 0.002493704511397299
+      },
+      "window": {
+        "d_max": 14.0,
+        "d_min": 1.0,
+        "n": 500,
+        "name": "wide"
+      }
+    }
+  ]
+}

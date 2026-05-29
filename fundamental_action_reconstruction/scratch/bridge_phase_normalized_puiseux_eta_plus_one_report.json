@@ -1,0 +1,120 @@
+{
+  "coefficient_match": {
+    "first_unmatched_expected_order": 3.0,
+    "legacy_expansion": {
+      "L1": -0.4634498410585544,
+      "L2": -0.3037906391234569,
+      "L_of_x_to_needed_order": "1 + L1*x + L2*x**2 + O(x**3)"
+    },
+    "matched_coefficient_residuals": {
+      "d^(eta+1)_residual": -2.0816681711721685e-17,
+      "d^1_residual": 0.0,
+      "d^2_residual": 0.0,
+      "d^eta_residual": 0.0
+    },
+    "puiseux_coefficients": {
+      "a": 0.06570915405925375,
+      "b": 0.03439391956571716,
+      "c": 2.1577308079681816,
+      "map": "x(d)=a*d+c*d**eta+b*d**2+q*d**(eta+1)+O(d**3)",
+      "q": -0.25158578159867107
+    },
+    "strict_expansion": {
+      "S1": -0.030452897004853215,
+      "S2": -0.01725153125,
+      "S_eta": -1.0,
+      "S_eta_plus_1": 0.030452897004853215,
+      "S_of_d_to_needed_order": "1 + S1*d + S_eta*d**eta + S2*d**2 + S_eta_plus_1*d**(eta+1) + O(d**3)"
+    }
+  },
+  "coefficient_match_passes_through_eta_plus_one": true,
+  "constants": {
+    "alpha_geo": 2.772588722239781,
+    "eta": 1.8,
+    "legacy": {
+      "beta_tors": 0.01,
+      "omega": 0.7853981633974483,
+      "phi": 0.5235987755982988
+    },
+    "strict": {
+      "beta": 1.0,
+      "eta": 1.8,
+      "omega": 0.18575,
+      "phi": 0.1625
+    }
+  },
+  "hard_limits": [
+    "No identity K_legacy_ont == K_strict_gate is exported.",
+    "No global distance map on Z12 is derived.",
+    "No strict-side derivation of the Puiseux coefficients is exported.",
+    "No legacy physical-role transfer is licensed.",
+    "No QW-2191 selector discharge and no ToE closure are claimed."
+  ],
+  "honest_interpretation": [
+    "The local two-channel Puiseux map can be extended one more mixed order through d^(eta+1).",
+    "For eta=9/5 this pushes the first unmatched formal order to d^3.",
+    "This strengthens the local asymptotic bridge candidate but still does not derive a transport law or global Z12 map."
+  ],
+  "next_honest_step": "Derive the coefficient recurrence for all Puiseux orders, or identify an obstruction at finite order before trying any global Z12 extension.",
+  "result_kind": "SCRATCH_PHASE_NORMALIZED_PUISEUX_ETA_PLUS_ONE_PROBE__NOT_A_THEOREM",
+  "sample_residual_rows": [
+    {
+      "abs_eta_plus_one_residual_over_d3": 0.0,
+      "d": 1e-05,
+      "eta_plus_one_residual": 0.0,
+      "improvement_abs_three_over_eta_plus_one": 1.2212453270876722e+285,
+      "three_term_residual": -1.2212453270876722e-15,
+      "x_eta_plus_one": 6.592527082766044e-07
+    },
+    {
+      "abs_eta_plus_one_residual_over_d3": 0.01143529715363911,
+      "d": 0.0001,
+      "eta_plus_one_residual": -1.1435297153639112e-14,
+      "improvement_abs_three_over_eta_plus_one": 65.32038834951456,
+      "three_term_residual": -7.469580509678053e-13,
+      "x_eta_plus_one": 6.707401367791936e-06
+    },
+    {
+      "abs_eta_plus_one_residual_over_d3": 0.039996228551331114,
+      "d": 0.001,
+      "eta_plus_one_residual": -3.9996228551331114e-11,
+      "improvement_abs_three_over_eta_plus_one": 12.606788543638656,
+      "three_term_residual": -5.042239958896744e-10,
+      "x_eta_plus_one": 7.433262746554607e-05
+    },
+    {
+      "abs_eta_plus_one_residual_over_d3": 0.15487289328763862,
+      "d": 0.01,
+      "eta_plus_one_residual": -1.5487289328763865e-07,
+      "improvement_abs_three_over_eta_plus_one": 2.8940749879053578,
+      "three_term_residual": -4.482137667682906e-07,
+      "x_eta_plus_one": 0.0012018964515764982
+    },
+    {
+      "abs_eta_plus_one_residual_over_d3": 0.23376135459274303,
+      "d": 0.02,
+      "eta_plus_one_residual": -1.8700908367419444e-06,
+      "improvement_abs_three_over_eta_plus_one": 2.0953028935410365,
+      "three_term_residual": -3.918406741409974e-06,
+      "x_eta_plus_one": 0.003210884284349385
+    },
+    {
+      "abs_eta_plus_one_residual_over_d3": 0.4017855497568944,
+      "d": 0.05,
+      "eta_plus_one_residual": -5.0223193719611814e-05,
+      "improvement_abs_three_over_eta_plus_one": 1.5374121062768076,
+      "three_term_residual": -7.721374604041653e-05,
+      "x_eta_plus_one": 0.013134907665264404
+    }
+  ],
+  "source_reports": {
+    "near_field_obstruction": "fundamental_action_reconstruction/scratch/bridge_phase_normalized_near_field_obstruction_report.json",
+    "previous_puiseux_map": "fundamental_action_reconstruction/scratch/bridge_phase_normalized_puiseux_map_report.json"
+  },
+  "status": "OPEN_PHASE_NORMALIZED_PUISEUX_ETA_PLUS_ONE_WITNESS_NO_BRIDGE_THEOREM",
+  "upstream_replay": {
+    "previous_first_unmatched_expected_order": 2.8,
+    "previous_obstruction_is_zero": false,
+    "previous_order_2_match": true
+  }
+}
