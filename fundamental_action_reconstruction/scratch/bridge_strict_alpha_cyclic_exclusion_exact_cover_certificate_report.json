@@ -1,0 +1,300 @@
+{
+  "constraint_system": {
+    "antipodal_forbidden_pairs": [
+      [
+        0,
+        6
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        4,
+        10
+      ],
+      [
+        5,
+        11
+      ]
+    ],
+    "cardinality": "sum x_i = 5",
+    "nearest_forbidden_pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        11,
+        0
+      ]
+    ],
+    "variables": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7",
+      "x_8",
+      "x_9",
+      "x_10",
+      "x_11"
+    ]
+  },
+  "d1_zero_gap_classification": {
+    "d1_zero_gap_necklace_count": 3,
+    "d1_zero_gap_necklaces": [
+      {
+        "canonical_gap_necklace": [
+          2,
+          2,
+          2,
+          2,
+          4
+        ],
+        "has_antipodal_contact": true,
+        "histograms_d1_to_d6": [
+          [
+            0,
+            4,
+            0,
+            4,
+            0,
+            2
+          ]
+        ],
+        "is_A5_d5_necklace": false,
+        "support_count": 12
+      },
+      {
+        "canonical_gap_necklace": [
+          2,
+          2,
+          2,
+          3,
+          3
+        ],
+        "has_antipodal_contact": true,
+        "histograms_d1_to_d6": [
+          [
+            0,
+            3,
+            2,
+            2,
+            2,
+            1
+          ]
+        ],
+        "is_A5_d5_necklace": false,
+        "support_count": 12
+      },
+      {
+        "canonical_gap_necklace": [
+          2,
+          2,
+          3,
+          2,
+          3
+        ],
+        "has_antipodal_contact": false,
+        "histograms_d1_to_d6": [
+          [
+            0,
+            3,
+            2,
+            1,
+            4,
+            0
+          ]
+        ],
+        "is_A5_d5_necklace": true,
+        "support_count": 12
+      }
+    ],
+    "d1_zero_support_count": 36,
+    "exact_cover_surviving_necklaces": [
+      {
+        "canonical_gap_necklace": [
+          2,
+          2,
+          3,
+          2,
+          3
+        ],
+        "has_antipodal_contact": false,
+        "histograms_d1_to_d6": [
+          [
+            0,
+            3,
+            2,
+            1,
+            4,
+            0
+          ]
+        ],
+        "is_A5_d5_necklace": true,
+        "support_count": 12
+      }
+    ]
+  },
+  "exact_cover_solution_audit": {
+    "antipodal_edge_constraint_count": 6,
+    "cardinality_constraint": "sum x_i = 5",
+    "forbidden_pair_count": 18,
+    "nearest_edge_constraint_count": 12,
+    "selects_A5_d5_orbit": true,
+    "solution_count": 12,
+    "solution_gap_necklaces": [
+      {
+        "canonical_gap_necklace": [
+          2,
+          2,
+          3,
+          2,
+          3
+        ],
+        "has_antipodal_contact": false,
+        "histograms_d1_to_d6": [
+          [
+            0,
+            3,
+            2,
+            1,
+            4,
+            0
+          ]
+        ],
+        "is_A5_d5_necklace": true,
+        "support_count": 12
+      }
+    ],
+    "solution_histogram_rows": [
+      {
+        "distance_histogram_d1_to_d6": [
+          0,
+          3,
+          2,
+          1,
+          4,
+          0
+        ],
+        "support_count": 12
+      }
+    ],
+    "solution_orbit_count": 1,
+    "solution_orbits": [
+      {
+        "distance_histogram_d1_to_d6": [
+          0,
+          3,
+          2,
+          1,
+          4,
+          0
+        ],
+        "is_A1_contiguous_orbit": false,
+        "is_A5_d5_orbit": true,
+        "orbit_size": 12,
+        "representative": [
+          0,
+          2,
+          4,
+          7,
+          9
+        ]
+      }
+    ],
+    "variable_count": 12
+  },
+  "exact_proof_certificate": {
+    "boolean_formulation": "Use x_0..x_11 in {0,1}, sum x_i=5, forbid nearest-neighbour pairs and antipodal pairs.",
+    "d1_only_boundary": "Without antipodal constraints, d1=0 gives three gap necklaces; the antipodal ban leaves only the A5/d5 necklace.",
+    "enumeration_domain": "The certificate checks all C(12,5)=792 cardinality-compatible assignments exactly.",
+    "gap_certificate": "The surviving cyclic gap necklace is [2,2,3,2,3], with folded histogram [0,3,2,1,4,0].",
+    "missing_source": "The exact-cover constraints are not derived here from strict nadsoliton geometry; they are a conditional selector premise.",
+    "orbit_certificate": "The 12 assignments form one dihedral orbit, containing the A5/d5 support class and not the A1 contiguous class.",
+    "solution_count": "Exactly 12 assignments satisfy the constraints."
+  },
+  "finite_model": {
+    "active_count": 5,
+    "histogram_class_count": 35,
+    "ring": "Z_12",
+    "support_count": 792,
+    "target_eta": "9/5",
+    "target_q_power": "256/243"
+  },
+  "hard_limits": [
+    "No identity K_legacy_ont == K_strict_gate is asserted or used.",
+    "No legacy physical-role or matter-generation claim is transferred onto K_strict_gate.",
+    "No theorem derives exact-cover constraints, cyclic exclusion energy, chi_11, or the unit-axis bit from strict nadsoliton geometry.",
+    "The exact-cover selector is a conditional finite certificate, not a strict-core theorem.",
+    "No endpoint, arrow orientation, ledger selector, positive lambda action, cycle metric source, anti-Nyquist source, fifth-mode source, future-probability source, future-value source, future-path source, matter-bit source, existence-bit source, recursive-self-information source, character-source, meta-character source, cyclic-adjacency source theorem, variational tie-break source theorem, exclusion-energy source theorem, or legacy-strict bridge theorem is claimed.",
+    "No QW-2191 discharge and no strict-core selector closure are claimed.",
+    "No ToE closure is claimed."
+  ],
+  "interpretation": {
+    "d1_boundary": "The nearest-neighbour constraint alone gives three gap necklaces; the antipodal clauses are the extra finite ingredient that remove the two non-A5 necklaces.",
+    "direct_result": "The exact-cover constraints sum=5, no adjacent pair, and no antipodal pair select exactly the A5/d5 dihedral orbit.",
+    "honest_limit": "The constraints are not proven strict-core outputs here; the selector remains conditional/non-strict unless a strict source exports them.",
+    "proof_style_upgrade": "This is a Boolean constraint certificate for the same d1+d6 exclusion selector, independent of the previous energy-minimization presentation."
+  },
+  "next_honest_step": "Audit existing strict-side nad12/sigma artifacts for a source of the exact-cover clauses; otherwise keep the clauses as an explicit non-strict selector premise.",
+  "ontology_guardrail": {
+    "allowed_reading": "The exact-cover constraints may be investigated as candidate structures of the nadsoliton itself.",
+    "forbidden_reading": "No separate informational layer underneath the nadsoliton is introduced to provide the exact-cover constraints or unit-axis bit.",
+    "preferred_order_preserved": "nadsoliton -> light -> matter -> emergent observer"
+  },
+  "result_kind": "SCRATCH_STRICT_ALPHA_CYCLIC_EXCLUSION_EXACT_COVER_CERTIFICATE_PROBE__CONDITIONAL_NOT_A_THEOREM",
+  "status": "exact-cover-nearest-plus-antipodal-constraints-select-A5-d5-orbit-conditionally-source-not-derived"
+}
