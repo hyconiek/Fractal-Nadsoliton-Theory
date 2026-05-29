@@ -1,0 +1,185 @@
+{
+  "candidate_interpretation": {
+    "content": "Fixed-labelled entropy/multinomial selection constructively forces the balanced ledger by monotone Robin-Hood moves.",
+    "supported_by_this_probe": true,
+    "why_this_is_more_proof_like": "It replaces a bare argmax table with exact multiplicity-ratio certificates W_after/W_before=a/(b+1) and monotone paths from every nonterminal canonical ledger.",
+    "why_this_is_not_enough": "The fixed-labelled entropy selector itself is still not derived from strict nadsoliton geometry and does not discharge QW-2191."
+  },
+  "candidate_space_rows": [
+    {
+      "eta_from_shared_product": 1.8,
+      "eta_residual_vs_9_5": 0.0,
+      "is_balanced_terminal": false,
+      "labelled_multinomial_count": 1680,
+      "ledger": [
+        4,
+        1,
+        1,
+        1,
+        1
+      ],
+      "orbit_size": 5,
+      "shannon_entropy_nats": 1.3862943611198906
+    },
+    {
+      "eta_from_shared_product": 1.8,
+      "eta_residual_vs_9_5": 0.0,
+      "is_balanced_terminal": false,
+      "labelled_multinomial_count": 3360,
+      "ledger": [
+        3,
+        2,
+        1,
+        1,
+        1
+      ],
+      "orbit_size": 20,
+      "shannon_entropy_nats": 1.4941751382893083
+    },
+    {
+      "eta_from_shared_product": 1.8,
+      "eta_residual_vs_9_5": 0.0,
+      "is_balanced_terminal": true,
+      "labelled_multinomial_count": 5040,
+      "ledger": [
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "orbit_size": 10,
+      "shannon_entropy_nats": 1.559581156259877
+    }
+  ],
+  "certificate_paths_to_balanced_ledger": {
+    "(3, 2, 1, 1, 1)": [
+      {
+        "after": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "before": [
+          3,
+          2,
+          1,
+          1,
+          1
+        ],
+        "entropy_after_nats": 1.559581156259877,
+        "entropy_before_nats": 1.4941751382893083,
+        "entropy_delta_nats": 0.06540601797056866,
+        "entropy_increases": true,
+        "exact_labelled_weight_ratio_after_over_before": "3/2",
+        "labelled_weight_after": 5040,
+        "labelled_weight_before": 3360,
+        "labelled_weight_delta": 1680,
+        "moved_from_exponent_a": 3,
+        "moved_to_exponent_b": 1,
+        "ratio_greater_than_one": true
+      }
+    ],
+    "(4, 1, 1, 1, 1)": [
+      {
+        "after": [
+          3,
+          2,
+          1,
+          1,
+          1
+        ],
+        "before": [
+          4,
+          1,
+          1,
+          1,
+          1
+        ],
+        "entropy_after_nats": 1.4941751382893083,
+        "entropy_before_nats": 1.3862943611198906,
+        "entropy_delta_nats": 0.10788077716941769,
+        "entropy_increases": true,
+        "exact_labelled_weight_ratio_after_over_before": "2/1",
+        "labelled_weight_after": 3360,
+        "labelled_weight_before": 1680,
+        "labelled_weight_delta": 1680,
+        "moved_from_exponent_a": 4,
+        "moved_to_exponent_b": 1,
+        "ratio_greater_than_one": true
+      },
+      {
+        "after": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "before": [
+          3,
+          2,
+          1,
+          1,
+          1
+        ],
+        "entropy_after_nats": 1.559581156259877,
+        "entropy_before_nats": 1.4941751382893083,
+        "entropy_delta_nats": 0.06540601797056866,
+        "entropy_increases": true,
+        "exact_labelled_weight_ratio_after_over_before": "3/2",
+        "labelled_weight_after": 5040,
+        "labelled_weight_before": 3360,
+        "labelled_weight_delta": 1680,
+        "moved_from_exponent_a": 3,
+        "moved_to_exponent_b": 1,
+        "ratio_greater_than_one": true
+      }
+    ]
+  },
+  "certificate_summary": {
+    "all_nonterminal_ledgers_have_path": true,
+    "all_steps_increase_entropy": true,
+    "all_steps_increase_labelled_weight": true,
+    "balanced_terminal": [
+      2,
+      2,
+      2,
+      1,
+      1
+    ],
+    "source_entropy_winner": [
+      2,
+      2,
+      2,
+      1,
+      1
+    ],
+    "source_entropy_winner_matches_terminal": true,
+    "terminal_entropy_nats": 1.559581156259877,
+    "terminal_labelled_weight": 5040
+  },
+  "fixed_labelled_weight_law": {
+    "derived_here_as_arithmetic_certificate": true,
+    "robin_hood_ratio": "W_after/W_before = a/(b+1) for a -> a-1 and b -> b+1",
+    "strict_increase_condition": "a >= b+2",
+    "strict_selector_source_derived_here": false,
+    "weight": "W(e_1,...,e_5)=8!/prod_i(e_i!)"
+  },
+  "hard_limits": [
+    "No identity K_legacy_ont == K_strict_gate is exported.",
+    "No legacy physical-role transfer is licensed.",
+    "No theorem derives fixed-labelled branch entropy as the strict-core selector.",
+    "This certificate is conditional on fixed-labelled branch multiplicity, not a proof that branches are fixed labelled strict channels.",
+    "No theorem derives eta=9/5 without adopting the branch count, ternary normalization, and fixed-labelled entropy selector as extra premises.",
+    "No QW-2191 selector discharge and no ToE closure are claimed."
+  ],
+  "next_honest_step": "Seek an internal strict source for fixed-labelled branch multiplicity; otherwise keep the Robin-Hood path as a conditional selector certificate only.",
+  "result_kind": "SCRATCH_STRICT_ALPHA_ENTROPY_ROBIN_HOOD_CERTIFICATE_PROBE__NOT_A_THEOREM",
+  "source_reports": {
+    "entropy_selector_discriminator": "fundamental_action_reconstruction/scratch/bridge_strict_alpha_entropy_selector_discriminator_report.json"
+  },
+  "status": "OPEN_STRICT_ALPHA_ENTROPY_ROBIN_HOOD_CERTIFICATE_NO_STRICT_SELECTOR_THEOREM"
+}
