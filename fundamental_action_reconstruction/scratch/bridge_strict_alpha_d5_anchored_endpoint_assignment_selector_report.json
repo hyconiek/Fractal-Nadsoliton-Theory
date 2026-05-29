@@ -1,0 +1,1391 @@
+{
+  "anchored_selector_definition": {
+    "forward_endpoint_selector": "lexicographically minimize (E_path, M_source)",
+    "path_energy": "E_path(a)=sum_r(a_{r+1}-a_r)^2",
+    "reverse_endpoint_selector": "lexicographically minimize (E_path, M_reverse) with M_reverse=sum_r(4-r)*a_r",
+    "source_moment": "M_source(a)=sum_r r*a_r",
+    "support_rule": "ordered support is (source + r*orientation*5) mod 12 for r=0..4"
+  },
+  "candidate_interpretation": {
+    "content": "An explicit source endpoint and orientation remove the final finite assignment degeneracy for the d5 path model.",
+    "supported_by_this_probe": true,
+    "why_this_is_more_proof_like": "The selector is exact and lexicographic: it first preserves path smoothing, then uniquely minimizes a source moment across every ordered support in the 24-case orbit scan.",
+    "why_this_is_not_enough": "The source endpoint, orientation, and endpoint-bias action remain premises; no strict theorem exports them from nadsoliton geometry."
+  },
+  "conditional_selector_schema": {
+    "conditional_output": "for each source and orientation, the forward endpoint selector uniquely chooses assignment 22211",
+    "endpoint_bias_premise": "lexicographic endpoint bias chooses high values nearest the declared source endpoint",
+    "ledger_premise": "convex/Schur-convex ledger selector supplies the multiset (2,2,2,1,1)",
+    "remaining_obstruction": "the strict origin of source, orientation, and endpoint-bias action is not derived",
+    "support_premise": "distance-5 band-pass support selector plus explicit source and orientation chooses an ordered support"
+  },
+  "hard_limits": [
+    "No identity K_legacy_ont == K_strict_gate is exported.",
+    "No legacy physical-role transfer is licensed.",
+    "The anchored endpoint assignment selector is conditional on explicit source, orientation, and endpoint-bias premises.",
+    "No theorem derives the endpoint-bias/source-moment action from strict nadsoliton geometry.",
+    "No theorem derives branch count m=5, total exponent n=8, denominator 3, or binary-rescale quotient.",
+    "No Aut(Z_12)/N462/QW-2191 selector obstruction is discharged; the source/orientation premises are exactly extra selector data.",
+    "No theorem derives eta=9/5 without the branch model, denominator/quotient convention, support premise, ledger selector, source/orientation premise, and assignment premise.",
+    "No QW-2191 selector discharge and no ToE closure are claimed."
+  ],
+  "next_honest_step": "Try to derive the source/orientation/endpoint-bias terms from strict nadsoliton geometry; otherwise mark them as non-strict selector axioms.",
+  "orbit_scan": {
+    "all_forward_assignments_unique": true,
+    "all_reverse_assignments_unique": true,
+    "assignments_per_ordered_support": 10,
+    "forward_selected_assignment_set": [
+      [
+        2,
+        2,
+        2,
+        1,
+        1
+      ]
+    ],
+    "ordered_support_count": 24,
+    "orientation_count_per_source": 2,
+    "reverse_selected_assignment_set": [
+      [
+        1,
+        1,
+        2,
+        2,
+        2
+      ]
+    ],
+    "rows_summary": [
+      {
+        "forward_assignment": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "forward_high_value_nodes": [
+          0,
+          2,
+          7
+        ],
+        "ordered_support": [
+          0,
+          7,
+          2,
+          9,
+          4
+        ],
+        "orientation": -1,
+        "reverse_assignment": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "reverse_high_value_nodes": [
+          2,
+          4,
+          9
+        ],
+        "source": 0
+      },
+      {
+        "forward_assignment": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "forward_high_value_nodes": [
+          0,
+          5,
+          10
+        ],
+        "ordered_support": [
+          0,
+          5,
+          10,
+          3,
+          8
+        ],
+        "orientation": 1,
+        "reverse_assignment": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "reverse_high_value_nodes": [
+          3,
+          8,
+          10
+        ],
+        "source": 0
+      },
+      {
+        "forward_assignment": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "forward_high_value_nodes": [
+          1,
+          3,
+          8
+        ],
+        "ordered_support": [
+          1,
+          8,
+          3,
+          10,
+          5
+        ],
+        "orientation": -1,
+        "reverse_assignment": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "reverse_high_value_nodes": [
+          3,
+          5,
+          10
+        ],
+        "source": 1
+      },
+      {
+        "forward_assignment": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "forward_high_value_nodes": [
+          1,
+          6,
+          11
+        ],
+        "ordered_support": [
+          1,
+          6,
+          11,
+          4,
+          9
+        ],
+        "orientation": 1,
+        "reverse_assignment": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "reverse_high_value_nodes": [
+          4,
+          9,
+          11
+        ],
+        "source": 1
+      },
+      {
+        "forward_assignment": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "forward_high_value_nodes": [
+          2,
+          4,
+          9
+        ],
+        "ordered_support": [
+          2,
+          9,
+          4,
+          11,
+          6
+        ],
+        "orientation": -1,
+        "reverse_assignment": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "reverse_high_value_nodes": [
+          4,
+          6,
+          11
+        ],
+        "source": 2
+      },
+      {
+        "forward_assignment": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "forward_high_value_nodes": [
+          0,
+          2,
+          7
+        ],
+        "ordered_support": [
+          2,
+          7,
+          0,
+          5,
+          10
+        ],
+        "orientation": 1,
+        "reverse_assignment": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "reverse_high_value_nodes": [
+          0,
+          5,
+          10
+        ],
+        "source": 2
+      },
+      {
+        "forward_assignment": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "forward_high_value_nodes": [
+          3,
+          5,
+          10
+        ],
+        "ordered_support": [
+          3,
+          10,
+          5,
+          0,
+          7
+        ],
+        "orientation": -1,
+        "reverse_assignment": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "reverse_high_value_nodes": [
+          0,
+          5,
+          7
+        ],
+        "source": 3
+      },
+      {
+        "forward_assignment": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "forward_high_value_nodes": [
+          1,
+          3,
+          8
+        ],
+        "ordered_support": [
+          3,
+          8,
+          1,
+          6,
+          11
+        ],
+        "orientation": 1,
+        "reverse_assignment": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "reverse_high_value_nodes": [
+          1,
+          6,
+          11
+        ],
+        "source": 3
+      },
+      {
+        "forward_assignment": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "forward_high_value_nodes": [
+          4,
+          6,
+          11
+        ],
+        "ordered_support": [
+          4,
+          11,
+          6,
+          1,
+          8
+        ],
+        "orientation": -1,
+        "reverse_assignment": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "reverse_high_value_nodes": [
+          1,
+          6,
+          8
+        ],
+        "source": 4
+      },
+      {
+        "forward_assignment": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "forward_high_value_nodes": [
+          2,
+          4,
+          9
+        ],
+        "ordered_support": [
+          4,
+          9,
+          2,
+          7,
+          0
+        ],
+        "orientation": 1,
+        "reverse_assignment": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "reverse_high_value_nodes": [
+          0,
+          2,
+          7
+        ],
+        "source": 4
+      },
+      {
+        "forward_assignment": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "forward_high_value_nodes": [
+          0,
+          5,
+          7
+        ],
+        "ordered_support": [
+          5,
+          0,
+          7,
+          2,
+          9
+        ],
+        "orientation": -1,
+        "reverse_assignment": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "reverse_high_value_nodes": [
+          2,
+          7,
+          9
+        ],
+        "source": 5
+      },
+      {
+        "forward_assignment": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "forward_high_value_nodes": [
+          3,
+          5,
+          10
+        ],
+        "ordered_support": [
+          5,
+          10,
+          3,
+          8,
+          1
+        ],
+        "orientation": 1,
+        "reverse_assignment": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "reverse_high_value_nodes": [
+          1,
+          3,
+          8
+        ],
+        "source": 5
+      },
+      {
+        "forward_assignment": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "forward_high_value_nodes": [
+          1,
+          6,
+          8
+        ],
+        "ordered_support": [
+          6,
+          1,
+          8,
+          3,
+          10
+        ],
+        "orientation": -1,
+        "reverse_assignment": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "reverse_high_value_nodes": [
+          3,
+          8,
+          10
+        ],
+        "source": 6
+      },
+      {
+        "forward_assignment": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "forward_high_value_nodes": [
+          4,
+          6,
+          11
+        ],
+        "ordered_support": [
+          6,
+          11,
+          4,
+          9,
+          2
+        ],
+        "orientation": 1,
+        "reverse_assignment": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "reverse_high_value_nodes": [
+          2,
+          4,
+          9
+        ],
+        "source": 6
+      },
+      {
+        "forward_assignment": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "forward_high_value_nodes": [
+          2,
+          7,
+          9
+        ],
+        "ordered_support": [
+          7,
+          2,
+          9,
+          4,
+          11
+        ],
+        "orientation": -1,
+        "reverse_assignment": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "reverse_high_value_nodes": [
+          4,
+          9,
+          11
+        ],
+        "source": 7
+      },
+      {
+        "forward_assignment": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "forward_high_value_nodes": [
+          0,
+          5,
+          7
+        ],
+        "ordered_support": [
+          7,
+          0,
+          5,
+          10,
+          3
+        ],
+        "orientation": 1,
+        "reverse_assignment": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "reverse_high_value_nodes": [
+          3,
+          5,
+          10
+        ],
+        "source": 7
+      },
+      {
+        "forward_assignment": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "forward_high_value_nodes": [
+          3,
+          8,
+          10
+        ],
+        "ordered_support": [
+          8,
+          3,
+          10,
+          5,
+          0
+        ],
+        "orientation": -1,
+        "reverse_assignment": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "reverse_high_value_nodes": [
+          0,
+          5,
+          10
+        ],
+        "source": 8
+      },
+      {
+        "forward_assignment": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "forward_high_value_nodes": [
+          1,
+          6,
+          8
+        ],
+        "ordered_support": [
+          8,
+          1,
+          6,
+          11,
+          4
+        ],
+        "orientation": 1,
+        "reverse_assignment": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "reverse_high_value_nodes": [
+          4,
+          6,
+          11
+        ],
+        "source": 8
+      },
+      {
+        "forward_assignment": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "forward_high_value_nodes": [
+          4,
+          9,
+          11
+        ],
+        "ordered_support": [
+          9,
+          4,
+          11,
+          6,
+          1
+        ],
+        "orientation": -1,
+        "reverse_assignment": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "reverse_high_value_nodes": [
+          1,
+          6,
+          11
+        ],
+        "source": 9
+      },
+      {
+        "forward_assignment": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "forward_high_value_nodes": [
+          2,
+          7,
+          9
+        ],
+        "ordered_support": [
+          9,
+          2,
+          7,
+          0,
+          5
+        ],
+        "orientation": 1,
+        "reverse_assignment": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "reverse_high_value_nodes": [
+          0,
+          5,
+          7
+        ],
+        "source": 9
+      },
+      {
+        "forward_assignment": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "forward_high_value_nodes": [
+          0,
+          5,
+          10
+        ],
+        "ordered_support": [
+          10,
+          5,
+          0,
+          7,
+          2
+        ],
+        "orientation": -1,
+        "reverse_assignment": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "reverse_high_value_nodes": [
+          0,
+          2,
+          7
+        ],
+        "source": 10
+      },
+      {
+        "forward_assignment": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "forward_high_value_nodes": [
+          3,
+          8,
+          10
+        ],
+        "ordered_support": [
+          10,
+          3,
+          8,
+          1,
+          6
+        ],
+        "orientation": 1,
+        "reverse_assignment": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "reverse_high_value_nodes": [
+          1,
+          6,
+          8
+        ],
+        "source": 10
+      },
+      {
+        "forward_assignment": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "forward_high_value_nodes": [
+          1,
+          6,
+          11
+        ],
+        "ordered_support": [
+          11,
+          6,
+          1,
+          8,
+          3
+        ],
+        "orientation": -1,
+        "reverse_assignment": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "reverse_high_value_nodes": [
+          1,
+          3,
+          8
+        ],
+        "source": 11
+      },
+      {
+        "forward_assignment": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "forward_high_value_nodes": [
+          4,
+          9,
+          11
+        ],
+        "ordered_support": [
+          11,
+          4,
+          9,
+          2,
+          7
+        ],
+        "orientation": 1,
+        "reverse_assignment": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "reverse_high_value_nodes": [
+          2,
+          7,
+          9
+        ],
+        "source": 11
+      }
+    ],
+    "source_count": 12
+  },
+  "previous_path_degeneracy_replay": {
+    "minimizer_count": 48,
+    "result_kind": "SCRATCH_STRICT_ALPHA_D5_PATH_ASSIGNMENT_DEGENERACY_PROBE__NOT_A_THEOREM",
+    "unique_minimizer_high_node_sets_count": 12
+  },
+  "reference_source_orientation_certificate": {
+    "all_adjacent_distances_are_5": true,
+    "forward_assignment_unique": true,
+    "forward_endpoint_selected_row": {
+      "assignment": [
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "high_value_nodes": [
+        0,
+        2,
+        7
+      ],
+      "lex_forward_key": [
+        1,
+        13
+      ],
+      "lex_reverse_key": [
+        1,
+        19
+      ],
+      "ordered_support": [
+        0,
+        7,
+        2,
+        9,
+        4
+      ],
+      "path_energy": 1,
+      "reverse_source_moment": 19,
+      "source_moment": 13
+    },
+    "ordered_support": [
+      0,
+      7,
+      2,
+      9,
+      4
+    ],
+    "orientation": -1,
+    "path_min_energy": 1,
+    "path_minimizer_count_before_endpoint_bias": 2,
+    "path_minimizers_before_endpoint_bias": [
+      {
+        "assignment": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "high_value_nodes": [
+          2,
+          4,
+          9
+        ],
+        "lex_forward_key": [
+          1,
+          19
+        ],
+        "lex_reverse_key": [
+          1,
+          13
+        ],
+        "ordered_support": [
+          0,
+          7,
+          2,
+          9,
+          4
+        ],
+        "path_energy": 1,
+        "reverse_source_moment": 13,
+        "source_moment": 19
+      },
+      {
+        "assignment": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "high_value_nodes": [
+          0,
+          2,
+          7
+        ],
+        "lex_forward_key": [
+          1,
+          13
+        ],
+        "lex_reverse_key": [
+          1,
+          19
+        ],
+        "ordered_support": [
+          0,
+          7,
+          2,
+          9,
+          4
+        ],
+        "path_energy": 1,
+        "reverse_source_moment": 19,
+        "source_moment": 13
+      }
+    ],
+    "reverse_assignment_unique": true,
+    "reverse_endpoint_selected_row": {
+      "assignment": [
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "high_value_nodes": [
+        2,
+        4,
+        9
+      ],
+      "lex_forward_key": [
+        1,
+        19
+      ],
+      "lex_reverse_key": [
+        1,
+        13
+      ],
+      "ordered_support": [
+        0,
+        7,
+        2,
+        9,
+        4
+      ],
+      "path_energy": 1,
+      "reverse_source_moment": 13,
+      "source_moment": 19
+    },
+    "row_count": 10,
+    "rows": [
+      {
+        "assignment": [
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "high_value_nodes": [
+          2,
+          4,
+          9
+        ],
+        "lex_forward_key": [
+          1,
+          19
+        ],
+        "lex_reverse_key": [
+          1,
+          13
+        ],
+        "ordered_support": [
+          0,
+          7,
+          2,
+          9,
+          4
+        ],
+        "path_energy": 1,
+        "reverse_source_moment": 13,
+        "source_moment": 19
+      },
+      {
+        "assignment": [
+          1,
+          2,
+          1,
+          2,
+          2
+        ],
+        "high_value_nodes": [
+          4,
+          7,
+          9
+        ],
+        "lex_forward_key": [
+          3,
+          18
+        ],
+        "lex_reverse_key": [
+          3,
+          14
+        ],
+        "ordered_support": [
+          0,
+          7,
+          2,
+          9,
+          4
+        ],
+        "path_energy": 3,
+        "reverse_source_moment": 14,
+        "source_moment": 18
+      },
+      {
+        "assignment": [
+          1,
+          2,
+          2,
+          1,
+          2
+        ],
+        "high_value_nodes": [
+          2,
+          4,
+          7
+        ],
+        "lex_forward_key": [
+          3,
+          17
+        ],
+        "lex_reverse_key": [
+          3,
+          15
+        ],
+        "ordered_support": [
+          0,
+          7,
+          2,
+          9,
+          4
+        ],
+        "path_energy": 3,
+        "reverse_source_moment": 15,
+        "source_moment": 17
+      },
+      {
+        "assignment": [
+          1,
+          2,
+          2,
+          2,
+          1
+        ],
+        "high_value_nodes": [
+          2,
+          7,
+          9
+        ],
+        "lex_forward_key": [
+          2,
+          16
+        ],
+        "lex_reverse_key": [
+          2,
+          16
+        ],
+        "ordered_support": [
+          0,
+          7,
+          2,
+          9,
+          4
+        ],
+        "path_energy": 2,
+        "reverse_source_moment": 16,
+        "source_moment": 16
+      },
+      {
+        "assignment": [
+          2,
+          1,
+          1,
+          2,
+          2
+        ],
+        "high_value_nodes": [
+          0,
+          4,
+          9
+        ],
+        "lex_forward_key": [
+          2,
+          17
+        ],
+        "lex_reverse_key": [
+          2,
+          15
+        ],
+        "ordered_support": [
+          0,
+          7,
+          2,
+          9,
+          4
+        ],
+        "path_energy": 2,
+        "reverse_source_moment": 15,
+        "source_moment": 17
+      },
+      {
+        "assignment": [
+          2,
+          1,
+          2,
+          1,
+          2
+        ],
+        "high_value_nodes": [
+          0,
+          2,
+          4
+        ],
+        "lex_forward_key": [
+          4,
+          16
+        ],
+        "lex_reverse_key": [
+          4,
+          16
+        ],
+        "ordered_support": [
+          0,
+          7,
+          2,
+          9,
+          4
+        ],
+        "path_energy": 4,
+        "reverse_source_moment": 16,
+        "source_moment": 16
+      },
+      {
+        "assignment": [
+          2,
+          1,
+          2,
+          2,
+          1
+        ],
+        "high_value_nodes": [
+          0,
+          2,
+          9
+        ],
+        "lex_forward_key": [
+          3,
+          15
+        ],
+        "lex_reverse_key": [
+          3,
+          17
+        ],
+        "ordered_support": [
+          0,
+          7,
+          2,
+          9,
+          4
+        ],
+        "path_energy": 3,
+        "reverse_source_moment": 17,
+        "source_moment": 15
+      },
+      {
+        "assignment": [
+          2,
+          2,
+          1,
+          1,
+          2
+        ],
+        "high_value_nodes": [
+          0,
+          4,
+          7
+        ],
+        "lex_forward_key": [
+          2,
+          15
+        ],
+        "lex_reverse_key": [
+          2,
+          17
+        ],
+        "ordered_support": [
+          0,
+          7,
+          2,
+          9,
+          4
+        ],
+        "path_energy": 2,
+        "reverse_source_moment": 17,
+        "source_moment": 15
+      },
+      {
+        "assignment": [
+          2,
+          2,
+          1,
+          2,
+          1
+        ],
+        "high_value_nodes": [
+          0,
+          7,
+          9
+        ],
+        "lex_forward_key": [
+          3,
+          14
+        ],
+        "lex_reverse_key": [
+          3,
+          18
+        ],
+        "ordered_support": [
+          0,
+          7,
+          2,
+          9,
+          4
+        ],
+        "path_energy": 3,
+        "reverse_source_moment": 18,
+        "source_moment": 14
+      },
+      {
+        "assignment": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "high_value_nodes": [
+          0,
+          2,
+          7
+        ],
+        "lex_forward_key": [
+          1,
+          13
+        ],
+        "lex_reverse_key": [
+          1,
+          19
+        ],
+        "ordered_support": [
+          0,
+          7,
+          2,
+          9,
+          4
+        ],
+        "path_energy": 1,
+        "reverse_source_moment": 19,
+        "source_moment": 13
+      }
+    ],
+    "source": 0
+  },
+  "result_kind": "SCRATCH_STRICT_ALPHA_D5_ANCHORED_ENDPOINT_ASSIGNMENT_SELECTOR_PROBE__NOT_A_THEOREM",
+  "source_reports": {
+    "d5_path_assignment_degeneracy": "fundamental_action_reconstruction/scratch/bridge_strict_alpha_d5_path_assignment_degeneracy_report.json"
+  },
+  "status": "OPEN_STRICT_ALPHA_D5_ANCHORED_ENDPOINT_ASSIGNMENT_SELECTOR_NO_STRICT_SOURCE_THEOREM",
+  "target_identity_replay": {
+    "balanced_ledger": [
+      2,
+      2,
+      2,
+      1,
+      1
+    ],
+    "eta_residual_vs_9_5": 0.0,
+    "q_power_product": "256/243"
+  }
+}
