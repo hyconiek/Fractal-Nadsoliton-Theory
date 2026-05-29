@@ -1,0 +1,175 @@
+{
+  "bounded_family_scan": {
+    "all_rows_eta_exact": true,
+    "denominator_summary": [
+      {
+        "binary_rescale_k": 0,
+        "denominator_D": 3,
+        "exact_rows_in_scan": 8,
+        "minimal_t_row": {
+          "D_label": "3*2^0",
+          "binary_rescale_k": 0,
+          "branch_count_m": 5,
+          "denominator_D": 3,
+          "eta_from_model": 1.8,
+          "eta_residual_vs_9_5": 0.0,
+          "n_over_m": "8/5",
+          "primitive_no_binary_rescale": true,
+          "refinement_t": 1,
+          "total_binary_exponent_n": 8
+        },
+        "n_over_m": "8/5"
+      },
+      {
+        "binary_rescale_k": 1,
+        "denominator_D": 6,
+        "exact_rows_in_scan": 8,
+        "minimal_t_row": {
+          "D_label": "3*2^1",
+          "binary_rescale_k": 1,
+          "branch_count_m": 5,
+          "denominator_D": 6,
+          "eta_from_model": 1.8,
+          "eta_residual_vs_9_5": 0.0,
+          "n_over_m": "13/5",
+          "primitive_no_binary_rescale": false,
+          "refinement_t": 1,
+          "total_binary_exponent_n": 13
+        },
+        "n_over_m": "13/5"
+      },
+      {
+        "binary_rescale_k": 2,
+        "denominator_D": 12,
+        "exact_rows_in_scan": 8,
+        "minimal_t_row": {
+          "D_label": "3*2^2",
+          "binary_rescale_k": 2,
+          "branch_count_m": 5,
+          "denominator_D": 12,
+          "eta_from_model": 1.8,
+          "eta_residual_vs_9_5": 0.0,
+          "n_over_m": "18/5",
+          "primitive_no_binary_rescale": false,
+          "refinement_t": 1,
+          "total_binary_exponent_n": 18
+        },
+        "n_over_m": "18/5"
+      },
+      {
+        "binary_rescale_k": 3,
+        "denominator_D": 24,
+        "exact_rows_in_scan": 8,
+        "minimal_t_row": {
+          "D_label": "3*2^3",
+          "binary_rescale_k": 3,
+          "branch_count_m": 5,
+          "denominator_D": 24,
+          "eta_from_model": 1.8,
+          "eta_residual_vs_9_5": 0.0,
+          "n_over_m": "23/5",
+          "primitive_no_binary_rescale": false,
+          "refinement_t": 1,
+          "total_binary_exponent_n": 23
+        },
+        "n_over_m": "23/5"
+      },
+      {
+        "binary_rescale_k": 4,
+        "denominator_D": 48,
+        "exact_rows_in_scan": 8,
+        "minimal_t_row": {
+          "D_label": "3*2^4",
+          "binary_rescale_k": 4,
+          "branch_count_m": 5,
+          "denominator_D": 48,
+          "eta_from_model": 1.8,
+          "eta_residual_vs_9_5": 0.0,
+          "n_over_m": "28/5",
+          "primitive_no_binary_rescale": false,
+          "refinement_t": 1,
+          "total_binary_exponent_n": 28
+        },
+        "n_over_m": "28/5"
+      },
+      {
+        "binary_rescale_k": 5,
+        "denominator_D": 96,
+        "exact_rows_in_scan": 8,
+        "minimal_t_row": {
+          "D_label": "3*2^5",
+          "binary_rescale_k": 5,
+          "branch_count_m": 5,
+          "denominator_D": 96,
+          "eta_from_model": 1.8,
+          "eta_residual_vs_9_5": 0.0,
+          "n_over_m": "33/5",
+          "primitive_no_binary_rescale": false,
+          "refinement_t": 1,
+          "total_binary_exponent_n": 33
+        },
+        "n_over_m": "33/5"
+      },
+      {
+        "binary_rescale_k": 6,
+        "denominator_D": 192,
+        "exact_rows_in_scan": 8,
+        "minimal_t_row": {
+          "D_label": "3*2^6",
+          "binary_rescale_k": 6,
+          "branch_count_m": 5,
+          "denominator_D": 192,
+          "eta_from_model": 1.8,
+          "eta_residual_vs_9_5": 0.0,
+          "n_over_m": "38/5",
+          "primitive_no_binary_rescale": false,
+          "refinement_t": 1,
+          "total_binary_exponent_n": 38
+        },
+        "n_over_m": "38/5"
+      }
+    ],
+    "exact_family_row_count": 56,
+    "max_binary_rescale_k": 6,
+    "max_refinement_t": 8,
+    "non_family_exact_rows_found": [],
+    "nonprimitive_binary_rescale_row_count": 48,
+    "primitive_row_count": 8
+  },
+  "candidate_interpretation": {
+    "content": "The radical target permits an infinite denominator family D=3*2^k; D=3 is primitive/no-binary-rescale, not forced by the target alone.",
+    "supported_by_this_probe": true,
+    "why_this_is_more_proof_like": "It isolates the exact integer-denominator family and distinguishes primitive denominator selection from eta arithmetic.",
+    "why_this_is_not_enough": "It does not derive the primitive/no-hidden-binary-rescale convention from strict nadsoliton geometry, and it does not solve the balanced-ledger selector obligation."
+  },
+  "exact_arithmetic_statement": {
+    "denominator_3_derived_from_target_alone": false,
+    "general_solution": "D=3*2^k, m=5*t, n=(8+5*k)*t for integers k>=0,t>=1",
+    "integer_D_condition": "n/m-8/5 must be a nonnegative integer k",
+    "primitive_solution": "k=0 gives D=3, m=5*t, n=8*t",
+    "required_denominator_form": "D=3*2^(n/m-8/5)",
+    "target": "q_radical=2^(8/5)/3",
+    "wide_model": "q_model=(2^n/D^m)^(1/m)=2^(n/m)/D"
+  },
+  "hard_limits": [
+    "No identity K_legacy_ont == K_strict_gate is exported.",
+    "No legacy physical-role transfer is licensed.",
+    "No theorem derives the primitive denominator D=3 from strict nadsoliton geometry.",
+    "The exact target admits nonprimitive binary-rescaled denominators D=3*2^k for k>0.",
+    "No selector theorem chooses (2,2,2,1,1) from the minimal canonical ledgers.",
+    "No theorem derives eta=9/5 without adopting a branch model, a primitive-denominator convention, and a selector convention as extra premises.",
+    "No QW-2191 selector discharge and no ToE closure are claimed."
+  ],
+  "minimal_branch_context_replay": {
+    "minimal_branch_model_used_D_3": true,
+    "minimal_branch_result_kind": "SCRATCH_STRICT_ALPHA_MINIMAL_BRANCH_COUNT_OBSTRUCTION_PROBE__NOT_A_THEOREM",
+    "primitive_denominator_needed_to_recover_prior_minimal_n": true,
+    "without_primitive_convention": "D=6,n/m=13/5; D=12,n/m=18/5; etc. are exact eta=9/5 rescaled families."
+  },
+  "next_honest_step": "Try to derive a primitive/no-hidden-binary-rescale denominator convention from strict nadsoliton geometry; absent that, denominator-3 remains a primitive gauge choice inside the branch model.",
+  "result_kind": "SCRATCH_STRICT_ALPHA_PRIMITIVE_DENOMINATOR_OBSTRUCTION_PROBE__NOT_A_THEOREM",
+  "source_reports": {
+    "minimal_branch_count_obstruction": "fundamental_action_reconstruction/scratch/bridge_strict_alpha_minimal_branch_count_obstruction_report.json"
+  },
+  "status": "OPEN_STRICT_ALPHA_PRIMITIVE_DENOMINATOR_OBSTRUCTION_NO_DENOMINATOR_THEOREM"
+}
