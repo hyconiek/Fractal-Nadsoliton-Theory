@@ -1,0 +1,638 @@
+{
+  "candidate_interpretation": {
+    "content": "The current strict-gate tuple can be used as a candidate positive Dirichlet quadratic source for a convex ledger selector, and the bounded scan selects (2,2,2,1,1) among the canonical eta=9/5 ledgers.",
+    "supported_by_this_probe": true,
+    "why_this_is_more_proof_like": "It tests the actual strict-gate parameters, verifies positivity/PSD by the Z12 circulant spectrum, and exhaustively scans all 5-node supports and assignments for the three canonical ledgers.",
+    "why_this_is_not_enough": "The scan also exposes a support-selection problem: the strict-gate Dirichlet energy prefers contiguous/clustered supports, not the fifth-step resonance support, and no theorem derives this action or support rule from strict nadsoliton geometry."
+  },
+  "canonical_ledger_assignment_scan": {
+    "global_best_among_canonical_ledgers": {
+      "energy": 8.066461680488555,
+      "ledger": [
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "support": [
+        0,
+        1,
+        2,
+        10,
+        11
+      ],
+      "weights": [
+        2,
+        2,
+        1,
+        1,
+        2
+      ]
+    },
+    "global_best_is_balanced_ledger": true,
+    "global_best_support_is_contiguous_example": false,
+    "global_best_support_is_cyclic_contiguous": true,
+    "global_best_support_is_fifth_window": false,
+    "ledger_summaries": [
+      {
+        "best_row": {
+          "energy": 19.88987539739669,
+          "ledger": [
+            4,
+            1,
+            1,
+            1,
+            1
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            10,
+            11
+          ],
+          "weights": [
+            4,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "ledger": [
+          4,
+          1,
+          1,
+          1,
+          1
+        ],
+        "max_energy": 29.994668553290992,
+        "mean_energy": 26.564916460257574,
+        "min_energy": 19.88987539739669,
+        "rows_scanned": 3960,
+        "worst_row": {
+          "energy": 29.994668553290992,
+          "ledger": [
+            4,
+            1,
+            1,
+            1,
+            1
+          ],
+          "support": [
+            0,
+            2,
+            4,
+            6,
+            9
+          ],
+          "weights": [
+            1,
+            1,
+            1,
+            1,
+            4
+          ]
+        }
+      },
+      {
+        "best_row": {
+          "energy": 11.569933466576602,
+          "ledger": [
+            3,
+            2,
+            1,
+            1,
+            1
+          ],
+          "support": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "weights": [
+            1,
+            2,
+            3,
+            1,
+            1
+          ]
+        },
+        "ledger": [
+          3,
+          2,
+          1,
+          1,
+          1
+        ],
+        "max_energy": 22.808658904359326,
+        "mean_energy": 19.319939243823693,
+        "min_energy": 11.569933466576602,
+        "rows_scanned": 15840,
+        "worst_row": {
+          "energy": 22.808658904359326,
+          "ledger": [
+            3,
+            2,
+            1,
+            1,
+            1
+          ],
+          "support": [
+            0,
+            2,
+            4,
+            7,
+            10
+          ],
+          "weights": [
+            1,
+            2,
+            1,
+            3,
+            1
+          ]
+        }
+      },
+      {
+        "best_row": {
+          "energy": 8.066461680488555,
+          "ledger": [
+            2,
+            2,
+            2,
+            1,
+            1
+          ],
+          "support": [
+            0,
+            1,
+            2,
+            10,
+            11
+          ],
+          "weights": [
+            2,
+            2,
+            1,
+            1,
+            2
+          ]
+        },
+        "ledger": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "max_energy": 19.203158881931778,
+        "mean_energy": 15.697450635606756,
+        "min_energy": 8.066461680488555,
+        "rows_scanned": 7920,
+        "worst_row": {
+          "energy": 19.203158881931778,
+          "ledger": [
+            2,
+            2,
+            2,
+            1,
+            1
+          ],
+          "support": [
+            0,
+            2,
+            4,
+            6,
+            9
+          ],
+          "weights": [
+            2,
+            1,
+            1,
+            2,
+            2
+          ]
+        }
+      }
+    ],
+    "total_rows_scanned": 27720
+  },
+  "hard_limits": [
+    "No identity K_legacy_ont == K_strict_gate is exported.",
+    "No legacy physical-role transfer is licensed.",
+    "The strict-gate Dirichlet quadratic action is audited as a candidate construction, not derived as a strict nadsoliton action theorem.",
+    "The bounded assignment scan selects the balanced ledger among canonical ledgers but does not derive branch count m=5, total exponent n=8, denominator 3, or binary-rescale quotient.",
+    "The support scan prefers clustered supports over the fifth-step resonance window; no support/phase-placement theorem is exported.",
+    "No Aut(Z_12)/N462/QW-2191 selector obstruction is discharged.",
+    "No theorem derives eta=9/5 without the branch model, denominator/quotient convention, Dirichlet action premise, and support/phase-placement premise.",
+    "No QW-2191 selector discharge and no ToE closure are claimed."
+  ],
+  "laplacian_psd_audit": {
+    "all_nonconstant_modes_positive": true,
+    "interpretation": "Positive strict-gate distance weights give a connected weighted Z12 Dirichlet quadratic form with only the constant zero mode.",
+    "minimum_nonconstant_eigenvalue": 0.7541211542070796,
+    "spectrum_rows": [
+      {
+        "eigenvalue": 0.0,
+        "mode": 0
+      },
+      {
+        "eigenvalue": 0.7541211542070796,
+        "mode": 1
+      },
+      {
+        "eigenvalue": 1.5770495144276093,
+        "mode": 2
+      },
+      {
+        "eigenvalue": 1.9614068619764453,
+        "mode": 3
+      },
+      {
+        "eigenvalue": 2.19956884933321,
+        "mode": 4
+      },
+      {
+        "eigenvalue": 2.2986062720790974,
+        "mode": 5
+      },
+      {
+        "eigenvalue": 2.3421820411463004,
+        "mode": 6
+      },
+      {
+        "eigenvalue": 2.2986062720790974,
+        "mode": 7
+      },
+      {
+        "eigenvalue": 2.19956884933321,
+        "mode": 8
+      },
+      {
+        "eigenvalue": 1.9614068619764458,
+        "mode": 9
+      },
+      {
+        "eigenvalue": 1.5770495144276093,
+        "mode": 10
+      },
+      {
+        "eigenvalue": 0.7541211542070811,
+        "mode": 11
+      }
+    ],
+    "zero_mode_eigenvalue": 0.0
+  },
+  "next_honest_step": "If pursuing a physical selector, prove or reject a strict nadsoliton action/source whose reduced branch-sector Dirichlet form and support rule are both exported; otherwise keep this as a candidate action audit with an explicit support-selection obstruction.",
+  "positive_weight_audit": {
+    "all_cyclic_distance_weights_positive": true,
+    "distance_weight_rows": [
+      {
+        "distance": 1,
+        "positive": true,
+        "weight": 0.4699856726450201
+      },
+      {
+        "distance": 2,
+        "positive": true,
+        "weight": 0.1920435516901028
+      },
+      {
+        "distance": 3,
+        "positive": true,
+        "weight": 0.09142861427792495
+      },
+      {
+        "distance": 4,
+        "positive": true,
+        "weight": 0.0470291687456504
+      },
+      {
+        "distance": 5,
+        "positive": true,
+        "weight": 0.02413122336363006
+      },
+      {
+        "distance": 6,
+        "positive": true,
+        "weight": 0.011070817321442113
+      }
+    ]
+  },
+  "previous_majorization_replay": {
+    "balanced_ledger": [
+      2,
+      2,
+      2,
+      1,
+      1
+    ],
+    "q_power_product": "256/243",
+    "result_kind": "SCRATCH_STRICT_ALPHA_SYMMETRIC_CONVEX_SELECTOR_MAJORIZATION_CERTIFICATE_PROBE__NOT_A_THEOREM"
+  },
+  "result_kind": "SCRATCH_STRICT_ALPHA_STRICT_GATE_DIRICHLET_ACTION_AUDIT_PROBE__NOT_A_THEOREM",
+  "source_reports": {
+    "symmetric_convex_selector_majorization_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_alpha_symmetric_convex_selector_majorization_certificate_report.json"
+  },
+  "status": "OPEN_STRICT_ALPHA_STRICT_GATE_DIRICHLET_ACTION_AUDIT_NO_SUPPORT_SELECTOR_THEOREM",
+  "strict_gate_parameters": {
+    "beta": 1.0,
+    "eta": 1.8,
+    "kernel": "K_strict_gate(d)=cos(omega*d+phi)/(1+beta*d^eta)",
+    "note": "strict-side working tuple only; no K_legacy_ont identification is used",
+    "omega": 0.18575,
+    "phi": 0.1625
+  },
+  "support_comparison": {
+    "contiguous_rows": [
+      {
+        "best_assignment": {
+          "energy": 19.889875397396708,
+          "weights": [
+            1,
+            1,
+            4,
+            1,
+            1
+          ]
+        },
+        "ledger": [
+          4,
+          1,
+          1,
+          1,
+          1
+        ],
+        "max_energy": 23.031304045266015,
+        "mean_energy": 21.387922706333647,
+        "min_energy": 19.889875397396708,
+        "permutation_count": 5,
+        "support": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "worst_assignment": {
+          "energy": 23.031304045266015,
+          "weights": [
+            1,
+            1,
+            1,
+            1,
+            4
+          ]
+        }
+      },
+      {
+        "best_assignment": {
+          "energy": 11.569933466576604,
+          "weights": [
+            1,
+            1,
+            3,
+            2,
+            1
+          ]
+        },
+        "ledger": [
+          3,
+          2,
+          1,
+          1,
+          1
+        ],
+        "max_energy": 16.201958255219015,
+        "mean_energy": 13.672309694088515,
+        "min_energy": 11.569933466576604,
+        "permutation_count": 20,
+        "support": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "worst_assignment": {
+          "energy": 16.201958255219015,
+          "weights": [
+            3,
+            1,
+            1,
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "best_assignment": {
+          "energy": 8.066461680488556,
+          "weights": [
+            1,
+            2,
+            2,
+            2,
+            1
+          ]
+        },
+        "ledger": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "max_energy": 11.16008494579461,
+        "mean_energy": 9.81450318796594,
+        "min_energy": 8.066461680488556,
+        "permutation_count": 10,
+        "support": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "worst_assignment": {
+          "energy": 11.16008494579461,
+          "weights": [
+            2,
+            1,
+            2,
+            1,
+            2
+          ]
+        }
+      }
+    ],
+    "contiguous_support": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "fifth_window_rows": [
+      {
+        "best_assignment": {
+          "energy": 28.806964383024514,
+          "weights": [
+            1,
+            1,
+            4,
+            1,
+            1
+          ]
+        },
+        "ledger": [
+          4,
+          1,
+          1,
+          1,
+          1
+        ],
+        "max_energy": 29.41065400749759,
+        "mean_energy": 29.23496101368612,
+        "min_energy": 28.806964383024514,
+        "permutation_count": 5,
+        "support": [
+          0,
+          7,
+          2,
+          9,
+          4
+        ],
+        "worst_assignment": {
+          "energy": 29.41065400749759,
+          "weights": [
+            1,
+            1,
+            1,
+            4,
+            1
+          ]
+        }
+      },
+      {
+        "best_assignment": {
+          "energy": 21.55299504526002,
+          "weights": [
+            1,
+            1,
+            3,
+            1,
+            2
+          ]
+        },
+        "ledger": [
+          3,
+          2,
+          1,
+          1,
+          1
+        ],
+        "max_energy": 22.627104108214635,
+        "mean_energy": 22.232715120291196,
+        "min_energy": 21.55299504526002,
+        "permutation_count": 20,
+        "support": [
+          0,
+          7,
+          2,
+          9,
+          4
+        ],
+        "worst_assignment": {
+          "energy": 22.627104108214635,
+          "weights": [
+            1,
+            1,
+            1,
+            3,
+            2
+          ]
+        }
+      },
+      {
+        "best_assignment": {
+          "energy": 18.29375613429685,
+          "weights": [
+            2,
+            1,
+            2,
+            1,
+            2
+          ]
+        },
+        "ledger": [
+          2,
+          2,
+          2,
+          1,
+          1
+        ],
+        "max_energy": 19.03204054059851,
+        "mean_energy": 18.73159217359374,
+        "min_energy": 18.29375613429685,
+        "permutation_count": 10,
+        "support": [
+          0,
+          7,
+          2,
+          9,
+          4
+        ],
+        "worst_assignment": {
+          "energy": 19.03204054059851,
+          "weights": [
+            2,
+            2,
+            1,
+            1,
+            2
+          ]
+        }
+      }
+    ],
+    "fifth_window_support": [
+      0,
+      7,
+      2,
+      9,
+      4
+    ],
+    "verdict": "The strict-gate Dirichlet candidate supports the balanced ledger in the bounded scan but prefers clustered supports over the fifth-step resonance window, so a separate support/phase-placement theorem is still required."
+  },
+  "target_identity_replay": {
+    "canonical_ledgers": [
+      [
+        4,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        3,
+        2,
+        1,
+        1,
+        1
+      ],
+      [
+        2,
+        2,
+        2,
+        1,
+        1
+      ]
+    ],
+    "eta_residual_vs_9_5": 0.0,
+    "q_power_product": "256/243"
+  }
+}

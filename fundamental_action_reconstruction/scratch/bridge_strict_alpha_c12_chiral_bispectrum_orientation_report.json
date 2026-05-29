@@ -1,0 +1,249 @@
+{
+  "bispectrum_definition": {
+    "formula": "B(k,l)=F_k * F_l * conjugate(F_{k+l mod 12})",
+    "reflection_behavior": "Reflection conjugates/reindexes Fourier modes; the audited chiral imaginary parts flip sign between the two d5 orientations.",
+    "selected_pairs": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        5,
+        5
+      ]
+    ],
+    "translation_invariance_reason": "Under a shift by s, F_k gains exp(-2πik s/12), so the three factors cancel exactly."
+  },
+  "c12_chiral_orientation_scan": {
+    "all_selected_pairs_reflection_chiral": true,
+    "all_selected_pairs_translation_invariant_over_sources": true,
+    "orientation_bispectrum_summary": {
+      "1,1": {
+        "by_orientation": {
+          "-1": {
+            "imaginary_sign": 1,
+            "representative_value": {
+              "imag": 0.143593539,
+              "real": 2.502577388
+            },
+            "unique_value_count_over_12_sources": 1
+          },
+          "1": {
+            "imaginary_sign": -1,
+            "representative_value": {
+              "imag": -0.143593539,
+              "real": 2.502577388
+            },
+            "unique_value_count_over_12_sources": 1
+          }
+        },
+        "imaginary_parts_flip_under_reflection": true,
+        "orientation_separating": true,
+        "real_parts_match_under_reflection": true
+      },
+      "1,2": {
+        "by_orientation": {
+          "-1": {
+            "imaginary_sign": -1,
+            "representative_value": {
+              "imag": -1.124355653,
+              "real": -3.464101615
+            },
+            "unique_value_count_over_12_sources": 1
+          },
+          "1": {
+            "imaginary_sign": 1,
+            "representative_value": {
+              "imag": 1.124355653,
+              "real": -3.464101615
+            },
+            "unique_value_count_over_12_sources": 1
+          }
+        },
+        "imaginary_parts_flip_under_reflection": true,
+        "orientation_separating": true,
+        "real_parts_match_under_reflection": true
+      },
+      "1,5": {
+        "by_orientation": {
+          "-1": {
+            "imaginary_sign": 1,
+            "representative_value": {
+              "imag": 2.0,
+              "real": 12.0
+            },
+            "unique_value_count_over_12_sources": 1
+          },
+          "1": {
+            "imaginary_sign": -1,
+            "representative_value": {
+              "imag": -2.0,
+              "real": 12.0
+            },
+            "unique_value_count_over_12_sources": 1
+          }
+        },
+        "imaginary_parts_flip_under_reflection": true,
+        "orientation_separating": true,
+        "real_parts_match_under_reflection": true
+      },
+      "2,3": {
+        "by_orientation": {
+          "-1": {
+            "imaginary_sign": -1,
+            "representative_value": {
+              "imag": -23.124355653,
+              "real": 3.464101615
+            },
+            "unique_value_count_over_12_sources": 1
+          },
+          "1": {
+            "imaginary_sign": 1,
+            "representative_value": {
+              "imag": 23.124355653,
+              "real": 3.464101615
+            },
+            "unique_value_count_over_12_sources": 1
+          }
+        },
+        "imaginary_parts_flip_under_reflection": true,
+        "orientation_separating": true,
+        "real_parts_match_under_reflection": true
+      },
+      "5,5": {
+        "by_orientation": {
+          "-1": {
+            "imaginary_sign": 1,
+            "representative_value": {
+              "imag": 27.856406461,
+              "real": 99.497422612
+            },
+            "unique_value_count_over_12_sources": 1
+          },
+          "1": {
+            "imaginary_sign": -1,
+            "representative_value": {
+              "imag": -27.856406461,
+              "real": 99.497422612
+            },
+            "unique_value_count_over_12_sources": 1
+          }
+        },
+        "imaginary_parts_flip_under_reflection": true,
+        "orientation_separating": true,
+        "real_parts_match_under_reflection": true
+      }
+    },
+    "orientation_separating_pair_count": 5,
+    "orientation_separating_pairs": [
+      "1,1",
+      "1,2",
+      "1,5",
+      "2,3",
+      "5,5"
+    ],
+    "row_count": 24
+  },
+  "candidate_interpretation": {
+    "content": "Chiral Fourier phase invariants can supply an orientation discriminator, but only in a C12 + handedness setting and not as a full source selector.",
+    "status": "candidate-supported-but-handedness-and-source-not-derived",
+    "supported_by_this_probe": true,
+    "why_this_is_more_proof_like": "The probe uses the exact bispectrum shift-cancellation identity and a complete 24-row finite scan to isolate orientation versus source selection power.",
+    "why_this_is_not_enough": "No strict theorem supplies the handedness convention, and translation invariance intentionally leaves the source unresolved."
+  },
+  "hard_limits": [
+    "No identity K_legacy_ont == K_strict_gate is exported.",
+    "No legacy physical-role transfer is licensed.",
+    "The bispectrum orientation discriminator is C12-invariant but reflection-chiral; it is not D12-invariant.",
+    "Using the imaginary bispectrum sign requires a handedness convention or strict chirality source that is not derived here.",
+    "The source/translation representative remains 12-fold degenerate under translation-invariant bispectrum data.",
+    "No theorem derives the origin, orientation, external phase, chirality, or handedness reference from strict nadsoliton geometry.",
+    "No theorem derives branch count m=5, total exponent n=8, denominator 3, or binary-rescale quotient.",
+    "No Aut(Z_12)/N462/QW-2191 selector obstruction is discharged by this chiral bispectrum audit.",
+    "No theorem derives eta=9/5 without the branch model, denominator/quotient convention, support premise, ledger selector, source/orientation premise, assignment premise, and chiral phase-reference premise.",
+    "No QW-2191 discharge and no ToE closure are claimed.",
+    "No ToE closure is claimed."
+  ],
+  "next_honest_step": "Either derive a strict chirality/handedness source and a separate source-localizing term, or prove a no-go for translation-invariant phase invariants selecting the source representative.",
+  "previous_phase_obstruction_replay": {
+    "all_power_spectra_constant_on_orbit": true,
+    "dft_covariance_max_error": 3.751325971894055e-14,
+    "phase_reference_status": "candidate-supported-but-phase-reference-not-derived",
+    "result_kind": "SCRATCH_STRICT_ALPHA_D12_FOURIER_PHASE_REFERENCE_OBSTRUCTION_PROBE__NOT_A_THEOREM"
+  },
+  "result_kind": "SCRATCH_STRICT_ALPHA_C12_CHIRAL_BISPECTRUM_ORIENTATION_PROBE__NOT_A_THEOREM",
+  "selector_consequence": {
+    "what_is_gained": "A C12-invariant but reflection-chiral bispectrum can distinguish the two d5 orientations after a handedness convention is allowed.",
+    "what_remains_unselected": "The source/translation index remains 12-fold degenerate because the bispectrum is translation-invariant by construction.",
+    "why_this_is_not_D12_invariant": "The separating observable is the sign of an imaginary bispectrum component, which flips under reflection."
+  },
+  "source_degeneracy_after_c12_chiral_phase": {
+    "-1": {
+      "representative_sources": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "signature_count": 1,
+      "source_counts_per_signature": [
+        12
+      ]
+    },
+    "1": {
+      "representative_sources": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "signature_count": 1,
+      "source_counts_per_signature": [
+        12
+      ]
+    }
+  },
+  "source_reports": {
+    "d12_fourier_phase_reference_obstruction": "fundamental_action_reconstruction/scratch/bridge_strict_alpha_d12_fourier_phase_reference_obstruction_report.json"
+  },
+  "status": "OPEN_STRICT_ALPHA_C12_CHIRAL_BISPECTRUM_ORIENTATION_AUDIT_NO_STRICT_SELECTOR_DISCHARGE",
+  "target_identity_replay": {
+    "eta_residual_vs_9_5": 0.0,
+    "forward_assignment": [
+      2,
+      2,
+      2,
+      1,
+      1
+    ],
+    "q_power_product": "256/243"
+  }
+}
