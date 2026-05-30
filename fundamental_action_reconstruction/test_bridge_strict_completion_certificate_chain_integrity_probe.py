@@ -1,0 +1,86 @@
+from __future__ import annotations
+
+import json
+import subprocess
+import sys
+import unittest
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+SCRIPT = ROOT / "fundamental_action_reconstruction" / "scratch" / "bridge_strict_completion_certificate_chain_integrity_probe.py"
+REPORT_JSON = ROOT / "fundamental_action_reconstruction" / "scratch" / "bridge_strict_completion_certificate_chain_integrity_report.json"
+REPORT_MD = ROOT / "fundamental_action_reconstruction" / "scratch" / "bridge_strict_completion_certificate_chain_integrity_report.md"
+
+
+class StrictCompletionCertificateChainIntegrityProbeTest(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        subprocess.run([sys.executable, str(SCRIPT)], check=True, cwd=ROOT)
+        cls.payload = json.loads(REPORT_JSON.read_text(encoding="utf-8"))
+
+    def test_result_kind_sources_and_shared_objects(self):
+        payload = self.payload
+        self.assertEqual(
+            payload["result_kind"],
+            "SCRATCH_STRICT_COMPLETION_CERTIFICATE_CHAIN_INTEGRITY__FINITE_LEDGER_NO_BRIDGE_THEOREM",
+        )
+        self.assertIn("cross-consistent", payload["status"])
+        self.assertEqual(set(payload["source_reports"]), {
+            "necessity",
+            "cocycle",
+            "phase_zero",
+            "phase_zero_rational",
+            "phase_zero_margin",
+            "damping_monotonicity",
+            "low_order_no_go",
+        })
+        shared = payload["expected_shared_objects"]
+        self.assertEqual(shared["phase_transport_sign_pattern"], [1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, 1])
+        self.assertEqual(shared["phase_sign_flip_edges"], ["1->2", "5->6", "7->8", "9->10"])
+        self.assertEqual(shared["unique_exact_completion_subset"], "alpha_normalization+phase_frequency_transport+damping_compression")
+
+    def test_cross_checks_and_chain_summary(self):
+        payload = self.payload
+        self.assertTrue(payload["all_cross_checks_pass"])
+        self.assertTrue(all(payload["cross_checks"].values()))
+        checks = payload["cross_checks"]
+        self.assertTrue(checks["necessity_has_unique_exact_full_APD_subset"])
+        self.assertTrue(checks["phase_zero_rational_matches_float"])
+        self.assertTrue(checks["phase_zero_margin_preserves_rational"])
+        self.assertTrue(checks["damping_cannot_supply_sign_flips"])
+        self.assertTrue(checks["low_order_no_go_all_listed_models_fail"])
+
+        summary = payload["chain_summary"]
+        self.assertTrue(summary["exact_APD_completion_certified"])
+        self.assertTrue(summary["transport_cocycle_certified"])
+        self.assertTrue(summary["phase_sign_source_certified"])
+        self.assertTrue(summary["damping_envelope_certified"])
+        self.assertTrue(summary["simple_transport_readings_rejected"])
+        self.assertFalse(summary["strict_dynamic_derivation_exported"])
+        self.assertFalse(summary["bridge_theorem_exported"])
+
+    def test_frontier_proof_guardrails_and_markdown(self):
+        frontier = self.payload["frontier_statement"]
+        self.assertIn("internally consistent", frontier["positive_content"])
+        self.assertIn("does not derive", frontier["negative_content"])
+        self.assertIn("strict_phase_frequency", frontier["next_real_blocker"])
+        self.assertIn("orientation_chi11_source", frontier["next_real_blocker"])
+
+        proof = self.payload["proof_certificate"]
+        self.assertIn("All prerequisite JSON reports", proof["ledger_step"])
+        self.assertIn("common sign pattern", proof["shared_object_step"])
+        self.assertIn("A+P+D", proof["factor_step"])
+        self.assertIn("phase only", proof["envelope_step"])
+
+        hard_limits = "\n".join(self.payload["hard_limits"])
+        self.assertIn("K_strict_gate remains the current live/full", hard_limits)
+        self.assertIn("No unqualified identity K_legacy_ont == K_strict_gate", hard_limits)
+        self.assertIn("No proof derives A(d), P(d), D(d)", hard_limits)
+        self.assertIn("No beta_tors -> chi_11 theorem", hard_limits)
+        self.assertIn("No QW-2191 selector discharge", hard_limits)
+        self.assertIn("No ToE closure", hard_limits)
+        self.assertTrue(REPORT_MD.exists())
+
+
+if __name__ == "__main__":
+    unittest.main()
