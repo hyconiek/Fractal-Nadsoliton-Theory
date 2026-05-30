@@ -1,0 +1,271 @@
+{
+  "closure_audit": {
+    "aut_conjugate_d5_plus_d6_system": {
+      "cardinality_compatible_assignments_checked": 792,
+      "clauses_forbidden_pair_count": 18,
+      "dihedral_orbit_count": 1,
+      "distance_histograms_d1_to_d6": [
+        [
+          4,
+          3,
+          2,
+          1,
+          0,
+          0
+        ]
+      ],
+      "forbidden_shells": [
+        5,
+        6
+      ],
+      "gap_necklaces": [
+        [
+          1,
+          1,
+          1,
+          1,
+          8
+        ]
+      ],
+      "is_unsat": false,
+      "name": "aut_conjugate_d5_plus_d6",
+      "representative_solutions": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          11
+        ],
+        [
+          0,
+          1,
+          2,
+          10,
+          11
+        ],
+        [
+          0,
+          1,
+          9,
+          10,
+          11
+        ],
+        [
+          0,
+          8,
+          9,
+          10,
+          11
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      "selects_A5_d5_histogram": false,
+      "solution_count": 12
+    },
+    "base_chi_11_system": {
+      "cardinality_compatible_assignments_checked": 792,
+      "clauses_forbidden_pair_count": 18,
+      "dihedral_orbit_count": 1,
+      "distance_histograms_d1_to_d6": [
+        [
+          0,
+          3,
+          2,
+          1,
+          4,
+          0
+        ]
+      ],
+      "forbidden_shells": [
+        1,
+        6
+      ],
+      "gap_necklaces": [
+        [
+          2,
+          2,
+          3,
+          2,
+          3
+        ]
+      ],
+      "is_unsat": false,
+      "name": "base_or_chi_11_closed_d1_plus_d6",
+      "representative_solutions": [
+        [
+          0,
+          2,
+          4,
+          7,
+          9
+        ],
+        [
+          0,
+          2,
+          5,
+          7,
+          9
+        ],
+        [
+          0,
+          2,
+          5,
+          7,
+          10
+        ],
+        [
+          0,
+          3,
+          5,
+          7,
+          10
+        ],
+        [
+          0,
+          3,
+          5,
+          8,
+          10
+        ],
+        [
+          1,
+          3,
+          5,
+          8,
+          10
+        ]
+      ],
+      "selects_A5_d5_histogram": true,
+      "solution_count": 12
+    },
+    "base_seed_forbidden_shells": [
+      1,
+      6
+    ],
+    "chi_11_kernel_closed_forbidden_shells": [
+      1,
+      6
+    ],
+    "chi_11_kernel_units": [
+      1,
+      11
+    ],
+    "full_Aut_closed_forbidden_shells": [
+      1,
+      5,
+      6
+    ],
+    "full_Aut_closed_system": {
+      "cardinality_compatible_assignments_checked": 792,
+      "clauses_forbidden_pair_count": 30,
+      "dihedral_orbit_count": 0,
+      "distance_histograms_d1_to_d6": [],
+      "forbidden_shells": [
+        1,
+        5,
+        6
+      ],
+      "gap_necklaces": [],
+      "is_unsat": true,
+      "name": "full_Aut_closed_d1_plus_d5_plus_d6",
+      "representative_solutions": [],
+      "selects_A5_d5_histogram": false,
+      "solution_count": 0
+    },
+    "shell_orbit_of_d1_under_full_Aut": [
+      1,
+      5
+    ],
+    "shell_orbit_of_d6_under_full_Aut": [
+      6
+    ],
+    "unit_shell_action": [
+      {
+        "image_of_d1": 1,
+        "image_of_d5": 5,
+        "image_of_d6": 6,
+        "preserves_base_clause_set_d1_d6": true,
+        "unit": 1
+      },
+      {
+        "image_of_d1": 5,
+        "image_of_d5": 1,
+        "image_of_d6": 6,
+        "preserves_base_clause_set_d1_d6": false,
+        "unit": 5
+      },
+      {
+        "image_of_d1": 5,
+        "image_of_d5": 1,
+        "image_of_d6": 6,
+        "preserves_base_clause_set_d1_d6": false,
+        "unit": 7
+      },
+      {
+        "image_of_d1": 1,
+        "image_of_d5": 5,
+        "image_of_d6": 6,
+        "preserves_base_clause_set_d1_d6": true,
+        "unit": 11
+      }
+    ]
+  },
+  "exact_proof_certificate": {
+    "base_certificate": "Forbidding d1 and d6 gives 12 solutions, one dihedral orbit, with histogram [0,3,2,1,4,0] (A5/d5).",
+    "conditional_positive": "The d1+d6 certificate survives exactly at the chi_11-kernel level {1,11}; it is not a full-Aut-invariant strict-core selector theorem.",
+    "finite_domain": "All C(12,5)=792 Boolean cardinality-compatible supports are enumerated exactly.",
+    "source_obstruction": "A strict derivation would still need an internal source for the chi_11/shell-label reduction before using the successful exact-cover selector.",
+    "unit_closure_step": "Under Aut(Z_12)={1,5,7,11}, the orbit of d1 is {d1,d5}; d6 is fixed. Full-Aut closure of d1+d6 is therefore d1+d5+d6.",
+    "unsat_result": "Forbidding d1,d5,d6 has 0 solutions among all 792 five-supports, so full-Aut closure destroys the exact-cover certificate."
+  },
+  "finite_model": {
+    "active_count": 5,
+    "automorphism_units": [
+      1,
+      5,
+      7,
+      11
+    ],
+    "base_forbidden_shells": [
+      1,
+      6
+    ],
+    "ring": "Z_12",
+    "target_eta": "9/5",
+    "target_q_power": "256/243"
+  },
+  "hard_limits": [
+    "No identity K_legacy_ont == K_strict_gate is used or claimed.",
+    "No legacy role transfer to K_strict_gate, alpha_geo, beta_tors, or D_f is made.",
+    "No theorem derives the chi_11-kernel, shell-label d1 vs d5, or unit-axis bit from strict nadsoliton geometry.",
+    "The result is a finite full-Aut clause-closure UNSAT audit, not a selector-origin theorem.",
+    "No QW-2191 discharge.",
+    "No ToE closure."
+  ],
+  "interpretation": {
+    "honest_limit": "QW-2191 remains open: no strict-core source for chi_11, unit-axis bit, or shell-label reduction is derived here.",
+    "new_no_go": "If the clause set is closed under full Aut(Z_12), d5 clauses must be added and the five-active exact-cover problem becomes UNSAT.",
+    "relation_to_previous_probe": "This strengthens the branch-pair no-go at the level of the original Boolean clauses rather than only at the level of selected branch pairs.",
+    "what_was_proved": "The finite d1+d6 exact-cover selector is computationally correct but only after the d1-vs-d5 shell label has already been chosen."
+  },
+  "ontology_guardrail": {
+    "allowed_reading": "The nadsoliton itself is the primordial information in a solitonic state.",
+    "forbidden_reading": "No separate informational layer underneath the nadsoliton is introduced by this finite combinatorial audit."
+  },
+  "result_kind": "SCRATCH_STRICT_ALPHA_EXACT_COVER_FULL_AUT_CLAUSE_CLOSURE_UNSAT_AUDIT_PROBE__NO_GO_NOT_A_THEOREM",
+  "status": "full-aut-closure-of-d1-d6-exact-cover-is-unsat-chi_11-kernel-certificate-only"
+}
