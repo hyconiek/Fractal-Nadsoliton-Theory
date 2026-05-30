@@ -1,0 +1,195 @@
+{
+  "branch_rows": [
+    {
+      "dihedral_orbit_index": 0,
+      "name": "A1_k1",
+      "required_chi11_value": -1,
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "dihedral_orbit_index": 37,
+      "name": "A5_k5",
+      "required_chi11_value": 1,
+      "support": [
+        0,
+        3,
+        5,
+        8,
+        10
+      ]
+    },
+    {
+      "dihedral_orbit_index": 37,
+      "name": "A7_k7",
+      "required_chi11_value": 1,
+      "support": [
+        0,
+        2,
+        4,
+        7,
+        9
+      ]
+    },
+    {
+      "dihedral_orbit_index": 0,
+      "name": "A11_k11",
+      "required_chi11_value": -1,
+      "support": [
+        0,
+        8,
+        9,
+        10,
+        11
+      ]
+    }
+  ],
+  "exact_proof_certificate": {
+    "branch_constraint": "A1/A11=-1 and A5/A7=+1 fixes the branch two-cycle coefficient to +1.",
+    "finite_domain": "All C(12,5)=792 supports are quotiented by D12; the residual unit-5 action gives the chi_11 two-cycle basis.",
+    "free_coefficients": "The other 12 two-cycle coefficients are independently free in (-1, 0, 1), giving 3^12=531441 branch-normalized ternary extensions.",
+    "module_reuse_boundary": "The D12 chi_11 module has 13 two-cycle basis generators; this probe only studies branch-normalized ternary extensions inside that already computed module.",
+    "strict_limit": "The sparsest-extension rule is an added selector criterion, not a strict-core derivation of chi_11 or QW-2191 discharge.",
+    "support_formula": "If k non-branch coefficients are nonzero, the D12-component support size is 2+2k.",
+    "unique_minimum": "The unique minimum-support extension has k=0, support size 2, and equals the branch generator only."
+  },
+  "finite_model": {
+    "active_count": 5,
+    "automorphism_units": [
+      1,
+      5,
+      7,
+      11
+    ],
+    "chi11_two_cycle_count": 13,
+    "d12_orbit_count": 38,
+    "dihedral_units": [
+      1,
+      11
+    ],
+    "ring": "Z_12",
+    "support_count": 792,
+    "target_eta": "9/5",
+    "target_q_power": "256/243"
+  },
+  "hard_limits": [
+    "No identity K_legacy_ont == K_strict_gate is asserted.",
+    "No legacy physical-role transfer onto K_strict_gate is used.",
+    "No theorem derives chi_11, shell-labels, unit-axis bit, exact-cover clauses, or cardinality 5 from strict geometry.",
+    "No theorem derives a sparsest-extension selector from strict core.",
+    "No QW-2191 discharge is claimed.",
+    "No ToE closure is claimed."
+  ],
+  "interpretation": {
+    "honest_negative": "The sparsest-extension rule is not derived from strict geometry and cannot be used as a hidden QW-2191 discharge.",
+    "honest_positive": "Given the D12 chi_11 module and a sparsest-extension rule, the branch generator is uniquely selected.",
+    "relation_to_previous_probe": "This refines the rank-13 / 531441 branch-normalized count by proving the exact support-size distribution and unique minimum."
+  },
+  "minimum_support_witness": {
+    "nonzero_cycle_coefficients": {
+      "branch_cycle_[0,37]": 1
+    },
+    "requires_imported_premise": "D12 chi_11 module plus sparsest-extension selector; not strict full-Aut provenance",
+    "values_by_branch": {
+      "A11_k11": -1,
+      "A1_k1": -1,
+      "A5_k5": 1,
+      "A7_k7": 1
+    },
+    "values_by_d12_orbit": {
+      "0": -1,
+      "37": 1
+    }
+  },
+  "ontology_guardrail": {
+    "allowed_reading": "The nadsoliton itself remains the primordial information in a solitonic state.",
+    "forbidden_reading": "No separate informational layer underneath the nadsoliton is introduced."
+  },
+  "result_kind": "SCRATCH_STRICT_ALPHA_D12_CHI11_SPARSEST_EXTENSION_SELECTOR_AUDIT__CONDITIONAL_NOT_A_THEOREM",
+  "sparsity_summary": {
+    "branch_cycle_coefficient_fixed_to": 1,
+    "branch_cycle_orbit_pair": [
+      0,
+      37
+    ],
+    "branch_normalized_ternary_function_count": 531441,
+    "free_nonbranch_cycle_count": 12,
+    "maximum_d12_component_support_size": 26,
+    "minimum_d12_component_support_size": 2,
+    "minimum_support_function_count": 1,
+    "unique_minimum_is_branch_generator": true
+  },
+  "status": "sparsest-branch-normalized-d12-chi11-extension-is-unique-but-sparsity-is-extra",
+  "support_size_distribution": [
+    {
+      "d12_component_support_size": 2,
+      "function_count": 1,
+      "nonzero_free_coefficients": 0
+    },
+    {
+      "d12_component_support_size": 4,
+      "function_count": 24,
+      "nonzero_free_coefficients": 1
+    },
+    {
+      "d12_component_support_size": 6,
+      "function_count": 264,
+      "nonzero_free_coefficients": 2
+    },
+    {
+      "d12_component_support_size": 8,
+      "function_count": 1760,
+      "nonzero_free_coefficients": 3
+    },
+    {
+      "d12_component_support_size": 10,
+      "function_count": 7920,
+      "nonzero_free_coefficients": 4
+    },
+    {
+      "d12_component_support_size": 12,
+      "function_count": 25344,
+      "nonzero_free_coefficients": 5
+    },
+    {
+      "d12_component_support_size": 14,
+      "function_count": 59136,
+      "nonzero_free_coefficients": 6
+    },
+    {
+      "d12_component_support_size": 16,
+      "function_count": 101376,
+      "nonzero_free_coefficients": 7
+    },
+    {
+      "d12_component_support_size": 18,
+      "function_count": 126720,
+      "nonzero_free_coefficients": 8
+    },
+    {
+      "d12_component_support_size": 20,
+      "function_count": 112640,
+      "nonzero_free_coefficients": 9
+    },
+    {
+      "d12_component_support_size": 22,
+      "function_count": 67584,
+      "nonzero_free_coefficients": 10
+    },
+    {
+      "d12_component_support_size": 24,
+      "function_count": 24576,
+      "nonzero_free_coefficients": 11
+    },
+    {
+      "d12_component_support_size": 26,
+      "function_count": 4096,
+      "nonzero_free_coefficients": 12
+    }
+  ]
+}

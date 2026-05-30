@@ -1,0 +1,658 @@
+{
+  "exact_proof_certificate": {
+    "admitting_subgroups": "The only admitting subgroups are ['T_semidirect_{1}_cyclic_translation', 'T_semidirect_{1,11}_D12'].",
+    "finite_domain": "All C(12,5)=792 supports are enumerated for every affine unit subgroup between translations and full Aut.",
+    "full_aut_consequence": "Full affine Aut contains both unit 5 and unit 7, so any full-Aut invariant support source is constant on the mixed branch orbit and cannot export chi_11 polarity.",
+    "killing_subgroups": "The subgroups ['T_semidirect_{1,5}_unit5_axis', 'T_semidirect_{1,7}_unit7_axis', 'T_semidirect_{1,5,7,11}_full_affine_Aut'] all mix opposite branch signs in one quotient orbit.",
+    "strict_limit": "This subgroup-lattice fact does not derive the missing unit-axis premise and does not discharge QW-2191.",
+    "unit_obstruction": "The obstruction appears exactly when the admitted unit subgroup contains unit 5 or unit 7; unit 11 alone is harmless because it preserves the chi_11 sign pairs.",
+    "well_definedness_test": "A quotient can host branch chi_11 exactly when no quotient orbit contains both signs A1/A11=-1 and A5/A7=+1."
+  },
+  "finite_model": {
+    "active_count": 5,
+    "affine_unit_subgroup_count": 5,
+    "all_automorphism_units": [
+      1,
+      5,
+      7,
+      11
+    ],
+    "ring": "Z_12",
+    "support_count": 792,
+    "target_eta": "9/5",
+    "target_q_power": "256/243"
+  },
+  "hard_limits": [
+    "No identity K_legacy_ont == K_strict_gate is asserted.",
+    "No legacy physical-role transfer onto K_strict_gate is used.",
+    "No theorem derives chi_11, shell-labels, unit-axis bit, exact-cover clauses, or cardinality 5 from strict geometry.",
+    "No QW-2191 discharge is claimed.",
+    "No ToE closure is claimed.",
+    "Result classifies affine subgroup quotients; it does not supply an internal strict source for selecting the D12/unit-axis premise."
+  ],
+  "interpretation": {
+    "honest_negative": "Any quotient admitting unit 5 or unit 7 mixes A1/A11 with A5/A7 and therefore erases the branch sign.",
+    "honest_positive": "The subgroup lattice gives an exact finite boundary: D12 is the largest affine unit subgroup preserving the branch chi_11 quotient.",
+    "relation_to_previous_probe": "The previous probe showed full-Aut amplitude can locate the block; this probe proves which subgroup symmetries erase the polarity."
+  },
+  "lattice_summary": {
+    "admitting_subgroup_count": 2,
+    "admitting_subgroups": [
+      "T_semidirect_{1}_cyclic_translation",
+      "T_semidirect_{1,11}_D12"
+    ],
+    "full_aut_admits_chi11": false,
+    "killing_subgroup_count": 3,
+    "killing_subgroups": [
+      "T_semidirect_{1,5}_unit5_axis",
+      "T_semidirect_{1,7}_unit7_axis",
+      "T_semidirect_{1,5,7,11}_full_affine_Aut"
+    ],
+    "minimal_killing_unit_additions": [
+      "unit5",
+      "unit7"
+    ],
+    "minimal_nontrivial_admitting_reflection_subgroup": "T_semidirect_{1,11}_D12"
+  },
+  "ontology_guardrail": {
+    "allowed_reading": "The nadsoliton itself remains the primordial information in a solitonic state.",
+    "forbidden_reading": "No separate informational layer underneath the nadsoliton is introduced."
+  },
+  "result_kind": "SCRATCH_STRICT_ALPHA_AFFINE_SUBGROUP_LATTICE_CHI11_SOURCE_OBSTRUCTION__NO_FALSE_PASS",
+  "status": "only-cyclic-and-D12-quotients-admit-chi11-unit5-or-unit7-kill-it",
+  "subgroup_rows": [
+    {
+      "branch_chi11_well_defined_on_quotient": true,
+      "branch_orbit_partition": {
+        "0": [
+          "A1_k1",
+          "A11_k11"
+        ],
+        "65": [
+          "A5_k5",
+          "A7_k7"
+        ]
+      },
+      "branch_rows": [
+        {
+          "branch_pair": "contiguous_pair_A1_A11",
+          "gap_necklace": [
+            1,
+            1,
+            1,
+            1,
+            8
+          ],
+          "name": "A1_k1",
+          "quotient_orbit_index": 0,
+          "required_chi11_value": -1,
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "branch_pair": "d5_pair_A5_A7",
+          "gap_necklace": [
+            2,
+            2,
+            3,
+            2,
+            3
+          ],
+          "name": "A5_k5",
+          "quotient_orbit_index": 65,
+          "required_chi11_value": 1,
+          "support": [
+            0,
+            3,
+            5,
+            8,
+            10
+          ]
+        },
+        {
+          "branch_pair": "d5_pair_A5_A7",
+          "gap_necklace": [
+            2,
+            2,
+            3,
+            2,
+            3
+          ],
+          "name": "A7_k7",
+          "quotient_orbit_index": 65,
+          "required_chi11_value": 1,
+          "support": [
+            0,
+            2,
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "branch_pair": "contiguous_pair_A1_A11",
+          "gap_necklace": [
+            1,
+            1,
+            1,
+            1,
+            8
+          ],
+          "name": "A11_k11",
+          "quotient_orbit_index": 0,
+          "required_chi11_value": -1,
+          "support": [
+            0,
+            8,
+            9,
+            10,
+            11
+          ]
+        }
+      ],
+      "classification": "admits_branch_chi11_quotient",
+      "contains_reversal_unit11": false,
+      "contains_unit5": false,
+      "contains_unit7": false,
+      "mixed_chi11_sign_branch_orbits": [],
+      "orbit_count_on_all_supports": 66,
+      "orbit_size_counts": {
+        "12": 66
+      },
+      "subgroup_name": "T_semidirect_{1}_cyclic_translation",
+      "unit_subgroup": [
+        1
+      ]
+    },
+    {
+      "branch_chi11_well_defined_on_quotient": true,
+      "branch_orbit_partition": {
+        "0": [
+          "A1_k1",
+          "A11_k11"
+        ],
+        "37": [
+          "A5_k5",
+          "A7_k7"
+        ]
+      },
+      "branch_rows": [
+        {
+          "branch_pair": "contiguous_pair_A1_A11",
+          "gap_necklace": [
+            1,
+            1,
+            1,
+            1,
+            8
+          ],
+          "name": "A1_k1",
+          "quotient_orbit_index": 0,
+          "required_chi11_value": -1,
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "branch_pair": "d5_pair_A5_A7",
+          "gap_necklace": [
+            2,
+            2,
+            3,
+            2,
+            3
+          ],
+          "name": "A5_k5",
+          "quotient_orbit_index": 37,
+          "required_chi11_value": 1,
+          "support": [
+            0,
+            3,
+            5,
+            8,
+            10
+          ]
+        },
+        {
+          "branch_pair": "d5_pair_A5_A7",
+          "gap_necklace": [
+            2,
+            2,
+            3,
+            2,
+            3
+          ],
+          "name": "A7_k7",
+          "quotient_orbit_index": 37,
+          "required_chi11_value": 1,
+          "support": [
+            0,
+            2,
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "branch_pair": "contiguous_pair_A1_A11",
+          "gap_necklace": [
+            1,
+            1,
+            1,
+            1,
+            8
+          ],
+          "name": "A11_k11",
+          "quotient_orbit_index": 0,
+          "required_chi11_value": -1,
+          "support": [
+            0,
+            8,
+            9,
+            10,
+            11
+          ]
+        }
+      ],
+      "classification": "admits_branch_chi11_quotient",
+      "contains_reversal_unit11": true,
+      "contains_unit5": false,
+      "contains_unit7": false,
+      "mixed_chi11_sign_branch_orbits": [],
+      "orbit_count_on_all_supports": 38,
+      "orbit_size_counts": {
+        "12": 10,
+        "24": 28
+      },
+      "subgroup_name": "T_semidirect_{1,11}_D12",
+      "unit_subgroup": [
+        1,
+        11
+      ]
+    },
+    {
+      "branch_chi11_well_defined_on_quotient": false,
+      "branch_orbit_partition": {
+        "0": [
+          "A1_k1",
+          "A5_k5",
+          "A7_k7",
+          "A11_k11"
+        ]
+      },
+      "branch_rows": [
+        {
+          "branch_pair": "contiguous_pair_A1_A11",
+          "gap_necklace": [
+            1,
+            1,
+            1,
+            1,
+            8
+          ],
+          "name": "A1_k1",
+          "quotient_orbit_index": 0,
+          "required_chi11_value": -1,
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "branch_pair": "d5_pair_A5_A7",
+          "gap_necklace": [
+            2,
+            2,
+            3,
+            2,
+            3
+          ],
+          "name": "A5_k5",
+          "quotient_orbit_index": 0,
+          "required_chi11_value": 1,
+          "support": [
+            0,
+            3,
+            5,
+            8,
+            10
+          ]
+        },
+        {
+          "branch_pair": "d5_pair_A5_A7",
+          "gap_necklace": [
+            2,
+            2,
+            3,
+            2,
+            3
+          ],
+          "name": "A7_k7",
+          "quotient_orbit_index": 0,
+          "required_chi11_value": 1,
+          "support": [
+            0,
+            2,
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "branch_pair": "contiguous_pair_A1_A11",
+          "gap_necklace": [
+            1,
+            1,
+            1,
+            1,
+            8
+          ],
+          "name": "A11_k11",
+          "quotient_orbit_index": 0,
+          "required_chi11_value": -1,
+          "support": [
+            0,
+            8,
+            9,
+            10,
+            11
+          ]
+        }
+      ],
+      "classification": "kills_branch_chi11_by_mixing_opposite_signs",
+      "contains_reversal_unit11": false,
+      "contains_unit5": true,
+      "contains_unit7": false,
+      "mixed_chi11_sign_branch_orbits": [
+        {
+          "branch_names": [
+            "A1_k1",
+            "A5_k5",
+            "A7_k7",
+            "A11_k11"
+          ],
+          "orbit_index": 0,
+          "required_chi11_values": [
+            -1,
+            1,
+            1,
+            -1
+          ]
+        }
+      ],
+      "orbit_count_on_all_supports": 38,
+      "orbit_size_counts": {
+        "12": 10,
+        "24": 28
+      },
+      "subgroup_name": "T_semidirect_{1,5}_unit5_axis",
+      "unit_subgroup": [
+        1,
+        5
+      ]
+    },
+    {
+      "branch_chi11_well_defined_on_quotient": false,
+      "branch_orbit_partition": {
+        "0": [
+          "A1_k1",
+          "A5_k5",
+          "A7_k7",
+          "A11_k11"
+        ]
+      },
+      "branch_rows": [
+        {
+          "branch_pair": "contiguous_pair_A1_A11",
+          "gap_necklace": [
+            1,
+            1,
+            1,
+            1,
+            8
+          ],
+          "name": "A1_k1",
+          "quotient_orbit_index": 0,
+          "required_chi11_value": -1,
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "branch_pair": "d5_pair_A5_A7",
+          "gap_necklace": [
+            2,
+            2,
+            3,
+            2,
+            3
+          ],
+          "name": "A5_k5",
+          "quotient_orbit_index": 0,
+          "required_chi11_value": 1,
+          "support": [
+            0,
+            3,
+            5,
+            8,
+            10
+          ]
+        },
+        {
+          "branch_pair": "d5_pair_A5_A7",
+          "gap_necklace": [
+            2,
+            2,
+            3,
+            2,
+            3
+          ],
+          "name": "A7_k7",
+          "quotient_orbit_index": 0,
+          "required_chi11_value": 1,
+          "support": [
+            0,
+            2,
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "branch_pair": "contiguous_pair_A1_A11",
+          "gap_necklace": [
+            1,
+            1,
+            1,
+            1,
+            8
+          ],
+          "name": "A11_k11",
+          "quotient_orbit_index": 0,
+          "required_chi11_value": -1,
+          "support": [
+            0,
+            8,
+            9,
+            10,
+            11
+          ]
+        }
+      ],
+      "classification": "kills_branch_chi11_by_mixing_opposite_signs",
+      "contains_reversal_unit11": false,
+      "contains_unit5": false,
+      "contains_unit7": true,
+      "mixed_chi11_sign_branch_orbits": [
+        {
+          "branch_names": [
+            "A1_k1",
+            "A5_k5",
+            "A7_k7",
+            "A11_k11"
+          ],
+          "orbit_index": 0,
+          "required_chi11_values": [
+            -1,
+            1,
+            1,
+            -1
+          ]
+        }
+      ],
+      "orbit_count_on_all_supports": 40,
+      "orbit_size_counts": {
+        "12": 14,
+        "24": 26
+      },
+      "subgroup_name": "T_semidirect_{1,7}_unit7_axis",
+      "unit_subgroup": [
+        1,
+        7
+      ]
+    },
+    {
+      "branch_chi11_well_defined_on_quotient": false,
+      "branch_orbit_partition": {
+        "0": [
+          "A1_k1",
+          "A5_k5",
+          "A7_k7",
+          "A11_k11"
+        ]
+      },
+      "branch_rows": [
+        {
+          "branch_pair": "contiguous_pair_A1_A11",
+          "gap_necklace": [
+            1,
+            1,
+            1,
+            1,
+            8
+          ],
+          "name": "A1_k1",
+          "quotient_orbit_index": 0,
+          "required_chi11_value": -1,
+          "support": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "branch_pair": "d5_pair_A5_A7",
+          "gap_necklace": [
+            2,
+            2,
+            3,
+            2,
+            3
+          ],
+          "name": "A5_k5",
+          "quotient_orbit_index": 0,
+          "required_chi11_value": 1,
+          "support": [
+            0,
+            3,
+            5,
+            8,
+            10
+          ]
+        },
+        {
+          "branch_pair": "d5_pair_A5_A7",
+          "gap_necklace": [
+            2,
+            2,
+            3,
+            2,
+            3
+          ],
+          "name": "A7_k7",
+          "quotient_orbit_index": 0,
+          "required_chi11_value": 1,
+          "support": [
+            0,
+            2,
+            4,
+            7,
+            9
+          ]
+        },
+        {
+          "branch_pair": "contiguous_pair_A1_A11",
+          "gap_necklace": [
+            1,
+            1,
+            1,
+            1,
+            8
+          ],
+          "name": "A11_k11",
+          "quotient_orbit_index": 0,
+          "required_chi11_value": -1,
+          "support": [
+            0,
+            8,
+            9,
+            10,
+            11
+          ]
+        }
+      ],
+      "classification": "kills_branch_chi11_by_mixing_opposite_signs",
+      "contains_reversal_unit11": true,
+      "contains_unit5": true,
+      "contains_unit7": true,
+      "mixed_chi11_sign_branch_orbits": [
+        {
+          "branch_names": [
+            "A1_k1",
+            "A5_k5",
+            "A7_k7",
+            "A11_k11"
+          ],
+          "orbit_index": 0,
+          "required_chi11_values": [
+            -1,
+            1,
+            1,
+            -1
+          ]
+        }
+      ],
+      "orbit_count_on_all_supports": 25,
+      "orbit_size_counts": {
+        "12": 4,
+        "24": 11,
+        "48": 10
+      },
+      "subgroup_name": "T_semidirect_{1,5,7,11}_full_affine_Aut",
+      "unit_subgroup": [
+        1,
+        5,
+        7,
+        11
+      ]
+    }
+  ]
+}

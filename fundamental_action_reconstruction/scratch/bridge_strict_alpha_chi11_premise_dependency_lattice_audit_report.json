@@ -1,0 +1,237 @@
+{
+  "cross_report_checks": {
+    "all_input_reports_loaded": true,
+    "cyclic_chi11_dimension": 13,
+    "cyclic_full_aut_trivial_intersection_with_chi11_rank": 0,
+    "cyclic_translation_orbit_count": 66,
+    "d12_chi11_rank": 13,
+    "d12_full_aut_intersection_rank_zero": true,
+    "d12_orbit_count": 38,
+    "full_aut_block_amplitude_exports_no_polarity": true,
+    "full_aut_block_amplitude_locates_unique_block": true,
+    "full_aut_kills_chi11": true,
+    "full_aut_orbit_count": 25,
+    "input_report_count": 7,
+    "max_shell_imbalance_requires_shell_label": true,
+    "max_shell_imbalance_unique_branch_maximizer": true,
+    "nonhistogram_singleton_A5_not_A1_count_zero": true,
+    "sparsest_unique_minimum_is_branch_generator": true,
+    "support_count_agrees": true,
+    "unit5_and_unit7_are_killing_additions": true
+  },
+  "exact_proof_certificate": {
+    "finite_domain": "This audit reuses the already-generated C(12,5)=792 support reports and checks their shared finite-model counts before building a premise antichain.",
+    "full_aut_no_polarity": "The affine subgroup lattice says full Aut does not admit chi_11; the full-Aut block-amplitude report locates the branch block but has exports_chi11_polarity=false; the nonhistogram audit has zero full-Aut singleton A5-not-A1 classifiers.",
+    "not_duplicate_of_general_qw2191_lattice": "P2165 audits general QW-2191 lane admissibility.  This probe is narrower: it computes the minimal premise antichain for the current strict-alpha chi_11 support reports only.",
+    "reduced_quotient_boundary": "A nonzero chi_11 carrier appears only after quotient/premise reduction: cyclic translation quotient plus chi_11 character gives dimension 13, and D12 plus chi_11 character gives the 13 two-cycle module.",
+    "selector_boundary": "The branch-normalized D12 chi_11 family is not unique until an extra selector is imported.  Current finite audits certify two conditional selectors: sparsest extension and shell-labelled max imbalance.",
+    "strict_limit": "No row in this premise lattice supplies an internal strict full-Aut source for the chi_11 polarity, the shell-label d1/d5 axis, or QW-2191 selector closure."
+  },
+  "finite_model": {
+    "active_count": 5,
+    "premise_count": 8,
+    "premise_subset_count": 256,
+    "ring": "Z_12",
+    "support_count": 792,
+    "target_eta": "9/5",
+    "target_q_power": "256/243"
+  },
+  "hard_limits": [
+    "No identity K_legacy_ont == K_strict_gate is asserted.",
+    "No legacy physical role is transferred onto K_strict_gate.",
+    "No theorem derives chi_11 from full-Aut strict geometry.",
+    "No theorem derives the shell-label d1/d5 axis or unit-axis bit from strict full-Aut support data.",
+    "No theorem derives the sparsest-extension selector or max-shell-imbalance selector as strict-core closure.",
+    "No QW-2191 discharge is claimed.",
+    "No ToE closure is claimed."
+  ],
+  "input_reports": {
+    "affine_subgroup_lattice": "scratch/bridge_strict_alpha_affine_subgroup_lattice_chi11_source_obstruction_report.json",
+    "cyclic_character_projection": "scratch/bridge_strict_alpha_cyclic_quotient_character_projection_chi11_certificate_report.json",
+    "d12_character_module": "scratch/bridge_strict_alpha_d12_chi11_character_module_certificate_report.json",
+    "d12_max_shell_imbalance": "scratch/bridge_strict_alpha_d12_chi11_max_shell_imbalance_selector_certificate_report.json",
+    "d12_sparsest_extension": "scratch/bridge_strict_alpha_d12_chi11_sparsest_extension_selector_audit_report.json",
+    "full_aut_block_amplitude": "scratch/bridge_strict_alpha_full_aut_block_amplitude_chi11_polarity_obstruction_report.json",
+    "nonhistogram_dihedral_quotient": "scratch/bridge_strict_alpha_nonhistogram_dihedral_quotient_chi11_audit_report.json"
+  },
+  "interpretation": {
+    "honest_negative": "The antichain has no minimal set for a strict full-Aut internal chi_11 polarity source; all polarity/selector outcomes still require reduced quotient, character, shell-label, or selector premises.",
+    "honest_positive": "The existing chi_11 audit chain can now be read as a finite premise-dependency antichain: it tells exactly which extra premises are sufficient for each weaker outcome.",
+    "relation_to_previous_probe": "This is a meta-certificate over prior generated support-combinatorics reports, not another duplicate enumeration of the same D12/full-Aut orbits."
+  },
+  "minimal_premise_antichains": {
+    "branch_normalized_d12_chi11_family": [
+      [
+        "d12_reduced_quotient",
+        "chi11_unit_character_choice",
+        "branch_normalization_constraint"
+      ]
+    ],
+    "host_d12_chi11_covariant_module": [
+      [
+        "d12_reduced_quotient",
+        "chi11_unit_character_choice"
+      ]
+    ],
+    "host_nonzero_cyclic_chi11_character_space": [
+      [
+        "cyclic_translation_quotient",
+        "chi11_unit_character_choice"
+      ]
+    ],
+    "locate_branch_full_aut_block_without_polarity": [
+      [
+        "full_aut_unoriented_block_amplitude"
+      ]
+    ],
+    "strict_full_aut_internal_chi11_polarity_source": [],
+    "unique_branch_generator_by_max_shell_imbalance": [
+      [
+        "d12_reduced_quotient",
+        "chi11_unit_character_choice",
+        "branch_normalization_constraint",
+        "shell_label_d1_d5_axis",
+        "max_shell_imbalance_selector"
+      ]
+    ],
+    "unique_branch_generator_by_sparsest_extension": [
+      [
+        "d12_reduced_quotient",
+        "chi11_unit_character_choice",
+        "branch_normalization_constraint",
+        "sparsest_extension_selector"
+      ]
+    ]
+  },
+  "ontology_guardrail": {
+    "allowed_reading": "The nadsoliton itself remains the primordial information in solitonic state; this audit only classifies finite support-premise dependencies.",
+    "forbidden_reading": "No separate informational layer under the nadsoliton is introduced, and no strict-core source for chi_11 is claimed."
+  },
+  "outcome_rows": [
+    {
+      "minimal_premise_count": 1,
+      "minimal_premise_sets": [
+        [
+          "full_aut_unoriented_block_amplitude"
+        ]
+      ],
+      "outcome": "locate_branch_full_aut_block_without_polarity",
+      "realized_by_current_reports": true
+    },
+    {
+      "minimal_premise_count": 2,
+      "minimal_premise_sets": [
+        [
+          "cyclic_translation_quotient",
+          "chi11_unit_character_choice"
+        ]
+      ],
+      "outcome": "host_nonzero_cyclic_chi11_character_space",
+      "realized_by_current_reports": true
+    },
+    {
+      "minimal_premise_count": 2,
+      "minimal_premise_sets": [
+        [
+          "d12_reduced_quotient",
+          "chi11_unit_character_choice"
+        ]
+      ],
+      "outcome": "host_d12_chi11_covariant_module",
+      "realized_by_current_reports": true
+    },
+    {
+      "minimal_premise_count": 3,
+      "minimal_premise_sets": [
+        [
+          "d12_reduced_quotient",
+          "chi11_unit_character_choice",
+          "branch_normalization_constraint"
+        ]
+      ],
+      "outcome": "branch_normalized_d12_chi11_family",
+      "realized_by_current_reports": true
+    },
+    {
+      "minimal_premise_count": 4,
+      "minimal_premise_sets": [
+        [
+          "d12_reduced_quotient",
+          "chi11_unit_character_choice",
+          "branch_normalization_constraint",
+          "sparsest_extension_selector"
+        ]
+      ],
+      "outcome": "unique_branch_generator_by_sparsest_extension",
+      "realized_by_current_reports": true
+    },
+    {
+      "minimal_premise_count": 5,
+      "minimal_premise_sets": [
+        [
+          "d12_reduced_quotient",
+          "chi11_unit_character_choice",
+          "branch_normalization_constraint",
+          "shell_label_d1_d5_axis",
+          "max_shell_imbalance_selector"
+        ]
+      ],
+      "outcome": "unique_branch_generator_by_max_shell_imbalance",
+      "realized_by_current_reports": true
+    },
+    {
+      "minimal_premise_count": null,
+      "minimal_premise_sets": [],
+      "outcome": "strict_full_aut_internal_chi11_polarity_source",
+      "realized_by_current_reports": false
+    }
+  ],
+  "premises": [
+    {
+      "id": "full_aut_unoriented_block_amplitude",
+      "index": 0,
+      "strict_core_exported": null
+    },
+    {
+      "id": "d12_reduced_quotient",
+      "index": 1,
+      "strict_core_exported": false
+    },
+    {
+      "id": "cyclic_translation_quotient",
+      "index": 2,
+      "strict_core_exported": false
+    },
+    {
+      "id": "chi11_unit_character_choice",
+      "index": 3,
+      "strict_core_exported": false
+    },
+    {
+      "id": "branch_normalization_constraint",
+      "index": 4,
+      "strict_core_exported": false
+    },
+    {
+      "id": "sparsest_extension_selector",
+      "index": 5,
+      "strict_core_exported": false
+    },
+    {
+      "id": "shell_label_d1_d5_axis",
+      "index": 6,
+      "strict_core_exported": false
+    },
+    {
+      "id": "max_shell_imbalance_selector",
+      "index": 7,
+      "strict_core_exported": false
+    }
+  ],
+  "repo_grep_nonduplication_note": {
+    "finding": "Existing files already cover affine subgroup lattice, cyclic projection, D12 module, max-shell selector, sparsest-extension selector, full-Aut block amplitude, and nonhistogram D12 quotient.  The new work therefore audits the dependency antichain across those reports rather than re-running the same orbit study.",
+    "performed_before_new_probe": true
+  },
+  "result_kind": "SCRATCH_STRICT_ALPHA_CHI11_PREMISE_DEPENDENCY_LATTICE_AUDIT__NO_STRICT_FULL_AUT_SOURCE",
+  "status": "minimal-premise-antichain-computed-for-existing-chi11-support-audits"
+}
