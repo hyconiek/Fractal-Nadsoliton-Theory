@@ -227,7 +227,7 @@ def build_payload() -> dict[str, Any]:
         },
         "proof_certificate": {
             "ledger_step": "All prerequisite JSON reports are loaded and their status fields are recorded in one ledger.",
-            "shared_object_step": "The common sign pattern and flip edges agree across cocycle, float zero, rational zero, margin, node-clearance, cell-partition, carrier-edge-incidence, carrier-prefix-node-matrix, GF2-commutative-diagram, path-cohomology-triviality, cycle-closure-boundary, cell-sign, Z2-coboundary, edge-support-minimality, GF2-linear-system, and low-order no-go reports.",
+          k  "shared_object_step": "The common sign pattern and flip edges agree across cocycle, float zero, rational zero, margin, node-clearance, cell-partition, carrier-edge-incidence, carrier-prefix-node-matrix, GF2-commutative-diagram, path-cohomology-triviality, cycle-closure-boundary, cell-sign, Z2-coboundary, edge-support-minimality, GF2-linear-system, and low-order no-go reports.",
             "factor_step": "The necessity report still has exactly one exact no-extra-scalar subset: A+P+D.",
             "node_clearance_step": "The phase-zero node-clearance report proves every audited integer node has positive rational clearance from the relevant phase zeros.",
             "cell_partition_step": "The phase-zero cell-partition report proves the in-domain zero carriers are ordered, disjoint, and cut [0,11] into positive rational cells.",
