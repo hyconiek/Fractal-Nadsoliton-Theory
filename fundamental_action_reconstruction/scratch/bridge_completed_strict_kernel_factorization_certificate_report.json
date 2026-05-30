@@ -1,0 +1,285 @@
+{
+  "completion_factor_interpretation": {
+    "amplitude": "1/alpha_geo removes the legacy explicit amplitude; role-safe use still requires bridge discipline.",
+    "damping_compression": "((1+beta_tors*d)/(1+beta*d^eta)) is the exact pointwise compression factor upgrading legacy hyperbolic damping into strict eta damping.",
+    "orientation_bit": "The factorization does not supply beta_tors -> chi_11; that remains the one-bit theorem-target from the reactivation audit.",
+    "phase_frequency": "cos(strict phase)/cos(legacy phase) is the exact pointwise transport from legacy torsion/resonance phase to strict gate phase on the sampled domain."
+  },
+  "constants": {
+    "alpha_geo": 2.772588722239781,
+    "balanced_ledger": [
+      2,
+      2,
+      2,
+      1,
+      1
+    ],
+    "legacy": {
+      "beta_tors": 0.01,
+      "omega": 0.7853981633974483,
+      "phi": 0.5235987755982988
+    },
+    "strict": {
+      "beta": 1.0,
+      "eta": 1.8,
+      "omega": 0.18575,
+      "phi": 0.1625
+    },
+    "target_eta": "9/5",
+    "target_q_power": "256/243"
+  },
+  "exact_proof_certificate": {
+    "completion_objects": "C_full=(1/alpha_geo)*phase_transport*damping_compression and C_reduced=phase_transport*damping_compression are explicit completion factors.",
+    "computational_positive": "The current full kernel can be represented exactly as strict completion of the legacy carrier on the finite d=1..11 audit domain.",
+    "factor_identity": "For every listed d, K_strict(d) - C_full(d)*K_legacy_full(d) = 0 up to floating arithmetic, and similarly for the reduced no-alpha carrier.",
+    "theoretical_limit": "This is an exact factor certificate, not a derivation of the factors, not the beta_tors->chi_11 theorem, and not QW-2191 closure."
+  },
+  "factorization_rows": [
+    {
+      "amplitude_factor_alpha_removal": 0.36067376022224085,
+      "completion_factor_over_legacy_full": 0.6614915634731454,
+      "completion_factor_over_legacy_reduced": 1.8340440487424037,
+      "d": 1,
+      "damping_compression_factor": 0.505,
+      "legacy_full": 0.7104938272793255,
+      "legacy_reduced_no_alpha": 0.2562564802995257,
+      "phase_frequency_transport_factor": 3.631770393549314,
+      "reconstructed_from_legacy_full": 0.46998567264502,
+      "reconstructed_from_legacy_reduced": 0.4699856726450201,
+      "residual_from_legacy_full": -1.1102230246251565e-16,
+      "residual_from_legacy_reduced": 0.0,
+      "strict_kernel": 0.4699856726450201
+    },
+    {
+      "amplitude_factor_alpha_removal": 0.36067376022224085,
+      "completion_factor_over_legacy_full": -0.1413007426255875,
+      "completion_factor_over_legacy_reduced": -0.3917688454478099,
+      "d": 2,
+      "damping_compression_factor": 0.22756670546834754,
+      "legacy_full": -1.3591121187449902,
+      "legacy_reduced_no_alpha": -0.4901960784313723,
+      "phase_frequency_transport_factor": -1.7215560801898648,
+      "reconstructed_from_legacy_full": 0.1920435516901028,
+      "reconstructed_from_legacy_reduced": 0.1920435516901028,
+      "residual_from_legacy_full": 0.0,
+      "residual_from_legacy_reduced": 0.0,
+      "strict_kernel": 0.1920435516901028
+    },
+    {
+      "amplitude_factor_alpha_removal": 0.36067376022224085,
+      "completion_factor_over_legacy_full": -0.03516334095457687,
+      "completion_factor_over_legacy_reduced": -0.09749348256693206,
+      "d": 3,
+      "damping_compression_factor": 0.1252329263149802,
+      "legacy_full": -2.6001117014458375,
+      "legacy_reduced_no_alpha": -0.9377920643583186,
+      "phase_frequency_transport_factor": -0.7784972006620755,
+      "reconstructed_from_legacy_full": 0.09142861427792497,
+      "reconstructed_from_legacy_reduced": 0.09142861427792497,
+      "residual_from_legacy_full": 1.3877787807814457e-17,
+      "residual_from_legacy_reduced": 1.3877787807814457e-17,
+      "strict_kernel": 0.09142861427792495
+    },
+    {
+      "amplitude_factor_alpha_removal": 0.36067376022224085,
+      "completion_factor_over_legacy_full": -0.020369696477490092,
+      "completion_factor_over_legacy_reduced": -0.05647679072893643,
+      "d": 4,
+      "damping_compression_factor": 0.07923367305085117,
+      "legacy_full": -2.3087810266402764,
+      "legacy_reduced_no_alpha": -0.8327167344081142,
+      "phase_frequency_transport_factor": -0.7127877397869758,
+      "reconstructed_from_legacy_full": 0.0470291687456504,
+      "reconstructed_from_legacy_reduced": 0.047029168745650406,
+      "residual_from_legacy_full": 0.0,
+      "residual_from_legacy_reduced": 6.938893903907228e-18,
+      "strict_kernel": 0.0470291687456504
+    },
+    {
+      "amplitude_factor_alpha_removal": 0.36067376022224085,
+      "completion_factor_over_legacy_full": -0.03530912502659723,
+      "completion_factor_over_legacy_reduced": -0.0978976818408979,
+      "d": 5,
+      "damping_compression_factor": 0.05491777827620198,
+      "legacy_full": -0.6834273957639219,
+      "legacy_reduced_no_alpha": -0.24649432866906726,
+      "phase_frequency_transport_factor": -1.7826227665025696,
+      "reconstructed_from_legacy_full": 0.02413122336363006,
+      "reconstructed_from_legacy_reduced": 0.024131223363630064,
+      "residual_from_legacy_full": 0.0,
+      "residual_from_legacy_reduced": 3.469446951953614e-18,
+      "strict_kernel": 0.02413122336363006
+    },
+    {
+      "amplitude_factor_alpha_removal": 0.36067376022224085,
+      "completion_factor_over_legacy_full": 0.00846506102156305,
+      "completion_factor_over_legacy_reduced": 0.023470132721457274,
+      "d": 6,
+      "damping_compression_factor": 0.04052332235066948,
+      "legacy_full": 1.307824868981029,
+      "legacy_reduced_no_alpha": 0.47169811320754723,
+      "phase_frequency_transport_factor": 0.5791759253685558,
+      "reconstructed_from_legacy_full": 0.011070817321442111,
+      "reconstructed_from_legacy_reduced": 0.011070817321442111,
+      "residual_from_legacy_full": -1.734723475976807e-18,
+      "residual_from_legacy_reduced": -1.734723475976807e-18,
+      "strict_kernel": 0.011070817321442113
+    },
+    {
+      "amplitude_factor_alpha_removal": 0.36067376022224085,
+      "completion_factor_over_legacy_full": 0.001259667313500833,
+      "completion_factor_over_legacy_reduced": 0.0034925393871864923,
+      "d": 7,
+      "damping_compression_factor": 0.031283865189164484,
+      "legacy_full": 2.5029112640086097,
+      "legacy_reduced_no_alpha": 0.9027344170925872,
+      "phase_frequency_transport_factor": 0.11164027737839033,
+      "reconstructed_from_legacy_full": 0.0031528355078646996,
+      "reconstructed_from_legacy_reduced": 0.0031528355078646996,
+      "residual_from_legacy_full": 0.0,
+      "residual_from_legacy_reduced": 0.0,
+      "strict_kernel": 0.0031528355078646996
+    },
+    {
+      "amplitude_factor_alpha_removal": 0.36067376022224085,
+      "completion_factor_over_legacy_full": -0.0008077641968995035,
+      "completion_factor_over_legacy_reduced": -0.0022395979025526375,
+      "d": 8,
+      "damping_compression_factor": 0.024985972490576408,
+      "legacy_full": 2.223270618246192,
+      "legacy_reduced_no_alpha": 0.8018753738744802,
+      "phase_frequency_transport_factor": -0.08963420989106242,
+      "reconstructed_from_legacy_full": -0.0017958784054378978,
+      "reconstructed_from_legacy_reduced": -0.0017958784054378978,
+      "residual_from_legacy_full": -2.168404344971009e-19,
+      "residual_from_legacy_reduced": -2.168404344971009e-19,
+      "strict_kernel": -0.0017958784054378975
+    },
+    {
+      "amplitude_factor_alpha_removal": 0.36067376022224085,
+      "completion_factor_over_legacy_full": -0.007435928520209978,
+      "completion_factor_over_legacy_reduced": -0.020616771554515332,
+      "d": 9,
+      "damping_compression_factor": 0.020490295084356347,
+      "legacy_full": 0.6583474913322185,
+      "legacy_reduced_no_alpha": 0.23744866523167038,
+      "phase_frequency_transport_factor": -1.0061725060394833,
+      "reconstructed_from_legacy_full": -0.004895424887005935,
+      "reconstructed_from_legacy_reduced": -0.0048954248870059355,
+      "residual_from_legacy_full": 8.673617379884035e-19,
+      "residual_from_legacy_reduced": 0.0,
+      "strict_kernel": -0.0048954248870059355
+    },
+    {
+      "amplitude_factor_alpha_removal": 0.36067376022224085,
+      "completion_factor_over_legacy_full": 0.005375839242187774,
+      "completion_factor_over_legacy_reduced": 0.014904991255463873,
+      "d": 10,
+      "damping_compression_factor": 0.017161828466012562,
+      "legacy_full": -1.2602676010180802,
+      "legacy_reduced_no_alpha": -0.4545454545454538,
+      "phase_frequency_transport_factor": 0.8684966922366023,
+      "reconstructed_from_legacy_full": -0.00677499602521084,
+      "reconstructed_from_legacy_reduced": -0.0067749960252108405,
+      "residual_from_legacy_full": 8.673617379884035e-19,
+      "residual_from_legacy_reduced": 0.0,
+      "strict_kernel": -0.0067749960252108405
+    },
+    {
+      "amplitude_factor_alpha_removal": 0.36067376022224085,
+      "completion_factor_over_legacy_full": 0.0032388039359289075,
+      "completion_factor_over_legacy_reduced": 0.008979871266302304,
+      "d": 11,
+      "damping_compression_factor": 0.014623674671644927,
+      "legacy_full": -2.4127162635037935,
+      "legacy_reduced_no_alpha": -0.8702034471072682,
+      "phase_frequency_transport_factor": 0.6140639386428728,
+      "reconstructed_from_legacy_full": -0.007814314930515773,
+      "reconstructed_from_legacy_reduced": -0.007814314930515773,
+      "residual_from_legacy_full": 0.0,
+      "residual_from_legacy_reduced": 0.0,
+      "strict_kernel": -0.007814314930515773
+    }
+  ],
+  "factorization_summary": {
+    "completion_factor_over_legacy_full_sign_pattern": [
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      1
+    ],
+    "damping_compression_factor_positive": true,
+    "damping_compression_factor_strictly_decreasing": true,
+    "damping_factor_d1": 0.505,
+    "damping_factor_d11": 0.014623674671644927,
+    "damping_factor_d1_over_d11": 34.533043939987735,
+    "domain_d_values": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "max_abs_residual_from_legacy_full": 1.1102230246251565e-16,
+    "max_abs_residual_from_legacy_reduced": 1.3877787807814457e-17,
+    "phase_transport_sign_pattern": [
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      1
+    ],
+    "residual_tolerance_pass": true
+  },
+  "hard_limits": [
+    "No claim that the legacy kernel is the current live kernel; K_strict_gate is the current full form.",
+    "No unqualified identity K_legacy_ont == K_strict_gate is asserted; only explicit factorization/completion is certified.",
+    "No beta_tors -> chi_11 theorem is asserted.",
+    "No proof derives the completion factors from strict nadsoliton dynamics yet.",
+    "No legacy physical-role transfer onto K_strict_gate is used without an explicit bridge theorem.",
+    "No QW-2191 discharge is claimed.",
+    "No ToE closure is claimed."
+  ],
+  "kernel_reading": {
+    "completion_reading": "K_strict_gate is represented as legacy carrier plus explicit completion factors for alpha removal, phase/frequency transport, damping/compression, and the still-open orientation bit lane.",
+    "current_live_kernel": "K_strict_gate(d)=cos(omega_S*d+phi_S)/(1+beta*d^eta)",
+    "guarded_identity": "Pointwise factorization is exact where cos(omega_L*d+phi_L) != 0; it is not yet an internal theorem deriving the factors from nadsoliton dynamics.",
+    "legacy_reading": "K_legacy_ont is the historical/nadsoliton-characteristic carrier, not the live current kernel."
+  },
+  "ontology_guardrail": {
+    "allowed_reading": "The nadsoliton itself remains the primordial information in a solitonic state; legacy kernel data is read as a historical internal characteristic carrier completed by the strict kernel.",
+    "forbidden_reading": "No separate informational layer underneath the nadsoliton is introduced."
+  },
+  "result_kind": "SCRATCH_COMPLETED_STRICT_KERNEL_FACTORIZATION_CERTIFICATE__EXACT_FACTOR_TARGET_NOT_BRIDGE_THEOREM",
+  "status": "strict-kernel-current-full-form-with-explicit-legacy-completion-factorization",
+  "upstream_bridge_context": {
+    "one_bit_frontier": {
+      "frontier_name": "T_beta_tors_orientation_exports_chi11_or_nonbridge",
+      "negative_branch": "legacy torsion/topology fingerprint remains only archival/provenance and cannot select chi_11 without an extra axiom; this is the nonbridge theorem branch",
+      "positive_branch": "legacy torsion/topology fingerprint exports a non-full-Aut orientation source whose U12 character is chi_11",
+      "why_this_is_now_the_main_bridge_subproblem": "All loaded chi_11 audits concentrate the missing strict selector datum into a nontrivial unit character, while DIAGRAMS supplies a legacy torsion/topology place where such an orientation could be searched for explicitly."
+    },
+    "reactivation_status": "legacy-kernel-restored-as-guarded-bridge-theorem-target-not-silent-identity",
+    "reynolds_annihilator_zero": true,
+    "reynolds_full_aut_obstruction": "Any full-Aut Reynolds/invariant support datum loses the branch polarity exactly; no full-Aut invariant source exports chi_11."
+  }
+}
