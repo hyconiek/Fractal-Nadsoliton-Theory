@@ -31,6 +31,13 @@ integrity check, not a new bridge theorem or strict dynamical derivation.
 - `phase_zero_gf2_diagram_all_checks_pass`: `True`
 - `phase_zero_gf2_diagram_matches_z2`: `True`
 - `phase_zero_gf2_diagram_inherits_ranks`: `True`
+- `phase_sign_path_cohomology_h1_zero`: `True`
+- `phase_sign_path_cohomology_anchor_reconstructs`: `True`
+- `phase_sign_path_cohomology_flips_match`: `True`
+- `phase_sign_cycle_closure_h1_one`: `True`
+- `phase_sign_cycle_closure_zero_edge_exact`: `True`
+- `phase_sign_cycle_closure_odd_edge_obstructed`: `True`
+- `phase_sign_cycle_closure_matches_z2`: `True`
 - `phase_zero_cell_sign_preserves_cell_partition`: `True`
 - `phase_zero_cell_sign_no_trig_eval`: `True`
 - `phase_zero_cell_sign_edge_parity`: `True`
@@ -67,6 +74,8 @@ All cross-checks pass: `True`
 - `phase_carrier_edge_incidence_certified`: `True`
 - `phase_carrier_prefix_node_matrix_certified`: `True`
 - `phase_gf2_commutative_diagram_certified`: `True`
+- `phase_path_cohomology_triviality_certified`: `True`
+- `phase_cycle_closure_boundary_certified`: `True`
 - `phase_cell_sign_certified`: `True`
 - `phase_z2_coboundary_certified`: `True`
 - `phase_edge_support_minimality_certified`: `True`
@@ -80,7 +89,7 @@ All cross-checks pass: `True`
 
 ## Frontier statement
 
-- Positive: The finite completion ansatz is internally consistent across necessity, cocycle, phase-zero, rational-zero, robustness-margin, node-clearance, cell-partition, carrier-edge-incidence, carrier-prefix-node-matrix, GF2-commutative-diagram, cell-sign, Z2-coboundary, edge-support-minimality, GF2-linear-system, damping, exact-rational-damping, positive-factor-sign-separation, and low-order no-go certificates.
+- Positive: The finite completion ansatz is internally consistent across necessity, cocycle, phase-zero, rational-zero, robustness-margin, node-clearance, cell-partition, carrier-edge-incidence, carrier-prefix-node-matrix, GF2-commutative-diagram, path-cohomology-triviality, cycle-closure-boundary, cell-sign, Z2-coboundary, edge-support-minimality, GF2-linear-system, damping, exact-rational-damping, positive-factor-sign-separation, and low-order no-go certificates.
 - Negative: The chain still does not derive A(d), P(d), D(d), omega/phi, beta/eta, or the transport cocycle from strict nadsoliton dynamics.
 - Next blocker: strict_phase_frequency/damping/transport derivation from strict nadsoliton dynamics, plus orientation_chi11_source and role_transfer_theorem if a bridge lane is explicitly reopened.
 

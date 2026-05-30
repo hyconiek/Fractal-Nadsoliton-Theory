@@ -36,6 +36,8 @@ class StrictCompletionCertificateChainIntegrityProbeTest(unittest.TestCase):
             "phase_zero_carrier_edge_incidence",
             "phase_zero_carrier_prefix_node_matrix",
             "phase_zero_gf2_commutative_diagram",
+            "phase_sign_path_cohomology_triviality",
+            "phase_sign_cycle_closure_obstruction",
             "phase_zero_cell_sign",
             "phase_sign_z2_coboundary",
             "phase_sign_edge_support_minimality",
@@ -72,6 +74,13 @@ class StrictCompletionCertificateChainIntegrityProbeTest(unittest.TestCase):
         self.assertTrue(checks["phase_zero_gf2_diagram_all_checks_pass"])
         self.assertTrue(checks["phase_zero_gf2_diagram_matches_z2"])
         self.assertTrue(checks["phase_zero_gf2_diagram_inherits_ranks"])
+        self.assertTrue(checks["phase_sign_path_cohomology_h1_zero"])
+        self.assertTrue(checks["phase_sign_path_cohomology_anchor_reconstructs"])
+        self.assertTrue(checks["phase_sign_path_cohomology_flips_match"])
+        self.assertTrue(checks["phase_sign_cycle_closure_h1_one"])
+        self.assertTrue(checks["phase_sign_cycle_closure_zero_edge_exact"])
+        self.assertTrue(checks["phase_sign_cycle_closure_odd_edge_obstructed"])
+        self.assertTrue(checks["phase_sign_cycle_closure_matches_z2"])
         self.assertTrue(checks["phase_zero_cell_sign_preserves_cell_partition"])
         self.assertTrue(checks["phase_zero_cell_sign_no_trig_eval"])
         self.assertTrue(checks["phase_zero_cell_sign_edge_parity"])
@@ -102,6 +111,8 @@ class StrictCompletionCertificateChainIntegrityProbeTest(unittest.TestCase):
         self.assertTrue(summary["phase_carrier_edge_incidence_certified"])
         self.assertTrue(summary["phase_carrier_prefix_node_matrix_certified"])
         self.assertTrue(summary["phase_gf2_commutative_diagram_certified"])
+        self.assertTrue(summary["phase_path_cohomology_triviality_certified"])
+        self.assertTrue(summary["phase_cycle_closure_boundary_certified"])
         self.assertTrue(summary["phase_cell_sign_certified"])
         self.assertTrue(summary["phase_z2_coboundary_certified"])
         self.assertTrue(summary["phase_edge_support_minimality_certified"])
@@ -129,6 +140,9 @@ class StrictCompletionCertificateChainIntegrityProbeTest(unittest.TestCase):
         self.assertIn("column rank 4", proof["carrier_edge_incidence_step"])
         self.assertIn("C=L*M", proof["carrier_prefix_node_matrix_step"])
         self.assertIn("B*node_bits=edge_bits", proof["gf2_commutative_diagram_step"])
+        self.assertIn("H^1(path;GF(2)) has dimension 0", proof["path_cohomology_step"])
+        self.assertIn("closed 12-cycle", proof["cycle_closure_step"])
+        self.assertIn("odd closing-edge perturbation", proof["cycle_closure_step"])
         self.assertIn("without fresh trigonometric evaluation", proof["cell_sign_step"])
         self.assertIn("every interval parity law", proof["z2_coboundary_step"])
         self.assertIn("2^11 edge assignments", proof["edge_support_minimality_step"])
