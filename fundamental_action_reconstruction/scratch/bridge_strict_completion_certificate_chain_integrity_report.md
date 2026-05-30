@@ -22,12 +22,34 @@ integrity check, not a new bridge theorem or strict dynamical derivation.
 - `phase_zero_cell_partition_preserves_node_clearance`: `True`
 - `phase_zero_cell_partition_ordered_disjoint`: `True`
 - `phase_zero_cell_partition_positive_cells`: `True`
+- `phase_zero_carrier_edge_incidence_preserves_cell_partition`: `True`
+- `phase_zero_carrier_edge_incidence_rank_full`: `True`
+- `phase_zero_carrier_edge_incidence_matches_gf2`: `True`
+- `phase_zero_carrier_prefix_preserves_cell_sign`: `True`
+- `phase_zero_carrier_prefix_matches_z2_nodes`: `True`
+- `phase_zero_carrier_prefix_edge_differences_match_incidence`: `True`
+- `phase_zero_gf2_diagram_all_checks_pass`: `True`
+- `phase_zero_gf2_diagram_matches_z2`: `True`
+- `phase_zero_gf2_diagram_inherits_ranks`: `True`
+- `phase_sign_path_cohomology_h1_zero`: `True`
+- `phase_sign_path_cohomology_anchor_reconstructs`: `True`
+- `phase_sign_path_cohomology_flips_match`: `True`
+- `phase_sign_cycle_closure_h1_one`: `True`
+- `phase_sign_cycle_closure_zero_edge_exact`: `True`
+- `phase_sign_cycle_closure_odd_edge_obstructed`: `True`
+- `phase_sign_cycle_closure_matches_z2`: `True`
 - `phase_zero_cell_sign_preserves_cell_partition`: `True`
 - `phase_zero_cell_sign_no_trig_eval`: `True`
 - `phase_zero_cell_sign_edge_parity`: `True`
 - `phase_sign_z2_preserves_cell_sign`: `True`
 - `phase_sign_z2_all_intervals_pass`: `True`
 - `phase_sign_z2_prefix_reconstructs`: `True`
+- `phase_sign_edge_support_preserves_z2`: `True`
+- `phase_sign_edge_support_unique_assignment`: `True`
+- `phase_sign_edge_support_lower_supports_fail`: `True`
+- `phase_sign_gf2_preserves_edge_support`: `True`
+- `phase_sign_gf2_full_rank_unique_solution`: `True`
+- `phase_sign_gf2_inverse_checks_pass`: `True`
 - `cocycle_negative_edges_equal_phase_flips`: `True`
 - `low_order_negative_edges_equal_phase_flips`: `True`
 - `damping_positive_and_decreasing`: `True`
@@ -49,8 +71,15 @@ All cross-checks pass: `True`
 - `phase_sign_source_certified`: `True`
 - `phase_node_clearance_certified`: `True`
 - `phase_cell_partition_certified`: `True`
+- `phase_carrier_edge_incidence_certified`: `True`
+- `phase_carrier_prefix_node_matrix_certified`: `True`
+- `phase_gf2_commutative_diagram_certified`: `True`
+- `phase_path_cohomology_triviality_certified`: `True`
+- `phase_cycle_closure_boundary_certified`: `True`
 - `phase_cell_sign_certified`: `True`
 - `phase_z2_coboundary_certified`: `True`
+- `phase_edge_support_minimality_certified`: `True`
+- `phase_gf2_linear_system_certified`: `True`
 - `damping_envelope_certified`: `True`
 - `damping_exact_rational_calculus_certified`: `True`
 - `positive_factor_sign_separation_certified`: `True`
@@ -60,7 +89,7 @@ All cross-checks pass: `True`
 
 ## Frontier statement
 
-- Positive: The finite completion ansatz is internally consistent across necessity, cocycle, phase-zero, rational-zero, robustness-margin, node-clearance, cell-partition, cell-sign, Z2-coboundary, damping, exact-rational-damping, positive-factor-sign-separation, and low-order no-go certificates.
+- Positive: The finite completion ansatz is internally consistent across necessity, cocycle, phase-zero, rational-zero, robustness-margin, node-clearance, cell-partition, carrier-edge-incidence, carrier-prefix-node-matrix, GF2-commutative-diagram, path-cohomology-triviality, cycle-closure-boundary, cell-sign, Z2-coboundary, edge-support-minimality, GF2-linear-system, damping, exact-rational-damping, positive-factor-sign-separation, and low-order no-go certificates.
 - Negative: The chain still does not derive A(d), P(d), D(d), omega/phi, beta/eta, or the transport cocycle from strict nadsoliton dynamics.
 - Next blocker: strict_phase_frequency/damping/transport derivation from strict nadsoliton dynamics, plus orientation_chi11_source and role_transfer_theorem if a bridge lane is explicitly reopened.
 

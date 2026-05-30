@@ -1,0 +1,694 @@
+{
+  "blocker_context": {
+    "guardrail": "This is a closed-cycle boundary-condition sanity check, not a cyclic gate-generation strategy and not a strict-source selector closure.",
+    "still_open": [
+      "strict_phase_frequency_derivation_from_nadsoliton_dynamics",
+      "strict_damping_derivation_from_nadsoliton_dynamics",
+      "transport_cocycle_source_from_strict_dynamics",
+      "QW-2191_selector_obstruction",
+      "orientation_chi11_source"
+    ]
+  },
+  "closure_case_rows": [
+    {
+      "anchored_reconstructed_node_bits": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "anchored_reconstruction_matches_audited_nodes": true,
+      "case": "audited_path_plus_forced_zero_closing_edge",
+      "closing_edge_bit": 0,
+      "closing_edge_matches_audited_endpoint_xor": true,
+      "constant_kernel_pair_present_when_exact": true,
+      "cycle_edge_bits": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "cycle_parity_even": true,
+      "exact_node_potential_count": 2,
+      "forced_closing_bit_from_audited_nodes": 0,
+      "is_exact_cycle_coboundary": true,
+      "total_cycle_parity_mod2": 0
+    },
+    {
+      "anchored_reconstructed_node_bits": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "anchored_reconstruction_matches_audited_nodes": true,
+      "case": "odd_closing_edge_perturbation",
+      "closing_edge_bit": 1,
+      "closing_edge_matches_audited_endpoint_xor": false,
+      "constant_kernel_pair_present_when_exact": true,
+      "cycle_edge_bits": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "cycle_parity_even": false,
+      "exact_node_potential_count": 0,
+      "forced_closing_bit_from_audited_nodes": 0,
+      "is_exact_cycle_coboundary": false,
+      "total_cycle_parity_mod2": 1
+    }
+  ],
+  "cycle_closure_summary": {
+    "audited_node_bits": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    "audited_path_edge_bits": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    "cycle_rank": 1,
+    "forced_closing_edge_bit_b11_xor_b0": 0,
+    "gf2_path_solution_inherited": true,
+    "h1_dimension_dim_C1_minus_rank_delta": 1,
+    "nullity_delta_cycle": 1,
+    "odd_closing_cycle_exact": false,
+    "odd_closing_cycle_parity_even": false,
+    "odd_closing_obstructed_by_cycle_parity": true,
+    "path_anchor_reconstruction_inherited": true,
+    "path_h1_zero_inherited": true,
+    "rank_delta_cycle": 11,
+    "zero_closing_anchor_recovers_audited_nodes": true,
+    "zero_closing_cycle_exact": true,
+    "zero_closing_cycle_parity_even": true,
+    "zero_closing_exact_potential_count": 2
+  },
+  "cycle_coboundary_rank_certificate": {
+    "nullity": 1,
+    "pivot_rows": [
+      {
+        "pivot_col": 0,
+        "row": 0
+      },
+      {
+        "pivot_col": 1,
+        "row": 1
+      },
+      {
+        "pivot_col": 2,
+        "row": 2
+      },
+      {
+        "pivot_col": 3,
+        "row": 3
+      },
+      {
+        "pivot_col": 4,
+        "row": 4
+      },
+      {
+        "pivot_col": 5,
+        "row": 5
+      },
+      {
+        "pivot_col": 6,
+        "row": 6
+      },
+      {
+        "pivot_col": 7,
+        "row": 7
+      },
+      {
+        "pivot_col": 8,
+        "row": 8
+      },
+      {
+        "pivot_col": 9,
+        "row": 9
+      },
+      {
+        "pivot_col": 10,
+        "row": 10
+      }
+    ],
+    "rank": 11,
+    "rref_matrix": [
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "cycle_complex_definition": {
+    "connected_components": 1,
+    "cycle_coboundary_delta_matrix": [
+      [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    ],
+    "cycle_edge_count_dim_C1": 12,
+    "cycle_functional": "sum of all 12 cycle-edge bits mod 2",
+    "cycle_rank_E_minus_V_plus_components": 1,
+    "edge_labels": [
+      "0->1",
+      "1->2",
+      "2->3",
+      "3->4",
+      "4->5",
+      "5->6",
+      "6->7",
+      "7->8",
+      "8->9",
+      "9->10",
+      "10->11",
+      "11->0"
+    ],
+    "exactness_criterion": "cycle edge cochain is exact iff total cycle parity is 0",
+    "field": "GF(2)",
+    "node_count_dim_C0": 12
+  },
+  "cycle_edge_comparison_rows": [
+    {
+      "audited_zero_closure_bit": 0,
+      "differs_only_on_closing_edge": true,
+      "edge": "0->1",
+      "odd_closure_perturbation_bit": 0
+    },
+    {
+      "audited_zero_closure_bit": 1,
+      "differs_only_on_closing_edge": true,
+      "edge": "1->2",
+      "odd_closure_perturbation_bit": 1
+    },
+    {
+      "audited_zero_closure_bit": 0,
+      "differs_only_on_closing_edge": true,
+      "edge": "2->3",
+      "odd_closure_perturbation_bit": 0
+    },
+    {
+      "audited_zero_closure_bit": 0,
+      "differs_only_on_closing_edge": true,
+      "edge": "3->4",
+      "odd_closure_perturbation_bit": 0
+    },
+    {
+      "audited_zero_closure_bit": 0,
+      "differs_only_on_closing_edge": true,
+      "edge": "4->5",
+      "odd_closure_perturbation_bit": 0
+    },
+    {
+      "audited_zero_closure_bit": 1,
+      "differs_only_on_closing_edge": true,
+      "edge": "5->6",
+      "odd_closure_perturbation_bit": 1
+    },
+    {
+      "audited_zero_closure_bit": 0,
+      "differs_only_on_closing_edge": true,
+      "edge": "6->7",
+      "odd_closure_perturbation_bit": 0
+    },
+    {
+      "audited_zero_closure_bit": 1,
+      "differs_only_on_closing_edge": true,
+      "edge": "7->8",
+      "odd_closure_perturbation_bit": 1
+    },
+    {
+      "audited_zero_closure_bit": 0,
+      "differs_only_on_closing_edge": true,
+      "edge": "8->9",
+      "odd_closure_perturbation_bit": 0
+    },
+    {
+      "audited_zero_closure_bit": 1,
+      "differs_only_on_closing_edge": true,
+      "edge": "9->10",
+      "odd_closure_perturbation_bit": 1
+    },
+    {
+      "audited_zero_closure_bit": 0,
+      "differs_only_on_closing_edge": true,
+      "edge": "10->11",
+      "odd_closure_perturbation_bit": 0
+    },
+    {
+      "audited_zero_closure_bit": 0,
+      "differs_only_on_closing_edge": true,
+      "edge": "11->0",
+      "odd_closure_perturbation_bit": 1
+    }
+  ],
+  "grep_disambiguation": {
+    "conclusion": "Existing reports certify path exactness; this report adds the conditional closed-cycle parity functional and odd-closing-edge obstruction check.",
+    "searched_terms": [
+      "cycle closure parity",
+      "closed 12-cycle",
+      "closing edge 11->0",
+      "cycle obstruction",
+      "GF2 cycle functional",
+      "boundary condition sensitivity"
+    ]
+  },
+  "hard_limits": [
+    "K_strict_gate remains the current live/full operational kernel.",
+    "No unqualified identity K_legacy_ont == K_strict_gate is claimed.",
+    "No cyclic L5/L12 gate-generation strategy is introduced or recommended.",
+    "No proof derives A(d), P(d), D(d), omega/phi, beta/eta, or the transport cocycle from strict nadsoliton dynamics.",
+    "No beta_tors -> chi_11 theorem is claimed.",
+    "No legacy physical-role transfer to K_strict_gate is claimed.",
+    "No QW-2191 selector discharge is claimed.",
+    "No ToE closure is claimed."
+  ],
+  "kernel_certificate": {
+    "kernel_is_exactly_constant_node_cochains": true,
+    "kernel_size": 2,
+    "kernel_vectors": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ]
+  },
+  "proof_certificate": {
+    "criterion_step": "A 12-cycle edge cochain is exact only when the total cycle parity is 0.",
+    "cycle_rank_step": "The artificially closed graph has V=12, E=12, one connected component, rank(delta)=11, and one GF(2) cycle functional.",
+    "odd_closure_step": "Changing only the closing edge to 1 makes total cycle parity odd, so no node potential solves delta b=e on the closed cycle.",
+    "theoretical_limit": "This boundary-condition certificate does not derive omega/phi, beta/eta, transport, a selector, or any bridge theorem from strict nadsoliton dynamics.",
+    "zero_closure_step": "The audited endpoint bits force closing edge b(11) xor b(0)=0; path bits plus this closing bit have even cycle parity and exactly the constant-pair node potentials."
+  },
+  "result_kind": "SCRATCH_STRICT_COMPLETION_PHASE_SIGN_CYCLE_CLOSURE_OBSTRUCTION_CERTIFICATE__GF2_BOUNDARY_CONDITION",
+  "source_reports": {
+    "phase_sign_gf2_linear_system_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_phase_sign_gf2_linear_system_certificate_report.json",
+    "phase_sign_path_cohomology_triviality_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_phase_sign_path_cohomology_triviality_certificate_report.json",
+    "phase_sign_z2_coboundary_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_phase_sign_z2_coboundary_certificate_report.json"
+  },
+  "status": "cycle-closure-parity-functional-certified-zero-closure-exact-odd-closure-obstructed"
+}
