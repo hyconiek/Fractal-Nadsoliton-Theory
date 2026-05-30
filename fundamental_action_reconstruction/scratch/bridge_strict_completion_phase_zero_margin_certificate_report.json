@@ -1,0 +1,235 @@
+{
+  "blocker_context": {
+    "phase_zero_status": "phase-transport-sign-flips-certified-by-legacy-strict-cosine-zero-interlacing",
+    "rational_zero_status": "phase-zero-sign-flip-edges-certified-by-rational-pi-intervals",
+    "still_open": [
+      "strict_phase_frequency_derivation_from_nadsoliton_dynamics",
+      "strict_transport_derivation_from_nadsoliton_dynamics",
+      "orientation_chi11_source",
+      "chi11_uniqueness",
+      "role_transfer_theorem"
+    ],
+    "what_this_refines": "adds a rational perturbation margin around strict omega/phi for the certified phase-zero edge placement"
+  },
+  "hard_limits": [
+    "K_strict_gate remains the current live/full operational kernel.",
+    "No unqualified identity K_legacy_ont == K_strict_gate is claimed.",
+    "No proof derives strict omega/phi or phase transport from strict nadsoliton dynamics.",
+    "No beta_tors -> chi_11 theorem is claimed.",
+    "No legacy physical-role transfer to K_strict_gate is claimed.",
+    "No QW-2191 selector discharge is claimed.",
+    "No ToE closure is claimed."
+  ],
+  "margin_definitions": {
+    "certified_symmetric_epsilon_rule": "eps = eps_limit/2 to keep all inequalities strict",
+    "k0_left_margin": "pi_lower/2 - (7*omega + phi)",
+    "k0_right_margin": "(8*omega + phi) - pi_upper/2",
+    "k1_right_exclusion_margin": "3*pi_lower/2 - (11*omega + phi)",
+    "k_minus_1_left_exclusion_margin": "phi + pi_lower/2",
+    "limiting_symmetric_epsilon_rule": "eps_limit = min(left_margin/8, right_margin/9, k1_margin/12, k_minus_1_margin/2)"
+  },
+  "margin_values": {
+    "left_margin": {
+      "decimal": 0.10800471698113208,
+      "denominator": 212000,
+      "numerator": 22897,
+      "text": "22897/212000"
+    },
+    "limiting_symmetric_parameter_epsilon": {
+      "decimal": 0.008633726647000984,
+      "denominator": 2034000,
+      "numerator": 17561,
+      "text": "17561/2034000"
+    },
+    "next_zero_right_margin": {
+      "decimal": 2.506514150943396,
+      "denominator": 212000,
+      "numerator": 531381,
+      "text": "531381/212000"
+    },
+    "previous_zero_left_margin": {
+      "decimal": 1.733254716981132,
+      "denominator": 4240,
+      "numerator": 7349,
+      "text": "7349/4240"
+    },
+    "right_margin": {
+      "decimal": 0.07770353982300884,
+      "denominator": 226000,
+      "numerator": 17561,
+      "text": "17561/226000"
+    },
+    "symmetric_parameter_epsilon": {
+      "decimal": 0.004316863323500492,
+      "denominator": 4068000,
+      "numerator": 17561,
+      "text": "17561/4068000"
+    }
+  },
+  "ontology_guardrail": {
+    "allowed_reading": "The nadsoliton itself remains the primordial information in solitonic state; this audit only checks robustness of phase-zero placement.",
+    "forbidden_reading": "No separate informational layer below the nadsoliton is introduced."
+  },
+  "proof_certificate": {
+    "edge_condition_step": "The k=0 strict zero stays in (7,8) if 7*omega+phi < pi/2 < 8*omega+phi.",
+    "epsilon_step": "The symmetric epsilon bound subtracts worst-case 7*eps+eps and 8*eps+eps perturbations from those margins.",
+    "exclusion_step": "Additional k=-1 and k=1 inequalities keep the adjacent strict zeros outside [0,11].",
+    "margin_step": "Using pi_lower for the left inequality and pi_upper for the right inequality gives positive rational margins.",
+    "nonduplication": "This is a rational robustness-margin certificate, not another zero-location, damping, cocycle, or low-order fit audit.",
+    "theoretical_limit": "The certificate proves local parameter robustness of the chosen phase placement; it does not derive omega/phi from strict dynamics."
+  },
+  "rational_inputs": {
+    "pi_lower_bound": {
+      "decimal": 3.141509433962264,
+      "denominator": 106,
+      "numerator": 333,
+      "text": "333/106"
+    },
+    "pi_upper_bound": {
+      "decimal": 3.1415929203539825,
+      "denominator": 113,
+      "numerator": 355,
+      "text": "355/113"
+    },
+    "strict_omega": {
+      "decimal": 0.18575,
+      "denominator": 4000,
+      "numerator": 743,
+      "text": "743/4000"
+    },
+    "strict_phi": {
+      "decimal": 0.1625,
+      "denominator": 80,
+      "numerator": 13,
+      "text": "13/80"
+    }
+  },
+  "result_kind": "SCRATCH_STRICT_COMPLETION_PHASE_ZERO_MARGIN_CERTIFICATE__RATIONAL_PARAMETER_ROBUSTNESS",
+  "robustness_summary": {
+    "active_margin_source": "k0_right_margin/9",
+    "all_margins_positive": true,
+    "all_worst_case_inequalities_hold_at_epsilon": true,
+    "certified_epsilon_is_half_of_limiting_epsilon": true,
+    "certified_phase_sign_flip_edges_preserved": [
+      "1->2",
+      "5->6",
+      "7->8",
+      "9->10"
+    ],
+    "certified_phase_sign_pattern_preserved": [
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      1
+    ],
+    "matches_phase_zero_report": true,
+    "symmetric_parameter_epsilon_decimal": 0.004316863323500492
+  },
+  "source_reports": {
+    "phase_zero_interlacing_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_phase_zero_interlacing_certificate_report.json",
+    "rational_zero_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_phase_zero_rational_interval_certificate_report.json"
+  },
+  "status": "strict-phase-zero-edge-placement-has-positive-rational-parameter-margin",
+  "worst_case_inequality_rows": [
+    {
+      "expression": "7*(omega+eps)+(phi+eps) < pi_lower/2",
+      "left_value": {
+        "decimal": 1.4972849065880038,
+        "denominator": 813600,
+        "numerator": 1218191,
+        "text": "1218191/813600"
+      },
+      "name": "k0_left_edge_upper_worst_case",
+      "right_value": {
+        "decimal": 1.570754716981132,
+        "denominator": 212,
+        "numerator": 333,
+        "text": "333/212"
+      },
+      "slack": {
+        "decimal": 0.07346981039312814,
+        "denominator": 43120800,
+        "numerator": 3168077,
+        "text": "3168077/43120800"
+      },
+      "strict_inequality_holds": true
+    },
+    {
+      "expression": "pi_upper/2 < 8*(omega-eps)+(phi-eps)",
+      "left_value": {
+        "decimal": 1.5707964601769913,
+        "denominator": 226,
+        "numerator": 355,
+        "text": "355/226"
+      },
+      "name": "k0_right_edge_lower_worst_case",
+      "right_value": {
+        "decimal": 1.6096482300884956,
+        "denominator": 452000,
+        "numerator": 727561,
+        "text": "727561/452000"
+      },
+      "slack": {
+        "decimal": 0.03885176991150442,
+        "denominator": 452000,
+        "numerator": 17561,
+        "text": "17561/452000"
+      },
+      "strict_inequality_holds": true
+    },
+    {
+      "expression": "11*(omega+eps)+(phi+eps) < 3*pi_lower/2",
+      "left_value": {
+        "decimal": 2.257552359882006,
+        "denominator": 1356000,
+        "numerator": 3061241,
+        "text": "3061241/1356000"
+      },
+      "name": "k1_stays_right_of_d11_worst_case",
+      "right_value": {
+        "decimal": 4.712264150943396,
+        "denominator": 212,
+        "numerator": 999,
+        "text": "999/212"
+      },
+      "slack": {
+        "decimal": 2.4547117910613903,
+        "denominator": 71868000,
+        "numerator": 176415227,
+        "text": "176415227/71868000"
+      },
+      "strict_inequality_holds": true
+    },
+    {
+      "expression": "-pi_lower/2 < phi-eps",
+      "left_value": {
+        "decimal": -1.570754716981132,
+        "denominator": 212,
+        "numerator": -333,
+        "text": "-333/212"
+      },
+      "name": "k_minus_1_stays_left_of_d0_worst_case",
+      "right_value": {
+        "decimal": 0.1581831366764995,
+        "denominator": 4068000,
+        "numerator": 643489,
+        "text": "643489/4068000"
+      },
+      "slack": {
+        "decimal": 1.7289378536576316,
+        "denominator": 215604000,
+        "numerator": 372765917,
+        "text": "372765917/215604000"
+      },
+      "strict_inequality_holds": true
+    }
+  ]
+}

@@ -1,0 +1,343 @@
+{
+  "blocker_context": {
+    "damping_status": "damping-compression-factor-positive-and-strictly-decreasing-on-continuous-interval-1-to-11",
+    "necessity_status": "all-three-explicit-factors-are-necessary-for-exact-pointwise-completion; phase-and-damping-are-shape-critical",
+    "phase_zero_status": "phase-transport-sign-flips-certified-by-legacy-strict-cosine-zero-interlacing",
+    "still_open": [
+      "strict_phase_frequency_derivation_from_nadsoliton_dynamics",
+      "strict_transport_derivation_from_nadsoliton_dynamics",
+      "orientation_chi11_source",
+      "chi11_uniqueness",
+      "role_transfer_theorem"
+    ],
+    "what_this_refines": "replaces the decisive strict zero placement in the phase sign certificate with rational interval arithmetic using 333/106 < pi < 355/113"
+  },
+  "edge_zero_parity_rows": [
+    {
+      "edge": "0->1",
+      "legacy_zero_count": 0,
+      "phase_sign_flip_by_odd_parity": false,
+      "strict_zero_count": 0,
+      "total_zero_count": 0
+    },
+    {
+      "edge": "1->2",
+      "legacy_zero_count": 1,
+      "phase_sign_flip_by_odd_parity": true,
+      "strict_zero_count": 0,
+      "total_zero_count": 1
+    },
+    {
+      "edge": "2->3",
+      "legacy_zero_count": 0,
+      "phase_sign_flip_by_odd_parity": false,
+      "strict_zero_count": 0,
+      "total_zero_count": 0
+    },
+    {
+      "edge": "3->4",
+      "legacy_zero_count": 0,
+      "phase_sign_flip_by_odd_parity": false,
+      "strict_zero_count": 0,
+      "total_zero_count": 0
+    },
+    {
+      "edge": "4->5",
+      "legacy_zero_count": 0,
+      "phase_sign_flip_by_odd_parity": false,
+      "strict_zero_count": 0,
+      "total_zero_count": 0
+    },
+    {
+      "edge": "5->6",
+      "legacy_zero_count": 1,
+      "phase_sign_flip_by_odd_parity": true,
+      "strict_zero_count": 0,
+      "total_zero_count": 1
+    },
+    {
+      "edge": "6->7",
+      "legacy_zero_count": 0,
+      "phase_sign_flip_by_odd_parity": false,
+      "strict_zero_count": 0,
+      "total_zero_count": 0
+    },
+    {
+      "edge": "7->8",
+      "legacy_zero_count": 0,
+      "phase_sign_flip_by_odd_parity": true,
+      "strict_zero_count": 1,
+      "total_zero_count": 1
+    },
+    {
+      "edge": "8->9",
+      "legacy_zero_count": 0,
+      "phase_sign_flip_by_odd_parity": false,
+      "strict_zero_count": 0,
+      "total_zero_count": 0
+    },
+    {
+      "edge": "9->10",
+      "legacy_zero_count": 1,
+      "phase_sign_flip_by_odd_parity": true,
+      "strict_zero_count": 0,
+      "total_zero_count": 1
+    },
+    {
+      "edge": "10->11",
+      "legacy_zero_count": 0,
+      "phase_sign_flip_by_odd_parity": false,
+      "strict_zero_count": 0,
+      "total_zero_count": 0
+    }
+  ],
+  "hard_limits": [
+    "K_strict_gate remains the current live/full operational kernel.",
+    "No unqualified identity K_legacy_ont == K_strict_gate is claimed.",
+    "No proof derives strict omega/phi or phase transport from strict nadsoliton dynamics.",
+    "No beta_tors -> chi_11 theorem is claimed.",
+    "No legacy physical-role transfer to K_strict_gate is claimed.",
+    "No QW-2191 selector discharge is claimed.",
+    "No ToE closure is claimed."
+  ],
+  "interval_summary": {
+    "all_integer_nodes_certified_away_from_zeros": true,
+    "legacy_zero_count_in_0_11": 3,
+    "matches_float_phase_zero_report_flip_edges": true,
+    "matches_float_phase_zero_report_sign_pattern": true,
+    "phase_sign_flip_edges_from_rational_intervals": [
+      "1->2",
+      "5->6",
+      "7->8",
+      "9->10"
+    ],
+    "phase_transport_sign_pattern_from_rational_intervals": [
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      1
+    ],
+    "strict_k_0_inside_edge_7_8": true,
+    "strict_k_1_right_of_audit_domain": true,
+    "strict_k_minus_1_left_of_domain": true,
+    "strict_zero_count_in_0_11": 1
+  },
+  "legacy_zero_rows": [
+    {
+      "edge_containing_zero": "1->2",
+      "k": 0,
+      "position": {
+        "decimal": 1.3333333333333333,
+        "denominator": 3,
+        "numerator": 4,
+        "text": "4/3"
+      },
+      "proves_inside_audit_domain": true,
+      "proves_not_integer_node": true
+    },
+    {
+      "edge_containing_zero": "5->6",
+      "k": 1,
+      "position": {
+        "decimal": 5.333333333333333,
+        "denominator": 3,
+        "numerator": 16,
+        "text": "16/3"
+      },
+      "proves_inside_audit_domain": true,
+      "proves_not_integer_node": true
+    },
+    {
+      "edge_containing_zero": "9->10",
+      "k": 2,
+      "position": {
+        "decimal": 9.333333333333334,
+        "denominator": 3,
+        "numerator": 28,
+        "text": "28/3"
+      },
+      "proves_inside_audit_domain": true,
+      "proves_not_integer_node": true
+    }
+  ],
+  "ontology_guardrail": {
+    "allowed_reading": "The nadsoliton itself remains the primordial information in solitonic state; this audit only checks interval placement of phase zeros.",
+    "forbidden_reading": "No separate informational layer below the nadsoliton is introduced."
+  },
+  "proof_certificate": {
+    "legacy_zero_step": "Legacy phase zeros are exact at 4/3, 16/3, and 28/3, hence inside edges 1->2, 5->6, and 9->10.",
+    "nonduplication": "This is a rational-interval strengthening of phase-zero placement, not another damping, cocycle, or low-order fit audit.",
+    "parity_step": "Starting from positive phase sign at d=0, odd zero parity on an edge forces exactly the certified sign flips.",
+    "pi_interval_step": "Use 333/106 < pi < 355/113 and exact rational strict parameters omega=743/4000, phi=13/80.",
+    "strict_zero_step": "The strict zero intervals prove k=-1 lies left of 0, k=0 lies inside (7,8), and k=1 lies right of 11.",
+    "theoretical_limit": "The certificate proves zero placement consequences of the selected phase parameters; it does not derive those parameters from strict dynamics."
+  },
+  "rational_inputs": {
+    "legacy_zero_positions_exact": [
+      {
+        "decimal": 1.3333333333333333,
+        "denominator": 3,
+        "numerator": 4,
+        "text": "4/3"
+      },
+      {
+        "decimal": 5.333333333333333,
+        "denominator": 3,
+        "numerator": 16,
+        "text": "16/3"
+      },
+      {
+        "decimal": 9.333333333333334,
+        "denominator": 3,
+        "numerator": 28,
+        "text": "28/3"
+      }
+    ],
+    "pi_lower_bound": {
+      "decimal": 3.141509433962264,
+      "denominator": 106,
+      "numerator": 333,
+      "text": "333/106"
+    },
+    "pi_upper_bound": {
+      "decimal": 3.1415929203539825,
+      "denominator": 113,
+      "numerator": 355,
+      "text": "355/113"
+    },
+    "strict_omega": {
+      "decimal": 0.18575,
+      "denominator": 4000,
+      "numerator": 743,
+      "text": "743/4000"
+    },
+    "strict_phi": {
+      "decimal": 0.1625,
+      "denominator": 80,
+      "numerator": 13,
+      "text": "13/80"
+    }
+  },
+  "result_kind": "SCRATCH_STRICT_COMPLETION_PHASE_ZERO_RATIONAL_INTERVAL_CERTIFICATE__NO_FLOAT_ZERO_PLACEMENT",
+  "source_reports": {
+    "damping_monotonicity_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_damping_continuous_monotonicity_certificate_report.json",
+    "necessity_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_kernel_completion_necessity_certificate_report.json",
+    "phase_zero_interlacing_float_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_phase_zero_interlacing_certificate_report.json"
+  },
+  "status": "phase-zero-sign-flip-edges-certified-by-rational-pi-intervals",
+  "strict_zero_interval_rows": [
+    {
+      "k": -1,
+      "numerator_interval": {
+        "lower": {
+          "decimal": -1.7332964601769911,
+          "denominator": 9040,
+          "numerator": -15669,
+          "text": "-15669/9040"
+        },
+        "upper": {
+          "decimal": -1.733254716981132,
+          "denominator": 4240,
+          "numerator": -7349,
+          "text": "-7349/4240"
+        }
+      },
+      "proves_in_audit_domain": false,
+      "proves_inside_7_8": false,
+      "proves_left_of_domain": true,
+      "proves_right_of_audit_domain": false,
+      "x_interval": {
+        "lower": {
+          "decimal": -9.331340297049751,
+          "denominator": 83959,
+          "numerator": -783450,
+          "text": "-783450/83959"
+        },
+        "upper": {
+          "decimal": -9.331115569212017,
+          "denominator": 39379,
+          "numerator": -367450,
+          "text": "-367450/39379"
+        }
+      }
+    },
+    {
+      "k": 0,
+      "numerator_interval": {
+        "lower": {
+          "decimal": 1.4082547169811321,
+          "denominator": 4240,
+          "numerator": 5971,
+          "text": "5971/4240"
+        },
+        "upper": {
+          "decimal": 1.4082964601769912,
+          "denominator": 9040,
+          "numerator": 12731,
+          "text": "12731/9040"
+        }
+      },
+      "proves_in_audit_domain": true,
+      "proves_inside_7_8": true,
+      "proves_left_of_domain": false,
+      "proves_right_of_audit_domain": false,
+      "x_interval": {
+        "lower": {
+          "decimal": 7.581452042967063,
+          "denominator": 39379,
+          "numerator": 298550,
+          "text": "298550/39379"
+        },
+        "upper": {
+          "decimal": 7.581676770804798,
+          "denominator": 83959,
+          "numerator": 636550,
+          "text": "636550/83959"
+        }
+      }
+    },
+    {
+      "k": 1,
+      "numerator_interval": {
+        "lower": {
+          "decimal": 4.549764150943396,
+          "denominator": 4240,
+          "numerator": 19291,
+          "text": "19291/4240"
+        },
+        "upper": {
+          "decimal": 4.549889380530973,
+          "denominator": 9040,
+          "numerator": 41131,
+          "text": "41131/9040"
+        }
+      },
+      "proves_in_audit_domain": false,
+      "proves_inside_7_8": false,
+      "proves_left_of_domain": false,
+      "proves_right_of_audit_domain": true,
+      "x_interval": {
+        "lower": {
+          "decimal": 24.494019655146143,
+          "denominator": 39379,
+          "numerator": 964550,
+          "text": "964550/39379"
+        },
+        "upper": {
+          "decimal": 24.494693838659344,
+          "denominator": 83959,
+          "numerator": 2056550,
+          "text": "2056550/83959"
+        }
+      }
+    }
+  ]
+}

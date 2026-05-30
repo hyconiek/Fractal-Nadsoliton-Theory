@@ -1,0 +1,276 @@
+{
+  "blocker_context": {
+    "low_order_status": "low-order-autonomous-transport-readings-fail-for-completion-cocycle",
+    "necessity_status": "all-three-explicit-factors-are-necessary-for-exact-pointwise-completion; phase-and-damping-are-shape-critical",
+    "phase_zero_status": "phase-transport-sign-flips-certified-by-legacy-strict-cosine-zero-interlacing",
+    "still_open": [
+      "strict_damping_formula_derivation_from_nadsoliton_dynamics",
+      "strict_phase_frequency_derivation_from_nadsoliton_dynamics",
+      "strict_transport_derivation_from_nadsoliton_dynamics",
+      "orientation_chi11_source",
+      "chi11_uniqueness",
+      "role_transfer_theorem"
+    ],
+    "strict_damping_derivation_status": "still_open; this certifies calculus consequences of the chosen damping formula, not its strict-side dynamical origin",
+    "transport_cocycle_status": "unique-finite-node-transport-and-adjacent-edge-cocycle-certified-for-completion-ansatz",
+    "what_this_refines": "proves the damping/compression factor is a positive monotone envelope on [1,11], so sign flips must come from phase rather than damping"
+  },
+  "constants": {
+    "audited_integer_domain": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "beta": 1.0,
+    "beta_tors": 0.01,
+    "certified_continuous_interval": [
+      1.0,
+      11.0
+    ],
+    "eta": 1.8,
+    "tolerance": 1e-14
+  },
+  "damping_definition": "D(x)=(1+beta_tors*x)/(1+beta*x^eta)",
+  "derivative_certificate": {
+    "conclusion": "D'(x)<0 for every x in [1,11] and D(x)>0 there",
+    "denominator_positive": "(1+beta*x^eta)^2 > 0",
+    "derivative_formula": "D'(x)=N(x)/(1+beta*x^eta)^2",
+    "inequality_for_x_ge_1": "N(x) <= beta_tors - eta = -1.79 < 0 because x^(eta-1)>=1 and beta_tors*(1-eta)*x^eta<0",
+    "numerator_formula": "N(x)=beta_tors - eta*x^(eta-1) + beta_tors*(1-eta)*x^eta",
+    "numerator_upper_bound_for_x_ge_1": -1.79
+  },
+  "grid_derivative_rows": [
+    {
+      "D_prime_x": -0.4495,
+      "D_prime_x_negative": true,
+      "D_x": 0.505,
+      "N_x_negative": true,
+      "derivative_denominator_positive": true,
+      "derivative_numerator_N_x": -1.798,
+      "x": 1.0
+    },
+    {
+      "D_prime_x": -0.15688492516795463,
+      "D_prime_x_negative": true,
+      "D_x": 0.22756670546834754,
+      "N_x_negative": true,
+      "derivative_denominator_positive": true,
+      "derivative_numerator_N_x": -3.151839645891523,
+      "x": 2.0
+    },
+    {
+      "D_prime_x": -0.06478800747520388,
+      "D_prime_x_negative": true,
+      "D_x": 0.1252329263149802,
+      "N_x_negative": true,
+      "derivative_denominator_positive": true,
+      "derivative_numerator_N_x": -4.3826018259519826,
+      "x": 3.0
+    },
+    {
+      "D_prime_x": -0.03217685916536702,
+      "D_prime_x_negative": true,
+      "D_x": 0.07923367305085117,
+      "N_x_negative": true,
+      "derivative_denominator_positive": true,
+      "derivative_numerator_N_x": -5.543585499694099,
+      "x": 4.0
+    },
+    {
+      "D_prime_x": -0.018213329478244247,
+      "D_prime_x_negative": true,
+      "D_x": 0.05491777827620198,
+      "N_x_negative": true,
+      "derivative_denominator_positive": true,
+      "derivative_numerator_N_x": -6.657972905834799,
+      "x": 5.0
+    },
+    {
+      "D_prime_x": -0.011309944705382378,
+      "D_prime_x_negative": true,
+      "D_x": 0.04052332235066948,
+      "N_x_negative": true,
+      "derivative_denominator_positive": true,
+      "derivative_numerator_N_x": -7.738595092939272,
+      "x": 6.0
+    },
+    {
+      "D_prime_x": -0.00751685305647215,
+      "D_prime_x_negative": true,
+      "D_x": 0.031283865189164484,
+      "N_x_negative": true,
+      "derivative_denominator_positive": true,
+      "derivative_numerator_N_x": -8.793520986899049,
+      "x": 7.0
+    },
+    {
+      "D_prime_x": -0.005260429958807257,
+      "D_prime_x_negative": true,
+      "D_x": 0.024985972490576408,
+      "N_x_negative": true,
+      "derivative_denominator_positive": true,
+      "derivative_numerator_N_x": -9.8282509827227,
+      "x": 8.0
+    },
+    {
+      "D_prime_x": -0.003833037558731487,
+      "D_prime_x_negative": true,
+      "D_x": 0.020490295084356347,
+      "N_x_negative": true,
+      "derivative_denominator_positive": true,
+      "derivative_numerator_N_x": -10.846750364336783,
+      "x": 9.0
+    },
+    {
+      "D_prime_x": -0.0028849169522517553,
+      "D_prime_x_negative": true,
+      "D_x": 0.017161828466012562,
+      "N_x_negative": true,
+      "derivative_denominator_positive": true,
+      "derivative_numerator_N_x": -11.851998076227636,
+      "x": 10.0
+    },
+    {
+      "D_prime_x": -0.0022296940565472417,
+      "D_prime_x_negative": true,
+      "D_x": 0.014623674671644927,
+      "N_x_negative": true,
+      "derivative_denominator_positive": true,
+      "derivative_numerator_N_x": -12.846304144762106,
+      "x": 11.0
+    }
+  ],
+  "hard_limits": [
+    "K_strict_gate remains the current live/full operational kernel.",
+    "No unqualified identity K_legacy_ont == K_strict_gate is claimed.",
+    "No proof derives beta, eta, or D(x) from strict nadsoliton dynamics.",
+    "No beta_tors -> chi_11 theorem is claimed.",
+    "No legacy physical-role transfer to K_strict_gate is claimed.",
+    "No QW-2191 selector discharge is claimed.",
+    "No ToE closure is claimed."
+  ],
+  "integer_edge_drop_rows": [
+    {
+      "D_left": 0.505,
+      "D_right": 0.22756670546834754,
+      "drop": 0.27743329453165244,
+      "edge": "1->2",
+      "ratio_left_over_right": 2.2191295469197754,
+      "strict_drop_positive": true
+    },
+    {
+      "D_left": 0.22756670546834754,
+      "D_right": 0.1252329263149802,
+      "drop": 0.10233377915336733,
+      "edge": "2->3",
+      "ratio_left_over_right": 1.817147551882498,
+      "strict_drop_positive": true
+    },
+    {
+      "D_left": 0.1252329263149802,
+      "D_right": 0.07923367305085117,
+      "drop": 0.04599925326412903,
+      "edge": "3->4",
+      "ratio_left_over_right": 1.5805518221351078,
+      "strict_drop_positive": true
+    },
+    {
+      "D_left": 0.07923367305085117,
+      "D_right": 0.05491777827620198,
+      "drop": 0.024315894774649197,
+      "edge": "4->5",
+      "ratio_left_over_right": 1.4427690911375821,
+      "strict_drop_positive": true
+    },
+    {
+      "D_left": 0.05491777827620198,
+      "D_right": 0.04052332235066948,
+      "drop": 0.014394455925532498,
+      "edge": "5->6",
+      "ratio_left_over_right": 1.3552141110486882,
+      "strict_drop_positive": true
+    },
+    {
+      "D_left": 0.04052332235066948,
+      "D_right": 0.031283865189164484,
+      "drop": 0.009239457161504996,
+      "edge": "6->7",
+      "ratio_left_over_right": 1.2953425705435269,
+      "strict_drop_positive": true
+    },
+    {
+      "D_left": 0.031283865189164484,
+      "D_right": 0.024985972490576408,
+      "drop": 0.006297892698588076,
+      "edge": "7->8",
+      "ratio_left_over_right": 1.2520571372982725,
+      "strict_drop_positive": true
+    },
+    {
+      "D_left": 0.024985972490576408,
+      "D_right": 0.020490295084356347,
+      "drop": 0.004495677406220061,
+      "edge": "8->9",
+      "ratio_left_over_right": 1.2194052056210922,
+      "strict_drop_positive": true
+    },
+    {
+      "D_left": 0.020490295084356347,
+      "D_right": 0.017161828466012562,
+      "drop": 0.0033284666183437846,
+      "edge": "9->10",
+      "ratio_left_over_right": 1.1939459204440546,
+      "strict_drop_positive": true
+    },
+    {
+      "D_left": 0.017161828466012562,
+      "D_right": 0.014623674671644927,
+      "drop": 0.0025381537943676355,
+      "edge": "10->11",
+      "ratio_left_over_right": 1.1735647059551368,
+      "strict_drop_positive": true
+    }
+  ],
+  "monotonicity_summary": {
+    "D_1": 0.505,
+    "D_11": 0.014623674671644927,
+    "D_1_over_D_11": 34.533043939987735,
+    "all_grid_derivative_numerators_negative": true,
+    "all_grid_derivatives_negative": true,
+    "all_integer_edge_drops_positive": true,
+    "continuous_positive_certificate": true,
+    "continuous_strictly_decreasing_certificate": true,
+    "max_grid_derivative_numerator": -1.798,
+    "min_integer_edge_drop": 0.0025381537943676355
+  },
+  "ontology_guardrail": {
+    "allowed_reading": "The nadsoliton itself remains the primordial information in solitonic state; this audit only checks calculus properties of the damping completion factor.",
+    "forbidden_reading": "No separate informational layer below the nadsoliton is introduced."
+  },
+  "proof_certificate": {
+    "derivative_step": "Differentiating D(x) gives D'(x)=N(x)/(1+beta*x^eta)^2 with the recorded N(x).",
+    "discrete_step": "The integer edge drops D(d)-D(d+1) are all positive for d=1..10, as expected from the continuous proof.",
+    "negative_numerator_step": "For x>=1, N(x)<=beta_tors-eta=-1.79<0, so D'(x)<0.",
+    "nonduplication": "This is a continuous damping-envelope calculus certificate, not another factor-subset, cocycle, low-order fit, or phase-zero report.",
+    "phase_separation_step": "Because D(x)>0, damping/compression cannot create the phase sign flips certified by the zero-interlacing report.",
+    "positivity_step": "For x in [1,11], numerator 1+beta_tors*x and denominator 1+beta*x^eta are positive, so D(x)>0.",
+    "theoretical_limit": "The certificate proves monotonicity of the chosen D(x); it does not derive D(x) from strict nadsoliton dynamics."
+  },
+  "result_kind": "SCRATCH_STRICT_COMPLETION_DAMPING_CONTINUOUS_MONOTONICITY_CERTIFICATE__CALCULUS_ENVELOPE_ONLY",
+  "source_reports": {
+    "low_order_no_go": "fundamental_action_reconstruction/scratch/bridge_strict_completion_low_order_transport_no_go_report.json",
+    "necessity_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_kernel_completion_necessity_certificate_report.json",
+    "phase_zero_interlacing": "fundamental_action_reconstruction/scratch/bridge_strict_completion_phase_zero_interlacing_certificate_report.json",
+    "transport_cocycle": "fundamental_action_reconstruction/scratch/bridge_strict_kernel_completion_transport_cocycle_report.json"
+  },
+  "status": "damping-compression-factor-positive-and-strictly-decreasing-on-continuous-interval-1-to-11"
+}

@@ -1,0 +1,487 @@
+{
+  "blocker_context": {
+    "blocker_lattice_status": "minimal-premise-lattice-computed-for-completed-strict-kernel-bridge-frontier",
+    "inverse_branch_status": "finite-z12-monotone-inverse-branch-certified-by-interval-brackets",
+    "ladder_status": "legacy-carrier-completed-to-current-strict-kernel-by-explicit-stage-ladder",
+    "what_remains_open": [
+      "strict_transport_derivation",
+      "global_z12_map_derivation_as_nadsoliton_dynamics",
+      "orientation_chi11_source",
+      "chi11_uniqueness",
+      "reynolds_obstruction_escape",
+      "role_transfer_theorem"
+    ],
+    "what_this_refines": "the completion ladder is not just an arbitrary display: the finite Z12 audit forces P and D as d-dependent shape corrections and A as the global normalization correction"
+  },
+  "completion_factor_definitions": {
+    "alpha_normalization": "A(d)=1/alpha_geo; global amplitude normalization only",
+    "damping_compression": "D(d)=(1+beta_tors*d)/(1+beta*d^eta); denominator compression beta_tors*d -> beta*d^eta",
+    "identity": "K_strict_gate(d)=K_legacy_ont(d)*A(d)*P(d)*D(d) on the audited finite domain",
+    "phase_frequency_transport": "P(d)=cos(omega_S*d+phi_S)/cos(omega_L*d+phi_L); sign/phase transport"
+  },
+  "constants": {
+    "alpha_geo": 2.772588722239781,
+    "domain_d_values": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "legacy": {
+      "beta_tors": 0.01,
+      "omega": 0.7853981633974483,
+      "phi": 0.5235987755982988
+    },
+    "strict": {
+      "beta": 1.0,
+      "eta": 1.8,
+      "omega": 0.18575,
+      "phi": 0.1625
+    },
+    "tolerance": 1e-14
+  },
+  "hard_limits": [
+    "K_strict_gate remains the current live/full operational kernel.",
+    "No unqualified identity K_legacy_ont == K_strict_gate is claimed.",
+    "No proof derives A(d), P(d), or D(d) from strict nadsoliton dynamics.",
+    "No beta_tors -> chi_11 theorem is claimed.",
+    "No legacy physical-role transfer to K_strict_gate is claimed.",
+    "No QW-2191 selector discharge is claimed.",
+    "No ToE closure is claimed."
+  ],
+  "necessity_summary": {
+    "alpha_is_global_scalar_not_shape_factor": "phase+damping without alpha becomes exact after multiplying by the global scalar 1/alpha_geo",
+    "damping_factor_positive": true,
+    "damping_factor_strictly_decreasing_after_d0": true,
+    "damping_is_envelope_shape_critical": "without D(d), the tail envelope is too large; at d=11 the omitted damping amplification is about 68.382268",
+    "exact_subsets_up_to_one_global_scalar": [
+      "phase_frequency_transport+damping_compression",
+      "alpha_normalization+phase_frequency_transport+damping_compression"
+    ],
+    "exact_subsets_without_extra_scalar": [
+      "alpha_normalization+phase_frequency_transport+damping_compression"
+    ],
+    "max_abs_quotient_identity_residual": 1.1102230246251565e-16,
+    "minimum_best_scalar_l2_residual_when_damping_missing": 0.7523311877932334,
+    "minimum_best_scalar_l2_residual_when_phase_missing": 0.5231383063044562,
+    "phase_is_sign_shape_critical": "without P(d), signs disagree at d=2,3,4,5,8,9 and no scalar removes the mismatch",
+    "phase_missing_sign_mismatch_union": [
+      2,
+      3,
+      4,
+      5,
+      8,
+      9
+    ],
+    "shape_exact_subsets_up_to_one_global_scalar": [
+      "phase_frequency_transport+damping_compression",
+      "alpha_normalization+phase_frequency_transport+damping_compression"
+    ]
+  },
+  "ontology_guardrail": {
+    "allowed_reading": "The nadsoliton itself remains the primordial information in solitonic state; this audit compares kernel carriers only.",
+    "forbidden_reading": "No separate informational layer below the nadsoliton is introduced."
+  },
+  "pointwise_quotient_certificate": [
+    {
+      "alpha_normalization_factor": 0.36067376022224085,
+      "d": 0,
+      "damping_compression_factor": 1.0,
+      "factor_product": 0.4109835665709374,
+      "legacy_full": 2.4011322677058873,
+      "legacy_sign": 1,
+      "phase_factor_sign": 1,
+      "phase_frequency_transport_factor": 1.1394884017004634,
+      "quotient_minus_factor_product": 1.1102230246251565e-16,
+      "strict_kernel": 0.9868259031903286,
+      "strict_over_legacy_quotient": 0.4109835665709375,
+      "strict_sign": 1,
+      "tail_amplification_if_damping_omitted": 1.0
+    },
+    {
+      "alpha_normalization_factor": 0.36067376022224085,
+      "d": 1,
+      "damping_compression_factor": 0.505,
+      "factor_product": 0.6614915634731454,
+      "legacy_full": 0.7104938272793256,
+      "legacy_sign": 1,
+      "phase_factor_sign": 1,
+      "phase_frequency_transport_factor": 3.631770393549314,
+      "quotient_minus_factor_product": 1.1102230246251565e-16,
+      "strict_kernel": 0.4699856726450201,
+      "strict_over_legacy_quotient": 0.6614915634731455,
+      "strict_sign": 1,
+      "tail_amplification_if_damping_omitted": 1.9801980198019802
+    },
+    {
+      "alpha_normalization_factor": 0.36067376022224085,
+      "d": 2,
+      "damping_compression_factor": 0.22756670546834754,
+      "factor_product": -0.1413007426255875,
+      "legacy_full": -1.3591121187449902,
+      "legacy_sign": -1,
+      "phase_factor_sign": -1,
+      "phase_frequency_transport_factor": -1.7215560801898648,
+      "quotient_minus_factor_product": 0.0,
+      "strict_kernel": 0.1920435516901028,
+      "strict_over_legacy_quotient": -0.1413007426255875,
+      "strict_sign": 1,
+      "tail_amplification_if_damping_omitted": 4.394315934494604
+    },
+    {
+      "alpha_normalization_factor": 0.36067376022224085,
+      "d": 3,
+      "damping_compression_factor": 0.1252329263149802,
+      "factor_product": -0.03516334095457687,
+      "legacy_full": -2.6001117014458375,
+      "legacy_sign": -1,
+      "phase_factor_sign": -1,
+      "phase_frequency_transport_factor": -0.7784972006620755,
+      "quotient_minus_factor_product": 6.938893903907228e-18,
+      "strict_kernel": 0.09142861427792495,
+      "strict_over_legacy_quotient": -0.03516334095457686,
+      "strict_sign": 1,
+      "tail_amplification_if_damping_omitted": 7.985120442565122
+    },
+    {
+      "alpha_normalization_factor": 0.36067376022224085,
+      "d": 4,
+      "damping_compression_factor": 0.07923367305085117,
+      "factor_product": -0.020369696477490092,
+      "legacy_full": -2.3087810266402764,
+      "legacy_sign": -1,
+      "phase_factor_sign": -1,
+      "phase_frequency_transport_factor": -0.7127877397869758,
+      "quotient_minus_factor_product": 0.0,
+      "strict_kernel": 0.0470291687456504,
+      "strict_over_legacy_quotient": -0.020369696477490092,
+      "strict_sign": 1,
+      "tail_amplification_if_damping_omitted": 12.6208966654646
+    },
+    {
+      "alpha_normalization_factor": 0.36067376022224085,
+      "d": 5,
+      "damping_compression_factor": 0.05491777827620198,
+      "factor_product": -0.03530912502659723,
+      "legacy_full": -0.6834273957639219,
+      "legacy_sign": -1,
+      "phase_factor_sign": -1,
+      "phase_frequency_transport_factor": -1.7826227665025696,
+      "quotient_minus_factor_product": 0.0,
+      "strict_kernel": 0.02413122336363006,
+      "strict_over_legacy_quotient": -0.03530912502659723,
+      "strict_sign": 1,
+      "tail_amplification_if_damping_omitted": 18.2090396113737
+    },
+    {
+      "alpha_normalization_factor": 0.36067376022224085,
+      "d": 6,
+      "damping_compression_factor": 0.04052332235066948,
+      "factor_product": 0.00846506102156305,
+      "legacy_full": 1.307824868981029,
+      "legacy_sign": 1,
+      "phase_factor_sign": 1,
+      "phase_frequency_transport_factor": 0.5791759253685558,
+      "quotient_minus_factor_product": 1.734723475976807e-18,
+      "strict_kernel": 0.011070817321442113,
+      "strict_over_legacy_quotient": 0.008465061021563051,
+      "strict_sign": 1,
+      "tail_amplification_if_damping_omitted": 24.677147429978163
+    },
+    {
+      "alpha_normalization_factor": 0.36067376022224085,
+      "d": 7,
+      "damping_compression_factor": 0.031283865189164484,
+      "factor_product": 0.001259667313500833,
+      "legacy_full": 2.5029112640086097,
+      "legacy_sign": 1,
+      "phase_factor_sign": 1,
+      "phase_frequency_transport_factor": 0.11164027737839033,
+      "quotient_minus_factor_product": 0.0,
+      "strict_kernel": 0.0031528355078646996,
+      "strict_over_legacy_quotient": 0.001259667313500833,
+      "strict_sign": 1,
+      "tail_amplification_if_damping_omitted": 31.9653595856295
+    },
+    {
+      "alpha_normalization_factor": 0.36067376022224085,
+      "d": 8,
+      "damping_compression_factor": 0.024985972490576408,
+      "factor_product": -0.0008077641968995035,
+      "legacy_full": 2.223270618246192,
+      "legacy_sign": 1,
+      "phase_factor_sign": -1,
+      "phase_frequency_transport_factor": -0.08963420989106242,
+      "quotient_minus_factor_product": 1.0842021724855044e-19,
+      "strict_kernel": -0.0017958784054378975,
+      "strict_over_legacy_quotient": -0.0008077641968995034,
+      "strict_sign": -1,
+      "tail_amplification_if_damping_omitted": 40.02245661549316
+    },
+    {
+      "alpha_normalization_factor": 0.36067376022224085,
+      "d": 9,
+      "damping_compression_factor": 0.020490295084356347,
+      "factor_product": -0.007435928520209978,
+      "legacy_full": 0.6583474913322185,
+      "legacy_sign": 1,
+      "phase_factor_sign": -1,
+      "phase_frequency_transport_factor": -1.0061725060394833,
+      "quotient_minus_factor_product": -8.673617379884035e-19,
+      "strict_kernel": -0.0048954248870059355,
+      "strict_over_legacy_quotient": -0.007435928520209979,
+      "strict_sign": -1,
+      "tail_amplification_if_damping_omitted": 48.80359193867669
+    },
+    {
+      "alpha_normalization_factor": 0.36067376022224085,
+      "d": 10,
+      "damping_compression_factor": 0.017161828466012562,
+      "factor_product": 0.005375839242187774,
+      "legacy_full": -1.2602676010180802,
+      "legacy_sign": -1,
+      "phase_factor_sign": 1,
+      "phase_frequency_transport_factor": 0.8684966922366023,
+      "quotient_minus_factor_product": 8.673617379884035e-19,
+      "strict_kernel": -0.0067749960252108405,
+      "strict_over_legacy_quotient": 0.0053758392421877745,
+      "strict_sign": -1,
+      "tail_amplification_if_damping_omitted": 58.26884949819939
+    },
+    {
+      "alpha_normalization_factor": 0.36067376022224085,
+      "d": 11,
+      "damping_compression_factor": 0.014623674671644927,
+      "factor_product": 0.0032388039359289075,
+      "legacy_full": -2.4127162635037935,
+      "legacy_sign": -1,
+      "phase_factor_sign": 1,
+      "phase_frequency_transport_factor": 0.6140639386428728,
+      "quotient_minus_factor_product": 0.0,
+      "strict_kernel": -0.007814314930515773,
+      "strict_over_legacy_quotient": 0.0032388039359289075,
+      "strict_sign": -1,
+      "tail_amplification_if_damping_omitted": 68.38226522769848
+    }
+  ],
+  "proof_certificate": {
+    "envelope_step": "The damping factor is necessary because it supplies a positive strictly decreasing envelope compression from 1 at d=0 to the certified tail value at d=11.",
+    "nonduplication": "This is a necessity/exhaustion certificate for the displayed completion factors, not another factorization-only or inverse-branch report.",
+    "quotient_step": "For every audited d, K_strict_gate(d)/K_legacy_ont(d) equals A(d)*P(d)*D(d) to machine precision.",
+    "scalar_repair_step": "Allowing one post-hoc global scalar repairs only the missing-alpha case; it cannot repair missing phase or missing damping shape.",
+    "sign_step": "The phase factor is necessary because it removes six legacy-vs-strict sign mismatches on d=0..11.",
+    "subset_exhaustion": "All 2^3 subsets of {A,P,D} were enumerated; only A+P+D is exact without an extra scalar.",
+    "theoretical_limit": "The certificate proves finite-domain necessity relative to the chosen completion ansatz; it does not derive the ansatz from nadsoliton dynamics."
+  },
+  "result_kind": "SCRATCH_STRICT_KERNEL_COMPLETION_NECESSITY_CERTIFICATE__FINITE_Z12_NO_DYNAMICAL_DERIVATION",
+  "source_reports": {
+    "blocker_lattice": "fundamental_action_reconstruction/scratch/bridge_completed_kernel_blocker_dependency_lattice_report.json",
+    "completion_ladder": "fundamental_action_reconstruction/scratch/bridge_strict_kernel_completion_ladder_report.json",
+    "inverse_branch_interval_certificate": "fundamental_action_reconstruction/scratch/bridge_phase_normalized_z12_inverse_branch_interval_certificate_report.json"
+  },
+  "status": "all-three-explicit-factors-are-necessary-for-exact-pointwise-completion; phase-and-damping-are-shape-critical",
+  "subset_enumeration": [
+    {
+      "best_scalar_repair": {
+        "best_scalar": 0.051215001273549374,
+        "l2_residual_after_best_scalar": 1.0650474048529386,
+        "max_abs_residual_after_best_scalar": 0.863851911041811
+      },
+      "exact_up_to_one_global_scalar": false,
+      "exact_without_extra_scalar": false,
+      "l1_residual": 19.304095766419533,
+      "l2_residual": 6.199599436354421,
+      "max_abs_residual": 2.6915403157237625,
+      "missing_factors": [
+        "alpha_normalization",
+        "phase_frequency_transport",
+        "damping_compression"
+      ],
+      "sign_mismatch_d_values": [
+        2,
+        3,
+        4,
+        5,
+        8,
+        9
+      ],
+      "subset": [],
+      "subset_label": "none"
+    },
+    {
+      "best_scalar_repair": {
+        "best_scalar": 0.14199813494053906,
+        "l2_residual_after_best_scalar": 1.0650474048529386,
+        "max_abs_residual_after_best_scalar": 0.863851911041811
+      },
+      "exact_up_to_one_global_scalar": false,
+      "exact_without_extra_scalar": false,
+      "l1_residual": 6.912745266261982,
+      "l2_residual": 2.258863908318821,
+      "max_abs_residual": 1.0292206786362437,
+      "missing_factors": [
+        "phase_frequency_transport",
+        "damping_compression"
+      ],
+      "sign_mismatch_d_values": [
+        2,
+        3,
+        4,
+        5,
+        8,
+        9
+      ],
+      "subset": [
+        "alpha_normalization"
+      ],
+      "subset_label": "alpha_normalization"
+    },
+    {
+      "best_scalar_repair": {
+        "best_scalar": 0.14448102699703488,
+        "l2_residual_after_best_scalar": 0.7523311877932335,
+        "max_abs_residual_after_best_scalar": 0.5915168020448465
+      },
+      "exact_up_to_one_global_scalar": false,
+      "exact_without_extra_scalar": false,
+      "l1_residual": 15.172074804304403,
+      "l2_residual": 4.929846913008693,
+      "max_abs_residual": 2.1477441799950645,
+      "missing_factors": [
+        "alpha_normalization",
+        "damping_compression"
+      ],
+      "sign_mismatch_d_values": [],
+      "subset": [
+        "phase_frequency_transport"
+      ],
+      "subset_label": "phase_frequency_transport"
+    },
+    {
+      "best_scalar_repair": {
+        "best_scalar": 0.3971815651798906,
+        "l2_residual_after_best_scalar": 0.5231383063044562,
+        "max_abs_residual_after_best_scalar": 0.32747717220844613
+      },
+      "exact_up_to_one_global_scalar": false,
+      "exact_without_extra_scalar": false,
+      "l1_residual": 2.970627065793382,
+      "l2_residual": 1.5832182385906137,
+      "max_abs_residual": 1.4143063645155587,
+      "missing_factors": [
+        "alpha_normalization",
+        "phase_frequency_transport"
+      ],
+      "sign_mismatch_d_values": [
+        2,
+        3,
+        4,
+        5,
+        8,
+        9
+      ],
+      "subset": [
+        "damping_compression"
+      ],
+      "subset_label": "damping_compression"
+    },
+    {
+      "best_scalar_repair": {
+        "best_scalar": 0.4005864660296003,
+        "l2_residual_after_best_scalar": 0.7523311877932334,
+        "max_abs_residual_after_best_scalar": 0.5915168020448465
+      },
+      "exact_up_to_one_global_scalar": false,
+      "exact_without_extra_scalar": false,
+      "l1_residual": 4.291366693773021,
+      "l2_residual": 1.4428620248168371,
+      "max_abs_residual": 0.6518564876186541,
+      "missing_factors": [
+        "damping_compression"
+      ],
+      "sign_mismatch_d_values": [],
+      "subset": [
+        "alpha_normalization",
+        "phase_frequency_transport"
+      ],
+      "subset_label": "alpha_normalization+phase_frequency_transport"
+    },
+    {
+      "best_scalar_repair": {
+        "best_scalar": 1.1012211282993092,
+        "l2_residual_after_best_scalar": 0.5231383063044562,
+        "max_abs_residual_after_best_scalar": 0.3274771722084462
+      },
+      "exact_up_to_one_global_scalar": false,
+      "exact_without_extra_scalar": false,
+      "l1_residual": 1.1951816535270048,
+      "l2_residual": 0.5309080942025455,
+      "max_abs_residual": 0.34057615009375963,
+      "missing_factors": [
+        "phase_frequency_transport"
+      ],
+      "sign_mismatch_d_values": [
+        2,
+        3,
+        4,
+        5,
+        8,
+        9
+      ],
+      "subset": [
+        "alpha_normalization",
+        "damping_compression"
+      ],
+      "subset_label": "alpha_normalization+damping_compression"
+    },
+    {
+      "best_scalar_repair": {
+        "best_scalar": 0.36067376022224096,
+        "l2_residual_after_best_scalar": 1.3690258225607257e-16,
+        "max_abs_residual_after_best_scalar": 1.1102230246251565e-16
+      },
+      "exact_up_to_one_global_scalar": true,
+      "exact_without_extra_scalar": false,
+      "l1_residual": 3.2738799061539083,
+      "l2_residual": 1.9762675288705163,
+      "max_abs_residual": 1.749236466809262,
+      "missing_factors": [
+        "alpha_normalization"
+      ],
+      "sign_mismatch_d_values": [],
+      "subset": [
+        "phase_frequency_transport",
+        "damping_compression"
+      ],
+      "subset_label": "phase_frequency_transport+damping_compression"
+    },
+    {
+      "best_scalar_repair": {
+        "best_scalar": 1.0000000000000002,
+        "l2_residual_after_best_scalar": 8.474689011789171e-17,
+        "max_abs_residual_after_best_scalar": 5.551115123125783e-17
+      },
+      "exact_up_to_one_global_scalar": true,
+      "exact_without_extra_scalar": true,
+      "l1_residual": 2.933851078745775e-16,
+      "l2_residual": 2.293020696250137e-16,
+      "max_abs_residual": 2.220446049250313e-16,
+      "missing_factors": [],
+      "sign_mismatch_d_values": [],
+      "subset": [
+        "alpha_normalization",
+        "phase_frequency_transport",
+        "damping_compression"
+      ],
+      "subset_label": "alpha_normalization+phase_frequency_transport+damping_compression"
+    }
+  ]
+}
