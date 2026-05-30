@@ -1,0 +1,296 @@
+{
+  "constants": {
+    "bisection_steps": 90,
+    "branch_interval": [
+      0.0,
+      2.0
+    ],
+    "domain_d_values": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "legacy": {
+      "beta_tors": 0.01,
+      "omega": 0.7853981633974483,
+      "phi": 0.5235987755982988
+    },
+    "strict": {
+      "beta": 1.0,
+      "eta": 1.8,
+      "omega": 0.18575,
+      "phi": 0.1625
+    },
+    "target_eta": "9/5",
+    "target_q_power": "256/243"
+  },
+  "exact_proof_certificate": {
+    "blocker_refinement": "This certifies a global finite Z12 output-matching map, but it does not derive that map from strict nadsoliton dynamics.",
+    "existence": "Every strict normalized target S(d), d=0..11, lies between L(0) and L(2), so IVT gives at least one root in [0,2].",
+    "monotonicity": "The finite strict targets are strictly decreasing and L is strictly decreasing, hence the inverse roots are monotone nondecreasing; bisection intervals numerically certify the finite roots.",
+    "uniqueness": "The analytic derivative upper bound for L on [0,2] is strictly negative, so each root is unique on the first legacy branch."
+  },
+  "hard_limits": [
+    "No unqualified identity K_legacy_ont == K_strict_gate is asserted.",
+    "No strict-side derivation of the inverse branch or transport ODE is claimed.",
+    "No beta_tors -> chi_11 theorem is asserted.",
+    "No legacy physical-role transfer onto K_strict_gate is used without an explicit bridge theorem.",
+    "No QW-2191 discharge is claimed.",
+    "No ToE closure is claimed."
+  ],
+  "interval_certificate": {
+    "all_midpoints_in_first_legacy_interval": true,
+    "all_root_intervals_sign_bracket_or_endpoint": true,
+    "all_targets_inside_legacy_interval_range": true,
+    "legacy_derivative_bound_strictly_negative": true,
+    "legacy_derivative_upper_bound_on_interval": -0.44767633836665816,
+    "legacy_left_value": 1.0,
+    "legacy_right_value": -0.5660296756761034,
+    "max_mid_residual_abs": 3.5475095083725705e-16,
+    "max_root_interval_width": 2.220446049250313e-16,
+    "min_root_increment": 0.0011770131701616116,
+    "min_strict_target_drop_margin": 0.0010531937821503254,
+    "roots_monotone_non_decreasing_on_z12": true,
+    "strict_targets_strictly_decreasing_on_z12": true,
+    "z12_to_legacy_compression_x11_over_11": 0.12201655847945313
+  },
+  "ontology_guardrail": {
+    "allowed_reading": "The nadsoliton itself remains the primordial information in a solitonic state; this is a finite output-matching map between strict and legacy carrier coordinates.",
+    "forbidden_reading": "No separate informational layer underneath the nadsoliton is introduced."
+  },
+  "result_kind": "SCRATCH_PHASE_NORMALIZED_Z12_INVERSE_BRANCH_INTERVAL_CERTIFICATE__OUTPUT_MATCHING_NOT_STRICT_DERIVATION",
+  "root_rows": [
+    {
+      "d": 0,
+      "legacy_norm_at_mid": 1.0,
+      "mid_in_first_legacy_interval": true,
+      "mid_residual": 0.0,
+      "root_interval": {
+        "f_hi": 0.0,
+        "f_lo": 0.0,
+        "f_mid": 0.0,
+        "hi": 0.0,
+        "lo": 0.0,
+        "mid": 0.0,
+        "sign_bracket_or_endpoint": true,
+        "width": 0.0
+      },
+      "strict_norm_target": 1.0
+    },
+    {
+      "d": 1,
+      "legacy_norm_at_mid": 0.4762599675642828,
+      "mid_in_first_legacy_interval": true,
+      "mid_residual": -1.6653345369377348e-16,
+      "root_interval": {
+        "f_hi": -1.6653345369377348e-16,
+        "f_lo": 1.1102230246251565e-16,
+        "f_mid": -1.6653345369377348e-16,
+        "hi": 0.7874781606892143,
+        "lo": 0.7874781606892142,
+        "mid": 0.7874781606892143,
+        "sign_bracket_or_endpoint": true,
+        "width": 1.1102230246251565e-16
+      },
+      "strict_norm_target": 0.47625996756428296
+    },
+    {
+      "d": 2,
+      "legacy_norm_at_mid": 0.19460732746195814,
+      "mid_in_first_legacy_interval": true,
+      "mid_residual": 5.551115123125783e-17,
+      "root_interval": {
+        "f_hi": -1.942890293094024e-16,
+        "f_lo": 5.551115123125783e-17,
+        "f_mid": 5.551115123125783e-17,
+        "hi": 1.1152906147118757,
+        "lo": 1.1152906147118755,
+        "mid": 1.1152906147118755,
+        "sign_bracket_or_endpoint": true,
+        "width": 2.220446049250313e-16
+      },
+      "strict_norm_target": 0.19460732746195808
+    },
+    {
+      "d": 3,
+      "legacy_norm_at_mid": 0.0926491835919014,
+      "mid_in_first_legacy_interval": true,
+      "mid_residual": -2.914335439641036e-16,
+      "root_interval": {
+        "f_hi": -2.914335439641036e-16,
+        "f_lo": 2.220446049250313e-16,
+        "f_mid": -2.914335439641036e-16,
+        "hi": 1.22980256924372,
+        "lo": 1.2298025692437198,
+        "mid": 1.22980256924372,
+        "sign_bracket_or_endpoint": true,
+        "width": 2.220446049250313e-16
+      },
+      "strict_norm_target": 0.09264918359190169
+    },
+    {
+      "d": 4,
+      "legacy_norm_at_mid": 0.04765700676645069,
+      "mid_in_first_legacy_interval": true,
+      "mid_residual": -9.71445146547012e-17,
+      "root_interval": {
+        "f_hi": -9.71445146547012e-17,
+        "f_lo": 4.163336342344337e-16,
+        "f_mid": -9.71445146547012e-17,
+        "hi": 1.2800957700862328,
+        "lo": 1.2800957700862325,
+        "mid": 1.2800957700862328,
+        "sign_bracket_or_endpoint": true,
+        "width": 2.220446049250313e-16
+      },
+      "strict_norm_target": 0.04765700676645079
+    },
+    {
+      "d": 5,
+      "legacy_norm_at_mid": 0.024453374486437245,
+      "mid_in_first_legacy_interval": true,
+      "mid_residual": -2.914335439641036e-16,
+      "root_interval": {
+        "f_hi": -2.914335439641036e-16,
+        "f_lo": 2.1510571102112408e-16,
+        "f_mid": -2.914335439641036e-16,
+        "hi": 1.3060153834599997,
+        "lo": 1.3060153834599995,
+        "mid": 1.3060153834599997,
+        "sign_bracket_or_endpoint": true,
+        "width": 2.220446049250313e-16
+      },
+      "strict_norm_target": 0.024453374486437536
+    },
+    {
+      "d": 6,
+      "legacy_norm_at_mid": 0.011218612407367221,
+      "mid_in_first_legacy_interval": true,
+      "mid_residual": 2.7582103268031233e-16,
+      "root_interval": {
+        "f_hi": -2.3071822230491534e-16,
+        "f_lo": 2.7582103268031233e-16,
+        "f_mid": 2.7582103268031233e-16,
+        "hi": 1.320799453798443,
+        "lo": 1.3207994537984429,
+        "mid": 1.3207994537984429,
+        "sign_bracket_or_endpoint": true,
+        "width": 2.220446049250313e-16
+      },
+      "strict_norm_target": 0.011218612407366945
+    },
+    {
+      "d": 7,
+      "legacy_norm_at_mid": 0.0031949257692483264,
+      "mid_in_first_legacy_interval": true,
+      "mid_residual": -1.6696713456276768e-16,
+      "root_interval": {
+        "f_hi": -1.6696713456276768e-16,
+        "f_lo": 3.391384395534658e-16,
+        "f_mid": -1.6696713456276768e-16,
+        "hi": 1.3297635724948504,
+        "lo": 1.3297635724948502,
+        "mid": 1.3297635724948504,
+        "sign_bracket_or_endpoint": true,
+        "width": 2.220446049250313e-16
+      },
+      "strict_norm_target": 0.0031949257692484934
+    },
+    {
+      "d": 8,
+      "legacy_norm_at_mid": -0.0018198533293783928,
+      "mid_in_first_legacy_interval": true,
+      "mid_residual": 1.4051260155412137e-16,
+      "root_interval": {
+        "f_hi": -3.655929725621121e-16,
+        "f_lo": 1.4051260155412137e-16,
+        "f_mid": 1.4051260155412137e-16,
+        "hi": 1.3353668061275135,
+        "lo": 1.3353668061275132,
+        "mid": 1.3353668061275132,
+        "sign_bracket_or_endpoint": true,
+        "width": 2.220446049250313e-16
+      },
+      "strict_norm_target": -0.0018198533293785333
+    },
+    {
+      "d": 9,
+      "legacy_norm_at_mid": -0.00496077866539485,
+      "mid_in_first_legacy_interval": true,
+      "mid_residual": 3.5475095083725705e-16,
+      "root_interval": {
+        "f_hi": -1.5178830414797062e-16,
+        "f_lo": 3.5475095083725705e-16,
+        "f_mid": 3.5475095083725705e-16,
+        "hi": 1.3388766291930658,
+        "lo": 1.3388766291930656,
+        "mid": 1.3388766291930656,
+        "sign_bracket_or_endpoint": true,
+        "width": 2.220446049250313e-16
+      },
+      "strict_norm_target": -0.004960778665395205
+    },
+    {
+      "d": 10,
+      "legacy_norm_at_mid": -0.006865442023064022,
+      "mid_in_first_legacy_interval": true,
+      "mid_residual": -1.5178830414797062e-16,
+      "root_interval": {
+        "f_hi": -1.5178830414797062e-16,
+        "f_lo": 3.5475095083725705e-16,
+        "f_mid": -1.5178830414797062e-16,
+        "hi": 1.3410051301038228,
+        "lo": 1.3410051301038226,
+        "mid": 1.3410051301038228,
+        "sign_bracket_or_endpoint": true,
+        "width": 2.220446049250313e-16
+      },
+      "strict_norm_target": -0.0068654420230638705
+    },
+    {
+      "d": 11,
+      "legacy_norm_at_mid": -0.007918635805214314,
+      "mid_in_first_legacy_interval": true,
+      "mid_residual": -1.1796119636642288e-16,
+      "root_interval": {
+        "f_hi": -1.1796119636642288e-16,
+        "f_lo": 3.86843335142828e-16,
+        "f_mid": -1.1796119636642288e-16,
+        "hi": 1.3421821432739844,
+        "lo": 1.3421821432739842,
+        "mid": 1.3421821432739844,
+        "sign_bracket_or_endpoint": true,
+        "width": 2.220446049250313e-16
+      },
+      "strict_norm_target": -0.007918635805214196
+    }
+  ],
+  "source_reports": {
+    "completed_kernel_blocker_lattice": "fundamental_action_reconstruction/scratch/bridge_completed_kernel_blocker_dependency_lattice_report.json",
+    "monotone_inverse_branch": "fundamental_action_reconstruction/scratch/bridge_phase_normalized_monotone_inverse_branch_report.json"
+  },
+  "status": "finite-z12-monotone-inverse-branch-certified-by-interval-brackets",
+  "upstream_blocker_update": {
+    "blocker_lattice_global_z12_status_before_this_probe": "OPEN_BLOCKER",
+    "previous_global_admissibility_note": false,
+    "previous_monotone_status": "OPEN_MONOTONE_INVERSE_BRANCH_EXISTENCE_WITNESS_NO_BRIDGE_THEOREM",
+    "refined_status_after_this_probe": "global_z12_output_matching_map_certified; strict_transport_derivation remains open",
+    "remaining_bridge_blockers": [
+      "strict_transport_derivation",
+      "global_z12_map_derivation",
+      "orientation_chi11_source",
+      "chi11_uniqueness",
+      "reynolds_obstruction_escape",
+      "role_transfer_theorem"
+    ]
+  }
+}
