@@ -1,0 +1,889 @@
+{
+  "blocker_context": {
+    "still_open": [
+      "strict_phase_frequency_derivation_from_nadsoliton_dynamics",
+      "strict_transport_derivation_from_nadsoliton_dynamics",
+      "strict_damping_parameter_derivation_from_nadsoliton_dynamics",
+      "orientation_chi11_source",
+      "QW-2191_selector_obstruction"
+    ],
+    "what_this_certifies": "finite GF(2) commutative diagram tying carrier, edge, and node phase-sign bookkeeping together"
+  },
+  "diagram_check_rows": [
+    {
+      "check": "C_tail_equals_L_times_M",
+      "description": "carrier-prefix tail matrix equals prefix matrix times carrier/edge incidence",
+      "passes": true
+    },
+    {
+      "check": "D_times_C_tail_equals_M",
+      "description": "first difference of carrier-prefix tail recovers carrier/edge incidence",
+      "passes": true
+    },
+    {
+      "check": "B_times_C_full_equals_M",
+      "description": "adjacent node boundary of full carrier-prefix matrix recovers carrier/edge incidence",
+      "passes": true
+    },
+    {
+      "check": "C_full_times_one_equals_node_bits",
+      "description": "carrier-prefix full matrix maps all-one carrier vector to node bits",
+      "passes": true
+    },
+    {
+      "check": "M_times_one_equals_edge_bits",
+      "description": "carrier/edge incidence maps all-one carrier vector to edge bits",
+      "passes": true
+    },
+    {
+      "check": "B_times_node_bits_equals_edge_bits",
+      "description": "adjacent node boundary maps node bits to edge bits",
+      "passes": true
+    },
+    {
+      "check": "D_times_L_is_identity",
+      "description": "first-difference matrix is a left inverse of prefix matrix",
+      "passes": true
+    },
+    {
+      "check": "L_times_D_is_identity",
+      "description": "first-difference matrix is a right inverse of prefix matrix",
+      "passes": true
+    }
+  ],
+  "diagram_definition": {
+    "B_adjacent_node_boundary_matrix": [
+      [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    ],
+    "C_full_node_carrier_prefix_matrix": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "C_tail_carrier_prefix_matrix": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "D_first_difference_matrix": [
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    ],
+    "L_prefix_matrix": [
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "M_carrier_edge_incidence": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "carrier_multiplicity_vector": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "equations_checked": [
+      "C_tail_equals_L_times_M",
+      "D_times_C_tail_equals_M",
+      "B_times_C_full_equals_M",
+      "C_full_times_one_equals_node_bits",
+      "M_times_one_equals_edge_bits",
+      "B_times_node_bits_equals_edge_bits",
+      "D_times_L_is_identity",
+      "L_times_D_is_identity"
+    ],
+    "field": "GF(2)"
+  },
+  "diagram_summary": {
+    "all_diagram_checks_pass": true,
+    "edge_bits_from_boundary": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    "flip_edges_from_boundary": [
+      "1->2",
+      "5->6",
+      "7->8",
+      "9->10"
+    ],
+    "inherits_carrier_edge_rank_4": true,
+    "inherits_carrier_prefix_rank_4": true,
+    "matches_carrier_edge_incidence_edge_bits": true,
+    "matches_expected_edge_bits": true,
+    "matches_expected_flip_edges": true,
+    "matches_expected_node_bits": true,
+    "matches_gf2_solution_edge_bits": true,
+    "matches_z2_edge_bits": true,
+    "matches_z2_node_bits": true,
+    "node_bits_from_carrier_prefix": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ]
+  },
+  "edge_boundary_rows": [
+    {
+      "boundary_edge_bit": 0,
+      "edge": "0->1",
+      "expected_edge_bit": 0,
+      "is_flip_edge": false,
+      "matches_expected_edge_bit": true
+    },
+    {
+      "boundary_edge_bit": 1,
+      "edge": "1->2",
+      "expected_edge_bit": 1,
+      "is_flip_edge": true,
+      "matches_expected_edge_bit": true
+    },
+    {
+      "boundary_edge_bit": 0,
+      "edge": "2->3",
+      "expected_edge_bit": 0,
+      "is_flip_edge": false,
+      "matches_expected_edge_bit": true
+    },
+    {
+      "boundary_edge_bit": 0,
+      "edge": "3->4",
+      "expected_edge_bit": 0,
+      "is_flip_edge": false,
+      "matches_expected_edge_bit": true
+    },
+    {
+      "boundary_edge_bit": 0,
+      "edge": "4->5",
+      "expected_edge_bit": 0,
+      "is_flip_edge": false,
+      "matches_expected_edge_bit": true
+    },
+    {
+      "boundary_edge_bit": 1,
+      "edge": "5->6",
+      "expected_edge_bit": 1,
+      "is_flip_edge": true,
+      "matches_expected_edge_bit": true
+    },
+    {
+      "boundary_edge_bit": 0,
+      "edge": "6->7",
+      "expected_edge_bit": 0,
+      "is_flip_edge": false,
+      "matches_expected_edge_bit": true
+    },
+    {
+      "boundary_edge_bit": 1,
+      "edge": "7->8",
+      "expected_edge_bit": 1,
+      "is_flip_edge": true,
+      "matches_expected_edge_bit": true
+    },
+    {
+      "boundary_edge_bit": 0,
+      "edge": "8->9",
+      "expected_edge_bit": 0,
+      "is_flip_edge": false,
+      "matches_expected_edge_bit": true
+    },
+    {
+      "boundary_edge_bit": 1,
+      "edge": "9->10",
+      "expected_edge_bit": 1,
+      "is_flip_edge": true,
+      "matches_expected_edge_bit": true
+    },
+    {
+      "boundary_edge_bit": 0,
+      "edge": "10->11",
+      "expected_edge_bit": 0,
+      "is_flip_edge": false,
+      "matches_expected_edge_bit": true
+    }
+  ],
+  "grep_disambiguation": {
+    "conclusion": "No strict-completion report exported the full GF(2) carrier-edge-node commutative diagram before this file.",
+    "searched_terms": [
+      "commutative diagram",
+      "exact sequence",
+      "chain complex",
+      "B*C",
+      "D*C",
+      "D*L",
+      "carrier edge node diagram"
+    ]
+  },
+  "hard_limits": [
+    "K_strict_gate remains the current live/full operational kernel.",
+    "No unqualified identity K_legacy_ont == K_strict_gate is claimed.",
+    "No proof derives A(d), P(d), D(d), omega/phi, beta/eta, or the transport cocycle from strict nadsoliton dynamics.",
+    "No beta_tors -> chi_11 theorem is claimed.",
+    "No legacy physical-role transfer to K_strict_gate is claimed.",
+    "No QW-2191 selector discharge is claimed.",
+    "No ToE closure is claimed."
+  ],
+  "proof_certificate": {
+    "difference_step": "D*C_tail=M and B*C_full=M verify that first differences recover the carrier/edge incidence matrix.",
+    "inverse_step": "D*L and L*D both equal the 11x11 identity over GF(2).",
+    "prefix_composition_step": "C_tail=L*M verifies that carrier-prefix rows are prefix sums of carrier/edge incidence rows.",
+    "theoretical_limit": "This proves finite diagram commutativity only; it does not derive zero carriers, omega/phi, beta/eta, damping, or transport from strict nadsoliton dynamics.",
+    "vector_step": "C_full*1 gives node bits, M*1 gives edge bits, and B*node_bits gives the same edge bits."
+  },
+  "result_kind": "SCRATCH_STRICT_COMPLETION_PHASE_ZERO_GF2_COMMUTATIVE_DIAGRAM_CERTIFICATE__CARRIER_EDGE_NODE_MAPS",
+  "source_reports": {
+    "carrier_edge_incidence_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_phase_zero_carrier_edge_incidence_certificate_report.json",
+    "carrier_prefix_node_matrix_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_phase_zero_carrier_prefix_node_matrix_certificate_report.json",
+    "phase_sign_gf2_linear_system_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_phase_sign_gf2_linear_system_certificate_report.json",
+    "phase_sign_z2_coboundary_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_phase_sign_z2_coboundary_certificate_report.json"
+  },
+  "status": "carrier-edge-node-gf2-diagram-commutes-for-audited-phase-sign-data"
+}

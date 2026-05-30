@@ -1,0 +1,3536 @@
+{
+  "blocker_context": {
+    "still_open": [
+      "strict_phase_frequency_derivation_from_nadsoliton_dynamics",
+      "strict_transport_derivation_from_nadsoliton_dynamics",
+      "strict_damping_parameter_derivation_from_nadsoliton_dynamics",
+      "orientation_chi11_source",
+      "QW-2191_selector_obstruction"
+    ],
+    "what_this_certifies": "finite-path uniqueness and support minimality of the already exported Z2 phase-flip edge assignment"
+  },
+  "boundary_forced_edge_rows": [
+    {
+      "edge": "0->1",
+      "forced_edge_bit": 0,
+      "is_forced_flip": false,
+      "left_node_bit": 0,
+      "matches_z2_edge_bit": true,
+      "right_node_bit": 0,
+      "z2_edge_bit": 0
+    },
+    {
+      "edge": "1->2",
+      "forced_edge_bit": 1,
+      "is_forced_flip": true,
+      "left_node_bit": 0,
+      "matches_z2_edge_bit": true,
+      "right_node_bit": 1,
+      "z2_edge_bit": 1
+    },
+    {
+      "edge": "2->3",
+      "forced_edge_bit": 0,
+      "is_forced_flip": false,
+      "left_node_bit": 1,
+      "matches_z2_edge_bit": true,
+      "right_node_bit": 1,
+      "z2_edge_bit": 0
+    },
+    {
+      "edge": "3->4",
+      "forced_edge_bit": 0,
+      "is_forced_flip": false,
+      "left_node_bit": 1,
+      "matches_z2_edge_bit": true,
+      "right_node_bit": 1,
+      "z2_edge_bit": 0
+    },
+    {
+      "edge": "4->5",
+      "forced_edge_bit": 0,
+      "is_forced_flip": false,
+      "left_node_bit": 1,
+      "matches_z2_edge_bit": true,
+      "right_node_bit": 1,
+      "z2_edge_bit": 0
+    },
+    {
+      "edge": "5->6",
+      "forced_edge_bit": 1,
+      "is_forced_flip": true,
+      "left_node_bit": 1,
+      "matches_z2_edge_bit": true,
+      "right_node_bit": 0,
+      "z2_edge_bit": 1
+    },
+    {
+      "edge": "6->7",
+      "forced_edge_bit": 0,
+      "is_forced_flip": false,
+      "left_node_bit": 0,
+      "matches_z2_edge_bit": true,
+      "right_node_bit": 0,
+      "z2_edge_bit": 0
+    },
+    {
+      "edge": "7->8",
+      "forced_edge_bit": 1,
+      "is_forced_flip": true,
+      "left_node_bit": 0,
+      "matches_z2_edge_bit": true,
+      "right_node_bit": 1,
+      "z2_edge_bit": 1
+    },
+    {
+      "edge": "8->9",
+      "forced_edge_bit": 0,
+      "is_forced_flip": false,
+      "left_node_bit": 1,
+      "matches_z2_edge_bit": true,
+      "right_node_bit": 1,
+      "z2_edge_bit": 0
+    },
+    {
+      "edge": "9->10",
+      "forced_edge_bit": 1,
+      "is_forced_flip": true,
+      "left_node_bit": 1,
+      "matches_z2_edge_bit": true,
+      "right_node_bit": 0,
+      "z2_edge_bit": 1
+    },
+    {
+      "edge": "10->11",
+      "forced_edge_bit": 0,
+      "is_forced_flip": false,
+      "left_node_bit": 0,
+      "matches_z2_edge_bit": true,
+      "right_node_bit": 0,
+      "z2_edge_bit": 0
+    }
+  ],
+  "edge_support_minimality_summary": {
+    "all_boundary_forced_rows_match_z2": true,
+    "all_lower_support_assignments_fail": true,
+    "derived_phase_sign_flip_edges": [
+      "1->2",
+      "5->6",
+      "7->8",
+      "9->10"
+    ],
+    "edge_bit_pattern": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    "lower_support_assignments_checked": 232,
+    "matches_cell_sign_flip_edges": true,
+    "matches_expected_edge_bits": true,
+    "matches_expected_flip_edges": true,
+    "matches_expected_node_bits": true,
+    "matches_expected_sign_pattern": true,
+    "matches_positive_factor_completion_flips": true,
+    "matching_assignment_count": 1,
+    "node_bit_pattern": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    "phase_sign_pattern": [
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      1
+    ],
+    "target_support_size": 4,
+    "total_edge_assignments_checked": 2048,
+    "unique_matching_assignment": true,
+    "unique_matching_assignment_support_edges": [
+      "1->2",
+      "5->6",
+      "7->8",
+      "9->10"
+    ]
+  },
+  "finite_path_definitions": {
+    "anchor_bit": 0,
+    "domain_nodes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "edge_labels": [
+      "0->1",
+      "1->2",
+      "2->3",
+      "3->4",
+      "4->5",
+      "5->6",
+      "6->7",
+      "7->8",
+      "8->9",
+      "9->10",
+      "10->11"
+    ],
+    "minimality_claim": "Every edge-bit assignment reconstructing the audited node-bit pattern equals the Z2 coboundary; therefore its support size is forced and minimal.",
+    "reconstruction_rule": "b_hat(0)=anchor_bit and b_hat(d+1)=b_hat(d) xor e(d,d+1)"
+  },
+  "grep_disambiguation": {
+    "conclusion": "No existing strict-completion probe exported an exhaustive finite path edge-support uniqueness/minimality certificate before this file.",
+    "searched_terms": [
+      "edge-support uniqueness",
+      "support minimal",
+      "phase_sign_edge",
+      "edge_support_minimal",
+      "lower_support",
+      "exhaustive"
+    ]
+  },
+  "hard_limits": [
+    "K_strict_gate remains the current live/full operational kernel.",
+    "No unqualified identity K_legacy_ont == K_strict_gate is claimed.",
+    "No proof derives A(d), P(d), D(d), omega/phi, beta/eta, or the transport cocycle from strict nadsoliton dynamics.",
+    "No beta_tors -> chi_11 theorem is claimed.",
+    "No legacy physical-role transfer to K_strict_gate is claimed.",
+    "No QW-2191 selector discharge is claimed.",
+    "No ToE closure is claimed."
+  ],
+  "lower_support_exhaustion_rows": [
+    {
+      "all_assignments_fail": true,
+      "assignments_checked": 1,
+      "assignments_failing_to_reconstruct_expected_pattern": 1,
+      "sample_failure": {
+        "first_mismatch": {
+          "d": 2,
+          "expected_bit": 1,
+          "reconstructed_bit": 0
+        },
+        "support_edges": []
+      },
+      "support_size": 0
+    },
+    {
+      "all_assignments_fail": true,
+      "assignments_checked": 11,
+      "assignments_failing_to_reconstruct_expected_pattern": 11,
+      "sample_failure": {
+        "first_mismatch": {
+          "d": 1,
+          "expected_bit": 0,
+          "reconstructed_bit": 1
+        },
+        "support_edges": [
+          "0->1"
+        ]
+      },
+      "support_size": 1
+    },
+    {
+      "all_assignments_fail": true,
+      "assignments_checked": 55,
+      "assignments_failing_to_reconstruct_expected_pattern": 55,
+      "sample_failure": {
+        "first_mismatch": {
+          "d": 1,
+          "expected_bit": 0,
+          "reconstructed_bit": 1
+        },
+        "support_edges": [
+          "0->1",
+          "1->2"
+        ]
+      },
+      "support_size": 2
+    },
+    {
+      "all_assignments_fail": true,
+      "assignments_checked": 165,
+      "assignments_failing_to_reconstruct_expected_pattern": 165,
+      "sample_failure": {
+        "first_mismatch": {
+          "d": 1,
+          "expected_bit": 0,
+          "reconstructed_bit": 1
+        },
+        "support_edges": [
+          "0->1",
+          "1->2",
+          "2->3"
+        ]
+      },
+      "support_size": 3
+    }
+  ],
+  "lower_support_failure_witness_rows": [
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 0,
+      "support_edges": [],
+      "support_size": 0
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 1,
+      "support_edges": [
+        "0->1"
+      ],
+      "support_size": 1
+    },
+    {
+      "first_mismatch": {
+        "d": 6,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 2,
+      "support_edges": [
+        "1->2"
+      ],
+      "support_size": 1
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 3,
+      "support_edges": [
+        "0->1",
+        "1->2"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 4,
+      "support_edges": [
+        "2->3"
+      ],
+      "support_size": 1
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 5,
+      "support_edges": [
+        "0->1",
+        "2->3"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 3,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 6,
+      "support_edges": [
+        "1->2",
+        "2->3"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 7,
+      "support_edges": [
+        "0->1",
+        "1->2",
+        "2->3"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 8,
+      "support_edges": [
+        "3->4"
+      ],
+      "support_size": 1
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 9,
+      "support_edges": [
+        "0->1",
+        "3->4"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 4,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 10,
+      "support_edges": [
+        "1->2",
+        "3->4"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 11,
+      "support_edges": [
+        "0->1",
+        "1->2",
+        "3->4"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 12,
+      "support_edges": [
+        "2->3",
+        "3->4"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 13,
+      "support_edges": [
+        "0->1",
+        "2->3",
+        "3->4"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 3,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 14,
+      "support_edges": [
+        "1->2",
+        "2->3",
+        "3->4"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 16,
+      "support_edges": [
+        "4->5"
+      ],
+      "support_size": 1
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 17,
+      "support_edges": [
+        "0->1",
+        "4->5"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 5,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 18,
+      "support_edges": [
+        "1->2",
+        "4->5"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 19,
+      "support_edges": [
+        "0->1",
+        "1->2",
+        "4->5"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 20,
+      "support_edges": [
+        "2->3",
+        "4->5"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 21,
+      "support_edges": [
+        "0->1",
+        "2->3",
+        "4->5"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 3,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 22,
+      "support_edges": [
+        "1->2",
+        "2->3",
+        "4->5"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 24,
+      "support_edges": [
+        "3->4",
+        "4->5"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 25,
+      "support_edges": [
+        "0->1",
+        "3->4",
+        "4->5"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 4,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 26,
+      "support_edges": [
+        "1->2",
+        "3->4",
+        "4->5"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 28,
+      "support_edges": [
+        "2->3",
+        "3->4",
+        "4->5"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 32,
+      "support_edges": [
+        "5->6"
+      ],
+      "support_size": 1
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 33,
+      "support_edges": [
+        "0->1",
+        "5->6"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 8,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 34,
+      "support_edges": [
+        "1->2",
+        "5->6"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 35,
+      "support_edges": [
+        "0->1",
+        "1->2",
+        "5->6"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 36,
+      "support_edges": [
+        "2->3",
+        "5->6"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 37,
+      "support_edges": [
+        "0->1",
+        "2->3",
+        "5->6"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 3,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 38,
+      "support_edges": [
+        "1->2",
+        "2->3",
+        "5->6"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 40,
+      "support_edges": [
+        "3->4",
+        "5->6"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 41,
+      "support_edges": [
+        "0->1",
+        "3->4",
+        "5->6"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 4,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 42,
+      "support_edges": [
+        "1->2",
+        "3->4",
+        "5->6"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 44,
+      "support_edges": [
+        "2->3",
+        "3->4",
+        "5->6"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 48,
+      "support_edges": [
+        "4->5",
+        "5->6"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 49,
+      "support_edges": [
+        "0->1",
+        "4->5",
+        "5->6"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 5,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 50,
+      "support_edges": [
+        "1->2",
+        "4->5",
+        "5->6"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 52,
+      "support_edges": [
+        "2->3",
+        "4->5",
+        "5->6"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 56,
+      "support_edges": [
+        "3->4",
+        "4->5",
+        "5->6"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 64,
+      "support_edges": [
+        "6->7"
+      ],
+      "support_size": 1
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 65,
+      "support_edges": [
+        "0->1",
+        "6->7"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 6,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 66,
+      "support_edges": [
+        "1->2",
+        "6->7"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 67,
+      "support_edges": [
+        "0->1",
+        "1->2",
+        "6->7"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 68,
+      "support_edges": [
+        "2->3",
+        "6->7"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 69,
+      "support_edges": [
+        "0->1",
+        "2->3",
+        "6->7"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 3,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 70,
+      "support_edges": [
+        "1->2",
+        "2->3",
+        "6->7"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 72,
+      "support_edges": [
+        "3->4",
+        "6->7"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 73,
+      "support_edges": [
+        "0->1",
+        "3->4",
+        "6->7"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 4,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 74,
+      "support_edges": [
+        "1->2",
+        "3->4",
+        "6->7"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 76,
+      "support_edges": [
+        "2->3",
+        "3->4",
+        "6->7"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 80,
+      "support_edges": [
+        "4->5",
+        "6->7"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 81,
+      "support_edges": [
+        "0->1",
+        "4->5",
+        "6->7"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 5,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 82,
+      "support_edges": [
+        "1->2",
+        "4->5",
+        "6->7"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 84,
+      "support_edges": [
+        "2->3",
+        "4->5",
+        "6->7"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 88,
+      "support_edges": [
+        "3->4",
+        "4->5",
+        "6->7"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 96,
+      "support_edges": [
+        "5->6",
+        "6->7"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 97,
+      "support_edges": [
+        "0->1",
+        "5->6",
+        "6->7"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 7,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 98,
+      "support_edges": [
+        "1->2",
+        "5->6",
+        "6->7"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 100,
+      "support_edges": [
+        "2->3",
+        "5->6",
+        "6->7"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 104,
+      "support_edges": [
+        "3->4",
+        "5->6",
+        "6->7"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 112,
+      "support_edges": [
+        "4->5",
+        "5->6",
+        "6->7"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 128,
+      "support_edges": [
+        "7->8"
+      ],
+      "support_size": 1
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 129,
+      "support_edges": [
+        "0->1",
+        "7->8"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 6,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 130,
+      "support_edges": [
+        "1->2",
+        "7->8"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 131,
+      "support_edges": [
+        "0->1",
+        "1->2",
+        "7->8"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 132,
+      "support_edges": [
+        "2->3",
+        "7->8"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 133,
+      "support_edges": [
+        "0->1",
+        "2->3",
+        "7->8"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 3,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 134,
+      "support_edges": [
+        "1->2",
+        "2->3",
+        "7->8"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 136,
+      "support_edges": [
+        "3->4",
+        "7->8"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 137,
+      "support_edges": [
+        "0->1",
+        "3->4",
+        "7->8"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 4,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 138,
+      "support_edges": [
+        "1->2",
+        "3->4",
+        "7->8"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 140,
+      "support_edges": [
+        "2->3",
+        "3->4",
+        "7->8"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 144,
+      "support_edges": [
+        "4->5",
+        "7->8"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 145,
+      "support_edges": [
+        "0->1",
+        "4->5",
+        "7->8"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 5,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 146,
+      "support_edges": [
+        "1->2",
+        "4->5",
+        "7->8"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 148,
+      "support_edges": [
+        "2->3",
+        "4->5",
+        "7->8"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 152,
+      "support_edges": [
+        "3->4",
+        "4->5",
+        "7->8"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 160,
+      "support_edges": [
+        "5->6",
+        "7->8"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 161,
+      "support_edges": [
+        "0->1",
+        "5->6",
+        "7->8"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 10,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 162,
+      "support_edges": [
+        "1->2",
+        "5->6",
+        "7->8"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 164,
+      "support_edges": [
+        "2->3",
+        "5->6",
+        "7->8"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 168,
+      "support_edges": [
+        "3->4",
+        "5->6",
+        "7->8"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 176,
+      "support_edges": [
+        "4->5",
+        "5->6",
+        "7->8"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 192,
+      "support_edges": [
+        "6->7",
+        "7->8"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 193,
+      "support_edges": [
+        "0->1",
+        "6->7",
+        "7->8"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 6,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 194,
+      "support_edges": [
+        "1->2",
+        "6->7",
+        "7->8"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 196,
+      "support_edges": [
+        "2->3",
+        "6->7",
+        "7->8"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 200,
+      "support_edges": [
+        "3->4",
+        "6->7",
+        "7->8"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 208,
+      "support_edges": [
+        "4->5",
+        "6->7",
+        "7->8"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 224,
+      "support_edges": [
+        "5->6",
+        "6->7",
+        "7->8"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 256,
+      "support_edges": [
+        "8->9"
+      ],
+      "support_size": 1
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 257,
+      "support_edges": [
+        "0->1",
+        "8->9"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 6,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 258,
+      "support_edges": [
+        "1->2",
+        "8->9"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 259,
+      "support_edges": [
+        "0->1",
+        "1->2",
+        "8->9"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 260,
+      "support_edges": [
+        "2->3",
+        "8->9"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 261,
+      "support_edges": [
+        "0->1",
+        "2->3",
+        "8->9"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 3,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 262,
+      "support_edges": [
+        "1->2",
+        "2->3",
+        "8->9"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 264,
+      "support_edges": [
+        "3->4",
+        "8->9"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 265,
+      "support_edges": [
+        "0->1",
+        "3->4",
+        "8->9"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 4,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 266,
+      "support_edges": [
+        "1->2",
+        "3->4",
+        "8->9"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 268,
+      "support_edges": [
+        "2->3",
+        "3->4",
+        "8->9"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 272,
+      "support_edges": [
+        "4->5",
+        "8->9"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 273,
+      "support_edges": [
+        "0->1",
+        "4->5",
+        "8->9"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 5,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 274,
+      "support_edges": [
+        "1->2",
+        "4->5",
+        "8->9"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 276,
+      "support_edges": [
+        "2->3",
+        "4->5",
+        "8->9"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 280,
+      "support_edges": [
+        "3->4",
+        "4->5",
+        "8->9"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 288,
+      "support_edges": [
+        "5->6",
+        "8->9"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 289,
+      "support_edges": [
+        "0->1",
+        "5->6",
+        "8->9"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 8,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 290,
+      "support_edges": [
+        "1->2",
+        "5->6",
+        "8->9"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 292,
+      "support_edges": [
+        "2->3",
+        "5->6",
+        "8->9"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 296,
+      "support_edges": [
+        "3->4",
+        "5->6",
+        "8->9"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 304,
+      "support_edges": [
+        "4->5",
+        "5->6",
+        "8->9"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 320,
+      "support_edges": [
+        "6->7",
+        "8->9"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 321,
+      "support_edges": [
+        "0->1",
+        "6->7",
+        "8->9"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 6,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 322,
+      "support_edges": [
+        "1->2",
+        "6->7",
+        "8->9"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 324,
+      "support_edges": [
+        "2->3",
+        "6->7",
+        "8->9"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 328,
+      "support_edges": [
+        "3->4",
+        "6->7",
+        "8->9"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 336,
+      "support_edges": [
+        "4->5",
+        "6->7",
+        "8->9"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 352,
+      "support_edges": [
+        "5->6",
+        "6->7",
+        "8->9"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 384,
+      "support_edges": [
+        "7->8",
+        "8->9"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 385,
+      "support_edges": [
+        "0->1",
+        "7->8",
+        "8->9"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 6,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 386,
+      "support_edges": [
+        "1->2",
+        "7->8",
+        "8->9"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 388,
+      "support_edges": [
+        "2->3",
+        "7->8",
+        "8->9"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 392,
+      "support_edges": [
+        "3->4",
+        "7->8",
+        "8->9"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 400,
+      "support_edges": [
+        "4->5",
+        "7->8",
+        "8->9"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 416,
+      "support_edges": [
+        "5->6",
+        "7->8",
+        "8->9"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 448,
+      "support_edges": [
+        "6->7",
+        "7->8",
+        "8->9"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 512,
+      "support_edges": [
+        "9->10"
+      ],
+      "support_size": 1
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 513,
+      "support_edges": [
+        "0->1",
+        "9->10"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 6,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 514,
+      "support_edges": [
+        "1->2",
+        "9->10"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 515,
+      "support_edges": [
+        "0->1",
+        "1->2",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 516,
+      "support_edges": [
+        "2->3",
+        "9->10"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 517,
+      "support_edges": [
+        "0->1",
+        "2->3",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 3,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 518,
+      "support_edges": [
+        "1->2",
+        "2->3",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 520,
+      "support_edges": [
+        "3->4",
+        "9->10"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 521,
+      "support_edges": [
+        "0->1",
+        "3->4",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 4,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 522,
+      "support_edges": [
+        "1->2",
+        "3->4",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 524,
+      "support_edges": [
+        "2->3",
+        "3->4",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 528,
+      "support_edges": [
+        "4->5",
+        "9->10"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 529,
+      "support_edges": [
+        "0->1",
+        "4->5",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 5,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 530,
+      "support_edges": [
+        "1->2",
+        "4->5",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 532,
+      "support_edges": [
+        "2->3",
+        "4->5",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 536,
+      "support_edges": [
+        "3->4",
+        "4->5",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 544,
+      "support_edges": [
+        "5->6",
+        "9->10"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 545,
+      "support_edges": [
+        "0->1",
+        "5->6",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 8,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 546,
+      "support_edges": [
+        "1->2",
+        "5->6",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 548,
+      "support_edges": [
+        "2->3",
+        "5->6",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 552,
+      "support_edges": [
+        "3->4",
+        "5->6",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 560,
+      "support_edges": [
+        "4->5",
+        "5->6",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 576,
+      "support_edges": [
+        "6->7",
+        "9->10"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 577,
+      "support_edges": [
+        "0->1",
+        "6->7",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 6,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 578,
+      "support_edges": [
+        "1->2",
+        "6->7",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 580,
+      "support_edges": [
+        "2->3",
+        "6->7",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 584,
+      "support_edges": [
+        "3->4",
+        "6->7",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 592,
+      "support_edges": [
+        "4->5",
+        "6->7",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 608,
+      "support_edges": [
+        "5->6",
+        "6->7",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 640,
+      "support_edges": [
+        "7->8",
+        "9->10"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 641,
+      "support_edges": [
+        "0->1",
+        "7->8",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 6,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 642,
+      "support_edges": [
+        "1->2",
+        "7->8",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 644,
+      "support_edges": [
+        "2->3",
+        "7->8",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 648,
+      "support_edges": [
+        "3->4",
+        "7->8",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 656,
+      "support_edges": [
+        "4->5",
+        "7->8",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 672,
+      "support_edges": [
+        "5->6",
+        "7->8",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 704,
+      "support_edges": [
+        "6->7",
+        "7->8",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 768,
+      "support_edges": [
+        "8->9",
+        "9->10"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 769,
+      "support_edges": [
+        "0->1",
+        "8->9",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 6,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 770,
+      "support_edges": [
+        "1->2",
+        "8->9",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 772,
+      "support_edges": [
+        "2->3",
+        "8->9",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 776,
+      "support_edges": [
+        "3->4",
+        "8->9",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 784,
+      "support_edges": [
+        "4->5",
+        "8->9",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 800,
+      "support_edges": [
+        "5->6",
+        "8->9",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 832,
+      "support_edges": [
+        "6->7",
+        "8->9",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 896,
+      "support_edges": [
+        "7->8",
+        "8->9",
+        "9->10"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1024,
+      "support_edges": [
+        "10->11"
+      ],
+      "support_size": 1
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 1025,
+      "support_edges": [
+        "0->1",
+        "10->11"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 6,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 1026,
+      "support_edges": [
+        "1->2",
+        "10->11"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 1027,
+      "support_edges": [
+        "0->1",
+        "1->2",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1028,
+      "support_edges": [
+        "2->3",
+        "10->11"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 1029,
+      "support_edges": [
+        "0->1",
+        "2->3",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 3,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1030,
+      "support_edges": [
+        "1->2",
+        "2->3",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1032,
+      "support_edges": [
+        "3->4",
+        "10->11"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 1033,
+      "support_edges": [
+        "0->1",
+        "3->4",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 4,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1034,
+      "support_edges": [
+        "1->2",
+        "3->4",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1036,
+      "support_edges": [
+        "2->3",
+        "3->4",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1040,
+      "support_edges": [
+        "4->5",
+        "10->11"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 1041,
+      "support_edges": [
+        "0->1",
+        "4->5",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 5,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1042,
+      "support_edges": [
+        "1->2",
+        "4->5",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1044,
+      "support_edges": [
+        "2->3",
+        "4->5",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1048,
+      "support_edges": [
+        "3->4",
+        "4->5",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1056,
+      "support_edges": [
+        "5->6",
+        "10->11"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 1057,
+      "support_edges": [
+        "0->1",
+        "5->6",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 8,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1058,
+      "support_edges": [
+        "1->2",
+        "5->6",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1060,
+      "support_edges": [
+        "2->3",
+        "5->6",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1064,
+      "support_edges": [
+        "3->4",
+        "5->6",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1072,
+      "support_edges": [
+        "4->5",
+        "5->6",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1088,
+      "support_edges": [
+        "6->7",
+        "10->11"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 1089,
+      "support_edges": [
+        "0->1",
+        "6->7",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 6,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 1090,
+      "support_edges": [
+        "1->2",
+        "6->7",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1092,
+      "support_edges": [
+        "2->3",
+        "6->7",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1096,
+      "support_edges": [
+        "3->4",
+        "6->7",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1104,
+      "support_edges": [
+        "4->5",
+        "6->7",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1120,
+      "support_edges": [
+        "5->6",
+        "6->7",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1152,
+      "support_edges": [
+        "7->8",
+        "10->11"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 1153,
+      "support_edges": [
+        "0->1",
+        "7->8",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 6,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 1154,
+      "support_edges": [
+        "1->2",
+        "7->8",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1156,
+      "support_edges": [
+        "2->3",
+        "7->8",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1160,
+      "support_edges": [
+        "3->4",
+        "7->8",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1168,
+      "support_edges": [
+        "4->5",
+        "7->8",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1184,
+      "support_edges": [
+        "5->6",
+        "7->8",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1216,
+      "support_edges": [
+        "6->7",
+        "7->8",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1280,
+      "support_edges": [
+        "8->9",
+        "10->11"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 1281,
+      "support_edges": [
+        "0->1",
+        "8->9",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 6,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 1282,
+      "support_edges": [
+        "1->2",
+        "8->9",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1284,
+      "support_edges": [
+        "2->3",
+        "8->9",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1288,
+      "support_edges": [
+        "3->4",
+        "8->9",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1296,
+      "support_edges": [
+        "4->5",
+        "8->9",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1312,
+      "support_edges": [
+        "5->6",
+        "8->9",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1344,
+      "support_edges": [
+        "6->7",
+        "8->9",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1408,
+      "support_edges": [
+        "7->8",
+        "8->9",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1536,
+      "support_edges": [
+        "9->10",
+        "10->11"
+      ],
+      "support_size": 2
+    },
+    {
+      "first_mismatch": {
+        "d": 1,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 1537,
+      "support_edges": [
+        "0->1",
+        "9->10",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 6,
+        "expected_bit": 0,
+        "reconstructed_bit": 1
+      },
+      "mask": 1538,
+      "support_edges": [
+        "1->2",
+        "9->10",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1540,
+      "support_edges": [
+        "2->3",
+        "9->10",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1544,
+      "support_edges": [
+        "3->4",
+        "9->10",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1552,
+      "support_edges": [
+        "4->5",
+        "9->10",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1568,
+      "support_edges": [
+        "5->6",
+        "9->10",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1600,
+      "support_edges": [
+        "6->7",
+        "9->10",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1664,
+      "support_edges": [
+        "7->8",
+        "9->10",
+        "10->11"
+      ],
+      "support_size": 3
+    },
+    {
+      "first_mismatch": {
+        "d": 2,
+        "expected_bit": 1,
+        "reconstructed_bit": 0
+      },
+      "mask": 1792,
+      "support_edges": [
+        "8->9",
+        "9->10",
+        "10->11"
+      ],
+      "support_size": 3
+    }
+  ],
+  "matching_edge_assignment_rows": [
+    {
+      "edge_bits": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "mask": 674,
+      "reconstructed_node_bits": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "support_edges": [
+        "1->2",
+        "5->6",
+        "7->8",
+        "9->10"
+      ],
+      "support_size": 4
+    }
+  ],
+  "proof_certificate": {
+    "boundary_step": "On a path graph, each edge bit is forced by adjacent node bits: e_i=b_i xor b_{i+1}.",
+    "exhaustive_step": "All 2^11 edge-bit assignments were enumerated against the left-anchor reconstruction rule.",
+    "minimality_step": "All assignments with support size 0, 1, 2, or 3 fail, so the four-edge flip support is minimal.",
+    "theoretical_limit": "This proves finite sign-support uniqueness only; it does not derive omega/phi, beta/eta, or transport from strict nadsoliton dynamics.",
+    "uniqueness_step": "Exactly one assignment reconstructs the audited node-bit pattern, and it is the Z2 coboundary assignment."
+  },
+  "result_kind": "SCRATCH_STRICT_COMPLETION_PHASE_SIGN_EDGE_SUPPORT_MINIMALITY_CERTIFICATE__FINITE_PATH_EXHAUSTIVE",
+  "source_reports": {
+    "cell_sign_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_phase_zero_cell_sign_certificate_report.json",
+    "phase_sign_z2_coboundary_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_phase_sign_z2_coboundary_certificate_report.json",
+    "positive_factor_sign_separation_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_positive_factor_sign_separation_certificate_report.json"
+  },
+  "status": "unique-four-edge-z2-support-is-minimal-for-the-audited-phase-sign-pattern",
+  "support_histogram_all_2_pow_11_assignments": {
+    "0": 1,
+    "1": 11,
+    "10": 11,
+    "11": 1,
+    "2": 55,
+    "3": 165,
+    "4": 330,
+    "5": 462,
+    "6": 462,
+    "7": 330,
+    "8": 165,
+    "9": 55
+  }
+}
