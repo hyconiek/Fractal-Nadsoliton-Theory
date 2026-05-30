@@ -1,0 +1,625 @@
+{
+  "exact_proof_certificate": {
+    "center_certificate": "The center {d1,d6} has 12 solutions, one dihedral orbit, and only histogram [0,3,2,1,4,0], so it selects A5/d5.",
+    "conditional_scope": "Necessity is local and conditional on the chi_11/shell-label premise plus the pure shell-exclusion exact-cover grammar; no strict source theorem is claimed.",
+    "d1_necessity": "Deleting d1 leaves only d6 and gives 192 solutions over 9 histogram classes, including A1/contiguous; hence d1 is necessary for specificity.",
+    "d6_necessity": "Deleting d6 leaves only d1 and gives 36 solutions over 3 gap necklaces; hence d6 is necessary for exact cover uniqueness.",
+    "finite_domain": "Each local system enumerates all C(12,5)=792 supports exactly under the chi_11-stable shell-exclusion grammar.",
+    "maximality_boundary": "Adding any one missing shell to {d1,d6} gives UNSAT counts [0, 0, 0, 0], so the selector is upward-isolated."
+  },
+  "finite_model": {
+    "active_count": 5,
+    "center_forbidden_shells": [
+      1,
+      6
+    ],
+    "chi11_kernel_units": [
+      1,
+      11
+    ],
+    "folded_shells": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "ring": "Z_12",
+    "target_A1_histogram": [
+      4,
+      3,
+      2,
+      1,
+      0,
+      0
+    ],
+    "target_A5_histogram": [
+      0,
+      3,
+      2,
+      1,
+      4,
+      0
+    ],
+    "target_eta": "9/5",
+    "target_q_power": "256/243"
+  },
+  "hard_limits": [
+    "No identity K_legacy_ont == K_strict_gate is used or claimed.",
+    "No legacy role transfer to K_strict_gate, alpha_geo, beta_tors, or D_f is made.",
+    "No theorem derives the chi_11-kernel, shell-label d1 vs d5, unit-axis bit, exact-cover clauses, or cardinality 5 from strict nadsoliton geometry.",
+    "The result is a conditional finite local necessity certificate inside an axiom-augmented grammar, not a strict selector-origin theorem.",
+    "No QW-2191 discharge.",
+    "No ToE closure."
+  ],
+  "interpretation": {
+    "honest_negative": "This does not derive chi_11, cardinality 5, or the shell-exclusion grammar from strict nadsoliton geometry.",
+    "honest_positive": "Inside the chi_11 shell-exclusion grammar, {d1,d6} is not only globally unique but locally necessary: removing either clause overselects, adding any clause kills satisfiability.",
+    "relation_to_previous_probe": "The previous 64-mask uniqueness result is sharpened into a local Hasse-neighborhood certificate around the unique A5/d5 mask."
+  },
+  "local_boundary_rows": [
+    {
+      "contains_A1_contiguous_histogram": false,
+      "contains_A5_d5_histogram": true,
+      "dihedral_orbit_count": 1,
+      "forbidden_shell_labels": [
+        "d1",
+        "d6"
+      ],
+      "forbidden_shells": [
+        1,
+        6
+      ],
+      "gap_necklace_count": 1,
+      "gap_necklaces": [
+        [
+          2,
+          2,
+          3,
+          2,
+          3
+        ]
+      ],
+      "histogram_class_count": 1,
+      "histogram_rows": [
+        {
+          "classification": "A5_d5_target",
+          "histogram_d1_to_d6": [
+            0,
+            3,
+            2,
+            1,
+            4,
+            0
+          ]
+        }
+      ],
+      "is_unsat": false,
+      "name": "center_d1_plus_d6",
+      "relation_to_center": "center",
+      "representative_solutions": [
+        [
+          0,
+          2,
+          4,
+          7,
+          9
+        ],
+        [
+          0,
+          2,
+          5,
+          7,
+          9
+        ],
+        [
+          0,
+          2,
+          5,
+          7,
+          10
+        ],
+        [
+          0,
+          3,
+          5,
+          7,
+          10
+        ],
+        [
+          0,
+          3,
+          5,
+          8,
+          10
+        ],
+        [
+          1,
+          3,
+          5,
+          8,
+          10
+        ]
+      ],
+      "selects_A5_d5_uniquely": true,
+      "solution_count": 12
+    },
+    {
+      "contains_A1_contiguous_histogram": true,
+      "contains_A5_d5_histogram": true,
+      "dihedral_orbit_count": 10,
+      "forbidden_shell_labels": [
+        "d6"
+      ],
+      "forbidden_shells": [
+        6
+      ],
+      "gap_necklace_count": 10,
+      "gap_necklaces": [
+        [
+          1,
+          1,
+          1,
+          1,
+          8
+        ],
+        [
+          1,
+          1,
+          1,
+          2,
+          7
+        ],
+        [
+          1,
+          1,
+          2,
+          1,
+          7
+        ],
+        [
+          1,
+          1,
+          2,
+          5,
+          3
+        ],
+        [
+          1,
+          1,
+          3,
+          4,
+          3
+        ],
+        [
+          1,
+          2,
+          1,
+          4,
+          4
+        ],
+        [
+          1,
+          2,
+          2,
+          3,
+          4
+        ],
+        [
+          1,
+          2,
+          2,
+          5,
+          2
+        ],
+        [
+          1,
+          3,
+          1,
+          3,
+          4
+        ],
+        [
+          2,
+          2,
+          3,
+          2,
+          3
+        ]
+      ],
+      "histogram_class_count": 9,
+      "histogram_rows": [
+        {
+          "classification": "A5_d5_target",
+          "histogram_d1_to_d6": [
+            0,
+            3,
+            2,
+            1,
+            4,
+            0
+          ]
+        },
+        {
+          "classification": "other",
+          "histogram_d1_to_d6": [
+            1,
+            2,
+            2,
+            2,
+            3,
+            0
+          ]
+        },
+        {
+          "classification": "other",
+          "histogram_d1_to_d6": [
+            1,
+            3,
+            2,
+            1,
+            3,
+            0
+          ]
+        },
+        {
+          "classification": "other",
+          "histogram_d1_to_d6": [
+            2,
+            0,
+            2,
+            4,
+            2,
+            0
+          ]
+        },
+        {
+          "classification": "other",
+          "histogram_d1_to_d6": [
+            2,
+            1,
+            2,
+            3,
+            2,
+            0
+          ]
+        },
+        {
+          "classification": "other",
+          "histogram_d1_to_d6": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            0
+          ]
+        },
+        {
+          "classification": "other",
+          "histogram_d1_to_d6": [
+            3,
+            2,
+            2,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "classification": "other",
+          "histogram_d1_to_d6": [
+            3,
+            3,
+            2,
+            1,
+            1,
+            0
+          ]
+        },
+        {
+          "classification": "A1_contiguous_conjugate",
+          "histogram_d1_to_d6": [
+            4,
+            3,
+            2,
+            1,
+            0,
+            0
+          ]
+        }
+      ],
+      "is_unsat": false,
+      "name": "delete_d1",
+      "relation_to_center": "delete d1",
+      "representative_solutions": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          5
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          10
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          11
+        ],
+        [
+          0,
+          1,
+          2,
+          4,
+          5
+        ],
+        [
+          0,
+          1,
+          2,
+          4,
+          9
+        ]
+      ],
+      "selects_A5_d5_uniquely": false,
+      "solution_count": 192
+    },
+    {
+      "contains_A1_contiguous_histogram": false,
+      "contains_A5_d5_histogram": true,
+      "dihedral_orbit_count": 3,
+      "forbidden_shell_labels": [
+        "d1"
+      ],
+      "forbidden_shells": [
+        1
+      ],
+      "gap_necklace_count": 3,
+      "gap_necklaces": [
+        [
+          2,
+          2,
+          2,
+          2,
+          4
+        ],
+        [
+          2,
+          2,
+          2,
+          3,
+          3
+        ],
+        [
+          2,
+          2,
+          3,
+          2,
+          3
+        ]
+      ],
+      "histogram_class_count": 3,
+      "histogram_rows": [
+        {
+          "classification": "A5_d5_target",
+          "histogram_d1_to_d6": [
+            0,
+            3,
+            2,
+            1,
+            4,
+            0
+          ]
+        },
+        {
+          "classification": "other",
+          "histogram_d1_to_d6": [
+            0,
+            3,
+            2,
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "classification": "other",
+          "histogram_d1_to_d6": [
+            0,
+            4,
+            0,
+            4,
+            0,
+            2
+          ]
+        }
+      ],
+      "is_unsat": false,
+      "name": "delete_d6",
+      "relation_to_center": "delete d6",
+      "representative_solutions": [
+        [
+          0,
+          2,
+          4,
+          6,
+          8
+        ],
+        [
+          0,
+          2,
+          4,
+          6,
+          9
+        ],
+        [
+          0,
+          2,
+          4,
+          6,
+          10
+        ],
+        [
+          0,
+          2,
+          4,
+          7,
+          9
+        ],
+        [
+          0,
+          2,
+          4,
+          7,
+          10
+        ],
+        [
+          0,
+          2,
+          4,
+          8,
+          10
+        ]
+      ],
+      "selects_A5_d5_uniquely": false,
+      "solution_count": 36
+    },
+    {
+      "contains_A1_contiguous_histogram": false,
+      "contains_A5_d5_histogram": false,
+      "dihedral_orbit_count": 0,
+      "forbidden_shell_labels": [
+        "d1",
+        "d2",
+        "d6"
+      ],
+      "forbidden_shells": [
+        1,
+        2,
+        6
+      ],
+      "gap_necklace_count": 0,
+      "gap_necklaces": [],
+      "histogram_class_count": 0,
+      "histogram_rows": [],
+      "is_unsat": true,
+      "name": "add_d2",
+      "relation_to_center": "add d2",
+      "representative_solutions": [],
+      "selects_A5_d5_uniquely": false,
+      "solution_count": 0
+    },
+    {
+      "contains_A1_contiguous_histogram": false,
+      "contains_A5_d5_histogram": false,
+      "dihedral_orbit_count": 0,
+      "forbidden_shell_labels": [
+        "d1",
+        "d3",
+        "d6"
+      ],
+      "forbidden_shells": [
+        1,
+        3,
+        6
+      ],
+      "gap_necklace_count": 0,
+      "gap_necklaces": [],
+      "histogram_class_count": 0,
+      "histogram_rows": [],
+      "is_unsat": true,
+      "name": "add_d3",
+      "relation_to_center": "add d3",
+      "representative_solutions": [],
+      "selects_A5_d5_uniquely": false,
+      "solution_count": 0
+    },
+    {
+      "contains_A1_contiguous_histogram": false,
+      "contains_A5_d5_histogram": false,
+      "dihedral_orbit_count": 0,
+      "forbidden_shell_labels": [
+        "d1",
+        "d4",
+        "d6"
+      ],
+      "forbidden_shells": [
+        1,
+        4,
+        6
+      ],
+      "gap_necklace_count": 0,
+      "gap_necklaces": [],
+      "histogram_class_count": 0,
+      "histogram_rows": [],
+      "is_unsat": true,
+      "name": "add_d4",
+      "relation_to_center": "add d4",
+      "representative_solutions": [],
+      "selects_A5_d5_uniquely": false,
+      "solution_count": 0
+    },
+    {
+      "contains_A1_contiguous_histogram": false,
+      "contains_A5_d5_histogram": false,
+      "dihedral_orbit_count": 0,
+      "forbidden_shell_labels": [
+        "d1",
+        "d5",
+        "d6"
+      ],
+      "forbidden_shells": [
+        1,
+        5,
+        6
+      ],
+      "gap_necklace_count": 0,
+      "gap_necklaces": [],
+      "histogram_class_count": 0,
+      "histogram_rows": [],
+      "is_unsat": true,
+      "name": "add_d5",
+      "relation_to_center": "add d5",
+      "representative_solutions": [],
+      "selects_A5_d5_uniquely": false,
+      "solution_count": 0
+    }
+  ],
+  "local_boundary_summary": {
+    "addition_neighbor_count": 4,
+    "addition_solution_counts": {
+      "add_d2": 0,
+      "add_d3": 0,
+      "add_d4": 0,
+      "add_d5": 0
+    },
+    "all_additions_unsat": true,
+    "all_deletions_overselect": true,
+    "center_selects_A5_d5_uniquely": true,
+    "delete_d1_solution_count": 192,
+    "delete_d6_solution_count": 36,
+    "deletion_neighbor_count": 2
+  },
+  "ontology_guardrail": {
+    "allowed_reading": "The nadsoliton itself is the primordial information in a solitonic state.",
+    "forbidden_reading": "No separate informational layer underneath the nadsoliton is introduced by this finite local certificate."
+  },
+  "result_kind": "SCRATCH_STRICT_ALPHA_CHI11_D1D6_LOCAL_NECESSITY_CERTIFICATE_PROBE__CONDITIONAL_NOT_A_THEOREM",
+  "status": "d1-d6-is-locally-necessary-and-upward-isolated-inside-chi11-shell-exclusion-grammar"
+}

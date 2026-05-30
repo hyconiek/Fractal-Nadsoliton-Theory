@@ -1,0 +1,441 @@
+{
+  "exact_proof_certificate": {
+    "five_support_elimination": "All 3 min-gap necklaces for k=5 contain a consecutive interval of folded length 5 or 6, so no 5-support survives.",
+    "four_support_elimination": "All 8 min-gap necklaces for k=4 contain a consecutive interval of folded length 5 or 6, so no 4-support survives.",
+    "gap_reduction": "For any independent support, the d1 ban forces every cyclic gap to be at least 2; all possible k-support gap certificates are therefore integer necklaces summing to 12.",
+    "graph_definition": "G has vertex set Z_12 and forbidden edges at folded distances d1,d5,d6, the full-Aut closure of the earlier d1+d6 exact-cover clauses.",
+    "selector_consequence": "The target exact-cover cardinality 5 is impossible after full-Aut clause closure; the successful d1+d6 selector remains chi_11-conditional.",
+    "tightness": "There are 16 independent 3-supports, while k=4 count is 0 and k=5 count is 0; hence alpha(G)=3."
+  },
+  "finite_model": {
+    "automorphism_units": [
+      1,
+      5,
+      7,
+      11
+    ],
+    "forbidden_shells_full_Aut_closed": [
+      1,
+      5,
+      6
+    ],
+    "ring": "Z_12",
+    "target_active_count": 5,
+    "target_eta": "9/5",
+    "target_q_power": "256/243"
+  },
+  "gap_elimination_certificate": {
+    "all_k4_necklaces_eliminated_by_d5_or_d6": true,
+    "all_k5_necklaces_eliminated_by_d5_or_d6": true,
+    "k4_rows": [
+      {
+        "active_count": 4,
+        "all_gaps_at_least_2_from_d1_ban": true,
+        "forbidden_interval_certificate": {
+          "consecutive_gap_count": 3,
+          "folded_distance": 6,
+          "forbidden_shell_hit": "d6",
+          "oriented_interval_sum": 6,
+          "start_gap_index": 0
+        },
+        "gap_necklace": [
+          2,
+          2,
+          2,
+          6
+        ],
+        "gap_sum": 12,
+        "survives_d5_d6_bans": false
+      },
+      {
+        "active_count": 4,
+        "all_gaps_at_least_2_from_d1_ban": true,
+        "forbidden_interval_certificate": {
+          "consecutive_gap_count": 3,
+          "folded_distance": 5,
+          "forbidden_shell_hit": "d5",
+          "oriented_interval_sum": 7,
+          "start_gap_index": 0
+        },
+        "gap_necklace": [
+          2,
+          2,
+          3,
+          5
+        ],
+        "gap_sum": 12,
+        "survives_d5_d6_bans": false
+      },
+      {
+        "active_count": 4,
+        "all_gaps_at_least_2_from_d1_ban": true,
+        "forbidden_interval_certificate": {
+          "consecutive_gap_count": 2,
+          "folded_distance": 6,
+          "forbidden_shell_hit": "d6",
+          "oriented_interval_sum": 6,
+          "start_gap_index": 1
+        },
+        "gap_necklace": [
+          2,
+          2,
+          4,
+          4
+        ],
+        "gap_sum": 12,
+        "survives_d5_d6_bans": false
+      },
+      {
+        "active_count": 4,
+        "all_gaps_at_least_2_from_d1_ban": true,
+        "forbidden_interval_certificate": {
+          "consecutive_gap_count": 2,
+          "folded_distance": 5,
+          "forbidden_shell_hit": "d5",
+          "oriented_interval_sum": 5,
+          "start_gap_index": 0
+        },
+        "gap_necklace": [
+          2,
+          3,
+          2,
+          5
+        ],
+        "gap_sum": 12,
+        "survives_d5_d6_bans": false
+      },
+      {
+        "active_count": 4,
+        "all_gaps_at_least_2_from_d1_ban": true,
+        "forbidden_interval_certificate": {
+          "consecutive_gap_count": 2,
+          "folded_distance": 5,
+          "forbidden_shell_hit": "d5",
+          "oriented_interval_sum": 5,
+          "start_gap_index": 0
+        },
+        "gap_necklace": [
+          2,
+          3,
+          3,
+          4
+        ],
+        "gap_sum": 12,
+        "survives_d5_d6_bans": false
+      },
+      {
+        "active_count": 4,
+        "all_gaps_at_least_2_from_d1_ban": true,
+        "forbidden_interval_certificate": {
+          "consecutive_gap_count": 2,
+          "folded_distance": 5,
+          "forbidden_shell_hit": "d5",
+          "oriented_interval_sum": 5,
+          "start_gap_index": 0
+        },
+        "gap_necklace": [
+          2,
+          3,
+          4,
+          3
+        ],
+        "gap_sum": 12,
+        "survives_d5_d6_bans": false
+      },
+      {
+        "active_count": 4,
+        "all_gaps_at_least_2_from_d1_ban": true,
+        "forbidden_interval_certificate": {
+          "consecutive_gap_count": 2,
+          "folded_distance": 6,
+          "forbidden_shell_hit": "d6",
+          "oriented_interval_sum": 6,
+          "start_gap_index": 0
+        },
+        "gap_necklace": [
+          2,
+          4,
+          2,
+          4
+        ],
+        "gap_sum": 12,
+        "survives_d5_d6_bans": false
+      },
+      {
+        "active_count": 4,
+        "all_gaps_at_least_2_from_d1_ban": true,
+        "forbidden_interval_certificate": {
+          "consecutive_gap_count": 2,
+          "folded_distance": 6,
+          "forbidden_shell_hit": "d6",
+          "oriented_interval_sum": 6,
+          "start_gap_index": 0
+        },
+        "gap_necklace": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "gap_sum": 12,
+        "survives_d5_d6_bans": false
+      }
+    ],
+    "k5_rows": [
+      {
+        "active_count": 5,
+        "all_gaps_at_least_2_from_d1_ban": true,
+        "forbidden_interval_certificate": {
+          "consecutive_gap_count": 3,
+          "folded_distance": 6,
+          "forbidden_shell_hit": "d6",
+          "oriented_interval_sum": 6,
+          "start_gap_index": 0
+        },
+        "gap_necklace": [
+          2,
+          2,
+          2,
+          2,
+          4
+        ],
+        "gap_sum": 12,
+        "survives_d5_d6_bans": false
+      },
+      {
+        "active_count": 5,
+        "all_gaps_at_least_2_from_d1_ban": true,
+        "forbidden_interval_certificate": {
+          "consecutive_gap_count": 3,
+          "folded_distance": 6,
+          "forbidden_shell_hit": "d6",
+          "oriented_interval_sum": 6,
+          "start_gap_index": 0
+        },
+        "gap_necklace": [
+          2,
+          2,
+          2,
+          3,
+          3
+        ],
+        "gap_sum": 12,
+        "survives_d5_d6_bans": false
+      },
+      {
+        "active_count": 5,
+        "all_gaps_at_least_2_from_d1_ban": true,
+        "forbidden_interval_certificate": {
+          "consecutive_gap_count": 3,
+          "folded_distance": 5,
+          "forbidden_shell_hit": "d5",
+          "oriented_interval_sum": 7,
+          "start_gap_index": 0
+        },
+        "gap_necklace": [
+          2,
+          2,
+          3,
+          2,
+          3
+        ],
+        "gap_sum": 12,
+        "survives_d5_d6_bans": false
+      }
+    ]
+  },
+  "hard_limits": [
+    "No identity K_legacy_ont == K_strict_gate is used or claimed.",
+    "No legacy role transfer to K_strict_gate, alpha_geo, beta_tors, or D_f is made.",
+    "No theorem derives the chi_11-kernel, shell-label d1 vs d5, or unit-axis bit from strict nadsoliton geometry.",
+    "The result is a finite full-Aut graph/gap no-go certificate, not a selector-origin theorem.",
+    "No QW-2191 discharge.",
+    "No ToE closure."
+  ],
+  "independence_profile": [
+    {
+      "active_count": 0,
+      "exists": true,
+      "gap_necklaces": [],
+      "independent_support_count": 1,
+      "representative_supports": [
+        []
+      ]
+    },
+    {
+      "active_count": 1,
+      "exists": true,
+      "gap_necklaces": [
+        [
+          12
+        ]
+      ],
+      "independent_support_count": 12,
+      "representative_supports": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ]
+    },
+    {
+      "active_count": 2,
+      "exists": true,
+      "gap_necklaces": [
+        [
+          2,
+          10
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          4,
+          8
+        ]
+      ],
+      "independent_support_count": 36,
+      "representative_supports": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ]
+      ]
+    },
+    {
+      "active_count": 3,
+      "exists": true,
+      "gap_necklaces": [
+        [
+          2,
+          2,
+          8
+        ],
+        [
+          4,
+          4,
+          4
+        ]
+      ],
+      "independent_support_count": 16,
+      "representative_supports": [
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          2,
+          10
+        ],
+        [
+          0,
+          4,
+          8
+        ],
+        [
+          0,
+          8,
+          10
+        ],
+        [
+          1,
+          3,
+          5
+        ],
+        [
+          1,
+          3,
+          11
+        ],
+        [
+          1,
+          5,
+          9
+        ],
+        [
+          1,
+          9,
+          11
+        ]
+      ]
+    },
+    {
+      "active_count": 4,
+      "exists": false,
+      "gap_necklaces": [],
+      "independent_support_count": 0,
+      "representative_supports": []
+    },
+    {
+      "active_count": 5,
+      "exists": false,
+      "gap_necklaces": [],
+      "independent_support_count": 0,
+      "representative_supports": []
+    }
+  ],
+  "interpretation": {
+    "honest_limit": "This proves a finite full-Aut closure obstruction, not the origin of chi_11, not QW-2191 discharge, and not ToE closure.",
+    "what_was_added": "A compact gap-necklace certificate proves the previous full-Aut UNSAT result and strengthens it to alpha(G)=3.",
+    "why_more_proof_like": "Only 8 k=4 and 3 k=5 min-gap necklaces need elimination after the d1 gap reduction, instead of relying only on all 792 Boolean assignments."
+  },
+  "maximum_independent_size": 3,
+  "ontology_guardrail": {
+    "allowed_reading": "The nadsoliton itself is the primordial information in a solitonic state.",
+    "forbidden_reading": "No separate informational layer underneath the nadsoliton is introduced by this graph certificate."
+  },
+  "result_kind": "SCRATCH_STRICT_ALPHA_FULL_AUT_GAP_INDEPENDENCE_CERTIFICATE_PROBE__NO_GO_NOT_A_THEOREM",
+  "status": "full-aut-d1-d5-d6-closure-has-independence-number-3-so-five-active-exact-cover-is-unsat",
+  "target_five_active_is_unsat": true
+}

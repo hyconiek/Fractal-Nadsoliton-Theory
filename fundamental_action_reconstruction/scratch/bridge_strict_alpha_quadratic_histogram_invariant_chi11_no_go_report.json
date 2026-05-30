@@ -1,0 +1,423 @@
+{
+  "anti_invariant_rows": [
+    {
+      "anti_orbit_difference": "d5 - d1",
+      "degree": 1,
+      "imports_d1_vs_d5_shell_orientation": true,
+      "numeric_chi11_covariant": true,
+      "value_A1_A11": -4,
+      "value_A5_A7": 4
+    },
+    {
+      "anti_orbit_difference": "d5*d5 - d1*d1",
+      "degree": 2,
+      "imports_d1_vs_d5_shell_orientation": true,
+      "numeric_chi11_covariant": true,
+      "value_A1_A11": -16,
+      "value_A5_A7": 16
+    },
+    {
+      "anti_orbit_difference": "d2*d5 - d1*d2",
+      "degree": 2,
+      "imports_d1_vs_d5_shell_orientation": true,
+      "numeric_chi11_covariant": true,
+      "value_A1_A11": -12,
+      "value_A5_A7": 12
+    },
+    {
+      "anti_orbit_difference": "d3*d5 - d1*d3",
+      "degree": 2,
+      "imports_d1_vs_d5_shell_orientation": true,
+      "numeric_chi11_covariant": true,
+      "value_A1_A11": -8,
+      "value_A5_A7": 8
+    },
+    {
+      "anti_orbit_difference": "d4*d5 - d1*d4",
+      "degree": 2,
+      "imports_d1_vs_d5_shell_orientation": true,
+      "numeric_chi11_covariant": true,
+      "value_A1_A11": -4,
+      "value_A5_A7": 4
+    },
+    {
+      "anti_orbit_difference": "d5*d6 - d1*d6",
+      "degree": 2,
+      "imports_d1_vs_d5_shell_orientation": true,
+      "numeric_chi11_covariant": false,
+      "value_A1_A11": 0,
+      "value_A5_A7": 0
+    }
+  ],
+  "branch_rows": [
+    {
+      "branch_pair": "contiguous_pair_A1_A11",
+      "distance_histogram_d1_to_d6": [
+        4,
+        3,
+        2,
+        1,
+        0,
+        0
+      ],
+      "mode": 1,
+      "name": "A1_k1",
+      "required_chi11_value": -1,
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "branch_pair": "d5_pair_A5_A7",
+      "distance_histogram_d1_to_d6": [
+        0,
+        3,
+        2,
+        1,
+        4,
+        0
+      ],
+      "mode": 5,
+      "name": "A5_k5",
+      "required_chi11_value": 1,
+      "support": [
+        0,
+        3,
+        5,
+        8,
+        10
+      ]
+    },
+    {
+      "branch_pair": "d5_pair_A5_A7",
+      "distance_histogram_d1_to_d6": [
+        0,
+        3,
+        2,
+        1,
+        4,
+        0
+      ],
+      "mode": 7,
+      "name": "A7_k7",
+      "required_chi11_value": 1,
+      "support": [
+        0,
+        2,
+        4,
+        7,
+        9
+      ]
+    },
+    {
+      "branch_pair": "contiguous_pair_A1_A11",
+      "distance_histogram_d1_to_d6": [
+        4,
+        3,
+        2,
+        1,
+        0,
+        0
+      ],
+      "mode": 11,
+      "name": "A11_k11",
+      "required_chi11_value": -1,
+      "support": [
+        0,
+        8,
+        9,
+        10,
+        11
+      ]
+    }
+  ],
+  "exact_proof_certificate": {
+    "anti_invariant_boundary": "Five anti-invariant orbit differences are nonzero chi_11-covariant, but each imports an orientation of the d1/d5 shell pair.",
+    "finite_domain": "All degree<=2 histogram monomials and their d1<->d5 full-Aut orbits are enumerated exactly.",
+    "invariant_no_go": "Every one of the 21 invariant orbit sums has equal value on A1/A11 and A5/A7, so their linear span cannot export chi_11.",
+    "scope_limit": "This is exhaustive only for degree<=2 histogram invariants, not for all possible strict nadsoliton source mechanisms.",
+    "symbolic_reason": "Any full-Aut invariant histogram polynomial P satisfies P(h)=P(swap_d1_d5(h)), so P(A1)=P(A5)."
+  },
+  "finite_model": {
+    "active_count": 5,
+    "automorphism_units": [
+      1,
+      5,
+      7,
+      11
+    ],
+    "branch_modes": [
+      1,
+      5,
+      7,
+      11
+    ],
+    "invariant_orbit_sum_count_degree_le_2": 21,
+    "monomial_count_degree_le_2": 27,
+    "ring": "Z_12",
+    "shell_labels": [
+      "d1",
+      "d2",
+      "d3",
+      "d4",
+      "d5",
+      "d6"
+    ],
+    "target_eta": "9/5",
+    "target_q_power": "256/243"
+  },
+  "hard_limits": [
+    "No identity K_legacy_ont == K_strict_gate is used or claimed.",
+    "No legacy role transfer to K_strict_gate, alpha_geo, beta_tors, or D_f is made.",
+    "No theorem derives the chi_11-kernel, shell-label d1 vs d5, unit-axis bit, exact-cover clauses, or cardinality 5 from strict nadsoliton geometry.",
+    "The result is a finite degree<=2 histogram invariant no-go, not an exhaustive strict-source theorem.",
+    "No QW-2191 discharge.",
+    "No ToE closure."
+  ],
+  "interpretation": {
+    "honest_negative": "No full-Aut invariant degree<=2 histogram expression can distinguish the branch pairs or supply chi_11.",
+    "honest_positive": "The computation identifies low-degree anti-invariant expressions that behave like chi_11 once d1/d5 orientation is supplied.",
+    "relation_to_previous_probe": "This extends the bounded linear no-go to the complete quadratic invariant orbit-sum basis."
+  },
+  "invariant_orbit_rows": [
+    {
+      "degree": 1,
+      "distinguishes_branch_pairs": false,
+      "invariant_orbit_sum_value_A1_A11": 4,
+      "invariant_orbit_sum_value_A5_A7": 4,
+      "orbit_monomials": [
+        "d1",
+        "d5"
+      ],
+      "orbit_size": 2
+    },
+    {
+      "degree": 1,
+      "distinguishes_branch_pairs": false,
+      "invariant_orbit_sum_value_A1_A11": 3,
+      "invariant_orbit_sum_value_A5_A7": 3,
+      "orbit_monomials": [
+        "d2"
+      ],
+      "orbit_size": 1
+    },
+    {
+      "degree": 1,
+      "distinguishes_branch_pairs": false,
+      "invariant_orbit_sum_value_A1_A11": 2,
+      "invariant_orbit_sum_value_A5_A7": 2,
+      "orbit_monomials": [
+        "d3"
+      ],
+      "orbit_size": 1
+    },
+    {
+      "degree": 1,
+      "distinguishes_branch_pairs": false,
+      "invariant_orbit_sum_value_A1_A11": 1,
+      "invariant_orbit_sum_value_A5_A7": 1,
+      "orbit_monomials": [
+        "d4"
+      ],
+      "orbit_size": 1
+    },
+    {
+      "degree": 1,
+      "distinguishes_branch_pairs": false,
+      "invariant_orbit_sum_value_A1_A11": 0,
+      "invariant_orbit_sum_value_A5_A7": 0,
+      "orbit_monomials": [
+        "d6"
+      ],
+      "orbit_size": 1
+    },
+    {
+      "degree": 2,
+      "distinguishes_branch_pairs": false,
+      "invariant_orbit_sum_value_A1_A11": 16,
+      "invariant_orbit_sum_value_A5_A7": 16,
+      "orbit_monomials": [
+        "d1*d1",
+        "d5*d5"
+      ],
+      "orbit_size": 2
+    },
+    {
+      "degree": 2,
+      "distinguishes_branch_pairs": false,
+      "invariant_orbit_sum_value_A1_A11": 12,
+      "invariant_orbit_sum_value_A5_A7": 12,
+      "orbit_monomials": [
+        "d1*d2",
+        "d2*d5"
+      ],
+      "orbit_size": 2
+    },
+    {
+      "degree": 2,
+      "distinguishes_branch_pairs": false,
+      "invariant_orbit_sum_value_A1_A11": 8,
+      "invariant_orbit_sum_value_A5_A7": 8,
+      "orbit_monomials": [
+        "d1*d3",
+        "d3*d5"
+      ],
+      "orbit_size": 2
+    },
+    {
+      "degree": 2,
+      "distinguishes_branch_pairs": false,
+      "invariant_orbit_sum_value_A1_A11": 4,
+      "invariant_orbit_sum_value_A5_A7": 4,
+      "orbit_monomials": [
+        "d1*d4",
+        "d4*d5"
+      ],
+      "orbit_size": 2
+    },
+    {
+      "degree": 2,
+      "distinguishes_branch_pairs": false,
+      "invariant_orbit_sum_value_A1_A11": 0,
+      "invariant_orbit_sum_value_A5_A7": 0,
+      "orbit_monomials": [
+        "d1*d5"
+      ],
+      "orbit_size": 1
+    },
+    {
+      "degree": 2,
+      "distinguishes_branch_pairs": false,
+      "invariant_orbit_sum_value_A1_A11": 0,
+      "invariant_orbit_sum_value_A5_A7": 0,
+      "orbit_monomials": [
+        "d1*d6",
+        "d5*d6"
+      ],
+      "orbit_size": 2
+    },
+    {
+      "degree": 2,
+      "distinguishes_branch_pairs": false,
+      "invariant_orbit_sum_value_A1_A11": 9,
+      "invariant_orbit_sum_value_A5_A7": 9,
+      "orbit_monomials": [
+        "d2*d2"
+      ],
+      "orbit_size": 1
+    },
+    {
+      "degree": 2,
+      "distinguishes_branch_pairs": false,
+      "invariant_orbit_sum_value_A1_A11": 6,
+      "invariant_orbit_sum_value_A5_A7": 6,
+      "orbit_monomials": [
+        "d2*d3"
+      ],
+      "orbit_size": 1
+    },
+    {
+      "degree": 2,
+      "distinguishes_branch_pairs": false,
+      "invariant_orbit_sum_value_A1_A11": 3,
+      "invariant_orbit_sum_value_A5_A7": 3,
+      "orbit_monomials": [
+        "d2*d4"
+      ],
+      "orbit_size": 1
+    },
+    {
+      "degree": 2,
+      "distinguishes_branch_pairs": false,
+      "invariant_orbit_sum_value_A1_A11": 0,
+      "invariant_orbit_sum_value_A5_A7": 0,
+      "orbit_monomials": [
+        "d2*d6"
+      ],
+      "orbit_size": 1
+    },
+    {
+      "degree": 2,
+      "distinguishes_branch_pairs": false,
+      "invariant_orbit_sum_value_A1_A11": 4,
+      "invariant_orbit_sum_value_A5_A7": 4,
+      "orbit_monomials": [
+        "d3*d3"
+      ],
+      "orbit_size": 1
+    },
+    {
+      "degree": 2,
+      "distinguishes_branch_pairs": false,
+      "invariant_orbit_sum_value_A1_A11": 2,
+      "invariant_orbit_sum_value_A5_A7": 2,
+      "orbit_monomials": [
+        "d3*d4"
+      ],
+      "orbit_size": 1
+    },
+    {
+      "degree": 2,
+      "distinguishes_branch_pairs": false,
+      "invariant_orbit_sum_value_A1_A11": 0,
+      "invariant_orbit_sum_value_A5_A7": 0,
+      "orbit_monomials": [
+        "d3*d6"
+      ],
+      "orbit_size": 1
+    },
+    {
+      "degree": 2,
+      "distinguishes_branch_pairs": false,
+      "invariant_orbit_sum_value_A1_A11": 1,
+      "invariant_orbit_sum_value_A5_A7": 1,
+      "orbit_monomials": [
+        "d4*d4"
+      ],
+      "orbit_size": 1
+    },
+    {
+      "degree": 2,
+      "distinguishes_branch_pairs": false,
+      "invariant_orbit_sum_value_A1_A11": 0,
+      "invariant_orbit_sum_value_A5_A7": 0,
+      "orbit_monomials": [
+        "d4*d6"
+      ],
+      "orbit_size": 1
+    },
+    {
+      "degree": 2,
+      "distinguishes_branch_pairs": false,
+      "invariant_orbit_sum_value_A1_A11": 0,
+      "invariant_orbit_sum_value_A5_A7": 0,
+      "orbit_monomials": [
+        "d6*d6"
+      ],
+      "orbit_size": 1
+    }
+  ],
+  "ontology_guardrail": {
+    "allowed_reading": "The nadsoliton itself remains the only admissible place where a future non-histogram or higher-order strict chi_11 source could be derived.",
+    "forbidden_reading": "No separate informational layer underneath the nadsoliton is introduced to supply chi_11."
+  },
+  "quadratic_invariant_summary": {
+    "allowed_strict_chi11_source_count": 0,
+    "anti_invariant_chi11_covariant_count": 5,
+    "anti_invariant_orbit_difference_count": 6,
+    "invariant_orbit_sum_count": 21,
+    "invariant_orbit_sum_pair_distinguishing_count": 0
+  },
+  "result_kind": "SCRATCH_STRICT_ALPHA_QUADRATIC_HISTOGRAM_INVARIANT_CHI11_NO_GO_PROBE__NO_GO_NOT_A_THEOREM",
+  "status": "degree2-full-aut-histogram-invariants-cannot-distinguish-a1-from-a5-or-export-chi11",
+  "symbolic_certificate": {
+    "anti_invariant_boundary": "Orbit differences can flip sign under d1<->d5, but choosing an orbit difference chooses an orientation of the d1/d5 pair and therefore imports the missing shell-label bit.",
+    "degree2_enumeration": "The degree<=2 monomial basis has 6 linear + 21 quadratic monomials; quotienting by d1<->d5 gives 21 invariant orbit sums.",
+    "histogram_relation": "A1/A11 has h=(4,3,2,1,0,0) and A5/A7 has h'=(0,3,2,1,4,0), exactly the d1<->d5 swap of h.",
+    "invariant_principle": "Any full-Aut invariant histogram polynomial P satisfies P(h)=P(swap_d1_d5(h)), so P(A1)=P(A5)."
+  }
+}
