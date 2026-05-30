@@ -1,0 +1,224 @@
+{
+  "blocker_context": {
+    "blocker_lattice_status": "minimal-premise-lattice-computed-for-completed-strict-kernel-bridge-frontier",
+    "necessity_status": "all-three-explicit-factors-are-necessary-for-exact-pointwise-completion; phase-and-damping-are-shape-critical",
+    "refined_blocker": "strict_transport_derivation remains open, but simple autonomous/damping-only explanations are now ruled out on the finite audit domain",
+    "still_open": [
+      "non-low-order strict_transport_derivation_from_nadsoliton_dynamics",
+      "global_z12_map_derivation_as_internal_dynamics",
+      "orientation_chi11_source",
+      "chi11_uniqueness",
+      "reynolds_obstruction_escape",
+      "role_transfer_theorem"
+    ],
+    "transport_cocycle_status": "unique-finite-node-transport-and-adjacent-edge-cocycle-certified-for-completion-ansatz"
+  },
+  "domain": {
+    "edge_count": 11,
+    "node_count": 12,
+    "tolerance": 1e-14
+  },
+  "hard_limits": [
+    "K_strict_gate remains the current live/full operational kernel.",
+    "No unqualified identity K_legacy_ont == K_strict_gate is claimed.",
+    "No full no-go theorem against every strict transport derivation is claimed.",
+    "No proof derives the completion transport from strict nadsoliton dynamics.",
+    "No beta_tors -> chi_11 theorem is claimed.",
+    "No legacy physical-role transfer to K_strict_gate is claimed.",
+    "No QW-2191 selector discharge is claimed.",
+    "No ToE closure is claimed."
+  ],
+  "no_go_checks": {
+    "affine_log_envelope": {
+      "best_c_least_squares": -1.2180923661370884,
+      "best_m_least_squares": -0.5099555766966459,
+      "exact_pass": false,
+      "l2_residual": 3.6346016956681058,
+      "max_abs_residual": 1.8891262267731213,
+      "model": "log|T[d]|=m*d+c",
+      "residuals": [
+        0.32889031683948644,
+        1.314789893694358,
+        0.2811387858907848,
+        -0.5997920929911573,
+        -0.6357922763976225,
+        0.42425640050926683,
+        -0.4939822284157964,
+        -1.8891262267731213,
+        -1.823503397845612,
+        0.906260734571001,
+        1.0918075540283017,
+        1.095052536890103
+      ]
+    },
+    "constant_first_order_multiplier": {
+      "best_r_least_squares": 0.29307548057349686,
+      "exact_pass": false,
+      "l2_residual": 0.6376000586350046,
+      "max_abs_residual": 0.5410423571925583,
+      "model": "T[d+1]=r*T[d]",
+      "residuals": [
+        0.5410423571925583,
+        -0.3351677004857935,
+        0.006248442095809187,
+        -0.010064183428657754,
+        -0.029339266442320554,
+        0.018813299807362717,
+        -0.0012212345134777344,
+        -0.0011769418001664857,
+        -0.0071991926400135926,
+        0.007555127566758486,
+        0.0016632772665388623
+      ]
+    },
+    "constant_second_order_linear_recurrence": {
+      "best_a_least_squares": -0.15906840053672286,
+      "best_b_least_squares": -0.07646138093067381,
+      "exact_pass": false,
+      "l2_residual": 0.05666440484247014,
+      "max_abs_residual": 0.04123793767221316,
+      "model": "T[d+2]=a*T[d+1]+b*T[d]",
+      "residuals": [
+        -0.004653966615550766,
+        -0.007061265661533034,
+        -0.03676712278834422,
+        -0.04123793767221316,
+        0.0012909998574234837,
+        -9.359342834081366e-05,
+        3.985932323859599e-05,
+        -0.007468102376718107,
+        0.00413125522001128,
+        0.0035253687225692285
+      ]
+    },
+    "positive_damping_only_transport": {
+      "candidate": "all adjacent ratios R(d) are positive damping/envelope updates",
+      "exact_pass": false,
+      "failure_reason": "four adjacent ratios are negative, so phase sign transport cannot be replaced by positive damping-only flow",
+      "negative_edges": [
+        "1->2",
+        "5->6",
+        "7->8",
+        "9->10"
+      ]
+    },
+    "short_period_edge_sign_law": {
+      "candidate": "edge sign sequence has period p<=5",
+      "exact_pass": false,
+      "period_rows": [
+        {
+          "is_periodic_on_audited_edges": false,
+          "mismatch_indices": [
+            1,
+            5,
+            7,
+            9
+          ],
+          "period": 1
+        },
+        {
+          "is_periodic_on_audited_edges": false,
+          "mismatch_indices": [
+            3
+          ],
+          "period": 2
+        },
+        {
+          "is_periodic_on_audited_edges": false,
+          "mismatch_indices": [
+            4,
+            5,
+            9,
+            10
+          ],
+          "period": 3
+        },
+        {
+          "is_periodic_on_audited_edges": false,
+          "mismatch_indices": [
+            7
+          ],
+          "period": 4
+        },
+        {
+          "is_periodic_on_audited_edges": false,
+          "mismatch_indices": [
+            5,
+            6,
+            7,
+            9
+          ],
+          "period": 5
+        }
+      ]
+    }
+  },
+  "no_go_summary": {
+    "affine_log_envelope_fails": true,
+    "constant_first_order_fails": true,
+    "constant_second_order_fails": true,
+    "minimum_failed_model_l2_residual": 0.05666440484247014,
+    "positive_damping_only_fails": true,
+    "sharpener": "A real strict transport derivation must be nontrivial enough to generate mixed sign phase transport plus non-affine envelope variation.",
+    "short_period_edge_sign_law_fails": true
+  },
+  "ontology_guardrail": {
+    "allowed_reading": "The nadsoliton itself remains the primordial information in solitonic state; this audit only constrains candidate transport readings.",
+    "forbidden_reading": "No separate informational layer below the nadsoliton is introduced."
+  },
+  "proof_certificate": {
+    "affine_log_no_go": "An affine log-envelope would make log|T(d)| linear in d; the least-squares residual is far above machine tolerance.",
+    "first_order_no_go": "If T[d+1]=r*T[d] exactly, all edge ratios are equal; the least-squares residual remains nonzero at the recorded tolerance.",
+    "period_no_go": "The edge-sign sequence is not periodic with period <=5 on the audited edges.",
+    "positive_damping_no_go": "A positive damping-only edge law requires R(d)>0 on every edge; the audited cocycle has four negative R(d).",
+    "second_order_no_go": "The best constant-coefficient second-order recurrence has nonzero residual, so the finite sequence is not captured by this low-order autonomous recurrence.",
+    "theoretical_limit": "This is not a theorem against all possible strict dynamics; it only rules out the listed low-order/autonomous candidates."
+  },
+  "result_kind": "SCRATCH_STRICT_COMPLETION_LOW_ORDER_TRANSPORT_NO_GO__FINITE_Z12_NOT_FULL_DYNAMICAL_NO_GO",
+  "source_reports": {
+    "blocker_lattice": "fundamental_action_reconstruction/scratch/bridge_completed_kernel_blocker_dependency_lattice_report.json",
+    "necessity_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_kernel_completion_necessity_certificate_report.json",
+    "transport_cocycle": "fundamental_action_reconstruction/scratch/bridge_strict_kernel_completion_transport_cocycle_report.json"
+  },
+  "status": "low-order-autonomous-transport-readings-fail-for-completion-cocycle",
+  "transport_input_summary": {
+    "edge_ratio_spread": 9.928523012791779,
+    "edge_sign_pattern": [
+      1,
+      -1,
+      1,
+      1,
+      1,
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1
+    ],
+    "max_edge_ratio": 9.205568343771377,
+    "min_edge_ratio": -0.7229546690204022,
+    "negative_edge_count": 4,
+    "negative_edges": [
+      "1->2",
+      "5->6",
+      "7->8",
+      "9->10"
+    ],
+    "positive_edge_count": 7,
+    "transport_sign_pattern": [
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      1
+    ]
+  }
+}
