@@ -31,7 +31,13 @@ class StrictCompletionCertificateChainIntegrityProbeTest(unittest.TestCase):
             "phase_zero",
             "phase_zero_rational",
             "phase_zero_margin",
+            "phase_zero_node_clearance",
+            "phase_zero_cell_partition",
+            "phase_zero_cell_sign",
+            "phase_sign_z2_coboundary",
             "damping_monotonicity",
+            "damping_exact_rational",
+            "positive_factor_sign_separation",
             "low_order_no_go",
         })
         shared = payload["expected_shared_objects"]
@@ -47,14 +53,37 @@ class StrictCompletionCertificateChainIntegrityProbeTest(unittest.TestCase):
         self.assertTrue(checks["necessity_has_unique_exact_full_APD_subset"])
         self.assertTrue(checks["phase_zero_rational_matches_float"])
         self.assertTrue(checks["phase_zero_margin_preserves_rational"])
+        self.assertTrue(checks["phase_zero_node_clearance_preserves_rational"])
+        self.assertTrue(checks["phase_zero_node_clearance_no_integer_degeneracy"])
+        self.assertTrue(checks["phase_zero_cell_partition_preserves_node_clearance"])
+        self.assertTrue(checks["phase_zero_cell_partition_ordered_disjoint"])
+        self.assertTrue(checks["phase_zero_cell_partition_positive_cells"])
+        self.assertTrue(checks["phase_zero_cell_sign_preserves_cell_partition"])
+        self.assertTrue(checks["phase_zero_cell_sign_no_trig_eval"])
+        self.assertTrue(checks["phase_zero_cell_sign_edge_parity"])
+        self.assertTrue(checks["phase_sign_z2_preserves_cell_sign"])
+        self.assertTrue(checks["phase_sign_z2_all_intervals_pass"])
+        self.assertTrue(checks["phase_sign_z2_prefix_reconstructs"])
         self.assertTrue(checks["damping_cannot_supply_sign_flips"])
+        self.assertTrue(checks["damping_exact_rational_matches_float"])
+        self.assertTrue(checks["damping_exact_rational_derivative_bound_negative"])
+        self.assertTrue(checks["damping_exact_rational_edges_drop_by_mvt"])
+        self.assertTrue(checks["positive_factor_sign_matches_z2"])
+        self.assertTrue(checks["positive_factor_bits_all_zero"])
+        self.assertTrue(checks["positive_factor_completion_flips_phase_only"])
         self.assertTrue(checks["low_order_no_go_all_listed_models_fail"])
 
         summary = payload["chain_summary"]
         self.assertTrue(summary["exact_APD_completion_certified"])
         self.assertTrue(summary["transport_cocycle_certified"])
         self.assertTrue(summary["phase_sign_source_certified"])
+        self.assertTrue(summary["phase_node_clearance_certified"])
+        self.assertTrue(summary["phase_cell_partition_certified"])
+        self.assertTrue(summary["phase_cell_sign_certified"])
+        self.assertTrue(summary["phase_z2_coboundary_certified"])
         self.assertTrue(summary["damping_envelope_certified"])
+        self.assertTrue(summary["damping_exact_rational_calculus_certified"])
+        self.assertTrue(summary["positive_factor_sign_separation_certified"])
         self.assertTrue(summary["simple_transport_readings_rejected"])
         self.assertFalse(summary["strict_dynamic_derivation_exported"])
         self.assertFalse(summary["bridge_theorem_exported"])
@@ -70,7 +99,13 @@ class StrictCompletionCertificateChainIntegrityProbeTest(unittest.TestCase):
         self.assertIn("All prerequisite JSON reports", proof["ledger_step"])
         self.assertIn("common sign pattern", proof["shared_object_step"])
         self.assertIn("A+P+D", proof["factor_step"])
+        self.assertIn("positive rational clearance", proof["node_clearance_step"])
+        self.assertIn("ordered, disjoint", proof["cell_partition_step"])
+        self.assertIn("without fresh trigonometric evaluation", proof["cell_sign_step"])
+        self.assertIn("every interval parity law", proof["z2_coboundary_step"])
         self.assertIn("phase only", proof["envelope_step"])
+        self.assertIn("-179/100", proof["exact_damping_step"])
+        self.assertIn("zero Z2 sign bits", proof["positive_factor_sign_step"])
 
         hard_limits = "\n".join(self.payload["hard_limits"])
         self.assertIn("K_strict_gate remains the current live/full", hard_limits)

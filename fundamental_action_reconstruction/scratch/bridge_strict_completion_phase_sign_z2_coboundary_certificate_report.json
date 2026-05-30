@@ -1,0 +1,991 @@
+{
+  "blocker_context": {
+    "cell_sign_status": "phase-sign-pattern-derived-from-rational-cell-partition-and-left-anchor",
+    "rational_zero_status": "phase-zero-sign-flip-edges-certified-by-rational-pi-intervals",
+    "still_open": [
+      "strict_phase_frequency_derivation_from_nadsoliton_dynamics",
+      "strict_transport_derivation_from_nadsoliton_dynamics",
+      "orientation_chi11_source",
+      "chi11_uniqueness",
+      "role_transfer_theorem"
+    ],
+    "transport_cocycle_status": "unique-finite-node-transport-and-adjacent-edge-cocycle-certified-for-completion-ansatz",
+    "what_this_refines": "packages the cell-sign result as a finite Z2 coboundary and verifies every interval parity law"
+  },
+  "edge_bit_rows": [
+    {
+      "edge": "0->1",
+      "edge_bit": 0,
+      "edge_sign_ratio": 1,
+      "is_phase_flip": false,
+      "left_d": 0,
+      "left_node_bit": 0,
+      "right_d": 1,
+      "right_node_bit": 0
+    },
+    {
+      "edge": "1->2",
+      "edge_bit": 1,
+      "edge_sign_ratio": -1,
+      "is_phase_flip": true,
+      "left_d": 1,
+      "left_node_bit": 0,
+      "right_d": 2,
+      "right_node_bit": 1
+    },
+    {
+      "edge": "2->3",
+      "edge_bit": 0,
+      "edge_sign_ratio": 1,
+      "is_phase_flip": false,
+      "left_d": 2,
+      "left_node_bit": 1,
+      "right_d": 3,
+      "right_node_bit": 1
+    },
+    {
+      "edge": "3->4",
+      "edge_bit": 0,
+      "edge_sign_ratio": 1,
+      "is_phase_flip": false,
+      "left_d": 3,
+      "left_node_bit": 1,
+      "right_d": 4,
+      "right_node_bit": 1
+    },
+    {
+      "edge": "4->5",
+      "edge_bit": 0,
+      "edge_sign_ratio": 1,
+      "is_phase_flip": false,
+      "left_d": 4,
+      "left_node_bit": 1,
+      "right_d": 5,
+      "right_node_bit": 1
+    },
+    {
+      "edge": "5->6",
+      "edge_bit": 1,
+      "edge_sign_ratio": -1,
+      "is_phase_flip": true,
+      "left_d": 5,
+      "left_node_bit": 1,
+      "right_d": 6,
+      "right_node_bit": 0
+    },
+    {
+      "edge": "6->7",
+      "edge_bit": 0,
+      "edge_sign_ratio": 1,
+      "is_phase_flip": false,
+      "left_d": 6,
+      "left_node_bit": 0,
+      "right_d": 7,
+      "right_node_bit": 0
+    },
+    {
+      "edge": "7->8",
+      "edge_bit": 1,
+      "edge_sign_ratio": -1,
+      "is_phase_flip": true,
+      "left_d": 7,
+      "left_node_bit": 0,
+      "right_d": 8,
+      "right_node_bit": 1
+    },
+    {
+      "edge": "8->9",
+      "edge_bit": 0,
+      "edge_sign_ratio": 1,
+      "is_phase_flip": false,
+      "left_d": 8,
+      "left_node_bit": 1,
+      "right_d": 9,
+      "right_node_bit": 1
+    },
+    {
+      "edge": "9->10",
+      "edge_bit": 1,
+      "edge_sign_ratio": -1,
+      "is_phase_flip": true,
+      "left_d": 9,
+      "left_node_bit": 1,
+      "right_d": 10,
+      "right_node_bit": 0
+    },
+    {
+      "edge": "10->11",
+      "edge_bit": 0,
+      "edge_sign_ratio": 1,
+      "is_phase_flip": false,
+      "left_d": 10,
+      "left_node_bit": 0,
+      "right_d": 11,
+      "right_node_bit": 0
+    }
+  ],
+  "hard_limits": [
+    "K_strict_gate remains the current live/full operational kernel.",
+    "No unqualified identity K_legacy_ont == K_strict_gate is claimed.",
+    "No proof derives strict omega/phi or phase transport from strict nadsoliton dynamics.",
+    "No beta_tors -> chi_11 theorem is claimed.",
+    "No legacy physical-role transfer to K_strict_gate is claimed.",
+    "No QW-2191 selector discharge is claimed.",
+    "No ToE closure is claimed."
+  ],
+  "interval_coboundary_rows": [
+    {
+      "edge_bit_sum_mod2": 0,
+      "end_d": 1,
+      "endpoint_node_bit_xor": 0,
+      "endpoint_sign_ratio": 1,
+      "interval": "0->1",
+      "matches_endpoint_coboundary": true,
+      "start_d": 0
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 2,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "0->2",
+      "matches_endpoint_coboundary": true,
+      "start_d": 0
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 3,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "0->3",
+      "matches_endpoint_coboundary": true,
+      "start_d": 0
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 4,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "0->4",
+      "matches_endpoint_coboundary": true,
+      "start_d": 0
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 5,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "0->5",
+      "matches_endpoint_coboundary": true,
+      "start_d": 0
+    },
+    {
+      "edge_bit_sum_mod2": 0,
+      "end_d": 6,
+      "endpoint_node_bit_xor": 0,
+      "endpoint_sign_ratio": 1,
+      "interval": "0->6",
+      "matches_endpoint_coboundary": true,
+      "start_d": 0
+    },
+    {
+      "edge_bit_sum_mod2": 0,
+      "end_d": 7,
+      "endpoint_node_bit_xor": 0,
+      "endpoint_sign_ratio": 1,
+      "interval": "0->7",
+      "matches_endpoint_coboundary": true,
+      "start_d": 0
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 8,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "0->8",
+      "matches_endpoint_coboundary": true,
+      "start_d": 0
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 9,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "0->9",
+      "matches_endpoint_coboundary": true,
+      "start_d": 0
+    },
+    {
+      "edge_bit_sum_mod2": 0,
+      "end_d": 10,
+      "endpoint_node_bit_xor": 0,
+      "endpoint_sign_ratio": 1,
+      "interval": "0->10",
+      "matches_endpoint_coboundary": true,
+      "start_d": 0
+    },
+    {
+      "edge_bit_sum_mod2": 0,
+      "end_d": 11,
+      "endpoint_node_bit_xor": 0,
+      "endpoint_sign_ratio": 1,
+      "interval": "0->11",
+      "matches_endpoint_coboundary": true,
+      "start_d": 0
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 2,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "1->2",
+      "matches_endpoint_coboundary": true,
+      "start_d": 1
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 3,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "1->3",
+      "matches_endpoint_coboundary": true,
+      "start_d": 1
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 4,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "1->4",
+      "matches_endpoint_coboundary": true,
+      "start_d": 1
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 5,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "1->5",
+      "matches_endpoint_coboundary": true,
+      "start_d": 1
+    },
+    {
+      "edge_bit_sum_mod2": 0,
+      "end_d": 6,
+      "endpoint_node_bit_xor": 0,
+      "endpoint_sign_ratio": 1,
+      "interval": "1->6",
+      "matches_endpoint_coboundary": true,
+      "start_d": 1
+    },
+    {
+      "edge_bit_sum_mod2": 0,
+      "end_d": 7,
+      "endpoint_node_bit_xor": 0,
+      "endpoint_sign_ratio": 1,
+      "interval": "1->7",
+      "matches_endpoint_coboundary": true,
+      "start_d": 1
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 8,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "1->8",
+      "matches_endpoint_coboundary": true,
+      "start_d": 1
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 9,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "1->9",
+      "matches_endpoint_coboundary": true,
+      "start_d": 1
+    },
+    {
+      "edge_bit_sum_mod2": 0,
+      "end_d": 10,
+      "endpoint_node_bit_xor": 0,
+      "endpoint_sign_ratio": 1,
+      "interval": "1->10",
+      "matches_endpoint_coboundary": true,
+      "start_d": 1
+    },
+    {
+      "edge_bit_sum_mod2": 0,
+      "end_d": 11,
+      "endpoint_node_bit_xor": 0,
+      "endpoint_sign_ratio": 1,
+      "interval": "1->11",
+      "matches_endpoint_coboundary": true,
+      "start_d": 1
+    },
+    {
+      "edge_bit_sum_mod2": 0,
+      "end_d": 3,
+      "endpoint_node_bit_xor": 0,
+      "endpoint_sign_ratio": 1,
+      "interval": "2->3",
+      "matches_endpoint_coboundary": true,
+      "start_d": 2
+    },
+    {
+      "edge_bit_sum_mod2": 0,
+      "end_d": 4,
+      "endpoint_node_bit_xor": 0,
+      "endpoint_sign_ratio": 1,
+      "interval": "2->4",
+      "matches_endpoint_coboundary": true,
+      "start_d": 2
+    },
+    {
+      "edge_bit_sum_mod2": 0,
+      "end_d": 5,
+      "endpoint_node_bit_xor": 0,
+      "endpoint_sign_ratio": 1,
+      "interval": "2->5",
+      "matches_endpoint_coboundary": true,
+      "start_d": 2
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 6,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "2->6",
+      "matches_endpoint_coboundary": true,
+      "start_d": 2
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 7,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "2->7",
+      "matches_endpoint_coboundary": true,
+      "start_d": 2
+    },
+    {
+      "edge_bit_sum_mod2": 0,
+      "end_d": 8,
+      "endpoint_node_bit_xor": 0,
+      "endpoint_sign_ratio": 1,
+      "interval": "2->8",
+      "matches_endpoint_coboundary": true,
+      "start_d": 2
+    },
+    {
+      "edge_bit_sum_mod2": 0,
+      "end_d": 9,
+      "endpoint_node_bit_xor": 0,
+      "endpoint_sign_ratio": 1,
+      "interval": "2->9",
+      "matches_endpoint_coboundary": true,
+      "start_d": 2
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 10,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "2->10",
+      "matches_endpoint_coboundary": true,
+      "start_d": 2
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 11,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "2->11",
+      "matches_endpoint_coboundary": true,
+      "start_d": 2
+    },
+    {
+      "edge_bit_sum_mod2": 0,
+      "end_d": 4,
+      "endpoint_node_bit_xor": 0,
+      "endpoint_sign_ratio": 1,
+      "interval": "3->4",
+      "matches_endpoint_coboundary": true,
+      "start_d": 3
+    },
+    {
+      "edge_bit_sum_mod2": 0,
+      "end_d": 5,
+      "endpoint_node_bit_xor": 0,
+      "endpoint_sign_ratio": 1,
+      "interval": "3->5",
+      "matches_endpoint_coboundary": true,
+      "start_d": 3
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 6,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "3->6",
+      "matches_endpoint_coboundary": true,
+      "start_d": 3
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 7,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "3->7",
+      "matches_endpoint_coboundary": true,
+      "start_d": 3
+    },
+    {
+      "edge_bit_sum_mod2": 0,
+      "end_d": 8,
+      "endpoint_node_bit_xor": 0,
+      "endpoint_sign_ratio": 1,
+      "interval": "3->8",
+      "matches_endpoint_coboundary": true,
+      "start_d": 3
+    },
+    {
+      "edge_bit_sum_mod2": 0,
+      "end_d": 9,
+      "endpoint_node_bit_xor": 0,
+      "endpoint_sign_ratio": 1,
+      "interval": "3->9",
+      "matches_endpoint_coboundary": true,
+      "start_d": 3
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 10,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "3->10",
+      "matches_endpoint_coboundary": true,
+      "start_d": 3
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 11,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "3->11",
+      "matches_endpoint_coboundary": true,
+      "start_d": 3
+    },
+    {
+      "edge_bit_sum_mod2": 0,
+      "end_d": 5,
+      "endpoint_node_bit_xor": 0,
+      "endpoint_sign_ratio": 1,
+      "interval": "4->5",
+      "matches_endpoint_coboundary": true,
+      "start_d": 4
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 6,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "4->6",
+      "matches_endpoint_coboundary": true,
+      "start_d": 4
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 7,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "4->7",
+      "matches_endpoint_coboundary": true,
+      "start_d": 4
+    },
+    {
+      "edge_bit_sum_mod2": 0,
+      "end_d": 8,
+      "endpoint_node_bit_xor": 0,
+      "endpoint_sign_ratio": 1,
+      "interval": "4->8",
+      "matches_endpoint_coboundary": true,
+      "start_d": 4
+    },
+    {
+      "edge_bit_sum_mod2": 0,
+      "end_d": 9,
+      "endpoint_node_bit_xor": 0,
+      "endpoint_sign_ratio": 1,
+      "interval": "4->9",
+      "matches_endpoint_coboundary": true,
+      "start_d": 4
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 10,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "4->10",
+      "matches_endpoint_coboundary": true,
+      "start_d": 4
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 11,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "4->11",
+      "matches_endpoint_coboundary": true,
+      "start_d": 4
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 6,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "5->6",
+      "matches_endpoint_coboundary": true,
+      "start_d": 5
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 7,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "5->7",
+      "matches_endpoint_coboundary": true,
+      "start_d": 5
+    },
+    {
+      "edge_bit_sum_mod2": 0,
+      "end_d": 8,
+      "endpoint_node_bit_xor": 0,
+      "endpoint_sign_ratio": 1,
+      "interval": "5->8",
+      "matches_endpoint_coboundary": true,
+      "start_d": 5
+    },
+    {
+      "edge_bit_sum_mod2": 0,
+      "end_d": 9,
+      "endpoint_node_bit_xor": 0,
+      "endpoint_sign_ratio": 1,
+      "interval": "5->9",
+      "matches_endpoint_coboundary": true,
+      "start_d": 5
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 10,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "5->10",
+      "matches_endpoint_coboundary": true,
+      "start_d": 5
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 11,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "5->11",
+      "matches_endpoint_coboundary": true,
+      "start_d": 5
+    },
+    {
+      "edge_bit_sum_mod2": 0,
+      "end_d": 7,
+      "endpoint_node_bit_xor": 0,
+      "endpoint_sign_ratio": 1,
+      "interval": "6->7",
+      "matches_endpoint_coboundary": true,
+      "start_d": 6
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 8,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "6->8",
+      "matches_endpoint_coboundary": true,
+      "start_d": 6
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 9,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "6->9",
+      "matches_endpoint_coboundary": true,
+      "start_d": 6
+    },
+    {
+      "edge_bit_sum_mod2": 0,
+      "end_d": 10,
+      "endpoint_node_bit_xor": 0,
+      "endpoint_sign_ratio": 1,
+      "interval": "6->10",
+      "matches_endpoint_coboundary": true,
+      "start_d": 6
+    },
+    {
+      "edge_bit_sum_mod2": 0,
+      "end_d": 11,
+      "endpoint_node_bit_xor": 0,
+      "endpoint_sign_ratio": 1,
+      "interval": "6->11",
+      "matches_endpoint_coboundary": true,
+      "start_d": 6
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 8,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "7->8",
+      "matches_endpoint_coboundary": true,
+      "start_d": 7
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 9,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "7->9",
+      "matches_endpoint_coboundary": true,
+      "start_d": 7
+    },
+    {
+      "edge_bit_sum_mod2": 0,
+      "end_d": 10,
+      "endpoint_node_bit_xor": 0,
+      "endpoint_sign_ratio": 1,
+      "interval": "7->10",
+      "matches_endpoint_coboundary": true,
+      "start_d": 7
+    },
+    {
+      "edge_bit_sum_mod2": 0,
+      "end_d": 11,
+      "endpoint_node_bit_xor": 0,
+      "endpoint_sign_ratio": 1,
+      "interval": "7->11",
+      "matches_endpoint_coboundary": true,
+      "start_d": 7
+    },
+    {
+      "edge_bit_sum_mod2": 0,
+      "end_d": 9,
+      "endpoint_node_bit_xor": 0,
+      "endpoint_sign_ratio": 1,
+      "interval": "8->9",
+      "matches_endpoint_coboundary": true,
+      "start_d": 8
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 10,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "8->10",
+      "matches_endpoint_coboundary": true,
+      "start_d": 8
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 11,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "8->11",
+      "matches_endpoint_coboundary": true,
+      "start_d": 8
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 10,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "9->10",
+      "matches_endpoint_coboundary": true,
+      "start_d": 9
+    },
+    {
+      "edge_bit_sum_mod2": 1,
+      "end_d": 11,
+      "endpoint_node_bit_xor": 1,
+      "endpoint_sign_ratio": -1,
+      "interval": "9->11",
+      "matches_endpoint_coboundary": true,
+      "start_d": 9
+    },
+    {
+      "edge_bit_sum_mod2": 0,
+      "end_d": 11,
+      "endpoint_node_bit_xor": 0,
+      "endpoint_sign_ratio": 1,
+      "interval": "10->11",
+      "matches_endpoint_coboundary": true,
+      "start_d": 10
+    }
+  ],
+  "node_bit_rows": [
+    {
+      "d": 0,
+      "node_bit": 0,
+      "phase_sign": 1
+    },
+    {
+      "d": 1,
+      "node_bit": 0,
+      "phase_sign": 1
+    },
+    {
+      "d": 2,
+      "node_bit": 1,
+      "phase_sign": -1
+    },
+    {
+      "d": 3,
+      "node_bit": 1,
+      "phase_sign": -1
+    },
+    {
+      "d": 4,
+      "node_bit": 1,
+      "phase_sign": -1
+    },
+    {
+      "d": 5,
+      "node_bit": 1,
+      "phase_sign": -1
+    },
+    {
+      "d": 6,
+      "node_bit": 0,
+      "phase_sign": 1
+    },
+    {
+      "d": 7,
+      "node_bit": 0,
+      "phase_sign": 1
+    },
+    {
+      "d": 8,
+      "node_bit": 1,
+      "phase_sign": -1
+    },
+    {
+      "d": 9,
+      "node_bit": 1,
+      "phase_sign": -1
+    },
+    {
+      "d": 10,
+      "node_bit": 0,
+      "phase_sign": 1
+    },
+    {
+      "d": 11,
+      "node_bit": 0,
+      "phase_sign": 1
+    }
+  ],
+  "ontology_guardrail": {
+    "allowed_reading": "The nadsoliton itself remains the primordial information in solitonic state; this audit only checks finite Z2 sign bookkeeping.",
+    "forbidden_reading": "No separate informational layer below the nadsoliton is introduced."
+  },
+  "prefix_reconstruction_rows": [
+    {
+      "d": 0,
+      "expected_phase_sign": 1,
+      "matches_expected": true,
+      "prefix_edge_bit_sum_mod2": 0,
+      "reconstructed_node_bit": 0,
+      "reconstructed_phase_sign": 1
+    },
+    {
+      "d": 1,
+      "expected_phase_sign": 1,
+      "matches_expected": true,
+      "prefix_edge_bit_sum_mod2": 0,
+      "reconstructed_node_bit": 0,
+      "reconstructed_phase_sign": 1
+    },
+    {
+      "d": 2,
+      "expected_phase_sign": -1,
+      "matches_expected": true,
+      "prefix_edge_bit_sum_mod2": 1,
+      "reconstructed_node_bit": 1,
+      "reconstructed_phase_sign": -1
+    },
+    {
+      "d": 3,
+      "expected_phase_sign": -1,
+      "matches_expected": true,
+      "prefix_edge_bit_sum_mod2": 1,
+      "reconstructed_node_bit": 1,
+      "reconstructed_phase_sign": -1
+    },
+    {
+      "d": 4,
+      "expected_phase_sign": -1,
+      "matches_expected": true,
+      "prefix_edge_bit_sum_mod2": 1,
+      "reconstructed_node_bit": 1,
+      "reconstructed_phase_sign": -1
+    },
+    {
+      "d": 5,
+      "expected_phase_sign": -1,
+      "matches_expected": true,
+      "prefix_edge_bit_sum_mod2": 1,
+      "reconstructed_node_bit": 1,
+      "reconstructed_phase_sign": -1
+    },
+    {
+      "d": 6,
+      "expected_phase_sign": 1,
+      "matches_expected": true,
+      "prefix_edge_bit_sum_mod2": 0,
+      "reconstructed_node_bit": 0,
+      "reconstructed_phase_sign": 1
+    },
+    {
+      "d": 7,
+      "expected_phase_sign": 1,
+      "matches_expected": true,
+      "prefix_edge_bit_sum_mod2": 0,
+      "reconstructed_node_bit": 0,
+      "reconstructed_phase_sign": 1
+    },
+    {
+      "d": 8,
+      "expected_phase_sign": -1,
+      "matches_expected": true,
+      "prefix_edge_bit_sum_mod2": 1,
+      "reconstructed_node_bit": 1,
+      "reconstructed_phase_sign": -1
+    },
+    {
+      "d": 9,
+      "expected_phase_sign": -1,
+      "matches_expected": true,
+      "prefix_edge_bit_sum_mod2": 1,
+      "reconstructed_node_bit": 1,
+      "reconstructed_phase_sign": -1
+    },
+    {
+      "d": 10,
+      "expected_phase_sign": 1,
+      "matches_expected": true,
+      "prefix_edge_bit_sum_mod2": 0,
+      "reconstructed_node_bit": 0,
+      "reconstructed_phase_sign": 1
+    },
+    {
+      "d": 11,
+      "expected_phase_sign": 1,
+      "matches_expected": true,
+      "prefix_edge_bit_sum_mod2": 0,
+      "reconstructed_node_bit": 0,
+      "reconstructed_phase_sign": 1
+    }
+  ],
+  "proof_certificate": {
+    "edge_step": "Compute edge bits as the coboundary e(d,d+1)=b(d) xor b(d+1).",
+    "interval_step": "All 66 nontrivial intervals satisfy sum(edge bits) mod 2 = endpoint node-bit xor.",
+    "node_step": "Convert the certified phase signs into Z2 node bits b(d).",
+    "nonduplication": "This is a Z2 cochain/coboundary algebra certificate, not another zero-location, cell-sign, damping, or real-valued cocycle audit.",
+    "prefix_step": "Starting from b(0), prefix xor of edge bits reconstructs every node bit and phase sign.",
+    "theoretical_limit": "The certificate proves finite sign-transport algebra on the selected domain; it does not derive omega/phi or transport from strict nadsoliton dynamics and does not discharge a selector obstruction."
+  },
+  "result_kind": "SCRATCH_STRICT_COMPLETION_PHASE_SIGN_Z2_COBOUNDARY_CERTIFICATE__FINITE_PATH_GRAPH",
+  "source_reports": {
+    "cell_sign_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_phase_zero_cell_sign_certificate_report.json",
+    "rational_zero_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_phase_zero_rational_interval_certificate_report.json",
+    "transport_cocycle_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_kernel_completion_transport_cocycle_report.json"
+  },
+  "status": "phase-sign-pattern-certified-as-z2-coboundary-on-finite-path-domain",
+  "z2_coboundary_summary": {
+    "all_interval_coboundary_rows_pass": true,
+    "all_prefix_reconstruction_rows_match_expected": true,
+    "anchor_node_bit_d0": 0,
+    "anchor_phase_sign_d0": 1,
+    "derived_phase_sign_flip_edges": [
+      "1->2",
+      "5->6",
+      "7->8",
+      "9->10"
+    ],
+    "edge_bit_pattern": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    "edge_flip_support_size": 4,
+    "interval_count": 66,
+    "matches_cell_sign_flip_edges": true,
+    "matches_cell_sign_pattern": true,
+    "matches_cocycle_flip_edges": true,
+    "matches_expected_flip_edges": true,
+    "matches_expected_sign_pattern": true,
+    "matches_rational_zero_flip_edges": true,
+    "node_bit_pattern": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    "phase_sign_pattern": [
+      1,
+      1,
+      -1,
+      -1,
+      -1,
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1,
+      1
+    ]
+  },
+  "z2_definitions": {
+    "domain": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "edge_bit": "e(d,d+1)=b(d) xor b(d+1)",
+    "interval_law": "sum edge bits mod 2 over [a,b] equals b(a) xor b(b)",
+    "node_bit": "b(d)=0 for phase sign +1; b(d)=1 for phase sign -1"
+  }
+}
