@@ -1,0 +1,418 @@
+{
+  "blocker_context": {
+    "cell_sign_status": "phase-sign-pattern-derived-from-rational-cell-partition-and-left-anchor",
+    "continuous_damping_status": "damping-compression-factor-positive-and-strictly-decreasing-on-continuous-interval-1-to-11",
+    "phase_sign_z2_status": "phase-sign-pattern-certified-as-z2-coboundary-on-finite-path-domain",
+    "still_open": [
+      "strict_damping_formula_derivation_from_nadsoliton_dynamics",
+      "strict_phase_frequency_derivation_from_nadsoliton_dynamics",
+      "strict_transport_derivation_from_nadsoliton_dynamics",
+      "orientation_chi11_source",
+      "chi11_uniqueness",
+      "role_transfer_theorem"
+    ],
+    "what_this_refines": "replaces floating derivative-sign reliance with an exact rational upper-bound proof for the chosen damping envelope"
+  },
+  "exact_derivative_certificate": {
+    "conclusion": "D'(x)<0 on [1,11] by exact rational comparison, with no floating derivative sign decision.",
+    "damping_formula": "D(x)=(1+beta_tors*x)/(1+beta*x^(eta))",
+    "derivative_formula": "D'(x)=N(x)/(1+x^(9/5))^2",
+    "negative_tail_step": "-(1/125)*x^(9/5)<=0.",
+    "numerator_formula": "N(x)=1/100-(9/5)*x^(4/5)-(1/125)*x^(9/5)",
+    "positive_denominator_step": "(1+x^(9/5))^2 > 0 for x in [1,11]",
+    "rational_upper_bound": {
+      "decimal": -1.79,
+      "denominator": 100,
+      "numerator": -179,
+      "text": "-179/100"
+    },
+    "stronger_rational_upper_bound_using_tail": {
+      "decimal": -1.798,
+      "denominator": 500,
+      "numerator": -899,
+      "text": "-899/500"
+    },
+    "upper_bound_strictly_negative": true,
+    "x_ge_1_step": "For x>=1, x^(4/5)>=1 and x^(9/5)>=0."
+  },
+  "exact_rational_damping_summary": {
+    "all_grid_bounds_negative": true,
+    "all_integer_edges_drop_by_mean_value_theorem": true,
+    "continuous_positive_certificate": true,
+    "continuous_strictly_decreasing_certificate": true,
+    "damping_can_supply_phase_sign_flips": false,
+    "derivative_upper_bound_decimal": -1.79,
+    "derivative_upper_bound_text": "-179/100",
+    "matches_previous_float_monotonicity_certificate": true,
+    "phase_flip_edges_remain_phase_only": true,
+    "z2_phase_flip_edges_remain_unchanged": true
+  },
+  "grid_exact_bound_rows": [
+    {
+      "D_prime_certified_negative": true,
+      "denominator_positive": true,
+      "derivative_numerator_upper_bound_with_x_ge_1_tail": {
+        "decimal": -1.798,
+        "denominator": 500,
+        "numerator": -899,
+        "text": "-899/500"
+      },
+      "derivative_numerator_upper_bound_without_tail": {
+        "decimal": -1.79,
+        "denominator": 100,
+        "numerator": -179,
+        "text": "-179/100"
+      },
+      "negative_tail_term": "beta_tors*(1-eta)*x^(9/5) <= 0",
+      "strictly_negative_bound": true,
+      "x": 1,
+      "x_ge_1": true,
+      "x_power_4_5_lower_bound": "x^(4/5) >= 1"
+    },
+    {
+      "D_prime_certified_negative": true,
+      "denominator_positive": true,
+      "derivative_numerator_upper_bound_with_x_ge_1_tail": {
+        "decimal": -1.798,
+        "denominator": 500,
+        "numerator": -899,
+        "text": "-899/500"
+      },
+      "derivative_numerator_upper_bound_without_tail": {
+        "decimal": -1.79,
+        "denominator": 100,
+        "numerator": -179,
+        "text": "-179/100"
+      },
+      "negative_tail_term": "beta_tors*(1-eta)*x^(9/5) <= 0",
+      "strictly_negative_bound": true,
+      "x": 2,
+      "x_ge_1": true,
+      "x_power_4_5_lower_bound": "x^(4/5) >= 1"
+    },
+    {
+      "D_prime_certified_negative": true,
+      "denominator_positive": true,
+      "derivative_numerator_upper_bound_with_x_ge_1_tail": {
+        "decimal": -1.798,
+        "denominator": 500,
+        "numerator": -899,
+        "text": "-899/500"
+      },
+      "derivative_numerator_upper_bound_without_tail": {
+        "decimal": -1.79,
+        "denominator": 100,
+        "numerator": -179,
+        "text": "-179/100"
+      },
+      "negative_tail_term": "beta_tors*(1-eta)*x^(9/5) <= 0",
+      "strictly_negative_bound": true,
+      "x": 3,
+      "x_ge_1": true,
+      "x_power_4_5_lower_bound": "x^(4/5) >= 1"
+    },
+    {
+      "D_prime_certified_negative": true,
+      "denominator_positive": true,
+      "derivative_numerator_upper_bound_with_x_ge_1_tail": {
+        "decimal": -1.798,
+        "denominator": 500,
+        "numerator": -899,
+        "text": "-899/500"
+      },
+      "derivative_numerator_upper_bound_without_tail": {
+        "decimal": -1.79,
+        "denominator": 100,
+        "numerator": -179,
+        "text": "-179/100"
+      },
+      "negative_tail_term": "beta_tors*(1-eta)*x^(9/5) <= 0",
+      "strictly_negative_bound": true,
+      "x": 4,
+      "x_ge_1": true,
+      "x_power_4_5_lower_bound": "x^(4/5) >= 1"
+    },
+    {
+      "D_prime_certified_negative": true,
+      "denominator_positive": true,
+      "derivative_numerator_upper_bound_with_x_ge_1_tail": {
+        "decimal": -1.798,
+        "denominator": 500,
+        "numerator": -899,
+        "text": "-899/500"
+      },
+      "derivative_numerator_upper_bound_without_tail": {
+        "decimal": -1.79,
+        "denominator": 100,
+        "numerator": -179,
+        "text": "-179/100"
+      },
+      "negative_tail_term": "beta_tors*(1-eta)*x^(9/5) <= 0",
+      "strictly_negative_bound": true,
+      "x": 5,
+      "x_ge_1": true,
+      "x_power_4_5_lower_bound": "x^(4/5) >= 1"
+    },
+    {
+      "D_prime_certified_negative": true,
+      "denominator_positive": true,
+      "derivative_numerator_upper_bound_with_x_ge_1_tail": {
+        "decimal": -1.798,
+        "denominator": 500,
+        "numerator": -899,
+        "text": "-899/500"
+      },
+      "derivative_numerator_upper_bound_without_tail": {
+        "decimal": -1.79,
+        "denominator": 100,
+        "numerator": -179,
+        "text": "-179/100"
+      },
+      "negative_tail_term": "beta_tors*(1-eta)*x^(9/5) <= 0",
+      "strictly_negative_bound": true,
+      "x": 6,
+      "x_ge_1": true,
+      "x_power_4_5_lower_bound": "x^(4/5) >= 1"
+    },
+    {
+      "D_prime_certified_negative": true,
+      "denominator_positive": true,
+      "derivative_numerator_upper_bound_with_x_ge_1_tail": {
+        "decimal": -1.798,
+        "denominator": 500,
+        "numerator": -899,
+        "text": "-899/500"
+      },
+      "derivative_numerator_upper_bound_without_tail": {
+        "decimal": -1.79,
+        "denominator": 100,
+        "numerator": -179,
+        "text": "-179/100"
+      },
+      "negative_tail_term": "beta_tors*(1-eta)*x^(9/5) <= 0",
+      "strictly_negative_bound": true,
+      "x": 7,
+      "x_ge_1": true,
+      "x_power_4_5_lower_bound": "x^(4/5) >= 1"
+    },
+    {
+      "D_prime_certified_negative": true,
+      "denominator_positive": true,
+      "derivative_numerator_upper_bound_with_x_ge_1_tail": {
+        "decimal": -1.798,
+        "denominator": 500,
+        "numerator": -899,
+        "text": "-899/500"
+      },
+      "derivative_numerator_upper_bound_without_tail": {
+        "decimal": -1.79,
+        "denominator": 100,
+        "numerator": -179,
+        "text": "-179/100"
+      },
+      "negative_tail_term": "beta_tors*(1-eta)*x^(9/5) <= 0",
+      "strictly_negative_bound": true,
+      "x": 8,
+      "x_ge_1": true,
+      "x_power_4_5_lower_bound": "x^(4/5) >= 1"
+    },
+    {
+      "D_prime_certified_negative": true,
+      "denominator_positive": true,
+      "derivative_numerator_upper_bound_with_x_ge_1_tail": {
+        "decimal": -1.798,
+        "denominator": 500,
+        "numerator": -899,
+        "text": "-899/500"
+      },
+      "derivative_numerator_upper_bound_without_tail": {
+        "decimal": -1.79,
+        "denominator": 100,
+        "numerator": -179,
+        "text": "-179/100"
+      },
+      "negative_tail_term": "beta_tors*(1-eta)*x^(9/5) <= 0",
+      "strictly_negative_bound": true,
+      "x": 9,
+      "x_ge_1": true,
+      "x_power_4_5_lower_bound": "x^(4/5) >= 1"
+    },
+    {
+      "D_prime_certified_negative": true,
+      "denominator_positive": true,
+      "derivative_numerator_upper_bound_with_x_ge_1_tail": {
+        "decimal": -1.798,
+        "denominator": 500,
+        "numerator": -899,
+        "text": "-899/500"
+      },
+      "derivative_numerator_upper_bound_without_tail": {
+        "decimal": -1.79,
+        "denominator": 100,
+        "numerator": -179,
+        "text": "-179/100"
+      },
+      "negative_tail_term": "beta_tors*(1-eta)*x^(9/5) <= 0",
+      "strictly_negative_bound": true,
+      "x": 10,
+      "x_ge_1": true,
+      "x_power_4_5_lower_bound": "x^(4/5) >= 1"
+    },
+    {
+      "D_prime_certified_negative": true,
+      "denominator_positive": true,
+      "derivative_numerator_upper_bound_with_x_ge_1_tail": {
+        "decimal": -1.798,
+        "denominator": 500,
+        "numerator": -899,
+        "text": "-899/500"
+      },
+      "derivative_numerator_upper_bound_without_tail": {
+        "decimal": -1.79,
+        "denominator": 100,
+        "numerator": -179,
+        "text": "-179/100"
+      },
+      "negative_tail_term": "beta_tors*(1-eta)*x^(9/5) <= 0",
+      "strictly_negative_bound": true,
+      "x": 11,
+      "x_ge_1": true,
+      "x_power_4_5_lower_bound": "x^(4/5) >= 1"
+    }
+  ],
+  "hard_limits": [
+    "K_strict_gate remains the current live/full operational kernel.",
+    "No unqualified identity K_legacy_ont == K_strict_gate is claimed.",
+    "No proof derives beta, eta, beta_tors, or D(x) from strict nadsoliton dynamics.",
+    "No beta_tors -> chi_11 theorem is claimed.",
+    "No legacy physical-role transfer to K_strict_gate is claimed.",
+    "No QW-2191 selector discharge is claimed.",
+    "No ToE closure is claimed."
+  ],
+  "integer_edge_mean_value_rows": [
+    {
+      "D_prime_negative_on_open_interval_by_exact_bound": true,
+      "damping_sign_flip_possible_on_edge": false,
+      "edge": "1->2",
+      "mean_value_interval": "(1,2)",
+      "therefore_D_left_greater_than_D_right": true
+    },
+    {
+      "D_prime_negative_on_open_interval_by_exact_bound": true,
+      "damping_sign_flip_possible_on_edge": false,
+      "edge": "2->3",
+      "mean_value_interval": "(2,3)",
+      "therefore_D_left_greater_than_D_right": true
+    },
+    {
+      "D_prime_negative_on_open_interval_by_exact_bound": true,
+      "damping_sign_flip_possible_on_edge": false,
+      "edge": "3->4",
+      "mean_value_interval": "(3,4)",
+      "therefore_D_left_greater_than_D_right": true
+    },
+    {
+      "D_prime_negative_on_open_interval_by_exact_bound": true,
+      "damping_sign_flip_possible_on_edge": false,
+      "edge": "4->5",
+      "mean_value_interval": "(4,5)",
+      "therefore_D_left_greater_than_D_right": true
+    },
+    {
+      "D_prime_negative_on_open_interval_by_exact_bound": true,
+      "damping_sign_flip_possible_on_edge": false,
+      "edge": "5->6",
+      "mean_value_interval": "(5,6)",
+      "therefore_D_left_greater_than_D_right": true
+    },
+    {
+      "D_prime_negative_on_open_interval_by_exact_bound": true,
+      "damping_sign_flip_possible_on_edge": false,
+      "edge": "6->7",
+      "mean_value_interval": "(6,7)",
+      "therefore_D_left_greater_than_D_right": true
+    },
+    {
+      "D_prime_negative_on_open_interval_by_exact_bound": true,
+      "damping_sign_flip_possible_on_edge": false,
+      "edge": "7->8",
+      "mean_value_interval": "(7,8)",
+      "therefore_D_left_greater_than_D_right": true
+    },
+    {
+      "D_prime_negative_on_open_interval_by_exact_bound": true,
+      "damping_sign_flip_possible_on_edge": false,
+      "edge": "8->9",
+      "mean_value_interval": "(8,9)",
+      "therefore_D_left_greater_than_D_right": true
+    },
+    {
+      "D_prime_negative_on_open_interval_by_exact_bound": true,
+      "damping_sign_flip_possible_on_edge": false,
+      "edge": "9->10",
+      "mean_value_interval": "(9,10)",
+      "therefore_D_left_greater_than_D_right": true
+    },
+    {
+      "D_prime_negative_on_open_interval_by_exact_bound": true,
+      "damping_sign_flip_possible_on_edge": false,
+      "edge": "10->11",
+      "mean_value_interval": "(10,11)",
+      "therefore_D_left_greater_than_D_right": true
+    }
+  ],
+  "ontology_guardrail": {
+    "allowed_reading": "The nadsoliton itself remains the primordial information in solitonic state; this audit only checks exact calculus consequences of the selected damping factor.",
+    "forbidden_reading": "No separate informational layer below the nadsoliton is introduced."
+  },
+  "proof_certificate": {
+    "derivative_step": "Symbolic differentiation gives D'(x)=N(x)/(1+x^(9/5))^2 with the recorded N(x).",
+    "mean_value_step": "Since D'(x)<0 on every open integer edge, D(d)>D(d+1) follows by the mean value theorem for d=1..10.",
+    "nonduplication": "This is an exact rational calculus certificate, not another phase-zero, cell-sign, Z2, real-valued cocycle, or low-order no-go audit.",
+    "parameter_step": "The selected damping parameters are represented exactly as beta=1, eta=9/5, beta_tors=1/100.",
+    "phase_separation_step": "Because D(x)>0 and is decreasing, damping remains an envelope and cannot supply the certified phase sign flips.",
+    "rational_bound_step": "For x>=1, N(x)<=1/100-9/5=-179/100<0; the remaining tail is also non-positive.",
+    "theoretical_limit": "The certificate proves consequences of the selected D(x); it does not derive beta, eta, beta_tors, or D(x) from strict nadsoliton dynamics."
+  },
+  "rational_parameters": {
+    "beta": {
+      "decimal": 1.0,
+      "denominator": 1,
+      "numerator": 1,
+      "text": "1/1"
+    },
+    "beta_tors": {
+      "decimal": 0.01,
+      "denominator": 100,
+      "numerator": 1,
+      "text": "1/100"
+    },
+    "certified_interval": [
+      {
+        "decimal": 1.0,
+        "denominator": 1,
+        "numerator": 1,
+        "text": "1/1"
+      },
+      {
+        "decimal": 11.0,
+        "denominator": 1,
+        "numerator": 11,
+        "text": "11/1"
+      }
+    ],
+    "eta": {
+      "decimal": 1.8,
+      "denominator": 5,
+      "numerator": 9,
+      "text": "9/5"
+    }
+  },
+  "result_kind": "SCRATCH_STRICT_COMPLETION_DAMPING_EXACT_RATIONAL_CALCULUS_CERTIFICATE__NO_FLOAT_DERIVATIVE_SIGN",
+  "source_reports": {
+    "cell_sign_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_phase_zero_cell_sign_certificate_report.json",
+    "continuous_damping_monotonicity_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_damping_continuous_monotonicity_certificate_report.json",
+    "phase_sign_z2_coboundary_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_phase_sign_z2_coboundary_certificate_report.json"
+  },
+  "status": "damping-derivative-negativity-certified-by-exact-rational-bound-on-continuous-interval"
+}
