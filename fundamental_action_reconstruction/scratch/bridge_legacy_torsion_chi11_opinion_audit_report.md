@@ -41,8 +41,8 @@ Overall verdict: `PARTLY_USEFUL_HEURISTIC_BUT_NOT_A_CURRENT_REPO_THEOREM`
 
 ### legacy_kernel_bridge_is_now_the_main_bridge
 - Opinion claim: This observation supplies the legacy->strict bridge the repo has been seeking.
-- Verdict: `CONFLICTS_WITH_CURRENT_S2_STRATEGY_IF_ASSERTED_AS_FACT`
-- Allowed use: Can be archived as an intuition; pursuing it would require an explicit task to build a new bridge/non-bridge theorem despite S2.
+- Verdict: `REACTIVATED_AS_BRIDGE_TARGET_BUT_NOT_PROVEN_AS_FACT`
+- Allowed use: Can motivate the restored legacy->strict completion bridge, but the bridge still requires an explicit map, compression account, selector/source theorem, and role-transfer audit.
 
 ### chi11_triggers_eta_and_balanced_ledger
 - Opinion claim: Supplying chi_11 directly triggers eta=9/5, q^5=256/243, and the [2,2,2,1,1] allocation.
@@ -58,8 +58,8 @@ Overall verdict: `PARTLY_USEFUL_HEURISTIC_BUT_NOT_A_CURRENT_REPO_THEOREM`
 
 - `orientation_map`: Define a strict or explicitly bridge-level map from legacy torsion orientation to a U12 character, including why the kernel is {1,11} rather than chi_5 or chi_7.
   - Current status: No meta-invariant rule over the abstract unit group selects singleton chi_11 from the three nontrivial characters.
-- `role_transfer_control`: Prove that using beta_tors as a selector source is not a silent transfer of retired legacy physical roles onto K_strict_gate.
-  - Current status: S2 retires K_legacy_ont to archival status and redirects priority to strict-only closure.
+- `role_transfer_control`: Prove that using beta_tors as a selector source is not a silent transfer of legacy physical roles onto K_strict_gate.
+  - Current status: S2 restores K_legacy_ont as an intermediate bridge kernel and requires a post-bridge role-transfer audit before any legacy physical role can move onto K_strict_gate.
 - `eta_pipeline_link`: Connect the character bit to eta=9/5 and q^5=256/243 through already certified selector premises without treating conditional certificates as strict closure.
   - Current status: Existing eta/ledger reports are conditional and keep hard limits against exact strict eta theorem/selector closure.
 - `full_aut_obstruction_escape`: Explain how the proposed source avoids the Reynolds annihilator and premise-lattice no-source obstruction for full-Aut invariant data.
@@ -70,7 +70,7 @@ Overall verdict: `PARTLY_USEFUL_HEURISTIC_BUT_NOT_A_CURRENT_REPO_THEOREM`
 - `supported_part`: K1 supports beta_tors as a legacy torsion/damping datum; existing chi_11 audits support a missing nontrivial unit-character premise in reduced models.
 - `unsupported_part`: No loaded report exports beta_tors -> chi_11, torsion -> parity-breaking unit character, or chi_11 -> eta=9/5 as an unconditional strict theorem.
 - `current_obstruction`: Full-Aut Reynolds averaging annihilates chi_11 and the premise lattice has no minimal set for a strict full-Aut internal chi_11 polarity source.
-- `s2_boundary`: S2 says the legacy kernel is retired to archival status; any beta_tors bridge must be explicitly re-opened as a candidate, not asserted as current closure.
+- `s2_boundary`: S2 restores the legacy kernel as an intermediate bridge kernel; any beta_tors bridge is now an explicit candidate bridge/source theorem target, not an asserted current closure.
 
 ## Hard limits
 

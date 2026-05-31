@@ -1,124 +1,128 @@
 # S2 Current FAR Strategic Priority Reorientation Packet
 
-Status: `S2_UPDATED_LEGACY_KERNEL_RETIRED_STRICT_ONLY_CLOSURE_TARGET_NO_FALSE_PASS`
-As of: `2026-03-11`
+Status: `S2_UPDATED_LEGACY_KERNEL_RESTORED_AS_INTERMEDIATE_BRIDGE_KERNEL_NO_FALSE_PASS`
+As of: `2026-05-31`
 
 ## Goal
 
-Record the strongest honest strategic reorientation now forced by the current
-repo state AND by the author's explicit decree on the legacy kernel.
+Record the current strategic reorientation forced by the author's latest
+correction: the legacy kernel is **not** a discarded dead end.  It is restored
+as an intermediate kernel on the path toward identifying the strict kernel.
 
-## CRITICAL UPDATE: Legacy Kernel Retirement (Author Decree 2026-03-09)
+This packet supersedes the older retirement-only reading.  It does not license
+silent identity, silent physical-role transfer, QW-2191 discharge, or ToE
+closure.
 
-The theory author has explicitly declared:
+## Critical update: legacy kernel restored as intermediate bridge kernel
+
+The current bridge discipline is:
 
 ```text
 K_legacy_ont(d) = alpha_geo*cos(omega*d+phi)/(1+beta_tors*d)
-was ONLY a transitional/historical kernel.
-It is NOT a co-equal theory requiring a bridge.
-It is RETIRED to archival status.
+    -> intermediate / incomplete bridge kernel
+
+K_strict_gate(d) = cos(omega*d+phi)/(1+beta*d^eta)
+    -> completed / enriched strict kernel
 ```
 
-Therefore:
-
-1. Priority 1 (legacy -> strict bridge or non-bridge) is now CLOSED
-   with resolution: `non-bridge by author retirement decree`.
-2. `K1/K2` guardrails remain valid only in the narrow sense:
-   do not silently transfer legacy physical-role claims onto `K_strict_gate`.
-3. But the bridge/non-bridge question itself is no longer an open problem.
-4. N364-N369 (Legacy-To-Strict Bridge Closure Witness chain) are frozen
-   as archival — do not continue that route.
-
-## Priority 1 (NEW): Strict-Only ToE Closure
-
-The sole remaining highest-priority target is now:
+The intended bridge direction is therefore not “retire legacy and forget it”,
+but:
 
 ```text
-strict-core ToE closure using only strict-side sources
+legacy kernel + missing strict-side characteristics -> strict kernel
 ```
 
-The strict-side sources available are:
+The current repository already contains finite certificates showing that the
+strict completion adds structure that the legacy kernel did not fully encode,
+including:
 
-1. `K_strict_gate(d) = cos(omega*d+phi)/(1+beta*d^eta)` with known parameters,
-2. Nadsoliton ontology (AX9/F1) as strict-side source (not legacy import),
-3. Shannon Information Void Asymmetry: `alpha_geo = 4*ln(2)` as the
-   strict-side asymmetry measure candidate (not legacy import),
-   now also exported as a strict-derived source-upgrade value object:
-   `alpha_geo_strict_derived_v1 := 4 ln 2` via `F309/N420`,
-4. The full nad12-sigma residual route (N328-N345) as carrier infrastructure,
-5. Feeder law candidates using Shannon weighting (N345-N349).
+1. the unique A/P/D completion ansatz on the audited finite domain,
+2. GF(2) phase-sign reconstruction and rank-11 uniqueness,
+3. carrier/edge/node commutative-diagram bookkeeping,
+4. path-cohomology and cycle-closure parity constraints,
+5. strict damping/compression behavior, including the nonlinear `d^eta`
+   compression absent from the legacy linear `beta_tors*d` denominator.
 
-The agent MUST treat `4*ln(2)` as a strict-side **strategic premise** for
-candidate construction, NOT as a legacy import.
+Therefore the legacy kernel is restored as an input/intermediate object, but it
+remains incomplete relative to the strict kernel.
 
-Status discipline update (post-`T144` discharge): on the current repo state,
-the repo now **does** export one actual strict-derived source-upgrade object:
+## Priority 1: legacy -> strict completion bridge
+
+The highest theoretical priority is now:
 
 ```text
-alpha_geo_strict_derived_v1 := 4 ln 2  (F309/N420).
+construct and audit the explicit completion bridge
+K_legacy_ont -> K_strict_gate
 ```
 
-This removes the specific “no strict alpha-geo source” blocker, but it does
-**not** by itself upgrade any feeder-law, theta-export, pair-population, or
-selector-closure candidate into an actual ingredient, and it does **not**
-discharge `QW-2191`.
+A valid bridge must specify at least:
 
-## Priority 2: QW-2191 selector obstruction
+1. the amplitude/normalization passage,
+2. the phase/frequency/topological bit passage,
+3. the damping/compression passage from legacy linear torsion damping to strict
+   nonlinear compression,
+4. the selector/source premise responsible for the certified phase/topological
+   data,
+5. which strict-side characteristics are additions rather than legacy contents.
 
-Current state:
+## Priority 2: role-transfer audit after bridge completion
 
-1. `QW-2191` proves the uniqueness/selector obstruction,
-2. later `AX1..AX8` and the current canonical-ontology-supported lane show
-   what can be done only outside strict core,
-3. no strict-core selector closure is currently exported.
+When the bridge is fully specified, the next mandatory step is a separate
+legacy-role transfer audit.
 
-Therefore the strongest honest current statement is:
+That audit must decide, claim by claim, whether each legacy physical role:
 
-```text
-strict-core selector closure remains blocked unless one adds an explicit
-symmetry-breaking / selector premise or proves a new internal selector source
-```
+1. survives unchanged under strict completion,
+2. survives only in modified/compressed form,
+3. becomes a strict-side successor statement with different semantics, or
+4. is rejected.
 
-The Shannon-weighted feeder law with `4*ln(2)` as strict-side source now
-constitutes a candidate for exactly such a symmetry-breaking premise.
+This especially applies to legacy claims involving:
 
-## Priority 3: L5 / L12 noncyclic anchor
+- `sin^2(theta_W)=alpha_geo/12`,
+- `alpha_EM^-1 = alpha_geo/(2*beta_tors)*(1-beta_tors)`,
+- `beta^N` gravity hierarchy,
+- any proposed `beta_tors -> chi_11` orientation/torsion role.
 
-Current state:
+## Priority 3: selector / source obstruction
 
-1. `QW-2381` confirms blocker-cut recurrence,
-2. `QW-2382` introduces hard noncyclic strategy constraints `NC1..NC4`,
-3. `QW-2383` rejects repeating the same step under the same blocker-cut.
+`QW-2191` remains a real strict-core selector obstruction.  The GF(2), path
+cohomology, and cycle-closure certificates identify where the bit lives and how
+it is constrained, but they do not by themselves export its strict source.
 
-The nad12-sigma Shannon-weighted route (N328-N349) constitutes a genuinely
-new provider class and noncyclic anchor, not a repetition of L5/L12.
+Any proposed source such as `beta_tors -> chi_11`, spontaneous symmetry
+breaking, or observer-readout must be stated as a bridge/source theorem and must
+not be smuggled in as an already proven strict-core selector closure.
 
 ## Consequence for current FAR work
 
 The current priority order is now:
 
-1. strict-only ToE closure (legacy kernel retired),
-2. selector-axiom discharge via Shannon symmetry-breaking premise,
-3. noncyclic anchor confirmation via nad12-sigma Shannon route,
-4. only then further auxiliary sharpening.
+1. explicit `legacy -> strict` completion bridge,
+2. role-transfer audit after the bridge is fully specified,
+3. selector/source theorem for the remaining bit/orientation obstruction,
+4. only then auxiliary local direct-route mass decomposition.
 
 ## What S2 does not claim
 
 `S2` does not claim:
 
-- that strict-core ToE closure is already achieved,
-- that `QW-2191` is already discharged,
-- that the Shannon premise is already proven as sufficient,
+- that `K_legacy_ont == K_strict_gate` as a raw identity,
+- that the legacy kernel already contained all strict nadsoliton
+  characteristics,
+- that legacy physical roles automatically transfer to the strict kernel,
+- that `beta_tors -> chi_11` is already proven,
+- that `QW-2191` is discharged,
 - that ToE is closed.
 
 But it DOES claim:
 
-- that legacy kernel bridge is no longer an open problem (retired by decree),
-- that `4*ln(2)` is a strict-side premise/source for strategy (not legacy),
-- that the agent must now pursue strict-only closure as Priority 1.
+- that the legacy kernel is restored as an intermediate bridge kernel,
+- that the strict kernel should be audited as a completed/enriched legacy
+  continuation rather than an unrelated replacement,
+- that bridge completion must be followed by explicit role-transfer auditing,
+- that compression and other strict-side additions must remain visible.
 
 ## Product
 
-- one updated persisted strategic priority packet for future FAR continuation,
-- legacy kernel retirement recorded,
-- no false pass.
+This packet is a guardrail update, not a closure theorem.

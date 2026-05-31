@@ -121,19 +121,19 @@ def claim_rows(k1_text: str, s2_text: str, reports: dict[str, dict[str, Any]]) -
             "evidence": [
                 bridge["interpretation"]["what_cannot_be_done_now"],
                 premise["interpretation"]["honest_negative"],
-                contains_all(s2_text, ["was ONLY a transitional/historical kernel", "RETIRED to archival status"]),
+                contains_all(s2_text, ["legacy kernel is **not** a discarded dead end", "intermediate kernel on the path toward identifying the strict kernel"]),
             ],
             "allowed_use": "Only as an explicitly labelled new theorem target, not as a repo conclusion.",
         },
         {
             "claim_id": "legacy_kernel_bridge_is_now_the_main_bridge",
             "opinion_claim": "This observation supplies the legacy->strict bridge the repo has been seeking.",
-            "verdict": "CONFLICTS_WITH_CURRENT_S2_STRATEGY_IF_ASSERTED_AS_FACT",
+            "verdict": "REACTIVATED_AS_BRIDGE_TARGET_BUT_NOT_PROVEN_AS_FACT",
             "evidence": [
-                contains_all(s2_text, ["Priority 1 (legacy -> strict bridge or non-bridge) is now CLOSED", "non-bridge by author retirement decree"]),
-                "S2 redirects work to strict-only closure and keeps legacy role-transfer forbidden unless explicitly re-opened.",
+                contains_all(s2_text, ["legacy -> strict` completion bridge", "role-transfer audit after bridge completion"]),
+                "S2 restores bridge-completion priority and keeps legacy role-transfer forbidden until an explicit post-bridge role-transfer audit.",
             ],
-            "allowed_use": "Can be archived as an intuition; pursuing it would require an explicit task to build a new bridge/non-bridge theorem despite S2.",
+            "allowed_use": "Can motivate the restored legacy->strict completion bridge, but the bridge still requires an explicit map, compression account, selector/source theorem, and role-transfer audit.",
         },
         {
             "claim_id": "chi11_triggers_eta_and_balanced_ledger",
@@ -185,8 +185,8 @@ def build_payload() -> dict[str, Any]:
         },
         {
             "requirement": "role_transfer_control",
-            "needed_theorem": "Prove that using beta_tors as a selector source is not a silent transfer of retired legacy physical roles onto K_strict_gate.",
-            "current_status": "S2 retires K_legacy_ont to archival status and redirects priority to strict-only closure.",
+            "needed_theorem": "Prove that using beta_tors as a selector source is not a silent transfer of legacy physical roles onto K_strict_gate.",
+            "current_status": "S2 restores K_legacy_ont as an intermediate bridge kernel and requires a post-bridge role-transfer audit before any legacy physical role can move onto K_strict_gate.",
         },
         {
             "requirement": "eta_pipeline_link",
@@ -223,13 +223,13 @@ def build_payload() -> dict[str, Any]:
         "bridge_hypothesis_requirements": bridge_hypothesis_requirements,
         "recommended_next_honest_step": {
             "if_pursuing_this_intuition": "Write a deliberately non-strict theorem-target spec: beta_tors_orientation_source -> U12 character, then try to prove or refute it against the full-Aut Reynolds obstruction and meta-character ambiguity.",
-            "if_following_current_S2_priority": "Keep beta_tors archival and continue strict-only selector-source/ToE closure work without importing legacy torsion roles.",
+            "if_following_current_S2_priority": "Treat beta_tors as a candidate bridge/source datum and continue bridge-completion work without importing legacy torsion roles before a role-transfer audit.",
         },
         "exact_proof_certificate": {
             "supported_part": "K1 supports beta_tors as a legacy torsion/damping datum; existing chi_11 audits support a missing nontrivial unit-character premise in reduced models.",
             "unsupported_part": "No loaded report exports beta_tors -> chi_11, torsion -> parity-breaking unit character, or chi_11 -> eta=9/5 as an unconditional strict theorem.",
             "current_obstruction": "Full-Aut Reynolds averaging annihilates chi_11 and the premise lattice has no minimal set for a strict full-Aut internal chi_11 polarity source.",
-            "s2_boundary": "S2 says the legacy kernel is retired to archival status; any beta_tors bridge must be explicitly re-opened as a candidate, not asserted as current closure.",
+            "s2_boundary": "S2 restores the legacy kernel as an intermediate bridge kernel; any beta_tors bridge is now an explicit candidate bridge/source theorem target, not an asserted current closure.",
         },
         "ontology_guardrail": {
             "allowed_reading": "The nadsoliton itself remains the primordial information in a solitonic state.",

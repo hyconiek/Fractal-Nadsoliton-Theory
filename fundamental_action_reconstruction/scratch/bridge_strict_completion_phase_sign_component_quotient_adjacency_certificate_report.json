@@ -1,0 +1,303 @@
+{
+  "blocker_context": {
+    "resolved_locally": [
+      "The maximal constant-sign runs collapse to a five-vertex alternating quotient path.",
+      "The quotient has V=5, E=4, and V-E=1, so it is a tree in this finite path quotient.",
+      "The four quotient edges are exactly the audited four flip edges."
+    ],
+    "still_open": [
+      "strict_phase_frequency_derivation_from_nadsoliton_dynamics",
+      "strict_damping_transport_derivation_from_nadsoliton_dynamics",
+      "QW-2191_selector_obstruction",
+      "strict ToE closure"
+    ]
+  },
+  "component_count_certificate": {
+    "component_count_equals_flip_count_plus_one": true,
+    "flip_edge_count": 4,
+    "negative_component_count": 2,
+    "negative_component_intervals": [
+      {
+        "end": 5,
+        "start": 2
+      },
+      {
+        "end": 9,
+        "start": 8
+      }
+    ],
+    "negative_components_match_support_euler_component_count": true,
+    "positive_component_count": 3,
+    "positive_component_intervals": [
+      {
+        "end": 1,
+        "start": 0
+      },
+      {
+        "end": 7,
+        "start": 6
+      },
+      {
+        "end": 11,
+        "start": 10
+      }
+    ],
+    "total_component_count": 5
+  },
+  "component_quotient_adjacency_summary": {
+    "component_count_equals_flip_count_plus_one": true,
+    "matches_edge_support_minimality": true,
+    "matches_expected_components": true,
+    "matches_expected_quotient_edges": true,
+    "negative_components_match_support_euler": true,
+    "negative_intervals_match_flip_pair": true,
+    "quotient_edges_match_flip_edges": true,
+    "quotient_is_alternating": true,
+    "quotient_is_tree": true
+  },
+  "component_quotient_definition": {
+    "component_adjacency_matrix": [
+      [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    ],
+    "component_rows": [
+      {
+        "bit": 0,
+        "component_index": 0,
+        "end": 1,
+        "node_count": 2,
+        "nodes": [
+          0,
+          1
+        ],
+        "sign": 1,
+        "start": 0
+      },
+      {
+        "bit": 1,
+        "component_index": 1,
+        "end": 5,
+        "node_count": 4,
+        "nodes": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "sign": -1,
+        "start": 2
+      },
+      {
+        "bit": 0,
+        "component_index": 2,
+        "end": 7,
+        "node_count": 2,
+        "nodes": [
+          6,
+          7
+        ],
+        "sign": 1,
+        "start": 6
+      },
+      {
+        "bit": 1,
+        "component_index": 3,
+        "end": 9,
+        "node_count": 2,
+        "nodes": [
+          8,
+          9
+        ],
+        "sign": -1,
+        "start": 8
+      },
+      {
+        "bit": 0,
+        "component_index": 4,
+        "end": 11,
+        "node_count": 2,
+        "nodes": [
+          10,
+          11
+        ],
+        "sign": 1,
+        "start": 10
+      }
+    ],
+    "degree_rows": [
+      {
+        "component_index": 0,
+        "is_endpoint_component": true,
+        "quotient_degree": 1
+      },
+      {
+        "component_index": 1,
+        "is_endpoint_component": false,
+        "quotient_degree": 2
+      },
+      {
+        "component_index": 2,
+        "is_endpoint_component": false,
+        "quotient_degree": 2
+      },
+      {
+        "component_index": 3,
+        "is_endpoint_component": false,
+        "quotient_degree": 2
+      },
+      {
+        "component_index": 4,
+        "is_endpoint_component": true,
+        "quotient_degree": 1
+      }
+    ],
+    "graph": "quotient of the finite path by maximal constant node-bit runs",
+    "node_bits": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    "quotient_edge_rows": [
+      {
+        "is_bit_flip": true,
+        "is_sign_flip": true,
+        "left_bit": 0,
+        "left_component": 0,
+        "left_sign": 1,
+        "path_edge": "1->2",
+        "path_edge_index": 1,
+        "quotient_edge_index": 0,
+        "right_bit": 1,
+        "right_component": 1,
+        "right_sign": -1
+      },
+      {
+        "is_bit_flip": true,
+        "is_sign_flip": true,
+        "left_bit": 1,
+        "left_component": 1,
+        "left_sign": -1,
+        "path_edge": "5->6",
+        "path_edge_index": 5,
+        "quotient_edge_index": 1,
+        "right_bit": 0,
+        "right_component": 2,
+        "right_sign": 1
+      },
+      {
+        "is_bit_flip": true,
+        "is_sign_flip": true,
+        "left_bit": 0,
+        "left_component": 2,
+        "left_sign": 1,
+        "path_edge": "7->8",
+        "path_edge_index": 7,
+        "quotient_edge_index": 2,
+        "right_bit": 1,
+        "right_component": 3,
+        "right_sign": -1
+      },
+      {
+        "is_bit_flip": true,
+        "is_sign_flip": true,
+        "left_bit": 1,
+        "left_component": 3,
+        "left_sign": -1,
+        "path_edge": "9->10",
+        "path_edge_index": 9,
+        "quotient_edge_index": 3,
+        "right_bit": 0,
+        "right_component": 4,
+        "right_sign": 1
+      }
+    ]
+  },
+  "grep_disambiguation": {
+    "finding": "Existing reports export support components and flip-pair reconstruction, but not the collapsed constant-sign component adjacency quotient tree before this file.",
+    "searched_terms": [
+      "quotient component",
+      "component adjacency",
+      "alternating sign",
+      "sign-run",
+      "sign run",
+      "component quotient",
+      "run quotient"
+    ]
+  },
+  "hard_limits": [
+    "K_strict_gate remains the current live/full operational kernel.",
+    "No unqualified identity K_legacy_ont == K_strict_gate is claimed.",
+    "No proof derives A(d), P(d), D(d), omega/phi, beta/eta, or the transport cocycle from strict nadsoliton dynamics.",
+    "No beta_tors -> chi_11 theorem is claimed.",
+    "No legacy physical-role transfer to K_strict_gate is claimed.",
+    "No QW-2191 selector discharge is claimed.",
+    "No ToE closure is claimed."
+  ],
+  "proof_certificate": {
+    "component_step": "Maximal constant node-bit runs are +[0,1], -[2,5], +[6,7], -[8,9], +[10,11].",
+    "count_step": "Total component count equals flip_count+1, while the two negative components match the support Euler and flip-pair interval certificates.",
+    "flip_step": "The quotient edges are exactly 1->2, 5->6, 7->8, and 9->10, matching the audited flip support.",
+    "quotient_step": "Collapsing those runs gives an alternating quotient path with V=5 and E=4, hence V-E=1.",
+    "theoretical_limit": "This is finite component-quotient bookkeeping; it does not derive omega/phi, beta/eta, damping, or transport from strict nadsoliton dynamics."
+  },
+  "quotient_tree_certificate": {
+    "all_quotient_edges_are_bit_flips": true,
+    "all_quotient_edges_are_sign_flips": true,
+    "component_vertex_count_Vq": 5,
+    "endpoint_components_have_degree_one": true,
+    "euler_Vq_minus_Eq": 1,
+    "internal_components_have_degree_two": true,
+    "is_tree_by_path_quotient_euler": true,
+    "quotient_edge_count_Eq": 4
+  },
+  "result_kind": "SCRATCH_STRICT_COMPLETION_PHASE_SIGN_COMPONENT_QUOTIENT_ADJACENCY_CERTIFICATE__SIGN_RUN_TREE",
+  "source_reports": {
+    "phase_sign_edge_support_minimality_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_phase_sign_edge_support_minimality_certificate_report.json",
+    "phase_sign_flip_pair_interval_reconstruction_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_phase_sign_flip_pair_interval_reconstruction_certificate_report.json",
+    "phase_sign_support_euler_characteristic_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_phase_sign_support_euler_characteristic_certificate_report.json",
+    "phase_sign_z2_coboundary_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_phase_sign_z2_coboundary_certificate_report.json"
+  },
+  "status": "constant-sign-components-collapse-to-alternating-quotient-path-tree"
+}
