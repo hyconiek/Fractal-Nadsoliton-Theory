@@ -1,0 +1,294 @@
+{
+  "blocker_context": {
+    "resolved_locally": [
+      "The ordered flip support is paired into entry/exit cuts (1->2,5->6) and (7->8,9->10).",
+      "Those pairs reconstruct exactly the maximal 1-node intervals [2,5] and [8,9].",
+      "Even flip count and zero endpoint support close the path-boundary inverse sanity check."
+    ],
+    "still_open": [
+      "strict_phase_frequency_derivation_from_nadsoliton_dynamics",
+      "strict_damping_transport_derivation_from_nadsoliton_dynamics",
+      "QW-2191_selector_obstruction",
+      "strict ToE closure"
+    ]
+  },
+  "flip_pair_interval_reconstruction_summary": {
+    "all_pair_boundaries_match_edge_bits": true,
+    "component_count_from_pairs": 2,
+    "edge_bits_from_interval_boundaries_match_z2": true,
+    "flip_count_even": true,
+    "matches_edge_support_minimality": true,
+    "matches_expected_flip_edges": true,
+    "matches_expected_flip_indices": true,
+    "matches_expected_intervals": true,
+    "matches_interval_boundary_report": true,
+    "matches_reduced_coboundary_nodes": true,
+    "no_endpoint_support": true,
+    "no_unclosed_interval": true,
+    "node_bits_from_interval_union_match_z2": true,
+    "node_bits_from_scan_match_z2": true
+  },
+  "flip_pair_reconstruction_definition": {
+    "anchor_bit_b0": 0,
+    "edge_bits": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    "field": "GF(2)",
+    "flip_edges": [
+      "1->2",
+      "5->6",
+      "7->8",
+      "9->10"
+    ],
+    "flip_indices": [
+      1,
+      5,
+      7,
+      9
+    ],
+    "graph": "finite path 0--1--...--11",
+    "rule": "scan from b(0)=0; 0->1 flips open an interval at edge_index+1 and 1->0 flips close it at edge_index"
+  },
+  "flip_scan_rows": [
+    {
+      "flip_edge": "1->2",
+      "flip_index": 1,
+      "open_interval_start_after_flip": 2,
+      "role": "entry",
+      "state_after": 1,
+      "state_before": 0
+    },
+    {
+      "flip_edge": "5->6",
+      "flip_index": 5,
+      "open_interval_start_after_flip": null,
+      "role": "exit",
+      "state_after": 0,
+      "state_before": 1
+    },
+    {
+      "flip_edge": "7->8",
+      "flip_index": 7,
+      "open_interval_start_after_flip": 8,
+      "role": "entry",
+      "state_after": 1,
+      "state_before": 0
+    },
+    {
+      "flip_edge": "9->10",
+      "flip_index": 9,
+      "open_interval_start_after_flip": null,
+      "role": "exit",
+      "state_after": 0,
+      "state_before": 1
+    }
+  ],
+  "grep_disambiguation": {
+    "finding": "Existing reports export edge-support minimality and interval-to-boundary reconstruction, but not the ordered flip-pair inverse from boundary edges back to maximal support intervals.",
+    "searched_terms": [
+      "flip pair",
+      "paired flips",
+      "edge pair",
+      "boundary inverse",
+      "support from boundary",
+      "interval reconstruction",
+      "endpoint pairing"
+    ]
+  },
+  "hard_limits": [
+    "K_strict_gate remains the current live/full operational kernel.",
+    "No unqualified identity K_legacy_ont == K_strict_gate is claimed.",
+    "No proof derives A(d), P(d), D(d), omega/phi, beta/eta, or the transport cocycle from strict nadsoliton dynamics.",
+    "No beta_tors -> chi_11 theorem is claimed.",
+    "No legacy physical-role transfer to K_strict_gate is claimed.",
+    "No QW-2191 selector discharge is claimed.",
+    "No ToE closure is claimed."
+  ],
+  "paired_interval_rows": [
+    {
+      "boundary_edges": [
+        "1->2",
+        "5->6"
+      ],
+      "boundary_edges_match_edge_bits": true,
+      "entry_flip_edge": "1->2",
+      "exit_flip_edge": "5->6",
+      "interval": {
+        "end": 5,
+        "start": 2
+      },
+      "interval_boundary_vector": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "interval_node_vector": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "pair_index": 0
+    },
+    {
+      "boundary_edges": [
+        "7->8",
+        "9->10"
+      ],
+      "boundary_edges_match_edge_bits": true,
+      "entry_flip_edge": "7->8",
+      "exit_flip_edge": "9->10",
+      "interval": {
+        "end": 9,
+        "start": 8
+      },
+      "interval_boundary_vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "interval_node_vector": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "pair_index": 1
+    }
+  ],
+  "parity_and_endpoint_certificate": {
+    "component_count_from_pairs": 2,
+    "flip_count": 4,
+    "flip_count_equals_two_components": true,
+    "flip_count_even": true,
+    "left_endpoint_bit": 0,
+    "no_endpoint_support": true,
+    "right_endpoint_bit": 0,
+    "scan_returns_to_anchor_state": true
+  },
+  "proof_certificate": {
+    "boundary_inverse_step": "The union of reconstructed intervals recovers the audited node bits, and their GF(2) boundaries recover the audited edge bits.",
+    "chain_step": "The reconstructed intervals match the node-support interval-boundary report, edge-support minimality, and reduced-coboundary node reconstruction.",
+    "pairing_step": "The entry/exit flip pairs (1->2,5->6) and (7->8,9->10) reconstruct intervals [2,5] and [8,9].",
+    "parity_step": "The flip count is even, equals 2*component_count, and the final scan state returns to the b(0)=0 anchor with no endpoint support.",
+    "scan_step": "Starting from b(0)=0, the ordered flip indices [1,5,7,9] toggle the scan state 0->1->0->1->0.",
+    "theoretical_limit": "This is finite path-boundary inverse bookkeeping; it does not derive omega/phi, beta/eta, damping, or transport from strict nadsoliton dynamics."
+  },
+  "reconstruction_certificate": {
+    "edge_bits_from_reconstructed_interval_boundaries": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    "final_scan_state": 0,
+    "has_unclosed_interval": false,
+    "node_bits_from_anchor_scan": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    "node_bits_from_reconstructed_interval_union": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    "ordered_flip_edges": [
+      "1->2",
+      "5->6",
+      "7->8",
+      "9->10"
+    ],
+    "ordered_flip_indices": [
+      1,
+      5,
+      7,
+      9
+    ],
+    "reconstructed_intervals_from_flip_pairs": [
+      {
+        "end": 5,
+        "start": 2
+      },
+      {
+        "end": 9,
+        "start": 8
+      }
+    ]
+  },
+  "result_kind": "SCRATCH_STRICT_COMPLETION_PHASE_SIGN_FLIP_PAIR_INTERVAL_RECONSTRUCTION_CERTIFICATE__BOUNDARY_INVERSE_ON_PATH",
+  "source_reports": {
+    "phase_sign_edge_support_minimality_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_phase_sign_edge_support_minimality_certificate_report.json",
+    "phase_sign_node_support_interval_boundary_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_phase_sign_node_support_interval_boundary_certificate_report.json",
+    "phase_sign_reduced_coboundary_inverse_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_phase_sign_reduced_coboundary_inverse_certificate_report.json",
+    "phase_sign_z2_coboundary_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_phase_sign_z2_coboundary_certificate_report.json"
+  },
+  "status": "ordered-flip-pairs-reconstruct-maximal-node-support-intervals"
+}

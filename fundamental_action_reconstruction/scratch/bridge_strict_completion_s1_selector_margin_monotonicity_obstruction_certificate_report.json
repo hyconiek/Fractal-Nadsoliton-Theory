@@ -1,0 +1,229 @@
+{
+  "blocker_context": {
+    "resolved_locally": [
+      "The existing confidence artifacts are sufficient to evaluate the available S1 surrogate route.",
+      "The statistical confidence margin improves, but the selector margin-to-target remains negative.",
+      "Locked replay does not meet all target floors, so S1 is not exported from this provider class."
+    ],
+    "still_open": [
+      "a new provider class or blocker cut for S1",
+      "strict-local selector margin monotonicity witness",
+      "kernel-alone/global QW-2191 discharge",
+      "strict F_nadsoliton => L_SM + L_GR bridge",
+      "strict ToE closure"
+    ]
+  },
+  "finite_margin_table": {
+    "floor_rows_by_risk": [
+      {
+        "adaptive_certified_floor": 0.0,
+        "baseline_empirical_floor": 0.0,
+        "locked_adaptive_certified_floor": 0.0,
+        "locked_margin_to_target": -0.99,
+        "locked_meets_target": false,
+        "risk_tolerance": 0.01,
+        "target_floor": 0.99
+      },
+      {
+        "adaptive_certified_floor": 0.0,
+        "baseline_empirical_floor": 0.0,
+        "locked_adaptive_certified_floor": 0.0,
+        "locked_margin_to_target": -0.98,
+        "locked_meets_target": false,
+        "risk_tolerance": 0.02,
+        "target_floor": 0.98
+      },
+      {
+        "adaptive_certified_floor": 0.0,
+        "baseline_empirical_floor": 0.0,
+        "locked_adaptive_certified_floor": 0.0,
+        "locked_margin_to_target": -0.95,
+        "locked_meets_target": false,
+        "risk_tolerance": 0.05,
+        "target_floor": 0.95
+      },
+      {
+        "adaptive_certified_floor": 0.0,
+        "baseline_empirical_floor": 0.0,
+        "locked_adaptive_certified_floor": 0.0,
+        "locked_margin_to_target": -0.9,
+        "locked_meets_target": false,
+        "risk_tolerance": 0.1,
+        "target_floor": 0.9
+      }
+    ],
+    "locked_global_summary": {
+      "all_rows_meet_target": false,
+      "worst_margin_to_target": -0.99
+    },
+    "locked_profile": {
+      "adaptive_margin": 0.008177348223186947,
+      "base_trials": 700,
+      "delta": 0.1,
+      "horizon": 36,
+      "n_eff": 22400,
+      "noise_amp": 0.02,
+      "seeds": [
+        12291,
+        12292,
+        12293,
+        12294,
+        12295,
+        12296,
+        12297,
+        12298
+      ],
+      "trial_multiplier": 1,
+      "trials": 700
+    },
+    "sweep_groups_by_delta": [
+      {
+        "adaptive_confidence_margins": [
+          0.016476067556504582,
+          0.011650339096492062,
+          0.008238033778252291
+        ],
+        "confidence_margin_decreases": true,
+        "delta": 0.001,
+        "final_worst_margin_positive": false,
+        "nondecreasing_worst_margin": true,
+        "strictly_improves_worst_margin": false,
+        "trial_multipliers": [
+          1,
+          2,
+          4
+        ],
+        "worst_margins_to_target": [
+          -0.99,
+          -0.99,
+          -0.99
+        ]
+      },
+      {
+        "adaptive_confidence_margins": [
+          0.013755930365986099,
+          0.009726911643318717,
+          0.006877965182993049
+        ],
+        "confidence_margin_decreases": true,
+        "delta": 0.01,
+        "final_worst_margin_positive": false,
+        "nondecreasing_worst_margin": true,
+        "strictly_improves_worst_margin": false,
+        "trial_multipliers": [
+          1,
+          2,
+          4
+        ],
+        "worst_margins_to_target": [
+          -0.99,
+          -0.99,
+          -0.99
+        ]
+      },
+      {
+        "adaptive_confidence_margins": [
+          0.01147805274381432,
+          0.008116208929967964,
+          0.00573902637190716
+        ],
+        "confidence_margin_decreases": true,
+        "delta": 0.05,
+        "final_worst_margin_positive": false,
+        "nondecreasing_worst_margin": true,
+        "strictly_improves_worst_margin": false,
+        "trial_multipliers": [
+          1,
+          2,
+          4
+        ],
+        "worst_margins_to_target": [
+          -0.99,
+          -0.99,
+          -0.99
+        ]
+      },
+      {
+        "adaptive_confidence_margins": [
+          0.010343618242240669,
+          0.007314042601093255,
+          0.0051718091211203346
+        ],
+        "confidence_margin_decreases": true,
+        "delta": 0.1,
+        "final_worst_margin_positive": false,
+        "nondecreasing_worst_margin": true,
+        "strictly_improves_worst_margin": false,
+        "trial_multipliers": [
+          1,
+          2,
+          4
+        ],
+        "worst_margins_to_target": [
+          -0.99,
+          -0.99,
+          -0.99
+        ]
+      }
+    ]
+  },
+  "grep_disambiguation": {
+    "finding": "Repo grep finds prior confidence/replay artifacts and P1445's S1 target, but no strict-completion S1 pass/fail certificate that evaluates monotonic selector margins and locked replay against the closure-plan dependency matrix before this file.",
+    "searched_terms": [
+      "strict-local selector margin monotonicity witness",
+      "selector margin monotonicity",
+      "margin monotonicity witness",
+      "replay-stability",
+      "strict_nu_branch_group_policy_confidence_curve_sweep",
+      "locked confidence profile",
+      "S1 selector obstruction"
+    ]
+  },
+  "hard_limits": [
+    "No strict-local selector margin monotonicity witness is claimed.",
+    "No strict-core selector closure is claimed.",
+    "No QW-2191 selector discharge is claimed.",
+    "No strict F_nadsoliton => L_SM + L_GR bridge is claimed.",
+    "No ToE closure is claimed.",
+    "No unqualified identity K_legacy_ont == K_strict_gate is claimed or used."
+  ],
+  "proof_certificate": {
+    "grep_step": "Repo grep distinguishes this from prior confidence sweeps: those artifacts exist, but no S1 pass/fail obstruction certificate was exported.",
+    "locked_replay_step": "The locked replay profile has all_rows_meet_target=false and worst_margin_to_target=-0.99, so replay-stability at the requested floor is absent.",
+    "next_step": "Continue by changing provider class or blocker cut, as required by the closure-plan dependency certificate.",
+    "sweep_step": "For each delta, the confidence margin decreases with budget, yet the worst selector margin-to-target does not strictly improve and never becomes positive.",
+    "theoretical_limit": "This report is a local S1 obstruction certificate; it does not discharge QW-2191, build F_nadsoliton=>L_SM+L_GR, or close ToE.",
+    "verdict_step": "S1 is a certified local obstruction on the currently available strict nu-branch surrogate provider class; no S1 witness is exported."
+  },
+  "result_kind": "SCRATCH_STRICT_COMPLETION_S1_SELECTOR_MARGIN_MONOTONICITY_OBSTRUCTION_CERTIFICATE__FINITE_PREFLIGHT",
+  "s1_definition": {
+    "provider_class_audited": "strict_nu_branch_group_policy_surrogate_confidence_route",
+    "required_local_pass_conditions": [
+      "monotonic selector-margin growth on a fixed perturbation/confidence grid",
+      "replay-stability under a locked profile",
+      "explicit local-only pass scope with no global closure claim"
+    ],
+    "scope": "local surrogate preflight only; not strict-core selector closure",
+    "source": "P1445"
+  },
+  "s1_obstruction_summary": {
+    "closure_plan_recommends_s1": true,
+    "confidence_margins_decrease_with_budget": true,
+    "locked_replay_meets_all_targets": false,
+    "locked_worst_margin_to_target": -0.99,
+    "p1445_contains_s1_target": true,
+    "s1_obstruction_certified": true,
+    "s1_witness_exported": false,
+    "worst_selector_margins_reach_positive": false,
+    "worst_selector_margins_strictly_improve_with_budget": false
+  },
+  "source_reports": {
+    "P1445_next_honest_step_packet": "fundamental_action_reconstruction/P1445_STRICT_NEXT_HONEST_STEP_F_NADSOLITON_TO_LSM_PLUS_LGR_NO_LEGACY_BRIDGE_PACKET_PL.md",
+    "closure_plan_dependency_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_closure_plan_dependency_certificate_report.json",
+    "p2275_corner_replay_passrate_floor": "fundamental_action_reconstruction/generated/p2275_s1225_strict_nu_branch_group_policy_certified_box_corner_replay_passrate_floor_probe.json",
+    "p2277_adaptive_confidence_margin": "fundamental_action_reconstruction/generated/p2277_s1227_strict_nu_branch_group_policy_adaptive_confidence_margin_certificate_probe.json",
+    "p2278_confidence_curve_sweep": "fundamental_action_reconstruction/generated/p2278_s1228_strict_nu_branch_group_policy_confidence_curve_sweep_probe.json",
+    "p2279_locked_confidence_profile_replay": "fundamental_action_reconstruction/generated/p2279_s1229_strict_nu_branch_group_policy_locked_confidence_profile_corner_replay_probe.json"
+  },
+  "status": "s1-selector-margin-monotonicity-witness-not-exported-local-obstruction-certified"
+}

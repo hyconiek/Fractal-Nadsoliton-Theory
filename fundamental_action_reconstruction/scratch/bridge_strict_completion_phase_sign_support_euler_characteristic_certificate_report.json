@@ -1,0 +1,179 @@
+{
+  "blocker_context": {
+    "resolved_locally": [
+      "The induced 1-node support graph has V=6, E_internal=4, and C=2.",
+      "The Euler characteristic V-E equals the component count C.",
+      "The endpoint-free boundary count is 2*C=4 and equals the audited flip support."
+    ],
+    "still_open": [
+      "strict_phase_frequency_derivation_from_nadsoliton_dynamics",
+      "strict_damping_transport_derivation_from_nadsoliton_dynamics",
+      "QW-2191_selector_obstruction",
+      "strict ToE closure"
+    ]
+  },
+  "boundary_count_certificate": {
+    "all_component_boundary_counts_match_endpoint_formula": true,
+    "boundary_edges": [
+      "1->2",
+      "5->6",
+      "7->8",
+      "9->10"
+    ],
+    "boundary_edges_equal_edge_bit_support": true,
+    "boundary_weight": 4,
+    "boundary_weight_formula_matches": true,
+    "endpoint_touch_count": 0,
+    "predicted_boundary_weight_2C_minus_endpoint_touches": 4
+  },
+  "component_rows": [
+    {
+      "boundary_count_matches_endpoint_formula": true,
+      "boundary_edge_count": 2,
+      "boundary_edges": [
+        "1->2",
+        "5->6"
+      ],
+      "component_index": 0,
+      "component_is_subset_of_support": true,
+      "euler_v_minus_e": 1,
+      "internal_edge_count": 3,
+      "internal_edges": [
+        "2->3",
+        "3->4",
+        "4->5"
+      ],
+      "is_path_tree_component": true,
+      "node_count": 4,
+      "nodes": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "touches_left_endpoint": false,
+      "touches_right_endpoint": false
+    },
+    {
+      "boundary_count_matches_endpoint_formula": true,
+      "boundary_edge_count": 2,
+      "boundary_edges": [
+        "7->8",
+        "9->10"
+      ],
+      "component_index": 1,
+      "component_is_subset_of_support": true,
+      "euler_v_minus_e": 1,
+      "internal_edge_count": 1,
+      "internal_edges": [
+        "8->9"
+      ],
+      "is_path_tree_component": true,
+      "node_count": 2,
+      "nodes": [
+        8,
+        9
+      ],
+      "touches_left_endpoint": false,
+      "touches_right_endpoint": false
+    }
+  ],
+  "euler_characteristic_certificate": {
+    "V_minus_E_equals_component_count": true,
+    "all_components_are_path_trees": true,
+    "component_count_C": 2,
+    "euler_characteristic_V_minus_E": 2,
+    "support_internal_edge_count_E": 4,
+    "support_vertex_count_V": 6
+  },
+  "grep_disambiguation": {
+    "finding": "Existing strict-completion scratch reports identify intervals and boundaries, but do not export the induced support graph Euler characteristic and boundary-count certificate before this file.",
+    "searched_terms": [
+      "support Euler",
+      "Euler characteristic",
+      "induced support",
+      "support graph",
+      "internal edge",
+      "V-E"
+    ]
+  },
+  "hard_limits": [
+    "K_strict_gate remains the current live/full operational kernel.",
+    "No unqualified identity K_legacy_ont == K_strict_gate is claimed.",
+    "No proof derives A(d), P(d), D(d), omega/phi, beta/eta, or the transport cocycle from strict nadsoliton dynamics.",
+    "No beta_tors -> chi_11 theorem is claimed.",
+    "No legacy physical-role transfer to K_strict_gate is claimed.",
+    "No QW-2191 selector discharge is claimed.",
+    "No ToE closure is claimed."
+  ],
+  "proof_certificate": {
+    "boundary_step": "Neither component touches a path endpoint, so boundary_weight=2*C=4 and the boundary edges are 1->2, 5->6, 7->8, and 9->10.",
+    "chain_step": "The support graph components match interval-boundary rows, flip-pair reconstructed intervals, and edge-support minimality.",
+    "euler_step": "The induced support graph has V=6, E=4, C=2, hence V-E=C=2.",
+    "support_step": "The audited 1-node support is {2,3,4,5,8,9} with internal path edges 2->3, 3->4, 4->5, and 8->9.",
+    "theoretical_limit": "This is finite support-graph bookkeeping; it does not derive omega/phi, beta/eta, damping, or transport from strict nadsoliton dynamics."
+  },
+  "result_kind": "SCRATCH_STRICT_COMPLETION_PHASE_SIGN_SUPPORT_EULER_CHARACTERISTIC_CERTIFICATE__INDUCED_PATH_SUPPORT_GRAPH",
+  "source_reports": {
+    "phase_sign_edge_support_minimality_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_phase_sign_edge_support_minimality_certificate_report.json",
+    "phase_sign_flip_pair_interval_reconstruction_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_phase_sign_flip_pair_interval_reconstruction_certificate_report.json",
+    "phase_sign_node_support_interval_boundary_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_phase_sign_node_support_interval_boundary_certificate_report.json",
+    "phase_sign_z2_coboundary_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_phase_sign_z2_coboundary_certificate_report.json"
+  },
+  "status": "support-induced-graph-euler-characteristic-and-boundary-count-certified",
+  "support_euler_characteristic_summary": {
+    "all_components_are_path_trees": true,
+    "boundary_edges_equal_edge_bit_support": true,
+    "boundary_weight_formula_matches": true,
+    "component_count": 2,
+    "euler_characteristic_equals_component_count": true,
+    "matches_edge_support_minimality": true,
+    "matches_expected_boundary_edges": true,
+    "matches_expected_components": true,
+    "matches_expected_internal_edges": true,
+    "matches_expected_support_nodes": true,
+    "matches_flip_pair_intervals": true,
+    "matches_interval_boundary_components": true
+  },
+  "support_graph_definition": {
+    "boundary_edges": [
+      "1->2",
+      "5->6",
+      "7->8",
+      "9->10"
+    ],
+    "connected_components": [
+      [
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        8,
+        9
+      ]
+    ],
+    "edge_bits_on_boundary_edges": {
+      "1->2": 1,
+      "5->6": 1,
+      "7->8": 1,
+      "9->10": 1
+    },
+    "graph": "induced subgraph of finite path 0--1--...--11 on nodes with node_bit=1",
+    "internal_edges": [
+      "2->3",
+      "3->4",
+      "4->5",
+      "8->9"
+    ],
+    "support_nodes": [
+      2,
+      3,
+      4,
+      5,
+      8,
+      9
+    ]
+  }
+}
