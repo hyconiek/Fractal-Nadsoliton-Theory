@@ -1,0 +1,228 @@
+{
+  "closed_form_bathtub_corner_reduction_theorem": {
+    "artifact_replay": {
+      "p2376_packet_id": "P2376",
+      "p2381_packet_id": "P2381",
+      "p2382_packet_id": "P2382"
+    },
+    "cap_threshold_corner_reduction_certificate": {
+      "audited_cap_band": [
+        1.5,
+        1.6
+      ],
+      "corner_reduction_statement": "On the audited cap band, the d5 chamber margin increases with eta, decreases with beta_tors, and increases with M; hence the rectangle-uniform cap threshold is attained at (eta,beta_tors)=(9/5,0.1).",
+      "corner_rows": [
+        {
+          "beta_tors": 0.0,
+          "eta": 1.8,
+          "margin_M_1_5": 0.1720465479040243,
+          "margin_M_1_6": 0.30230299088399937,
+          "threshold": 1.3707370853296428
+        },
+        {
+          "beta_tors": 0.1,
+          "eta": 1.8,
+          "margin_M_1_5": -0.0773742352764657,
+          "margin_M_1_6": 0.025695325384091916,
+          "threshold": 1.574821357435363
+        },
+        {
+          "beta_tors": 0.0,
+          "eta": 2.0,
+          "margin_M_1_5": 0.62297833580763,
+          "margin_M_1_6": 0.7811888281434753,
+          "threshold": 1.1214780007673735
+        },
+        {
+          "beta_tors": 0.1,
+          "eta": 2.0,
+          "margin_M_1_5": 0.3686492704567952,
+          "margin_M_1_6": 0.4983671782657728,
+          "threshold": 1.2279789590960084
+        }
+      ],
+      "derivative_audits": {
+        "margin_d_beta_on_cap_band": {
+          "grid": 96,
+          "max": {
+            "beta_tors": 0.10000000000000002,
+            "cap": 1.5,
+            "eta": 1.8,
+            "value": -1.0684748650283744
+          },
+          "min": {
+            "beta_tors": 0.0,
+            "cap": 1.6,
+            "eta": 2.0,
+            "value": -2.5795257374204743
+          }
+        },
+        "margin_d_cap_on_cap_band": {
+          "grid": 96,
+          "max": {
+            "beta_tors": 0.0,
+            "cap": 1.5,
+            "eta": 2.0,
+            "value": 1.595806527170946
+          },
+          "min": {
+            "beta_tors": 0.10000000000000002,
+            "cap": 1.6,
+            "eta": 1.8,
+            "value": 1.0171214582711852
+          }
+        },
+        "margin_d_eta_on_cap_band": {
+          "grid": 96,
+          "max": {
+            "beta_tors": 0.0,
+            "cap": 1.6,
+            "eta": 2.0,
+            "value": 2.420207387118948
+          },
+          "min": {
+            "beta_tors": 0.10000000000000002,
+            "cap": 1.5,
+            "eta": 1.8,
+            "value": 2.2015306672916366
+          }
+        }
+      },
+      "negative_at_M_1_5": true,
+      "positive_at_M_1_6": true,
+      "worst_corner": {
+        "beta_tors": 0.1,
+        "eta": 1.8
+      },
+      "worst_corner_margin_M_1_6": 0.025695325384091916,
+      "worst_corner_threshold": 1.574821357435363
+    },
+    "closed_form_qprime_ratio_certificate": {
+      "R_min_closed_form_corner": 1.8953947080453295,
+      "R_min_square_minus_3": 0.5925210992862397,
+      "closed_form_R": "R=A5/A1=(Delta5*(u1+s*Delta1))/(Delta1*(u5+s*Delta5))",
+      "dense_replay_worst_R": {
+        "R": 1.8953947080453295,
+        "beta_tors": 0.0,
+        "eta": 1.8,
+        "qprime": -0.14813027482155994,
+        "s": 1.0
+      },
+      "monotonicity_proof_notes": [
+        "For the audited rectangle, A5>A1, so R decreases in s and the s-worst boundary is s=1.",
+        "At s=1, dR/d(5^eta)>0 and dR/d(beta_tors)>0 because 5^eta>5; hence the global lower corner is eta=9/5,beta_tors=0.",
+        "Therefore q'(s)=A1^2*(3-R^2)<0 follows from R_min^2>3, without relying on the P2382 box grid as the primary proof object."
+      ],
+      "qprime_factor_upper_bound_3_minus_Rmin_square": -0.5925210992862397,
+      "s1_boundary_R": "R(1)=2*(5^eta-5*beta_tors)/((1-beta_tors)*(1+5^eta))",
+      "sample_boundaries": [
+        {
+          "R_s0": 18.11949159194239,
+          "R_s1": 1.8953947080453295,
+          "beta_tors": 0.0,
+          "eta": 1.8,
+          "qprime_s1": -0.14813027482155994
+        },
+        {
+          "R_s0": 14.356622778619725,
+          "R_s1": 2.047880068964438,
+          "beta_tors": 0.1,
+          "eta": 1.8,
+          "qprime_s1": -0.24174708731451278
+        },
+        {
+          "R_s0": 21.28349806301961,
+          "R_s1": 1.9102474847376372,
+          "beta_tors": 0.0,
+          "eta": 1.9,
+          "qprime_s1": -0.16226136323661733
+        },
+        {
+          "R_s0": 16.93470212542339,
+          "R_s1": 2.072634696784951,
+          "beta_tors": 0.1,
+          "eta": 1.9,
+          "qprime_s1": -0.26240245372916104
+        },
+        {
+          "R_s0": 25.0,
+          "R_s1": 1.9230769230769231,
+          "beta_tors": 0.0,
+          "eta": 2.0,
+          "qprime_s1": -0.17455621301775148
+        },
+        {
+          "R_s0": 19.962962962962962,
+          "R_s1": 2.094017094017094,
+          "beta_tors": 0.1,
+          "eta": 2.0,
+          "qprime_s1": -0.2804437869822485
+        }
+      ],
+      "sqrt3": 1.7320508075688772
+    },
+    "docs": {
+      "equation_sheet": "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md",
+      "lagrangian_eom_draft": "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md"
+    },
+    "probe_id": "P2383_S1333_CLOSED_FORM_BATHTUB_CORNER_REDUCTION_THEOREM",
+    "source_artifacts": {
+      "P2376_RECTANGLE_ROBUSTNESS": "fundamental_action_reconstruction/generated/p2376_s1326_damping_compression_eta_beta_rectangle_robustness_theorem.json",
+      "P2381_AFFINE_SOURCE_OBLIGATION": "fundamental_action_reconstruction/generated/p2381_s1331_affine_frontload_source_obligation_theorem.json",
+      "P2382_BOUNDED_DENSITY_BATHTUB": "fundamental_action_reconstruction/generated/p2382_s1332_bounded_density_bathtub_frontload_certificate.json"
+    },
+    "source_burden_translation": {
+      "M_1_6_barycenter": 0.3125,
+      "M_1_6_barycenter_shift_from_uniform": 0.1875,
+      "M_1_6_early_interval_length": 0.625,
+      "M_1_6_early_mass_on_first_half": 0.8,
+      "equivalent_early_interval_length_lt": 0.6349926582330111,
+      "interpretation": "If a future strict source theorem chooses to use the bounded-density route, it must now source at least this cap/frontload scale, or leave it as an explicit non-strict premise. The certificate does not itself derive the density from strict dynamics.",
+      "minimal_rectangle_cap_gt": 1.574821357435363
+    },
+    "theorem_export": {
+      "claim": "The P2382 bathtub result admits a closed ratio reduction / closed-form proof core: q'(s)<0 follows from the ratio lower bound R_min=2*5^(9/5)/(1+5^(9/5))>sqrt(3), and the audited M-cap source burden reduces to the single worst corner (eta,beta_tors)=(9/5,0.1) on the cap band [1.5,1.6].",
+      "name": "P2383/S1333 closed-form bathtub corner reduction theorem",
+      "not_licensed": [
+        "strict source theorem deriving the cap M or bang-bang density",
+        "promotion of rho_M or W_M into L_total",
+        "claim that the cap/frontload premise is strict-core supplied",
+        "QW-2191 discharge or selector closure",
+        "beta_tors -> chi11 theorem",
+        "legacy physical-role transfer",
+        "ToE closure"
+      ],
+      "positive_content": [
+        "Replaces the q'(s)<0 grid witness by an algebraic ratio lower-bound proof replay.",
+        "Exports derivative-form audits showing that the cap threshold is controlled by the eta-low/beta-high corner on the audited band.",
+        "Translates M=1.6 into explicit early interval, early-half mass, and barycenter obligations for future source theorems."
+      ]
+    },
+    "theorem_fingerprint_sha256": "975e6dc74e0c2b084d79acae72d973b42448029ebc38dc559b1ea76d1fe6a7c3"
+  },
+  "gatekeeper_checks": {
+    "cap_test_positive_and_lower_control_negative": true,
+    "dense_replay_respects_ratio_bound": true,
+    "docs_updated_with_p2383_corner_reduction": true,
+    "margin_decreases_with_beta_on_cap_band": true,
+    "margin_increases_with_cap_on_cap_band": true,
+    "margin_increases_with_eta_on_cap_band": true,
+    "no_qw2191_discharge_claimed": true,
+    "p2376_loaded": true,
+    "p2381_loaded": true,
+    "p2382_loaded": true,
+    "qprime_closed_form_negative": true,
+    "ratio_bound_beats_sqrt3": true,
+    "source_artifacts_present": true,
+    "worst_corner_threshold_matches_p2382": true
+  },
+  "global_status": "OPEN_PROGRESS_WITH_TRACE_NO_SELECTOR_OR_TOE_CLOSURE",
+  "packet_id": "P2383",
+  "produced_by": "p2383_s1333_closed_form_bathtub_corner_reduction_theorem.py",
+  "recommended_next_honest_step": "Use the P2383 corner-reduced source burden as the acceptance target for a real source theorem: derive a strict bounded density with M>1.574821357435363, or mark the cap/frontload as a non-strict premise. Do not promote the variational optimizer into L_total without such a source.",
+  "result_kind": "CLOSED_FORM_BATHTUB_CORNER_REDUCTION_THEOREM",
+  "schema_version": "p2383_s1333_v1",
+  "stage_id": "S1333",
+  "status": "OPEN_PROGRESS_CLOSED_FORM_BATHTUB_CORNER_REDUCTION_SOURCE_STILL_OPEN",
+  "timestamp_utc": "2026-06-01T00:00:00+00:00"
+}

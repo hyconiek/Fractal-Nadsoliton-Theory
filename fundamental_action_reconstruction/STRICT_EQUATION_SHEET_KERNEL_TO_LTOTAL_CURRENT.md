@@ -584,3 +584,81 @@ M > 1.5748213574353633.
 ```
 
 Thus `M=1.6` is rectangle-uniformly sufficient and selects the 12 d5 supports, while a just-below-threshold cap at the worst corner fails the d5 chamber.  This is still not a strict source theorem: it only says that any future bounded-density source may be checked against the explicit cap/frontload burden, and that the optimal candidate under such a cap is known.  No `L_total` promotion, legacy role transfer, `beta_tors -> chi11` theorem, QW-2191 discharge, selector closure, or ToE closure follows.
+
+## P2383/S1333 closed-form bathtub corner reduction theorem
+
+`P2383/S1333` makes the P2382 bounded-density result more proof-like by replacing the primary `q'(s)<0` grid witness with a closed ratio reduction.  With
+
+```text
+A_s(d)=(d^eta-beta_tors*d)/(1+beta_tors*d+s*(d^eta-beta_tors*d)),
+R=A_s(5)/A_s(1),
+```
+
+one has
+
+```text
+q'(s)=A_s(1)^2*(3-R^2).
+```
+
+On the P2376 rectangle the ratio is minimized at `s=1`, `eta=9/5`, `beta_tors=0`, giving
+
+```text
+R_min = 2*5^(9/5)/(1+5^(9/5)) > sqrt(3).
+```
+
+Hence the bathtub monotonicity needed by P2382 is certified by a closed-form inequality rather than by treating the interval grid as the proof object.
+
+P2383 also derivative-audits the capped chamber margin on the cap band `[1.5,1.6]`: the margin increases with `eta`, decreases with `beta_tors`, and increases with `M`.  The rectangle-uniform cap burden therefore reduces to the single corner `(eta,beta_tors)=(9/5,0.1)`, where the threshold remains
+
+```text
+M > 1.574821357435363.
+```
+
+For the replayed sufficient cap `M=1.6`, the source burden can now be stated as concrete frontload data: early interval length `0.625`, early-half mass `0.8`, and barycenter shift from uniform `0.1875`.  This is still only an acceptance/corner-reduction theorem for a future source theorem; it does not source the cap, promote the bang-bang profile into `L_total`, transfer legacy physical roles, prove `beta_tors -> chi11`, discharge QW-2191, close the selector, or close ToE.
+
+## P2384/S1334 symbolic bathtub inequality proof packet
+
+`P2384/S1334` responds to the proof burden left by P2383 by extracting a symbolic inequality core from the bathtub/corner-reduction lane.  The monotonicity step no longer needs to rest on a grid-first reading because the ratio floor is implied by the coarse chain
+
+```text
+eta >= 9/5 > 3/2,
+5^eta >= 5^(3/2)=sqrt(125),
+sqrt(125) > 3 + 2*sqrt(3),
+2*x/(1+x) > sqrt(3).
+```
+
+The last comparison is the algebraic condition equivalent to `R>sqrt(3)`, and `P2384` records an integer-backed certificate for `sqrt(125) > 3+2*sqrt(3)`.
+
+For the cap-corner direction, P2384 also records closed derivative identities rather than only numeric derivative samples:
+
+```text
+dW_d/deta = d^eta*log(d)/(1+beta_tors*d+(d^eta-beta_tors*d)/M),
+dW_d/dbeta_tors = -d*(1+d^eta)/((1+beta_tors*d)*(M*(1+beta_tors*d)+d^eta-beta_tors*d)),
+dW_d/dM = h(x_d),  h(x)=log(1+x)-x/(1+x).
+```
+
+Coarse endpoint inequalities on `[1.5,1.6]` prove the required direction signs: eta increases the d5 margin, beta_tors decreases it, and `M` increases it.  Thus the P2383 corner `(eta,beta_tors)=(9/5,0.1)` remains the proof-side acceptance target, while the strict source obligation remains open.  No `L_total` promotion, legacy role transfer, `beta_tors -> chi11` theorem, QW-2191 discharge, selector closure, or ToE closure follows.
+
+## P2385/S1335 exact Z12 support chamber theorem
+
+`P2385/S1335` separates the finite support-selection step from the analytic bounded-density/cap proof.  After P2382/P2384 have established the d5 chamber condition
+
+```text
+b>0, a>=0, a/b<1/3,
+```
+
+P2385 proves the exact finite consequence for all `binomial(12,5)=792` supports scored by
+
+```text
+Score(S)=a*h1(S)+b*h5(S).
+```
+
+The target pair `(h1,h5)=(0,4)` has score `4b`.  For every other observed pair the normalized gap is
+
+```text
+4 - h5 - (a/b)*h1.
+```
+
+At the boundary `a/b=1/3`, the integer numerator `3*(4-h5)-h1` is nonnegative for every observed pair, and the only non-target zero is `(h1,h5)=(3,3)`.  Hence the inequality is strict throughout `a/b<1/3`, and the unique maximizers are exactly the 12 `(0,4)` supports.  These 12 supports are also identified as length-5 paths in the step-5 cycle on `Z12`.
+
+This closes the finite support chamber handoff but not the source question.  The cap/frontload density still must be derived by a future strict source theorem or kept as an explicit non-strict premise.  No `L_total` promotion, legacy role transfer, `beta_tors -> chi11` theorem, QW-2191 discharge, selector closure, or ToE closure follows.

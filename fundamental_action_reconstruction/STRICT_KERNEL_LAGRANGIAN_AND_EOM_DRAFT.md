@@ -513,3 +513,62 @@ W_M(d)=M*log((1+beta_tors*d+(d^eta-beta_tors*d)/M)/(1+beta_tors*d)).
 The worst-corner cap threshold is approximately `1.5748213574353633`, and interval arithmetic certifies that `M=1.6` has positive d5 chamber margin on the whole audited rectangle.  The theorem also keeps a negative control: just below the worst-corner threshold the d5 chamber fails, while `M=1.6` selects the 12 d5 supports.
 
 This is a variational reduction and acceptance certificate for bounded normalized profiles, not the missing strict source theorem.  A future strict theorem must still derive the cap and the early bang-bang/frontloaded density from nadsoliton dynamics, or the profile remains an explicit non-strict premise.  There is still no `L_total` promotion, legacy role transfer, `beta_tors -> chi11` theorem, QW-2191 discharge, selector closure, or ToE closure.
+
+## P2383/S1333 closed-form bathtub corner reduction, still source-open
+
+`P2383/S1333` strengthens the bounded-density lane by extracting a closed proof core from the P2382 bathtub computation.  For
+
+```text
+A_s(d)=Delta_d/(u_d+s*Delta_d),
+Delta_d=d^eta-beta_tors*d,
+u_d=1+beta_tors*d,
+R=A_s(5)/A_s(1),
+```
+
+the derivative of the d5-vs-h1 contrast is
+
+```text
+q'(s)=A_s(1)^2*(3-R^2).
+```
+
+The ratio reduction shows that the worst ratio is attained at the boundary `s=1`, `eta=9/5`, `beta_tors=0`, with
+
+```text
+R_min=2*5^(9/5)/(1+5^(9/5)) > sqrt(3),
+```
+
+so the P2382 bathtub ordering no longer depends on a grid-first monotonicity claim.
+
+For the cap threshold, P2383 audits the derivatives of the chamber margin on `[1.5,1.6]` and finds the same one-corner control rule: margin increases with `eta`, decreases with `beta_tors`, and increases with `M`.  Thus the rectangle threshold is still the corner value
+
+```text
+M > 1.574821357435363.
+```
+
+The replayed cap `M=1.6` corresponds to a bang-bang support interval of length `0.625`, early-half mass `0.8`, and transport barycenter `0.3125` (shift `0.1875` from the uniform barycenter).  These are sharper source targets, not strict sourced dynamics.  No `L_total` promotion, legacy role transfer, `beta_tors -> chi11` theorem, QW-2191 discharge, selector closure, or ToE closure follows.
+
+## P2384/S1334 symbolic bathtub inequality proof packet, still source-open
+
+`P2384/S1334` is the proof-side clean-up of the P2383 bounded-density corner reduction.  It replaces the informal reliance on derivative grids with explicit inequality identities wherever the current lane allows them.  The ratio proof uses
+
+```text
+5^eta >= 5^(3/2)=sqrt(125) > 3+2*sqrt(3),
+```
+
+which is sufficient for the closed ratio lower bound `R>sqrt(3)` and hence for `q'(s)=A_s(1)^2*(3-R^2)<0`.
+
+For the one-corner cap reduction, P2384 records derivative identities for `W_M(d)` in the `eta`, `beta_tors`, and `M` directions and then checks coarse endpoint gaps on the audited cap band `[1.5,1.6]`.  In particular, it certifies the beta-direction sign through `N5>3*N1` and the cap-direction sign through `h(x5)>3*h(x1)`, with positive margins large enough to avoid treating the dense derivative replay as the proof object.
+
+The output is still not a sourced strict density.  It sharpens the acceptance proof for a future source theorem: that theorem must derive the bounded front-loaded density/cap, or leave it as a non-strict premise.  There is still no `L_total` promotion, legacy role transfer, `beta_tors -> chi11` theorem, QW-2191 discharge, selector closure, or ToE closure.
+
+## P2385/S1335 exact Z12 support chamber theorem, still source-open
+
+`P2385/S1335` finishes the finite support-selection side of the P2382-P2384 bounded-density lane.  It does not add a new dynamical source; it proves that once the analytic lane supplies
+
+```text
+b>0, a>=0, a/b<1/3,
+```
+
+the finite `Z12` support maximization is no longer an empirical enumeration claim.  Among all 792 five-node supports, the `(h1,h5)=(0,4)` class has score `4b`, and every other `(h1,h5)` class is beaten by the integer gap test `3*(4-h5)-h1>=0`, with only the non-target `(3,3)` class tying at the excluded boundary `a/b=1/3`.
+
+Thus the 12 d5 supports used by P2382 are exactly the length-5 paths in the step-5 cycle.  The remaining source burden is unchanged: a strict theorem must still derive the bounded front-loaded density/cap, or the cap remains a non-strict premise.  There is still no `L_total` promotion, legacy role transfer, `beta_tors -> chi11` theorem, QW-2191 discharge, selector closure, or ToE closure.
