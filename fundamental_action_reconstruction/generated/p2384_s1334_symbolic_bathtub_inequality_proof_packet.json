@@ -1,0 +1,116 @@
+{
+  "gatekeeper_checks": {
+    "beta_derivative_sign_passes": true,
+    "cap_derivative_sign_passes": true,
+    "docs_updated_with_p2384_symbolic_packet": true,
+    "eta_derivative_sign_passes": true,
+    "no_qw2191_discharge_claimed": true,
+    "p2382_loaded": true,
+    "p2383_loaded": true,
+    "ratio_symbolic_proof_passes": true,
+    "source_artifacts_present": true,
+    "source_target_not_promoted": true
+  },
+  "global_status": "OPEN_PROGRESS_WITH_TRACE_NO_SELECTOR_OR_TOE_CLOSURE",
+  "packet_id": "P2384",
+  "produced_by": "p2384_s1334_symbolic_bathtub_inequality_proof_packet.py",
+  "recommended_next_honest_step": "Use the symbolic P2384 inequalities as the proof-side acceptance kernel for any future strict source theorem. The remaining open task is still to derive the bounded front-loaded density/cap from a real strict source, not to add more optimizer replays.",
+  "result_kind": "SYMBOLIC_BATHTUB_INEQUALITY_PROOF_PACKET",
+  "schema_version": "p2384_s1334_v1",
+  "stage_id": "S1334",
+  "status": "OPEN_PROGRESS_SYMBOLIC_BATHTUB_INEQUALITY_PROOF_SOURCE_STILL_OPEN",
+  "symbolic_bathtub_inequality_proof_packet": {
+    "artifact_replay": {
+      "p2382_packet_id": "P2382",
+      "p2383_packet_id": "P2383"
+    },
+    "beta_tors_derivative_sign_proof": {
+      "coarse_lower_N5": "3.1039814949405757301853178046162302479753196963436893275333213168479736341442150",
+      "coarse_upper_3N1": "2.4",
+      "conclusion": "Because N5>3*N1 on the audited band, the capped chamber margin decreases with beta_tors.",
+      "derivative_identity": "dW_d/dbeta_tors = -N_d, where N_d=d*(1+d^eta)/((1+beta_tors*d)*(M*(1+beta_tors*d)+d^eta-beta_tors*d)).",
+      "margin_derivative": "d/d beta_tors [W5-3W1] = -N5+3*N1",
+      "passes": true,
+      "positive_gap_N5_minus_3N1": "0.7039814949405757301853178046162302479753196963436893275333213168479736341442150"
+    },
+    "cap_derivative_sign_proof": {
+      "coarse_lower_h_x5": "0.87912306433454140357813351289224062165788513491470675948673470417176470417998837",
+      "coarse_lower_x5": "4.4501416197912285341857784765234921571679549158573452588977025946052519284120933",
+      "coarse_upper_3h_x1": "0.33247687129797204961654228891098580463433238933730481053386067351005408346714649",
+      "coarse_upper_x1": "0.66666666666666666666666666666666666666666666666666666666666666666666666666666667",
+      "conclusion": "Because h(x5)>3*h(x1) on the audited band, the capped chamber margin increases with M.",
+      "derivative_identity": "dW_d/dM = h(x_d), h(x)=log(1+x)-x/(1+x), x_d=(d^eta-beta_tors*d)/(M*(1+beta_tors*d)).",
+      "monotonic_h_note": "h'(x)=x/(1+x)^2>0 for x>0.",
+      "passes": true,
+      "positive_gap_h5_minus_3h1": "0.54664619303656935396159122398125481702355274557740194895287403066171062071284188"
+    },
+    "docs": {
+      "equation_sheet": "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md",
+      "lagrangian_eom_draft": "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md"
+    },
+    "eta_derivative_sign_proof": {
+      "conclusion": "d/deta [W5-3W1] > 0, so the capped chamber margin increases with eta.",
+      "d1_term": "For d=1, log(1)=0, so dW1/deta=0.",
+      "d5_term": "For d=5, every factor is positive on the audited rectangle and cap band.",
+      "derivative_identity": "dW_d/deta = d^eta*log(d)/(1+beta_tors*d+(d^eta-beta_tors*d)/M).",
+      "passes": true
+    },
+    "probe_id": "P2384_S1334_SYMBOLIC_BATHTUB_INEQUALITY_PROOF_PACKET",
+    "source_artifacts": {
+      "P2382_BOUNDED_DENSITY_BATHTUB": "fundamental_action_reconstruction/generated/p2382_s1332_bounded_density_bathtub_frontload_certificate.json",
+      "P2383_CORNER_REDUCTION": "fundamental_action_reconstruction/generated/p2383_s1333_closed_form_bathtub_corner_reduction_theorem.json"
+    },
+    "source_target_translation": {
+      "barycenter": "0.3125",
+      "barycenter_shift_from_uniform": "0.1875",
+      "cap_replay_M": "1.6",
+      "early_half_mass": "0.8",
+      "early_interval_length": "0.625",
+      "source_theorem_obligation": "A future strict source theorem using this lane must source a bounded density with at least this cap/frontload scale; otherwise the cap remains a non-strict premise."
+    },
+    "symbolic_ratio_proof": {
+      "coarse_exponent_step": "Since eta>=9/5>3/2, 5^eta >= 5^(3/2)=sqrt(125).",
+      "logical_chain": [
+        "R(s) decreases in s because d/ds[(u1+s*Delta1)/(u5+s*Delta5)] has numerator Delta1*u5-Delta5*u1<0; the coarse Delta5>=sqrt(125)-0.5 and Delta1<=1 beat u5/u1<=1.5.",
+        "At s=1, R=2*(x-5*beta_tors)/((1-beta_tors)*(1+x)); it is increasing in x=5^eta and in beta_tors for x>5, so the lower corner is beta_tors=0 and eta minimized.",
+        "The coarser eta>=3/2 bound already gives R>sqrt(3); therefore q'(s)<0 without a grid-first proof premise."
+      ],
+      "p2383_numeric_rmin_replay": "1.8953947080453295",
+      "passes": true,
+      "proof_goal": "q'(s)=A1(s)^2*(3-R(s)^2)<0 on the P2376 rectangle",
+      "ratio_floor_sufficient_condition": "2*x/(1+x)>sqrt(3) is equivalent to x>3+2*sqrt(3).",
+      "rmin_lower_from_coarse_bound": "1.8358009695564685728702279299410261100451114226119737319136373189185063769646931",
+      "rmin_lower_square_minus_3": "0.3701651998244700518960803626654278630851267040805392415872472537036547458253754",
+      "sqrt125_gt_threshold": {
+        "integer_certificate": {
+          "claim": "sqrt(125) > 3+2*sqrt(3)",
+          "equivalent_integer_check": "104 > 12*sqrt(3); squaring is legal because both sides are positive",
+          "integer_margin_after_squaring": 10384
+        },
+        "margin": "4.7162382723611938949909756606446364433174812904368673652428722681487385943714240",
+        "sqrt125": "11.180339887498948482045868343656381177203091798057628621354486227052604628189024",
+        "three_plus_two_sqrt3": "6.4641016151377545870548926830117447338856105076207612561116139589038660338176000"
+      }
+    },
+    "theorem_export": {
+      "claim": "The P2383 corner-reduction lane has a symbolic inequality core: a coarse 5^eta>=sqrt(125) bound proves the q'(s)<0 ratio floor, and closed derivative identities with coarse endpoint inequalities certify the eta/beta_tors/M corner-direction signs on the audited cap band.",
+      "name": "P2384/S1334 symbolic bathtub inequality proof packet",
+      "not_licensed": [
+        "strict source theorem deriving the cap M or bang-bang density",
+        "promotion of rho_M or W_M into L_total",
+        "claim that the cap/frontload premise is strict-core supplied",
+        "QW-2191 discharge or selector closure",
+        "beta_tors -> chi11 theorem",
+        "legacy physical-role transfer",
+        "ToE closure"
+      ],
+      "positive_content": [
+        "Exports an integer-backed proof that sqrt(125)>3+2*sqrt(3), which is sufficient for R>sqrt(3).",
+        "Replaces the beta_tors and M derivative sign claims with explicit N_d and h(x) identities plus positive coarse gaps.",
+        "Keeps the bounded-density source target as an obligation rather than a sourced strict theorem."
+      ]
+    },
+    "theorem_fingerprint_sha256": "b8d95a4c7ef9e7748a712da8e316df475075e76e7a8956691e51bf28e94cee66"
+  },
+  "timestamp_utc": "2026-06-01T00:00:00+00:00"
+}
