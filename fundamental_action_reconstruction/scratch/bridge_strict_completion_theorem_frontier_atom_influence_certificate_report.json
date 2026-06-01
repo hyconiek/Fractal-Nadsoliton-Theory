@@ -1,0 +1,189 @@
+{
+  "atom_influence_order": [
+    "chi11_selector_source",
+    "strict_damping_beta_eta_source",
+    "strict_dynamical_source_for_A_P_D",
+    "strict_phase_frequency_source",
+    "alpha_geo_electroweak_role_theorem",
+    "beta_power_hierarchy_successor_theorem",
+    "beta_tors_strict_role_theorem"
+  ],
+  "atom_influence_rows": [
+    {
+      "atom": "alpha_geo_electroweak_role_theorem",
+      "bridge_critical_count": 0,
+      "exported_now": false,
+      "normalized_total_critical_count": 0.03515625,
+      "role_transfer_critical_count": 8,
+      "selector_qw2191_critical_count": 0,
+      "target_memberships": [
+        "role_transfer_theorem_level_closure",
+        "toe_closure"
+      ],
+      "toe_critical_count": 1,
+      "total_critical_count": 9
+    },
+    {
+      "atom": "beta_power_hierarchy_successor_theorem",
+      "bridge_critical_count": 0,
+      "exported_now": false,
+      "normalized_total_critical_count": 0.03515625,
+      "role_transfer_critical_count": 8,
+      "selector_qw2191_critical_count": 0,
+      "target_memberships": [
+        "role_transfer_theorem_level_closure",
+        "toe_closure"
+      ],
+      "toe_critical_count": 1,
+      "total_critical_count": 9
+    },
+    {
+      "atom": "beta_tors_strict_role_theorem",
+      "bridge_critical_count": 0,
+      "exported_now": false,
+      "normalized_total_critical_count": 0.03515625,
+      "role_transfer_critical_count": 8,
+      "selector_qw2191_critical_count": 0,
+      "target_memberships": [
+        "role_transfer_theorem_level_closure",
+        "toe_closure"
+      ],
+      "toe_critical_count": 1,
+      "total_critical_count": 9
+    },
+    {
+      "atom": "chi11_selector_source",
+      "bridge_critical_count": 0,
+      "exported_now": false,
+      "normalized_total_critical_count": 0.28515625,
+      "role_transfer_critical_count": 8,
+      "selector_qw2191_critical_count": 64,
+      "target_memberships": [
+        "role_transfer_theorem_level_closure",
+        "selector_qw2191_closure",
+        "toe_closure"
+      ],
+      "toe_critical_count": 1,
+      "total_critical_count": 73
+    },
+    {
+      "atom": "strict_damping_beta_eta_source",
+      "bridge_critical_count": 16,
+      "exported_now": false,
+      "normalized_total_critical_count": 0.06640625,
+      "role_transfer_critical_count": 0,
+      "selector_qw2191_critical_count": 0,
+      "target_memberships": [
+        "bridge_theorem_level_closure",
+        "toe_closure"
+      ],
+      "toe_critical_count": 1,
+      "total_critical_count": 17
+    },
+    {
+      "atom": "strict_dynamical_source_for_A_P_D",
+      "bridge_critical_count": 16,
+      "exported_now": false,
+      "normalized_total_critical_count": 0.06640625,
+      "role_transfer_critical_count": 0,
+      "selector_qw2191_critical_count": 0,
+      "target_memberships": [
+        "bridge_theorem_level_closure",
+        "toe_closure"
+      ],
+      "toe_critical_count": 1,
+      "total_critical_count": 17
+    },
+    {
+      "atom": "strict_phase_frequency_source",
+      "bridge_critical_count": 16,
+      "exported_now": false,
+      "normalized_total_critical_count": 0.06640625,
+      "role_transfer_critical_count": 0,
+      "selector_qw2191_critical_count": 0,
+      "target_memberships": [
+        "bridge_theorem_level_closure",
+        "toe_closure"
+      ],
+      "toe_critical_count": 1,
+      "total_critical_count": 17
+    }
+  ],
+  "cross_checks": {
+    "atom_set_matches_truth_table_and_cut": true,
+    "critical_counts_match_closed_forms": true,
+    "limits_preserved": true,
+    "source_reports_present": true,
+    "toe_criticality_is_uniform": true,
+    "top_influence_is_chi11_selector_source": true
+  },
+  "grep_disambiguation": {
+    "finding": "No prior strict-completion report computed Boolean swing/criticality counts for each open theorem-frontier atom; this report adds that finite influence audit.",
+    "searched_terms": [
+      "Banzhaf",
+      "critical count",
+      "atom influence",
+      "Boolean derivative",
+      "bottleneck score"
+    ]
+  },
+  "hard_limits": [
+    "No influence score is promoted to a theorem source.",
+    "No missing theorem atom is exported.",
+    "No bridge theorem, role-transfer theorem, selector closure, or ToE closure is claimed.",
+    "No QW-2191 selector discharge is claimed."
+  ],
+  "open_atoms": [
+    "alpha_geo_electroweak_role_theorem",
+    "beta_power_hierarchy_successor_theorem",
+    "beta_tors_strict_role_theorem",
+    "chi11_selector_source",
+    "strict_damping_beta_eta_source",
+    "strict_dynamical_source_for_A_P_D",
+    "strict_phase_frequency_source"
+  ],
+  "proof_certificate": {
+    "bridge_step": "Each strict bridge source atom has total critical count 17: 16 bridge swings plus the single ToE all-other-true swing.",
+    "definition_step": "For an atom a and target T, the critical count enumerates assignments with a=false where flipping a to true changes T from false to true.",
+    "enumeration_step": "Each atom-target pair checks 2^6=64 assignments, so the audit covers 7*4*64 finite swing cases.",
+    "grep_step": "rg was used to avoid duplicating an existing influence/power-index audit; none existed for the strict-completion theorem frontier.",
+    "influence_step": "chi11_selector_source has total critical count 73 because it is critical for selector in 64 assignments, role transfer in 8 assignments, and ToE in 1 assignment.",
+    "role_step": "The three role-only atoms have total critical count 9: 8 role-transfer swings plus the single ToE all-other-true swing.",
+    "scope_step": "This ranks open theorem atoms by Boolean criticality only; it exports no atom and proves no bridge, role-transfer, selector, or ToE closure."
+  },
+  "result_kind": "SCRATCH_STRICT_COMPLETION_THEOREM_FRONTIER_ATOM_INFLUENCE_CERTIFICATE__NO_THEOREM_EXPORT",
+  "source_reports": {
+    "role_transfer_minimal_obligation_lattice": "fundamental_action_reconstruction/scratch/bridge_strict_completion_legacy_role_transfer_minimal_obligation_lattice_certificate_report.json",
+    "theorem_frontier_cut": "fundamental_action_reconstruction/scratch/bridge_strict_completion_theorem_frontier_cut_certificate_report.json",
+    "theorem_frontier_truth_table": "fundamental_action_reconstruction/scratch/bridge_strict_completion_theorem_frontier_truth_table_certificate_report.json"
+  },
+  "status": "boolean-swing-criticality-computed-for-seven-open-frontier-atoms-no-closure",
+  "targets": [
+    "bridge_theorem_level_closure",
+    "role_transfer_theorem_level_closure",
+    "selector_qw2191_closure",
+    "toe_closure"
+  ],
+  "theorem_frontier_atom_influence_summary": {
+    "bridge_source_atoms_tie_at_17": true,
+    "bridge_theorem_exported": false,
+    "chi11_selector_source_is_unique_top_influence": true,
+    "chi11_selector_source_total_critical_count": 73,
+    "critical_pair_universe_per_atom_target": 64,
+    "each_atom_is_toe_critical_once": true,
+    "frontier_cut_open_atoms_match": true,
+    "open_atom_count": 7,
+    "role_lattice_atoms_remain_missing": true,
+    "role_only_atoms_tie_at_9": true,
+    "role_transfer_theorem_exported": false,
+    "selector_closure_exported": false,
+    "target_count": 4,
+    "toe_closure_claimed": false,
+    "top_influence_atoms": [
+      "chi11_selector_source"
+    ],
+    "top_influence_total_critical_count": 73,
+    "total_critical_count_all_atoms": 151,
+    "truth_table_current_assignment_closes_no_target": true
+  }
+}

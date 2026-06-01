@@ -1,0 +1,190 @@
+{
+  "all_cross_checks_pass": true,
+  "conditional_closure_summary": {
+    "conditional_toe_assumption_count": 7,
+    "conditional_toe_full_row_closes_all_targets": true,
+    "conditional_toe_full_row_index": 127,
+    "conditional_toe_sequent_id": "S4_all_atoms_to_toe_target",
+    "current_row_closes_no_targets": true,
+    "strict_open_atoms_still_open_now": true,
+    "unconditional_toe_closure_claimed": false
+  },
+  "cross_checks": {
+    "all_sequents_true_under_assumptions": true,
+    "boolean_essentiality_inherited": true,
+    "boolean_normal_form_inherited": true,
+    "current_state_unclosed": true,
+    "full_row_is_unique_toe_row": true,
+    "hard_limits_preserved": true,
+    "minimal_sequents_match_truth_table": true,
+    "source_reports_present": true,
+    "target_signature_lattice_inherited": true,
+    "toe_audit_doc_mentions_conditional_interface": true,
+    "truth_table_loaded": true
+  },
+  "hard_limits": [
+    "No theorem atom is proved by this conditional interface.",
+    "No strict dynamical source theorem is claimed.",
+    "No legacy role-transfer theorem is claimed unconditionally.",
+    "No QW-2191 selector source is supplied.",
+    "No unconditional ToE closure is claimed."
+  ],
+  "open_atoms": [
+    "alpha_geo_electroweak_role_theorem",
+    "beta_power_hierarchy_successor_theorem",
+    "beta_tors_strict_role_theorem",
+    "chi11_selector_source",
+    "strict_damping_beta_eta_source",
+    "strict_dynamical_source_for_A_P_D",
+    "strict_phase_frequency_source"
+  ],
+  "proof_certificate": {
+    "closure_step": "The full seven-atom row is the unique truth-table row with toe_closure=true, so this is an assumption-conditional ToE closure interface.",
+    "limit_step": "The current zero-atom row still closes no target; none of the seven source/role/selector atoms is supplied by this probe, so no unconditional ToE closure is claimed.",
+    "minimality_step": "Each sequent assumption set covers a truth-table minimal true atom set for every asserted target; the component sequents are exact minimal interfaces, and the ToE sequent uses the full seven-atom frontier cut.",
+    "sequent_step": "The probe verifies four finite sequents: bridge-source atoms imply the bridge target, role atoms imply the role-transfer target, chi11 implies selector/QW-2191 closure, and all seven atoms imply all four target bits."
+  },
+  "result_kind": "SCRATCH_STRICT_COMPLETION_TOE_CONDITIONAL_CLOSURE_CERTIFICATE__ASSUMPTION_SEQUENTS_NO_UNCONDITIONAL_CLOSURE",
+  "sequent_rows": [
+    {
+      "all_available_minimality_checks_pass": true,
+      "all_conclusions_true_under_assumptions": true,
+      "assumption_count": 3,
+      "assumption_mask": 112,
+      "assumptions": [
+        "strict_damping_beta_eta_source",
+        "strict_dynamical_source_for_A_P_D",
+        "strict_phase_frequency_source"
+      ],
+      "conclusion_values": {
+        "bridge_theorem_level_closure": true
+      },
+      "conclusions": [
+        "bridge_theorem_level_closure"
+      ],
+      "minimality_checks": {
+        "bridge_theorem_level_closure": true
+      },
+      "scope": "conditional bridge theorem interface",
+      "sequent_id": "S1_bridge_sources_to_bridge_target",
+      "witness_assignment_index": 7,
+      "witness_true_atoms": [
+        "strict_damping_beta_eta_source",
+        "strict_dynamical_source_for_A_P_D",
+        "strict_phase_frequency_source"
+      ]
+    },
+    {
+      "all_available_minimality_checks_pass": true,
+      "all_conclusions_true_under_assumptions": true,
+      "assumption_count": 4,
+      "assumption_mask": 15,
+      "assumptions": [
+        "alpha_geo_electroweak_role_theorem",
+        "beta_power_hierarchy_successor_theorem",
+        "beta_tors_strict_role_theorem",
+        "chi11_selector_source"
+      ],
+      "conclusion_values": {
+        "role_transfer_theorem_level_closure": true
+      },
+      "conclusions": [
+        "role_transfer_theorem_level_closure"
+      ],
+      "minimality_checks": {
+        "role_transfer_theorem_level_closure": true
+      },
+      "scope": "conditional strict role-transfer theorem interface",
+      "sequent_id": "S2_role_atoms_to_role_target",
+      "witness_assignment_index": 120,
+      "witness_true_atoms": [
+        "alpha_geo_electroweak_role_theorem",
+        "beta_power_hierarchy_successor_theorem",
+        "beta_tors_strict_role_theorem",
+        "chi11_selector_source"
+      ]
+    },
+    {
+      "all_available_minimality_checks_pass": true,
+      "all_conclusions_true_under_assumptions": true,
+      "assumption_count": 1,
+      "assumption_mask": 8,
+      "assumptions": [
+        "chi11_selector_source"
+      ],
+      "conclusion_values": {
+        "selector_qw2191_closure": true
+      },
+      "conclusions": [
+        "selector_qw2191_closure"
+      ],
+      "minimality_checks": {
+        "selector_qw2191_closure": true
+      },
+      "scope": "conditional selector-source interface",
+      "sequent_id": "S3_chi11_to_selector_target",
+      "witness_assignment_index": 8,
+      "witness_true_atoms": [
+        "chi11_selector_source"
+      ]
+    },
+    {
+      "all_available_minimality_checks_pass": true,
+      "all_conclusions_true_under_assumptions": true,
+      "assumption_count": 7,
+      "assumption_mask": 127,
+      "assumptions": [
+        "alpha_geo_electroweak_role_theorem",
+        "beta_power_hierarchy_successor_theorem",
+        "beta_tors_strict_role_theorem",
+        "chi11_selector_source",
+        "strict_damping_beta_eta_source",
+        "strict_dynamical_source_for_A_P_D",
+        "strict_phase_frequency_source"
+      ],
+      "conclusion_values": {
+        "bridge_theorem_level_closure": true,
+        "role_transfer_theorem_level_closure": true,
+        "selector_qw2191_closure": true,
+        "toe_closure": true
+      },
+      "conclusions": [
+        "bridge_theorem_level_closure",
+        "role_transfer_theorem_level_closure",
+        "selector_qw2191_closure",
+        "toe_closure"
+      ],
+      "minimality_checks": {
+        "bridge_theorem_level_closure": true,
+        "role_transfer_theorem_level_closure": true,
+        "selector_qw2191_closure": true,
+        "toe_closure": true
+      },
+      "scope": "assumption-conditional ToE closure interface",
+      "sequent_id": "S4_all_atoms_to_toe_target",
+      "witness_assignment_index": 127,
+      "witness_true_atoms": [
+        "alpha_geo_electroweak_role_theorem",
+        "beta_power_hierarchy_successor_theorem",
+        "beta_tors_strict_role_theorem",
+        "chi11_selector_source",
+        "strict_damping_beta_eta_source",
+        "strict_dynamical_source_for_A_P_D",
+        "strict_phase_frequency_source"
+      ]
+    }
+  ],
+  "source_reports": {
+    "frontier_truth_table": "fundamental_action_reconstruction/scratch/bridge_strict_completion_theorem_frontier_truth_table_certificate_report.json",
+    "target_signature_lattice": "fundamental_action_reconstruction/scratch/bridge_strict_completion_theorem_frontier_target_signature_lattice_certificate_report.json",
+    "toe_boolean_essentiality": "fundamental_action_reconstruction/scratch/bridge_strict_completion_toe_boolean_essentiality_certificate_report.json",
+    "toe_boolean_normal_form": "fundamental_action_reconstruction/scratch/bridge_strict_completion_toe_boolean_normal_form_certificate_report.json"
+  },
+  "status": "PASS",
+  "target_keys": [
+    "bridge_theorem_level_closure",
+    "role_transfer_theorem_level_closure",
+    "selector_qw2191_closure",
+    "toe_closure"
+  ]
+}

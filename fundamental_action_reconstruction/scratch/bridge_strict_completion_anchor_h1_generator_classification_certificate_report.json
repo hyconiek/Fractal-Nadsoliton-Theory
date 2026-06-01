@@ -1,0 +1,181 @@
+{
+  "classification_summary": {
+    "ai_opinion_as_stated_rejected": true,
+    "ai_opinion_weak_form_accepted": true,
+    "alternate_odd_edge_same_generator_class": true,
+    "audited_closed_cochain_is_exact_zero_h1_class": true,
+    "closing_edge_odd_parity_generator": true,
+    "cycle_h1_one": true,
+    "cycle_image_equals_even_parity_kernel": true,
+    "gf2_path_solution_unique_inherited": true,
+    "left_anchor_is_c0_gauge_fix_not_c1_generator": true,
+    "path_h1_zero": true,
+    "selector_source_remains_open": true
+  },
+  "cohomology_type_ledger": {
+    "cycle_dim_C0": 12,
+    "cycle_dim_C1": 12,
+    "cycle_generator_object": "odd-parity C1 edge-cochain class modulo im(delta)",
+    "cycle_h1_dimension_dim_C1_minus_rank_delta": 1,
+    "cycle_parity_functional": "sum of all 12 cycle-edge bits mod 2",
+    "cycle_rank_delta": 11,
+    "expected_image_size_2_rank": 2048,
+    "field": "GF(2)",
+    "image_size": 2048,
+    "path_anchor_object": "b(0)=0 in C0 / node-potential gauge fixing",
+    "path_dim_C0": 12,
+    "path_dim_C1": 11,
+    "path_h1_dimension": 0
+  },
+  "grep_disambiguation": {
+    "conclusion": "Existing reports certify path H1=0 and cycle H1=1, but no report explicitly separated the C0 anchor from the closed-cycle C1/im(delta) generator before this file.",
+    "searched_terms": [
+      "H^1",
+      "cohomology generator",
+      "anchor",
+      "left anchor",
+      "cycle closure",
+      "Z12",
+      "selector source"
+    ]
+  },
+  "hard_limits": [
+    "No beta_tors -> chi_11 theorem is claimed.",
+    "No strict-core selector source is exported.",
+    "No QW-2191 selector discharge is claimed.",
+    "No legacy physical-role transfer to K_strict_gate is claimed.",
+    "No unqualified identity K_legacy_ont == K_strict_gate is claimed.",
+    "No ToE closure is claimed."
+  ],
+  "opinion_audit_rows": [
+    {
+      "claim": "H^1(Z12;GF(2)) is one-dimensional on the closed 12-cycle.",
+      "finite_witness": "cycle report has rank(delta)=11, dim C1=12, so dim H^1=1",
+      "verdict": "accepted_for_closed_cycle_only"
+    },
+    {
+      "claim": "The d=0 left anchor is itself the H^1 generator.",
+      "finite_witness": "b(0) is a C0 gauge-fixing value; an H^1 generator is a C1/im(delta) edge-cochain class with odd cycle parity",
+      "verdict": "rejected_type_mismatch"
+    },
+    {
+      "claim": "The audited phase pattern represents the nonzero H^1 generator.",
+      "finite_witness": "audited path plus forced closing bit has total parity 0 and is exact on the closed cycle",
+      "verdict": "rejected_for_audited_zero_closure"
+    },
+    {
+      "claim": "The missing selector/source is still open.",
+      "finite_witness": "the generator classification gives the address of the obstruction, not a source theorem or QW-2191 discharge",
+      "verdict": "accepted"
+    }
+  ],
+  "proof_certificate": {
+    "anchor_step": "The left anchor b(0)=0 is a node-potential gauge choice in C0, not a C1 edge cochain and not an H^1 quotient class.",
+    "audited_pattern_step": "The audited path plus forced closing bit has parity 0 and is exact, so it represents the zero H^1 class rather than the generator.",
+    "cycle_step": "On the closed 12-cycle, rank(delta)=11 and dim C1=12, so C1/im(delta) has dimension 1.",
+    "generator_step": "The single closing-edge cochain 11->0 has odd parity, is not a coboundary, and is therefore a valid generator representative; any other single edge differs from it by an exact even-parity cochain.",
+    "parity_step": "Every coboundary has even total cycle parity; the image has 2^11 vectors, matching the even-parity kernel, so odd parity represents the nonzero H^1 class.",
+    "path_step": "On the open path, rank(delta)=11=dim C1, so H^1(path;GF(2))=0; b(0)=0 only fixes the constant C0 kernel.",
+    "theoretical_limit": "This locates the type and representative of the closed-cycle obstruction only; it does not derive the selector/source bit from nadsoliton dynamics, beta_tors, SSB, observer readout, or any bridge theorem."
+  },
+  "representative_rows": [
+    {
+      "edge_bits": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "h1_class": "zero",
+      "in_image_delta": true,
+      "name": "audited_closed_phase_cochain",
+      "parity": 0
+    },
+    {
+      "edge_bits": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "h1_class": "nonzero_generator",
+      "in_image_delta": false,
+      "name": "closing_edge_generator_candidate",
+      "parity": 1,
+      "support": [
+        "11->0"
+      ]
+    },
+    {
+      "edge_bits": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "h1_class": "nonzero_generator",
+      "name": "first_edge_generator_candidate",
+      "parity": 1,
+      "same_h1_class_as_closing_edge_generator": true,
+      "support": [
+        "0->1"
+      ]
+    },
+    {
+      "edge_bits": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "h1_class": "zero",
+      "in_image_delta": true,
+      "name": "even_two_edge_boundary_candidate",
+      "parity": 0,
+      "support": [
+        "0->1",
+        "1->2"
+      ]
+    }
+  ],
+  "result_kind": "SCRATCH_STRICT_COMPLETION_ANCHOR_H1_GENERATOR_CLASSIFICATION_CERTIFICATE__GF2_TYPE_AUDIT",
+  "source_reports": {
+    "phase_sign_cycle_closure_obstruction_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_phase_sign_cycle_closure_obstruction_certificate_report.json",
+    "phase_sign_gf2_linear_system_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_phase_sign_gf2_linear_system_certificate_report.json",
+    "phase_sign_path_cohomology_triviality_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_phase_sign_path_cohomology_triviality_certificate_report.json",
+    "phase_sign_z2_coboundary_certificate": "fundamental_action_reconstruction/scratch/bridge_strict_completion_phase_sign_z2_coboundary_certificate_report.json"
+  },
+  "status": "anchor-is-c0-gauge-fix-not-h1-generator__closed-cycle-generator-is-odd-parity-c1-class"
+}

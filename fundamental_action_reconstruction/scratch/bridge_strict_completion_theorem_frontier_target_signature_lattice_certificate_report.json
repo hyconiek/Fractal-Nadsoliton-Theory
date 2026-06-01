@@ -1,0 +1,432 @@
+{
+  "cross_checks": {
+    "implications_pass": true,
+    "limits_preserved": true,
+    "minimal_weights_pass": true,
+    "reachable_signature_counts_pass": true,
+    "reachable_unreachable_counts_pass": true,
+    "signature_partition_pass": true,
+    "source_reports_present": true
+  },
+  "grep_disambiguation": {
+    "finding": "No prior strict-completion report projected the 128 theorem-frontier assignments onto the four closure-target signatures; this report adds that target-lattice audit.",
+    "searched_terms": [
+      "target lattice",
+      "closure lattice",
+      "target signature",
+      "reachable target",
+      "implication lattice"
+    ]
+  },
+  "hard_limits": [
+    "No reachable target signature is promoted to the current theory state.",
+    "No missing theorem atom is exported.",
+    "No bridge theorem, role-transfer theorem, selector closure, or ToE closure is claimed.",
+    "No QW-2191 selector discharge is claimed."
+  ],
+  "implication_rows": [
+    {
+      "holds_on_all_assignments": true,
+      "implication": "role_transfer_theorem_level_closure => selector_qw2191_closure",
+      "reason": "role-transfer target requires chi11_selector_source, and selector target is exactly chi11_selector_source."
+    },
+    {
+      "holds_on_all_assignments": true,
+      "implication": "toe_closure => bridge_theorem_level_closure",
+      "reason": "ToE target is bridge AND role_transfer AND selector."
+    },
+    {
+      "holds_on_all_assignments": true,
+      "implication": "toe_closure => role_transfer_theorem_level_closure",
+      "reason": "ToE target is bridge AND role_transfer AND selector."
+    },
+    {
+      "holds_on_all_assignments": true,
+      "implication": "toe_closure => selector_qw2191_closure",
+      "reason": "ToE target is bridge AND role_transfer AND selector."
+    }
+  ],
+  "proof_certificate": {
+    "count_step": "The reachable signature counts are 56, 49, 7, 8, 7, and 1 respectively, summing to 128.",
+    "grep_step": "rg was used to avoid duplicating a target-signature or implication-lattice audit; none existed for the strict-completion theorem frontier.",
+    "implication_step": "The lattice proves role-transfer closure implies selector closure, and ToE closure implies bridge, role-transfer, and selector closure.",
+    "minimal_step": "Minimal true-atom weights by reachable signature are 0, 1, 4, 3, 4, and 7 respectively; ToE is reachable only at the all-open-atom frontier cut.",
+    "projection_step": "Each of the 128 open-atom assignments is projected to a 4-bit target signature ordered as bridge, role-transfer, selector, ToE.",
+    "reachability_step": "Exactly 6 of 16 target signatures are reachable: 0000, 0010, 0110, 1000, 1010, and 1111.",
+    "scope_step": "This is a finite target-lattice audit only; it exports no theorem atom and proves no bridge, role-transfer, selector, or ToE closure."
+  },
+  "result_kind": "SCRATCH_STRICT_COMPLETION_THEOREM_FRONTIER_TARGET_SIGNATURE_LATTICE_CERTIFICATE__NO_CLOSURE_THEOREM",
+  "signature_rows": [
+    {
+      "assignment_count": 56,
+      "minimal_true_atom_count": 0,
+      "minimal_true_atom_sets": [
+        []
+      ],
+      "reachable": true,
+      "signature": "0000",
+      "target_values": {
+        "bridge_theorem_level_closure": false,
+        "role_transfer_theorem_level_closure": false,
+        "selector_qw2191_closure": false,
+        "toe_closure": false
+      },
+      "true_targets": []
+    },
+    {
+      "assignment_count": 0,
+      "minimal_true_atom_count": null,
+      "minimal_true_atom_sets": [],
+      "reachable": false,
+      "signature": "0001",
+      "target_values": {
+        "bridge_theorem_level_closure": false,
+        "role_transfer_theorem_level_closure": false,
+        "selector_qw2191_closure": false,
+        "toe_closure": true
+      },
+      "true_targets": [
+        "toe_closure"
+      ]
+    },
+    {
+      "assignment_count": 49,
+      "minimal_true_atom_count": 1,
+      "minimal_true_atom_sets": [
+        [
+          "chi11_selector_source"
+        ]
+      ],
+      "reachable": true,
+      "signature": "0010",
+      "target_values": {
+        "bridge_theorem_level_closure": false,
+        "role_transfer_theorem_level_closure": false,
+        "selector_qw2191_closure": true,
+        "toe_closure": false
+      },
+      "true_targets": [
+        "selector_qw2191_closure"
+      ]
+    },
+    {
+      "assignment_count": 0,
+      "minimal_true_atom_count": null,
+      "minimal_true_atom_sets": [],
+      "reachable": false,
+      "signature": "0011",
+      "target_values": {
+        "bridge_theorem_level_closure": false,
+        "role_transfer_theorem_level_closure": false,
+        "selector_qw2191_closure": true,
+        "toe_closure": true
+      },
+      "true_targets": [
+        "selector_qw2191_closure",
+        "toe_closure"
+      ]
+    },
+    {
+      "assignment_count": 0,
+      "minimal_true_atom_count": null,
+      "minimal_true_atom_sets": [],
+      "reachable": false,
+      "signature": "0100",
+      "target_values": {
+        "bridge_theorem_level_closure": false,
+        "role_transfer_theorem_level_closure": true,
+        "selector_qw2191_closure": false,
+        "toe_closure": false
+      },
+      "true_targets": [
+        "role_transfer_theorem_level_closure"
+      ]
+    },
+    {
+      "assignment_count": 0,
+      "minimal_true_atom_count": null,
+      "minimal_true_atom_sets": [],
+      "reachable": false,
+      "signature": "0101",
+      "target_values": {
+        "bridge_theorem_level_closure": false,
+        "role_transfer_theorem_level_closure": true,
+        "selector_qw2191_closure": false,
+        "toe_closure": true
+      },
+      "true_targets": [
+        "role_transfer_theorem_level_closure",
+        "toe_closure"
+      ]
+    },
+    {
+      "assignment_count": 7,
+      "minimal_true_atom_count": 4,
+      "minimal_true_atom_sets": [
+        [
+          "alpha_geo_electroweak_role_theorem",
+          "beta_power_hierarchy_successor_theorem",
+          "beta_tors_strict_role_theorem",
+          "chi11_selector_source"
+        ]
+      ],
+      "reachable": true,
+      "signature": "0110",
+      "target_values": {
+        "bridge_theorem_level_closure": false,
+        "role_transfer_theorem_level_closure": true,
+        "selector_qw2191_closure": true,
+        "toe_closure": false
+      },
+      "true_targets": [
+        "role_transfer_theorem_level_closure",
+        "selector_qw2191_closure"
+      ]
+    },
+    {
+      "assignment_count": 0,
+      "minimal_true_atom_count": null,
+      "minimal_true_atom_sets": [],
+      "reachable": false,
+      "signature": "0111",
+      "target_values": {
+        "bridge_theorem_level_closure": false,
+        "role_transfer_theorem_level_closure": true,
+        "selector_qw2191_closure": true,
+        "toe_closure": true
+      },
+      "true_targets": [
+        "role_transfer_theorem_level_closure",
+        "selector_qw2191_closure",
+        "toe_closure"
+      ]
+    },
+    {
+      "assignment_count": 8,
+      "minimal_true_atom_count": 3,
+      "minimal_true_atom_sets": [
+        [
+          "strict_damping_beta_eta_source",
+          "strict_dynamical_source_for_A_P_D",
+          "strict_phase_frequency_source"
+        ]
+      ],
+      "reachable": true,
+      "signature": "1000",
+      "target_values": {
+        "bridge_theorem_level_closure": true,
+        "role_transfer_theorem_level_closure": false,
+        "selector_qw2191_closure": false,
+        "toe_closure": false
+      },
+      "true_targets": [
+        "bridge_theorem_level_closure"
+      ]
+    },
+    {
+      "assignment_count": 0,
+      "minimal_true_atom_count": null,
+      "minimal_true_atom_sets": [],
+      "reachable": false,
+      "signature": "1001",
+      "target_values": {
+        "bridge_theorem_level_closure": true,
+        "role_transfer_theorem_level_closure": false,
+        "selector_qw2191_closure": false,
+        "toe_closure": true
+      },
+      "true_targets": [
+        "bridge_theorem_level_closure",
+        "toe_closure"
+      ]
+    },
+    {
+      "assignment_count": 7,
+      "minimal_true_atom_count": 4,
+      "minimal_true_atom_sets": [
+        [
+          "chi11_selector_source",
+          "strict_damping_beta_eta_source",
+          "strict_dynamical_source_for_A_P_D",
+          "strict_phase_frequency_source"
+        ]
+      ],
+      "reachable": true,
+      "signature": "1010",
+      "target_values": {
+        "bridge_theorem_level_closure": true,
+        "role_transfer_theorem_level_closure": false,
+        "selector_qw2191_closure": true,
+        "toe_closure": false
+      },
+      "true_targets": [
+        "bridge_theorem_level_closure",
+        "selector_qw2191_closure"
+      ]
+    },
+    {
+      "assignment_count": 0,
+      "minimal_true_atom_count": null,
+      "minimal_true_atom_sets": [],
+      "reachable": false,
+      "signature": "1011",
+      "target_values": {
+        "bridge_theorem_level_closure": true,
+        "role_transfer_theorem_level_closure": false,
+        "selector_qw2191_closure": true,
+        "toe_closure": true
+      },
+      "true_targets": [
+        "bridge_theorem_level_closure",
+        "selector_qw2191_closure",
+        "toe_closure"
+      ]
+    },
+    {
+      "assignment_count": 0,
+      "minimal_true_atom_count": null,
+      "minimal_true_atom_sets": [],
+      "reachable": false,
+      "signature": "1100",
+      "target_values": {
+        "bridge_theorem_level_closure": true,
+        "role_transfer_theorem_level_closure": true,
+        "selector_qw2191_closure": false,
+        "toe_closure": false
+      },
+      "true_targets": [
+        "bridge_theorem_level_closure",
+        "role_transfer_theorem_level_closure"
+      ]
+    },
+    {
+      "assignment_count": 0,
+      "minimal_true_atom_count": null,
+      "minimal_true_atom_sets": [],
+      "reachable": false,
+      "signature": "1101",
+      "target_values": {
+        "bridge_theorem_level_closure": true,
+        "role_transfer_theorem_level_closure": true,
+        "selector_qw2191_closure": false,
+        "toe_closure": true
+      },
+      "true_targets": [
+        "bridge_theorem_level_closure",
+        "role_transfer_theorem_level_closure",
+        "toe_closure"
+      ]
+    },
+    {
+      "assignment_count": 0,
+      "minimal_true_atom_count": null,
+      "minimal_true_atom_sets": [],
+      "reachable": false,
+      "signature": "1110",
+      "target_values": {
+        "bridge_theorem_level_closure": true,
+        "role_transfer_theorem_level_closure": true,
+        "selector_qw2191_closure": true,
+        "toe_closure": false
+      },
+      "true_targets": [
+        "bridge_theorem_level_closure",
+        "role_transfer_theorem_level_closure",
+        "selector_qw2191_closure"
+      ]
+    },
+    {
+      "assignment_count": 1,
+      "minimal_true_atom_count": 7,
+      "minimal_true_atom_sets": [
+        [
+          "alpha_geo_electroweak_role_theorem",
+          "beta_power_hierarchy_successor_theorem",
+          "beta_tors_strict_role_theorem",
+          "chi11_selector_source",
+          "strict_damping_beta_eta_source",
+          "strict_dynamical_source_for_A_P_D",
+          "strict_phase_frequency_source"
+        ]
+      ],
+      "reachable": true,
+      "signature": "1111",
+      "target_values": {
+        "bridge_theorem_level_closure": true,
+        "role_transfer_theorem_level_closure": true,
+        "selector_qw2191_closure": true,
+        "toe_closure": true
+      },
+      "true_targets": [
+        "bridge_theorem_level_closure",
+        "role_transfer_theorem_level_closure",
+        "selector_qw2191_closure",
+        "toe_closure"
+      ]
+    }
+  ],
+  "source_reports": {
+    "theorem_frontier_atom_influence": "fundamental_action_reconstruction/scratch/bridge_strict_completion_theorem_frontier_atom_influence_certificate_report.json",
+    "theorem_frontier_cut": "fundamental_action_reconstruction/scratch/bridge_strict_completion_theorem_frontier_cut_certificate_report.json",
+    "theorem_frontier_truth_table": "fundamental_action_reconstruction/scratch/bridge_strict_completion_theorem_frontier_truth_table_certificate_report.json"
+  },
+  "status": "target-signature-lattice-enumerated-six-of-sixteen-signatures-reachable-no-closure",
+  "targets": [
+    "bridge_theorem_level_closure",
+    "role_transfer_theorem_level_closure",
+    "selector_qw2191_closure",
+    "toe_closure"
+  ],
+  "theorem_frontier_target_signature_lattice_summary": {
+    "all_target_signature_count": 16,
+    "atom_influence_top_atom_inherited": true,
+    "bridge_theorem_exported": false,
+    "counts_by_reachable_signature": {
+      "0000": 56,
+      "0010": 49,
+      "0110": 7,
+      "1000": 8,
+      "1010": 7,
+      "1111": 1
+    },
+    "current_signature_all_false": true,
+    "frontier_cut_open_atoms_match": true,
+    "minimal_weights_by_reachable_signature": {
+      "0000": 0,
+      "0010": 1,
+      "0110": 4,
+      "1000": 3,
+      "1010": 4,
+      "1111": 7
+    },
+    "only_full_signature_has_toe_closure": true,
+    "reachable_signatures": [
+      "0000",
+      "0010",
+      "0110",
+      "1000",
+      "1010",
+      "1111"
+    ],
+    "reachable_target_signature_count": 6,
+    "role_implies_selector": true,
+    "role_transfer_theorem_exported": false,
+    "selector_closure_exported": false,
+    "target_count": 4,
+    "toe_closure_claimed": false,
+    "toe_implies_all_targets": true,
+    "unreachable_signatures": [
+      "0001",
+      "0011",
+      "0100",
+      "0101",
+      "0111",
+      "1001",
+      "1011",
+      "1100",
+      "1101",
+      "1110"
+    ],
+    "unreachable_target_signature_count": 10
+  }
+}
