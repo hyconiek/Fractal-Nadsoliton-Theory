@@ -1,0 +1,186 @@
+{
+  "all_cross_checks_pass": true,
+  "cross_checks": {
+    "full_set_only_toe_pass": true,
+    "hard_limits_preserved": true,
+    "minimal_cut_matches_truth_table": true,
+    "missing_atom_rows_cover_frontier": true,
+    "nearest_miss_count_pass": true,
+    "nearest_miss_rows_fail_toe": true,
+    "proper_subset_count_pass": true,
+    "readiness_certificate_inherited": true,
+    "source_reports_present": true,
+    "target_lattice_full_signature_only": true,
+    "toe_audit_doc_mentions_joint_requirement": true,
+    "truth_table_count_pass": true
+  },
+  "hard_limits": [
+    "No proper subset is promoted to ToE closure.",
+    "No new theorem atom is exported.",
+    "No bridge theorem is claimed.",
+    "No role-transfer theorem is claimed.",
+    "No QW-2191 selector discharge is claimed.",
+    "No ToE closure is claimed."
+  ],
+  "max_proper_target_signatures": [
+    "0110",
+    "1010"
+  ],
+  "max_proper_true_targets": 2,
+  "nearest_miss_rows": [
+    {
+      "bridge_theorem_level_closure": true,
+      "deficit_explanation": "role-transfer atom missing: electroweak role theorem is absent, so role transfer and ToE fail",
+      "missing_atom": "alpha_geo_electroweak_role_theorem",
+      "role_transfer_theorem_level_closure": false,
+      "selector_qw2191_closure": true,
+      "target_signature": "1010",
+      "toe_closure": false,
+      "true_atom_count": 6
+    },
+    {
+      "bridge_theorem_level_closure": true,
+      "deficit_explanation": "role-transfer atom missing: hierarchy successor theorem is absent, so role transfer and ToE fail",
+      "missing_atom": "beta_power_hierarchy_successor_theorem",
+      "role_transfer_theorem_level_closure": false,
+      "selector_qw2191_closure": true,
+      "target_signature": "1010",
+      "toe_closure": false,
+      "true_atom_count": 6
+    },
+    {
+      "bridge_theorem_level_closure": true,
+      "deficit_explanation": "role-transfer atom missing: beta_tors strict successor theorem is absent, so role transfer and ToE fail",
+      "missing_atom": "beta_tors_strict_role_theorem",
+      "role_transfer_theorem_level_closure": false,
+      "selector_qw2191_closure": true,
+      "target_signature": "1010",
+      "toe_closure": false,
+      "true_atom_count": 6
+    },
+    {
+      "bridge_theorem_level_closure": true,
+      "deficit_explanation": "selector and role atom missing: QW-2191 selector, role transfer, and ToE fail",
+      "missing_atom": "chi11_selector_source",
+      "role_transfer_theorem_level_closure": false,
+      "selector_qw2191_closure": false,
+      "target_signature": "1000",
+      "toe_closure": false,
+      "true_atom_count": 6
+    },
+    {
+      "bridge_theorem_level_closure": false,
+      "deficit_explanation": "bridge-source atom missing: damping beta/eta source is absent, so bridge and ToE fail",
+      "missing_atom": "strict_damping_beta_eta_source",
+      "role_transfer_theorem_level_closure": true,
+      "selector_qw2191_closure": true,
+      "target_signature": "0110",
+      "toe_closure": false,
+      "true_atom_count": 6
+    },
+    {
+      "bridge_theorem_level_closure": false,
+      "deficit_explanation": "bridge-source atom missing: APD source is absent, so bridge and ToE fail",
+      "missing_atom": "strict_dynamical_source_for_A_P_D",
+      "role_transfer_theorem_level_closure": true,
+      "selector_qw2191_closure": true,
+      "target_signature": "0110",
+      "toe_closure": false,
+      "true_atom_count": 6
+    },
+    {
+      "bridge_theorem_level_closure": false,
+      "deficit_explanation": "bridge-source atom missing: phase/frequency source is absent, so bridge and ToE fail",
+      "missing_atom": "strict_phase_frequency_source",
+      "role_transfer_theorem_level_closure": true,
+      "selector_qw2191_closure": true,
+      "target_signature": "0110",
+      "toe_closure": false,
+      "true_atom_count": 6
+    }
+  ],
+  "open_atoms": [
+    "alpha_geo_electroweak_role_theorem",
+    "beta_power_hierarchy_successor_theorem",
+    "beta_tors_strict_role_theorem",
+    "chi11_selector_source",
+    "strict_damping_beta_eta_source",
+    "strict_dynamical_source_for_A_P_D",
+    "strict_phase_frequency_source"
+  ],
+  "proof_certificate": {
+    "enumeration_step": "The probe enumerates all 127 proper subsets of the seven open theorem atoms and checks each truth-table row; every proper subset has toe_closure=false.",
+    "limit_step": "This is a finite obstruction/readiness certificate only: it proves a proper-subset no-go over the audited Boolean frontier and exports no new theorem atom, bridge theorem, role-transfer theorem, QW-2191 discharge, or ToE closure.",
+    "nearest_miss_step": "The seven six-atom nearest misses are classified by the single missing atom: missing bridge-source atoms disable bridge+ToE, missing role atoms disable role-transfer+ToE, and missing chi11 disables selector+role+ToE.",
+    "signature_step": "No proper subset reaches ToE signature 1111; the largest proper signatures are partial bridge/role/selector states, so partial progress is not promoted to ToE closure."
+  },
+  "proper_subset_count": 127,
+  "proper_subset_count_by_weight": {
+    "0": 1,
+    "1": 7,
+    "2": 21,
+    "3": 35,
+    "4": 35,
+    "5": 21,
+    "6": 7
+  },
+  "proper_subset_obstruction_summary": {
+    "all_127_proper_subsets_fail_toe": true,
+    "all_seven_atoms_required": true,
+    "max_proper_true_targets": 2,
+    "nearest_miss_count": 7,
+    "six_atom_packages_fail_toe": true,
+    "toe_closure_claimed": false
+  },
+  "result_kind": "SCRATCH_STRICT_COMPLETION_TOE_PROPER_SUBSET_OBSTRUCTION_CERTIFICATE__ALL_127_PROPER_SUBSETS_FAIL_NO_CLOSURE",
+  "signature_counts_by_weight": {
+    "0": {
+      "0000": 1
+    },
+    "1": {
+      "0000": 6,
+      "0010": 1
+    },
+    "2": {
+      "0000": 15,
+      "0010": 6
+    },
+    "3": {
+      "0000": 19,
+      "0010": 15,
+      "1000": 1
+    },
+    "4": {
+      "0000": 12,
+      "0010": 18,
+      "0110": 1,
+      "1000": 3,
+      "1010": 1
+    },
+    "5": {
+      "0000": 3,
+      "0010": 9,
+      "0110": 3,
+      "1000": 3,
+      "1010": 3
+    },
+    "6": {
+      "0110": 3,
+      "1000": 1,
+      "1010": 3
+    }
+  },
+  "source_reports": {
+    "frontier_cut": "fundamental_action_reconstruction/scratch/bridge_strict_completion_theorem_frontier_cut_certificate_report.json",
+    "frontier_truth_table": "fundamental_action_reconstruction/scratch/bridge_strict_completion_theorem_frontier_truth_table_certificate_report.json",
+    "target_signature_lattice": "fundamental_action_reconstruction/scratch/bridge_strict_completion_theorem_frontier_target_signature_lattice_certificate_report.json",
+    "toe_potential_readiness": "fundamental_action_reconstruction/scratch/bridge_strict_completion_toe_potential_readiness_certificate_report.json"
+  },
+  "status": "PASS",
+  "target_keys": [
+    "bridge_theorem_level_closure",
+    "role_transfer_theorem_level_closure",
+    "selector_qw2191_closure",
+    "toe_closure"
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "cross_checks": {
+    "all_roles_blocked_with_nonzero_dependency_rank": true,
+    "alpha_beta_chi11_sources_missing": true,
+    "closure_limits_preserved": true,
+    "component_and_symbolic_reports_do_not_transfer_roles": true,
+    "s2_and_t15_require_separate_role_transfer": true,
+    "source_reports_present": true
+  },
+  "grep_disambiguation": {
+    "finding": "Existing guardrails require role-transfer auditing after bridge completion; this report performs a finite pre-audit and blocks every listed legacy role pending a separate theorem.",
+    "searched_terms": [
+      "role-transfer",
+      "legacy physical-role",
+      "sin^2(theta_W)",
+      "alpha_EM^-1",
+      "beta^N gravity hierarchy",
+      "beta_tors -> chi_11"
+    ]
+  },
+  "hard_limits": [
+    "No legacy physical-role claim is transferred onto K_strict_gate.",
+    "No alpha_geo electroweak role theorem is exported.",
+    "No beta_tors electromagnetic/gravity hierarchy role theorem is exported.",
+    "No beta_tors -> chi_11 theorem is exported.",
+    "No QW-2191 selector discharge is claimed.",
+    "No ToE closure is claimed."
+  ],
+  "proof_certificate": {
+    "alpha_step": "sin^2(theta_W)=alpha_geo/12 is blocked because alpha_geo is only normalized as a kernel scalar, with no strict physical-role theorem.",
+    "beta_step": "alpha_EM^-1 and beta^N hierarchy claims are blocked because beta_tors is not mapped to a strict physical role through beta=1, eta=9/5 compression.",
+    "chi11_step": "beta_tors -> chi_11 is blocked because the anchor/H1 certificates locate the bit but keep its selector/source theorem open.",
+    "grep_step": "rg was used to locate existing role-transfer guardrails and avoid treating the symbolic bridge as a physical-role theorem.",
+    "matrix_step": "The four audited legacy roles give a GF(2) dependency matrix of rank 4 over columns ['depends_alpha_geo', 'depends_beta_tors', 'depends_beta_power_hierarchy', 'depends_chi11_or_orientation', 'strict_successor_theorem_available_now', 'unchanged_transfer_allowed_now', 'modified_transfer_allowed_now', 'rejected_by_current_bridge_data'].",
+    "scope_step": "This is a pre-audit: it classifies transfer obligations but exports zero role-transfer permissions and no QW-2191 or ToE closure."
+  },
+  "result_kind": "SCRATCH_STRICT_COMPLETION_LEGACY_ROLE_TRANSFER_PRE_AUDIT_CERTIFICATE__NO_TRANSFER_THEOREM",
+  "role_dependency_columns": [
+    "depends_alpha_geo",
+    "depends_beta_tors",
+    "depends_beta_power_hierarchy",
+    "depends_chi11_or_orientation",
+    "strict_successor_theorem_available_now",
+    "unchanged_transfer_allowed_now",
+    "modified_transfer_allowed_now",
+    "rejected_by_current_bridge_data"
+  ],
+  "role_dependency_matrix_gf2": [
+    [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "role_transfer_pre_audit_summary": {
+    "all_roles_blocked_now": true,
+    "alpha_role_source_missing": true,
+    "beta_tors_role_source_missing": true,
+    "chi11_source_missing": true,
+    "component_gap_blocks_role_transfer": true,
+    "dependency_matrix_columns": [
+      "depends_alpha_geo",
+      "depends_beta_tors",
+      "depends_beta_power_hierarchy",
+      "depends_chi11_or_orientation",
+      "strict_successor_theorem_available_now",
+      "unchanged_transfer_allowed_now",
+      "modified_transfer_allowed_now",
+      "rejected_by_current_bridge_data"
+    ],
+    "dependency_matrix_rank_gf2": 4,
+    "guardrail_requires_role_transfer_audit": true,
+    "q2191_discharged": false,
+    "role_claim_count": 4,
+    "role_transfer_theorem_exported": false,
+    "roles_transferred_now": 0,
+    "s2_lists_required_role_transfer_claims": true,
+    "strict_dynamic_source_exported": false,
+    "symbolic_bridge_is_formula_only": true,
+    "t15_keeps_role_transfer_separate": true,
+    "toe_closure_claimed": false
+  },
+  "role_transfer_rows": [
+    {
+      "current_verdict": "blocked_not_transferred",
+      "depends_alpha_geo": 1,
+      "depends_beta_power_hierarchy": 0,
+      "depends_beta_tors": 0,
+      "depends_chi11_or_orientation": 0,
+      "legacy_formula": "sin^2(theta_W)=alpha_geo/12",
+      "modified_transfer_allowed_now": 0,
+      "needed_transfer_theorem": "strict alpha_geo physical-role theorem after scalar normalization",
+      "reason": "The bridge cancels alpha_geo as a kernel amplitude scalar; no theorem says the legacy electroweak role survives that normalization.",
+      "rejected_by_current_bridge_data": 0,
+      "role_id": "legacy_weak_mixing_angle",
+      "role_transfer_allowed_now": false,
+      "strict_successor_theorem_available_now": 0,
+      "unchanged_transfer_allowed_now": 0
+    },
+    {
+      "current_verdict": "blocked_not_transferred",
+      "depends_alpha_geo": 1,
+      "depends_beta_power_hierarchy": 0,
+      "depends_beta_tors": 1,
+      "depends_chi11_or_orientation": 0,
+      "legacy_formula": "alpha_EM^-1=alpha_geo/(2*beta_tors)*(1-beta_tors)",
+      "modified_transfer_allowed_now": 0,
+      "needed_transfer_theorem": "joint strict alpha_geo and beta_tors role theorem",
+      "reason": "The current bridge separates legacy linear beta_tors from strict nonlinear beta*d^eta and exports no beta_tors role theorem.",
+      "rejected_by_current_bridge_data": 0,
+      "role_id": "legacy_inverse_alpha_em",
+      "role_transfer_allowed_now": false,
+      "strict_successor_theorem_available_now": 0,
+      "unchanged_transfer_allowed_now": 0
+    },
+    {
+      "current_verdict": "blocked_not_transferred",
+      "depends_alpha_geo": 0,
+      "depends_beta_power_hierarchy": 1,
+      "depends_beta_tors": 1,
+      "depends_chi11_or_orientation": 0,
+      "legacy_formula": "beta^N gravity hierarchy / beta_tors-power hierarchy",
+      "modified_transfer_allowed_now": 0,
+      "needed_transfer_theorem": "strict successor hierarchy theorem across nonlinear damping/compression",
+      "reason": "No report maps the legacy beta-power hierarchy through the strict beta=1, eta=9/5 nonlinear compression data.",
+      "rejected_by_current_bridge_data": 0,
+      "role_id": "legacy_beta_power_gravity_hierarchy",
+      "role_transfer_allowed_now": false,
+      "strict_successor_theorem_available_now": 0,
+      "unchanged_transfer_allowed_now": 0
+    },
+    {
+      "current_verdict": "blocked_not_transferred",
+      "depends_alpha_geo": 0,
+      "depends_beta_power_hierarchy": 0,
+      "depends_beta_tors": 1,
+      "depends_chi11_or_orientation": 1,
+      "legacy_formula": "candidate beta_tors -> chi_11 orientation/torsion role",
+      "modified_transfer_allowed_now": 0,
+      "needed_transfer_theorem": "selector/source theorem beta_tors -> chi_11 or replacement source",
+      "reason": "GF(2)/H1 reports locate the bit but do not source it, and the anchor/H1 audit keeps selector source open.",
+      "rejected_by_current_bridge_data": 0,
+      "role_id": "legacy_torsion_to_chi11_orientation",
+      "role_transfer_allowed_now": false,
+      "strict_successor_theorem_available_now": 0,
+      "unchanged_transfer_allowed_now": 0
+    }
+  ],
+  "source_reports": {
+    "amplitude_scalar_normalization": "fundamental_action_reconstruction/scratch/bridge_strict_completion_legacy_to_strict_amplitude_scalar_normalization_certificate_report.json",
+    "anchor_h1_classification": "fundamental_action_reconstruction/scratch/bridge_strict_completion_anchor_h1_generator_classification_certificate_report.json",
+    "component_gap_matrix": "fundamental_action_reconstruction/scratch/bridge_strict_completion_legacy_to_strict_completion_component_gap_certificate_report.json",
+    "damping_parameter_identifiability": "fundamental_action_reconstruction/scratch/bridge_strict_completion_legacy_to_strict_damping_parameter_identifiability_certificate_report.json",
+    "legacy_bridge_guardrail": "fundamental_action_reconstruction/scratch/bridge_strict_completion_legacy_kernel_intermediate_bridge_guardrail_certificate_report.json",
+    "symbolic_cancellation": "fundamental_action_reconstruction/scratch/bridge_strict_completion_legacy_to_strict_symbolic_cancellation_certificate_report.json"
+  },
+  "source_specs": {
+    "s2_priority_packet": "fundamental_action_reconstruction/S2_CURRENT_FAR_STRATEGIC_PRIORITY_REORIENTATION_PACKET.md",
+    "t15_bridge_theorem_spec": "fundamental_action_reconstruction/T15_LEGACY_TO_STRICT_KERNEL_BRIDGE_THEOREM_SPEC.md"
+  },
+  "status": "legacy-physical-role-claims-audited-all-blocked-until-separate-role-transfer-theorem"
+}
