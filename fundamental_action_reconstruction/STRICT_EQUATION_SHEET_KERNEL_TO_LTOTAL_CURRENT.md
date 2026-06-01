@@ -974,3 +974,61 @@ Thus the long degree-12 monomial from P2406 is not arbitrary bookkeeping: it fac
 The finite derivative audit also finds one decisive edge for each stage.  Removing any one of `O`, `S`, or `R` from the full mask gives the unique nearest miss for that stage, so every package is essential and none is merely decorative bookkeeping.
 
 Thus the quotient barrier is minimal and essential: role-bearing projection cannot be weakened below `O * S * R`, and this remains conditional readiness rather than ToE closure.
+
+## P2409/S1359 stage-quotient prime-implicate and failure-cover certificate
+
+`P2409/S1359` proves the dual of the P2408 success-side prime-implicant result.  Over the same quotient stages `O`, `S`, and `R`, the success condition has the exact prime-implicate/CNF form:
+
+```text
+O AND S AND R.
+```
+
+The failure side has the exact shortcut cover:
+
+```text
+not O OR not S OR not R.
+```
+
+Thus every proper shortcut mask is rejected by at least one missing-stage unit, and the three one-stage-missing masks are the nearest repairs rather than licensed projections.  This is a proof-carrying obstruction ledger for choosing the next missing stage theorem; it is not a ToE closure theorem.
+
+## P2410/S1360 dequotiented twelve-atom prime-implicate obstruction certificate
+
+`P2410/S1360` expands the P2409 quotient CNF back to the full P2406 twelve-atom staged barrier.  The finite enumeration checks all `3^12 - 1` nonempty non-tautological clauses and finds the exact success-side prime implicates to be the twelve positive unit obligations:
+
+```text
+O_1 AND ... AND O_5 AND S_1 AND ... AND S_4 AND R_1 AND R_2 AND R_3.
+```
+
+The dual failure cover is the twelve-term DNF saying that any missing ontology guard atom, strict internal-completion atom, or role-successor atom blocks `L_total`/ToE projection.  The repair spectrum contains `4095` failure assignments with distance distribution `binomial(12,k)` by the number of missing atoms, and the nearest failures are exactly the twelve one-atom-missing masks.
+
+This dequotients the obstruction ledger without weakening the guard: it identifies atom-level proof obligations but does not export role theorems, selector-source closure, or ToE closure.
+
+## P2411/S1361 legacy-to-strict bridge source-obligation hypergraph certificate
+
+`P2411/S1361` moves from the generic twelve-atom `L_total` obstruction ledger to the strategic S2 bridge problem itself.  It models the current `K_legacy_ont -> K_strict_gate` completion bridge as five S2 components: amplitude normalization, phase/frequency/topological-bit passage, damping/compression passage, selector/source premise, and residual strict-addition inventory.
+
+The finite hypergraph has eight open bridge-source obligations.  The residual strict-addition inventory is currently ready as an inventory, but the bridge theorem is true only at the full eight-obligation mask.  All `255` proper masks fail; the nearest misses are exactly the eight one-obligation-missing masks.
+
+This identifies the next proof search as a real bridge/source theorem problem, not another role-export shortcut: role-transfer atoms remain reserved for the post-bridge audit, and QW-2191 remains open until a genuine selector/source or symmetry-breaking premise is supplied.
+
+## P2412/S1362 chi11 selector scope-separation certificate
+
+`P2412/S1362` reconciles three facts that must not be conflated: P2392 makes the declared-scope strict selector available without the retired `beta_tors -> chi11` route; P2366 gives a finite phase-origin candidate but not a strict-core source theorem; and P2411 keeps the bridge-level `chi11` source/QW-2191 obligation open.
+
+The finite five-atom scope lattice has `32` rows.  The current mask is the signed state where declared selector availability, beta-route retirement, and the finite phase-origin candidate are true, while bridge-level `chi11` source export and QW-2191 discharge are false.  That signed state is a consistency certificate, not a closure theorem.
+
+Thus `chi11` bookkeeping may be used only inside its declared selector scope; it cannot be promoted into the legacy-to-strict bridge source, QW-2191 discharge, role transfer, `L_total`, or ToE closure without a new theorem.
+
+## P2413/S1363 amplitude scalar-normalization bridge witness certificate
+
+`P2413/S1363` takes the first S2 bridge component, amplitude normalization, and exports a narrow exact witness rather than another global obstruction ledger.  On the audited `d=0..11` domain,
+
+```text
+K_legacy_ont(d) = alpha_geo * L_shape(d),
+L_shape(d) = cos(pi*d/4 + pi/6)/(1+d/100),
+alpha_geo^{-1} K_legacy_ont(d) = L_shape(d).
+```
+
+The proof checks the exact zero condition `3d == 4 mod 12`, which has no solution, and the denominator `(100+d)/100 > 0`, so the positive scalar `alpha_geo=4 ln 2` removes only the global amplitude and preserves signs.
+
+This is a bridge ingredient, not a full amplitude source theorem and not a role-safe amplitude absorption theorem: it does not transfer `sin^2(theta_W)=alpha_geo/12`, does not complete `K_legacy_ont -> K_strict_gate`, and does not affect QW-2191, `L_total`, or ToE closure.
