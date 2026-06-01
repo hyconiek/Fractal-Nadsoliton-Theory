@@ -1,0 +1,168 @@
+{
+  "bathtub_lp_dual_certificate": {
+    "artifact_replay": {
+      "p2382_packet_id": "P2382",
+      "p2384_packet_id": "P2384",
+      "p2385_packet_id": "P2385"
+    },
+    "docs": {
+      "equation_sheet": "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md",
+      "lagrangian_eom_draft": "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md"
+    },
+    "lp_dual_certificate": {
+      "absolute_primal_dual_gap": 0.0,
+      "absolute_primal_weight_gap": 2.220446049250313e-16,
+      "cap_M": 1.6,
+      "closed_form_W5_minus_3W1": 1.411521119955523,
+      "dual_mu_rule": "mu(s)=max(q(s)-q(1/M),0)",
+      "dual_slack_integral": 1.0171214582711858,
+      "dual_value": 1.4115211199555233,
+      "early_cut_t_1_over_M": 0.625,
+      "lambda_q_t": -0.21587321327837405,
+      "linear_program": {
+        "dual": "minimize lambda + M*integral_0^1 mu(s) ds subject to lambda+mu(s)>=q(s), mu(s)>=0",
+        "primal": "maximize integral_0^1 q(s)*rho(s) ds subject to 0<=rho<=M and integral rho=1",
+        "q_s": "A5(s)-3*A1(s)"
+      },
+      "primal_value": 1.4115211199555233,
+      "rho_star_rule": "rho*(s)=M on 0<=s<1/M and rho*(s)=0 on 1/M<s<=1",
+      "sampled_complementarity": {
+        "grid_points": 42,
+        "max_complementarity_error": 7.105427357601002e-16,
+        "rows": [
+          {
+            "dual_gap": 0.0,
+            "dual_gap_times_rho": 0.0,
+            "mu_s": 9.507655486694514,
+            "mu_times_cap_minus_rho": 0.0,
+            "rho_star_s": 1.6,
+            "s": 0.0
+          },
+          {
+            "dual_gap": 0.0,
+            "dual_gap_times_rho": 0.0,
+            "mu_s": 0.0173778269651077,
+            "mu_times_cap_minus_rho": 0.0,
+            "rho_star_s": 1.6,
+            "s": 0.6097560975609756
+          },
+          {
+            "dual_gap": 0.009904720460869765,
+            "dual_gap_times_rho": 0.0,
+            "mu_s": 0.0,
+            "mu_times_cap_minus_rho": 0.0,
+            "rho_star_s": 0.0,
+            "s": 0.6341463414634146
+          },
+          {
+            "dual_gap": 0.2125807556876289,
+            "dual_gap_times_rho": 0.0,
+            "mu_s": 0.0,
+            "mu_times_cap_minus_rho": 0.0,
+            "rho_star_s": 0.0,
+            "s": 1.0
+          }
+        ]
+      },
+      "sampled_dual_feasibility": {
+        "grid_points": 65,
+        "max_negative_dual_gap_violation": 2.220446049250313e-16,
+        "max_q_prime_on_grid": -0.24174708731451278,
+        "samples": [
+          {
+            "dual_gap_lambda_plus_mu_minus_q": 0.0,
+            "lambda": -0.21587321327837405,
+            "mu_s": 9.507655486694514,
+            "q_prime_s": -135.96795062986945,
+            "q_s": 9.291782273416139,
+            "s": 0.0
+          },
+          {
+            "dual_gap_lambda_plus_mu_minus_q": 0.0,
+            "lambda": -0.21587321327837405,
+            "mu_s": 0.0,
+            "q_prime_s": -1.10379999246585,
+            "q_s": -0.21587321327837405,
+            "s": 0.625
+          },
+          {
+            "dual_gap_lambda_plus_mu_minus_q": 0.2125807556876289,
+            "lambda": -0.21587321327837405,
+            "mu_s": 0.0,
+            "q_prime_s": -0.24174708731451278,
+            "q_s": -0.42845396896600296,
+            "s": 1.0
+          }
+        ]
+      },
+      "source_burden_translation_for_M_1_6": {
+        "barycenter": 0.3125,
+        "early_half_mass": 0.8,
+        "early_interval_length": 0.625,
+        "shift_from_uniform_barycenter": 0.1875,
+        "status": "SOURCE_STILL_OPEN_NON_STRICT_PREMISE_UNTIL_DERIVED"
+      },
+      "uniqueness_statement": "Since P2383/P2384 certify q'(s)<0 on the audited rectangle, equality in the LP dual can only saturate the cap on the earliest interval of length 1/M, up to the endpoint of measure zero."
+    },
+    "p2382_cap_replay_summary": {
+      "W5_minus_3W1": 1.411521119955523,
+      "a_over_b": 0.3308275319314663,
+      "beta_tors": 0.1,
+      "cap_M": 1.6,
+      "d5_chamber": true,
+      "d5_margin_b_minus_3a": 0.02569532538409236,
+      "eta": 1.8
+    },
+    "probe_id": "P2386_S1336_BATHTUB_LP_DUAL_CERTIFICATE",
+    "source_artifacts": {
+      "P2382_BOUNDED_DENSITY_BATHTUB": "fundamental_action_reconstruction/generated/p2382_s1332_bounded_density_bathtub_frontload_certificate.json",
+      "P2384_SYMBOLIC_INEQUALITY": "fundamental_action_reconstruction/generated/p2384_s1334_symbolic_bathtub_inequality_proof_packet.json",
+      "P2385_EXACT_SUPPORT_CHAMBER": "fundamental_action_reconstruction/generated/p2385_s1335_exact_z12_support_chamber_theorem.json"
+    },
+    "theorem_export": {
+      "claim": "The bounded-density bathtub step can be written as an infinite-dimensional linear program with an explicit dual certificate. For M=1.6 at the P2382/P2384 worst corner, lambda=q(1/M) and mu(s)=max(q(s)-lambda,0) match the early bang-bang primal value exactly, so the cap/frontload optimization is certified by strong-duality/KKT bookkeeping rather than by an informal rearrangement argument.",
+      "name": "P2386/S1336 bathtub LP dual certificate",
+      "not_licensed": [
+        "strict variational source theorem deriving the cap M or the density rho*",
+        "promotion of rho*, q, mu, or the LP objective into L_total",
+        "claim that the bounded-density source is supplied by the strict core",
+        "QW-2191 discharge or selector closure",
+        "beta_tors -> chi11 theorem",
+        "legacy physical-role transfer",
+        "ToE closure"
+      ],
+      "positive_content": [
+        "Exports the primal bounded-density LP and its nonnegative-slack dual.",
+        "Computes the exact closed-form primal value M*int_0^(1/M) q(s) ds and matches it to W_M(5)-3*W_M(1).",
+        "Checks sampled dual feasibility, sampled q'(s)<0 consistency, and KKT complementarity for the early bang-bang optimizer.",
+        "Keeps the finite support theorem P2385 separate from the analytic LP certificate."
+      ]
+    },
+    "theorem_fingerprint_sha256": "ad10c9f9c49afc0716e5bcbb9afe752b3cf8ea2e8997e1bd0a88486172126216"
+  },
+  "gatekeeper_checks": {
+    "docs_updated_with_p2386_lp_dual": true,
+    "lp_matches_closed_form_weight_contrast": true,
+    "lp_primal_dual_gap_closed": true,
+    "no_qw2191_discharge_claimed": true,
+    "p2382_cap_chamber_still_true": true,
+    "p2382_cap_is_m_1_6": true,
+    "p2382_loaded": true,
+    "p2384_loaded": true,
+    "p2385_loaded": true,
+    "sampled_dual_feasibility_ok": true,
+    "sampled_kkt_complementarity_ok": true,
+    "sampled_monotonicity_consistent": true,
+    "source_artifacts_present": true,
+    "source_target_not_promoted": true
+  },
+  "global_status": "OPEN_PROGRESS_WITH_TRACE_NO_SELECTOR_OR_TOE_CLOSURE",
+  "packet_id": "P2386",
+  "produced_by": "fundamental_action_reconstruction/p2386_s1336_bathtub_lp_dual_certificate.py",
+  "recommended_next_honest_step": "Use the LP-dual/KKT certificate as the acceptance target for any future strict source theorem: the next source-side result must derive a density whose support/cap data meet this dual-saturated early-frontload profile, or explicitly mark the cap as a non-strict premise.",
+  "result_kind": "BATHTUB_LP_DUAL_CERTIFICATE",
+  "schema_version": "p2386_s1336_v1",
+  "stage_id": "S1336",
+  "status": "OPEN_PROGRESS_PROOF_SIDE_LP_DUAL_CERTIFICATE_SOURCE_STILL_OPEN",
+  "timestamp_utc": "2026-06-01T00:00:00Z"
+}

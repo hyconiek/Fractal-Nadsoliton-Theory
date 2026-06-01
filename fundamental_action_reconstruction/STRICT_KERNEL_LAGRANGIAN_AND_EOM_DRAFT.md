@@ -572,3 +572,34 @@ b>0, a>=0, a/b<1/3,
 the finite `Z12` support maximization is no longer an empirical enumeration claim.  Among all 792 five-node supports, the `(h1,h5)=(0,4)` class has score `4b`, and every other `(h1,h5)` class is beaten by the integer gap test `3*(4-h5)-h1>=0`, with only the non-target `(3,3)` class tying at the excluded boundary `a/b=1/3`.
 
 Thus the 12 d5 supports used by P2382 are exactly the length-5 paths in the step-5 cycle.  The remaining source burden is unchanged: a strict theorem must still derive the bounded front-loaded density/cap, or the cap remains a non-strict premise.  There is still no `L_total` promotion, legacy role transfer, `beta_tors -> chi11` theorem, QW-2191 discharge, selector closure, or ToE closure.
+
+## P2386/S1336 bathtub LP dual certificate, still source-open
+
+`P2386/S1336` is the next proof-cleanup step for the P2382-P2385 bounded-density lane.  It recasts the early-frontload problem as an LP over densities `rho` with `0<=rho<=M` and `int rho=1`, then exports the dual slack certificate
+
+```text
+lambda=q(1/M),
+mu(s)=max(q(s)-lambda,0).
+```
+
+At `M=1.6`, the primal early bang-bang density and this dual pair have matching value, matching the closed-form transport contrast `W_M(5)-3*W_M(1)`.  The certificate also records sampled dual feasibility, the already-proven monotonicity direction `q'(s)<0`, and KKT complementarity checks.
+
+The result narrows what a future strict source theorem must supply: it must derive a source whose cap/frontload data saturate this LP-dual target, or else keep the cap as an explicit non-strict premise.  It is not an `L_total` term and not a strict variational derivation of the density.  There is still no legacy role transfer, `beta_tors -> chi11` theorem, QW-2191 discharge, selector closure, or ToE closure.
+
+## P2387/S1337 bathtub exact KKT branch certificate, still source-open
+
+`P2387/S1337` removes the remaining sampled-KKT flavor from P2386.  Given `q'(s)<0`, the cut `t=1/M` forces the exact sign split `q>lambda` before the cut and `q<lambda` after the cut.  The dual slack `mu=max(q-lambda,0)` and the early bang-bang density `rho_*=M*1_[0,t)` therefore satisfy feasibility and complementarity branch-by-branch.
+
+The result is a sharper acceptance target for source work: a strict source theorem must now derive a density/cap that realizes this branch saturation, or the cap remains a non-strict premise.  This is not an `L_total` term, not a sourced variational derivation, and not a legacy-role or selector closure.  There is still no `beta_tors -> chi11` theorem, QW-2191 discharge, selector closure, or ToE closure.
+
+## P2388/S1338 cap-threshold root uniqueness certificate, still source-open
+
+`P2388/S1338` turns the numerical worst-corner cap threshold into a unique-root statement for the scalar margin equation `F(M)=0`.  The proof structure is: bracket the P2382 root, inherit strict `M`-monotonicity from the P2384 cap-derivative sign proof, and replay bisection/Newton only as deterministic computation.
+
+This makes the source-side target sharper: a strict source theorem must derive a bounded density with cap above the unique root near `1.574821357435363`, or the cap remains a non-strict premise.  The result is not an `L_total` term, not a sourced variational derivation, not a legacy-role transfer, and not a `beta_tors -> chi11`, QW-2191, selector, or ToE closure.
+
+## P2389/S1339 cap slack budget sensitivity certificate, still source-open
+
+`P2389/S1339` measures the safety budget between the unique P2388 cap threshold and the adopted `M=1.6` source target.  It reports the cap surplus, scalar margin, derivative/sensitivity band, and the corresponding source-geometry surplus in early interval length, early-half mass, barycenter, and uniform-shift terms.
+
+This helps future source-side work decide whether it can derive exactly `M=1.6`, a smaller cap still above the unique root, or only a non-strict premise.  It is not an `L_total` term, not a sourced variational derivation, not a legacy-role transfer, and not a `beta_tors -> chi11`, QW-2191, selector, or ToE closure.
