@@ -268,7 +268,7 @@ def main() -> None:
             "P2030-P2033 keep tensor projection, component table, projection rule, and curved B1 ansatz unavailable.",
             "P2314/P2315 answer the full-EOM/Lagrangian and schematic-spectrum questions without claiming selector or G1/G3 closure.",
         ],
-        "blocker": "C3/tensor-resolved metric-background theorem remains open; no new selector or policy-margin source is exported here.",
+        "blocker": "C3/tensor-resolved metric-background theorem remains open on the EOM/Lagrangian track; selector and policy-margin sources are separate parallel blockers and are not prerequisites for continuing EOM export.",
         "strict_guardrails": {
             "no_legacy_kernel_role_transfer": True,
             "no_selector_premise_added": True,
@@ -321,7 +321,7 @@ def main() -> None:
         "status": "OPEN_BEST_WORKING_LTOTAL_IDENTIFIED_FULL_TASK3_EOM_THEOREM_STILL_MISSING",
         "result_kind": "STRICT_REPO_GREP_AND_COMPUTATIONAL_LAGRANGIAN_EOM_COVERAGE_AUDIT_NO_G1_G3_UPDATE",
         "strict_current_best_lagrangian_eom_coverage_audit_probe": probe,
-        "recommended_next_honest_step": "Either export a tensor-resolved metric/background theorem for the selected L_total, or prove a nonexistence theorem that P1653/P1693/P2086 cannot supply Task-3 policy-margin lift without a new lapse/shear or selector source.",
+        "recommended_next_honest_step": "Continue the EOM/Lagrangian track independently: export tensor-resolved metric/background equations for the selected L_total, or prove a nonexistence theorem for that tensor/background lift. Keep selector/QW-2191 closure as a separate parallel track.",
         "gatekeeper_checks": gatekeeper_checks,
         "global_status": "OPEN_OBSTRUCTION_WITH_TRACE",
     }

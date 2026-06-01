@@ -1,0 +1,172 @@
+{
+  "bridge_completed_frw_scalar_gauge_gravity_residual_table_probe": {
+    "background_family": {
+      "R_FRW": "12*H**2",
+      "name": "spatially_flat_FRW_constant_H_minisuperspace_slice",
+      "scope": "named background-family residual table, not background-independence theorem"
+    },
+    "coefficient_source": {
+      "canonical_numeric_coupling_ratios": {
+        "g_eff_over_g": 1.2319100971546473,
+        "lam_eff_over_lam": 1.2067348237095545,
+        "m2_eff_over_m2": 1.46998567264502,
+        "xi_eff_over_xi": 1.46998567264502
+      },
+      "effective_couplings": {
+        "g_eff": "g*(c2 + 1)",
+        "lam_eff": "lam*(c1**2 + 1)",
+        "m2_eff": "m2*(c0 + 1)",
+        "xi_eff": "xi*(c0 + 1)"
+      },
+      "moments": {
+        "c0": "c0",
+        "c1": "c1",
+        "c2": "c2"
+      },
+      "raw_legacy_moments_used": false,
+      "source": "P2363 bridge-completed APD moment transport",
+      "strict_kernel_moment_definitions": {
+        "c0": "cos(omega + phi)/(beta + 1)",
+        "c1": "-(beta*eta*cos(omega + phi) + beta*omega*sin(omega + phi) + omega*sin(omega + phi))/(beta + 1)**2",
+        "c2": "(beta**2*eta**2*cos(omega + phi) + 2*beta**2*eta*omega*sin(omega + phi) + beta**2*eta*cos(omega + phi) - beta**2*omega**2*cos(omega + phi) - beta*eta**2*cos(omega + phi) + 2*beta*eta*omega*sin(omega + phi) + beta*eta*cos(omega + phi) - 2*beta*omega**2*cos(omega + phi) - omega**2*cos(omega + phi))/(2*(beta + 1)**3)",
+        "source_certificate": "P2363 proves APD-completed bridge moments equal these strict moments."
+      }
+    },
+    "docs": {
+      "equation_sheet": "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md",
+      "lagrangian_eom_draft": "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md"
+    },
+    "gap_movement": {
+      "advanced_by": "named FRW scalar/gauge/gravity residual table with bridge-completed coefficient source",
+      "advanced_gap": "nonproxy_covariant_sector_export_with_background_residual_tables",
+      "p2088_open_gaps_before": [
+        "strict_background_family_tensor_closure",
+        "global_nonperturbative_wellposedness_export",
+        "nonproxy_covariant_sector_export_with_background_residual_tables"
+      ],
+      "still_open_reason": "metric row still inherits Einstein-perfect-fluid FRW class and does not include full nonminimal tensor stress-energy variation or atlas lift"
+    },
+    "metric_solution": {
+      "H2": "kappa2*(2*B2*c2*g + 2*B2*g + 2*E2*c2*g + 2*E2*g + 6*c0*m2*phi0**2 + 3*c1**2*lam*phi0**4 + 3*lam*phi0**4 + 6*m2*phi0**2 - 6*p_f + 6*rho_f)/36",
+      "Lambda_cc": "kappa2*(2*B2*c2*g + 2*B2*g + 2*E2*c2*g + 2*E2*g + 3*p_f + 3*phidot**2 + 3*rho_f)/6",
+      "solution_residuals": {
+        "R_g_00": "0",
+        "R_g_ii": "0"
+      }
+    },
+    "normal_form_residuals": {
+      "E_A_after_Addot_substitution": "0",
+      "E_phi_after_phiddot_substitution": "0"
+    },
+    "probe_id": "P2364_S1314_BRIDGE_COMPLETED_FRW_SCALAR_GAUGE_GRAVITY_RESIDUAL_TABLE",
+    "residual_table": [
+      {
+        "derivation_residual": "0",
+        "normal_form": "phiddot = A0**2*c2*g*phi0 + A0**2*g*phi0 + 24*H**2*c0*phi0*xi + 24*H**2*phi0*xi - 3*H*phidot - c0*m2*phi0 - c1**2*lam*phi0**3 - lam*phi0**3 - m2*phi0",
+        "residual_expression": "-A0**2*c2*g*phi0 - A0**2*g*phi0 - 24*H**2*c0*phi0*xi - 24*H**2*phi0*xi + 3*H*phidot + c0*m2*phi0 + c1**2*lam*phi0**3 + lam*phi0**3 + m2*phi0 + phiddot",
+        "row_id": "E_phi_FRW",
+        "sector": "scalar",
+        "selector_required": false
+      },
+      {
+        "derivation_residual": "0",
+        "normal_form": "Addot = -A0*c2*g*phi0**2 - A0*g*phi0**2 - 3*Adot*H",
+        "residual_expression": "A0*c2*g*phi0**2 + A0*g*phi0**2 + Addot + 3*Adot*H",
+        "row_id": "E_A_FRW",
+        "sector": "gauge",
+        "selector_required": false
+      },
+      {
+        "derivation_residual": "inherited Einstein-perfect-fluid FRW row from P1870/P1873",
+        "normal_form": "H2 = kappa2*(2*B2*c2*g + 2*B2*g + 2*E2*c2*g + 2*E2*g + 6*c0*m2*phi0**2 + 3*c1**2*lam*phi0**4 + 3*lam*phi0**4 + 6*m2*phi0**2 - 6*p_f + 6*rho_f)/36",
+        "residual_expression": "-(2*B2*c2*g*kappa2 + 2*B2*g*kappa2 + 2*E2*c2*g*kappa2 + 2*E2*g*kappa2 - 12*H**2 - 4*Lambda_cc + 2*c0*kappa2*m2*phi0**2 + c1**2*kappa2*lam*phi0**4 + kappa2*lam*phi0**4 + 2*kappa2*m2*phi0**2 + 2*kappa2*phidot**2 + 4*kappa2*rho_f)/4",
+        "row_id": "R_g_00_FRW",
+        "sector": "gravity_metric",
+        "selector_required": false
+      },
+      {
+        "derivation_residual": "inherited Einstein-perfect-fluid FRW row from P1870/P1873",
+        "normal_form": "Lambda_cc = kappa2*(2*B2*c2*g + 2*B2*g + 2*E2*c2*g + 2*E2*g + 3*p_f + 3*phidot**2 + 3*rho_f)/6",
+        "residual_expression": "(-2*B2*c2*g*kappa2 - 2*B2*g*kappa2 - 2*E2*c2*g*kappa2 - 2*E2*g*kappa2 - 36*H**2 + 12*Lambda_cc + 6*c0*kappa2*m2*phi0**2 + 3*c1**2*kappa2*lam*phi0**4 + 3*kappa2*lam*phi0**4 + 6*kappa2*m2*phi0**2 - 12*kappa2*p_f - 6*kappa2*phidot**2)/12",
+        "row_id": "R_g_ii_FRW",
+        "sector": "gravity_metric",
+        "selector_required": false
+      }
+    ],
+    "residual_vector_after_closure_substitution": {
+      "E_A": "0",
+      "E_phi": "0",
+      "R_g_00": "0",
+      "R_g_ii": "0"
+    },
+    "separation_from_selector": {
+      "eom_lagrangian_track_is_selector_independent": true,
+      "legacy_role_transfer_claimed": false,
+      "selector_qw2191_remains_parallel": true,
+      "selector_required_for_residual_table": false
+    },
+    "source_artifacts": {
+      "P1867_COVARIANT_EOM_SCAFFOLD": "fundamental_action_reconstruction/generated/p1867_s817_strict_covariant_eom_residual_witness_scaffold.json",
+      "P1870_FRW_METRIC_RESIDUAL": "fundamental_action_reconstruction/generated/p1870_s820_strict_frw_background_metric_residual_probe.json",
+      "P1873_FRW_MULTISECTOR_STRESS_ENERGY": "fundamental_action_reconstruction/generated/p1873_s823_strict_frw_multisector_stress_energy_scaffold.json",
+      "P2088_EOM_THEOREM_GAP_AUDIT": "fundamental_action_reconstruction/generated/p2088_s1038_strict_full_ltotal_eom_theorem_readiness_gap_audit.json",
+      "P2363_BRIDGE_COMPLETED_MOMENTS": "fundamental_action_reconstruction/generated/p2363_s1313_legacy_strict_bridge_moment_lagrangian_transport_probe.json"
+    },
+    "stress_energy_seed": {
+      "V_scalar": "phi0**2*(2*c0*m2 + c1**2*lam*phi0**2 + lam*phi0**2 + 2*m2)/4",
+      "p_gauge": "g*(B2 + E2)*(c2 + 1)/6",
+      "p_scalar": "-(2*c0*m2*phi0**2 + c1**2*lam*phi0**4 + lam*phi0**4 + 2*m2*phi0**2 - 2*phidot**2)/4",
+      "p_total": "-(-2*B2*c2*g - 2*B2*g - 2*E2*c2*g - 2*E2*g + 6*c0*m2*phi0**2 + 3*c1**2*lam*phi0**4 + 3*lam*phi0**4 + 6*m2*phi0**2 - 12*p_f - 6*phidot**2)/12",
+      "rho_gauge": "g*(B2 + E2)*(c2 + 1)/2",
+      "rho_scalar": "(2*c0*m2*phi0**2 + c1**2*lam*phi0**4 + lam*phi0**4 + 2*m2*phi0**2 + 2*phidot**2)/4",
+      "rho_total": "(2*B2*c2*g + 2*B2*g + 2*E2*c2*g + 2*E2*g + 2*c0*m2*phi0**2 + c1**2*lam*phi0**4 + lam*phi0**4 + 2*m2*phi0**2 + 2*phidot**2 + 4*rho_f)/4"
+    },
+    "theorem_export": {
+      "claim": "Using the P2363 bridge-completed moments as the coefficient source, one can export a named FRW-background scalar/gauge/gravity residual table whose scalar and gauge rows are derived from an executable minisuperspace Lagrangian and whose metric Einstein residual rows have an explicit algebraic residual-zero normal form.",
+      "not_licensed": [
+        "full nonproxy tensor-resolved metric variation with nonminimal stress-energy terms",
+        "renormalized one-loop stress-energy closure",
+        "Cutkosky/BRST/unitarity theorem",
+        "background-independence atlas lift beyond this FRW family",
+        "legacy physical-role transfer",
+        "selector premise or QW-2191 discharge",
+        "ToE closure"
+      ],
+      "positive_content": [
+        "The scalar FRW row is the Euler-Lagrange row of the bridge-completed effective Lagrangian density.",
+        "The gauge FRW row is the sign-normalized Euler-Lagrange row of the same density.",
+        "The scalar/gauge acceleration normal forms substitute back with zero residual.",
+        "The FRW metric residuals R_g_00 and R_g_ii solve exactly for H^2 and Lambda_cc and substitute back with zero residual.",
+        "The coefficient source is the P2363 APD-completed bridge moment map, not raw legacy moments."
+      ],
+      "theorem_name": "P2364 bridge-completed FRW scalar/gauge/gravity residual table"
+    },
+    "theorem_fingerprint_sha256": "887a99053cb8d118177bc66692693786fc27543928e6eee02c307cf98335c627"
+  },
+  "gatekeeper_checks": {
+    "docs_updated_with_p2364_frw_residual_table": true,
+    "full_residual_vector_closes_under_normal_forms": true,
+    "gauge_el_derivation_residual_zero": true,
+    "hard_limits_preserved": true,
+    "metric_solution_residuals_zero": true,
+    "p1867_scaffold_loaded": true,
+    "p1870_frw_metric_loaded": true,
+    "p1873_frw_multisector_loaded": true,
+    "p2088_gap_advanced_not_claimed_closed": true,
+    "p2363_gatekeepers_all_true": true,
+    "raw_legacy_moments_not_used": true,
+    "scalar_el_derivation_residual_zero": true,
+    "scalar_gauge_normal_forms_residual_zero": true,
+    "selector_and_role_limits_preserved": true,
+    "source_artifacts_present": true
+  },
+  "global_status": "OPEN_PROGRESS_WITH_TRACE_NO_SELECTOR_ROLE_TRANSFER_OR_TOE_CLOSURE",
+  "packet_id": "P2364",
+  "produced_by": "p2364_s1314_bridge_completed_frw_scalar_gauge_gravity_residual_table_probe.py",
+  "recommended_next_honest_step": "Promote the FRW metric row from the inherited Einstein-perfect-fluid class to a full tensor-resolved variation including the xi_eff*Phi^2*R nonminimal stress-energy terms, then replay the same residual table on a second background family such as Bianchi-I.",
+  "result_kind": "BRIDGE_COMPLETED_FRW_SCALAR_GAUGE_GRAVITY_RESIDUAL_TABLE",
+  "schema_version": "p2364_s1314_v1",
+  "stage_id": "S1314",
+  "status": "OPEN_PROGRESS_BRIDGE_COMPLETED_FRW_RESIDUAL_TABLE_EXPORTED_NO_FULL_TENSOR_CLOSURE",
+  "timestamp_utc": "2026-06-01T00:00:00+00:00"
+}

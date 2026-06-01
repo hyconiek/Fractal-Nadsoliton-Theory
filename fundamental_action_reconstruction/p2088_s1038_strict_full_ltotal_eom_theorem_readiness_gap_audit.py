@@ -48,7 +48,7 @@ def main() -> None:
         },
         {
             "id": "G3",
-            "name": "qw2191_compatible_selector_premise_or_internal_source",
+            "name": "nonproxy_covariant_sector_export_with_background_residual_tables",
             "status": "OPEN",
             "evidence_source": "p2086/p2087 c3_gate_update",
         },
@@ -59,13 +59,13 @@ def main() -> None:
         "stage_goal": "export strict nonavailability-vs-availability theorem object for DELTA_BG_Yf normal-form lift from scalar proxy to background-family tensor layer",
         "why_now": [
             "P2087 closed local scalar normal-form extraction checks.",
-            "Remaining blockers are theorem-readiness gaps G1-G3, not local EL algebra.",
+            "Remaining EOM/Lagrangian blockers are theorem-readiness gaps G1-G3, not local EL algebra and not selector closure.",
             "This is kernel-split-robust and does not reopen artifact-sensitive upstream classes.",
         ],
         "must_not_claim": [
             "no C3 discharge",
             "no global theorem closure",
-            "no strict-core selector closure without explicit selector premise/source",
+            "no strict-core selector closure; selector work remains a separate parallel track",
         ],
     }
 

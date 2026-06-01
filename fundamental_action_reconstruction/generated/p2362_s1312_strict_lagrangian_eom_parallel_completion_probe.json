@@ -1,0 +1,348 @@
+{
+  "gatekeeper_checks": {
+    "covariant_sector_rows_complete": true,
+    "docs_updated_with_parallel_eom_statement": true,
+    "hard_limits_preserved": true,
+    "no_selector_prerequisite_for_eom_export": true,
+    "p1688_sector_eom_loaded": true,
+    "p1693_covariant_anchor_loaded": true,
+    "p2086_termwise_zero_residuals": true,
+    "p2087_normal_forms_zero_residuals": true,
+    "p2088_eom_gaps_not_selector_gaps": true,
+    "p2316_parallel_next_step_recorded": true,
+    "p2329_selector_independence_inherited": true,
+    "reduced_all_fields_have_nonzero_terms": true,
+    "reduced_all_terms_hit_at_least_one_field": true,
+    "reduced_eom_rows_have_zero_residuals": true,
+    "reduced_incidence_matrix_full_field_rank": true,
+    "source_artifacts_present": true
+  },
+  "global_status": "OPEN_PROGRESS_WITH_TRACE_NO_SELECTOR_OR_TOE_CLOSURE",
+  "packet_id": "P2362",
+  "produced_by": "p2362_s1312_strict_lagrangian_eom_parallel_completion_probe.py",
+  "recommended_next_honest_step": "Continue EOM/Lagrangian completion by exporting nonproxy covariant spinor/gauge/metric residual tables on a named background family; work on selector/QW-2191 can proceed in parallel but is not a prerequisite for this EOM step.",
+  "result_kind": "STRICT_LAGRANGIAN_EOM_PARALLEL_COMPLETION_AUDIT_SELECTOR_INDEPENDENT_NO_QW2191_DISCHARGE",
+  "schema_version": "p2362_s1312_v1",
+  "stage_id": "S1312",
+  "status": "OPEN_PARALLEL_EOM_LAGRANGIAN_COMPLETION_ADVANCED_SELECTOR_SEPARATE",
+  "strict_lagrangian_eom_parallel_completion_probe": {
+    "covariant_sector_eom_rows": [
+      {
+        "completion_track": "EOM_LAGRANGIAN_PARALLEL_TO_SELECTOR",
+        "eom_row": "□φ + m_φ^2 φ + (λ_3/2)φ^2 + (λ_4/3!)φ^3 + 2λ_{φH}φ(H†H) + 2ξ_{φR}Rφ = 0",
+        "lagrangian_anchor": "sqrt(-g)*[(1/2)(∇φ)^2 - (1/2)m_φ^2φ^2 - (λ_3/3!)φ^3 - (λ_4/4!)φ^4 - λ_{φH}φ^2(H^†H) - ξ_{φR}φ^2R]",
+        "lagrangian_anchor_key": "L_scalar_phi",
+        "sector": "scalar_phi",
+        "selector_required_for_eom_export": false
+      },
+      {
+        "completion_track": "EOM_LAGRANGIAN_PARALLEL_TO_SELECTOR",
+        "eom_row": "D_μD^μH + μ_H^2 H + 2λ_H(H†H)H + ξ_HR R H + λ_{φH}φ^2 H + Yukawa_source = 0",
+        "lagrangian_anchor": "sqrt(-g)*[(D_μH)^†(D^μH) - μ_H^2(H^†H) - λ_H(H^†H)^2 - ξ_HR(H^†H)R]",
+        "lagrangian_anchor_key": "L_higgs",
+        "sector": "higgs_H",
+        "selector_required_for_eom_export": false
+      },
+      {
+        "completion_track": "EOM_LAGRANGIAN_PARALLEL_TO_SELECTOR",
+        "eom_row": "∇_ν(Z_a F_a^{νμ}) + J_a^μ + χ_RG ∇_ν(R F_a^{νμ}) = 0",
+        "lagrangian_anchor": "sqrt(-g)*[-(1/4) Σ_a Z_a F^a_{μν}F_a^{μν}]",
+        "lagrangian_anchor_key": "L_gauge",
+        "sector": "gauge_A",
+        "selector_required_for_eom_export": false
+      },
+      {
+        "completion_track": "EOM_LAGRANGIAN_PARALLEL_TO_SELECTOR",
+        "eom_row": "iγ^a e_a^{ μ}D_μ ψ_f - y_f H·ψ_f = 0",
+        "lagrangian_anchor": "sqrt(-g)*[Σ_f i ψ̄_f γ^a e_a^{ μ}D_μ ψ_f]",
+        "lagrangian_anchor_key": "L_fermion",
+        "sector": "fermion_psi",
+        "selector_required_for_eom_export": false
+      },
+      {
+        "completion_track": "EOM_LAGRANGIAN_PARALLEL_TO_SELECTOR",
+        "eom_row": "(M_Pl^2/2)G_{μν} + Λg_{μν} + H_{μν}^{(R2,Ric2,Riem2)} = T_{μν}^{SM+mix}",
+        "lagrangian_anchor": "sqrt(-g)*[(M_Pl^2/2)R - Λ + c_R2 R^2 + c_Ric2 R_{μν}R^{μν} + c_Riem2 R_{μνρσ}R^{μνρσ}]",
+        "lagrangian_anchor_key": "L_gravity",
+        "sector": "metric_g",
+        "selector_required_for_eom_export": false
+      }
+    ],
+    "docs": {
+      "equation_sheet": "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md",
+      "lagrangian_eom_draft": "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md"
+    },
+    "parallel_completion_summary": {
+      "covariant_sector_eom_row_count": 5,
+      "eom_lagrangian_track_is_selector_independent": true,
+      "reduced_incidence_rank": 3,
+      "reduced_term_count": 11,
+      "reduced_variation_field_count": 3,
+      "remaining_eom_blockers": [
+        "strict_background_family_tensor_closure",
+        "global_nonperturbative_wellposedness_export",
+        "nonproxy_covariant_sector_export_with_background_residual_tables"
+      ],
+      "selector_closure_is_parallel_problem": true,
+      "selector_closure_required_before_eom_work": false,
+      "selector_qw2191_status": "OPEN_PARALLEL_TRACK_NOT_USED_AS_EOM_PREREQUISITE"
+    },
+    "probe_id": "P2362_S1312_STRICT_LAGRANGIAN_EOM_PARALLEL_COMPLETION",
+    "reduced_eom_rows": [
+      {
+        "eom_full_srepr": "Add(Mul(Integer(-1), Symbol('gmix', real=True), Function('A')(Symbol('x', real=True)), Function('h')(Symbol('x', real=True))), Mul(Integer(-1), Symbol('kpsi', real=True), Derivative(Function('psi')(Symbol('x', real=True)), Tuple(Symbol('x', real=True), Integer(2)))), Mul(Integer(-1), Integer(4), Symbol('lam4', real=True), Pow(Function('psi')(Symbol('x', real=True)), Integer(3))), Mul(Integer(-1), Symbol('mpsi', real=True), Function('psi')(Symbol('x', real=True))), Mul(Integer(-1), Integer(2), Symbol('zeta', real=True), Pow(Function('A')(Symbol('x', real=True)), Integer(2)), Function('psi')(Symbol('x', real=True))))",
+        "field": "psi",
+        "normal_form_rhs_srepr": "Add(Mul(Integer(-1), Symbol('gmix', real=True), Pow(Symbol('kpsi', real=True), Integer(-1)), Function('A')(Symbol('x', real=True)), Function('h')(Symbol('x', real=True))), Mul(Integer(-1), Integer(4), Pow(Symbol('kpsi', real=True), Integer(-1)), Symbol('lam4', real=True), Pow(Function('psi')(Symbol('x', real=True)), Integer(3))), Mul(Integer(-1), Pow(Symbol('kpsi', real=True), Integer(-1)), Symbol('mpsi', real=True), Function('psi')(Symbol('x', real=True))), Mul(Integer(-1), Integer(2), Pow(Symbol('kpsi', real=True), Integer(-1)), Symbol('zeta', real=True), Pow(Function('A')(Symbol('x', real=True)), Integer(2)), Function('psi')(Symbol('x', real=True))))",
+        "numeric_probe_residual": "0",
+        "selector_required_for_reduced_eom": false,
+        "symbolic_recomposition_residual": "Integer(0)"
+      },
+      {
+        "eom_full_srepr": "Add(Mul(Integer(-1), Integer(4), Symbol('gA', real=True), Pow(Function('A')(Symbol('x', real=True)), Integer(3))), Mul(Integer(-1), Symbol('gmix', real=True), Function('h')(Symbol('x', real=True)), Function('psi')(Symbol('x', real=True))), Mul(Integer(-1), Symbol('kA', real=True), Derivative(Function('A')(Symbol('x', real=True)), Tuple(Symbol('x', real=True), Integer(2)))), Mul(Integer(-1), Symbol('mA', real=True), Function('A')(Symbol('x', real=True))), Mul(Integer(-1), Integer(2), Symbol('zeta', real=True), Function('A')(Symbol('x', real=True)), Pow(Function('psi')(Symbol('x', real=True)), Integer(2))))",
+        "field": "A",
+        "normal_form_rhs_srepr": "Add(Mul(Integer(-1), Integer(4), Symbol('gA', real=True), Pow(Symbol('kA', real=True), Integer(-1)), Pow(Function('A')(Symbol('x', real=True)), Integer(3))), Mul(Integer(-1), Symbol('gmix', real=True), Pow(Symbol('kA', real=True), Integer(-1)), Function('h')(Symbol('x', real=True)), Function('psi')(Symbol('x', real=True))), Mul(Integer(-1), Pow(Symbol('kA', real=True), Integer(-1)), Symbol('mA', real=True), Function('A')(Symbol('x', real=True))), Mul(Integer(-1), Integer(2), Pow(Symbol('kA', real=True), Integer(-1)), Symbol('zeta', real=True), Function('A')(Symbol('x', real=True)), Pow(Function('psi')(Symbol('x', real=True)), Integer(2))))",
+        "numeric_probe_residual": "0",
+        "selector_required_for_reduced_eom": false,
+        "symbolic_recomposition_residual": "Integer(0)"
+      },
+      {
+        "eom_full_srepr": "Add(Mul(Integer(-1), Integer(4), Symbol('gh', real=True), Pow(Function('h')(Symbol('x', real=True)), Integer(3))), Mul(Integer(-1), Symbol('gmix', real=True), Function('A')(Symbol('x', real=True)), Function('psi')(Symbol('x', real=True))), Mul(Integer(-1), Symbol('kh', real=True), Derivative(Function('h')(Symbol('x', real=True)), Tuple(Symbol('x', real=True), Integer(2)))), Mul(Integer(-1), Symbol('mh', real=True), Function('h')(Symbol('x', real=True))))",
+        "field": "h",
+        "normal_form_rhs_srepr": "Add(Mul(Integer(-1), Integer(4), Symbol('gh', real=True), Pow(Symbol('kh', real=True), Integer(-1)), Pow(Function('h')(Symbol('x', real=True)), Integer(3))), Mul(Integer(-1), Symbol('gmix', real=True), Pow(Symbol('kh', real=True), Integer(-1)), Function('A')(Symbol('x', real=True)), Function('psi')(Symbol('x', real=True))), Mul(Integer(-1), Pow(Symbol('kh', real=True), Integer(-1)), Symbol('mh', real=True), Function('h')(Symbol('x', real=True))))",
+        "numeric_probe_residual": "0",
+        "selector_required_for_reduced_eom": false,
+        "symbolic_recomposition_residual": "Integer(0)"
+      }
+    ],
+    "reduced_field_column_sums": {
+      "A": 5,
+      "h": 4,
+      "psi": 5
+    },
+    "reduced_termwise_incidence_matrix": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ]
+    ],
+    "reduced_termwise_incidence_rank": 3,
+    "reduced_termwise_incidence_rows": [
+      {
+        "field_incidence": {
+          "A": 1,
+          "h": 0,
+          "psi": 0
+        },
+        "nonzero_fields": [
+          "A"
+        ],
+        "selector_required_for_variation": false,
+        "term_id": "L_A_kin"
+      },
+      {
+        "field_incidence": {
+          "A": 1,
+          "h": 0,
+          "psi": 0
+        },
+        "nonzero_fields": [
+          "A"
+        ],
+        "selector_required_for_variation": false,
+        "term_id": "L_A_mass"
+      },
+      {
+        "field_incidence": {
+          "A": 1,
+          "h": 0,
+          "psi": 0
+        },
+        "nonzero_fields": [
+          "A"
+        ],
+        "selector_required_for_variation": false,
+        "term_id": "L_A_self"
+      },
+      {
+        "field_incidence": {
+          "A": 0,
+          "h": 1,
+          "psi": 0
+        },
+        "nonzero_fields": [
+          "h"
+        ],
+        "selector_required_for_variation": false,
+        "term_id": "L_h_kin"
+      },
+      {
+        "field_incidence": {
+          "A": 0,
+          "h": 1,
+          "psi": 0
+        },
+        "nonzero_fields": [
+          "h"
+        ],
+        "selector_required_for_variation": false,
+        "term_id": "L_h_mass"
+      },
+      {
+        "field_incidence": {
+          "A": 0,
+          "h": 1,
+          "psi": 0
+        },
+        "nonzero_fields": [
+          "h"
+        ],
+        "selector_required_for_variation": false,
+        "term_id": "L_h_self"
+      },
+      {
+        "field_incidence": {
+          "A": 1,
+          "h": 0,
+          "psi": 1
+        },
+        "nonzero_fields": [
+          "psi",
+          "A"
+        ],
+        "selector_required_for_variation": false,
+        "term_id": "L_mix_biquadratic"
+      },
+      {
+        "field_incidence": {
+          "A": 1,
+          "h": 1,
+          "psi": 1
+        },
+        "nonzero_fields": [
+          "psi",
+          "A",
+          "h"
+        ],
+        "selector_required_for_variation": false,
+        "term_id": "L_mix_trilinear"
+      },
+      {
+        "field_incidence": {
+          "A": 0,
+          "h": 0,
+          "psi": 1
+        },
+        "nonzero_fields": [
+          "psi"
+        ],
+        "selector_required_for_variation": false,
+        "term_id": "L_psi_kin"
+      },
+      {
+        "field_incidence": {
+          "A": 0,
+          "h": 0,
+          "psi": 1
+        },
+        "nonzero_fields": [
+          "psi"
+        ],
+        "selector_required_for_variation": false,
+        "term_id": "L_psi_mass"
+      },
+      {
+        "field_incidence": {
+          "A": 0,
+          "h": 0,
+          "psi": 1
+        },
+        "nonzero_fields": [
+          "psi"
+        ],
+        "selector_required_for_variation": false,
+        "term_id": "L_psi_self"
+      }
+    ],
+    "source_artifacts": {
+      "P1688_SECTOR_EOM_EXPORT": "fundamental_action_reconstruction/generated/p1688_s638_strict_full_lagrangian_to_sector_eom_export_summary.json",
+      "P1693_MULTISECTOR_SYMPY_BRIDGE": "fundamental_action_reconstruction/generated/p1693_s643_strict_full_lagrangian_multisector_sympy_eom_bridge.json",
+      "P2086_TERMWISE_EOM": "fundamental_action_reconstruction/generated/p2086_s1036_strict_full_ltotal_eom_termwise_execution_audit.json",
+      "P2087_NORMAL_FORMS": "fundamental_action_reconstruction/generated/p2087_s1037_strict_full_ltotal_eom_normal_form_extraction_audit.json",
+      "P2088_EOM_GAP_AUDIT": "fundamental_action_reconstruction/generated/p2088_s1038_strict_full_ltotal_eom_theorem_readiness_gap_audit.json",
+      "P2316_BEST_LTOTAL_AUDIT": "fundamental_action_reconstruction/generated/p2316_s1266_strict_current_best_lagrangian_eom_coverage_audit_probe.json",
+      "P2329_SELECTOR_INDEPENDENCE": "fundamental_action_reconstruction/generated/p2329_s1279_selector_independence_lagrangian_eom_audit_probe.json"
+    },
+    "theorem_export": {
+      "claim": "The strict Lagrangian/EOM track can be continued independently of selector/QW-2191 closure: covariant sector EOM rows and reduced termwise normal forms are available, and remaining EOM blockers are tensor/background/nonproxy-sector obligations rather than selector prerequisites.",
+      "not_licensed": [
+        "full tensor-resolved metric/background theorem",
+        "global nonperturbative well-posedness theorem",
+        "BRST/Cutkosky/counterterm closure",
+        "legacy physical-role transfer",
+        "selector premise or QW-2191 selector discharge",
+        "ToE closure"
+      ],
+      "positive_content": [
+        "P1688 exports sector EOM rows for scalar_phi, higgs_H, gauge_A, fermion_psi, and metric_g.",
+        "P1693 exports matching covariant Lagrangian sector anchors.",
+        "P2086 exports 11 reduced L_total terms with termwise Euler-Lagrange recomposition residuals equal to zero.",
+        "P2087 exports second-derivative normal forms for psi, A, and h with zero substitution residual.",
+        "P2329 certifies the reduced Lagrangian/EOM terms, variations, and residuals as selector-independent."
+      ],
+      "theorem_name": "P2362 selector-independent strict Lagrangian/EOM parallel completion audit"
+    },
+    "theorem_fingerprint_sha256": "7b24011d3b09033eced59e4bf237bcbe8e75b9d87b72b94bd6097bca1ed3fe96"
+  },
+  "timestamp_utc": "2026-06-01T00:00:00+00:00"
+}

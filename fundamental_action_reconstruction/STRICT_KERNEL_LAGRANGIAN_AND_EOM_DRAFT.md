@@ -64,6 +64,22 @@ K_strict -> (c0,c1,c2) -> effective couplings -> L_SM + L_GR scaffold
 
 The reverse direction still requires residual-zero EOM/QG witness tables.
 
+### 3.1 Bridge-completed moment transport
+
+`P2363/S1313` records the bridge-completed moment transport from the legacy intermediate kernel into the strict `L_total` coefficient map.  The admissible route is:
+
+```text
+K_legacy_ont(d)
+  * (1/alpha_geo)
+  * cos(omega*d + phi)/cos(omega_L*d + phi_L)
+  * (1 + beta_tors*d)/(1 + beta*d^eta)
+  = K_strict_gate(d)
+```
+
+After this APD completion is applied, the moments extracted at `d_ref=1` have zero symbolic residual against the strict `c0,c1,c2` moments, and the induced `m2_eff`, `lam_eff`, `y_eff`, `g_eff`, and `xi_eff` map matches `P1866`.  The negative control is also part of the result: raw legacy moments, including amplitude-normalized raw legacy moments, do not match the strict moments and cannot be used as silent substitutes.
+
+This is bridge-completed moment transport for the Lagrangian/EOM track only.  It does not derive a strict source theorem for the APD factors, does not transfer legacy physical roles, and does not close selector/QW-2191.
+
 ## 4. Lagrangian scaffold
 
 With scalar `Phi`, fermion `psi`, gauge field `A_mu`, curvature scalar `R`, and metric determinant factor `sqrt(-g)`, the compact covariant scaffold is:
@@ -88,6 +104,8 @@ L_total = L_scalar + L_fermion + L_gauge + L_gravity
 This is the human-readable form of the strict symbolic export. The probe also stores a one-dimensional expanded expression for `L_scalar`, `L_fermion`, `L_gauge`, and `L_gravity_density`.
 
 ## 5. Euler-Lagrange / EOM scaffold
+
+P2362/S1312 makes the current release discipline explicit: EOM/Lagrangian track is selector-independent.  The selector closure is a parallel problem; it is not a prerequisite for continuing the Lagrangian variation, termwise EOM export, or residual-zero auditing.  The selector/QW-2191 lane becomes relevant only when a claim selects a physical branch/source or promotes dynamics to global closure.
 
 A compact scalar-field EOM template following the above sign convention is:
 
@@ -114,6 +132,162 @@ sqrt(-g)*((R - 2*Lambda)/(2*kappa^2) + xi_eff*Phi^2 R)
 
 plus stress-energy contributions from the strict scalar, fermion, and gauge sectors.
 
+### 5.1 Covariant sector rows
+
+The current covariant sector export gives the following explicit rows:
+
+```text
+E_phi:
+  Box(phi) + m_phi^2*phi + (lambda_3/2)*phi^2
+  + (lambda_4/3!)*phi^3
+  + 2*lambda_phiH*phi*(H^\dagger H)
+  + 2*xi_phiR*R*phi = 0
+
+E_H:
+  D_mu D^mu H + mu_H^2*H + 2*lambda_H*(H^\dagger H)*H
+  + xi_HR*R*H + lambda_phiH*phi^2*H + Yukawa_source = 0
+
+E_A:
+  nabla_nu(Z_a F_a^{nu mu}) + J_a^mu
+  + chi_RG*nabla_nu(R F_a^{nu mu}) = 0
+
+E_psi:
+  i gamma^a e_a^mu D_mu psi_f - y_f H dot psi_f = 0
+
+E_g:
+  (M_Pl^2/2)G_mu_nu + Lambda*g_mu_nu
+  + H_mu_nu^(R2,Ric2,Riem2) = T_mu_nu^(SM+mix)
+```
+
+These rows supplement the scaffold but still stop below full tensor-resolved theorem closure.
+
+### 5.2 Reduced termwise computational EOM
+
+Reduced termwise computational EOM from `P2086/P2087` use the local fields `psi(x)`, `A(x)`, and `h(x)`:
+
+```text
+0 = E_psi
+  = -kpsi*psi'' - mpsi*psi - 4*lam4*psi^3
+    - gmix*A*h - 2*zeta*A^2*psi
+
+0 = E_A
+  = -kA*A'' - mA*A - 4*gA*A^3
+    - gmix*h*psi - 2*zeta*A*psi^2
+
+0 = E_h
+  = -kh*h'' - mh*h - 4*gh*h^3
+    - gmix*A*psi
+```
+
+Equivalently:
+
+```text
+psi'' = -(mpsi*psi + 4*lam4*psi^3 + gmix*A*h + 2*zeta*A^2*psi)/kpsi
+A''   = -(mA*A + 4*gA*A^3 + gmix*h*psi + 2*zeta*A*psi^2)/kA
+h''   = -(mh*h + 4*gh*h^3 + gmix*A*psi)/kh
+```
+
+The reduced termwise incidence matrix over `(psi,A,h)` has full field rank `3`, every term contributes to at least one varied field, and the symbolic/numeric recomposition residuals are zero.  This is the immediate EOM/Lagrangian continuation surface; it does not require selector closure.
+
+### 5.3 Bridge-completed FRW scalar/gauge/gravity residual table
+
+`P2364/S1314` turns the `P2363` bridge-completed moments into a named-background scalar/gauge/gravity residual table.  The coefficient source is explicitly:
+
+```text
+K_legacy_ont * Q_APD -> K_strict_gate -> c0,c1,c2 -> m2_eff, lam_eff, g_eff, xi_eff
+```
+
+and not raw legacy moments.
+
+On the spatially flat constant-H FRW minisuperspace slice, with `R_FRW = 12 H^2`, the executable rows are:
+
+```text
+E_phi_FRW =
+  phiddot + 3*H*phidot
+  + m2_eff*phi + lam_eff*phi^3
+  - g_eff*A^2*phi
+  - 2*xi_eff*R_FRW*phi
+
+E_A_FRW =
+  Addot + 3*H*Adot + g_eff*phi^2*A
+
+R_g_00 =
+  3*H^2 + Lambda - kappa^2*rho_total
+
+R_g_ii =
+  -3*H^2 + Lambda - kappa^2*p_total
+```
+
+The scalar and gauge rows are derived from the bridge-completed effective minisuperspace Lagrangian density.  Their acceleration normal forms substitute back with zero residual, and the metric rows solve algebraically as:
+
+```text
+H^2 = kappa^2*(rho_total - p_total)/6
+Lambda = kappa^2*(rho_total + p_total)/2
+```
+
+This is a bridge-completed FRW residual table, not a full tensor-resolved metric theorem.  The scalar/gauge/gravity residual table advances the `P2088` background residual gap, while full nonminimal stress-energy variation, renormalization, Cutkosky/BRST, and atlas lift remain open.  selector/QW-2191 remains parallel.
+
+### 5.4 Nonminimal FRW metric variation lift
+
+`P2365/S1315` upgrades the metric part of the FRW table by adding the explicit nonminimal FRW metric variation of:
+
+```text
+xi_eff*Phi^2*R
+```
+
+Using `F = xi_eff*Phi^2`, the reduced FRW tensor correction is:
+
+```text
+Delta_mn_nm =
+  2*kappa2*(F*G_mn + (g_mn*Box - nabla_m*nabla_n)F)
+```
+
+For homogeneous `Phi(t)` on the constant-H FRW slice:
+
+```text
+Fdot  = 2*xi_eff*Phi*Phidot
+Fddot = 2*xi_eff*(Phidot^2 + Phi*Phiddot)
+
+Delta_00_nm = 2*kappa2*(3*F*H^2 + 3*H*Fdot)
+Delta_ii_nm = 2*kappa2*(-3*F*H^2 - Fddot - 2*H*Fdot)
+```
+
+The lifted rows are:
+
+```text
+R_g_00_nm = 3*H^2 + Lambda - kappa2*rho_matter + Delta_00_nm
+R_g_ii_nm = -3*H^2 + Lambda - kappa2*p_matter + Delta_ii_nm
+```
+
+The probe solves these rows for `H^2` and `Lambda`, substitutes back with zero residual, and verifies that the `xi_eff -> 0` limit returns the `P2364` minimal metric normal form.
+
+This closes only the named-FRW-family nonminimal correction.  It does not claim Bianchi-I/anisotropic replay, off-FRW tensor closure, renormalized stress-energy, Cutkosky/BRST, atlas lift, or selector closure; selector/QW-2191 remains parallel.
+
+### 5.5 Parallel selector candidate audit
+
+`P2366/S1316` audits the selector track without making it a prerequisite for the EOM/Lagrangian track.  The strongest logical blocker remains:
+
+```text
+chi11_selector_source
+```
+
+It is the unique top Boolean bottleneck and the only singleton selector unlock in the current theorem-frontier audits.  The most concrete operational phase-origin selector candidate found by repo grep is:
+
+```text
+chiral bispectrum fixes orientation
+calibrated coprime Fourier phase fixes source
+```
+
+For `k in {1,5,7,11}` the source recovery formula is:
+
+```text
+s = inv(k mod 12) * 12 * (phase_ref_k(orientation) - phase_obs_k) mod 12
+```
+
+The probe verifies all 24 source/orientation rows and checks the negative controls: translation-invariant magnitudes are source-blind, non-coprime modes alias sources, and without the chiral marker orientation remains two-valued.
+
+This is a candidate audit, not selector closure.  The phase-origin selector candidate still imports phase origin and handedness premises; no `beta_tors -> chi11` theorem, legacy role transfer, strict-core selector theorem, QW-2191 discharge, or ToE closure is claimed.  QW-2191 remains open.
+
 ## 6. Existing computational exports
 
 The current strict symbolic export already provides:
@@ -123,6 +297,8 @@ The current strict symbolic export already provides:
 - strict closure blockers: missing 4D covariant EOM tables, missing full counterterm cancellation proof, missing exact Cutkosky discontinuity integrals, and missing background-independence lift theorem.
 
 The schematic EOM/spectrum probe additionally checks a strict kernel-coupled finite spectrum, but records that the Fourier-pair degeneracy remains non-selector and does not discharge `QW-2191`.
+
+The P2362/S1312 supplement records this as a separation principle: continue nonproxy covariant spinor/gauge/metric residual tables on the EOM/Lagrangian track, while selector/QW-2191 work proceeds separately.
 
 ## 7. Hard limits
 

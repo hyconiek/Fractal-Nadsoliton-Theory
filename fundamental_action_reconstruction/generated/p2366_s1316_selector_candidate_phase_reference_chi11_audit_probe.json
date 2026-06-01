@@ -1,0 +1,1134 @@
+{
+  "gatekeeper_checks": {
+    "all_24_rows_recover_orientation_and_source": true,
+    "chi11_only_singleton_unlock_loaded": true,
+    "chi11_unique_top_bottleneck_loaded": true,
+    "docs_updated_with_p2366_selector_candidate_statement": true,
+    "full_aut_internal_chi11_source_absent_in_lattice": true,
+    "hard_limits_preserved": true,
+    "legacy_torsion_not_promoted_to_selector_theorem": true,
+    "negative_controls_pass": true,
+    "no_qw2191_discharge_claimed": true,
+    "prior_phase_reference_report_replayed": true,
+    "selected_candidate_is_phase_origin": true,
+    "source_artifacts_present": true
+  },
+  "global_status": "OPEN_PROGRESS_WITH_TRACE_NO_SELECTOR_OR_TOE_CLOSURE",
+  "packet_id": "P2366",
+  "produced_by": "p2366_s1316_selector_candidate_phase_reference_chi11_audit_probe.py",
+  "recommended_next_honest_step": "Try to derive the phase-origin reference from an internal strict object (for example an APD phase transport boundary, a defect/node anchor, or a self-recorded arrow action), or prove that every admissible strict-core candidate remains translation-invariant and therefore source-blind.",
+  "result_kind": "SELECTOR_CANDIDATE_PHASE_REFERENCE_CHI11_AUDIT",
+  "schema_version": "p2366_s1316_v1",
+  "selector_candidate_phase_reference_chi11_audit_probe": {
+    "bridge_and_eom_separation": {
+      "p2363_bridge_completed_moments_available": true,
+      "selector_required_for_p2365_eom_lift": false,
+      "selector_work_is_parallel_to_eom_lagrangian": true
+    },
+    "candidate_ranking": [
+      {
+        "candidate": "phase_origin_plus_chiral_bispectrum_for_chi11_selector_source",
+        "rank": 1,
+        "status": "BEST_OPERATIONAL_CANDIDATE_PREMISE_BASED_NOT_STRICT_SOURCE",
+        "why_selected": [
+          "It is the strongest concrete constructive candidate found by grep: exact modular recovery formula plus exhaustive 24-row scan.",
+          "It targets the unique top logical bottleneck, chi11_selector_source.",
+          "It has clear negative controls: no phase origin leaves translation-invariant magnitudes source-blind; non-coprime modes alias sources; no chiral marker leaves orientation two-valued."
+        ]
+      },
+      {
+        "candidate": "beta_tors_to_chi11_bridge_hypothesis",
+        "rank": 2,
+        "status": "PARTLY_USEFUL_HEURISTIC_BUT_NOT_A_CURRENT_REPO_THEOREM",
+        "why_not_first": [
+          "S2 makes it a real bridge target, but the current audit classifies it as candidate-not-theorem.",
+          "It still needs an orientation map, role-transfer control, eta-pipeline link, and full-Aut obstruction escape."
+        ]
+      },
+      {
+        "candidate": "sparsest_extension_or_max_shell_imbalance_branch_selector",
+        "rank": 3,
+        "status": "CONDITIONAL_DOWNSTREAM_BRANCH_SELECTOR",
+        "why_not_first": [
+          "The chi11 premise lattice says these can uniquely select a branch only after quotient, chi11 character, and normalization premises are imported.",
+          "They are downstream conditional selectors rather than a source for chi11_selector_source."
+        ]
+      }
+    ],
+    "docs": {
+      "equation_sheet": "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md",
+      "lagrangian_eom_draft": "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md"
+    },
+    "grep_synthesis": {
+      "chi11_is_only_singleton_unlock": true,
+      "chi11_total_critical_count": 73,
+      "legacy_torsion_overall_verdict": "PARTLY_USEFUL_HEURISTIC_BUT_NOT_A_CURRENT_REPO_THEOREM",
+      "strict_full_aut_internal_chi11_polarity_source_antichain": [],
+      "top_logical_bottleneck": [
+        "chi11_selector_source"
+      ]
+    },
+    "negative_controls": {
+      "noncoprime_mode_alias_class_counts": {
+        "10": 6,
+        "2": 6,
+        "3": 4,
+        "4": 3,
+        "6": 2,
+        "8": 3,
+        "9": 4
+      },
+      "noncoprime_modes_fail_full_source_resolution": true,
+      "orientation_candidates_per_source_without_chiral_marker": {
+        "0": 2,
+        "1": 2,
+        "10": 2,
+        "11": 2,
+        "2": 2,
+        "3": 2,
+        "4": 2,
+        "5": 2,
+        "6": 2,
+        "7": 2,
+        "8": 2,
+        "9": 2
+      },
+      "translation_invariant_magnitude_signature_counts_by_orientation": {
+        "-1": 1,
+        "1": 1
+      },
+      "translation_invariant_magnitudes_cannot_select_source": true,
+      "without_chiral_marker_orientation_not_unique": true
+    },
+    "phase_origin_selector_research": {
+      "all_orientations_recovered_by_chiral_bispectrum": true,
+      "all_rows_recovered_by_all_coprime_modes": true,
+      "coprime_modes": [
+        1,
+        5,
+        7,
+        11
+      ],
+      "expected_pair_count": 24,
+      "formula": "s = inv(k mod 12) * 12 * (phase_ref_k(orientation)-phase_obs_k) mod 12",
+      "prior_phase_reference_report_agrees": {
+        "all_rows_recovered_by_all_coprime_modes": true,
+        "row_count": true,
+        "unique_pairs_mode_1": true
+      },
+      "row_count": 24,
+      "rows": [
+        {
+          "actual_orientation": -1,
+          "actual_source": 0,
+          "all_modes_recover_source": true,
+          "ordered_support": [
+            0,
+            7,
+            2,
+            9,
+            4
+          ],
+          "orientation_matches_actual": true,
+          "per_coprime_mode_source_recovery": {
+            "1": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.894690730781,
+              "recovered_source": 0,
+              "reference_phase_turns": 0.894690730781
+            },
+            "11": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.105309269219,
+              "recovered_source": 0,
+              "reference_phase_turns": 0.105309269219
+            },
+            "5": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.131593497575,
+              "recovered_source": 0,
+              "reference_phase_turns": 0.131593497575
+            },
+            "7": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.868406502425,
+              "recovered_source": 0,
+              "reference_phase_turns": 0.868406502425
+            }
+          },
+          "predicted_orientation_from_chiral_bispectrum": -1
+        },
+        {
+          "actual_orientation": -1,
+          "actual_source": 1,
+          "all_modes_recover_source": true,
+          "ordered_support": [
+            1,
+            8,
+            3,
+            10,
+            5
+          ],
+          "orientation_matches_actual": true,
+          "per_coprime_mode_source_recovery": {
+            "1": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.811357397447,
+              "recovered_source": 1,
+              "reference_phase_turns": 0.894690730781
+            },
+            "11": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.188642602553,
+              "recovered_source": 1,
+              "reference_phase_turns": 0.105309269219
+            },
+            "5": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.714926830908,
+              "recovered_source": 1,
+              "reference_phase_turns": 0.131593497575
+            },
+            "7": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.285073169092,
+              "recovered_source": 1,
+              "reference_phase_turns": 0.868406502425
+            }
+          },
+          "predicted_orientation_from_chiral_bispectrum": -1
+        },
+        {
+          "actual_orientation": -1,
+          "actual_source": 2,
+          "all_modes_recover_source": true,
+          "ordered_support": [
+            2,
+            9,
+            4,
+            11,
+            6
+          ],
+          "orientation_matches_actual": true,
+          "per_coprime_mode_source_recovery": {
+            "1": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.728024064114,
+              "recovered_source": 2,
+              "reference_phase_turns": 0.894690730781
+            },
+            "11": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.271975935886,
+              "recovered_source": 2,
+              "reference_phase_turns": 0.105309269219
+            },
+            "5": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.298260164242,
+              "recovered_source": 2,
+              "reference_phase_turns": 0.131593497575
+            },
+            "7": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.701739835758,
+              "recovered_source": 2,
+              "reference_phase_turns": 0.868406502425
+            }
+          },
+          "predicted_orientation_from_chiral_bispectrum": -1
+        },
+        {
+          "actual_orientation": -1,
+          "actual_source": 3,
+          "all_modes_recover_source": true,
+          "ordered_support": [
+            3,
+            10,
+            5,
+            0,
+            7
+          ],
+          "orientation_matches_actual": true,
+          "per_coprime_mode_source_recovery": {
+            "1": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.644690730781,
+              "recovered_source": 3,
+              "reference_phase_turns": 0.894690730781
+            },
+            "11": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.355309269219,
+              "recovered_source": 3,
+              "reference_phase_turns": 0.105309269219
+            },
+            "5": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.881593497575,
+              "recovered_source": 3,
+              "reference_phase_turns": 0.131593497575
+            },
+            "7": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.118406502425,
+              "recovered_source": 3,
+              "reference_phase_turns": 0.868406502425
+            }
+          },
+          "predicted_orientation_from_chiral_bispectrum": -1
+        },
+        {
+          "actual_orientation": -1,
+          "actual_source": 4,
+          "all_modes_recover_source": true,
+          "ordered_support": [
+            4,
+            11,
+            6,
+            1,
+            8
+          ],
+          "orientation_matches_actual": true,
+          "per_coprime_mode_source_recovery": {
+            "1": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.561357397447,
+              "recovered_source": 4,
+              "reference_phase_turns": 0.894690730781
+            },
+            "11": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.438642602553,
+              "recovered_source": 4,
+              "reference_phase_turns": 0.105309269219
+            },
+            "5": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.464926830908,
+              "recovered_source": 4,
+              "reference_phase_turns": 0.131593497575
+            },
+            "7": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.535073169092,
+              "recovered_source": 4,
+              "reference_phase_turns": 0.868406502425
+            }
+          },
+          "predicted_orientation_from_chiral_bispectrum": -1
+        },
+        {
+          "actual_orientation": -1,
+          "actual_source": 5,
+          "all_modes_recover_source": true,
+          "ordered_support": [
+            5,
+            0,
+            7,
+            2,
+            9
+          ],
+          "orientation_matches_actual": true,
+          "per_coprime_mode_source_recovery": {
+            "1": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.478024064114,
+              "recovered_source": 5,
+              "reference_phase_turns": 0.894690730781
+            },
+            "11": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.521975935886,
+              "recovered_source": 5,
+              "reference_phase_turns": 0.105309269219
+            },
+            "5": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.048260164242,
+              "recovered_source": 5,
+              "reference_phase_turns": 0.131593497575
+            },
+            "7": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.951739835758,
+              "recovered_source": 5,
+              "reference_phase_turns": 0.868406502425
+            }
+          },
+          "predicted_orientation_from_chiral_bispectrum": -1
+        },
+        {
+          "actual_orientation": -1,
+          "actual_source": 6,
+          "all_modes_recover_source": true,
+          "ordered_support": [
+            6,
+            1,
+            8,
+            3,
+            10
+          ],
+          "orientation_matches_actual": true,
+          "per_coprime_mode_source_recovery": {
+            "1": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.394690730781,
+              "recovered_source": 6,
+              "reference_phase_turns": 0.894690730781
+            },
+            "11": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.605309269219,
+              "recovered_source": 6,
+              "reference_phase_turns": 0.105309269219
+            },
+            "5": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.631593497575,
+              "recovered_source": 6,
+              "reference_phase_turns": 0.131593497575
+            },
+            "7": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.368406502425,
+              "recovered_source": 6,
+              "reference_phase_turns": 0.868406502425
+            }
+          },
+          "predicted_orientation_from_chiral_bispectrum": -1
+        },
+        {
+          "actual_orientation": -1,
+          "actual_source": 7,
+          "all_modes_recover_source": true,
+          "ordered_support": [
+            7,
+            2,
+            9,
+            4,
+            11
+          ],
+          "orientation_matches_actual": true,
+          "per_coprime_mode_source_recovery": {
+            "1": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.311357397447,
+              "recovered_source": 7,
+              "reference_phase_turns": 0.894690730781
+            },
+            "11": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.688642602553,
+              "recovered_source": 7,
+              "reference_phase_turns": 0.105309269219
+            },
+            "5": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.214926830908,
+              "recovered_source": 7,
+              "reference_phase_turns": 0.131593497575
+            },
+            "7": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.785073169092,
+              "recovered_source": 7,
+              "reference_phase_turns": 0.868406502425
+            }
+          },
+          "predicted_orientation_from_chiral_bispectrum": -1
+        },
+        {
+          "actual_orientation": -1,
+          "actual_source": 8,
+          "all_modes_recover_source": true,
+          "ordered_support": [
+            8,
+            3,
+            10,
+            5,
+            0
+          ],
+          "orientation_matches_actual": true,
+          "per_coprime_mode_source_recovery": {
+            "1": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.228024064114,
+              "recovered_source": 8,
+              "reference_phase_turns": 0.894690730781
+            },
+            "11": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.771975935886,
+              "recovered_source": 8,
+              "reference_phase_turns": 0.105309269219
+            },
+            "5": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.798260164242,
+              "recovered_source": 8,
+              "reference_phase_turns": 0.131593497575
+            },
+            "7": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.201739835758,
+              "recovered_source": 8,
+              "reference_phase_turns": 0.868406502425
+            }
+          },
+          "predicted_orientation_from_chiral_bispectrum": -1
+        },
+        {
+          "actual_orientation": -1,
+          "actual_source": 9,
+          "all_modes_recover_source": true,
+          "ordered_support": [
+            9,
+            4,
+            11,
+            6,
+            1
+          ],
+          "orientation_matches_actual": true,
+          "per_coprime_mode_source_recovery": {
+            "1": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.144690730781,
+              "recovered_source": 9,
+              "reference_phase_turns": 0.894690730781
+            },
+            "11": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.855309269219,
+              "recovered_source": 9,
+              "reference_phase_turns": 0.105309269219
+            },
+            "5": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.381593497575,
+              "recovered_source": 9,
+              "reference_phase_turns": 0.131593497575
+            },
+            "7": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.618406502425,
+              "recovered_source": 9,
+              "reference_phase_turns": 0.868406502425
+            }
+          },
+          "predicted_orientation_from_chiral_bispectrum": -1
+        },
+        {
+          "actual_orientation": -1,
+          "actual_source": 10,
+          "all_modes_recover_source": true,
+          "ordered_support": [
+            10,
+            5,
+            0,
+            7,
+            2
+          ],
+          "orientation_matches_actual": true,
+          "per_coprime_mode_source_recovery": {
+            "1": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.061357397447,
+              "recovered_source": 10,
+              "reference_phase_turns": 0.894690730781
+            },
+            "11": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.938642602553,
+              "recovered_source": 10,
+              "reference_phase_turns": 0.105309269219
+            },
+            "5": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.964926830908,
+              "recovered_source": 10,
+              "reference_phase_turns": 0.131593497575
+            },
+            "7": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.035073169092,
+              "recovered_source": 10,
+              "reference_phase_turns": 0.868406502425
+            }
+          },
+          "predicted_orientation_from_chiral_bispectrum": -1
+        },
+        {
+          "actual_orientation": -1,
+          "actual_source": 11,
+          "all_modes_recover_source": true,
+          "ordered_support": [
+            11,
+            6,
+            1,
+            8,
+            3
+          ],
+          "orientation_matches_actual": true,
+          "per_coprime_mode_source_recovery": {
+            "1": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.978024064114,
+              "recovered_source": 11,
+              "reference_phase_turns": 0.894690730781
+            },
+            "11": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.021975935886,
+              "recovered_source": 11,
+              "reference_phase_turns": 0.105309269219
+            },
+            "5": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.548260164242,
+              "recovered_source": 11,
+              "reference_phase_turns": 0.131593497575
+            },
+            "7": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.451739835758,
+              "recovered_source": 11,
+              "reference_phase_turns": 0.868406502425
+            }
+          },
+          "predicted_orientation_from_chiral_bispectrum": -1
+        },
+        {
+          "actual_orientation": 1,
+          "actual_source": 0,
+          "all_modes_recover_source": true,
+          "ordered_support": [
+            0,
+            5,
+            10,
+            3,
+            8
+          ],
+          "orientation_matches_actual": true,
+          "per_coprime_mode_source_recovery": {
+            "1": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.105309269219,
+              "recovered_source": 0,
+              "reference_phase_turns": 0.105309269219
+            },
+            "11": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.894690730781,
+              "recovered_source": 0,
+              "reference_phase_turns": 0.894690730781
+            },
+            "5": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.868406502425,
+              "recovered_source": 0,
+              "reference_phase_turns": 0.868406502425
+            },
+            "7": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.131593497575,
+              "recovered_source": 0,
+              "reference_phase_turns": 0.131593497575
+            }
+          },
+          "predicted_orientation_from_chiral_bispectrum": 1
+        },
+        {
+          "actual_orientation": 1,
+          "actual_source": 1,
+          "all_modes_recover_source": true,
+          "ordered_support": [
+            1,
+            6,
+            11,
+            4,
+            9
+          ],
+          "orientation_matches_actual": true,
+          "per_coprime_mode_source_recovery": {
+            "1": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.021975935886,
+              "recovered_source": 1,
+              "reference_phase_turns": 0.105309269219
+            },
+            "11": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.978024064114,
+              "recovered_source": 1,
+              "reference_phase_turns": 0.894690730781
+            },
+            "5": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.451739835758,
+              "recovered_source": 1,
+              "reference_phase_turns": 0.868406502425
+            },
+            "7": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.548260164242,
+              "recovered_source": 1,
+              "reference_phase_turns": 0.131593497575
+            }
+          },
+          "predicted_orientation_from_chiral_bispectrum": 1
+        },
+        {
+          "actual_orientation": 1,
+          "actual_source": 2,
+          "all_modes_recover_source": true,
+          "ordered_support": [
+            2,
+            7,
+            0,
+            5,
+            10
+          ],
+          "orientation_matches_actual": true,
+          "per_coprime_mode_source_recovery": {
+            "1": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.938642602553,
+              "recovered_source": 2,
+              "reference_phase_turns": 0.105309269219
+            },
+            "11": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.061357397447,
+              "recovered_source": 2,
+              "reference_phase_turns": 0.894690730781
+            },
+            "5": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.035073169092,
+              "recovered_source": 2,
+              "reference_phase_turns": 0.868406502425
+            },
+            "7": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.964926830908,
+              "recovered_source": 2,
+              "reference_phase_turns": 0.131593497575
+            }
+          },
+          "predicted_orientation_from_chiral_bispectrum": 1
+        },
+        {
+          "actual_orientation": 1,
+          "actual_source": 3,
+          "all_modes_recover_source": true,
+          "ordered_support": [
+            3,
+            8,
+            1,
+            6,
+            11
+          ],
+          "orientation_matches_actual": true,
+          "per_coprime_mode_source_recovery": {
+            "1": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.855309269219,
+              "recovered_source": 3,
+              "reference_phase_turns": 0.105309269219
+            },
+            "11": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.144690730781,
+              "recovered_source": 3,
+              "reference_phase_turns": 0.894690730781
+            },
+            "5": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.618406502425,
+              "recovered_source": 3,
+              "reference_phase_turns": 0.868406502425
+            },
+            "7": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.381593497575,
+              "recovered_source": 3,
+              "reference_phase_turns": 0.131593497575
+            }
+          },
+          "predicted_orientation_from_chiral_bispectrum": 1
+        },
+        {
+          "actual_orientation": 1,
+          "actual_source": 4,
+          "all_modes_recover_source": true,
+          "ordered_support": [
+            4,
+            9,
+            2,
+            7,
+            0
+          ],
+          "orientation_matches_actual": true,
+          "per_coprime_mode_source_recovery": {
+            "1": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.771975935886,
+              "recovered_source": 4,
+              "reference_phase_turns": 0.105309269219
+            },
+            "11": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.228024064114,
+              "recovered_source": 4,
+              "reference_phase_turns": 0.894690730781
+            },
+            "5": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.201739835758,
+              "recovered_source": 4,
+              "reference_phase_turns": 0.868406502425
+            },
+            "7": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.798260164242,
+              "recovered_source": 4,
+              "reference_phase_turns": 0.131593497575
+            }
+          },
+          "predicted_orientation_from_chiral_bispectrum": 1
+        },
+        {
+          "actual_orientation": 1,
+          "actual_source": 5,
+          "all_modes_recover_source": true,
+          "ordered_support": [
+            5,
+            10,
+            3,
+            8,
+            1
+          ],
+          "orientation_matches_actual": true,
+          "per_coprime_mode_source_recovery": {
+            "1": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.688642602553,
+              "recovered_source": 5,
+              "reference_phase_turns": 0.105309269219
+            },
+            "11": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.311357397447,
+              "recovered_source": 5,
+              "reference_phase_turns": 0.894690730781
+            },
+            "5": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.785073169092,
+              "recovered_source": 5,
+              "reference_phase_turns": 0.868406502425
+            },
+            "7": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.214926830908,
+              "recovered_source": 5,
+              "reference_phase_turns": 0.131593497575
+            }
+          },
+          "predicted_orientation_from_chiral_bispectrum": 1
+        },
+        {
+          "actual_orientation": 1,
+          "actual_source": 6,
+          "all_modes_recover_source": true,
+          "ordered_support": [
+            6,
+            11,
+            4,
+            9,
+            2
+          ],
+          "orientation_matches_actual": true,
+          "per_coprime_mode_source_recovery": {
+            "1": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.605309269219,
+              "recovered_source": 6,
+              "reference_phase_turns": 0.105309269219
+            },
+            "11": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.394690730781,
+              "recovered_source": 6,
+              "reference_phase_turns": 0.894690730781
+            },
+            "5": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.368406502425,
+              "recovered_source": 6,
+              "reference_phase_turns": 0.868406502425
+            },
+            "7": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.631593497575,
+              "recovered_source": 6,
+              "reference_phase_turns": 0.131593497575
+            }
+          },
+          "predicted_orientation_from_chiral_bispectrum": 1
+        },
+        {
+          "actual_orientation": 1,
+          "actual_source": 7,
+          "all_modes_recover_source": true,
+          "ordered_support": [
+            7,
+            0,
+            5,
+            10,
+            3
+          ],
+          "orientation_matches_actual": true,
+          "per_coprime_mode_source_recovery": {
+            "1": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.521975935886,
+              "recovered_source": 7,
+              "reference_phase_turns": 0.105309269219
+            },
+            "11": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.478024064114,
+              "recovered_source": 7,
+              "reference_phase_turns": 0.894690730781
+            },
+            "5": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.951739835758,
+              "recovered_source": 7,
+              "reference_phase_turns": 0.868406502425
+            },
+            "7": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.048260164242,
+              "recovered_source": 7,
+              "reference_phase_turns": 0.131593497575
+            }
+          },
+          "predicted_orientation_from_chiral_bispectrum": 1
+        },
+        {
+          "actual_orientation": 1,
+          "actual_source": 8,
+          "all_modes_recover_source": true,
+          "ordered_support": [
+            8,
+            1,
+            6,
+            11,
+            4
+          ],
+          "orientation_matches_actual": true,
+          "per_coprime_mode_source_recovery": {
+            "1": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.438642602553,
+              "recovered_source": 8,
+              "reference_phase_turns": 0.105309269219
+            },
+            "11": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.561357397447,
+              "recovered_source": 8,
+              "reference_phase_turns": 0.894690730781
+            },
+            "5": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.535073169092,
+              "recovered_source": 8,
+              "reference_phase_turns": 0.868406502425
+            },
+            "7": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.464926830908,
+              "recovered_source": 8,
+              "reference_phase_turns": 0.131593497575
+            }
+          },
+          "predicted_orientation_from_chiral_bispectrum": 1
+        },
+        {
+          "actual_orientation": 1,
+          "actual_source": 9,
+          "all_modes_recover_source": true,
+          "ordered_support": [
+            9,
+            2,
+            7,
+            0,
+            5
+          ],
+          "orientation_matches_actual": true,
+          "per_coprime_mode_source_recovery": {
+            "1": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.355309269219,
+              "recovered_source": 9,
+              "reference_phase_turns": 0.105309269219
+            },
+            "11": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.644690730781,
+              "recovered_source": 9,
+              "reference_phase_turns": 0.894690730781
+            },
+            "5": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.118406502425,
+              "recovered_source": 9,
+              "reference_phase_turns": 0.868406502425
+            },
+            "7": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.881593497575,
+              "recovered_source": 9,
+              "reference_phase_turns": 0.131593497575
+            }
+          },
+          "predicted_orientation_from_chiral_bispectrum": 1
+        },
+        {
+          "actual_orientation": 1,
+          "actual_source": 10,
+          "all_modes_recover_source": true,
+          "ordered_support": [
+            10,
+            3,
+            8,
+            1,
+            6
+          ],
+          "orientation_matches_actual": true,
+          "per_coprime_mode_source_recovery": {
+            "1": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.271975935886,
+              "recovered_source": 10,
+              "reference_phase_turns": 0.105309269219
+            },
+            "11": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.728024064114,
+              "recovered_source": 10,
+              "reference_phase_turns": 0.894690730781
+            },
+            "5": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.701739835758,
+              "recovered_source": 10,
+              "reference_phase_turns": 0.868406502425
+            },
+            "7": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.298260164242,
+              "recovered_source": 10,
+              "reference_phase_turns": 0.131593497575
+            }
+          },
+          "predicted_orientation_from_chiral_bispectrum": 1
+        },
+        {
+          "actual_orientation": 1,
+          "actual_source": 11,
+          "all_modes_recover_source": true,
+          "ordered_support": [
+            11,
+            4,
+            9,
+            2,
+            7
+          ],
+          "orientation_matches_actual": true,
+          "per_coprime_mode_source_recovery": {
+            "1": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.188642602553,
+              "recovered_source": 11,
+              "reference_phase_turns": 0.105309269219
+            },
+            "11": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.811357397447,
+              "recovered_source": 11,
+              "reference_phase_turns": 0.894690730781
+            },
+            "5": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.285073169092,
+              "recovered_source": 11,
+              "reference_phase_turns": 0.868406502425
+            },
+            "7": {
+              "matches_actual_source": true,
+              "observed_phase_turns": 0.714926830908,
+              "recovered_source": 11,
+              "reference_phase_turns": 0.131593497575
+            }
+          },
+          "predicted_orientation_from_chiral_bispectrum": 1
+        }
+      ],
+      "source_recovery_success_by_mode": {
+        "1": true,
+        "11": true,
+        "5": true,
+        "7": true
+      },
+      "unique_predicted_orientation_source_pairs_using_mode_1": 24
+    },
+    "probe_id": "P2366_S1316_SELECTOR_CANDIDATE_PHASE_REFERENCE_CHI11_AUDIT",
+    "selected_candidate": {
+      "candidate": "phase_origin_plus_chiral_bispectrum_for_chi11_selector_source",
+      "rank": 1,
+      "status": "BEST_OPERATIONAL_CANDIDATE_PREMISE_BASED_NOT_STRICT_SOURCE",
+      "why_selected": [
+        "It is the strongest concrete constructive candidate found by grep: exact modular recovery formula plus exhaustive 24-row scan.",
+        "It targets the unique top logical bottleneck, chi11_selector_source.",
+        "It has clear negative controls: no phase origin leaves translation-invariant magnitudes source-blind; non-coprime modes alias sources; no chiral marker leaves orientation two-valued."
+      ]
+    },
+    "source_artifacts": {
+      "ATOM_INFLUENCE": "fundamental_action_reconstruction/scratch/bridge_strict_completion_theorem_frontier_atom_influence_certificate_report.json",
+      "CHI11_PREMISE_LATTICE": "fundamental_action_reconstruction/scratch/bridge_strict_alpha_chi11_premise_dependency_lattice_audit_report.json",
+      "LEGACY_TORSION_CHI11": "fundamental_action_reconstruction/scratch/bridge_legacy_torsion_chi11_opinion_audit_report.json",
+      "LOW_WEIGHT_FRONTIER": "fundamental_action_reconstruction/scratch/bridge_strict_completion_theorem_frontier_low_weight_extension_certificate_report.json",
+      "P2363_BRIDGE_COMPLETED_MOMENTS": "fundamental_action_reconstruction/generated/p2363_s1313_legacy_strict_bridge_moment_lagrangian_transport_probe.json",
+      "PHASE_REFERENCE_SELECTOR": "fundamental_action_reconstruction/scratch/bridge_strict_alpha_phase_reference_source_selector_certificate_report.json"
+    },
+    "theorem_export": {
+      "claim": "The strongest current concrete selector candidate is not raw beta_tors nor an Aut-invariant score, but a premise-based phase-origin source-localizing selector: a chiral bispectrum chooses orientation and a calibrated coprime Fourier phase recovers the source.  This is sufficient on the audited 24 source/orientation rows, but remains a candidate because the phase origin and handedness are not derived as strict-core data.",
+      "not_licensed": [
+        "strict-core source theorem for phase origin",
+        "strict-core source theorem for handedness/chirality",
+        "beta_tors -> chi11 theorem",
+        "legacy physical-role transfer",
+        "selector/QW-2191 discharge",
+        "ToE closure"
+      ],
+      "positive_content": [
+        "chi11_selector_source is the unique top Boolean bottleneck and the only singleton selector unlock.",
+        "All 24 source/orientation rows recover orientation and source using chiral bispectrum plus calibrated coprime phase.",
+        "All coprime modes 1,5,7,11 recover all sources.",
+        "Translation-invariant magnitude data cannot select source.",
+        "Non-coprime phase modes alias sources and fail full source resolution.",
+        "Without a chiral marker, orientation remains two-valued."
+      ],
+      "theorem_name": "P2366 selector candidate audit: phase-origin chi11 source candidate"
+    },
+    "theorem_fingerprint_sha256": "ad82bcb941e556e61d523944bd67dea147d159b592b78437a4d9b06e6c438c64"
+  },
+  "stage_id": "S1316",
+  "status": "OPEN_PROGRESS_SELECTOR_CANDIDATE_AUDIT_PHASE_ORIGIN_PREMISE_NO_QW2191_DISCHARGE",
+  "timestamp_utc": "2026-06-01T00:00:00+00:00"
+}

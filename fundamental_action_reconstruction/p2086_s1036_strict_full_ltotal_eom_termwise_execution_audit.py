@@ -139,7 +139,7 @@ def main() -> None:
             "missing_for_full_eom_theorem": [
                 "strict background-family tensor closure proof (FRW/Bianchi-I and targeted branches)",
                 "global non-perturbative well-posedness/export layer",
-                "QW-2191-compatible strict selector premise or source",
+                "nonproxy covariant spinor/gauge/metric sector export with background-family residual tables",
             ],
         },
         "gatekeeper_checks": {

@@ -1,0 +1,196 @@
+{
+  "gatekeeper_checks": {
+    "amplitude_normalized_legacy_moments_do_not_match_strict": true,
+    "canonical_completed_numeric_residual_zero": true,
+    "completed_effective_couplings_match_strict": true,
+    "completed_moments_match_strict": true,
+    "docs_updated_with_p2363_transport_statement": true,
+    "finite_bridge_assembly_inherited": true,
+    "hard_limits_preserved": true,
+    "no_selector_or_role_transfer_claimed": true,
+    "p1866_effective_couplings_loaded": true,
+    "p1866_strict_moments_loaded": true,
+    "p2362_parallel_eom_lagrangian_inherited": true,
+    "raw_legacy_moments_do_not_match_strict": true,
+    "source_artifacts_present": true,
+    "strict_effective_couplings_match_p1866_export": true,
+    "strict_moments_match_p1866_export": true,
+    "symbolic_apd_bridge_residual_zero": true,
+    "symbolic_cancellation_inherited": true
+  },
+  "global_status": "OPEN_PROGRESS_WITH_TRACE_NO_SELECTOR_ROLE_TRANSFER_OR_TOE_CLOSURE",
+  "legacy_strict_bridge_moment_lagrangian_transport_probe": {
+    "canonical_numeric_witness": {
+      "completed_bridge_moments": {
+        "c0": 0.4699856726450201,
+        "c1": -0.4546810131394916,
+        "c2": 0.23191009715464736
+      },
+      "completed_numeric_max_abs_residual": 0.0,
+      "legacy_amplitude_normalized_moments": {
+        "c0": 0.2562564802995255,
+        "c1": -0.7536623116322695,
+        "c2": -0.07157393709490278
+      },
+      "legacy_amplitude_normalized_numeric_max_abs_mismatch": 0.30348403424955017,
+      "legacy_raw_moments": {
+        "c0": 0.7104938272793251,
+        "c1": -2.0895956256087937,
+        "c2": -0.19844509079562697
+      },
+      "legacy_raw_numeric_max_abs_mismatch": 1.6349146124693021,
+      "parameters": {
+        "alpha_geo": "4*log(2)",
+        "beta": "1",
+        "beta_tors": "1/100",
+        "eta": "9/5",
+        "omega": "743/4000",
+        "omega_L": "pi/4",
+        "phi": "13/80",
+        "phi_L": "pi/6"
+      },
+      "strict_moments": {
+        "c0": 0.4699856726450201,
+        "c1": -0.4546810131394916,
+        "c2": 0.23191009715464736
+      }
+    },
+    "docs": {
+      "equation_sheet": "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md",
+      "lagrangian_eom_draft": "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md"
+    },
+    "effective_coupling_transport": {
+      "completed_bridge_effective_couplings": {
+        "g_eff": "g*(2*beta*eta*omega*(beta + 1)*sin(omega + phi) + beta*eta*(2*beta*eta - (beta + 1)*(eta - 1))*cos(omega + phi) - omega**2*(beta + 1)**2*cos(omega + phi) + 2*(beta + 1)**3)/(2*(beta + 1)**3)",
+        "lam_eff": "lam*((beta + 1)**4 + (beta*eta*cos(omega + phi) + omega*(beta + 1)*sin(omega + phi))**2)/(beta + 1)**4",
+        "m2_eff": "m2*(beta + cos(omega + phi) + 1)/(beta + 1)",
+        "xi_eff": "xi*(beta + cos(omega + phi) + 1)/(beta + 1)",
+        "y_eff": "y*(2*beta + cos(omega + phi) + 2)/(2*(beta + 1))"
+      },
+      "completed_minus_strict_residuals": {
+        "g_eff": "0",
+        "lam_eff": "0",
+        "m2_eff": "0",
+        "xi_eff": "0",
+        "y_eff": "0"
+      },
+      "map": {
+        "g_eff": "g*(1 + c2)",
+        "lam_eff": "lam*(1 + c1**2)",
+        "m2_eff": "m2*(1 + c0)",
+        "xi_eff": "xi*(1 + c0)",
+        "y_eff": "y*(1 + c0/2)"
+      },
+      "p1866_strict_export_residuals": {
+        "g_eff": "0",
+        "lam_eff": "0",
+        "m2_eff": "0",
+        "xi_eff": "0",
+        "y_eff": "0"
+      },
+      "strict_effective_couplings": {
+        "g_eff": "g*(2*beta*eta*omega*(beta + 1)*sin(omega + phi) + beta*eta*(2*beta*eta - (beta + 1)*(eta - 1))*cos(omega + phi) - omega**2*(beta + 1)**2*cos(omega + phi) + 2*(beta + 1)**3)/(2*(beta + 1)**3)",
+        "lam_eff": "lam*((beta + 1)**4 + (beta*eta*cos(omega + phi) + omega*(beta + 1)*sin(omega + phi))**2)/(beta + 1)**4",
+        "m2_eff": "m2*(beta + cos(omega + phi) + 1)/(beta + 1)",
+        "xi_eff": "xi*(beta + cos(omega + phi) + 1)/(beta + 1)",
+        "y_eff": "y*(2*beta + cos(omega + phi) + 2)/(2*(beta + 1))"
+      }
+    },
+    "moment_transport": {
+      "amplitude_normalized_legacy_moments": {
+        "c0": "cos(omega_L + phi_L)/(beta_tors + 1)",
+        "c1": "(-beta_tors*cos(omega_L + phi_L) - omega_L*(beta_tors + 1)*sin(omega_L + phi_L))/(beta_tors + 1)**2",
+        "c2": "(beta_tors**2*cos(omega_L + phi_L) + beta_tors*omega_L*(beta_tors + 1)*sin(omega_L + phi_L) - omega_L**2*(beta_tors + 1)**2*cos(omega_L + phi_L)/2)/(beta_tors + 1)**3"
+      },
+      "completed_bridge_moments": {
+        "c0": "cos(omega + phi)/(beta + 1)",
+        "c1": "(-beta*eta*cos(omega + phi) - omega*(beta + 1)*sin(omega + phi))/(beta + 1)**2",
+        "c2": "(2*beta*eta*omega*(beta + 1)*sin(omega + phi) + beta*eta*(2*beta*eta - (beta + 1)*(eta - 1))*cos(omega + phi) - omega**2*(beta + 1)**2*cos(omega + phi))/(2*(beta + 1)**3)"
+      },
+      "completed_minus_strict_residuals": {
+        "c0": "0",
+        "c1": "0",
+        "c2": "0"
+      },
+      "p1866_strict_export_residuals": {
+        "c0": "0",
+        "c1": "0",
+        "c2": "0"
+      },
+      "raw_legacy_moments": {
+        "c0": "alpha_geo*cos(omega_L + phi_L)/(beta_tors + 1)",
+        "c1": "-alpha_geo*(beta_tors*cos(omega_L + phi_L) + omega_L*(beta_tors + 1)*sin(omega_L + phi_L))/(beta_tors + 1)**2",
+        "c2": "alpha_geo*(2*beta_tors**2*cos(omega_L + phi_L) + 2*beta_tors*omega_L*(beta_tors + 1)*sin(omega_L + phi_L) - omega_L**2*(beta_tors + 1)**2*cos(omega_L + phi_L))/(2*(beta_tors + 1)**3)"
+      },
+      "reference_scale": "d_ref=1",
+      "strict_moments": {
+        "c0": "cos(omega + phi)/(beta + 1)",
+        "c1": "(-beta*eta*cos(omega + phi) - omega*(beta + 1)*sin(omega + phi))/(beta + 1)**2",
+        "c2": "(2*beta*eta*omega*(beta + 1)*sin(omega + phi) + beta*eta*(2*beta*eta - (beta + 1)*(eta - 1))*cos(omega + phi) - omega**2*(beta + 1)**2*cos(omega + phi))/(2*(beta + 1)**3)"
+      }
+    },
+    "probe_id": "P2363_S1313_LEGACY_STRICT_BRIDGE_MOMENT_LAGRANGIAN_TRANSPORT",
+    "separation_from_selector": {
+      "eom_lagrangian_track_is_selector_independent": true,
+      "p2362_inherited_summary": {
+        "covariant_sector_eom_row_count": 5,
+        "eom_lagrangian_track_is_selector_independent": true,
+        "reduced_incidence_rank": 3,
+        "reduced_term_count": 11,
+        "reduced_variation_field_count": 3,
+        "remaining_eom_blockers": [
+          "strict_background_family_tensor_closure",
+          "global_nonperturbative_wellposedness_export",
+          "nonproxy_covariant_sector_export_with_background_residual_tables"
+        ],
+        "selector_closure_is_parallel_problem": true,
+        "selector_closure_required_before_eom_work": false,
+        "selector_qw2191_status": "OPEN_PARALLEL_TRACK_NOT_USED_AS_EOM_PREREQUISITE"
+      },
+      "selector_closure_is_parallel_problem": true,
+      "selector_qw2191_status": "OPEN_PARALLEL_TRACK_NOT_USED_AS_EOM_INPUT",
+      "selector_required_for_moment_transport": false
+    },
+    "source_artifacts": {
+      "P1866_STRICT_KERNEL_TO_LTOTAL": "fundamental_action_reconstruction/generated/p1866_s816_strict_kernel_to_full_lagrangian_and_eom_symbolic_export.json",
+      "P2362_PARALLEL_EOM_LAGRANGIAN": "fundamental_action_reconstruction/generated/p2362_s1312_strict_lagrangian_eom_parallel_completion_probe.json",
+      "SCRATCH_FINITE_APD_ASSEMBLY": "fundamental_action_reconstruction/scratch/bridge_strict_completion_legacy_to_strict_finite_bridge_assembly_certificate_report.json",
+      "SCRATCH_SYMBOLIC_APD_CANCELLATION": "fundamental_action_reconstruction/scratch/bridge_strict_completion_legacy_to_strict_symbolic_cancellation_certificate_report.json"
+    },
+    "symbolic_bridge": {
+      "admissibility_scope": "inherits finite nonzero-domain assumptions from scratch APD cancellation reports",
+      "completed_kernel": "cos(d*omega + phi)/(beta*d**eta + 1)",
+      "completed_minus_strict_residual": "0",
+      "completion_factor": "Q_APD(d)=(1/alpha_geo)*(cos(omega*d+phi)/cos(omega_L*d+phi_L))*((1+beta_tors*d)/(1+beta*d^eta))",
+      "legacy_kernel": "K_legacy_ont(d)=alpha_geo*cos(omega_L*d+phi_L)/(1+beta_tors*d)",
+      "strict_kernel": "cos(d*omega + phi)/(beta*d**eta + 1)"
+    },
+    "theorem_export": {
+      "claim": "If the explicit APD completion factor Q=(1/alpha_geo)*P*D is applied to K_legacy_ont before moment extraction, then the d_ref=1 moments c0,c1,c2 and the P1866 effective couplings are identical to the strict-kernel export. Raw legacy moments, even after amplitude normalization, are not an admissible substitute for strict L_total coefficients.",
+      "not_licensed": [
+        "strict dynamical source theorem for A/P/D",
+        "selector premise or QW-2191 discharge",
+        "legacy physical-role transfer",
+        "full bridge role-transfer theorem",
+        "full 4D EOM theorem-grade closure",
+        "ToE closure"
+      ],
+      "positive_content": [
+        "Symbolic cancellation gives K_legacy_ont(d)*Q_APD(d)-K_strict_gate(d)=0.",
+        "The completed bridge moments c0,c1,c2 have zero symbolic residual against the strict moments.",
+        "The completed bridge effective couplings m2_eff, lam_eff, y_eff, g_eff, xi_eff have zero symbolic residual against the P1866 strict map.",
+        "A finite canonical witness shows raw legacy moments and amplitude-normalized legacy moments do not match strict moments."
+      ],
+      "theorem_name": "P2363 bridge-completed moment transport into strict L_total couplings"
+    },
+    "theorem_fingerprint_sha256": "b81a5f8a57c3c001eefc7b5b33d5c05de097162ef16a01f901a03921f74b08e6"
+  },
+  "packet_id": "P2363",
+  "produced_by": "p2363_s1313_legacy_strict_bridge_moment_lagrangian_transport_probe.py",
+  "recommended_next_honest_step": "Use the now-certified bridge-completed moments as the input to a 4D covariant EOM residual table for the scalar/gauge/gravity sectors; keep selector/QW-2191 and legacy role-transfer audits on separate parallel tracks.",
+  "result_kind": "LEGACY_STRICT_BRIDGE_COMPLETED_MOMENT_LAGRANGIAN_TRANSPORT_CERTIFICATE",
+  "schema_version": "p2363_s1313_v1",
+  "stage_id": "S1313",
+  "status": "OPEN_PROGRESS_BRIDGE_COMPLETED_MOMENT_TRANSPORT_TO_LTOTAL_NO_SELECTOR_OR_ROLE_TRANSFER",
+  "timestamp_utc": "2026-06-01T00:00:00+00:00"
+}

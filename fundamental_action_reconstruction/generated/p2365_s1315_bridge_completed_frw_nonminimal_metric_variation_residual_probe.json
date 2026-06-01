@@ -1,0 +1,138 @@
+{
+  "bridge_completed_frw_nonminimal_metric_variation_residual_probe": {
+    "coefficient_source": {
+      "canonical_numeric_coupling_ratios": {
+        "g_eff_over_g": 1.2319100971546473,
+        "lam_eff_over_lam": 1.2067348237095545,
+        "m2_eff_over_m2": 1.46998567264502,
+        "xi_eff_over_xi": 1.46998567264502
+      },
+      "effective_couplings": {
+        "g_eff": "g*(c2 + 1)",
+        "lam_eff": "lam*(c1**2 + 1)",
+        "m2_eff": "m2*(c0 + 1)",
+        "xi_eff": "xi*(c0 + 1)"
+      },
+      "raw_legacy_moments_used": false,
+      "source": "P2363 bridge-completed APD moment transport"
+    },
+    "docs": {
+      "equation_sheet": "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md",
+      "lagrangian_eom_draft": "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md"
+    },
+    "frw_nonminimal_variation_convention": {
+      "D00": "6*H*phi0*phidot*xi*(c0 + 1)",
+      "Dii_class": "-2*xi*(c0 + 1)*(2*H*phi0*phidot + phi0*phiddot + phidot**2)",
+      "F": "phi0**2*xi*(c0 + 1)",
+      "Fddot": "2*xi*(c0 + 1)*(phi0*phiddot + phidot**2)",
+      "Fdot": "2*phi0*phidot*xi*(c0 + 1)",
+      "normalization": "P2364 Einstein residual normalization with nonminimal contribution multiplied by 2*kappa2",
+      "term": "xi_eff*Phi^2*R",
+      "variation_operator": "F*G_mn + (g_mn*Box - nabla_m*nabla_n)F"
+    },
+    "gap_movement": {
+      "advanced_by": "explicit xi_eff*Phi^2*R FRW metric variation rows and residual-zero normal form",
+      "advanced_gap": "full tensor-resolved nonminimal metric variation on named FRW family",
+      "still_open": [
+        "Bianchi-I/anisotropic replay",
+        "off-FRW tensor component table",
+        "renormalized T_mn counterterm closure",
+        "background-independence atlas lift"
+      ]
+    },
+    "minimal_limit_against_p2364": {
+      "H2_minimal": "kappa2*(2*B2*c2*g + 2*B2*g + 2*E2*c2*g + 2*E2*g + 6*c0*m2*phi0**2 + 3*c1**2*lam*phi0**4 + 3*lam*phi0**4 + 6*m2*phi0**2 - 6*p_f + 6*rho_f)/36",
+      "Lambda_minimal": "kappa2*(2*B2*c2*g + 2*B2*g + 2*E2*c2*g + 2*E2*g + 3*p_f + 3*phidot**2 + 3*rho_f)/6",
+      "minimal_limit_residuals": {
+        "H2_solution_minus_P2364_minimal": "0",
+        "Lambda_solution_minus_P2364_minimal": "0",
+        "R00_nonminimal_reduces_to_minimal": "0",
+        "Rii_nonminimal_reduces_to_minimal": "0"
+      },
+      "p2364_background_family": {
+        "R_FRW": "12*H**2",
+        "name": "spatially_flat_FRW_constant_H_minisuperspace_slice",
+        "scope": "named background-family residual table, not background-independence theorem"
+      }
+    },
+    "nonminimal_metric_residual_rows": {
+      "Delta_00_nonminimal": "6*kappa2*phi0*xi*(c0 + 1)*(2*H*phidot + H2*phi0)",
+      "Delta_ii_nonminimal": "-2*kappa2*xi*(c0 + 1)*(4*H*phi0*phidot + 3*H2*phi0**2 + 2*phi0*phiddot + 2*phidot**2)",
+      "R_g_00_nonminimal": "-(2*B2*c2*g*kappa2 + 2*B2*g*kappa2 + 2*E2*c2*g*kappa2 + 2*E2*g*kappa2 - 48*H*c0*kappa2*phi0*phidot*xi - 48*H*kappa2*phi0*phidot*xi - 24*H2*c0*kappa2*phi0**2*xi - 24*H2*kappa2*phi0**2*xi - 12*H2 - 4*Lambda_cc + 2*c0*kappa2*m2*phi0**2 + c1**2*kappa2*lam*phi0**4 + kappa2*lam*phi0**4 + 2*kappa2*m2*phi0**2 + 2*kappa2*phidot**2 + 4*kappa2*rho_f)/4",
+      "R_g_ii_nonminimal": "(-2*B2*c2*g*kappa2 - 2*B2*g*kappa2 - 2*E2*c2*g*kappa2 - 2*E2*g*kappa2 - 96*H*c0*kappa2*phi0*phidot*xi - 96*H*kappa2*phi0*phidot*xi - 72*H2*c0*kappa2*phi0**2*xi - 72*H2*kappa2*phi0**2*xi - 36*H2 + 12*Lambda_cc + 6*c0*kappa2*m2*phi0**2 - 48*c0*kappa2*phi0*phiddot*xi - 48*c0*kappa2*phidot**2*xi + 3*c1**2*kappa2*lam*phi0**4 + 3*kappa2*lam*phi0**4 + 6*kappa2*m2*phi0**2 - 12*kappa2*p_f - 48*kappa2*phi0*phiddot*xi - 48*kappa2*phidot**2*xi - 6*kappa2*phidot**2)/12"
+    },
+    "nonminimal_metric_solution": {
+      "H2": "kappa2*(2*B2*c2*g + 2*B2*g + 2*E2*c2*g + 2*E2*g - 120*H*c0*phi0*phidot*xi - 120*H*phi0*phidot*xi + 6*c0*m2*phi0**2 - 24*c0*phi0*phiddot*xi - 24*c0*phidot**2*xi + 3*c1**2*lam*phi0**4 + 3*lam*phi0**4 + 6*m2*phi0**2 - 6*p_f - 24*phi0*phiddot*xi - 24*phidot**2*xi + 6*rho_f)/(36*(2*c0*kappa2*phi0**2*xi + 2*kappa2*phi0**2*xi + 1))",
+      "Lambda_cc": "-kappa2*(-2*B2*c2*g - 2*B2*g - 2*E2*c2*g - 2*E2*g + 12*H*c0*phi0*phidot*xi + 12*H*phi0*phidot*xi - 12*c0*phi0*phiddot*xi - 12*c0*phidot**2*xi - 3*p_f - 12*phi0*phiddot*xi - 12*phidot**2*xi - 3*phidot**2 - 3*rho_f)/6",
+      "solution_residuals": {
+        "R_g_00_nonminimal": "0",
+        "R_g_ii_nonminimal": "0"
+      }
+    },
+    "probe_id": "P2365_S1315_BRIDGE_COMPLETED_FRW_NONMINIMAL_METRIC_VARIATION_RESIDUAL",
+    "separation_from_selector": {
+      "eom_lagrangian_track_is_selector_independent": true,
+      "legacy_role_transfer_claimed": false,
+      "selector_qw2191_remains_parallel": true,
+      "selector_required_for_metric_variation_lift": false
+    },
+    "source_artifacts": {
+      "P1873_FULL_COMPONENT_STRESS_ENERGY_SEED": "fundamental_action_reconstruction/generated/p1873_s823_strict_frw_full_component_stress_energy_table_probe.json",
+      "P2363_BRIDGE_COMPLETED_MOMENTS": "fundamental_action_reconstruction/generated/p2363_s1313_legacy_strict_bridge_moment_lagrangian_transport_probe.json",
+      "P2364_FRW_RESIDUAL_TABLE": "fundamental_action_reconstruction/generated/p2364_s1314_bridge_completed_frw_scalar_gauge_gravity_residual_table_probe.json"
+    },
+    "stress_energy_minimal_seed": {
+      "p1873_seed_nonminimal_present": true,
+      "p_gauge": "g*(B2 + E2)*(c2 + 1)/6",
+      "p_matter_without_nonminimal": "-(-2*B2*c2*g - 2*B2*g - 2*E2*c2*g - 2*E2*g + 6*c0*m2*phi0**2 + 3*c1**2*lam*phi0**4 + 3*lam*phi0**4 + 6*m2*phi0**2 - 12*p_f - 6*phidot**2)/12",
+      "p_scalar": "-(2*c0*m2*phi0**2 + c1**2*lam*phi0**4 + lam*phi0**4 + 2*m2*phi0**2 - 2*phidot**2)/4",
+      "rho_gauge": "g*(B2 + E2)*(c2 + 1)/2",
+      "rho_matter_without_nonminimal": "(2*B2*c2*g + 2*B2*g + 2*E2*c2*g + 2*E2*g + 2*c0*m2*phi0**2 + c1**2*lam*phi0**4 + lam*phi0**4 + 2*m2*phi0**2 + 2*phidot**2 + 4*rho_f)/4",
+      "rho_scalar": "(2*c0*m2*phi0**2 + c1**2*lam*phi0**4 + lam*phi0**4 + 2*m2*phi0**2 + 2*phidot**2)/4"
+    },
+    "theorem_export": {
+      "claim": "On the same named FRW family as P2364, the xi_eff*Phi^2*R term can be included in the metric residual rows through the reduced tensor variation F*G_mn + (g_mn*Box - nabla_m*nabla_n)F with F=xi_eff*Phi^2. The resulting R_g_00 and R_g_ii rows have an exact algebraic residual-zero normal form and reduce to the P2364 minimal metric solution when xi_eff is disabled.",
+      "not_licensed": [
+        "full off-FRW tensor-resolved metric theorem",
+        "anisotropic Bianchi-I replay",
+        "renormalized one-loop stress-energy closure",
+        "Cutkosky/BRST/unitarity theorem",
+        "background-independence atlas lift",
+        "legacy physical-role transfer",
+        "selector premise or QW-2191 discharge",
+        "ToE closure"
+      ],
+      "positive_content": [
+        "The coefficient source remains P2363 APD-completed bridge moments.",
+        "The nonminimal variation contributes both F*G_mn and derivative D_mn[F] terms on FRW.",
+        "The corrected R_g_00 and R_g_ii rows solve exactly for H^2 and Lambda_cc.",
+        "The solution residuals are exactly zero.",
+        "The xi_eff=0 limit returns the P2364 minimal FRW metric normal form."
+      ],
+      "theorem_name": "P2365 bridge-completed FRW nonminimal metric variation residual lift"
+    },
+    "theorem_fingerprint_sha256": "0e0d87fa1771d3cee6d675fb6c7697dcfa0554c6ebf420af9c76a0a0425a0cc0"
+  },
+  "gatekeeper_checks": {
+    "docs_updated_with_p2365_nonminimal_metric_statement": true,
+    "hard_limits_preserved": true,
+    "minimal_limit_recovers_p2364_metric_rows": true,
+    "nonminimal_metric_solution_residuals_zero": true,
+    "p1873_nonminimal_seed_detected": true,
+    "p2363_gatekeepers_all_true": true,
+    "p2364_gatekeepers_all_true": true,
+    "raw_legacy_moments_not_used": true,
+    "selector_and_role_limits_preserved": true,
+    "source_artifacts_present": true,
+    "variation_derivative_terms_present": true
+  },
+  "global_status": "OPEN_PROGRESS_WITH_TRACE_NO_SELECTOR_ROLE_TRANSFER_OR_TOE_CLOSURE",
+  "packet_id": "P2365",
+  "produced_by": "p2365_s1315_bridge_completed_frw_nonminimal_metric_variation_residual_probe.py",
+  "recommended_next_honest_step": "Replay the P2365 nonminimal metric residual rows on a diagonal Bianchi-I family with shear variables, and test whether the FRW residual-zero normal form transports or produces an anisotropic obstruction.",
+  "result_kind": "BRIDGE_COMPLETED_FRW_NONMINIMAL_METRIC_VARIATION_RESIDUAL_LIFT",
+  "schema_version": "p2365_s1315_v1",
+  "stage_id": "S1315",
+  "status": "OPEN_PROGRESS_FRW_NONMINIMAL_METRIC_VARIATION_LIFT_NO_ATLAS_OR_SELECTOR_CLOSURE",
+  "timestamp_utc": "2026-06-01T00:00:00+00:00"
+}
