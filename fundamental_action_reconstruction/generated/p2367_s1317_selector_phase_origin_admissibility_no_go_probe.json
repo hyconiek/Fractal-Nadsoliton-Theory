@@ -1,0 +1,181 @@
+{
+  "gatekeeper_checks": {
+    "chiral_marker_keeps_orientation": true,
+    "coprime_phase_reference_recovers_sources": true,
+    "covariance_errors_zero": true,
+    "docs_updated_with_p2367_boundary": true,
+    "free_transitive_source_orbits": true,
+    "no_qw2191_discharge_claimed": true,
+    "noncoprime_modes_alias": true,
+    "p2366_was_run_and_loaded": true,
+    "source_artifacts_present": true,
+    "translation_invariant_examples_source_blind": true
+  },
+  "global_status": "OPEN_PROGRESS_WITH_TRACE_NO_SELECTOR_OR_TOE_CLOSURE",
+  "packet_id": "P2367",
+  "produced_by": "p2367_s1317_selector_phase_origin_admissibility_no_go_probe.py",
+  "recommended_next_honest_step": "Search for, or refute within a named admissible class, an internal strict phase-origin provider: APD phase-transport boundary, defect/node anchor, self-recorded arrow action, or another non-translation-invariant object that is not a silent legacy-role transfer.",
+  "result_kind": "SELECTOR_PHASE_ORIGIN_ADMISSIBILITY_NO_GO_BOUNDARY",
+  "schema_version": "p2367_s1317_v1",
+  "selector_phase_origin_admissibility_no_go_probe": {
+    "admissibility_rows": [
+      {
+        "calibrated_coprime_phase_recovers_all_sources_by_mode": {
+          "1": true,
+          "11": true,
+          "5": true,
+          "7": true
+        },
+        "noncoprime_phase_alias_class_counts": {
+          "10": 6,
+          "2": 6,
+          "3": 4,
+          "4": 3,
+          "6": 2,
+          "8": 3,
+          "9": 4
+        },
+        "orientation": -1,
+        "unique_chiral_bispectrum_orientations": [
+          -1
+        ],
+        "unique_complete_bispectrum_signatures": 1,
+        "unique_power_signatures": 1,
+        "unique_raw_coprime_phase_signatures": 12
+      },
+      {
+        "calibrated_coprime_phase_recovers_all_sources_by_mode": {
+          "1": true,
+          "11": true,
+          "5": true,
+          "7": true
+        },
+        "noncoprime_phase_alias_class_counts": {
+          "10": 6,
+          "2": 6,
+          "3": 4,
+          "4": 3,
+          "6": 2,
+          "8": 3,
+          "9": 4
+        },
+        "orientation": 1,
+        "unique_chiral_bispectrum_orientations": [
+          1
+        ],
+        "unique_complete_bispectrum_signatures": 1,
+        "unique_power_signatures": 1,
+        "unique_raw_coprime_phase_signatures": 12
+      }
+    ],
+    "candidate_boundary_table": [
+      {
+        "candidate_class": "translation_invariant_power_or_histogram_score",
+        "reason": "constant on each free transitive source orbit",
+        "verdict": "REJECT_AS_SOURCE_LOCALIZER"
+      },
+      {
+        "candidate_class": "complete_translation_invariant_bispectrum_score",
+        "reason": "bispectrum is translation-invariant and source-blind, although its chiral sign fixes orientation",
+        "verdict": "REJECT_AS_SOURCE_LOCALIZER_BUT_KEEP_AS_CHIRAL_ORIENTATION_MARKER"
+      },
+      {
+        "candidate_class": "noncoprime_raw_phase_mode",
+        "reason": "non-coprime modes have nontrivial gcd aliases on Z12",
+        "verdict": "REJECT_AS_FULL_SOURCE_LOCALIZER"
+      },
+      {
+        "candidate_class": "coprime_phase_with_phase_origin_reference",
+        "reason": "recovers all sources, but imports the still-unproven phase-origin reference",
+        "verdict": "BEST_OPERATIONAL_CANDIDATE_BUT_PREMISE_BASED"
+      }
+    ],
+    "covariance_and_invariance_errors": {
+      "max_complete_bispectrum_invariance_error": 0.0,
+      "max_dft_translation_covariance_error": 0.0,
+      "max_power_invariance_error": 0.0
+    },
+    "docs": {
+      "equation_sheet": "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md",
+      "lagrangian_eom_draft": "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md"
+    },
+    "orbit_certificate": [
+      {
+        "orbit_size_from_source_rows": 12,
+        "orientation": -1,
+        "stabilizer_of_source_0": [
+          0
+        ],
+        "translated_sources_from_source_0": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "translation_action_is_free_on_sources": true,
+        "translation_action_is_transitive_on_sources": true
+      },
+      {
+        "orbit_size_from_source_rows": 12,
+        "orientation": 1,
+        "stabilizer_of_source_0": [
+          0
+        ],
+        "translated_sources_from_source_0": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "translation_action_is_free_on_sources": true,
+        "translation_action_is_transitive_on_sources": true
+      }
+    ],
+    "probe_id": "P2367_S1317_SELECTOR_PHASE_ORIGIN_ADMISSIBILITY_NO_GO",
+    "source_artifacts": {
+      "C12_SOURCE_TRANSLATION_NO_GO": "fundamental_action_reconstruction/scratch/bridge_strict_alpha_c12_source_translation_no_go_report.json",
+      "CHI11_PREMISE_LATTICE": "fundamental_action_reconstruction/scratch/bridge_strict_alpha_chi11_premise_dependency_lattice_audit_report.json",
+      "P2366_SELECTOR_CANDIDATE": "fundamental_action_reconstruction/generated/p2366_s1316_selector_candidate_phase_reference_chi11_audit_probe.json",
+      "PHASE_REFERENCE_SELECTOR": "fundamental_action_reconstruction/scratch/bridge_strict_alpha_phase_reference_source_selector_certificate_report.json"
+    },
+    "theorem_export": {
+      "claim": "On the audited Z12 selector support, C12 translations act freely and transitively on the twelve source choices for each fixed chiral orientation. Therefore any translation-invariant strict-core score is source-blind. Complete Fourier powers and complete bispectra are verified examples of this no-go; raw coprime phases can localize source only after an external or internally derived phase-origin reference is supplied.",
+      "not_licensed": [
+        "strict-core phase-origin theorem",
+        "strict-core selector closure",
+        "QW-2191 discharge",
+        "beta_tors -> chi11 theorem",
+        "legacy physical-role transfer",
+        "ToE closure"
+      ],
+      "positive_content": [
+        "The source orbit is a free transitive C12 orbit for both orientations.",
+        "Complete power spectra and complete bispectrum signatures are invariant and source-blind.",
+        "The chiral bispectrum keeps the orientation information but does not supply a source origin.",
+        "Non-coprime phase modes alias source classes.",
+        "Coprime phases recover all sources only with a calibrated phase-origin reference."
+      ],
+      "theorem_name": "P2367 finite source-localization admissibility no-go boundary"
+    },
+    "theorem_fingerprint_sha256": "cd46953097ed73ac94ebe5e1c264b017b7350964876a725d95fee03e486a1657"
+  },
+  "stage_id": "S1317",
+  "status": "OPEN_PROGRESS_SELECTOR_ADMISSIBILITY_NO_GO_BOUNDARY_NO_QW2191_DISCHARGE",
+  "timestamp_utc": "2026-06-01T00:00:00+00:00"
+}

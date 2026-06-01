@@ -263,7 +263,7 @@ def main() -> None:
                 "S2 makes it a real bridge target, but the current audit classifies it as candidate-not-theorem.",
                 "It still needs an orientation map, role-transfer control, eta-pipeline link, and full-Aut obstruction escape.",
             ],
-            "status": legacy_verdict,
+            "status": f"candidate-not-theorem__{legacy_verdict}",
         },
         {
             "rank": 3,
