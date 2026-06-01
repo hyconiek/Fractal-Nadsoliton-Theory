@@ -401,3 +401,17 @@ This strengthens the selector-side candidate as an acceptance target for dynamic
 `P2376/S1326` proves that the P2374/P2375 compression-polarity candidate survives the audited parameter rectangle `eta in [9/5,2]`, `beta_tors in [0,0.1]`.  The proof uses the bivariate margin `F(eta,x)=(1+5^eta)*(1+x)^3-8*(1+5*x)` and shows it is increasing in both variables on the rectangle, with a positive lower-left corner.
 
 This is the point where finite robustness should not be widened further without a new risk.  The next honest move is no longer another local support scan; it is to derive, or fail to derive, a transport/variational source theorem that turns the robust `C(d)` polarity into an actual selector action.  Until then it remains outside `L_total` and does not close `QW-2191`.
+
+## P2377/S1327 transport primitive, still not variational closure
+
+`P2377/S1327` makes the compression candidate more structural without pretending to close the EOM.  It identifies `C(d)=log((1+d^eta)/(1+beta_tors*d))` as the endpoint primitive of the exact log-transport one-form for the denominator-completion homotopy `u_s(d)=(1-s)*(1+beta_tors*d)+s*(1+d^eta)`.
+
+The theorem also derives a uniform coupling threshold for the rectangle already certified by P2376: because `D(eta,x)=C5-3*C1` is minimized at `(eta,x)=(9/5,0.1)`, any scalar `tau>(3*K1-K5)/D(9/5,0.1)` forces the blended pair weights `K_strict(d)+tau*C(d)` into the d5 chamber throughout the audited rectangle.  The computational audit verifies the endpoint integral and the all-792-support d5 maximizer scan on the 3x3 parameter grid.
+
+This should be read as transport provenance plus an acceptance threshold for a future source theorem.  It still does not derive the scalar coupling from strict dynamics, does not add `tau*C(d)` to `L_total`, does not transfer legacy physical roles, and does not discharge QW-2191.
+
+## P2378/S1328 normalized transport is still too weak
+
+`P2378/S1328` prevents a tempting but false closure after P2377.  The exact log-transport primitive `C(d)` has structural provenance, but the unit-normalized insertion `K_strict(d)+C(d)` does not reach the d5 chamber.  More generally, for `K_strict(d)+M*C(d)` the selector condition is `M>(3*K1-K5)/(C5-3*C1)`.
+
+Across the P2376 rectangle, this threshold is always greater than one; the audited range is about `1.1757688203` to `1.8435099396`.  Therefore a variational/source theorem must not merely recover `C(d)` as a primitive: it must also fix a super-unit normalization above the relevant threshold.  Without that extra theorem, `M*C(d)` remains outside `L_total`, and QW-2191 remains open.

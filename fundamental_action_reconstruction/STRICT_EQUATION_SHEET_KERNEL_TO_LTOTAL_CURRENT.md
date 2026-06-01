@@ -444,3 +444,54 @@ F(eta,x) = (1 + 5^eta)*(1+x)^3 - 8*(1+5*x) > 0.
 ```
 
 The proof checks that `F` is increasing in both `eta` and `x` on the audited rectangle, so its minimum is at `(eta,x)=(9/5,0)`, where the margin is already positive.  A 3x3 grid scan over all 792 supports confirms the d5 path selection throughout the sampled rectangle.  This closes an eta/beta fine-tuning worry for the candidate, but it still does not supply the missing variational/transport source theorem.
+
+## P2377/S1327 damping-compression transport primitive and uniform coupling
+
+`P2377/S1327` stops widening finite robustness and tests the first requested source-level interface for the robust compression candidate.  It proves that
+
+```text
+C(d)=log((1+d^eta)/(1+beta_tors*d))
+```
+
+is the exact endpoint primitive of the damping-completion log-transport one-form along
+
+```text
+u_s(d)=(1-s)*(1+beta_tors*d)+s*(1+d^eta),
+A_s(d)=partial_s log(u_s(d)).
+```
+
+Thus `integral_0^1 A_s(d) ds = C(d)`.  This gives transport provenance for the P2374 feature rather than a bare pair-feature insertion.
+
+The same theorem computes a rectangle-uniform acceptance threshold for blending this transport primitive with the failed direct strict pair weights:
+
+```text
+(K1+tau*C1)/(K5+tau*C5)<1/3
+```
+
+through the denominator `D(eta,x)=C5-3*C1`.  On the P2376 rectangle, `D` is increasing in `eta` and decreasing in `x in [0,0.1]`, so its minimum is at `(eta,x)=(9/5,0.1)`.  Therefore a single scalar threshold `tau>(3*K1-K5)/D(9/5,0.1)` is sufficient on the audited rectangle, and grid support scans again select the 12 d5 supports.
+
+This is progress, but it is not the missing strict variational source theorem: the scalar coupling `tau` is not derived from nadsoliton dynamics, `C(d)` is not promoted into `L_total`, and QW-2191 remains open.
+
+## P2378/S1328 unit-normalized transport coupling insufficiency
+
+`P2378/S1328` audits the strongest false-closure risk left by P2377.  P2377 gives exact transport provenance for `C(d)`, but if that endpoint primitive is inserted with only unit-normalized total transport mass `M<=1`, it still cannot overcome the failed direct strict-kernel pair polarity.
+
+For a scalar transport budget
+
+```text
+a = K1 + M*C1,   b = K5 + M*C5,
+```
+
+the d5 chamber requires
+
+```text
+M > (3*K1-K5)/(C5-3*C1).
+```
+
+On the P2376 rectangle, `D(eta,x)=C5-3*C1` is positive, increasing in `eta`, and decreasing in `x`; its maximum occurs at `(eta,x)=(2,0)`.  Since even this maximum is smaller than `3*K1-K5`, every admissible point has threshold greater than one.  The certified threshold range is approximately
+
+```text
+1.1757688203 < M_threshold < 1.8435099396.
+```
+
+Thus P2377 transport provenance is not enough by itself: a future theorem must derive a super-unit source normalization above the relevant threshold, or else the extra coupling strength remains an explicit non-strict selector premise.  Grid scans confirm that `M=1` selects the mixed `(h1,h5)=(3,3)` orbit, while just-above-threshold mass selects the 12 d5 supports.
