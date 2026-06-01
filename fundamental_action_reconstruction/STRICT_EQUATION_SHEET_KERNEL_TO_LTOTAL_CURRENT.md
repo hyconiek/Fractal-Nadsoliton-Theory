@@ -790,3 +790,147 @@ post_bridge_role_transfer_audit.
 The `selector_mechanism` target is already realized by the strict-internal selector atom, so no realized selector support uses `auxiliary_beta_tors_to_chi11`.  The active `beta_tors -> chi11` obligation count is therefore zero.
 
 This retires `beta_tors -> chi11` only as a selector-search assumption.  It does not transfer legacy physical roles, does not complete the legacy-to-strict bridge, and does not produce an `L_total` source term.  The next honest bridge work is explicit bridge completion and then the separate role-transfer audit, without treating `beta_tors -> chi11` as a required selector proof.
+
+## P2393/S1343 normalized kernel boundary and current residual certificate
+
+`P2393/S1343` moves the bridge-completion lane from wording to a finite computation.  It proves the exact boundary embedding
+
+```text
+K_legacy_ont(d)/alpha_geo = K_strict_gate(d)
+```
+
+only after the explicit boundary substitution
+
+```text
+omega = omega_legacy, phi = phi_legacy, beta = beta_tors, eta = 1.
+```
+
+On the audited finite domain `d=0..12`, the replayed boundary residual is zero to floating precision, so amplitude normalization plus the `eta=1` substitution is a genuine bridge ingredient.  The same computation against the current strict target parameters leaves a nonzero residual vector, but after P2394 this is read only as an `eta=1` negative-control slice: the repo already has the finite APD completion witness `K_strict = K_legacy*A*P*D`.
+
+This step does not reopen `beta_tors -> chi11`; after P2392 that route remains retired as a selector-search assumption.  It also does not license legacy physical-role transfer; after P2394 the next active target is the post-bridge role-transfer audit, not re-proving APD.
+
+## P2394/S1344 APD bridge found, chi11 rebased, role-transfer frontier
+
+`P2394/S1344` corrects the active reading after P2393.  The finite comparison bridge was already found in the existing APD assembly certificate:
+
+```text
+K_strict(d) = K_legacy(d) * A(d) * P(d) * D(d)
+```
+
+on the audited finite domain.  Therefore the P2393 `eta=1` boundary residual is only a negative-control slice: it says the boundary slice alone is insufficient, not that the APD bridge is missing.
+
+After P2392/P1343/P1348, the strict selector/`chi11` mechanism is also available in declared scope without using the retired `beta_tors -> chi11` selector-search route.  The rebased active frontier is therefore the post-bridge legacy physical-role audit, not another APD proof and not a `beta_tors -> chi11` proof.
+
+The computed role-transfer truth table has three active role atoms:
+
+```text
+alpha_geo_electroweak_role_theorem,
+beta_tors_strict_role_theorem,
+beta_power_hierarchy_successor_theorem.
+```
+
+Current assignment closes none of the three legacy physical-role transfers.  Minimal supports are: Weinberg role needs `alpha_geo`, alpha-EM needs `alpha_geo + beta_tors`, and gravity hierarchy needs `beta_tors + beta_power`.  No `L_total`, SM/GR numeric extraction, or ToE closure follows.
+
+## P2395/S1345 post-bridge retained-negative successor frontier
+
+`P2395/S1345` runs the post-P2394 role-transfer audit without duplicating older retained-branch work.  Repo grep finds the existing retained-branch negative closures `N73`, `N90`, and `N106`; P2395 therefore treats unchanged legacy-role retention as closed negatively on the current repo state for the Weinberg, fine-structure, and gravity-hierarchy roles.
+
+With APD bridge and declared-scope `chi11` selector rebased as found, the active frontier becomes the modified strict-successor branch.  The finite role matrix uses three rows and eight columns: APD found, chi11 found, retained negative closure, alpha_geo atom, beta_tors atom, beta-power atom, modified successor open, and current transfer licensed.
+
+The computed successor universe is:
+
+```text
+alpha_geo_electroweak_role_theorem,
+beta_tors_strict_role_theorem,
+beta_power_hierarchy_successor_theorem.
+```
+
+Current transfer count is zero; all three modified successor branches remain open.  This is not a forever-rejection theorem: it only says unchanged retained inheritance is closed now, while strict successor roles still require new theorems before any `L_total`, SM/GR numeric extraction, or ToE closure claim.
+
+## P2396/S1346 role-package negative closure rebase
+
+`P2396/S1346` adds a nonduplication correction after P2395.  Repo grep finds that `N83`, `N99`, `N115`, and `N116` already close the full legacy physical-role package negatively on the current repo state.  Therefore the P2395 modified-successor flags must be read as future-only conditional slots, not as current exported successor branches.
+
+The finite matrix has three role rows and six columns: retained negative closure, replaced negative closure, full claim-specific negative closure, P2395 modified-successor flag, current transfer license, and future-successor-not-forbidden.  The current licensed transfer count is zero, while the future-not-forbidden bit prevents overclaiming a forever rejection.
+
+The next honest move is not to re-open the legacy role package.  It is to introduce genuinely new explicit successor evidence if one wants to revisit a role, otherwise keep the current-state package closed and continue on non-role strict-source/frontier work.  No `L_total`, SM/GR numeric extraction, or ToE closure follows.
+
+## P2397/S1347 role-closed ToE projection certificate
+
+`P2397/S1347` projects the existing seven-atom ToE truth-table/normal-form board onto the P2396 current-state role-closed slice.  Repo grep confirms that the global ToE boolean-normal-form and proper-subset reports already exist, so P2397 only computes the 16 assignments where the three role atoms are forced false:
+
+```text
+alpha_geo_electroweak_role_theorem = false,
+beta_tors_strict_role_theorem = false,
+beta_power_hierarchy_successor_theorem = false.
+```
+
+The free non-role atoms are the three strict bridge-source atoms plus `chi11_selector_source`.  On this slice the bridge target can still become true and the selector target can still become true, but role-transfer and ToE closure are false in all 16 rows.  This proves a sharper current-state corollary of P2396: non-role progress alone cannot close ToE while the role package is closed on the current repo state.
+
+This is not a forever no-go theorem.  Future explicit role-successor evidence would move the system off the P2396 role-closed slice.  No `L_total`, SM/GR numeric extraction, or ToE closure follows.
+
+## P2398/S1348 role-closed quotient ANF certificate
+
+`P2398/S1348` strengthens P2397 by computing the algebraic normal form of the P2396 role-closed quotient instead of only counting truth-table rows.  On the four free non-role variables, the quotient ANF is:
+
+```text
+bridge = strict_dynamical_source_for_A_P_D * strict_phase_frequency_source * strict_damping_beta_eta_source,
+selector = chi11_selector_source,
+role_transfer = 0,
+toe = 0.
+```
+
+Thus role-transfer and ToE are not merely unsatisfied in the current row; they are identically zero functions on the whole role-closed quotient.  Non-role source work can still close the bridge or selector components, but it cannot close role-transfer or ToE until genuinely new role-successor evidence moves the state off this quotient.
+
+No `L_total`, SM/GR numeric extraction, or ToE closure follows.
+
+## P2399/S1349 role-closed lift-distance spectrum certificate
+
+`P2399/S1349` lifts the P2398 quotient result back toward the seven-atom frontier by computing exact Hamming/lift distances from every P2396 role-closed row to each target.  This does not redo the global nearest-miss theorem; it asks a narrower question: how far is the current role-closed quotient from role-transfer and ToE once non-role progress is allowed?
+
+The result is finite and sharp: the nearest role-transfer lift has distance `3` and requires all three role atoms when `chi11_selector_source` is already present; the nearest ToE lift also has distance `3` and occurs only when all four non-role atoms are already present.  Therefore non-role progress can reduce the ToE lift distance down to three, but it cannot remove the three explicit role-successor obligations.
+
+No role-transfer theorem, ToE closure, `L_total` promotion, or SM/GR numeric extraction follows from this distance spectrum.
+
+## P2400/S1350 nearest-lift role-successor lattice certificate
+
+`P2400/S1350` takes the P2399 nearest non-role-complete row and enumerates the remaining three-role successor lattice exactly.  With APD, phase/frequency, damping, and `chi11` fixed true, the role-transfer/ToE Boolean function over the three role atoms is the single degree-3 monomial:
+
+```text
+alpha_geo_electroweak_role_theorem * beta_tors_strict_role_theorem * beta_power_hierarchy_successor_theorem.
+```
+
+All seven proper role subsets fail; the three one-missing nearest misses are the exact Boolean-derivative supports.  This is a conditional lattice theorem, not a proof that any role atom has been exported.
+
+## P2401/S1351 role-successor unlock-order certificate
+
+`P2401/S1351` does not add a new role theorem.  It takes the P2394 role-claim supports and the P2400 three-role monomial, then enumerates all six possible orders for proving the three role-successor atoms.  The finite result is:
+
+```text
+best partial-clarification order = alpha_geo_electroweak_role_theorem -> beta_tors_strict_role_theorem -> beta_power_hierarchy_successor_theorem,
+full role-transfer/ToE readiness = still only at prefix size 3.
+```
+
+Thus `alpha_geo` is the best first target only for early partial role-claim clarification; it is not a shortcut to role-transfer or ToE closure.
+
+## P2402/S1352 role-successor marginal-credit certificate
+
+`P2402/S1352` complements P2401 by computing role-local marginal credit over all six proof orders.  This is not the older global frontier influence report; it only asks how much each of the three role-successor atoms contributes to unlocking the P2394 role claims inside the P2400 lattice.
+
+The exact marginal-credit vector over all role claims is:
+
+```text
+alpha_geo_electroweak_role_theorem: 11/6,
+beta_tors_strict_role_theorem: 4/3,
+beta_power_hierarchy_successor_theorem: 5/6.
+```
+
+For physical claims only, the vector is `3/2, 1, 1/2`.  This supports prioritizing `alpha_geo` for first proof-search clarification, while preserving the P2400 rule that all three atoms are still required for full role-transfer/ToE readiness.
+
+## P2403/S1353 strict-primary physics-generation rebase certificate
+
+`P2403/S1353` incorporates the corrected historical reading: the legacy kernel was the first successful kernel and was extensively studied as a possible ToE generator of masses, gravity, and related physical roles.  The current strict kernel is now the primary kernel because the bridge/completion work records strict-side nadsoliton characteristics not present in the legacy kernel as a final object: A/P/D completion, GF(2)/cohomological phase data, nonlinear `d^eta` compression, and strict `chi11` selector bookkeeping.
+
+The finite characteristic matrix has strict count `5/5` and legacy count `1/5` on the audited structural characteristics.  This is a structural research-priority theorem: strict should be the primary target for future known-physics generation tests, while legacy remains the construction/bridge source explaining how strict is built.
+
+It is not yet a theorem that strict generates SM/GR roles; role-successor and `L_total` promotion remain blocked until explicit role theorems are supplied.

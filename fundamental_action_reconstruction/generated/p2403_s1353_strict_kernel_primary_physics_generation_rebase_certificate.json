@@ -1,0 +1,282 @@
+{
+  "gatekeeper_checks": {
+    "all_lanes_rebased_to_strict_primary": true,
+    "apd_and_chi11_rebase_inherited": true,
+    "fingerprint_stable": true,
+    "legacy_does_not_contain_all_audited_characteristics": true,
+    "legacy_kept_as_bridge_in_all_lanes": true,
+    "rg_nonduplication_audit_ran": true,
+    "s2_completion_additions_detected": true,
+    "silent_role_transfer_blocked_in_all_lanes": true,
+    "strict_contains_all_audited_characteristics": true,
+    "strict_dominance_delta_is_four": true
+  },
+  "global_status": "OPEN_PROGRESS_STRICT_PRIMARY_PHYSICS_GENERATION_REBASED_NO_ROLE_TRANSFER_LICENSE",
+  "packet_id": "P2403",
+  "recommended_next_honest_step": "Use strict kernel as the primary object for future mass/gravity/known-physics generation tests, while using legacy+bridge data to explain strict components and keeping role-transfer theorems separate.",
+  "result_kind": "STRICT_KERNEL_PRIMARY_PHYSICS_GENERATION_REBASE_CERTIFICATE",
+  "schema_version": "p2403_s1353_v1",
+  "stage_id": "S1353",
+  "status": "PASS_STRICT_PRIMARY_REBASE_LEGACY_BRIDGE_ROLE_PRESERVED_NO_PHYSICS_CLOSURE",
+  "strict_kernel_primary_physics_generation_rebase_certificate": {
+    "characteristic_matrix": {
+      "legacy_characteristic_count": 1,
+      "legacy_contains_all_audited_characteristics": false,
+      "rows": [
+        {
+          "bridge_reading": "Legacy supplies D_f/alpha_geo/beta_tors construction data; strict must not silently inherit physical roles from it.",
+          "id": "legacy_canonical_parameter_layer",
+          "legacy_bit": 1,
+          "legacy_contains": true,
+          "strict_addition": false,
+          "strict_bit": 1,
+          "strict_contains": true,
+          "strict_minus_legacy_delta": 0
+        },
+        {
+          "bridge_reading": "Strict uses the finite A/P/D completion structure rather than raw legacy identity.",
+          "id": "apd_completion_structure",
+          "legacy_bit": 0,
+          "legacy_contains": false,
+          "strict_addition": true,
+          "strict_bit": 1,
+          "strict_contains": true,
+          "strict_minus_legacy_delta": 1
+        },
+        {
+          "bridge_reading": "Strict carries certified GF(2)/cohomological phase/topological data absent from the legacy kernel as such.",
+          "id": "gf2_phase_topological_data",
+          "legacy_bit": 0,
+          "legacy_contains": false,
+          "strict_addition": true,
+          "strict_bit": 1,
+          "strict_contains": true,
+          "strict_minus_legacy_delta": 1
+        },
+        {
+          "bridge_reading": "Strict contains nonlinear d^eta compression; legacy has only linear beta_tors*d damping.",
+          "id": "nonlinear_damping_compression",
+          "legacy_bit": 0,
+          "legacy_contains": false,
+          "strict_addition": true,
+          "strict_bit": 1,
+          "strict_contains": true,
+          "strict_minus_legacy_delta": 1
+        },
+        {
+          "bridge_reading": "Strict-side chi11 selector/source is rebased as present; beta_tors->chi11 remains retired as a selector route.",
+          "id": "chi11_selector_source_declared",
+          "legacy_bit": 0,
+          "legacy_contains": false,
+          "strict_addition": true,
+          "strict_bit": 1,
+          "strict_contains": true,
+          "strict_minus_legacy_delta": 1
+        }
+      ],
+      "strict_addition_count": 4,
+      "strict_additions": [
+        "apd_completion_structure",
+        "gf2_phase_topological_data",
+        "nonlinear_damping_compression",
+        "chi11_selector_source_declared"
+      ],
+      "strict_characteristic_count": 5,
+      "strict_contains_all_audited_characteristics": true,
+      "strict_structural_dominance_delta": 4
+    },
+    "physics_lane_rebase": {
+      "all_lanes_block_silent_role_transfer": true,
+      "all_lanes_keep_legacy_as_bridge_not_final_kernel": true,
+      "all_lanes_rebased_to_strict_primary": true,
+      "alpha_geo_first_search_priority_inherited": true,
+      "lanes": [
+        {
+          "alpha_geo_first_search_priority_if_role_lane": false,
+          "current_physical_generation_theorem_exported": false,
+          "lane": "mass_generation",
+          "legacy_as_construction_bridge": true,
+          "legacy_silent_role_transfer_allowed": false,
+          "role_successor_theorem_required_before_physical_promotion": true,
+          "strict_primary_candidate": true
+        },
+        {
+          "alpha_geo_first_search_priority_if_role_lane": true,
+          "current_physical_generation_theorem_exported": false,
+          "lane": "electroweak_alpha_roles",
+          "legacy_as_construction_bridge": true,
+          "legacy_silent_role_transfer_allowed": false,
+          "role_successor_theorem_required_before_physical_promotion": true,
+          "strict_primary_candidate": true
+        },
+        {
+          "alpha_geo_first_search_priority_if_role_lane": false,
+          "current_physical_generation_theorem_exported": false,
+          "lane": "gravity_hierarchy",
+          "legacy_as_construction_bridge": true,
+          "legacy_silent_role_transfer_allowed": false,
+          "role_successor_theorem_required_before_physical_promotion": true,
+          "strict_primary_candidate": true
+        },
+        {
+          "alpha_geo_first_search_priority_if_role_lane": true,
+          "current_physical_generation_theorem_exported": false,
+          "lane": "lagrangian_eom_promotion",
+          "legacy_as_construction_bridge": true,
+          "legacy_silent_role_transfer_allowed": false,
+          "role_successor_theorem_required_before_physical_promotion": true,
+          "strict_primary_candidate": true
+        }
+      ],
+      "role_lattice_full_mask_condition_inherited": true
+    },
+    "rg_nonduplication_audit": {
+      "finding": "Repo grep confirms extensive legacy physics-role material plus strict bridge/completion artifacts. P2403 therefore rebases the research priority, rather than claiming a new SM/GR derivation.",
+      "patterns": {
+        "bridge_components": {
+          "count": 2026,
+          "samples": [
+            "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2139_kernel_green_status_3d_energy_gate.json:8:    \"formula\": \"K(d)=cos(omega*d+phi)/(1+beta*d^eta)\"",
+            "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2140_kernel_inverse_finite_domain_gate.json:8:    \"formula\": \"K(d)=cos(omega*d+phi)/(1+beta*d^eta)\"",
+            "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2141_continuum_weak_distribution_proxy_gate.json:8:    \"formula\": \"K(d)=cos(omega*d+phi)/(1+beta*d^eta)\"",
+            "material_dowodowy/korpus_qw_pozostaly/raporty_md/RAPORT_QW2139_KERNEL_GREEN_STATUS_3D_ENERGY_GATE.md:8:- formula: `K(d)=cos(omega*d+phi)/(1+beta*d^eta)`",
+            "fundamental_action_reconstruction/p1698_s648_strict_full_lagrangian_sector_eom_bundle_nonproxy_scaffold_checkpoint.py:66:        \"kernel\": p1694.get(\"kernel\", \"K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)\"),",
+            "fundamental_action_reconstruction/p1698_s648_strict_full_lagrangian_sector_eom_bundle_nonproxy_scaffold_checkpoint.py:96:            \"BRST_nilpotency_and_cohomology_theorem\",",
+            "fundamental_action_reconstruction/p1956_s906_strict_gauge_gauge_physical_projector_certificate.py:8:BRST nilpotency, ghost cancellation, and cohomology as open requirements.",
+            "fundamental_action_reconstruction/p1956_s906_strict_gauge_gauge_physical_projector_certificate.py:232:                \"channel-level ghost-subtracted BRST cohomology projector was found.\"",
+            "fundamental_action_reconstruction/p1956_s906_strict_gauge_gauge_physical_projector_certificate.py:290:                \"no proof that the full cut sum is restricted to BRST cohomology\",",
+            "fundamental_action_reconstruction/p1956_s906_strict_gauge_gauge_physical_projector_certificate.py:300:            \"reason\": \"P1956 supplies only external transverse polarization algebra; P1767/P1801/P1802 still require BRST charge, ghost sector, nilpotency, cohomology, and optical theorem matching.\",",
+            "fundamental_action_reconstruction/p1956_s906_strict_gauge_gauge_physical_projector_certificate.py:304:            \"It is not a BRST cohomology theorem, not a ghost-cancellation theorem, \"",
+            "fundamental_action_reconstruction/p1708_s658_strict_nonproxy_covariant_eom_first_explicit_formula_export_checkpoint.py:52:            \"brst_nilpotency_and_cohomology_nonproxy\",",
+            "fundamental_action_reconstruction/P2017_S967_STRICT_CUTKOSKY_BACKEND_LOOP_AMPLITUDE_TENSOR_QUADRATURE_WITNESS_THEOREM.md:24:K_strict(d) = cos(omega*d + phi)/(1 + beta*d^eta)",
+            "fundamental_action_reconstruction/p1928_s878_strict_full_chain_bidirectional_closure_gap_ledger_probe.py:58:                \"K_strict(d)=cos(omega*d+phi)/(1+beta*d^eta)\",",
+            "fundamental_action_reconstruction/DIAGRAMS_STRICT_KERNEL_TRANSFORMATION.md:15:Within that ontology, the kernel is not a separate entity below the nadsoliton. It is a compressed operational trace of nadsoliton structure. The legacy kernel was the first effective trace. The strict kernel is the later enriched trace after adding strict-side characteristics of the nadsoliton: nonlinear compression/damping, phase/topological data, and finite bookkeeping of carrier/node/edge information.",
+            "fundamental_action_reconstruction/DIAGRAMS_STRICT_KERNEL_TRANSFORMATION.md:33:        |-- APD symbolic cancellation certificate"
+          ]
+        },
+        "guardrail_language": {
+          "count": 117,
+          "samples": [
+            "fundamental_action_reconstruction/DIAGRAMS_STRICT_KERNEL_TRANSFORMATION.md:5:This file is the strict-kernel counterpart of `DIAGRAMS_KERNEL_TRANSFORMATION.md`. It is deliberately written as a release scaffold: it records the current finite construction of the bridge from the restored legacy intermediate kernel to the strict working kernel, while preserving the guardrails that block silent identity, silent role transfer, QW-2191 discharge, and ToE closure.",
+            "fundamental_action_reconstruction/DIAGRAMS_STRICT_KERNEL_TRANSFORMATION.md:129:3. Complete the separate strict role-transfer audit after the bridge is no longer only finite-comparison scope.",
+            "fundamental_action_reconstruction/test_bridge_strict_completion_legacy_to_strict_completion_component_gap_certificate_probe.py:46:        self.assertIn(\"role-transfer audit\", searched)",
+            "fundamental_action_reconstruction/p2392_s1342_auxiliary_beta_tors_chi11_retirement_certificate.py:178:            \"obligation\": \"post-bridge role-transfer audit\",",
+            "fundamental_action_reconstruction/p2392_s1342_auxiliary_beta_tors_chi11_retirement_certificate.py:198:            \"Keep beta_tors legacy physical roles separated until an explicit post-bridge role-transfer audit.\",",
+            "fundamental_action_reconstruction/p2392_s1342_auxiliary_beta_tors_chi11_retirement_certificate.py:232:        \"recommended_next_honest_step\": \"Stop treating beta_tors->chi11 as an active selector target; work on the explicit legacy->strict bridge completion and then the role-transfer audit.\",",
+            "fundamental_action_reconstruction/p2392_s1342_auxiliary_beta_tors_chi11_retirement_certificate.py:262:                \"- Legacy physical-role transfer remains blocked until bridge completion and a separate role-transfer audit.\",",
+            "fundamental_action_reconstruction/p438_current_strict_t166_diagonal_accelerator_lane_status_dashboard_probe.py:1371:                                                                                                                                                \"To avoid silent role transfer, the next honest comparison move is to materialize the missing T16 component obstruction: \"",
+            "fundamental_action_reconstruction/STRICT_KERNEL_TOE_POTENTIAL_AUDIT.md:24:proper strict-side completion and role-transfer audit, the same structural place",
+            "fundamental_action_reconstruction/p2394_s1344_apd_bridge_chi11_rebased_role_frontier_certificate.py:273:The role-transfer truth table leaves the legacy Weinberg, alpha-EM, and beta-power gravity roles unlicensed at the current assignment.  Any future `L_total` term using `alpha_geo`, `beta_tors`, or `beta^N` as physical legacy roles must pass that role-transfer audit first.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:316:4. Link any eventual physical-role updates to the separate strict role-transfer audit rather than to the Lagrangian scaffold alone.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:652:The role-transfer truth table leaves the legacy Weinberg, alpha-EM, and beta-power gravity roles unlicensed at the current assignment.  Any future `L_total` term using `alpha_geo`, `beta_tors`, or `beta^N` as physical legacy roles must pass that role-transfer audit first.",
+            "fundamental_action_reconstruction/test_bridge_strict_completion_legacy_kernel_intermediate_bridge_guardrail_certificate_probe.py:76:        self.assertIn(\"role-transfer audit\", implications)",
+            "fundamental_action_reconstruction/test_bridge_strict_completion_legacy_kernel_intermediate_bridge_guardrail_certificate_probe.py:83:        self.assertIn(\"role-transfer audit\", proof[\"role_transfer_step\"])",
+            "fundamental_action_reconstruction/generated/p2392_s1342_auxiliary_beta_tors_chi11_retirement_certificate.md:19:- Legacy physical-role transfer remains blocked until bridge completion and a separate role-transfer audit.",
+            "fundamental_action_reconstruction/generated/p2392_s1342_auxiliary_beta_tors_chi11_retirement_certificate.json:30:        \"obligation\": \"post-bridge role-transfer audit\","
+          ]
+        },
+        "legacy_physics_studies": {
+          "count": 1869,
+          "samples": [
+            "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1947_coupling_completeness_and_mass_operator_frontier.json:72:  \"legacy_mass_operator_qw1939\": {",
+            "material_dowodowy/korpus_qw_pozostaly/raporty_md/RAPORT_QW2056_FIRST_PRINCIPLES_FLAVOR_OPERATOR_FAMILY_FRONTIER.md:33:- 10. legacy | quark_mass_inversion | pass 4/6 | CKM=987.114 | PMNS=14.060 | CKM_perm_env=189.005",
+            "fundamental_action_reconstruction/p2378_s1328_unit_normalized_transport_coupling_insufficiency_theorem.py:285:                \"- No `L_total` promotion, `beta_tors -> chi11` theorem, legacy role transfer, QW-2191 discharge, selector closure, or ToE closure is claimed.\",",
+            "fundamental_action_reconstruction/p2371_s1321_aut_invariant_unit_bandpass_obstruction_theorem.py:241:                \"- No `beta_tors -> chi11` theorem, legacy role transfer, QW-2191 discharge, selector closure, or ToE closure is claimed.\",",
+            "fundamental_action_reconstruction/p2386_s1336_bathtub_lp_dual_certificate.py:316:                \"- No `L_total` promotion, `beta_tors -> chi11` theorem, legacy role transfer, QW-2191 discharge, selector closure, or ToE closure is claimed.\",",
+            "fundamental_action_reconstruction/n88_current_legacy_fine_structure_semantic_transfer_subbranch_obstruction_theorem.py:12:    / \"n88_current_legacy_fine_structure_semantic_transfer_subbranch_obstruction_theorem_summary.json\"",
+            "fundamental_action_reconstruction/n88_current_legacy_fine_structure_semantic_transfer_subbranch_obstruction_theorem.py:22:        \"fundamental_action_reconstruction/generated/p83_legacy_fine_structure_semantic_transfer_subbranch_probe_summary.json\"",
+            "fundamental_action_reconstruction/n88_current_legacy_fine_structure_semantic_transfer_subbranch_obstruction_theorem.py:66:            \"scope\": \"current_legacy_fine_structure_retained_semantic_transfer_question_only\",",
+            "fundamental_action_reconstruction/n88_current_legacy_fine_structure_semantic_transfer_subbranch_obstruction_theorem.py:75:            \"scope\": \"current_legacy_fine_structure_retained_semantic_transfer_question_only\",",
+            "fundamental_action_reconstruction/n88_current_legacy_fine_structure_semantic_transfer_subbranch_obstruction_theorem.py:85:                \"explicit_textual_retained_successor_verdict_identifying_alpha_em_inv_mz_as_the_retained_strict_side_successor_of_the_legacy_fine_structure_role\",",
+            "fundamental_action_reconstruction/P83_LEGACY_FINE_STRUCTURE_SEMANTIC_TRANSFER_SUBBRANCH_PROBE.md:60:1. `explicit_textual_retained_successor_verdict_identifying_alpha_em_inv_mz_as_the_retained_strict_side_successor_of_the_legacy_fine_structure_role`",
+            "fundamental_action_reconstruction/n100_current_legacy_gravity_hierarchy_role_strict_side_branch_obstruction_theorem.py:13:    / \"n100_current_legacy_gravity_hierarchy_role_strict_side_branch_obstruction_theorem_summary.json\"",
+            "fundamental_action_reconstruction/n100_current_legacy_gravity_hierarchy_role_strict_side_branch_obstruction_theorem.py:23:        \"fundamental_action_reconstruction/generated/f20_legacy_gravity_hierarchy_role_strict_side_partition_refinement_packet_summary.json\"",
+            "fundamental_action_reconstruction/n100_current_legacy_gravity_hierarchy_role_strict_side_branch_obstruction_theorem.py:26:        \"fundamental_action_reconstruction/generated/p93_legacy_gravity_hierarchy_role_strict_side_branch_probe_summary.json\"",
+            "fundamental_action_reconstruction/n100_current_legacy_gravity_hierarchy_role_strict_side_branch_obstruction_theorem.py:76:            \"scope\": \"current_legacy_gravity_hierarchy_role_branch_question_only\",",
+            "fundamental_action_reconstruction/n100_current_legacy_gravity_hierarchy_role_strict_side_branch_obstruction_theorem.py:85:            \"scope\": \"current_legacy_gravity_hierarchy_role_branch_question_only\","
+          ]
+        },
+        "new_packet": {
+          "count": 42,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:698:## P2403/S1353 strict-primary physics-generation guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:700:`P2403/S1353` rebases future physics-generation work onto the strict kernel as the primary candidate, with the legacy kernel retained as bridge/construction data.  This strengthens the reason to test strict for masses, gravity, and Lagrangian roles, but it does not license importing old legacy role terms into `L_total` without the separate role-successor theorems.",
+            "fundamental_action_reconstruction/test_p2403_s1353_strict_kernel_primary_physics_generation_rebase_certificate.py:24:class P2403StrictKernelPrimaryPhysicsGenerationRebaseCertificateTest(unittest.TestCase):",
+            "fundamental_action_reconstruction/test_p2403_s1353_strict_kernel_primary_physics_generation_rebase_certificate.py:35:        self.assertEqual(self.payload[\"packet_id\"], \"P2403\")",
+            "fundamental_action_reconstruction/test_p2403_s1353_strict_kernel_primary_physics_generation_rebase_certificate.py:36:        self.assertEqual(self.payload[\"stage_id\"], \"S1353\")",
+            "fundamental_action_reconstruction/test_p2403_s1353_strict_kernel_primary_physics_generation_rebase_certificate.py:62:        self.assertIn(\"P2403/S1353 strict-primary\", (ROOT / \"STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md\").read_text(encoding=\"utf-8\"))",
+            "fundamental_action_reconstruction/test_p2403_s1353_strict_kernel_primary_physics_generation_rebase_certificate.py:63:        self.assertIn(\"P2403/S1353 strict-primary\", (ROOT / \"STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md\").read_text(encoding=\"utf-8\"))",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:930:## P2403/S1353 strict-primary physics-generation rebase certificate",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:932:`P2403/S1353` incorporates the corrected historical reading: the legacy kernel was the first successful kernel and was extensively studied as a possible ToE generator of masses, gravity, and related physical roles.  The current strict kernel is now the primary kernel because the bridge/completion work records strict-side nadsoliton characteristics not present in the legacy kernel as a final object: A/P/D completion, GF(2)/cohomological phase data, nonlinear `d^eta` compression, and strict `chi11` selector bookkeeping.",
+            "fundamental_action_reconstruction/generated/p2403_s1353_strict_kernel_primary_physics_generation_rebase_certificate.md:1:# P2403 S1353: strict-kernel primary physics-generation rebase certificate",
+            "fundamental_action_reconstruction/generated/p2403_s1353_strict_kernel_primary_physics_generation_rebase_certificate.md:7:P2403/S1353 rebases future known-physics generation work onto the strict kernel as the primary candidate, while preserving the legacy kernel as bridge/construction data.",
+            "fundamental_action_reconstruction/p2403_s1353_strict_kernel_primary_physics_generation_rebase_certificate.py:114:        \"new_packet\": \"P2403|S1353|strict kernel primary physics generation|primary physics-generation rebase\",",
+            "fundamental_action_reconstruction/p2403_s1353_strict_kernel_primary_physics_generation_rebase_certificate.py:125:            \"P2403 therefore rebases the research priority, rather than claiming a new SM/GR derivation.\"",
+            "fundamental_action_reconstruction/p2403_s1353_strict_kernel_primary_physics_generation_rebase_certificate.py:185:## P2403/S1353 strict-primary physics-generation rebase certificate",
+            "fundamental_action_reconstruction/p2403_s1353_strict_kernel_primary_physics_generation_rebase_certificate.py:187:`P2403/S1353` incorporates the corrected historical reading: the legacy kernel was the first successful kernel and was extensively studied as a possible ToE generator of masses, gravity, and related physical roles.  The current strict kernel is now the primary kernel because the bridge/completion work records strict-side nadsoliton characteristics not present in the legacy kernel as a final object: A/P/D completion, GF(2)/cohomological phase data, nonlinear `d^eta` compression, and strict `chi11` selector bookkeeping.",
+            "fundamental_action_reconstruction/p2403_s1353_strict_kernel_primary_physics_generation_rebase_certificate.py:194:## P2403/S1353 strict-primary physics-generation guard for Lagrangian/EOM"
+          ]
+        },
+        "strict_physics_studies": {
+          "count": 1525,
+          "samples": [
+            "material_dowodowy/lean_fin_dowody/md/FIN_SPINOR_GAUGE_EXTENSION_SPEC_QW2121.md:4:It does not claim strict-derivation status for spinor/gauge/gravity action blocks.",
+            "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw2069_full_sm_gr_derivation_package.json:23:    \"gravity_hierarchy_strict_bridge_gate_optional\": \"report_qw2115_gravity_hierarchy_strict_bridge_gate.json\"",
+            "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1947_coupling_completeness_and_mass_operator_frontier.json:106:        \"strict_mass_pass\": false,",
+            "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1947_coupling_completeness_and_mass_operator_frontier.json:114:        \"strict_mass_pass\": false",
+            "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1947_coupling_completeness_and_mass_operator_frontier.json:175:            \"strict_mass_pass\": false",
+            "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1947_coupling_completeness_and_mass_operator_frontier.json:236:            \"strict_mass_pass\": false",
+            "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1947_coupling_completeness_and_mass_operator_frontier.json:297:            \"strict_mass_pass\": false",
+            "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1947_coupling_completeness_and_mass_operator_frontier.json:322:        \"strict_mass_pass\": false,",
+            "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1947_coupling_completeness_and_mass_operator_frontier.json:330:        \"strict_mass_pass\": false",
+            "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1947_coupling_completeness_and_mass_operator_frontier.json:391:            \"strict_mass_pass\": false",
+            "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1947_coupling_completeness_and_mass_operator_frontier.json:452:            \"strict_mass_pass\": false",
+            "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1947_coupling_completeness_and_mass_operator_frontier.json:513:            \"strict_mass_pass\": false",
+            "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1947_coupling_completeness_and_mass_operator_frontier.json:538:        \"strict_mass_pass\": false,",
+            "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1947_coupling_completeness_and_mass_operator_frontier.json:546:        \"strict_mass_pass\": false",
+            "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1947_coupling_completeness_and_mass_operator_frontier.json:607:            \"strict_mass_pass\": false",
+            "material_dowodowy/korpus_qw_pozostaly/raporty_json/report_qw1947_coupling_completeness_and_mass_operator_frontier.json:668:            \"strict_mass_pass\": false"
+          ]
+        }
+      },
+      "tool": "rg"
+    },
+    "source_artifact_statuses": {
+      "P2394_APD_CHI11_REBASE": "PASS_APD_BRIDGE_FOUND_CHI11_SELECTOR_REBASED_ROLE_TRANSFER_FRONTIER_OPEN",
+      "P2400_ROLE_LATTICE": "PASS_NEAREST_LIFT_REQUIRES_FULL_THREE_ROLE_SUCCESSOR_MONOMIAL",
+      "P2402_MARGINAL_CREDIT": "PASS_ROLE_SUCCESSOR_MARGINAL_CREDIT_PRIORITIZES_ALPHA_NO_PREFIX_LICENSE"
+    },
+    "theorem_export": {
+      "characteristic_matrix_summary": {
+        "legacy_characteristic_count": 1,
+        "strict_addition_count": 4,
+        "strict_additions": [
+          "apd_completion_structure",
+          "gf2_phase_topological_data",
+          "nonlinear_damping_compression",
+          "chi11_selector_source_declared"
+        ],
+        "strict_characteristic_count": 5,
+        "strict_structural_dominance_delta": 4
+      },
+      "lane_rebase_summary": {
+        "all_lanes_block_silent_role_transfer": true,
+        "all_lanes_keep_legacy_as_bridge_not_final_kernel": true,
+        "all_lanes_rebased_to_strict_primary": true
+      },
+      "legacy_kernel_role_now": "construction_bridge_and_historical_physics_study_source_not_final_primary_kernel",
+      "not_licensed": [
+        "No theorem that strict already generates SM/GR physical roles is exported here.",
+        "No legacy mass/gravity/electroweak role is silently transferred to the strict kernel.",
+        "No L_total promotion follows from structural dominance alone.",
+        "Legacy remains scientifically useful as bridge/construction data and historical role-study source."
+      ],
+      "p2394_apd_bridge_found": true,
+      "p2394_chi11_selector_found": true,
+      "s2_mentions_strict_completion_additions": true,
+      "strict_kernel_primary_candidate_now": true,
+      "theorem_name": "P2403_T1_strict_primary_physics_generation_rebase"
+    },
+    "theorem_fingerprint_sha256": "b30847cc6b2b2b246815046daa19f3ff9e21bb93405d1ebc4c04ca8d92fad11e"
+  }
+}

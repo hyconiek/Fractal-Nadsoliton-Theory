@@ -1,0 +1,292 @@
+{
+  "gatekeeper_checks": {
+    "all_three_full_claim_negative_closures_loaded": true,
+    "current_transfer_count_zero": true,
+    "fingerprint_stable": true,
+    "future_successor_not_forbidden_preserved": true,
+    "matrix_rank_is_one": true,
+    "n116_package_negative_closure_loaded": true,
+    "p2395_flags_rebased_future_only": true,
+    "rg_nonduplication_audit_ran": true
+  },
+  "global_status": "OPEN_PROGRESS_ROLE_PACKAGE_CURRENT_STATE_CLOSED_FUTURE_SUCCESSOR_ONLY_CONDITIONAL",
+  "packet_id": "P2396",
+  "recommended_next_honest_step": "Do not reopen the legacy role package without new explicit successor evidence; use P2396 as the current-state closure guard and move to a non-role strict-source frontier or a genuinely new successor theorem input.",
+  "result_kind": "ROLE_PACKAGE_NEGATIVE_CLOSURE_REBASE_CERTIFICATE",
+  "role_package_negative_closure_rebase_certificate": {
+    "package_certificate": {
+      "all_current_role_transfer_closed_negative": true,
+      "current_licensed_transfer_count": 0,
+      "full_claim_specific_negative_count": 3,
+      "future_successor_not_forbidden_count": 3,
+      "matrix": [
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1
+        ]
+      ],
+      "matrix_columns": [
+        "retained_branch_closed_negative",
+        "replaced_branch_closed_negative",
+        "full_claim_specific_closed_negative",
+        "p2395_modified_successor_open_flag",
+        "current_transfer_licensed",
+        "future_successor_not_forbidden_forever"
+      ],
+      "matrix_rank_mod2": 1,
+      "n116_package_closed_negative": true,
+      "p2395_future_only_flag_count": 3,
+      "rebase_rule": "If a role has full claim-specific negative closure and no current transfer license, then P2395's modified-successor-open flag is read as future-only conditional unless a new explicit successor verdict is exported.",
+      "role_count": 3
+    },
+    "rg_nonduplication_audit": {
+      "finding": "Repo grep finds N83/N99/N115/N116 full current-state negative closures for the legacy role package. P2396 therefore treats P2395's modified-successor flag as a future-only conditional frontier, not as a current exported role-transfer branch.",
+      "patterns": {
+        "N83|N99|N115|N116|full claim-specific negative closure|legacy physical-role package": {
+          "count": 310,
+          "samples": [
+            "fundamental_action_reconstruction/n116_current_legacy_physical_role_package_full_negative_closure_theorem.py:36:            \"meaning\": \"N83 already closes the full legacy Weinberg claim-specific frontier negatively on the current repo state\",",
+            "fundamental_action_reconstruction/n116_current_legacy_physical_role_package_full_negative_closure_theorem.py:42:            \"meaning\": \"N99 already closes the full legacy fine-structure claim-specific frontier negatively on the current repo state\",",
+            "fundamental_action_reconstruction/n116_current_legacy_physical_role_package_full_negative_closure_theorem.py:48:            \"meaning\": \"N115 already closes the full legacy gravity-hierarchy claim-specific frontier negatively on the current repo state\",",
+            "fundamental_action_reconstruction/n116_current_legacy_physical_role_package_full_negative_closure_theorem.py:70:            \"step\": \"N116\",",
+            "fundamental_action_reconstruction/n116_current_legacy_physical_role_package_full_negative_closure_theorem.py:71:            \"status\": \"N116_REQUIRES_REVIEW_CHANGED_OR_INSUFFICIENT_LEGACY_PHYSICAL_ROLE_PACKAGE_STATE\",",
+            "fundamental_action_reconstruction/n116_current_legacy_physical_role_package_full_negative_closure_theorem.py:79:            \"step\": \"N116\",",
+            "fundamental_action_reconstruction/n116_current_legacy_physical_role_package_full_negative_closure_theorem.py:80:            \"status\": \"N116_DISCHARGED_CURRENT_LEGACY_PHYSICAL_ROLE_PACKAGE_FULL_NEGATIVE_CLOSURE_THEOREM_NO_FALSE_PASS\",",
+            "fundamental_action_reconstruction/N991_CURRENT_STRICT_T173_T176_EXISTING_T342_EXACT_YET_FURTHER_LOWER_BOUNDARY_TARGET_THEOREM.md:1:# N991 Current Strict `T173/T176` Existing `T342` Exact Yet-Further Lower-Boundary Target Theorem",
+            "fundamental_action_reconstruction/N991_CURRENT_STRICT_T173_T176_EXISTING_T342_EXACT_YET_FURTHER_LOWER_BOUNDARY_TARGET_THEOREM.md:3:Status: `N991_CURRENT_STRICT_T173_T176_EXISTING_T342_EXACT_YET_FURTHER_LOWER_BOUNDARY_TARGET_THEOREM_NO_FALSE_PASS`",
+            "fundamental_action_reconstruction/N991_CURRENT_STRICT_T173_T176_EXISTING_T342_EXACT_YET_FURTHER_LOWER_BOUNDARY_TARGET_THEOREM.md:9:`P1142/N990`, without false pass.",
+            "fundamental_action_reconstruction/N991_CURRENT_STRICT_T173_T176_EXISTING_T342_EXACT_YET_FURTHER_LOWER_BOUNDARY_TARGET_THEOREM.md:13:Assuming `P1140/P1141/P1142`, `N987/N989/N990`, and the current exact lower",
+            "fundamental_action_reconstruction/N991_CURRENT_STRICT_T173_T176_EXISTING_T342_EXACT_YET_FURTHER_LOWER_BOUNDARY_TARGET_THEOREM.md:46:   `P1142/N990`,",
+            "fundamental_action_reconstruction/N991_CURRENT_STRICT_T173_T176_EXISTING_T342_EXACT_YET_FURTHER_LOWER_BOUNDARY_TARGET_THEOREM.md:74:`N991` does **not** claim:",
+            "fundamental_action_reconstruction/N116_CURRENT_LEGACY_PHYSICAL_ROLE_PACKAGE_FULL_NEGATIVE_CLOSURE_THEOREM.md:1:# N116 Current Legacy Physical-Role Package Full Negative Closure Theorem",
+            "fundamental_action_reconstruction/N116_CURRENT_LEGACY_PHYSICAL_ROLE_PACKAGE_FULL_NEGATIVE_CLOSURE_THEOREM.md:3:Status: `N116_DISCHARGED_CURRENT_LEGACY_PHYSICAL_ROLE_PACKAGE_FULL_NEGATIVE_CLOSURE_THEOREM_NO_FALSE_PASS`",
+            "fundamental_action_reconstruction/N116_CURRENT_LEGACY_PHYSICAL_ROLE_PACKAGE_FULL_NEGATIVE_CLOSURE_THEOREM.md:8:After `N83`, `N99`, and `N115`, the strongest honest theorem-level question is:"
+          ]
+        },
+        "P2395|modified successor frontier|OPEN_ACTIVE_SUCCESSOR_FRONTIER|post-bridge retained-negative": {
+          "count": 97,
+          "samples": [
+            "fundamental_action_reconstruction/test_p2396_s1346_role_package_negative_closure_rebase_certificate.py:70:        self.assertIn(\"No P2395 modified-successor flag is a current exported successor theorem.\", self.theorem[\"not_licensed\"])",
+            "fundamental_action_reconstruction/test_p2395_s1345_post_bridge_retained_negative_successor_frontier_certificate.py:24:class P2395PostBridgeRetainedNegativeSuccessorFrontierCertificateTest(unittest.TestCase):",
+            "fundamental_action_reconstruction/test_p2395_s1345_post_bridge_retained_negative_successor_frontier_certificate.py:35:        self.assertEqual(self.payload[\"packet_id\"], \"P2395\")",
+            "fundamental_action_reconstruction/test_p2395_s1345_post_bridge_retained_negative_successor_frontier_certificate.py:53:        self.assertTrue(all(row[\"modified_successor_verdict\"] == \"OPEN_ACTIVE_SUCCESSOR_FRONTIER\" for row in rows))",
+            "fundamental_action_reconstruction/test_p2395_s1345_post_bridge_retained_negative_successor_frontier_certificate.py:78:        self.assertIn(\"post-bridge retained-negative\", MD.read_text(encoding=\"utf-8\"))",
+            "fundamental_action_reconstruction/test_p2395_s1345_post_bridge_retained_negative_successor_frontier_certificate.py:79:        self.assertIn(\"P2395/S1345 post-bridge\", (ROOT / \"STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md\").read_text(encoding=\"utf-8\"))",
+            "fundamental_action_reconstruction/test_p2395_s1345_post_bridge_retained_negative_successor_frontier_certificate.py:80:        self.assertIn(\"P2395/S1345 retained-negative\", (ROOT / \"STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md\").read_text(encoding=\"utf-8\"))",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:654:## P2395/S1345 retained-negative role rebase, strict successor branch open",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:656:`P2395/S1345` applies the post-bridge role audit to the Lagrangian/EOM lane.  Since `N73/N90/N106` already close the unchanged retained branches negatively on the current repo state, no `L_total` term may import the old Weinberg, fine-structure, or gravity-hierarchy formulas by literal inheritance.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:658:The only honest active branch is a modified strict-successor branch.  It remains open for all three roles and depends on the `alpha_geo`, `beta_tors`, and beta-power successor atoms computed by P2395.  Thus P2395 blocks silent legacy-role import while preserving a precise successor-theorem frontier.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:662:`P2396/S1346` prevents a Lagrangian/EOM overread of P2395.  Since `N83/N99/N115/N116` already close the current-state legacy role package negatively, the P2395 modified-successor flags are future-only conditional slots.  They are not current licenses to import Weinberg, fine-structure, or gravity-hierarchy semantics into `L_total`.",
+            "fundamental_action_reconstruction/generated/p2397_s1347_role_closed_toe_projection_certificate.json:32:            \"fundamental_action_reconstruction/p2396_s1346_role_package_negative_closure_rebase_certificate.py:109:            \\\"P2396 therefore treats P2395's modified-successor flag as a future-only conditional frontier, not as a current exported role-transfer branch.\\\"\",",
+            "fundamental_action_reconstruction/generated/p2397_s1347_role_closed_toe_projection_certificate.json:34:            \"fundamental_action_reconstruction/p2396_s1346_role_package_negative_closure_rebase_certificate.py:213:            \\\"then P2395's modified-successor-open flag is read as future-only conditional unless a new explicit successor verdict is exported.\\\"\",",
+            "fundamental_action_reconstruction/generated/p2397_s1347_role_closed_toe_projection_certificate.json:36:            \"fundamental_action_reconstruction/p2396_s1346_role_package_negative_closure_rebase_certificate.py:222:`P2396/S1346` adds a nonduplication correction after P2395.  Repo grep finds that `N83`, `N99`, `N115`, and `N116` already close the full legacy physical-role package negatively on the current repo state.  Therefore the P2395 modified-successor flags must be read as future-only conditional slots, not as current exported successor branches.\",",
+            "fundamental_action_reconstruction/generated/p2397_s1347_role_closed_toe_projection_certificate.json:38:            \"fundamental_action_reconstruction/p2396_s1346_role_package_negative_closure_rebase_certificate.py:231:`P2396/S1346` prevents a Lagrangian/EOM overread of P2395.  Since `N83/N99/N115/N116` already close the current-state legacy role package negatively, the P2395 modified-successor flags are future-only conditional slots.  They are not current licenses to import Weinberg, fine-structure, or gravity-hierarchy semantics into `L_total`.\",",
+            "fundamental_action_reconstruction/generated/p2397_s1347_role_closed_toe_projection_certificate.json:45:            \"fundamental_action_reconstruction/p2396_s1346_role_package_negative_closure_rebase_certificate.py:307:                \\\"P2396/S1346 rebases P2395 against N83/N99/N115/N116: the legacy role package is closed negatively on the current repo state, and P2395 modified-successor flags are future-only conditional slots.\\\",\","
+          ]
+        },
+        "P2396|S1346|role package negative closure rebase|current-state role package closure": {
+          "count": 130,
+          "samples": [
+            "fundamental_action_reconstruction/test_p2396_s1346_role_package_negative_closure_rebase_certificate.py:24:class P2396RolePackageNegativeClosureRebaseCertificateTest(unittest.TestCase):",
+            "fundamental_action_reconstruction/test_p2396_s1346_role_package_negative_closure_rebase_certificate.py:35:        self.assertEqual(self.payload[\"packet_id\"], \"P2396\")",
+            "fundamental_action_reconstruction/test_p2396_s1346_role_package_negative_closure_rebase_certificate.py:36:        self.assertEqual(self.payload[\"stage_id\"], \"S1346\")",
+            "fundamental_action_reconstruction/test_p2396_s1346_role_package_negative_closure_rebase_certificate.py:73:        self.assertIn(\"P2396/S1346 role-package\", (ROOT / \"STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md\").read_text(encoding=\"utf-8\"))",
+            "fundamental_action_reconstruction/test_p2396_s1346_role_package_negative_closure_rebase_certificate.py:74:        self.assertIn(\"P2396/S1346 role-package\", (ROOT / \"STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md\").read_text(encoding=\"utf-8\"))",
+            "fundamental_action_reconstruction/p2399_s1349_role_closed_lift_distance_spectrum_certificate.py:93:            \"P2399 therefore does not redo the global seven-atom obstruction; it computes the exact lift-distance spectrum from the P2396/P2397 role-closed quotient.\"",
+            "fundamental_action_reconstruction/p2399_s1349_role_closed_lift_distance_spectrum_certificate.py:211:`P2399/S1349` lifts the P2398 quotient result back toward the seven-atom frontier by computing exact Hamming/lift distances from every P2396 role-closed row to each target.  This does not redo the global nearest-miss theorem; it asks a narrower question: how far is the current role-closed quotient from role-transfer and ToE once non-role progress is allowed?",
+            "fundamental_action_reconstruction/p2399_s1349_role_closed_lift_distance_spectrum_certificate.py:303:                \"P2399/S1349 computes the exact Hamming/lift-distance spectrum from the P2396/P2397 role-closed quotient.\",",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:660:## P2396/S1346 role-package closure rebase for Lagrangian use",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:662:`P2396/S1346` prevents a Lagrangian/EOM overread of P2395.  Since `N83/N99/N115/N116` already close the current-state legacy role package negatively, the P2395 modified-successor flags are future-only conditional slots.  They are not current licenses to import Weinberg, fine-structure, or gravity-hierarchy semantics into `L_total`.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:668:`P2397/S1347` computes the P2396 role-closed slice of the existing ToE truth table.  Across all 16 assignments of the remaining non-role atoms, role-transfer and ToE closure stay false.  Therefore even a future non-role source advance in APD, phase/frequency, damping, or `chi11` cannot by itself license a role-bearing `L_total` term while the legacy role package remains closed on the current repo state.",
+            "fundamental_action_reconstruction/p2397_s1347_role_closed_toe_projection_certificate.py:20:    \"P2396_ROLE_PACKAGE_REBASE\": GEN / \"p2396_s1346_role_package_negative_closure_rebase_certificate.json\",",
+            "fundamental_action_reconstruction/p2397_s1347_role_closed_toe_projection_certificate.py:71:        \"P2396|role package negative closure|current_licensed_transfer_count|future-only conditional\",",
+            "fundamental_action_reconstruction/p2397_s1347_role_closed_toe_projection_certificate.py:92:            \"Repo grep finds existing ToE truth-table/normal-form/proper-subset reports and the P2396 current-state role-package closure. \"",
+            "fundamental_action_reconstruction/p2397_s1347_role_closed_toe_projection_certificate.py:93:            \"P2397 therefore does not recompute global ToE readiness; it projects the existing 7-atom ToE board onto the P2396 role-closed slice.\"",
+            "fundamental_action_reconstruction/p2397_s1347_role_closed_toe_projection_certificate.py:182:`P2397/S1347` projects the existing seven-atom ToE truth-table/normal-form board onto the P2396 current-state role-closed slice.  Repo grep confirms that the global ToE boolean-normal-form and proper-subset reports already exist, so P2397 only computes the 16 assignments where the three role atoms are forced false:"
+          ]
+        },
+        "legacy Weinberg|legacy fine-structure|legacy gravity-hierarchy|sin2_theta_w_mz|alpha_em_inv_mz|gravity_hierarchy_beta20": {
+          "count": 1529,
+          "samples": [
+            "fundamental_action_reconstruction/p70_strict_side_lineage_upgrade_probe_for_legacy_weinberg_role.py:34:    \"sin2_theta_w_mz\",",
+            "fundamental_action_reconstruction/p70_strict_side_lineage_upgrade_probe_for_legacy_weinberg_role.py:89:            \"meaning\": \"the current strict-side source set exports no explicit lineage-upgrade verdict for the legacy Weinberg role\",",
+            "fundamental_action_reconstruction/p74_strict_side_textual_object_successor_probe_for_legacy_weinberg_role.py:35:OBJECT_MARKERS = [\"sin2_theta_w_mz\"]",
+            "fundamental_action_reconstruction/p74_strict_side_textual_object_successor_probe_for_legacy_weinberg_role.py:88:            \"meaning\": \"the current strict-side object source set exports no explicit textual object-successor verdict for the legacy Weinberg role\",",
+            "fundamental_action_reconstruction/p74_strict_side_textual_object_successor_probe_for_legacy_weinberg_role.py:109:        \"reason\": \"the strict-side object sources do export the sin2_theta_w_mz object chain, but none of those sources joins that object to the legacy Weinberg role through an explicit textual object-successor verdict\",",
+            "fundamental_action_reconstruction/p74_strict_side_textual_object_successor_probe_for_legacy_weinberg_role.py:114:            \"explicit_object_lineage_upgrade_verdict_elevating_the_existing_sin2_theta_w_mz_candidate_chain_into_replacement_semantics_for_the_legacy_weinberg_angle_role\"",
+            "fundamental_action_reconstruction/F6_LEGACY_WEINBERG_ROLE_STRICT_SIDE_PARTITION_REFINEMENT_PACKET.md:26:   `retained` verdict for the legacy Weinberg-angle role,",
+            "fundamental_action_reconstruction/F6_LEGACY_WEINBERG_ROLE_STRICT_SIDE_PARTITION_REFINEMENT_PACKET.md:28:   `replaced` verdict for the legacy Weinberg-angle role by an explicit strict",
+            "fundamental_action_reconstruction/F6_LEGACY_WEINBERG_ROLE_STRICT_SIDE_PARTITION_REFINEMENT_PACKET.md:37:one claim-specific strict-side verdict for the legacy Weinberg-angle role",
+            "fundamental_action_reconstruction/F6_LEGACY_WEINBERG_ROLE_STRICT_SIDE_PARTITION_REFINEMENT_PACKET.md:55:1. `P62/N65` already rule out silent transfer of the legacy Weinberg-angle",
+            "fundamental_action_reconstruction/F6_LEGACY_WEINBERG_ROLE_STRICT_SIDE_PARTITION_REFINEMENT_PACKET.md:66:- that the legacy Weinberg-angle role is retained on the strict side,",
+            "fundamental_action_reconstruction/F6_LEGACY_WEINBERG_ROLE_STRICT_SIDE_PARTITION_REFINEMENT_PACKET.md:67:- that the legacy Weinberg-angle role is replaced on the strict side,",
+            "fundamental_action_reconstruction/F6_LEGACY_WEINBERG_ROLE_STRICT_SIDE_PARTITION_REFINEMENT_PACKET.md:78:   or the replaced branch for the legacy Weinberg-angle role,",
+            "fundamental_action_reconstruction/F13_LEGACY_FINE_STRUCTURE_ROLE_STRICT_SIDE_PARTITION_REFINEMENT_PACKET.md:26:   for the legacy fine-structure role,",
+            "fundamental_action_reconstruction/F13_LEGACY_FINE_STRUCTURE_ROLE_STRICT_SIDE_PARTITION_REFINEMENT_PACKET.md:28:   verdict for the legacy fine-structure role by an explicit strict successor",
+            "fundamental_action_reconstruction/F13_LEGACY_FINE_STRUCTURE_ROLE_STRICT_SIDE_PARTITION_REFINEMENT_PACKET.md:37:one claim-specific strict-side verdict for the legacy fine-structure role"
+          ]
+        },
+        "retained branch|replaced branch|closed negatively|future strict-side successor semantics": {
+          "count": 568,
+          "samples": [
+            "fundamental_action_reconstruction/F6_LEGACY_WEINBERG_ROLE_STRICT_SIDE_PARTITION_REFINEMENT_PACKET.md:60:   retained branch vs replaced branch.",
+            "fundamental_action_reconstruction/F6_LEGACY_WEINBERG_ROLE_STRICT_SIDE_PARTITION_REFINEMENT_PACKET.md:77:1. test whether the current repo already exports either the retained branch",
+            "fundamental_action_reconstruction/F6_LEGACY_WEINBERG_ROLE_STRICT_SIDE_PARTITION_REFINEMENT_PACKET.md:78:   or the replaced branch for the legacy Weinberg-angle role,",
+            "fundamental_action_reconstruction/F13_LEGACY_FINE_STRUCTURE_ROLE_STRICT_SIDE_PARTITION_REFINEMENT_PACKET.md:60:   retained branch vs replaced branch.",
+            "fundamental_action_reconstruction/F13_LEGACY_FINE_STRUCTURE_ROLE_STRICT_SIDE_PARTITION_REFINEMENT_PACKET.md:77:1. test whether the current repo already exports either the retained branch",
+            "fundamental_action_reconstruction/F13_LEGACY_FINE_STRUCTURE_ROLE_STRICT_SIDE_PARTITION_REFINEMENT_PACKET.md:78:   or the replaced branch for the legacy fine-structure role,",
+            "fundamental_action_reconstruction/N443_CURRENT_FIRST_STRICT_SIGMA_INT_TO_THETA_SELECTOR_INGREDIENT_O2_CUT_STRICT_CORE_UPGRADE_SLOT_ELIMINATION_FAILURE_THEOREM.md:46:is closed negatively for the current exported sigma-int → theta candidate pipeline:",
+            "fundamental_action_reconstruction/n112_current_strict_side_textual_method_successor_obstruction_theorem_for_legacy_gravity_hierarchy_role.py:33:            \"meaning\": \"the full object-successor branch remains closed negatively on the current repo state\",",
+            "fundamental_action_reconstruction/F7_LEGACY_WEINBERG_RETAINED_BRANCH_REFINEMENT_PACKET.md:17:what are the two narrowest ways the retained branch could be discharged on the",
+            "fundamental_action_reconstruction/F7_LEGACY_WEINBERG_RETAINED_BRANCH_REFINEMENT_PACKET.md:36:So the retained branch is no longer:",
+            "fundamental_action_reconstruction/p71_strict_side_replaced_branch_probe_for_legacy_weinberg_role.py:83:            \"meaning\": \"N73 already closes the retained branch negatively on the current repo state\",",
+            "fundamental_action_reconstruction/p71_strict_side_replaced_branch_probe_for_legacy_weinberg_role.py:110:        \"reason\": \"the retained branch is already closed negatively, but the current strict-side source set still exports no explicit replacement verdict linking the legacy Weinberg role to a named strict successor semantics\",",
+            "fundamental_action_reconstruction/N69_CURRENT_STRICT_SIDE_LITERAL_RETENTION_OBSTRUCTION_THEOREM_FOR_LEGACY_WEINBERG_FORMULA.md:30:> Therefore the current repo does not justify saying that the retained branch",
+            "fundamental_action_reconstruction/N69_CURRENT_STRICT_SIDE_LITERAL_RETENTION_OBSTRUCTION_THEOREM_FOR_LEGACY_WEINBERG_FORMULA.md:49:- a proof that the replaced branch is solved,",
+            "fundamental_action_reconstruction/N69_CURRENT_STRICT_SIDE_LITERAL_RETENTION_OBSTRUCTION_THEOREM_FOR_LEGACY_WEINBERG_FORMULA.md:61:2. while keeping the replaced branch separate.",
+            "fundamental_action_reconstruction/p93_legacy_gravity_hierarchy_role_strict_side_branch_probe.py:36:            \"meaning\": \"F20 refines the missing gravity-hierarchy verdict into retained vs replaced branches\","
+          ]
+        }
+      },
+      "tool": "rg"
+    },
+    "role_rows": [
+      {
+        "current_state_role_transfer_verdict": "CLOSED_NEGATIVE_CURRENT_REPO_STATE",
+        "current_transfer_licensed": false,
+        "full_claim_specific_closed_negative": true,
+        "full_negative_source": "N83_WEINBERG_FULL_NEGATIVE",
+        "future_successor_not_forbidden_forever": true,
+        "matrix_bits": {
+          "current_transfer_licensed": false,
+          "full_claim_specific_closed_negative": true,
+          "future_successor_not_forbidden_forever": true,
+          "p2395_modified_successor_open_flag": true,
+          "replaced_branch_closed_negative": true,
+          "retained_branch_closed_negative": true
+        },
+        "matrix_vector": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        "p2395_modified_successor_flag": true,
+        "p2395_modified_successor_rebased_verdict": "FUTURE_ONLY_CONDITIONAL_NOT_CURRENT_EXPORT",
+        "p2395_role_id": "legacy_weinberg_sin2_theta_role",
+        "replaced_branch_closed_negative": true,
+        "retained_branch_closed_negative": true,
+        "role_id": "legacy_weinberg_angle_role",
+        "role_keyword": "weinberg"
+      },
+      {
+        "current_state_role_transfer_verdict": "CLOSED_NEGATIVE_CURRENT_REPO_STATE",
+        "current_transfer_licensed": false,
+        "full_claim_specific_closed_negative": true,
+        "full_negative_source": "N99_FINE_STRUCTURE_FULL_NEGATIVE",
+        "future_successor_not_forbidden_forever": true,
+        "matrix_bits": {
+          "current_transfer_licensed": false,
+          "full_claim_specific_closed_negative": true,
+          "future_successor_not_forbidden_forever": true,
+          "p2395_modified_successor_open_flag": true,
+          "replaced_branch_closed_negative": true,
+          "retained_branch_closed_negative": true
+        },
+        "matrix_vector": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        "p2395_modified_successor_flag": true,
+        "p2395_modified_successor_rebased_verdict": "FUTURE_ONLY_CONDITIONAL_NOT_CURRENT_EXPORT",
+        "p2395_role_id": "legacy_alpha_em_inverse_role",
+        "replaced_branch_closed_negative": true,
+        "retained_branch_closed_negative": true,
+        "role_id": "legacy_fine_structure_role",
+        "role_keyword": "fine-structure"
+      },
+      {
+        "current_state_role_transfer_verdict": "CLOSED_NEGATIVE_CURRENT_REPO_STATE",
+        "current_transfer_licensed": false,
+        "full_claim_specific_closed_negative": true,
+        "full_negative_source": "N115_GRAVITY_FULL_NEGATIVE",
+        "future_successor_not_forbidden_forever": true,
+        "matrix_bits": {
+          "current_transfer_licensed": false,
+          "full_claim_specific_closed_negative": true,
+          "future_successor_not_forbidden_forever": true,
+          "p2395_modified_successor_open_flag": true,
+          "replaced_branch_closed_negative": true,
+          "retained_branch_closed_negative": true
+        },
+        "matrix_vector": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        "p2395_modified_successor_flag": true,
+        "p2395_modified_successor_rebased_verdict": "FUTURE_ONLY_CONDITIONAL_NOT_CURRENT_EXPORT",
+        "p2395_role_id": "legacy_beta_power_gravity_hierarchy_role",
+        "replaced_branch_closed_negative": true,
+        "retained_branch_closed_negative": true,
+        "role_id": "legacy_gravity_hierarchy_role",
+        "role_keyword": "gravity"
+      }
+    ],
+    "source_artifact_statuses": {
+      "N115_GRAVITY_FULL_NEGATIVE": "TEXT_SOURCE",
+      "N116_ROLE_PACKAGE_FULL_NEGATIVE": "TEXT_SOURCE",
+      "N83_WEINBERG_FULL_NEGATIVE": "TEXT_SOURCE",
+      "N99_FINE_STRUCTURE_FULL_NEGATIVE": "TEXT_SOURCE",
+      "P2395_SUCCESSOR_FRONTIER": "PASS_RETAINED_BRANCHES_CLOSED_NEGATIVE_MODIFIED_SUCCESSOR_FRONTIER_OPEN",
+      "STRICT_ROLE_AUDIT_DRAFT": "TEXT_SOURCE"
+    },
+    "theorem_export": {
+      "current_licensed_transfer_count": 0,
+      "future_successor_not_forbidden_count": 3,
+      "matrix_rank_mod2": 1,
+      "not_licensed": [
+        "No legacy physical role is transferred on the current repo state.",
+        "No P2395 modified-successor flag is a current exported successor theorem.",
+        "No forever impossibility of future strict successor evidence is claimed.",
+        "No L_total promotion, SM/GR numeric extraction, or ToE closure is claimed."
+      ],
+      "p2395_modified_successor_flags_rebased_as_future_only": 3,
+      "role_package_closed_negative_now": true,
+      "theorem_name": "P2396_T1_role_package_current_state_negative_closure_rebase"
+    },
+    "theorem_fingerprint_sha256": "9e8314819aca11012044fe3f8e9a3fb5b8580d725bccbcba469af45a44e6993d"
+  },
+  "schema_version": "p2396_s1346_v1",
+  "stage_id": "S1346",
+  "status": "PASS_ROLE_PACKAGE_CLOSED_CURRENT_STATE_P2395_FLAGS_FUTURE_ONLY"
+}
