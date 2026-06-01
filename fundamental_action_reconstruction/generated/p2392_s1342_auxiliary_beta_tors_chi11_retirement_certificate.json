@@ -1,0 +1,171 @@
+{
+  "auxiliary_beta_tors_chi11_retirement_certificate": {
+    "active_beta_tors_chi11_obligations": [],
+    "obligation_rows": [
+      {
+        "active_next_target": false,
+        "beta_tors_chi11_required": false,
+        "evidence": "selector_mechanism has a realized minimal support using strict_internal_selector_P1343_P1348",
+        "obligation": "strict selector mechanism",
+        "status": "DISCHARGED_BY_P1343_P1348"
+      },
+      {
+        "active_next_target": false,
+        "beta_tors_chi11_required": false,
+        "evidence": "not used by the realized selector_mechanism support",
+        "obligation": "auxiliary beta_tors -> chi11 selector-search hypothesis",
+        "status": "RETIRED_AS_SELECTOR_ROUTE_ASSUMPTION"
+      },
+      {
+        "active_next_target": true,
+        "beta_tors_chi11_required": false,
+        "evidence": "bridge completion is independent of confirming the retired selector-search hypothesis",
+        "obligation": "legacy -> strict bridge completion",
+        "status": "OPEN_ACTIVE_BRIDGE_TARGET"
+      },
+      {
+        "active_next_target": false,
+        "beta_tors_chi11_required": false,
+        "evidence": "role transfer remains blocked, but beta_tors->chi11 is not required just to preserve the selector mechanism",
+        "obligation": "post-bridge role-transfer audit",
+        "status": "DEFERRED_UNTIL_BRIDGE_READY"
+      }
+    ],
+    "rg_nonduplication_audit": {
+      "finding": "Repo already contains P2390/P2391 separation artifacts and many beta_tors/chi11 candidate references. P2392 therefore does not try to prove beta_tors->chi11; it retires that candidate from the active selector-mechanism route.",
+      "patterns": {
+        "P2390|P2391|selector-qualified|selector-epoch": {
+          "count": 84,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:607:## P2390/S1340 selector-qualified beta_tors -> chi11 role audit, bridge-role still open",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:609:`P2390/S1340` answers the current ambiguity caused by the presence of a strict selector mechanism.  The audit treats `P1343/P1348` as real declared-scope selector/global-closure exports, then separates that fact from the legacy bridge-role claim `beta_tors -> chi11`.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:622:## P2391/S1341 selector-epoch rebased bridge gap matrix, stale selector gap removed",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:624:`P2391/S1341` rebases the bridge gap matrix after accepting the P1343/P1348 selector epoch and the P2390 role-separation result.  It changes exactly one bookkeeping bit: the `topological_phase_bit_chi11` row now records generic strict selector presence.  It does not change the transport or role-transfer bits:",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:636:`P2392/S1342` removes an unnecessary active target from the Lagrangian/EOM lane.  The historical `beta_tors -> chi11` idea is classified as an auxiliary search assumption for finding a selector mechanism.  Since the selector mechanism is now supplied by P1343/P1348 and carried into the rebased P2391 `chi11` row, the strict selector route no longer needs a `beta_tors -> chi11` theorem.",
+            "fundamental_action_reconstruction/generated/p2392_s1342_auxiliary_beta_tors_chi11_retirement_certificate.md:8:Since P1343/P1348 now provide the strict selector mechanism and P2391 rebases the chi11 row to selector-present, this auxiliary route is retired from the active selector blocker list.",
+            "fundamental_action_reconstruction/p2391_s1341_selector_epoch_rebased_bridge_gap_matrix.py:21:    \"P2390_SELECTOR_QUALIFIED_AUDIT\": GEN / \"p2390_s1340_selector_qualified_beta_tors_chi11_role_audit.json\",",
+            "fundamental_action_reconstruction/p2391_s1341_selector_epoch_rebased_bridge_gap_matrix.py:88:        \"P2390|S1340|selector-qualified\",",
+            "fundamental_action_reconstruction/p2391_s1341_selector_epoch_rebased_bridge_gap_matrix.py:109:            \"The repo already contains an older component-gap matrix with a pre-P1343-style selector-source gap, plus P2390's selector-qualified audit. \"",
+            "fundamental_action_reconstruction/p2391_s1341_selector_epoch_rebased_bridge_gap_matrix.py:110:            \"P2391 therefore rebases the matrix by epoch instead of duplicating either artifact.\""
+          ]
+        },
+        "S_strict_internal_v1|P1343|P1348": {
+          "count": 163,
+          "samples": [
+            "fundamental_action_reconstruction/P1355_PRE_CLOSURE_PHYSICAL_CONSTANT_DERIVATION_REVALIDATION_MATRIX_POST_R81_PL.md:5:Depends on: `RELEASE_8_1_TEXTBOOK_EDITION_EN_PL.md`, `P1347`, `P1348`, `P1349`, `A6`, `N50`, `P710`, `N495`, `QW-2126/QW-2184/QW-2190/QW-2191`",
+            "fundamental_action_reconstruction/P1355_PRE_CLOSURE_PHYSICAL_CONSTANT_DERIVATION_REVALIDATION_MATRIX_POST_R81_PL.md:14:1. Jest global closure w zadeklarowanym scope (`P1348`).",
+            "fundamental_action_reconstruction/generated/p2392_s1342_auxiliary_beta_tors_chi11_retirement_certificate.md:8:Since P1343/P1348 now provide the strict selector mechanism and P2391 rebases the chi11 row to selector-present, this auxiliary route is retired from the active selector blocker list.",
+            "fundamental_action_reconstruction/generated/p2392_s1342_auxiliary_beta_tors_chi11_retirement_certificate.md:12:- Available atoms: `{'strict_internal_selector_P1343_P1348': True, 'auxiliary_beta_tors_to_chi11': False, 'legacy_to_strict_bridge_completion': False, 'post_bridge_role_transfer_audit': False}`.",
+            "fundamental_action_reconstruction/generated/p2392_s1342_auxiliary_beta_tors_chi11_retirement_certificate.md:13:- Selector support evaluation: `{'minimal_supports': [['strict_internal_selector_P1343_P1348'], ['auxiliary_beta_tors_to_chi11']], 'realized_minimal_supports': [['strict_internal_selector_P1343_P1348']], 'target_satisfied': True, 'uses_auxiliary_beta_tors_in_realized_support': False}`.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:609:`P2390/S1340` answers the current ambiguity caused by the presence of a strict selector mechanism.  The audit treats `P1343/P1348` as real declared-scope selector/global-closure exports, then separates that fact from the legacy bridge-role claim `beta_tors -> chi11`.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:624:`P2391/S1341` rebases the bridge gap matrix after accepting the P1343/P1348 selector epoch and the P2390 role-separation result.  It changes exactly one bookkeeping bit: the `topological_phase_bit_chi11` row now records generic strict selector presence.  It does not change the transport or role-transfer bits:",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:636:`P2392/S1342` removes an unnecessary active target from the Lagrangian/EOM lane.  The historical `beta_tors -> chi11` idea is classified as an auxiliary search assumption for finding a selector mechanism.  Since the selector mechanism is now supplied by P1343/P1348 and carried into the rebased P2391 `chi11` row, the strict selector route no longer needs a `beta_tors -> chi11` theorem.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:638:The computed minimal-support table has the selector target realized by `strict_internal_selector_P1343_P1348` and no realized selector support using `auxiliary_beta_tors_to_chi11`.  Therefore a future `L_total` source term should not be aimed at confirming the retired auxiliary assumption.  If a `beta_tors`-dependent term is ever proposed, it must be justified by a separate legacy role-transfer theorem after bridge completion, not by selector necessity.",
+            "fundamental_action_reconstruction/test_p2392_s1342_auxiliary_beta_tors_chi11_retirement_certificate.py:50:        self.assertTrue(available[\"strict_internal_selector_P1343_P1348\"])"
+          ]
+        },
+        "auxiliary.*beta_tors|candidate bridge hypothesis|not a theorem": {
+          "count": 142,
+          "samples": [
+            "fundamental_action_reconstruction/N235_CURRENT_FIRST_SOURCE_TOPOLOGY_INVARIANT_CANDIDATE_PACKET_THEOREM.md:43:It is not a theorem of selector closure.",
+            "fundamental_action_reconstruction/AX7_AXIOM_LANE_ANTI_OVERCLAIM_BOUNDARY_AUDIT.md:70:- not a theorem-level strict-core result,",
+            "fundamental_action_reconstruction/D1_SELECTOR_AXIOM_NECESSITY_CURRENT_BEST_SUPPORTED_CONCLUSION.md:17:`D1` records the strongest project-level conclusion currently supported by the strict evidence (not a theorem-level claim).",
+            "fundamental_action_reconstruction/generated/sigma_int_strict_derived_v1_to_residual_datum_bridge_export_map_object_support_projection_candidate_instance.json:86:    \"candidate-only instantiation artifact; not a theorem; not an export-spec\",",
+            "fundamental_action_reconstruction/generated/p2392_s1342_auxiliary_beta_tors_chi11_retirement_certificate.md:1:# P2392 S1342: auxiliary beta_tors -> chi11 selector-assumption retirement certificate",
+            "fundamental_action_reconstruction/generated/p2392_s1342_auxiliary_beta_tors_chi11_retirement_certificate.md:12:- Available atoms: `{'strict_internal_selector_P1343_P1348': True, 'auxiliary_beta_tors_to_chi11': False, 'legacy_to_strict_bridge_completion': False, 'post_bridge_role_transfer_audit': False}`.",
+            "fundamental_action_reconstruction/generated/p2392_s1342_auxiliary_beta_tors_chi11_retirement_certificate.md:13:- Selector support evaluation: `{'minimal_supports': [['strict_internal_selector_P1343_P1348'], ['auxiliary_beta_tors_to_chi11']], 'realized_minimal_supports': [['strict_internal_selector_P1343_P1348']], 'target_satisfied': True, 'uses_auxiliary_beta_tors_in_realized_support': False}`.",
+            "fundamental_action_reconstruction/generated/fractal_light_path_pair_map_rule_candidate_artifact_instance_sigma_int_weighted.json:60:    \"template-level instance produced by a candidate generator; not a theorem\",",
+            "fundamental_action_reconstruction/generated/p2064_s1014_strict_same_scheme_certificate_perturbation_radius_audit.json:28:    \"interpretation\": \"certificate is local/audit-level and not a theorem-grade C3 discharge\"",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:634:## P2392/S1342 auxiliary beta_tors -> chi11 selector-assumption retirement certificate"
+          ]
+        },
+        "beta_tors -> chi11|beta_tors -> chi_11|beta_tors.*chi_?11": {
+          "count": 787,
+          "samples": [
+            "fundamental_action_reconstruction/p2370_s1320_d5_bandpass_support_closed_form_theorem.py:211:            \"beta_tors -> chi11 theorem\",",
+            "fundamental_action_reconstruction/test_bridge_strict_completion_phase_zero_interlacing_certificate_probe.py:77:        self.assertIn(\"No beta_tors -> chi_11 theorem\", hard_limits)",
+            "fundamental_action_reconstruction/S2_CURRENT_FAR_STRATEGIC_PRIORITY_REORIENTATION_PACKET.md:85:- any proposed `beta_tors -> chi_11` orientation/torsion role.",
+            "fundamental_action_reconstruction/S2_CURRENT_FAR_STRATEGIC_PRIORITY_REORIENTATION_PACKET.md:93:Any proposed source such as `beta_tors -> chi_11`, spontaneous symmetry",
+            "fundamental_action_reconstruction/S2_CURRENT_FAR_STRATEGIC_PRIORITY_REORIENTATION_PACKET.md:114:- that `beta_tors -> chi_11` is already proven,",
+            "fundamental_action_reconstruction/STRICT_KERNEL_RELEASE_TRACEABILITY_MATRIX.md:58:- This traceability matrix does not prove `beta_tors -> chi_11`.",
+            "fundamental_action_reconstruction/test_bridge_strict_completion_phase_sign_path_cohomology_triviality_certificate_probe.py:89:        self.assertIn(\"No beta_tors -> chi_11 theorem\", hard_limits)",
+            "fundamental_action_reconstruction/generated/p2379_s1329_front_loaded_normalized_transport_density_existence_probe.md:23:- No `L_total` promotion, `beta_tors -> chi11` theorem, legacy role transfer, QW-2191 discharge, selector closure, or ToE closure is claimed.",
+            "fundamental_action_reconstruction/generated/p2392_s1342_auxiliary_beta_tors_chi11_retirement_certificate.md:1:# P2392 S1342: auxiliary beta_tors -> chi11 selector-assumption retirement certificate",
+            "fundamental_action_reconstruction/generated/p2392_s1342_auxiliary_beta_tors_chi11_retirement_certificate.md:7:P2392/S1342 implements the correction that `beta_tors -> chi11` was an auxiliary assumption used while searching for a selector mechanism."
+          ]
+        }
+      },
+      "tool": "rg"
+    },
+    "theorem_export": {
+      "active_beta_tors_chi11_obligation_count": 0,
+      "available_atoms": {
+        "auxiliary_beta_tors_to_chi11": false,
+        "legacy_to_strict_bridge_completion": false,
+        "post_bridge_role_transfer_audit": false,
+        "strict_internal_selector_P1343_P1348": true
+      },
+      "licensed": [
+        "Drop beta_tors->chi11 from the active selector-mechanism blocker list.",
+        "Keep beta_tors legacy physical roles separated until an explicit post-bridge role-transfer audit.",
+        "Move the next bridge work toward bridge completion / role-audit prerequisites rather than proving the retired selector-search assumption."
+      ],
+      "not_licensed": [
+        "No beta_tors -> chi11 theorem is claimed or needed here.",
+        "No silent legacy physical-role transfer is licensed.",
+        "No completed legacy -> strict bridge, L_total promotion, cap-density source theorem, SM/GR numeric extraction, or ToE closure is claimed."
+      ],
+      "statement": "Because the current selector mechanism is realized by P1343/P1348 and P2391 rebases the chi11 row to generic selector-present, the auxiliary beta_tors->chi11 hypothesis is no longer an active selector-mechanism obligation. It may remain a historical/candidate legacy-role idea, but it need not be confirmed to continue the strict selector route.",
+      "support_evaluation": {
+        "legacy_role_transfer_permission": {
+          "minimal_supports": [
+            [
+              "legacy_to_strict_bridge_completion",
+              "post_bridge_role_transfer_audit"
+            ]
+          ],
+          "realized_minimal_supports": [],
+          "target_satisfied": false,
+          "uses_auxiliary_beta_tors_in_realized_support": false
+        },
+        "selector_mechanism": {
+          "minimal_supports": [
+            [
+              "strict_internal_selector_P1343_P1348"
+            ],
+            [
+              "auxiliary_beta_tors_to_chi11"
+            ]
+          ],
+          "realized_minimal_supports": [
+            [
+              "strict_internal_selector_P1343_P1348"
+            ]
+          ],
+          "target_satisfied": true,
+          "uses_auxiliary_beta_tors_in_realized_support": false
+        }
+      },
+      "theorem_name": "P2392_T1_auxiliary_beta_tors_chi11_selector_assumption_retired"
+    },
+    "theorem_fingerprint_sha256": "bd276a76575ddd1b1bf8a940db9205f6cf995e0c116e7058544f2a33cca22c4a"
+  },
+  "gatekeeper_checks": {
+    "beta_transport_not_available_and_not_required": true,
+    "docs_updated_with_p2392": true,
+    "legacy_role_transfer_still_unsatisfied": true,
+    "p1343_p1348_selector_available": true,
+    "p2391_chi11_selector_rebased": true,
+    "rg_nonduplication_found_prior_artifacts": true,
+    "selector_support_realized_without_beta_tors": true
+  },
+  "global_status": "OPEN_PROGRESS_SELECTOR_ASSUMPTION_RETIRED_BRIDGE_AND_ROLE_AUDIT_OPEN",
+  "packet_id": "P2392",
+  "produced_by": "fundamental_action_reconstruction/p2392_s1342_auxiliary_beta_tors_chi11_retirement_certificate.py",
+  "recommended_next_honest_step": "Stop treating beta_tors->chi11 as an active selector target; work on the explicit legacy->strict bridge completion and then the role-transfer audit.",
+  "result_kind": "AUXILIARY_BETA_TORS_CHI11_SELECTOR_ASSUMPTION_RETIREMENT_CERTIFICATE",
+  "schema_version": "p2392_s1342_v1",
+  "stage_id": "S1342",
+  "status": "PASS_BETA_TORS_CHI11_RETIRED_AS_SELECTOR_ROUTE_ASSUMPTION",
+  "timestamp_utc": "2026-06-01T00:00:00Z"
+}

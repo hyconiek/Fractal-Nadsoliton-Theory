@@ -739,3 +739,54 @@ F(M)=W_M(5)-3*W_M(1)-(3*K_strict(1)-K_strict(5)).
 The output records the cap surplus `1.6-M_*`, the scalar chamber margin `F(1.6)`, a derivative/sensitivity band for root movement under additive threshold perturbations, and the source-geometry surplus relative to the just-threshold profile: shorter early support interval, larger early-half mass, and larger barycenter shift.  This is a budget for evaluating future source candidates, not a new source theorem.
 
 No `L_total` promotion, legacy role transfer, `beta_tors -> chi11` theorem, QW-2191 discharge, selector closure, or ToE closure follows.
+
+## P2390/S1340 selector-qualified `beta_tors -> chi11` role audit
+
+`P2390/S1340` reconciles the newer strict selector package with the older bridge guardrail wording.  It accepts the current strict selector mechanism in its declared scope:
+
+```text
+P1343: S_strict_internal_v1 exported,
+P1348: declared-scope global closure packaged.
+```
+
+The audit then asks the narrower bridge-role question: does the existence of this selector by itself license the legacy torsion parameter role
+
+```text
+beta_tors -> chi11 / orientation bit
+```
+
+on the strict bridge lane?  The answer is no.  The proof reduction is a finite implication separation: selector export is one premise, but `beta_tors -> chi11` role transfer also requires an explicit torsion-to-orientation transport theorem, a completed legacy-to-strict bridge, and the separate role-transfer theorem required by the S2 guardrail.  The current component-gap matrix still classifies `beta_tors -> chi11` as candidate/not-theorem and keeps role transfer blocked.
+
+Thus the old hard limit should no longer be read as “there is no selector mechanism at all.”  It should be read more precisely as: selector present in declared strict scope, but no `beta_tors -> chi11` bridge-role theorem yet.  No `L_total` promotion, cap source theorem, legacy physical-role transfer, SM/GR numeric extraction, or ToE closure follows.
+
+## P2391/S1341 selector-epoch rebased bridge gap matrix
+
+`P2391/S1341` corrects a remaining epoch mismatch in the bridge bookkeeping.  Older component-gap reports were written before the current P1343/P1348 selector export and still contain wording such as generic selector/source gap for the `chi11` row.  After P2390, the honest rebased state is:
+
+```text
+generic strict selector for chi11: present,
+explicit beta_tors -> chi11 transport: absent,
+full legacy -> strict bridge ready: absent,
+legacy role-transfer theorem: absent.
+```
+
+The proof is a finite matrix rebase rather than a new selector proof.  The old selector/source vector is compared with the rebased vector, and the Hamming delta is exactly one: the `topological_phase_bit_chi11` row flips from stale generic-selector-gap wording to selector-present wording.  The `beta_tors -> chi11` transport and role-transfer columns remain zero.
+
+Thus future bridge work should no longer spend effort proving merely that some strict selector exists in the declared P1343/P1348 scope.  With P2392, the auxiliary `beta_tors -> chi11` selector-search hypothesis is also removed from the active selector target list; bridge work should focus on completion and only later role-transfer auditing.  No `L_total` promotion, cap-density source theorem, legacy physical-role transfer, SM/GR numeric extraction, or ToE closure follows.
+
+## P2392/S1342 auxiliary `beta_tors -> chi11` selector-assumption retirement certificate
+
+`P2392/S1342` applies the corrected reading: `beta_tors -> chi11` was an auxiliary hypothesis used while searching for a selector mechanism.  Once P1343/P1348 export `S_strict_internal_v1` and P2391 rebases the `chi11` row to generic selector-present, the auxiliary `beta_tors -> chi11` route is no longer an active selector-mechanism target.
+
+The proof is a minimal-support computation over four atoms:
+
+```text
+strict_internal_selector_P1343_P1348,
+auxiliary_beta_tors_to_chi11,
+legacy_to_strict_bridge_completion,
+post_bridge_role_transfer_audit.
+```
+
+The `selector_mechanism` target is already realized by the strict-internal selector atom, so no realized selector support uses `auxiliary_beta_tors_to_chi11`.  The active `beta_tors -> chi11` obligation count is therefore zero.
+
+This retires `beta_tors -> chi11` only as a selector-search assumption.  It does not transfer legacy physical roles, does not complete the legacy-to-strict bridge, and does not produce an `L_total` source term.  The next honest bridge work is explicit bridge completion and then the separate role-transfer audit, without treating `beta_tors -> chi11` as a required selector proof.

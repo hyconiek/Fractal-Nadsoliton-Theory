@@ -1,0 +1,249 @@
+{
+  "gatekeeper_checks": {
+    "chi11_beta_transport_still_false": true,
+    "chi11_selector_bit_rebased_true": true,
+    "docs_updated_with_p2391": true,
+    "exactly_one_selector_epoch_delta": true,
+    "p1343_selector_present": true,
+    "p1348_declared_closure_present": true,
+    "rg_found_old_selector_gap_wording": true,
+    "rg_nonduplication_found_p2390": true,
+    "role_transfer_all_rows_false": true
+  },
+  "global_status": "OPEN_PROGRESS_SELECTOR_EPOCH_REBASED_NO_ROLE_TRANSFER_OR_TOE_CLOSURE",
+  "packet_id": "P2391",
+  "produced_by": "fundamental_action_reconstruction/p2391_s1341_selector_epoch_rebased_bridge_gap_matrix.py",
+  "recommended_next_honest_step": "Do not pursue beta_tors->chi11 for selector necessity; continue with legacy->strict bridge completion and later role-transfer auditing.",
+  "result_kind": "SELECTOR_EPOCH_REBASED_BRIDGE_GAP_MATRIX",
+  "schema_version": "p2391_s1341_v1",
+  "selector_epoch_rebased_bridge_gap_matrix": {
+    "matrix_columns": [
+      "finite_certificate_exported",
+      "generic_strict_selector_exported",
+      "explicit_beta_tors_to_chi11_transport",
+      "strict_dynamic_source_exported",
+      "role_transfer_allowed_now"
+    ],
+    "matrix_rank_mod2": 2,
+    "new_selector_vector": [
+      1,
+      0,
+      1,
+      1,
+      0
+    ],
+    "old_selector_vector": [
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "rebased_matrix": [
+      [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "rg_nonduplication_audit": {
+      "finding": "The repo already contains an older component-gap matrix with a pre-P1343-style selector-source gap, plus P2390's selector-qualified audit. P2391 therefore rebases the matrix by epoch instead of duplicating either artifact.",
+      "patterns": {
+        "P1343|S_strict_internal_v1": {
+          "count": 129,
+          "samples": [
+            "fundamental_action_reconstruction/generated/p2392_s1342_auxiliary_beta_tors_chi11_retirement_certificate.md:8:Since P1343/P1348 now provide the strict selector mechanism and P2391 rebases the chi11 row to selector-present, this auxiliary route is retired from the active selector blocker list.",
+            "fundamental_action_reconstruction/generated/p2392_s1342_auxiliary_beta_tors_chi11_retirement_certificate.md:12:- Available atoms: `{'strict_internal_selector_P1343_P1348': True, 'auxiliary_beta_tors_to_chi11': False, 'legacy_to_strict_bridge_completion': False, 'post_bridge_role_transfer_audit': False}`.",
+            "fundamental_action_reconstruction/generated/p2392_s1342_auxiliary_beta_tors_chi11_retirement_certificate.md:13:- Selector support evaluation: `{'minimal_supports': [['strict_internal_selector_P1343_P1348'], ['auxiliary_beta_tors_to_chi11']], 'realized_minimal_supports': [['strict_internal_selector_P1343_P1348']], 'target_satisfied': True, 'uses_auxiliary_beta_tors_in_realized_support': False}`.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:609:`P2390/S1340` answers the current ambiguity caused by the presence of a strict selector mechanism.  The audit treats `P1343/P1348` as real declared-scope selector/global-closure exports, then separates that fact from the legacy bridge-role claim `beta_tors -> chi11`.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:624:`P2391/S1341` rebases the bridge gap matrix after accepting the P1343/P1348 selector epoch and the P2390 role-separation result.  It changes exactly one bookkeeping bit: the `topological_phase_bit_chi11` row now records generic strict selector presence.  It does not change the transport or role-transfer bits:",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:636:`P2392/S1342` removes an unnecessary active target from the Lagrangian/EOM lane.  The historical `beta_tors -> chi11` idea is classified as an auxiliary search assumption for finding a selector mechanism.  Since the selector mechanism is now supplied by P1343/P1348 and carried into the rebased P2391 `chi11` row, the strict selector route no longer needs a `beta_tors -> chi11` theorem.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:638:The computed minimal-support table has the selector target realized by `strict_internal_selector_P1343_P1348` and no realized selector support using `auxiliary_beta_tors_to_chi11`.  Therefore a future `L_total` source term should not be aimed at confirming the retired auxiliary assumption.  If a `beta_tors`-dependent term is ever proposed, it must be justified by a separate legacy role-transfer theorem after bridge completion, not by selector necessity.",
+            "fundamental_action_reconstruction/test_p2392_s1342_auxiliary_beta_tors_chi11_retirement_certificate.py:50:        self.assertTrue(available[\"strict_internal_selector_P1343_P1348\"])"
+          ]
+        },
+        "P2390|S1340|selector-qualified": {
+          "count": 59,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:607:## P2390/S1340 selector-qualified beta_tors -> chi11 role audit, bridge-role still open",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:609:`P2390/S1340` answers the current ambiguity caused by the presence of a strict selector mechanism.  The audit treats `P1343/P1348` as real declared-scope selector/global-closure exports, then separates that fact from the legacy bridge-role claim `beta_tors -> chi11`.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:624:`P2391/S1341` rebases the bridge gap matrix after accepting the P1343/P1348 selector epoch and the P2390 role-separation result.  It changes exactly one bookkeeping bit: the `topological_phase_bit_chi11` row now records generic strict selector presence.  It does not change the transport or role-transfer bits:",
+            "fundamental_action_reconstruction/generated/p2390_s1340_selector_qualified_beta_tors_chi11_role_audit.md:1:# P2390 S1340: selector-qualified beta_tors -> chi11 role audit",
+            "fundamental_action_reconstruction/generated/p2390_s1340_selector_qualified_beta_tors_chi11_role_audit.md:15:- Finding: Existing reports already discuss beta_tors->chi11 as a candidate/non-theorem and P1343/P1348 as selector closure. P2390 therefore does not try to re-prove the selector; it audits whether that selector is sufficient to license legacy beta_tors->chi11 role transfer.",
+            "fundamental_action_reconstruction/p2391_s1341_selector_epoch_rebased_bridge_gap_matrix.py:21:    \"P2390_SELECTOR_QUALIFIED_AUDIT\": GEN / \"p2390_s1340_selector_qualified_beta_tors_chi11_role_audit.json\",",
+            "fundamental_action_reconstruction/p2391_s1341_selector_epoch_rebased_bridge_gap_matrix.py:88:        \"P2390|S1340|selector-qualified\",",
+            "fundamental_action_reconstruction/p2391_s1341_selector_epoch_rebased_bridge_gap_matrix.py:109:            \"The repo already contains an older component-gap matrix with a pre-P1343-style selector-source gap, plus P2390's selector-qualified audit. \""
+          ]
+        },
+        "beta_tors.*chi_?11|chi_?11.*beta_tors": {
+          "count": 789,
+          "samples": [
+            "fundamental_action_reconstruction/p2370_s1320_d5_bandpass_support_closed_form_theorem.py:211:            \"beta_tors -> chi11 theorem\",",
+            "fundamental_action_reconstruction/test_bridge_strict_completion_phase_zero_interlacing_certificate_probe.py:77:        self.assertIn(\"No beta_tors -> chi_11 theorem\", hard_limits)",
+            "fundamental_action_reconstruction/S2_CURRENT_FAR_STRATEGIC_PRIORITY_REORIENTATION_PACKET.md:85:- any proposed `beta_tors -> chi_11` orientation/torsion role.",
+            "fundamental_action_reconstruction/S2_CURRENT_FAR_STRATEGIC_PRIORITY_REORIENTATION_PACKET.md:93:Any proposed source such as `beta_tors -> chi_11`, spontaneous symmetry",
+            "fundamental_action_reconstruction/S2_CURRENT_FAR_STRATEGIC_PRIORITY_REORIENTATION_PACKET.md:114:- that `beta_tors -> chi_11` is already proven,",
+            "fundamental_action_reconstruction/STRICT_KERNEL_RELEASE_TRACEABILITY_MATRIX.md:58:- This traceability matrix does not prove `beta_tors -> chi_11`.",
+            "fundamental_action_reconstruction/test_bridge_strict_completion_phase_sign_path_cohomology_triviality_certificate_probe.py:89:        self.assertIn(\"No beta_tors -> chi_11 theorem\", hard_limits)",
+            "fundamental_action_reconstruction/generated/p2379_s1329_front_loaded_normalized_transport_density_existence_probe.md:23:- No `L_total` promotion, `beta_tors -> chi11` theorem, legacy role transfer, QW-2191 discharge, selector closure, or ToE closure is claimed."
+          ]
+        },
+        "selector_source_gap_remains|bit_source_not_exported": {
+          "count": 24,
+          "samples": [
+            "fundamental_action_reconstruction/p2391_s1341_selector_epoch_rebased_bridge_gap_matrix.py:89:        \"selector_source_gap_remains|bit_source_not_exported\",",
+            "fundamental_action_reconstruction/p2391_s1341_selector_epoch_rebased_bridge_gap_matrix.py:192:        \"rg_found_old_selector_gap_wording\": grep[\"patterns\"][\"selector_source_gap_remains|bit_source_not_exported\"][\"count\"] > 0,",
+            "fundamental_action_reconstruction/test_bridge_strict_completion_legacy_to_strict_completion_component_gap_certificate_probe.py:80:        self.assertTrue(summary[\"selector_source_gap_remains\"])",
+            "fundamental_action_reconstruction/test_p2391_s1341_selector_epoch_rebased_bridge_gap_matrix.py:45:        self.assertGreater(audit[\"patterns\"][\"selector_source_gap_remains|bit_source_not_exported\"][\"count\"], 0)",
+            "fundamental_action_reconstruction/generated/p2391_s1341_selector_epoch_rebased_bridge_gap_matrix.json:121:        \"selector_source_gap_remains|bit_source_not_exported\": {",
+            "fundamental_action_reconstruction/generated/p2391_s1341_selector_epoch_rebased_bridge_gap_matrix.json:124:            \"fundamental_action_reconstruction/p2391_s1341_selector_epoch_rebased_bridge_gap_matrix.py:89:        \\\"selector_source_gap_remains|bit_source_not_exported\\\",\",",
+            "fundamental_action_reconstruction/generated/p2391_s1341_selector_epoch_rebased_bridge_gap_matrix.json:125:            \"fundamental_action_reconstruction/p2391_s1341_selector_epoch_rebased_bridge_gap_matrix.py:192:        \\\"rg_found_old_selector_gap_wording\\\": grep[\\\"patterns\\\"][\\\"selector_source_gap_remains|bit_source_not_exported\\\"][\\\"count\\\"] > 0,\",",
+            "fundamental_action_reconstruction/generated/p2391_s1341_selector_epoch_rebased_bridge_gap_matrix.json:126:            \"fundamental_action_reconstruction/test_bridge_strict_completion_legacy_to_strict_completion_component_gap_certificate_probe.py:80:        self.assertTrue(summary[\\\"selector_source_gap_remains\\\"])\","
+          ]
+        }
+      },
+      "tool": "rg"
+    },
+    "rows": [
+      {
+        "component": "amplitude_normalization",
+        "epoch_delta": {
+          "beta_transport_still_missing": false,
+          "role_transfer_still_blocked": true,
+          "selector_bit_flipped_by_P1343_P1348": false
+        },
+        "old_selector_or_source_exported": true,
+        "rebased_bits": {
+          "explicit_beta_tors_to_chi11_transport": false,
+          "finite_certificate_exported": true,
+          "generic_strict_selector_exported": true,
+          "role_transfer_allowed_now": false,
+          "strict_dynamic_source_exported": false
+        },
+        "status": "finite_completion_factor_certified__source_and_role_transfer_open"
+      },
+      {
+        "component": "phase_frequency_transport",
+        "epoch_delta": {
+          "beta_transport_still_missing": false,
+          "role_transfer_still_blocked": true,
+          "selector_bit_flipped_by_P1343_P1348": false
+        },
+        "old_selector_or_source_exported": false,
+        "rebased_bits": {
+          "explicit_beta_tors_to_chi11_transport": false,
+          "finite_certificate_exported": true,
+          "generic_strict_selector_exported": false,
+          "role_transfer_allowed_now": false,
+          "strict_dynamic_source_exported": false
+        },
+        "status": "finite_phase_transport_certified__orientation_source_open"
+      },
+      {
+        "component": "damping_compression",
+        "epoch_delta": {
+          "beta_transport_still_missing": false,
+          "role_transfer_still_blocked": true,
+          "selector_bit_flipped_by_P1343_P1348": false
+        },
+        "old_selector_or_source_exported": true,
+        "rebased_bits": {
+          "explicit_beta_tors_to_chi11_transport": false,
+          "finite_certificate_exported": true,
+          "generic_strict_selector_exported": true,
+          "role_transfer_allowed_now": false,
+          "strict_dynamic_source_exported": false
+        },
+        "status": "finite_strict_compression_certified__legacy_to_nonlinear_passage_open"
+      },
+      {
+        "component": "topological_phase_bit_chi11",
+        "epoch_delta": {
+          "beta_transport_still_missing": true,
+          "role_transfer_still_blocked": true,
+          "selector_bit_flipped_by_P1343_P1348": true
+        },
+        "old_selector_or_source_exported": false,
+        "rebased_bits": {
+          "explicit_beta_tors_to_chi11_transport": false,
+          "finite_certificate_exported": true,
+          "generic_strict_selector_exported": true,
+          "role_transfer_allowed_now": false,
+          "strict_dynamic_source_exported": false
+        },
+        "status": "generic_selector_rebased_present__beta_tors_transport_and_role_transfer_absent"
+      },
+      {
+        "component": "legacy_physical_role_transfer",
+        "epoch_delta": {
+          "beta_transport_still_missing": false,
+          "role_transfer_still_blocked": true,
+          "selector_bit_flipped_by_P1343_P1348": false
+        },
+        "old_selector_or_source_exported": false,
+        "rebased_bits": {
+          "explicit_beta_tors_to_chi11_transport": false,
+          "finite_certificate_exported": true,
+          "generic_strict_selector_exported": false,
+          "role_transfer_allowed_now": false,
+          "strict_dynamic_source_exported": false
+        },
+        "status": "role_transfer_audit_required__not_permitted_now"
+      }
+    ],
+    "selector_hamming_delta_old_to_rebased": 1,
+    "theorem_export": {
+      "matrix_columns": [
+        "finite_certificate_exported",
+        "generic_strict_selector_exported",
+        "explicit_beta_tors_to_chi11_transport",
+        "strict_dynamic_source_exported",
+        "role_transfer_allowed_now"
+      ],
+      "matrix_rank_mod2": 2,
+      "not_licensed": [
+        "No explicit beta_tors -> chi11 transport theorem is exported.",
+        "No completed legacy -> strict bridge is exported.",
+        "No legacy role-transfer theorem is exported.",
+        "No L_total promotion, cap-density source theorem, SM/GR numeric extraction, or ToE closure follows."
+      ],
+      "selector_hamming_delta_old_to_rebased": 1,
+      "statement": "After P1343/P1348 and P2390, the topological chi11 row must be rebased from 'no generic selector source' to 'generic strict selector present'. This one-bit epoch update does not license beta_tors->chi11 transport or legacy role transfer.",
+      "theorem_name": "P2391_T1_selector_epoch_rebased_gap_matrix"
+    },
+    "theorem_fingerprint_sha256": "7dc0479ad03c9a5b246e5fea3431bb1d58104f23c7d158bf8280fd2f53e0b65e"
+  },
+  "stage_id": "S1341",
+  "status": "PASS_ONE_SELECTOR_EPOCH_BIT_REBASED_BETA_TORS_TRANSPORT_AND_ROLE_TRANSFER_STILL_OPEN",
+  "timestamp_utc": "2026-06-01T00:00:00Z"
+}

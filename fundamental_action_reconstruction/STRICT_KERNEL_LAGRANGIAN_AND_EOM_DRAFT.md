@@ -603,3 +603,38 @@ This makes the source-side target sharper: a strict source theorem must derive a
 `P2389/S1339` measures the safety budget between the unique P2388 cap threshold and the adopted `M=1.6` source target.  It reports the cap surplus, scalar margin, derivative/sensitivity band, and the corresponding source-geometry surplus in early interval length, early-half mass, barycenter, and uniform-shift terms.
 
 This helps future source-side work decide whether it can derive exactly `M=1.6`, a smaller cap still above the unique root, or only a non-strict premise.  It is not an `L_total` term, not a sourced variational derivation, not a legacy-role transfer, and not a `beta_tors -> chi11`, QW-2191, selector, or ToE closure.
+
+## P2390/S1340 selector-qualified beta_tors -> chi11 role audit, bridge-role still open
+
+`P2390/S1340` answers the current ambiguity caused by the presence of a strict selector mechanism.  The audit treats `P1343/P1348` as real declared-scope selector/global-closure exports, then separates that fact from the legacy bridge-role claim `beta_tors -> chi11`.
+
+The resulting implication certificate says:
+
+```text
+selector_exported = true
+beta_tors_to_chi11_transport_theorem = false
+full_legacy_to_strict_bridge_ready = false
+separate_role_transfer_theorem = false
+```
+
+Therefore `beta_tors -> chi11` is still not licensed, but for the sharper reason that the missing object is no longer a generic selector mechanism; it is the explicit torsion-to-orientation transport plus bridge-completion and role-transfer theorem.  This keeps the Lagrangian/EOM lane honest: do not write a `beta_tors`-driven orientation source term into `L_total` merely because the strict selector exists.  No cap-density source theorem, legacy physical-role transfer, SM/GR numeric extraction, or ToE closure follows.
+
+## P2391/S1341 selector-epoch rebased bridge gap matrix, stale selector gap removed
+
+`P2391/S1341` rebases the bridge gap matrix after accepting the P1343/P1348 selector epoch and the P2390 role-separation result.  It changes exactly one bookkeeping bit: the `topological_phase_bit_chi11` row now records generic strict selector presence.  It does not change the transport or role-transfer bits:
+
+```text
+chi11 generic selector = true
+beta_tors_to_chi11_transport = false
+role_transfer_allowed_now = false
+```
+
+For the Lagrangian/EOM lane this matters because the missing object is now narrower.  A future `L_total` term cannot be justified by saying “selector exists”; after P2392, it also should not target `beta_tors -> chi11` merely to satisfy selector necessity.  Any `beta_tors` term would need a later role-transfer theorem after bridge completion.  No cap-density source theorem, completed legacy bridge, legacy physical-role transfer, SM/GR numeric extraction, or ToE closure follows.
+
+## P2392/S1342 auxiliary beta_tors -> chi11 selector-assumption retirement certificate
+
+`P2392/S1342` removes an unnecessary active target from the Lagrangian/EOM lane.  The historical `beta_tors -> chi11` idea is classified as an auxiliary search assumption for finding a selector mechanism.  Since the selector mechanism is now supplied by P1343/P1348 and carried into the rebased P2391 `chi11` row, the strict selector route no longer needs a `beta_tors -> chi11` theorem.
+
+The computed minimal-support table has the selector target realized by `strict_internal_selector_P1343_P1348` and no realized selector support using `auxiliary_beta_tors_to_chi11`.  Therefore a future `L_total` source term should not be aimed at confirming the retired auxiliary assumption.  If a `beta_tors`-dependent term is ever proposed, it must be justified by a separate legacy role-transfer theorem after bridge completion, not by selector necessity.
+
+No legacy physical-role transfer, completed bridge, cap-density source theorem, SM/GR numeric extraction, or ToE closure follows.
