@@ -415,3 +415,69 @@ This should be read as transport provenance plus an acceptance threshold for a f
 `P2378/S1328` prevents a tempting but false closure after P2377.  The exact log-transport primitive `C(d)` has structural provenance, but the unit-normalized insertion `K_strict(d)+C(d)` does not reach the d5 chamber.  More generally, for `K_strict(d)+M*C(d)` the selector condition is `M>(3*K1-K5)/(C5-3*C1)`.
 
 Across the P2376 rectangle, this threshold is always greater than one; the audited range is about `1.1757688203` to `1.8435099396`.  Therefore a variational/source theorem must not merely recover `C(d)` as a primitive: it must also fix a super-unit normalization above the relevant threshold.  Without that extra theorem, `M*C(d)` remains outside `L_total`, and QW-2191 remains open.
+
+## P2379/S1329 front-loaded normalized transport profile, still source-open
+
+`P2379/S1329` refines the P2378 insufficiency result without pretending to close the source problem.  P2378 shows that the unit-uniform endpoint primitive `K_strict(d)+C(d)` is too weak, but it does not rule out every normalized transport profile along the P2377 homotopy.  P2379 audits the affine unit-mass density
+
+```text
+rho_lambda(s)=1+lambda*(1-2s),  0<=lambda<=1,
+```
+
+for the same log-transport one-form `A_s(d)=partial_s log(u_s(d))`.  This density is nonnegative and normalized on `[0,1]`, and the weighted transport has the exact closed form
+
+```text
+int_0^1 rho_lambda(s) A_s(d) ds = C(d)+lambda*B(d),
+B(d)=C(d)*(1+2*(1+beta_tors*d)/(d^eta-beta_tors*d))-2.
+```
+
+The resulting profile threshold is
+
+```text
+lambda > [3*(K1+C1)-(K5+C5)]/(B5-3*B1).
+```
+
+On the audited P2376 grid, `lambda=0.8` is enough to move the normalized weighted transport into the d5 chamber while the uniform case `lambda=0` still selects the mixed `(h1,h5)=(3,3)` orbit.  An 81x81 threshold lattice keeps the computed profile threshold below the same test value.
+
+This is a useful correction to the previous next-step target: the missing source theorem need not only derive a super-unit scalar mass.  It could instead derive a sufficiently front-loaded unit-mass transport density.  Until such a density/profile is derived from strict dynamics, however, `rho_lambda` is only an audited non-strict candidate profile, not an `L_total` term, not a selector closure, and not a QW-2191 discharge.
+
+## P2380/S1330 front-loaded profile rectangle certificate, still source-open
+
+`P2380/S1330` tightens P2379 by replacing the 81x81 lattice observation with a rectangle-level monotonicity certificate for the affine normalized profile family.  Let
+
+```text
+T(eta,x) = [3*(K1+C1)-(K5+C5)]/(B5-3*B1),
+C(d)=log((1+d^eta)/(1+x*d)),
+B(d)=C(d)*(1+2*(1+x*d)/(d^eta-x*d))-2.
+```
+
+Using interval arithmetic on the P2376 rectangle, P2380 audits the closed-form derivatives
+
+```text
+T_eta = (N_eta*H-N*H_eta)/H^2,
+T_x   = (N_x*H-N*H_x)/H^2,
+```
+
+and certifies `T_eta<0`, `T_x>0`, and `H=B5-3*B1>0` throughout the rectangle.  Thus the worst affine-profile threshold is not merely grid-located: it is forced to the corner `(eta,x)=(9/5,0.1)`, where `T=0.7916644842269442`, so `lambda=0.8` is rectangle-uniformly sufficient for the audited affine profile family.
+
+This remains an acceptance certificate, not a source theorem.  It upgrades the future source target from “some front-loaded profile appears to work on a lattice” to “derive this affine normalized profile, or another profile meeting the same rectangle threshold, from strict dynamics.”  It still does not add the profile to `L_total`, transfer legacy physical roles, or discharge QW-2191.
+
+## P2381/S1331 affine frontload source burden, still not sourced
+
+`P2381/S1331` adds the missing honesty check after P2379/P2380: a sufficient front-loaded affine profile is not the same thing as a sourced profile.  Since P2380 fixes the rectangle-worst affine threshold at `(eta,beta_tors)=(9/5,0.1)`, any rectangle-uniform affine source must derive
+
+```text
+lambda > 0.7916644842269429.
+```
+
+For `rho_lambda(s)=1+lambda*(1-2s)`, this is equivalent to a concrete asymmetry burden:
+
+```text
+int_0^(1/2) rho_lambda(s) ds > 0.6979161,
+int_0^1 s*rho_lambda(s) ds < 0.3680559,
+rho_lambda(0)/rho_lambda(1) > 8.5995.
+```
+
+Thus a future theorem cannot merely say “normalized transport density.”  It must derive a strong early-transport bias of this scale, or explicitly keep that bias as a non-strict selector premise.  P2381 also keeps the negative control visible: just below the threshold, the worst corner fails the d5 chamber; at `lambda=0.8`, the corner replay selects the 12 d5 supports.
+
+This still does not produce a strict variational source for `rho_lambda`, does not add the profile to `L_total`, and does not discharge QW-2191.

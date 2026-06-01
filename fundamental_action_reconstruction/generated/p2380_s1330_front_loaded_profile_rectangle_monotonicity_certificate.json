@@ -1,0 +1,288 @@
+{
+  "front_loaded_profile_rectangle_monotonicity_certificate": {
+    "artifact_replay": {
+      "p2376_packet_id": "P2376",
+      "p2377_packet_id": "P2377",
+      "p2378_packet_id": "P2378",
+      "p2379_packet_id": "P2379"
+    },
+    "docs": {
+      "equation_sheet": "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md",
+      "lagrangian_eom_draft": "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md"
+    },
+    "front_loaded_profile_rectangle_monotonicity_certificate": {
+      "closed_form_derivative_audit": {
+        "T_eta": "(N_eta*H-N*H_eta)/H^2",
+        "T_x": "(N_x*H-N*H_x)/H^2",
+        "method": "outward interval arithmetic over the full audited rectangle"
+      },
+      "interval_monotonicity_certificate": {
+        "analytic_conclusion": "interval arithmetic certifies dT/deta<0 and dT/dbeta_tors>0 on the rectangle, so the maximum is at (eta=9/5,beta_tors=0.1)",
+        "beta_tors_derivative_positive_on_all_boxes": true,
+        "corner_maximum_below_lambda_test": true,
+        "corner_maximum_candidate": {
+          "B1": 0.05921633593602582,
+          "B5": 0.9786115376296642,
+          "C1": 0.5978370007556204,
+          "C5": 2.545243208781978,
+          "K1": 0.4699856726450201,
+          "K5": 0.02413122336363006,
+          "beta_tors": 0.1,
+          "eta": 1.8,
+          "lambda_denominator_B5_minus_3B1": 0.8009625298215868,
+          "lambda_numerator": 0.6340935880563139,
+          "lambda_threshold_gt": 0.7916644842269429
+        },
+        "corner_minimum_candidate": {
+          "B1": 0.07944154167983575,
+          "B5": 1.5187442610632012,
+          "C1": 0.6931471805599453,
+          "C5": 3.258096538021482,
+          "K1": 0.4699856726450201,
+          "K5": 0.02413122336363006,
+          "beta_tors": 0.0,
+          "eta": 2.0,
+          "lambda_denominator_B5_minus_3B1": 1.280419636023694,
+          "lambda_numerator": 0.20717079822978413,
+          "lambda_threshold_gt": 0.16179914178225746
+        },
+        "denominator_positive_on_all_boxes": true,
+        "eta_derivative_negative_on_all_boxes": true,
+        "failure_counts": {
+          "beta_tors_derivative_sign": 0,
+          "denominator_positive": 0,
+          "eta_derivative_sign": 0,
+          "threshold_upper": 2
+        },
+        "interval_box_count": 16384,
+        "interval_grid_per_axis": 128,
+        "raw_interval_threshold_upper_below_lambda_test_on_all_boxes": false,
+        "rectangle_uniform_sufficiency_certified_by_monotonicity": true,
+        "worst_beta_tors_derivative_lo": 1.1577604521646625,
+        "worst_eta_derivative_hi": -1.3301876312346335,
+        "worst_threshold_box": {
+          "beta_tors_interval": {
+            "hi": 0.1,
+            "lo": 0.09921875000000001
+          },
+          "denominator_interval": {
+            "hi": 0.8137166642725266,
+            "lo": 0.791280696139983
+          },
+          "eta_interval": {
+            "hi": 1.8015625,
+            "lo": 1.8
+          },
+          "numerator_interval": {
+            "hi": 0.6362250268671104,
+            "lo": 0.6291026492071081
+          },
+          "threshold_beta_tors_derivative_interval": {
+            "hi": 2.6648216874939807,
+            "lo": 2.3982665499837355
+          },
+          "threshold_eta_derivative_interval": {
+            "hi": -2.8244163139794605,
+            "lo": -3.0826748914481965
+          },
+          "threshold_interval": {
+            "hi": 0.8040446708364509,
+            "lo": 0.7731224845561374
+          }
+        }
+      },
+      "sample_support_replay": [
+        {
+          "beta_tors": 0.0,
+          "eta": 1.8,
+          "front_loaded_score_audit": {
+            "a_over_b": 0.3069814424160041,
+            "d5_chamber": true,
+            "maximizer_count": 12,
+            "maximizer_h1_h5_pair_distribution": {
+              "0,4": 12
+            },
+            "maximum_score": 15.983846800569756
+          },
+          "lambda_test_margin": 0.3043156850705188,
+          "lambda_threshold_gt": 0.49568431492948123
+        },
+        {
+          "beta_tors": 0.01,
+          "eta": 1.8,
+          "front_loaded_score_audit": {
+            "a_over_b": 0.31013984315293797,
+            "d5_chamber": true,
+            "maximizer_count": 12,
+            "maximizer_h1_h5_pair_distribution": {
+              "0,4": 12
+            },
+            "maximum_score": 15.669551900102274
+          },
+          "lambda_test_margin": 0.2705204854534923,
+          "lambda_threshold_gt": 0.5294795145465078
+        },
+        {
+          "beta_tors": 0.1,
+          "eta": 1.8,
+          "front_loaded_score_audit": {
+            "a_over_b": 0.3326694599556571,
+            "d5_chamber": true,
+            "maximizer_count": 12,
+            "maximizer_h1_h5_pair_distribution": {
+              "0,4": 12
+            },
+            "maximum_score": 13.409054648997358
+          },
+          "lambda_test_margin": 0.008335515773057134,
+          "lambda_threshold_gt": 0.7916644842269429
+        },
+        {
+          "beta_tors": 0.0,
+          "eta": 1.9,
+          "front_loaded_score_audit": {
+            "a_over_b": 0.2890136332212992,
+            "d5_chamber": true,
+            "maximizer_count": 12,
+            "maximizer_h1_h5_pair_distribution": {
+              "0,4": 12
+            },
+            "maximum_score": 16.97755324378839
+          },
+          "lambda_test_margin": 0.487673305996853,
+          "lambda_threshold_gt": 0.31232669400314705
+        },
+        {
+          "beta_tors": 0.01,
+          "eta": 1.9,
+          "front_loaded_score_audit": {
+            "a_over_b": 0.2917053722239905,
+            "d5_chamber": true,
+            "maximizer_count": 12,
+            "maximizer_h1_h5_pair_distribution": {
+              "0,4": 12
+            },
+            "maximum_score": 16.65979728629373
+          },
+          "lambda_test_margin": 0.46208803914884805,
+          "lambda_threshold_gt": 0.337911960851152
+        },
+        {
+          "beta_tors": 0.1,
+          "eta": 1.9,
+          "front_loaded_score_audit": {
+            "a_over_b": 0.3103959676717533,
+            "d5_chamber": true,
+            "maximizer_count": 12,
+            "maximizer_h1_h5_pair_distribution": {
+              "0,4": 12
+            },
+            "maximum_score": 14.37126584490674
+          },
+          "lambda_test_margin": 0.2716115554635097,
+          "lambda_threshold_gt": 0.5283884445364904
+        },
+        {
+          "beta_tors": 0.0,
+          "eta": 2.0,
+          "front_loaded_score_audit": {
+            "a_over_b": 0.2727652242538256,
+            "d5_chamber": true,
+            "maximizer_count": 12,
+            "maximizer_h1_h5_pair_distribution": {
+              "0,4": 12
+            },
+            "maximum_score": 17.988892680942694
+          },
+          "lambda_test_margin": 0.6382008582177425,
+          "lambda_threshold_gt": 0.16179914178225746
+        },
+        {
+          "beta_tors": 0.01,
+          "eta": 2.0,
+          "front_loaded_score_audit": {
+            "a_over_b": 0.27506079157821817,
+            "d5_chamber": true,
+            "maximizer_count": 12,
+            "maximizer_h1_h5_pair_distribution": {
+              "0,4": 12
+            },
+            "maximum_score": 17.66792111914863
+          },
+          "lambda_test_margin": 0.6187996298331618,
+          "lambda_threshold_gt": 0.18120037016683818
+        },
+        {
+          "beta_tors": 0.1,
+          "eta": 2.0,
+          "front_loaded_score_audit": {
+            "a_over_b": 0.29054348449545087,
+            "d5_chamber": true,
+            "maximizer_count": 12,
+            "maximizer_h1_h5_pair_distribution": {
+              "0,4": 12
+            },
+            "maximum_score": 15.353236973612768
+          },
+          "lambda_test_margin": 0.4810403231797241,
+          "lambda_threshold_gt": 0.31895967682027593
+        }
+      ],
+      "threshold_definition": {
+        "B(d)": "C(d)*(1+2*(1+x*d)/(d^eta-x*d))-2",
+        "C(d)": "log((1+d^eta)/(1+x*d))",
+        "T(eta,x)": "[3*(K1+C1)-(K5+C5)]/(B5-3*B1)",
+        "lambda_test": 0.8
+      }
+    },
+    "probe_id": "P2380_S1330_FRONT_LOADED_PROFILE_RECTANGLE_MONOTONICITY_CERTIFICATE",
+    "source_artifacts": {
+      "P2376_RECTANGLE_ROBUSTNESS": "fundamental_action_reconstruction/generated/p2376_s1326_damping_compression_eta_beta_rectangle_robustness_theorem.json",
+      "P2377_TRANSPORT_PRIMITIVE": "fundamental_action_reconstruction/generated/p2377_s1327_damping_compression_transport_primitive_uniform_coupling_theorem.json",
+      "P2378_UNIT_NORMALIZED_INSUFFICIENCY": "fundamental_action_reconstruction/generated/p2378_s1328_unit_normalized_transport_coupling_insufficiency_theorem.json",
+      "P2379_FRONT_LOADED_PROFILE": "fundamental_action_reconstruction/generated/p2379_s1329_front_loaded_normalized_transport_density_existence_probe.json"
+    },
+    "theorem_export": {
+      "claim": "The P2379 affine normalized profile threshold T(eta,beta_tors) is not merely grid-observed. Interval arithmetic over the P2376 rectangle certifies dT/deta<0 and dT/dbeta_tors>0, so the worst point is the corner (eta=9/5,beta_tors=0.1). At that corner T=0.7916644842269442, hence lambda=0.8 is rectangle-uniformly sufficient for the audited affine profile family.",
+      "not_licensed": [
+        "strict variational source theorem deriving rho_lambda or lambda=0.8",
+        "promotion of weighted transport into L_total",
+        "global proof for arbitrary normalized profiles beyond the affine audited family",
+        "QW-2191 discharge",
+        "beta_tors -> chi11 theorem",
+        "legacy physical-role transfer",
+        "ToE closure"
+      ],
+      "positive_content": [
+        "Exports closed-form derivative formulas for the P2379 profile threshold.",
+        "Uses interval arithmetic on 128x128 boxes to certify monotonicity signs and denominator positivity over the full P2376 rectangle.",
+        "Replays all-792-support d5 selection on the 3x3 sample grid at the rectangle-uniform lambda=0.8."
+      ],
+      "theorem_name": "P2380 front-loaded profile rectangle monotonicity certificate"
+    },
+    "theorem_fingerprint_sha256": "1e9f0337de0de62c711bcffd709a32db7ffdba36242b7ba7500f8db252de8542"
+  },
+  "gatekeeper_checks": {
+    "all_sample_support_replays_select_d5": true,
+    "beta_tors_monotone_increasing_certified": true,
+    "denominator_positive_certified": true,
+    "docs_updated_with_p2380_monotonicity_obligation": true,
+    "eta_monotone_decreasing_certified": true,
+    "lambda_test_rectangle_uniform_certified": true,
+    "no_qw2191_discharge_claimed": true,
+    "p2376_loaded": true,
+    "p2377_loaded": true,
+    "p2378_loaded": true,
+    "p2379_loaded": true,
+    "source_artifacts_present": true
+  },
+  "global_status": "OPEN_PROGRESS_WITH_TRACE_NO_SELECTOR_OR_TOE_CLOSURE",
+  "packet_id": "P2380",
+  "produced_by": "p2380_s1330_front_loaded_profile_rectangle_monotonicity_certificate.py",
+  "recommended_next_honest_step": "P2380 upgrades P2379 from a lattice observation to a rectangle monotonicity certificate for the affine profile family. The remaining honest source task is still to derive rho_lambda and lambda>=0.8 from strict dynamics, or keep the profile as an explicit non-strict selector premise.",
+  "result_kind": "FRONT_LOADED_PROFILE_RECTANGLE_MONOTONICITY_CERTIFICATE",
+  "schema_version": "p2380_s1330_v1",
+  "stage_id": "S1330",
+  "status": "OPEN_PROGRESS_FRONT_LOADED_PROFILE_RECTANGLE_MONOTONICITY_CERTIFIED_SOURCE_STILL_OPEN",
+  "timestamp_utc": "2026-06-01T00:00:00+00:00"
+}

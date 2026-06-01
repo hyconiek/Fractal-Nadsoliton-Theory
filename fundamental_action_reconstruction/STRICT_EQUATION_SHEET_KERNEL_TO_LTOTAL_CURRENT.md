@@ -495,3 +495,63 @@ On the P2376 rectangle, `D(eta,x)=C5-3*C1` is positive, increasing in `eta`, and
 ```
 
 Thus P2377 transport provenance is not enough by itself: a future theorem must derive a super-unit source normalization above the relevant threshold, or else the extra coupling strength remains an explicit non-strict selector premise.  Grid scans confirm that `M=1` selects the mixed `(h1,h5)=(3,3)` orbit, while just-above-threshold mass selects the 12 d5 supports.
+
+## P2379/S1329 front-loaded normalized transport profile candidate
+
+`P2379/S1329` narrows the P2378 obstruction.  The unit-uniform primitive `C(d)` is insufficient, but a normalized nonuniform profile on the same P2377 homotopy can be strong enough because it samples the early high-contrast part of the damping-completion transport.
+
+For
+
+```text
+rho_lambda(s)=1+lambda*(1-2s),  0<=lambda<=1,
+```
+
+one has
+
+```text
+int_0^1 rho_lambda(s) ds = 1,
+int_0^1 rho_lambda(s) A_s(d) ds = C(d)+lambda*B(d),
+B(d)=C(d)*(1+2*(1+beta_tors*d)/(d^eta-beta_tors*d))-2.
+```
+
+The d5 threshold in this affine profile family is
+
+```text
+lambda > [3*(K1+C1)-(K5+C5)]/(B5-3*B1).
+```
+
+The P2379 audit tests `lambda=0.8`: uniform normalized transport still fails, but the front-loaded normalized density selects the 12 d5 supports on the audited grid and stays above the computed 81x81 lattice threshold.  This does not promote the profile into `L_total`; it only records a sharper future source obligation: derive either super-unit mass or a sufficiently front-loaded normalized density from strict dynamics.
+
+## P2380/S1330 rectangle certificate for the affine front-loaded threshold
+
+`P2380/S1330` converts the P2379 affine-profile lattice audit into a rectangle monotonicity certificate.  For
+
+```text
+T(eta,x)=[3*(K1+C1)-(K5+C5)]/(B5-3*B1),
+```
+
+with the same `C(d)` and `B(d)` as P2379, interval arithmetic over the P2376 rectangle certifies
+
+```text
+T_eta<0,  T_x>0,  B5-3*B1>0.
+```
+
+Therefore the maximum threshold occurs at `(eta,x)=(9/5,0.1)` and equals approximately `0.7916644842269442`; `lambda=0.8` is rectangle-uniformly sufficient for the audited affine density family.  The equation-sheet status remains source-open: this is not an `L_total` promotion, only a sharper acceptance condition for a future theorem deriving the normalized front-loaded density from strict dynamics.
+
+## P2381/S1331 source-obligation form of the affine frontload result
+
+`P2381/S1331` records the source burden implied by P2380.  Rectangle-uniform sufficiency of the affine density family requires more than normalization:
+
+```text
+lambda > 0.7916644842269429.
+```
+
+For `rho_lambda(s)=1+lambda*(1-2s)`, this forces
+
+```text
+early-half mass > 0.6979161,
+transport barycenter < 0.3680559,
+rho(0)/rho(1) > 8.5995.
+```
+
+The equation-sheet consequence is a sharpened non-closure statement: a source theorem must derive this front-loading burden, or the affine profile remains a quantified non-strict premise.  P2381 does not promote the profile into `L_total` and does not close QW-2191.
