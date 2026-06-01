@@ -698,3 +698,23 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2403/S1353 strict-primary physics-generation guard for Lagrangian/EOM
 
 `P2403/S1353` rebases future physics-generation work onto the strict kernel as the primary candidate, with the legacy kernel retained as bridge/construction data.  This strengthens the reason to test strict for masses, gravity, and Lagrangian roles, but it does not license importing old legacy role terms into `L_total` without the separate role-successor theorems.
+
+## P2404/S1354 dependency-cut guard for Lagrangian/EOM
+
+`P2404/S1354` computes the finite dependency cut for strict physics lanes.  The `L_total` and ToE candidate lanes have the degree-7 dependency monomial: four strict additions plus all three role-successor atoms.  Therefore no Lagrangian term may be promoted from legacy-only data, from strict structural additions alone, or from any one-/two-role prefix.
+
+## P2405/S1355 information-ontology guard for Lagrangian/EOM
+
+`P2405/S1355` types the strict additions as internal information constraints of the nadsoliton, not as physical Lagrangian terms and not as a sub-nadsoliton information layer.  `L_total` remains downstream of light/matter projection and still requires the P2404 degree-7 dependency monomial before role-bearing promotion.
+
+## P2406/S1356 staged projection barrier for Lagrangian/EOM
+
+`P2406/S1356` makes the information-to-physics staging explicit: pure-information ontology plus strict internal completion still does not license a role-bearing `L_total`.  `L_total` and ToE projection require the full degree-12 guard/completion/role monomial, so no Lagrangian term may be promoted directly from ontology or strict additions alone.
+
+## P2407/S1357 stage-quotient barrier for Lagrangian/EOM
+
+`P2407/S1357` reduces the P2406 guard/completion/role monomial to the quotient rule `O * S * R`.  A role-bearing `L_total` is allowed only at the full stage mask `7`; ontology-only and ontology-plus-strict masks are still non-physical-role states.
+
+## P2408/S1358 prime-implicant guard for Lagrangian/EOM
+
+`P2408/S1358` proves that the quotient `O * S * R` is the unique prime implicant for role-bearing `L_total`/ToE readiness.  Dropping ontology, strict completion, or role-successor projection crosses the unique Boolean derivative edge back to a nearest miss, so no Lagrangian shortcut is available.

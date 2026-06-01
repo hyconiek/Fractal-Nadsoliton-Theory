@@ -934,3 +934,43 @@ For physical claims only, the vector is `3/2, 1, 1/2`.  This supports prioritizi
 The finite characteristic matrix has strict count `5/5` and legacy count `1/5` on the audited structural characteristics.  This is a structural research-priority theorem: strict should be the primary target for future known-physics generation tests, while legacy remains the construction/bridge source explaining how strict is built.
 
 It is not yet a theorem that strict generates SM/GR roles; role-successor and `L_total` promotion remain blocked until explicit role theorems are supplied.
+
+## P2404/S1354 strict-addition physics-lane dependency-cut certificate
+
+`P2404/S1354` turns the P2403 strict-primary rebase into a finite dependency-cut audit.  The audited atoms are the four strict additions (`A/P/D`, GF(2)/topological phase data, nonlinear compression, and `chi11` selector bookkeeping) plus the three role-successor atoms from the P2400 lattice.
+
+The exact 128-row lattice shows that every listed physics-generation lane has the same common strict-addition cut: all four strict-side additions must be present before the strict kernel is even the correct primary object for that lane.  With only the strict additions present, the structural strict-kernel and mass-generation candidate tests become ready, but all role-bearing physical lanes remain false.  Role transfer, `L_total`, and ToE package readiness still require the relevant role-successor atoms; the full package has the degree-7 monomial consisting of all four strict additions and all three role-successor atoms.
+
+Thus strict is computationally favored as the primary physics-generation candidate because it carries the missing nadsoliton characteristics, while legacy-only physics inheritance remains blocked by an explicit dependency cut rather than by narrative preference.
+
+## P2405/S1355 nadsoliton information-ontology projection certificate
+
+`P2405/S1355` corrects the P2404 dependency-cut reading by making the ontology type explicit: the nadsoliton itself is the sole primordial information in a solitonic state.  The four strict additions are therefore typed as internal information constraints of the completed strict kernel, not as a new informational substrate beneath the nadsoliton and not as immediate physical-role exports.
+
+The finite ontology guard lattice has `32` rows and a single true mask: `nadsoliton_is_sole_primordial_information * no_separate_information_layer_under_nadsoliton * strict_additions_are_internal_information_constraints * physics_roles_are_downstream_projections * observer_is_downstream_readout_not_source`.  The poset audit has a unique root, `nadsoliton_pure_information_root`, and preserves the order `nadsoliton -> light -> matter -> emergent observer` after inserting legacy/strict kernel codes as internal information-code stages upstream of light.
+
+Thus P2404's strict-addition cut is not a new lower layer.  It is a proof obligation inside the single informational nadsoliton before any downstream physical projection can be claimed.
+
+## P2406/S1356 information-to-physics staged projection barrier certificate
+
+`P2406/S1356` combines P2405 ontology typing with the P2404 dependency cut as one compact finite Boolean certificate over `12` atoms: five ontology guards, four strict internal-information additions, and three downstream role-successor atoms.  The full finite space has `4096` assignments, but the artifact records exact counts and monomials rather than dumping the full truth table.
+
+The staged result is: ontology alone readies only the typed-information root; ontology plus all four strict additions readies only internal strict completion; no role-bearing physical projection is ready until the appropriate role-successor atoms are added.  The `L_total` and ToE downstream projection lanes require the degree-12 monomial consisting of all ontology, strict-addition, and role-successor atoms.
+
+Thus pure information is not physical-role export by itself.  Physics remains a downstream projection from the single informational nadsoliton through strict internal completion and then through explicit role-successor theorems.
+
+## P2407/S1357 stage-quotient projection barrier certificate
+
+`P2407/S1357` compresses the P2406 twelve-atom barrier into a three-stage quotient: `O` = ontology guard package, `S` = strict internal completion package, and `R` = role-successor projection package.  The quotient has exactly `8` rows and preserves the P2406 no-shortcut theorem.
+
+In the quotient, `L_total`/ToE projection is the single degree-3 monomial `O * S * R`.  The ontology-only mask `1` readies only the typed information root; the ontology-plus-strict mask `3` readies internal strict completion but no physical role projection; the only role-bearing mask is the full mask `7`.
+
+Thus the long degree-12 monomial from P2406 is not arbitrary bookkeeping: it factors into three mandatory stage packages, and every shortcut that skips ontology, strict completion, or role-successor projection remains rejected.
+
+## P2408/S1358 stage-quotient prime-implicant and derivative certificate
+
+`P2408/S1358` audits the P2407 quotient as a Boolean object rather than as prose.  The truth vector over masks `0..7` has a single true mask, `7`; the computed ANF has one term, `O * S * R`; and the prime-implicant enumeration has exactly one prime implicant, the full stage package itself.
+
+The finite derivative audit also finds one decisive edge for each stage.  Removing any one of `O`, `S`, or `R` from the full mask gives the unique nearest miss for that stage, so every package is essential and none is merely decorative bookkeeping.
+
+Thus the quotient barrier is minimal and essential: role-bearing projection cannot be weakened below `O * S * R`, and this remains conditional readiness rather than ToE closure.
