@@ -1,0 +1,608 @@
+{
+  "gatekeeper_checks": {
+    "all_255_proper_masks_fail": true,
+    "eight_bridge_obligations": true,
+    "empty_mask_only_residual_inventory_ready": true,
+    "exact_256_assignment_lattice": true,
+    "fingerprint_stable": true,
+    "five_s2_bridge_components": true,
+    "nearest_misses_are_eight_one_obligation_gaps": true,
+    "only_full_mask_completes_bridge": true,
+    "p2410_no_ltotal_or_toe_closure_inherited": true,
+    "repair_spectrum_sums_to_255": true,
+    "rg_nonduplication_audit_ran": true,
+    "scratch_role_transfer_blocked_inherited": true,
+    "scratch_sources_missing_inherited": true
+  },
+  "global_status": "OPEN_PROGRESS_BRIDGE_SOURCE_HYPERGRAPH_CERTIFIED_NO_ROLE_TRANSFER_OR_TOE_CLOSURE",
+  "legacy_strict_bridge_source_obligation_hypergraph_certificate": {
+    "finite_hypergraph_certificate": {
+      "atom_component_incidence": [
+        {
+          "atom": "amplitude_dynamic_source_theorem",
+          "component_count": 1,
+          "components": [
+            "amplitude_normalization_passage"
+          ]
+        },
+        {
+          "atom": "role_safe_amplitude_absorption_map_theorem",
+          "component_count": 1,
+          "components": [
+            "amplitude_normalization_passage"
+          ]
+        },
+        {
+          "atom": "phase_frequency_dynamic_source_theorem",
+          "component_count": 1,
+          "components": [
+            "phase_frequency_topological_bit_passage"
+          ]
+        },
+        {
+          "atom": "topological_bit_transport_selector_theorem",
+          "component_count": 1,
+          "components": [
+            "phase_frequency_topological_bit_passage"
+          ]
+        },
+        {
+          "atom": "legacy_linear_to_strict_nonlinear_compression_map_theorem",
+          "component_count": 1,
+          "components": [
+            "damping_compression_passage"
+          ]
+        },
+        {
+          "atom": "strict_compression_dynamic_source_theorem",
+          "component_count": 1,
+          "components": [
+            "damping_compression_passage"
+          ]
+        },
+        {
+          "atom": "chi11_selector_source_theorem",
+          "component_count": 2,
+          "components": [
+            "phase_frequency_topological_bit_passage",
+            "selector_source_premise"
+          ]
+        },
+        {
+          "atom": "qw2191_symmetry_breaking_or_internal_source_theorem",
+          "component_count": 1,
+          "components": [
+            "selector_source_premise"
+          ]
+        }
+      ],
+      "bridge_components": {
+        "amplitude_normalization_passage": [
+          "amplitude_dynamic_source_theorem",
+          "role_safe_amplitude_absorption_map_theorem"
+        ],
+        "damping_compression_passage": [
+          "legacy_linear_to_strict_nonlinear_compression_map_theorem",
+          "strict_compression_dynamic_source_theorem"
+        ],
+        "phase_frequency_topological_bit_passage": [
+          "phase_frequency_dynamic_source_theorem",
+          "topological_bit_transport_selector_theorem",
+          "chi11_selector_source_theorem"
+        ],
+        "residual_strict_additions_inventory": [],
+        "selector_source_premise": [
+          "chi11_selector_source_theorem",
+          "qw2191_symmetry_breaking_or_internal_source_theorem"
+        ]
+      },
+      "bridge_obligation_atoms": [
+        "amplitude_dynamic_source_theorem",
+        "role_safe_amplitude_absorption_map_theorem",
+        "phase_frequency_dynamic_source_theorem",
+        "topological_bit_transport_selector_theorem",
+        "legacy_linear_to_strict_nonlinear_compression_map_theorem",
+        "strict_compression_dynamic_source_theorem",
+        "chi11_selector_source_theorem",
+        "qw2191_symmetry_breaking_or_internal_source_theorem"
+      ],
+      "bridge_ready_anf": "amplitude_dynamic_source_theorem * role_safe_amplitude_absorption_map_theorem * phase_frequency_dynamic_source_theorem * topological_bit_transport_selector_theorem * legacy_linear_to_strict_nonlinear_compression_map_theorem * strict_compression_dynamic_source_theorem * chi11_selector_source_theorem * qw2191_symmetry_breaking_or_internal_source_theorem",
+      "bridge_ready_anf_degree": 8,
+      "bridge_ready_true_masks": [
+        255
+      ],
+      "bridge_ready_truth_vector_sha256": "5e378b70fed8062261cf9f7f42d4592cc8080c5a285d3df6e1ed3f6648bd9f56",
+      "component_frontier_rows": [
+        {
+          "component": "amplitude_normalization_passage",
+          "current_ready_at_empty_mask": false,
+          "open_gap": "amplitude_dynamic_source_theorem + role_safe_amplitude_absorption_map_theorem",
+          "required_atom_count": 2,
+          "required_atoms": [
+            "amplitude_dynamic_source_theorem",
+            "role_safe_amplitude_absorption_map_theorem"
+          ]
+        },
+        {
+          "component": "phase_frequency_topological_bit_passage",
+          "current_ready_at_empty_mask": false,
+          "open_gap": "phase_frequency_dynamic_source_theorem + topological_bit_transport_selector_theorem + chi11_selector_source_theorem",
+          "required_atom_count": 3,
+          "required_atoms": [
+            "phase_frequency_dynamic_source_theorem",
+            "topological_bit_transport_selector_theorem",
+            "chi11_selector_source_theorem"
+          ]
+        },
+        {
+          "component": "damping_compression_passage",
+          "current_ready_at_empty_mask": false,
+          "open_gap": "legacy_linear_to_strict_nonlinear_compression_map_theorem + strict_compression_dynamic_source_theorem",
+          "required_atom_count": 2,
+          "required_atoms": [
+            "legacy_linear_to_strict_nonlinear_compression_map_theorem",
+            "strict_compression_dynamic_source_theorem"
+          ]
+        },
+        {
+          "component": "selector_source_premise",
+          "current_ready_at_empty_mask": false,
+          "open_gap": "chi11_selector_source_theorem + qw2191_symmetry_breaking_or_internal_source_theorem",
+          "required_atom_count": 2,
+          "required_atoms": [
+            "chi11_selector_source_theorem",
+            "qw2191_symmetry_breaking_or_internal_source_theorem"
+          ]
+        },
+        {
+          "component": "residual_strict_additions_inventory",
+          "current_ready_at_empty_mask": true,
+          "open_gap": "none_currently_blocking_component",
+          "required_atom_count": 0,
+          "required_atoms": []
+        }
+      ],
+      "empty_mask_bridge_ready": false,
+      "empty_mask_ready_components": [
+        "residual_strict_additions_inventory"
+      ],
+      "minimal_component_completion_sets": [
+        {
+          "component": "amplitude_normalization_passage",
+          "minimal_completion_sets": [
+            [
+              "amplitude_dynamic_source_theorem",
+              "role_safe_amplitude_absorption_map_theorem"
+            ]
+          ],
+          "minimum_size": 2
+        },
+        {
+          "component": "phase_frequency_topological_bit_passage",
+          "minimal_completion_sets": [
+            [
+              "phase_frequency_dynamic_source_theorem",
+              "topological_bit_transport_selector_theorem",
+              "chi11_selector_source_theorem"
+            ]
+          ],
+          "minimum_size": 3
+        },
+        {
+          "component": "damping_compression_passage",
+          "minimal_completion_sets": [
+            [
+              "legacy_linear_to_strict_nonlinear_compression_map_theorem",
+              "strict_compression_dynamic_source_theorem"
+            ]
+          ],
+          "minimum_size": 2
+        },
+        {
+          "component": "selector_source_premise",
+          "minimal_completion_sets": [
+            [
+              "chi11_selector_source_theorem",
+              "qw2191_symmetry_breaking_or_internal_source_theorem"
+            ]
+          ],
+          "minimum_size": 2
+        },
+        {
+          "component": "residual_strict_additions_inventory",
+          "minimal_completion_sets": [
+            []
+          ],
+          "minimum_size": 0
+        }
+      ],
+      "nearest_miss_count": 8,
+      "nearest_miss_rows": [
+        {
+          "blocked_components_before_repair": [
+            "amplitude_normalization_passage"
+          ],
+          "mask": 254,
+          "missing_atom": "amplitude_dynamic_source_theorem",
+          "ready_components_before_repair": [
+            "phase_frequency_topological_bit_passage",
+            "damping_compression_passage",
+            "selector_source_premise",
+            "residual_strict_additions_inventory"
+          ]
+        },
+        {
+          "blocked_components_before_repair": [
+            "amplitude_normalization_passage"
+          ],
+          "mask": 253,
+          "missing_atom": "role_safe_amplitude_absorption_map_theorem",
+          "ready_components_before_repair": [
+            "phase_frequency_topological_bit_passage",
+            "damping_compression_passage",
+            "selector_source_premise",
+            "residual_strict_additions_inventory"
+          ]
+        },
+        {
+          "blocked_components_before_repair": [
+            "phase_frequency_topological_bit_passage"
+          ],
+          "mask": 251,
+          "missing_atom": "phase_frequency_dynamic_source_theorem",
+          "ready_components_before_repair": [
+            "amplitude_normalization_passage",
+            "damping_compression_passage",
+            "selector_source_premise",
+            "residual_strict_additions_inventory"
+          ]
+        },
+        {
+          "blocked_components_before_repair": [
+            "phase_frequency_topological_bit_passage"
+          ],
+          "mask": 247,
+          "missing_atom": "topological_bit_transport_selector_theorem",
+          "ready_components_before_repair": [
+            "amplitude_normalization_passage",
+            "damping_compression_passage",
+            "selector_source_premise",
+            "residual_strict_additions_inventory"
+          ]
+        },
+        {
+          "blocked_components_before_repair": [
+            "damping_compression_passage"
+          ],
+          "mask": 239,
+          "missing_atom": "legacy_linear_to_strict_nonlinear_compression_map_theorem",
+          "ready_components_before_repair": [
+            "amplitude_normalization_passage",
+            "phase_frequency_topological_bit_passage",
+            "selector_source_premise",
+            "residual_strict_additions_inventory"
+          ]
+        },
+        {
+          "blocked_components_before_repair": [
+            "damping_compression_passage"
+          ],
+          "mask": 223,
+          "missing_atom": "strict_compression_dynamic_source_theorem",
+          "ready_components_before_repair": [
+            "amplitude_normalization_passage",
+            "phase_frequency_topological_bit_passage",
+            "selector_source_premise",
+            "residual_strict_additions_inventory"
+          ]
+        },
+        {
+          "blocked_components_before_repair": [
+            "phase_frequency_topological_bit_passage",
+            "selector_source_premise"
+          ],
+          "mask": 191,
+          "missing_atom": "chi11_selector_source_theorem",
+          "ready_components_before_repair": [
+            "amplitude_normalization_passage",
+            "damping_compression_passage",
+            "residual_strict_additions_inventory"
+          ]
+        },
+        {
+          "blocked_components_before_repair": [
+            "selector_source_premise"
+          ],
+          "mask": 127,
+          "missing_atom": "qw2191_symmetry_breaking_or_internal_source_theorem",
+          "ready_components_before_repair": [
+            "amplitude_normalization_passage",
+            "phase_frequency_topological_bit_passage",
+            "damping_compression_passage",
+            "residual_strict_additions_inventory"
+          ]
+        }
+      ],
+      "p2410_no_ltotal_or_toe_closure_inherited": true,
+      "proof_order_scores": [
+        {
+          "affected_components": [
+            "phase_frequency_topological_bit_passage",
+            "selector_source_premise"
+          ],
+          "atom": "chi11_selector_source_theorem",
+          "component_incidence_count": 2,
+          "proof_search_priority_score": 2,
+          "singleton_completion_count": 0
+        },
+        {
+          "affected_components": [
+            "amplitude_normalization_passage"
+          ],
+          "atom": "amplitude_dynamic_source_theorem",
+          "component_incidence_count": 1,
+          "proof_search_priority_score": 1,
+          "singleton_completion_count": 0
+        },
+        {
+          "affected_components": [
+            "damping_compression_passage"
+          ],
+          "atom": "legacy_linear_to_strict_nonlinear_compression_map_theorem",
+          "component_incidence_count": 1,
+          "proof_search_priority_score": 1,
+          "singleton_completion_count": 0
+        },
+        {
+          "affected_components": [
+            "phase_frequency_topological_bit_passage"
+          ],
+          "atom": "phase_frequency_dynamic_source_theorem",
+          "component_incidence_count": 1,
+          "proof_search_priority_score": 1,
+          "singleton_completion_count": 0
+        },
+        {
+          "affected_components": [
+            "selector_source_premise"
+          ],
+          "atom": "qw2191_symmetry_breaking_or_internal_source_theorem",
+          "component_incidence_count": 1,
+          "proof_search_priority_score": 1,
+          "singleton_completion_count": 0
+        },
+        {
+          "affected_components": [
+            "amplitude_normalization_passage"
+          ],
+          "atom": "role_safe_amplitude_absorption_map_theorem",
+          "component_incidence_count": 1,
+          "proof_search_priority_score": 1,
+          "singleton_completion_count": 0
+        },
+        {
+          "affected_components": [
+            "damping_compression_passage"
+          ],
+          "atom": "strict_compression_dynamic_source_theorem",
+          "component_incidence_count": 1,
+          "proof_search_priority_score": 1,
+          "singleton_completion_count": 0
+        },
+        {
+          "affected_components": [
+            "phase_frequency_topological_bit_passage"
+          ],
+          "atom": "topological_bit_transport_selector_theorem",
+          "component_incidence_count": 1,
+          "proof_search_priority_score": 1,
+          "singleton_completion_count": 0
+        }
+      ],
+      "proper_subset_failure_count": 255,
+      "repair_spectrum": [
+        {
+          "failure_mask_count": 8,
+          "missing_obligation_count": 1,
+          "nearest_repair_distance": 1
+        },
+        {
+          "failure_mask_count": 28,
+          "missing_obligation_count": 2,
+          "nearest_repair_distance": 2
+        },
+        {
+          "failure_mask_count": 56,
+          "missing_obligation_count": 3,
+          "nearest_repair_distance": 3
+        },
+        {
+          "failure_mask_count": 70,
+          "missing_obligation_count": 4,
+          "nearest_repair_distance": 4
+        },
+        {
+          "failure_mask_count": 56,
+          "missing_obligation_count": 5,
+          "nearest_repair_distance": 5
+        },
+        {
+          "failure_mask_count": 28,
+          "missing_obligation_count": 6,
+          "nearest_repair_distance": 6
+        },
+        {
+          "failure_mask_count": 8,
+          "missing_obligation_count": 7,
+          "nearest_repair_distance": 7
+        },
+        {
+          "failure_mask_count": 1,
+          "missing_obligation_count": 8,
+          "nearest_repair_distance": 8
+        }
+      ],
+      "repair_spectrum_failure_total": 255,
+      "role_transfer_atoms_reserved_post_bridge": [
+        "alpha_geo_electroweak_role_transfer_theorem",
+        "beta_tors_strict_role_transfer_theorem",
+        "beta_power_hierarchy_successor_role_transfer_theorem"
+      ],
+      "scratch_component_gap_sources_missing_inherited": true,
+      "scratch_role_transfer_blocked_inherited": true,
+      "total_bridge_obligation_assignment_count": 256
+    },
+    "rg_nonduplication_audit": {
+      "finding": "Repo grep finds scratch component-gap and guardrail material, but no production P24xx certificate that turns S2's legacy->strict bridge requirements into a finite source-obligation hypergraph.",
+      "patterns": {
+        "bridge_gap_source": {
+          "count": 9,
+          "samples": [
+            "fundamental_action_reconstruction/S2_CURRENT_FAR_STRATEGIC_PRIORITY_REORIENTATION_PACKET.md:49:## Priority 1: legacy -> strict completion bridge",
+            "fundamental_action_reconstruction/p2411_s1361_legacy_strict_bridge_source_obligation_hypergraph_certificate.py:123:        \"bridge_gap_source\": \"completion component gap|legacy -> strict completion bridge|component gap matrix\",",
+            "fundamental_action_reconstruction/scratch/bridge_strict_completion_legacy_to_strict_completion_component_gap_certificate_probe.py:2:\"\"\"Scratch probe: legacy->strict completion component gap matrix.",
+            "fundamental_action_reconstruction/scratch/bridge_strict_completion_legacy_to_strict_completion_component_gap_certificate_probe.py:350:        \"# Legacy -> strict completion component gap certificate\",",
+            "fundamental_action_reconstruction/scratch/bridge_strict_completion_legacy_to_strict_completion_component_gap_certificate_probe.py:51:    \"completion component gap\",",
+            "fundamental_action_reconstruction/scratch/bridge_strict_completion_legacy_to_strict_completion_component_gap_certificate_probe.py:53:    \"legacy -> strict completion bridge\",",
+            "fundamental_action_reconstruction/scratch/bridge_strict_completion_legacy_to_strict_completion_component_gap_certificate_report.md:1:# Legacy -> strict completion component gap certificate",
+            "fundamental_action_reconstruction/scratch/bridge_strict_completion_legacy_to_strict_damping_compression_separation_certificate_probe.py:168:            \"finding\": \"Existing reports certify damping necessity, monotonicity, ontology, inverse branches, and the component gap matrix; this report adds the exact finite/algebraic separation: no single linear gamma in a legacy-style denominator can match strict d^eta compression on two positive Z12 nodes.\",",
+            "fundamental_action_reconstruction/test_bridge_strict_completion_legacy_to_strict_completion_component_gap_certificate_probe.py:44:        self.assertIn(\"completion component gap\", searched)"
+          ]
+        },
+        "new_packet": {
+          "count": 23,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1006:## P2411/S1361 legacy-to-strict bridge source-obligation hypergraph certificate",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1008:`P2411/S1361` moves from the generic twelve-atom `L_total` obstruction ledger to the strategic S2 bridge problem itself.  It models the current `K_legacy_ont -> K_strict_gate` completion bridge as five S2 components: amplitude normalization, phase/frequency/topological-bit passage, damping/compression passage, selector/source premise, and residual strict-addition inventory.",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:730:## P2411/S1361 bridge-source hypergraph guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:732:`P2411/S1361` keeps `L_total` downstream of the bridge: the legacy-to-strict completion bridge still needs eight source obligations before any post-bridge role-transfer audit can start.  Therefore no Lagrangian term may import legacy roles from amplitude, phase, damping, or `chi11` bookkeeping without a real bridge-source theorem and the later role-transfer theorem.",
+            "fundamental_action_reconstruction/generated/p2411_s1361_legacy_strict_bridge_source_obligation_hypergraph_certificate.md:1:# P2411 S1361: legacy-strict bridge source-obligation hypergraph certificate",
+            "fundamental_action_reconstruction/generated/p2411_s1361_legacy_strict_bridge_source_obligation_hypergraph_certificate.md:7:P2411/S1361 converts the S2 legacy->strict bridge priority into an exact source-obligation hypergraph.",
+            "fundamental_action_reconstruction/p2411_s1361_legacy_strict_bridge_source_obligation_hypergraph_certificate.py:122:        \"new_packet\": \"P2411|S1361|bridge source obligation hypergraph|source-obligation hypergraph\",",
+            "fundamental_action_reconstruction/p2411_s1361_legacy_strict_bridge_source_obligation_hypergraph_certificate.py:132:            \"turns S2's legacy->strict bridge requirements into a finite source-obligation hypergraph.\"",
+            "fundamental_action_reconstruction/p2411_s1361_legacy_strict_bridge_source_obligation_hypergraph_certificate.py:277:## P2411/S1361 legacy-to-strict bridge source-obligation hypergraph certificate",
+            "fundamental_action_reconstruction/p2411_s1361_legacy_strict_bridge_source_obligation_hypergraph_certificate.py:279:`P2411/S1361` moves from the generic twelve-atom `L_total` obstruction ledger to the strategic S2 bridge problem itself.  It models the current `K_legacy_ont -> K_strict_gate` completion bridge as five S2 components: amplitude normalization, phase/frequency/topological-bit passage, damping/compression passage, selector/source premise, and residual strict-addition inventory.",
+            "fundamental_action_reconstruction/p2411_s1361_legacy_strict_bridge_source_obligation_hypergraph_certificate.py:286:## P2411/S1361 bridge-source hypergraph guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/p2411_s1361_legacy_strict_bridge_source_obligation_hypergraph_certificate.py:288:`P2411/S1361` keeps `L_total` downstream of the bridge: the legacy-to-strict completion bridge still needs eight source obligations before any post-bridge role-transfer audit can start.  Therefore no Lagrangian term may import legacy roles from amplitude, phase, damping, or `chi11` bookkeeping without a real bridge-source theorem and the later role-transfer theorem.",
+            "fundamental_action_reconstruction/p2411_s1361_legacy_strict_bridge_source_obligation_hypergraph_certificate.py:305:        \"theorem_name\": \"P2411_T1_legacy_strict_bridge_source_obligation_hypergraph_certificate\",",
+            "fundamental_action_reconstruction/p2411_s1361_legacy_strict_bridge_source_obligation_hypergraph_certificate.py:345:        \"packet_id\": \"P2411\",",
+            "fundamental_action_reconstruction/p2411_s1361_legacy_strict_bridge_source_obligation_hypergraph_certificate.py:346:        \"stage_id\": \"S1361\",",
+            "fundamental_action_reconstruction/p2411_s1361_legacy_strict_bridge_source_obligation_hypergraph_certificate.py:371:                \"# P2411 S1361: legacy-strict bridge source-obligation hypergraph certificate\","
+          ]
+        },
+        "qw2191_guard": {
+          "count": 7985,
+          "samples": [
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:267:basis-choice family obstruction (`QW-2191`).",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:292:1. `QW-2191` remains a real strict-core uniqueness obstruction on degenerate mode pairs.",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:304:4. strict-core discharge of `QW-2191`,",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:38:It does **not** claim ToE closure, strict-core selector closure, or `QW-2191` discharge.",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:60:4. `QW-2190/QW-2191`",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:74:3. does **not** claim a strict-core $O(2)$ cut on `pair1` or a discharge of `QW-2191` (see `T166` and the diagonal",
+            "fundamental_action_reconstruction/A11_NADSOLITON_SINGLE_KERNEL_CORE_LAGRANGIAN_AND_EMERGENCE_PACKET.md:94:     (`QW-2191`).",
+            "fundamental_action_reconstruction/A5_SM_GR_BRIDGE_SPEC.md:107:- brak pelnej unikalnosci reprezentacji przez obstruction `QW-2191`,",
+            "fundamental_action_reconstruction/A5_SM_GR_BRIDGE_SPEC.md:178:| pelna unikalnosc representation map | `blocked` | `QW-2191` |",
+            "fundamental_action_reconstruction/A5_SM_GR_BRIDGE_SPEC.md:63:6. `QW-2191`",
+            "fundamental_action_reconstruction/A6_GAUGE_RECONSTRUCTION_SPEC.md:112:- ale `QW-2191` pozostaje prawdziwe jako obstruction **kanonicznego reprezentanta** (axis choice) w scope kernel‑alone,",
+            "fundamental_action_reconstruction/A6_GAUGE_RECONSTRUCTION_SPEC.md:133:| pelna fizyczna unikalnosc representation map | `lane_scoped_canonicalized_on_two_lanes_up_to_conjugation_global_blocked` | `N487/F453/N494` + `F454/N496` + `P455` vs `QW-2191` |",
+            "fundamental_action_reconstruction/A6_GAUGE_RECONSTRUCTION_SPEC.md:33:6. `QW-2191`",
+            "fundamental_action_reconstruction/A6_GAUGE_RECONSTRUCTION_SPEC.md:97:`QW-2191` daje jawny obstruction theorem:",
+            "fundamental_action_reconstruction/ANALIZA_SYNTEZY_MOSTU_LAGRANGIAN_JADRO.md:115:4. **Zadanie na Przyszłość:** Najwyższym priorytetem teoretycznym jest teraz wykazanie, w jaki sposób asymetria Shannon'a ($\\alpha_{\\text{geo}} = 4 \\ln 2$) na pierścieniu nad12-sigma w pełni znosi przeszkodę selektora `QW-2191`, umożliwiając jednoznaczne wyłonienie generacji cząstek w ścisłym rdzeniu.",
+            "fundamental_action_reconstruction/ANALIZA_SYNTEZY_MOSTU_LAGRANGIAN_JADRO.md:97:### 4.1. Przeszkoda Selektora `QW-2191`"
+          ]
+        },
+        "s2_bridge_requirements": {
+          "count": 20,
+          "samples": [
+            "fundamental_action_reconstruction/DIAGRAMS_STRICT_KERNEL_TRANSFORMATION.md:31:        |-- damping/compression passage D(d)",
+            "fundamental_action_reconstruction/S2_CURRENT_FAR_STRATEGIC_PRIORITY_REORIENTATION_PACKET.md:60:1. the amplitude/normalization passage,",
+            "fundamental_action_reconstruction/S2_CURRENT_FAR_STRATEGIC_PRIORITY_REORIENTATION_PACKET.md:62:3. the damping/compression passage from legacy linear torsion damping to strict",
+            "fundamental_action_reconstruction/S2_CURRENT_FAR_STRATEGIC_PRIORITY_REORIENTATION_PACKET.md:64:4. the selector/source premise responsible for the certified phase/topological",
+            "fundamental_action_reconstruction/S2_CURRENT_FAR_STRATEGIC_PRIORITY_REORIENTATION_PACKET.md:68:## Priority 2: role-transfer audit after bridge completion",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1008:`P2411/S1361` moves from the generic twelve-atom `L_total` obstruction ledger to the strategic S2 bridge problem itself.  It models the current `K_legacy_ont -> K_strict_gate` completion bridge as five S2 components: amplitude normalization, phase/frequency/topological-bit passage, damping/compression passage, selector/source premise, and residual strict-addition inventory.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:345:The proof is closed-form and is cross-checked against all `binom(12,5)=792` supports.  Combined with P2369, the finite support and finite ledger uniqueness subclaims are isolated.  The remaining missing premise is now sharper: derive the distance-5 band-pass action and path-order/arrow convention from bridge-completed nadsoliton dynamics, or mark them as non-strict selector/source premises.  This does not choose a unique translate/source and does not discharge QW-2191.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:361:Thus the distance-5 band-pass polarity cannot be silently obtained from full-`Aut(Z12)` unit-band symmetry.  The next real target is a bridge-completed dynamical export of this polarity inequality, or an explicit non-strict selector/source premise.  QW-2191 remains open.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:379:Thus the band-polarity source is still not exported by direct `K(d)` pair weights.  The honest next target is a separate bridge-completed dynamical term with effective `h1/h5` coefficient ratio `<1/3`, or else an explicit non-strict selector/source premise.",
+            "fundamental_action_reconstruction/p2370_s1320_d5_bandpass_support_closed_form_theorem.py:264:            \"or prove that the band-pass action is an extra non-strict selector/source premise; do not treat \"",
+            "fundamental_action_reconstruction/p2371_s1321_aut_invariant_unit_bandpass_obstruction_theorem.py:212:            \"or classify the distance-5 band-pass polarity as an explicit non-strict selector/source premise.\"",
+            "fundamental_action_reconstruction/p2411_s1361_legacy_strict_bridge_source_obligation_hypergraph_certificate.py:124:        \"s2_bridge_requirements\": \"amplitude/normalization passage|damping/compression passage|selector/source premise|role-transfer audit after bridge completion\",",
+            "fundamental_action_reconstruction/p2411_s1361_legacy_strict_bridge_source_obligation_hypergraph_certificate.py:279:`P2411/S1361` moves from the generic twelve-atom `L_total` obstruction ledger to the strategic S2 bridge problem itself.  It models the current `K_legacy_ont -> K_strict_gate` completion bridge as five S2 components: amplitude normalization, phase/frequency/topological-bit passage, damping/compression passage, selector/source premise, and residual strict-addition inventory.",
+            "fundamental_action_reconstruction/scratch/bridge_legacy_torsion_chi11_opinion_audit_probe.py:133:                contains_all(s2_text, [\"legacy -> strict` completion bridge\", \"role-transfer audit after bridge completion\"]),",
+            "fundamental_action_reconstruction/scratch/bridge_strict_completion_closure_plan_dependency_certificate_probe.py:99:        \"S2_requires_legacy_strict_completion_bridge_priority\": contains_all(texts[\"S2_strategic_reorientation\"], [\"legacy -> strict` completion bridge\", \"role-transfer audit after bridge completion\", \"QW-2191\"]),",
+            "fundamental_action_reconstruction/scratch/bridge_strict_completion_legacy_kernel_intermediate_bridge_guardrail_certificate_probe.py:100:                \"role-transfer audit after bridge completion\","
+          ]
+        }
+      },
+      "tool": "rg"
+    },
+    "source_artifact_statuses": {
+      "P2410_ATOM_OBSTRUCTION": "PASS_DEQUOTIENTED_12_ATOM_OBSTRUCTION_LEDGER_NO_CLOSURE",
+      "S2_STRATEGIC_PRIORITY": "TEXT_LOADED",
+      "SCRATCH_COMPONENT_GAP": "legacy-to-strict-component-gap-matrix-exported-finite-evidence-certified-sources-and-role-transfer-open"
+    },
+    "theorem_export": {
+      "bridge_component_count": 5,
+      "bridge_obligation_atom_count": 8,
+      "bridge_ready_anf_degree": 8,
+      "bridge_ready_true_masks": [
+        255
+      ],
+      "empty_mask_bridge_ready": false,
+      "empty_mask_ready_components": [
+        "residual_strict_additions_inventory"
+      ],
+      "nearest_miss_count": 8,
+      "not_licensed": [
+        "No raw identity K_legacy_ont == K_strict_gate is claimed.",
+        "No bridge completion follows from residual strict-addition inventory alone.",
+        "No chi11 selector-source theorem or QW-2191 discharge is exported.",
+        "No legacy physical-role transfer is licensed before the post-bridge role-transfer audit.",
+        "No role-bearing L_total or ToE closure follows from this bridge hypergraph."
+      ],
+      "p2410_no_ltotal_or_toe_closure_inherited": true,
+      "proper_subset_failure_count": 255,
+      "repair_spectrum_failure_total": 255,
+      "scratch_component_gap_sources_missing_inherited": true,
+      "scratch_role_transfer_blocked_inherited": true,
+      "theorem_name": "P2411_T1_legacy_strict_bridge_source_obligation_hypergraph_certificate",
+      "top_priority_atoms": [
+        {
+          "affected_components": [
+            "phase_frequency_topological_bit_passage",
+            "selector_source_premise"
+          ],
+          "atom": "chi11_selector_source_theorem",
+          "component_incidence_count": 2,
+          "proof_search_priority_score": 2,
+          "singleton_completion_count": 0
+        },
+        {
+          "affected_components": [
+            "amplitude_normalization_passage"
+          ],
+          "atom": "amplitude_dynamic_source_theorem",
+          "component_incidence_count": 1,
+          "proof_search_priority_score": 1,
+          "singleton_completion_count": 0
+        },
+        {
+          "affected_components": [
+            "damping_compression_passage"
+          ],
+          "atom": "legacy_linear_to_strict_nonlinear_compression_map_theorem",
+          "component_incidence_count": 1,
+          "proof_search_priority_score": 1,
+          "singleton_completion_count": 0
+        }
+      ],
+      "total_bridge_obligation_assignment_count": 256
+    },
+    "theorem_fingerprint_sha256": "dca2122939a93a5357512ec732ca7480beabca2af4a750a458f32ac240071580"
+  },
+  "packet_id": "P2411",
+  "recommended_next_honest_step": "Attempt one concrete bridge-source theorem from the top-priority atoms, especially chi11 selector/source or a real amplitude/damping source map; do not perform post-bridge role transfer yet.",
+  "result_kind": "LEGACY_STRICT_BRIDGE_SOURCE_OBLIGATION_HYPERGRAPH_CERTIFICATE",
+  "schema_version": "p2411_s1361_v1",
+  "stage_id": "S1361",
+  "status": "PASS_BRIDGE_SOURCE_OBLIGATION_HYPERGRAPH_FULL_MASK_ONLY_NO_ROLE_TRANSFER"
+}

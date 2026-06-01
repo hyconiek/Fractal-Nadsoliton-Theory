@@ -1,0 +1,443 @@
+{
+  "gatekeeper_checks": {
+    "all_seven_shortcuts_have_failure_witnesses": true,
+    "failure_cover_has_three_missing_stage_terms": true,
+    "fingerprint_stable": true,
+    "full_mask_avoids_failure_cover": true,
+    "max_repair_distance_is_three_at_empty_mask": true,
+    "one_stage_missing_masks_match_p2408_derivatives": true,
+    "p2408_derivative_nearest_misses_inherited": true,
+    "p2408_single_success_prime_implicant_inherited": true,
+    "rg_nonduplication_audit_ran": true,
+    "success_cnf_has_three_unit_prime_implicates": true
+  },
+  "global_status": "OPEN_PROGRESS_DUAL_OBSTRUCTION_LEDGER_CERTIFIED_NO_LTOTAL_OR_TOE_CLOSURE",
+  "packet_id": "P2409",
+  "recommended_next_honest_step": "Use the CNF/failure-cover ledger to pick a concrete missing unit obligation, preferably a bridge/source or role-successor theorem, rather than weakening O*S*R or promoting shortcut masks.",
+  "result_kind": "STAGE_QUOTIENT_PRIME_IMPLICATE_FAILURE_COVER_CERTIFICATE",
+  "schema_version": "p2409_s1359_v1",
+  "stage_id": "S1359",
+  "stage_quotient_prime_implicate_failure_cover_certificate": {
+    "finite_dual_boolean_certificate": {
+      "all_shortcuts_hit_by_failure_cover": true,
+      "failure_cover_term_count": 3,
+      "failure_dnf": "not O_ontology_guard_package OR not S_strict_internal_completion_package OR not R_role_successor_projection_package",
+      "failure_implicant_cover": [
+        {
+          "covered_failure_count": 4,
+          "covered_failure_masks": [
+            0,
+            2,
+            4,
+            6
+          ],
+          "failure_implicant": "not O_ontology_guard_package",
+          "missing_stage": "O_ontology_guard_package"
+        },
+        {
+          "covered_failure_count": 4,
+          "covered_failure_masks": [
+            0,
+            1,
+            4,
+            5
+          ],
+          "failure_implicant": "not S_strict_internal_completion_package",
+          "missing_stage": "S_strict_internal_completion_package"
+        },
+        {
+          "covered_failure_count": 4,
+          "covered_failure_masks": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "failure_implicant": "not R_role_successor_projection_package",
+          "missing_stage": "R_role_successor_projection_package"
+        }
+      ],
+      "full_mask_avoids_failure_cover": true,
+      "max_nearest_repair_distance": 3,
+      "one_stage_missing_masks": [
+        3,
+        5,
+        6
+      ],
+      "prime_implicates_are_positive_stage_units": true,
+      "shortcut_failure_mask_count": 7,
+      "shortcut_masks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "shortcut_witness_table": [
+        {
+          "failure_cover_terms_hit": [
+            "not O_ontology_guard_package",
+            "not S_strict_internal_completion_package",
+            "not R_role_successor_projection_package"
+          ],
+          "mask": 0,
+          "minimal_repair_options": [
+            "O_ontology_guard_package",
+            "S_strict_internal_completion_package",
+            "R_role_successor_projection_package"
+          ],
+          "missing_stages": [
+            "O_ontology_guard_package",
+            "S_strict_internal_completion_package",
+            "R_role_successor_projection_package"
+          ],
+          "nearest_repair_distance": 3,
+          "present_stages": []
+        },
+        {
+          "failure_cover_terms_hit": [
+            "not S_strict_internal_completion_package",
+            "not R_role_successor_projection_package"
+          ],
+          "mask": 1,
+          "minimal_repair_options": [
+            "S_strict_internal_completion_package",
+            "R_role_successor_projection_package"
+          ],
+          "missing_stages": [
+            "S_strict_internal_completion_package",
+            "R_role_successor_projection_package"
+          ],
+          "nearest_repair_distance": 2,
+          "present_stages": [
+            "O_ontology_guard_package"
+          ]
+        },
+        {
+          "failure_cover_terms_hit": [
+            "not O_ontology_guard_package",
+            "not R_role_successor_projection_package"
+          ],
+          "mask": 2,
+          "minimal_repair_options": [
+            "O_ontology_guard_package",
+            "R_role_successor_projection_package"
+          ],
+          "missing_stages": [
+            "O_ontology_guard_package",
+            "R_role_successor_projection_package"
+          ],
+          "nearest_repair_distance": 2,
+          "present_stages": [
+            "S_strict_internal_completion_package"
+          ]
+        },
+        {
+          "failure_cover_terms_hit": [
+            "not R_role_successor_projection_package"
+          ],
+          "mask": 3,
+          "minimal_repair_options": [
+            "R_role_successor_projection_package"
+          ],
+          "missing_stages": [
+            "R_role_successor_projection_package"
+          ],
+          "nearest_repair_distance": 1,
+          "present_stages": [
+            "O_ontology_guard_package",
+            "S_strict_internal_completion_package"
+          ]
+        },
+        {
+          "failure_cover_terms_hit": [
+            "not O_ontology_guard_package",
+            "not S_strict_internal_completion_package"
+          ],
+          "mask": 4,
+          "minimal_repair_options": [
+            "O_ontology_guard_package",
+            "S_strict_internal_completion_package"
+          ],
+          "missing_stages": [
+            "O_ontology_guard_package",
+            "S_strict_internal_completion_package"
+          ],
+          "nearest_repair_distance": 2,
+          "present_stages": [
+            "R_role_successor_projection_package"
+          ]
+        },
+        {
+          "failure_cover_terms_hit": [
+            "not S_strict_internal_completion_package"
+          ],
+          "mask": 5,
+          "minimal_repair_options": [
+            "S_strict_internal_completion_package"
+          ],
+          "missing_stages": [
+            "S_strict_internal_completion_package"
+          ],
+          "nearest_repair_distance": 1,
+          "present_stages": [
+            "O_ontology_guard_package",
+            "R_role_successor_projection_package"
+          ]
+        },
+        {
+          "failure_cover_terms_hit": [
+            "not O_ontology_guard_package"
+          ],
+          "mask": 6,
+          "minimal_repair_options": [
+            "O_ontology_guard_package"
+          ],
+          "missing_stages": [
+            "O_ontology_guard_package"
+          ],
+          "nearest_repair_distance": 1,
+          "present_stages": [
+            "S_strict_internal_completion_package",
+            "R_role_successor_projection_package"
+          ]
+        }
+      ],
+      "stage_atoms": [
+        "O_ontology_guard_package",
+        "S_strict_internal_completion_package",
+        "R_role_successor_projection_package"
+      ],
+      "success_cnf": "O_ontology_guard_package AND S_strict_internal_completion_package AND R_role_successor_projection_package",
+      "success_prime_implicate_count": 3,
+      "success_prime_implicates": [
+        {
+          "literal_count": 1,
+          "literals": [
+            {
+              "polarity": "positive",
+              "stage": "O_ontology_guard_package"
+            }
+          ],
+          "support_masks": [
+            1,
+            3,
+            5,
+            7
+          ]
+        },
+        {
+          "literal_count": 1,
+          "literals": [
+            {
+              "polarity": "positive",
+              "stage": "R_role_successor_projection_package"
+            }
+          ],
+          "support_masks": [
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "literal_count": 1,
+          "literals": [
+            {
+              "polarity": "positive",
+              "stage": "S_strict_internal_completion_package"
+            }
+          ],
+          "support_masks": [
+            2,
+            3,
+            6,
+            7
+          ]
+        }
+      ],
+      "truth_vector_by_mask_0_to_7": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "rg_nonduplication_audit": {
+      "finding": "Repo grep finds the P2408 success-side prime-implicant/derivative audit and older proper-subset fail language, but no compact dual CNF prime-implicate plus failure-cover certificate for the O/S/R quotient.",
+      "patterns": {
+        "failure_cover": {
+          "count": 8,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:1002:The dual failure cover is the twelve-term DNF saying that any missing ontology guard atom, strict internal-completion atom, or role-successor atom blocks `L_total`/ToE projection.  The repair spectrum contains `4095` failure assignments with distance distribution `binomial(12,k)` by the number of missing atoms, and the nearest failures are exactly the twelve one-atom-missing masks.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:986:The failure side has the exact shortcut cover:",
+            "fundamental_action_reconstruction/p2409_s1359_stage_quotient_prime_implicate_failure_cover_certificate.py:253:The failure side has the exact shortcut cover:",
+            "fundamental_action_reconstruction/p2409_s1359_stage_quotient_prime_implicate_failure_cover_certificate.py:78:        \"new_packet\": \"P2409|S1359|stage quotient prime implicate|prime-implicate failure cover\",",
+            "fundamental_action_reconstruction/p2409_s1359_stage_quotient_prime_implicate_failure_cover_certificate.py:81:        \"failure_cover\": \"failure cover|shortcut cover|minimal failure|proper subset fail\",",
+            "fundamental_action_reconstruction/p2410_s1360_dequotiented_twelve_atom_prime_implicate_obstruction_certificate.py:105:        \"new_packet\": \"P2410|S1360|dequotiented twelve atom|de-quotiented 12-atom|atom-level failure cover\",",
+            "fundamental_action_reconstruction/p2410_s1360_dequotiented_twelve_atom_prime_implicate_obstruction_certificate.py:107:        \"p2409_source\": \"P2409|prime-implicate failure-cover|failure DNF|shortcut cover\",",
+            "fundamental_action_reconstruction/p2410_s1360_dequotiented_twelve_atom_prime_implicate_obstruction_certificate.py:285:The dual failure cover is the twelve-term DNF saying that any missing ontology guard atom, strict internal-completion atom, or role-successor atom blocks `L_total`/ToE projection.  The repair spectrum contains `4095` failure assignments with distance distribution `binomial(12,k)` by the number of missing atoms, and the nearest failures are exactly the twelve one-atom-missing masks."
+          ]
+        },
+        "new_packet": {
+          "count": 29,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:978:## P2409/S1359 stage-quotient prime-implicate and failure-cover certificate",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:980:`P2409/S1359` proves the dual of the P2408 success-side prime-implicant result.  Over the same quotient stages `O`, `S`, and `R`, the success condition has the exact prime-implicate/CNF form:",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:996:`P2410/S1360` expands the P2409 quotient CNF back to the full P2406 twelve-atom staged barrier.  The finite enumeration checks all `3^12 - 1` nonempty non-tautological clauses and finds the exact success-side prime implicates to be the twelve positive unit obligations:",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:722:## P2409/S1359 prime-implicate failure-cover guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:724:`P2409/S1359` gives the Lagrangian/EOM guard in CNF form: a role-bearing `L_total` must satisfy the three unit obligations `O`, `S`, and `R`.  Equivalently, every proposed shortcut is covered by the failure DNF `not O OR not S OR not R`; a missing ontology guard, strict completion, or role-successor projection blocks Lagrangian promotion.",
+            "fundamental_action_reconstruction/generated/p2409_s1359_stage_quotient_prime_implicate_failure_cover_certificate.md:1:# P2409 S1359: stage-quotient prime-implicate failure-cover certificate",
+            "fundamental_action_reconstruction/generated/p2409_s1359_stage_quotient_prime_implicate_failure_cover_certificate.md:7:P2409/S1359 proves the dual CNF/failure-cover ledger for the P2407/P2408 quotient barrier.",
+            "fundamental_action_reconstruction/p2409_s1359_stage_quotient_prime_implicate_failure_cover_certificate.py:245:## P2409/S1359 stage-quotient prime-implicate and failure-cover certificate",
+            "fundamental_action_reconstruction/p2409_s1359_stage_quotient_prime_implicate_failure_cover_certificate.py:247:`P2409/S1359` proves the dual of the P2408 success-side prime-implicant result.  Over the same quotient stages `O`, `S`, and `R`, the success condition has the exact prime-implicate/CNF form:",
+            "fundamental_action_reconstruction/p2409_s1359_stage_quotient_prime_implicate_failure_cover_certificate.py:262:## P2409/S1359 prime-implicate failure-cover guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/p2409_s1359_stage_quotient_prime_implicate_failure_cover_certificate.py:264:`P2409/S1359` gives the Lagrangian/EOM guard in CNF form: a role-bearing `L_total` must satisfy the three unit obligations `O`, `S`, and `R`.  Equivalently, every proposed shortcut is covered by the failure DNF `not O OR not S OR not R`; a missing ontology guard, strict completion, or role-successor projection blocks Lagrangian promotion.",
+            "fundamental_action_reconstruction/p2409_s1359_stage_quotient_prime_implicate_failure_cover_certificate.py:281:        \"theorem_name\": \"P2409_T1_stage_quotient_prime_implicate_failure_cover_certificate\",",
+            "fundamental_action_reconstruction/p2409_s1359_stage_quotient_prime_implicate_failure_cover_certificate.py:319:        \"packet_id\": \"P2409\",",
+            "fundamental_action_reconstruction/p2409_s1359_stage_quotient_prime_implicate_failure_cover_certificate.py:320:        \"stage_id\": \"S1359\","
+          ]
+        },
+        "p2408_source": {
+          "count": 31,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:970:## P2408/S1358 stage-quotient prime-implicant and derivative certificate",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:972:`P2408/S1358` audits the P2407 quotient as a Boolean object rather than as prose.  The truth vector over masks `0..7` has a single true mask, `7`; the computed ANF has one term, `O * S * R`; and the prime-implicant enumeration has exactly one prime implicant, the full stage package itself.",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:980:`P2409/S1359` proves the dual of the P2408 success-side prime-implicant result.  Over the same quotient stages `O`, `S`, and `R`, the success condition has the exact prime-implicate/CNF form:",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:718:## P2408/S1358 prime-implicant guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:720:`P2408/S1358` proves that the quotient `O * S * R` is the unique prime implicant for role-bearing `L_total`/ToE readiness.  Dropping ontology, strict completion, or role-successor projection crosses the unique Boolean derivative edge back to a nearest miss, so no Lagrangian shortcut is available.",
+            "fundamental_action_reconstruction/generated/p2408_s1358_stage_quotient_prime_implicant_derivative_certificate.md:1:# P2408 S1358: stage-quotient prime-implicant derivative certificate",
+            "fundamental_action_reconstruction/generated/p2408_s1358_stage_quotient_prime_implicant_derivative_certificate.md:7:P2408/S1358 proves the P2407 quotient barrier is the unique prime implicant O*S*R and audits its Boolean derivative edges.",
+            "fundamental_action_reconstruction/generated/p2409_s1359_stage_quotient_prime_implicate_failure_cover_certificate.md:7:P2409/S1359 proves the dual CNF/failure-cover ledger for the P2407/P2408 quotient barrier.",
+            "fundamental_action_reconstruction/p2408_s1358_stage_quotient_prime_implicant_derivative_certificate.py:215:## P2408/S1358 stage-quotient prime-implicant and derivative certificate",
+            "fundamental_action_reconstruction/p2408_s1358_stage_quotient_prime_implicant_derivative_certificate.py:217:`P2408/S1358` audits the P2407 quotient as a Boolean object rather than as prose.  The truth vector over masks `0..7` has a single true mask, `7`; the computed ANF has one term, `O * S * R`; and the prime-implicant enumeration has exactly one prime implicant, the full stage package itself.",
+            "fundamental_action_reconstruction/p2408_s1358_stage_quotient_prime_implicant_derivative_certificate.py:224:## P2408/S1358 prime-implicant guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/p2408_s1358_stage_quotient_prime_implicant_derivative_certificate.py:226:`P2408/S1358` proves that the quotient `O * S * R` is the unique prime implicant for role-bearing `L_total`/ToE readiness.  Dropping ontology, strict completion, or role-successor projection crosses the unique Boolean derivative edge back to a nearest miss, so no Lagrangian shortcut is available.",
+            "fundamental_action_reconstruction/p2408_s1358_stage_quotient_prime_implicant_derivative_certificate.py:241:        \"theorem_name\": \"P2408_T1_stage_quotient_prime_implicant_derivative_certificate\",",
+            "fundamental_action_reconstruction/p2408_s1358_stage_quotient_prime_implicant_derivative_certificate.py:278:        \"packet_id\": \"P2408\","
+          ]
+        },
+        "prime_implicate_cnf": {
+          "count": 39,
+          "samples": [
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:978:## P2409/S1359 stage-quotient prime-implicate and failure-cover certificate",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:980:`P2409/S1359` proves the dual of the P2408 success-side prime-implicant result.  Over the same quotient stages `O`, `S`, and `R`, the success condition has the exact prime-implicate/CNF form:",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:994:## P2410/S1360 dequotiented twelve-atom prime-implicate obstruction certificate",
+            "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md:996:`P2410/S1360` expands the P2409 quotient CNF back to the full P2406 twelve-atom staged barrier.  The finite enumeration checks all `3^12 - 1` nonempty non-tautological clauses and finds the exact success-side prime implicates to be the twelve positive unit obligations:",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:722:## P2409/S1359 prime-implicate failure-cover guard for Lagrangian/EOM",
+            "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md:724:`P2409/S1359` gives the Lagrangian/EOM guard in CNF form: a role-bearing `L_total` must satisfy the three unit obligations `O`, `S`, and `R`.  Equivalently, every proposed shortcut is covered by the failure DNF `not O OR not S OR not R`; a missing ontology guard, strict completion, or role-successor projection blocks Lagrangian promotion.",
+            "fundamental_action_reconstruction/generated/p2409_s1359_stage_quotient_prime_implicate_failure_cover_certificate.md:12:- Success CNF: `O_ontology_guard_package AND S_strict_internal_completion_package AND R_role_successor_projection_package`.",
+            "fundamental_action_reconstruction/generated/p2409_s1359_stage_quotient_prime_implicate_failure_cover_certificate.md:13:- Success prime implicate count: `3`.",
+            "fundamental_action_reconstruction/generated/p2409_s1359_stage_quotient_prime_implicate_failure_cover_certificate.md:1:# P2409 S1359: stage-quotient prime-implicate failure-cover certificate",
+            "fundamental_action_reconstruction/generated/p2409_s1359_stage_quotient_prime_implicate_failure_cover_certificate.md:23:- No ToE closure follows from the CNF/failure-cover duality alone.",
+            "fundamental_action_reconstruction/generated/p2409_s1359_stage_quotient_prime_implicate_failure_cover_certificate.md:7:P2409/S1359 proves the dual CNF/failure-cover ledger for the P2407/P2408 quotient barrier.",
+            "fundamental_action_reconstruction/generated/p2410_s1360_dequotiented_twelve_atom_prime_implicate_obstruction_certificate.md:1:# P2410 S1360: dequotiented twelve-atom prime-implicate obstruction certificate",
+            "fundamental_action_reconstruction/generated/p2410_s1360_dequotiented_twelve_atom_prime_implicate_obstruction_certificate.md:20:- Unit prime implicates are proof obligations, not role exports.",
+            "fundamental_action_reconstruction/generated/p2410_s1360_dequotiented_twelve_atom_prime_implicate_obstruction_certificate.md:24:- No ToE closure follows from the twelve-atom CNF/failure-cover certificate alone."
+          ]
+        }
+      },
+      "tool": "rg"
+    },
+    "source_artifact_statuses": {
+      "P2408_PRIME_IMPLICANT_DERIVATIVE": "PASS_UNIQUE_PRIME_IMPLICANT_AND_SINGLE_EDGE_DERIVATIVES_NO_CLOSURE"
+    },
+    "theorem_export": {
+      "failure_cover_term_count": 3,
+      "failure_dnf": "not O_ontology_guard_package OR not S_strict_internal_completion_package OR not R_role_successor_projection_package",
+      "max_nearest_repair_distance": 3,
+      "not_licensed": [
+        "Prime implicate units are obligations, not physical-role exports.",
+        "Failure-cover terms diagnose shortcuts; they do not provide selector-source closure.",
+        "One-stage-missing masks are nearest repairs, not L_total licenses.",
+        "No ToE closure follows from the CNF/failure-cover duality alone."
+      ],
+      "one_stage_missing_masks": [
+        3,
+        5,
+        6
+      ],
+      "p2408_derivative_nearest_misses_inherited": true,
+      "p2408_single_success_prime_implicant_inherited": true,
+      "shortcut_failure_mask_count": 7,
+      "shortcut_masks": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "success_cnf": "O_ontology_guard_package AND S_strict_internal_completion_package AND R_role_successor_projection_package",
+      "success_prime_implicate_count": 3,
+      "success_prime_implicates": [
+        {
+          "literal_count": 1,
+          "literals": [
+            {
+              "polarity": "positive",
+              "stage": "O_ontology_guard_package"
+            }
+          ],
+          "support_masks": [
+            1,
+            3,
+            5,
+            7
+          ]
+        },
+        {
+          "literal_count": 1,
+          "literals": [
+            {
+              "polarity": "positive",
+              "stage": "R_role_successor_projection_package"
+            }
+          ],
+          "support_masks": [
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "literal_count": 1,
+          "literals": [
+            {
+              "polarity": "positive",
+              "stage": "S_strict_internal_completion_package"
+            }
+          ],
+          "support_masks": [
+            2,
+            3,
+            6,
+            7
+          ]
+        }
+      ],
+      "theorem_name": "P2409_T1_stage_quotient_prime_implicate_failure_cover_certificate",
+      "truth_vector_by_mask_0_to_7": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "theorem_fingerprint_sha256": "36879bb537450da5019a17cc63e462eb11d5b5d9ff969f56ec528c6d0ff3d8f6"
+  },
+  "status": "PASS_PRIME_IMPLICATE_FAILURE_COVER_NO_SHORTCUT_NO_CLOSURE"
+}

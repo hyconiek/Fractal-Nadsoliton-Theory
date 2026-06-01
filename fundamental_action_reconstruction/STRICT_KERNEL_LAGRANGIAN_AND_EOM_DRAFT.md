@@ -718,3 +718,23 @@ The calculation is conditional on future role evidence and exports no physical-r
 ## P2408/S1358 prime-implicant guard for Lagrangian/EOM
 
 `P2408/S1358` proves that the quotient `O * S * R` is the unique prime implicant for role-bearing `L_total`/ToE readiness.  Dropping ontology, strict completion, or role-successor projection crosses the unique Boolean derivative edge back to a nearest miss, so no Lagrangian shortcut is available.
+
+## P2409/S1359 prime-implicate failure-cover guard for Lagrangian/EOM
+
+`P2409/S1359` gives the Lagrangian/EOM guard in CNF form: a role-bearing `L_total` must satisfy the three unit obligations `O`, `S`, and `R`.  Equivalently, every proposed shortcut is covered by the failure DNF `not O OR not S OR not R`; a missing ontology guard, strict completion, or role-successor projection blocks Lagrangian promotion.
+
+## P2410/S1360 dequotiented obstruction guard for Lagrangian/EOM
+
+`P2410/S1360` refines the quotient `O * S * R` Lagrangian guard into twelve unit obligations.  A role-bearing `L_total` remains blocked by any missing ontology atom, strict internal-completion atom, or role-successor atom; the twelve one-atom-missing masks are nearest repair targets, not admissible Lagrangian terms.
+
+## P2411/S1361 bridge-source hypergraph guard for Lagrangian/EOM
+
+`P2411/S1361` keeps `L_total` downstream of the bridge: the legacy-to-strict completion bridge still needs eight source obligations before any post-bridge role-transfer audit can start.  Therefore no Lagrangian term may import legacy roles from amplitude, phase, damping, or `chi11` bookkeeping without a real bridge-source theorem and the later role-transfer theorem.
+
+## P2412/S1362 chi11 selector scope guard for Lagrangian/EOM
+
+`P2412/S1362` separates declared-scope selector availability from bridge-level `chi11` source closure.  Lagrangian terms may not treat the retired `beta_tors -> chi11` route, the finite phase-origin candidate, or generic declared selector availability as a bridge-source theorem or QW-2191 discharge.
+
+## P2413/S1363 amplitude scalar-normalization guard for Lagrangian/EOM
+
+`P2413/S1363` permits only the scalar bridge witness `alpha_geo^{-1} K_legacy_ont = L_shape` on the audited domain.  It does not license an `alpha_geo` electroweak Lagrangian term, role-safe amplitude absorption, full bridge completion, or any `L_total` promotion.
