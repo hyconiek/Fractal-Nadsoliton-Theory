@@ -481,3 +481,35 @@ rho_lambda(0)/rho_lambda(1) > 8.5995.
 Thus a future theorem cannot merely say “normalized transport density.”  It must derive a strong early-transport bias of this scale, or explicitly keep that bias as a non-strict selector premise.  P2381 also keeps the negative control visible: just below the threshold, the worst corner fails the d5 chamber; at `lambda=0.8`, the corner replay selects the 12 d5 supports.
 
 This still does not produce a strict variational source for `rho_lambda`, does not add the profile to `L_total`, and does not discharge QW-2191.
+
+## P2382/S1332 bounded-density bathtub frontload certificate, still source-open
+
+`P2382/S1332` takes the next honest step after P2381 by asking whether the frontload burden is an artifact of the affine ansatz.  It is not treated as sourced; instead, the theorem enlarges the admissible comparison class to all normalized densities obeying a pointwise cap:
+
+```text
+0 <= rho(s) <= M,   int_0^1 rho(s) ds = 1.
+```
+
+For the P2377 homotopy, define the selector-relevant contrast
+
+```text
+q(s)=A_s(5)-3*A_s(1),
+A_s(d)=partial_s log((1-s)*(1+beta_tors*d)+s*(1+d^eta)).
+```
+
+P2382 audits the closed-form derivative
+
+```text
+q'(s)=3*Delta1^2/u1(s)^2-Delta5^2/u5(s)^2
+```
+
+and certifies `q'(s)<0` throughout the P2376 rectangle.  By the bathtub principle, the best `M`-capped unit density is therefore the earliest bang-bang profile
+
+```text
+rho_M(s)=M on [0,1/M],  rho_M(s)=0 on (1/M,1],
+W_M(d)=M*log((1+beta_tors*d+(d^eta-beta_tors*d)/M)/(1+beta_tors*d)).
+```
+
+The worst-corner cap threshold is approximately `1.5748213574353633`, and interval arithmetic certifies that `M=1.6` has positive d5 chamber margin on the whole audited rectangle.  The theorem also keeps a negative control: just below the worst-corner threshold the d5 chamber fails, while `M=1.6` selects the 12 d5 supports.
+
+This is a variational reduction and acceptance certificate for bounded normalized profiles, not the missing strict source theorem.  A future strict theorem must still derive the cap and the early bang-bang/frontloaded density from nadsoliton dynamics, or the profile remains an explicit non-strict premise.  There is still no `L_total` promotion, legacy role transfer, `beta_tors -> chi11` theorem, QW-2191 discharge, selector closure, or ToE closure.

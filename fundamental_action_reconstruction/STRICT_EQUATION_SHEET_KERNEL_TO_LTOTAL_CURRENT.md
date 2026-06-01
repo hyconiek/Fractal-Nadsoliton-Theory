@@ -555,3 +555,32 @@ rho(0)/rho(1) > 8.5995.
 ```
 
 The equation-sheet consequence is a sharpened non-closure statement: a source theorem must derive this front-loading burden, or the affine profile remains a quantified non-strict premise.  P2381 does not promote the profile into `L_total` and does not close QW-2191.
+
+## P2382/S1332 bounded-density bathtub frontload certificate
+
+`P2382/S1332` generalizes the affine-only profile question to all normalized transport densities with a pointwise cap
+
+```text
+0 <= rho(s) <= M,   int_0^1 rho(s) ds = 1.
+```
+
+For the P2377 log-transport one-form, the relevant d5-vs-h1 contrast is
+
+```text
+q(s)=A_s(5)-3*A_s(1).
+```
+
+Interval arithmetic certifies `q'(s)<0` on the P2376 rectangle.  Therefore the bathtub rearrangement principle reduces the optimal `M`-capped normalized density to the early bang-bang profile
+
+```text
+rho_M(s)=M for 0<=s<=1/M,  rho_M(s)=0 otherwise,
+W_M(d)=M*log((1+beta_tors*d+(d^eta-beta_tors*d)/M)/(1+beta_tors*d)).
+```
+
+The worst audited cap threshold is at `(eta,beta_tors)=(9/5,0.1)`:
+
+```text
+M > 1.5748213574353633.
+```
+
+Thus `M=1.6` is rectangle-uniformly sufficient and selects the 12 d5 supports, while a just-below-threshold cap at the worst corner fails the d5 chamber.  This is still not a strict source theorem: it only says that any future bounded-density source may be checked against the explicit cap/frontload burden, and that the optimal candidate under such a cap is known.  No `L_total` promotion, legacy role transfer, `beta_tors -> chi11` theorem, QW-2191 discharge, selector closure, or ToE closure follows.
