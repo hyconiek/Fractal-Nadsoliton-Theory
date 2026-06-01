@@ -1,0 +1,338 @@
+{
+  "gatekeeper_checks": {
+    "all_sample_threshold_blends_select_d5": true,
+    "all_sample_unit_blends_fail_d5": true,
+    "all_sample_unit_blends_select_mixed_33": true,
+    "denominator_positive_on_rectangle": true,
+    "docs_updated_with_p2378_insufficiency": true,
+    "no_qw2191_discharge_claimed": true,
+    "p2374_loaded": true,
+    "p2376_loaded": true,
+    "p2377_loaded": true,
+    "source_artifacts_present": true,
+    "unit_mass_insufficient_on_rectangle": true
+  },
+  "global_status": "OPEN_PROGRESS_WITH_TRACE_NO_SELECTOR_OR_TOE_CLOSURE",
+  "packet_id": "P2378",
+  "produced_by": "p2378_s1328_unit_normalized_transport_coupling_insufficiency_theorem.py",
+  "recommended_next_honest_step": "Do not treat P2377 transport provenance as selector closure. Next either derive a variational/source normalization theorem that gives total coupling M above the P2378 threshold range, or mark the extra coupling strength as an explicit non-strict premise.",
+  "result_kind": "UNIT_NORMALIZED_TRANSPORT_COUPLING_INSUFFICIENCY_THEOREM",
+  "schema_version": "p2378_s1328_v1",
+  "stage_id": "S1328",
+  "status": "OPEN_PROGRESS_UNIT_NORMALIZED_TRANSPORT_INSUFFICIENT_SOURCE_STRENGTH_STILL_OPEN",
+  "timestamp_utc": "2026-06-01T00:00:00+00:00",
+  "unit_normalized_transport_coupling_insufficiency_theorem": {
+    "artifact_replay": {
+      "p2374_packet_id": "P2374",
+      "p2376_packet_id": "P2376",
+      "p2377_packet_id": "P2377"
+    },
+    "docs": {
+      "equation_sheet": "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md",
+      "lagrangian_eom_draft": "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md"
+    },
+    "probe_id": "P2378_S1328_UNIT_NORMALIZED_TRANSPORT_COUPLING_INSUFFICIENCY_THEOREM",
+    "source_artifacts": {
+      "P2374_DAMPING_COMPRESSION_CANDIDATE": "fundamental_action_reconstruction/generated/p2374_s1324_damping_compression_band_polarity_candidate_theorem.json",
+      "P2376_RECTANGLE_ROBUSTNESS": "fundamental_action_reconstruction/generated/p2376_s1326_damping_compression_eta_beta_rectangle_robustness_theorem.json",
+      "P2377_TRANSPORT_PRIMITIVE": "fundamental_action_reconstruction/generated/p2377_s1327_damping_compression_transport_primitive_uniform_coupling_theorem.json"
+    },
+    "theorem_export": {
+      "claim": "Although P2377 gives exact transport provenance for C(d), a unit-normalized transport primitive is insufficient: for every eta in [9/5,2] and beta_tors in [0,0.1], the d5 chamber for K+M*C requires M>1. The threshold range is certified by D=C5-3*C1, whose maximum remains below 3*K1-K5.",
+      "not_licensed": [
+        "strict variational source theorem fixing M above threshold",
+        "using P2377 transport provenance alone as selector closure",
+        "promotion of C(d) or M*C(d) into L_total without a source theorem",
+        "QW-2191 discharge",
+        "beta_tors -> chi11 theorem",
+        "legacy physical-role transfer",
+        "ToE closure"
+      ],
+      "positive_content": [
+        "Derives the scalar mass-budget condition M>(3*K1-K5)/(C5-3*C1).",
+        "Proves across the P2376 rectangle that every normalized budget M<=1 fails to overcome direct strict-kernel polarity.",
+        "Computationally separates unit-mass failure from just-above-threshold d5 success on the 3x3 grid over all 792 supports."
+      ],
+      "theorem_name": "P2378 unit-normalized transport coupling insufficiency theorem"
+    },
+    "theorem_fingerprint_sha256": "9b39b914c38e973db89f7bd7b69adb80148258688c5148f3439e41812d94ecc3",
+    "unit_normalized_transport_coupling_insufficiency_certificate": {
+      "mass_budget_theorem": {
+        "d5_condition": "M > (3*K1-K5)/(C5-3*C1)",
+        "effective_blend": "a=K1+M*C1, b=K5+M*C5 for nonnegative total transport mass M",
+        "interpretation": "An endpoint primitive with only unit-normalized total mass is not enough to overcome direct strict-kernel polarity.",
+        "normalized_transport_budget": "M<=1"
+      },
+      "rectangle_proof": {
+        "D(eta,x)": "C5(eta,x)-3*C1(eta,x)",
+        "dD_deta": "ln(5)*5^eta/(1+5^eta) > 0",
+        "dD_deta_lower_left": 1.525260051077558,
+        "dD_dx": "-5/(1+5*x)+3/(1+x) < 0 on x in [0,0.1]",
+        "dD_dx_left_endpoint": -2.0,
+        "dD_dx_right_endpoint": -0.6060606060606064,
+        "denominator_max_corner": {
+          "beta_tors": 0.0,
+          "eta": 2.0
+        },
+        "denominator_max_value": 1.1786549963416464,
+        "denominator_min_corner": {
+          "beta_tors": 0.1,
+          "eta": 1.8
+        },
+        "denominator_min_value": 0.7517322065151169,
+        "denominator_positive_on_rectangle": true,
+        "numerator_3K1_minus_K5": 1.3858257945714303,
+        "tau_threshold_range": {
+          "maximum_tau_gt": 1.8435099395246706,
+          "minimum_tau_gt": 1.1757688202848233
+        },
+        "unit_mass_insufficient_on_rectangle": true
+      },
+      "sample_mass_budget_support_audits": [
+        {
+          "C1": 0.6931471805599453,
+          "C5": 2.9507083168901427,
+          "beta_tors": 0.0,
+          "denominator_C5_minus_3C1": 0.8712667752103069,
+          "eta": 1.8,
+          "just_above_threshold_score_audit": {
+            "a_over_b": 0.3333333332717704,
+            "d5_chamber": true,
+            "maximizer_count": 12,
+            "maximizer_h1_h5_pair_distribution": {
+              "0,4": 12
+            },
+            "maximum_score": 18.869960615878888
+          },
+          "tau_threshold": 1.590587216225385,
+          "unit_mass_blend_ratio": 0.3909901147494304,
+          "unit_mass_blend_score_audit": {
+            "a_over_b": 0.3909901147494304,
+            "d5_chamber": false,
+            "maximizer_count": 24,
+            "maximizer_h1_h5_pair_distribution": {
+              "3,3": 24
+            },
+            "maximum_score": 12.413917180376215
+          }
+        },
+        {
+          "C1": 0.6831968497067772,
+          "C5": 2.9019181527207105,
+          "beta_tors": 0.01,
+          "denominator_C5_minus_3C1": 0.8523276036003788,
+          "eta": 1.8,
+          "just_above_threshold_score_audit": {
+            "a_over_b": 0.3333333332734256,
+            "d5_chamber": true,
+            "maximizer_count": 12,
+            "maximizer_h1_h5_pair_distribution": {
+              "0,4": 12
+            },
+            "maximum_score": 18.96979857489385
+          },
+          "tau_threshold": 1.6259309081595656,
+          "unit_mass_blend_ratio": 0.39410904401585806,
+          "unit_mass_blend_score_audit": {
+            "a_over_b": 0.39410904401585806,
+            "d5_chamber": false,
+            "maximizer_count": 24,
+            "maximizer_h1_h5_pair_distribution": {
+              "3,3": 24
+            },
+            "maximum_score": 12.237695695308414
+          }
+        },
+        {
+          "C1": 0.5978370007556204,
+          "C5": 2.545243208781978,
+          "beta_tors": 0.1,
+          "denominator_C5_minus_3C1": 0.7517322065151169,
+          "eta": 1.8,
+          "just_above_threshold_score_audit": {
+            "a_over_b": 0.33333333328020337,
+            "d5_chamber": true,
+            "maximizer_count": 12,
+            "maximizer_h1_h5_pair_distribution": {
+              "0,4": 12
+            },
+            "maximum_score": 18.865249519224466
+          },
+          "tau_threshold": 1.8435099395246706,
+          "unit_mass_blend_ratio": 0.41559636464076344,
+          "unit_mass_blend_score_audit": {
+            "a_over_b": 0.41559636464076344,
+            "d5_chamber": false,
+            "maximizer_count": 24,
+            "maximizer_h1_h5_pair_distribution": {
+              "3,3": 24
+            },
+            "maximum_score": 10.911591316638745
+          }
+        },
+        {
+          "C1": 0.6931471805599453,
+          "C5": 3.1038464073590077,
+          "beta_tors": 0.0,
+          "denominator_C5_minus_3C1": 1.024404865679172,
+          "eta": 1.9,
+          "just_above_threshold_score_audit": {
+            "a_over_b": 0.3333333332524751,
+            "d5_chamber": true,
+            "maximizer_count": 12,
+            "maximizer_h1_h5_pair_distribution": {
+              "0,4": 12
+            },
+            "maximum_score": 16.892190595545014
+          },
+          "tau_threshold": 1.3528106327888625,
+          "unit_mass_blend_ratio": 0.3718482005052747,
+          "unit_mass_blend_score_audit": {
+            "a_over_b": 0.3718482005052747,
+            "d5_chamber": false,
+            "maximizer_count": 24,
+            "maximizer_h1_h5_pair_distribution": {
+              "3,3": 24
+            },
+            "maximum_score": 12.873331451782809
+          }
+        },
+        {
+          "C1": 0.6831968497067772,
+          "C5": 3.0550562431895756,
+          "beta_tors": 0.01,
+          "denominator_C5_minus_3C1": 1.005465694069244,
+          "eta": 1.9,
+          "just_above_threshold_score_audit": {
+            "a_over_b": 0.33333333325419195,
+            "d5_chamber": true,
+            "maximizer_count": 12,
+            "maximizer_h1_h5_pair_distribution": {
+              "0,4": 12
+            },
+            "maximum_score": 16.939568962380406
+          },
+          "tau_threshold": 1.378292469594683,
+          "unit_mass_blend_ratio": 0.3745087088324154,
+          "unit_mass_blend_score_audit": {
+            "a_over_b": 0.3745087088324154,
+            "d5_chamber": false,
+            "maximizer_count": 24,
+            "maximizer_h1_h5_pair_distribution": {
+              "3,3": 24
+            },
+            "maximum_score": 12.697109966715008
+          }
+        },
+        {
+          "C1": 0.5978370007556204,
+          "C5": 2.698381299250843,
+          "beta_tors": 0.1,
+          "denominator_C5_minus_3C1": 0.9048702969839819,
+          "eta": 1.9,
+          "just_above_threshold_score_audit": {
+            "a_over_b": 0.33333333326077097,
+            "d5_chamber": true,
+            "maximizer_count": 12,
+            "maximizer_h1_h5_pair_distribution": {
+              "0,4": 12
+            },
+            "maximum_score": 16.62701074539036
+          },
+          "tau_threshold": 1.5315187151026157,
+          "unit_mass_blend_ratio": 0.392219563557854,
+          "unit_mass_blend_score_audit": {
+            "a_over_b": 0.392219563557854,
+            "d5_chamber": false,
+            "maximizer_count": 24,
+            "maximizer_h1_h5_pair_distribution": {
+              "3,3": 24
+            },
+            "maximum_score": 11.371005588045342
+          }
+        },
+        {
+          "C1": 0.6931471805599453,
+          "C5": 3.258096538021482,
+          "beta_tors": 0.0,
+          "denominator_C5_minus_3C1": 1.1786549963416464,
+          "eta": 2.0,
+          "just_above_threshold_score_audit": {
+            "a_over_b": 0.333333333231415,
+            "d5_chamber": true,
+            "maximizer_count": 12,
+            "maximizer_h1_h5_pair_distribution": {
+              "0,4": 12
+            },
+            "maximum_score": 15.419598198021248
+          },
+          "tau_threshold": 1.1757688202848233,
+          "unit_mass_blend_ratio": 0.35437298620438185,
+          "unit_mass_blend_score_audit": {
+            "a_over_b": 0.35437298620438185,
+            "d5_chamber": false,
+            "maximizer_count": 24,
+            "maximizer_h1_h5_pair_distribution": {
+              "3,3": 24
+            },
+            "maximum_score": 13.336081843770232
+          }
+        },
+        {
+          "C1": 0.6831968497067772,
+          "C5": 3.20930637385205,
+          "beta_tors": 0.01,
+          "denominator_C5_minus_3C1": 1.1597158247317183,
+          "eta": 2.0,
+          "just_above_threshold_score_audit": {
+            "a_over_b": 0.3333333332331633,
+            "d5_chamber": true,
+            "maximizer_count": 12,
+            "maximizer_h1_h5_pair_distribution": {
+              "0,4": 12
+            },
+            "maximum_score": 15.436626199108165
+          },
+          "tau_threshold": 1.1949701513230786,
+          "unit_mass_blend_ratio": 0.3566428878493914,
+          "unit_mass_blend_score_audit": {
+            "a_over_b": 0.3566428878493914,
+            "d5_chamber": false,
+            "maximizer_count": 24,
+            "maximizer_h1_h5_pair_distribution": {
+              "3,3": 24
+            },
+            "maximum_score": 13.159860358702431
+          }
+        },
+        {
+          "C1": 0.5978370007556204,
+          "C5": 2.8526314299133175,
+          "beta_tors": 0.1,
+          "denominator_C5_minus_3C1": 1.0591204276464563,
+          "eta": 2.0,
+          "just_above_threshold_score_audit": {
+            "a_over_b": 0.33333333323935743,
+            "d5_chamber": true,
+            "maximizer_count": 12,
+            "maximizer_h1_h5_pair_distribution": {
+              "0,4": 12
+            },
+            "maximum_score": 15.02683921015645
+          },
+          "tau_threshold": 1.3084685729751888,
+          "unit_mass_blend_ratio": 0.371189007262825,
+          "unit_mass_blend_score_audit": {
+            "a_over_b": 0.371189007262825,
+            "d5_chamber": false,
+            "maximizer_count": 24,
+            "maximizer_h1_h5_pair_distribution": {
+              "3,3": 24
+            },
+            "maximum_score": 11.833755980032763
+          }
+        }
+      ]
+    }
+  }
+}
