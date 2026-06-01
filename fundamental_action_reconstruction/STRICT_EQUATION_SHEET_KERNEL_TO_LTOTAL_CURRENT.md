@@ -662,3 +662,80 @@ The target pair `(h1,h5)=(0,4)` has score `4b`.  For every other observed pair t
 At the boundary `a/b=1/3`, the integer numerator `3*(4-h5)-h1` is nonnegative for every observed pair, and the only non-target zero is `(h1,h5)=(3,3)`.  Hence the inequality is strict throughout `a/b<1/3`, and the unique maximizers are exactly the 12 `(0,4)` supports.  These 12 supports are also identified as length-5 paths in the step-5 cycle on `Z12`.
 
 This closes the finite support chamber handoff but not the source question.  The cap/frontload density still must be derived by a future strict source theorem or kept as an explicit non-strict premise.  No `L_total` promotion, legacy role transfer, `beta_tors -> chi11` theorem, QW-2191 discharge, selector closure, or ToE closure follows.
+
+## P2386/S1336 bathtub LP dual certificate
+
+`P2386/S1336` adds a proof-side LP/KKT certificate for the bounded-density bathtub lane after P2382-P2385.  The primal problem is
+
+```text
+maximize int_0^1 q(s)*rho(s) ds
+subject to 0 <= rho(s) <= M,  int_0^1 rho(s) ds = 1,
+q(s)=A5(s)-3*A1(s).
+```
+
+The matching dual is
+
+```text
+minimize lambda + M*int_0^1 mu(s) ds
+subject to lambda + mu(s) >= q(s),  mu(s) >= 0.
+```
+
+For the audited `M=1.6` target, P2386 uses the explicit dual variables
+
+```text
+t = 1/M = 0.625,
+lambda = q(t),
+mu(s) = max(q(s)-lambda,0),
+rho_*(s)=M on [0,t), rho_*(s)=0 on (t,1].
+```
+
+Because P2383/P2384 already certify `q'(s)<0` on the relevant rectangle, this dual certificate proves the early bang-bang optimizer by equality of primal and dual values rather than by an informal rearrangement step.  The closed-form value is also checked against `W_M(5)-3*W_M(1)`, and sampled KKT complementarity is recorded as a regression guard.
+
+This strengthens the proof audit of the cap/frontload acceptance criterion but still does not derive the cap or density from strict dynamics.  No `L_total` promotion, legacy role transfer, `beta_tors -> chi11` theorem, QW-2191 discharge, selector closure, or ToE closure follows.
+
+## P2387/S1337 bathtub exact KKT branch certificate
+
+`P2387/S1337` upgrades the P2386 LP-dual audit from sampled KKT evidence to an exact branch certificate.  With
+
+```text
+t = 1/M = 0.625,
+lambda = q(t),
+mu(s)=max(q(s)-lambda,0),
+rho_*(s)=M*1_[0,t)(s),
+```
+
+and with the P2384/P2386 monotonicity input `q'(s)<0`, the domain splits into three algebraic KKT branches:
+
+```text
+0 <= s < t:  q(s)>lambda, mu=q-lambda, rho_*=M,
+s = t:       q(s)=lambda, null-set endpoint convention,
+t < s <= 1:  q(s)<lambda, mu=0, rho_*=0.
+```
+
+Thus dual feasibility and complementarity become branch identities rather than theorem-level grid assertions.  P2387 still keeps a computational audit grid as a regression guard, but the proof reduction is the monotone branch split plus the closed primitive value identity.
+
+This is an exact KKT acceptance target for a future source theorem, not a strict derivation of the density or cap.  No `L_total` promotion, legacy role transfer, `beta_tors -> chi11` theorem, QW-2191 discharge, selector closure, or ToE closure follows.
+
+## P2388/S1338 cap-threshold root uniqueness certificate
+
+`P2388/S1338` reconnects the P2386/P2387 LP/KKT acceptance target to the scalar cap threshold used by P2382/P2383.  At the worst corner `(eta,beta_tors)=(9/5,0.1)`, it defines
+
+```text
+F(M)=W_M(5)-3*W_M(1)-(3*K_strict(1)-K_strict(5)).
+```
+
+The threshold is the unique root of `F(M)=0` on the audited cap band.  The uniqueness step is not a numerical-grid claim: P2388 uses the P2384 cap-derivative sign proof to inherit strict monotonicity in `M`, then combines it with a sign-changing bracket around the P2382 threshold.  Bisection and Newton replays are retained only as reproducible computations.
+
+The resulting root remains approximately `1.574821357435363`, and `M=1.6` has positive margin above that root.  This is still an acceptance target for a future strict source theorem, not a derivation of the cap or density.  No `L_total` promotion, legacy role transfer, `beta_tors -> chi11` theorem, QW-2191 discharge, selector closure, or ToE closure follows.
+
+## P2389/S1339 cap slack budget sensitivity certificate
+
+`P2389/S1339` quantifies the slack left by the accepted cap `M=1.6` above the unique P2388 threshold.  It treats the P2388 root as the exact acceptance boundary and then audits the interval `[M_*,1.6]` for the scalar margin equation
+
+```text
+F(M)=W_M(5)-3*W_M(1)-(3*K_strict(1)-K_strict(5)).
+```
+
+The output records the cap surplus `1.6-M_*`, the scalar chamber margin `F(1.6)`, a derivative/sensitivity band for root movement under additive threshold perturbations, and the source-geometry surplus relative to the just-threshold profile: shorter early support interval, larger early-half mass, and larger barycenter shift.  This is a budget for evaluating future source candidates, not a new source theorem.
+
+No `L_total` promotion, legacy role transfer, `beta_tors -> chi11` theorem, QW-2191 discharge, selector closure, or ToE closure follows.

@@ -1,0 +1,183 @@
+{
+  "bathtub_exact_kkt_branch_certificate": {
+    "artifact_replay": {
+      "p2382_packet_id": "P2382",
+      "p2384_packet_id": "P2384",
+      "p2385_packet_id": "P2385",
+      "p2386_packet_id": "P2386"
+    },
+    "docs": {
+      "equation_sheet": "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md",
+      "lagrangian_eom_draft": "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md"
+    },
+    "exact_kkt_branch_certificate": {
+      "cap_M": 1.6,
+      "closed_branch_kkt_certificate": [
+        {
+          "branch": "left_s_less_than_t",
+          "cap_slack_M_minus_rho": "0",
+          "domain": "0 <= s < t",
+          "dual_gap_lambda_plus_mu_minus_q": "0",
+          "kkt_products": {
+            "dual_gap_times_rho": "0",
+            "mu_times_cap_slack": "0"
+          },
+          "monotone_consequence": "q(s) > lambda",
+          "mu": "q(s)-lambda",
+          "rho_star": "M"
+        },
+        {
+          "branch": "cut_point_measure_zero",
+          "cap_slack_M_minus_rho": "endpoint convention",
+          "domain": "s = t",
+          "dual_gap_lambda_plus_mu_minus_q": "0",
+          "kkt_products": {
+            "dual_gap_times_rho": "0",
+            "mu_times_cap_slack": "0"
+          },
+          "monotone_consequence": "q(s) = lambda",
+          "mu": "0",
+          "rho_star": "arbitrary endpoint convention; measure zero"
+        },
+        {
+          "branch": "right_s_greater_than_t",
+          "cap_slack_M_minus_rho": "M",
+          "domain": "t < s <= 1",
+          "dual_gap_lambda_plus_mu_minus_q": "lambda-q(s)",
+          "kkt_products": {
+            "dual_gap_times_rho": "0",
+            "mu_times_cap_slack": "0"
+          },
+          "monotone_consequence": "q(s) < lambda",
+          "mu": "0",
+          "rho_star": "0"
+        }
+      ],
+      "closed_value_identity": {
+        "absolute_gap": 0.0,
+        "dual_value_lambda_plus_M_int_mu": 1.4115211199555233,
+        "primal_value_M_int_0_t_q": 1.4115211199555233
+      },
+      "computational_audit_not_theorem_core": {
+        "grid_points": 33,
+        "max_q_prime_on_grid": -0.24174708731451278,
+        "min_left_q_minus_lambda_on_grid_excluding_cut": 0.03687345431231259,
+        "min_right_lambda_minus_q_on_grid_excluding_cut": 0.0323387857183266,
+        "rows": [
+          {
+            "branch": "left",
+            "lambda_minus_q": -9.507655486694514,
+            "q_minus_lambda": 9.507655486694514,
+            "q_prime_s": -135.96795062986945,
+            "q_s": 9.291782273416139,
+            "s": 0.0
+          },
+          {
+            "branch": "right_or_cut",
+            "lambda_minus_q": 0.0,
+            "q_minus_lambda": 0.0,
+            "q_prime_s": -1.10379999246585,
+            "q_s": -0.21587321327837405,
+            "s": 0.625
+          },
+          {
+            "branch": "right_or_cut",
+            "lambda_minus_q": 0.0323387857183266,
+            "q_minus_lambda": -0.0323387857183266,
+            "q_prime_s": -0.969162160806222,
+            "q_s": -0.24821199899670066,
+            "s": 0.65625
+          },
+          {
+            "branch": "right_or_cut",
+            "lambda_minus_q": 0.2125807556876289,
+            "q_minus_lambda": -0.2125807556876289,
+            "q_prime_s": -0.24174708731451278,
+            "q_s": -0.42845396896600296,
+            "s": 1.0
+          }
+        ]
+      },
+      "cut_t_1_over_M": 0.625,
+      "endpoint_values": {
+        "q_0": 9.291782273416139,
+        "q_1": -0.42845396896600296,
+        "q_t": -0.21587321327837405
+      },
+      "lambda_q_t": -0.21587321327837405,
+      "proof_reduction": [
+        "P2384/P2386 provide q'(s)<0 for the audited rectangle and cap target.",
+        "Therefore q(s)>q(t)=lambda on 0<=s<t and q(s)<q(t)=lambda on t<s<=1.",
+        "The branch definitions mu=max(q-lambda,0) and rho*=M*1_[0,t) make dual feasibility and all KKT products identities on each branch.",
+        "The primal-dual values match by the closed primitive integral, so no grid sample is part of the theorem statement."
+      ],
+      "source_burden_acceptance_target": {
+        "cap_M": 1.6,
+        "early_interval_length": 0.625,
+        "required_branch_saturation": "rho=M on [0,1/M), rho=0 on (1/M,1] up to null-set conventions",
+        "status": "EXACT_KKT_ACCEPTANCE_TARGET_ONLY_SOURCE_STILL_OPEN"
+      },
+      "strict_endpoint_margins_from_monotone_q": {
+        "both_positive": true,
+        "lambda_minus_q_1": 0.2125807556876289,
+        "q_0_minus_lambda": 9.507655486694514
+      }
+    },
+    "p2386_replay": {
+      "packet_cap_M": 1.6,
+      "packet_value_gap": 0.0,
+      "packet_weight_gap": 2.220446049250313e-16
+    },
+    "probe_id": "P2387_S1337_BATHTUB_EXACT_KKT_BRANCH_CERTIFICATE",
+    "source_artifacts": {
+      "P2382_BOUNDED_DENSITY_BATHTUB": "fundamental_action_reconstruction/generated/p2382_s1332_bounded_density_bathtub_frontload_certificate.json",
+      "P2384_SYMBOLIC_INEQUALITY": "fundamental_action_reconstruction/generated/p2384_s1334_symbolic_bathtub_inequality_proof_packet.json",
+      "P2385_EXACT_SUPPORT_CHAMBER": "fundamental_action_reconstruction/generated/p2385_s1335_exact_z12_support_chamber_theorem.json",
+      "P2386_LP_DUAL": "fundamental_action_reconstruction/generated/p2386_s1336_bathtub_lp_dual_certificate.json"
+    },
+    "theorem_export": {
+      "claim": "The P2386 LP-dual certificate can be upgraded from sampled KKT evidence to an exact branch certificate: once P2384/P2386 provide q'(s)<0, the cut t=1/M partitions the domain into q>lambda, q=lambda, and q<lambda branches, making dual feasibility and complementarity algebraic identities.",
+      "name": "P2387/S1337 bathtub exact KKT branch certificate",
+      "not_licensed": [
+        "strict source theorem deriving rho* or cap M",
+        "promotion of the LP/KKT branch certificate into L_total",
+        "claim that strict nadsoliton dynamics supplies the front-loaded density",
+        "QW-2191 discharge or selector closure",
+        "beta_tors -> chi11 theorem",
+        "legacy physical-role transfer",
+        "ToE closure"
+      ],
+      "positive_content": [
+        "Exports the three KKT branches for s<t, s=t, and s>t.",
+        "Checks strict endpoint margins q(0)-lambda and lambda-q(1), then uses monotonicity to certify branch signs without sampling as theorem core.",
+        "Replays the P2386 primal-dual value gap and recomputes the closed value identity.",
+        "Leaves the source question as an exact KKT acceptance target rather than a sourced density theorem."
+      ]
+    },
+    "theorem_fingerprint_sha256": "47cf92d5091ab427778e7a5102ff3cccea361a9e7376e32bc81a0d259b51a9e9"
+  },
+  "gatekeeper_checks": {
+    "audit_grid_branch_margins_positive": true,
+    "audit_grid_qprime_negative": true,
+    "closed_value_identity_gap_zero": true,
+    "docs_updated_with_p2387_exact_kkt": true,
+    "no_qw2191_discharge_claimed": true,
+    "p2382_loaded": true,
+    "p2384_loaded": true,
+    "p2385_loaded": true,
+    "p2386_loaded": true,
+    "p2386_replay_gap_zero": true,
+    "source_artifacts_present": true,
+    "source_target_not_promoted": true,
+    "strict_endpoint_branch_margins_positive": true
+  },
+  "global_status": "OPEN_PROGRESS_WITH_TRACE_NO_SELECTOR_OR_TOE_CLOSURE",
+  "packet_id": "P2387",
+  "produced_by": "fundamental_action_reconstruction/p2387_s1337_bathtub_exact_kkt_branch_certificate.py",
+  "recommended_next_honest_step": "Treat the P2387 branch certificate as the exact source-side acceptance target: future work must derive the front-loaded density/cap from strict dynamics or explicitly keep it as a non-strict premise.",
+  "result_kind": "BATHTUB_EXACT_KKT_BRANCH_CERTIFICATE",
+  "schema_version": "p2387_s1337_v1",
+  "stage_id": "S1337",
+  "status": "OPEN_PROGRESS_EXACT_KKT_BRANCH_CERTIFICATE_SOURCE_STILL_OPEN",
+  "timestamp_utc": "2026-06-01T00:00:00Z"
+}

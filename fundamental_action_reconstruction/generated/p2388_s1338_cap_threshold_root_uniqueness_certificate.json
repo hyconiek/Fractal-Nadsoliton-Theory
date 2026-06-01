@@ -1,0 +1,190 @@
+{
+  "cap_threshold_root_uniqueness_certificate": {
+    "artifact_replay": {
+      "p2382_packet_id": "P2382",
+      "p2384_packet_id": "P2384",
+      "p2386_packet_id": "P2386",
+      "p2387_packet_id": "P2387"
+    },
+    "cap_threshold_root_certificate": {
+      "accepted_cap_replay": {
+        "F_M_test": 0.02569532538409236,
+        "M_test": 1.6,
+        "M_test_minus_root_mid": 0.02517864256463742,
+        "accepted": true
+      },
+      "bisection_certificate": {
+        "f_hi": 1.1102230246251565e-15,
+        "f_lo": -2.220446049250313e-16,
+        "f_mid": -2.220446049250313e-16,
+        "hi": 1.574821357435363,
+        "lo": 1.5748213574353627,
+        "mid": 1.5748213574353627,
+        "steps": 120,
+        "width": 2.220446049250313e-16
+      },
+      "derivative_audit": {
+        "all_sampled_positive": true,
+        "grid_points": 65,
+        "max_derivative_on_bracket_grid": {
+          "F_prime": 1.0239264303546514,
+          "cap": 1.5748213564353628
+        },
+        "min_derivative_on_bracket_grid": {
+          "F_prime": 1.0239264298125739,
+          "cap": 1.574821358435363
+        },
+        "proof_role": "regression audit only; theorem monotonicity is inherited from P2384 cap-derivative sign proof"
+      },
+      "initial_sign_bracket_around_p2382_value": {
+        "F_hi": 1.0239269432332776e-09,
+        "F_lo": -1.0239264991440677e-09,
+        "hi": 1.574821358435363,
+        "lo": 1.5748213564353628,
+        "sign_change": true
+      },
+      "newton_replay": {
+        "final_abs_residual": 1.1102230246251565e-15,
+        "final_cap": 1.574821357435363,
+        "seed": 1.574821357435363,
+        "steps": [
+          {
+            "F_cap": 1.1102230246251565e-15,
+            "F_prime_cap": 1.0239264300836124,
+            "cap": 1.574821357435363,
+            "step": 0
+          },
+          {
+            "F_cap": -1.1102230246251565e-15,
+            "F_prime_cap": 1.0239264300836126,
+            "cap": 1.5748213574353618,
+            "step": 1
+          },
+          {
+            "F_cap": 1.1102230246251565e-15,
+            "F_prime_cap": 1.0239264300836124,
+            "cap": 1.574821357435363,
+            "step": 2
+          },
+          {
+            "F_cap": -1.1102230246251565e-15,
+            "F_prime_cap": 1.0239264300836126,
+            "cap": 1.5748213574353618,
+            "step": 3
+          },
+          {
+            "F_cap": 1.1102230246251565e-15,
+            "F_prime_cap": 1.0239264300836124,
+            "cap": 1.574821357435363,
+            "step": 4
+          },
+          {
+            "F_cap": -1.1102230246251565e-15,
+            "F_prime_cap": 1.0239264300836126,
+            "cap": 1.5748213574353618,
+            "step": 5
+          },
+          {
+            "F_cap": 1.1102230246251565e-15,
+            "F_prime_cap": 1.0239264300836124,
+            "cap": 1.574821357435363,
+            "step": 6
+          },
+          {
+            "F_cap": -1.1102230246251565e-15,
+            "F_prime_cap": 1.0239264300836126,
+            "cap": 1.5748213574353618,
+            "step": 7
+          }
+        ]
+      },
+      "source_burden_translation": {
+        "M_1_6_barycenter": 0.3125,
+        "M_1_6_barycenter_shift_from_uniform": 0.1875,
+        "M_1_6_early_half_mass": 0.8,
+        "M_1_6_early_interval_length": 0.625,
+        "minimal_cap_must_exceed_unique_root": 1.5748213574353627,
+        "status": "UNIQUE_THRESHOLD_ACCEPTANCE_TARGET_ONLY_SOURCE_STILL_OPEN"
+      },
+      "strict_kernel_parameters_used_for_target": {
+        "beta": 1.0,
+        "eta": 1.8,
+        "omega": 0.18575,
+        "phi": 0.1625
+      },
+      "target_3K1_minus_K5": 1.3858257945714303,
+      "threshold_equation": "F(M)=W_M(5)-3*W_M(1)-(3*K_strict(1)-K_strict(5))=0 at eta=9/5,beta_tors=0.1",
+      "uniqueness_proof_reduction": [
+        "P2384 proves the cap derivative of the d5 chamber margin is positive on the audited cap band.",
+        "The sign-changing bracket contains exactly one zero because F is strictly increasing on that band.",
+        "M=1.6 is accepted because F(1.6)>0, while values below the unique root fail the d5 chamber inequality at the worst corner."
+      ],
+      "worst_corner": {
+        "beta_tors": 0.1,
+        "eta": 1.8
+      }
+    },
+    "docs": {
+      "equation_sheet": "fundamental_action_reconstruction/STRICT_EQUATION_SHEET_KERNEL_TO_LTOTAL_CURRENT.md",
+      "lagrangian_eom_draft": "fundamental_action_reconstruction/STRICT_KERNEL_LAGRANGIAN_AND_EOM_DRAFT.md"
+    },
+    "p2382_replay": {
+      "p2382_below_threshold_fails": true,
+      "p2382_cap_test_M": 1.6,
+      "p2382_cap_test_margin": 0.02569532538409236,
+      "p2382_cap_threshold_gt": 1.574821357435363
+    },
+    "probe_id": "P2388_S1338_CAP_THRESHOLD_ROOT_UNIQUENESS_CERTIFICATE",
+    "source_artifacts": {
+      "P2382_BOUNDED_DENSITY_BATHTUB": "fundamental_action_reconstruction/generated/p2382_s1332_bounded_density_bathtub_frontload_certificate.json",
+      "P2384_SYMBOLIC_INEQUALITY": "fundamental_action_reconstruction/generated/p2384_s1334_symbolic_bathtub_inequality_proof_packet.json",
+      "P2386_LP_DUAL": "fundamental_action_reconstruction/generated/p2386_s1336_bathtub_lp_dual_certificate.json",
+      "P2387_EXACT_KKT_BRANCH": "fundamental_action_reconstruction/generated/p2387_s1337_bathtub_exact_kkt_branch_certificate.json"
+    },
+    "theorem_export": {
+      "claim": "The worst-corner bounded-density cap threshold is the unique root of a scalar monotone equation F(M)=0, not merely a bisection number. A sign-changing bracket around the P2382 value plus the P2384 positive cap-derivative proof yields uniqueness; bisection and Newton are retained as reproducible computations.",
+      "name": "P2388/S1338 cap-threshold root uniqueness certificate",
+      "not_licensed": [
+        "strict source theorem deriving M or the front-loaded density",
+        "promotion of the scalar threshold equation into L_total",
+        "claim that strict dynamics supplies the cap threshold",
+        "QW-2191 discharge or selector closure",
+        "beta_tors -> chi11 theorem",
+        "legacy physical-role transfer",
+        "ToE closure"
+      ],
+      "positive_content": [
+        "Defines the exact threshold equation using the P2382 strict-kernel target 3*K_strict(1)-K_strict(5).",
+        "Exports a sign-changing bracket, high-iteration bisection certificate, and Newton replay for the unique root near 1.574821357435363.",
+        "Replays M=1.6 as strictly above the unique threshold and keeps the source burden explicit.",
+        "Connects the P2386/P2387 LP/KKT acceptance target back to the scalar cap threshold without promoting a source theorem."
+      ]
+    },
+    "theorem_fingerprint_sha256": "fc4e3c65cf2edc01e32f5361992cb9ee137e16cfb5bb3e10cbf27d9d638689d8"
+  },
+  "gatekeeper_checks": {
+    "M_1_6_above_unique_root": true,
+    "bisection_width_collapsed": true,
+    "derivative_audit_positive": true,
+    "docs_updated_with_p2388_threshold_root": true,
+    "initial_bracket_sign_changes": true,
+    "newton_residual_tiny": true,
+    "no_qw2191_discharge_claimed": true,
+    "p2382_loaded": true,
+    "p2384_loaded": true,
+    "p2386_loaded": true,
+    "p2387_loaded": true,
+    "root_matches_p2382_threshold": true,
+    "source_artifacts_present": true,
+    "source_target_not_promoted": true
+  },
+  "global_status": "OPEN_PROGRESS_WITH_TRACE_NO_SELECTOR_OR_TOE_CLOSURE",
+  "packet_id": "P2388",
+  "produced_by": "fundamental_action_reconstruction/p2388_s1338_cap_threshold_root_uniqueness_certificate.py",
+  "recommended_next_honest_step": "Use the unique scalar root as the exact cap-threshold acceptance target: future source work must derive M above this root, or keep the bounded-density cap as an explicit non-strict premise.",
+  "result_kind": "CAP_THRESHOLD_ROOT_UNIQUENESS_CERTIFICATE",
+  "schema_version": "p2388_s1338_v1",
+  "stage_id": "S1338",
+  "status": "OPEN_PROGRESS_UNIQUE_CAP_THRESHOLD_ROOT_CERTIFICATE_SOURCE_STILL_OPEN",
+  "timestamp_utc": "2026-06-01T00:00:00Z"
+}
